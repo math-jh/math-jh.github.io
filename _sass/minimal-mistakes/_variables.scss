@@ -12,9 +12,91 @@ $doc-font-size: 16 !default;
 $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
+/* Serif*/
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: normal;
+  src: url('fonts/MaruBuri-Regular.woff2') format('woff2');
+  src: url('fonts/MaruBuri-Regular.woff') format('woff');
+  unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: normal;
+  src: url('fonts/Merriweather-Light.woff2') format('woff2');
+  src: url('fonts/Merriweather-Light.woff') format('woff');
+  unicode-range: U+0020-0027, U+0040-005A, U+005C, U+005E-007F;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: italic;
+  src: url('fonts/Hahmlet-Medium.woff2') format('woff2');
+  src: url('fonts/Hahmlet-Medium.woff') format('woff');
+  unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: italic;
+  src: url('fonts/Merriweather-Regular.woff2') format('woff2');
+  src: url('fonts/Merriweather-Regular.woff') format('woff');
+  unicode-range:U+0028-0029;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: italic;
+  src: url('fonts/Merriweather-Italic.woff2') format('woff2');
+  src: url('fonts/Merriweather-Italic.woff') format('woff');
+  unicode-range: U+0020-0027, U+0040-005A, U+005C, U+005E-007F;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-weight: bold;
+  src: url('fonts/Maruburi-Bold.woff2') format('woff2');
+  src: url('fonts/Maruburi-Bold.woff') format('woff');
+  unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-weight: bold;
+  src: url('fonts/Merriweather-Bold.woff2') format('woff2');
+  src: url('fonts/Merriweather-Bold.woff') format('woff');
+  unicode-range: U+0020-0027, U+0040-005A, U+005C, U+005E-007F;
+}
+
+/* Sans-serif */
+@font-face {
+  font-family: "MySansSerifFont";
+  font-style: normal;
+  src: url('fonts/NanumGothic-Regular.woff2') format('woff2');
+  src: url('fonts/NanumGothic-Regular.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: "MySansSerifFont";
+  font-weight: bold;
+  src: url('fonts/NanumGothic-Bold.woff2') format('woff2');
+  src: url('fonts/NanumGothic-Bold.woff') format('woff');
+}
+
+/* Emphasizing_font */
+@font-face {
+  font-family: "MyEmphFont";
+  font-style: normal;
+  src: url('fonts/NotoSansKR-Regular.woff2') format('woff2');
+  src: url('fonts/NotoSansKR-Regular.woff') format('woff');
+}
+
 /* system typefaces */
-$serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+$serif: "MySerifFont", Georgia, Times, serif !default;
+$sans-serif: "MySansSerifFont", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
@@ -29,7 +111,7 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $sans-serif !default;
+$global-font-family: $serif !default;
 $header-font-family: $sans-serif !default;
 $caption-font-family: $serif !default;
 
