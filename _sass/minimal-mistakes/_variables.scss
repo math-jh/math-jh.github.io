@@ -168,6 +168,15 @@ $info-color: #3b9cba !default;
 $focus-color: $primary-color !default;
 $active-color: mix(#fff, $primary-color, 80%) !default;
 
+/* Math notice colors */
+$definition-color: #b2dfdb !default;                              //  Teal 100
+$proposition-color: #c5cae9 !default;                             //  Indigo 100
+$proof-color: #cfd8dc !default;                                   //  Blue Grey 100
+$example-color: #c8e6c9 !default;                                 //  Green 100
+$remark-color: #f8bbd0 !default;                                  //  Pink 100
+$misc-color: #d4ccc8 !default;                                    //  Grey 400
+$spoiler-color: #ff4301 !default;
+
 /* YIQ color contrast */
 $yiq-contrasted-dark-default: $dark-gray !default;
 $yiq-contrasted-light-default: #fff !default;
