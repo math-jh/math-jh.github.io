@@ -17,7 +17,7 @@
 
 <!--두 번째 문단-->
 {% if prev_post or next_post %}
-  <nav class="pagination">
+  <nav class="pagination" style="margin-bottom:3em">
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
     {% else %}

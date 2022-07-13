@@ -436,17 +436,17 @@ body {
 }
 
 .page__comments-title {
-  margin-top: 2rem;
+  margin-top: .5rem;
   margin-bottom: 10px;
-  padding-top: 2rem;
+  padding-top: .5rem;
   font-size: $type-size-6;
-  border-top: 1px solid $border-color;
   text-transform: uppercase;
 }
 
 .page__comments-form {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+  background-color: $background-color;
 
   &.disabled {
     input,
