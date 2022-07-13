@@ -94,6 +94,14 @@ $indent-var: 1.3em !default;
   src: url('fonts/NotoSansKR-Regular.woff') format('woff');
 }
 
+/* Material Icons */
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  src: url('fonts/material-icons-sharp.woff2') format('woff2');
+  src: url('fonts/material-icons-sharp.woff') format('woff');
+}
+
 /* system typefaces */
 $serif: "MySerifFont", Georgia, Times, serif !default;
 $sans-serif: "MySansSerifFont", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
