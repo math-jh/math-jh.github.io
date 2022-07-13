@@ -12,6 +12,33 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  {% if site.multilingual %}
+    window.addEventListener('DOMContentLoaded', function(){
+      var origin = window.location.origin;
+      var newpathname = "";
+      var pathname = window.location.pathname.split('/');
+      if(!(pathname[1] == "en" || pathname[1] == "ko")){
+        document.getElementById('lang_container').style.display="none";
+      } else if (pathname[1] == "en") {
+        document.querySelector("#lang").checked=true;
+        var newlang="/ko"
+      } else if (pathname[1] == "ko") {
+        document.querySelector("#lang").checked=false;
+        var newlang="/en"
+      }
+      for (i = 2; i < pathname.length; i++) {
+        newpathname += "/";
+        newpathname += pathname[i];
+      }
+      var newurl = newlang + newpathname;
+      var http = new XMLHttpRequest();
+      http.open('HEAD', newurl, false);
+      http.send();
+      if (http.status == 404) {
+        document.getElementById('lang_container').style.display="none";
+      }
+    })
+  {% endif %}  
 </script>
 
 <!-- For all browsers -->
