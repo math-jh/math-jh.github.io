@@ -242,8 +242,8 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 4px;
-        background: $primary-color;
+        height: 2px;
+        background: #897a6e;
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
@@ -439,10 +439,19 @@
 
 .nav__list .nav__items {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  line-height: 1.2em;
+  color: mix($primary-color, #fff, 40%);
 
   a {
-    color: inherit;
+    color: mix($link-color, $background-color, 60%);
+    font-size: 0.95em;
+  }
+
+  a:hover {
+    color: $link-color;
+    font-size: 0.95em;
+    font-weight: bold;
   }
 
   .active {
@@ -451,6 +460,8 @@
     padding-right: 0.5em;
     font-weight: bold;
   }
+
+  &:hover{color: $text-color;}
 
   @include breakpoint(max-width $large - 1px) {
     position: relative;
