@@ -4,6 +4,12 @@
   {% assign feature_row = page.feature_row %}
 {% endif %}
 
+{% assign lang = site.locale %}
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+{% endif %}
+
 <div class="feature__wrapper">
 
   {% for f in feature_row %}
@@ -31,7 +37,7 @@
           {% endif %}
 
           {% if f.url %}
-            <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+            <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[lang].more_label | default: "Learn More" }}</a></p>
           {% endif %}
         </div>
       </div>

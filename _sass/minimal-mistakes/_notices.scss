@@ -72,6 +72,20 @@
   }
 }
 
+/* Personal */
+@mixin select($select-color) {
+  margin: 1vw 0 !important;  /* override*/
+  padding: 1vw;
+  color: $text-color;
+  font-family: $global-font-family;
+  font-size: $type-size-5 !important;
+  text-indent: initial; /* override*/
+  background-color: $select-color;
+  border: solid 2px mix(#000, $select-color, 10%);
+  border-radius: $border-radius;
+  box-shadow: 0 1px 1px rgba($select-color, 0.25);
+}
+
 /* Default notice */
 
 .notice {
@@ -108,23 +122,15 @@
   @include notice($danger-color);
 }
 
-/*
-   Math notice settings
-   ========================================================================== */
-
-/* Definition */
+/* Math notice settings */
 
 .definition {
   @include notice($definition-color);
 }
 
-/* Proposition */
-
 .proposition {
   @include notice($proposition-color);
 }
-
-/* Proofs */
 
 .proof {
   @include notice($proof-color);
@@ -139,26 +145,26 @@ summary {
   cursor: pointer;
 }
 
-/* Example */
-
 .example {
   @include notice($example-color);
 }
-
-/* Remark */
 
 .remark {
   @include notice($remark-color);
 }
 
-/* Misc */
-
 .misc {
   @include notice($misc-color);
 }
 
-/* Spoiler */
-
 .spoiler {
   @include notice($spoiler-color);
+}
+
+.lang {
+  @include select($lang-color);
+}
+
+.lang-list {
+  @include select($lang-list-color);
 }

@@ -43,7 +43,7 @@
     </div>
     
     <div class="comment__reply" style="border:none; margin-bottom:2em; margin-left:1em;">
-      <a rel="nofollow" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"><span class="material-icons md-14">&#xE5DA;</span>{{ include.name }}에게 답글 남기기</a>
+      <a rel="nofollow" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"><span class="material-icons md-14">&#xE5DA;</span> {{ reply_to_en | default: "Reply to " }}{{ include.name }}{{ reply_to_ko | default: " 에게 답글 남기기"}}</a>
     </div>
   
   {% endif %}  
