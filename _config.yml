@@ -166,7 +166,7 @@ exclude:
   - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
-  - assets/js/vendor
+  - assets/js/vendor/jquery/jquery-3.6.0.js
   - Capfile
   - CHANGELOG
   - config
@@ -288,3 +288,8 @@ defaults:
       comments: # true
       share: true
       related: true
+
+# Head scripts
+head_scripts:   
+  - /assets/js/vendor/jquery-min/jquery-3.6.0.min.js
+  - /assets/js/custom/HiddenTopButton.js
