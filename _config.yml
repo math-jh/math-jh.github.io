@@ -14,6 +14,9 @@
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+dark_theme               : true
+dark_skin                : "custom-dark"
+
 # Site Settings
 locale                   : "ko-KR"
 title                    : "수학쟁이의 낙서장"
@@ -292,4 +295,5 @@ defaults:
 # Head scripts
 head_scripts:   
   - /assets/js/vendor/jquery-min/jquery-3.6.0.min.js
+  - /assets/js/custom/Color_scheme.js
   - /assets/js/custom/HiddenTopButton.js
