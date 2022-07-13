@@ -1,0 +1,58 @@
+# 공개 저장소에 남는 파일이므로 일반적인 규칙만 둔다.
+# 로컬 전용 경로(초안·도구·자격증명 등)는 커밋되지 않는 .git/info/exclude 에 둔다.
+
+.DS_Store
+
+# Jekyll 빌드 산출물·캐시
+_site/
+.sass-cache/
+.jekyll-cache/
+*.jekyll-metadata
+
+# 홈 타일 — 빌드 때 scripts/generate-thumbnails.js 가 다시 굽는다
+assets/images/Pages/Thumbnails/Files/*.jpeg
+
+# Jekyll 초안
+_drafts/
+
+# 로컬 노트
+notes/
+
+# LaTeX 빌드 산출물
+*.aux
+*.log
+*.pdf
+*.dvi
+*.ps
+
+# 외부 reference 자료(PDF 등)는 assets/reference/ 아래에 두고 위 규칙을 덮어 whitelist 한다.
+!assets/reference/
+!assets/reference/**
+
+# 백업
+.backups/
+*.backup_*
+*.bak
+*.bak-*
+
+# Bundler — anchor to repo root. An unanchored `vendor/` matched EVERY vendor
+# dir at any depth, silently ignoring self-hosted libs under assets/js/vendor/
+# (force-graph.min.js 404'd in production this way, 2026-06-26). Only the
+# root-level Bundler vendor/bundle/ should be ignored.
+.bundle/
+/vendor/
+*.lock
+!Gemfile.lock
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+node_modules/
+
+# 에디터·도구 로컬 설정
+.vscode/
+.claude/
+CLAUDE.md
