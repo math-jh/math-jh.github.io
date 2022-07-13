@@ -1,6 +1,6 @@
 <!--첫 번째 문단-->
 {% assign cat = page.categories[0] %}
-{% assign cat_list = site.categories[cat] %}
+{% assign cat_list = site.categories[cat] | sort: 'weight' | reverse %}
 {% for post in cat_list %}
   {% if post.url == page.url %}
     {% assign prevIndex = forloop.index0 | minus: 1 %}
