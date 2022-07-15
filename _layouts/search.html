@@ -2,6 +2,12 @@
 layout: default
 ---
 
+{% assign lang = site.locale %}
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+{% endif %}
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% endif %}
@@ -25,11 +31,11 @@ layout: default
     {%- assign search_provider = site.search_provider | default: "lunr" -%}
     {%- case search_provider -%}
       {%- when "lunr" -%}
-        <input type="text" id="search" class="search-input" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+        <input type="text" id="search" class="search-input" placeholder="{{ site.data.ui-text[lang].search_placeholder_text | default: 'Enter your search term...' }}" />
         <div id="results" class="results"></div>
       {%- when "google" -%}
         <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
-        <input type="text" id="cse-search-input-box-id" class="search-input" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+        <input type="text" id="cse-search-input-box-id" class="search-input" placeholder="{{ site.data.ui-text[lang].search_placeholder_text | default: 'Enter your search term...' }}" />
         </form>
         <div id="results" class="results">
           <gcse:searchresults-only></gcse:searchresults-only>

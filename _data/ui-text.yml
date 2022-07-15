@@ -43,13 +43,16 @@ en: &DEFAULT_EN
   comment_btn_submit         : "Submit comment"
   comment_btn_submitted      : "Submitted"
   comment_success_msg        : "Thanks for your comment! It will show on the site once it has been approved."
-  comment_error_msg          : "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again."
+  comment_error_msg          : "Sorry, there was an error with your submission. Please make sure all required fields have been completed (including reCaptcha) and try again."
   loading_label              : "Loading..."
   search_label_text          : "Enter your search term..."
   search_placeholder_text    : "Enter your search term..."
   search_algolia_no_results  : "No results"
   results_found              : "Result(s) found"
   back_to_top                : "Back to top"
+  cancel_reply               : "Cancel reply"
+  reply_to_en                : "Reply to"
+  reply_to_ko                : ""
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -601,11 +604,11 @@ ko: &DEFAULT_KO
   page                       : "페이지"
   pagination_previous        : "이전"
   pagination_next            : "다음"
-  breadcrumb_home_label      : "Home"
+  breadcrumb_home_label      : "홈"
   breadcrumb_separator       : "/"
   menu_label                 : "토글 메뉴"
   search_label               :
-  toc_label                  : "On This Page"
+  toc_label                  : "목차"
   ext_link_label             : "직접 링크"
   less_than                  : "최대"
   minute_read                : "분 소요"
@@ -631,16 +634,19 @@ ko: &DEFAULT_KO
   comment_form_name_label    : "이름"
   comment_form_email_label   : "이메일"
   comment_form_website_label : "웹사이트(선택사항)"
-  comment_btn_submit         : "댓글 등록"
-  comment_btn_submitted      : "등록됨"
-  comment_success_msg        : "감사합니다! 댓글이 머지된 후 확인하실 수 있습니다."
-  comment_error_msg          : "댓글 등록에 문제가 있습니다. 필요 필드를 작성했는지 확인하고 다시 시도하세요."
+  comment_btn_submit         : "댓글 제출"
+  comment_btn_submitted      : "제출 완료"
+  comment_success_msg        : "댓글이 제출되었습니다. 댓글 검토에는 시간이 소요됩니다."
+  comment_error_msg          : "댓글 제출에 문제가 있습니다. 빠진 항목이 있는지, reCaptcha를 통과했는지 확인해주세요."
   loading_label              : "로딩중..."
   search_label_text          :
   search_placeholder_text    : "검색어를 입력하세요..."
   search_algolia_no_results  :
   results_found              : "개 결과 발견"
   back_to_top                : "맨 위로 이동"
+  cancel_reply               : "답글 취소"
+  reply_to_en                : ""
+  reply_to_ko                : "에게 답글 남기기"
 ko-KR:
   <<: *DEFAULT_KO
 

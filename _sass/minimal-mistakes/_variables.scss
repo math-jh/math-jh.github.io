@@ -12,9 +12,99 @@ $doc-font-size: 16 !default;
 $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
+/* Serif*/
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: normal;
+  src: url('fonts/MaruBuri-Regular.woff2') format('woff2');
+  src: url('fonts/MaruBuri-Regular.woff') format('woff');
+  unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: normal;
+  src: url('fonts/Merriweather-Light.woff2') format('woff2');
+  src: url('fonts/Merriweather-Light.woff') format('woff');
+  unicode-range: U+0020-0027, U+0040-005A, U+005C, U+005E-007F;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: italic;
+  src: url('fonts/Hahmlet-Medium.woff2') format('woff2');
+  src: url('fonts/Hahmlet-Medium.woff') format('woff');
+  unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: italic;
+  src: url('fonts/Merriweather-Regular.woff2') format('woff2');
+  src: url('fonts/Merriweather-Regular.woff') format('woff');
+  unicode-range:U+0028-0029;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: italic;
+  src: url('fonts/Merriweather-Italic.woff2') format('woff2');
+  src: url('fonts/Merriweather-Italic.woff') format('woff');
+  unicode-range: U+0020-0027, U+0040-005A, U+005C, U+005E-007F;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-weight: bold;
+  src: url('fonts/Maruburi-Bold.woff2') format('woff2');
+  src: url('fonts/Maruburi-Bold.woff') format('woff');
+  unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-weight: bold;
+  src: url('fonts/Merriweather-Bold.woff2') format('woff2');
+  src: url('fonts/Merriweather-Bold.woff') format('woff');
+  unicode-range: U+0020-0027, U+0040-005A, U+005C, U+005E-007F;
+}
+
+/* Sans-serif */
+@font-face {
+  font-family: "MySansSerifFont";
+  font-style: normal;
+  src: url('fonts/NanumGothic-Regular.woff2') format('woff2');
+  src: url('fonts/NanumGothic-Regular.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: "MySansSerifFont";
+  font-weight: bold;
+  src: url('fonts/NanumGothic-Bold.woff2') format('woff2');
+  src: url('fonts/NanumGothic-Bold.woff') format('woff');
+}
+
+/* Emphasizing_font */
+@font-face {
+  font-family: "MyEmphFont";
+  font-style: normal;
+  src: url('fonts/NotoSansKR-Regular.woff2') format('woff2');
+  src: url('fonts/NotoSansKR-Regular.woff') format('woff');
+}
+
+/* Material Icons */
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  src: url('fonts/material-icons-sharp.woff2') format('woff2');
+  src: url('fonts/material-icons-sharp.woff') format('woff');
+}
+
 /* system typefaces */
-$serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+$serif: "MySerifFont", Georgia, Times, serif !default;
+$sans-serif: "MySansSerifFont", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
@@ -29,7 +119,7 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $sans-serif !default;
+$global-font-family: $serif !default;
 $header-font-family: $sans-serif !default;
 $caption-font-family: $serif !default;
 
@@ -77,6 +167,19 @@ $danger-color: #ee5f5b !default;
 $info-color: #3b9cba !default;
 $focus-color: $primary-color !default;
 $active-color: mix(#fff, $primary-color, 80%) !default;
+
+/* Math notice colors */
+$definition-color: #b2dfdb !default;                              //  Teal 100
+$proposition-color: #c5cae9 !default;                             //  Indigo 100
+$proof-color: #cfd8dc !default;                                   //  Blue Grey 100
+$example-color: #c8e6c9 !default;                                 //  Green 100
+$remark-color: #f8bbd0 !default;                                  //  Pink 100
+$misc-color: #d4ccc8 !default;                                    //  Grey 400
+$spoiler-color: #ff4301 !default;
+
+/* Language selection colors */
+$lang-color: #afc7f4 !default;
+$lang-list-color: #d7e3f9 !default;
 
 /* YIQ color contrast */
 $yiq-contrasted-dark-default: $dark-gray !default;
@@ -156,8 +259,8 @@ $max-width: $x-large !default;
    ========================================================================== */
 
 $right-sidebar-width-narrow: 200px !default;
-$right-sidebar-width: 300px !default;
-$right-sidebar-width-wide: 400px !default;
+$right-sidebar-width: 200px !default;
+$right-sidebar-width-wide: 250px !default;
 
 /*
    Other
@@ -171,3 +274,5 @@ $navicon-width: 1.5rem !default;
 $navicon-height: 0.25rem !default;
 $global-transition: all 0.2s ease-in-out !default;
 $intro-transition: intro 0.3s both !default;
+
+.katex { font-size: 1em !important; }

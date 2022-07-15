@@ -261,6 +261,12 @@ select:focus {
   border-width: 0;
 }
 
+.form-group input,
+.form-group textarea {
+  background-color: mix($background-color, $text-color, 95%);
+  color: $text-color;
+}
+
 /*
      .form-inline
      ========================================================================== */
@@ -338,16 +344,6 @@ select:focus {
 
 .form--loading .form__spinner {
   display: block;
-}
-
-.form:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 10;
 }
 
 .form__spinner {

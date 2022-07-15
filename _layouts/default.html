@@ -8,13 +8,54 @@
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+
+{% assign lang = site.locale %}
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+{% endif %}
+
+<html lang="{{ lang | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <style>
+      .switch input[type="checkbox"],
+      .switch .checked {
+        display: none;
+      }
+      .switch input[type="checkbox"]:checked ~ .checked
+      {
+        display: inline-block;
+      }
+      .switch input[type="checkbox"]:checked ~ .unchecked
+      {
+        display: none;
+      }
+      label[for="toggle_dark_theme"] {
+        position: relative;
+        top: .15em;
+      }
+      .vl {
+        border-left: 2px solid white;
+        height: 1em;
+      }
+      body::-webkit-scrollbar{width: 16px;}
+      body::-webkit-scrollbar-track {background-color:#071734;}
+      body::-webkit-scrollbar-thumb:hover {background: #a9874a; background-clip: padding-box; border: 2px solid transparent}
+      .sidebar.sticky::-webkit-scrollbar{width: 6px}
+      .sidebar.sticky::-webkit-scrollbar-track{display: none}
+      .sidebar.sticky::-webkit-scrollbar-thumb:hover {background: #071734; background-clip: padding-box; border: 1px solid transparent}
+      .toc__menu::-webkit-scrollbar{width: 6px}
+      .toc__menu::-webkit-scrollbar-track{display: none}
+      .toc__menu::-webkit-scrollbar-thumb:hover {background: #071734; background-clip: padding-box; border: 1px solid transparent}
+    </style>
+    <style id="scrollbar-color">
+
+    </style>
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" onload="darkmode(), scrollbar()">
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
 
@@ -29,6 +70,14 @@
     {% endif %}
 
     <div id="footer" class="page__footer">
+      <aside class="sidebar__top">
+        <div style="text-align: center; width: 50px">
+          <a href="#site-nav" class="top_button"> <i class="material-icons" style="color: #a9874a">&#xE5D8;</i></a>
+          {% if page.id %}
+            <p style="font-size:12px; color: #a9874a; font-family: sans-serif"><span id="percent">0</span>%</p>
+          {% endif %}
+        </div>
+      </aside>
       <footer>
         {% include footer/custom.html %}
         {% include_cached footer.html %}

@@ -2,18 +2,29 @@
   {% when "liquid" %}
     {% assign path_type = "#" %}
   {% when "jekyll-archives" %}
-    {% assign path_type = nil %}
+    {% assign path_type = "#" %}
 {% endcase %}
+
+{% assign lang = site.locale %}
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+{% endif %}
 
 {% if site.category_archive.path %}
   {% assign categories_sorted = page.categories | sort_natural %}
-
   <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }} </strong>
+    <strong><i class="material-icons md-14" aria-hidden="true" style="vertical-align: -.1em;">&#xE2C8;</i> {{ site.data.ui-text[lang].categories_label | default: "Categories:" }} </strong>
     <span itemprop="keywords">
-    {% for category_word in categories_sorted %}
-      <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
-    {% endfor %}
+    {% if site.multilingual %}
+       {% for category_word in categories_sorted %}
+         <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | prepend: lang_prefix | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+       {% endfor %}
+    {% else %}
+      {% for category_word in categories_sorted %}
+        <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+      {% endfor %}
+    {% endif %}
     </span>
   </p>
 {% endif %}
