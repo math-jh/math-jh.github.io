@@ -3,8 +3,6 @@
 title: "집합의 합"
 excerpt: "집합들 사이의 합 (분리합집합)"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/sum_of_sets
 header:

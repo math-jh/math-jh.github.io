@@ -2,8 +2,6 @@
 title: "몫위상"
 excerpt: "몫공간과 몫사상"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/quotient_topology
 header:

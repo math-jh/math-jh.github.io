@@ -3,8 +3,6 @@
 title: "순서집합의 원소들"
 excerpt: "순서집합의 최대, 최소, 극대, 극소 원소들"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/order_relations_2
 header:

@@ -3,10 +3,10 @@
 title: "맨 위로 버튼 만들기"
 excerpt: "맨 위로 버튼 만들기, 숨기기"
 
-lang: ko
+read_time: false
 
 categories: [Blog development]
-permalink: /blog_dev/back_to_top
+permalink: /ko/blog_dev/back_to_top
 
 sidebar: 
     nav: "dev"
@@ -16,6 +16,9 @@ last_modified_at: 2022-07-10
 weight: 9
 
 ---
+
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/73b6bfc9acf569e8befbf2768d0fa11a0b370389)
+{: .notice--info}
 
 ## 목표
 
@@ -135,3 +138,9 @@ head_scripts:
 를 추가하여, 사이트가 로드될 때 이 두 javascript가 같이 로드되도록 설정해준다.
 
 이렇게 하면 jQuery가 `head_scripts`에서 한 번, `main.min.js`에서 다시 한 번 불러져서 쓸데없이 두 번 불러진다는 문제가 있지만 `minimal-mistakes`의 어떤 부분에서 jQuery가 필요한지를 모두 아는 게 아니다보니 이 방법이 가장 안전하다고 생각했다.
+
+---
+
+**참고자료**
+
+맨 위로 버튼을 만드는 것은 위에서 달아둔 것과 같이 [이 글](https://masunii.github.io/blog_custom/top_button/)을, 그리고 자동으로 숨기는 기능은 stack exchange의 이 [질문글](https://stackoverflow.com/questions/41021611/how-to-show-divs-when-the-mouse-moves-anywhere-on-screen-not-just-the-element-i)을 참고하였다.

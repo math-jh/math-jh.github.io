@@ -3,8 +3,6 @@
 title: "필터와 아이디얼, 갈루아 대응"
 excerpt: "Filter와 ideal"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/order_relations_3
 header:

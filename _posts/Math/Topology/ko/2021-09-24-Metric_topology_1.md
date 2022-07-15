@@ -2,8 +2,6 @@
 title: "거리위상 (1)"
 excerpt: "순서위상과 거리위상"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/metric_topology_1
 header:
