@@ -3,8 +3,6 @@
 title: "부분다양체와 역함수 정리"
 excerpt: "미분다양체의 부분구조"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/submanifolds
 header:

@@ -3,8 +3,6 @@
 title: "수열의 수렴"
 excerpt: "기본정의 3: 수열의 수렴"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/basic_definition_3
 header:

@@ -3,8 +3,6 @@
 title: "기수"
 excerpt: "Cardinal number의 정의"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/cardinals
 header:
