@@ -3,10 +3,10 @@
 title: "Jekyll 블로그 커스터마이징"
 excerpt: "본문 너비 늘리기, 파비콘 적용, 머티리얼 아이콘 적용"
 
-lang: ko
+read_time: false
 
 categories: [Blog development]
-permalink: /blog_dev/personalization
+permalink: /ko/blog_dev/personalization
 
 sidebar: 
     nav: "dev"
@@ -16,6 +16,9 @@ last_modified_at: 2022-07-09
 weight: 8
 
 ---
+
+관련 커밋: [링크 1](https://github.com/math-jh/math-jh.github.io/commit/52533f6a305698a54de1f74971d733e5e7d59b72), [링크 2](https://github.com/math-jh/math-jh.github.io/commit/78122756009023af2a8016215e1926b198801f08)
+{: .notice--info}
 
 Minimal-mistakes 테마의 가장 큰 장점 중 하나는 기본 테마가 깔끔해서 이리저리 수정하기 좋은 것이라 생각한다. 이 글에서는 내 블로그에서 적용된 여러 변경점들을 정리해두었다. 
 
@@ -171,4 +174,3 @@ Minimal-mistakes 테마는 사이트의 각 아이콘을 [Font Awesome](https://
 3. 이후 사이트에서 font awesome 폰트를 사용하는 곳을 모두 찾아 적절한 아이콘으로 바꿔준다. 
 
 
-[^1]: 실험 결과, 위의 색상들이 없으면 오류는 생기지 않지만 색상 없는 박스가 출력되는 것을 확인했다.

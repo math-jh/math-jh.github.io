@@ -3,8 +3,6 @@
 title: "미분형식"
 excerpt: "Differential form"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/differential_forms
 header:

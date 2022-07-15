@@ -3,8 +3,6 @@
 title: "정렬집합의 성질들<sup>†</sup>"
 excerpt: "Ordinal의 정의와 정렬집합의 성질들"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/well_ordering
 header:

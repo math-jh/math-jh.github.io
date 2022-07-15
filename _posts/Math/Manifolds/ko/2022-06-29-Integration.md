@@ -3,8 +3,6 @@
 title: "적분"
 excerpt: "Manifold 위에서의 적분"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/Integration
 header:
