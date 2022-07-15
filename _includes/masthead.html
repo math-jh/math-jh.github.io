@@ -4,13 +4,38 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
-        {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">
-          {{ site.masthead_title | default: site.title }}
-          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
-        </a>
+        {% if site.multilingual %}
+          {% unless logo_path == empty %}
+            <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          {% endunless %}
+          <div class="site-title" onclick="lang_home()" style="cursor:pointer; color:#ccc">
+            {{ site.masthead_title | default: site.title }}
+          </div>
+        {% else %}
+          {% unless logo_path == empty %}
+            <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          {% endunless %}
+          <a class="site-title" href="{{ '/' | relative_url }}">
+            {{ site.masthead_title | default: site.title }}
+            {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+          </a>
+        {% endif %}
+        <div style="margin-left: 10px; border: 2px solid #555; border-radius:10px; background-color:#222; {% unless site.dark_theme or site.multilingual %} display: none; {% endunless %}">
+          {% if site.dark_theme %}
+            <label class="switch" for="toggle_dark_theme" style="color:#bbb; font-size:1em; display:inline; margin-left:5px; margin-right:5px">
+                <input type="checkbox" id="toggle_dark_theme" onclick="scrollbar()"/>
+                <span class="material-icons md-16 unchecked" style="color:#ffbb9a">&#xE518;</span>
+                <span class="material-icons md-16 checked" style="color:#ffeabc">&#xE51C;</span>
+            </label>
+          {% endif %}
+          {% if site.multilingual %}
+            <label class="switch" for="lang" style="color:#bbb; font-size:1em; display:inline; margin-right:5px; padding-left:3px; margin-left:{% if site.dark_theme %}-5px{% else %}5px{% endif %}; {% if site.dark_theme %}border-left: 2px solid #555{% endif %}" id="lang_container">
+                <input type="checkbox" id="lang" onclick="lang_select()"/>
+                <span class="checked" style="color:#a9874a">en</span>
+                <span class="unchecked" style="color:#a9874a">ko</span>
+            </label>
+          {% endif %}
+        </div>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
@@ -21,7 +46,7 @@
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="fas fa-search"></i>
+          <i class="material-icons md-24" style="vertical-align:-.2em;">&#xE8B6;</i>
         </button>
         {% endif %}
         <button class="greedy-nav__toggle hidden" type="button">
