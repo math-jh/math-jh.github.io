@@ -3,8 +3,6 @@
 title: "리 군"
 excerpt: "Differential form"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/Lie_groups
 header:

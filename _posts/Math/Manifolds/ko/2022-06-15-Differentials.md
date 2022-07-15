@@ -3,8 +3,6 @@
 title: "미분사상"
 excerpt: "두 접공간 사이의 미분사상"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/differentials
 header:

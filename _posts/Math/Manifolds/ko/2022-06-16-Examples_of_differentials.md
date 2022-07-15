@@ -3,8 +3,6 @@
 title: "미분사상의 예시들"
 excerpt: "매끈한 함수와 미분사상의 예시들"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/examples_of_differentials
 header:

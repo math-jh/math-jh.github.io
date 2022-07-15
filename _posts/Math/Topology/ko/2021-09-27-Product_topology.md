@@ -2,8 +2,6 @@
 title: "곱위상"
 excerpt: "위상공간의 product"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/product_topology
 header:

@@ -3,8 +3,6 @@
 title: "ZFC 공리계"
 excerpt: "집합론의 공리들"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/zfc_axioms
 header:

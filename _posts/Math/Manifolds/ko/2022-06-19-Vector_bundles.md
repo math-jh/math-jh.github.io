@@ -3,8 +3,6 @@
 title: "벡터다발"
 excerpt: "Vector bundle, tangent bundle, cotangent bundle"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/vector_bundles
 header:
