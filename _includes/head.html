@@ -1,3 +1,4 @@
+<meta name="theme-color" content="#071734">
 <meta charset="utf-8">
 
 {% include seo.html %}
@@ -11,10 +12,41 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  {% if site.multilingual %}
+    window.addEventListener('DOMContentLoaded', function(){
+      var origin = window.location.origin;
+      var newpathname = "";
+      var pathname = window.location.pathname.split('/');
+      if(!(pathname[1] == "en" || pathname[1] == "ko")){
+        document.getElementById('lang_container').style.display="none";
+      } else if (pathname[1] == "en") {
+        document.querySelector("#lang").checked=true;
+        var newlang="/ko"
+      } else if (pathname[1] == "ko") {
+        document.querySelector("#lang").checked=false;
+        var newlang="/en"
+      }
+      for (i = 2; i < pathname.length; i++) {
+        newpathname += "/";
+        newpathname += pathname[i];
+      }
+      var newurl = newlang + newpathname;
+      var http = new XMLHttpRequest();
+      http.open('HEAD', newurl, false);
+      http.send();
+      if (http.status == 404) {
+        document.getElementById('lang_container').style.display="none";
+      }
+    })
+  {% endif %}  
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+{% if site.dark_theme %}
+  <link rel="stylesheet" href="/assets/css/main_dark.css">
+{% endif %}
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 

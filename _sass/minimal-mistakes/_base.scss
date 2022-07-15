@@ -70,7 +70,10 @@ p {
 u,
 ins {
   text-decoration: none;
-  border-bottom: 1px solid $text-color;
+  border-bottom: 2px solid $text-color;
+  margin-right: 1em;
+  padding-left: .1em;
+  padding-right: .1em;
   a {
     color: inherit;
   }
@@ -79,6 +82,75 @@ ins {
 del a {
   color: inherit;
 }
+
+/* Personal settings */
+
+sub {
+    font-size: .6em;
+    color: #9e9e9e;
+}
+
+summary {
+    font-style: italic;
+}
+
+em_ko {
+  font-family: "MyEmphFont";
+  font-size: 1.05em;
+  vertical-align: -.1em;
+}
+
+cap {
+  display: block;
+  font-size: .8em;
+  color: $muted-text-color;
+  margin: auto;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+/* Material icons */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-10 { font-size: 10px; }
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
 /* reduce orphans and widows when printing */
 
@@ -107,12 +179,12 @@ abbr[data-original-title] {
 /* blockquotes */
 
 blockquote {
-  margin: 2em 1em 2em 0;
-  padding-left: 1em;
+    margin: 2em .5em 2em 0;
+  padding-left: .75em;
   padding-right: 1em;
-  font-style: italic;
+  font-size: 90%;
+  font-family: MySerifFont;
   border-left: 0.25em solid $primary-color;
-
   cite {
     font-style: italic;
 
@@ -126,6 +198,9 @@ blockquote {
 /* links */
 
 a {
+
+  text-decoration: none;
+
   &:focus {
     @extend %tab-focus;
   }

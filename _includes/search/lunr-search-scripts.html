@@ -1,4 +1,10 @@
 {% assign lang = site.locale | slice: 0,2 | default: "en" %}
+
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+{% endif %}
+
 {% case lang %}
 {% when "gr" %}
   {% assign lang = "gr" %}
