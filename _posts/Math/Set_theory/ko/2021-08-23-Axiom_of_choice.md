@@ -3,8 +3,6 @@
 title: "선택공리"
 excerpt: "선택공리와 동치들, 서수들의 순서관계 마무리"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/axiom_of_choice
 header:

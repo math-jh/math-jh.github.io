@@ -3,8 +3,6 @@
 title: "위상공간과 수렴<sup>†</sup>"
 excerpt: "Closure axiom, Filter, "
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/convergence
 header:

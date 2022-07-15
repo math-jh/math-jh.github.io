@@ -3,8 +3,6 @@
 title: "벡터장"
 excerpt: "Vector fields"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/vector_fields
 header:

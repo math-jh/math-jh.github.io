@@ -2,11 +2,10 @@
 
 title: "Github pages와 Jekyll"
 excerpt: "Jekyll과 티스토리, 네이버 블로그"
-
-lang: ko
+read_time: false
 
 categories: [Blog development]
-permalink: /blog_dev/introduction
+permalink: /ko/blog_dev/introduction
 
 sidebar: 
     nav: "dev"

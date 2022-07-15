@@ -3,8 +3,6 @@
 title: "Diagram chasing"
 excerpt: "기본정의"
 
-lang: ko
-
 categories: [Math / Homology]
 permalink: /ko/math/homology/diagram_chasing
 header:

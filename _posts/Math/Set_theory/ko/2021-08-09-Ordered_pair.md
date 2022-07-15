@@ -2,8 +2,6 @@
 title: "순서쌍"
 excerpt: "집합의 포함관계와 순서쌍의 정의"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/ordered_pair
 header:

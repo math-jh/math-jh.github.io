@@ -3,8 +3,6 @@
 title: "Initial and final topology<sup>†</sup>"
 excerpt: "Initial topology와 final topology"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/initial_and_final_topology
 header:

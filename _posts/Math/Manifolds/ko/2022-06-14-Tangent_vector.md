@@ -3,8 +3,6 @@
 title: "접공간"
 excerpt: "접벡터와 접공간"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/tangent_space
 header:

@@ -3,8 +3,6 @@
 title: "리 군과 리 대수"
 excerpt: "Differential form"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/Lie_groups_and_Lie_algebras
 header:

@@ -3,8 +3,6 @@
 title: "기본군"
 excerpt: "Fundamental group"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/fundamental_group
 header:

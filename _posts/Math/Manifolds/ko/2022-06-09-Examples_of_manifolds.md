@@ -3,8 +3,6 @@
 title: "미분다양체의 예시들"
 excerpt: "미분다양체의 다양한 예시들"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/examples_of_manifolds
 header:

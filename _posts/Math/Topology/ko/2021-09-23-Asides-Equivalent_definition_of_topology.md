@@ -3,8 +3,6 @@
 title: "위상공간의 다른 정의들<sup>†</sup>"
 excerpt: "Closure axiom, Filter, "
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/equivalent_definition_of_topology
 header:

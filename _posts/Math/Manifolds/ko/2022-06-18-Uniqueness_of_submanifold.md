@@ -3,8 +3,6 @@
 title: "부분다양체의 유일성"
 excerpt: "Embedded submanifold의 유일성"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/uniqueness_of_submanifold
 header:
