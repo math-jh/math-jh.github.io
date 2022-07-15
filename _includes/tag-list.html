@@ -5,11 +5,17 @@
     {% assign path_type = nil %}
 {% endcase %}
 
+{% assign lang = site.locale %}
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+{% endif %}
+
 {% if site.tag_archive.path %}
   {% assign tags_sorted = page.tags | sort_natural %}
 
   <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].tags_label | default: "Tags:" }} </strong>
+    <strong><i class="material-icons md-14" aria-hidden="true" style="vertical-align:-.1em">&#xE41D;</i> {{ site.data.ui-text[lang].tags_label | default: "Tags:" }} </strong>
     <span itemprop="keywords">
     {% for tag_word in tags_sorted %}
       <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}

@@ -177,7 +177,7 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background: $background-color;
+  background: $footer-background-color;
 
   a {
     display: block;
@@ -242,8 +242,8 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 4px;
-        background: $primary-color;
+        height: 2px;
+        background: #897a6e;
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
@@ -439,10 +439,19 @@
 
 .nav__list .nav__items {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  line-height: 1.2em;
+  color: mix($primary-color, #fff, 40%);
 
   a {
-    color: inherit;
+    color: mix($link-color, $background-color, 60%);
+    font-size: 0.95em;
+  }
+
+  a:hover {
+    color: $link-color;
+    font-size: 0.95em;
+    font-weight: bold;
   }
 
   .active {
@@ -451,6 +460,8 @@
     padding-right: 0.5em;
     font-weight: bold;
   }
+
+  &:hover{color: $text-color;}
 
   @include breakpoint(max-width $large - 1px) {
     position: relative;
@@ -507,22 +518,16 @@
   font-family: $sans-serif-narrow;
   color: $gray;
   background-color: $background-color;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
 
   .nav__title {
-    color: #fff;
+    color: $highlight-color;
     font-size: $type-size-6;
-    background: $primary-color;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+    background: $background-color;
   }
 
   // Scrollspy marks toc items as .active when they are in focus
   .active a {
-    @include yiq-contrasted($active-color);
+    @include yiq-contrasted($background-color);
   }
 }
 
@@ -540,10 +545,9 @@
   a {
     display: block;
     padding: 0.25rem 0.75rem;
-    color: $muted-text-color;
+    color: mix($gray, $background-color, 20%);
     font-weight: bold;
     line-height: 1.5;
-    border-bottom: 1px solid $border-color;
 
     &:hover {
       color: $text-color;
