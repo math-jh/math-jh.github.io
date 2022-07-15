@@ -3,8 +3,6 @@
 title: "미분다양체"
 excerpt: "Smooth manifold의 정의"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/smooth_manifolds
 header:

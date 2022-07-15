@@ -3,8 +3,6 @@
 title: "피복공간"
 excerpt: "Covering space"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/covering_spaces
 header:

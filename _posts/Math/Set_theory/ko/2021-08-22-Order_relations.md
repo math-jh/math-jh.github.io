@@ -3,8 +3,6 @@
 title: "순서관계의 정의"
 excerpt: "순서관계의 정의와 성질들"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/order_relations_1
 header:

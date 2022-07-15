@@ -2,8 +2,6 @@
 title: "부분공간"
 excerpt: "위상공간의 부분공간"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/subspace_topology
 header:

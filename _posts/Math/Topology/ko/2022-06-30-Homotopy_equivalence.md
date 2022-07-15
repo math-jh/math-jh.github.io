@@ -3,8 +3,6 @@
 title: "Homotopy equivalence"
 excerpt: "Fundamental group"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/Homotopy_equivalence
 header:
