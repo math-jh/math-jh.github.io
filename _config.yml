@@ -12,25 +12,30 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+dark_theme               : true
+dark_skin                : "custom-dark"
+
+multilingual             : true
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
+locale                   : "ko-KR"
+title                    : "수학쟁이의 낙서장"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Junhyeok Kim"
+description              : "수학쟁이의 낙서장"
+url                      : "https://math-jh.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "math-jh/math-jh.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -51,31 +56,31 @@ comments:
     reactions_enabled    : # '1' for enabled (default), '0' for disabled
     theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
   staticman:
-    branch               : # "master"
-    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+    branch               : "main" # "master"
+    endpoint             : "https://math-jh-staticman.herokuapp.com/v2/entry/" # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
-  siteKey                :
-  secret                 :
+  siteKey                : "6LeiUpkgAAAAAN3VR6VD-g9b10-yf2r8DjRmfiVZ"
+  secret                 : "AE8k5EQKTRnYyp/vpHoMUhAH/YVkzv36tfI+ZZZ2N5c/pFI7Afio0TQfD/FJdDUOpJ8UH+n5K1x7Yeqc5tbcfG20rpKpWCXTiehLJSqiMixuj12oPGzg7iD4Qecehc9o02vSk6pRS/lCAoxuO2GU9zTs8EyKYSqgCkLIKEzoZDnnVJKvpWoPhhpqmaogaYG0AvuLyoKwDoN1C8EwZlGg69btCtVgtcIWgCscVb4eOlc/TH+b3FbKAn2XfLlRmRaDhGpsAl9HMWoIFURnqQ4ZDkcD3S6H9tGNrJd1uUtsWuhnXz7iz5nvg2Z82aWqOD8hqAaCH/jLpKWFNJiFVGqjgzVmxn665k9NCGmPx7rFPUkmQN8MFjJi1WO+w1WmUTdf0N6+A253f9Ls5ZKqJHRsoXDubd9c9bTuFI1YmaTiXiU45vJXMQRTgqO2XgWSbIANigWC4fQXa6D42pFZMVlOs9zjQ2dww84hMfNjqA1djAGf7C4oWBMNZqzyDiPbWvwBFZ1MQqSBq1SWrrrxF1l501U9GrYaOpgFlKBm0d1l4BE5Wft176EOzkyGGvgzhKfWMDla8CrOAQD8Qglpz3chIMAVTXucCIjvK74yNuNloZsXcGqGaFQguNsa9EhiAhWwviHFQmVCcxOl2bbMuc1QN0qsQC1TO1J0cQs9kbfWd8c="
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : algolia # lunr (default), algolia, google
 lunr:
   search_within_pages    : # true, false (default)
 algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
+  application_id         : 919RU1KVX3 # YOUR_APPLICATION_ID
+  index_name             : math-jh_blog # YOUR_INDEX_NAME
+  search_only_api_key    : cf2a0afdacacf7bc3328a49c5f755203 # YOUR_SEARCH_ONLY_API_KEY
+  powered_by             : false # true (default), false
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : "D1SY1jalQEE3sKKJjj1KWASZwCSTFRApCluC9Bmdpqo"
 bing_site_verification   :
-naver_site_verification  :
+naver_site_verification  : "4eb7cd46f1bd3875a2c91482087ea23d615353c7"
 yandex_site_verification :
 baidu_site_verification  :
 
@@ -96,19 +101,19 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "G-T026KQ802B"
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  name             : "MathHolic"
+  avatar           : /assets/images/Octahedral.jpeg
+  bio              : "Grad. student in mathematics"
+  location         : "Seoul, Korea"
+  email            : "kujuburi@icloud.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -140,7 +145,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/math-jh"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -166,7 +171,7 @@ exclude:
   - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
-  - assets/js/vendor
+  - assets/js/vendor/jquery/jquery-3.6.0.js
   - Capfile
   - CHANGELOG
   - config
@@ -181,8 +186,6 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
   - .svn
@@ -208,7 +211,7 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
+  math_engine: katex
 
 # Sass/SCSS
 sass:
@@ -217,9 +220,9 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+# permalink: /:categories/:title/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
@@ -253,9 +256,9 @@ whitelist:
 category_archive:
   type: liquid
   path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+# tag_archive:
+#   type: liquid
+#   path: /tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
@@ -287,6 +290,16 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      show_date: true
+      toc: true
+      toc_sticky: true
+      comments: true
       share: true
-      related: true
+
+# Head scripts
+head_scripts:   
+  - /assets/js/vendor/jquery-min/jquery-3.6.0.min.js
+  - /assets/js/custom/Color_scheme.js
+  - /assets/js/custom/HiddenTopButton.js
+  - /assets/js/custom/Comments.js
+  - /assets/js/custom/Multilingual.js
