@@ -11,11 +11,11 @@
  */
 
 @mixin notice($notice-color) {
-  margin: 2em 0 !important;  /* override*/
+  margin: 1em 0 !important;  /* override*/
   padding: 1em;
   color: $text-color;
   font-family: $global-font-family;
-  font-size: $type-size-6 !important;
+  font-size: $type-size-5 !important;
   text-indent: initial; /* override*/
   background-color: mix($background-color, $notice-color, $notice-background-mix);
   border-radius: $border-radius;
@@ -46,10 +46,10 @@
   }
 
   a {
-    color: mix(#000, $notice-color, 10%);
+    color: $link-color;
 
     &:hover {
-      color: mix(#000, $notice-color, 50%);
+      color: mix($link-color, $notice-color, 50%);
     }
   }
 
@@ -70,6 +70,20 @@
       margin-bottom: 0; /* override*/
     }
   }
+}
+
+/* Personal */
+@mixin select($select-color) {
+  margin: 1vw 0 !important;  /* override*/
+  padding: 1vw;
+  color: $text-color;
+  font-family: $global-font-family;
+  font-size: $type-size-5 !important;
+  text-indent: initial; /* override*/
+  background-color: $select-color;
+  border: solid 2px mix(#000, $select-color, 10%);
+  border-radius: $border-radius;
+  box-shadow: 0 1px 1px rgba($select-color, 0.25);
 }
 
 /* Default notice */
@@ -106,4 +120,51 @@
 
 .notice--danger {
   @include notice($danger-color);
+}
+
+/* Math notice settings */
+
+.definition {
+  @include notice($definition-color);
+}
+
+.proposition {
+  @include notice($proposition-color);
+}
+
+.proof {
+  @include notice($proof-color);
+  margin-top: -.5em !important;
+}
+
+.proof--alone {
+  @include notice($proof-color);
+}
+
+summary {
+  cursor: pointer;
+}
+
+.example {
+  @include notice($example-color);
+}
+
+.remark {
+  @include notice($remark-color);
+}
+
+.misc {
+  @include notice($misc-color);
+}
+
+.spoiler {
+  @include notice($spoiler-color);
+}
+
+.lang {
+  @include select($lang-color);
+}
+
+.lang-list {
+  @include select($lang-list-color);
 }
