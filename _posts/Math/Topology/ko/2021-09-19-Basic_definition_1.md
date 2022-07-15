@@ -3,8 +3,6 @@
 title: "열린집합과 닫힌집합"
 excerpt: "기본정의 1: 열린집합과 닫힌집합"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/basic_definition_1
 header:

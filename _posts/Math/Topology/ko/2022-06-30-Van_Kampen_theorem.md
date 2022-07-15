@@ -3,8 +3,6 @@
 title: "반 캄펜 정리"
 excerpt: "Fundamental group"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/Van_Kampen_theorem
 header:

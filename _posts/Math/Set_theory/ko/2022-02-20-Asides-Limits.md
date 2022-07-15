@@ -3,8 +3,6 @@
 title: "극한<sup>†</sup>"
 excerpt: "Inverse limit과 direct limit"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/limits
 header:

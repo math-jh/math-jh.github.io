@@ -3,8 +3,6 @@
 title: "위상다양체"
 excerpt: "위상다양체와 partition of unity"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/topological_manifolds
 header:

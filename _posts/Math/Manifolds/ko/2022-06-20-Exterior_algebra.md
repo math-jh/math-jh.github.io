@@ -3,8 +3,6 @@
 title: "외대수"
 excerpt: "Exterior algebra"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/exterior_algebra
 header:

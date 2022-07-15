@@ -3,7 +3,6 @@
 title: "ZFC axioms"
 excerpt: "Axioms of the set theory"
 
-lang: en
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/zfc_axioms
 header:

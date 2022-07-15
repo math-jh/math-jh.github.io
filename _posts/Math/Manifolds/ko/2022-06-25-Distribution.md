@@ -3,8 +3,6 @@
 title: "Distribution"
 excerpt: "Examples of Lie group and Lie groups"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/distribution
 header:

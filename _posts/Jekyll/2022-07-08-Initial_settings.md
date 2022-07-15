@@ -3,10 +3,10 @@
 title: "Minimal mistakes 테마의 기본 설정"
 excerpt: "Minimal-mistakes 초기 설정"
 
-lang: ko
+read_time: false
 
 categories: [Blog development]
-permalink: /blog_dev/initial_settings
+permalink: /ko/blog_dev/initial_settings
 
 sidebar: 
     nav: "dev"
@@ -17,9 +17,12 @@ weight: 3
 
 ---
 
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/ae1ab5d1f563af8cc8e9104f836b97724f9ad9a9)
+{: .notice--info}
+
 이제부터 모든 글은 내가 사용하는 테마인 Minimal-mistakes를 기준으로 작성한다. 아무래도 나는 코딩이나 개발쪽에는 별로 관심이 없기 때문에, 이런저런 것들을 추가할 때 있었던 시행착오들까지 굳이 적기보다는 결과물만 적는 방향으로 글들을 쓰게 될 것 같다. 
 
-블로그 꾸밀 때 가장 많이 참고한 사이트는 [이 블로그](https://ansohxxn.github.io/)인데, 기능들을 소개할 때 자세히 설명을 덧붙여 주셨으니 여기를 참고하는 것도 좋을 것 같다.
+블로그 꾸밀 때 가장 많이 참고한 사이트는 [이 블로그](https://ansohxxn.github.io/)인데, 기능들을 소개할 때 자세히 설명을 덧붙여 주셔서 다른 기능들도 구현하기 용이했다.
 
 ## 불필요한 파일 지우기
 
@@ -31,11 +34,16 @@ math-jh.github.io
 |     ...
 ├──  test
 |     ...
-├──  screenshot-layouts.png
-├──  screenshot.png
-├──  minimal-mistakes-jekyll.gemspec
+├──  CHANGELOG.md
 ├──  README.md
-└──  CHANGELOG.md
+├──  Rakefile
+├──  banner.js
+├──  index.html
+├──  minimal-mistakes-jekyll.gemspec
+├──  package-lock.json
+├──  package.json
+├──  screenshot-layouts.png
+└──  screenshot.png
 ```
 
 macOS의 경우, 작업을 할 때마다 일종의 캐시처럼 `.DS_Store`파일이 생성된다. 이 파일들을 무시하기 위해 `.gitignore` 파일에 `.DS_Store`를 추가하였다.  
@@ -47,7 +55,7 @@ Gemfile에 대한 내용은 나중에 언젠가 컴퓨터를 바꿔서 Jekyll을
 
 블로그에 대한 모든 정보는 최상위 디렉터리에 있는 `_config.yml`에 담겨있다고 생각해도 된다. 기본 설정에서는 사이트 이름은 Site Title, 저자 이름은 Your Name 등등으로 되어있는데, 이 파일을 수정하면 이를 바꿔줄 수 있다.
 
-우선 `_config.yml` 파일의 `#Site Settings` 탭에서 사이트, 저자 이름 등을 바꿔줄 수 있다.
+우선 `_config.yml` 파일의 `# Site Settings` 아래 항목에서 사이트, 저자 이름 등을 바꿔줄 수 있다.
 
 ```yml
 # Site Settings
@@ -84,7 +92,7 @@ logo                     : # path of logo image to display in the masthead, e.g.
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 ``` 
 
-밑으로 쭉 내려가서 `#Site Author`의 항목을 수정하자. 
+밑으로 쭉 내려가서 `# Site Author`의 항목을 수정하자. 
 
 ```yml
 # Site Author
@@ -104,7 +112,7 @@ author:
 # Site Author
 author:
   name             : "MathHolic"
-  avatar           : /assets/images/Octahedral.png # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/images/Octahedral.jpeg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Grad. student in mathematics"
   location         : "Seoul, Korea"
   email            : "kujuburi@icloud.com"
@@ -144,14 +152,19 @@ author_profile: true
 우선 앞으로 포스트들을 모아둘 `_posts/` 폴더를 만들고, 이 안에 마크다운(`.md`) 파일을 하나 만들어서 첫 글을 작성하자. 
 여담으로 `_drafts/` 폴더를 만들어 아직 완성되지 않은 포스트도 보관할 수 있다. 이 폴더에 저장된 포스트는 호스팅할 때에는 보이지 않고, 로컬에서 확인하려면 `jekyll serve` 혹은 `jekyll build` 명령의 인자로 `--drafts`를 추가해주면 된다. 
 
-어쨌든 jekyll이 마크다운 파일을 포스트로 인식하게 하려면, 마크다운 파일의 이름을 반드시 `yyyy-mm-dd-파일이름`으로 지어줘야 한다. 또, 이 파일은 반드시 파일의 정보를 알려주는 YAML frontmatter로 시작해야 한다. 이건 별다른 건 아니고, 문서를 시작하기 전 두 개의 `---` 사이에 문서의 정보를 입력해주면 된다. 예컨대 이 글은 
+어쨌든 Jekyll이 마크다운 파일을 포스트로 인식하게 하려면 두 가지 조건이 만족되어야 한다.
+
+1. 마크다운 파일의 이름을 반드시 `yyyy-mm-dd-파일이름`으로 지어줘야 한다. 
+2. 또, 이 파일은 반드시 파일의 정보를 알려주는 YAML frontmatter로 시작해야 한다. 이건 별다른 건 아니고, 문서를 시작하기 전 두 개의 `---` 사이에 문서의 정보를 입력해주면 된다. 
+
+예컨대 이 글은 
 
 ```yaml
 ---
 
 title: "Minimal mistakes 테마의 기본 설정"
 categories: [Blog development]
-permalink: /blog_dev/initial_settings
+permalink: /ko/blog_dev/initial_settings
 sidebar: 
     nav: "dev"
 date: 2022-07-08

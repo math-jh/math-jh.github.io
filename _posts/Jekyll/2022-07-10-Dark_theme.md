@@ -3,10 +3,10 @@
 title: "Minimal-mistakes에 다크모드 추가하기"
 excerpt: "다크모드 추가"
 
-lang: ko
+read_time: false
 
 categories: [Blog development]
-permalink: /blog_dev/dark_theme
+permalink: /ko/blog_dev/dark_theme
 
 sidebar: 
     nav: "dev"
@@ -17,15 +17,17 @@ weight: 10
 
 ---
 
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/dcf3036a834a9bb235604c7ea2ca8b8754cd06d3)
+{: .notice--info}
+
 ## 다크모드 설정하기
 
-이 절의 내용, 특히 `main_dark.scss`를 설정하는 부분과 Javascript는 모두 [이 글](https://etch-cure.github.io/blog/toggle-dark-mode/)에서 가져왔다.
-{: .notice--success}
+나는 보통 밤에 블로그를 관리하므로, 블로그의 전반적인 테마가 어두웠으면 하는 바람이 있었다. 물론 단순히 어두운 테마를 사용해도 되는 일이긴 하지만, 그보다는 다크모드를 사용하고 싶었다. [이 글](https://etch-cure.github.io/blog/toggle-dark-mode/)에서 방법을 찾았다.
 
 우선 `_config.yml` 파일에서 다음과 같이 다크모드를 사용할 것임을 알린다. 또, 어떤 스킨을 다크모드로 사용할지를 알려줘야 한다. 나는 새로 `custom-dark.scss` 파일을 추가했다.
 ```yml
-dark_mode                : true
-dark_theme               : "custom-dark"
+dark_theme                : true
+dark_skin                 : "custom-dark"
 ```
 그리고 `assets/css/` 디렉터리로 들어가, 다음과 같이 `main_dark.scss`를 추가한다.
 ```scss
@@ -35,14 +37,14 @@ dark_theme               : "custom-dark"
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.dark_theme | default: 'default' }}"; // skin
+@import "minimal-mistakes/skins/{{ site.dark_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
 ```
-그 후 `_includes/head.html`로 들어가서, 위에서 지정한 `dark_mode`가 참이라면 방금 만든 `main_dark.scss`를 로드하도록 한다.
+그 후 `_includes/head.html`로 들어가서, 위에서 지정한 `dark_theme`이 참이라면 방금 만든 `main_dark.scss`를 로드하도록 한다.
 {% raw %}
 ```html
-{% if site.dark_mode == true %}
+{% if site.dark_theme %}
   <link rel="stylesheet" href="/assets/css/main_dark.css">
 {% endif %}
 ```
@@ -76,7 +78,7 @@ dark_theme               : "custom-dark"
 마지막으로 `_includes/masthead.html`에서 `<a class="site-title">`과 `<ul class="visible-links">` 사이에 다음 코드를 넣어준다.
 {% raw %}
 ```html
-{% if site.dark_mode %}
+{% if site.dark_theme %}
 <div style="margin-left: 5px; border: 2px solid #555; border-radius:10px; background-color:#222">
     <label class="switch" for="toggle_dark_theme" style="color:#bbb; font-size:1em; display:inline; margin-left:5px; margin-right:5px">
         <input type="checkbox" id="toggle_dark_theme" onclick="scrollbar()"/>

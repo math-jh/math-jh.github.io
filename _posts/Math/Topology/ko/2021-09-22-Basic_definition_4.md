@@ -3,8 +3,6 @@
 title: "연속함수"
 excerpt: "기본정의 4: 연속함수"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/basic_definition_4
 header:

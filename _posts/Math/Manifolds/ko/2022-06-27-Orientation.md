@@ -3,8 +3,6 @@
 title: "Orientation"
 excerpt: "Differential form"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/Orientation
 header:

@@ -3,8 +3,6 @@
 title: "동치관계"
 excerpt: "동치관계의 정의와 성질들"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/equivalence_relations
 header:

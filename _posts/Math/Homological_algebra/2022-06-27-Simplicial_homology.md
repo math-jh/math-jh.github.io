@@ -3,8 +3,6 @@
 title: "호몰로지"
 excerpt: "기본정의"
 
-lang: ko
-
 categories: [Math / Homology]
 permalink: /ko/math/homology/singular_homology
 header:
