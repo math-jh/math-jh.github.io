@@ -114,6 +114,7 @@ body {
   li,
   dl {
     font-size: 1em;
+    line-height: 1.7;
   }
 
   /* paragraph indents */
@@ -143,8 +144,9 @@ body {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     font-size: 0.8em;
-    background: $code-background-color;
+    background: mix($background-color, $text-color, 90%);
     border-radius: $border-radius;
+    color: $text-color;
 
     &::before,
     &::after {
@@ -434,17 +436,17 @@ body {
 }
 
 .page__comments-title {
-  margin-top: 2rem;
+  margin-top: .5rem;
   margin-bottom: 10px;
-  padding-top: 2rem;
+  padding-top: .5rem;
   font-size: $type-size-6;
-  border-top: 1px solid $border-color;
   text-transform: uppercase;
 }
 
 .page__comments-form {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+  background-color: $background-color;
 
   &.disabled {
     input,

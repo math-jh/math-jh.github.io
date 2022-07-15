@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Personal skin
+   ========================================================================== */
+
+/* Colors */
+$text-color: #212121 !default;                                    //  Grey 900
+$muted-text-color: mix(#fff, $text-color, 20%) !default;
+$primary-color: #071734 !default;
+$border-color: mix(#fff, $text-color, 75%) !default;
+$footer-background-color: #071734 !default;
+$link-color: #2962ff !default;                                    //  Indigo A700
+$masthead-link-color: #f5f5f5 !default;                           //  Grey 100
+$masthead-link-color-hover: #a9874a !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+$background-color: #e0e0e0 !default;
+$highlight-color: #0c285b;                                        //  Lighten #071734 10
+$notice-background-mix: 0%;
+
+/* Math notice colors */
+$definition-color: #b2dfdb !default;                              //  Teal 100
+$proposition-color: #c5cae9 !default;                             //  Indigo 100
+$proof-color: #cfd8dc !default;                                   //  Blue Grey 100
+$example-color: #c8e6c9 !default;                                 //  Green 100
+$remark-color: #f8bbd0 !default;                                  //  Pink 100
+$misc-color: #d4ccc8 !default;                                    //  Grey 400
+$spoiler-color: #ff4301 !default;
+
+$lang-color: #afc7f4 !default;
+$lang-list-color: #d7e3f9 !default;
+
+.page__content {
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    color: $text-color;
+  }
+}
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa  {
+  color: inherit;
+}
+
+
