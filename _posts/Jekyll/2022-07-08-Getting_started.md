@@ -3,10 +3,10 @@
 title: "Github pages에서 블로그 만들기"
 excerpt: "Github 블로그 저장소 만들기"
 
-lang: ko
+read_time: false
 
 categories: [Blog development]
-permalink: /blog_dev/getting_started
+permalink: /ko/blog_dev/getting_started
 
 sidebar: 
     nav: "dev"
@@ -16,6 +16,9 @@ last_modified_at: 2022-07-08
 weight: 2
 
 ---
+
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/cc692e26c9c2b9319f7924dc8749fe5072a482c3)
+{: .notice--info}
 
 앞선 글에서 Github 블로그를 만드는 데 필요한 배경지식을 모두 갖췄으니, 이제 실제로 블로그를 만들어보자!
 

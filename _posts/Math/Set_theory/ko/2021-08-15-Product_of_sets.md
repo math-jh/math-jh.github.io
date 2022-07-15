@@ -3,8 +3,6 @@
 title: "집합의 곱"
 excerpt: "집합들 사이의 곱"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/product_of_sets
 header:

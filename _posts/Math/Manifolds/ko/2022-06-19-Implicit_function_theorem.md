@@ -3,8 +3,6 @@
 title: "음함수 정리"
 excerpt: "미분다양체에서의 음함수 정리와 그 결과들"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/implicit_function_theorem
 header:

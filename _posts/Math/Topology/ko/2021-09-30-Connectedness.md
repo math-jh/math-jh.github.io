@@ -3,8 +3,6 @@
 title: "연결공간"
 excerpt: ""
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/connectedness
 header:

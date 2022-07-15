@@ -3,8 +3,6 @@
 title: "위상공간의 기저"
 excerpt: "기본정의 2: 기저"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/basic_definition_2
 header:

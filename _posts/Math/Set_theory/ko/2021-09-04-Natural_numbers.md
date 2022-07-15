@@ -3,8 +3,6 @@
 title: "자연수와 무한집합"
 excerpt: "자연수의 정의와 무한집합의 성질들"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/natural_numbers
 header:

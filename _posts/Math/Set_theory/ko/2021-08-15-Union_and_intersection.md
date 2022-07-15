@@ -3,8 +3,6 @@
 title: "합집합과 교집합"
 excerpt: "집합들 간의 합집합과 교집합"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/union_and_intersection
 header:

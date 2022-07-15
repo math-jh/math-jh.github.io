@@ -3,8 +3,6 @@
 title: "기본군의 예시들"
 excerpt: "Fundamental group"
 
-lang: ko
-
 categories: [Math / Topology]
 permalink: /ko/math/topology/examples_of_fundamental_groups
 header:

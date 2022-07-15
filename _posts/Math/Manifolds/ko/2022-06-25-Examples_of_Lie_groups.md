@@ -3,8 +3,6 @@
 title: "리 군의 예시들"
 excerpt: "Examples of Lie group and Lie groups"
 
-lang: ko
-
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/examples_of_Lie_groups
 header:

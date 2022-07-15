@@ -3,8 +3,6 @@
 title: "이항관계의 그래프"
 excerpt: "이항관계의 그래프와 역, 합성"
 
-lang: ko
-
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/binary_relation
 header:
