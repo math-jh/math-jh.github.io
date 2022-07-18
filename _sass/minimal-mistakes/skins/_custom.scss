@@ -13,8 +13,9 @@ $masthead-link-color: #f5f5f5 !default;                           //  Grey 100
 $masthead-link-color-hover: #a9874a !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 $background-color: #e0e0e0 !default;
-$highlight-color: #0c285b;                                        //  Lighten #071734 10
+$highlight-color: #1c5dd2;                                        //  Lighten #071734 40
 $notice-background-mix: 0%;
+$highlight-background-mix: 8%;
 
 /* Math notice colors */
 $definition-color: #b2dfdb !default;                              //  Teal 100
