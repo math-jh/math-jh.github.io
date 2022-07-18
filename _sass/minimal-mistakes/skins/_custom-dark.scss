@@ -13,8 +13,9 @@ $masthead-link-color: #f5f5f5 !default;                           //  Grey 100
 $masthead-link-color-hover: #a9874a !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 $background-color: #212121 !default;
-$highlight-color: #6090e9;                                        //  Lighten #071734 60
+$highlight-color: #6090e9;                                        //  Lighten #071734 30
 $notice-background-mix: 0%;
+$highlight-background-mix: 20%;
 
 /* Personal notice colors */
 $definition-color: #00796b !default;                              //  Teal 700

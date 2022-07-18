@@ -18,6 +18,10 @@
   
 .hide {opacity: 0.1; }
 
+.sidebar_title {
+  color: $highlight-color;
+}
+
 .sidebar {
   @include clearfix();
   // @include breakpoint(max-width $large) {
