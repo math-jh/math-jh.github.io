@@ -109,6 +109,13 @@ cap {
   text-align: center;
 }
 
+phrase {
+  background-color: rgba($highlight-color, $highlight-background-mix);
+  border-radius: 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 /* Material icons */
 .material-icons {
   font-family: 'Material Icons';
