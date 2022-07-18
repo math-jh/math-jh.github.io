@@ -141,7 +141,7 @@ $$\emptyset=A\cap \bigcup_{D\in\mathcal{D}}\operatorname{cl}(D)=A\cap \operatorn
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $\mathcal{C}$를 <box>적당한 $i\in I$가 존재하여 $\operatorname{cl}C\subset U_i$인 열린집합 $C$들의 모임</box>으로 정의하자. 임의의 $x\in X$와 $x$를 포함하는 $U_i$에 대하여 $C_i=X\setminus U_i$는 $x$를 포함하지 않는 닫힌집합이고, 따라서 $X$의 regularity에 의하여 $x$와 $C_i$를 분리하는 서로소인 열린집합 $V_i$와 $W_i$가 각각 존재한다.  그럼 $V_i\subset X\setminus W_i$이고, 따라서
+우선 $\mathcal{C}$를 [적당한 $i\in I$가 존재하여 $\operatorname{cl}C\subset U_i$인 열린집합 $C$들의 모임]으로 정의하자. 임의의 $x\in X$와 $x$를 포함하는 $U_i$에 대하여 $C_i=X\setminus U_i$는 $x$를 포함하지 않는 닫힌집합이고, 따라서 $X$의 regularity에 의하여 $x$와 $C_i$를 분리하는 서로소인 열린집합 $V_i$와 $W_i$가 각각 존재한다.  그럼 $V_i\subset X\setminus W_i$이고, 따라서
 
 $$\operatorname{cl}V_i\subset X\setminus W_i\subset X\setminus C_i=U_i$$
 
