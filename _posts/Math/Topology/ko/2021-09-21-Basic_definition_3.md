@@ -20,7 +20,7 @@ weight: 3
 
 ## 집합의 interior와 closure
 
-위상공간 $(X,\mathcal{T})$가 주어졌다고 하자. $X$의 임의의 부분집합 $A$에 대하여, <box>$A$를 포함하는 닫힌집합</box>과 <box>$A$에 포함되어 있는 열린집합</box>이 항상 존재한다. ($X$와 $\emptyset$). 한편, 닫힌집합들의 임의의 교집합은 닫힌집합이고 ([§열린집합과 닫힌집합, 명제 8](/ko/math/topology/basic_definition_1#pp8)의 증명), 열린집합들의 임의의 합집합은 열린집합이므로, <box>$A$를 포함하는 가장 작은 닫힌집합</box>과 <box>$A$에 포함된 가장 큰 열린집합</box>이 모두 존재한다. 이들을 다음과 같이 정의한다.
+위상공간 $(X,\mathcal{T})$가 주어졌다고 하자. $X$의 임의의 부분집합 $A$에 대하여, <phrase>$A$를 포함하는 닫힌집합</phrase>과 <phrase>$A$에 포함되어 있는 열린집합</phrase>이 항상 존재한다. ($X$와 $\emptyset$). 한편, 닫힌집합들의 임의의 교집합은 닫힌집합이고 ([§열린집합과 닫힌집합, 명제 8](/ko/math/topology/basic_definition_1#pp8)의 증명), 열린집합들의 임의의 합집합은 열린집합이므로, <phrase>$A$를 포함하는 가장 작은 닫힌집합</phrase>과 <phrase>$A$에 포함된 가장 큰 열린집합</phrase>이 모두 존재한다. 이들을 다음과 같이 정의한다.
 
 <div class="definition" markdown="1">
 
