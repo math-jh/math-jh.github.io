@@ -188,7 +188,7 @@ Right directed인 집합들의 product은 right directed이다. 만약 product s
 
 수학적 귀납법을 알고 있다고 가정하면, lattice $E$의 임의의 유한한 부분집합은 supremum과 infimum을 갖는다는 것을 알 수 있지만 무한한 부분집합에 대해서는 어떠한 이야기도 할 수 없다. 만일 lattice $E$의 (무한집합을 포함한) 임의의 부분집합이 supremum과 infumum을 갖는다면, 이를 *complete lattice*라 부른다.
 
-<ins id="df16">**정의 16**</ins> Preordered set $E$에서의 두 원소 $x$, $y$가 *comparable<sub>비교가능</sub>*하다는 것은 명제 <box>$x\leq y$ 혹은 $y\leq x$</box>이 항상 참인 것이다. 만약 집합 $E$의 임의의 원소가 comparable하다면, 이를 *totally ordered set<sub>전순서집합</sub>*이라 부른다.
+<ins id="df16">**정의 16**</ins> Preordered set $E$에서의 두 원소 $x$, $y$가 *comparable<sub>비교가능</sub>*하다는 것은 명제 <phrase>$x\leq y$ 혹은 $y\leq x$</phrase>이 항상 참인 것이다. 만약 집합 $E$의 임의의 원소가 comparable하다면, 이를 *totally ordered set<sub>전순서집합</sub>*이라 부른다.
 {: .definition}
 
 만약 $E$가 totally ordered set이라면, trichotomy가 성립한다. 즉,임의의 $x, y\in E$에 대하여,  $x=y$, $x&lt;y$, $x&gt;y$ 중 하나가 성립한다. 이 경우엔 $x\leq y$의 부정이 $x>y$가 된다. 하지만 totally ordered set이라는 조건이 빠진 상태에서 이는 일반적으로 성립하지 않는다. (§순서관계 (1), 명제 10 직후의 [참고](/ko/math/set_theory/order_relations_1#rmk1))

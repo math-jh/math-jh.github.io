@@ -212,9 +212,9 @@ $$(G_3\circ G_2)\circ G_1=G_3\circ(G_2\circ G_1)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp13">**명제 13**</ins> $G$, $G'$가 그래프이고 $A$가 집합이라 하자. 그럼
+<ins id="pp13">**명제 13**</ins> $G$, $G'$가 그래프이고 $X$가 집합이라 하자. 그럼
 
-$$(G'\circ G)(A)=G'(G(A))$$
+$$(G'\circ G)(X)=G'(G(X))$$
 
 가 성립한다.
 
@@ -224,16 +224,16 @@ $$(G'\circ G)(A)=G'(G(A))$$
 
 앞선 명제와 같이 진행한다. 
 
-어떠한 $z$에 대하여 $z\in (G'\circ G)(A)$인 것은 <phrase>어떠한 $x\in A$가 존재하여 $(x,z)\in G'\circ G$인 것</phrase>과 동치이다. 그런데 이는 다시 <phrase>어떠한 $y$가 존재하여 $(x,y)\in G$이고 $(y,z)\in G'$인 것</phrase>과 동치이다. $y\in G(A)$이므로, $z\in G'(G(A))$이다. 이 논리를 거꾸로 뒤집으면 반대방향의 증명이 된다.
+어떠한 $z$에 대하여 $z\in (G'\circ G)(X)$인 것은 <phrase>어떠한 $x\in X$가 존재하여 $(x,z)\in G'\circ G$인 것</phrase>과 동치이다. 그런데 이는 다시 <phrase>어떠한 $y$가 존재하여 $(x,y)\in G$이고 $(y,z)\in G'$인 것</phrase>과 동치이다. $y\in G(X)$이므로, $z\in G'(G(X))$이다. 이 논리를 거꾸로 뒤집으면 반대방향의 증명이 된다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp14">**명제 14**</ins> Correspondence $\Gamma=(G,X,Y)$에 대하여 $A\subset X$, $B\subset Y$라 하자. 그럼 
+<ins id="pp14">**명제 14**</ins> Correspondence $\Gamma=(G,A,B)$에 대하여 $X\subset A$, $Y\subset B$라 하자. 그럼 
 
-1. $G^{-1}(G(A))\supset A\cap\operatorname{pr}_1G$  
-2. $G(G^{-1}(B))\supset B\cap\operatorname{pr}_2G$  
+1. $G^{-1}(G(X))\supset X\cap\operatorname{pr}_1G$  
+2. $G(G^{-1}(Y))\supset Y\cap\operatorname{pr}_2G$  
 
 가 각각 성립한다.
 
@@ -243,7 +243,7 @@ $$(G'\circ G)(A)=G'(G(A))$$
 
 본격적으로 증명을 시작하기 전에, 위의 두 식은 <em_ko>모든</em_ko> $G$에 대해 성립해야 하므로, $G$ 자리에 $G^{-1}$을 집어넣어도 성립해야 한다. 따라서, 1만 보이면 2는 [명제 9](#pp9)에 의해 자명하다.  
 
-이제 $x\in A\cap\operatorname{pr}\_1G$라 하자. 그럼 $x\in\operatorname{pr}\_1G$에서, 어떠한 $y$가 존재하여 $(x,y)\in G$이고, $x\in A$이므로 이 $y$는 $y\in G(A)$를 만족한다. 이제 $(y,x)\in G^{-1}$이므로, $x\in G^{-1}(G(A))$이다.
+이제 $x\in X\cap\operatorname{pr}\_1G$라 하자. 그럼 $x\in\operatorname{pr}\_1G$에서, 어떠한 $y$가 존재하여 $(x,y)\in G$이고, $x\in X$이므로 이 $y$는 $y\in G(X)$를 만족한다. 이제 $(y,x)\in G^{-1}$이므로, $x\in G^{-1}(G(X))$이다.
 
 </details>
 
@@ -274,7 +274,7 @@ $$\begin{aligned}
 
 <div class="definition" markdown="1">
 
-<ins id="df16">**정의 16**</ins> $A$가 집합이라 하자. 그럼 집합 $\Delta_A$는 $x\in A$를 만족하는 모든 $(x,x)$들의 모임을 뜻한다. 이를 $A\times A$의 *diagonal*이라 부른다.
+<ins id="df16">**정의 16**</ins> 집합 $A$에 대하여, $\Delta_A$는 $x\in A$를 만족하는 모든 $(x,x)$들의 모임을 뜻한다. 이를 $A\times A$의 *diagonal*이라 부른다.
 
 </div>
 
