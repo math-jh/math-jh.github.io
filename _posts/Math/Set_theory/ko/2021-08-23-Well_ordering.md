@@ -80,7 +80,7 @@ $S$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라
 <ins id="lem5">**보조정리 5**</ins> $(X\_\alpha)\_{\alpha\in A}, \subset)$가 
 
 1. 이들은 ordered set들의 directed set이고, 
-2. 만약 $X\_\alpha\subset X\_\beta$라면, <box>$X\_\beta$의 order relation을 $X\_\alpha$로 제한한 relation</box>이 <box>$X\_\alpha$의 relation</box>과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $E=\bigcup\_{\alpha\in A} X\_\alpha$ 위의 order relation이 유일하게 존재한다.
+2. 만약 $X\_\alpha\subset X\_\beta$라면, <phrase>$X\_\beta$의 order relation을 $X\_\alpha$로 제한한 relation</phrase>이 <phrase>$X\_\alpha$의 relation</phrase>과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $E=\bigcup\_{\alpha\in A} X\_\alpha$ 위의 order relation이 유일하게 존재한다.
 
 </div>
 <details class="proof" markdown="1">
