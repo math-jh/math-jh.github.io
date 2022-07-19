@@ -36,7 +36,7 @@ Binary relation을 처음 정의할 때 언급했던 세 가지 종류의 중요
 
 만일 $x\mathrel{R}x$이면 $x\in E$일 경우, equivalence relation 때와 마찬가지로 이 relation이 집합 $E$ 위에서 정의되었다고 한다. 이 때 correspondence $\Gamma=(R, E, E)$이 잘 정의되며, 우리는 $E$가 <em_ko>$\Gamma$에 의해 ordering이 부여되었다</em_ko>고 하고, 종종 $E$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 
 
-<ins id="ex3">**예시 3**</ins> Relation <box>$x=y$</box>는 order relation이다. Relation <box>$x\subset y$</box> 또한 order relation이다. ([§순서쌍, 명제 2](/ko/math/set_theory/ordered_pair#pp2)과 같은 글의 [명제 3](/ko/math/set_theory/ordered_pair#pp3) 참고)
+<ins id="ex3">**예시 3**</ins> Relation <phrase>$x=y$</phrase>는 order relation이다. Relation <phrase>$x\subset y$</phrase> 또한 order relation이다. ([§순서쌍, 명제 2](/ko/math/set_theory/ordered_pair#pp2)과 같은 글의 [명제 3](/ko/math/set_theory/ordered_pair#pp3) 참고)
 {: .example}
 
 Ordered set은 $&lt;$라는 relation이 추가적으로 정의된 집합이므로, ordered set들 간의 함수를 생각할 때에는 (단순한 함수가 아니라) 이 relation 또한 보존하는 함수를 생각하는 것이 올바르다. 
@@ -82,7 +82,7 @@ Preorder relation의 성질을 알기 위해 우리는 order relation의 성질�
 만일 relation $R$이 order relation이었다면, antisymmetry는 $(x\mathrel{R}y)\wedge(y\mathrel{R}x)\implies x=y$를 뜻한다. Preorder relation에 대해서는 이것이 성립하지 않는다는 것을 살펴보았지만, 그 대신 Preorder relation에 대해서는 <em_ko>일반화된 등호</em_ko>, 즉 equivalence relation이 똑같은 성질을 준다. 
 
 <div class="proposition" markdown="1">
-<ins id="pp8">**명제 8**</ins>  $R$이 preorder relation이라 하자. 그럼 relation <box>$x\mathrel{R}y$이고 $y\mathrel{R}x$</box>은 equivalence relation이다.
+<ins id="pp8">**명제 8**</ins>  $R$이 preorder relation이라 하자. 그럼 relation <phrase>$x\mathrel{R}y$이고 $y\mathrel{R}x$</phrase>은 equivalence relation이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -108,20 +108,20 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\mathrel{R}y)\wed
 
 ## Strict order
 
-주어진 order relation $\leq$에 대하여, $&lt;$을 <box>$x\leq y$이고 $x\neq y$</box>로 정의된 relation으로 정의하자. 이 때 $&lt;$는 antisymmetry를 만족하지 않으므로 order relation이 될 수는 없고, 또 reflexive하지도 않으므로 preorder 또한 될 수 없다. 대신 다음을 정의하자.
+주어진 order relation $\leq$에 대하여, $&lt;$을 <phrase>$x\leq y$이고 $x\neq y$</phrase>로 정의된 relation으로 정의하자. 이 때 $&lt;$는 antisymmetry를 만족하지 않으므로 order relation이 될 수는 없고, 또 reflexive하지도 않으므로 preorder 또한 될 수 없다. 대신 다음을 정의하자.
 
 <ins id="df9">**정의 9**</ins>  Relation $R$이 *asymmetric<sub>비대칭적</sub>*이라는 것은 $x\mathrel{R}y$이면 $y\not \mathrel{R}x$인 것이다. Asymmetric, transitive relation을 *strict order*라 부른다.
 {: .definition}
 
 그럼 다음이 성립한다.
 
-<ins id="pp10">**명제 10**</ins>  $R$이 order relation이라 하자. 그럼 새로운 relation <box>$x\mathrel{R}y$이고 $x\neq y$</box>는 strict order이다.  
-반대로 $S$가 strict order라 하자. 그럼 새로운 relation <box>$x\mathrel{S}y$이거나 $x=y$</box>는 order relation이다.
+<ins id="pp10">**명제 10**</ins>  $R$이 order relation이라 하자. 그럼 새로운 relation <phrase>$x\mathrel{R}y$이고 $x\neq y$</phrase>는 strict order이다.  
+반대로 $S$가 strict order라 하자. 그럼 새로운 relation <phrase>$x\mathrel{S}y$이거나 $x=y$</phrase>는 order relation이다.
 {: .proposition}
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
-우선 $R$이 orader relation이라 하고, 새로운 relation $S$를 <box>$x\mathrel{R}y$이고 $x\neq y$</box>으로 정의하자. Asymmetry를 보이기 위해 우리는 $x\mathrel{S}y$와 $y\mathrel{S}x$가 동시에 성립할 수 없음을 보여야 한다. $(x\mathrel{S}y)\wedge(y\mathrel{S}x)$를 풀어 쓰면 다음과 같다.
+우선 $R$이 orader relation이라 하고, 새로운 relation $S$를 <phrase>$x\mathrel{R}y$이고 $x\neq y$</phrase>으로 정의하자. Asymmetry를 보이기 위해 우리는 $x\mathrel{S}y$와 $y\mathrel{S}x$가 동시에 성립할 수 없음을 보여야 한다. $(x\mathrel{S}y)\wedge(y\mathrel{S}x)$를 풀어 쓰면 다음과 같다.
   
 $$((x\mathrel{R}y)\wedge(x\neq y))\wedge((y\mathrel{R}x)\wedge(y\neq x))$$
 
@@ -131,7 +131,7 @@ $$((x\mathrel{R}y)\wedge(y\mathrel{R}x))\wedge(x\neq y)$$
 
 이는 $R$의 antisymmetry에 의하여 $(x=y)\wedge(x\neq y)$이고, 이는 항상 거짓이므로 $x\mathrel{S} y$이면 $y\not\mathrel{S}x$이다.
 
-반대로 $S$가 strict order라 하고, 새로운 relation $R$을 <box>$x\mathrel{S}y$이거나 $x=y$</box>로 정의하자. 우선 $x=x$이므로, 뒤쪽 조건에 걸려 $x\mathrel{R}x$이다. Antisymmetry를 보이기 위해, $x\mathrel{R}y$와 $y\mathrel{R}x$가 성립한다고 가정하자. 그럼 
+반대로 $S$가 strict order라 하고, 새로운 relation $R$을 <phrase>$x\mathrel{S}y$이거나 $x=y$</phrase>로 정의하자. 우선 $x=x$이므로, 뒤쪽 조건에 걸려 $x\mathrel{R}x$이다. Antisymmetry를 보이기 위해, $x\mathrel{R}y$와 $y\mathrel{R}x$가 성립한다고 가정하자. 그럼 
 
 $$\begin{aligned}  
 (x\mathrel{R}y)\wedge(y\mathrel{R}x)&\iff((x\mathrel{S}y)\vee(x=y))\wedge((y\mathrel{S}x)\vee(y=x))\\

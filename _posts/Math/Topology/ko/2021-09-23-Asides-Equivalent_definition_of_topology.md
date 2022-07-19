@@ -89,7 +89,7 @@ $$\operatorname{cl}(A)\subset\operatorname{cl}(A)\cup\operatorname{cl}(B)=\opera
 
 거꾸로 임의의 $x\in X$마다 filter $\mathcal{F}_x$가 정의되었다 하자. 그럼 이들 각각을 $x$에서의 neighborhood filter로 갖는 위상구조 $\mathcal{T}$가 존재하는지를 생각할 수 있다. 이에 답하기 위해서는 power set $\mathcal{P}(X)$ 위에서 정의된 filter, 그 중에서도 $\emptyset$을 포함하지 않는 *proper* filter를 조금 더 자세히 살펴볼 필요가 있다.
 
-Filter $\mathcal{F}$가 ordered set $\mathcal{P}(X)$의 proper filter임을 일일히 언급하는 것은 성가신 일이므로, 앞으로 이를 간단히 <box>$X$ 위에서 정의된 filter $\mathcal{F}$</box>으로 표현하기로 한다.
+Filter $\mathcal{F}$가 ordered set $\mathcal{P}(X)$의 proper filter임을 일일히 언급하는 것은 성가신 일이므로, 앞으로 이를 간단히 <phrase>$X$ 위에서 정의된 filter $\mathcal{F}$</phrase>으로 표현하기로 한다.
 
 <div class="definition" markdown="1">
 
@@ -141,7 +141,7 @@ $X$의 부분집합들의 모임 $\mathcal{S}\subset\mathcal{P}(X)$를 생각하
 
 <div class="misc" markdown="1">
 
-**Neighborhood axiom.** 임의의 $z\in X$와, 각각의 원소가 $z$를 포함하는 $X$의 filter $\mathcal{N}(z)$가 주어졌다 하자. 그럼 임의의 $S\in\mathcal{N}(z)$마다 적당한 $S'\in\mathcal{N}(z)$가 존재하여, <box>임의의 $x\in S'$마다 $S\in\mathcal{N}(x)$</box>가 성립하도록 할 수 있다.
+**Neighborhood axiom.** 임의의 $z\in X$와, 각각의 원소가 $z$를 포함하는 $X$의 filter $\mathcal{N}(z)$가 주어졌다 하자. 그럼 임의의 $S\in\mathcal{N}(z)$마다 적당한 $S'\in\mathcal{N}(z)$가 존재하여, <phrase>임의의 $x\in S'$마다 $S\in\mathcal{N}(x)$</phrase>가 성립하도록 할 수 있다.
 
 </div>
 

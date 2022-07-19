@@ -304,7 +304,7 @@ $$f_i: E_i\hookrightarrow G\twoheadrightarrow G/R=E$$
 
 $$i\leq j\iff V_j\subset V_i$$
 
-이 만족되도록 잡자. 각각의 $i$에 대하여, 집합 $E_i$를 <box>$V_i$에서 $B$로의 함수들의 모임</box>으로 잡자. 그럼 $i\leq j$인 $E_i,E_j$마다 자연스러운 함수 $f_{ji}:E_i\rightarrow E_j$를 다음의 식
+이 만족되도록 잡자. 각각의 $i$에 대하여, 집합 $E_i$를 <phrase>$V_i$에서 $B$로의 함수들의 모임</phrase>으로 잡자. 그럼 $i\leq j$인 $E_i,E_j$마다 자연스러운 함수 $f_{ji}:E_i\rightarrow E_j$를 다음의 식
 
 $$f_{ji}(u)=u|_{E_j}$$
 
