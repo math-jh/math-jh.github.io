@@ -170,6 +170,7 @@ exclude:
   - .jekyll-assets-cache
   - .sass-cache
   - assets/js/plugins
+  - assets/diagrams
   - assets/js/_main.js
   - assets/js/vendor/jquery/jquery-3.6.0.js
   - Capfile
