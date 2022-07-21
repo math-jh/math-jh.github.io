@@ -84,7 +84,7 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 위의 정의에서, $F$를 $f$의 그래프라 하자. 그럼 $x\equiv y$인 것은 <phrase>어떠한 $z$가 존재하여 $(x,z)\in F$이고 $(y, z)\in F$인 것</phrase>과 동치이다. 이는 다시 <phrase>어떠한 $z$가 존재하여 $(x, z)\in F$이고 $(z, y)\in F^{-1}$인 것</phrase>과 동치이므로, 이 동치관계의 그래프는 $F^{-1}\circ F$가 된다. 
 
-## 동치관계와 partition
+## 동치관계와 분할
 
 한편, 우리가 앞서 정의했던 분할 ([§집합의 합, 정의 4](/ko/math/set_theory/sum_of_sets#df4))은 동치관계와 아주 깊은 관계가 있다.
 
@@ -119,9 +119,10 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 우선 $(x,y)\in G$라 하자. 그럼 $y\in G(x)$로부터 $G(y)\subset G(G(x))=G(x)$이다. 비슷하게 $G(x)\subset G(y)$이므로 $p(x)=G(x)=G(y)=p(y)$이다. 반대로 만일 $G(x)=G(y)$라면, $x\in G(x)=G(y)$이므로 $(y, x)\in G$가 되어 보조정리가 성립한다.
 </details>
 
-위의 함수 $p$를 canonical하다고 말한다. 위의 정리로부터 equivalence class들은 서로소라는 것을 알 수 있으므로, 동치관계는 집합 $A$의 분할을 유도한다. 반대로,
+위의 함수 $p$를 canonical이라 부른다. 위의 정리로부터 equivalence class들은 서로소라는 것을 알 수 있으므로, 동치관계는 집합 $A$의 분할을 유도한다. 반대로,
 
 <div class="definition" markdown="1">
+
 <ins id="pp10">**명제 10**</ins> $(A_i)\_{i\in I}$가 $A$의 분할이라 하자. 그럼 
 
 > 어떤 $i$가 존재하여 $x,y\in A_i$이다
@@ -187,11 +188,11 @@ $G$를 $R$의 그래프라 하자. 위의 정의에 따르면, 어떤 집합 $A'
 
 이번에는 canonical map $f:A\rightarrow A/R$과 그 그래프 $F$를 생각하자. [§이항관계의 그래프, 명제 14](/ko/math/set_theory/binary_relation#pp14)에 의하여 $f^{-1}(f(A'))\supseteq A'$가 성립하며, 일반적인 경우에 반대쪽 포함관계는 성립하지 않는다. 그러나 만일 $A'$가 saturated라면 반대쪽 포함관계도 성립한다. 각각의 $x\in A'$에 대하여, $f^{-1}(\left\\{f(x)\right\\})\subseteq A'$이므로
 
-$$\bigcup_{x\in A'}f^{-1}(\left\{f(x)\right\})=f^{-1}(f(A'))\subseteq A'$$
+$$f^{-1}(f(A'))=\bigcup_{x\in A'}f^{-1}(\left\{f(x)\right\})\subseteq A'$$
 
 가 성립하기 때문이다.
 
-더 일반적으로, $B$가 임의의 집합이라 하자. $f^{-1}(f(B))$는 여전히 saturated이다. 만일 $x\in f^{-1}(f(B))$라 하면, $z\in F(x)$에 대하여, 어떠한 $y\in f(B)$가 존재하여 $(y,x)\in F^{-1}$이므로 $(x, y)\in F$이고, 따라서 transitivity에 의하여 $(z,x)\in F$이면 $(z,y)\in F$이고, 따라서 $z\in f^{-1}(f(B))$이기 때문이다. 만일 $\overline{B}$가 $B$를 포함하는 saturated subset이라면, 
+더 일반적으로, $B$가 임의의 집합이라 하자. $f^{-1}(f(B))$는 여전히 saturated이다. 만일 $x\in f^{-1}(f(B))$라 하면 $z\in F(x)$에 대하여 어떠한 $y\in f(B)$가 존재하여 $(y,x)\in F^{-1}$이므로 $(x, y)\in F$이고, 따라서 transitivity에 의하여 $(z,x)\in F$이면 $(z,y)\in F$이고   $z\in f^{-1}(f(B))$이기 때문이다. 만일 $\overline{B}$가 $B$를 포함하는 saturated subset이라면, 
 
 $$\overline{B}=f^{-1}(f(\overline{B}))\supseteq f^{-1}(f(B))$$
 
@@ -201,7 +202,7 @@ $$\overline{B}=f^{-1}(f(\overline{B}))\supseteq f^{-1}(f(B))$$
 
 <div class="definition" markdown="1">
 
-<ins id="df14">**정의 14**</ins> 집합 $E$와 $E$ 위에서 정의된 equivalence relation $R$이 주어졌다고 하자. $E$를 정의역으로 갖는 함수 $f$에 대하여, $f$가 $R$과 *compatible*하다는 것은 $x$에 대한 unary relation $y=f(x)$가 $R$과 compatible하다는 것을 의미한다.
+<ins id="df14">**정의 14**</ins> 집합 $A$ 위에서 정의된 동치관계 $R$이 주어졌다고 하자. $A$를 정의역으로 갖는 함수 $f$에 대하여, $f$가 $R$과 *compatible*하다는 것은 $x$에 대한 단항관계 $y=f(x)$가 $R$과 compatible하다는 것을 의미한다.
 
 </div>
 
@@ -209,50 +210,52 @@ $$\overline{B}=f^{-1}(f(\overline{B}))\supseteq f^{-1}(f(B))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp15">**명제 15**</ins> $R$이 집합 $E$ 위에서의 equivalence relation이고, $p:E\rightarrow E/R$이 canonical이라 하자. 그럼 $f:E\rightarrow F$가 $R$과 compatible한 것은 어떤 $h:E/R\rightarrow F$에 대하여 $f$가 $h\circ p$의 꼴로 쓰여질 수 있는 것과 동치이다.
+<ins id="pp15">**명제 15**</ins> $R$이 집합 $A$ 위에서의 동치관계이고, $p:E\rightarrow E/R$이 canonical이라 하자. 그럼 $f:A\rightarrow B$가 $R$과 compatible한 것은 어떤 $h:A/R\rightarrow B$에 대하여 $f$가 $h\circ p$의 꼴로 쓰여질 수 있는 것과 동치이다.
 
 </div>
 
 즉, 다음의 diagram이 commute한다.
 
-![induced_injection](/assets/images/Set_theory/Equivalence_relations-1.png){:width="120px"  class="invert" .align-center}
+![induced_injection](/assets/images/Set_theory/Equivalence_relations-1.png){:width="147.6px"  class="invert" .align-center}
 
-이 때 $h$는 $p$의 section $s$에 의하여 $h=f\circ s$로 유일하게 결정된다. $h$는 $f$에 의해 induce되었다고 한다. 더 정확하게 이야기하려면 다음의 diagram을 생각할 수 있다.
+이 때 $h$는 $p$의 section $s$에 의하여 $h=f\circ s$로 유일하게 결정된다. $h$는 $f$에 의해 induce되었다고 한다. 
 
-![canonical_decomposition](/assets/images/Set_theory/Equivalence_relations-2.png){:width="240px"  class="invert" .align-center}
+특별히 $R$이 $f$에 의해 정의된 동치관계([정의 5](#df5))라 하자. 다음의 diagram을 생각할 수 있다.
 
-여기서 $\tilde{f}$는 $f$의 공역 $F$를 $f(E)$로 제한하여 얻어지는 함수이고, $j$는 canonical injection, $R$은 $f$에 의해 결정되는 equivalence relation이며 $p$는 이 equivalence relation에 해당하는 canonical mapping이다. 따라서 우리는
+![canonical_decomposition](/assets/images/Set_theory/Equivalence_relations-2.png){:width="262.05px"  class="invert" .align-center}
+
+이 때 $\tilde{f}$는 $f$의 공역 $F$를 $f(A)$로 제한하여 얻어지는 함수이고, $j$는 canonical injection, 그리고 $p$는 $R$에 해당하는 canonical mapping이다. 따라서 우리는
 
 $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
-를 얻는다. 만일 어떠한 $t, t'\in E/R$에 대해 $h(t)=h(t')$라면, $x\in t$, $x'\in t'$에 대하여 $f(x)=f(x')$이므로 $x\mathrel{R}x'$이고, 따라서 $t=t'$가 되어 $h$는 injection이다. 그런데 $h$의 공역은 $f$의 치역으로 제한된 상태이므로, $h$는 surjection이기도 하다. 따라서 $h$는 bijection이며, 위의 식을 $f$의 *canonical decomposition*이라 부른다.
+를 얻는다. 만일 어떠한 $t, t'\in A/R$에 대해 $h(t)=h(t')$라면, $x\in t$, $x'\in t'$에 대하여 $f(x)=f(x')$이므로 $x\mathrel{R}x'$이고, 따라서 $t=t'$가 되어 $h$는 단사함수이다. 그런데 $h$의 공역은 $f$의 치역으로 제한된 상태이므로, $h$는 전사함수이기도 하다. 따라서 $h$는 전단사이며, 위의 식을 $f$의 *canonical decomposition*이라 부른다.
 
-추가로 공역 $F$에 equivalence relation$S$가 주어졌다고 하자. 그럼 우선 다음의 diagram을 얻는다.
+추가로 공역 $B$에 동치관계 $S$가 주어졌다고 하자. 그럼 우선 다음의 diagram을 얻는다.
 
-![induced_mapping_of_equivalence](/assets/images/Set_theory/Equivalence_relations-3.png){:width="120px"  class="invert" .align-center}
+![induced_mapping_of_equivalence](/assets/images/Set_theory/Equivalence_relations-3.png){:width="172.5px"  class="invert" .align-center}
 
-그럼 $f$가 $R$과 compatible한 것은 map $p'\circ f$이 $R$과 compatible한 것이다. 이는 다시 $h:E/R\rightarrow F/S$가 존재하여 $h\circ p=p'\circ f$인 것과 동치이다. 
+만일 $q\circ f$이 $R$과 compatible하다면, $f$가 두 동치관계 $R$, $S$와 compatible하다고 한다. [명제 15](#pp15)에 의해 이는 다시 $h:A/R\rightarrow B/S$가 존재하여 $h\circ p=q\circ f$인 것과 동치이다. 
 
-반대로 우리는 공역 $F$에 정의된 equivalence relation $S$로부터 $E$ 위에 equivalence relation을 만들 수도 있다. 우선 $f:E\rightarrow F$이고 $S$가 $F$ 위에서의 equivalence relation, 그리고 $p:F\rightarrow F/S$가 canonical이라 하자. 즉 다음과 같다.
+또, 공역 $B$에 정의된 동치관계 $S$로부터 $A$ 위에 동치관계를 만들 수도 있다. 우선 $f:A\rightarrow B$이고 $S$가 $B$ 위에서의 동치관계, 그리고 $p:B\rightarrow B/S$가 canonical이라 하자. 이 상황을 diagram으로 나타내면 다음과 같다.
 
-![inverse_image_of_equivalence](/assets/images/Set_theory/Equivalence_relations-4.png){:width="120px"  class="invert" .align-center}
+![inverse_image_of_equivalence](/assets/images/Set_theory/Equivalence_relations-4.png){:width="145.5px"  class="invert" .align-center}
 
-그럼 우리는 map $p\circ f$에 의해 정의되는 equivalence relation $R$을 $E$ 위에 정의할 수 있다. 이를 $S$의 $f$에 의한 *inverse image*라 부른다.
+그럼 우리는 함수 $p\circ f$에 의해 정의되는 동치관계 $R$을 $A$ 위에 정의할 수 있다. 이를 $S$의 $f$에 의한 *inverse image*라 부른다.
 
-<ins id="df16">**정의 16**</ins>  $R$, $S$가 equivalence relation들이라 하자. $S$가 $R$보다 *finer<sub>세밀하다</sub>*하다는 것은 $x\mathrel{S}y\rightarrow x\mathrel{R}y$가 항상 성립하는 것이다.
+<ins id="df16">**정의 16**</ins>  $R$, $S$가 동치관계들이라 하자. $S$가 $R$보다 *finer<sub>세밀하다</sub>*하다는 것은 $x\mathrel{S}y\implies x\mathrel{R}y$가 항상 성립하는 것이다.
 {: .definition}
 
-만일 두 equivalence relation들이 모두 $E$ 위에서 정의된다면 그래프들이 존재하므로, 더 finer한 equivalence relation은 그래프의 측면에서 finer하기도 하다. 다음의 diagram을 생각하자.
+두 동치관계 $R,S$가 집합 $A$ 위에서 정의된 동치관계이고, $S$가 $R$보다 finer하다고 하자. 
 
-![third_iso_1](/assets/images/Set_theory/Equivalence_relations-5.png){:width="140px"  class="invert" .align-center}
+![third_iso_1](/assets/images/Set_theory/Equivalence_relations-5.png){:width="171.3px"  class="invert" .align-center}
 
-함수 $p_S$가 surjective이고 $p_S(x)=p_S(y)$이면 $p_R(x)=p_R(y)$이다. 따라서 유일한 함수 $h:E/S\rightarrow E/R$이 존재하여 $p_R=h\circ p_S$이다. 이렇게 생기는 함수 $h:E/S\rightarrow E/R$을 이용하면 $E/S$ 위에 equivalence relation을 정의할 수 있다. 우리는 이 equivalence relation을 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. 이 상황은 canonical decomposition을 거치면 다음과 같다. 
+그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 유일한 함수 $h:A/S\rightarrow A/R$이 존재하여 $p_R=h\circ p_S$이다. ([§함수 (2), 명제 4](/ko/math/set_theory/functions_2#pp4)) 
 
-![third_iso_2](/assets/images/Set_theory/Equivalence_relations-6.png){:width="320px"  class="invert" .align-center}
+위와 같이 정의된 함수 $h$에 대하여, $h$에 의해 $A/S$ 위에 정의된 동치관계를 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. 이 상황은 canonical decomposition을 거치면 다음과 같다. 
 
-위의 $k$는 앞선 canonical decomposition의 정의에 의하여 bijection이 된다. 즉 $(E/S)/(R/S)$는 $E/R$과의 bijection을 갖는다.
+![third_iso_2](/assets/images/Set_theory/Equivalence_relations-6.png){:width="368.25px"  class="invert" .align-center}
 
-이들 정리는 특히 대수적인 구조들을 다룰 때 중요하게 등장한다.
+위의 $k$는 앞선 canonical decomposition의 정의에 의하여 전단사함수가 된다. 
 
 ## 동치관계의 product
 마지막으로 두 equivalence relation $R$, $R'$이 주어졌다고 하자. 만일 우리가 $S$를 다음의 relation
