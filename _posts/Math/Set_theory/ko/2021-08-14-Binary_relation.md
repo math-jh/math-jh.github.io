@@ -76,7 +76,7 @@ $$A=\left\{x:\left(x\in\bigcup\left(\bigcup G\right)\right)\wedge P(x)\right\}$$
 
 $$\Gamma=(G, A, B)$$
 
-을 의미한다. 여기서 $G$는 $\operatorname{pr}_1 G\subset A$, $\operatorname{pr}_2 G\subset B$를 만족하는 그래프이다. 이 때, $G$는 $\Gamma$의 그래프, $A$는 *source*, $B$는 *target*이라 불린다. 또,
+을 의미한다. 여기서 $G$는 $\operatorname{pr}_1 G\subseteq A$, $\operatorname{pr}_2 G\subseteq B$를 만족하는 그래프이다. 이 때, $G$는 $\Gamma$의 그래프, $A$는 *source*, $B$는 *target*이라 불린다. 또,
 
 - 만일 $x\in \operatorname{pr}_1G$라면 $\Gamma$가 $x$에서 정의되었다고 하며, $\operatorname{pr}_1G$는 $\Gamma$의 *정의역<sub>domain</sub>*이라 불린다. 
 - 만일 $y\in \operatorname{pr}_2G$라면, $y$는 $\Gamma$가 갖는 값이라 하고, $\operatorname{pr}_2G$는 $\Gamma$의 *치역<sub>range</sub>*이라 부른다.
@@ -85,36 +85,36 @@ $$\Gamma=(G, A, B)$$
 
 $\Gamma=(G,A,B)$가 correspondence라 하자. 그럼 [§순서쌍, 명제 9](/ko/math/set_theory/ordered_pair#pp9)에 의하여,
 
-$$G\subset \operatorname{pr}_1 G\times\operatorname{pr}_2G\subset A\times B$$
+$$G\subseteq \operatorname{pr}_1 G\times\operatorname{pr}_2G\subseteq A\times B$$
 
 이므로 곱집합 $A\times B$는 $A$를 source로, $B$를 target으로 갖는 그래프 중 가장 큰 것이라 할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> $G$가 그래프, $X$가 집합이라 하자. 그럼 <phrase>$G$에 의해 $X$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $G$에 의한 $X$의 *상<sub>image</sub>*라 부르고 , $G(X)$로 표기한다.
+<ins id="df5">**정의 5**</ins> $G$가 그래프, $A$가 집합이라 하자. 그럼 <phrase>$G$에 의해 $A$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $G$에 의한 $A$의 *상<sub>image</sub>*라 부르고 , $G(A)$로 표기한다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $G$가 그래프, $X$, $Y$가 집합이라 하자. 만일 $X\subset Y$라면 항상 $G(X)\subset G(Y)$가 성립한다.
+<ins id="pp6">**명제 6**</ins> $G$가 그래프라 하고, 임의의 집합 $A$와 그 부분집합 $X$를 생각하자. 그럼 $G(X)\subseteq G(A)$가 성립한다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$y\in G(X)$라 하자. 그럼 어떤 $x\in X$가 존재하여 $(x,y)\in G(X)$이다. 이제 $X\subset Y$로부터 $x\in Y$이므로, $y\in G(Y)$이다.
+$y\in G(X)$라 하자. 그럼 어떤 $x\in X$가 존재하여 $(x,y)\in G(X)$이다. 이제 $X\subseteq A$로부터 $x\in A$이므로, $y\in G(A)$이다.
 
 </details>
 
-위의 명제에 의하여 임의의 $X$에 대해 
+위의 명제에 의하여 임의의 $A$에 대해 
 
-$$G(X)=\operatorname{pr}_2\{z\in G:\text{$\operatorname{pr}_1z\in X$}\}\subset\operatorname{pr}_2G$$
+$$G(A)=\operatorname{pr}_2\{z\in G:\text{$\operatorname{pr}_1z\in A$}\}\subset\operatorname{pr}_2G$$
 
-이고, 따라서 $G(X)\subset\operatorname{pr}_2G$가 성립한다. 특히 $X=\emptyset$이라면 $G(\emptyset)=\emptyset$이며, 더 일반적으로 만일 $X\cap\operatorname{pr}_1G=\emptyset$이라면 $G(X)=\emptyset$이다.
+이고, 따라서 $G(A)\subset\operatorname{pr}_2G$가 성립한다. 특히 $A=\emptyset$이라면 $G(A)=\emptyset$이며, 더 일반적으로 만일 $A\cap\operatorname{pr}_1G=\emptyset$이라면 $G(A)=\emptyset$이다.
 
-만일 어떤 $x$에 대해 $X=\\{x\\}$라면 $G(X)$를 마치 $x$에서의 $G$의 함숫값처럼 생각할 수 있다. 
+만일 어떤 $x$에 대해 $A=\\{x\\}$라면 $G(A)$를 마치 $x$에서의 $G$의 함숫값처럼 생각할 수 있다. 
 
 <div class="definition" markdown="1">
 
@@ -130,7 +130,7 @@ $$G(X)=\operatorname{pr}_2\{z\in G:\text{$\operatorname{pr}_1z\in X$}\}\subset\o
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> $G$가 그래프라 하자. 그럼 $(x,y)\in G$를 만족하는 모든 $(y,x)$들로 이루어진 그래프를 $G$의 *역<sub>inverse</sub>*이라 부르고 이를 $G^{-1}$로 표기한다. 또, 집합 $G^{-1}(X)$를 $X$의 *역상<sub>inverse image 혹은 preimage</sub>*이라 부른다. 만일 $G^{-1}=G$라면 $G$가 *대칭적<sub>symmetric</sub>*이라고 한다.
+<ins id="df8">**정의 8**</ins> $G$가 그래프라 하자. 그럼 $(x,y)\in G$를 만족하는 모든 $(y,x)$들로 이루어진 그래프를 $G$의 *역<sub>inverse</sub>*이라 부르고 이를 $G^{-1}$로 표기한다. 또, 집합 $G^{-1}(A)$를 $A$의 *역상<sub>inverse image 혹은 preimage</sub>*이라 부른다. 만일 $G^{-1}=G$라면 $G$가 *대칭적<sub>symmetric</sub>*이라고 한다.
 
 </div>
 
@@ -160,11 +160,11 @@ $$(x,y)\in G\iff (y,x)\in G^{-1}\iff (x,y)\in (G^{-1})^{-1}$$
 
 </details>
 
-주어진 집합 $X$와 $Y$에 대하여, $X\times Y$는 $X$를 source로, $Y$를 target으로 갖는 가장 큰 그래프였다. 따라서 두 개의 식
+주어진 집합 $A,B$에 대하여, $A\times B$는 $A$를 source로, $B$를 target으로 갖는 가장 큰 그래프였다. 따라서 두 개의 식
 
-$$\operatorname{pr}_1(X\times Y)^{-1}=\operatorname{pr}_2(X\times Y)=Y,\qquad \operatorname{pr}_2(X\times Y)^{-1}=\operatorname{pr}_1(X\times Y)=X$$
+$$\operatorname{pr}_1(A\times B)^{-1}=\operatorname{pr}_2(A\times B)=B,\qquad \operatorname{pr}_2(A\times B)^{-1}=\operatorname{pr}_1(A\times B)=A$$
 
-에서, $(X\times Y)^{-1}\subset Y\times X$이다. 반대로, 만일 $(y,x)\in Y\times X$라면 $x\in X$, $y\in Y$이므로 $(x,y)\in X\times Y$이고, 따라서 $(y,x)\in (X\times Y)^{-1}$이므로 $(X\times Y)^{-1}=Y\times X$가 성립한다.
+에서, $(A\times B)^{-1}\subseteq B\times A$이다. 반대로, 만일 $(y,x)\in B\times A$라면 $x\in A$, $y\in B$이므로 $(x,y)\in A\times B$이고, 따라서 $(y,x)\in (A\times B)^{-1}$이므로 $(A\times B)^{-1}=B\times A$가 성립한다.
 
 <div class="definition" markdown="1">
 
@@ -212,9 +212,9 @@ $$(G_3\circ G_2)\circ G_1=G_3\circ(G_2\circ G_1)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp13">**명제 13**</ins> $G$, $G'$가 그래프이고 $X$가 집합이라 하자. 그럼
+<ins id="pp13">**명제 13**</ins> $G$, $G'$가 그래프이고 $A$가 집합이라 하자. 그럼
 
-$$(G'\circ G)(X)=G'(G(X))$$
+$$(G'\circ G)(A)=G'(G(A))$$
 
 가 성립한다.
 
@@ -224,13 +224,13 @@ $$(G'\circ G)(X)=G'(G(X))$$
 
 앞선 명제와 같이 진행한다. 
 
-어떠한 $z$에 대하여 $z\in (G'\circ G)(X)$인 것은 <phrase>어떠한 $x\in X$가 존재하여 $(x,z)\in G'\circ G$인 것</phrase>과 동치이다. 그런데 이는 다시 <phrase>어떠한 $y$가 존재하여 $(x,y)\in G$이고 $(y,z)\in G'$인 것</phrase>과 동치이다. $y\in G(X)$이므로, $z\in G'(G(X))$이다. 이 논리를 거꾸로 뒤집으면 반대방향의 증명이 된다.
+어떠한 $z$에 대하여 $z\in (G'\circ G)(A)$인 것은 <phrase>어떠한 $x\in X$가 존재하여 $(x,z)\in G'\circ G$인 것</phrase>과 동치이다. 그런데 이는 다시 <phrase>어떠한 $y$가 존재하여 $(x,y)\in G$이고 $(y,z)\in G'$인 것</phrase>과 동치이다. $y\in G(A)$이므로, $z\in G'(G(A))$이다. 이 논리를 거꾸로 뒤집으면 반대방향의 증명이 된다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp14">**명제 14**</ins> Correspondence $\Gamma=(G,A,B)$에 대하여 $X\subset A$, $Y\subset B$라 하자. 그럼 
+<ins id="pp14">**명제 14**</ins> Correspondence $\Gamma=(G,A,B)$에 대하여 $X\subseteq A$, $Y\subseteq B$라 하자. 그럼 
 
 1. $G^{-1}(G(X))\supset X\cap\operatorname{pr}_1G$  
 2. $G(G^{-1}(Y))\supset Y\cap\operatorname{pr}_2G$  

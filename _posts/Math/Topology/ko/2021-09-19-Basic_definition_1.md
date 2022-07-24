@@ -37,9 +37,9 @@ weight: 1
 
 > $X$의 부분집합 $U$가 열린집합인 것은 <phrase>$U$의 원소 $x$마다, $x$를 포함하고 $U$에 포함된 열린집합 $V_x$가 존재하는 것</phrase>과 동치이다.
 
-먼저 $U$가 열린집합이라면, 임의의 $x$에 대하여 $U$가 $V_x$의 역할을 하므로 더 이상 증명할 것이 없다. 따라서 반대방향만 보이면 충분하다. 임의의 $x\in U$에 대하여, $V_x\subset U$가 모든 $x\in U$에 대해 성립하므로,
+먼저 $U$가 열린집합이라면, 임의의 $x$에 대하여 $U$가 $V_x$의 역할을 하므로 더 이상 증명할 것이 없다. 따라서 반대방향만 보이면 충분하다. 임의의 $x\in U$에 대하여, $V_x\subseteq U$가 모든 $x\in U$에 대해 성립하므로,
 
-$$\bigcup_{x\in U}V_x\subset U$$
+$$\bigcup_{x\in U}V_x\subseteq U$$
 
 가 성립한다. 반대로 임의의 $x\in U$에 대하여, $x\in V_x\subset\bigcup_{x\in U} V_x$이므로
 
@@ -90,7 +90,7 @@ $$\mathcal{T}=\{\emptyset, \{x\}, X\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> $X$의 임의의 원소 $x$에 대하여, $x$를 포함하는 열린집합 $U$를 $x$의 *열린근방<sub>open neighborhood</sub>*이라 부른다. $X$의 부분집합이 $x$의 어떤 open neighborhood를 포함한다면 이 부분집합을 $x$의 *근방<sub>neighborhood</sub>*이라 부른다.  
+<ins id="df5">**정의 5**</ins> $X$의 임의의 원소 $x$에 대하여, $x$를 포함하는 열린집합 $U$를 $x$의 *열린근방<sub>open neighborhood</sub>*이라 부른다. $X$의 부분집합이 $x$의 어떤 열린근방을 포함한다면 이 부분집합을 $x$의 *근방<sub>neighborhood</sub>*이라 부른다.  
 
 </div>
 
@@ -100,7 +100,7 @@ $$\mathcal{T}=\{\emptyset, \{x\}, X\}$$
    
 임의의 집합 $X$에 대하여, $\mathcal{T}$를 다음의 집합
 
-$$\mathcal{T}=\{U\subset X:\text{either $U^c$ is finite or $U=\emptyset$}\}$$
+$$\mathcal{T}=\{U\subseteq X:\text{either $U^c$ is finite or $U=\emptyset$}\}$$
 
 으로 정의하자. 그럼, 
 
@@ -138,7 +138,7 @@ $X$ 위의 임의의 위상 $\mathcal{T}$에서 $\emptyset$과 $X$는 열린집�
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-다음의 De Morgan 법칙 (<#ref#>)
+다음의 De Morgan 법칙 ([집합론, §합집합과 교집합, 명제 8](/ko/math/set_theory/union_and_intersection#pp8))
 
 $$\left(\bigcap C_i\right)^c=\bigcup C_i^c,\quad\left(\bigcup C_i\right)^c=\bigcap C_i^c$$
 
@@ -154,6 +154,6 @@ $$\left(\bigcap C_i\right)^c=\bigcup C_i^c,\quad\left(\bigcup C_i\right)^c=\bigc
 
 ---
 
-[^1]: 사실, index set을 공집합으로 두면 1번 조건은 2번과 3번 조건에서 유도되긴 한다.
-[^2]: 나중에, 위상공간보다는 조금 더 직관적으로 가까움의 개념을 포함하는 (거리는 정의되지 않은) 공간을 살펴보게 된다.
+[^1]: 사실 index set을 공집합으로 두면 1번 조건은 2번과 3번 조건에서 유도되긴 한다.
+[^2]: 나중에 위상공간보다는 조금 더 직관적으로 가까움의 개념을 포함하는 (거리는 정의되지 않은) 공간을 살펴보게 된다.
 [^3]: 위에서 예로 든 $\mathcal{T}$의 경우, $x$를 $y$에서 분리하는 것은 열린집합 $\\{x\\}$를 통해 가능하지만, $y$를 $x$에서 분리하는 것은 애매하다.

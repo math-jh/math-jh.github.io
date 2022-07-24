@@ -129,3 +129,35 @@ manifold-en:
     children:
       - title: 
         url: 
+
+dev:
+  - title: "블로그 개발"
+    children:
+      - title: "블로그 플랫폼 선택"
+        url: /ko/blog_dev/introduction
+      - title: "Github 블로그 생성"
+        url: /ko/blog_dev/getting_started
+      - title: "Minimal mistakes 기본설정"
+        url: /ko/blog_dev/initial_settings
+      - title: "한글 폰트 추가"
+        url: /ko/blog_dev/fonts
+      - title: "수식입력 지원"
+        url: /ko/blog_dev/KaTeX
+      - title: "Minimal mistakes 테마 수정"
+        url: /ko/blog_dev/skin
+      - title: "각종 박스 생성"
+        url: /ko/blog_dev/notices
+      - title: "블로그 커스터마이징"
+        url: /ko/blog_dev/personalization
+      - title: "맨 위로 버튼 만들기"
+        url: /ko/blog_dev/back_to_top
+      - title: "다크 모드 설정"
+        url: /ko/blog_dev/dark_theme
+      - title: "포스트 순서 정렬"
+        url: /ko/blog_dev/weight
+      - title: "댓글 기능 추가 (1)"
+        url: /ko/blog_dev/comments_1
+      - title: "댓글 기능 추가 (2)"
+        url: /ko/blog_dev/comments_2
+      - title: "다국어 지원"
+        url: /ko/blog_dev/multilingual

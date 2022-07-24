@@ -35,7 +35,7 @@ weight: 5
 
 </div>
 
-세 번째 조건으로부터, 만일 $A\subset B$라면
+세 번째 조건으로부터, 만일 $A\subseteq B$라면
 
 $$\operatorname{cl}(A)\subset\operatorname{cl}(A)\cup\operatorname{cl}(B)=\operatorname{cl}(A\cup B)=\operatorname{cl}(B)$$
 
@@ -47,7 +47,7 @@ $$\operatorname{cl}(A)\subset\operatorname{cl}(A)\cup\operatorname{cl}(B)=\opera
 
 - $\operatorname{cl}(\emptyset)=\emptyset$이므로, $\emptyset\in\mathcal{C}$이다. 한편 $X\subset\operatorname{cl}(X)$이므로 $\operatorname{cl}(X)=X$이고 따라서 $X\in\mathcal{C}$이다.
 - 임의의 $A,B\in\mathcal{C}$에 대하여, $A\cup B=\operatorname{cl}(A)\cup\operatorname{cl}(B)=\operatorname{cl}(A\cup B)$가 성립하므로 $A\cup B\in\mathcal{C}$가 성립한다. 
-- 임의의 index set $I$와 $A_i\in\mathcal{C}$들에 대하여, $\bigcap A_i\subset\operatorname{cl}(\bigcap A_i)$이고, 또 $\bigcap A_i\subset A_i$으로부터 
+- 임의의 index set $I$와 $A_i\in\mathcal{C}$들에 대하여, $\bigcap A_i\subset\operatorname{cl}(\bigcap A_i)$이고, 또 $\bigcap A_i\subseteq A_i$으로부터 
 
   $$\operatorname{cl}(\bigcap A_i)\subset\operatorname{cl}(A_i)=A_i$$
 
@@ -67,7 +67,7 @@ $$\operatorname{cl}(A)\subset\operatorname{cl}(A)\cup\operatorname{cl}(B)=\opera
 
 **Interior axiom.** 임의의 집합 $X$에 대하여, 함수 $\operatorname{int}:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 다음의 조건들을 만족한다 하자.
 
-- $\operatorname{int}(A)\subset A$
+- $\operatorname{int}(A)\subseteq A$
 - $\operatorname{int}(\operatorname{int}(A))=\operatorname{int}(A)$
 - $\operatorname{int}(A\cap B)=\operatorname{int}(A)\cap\operatorname{int}(B)$
 - $\operatorname{int}(X)=X$
@@ -82,8 +82,8 @@ $$\operatorname{cl}(A)\subset\operatorname{cl}(A)\cup\operatorname{cl}(B)=\opera
 
 위상공간 $X$가 주어졌다 하고, 공집합이 아닌 부분집합 $A$를 생각하자. $A$의 근방들의 모임을 $\mathcal{N}(A)$라 하면 $\mathcal{N}(A)$는 ordered set $\mathcal{P}(X)$의 filter가 된다. 
 
-1. (Left directed) 임의의 $N_1, N_2\in\mathcal{N}(A)$가 주어졌다 하자. 그럼 $A\subset U_i\subset N_i$를 만족하는 $A$의 열린근방 $U_i$들이 존재한다. 그런데 $A\subset U_1\cap U_2\subset N_1\cap N_2$이고 $U_1\cap U_2$는 $A$의 열린근방이므로, $N_1\cap N_2$도 $A$의 근방이다.
-2. (Upper set) 만일 $N\in\mathcal{N}(A)$라면, $A$의 적당한 열린근방 $U$가 존재하여 $A\subset U\subset N$이다. 그런데 $N\subset N'$를 만족하는 임의의 $N'$에 대하여 $U$는 $N'$의 부분집합이기도 하므로 $N'\in\mathcal{N}(A)$가 성립한다.
+1. (Left directed) 임의의 $N_1, N_2\in\mathcal{N}(A)$가 주어졌다 하자. 그럼 $A\subseteq U_i\subseteq N_i$를 만족하는 $A$의 열린근방 $U_i$들이 존재한다. 그런데 $A\subseteq U_1\cap U_2\subseteq N_1\cap N_2$이고 $U_1\cap U_2$는 $A$의 열린근방이므로, $N_1\cap N_2$도 $A$의 근방이다.
+2. (Upper set) 만일 $N\in\mathcal{N}(A)$라면, $A$의 적당한 열린근방 $U$가 존재하여 $A\subseteq U\subseteq N$이다. 그런데 $N\subseteq N'$를 만족하는 임의의 $N'$에 대하여 $U$는 $N'$의 부분집합이기도 하므로 $N'\in\mathcal{N}(A)$가 성립한다.
 
 특별히 $A=\\{x\\}$인 경우, $\mathcal{N}(A)$ 대신 간단하게 $\mathcal{N}(x)$로 표기하기로 한다.
 
@@ -133,7 +133,7 @@ $X$의 부분집합들의 모임 $\mathcal{S}\subset\mathcal{P}(X)$를 생각하
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $F\cap A,F'\cap A\in\mathcal{F}_A$에 대하여 $(F\cap A)\cap(F'\cap A)=(F\cap F')\cap A$이고, $\mathcal{F}$는 filter이므로 $F\cap F'\in\mathcal{F}$가 되어 $(F\cap A)\cap(F'\cap A)\in\mathcal{F}_A$가 성립한다. 또, 만일 $F\cap A\subset G\subset A$라 하면, $G=(F\cup G)\cap A$이므로 $G\in\mathcal{F}_A$이다. 따라서 $\emptyset\not\in\mathcal{F}_A$이기만 하면 $\mathcal{F}_A$가 filter로써 잘 정의되며, 또 당연히 $\mathcal{F}_A$가 filterrㅏ 되기 위해서는 $\emptyset\not\in\mathcal{F}_A$여야 하므로 원하는 결과를 얻는다.
+임의의 $F\cap A,F'\cap A\in\mathcal{F}_A$에 대하여 $(F\cap A)\cap(F'\cap A)=(F\cap F')\cap A$이고, $\mathcal{F}$는 filter이므로 $F\cap F'\in\mathcal{F}$가 되어 $(F\cap A)\cap(F'\cap A)\in\mathcal{F}_A$가 성립한다. 또, 만일 $F\cap A\subseteq G\subseteq A$라 하면, $G=(F\cup G)\cap A$이므로 $G\in\mathcal{F}_A$이다. 따라서 $\emptyset\not\in\mathcal{F}_A$이기만 하면 $\mathcal{F}_A$가 filter로써 잘 정의되며, 또 당연히 $\mathcal{F}_A$가 filterrㅏ 되기 위해서는 $\emptyset\not\in\mathcal{F}_A$여야 하므로 원하는 결과를 얻는다.
 
 </details>
 
@@ -159,7 +159,7 @@ $\mathcal{P}(X)$에서 $\mathcal{P}(X)$로의 operator $\operatorname{int}$를 �
 
 $$\operatorname{int}(A)=\{x\in X:A\in\mathcal{N}(x)\}$$
 
-으로 정의하자. 그럼 임의의 $x\in\operatorname{int}(A)$에 대하여 $A\in\mathcal{N}(x)$이므로 $x\in A$이고, 따라서 $\operatorname{int}(A)\subset A$가 성립한다.
+으로 정의하자. 그럼 임의의 $x\in\operatorname{int}(A)$에 대하여 $A\in\mathcal{N}(x)$이므로 $x\in A$이고, 따라서 $\operatorname{int}(A)\subseteq A$가 성립한다.
 
 이로부터 $\operatorname{int}(\operatorname{int}(A))\subset\operatorname{int}(A)$는 자명하다. 거꾸로 $x\in\operatorname{int}(A)$라 하자. 즉 $A\in\mathcal{N}(x)$이다. 그럼 neighborhood axiom에 의하여, 적당한 $A'\in\mathcal{N}(x)$가 존재하여 $x'\in A'$일 때마다 $A\in\mathcal{N}(x')$이다. 이는 정확히 임의의 $x'\in A'$에 대하여 항상 $x'\in\operatorname{int}(A)$라는 뜻이므로, $A'\subset\operatorname{int}(A)$이고, $\mathcal{N}(x)$는 upper set이므로 $\operatorname{int}(A)\in\mathcal{N}(x)$이다. 즉, $x\in\operatorname{int}(\operatorname{int}(A))$이고, 따라서 $\operatorname{int}(\operatorname{int}(A))=\operatorname{int}(A)$가 성립한다.  
 

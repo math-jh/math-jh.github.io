@@ -29,7 +29,7 @@ weight: 11
 
 Vector field $X$에 대하여, 점 $p$에서의 $X$의 함숫값은 $X(p)$ 대신 $X_p$로 적는 것이 보통이다. 이는 $T_pM$의 원소로서 $X_p$가 $C^\infty_p(M)$의 원소 $f$에 작용하므로, 이를 $X_p(f)$로 적기 위해서이다.
 
-한편 $f$가 열린집합 $U\subset M$에서 정의되었다 하자. 그럼 각각의 $p\in U$에 대하여 $X_p(f)$가 잘 정의되며, 대응 $p\mapsto X_p(f)$를 $U$ 위에서 정의된 함수로 생각할 수 있다. 이를 $X(f)$로 적는다.
+한편 $f$가 열린집합 $U\subseteq M$에서 정의되었다 하자. 그럼 각각의 $p\in U$에 대하여 $X_p(f)$가 잘 정의되며, 대응 $p\mapsto X_p(f)$를 $U$ 위에서 정의된 함수로 생각할 수 있다. 이를 $X(f)$로 적는다.
 
 <div class="proposition" markdown="1">
 
@@ -41,7 +41,7 @@ Vector field $X$에 대하여, 점 $p$에서의 $X$의 함숫값은 $X(p)$ 대�
     $$(X|_U)_p=\sum_{i=1}^m a^i(p)\frac{\partial}{\partial x^i}\bigg|_p$$
 
     으로 정의된 함수 $a^i:U\rightarrow\mathbb{R}$들이 모두 $U$에서 정의된 $C^\infty$ 함수들이다. 
-3. 임의의 열린집합 $V\subset M$과 $V$ 위에서 정의된 $C^\infty$ 함수 $f:V\rightarrow\mathbb{R}$에 대하여, $X(f)$ 또한 $C^\infty$이다.
+3. 임의의 열린집합 $V\subseteq M$과 $V$ 위에서 정의된 $C^\infty$ 함수 $f:V\rightarrow\mathbb{R}$에 대하여, $X(f)$ 또한 $C^\infty$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -243,7 +243,7 @@ $$\begin{aligned}dF_p([X_1,X_2]_p)f&=[X_1,X_2]_p(f\circ F)\\
 
 1. $0\in \bigl(a(p),b(p)\bigr)$, $\gamma_p(0)=p$.
 2. $\gamma_p$는 $X$의 integral curve이다.
-3. 만일 $\mu:(c,d)\rightarrow M$이 위의 두 조건을 만족하는 $C^\infty$ 함수라면 $(c,d)\subset \bigl(a(p),b(p)\bigr)$이고, $\mu$는 $\gamma_p$를 $(c,d)$로 제한한 것과 동일한 함수이다.
+3. 만일 $\mu:(c,d)\rightarrow M$이 위의 두 조건을 만족하는 $C^\infty$ 함수라면 $(c,d)\subseteq \bigl(a(p),b(p)\bigr)$이고, $\mu$는 $\gamma_p$를 $(c,d)$로 제한한 것과 동일한 함수이다.
 4. 각각의 $p\in M$마다 적당한 열린근방 $V$와 양수 $\epsilon$이 존재하여, $(t,p)\mapsto X_t(p)$가 잘 정의되며, 이 함수는 $(-\epsilon,\epsilon)\times V$에서 $M$으로의 $C^\infty$ 함수이다.
 5. 임의의 $t$에 대해 $\mathcal{D}_t$가 열린집합이다.
 6. $\bigcup\_{t>0}\mathcal{D}_t=M$.

@@ -126,25 +126,25 @@ $I$가 유한이므로, 임의의 자연수 $a$와 $b$에 대해 $a+b$와 $ab$�
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> $E$가 공집합이 아니고 $A$가 $E$의 부분집합이라 하자. $A$의 *특성함수<sub>characteristic function</sub>*는 함수 $\chi_A:E\rightarrow \\{0,1\\}$이며, 그 값은 다음의 식
+<ins id="df8">**정의 8**</ins> $A$가 공집합이 아니고 $X$가 $A$의 부분집합이라 하자. $X$의 *특성함수<sub>characteristic function</sub>*는 함수 $\chi_X:E\rightarrow \\{0,1\\}$이며, 그 값은 다음의 식
 
-$$\chi_A(x)=\begin{cases}1&\text{if $x\in A$}\\ 0&\text{if $x\in E\setminus A$}\end{cases}$$
+$$\chi_X(x)=\begin{cases}1&\text{if $x\in X$}\\ 0&\text{if $x\in A\setminus X$}\end{cases}$$
 
 으로 주어진다.
 
 </div>
 
-종종 조금 더 현대적인 표기법으로, $\chi_A$ 대신 $1_A$ 등과 같이 쓰기도 한다.  
+종종 조금 더 현대적인 표기법으로, $\chi_X$ 대신 $1_X$ 등과 같이 쓰기도 한다.  
 다음의 정리는 자명하게 보일 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> 집합 $E$의 두 부분집합 $A$와 $B$에 대하여,
+<ins id="pp9">**명제 9**</ins> 집합 $A$의 두 부분집합 $X$와 $Y$에 대하여,
 
 $$\begin{aligned}
-\chi_{E\setminus A}(x)&=1-\chi_A(x)\\
-\chi_{A\cap B}(x)&=\chi_A(x)\chi_B(x)\\
-\chi_{A\cup B}(x)+\chi_{A\cap B}(x)&=\chi_A(x)+\chi_B(x)
+\chi_{A\setminus X}(x)&=1-\chi_X(x)\\
+\chi_{X\cap Y}(x)&=\chi_X(x)\chi_Y(x)\\
+\chi_{X\cup Y}(x)+\chi_{X\cap Y}(x)&=\chi_X(x)+\chi_Y(x)
 \end{aligned}$$
 
 가 성립한다.
@@ -207,13 +207,13 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem13">**보조정리 13**</ins> 임의의 무한집합 $E$는 $\mathbb{N}$과 equipotent한 부분집합을 포함한다.
+<ins id="lem13">**보조정리 13**</ins> 임의의 무한집합 $A$는 $\mathbb{N}$과 equipotent한 부분집합을 포함한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$E$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $E$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $E$의 segment와 isomorphic하다. ([§<sup>†</sup>Ordinal과 well-ordering, 명제 18](/ko/math/set_theory/ordinals#pp18))
+$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§<sup>†</sup>Ordinal과 well-ordering, 명제 18](/ko/math/set_theory/ordinals#pp18))
 
 </details>
 <div class="proposition" markdown="1">
@@ -236,23 +236,23 @@ $$(1,1),\;\; (1,2),(2,1),\;\; (1,3),(2,2),(3,1),\;\; \cdots$$
 <details class="proof--alone" markdown="1">
 <summary>명제 12의 증명</summary>
 
-$E$가 cardinal $\mathfrak{a}$를 갖는 집합이라 하자. 그럼 첫 번째 보조정리로부터 어떤 $D\subset E$는 $\mathbb{N}$과 equipotent하고, 따라서 두 번째 보조정리에 의해 $D\times D$와 $D$ 사이의 bijection이 존재한다. 이를 $f$라 하자. 
+$A$가 cardinal $\mathfrak{a}$를 갖는 집합이라 하자. 그럼 첫 번째 보조정리로부터 어떤 $B\subseteq A$는 $\mathbb{N}$과 equipotent하고, 따라서 두 번째 보조정리에 의해 $B\times B$와 $B$ 사이의 전단사함수가 존재한다. 이를 $f$라 하자. 
 
-$D$를 포함하는 $E$의 부분집합 $X$와, 그 위에서 정의된 $f$의 extension $\psi:X\rightarrow X\times X$에 대해 $\mathfrak{M}$이 이러한 쌍 $(X,\psi)$들의 모임이라 하자. 그럼 $\mathfrak{M}$의 임의의 chain에 대하여 가장 큰 정의역을 갖는 쌍이 maximal element가 되므로, $\mathfrak{M}$은 inductive한 집합이고, 따라서 Zorn's lemma에 의해 $\mathfrak{M}$의 maximal element $(F, \tilde{f})$가 존재한다.
+$B$를 포함하는 $A$의 부분집합 $X$와, 그 위에서 정의된 $f$의 extension $\psi:X\rightarrow X\times X$에 대해 $\mathfrak{M}$이 이러한 쌍 $(X,\psi)$들의 모임이라 하자. 그럼 $\mathfrak{M}$의 임의의 chain에 대하여 가장 큰 정의역을 갖는 쌍이 maximal element가 되므로, $\mathfrak{M}$은 inductive한 집합이고, 따라서 Zorn's lemma에 의해 $\mathfrak{M}$의 maximal element $(F, \tilde{f})$가 존재한다.
 
 이제 $\operatorname{card} F=\mathfrak{a}$임을 보이면 충분하다. 만일 $\operatorname{card} F=\mathfrak{b}&lt;\mathfrak{a}$라면, bijection $\tilde{f}$에 의해 $\mathfrak{b}=\mathfrak{b}^2$이므로 
 
 $$\mathfrak{b}\leq 2\mathfrak{b}\leq 3\mathfrak{b}\leq \mathfrak{b}^2=\mathfrak{b}$$
 
-에서 $\mathfrak{b}=2\mathfrak{b}=3\mathfrak{b}$이다. 그럼 $\mathfrak{b}&lt;\mathfrak{a}$에서 $\operatorname{card}(E\setminus F)>\mathfrak{b}$이다. 그렇지 않다면
+에서 $\mathfrak{b}=2\mathfrak{b}=3\mathfrak{b}$이다. 그럼 $\mathfrak{b}&lt;\mathfrak{a}$에서 $\operatorname{card}(A\setminus F)>\mathfrak{b}$이다. 그렇지 않다면
 
-$$\mathfrak{a}=\operatorname{card} E=\operatorname{card}(F\cup(E\setminus F))\leq\operatorname{card} F+\operatorname{card}(E\setminus F)\leq\mathfrak{b}+\mathfrak{b}=2\mathfrak{b}=\mathfrak{b}$$
+$$\mathfrak{a}=\operatorname{card} A=\operatorname{card}(F\cup(A\setminus F))\leq\operatorname{card} F+\operatorname{card}(A\setminus F)\leq\mathfrak{b}+\mathfrak{b}=2\mathfrak{b}=\mathfrak{b}$$
 
-가 되어 모순이기 때문이다. 따라서 어떤 $Y\subset E\setminus F$가 존재하여 $\operatorname{card} Y=\mathfrak{b}$이다. $Z=F\cup Y$라 하자. 그럼
+가 되어 모순이기 때문이다. 따라서 어떤 $Y\subseteq A\setminus F$가 존재하여 $\operatorname{card} Y=\mathfrak{b}$이다. $Z=F\cup Y$라 하자. 그럼
 
 $$Z\times Z=(F\times F)\cup(F\times Y)\cup(Y\times F)\cup (Y\times Y)$$
 
-이고, 우변의 네 항들은 모두 mutually disjoint한 집합들이다. $F$와 $Y$가 equipotent하므로, 
+이고, 우변의 네 항들은 모두 서로소인 집합들이다. $F$와 $Y$가 equipotent하므로, 
 
 $$\operatorname{card}(F\times Y)=\operatorname{card}(Y\times F)=\operatorname{card}(F\times F)=\mathfrak{b}^2=\mathfrak{b}$$
 
@@ -260,7 +260,7 @@ $$\operatorname{card}(F\times Y)=\operatorname{card}(Y\times F)=\operatorname{ca
 
 $$\operatorname{card}((F\times Y)\cup(Y\times F)\cup(Y\times Y))=3\mathfrak{b}=\mathfrak{b}=\operatorname{card} Y$$
 
-이다. 그러므로 $Y$에서 이 집합들의 합집합으로의 bijection이 존재하고, 따라서 $Z=F\cup Y$에서 $Z\times Z$로의 bijection이 존재한다. $F$에서는 $\tilde{f}:F\rightarrow F\times F$로, $Y$에서는 방금 만든 bijection을 이용하면 되기 때문이다. 이는 $F$의 maximality에 모순이므로 $\operatorname{card} F=\mathfrak{a}$여야 한다.
+이다. 그러므로 $Y$에서 이 집합들의 합집합으로의 전단사함수가 존재하고, 따라서 $Z=F\cup Y$에서 $Z\times Z$로의 전단사함수가 존재한다. $F$에서는 $\tilde{f}:F\rightarrow F\times F$로, $Y$에서는 방금 만든 전단사함수를 이용하면 되기 때문이다. 이는 $F$의 maximality에 모순이므로 $\operatorname{card} F=\mathfrak{a}$여야 한다.
 
 </details>
 
