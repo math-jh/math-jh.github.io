@@ -19,7 +19,7 @@ weight: 14
 
 이번 글에서 우리의 목적은 [§벡터장, 정리 10](/ko/math/manifold/vector_fields#thm10)을 일반화하는 것이다. 이 정리를 다른 방식으로 풀어쓰면 다음과 같다.
 
-> 임의의 manifold $M$에 대하여, 각 점 $p\in M$마다 1차원 부분공간 $V_p\subset T_pM$이 주어졌다 하자.[^1] 그럼 임의의 점 $p\in P$마다 $p$를 포함하는 1차원 submanifold $\gamma_p$가 존재하여, $\gamma_p$의 각 점 $q$에서의 tangent space $T_q\gamma_p$가 $V_q$와 같도록 할 수 있다.
+> 임의의 manifold $M$에 대하여, 각 점 $p\in M$마다 1차원 부분공간 $V_p\subseteq T_pM$이 주어졌다 하자.[^1] 그럼 임의의 점 $p\in P$마다 $p$를 포함하는 1차원 submanifold $\gamma_p$가 존재하여, $\gamma_p$의 각 점 $q$에서의 tangent space $T_q\gamma_p$가 $V_q$와 같도록 할 수 있다.
 
 우리는 이를 $k$차원으로 확장하려 한다. 
 
@@ -29,7 +29,7 @@ weight: 14
 
 <ins id="df1">**정의 1**</ins> $m$차원 manifold $M$과 자연수 $k\leq m$이 주어졌다 하자. 
 
-1. $\mathscr{D}$가 rank $k$의 *regular distribution*이라는 것은 각각의 점 $p\in M$마다 $k$차원 벡터공간 $\mathscr{D}(p)\subset T_pM$을 대응시켜주는 것이다.
+1. $\mathscr{D}$가 rank $k$의 *regular distribution*이라는 것은 각각의 점 $p\in M$마다 $k$차원 벡터공간 $\mathscr{D}(p)\subseteq T_pM$을 대응시켜주는 것이다.
 2. Regular distribution $\mathscr{D}$가 $C^\infty$라는 것은 각각의 $p\in M$마다 적당한 열린근방 $U$과 이 위에서 정의된 local section $X_1,\ldots, X_k$가 존재하여 이들이 $\mathscr{D}$를 span하는 것이다.
 3. 만일 임의의 vector field $X$가 $X_p\in \mathscr{D}(p)$를 항상 만족한다면 이를 $X\in\mathscr{D}$로 적는다. 
 
@@ -125,7 +125,7 @@ $$X|_U=\frac{\partial}{\partial x^1}\bigg|_U$$
     $$S=\{q\in U: x^i(q)=r^i(p), k+1\leq i\leq m\}$$
 
     이 각각 $\mathscr{D}$의 integral manifold이도록 할 수 있다.
-3. 마지막으로, 위와 같은 상황에서 만일 $F:N\rightarrow M$이 $\mathscr{D}$의 integral manifold이고 $F(N)\subset U$라 하자. 만일 $N$이 connected라면, $F(N)$은 반드시 하나의 slice에만 포함된다. 
+3. 마지막으로, 위와 같은 상황에서 만일 $F:N\rightarrow M$이 $\mathscr{D}$의 integral manifold이고 $F(N)\subseteq U$라 하자. 만일 $N$이 connected라면, $F(N)$은 반드시 하나의 slice에만 포함된다. 
 
 </div>
 <details class="proof" markdown="1">

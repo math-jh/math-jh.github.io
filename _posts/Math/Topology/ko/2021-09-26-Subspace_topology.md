@@ -20,7 +20,7 @@ weight: 9
 
 ## Subspace의 정의
 
-대수적인 구조를 다룰 때와 마찬가지로, 집합 $X$ 위에 위상구조를 준 후에는 이 구조가 부분집합 $A\subset X$에는 어떠한 방식으로 제한되는지를 살펴보는 것이 자연스럽다. 가장 먼저 드는 생각은 $X$의 열린집합들 가운데, $A$에 포함된 열린집합들만 추려 이들을 위상공간 $A$의 열린집합들로 정의하는 것이다. 그러나 이 시도는 실패할 수밖에 없는데, $A$가 $X$에서 열린집합이 아니라면, 전체집합 $A$부터가 이 모임에 속하지 않기 때문이다. 
+대수적인 구조를 다룰 때와 마찬가지로, 집합 $X$ 위에 위상구조를 준 후에는 이 구조가 부분집합 $A\subseteq X$에는 어떠한 방식으로 제한되는지를 살펴보는 것이 자연스럽다. 가장 먼저 드는 생각은 $X$의 열린집합들 가운데, $A$에 포함된 열린집합들만 추려 이들을 위상공간 $A$의 열린집합들로 정의하는 것이다. 그러나 이 시도는 실패할 수밖에 없는데, $A$가 $X$에서 열린집합이 아니라면, 전체집합 $A$부터가 이 모임에 속하지 않기 때문이다. 
 
 <div class="definition" markdown="1">
 
@@ -48,7 +48,7 @@ Subspace를 다룰 때 주의해야 하는 것은, $\mathcal{T}_A$에서 열린�
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-거의 자명하다. $U$가 $A$의 열린 부분집합이라면, 어떤 열린집합 $V\subset X$가 존재하여 $U=A\cap V$인데, $A$도 열린집합이므로 $A\cap V=U$도 ($X$에서) 열린집합이다.
+거의 자명하다. $U$가 $A$의 열린 부분집합이라면, 어떤 열린집합 $V\subseteq X$가 존재하여 $U=A\cap V$인데, $A$도 열린집합이므로 $A\cap V=U$도 ($X$에서) 열린집합이다.
 
 </details>
 
@@ -68,7 +68,7 @@ $$\mathcal{B}_A=\left\{B\cap A:B\in\mathcal{B}\right\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$A$의 임의의 열린집합을 고르자. 그럼 어떤 $X$의 열린집합 $U$에 대하여 이 집합은 $U\cap A$로 쓸 수 있다. 이제 임의의 $x\in U\cap A$에 대하여, $x\in U$이므로 어떠한 $B\in\mathcal{B}$가 존재하여 $x\in B\subset U$이다. 이제 $x\in B\cap A\subset U\cap A$이므로, $\mathcal{B}_A$는 basis의 조건을 만족하고, 따라서 $\mathcal{T}_A$의 basis가 된다.
+$A$의 임의의 열린집합을 고르자. 그럼 어떤 $X$의 열린집합 $U$에 대하여 이 집합은 $U\cap A$로 쓸 수 있다. 이제 임의의 $x\in U\cap A$에 대하여, $x\in U$이므로 어떠한 $B\in\mathcal{B}$가 존재하여 $x\in B\subseteq U$이다. 이제 $x\in B\cap A\subseteq U\cap A$이므로, $\mathcal{B}_A$는 basis의 조건을 만족하고, 따라서 $\mathcal{T}_A$의 basis가 된다.
 
 </details>
 
@@ -99,7 +99,7 @@ $$A\cap V^c=A\setminus (A\cap V)=A\setminus(A\setminus C)=C$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[보조정리 2](#lem2)의 증명과 토씨 하나 안 틀리고 똑같다. $C$가 $A$의 닫힌집합이므로, 어떤 닫힌집합 $D\subset X$가 존재하여 $C=D\cap A$인데, $A$도 닫힌집합이므로 $D\cap A=C$도 ($X$에서) 닫힌집합이다.
+[보조정리 2](#lem2)의 증명과 토씨 하나 안 틀리고 똑같다. $C$가 $A$의 닫힌집합이므로, 어떤 닫힌집합 $D\subseteq X$가 존재하여 $C=D\cap A$인데, $A$도 닫힌집합이므로 $D\cap A=C$도 ($X$에서) 닫힌집합이다.
 
 </details>
 
@@ -107,15 +107,15 @@ $$A\cap V^c=A\setminus (A\cap V)=A\setminus(A\setminus C)=C$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $A$가 $X$의 subspace이고, $B\subset A$라 하자. 그럼 $B$의 $X$에서의 closure $\operatorname{cl}B$에 대하여, $B$의 *$A$에서의* closure는 $(\operatorname{cl}B)\cap A$로 주어진다.
+<ins id="pp6">**명제 6**</ins> $A$가 $X$의 subspace이고, $B\subseteq A$라 하자. 그럼 $B$의 $X$에서의 closure $\operatorname{cl}B$에 대하여, $B$의 *$A$에서의* closure는 $(\operatorname{cl}B)\cap A$로 주어진다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선, $B\subset\operatorname{cl}B$이고, $B\subset A$이므로 $B\subset(\operatorname{cl}B)\cap A$가 성립하고, 앞선 명제에 의해 이 집합은 $A$에서의 닫힌집합이다. 따라서, 이 집합이 $B$를 포함하는 임의의 ($A$에서의) 닫힌집합에 포함된다는 것만 보이면 closure의 정의로부터 원하는 결론을 얻는다.  
+우선, $B\subset\operatorname{cl}B$이고, $B\subseteq A$이므로 $B\subset(\operatorname{cl}B)\cap A$가 성립하고, 앞선 명제에 의해 이 집합은 $A$에서의 닫힌집합이다. 따라서, 이 집합이 $B$를 포함하는 임의의 ($A$에서의) 닫힌집합에 포함된다는 것만 보이면 closure의 정의로부터 원하는 결론을 얻는다.  
 
-$C$가 $B$를 포함하는 $A$의 닫힌집합이라 하자. 그럼 어떠한 $X$의 닫힌집합 $D$가 존재하여 $C=D\cap A$이다. 그런데, $B\subset C\subset D$이므로, $D$는 $B$를 포함하는 닫힌집합이고 $\operatorname{cl}B$ 또한 포함한다. 그러므로 
+$C$가 $B$를 포함하는 $A$의 닫힌집합이라 하자. 그럼 어떠한 $X$의 닫힌집합 $D$가 존재하여 $C=D\cap A$이다. 그런데, $B\subseteq C\subseteq D$이므로, $D$는 $B$를 포함하는 닫힌집합이고 $\operatorname{cl}B$ 또한 포함한다. 그러므로 
 
 $$C=D\cap A\supset(\operatorname{cl}B)\cap A$$
 

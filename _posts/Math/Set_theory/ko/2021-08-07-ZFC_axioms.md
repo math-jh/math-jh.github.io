@@ -193,7 +193,7 @@ $$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\wedge(x=\emptyset)\iff x\
 
 <div class="misc" markdown="1">
 
-**The Axiom of Power set.<sub>멱집합 공리</sub>** 임의의 집합 $S$에 대하여, <phrase>$X\in \mathcal{P}$인 것</phrase>과 <phrase>$X\subset S$인 것</phrase>이 동치이도록 하는 집합 $\mathcal{P}$가 존재한다.
+**The Axiom of Power set.<sub>멱집합 공리</sub>** 임의의 집합 $S$에 대하여, <phrase>$X\in \mathcal{P}$인 것</phrase>과 <phrase>$X\subseteq S$인 것</phrase>이 동치이도록 하는 집합 $\mathcal{P}$가 존재한다.
 
 </div>
 

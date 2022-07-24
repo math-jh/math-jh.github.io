@@ -17,11 +17,12 @@ weight: 9
 
 ---
 
-이제 우리는 동치관계에 대해 살펴본다.
+이제 우리는 동치관계에 대해 살펴본다. 
 
 ## 동치관계의 정의
 
 <div class="definition" markdown="1">
+
 <ins id="df1">**정의 1**</ins> $R$이 이항관계라 하자. $R$이 *symmetric<sub>대칭적</sub>*이라는 것은 $x\mathrel{R}y$가 성립하면 $y\mathrel{R}x$도 성립하는 것이다. 만일 
 
 $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
@@ -29,7 +30,7 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 가 성립할 경우, 이를 *transitive<sub>추이적</sub>*라고 한다. 마지막으로 어떠한 집합 $A$에 대하여 $x\mathrel{R}x \implies x\in A$일 경우, $R$이 $A$ 위에서 *reflexive<sub>반사적</sub>*라고 한다. Symmetric, transitive, 그리고 어떤 집합 $A$ 위에서 reflexive한 관계 $R$을 *동치관계<sub>equivalence relation</sub>*라 부른다. 
 </div>
 
-우리는 종종 $x\mathrel{R}y$대신 $x\equiv y\mod R$과 같이 쓰며, 혼동의 여지가 없을 때에는 $x\equiv y$로만 쓰기도 한다. 다만 이 글에서는 최대한 엄밀한 표현을 유지한다.
+동치관계를 나타내는 표준적인 표기법에는 여러가지가 있다. $x\equiv y\mod R$ 혹은 $x\sim y\mod R$ 등의 표기는 모두 $x\mathrel{R}y$와 동일한 것이며, 혼동의 여지가 없을 경우 $x\equiv y$ 혹은 $x\sim y$로만 쓰기도 한다. 우리는 혼동을 피하기 위해 남은 글에서는 표기법 $x\sim_{\tiny R}y$를 사용한다.
 
 <div class="example" markdown="1">
 
@@ -41,24 +42,25 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 </div>
 
-다음은 동치관계의 정의를 조금 더 수식적으로 다듬은 것이다.
+이를 식으로 정리하면 다음과 같다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> Correspondence $\Gamma=(G,A,A)$가 $A$ 위에서의 동치관계인 것은 
+<ins id="pp3">**명제 3**</ins> 이항관계 $R$이 $A$ 위에서의 동치관계인 것은 
 
-1. $\Gamma$의 정의역이 $A$이고,
-2. $\Gamma=\Gamma^{-1}$이고,
-3. $\Gamma\circ\Gamma=\Gamma$   
+1. $R$의 정의역이 $A$이고,
+2. $R=R^{-1}$이고,
+3. $R\circ R=R$   
 
 인 것과 동치이다.
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
-만일 $\Gamma$가 $A$ 위에서의 동치관계라면 모든 $x\in A$에 대해 $(x,x)\in G$이다. 따라서 $A$는 $\Gamma$의 정의역이다. 또, 만일 $(x,y)\in G$라면 $(y,x)\in G$이고, 이는 $(x, y)\in G^{-1}$과 동치이므로, $\Gamma=\Gamma^{-1}$이다. 마지막으로 임의의 $(x,y)\in G$에 대하여 $(x,x)\in G$이고 $(x, y)\in G$이므로 $(x,y)\in G\circ G$이며, 반대로 임의의 $(x, y)\in G\circ G$에 대해 어떠한 $z$가 존재하여 $(x,z)\in G$이고 $(z,y)\in G$이므로 transitivity에 의해여 $(x, y)\in G$이다. 따라서 $\Gamma\circ\Gamma=\Gamma$이다.  
 
-반대로 $\Gamma$가 주어진 조건들을 만족하는 correspondence이라 하자. 만일 $(x, y)\in G$라면, 조건 2에 의하여 $(y,x)\in G^{-1}=G$이므로 관계 $(x,y)\in G$는 symmetric이다. 또, 만일 $(x, y)\in G$이고 $(y,z)\in G$라면 조건 3에 의해 $(x,z)\in G\circ G=G$이므로 이 관계는 transitive이며, 마지막으로 조건 1에 의하여 $G$의 정의역은 $A$이고, 따라서 임의의 $x\in A$에 대해 $(x, y)\in G$라 하면 symmetry에 의해 $(y,x)\in G$, transitivity에 의해 $(x,x)\in G$이므로 $A$ 위에서 reflexive하다. 따라서 이는 동치관계다.
+$G$가 $R$의 그래프라 하자. 만일 $R$이 $A$ 위에서의 동치관계라면 모든 $x\in A$에 대해 $(x,x)\in G$이다. 따라서 $A$는 $R$의 정의역이다. 또, 만일 $(x,y)\in G$라면 $(y,x)\in G$이고, 이는 $(x, y)\in G^{-1}$과 동치이므로,$R=R^{-1}$이다. 마지막으로 임의의 $(x,y)\in G$에 대하여 $(x,x)\in G$이고 $(x, y)\in G$이므로 $(x,y)\in G\circ G$이며, 반대로 임의의 $(x, y)\in G\circ G$에 대해 어떠한 $z$가 존재하여 $(x,z)\in G$이고 $(z,y)\in G$이므로 transitivity에 의해여 $(x, y)\in G$이다. 따라서 $R\circ R=R$이다.  
+
+반대로 $R$이 주어진 조건을 만족한다 하자. 만일 $(x, y)\in G$라면, 조건 2에 의하여 $(y,x)\in G^{-1}=G$이므로 관계 $(x,y)\in G$은 symmetric이다. 또, 만일 $(x, y)\in G$이고 $(y,z)\in G$라면 조건 3에 의해 $(x,z)\in G\circ G=G$이므로 이 관계는 transitive이며, 마지막으로 조건 1에 의하여 $R$의 정의역은 $A$이고, 따라서 임의의 $x\in A$에 대해 $(x, y)\in G$라 하면 symmetry에 의해 $(y,x)\in G$, transitivity에 의해 $(x,x)\in G$이므로 $A$ 위에서 reflexive하다. 따라서 이는 동치관계다.
 </details>
 
 이제부터 동치관계들의 성질을 살펴보고, 다양한 동치관계들의 예시를 살펴보자.
@@ -66,6 +68,7 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 ## 함수에 의해 정의되는 동치관계
 
 <div class="proposition" markdown="1">
+
 <ins id="pp4">**명제 4**</ins> $f$가 함수이고 $A$를 정의역으로 갖는 함수라 하자. 그럼 $x$, $y$ 사이의 관계 <phrase>$x$, $y\in A$이고 $f(x)=f(y)$</phrase>는 $A$ 위에서의 동치관계다.
 </div>
 
@@ -82,7 +85,7 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 </div>
 
-위의 정의에서, $F$를 $f$의 그래프라 하자. 그럼 $x\equiv y$인 것은 <phrase>어떠한 $z$가 존재하여 $(x,z)\in F$이고 $(y, z)\in F$인 것</phrase>과 동치이다. 이는 다시 <phrase>어떠한 $z$가 존재하여 $(x, z)\in F$이고 $(z, y)\in F^{-1}$인 것</phrase>과 동치이므로, 이 동치관계의 그래프는 $F^{-1}\circ F$가 된다. 
+위의 정의에서, $F$를 $f$의 그래프라 하자. 그럼 $x\sim y$인 것은 <phrase>어떠한 $z$가 존재하여 $(x,z)\in F$이고 $(y, z)\in F$인 것</phrase>과 동치이다. 이는 다시 <phrase>어떠한 $z$가 존재하여 $(x, z)\in F$이고 $(z, y)\in F^{-1}$인 것</phrase>과 동치이므로, 이 동치관계의 그래프는 $F^{-1}\circ F$가 된다. 
 
 ## 동치관계와 분할
 
@@ -94,9 +97,13 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 </div>
 
+정의에 의하여 $G(x)$는 동치관계 $R$에 의해 $x$와 동등한 것으로 취급되는 원소들의 모임이다. 많은 경우 $x$를 포함하는 equivalence class를 $[x]_R$로 적기도 한다. 혼동의 여지가 없을 경우, 이들의 집합 $A/R$을 $A/\mathord{\sim}$으로 표기하기도 한다.
+
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> 집합 $A$ 위에서 <phrase>$x=y$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $x$의 equivalence class는 집합 $\{x\}$이다. 한편 동일한 예시에서 <phrase>$x\in A$이고 $y\in A$</phrase> 또한 동치관계였는데, 이 경우 $x$의 equivalence class는 $E$ 전체가 된다. 이런 관점에서 첫 번째 관계는 집합 $E$ 위에서 정의된 가장 조밀한 동치관계라 할 수 있고, 두 번째는 가장 성긴 동치관계라 할 수 있다.
+<ins id="ex7">**예시 7**</ins> 집합 $A$ 위에서 <phrase>$x=y$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $x$의 equivalence class는 집합 $\{x\}$이다. 한편 동일한 예시에서 <phrase>$x\in A$이고 $y\in A$</phrase> 또한 동치관계였는데, 이 경우 $x$의 equivalence class는 $A$ 전체가 된다. 이런 관점에서 첫 번째 관계는 집합 $A$ 위에서 정의된 가장 조밀한 동치관계라 할 수 있고, 두 번째는 가장 성긴 동치관계라 할 수 있다.
+
+또, 함수 $f:A\rightarrow B$에 의해 $A$ 위에 정의되는 동치관계 $R$의 equivalence class들은 $b\in B$의 역상 $f^{-1}(b)$ 꼴의 집합들이다. 
 
 </div>
 
@@ -110,13 +117,20 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem9">**보조정리 9**</ins> $R$이 $A$ 위의 동치관계라 하고, $p:A\rightarrow A/R$을 $x\mapsto G(x)$로 정의하자. 그럼 $x\mathrel{R}y$와 $p(x)=p(y)$는 서로 동치이다.
+<ins id="lem9">**보조정리 9**</ins> $R$이 $A$ 위의 동치관계라 하고, $p:A\rightarrow A/R$을 $x\mapsto [x]\_R$로 정의하자. 그럼 $x\sim\_{\tiny R} y$와 $p(x)=p(y)$는 서로 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $(x,y)\in G$라 하자. 그럼 $y\in G(x)$로부터 $G(y)\subset G(G(x))=G(x)$이다. 비슷하게 $G(x)\subset G(y)$이므로 $p(x)=G(x)=G(y)=p(y)$이다. 반대로 만일 $G(x)=G(y)$라면, $x\in G(x)=G(y)$이므로 $(y, x)\in G$가 되어 보조정리가 성립한다.
+우선 $x\sim\_{\tiny R} y$이라 가정하자. $R$의 그래프를 $G$라 하면 $y\in [x]\_R=G(x)$가 성립한다. 즉 $\\{y\\}\subseteq G(x)$이므로, [§이항관계의 그래프, 명제 6](/ko/math/set_theory/binary_relation#pp6)과 [명제 3](#pp3)에 의하여
+
+$$G(y)\subseteq G(G(x))=G(x)$$
+
+가 성립한다. $x$와 $y$의 역할을 바꾸면 $G(x)\subseteq G(y)$ 또한 성립하므로 $p(x)=p(y)$가 성립한다.
+
+반대로 만일 $[x]\_R=[y]\_R$이라 하면 $x\in [x]\_R=[y]\_R$로부터 $y\sim\_{\tiny R} x$를 얻고 따라서 보조정리가 성립한다.
+
 </details>
 
 위의 함수 $p$를 canonical이라 부른다. 위의 정리로부터 equivalence class들은 서로소라는 것을 알 수 있으므로, 동치관계는 집합 $A$의 분할을 유도한다. 반대로,
@@ -133,14 +147,19 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-위의 관계를 $R$이라 적자. 그럼 $R$이 $E$ 위에서 reflexive인 것은 자명하다. 또, $x$와 $y$가 같은 집합에 포함되면 $y$와 $x$도 같은 집합에 포함되므로 $x\mathrel{R}y$이면 $y\mathrel{R}x$이다. 즉 $R$은 symmetric하다. 마지막으로 만일 $x\mathrel{R}y$이고 $y\mathrel{R}z$라면, $x,y\in A_i$이고 $y,z\in A_j$이다. 그런데 $y\in A_i\cap A_j$이고 $(A_i)_{i\in I}$가 partition이므로 $i=j$이다. 따라서 $x,z\in A_i$이고 명제가 성립한다.
+위의 관계를 $R$이라 적자. 
+
+- $R$이 $A$ 위에서 reflexive인 것은 자명하다. 
+- $x$와 $y$가 같은 집합에 포함되면 $y$와 $x$도 같은 집합에 포함되므로 $x\mathrel{R}y$이면 $y\mathrel{R}x$이다. 즉 $R$은 symmetric하다. 
+- 마지막으로 만일 $x\mathrel{R}y$이고 $y\mathrel{R}z$라면, $x,y\in A_i$이고 $y,z\in A_j$이다. 그런데 $y\in A_i\cap A_j$이고 $(A_i)_{i\in I}$가 partition이므로 $i=j$이다. 따라서 $x,z\in A_i$이고 명제가 성립한다.
+
 </details>
 
 ## 단항관계와 compatible한 동치관계
 
 <div class="definition" markdown="1">
 
-<ins id="df11">**정의 11**</ins> $R$이 동치관계라 하자. 그럼 단항관계 $P$가 $R$과 *compatible*하다는 것은 $P(x)\wedge (x\mathrel{R}y)\implies P(y)$인 것이다.
+<ins id="df11">**정의 11**</ins> $R$이 동치관계라 하자. 그럼 단항관계 $P$가 $R$과 *compatible*하다는 것은 $P(x)\wedge (x\sim\_{\tiny R}y)\implies P(y)$인 것이다.
 
 </div>
 
@@ -168,7 +187,7 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 그리고 이건 정확히 compatible한 단항관계의 정의다. 
 
-반대 방향은 자명하다. 만일 $t\in A/R$에 대하여 $a\in t$가 존재하여 $P(a)$라 하자. 그럼 모든 $x\in t$에 대하여 $a R x$이므로 $P(x)$이다.
+반대 방향은 자명하다. 만일 $t\in A/R$에 대하여 $a\in t$가 존재하여 $P(a)$라 하자. 그럼 모든 $x\in t$에 대하여 $a\sim\_{\tiny R}x$이므로 $P(x)$이다.
 </details>
 
 ## 동치관계의 포화
@@ -177,22 +196,22 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 <div class="definition" markdown="1">
 
-<ins id="df13">**정의 13**</ins> $R$이 $A$ 위에서의 동치관계이고 $A'$가 $A$의 부분집합이라 하자. $A'$가 $R$에 대해 *saturated<sub>포화</sub>*되었다는 것은 단항관계 $x\in A$가 $R$과 compatible한 것이다.
+<ins id="df13">**정의 13**</ins> $R$이 $A$ 위에서의 동치관계이고 $X$가 $A$의 부분집합이라 하자. $X$가 $R$에 대해 *saturated<sub>포화</sub>*되었다는 것은 단항관계 $x\in A$가 $R$과 compatible한 것이다.
 
 </div>
 
-$G$를 $R$의 그래프라 하자. 위의 정의에 따르면, 어떤 집합 $A'$가 $R$에 대해 saturated이기 위해서는 <phrase>$x\in A'$라면 $G(x)\subset A'$</phrase>가 반드시 성립해야 한다. 따라서 saturated인 부분집합 $A'$는 어떠한 부분집합 $B\subset A$에 대하여 $\bigcup\_{x\in B}G(x)$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
+$G$를 $R$의 그래프라 하자. 위의 정의에 따르면, 어떤 집합 $X$가 $R$에 대해 saturated이기 위해서는 <phrase>$x\in X$라면 $G(x)\subseteq X$</phrase>가 반드시 성립해야 한다. 따라서 saturated인 부분집합 $X$는 어떠한 부분집합 $B\subseteq A$에 대하여 $\bigcup\_{x\in B}G(x)$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
 
 1. 만일 $(A\_i)\_{i\in I}$가 saturated인 부분집합들의 family라면, $\bigcup\_{i\in I} A_i$와 $\bigcap\_{i\in I} A_i$가 saturated이다.
-2. Saturated인 부분집합 $A'$에 대해 $A\setminus A'$ 또한 saturated이다.
+2. Saturated인 부분집합 $X$에 대해 $A\setminus X$ 또한 saturated이다.
 
-이번에는 canonical map $f:A\rightarrow A/R$과 그 그래프 $F$를 생각하자. [§이항관계의 그래프, 명제 14](/ko/math/set_theory/binary_relation#pp14)에 의하여 $f^{-1}(f(A'))\supseteq A'$가 성립하며, 일반적인 경우에 반대쪽 포함관계는 성립하지 않는다. 그러나 만일 $A'$가 saturated라면 반대쪽 포함관계도 성립한다. 각각의 $x\in A'$에 대하여, $f^{-1}(\left\\{f(x)\right\\})\subseteq A'$이므로
+이번에는 canonical map $f:A\rightarrow A/R$과 그 그래프 $F$를 생각하자. [§이항관계의 그래프, 명제 14](/ko/math/set_theory/binary_relation#pp14)에 의하여 $f^{-1}(f(X))\supseteq X$가 성립하며, 일반적인 경우에 반대쪽 포함관계는 성립하지 않는다. 그러나 만일 $X$가 saturated라면 반대쪽 포함관계도 성립한다. 각각의 $x\in X$에 대하여, $f^{-1}(\left\\{f(x)\right\\})\subseteq X$이므로
 
-$$f^{-1}(f(A'))=\bigcup_{x\in A'}f^{-1}(\left\{f(x)\right\})\subseteq A'$$
+$$f^{-1}(f(X))=\bigcup_{x\in X}f^{-1}(\left\{f(x)\right\})\subseteq X$$
 
 가 성립하기 때문이다.
 
-더 일반적으로, $B$가 임의의 집합이라 하자. $f^{-1}(f(B))$는 여전히 saturated이다. 만일 $x\in f^{-1}(f(B))$라 하면 $z\in F(x)$에 대하여 어떠한 $y\in f(B)$가 존재하여 $(y,x)\in F^{-1}$이므로 $(x, y)\in F$이고, 따라서 transitivity에 의하여 $(z,x)\in F$이면 $(z,y)\in F$이고   $z\in f^{-1}(f(B))$이기 때문이다. 만일 $\overline{B}$가 $B$를 포함하는 saturated subset이라면, 
+더 일반적으로, $B$가 임의의 부분집합이라 하자. $f^{-1}(f(B))$는 여전히 saturated이다. 만일 $x\in f^{-1}(f(B))$라 하면 $z\in F(x)$에 대하여 어떠한 $y\in f(B)$가 존재하여 $(y,x)\in F^{-1}$이므로 $(x, y)\in F$이고, 따라서 transitivity에 의하여 $(z,x)\in F$이면 $(z,y)\in F$이고 $z\in f^{-1}(f(B))$이기 때문이다. 만일 $\overline{B}$가 $B$를 포함하는 saturated subset이라면, 
 
 $$\overline{B}=f^{-1}(f(\overline{B}))\supseteq f^{-1}(f(B))$$
 
@@ -206,11 +225,11 @@ $$\overline{B}=f^{-1}(f(\overline{B}))\supseteq f^{-1}(f(B))$$
 
 </div>
 
-즉, $f$가 $R$과 compatible하려면 $f$는 각각의 equivalence class로 제한하였을 때 상수함수가 되어야 한다. 만일 $x\mathrel{R}x'$라면 $f(x)=y=f(x')$이여야 하기 때문이다. 이제 [§함수 (2), 명제 4](/ko/math/set_theory/functions_2#pp4)를 적용하면 다음을 얻는다.
+즉, $f$가 $R$과 compatible하려면 $f$는 각각의 equivalence class로 제한하였을 때 상수함수가 되어야 한다. 만일 $x\sim\_{\tiny R}x'$라면 $f(x)=y=f(x')$이여야 하기 때문이다. 이제 [§함수 (2), 명제 4](/ko/math/set_theory/functions_2#pp4)를 적용하면 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp15">**명제 15**</ins> $R$이 집합 $A$ 위에서의 동치관계이고, $p:E\rightarrow E/R$이 canonical이라 하자. 그럼 $f:A\rightarrow B$가 $R$과 compatible한 것은 어떤 $h:A/R\rightarrow B$에 대하여 $f$가 $h\circ p$의 꼴로 쓰여질 수 있는 것과 동치이다.
+<ins id="pp15">**명제 15**</ins> $R$이 집합 $A$ 위에서의 동치관계이고, $p:A\rightarrow A/R$이 canonical이라 하자. 그럼 $f:A\rightarrow B$가 $R$과 compatible한 것은 어떤 $h:A/R\rightarrow B$에 대하여 $f$가 $h\circ p$의 꼴로 쓰여질 수 있는 것과 동치이다.
 
 </div>
 
@@ -228,7 +247,7 @@ $$\overline{B}=f^{-1}(f(\overline{B}))\supseteq f^{-1}(f(B))$$
 
 $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
-를 얻는다. 만일 어떠한 $t, t'\in A/R$에 대해 $h(t)=h(t')$라면, $x\in t$, $x'\in t'$에 대하여 $f(x)=f(x')$이므로 $x\mathrel{R}x'$이고, 따라서 $t=t'$가 되어 $h$는 단사함수이다. 그런데 $h$의 공역은 $f$의 치역으로 제한된 상태이므로, $h$는 전사함수이기도 하다. 따라서 $h$는 전단사이며, 위의 식을 $f$의 *canonical decomposition*이라 부른다.
+를 얻는다. 만일 어떠한 $t, t'\in A/R$에 대해 $h(t)=h(t')$라면, $x\in t$, $x'\in t'$에 대하여 $f(x)=f(x')$이므로 $x\sim\_{\tiny R}x'$이고, 따라서 $t=t'$가 되어 $h$는 단사함수이다. 그런데 $h$의 공역은 $f$의 치역으로 제한된 상태이므로, $h$는 전사함수이기도 하다. 따라서 $h$는 전단사이며, 위의 식을 $f$의 *canonical decomposition*이라 부른다.
 
 추가로 공역 $B$에 동치관계 $S$가 주어졌다고 하자. 그럼 우선 다음의 diagram을 얻는다.
 
@@ -242,7 +261,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 그럼 우리는 함수 $p\circ f$에 의해 정의되는 동치관계 $R$을 $A$ 위에 정의할 수 있다. 이를 $S$의 $f$에 의한 *inverse image*라 부른다.
 
-<ins id="df16">**정의 16**</ins>  $R$, $S$가 동치관계들이라 하자. $S$가 $R$보다 *finer<sub>세밀하다</sub>*하다는 것은 $x\mathrel{S}y\implies x\mathrel{R}y$가 항상 성립하는 것이다.
+<ins id="df16">**정의 16**</ins>  $R$, $S$가 동치관계들이라 하자. $S$가 $R$보다 *finer<sub>세밀하다</sub>*하다는 것은 $x\sim\_{\tiny S}y\implies x\sim\_{\tiny R}y$가 항상 성립하는 것이다.
 {: .definition}
 
 두 동치관계 $R,S$가 집합 $A$ 위에서 정의된 동치관계이고, $S$가 $R$보다 finer하다고 하자. 
@@ -257,12 +276,36 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 위의 $k$는 앞선 canonical decomposition의 정의에 의하여 전단사함수가 된다. 
 
-## 동치관계의 product
-마지막으로 두 equivalence relation $R$, $R'$이 주어졌다고 하자. 만일 우리가 $S$를 다음의 relation
+## 동치관계의 곱
 
-> $u\mathrel{S}v$인 것은 어떠한 $x$, $x'$, $y$, $y'$가 존재하여 $u=(x,x')$, $v=(y,y')$이고 $x\mathrel{R}y$, $x'\mathrel{R}y'$인 것이다
+마지막으로 두 동치관계 $R$, $R'$이 주어졌다고 하고, 관계 $S$를
 
-로 정의한다면 $S$가 equivalence relation이 됨은 자명하다. 이 equivalence relation을 $R$과 $R'$의 *product*이라 부른다. 이제 주어진 집합 $E$, $E'$를 정의역으로 갖는 함수 $f$, $f'$가 주어졌다고 하고, $R$과 $R'$을 각각 $f$와 $f'$에 의해 유도되는 equivalence relation이라 하자. 그럼 약간의 노력을 통해 $f\times f'$에 의해 유도되는 equivalence relation이 $R\times R'$과 같음을 보일 수 있다. 따라서 우리는 $(E\times E')/(R\times R')$과 $(E/R)\times(E'/R')$ 사이의 bijection을 만들 수 있다.
+> $u\sim\_{\tiny S}v$인 것은 어떠한 $x$, $x'$, $y$, $y'$가 존재하여 $u=(x,x')$, $v=(y,y')$이고 $x\sim\_{\tiny R}y$, $x'\sim\_{\tiny R'}y'$인 것이다
+
+로 정의하자. 만일 $R$이 집합 $A$ 위에서 정의되었고, $R'$가 집합 $A'$ 위에서 정의되었다면 집합 $A\times A'$ 위에서 정의된다. $u=(x,x'),v=(y,y'),w=(z,z')$이 $A\times A'$의 원소들이라 하자. 
+
+- $u\sim\_{\tiny S}u$가 항상 성립하는 것은 자명하다. $x\sim\_{\tiny R}x$이고 $x'\sim\_{\tiny R'}x'$이기 때문이다.
+- $u\sim\_{\tiny S}v$라면 <phrase>$x\sim_{\tiny R}y$이고 $x'\sim_{\tiny R'}y'$</phrase>이므로 <phrase>$y\sim_{\tiny R}x$이고 $y'\sim_{\tiny R'}x'$</phrase>이고, 따라서 $v\sim\_{\tiny S}u$이다.
+- $u\sim\_{\tiny S}v$이고 $v\sim\_{\tiny S}$라 하자. 그럼 <phrase>$x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$</phrase>가 각각 성립한다. 이제 $x\sim\_{\tiny R}y$와 $y\sim\_{\tiny R}z$로부터 $x\sim\_{\tiny R}z$이고, $x'\sim\_{\tiny R'}y'$와 $y'\sim\_{\tiny R'}z'$로부터 $x'\sim\_{\tiny R'}z'$이다. 즉 $u\sim\_{\tiny S}w$가 성립한다.
+
+따라서 $S$는 동치관계가 된다. 이 동치관계를 $R$과 $R'$의 *곱<sub>product</sub>*이라 부르고 $R\times R'$로 적는다.
+
+집합 $A$, $A'$를 정의역으로 갖는 함수 $f:A\rightarrow B$, $f':A'\rightarrow B'$가 주어졌다고 하고, $R$과 $R'$을 각각 $f$와 $f'$에 의해 유도되는 동치관계라 하자. 그럼 $f\times f':A\times A'\rightarrow B\times B'$가 잘 정의되고, 이 함수를 통해 $A\times A'$ 위에 동치관계를 정의할 수 있다. 이 동치관계를 잠시 $S$라 하고, $u=(x,x'),v=(y,y')\in A\times A'$라 하자. 그럼
+
+$$\begin{aligned}u\sim_{\tiny S}v&\iff (f\times f')(u)=(f\times f')(v)\iff (f(x),f'(x')=(f(y),f'(y'))\\
+&\iff (f(x)=f(y))\wedge(f'(x')=f'(y'))\iff (x\sim_{\tiny R}y)\wedge(x'\sim_{\tiny R'}y')\\&\iff u\sim_{\tiny R\times R'}v\end{aligned}$$
+
+이므로 $S=R\times R'$이다. 이 때 $f\times f'$에 의한 $A\times A'$의 상은 $f(A)\times f'(A')$와 같으므로, $f\times f'$의 canonical decomposition을 생각하면 $(A\times A')/(R\times R')$과 $f(A)\times f'(A')$ 사이의 전단사함수가 존재한다.
+
+![canonical_bijection_between_product](/assets/images/Set_theory/Equivalence_relations-7.png){:width="523.5px" class="invert" .align-center}
+
+한편 다음의 diagram을 생각하자.
+
+![canonical_bijection_between_product_2](/assets/images/Set_theory/Equivalence_relations-8.png){:width="415.8px" class="invert" .align-center}
+
+여기서 $A/R\rightarrow f(A)$와 $A'/R'\rightarrow f'(A')$는 각각 $f$와 $f'$의 canonical decomposition들로부터 얻어지는 전단사함수이다. 따라서 이들에 의해 유도되는 함수 $(A/R)\times (A/R')\rightarrow f(A)\times f'(A')$ 또한 전단사함수이다. 
+
+위에서 얻어진 두 개의 전단사함수와 그 역들을 적절히 합성해주면 $(A\times A')/(R\times R')$과 $(A/R)\times(A'/R')$ 사이의 전단사함수를 얻을 수 있다. 이 전단사함수들 또한 canonical이라 부른다. 
 
 
 

@@ -41,7 +41,7 @@ $$\exists i(i\in I\wedge x\in A_i)$$
 
 를 만족하는 $x$들의 집합이다. 따라서 $I=\emptyset$이라면 $\bigcup\_{i\in I} A\_i=\emptyset$이다. 
 
-어떤 집합 $A$가 존재하여, 모든 $i$에 대해 $A_i\subset A$였다 하더라도, 이들의 합집합 $\bigcup\_{i\in I}A\_i$는 달라질 것이 없다. 즉 함수 $a$의 target을 $\mathcal{P}(A)$로 설정해주어도 이것이 합집합 $\bigcup\_{i\in I}A_i$에 미치는 영향은 없다. 반면 교집합의 경우에는 $a$의 target이 $\mathcal{P}(A)$인지 아닌지가 그 결과에 영향을 끼친다.
+어떤 집합 $A$가 존재하여, 모든 $i$에 대해 $A_i\subseteq A$였다 하더라도, 이들의 합집합 $\bigcup\_{i\in I}A\_i$는 달라질 것이 없다. 즉 함수 $a$의 target을 $\mathcal{P}(A)$로 설정해주어도 이것이 합집합 $\bigcup\_{i\in I}A_i$에 미치는 영향은 없다. 반면 교집합의 경우에는 $a$의 target이 $\mathcal{P}(A)$인지 아닌지가 그 결과에 영향을 끼친다.
 
 <div class="definition" markdown="1">
 
@@ -99,14 +99,14 @@ $$\bigcup_{k\in K} A_k=\bigcup_{k\in K} A_{f(k)}=\bigcup_{i\in I}A_i=A_{k_0},\qq
 
 가 성립한다.
 
-이제 합집합과 교집합의 성질들을 조금 더 살펴보자. 만일 같은 index를 갖는 두 family $(A\_i)\_{i\in I}$와 $(B\_i)\_{i\in I}$가 주어졌고, $B_i\subset A_i$가 모든 $i\in I$에 대해 성립한다면 
+이제 합집합과 교집합의 성질들을 조금 더 살펴보자. 만일 같은 index를 갖는 두 family $(A\_i)\_{i\in I}$와 $(B\_i)\_{i\in I}$가 주어졌고, $B_i\subseteq A_i$가 모든 $i\in I$에 대해 성립한다면 
 
 $$\bigcup_{i\in I} B_i\subset\bigcup_{i\in I} A_i,\qquad \bigcap_{i\in I} B_i\subset\bigcap_{i\in I} A_i$$
 
 임은 자명하다. 굳이 증명하자면, 
 
-- 임의의 $y\in\bigcup\_{i\in I}B\_i$가 주어졌다면 어떤 $i\_0\in I$에 대해 $y\in B\_{i\_0}$이고, 가정에 의해 $B\_{i\_0}\subset A\_{i\_0}$이므로 $y\in A\_{i\_0}$가 되어 $y\in\bigcup A\_i$가 성립하며, 
-- 임의의 $y\in\bigcap B\_i$가 주어졌다면, 모든 $i$에 대해 $y\in B\_i$이고, $B\_i\subset A\_i$이므로 모든 $i$에 대해 $y\in A\_i$가 되므로 $y\in\bigcap A\_i$이다. 
+- 임의의 $y\in\bigcup\_{i\in I}B\_i$가 주어졌다면 어떤 $i\_0\in I$에 대해 $y\in B\_{i\_0}$이고, 가정에 의해 $B\_{i\_0}\subseteq A\_{i\_0}$이므로 $y\in A\_{i\_0}$가 되어 $y\in\bigcup A\_i$가 성립하며, 
+- 임의의 $y\in\bigcap B\_i$가 주어졌다면, 모든 $i$에 대해 $y\in B\_i$이고, $B\_i\subseteq A\_i$이므로 모든 $i$에 대해 $y\in A\_i$가 되므로 $y\in\bigcap A\_i$이다. 
 
 또, 주어진 family $(A\_i)\_{i\in I}$와 $I$의 부분집합 $J$에 대하여, 
 
@@ -130,13 +130,13 @@ $$\bigcup_{i\in I} A_i=\bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right),\quad
 <summary>증명</summary>
 우선 합집합에 관한 식부터 보이자. 만일 $x\in \bigcup\_{i\in I}A\_i$라면, 어떠한 $i_0\in I$에 대하여 $x\in A\_{i_0}$이다. 이제 $I=\bigcup\_{k\in K} J\_k$이므로, 어떤 $k_0$가 존재하여 $i_0\in J\_{k_0}$이다. 그럼
 
-$$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subset\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\in\left\{k_0\right\}}\left(\bigcup_{i\in J_k} A_i\right)\subset \bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right)$$
+$$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subset\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\in\left\{k_0\right\}}\left(\bigcup_{i\in J_k} A_i\right)\subseteq \bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right)$$
 
-이므로 $x\in A\_{i_0}\subset \bigcup\_{k\in K}\left(\bigcup\_{j\in J_k} A\_j\right)$이다.  
+이므로 $x\in A\_{i_0}\subseteq \bigcup\_{k\in K}\left(\bigcup\_{j\in J_k} A\_j\right)$이다.  
 
 반대로 만일 $x\in \bigcup\_{k\in K}\left(\bigcup\_{j\in J_k} A_j\right)$이라면, 어떠한 $k_0\in K$에 대하여 $x\in \bigcup\_{j\in J\_{k_0}}A\_j$이고, 따라서 다시 어떤 $i_0\in J\_{k_0}$에 대하여 $x\in A\_{i_0}$이다. 이제 $i_0\in I$이므로 $x\in\bigcup\_{i\in I} A\_i$이다. 
 
-이와 비슷하게 두 번째 식도 보일 수 있다. 만일 $x\in\bigcap\_{i\in I} A\_i$라면, 모든 $i\in I$에 대하여 $x\in A\_i$이다. 임의의 $k\in K$에 대하여 $J\_{k}\subset I$이므로, 모든 $i\in I$에 대하여 위의 식이 성립한다는 말은 모든 $j\in J\_{k}$에 대하여 $x\in A\_j$가 성립한다는 말이기도 하다. 임의로 선택된 $k$에 대하여 이것이 성립하므로, 이는 정확히 $x\in\bigcap\_{k\in K}\left(\bigcap\_{j\in J\_{k}}A_j\right)$를 의미한다.
+이와 비슷하게 두 번째 식도 보일 수 있다. 만일 $x\in\bigcap\_{i\in I} A\_i$라면, 모든 $i\in I$에 대하여 $x\in A\_i$이다. 임의의 $k\in K$에 대하여 $J\_{k}\subseteq I$이므로, 모든 $i\in I$에 대하여 위의 식이 성립한다는 말은 모든 $j\in J\_{k}$에 대하여 $x\in A\_j$가 성립한다는 말이기도 하다. 임의로 선택된 $k$에 대하여 이것이 성립하므로, 이는 정확히 $x\in\bigcap\_{k\in K}\left(\bigcap\_{j\in J\_{k}}A_j\right)$를 의미한다.
 </details>
 
 또, 우리는 다음과 같이 합집합/교집합과 correspondence의 image와의 관계도 생각해 볼 수 있다.
@@ -187,21 +187,21 @@ $$f\left(\bigcap_{i\in I} A_i\right)=\bigcap_{i\in I} f(A_i)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8 (De Morgan's law)**</ins> 집합 $E$의 부분집합들의 Family $(A\_i)\_{i\in I}$에 대하여, 
+<ins id="pp8">**명제 8 (De Morgan's law)**</ins> 집합 $A$의 부분집합들의 Family $(A\_i)\_{i\in I}$에 대하여, 
   
-$$E\setminus \left(\bigcup_{i\in I}A_i\right)=\bigcap_{i\in I}(E\setminus A_i),\quad E\setminus\left(\bigcap_{i\in I} A_i\right)=\bigcup_{i\in I} (E\setminus A_i)$$
+$$A\setminus \left(\bigcup_{i\in I}A_i\right)=\bigcap_{i\in I}(A\setminus A_i),\quad A\setminus\left(\bigcap_{i\in I} A_i\right)=\bigcup_{i\in I} (A\setminus A_i)$$
 
 가 성립한다.
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
-첫 번째 식을 보이기 위해 우선 $x\in E\setminus\left(\bigcup\_{i\in I} A\_i\right)$라 하자. 그럼 $x\in E$이고 $x\not\in\left(\bigcup\_{i\in I} A\_i\right)$이다. 따라서 모든 $i$에 대하여 $x\not\in A_i$이므로, $x\in (E\setminus A_i)$가 모든 $i$에 대하여 성립한다. 즉 $x\in\bigcap\_{i\in I}(E\setminus A\_i)$이다.  
-반대로 만일 $x\in\bigcap\_{i\in I} (E\setminus A\_i)$라면, 임의의 $i\in I$에 대하여 $x\in E\setminus A_i$이고, 따라서 모든 $i\in I$에 대하여 $x\not\in A\_i$이다. 이제 $x\not\in\bigcup\_{i\in I} A\_i$이므로 $x\in E\setminus\bigcup\_{i\in I} A_i$이다.
+첫 번째 식을 보이기 위해 우선 $x\in A\setminus\left(\bigcup\_{i\in I} A\_i\right)$라 하자. 그럼 $x\in A$이고 $x\not\in\left(\bigcup\_{i\in I} A\_i\right)$이다. 따라서 모든 $i$에 대하여 $x\not\in A_i$이므로, $x\in (A\setminus A_i)$가 모든 $i$에 대하여 성립한다. 즉 $x\in\bigcap\_{i\in I}(A\setminus A\_i)$이다.  
+반대로 만일 $x\in\bigcap\_{i\in I} (A\setminus A\_i)$라면, 임의의 $i\in I$에 대하여 $x\in A\setminus A_i$이고, 따라서 모든 $i\in I$에 대하여 $x\not\in A\_i$이다. 이제 $x\not\in\bigcup\_{i\in I} A\_i$이므로 $x\in A\setminus\bigcup\_{i\in I} A_i$이다.
 
-두 번째 식은 등식 $E\setminus(E\setminus A)=A$가 모든 $A\subset E$에 대해 성립하므로 첫 번째 식으로부터 자명.
+두 번째 식은 등식 $A\setminus(A\setminus X)=X$가 모든 $X\subseteq A$에 대해 성립하므로 첫 번째 식으로부터 자명.
 </details>
 
-만약 $E$를 전체집합처럼 취급한다면, 이 식은 우리가 원래 알던 $(\bigcup A_i)^c=\bigcap A_i^c$, 그리고 $(\bigcap A_i)^c=\bigcup A_i^c$으로 쓸 수도 있다. 
+만약 $A$를 전체집합처럼 취급한다면, 이 식은 우리가 원래 알던 $(\bigcup A_i)^c=\bigcap A_i^c$, 그리고 $(\bigcap A_i)^c=\bigcup A_i^c$으로 쓸 수도 있다. 
 
 
 
