@@ -20,7 +20,7 @@ weight: 7
 ## Covering
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Family $(A\_i)\_{i\in I}$가 집합 $A$의 *covering<sub>덮개</sub>*이라는 것은 $A=\bigcup\_{i\in I} A\_i$임을 뜻한다. $A$의 두 covering $(A\_i)\_{i\in I}$와 $(A'\_j)\_{j\in J}$에 대하여, $(A'_j)\_{j\in J}$가 $(A_i)\_{i\in I}$보다 *finer*하다는 것은 임의의 $j\in J$에 대하여, $A'\_j\subset A\_i$를 만족하는 $i\in I$가 존재하는 것이다.
+<ins id="df1">**정의 1**</ins> Family $(A\_i)\_{i\in I}$가 집합 $A$의 *covering<sub>덮개</sub>*이라는 것은 $A=\bigcup\_{i\in I} A\_i$임을 뜻한다. $A$의 두 covering $(A\_i)\_{i\in I}$와 $(A'\_j)\_{j\in J}$에 대하여, $(A'_j)\_{j\in J}$가 $(A_i)\_{i\in I}$보다 *finer*하다는 것은 임의의 $j\in J$에 대하여, $A'\_j\subseteq A\_i$를 만족하는 $i\in I$가 존재하는 것이다.
 
 </div>
 
@@ -50,7 +50,7 @@ weight: 7
 
 > 만일 $(x,y)\in F$이고 $(x,y')\in F$라면 $y=y'$
 
-임을 보여야 한다. $F$는 $F_i$들의 합집합이므로, 위의 전제가 성립한다면 어떤 $i$, $j$에 대하여 $(x,y)\in F_i$이고 $(x,y')\in F_j$이므로 $x\in A_i$, $y\in A_j$이다. 따라서 <phrase>$x\in \operatorname{pr}_1 f_i=A_i$이고 $x\in\operatorname{pr}_1 f_j=A_j$</phrase>에서 $x\in A_i\cap A_j$이고, 집합 $A_i\cap A_j$ 위에서 $f_i$와 $f_j$는 compatible하므로 $y=f_i(x)=f_j(x)=y'$이다. 따라서 $F$는 functional이다.  
+임을 보여야 한다. $F$는 $F_i$들의 합집합이므로, 위의 전제가 성립한다면 어떤 $i$, $j$에 대하여 $(x,y)\in F_i$이고 $(x,y')\in F_j$이므로 $x\in A_i$, $y\in A_j$이다. 따라서 <phrase>$x\in \operatorname{pr}_1 F_i=A_i$이고 $x\in\operatorname{pr}_1 F_j=A_j$</phrase>에서 $x\in A_i\cap A_j$이고, 집합 $A_i\cap A_j$ 위에서 $f_i$와 $f_j$는 compatible하므로 $y=f_i(x)=f_j(x)=y'$이다. 따라서 $F$는 functional이다.  
 
 이 그래프의 정의역이 $\bigcup\_{i\in I} A_i$임은 자명하고, $f$의 유일성은 첫 번째 부분으로부터 자명하다. 만일 $f\_i$들을 확장하는 또다른 $g$가 존재한다면, 임의의 $i$에 대하여 $f$와 $g$가 모두 $A_i$에서 $f_i$와 compatible할 것이기 때문이다.
 

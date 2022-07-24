@@ -21,7 +21,7 @@ weight: 8
 
 ## Restriction of codomain
 
-임의의 manifold $M$과 그 submanifold $F:N'\rightarrow M$이 주어졌다 하자. 그럼 $F$를 일종의 inclusion으로 생각할 수 있으므로, 만일 또 다른 어떤 manifold $N$과 $C^\infty$ 함수 $G:N\rightarrow M$에 대하여 $G(N)\subset F(N')$가 성립한다면 $N\rightarrow N'\overset{F}{\hookrightarrow}M$이 $G$와 같도록 하는 $C^\infty$ 함수 $\iota:N\rightarrow N'$가 존재하는지를 생각할 수 있다.
+임의의 manifold $M$과 그 submanifold $F:N'\rightarrow M$이 주어졌다 하자. 그럼 $F$를 일종의 inclusion으로 생각할 수 있으므로, 만일 또 다른 어떤 manifold $N$과 $C^\infty$ 함수 $G:N\rightarrow M$에 대하여 $G(N)\subseteq F(N')$가 성립한다면 $N\rightarrow N'\overset{F}{\hookrightarrow}M$이 $G$와 같도록 하는 $C^\infty$ 함수 $\iota:N\rightarrow N'$가 존재하는지를 생각할 수 있다.
 
 예를 들어, $M=\mathbb{R}^2$이라 하고, 두 submanifold $F:N'=\mathbb{R}\rightarrow \mathbb{R}^2$, $G:N=\mathbb{R}\rightarrow\mathbb{R}^2$를 각각 아래 그림의 오른쪽과 왼쪽의 submanifold로 생각하자. 여기에서 $F(0)=G(0)$은 모두 $\mathbb{R}^2$의 원점이다.
 
@@ -35,7 +35,7 @@ weight: 8
 
 <div class="proposition" markdown="1">
 
-<ins id="thm1">**정리 1**</ins> 임의의 manifold $M$과 그 submanifold $F:N'\rightarrow M$이 주어졌다 하자. $C^\infty$ 함수 $G:N\rightarrow M$이 $G(N)\subset F(N')$를 만족한다고 가정하고, $F\circ\iota=G$를 만족하는 유일한 함수 $\iota$를 생각하자. 그럼
+<ins id="thm1">**정리 1**</ins> 임의의 manifold $M$과 그 submanifold $F:N'\rightarrow M$이 주어졌다 하자. $C^\infty$ 함수 $G:N\rightarrow M$이 $G(N)\subseteq F(N')$를 만족한다고 가정하고, $F\circ\iota=G$를 만족하는 유일한 함수 $\iota$를 생각하자. 그럼
 
 1. 만일 $\iota$가 연속이라면 $\iota$는 $C^\infty$이기도 하다.
 2. 만일 $F$가 embedding이라면 $\iota$는 연속이다.

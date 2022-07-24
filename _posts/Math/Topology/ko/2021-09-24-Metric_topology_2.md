@@ -52,7 +52,7 @@ $$\alpha d_1(x,y)\leq d_2(x,y)\leq \beta d_1(x,y)$$
 
 $$d_1(x,z)\leq d_1(x,y)+d_1(y,z)\leq d_1(x,y)+\alpha^{-1}d_2(y,z)<d_1(x,y)+\alpha^{-1}\alpha\delta_1=\epsilon_1$$
 
-이므로 $z\in B_1$이다. 즉, $B\_{d\_2}(y,\alpha\delta\_1)\subset B_1$이고, 따라서 $\mathcal{T}\_2$는 $\mathcal{T}\_1$보다 강하다.  
+이므로 $z\in B_1$이다. 즉, $B\_{d\_2}(y,\alpha\delta\_1)\subseteq B_1$이고, 따라서 $\mathcal{T}\_2$는 $\mathcal{T}\_1$보다 강하다.  
 
 이와 비슷하게, $\mathcal{B}\_2$의 임의의 원소 $B\_2=B\_{d\_2}(x, \epsilon\_2)$와, $B\_2$의 임의의 원소 $y$가 주어졌다 하자. $\delta\_2=\epsilon\_2-d\_2(x,y)>0$이라 하면, 임의의 $z\in B\_{d\_1}(y, \beta^{-1}\delta\_2)$에 대하여, 
 
@@ -124,9 +124,9 @@ $$\overline{d}(x,z)\leq d(x,z)\leq d(x,y)+d(y,z)=\overline{d}(x,y)+\overline{d}(
   
 $$f^{-1}(B_{d_Y}(f(x), \epsilon))$$
 
-는 열린집합의 preimage이므로 열린집합이다. 따라서 어떠한 $\delta>0$이 존재하여 $B\_{d\_X}(x,\delta)\subset f^{-1}(B\_{d\_Y}(f(x),\epsilon))$이 성립한다. 이제 만일 $y\in B\_{d\_X}(x,\delta)$라면, 즉 만일 $d\_X(x,y)<\delta$라면, $y\in f^{-1}(B\_{d\_Y}(f(x), \epsilon))$이므로 $f(y)\in B\_{d\_Y}(f(x), \epsilon)$이다.
+는 열린집합의 preimage이므로 열린집합이다. 따라서 어떠한 $\delta>0$이 존재하여 $B\_{d\_X}(x,\delta)\subseteq f^{-1}(B\_{d\_Y}(f(x),\epsilon))$이 성립한다. 이제 만일 $y\in B\_{d\_X}(x,\delta)$라면, 즉 만일 $d\_X(x,y)<\delta$라면, $y\in f^{-1}(B\_{d\_Y}(f(x), \epsilon))$이므로 $f(y)\in B\_{d\_Y}(f(x), \epsilon)$이다.
 
-반대로 $\epsilon$-$\delta$ 조건이 만족되었다고 하자. $f$가 연속임을 보이기 위해, 임의의 열린집합 $V\subset Y$를 택하고 $f^{-1}(V)$가 $X$에서 열린집합임을 보여야 한다. $x\in f^{-1}(V)$라 하자. 그럼 $f(x)\in V$이므로, 어떤 $\epsilon>0$이 존재하여 $B\_{d\_Y}(f(x),\epsilon)\subset V$이도록 할 수 있다. 이제 $\epsilon$-$\delta$ 조건에 의해, 어떠한 $\delta>0$이 존재하여 $y\in B\_{d\_X}(x,\delta)$이면 $f(y)\in B\_{d\_Y}(f(x), \epsilon)\subset V$이도록 할 수 있고, 따라서 $y\in f^{-1}(V)$이다. 즉, $B\_{d\_X}(x,\delta)\subset f^{-1}(V)$이므로 $f^{-1}(V)$도 열린집합이다. 
+반대로 $\epsilon$-$\delta$ 조건이 만족되었다고 하자. $f$가 연속임을 보이기 위해, 임의의 열린집합 $V\subseteq Y$를 택하고 $f^{-1}(V)$가 $X$에서 열린집합임을 보여야 한다. $x\in f^{-1}(V)$라 하자. 그럼 $f(x)\in V$이므로, 어떤 $\epsilon>0$이 존재하여 $B\_{d\_Y}(f(x),\epsilon)\subseteq V$이도록 할 수 있다. 이제 $\epsilon$-$\delta$ 조건에 의해, 어떠한 $\delta>0$이 존재하여 $y\in B\_{d\_X}(x,\delta)$이면 $f(y)\in B\_{d\_Y}(f(x), \epsilon)\subseteq V$이도록 할 수 있고, 따라서 $y\in f^{-1}(V)$이다. 즉, $B\_{d\_X}(x,\delta)\subseteq f^{-1}(V)$이므로 $f^{-1}(V)$도 열린집합이다. 
 
 
 </details>
@@ -135,7 +135,7 @@ $$f^{-1}(B_{d_Y}(f(x), \epsilon))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5 (The sequence lemma)**</ins> 위상공간 $X$에 대하여, $A\subset X$라 하자. 만일 어떠한 $x\in A$에 대하여, $A$의 원소들로 이루어진 수열 $\left(x\_n\right)\_{n=1}^\infty$이 존재하여 $x_n\rightarrow x$라면 $x\in\operatorname{cl}A$가 성립한다. 만일 $X$가 metrizable이라면 그 역도 성립한다.
+<ins id="lem5">**보조정리 5 (The sequence lemma)**</ins> 위상공간 $X$에 대하여, $A\subseteq X$라 하자. 만일 어떠한 $x\in A$에 대하여, $A$의 원소들로 이루어진 수열 $\left(x\_n\right)\_{n=1}^\infty$이 존재하여 $x_n\rightarrow x$라면 $x\in\operatorname{cl}A$가 성립한다. 만일 $X$가 metrizable이라면 그 역도 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -143,7 +143,7 @@ $$f^{-1}(B_{d_Y}(f(x), \epsilon))$$
 
 우선 $x\_n\rightarrow x$라 하자. 그럼 정의에 의하여, $x$의 임의의 열린근방은 반드시 어떠한 $x\_n$을 포함하고, 이는 $A$의 원소이므로 $x$의 임의의 열린근방은 반드시 $A$와 만난다. 따라서 [§수열의 수렴, 명제 2](/ko/math/topology/basic_definition_3#pp2)에 의해 $x\in\operatorname{cl}A$이다.
 
-이제 $X$가 metrizable이라 가정하고 그 역을 보이자. 임의의 $x\in\operatorname{cl}A$에 대하여, 우리는 $x$로 수렴하는 $A$의 수열 $\left(x\_n\right)\_{n=1}^\infty$를 만들어야 한다. 각각의 $n$에 대하여, $B(x,1/n)$을 생각하자. 그럼 $x\in\operatorname{cl}A$이므로 이들은 $A$와 어떤 점에서 만난다. $B(x,1/n)\cap A$의 점들 중 하나를 뽑아 이를 $x\_n$이라 하자. 그럼 $x\_n\rightarrow x$이다. 만일 우리가 $x$의 임의의 열린근방 $U$를 잡는다면, $U$는 어떠한 $\epsilon$에 대하여 $B(x,\epsilon)$을 포함하고, 따라서 $1/N<\epsilon$이도록 하면 $n\geq N$일 때마다 $x\_n\in B(x,\epsilon)\subset U$이도록 할 수 있기 때문이다.
+이제 $X$가 metrizable이라 가정하고 그 역을 보이자. 임의의 $x\in\operatorname{cl}A$에 대하여, 우리는 $x$로 수렴하는 $A$의 수열 $\left(x\_n\right)\_{n=1}^\infty$를 만들어야 한다. 각각의 $n$에 대하여, $B(x,1/n)$을 생각하자. 그럼 $x\in\operatorname{cl}A$이므로 이들은 $A$와 어떤 점에서 만난다. $B(x,1/n)\cap A$의 점들 중 하나를 뽑아 이를 $x\_n$이라 하자. 그럼 $x\_n\rightarrow x$이다. 만일 우리가 $x$의 임의의 열린근방 $U$를 잡는다면, $U$는 어떠한 $\epsilon$에 대하여 $B(x,\epsilon)$을 포함하고, 따라서 $1/N<\epsilon$이도록 하면 $n\geq N$일 때마다 $x\_n\in B(x,\epsilon)\subseteq U$이도록 할 수 있기 때문이다.
 
 </details>
 <div class="proposition" markdown="1">
@@ -156,7 +156,7 @@ $$f^{-1}(B_{d_Y}(f(x), \epsilon))$$
 
 우선 $f$가 연속이라 가정하자. $x\_n\rightarrow x$인 수열 $\left(x\_n\right)\_{n=1}^\infty$에 대하여, 우리는 $f(x\_n)\rightarrow f(x)$임을 보여야 한다. $f(x)$의 열린근방 $V$를 생각하자. 그럼 $f^{-1}(V)$는 $x$를 포함하는 열린집합이다. 따라서 어떠한 $N$이 존재하여, $n\geq N$이면 $x\_n\in f^{-1}(V)$가 성립하도록 할 수 있다. 즉, $f(x\_n)\in V$가 모든 $n\geq N$에 대해 성립하므로 $f(x\_n)\rightarrow f(x)$이다.
 
-반대로 $A\subset X$이고 뒤쪽 조건이 성립한다고 하자. 우리는 연속함수의 동치조건 ([§연속함수, 명제 2](/ko/math/topology/basic_definition_4#pp2)) 중 $f(\operatorname{cl}A)\subset\operatorname{cl}f(A)$를 이용할 것이다. 앞선 보조정리의 역에 의하여, 만일 $x\in \operatorname{cl}A$라면 $x$로 수렴하는 $A$의 수열 $\left(x\_n\right)\_{n=1}^\infty$가 존재한다. 그런데 가정에 의하여 $f(x\_n)\rightarrow f(x)$이고, 따라서 다시 앞선 보조정리에 의해 $f(x)\in \operatorname{cl}f(A)$가 성립한다. 따라서 $f(\operatorname{cl}A)\subset\operatorname{cl}f(A)$가 성립한다.
+반대로 $A\subseteq X$이고 뒤쪽 조건이 성립한다고 하자. 우리는 연속함수의 동치조건 ([§연속함수, 명제 2](/ko/math/topology/basic_definition_4#pp2)) 중 $f(\operatorname{cl}A)\subset\operatorname{cl}f(A)$를 이용할 것이다. 앞선 보조정리의 역에 의하여, 만일 $x\in \operatorname{cl}A$라면 $x$로 수렴하는 $A$의 수열 $\left(x\_n\right)\_{n=1}^\infty$가 존재한다. 그런데 가정에 의하여 $f(x\_n)\rightarrow f(x)$이고, 따라서 다시 앞선 보조정리에 의해 $f(x)\in \operatorname{cl}f(A)$가 성립한다. 따라서 $f(\operatorname{cl}A)\subset\operatorname{cl}f(A)$가 성립한다.
 
 </details>
 
@@ -199,20 +199,20 @@ $$d(f_n(x), f(x))<\epsilon$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$V$가 $Y$의 열린집합이라 하고, $x\_0\in f^{-1}(V)$라 하자. 우리는 $f^{-1}(V)$가 열린집합임을 보이기 위해, 어떠한 $x\_0$의 열린근방 $U$가 존재하여 $f(U)\subset V$임을 보여야 한다.
+$V$가 $Y$의 열린집합이라 하고, $x\_0\in f^{-1}(V)$라 하자. 우리는 $f^{-1}(V)$가 열린집합임을 보이기 위해, 어떠한 $x\_0$의 열린근방 $U$가 존재하여 $f(U)\subseteq V$임을 보여야 한다.
 
-$y\_0=f(x\_0)$이라 하자. $V$는 열린집합이므로, 어떠한 $\epsilon$이 존재하여 $B(y\_0, \epsilon)\subset V$이다. 이제 $f\_n\rightrightarrows f$이므로, 어따한 $N$이 존재하여, 다음의 식
+$y\_0=f(x\_0)$이라 하자. $V$는 열린집합이므로, 어떠한 $\epsilon$이 존재하여 $B(y\_0, \epsilon)\subseteq V$이다. 이제 $f\_n\rightrightarrows f$이므로, 어따한 $N$이 존재하여, 다음의 식
 
 $$d(f_n(x), f(x))<\epsilon/3$$
 
-이 모든 $n>N$과 $x\in X$에 대해 성립하도록 할 수 있다. 한편, $f\_N$은 연속이므로, $f\_N^{-1}(B(f\_N(x\_0), \epsilon/3))$은 열린집합이고, 따라서 $x\in U\subset f\_N^{-1}(B(f\_N(x\_0), \epsilon/3))$인 열린집합 $U$가 존재한다. 이제 임의의 $x\in U$에 대하여,
+이 모든 $n>N$과 $x\in X$에 대해 성립하도록 할 수 있다. 한편, $f\_N$은 연속이므로, $f\_N^{-1}(B(f\_N(x\_0), \epsilon/3))$은 열린집합이고, 따라서 $x\in U\subseteq f\_N^{-1}(B(f\_N(x\_0), \epsilon/3))$인 열린집합 $U$가 존재한다. 이제 임의의 $x\in U$에 대하여,
 
 $$\begin{aligned}
   d(f(x), f(x_0))&\leq d(f(x), f_N(x))+d(f_N(x), f_N(x_0))+d(f_N(x_0), f(x_0))\\
   &<\epsilon/3+\epsilon/3+\epsilon/3=\epsilon
 \end{aligned}$$
 
-이므로 $f(x)\in B(y\_0,\epsilon)\subset V$이다. 즉, $f(U)\subset B(y\_0,\epsilon)\subset V$이므로 $f^{-1}(V)$가 열린집합이다.
+이므로 $f(x)\in B(y\_0,\epsilon)\subseteq V$이다. 즉, $f(U)\subseteq B(y\_0,\epsilon)\subseteq V$이므로 $f^{-1}(V)$가 열린집합이다.
 
 </details>
 

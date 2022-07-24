@@ -25,7 +25,7 @@ weight: 5
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 두 manifold $M,N$이 주어졌다 하자. 함수 $F:M\rightarrow N$이 점 $p\in M$에서 $C^\infty$라는 것은, $p$를 포함하는 적당한 coordinate system $(U,\varphi)$와, $F(U)\subset V$인 적당한 coordinate system $(V,\psi)$가 존재하여 $\psi\circ F\circ\varphi^{-1}$이 $C^\infty$인 것이다. 
+<ins id="df1">**정의 1**</ins> 두 manifold $M,N$이 주어졌다 하자. 함수 $F:M\rightarrow N$이 점 $p\in M$에서 $C^\infty$라는 것은, $p$를 포함하는 적당한 coordinate system $(U,\varphi)$와, $F(U)\subseteq V$인 적당한 coordinate system $(V,\psi)$가 존재하여 $\psi\circ F\circ\varphi^{-1}$이 $C^\infty$인 것이다. 
 
 ![smooth_map](/assets/images/Manifold/Differentials-1.png){:width="500px" class="invert" .align-center}
 <cap>[Lee], p.34. Fig. 2.2</cap>
@@ -55,7 +55,7 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $\operatorname{id}_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으로, 임의의 열린집합 $U\subset M$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, 정의 3](/ko/math/manifold/examples#df3)) inclusion map $U\hookrightarrow M$은 $C^\infty$ 함수이다. 
+<ins id="ex3">**예시 3**</ins> $\operatorname{id}_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으로, 임의의 열린집합 $U\subseteq M$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, 정의 3](/ko/math/manifold/examples#df3)) inclusion map $U\hookrightarrow M$은 $C^\infty$ 함수이다. 
 
 </div>
 
@@ -227,7 +227,7 @@ $$0=dF_p\left(\frac{\partial}{\partial x^i}\bigg|_p\right)=\sum_{j=1}^n\frac{\pa
 
 $$\frac{\partial(y^j\circ F)}{\partial x^i}(p)=0$$
 
-이 성립한다. 이들은 $\psi\circ F\circ\varphi^{-1}$의 Jacobian이므로, 유클리드 공간 사이의 함수 $\psi\circ F\circ\varphi^{-1}$는 상수함수이고, 특히 점 $\varphi^{-1}(p)$가 $\psi(q)$로 옮겨지므로 $\psi\circ F\circ\varphi^{-1}$은 모든 점을 $\psi(q)$로 보내는 상수함수이다. 따라서 $F$는 $U$의 모든 점을 $q$로 보내는 상수함수가 되어 $U\subset F^{-1}(q)$이고 $F^{-1}(q)$는 열린집합이다.
+이 성립한다. 이들은 $\psi\circ F\circ\varphi^{-1}$의 Jacobian이므로, 유클리드 공간 사이의 함수 $\psi\circ F\circ\varphi^{-1}$는 상수함수이고, 특히 점 $\varphi^{-1}(p)$가 $\psi(q)$로 옮겨지므로 $\psi\circ F\circ\varphi^{-1}$은 모든 점을 $\psi(q)$로 보내는 상수함수이다. 따라서 $F$는 $U$의 모든 점을 $q$로 보내는 상수함수가 되어 $U\subseteq F^{-1}(q)$이고 $F^{-1}(q)$는 열린집합이다.
 
 </details>
 
