@@ -139,7 +139,7 @@ $$\phi\circ\psi^{-1}(p,v)=(p, \tau(p)v)$$
 
 ## Section and frame
 
-주어진 vector bundle $\pi:E\rightarrow M$에 대하여, 열린집합 $U\subset M$에서 정의된 *local section*은 다음의 식
+주어진 vector bundle $\pi:E\rightarrow M$에 대하여, 열린집합 $U\subseteq M$에서 정의된 *local section*은 다음의 식
 
 $$\pi\circ \sigma=\operatorname{id}_U$$
 

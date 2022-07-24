@@ -25,7 +25,7 @@ weight: 6
 
 <ins id="df1">**정의 1**</ins> Totally ordered set $(X,<)$ 위에 정의된 *order topology<sub>순서위상</sub>*은 다음의 집합 
 
-$$\{(a,b)\subset X:\text{$a<b$, $a$ or $b$ can be possibly infinite}\}$$
+$$\{(a,b)\subseteq X:\text{$a<b$, $a$ or $b$ can be possibly infinite}\}$$
 
 을 basis로 하여 정의된 위상이다.
 
@@ -83,7 +83,7 @@ $$B(x,\epsilon)=\{y:d(x,y)<\epsilon\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem6">**보조정리 6**</ins> 임의의 $y\in B(x,\epsilon)$에 대하여, 적당한 양수 $\delta>0$이 존재하여 $B(y,\delta)\subset B(x,\epsilon)$이도록 할 수 있다.
+<ins id="lem6">**보조정리 6**</ins> 임의의 $y\in B(x,\epsilon)$에 대하여, 적당한 양수 $\delta>0$이 존재하여 $B(y,\delta)\subseteq B(x,\epsilon)$이도록 할 수 있다.
 
 </div>
 <details class="proof" markdown="1">
@@ -107,15 +107,15 @@ $$d(x,z)\leq d(y,z)+d(x,y)<(\epsilon-d(x,y))+d(x,y)=\epsilon$$
 
 우선 임의의 $x\in X$에 대하여 $B(x,1)$은 항상 $x$를 포함하므로 $B(x,\epsilon)$들의 모임이 $X$를 덮는 것은 자명하다. 
 
-공집합이 아닌 교집합을 갖는 임의의 두 ball $B\_1=B(x\_1,\epsilon\_1)$과 $B\_2=B(x\_2,\epsilon\_2)$가 주어졌다고 하자. 그럼 임의의 $y\in B\_1\cap B\_2$에 대하여, 앞선 보조정리에 의해 $B(y, \delta\_1)\subset B\_1$, $B(y,\delta\_2)\subset B\_2$이도록 하는 $\delta\_1, \delta\_2$가 각각 존재한다. 이제 $\delta=\min(\delta\_1,\delta\_2)$로 두면, 
+공집합이 아닌 교집합을 갖는 임의의 두 ball $B\_1=B(x\_1,\epsilon\_1)$과 $B\_2=B(x\_2,\epsilon\_2)$가 주어졌다고 하자. 그럼 임의의 $y\in B\_1\cap B\_2$에 대하여, 앞선 보조정리에 의해 $B(y, \delta\_1)\subseteq B\_1$, $B(y,\delta\_2)\subseteq B\_2$이도록 하는 $\delta\_1, \delta\_2$가 각각 존재한다. 이제 $\delta=\min(\delta\_1,\delta\_2)$로 두면, 
 
-$$B(y, \delta)\subset B(y, \delta_i)\subset B(x, \epsilon_i)$$
+$$B(y, \delta)\subseteq B(y, \delta_i)\subseteq B(x, \epsilon_i)$$
 
 가 $i=1,2$에 대해 성립하므로 원하는 결과를 얻는다.
 
 </details>
 
-위 두 명제들은 단순히 주어진 집합이 basis라는 것을 보일 때 뿐만 아니라, 종종 필요할 때 꺼내 쓸 명제이기도 하다. 한편, [보조정리 6](#lem6)을 적용하면 임의의 $x\in X$와 양수 $r>0$에 대하여, 집합 $B(x,r)$의 임의의 원소 $y$마다 적당한 $\delta_y>0$이 존재하여 $B(y,\delta_y)\subset B(x,r)$이도록 할 수 있으므로 다음의 식
+위 두 명제들은 단순히 주어진 집합이 basis라는 것을 보일 때 뿐만 아니라, 종종 필요할 때 꺼내 쓸 명제이기도 하다. 한편, [보조정리 6](#lem6)을 적용하면 임의의 $x\in X$와 양수 $r>0$에 대하여, 집합 $B(x,r)$의 임의의 원소 $y$마다 적당한 $\delta_y>0$이 존재하여 $B(y,\delta_y)\subseteq B(x,r)$이도록 할 수 있으므로 다음의 식
 
 $$B(x,r)=\bigcup_{y\in B(x,r)} B(y, \delta_y)$$
 

@@ -1,6 +1,6 @@
 ---
 
-title: "Minimal-mistakes에 다크모드 추가하기"
+title: "Minimal mistakes 테마 다크모드 추가하기"
 excerpt: "다크모드 추가"
 
 read_time: false

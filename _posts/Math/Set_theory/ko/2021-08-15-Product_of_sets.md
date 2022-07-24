@@ -161,13 +161,13 @@ $$\begin{aligned}
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> Family $(A_i)\_{i\in I}$와 그 product $\prod\_{i\in I} A_i$가 주어졌다고 하자. 그럼 index set의 부분집합 $J\subset I$에 대하여, $\prod\_{j\in J} A_j$를 *부분곱<sub>partial product</sub>*이라 부른다. 
+<ins id="df6">**정의 6**</ins> Family $(A_i)\_{i\in I}$와 그 product $\prod\_{i\in I} A_i$가 주어졌다고 하자. 그럼 index set의 부분집합 $J\subseteq I$에 대하여, $\prod\_{j\in J} A_j$를 *부분곱<sub>partial product</sub>*이라 부른다. 
 
 </div>
 
 $\prod\_{i\in I}A\_i$의 부분곱 $\prod\_{j\in J}A_j$가 주어졌다 하자. 그럼 임의의 $F\in\prod\_{i\in I}A\_i$에 대하여 함수 $F\circ\Delta_J$는 정의역 $J$를 갖는 함수이며, 각각의 $j$에 대하여 $(F\circ\Delta_J)(j)=F(j)\in A_j$이고 따라서 $F\circ\Delta_J$는 $\prod\_{j\in J}A_j$의 원소이다. 
 
-위의 문단에 의하여, $F\mapsto F\circ\Delta_J$는 $\prod_{i\in I}A_i$에서 $\prod_{j\in J}A_j$로의 함수를 정의한다. 이를 성분함수의 표기를 빌려 $\operatorname{pr}\_J$로 적는다. 그럼 $K\subset J\subset I$에 대하여, 곱집합 $\prod\_{i\in I}A\_i$에서 부분곱 $\prod\_{j\in J}A\_j$로의 $J$번째 성분함수와, 곱집합 $\prod\_{j\in J}A\_j$에서 이 곱집합의 부분곱 $\prod\_{k\in K}A\_k$로의 $K$번째 성분함수
+위의 문단에 의하여, $F\mapsto F\circ\Delta_J$는 $\prod_{i\in I}A_i$에서 $\prod_{j\in J}A_j$로의 함수를 정의한다. 이를 성분함수의 표기를 빌려 $\operatorname{pr}\_J$로 적는다. 그럼 $K\subseteq J\subseteq I$에 대하여, 곱집합 $\prod\_{i\in I}A\_i$에서 부분곱 $\prod\_{j\in J}A\_j$로의 $J$번째 성분함수와, 곱집합 $\prod\_{j\in J}A\_j$에서 이 곱집합의 부분곱 $\prod\_{k\in K}A\_k$로의 $K$번째 성분함수
 
 $$\prod_{i\in I}A_i\longrightarrow \prod_{j\in J}A_j\longrightarrow \prod_{k\in K}A_k$$
 
@@ -247,13 +247,13 @@ $$\operatorname{pr}_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{
 
 $${\operatorname{pr}_i}\circ(\phi\circ\psi)=({\operatorname{pr}_i}\circ\phi)\circ\psi={\operatorname{pr}_{ik}}\circ\psi={\operatorname{pr}_i}\circ({\operatorname{pr}_k}\circ\psi)={\operatorname{pr}_j}\circ{\operatorname{pr}_{J_k}}=\operatorname{pr}_j$$
 
-에서 원하는 결론을 얻는다. (마지막 등식은 $\operatorname{pr}_j$를 $\\{j\\}\subset I$로의 성분함수로 보았다.) 이 식은 복잡해보이지만, 그냥 다음의 diagram이 commute한다는 것을 식으로 쓴 것에 불과하다. 
+에서 원하는 결론을 얻는다. (마지막 등식은 $\operatorname{pr}_j$를 $\\{j\\}\subseteq I$로의 성분함수로 보았다.) 이 식은 복잡해보이지만, 그냥 다음의 diagram이 commute한다는 것을 식으로 쓴 것에 불과하다. 
 
 ![partial_product_pf_4](/assets/images/Set_theory/Product_of_sets-7.png){:width="349.05px" class="invert" .align-center}
 
 </details> 
 
-우리는 이미 두 함수의 곱 $u\times v$를 정의했는데, 이를 일반적인 곱집합으로 확장할 수 있다. $(A_i)\_{i\in I}$, $(B_i)\_{i\in I}$가 같은 index를 갖는 family이고, <phrase>$A_i$에서 $B_i$로의 함수 $g_i$들의 family</phrase> $(g_i)\_{i\in I}$가 주어졌다 하자. $u_f$를 $I$에서 $\bigcup_{i\in I}B_i$로의 함수 $i\mapsto g_i(f(i))$라 하면 $u_f(i)\in B_i$이고, 따라서 $u_f\in\prod_{i\in I}B_i$이다. 
+$(A_i)\_{i\in I}$, $(B_i)\_{i\in I}$가 같은 index를 갖는 family이고, <phrase>$A_i$에서 $B_i$로의 함수 $g_i$들의 family</phrase> $(g_i)\_{i\in I}$가 주어졌다 하자. $u_f$를 $I$에서 $\bigcup_{i\in I}B_i$로의 함수 $i\mapsto g_i(f(i))$라 하면 $u_f(i)\in B_i$이고, 따라서 $u_f\in\prod_{i\in I}B_i$이다. 
 
 <div class="definition" markdown="1">
 
@@ -270,6 +270,21 @@ $$\prod_{i\in I} (g_i\circ f_i)=\left(\prod_{i\in I} g_i\right)\circ\left(\prod_
 이 성립한다.
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+다음 두 개의 commutative diagram 이외에는 특별히 설명할 것이 없다.
+
+![composition_of_product_functions](/assets/images/Set_theory/Product_of_sets-8.png){:width="287.1px" class="invert" .align-center}
+
+그리고
+
+![composition_of_product_fuctions_2](/assets/images/Set_theory/Product_of_sets-9.png){:width="335.4px" class="invert" .align-center}
+
+</details>
+
+$\operatorname{id}\_{A\_i}$들의 곱이 $\operatorname{id}\_{\prod A\_i}$라는 것은 자명하므로, 위의 명제에 의해 단사함수들의 곱은 단사함수이고 전사함수들의 곱은 전사함수라는 것 또한 명확하다. 
+
 
 ## 분배법칙
 
