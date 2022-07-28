@@ -21,7 +21,7 @@ weight: 8
 
 <div class="proposition" markdown="1">
 
-<ins id="lem0">**보조정리 (The sequence lemma)**</ins> 거리공간 $X$와 그 부분집합 $A$에 대하여, $x\in\operatorname{cl}A$인 것과, <box>적당한 $A$의 수열 $(x_n)$이 존재하여 $x_n\rightarrow x$인 것</box>이 동치이다.
+<ins id="lem0">**보조정리 (The sequence lemma)**</ins> 거리공간 $X$와 그 부분집합 $A$에 대하여, $x\in\operatorname{cl}A$인 것과, <phrase>적당한 $A$의 수열 $(x_n)$이 존재하여 $x_n\rightarrow x$인 것</phrase>이 동치이다.
 
 </div>
 
@@ -49,4 +49,4 @@ weight: 8
 
 ---
 
-[^1]: 만일 수열들의 수렴에 대한 정보를 정확히 알고 있다면, 함수 $\operatorname{cl}:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$를, 집합 $A$를 받아 <box>$A$의 원소들로 이루어진 수열의 수렴값들의 집합</box>으로 보내는 함수로 정의하면 된다.
+[^1]: 만일 수열들의 수렴에 대한 정보를 정확히 알고 있다면, 함수 $\operatorname{cl}:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$를, 집합 $A$를 받아 <phrase>$A$의 원소들로 이루어진 수열의 수렴값들의 집합</phrase>으로 보내는 함수로 정의하면 된다.

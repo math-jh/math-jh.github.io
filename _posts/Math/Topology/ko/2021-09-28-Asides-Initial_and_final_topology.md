@@ -73,7 +73,7 @@ $$g^{-1}(U)=g^{-1}\left(\bigcap f_j^{-1}(U_j)\right)=\bigcap_{j=1}^n(f_j\circ g)
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> 임의의 집합 $X$, 위상공간 $Y$와 함수 $f:X\rightarrow Y$가 주어졌다 하자. 그럼 $f$에 의해 정의되는 initial topology는 정확히 $Y$의 열린집합들의 preimage를 모아둔 것과 같다. 특히 만일 $X\subset Y$이고 $X\rightarrow Y$가 canonical inclusion이었다면 이렇게 만들어지는 initial topology는 subspace topology와 동일하다. 
+<ins id="ex4">**예시 4**</ins> 임의의 집합 $X$, 위상공간 $Y$와 함수 $f:X\rightarrow Y$가 주어졌다 하자. 그럼 $f$에 의해 정의되는 initial topology는 정확히 $Y$의 열린집합들의 preimage를 모아둔 것과 같다. 특히 만일 $X\subseteq Y$이고 $X\rightarrow Y$가 canonical inclusion이었다면 이렇게 만들어지는 initial topology는 subspace topology와 동일하다. 
 
 </div>
 
@@ -97,7 +97,7 @@ $X$에 trivial topology가 주어졌다 하면, $X$로의 임의의 함수는 �
 
 <ins id="pp7">**명제 7**</ins> [정의 6](#df6)의 위상은 다음의 집합
 
-$$\mathcal{T}_\mathrm{fin}=\{U\subset X:f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
+$$\mathcal{T}_\mathrm{fin}=\{U\subseteq X:f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
 
 으로 정의된다.
 
