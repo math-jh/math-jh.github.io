@@ -1,6 +1,6 @@
 ---
 
-title: "Jekyll 블로그 커스터마이징"
+title: "블로그 커스터마이징"
 excerpt: "본문 너비 늘리기, 파비콘 적용, 머티리얼 아이콘 적용"
 
 read_time: false

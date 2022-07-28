@@ -23,11 +23,11 @@ weight: 4
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 위상공간 $X$, $Y$ 사이의 함수 $f:X\rightarrow Y$가 $x\in X$에서 *연속<sub>continuous</sub>*이라는 것은 $f(x)\in Y$의 임의의 열린근방 $V$에 대하여, $f(U)\subset V$이도록 하는 $x$의 열린근방 $U$가 존재하는 것이다. 만일 $f$가 $X$의 모든 점에서 연속이라면, $f$를 *연속함수<sub>continuous function</sub>*라 부른다.
+<ins id="df1">**정의 1**</ins> 임의의 위상공간 $X$, $Y$ 사이의 함수 $f:X\rightarrow Y$가 $x\in X$에서 *연속<sub>continuous</sub>*이라는 것은 $f(x)\in Y$의 임의의 열린근방 $V$에 대하여, $f(U)\subseteq V$이도록 하는 $x$의 열린근방 $U$가 존재하는 것이다. 만일 $f$가 $X$의 모든 점에서 연속이라면, $f$를 *연속함수<sub>continuous function</sub>*라 부른다.
 
 </div>
 
-정의에 의해 항등함수가 연속임은 자명하다. 또, 실수에서 실수로의 연속함수의 정의는 정확하게 $\epsilon$-$\delta$ 정의와 일치한다. (ref) 
+정의에 의해 항등함수가 연속임은 자명하다. 또, 실수에서 실수로의 연속함수의 정의는 정확하게 $\epsilon$-$\delta$ 정의와 일치한다. <#ref#>
 
 <div class="proposition" markdown="1">
 
@@ -42,9 +42,9 @@ weight: 4
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $f$가 연속이라 하자. 2번을 보이기 위해서는 $Y$의 임의의 열린집합 $V$가 주어졌다고 가정한 후, $f^{-1}(V)$가 열린집합임을 보여야 한다. 이를 위해 임의의 $x\in f^{-1}(V)$를 택하자. 그럼 $f(x)\in V$이므로 $V$는 $f(x)$의 열린근방이다. 따라서, $x$의 어떤 열린근방 $U$가 존재하여 $f(U)\subset V$이고 
+우선 $f$가 연속이라 하자. 2번을 보이기 위해서는 $Y$의 임의의 열린집합 $V$가 주어졌다고 가정한 후, $f^{-1}(V)$가 열린집합임을 보여야 한다. 이를 위해 임의의 $x\in f^{-1}(V)$를 택하자. 그럼 $f(x)\in V$이므로 $V$는 $f(x)$의 열린근방이다. 따라서, $x$의 어떤 열린근방 $U$가 존재하여 $f(U)\subseteq V$이고 
 
-$$U\subset f^{-1}(f(U))\subset f^{-1}(V)$$
+$$U\subseteq f^{-1}(f(U))\subseteq f^{-1}(V)$$
 
 이 성립하므로 $f^{-1}(V)$는 열린집합이다. 
 
@@ -56,23 +56,23 @@ $$f^{-1}(V)=f^{-1}(Y\setminus C)=X\setminus f^{-1}(C)$$
 
 이제 3번을 가정하고 4번을 보이자. $X$의 임의의 부분집합 $A$에 대하여, $\operatorname{cl}f(A)$는 $Y$의 닫힌집합이므로, $f^{-1}(\operatorname{cl}f(A))$는 $X$의 닫힌집합이다. 또, 이 집합은 항상 $A$를 포함하므로, $\operatorname{cl}A$도 포함해야 한다. 즉
 
-$$\operatorname{cl}A\subset f^{-1}(\operatorname{cl}f(A))$$
+$$\operatorname{cl}A\subseteq f^{-1}(\operatorname{cl}f(A))$$
 
 가 성립하고, 따라서 
 
-$$f(\operatorname{cl}A)\subset f(f^{-1}(\operatorname{cl}f(A))\subset \operatorname{cl}f(A)$$
+$$f(\operatorname{cl}A)\subseteq f(f^{-1}(\operatorname{cl}f(A))\subseteq \operatorname{cl}f(A)$$
 
 또한 성립한다. 
 
 마지막으로 4번이 성립한다고 가정하자. 임의의 $x\in X$에 대해 $f(x)\in Y$의 열린근방 $V$가 주어졌다고 하면, $V^c$는 닫힌집합이므로 $\operatorname{cl}V^c=V^c$이고, 따라서 
 
-$$f(\operatorname{cl}f^{-1}(V^c))\subset \operatorname{cl}(f(f^{-1}(V^c))\subset\operatorname{cl}V^c=V^c$$
+$$f(\operatorname{cl}f^{-1}(V^c))\subseteq \operatorname{cl}(f(f^{-1}(V^c))\subset\operatorname{cl}V^c=V^c$$
 
 가 성립한다. $f(x)\not\in V^c$이므로, $x\not\in\operatorname{cl}f^{-1}(V^c)$이고, 따라서 
 
 $$U= \left(\operatorname{cl}f^{-1}(V^c)\right)^c$$
 
-라 하면 $x\in U$이다. $U$는 닫힌집합의 여집합이므로 열린집합이고, 따라서 $x$의 열린근방이 된다. 이제 $f(U)\subset V$임을 보여야 하는데, 임의의 $x'\in U$에 대하여, $x'\not\in \operatorname{cl}(f^{-1}(V^c))$이고 따라서 $x'\not\in f^{-1}(V^c)$이다. 즉, $f(x')\not\in V^c$이므로 $f(x')\in V$이고, $f(U)\subset V$가 성립한다.
+라 하면 $x\in U$이다. $U$는 닫힌집합의 여집합이므로 열린집합이고, 따라서 $x$의 열린근방이 된다. 이제 $f(U)\subseteq V$임을 보여야 하는데, 임의의 $x'\in U$에 대하여, $x'\not\in \operatorname{cl}(f^{-1}(V^c))$이고 따라서 $x'\not\in f^{-1}(V^c)$이다. 즉, $f(x')\not\in V^c$이므로 $f(x')\in V$이고, $f(U)\subseteq V$가 성립한다.
 </details>
 
 2번의 결과가 특히 눈여겨볼만한데, 일반적인 대수구조는 $X$에서의 연산이 $Y$의 연산으로 보내지는 형태를 homomorphism이라 생각하지만, 위상구조에서는 방향이 반대로 바뀌어 $Y$의 열린집합의 preimage가 $X$의 열린집합이 되는 함수를 연속함수라 부르고 있다. 
@@ -91,14 +91,14 @@ $$U= \left(\operatorname{cl}f^{-1}(V^c)\right)^c$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 열린집합 $W\subset Z$에 대하여, 
+임의의 열린집합 $W\subseteq Z$에 대하여, 
 
 $$(g\circ f)^{-1}(W)=f^{-1}(g^{-1}(W))$$
 
 이고, $g$의 연속성에 의해 $g^{-1}(W)$는 열린집합이므로, $f$의 연속성을 다시 한 번 적용하면 $f^{-1}(g^{-1}(W))$도 열린집합이다.
 </details>
 
-또, 연속함수에 의해 *같은 것*으로 취급되는 위상공간도 정의할 수 있다.
+또, 연속함수에 의해 <em_ko>같은 것</em_ko>으로 취급되는 위상공간도 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -107,7 +107,7 @@ $$(g\circ f)^{-1}(W)=f^{-1}(g^{-1}(W))$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 대수적인 구조들과는 다르게, bijective한 연속함수가 항상 homeomorphism이 되는 것은 아니다. 이는 연속함수의 역함수가 연속이 되리라는 보장이 없기 때문이다. 
+<ins id="rmk1">**참고**</ins> 대수적인 구조들과는 다르게, 전단사인 연속함수가 항상 homeomorphism이 되는 것은 아니다. 이는 연속함수의 역함수가 연속이 되리라는 보장이 없기 때문이다. 
 
 예를 들어, standard topology가 주어진 ([§위상공간의 기저, 정의 5](/ko/math/topology/basic_definition_2#df5)) 실수에서 실수로의 함수 
 

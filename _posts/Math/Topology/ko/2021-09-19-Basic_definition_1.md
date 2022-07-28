@@ -33,13 +33,15 @@ weight: 1
 
 </div>
 
-이렇게 추상적인 정의가 어떤 방식으로 공간에 대한 정보를 주는지를 이해하는 것이 학부 위상수학의 첫 번째 목표라고 할 수 있다. 다음의 명제를 증명해보자.
+이 정의를 이용해 다음의 명제를 증명해보자.
 
-> $X$의 부분집합 $U$가 열린집합인 것은 <box>$U$의 원소 $x$마다, $x$를 포함하고 $U$에 포함된 열린집합 $V_x$가 존재하는 것</box>과 동치이다.
+> $X$의 부분집합 $U$가 열린집합인 것은 <phrase>$U$의 원소 $x$마다, $x$를 포함하고 $U$에 포함된 열린집합 $V_x$가 존재하는 것</phrase>과 동치이다.
 
-먼저 $U$가 열린집합이라면, 임의의 $x$에 대하여 $U$가 $V_x$의 역할을 하므로 더 이상 증명할 것이 없다. 따라서 반대방향만 보이면 충분하다. 임의의 $x\in U$에 대하여, $V_x\subset U$가 모든 $x\in U$에 대해 성립하므로,
+먼저 $U$가 열린집합이라면, 임의의 $x$에 대하여 $U$가 $V_x$의 역할을 하므로 더 이상 증명할 것이 없다. 
 
-$$\bigcup_{x\in U}V_x\subset U$$
+따라서 반대방향만 보이면 충분하다. 임의의 $x\in U$에 대하여, $V_x\subseteq U$가 모든 $x\in U$에 대해 성립하므로,
+
+$$\bigcup_{x\in U}V_x\subseteq U$$
 
 가 성립한다. 반대로 임의의 $x\in U$에 대하여, $x\in V_x\subset\bigcup_{x\in U} V_x$이므로
 
@@ -70,7 +72,7 @@ $$\bigcup_{x\in U}V_x= U$$
 
 예를 들어, 집합 $X$ 위에 정의된 <em_ko>임의의</em_ko> 위상 $\mathcal{T}$는 $X$ 위의 discrete topology보다는 항상 약하고, $X$ 위의 trivial topology보다는 항상 강하다. 
 
-$X$에 멀고 가까움의 개념을 주기 위해서 가장 좋은 도구는 <em_ko>거리</em_ko>지만, 거리를 줄 수 있는 공간은 매우 적기 때문에 더 일반화된 개념이 필요하다. $\mathcal{T}$에 의해 정의되는 일종의 멀고 가까움을 <box>두 점이 얼마나 많은 열린집합에 공통적으로 포함되는지</box>를 통해 살펴보면 거리가 주어진 것과 비슷한 이야기를 할 수 있다.[^2]
+$X$에 멀고 가까움의 개념을 주기 위해서 가장 좋은 도구는 <em_ko>거리</em_ko>지만, 거리를 줄 수 있는 공간은 매우 적기 때문에 더 일반화된 개념이 필요하다. $\mathcal{T}$에 의해 정의되는 일종의 멀고 가까움을 <phrase>두 점이 얼마나 많은 열린집합에 공통적으로 포함되는지</phrase>를 통해 살펴보면 거리가 주어진 것과 비슷한 이야기를 할 수 있다.[^2]
 
 우선 trivial topology의 경우를 살펴보자. 만약 $X=\\{x,y\\}$이고 $X$에 trivial topology가 주어졌다면, $X$의 두 점 $x,y$는 위상공간의 관점에서는 완벽하게 동등하다. 이는 열린집합들을 이용해서 두 점 $x,y$를 구별할 수 없기 때문이다. 이렇게 어떠한 위상공간 $X$의 두 점 $x,y$가 정확히 동일한 열린집합들에 포함된다면 이 두 점이 *topologically indistinguishable<sub>위상적으로 구별불가능</sub>*이라고 말한다.
 
@@ -90,9 +92,11 @@ $$\mathcal{T}=\{\emptyset, \{x\}, X\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> $X$의 임의의 원소 $x$에 대하여, $x$를 포함하는 열린집합 $U$를 $x$의 *열린근방<sub>open neighborhood</sub>*이라 부른다. $X$의 부분집합이 $x$의 어떤 open neighborhood를 포함한다면 이 부분집합을 $x$의 *근방<sub>neighborhood</sub>*이라 부른다.  
+<ins id="df5">**정의 5**</ins> $X$의 임의의 원소 $x$에 대하여, $x$를 포함하는 열린집합 $U$를 $x$의 *열린근방<sub>open neighborhood</sub>*이라 부른다. $X$의 부분집합이 $x$의 어떤 열린근방을 포함한다면 이 부분집합을 $x$의 *근방<sub>neighborhood</sub>*이라 부른다.  
 
 </div>
+
+그럼 $X$가 Hausdorff라는 것은 임의의 두 점 $x,y\in X$가 주어질 때마다 각각을 포함하는 서로소인 열린근방을 찾을 수 있다는 것이다.
 
 <div class="example" markdown="1">
 
@@ -100,7 +104,7 @@ $$\mathcal{T}=\{\emptyset, \{x\}, X\}$$
    
 임의의 집합 $X$에 대하여, $\mathcal{T}$를 다음의 집합
 
-$$\mathcal{T}=\{U\subset X:\text{either $U^c$ is finite or $U=\emptyset$}\}$$
+$$\mathcal{T}=\{U\subseteq X:\text{either $U^c$ is finite or $U=\emptyset$}\}$$
 
 으로 정의하자. 그럼, 
 
@@ -138,7 +142,7 @@ $X$ 위의 임의의 위상 $\mathcal{T}$에서 $\emptyset$과 $X$는 열린집�
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-다음의 De Morgan 법칙 (<#ref#>)
+다음의 De Morgan 법칙 ([집합론, §합집합과 교집합, 명제 8](/ko/math/set_theory/union_and_intersection#pp8))
 
 $$\left(\bigcap C_i\right)^c=\bigcup C_i^c,\quad\left(\bigcup C_i\right)^c=\bigcap C_i^c$$
 
@@ -154,6 +158,6 @@ $$\left(\bigcap C_i\right)^c=\bigcup C_i^c,\quad\left(\bigcup C_i\right)^c=\bigc
 
 ---
 
-[^1]: 사실, index set을 공집합으로 두면 1번 조건은 2번과 3번 조건에서 유도되긴 한다.
-[^2]: 나중에, 위상공간보다는 조금 더 직관적으로 가까움의 개념을 포함하는 (거리는 정의되지 않은) 공간을 살펴보게 된다.
+[^1]: 사실 index set을 공집합으로 두면 1번 조건은 2번과 3번 조건에서 유도되긴 한다.
+[^2]: 나중에 위상공간보다는 조금 더 직관적으로 가까움의 개념을 포함하는 (거리는 정의되지 않은) 공간을 살펴보게 된다.
 [^3]: 위에서 예로 든 $\mathcal{T}$의 경우, $x$를 $y$에서 분리하는 것은 열린집합 $\\{x\\}$를 통해 가능하지만, $y$를 $x$에서 분리하는 것은 애매하다.

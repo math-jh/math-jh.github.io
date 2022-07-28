@@ -65,7 +65,7 @@ $$\begin{pmatrix}\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\par
 
 $$\begin{pmatrix}\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^n\\\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^n\\\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^n\end{pmatrix}$$
 
-가 nonsingular라면, $x_0$의 적당한 열린근방 $V$, $y_0$의 적당한 열린근방 $W$, 그리고 $C^\infty$ 함수 $g:V\rightarrow W$가 존재하여 $V\times W\subset U$이고, 각각의 $(p,q)\in V\times W$마다 
+가 nonsingular라면, $x_0$의 적당한 열린근방 $V$, $y_0$의 적당한 열린근방 $W$, 그리고 $C^\infty$ 함수 $g:V\rightarrow W$가 존재하여 $V\times W\subseteq U$이고, 각각의 $(p,q)\in V\times W$마다 
 
 $$f(p,q)=0\iff q=g(p)$$
 

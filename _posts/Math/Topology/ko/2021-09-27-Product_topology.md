@@ -138,7 +138,7 @@ $$\rho(x,y)=\lVert x-y\rVert_\infty=\max_{1\leq i\leq n}\{\lvert x_i-y_i\rvert\}
 
 $x$를 포함하는 product topology의 basis $\prod U_i$에 대하여, $i_1$, $\ldots$, $i_n$들이 $U_i\neq \mathbb{R}$인 index들이라 하자. 그럼 각각의 $U_{i_k}$에 대하여, 우리는 적당한 $\epsilon_{i_k}>0$들을 잡아
 
-$$B_{\overline{d}}(x_{i_k},\epsilon_{i_k})\subset U_{i_k}$$
+$$B_{\overline{d}}(x_{i_k},\epsilon_{i_k})\subseteq U_{i_k}$$
 
 이도록 할 수 있다. 이제 $\epsilon=\min_{1\leq k\leq n}\left\\{\epsilon_{i_k}\right\\}$이라 하고 $B_{\overline{\rho}}(x, \epsilon)$을 생각하자. 만약 $z\in  B_{\overline{\rho}}(x, \epsilon)$라면, 모든 $i\in J$에 대하여 $\overline{d}(x_i, z_i)&lt;\epsilon$이고, 따라서 $z$는 $\prod U_i$에 속한다. 즉, 우리는 임의로 주어진 $x$와 $x$를 포함하는 product topology의 basis element에 대하여, uniform topology의 어떤 basis element가 존재하여 $x$를 포함하고 $\prod U_i$에 포함됨을 보였으므로 product topology보다 uniform topology가 강하다.
 
@@ -170,7 +170,7 @@ $$D(x,y)=\sup\left\{\frac{\overline{d}(x_i, y_i)}{i}\right\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이제 $D$가 metric인 것을 보이는 것 정도는 너무 쉽다. 이 metric에 의해 정의되는 metric topology가 product topology와 같음을 보이기 위해, 우선 $x\in\mathbb{R}^\omega$와 이를 포함하는 metric topology에서의 열린집합 $U$를 택하자. $U$가 $D$에 의해 정의되는 metric topology에서 열린집합이므로, 어떠한 $\epsilon$-ball $B_D(x,\epsilon)$이 존재하여 $B_D(x,\epsilon)\subset U$이다. $\epsilon$을 고정하고,  $1/N&lt;\epsilon$을 만족하는 충분히 큰 $N$에 대하여 
+이제 $D$가 metric인 것을 보이는 것 정도는 너무 쉽다. 이 metric에 의해 정의되는 metric topology가 product topology와 같음을 보이기 위해, 우선 $x\in\mathbb{R}^\omega$와 이를 포함하는 metric topology에서의 열린집합 $U$를 택하자. $U$가 $D$에 의해 정의되는 metric topology에서 열린집합이므로, 어떠한 $\epsilon$-ball $B_D(x,\epsilon)$이 존재하여 $B_D(x,\epsilon)\subseteq U$이다. $\epsilon$을 고정하고,  $1/N&lt;\epsilon$을 만족하는 충분히 큰 $N$에 대하여 
   
 $$V=\left(x_1-\epsilon, x_1+\epsilon\right)\times\cdots\times(x_N-\epsilon,x_N+\epsilon)\times\mathbb{R}\times\mathbb{R}\times\cdots$$
 
@@ -182,7 +182,7 @@ $$\frac{\overline{d}(x_i, y_i)}{i}\leq\frac{1}{N}$$
 
 $$D(x, y)=\sup\left\{\frac{\overline{d}(x_i, y_i)}{i}\right\}\leq\max \left\{\frac{\overline{d}(x_1, y_1)}{1},\cdots, \frac{\overline{d}(x_N, y_N)}{N},\frac{1}{N}\right\}$$
 
-이 성립한다. 만일 $y\in V$라면 위의 식에서 $\overline{d}(x_i, y_i)$들 각각이 $\epsilon$보다 작고, $1/N$도 $\epsilon$보다 작으므로 우변이 $\epsilon$보다 작다. 즉 $V\subset B_D(x,\epsilon)$이 성립한다.
+이 성립한다. 만일 $y\in V$라면 위의 식에서 $\overline{d}(x_i, y_i)$들 각각이 $\epsilon$보다 작고, $1/N$도 $\epsilon$보다 작으므로 우변이 $\epsilon$보다 작다. 즉 $V\subseteq B_D(x,\epsilon)$이 성립한다.
 
 반대로 임의의 $x\in\mathbb{R}^\omega$와 $x$를 포함하는 product topology의 basis element $\prod U_i$를 생각하자. Product topology의 정의에 의하여, 유한개의 index를 제외하면 $U_i=\mathbb{R}$이다. 이 유한개의 index들을 $i_1$, $\ldots$, $i_k$라 하면, 우리는 이들 각각에 대하여 적당한 $\epsilon_{i_k}>0$들을 잡아 $(x_{i_k}-\epsilon_{i_k},x_{i_k}+\epsilon_{i_k})$가 $U_{i_k}$ 안에 속하도록 할 수 있다. 이제 $\epsilon_{i_k}$들을 1보다 작도록 잡고, $\epsilon=\min_{1\leq k\leq n}\left\\{\epsilon_{i_k}/i_k\right\\}$이라 하면 $\epsilon\leq\epsilon_{i_k}/i_k$이다. 임의의 $y\in B_D(x,\epsilon)$에 대하여,
 
@@ -192,7 +192,7 @@ $$\frac{\overline{d}(x_i, y_i)}{i}\leq D(x,y)<\epsilon$$
 
 $$\frac{\overline{d}(x_{i_k}, y_{i_k})}{i_k}<\epsilon\leq\frac{\epsilon_{i_k}}{i_k},$$
 
-즉 $\left\lvert x_{i_k}-y_{i_k}\right\rvert&lt;\epsilon_{i_k}$이므로 $y\in \prod U_i$이다. 즉 $B_D(x,\epsilon)\subset \prod U_i$이다.
+즉 $\left\lvert x_{i_k}-y_{i_k}\right\rvert&lt;\epsilon_{i_k}$이므로 $y\in \prod U_i$이다. 즉 $B_D(x,\epsilon)\subseteq \prod U_i$이다.
 
 </details>
 

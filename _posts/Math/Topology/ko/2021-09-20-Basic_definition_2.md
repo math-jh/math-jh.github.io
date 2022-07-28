@@ -17,13 +17,9 @@ weight: 2
 
 ---
 
-
-
 ## 위상공간의 기저
 
-어떤 대수적인 구조가 주어졌다 하자. 이 구조를 전체적으로 살펴볼 수 있는 도구가 있으면 가장 좋겠지만, 그것이 불가능할 때 우리는 이 구조의 성질을 잘 설명해줄 수 있는 부분집합을 이용했다. 이러한 철학을 가장 적극적으로 사용했던 것은 선형대수학에서였는데, 조금 과장하자면 선형대수학에서는 벡터공간 전체보다는 그 벡터공간을 생성하는 일차독립인 부분집합, 즉 벡터공간의 basis만 택하면 모든 것이 해결되었다.
-
-이와 비슷하게 위상 $\mathcal{T}$도 그 성질을 잘 설명해주는 부분집합을 갖는다. 벡터공간의 basis와는 성질들이 많이 다르기는 하지만, 이 부분집합 또한 마찬가지로 위상의 *basis*라고 부른다. 
+특정한 수학적 구조가 주어졌을 때, 이를 연구하기 위한 방법 중 하나는 이 구조를 잘 설명할 수 있는 부분집합을 찾는 것이다. 예컨대 선형대수학에서는 basis를 찾으면 대부분의 문제가 해결되었다. 비슷하게 위상공간도 위상구조를 설명할 수 있는 부분집합을 갖는다. 이 부분집합 또한 마찬가지로 위상의 *basis*라고 부른다. 
 
 <div class="definition" markdown="1">
 
@@ -31,7 +27,7 @@ weight: 2
 
 </div>
 
-정의에 의하여, $\mathcal{B}$는 $X$의 covering이기도 하다. ([집합론, §집합의 합, 정의 1](/ko/math/set_theory/sum_of_sets#df1)) 또한, $\mathcal{B}$의 원소들은 모두 열린집합들이니, 이를 $\mathcal{B}$가 $X$의 *open covering<sub>열린덮개</sub>*이라고 표현하면 적절할 것이다. 
+특별히 $X\in\mathcal{T}$이므로  $\mathcal{B}$는 $X$의 covering이기도 하다.  정의에 의해 $\mathcal{B}$의 원소들은 모두 열린집합들이니, 이를 $\mathcal{B}$가 $X$의 *open covering<sub>열린덮개</sub>*이라고 표현하면 적절할 것이다. ([집합론, §집합의 합, 정의 1](/ko/math/set_theory/sum_of_sets#df1))
 
 **[Mun]**을 포함한 대부분의 저자들은 위의 정의 대신 다음을 basis의 정의로 삼는다.
 
@@ -40,39 +36,62 @@ weight: 2
 <ins id="pp2">**명제 2**</ins> 위상공간 $(X,\mathcal{T})$에 대하여, $\mathcal{B}$가 $\mathcal{T}$의 basis인 것은 세 가지 조건
 
 1. 각각의 $x\in X$에 대하여, 적어도 하나의 $B\in \mathcal{B}$가 존재하여 $x\in B$이고,
-2. 만일 $x$를 포함하는 $\mathcal{B}$의 두 원소 $B\_1$, $B\_2$가 존재한다면, 또 다른 $B\_3\in\mathcal{B}$가 존재하여 $x\in B\_3$이고 $B\_3\subset B\_1\cap B\_2$를 만족하고,
-3. 각각의 $U\in\mathcal{T}$와 $x\in U$에 대하여, $x\in B\subset U$를 만족하는 $B\in\mathcal{B}$가 존재한다.
+2. 만일 $x$를 포함하는 $\mathcal{B}$의 두 원소 $B\_1$, $B\_2$가 존재한다면, 또 다른 $B\_3\in\mathcal{B}$가 존재하여 $x\in B\_3$이고 $B\_3\subseteq B\_1\cap B\_2$를 만족하고,
+3. 각각의 $U\in\mathcal{T}$와 $x\in U$에 대하여, $x\in B\subseteq U$를 만족하는 $B\in\mathcal{B}$가 존재한다.
 
 을 만족하는 것과 동치이다.
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $\mathcal{B}$가 $\mathcal{T}$의 basis라 가정하자. 그럼 $\mathcal{B}$는 $X$의 open covering이므로, 1번 조건이 자명하게 성립된다. 한편, $B\_1$, $B\_2$가 2번 조건과 같이 주어졌다면, $B\_1\cap B\_2$도 열린집합이므로 $B\_1\cap B\_2=\bigcup\_{i\in I} B\_i$를 만족하는 $\mathcal{B}$의 원소들의 family $(B\_i)\_{i\in I}$가 존재한다. 이 때, $(B\_i)\_{i\in I}$는 $B\_1\cap B\_2$의 open covering이므로, 1번 조건과 마찬가지로 2번 조건도 자명하게 성립된다. 여기에서 $B\_1\cap B\_2$를 임의의 열린집합 $U$로 바꾸면 3번을 얻는다.
+우선 $\mathcal{B}$가 $\mathcal{T}$의 basis라 가정하자. 그럼 $\mathcal{B}$는 $X$의 open covering이므로, 1번 조건이 자명하게 성립된다. 
 
-거꾸로 세 개의 조건이 만족된다고 가정하고, 임의의 열린집합 $U$를 택하자. 그럼 $x\in U$에 대해, 3번 조건에 의해 $x\in B\_x\subset U$를 만족하는 $B\_x\in\mathcal{B}$가 존재한다. 이제 $U=\bigcup\_{x\in U} B\_x$이므로, 증명 끝.  
+한편, $B\_1$, $B\_2$가 2번 조건과 같이 주어졌다면, $B\_1\cap B\_2$도 열린집합이므로 $B\_1\cap B\_2=\bigcup\_{i\in I} B\_i$를 만족하는 $\mathcal{B}$의 원소들의 family $(B\_i)\_{i\in I}$가 존재한다. 이 때, $(B\_i)\_{i\in I}$는 $B\_1\cap B\_2$의 open covering이므로, 1번 조건과 마찬가지로 2번 조건도 자명하게 성립된다. 여기에서 $B\_1\cap B\_2$를 임의의 열린집합 $U$로 바꾸면 3번을 얻는다.
+
+거꾸로 세 개의 조건이 만족된다고 가정하고, 임의의 열린집합 $U$를 택하자. 그럼 $x\in U$에 대해, 3번 조건에 의해 $x\in B\_x\subseteq U$를 만족하는 $B\_x\in\mathcal{B}$가 존재한다. 이제 $U=\bigcup\_{x\in U} B\_x$이므로, 증명 끝.  
 
 </details>
 
-따라서, 집합 $X$와 위 명제의 세 가지 조건을 만족하는 $X$의 부분집합들의 모임 $\mathcal{B}$가 주어졌을 때, 이 집합 $X$ 위에 $\mathcal{B}$를 basis로 갖는 새로운 위상 $\mathcal{T}$를 정의할 수 있다. 물론 앞선 명제는 위상공간의 구조가 주어졌다는 것이 가정이었으므로, 다음과 같이 추가적인 논증이 필요하다.
+위의 명제로부터 다음과 같은 질문이 자연스럽게 따라온다.
+
+> 임의의 <em_ko>집합</em_ko> $X$ 위에 앞선 조건들을 만족하는 $\mathcal{P}(X)$의 부분집합 $\mathcal{B}$가 주어졌다 하자. 그럼 $X$ 위에 위상 $\mathcal{T}$를 부여하여, $(X,\mathcal{T})$를 basis $\mathcal{B}$를 갖는 위상공간으로 생각할 수 있는가?
+
+이 질문에 답하기 전에, [명제 2](#pp2)의 세 가지 조건 중 마지막 조건은 $\mathcal{T}$의 원소 $U$에 대한 조건이므로 $X$가 위상공간임을 이미 전제하고 있다는 것을 기억하자. 어쨌든 이 세 조건을 적절히 수정해주면 위의 질문에 대한 답은 가능하다는 것이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem3">**보조정리 3**</ins> 집합 $X$에 대하여, $X$의 부분집합의 family $\mathcal{B}$가 앞선 명제의 1번과 2번 조건을 만족한다고 하자. 그럼, $\mathcal{T}$를 *3번 조건을 만족하는 모든 부분집합 $U$들의 모임*으로 정의한다면, $\mathcal{T}$는 $X$ 위에 위상공간 구조를 준다. 
+<ins id="lem3">**보조정리 3**</ins> 집합 $X$에 대하여, $X$의 부분집합의 family $\mathcal{B}$가 앞선 명제의 1번과 2번 조건을 만족한다고 하자. $\mathcal{T}$를 다음의 명제
+
+> 임의의 $x\in U$마다 적절한 $B\in\mathcal{B}$가 존재하여 $x\in B\subseteq U$이도록 할 수 있다.
+
+를 만족하는 모든 $U$들의 모임으로 정의한다면, $\mathcal{T}$는 $X$ 위에 위상공간 구조를 준다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선, $X$ 자기 자신은 $\mathcal{T}$의 원소이다. $X$에 적용되는 3번 조건은 정확하게 $\mathcal{B}$가 만족해야 할 1번 조건이기 때문이다. 또, 
+- 우선, $X$ 자기 자신은 $\mathcal{T}$의 원소이다. 첫 번째 조건에 의하여 임의의 $x\in X$마다 적당한 $B\in\mathcal{B}$가 존재하여 $x\in B$이도록 할 수 있는데, 이것이 정확히 $U=X$가 주어진 조건을 만족한다는 의미이다. 또 $\emptyset\in\mathcal{T}$가 vacuous하게 성립한다.
 
-$$\emptyset=\bigcup_{i\in\emptyset}B_i$$
+이제 $(U\_i)\_{i\in I}$가 $\mathcal{T}$의 원소들의 family라 하자. 
 
-이므로 $\emptyset\in\mathcal{T}$도 성립한다. 
+- $U=\bigcup\_{i\in I} U\_i$도 $\mathcal{T}$에 속한다. $U$의 임의의 원소 $x$를 택하면 이를 포함하는 $U\_i$가 존재하며, 따라서 $U_i\in\mathcal{T}$로부터 $x\in B\_i\subseteq U\_i$를 만족하는 $B\_i\in\mathcal{B}$가 존재하기 때문이다. 이러한 $B\_i$에 대하여
 
-이제 $(U\_i)\_{i\in I}$가 $\mathcal{T}$의 원소들의 family라 하자. 우리는 $\bigcup\_{i\in I} U\_i$도 $\mathcal{T}$의 원소임을 보여야 한다. 그런데 이는 자명한 것이, 임의의 $x\in \bigcup U\_i$에 대하여, $x$를 포함하는 $U\_i$를 하나 택하면, $x\in B\_i\subset U\_i$를 만족하는 $\mathcal{B}$의 원소 $B\_i$가 $\mathcal{T}$의 조건을 만족하므로 $\bigcup U\_i$ 또한 $\mathcal{T}$의 원소가 된다.
+    $$x\in B_i\subseteq U_i\subseteq U$$
 
-마지막으로, $(U\_i)\_{i\in I}$가 $\mathcal{T}$의 원소들의 *유한한* family라 하자. $\bigcap\_{i\in I} U\_i$가 $\mathcal{T}$의 원소임을 보여야 한다. 만일 이 집합이 공집합이라면 더 이상 보일 것이 없으므로, $x\in\bigcap\_{i\in I} U\_i$라 하자. 우리는 어떤 $B\in\mathcal{B}$가 존재하여 $x\in B\subset\bigcap U\_i$임을 보여야 한다. $\mathcal{T}$의 정의에 의하여, 각각의 $i$마다 $B\_i\in\mathcal{B}$가 존재하여 $x\in B\_i\subset U\_i$가 성립한다. 이제 임의의 $i,j\in I$에 대해, $x\in B\_i\cap B\_j\subset U\_i\cap U\_j$인데, 2번 조건에 의하여 $x\in B\_{ij}\subset B\_i\cap B\_j$를 만족하는 $B\_{ij}\in\mathcal{B}$가 존재한다. 마찬가지로, 또 다른 $k\in I$에 대하여 $x\in B\_{ij}\cap B\_k$이므로, 다시 어떤 $B\_{ijk}\in\mathcal{B}$가 존재하여 $x\in B\_{ij}\cap B\_k$이고, ... 이 과정을 *유한번* 반복하면 (즉 귀납법을 사용하면) 우리는 $\bigcap U\_i$에 포함된 $\mathcal{B}$의 원소 하나를 얻게 된다.    
+    가 성립하고 따라서 $U$는 $\mathcal{T}$의 원소이다.
+- $I$가 유한집합이라 가정하자. 그럼 $U'=\bigcap\_{i\in I} U\_i$가 $\mathcal{T}$의 원소이다. $U'=\emptyset$이라면 더 이상 보일 것이 없으므로, $x\in U'$라 하자. 그럼 $x\in U\_i$가 모든 $i$에 대해 성립하고, 따라서 각각의 $i$마다 다음 조건
+    
+    $$x\in B_i\subseteq U_i$$
+
+    을 만족하는 $B\_i\in\mathcal{B}$가 존재한다. 이제 임의의 $i,j\in I$에 대하여 $x\in B\_i$, $x\in B\_j$가 성립하므로, $\mathcal{B}$의 두 번째 조건에 의하여
+
+    $$x\in B_{ij}\subseteq B_i\cap B_j$$
+
+    를 만족하는 $B\_{ij}\in\mathcal{B}$가 존재하고 $B\_{ij}$는 $B\_{ij}\subseteq U_i\cap U_j$를 만족한다. 마찬가지로 또 다른 $k$에 대하여 $x\in B\_k$, $x\in B\_{ij}$가 성립하므로
+
+    $$x\in B_{ijk}\subseteq B_{ij}\cap B_k$$    
+
+    를 만족하는 $B\_{ijk}$가 존재하고 $B\_{ijk}\subseteq U\_i\cap U\_j\cap U\_k$이다. $I$는 유한집합임을 가정하였으므로, 이를 귀납적으로 반복하면 $x\in B'\subseteq U'$를 만족하는 $\mathcal{B}$의 원소 $B'$를 얻는다.
 
 </details>
 
@@ -80,7 +99,7 @@ $$\emptyset=\bigcup_{i\in\emptyset}B_i$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 위상공간 $(X,\mathcal{T})$의 *subbasis<sub>부분기저</sub>* $\mathcal{S}$는 임의의 $U\in\mathcal{T}$에 대하여, $S\subset U$인 $S\in\mathcal{S}$가 존재하는 $X$의 open covering을 의미한다.
+<ins id="df4">**정의 4**</ins> 위상공간 $(X,\mathcal{T})$의 *subbasis<sub>부분기저</sub>* $\mathcal{S}$는 임의의 $U\in\mathcal{T}$에 대하여, $S\subseteq U$인 $S\in\mathcal{S}$가 존재하는 $X$의 open covering을 의미한다.
 
 </div>
 
@@ -103,7 +122,7 @@ $$\mathcal{B}=\{(a,b)\subset\mathbb{R}:a<b\}$$
 
 이 정의로부터 *반직선들*, 예컨대 $(-\infty, a)$가 열린집합임을 쉽게 확인할 수 있다.
 
-$$(-\infty, a)=\bigcup_{n<a;n\in\mathbb{Z}} (n, a)$$
+$$(-\infty, a)=\bigcup_{x<a} (x, a)$$
 
 이기 때문이다. 이와 비슷하게 $(b,\infty)$ 또한 열린집합이며, 따라서 $[a,b]$는 
 
@@ -146,7 +165,7 @@ $$K=\{1/n:n\in\mathbb{N}^{>0}\}$$
 
 우선 $\mathcal{T}\subset\mathcal{T}'$라 하자. 즉, $\mathcal{T}'$가 $\mathcal{T}$보다 강하다. 임의로 주어진 $B\in\mathcal{T}$와 $x\in B$에 대하여, $B$가 $\mathcal{T}'$에서 열린집합이기 위해서는 $x$를 포함하고 $B$에 포함된 $\mathcal{B}'$의 원소 $B'$가 존재해야 하는데 ([명제 2](#pp2)), 이것이 정확히 주어진 조건이다.
 
-거꾸로 주어진 조건이 성립한다 하고, 임의의 $U\in\mathcal{T}$는 $\mathcal{T}'$의 원소이기도 하다는 것을 보이자. 이는 임의의 $x\in U$에 대하여, $U$에 포함되고 $x$를 포함하는 $\mathcal{B}'$의 원소 $B'$가 존재한다는 것을 보이는 것과 같다. 그런데, $U$는 $\mathcal{T}$에서 열린집합이므로 $x\in B\subset U$를 만족하는 $B\in\mathcal{T}$가 존재하고, 주어진 조건에 의하여 $x\in B'\subset B$를 만족하는 $B'\in\mathcal{T}$가 존재하므로 정확히 이 $B'$가 이를 만족한다.
+거꾸로 주어진 조건이 성립한다 하고, 임의의 $U\in\mathcal{T}$는 $\mathcal{T}'$의 원소이기도 하다는 것을 보이자. 이는 임의의 $x\in U$에 대하여, $U$에 포함되고 $x$를 포함하는 $\mathcal{B}'$의 원소 $B'$가 존재한다는 것을 보이는 것과 같다. 그런데, $U$는 $\mathcal{T}$에서 열린집합이므로 $x\in B\subseteq U$를 만족하는 $B\in\mathcal{T}$가 존재하고, 주어진 조건에 의하여 $x\in B'\subseteq B$를 만족하는 $B'\in\mathcal{T}$가 존재하므로 정확히 이 $B'$가 이를 만족한다.
 </details>
 
 이 보조정리와 함께라면 앞선 명제를 쉽게 보일 수 있다. 
@@ -154,7 +173,7 @@ $$K=\{1/n:n\in\mathbb{N}^{>0}\}$$
 <details class="proof--alone" markdown="1">
 <summary>명제 7의 증명</summary>
 우선, $\mathbb{R}\_l$은 $\mathbb{R}$보다 강하다. $\mathbb{R}$의 basis의 원소 $(a,b)$를 택하자. 그럼 임의의 $x\in (a,b)$에 대하여, $[x,b)$가 $(a,b)$에 포함되고 $x$를 포함하는 $\mathcal{B}\_l$의 원소이다.  
-그러나 그 역은 성립하지 않는다. 만일 $\mathbb{R}$이 $\mathbb{R}\_l$보다 강하다면, $\mathbb{R}\_l$의 basis의 원소 $[a,b)$와 $x\in [a,b)$에 대하여, $x$를 포함하고 $[a,b)$에 속하는 $\mathcal{B}$의 원소 $(c,d)$가 존재해야 한다. 그런데 $x=a$로 두면 이러한 원소는 존재할 수 없다. $a\in (c,d)$이기 위해서는 $c<a$여야 하는데, 이것이 만족되는 순간 $(c,d)\not\subset [a,b)$이기 때문이다. 
+그러나 그 역은 성립하지 않는다. 만일 $\mathbb{R}$이 $\mathbb{R}\_l$보다 강하다면, $\mathbb{R}\_l$의 basis의 원소 $[a,b)$와 $x\in [a,b)$에 대하여, $x$를 포함하고 $[a,b)$에 속하는 $\mathcal{B}$의 원소 $(c,d)$가 존재해야 한다. 그런데 $x=a$로 두면 이러한 원소는 존재할 수 없다. $a\in (c,d)$이기 위해서는 $c<a$여야 하는데, 이것이 만족되는 순간 $(c,d)\not\subseteq [a,b)$이기 때문이다. 
 
 한편, 정의에 의해 $\mathbb{R}\_K$가 $\mathbb{R}$보다 강한 것은 자명하므로, 이 반대가 성립하지 않는다는 것만 보이면 된다. $\mathcal{B}\_K$의 원소 $(-1,1)\setminus K$를 생각하자. 그럼 $0\in(-1,1)\setminus K$이다.  
 그러나, $0$을 포함하며 $(-1,1)\setminus K$에 포함되는 $\mathcal{B}$의 원소 $(c,d)$는 존재하지 않는다. $0\in (c,d)$이기 위해서는 $0<d$여야 하는데, $n$을 충분히 크게 잡으면 $1/n<d$이도록 할 수 있으므로, 이러한 $n$에 대하여 $1/n\not\in (-1,1)\setminus K$이지만 $1/n\in (c,d)$이기 때문이다.

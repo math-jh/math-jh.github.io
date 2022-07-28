@@ -25,13 +25,13 @@ weight: 7
 
 1. $F$가 *immersion<sub>몰입</sub>*이라는 것은 모든 $p\in M$에 대하여 $dF_p$가 injective인 것이고, 비슷하게 $F$가 *submersion<sub>침몰</sub>*이라는 것은 모든 $p\in M$에 대하여 $dF_p$가 surjective인 것이다.
 2. 만일 $F:M\rightarrow N$이 immersion인 동시에 injection이기도 하다면, $F$를 $N$의 *submanifold<sub>부분다양체</sub>*라 한다.
-3. 만일 $F:M\rightarrow N$가 $N$의 submanifold일 뿐만 아니라 $M$과, subspace topology가 주어진 $F(M)\subset N$ 사이의 homeomorphism이기도 하다면 $F$를 *embedding<sub>매장</sub>*, 혹은 2번의 정의와 맞추어 *embedded submanifold*라 부른다.
+3. 만일 $F:M\rightarrow N$가 $N$의 submanifold일 뿐만 아니라 $M$과, subspace topology가 주어진 $F(M)\subseteq N$ 사이의 homeomorphism이기도 하다면 $F$를 *embedding<sub>매장</sub>*, 혹은 2번의 정의와 맞추어 *embedded submanifold*라 부른다.
 
 </div>
 
 3번의 embedded submanifold와 더 명확하게 구별하기 위해 2번을 *immersed submanifold*라 부르기도 한다. 우리는 위의 정의 그대로, 수식어 없는 submanifold를 immersed manifold의 뜻으로 사용하고, embedded submanifold는 축약하지 않고 그대로 사용한다.
 
-함수 $F:M\rightarrow N$이 submanifold라는 것은 직관적으로 $F$가 inclusion $M\hookrightarrow N$의 역할을 하는 것으로 생각할 수 있다. 이 때, $F$의 image $F(M)\subset N$에 위상구조를 주는 방법은 두 가지가 있는데, 하나는 bijection $F:M\rightarrow F(M)$을 통해 $M$의 위상 옮겨오는 것이고, 다른 하나는 $N$에 주어진 위상구조를 subspace topology를 통해 가져오는 것이다. 만일 이 두 위상이 서로 동일하다면 $F$를 *embedded* submanifold라 부르는 것이고, 그렇지 않다면 이를 단순히 submanifold라 부른다.
+함수 $F:M\rightarrow N$이 submanifold라는 것은 직관적으로 $F$가 inclusion $M\hookrightarrow N$의 역할을 하는 것으로 생각할 수 있다. 이 때, $F$의 image $F(M)\subseteq N$에 위상구조를 주는 방법은 두 가지가 있는데, 하나는 bijection $F:M\rightarrow F(M)$을 통해 $M$의 위상 옮겨오는 것이고, 다른 하나는 $N$에 주어진 위상구조를 subspace topology를 통해 가져오는 것이다. 만일 이 두 위상이 서로 동일하다면 $F$를 *embedded* submanifold라 부르는 것이고, 그렇지 않다면 이를 단순히 submanifold라 부른다.
 
 ![Immersion, submanifold, immersion](/assets/images/Manifold/Submanifolds-1.png){:width="500px" class="invert" .align-center}
 
@@ -48,7 +48,7 @@ weight: 7
 
 <ins id="ex3">**예시 3**</ins> 두 manifold $M,N$과 그 product $M\times N$을 생각하자. 그럼 임의의 $q\in N$에 대하여, 부분집합 $M\times\\{q\\}$은 $M$과 diffeomorphic한 $M\times N$의 embedded submanifold이고, 비슷하게 임의의 $p\in M$에 대하여 부분집합 $\\{p\\}\times N$은 $N$과 diffeomorphic한 embedded submanifold이며, 이 때의 embedding은 각각 $x\mapsto (x,q)$와 $y\mapsto (p,y)$으로 주어진다.
 
-더 일반적으로 두 manifold $M,N$과, open submanifold $U\subset M$에서 정의된 $C^\infty$ 함수 $f:U\rightarrow N$이 주어졌다 하자. 그럼 $f$의 그래프
+더 일반적으로 두 manifold $M,N$과, open submanifold $U\subseteq M$에서 정의된 $C^\infty$ 함수 $f:U\rightarrow N$이 주어졌다 하자. 그럼 $f$의 그래프
 
 $$\Gamma(f)=\{(x,y)\in M\times N: x\in U, y=f(x)\}$$
 
@@ -66,7 +66,7 @@ $$\Gamma(f)=\{(x,y)\in M\times N: x\in U, y=f(x)\}$$
 
 $$\begin{pmatrix}\partial(r^1\circ f)/\partial r^1&\partial(r^1\circ f)/\partial r^2&\cdots&\partial(r^1\circ f)/\partial r^m\\\partial(r^2\circ f)/\partial r^1&\partial(r^2\circ f)/\partial r^2&\cdots&\partial(r^2\circ f)/\partial r^m\\\vdots&\vdots&\ddots&\vdots\\\partial(r^m\circ f)/\partial r^1&\partial(r^m\circ f)/\partial r^2&\cdots&\partial(r^m\circ f)/\partial r^m\end{pmatrix}$$
 
-가 nonsingular라면, $p_0\in V\subset U$를 만족하는 적당한 열린집합 $V$가 존재하여 $f\|\_V$가 $V$와 $f(V)$ 사이의 diffeomorphism을 정의한다.
+가 nonsingular라면, $p_0\in V\subseteq U$를 만족하는 적당한 열린집합 $V$가 존재하여 $f\|\_V$가 $V$와 $f(V)$ 사이의 diffeomorphism을 정의한다.
 
 </div>
 
@@ -74,13 +74,13 @@ $$\begin{pmatrix}\partial(r^1\circ f)/\partial r^1&\partial(r^1\circ f)/\partial
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> $F:M\rightarrow N$이 manifold들 사이의 $C^\infty$ 함수이고 $p\in M$이라 하자. 만일 $dF_p:T_pM\rightarrow T_{F(p)}N$이 isomorphism이라면 적당한 열린집합 $U\subset M$이 존재하여, $p\in U$이고 $F\|\_U:U\rightarrow F(U)$가 $U$와 $F(U)$ 사이의 diffeomorphism을 정의한다.
+<ins id="crl5">**따름정리 5**</ins> $F:M\rightarrow N$이 manifold들 사이의 $C^\infty$ 함수이고 $p\in M$이라 하자. 만일 $dF_p:T_pM\rightarrow T_{F(p)}N$이 isomorphism이라면 적당한 열린집합 $U\subseteq M$이 존재하여, $p\in U$이고 $F\|\_U:U\rightarrow F(U)$가 $U$와 $F(U)$ 사이의 diffeomorphism을 정의한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $dF_p$가 isomorphism인 것으로부터 $\dim M=\dim T_pM=\dim T_{F(p)}N=\dim N$을 얻는다. 이제 점 $F(p)$를 포함하는 coordinate system $(W,\tau)$를 잡고, $F(V)\subset W$를 만족하도록 $p$를 포함하는 coordinate system $(V,\varphi)$를 잡자. 그럼 함수 $(\tau\circ F\circ\varphi^{-1})\|\_{\varphi(V)}$는 같은 차원을 갖는 유클리드 공간 사이의 함수이며, 또 $dF_p$가 isomorphism인 것으로부터 이 함수의 점 $\varphi(p)$에서의 Jacobian matrix가 nonsingular라는 것을 안다. 
+우선 $dF_p$가 isomorphism인 것으로부터 $\dim M=\dim T_pM=\dim T_{F(p)}N=\dim N$을 얻는다. 이제 점 $F(p)$를 포함하는 coordinate system $(W,\tau)$를 잡고, $F(V)\subseteq W$를 만족하도록 $p$를 포함하는 coordinate system $(V,\varphi)$를 잡자. 그럼 함수 $(\tau\circ F\circ\varphi^{-1})\|\_{\varphi(V)}$는 같은 차원을 갖는 유클리드 공간 사이의 함수이며, 또 $dF_p$가 isomorphism인 것으로부터 이 함수의 점 $\varphi(p)$에서의 Jacobian matrix가 nonsingular라는 것을 안다. 
 
 따라서 역함수정리에 의해, $\varphi(p)\in U'\subset\varphi(V)$를 만족하는 열린집합 $U'$가 존재하여 $(\tau\circ F\circ\varphi^{-1})\|\_{U'}$이 $U'$와 $\tau\circ F\circ\varphi^{-1}(U')$ 사이의 diffeomorphism을 정의한다. 이제 $U=\varphi^{-1}(U)$로 잡으면 함수
 
@@ -110,7 +110,7 @@ $$\varphi(p)=(y^1(p),\ldots, y^m(p))$$
 
 $$d\varphi_{p_0}\left(dr^i|_{\varphi(p_0)}\right)=\left(dr^i|_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i|_{p_0}$$
 
-이므로, $T_{\varphi(p_0)}^\ast\mathbb{R}^m$에서의 basis $dr^i\|\_{\varphi(p_0)}$들이 모두 $T_{p_0}^\ast M$의 basis로 각각 옮겨지고 따라서 $(d\varphi_{p_0})^\ast$는 isomorphism이다. 따라서 $d\varphi_{p_0}$도 isomorphism이며, 따라서 [따름정리 5](#crl5)를 적용하면 $p_0\in V\subset U$를 만족하는 적당한 $V$가 존재하여 $\varphi\|\_V:V\rightarrow\varphi(V)$가 coordinate system이 된다는 것을 알 수 있다.
+이므로, $T_{\varphi(p_0)}^\ast\mathbb{R}^m$에서의 basis $dr^i\|\_{\varphi(p_0)}$들이 모두 $T_{p_0}^\ast M$의 basis로 각각 옮겨지고 따라서 $(d\varphi_{p_0})^\ast$는 isomorphism이다. 따라서 $d\varphi_{p_0}$도 isomorphism이며, 따라서 [따름정리 5](#crl5)를 적용하면 $p_0\in V\subseteq U$를 만족하는 적당한 $V$가 존재하여 $\varphi\|\_V:V\rightarrow\varphi(V)$가 coordinate system이 된다는 것을 알 수 있다.
 
 </details>
 

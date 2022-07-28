@@ -28,15 +28,15 @@ ZFC 공리계는 [앞선 글](/ko/math/set_theory/zfc_axioms)에서 소개한 �
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $A\subset B$라는 것은 임의의 $x$에 대하여, 명제 $x\in A\implies x\in B$이 항상 참인 것이다. 
+<ins id="df1">**정의 1**</ins> $A\subseteq B$라는 것은 임의의 $x$에 대하여, 명제 $x\in A\implies x\in B$이 항상 참인 것이다. 
 
 </div>
 
-다음의 두 명제들은 $\subset$의 두 성질들이다. (참고: [§순서관계 (1), 정의 1](/ko/math/set_theory/order_relations_1#df1))
+다음의 두 명제들은 $\subset$의 두 성질들이다. (참고: [§순서관계 (1), 정의 1](/ko/math/set_theory/order_relations#df1))
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $A\subset A$가 항상 성립한다.
+<ins id="pp2">**명제 2**</ins> $A\subseteq A$가 항상 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -48,13 +48,13 @@ $x\in A\implies x\in A$가 항상 참이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> $A\subset B$이고 $B\subset C$이면 $A\subset C$이다.
+<ins id="pp3">**명제 3**</ins> $A\subseteq B$이고 $B\subseteq C$이면 $A\subseteq C$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 전제는 임의의 $x$에 대하여 두 명제 $x\in A\implies x\in B$와 $x\in B\implies x\in C$가 참이라는 것을 뜻한다. 따라서 삼단논법에 의해 $x\in A\implies x\in C$도 참이고, $x$는 임의로 택할 수 있으므로 $A\subset C$가 성립한다. 
+우선 전제는 임의의 $x$에 대하여 두 명제 $x\in A\implies x\in B$와 $x\in B\implies x\in C$가 참이라는 것을 뜻한다. 따라서 삼단논법에 의해 $x\in A\implies x\in C$도 참이고, $x$는 임의로 택할 수 있으므로 $A\subseteq C$가 성립한다. 
 
 </details>
 
@@ -166,27 +166,27 @@ $$\{z:(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 두 곱집합 $A\times B$와 $A'\times B'$가 동일해질 조건을 알기 위해서는 하나의 곱집합이 다른 곱집합에 언제 <em_ko>포함되는지</em_ko>만 확실하게 결정해주면 된다. 이를 알면 우리는 두 명제
 
-$$A\times B\subset A'\times B',\qquad A'\times B'\subset A\times B$$
+$$A\times B\subseteq A'\times B',\qquad A'\times B'\subseteq A\times B$$
 
 가 각각 언제 성립하는지를 알기 때문이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> 공집합이 아닌 두 집합 $A'$, $B'$에 대하여, <phrase>$A'\times B'\subset A\times B$인 것</phrase>과 <phrase>$A'\subset A$이고 $B'\subset B$인 것</phrase>이 동치이다.
+<ins id="pp9">**명제 9**</ins> 공집합이 아닌 두 집합 $A'$, $B'$에 대하여, <phrase>$A'\times B'\subseteq A\times B$인 것</phrase>과 <phrase>$A'\subseteq A$이고 $B'\subseteq B$인 것</phrase>이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-먼저, $A'\times B'\subset A\times B$라 가정하자. $A'\subset A$를 보여야 하므로, 임의의 $a'\in A'$가 주어졌다 하고 $a'\in A$임을 보이자.  
-$B'$는 공집합이 아니므로, 어떤 원소 $b'\in B'$가 존재한다. 따라서 $(a',b')\in A'\times B'$이고, 이제 $A'\times B'\subset A\times B$이므로 $(a',b')\in A\times B$이고 $a'\in A$이다. 이와 비슷하게 $B'\subset B$도 보일 수 있다.
+먼저, $A'\times B'\subseteq A\times B$라 가정하자. $A'\subseteq A$를 보여야 하므로, 임의의 $a'\in A'$가 주어졌다 하고 $a'\in A$임을 보이자.  
+$B'$는 공집합이 아니므로, 어떤 원소 $b'\in B'$가 존재한다. 따라서 $(a',b')\in A'\times B'$이고, 이제 $A'\times B'\subseteq A\times B$이므로 $(a',b')\in A\times B$이고 $a'\in A$이다. 이와 비슷하게 $B'\subseteq B$도 보일 수 있다.
 
-반대로 $A'\subset A$이고 $B'\subset B$라 하자. 임의의 $z'\in A'\times B'$가 주어졌을 때 $z'\in A\times B$임을 보여야 한다.  
+반대로 $A'\subseteq A$이고 $B'\subseteq B$라 하자. 임의의 $z'\in A'\times B'$가 주어졌을 때 $z'\in A\times B$임을 보여야 한다.  
 $z'=(a',b')$이라 하자. 즉 $a'\in A'$, $b'\in B'$인데, 가정에 의해 $a'$와 $b'$는 $A$와 $B$의 원소이기도 하므로 $(a,b)\in A\times B$이다.
 
 </details>
 
-이 증명에서, 예를 들어 만일 $B'$가 공집합이었다면 $A'\times B'\subset A\times B$로부터 $A'\subset A$를 보일 때 어떤 원소 $b'\in B'$를 뽑아올 수 없으므로 이 증명을 사용할 수 없다. 따라서 $A',B'$가 공집합이라는 가정이 필수적이다. 둘 중 하나가 공집합일 때는 다음 명제가 해결해준다.
+이 증명에서, 예를 들어 만일 $B'$가 공집합이었다면 $A'\times B'\subseteq A\times B$로부터 $A'\subseteq A$를 보일 때 어떤 원소 $b'\in B'$를 뽑아올 수 없으므로 이 증명을 사용할 수 없다. 따라서 $A',B'$가 공집합이라는 가정이 필수적이다. 둘 중 하나가 공집합일 때는 다음 명제가 해결해준다.
 
 <div class="proposition" markdown="1">
 

@@ -161,7 +161,7 @@ There are more ZFC axioms, but we end this article by introducing the axiom of p
 
 <div class="misc" markdown="1">
 
-**The axiom of power set.** For any set $S$, there exists a set $\mathcal{P}$ such that $X\in \mathcal{P}$ iff $X\subset S$.
+**The axiom of power set.** For any set $S$, there exists a set $\mathcal{P}$ such that $X\in \mathcal{P}$ iff $X\subseteq S$.
 
 </div>
 
