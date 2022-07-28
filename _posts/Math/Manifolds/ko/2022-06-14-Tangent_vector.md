@@ -45,7 +45,7 @@ $$\lim_{t\rightarrow 0}\frac{f(p+tv)-f(p)}{t}$$
 
 어쨌든 germ이라는 것은 적당한 equivalence relation의 equivalence class이고, 이 equivalence relation은 점 $p$의 어떤 근방에서 일치하는 두 함수를 같게 보는 relation이다. **[War]**를 따라 주어진 함수 $f$에 대하여[^1], 잠시동안 $f$의 germ을 $\mathbf{f}$로 표기하기로 하자. 이 표기법은 썩 좋은 표기법은 아니지만, 어차피 접벡터를 엄밀하게 정의한 이후에는 이를 잘 사용하지 않을 것이다.
 
-조금 더 고상한 표현을 빌리자면, $C^\infty(U)$를 열린집합 $U$ 위에서 정의된 $C^\infty$ 함수들의 모임, 그리고 $U\subset V$일 때마다 함수 $\operatorname{res}_{UV}:C^\infty(U)\rightarrow C^\infty(V)$를 
+조금 더 고상한 표현을 빌리자면, $C^\infty(U)$를 열린집합 $U$ 위에서 정의된 $C^\infty$ 함수들의 모임, 그리고 $U\subseteq V$일 때마다 함수 $\operatorname{res}_{UV}:C^\infty(U)\rightarrow C^\infty(V)$를 
 
 $$\operatorname{res}_{UV}:f\mapsto f|_V$$
 
