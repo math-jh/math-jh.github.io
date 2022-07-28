@@ -136,7 +136,7 @@ $$h(U)=p(\pi^{-1}(U))$$
 
 어떤 quotient map $p:X\rightarrow Y$에 대하여, $A$가 집합 $X$의 subspace라 하자. $p$에 의해 정의된 equivalence relation을 $R$이라 한다면, relation $R$을 $A\times A$ 위로 제한한 relation, 즉 $R\cap (A\times A)$ 또한 $A$ 위에서의 equivalence relation이고, 따라서 우리는 $A$ 위에서 이 equivalence relation을 이용해 quotient space를 만들어 볼 수 있다.  
 
-우선 $f$를 $A$로 제한한 함수 $p\|\_A$를 생각하면, $p\|\_A:A\rightarrow p(A)$는 surjection이다. 또, $p\|\_A$는 연속함수를 제한하여 얻어졌으므로 연속이다. 그러나 $p\|\_A$가 saturated인 열린집합을 열린집합으로 보내는지는 확실하지 않다. 이는 $A$에서 $R\cap (A\times A)$에 대해 saturated인 집합이 $X$에서는 saturated가 아닐 수도 있기 때문이다. 즉, $R\cap(A\times A)$에서 $x\in A$와 equivalent한 원소들은 모두 $A$의 원소들이고, 이 때 $x$와 equivalent한 원소들 중 $A$ 바깥에 있는 원소들이 빠져있으므로 어떤 집합 $U\subset A$가 $A$에서 saturated라 하더라도, $X$에서는 saturated가 아닐 수 있으므로, $p\|\_A(U)$가 열린집합일 필요가 없다.
+우선 $f$를 $A$로 제한한 함수 $p\|\_A$를 생각하면, $p\|\_A:A\rightarrow p(A)$는 surjection이다. 또, $p\|\_A$는 연속함수를 제한하여 얻어졌으므로 연속이다. 그러나 $p\|\_A$가 saturated인 열린집합을 열린집합으로 보내는지는 확실하지 않다. 이는 $A$에서 $R\cap (A\times A)$에 대해 saturated인 집합이 $X$에서는 saturated가 아닐 수도 있기 때문이다. 즉, $R\cap(A\times A)$에서 $x\in A$와 equivalent한 원소들은 모두 $A$의 원소들이고, 이 때 $x$와 equivalent한 원소들 중 $A$ 바깥에 있는 원소들이 빠져있으므로 어떤 집합 $U\subseteq A$가 $A$에서 saturated라 하더라도, $X$에서는 saturated가 아닐 수 있으므로, $p\|\_A(U)$가 열린집합일 필요가 없다.
 
 <div class="example" markdown="1">
 
@@ -170,13 +170,13 @@ $$f(x)=\left\{\begin{array}{l l}1&x=1,3\\0&x=2\end{array}\right.$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-먼저, $A$는 saturated인 부분집합이므로 $p^{-1}(p(A))=A$이고, 따라서 $U\subset p(A)$에 대하여 $p^{-1}(U)\subset p^{-1}(p(A))=A$이다. 그러므로 $U\subset p(A)$인 집합 $U$에 대해서는
+먼저, $A$는 saturated인 부분집합이므로 $p^{-1}(p(A))=A$이고, 따라서 $U\subseteq p(A)$에 대하여 $p^{-1}(U)\subseteq p^{-1}(p(A))=A$이다. 그러므로 $U\subseteq p(A)$인 집합 $U$에 대해서는
 
 $$(p|_A)^{-1}(U)=p^{-1}(U)$$
 
 가 성립한다.  
 
-또, 임의의 부분집합 $V\subset X$에 대하여 $p(V\cap A)=p(V)\cap p(A)$가 성립한다. $p(V\cap A)\subset p(V)\cap p(A)$는 일반적으로 성립하며, $y\in p(V)\cap p(A)$라면 $p^{-1}(\left\\{y\right\\})\subset p^{-1}(p(A))=A$이고, 따라서 $p(x)=y$를 만족하는 모든 $x\in X$는 $A$의 원소이므로, 특히 $y\in p(V)$에서 얻어지는 $p(v)=y$를 만족하는 $v\in V$도 $A$의 원소여야 하므로 $v\in A\cap V$이고 $p(v)=y\in p(V\cap A)$이다.
+또, 임의의 부분집합 $V\subseteq X$에 대하여 $p(V\cap A)=p(V)\cap p(A)$가 성립한다. $p(V\cap A)\subseteq p(V)\cap p(A)$는 일반적으로 성립하며, $y\in p(V)\cap p(A)$라면 $p^{-1}(\left\\{y\right\\})\subseteq p^{-1}(p(A))=A$이고, 따라서 $p(x)=y$를 만족하는 모든 $x\in X$는 $A$의 원소이므로, 특히 $y\in p(V)$에서 얻어지는 $p(v)=y$를 만족하는 $v\in V$도 $A$의 원소여야 하므로 $v\in A\cap V$이고 $p(v)=y\in p(V\cap A)$이다.
 
 이제 주어진 명제들을 보이자. 이를 위해서, 우리는 $A$에서의 saturated인 열린집합을 하나 가져온 다음, 이 집합의 image가 $p(A)$ 상에서 열린집합이 됨을 보여야 한다. $A$에서의 saturated인 부분집합의 형태는 항상 $p^{-1}(V)$의 형태이므로, 우리는 $(p\|\_A)^{-1}(V)$이 $A$에서 열린집합이라면 $V$가 $p(A)$에서 열린집합임만 보이면 된다. 만일 $A$가 열린집합이고 $(p\|\_A)^{-1}(V)$가 $A$에서 열린집합이라면, 이 집합은 $X$에서도 열린집합이다. 한편, $(p\|\_A)^{-1}(V)=p^{-1}(V)$이므로, 다음의 집합
 
@@ -204,7 +204,7 @@ $$V=p(p^{-1}(V))=p(U\cap A)=p(U)\cap p(A)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-앞서 적은 것과 같이, [집합론, §함수 (2), 명제 4](/ko/math/set_theory/functions_2#pp4)에 의해 $f$가 잘 정의된다. 한편, 만일 $f$가 연속이라면, 두 연속함수들의 합성 $f\circ p=g$가 연속임은 자명하다. 이제 $g$가 연속이라 가정하자. 그럼 임의의 $V\subset Z$에 대하여, $V$가 열린집합이라면 $g^{-1}(V)$ 또한 열린집합이다. 그런데 
+앞서 적은 것과 같이, [집합론, §함수 (2), 명제 4](/ko/math/set_theory/functions_2#pp4)에 의해 $f$가 잘 정의된다. 한편, 만일 $f$가 연속이라면, 두 연속함수들의 합성 $f\circ p=g$가 연속임은 자명하다. 이제 $g$가 연속이라 가정하자. 그럼 임의의 $V\subseteq Z$에 대하여, $V$가 열린집합이라면 $g^{-1}(V)$ 또한 열린집합이다. 그런데 
 
 $$g^{-1}(V)=(f\circ p)^{-1}(V)=p^{-1}(f^{-1}(V))$$
 

@@ -23,34 +23,34 @@ weight: 13
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $I$가 preordered set이고, family $(E_i)\_{i\in I}$가 주어졌다 하자. 여기에 추가적으로 $i\leq j$를 만족하는 쌍 $(i,j)$마다 함수 $f\_{ij}:E\_j\rightarrow E\_i$가 정의되어, 다음의 두 조건
+<ins id="df1">**정의 1**</ins> $I$가 preordered set이고, family $(A_i)\_{i\in I}$가 주어졌다 하자. 여기에 추가적으로 $i\leq j$를 만족하는 쌍 $(i,j)$마다 함수 $f\_{ij}:A\_j\rightarrow A\_i$가 정의되어, 다음의 두 조건
 
 1. $i\leq j\leq k$이면 $f\_{ik}=f\_{ij}\circ f\_{jk}$,
-2. 각각의 $i\in I$마다 $f\_{ii}=\operatorname{id}\_{E\_i}$
+2. 각각의 $i\in I$마다 $f\_{ii}=\operatorname{id}\_{A\_i}$
 
-을 만족한다면, $\bigl((E\_i)\_{i\in I}, (f\_{ij})\_{i\leq j}\bigr)$들을 *inverse system*, 혹은 *projective system*이라 부른다.
+을 만족한다면, $\bigl((A\_i)\_{i\in I}, (f\_{ij})\_{i\leq j}\bigr)$들을 *inverse system*, 혹은 *projective system*이라 부른다.
 
 </div>
 
 **[Bou]**에서는 위의 정의와 같이 $I$에 preordered set이라는 조건 외에는 어떠한 조건도 주지 않았지만, 곧바로 살펴볼 directed system을 생각하면 $I$가 *right directed set*인 경우를 생각하는 것이 조금 더 자연스럽고, 실제로 우리가 마주치게 되는 예시도 대부분 $I$가 right directed set인 경우이다.
 
-우리는 이미 집합들 간의 sum과 product를 정의하며 universal property를 소개했고, 이들이 얼마나 강력한 도구인지도 조금 살펴보았다. Inverse limit과 direct limit 또한 universal property에 의해 정의된다.
+우리는 이미 집합들 간의 합과 곱을 정의하며 universal property를 소개했고, 이들이 얼마나 강력한 도구인지도 조금 살펴보았다. Inverse limit과 direct limit 또한 universal property에 의해 정의된다.
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 집합 $\varprojlim E_i$와, 함수 $f\_i: \varprojlim E_i\rightarrow E_i$들의 family $(f_i)\_{i\in I}$가 $\bigl((E\_i)\_{i\in I}, (f\_{ij})\_{i\leq j}\bigr)$의 *inverse limit<sub>역극한</sub>* 혹은 *projective limit <sub>사영극한</sub>*이라는 것은 임의의 $i\leq j$에 대하여
+<ins id="df2">**정의 2**</ins> 집합 $\varprojlim A_i$와, 함수 $f\_i: \varprojlim A_i\rightarrow A_i$들의 family $(f_i)\_{i\in I}$가 $\bigl((A\_i)\_{i\in I}, (f\_{ij})\_{i\leq j}\bigr)$의 *inverse limit<sub>역극한</sub>* 혹은 *projective limit <sub>사영극한</sub>*이라는 것은 임의의 $i\leq j$에 대하여
 
 $$f_i=f_{ij}\circ f_j$$
 
 가 성립하고, 추가적으로 다음의 universal property를 만족하는 것이다.
 
-![universal_property_of_inverse_limit](/assets/images/Set_theory/Limits-1.png){:width="180px" class="invert" .align-center}
+![universal_property_of_inverse_limit](/assets/images/Set_theory/Limits-1.png){:width="260.85px" class="invert" .align-center}
 
-> 만일 어떤 집합 $F$와 함수들의 모임 $u_i:F\rightarrow E_i$가 주어져서 $i\leq j$마다 다음의 식
+> 만일 어떤 집합 $B$와 함수들의 모임 $u_i:B\rightarrow A_i$가 주어져서 $i\leq j$마다 다음의 식
 > 
 > $$u_i=f_{ij}\circ u_j$$
 >
-> 를 만족한다면, 함수 $u:F\rightarrow \varprojlim E_i$가 유일하게 존재하여, 모든 $i\in I$에 대하여
+> 를 만족한다면, 함수 $u:B\rightarrow \varprojlim A_i$가 유일하게 존재하여, 모든 $i\in I$에 대하여
 > 
 > $$u_i=f_i\circ u$$ 
 > 
@@ -58,43 +58,43 @@ $$f_i=f_{ij}\circ f_j$$
 
 </div>
 
-Sum과 product의 universal property를 소개할 때에도 이야기했지만, 이 정의가 말이 되기 위해서는 $\bigl(\varprojlim E\_i, (f\_i)\_{i\in I}\bigr)$가 적어도 하나는 존재한다는 것을 직접 보여야 한다.
+집합의 합과 곱의 universal property를 소개할 때에도 이야기했지만, 이 정의가 말이 되기 위해서는 $\bigl(\varprojlim A\_i, (f\_i)\_{i\in I}\bigr)$가 적어도 하나는 존재한다는 것을 직접 보여야 한다.
 
-이를 위해, 우선 집합 $\prod\_{i\in I} E\_i$와 canonical projection들 $(\operatorname{pr}\_i)\_{i\in I}$을 생각하자. 그 후, 집합 $E$를 다음의 조건
+이를 위해, 우선 집합 $\prod\_{i\in I} A\_i$와 성분함수들 $(\operatorname{pr}\_i)\_{i\in I}$을 생각하자. 그 후, 집합 $A$를 다음의 조건
 
 $$\operatorname{pr}_i x=f_{ij}(\operatorname{pr}_j x)$$
 
-를 만족하는 모든 $x$들의 집합으로 정의하고, 또 $f_i$들을 $\operatorname{pr}\_i\|\_{E}$으로 정의하자. 그럼 이렇게 정의된 $\bigl(E, (f_i)\bigr)$가 위의 universal property를 만족한다. 이렇게 만들어진 $E$가 어떤 모양인지 예시를 통해 살펴보는 것이 증명에 도움이 된다.
+를 만족하는 모든 $x$들의 부분집합으로 정의하고, 또 $f_i$들을 $\operatorname{pr}\_i\|\_{A}$으로 정의하자. 그럼 이렇게 정의된 $\bigl(A, (f_i)\bigr)$가 위의 universal property를 만족한다. 
 
 <div class="example" markdown="1">
 
 <ins id="ex3">**예시 3**</ins> 예를 들어, 만일 $I$가 일반적인 $\leq$가 주어진 $\mathbb{N}$이었다면 inverse system은
 
-$$\cdots\overset{f_{3,4}}{\longrightarrow} E_3\overset{f_{2,3}}{\longrightarrow}E_2\overset{f_{1,2}}{\longrightarrow}E_1\overset{f_{0,1}}{\longrightarrow}E_0$$  
+$$\cdots\overset{f_{3,4}}{\longrightarrow} A_3\overset{f_{2,3}}{\longrightarrow}A_2\overset{f_{1,2}}{\longrightarrow}A_1\overset{f_{0,1}}{\longrightarrow}A_0$$  
 
-과 같은 모습[^1]일 것이고, 이 때 위에서 정의한 집합 $E$는 무한한 순서쌍
+과 같은 모습[^1]일 것이고, 이 때 위에서 정의한 집합 $A$는 무한한 순서쌍
 
-$$(x_0, x_1,\ldots )\in E_0\times E_1\times\cdots=\prod_{i\in\mathbb{N}} E_i$$
+$$(x_0, x_1,\ldots )\in A_0\times A_1\times\cdots=\prod_{i\in\mathbb{N}} A_i$$
 
-의 모임이며 이들 순서쌍들은 $f\_{i, i+1}(x\_{i+1})=x\_i$를 만족하는 순서쌍들이고, $f_i$들은 그냥 $E$ 위로 제한된 projection map이다.
+의 모임이며 이들 순서쌍들은 $f\_{i, i+1}(x\_{i+1})=x\_i$를 만족하는 순서쌍들이고, $f_i$들은 그냥 $A$ 위로 제한된 성분함수들이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> 임의의 index set $I$ 위에 ordering이 $=$로 주어졌다 하자. 그럼 mapping들은 오직 $f\_{ii}=\operatorname{id}\_{E\_i}$꼴만 존재한다. 따라서, 위의 construction 상에서 
+<ins id="ex4">**예시 4**</ins> 임의의 index set $I$ 위에 ordering이 $=$로 주어졌다 하자. 그럼 이들 사이의 함수들은 오직 $f\_{ii}=\operatorname{id}\_{A\_i}$꼴만 존재한다. 따라서, 위의 construction 상에서 
 
 $$\operatorname{pr}_i(x)=f_{ij}(\operatorname{pr}_j(x))$$
 
-가 모든 $i,j$에 대해 vacuous하게 성립하므로 $E$는 $\prod E_i$ 전체가 된다. 따라서 이 경우 $\varprojlim E_i=\prod E_i$이다.
+가 모든 $i,j$에 대해 vacuous하게 성립하므로 $A$는 $\prod A_i$ 전체가 된다. 따라서 이 경우 $\varprojlim A_i=\prod A_i$이다.
 
 </div>
 
-많은 경우 inverse system은 [예시 3](#ex3)과 같은 형태로 등장하게 된다. <#ref#> 이제 약속했던 것과 같이 [정의 2](#df2)를 뒷받침하는 다음의 보조정리를 보이자.
+많은 경우 inverse system은 [예시 3](#ex3)과 같은 형태로 등장하게 된다. 이제 약속했던 것과 같이 [정의 2](#df2)를 뒷받침하는 다음의 보조정리를 보이자.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> 위에서 만들어낸 $\bigl(E, (f_i)\bigr)$는 inverse limit의 universal property를 만족한다.
+<ins id="lem5">**보조정리 5**</ins> 위에서 만들어낸 $\bigl(A, (f_i)\bigr)$는 inverse limit의 universal property를 만족한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -104,7 +104,7 @@ $$\operatorname{pr}_i(x)=f_{ij}(\operatorname{pr}_j(x))$$
 
 $$u_i=f_i\circ u\qquad\text{for all $i\in I$}$$
 
-을 만족하는 $u:F\rightarrow E$가 존재한다면 이러한 $u$가 유일하다는 것은 어렵지 않게 보일 수 있다. $v:F\rightarrow E$가 마찬가지 조건을 만족한다 가정하자. $u(y)$와 $v(y)$는 모두 $\prod E_i$의 원소이므로, projection map $\operatorname{pr}_i$에 의한 image들에 의해 결정된다. 따라서 $u(y)$에 $\operatorname{pr}_i$를 적용해보면,
+을 만족하는 $u:B\rightarrow A$가 존재한다면 이러한 $u$가 유일하다는 것은 어렵지 않게 보일 수 있다. $v:B\rightarrow A$가 마찬가지 조건을 만족한다 가정하자. $u(y)$와 $v(y)$는 모두 $\prod A_i$의 원소이므로, 성분함수들 $\operatorname{pr}_i$에 의한 상에 의해 결정된다. 따라서 $u(y)$에 $\operatorname{pr}_i$를 적용해보면,
 
 $$\operatorname{pr}_i(u(y))=f_i(u(y))=u_i(y)=f_i(v(y))=\operatorname{pr}_i(v(y))$$
 
@@ -114,7 +114,7 @@ $$\operatorname{pr}_i(u(y))=f_i(u(y))=u_i(y)=f_i(v(y))=\operatorname{pr}_i(v(y))
 
 $$u(y)=\big(u_i(y)\big)_{i\in I}$$
 
-으로 정의해야 한다는 것을 알 수 있다. 이렇게 정의한다면 $u$가 함수가 되는 것은 자명하므로, $u$의 image가 실제로 $E$에 속한다는 것만 보이면 된다. 즉, 
+으로 정의해야 한다는 것을 알 수 있다. 이렇게 정의한다면 $u$가 함수가 되는 것은 자명하므로, $u$의 상이 실제로 $A$에 속한다는 것만 보이면 된다. 즉, 
 
 $$\operatorname{pr}_i(u(y))=f_{ij}(\operatorname{pr}_j(u(y)))$$
 
@@ -122,23 +122,23 @@ $$\operatorname{pr}_i(u(y))=f_{ij}(\operatorname{pr}_j(u(y)))$$
 
 $$u_i(y)=f_{ij}(u_j(y))$$
 
-가 되어 $u(y)\in E$이고 증명이 완료된다. 
+가 되어 $u(y)\in A$이고 증명이 완료된다. 
 
 </details>
 
-Inverse limit의 유일성을 보여주는 다음 따름정리는 사실 존재성과 무관하게 얻어지는 형식적인 정리이다.
+Inverse limit의 유일성을 보여주는 다음 따름정리는 언제나와 같이 universal property로부터 얻어지는 형식적인 정리이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="crl6">**따름정리 6**</ins> $\bigl((E_i), (f_{ij})\bigr)$의 inverse limit은 bijection에 대하여 유일하다.
+<ins id="crl6">**따름정리 6**</ins> $\bigl((A_i), (f_{ij})\bigr)$의 inverse limit은 unique up to bijection이다.
 
 </div>
 
-Universal property를 통해 여러 명제들을 증명할 수 있다. 우선 다음의 정의부터 약속하자.
+뿐만 아니라, universal property를 통해 여러 명제들을 증명할 수 있다. 우선 다음의 정의부터 약속하자.
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> 두 개의 inverse system $\bigl((E_i), (f_{ij})\bigr)$, $\bigl((F_i), (g_{ij})\bigr)$가 주어졌다 하자. 그럼 함수 $u_i:E_i\rightarrow F_i$들의 family $(u_i)_{i\in I}$가 *inverse system 사이의 함수*라는 것은 임의의 $i,j$에 대해 다음의 식
+<ins id="df7">**정의 7**</ins> 두 개의 inverse system $\bigl((A_i), (f_{ij})\bigr)$, $\bigl((B_i), (g_{ij})\bigr)$가 주어졌다 하자. 그럼 함수 $u_i:A_i\rightarrow B_i$들의 family $(u_i)_{i\in I}$가 *inverse system 사이의 함수*라는 것은 임의의 $i,j$에 대해 다음의 식
 
 $$g_{ij}\circ u_j=u_i\circ f_{ij}$$
 
@@ -148,26 +148,26 @@ $$g_{ij}\circ u_j=u_i\circ f_{ij}$$
 
 즉, 다음의 diagram이 모든 $i\leq j$에 대해 commute하는 것이다.
 
-![inverse_system_of_mappings](/assets/images/Set_theory/Limits-2.png){:width="120px" class="invert" .align-center}
+![inverse_system_of_mappings](/assets/images/Set_theory/Limits-2.png){:width="147.3px" class="invert" .align-center}
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> 두 개의 inverse system $\bigl((E_i), (f_{ij})\bigr)$, $\bigl((F_i), (g_{ij})\bigr)$, 그리고 inverse system 사이의 함수 $(u_i:E_i\rightarrow F_i)$가 주어졌다 하자. 그럼 유일한 $u:\varprojlim E_i\rightarrow \varprojlim F_i$가 존재하여, 각각의 $i$마다 $g_i\circ u=u_i\circ f_i$가 성립하도록 할 수 있다.
+<ins id="pp8">**명제 8**</ins> 두 개의 inverse system $\bigl((A_i), (f_{ij})\bigr)$, $\bigl((B_i), (g_{ij})\bigr)$, 그리고 inverse system 사이의 함수 $(u_i:A_i\rightarrow B_i)$가 주어졌다 하자. 그럼 유일한 $u:\varprojlim A_i\rightarrow \varprojlim B_i$가 존재하여, 각각의 $i$마다 $g_i\circ u=u_i\circ f_i$가 성립하도록 할 수 있다.
 
-![mapping_between_inverse_limits](/assets/images/Set_theory/Limits-3.png){:width="180px" class="invert" .align-center}
+![mapping_between_inverse_limits](/assets/images/Set_theory/Limits-3.png){:width="272.85px" class="invert" .align-center}
 
 </div>
 
-바꿔 말하자면, $u_i$들이 적절한 commutativity 조건을 만족한다면, 이들은 inverse limit 사이의 함수 $u$를 자연스럽게 유도한다.
+바꿔 말하자면, $u_i$들이 적절한 조건을 만족한다면, 이들은 inverse limit 사이의 함수 $u$를 자연스럽게 유도한다.
 
 <details class="proof--alone" markdown="1">
 <summary>증명</summary>
 
-우선 합성함수 $u_j\circ f_j$가 $\varprojlim E_i$에서 $F_i$로의 mapping을 만든다는 것을 관찰하자. 때문에 이 함수들이 universal property가 적용될 수 있는 조건을 만족한다는 것을 보이면 함수 $u$를 잘 정의할 수 있다. 즉, 
+우선 합성함수 $u_j\circ f_j$가 $\varprojlim A_i$에서 $B_i$로의 함수를 만든다는 것을 관찰하자. 때문에 이 함수들이 universal property가 적용될 수 있는 조건을 만족한다는 것을 보이면 함수 $u$를 잘 정의할 수 있다. 즉, 
 
 $$(u_i\circ f_i)=g_{ij}\circ (u_j\circ f_j)$$
 
-임을 보여야 한다. 그런데 $u_i$들은 inverse system 사이의 mapping이므로, 앞선 정의에 의하여
+임을 보여야 한다. 그런데 $u_i$들은 inverse system 사이의 함수이므로, 앞선 정의에 의하여
 
 $$g_{ij}\circ u_j=u_i\circ f_{ij}$$
 
@@ -179,7 +179,7 @@ $$g_{ij}\circ (u_j\circ f_j)=(u_i\circ f_{ij})\circ f_j=u_i\circ f_i$$
 
 $$(u_i\circ f_i)=g_i\circ u$$
 
-이도록 하는 유일한 함수 $u:\varprojlim E_i\rightarrow\varprojlim F_i$가 존재하고, 이 식이 바로 우리가 원하던 식이다.
+이도록 하는 유일한 함수 $u:\varprojlim A_i\rightarrow\varprojlim B_i$가 존재하고, 이 식이 바로 우리가 원하던 식이다.
 
 </details>
 
@@ -187,7 +187,7 @@ $$(u_i\circ f_i)=g_i\circ u$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl9">**따름정리 9**</ins> 세 개의 inverse system $\bigl((E_i), (f_{ij})\bigr)$, $\bigl((F_i), (g_{ij})\bigr)$, $\bigl((G_i), (h_{ij})\bigr)$가 주어졌다 하고, 이들 system들 사이의 mapping $(u_i:E_i\rightarrow F_i)$, $(v_i:E_i\rightarrow F_i)$가 주어졌다 하자. 그럼
+<ins id="crl9">**따름정리 9**</ins> 세 개의 inverse system $\bigl((A_i), (f_{ij})\bigr)$, $\bigl((B_i), (g_{ij})\bigr)$, $\bigl((C_i), (h_{ij})\bigr)$가 주어졌다 하고, 이들 system들 사이의 함수 $(u_i:A_i\rightarrow B_i)$, $(v_i:B_i\rightarrow C_i)$가 주어졌다 하자. 그럼
 
 $$\varprojlim(v_i\circ u_i)=\bigl(\varprojlim v_i\bigr)\circ\bigl(\varprojlim u_i\bigr)$$
 
@@ -197,17 +197,17 @@ $$\varprojlim(v_i\circ u_i)=\bigl(\varprojlim v_i\bigr)\circ\bigl(\varprojlim u_
 
 <div class="definition" markdown="1">
 
-<ins id="df10">**정의 10**</ins> Inverse system $\bigl((E_i), (f_{ij})\bigr)$이 주어졌다 하자. 만일 $E_i$들의 부분집합 $M_i$들이 주어졌고, 이들 위에 $f_{ij}$를 제한하여 inverse system을 만들 수 있다면, 즉 다음의 식
+<ins id="df10">**정의 10**</ins> Inverse system $\bigl((A_i), (f_{ij})\bigr)$이 주어졌다 하자. 만일 $A_i$들의 부분집합 $X_i$들이 주어졌고, 이들 위에 $f_{ij}$를 제한하여 inverse system을 만들 수 있다면, 즉 다음의 식
 
-$$f_{ij}(M_j)\subset M_i$$
+$$f_{ij}(X_j)\subseteq X_i$$
 
-가 $i\leq j$마다 성립한다면 이들 system $\bigl((M\_i), (f\_{ij}\|\_{M\_j})\bigr)$을 원래 system의 부분집합들의 inverse system이라 부른다. 
+가 $i\leq j$마다 성립한다면 이들 system $\bigl((X\_i), (f\_{ij}\|\_{X\_j})\bigr)$을 원래 system의 부분집합들의 inverse system이라 부른다. 
 
 </div>
 
 그럼 어렵지 않게 
 
-$$\varprojlim M_i=\bigl(\varprojlim E_i\bigr)\cap\prod_{i\in I} M_i$$
+$$\varprojlim X_i=\bigl(\varprojlim A_i\bigr)\cap\prod_{i\in I} X_i$$
 
 가 성립한다는 것을 확인할 수 있다. 
 
@@ -215,7 +215,7 @@ $$\varprojlim M_i=\bigl(\varprojlim E_i\bigr)\cap\prod_{i\in I} M_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp11">**명제 11**</ins> 두 개의 inverse system $\bigl((E_i), (f_{ij})\bigr)$, $\bigl((F_i), (g_{ij})\bigr)$, 그리고 inverse system 사이의 mapping $(u_i:E_i\rightarrow F_i)$가 주어졌다 하자. 편의상 $u=\varprojlim u_i$라 하면, 각각의 $y=(y_i)\in \varprojlim F_i$에 대하여, $u_i^{-1}(y_i)$들이 $E_i$의 부분집합들의 inverse system을 이루며, inverse limit은
+<ins id="pp11">**명제 11**</ins> 두 개의 inverse system $\bigl((A_i), (f_{ij})\bigr)$, $\bigl((B_i), (g_{ij})\bigr)$, 그리고 inverse system 사이의 함수 $(u_i:A_i\rightarrow B_i)$가 주어졌다 하자. 편의상 $u=\varprojlim u_i$라 하면, 각각의 $y=(y_i)\in \varprojlim B_i$에 대하여, $u_i^{-1}(y_i)$들이 $A_i$의 부분집합들의 inverse system을 이루며, inverse limit은
 
 $$\varprojlim u_i^{-1}(y_i)=u^{-1}(y)$$
 
@@ -225,13 +225,13 @@ $$\varprojlim u_i^{-1}(y_i)=u^{-1}(y)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선  $u_i^{-1}(y_i)$들이 $E_i$의 부분집합들의 inverse system을 이룬다는 것부터 보이자. 즉, 임의의 $x_j\in u_j^{-1}(y_j)$에 대하여, 이를 $f_{ij}$를 타고 $E_i$로 보낸 값이 $u_i^{-1}(y_i)$에 속한다는 것을 보여야 한다. 즉, $y\_i=u\_i(f\_{ij}(x\_j))$임을 보이면 된다. 계산을 직접 해 보면
+우선  $u_i^{-1}(y_i)$들이 $A_i$의 부분집합들의 inverse system을 이룬다는 것부터 보이자. 즉, 임의의 $x_j\in u_j^{-1}(y_j)$에 대하여, 이를 $f_{ij}$를 타고 $E_i$로 보낸 값이 $u_i^{-1}(y_i)$에 속한다는 것을 보여야 한다. 즉, $y\_i=u\_i(f\_{ij}(x\_j))$임을 보이면 된다. 계산을 직접 해 보면
 
 $$u_i(f_{ij}(x_j))=g_{ij}(u_j(x_j))=g_{ij}(y_j)=y_i$$
 
 가 성립하므로, 이 주장이 성립한다. 
 
-한편, $x\in\varprojlim E_i$가 $u(x)=y$를 만족한다는 것은 $u$의 정의로부터 정확히 $u\_i(x\_i)=y\_i$가 모든 $i$에 대해 성립한다는 이야기이므로 두 번째 주장도 성립한다.
+한편, $x\in\varprojlim A_i$가 $u(x)=y$를 만족한다는 것은 $u$의 정의로부터 정확히 $u\_i(x\_i)=y\_i$가 모든 $i$에 대해 성립한다는 이야기이므로 두 번째 주장도 성립한다.
 
 </details>
 
@@ -241,12 +241,12 @@ $$u_i(f_{ij}(x_j))=g_{ij}(u_j(x_j))=g_{ij}(y_j)=y_i$$
 
 <div class="definition" markdown="1">
 
-<ins id="df12">**정의 12**</ins> $I$가 right directed set이고, family $(E\_i)\_{i\in I}$가 주어졌다 하자. 여기에 추가적으로 $i\leq j$를 만족하는 쌍 $(i,j)$마다 함수 $f\_{ij}:E\_i\rightarrow E\_j$가 정의되어, 다음의 두 조건
+<ins id="df12">**정의 12**</ins> $I$가 right directed set이고, family $(A\_i)\_{i\in I}$가 주어졌다 하자. 여기에 추가적으로 $i\leq j$를 만족하는 쌍 $(i,j)$마다 함수 $f\_{ij}:A\_i\rightarrow A\_j$가 정의되어, 다음의 두 조건
 
 1. $i\leq j\leq k$이면 $f\_{ik}=f\_{jk}\circ f\_{ij}$,
 2. 각각의 $i\in I$마다 $f\_{ii}=\operatorname{id}\_{E\_i}$.
 
-을 만족한다면, $\bigl((E\_i)\_{i\in I}, (f\_{ij})\_{i\leq j}\bigr)$를 *directed system*이라 부른다.
+을 만족한다면, $\bigl((A\_i)\_{i\in I}, (f\_{ij})\_{i\leq j}\bigr)$를 *directed system*이라 부른다.
 
 </div>
 
@@ -254,7 +254,7 @@ Inverse system과 directed system은 모두 right directed set를 index로 갖�
 
 <div class="definition" markdown="1">
 
-<ins id="df13">**정의 13**</ins> 집합 $\varinjlim E_i$와, 함수 $f\_i: E_i\rightarrow \varinjlim E_i$들의 family $(f_i)\_{i\in I}$가 $\bigl((E\_i)\_{i\in I}, (f\_{ij})\_{i\leq j}\bigr)$의 *direct limit<sub>직접극한</sub>* 혹은 *injective limit <sub>귀납적 극한</sub>*이라는 것은 임의의 $i\leq j$에 대하여
+<ins id="df13">**정의 13**</ins> 집합 $\varinjlim A_i$와, 함수 $f\_i: A_i\rightarrow \varinjlim A_i$들의 family $(f_i)\_{i\in I}$가 $\bigl((A\_i)\_{i\in I}, (f\_{ij})\_{i\leq j}\bigr)$의 *direct limit<sub>직접극한</sub>* 혹은 *injective limit <sub>귀납적 극한</sub>*이라는 것은 임의의 $i\leq j$에 대하여
 
 $$f_i=f_{ij}\circ f_j$$
 
@@ -262,11 +262,11 @@ $$f_i=f_{ij}\circ f_j$$
 
 ![universal_property_of_direct_limit](/assets/images/Set_theory/Limits-4.png){:width="180px" class="invert" .align-center}
 
-> 만일 어떤 집합 $F$와 함수들의 모임 $u_i:E_i\rightarrow F$가 주어져서 $i\leq j$마다 다음의 식
+> 만일 어떤 집합 $B$와 함수들의 모임 $u_i:A_i\rightarrow B$가 주어져서 $i\leq j$마다 다음의 식
 > 
 > $$u_j\circ f_{ji}=u_i$$
 >
-> 를 만족한다면, 함수 $u:\varprojlim E_i\rightarrow F$가 유일하게 존재하여, 모든 $i\in I$에 대하여
+> 를 만족한다면, 함수 $u:\varprojlim A_i\rightarrow B$가 유일하게 존재하여, 모든 $i\in I$에 대하여
 > 
 > $$u_i=u\circ f_i$$ 
 > 
@@ -274,41 +274,35 @@ $$f_i=f_{ij}\circ f_j$$
 
 </div>
 
-이러한 성질을 갖는 대상과 함수를 만들기 위해서는 기존에 알던 다른 대상들을 사용할 필요가 있다. 집합들의 모임 $E_i$들에 대해, $G=\sum E_i$라 하자. Inclusion $E_i\hookrightarrow G$를 통해 $E_i$와 그 image를 동일하게 취급하면, 임의의 $x\in G$에 대하여 $x\in E_i$이도록 하는 유일한 index $i$가 존재한다. 이를 $\lambda(x)$라 적자. 그럼 다음의 relation
+이러한 성질을 갖는 대상과 함수를 만들기 위해서는 기존에 알던 다른 대상들을 사용할 필요가 있다. 집합들의 모임 $A_i$들에 대해, $S=\sum A_i$라 하자. Inclusion $A_i\hookrightarrow S$를 통해 $A_i$와 그 상을 동일하게 취급하면, 임의의 $x\in S$에 대하여 $x\in A_i$이도록 하는 유일한 index $i$가 존재한다. 이를 $\lambda(x)$라 적자. 그럼 다음의 relation
 
 > $x\mathrel{R} y$인 것은, $i=\lambda(x)$, $j=\lambda(y)$보다 크거나 같은 $k$가 존재하여 $f_{ki}(x)=f_{kj}(y)$를 만족하는 것이다.
 
-이 equivalence relation이 된다는 것을 쉽게 확인할 수 있다. 따라서 quotient set $E=G/R$이 잘 정의되고, 자연스러운 합성 
+이 동치관계가 된다는 것을 쉽게 확인할 수 있다. 따라서 quotient set $A=S/R$이 잘 정의되고, 자연스러운 합성 
 
-$$f_i: E_i\hookrightarrow G\twoheadrightarrow G/R=E$$
+$$f_i: A_i\hookrightarrow S\twoheadrightarrow S/R=A$$
 
 또한 주어진다.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem14">**보조정리 14**</ins> 위에서 만들어낸 $\bigl(E, (f_i)\bigr)$는 direct limit의 universal property를 만족한다.
+<ins id="lem14">**보조정리 14**</ins> 위에서 만들어낸 $\bigl(A, (f_i)\bigr)$는 direct limit의 universal property를 만족한다.
 
 </div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-<#content#>
-
-</details>
 
 어렵지 않게 inverse limit을 정의하며 살펴보았던 정리들을 direct limit에서도 도입할 수 있다. 이를 반복하는 것보다는 특히 많이 사용되는 예시를 소개하는 것이 효율적이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> 두 집합 $A,B$가 주어졌다 하자. Directed set $I$에 대하여, $A$의 부분집합들의 family $(V_i)$를 다음의 조건
+<ins id="ex15">**예시 15**</ins> 두 집합 $A,B$가 주어졌다 하자. Directed set $I$에 대하여, $A$의 부분집합들의 family $(A_i)$를 다음의 조건
 
-$$i\leq j\iff V_j\subset V_i$$
+$$i\leq j\iff A_j\subseteq A_i$$
 
-이 만족되도록 잡자. 각각의 $i$에 대하여, 집합 $E_i$를 <box>$V_i$에서 $B$로의 함수들의 모임</box>으로 잡자. 그럼 $i\leq j$인 $E_i,E_j$마다 자연스러운 함수 $f_{ji}:E_i\rightarrow E_j$를 다음의 식
+이 만족되도록 잡자. 각각의 $i$에 대하여, 집합 $F_i$를 <phrase>$A_i$에서 $B$로의 함수들의 모임</phrase>으로 잡자. 그럼 $i\leq j$인 $A_i,A_j$마다 자연스러운 함수 $f_{ji}:A_i\rightarrow A_j$를 다음의 식
 
-$$f_{ji}(u)=u|_{E_j}$$
+$$f_{ji}(u)=u|_{A_j}$$
 
-으로 정의할 수 있다. 이와 같은 상황에서는 흔히 $\varinjlim E_i$의 원소들을 *germ*들이라 부른다.
+으로 정의할 수 있다. 이와 같은 상황에서는 흔히 $\varinjlim A_i$의 원소들을 *germ*들이라 부른다.
 
 </div>
 

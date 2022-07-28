@@ -4,7 +4,7 @@ title: "필터와 아이디얼, 갈루아 대응"
 excerpt: "Filter와 ideal"
 
 categories: [Math / Set Theory]
-permalink: /ko/math/set_theory/order_relations_3
+permalink: /ko/math/set_theory/filter_and_ideal
 header:
     overlay_image: /assets/images/Set_theory/Order_relations.png
     overlay_filter: 0.5
@@ -25,7 +25,7 @@ weight: 12
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Ordered set $E$에 대하여, 부분집합 $A\subset E$가 *lower set<sub>하집합</sub>* (resp. *upper set<sub>상집합</sub>*)이라는 것은 $y\in E$가 어떤 $x\in A$에 대해 $y\leq x$ (resp. $x\leq y$)를 만족하면 반드시 $y\in A$인 것이다.
+<ins id="df1">**정의 1**</ins> Ordered set $A$에 대하여, 부분집합 $X\subseteq A$가 *lower set<sub>하집합</sub>* (resp. *upper set<sub>상집합</sub>*)이라는 것은 $y\in A$가 어떤 $x\in X$에 대해 $y\leq x$ (resp. $x\leq y$)를 만족하면 반드시 $y\in X$인 것이다.
 
 공집합이 아닌 right directed lower set을 *ideal*, 공집합이 아닌 left directed upper set을 *filter*라 부른다.
 
@@ -35,34 +35,34 @@ weight: 12
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> Ordered set $E$가 주어졌다 하자. 임의의 $x\in E$에 대하여, $x$의 *downward closure*[^1]
+<ins id="ex2">**예시 2**</ins> Ordered set $A$가 주어졌다 하자. 임의의 $x\in A$에 대하여, $x$의 *downward closure*[^1]
 
-$$\downarrow x=\{y\in E: y\leq x\}$$
+$$\downarrow x=\{y\in A: y\leq x\}$$
 
-는 $E$의 ideal이 된다. 이러한 ideal을 *principal ideal*이라 부른다.
+는 $A$의 ideal이 된다. 이러한 ideal을 *principal ideal*이라 부른다.
 
 물론, 비슷하게, $x$의 *upward closure* 
 
-$$\uparrow x=\{y\in E: y\geq x\}$$
+$$\uparrow x=\{y\in A: y\geq x\}$$
 
-는 $E$의 filter가 되며 이러한 filter를 *principal filter*라 부른다.
+는 $A$의 filter가 되며 이러한 filter를 *principal filter*라 부른다.
 
 </div>
 
-우리는 대부분 $E$가 lattice인 경우에 관심이 있다. 이러한 경우 임의의 $x,y\in E$에 대하여 $\\{x,y\\}$의 supremum과 infimum이 각각 존재한다. 이들을 각각 $x\vee y$와 $x\wedge y$로 각각 표기하자. 이 때,
+우리는 대부분 $A$가 lattice인 경우에 관심이 있다. 이 때,
 
 - 공집합이 아닌 lower set $I$가 ideal인 것은 임의의 $x,y\in I$에 대하여 $x\vee y\in I$인 것과 동치이다.
 - 공집합이 아닌 upper set $F$가 filter인 것은 임의의 $x,y\in F$에 대하여 $x\wedge y\in F$인 것과 동치이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> 어떠한 집합 $X$가 주어졌다 하자. 그럼 $\mathcal{P}(X)$에 자연스러운 order relation $\subset$을 주면 $\mathcal{P}(X)$는 lattice가 되며 특히 임의의 $A,B\in\mathcal{P}(X)$에 대하여
+<ins id="ex3">**예시 3**</ins> 어떠한 집합 $A$가 주어졌다 하자. 그럼 $\mathcal{P}(A)$에 자연스러운 order relation $\subseteq$을 주면 $\mathcal{P}(A)$는 lattice가 되며 특히 임의의 $X,Y\in\mathcal{P}(A)$에 대하여
 
-$$A\vee B=A\cup B,\qquad A\wedge B=A\cap B$$
+$$X\vee Y=X\cup Y,\qquad X\wedge Y=X\cap Y$$
 
-가 성립한다. $\mathcal{P}(X)$는 추가적으로, 두 연산 $\vee$와 $\wedge$가 다음의 분배법칙
+가 성립한다. $\mathcal{P}(A)$에서는 추가적으로 두 연산 $\vee$와 $\wedge$가 다음의 분배법칙
 
-$$A\vee(B\wedge C)=(A\vee B)\wedge(A\vee C),\qquad A\wedge(B\vee C)=(A\wedge B)\vee(A\wedge C)$$
+$$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\vee(X\wedge Z)$$
 
 을 만족한다.
 
@@ -70,23 +70,21 @@ $$A\vee(B\wedge C)=(A\vee B)\wedge(A\vee C),\qquad A\wedge(B\vee C)=(A\wedge B)\
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Lattice $E$가 주어졌다 하고, $I$와 $F$가 각각 $E$의 proper ideal과 proper filter라 하자. $I$가 *prime ideal*이라는 것은 임의의 $x,y\in E$에 대하여 $x\wedge y\in I$이면 반드시 $x\in I$ 혹은 $y\in I$가 성립하는 것이다. 비슷하게 $F$가 *prime filter*라는 것은 임의의 $x,y\in E$에 대하여 $x\vee y\in F$이면 반드시 $x\in F$ 혹은 $y\in F$가 성립하는 것이다.
+<ins id="df4">**정의 4**</ins> Lattice $A$가 주어졌다 하고, $I$와 $F$가 각각 $E$의 proper ideal과 proper filter라 하자. $I$가 *prime ideal*이라는 것은 임의의 $x,y\in A$에 대하여 $x\wedge y\in I$이면 반드시 $x\in I$ 혹은 $y\in I$가 성립하는 것이다. 비슷하게 $F$가 *prime filter*라는 것은 임의의 $x,y\in A$에 대하여 $x\vee y\in F$이면 반드시 $x\in F$ 혹은 $y\in F$가 성립하는 것이다. (<#ref#>)
 
 </div>
 
-혹은, $I$가 prime ideal이라는 것은 $E\setminus I$가 filter라는 것으로 정의하여도 동등한 정의를 얻는다.
-
-Ideal이라는 용어는 위의 정의에서 추측할 수 있듯 ring의 ideal (<#ref#>)로부터 온 것이다.  임의의 ordered set $E$와 proper ideal $I$에 대하여, 만일 $I\subset J$를 만족하는 ideal $J$가 항상 $J=I$ 혹은 $J=E$를 만족한다면 $I$를 *maximal ideal*이라 부른다. Ring에서와는 다르게 모든 maximal ideal이 prime ideal이 되지는 않지만, [예시 3](#ex3)과 같이 $\wedge$와 $\vee$ 사이에 분배법칙이 성립할 경우 참이 된다.
+혹은, $I$가 prime ideal이라는 것은 $A\setminus I$가 filter라는 것으로 정의하여도 동등한 정의를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 두 연산 $\vee$와 $\wedge$ 사이의 분배법칙이 성립하는 lattice $E$가 주어졌다 하자. 그럼 임의의 maximal ideal은 prime ideal이고 임의의 maximal filter는 prime filter이다.
+<ins id="pp5">**명제 5**</ins> 두 연산 $\vee$와 $\wedge$ 사이의 분배법칙이 성립하는 lattice $A$가 주어졌다 하자. 그럼 임의의 maximal ideal은 prime ideal이고 임의의 maximal filter는 prime filter이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Maximal ideal $I$에 대해, $x\wedge y\in I$라 하자. 결론에 반하여 $x,y\not\in I$라 하고, 새로운 집합 $J$를 <box>$x\wedge z\in I$이도록 하는 모든 $z$들의 집합</box>이라 하자. 
+Maximal ideal $I$에 대해, $x\wedge y\in I$라 하자. 결론에 반하여 $x,y\not\in I$라 하고, 새로운 집합 $J$를 <phrase>$x\wedge z\in I$이도록 하는 모든 $z$들의 집합</phrase>이라 하자. 
 
 1. 만일 $z_1,z_2\in J$라면 $x\wedge (z_1\vee z_2)=(x\wedge z_1)\vee(x\wedge z_2)\in I$가 성립하므로, $z_1\vee z_2\in J$이다. 
 2. 만일 $z\in J$이고 $z'\leq z$라면 $z'\in J$이다. $(x\wedge z')\vee (x\wedge z)=x\wedge (z'\vee z)=x\wedge z$이므로 $x\wedge z'\leq x\wedge z$인데, $x\wedge z\in I$이므로 $x\wedge z'$ 또한 $I$의 원소여야 하기 때문이다.
@@ -100,7 +98,7 @@ Maximal ideal $I$에 대해, $x\wedge y\in I$라 하자. 결론에 반하여 $x,
 특별히 maximal filter를 *ultrafilter*라 부르기도 한다. 
 
 
-두 ordered set $A,B$에 대해 증가함수 $f:A\rightarrow B$를 생각하자. 즉, $x\leq y$가 $A$에서 성립한다면 반드시 $f(x)\leq f(y)$가 성립한다. $B$의 임의의 lower set $E'$가 주어졌다 하고 $E=f^{-1}(E')$이라 하자. 만일 어떤 $y\in A$에 대해 적당한 $x\in E$가 존재하여 $y\leq x$라면 $f(y)\leq f(x)$이고, $E'$는 lower set이므로 $f(y)\in E'$이 성립하여 $y\in E$이다. 즉, $E$ 또한 lower set이 된다. 
+두 ordered set $A,B$에 대해 증가함수 $f:A\rightarrow B$를 생각하자. 또, $B$의 임의의 lower set $Y$가 주어졌다 하고 $X=f^{-1}(Y)$이라 하자. 만일 어떤 $y\in A$에 대해 적당한 $x\in X$가 존재하여 $y\leq x$라면 $f(y)\leq f(x)$이고, $Y$는 lower set이므로 $f(y)\in Y$이 성립하여 $y\in X$이다. 즉, lower set의 역상 $X$ 또한 lower set이 된다. 
 
 ## Galois connection
 
@@ -160,10 +158,10 @@ $$b\leq F(G(b))\iff G(b)\leq G(b)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> Ordered set $E$에 대하여, 함수 $f:E\rightarrow E$가 *closure operator<sub>폐포 연산자</sub>*라는 것은 다음의 세 조건이 모두 성립하는 것이다.
+<ins id="df8">**정의 8**</ins> Ordered set $A$에 대하여, 함수 $f:A\rightarrow A$가 *closure operator<sub>폐포 연산자</sub>*라는 것은 다음의 세 조건이 모두 성립하는 것이다.
 
-1. 임의의 $x\in E$에 대해 $x\leq f(x)$가 성립한다.
-2. 임의의 $x\in E$에 대해 $f(x)=f(f(x))$.
+1. 임의의 $x\in A$에 대해 $x\leq f(x)$가 성립한다.
+2. 임의의 $x\in A$에 대해 $f(x)=f(f(x))$.
 3. 만일 $x\leq y$라면, $f(x)\leq f(y)$.
 
 이 때, $x$가 *closed*라는 것은 $f(x)=x$인 것이다.
@@ -178,9 +176,7 @@ $$GFGF(x)=GF(x)$$
 
 정의에 의하여, $x,y$가 긱긱 $GF$와 $FG$에 대해 closed라는 것은 각각 $GF(x)=x$, 그리고 $FG(y)=y$가 성립한다는 것이다. 우리는 [명제 7](#pp7)로부터 $F$와 $G$의 image에 속한 원소들은 모두 closed라는 것을 안다. 거꾸로 임의의 원소 $x$가 $GF$에 대해 closed라면 $GF(x)=x$로부터 $x$가 $G$의 image에 속한다는 것을 알고, 비슷하게 $FG$에 대한 명제 또한 증명할 수 있다.
 
-우리는 이 과정을 통해 ordered set $A,B$ 사이의 Galois connection에 대해, closed subset들의 모임 $A'\subset A$, $B'\subset B$를 만들 수 있으며, $F$와 $G$를 이 모임에 제한한 것이 잘 정의된다. 뿐만 아니라 이들 $F\|\_A$와 $G\|\_B$는 일대일 대응이며, *anti-isomorphism*이 된다. 이러한 상황을 특별히 *Galois correspondence<sub>갈루아 대응</sub>*라 부른다.
-
-
+우리는 이 과정을 통해 ordered set $A,B$ 사이의 Galois connection에 대해, closed subset들의 모임 $A'\subseteq A$, $B'\subseteq B$를 만들 수 있으며, $F$와 $G$를 이 모임에 제한한 것이 잘 정의된다. 뿐만 아니라 이들 $F\|\_{A'}$와 $G\|\_{B'}$는 일대일 대응이며, *anti-isomorphism*이 된다. 이들을 특별히 *Galois correspondence<sub>갈루아 대응</sub>*라 부른다.
 
 
 ---

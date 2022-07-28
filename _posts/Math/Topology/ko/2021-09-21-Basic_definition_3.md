@@ -20,7 +20,7 @@ weight: 3
 
 ## 집합의 interior와 closure
 
-위상공간 $(X,\mathcal{T})$가 주어졌다고 하자. $X$의 임의의 부분집합 $A$에 대하여, <box>$A$를 포함하는 닫힌집합</box>과 <box>$A$에 포함되어 있는 열린집합</box>이 항상 존재한다. ($X$와 $\emptyset$). 한편, 닫힌집합들의 임의의 교집합은 닫힌집합이고 ([§열린집합과 닫힌집합, 명제 8](/ko/math/topology/basic_definition_1#pp8)의 증명), 열린집합들의 임의의 합집합은 열린집합이므로, <box>$A$를 포함하는 가장 작은 닫힌집합</box>과 <box>$A$에 포함된 가장 큰 열린집합</box>이 모두 존재한다. 이들을 다음과 같이 정의한다.
+위상공간 $(X,\mathcal{T})$가 주어졌다고 하자. $X$의 임의의 부분집합 $A$에 대하여, <phrase>$A$를 포함하는 닫힌집합</phrase>과 <phrase>$A$에 포함되어 있는 열린집합</phrase>이 항상 존재한다. ($X$와 $\emptyset$). 한편, 닫힌집합들의 임의의 교집합은 닫힌집합이고 ([§열린집합과 닫힌집합, 명제 8](/ko/math/topology/basic_definition_1#pp8)의 증명), 열린집합들의 임의의 합집합은 열린집합이므로, <phrase>$A$를 포함하는 가장 작은 닫힌집합</phrase>과 <phrase>$A$에 포함된 가장 큰 열린집합</phrase>이 모두 존재한다. 이들을 다음과 같이 정의한다.
 
 <div class="definition" markdown="1">
 
@@ -51,7 +51,7 @@ $$\operatorname{int}(A^c)=(\operatorname{cl}(A))^c$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-대우명제를 보이는 것이 편하다. $x\not\in\operatorname{cl}A$라 하자. 그럼 $x\in(\operatorname{cl}A)^c=\operatorname{ext}A$는 $x$를 포함하며, $\operatorname{cl}A$와 만나지 않는 열린집합이고, 따라서 $A$와도 만나지 않는 열린집합이 된다. 즉, 명제 "$A$와 만나지 않는 $x$의 어떠한 neighborhood가 존재한다"가 참이다. 
+대우명제를 보이는 것이 편하다. $x\not\in\operatorname{cl}A$라 하자. 그럼 $x\in(\operatorname{cl}A)^c=\operatorname{ext}A$는 $x$를 포함하며, $\operatorname{cl}A$와 만나지 않는 열린집합이고, 따라서 $A$와도 만나지 않는 열린집합이 된다. 즉, 명제 <phrase>$A$와 만나지 않는 $x$의 어떠한 열린근방이 존재한다</phrase>가 참이다. 
 
 거꾸로, 어떠한 $x$의 열린근방 $U$가 존재하여 $U\cap A=\emptyset$이라면, $U^c\cap A=A$이므로 $U^c$는 $A$를 포함하는 닫힌집합이고, closure의 최소성에 의하여 $U^c$는 $\operatorname{cl}A$ 또한 포함한다. 즉, $x\not\in U^c$이면 $x\not\in\operatorname{cl}A$이고, 따라서 반대방향도 성립한다.  
 
@@ -73,7 +73,7 @@ $\partial A$를 정의하고 나면, closure를 조금 더 직관적으로 이�
 
 $$A\cup\partial A=A\cup(\operatorname{cl}A\setminus\operatorname{int}A)=A\cup\operatorname{cl}A=\operatorname{cl}A$$
 
-이므로 closure란 집합 $A$에, $A$의 boundary point를 더하여 만들어진 닫힌집합이다. 물론 boundaary라는 것을 closure를 통해 정의하였으므로, 이를 그냥 받아들이는 것은 순환논법이다. 
+이므로 closure란 집합 $A$에, $A$의 boundary point를 더하여 만들어진 닫힌집합이다. 물론 boundary라는 것을 closure를 통해 정의하였으므로, 이를 그냥 받아들이는 것은 순환논법이다. 
 
 <div class="definition" markdown="1">
 
@@ -123,7 +123,7 @@ $$x\in\operatorname{cl}A\setminus A\subset\operatorname{cl}A\setminus\operatorna
 
 가 성립한다. 
 
-이제 반대로 $x\in\partial A\setminus A$라 하자. $\operatorname{int}A\subset A$이므로, 
+이제 반대로 $x\in\partial A\setminus A$라 하자. $\operatorname{int}A\subseteq A$이므로, 
 
 $$\partial A\setminus A=(\operatorname{cl}A\setminus\operatorname{int}A)\setminus A=\operatorname{cl}A $$
 
@@ -200,7 +200,7 @@ $X\setminus\\{x\\}$가 열린집합임을 보이면 충분하다. 그런데 임�
 
 우선, $x$의 임의의 열린근방이 $A$의 무한히 많은 점을 포함한다면, 자기 자신과 다른 점에서 $A$와 만나는 것은 자명하므로 반대방향만 증명하면 충분하다.
 
-$x$가 $A$의 limit point라 하고, 결론에 반하여 $x$의 어떤 neighborhood $U$가 $A$와 유한하게 많은 점에서만 만난다고 하자. $x$ 자기 자신을 제외하고, $U$가 $A$와 만나는 점을 $x_1,\ldots, x_n$이라 하면 $X$가 $T_1$이므로 $\\{x_1,\ldots, x_n\\}$은 닫힌집합이고 따라서 다음의 집합
+$x$가 $A$의 limit point라 하고, 결론에 반하여 $x$의 어떤 열린근방 $U$가 $A$와 유한하게 많은 점에서만 만난다고 하자. $x$ 자기 자신을 제외하고, $U$가 $A$와 만나는 점을 $x_1,\ldots, x_n$이라 하면 $X$가 $T_1$이므로 $\\{x_1,\ldots, x_n\\}$은 닫힌집합이고 따라서 다음의 집합
 
 $$U\setminus\{x_1,\ldots, x_n\}=U\cap\bigl(X\setminus\{x_1,\ldots, x_n\}\bigr)$$
 

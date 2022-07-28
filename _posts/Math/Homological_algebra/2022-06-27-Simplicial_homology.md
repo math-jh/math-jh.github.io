@@ -39,7 +39,7 @@ Homology group을 계산하는 방법은 여러가지가 있는데, 우선 우�
 
 1. 각각의 $\alpha$마다, $\sigma_\alpha$를 $\Delta^n$의 내부로 제한한 것은 injection이 되며, 또 $X$의 임의의 점은 이렇게 제한된 함수들의 image 중 정확히 하나에 들어간다.
 2. 각각의 $\alpha$마다, $\sigma_\alpha$를 $\Delta^n$의 각 면으로 제한한 $\Delta^{n-1}\rightarrow X$ 또한 이 함수들 중 하나이다.
-3. $A\subset X$가 열린집합인 것은 모든 $\alpha$에 대해 $\sigma_\alpha^{-1}(A)$가 $\Delta^n$에서 열린집합인 것이다. 
+3. $A\subseteq X$가 열린집합인 것은 모든 $\alpha$에 대해 $\sigma_\alpha^{-1}(A)$가 $\Delta^n$에서 열린집합인 것이다. 
 
 예를 들어 다음의 torus는 $\Delta$-complex 구조를 가진다. 
 
