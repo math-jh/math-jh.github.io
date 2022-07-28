@@ -128,7 +128,7 @@ $$B(x,r)=\bigcup_{y\in B(x,r)} B(y, \delta_y)$$
 </div>
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> 임의의 집합 $X$ 위에 주어진 discrete topology 또한 metric으로 표현할 수 있다. $d:X\times X\rightarrow\mathbb{R}$을 다음의 식 
+<ins id="ex9">**예시 9**</ins> 임의의 집합 $X$ 위에 주어진 discrete topology 또한 metric으로 표현할 수 있다. $d:X\times X\rightarrow\mathbb{R}$을 다음의 식 
 
 $$d(x,y)=\begin{cases}0&x=y\\ 1&x\neq y\end{cases}$$
 
@@ -139,7 +139,7 @@ $$d(x,y)=\begin{cases}0&x=y\\ 1&x\neq y\end{cases}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df14">**정의 14**</ins> 위상공간 $(X,\mathcal{T})$에 대하여, $X$ 위에 어떠한 metric $d$가 존재하여, $\mathcal{T}$가 이 metric $d$에 의해 만들어지는 metric topology와 동일하도록 할 수 있다면 $(X,\mathcal{T})$가 *metrizable<sub>거리화 가능</sub>*하다고 하고, 이렇게 $d$가 부여된 구조 $(X,d)$를 *<sub>metric space</sub>*이라 부른다.
+<ins id="df10">**정의 10**</ins> 위상공간 $(X,\mathcal{T})$에 대하여, $X$ 위에 어떠한 metric $d$가 존재하여, $\mathcal{T}$가 이 metric $d$에 의해 만들어지는 metric topology와 동일하도록 할 수 있다면 $(X,\mathcal{T})$가 *metrizable<sub>거리화 가능</sub>*하다고 하고, 이렇게 $d$가 부여된 구조 $(X,d)$를 *<sub>metric space</sub>*이라 부른다.
 
 </div>
 
