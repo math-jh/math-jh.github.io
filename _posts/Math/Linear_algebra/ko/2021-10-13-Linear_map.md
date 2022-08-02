@@ -1,20 +1,21 @@
 ---
-layout: single
-date: 2021-10-13
+
 title: "선형사상"
+excerpt: "선형사상의 정의와 예시"
+
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/linear_map
+sidebar: 
+    nav: "linear_algebra-ko"
+
 header:
     overlay_image: /assets/images/Linear_algebra/Linear_map.png
     overlay_filter: 0.5
-toc: true
-toc_sticky: true
-comments: true
-sidebar: 
-    nav: "preliminaries"
-excerpt: "Linear map"
-lang: ko
-weight: 4
+
+date: 2021-10-13
+last_modified_at: 2022-08-01
+
+weight: 7
 ---
 <div class="notice--warning" markdown="1">
 
