@@ -14,7 +14,7 @@ sidebar:
     nav: "preliminaries"
 excerpt: "행렬식과 그 성질들"
 lang: ko
-weight: 9
+weight: 109
 ---
 <div class="notice--warning" markdown="1">
 
