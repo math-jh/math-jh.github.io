@@ -14,7 +14,7 @@ sidebar:
     nav: "preliminaries"
 excerpt: "선형대수학의 기본정리"
 lang: ko
-weight: 7
+weight: 107
 ---
 <div class="notice--warning" markdown="1">
 
