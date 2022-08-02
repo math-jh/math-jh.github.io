@@ -1,6 +1,6 @@
 ---
 
-title: "벡터공간의 정의와 예시"
+title: "벡터공간"
 excerpt: "벡터공간의 정의, 간단한 성질과 예시들"
 
 categories: [Math / Linear Algebra]

@@ -130,6 +130,22 @@ manifold-en:
       - title: 
         url: 
 
+linear_algebra-ko:
+  - title: <a href="/ko/linear_algebra" class="sidebar_title">선형대수학</a>
+    children:
+      - title: "가환군과 체"
+        url: /ko/math/linear_algebra/fields
+      - title: "벡터공간"
+        url: /ko/math/linear_algebra/vector_spaces
+      - title: "부분공간"
+        url: /ko/math/linear_algebra/subspaces
+      - title: "벡터공간의 기저"
+        url: /ko/math/linear_algebra/basis
+      - title: "벡터공간의 차원"
+        url: /ko/math/linear_algebra/dimension
+      - title: "무한차원 벡터공간<sup>†</sup>"
+        url: /ko/math/linear_algebra/infinite-dimensional-vector-space
+
 dev:
   - title: "블로그 개발"
     children:
