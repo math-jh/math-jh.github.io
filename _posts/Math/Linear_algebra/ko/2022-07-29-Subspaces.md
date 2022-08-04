@@ -206,3 +206,11 @@ $$p(\mathrm{x})=\sum_{i=0}^\infty \alpha_i\mathrm{x}^i$$
 </div>
 
 정의에 의하여 $F[\mathrm{x}]$는 $F[[\mathrm{x}]]$의 부분공간이다. 또, $F[\mathrm{x}]$의 모든 원소들은 집합 $\\{1,\mathrm{x},\mathrm{x}^2,\ldots\\}$의 벡터들의 일차결합으로 표현할 수 있지만, $F[[\mathrm{x}]]$의 원소들은 그렇지 않다.
+
+---
+
+**참고문헌**
+
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
+
+---

@@ -197,7 +197,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
 1. $L(S)$의 원소들 $L(s_1),\ldots, L(s_n)$들에 대하여, 만일
 
-    $$\sum_{i=1}^n\alpha_i L(s_i)=0
+    $$\sum_{i=1}^n\alpha_i L(s_i)=0$$
 
     라면, [명제 3](#pp3)에 의해
 
@@ -221,8 +221,6 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
 ## 선형사상의 예시들
 
-이제 linear map들의 예시를 살펴보자.
-
 <div class="example" markdown="1">
 
 <ins id="ex10">**예시 10**</ins> 임의의 $F$-벡터공간 $V$와 $W$에 대하여, 다음의 식
@@ -233,7 +231,7 @@ $$L(v)=0\text{ for all $v\in V$}$$
 
 </div>
 
-위와 같은 경우, 이 함수 자체를 $0$으로 표기하기도 한다.
+위의 예시에서 정의된 함수 자체를 $0$으로 표기하기도 한다. 이 표기는 덧셈에 대한 항등원 $0$과 혼동을 일으킬 수도 있지만, 이 함수는 <em_ko>실제로</em_ko> 적당한 벡터공간에서의 항등원이 된다. 이에 대한 증명은 어렵지 않지만 나중으로 미뤄둔다.
 
 <div class="example" markdown="1">
 
@@ -245,7 +243,7 @@ $$\iota(w)=w\text{ for all $w\in W$}$$
 
 </div>
 
-여기서 $\iota$는 inclusion을 나타내는 데에 주로 쓰이는 문자다. 
+위의 예시에서 특별히 $W=V$인 경우 $L$은 항등함수 $\operatorname{id}_V$와 같게 된다. ([집합론, §함수 (1), 예시 8](/ko/math/set_theory/functions_1#ex8)) 
 
 <div class="example" markdown="1">
 
@@ -277,7 +275,7 @@ $$D\left(\sum_{i=0}^\infty a_i\mathrm{x}^i\right)=\sum_{i=1}^\infty ia_i\mathrm{
 
 </div>
 
-마지막 예시는 단순한 예시일 뿐만 아니라, 
+마지막 예시는 단순한 예시일 뿐만 아니라, 다음 글에서 살펴볼 isomorphism의 원형이라 생각할 수 있다.
 
 <div class="example" markdown="1">
 
@@ -316,7 +314,7 @@ $$\sum_{i=1}^n\alpha_i b_i$$
 
 ---
 
-**Reference**
+**참고문헌**
 
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
 

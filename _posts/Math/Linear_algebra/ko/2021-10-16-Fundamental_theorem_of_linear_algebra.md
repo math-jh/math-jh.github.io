@@ -363,10 +363,11 @@ $$I=[\operatorname{id}_V]_{\mathcal{B}_1}^{\mathcal{B}_2}[\operatorname{id}_V]_{
 
 
 ---
-**Reference**
+
+**참고문헌**
 
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
-**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005
+**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 
 ---
 
