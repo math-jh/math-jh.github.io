@@ -239,7 +239,8 @@ $$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\r
 </div>
 
 ---
-**Reference**
+
+**참고문헌**
 
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
 

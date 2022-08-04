@@ -63,9 +63,15 @@ weight: 17
 
 </div>
 
-잠시동안만 이 관계를 $\operatorname{Eq}(A,B)$로 적자. 이 관계가 동치관계임을 보이는 것은 어렵지 않다.  
+그럼
 
-자명하게 이 관계는 reflexive하고 (항등함수), symmetric하며 (역함수), 전단사함수 두 개의 합성은 전단사함수이므로 transitive하기도 하다. 따라서 주어진 집합 $X$에 대하여, 우리는 $X$를 포함하는 equivalence class를 얻고, 이제 이 equivalence class 가운데에서 이를 대표하는 원소를 아무거나 하나 뽑으면 집합의 크기를 정의할 수 있다.[^1]
+1. 임의의 집합 $A$에 대하여, $\operatorname{id}_A$는 $A$에서 $A$로의 전단사함수이다.
+2. 임의의 집합 $A,B$ 사이에 전단사함수 $f:A\rightarrow B$가 존재한다면 그 역함수 $f^{-1}:B\rightarrow A$는 $B$에서 $A$로의 전단사함수이다.
+3. 두 전단사함수의 합성 또한 전단사함수이다.
+
+이상에서 동치관계의 정의에서 만족되지 않는 유일한 조건은 위의 관계가 <em_ko>특정 집합 $U$ 위에서</em_ko> reflexive하다는 조건뿐이며, 따라서 전체집합이 존재하지 않는다는 문제만 해결하면 이 관계를 전체집합 위에서 정의된 동치관계라 생각할 수 있다. 
+
+엄밀한 해결책은 아니지만, 지금부터는 이 문제가 해결되었다고 가정하고 이야기를 전개한다. (참고: [Wikipedia, Class](https://en.wikipedia.org/wiki/Class_(set_theory)))
 
 <div class="definition" markdown="1">
 
@@ -305,9 +311,6 @@ $$\beth_0=\aleph_0,\quad \beth_{\alpha+1}=\mathbf{2}^{\beth_\alpha}$$
 ---
 **참고문헌** 
 
-- [Bou13] N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
+**[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
 
 ---
-
-[^1]: 이 부분이 이전 글에서 언급했던 <em_ko>엄밀하지 않은 부분</em_ko>.
-[^2]: 사실 이는 sum과 product에서도 마찬가지다.
