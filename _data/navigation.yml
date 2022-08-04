@@ -145,6 +145,10 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/dimension
       - title: "무한차원 벡터공간<sup>†</sup>"
         url: /ko/math/linear_algebra/infinite-dimensional-vector-space
+      - title: "선형사상"
+        url: /ko/math/linear_algebra/linear_map
+      - title: "동형사상"
+        url: /ko/math/linear_algebra/isomorphic_vector_spaces
 
 dev:
   - title: "블로그 개발"

@@ -178,7 +178,8 @@ $$\lvert\mathcal{B}_1\rvert\leq\lvert\operatorname{im}f\times\mathbb{N}\rvert=\l
 
 
 ---
-**Reference**
+
+**참고문헌**
 
 **[Hun]** Thomas W. Hungerford, *Algebra*, Graduate texts in mathematics, Springer, 2003.
 
