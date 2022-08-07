@@ -16,6 +16,7 @@ date: 2021-10-13
 last_modified_at: 2022-08-01
 
 weight: 7
+
 ---
 
 이번 글에서는 벡터공간들 간의 함수, 즉 *선형사상*을 정의한다.
@@ -61,7 +62,7 @@ $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
 <ins id="pp3">**명제 3**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$, 스칼라들 $\alpha_1,\ldots,\alpha_n$과 $V$의 벡터들 $v_1,\ldots, v_n$에 대하여
 
-$$L\left(\sum_{i=1}^n\alpha_i v_i\right)=\sum_{i=1}^nL(\alpha_iv_i)$$
+$$L\left(\sum_{i=1}^k\alpha_i v_i\right)=\sum_{i=1}^kL(\alpha_iv_i)$$
 
 이 성립한다.
 
@@ -69,7 +70,7 @@ $$L\left(\sum_{i=1}^n\alpha_i v_i\right)=\sum_{i=1}^nL(\alpha_iv_i)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$n$에 대한 귀납법에 의하여 자명하다.
+$k$에 대한 귀납법에 의하여 자명하다.
 
 </details>
 
@@ -170,7 +171,7 @@ $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \operatorname{im}L$$
 
 둘째 주장은 동어반복이다.
 
-만약 $L$이 단라면 $L(v)=0$을 만족하는 $v$는 유일해야 하고, [명제 2](#pp2)에 의해 $0$은 이 식을 만족하므로 $\ker L=\\{0\\}$이어야 한다. 따라서 첫째 주장 중에서도 다음의 명제
+만약 $L$이 단사라면 $L(v)=0$을 만족하는 $v$는 유일해야 하고, [명제 2](#pp2)에 의해 $0$은 이 식을 만족하므로 $\ker L=\\{0\\}$이어야 한다. 따라서 첫째 주장 중에서도 다음의 명제
 
 > $\ker L=\\{0\\}\implies\text{$L$ injective}$
 
@@ -195,23 +196,23 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $L(S)$의 원소들 $L(s_1),\ldots, L(s_n)$들에 대하여, 만일
+1. $L(S)$의 원소들 $L(x_1),\ldots, L(x_k)$들에 대하여, 만일
 
-    $$\sum_{i=1}^n\alpha_i L(s_i)=0$$
+    $$\sum_{i=1}^k\alpha_i L(x_i)=0$$
 
     라면, [명제 3](#pp3)에 의해
 
-    $$0=L\left(\sum_{i=1}^n\alpha_is_i\right)$$
+    $$0=L\left(\sum_{i=1}^k\alpha_ix_i\right)$$
 
-    이므로, 앞선 명제에 의해 $\sum\alpha_is_i=0$이어야 한다. 이제, $S$는 일차독립인 부분집합이므로, $\alpha_i=0$이 모든 $i$에 대해 성립해야 한다.
+    이므로, 앞선 명제에 의해 $\sum\alpha_ix_i=0$이어야 한다. 이제, $S$는 일차독립인 부분집합이므로, $\alpha_i=0$이 모든 $i$에 대해 성립한다.
 
 2. 임의의 $w\in W$가 주어졌다 하자. 그럼 $\operatorname{im}L=W$이므로, 적당한 $v\in V$가 존재하여 $L(v)=w$이다. 한편, $\operatorname{span}S=V$이므로 $v$를 $S$의 원소들의 일차결합
 
-    $$v=\sum_{i=1}^n\alpha_is_i$$
+    $$v=\sum_{i=1}^n\alpha_ix_i$$
     
     으로 나타낼 수 있다. 양 변에 $L$을 취한 후 [명제 3](#pp3)을 적용하면
     
-    $$w=L(v)=L\left(\sum_{i=1}^n\alpha_is_i\right)=\sum_{i=1}^n\alpha_i L(s_i)$$
+    $$w=L(v)=L\left(\sum_{i=1}^n\alpha_ix_i\right)=\sum_{i=1}^n\alpha_i L(x_i)$$
     
     가 성립한다. 즉 임의의 $w\in W$는 $L(S)$의 원소들의 일차결합으로 표현할 수 있다.
  
@@ -271,7 +272,7 @@ $\operatorname{pr}$은 projection의 머릿글자로, 간단히 $p$, 혹은 $\pi
 
 $$D\left(\sum_{i=0}^\infty a_i\mathrm{x}^i\right)=\sum_{i=1}^\infty ia_i\mathrm{x}^{i-1}$$
 
-으로 정의하자. 그럼 $D$는 linear이고, $\operatorname{im} D= F[\mathrm{x}]$이다. 또, $\ker D$는 모든 constant polynomial들의 모임이다. 
+으로 정의하자. (여기서 $(a_i)$는 finitely supported이다.) 그럼 $D$는 linear이고, $\operatorname{im} D= F[\mathrm{x}]$이다. 또, $\ker D$는 모든 constant polynomial들의 모임이다. 
 
 </div>
 
@@ -279,15 +280,15 @@ $$D\left(\sum_{i=0}^\infty a_i\mathrm{x}^i\right)=\sum_{i=1}^\infty ia_i\mathrm{
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> 임의의 $n$차원 $F$-벡터공간 $V$가 주어졌다 하고, $B=\\{b_1,\ldots, b_n\\}$이 $V$의 basis라 하자. 즉 임의의 $v\in V$에 대하여, 
+<ins id="ex14">**예시 14**</ins> 임의의 $n$차원 $F$-벡터공간 $V$가 주어졌다 하고, $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 $V$의 basis라 하자. 즉 임의의 $v\in V$에 대하여, 
 
-$$v=\sum_{i=1}^n v_i b_i$$
+$$v=\sum_{i=1}^n v_i x_i$$
 
-이도록 하는 스칼라들 $v_1,\ldots, v_n$이 항상 존재하며, 유일하게 결정된다. (우리는 이 표현을 $[v]_B$로 적기로 했었다.) 따라서, 함수 $L:V\rightarrow F^n$을 식 $v\mapsto (v_1,v_2,\ldots, v_n)\in F^n$으로 정의할 수 있다.
+이도록 하는 스칼라들 $v_1,\ldots, v_n$이 항상 존재하며, 유일하게 결정된다. 따라서, 함수 $L:V\rightarrow F^n$을 식 $v\mapsto (v_1,v_2,\ldots, v_n)\in F^n$으로 정의할 수 있다.
 
 그럼 $L$은 linear다. 임의의 $v,w\in V$에 대하여,
 
-$$v=\sum_{i=1}^n v_i b_i,\quad w=\sum_{i=1}^n w_i b_i$$
+$$v=\sum_{i=1}^n v_i x_i,\quad w=\sum_{i=1}^n w_i x_i$$
 
 이라 하면, 임의의 $\alpha\in F$에 대하여
 
@@ -295,7 +296,7 @@ $$\alpha L(v)=\alpha(v_1,v_2,\ldots,v_n)=(\alpha v_1,\alpha v_2,\ldots,\alpha v_
 
 인데,
 
-$$\alpha v=\alpha\sum_{i=1}^nv_i b_i=\sum_{i=1}^n\alpha v_i b_i$$
+$$\alpha v=\alpha\sum_{i=1}^nv_i x_i=\sum_{i=1}^n\alpha v_i x_i$$
 
 이므로 $L(\alpha v)$의 값은 $\alpha L(v)$의 값과 동일하다. 마찬가지로, $L(v)+L(w)$와 $L(v+w)$의 값을 비교해보면
 
@@ -303,9 +304,9 @@ $$L(v)+L(w)=(v_1+w_1,v_2+w_2,\ldots,v_n+w_n)=L(v+w)$$
 
 가 성립한다.
 
-$\ker L$은 $B$가 일차독립이므로 $\\{0\\}$이 된다. 한편, 임의의 $(\alpha_1,\ldots,\alpha_n)\in F^n$에 대하여 다음의 일차결합
+$\ker L$은 $\mathcal{B}$가 일차독립이므로 $\\{0\\}$이 된다. 한편, 임의의 $(\alpha_1,\ldots,\alpha_n)\in F^n$에 대하여 다음의 일차결합
 
-$$\sum_{i=1}^n\alpha_i b_i$$
+$$\sum_{i=1}^n\alpha_i x_i$$
 
 은 당연히 $V$에 속하므로, $L$은 단사함수이다. 
 
