@@ -137,7 +137,7 @@ $$\beta_2v_2+\beta_1v_1+\alpha_1u_1+\alpha_2u_2+\ldots+\alpha_{n-1}u_{n-1}=0$$
 
 만약 $\operatorname{span}S=V$라면, 더 이상 증명할 것이 없다. 그렇지 않다면 $v\not\in\operatorname{span}S$인 $v\in V$가 존재한다. 이제 집합 $S_1=S\cup\\{v\\}$이라 하자. 그럼 $S_1$은 일차독립이다. 자명하게 $v\neq0$이며, 이제 $S_1$의 임의의 일차결합 
 
-$$\sum_{s\in S_1} \alpha_ss=\sum_{s\in S}\alpha_ss+\alpha_vv=0$$  
+$$\sum_{x\in S_1} \alpha_xx=\sum_{x\in S}\alpha_xx+\alpha_vv=0$$  
 
 이라 하면, $\alpha_v\neq 0$일 경우 $\alpha_vv$를 이항한 후 $-\alpha_v^{-1}$를 곱해주면 $v$를 $S$의 원소들의 일차결합으로 나타낼 수 있는데, 이는 $v$의 선택에 모순이기 때문이다. 따라서 $\alpha_v=0$이고, 그럼 $S$의 각 원소들은 일차독립이므로 $\alpha_x=0$이 모든 $x\in S$에 대해 성립한다. 따라서, $\alpha_x=0$이 모든 $x\in S_1$에 대해 성립한다.
 
@@ -157,7 +157,7 @@ $V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$S_0=\emptyset$이라 하자. 그럼 $\operatorname{span}S_0=\\{0\\}$이다. 이제 $S\setminus\operatorname{span}S_0$의 원소 $s_1$을 택해 $S_1=\\{s_1\\}=S_0\cup\\{s_1\\}$이라 하고, 비슷하게 $S\setminus\operatorname{span}S_1$의 원소 $s_2$를 택해 $S_2=\\{s_1,s_2\\}=S_1\cup \\{s_2\\}$를 만드는 과정을 반복한다.
+$S_0=\emptyset$이라 하자. 그럼 $\operatorname{span}S_0=\\{0\\}$이다. 이제 $S\setminus\operatorname{span}S_0$의 원소 $x_1$을 택해 $S_1=\\{x_1\\}=S_0\cup\\{x_1\\}$이라 하고, 비슷하게 $S\setminus\operatorname{span}S_1$의 원소 $x_2$를 택해 $S_2=\\{x_1,x_2\\}=S_1\cup \\{x_2\\}$를 만드는 과정을 반복한다.
 
 이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\operatorname{span}S_i$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 모든 $i < n = \dim V$에 대하여 $S\setminus\operatorname{span}S_i$가 공집합이 아니라는 것을 보이면 충분하다. 
 
@@ -183,7 +183,7 @@ $$(v_1, w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2),\quad\alpha(v,w)=(\alpha v,\alpha w)$$
 
 으로 주어진다. 어렵지 않게, 만일 $\mathcal{B}_1$, $\mathcal{B}_2$가 각각 $V$, $W$의 기저들이라면, $V\times W$의 부분집합
 
-$$\mathcal{B}=\{(x, y): x\in \mathcal{B}_2\text{ and }y\in \mathcal{B}_2\}$$
+$$\mathcal{B}=\{(x, y): x\in \mathcal{B}_1\text{ and }y\in \mathcal{B}_2\}$$
 
 이 $V\times W$의 기저가 되는 것을 확인할 수 있다. 특히, 만일 $V$, $W$가 모두 유한차원이라면 $V\times W$도 그러하고 $\dim(V\times W)$는 $(\dim V)+(\dim W)$와 같게 된다.
 
