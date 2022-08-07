@@ -1,49 +1,43 @@
 ---
-layout: single
-date: 2021-10-12
+
 title: "무한차원 벡터공간<sup>†</sup>"
+excerpt: "무한차원 벡터공간의 기저와 차원"
+
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/infinite-dimensional-vector-space
+sidebar: 
+    nav: "linear_algebra-ko"
+
 header:
     overlay_image: /assets/images/Linear_algebra/basis_and_dimension.png
     overlay_filter: 0.5
-toc: true
-toc_sticky: true
-comments: true
-sidebar: 
-    nav: "preliminaries"
-excerpt: "무한차원 벡터공간의 기저와 차원"
-lang: ko
-weight: 3
+
+date: 2021-10-12
+last_modified_at: 2022-08-01
+
+weight: 6
+
 ---
-<div class="notice--warning" markdown="1">
 
-이 글은 현재 수정중입니다.
+우리는 다음 이야기를 하기에 앞서서, 모든 (유한차원일 필요는 없는) 벡터공간이 basis를 가지며, 이 때 차원이 잘 정의된다는 것을 보인다. 
 
-이 글은 예전에 쓴 글로, 서술 방향이 마음에 들지 않거나 표기법이 마음에 들지 않아 전체적으로 수정이 진행중입니다. 읽으실 때 참고해주세요.
-
-</div>
-
-
-우리는 다음 이야기를 하기에 앞서서, 모든 (유한차원일 필요는 없는) 벡터공간이 기저를 가지며, 이 때 차원이 잘 정의된다는 것을 보인다. 
-
-## 기저의 존재성
+## basis의 존재성
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 집합들의 family $\mathscr{B}$에 대하여, $A\in\mathscr{B}$가 *maximal*이라는 것은, 만약 임의의 $B\in\mathscr{B}$에 대하여 $A\subset B$라면 반드시 $A=B$인 것이다. (cf. [Set Theory, §순서관계, 정의 15](/ko/note/set_theory/order_relations#pp15)) 
+<ins id="df1">**정의 1**</ins> 집합들의 family $\mathscr{B}$에 대하여, $A\in\mathscr{B}$가 *maximal*이라는 것은, 만약 임의의 $B\in\mathscr{B}$에 대하여 $A\subset B$라면 반드시 $A=B$인 것이다. (cf. [집합론, §순서집합의 원소들, 정의 1](/ko/math/set_theory/elements_in_ordered_set#df1)) 
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 임의의 $F$-벡터공간 $V$에 대하여, $V$의 모든 일차독립인 부분집합들의 모임을 $\mathscr{B}$라 하자. 만약 $\mathscr{B}$의 maximal element $\mathcal{B}$가 존재한다면, $\mathcal{B}$는 $V$의 기저가 된다. 
+<ins id="pp2">**명제 2**</ins> 임의의 $F$-벡터공간 $V$에 대하여, $V$의 모든 일차독립인 부분집합들의 모임을 $\mathscr{B}$라 하자. 만약 $\mathscr{B}$의 maximal element $\mathcal{B}$가 존재한다면, $\mathcal{B}$는 $V$의 basis가 된다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-결론에 반하여 $\mathcal{B}$가 $V$의 기저가 아니라 가정하자. $\mathcal{B}\in\mathscr{B}$이므로, $\mathcal{B}$는 일차독립이고, 따라서 $\mathcal{B}$가 $V$의 기저가 아니기 위해서는 $\mathcal{B}$가 $V$를 span하지 않아야 한다. 이제 $\operatorname{span}\mathcal{B}$ 바깥에 있는 $V$의 원소를 하나 뽑아 이를 $v$라 하고, $\mathcal{B}'=\mathcal{B}\cup\\{v\\}$이라 하자. 만일
+결론에 반하여 $\mathcal{B}$가 $V$의 basis가 아니라 가정하자. $\mathcal{B}\in\mathscr{B}$이므로 $\mathcal{B}$는 일차독립이고, 따라서 $\mathcal{B}$가 $V$의 basis가 아니기 위해서는 $\mathcal{B}$가 $V$를 span하지 않아야 한다. 이제 $\operatorname{span}\mathcal{B}$ 바깥에 있는 $V$의 원소를 하나 뽑아 이를 $v$라 하고, $\mathcal{B}'=\mathcal{B}\cup\\{v\\}$이라 하자. 만일
 
 $$\sum_{x\in\mathcal{B}'}\alpha_xx=0,\qquad\text{$(\alpha_x)_{x\in\mathcal{B}'}$ finitely supported}$$
 
@@ -69,21 +63,21 @@ $$\sum_{x\in\mathcal{B}'}\alpha_xx=0,\qquad\text{$(\alpha_x)_{x\in\mathcal{B}'}$
  
 </details>
 
-따라서, 임의의 $F$-벡터공간의 기저가 존재한다는 것을 보이기 위해서는 집합 $\mathscr{B}$의 maximal element가 존재함을 보이면 된다. 당연히:
+따라서, 임의의 $F$-벡터공간의 basis가 존재한다는 것을 보이기 위해서는 집합 $\mathscr{B}$의 maximal element가 존재함을 보이면 된다. 당연히 이는 Zorn's lemma를 사용한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem3">**보조정리 3 (Zorn)**</ins> 집합들의 모임 $\mathscr{B}$의 임의의 전순서 부분집합이 항상 upper bound를 갖는다고 가정하자. 즉, $\mathcal{C}\subset\mathscr{B}$이고, $\mathcal{C}$가 추가적인 다음의 조건
+<ins id="lem3">**보조정리 3 (Zorn)**</ins> 집합들의 모임 $\mathscr{B}$의 임의의 chain이 항상 upper bound를 갖는다고 가정하자. 즉, $\mathcal{C}\subseteq\mathscr{B}$이고, $\mathcal{C}$가 추가적인 다음의 조건
 
-> 임의의 $C_1,C_2\in\mathcal{C}$에 대하여, 항상 $C_1\subset C_2$이거나 $C_2\subset C_1$
+> 임의의 $C_1,C_2\in\mathcal{C}$에 대하여, 항상 $C_1\subseteq C_2$이거나 $C_2\subseteq C_1$
 
-을 만족한다면, 항상 적당한 $\mathcal{B}\in\mathscr{B}$가 존재하여, 임의의 $C\in\mathcal{C}$에 대해 $C\subset\mathcal{B}$이도록 할 수 있다고 가정하자. 그럼 $\mathscr{B}$는 maximal element를 갖는다.
+을 만족한다면, 항상 적당한 $\mathcal{B}\in\mathscr{B}$가 존재하여, 임의의 $C\in\mathcal{C}$에 대해 $C\subseteq\mathcal{B}$이도록 할 수 있다고 가정하자. 그럼 $\mathscr{B}$는 maximal element를 갖는다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[Set Theory, §Ordinals, well-ordering<sup>†</sup>, 명제 17](/ko/note/set_theory/ordinal_numbers#pp17).
+[집합론, §선택공리, 정리 4](/ko/math/set_theory/axiom_of_choice#thm4).
 
 </details>
 
@@ -91,7 +85,7 @@ $$\sum_{x\in\mathcal{B}'}\alpha_xx=0,\qquad\text{$(\alpha_x)_{x\in\mathcal{B}'}$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm4">**정리 4**</ins> 임의의 $F$-벡터공간 $V$는 기저를 갖는다.
+<ins id="thm4">**정리 4**</ins> 임의의 $F$-벡터공간 $V$는 basis를 갖는다.
 
 </div>
 <details class="proof" markdown="1">
@@ -99,7 +93,7 @@ $$\sum_{x\in\mathcal{B}'}\alpha_xx=0,\qquad\text{$(\alpha_x)_{x\in\mathcal{B}'}$
 
 $V$의 모든 일차독립인 부분집합들을 모아둔 집합을 $\mathscr{B}$라 하자. $\mathscr{B}$가 [보조정리 3](#lem3)의 조건을 만족한다는 것을 보이면 된다.
 
-이를 위해, $\mathscr{B}$의 임의의 전순서 부분집합 $\mathcal{C}$가 주어졌다 하자. 우리는 임의의 $C\in\mathcal{C}$에 대해 $C\subset\mathcal{B}$가 성립하도록 하는 $\mathcal{B}\in\mathscr{B}$를 찾아야 한다. 당연히 자연스러운 선택은 $\mathcal{B}=\bigcup_{C\in\mathcal{C}}C$이다. 증명을 마무리하기 위해서는 이 집합이 $\mathscr{B}$의 원소라는 것을 보여야 한다. 즉, $\mathcal{B}$가 일차독립이어야 한다.
+이를 위해, $\mathscr{B}$의 임의의 chain $\mathcal{C}$가 주어졌다 하자. 우리는 임의의 $C\in\mathcal{C}$에 대해 $C\subseteq\mathcal{B}$가 성립하도록 하는 $\mathcal{B}\in\mathscr{B}$를 찾아야 한다. 당연히 자연스러운 선택은 $\mathcal{B}=\bigcup_{C\in\mathcal{C}}C$이다. 증명을 마무리하기 위해서는 이 집합이 $\mathscr{B}$의 원소라는 것을 보여야 한다. 즉, $\mathcal{B}$가 일차독립이어야 한다.
 
 임의의 finitely supported family $(\alpha_x)_{x\in\mathcal{B}}$에 대하여, 
 
@@ -109,11 +103,11 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 
 </details>
 
-다음 두 따름정리는 모두 유한차원일 경우에는 증명을 했었지만 ([§기저와 차원, 명제 18](/ko/math/linear_algebra/basis_and_dimension#pp18), [명제 19](/ko/math/linear_algebra/basis_and_dimension#pp19)) 앞선 논증과 비슷하게, 무한차원 벡터공간에 대해서도 성립한다. 
+다음 두 따름정리는 모두 유한차원일 경우에는 증명을 했었지만 ([§basis와 차원, 명제 5](/ko/math/linear_algebra/dimension#pp5), [명제 6](/ko/math/linear_algebra/dimension#pp6)) 앞선 논증과 비슷하게, 무한차원 벡터공간에 대해서도 성립한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> $F$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 기저 $\mathcal{B}$가 존재한다.
+<ins id="crl5">**따름정리 5**</ins> $F$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 basis $\mathcal{B}$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -124,7 +118,7 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 </details>
 <div class="proposition" markdown="1">
 
-<ins id="crl6">**따름정리 6**</ins> $F$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 기저가 된다. 
+<ins id="crl6">**따름정리 6**</ins> $F$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -134,15 +128,15 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 
 > $S$에 포함된 모든 일차독립인 부분집합들의 집합
 
-으로 정의하자. 어렵지 않게 $\mathscr{C}$가 Zorn's lemma의 조건을 만족한다는 것을 확인할 수 있고, 따라서 maximal element $\mathcal{B}$가 존재한다. 이제 $\mathcal{B}$는 [명제 4](#pp4)에서 도입한 집합 $\mathscr{B}$ ($V$의 모든 일차독립인 부분집합들의 집합)에서도 maximal인 것을, 즉 $V$의 기저가 된다는 것을 증명하면 된다. 
+으로 정의하자. 어렵지 않게 $\mathscr{C}$가 Zorn's lemma의 조건을 만족한다는 것을 확인할 수 있고, 따라서 maximal element $\mathcal{B}$가 존재한다. 이제 $\mathcal{B}$는 [명제 4](#pp4)에서 도입한 집합 $\mathscr{B}$ ($V$의 모든 일차독립인 부분집합들의 집합)에서도 maximal인 것을, 즉 $V$의 basis가 된다는 것을 증명하면 된다. 
 
-결론에 반하여 $\mathcal{B}$가 $V$의 기저가 아니라 가정하자. 그럼 어떤 $v\in V$가 존재하여 $v\not\in\operatorname{span}\mathcal{B}$이다. 한편, $S$는 $V$를 span하므로, 적당한 finitely supported family $(\alpha_x)_{x\in S}$가 존재하여 
+결론에 반하여 $\mathcal{B}$가 $V$의 basis가 아니라 가정하자. 그럼 어떤 $v\in V$가 존재하여 $v\not\in\operatorname{span}\mathcal{B}$이다. 한편, $S$는 $V$를 span하므로, 적당한 finitely supported family $(\alpha_x)_{x\in S}$가 존재하여 
 
 $$v=\sum_{x\in S}\alpha_xx$$
 
 이다. (물론, $S$는 일차독립인 부분집합이 아니므로 이 표현은 유일하지 않을 수 있다.) 만일 $\operatorname{supp}(\alpha_x)_{x\in S}$의 원소들이 모두 $\mathcal{B}$의 원소였다면 $v\in\operatorname{span}\mathcal{B}$였을 것이므로, $x\not\in\mathcal{B}$를 만족하는 원소들 $x\in S$가 존재한다. 또, 만일 이러한 원소 $x$들이 모두 $\mathcal{B}$의 다른 원소들의 일차결합으로 표현 가능하다면, $\alpha_xx$들을 모두 이 일차결합으로 바꾸면 $v\in\operatorname{span}\mathcal{B}$이므로, 이러한 $x$들 가운데에는 $\mathcal{B}$의 원소들의 일차결합으로 나타나지 않는 어떤 원소 $y$가 존재한다. 
 
-이제 $\mathcal{B}'=\mathcal{B}\cup\\{y\\}$라 하자. 그럼 $y$는 $\mathcal{B}$의 원소들의 일차결합으로 나타나지 않으므로, $\mathcal{B}'$는 일차독립인 부분집합이고, $y\in S$이므로 $\mathcal{B}'\in\mathscr{C}$이다. 이는 $\mathcal{B}$가 $\mathscr{C}$에서 maximal이라는 가정에 모순이므로, $\mathcal{B}$는 $V$의 기저여야 한다.   
+이제 $\mathcal{B}'=\mathcal{B}\cup\\{y\\}$라 하자. 그럼 $y$는 $\mathcal{B}$의 원소들의 일차결합으로 나타나지 않으므로, $\mathcal{B}'$는 일차독립인 부분집합이고, $y\in S$이므로 $\mathcal{B}'\in\mathscr{C}$이다. 이는 $\mathcal{B}$가 $\mathscr{C}$에서 maximal이라는 가정에 모순이므로, $\mathcal{B}$는 $V$의 basis여야 한다.   
 
 </details>
 
@@ -150,19 +144,19 @@ $$v=\sum_{x\in S}\alpha_xx$$
 
 ## Well-definedness of dimension
 
-이렇게 기저의 존재성을 보이고 나면, 차원이 잘 정의된다는 것을 보여야 한다. 즉, 임의의 $F$-벡터공간 $V$에 대하여, $\mathcal{B}_1$, $\mathcal{B}_2$가 두 기저라면 $\lvert\mathcal{B}\_1\rvert=\lvert\mathcal{B}\_2\rvert$임을 보여야 한다. 
+이렇게 basis의 존재성을 보이고 나면, 차원이 잘 정의된다는 것을 보여야 한다. 즉, 임의의 $F$-벡터공간 $V$에 대하여, $\mathcal{B}_1$, $\mathcal{B}_2$가 두 basis라면 $\lvert\mathcal{B}\_1\rvert=\lvert\mathcal{B}\_2\rvert$임을 보여야 한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="thm7">**정리 7**</ins> 어떤 $F$-벡터공간 $V$가 무한한 기저 $\mathcal{B}\_1$을 갖는다면, $V$의 또 다른 기저 $\mathcal{B}\_2$ 또한 무한하며 그 cardinality는 $\lvert\mathcal{B}\_1\rvert$와 같다.
+<ins id="thm7">**정리 7**</ins> 어떤 $F$-벡터공간 $V$가 무한한 basis $\mathcal{B}\_1$을 갖는다면, $V$의 또 다른 basis $\mathcal{B}\_2$ 또한 무한하며 그 cardinality는 $\lvert\mathcal{B}\_1\rvert$와 같다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선, 결론에 반하여 $V$의 유한한 기저 $\mathcal{B}'$가 존재한다 하자. $\operatorname{span}\mathcal{B}'=V$이므로, $\mathcal{B}$의 모든 원소들은 $\mathcal{B}'$의 원소들의 일차결합으로 표현 가능하다. 그런데, 다시 $\mathcal{B}'$의 (유한히 많은) 원소들은 $V$의 원소이므로, 이들 각각은 기저 $\mathcal{B}$의 일차결합으로 나타나야 한다. 따라서 $\mathcal{B}'$의 모든 원소들을 일차결합으로 표현하기 위해서는 유한히 많은 $\mathcal{B}$의 원소들만이 필요하다. 이들을 $\\{x_1,\ldots, x_m\\}$이라 하자. $V$의 임의의 원소는 항상 $\mathcal{B}'$들의 일차결합으로, 그리고 다시 $\\{x_1,\ldots,x_m\\}$의 원소들로 표현할 수 있으므로, $\mathcal{B}\setminus\\{x_1,\ldots, x_m\\}$의 원소도 이들의 일차결합으로 표기 가능하며, 이는 일차독립성에 모순이다.
+우선, 결론에 반하여 $V$의 유한한 basis $\mathcal{B}'$가 존재한다 하자. $\operatorname{span}\mathcal{B}'=V$이므로, $\mathcal{B}$의 모든 원소들은 $\mathcal{B}'$의 원소들의 일차결합으로 표현 가능하다. 그런데, 다시 $\mathcal{B}'$의 (유한히 많은) 원소들은 $V$의 원소이므로, 이들 각각은 basis $\mathcal{B}$의 일차결합으로 나타나야 한다. 따라서 $\mathcal{B}'$의 모든 원소들을 일차결합으로 표현하기 위해서는 유한히 많은 $\mathcal{B}$의 원소들만이 필요하다. 이들을 $\\{x_1,\ldots, x_m\\}$이라 하자. $V$의 임의의 원소는 항상 $\mathcal{B}'$들의 일차결합으로, 그리고 다시 $\\{x_1,\ldots,x_m\\}$의 원소들로 표현할 수 있으므로, $\mathcal{B}\setminus\\{x_1,\ldots, x_m\\}$의 원소도 이들의 일차결합으로 표기 가능하며, 이는 일차독립성에 모순이다.
 
-따라서, $V$의 다른 기저 또한 항상 무한해야 한다. 이제 다른 기저 $\mathcal{B}\_2$의 cardinality가 $\mathcal{B}\_1$의 cardinality와 동일하다는 것을 보여야 한다. $\mathscr{B}$를 다음의 집합
+따라서, $V$의 다른 basis 또한 항상 무한해야 한다. 이제 다른 basis $\mathcal{B}\_2$의 cardinality가 $\mathcal{B}\_1$의 cardinality와 동일하다는 것을 보여야 한다. $\mathscr{B}$를 다음의 집합
 
 > $\mathcal{B}$의 유한한 부분집합들의 모임
 
@@ -182,11 +176,10 @@ $$\lvert\mathcal{B}_1\rvert\leq\lvert\operatorname{im}f\times\mathbb{N}\rvert=\l
 
 </details>
 
-[따름정리 5](#crl5), [따름정리 6](#crl6)에서 본 것과 같이, 우리가 앞으로 해 온 이야기, 그리고 앞으로 할 이야기의 대부분은 무한차원 벡터공간에서도 (적당한 수정만 거치면) 성립한다. 하지만 어쨌건 우리는 (특히 학부 수준에서는) 유한차원인 경우에 특별히 많은 관심이 있으므로, 이미 약속했던 것과 같이 앞으로 우리가 모든 벡터공간들은 유한차원인 것으로 가정한다.
-
 
 ---
-**Reference**
+
+**참고문헌**
 
 **[Hun]** Thomas W. Hungerford, *Algebra*, Graduate texts in mathematics, Springer, 2003.
 

@@ -76,10 +76,10 @@ $\mathcal{S}=\mathcal{P}(A)\setminus\\{A\\}$라 하자. 또, 함수 $p:\mathcal{
 
 이제 가장 범용적으로 쓰이는 선택공리의 동치인 Zorn's lemma를 소개할 차례다. 우선 다음을 정의하자.
 
-<ins id="df3">**정의 3**</ins> Ordered set $A$가 *inductive*하다는 것은 임의의 전순서 부분집합이 upper bound를 갖는 것이다.
+<ins id="df3">**정의 3**</ins> Ordered set $A$가 *inductive*하다는 것은 임의의 totally ordered subset이 upper bound를 갖는 것이다.
 {: .definition}
 
-다만 저자들마다 inductive set을 서로 다른 대상을 표현할 때 사용하기도 하므로, 이 용어를 사용할 때는 조금 주의가 필요하다. 이 정의는 우리는 종종 전순서 부분집합을 간단히 chain이라 부르기도 한다. 
+Inductive set은 저자에 따라 전혀 다른 개념을 뜻하기도 하므로 주의가 필요하다. Totally ordered subset은 *chain*이라 부르기도 한다. 
 
 <ins id="thm4">**정리 4 (Zorn's lemma)**</ins> 임의의 inductive set은 maximal element를 갖는다.
 {: .proposition}

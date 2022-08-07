@@ -130,6 +130,36 @@ manifold-en:
       - title: 
         url: 
 
+linear_algebra-ko:
+  - title: <a href="/ko/linear_algebra" class="sidebar_title">선형대수학</a>
+    children:
+      - title: "가환군과 체"
+        url: /ko/math/linear_algebra/fields
+      - title: "벡터공간"
+        url: /ko/math/linear_algebra/vector_spaces
+      - title: "부분공간"
+        url: /ko/math/linear_algebra/subspaces
+      - title: "벡터공간의 기저"
+        url: /ko/math/linear_algebra/basis
+      - title: "벡터공간의 차원"
+        url: /ko/math/linear_algebra/dimension
+      - title: "무한차원 벡터공간<sup>†</sup>"
+        url: /ko/math/linear_algebra/infinite-dimensional-vector-space
+      - title: "선형사상"
+        url: /ko/math/linear_algebra/linear_map
+      - title: "동형사상"
+        url: /ko/math/linear_algebra/isomorphic_vector_spaces
+      - title: "행렬들의 공간"
+        url: /ko/math/linear_algebra/matrix
+      - title: "선형사상들의 공간"
+        url: /ko/math/linear_algebra/space_of_linear_maps
+      - title: "선형대수학의 기본정리"
+        url: /ko/math/linear_algebra/ftla
+      - title: "기본정리: categorical viewpoint<sup>†</sup>"
+        url: /ko/math/linear_algebra/ftla_categorical_viewpoint
+      - title: "쌍대공간"
+        url: /ko/math/linear_algebra/dual_space
+
 dev:
   - title: "블로그 개발"
     children:

@@ -14,7 +14,7 @@ sidebar:
     nav: "preliminaries"
 excerpt: "행렬식과 그 성질들"
 lang: ko
-weight: 9
+weight: 109
 ---
 <div class="notice--warning" markdown="1">
 
@@ -30,8 +30,10 @@ weight: 9
  
 
 ---
-**Reference**
 
-**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005
+**참고문헌**
+
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
+**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 
 ---
