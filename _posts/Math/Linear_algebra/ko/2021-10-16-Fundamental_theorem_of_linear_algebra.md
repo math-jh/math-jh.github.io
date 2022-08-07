@@ -1,46 +1,25 @@
 ---
-layout: single
-date: 2021-10-16
+
 title: "선형대수학의 기본정리"
+excerpt: "선형대수학의 기본정리"
+
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/ftla
+sidebar: 
+    nav: "linear_algebra-ko"
+
 header:
     overlay_image: /assets/images/Linear_algebra/Basis_and_dimension.png
     overlay_filter: 0.5
-toc: true
-toc_sticky: true
-comments: true
-sidebar: 
-    nav: "preliminaries"
-excerpt: "선형대수학의 기본정리"
-lang: ko
-weight: 107
+
+date: 2021-10-16
+last_modified_at: 2022-08-07
+
+weight: 11
+
 ---
-<div class="notice--warning" markdown="1">
 
-이 글은 현재 수정중입니다.
-
-이 글은 예전에 쓴 글로, 서술 방향이 마음에 들지 않거나 표기법이 마음에 들지 않아 전체적으로 수정이 진행중입니다. 읽으실 때 참고해주세요.
-
-</div>
-
-
-
-## Review
-
-우리는 [앞선 글](/ko/math/linear_algebra/matrix)에서, 어떤 선형사상 $L:V\rightarrow W$를 항상 행렬의 모양으로 표현할 수 있다는 것을 확인했다. 이를 위해서는 $V$와 $W$의 기저 $\mathcal{B}=\\{x_1,\ldots, x_n\\}$, 그리고 $\mathcal{C}=\\{y_1,\ldots, y_m\\}$이 주어져야 하며, 이 경우 우리는 $L(x_i)$들을 다음의 식
-
-$$\begin{aligned}L(x_1)&=\alpha_{1,1}y_1+\alpha_{2,1}y_2+\cdots+\alpha_{m,1}y_m\\L(x_2)&=\alpha_{1,2}y_1+\alpha_{2,2}y_2+\cdots+\alpha_{m,2}y_m\\&\vdots\\L(x_n)&=\alpha_{1,n}y_1+\alpha_{2,n}y_2+\cdots+\alpha_{m,n}y_m\end{aligned}$$
-
-을 통해 계산하고, 그럼 행렬
-
-$$A=\begin{pmatrix}\alpha_{1,1}&\alpha_{1,2}&\cdots&\alpha_{1,n}\\\alpha_{2,1}&\alpha_{2,2}&\cdots&\alpha_{2,n}\\\vdots&\vdots&\ddots&\vdots\\\alpha_{m,1}&\alpha_{m,2}&\cdots&\alpha_{m,n}\end{pmatrix}$$
-
-이 $L$을 표현한다는 것을 살펴보았다. 여기서 위 행렬 $A$가 $L$을 나타낸다는 것은, 임의의 $v=\sum_{i=1}^n v_ix_i$에 대하여, 다음의 식
-
-$$\begin{pmatrix}\alpha_{1,1}&\alpha_{1,2}&\cdots&\alpha_{1,n}\\\alpha_{2,1}&\alpha_{2,2}&\cdots&\alpha_{2,n}\\\vdots&\vdots&\ddots&\vdots\\\alpha_{m,1}&\alpha_{m,2}&\cdots&\alpha_{m,n}\end{pmatrix}\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}=\begin{pmatrix}w_1\\w_2\\\vdots\\w_m\end{pmatrix}\tag{1}$$
-
-을 계산하면, $L(v)$는 다름아닌 $w=\sum_{j=1}^m w_jy_j$와 같다는 뜻이다. 이 motivation을 처음 가져올 때는 고등학교에서 배운 행렬곱 운운했지만, 이제 우리는 행렬곱을 어떻게 하는지 또한 정의했으니 직접 체크해볼 수 있을 것이다.
+지난 글에서 각각 $n$차원, $m$차원인 두 $F$-벡터공간 $V,W$에 대하여 $\operatorname{Hom}(V,W)$는 $mn$차원 $F$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\operatorname{Mat}_{m\times n}(F)$ 또한 $mn$차원의 $F$-벡터공간이다. 
 
 ## 기본정리: 유클리드 공간의 경우
 
