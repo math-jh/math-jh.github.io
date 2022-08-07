@@ -23,7 +23,7 @@ weight: 10
 
 <div class="proposition" markdown="1">
 
-<ins id="thm1">**정리 1 (Extension by linearity)**</ins> 임의의 $F$-벡터공간 $V$와 basis $\mathcal{B}$가 주어졌다 하자. 또 다른 $F$-벡터공간 $W$에 대하여, <em_ko>함수</em_ko> $f:\mathcal{B}\rightarrow W$가 주어질 때마다, $f=F\circ\iota$이도록 하는 유일한 <em_ko>linear map</em_ko> $F:V\rightarrow W$가 존재한다.
+<ins id="thm1">**정리 1 (Extension by linearity)**</ins> 임의의 $F$-벡터공간 $V$와 basis $\mathcal{B}$가 주어졌다 하자. 또 다른 $F$-벡터공간 $W$에 대하여, <em_ko>함수</em_ko> $g:\mathcal{B}\rightarrow W$가 주어질 때마다, $g=G\circ\iota$이도록 하는 유일한 <em_ko>linear map</em_ko> $G:V\rightarrow W$가 존재한다.
 
 </div>
 
@@ -32,29 +32,29 @@ weight: 10
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-주어진 함수 $f$에 대하여, 해당 조건을 만족하는 linear map $F$가 유일해야 한다는 것은 자명하다. 왜냐하면, 만일 $F':V\rightarrow W$가 주어진 조건을 만족하는 또 다른 linear map이라면, 임의의 $v\in V$에 대하여 
+주어진 함수 $g$에 대하여, 해당 조건을 만족하는 linear map $G$가 유일해야 한다는 것은 자명하다. 왜냐하면, 만일 $G':V\rightarrow W$가 주어진 조건을 만족하는 또 다른 linear map이라면, 임의의 $v\in V$에 대하여 
 
 $$v=\sum_{x\in \mathcal{B}}v_xx$$
 
 라 하면
 
-$$\begin{aligned}(F-F')\left(\sum_{x\in \mathcal{B}}v_xx\right)&=\sum_{x\in\mathcal{B}}v_x(F-F')(x)=\sum_{x\in\mathcal{B}}v_x(F-F')(\iota(x))\\&=\sum_{x\in\mathcal{B}}v_x(F\circ \iota-F'\circ\iota)(x)=\sum_{x\in\mathcal{B}}v_x(f-f)(x)=0\end{aligned}$$
+$$\begin{aligned}(G-G')\left(\sum_{x\in \mathcal{B}}v_xx\right)&=\sum_{x\in\mathcal{B}}v_x(G-G')(x)=\sum_{x\in\mathcal{B}}v_x(G-G')(\iota(x))\\&=\sum_{x\in\mathcal{B}}v_x(G\circ \iota-G'\circ\iota)(x)=\sum_{x\in\mathcal{B}}v_x(g-g)(x)=0\end{aligned}$$
 
 이 되기 때문이다. 
 
-이제 $F$를 실제로 만들어야 한다. 당연히 임의의 $v=\sum_{x\in\mathcal{B}}v_xx$에 대하여,
+이제 $G$를 실제로 만들어야 한다. 당연히 임의의 $v=\sum_{x\in\mathcal{B}}v_xx$에 대하여,
 
-$$F(v)=\sum_{x\in\mathcal{B}} v_xf(x)$$
+$$G(v)=\sum_{x\in\mathcal{B}} v_xg(x)$$
 
-로 *정의*하는 것이 자연스럽다. $v$를 $B$의 원소들의 일차결합으로 쓰는 방법은 유일하므로, $F$는 잘 정의되었으며 어렵지 않게 $F$가 선형사상이 된다는 것을 증명할 수 있다.
+로 *정의*하는 것이 자연스럽다. $v$를 $B$의 원소들의 일차결합으로 쓰는 방법은 유일하므로, $G$는 잘 정의되었으며 어렵지 않게 $G$가 선형사상이 된다는 것을 증명할 수 있다.
 
 </details>
 
-즉, 다음의 diagram이 항상 commute하도록 하는 $F:V\rightarrow W$를 찾을 수 있다.
+즉, 다음의 diagram이 항상 commute하도록 하는 $G:V\rightarrow W$를 찾을 수 있다.
 
-![extend_by_linearity](/assets/images/Linear_algebra/Matrix-1.png){:width="127.2px" class="invert" .align-center}
+![extend_by_linearity](/assets/images/Linear_algebra/Space_of_linear_maps-1.png){:width="127.2px" class="invert" .align-center}
 
-반대로 임의의 linear map $F:V\rightarrow W$가 주어진다면 이를 $\mathcal{B}$로 제한하여 함수 $f=F\circ\iota$를 정의할 수 있으며, 위 정리의 유일성 파트에 의하여 이 등식을 만족하는 linear map은 오직 $F$ 뿐이다. 따라서 다음 두 집합 사이의 전단사함수가 존재한다.
+반대로 임의의 linear map $G:V\rightarrow W$가 주어진다면 이를 $\mathcal{B}$로 제한하여 함수 $g=G\circ\iota$를 정의할 수 있으며, 위 정리의 유일성 파트에 의하여 이 등식을 만족하는 linear map은 오직 $G$ 뿐이다. 따라서 다음 두 집합 사이의 전단사함수가 존재한다.
 
 $$\{\text{functions from $\mathcal{B}$ to $W$}\}\longleftrightarrow\{\text{linear maps from $V$ to $W$}\}$$
 
@@ -82,16 +82,42 @@ $$(\alpha_{11}v_1+\alpha_{12}v_2+\cdots+\alpha_{1n}v_n)y_1+(\alpha_{21}v_1+\alph
 
 이 된다. 따라서 $L$은 다음의 대응
 
-$$(v_1,\ldots, v_n)\mapsto\left(\sum\alpha_{1i}v_i,\sum\alpha_{2i}v_i,\ldots,\sum\alpha_{mi}v_i\right)$$
+$$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{ji}v_i\right)y_j=L(v)$$
 
 으로 이해할 수 있다.
 
+위의 정리를 이용하면 [집합론, §함수 (2), 명제 1](/ko/math/set_theory/functions_2#pp1)에 대응되는 다음 명제를 증명할 수 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="crl2">**따름정리 2**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
+
+1. 만일 $L$이 단사함수라면, 적당한 linear map $R:W\rightarrow V$가 존재하여 $R\circ L=\operatorname{id}_V$이다.
+2. 만일 $L$이 전사함수라면, 적당한 linear map $S:W\rightarrow V$가 존재하여 $L\circ S=\operatorname{id}_W$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+1. 우선 $L$이 단사함수라 하고, $V$의 basis $x_1,\ldots,x_n$을 택하자. 그럼 $L(x_1),\ldots, L(x_n)$은 일차독립이고, 따라서 이들을 포함하는 $W$의 basis $\mathcal{B}$를 찾을 수 있다. 이제 함수 $r:\mathcal{B}\rightarrow V$를 다음의 식
+    
+    $$r(v)=\begin{cases}x_i&\text{if $v=L(x_i)$}\\0&\text{otherwise}\end{cases}$$
+
+    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $R$이라 하자. 그럼 $V$의 basis $\\{x_1,\ldots,x_n\\}$의 임의의 원소 $x_i$에 대하여 $(R\circ L)(x_i)=x_i$이고, 따라서 정리 1의 유일성 부분에 의하여 $R\circ L=\operatorname{id}_V$가 성립한다.
+
+2. $L$이 전사함수라 하고, $V$의 basis $x_1,\ldots,x_n$을 택하자. 그럼 $L(x_1),\ldots, L(x_n)$은 $W$를 span하므로 이 벡터들 중 일부를 택하여 $W$의 basis $\mathcal{B}$를 찾을 수 있다. 일반성을 잃지 않고 $\mathcal{B}=\\{L(x_1),\ldots, L(x_m)\\}$ ($m\leq n$)이라 하자. 함수 $s:\mathcal{B}\rightarrow V$를 다음의 식
+    
+    $$s(v)=x_k\qquad v=L(x_k)$$
+
+    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $S$라 하자. 이제 $W$의 basis $\mathcal{B}$의 임의의 원소 $L(x_k)$에 대하여 $(L\circ S)(L(x_k))=L(x_k)$이므로 다시 정리 1의 유일성 부분에 의하여 $L\circ S=\operatorname{id}_W$가 성립한다.
+
+</details>
 
 ## 선형사상들의 공간
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**보조정리 2**</ins> 두 $F$-벡터공간 $V$, $W$를 생각하자. $L,L_1,L_2$이 $V$에서 $W$로의 linear map들이고,  $\alpha\in F$라면
+<ins id="lem3">**보조정리 3**</ins> 두 $F$-벡터공간 $V$, $W$를 생각하자. $L,L_1,L_2$이 $V$에서 $W$로의 linear map들이고,  $\alpha\in F$라면
 
 $$L_1+L_2:v\mapsto L_1(v)+L_2(v),\qquad \alpha L:v\mapsto \alpha L(v)$$
 
@@ -126,7 +152,7 @@ $$\begin{aligned}
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 2](#lem2)의 연산을 준 $F$-벡터공간을 $\operatorname{Hom}_F(V,W)$, 혹은 문맥에 따라 field $F$가 명확할 때는 $\operatorname{Hom}(V,W)$로 적는다. 
+<ins id="df4">**정의 4**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $F$-벡터공간을 $\operatorname{Hom}_F(V,W)$, 혹은 문맥에 따라 field $F$가 명확할 때는 $\operatorname{Hom}(V,W)$로 적는다. 
 
 특별히 $W=F$일 경우, $\operatorname{Hom}(V,F)$를 $V$의 *dual space<sub>쌍대공간</sub>*이라 부르고 $V^\*$으로 적는다. $V^\ast$의 원소들을 *linear functional*들이라 부른다. 
 
@@ -142,7 +168,7 @@ $$f_i^j(x)=\begin{cases}y_j&\text{if $x=x_i$}\\0&\text{otherwise}\end{cases}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 두 유한차원 $F$-벡터공간 $V,W$가 각각 basis $\\{x_1,\ldots,x_n\\}$, $\\{y_1,\ldots,y_m\\}$을 갖는다 하자. 그럼 $\operatorname{Hom}(V,W)$는 $mn$차원 벡터공간이며, 이 때 위의 $mn$개의 linear map들 $B_i^j$가 $\operatorname{Hom}(V,W)$의 basis가 된다.
+<ins id="pp5">**명제 5**</ins> 두 유한차원 $F$-벡터공간 $V,W$가 각각 basis $\\{x_1,\ldots,x_n\\}$, $\\{y_1,\ldots,y_m\\}$을 갖는다 하자. 그럼 $\operatorname{Hom}(V,W)$는 $mn$차원 벡터공간이며, 이 때 위의 $mn$개의 linear map들 $B_i^j$가 $\operatorname{Hom}(V,W)$의 basis가 된다.
 
 </div>
 <details class="proof" markdown="1">

@@ -149,6 +149,16 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/linear_map
       - title: "동형사상"
         url: /ko/math/linear_algebra/isomorphic_vector_spaces
+      - title: "행렬들의 공간"
+        url: /ko/math/linear_algebra/matrix
+      - title: "선형사상들의 공간"
+        url: /ko/math/linear_algebra/space_of_linear_maps
+      - title: "선형대수학의 기본정리"
+        url: /ko/math/linear_algebra/ftla
+      - title: "기본정리: categorical viewpoint<sup>†</sup>"
+        url: /ko/math/linear_algebra/ftla_categorical_viewpoint
+      - title: "쌍대공간"
+        url: /ko/math/linear_algebra/dual_space
 
 dev:
   - title: "블로그 개발"
