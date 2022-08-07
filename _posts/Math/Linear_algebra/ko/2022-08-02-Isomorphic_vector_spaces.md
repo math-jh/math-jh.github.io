@@ -135,25 +135,25 @@ $$\operatorname{rank}L+\operatorname{null}L=\operatorname{dim}V$$
 1. 만일 $n=k$라면, $\ker L$은 $V$와 같은 차원을 가지는 부분공간이므로 $\ker L=V$가 성립한다. 따라서 $L=0$이고, $\operatorname{im} L=0$이므로 $\operatorname{rank} L=0$이 되어 정리가 성립한다. 
 2. 이와 비슷하게 만일 $k=0$이라면 $\ker L=0$이므로 $L$은 단사다. 따라서 $L$의 공역을 $W$에서 $\operatorname{im} L$로 제한한다면 $L$은 $V$와 $\operatorname{im} L$ 사이의 전단사인 linear map이 된다. 따라서 $\dim V=\dim\operatorname{im} L=\operatorname{rank} L$이 된다.
 
-이제 $0 < k < n$인 경우만 보이면 충분하다. $\left\\{b_1,b_2,\ldots, b_k\right\\}$가 $\ker L$의 basis라 하자. 이 집합은 $V$의 일차독립인 부분집합이므로, 이를 확장하여 $V$의 basis $\left\\{b_1,b_2,\ldots, b_k,b_{k+1},\ldots, b_n\right\\}$을 만들 수 있다. 그럼 집합 $\left\\{L(b_{k+1}), L(b_{k+2}), \ldots, L(b_n)\right\\}$이 $\operatorname{im} L$의 basis가 된다.
+이제 $0 < k < n$인 경우만 보이면 충분하다. $\left\\{x_1,x_2,\ldots,x_k\right\\}$가 $\ker L$의 basis라 하자. 이 집합은 $V$의 일차독립인 부분집합이므로, 이를 확장하여 $V$의 basis $\left\\{x_1,x_2,\ldots,x_k,x_{k+1},\ldots,x_n\right\\}$을 만들 수 있다. 그럼 집합 $\left\\{L(x_{k+1}),L(x_{k+2}),\ldots,L(x_n)\right\\}$이 $\operatorname{im} L$의 basis가 된다는 것을 다음과 같이 보일 수 있다.
 
 우선 이 집합은 일차독립인데, 만일 
 
-$$\alpha_{k+1}L(b_{k+1})+\alpha_{k+2}L(b_{k+2})+\cdots+\alpha_nL(b_n)=0$$
+$$\alpha_{k+1}L(x_{k+1})+\alpha_{k+2}L(x_{k+2})+\cdots+\alpha_nL(x_n)=0$$
 
-이 성립한다면 linearity에 의해 $L(\sum_{i=k+1}^n \alpha_i b_i)=0$이므로 $\sum_{i=k+1}^n\alpha_ib_i\in\ker L$이고, 따라서 어떤 $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_k$에 대하여
+이 성립한다면 linearity에 의해 $L(\sum_{i=k+1}^n \alpha_i x_i)=0$이므로 $\sum_{i=k+1}^n\alpha_ix_i\in\ker L$이고, 따라서 어떤 $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_k$에 대하여
 
-$$\sum_{i=k+1}^n\alpha_ib_i=\alpha_1b_1+\alpha_2b_2+\cdots+\alpha_kb_k$$
+$$\sum_{i=k+1}^n\alpha_ix_i=\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_kx_k$$
 
 혹은
 
-$$\alpha_1b_1+\alpha_2b_2+\cdots+\alpha_kb_k-\alpha_{k+1}b_{k+1}-\cdots-\alpha_nb_n=0$$
+$$\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_kx_k-\alpha_{k+1}x_{k+1}-\cdots-\alpha_nx_n=0$$
 
-가 성립한다. 이제 $\left\\{b_1,b_2,\ldots, b_k,b_{k+1},\ldots, b_n\right\\}$가 일차독립이므로 $\alpha_1=\alpha_2=\cdots=\alpha_n=0$이어야 하고, 특히 $\alpha_{k+1}=\alpha_{k+2}=\cdots=\alpha_n=0$이 된다.
+가 성립한다. 이제 $\left\\{x_1,x_2,\ldots,x_k,x_{k+1},\ldots,x_n\right\\}$가 일차독립이므로 $\alpha_1=\alpha_2=\cdots=\alpha_n=0$이어야 하고, 특히 $\alpha_{k+1}=\alpha_{k+2}=\cdots=\alpha_n=0$이 된다.
 
-또, 이 집합은 $\operatorname{im} L$을 span한다. 임의의 $w\in \operatorname{im} L$이 주어졌다고 하자. 그럼 $L(v)=w$인 $v\in V$가 존재한다. $v=\sum_{i=1}^n \alpha_ib_i$라 하면, 
+또, 이 집합은 $\operatorname{im} L$을 span한다. 임의의 $w\in \operatorname{im} L$이 주어졌다고 하자. 그럼 $L(v)=w$인 $v\in V$가 존재한다. $v=\sum_{i=1}^n \alpha_ix_i$라 하면, 
 
-$$u=L\left(\sum_{i=1}^n\alpha_i b_i\right)=L\left(\sum_{i=1}^k\alpha_i b_i\right)+L\left(\sum_{i=k+1}^n\alpha_i b_i\right)=\sum_{i=k+1}^n\alpha_i L(b_i)$$
+$$u=L\left(\sum_{i=1}^n\alpha_ix_i\right)=L\left(\sum_{i=1}^k\alpha_ix_i\right)+L\left(\sum_{i=k+1}^n\alpha_i x_i\right)=\sum_{i=k+1}^n\alpha_i L(x_i)$$
 
 가 성립하기 때문이다.
 
