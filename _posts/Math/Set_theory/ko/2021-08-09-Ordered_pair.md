@@ -4,14 +4,17 @@ excerpt: "집합의 포함관계와 순서쌍의 정의"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/ordered_pair
+
 header:
     overlay_image: /assets/images/Set_theory/Ordered_pair.png
     overlay_filter: 0.5
+
 sidebar: 
     nav: "set-ko"
 
 date: 2021-08-09
 last_modified_at: 2021-05-17
+
 weight: 2
 
 ---
