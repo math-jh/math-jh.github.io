@@ -159,6 +159,10 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/ftla_categorical_viewpoint
       - title: "쌍대공간"
         url: /ko/math/linear_algebra/dual_space
+      - title: "행렬식"
+        url: /ko/math/linear_algebra/determinant
+      - title: "행렬식의 존재성과 유일성"
+        url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
 
 dev:
   - title: "블로그 개발"

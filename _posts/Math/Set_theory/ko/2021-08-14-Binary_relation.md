@@ -5,17 +5,21 @@ excerpt: "이항관계의 그래프와 역, 합성"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/binary_relation
+
 header:
     overlay_image: /assets/images/Set_theory/Binary_relation.png
     overlay_filter: 0.5
+
 sidebar: 
     nav: "set-ko"
 
 date: 2021-08-14
 last_modified_at: 2022-05-12
+
 weight: 3
 
 ---
+
 ## 그래프와 이항관계
 
 우리가 순서쌍을 도입한 이유는 이항관계를 살펴보기 위해서였다. 앞으로 별 말이 없으면 대문자 $R$은 이항관계를 뜻한다. 예를 들어, $x\mathrel{R}y$라는 표기는 $x$와 $y$가 $R$에 의해 관계되어 있다는 뜻이다. 
