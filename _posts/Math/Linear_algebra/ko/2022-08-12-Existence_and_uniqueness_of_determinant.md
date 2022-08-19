@@ -9,13 +9,13 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Basis_and_dimension.png
+    overlay_image: /assets/images/Linear_algebra/Existence_and_uniqueness_of_determinant.png
     overlay_filter: 0.5
 
 date: 2022-08-12
 last_modified_at: 2022-08-12
 
-weight: 15
+weight: 16
 
 ---
 

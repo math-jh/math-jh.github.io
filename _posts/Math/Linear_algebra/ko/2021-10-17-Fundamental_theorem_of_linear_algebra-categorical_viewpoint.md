@@ -9,13 +9,13 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Basis_and_dimension.png
+    overlay_image: /assets/images/Linear_algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
     overlay_filter: 0.5
 
 date: 2021-10-17
 last_modified_at: 2022-08-07
 
-weight: 12
+weight: 13
 
 ---
 
