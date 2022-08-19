@@ -9,13 +9,13 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Linear_map.png
+    overlay_image: /assets/images/Linear_algebra/Dual_space.png
     overlay_filter: 0.5
 
 date: 2022-08-05
 last_modified_at: 2022-08-05
 
-weight: 13
+weight: 14
 
 ---
 

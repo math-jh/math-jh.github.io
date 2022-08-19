@@ -9,13 +9,13 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Basis_and_dimension.png
+    overlay_image: /assets/images/Linear_algebra/Determinant.png
     overlay_filter: 0.5
 
 date: 2022-03-07
 last_modified_at: 2022-08-07
 
-weight: 14
+weight: 15
 
 ---
 
