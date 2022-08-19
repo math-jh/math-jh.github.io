@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/basis_and_dimension.png
+    overlay_image: /assets/images/Linear_algebra/Infinite_dimensional_vector_spaces.png
     overlay_filter: 0.5
 
 date: 2021-10-12
