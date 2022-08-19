@@ -9,19 +9,19 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Basis_and_dimension.png
+    overlay_image: /assets/images/Linear_algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
     overlay_filter: 0.5
 
 date: 2021-10-16
 last_modified_at: 2022-08-07
 
-weight: 11
+weight: 12
 
 ---
 
 지난 글에서 각각 $n$차원, $m$차원인 두 $F$-벡터공간 $V,W$에 대하여 $\operatorname{Hom}(V,W)$는 $mn$차원 $F$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\operatorname{Mat}_{m\times n}(F)$ 또한 $mn$차원의 $F$-벡터공간이다. 그럼 [§동형사상, 따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#crl4)로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
 
-이번 글에서 증명할 선형대수학의 기본정리는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em_ko>자연스러운</em_ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 이 <em_ko>자연스럽다</em_ko>는 말의 뜻은 다음 글에서 조금 더 자세히 살펴본다.
+이번 글에서 증명할 선형대수학의 기본정리[^1]는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em_ko>자연스러운</em_ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 이 <em_ko>자연스럽다</em_ko>는 말의 뜻은 다음 글에서 조금 더 자세히 살펴본다.
 
 ## 기본정리: 유클리드 공간
 
@@ -231,3 +231,5 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 
 ---
+
+[^1]: 미적분학의 기본정리, 대수학의 기본정리 등등과는 달리 *선형대수학의 기본정리*는 저자에 따라 전혀 다른 정리들을 의미하기도 한다. 예를 들어 **[Goc]**에서는 이전 글에서의 rank-nullity 정리를, Gilbert Strang의 경우 다음 글에서 다룰 직교여공간에 대한 정리들을 선형대수학의 기본정리라고 부른다. 우리는 **[Lee]**를 따라 이 정리를 선형대수학의 기본정리라 부르기로 한다.
