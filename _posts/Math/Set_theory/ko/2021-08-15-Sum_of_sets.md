@@ -25,7 +25,7 @@ weight: 7
 </div>
 
 
-집합 $A$의 covering $(A\_i)\_{i\in I}$이 주어졌을 때, 전사함수 $f:A\rightarrow B$가 주어진다면 $(f(A\_i))\_{i\in I}$는 $B$의 covering이 된다. 이를 *$(A\_i)\_{i\in I}$의 $f$에 의한 상*이라 부른다. 반대로 임의의 함수 $g:C\rightarrow A$가 주어진다면 $(g^{-1}(A\_i))\_{i\in I}$가 $C$의 covering이 된다. 이를 covering $(A\_i)$의 $f$에 의한 역상이라 부른다.
+집합 $A$의 covering $(A\_i)\_{i\in I}$이 주어졌을 때, 전사함수 $f:A\rightarrow B$가 주어진다면 $(f(A\_i))\_{i\in I}$는 $B$의 covering이 된다. 이를 *$(A\_i)\_{i\in I}$의 $f$에 의한 image*이라 부른다. 반대로 임의의 함수 $g:C\rightarrow A$가 주어진다면 $(g^{-1}(A\_i))\_{i\in I}$가 $C$의 covering이 된다. 이를 covering $(A\_i)$의 $f$에 의한 preimage라 부른다.
 
 한편, 집합 $A$의 covering $(A\_i)\_{i\in I}$와 이들 각각을 정의역으로 하고 동일한 target을 갖는 함수들 $f\_i:A\_i\rightarrow B$가 주어진 상황을 생각할 수 있다. 이 경우 우리의 가장 큰 관심사는 각 부분마다 정의된 함수 $f_i$들을 모두 모아, 전체 함수 $f:A\rightarrow B$를 만들수 있느냐는 것이다. 그리고 정확히 이를 위해 정의했던 개념이 있다. ([§함수 (1), 정의 2](/ko/math/set_theory/functions_1#df2))
 
