@@ -134,7 +134,7 @@ $$G(A)=\operatorname{pr}_2\{z\in G:\text{$\operatorname{pr}_1z\in A$}\}\subset\o
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> $G$가 그래프라 하자. 그럼 $(x,y)\in G$를 만족하는 모든 $(y,x)$들로 이루어진 그래프를 $G$의 *역<sub>inverse</sub>*이라 부르고 이를 $G^{-1}$로 표기한다. 또, 집합 $G^{-1}(A)$를 $A$의 *역상<sub>inverse image 혹은 preimage</sub>*이라 부른다. 만일 $G^{-1}=G$라면 $G$가 *대칭적<sub>symmetric</sub>*이라고 한다.
+<ins id="df8">**정의 8**</ins> $G$가 그래프라 하자. 그럼 $(x,y)\in G$를 만족하는 모든 $(y,x)$들로 이루어진 그래프를 $G$의 *역<sub>inverse</sub>*이라 부르고 이를 $G^{-1}$로 표기한다. 또, 집합 $G^{-1}(A)$를 $A$의 *preimage<sub>역상</sub>*이라 부른다. 만일 $G^{-1}=G$라면 $G$가 *symmetric<sub>대칭적</sub>*하다고 한다.
 
 </div>
 

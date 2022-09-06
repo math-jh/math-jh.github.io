@@ -147,10 +147,14 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/infinite-dimensional-vector-space
       - title: "선형사상"
         url: /ko/math/linear_algebra/linear_map
+      - title: "행렬"
+        url: /ko/math/linear_algebra/matrix
+      - title: "가우스 소거법"
+        url: /ko/math/linear_algebra/Gaussian_elimination
       - title: "동형사상"
         url: /ko/math/linear_algebra/isomorphic_vector_spaces
-      - title: "행렬들의 공간"
-        url: /ko/math/linear_algebra/matrix
+      - title: "행렬식의 존재성과 유일성"
+        url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
       - title: "선형사상들의 공간"
         url: /ko/math/linear_algebra/space_of_linear_maps
       - title: "선형대수학의 기본정리"
@@ -163,6 +167,8 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/determinant
       - title: "행렬식의 존재성과 유일성"
         url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+      - title: "역행렬"
+        url: /ko/math/linear_algebra/inverse_matrix
 
 dev:
   - title: "블로그 개발"
