@@ -139,7 +139,7 @@ $$f+g:t\mapsto f(t)+g(t),\qquad \alpha f:t\mapsto \alpha f(t)$$
 
 </div>
 
-$\operatorname{Fun}(I,\mathbb{R})$을 product set $\mathbb{R}^I$라 생각하면 [예시 10](#ex10)은 [예시 9](#ex9)의 자연스러운 일반화로 볼 수도 있다. ([Set Theory, §집합의 곱, 정의 1](/ko/math/set_theory/product_of_sets#df1))
+$\operatorname{Fun}(I,\mathbb{R})$을 product set $\mathbb{R}^I$라 생각하면 [예시 6](#ex6)은 [예시 5](#ex5)의 자연스러운 일반화로 볼 수도 있다. ([Set Theory, §집합의 곱, 정의 1](/ko/math/set_theory/product_of_sets#df1))
 
 ---
 
