@@ -21,7 +21,7 @@ weight: 6
 
 우리는 다음 이야기를 하기에 앞서서, 모든 (유한차원일 필요는 없는) 벡터공간이 basis를 가지며, 이 때 차원이 잘 정의된다는 것을 보인다. 
 
-## basis의 존재성
+## Basis의 존재성
 
 <div class="definition" markdown="1">
 

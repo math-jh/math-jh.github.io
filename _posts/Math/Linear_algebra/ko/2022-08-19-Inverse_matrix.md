@@ -15,7 +15,7 @@ header:
 date: 2022-08-19
 last_modified_at: 2022-08-19
 
-weight: 17
+weight: 18
 
 ---
 
@@ -27,7 +27,7 @@ weight: 17
 
 <ins id="lem1">**보조정리 1**</ins> 행렬 $A\in\operatorname{Mat}_n(F)$에 대하여, 다음 세 조건이 모두 동치이다.
 
-1. $A$가 invertible이다.
+1. $A$가 가역이다.
 2. 적당한 $B\in\operatorname{Mat}_n(F)$가 존재하여 $AB=I$이다.
 3. 적당한 $B\in\operatorname{Mat}_n(F)$가 존재하여 $BA=I$이다.
 
@@ -52,3 +52,12 @@ $$\operatorname{rank}L_A+\operatorname{null}L_A=\dim F^n=n$$
 비슷하게 셋째 조건이 첫째 조건을 함의한다는 것을 증명할 수 있다.  
 
 </details>
+
+$n\times n$ 가역행렬 $B$가 주어졌다 하자. $B$를 $F^n$에서 $F^n$으로의 선형사상으로 생각하면, $B$는 $F^n$의 basis $e_1,\ldots, e_n$을 어디로 옮기는지에 의해 완전하게 결정된다. 따라서 행렬 $A^{-1}$를 계산하기 위해서는 $A^{-1}$이 basis $e_i$를 어디로 옮기는지를 알면 된다. 이 값을 벡터 $v_i$라 하면, 행렬 $A$는 $(v\_1\|v\_2\|\cdots\|v\_n)$으로 주어질 것이며, 이 때 각각의 $v_i$들은 다음의 식
+
+$$v_i=A^{-1}e_i\iff Av_i=e_i$$
+
+으로 정의된다. 이 식을 풀기 위해 가우스 소거법을 적용하되, 이를 각 $i$마다 적용하는 대신 다음의 *첨가행렬*을 이용하면 더 빠르게 계산할 수 있다.
+
+img
+
