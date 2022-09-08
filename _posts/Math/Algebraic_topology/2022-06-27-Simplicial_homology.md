@@ -3,10 +3,10 @@
 title: "호몰로지"
 excerpt: "기본정의"
 
-categories: [Math / Homology]
-permalink: /ko/math/homology/singular_homology
+categories: [Math / Algebraic topology]
+permalink: /ko/math/algebraic_topology/singular_homology
 header:
-    overlay_image: /assets/images/Homological algebra/a.png
+    overlay_image: /assets/images/Algebraic_topology/a.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
