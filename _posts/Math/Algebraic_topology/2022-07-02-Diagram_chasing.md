@@ -3,10 +3,10 @@
 title: "Diagram chasing"
 excerpt: "기본정의"
 
-categories: [Math / Homology]
-permalink: /ko/math/homology/diagram_chasing
+categories: [Math / Algebraic topology]
+permalink: /ko/math/algebraic_topology/diagram_chasing
 header:
-    overlay_image: /assets/images/Homology/Diagram_chasing.png
+    overlay_image: /assets/images/Algebraic_topology/Diagram_chasing.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
