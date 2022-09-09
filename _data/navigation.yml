@@ -170,6 +170,14 @@ linear_algebra-ko:
       - title: "역행렬"
         url: /ko/math/linear_algebra/inverse_matrix
 
+homological_algebra-ko:
+  - title: <a href="/ko/homological_algebra" class="sidebar_title">호몰로지 대수학</a>
+    children:
+      - title: "완전열"
+        url: /ko/math/homological_algebra/exact_sequences
+      - title: "Digram chasing"
+        url: /ko/math/homological_algebra/diagram_chasing
+
 dev:
   - title: "블로그 개발"
     children:
