@@ -161,3 +161,23 @@ $$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 
 </details>
 
+호몰로지 대수학에서 유용하게 사용되는 도구는 diagram chasing이다. 다음 정리에서 처음이자 마지막으로 이를 이용한 증명을 소개한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm8">**정리 8 (The four lemma)**</ins> $R$-module들로 이루어진 commutative diagram
+
+
+
+이 주어졌다 하고, 위와 아래의 행들이 모두 exact라 하자. 그럼 
+
+1. 만일 $\gamma$가 전사라면, $\beta$ 또한 전사이다.
+2. 만일 $\beta$가 단사라면, $\gamma$ 또한 단사이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+
+
+</details>
