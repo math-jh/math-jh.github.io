@@ -3,13 +3,13 @@
 title: "완전열"
 excerpt: "기본정의"
 
-categories: [Math / Homological algebra]
-permalink: /ko/math/homological_algebra/exact_sequence
+categories: [Math / Homological Algebra]
+permalink: /ko/math/homological_algebra/exact_sequences
 header:
     overlay_image: /assets/images/Homological_algebra/a.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "topology-ko"
+    nav: "homological_algebra-ko"
 
 date: 2022-09-08
 last_modified_at: 2022-09-08
@@ -31,11 +31,11 @@ $$\cdots\longrightarrow X\overset{f}{\longrightarrow} Y\overset{g}{\longrightarr
 
 조건 $gf=0$은 $\operatorname{im}(f)\subseteq\ker(g)$와 동치이다. 특별히 $\operatorname{im}(f)=\ker(g)$가 성립할 경우, 우리는 위의 열이 $Y$에서 *exact<sub>완전</sub>*하다 하고, 각 성분에서 모두 exact인 열을 *exact sequence<sub>완전열</sub>*라 부른다. 
 
-임의의 $R$-module $X$에 대하여, zero module $0$에서 $X$로 가는 유일한 map은 $0$을 $0$으로 보내는 zero map 뿐이고, 거꾸로 $X$에서 $0$으로 가는 함수 또한 $X$의 모든 원소를 $0$으로 보내는 zero map 뿐이다. 이러한 상황에서는 
+임의의 $R$-module $X$에 대하여, zero module $0$에서 $X$로 가는 유일한 map은 $0$을 $0$으로 보내는 영함수뿐이고, 거꾸로 $X$에서 $0$으로 가는 함수 또한 $X$의 모든 원소를 $0$으로 보내는 영함수뿐이다. 이러한 상황에서는 
 
 $$0\longrightarrow X,\qquad X\longrightarrow 0$$
 
-와 같이 함수에 따로 이름을 붙이지 않는다. 한편, 임의의 두 $R$-module $X,Y$에 대하여, $X$의 모든 원소를 $0\in Y$로 보내는 zero map 또한 생각할 수 있는데, 이러한 zero map은 두 함수 $X\rightarrow 0$과 $0\rightarrow Y$의 합성으로 생각할 수 있으므로 열
+와 같이 함수에 따로 이름을 붙이지 않는다. 한편, 임의의 두 $R$-module $X,Y$에 대하여, $X$의 모든 원소를 $0\in Y$로 보내는 영함수 또한 생각할 수 있는데, 이러한 영함수는 두 함수 $X\rightarrow 0$과 $0\rightarrow Y$의 합성으로 생각할 수 있으므로 열
 
 $$\cdots\longrightarrow W\longrightarrow X\overset{0}{\longrightarrow} Y\longrightarrow Z\longrightarrow\cdots$$
 
@@ -53,7 +53,7 @@ $$X\longrightarrow \cdots\longrightarrow Z$$
 
 $$\cdots\longrightarrow 0\longrightarrow 0\longrightarrow X\longrightarrow \cdots\longrightarrow Z\longrightarrow 0\longrightarrow 0\longrightarrow\cdots$$
 
-을 통해 이를 무한한 열로 취급할 수 있다. 뿐만 아니라, 임의의 함수 $f$에 zero map을 합성하면 그 결과는 항상 zero map이므로, 만일 처음의 열이 exact sequence였다면 아래와 같이 무한하게 확장한 열 또한 exact sequence가 된다. 따라서 임의의 열은 항상 $\mathbb{Z}$로 index가 주어졌다고 생각할 수 있다.
+을 통해 이를 무한한 열로 취급할 수 있다. 뿐만 아니라, 임의의 함수 $f$에 영함수를 합성하면 그 결과는 항상 영함수이므로, 만일 처음의 열이 exact sequence였다면 아래와 같이 무한하게 확장한 열 또한 exact sequence가 된다. 따라서 임의의 열은 항상 $\mathbb{Z}$로 index가 주어졌다고 생각할 수 있다.
 
 <div class="example" markdown="1">
 
@@ -110,12 +110,20 @@ $$0\longrightarrow \ker f\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 <ins id="pp4">**명제 4**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $K=\ker f$, 그리고 자연스러운 inclusion $i:K\rightarrow X$를 생각하자. 그럼 $fi=0$이며, 뿐만 아니라 $i:K\rightarrow X$는 다음의 universal property를 만족한다.
 
 > 임의의 $g:Z\rightarrow X$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:Z\rightarrow K$가 존재하여 $g=ij$이다. 
+>
+> ![universal_property_of_kernel](/assets/images/Homological_algebra/Exact_sequences-1.png){:width="212.85px" class="invert" .align-center}
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+우선 유일성을 보이자. 만일 $ij=g=ij'$이도록 하는 두 함수 $j, j':Z\rightarrow K$가 존재한다면, 임의의 $z\in Z$에 대하여
 
+$$0=g(z)-g(z)=i(j(z))-i(j'(z))=i(j(z)-j'(z))$$
+
+가 성립한다. 그런데 $i$는 단사이므로, 이를 위해서는 모든 $z\in Z$에 대하여 $j(z)-j'(z)=0$, 즉 $j=j'$여야 한다. 
+
+존재성 또한 자명하다. $g$의 공역을 $K$로 제한한 것이 주어진 조건을 만족하기 때문이다.
 
 </details>
 
@@ -126,12 +134,20 @@ $$0\longrightarrow \ker f\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 <ins id="pp5">**명제 5**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $C=Y/\operatorname{im}(f)$, 그리고 자연스러운 projection $p:Y\rightarrow C$를 생각하자. 그럼 $pf=0$이며, 뿐만 아니라 $p:Y\rightarrow C$는 다음의 universal property를 만족한다.
 
 > 임의의 $g:Y\rightarrow Z$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:C\rightarrow Z$가 존재하여 $g=jp$이다. 
+>
+> ![universal_property_of_cokernel](/assets/images/Homological_algebra/Exact_sequences-2.png){:width="210px" class="invert" .align-center}
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+우선 유일성을 보이자. 만일 $jp=g=j'p$이도록 하는 $j,j':C\rightarrow Z$가 존재한다면, 임의의 $y\in Y$에 대하여
 
+$$0=g(y)-g(y)=j(p(y))-j'(p(y))=(j-j')(p(y))$$
+
+가 성립한다. 그런데 $p$는 전사이므로, 이는 곧 모든 $c\in C$에 대하여 $j(c)-j'(c)=0$, 곧 $j=j'$라는 뜻이다.
+
+존재성의 경우, $\ker(p)=\operatorname{im}(f)\subseteq\ker(g)$이므로 <#ref#>로부터 자명하다. 
 
 </details>
 
@@ -154,10 +170,14 @@ $$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 은 exact sequence가 된다.
 
 </div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
 
+호몰로지 대수에서 다루는 모든 내용은 kernel이나 cokernel, image 등의 언어로 완벽하게 설명할 수 있다. 따라서 모든 내용은 이들 개념이 잘 정의되는 더 일반적인 *abelian category*에서도 성립한다. Abelian category에서는 각각의 대상에서 원소를 뽑아오거나 하는 것이 불가능하기 때문에 다음 글에서 다룰 diagram chasing을 오로지 [명제 4](#pp4)나 [명제 5](#pp5)와 같은 universal property만을 이용해 수행해야 한다. 그러나 Freyd-Mitchell embedding theorem에 의하여 모든 abelian category는 적절한 $R$-module의 카테고리로의 embedding을 가지므로 우리는 간단하게 $R$-module의 카테고리에서만 명제들을 증명하고, abelian category에서는 자연스레 성립하는 것으로 생각해도 좋다.
 
+---
 
-</details>
+**참고문헌**
+
+**[Hu]** S.T. Hu, *Introduction to homological algebra*. University Microfilms, 1979.  
+**[Vak]** R. Vakil, *The rising sea: foundations of algebraic geometry*. 2015. Preprint. [링크](http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf)
+
 
