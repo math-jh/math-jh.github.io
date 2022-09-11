@@ -19,6 +19,8 @@ weight: 1
 
 앞으로 항상 $R$은 곱셈에 대한 항등원 $1$을 갖고, commutative인 것으로 생각한다. 또, $R$-module homomorphism을 간단히 함수, 혹은 map이라 부르기로 한다.
 
+## Exactness
+
 <div class="definition" markdown="1">
 
 <ins id="df1">**정의 1**</ins> $R$-module들의 열
@@ -103,6 +105,8 @@ $$0\longrightarrow \ker f\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 
 </div>
 
+## Kernel, cokernel
+
 위의 예시를 일반화하여, 임의의 map $f:X\rightarrow Y$가 주어졌다 하고, 이로부터 만들어지는 exact sequence를 생각할 수 있다. 적절한 직관을 부여하기 위해 우선 다음 명제를 증명하자.
 
 <div class="proposition" markdown="1">
@@ -171,7 +175,7 @@ $$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 
 </div>
 
-호몰로지 대수에서 다루는 모든 내용은 kernel이나 cokernel, image 등의 언어로 완벽하게 설명할 수 있다. 따라서 모든 내용은 이들 개념이 잘 정의되는 더 일반적인 *abelian category*에서도 성립한다. Abelian category에서는 각각의 대상에서 원소를 뽑아오거나 하는 것이 불가능하기 때문에 다음 글에서 다룰 diagram chasing을 오로지 [명제 4](#pp4)나 [명제 5](#pp5)와 같은 universal property만을 이용해 수행해야 한다. 그러나 Freyd-Mitchell embedding theorem에 의하여 모든 abelian category는 적절한 $R$-module의 카테고리로의 embedding을 가지므로 우리는 간단하게 $R$-module의 카테고리에서만 명제들을 증명하고, abelian category에서는 자연스레 성립하는 것으로 생각해도 좋다.
+
 
 ---
 
