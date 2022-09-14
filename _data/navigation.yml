@@ -177,6 +177,14 @@ homological_algebra-ko:
         url: /ko/math/homological_algebra/exact_sequences
       - title: "Digram chasing"
         url: /ko/math/homological_algebra/diagram_chasing
+      - title: "호몰로지"
+        url: /ko/math/homological_algebra/homology
+      - title: "사슬 호모토피"
+        url: /ko/math/homological_algebra/chain_homotopy
+      - title: "Mapping cone"
+        url: /ko/math/homological_algebra/mapping_cone
+      - title: "Delta functor"
+        url: /ko/math/homological_algebra/delta_functor
 
 dev:
   - title: "블로그 개발"
