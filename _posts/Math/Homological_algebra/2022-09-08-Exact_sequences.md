@@ -12,7 +12,7 @@ sidebar:
     nav: "homological_algebra-ko"
 
 date: 2022-09-08
-last_modified_at: 2022-09-08
+last_modified_at: 2022-09-12
 weight: 1
 
 ---
@@ -105,13 +105,23 @@ $$0\longrightarrow \ker f\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 
 </div>
 
+<div class="example" markdown="1">
+
+<ins id="ex4">**예시 4**</ins> $R$의 ideal은 항상 $R$-module 구조를 갖는다. 이제 $R$의 두 ideal $I,J$에 대하여 $R=I+J$라 가정하자. 그럼 다음의 short exact sequence
+
+$$0\longrightarrow I\cap J\longrightarrow I\oplus J\longrightarrow R\longrightarrow 0$$
+
+가 존재한다. 여기서 첫째 함수는 $x\mapsto (x,-x)$로 정의된 함수이고, 둘째 함수는 $(x,y)\mapsto x+y$로 정의된 함수이다.
+
+</div>
+
 ## Kernel, cokernel
 
 위의 예시를 일반화하여, 임의의 map $f:X\rightarrow Y$가 주어졌다 하고, 이로부터 만들어지는 exact sequence를 생각할 수 있다. 적절한 직관을 부여하기 위해 우선 다음 명제를 증명하자.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $K=\ker f$, 그리고 자연스러운 inclusion $i:K\rightarrow X$를 생각하자. 그럼 $fi=0$이며, 뿐만 아니라 $i:K\rightarrow X$는 다음의 universal property를 만족한다.
+<ins id="pp5">**명제 5**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $K=\ker f$, 그리고 자연스러운 inclusion $i:K\rightarrow X$를 생각하자. 그럼 $fi=0$이며, 뿐만 아니라 $i:K\rightarrow X$는 다음의 universal property를 만족한다.
 
 > 임의의 $g:Z\rightarrow X$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:Z\rightarrow K$가 존재하여 $g=ij$이다. 
 >
@@ -135,7 +145,7 @@ $$0=g(z)-g(z)=i(j(z))-i(j'(z))=i(j(z)-j'(z))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $C=Y/\operatorname{im}(f)$, 그리고 자연스러운 projection $p:Y\rightarrow C$를 생각하자. 그럼 $pf=0$이며, 뿐만 아니라 $p:Y\rightarrow C$는 다음의 universal property를 만족한다.
+<ins id="pp6">**명제 6**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $C=Y/\operatorname{im}(f)$, 그리고 자연스러운 projection $p:Y\rightarrow C$를 생각하자. 그럼 $pf=0$이며, 뿐만 아니라 $p:Y\rightarrow C$는 다음의 universal property를 만족한다.
 
 > 임의의 $g:Y\rightarrow Z$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:C\rightarrow Z$가 존재하여 $g=jp$이다. 
 >
@@ -159,7 +169,7 @@ $$0=g(y)-g(y)=j(p(y))-j'(p(y))=(j-j')(p(y))$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, module $Y/\operatorname{im}(f)$를 $f$의 *cokernel<sub>여핵</sub>*이라 부르고 $\operatorname{coker}(f)$으로 적는다.
+<ins id="df7">**정의 7**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, module $Y/\operatorname{im}(f)$를 $f$의 *cokernel<sub>여핵</sub>*이라 부르고 $\operatorname{coker}(f)$으로 적는다.
 
 </div>
 
@@ -167,7 +177,7 @@ $$0=g(y)-g(y)=j(p(y))-j'(p(y))=(j-j')(p(y))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, 다음의 sequence
+<ins id="pp8">**명제 8**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, 다음의 sequence
 
 $$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrightarrow \operatorname{coker}(f)\longrightarrow 0$$
 
@@ -175,7 +185,105 @@ $$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 
 </div>
 
+## Splitting exact sequence
 
+임의의 $F$-벡터공간 $V$와 그 부분공간 $S$에 대하여, 항상 적절한 부분공간 $T$가 존재하여 $V\cong S\oplus T$이다. 더 일반적으로 임의의 $R$에 대하여, free $R$-module은 항상 이러한 성질을 가진다. 이러한 대상들로 이루어진 exact sequence
+
+$$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarrow}Z\longrightarrow\cdots$$
+
+의 경우, $Y$의 submodule $\ker(g)=\operatorname{im}(f)$은 항상 $Y$의 direct summand로 생각할 수 있다. 물론 일반적인 경우 이것이 성립할 이유가 없으므로, 다음과 같이 정의한다.
+
+<div class="definition" markdown="1">
+
+<ins id="df9">**정의 9**</ins> 주어진 exact sequence
+
+$$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarrow}Z\longrightarrow\cdots$$
+
+에서 $\ker(g)=\operatorname{im}(f)$가 $Y$의 direct summand라면 위의 열이 $Y$에서 *split*한다고 한다. 모든 성분에서 split하는 exact sequence를 *splitting exact sequence*, 혹은 간단히 *split-exact*라 부른다. 
+
+</div>
+
+<div class="proposition" markdown="1">
+
+<ins id="pp10">**명제 10**</ins> 다음 exact sequence 
+
+$$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarrow}Z\longrightarrow\cdots$$
+
+가 $Y$에서 split-exact라면,
+
+$$Y\cong\operatorname{im}(f)\oplus\operatorname{im}(g)$$
+
+가 성립한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+편의상 $A=\operatorname{im}(f)=\ker(g)$라 하자. 정의에 의해 $Y=A\oplus B$이도록 하는 $Y$의 submodule $B$가 존재한다. 주어진 명제를 증명하기 위해서는 $B\cong\operatorname{im}(g)$임을 증명하면 된다.
+
+우선 $g:Y\rightarrow Z$를 $B$ 위로 제한한 $g\|\_B$를 생각하자. 그럼 $A\cap B=0$이므로, $g\|\_B$는 단사이고, 따라서 $g\|\_B$의 치역이 $\operatorname{im}(g)$와 같다는 것만 보이면 충분하다.
+
+임의의 $z\in\operatorname{im}(g)$를 택하고, $y\in Y$가 $g(y)=z$를 만족하는 원소라 하자. 그럼 $Y=A\oplus B$이므로, 유일한 $a\in A, b\in B$가 존재하여 $y=a+b$이다. 이제 
+
+$$z=g(y)=g(a+b)=g(a)+g(b)=g(b)=(g\|\_B)(b)$$
+
+이므로 원하는 명제가 성립한다.
+
+</details>
+
+따라서 만일 다음의 short exact sequence
+
+$$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
+
+이 split이라면, $B\cong A\oplus C$가 성립한다. 하지만 그 역은 성립하지 않는다. 위의 short exact sequence가 split이기 위해서는 다음의 *commutative* diagram
+
+![nonsplitting_direct_sum](/assets/images/Homological_algebra/Exact_sequences-3.png){:width="408px" class="invert" .align-center}
+
+에서, 가운데의 map $\alpha:B\rightarrow A\oplus C$가 isomorphism이어야 하는데, 단순히 isomorphism $\alpha$가 존재한다는 것만으로는 위의 diagram이 commute한다는 것을 보장할 수 없기 때문이다.
+
+<div class="example" markdown="1">
+
+<ins id="ex11">**예시 11**</ins> $R=\mathbb{Z}$라 하고, $A=\mathbb{Z}$, $C=\prod\_\mathbb{N}(\mathbb{Z}/2\mathbb{Z})$, 그리고 $B=A\oplus C$라 하자. 
+
+$$0\longrightarrow A\overset{f}{\longrightarrow}B\overset{g}{\longrightarrow}C\longrightarrow 0$$
+
+에서 $f:A\rightarrow B$는 $f(n)=(2n, 0)$, 그리고 $g:B\rightarrow C$는 다음의 식
+
+$$g:(a, [b_0], [b_1], \ldots, )\mapsto ([a], [b_0], [b_1],\ldots)$$
+
+으로 정의하면 위의 열이 exact인 것을 확인할 수 있다. 
+
+위의 diagram을 commute하게 하는 isomorphism $\alpha:B\rightarrow A\oplus C$가 존재한다 가정하자. 그럼 $\alpha\circ f={\operatorname{incl}}\circ{\operatorname{id}}$으로부터, 임의의 $n\in A$에 대하여
+
+$$\alpha(f(n))=(n,0)$$
+
+임을 안다. 한편 둘째 사각형의 commutativity에 의하여, $\alpha(x, y)\in A\oplus C$에서 $C$에 해당하는 두 번째 성분은 반드시 $g(x,y)$와 같아야 한다. 편의상 $\alpha(x,y)$의 첫 번째 성분을 $\tilde{f}(x,y)$라 하자. 즉 
+
+$$\alpha(x,y)=(\tilde{f}(x,y),g(x,y))$$
+
+이다. 그럼 위의 논의로부터
+
+$$1=\tilde{f}(f(1))=\tilde{f}(2,0)=2\tilde{f}(1,0)$$
+
+이 얻어지므로 모순이 된다.
+
+</div>
+
+위의 증명을 자세히 살펴보면, linear map $\tilde{f}$의 존재가 중요한 역할을 한다는 것을 알 수 있으며, $\tilde{f}$는 밑의 exact sequence에서는 $A\hookrightarrow A\oplus C$ 뿐만 아니라, 자연스러운 projection $A\oplus C\rightarrow A$가 존재하기 때문에 얻어질 수 있었다. 따라서 다음의 명제가 어색하지 않다.
+
+<div class="proposition" markdown="1">
+
+<ins id="pp12">**명제 12**</ins> $R$-module들의 short exact sequence
+
+$$0\longrightarrow A\overset{f}{\longrightarrow}B\overset{g}{\longrightarrow}C\longrightarrow 0$$
+
+에서, 다음이 모두 동치이다.
+
+1. $f$의 retraction이 존재한다.
+2. $g$의 section이 존재한다.
+3. 위의 short exact sequence가 split-exact이다.
+
+</div>
 
 ---
 

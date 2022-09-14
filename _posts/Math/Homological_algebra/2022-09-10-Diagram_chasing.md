@@ -115,7 +115,7 @@ $i:\ker(h)\rightarrow X$와 $\xi$의 합성 $\xi\circ i:\ker h\rightarrow X'$를
 
 $$h'\circ(\xi\circ i)=(\eta\circ h)\circ i=\eta\circ 0=0$$
 
-이므로, [§완전열, 명제 4](/ko/math/homological_algebra/exact_sequences#pp4)로부터 유일한 $\xi^\sharp:\ker(h)\rightarrow\ker(h')$가 존재한다는 것을 안다. 
+이므로, [§완전열, 명제 5](/ko/math/homological_algebra/exact_sequences#pp5)로부터 유일한 $\xi^\sharp:\ker(h)\rightarrow\ker(h')$가 존재한다는 것을 안다. 
 
 ![induced_morphism_kernel](/assets/images/Homological_algebra/Diagram_chasing-5.png){:width="274.2px" class="invert" .align-center}
 
@@ -201,7 +201,7 @@ $$((f')^\ast)(a'+\operatorname{im}(\alpha))=b'+\operatorname{im}(\beta)$$
 
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma),\qquad \operatorname{coker}(\alpha)\rightarrow\operatorname{coker}(\beta)\rightarrow\operatorname{coker}(\gamma)$$
 
-를 잇는 $h:\ker(\gamma)\rightarrow\operatorname{coker}(\alpha)$가 존재하여, 이를 통해 이어진 다음의 열
+를 잇는 $\delta:\ker(\gamma)\rightarrow\operatorname{coker}(\alpha)$가 존재하여, 이를 통해 이어진 다음의 열
 
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma)\rightarrow\operatorname{coker}(\alpha)\rightarrow\operatorname{coker}(\beta)\rightarrow\operatorname{coker}(\gamma)$$
 
@@ -211,15 +211,15 @@ $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma)\rightarrow\operatorn
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-증명을 위해서는 $h$를 하나 만들고, 이후 위의 열이 $\ker(\gamma)$와 $\operatorname{coker}(\alpha)$에서 각각 exact임을 보이면 충분하다. 
+증명을 위해서는 $\delta$를 하나 만들고, 이후 위의 열이 $\ker(\gamma)$와 $\operatorname{coker}(\alpha)$에서 각각 exact임을 보이면 충분하다. 
 
 우선 $c\in\ker(\gamma)$를 하나 택하자. 그럼 $g$가 전사이므로, 적당한 $b\in B$가 존재하여 $g(b)=c$가 성립하며, 이 $b$는 다음의 식
 
 $$0=\gamma(c)=\gamma(g(b))=(\gamma\circ g)(b)=(g'\circ\beta)(b)=g'(\beta(b))$$
 
-을 만족한다. 즉 $\beta(b)\in\ker(g')=\operatorname{im}(f')$이다. 따라서 $f'(a')=\beta(b)$이도록 하는 $a'$가 유일하게 존재한다. 이러한 $a'$에 대하여 $h(c)=a'+\operatorname{im}(\alpha)\in \operatorname{coker}(\alpha)$라 하자. 
+을 만족한다. 즉 $\beta(b)\in\ker(g')=\operatorname{im}(f')$이다. 따라서 $f'(a')=\beta(b)$이도록 하는 $a'$가 유일하게 존재한다. 이러한 $a'$에 대하여 $\delta(c)=a'+\operatorname{im}(\alpha)\in \operatorname{coker}(\alpha)$라 하자. 
 
-함수 $h$가 잘 정의되기 위해서는 위의 함수값이 $b$의 선택에 의존하지 않아야 한다. $g(b_1)=c$를 만족하는 또다른 $b_1\in B$를 택하고, 위와 같은 방식으로 $f'(a_1')=\beta(b_1)$을 만족하는 $a_1'\in A'$를 택하자. 그럼 
+함수 $delta$가 잘 정의되기 위해서는 위의 함수값이 $b$의 선택에 의존하지 않아야 한다. $g(b_1)=c$를 만족하는 또다른 $b_1\in B$를 택하고, 위와 같은 방식으로 $f'(a_1')=\beta(b_1)$을 만족하는 $a_1'\in A'$를 택하자. 그럼 
 
 $$0=(g'\circ f')(a_1'-a_1)=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
 
@@ -227,21 +227,21 @@ $$0=(g'\circ f')(a_1'-a_1)=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
 
 $$f'(\alpha(a))=\beta(f(a))=\beta(b_1)-\beta(b)=f'(a_1'-a')$$
 
-이고, $f'$가 단사이므로 $\alpha(a)=a_1'-a'$가 성립한다. 즉, $a_1'\equiv a' \mod \operatorname{im}(\alpha)$이고, $h$가 잘 정의된다. 어렵지 않게 $h$가 $R$-module들 사이의 homomorphism임을 보일 수 있다.
+이고, $f'$가 단사이므로 $\alpha(a)=a_1'-a'$가 성립한다. 즉, $a_1'\equiv a' \mod \operatorname{im}(\alpha)$이고, $\delta$가 잘 정의된다. 어렵지 않게 $\delta$가 $R$-module들 사이의 homomorphism임을 보일 수 있다.
 
-이렇게 만든 $h$가 다음의 열
+이렇게 만든 $\delta$가 다음의 열
 
 $$\ker(\beta)\rightarrow\ker(\gamma)\rightarrow\operatorname{coker}(\alpha)\rightarrow\operatorname{coker}(\beta)$$ 
 
-을 exact sequence로 만든다는 것을 보여야 한다. 우선 $b\in \ker(\beta)$라 하자. $h(g^\sharp(b))=a'+\operatorname{im}(\alpha)$라 하면 $a'$는 식 $f'(a')=\beta(b)$에 의하여 결정되는데, $b\in\ker(\beta)$이므로 $f'(a')=0$이고, $f'$는 단사이므로 $a'=0$이어야 한다. 즉 $h\circ g^\sharp=0$이다. 이와 비슷하게, 임의의 $c\in\ker(\gamma)$에 대하여 $h(c)=a'+\operatorname{im}(\alpha)$라 하면, 
+을 exact sequence로 만든다는 것을 보여야 한다. 우선 $b\in \ker(\beta)$라 하자. $\delta(g^\sharp(b))=a'+\operatorname{im}(\alpha)$라 하면 $a'$는 식 $f'(a')=\beta(b)$에 의하여 결정되는데, $b\in\ker(\beta)$이므로 $f'(a')=0$이고, $f'$는 단사이므로 $a'=0$이어야 한다. 즉 $\delta\circ g^\sharp=0$이다. 이와 비슷하게, 임의의 $c\in\ker(\gamma)$에 대하여 $\delta(c)=a'+\operatorname{im}(\alpha)$라 하면, 
 
 $$((f')^\ast)(a'+\operatorname{im}(\alpha))=f'(a')+\operatorname{im}(\beta)=\beta(b)+\operatorname{im}(\beta)=0$$
 
-가 된다. 따라서 $\ker(h)\subset\operatorname{im}(g^\sharp)$이고 $\ker(f')^\ast\subset\operatorname{im}(h)$이라는 것만 보이면 충분하다.
+가 된다. 따라서 $\ker(\delta)\subset\operatorname{im}(g^\sharp)$이고 $\ker(f')^\ast\subset\operatorname{im}(\delta)$이라는 것만 보이면 충분하다.
 
-우선 $c\in\ker(h)$라 하자. 그럼 $a'$는 $g(b)=c$를 만족하는 $b$에 대해, 식 $f'(a')=\beta(b)$를 만족하는 원소로 정의되므로 $a'\in\operatorname{im}(\alpha)$이다. 이제 $\alpha(a)=a'$를 만족하는 $a\in A$를 택하자. 그럼
+우선 $c\in\ker(\delta)$라 하자. 그럼 $a'$는 $g(b)=c$를 만족하는 $b$에 대해, 식 $f'(a')=\beta(b)$를 만족하는 원소로 정의되므로 $a'\in\operatorname{im}(\alpha)$이다. 이제 $\alpha(a)=a'$를 만족하는 $a\in A$를 택하자. 그럼
 
-$$\beta(b)=f'(a')=f'(\alpha(a))=\beta(f(a))z$$
+$$\beta(b)=f'(a')=f'(\alpha(a))=\beta(f(a))$$
 
 이므로 $b-f(a)\in\ker(\beta)$이다. 이제
 
@@ -253,11 +253,11 @@ $$g^\sharp(b-f(a))=g(b-f(a))=g(b)-g(f(a))=g(b)=c$$
 
 $$\gamma(g(b))=(g'\circ\beta)(b)=(g'\circ f')(a')=0$$
 
-가 성립하므로 $g(b)\in\ker(\gamma)$이다. 따라서 $h(g(b))$가 잘 정의되며, $b$가 정확히 $f'(a')=\beta(b)$를 만족하는 원소로 정의되었으므로 이 값은 정확히 $a'+\operatorname{im}(\alpha)$와 같다.
+가 성립하므로 $g(b)\in\ker(\gamma)$이다. 따라서 $\delta(g(b))$가 잘 정의되며, $b$가 정확히 $f'(a')=\beta(b)$를 만족하는 원소로 정의되었으므로 이 값은 정확히 $a'+\operatorname{im}(\alpha)$와 같다.
 
 </details>
 
-이 정리를 snake lemma라고 부르는 것은 connecting map $h$를 그렸을 때, 다음과 같은 모양이 나오기 때문이다.
+이 정리를 snake lemma라고 부르는 것은 connecting map $\delta$를 그렸을 때, 다음과 같은 모양이 나오기 때문이다.
 
 ![connecting_map_of_snake_diagram](/assets/images/Homological_algebra/Diagram_chasing-9.png){:width="550.8px" class="invert" .align-center}
 
