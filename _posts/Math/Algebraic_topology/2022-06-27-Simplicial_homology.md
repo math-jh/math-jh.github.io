@@ -3,7 +3,7 @@
 title: "호몰로지"
 excerpt: "기본정의"
 
-categories: [Math / Algebraic topology]
+categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/singular_homology
 header:
     overlay_image: /assets/images/Algebraic_topology/a.png
@@ -13,7 +13,7 @@ sidebar:
 
 date: 2022-06-27
 last_modified_at: 2022-06-27
-weight: 1
+weight: 101
 
 ---
 
@@ -22,6 +22,10 @@ weight: 1
 하지만 이 개념의 한계 또한 명확하다. 예컨대 $Y=\mathbb{R}^3\setminus\\{0\\}$을 생각하면 이 공간 상의 어떠한 고리를 주어도 한 점으로 수축시킬 수 있다. 이는 <em_ko>고리</em_ko> $S^1$이 공간 상의 구멍을 탐지하는 데에 한계가 있다는 것을 보여준다. 이를 해결하기 위한 방법은 당연히 $S^1$ 대신 더 높은 차원의 <em_ko>고리</em_ko>, 예컨대 $S^2$를 사용하는 것이다. 방금의 상황에서 $S^1$ 대신 $S^2$를 사용한다면, 원점을 감싸고 있는 $S^2$는 한 점으로 수축할 수 없고, 그렇지 않은 $S^2$는 한 점으로 수축할 수 있음이 직관적으로 명확하다.
 
 우리는 이렇게 기본군 $\pi\_1(X)$를 일반화하여 $\pi\_2(X)$, 더 나아가 $\pi\_n(X)$를 정의할 수 있다. 그러나 일반적으로 이 군들을 직접 계산하는 것은 굉장히 어렵다. 다행히도 우리가 궁금해하는 많은 성질들은 homotopy group $\pi\_n(X)$ 대신, 더 계산하기 쉬운 *homology group*들만 살펴보아도 충분하다는 것이 밝혀져 있다.
+
+Homology group을 다루기 위해서는 ㅇ
+
+
 
 ## Simplicial homology
 
@@ -114,3 +118,13 @@ $$C_\bullet(X):\qquad\cdots\overset{\partial}{\longrightarrow}C_n(X)\overset{\pa
 $$\cdots\overset{\partial}{\longrightarrow}C_n(X)\overset{\partial}{\longrightarrow}C_{n-1}(X)\overset{\partial}{\longrightarrow}C_{n-2}(X)\overset{\partial}{\longrightarrow}\cdots\overset{\partial}{\longrightarrow}C_0(X)\overset{\epsilon}{\longrightarrow}\mathbb{Z}\longrightarrow0$$
 
 을 정의한다. 여기서 $\epsilon$은 $\epsilon(\sum n_i\sigma_i)=\sum n_i$로 정의된다. 이 complex의 homology group을 원래 complex의 *reduced homology group*이라 부르고 $\tilde{H}_n(X)$로 적는다. $n$이 0보다 클 경우 이들은 원래의 homology group들 $H_n(X)$와는 다를 것이 없지만, $H_0(X)=\tilde{H}_0(X)\oplus\mathbb{Z}$가 된다. 
+
+## Induced chain map
+
+연속함수 $f:X\rightarrow Y$가 주어졌다 하자. 그럼 각각의 $\sigma\in C_n(X)$에 대하여 $\sigma\mapsto f\circ\sigma$를 통해 함수 $f_n:C_n(X)\rightarrow C_n(Y)$가 정의된다. 어렵지 않게 $f_\bullet=(f_n)$이 chain transformation임을 확인할 수 있다. 이 때, 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm4">**정리 4**</ins> 두 연속함수 $f,g:X\rightarrow Y$가 homotopic하다면 모든 $n$에 대해 $H_n(f)=H_n(g)$가 성립한다.
+
+</div>
