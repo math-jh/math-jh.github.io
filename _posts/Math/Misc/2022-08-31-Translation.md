@@ -155,3 +155,7 @@ read_time: false
 | <unselected>triangular matrix</unselected> | <selected>&#9745; 삼각행렬</selected> |
 | <unselected>diagonal matrix</unselected> | <selected>&#9745; 대각행렬</selected> |
 | <unselected>characteristic polynomial</unselected> | <selected>&#9745; 특성다항식</selected> |
+
+## 호몰로지 대수학
+| <selected>&#9745; exact sequence</selected> | <unselected>완전열</unselected> |
+| <selected>&#9745; cokernel</selected> | <unselected>여핵</unselected> |
