@@ -54,13 +54,13 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 </div>
 
-이를 $T^n$들, 그리고 $\delta^n:T^n(C)\rightarrow T^{n+1}(A)$로 바꾸어 쓰면 *cohomological $\delta$-functor*의 정의를 얻는다. 우리는 $n<0$일 경우, $T_n$과 $T^n$이 모두 $0$인 것으로 생각하기로 하였으므로 homological $\delta$-functor의 첫 번째 조건은 특히 $T_0$이 right exact functor라는 의미가 된다.
+위의 정의를 $T^n$들, 그리고 $\delta^n:T^n(C)\rightarrow T^{n+1}(A)$로 바꾸어 쓰면 *cohomological $\delta$-functor*의 정의를 얻는다. 우리는 $n<0$일 경우, $T_n$과 $T^n$이 모두 $0$인 것으로 생각하기로 하였으므로 homological $\delta$-functor의 첫 번째 조건은 특히 
 
-$$\cdots\longrightarrow T_0(A)\longrightarrow T_0(B)\longrightarrow T_0(C)\longrightarrow0\longrightarrow 0\longrightarrow\cdots$$
+$$\cdots\longrightarrow T_0(A)\longrightarrow T_0(B)\longrightarrow T_0(C)\longrightarrow0\longrightarrow 0\longrightarrow\cdots, $$
 
-마찬가지로 cohomological $\delta$-functor의 첫 번째 조건은 $T^0$이 left exact functor가 되도록 한다. 
+즉 $T_0$이 right exact functor라는 의미가 된다. 마찬가지로 cohomological $\delta$-functor의 첫 번째 조건은 $T^0$이 left exact functor가 되도록 한다. 
 
-Universal $\delta$-functor의 두 번째 조건은 short exact sequence들의 모임 $\mathbf{S}(\mathcal{A})$에서 $\mathcal{A}$로 가는 두 functor $T_i(C)$와 $T_{i-1}(A)$를 생각할 때, $\delta_i$가 이들 사이의 natural transformation이 된다는 것을 의미한다.
+또, $\delta$-functor의 두 번째 조건인 naturality는 short exact sequence들의 모임 $\mathbf{S}(\mathcal{A})$에서 $\mathcal{A}$로 가는 두 functor $T_i(C)$와 $T_{i-1}(A)$를 생각할 때, $\delta_i$가 이들 사이의 natural transformation이 된다는 것을 의미한다.
 
 언제나와 같이 cohomological $\delta$-functor의 경우는 homological $\delta$-functor로부터 쉽게 유도할 수 있으므로, 앞으로는 homological $\delta$-functor에 대해서만 생각하기로 한다.
 

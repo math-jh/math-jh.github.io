@@ -4,7 +4,7 @@ title: "Mapping cone"
 excerpt: "기본정의"
 
 categories: [Math / Homological Algebra]
-permalink: /ko/math/homological_algebra/mappig_cone
+permalink: /ko/math/homological_algebra/mapping_cone
 header:
     overlay_image: /assets/images/Homological_algebra/a.png
     overlay_filter: 0.5
@@ -37,3 +37,4 @@ $$\begin{pmatrix}-d^B&0\\-f&d^C\end{pmatrix}$$
 
 으로 생각하면 $d$의 식을 쉽게 기억할 수 있다. 이 부호들은 나중에 계산을 편하게 하도록 해 준다.
 
+**디라이브드 하기 전에 채워넣기**
