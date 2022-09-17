@@ -132,7 +132,7 @@ $$\cdots\overset{d}{\longrightarrow}P_2\overset{d}{\longrightarrow}P_1\overset{d
 
 <ins id="pp8">**명제 8**</ins> 충분히 많은 projective object를 갖는 abelian category $\mathcal{A}$의 object $M$은 항상 projective resolution을 갖는다.
 
-</div>v
+</div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
