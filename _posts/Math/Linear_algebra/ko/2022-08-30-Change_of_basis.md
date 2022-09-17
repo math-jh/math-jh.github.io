@@ -47,8 +47,24 @@ $$[L]_{\mathcal{C}'}^{\mathcal{B}'}=[\operatorname{id}_W]_{\mathcal{C}'}^\mathca
 
 를 얻는다.
 
-두 $n\times n$ 행렬 $A,B$가 주어졌다 하자. 그럼 위의 식에서부터, 만일 적당한 두 가역행렬 $P,Q$가 존재하여 다음의 식
+두 $m\times n$ 행렬 $A,B$가 주어졌다 하자. 그럼 위의 식에서부터, 만일 적당한 두 가역행렬 $P,Q$가 존재하여 다음의 식
 
 $$B=PAQ$$
 
-를 만족한다면, 이 둘을 같은 것으로 취급하고 싶은 유혹이 있다. 물론 이 관계는 동치관계지만, 
+를 만족한다면 $A$와 $B$를 같은 것으로 취급하고 싶은 유혹이 있다. 이는 고정된 linear map $L$이 주어졌을 때, $L$의 정의역과 공역의 basis를 잘 택하여 얻어지는 행렬표현들을 모두 같은 것으로 생각한다는 것이다. 
+
+그러나 이렇게 그럴듯한 동기에 비해 그 결과는 별로 좋지 않다. $L$의 정의역과 공역의 basis를 모두 변화시킬 수 있다면, 정의역의 임의의 basis $\\{v\_1,\ldots, v_n\\}$을 택하고, 이후 공역에서는 $L(v_1),\ldots, L(v_n)$들 중 일차독립인 $L(v_1),\ldots, L(v_k)$를 택한 후 [§벡터공간의 차원, 명제 6](/ko/math/linear_algebra/dimension#pp6)을 이용하여 공역의 basis를 만들면 이 linear map은 항상 block matrix
+
+$$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
+
+꼴로 나타낼 수 있기 때문이다.
+
+따라서 우리는 이 동치관계보다 세밀한 관계를 정의해야 한다.
+
+<div class="definition" markdown="1">
+
+<ins id="df2">**정의 2**</ins> 임의의 $n\times n$ 행렬 $A,B$가 주어졌다 하자. 그럼 $A$와 $B$가 *닮은 행렬<sub>similar matrix</sub>*이라는 것은 적당한 가역행렬 $P$가 존재하여 $A=PBP^{-1}$이 성립하는 것이다.
+
+</div>
+
+즉 행렬 $A,B$가 닮은 행렬이라는 것은, 고정된 벡터공간 $V$에 대해 $A$를 *basis $\mathcal{B}$에 대한 선형변환 $L:V\rightarrow V$의 행렬표현*이라 생각했을 때, 
