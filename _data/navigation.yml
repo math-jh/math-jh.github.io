@@ -153,14 +153,16 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/Gaussian_elimination
       - title: "동형사상"
         url: /ko/math/linear_algebra/isomorphic_vector_spaces
-      - title: "행렬식의 존재성과 유일성"
-        url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
       - title: "선형사상들의 공간"
         url: /ko/math/linear_algebra/space_of_linear_maps
+      - title: "행렬식의 존재성과 유일성"
+        url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
       - title: "선형대수학의 기본정리"
         url: /ko/math/linear_algebra/ftla
       - title: "기본정리: categorical viewpoint<sup>†</sup>"
         url: /ko/math/linear_algebra/ftla_categorical_viewpoint
+      - title: "기저변환"
+        url: /ko/math/linear_algebra/change_of_basis
       - title: "쌍대공간"
         url: /ko/math/linear_algebra/dual_space
       - title: "행렬식"
@@ -169,6 +171,10 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
       - title: "역행렬"
         url: /ko/math/linear_algebra/inverse_matrix
+      - title: "특성다항식"
+        url: /ko/math/linear_algebra/characteristic_polynomial
+      - title: "대각화"
+        url: /ko/math/linear_algebra/diagonalization
 
 homological_algebra-ko:
   - title: <a href="/ko/homological_algebra" class="sidebar_title">호몰로지 대수학</a>
