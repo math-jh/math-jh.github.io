@@ -67,4 +67,18 @@ $$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
 
 </div>
 
-즉 행렬 $A,B$가 닮은 행렬이라는 것은, 고정된 벡터공간 $V$에 대해 $A$를 *basis $\mathcal{B}$에 대한 선형변환 $L:V\rightarrow V$의 행렬표현*이라 생각했을 때, 
+즉 행렬 $A,B$가 닮은 행렬이라는 것은, 고정된 벡터공간 $V$에 대해 $A$를 *basis $\mathcal{B}$에 대한 선형변환 $L:V\rightarrow V$의 행렬표현*이라 생각했을 때, 적당한 basis $\mathcal{C}$가 존재하여 $B$를 *basis $\mathcal{C}$에 대한 $L$의 행렬표현*이라 생각할 수 있는 것이다. 그럼 이 때 
+
+$$A=[L]_{\mathcal{B}}^\mathcal{B}=[\operatorname{id}_V]^\mathcal{B}_\mathcal{C}[L]^\mathcal{C}_\mathcal{C}[\operatorname{id}_V]^\mathcal{C}_\mathcal{B}=PBP^{-1}$$
+
+이 된다. 
+
+아직은 행렬들 간의 닮음이 충분히 좋은 동치관계라는 것을 느끼기 어렵지만, 행렬식을 정의한 후에는 이것이 충분히 좋은 동치관계라는 것을 확인할 수 있다. 
+
+---
+
+**참고문헌**
+
+**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
+
+---
