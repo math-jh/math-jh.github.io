@@ -63,7 +63,7 @@ $$\det(0I-A)=\det(-A)=(-1)^n\det(A)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $n\times n$ 행렬 $A$에 대하여, $A$의 특성다항식 $\det(\mathrm{x}I-A)=0$의 해를 $A$의 *고윳값<sub>eigenvalue</sub>*이라 부른다.
+<ins id="df3">**정의 3**</ins> $n\times n$ 행렬 $A$에 대하여, $A$의 특성다항식 $\det(\mathrm{x}I-A)=0$의 해를 $A$의 *고윳값<sub>eigenvalue</sub>*이라 부른다. $A$의 고윳값들의 모임을 $A$의 *spectrum<sub>스펙트럼</sub>*이라 부르고, 이 집합을 $\operatorname{Spec}(A)$으로 표기한다.
 
 </div>
 
