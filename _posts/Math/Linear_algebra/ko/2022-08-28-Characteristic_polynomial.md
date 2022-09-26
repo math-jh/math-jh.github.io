@@ -99,6 +99,8 @@ $$\det(\mathrm{x}I-A)=\det(\mathrm{x}I-PBP^{-1})=\det(P(\mathrm{x}I-B)P^{-1})=\d
 
 </details>
 
+특히 임의의 linear map $L:V\rightarrow V$가 주어졌을 때, 다음 글에서 다룰 행렬의 대각화를 통해 $[L]\_\mathcal{B}^\mathcal{B}$를 분해하면 $V$를 $L$의 고유공간으로 분해할 수 있다.
+
 ## 대수적 중복도
 
 고윳값들은 모두 특성다항식의 해지만, 어떤 고윳값들은 다른 고윳값보다 더 큰 중복도를 가질 수 있다. 이는 다음과 같이 정의된다.
