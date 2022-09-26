@@ -27,11 +27,11 @@ $$Av=\lambda v$$
 
 을 만족한다. 따라서, $E_\lambda$로 제한했을 때 $A$는 아주 다루기 쉬운 대상인 $v\mapsto \lambda v$가 된다. 
 
-더 일반적으로, $A$를 $\mathbb{R}^n$에서 $\mathbb{R}^n$으로의 linear map으로 생각하고, 정의역 $\mathbb{R}^n$을 고유공간 $E_\lambda$들로 덮을 수 있다 가정하자. 즉
+더 일반적으로, $A$를 $F^n$에서 $F^n$으로의 linear map으로 생각하고, 정의역 $F^n$을 고유공간 $E_\lambda$들로 덮을 수 있다 가정하자. 즉
 
-$$\mathbb{R}^n=\operatorname{span}\left(\bigcup_{\lambda\in\operatorname{Spec}(A)}E_\lambda\right)$$
+$$F^n=\operatorname{span}\left(\bigcup_{\lambda\in\operatorname{Spec}(A)}E_\lambda\right)$$
 
-이라 하자. 그럼 임의의 $v\in\mathbb{R}^n$에 대하여, $v_\lambda\in E_\lambda$들이 각각 존재하여
+이라 하자. 그럼 임의의 $v\in F^n$에 대하여, $v_\lambda\in E_\lambda$들이 각각 존재하여
 
 $$v=\sum_{\lambda\in\operatorname{Spec}(A)}v_\lambda$$
 
@@ -101,12 +101,130 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $V=\bigoplus W_i$라 가정하고, $W_i$들의 basis $\mathcal{B}_i$를 택하자. 만일 $\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$이라면 $W_i\cap W_j\neq\emptyset$가 되어 [명제 2](#pp2) 이후의 논의에 모순이므로, 반드시 $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$이어야 한다. 임의의 $v\in V$에 대하여, $V=\bigoplus W_i$로부터 다음의 식
+우선 $V=\bigoplus W\_i$라 가정하고, $W\_i$들의 basis $\mathcal{B}\_i$를 택하자. 만일 $\mathcal{B}\_i\cap\mathcal{B}\_j\neq\emptyset$이라면 $W\_i\cap W\_j\neq\emptyset$가 되어 [명제 2](#pp2) 이후의 논의에 모순이므로, 반드시 $\mathcal{B}\_i\cap\mathcal{B}\_j=\emptyset$이어야 한다. 임의의 $v\in V$에 대하여, $V=\bigoplus W\_i$로부터 다음의 식
 
-$$v=\sum_{i\in I} w_i$$
+$$v=\sum\_{i\in I} w\_i$$
 
-을 만족하는 
+을 만족하는 $w\_i$들이 유일하게 존재한다. 또, $W\_i$들 각각에서 $w\_i$들을 $\mathcal{B}\_i$의 원소들의 linear combination으로 유일하게 표현할 수 있다. 이로부터 $\bigcup\mathcal{B}\_i$가 $V$의 basis가 된다는 것을 알 수 있다.
+
+이 논증을 거꾸로 뒤집으면 반대방향 또한 보일 수 있다.
 
 </details>
+
+따라서 $\dim V=\sum\_{i\in I}\dim W\_i$임을 알 수 있다. 
+
+## 대각화
+
+이제 $F^n$을 고유공간으로 분해하는 법을 살펴본다. 앞선 [명제 2](#pp2)로부터 벡터공간 $F^n$을 고유공간들 $E\_\lambda$로 분해하는 것은 $E\_\lambda$의 basis들을 모아서 $F^n$의 basis를 나타내는 것과 같다는 것을 안다. 또, 영이 아닌 벡터 $x\_1$이 고윳값 $\lambda\_1$에 대응되는 고유벡터라 하면, 또 다른 고윳값 $\lambda\_2$에 대하여
+
+$$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
+
+이므로 $x\_1\not\in E\_{\lambda\_2}$임을 안다. 따라서 $E\_\lambda$들의 basis를 어떻게 잡더라도, 서로 다른 $\lambda\_1,\lambda\_2$에 대하여 $E\_{\lambda\_1}, E\_{\lambda\_2}$의 basis가 겹치는 일은 없다. 뿐만 아니라 다음이 성립한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="pp3">**명제 3**</ins> 임의의 행렬 $A$에 대하여, $x\_1,\ldots, x\_m$들이 각각 서로 다른 고윳값들 $\lambda\_1,\ldots,\lambda\_m$들에 대응되는 고유벡터들이라 하자. 그럼 집합 $\\{x\_1,\ldots,x\_m\\}$은 일차독립이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+결론을 부정하여 집합 $\\{x\_1,x\_2,\ldots, x\_m\\}$이 일차종속이라 하자. 즉, 다음의 식
+
+
+$$\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_mx_m=0\tag{1}$$
+
+을 만족하며 모두 영은 아닌 스칼라들 $\alpha\_i$들이 존재한다. 이제 이를 만족하는 $(\alpha\_i)\_{1\leq i\leq m}$들 중, $\operatorname{supp}(\alpha\_i)$가 가장 작도록 하는 모임을 골라 이를 $(\beta\_i)\_{1\leq i\leq m}$라 하자. 즉, 만일 $\beta\_i\neq0$을 만족하는 $i$의 갯수가 $k$개라면, $k$개 미만의 $i$에 대하여 $\alpha\_i\neq 0$을 만족하는 $(\alpha\_i)\_{1\leq i\leq m}$은 위의 식 (1)을 만족하지 않는다.
+
+이제 적어도 2개의 $\beta\_i$에 대하여 $\beta\_i\neq 0$이므로, 일반성을 잃지 않고 $\beta\_m\neq 0$이라 하자. 그럼
+
+$$x_m=\sum_{i=1}^{m-1}\left(-\frac{\beta_i}{\beta_m}\right)x_i$$
+
+이다. 편의상 이를 $x\_m=\sum\_{i=1}^{m-1}\beta'\_ix\_i$라 하자. 양 변에 $A$를 곱하면
+
+$$Ax_m=\sum_{i=1}^{m-1}\beta'_i(Ax_i)$$
+
+이고, $x\_m$들은 고유벡터들이므로
+
+$$\lambda_mx_m=\sum_{i=1}^{m-1}\beta'_i\lambda_i x_i$$
+
+이다. 그런데 $x\_m=\sum\_{i=1}^{m-1}\beta'\_ix\_i$의 양변에 $\lambda\_m$을 곱하면
+
+$$\lambda_mx_m=\sum_{i=1}^{m-1}\beta_i'\lambda_mx_i$$
+
+이므로, 이를 앞서서 얻은 식과 연립하면
+
+$$0=\sum_{i=1}^{m-1}\beta_i'(\lambda_i-\lambda_m)x_i$$
+
+이고, $\beta\_i'=-(\beta\_i/\beta\_m)$이므로 양 변에 $\beta\_m$을 곱해 위의 식을 정리하면
+
+$$0=\sum_{i=1}^{m-1}\beta_i(\lambda_i-\lambda_m)x_i$$
+
+이다. 만일 $(\beta''\_i)\_{1\leq i\leq n}$을 다음의 식
+
+$$\beta_i''=\left\{\begin{array}{l l}\beta_i(\lambda_i-\lambda_m)&1\leq i\leq m-1\\0&i=m\end{array}\right$$
+
+으로 정의하면 위의 식은 
+
+$$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
+
+이 된다. 가정에 의해 $\lambda_i-\lambda_m\neq 0$이므로, $1\leq i\leq m-1$에 대해서는 $\beta_i''=0$인 것과 $\beta_i=0$인 것이 동치이다. 따라서 $\beta_i''\neq 0$을 만족하는 $1\leq i\leq m-1$은 $k-1$개이고, $\beta\_m''=0$이므로 $\operatorname{supp}(\beta\_i'')\_{1\leq i\leq m}$의 크기는 $k-1$이다. 이는 $(\beta\_i)\_{1\leq i\leq m}$의 최소성에 모순이므로, 집합 $\\{x_1,x_2,\ldots, x_m\right\\}$은 일차독립이다.
+
+</details>
+
+이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\operatorname{Spec}(A)$, 이에 대응되는 고유공간들을 $E\_\lambda$, 그리고 이들의 basis를 $\mathcal{B}\_\lambda$라 한다면 $\mathcal{B}=\bigcup\_{\lambda\in\operatorname{Spec}(A)}\mathcal{B}\_\lambda$가 $F^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $F^n$의 basis가 될 이유는 없다. 가령 이전 글의 [예시 7](/ko/math/linear_algebra/characteristic_polynomial#ex7)을 보면, $F=\mathbb{R}$에서 $\operatorname{Spec}(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
+
+$$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
+
+의 특성다항식은 $(\mathbf{x}-1)^3=0$이지만, 고윳값 $1$에 해당하는 고유벡터는 오직 $(1,0,0)$ 뿐임을 알 수 있다. 이를 이전 글에서 도입한 언어로 바꾸어 쓰자면, 고윳값 $1$의 대수적 중복도는 $3$이고, 기하적 중복도는 $1$이라 할 수 있다. 
+
+다음 명제는 <em_ko>항상</em_ko> 행렬의 고윳값의 기하적 중복도는 대수적 중복도를 넘을 수 없음을 보여준다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="pp4">**명제 4**</ins> $n\times n$ 행렬 $A$의 고윳값 $\lambda\in F$에 대하여, $\lambda$의 기하적 중복도는 항상 $\lambda$의 대수적 중복도를 넘지 못한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$\lambda$의 기하적 중복도가 $k$라 하고, $E_\lambda(A)$를 span하는 $k$개의 일차독립인 벡터들 $x_1,\ldots, x_k$를 생각하자. 여기에 $(n-k)$개의 벡터 $x_{k+1},\ldots, x_k$를 추가하여 $F^n$의 새로운 basis $\\{x_1,\ldots, x_n\\}$을 만들 수 있다. 이제 행렬 $X$를
+
+$$X=(x_1|x_2|\cdots|x_n)$$
+
+으로 정의한다면, $X$의 column들이 linearly independent하므로 $X^{-1}$이 존재한다. $X^{-1}$의 각 row들을 $y_i$라 하자. 식 $X^{-1}X=XX^{-1}=I$에서
+
+$$y_i\cdot x_j=\begin{cases}1&i=j\\ 0&i\neq j\end{cases}$$
+
+이 성립한다. 따라서 $B=X^{-1}AX$라 한다면 
+
+$$\begin{aligned}B&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmatrix}(Ax_1|Ax_2|\cdots|Ax_n)\\
+&=\begin{pmatrix}y_1\cdot Ax_1&y_1\cdot Ax_2&\cdots& y_1\cdot Ax_k&\cdots&y_1\cdot Ax_n\\ y_2\cdot Ax_1&y_2\cdot Ax_2&\cdots &y_2\cdot Ax_k&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot Ax_1&y_k\cdot Ax_2&\cdots&y_k\cdot Ax_k&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot Ax_1&y_n\cdot Ax_2&\cdots &y_n\cdot Ax_k&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
+&=\begin{pmatrix}y_1\cdot (\lambda x_1)&y_1\cdot (\lambda x_2)&\cdots& y_1\cdot (\lambda x_k)&\cdots&y_1\cdot Ax_n\\ y_2\cdot (\lambda x_1)&y_2\cdot (\lambda x_2)&\cdots &y_2\cdot (\lambda x_k)&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot (\lambda x_1)&y_k\cdot (\lambda x_2)&\cdots&y_k\cdot (\lambda x_k)&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot (\lambda x_1)&y_n\cdot (\lambda x_2)&\cdots &y_n\cdot (\lambda x_k)&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
+&=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
+&=\begin{pmatrix}\lambda I_k&B\\ 0&C\end{pmatrix}\end{aligned}$$
+
+이 된다. 따라서 $A$의 특성다항식을 $p_A(\mathbf{x})$라 적으면, 이전 글의 [정의 3]() 다음의 논증으로부터 $p_A(\mathbf{x})=p_B(\mathbf{x})$이고 따라서
+
+$$p_A(\mathbf{x}=p_B(\mathbf{x})=\det(\mathbf{x}I-B)=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
+
+임을 안다. 즉, $p_A$에서 $\lambda$의 대수적 중복도는 최소 $k$이다. 
+
+</details>
+
+지금까지의 내용을 정리해보자. $n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 3](#pp3) 이후의 논증으로부터, $F^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="pp5">**명제 5**</ins> 임의의 $n\times n$ 행렬 $A$에 대하여, $F^n$이 $A$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
+
+1. $A$의 특성다항식이 중복도를 고려하였을 때 $n$개의 근을 가지며,
+2. 이 때 각각의 고윳값의 기하적 중복도와 대수적 중복도가 같은 것이다.
+
+</div>
+
+특별히 $F$가 algebraically closed field라면 첫째 조건은 항상 만족되므로, 둘째 조건만 고려하면 된다.
+
+한편 
 
 [^1]: 물론, 언제나와 같이 이 합은 사실은 유한합인 것으로 가정한다. 즉 $(v\_i)\_{i\in I}$는 finitely supported인 것으로 가정한다.
