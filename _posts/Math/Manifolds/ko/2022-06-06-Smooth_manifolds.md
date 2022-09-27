@@ -13,19 +13,19 @@ sidebar:
 
 date: 2022-06-06
 last_modified_at: 2022-06-06
-weight: 2
+weight: 3
 
 ---
 
-현대수학에는 여러가지 철학이 있지만, 대부분의 분야에서 공통적으로 나타나는 것은
+현대수학에는 여러가지 철학이 있지만, 많은 분야에서 공통적으로 나타나는 것은
 
 > 수학적인 대상을 알기 위해서는, 그 대상 위에 정의된 함수를 살펴보면 된다.
 
-는 것이다. 예를 들어 어떠한 위상공간이 주어졌을 때, 이 위상공간의 성질은 위상공간 위에서 정의된 연속함수들을 이용해 설명할 수 있고, 벡터공간과 같은 경우에는 아예 그 쌍대공간을 떼어놓고는 설명하기가 힘들 정도이다. 마찬가지로 미분다양체의 성질을 알기 위해서는 이 위에 정의된 미분가능한 함수들에 대해 알아야 한다.
+는 것이다. 예를 들어 어떠한 위상공간이 주어졌을 때, 이 위상공간의 성질은 위상공간 위에서 정의된 연속함수들을 이용해 설명할 수 있고, 벡터공간과 같은 경우에는 아예 그 쌍대공간을 떼어놓고는 설명하기가 힘들 정도이다. 미분다양체도 마찬가지로 이러한 철학의 영향을 받으며, 따라서 우리는 differentiable manifold, 그리고 이 위에 정의된 smooth function들을 정의한다.
 
 ## 미분다양체
 
-이를 위해서는 우선 differentiable manifold 위에 미분구조가 어떠한 식으로 주어졌는지를 알아야 한다. 물론 일반적인 위상공간에서 미분을 정의하는 것은 쉬운 일이 아니다. 하지만 일반적인 위상공간과 달리, topological manifold는 국소적으로 $\mathbb{R}^n$과 닮아 있으므로, 여기에서 정의된 미분의 개념을 $M$으로 가져올 수 있다. ([정의 3](#df3)) 이것이 가능한 이유는 미분가능성이 본질적으로는 국소적인 성질이기 때문이다. 
+이를 위해서는 우선 differentiable manifold 위에 미분구조가 어떠한 식으로 주어졌는지를 알아야 한다. 일반적인 위상공간과 달리, topological manifold는 국소적으로 $\mathbb{R}^n$과 닮아 있으므로, 여기에서 정의된 미분의 개념을 $M$으로 가져올 수 있다. 이것이 가능한 이유는 미분가능성이 본질적으로는 국소적인 성질이기 때문이다. 
 
 힌퍈, 도입부에서 우리는 간단히 미분가능이라는 말로 뭉뚱그렸지만, 미분가능성에도 일종의 미분가능한 정도가 정의된다는 것을 잘 알고 있다.
 
@@ -112,9 +112,9 @@ $$\mathcal{A}_1=\{(\mathbb{R},\operatorname{id}_\mathbb{R})\},\qquad \mathcal{A}
 
 그럼에도 불구하고 [예시 4](#ex4)의 두 manifold는 서로 diffeomorphic하다는 것을 나중에 확인하게 된다. 
 
-## Partition of unity
+## Smooth partition of unity
 
-우리는 이전 글에서 topological manifold $M$이 주어졌을 때, second countability를 이용하여 $M$이 paracompact임을 보이고, 따라서 $M$이 partition of unity를 갖는다는 것을 증명하였다. 그러나 이제 우리는 differentiable manifold에 관심이 있기 때문에 이를 적절하게 수정해주어야 한다. 앞서 *continuous* partition of unity의 존재성을 보인 [§위상다양체, 정리 8](#/ko/math/manifolds/topological_manifolds)을 다시 살펴보면, 이를 적절히 수정하기 위해서는 Urysohn lemma에 의해 얻어지는 $\psi_i$들 각각을 $C^\infty$ 함수들로 바꿔주기만 하면 된다는 것을 알 수 있다. 즉 다음의 보조정리만 보이면 충분하다.
+우리는 이전 글에서 topological manifold $M$이 주어졌을 때, second countability를 이용하여 $M$이 paracompact임을 보이고, 따라서 $M$이 partition of unity를 갖는다는 것을 증명하였다. 그러나 이제 우리는 differentiable manifold에 관심이 있기 때문에 이를 적절하게 수정해주어야 한다. 앞서 *continuous* partition of unity의 존재성을 보인 [§단위분할, 정리 3](/ko/math/manifolds/partition_of_unity#thm3)을 다시 살펴보면, 이를 적절히 수정하기 위해서는 Urysohn lemma에 의해 얻어지는 $\psi_i$들 각각을 $C^\infty$ 함수들로 바꿔주기만 하면 된다는 것을 알 수 있다. 즉 다음의 보조정리만 보이면 충분하다.
 
 <div class="proposition" markdown="1">
 
