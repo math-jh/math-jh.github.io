@@ -45,24 +45,27 @@ $$\frac{\partial^2 f}{\partial x^2},\quad\frac{\partial^2 f}{\partial x\partial 
 
 위 정의에서의 homeomorphism $\varphi:U\rightarrow U'$를 *coordinate chart*라 부른다. $U'$는 $\mathbb{R}^m$의 부분집합이므로, $\varphi$는 $m$개의 성분함수들로 이루어진 함수이다. 위에서 약속한 표기법에 따르면, 성분함수 $r^i\circ\varphi$들은 $\varphi^i$로 적는 것이 옳지만 이들이 $U$ 위에서의 좌표계와 같은 역할을 한다는 것을 강조하기 위해 $x^i$로 적는다.
 
-Topological manifold $M$은 항상 국소적으로 유클리드 공간 $\mathbb{R}^m$과 닮아있기 때문에, 이 국소적인 정보들을 이어붙여 $M$ 전체에서 성립하는 성질을 얻을 수 있다. 예를 들어, $M$의 임의의 점 $p$마다 적당한 열린근방 $U$가 존재하여[^1], 함수들 $f:U\rightarrow\mathbb{R}$이 정의되었다고 하자. 만일 $f$들이 모두 compatible하다면 ([집합론, §함수 (1), 정의 3](/ko/math/set_theory/functions_1#df3)), 이들을 이어붙여 $M$ 전체에서 정의된 함수를 만들 수 있을 것이며, 이렇게 만들어진 함수는 대체로 $f$의 성질들, 예를 들어 연속성 혹은 smoothness를 이어받는다. 
+또, 실제로 위의 정의를 적용할 때에는 $U$와 $U'$가 모두 연결집합인 경우만 생각한다. 이는 우선 점 $x$의 임의의 열린근방 $U_0$, 그리고 이와 homeomorphic한 $\mathbb{R}^n$에서의 열린집합 $U'_0$이 주어졌다 하면, $\mathbb{R}^n$의 위상의 정의에 의하여 $\varphi(x)$를 포함하는 열린 공 $U'$을 잡을 수 있고, 이를 다시 $\varphi^{-1}$을 타고 $X$로 보내어 $U=\varphi^{-1}(U')$로 정의할 수 있기 때문이다. 
 
-그러나 일반적으로, 이렇게 국소적으로 정의된 함수들이 항상 compatible하다는 것을 바랄 수는 없다. 이런 경우에 $M$에 대해 국소적으로 알려진 정보들을 전체 $M$으로 확장하는 과정은 주로 다음의 *partition of unity*를 통해 이루어진다.
+임의의 $m$차원 topological manifold $M$이 주어졌다 하자. 일반적으로 $M$은 국소적으로만 $\mathbb{R}^m$과 닮아있기 때문에 이를 $\mathbb{R}^m$ 안에 그리는 것은 불가능할 수도 있다. 
 
-<div class="definition" markdown="1">
+<div class="example" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 위상공간 $X$와, $X$의 open covering $\\{U\_i\\}\_{i\in I}$가 주어졌다 하자. 이 때, 연속함수 $\phi_i:X\rightarrow [0,1]$들의 모임 $\\{\phi\_i\\}\_{i\in I}$가 $\\{U\_i\\}$에 의해 dominate되는 *partition of unity<sub>단위분할</sub>*라는 것은 다음의 세 조건
+<ins id="ex2">**예시 2**</ins> 1차원 구면 $S^1$을 생각하자. 그럼 임의의 점 $p\in S^1$에 대하여, $p$의 antipodal point를 포함하지 않을 정도로 작게 호를 그리면, 이는 $p$를 포함하는 $S^1$의 열린집합이 되며, 이 집합이 $\mathbb{R}^1$의 열린집합과 homeomorphic하다는 것은 직관적으로 자명하다. 따라서 $S^1$은 $1$차원의 위상다양체다. 
 
-1. $\operatorname{supp}\phi\_i\subseteq U\_i$,
-2. $\\{\operatorname{supp}\phi\_i\\}_{i\in I}$가 locally finite,
-3. 모든 $x$에 대하여 $\sum\_{i\in I}\phi\_i(x)=1$.
-
-을 만족하는 것이다.
+그러나 $S^1$과 homeomorphic한 $\mathbb{R}^1$의 부분집합은 존재하지 않는다. $S^1$에서 한 점을 뺀 공간은 여전히 연결집합이지만, $\mathbb{R}^1$에는 그러한 성질을 만족하는 집합이 없기 때문이다.
 
 </div>
 
-위의 정의에서, $\\{\operatorname{supp}\phi\_i\\}\_{i\in I}$가 *locally finite*이라는 것은, 임의의 $x\in X$마다 적당한 열린근방 $U$가 존재하여, $U$가 오직 <em_ko>유한 개의</em_ko> $\operatorname{supp}\phi_i$들과만 만나는 것이다. 따라서 임의의 $x\in X$는 오직 유한히 많은 $\operatorname{supp}\phi_i$에만 속해 있으며, 특히 3번 조건의 합 $\sum\phi_i(x)$는 $x\in X$가 고정될 때마다 유한합이 된다.  
-또, 만일 $\bigcup\operatorname{supp}\phi_i\neq X$라면 $x\not\in\bigcup\operatorname{supp}\phi_i$인 $x$에 대하여 $\sum\phi_i(x)=0$일 것이므로, 3번 조건은 모임 $\\{\operatorname{supp}\phi_i\\}$이 $X$의 covering이 된다는 것을 함의한다.
+그러나 Whitney embedding theorem에 의하여, 임의의 $n$차원 manifold는 $2n-1$차원 유클리드 공간에 적당히 넣을 수 있다는 것이 알려져 있다. 때문에 **[MS]**와 같은 책에서는 manifold를 정의할 때 충분히 큰 차원의 유클리드 공간의 부분집합으로 정의하기도 한다. 그러나 이런 식으로 정의할 경우, manifold $M$의 성질이 $M$에 내재되어 있는 성질인지, 혹은 $\mathbb{R}^A$의 부분집합으로서 생기는 성질인지를 꼼꼼히 따져줘야 하기 때문에 우리는 [정의 1](#df1)과 같은 접근방식을 유지한다.
+
+이 접근방식은 manifold를 다룰 때 많은 도움이 되지만, 동시에 직관적인 몇몇 정의들을 새로운 언어로 써야 한다. 예컨대 위의 예시 $S^1$를 보면, 점 $p\in S^1$에서의 접선이 무엇인지는 직관적으로 명확하지만 이를 $S^1$을 둘러싸고 있는 공간 $\mathbb{R}^2$ 없이 설명하는 것은 어렵다. 이를 [§접공간]()에서 정의한다. 
+
+## Paracompactness
+
+한편, manifold는 국소적으로는 우리에게 친숙한 공간인 유클리드 공간이다. 따라서 manifold를 다룰 때에는 이렇게 잘 알려진 정보를 이어붙여 manifold 전역에서 성립하는 정보를 얻어내는 과정이 필요하다. 가령 $M$의 임의의 점 $p$마다, 적당한 열린근방 $U$와 이 위에서 정의된 함수 $f_U:U\rightarrow M$들이 주어졌다 가정하자. 만일 $U\cap V\neq\emptyset$일 때마다 $f\_U\|\_{U\cap V}=f\_V\|\_{U\cap V}$라면, 이들 $f\_U$들을 이어붙여 $M$ 전역에서 정의된 함수 $f:M\rightarrow\mathbb{R}$을 만들 수 있다. ([집합론, §함수 (1), 정의 3](/ko/math/set_theory/functions_1#df3)) 이를 더 일반화하여, 각각의 조각들에서 정의된 정보들이 compatible하지 않더라도 $M$ 전역에서의 정보를 주는 방법이 존재한다. 
+
+이를 위해서는 일종의 finiteness가 필요하다. 위상공간 $X$와, $X$의 부분집합들의 모임 $\\{A\_i\\}\_{i\in I}$에 대하여, 이 모임이 *locally finite*이라는 것은 임의의 $x\in X$가 주어질 때마다, $x$의 적당한 열린근방 $U$가 존재하여 $U\cap A\_i\neq\emptyset$인 $i\in I$가 오직 유한 개 뿐이도록 할 수 있는 것이다. 또, 다음을 정의한다.
 
 <div class="definition" markdown="1">
 
@@ -92,104 +95,9 @@ $$X\setminus C=X\setminus\bigcup_{i\in I} C_i= \bigcap_{i\in I} (X\setminus C_i)
 
 </details>
 
-우리가 처음으로 보일 사실은 임의의 paracompact Hausdorff space가 normal space가 된다는 사실이다. 
-
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 임의의 paracompact, Hausdorff space $X$는 normal space이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-서로소인 두 닫힌집합 $A,B$가 주어졌을 때, 이들 각각을 포함하는 서로소인 열린집합 $U,V$가 존재함을 보여야 한다.
-
-우선 $A$가 singleton $A=\\{a\\}$인 경우부터 고려한다. 각각의 $b\in B$에 대하여, Hausdorff 조건에 의해 $A\subseteq U_b$이고 $b\in V_b$이도록 하는 서로소인 열린집합들 $U_b,V_b$가 존재한다. 특히 $U_b\cap V_b=\emptyset$으로부터 $U_b\subseteq X\setminus V_b$이고, 따라서
-
-$$A\subseteq U_b=\operatorname{int}(U_b)\subset\operatorname{int}(X\setminus V_b)=X\setminus\operatorname{cl}V_b$$
-
-이므로 $A\cap\operatorname{cl}V_b=\emptyset$이다. 이제 $\\{V_b\\}_{b\in B}$는 $B$의 open covering이므로, 여기에 열린집합 $X\setminus B$를 추가한 모임은 $X$의 open covering이 된다. $X$는 paracompact이므로, 이 모임의 locally finite, open refinement가 존재한다. 이를 $\mathcal{C}$라 하자. 
-
-이제 $\mathcal{C}$의 원소들 중, $B$와 만나는 것들을 모두 모아 $\mathcal{D}\subset\mathcal{C}$를 만들자. 그럼 $\mathcal{C}$가 locally finite이므로, 그 부분집합 $\mathcal{D}$ 또한 locally finite이다. 또 $\mathcal{D}$가 $B$를 덮는다는 것은 자명하므로,  다음의 열린집합
-
-$$V=\bigcup_{D\in\mathcal{D}}D$$
-
-은 $B$를 포함하는 열린집합이다. 
-
-한편, 임의의 $D\in\mathcal{D}$에 대해 $D\subseteq V_b$인 $b$를 잡으면
-
-$$A\cap\operatorname{cl}D\subseteq A\cap\operatorname{cl}V_b=\emptyset$$
-
-또한 성립한다. 따라서 [보조정리 4](#lem4)에 의해
-
-$$\emptyset=A\cap \bigcup_{D\in\mathcal{D}}\operatorname{cl}(D)=A\cap \operatorname{cl}V$$
-
-이므로 열린집합 $U=X\setminus\operatorname{cl}V$과 $V$가 각각 $A=\\{a\\}$와 $B$를 분리하는 서로소인 열린집합이 된다. 즉, $X$는 regular space가 된다.
-
-이제 임의의 서로소인 닫힌집합 $A,B$에 대하여, 방금 증명한 regularity를 사용하면 각각의 $b\in B$에 대해 $A\subseteq U_b$, $b\in V_b$이도록 하는 두 서로소인 열린집합 $U_b,V_b$를 잡을 수 있다. 이제 이들을 사용하여 위의 논증을 그대로 반복하면, 그 결과로 얻어지는 $U,V$가 $A$와 $B$를 분리하는 서로소인 열린집합이 된다는 것을 확인할 수 있다.
-
-</details>
-
-따라서 어떠한 위상공간 $X$가 paracompact, Hausdorff라면 Urysohn lemma를 자유롭게 사용할 수 있다. (<#ref#>) 특히 Urysohn lemma는 partition of unity의 존재성을 보일 때 사용된다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="lem6">**보조정리 6**</ins> 임의의 paracompact Hausdorff space $X$와, $X$의 open covering $\\{U\_i\\}\_{i\in I}$가 주어졌다 하자. 그럼 $\operatorname{cl}V_b\subseteq U_i$가 모든 $i\in I$에 대해 성립하도록 하는 $X$의 locally finite open covering $\\{V_i\\}$가 존재한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-우선 $\mathcal{C}$를 [적당한 $i\in I$가 존재하여 $\operatorname{cl}C\subseteq U_i$인 열린집합 $C$들의 모임]으로 정의하자. 임의의 $x\in X$와 $x$를 포함하는 $U_i$에 대하여 $C_i=X\setminus U_i$는 $x$를 포함하지 않는 닫힌집합이고, 따라서 $X$의 regularity에 의하여 $x$와 $C_i$를 분리하는 서로소인 열린집합 $V_i$와 $W_i$가 각각 존재한다.  그럼 $V_i\subseteq X\setminus W_i$이고, 따라서
-
-$$\operatorname{cl}V_i\subseteq X\setminus W_i\subseteq X\setminus C_i=U_i$$
-
-가 성립한다. 즉, 임의의 $x\in X$에 대해 그 closure가 어떤 $U_i$에 포함되도록 하는 열린집합 $V_i$가 항상 존재하고 따라서 $\mathcal{C}$는 open covering이다. $X$의 paracompactness를 이용하여  $\mathcal{C}$의 locally finite open refinement $\mathcal{D}$를 얻자.
-
-적당한 index set $J$를 통해 $\mathcal{D}=\\{W\_j\\}\_{j\in J}$라 적으면, 정의에 의해 $W_j$는 어떠한 $\mathcal{C}$의 원소 $C$에 포함되며, 다시 $C$는 적당한 $i\in I$에 대해 $\operatorname{cl}C\subseteq U_i$를 만족한다. 따라서 각각의 $j$마다 이러한 $i$를 하나씩 뽑아 함수 $f:J\rightarrow I$를 만들 수 있다. 이제 각각의 $i\in I$에 대하여
-
-$$V_i=\bigcup_{j\in f^{-1}(i)} W_j$$
-
-으로 정의하자. 그럼 $\\{V_i\\}_{i\in I}$가 정확히 우리가 원하는 open covering이 된다.
-
-우선 우변의 $W_j$들은 모두 $\operatorname{cl}W_j\subseteq U_i$를 만족하고, 따라서
-
-$$\operatorname{cl}V_i=\operatorname{cl}\left(\bigcup_{j\in f^{-1}(i)}W_j\right)=\bigcup_{j\in f^{-1}(i)}\operatorname{cl}W_j\subseteq U_i$$
-
-가 된다. 또 $\mathcal{D}$는 locally finite이므로, 임의의 $x\in X$마다 적당한 열린근방 $U$가 존재하여 유한히 많은 $W_j$들과만 만나도록 할 수 있다. 그럼 이 $U$는 $j\in f^{-1}(i)$를 만족하는 $V_i$들과만 만나므로, 마찬가지로 $\\{V_i\\}$도 locally finite이다.
-
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="thm7">**정리 7**</ins> 임의의 paracompact Hausdorff space $X$와, $X$의 open covering $\\{U\_i\\}\_{i\in I}$에 대하여, $\\{U_i\\}$에 의해 dominate되는 partition of unity가 존재한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-우선 앞선 보조정리를 이용하여 locally finite open covering $\\{V\_i\\}\_{i\in I}$를 얻고, 다시 여기에 앞선 보조정리를 이용하여 $\\{W\_i\\}\_{i\in I}$를 얻자. 그럼 $\operatorname{cl}W_i\subseteq V_i$이고 $\operatorname{cl}V_i\subseteq U_i$이다. 
-
-이제 Urysohn lemma를 적용하여 연속함수 $\psi_i:X\rightarrow [0,1]$을 $\psi_i(\operatorname{cl}W_i)=\\{1\\}$, $\psi_i(X\setminus V_i)=\\{0\\}$을 만족하도록 잡자. 그럼 $\operatorname{supp}\psi_i\subset\operatorname{cl}V_i\subseteq U_i$이다. 또, 임의의 열린집합 $U$가 $V_i$와 만나는 것은 $\operatorname{cl}V_i$와 만나는 것과 동치이므로, $\\{\operatorname{cl}V_i\\}$ 또한 locally finite이고 따라서 그 부분집합들의 모임 $\\{\operatorname{supp}\psi_i\\}$ 또한 그러하다. 
-
-따라서 함수 $\Psi$를
-
-$$\Psi(x)=\sum_{i\in I}\psi_i(x)$$
-
-으로 정의하면 우변의 무한합은 항상 유한합이 된다. 뿐만 아니라, 임의의 $x\in X$마다 적당한 열린근방 $U$를 택하여 $U\cap \operatorname{supp}\psi_i\neq\emptyset$인 $i$가 유한하도록 할 수 있으므로, 이 열린집합 $U$ 위에서 $\Psi$는 유한히 많은 연속함수들의 합이 되어 연속이다. 이제 함수 $\phi_i$들을 
-
-$$\phi_i(x)=\frac{\psi_i(x)}{\Psi(x)}$$
-
-로 잡으면 이들이 원하는 partition of unity가 된다.
-
-</details>
-
-물론, topological manifold가 위의 조건들을 만족하지 않았다면 굳이 이 절에서 이렇게 많은 정리들을 증명할 필요가 없었을 것이다.
-
-<div class="proposition" markdown="1">
-
-<ins id="thm8">**정리 8**</ins> 임의의 topological manifold $M$은 항상 paracompact이다. 뿐만 아니라, $M$의 임의의 open covering이 주어졌을 때, locally finite open refinement를 countable하고, 각각의 원소들이 relatively compact이도록 잡을 수 있다. 
+<ins id="thm5">**정리 5**</ins> 임의의 topological manifold $M$은 항상 paracompact이다. 뿐만 아니라, $M$의 임의의 open covering이 주어졌을 때, locally finite open refinement를 countable하고, 각각의 원소들이 relatively compact이도록 잡을 수 있다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -231,6 +139,9 @@ $$\operatorname{cl} G_k\subset\bigcup_{i=1}^{j_{k+1}} U_i$$
 이렇게 만든 subcover들의 모임이 $\\{V_\alpha\\}$의 open refinement가 되는 것은 자명하다. 또, 이 모임은 countable한 compact set $\operatorname{cl}(G_i)\setminus G_{i-1}$마다 유한히 많은 원소들을 모아서 만들어진 모임이므로 자연스럽게 countable이다. 임의의 점 $p\in M$은 정확히 하나의 $\operatorname{cl}(G_i)\setminus G_{i-1}$에만 포함되므로 이 모임은 locally finite이고, 마지막으로 이 모임의 임의의 원소는 충분히 큰 $N$에 대하여 compact set $\operatorname{cl}G_N$의 부분집합이므로 relatively compact이다.
 
 </details>
+
+
+
 
 ---
 
