@@ -67,7 +67,7 @@ $$\langle v,w_1+w_2\rangle=\langle v,w_1\rangle+\langle v,w_2\rangle,\qquad \lan
 
 이 성립하는 것은 자명하다. 따라서 벡터의 내적은 pairing이다. 한편 영벡터가 아닌 임의의 벡터 $v$에 대하여 $\langle v,v\rangle=\lVert v\rVert^2\neq 0$이므로 non-degenerate 조건 또한 만족된다. 
 
-내적의 예시는 나중에 중요한 역할을 하게 되며, 그 때는 이 글에 담긴 내용을 다른 관점에서 다시 쓰게 된다. 지금 당장 사용할 예시는 다음의 예시이다.
+위와 같이 $V=W$인 경우는 특별히 pairing을 *bilinear form*이라 부르기도 한다. 이번 글에서 사용할 예시는 다음의 예시이다.
 
 <div class="example" markdown="1">
 
@@ -115,11 +115,23 @@ $$w\mapsto \langle -,w\rangle$$
 
 </details>
 
-$V, W$가 모두 유한차원 $F$-벡터공간인 경우, 이로부터 두 부등식
+<div class="proposition" markdown="1">
+
+<ins id="crl5">**따름정리 5**</ins> Non-degenerate pairing $\langle-,-\rangle:V\times W\rightarrow F$가 주어진 두 <em_ko>유한차원</em_ko> $F$-벡터공간 $V,W$는 isomorphic하다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+두 부등식
 
 $$\dim V\leq\dim W^\ast=\dim W,\qquad \dim W\leq\dim V^\ast=\dim V$$
 
-을 얻고, 따라서 $\dim V=\dim W$가 성립한다. 특별히 $W=V^\ast$인 [예시 3](#ex3)의 canonical pairing에 이 명제를 적용하면 우리는 $V$에서 $V^{\ast\ast}$로의 isomorphism을 얻는다. 명시적으로 이 함수는 임의의 $f\in V^\ast$에 대하여 
+으로부터 자명하다.
+
+</details>
+
+특별히 $W=V^\ast$인 [예시 3](#ex3)의 canonical pairing에 이 따름정리를 적용하면 우리는 $V$에서 $V^{\ast\ast}$로의 isomorphism을 얻는다. 명시적으로 이 함수는 임의의 $f\in V^\ast$에 대하여 
 
 $$\operatorname{ev}_v:f\mapsto f(v)$$
 
@@ -177,7 +189,7 @@ $$[L^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}=\begin{pmatrix}\alpha_{11}&\alp
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 
+<ins id="pp6">**명제 6**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 
 
 1. 만약 $L$이 단사라면 $L^\ast$는 전사이다.
 2. 만약 $L$이 전사라면 $L^\ast$는 단사이다.
@@ -205,7 +217,7 @@ $$[L^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}=\begin{pmatrix}\alpha_{11}&\alp
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> Canonical pairing $\langle-,-\rangle$이 주어진 $F$-벡터공간 $V$가 주어졌다 하고, 임의의 부분집합 $S\subseteq V$을 생각하자. 임의의 $v\in S$에 대하여 $\langle v,f\rangle=0$을 만족하는 $f\in V^\ast$의 모임을 $S$의 *orthogonal complement<sub>직교여공간</sub>*라 부르고, $S^\perp$로 표기한다. 
+<ins id="df7">**정의 7**</ins> Canonical pairing $\langle-,-\rangle$이 주어진 $F$-벡터공간 $V$가 주어졌다 하고, 임의의 부분집합 $S\subseteq V$을 생각하자. 임의의 $v\in S$에 대하여 $\langle v,f\rangle=0$을 만족하는 $f\in V^\ast$의 모임을 $S$의 *orthogonal complement<sub>직교여공간</sub>*라 부르고, $S^\perp$로 표기한다. 
 
 이와 비슷하게, 임의의 부분집합 $T\subseteq V^\ast$가 주어졌다 하자. 그럼 임의의 $f\in T$에 대하여 $\langle v,f\rangle=0$을 만족하는 $v\in V$의 모임을 $T$의 orthogonal complement라 부르고 $T^\perp$로 표기한다.
 
@@ -221,7 +233,7 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 임의의 부분공간 $U\subseteq V$와 그 orthogonal complement $U^\perp$에 대하여,
+<ins id="pp8">**명제 8**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 임의의 부분공간 $U\subseteq V$와 그 orthogonal complement $U^\perp$에 대하여,
 
 $$L(U)^\perp=(L^\ast)^{-1}(U^\perp)$$
 
@@ -241,21 +253,21 @@ $$\upsilon\in L(U)^\perp\iff \langle L(u),\upsilon\rangle=0\text{ for all $u\in 
 
 <div class="proposition" markdown="1">
 
-<ins id="crl8">**따름정리 8**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 그럼 $(\operatorname{im}L)^\perp=\ker(L^\ast)$이 성립한다.
+<ins id="crl9">**따름정리 9**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 그럼 $(\operatorname{im}L)^\perp=\ker(L^\ast)$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 7](#pp7)에서 $U=V$로 두면 된다. Canonical pairing $\langle-,-\rangle$의 non-degenerate 조건으로부터 $U^\perp=\\{0\\}$이 되어 원하는 결과를 얻는다.
+[명제 8](#pp8)에서 $U=V$로 두면 된다. Canonical pairing $\langle-,-\rangle$의 non-degenerate 조건으로부터 $U^\perp=\\{0\\}$이 되어 원하는 결과를 얻는다.
 
 </details>
 
-[명제 7](#pp7)에서 $U\subseteq V$ 대신, $U\subseteq W^\ast$로 시작할 수도 있었다. 이 경우 다음의 명제를 얻는다.
+[명제 8](#pp8)에서 $U\subseteq V$ 대신, $U\subseteq W^\ast$로 시작할 수도 있었다. 이 경우 다음의 명제를 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 임의의 부분공간 $U\subseteq W^\ast$와 그 orthogonal complement $U^\perp$에 대하여,
+<ins id="pp10">**명제 10**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 임의의 부분공간 $U\subseteq W^\ast$와 그 orthogonal complement $U^\perp$에 대하여,
 
 $$\bigl(L^\ast(U)\bigr)^\perp=L^{-1}(U^\perp)$$
 
@@ -275,17 +287,15 @@ $$x\in \bigl(L^\ast(U)\bigr)^\perp\iff \langle x, L^\ast(\upsilon)\rangle=0\text
 
 <div class="proposition" markdown="1">
 
-<ins id="crl10">**따름정리 10**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 그럼 $\bigl(\operatorname{im}L^\ast\bigr)^\perp=\ker L$이 성립한다.
+<ins id="crl11">**따름정리 11**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 그럼 $\bigl(\operatorname{im}L^\ast\bigr)^\perp=\ker L$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 9](#pp9)에서 $U=W^\ast$로 두면 된다.
+[명제 10](#pp10)에서 $U=W^\ast$로 두면 된다.
 
 </details>
-
-이 절에서 다룬 내용의 경우, 특히 나중에 내적을 정의한 다음에 다시 살펴보게 된다.
 
 ---
 
