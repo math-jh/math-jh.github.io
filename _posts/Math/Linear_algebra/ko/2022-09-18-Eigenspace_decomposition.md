@@ -1,15 +1,15 @@
 ---
 
-title: "대각화"
-excerpt: "행렬의 대각화와 고유공간분해"
+title: "고유공간분해"
+excerpt: "벡터공간의 고유공간분해"
 
 categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/diagonalization
+permalink: /ko/math/linear_algebra/eigenspace_decomposition
 sidebar: 
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Diagonalization.png
+    overlay_image: /assets/images/Linear_algebra/Eigenspace_decomposition.png
     overlay_filter: 0.5
 
 date: 2022-09-18
@@ -196,23 +196,23 @@ $$X=(x_1|x_2|\cdots|x_n)$$
 
 $$y_i\cdot x_j=\begin{cases}1&i=j\\ 0&i\neq j\end{cases}$$
 
-이 성립한다. 따라서 $B=X^{-1}AX$라 한다면 
+이 성립한다. 따라서 $A'=X^{-1}AX$라 한다면 
 
-$$\begin{aligned}B&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmatrix}(Ax_1|Ax_2|\cdots|Ax_n)\\
+$$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmatrix}(Ax_1|Ax_2|\cdots|Ax_n)\\
 &=\begin{pmatrix}y_1\cdot Ax_1&y_1\cdot Ax_2&\cdots& y_1\cdot Ax_k&\cdots&y_1\cdot Ax_n\\ y_2\cdot Ax_1&y_2\cdot Ax_2&\cdots &y_2\cdot Ax_k&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot Ax_1&y_k\cdot Ax_2&\cdots&y_k\cdot Ax_k&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot Ax_1&y_n\cdot Ax_2&\cdots &y_n\cdot Ax_k&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}y_1\cdot (\lambda x_1)&y_1\cdot (\lambda x_2)&\cdots& y_1\cdot (\lambda x_k)&\cdots&y_1\cdot Ax_n\\ y_2\cdot (\lambda x_1)&y_2\cdot (\lambda x_2)&\cdots &y_2\cdot (\lambda x_k)&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot (\lambda x_1)&y_k\cdot (\lambda x_2)&\cdots&y_k\cdot (\lambda x_k)&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot (\lambda x_1)&y_n\cdot (\lambda x_2)&\cdots &y_n\cdot (\lambda x_k)&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda I_k&B\\ 0&C\end{pmatrix}\end{aligned}$$
 
-이 된다. 따라서 $A$의 특성다항식을 $p_A(\mathbf{x})$라 적으면, 이전 글의 [정의 3]() 다음의 논증으로부터 $p_A(\mathbf{x})=p_B(\mathbf{x})$이고 따라서
+이 된다. 따라서 $A$의 특성다항식을 $p_A(\mathbf{x})$라 적으면, 이전 글의 [정의 3]() 다음의 논증으로부터 $p_A(\mathbf{x})=p_{A'}(\mathbf{x})$이고 따라서
 
-$$p_A(\mathbf{x}=p_B(\mathbf{x})=\det(\mathbf{x}I-B)=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
+$$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
 임을 안다. 즉, $p_A$에서 $\lambda$의 대수적 중복도는 최소 $k$이다. 
 
 </details>
 
-지금까지의 내용을 정리해보자. $n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 3](#pp3) 이후의 논증으로부터, $F^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다.
+$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 3](#pp3) 이후의 논증으로부터, $F^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
 
 <div class="proposition" markdown="1">
 
@@ -225,6 +225,6 @@ $$p_A(\mathbf{x}=p_B(\mathbf{x})=\det(\mathbf{x}I-B)=(\mathbf{x}-\lambda)^k\det(
 
 특별히 $F$가 algebraically closed field라면 첫째 조건은 항상 만족되므로, 둘째 조건만 고려하면 된다.
 
-한편 
+
 
 [^1]: 물론, 언제나와 같이 이 합은 사실은 유한합인 것으로 가정한다. 즉 $(v\_i)\_{i\in I}$는 finitely supported인 것으로 가정한다.

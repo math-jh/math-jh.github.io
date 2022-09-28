@@ -155,8 +155,6 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/isomorphic_vector_spaces
       - title: "선형사상들의 공간"
         url: /ko/math/linear_algebra/space_of_linear_maps
-      - title: "행렬식의 존재성과 유일성"
-        url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
       - title: "선형대수학의 기본정리"
         url: /ko/math/linear_algebra/ftla
       - title: "기본정리: categorical viewpoint<sup>†</sup>"
@@ -165,6 +163,8 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/change_of_basis
       - title: "쌍대공간"
         url: /ko/math/linear_algebra/dual_space
+      - title: "내적공간"
+        url: /ko/math/linear_algebra/inner_product_space
       - title: "행렬식"
         url: /ko/math/linear_algebra/determinant
       - title: "행렬식의 존재성과 유일성"
@@ -173,6 +173,8 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/inverse_matrix
       - title: "특성다항식"
         url: /ko/math/linear_algebra/characteristic_polynomial
+      - title: "고유공간분해"
+        url: /ko/math/linear_algebra/eigenspace_decomposition
       - title: "대각화"
         url: /ko/math/linear_algebra/diagonalization
 
