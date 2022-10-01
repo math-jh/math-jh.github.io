@@ -1,7 +1,7 @@
 ---
 
 title: "쌍대공간"
-excerpt: ""
+excerpt: "쌍대공간, 쌍대사상, 그리고 직교여공간"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/dual_space
@@ -301,6 +301,7 @@ $$x\in \bigl(L^\ast(U)\bigr)^\perp\iff \langle x, L^\ast(\upsilon)\rangle=0\text
 
 **참고문헌**
 
+**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.  
 **[Bou]** Bourbaki, N. *Algebra I*, Elements of Mathematics. Springer-Verlag Berlin, 1998.  
 
 ---

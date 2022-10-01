@@ -15,7 +15,7 @@ header:
 date: 2022-09-18
 last_modified_at: 2022-09-18
 
-weight: 20
+weight: 23
 
 ---
 
@@ -228,3 +228,10 @@ $n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$�
 
 
 [^1]: 물론, 언제나와 같이 이 합은 사실은 유한합인 것으로 가정한다. 즉 $(v\_i)\_{i\in I}$는 finitely supported인 것으로 가정한다.
+
+---
+
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
+**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
+
+---
