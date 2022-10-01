@@ -163,6 +163,8 @@ linear_algebra-ko:
         url: /ko/math/linear_algebra/change_of_basis
       - title: "쌍대공간"
         url: /ko/math/linear_algebra/dual_space
+      - title: "쌍선형형식"
+        url: /ko/math/linear_algebra/bilinear_form
       - title: "내적공간"
         url: /ko/math/linear_algebra/inner_product_space
       - title: "행렬식"

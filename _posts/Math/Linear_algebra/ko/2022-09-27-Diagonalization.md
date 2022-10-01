@@ -15,7 +15,7 @@ header:
 date: 2022-09-27
 last_modified_at: 2022-09-27
 
-weight: 21
+weight: 24
 
 ---
 
@@ -63,3 +63,8 @@ QR, LU, SVD
 
 </div>
 
+---
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
+**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
+
+---
