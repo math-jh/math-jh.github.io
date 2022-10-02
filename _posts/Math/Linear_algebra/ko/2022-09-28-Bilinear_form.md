@@ -69,19 +69,19 @@ $$\langle v,w\rangle=v^T Gw$$
 
 ## 비퇴화 쌍선형형식
 
-유한차원 $F$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow F$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $(-,-):V\times V\rightarrow F$가 주어졌다면, 우리는 앞선 글의 [따름정리 5](/ko/math/linear_algebra/dual_space#crl5)로부터 $(-,-)$이 isomorphism 
+유한차원 $F$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow F$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow F$가 주어졌다면, 우리는 앞선 글의 [따름정리 5](/ko/math/linear_algebra/dual_space#crl5)로부터 $\langle -,-\rangle$이 isomorphism 
 
-$$V\rightarrow V^\ast;\qquad v\mapsto (-,v)\tag{1}$$
+$$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
 을 정의한다는 것을 안다. 
 
-편의를 위해 앞으로는 $(-,-)$이 처음부터 symmetric non-degenerate bilinear form이었던 것으로 가정하자. 그럼 $(-,-)$는 식 (1)에 의해 정의된 isomorphism을 가지며, 이는 다음과 같이 쓸 수 있다.
+편의를 위해 앞으로는 $\langle -,-\rangle$이 처음부터 symmetric non-degenerate bilinear form이었던 것으로 가정하자. 그럼 $\langle -,-\rangle$는 식 (1)에 의해 정의된 isomorphism을 가지며, 이는 다음과 같이 쓸 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="crl3">**따름정리 3**</ins> Symmetric non-degenerate bilinear form $(-,-)$이 주어진 유한차원 $F$-벡터공간 $V$를 생각하자. 임의의 $f\in V^\ast$가 주어질 때마다, 적당한 $w\in V$가 유일하게 존재하여 
+<ins id="crl3">**따름정리 3**</ins> Symmetric non-degenerate bilinear form $\langle -,-\rangle$이 주어진 유한차원 $F$-벡터공간 $V$를 생각하자. 임의의 $f\in V^\ast$가 주어질 때마다, 적당한 $w\in V$가 유일하게 존재하여 
 
-$$f(v)=(v,w)\qquad\text{for all $v\in V$}$$
+$$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 
 이 성립한다.
 
@@ -91,7 +91,7 @@ $$f(v)=(v,w)\qquad\text{for all $v\in V$}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Symmetric non-degenerate bilinear form $(-,-)$이 주어진 유한차원 $F$-벡터공간 $V$를 생각하자. 임의의 $v\in V$에 대하여, 다음의 식 $(w,v)=0$을 만족하는 모든 $w\in V$들의 모임을 $v$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $v^\perp$로 적는다. 더 일반적으로, 임의의 집합 $S$에 대하여, 다음 집합
+<ins id="df4">**정의 4**</ins> Symmetric non-degenerate bilinear form $\langle -,-\rangle$이 주어진 유한차원 $F$-벡터공간 $V$를 생각하자. 임의의 $v\in V$에 대하여, 다음의 식 $\langle w,v\rangle=0$을 만족하는 모든 $w\in V$들의 모임을 $v$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $v^\perp$로 적는다. 더 일반적으로, 임의의 집합 $S$에 대하여, 다음 집합
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
@@ -99,11 +99,11 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 </div>
 
-물론, 만일 $(-,-)$이 symmetric하지 않았더라도 동일한 정의를 할 수 있으며, 실제로 $v$를 $(-,v)$로 보내는지 혹은 $(v,-)$으로 보내는지를 선택한 후 이 선택을 꾸준히 유지한다면 동일한 결과를 얻게 된다. 어쨌든 혹시 모를 혼란을 피하기 위해 우리는 $(-,-)$이 symmetric이라는 조건을 유지한다.
+물론, 만일 $\langle -,-\rangle$이 symmetric하지 않았더라도 동일한 정의를 할 수 있으며, 실제로 $v$를 $\langle -,v\rangle$로 보내는지 혹은 $\langle v,-\rangle$으로 보내는지를 선택한 후 이 선택을 꾸준히 유지한다면 동일한 결과를 얻게 된다. 어쨌든 혹시 모를 혼란을 피하기 위해 우리는 $\langle -,-\rangle$이 symmetric이라는 조건을 유지한다.
 
 벡터 $w\in V$는 [따름정리 3](#crl3)에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, 정의 7](/ko/math/linear_algebra/dual_space#df7)의 의미에서 $v$의 orthogonal complement라면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space)의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
 
-우선 두 유한차원 $F$-벡터공간 $V,W$ 위에 symmetric non-degnerate bilinear form $(-,-)_V$와 $(-,-)_W$가 주어졌다 하자. 또, 논의의 편의를 위하여 이들 bilinear form에 의해 결정되는 isomorphism들을 각각
+우선 두 유한차원 $F$-벡터공간 $V,W$ 위에 symmetric non-degnerate bilinear form $\langle -,-\rangle_V$와 $\langle -,-\rangle_W$가 주어졌다 하자. 또, 논의의 편의를 위하여 이들 bilinear form에 의해 결정되는 isomorphism들을 각각
 
 $$\varphi_V:V^\ast\rightarrow V,\qquad \varphi_W:W^\ast\rightarrow W$$
 
@@ -119,7 +119,7 @@ $$\mathcal{B}'=\{\varphi_V(\xi^1),\ldots,\varphi_V(\xi^n)\},\qquad\mathcal{C}'=\
 
 를 생각하자. 즉 이들은 다음의 식
 
-$$(x_i,\varphi_V(\xi^j))=\delta_{ij},\qquad(y_i,\varphi_W(\upsilon^j))=\delta_{ij}$$
+$$\langle x_i,\varphi_V(\xi^j)\rangle=\delta_{ij},\qquad\langle y_i,\varphi_W(\upsilon^j)\rangle=\delta_{ij}$$
 
 을 통해 정의되는 $V,W$의 원소들이다. 이제 임의의 $L:V\rightarrow W$에 대하여, 
 
@@ -133,15 +133,15 @@ $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(
 
 한편, 이렇게 정의한 $L':W\rightarrow V$는 다음 식
 
-$$(Lv, w)_W=(v,L'w)_V\qquad\text{for all $v\in V$ and $w\in W$}\tag{1}$$
+$$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and $w\in W$}\tag{1}$$
 
 을 만족하는 것을 알 수 있다. 이는
 
-$$(Lv,w)=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\ast(\varphi^{-1}_W(w))(v)=(\varphi^{-1}_V(v)\circ L')(w)=(\varphi^{-1}_V(v))(L'w)=(v,L'w)$$
+$$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\ast(\varphi^{-1}_W(w))(v)=(\varphi^{-1}_V(v)\circ L')(w)=(\varphi^{-1}_V(v))(L'w)=\langle v,L'w\rangle$$
 
 으로부터 확인할 수 있다. 이러한 식을 만족하는 $L'$을 우리는 linear map $L$의 *adjoint*라 부르고, 약간의 abuse of notation을 통해 $L^\ast$으로 적기도 한다. 
 
-[§쌍대공간, 직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $\langle Lv,f\rangle=\langle v,L^\ast f\rangle$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $(-,-)$들에 대한 식 (1)로 대체하면 다음 결과들을 얻는다.
+[§쌍대공간, 직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $(Lv,f)=(v,L^\ast f)$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $\langle -,-\rangle$들에 대한 식 (1)로 대체하면 다음 결과들을 얻는다.
 
 <div class="proposition" markdown="1">
 
@@ -156,9 +156,53 @@ $$(Lv,w)=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\ast(\varphi^{-1
 
 특히, 3번과 4번에서 얻어지는 $V$와 $W$의 부분공간들
 
-$$\ker L, \ker L^\ast, \operatorname{im}L,\operatorname{im}L^\ast$$
+$$\ker L, \quad\ker L^\ast, \quad\operatorname{im}L,\quad\operatorname{im}L^\ast$$
 
 를 $L$에 의해 결정되는 *네 개의 기본공간들<sub>four fundamental subspaces</sub>*이라 부르기도 한다.
+
+## Orthogonal basis
+
+이제 symmetric non-degenerate bilinear form이 주어진 $F$-벡터공간 $V$를 생각하자. 그럼 $V$의 부분집합 $\\{v_1,\ldots, v_n\\}$이 *orthogonal set*이라는 것은 $i\neq j$일 때마다 $\langle v\_i,v\_j\rangle=0$이 성립하는 것이다. 만일 $V$의 basis $\mathcal{B}$가 orthogonal set이기도 하다면, 이를 *orthogonal basis*라 부른다.
+
+<div class="proposition" markdown="1">
+
+<ins id="pp6">**명제 6**</ins> $2\neq 0$인 field[^1] $F$에 대하여, symmetric non-degenerate bilinear form이 주어진 $F$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 간단한 보조정리를 보이자. 임의로 고정된 $v\in V$에 대하여, 반드시 $\langle u,v\rangle\neq 0$이도록 하는 $u\in V$가 존재한다. 그럼
+
+$$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rangle$$
+
+이고, $\langle u,v\rangle, 2\neq 0$이므로 좌변은 0이 아니다. 따라서 우변의 세 항 $\langle u+v,u+v\rangle, \langle u,u\rangle,\langle v,v\rangle$ 가운데 적어도 하나는 0이 아니다. 따라서,
+
+> Non-degnerate symmetric bilinear form이 주어진 임의의 $F$-벡터공간에는 $\langle w,w\rangle\neq 0$을 만족하는 $w$가 반드시 존재한다.
+
+원래의 명제는 $V$의 차원에 대한 귀납법으로 증명한다. $\operatorname{dim}V=0$인 경우는 증명할 것이 없다. 이제 $\operatorname{dim}V=k$인 경우 증명이 완료되었다 가정하자. 그럼 $\operatorname{dim}V=k+1$를 만족하는 임의의 벡터공간 $V$에 대하여, $\langle w,w\rangle\neq 0$을 만족하는 벡터 $w$가 존재한다. 
+
+이제 $W=\operatorname{span}w$라 하고 $W^\perp$를 생각하자. 그럼 임의의 $v\in V$에 대하여, 다음의 식
+
+$$v=\frac{\langle v,w\rangle}{\langle w,w\rangle}w+\left(v-\frac{\langle v,w\rangle}{\langle w,w\rangle}w\right)$$
+
+으로부터 $V$의 임의의 원소는 $W$와 $W^\perp$의 원소의 합으로 표현할 수 있다는 것을 안다. 또, 가정에 의해 $\langle w,w\rangle\neq 0$이므로 $W\cap W^\perp=\\{0\\}$이 성립한다. 따라서 [§벡터공간의 차원, 예시 8](/ko/math/linear_algebra/dimension#ex8)에 의하여
+
+$$k+1=\operatorname{dim}(V)=\operatorname{dim}(W+W^\perp)=\operatorname{dim}W+\operatorname{dim}W^\perp-\operatorname{dim}(W\cap W^\perp)$$
+
+으로부터 $\operatorname{dim}W^\perp=k$임을 안다. 뿐만 아니라, 임의의 $v\in W^\perp$에 대하여, $\langle u,v\rangle\neq 0$을 만족하는 $u$에 대하여, 
+
+$$u'=u-\frac{\langle u,w\rangle}{\langle w,w\rangle}w\in W^\perp$$
+
+는 $W^\perp$의 원소이며, 
+
+$$\langle u',v\rangle=\langle u,v\rangle\neq 0$$
+
+을 만족한다. 즉, $W^\perp$ 또한 $\langle-,-\rangle$에 대해 non-degenerate이며, 따라서 귀납적 가정에 의해 $W^\perp$에는 orthogonal basis $\mathcal{B}$가 존재한다. 이제 $\mathcal{B}\cup\\{v\\}$는 $V$의 orthogonal basis이므로, 원하는 결과를 얻는다.
+
+</details>
+
+
 
 ---
 
@@ -166,3 +210,5 @@ $$\ker L, \ker L^\ast, \operatorname{im}L,\operatorname{im}L^\ast$$
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
 
 ---
+
+[^1]: 가령, 집합 $F_2=\\{0,1\\}$에 덧셈과 곱셈을 <phrase>일반적인 덧셈과 곱셈의 곱을 $2$로 나눈 나머지</phrase>로 정의한다면, $F_2$가 field가 된다는 것을 확인할 수 있으며, 이 경우 $1+1=0$이다.
