@@ -49,61 +49,63 @@ $$f(u_1+u_2,v)=f(u_1,v)+f(u_2,v),\qquad f(u,v_1+v_2)=f(u,v_1)+f(u,v_2),\qquad f(
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$와 $W$의 *pairing*은 bilinear map $\langle -,-\rangle:V\times W\rightarrow F$를 의미한다. 만일 영벡터가 아닌 임의의 $v\in V$에 대하여 다음의 linear map
+<ins id="df2">**정의 2**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$와 $W$의 *pairing*은 bilinear map $(-,-):V\times W\rightarrow F$를 의미한다. 만일 영벡터가 아닌 임의의 $v\in V$에 대하여 다음의 linear map
 
-$$\langle v,-\rangle: W\rightarrow F$$
+$$(v,-): W\rightarrow F$$
 
 가 항상 영함수가 아니라면 이 pairing이 *왼쪽에서 non-degenerate*이라 하고, 비슷하게 영벡터가 아닌 임의의 $w\in W$에 대하여
 
-$$\langle -,w\rangle:U\rightarrow F$$
+$$(-,w):U\rightarrow F$$
 
 가 항상 영함수가 아니라면 이 pairing이 *오른쪽에서 non-degenerate*라 한다. 왼쪽과 오른쪽 모두에서 non-degenerate인 pairing을 간단히 *non-degenerate pairing*이라 부른다.
 
 </div>
 
-예를 들어 $V=W=\mathbb{R}^n$ 위에서 정의된 벡터의 내적 $\langle -,-\rangle:\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}$은 non-degenerate pairing이다. 우선 다음의 식
+표기법 $(-,-)$은 순서쌍의 표기법과 동일하여 약간의 혼동이 있을 수도 있지만, 문맥상 둘을 구별하는 것이 어렵지 않고 편하므로 이 표기법을 사용한다.
 
-$$\langle v,w_1+w_2\rangle=\langle v,w_1\rangle+\langle v,w_2\rangle,\qquad \langle v_1+v_2,w\rangle=\langle v_1,w\rangle+\langle v_2,w\rangle,\qquad \langle\alpha v,w\rangle=\alpha\langle v,w\rangle=\langle v,\alpha w\rangle$$
+예를 들어 $V=W=\mathbb{R}^n$ 위에서 정의된 벡터의 내적 $(-,-):\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}$은 non-degenerate pairing이다. 우선 다음의 식
 
-이 성립하는 것은 자명하다. 따라서 벡터의 내적은 pairing이다. 한편 영벡터가 아닌 임의의 벡터 $v$에 대하여 $\langle v,v\rangle=\lVert v\rVert^2\neq 0$이므로 non-degenerate 조건 또한 만족된다. 
+$$(v,w_1+w_2)=(v,w_1)+(v,w_2),\qquad (v_1+v_2,w)=(v_1,w)+(v_2,w),\qquad (\alpha v,w)=\alpha(v,w)=(v,\alpha w)$$
+
+이 성립하는 것은 자명하다. 따라서 벡터의 내적은 pairing이다. 한편 영벡터가 아닌 임의의 벡터 $v$에 대하여 $(v,v)=\lVert v\rVert^2\neq 0$이므로 non-degenerate 조건 또한 만족된다. 
 
 위와 같이 $V=W$인 경우는 특별히 pairing을 *bilinear form*이라 부르기도 한다. 이번 글에서 사용할 예시는 다음의 예시이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> 임의의 $F$-벡터공간 $V$와, $V$의 dual space $V^\ast$에 대하여 $\langle-,-\rangle:V\times V^\ast\rightarrow F$를 다음의 식
+<ins id="ex3">**예시 3**</ins> 임의의 $F$-벡터공간 $V$와, $V$의 dual space $V^\ast$에 대하여 $(-,-):V\times V^\ast\rightarrow F$를 다음의 식
 
-$$\langle v,f\rangle=f(v)$$
+$$(v,f)=f(v)$$
 
-으로 주면 $\langle-,-\rangle$은 non-degenerate pairing이다. 우선 고정된 $v\in V$와 임의의 $f,g\in V^\ast$에 대하여
+으로 주면 $(-,-)$은 non-degenerate pairing이다. 우선 고정된 $v\in V$와 임의의 $f,g\in V^\ast$에 대하여
 
-$$\langle v,f+g\rangle=(f+g)(v)=f(v)+g(v)=\langle v,f\rangle+\langle v,g\rangle$$
+$$(v,f+g)=(f+g)(v)=f(v)+g(v)=(v,f)+(v,g)$$
 
 이고, 또 고정된 $f\in V^\ast$와 임의의 $v_1,v_2\in V$에 대하여
 
-$$\langle v_1+v_2,f\rangle=f(v_1+v_2)=f(v_1)+f(v_2)=\langle v_1,f\rangle+\langle v_2,f\rangle$$
+$$(v_1+v_2,f)=f(v_1+v_2)=f(v_1)+f(v_2)=(v_1,f)+(v_2,f)$$
 
 이 성립한다. 비슷하게 임의의 스칼라 $\alpha$에 대하여
 
-$$\langle \alpha v,f\rangle=f(\alpha v)=\alpha f(v)=(\alpha f)(v)=\langle v,\alpha f\rangle$$
+$$(\alpha v,f)=f(\alpha v)=\alpha f(v)=(\alpha f)(v)=(v,\alpha f)$$
 
-이 성립하므로 $\langle -, -\rangle$은 pairing이다. 
+이 성립하므로 $(-, -)$은 pairing이다. 
 
-뿐만 아니라 $\langle -,-\rangle$은 non-degenerate이다. 우선 임의의 $f\in V^\ast$가 0이 아니라면 $f(v)\neq 0$이도록 하는 $v$가 존재하므로 $\langle -,-\rangle$이 오른쪽에서 non-degenerate임은 자명하다. 또, 영벡터가 아닌 임의의 벡터 $v$에 대하여, $v$를 포함하는 basis $\mathcal{B}$를 찾은 후, 위와 같이 dual basis를 만들면, $v$에 대응되는 dual basis의 원소 $\xi$에 대해 $\langle v,\xi\rangle=1$이므로 $\langle-,-\rangle$은 왼쪽에서 non-degenerate이기도 하다. 
+뿐만 아니라 $(-,-)$은 non-degenerate이다. 우선 임의의 $f\in V^\ast$가 0이 아니라면 $f(v)\neq 0$이도록 하는 $v$가 존재하므로 $(-,-)$이 오른쪽에서 non-degenerate임은 자명하다. 또, 영벡터가 아닌 임의의 벡터 $v$에 대하여, $v$를 포함하는 basis $\mathcal{B}$를 찾은 후, 위와 같이 dual basis를 만들면, $v$에 대응되는 dual basis의 원소 $\xi$에 대해 $(v,\xi)=1$이므로 $(-,-)$은 왼쪽에서 non-degenerate이기도 하다. 
 
-이로부터 $\langle-,-\rangle$이 non-degenerate pairing임을 안다. 이를 *canonical pairing*이라 부른다.
+이로부터 $(-,-)$이 non-degenerate pairing임을 안다. 이를 *canonical pairing*이라 부른다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> Non-degenerate pairing $\langle-,-\rangle:V\times W\rightarrow F$가 주어진 두 $F$-벡터공간 $V,W$에 대하여, 다음의 식
+<ins id="pp4">**명제 4**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow F$가 주어진 두 $F$-벡터공간 $V,W$에 대하여, 다음의 식
 
-$$v\mapsto \langle v,-\rangle$$
+$$v\mapsto (v,-)$$
 
 으로 정의된 함수 $V\rightarrow W^\ast$는 단사인 linear map이다. 비슷하게, 다음의 식
 
-$$w\mapsto \langle -,w\rangle$$
+$$w\mapsto (-,w)$$
 
 으로 정의된 함수 $W\rightarrow V^\ast$도 단사인 linear map이다.
 
@@ -111,13 +113,13 @@ $$w\mapsto \langle -,w\rangle$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이 함수가 linear map이라는 것은 $\langle-,-\rangle$이 각 성분에 대해 linear이므로 자명하다. 이 함수들이 단사라는 것은 정확히 $\langle-,-\rangle$이 왼쪽과 오른쪽에서 non-degenerate라는 것이다.
+이 함수가 linear map이라는 것은 $(-,-)$이 각 성분에 대해 linear이므로 자명하다. 이 함수들이 단사라는 것은 정확히 $(-,-)$이 왼쪽과 오른쪽에서 non-degenerate라는 것이다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> Non-degenerate pairing $\langle-,-\rangle:V\times W\rightarrow F$가 주어진 두 <em_ko>유한차원</em_ko> $F$-벡터공간 $V,W$는 isomorphic하다.
+<ins id="crl5">**따름정리 5**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow F$가 주어진 두 <em_ko>유한차원</em_ko> $F$-벡터공간 $V,W$는 isomorphic하다.
 
 </div>
 <details class="proof" markdown="1">
@@ -149,9 +151,9 @@ $$L^\ast(f)=f\circ L$$
 
 혹은, 위에서 정의한 canonical pairing에 따르면 $L^\ast$는 다음의 식
 
-$$\langle Lv, f\rangle=\langle v,L^\ast f\rangle\qquad\text{for all $v\in V$ and $f\in W^\ast$}\tag{1}$$
+$$(Lv, f)=(v,L^\ast f)\qquad\text{for all $v\in V$ and $f\in W^\ast$}\tag{1}$$
 
-을 통해 정의되었다 할 수 있다. 물론 좌변의 $\langle-,-\rangle$은 $W$의 canonical pairing이고, 우변의 $\langle-,-\rangle$은 $V$의 canonical pairing이다. 
+을 통해 정의되었다 할 수 있다. 물론 좌변의 $(-,-)$은 $W$의 canonical pairing이고, 우변의 $(-,-)$은 $V$의 canonical pairing이다. 
 
 특별히 $V,W$가 모두 유한차원 $F$-벡터공간이라 하자. $V$의 basis를 $\mathcal{B}=\\{x_1,\ldots, x_n\\}$, $W$의 basis를 $\mathcal{C}=\\{y_1,\ldots, y_m\\}$이라 하고 이들의 dual basis를 각각 
 
@@ -217,15 +219,15 @@ $$[L^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}=\begin{pmatrix}\alpha_{11}&\alp
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> Canonical pairing $\langle-,-\rangle$이 주어진 $F$-벡터공간 $V$가 주어졌다 하고, 임의의 부분집합 $S\subseteq V$을 생각하자. 임의의 $v\in S$에 대하여 $\langle v,f\rangle=0$을 만족하는 $f\in V^\ast$의 모임을 $S$의 *orthogonal complement<sub>직교여공간</sub>*라 부르고, $S^\perp$로 표기한다. 
+<ins id="df7">**정의 7**</ins> Canonical pairing $(-,-)$이 주어진 $F$-벡터공간 $V$가 주어졌다 하고, 임의의 부분집합 $S\subseteq V$을 생각하자. 임의의 $v\in S$에 대하여 $(v,f)=0$을 만족하는 $f\in V^\ast$의 모임을 $S$의 *orthogonal complement<sub>직교여공간</sub>*라 부르고, $S^\perp$로 표기한다. 
 
-이와 비슷하게, 임의의 부분집합 $T\subseteq V^\ast$가 주어졌다 하자. 그럼 임의의 $f\in T$에 대하여 $\langle v,f\rangle=0$을 만족하는 $v\in V$의 모임을 $T$의 orthogonal complement라 부르고 $T^\perp$로 표기한다.
+이와 비슷하게, 임의의 부분집합 $T\subseteq V^\ast$가 주어졌다 하자. 그럼 임의의 $f\in T$에 대하여 $(v,f)=0$을 만족하는 $v\in V$의 모임을 $T$의 orthogonal complement라 부르고 $T^\perp$로 표기한다.
 
 </div>
 
 특별히 $S$ 혹은 $T$가 singleton인 경우 이를 $v^\perp$ 혹은 $f^\perp$와 같이 표현하기도 한다.
 
-임의의 $v\in V$에 대하여 $v^\perp$가 $V^\ast$의 부분공간이 된다는 것은 $\langle-,-\rangle$이 bilinear라는 사실로부터 자명하다. 이제 다음 등식
+임의의 $v\in V$에 대하여 $v^\perp$가 $V^\ast$의 부분공간이 된다는 것은 $(-,-)$이 bilinear라는 사실로부터 자명하다. 이제 다음 등식
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
@@ -245,7 +247,7 @@ $$L(U)^\perp=(L^\ast)^{-1}(U^\perp)$$
 
 Dual map $L^\ast$를 canonical pairing을 통해 정의한 식 (1)을 사용하면, 임의의 $\upsilon\in W^\ast$에 대하여
 
-$$\upsilon\in L(U)^\perp\iff \langle L(u),\upsilon\rangle=0\text{ for all $u\in U$}\iff \langle u, L^\ast(\upsilon)\rangle\text{ for all $u\in U$}\iff L^\ast(\upsilon)\in U^\perp$$
+$$\upsilon\in L(U)^\perp\iff (L(u),\upsilon)=0\text{ for all $u\in U$}\iff (u, L^\ast(\upsilon))\text{ for all $u\in U$}\iff L^\ast(\upsilon)\in U^\perp$$
 
 이 성립한다. 
 
@@ -259,7 +261,7 @@ $$\upsilon\in L(U)^\perp\iff \langle L(u),\upsilon\rangle=0\text{ for all $u\in 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 8](#pp8)에서 $U=V$로 두면 된다. Canonical pairing $\langle-,-\rangle$의 non-degenerate 조건으로부터 $U^\perp=\\{0\\}$이 되어 원하는 결과를 얻는다.
+[명제 8](#pp8)에서 $U=V$로 두면 된다. Canonical pairing $(-,-)$의 non-degenerate 조건으로부터 $U^\perp=\\{0\\}$이 되어 원하는 결과를 얻는다.
 
 </details>
 
@@ -279,7 +281,7 @@ $$\bigl(L^\ast(U)\bigr)^\perp=L^{-1}(U^\perp)$$
 
 이 또한 식 (1)을 사용하면, 임의의 $x\in V$에 대하여
 
-$$x\in \bigl(L^\ast(U)\bigr)^\perp\iff \langle x, L^\ast(\upsilon)\rangle=0\text{ for all $\upsilon\in U$}\iff \langle L(x),\upsilon\rangle=0\text{ for all $\upsilon\in U$}\iff L(x)\in U^\perp$$
+$$x\in \bigl(L^\ast(U)\bigr)^\perp\iff (x, L^\ast(\upsilon))=0\text{ for all $\upsilon\in U$}\iff (L(x),\upsilon)=0\text{ for all $\upsilon\in U$}\iff L(x)\in U^\perp$$
 
 이므로 자명하다.
 
