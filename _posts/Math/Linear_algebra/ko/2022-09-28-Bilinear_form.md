@@ -57,16 +57,6 @@ $$\langle v,w\rangle=-\langle w,v\rangle$$
 
 </div>
 
-임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow F$가 주어졌다 하자. 만일 $V$의 basis $\\{x_1,\ldots, x_n\\}$가 고정되었다고 하면, 임의의 $v=\sum v_ix_i, w=\sum w_jx_j$에 대하여 다음의 식
-
-$$\langle v,w\rangle=\left\langle\sum_{i=1}^nv_ix_i,\sum_{j=1}^n w_jx_j\right\rangle=\sum_{i,j=1}^n v_iw_j\langle x_i,x_j\rangle$$
-
-이 성립한다. 잠시 $(i,j)$ 성분이 $\langle x_i,x_j\rangle$인 $n\times n$ 행렬을 $G$라 표기하면, 위 식은
-
-$$\langle v,w\rangle=v^T Gw$$
-
-으로 간단하게 쓸 수 있다. 이 때 $G$를 원래의 bilinear form의 basis $\\{x_1,\ldots, x_n\\}$에 대한 행렬표현이라 부른다. 어렵지 않게 bilinear form이 symmetric인 것은 그 행렬표현이 symmetric matrix인 것과 동치이고, alternating인 것은 그 행렬표현이 skew-symmetric matrix인 것과 동치라는 것을 알 수 있다.
-
 ## 비퇴화 쌍선형형식
 
 유한차원 $F$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow F$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow F$가 주어졌다면, 우리는 앞선 글의 [따름정리 5](/ko/math/linear_algebra/dual_space#crl5)로부터 $\langle -,-\rangle$이 isomorphism 
@@ -156,17 +146,41 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 
 특히, 3번과 4번에서 얻어지는 $V$와 $W$의 부분공간들
 
-$$\ker L, \quad\ker L^\ast, \quad\operatorname{im}L,\quad\operatorname{im}L^\ast$$
+$$\ker L, \quad(\ker L)^\perp, \quad\operatorname{im}L,\quad(\operatorname{im}L)^\perp$$
 
-를 $L$에 의해 결정되는 *네 개의 기본공간들<sub>four fundamental subspaces</sub>*이라 부르기도 한다.
+를 $L$에 의해 결정되는 *네 개의 기본공간들<sub>four fundamental subspaces</sub>*이라 부르기도 한다. 특히 이들은 
 
-## Orthogonal basis
+$$V=\ker L\oplus(\ker L)^\perp,\qquad W=\operatorname{im}L\oplus(\operatorname{im}L)^\perp$$
+
+를 만족한다.
+
+## 직교기저
 
 이제 symmetric non-degenerate bilinear form이 주어진 $F$-벡터공간 $V$를 생각하자. 그럼 $V$의 부분집합 $\\{v_1,\ldots, v_n\\}$이 *orthogonal set*이라는 것은 $i\neq j$일 때마다 $\langle v\_i,v\_j\rangle=0$이 성립하는 것이다. 만일 $V$의 basis $\mathcal{B}$가 orthogonal set이기도 하다면, 이를 *orthogonal basis*라 부른다.
 
+<div class="definition" markdown="1">
+
+<ins id="df6">**정의 6**</ins> Field $F$가 다음의 조건
+
+$$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
+
+을 만족한다면 $F$의 *characteristic<sub>표수</sub>*이 $p$라고 하고 이를 $\operatorname{char}F=p$로 표기한다. 만일 위의 식을 만족하는 자연수 $p$가 존재하지 않는다면 $F$는 characteristic 0을 갖는 것으로 생각한다.
+
+</div>
+
+예를 들어 $\mathbb{R}$은 characteristic 0을 갖는다. 만일 $\mathbb{F}_2=\\{0,1\\}$에 다음의 식
+
+$$0+0=0,\quad 0+1=1,\quad 1+0=1,\quad 1+1=2$$
+
+그리고
+
+$$0\cdot 0=0,\quad 0\cdot 1=0,\quad 1\cdot 0=0,\quad 1\cdot 1=1$$
+
+으로 덧셈과 곱셈을 각각 정의한다면 $\mathbb{F}_2$는 field의 조건을 만족한다는 것을 확인할 수 있고, 이 때 $\operatorname{char}\mathbb{F}_2=2$이다. 
+
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $2\neq 0$인 field[^1] $F$에 대하여, symmetric non-degenerate bilinear form이 주어진 $F$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
+<ins id="pp7">**명제 7**</ins> $\operatorname{char}F\neq 2$인 field $F$에 대하여, symmetric non-degenerate bilinear form이 주어진 $F$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
 
 </div>
 <details class="proof" markdown="1">
@@ -176,7 +190,7 @@ $$\ker L, \quad\ker L^\ast, \quad\operatorname{im}L,\quad\operatorname{im}L^\ast
 
 $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rangle$$
 
-이고, $\langle u,v\rangle, 2\neq 0$이므로 좌변은 0이 아니다. 따라서 우변의 세 항 $\langle u+v,u+v\rangle, \langle u,u\rangle,\langle v,v\rangle$ 가운데 적어도 하나는 0이 아니다. 따라서,
+이고, 두 조건 $\langle u,v\rangle\neq 0$과 $\operatorname{char}F\neq 2$에서 좌변은 0이 아니다. 따라서 우변의 세 항 $\langle u+v,u+v\rangle, \langle u,u\rangle,\langle v,v\rangle$ 가운데 적어도 하나는 0이 아니다. 따라서,
 
 > Non-degnerate symmetric bilinear form이 주어진 임의의 $F$-벡터공간에는 $\langle w,w\rangle\neq 0$을 만족하는 $w$가 반드시 존재한다.
 
@@ -202,7 +216,27 @@ $$\langle u',v\rangle=\langle u,v\rangle\neq 0$$
 
 </details>
 
+## Gram matrix
 
+임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow F$가 주어졌다 하자. 만일 $V$의 basis $\\{x_1,\ldots, x_n\\}$가 고정되었다고 하면, 임의의 $v=\sum v_ix_i, w=\sum w_jx_j$에 대하여 다음의 식
+
+$$\langle v,w\rangle=\left\langle\sum_{i=1}^nv_ix_i,\sum_{j=1}^n w_jx_j\right\rangle=\sum_{i,j=1}^n v_iw_j\langle x_i,x_j\rangle$$
+
+이 성립한다. 잠시 $(i,j)$ 성분이 $\langle x_i,x_j\rangle$인 $n\times n$ 행렬을 $G$라 표기하면, 위 식은
+
+$$\langle v,w\rangle=v^t Gw$$
+
+으로 간단하게 쓸 수 있다. 이 때 $G$를 basis $\mathcal{B}$에 대한 *Gram matrix*라 부른다.
+
+$V$ 위에 주어진 두 basis $\mathcal{B},\mathcal{C}$를 생각하자. 이들에 대한 Gram matrix를 각각 $G_\mathcal{B},G_\mathcal{C}$로 표현하고 위의 식을 정확하게 적으면, 
+
+$$\langle v,w\rangle=[v]^t_\mathcal{B}G_\mathcal{B}[w]_\mathcal{B}=[v]^t_\mathcal{C}G_\mathcal{C}[w]_\mathcal{C}$$
+
+라 할 수 있다. 이제 $[v]\_\mathcal{C}=[\operatorname{id}]\_\mathcal{C}^\mathcal{B}[v]\_\mathcal{B}$이므로, 위의 식의 가장 우변은
+
+$$[v]_\mathcal{C}^tG_\mathcal{C}[w]_\mathcal{C}=\left([\operatorname{id}]_\mathcal{C}^\mathcal{B}[v]_\mathcal{B}\right)^tG_\mathcal{B}\left([\operatorname{id}]_\mathcal{C}^\mathcal{B}[w]_\mathcal{B}\right)=[v]_\mathcal{B}^t\left(([\operatorname{id}]_\mathcal{C}^\mathcal{B})^t G_\mathcal{B}[\operatorname{id}]_\mathcal{C}^\mathcal{B}\right)[w]_\mathcal{B}$$
+
+이 된다. 
 
 ---
 
@@ -210,5 +244,3 @@ $$\langle u',v\rangle=\langle u,v\rangle\neq 0$$
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
 
 ---
-
-[^1]: 가령, 집합 $F_2=\\{0,1\\}$에 덧셈과 곱셈을 <phrase>일반적인 덧셈과 곱셈의 곱을 $2$로 나눈 나머지</phrase>로 정의한다면, $F_2$가 field가 된다는 것을 확인할 수 있으며, 이 경우 $1+1=0$이다.

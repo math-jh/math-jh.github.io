@@ -97,7 +97,7 @@ $$\begin{aligned}(L_1+L_2)(e_1)&=(\alpha_{1,1}+\beta_{1,1})e_1+(\alpha_{2,1}+\be
 
 $$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}=[L_2]^{\mathcal{E}_m}_{\mathcal{E}_k}[L_1]^{\mathcal{E}_n}_{\mathcal{E}_m}$$
 
-이 성립한다. 즉, 선형사상의 합성은 행렬의 곱과 같다. 
+이 성립한다. 즉, linear map의 합성은 행렬의 곱과 같다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -179,7 +179,7 @@ $$\begin{aligned}(L_1+L_2)(x_1)&=(\alpha_{1,1}+\beta_{1,1})y_1+(\alpha_{2,1}+\be
 
 $$[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}=[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$$
 
-이 성립한다. 즉, 선형사상의 합성은 행렬의 곱과 같다. 
+이 성립한다. 즉, linear map의 합성은 행렬의 곱과 같다. 
 
 </div>
 <details class="proof" markdown="1">

@@ -130,12 +130,14 @@ read_time: false
 | <selected>&#9745; spanning set</selected> | <unselected>생성집합</unselected> |
 | <selected>&#9745; span</selected> | <unselected>생성</unselected> |
 | <unselected>linearly dependent</unselected> | <selected>&#9745; 일차독립</selected> |
+| <unselected>linearly independent</unselected> | <selected>&#9745; 일차종속</selected> |
 | <selected>&#9745; basis</selected> | <unselected>기저</unselected> |
 | <unselected>dimension</unselected> | <selected>&#9745; 차원</selected> |
 | <selected>&#9745; linear map</selected> | <unselected>선형사상</unselected> |
 | <selected>&#9745; kernel</selected> | <unselected>핵</unselected> |
 | <selected>&#9745; image</selected> | <unselected>상</unselected> |
 | <unselected>matrix</unselected> | <selected>&#9745; 행렬</selected> |
+| <unselected>block matrix</unselected> | <selected>&#9745; 블록행렬</selected> |
 | <unselected>inverse matrix</unselected> | <selected>&#9745; 역행렬</selected> |
 | <unselected>invertible</unselected> | <selected>&#9745; 가역</selected> |
 | <selected>&#9745; trace</selected> | <unselected>대각합</unselected> |
@@ -145,7 +147,7 @@ read_time: false
 | <unselected>reduced row échelon matrix</unselected> | <selected>&#9745; 기약행사다리꼴행렬</selected> |
 | <selected>&#9745; isomorphism</selected> | <unselected>동형사상</unselected> |
 | <selected>&#9745; dual space</selected> | <unselected>쌍대공간</unselected> |
-| <selected>&#9745; change-of-basis matrix</selected> | <unselected>기저변환행렬</unselected> |
+| <unselected>change-of-basis matrix</unselected> | <selected>&#9745;기저변환행렬</selected> |
 | <selected>&#9745; orthogonal complement</selected> | <unselected>직교여공간</unselected> |
 | <selected>&#9745; (alternating) multilinear map</selected> | <unselected>(교대)다중선형사상</unselected> |
 | <unselected>determinant</unselected> | <selected>&#9745; 행렬식</selected> |
