@@ -61,7 +61,7 @@ $$\langle v,v\rangle=\sum_{i=1}^n v_i^2\geq 0$$
 
 $$\lvert \langle v,w\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
 
-이 성립한다.
+이 성립한다. 등호는 $u=\lambda v$를 만족하는 적당한 상수 $\lambda$가 존재할 때 성립한다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -79,7 +79,7 @@ $$0\leq \langle u-\lambda v, u-\lambda v\rangle$$
 
 $$0\leq \langle u,u\rangle-2\lambda\langle u,v\rangle+\lambda^2\langle v,v\rangle=\langle u,u\rangle-\frac{2\langle u,v\rangle^2}{\langle v,v\rangle}+\frac{\langle u,v\rangle^2}{\langle v,v\rangle}=\langle u,u\rangle-\frac{\langle u,v\rangle^2}{\langle v,v\rangle}$$
 
-을 얻는다. 이로부터 원하는 식을 얻는다.
+을 얻는다. 등호는 정확히 $u-\lambda v=0$일 때 성립한다. 이로부터 원하는 식을 얻는다.
 
 </details>
 
@@ -90,7 +90,7 @@ $$0\leq \langle u,u\rangle-2\lambda\langle u,v\rangle+\lambda^2\langle v,v\rangl
 
 $$\lVert v\rVert:=\sqrt{\langle v,v\rangle}$$
 
-으로 정의된 함수 $\lVert-\rVert:V\rightarrow \mathbb{R}$은 norm이 된다.
+으로 정의된 함수 $\lVert-\rVert:V\rightarrow \mathbb{R}$은 norm이 된다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -148,24 +148,136 @@ $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\rig
 
 으로 정의된 $\langle-,-\rangle$이 내적이 된다. 이에 대한 증명은 많이 어렵지는 않지만, $V$가 norm $\lVert-\rVert$를 통해 위상구조가 주어진다는 사실을 이용해야 한다. 이 결과를 지금 사용할 일은 없으므로 우리는 증명하지 않고 넘어간다.
 
-## Gram-Schmidt 과정
+## 정규직교기저
 
-실수 집합에서 $2\neq 0$임은 자명하다. 따라서 [§쌍선형형식, 명제 6](/ko/math/linear_algebra/bilinear_form#pp6)으로부터, 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다. 지금 소개할 Gram-Schmidt 과정 또한 이와 동일한 아이디어를 사용한다.
+우리는 $\operatorname{char}\mathbb{R}=0$임을 알고 있으므로, [§쌍선형형식, 명제 6](/ko/math/linear_algebra/bilinear_form#pp6)으로부터 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다는 것을 안다. 
 
-임의의 $\mathbb{R}$-내적공간 $V$가 주어졌다 하고, $V$에 basis $\mathcal{B}=\\{v_1,\ldots, v_n\\}$이 주어졌다 하자. 우선
+임의의 $\mathbb{R}$-내적공간 $V$가 주어졌다 하고, $V$에 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 주어졌다 하자. 우선
 
-$$\hat{v}_1:=v_1$$
+$$\hat{x}_1:=x_1$$
 
 으로 정의하자. 이후 
 
-$$\hat{v}_k:=v_k-\sum_{i=1}^{k-1}\frac{\langle v_i,v_k\rangle}{\langle v_i,v_i\rangle}v_i$$
+$$\hat{x}_k:=x_k-\sum_{i=1}^{k-1}\frac{\langle x_i,x_k\rangle}{\langle x_i,x_i\rangle}x_i$$
 
-으로 정의하면, 이 과정 끝에 얻어지는 집합 $\\{\hat{v}_1,\ldots, \hat{v}_n\\}$이 orthogonal basis가 된다는 것을 확인할 수 있다. 때때로 우리는 이렇게 얻어진 basis의 각 원소들의 크기가 1이기를 바랄 때도 있는데, 이를 위해서는 각 벡터를 자기 자신의 크기로 나누어주면 된다. 이러한 성질을 만족하는 basis를 *orthonormal basis*라 부른다.
+으로 정의하면, 이 과정 끝에 얻어지는 집합 $\\{\hat{x}_1,\ldots, \hat{x}_n\\}$이 orthogonal basis가 된다는 것을 확인할 수 있다. 이렇게 임의의 basis로부터 orthogonal basis를 얻어내는 방법을 *Gram-Schmidt 과정*이라 부른다. 때때로 우리는 이렇게 얻어진 basis의 각 원소들의 크기가 1이기를 바랄 때도 있는데, 이를 위해서는 각 벡터를 자기 자신의 크기로 나누어주면 된다. 이러한 성질을 만족하는 basis를 *orthonormal basis*라 부른다. 만일 $\mathcal{B}=\\{x_1, \ldots, x_n\\}$이 orthonormal basis라면, 임의의 $v\in V$에 대하여
+
+$$v=v_1x_1+\cdots+v_nx_n$$
+
+의 각 성분 $v_i$를 $\langle -, x_i\rangle$을 취해서 알 수 있다. 좌변은 $\langle v, x_i\rangle$이 될 것이며, 우변은 $\langle x_j,x_i\rangle=\delta_{ij}$이므로 오직 $v_i\langle x_i,x_i\rangle=v_i$만 남기 때문이다. 즉
+
+$$v=\langle v, x_1\rangle x_1+\cdots+\langle v, x_n\rangle x_n$$
+
+이 항상 성립한다. 만일 $\mathcal{B}$가 단순한 orthogonal basis였다면 이 계수들을 구할 때 상수배를 적절히 취했어야 할 것이다.
+
+## 직교행렬
+
+$\mathbb{R}$-내적공간 $V$를 생각하자. Linear map $L:V\rightarrow V$와 그 adjoint를 생각하자. 이 경우 $L$의 adjoint는 $L^\ast$ 대신 $L^t$로 적는 것이 관례이다. 그럼
+
+$$\langle v,Lw\rangle=\langle L^t v, w\rangle$$
+
+이 항상 성립하므로, 임의의 linear map $L$이 $\langle-,-\rangle$을 보존한다면 임의의 $v,w$에 대하여
+
+$$\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v, L^t Lw\rangle$$
+
+이 성립하며, 따라서 $L^t L=I$이 성립한다. 따라서 다음과 같이 정의한다.
+
+<div class="definition" markdown="1">
+
+<ins id="df7">**정의 7**</ins> 임의의 $A\in\operatorname{Mat}_n(\mathbb{R})$에 대해, 다음의 식
+
+$$A^tA=AA^t=I$$
+
+가 성립한다면 $A$를 *orthogonal matrix<sub>직교행렬</sub>*이라 부른다.
+
+</div>
+
+Rank-nullity 정리로부터 $A^tA=I$가 성립한다면 반드시 $AA^t=I$ 또한 성립한다는 것을 안다. 따라서 $\langle-,-\rangle$을 보존하는 임의의 linear map의 행렬표현은 orthogonal matrix가 된다.
+
+$V$에 주어진 두 orthonormal basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$, $\mathcal{C}=\\{x'\_1,\ldots, x'\_n\\}$를 생각하자. 그럼 행렬 $[\operatorname{id}]_\mathcal{C}^\mathcal{B}$의 $i$번째 열은 $x_i$의 $\mathcal{C}$에 대한 행렬표현과 같다. 이제
+
+$$x_i=\langle x_i, x'_1\rangle x'_1+\cdots+\langle x_i, x'_n\rangle x'_n$$
+
+으로부터 
+
+$$[\operatorname{id}]_\mathcal{C}^\mathcal{B}=\begin{pmatrix}\langle x_1,x'_1\rangle&\langle x_2, x'_1\rangle&\cdots&\langle x_n,x'_1\rangle\\ \langle x_1,x'_2\rangle&\langle x_2,x'_2\rangle&\cdots&\langle x_n,x'_2\rangle\\ \vdots&\vdots&\ddots&\vdots\\ \langle x_1, x'_n\rangle&\langle x_2, x'_n\rangle&\cdots&\langle x_n,x'_n\rangle\end{pmatrix}$$
+
+이 된다. $\mathcal{B}$와 $\mathcal{C}$의 역할을 바꾸면
+
+$$[\operatorname{id}]_\mathcal{B}^\mathcal{C}=\begin{pmatrix}\langle x'_1,x_1\rangle&\langle x'_2, x_1\rangle&\cdots&\langle x'_n,x_1\rangle\\ \langle x'_1,x_2\rangle&\langle x'_2,x_2\rangle&\cdots&\langle x'_n,x_2\rangle\\ \vdots&\vdots&\ddots&\vdots\\ \langle x'_1, x_n\rangle&\langle x'_2, x_n\rangle&\cdots&\langle x'_n,n\rangle\end{pmatrix}$$
+
+이므로, $\langle-,-\rangle$이 symmetric이라는 조건으로부터 두 orthonormal basis들 간의 기저변환행렬은 항상 orthogonal matrix가 된다는 것을 확인할 수 있다. 거꾸로 임의의 orthogonal matrix는 항상 orthonormal basis 사이의 기저변환행렬로 해석할 수 있다.
 
 ## Projection theorem
 
-임의의 $\mathbb{R}$-내적공간 $V$가 주어졌다 하고, $U\subseteq V$가 부분공간이라 하자. 만일 $\\{v_1,\ldots, v_{k-1}\\}$이 $U$의 부분집합이라면, 위에서 정의한 
+이제 $V$가 $\mathbb{R}$-내적공간이라 하고, 그 부분공간 $U\subseteq V$가 주어졌다 하자. 만일 $U\neq \\{0\\}$이라면 $u\neq 0$을 만족하는 임의의 $u\in U$마다 $\langle u,u\rangle>0$이 성립하므로, 특히 $V$의 내적 $\langle -,-\rangle$을 $U$로 제한한 것이 non-degenerate이고 따라서 $U$ 위에 bilinear form을 정의한다. 이렇게 정의된 bilinear form이 내적의 성질을 갖는 것은 거의 자명하므로, $\mathbb{R}$-내적공간의 임의의 부분공간은 항상 자연스러운 $\mathbb{R}$-내적공간 구조를 갖는다. 따라서 $U$의 orthonormal basis $\mathcal{B}=\\{x_1,\ldots, x_k\\}$가 존재한다. 뿐만 아니라, $\mathcal{B}$를 포함하는 $V$의 basis를 하나 택한 후, Gram-Schmidt 과정을 $x_1,\ldots, x_k$들부터 반복하면 $\mathcal{B}$를 포함하는 $V$의 orthonormal basis가 존재한다는 것도 확인할 수 있다.
 
-$$\sum_{i=1}^{k-1}\frac{\langle v,v_i\rangle}{\langle v_i,v_i\rangle}v_i$$
+이제 임의의 $v\in V$에 대하여, $v$의 $U$로의 *projection<sub>사영</sub>* $\operatorname{proj}_U v$를 다음의 식
 
-을 벡터 $v$의 $U$로의 *projection<sub>사영</sub>*이라 생각할 수 있다. 이 벡터는 $U$의 벡터들 $u$ 가운데, $\lVert u-v\rVert$를 최소로 하는 벡터이며, 이런 측면에서 위의 벡터를 $v$를 $U$의 벡터들로 근사한 것으로 생각하기도 한다. 
+$$\operatorname{proj}_U v=\sum_{i=1}^k \langle v, x_i\rangle x_i$$
+
+으로 정의하자. 이 정의가 말이 되기 위해서는 위 벡터가 $U$의 orthonormal basis $\mathcal{B}$의 선택과는 관계없이 정의되어야 한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="lem8">**보조정리 8**</ins> 위와 같은 상황에서, 만일 $\mathcal{B}=\\{x_1,\ldots, x_k\\},\mathcal{B}'=\\{x_1',\ldots, x_k'\\}$가 $U$의 두 orthonormal basis라 하면, 임의의 $v\in V$에 대하여
+
+$$\sum_{i=1}^k \langle v, x_i\rangle x_i=\sum_{i=1}^k\langle v, x'_i\rangle x_i'$$
+
+이 성립한다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+식
+
+$$[v]_\mathcal{B}=[\operatorname{id}]^{\mathcal{B}'}_{\mathcal{B}}[v]_{\mathcal{B}'}$$
+
+의 다른 표현일 뿐이다.
+
+</details>
+
+다음의 *projection theorem*은 이렇게 정의한 벡터 $\operatorname{proj}_Uv$가 $v$와 가장 가까운 $U$의 원소임을 알려준다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm8">**정리 8**</ins> $\mathbb{R}$-내적공간 $V$와 그 부분공간 $U\subseteq V$를 생각하자. 그럼 임의의 $v\in V$에 대하여, $\operatorname{proj}_Uv$는
+
+$$\lVert \operatorname{proj}_Uv-v\rVert=\min_{w\in U}\lVert v-w\rVert$$
+
+을 만족하며, 뿐만 아니라 위의 식을 만족하는 벡터는 오직 $\operatorname{proj}_Uv$ 뿐이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 $u,u'\in U$가 모두 $\lVert v-w\rVert$를 최소로 만든다고 가정하자. 그럼 최소성으로부터
+
+$$\lVert v-u\rVert=\lVert v-u'\rVert\leq\left\lVert v-\frac{u+u'}{2}\right\rVert$$
+
+을 얻는다. 따라서
+
+$$\lVert v-u\rVert+\lVert v-u'\rVert=\lVert (v-u)+(v-u')\rVert$$
+
+이다. 이제 삼각부등식의 등호조건으로부터 다음의 식
+
+$$v-u=\lambda (v-u')$$
+
+를 만족하는 상수 $\lambda$가 존재한다는 것을 안다. 특히 
+
+$$(1-\lambda)v=u-\lambda u'\in U$$
+
+가 성립한다. 이로부터 $\lambda=1$이거나 $v\in U$이다. 만일 $\lambda=1$이라면 $v-u=v-u'$로부터 $u=u'$이고, $v\in U$라면 $\lVert v-w\rVert$를 최소로 만드는 $w$는 $w=v$ 뿐이므로 이 경우에도 마찬가지로 $u=u'$이다. 따라서 이 식을 최소로 만드는 벡터는 유일하다. 
+
+이제 실제로 $\operatorname{proj}_Uv$가 실제로 $\lVert v-w\rVert$를 최소로 만드는 벡터임을 보여야 한다. $U$의 basis $\\{x\_1,\ldots, x\_k\\}$를 하나 택하고, 이를 포함하는 $V$의 orthonormal basis를 $\\{x\_1,\ldots, x\_n\\}$이라 하자. 그럼 $v=\sum\_{i=1}^n v\_i x\_i$, $w=\sum\_{i=1}^k w\_i x\_i$로부터
+
+$$\lVert v-w\rVert=\left\lVert\sum_{i=1}^k(v_i-w_i)x_i+\sum_{i=k+1}^n v_ix_i\right\rVert=\sum_{i=1}^k (v_i-w_i)^2+\sum_{i=k+1}^n v_i^2\geq \sum_{i=k+1}^n v_i^2$$
+
+이고, 등호는 모든 $1\leq i\leq k$에 대하여 $v_i=w_i$일 때 성립한다. 그럼 
+
+$$\operatorname{proj}_Uv=\sum_{i=1}^k v_ix_i=\sum_{i=1}^k w_ix_i=w$$
+
+이므로 원하는 결론을 얻는다.
+
+</details>

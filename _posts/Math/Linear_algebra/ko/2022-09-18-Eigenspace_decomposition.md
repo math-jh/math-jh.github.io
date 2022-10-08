@@ -15,7 +15,7 @@ header:
 date: 2022-09-18
 last_modified_at: 2022-09-18
 
-weight: 23
+weight: 24
 
 ---
 
@@ -91,7 +91,7 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
 와 같이, $e_1+e_2\in V$를 나타내는 방법이 유일하지 않기 때문이다. 
 
-또 다른 예시로, $V$의 basis $\mathcal{B}=\\{v_1,\ldots, v_n\\}$을 하나 택하자. $W_i=Fv_i$이라 하면, $\mathcal{B}$가 basis라는 조건은 정확하게 $V$가 $W_i$들의 direct sum이라는 조건과 일치하게 된다. 더 일반적으로 다음이 성립한다.
+또 다른 예시로, $V$의 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$을 하나 택하자. $W_i=Fx_i$이라 하면, $\mathcal{B}$가 basis라는 조건은 정확하게 $V$가 $W_i$들의 direct sum이라는 조건과 일치하게 된다. 더 일반적으로 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -105,7 +105,7 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
 $$v=\sum\_{i\in I} w\_i$$
 
-을 만족하는 $w\_i$들이 유일하게 존재한다. 또, $W\_i$들 각각에서 $w\_i$들을 $\mathcal{B}\_i$의 원소들의 linear combination으로 유일하게 표현할 수 있다. 이로부터 $\bigcup\mathcal{B}\_i$가 $V$의 basis가 된다는 것을 알 수 있다.
+을 만족하는 $w\_i$들이 유일하게 존재한다. 또, $W\_i$들 각각에서 $w\_i$들을 $\mathcal{B}\_i$의 원소들의 일차결합으로 유일하게 표현할 수 있다. 이로부터 $\bigcup\mathcal{B}\_i$가 $V$의 basis가 된다는 것을 알 수 있다.
 
 이 논증을 거꾸로 뒤집으면 반대방향 또한 보일 수 있다.
 
@@ -192,7 +192,7 @@ $\lambda$의 기하적 중복도가 $k$라 하고, $E_\lambda(A)$를 span하는 
 
 $$X=(x_1|x_2|\cdots|x_n)$$
 
-으로 정의한다면, $X$의 column들이 linearly independent하므로 $X^{-1}$이 존재한다. $X^{-1}$의 각 row들을 $y_i$라 하자. 식 $X^{-1}X=XX^{-1}=I$에서
+으로 정의한다면, $X$의 열들이 일차독립이므로 $X^{-1}$이 존재한다. $X^{-1}$의 각 row들을 $y_i$라 하자. 식 $X^{-1}X=XX^{-1}=I$에서
 
 $$y_i\cdot x_j=\begin{cases}1&i=j\\ 0&i\neq j\end{cases}$$
 

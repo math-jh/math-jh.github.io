@@ -45,56 +45,56 @@ weight: 5
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\mathcal{B}_1=\\{v_1,v_2,\ldots, v_m\\}$, 그리고 $\mathcal{B}_2=\\{u_1,u_2,\ldots, u_n\\}$이라 하고, $m=n$임을 보여야 한다. 결론에 반하여 $m>n$이라 하자.
+$\mathcal{B}_1=\\{x_1,x_2,\ldots, x_m\\}$, 그리고 $\mathcal{B}_2=\\{y_1,y_2,\ldots, y_n\\}$이라 하고, $m=n$임을 보여야 한다. 결론에 반하여 $m>n$이라 하자.
 
-우선 $v_1\in V$이므로, $v_1$은 $u_1$, $u_2$, $\ldots$, $u_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, 명제 6](/ko/math/linear_algebra/basis#pp6)에 의하여, 집합 $\\{v_1,u_1,u_2,\ldots, u_n\\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
+우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, 명제 6](/ko/math/linear_algebra/basis#pp6)에 의하여, 집합 $\\{x_1,y_1,y_2,\ldots, y_n\\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
 
-$$\beta_1v_1+\alpha_1u_1+\alpha_2u_2+\cdots+\alpha_n u_n=0\tag{1}$$
+$$\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_n y_n=0\tag{1}$$
 
 이도록 할 수 있다. 여기서 $\beta_1$이 0이 될 수 없음은 자명하다. 만일 $\beta_1=0$이라면 위의 식은 
 
-$$\alpha_1u_1+\alpha_2u_2+\cdots+\alpha_nu_n=0$$
+$$\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_ny_n=0$$
 
-이 되어, $u_1$, $u_2$, $\ldots$, $u_n$이 일차독립이라는 가정에 모순이기 때문이다. 또, 만일 모든 $\alpha_i$가 0이라면 $\beta_1v_1=0$인데, $\beta_1\neq 0$이므로 $v_1=0$이다. 이 경우 $\\{v_1, v_2, \ldots, v_m\\}$은 자명하게 일차종속이게 되므로, 어떤 0이 아닌 $\alpha_i$가 존재한다고 가정하자. 그럼 우리는 위의 식 (1)을 변형하여 다음의 식
+이 되어, $y_1$, $y_2$, $\ldots$, $y_n$이 일차독립이라는 가정에 모순이기 때문이다. 또, 만일 모든 $\alpha_i$가 0이라면 $\beta_1x_1=0$인데, $\beta_1\neq 0$이므로 $x_1=0$이다. 이 경우 $\\{x_1, x_2, \ldots, x_m\\}$은 자명하게 일차종속이게 되므로, 어떤 0이 아닌 $\alpha_i$가 존재한다고 가정하자. 그럼 우리는 위의 식 (1)을 변형하여 다음의 식
 
-$$u_i=\frac{\beta_1}{\alpha_i}v_1-\frac{\alpha_1}{\alpha_i}u_1-\cdots-\frac{\alpha_{i-1}}{\alpha_i}u_{i-1}-\frac{\alpha_{i+1}}{\alpha_i}u_{i+1}-\cdots-\frac{\alpha_n}{\alpha_i}u_n$$
+$$y_i=\frac{\beta_1}{\alpha_i}x_1-\frac{\alpha_1}{\alpha_i}y_1-\cdots-\frac{\alpha_{i-1}}{\alpha_i}y_{i-1}-\frac{\alpha_{i+1}}{\alpha_i}y_{i+1}-\cdots-\frac{\alpha_n}{\alpha_i}y_n$$
 
-을 얻는다. 따라서 만일 우리가 집합 $\\{v_1, u_1, u_2, \ldots, u_n\\}$에서 $u_i$를 빼더라도 이 집합은 여전히 $V$를 생성한다.  
+을 얻는다. 따라서 만일 우리가 집합 $\\{x_1, y_1, y_2, \ldots, y_n\\}$에서 $y_i$를 빼더라도 이 집합은 여전히 $V$를 span한다.  
 
 한편, 이 집합은 일차독립이다. 어떠한 스칼라들 $\beta_1'$, $\alpha_1'$, $\ldots$, $\alpha_n'$에 대하여 
 
-$$\beta_1'v_1+\alpha_1'u_1+\alpha_2'u_2+\cdots+\alpha_{i-1}'u_{i-1}+\alpha_{i+1}'u_{i+1}+\cdots+\alpha_n'u_n=0$$
+$$\beta_1'x_1+\alpha_1'y_1+\alpha_2'y_2+\cdots+\alpha_{i-1}'y_{i-1}+\alpha_{i+1}'y_{i+1}+\cdots+\alpha_n'y_n=0$$
 
 이라고 한다면, 위에서와 같은 이유로 $\beta_1'\neq 0$이 되고, 따라서 
 
-$$v_1=-\frac{\alpha_1'}{\beta_1'}u_1-\frac{\alpha_2'}{\beta_1'}u_2-\cdots-\frac{\alpha_{i-1}'}{\beta_1'}u_{i-1}-\frac{\alpha_{i+1}'}{\beta_1'}u_{i+1}-\cdots-\frac{\alpha_n'}{\beta_1'}u_n$$
+$$x_1=-\frac{\alpha_1'}{\beta_1'}y_1-\frac{\alpha_2'}{\beta_1'}y_2-\cdots-\frac{\alpha_{i-1}'}{\beta_1'}y_{i-1}-\frac{\alpha_{i+1}'}{\beta_1'}y_{i+1}-\cdots-\frac{\alpha_n'}{\beta_1'}y_n$$
 
 을 앞선 식에 대입하면
 
-$$0=\left(\frac{\alpha_1'\beta_1}{\alpha_i\beta_1'}+\frac{\alpha_1}{\alpha_i}\right)u_1+\cdots+\left(\frac{\alpha_{i-1}'\beta_1}{\alpha_i\beta_{i-1}'}+\frac{\alpha_{i-1}}{\alpha_i}\right)u_{i+1}+u_i+\left(\frac{\alpha_{i+1}'\beta_{i+1}}{\alpha_i\beta_{i+1}'}+\frac{\alpha_{i+1}}{\alpha_i}\right)u_{i+1}+\cdots+\left(\frac{\alpha_n'\beta_n}{\alpha_i\beta_n'}+\frac{\alpha_n}{\alpha_i}\right)u_n$$
+$$0=\left(\frac{\alpha_1'\beta_1}{\alpha_i\beta_1'}+\frac{\alpha_1}{\alpha_i}\right)y_1+\cdots+\left(\frac{\alpha_{i-1}'\beta_1}{\alpha_i\beta_{i-1}'}+\frac{\alpha_{i-1}}{\alpha_i}\right)y_{i+1}+y_i+\left(\frac{\alpha_{i+1}'\beta_{i+1}}{\alpha_i\beta_{i+1}'}+\frac{\alpha_{i+1}}{\alpha_i}\right)y_{i+1}+\cdots+\left(\frac{\alpha_n'\beta_n}{\alpha_i\beta_n'}+\frac{\alpha_n}{\alpha_i}\right)y_n$$
 
-을 얻는다. $u_i$의 계수가 $0$이 아니므로 이는 $\\{u_1,u_2,\ldots,u_n\\}$이 일차독립이라는 가정에 모순이다.
+을 얻는다. $y_i$의 계수가 $0$이 아니므로 이는 $\\{y_1,y_2,\ldots,y_n\\}$이 일차독립이라는 가정에 모순이다.
 
-따라서 우리는 $V$의 새로운 basis $\\{v_1,u_1,u_2,\ldots,u_{i-1}, u_{i+1},\ldots, u_n\\}$을 얻었다. 일반성을 잃지 않고, 우리가 없앤 벡터가 $u_n$이었다고 한다면 이렇게 생긴 새 basis는 $\\{v_1, u_1, \ldots, u_{n-1}\\}$이다. 이제 다시 이 basis에 $v_2$를 넣어 $\\{v_2, v_1, u_1, u_2, \ldots, u_n\\}$을 생각하자.
+따라서 우리는 $V$의 새로운 basis $\\{x_1,y_1,y_2,\ldots,y_{i-1}, y_{i+1},\ldots, y_n\\}$을 얻었다. 일반성을 잃지 않고, 우리가 없앤 벡터가 $y_n$이었다고 한다면 이렇게 생긴 새 basis는 $\\{x_1, y_1, \ldots, y_{n-1}\\}$이다. 이제 다시 이 basis에 $x_2$를 넣어 $\\{x_2, x_1, y_1, y_2, \ldots, y_n\\}$을 생각하자.
 
-$$\beta_2v_2+\beta_1v_1+\alpha_1u_1+\alpha_2u_2+\ldots+\alpha_{n-1}u_{n-1}=0$$
+$$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
-라 한다면 위와 같은 논리로 $\beta_2\neq 0$이고, $v_2=0$인 경우를 제외한다면 $\beta_1$, $\alpha_1$, $\ldots$, $\alpha_{n-1}$ 중 0이 아닌 계수가 존재한다. 
+라 한다면 위와 같은 논리로 $\beta_2\neq 0$이고, $x_2=0$인 경우를 제외한다면 $\beta_1$, $\alpha_1$, $\ldots$, $\alpha_{n-1}$ 중 0이 아닌 계수가 존재한다. 
 
-여기서 만일 $\beta_1$이 유일하게 0이 아닌 계수라면, 위의 식은 $\beta_2v_2+\beta_1v_1=0$이 되어 $\\{v_1,v_2\\}$가 일차종속이므로 증명이 끝난다.  
+여기서 만일 $\beta_1$이 유일하게 0이 아닌 계수라면, 위의 식은 $\beta_2x_2+\beta_1x_1=0$이 되어 $\\{x_1,x_2\\}$가 일차종속이므로 증명이 끝난다.  
 
-그렇지 않고 어떠한 $\alpha_i\neq 0$이 존재한다면, 우리는 위와 같은 과정을 반복하여 다시 새로운 basis $\\{v_2,v_1,u_1,u_2,\ldots,u_{n-2}\\}$를 얻는다.
+그렇지 않고 어떠한 $\alpha_i\neq 0$이 존재한다면, 우리는 위와 같은 과정을 반복하여 다시 새로운 basis $\\{x_2,x_1,y_1,y_2,\ldots,y_{n-2}\\}$를 얻는다.
 
 이 과정을 반복하다보면 두 가지의 가능성이 있다. 
 
 1. 만일 이 과정이 어디에선가 멈춘다면, 
 
-    $$\beta_kv_k+\beta_{k-1}v_{k-1}+\cdots+\beta_1v_1=0$$
+    $$\beta_kx_k+\beta_{k-1}x_{k-1}+\cdots+\beta_1x_1=0$$
     
-    이 될 것이므로 $\\{v_1,v_2,\ldots,v_m\\}$은 일차종속이다. 
-2. 그렇지 않다면, $n$번을 반복한 후 우리는 원래의 basis $\\{u_1,u_2,\ldots, u_n\\}$을 새로운 basis $\\{v_1, v_2, \ldots, v_n\\}$으로 완전하게 교체할 것이다. 이 경우, $v_{n+1}\in V$는 $\\{v_1, v_2, \ldots, v_n\\}$들의 일차결합으로 표현할 수 있으므로 $\\{v_1,v_2,\ldots, v_{n+1}\\}$은 일차종속이고 따라서 $\\{v_1,v_2,\ldots, v_m\\}$ 또한 마찬가지이다. 
+    이 될 것이므로 $\\{x_1,x_2,\ldots,x_m\\}$은 일차종속이다. 
+2. 그렇지 않다면, $n$번을 반복한 후 우리는 원래의 basis $\\{y_1,y_2,\ldots, y_n\\}$을 새로운 basis $\\{x_1, x_2, \ldots, x_n\\}$으로 완전하게 교체할 것이다. 이 경우, $x_{n+1}\in V$는 $\\{x_1, x_2, \ldots, x_n\\}$들의 일차결합으로 표현할 수 있으므로 $\\{x_1,x_2,\ldots, x_{n+1}\\}$은 일차종속이고 따라서 $\\{x_1,x_2,\ldots, x_m\\}$ 또한 마찬가지이다. 
 
-어떠한 경우든 $\\{v_1,v_2,\ldots, v_m\\}$는 일차종속이고, 따라서 basis가 될 수 없으므로 모순.
+어떠한 경우든 $\\{x_1,x_2,\ldots, x_m\\}$는 일차종속이고, 따라서 basis가 될 수 없으므로 모순.
 
 </details>
 
@@ -151,7 +151,7 @@ $V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $F$-벡터공간 $V$와, $V$를 생성하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다.
+<ins id="pp6">**명제 6**</ins> $F$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다.
 
 </div>
 <details class="proof" markdown="1">
@@ -181,11 +181,11 @@ $$V=\operatorname{span}S\subseteq\operatorname{span}\bigl(\operatorname{span}S_m
 
 $$(v_1, w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2),\quad\alpha(v,w)=(\alpha v,\alpha w)$$
 
-으로 주어진다. 어렵지 않게, 만일 $\mathcal{B}_1$, $\mathcal{B}_2$가 각각 $V$, $W$의 기저들이라면, $V\times W$의 부분집합
+으로 주어진다. 어렵지 않게, 만일 $\mathcal{B}_1$, $\mathcal{B}_2$가 각각 $V$, $W$의 basis들이라면, $V\times W$의 부분집합
 
 $$\mathcal{B}=\{(x, y): x\in \mathcal{B}_1\text{ and }y\in \mathcal{B}_2\}$$
 
-이 $V\times W$의 기저가 되는 것을 확인할 수 있다. 특히, 만일 $V$, $W$가 모두 유한차원이라면 $V\times W$도 그러하고 $\dim(V\times W)$는 $(\dim V)+(\dim W)$와 같게 된다.
+이 $V\times W$의 basis가 되는 것을 확인할 수 있다. 특히, 만일 $V$, $W$가 모두 유한차원이라면 $V\times W$도 그러하고 $\dim(V\times W)$는 $(\dim V)+(\dim W)$와 같게 된다.
 
 </div>
 
@@ -206,7 +206,7 @@ $$\dim(W_1+W_2)=\dim W_1+\dim W_2-\dim(W_1\cap W_2)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$W_1,W_2$이 각각 $m$, $n$차원이라 하고, $W_1\cap W_2$가 $k$차원이라 하자. 그럼 $W_1\cap W_2$의 기저 $\mathcal{B}\_0=\\{x_1,\ldots, x_k\\}$가 존재한다. 이 집합은 $W_1$과 $W_2$의 일차독립인 부분집합이므로, 이 집합을 포함하는 $W_1$과 $W_2$의 기저가 각각 존재한다. 이들을 $\mathcal{B}\_1$과 $\mathcal{B}\_2$라 하자. 그럼 
+$W_1,W_2$이 각각 $m$, $n$차원이라 하고, $W_1\cap W_2$가 $k$차원이라 하자. 그럼 $W_1\cap W_2$의 basis $\mathcal{B}\_0=\\{x_1,\ldots, x_k\\}$가 존재한다. 이 집합은 $W_1$과 $W_2$의 일차독립인 부분집합이므로, 이 집합을 포함하는 $W_1$과 $W_2$의 basis가 각각 존재한다. 이들을 $\mathcal{B}\_1$과 $\mathcal{B}\_2$라 하자. 그럼 
 
 $$\mathcal{B}_1=\{y_1,\ldots, y_m\},\quad \mathcal{B}_2=\{z_1,\ldots, z_n\},\qquad y_1=z_1=x_1,\ldots, y_k=z_k=x_k$$
 
@@ -214,7 +214,7 @@ $$\mathcal{B}_1=\{y_1,\ldots, y_m\},\quad \mathcal{B}_2=\{z_1,\ldots, z_n\},\qqu
 
 $$\mathcal{B}_1\cup\mathcal{B}_2=\{x_1=y_1,\ldots, x_k=y_k, \quad y_{k+1}, \ldots, y_m,\quad z_{k+1},\ldots, z_n\}$$
 
-은 $W_1+W_2$를 생성한다. 뿐만 아니라 이 집합은 일차독립이다. 이를 보이기 위해
+은 $W_1+W_2$를 span한다. 뿐만 아니라 이 집합은 일차독립이다. 이를 보이기 위해
 
 $$\alpha_1x_1+\cdots+\alpha_kx_k+\beta_{k+1}y_{k+1}+\cdots+\beta_{m}y_m+\gamma_{k+1}z_{k+1}+\cdots+\gamma_{n}z_n=0\tag{2}$$
 
@@ -222,7 +222,7 @@ $$\alpha_1x_1+\cdots+\alpha_kx_k+\beta_{k+1}y_{k+1}+\cdots+\beta_{m}y_m+\gamma_{
 
 $$\beta_1y_1+\cdots+\beta_ky_k+\beta_{k+1}y_{k+1}+\cdots+\beta_{m}y_m=-\gamma_1z_1-\cdots-\gamma_kz_k-\gamma_{k+1}z_{k+1}-\cdots-\gamma_{n}z_n$$
 
-으로 적으면 좌변은 $W_1$의 원소, 우변은 $W_2$의 원소이므로 이 공통의 벡터는 $W_1\cap W_2$의 원소이다. $\mathcal{B}\_0$이 $W_1\cap W_2$의 기저이므로, 적당한 스칼라들 $\alpha_i'$들을 다시 잡아
+으로 적으면 좌변은 $W_1$의 원소, 우변은 $W_2$의 원소이므로 이 공통의 벡터는 $W_1\cap W_2$의 원소이다. $\mathcal{B}\_0$이 $W_1\cap W_2$의 basis이므로, 적당한 스칼라들 $\alpha_i'$들을 다시 잡아
 
 $$\beta_1y_1+\cdots+\beta_my_m=\alpha_1'x_1+\cdots+\alpha_k'x_k=-\gamma_1z_1-\cdots-\gamma_nz_n$$
 
@@ -230,7 +230,7 @@ $$\beta_1y_1+\cdots+\beta_my_m=\alpha_1'x_1+\cdots+\alpha_k'x_k=-\gamma_1z_1-\cd
 
 $$(\beta_1-\alpha_1')y_1+\cdots+(\beta_k-\alpha_k')y_k+\beta_{k+1}y_{k+1}+\cdots+\beta_my_m=0$$
 
-이 되므로, $\mathcal{B}\_1$의 일차독립성에 의해 계수들이 모두 0이고, 특히 $\beta_{k+1}=\cdots=\beta_m=0$이다. 마찬가지로 둘째 등식에서 $\gamma_{k+1}=\cdots=\gamma_n=0$이고, 그럼 (2)에서 남는 식은 $\alpha_1x_1+\cdots+\alpha_kx_k=0$뿐인데 $x_1,\ldots,x_k$는 $W_1\cap W_2$의 기저이므로 다시 일차독립성에 의해 이들도 모두 0이다. 즉, $\mathcal{B}\_1\cup\mathcal{B}\_2$는 $W_1+W_2$를 생성하는 일차독립인 부분집합이고 따라서 $W_1+W_2$의 기저이다. 이제
+이 되므로, $\mathcal{B}\_1$의 일차독립성에 의해 계수들이 모두 0이고, 특히 $\beta_{k+1}=\cdots=\beta_m=0$이다. 마찬가지로 둘째 등식에서 $\gamma_{k+1}=\cdots=\gamma_n=0$이고, 그럼 (2)에서 남는 식은 $\alpha_1x_1+\cdots+\alpha_kx_k=0$뿐인데 $x_1,\ldots,x_k$는 $W_1\cap W_2$의 basis이므로 다시 일차독립성에 의해 이들도 모두 0이다. 즉, $\mathcal{B}\_1\cup\mathcal{B}\_2$는 $W_1+W_2$를 span하는 일차독립인 부분집합이고 따라서 $W_1+W_2$의 basis이다. 이제
 
 $$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\rvert+\lvert\mathcal{B}_2\rvert-\lvert\mathcal{B}_0\rvert=\dim W_1+\dim W_2-\dim(W_1\cap W_2).$$
 

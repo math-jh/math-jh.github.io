@@ -46,7 +46,7 @@ $$\begin{aligned}(G-G')\left(\sum_{x\in \mathcal{B}}v_xx\right)&=\sum_{x\in\math
 
 $$G(v)=\sum_{x\in\mathcal{B}} v_xg(x)$$
 
-로 *정의*하는 것이 자연스럽다. $v$를 $B$의 원소들의 일차결합으로 쓰는 방법은 유일하므로, $G$는 잘 정의되었으며 어렵지 않게 $G$가 선형사상이 된다는 것을 증명할 수 있다.
+로 *정의*하는 것이 자연스럽다. $v$를 $B$의 원소들의 일차결합으로 쓰는 방법은 유일하므로, $G$는 잘 정의되었으며 어렵지 않게 $G$가 linear map이 된다는 것을 증명할 수 있다.
 
 </details>
 

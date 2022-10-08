@@ -15,7 +15,7 @@ header:
 date: 2022-08-19
 last_modified_at: 2022-08-19
 
-weight: 21
+weight: 22
 
 ---
 
@@ -53,7 +53,7 @@ $$\operatorname{rank}L_A+\operatorname{null}L_A=\dim F^n=n$$
 
 </details>
 
-$n\times n$ 가역행렬 $B$가 주어졌다 하자. $B$를 $F^n$에서 $F^n$으로의 선형사상으로 생각하면, $B$는 $F^n$의 basis $e_1,\ldots, e_n$을 어디로 옮기는지에 의해 완전하게 결정된다. 따라서 행렬 $A^{-1}$를 계산하기 위해서는 $A^{-1}$이 basis $e_i$를 어디로 옮기는지를 알면 된다. 이 값을 벡터 $v_i$라 하면, 행렬 $A$는 $(v\_1\|v\_2\|\cdots\|v\_n)$으로 주어질 것이며, 이 때 각각의 $v_i$들은 다음의 식
+$n\times n$ 가역행렬 $B$가 주어졌다 하자. $B$를 $F^n$에서 $F^n$으로의 linear map으로 생각하면, $B$는 $F^n$의 basis $e_1,\ldots, e_n$을 어디로 옮기는지에 의해 완전하게 결정된다. 따라서 행렬 $A^{-1}$를 계산하기 위해서는 $A^{-1}$이 basis $e_i$를 어디로 옮기는지를 알면 된다. 이 값을 벡터 $v_i$라 하면, 행렬 $A$는 $(v\_1\|v\_2\|\cdots\|v\_n)$으로 주어질 것이며, 이 때 각각의 $v_i$들은 다음의 식
 
 $$v_i=A^{-1}e_i\iff Av_i=e_i$$
 

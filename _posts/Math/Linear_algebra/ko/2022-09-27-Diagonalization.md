@@ -15,7 +15,7 @@ header:
 date: 2022-09-27
 last_modified_at: 2022-09-27
 
-weight: 24
+weight: 25
 
 ---
 
@@ -27,7 +27,7 @@ weight: 24
 
 $$XAX^{-1}=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
 
-의 왼쪽 위 $k\times k$ block matrix가 대각행렬 $\lambda I_k$가 된다는 것을 보았다. 그런데 만일 $A$가 [명제 5](/ko/math/linear_algebra/eigenspace_decomposition#pp5)의 조건을 모두 만족한다면, $n-k$개의 벡터들 $x\_{k+1},\ldots, x_n$을 마구잡이로 추가할 것이 아니라, $n$개의 벡터들 $x_1,\ldots, x_n$이 모두 $A$의 고유공간의 basis가 되도록 잡을 수 있다. 그럼 [명제 4](/ko/math/linear_algebra/eigenspace_decomposition#pp4)의 증명 중
+의 왼쪽 위 $k\times k$ 블록행렬가 대각행렬 $\lambda I_k$가 된다는 것을 보았다. 그런데 만일 $A$가 [명제 5](/ko/math/linear_algebra/eigenspace_decomposition#pp5)의 조건을 모두 만족한다면, $n-k$개의 벡터들 $x\_{k+1},\ldots, x_n$을 마구잡이로 추가할 것이 아니라, $n$개의 벡터들 $x_1,\ldots, x_n$이 모두 $A$의 고유공간의 basis가 되도록 잡을 수 있다. 그럼 [명제 4](/ko/math/linear_algebra/eigenspace_decomposition#pp4)의 증명 중
 
 $$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
 
@@ -51,7 +51,7 @@ $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\
 
 </div>
 
-혹은, [명제 5](/ko/math/linear_algebra/eigenspace_decomposition#pp5)는 필요충분조건이었으므로, 대각행렬과 닮은 행렬을 diagonalizable matrix라 불러도 아무런 문제가 없다. 
+혹은, [명제 5](/ko/math/linear_algebra/eigenspace_decomposition#pp5)는 필요충분조건이었으므로, 대각행렬과 닮은 행렬을 diagonalizable한 행렬이라 불러도 아무런 문제가 없다. 
 
 <div class="notice--warning" markdown="1">
 Primary decomposition theorem, Cayley-Hamilton, Jordan canonical form  
