@@ -103,7 +103,7 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 
 </details>
 
-다음 두 따름정리는 모두 유한차원일 경우에는 증명을 했었지만 ([§basis와 차원, 명제 5](/ko/math/linear_algebra/dimension#pp5), [명제 6](/ko/math/linear_algebra/dimension#pp6)) 앞선 논증과 비슷하게, 무한차원 벡터공간에 대해서도 성립한다. 
+다음 두 따름정리는 모두 유한차원일 경우에는 증명을 했었지만 ([§벡터공간의 차원, 명제 5](/ko/math/linear_algebra/dimension#pp5), [명제 6](/ko/math/linear_algebra/dimension#pp6)) 앞선 논증과 비슷하게, 무한차원 벡터공간에 대해서도 성립한다. 
 
 <div class="proposition" markdown="1">
 

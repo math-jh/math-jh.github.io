@@ -15,7 +15,7 @@ header:
 date: 2022-08-12
 last_modified_at: 2022-08-12
 
-weight: 20
+weight: 21
 
 ---
 
@@ -152,19 +152,19 @@ $$\sum_{\tau\in S_n}\operatorname{sgn}(\tau)\det(A)B_{\tau(1)1}\cdots B_{\tau(n)
 
 </details>
 
-우리는 이전 글에서 행렬 $A$가 invertible인 것과 $\det A\neq 0$이 동치라는 것을 기하학적으로 설명했다. 방금 전의 [보조정리 5](#lem5)를 이용하면 이를 엄밀하게 증명할 수 있다.
+우리는 이전 글에서 행렬 $A$가 가역인 것과 $\det A\neq 0$이 동치라는 것을 기하학적으로 설명했다. 방금 전의 [보조정리 5](#lem5)를 이용하면 이를 엄밀하게 증명할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 임의의 행렬 $A\in\operatorname{Mat}_n(F)$에 대하여, $\det A\neq 0$인 것과 $A$가 invertible인 것이 동치이다.
+<ins id="pp6">**명제 6**</ins> 임의의 행렬 $A\in\operatorname{Mat}_n(F)$에 대하여, $\det A\neq 0$인 것과 $A$가 가역인 것이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-선형대수학의 기본정리로부터, $A$가 invertible인 것은 $A$에 의해 정의되는 linear map $L_A:F^n\rightarrow F^n$이 invertible인 것과 동치라는 것을 안다. $F^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\operatorname{col}(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, 명제 3](/ko/math/linear_algebra/determinant#pp3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 invertible이다.
+선형대수학의 기본정리로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:F^n\rightarrow F^n$이 가역인 것과 동치라는 것을 안다. $F^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\operatorname{col}(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, 명제 3](/ko/math/linear_algebra/determinant#pp3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
 
-거꾸로 $A$가 invertible이라 가정하자. 그럼 다음의 식
+거꾸로 $A$가 가역이라 가정하자. 그럼 다음의 식
 
 $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 
@@ -227,11 +227,11 @@ $$\det E_{i,j}=-1,\quad \det E'_{i,r}=r$$
 
 ## Block matrix의 행렬식
 
-한편, 행렬식의 공식 (2)를 이용하면 우리는 block matrix의 행렬식 또한 구할 수 있다. 
+한편, 행렬식의 공식 (2)를 이용하면 우리는 블록행렬의 행렬식 또한 구할 수 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp10">**명제 10**</ins> $A\in\operatorname{Mat}_k(F)$이고 $I$가 $l\times l$ 항등행렬이라 하자. 그럼 다음의 block matrix
+<ins id="pp10">**명제 10**</ins> $A\in\operatorname{Mat}_k(F)$이고 $I$가 $l\times l$ 항등행렬이라 하자. 그럼 다음의 블록행렬
 
 $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 
@@ -255,7 +255,7 @@ $$\sigma(k+1)=k+1,\ldots,\sigma(k+l)=k+1$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl11">**따름정리 11**</ins> $A\in\operatorname{Mat}\_k(F),B\in\operatorname{Mat}\_l(F), C\in\operatorname{Mat}\_{l\times k}(F)$에 대하여, 다음의 block matrix
+<ins id="crl11">**따름정리 11**</ins> $A\in\operatorname{Mat}\_k(F),B\in\operatorname{Mat}\_l(F), C\in\operatorname{Mat}\_{l\times k}(F)$에 대하여, 다음의 블록행렬
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 
@@ -277,7 +277,7 @@ $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&E\end{pmatrix}\begi
 
 $$\det\begin{pmatrix}A_{11}&A_{12}&\cdots&A_{1n}\\O&A_{22}&\cdots&A_{2n}\\\vdots&\vdots&\ddots&\vdots\\O&O&\cdots&A_{nn}\end{pmatrix}=\det A_{11}\det A_{22}\cdots\det A_{nn}$$
 
-이 성립한다. 다만 block matrix로 표현하였을 때 삼각행렬이 되지 않는 경우에는 비슷한 결과가 성립하지 <em_ko>않는다</em_ko>. 예컨대 다음 block matrix
+이 성립한다. 다만 블록행렬로 표현하였을 때 삼각행렬이 되지 않는 경우에는 비슷한 결과가 성립하지 <em_ko>않는다</em_ko>. 예컨대 다음 블록행렬
 
 $$\begin{pmatrix}A&B\\C&D\end{pmatrix}$$
 
