@@ -51,7 +51,7 @@ $$\{(a,b)\subseteq X:\text{$a<b$, $a$ or $b$ can be possibly infinite}\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 집합 $X$ 위에 주어진 *metric<sub>거리함수</sub>*는 다음의 조건을 만족하는 이변수함수 $d$이다.
+<ins id="df4">**정의 4**</ins> 집합 $X$ 위에 주어진 *metric<sub>거리함수</sub>*는 다음의 조건을 만족하는 이변수함수 $d:X\times X\rightarrow\mathbb{R}$이다.
 
 1. 임의의 $x,y\in X$에 대하여 $d(x,y)\geq 0$이 성립하며, $d(x,y)=0$인 것은 $x=y$인 것과 동치이다.
 2. 임의의 $x,y\in X$에 대하여, $d(x,y)=d(y,x)$가 성립한다.
