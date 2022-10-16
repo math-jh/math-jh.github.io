@@ -242,7 +242,7 @@ $$[v]_\mathcal{B}=[\operatorname{id}]^{\mathcal{B}'}_{\mathcal{B}}[v]_{\mathcal{
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8**</ins> $\mathbb{R}$-내적공간 $V$와 그 부분공간 $U\subseteq V$를 생각하자. 그럼 임의의 $v\in V$에 대하여, $\operatorname{proj}_Uv$는
+<ins id="thm9">**정리 9**</ins> $\mathbb{R}$-내적공간 $V$와 그 부분공간 $U\subseteq V$를 생각하자. 그럼 임의의 $v\in V$에 대하여, $\operatorname{proj}_Uv$는
 
 $$\lVert \operatorname{proj}_Uv-v\rVert=\min_{w\in U}\lVert v-w\rVert$$
 
@@ -281,3 +281,5 @@ $$\operatorname{proj}_Uv=\sum_{i=1}^k v_ix_i=\sum_{i=1}^k w_ix_i=w$$
 이므로 원하는 결론을 얻는다.
 
 </details>
+
+뿐만 아니라, $\operatorname{proj}_Uv$의 정의에 의하여 $v-\operatorname{proj}_Uv$는 $U$에 수직인 벡터가 되는 것이 자명하다. 이 사실은 다음 글에서 유용하게 사용한다.
