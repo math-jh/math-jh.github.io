@@ -23,7 +23,7 @@ weight: 4
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 위상공간 $X$, $Y$ 사이의 함수 $f:X\rightarrow Y$가 $x\in X$에서 *연속<sub>continuous</sub>*이라는 것은 $f(x)\in Y$의 임의의 열린근방 $V$에 대하여, $f(U)\subseteq V$이도록 하는 $x$의 열린근방 $U$가 존재하는 것이다. 만일 $f$가 $X$의 모든 점에서 연속이라면, $f$를 *연속함수<sub>continuous function</sub>*라 부른다.
+<ins id="df1">**정의 1**</ins> 임의의 위상공간 $X$, $Y$ 사이의 함수 $f:X\rightarrow Y$가 $x\in X$에서 *연속<sub>continuous</sub>*이라는 것은 $f(x)\in Y$의 임의의 근방 $V$에 대하여, $f(U)\subseteq V$이도록 하는 $x$의 근방 $U$가 존재하는 것이다. 만일 $f$가 $X$의 모든 점에서 연속이라면, $f$를 *연속함수<sub>continuous function</sub>*라 부른다.
 
 </div>
 
@@ -42,7 +42,7 @@ weight: 4
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $f$가 연속이라 하자. 2번을 보이기 위해서는 $Y$의 임의의 열린집합 $V$가 주어졌다고 가정한 후, $f^{-1}(V)$가 열린집합임을 보여야 한다. 이를 위해 임의의 $x\in f^{-1}(V)$를 택하자. 그럼 $f(x)\in V$이므로 $V$는 $f(x)$의 열린근방이다. 따라서, $x$의 어떤 열린근방 $U$가 존재하여 $f(U)\subseteq V$이고 
+우선 $f$가 연속이라 하자. 2번을 보이기 위해서는 $Y$의 임의의 열린집합 $V$가 주어졌다고 가정한 후, $f^{-1}(V)$가 열린집합임을 보여야 한다. 이를 위해 임의의 $x\in f^{-1}(V)$를 택하자. 그럼 $f(x)\in V$이므로 $V$는 $f(x)$의 열린근방이다. $f$는 $x$에서 연속이므로, $x$의 어떤 열린근방 $U$가 존재하여 $f(U)\subseteq V$이고 
 
 $$U\subseteq f^{-1}(f(U))\subseteq f^{-1}(V)$$
 
@@ -64,7 +64,7 @@ $$f(\operatorname{cl}A)\subseteq f(f^{-1}(\operatorname{cl}f(A))\subseteq \opera
 
 또한 성립한다. 
 
-마지막으로 4번이 성립한다고 가정하자. 임의의 $x\in X$에 대해 $f(x)\in Y$의 열린근방 $V$가 주어졌다고 하면, $V^c$는 닫힌집합이므로 $\operatorname{cl}V^c=V^c$이고, 따라서 
+마지막으로 4번이 성립한다고 가정하자. 임의의 $x\in X$에 대해 $f(x)\in Y$의 근방이 주어졌다 하고, 여기에 포함된 $f(x)$의 열린근방을 $V$라 하자. $V^c$는 닫힌집합이므로 $\operatorname{cl}V^c=V^c$이고, 따라서 
 
 $$f(\operatorname{cl}f^{-1}(V^c))\subseteq \operatorname{cl}(f(f^{-1}(V^c))\subset\operatorname{cl}V^c=V^c$$
 
