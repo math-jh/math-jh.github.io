@@ -47,9 +47,11 @@ $$3,\quad 3.1,\quad 3.14,\quad 3.141,\quad\cdots$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 
+<ins id="df2">**정의 2**</ins> 임의의 코시 수열이 수렴하는 거리공간을 *완비거리공간<sub>complete metric space</sub>*, 더 간단하게는 *완비공간*이라 부른다.
 
 </div>
+
+
 
 
 

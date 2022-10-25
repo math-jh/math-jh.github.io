@@ -69,8 +69,8 @@ topology-ko:
         url: /ko/math/topology/metric_topology_1
       - title: "거리위상 (2)"
         url: /ko/math/topology/metric_topology_2
-      - title: "위상공간과 수렴"
-        url: /ko/math/topology//ko/math/topology/convergence
+      - title: "위상공간과 수렴<sup>†</sup>"
+        url: /ko/math/topology/convergence
       - title: "부분위상"
         url: /ko/math/topology/subspace_topology
       - title: "곱위상"

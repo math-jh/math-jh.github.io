@@ -31,7 +31,7 @@ weight: 5
 - $\operatorname{cl}(A\cup B)=\operatorname{cl}(A)\cup\operatorname{cl}(B)$
 - $\operatorname{cl}(\emptyset)=\emptyset$
 
-이 조건들을 만족하는 함수를 *closure operator*라 부른다. ([집합론, §필터와 아이디얼, 갈루아 대응, 정의 8](/ko/math/set_theory/order_relations_3#df8))
+이 조건들을 만족하는 함수를 *closure operator*라 부른다. ([집합론, §필터와 아이디얼, 갈루아 대응, 정의 8](/ko/math/set_theory/filter_and_ideal#df8))
 
 </div>
 
@@ -78,14 +78,12 @@ $$\operatorname{cl}(A)\subset\operatorname{cl}(A)\cup\operatorname{cl}(B)=\opera
 
 ## Neighborhood filter
 
-이 절에서 점 $x$의 근방은 항상 열린근방이 아닌, 일반적인 근방을 뜻한다. ([§열린집합과 닫힌집합, 정의5](/ko/math/topology/basic_definition_1#df5))
-
-위상공간 $X$가 주어졌다 하고, 공집합이 아닌 부분집합 $A$를 생각하자. $A$의 근방들의 모임을 $\mathcal{N}(A)$라 하면 $\mathcal{N}(A)$는 ordered set $\mathcal{P}(X)$의 filter가 된다. 
+위상공간 $X$가 주어졌다 하고, 공집합이 아닌 부분집합 $A$를 생각하자. $A$의 근방들의 모임을 $\mathcal{N}(A)$라 하면 $\mathcal{N}(A)$는 ordered set $\mathcal{P}(X)$의 filter[^1]가 된다. ([집합론, §필터와 아이디얼, 갈루아 대응, 정의 1](/ko/math/set_theory/filter_and_ideal#df1)) 
 
 1. (Left directed) 임의의 $N_1, N_2\in\mathcal{N}(A)$가 주어졌다 하자. 그럼 $A\subseteq U_i\subseteq N_i$를 만족하는 $A$의 열린근방 $U_i$들이 존재한다. 그런데 $A\subseteq U_1\cap U_2\subseteq N_1\cap N_2$이고 $U_1\cap U_2$는 $A$의 열린근방이므로, $N_1\cap N_2$도 $A$의 근방이다.
 2. (Upper set) 만일 $N\in\mathcal{N}(A)$라면, $A$의 적당한 열린근방 $U$가 존재하여 $A\subseteq U\subseteq N$이다. 그런데 $N\subseteq N'$를 만족하는 임의의 $N'$에 대하여 $U$는 $N'$의 부분집합이기도 하므로 $N'\in\mathcal{N}(A)$가 성립한다.
 
-특별히 $A=\\{x\\}$인 경우, $\mathcal{N}(A)$ 대신 간단하게 $\mathcal{N}(x)$로 표기하기로 한다.
+이렇게 정의된 filter $\mathcal{N}(A)$를 $A$의 *neighborhood filter*라 부른다. 특별히 $A=\\{x\\}$인 경우, $\mathcal{N}(A)$ 대신 간단하게 $\mathcal{N}(x)$로 표기하기로 한다. 
 
 거꾸로 임의의 $x\in X$마다 filter $\mathcal{F}_x$가 정의되었다 하자. 그럼 이들 각각을 $x$에서의 neighborhood filter로 갖는 위상구조 $\mathcal{T}$가 존재하는지를 생각할 수 있다. 이에 답하기 위해서는 power set $\mathcal{P}(X)$ 위에서 정의된 filter, 그 중에서도 $\emptyset$을 포함하지 않는 *proper* filter를 조금 더 자세히 살펴볼 필요가 있다.
 
@@ -123,7 +121,7 @@ $X$의 부분집합들의 모임 $\mathcal{S}\subset\mathcal{P}(X)$를 생각하
 
 위의 조건을 만족하는 $\mathcal{S}$를 filter $\mathcal{F}={}\uparrow\mathcal{S}$의 *basis*라 부른다. 
 
-한편, 집합 $X$의 임의의 부분집합 $A$에 대하여, $X$ 위에서 정의된 filter $\mathcal{F}$는 일반적으로 $A$ 위에서의 filter로 restricted 되지 않는다. 이는 만일 $\mathcal{F}$의 어떤 원소와 $A$가 만나지 않는다면, $\mathcal{F}_A=\\{A\cap F: F\in\mathcal{F}\\}$가 $\emptyset$을 포함하기 때문이다. 다음 명제는 $\mathcal{F}_A$가 $A$ 위의 filter가 되지 않을 수 있는 이유는 오직 이것 뿐임을 보여준다.
+한편, 집합 $X$의 임의의 부분집합 $A$에 대하여, $X$ 위에서 정의된 filter $\mathcal{F}$는 일반적으로 $A$ 위에서의 filter로 잘 제한되지 않는다. 이는 만일 $\mathcal{F}$의 어떤 원소와 $A$가 만나지 않는다면, $\mathcal{F}_A=\\{A\cap F: F\in\mathcal{F}\\}$가 $\emptyset$을 포함하기 때문이다. 다음 명제는 $\mathcal{F}_A$가 $A$ 위의 filter가 되지 않을 수 있는 이유는 오직 이것 뿐임을 보여준다.
 
 <div class="proposition" markdown="1">
 
@@ -136,6 +134,8 @@ $X$의 부분집합들의 모임 $\mathcal{S}\subset\mathcal{P}(X)$를 생각하
 임의의 $F\cap A,F'\cap A\in\mathcal{F}_A$에 대하여 $(F\cap A)\cap(F'\cap A)=(F\cap F')\cap A$이고, $\mathcal{F}$는 filter이므로 $F\cap F'\in\mathcal{F}$가 되어 $(F\cap A)\cap(F'\cap A)\in\mathcal{F}_A$가 성립한다. 또, 만일 $F\cap A\subseteq G\subseteq A$라 하면, $G=(F\cup G)\cap A$이므로 $G\in\mathcal{F}_A$이다. 따라서 $\emptyset\not\in\mathcal{F}_A$이기만 하면 $\mathcal{F}_A$가 filter로써 잘 정의되며, 또 당연히 $\mathcal{F}_A$가 filterrㅏ 되기 위해서는 $\emptyset\not\in\mathcal{F}_A$여야 하므로 원하는 결과를 얻는다.
 
 </details>
+
+한편, 임의의 집합 위에서 정의된 filter $\mathcal{F}$가 주어졌을 때, 이를 포함하는 ultrafilter가 존재한다는 것은 Zorn's lemma로부터 자명하다. 따라서, 임의의 filter는 항상 이를 포함하는 ultrafilter들의 교집합으로 생각할 수 있다.
 
 이제 우리는 앞서 말한 것과 같이 neighborhood filter $\mathcal{N}(x)$를 이용해 $X$ 위에서의 위상구조를 정의해야 한다. 열린집합(닫힌집합)을 이용한 정의 혹은 closure operator를 이용한 정의에서는 열린집합, 닫힌집합 혹은 closure operator들이 만족해야 할 공리가 주어졌었는데, 마찬가지로 neighborhood filter $\mathcal{N}(x)$ 또한 다음의 공리를 만족해야 한다.
 
@@ -181,3 +181,5 @@ $x\in\operatorname{int}(A\cap B)$라 하자. 그럼 정의에 의해 $A\cap B\in
 **[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.
 
 ---
+
+[^1]: 위상수학에서 filter를 다룰 때는 $\mathcal{F}$가 공집합을 포함하지 않는 것으로 생각하는 것이 보통이다. 
