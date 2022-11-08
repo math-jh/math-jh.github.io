@@ -55,32 +55,7 @@ set-en:
 topology-ko:
   - title: <a href="/ko/topology" class="sidebar_title">위상수학</a>
     children:
-      - title: "열린집합과 닫힌집합"
-        url: /ko/math/topology/basic_definition_1
-      - title: "위상공간의 기저"
-        url: /ko/math/topology/basic_definition_2
-      - title: "수열의 수렴"
-        url: /ko/math/topology/basic_definition_3
-      - title: "연속함수"
-        url: /ko/math/topology/basic_definition_4
-      - title: "위상공간의 다른 정의들<sup>†</sup>"
-        url: /ko/math/topology/equivalent_definition_of_topology
-      - title: "거리위상 (1)"
-        url: /ko/math/topology/metric_topology_1
-      - title: "거리위상 (2)"
-        url: /ko/math/topology/metric_topology_2
-      - title: "위상공간과 수렴<sup>†</sup>"
-        url: /ko/math/topology/convergence
-      - title: "부분위상"
-        url: /ko/math/topology/subspace_topology
-      - title: "곱위상"
-        url: /ko/math/topology/product_topology
-      - title: "몫위상"
-        url: /ko/math/topology/quotient_topology
-      - title: "Initial and final topology<sup>†</sup>"
-        url: /ko/math/topology/initial_and_final_topology
-      - title: "연결공간"
-        url: /ko/math/topology/connectedness
+
 
 topology-en:
   - title: <a href="/en/topology" class="sidebar_title">Topology</a>
