@@ -55,6 +55,12 @@ set-en:
 topology-ko:
   - title: <a href="/ko/topology" class="sidebar_title">위상수학</a>
     children:
+      - title: "열린집합"
+        url: /ko/math/topology/open_sets
+      - title: "위상공간의 기저"
+        url: /ko/math/topology/topological_basis
+      - title: "집합의 내부, 폐포, 경계"
+        url: /ko/math/topology/other_concepts
 
 
 topology-en:
