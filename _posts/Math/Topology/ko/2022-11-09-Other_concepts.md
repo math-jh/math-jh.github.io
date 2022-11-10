@@ -105,7 +105,7 @@ $$\operatorname{cl}(A\cup B)=\operatorname{cl}(A)\cup\operatorname{cl}(B)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, 두 조건 
+<ins id="pp6">**명제 6**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, 두 조건 
 
 1. $x\in\operatorname{cl}A$인 것,
 2. $x$의 임의의 근방 $U$가 $A$와 만나는 것
@@ -124,7 +124,7 @@ $$\operatorname{cl}(A\cup B)=\operatorname{cl}(A)\cup\operatorname{cl}(B)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl3">**따름정리 3**</ins> 위상공간 $X$가 주어졌다 하자. 열린집합 $A$와 임의의 집합 $B$에 대하여, 다음의 식
+<ins id="crl7">**따름정리 7**</ins> 위상공간 $X$가 주어졌다 하자. 열린집합 $A$와 임의의 집합 $B$에 대하여, 다음의 식
 
 $$A\cap\operatorname{cl}(B)\subseteq\operatorname{cl}(A\cap B)$$
 
@@ -134,23 +134,23 @@ $$A\cap\operatorname{cl}(B)\subseteq\operatorname{cl}(A\cap B)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$x\in A\cap\operatorname{cl}(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의의 근방 $V$에 대하여 $V\cap A$ 또한 $x$의 근방이 된다. 따라서 $x\in\operatorname{cl}(B)$인 것과 [명제 2](#pp2)로부터 $(V\cap A)\cap B\neq\emptyset$임을 안다. 그런데 이는 $A\cap B$와 $V$의 교집합이 공집합이 아니라는 것으로 해석할 수도 있고, $V$는 $x$의 임의의 근방이므로 다시 [명제 2](#pp2)에 의하여 $x\in\operatorname{cl}(A\cap B)$이다.
+$x\in A\cap\operatorname{cl}(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의의 근방 $V$에 대하여 $V\cap A$ 또한 $x$의 근방이 된다. 따라서 $x\in\operatorname{cl}(B)$인 것과 [명제 6](#pp6)으로부터 $(V\cap A)\cap B\neq\emptyset$임을 안다. 그런데 이는 $A\cap B$와 $V$의 교집합이 공집합이 아니라는 것으로 해석할 수도 있고, $V$는 $x$의 임의의 근방이므로 다시 [명제 6](#pp6)에 의하여 $x\in\operatorname{cl}(A\cap B)$이다.
 
 </details>
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 위상공간 $X$와 $X$의 임의의 부분집합 $A$에 대하여, $x\in X$가 $A$의 *limit point<sub>극한점</sub>*이라는 것은 $x$의 임의의 근방이 $x$ 자기 자신을 제외한 점에서 $A$와 만나는 것이다. 
+<ins id="df8">**정의 8**</ins> 위상공간 $X$와 $X$의 임의의 부분집합 $A$에 대하여, $x\in X$가 $A$의 *limit point<sub>극한점</sub>*이라는 것은 $x$의 임의의 근방이 $x$ 자기 자신을 제외한 점에서 $A$와 만나는 것이다. 
 
 </div>
 
-만일 $x\in\operatorname{cl}(A)\setminus A$라면, [명제 2](#pp2)에 의하여 $x$는 반드시 $A$의 limit point여야 하는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\\{x\\}$이도록 할 수 있다면 $x$가 $A$의 *isolated point<sub>고립접</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
+만일 $x\in\operatorname{cl}(A)\setminus A$라면, [명제 6](#pp6)에 의하여 $x$는 반드시 $A$의 limit point여야 하는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\\{x\\}$이도록 할 수 있다면 $x$가 $A$의 *isolated point<sub>고립접</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
 
 ## 집합의 경계
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> 위상공간 $X$의 임의의 부분집합 $A$에 대하여, $A$의 *boundary<sub>경계</sub>*는 다음의 식
+<ins id="df9">**정의 9**</ins> 위상공간 $X$의 임의의 부분집합 $A$에 대하여, $A$의 *boundary<sub>경계</sub>*는 다음의 식
 
 $$\partial A=\operatorname{cl}A\setminus\operatorname{int}A$$
 
@@ -164,17 +164,17 @@ $$\partial A=\operatorname{cl}A\setminus\operatorname{int}A$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 위상공간 $X$의 임의의 부분집합 $A$가 *dense subset<sub>조밀 부분집합</sub>*이라는 것은 $\operatorname{cl}(A)=X$인 것이다.
+<ins id="df10">**정의 10**</ins> 위상공간 $X$의 임의의 부분집합 $A$가 *dense subset<sub>조밀 부분집합</sub>*이라는 것은 $\operatorname{cl}(A)=X$인 것이다.
 
 </div>
 
-[명제 2](#pp2)에 의하여, $A$가 $X$에서 dense라는 것은 공집합이 아닌 $X$의 열린집합이 반드시 $A$와 만난다는 것을 의미한다. 직관적으로 $X$의 dense subset을 찾으면, 약간의 perturbation만 거치면 $X$를 전부 얻어낼 수 있다는 것으로 생각할 수 있다. 이를 더 일상적인 언어로 쓰면 $X$의 dense subset은 $X$의 "거의 모든" 부분을 포함한다고 생각할 수 있다.
+[명제 6](#pp6)에 의하여, $A$가 $X$에서 dense라는 것은 공집합이 아닌 $X$의 열린집합이 반드시 $A$와 만난다는 것을 의미한다. 직관적으로 $X$의 dense subset을 찾으면, 약간의 perturbation만 거치면 $X$를 전부 얻어낼 수 있다는 것으로 생각할 수 있다. 이를 더 일상적인 언어로 쓰면 $X$의 dense subset은 $X$의 "거의 모든" 부분을 포함한다고 생각할 수 있다.
 
 한편, 위상수학에서도 크기의 개념은 basis의 크기로 주어지는데, 이는 다음 명제에 따른 것이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 위상공간 $X$의 basis $\mathcal{B}$에 대하여, $\operatorname{card}(D)\leq\operatorname{card}(\mathcal{B})$이도록 하는 $X$의 dense subset $D$가 존재한다.
+<ins id="pp11">**명제 11**</ins> 위상공간 $X$의 basis $\mathcal{B}$에 대하여, $\operatorname{card}(D)\leq\operatorname{card}(\mathcal{B})$이도록 하는 $X$의 dense subset $D$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">

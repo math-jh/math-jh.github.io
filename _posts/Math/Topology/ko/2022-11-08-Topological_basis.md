@@ -4,7 +4,7 @@ title: "위상공간의 기저"
 excerpt: "위상공간의 기저와 부분기저, 국소기저"
 
 categories: [Math / Topology]
-permalink: /ko/math/topology/topological_base
+permalink: /ko/math/topology/topological_basis
 header:
     overlay_image: /assets/images/Topology/Topological_structures.png
     overlay_filter: 0.5
