@@ -61,6 +61,10 @@ topology-ko:
         url: /ko/math/topology/topological_basis
       - title: "집합의 내부, 폐포, 경계"
         url: /ko/math/topology/other_concepts
+      - title: "위상공간의 다른 정의들"
+        url: /ko/math/topology/equivalent_formulation_of_topology
+      - title: "연속함수"
+        url: /ko/math/topology/continuous_functions
 
 
 topology-en:
