@@ -1,7 +1,7 @@
 ---
 
 title: "위상공간의 다른 정의들"
-excerpt: ""
+excerpt: "닫힌집합, 폐포, neighborhood filter를 이용한 위상의 정의"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/equivalent_formulation_of_topology

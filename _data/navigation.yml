@@ -65,6 +65,10 @@ topology-ko:
         url: /ko/math/topology/equivalent_formulation_of_topology
       - title: "연속함수"
         url: /ko/math/topology/continuous_functions
+      - title: "Initial topology와 final topology<sup>†</sup>"
+        url: /ko/math/topology/initial_and_final_topology
+      - title: "부분공간"
+        url: /ko/math/topology/subspace
 
 
 topology-en:
