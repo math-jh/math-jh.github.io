@@ -1,7 +1,7 @@
 ---
 
 title: "집합의 내부, 폐포, 경계"
-excerpt: ""
+excerpt: "위상수학의 기본 개념들"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/other_concepts

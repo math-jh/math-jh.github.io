@@ -1,7 +1,7 @@
 ---
 
 title: "연속함수"
-excerpt: ""
+excerpt: "연속함수의 성질들"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/continuous_functions
@@ -91,31 +91,31 @@ $$\operatorname{cl}(f^{-1}(C))\subseteq f^{-1}(f(\operatorname{cl}(f^{-1}(C)))\s
 
 두 위상공간 $(X,\mathcal{T}\_X), (Y,\mathcal{T}\_Y)$ 사이의 연속함수 $f:X\rightarrow Y$가 주어졌다 하자. 그럼 임의의 $V\in\mathcal{T}\_Y$에 대하여 $f^{-1}(V)\in\mathcal{T}\_X$가 성립하므로, 다음의 식
 
-$$f^\mathrm{inv}(V):=f^{-1}(V),\qquad V\in\mathcal{T}_Y$$
+$$f^\mathcal{T}(V):=f^{-1}(V),\qquad V\in\mathcal{T}_Y$$
 
-이 함수 $f^\mathrm{inv}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$를 잘 정의한다.
+이 함수 $f^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$를 잘 정의한다.
 
 이제 $f$가 전단사함수라 가정하고 $\mathcal{T}\_Y$의 서로 다른 두 원소 $V\_1,V\_2$를 생각하자. 일반성을 잃지 않고 $y\in V\_1\setminus V\_2$라 하면 
 
-$$f^{-1}(y)\in f^\mathrm{inv}(V_1)\setminus f^\mathrm{inv}(V_2)$$
+$$f^{-1}(y)\in f^\mathcal{T}(V_1)\setminus f^\mathcal{T}(V_2)$$
 
-가 성립하므로 $f^{\mathrm{inv}}$는 단사함수가 된다. 
+가 성립하므로 $f^{\mathcal{T}}$는 단사함수가 된다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 일반적으로 $f^{\mathrm{inv}}$가 전사함수가 될 필요는 없다. 가령 $\mathbb{N}$에 discrete topology를 준 공간을 $X$, trivial topology를 준 공간을 $Y$라 한 후, 집합으로서의 항등함수 $\operatorname{id}:\mathbb{N}\rightarrow\mathbb{N}$을 생각하면 $\operatorname{id}$는 연속인 전단사함수이지만 함수
+<ins id="ex5">**예시 5**</ins> 일반적으로 $f^{\mathcal{T}}$가 전사함수가 될 필요는 없다. 가령 $\mathbb{N}$에 discrete topology를 준 공간을 $X$, trivial topology를 준 공간을 $Y$라 한 후, 집합으로서의 항등함수 $\operatorname{id}:\mathbb{N}\rightarrow\mathbb{N}$을 생각하면 $\operatorname{id}$는 연속인 전단사함수이지만 함수
 
-$$\operatorname{id}^\mathrm{inv}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$
+$$\operatorname{id}^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$
 
 는 전사함수가 될 수 없다. ([집합론, §기수, 명제 15](/ko/math/set_theory/cardinals#pp15))
 
 </div>
 
-그러나 만일 전단사함수 $f$의 역함수 $f^{-1}$ 또한 연속함수라면 $(f^{-1})^\mathrm{inv}:\mathcal{T}_X\rightarrow\mathcal{T}_Y$가 잘 정의되며 정의로부터
+그러나 만일 전단사함수 $f$의 역함수 $f^{-1}$ 또한 연속함수라면 $(f^{-1})^\mathcal{T}:\mathcal{T}_X\rightarrow\mathcal{T}_Y$가 잘 정의되며 정의로부터
 
-$$f^\mathrm{inv}\circ (f^{-1})^\mathrm{inv}=\operatorname{id}_{\mathcal{T}_X},\qquad (f^{-1})^\mathrm{inv}\circ f^\mathrm{inv}=\operatorname{id}_{\mathcal{T}_Y}$$
+$$f^\mathcal{T}\circ (f^{-1})^\mathcal{T}=\operatorname{id}_{\mathcal{T}_X},\qquad (f^{-1})^\mathcal{T}\circ f^\mathcal{T}=\operatorname{id}_{\mathcal{T}_Y}$$
 
-임이 자명하므로 $f^\mathrm{inv}$ 또한 전단사함수가 된다. 이와 같은 상황을 다음과 같이 정의한다.
+임이 자명하므로 $f^\mathcal{T}$ 또한 전단사함수가 된다. 이와 같은 상황을 다음과 같이 정의한다.
 
 <div class="definition" markdown="1">
 
