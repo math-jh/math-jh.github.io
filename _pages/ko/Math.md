@@ -1,7 +1,7 @@
 ---
 title: "Math"
 layout: archive_custom
-permalink: /ko/math
+permalink: /ko/math/
 author_profile: true
 ---
 {% assign lang = site.locale %}
