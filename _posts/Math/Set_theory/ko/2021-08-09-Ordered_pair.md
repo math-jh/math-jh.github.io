@@ -13,7 +13,7 @@ sidebar:
     nav: "set-ko"
 
 date: 2021-08-09
-last_modified_at: 2021-05-17
+last_modified_at: 2022-11-21
 
 weight: 2
 
@@ -21,21 +21,13 @@ weight: 2
 
 ## 집합의 포함관계
 
-ZFC 공리계는 [앞선 글](/ko/math/set_theory/zfc_axioms)에서 소개한 공리들 외에도 여러가지 공리들을 포함하고 있지만, ZFC 공리계에 대한 소개는 일단은 이쯤에서 멈춘다. 
-
-러셀의 역설을 필두로 한 여러 모순들은 기존의 소박한 집합론에 경각심을 주긴 하였지만, 그렇다고 해서 기존의 이론을 사용할 수 없다는 이야기는 아니다. 오히려 공리적 집합론은 우리가 안심하고 기존의 소박한 집합론을 사용할 수 있도록 토대를 다져주는 역할을 한다. 
-
-때문에 남은 글들에서는 집합론을 완전하게 공리적으로 접근하기보다, 기존의 소박한 집합론의 관점으로 접근하되 필요한 부분만 그때그때 공리들을 언급해나가는 방향으로 진행할 것이다. 하지만 이들은 모두 ZFC 공리들에 의해 완벽하게 정당화될 수 있다. 
-
-본격적인 이야기를 시작하기 전에 앞으로 사용할 정의를 하나 새로 만들자.
-
 <div class="definition" markdown="1">
 
 <ins id="df1">**정의 1**</ins> $A\subseteq B$라는 것은 임의의 $x$에 대하여, 명제 $x\in A\implies x\in B$이 항상 참인 것이다. 
 
 </div>
 
-다음의 두 명제들은 $\subset$의 두 성질들이다. (참고: [§순서관계 (1), 정의 1](/ko/math/set_theory/order_relations#df1))
+다음의 두 명제들은 $\subset$의 두 성질들이다. 
 
 <div class="proposition" markdown="1">
 
@@ -61,23 +53,21 @@ $x\in A\implies x\in A$가 항상 참이다.
 
 </details>
 
+위 두 명제로부터 $\subseteq$가 집합들 사이의 순서관계가 된다는 것을 안다. ([§순서관계 (1), 정의 1](/ko/math/set_theory/order_relations#df1))
+
 ## 순서쌍
 
-이제 본격적으로 집합론을 시작한다. 
+우리가 집합론에서 사용할 거의 유일한 도구는 이항관계이고, 이를 표현하는 언어는 순서쌍이다. 가령 위에서 살펴본 이항관계 $\subseteq$는 $A\subseteq B$를 만족하는 순서쌍들 $(A,B)$를 모아둔 "집합"
 
-집합론에서 가장 중요하게 사용하는 것은 이항관계다. 이항관계는 *binary relation*이라는 말 그대로 <em_ko>두 개의 원소들 사이의 관계</em_ko>를 뜻한다. *단항관계<sub>unary relation</sub>* 등의 다른 관계도 있지만, 가장 빈번하게 사용되는 것은 이항관계이므로 앞으로 별다른 접두사 없이 간단히 관계라 지칭하는 것들은 모두 이항관계를 뜻하는 것으로 생각한다. 관계의 예시들은 다음과 같다.
+$$\subseteq=\{(A,B),(B,C),\cdots\}$$
 
-- $x=y$는 $x$와 $y$ 사이의 관계다. 
-- $y=f(x)$는 $x$와 $y$ 사이의 관계다.
-- $x < y$는 $x$와 $y$ 사이의 관계다.
+으로 생각할 수 있다.[^1] 이와 비슷하게 함수 $y=f(x)$는 다음 집합
 
-이 세 종류의 관계들은 각각 *동치관계<sub>equivalence relation</sub>*, *함수<sub>function</sub>*, 그리고 *순서관계<sub>order relation</sub>*라 부르며, 이들 셋을 모두 살펴보면 집합론에 대한 이 글타래는 끝이 난다. 
+$$F=\{(x_1,f(x_1)), (x_2,f(x_2)),\cdots\}$$
 
-모든 관계가 순서쌍으로 표현 가능한 것은 아니지만, 우리가 도입한 공리를 통해 형식화할 수 있는 관계들은 순서쌍을 이용해 표현할 수 있다. 하지만 우리가 정의한 집합들 중에는 중고등학교때 배운 순서쌍의 역할을 할 도구가 없다. 강력한 후보는 axiom of pair에 의해 얻어지는 집합 $\\{A,B\\}$인데,
+으로 생각할 수 있고, 아직 정의하지 않은 *동치관계* 또한 이렇게 순서쌍들의 집합으로 나타낼 수 있다. 
 
-$$x\in \{A,B\}\iff (x=A)\wedge(x=B)\iff (x=B)\wedge(x=A)\iff x\in\{B,A\}$$
-
-이므로 $\\{A,B\\}=\\{B,A\\}$가 되어 이 집합은 $A$와 $B$의 순서에 관계 없이 같은 집합을 나타낸다. 따라서, 순서쌍을 정의하기 위해서는 뭔가 새로운 아이디어가 필요하다.
+하지만 우리가 정의한 집합들 중에는 중고등학교때 배운 순서쌍의 역할을 할 도구가 없다. 예컨대 $\\{A,B\\}=\\{B,A\\}$이므로 단순히 axiom of pair를 한 번 사용해서는 $A$와 $B$의 순서를 구별할 수 없다.
 
 <div class="definition" markdown="1">
 
@@ -85,7 +75,7 @@ $$x\in \{A,B\}\iff (x=A)\wedge(x=B)\iff (x=B)\wedge(x=A)\iff x\in\{B,A\}$$
 
 </div>
 
-위의 정의가 의미를 갖기 위해서는 다음의 보조정리를 먼저 보여야 한다. 편의상, 이 증명을 마지막으로 앞으로는 매 과정마다 사용한 공리들을 일일히 열거하는 대신 간단히 논증만 전개하기로 한다. 
+위의 정의가 의미를 갖기 위해서는 다음의 보조정리를 먼저 보여야 한다.[^2]
 
 <div class="proposition" markdown="1">
 
@@ -101,11 +91,11 @@ $$x\in \{A,B\}\iff (x=A)\wedge(x=B)\iff (x=B)\wedge(x=A)\iff x\in\{B,A\}$$
 
 </details>
 
-순서쌍 $(x,y)$는 잘 정의된다는 것을 확인했지만, 이것이 정말 우리가 원하는 성질을 가지고 있는지는 아직 확인해보지 않았다. 즉, $(x,y)$와 $(y,x)$가 실제로 다른지를 확인해봐야 한다. 이는 더 일반적인 다음 명제의 결과이다.
+순서쌍 $(x,y)$는 잘 정의된다는 것을 확인했지만, 이렇게 정의된 순서쌍이 일반적인 $x,y$에 대하여 $(x,y)\neq (y,x)$를 만족하는지는 확인해봐야 한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 두 개의 순서쌍 $(x,y)$, $(x',y')$에 대하여, <phrase>$(x,y)=(x',y')$인 것</phrase>과 <phrase>$x=x'$이고 $y=y'$인 것</phrase>이 서로 동치이다.
+<ins id="pp6">**명제 6**</ins> 두 순서쌍 $(x,y)$, $(x',y')$에 대하여, <phrase>$(x,y)=(x',y')$인 것</phrase>과 <phrase>$x=x'$이고 $y=y'$인 것</phrase>이 서로 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -129,9 +119,11 @@ $$\big\{\{x\},\{x,y\}\big\}=\big\{\{x'\},\{x',y'\}\big\}$$
 
 </details>
 
-직관적으로 $z=(x,y)=\big\\{\\{x\\}, \\{x,y\\}\big\\}$의 첫 번째와 두 번째 성분을 각각 뽑아오기 위해서는 $(x,y)$의 두 원소 중 하나의 원소만 갖는 집합의 유일한 원소를 뽑아와서 이걸 첫 번째 성분이라 부르고, 남은 하나를 두 번째 성분이라 부르면 된다. 하지만 우리는 원소의 개수라는 것도 아직 정의하지 않았으므로 다른 방법이 필요하다.
+집합 
 
-집합 $\bigcup z$를 생각하자. 정의에 의해, 이 집합은 $\bigcup z=\\{x\\}\cup\\{x,y\\}=\\{x,y\\}$이다. 이제 다음과 같이 성질  
+$$\bigcup z=\{x\}\cup\{x,y\}=\{x,y\}$$
+
+를 생각하자. 이제 다음과 같이 성질  
 
 > $P(s)$: 어떠한 $t$가 존재하여 $z=(s,t)$이다.  
 
@@ -151,9 +143,7 @@ $$x=\operatorname{pr}_1 z,\qquad y=\operatorname{pr}_2 z$$
 
 </div>
 
-여기서 $\operatorname{pr}$은 **pr**ojection의 약자이다. 저자에 따라 $P$, $\pi$ 등 다양한 표기를 사용한다.
-
-한편, 다음과 같이 두 집합 $A$, $B$의 곱 $A\times B$를 정의할 수 있다.
+여기서 $\operatorname{pr}$은 **pr**ojection의 약자이다. 한편, 다음과 같이 두 집합 $A$, $B$의 곱 $A\times B$를 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -167,11 +157,7 @@ $$\{z:(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 </div>
 
-두 곱집합 $A\times B$와 $A'\times B'$가 동일해질 조건을 알기 위해서는 하나의 곱집합이 다른 곱집합에 언제 <em_ko>포함되는지</em_ko>만 확실하게 결정해주면 된다. 이를 알면 우리는 두 명제
-
-$$A\times B\subseteq A'\times B',\qquad A'\times B'\subseteq A\times B$$
-
-가 각각 언제 성립하는지를 알기 때문이다.
+두 곱집합 $A\times B$와 $A'\times B'$가 동일해질 조건을 알기 위해서는 하나의 곱집합이 다른 곱집합에 언제 <em_ko>포함되는지</em_ko>만 확실하게 결정해주면 된다. 
 
 <div class="proposition" markdown="1">
 
@@ -189,7 +175,7 @@ $z'=(a',b')$이라 하자. 즉 $a'\in A'$, $b'\in B'$인데, 가정에 의해 $a
 
 </details>
 
-이 증명에서, 예를 들어 만일 $B'$가 공집합이었다면 $A'\times B'\subseteq A\times B$로부터 $A'\subseteq A$를 보일 때 어떤 원소 $b'\in B'$를 뽑아올 수 없으므로 이 증명을 사용할 수 없다. 따라서 $A',B'$가 공집합이라는 가정이 필수적이다. 둘 중 하나가 공집합일 때는 다음 명제가 해결해준다.
+$A,B$ 둘 중 하나가 공집합일 때는 다음 명제를 적용할 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -205,12 +191,6 @@ $z'=(a',b')$이라 하자. 즉 $a'\in A'$, $b'\in B'$인데, 가정에 의해 $a
 
 </details>
 
-귀납적으로 $n$-tuple을 
-
-$$(a,b,c)=\bigl(a,(b,c)\bigr), \quad (a,b,c,d)=\bigl(a,(b,c,d)\bigr),\quad\cdots$$
-
-으로 정의할 수 있다. 하지만 우리는 함수를 정의한 후 더 일반적으로 순서쌍의 개념을 확장할 것이므로 이 정의에 대해서는 크게 신경쓰지 않기로 한다.
-
 ---
 **참고문헌**
 
@@ -218,3 +198,6 @@ $$(a,b,c)=\bigl(a,(b,c)\bigr), \quad (a,b,c,d)=\bigl(a,(b,c,d)\bigr),\quad\cdots
 **[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
 
 ---
+
+[^1]: 물론 이 "집합"은 집합이 아니다. ([§ZFC 공리계, 예시 4](/ko/math/set_theory/zfc_axioms#ex4))
+[^2]: 이 보조정리의 증명을 끝으로, 더 이상 증명과정에서 사용한 공리들을 언급하지 않는다.

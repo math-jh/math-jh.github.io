@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /en
+permalink: /en/
 hidden: true
 header:
   overlay_image: /assets/images/Background/Main.png
