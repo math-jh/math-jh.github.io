@@ -17,3 +17,11 @@ set-ko:
         url: ko/math/set_theory/binary_relation
       - title: "이항관계들 사이의 연산"
         url: ko/math/set_theory/operation_of_binary_relations
+      - title: "함수"
+        url: /ko/math/set_theory/functions
+      - title: "함수들 사이의 연산"
+        url: ko/math/set_theory/operation_of_functions
+      - title: "Retraction과 section"
+        url: ko/math/set_theory/retraction_and_section
+      - title: "합집합과 교집합"
+        url: ko/math/set_theory/union_and_intersection
