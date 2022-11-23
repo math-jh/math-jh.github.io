@@ -26,7 +26,7 @@ weight: 4
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $R$이 이항관계라 하자. 그럼 $(x,y)\in R$를 만족하는 모든 $(y,x)$들로 이루어진 이항관계를 $R$의 *역<sub>inverse</sub>*이라 부르고 이를 $R^{-1}$로 표기한다. 또, 집합 $R^{-1}(A)$를 $A$의 *preimage<sub>역상</sub>*이라 부른다. 만일 $R^{-1}=R$라면 $R$이 *symmetric<sub>대칭적</sub>*하다고 한다.
+<ins id="df1">**정의 1**</ins> $R$이 이항관계라 하자. 그럼 $(x,y)\in R$를 만족하는 모든 $(y,x)$들로 이루어진 이항관계를 $R$의 *역<sub>inverse</sub>*이라 부르고 이를 $R^{-1}$로 표기한다. 또, 집합 $R^{-1}(X)$를 $X$의 *역상<sub>preimage</sub>*이라 부른다. 만일 $R^{-1}=R$라면 $R$이 *symmetric<sub>대칭적</sub>*하다고 한다.
 
 </div>
 
@@ -34,7 +34,9 @@ weight: 4
 
 $$(x,y)\in R\iff (y,x)\in R^{-1}$$
 
-이 성립하도록 하는 집합이다.
+이 성립하도록 하는 집합이다. 
+
+집합 $R^{-1}(X)$는 이항관계 $R$에 의한 $X$의 역상으로 보거나, 혹은 $R$의 역관계 $R^{-1}$에 의한 $X$의 상으로 볼 수 있다. 그러나 $R^{-1}$의 정의에 의하여 이들 중 어떠한 관점을 택하더라도 동일한 집합을 얻으므로 혼동의 여지가 없다.
 
 <div class="proposition" markdown="1">
 
