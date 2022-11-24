@@ -25,3 +25,9 @@ set-ko:
         url: ko/math/set_theory/retraction_and_section
       - title: "합집합과 교집합"
         url: ko/math/set_theory/union_and_intersection
+      - title: "집합의 합"
+        url: ko/math/set_theory/sum_of_sets
+      - title: "집합의 곱"
+        url: ko/math/set_theory/product_of_sets
+      - title: "곱집합의 성질"
+        url: ko/math/set_theory/property_of_products
