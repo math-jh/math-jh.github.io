@@ -31,3 +31,11 @@ set-ko:
         url: ko/math/set_theory/product_of_sets
       - title: "곱집합의 성질"
         url: ko/math/set_theory/property_of_products
+      - title: "동치관계"
+        url: ko/math/set_theory/equivalence_relation
+      - title: "동치관계의 예시들"
+        url: ko/math/set_theory/examples_of_equivalence
+      - title: "순서관계의 정의"
+        url: ko/math/set_theory/order_relations
+      - title: "단조함수"
+        url: ko/math/set_theory/monotone_functions
