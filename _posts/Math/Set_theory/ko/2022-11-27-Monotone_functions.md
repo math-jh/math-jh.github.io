@@ -65,15 +65,19 @@ $$x_i\leq y_i\leq z_i\implies x_i\leq z_i$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins>  임의의 집합 $A$에서 $B$로의 함수 $f$는 index set을 $A$로 하여, 각각의 $a\in A$마다 $B$를 곱한 집합 $B^A=\prod_{a\in A}B$의 원소이다. 
+<ins id="ex3">**예시 3**</ins>  임의의 집합 $A$에서 $B$로의 함수 $f$는 index set을 $A$로 하여, 각각의 $a\in A$마다 $B$를 곱한 집합 $B^A=\prod_{a\in A}B$의 원소로 볼 수 있다.
 
-이제 집합 $B$ 위에 order relation $R$이 정의되었다 하자. 그럼 이 order relation들의 곱은 함수들의 집합 $B^A$ 위에 order relation을 정의한다. 이를 $\leq$라 적기로 하면, $f\leq g$는 임의의 $x\in A$에 대하여 $f(x)\leq_{\tiny R} g(x)$임을 의미한다. 
-
-Order relation $\leq$에 의해 정의되는 strict order를 $<$라 하자. 그럼 $f&lt;g$는 <em_ko>하나의</em_ko> $y\in A$에 대해서만 $f(y)<\_{\tiny R} g(y)$이고. 나머지 모든 $x\in A$에 대해서는 $f(x)\leq\_{\tiny R} g(x)$여도 성립한다.
+이제 집합 $B$ 위에 preorder relation $R$이 정의되었다 하자. 앞선 [명제 2](#pp2)에 의하여 preorder relation들의 곱은 함수들의 집합 $B^A$ 위에 preorder relation을 정의한다. 이를 $\leq$라 적기로 하면, $f\leq g$는 임의의 $x\in A$에 대하여 $f(x)\leq_{\tiny R} g(x)$임을 의미한다. 
 
 </div>
 
-앞선 두 절의 내용은 preorder relation을 모두 order relation으로 바꾸어도 성립한다.
+앞선 두 절의 내용은 preorder relation을 모두 order relation으로 바꾸어도 성립한다. 즉 원래 주어진 preorder relation이 antisymmetry를 가져서 order relation이 되었다면, [명제 1](#pp1)과 [명제 2](#pp2)에서 얻어지는 preorder relation 또한 antisymmetry를 만족하고 따라서 order relation이 된다.
+
+이 경우 strict order를 살펴볼 때에는 약간의 주의가 필요하다. 가령 집합 $B$에 order relation $R$이 주어졌다 하고, $R$에 의해 정의되는 strict order를 $S$라 하자. [예시 3](#ex3)을 통해 만들어진 order relation $\leq$로부터 만들어지는 strict order $&lt;$는 다음의 관계
+
+$$f< g\iff\forall x\bigl((x\in A)\implies (f(x)<_{\tiny R}g(x))\bigr)$$
+
+로 정의되는 관계와는 <em_ko>다르다</em_ko>. $f&lt;g$는 <em_ko>하나의</em_ko> $y\in A$에 대해서만 $f(y)<\_{\tiny R} g(y)$이고. 나머지 모든 $x\in A$에 대해서는 $f(x)\leq\_{\tiny R} g(x)$여도 성립한다.
 
 ## 단조함수
 
