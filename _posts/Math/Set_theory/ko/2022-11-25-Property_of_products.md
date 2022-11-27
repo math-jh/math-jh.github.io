@@ -30,7 +30,11 @@ weight: 11
 
 </div>
 
-$\prod\_{i\in I}A\_i$의 부분곱 $\prod\_{j\in J}A_j$가 주어졌다 하자. 그럼 임의의 $F\in\prod\_{i\in I}A\_i$에 대하여 함수 $F\circ\Delta_J$는 정의역 $J$를 갖는 함수이며, 각각의 $j$에 대하여 $(F\circ\Delta_J)(j)=F(j)\in A_j$이고 따라서 $F\circ\Delta_J$는 $\prod\_{j\in J}A_j$의 원소이다. 
+$\prod\_{i\in I}A\_i$의 부분곱 $\prod\_{j\in J}A_j$가 주어졌다 하자. 그럼 임의의 $F\in\prod\_{i\in I}A\_i$에 대하여, 
+
+$$f\circ\operatorname{id}_J=\biggl(F\circ\Delta_J, J, \bigcup_{j\in J} A_j\biggr)$$
+
+은 새로운 함수이며, 각각의 $j$에 대하여 $(f\circ\operatorname{id}_J)(j)=f(j)\in A_j$를 만족한다. 즉 $F\circ\Delta_J$는 $\prod\_{j\in J}A_j$의 원소이다. 
 
 위의 문단에 의하여, $F\mapsto F\circ\Delta_J$는 $\prod_{i\in I}A_i$에서 $\prod_{j\in J}A_j$로의 함수를 정의한다. 이를 성분함수의 표기를 빌려 $\operatorname{pr}\_J$로 적는다. 그럼 $K\subseteq J\subseteq I$에 대하여, 곱집합 $\prod\_{i\in I}A\_i$에서 부분곱 $\prod\_{j\in J}A\_j$로의 $J$번째 성분함수와, 곱집합 $\prod\_{j\in J}A\_j$에서 이 곱집합의 부분곱 $\prod\_{k\in K}A\_k$로의 $K$번째 성분함수
 
@@ -40,19 +44,24 @@ $$\prod_{i\in I}A_i\longrightarrow \prod_{j\in J}A_j\longrightarrow \prod_{k\in 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> Family $(A_i)\_{i\in I}$에 대하여, $A_i$들이 모두 공집합이 아니라 하자. 만일 $g:J\rightarrow\bigcup\_{i\in I} A_i$가 $g(i)\in A_i$를 만족한다면, $I$를 정의역으로 갖는 $g$의 extension $f$가 존재하여 $f(i)\in A_i$가 성립한다.
+<ins id="pp2">**명제 2**</ins> 모든 성분들이 공집합이 아닌 family $(A\_i)\_{i\in I}$를 생각하고, $J\subseteq I$라 하자. 만일 $g:J\rightarrow\bigcup\_{i\in I} A_i$가 $g(j)\in A_j$를 만족한다면, $g$의 extension $f:I\rightarrow\bigcup_{i\in I} A\_i$가 존재하여 $f(i)\in A_i$가 성립한다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-각각의 $i\in I\setminus J$에 대하여, $A_i$가 공집합이 아니므로 $x_i\in A_i$를 하나씩 뽑을 수 있다. 따라서 $g$의 그래프 $G$를 $G\cup\left(\bigcup\_{i\in I\setminus J}\left\\{(i, x_i)\right\\}\right)$로 확장하면 된다.
+$g=(G,J,\bigcup A_i)$라 하자. 각각의 $i\in I\setminus J$에 대하여, $A_i$가 공집합이 아니므로 $x_i\in A_i$를 하나씩 뽑을 수 있다. 이제
+
+$$F=G\cup\biggl(\bigcup_{i\in I\setminus J}\{(i, x_i)\}\biggr)$$
+
+으로 정의하고 $f=(F,I,\bigcup A_i)$라 하면 원하는 결과를 얻는다. 
+
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> $(A\_i)\_{i\in I}$가 $I\neq\emptyset$을 만족하는 family라 하자. 만일 $(J_k)\_{k\in K}$이 $I$의 분할이라면, $\prod\_{i\in I}A_i$에서 $\prod\_{k\in K}\left(\prod\_{j\in J_k}A_j\right)$로의 함수 $f\mapsto (\operatorname{pr}\_{J_k}(f))\_{k\in K}$ 또한 전단사함수이다.
+<ins id="pp3">**명제 3**</ins> 공집합이 아닌 index set $I$를 갖는 family $(A\_i)\_{i\in I}$가 $I\neq\emptyset$가 주어졌다 하자. 만일 $(J_k)\_{k\in K}$이 $I$의 분할이라면, $\prod\_{i\in I}A_i$에서 $\prod\_{k\in K}\left(\prod\_{j\in J_k}A_j\right)$로의 함수 $f\mapsto (\operatorname{pr}\_{J_k}(f))\_{k\in K}$ 또한 전단사함수이다.
 
 </div>
 
@@ -118,7 +127,7 @@ $${\operatorname{pr}_i}\circ(\phi\circ\psi)=({\operatorname{pr}_i}\circ\phi)\cir
 
 </details> 
 
-$(A_i)\_{i\in I}$, $(B_i)\_{i\in I}$가 같은 index를 갖는 family이고, <phrase>$A_i$에서 $B_i$로의 함수 $g_i$들의 family</phrase> $(g_i)\_{i\in I}$가 주어졌다 하자. $u_f$를 $I$에서 $\bigcup_{i\in I}B_i$로의 함수 $i\mapsto g_i(f(i))$라 하면 $u_f(i)\in B_i$이고, 따라서 $u_f\in\prod_{i\in I}B_i$이다. 
+$(A_i)\_{i\in I}$, $(B_i)\_{i\in I}$가 같은 index를 갖는 family이고, 함수들의 family $(g\_i:A\_i\rightarrow B\_i)\_{i\in I}$가 주어졌다 하자. $u_f:I\rightarrow\bigcup_{i\in I}B_i$를 $i\mapsto g_i(f(i))$로 정의하면 $u_f(i)\in B_i$이고, 따라서 $u_f\in\prod_{i\in I}B_i$이다. 
 
 <div class="definition" markdown="1">
 
