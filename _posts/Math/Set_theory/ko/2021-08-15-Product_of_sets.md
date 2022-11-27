@@ -27,7 +27,7 @@ weight: 10
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $(A_i)\_{i\in I}$가 집합들의 family라 하자. 그럼 $I$에서 $\bigcup A_i$로의 모든 functional graph들 중, $x_i=F(i)\in A_i$를 만족하는 것들의 모임 $P$를 이 family의 *곱<sub>product</sub>*이라 부른다.
+<ins id="df1">**정의 1**</ins> $(A_i)\_{i\in I}$가 집합들의 family라 하자. 그럼 $I$에서 $\bigcup A_i$로의 모든 함수들 중, $x_i=f(i)\in A_i$를 만족하는 것들의 모임 $P$를 이 family의 *곱<sub>product</sub>*이라 부른다.
 
 집합들의 family를 표기할 때와 마찬가지로, $P$의 원소들을 $(x_i)\_{i\in I}$로 적으며, 각각의 $x_i$를 *$i$번째 성분*이라 부르며, $F\in P$를 $F(i)$로 대응시키는 함수를 *$i$번째 성분함수*라 부르고 $\operatorname{pr}\_i$로 적는다.
 
@@ -35,9 +35,9 @@ weight: 10
 
 따라서 집합의 곱을 생각하는 것은 <em_ko>함수들의 집합</em_ko>을 생각하는 것과 같다. 
 
-집합 $A,B$가 주어졌다고 하자. 그럼 $A$에서 $B$로의 functional graph는 $\mathcal{P}(A\times B)$의 원소이다. 따라서 $A$에서 $B$로의 functional graph들의 모임은 $\mathcal{P}(A\times B)$의 부분집합이 된다. 이를 우리는 $B^A$로 적는다. $A$에서 $B$로의 함수들의 집합을 $\operatorname{Fun}(A,B)$라 하자. 그럼 임의의 $G\in B^A$에 대하여, $g=(G,A,B)$는 $A$에서 $B$로의 함수이며, 이 대응 $G\mapsto g$는 $B^A$에서 $\operatorname{Fun}(A,B)$로의 함수이다. 
+집합 $A,B$가 주어졌다고 하자. 그럼 $A$에서 $B$로의 함수는 $\mathcal{P}(A\times B)$의 원소이므로, 이들의 모임은 $\mathcal{P}(A\times B)$의 부분집합이 된다. 이를 우리는 $B^A$로 적는다. $A$에서 $B$로의 함수들의 집합을 $\operatorname{Fun}(A,B)$라 하자. 그럼 임의의 $F\in B^A$에 대하여, $f=(F,A,B)$는 $A$에서 $B$로의 함수이며, 이 대응 $F\mapsto f$는 $B^A$에서 $\operatorname{Fun}(A,B)$로의 함수이다. 
 
-한편 $\operatorname{Fun}(A,B)$에서 $B^A$로의 <phrase>함수 $g$를 받아 그 그래프를 주는 대응</phrase>을 생각하자. 그럼 이 대응은 $\operatorname{Fun}(A,B)$에서 $B^A$로의 함수이고, 위에서 정의한 대응의 역함수임을 쉽게 확인할 수 있다. 즉 $B^A$와 $\operatorname{Fun}(A,B)$ 사이의 자연스러운 전단사함수가 존재하여 이 두 집합을 서로 같은 것으로 생각할 수 있다.
+한편, 임의의 함수 $f=(F,A,B)$에 대하여, $B^A$의 원소 $F$를 대응시키면 이 대응은 함수일 뿐만 아니라, 앞서 정의한 대응의 gra역함수임을 쉽게 확인할 수 있다. 즉 $B^A$와 $\operatorname{Fun}(A,B)$ 사이의 자연스러운 전단사함수가 존재하여 이 두 집합을 서로 같은 것으로 생각할 수 있다.
 
 함수들 $u:A'\rightarrow A$와 $v:B\rightarrow B'$가 주어졌다고 하고, 다음의 diagram을 생각하자.
 
@@ -101,7 +101,7 @@ $$\operatorname{pr}_i(f(y))=f_i(y)=\operatorname{pr}_i(f'(y))$$
 
 ![universal_property_of_product](/assets/images/Set_theory/Product_of_sets-2.png){:width="283.65px" class="invert" .align-center}
 
-[§집합의 합, 따름정리 9](/ko/math/set_theory/sum_of_sets#crl9)와 정확하게 같은 논리를 펼치면 이 universal property를 만족하는 대상 및 $\operatorname{pr}\_i$들 또한 unique up to bijection임을 확인할 수 있다. 
+[§집합의 합, 따름정리 9](/ko/math/set_theory/sum_of_sets#crl9)와 정확하게 같은 논리를 펼치면 이 universal property를 만족하는 대상 및 $\operatorname{pr}\_i$들 또한 전단사함수에 대해 유일함을 확인할 수 있다. 
 
 <div class="proposition" markdown="1">
 
@@ -144,7 +144,7 @@ $$\begin{aligned}
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> $(A_i)\_{i\in I}$가 집합들의 family이고 $u:K\rightarrow I$가 전단사라 하자. 만일 $U$가 $u$의 그래프라면 $F\mapsto F\circ U$는 전단사함수이다.
+<ins id="pp5">**명제 5**</ins> $(A_i)\_{i\in I}$가 집합들의 family이고 $u:K\rightarrow I$가 전단사라 하자. 임의의 $f:I\rightarrow \prod_{i\in I}A\_i$에 대해, 이를 $f\circ u: K\rightarrow \prod\_{i\in I} A\_i$로 보내는 함수 $f\mapsto f\circ u$는 전단사함수이다.
 
 </div>
 
