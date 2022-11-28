@@ -6,7 +6,7 @@ excerpt: "동치관계의 예시들, 동치관계의 포화, isomorphism theorem
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/examples_of_equivalence
 header:
-    overlay_image: /assets/images/Set_theory/Equivalence_relations.png
+    overlay_image: /assets/images/Set_theory/Examples_of_equivalence.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set-ko"
@@ -213,3 +213,10 @@ $$\begin{aligned}u\sim_{\tiny S}v&\iff (f\times f')(u)=(f\times f')(v)\iff (f(x)
 여기서 $A/R\rightarrow f(A)$와 $A'/R'\rightarrow f'(A')$는 각각 $f$와 $f'$의 canonical decomposition들로부터 얻어지는 전단사함수이다. 따라서 이들에 의해 유도되는 함수 $(A/R)\times (A/R')\rightarrow f(A)\times f'(A')$ 또한 전단사함수이다. 
 
 위에서 얻어진 두 개의 전단사함수와 그 역들을 적절히 합성해주면 $(A\times A')/(R\times R')$과 $(A/R)\times(A'/R')$ 사이의 전단사함수를 얻을 수 있다. 이 전단사함수들 또한 canonical이라 부른다. 
+
+---
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
+
+---

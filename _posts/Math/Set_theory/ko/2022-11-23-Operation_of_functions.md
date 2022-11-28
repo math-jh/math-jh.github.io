@@ -7,7 +7,7 @@ categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/operation_of_functions
 
 header:
-    overlay_image: /assets/images/Set_theory/Operation_of_binary_relations.png
+    overlay_image: /assets/images/Set_theory/Operation_of_functions.png
     overlay_filter: 0.5
 
 sidebar: 
@@ -135,3 +135,10 @@ $f$가 이변수함수라면 우리는 $(x,y)$에서의 $f$의 값을 표현하�
 $$z\mapsto (u(\operatorname{pr}_1 z),v(\operatorname{pr}_2z))$$
 
 로 두면 된다. 이 함수를 $u$와 $v$의 *product*라 부르고, $u\times v$로 적는다. 물론 이 함수는 두 함숫값 $u(x)$와 $v(x)$를 곱해서 만들어지는 함수와는 전혀 관련이 없다.
+
+---
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
+
+---

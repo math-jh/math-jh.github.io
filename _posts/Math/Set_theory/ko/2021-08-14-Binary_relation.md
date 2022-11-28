@@ -136,6 +136,12 @@ $$R(A)=\operatorname{pr}_2\{z\in R:\text{$\operatorname{pr}_1z\in A$}\}\subset\o
 
 이 집합을 마치 $x$에서의 $R$의 함숫값처럼 $R(x)$로 적기도 한다. 이 <em_ko>함숫값</em_ko>은 유일하지 않으며, 따라서 $R(x)$ 또한 여러 개의 원소를 가질 수 있다.
 
+---
+**참고문헌**
 
+**[HJJ]** K. Hrbacek, T.J. Jeck, and T. Jech. *Introduction to Set Theory*. Lecture Notes in Pure and Applied Mathematics. M. Dekker, 1978.  
+**[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
+
+---
 
 [^1]: **[Bou]**에서는 이러한 집합을 *그래프*라 부르고, 이항관계 중 그래프를 갖는 것과 갖지 않는 것을 구분하여 생각한다. 이는 그렇게 흔한 정의는 아니므로, 우리는 **[HJJ]**를 따라 위의 정의를 그대로 사용한다.
