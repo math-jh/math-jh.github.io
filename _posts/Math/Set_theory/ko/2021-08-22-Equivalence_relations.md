@@ -4,9 +4,9 @@ title: "동치관계"
 excerpt: "동치관계의 정의와 성질들"
 
 categories: [Math / Set Theory]
-permalink: /ko/math/set_theory/equivalence_relation
+permalink: /ko/math/set_theory/equivalence_relations
 header:
-    overlay_image: /assets/images/Set_theory/Equivalence_relation.png
+    overlay_image: /assets/images/Set_theory/Equivalence_relations.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set-ko"
