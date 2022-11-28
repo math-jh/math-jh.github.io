@@ -6,7 +6,7 @@ excerpt: "순서집합의 연산과 단조함수"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/monotone_functions
 header:
-    overlay_image: /assets/images/Set_theory/Equivalence_relations.png
+    overlay_image: /assets/images/Set_theory/Monotone_functions.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set-ko"
@@ -110,3 +110,10 @@ $$m\prec n\iff ((m-n\text{ is even}) \wedge (m<n))$$
 주어진 가정과 $u$가 감소함수라는 것에서 자명하다. 즉, $u$는 감소함수이므로, $v(u(x))\geq x$에서 $u(v(u(x)))\leq u(x)$가 모든 $x$에 대해 성립하지만, 가정의 두 번째 부분에서 $u(v(u(x)))\geq u(x)$이 성립한다.
 
 </details>
+
+---
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
+
+---

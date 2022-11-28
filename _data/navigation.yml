@@ -32,10 +32,33 @@ set-ko:
       - title: "곱집합의 성질"
         url: ko/math/set_theory/property_of_products
       - title: "동치관계"
-        url: ko/math/set_theory/equivalence_relation
+        url: ko/math/set_theory/equivalence_relations
       - title: "동치관계의 예시들"
         url: ko/math/set_theory/examples_of_equivalence
       - title: "순서관계의 정의"
         url: ko/math/set_theory/order_relations
       - title: "단조함수"
         url: ko/math/set_theory/monotone_functions
+      - title: "순서집합의 원소들"
+        url: ko/math/set_theory/elements_in_ordered_set
+      - title: "유향집합"
+        url: ko/math/set_theory/directed_set
+      - title: "필터와 아이디얼, 갈루아 대응"
+        url: ko/math/set_theory/filter_and_ideal
+      - title: "서수와 정렬집합"
+        url: ko/math/set_theory/ordinals
+      - title: "정렬집합의 성질들"
+        url: ko/math/set_theory/well_ordering
+      - title: "선택공리"
+        url: ko/math/set_theory/axiom_of_choice
+      - title: "서수들 사이의 순서관계"
+        url: ko/math/set_theory/order_relations_between_ordinals
+      - title: "기수"
+        url: ko/math/set_theory/cardinals
+      - title: "기수들 사이의 연산"
+        url: ko/math/set_theory/operation_of_cardinals
+      - title: "자연수와 무한집합"
+        url: ko/math/set_theory/natural_numbers
+      - title: "극한"
+        url: ko/math/set_theory/limits
+          
