@@ -7,7 +7,7 @@ main:
     url: en/categories/
 
 set-ko:
-  - title: <a href="/ko/set_theory" class="sidebar_title">집합론</a>
+  - title: <a href="/ko/set_theory/" class="sidebar_title">집합론</a>
     children:
       - title: "ZFC 공리계"
         url: ko/math/set_theory/zfc_axioms
@@ -62,3 +62,14 @@ set-ko:
       - title: "극한"
         url: ko/math/set_theory/limits
           
+groups-ko:
+  - title: <a href="/ko/groups/" class="sidebar_title">군</a>
+    children:
+      - title: "대수적 구조"
+        url: ko/math/groups/algebraic_structure
+      - title: "준군, 모노이드, 군"
+        url: ko/math/groups/group
+      - title: "Grothendieck 군"
+        url: ko/math/groups/Grothendieck_group
+      - title: "준동형사상"
+        url: ko/math/groups/group_homomorphisms
