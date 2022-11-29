@@ -10,20 +10,9 @@ author_profile: true
   {% assign lang = lang_prefix | remove_first: "/" %}
 {% endif %}
 
-## Preliminaries
-- [Elementary Calculus]()
-- [Linear Algebra]({{ lang_prefix }}/linear_algebra/)
-
-
-## Foundations
+## 수학기초론
 
 - [Set Theory]({{ lang_prefix }}/set_theory/)
-- [Category Theory]()
 
-## Algebraic Structure
+## 대수학
 
-- [Groups]({{ lang_prefix }}/groups/)
-- [Rings]({{ lang_prefix }}/rings/)
-- [Modules]({{ lang_prefix }}/modules/)
-- [Algebras]({{ lang_prefix }}/algebras/)
-- [Galois theory]({{ lang_prefix }}/galois_theory/)
