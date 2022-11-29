@@ -84,9 +84,9 @@ $$f|_X=f\circ i$$
 
 이제 약속한대로 역함수를 정의할 수 있다. 
 
-<div class="definition" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> 함수 $f:A\rightarrow B$에 대하여, $f^{-1}$이 함수인 것과 $f$가 전단사함수인 것이 동치이다.
+<ins id="pp5">**명제 5**</ins> 함수 $f:A\rightarrow B$에 대하여, $f^{-1}$이 함수인 것과 $f$가 전단사함수인 것이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
