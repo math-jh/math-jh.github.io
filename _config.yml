@@ -272,6 +272,7 @@ category_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
+github: [metadata]
 
 # HTML Compression
 # - https://jch.penibelst.de/
