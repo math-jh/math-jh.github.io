@@ -11,8 +11,8 @@ header:
 sidebar: 
     nav: "tensor_algebra-ko"
 
-date: 2022-12-04
-last_modified_at: 2022-12-04
+date: 2022-12-03
+last_modified_at: 2022-12-03
 weight: 3
 
 ---
@@ -183,5 +183,11 @@ $$a\cdot m':=\rho(a)\cdot m',\qquad a\in A,m'\in M'$$
  
 </details>
 
+---
 
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
+
+---
 
