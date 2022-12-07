@@ -3,13 +3,13 @@
 title: "대수적 구조"
 excerpt: "집합 위에 정의된 이항연산"
 
-categories: [Math / Groups]
-permalink: /ko/math/groups/algebraic_structure
+categories: [Math / Algebraic structures]
+permalink: /ko/math/algebraic_structures/algebraic_structure
 header:
-    overlay_image: /assets/images/Groups/Algebraic_structure.png
+    overlay_image: /assets/images/Algebraic_structures/Algebraic_structure.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "groups-ko"
+    nav: "algebraic_structures-ko"
 
 date: 2021-09-02
 last_modified_at: 2022-11-29
@@ -17,9 +17,11 @@ weight: 1
 
 ---
 
+[대수적 구조](/ko/algebraic_structures/) 카테고리에서 우리는 group과 ring을 정의하고, 이들의 기본적인 성질들을 탐구한다. 이들은 집합 위에 이항연산의 구조를 추가하여 얻어지는데, group은 하나의 연산을, ring은 두 개의 연산을 추가하여 얻어지는 구조이다. 이들에 추가적으로 ring의 action을 주면 module과 algebra를 얻는다. 이들 대수적 구조 외에 갈루아 이론이나 tensor algebra 등은 별도의 카테고리로 분리하였다.
+
 ## 이항연산
 
-Group, ring, field 등의 대수적 구조는 집합 위에 이항연산의 구조를 추가하여 얻어진다. 이항연산의 정의는 다음과 같다.
+이번 글에서 우리는 이항연산이 하나 주어져 있는 대수적 구조인 *마그마*를 살펴본다. 이 구조는 너무 적은 정보를 가지고 있어서 앞으로 사용할 일은 없지만, 앞으로 새로운 대수적 구조를 정의할 때마다 이번 글에서 정의할 부분구조나 몫구조 등을 생각하게 된다.
 
 <div class="definition" markdown="1">
 
@@ -120,6 +122,8 @@ $$w\star'z=f(x)\star'f(y)=f(x\star y)$$
 <ins id="df7">**정의 7**</ins> 마그마 $(A,\star)$에 대하여, 만일 $A$의 어떤 부분집합 $S$가 $\star$에 대해 닫혀있다면, $S$를 $A$의 *부분마그마<sub>submagma</sub>*라고 부른다.
 
 </div>
+
+그럼 마그마 $(A,\star)$와 부분마그마들의 family $(S\_i)\_{i\in I}$에 대하여, 교집합 $S=\bigcap S\_i$ 또한 부분마그마가 되는 것은 자명하다. 임의의 $a,b\in S$를 택하면, 모든 $i$에 대해 $a,b\in S\_i$인 것으로부터 $a\star b\in S\_i$인 것을 얻고, 따라서 $a\star b\in S$이기 때문이다.
 
 ## 몫구조
 
