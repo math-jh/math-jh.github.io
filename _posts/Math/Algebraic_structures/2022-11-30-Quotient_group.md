@@ -3,13 +3,13 @@
 title: "몫군"
 excerpt: "정규부분군과 몫군"
 
-categories: [Math / Groups]
-permalink: /ko/math/groups/quotient_group
+categories: [Math / Algebraic structures]
+permalink: /ko/math/algebraic_structures/quotient_group
 header:
-    overlay_image: /assets/images/Groups/Quotient_group.png
+    overlay_image: /assets/images/Algebraic_structures/Quotient_group.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "groups-ko"
+    nav: "algebraic_structures-ko"
 
 date: 2022-11-30
 last_modified_at: 2022-11-30
@@ -96,7 +96,7 @@ $$x\in [a]_{\tiny r}\iff x\sim_{\tiny r} a\iff xa^{-1}\in H$$
 
 $$Ha:=\{ha: h\in H\}$$
 
-으로 정의하면 $[a]\_{\tiny r}=Ha$가 성립한다. 비슷하게, $G/{\sim_{\tiny l}}$에 대하여는 $[a]\_{\tiny l}=aH$가 성립한다.
+으로 정의하면 $[a]\_{\tiny r}=Ha$가 성립한다. 비슷하게, $G/{\sim_{\tiny l}}$에 대하여는 $[a]\_{\tiny l}=aH$가 성립한다. 물론 $G$의 연산이 덧셈으로 적혀있었다면 이들은 각각 $H+a$와 $a+H$로 적는 것이 관례이다.
 
 <div class="definition" markdown="1">
 
@@ -130,8 +130,14 @@ $$Ha\mapsto a^{-1}H$$
 
 </div>
 
-이 명제는 $G$ 혹은 $H$가 무한집합일 때에도 성립하지만, 특별히 이들이 유한일 경우, <phrase>Group $G$의 임의의 subgroup $H$에 대하여, $\lvert H\rvert$는 $\lvert G\rvert$의 약수이다</phrase>라는 결과를 얻는다.
+이 명제는 $G$ 혹은 $H$가 무한집합일 때에도 성립하지만, 특별히 이들이 유한일 경우, <phrase>Group $G$의 임의의 subgroup $H$에 대하여, $\lvert H\rvert$는 $\lvert G\rvert$의 약수</phrase>라는 결과를 얻는다.
 
+---
 
+**참고문헌**
 
-[^1]: Right coset의 표기법은 차집합의 표기와 겹치지만, right coset을 많이 사용할 일은 없으므로 별도의 표기법을 정하지는 않기로 한다.
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
+
+---
+
+[^1]: Right coset의 표기법은 차집합의 표기와 겹치지만, right coset을 많이 사용할 일은 없으므로 별도의 표기법을 정하지는 않기로 한다. 

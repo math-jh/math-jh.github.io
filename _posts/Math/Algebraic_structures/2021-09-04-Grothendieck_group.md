@@ -3,13 +3,13 @@
 title: "Grothendieck 군"
 excerpt: "Grothendieck group과 정수의 정의"
 
-categories: [Math / Groups]
-permalink: /ko/math/groups/Grothendieck_group
+categories: [Math / Algebraic structures]
+permalink: /ko/math/algebraic_structures/Grothendieck_group
 header:
-    overlay_image: /assets/images/Groups/Grothendieck_group.png
+    overlay_image: /assets/images/Algebraic_structures/Grothendieck_group.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "groups-ko"
+    nav: "algebraic_structures-ko"
 
 date: 2021-09-04
 last_modified_at: 2022-11-29
