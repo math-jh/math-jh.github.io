@@ -131,6 +131,12 @@ $$A_\alpha E_\beta\subseteq E_{\alpha+\beta},\qquad E_\alpha E_\beta\subseteq E_
 
 대부분의 경우, $A$는 graduation이 없는 ring이고 $E$가 graduation $\Delta$가 주어진 상태이며, 위의 식 (1)을 통해 $A$에 trivial graduation을 주고 이를 graded $A$-algebra로 생각하는 것이 보통이다. 
 
+---
 
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
+
+---
 
 [^1]: 정의에 의하여 $A$의 subring은 $(A,+,0)$의 subgroup인 동시에 곱셈에 대해 닫혀있는 집합이었고, 만일 $1\in A$라면 여기에 더하여 $1$까지 포함하는 것만 subring으로 생각하기로 하였다.

@@ -132,3 +132,11 @@ Right directed set $I$와 commutative monoid $\Delta$가 주어졌다 하고, $\
 $$A=\varinjlim_{i\in I} A_i,\qquad E=\varinjlim_{i\in I} E_i$$
 
 이라 하면 $E$는 $A$-algebra이며, 뿐만 아니라 $E$ 위에 정의된 곱셈이 graduation을 잘 따르므로 이는 $\Delta$-graded $A$-algebra가 된다. 
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
+
+---
