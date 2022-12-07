@@ -12,14 +12,14 @@ sidebar:
     nav: "set-ko"
 
 date: 2021-09-04
-last_modified_at: 2022-04-14
-weight: 18
+last_modified_at: 2022-11-29
+weight: 26
 
 ---
 
-## 자연수의 정의 (2)
+## 자연수의 다른 정의
 
-우리는 앞서 ordinal을 정의하며 motivation을 주기 위해 자연수 또한 정의했었다. ([§Ordinal과 well-ordering<sup>†</sup>](/ko/math/set_theory/ordinals)) 이제 우리는 이 방법 대신 우리가 이미 정의한 cardinal을 사용해서 자연수를 만들고, cardinal number들 위에서 정의했던 연산과 대소관계를 이용해 자연수의 구조를 탐구할 것이다.
+이제 우리는 [§서수와 정렬집합](/ko/math/set_theory/ordinals)의 방법 대신, 우리가 이미 정의한 cardinal을 사용해서 자연수를 만들고 cardinal number들 위에서 정의했던 연산과 대소관계를 이용해 자연수의 구조를 탐구한다.
 
 <div class="definition" markdown="1">
 
@@ -27,7 +27,7 @@ weight: 18
 
 </div>
 
-자연수는 cardinal들의 집합의 부분집합이므로 well-ordered이다. ([§Cardinal, 명제 5](/ko/math/set_theory/cardinals#pp5)) 따라서 자연수에서 귀납법을 사용할 수 있다. ([§Ordinal과 well-ordering<sup>†</sup>, 보조정리 12](/ko/math/set_theory/ordinals#lem12))
+자연수는 cardinal들의 집합의 부분집합이므로 well-ordered이다. ([§기수, 정리 5](/ko/math/set_theory/cardinals#thm5)) 따라서 자연수에서 귀납법을 사용할 수 있다. ([§정렬집합의 성질들, 보조정리 7](/ko/math/set_theory/well_ordering#lem7))
 
 <div class="proposition" markdown="1">
 
@@ -38,7 +38,7 @@ weight: 18
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§Cardinal, 명제 11](/ko/math/set_theory/cardinals#pp11)에 의하여, $\mathfrak{a}=\mathfrak{b}$인 것은 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$인 것과 동치이다. 이제 $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$로 잡으면, 가정에 의해 $\mathfrak{a}\neq\mathfrak{b}$이고, 따라서
+[§기수들 사이의 연산, 명제 6](/ko/math/set_theory/operation_of_cardinals#pp6)에 의하여, $\mathfrak{a}=\mathfrak{b}$인 것은 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$인 것과 동치이다. 이제 $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$로 잡으면, 가정에 의해 $\mathfrak{a}\neq\mathfrak{b}$이고, 따라서
 
 $$\mathfrak{b}=\mathfrak{a}+\mathbf{1}\neq\mathfrak{b}+\mathbf{1}$$
 
@@ -46,7 +46,9 @@ $$\mathfrak{b}=\mathfrak{a}+\mathbf{1}\neq\mathfrak{b}+\mathbf{1}$$
 
 </details>
 
-이제부터 자연수들은 블랙레터 $\mathfrak{a}$, $\mathfrak{b}$ 대신 $m$, $n$ 등과 같은 일반적인 알파벳으로, 그리고 cardinal number인 $\mathbf{0}$과 $\mathbf{1}$도 간단히 $0$과 $1$로 쓰기로 한다. 우리는 자연수들 사이의 대소관계를 정의할 것이다. 우선 간단한 보조정리 하나를 보이자.
+이제부터 자연수들은 블랙레터 $\mathfrak{a}$, $\mathfrak{b}$ 대신 $m$, $n$ 등과 같은 일반적인 알파벳으로, 그리고 cardinal number인 $\mathbf{0}$과 $\mathbf{1}$도 간단히 $0$과 $1$로 쓰기로 한다. 
+
+## 자연수 사이의 대소관계
 
 <div class="proposition" markdown="1">
 
@@ -134,8 +136,7 @@ $$\chi_X(x)=\begin{cases}1&\text{if $x\in X$}\\ 0&\text{if $x\in A\setminus X$}\
 
 </div>
 
-종종 조금 더 현대적인 표기법으로, $\chi_X$ 대신 $1_X$ 등과 같이 쓰기도 한다.  
-다음의 정리는 자명하게 보일 수 있다.
+다음 정리는 자명하다.
 
 <div class="proposition" markdown="1">
 
@@ -166,14 +167,11 @@ $$\begin{aligned}
 
 $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
-이 되기 때문이다. 존재성을 보이기 위해, $a&lt;a+1&lt;b(a+1)$라 하자. 그럼 $a&lt;bp$를 만족하는 $P$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $m$이 존재하므로 $m=q+1$라 하면 $Q$가 주어진 조건을 만족한다.
+이 되기 때문이다. 존재성을 보이기 위해, $a&lt;a+1&lt;b(a+1)$라 하자. 그럼 $a&lt;bp$를 만족하는 $p$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $m$이 존재하므로 $m=q+1$라 하면 $Q$가 주어진 조건을 만족한다.
 
 </details>
 
-이 정리에서, $R$을 $a$를 $b$로 나눈 *나머지*라 한다. 만일 $r=0$라면 $a$가 $b$의 *배수*라 하거나, $a$가 $b$에 의해 나누어떨어진다고 하고, $b$가 $a$의 *약수*라고도 한다. 이 경우 자연수 $Q$를 $a$를 $b$로 나눈 *몫*이라 하고 $a/b$로 적는다.  
-만일 두 자연수 $a$와 $b$가 같은 약수를 가진다면, 이를 $a$와 $b$의 *공약수*라 하고, 공약수 중 가장 큰 것을 *최대공약수*라 한다. 또, $a$와 $b$를 약수로 가지는 어떠한 수가 있다면, 그 수를 $a$와 $b$의 *공배수*라 하고, 그 중 가장 작은 것을 *최소공배수*라 한다.
-
-우리는 아직 정수를 정의하지는 않았지만, 위 정리는 $a$와 $b$가 자연수가 아니라 정수여도 마찬가지로 성립한다. 이에 따른 결과가 다음의 *Bézout's lemma*이다.
+위의 증명처럼, 우리가 정의한 자연수의 연산을 잘 사용하여 나머지나 배수, 약수 등의 개념을 정의할 수 있다. 다음 따름정리 또한 마찬가지 방식으로 쉽게 증명할 수 있으나, 아직 우리는 정수를 정의하지는 않았으므로 증명은 따로 하지 않는다.
 
 <div class="proposition" markdown="1">
 
@@ -181,14 +179,8 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-집합 $S$를 $ax+by>0$을 만족하는 $ax+by$들의 집합이라 하자. 그럼 자연수의 well-orderedness에 의하여 이 집합의 최소 원소 $d$가 존재한다. 이제 앞선 유클리드 호제법에서, $a=dq+r$이라 하자. 그럼 $d=ax+by$를 대입하여 $a(xq-1)+r+byq=0$, 혹은 $r=a(1-xq)+b(-yq)$를 얻는다. 만일 $r\neq 0$이라면 $r\in S$이고, 따라서 $r\geq d$인데 이는 모순이다. 따라서 $r=0$이고 $d$는 $a$를 나눈다. 이와 비슷하게 $d$는 $b$도 나누므로 $d$는 $a$와 $b$의 공약수이고, $a$와 $b$의 임의의 공약수는 $ax+by=d$ 또한 나눠야 하므로 $d$가 최대공약수이다.
-
-</details>
-
 ## 무한집합의 정의와 성질들
+
 <div class="definition" markdown="1">
 
 <ins id="df11">**정의 11**</ins> 집합이 *무한하다<sub>infinite</sub>*는 것은 유한하지 않다는 것이다.
@@ -213,7 +205,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§<sup>†</sup>Ordinal과 well-ordering, 명제 18](/ko/math/set_theory/ordinals#pp18))
+$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§서수들 사이의 순서관계, 명제 1](/ko/math/set_theory/order_relations_between_ordinals#pp1))
 
 </details>
 <div class="proposition" markdown="1">

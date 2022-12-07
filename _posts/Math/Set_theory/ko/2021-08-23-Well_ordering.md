@@ -1,24 +1,21 @@
 ---
 
-title: "정렬집합의 성질들<sup>†</sup>"
+title: "정렬집합의 성질들"
 excerpt: "Ordinal의 정의와 정렬집합의 성질들"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/well_ordering
 header:
-    overlay_image: /assets/images/Set_theory/Ordinals.png
+    overlay_image: /assets/images/Set_theory/Well_ordering.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set-ko"
 
 date: 2021-08-23
-last_modified_at: 2022-04-14
-weight: 15
+last_modified_at: 2022-11-29
+weight: 20
 
 ---
-
-이 글은 현재 수정중입니다.
-{: .notice--warning}
 
 ## Ordinal의 엄밀한 정의
 
@@ -26,25 +23,25 @@ weight: 15
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> Well-ordered set $A$의 segment들을 모두 모은 집합을 $A^\ast$라 하자. 그럼 이 집합 또한 포함관계에 의하여 well-ordered set이 된다. 또, 함수 $x\mapsto S_x$은 well-ordered set $A$와 $A^\ast\setminus\\{A\\}$ 간의 order isomorphism이다.
+<ins id="pp1">**명제 1**</ins> Well-ordered set $A$의 segment들을 모두 모은 집합을 $A^\ast$라 하자. 그럼 $(A^\ast,\subseteq)$ 또한 well-ordered set이며, 함수 $x\mapsto S_x$는 $A$와 $A^\ast\setminus\\{A\\}$ 간의 order isomorphism이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-함수 $s:x\mapsto S_x$가 $A$와 $A^\ast\setminus\\{A\\}$ 간의 isomorphism을 정의한다는 것을 보이기 위해, 우리는 [§순서관계 (2), 명제 16](/ko/math/set_theory/elements_in_ordered_set#pp16)을 사용한다. $S$가 순증가이고 $s(A)=A^\ast\setminus\\{A\\}$임을 보이자. 
+[§유향집합, 명제 6](/ko/math/set_theory/directed_set#pp16)을 사용한다. $S$가 순증가이고 $s(A)=A^\ast\setminus\\{A\\}$임을 보이자. 
 
-$s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라면, $a < x\leq y$이므로 $a\in S_y$이기 때문이다. 또, 이 포함관계는 strict한데, 만약 $x < y$라면, $x\not< x$이고 $x < y$이므로 $x\not\in S_x$지만 $x\in S_y$이기 때문이다. 따라서 함수 $s$는 $A$와 그 상 사이의 isomorphism이다. 그런데 [§서수와 정렬집합<sup>†</sup>,명제 5](/ko/math/set_theory/ordinals#pp5)와, 앞서 말한대로 어떠한 $S_x$도 $A$와 같아질 수 없다는 것을 종합하면 $s(A)=A^\ast\setminus\\{A\\}$이다.
+$s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라면, $a < x\leq y$이므로 $a\in S_y$이기 때문이다. 또, 이 포함관계는 strict한데, 만약 $x < y$라면, $x\not< x$이고 $x < y$이므로 $x\not\in S_x$지만 $x\in S_y$이기 때문이다. 따라서 함수 $s$는 $A$와 그 상 사이의 isomorphism이다. 따라서 [§서수와 정렬집합,명제 5](/ko/math/set_theory/ordinals#pp5)에 의해 $s(A)=A^\ast\setminus\\{A\\}$이다.
 
-마지막으로 $A^\ast$가 well-ordered임을 보이자. $s(A)$가 well-ordered이므로, $s(A)=A^\ast\setminus\\{A\\}$에 최대원소 $A$를 추가하면 ([§순서관계 (2), 명제 4](/ko/math/set_theory/elements_in_ordered_set#pp4)) $A^\ast$를 얻고, 이렇게 얻어진 집합은 다시 well-ordered이다. 
+마지막으로 $A^\ast$가 well-ordered임을 보이자. $s(A)$가 well-ordered이므로, $s(A)=A^\ast\setminus\\{A\\}$에 최대원소 $A$를 추가하면 ([§순서집합의 원소들, 명제 4](/ko/math/set_theory/elements_in_ordered_set#pp4)) $A^\ast$를 얻고, 이렇게 얻어진 집합은 다시 well-ordered이다. 
 
 </details>
 
-이 명제는 well-ordered set의 원소들과, well-ordered set에 포함된 initial segment들 사이의 isomorphism을 보여준다. $A$의 원소 $a$를 $(-\infty, a)$와 같게 본다면, $a$보다 작은 원소는 $(-\infty, a)$의 원소여야 하고, 혹은 그러한 원소도 initial segment로 본다면, $(-\infty,a)$의 부분집합이어야 한다. 따라서, 이걸 거꾸로 생각하면 well-ordered set을 정의할 때, 
+위 명제의 isomorphism을 통하면 well-ordered set을 다음의 정의
 
 > 각각의 well-ordered set은, 자신보다 작은 well-ordered set들에 $\subset$으로 포함관계가 주어진 집합이다.
 
-로 정의된 것처럼 취급해도 된다는 뜻이다. 
+처럼 취급해도 된다. 
 
 <div class="definition" markdown="1">
 
@@ -52,7 +49,7 @@ $s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라
 
 </div>
 
-우선, 임의의 ordinal은 $\in$이 strict ordering이므로 다른 ordinal과는 같을 수 없다. 또, $\emptyset$은 vacuous하게 ordinal이고, 모든 자연수들도 ordinal이 된다. 자연수를 나타내는 집합은 (유한집합이고 totally ordered set이므로) well-ordered set임은 자명하고, 또 예를 들어, $2\in 3=\\{0,1,2\\}$라면 $2=\\{0,1\\}$ 또한 $3$의 부분집합이 되기 때문이다. 일반적인 ordinal들은 그리스 소문자로 적는 것이 관례이다. 
+$\emptyset$은 vacuous하게 ordinal이고, 모든 자연수들도 ordinal이 된다. 자연수를 나타내는 집합은 (유한집합이고 totally ordered set이므로) well-ordered set임은 자명하고, 또 예를 들어, $2\in 3=\\{0,1,2\\}$라면 $2=\\{0,1\\}$ 또한 $3$의 부분집합이 되기 때문이다. 일반적인 ordinal들은 그리스 소문자로 적는 것이 관례이다. 
 
 더 일반적으로, 다음이 성립한다.
 
@@ -72,9 +69,7 @@ $s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> $(A_i)\_{i\in I}$가 well-ordered set들의 family이고, 어떠한 $i,j\in I$에 대해서도 $A_i$와 $A_j$ 중 어느 하나는 다른 하나의 segment라 하자. 그럼 집합 $A=\bigcup\_{i\in I}A_i$ 위에서의 유일한 order relation이 존재한다.
-
-이 ordering은 well-ordering이고 $A_i$의 segment는 $A$의 segment가 되며, $A$ 자기자신을 제외한 $A$의 segment는 어떤 $A_i$의 segment가 된다.
+<ins id="pp4">**명제 4**</ins> $(A_i)\_{i\in I}$가 well-ordered set들의 family이고, 어떠한 $i,j\in I$에 대해서도 $A_i$와 $A_j$ 중 어느 하나는 다른 하나의 segment라 하자. 그럼 집합 $A=\bigcup\_{i\in I}A_i$ 위에서의 유일한 order relation이 존재한다. 이는 well-ordering이고 $A_i$의 segment는 $A$의 segment가 되며, $A$ 자기자신을 제외한 $A$의 segment는 어떤 $A_i$의 segment가 된다.
 
 </div>
 
@@ -82,18 +77,15 @@ $s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> $((A\_i)\_{i\in I}, \subseteq)$가 
-
-1. 이들은 ordered set들의 directed set이고, 
-2. 만약 $A_i\subseteq A_j$라면, <phrase>$A_j$의 order relation을 $A_i$로 제한한 관계</phrase>가 $A_i$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $A=\bigcup\_{i\in I} A\_i$ 위의 order relation이 유일하게 존재한다.
+<ins id="lem5">**보조정리 5**</ins> Ordered set들의 family $(A\_i)\_{i\in I})$가 포함관계에 대하여 right directed이고, $A_i\subseteq A_j$일 때마다 <phrase>$A_j$의 order relation을 $A_i$로 제한한 관계</phrase>가 $A_i$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $A=\bigcup\_{i\in I} A\_i$ 위의 order relation이 유일하게 존재한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-각각의 $A\_i$에 대하여, $G\_i$가 order relation들의 그래프라 하자. 만약 각각의 order relation을 확장하는 $A$ 위의 ordering $G$가 존재한다면, $G\_i\subseteq G$이다. 반대로 만일 $(x,y)\in G$라면, 어떤 $A_i$, $A_j$가 각각 $x$와 $y$를 포함하므로, right directedness에 의해 어떤 $A_k$가 존재하여  $x$와 $y$를 동시에 포함한다. 한편 $(x,y)\in G\_k$이므로 $(x,y)\in\bigcup\_{i\in I}G\_i$이다. 따라서 만일 그러한 관계가 존재한다면 이는 유일하고, 그 그래프는 반드시 $\bigcup\_{i\in I}G\_i$가 되어야 한다.
+각각의 $A\_i$에 대하여, $R\_i$가 order relation이라 하자. 만약 각각의 order relation을 확장하는 $A$ 위의 ordering $R$이 존재한다면, $R\_i\subseteq R$이다. 반대로 만일 $(x,y)\in R$라면 $x$와 $y$를 포함하는 $A_i,A_j$가 존재하므로, 어떤 $A_k$가 존재하여 $x$와 $y$를 동시에 포함한다. 한편 $(x,y)\in R\_k$이므로 $(x,y)\in\bigcup\_{i\in I}R\_i$이다. 따라서 만일 그러한 관계가 존재한다면 이는 유일하며 반드시 $\bigcup\_{i\in I}R\_i$가 되어야 한다.
 
-따라서 이 $G=\bigcup\_{\alpha\in A}G\_\alpha$가 실제로 이 조건들을 만족함을 보이면 된다. (존재성) 우선 정의에 의해 $G$가 모든 $G\_i$를 확장하는 것은 자명하므로, $G$가 order relation임을 보이자. 임의의 $x\in A$에 대하여, 만일 $x\in X\_i$라면 $(x,x)\in G\_i\subseteq G$가 되므로 $(x,x)\in G$이다.  비슷하게 만일 $(x,y)\in G$라면, 어떤 $X\_k$가 존재하여 $x$와 $y$를 동시에 포함하며, 이 집합에서의 order relation들의 조건에 의해 $(y,x)\in G\_k\subseteq G$이다. Transitivity을 보이기 위해서는, $(x,y)\in G$와 $(y,z)\in G$를 가정한 후, $x$, $y$, $z$를 모두 포함하는 집합 $X\_l$를 찾아서 (directed 조건을 두 번 사용하면 된다), $(x,z)\in G\_l$로 결론을 내리면 된다.
+따라서 $R=\bigcup\_{\alpha\in A}R\_\alpha$가 실제로 이 조건들을 만족함을 보이면 된다. 우선 정의에 의해 $R$이 모든 $R\_i$를 확장하는 것은 자명하므로, $R$가 order relation임을 보이자. 임의의 $x\in A$에 대하여, 만일 $x\in X\_i$라면 $(x,x)\in R\_i\subseteq R$가 되므로 $(x,x)\in R$이다.  비슷하게 만일 $(x,y)\in R$라면, 어떤 $X\_k$가 존재하여 $x$와 $y$를 동시에 포함하며, 이 집합에서의 order relation들의 조건에 의해 $(y,x)\in R\_k\subseteq R$이다. Transitivity을 보이기 위해서는, $(x,y)\in R$과 $(y,z)\in R$을 가정한 후, $x$, $y$, $z$를 모두 포함하는 집합 $X\_l$를 찾아서, $(x,z)\in R\_l$로 결론을 내리면 된다.
 
 </details>
 
