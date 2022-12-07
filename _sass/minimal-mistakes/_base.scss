@@ -13,6 +13,7 @@ body {
   padding: 0;
   color: $text-color;
   font-family: $global-font-family;
+  font-size: 17px;
   line-height: 1.5;
 
   &.overflow--hidden {
@@ -114,6 +115,15 @@ phrase {
   border-radius: 2px;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+selected {
+  color: #00c853;
+  font-weight: bold;
+}
+
+unselected {
+  color: $gray;
 }
 
 /* Material icons */

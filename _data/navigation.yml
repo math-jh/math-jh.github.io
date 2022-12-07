@@ -2,192 +2,90 @@ main:
   - title: "About"
     url: /about/
   - title: "Category 🇰🇷"
-    url: ko/categories
+    url: ko/categories/
   - title: "Category 🇺🇸"
-    url: en/categories
+    url: en/categories/
 
 set-ko:
-  - title: <a href="/ko/set_theory" class="sidebar_title">집합론</a>
+  - title: <a href="/ko/set_theory/" class="sidebar_title">집합론</a>
     children:
       - title: "ZFC 공리계"
         url: ko/math/set_theory/zfc_axioms
       - title: "순서쌍"
         url: ko/math/set_theory/ordered_pair
-      - title: "이항관계의 그래프"
+      - title: "이항관계"
         url: ko/math/set_theory/binary_relation
-      - title: "함수 (1)"
-        url: ko/math/set_theory/functions_1
-      - title: "함수 (2)"
-        url: ko/math/set_theory/functions_2
+      - title: "이항관계들 사이의 연산"
+        url: ko/math/set_theory/operation_of_binary_relations
+      - title: "함수"
+        url: /ko/math/set_theory/functions
+      - title: "함수들 사이의 연산"
+        url: ko/math/set_theory/operation_of_functions
+      - title: "Retraction과 section"
+        url: ko/math/set_theory/retraction_and_section
       - title: "합집합과 교집합"
         url: ko/math/set_theory/union_and_intersection
       - title: "집합의 합"
         url: ko/math/set_theory/sum_of_sets
       - title: "집합의 곱"
         url: ko/math/set_theory/product_of_sets
+      - title: "곱집합의 성질"
+        url: ko/math/set_theory/property_of_products
       - title: "동치관계"
         url: ko/math/set_theory/equivalence_relations
+      - title: "동치관계의 예시들"
+        url: ko/math/set_theory/examples_of_equivalence
       - title: "순서관계의 정의"
-        url: ko/math/set_theory/order_relations_1
+        url: ko/math/set_theory/order_relations
+      - title: "단조함수"
+        url: ko/math/set_theory/monotone_functions
       - title: "순서집합의 원소들"
-        url: ko/math/set_theory/order_relations_2
+        url: ko/math/set_theory/elements_in_ordered_set
+      - title: "유향집합"
+        url: ko/math/set_theory/directed_set
       - title: "필터와 아이디얼, 갈루아 대응"
-        url: ko/math/set_theory/order_relations_3
-      - title: "극한<sup>†</sup>"
-        url: ko/math/set_theory/limits
-      - title: "서수와 정렬집합<sup>†</sup>"
+        url: ko/math/set_theory/filter_and_ideal
+      - title: "서수와 정렬집합"
         url: ko/math/set_theory/ordinals
-      - title: "정렬집합의 성질들<sup>†</sup>"
+      - title: "정렬집합의 성질들"
         url: ko/math/set_theory/well_ordering
       - title: "선택공리"
         url: ko/math/set_theory/axiom_of_choice
+      - title: "서수들 사이의 순서관계"
+        url: ko/math/set_theory/order_relations_between_ordinals
       - title: "기수"
         url: ko/math/set_theory/cardinals
+      - title: "기수들 사이의 연산"
+        url: ko/math/set_theory/operation_of_cardinals
       - title: "자연수와 무한집합"
         url: ko/math/set_theory/natural_numbers
-
-set-en:
-  - title: <a href="/en/set_theory" class="sidebar_title">Set Theory</a>
+      - title: "극한"
+        url: ko/math/set_theory/limits
+          
+algebraic_structures-ko:
+  - title: <a href="/ko/algebraic_structures/" class="sidebar_title">대수적 구조</a>
     children:
-      - title: "ZFC system"
-        url: en/math/set_theory/zfc_axioms
-
-topology-ko:
-  - title: <a href="/ko/topology" class="sidebar_title">위상수학</a>
-    children:
-      - title: "열린집합과 닫힌집합"
-        url: /ko/math/topology/basic_definition_1
-      - title: "위상공간의 기저"
-        url: /ko/math/topology/basic_definition_2
-      - title: "수열의 수렴"
-        url: /ko/math/topology/basic_definition_3
-      - title: "연속함수"
-        url: /ko/math/topology/basic_definition_4
-      - title: "위상공간의 다른 정의들<sup>†</sup>"
-        url: /ko/math/topology/equivalent_definition_of_topology
-      - title: "거리위상 (1)"
-        url: /ko/math/topology/metric_topology_1
-      - title: "거리위상 (2)"
-        url: /ko/math/topology/metric_topology_2
-      - title: "위상공간과 수렴"
-        url: /ko/math/topology//ko/math/topology/convergence
-      - title: "부분위상"
-        url: /ko/math/topology/subspace_topology
-      - title: "곱위상"
-        url: /ko/math/topology/product_topology
-      - title: "몫위상"
-        url: /ko/math/topology/quotient_topology
-      - title: "Initial and final topology<sup>†</sup>"
-        url: /ko/math/topology/initial_and_final_topology
-      - title: "연결공간"
-        url: /ko/math/topology/connectedness
-
-topology-en:
-  - title: <a href="/en/topology" class="sidebar_title">Topology</a>
-    children:
-      - title: 
-        url: 
-
-manifold-ko:
-  - title: <a href="/ko/manifold" class="sidebar_title">미분다양체</a>
-    children:
-      - title: "위상다양체"
-        url: /ko/math/manifold/topological_manifolds
-      - title: "미분다양체"
-        url: /ko/math/manifold/smooth_manifolds
-      - title: "미분다양체의 예시들"
-        url: /ko/math/manifold/examples_of_manifolds
-      - title: "접공간"
-        url: /ko/math/manifold/tangent_space
-      - title: "미분사상"
-        url: /ko/math/manifold/differentials
-      - title: "미분사상의 예시들"
-        url: /ko/math/manifold/examples_of_differentials
-      - title: "부분다양체와 역함수 정리"
-        url: /ko/math/manifold/submanifolds
-      - title: "부분다양체의 유일성"
-        url: /ko/math/manifold/uniqueness_of_submanifold
-      - title: "음함수 정리"
-        url: /ko/math/manifold/implicit_function_theorem
-      - title: "벡터다발"
-        url: /ko/math/manifold/vector_bundles
-      - title: "벡터장"
-        url: /ko/math/manifold/vector_fields
-      - title: "외대수"
-        url: /ko/math/manifold/exterior_algebra
-      - title: "미분형식"
-        url: /ko/math/manifold/differential_forms
-      - title: "Distribution"
-        url: /ko/math/manifold/distribution
-      - title: "리 군과 리 대수"
-        url: /ko/math/manifold/Lie_group_and_Lie_algebra
-      - title: "리 군의 예시들"
-        url: /ko/math/manifold/examples_of_Lie_groups
-
-manifold-en:
-  - title: <a href="/en/manifold" class="sidebar_title">Manifold</a>
-    children:
-      - title: 
-        url: 
-
-linear_algebra-ko:
-  - title: <a href="/ko/linear_algebra" class="sidebar_title">선형대수학</a>
-    children:
-      - title: "가환군과 체"
-        url: /ko/math/linear_algebra/fields
-      - title: "벡터공간"
-        url: /ko/math/linear_algebra/vector_spaces
-      - title: "부분공간"
-        url: /ko/math/linear_algebra/subspaces
-      - title: "벡터공간의 기저"
-        url: /ko/math/linear_algebra/basis
-      - title: "벡터공간의 차원"
-        url: /ko/math/linear_algebra/dimension
-      - title: "무한차원 벡터공간<sup>†</sup>"
-        url: /ko/math/linear_algebra/infinite-dimensional-vector-space
-      - title: "선형사상"
-        url: /ko/math/linear_algebra/linear_map
+      - title: "대수적 구조"
+        url: ko/math/algebraic_structures/algebraic_structure
+      - title: "준군, 모노이드, 군"
+        url: ko/math/algebraic_structures/group
+      - title: "Grothendieck 군"
+        url: ko/math/algebraic_structures/Grothendieck_group
+      - title: "준동형사상"
+        url: ko/math/algebraic_structures/group_homomorphisms
+      - title: "몫군"
+        url: ko/math/algebraic_structures/quotient_group
       - title: "동형사상"
-        url: /ko/math/linear_algebra/isomorphic_vector_spaces
-      - title: "행렬들의 공간"
-        url: /ko/math/linear_algebra/matrix
-      - title: "선형사상들의 공간"
-        url: /ko/math/linear_algebra/space_of_linear_maps
-      - title: "선형대수학의 기본정리"
-        url: /ko/math/linear_algebra/ftla
-      - title: "기본정리: categorical viewpoint<sup>†</sup>"
-        url: /ko/math/linear_algebra/ftla_categorical_viewpoint
-      - title: "쌍대공간"
-        url: /ko/math/linear_algebra/dual_space
+        url: ko/math/algebraic_structures/isomorphism_theorems
 
-dev:
-  - title: "블로그 개발"
+tensor_algebra-ko:
+  - title: <a href="/ko/tensor_algebra/" class="sidebar_title">텐서대수</a>
     children:
-      - title: "블로그 플랫폼 선택"
-        url: /ko/blog_dev/introduction
-      - title: "Github 블로그 생성"
-        url: /ko/blog_dev/getting_started
-      - title: "Minimal mistakes 기본설정"
-        url: /ko/blog_dev/initial_settings
-      - title: "한글 폰트 추가"
-        url: /ko/blog_dev/fonts
-      - title: "수식입력 지원"
-        url: /ko/blog_dev/KaTeX
-      - title: "Minimal mistakes 테마 수정"
-        url: /ko/blog_dev/skin
-      - title: "각종 박스 생성"
-        url: /ko/blog_dev/notices
-      - title: "블로그 커스터마이징"
-        url: /ko/blog_dev/personalization
-      - title: "맨 위로 버튼 만들기"
-        url: /ko/blog_dev/back_to_top
-      - title: "다크 모드 설정"
-        url: /ko/blog_dev/dark_theme
-      - title: "포스트 순서 정렬"
-        url: /ko/blog_dev/weight
-      - title: "댓글 기능 추가 (1)"
-        url: /ko/blog_dev/comments_1
-      - title: "댓글 기능 추가 (2)"
-        url: /ko/blog_dev/comments_2
-      - title: "다국어 지원"
-        url: /ko/blog_dev/multilingual
+      - title: "등급구조"
+        url: ko/math/tensor_algebra/graduation
+      - title: "등급대수"
+        url: ko/math/tensor_algebra/graded_homomorphism
+      - title: "텐서대수"
+        url: ko/math/tensor_algebra/tensor_algebra
+      - title: "대칭대수와 외대수"
+        url: ko/math/tensor_algebra/symmetric_and_exterior_algebra

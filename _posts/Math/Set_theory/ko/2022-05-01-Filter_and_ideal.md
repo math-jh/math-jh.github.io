@@ -6,14 +6,14 @@ excerpt: "Filter와 ideal"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/filter_and_ideal
 header:
-    overlay_image: /assets/images/Set_theory/Order_relations.png
+    overlay_image: /assets/images/Set_theory/Filter_and_ideal.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set-ko"
 
 date: 2022-05-01
 last_modified_at: 2022-04-04
-weight: 12
+weight: 18
 
 ---
 
