@@ -243,3 +243,11 @@ $$\bigwedge(M)\cong\bigotimes_{i=1}^n\bigwedge(M_i)$$
 이 성립한다.
 
 </div>
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
+
+---
