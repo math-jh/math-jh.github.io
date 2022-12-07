@@ -3,13 +3,13 @@
 title: "준동형사상"
 excerpt: "준동형사상의 정의와 성질들, 준동형사상의 핵과 상"
 
-categories: [Math / Groups]
-permalink: /ko/math/groups/group_homomorphisms
+categories: [Math / Algebraic structures]
+permalink: /ko/math/algebraic_structures/group_homomorphisms
 header:
-    overlay_image: /assets/images/Groups/Group_homomorphisms.png
+    overlay_image: /assets/images/Algebraic_structures/Group_homomorphisms.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "groups-ko"
+    nav: "algebraic_structures-ko"
     
 date: 2021-09-08
 last_modified_at: 2022-11-30
