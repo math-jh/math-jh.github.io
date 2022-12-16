@@ -190,7 +190,7 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> $A$-module $M$을 고정하고, $A$-algebra $E$로의 $A$-module homomorphism $f:M\rightarrow E$가 모든 $x\in M$에 대해 $f(x)^2=0$를 만족한다 하자. 그럼 다음 diagram을 commute하도록 하는 유일한 $A$-algebra homomorphism $\tilde{f}:\bigwedge(M)\rightarrow E$가 존재한다.
+<ins id="thm8">**정리 8**</ins> $A$-module $M$을 고정하고, $A$-algebra $E$로의 $A$-module homomorphism $f:M\rightarrow E$가 모든 $x\in M$에 대해 $f(x)^2=0$를 만족한다 하자. 그럼 다음 diagram을 commute하도록 하는 유일한 $A$-algebra homomorphism $\tilde{f}:\bigwedge(M)\rightarrow E$가 존재한다.
 
 ![Universal_property_of_exterior_algebra](/assets/images/Tensor_algebra/Symmetric_and_exterior_algebra-7.png){:width="167.7px" class="invert" .align-center}
 
@@ -243,6 +243,35 @@ $$\bigwedge(M)\cong\bigotimes_{i=1}^n\bigwedge(M_i)$$
 이 성립한다.
 
 </div>
+
+## Symmetric power와 alternating power
+
+$\mathcal{S}(M)$과 $\bigwedge(M)$은 모두 graded algebra이므로, 이들을 degree에 따라
+
+$$\mathcal{S}(M)=\bigoplus_{n=0}^\infty\mathcal{S}^n(M),\qquad\bigwedge(M)=\bigoplus_{n=0}^\infty\bigwedge\nolimits^n(M)$$
+
+으로 분해할 수 있다. 이 때 $\mathcal{S}(M)$과 $\bigwedge\nolimits^n(M)$을 각각 $M$의 $n$번째 *symmetric power*, *exterior power*라 부른다. $\mathcal{S}(M)$과 $\bigwedge(M)$와 마찬가지로 이들 또한 적당한 universal property를 갖는다. 이를 정리로 쓰기 위해서는 몇 가지 정의가 필요하다.
+
+임의의 $A$-module $X,Y$와 multilinear map $f:X^n\rightarrow Y$에 대하여, $f$가 *symmetric*이라는 것은 임의의 $\sigma\in S_n$에 대하여
+
+$$f(x_1,\ldots, x_n)=f(x_{\sigma(1)},\ldots, x_{\sigma(n)})$$
+
+이 성립하는 것이다. 비슷하게, $f$가 *alternating*이라는 것은 임의의 $i,j$에 대하여
+
+$$f(x_1,\ldots, x_i,\ldots, x_j,\ldots, x_n)=-f(x_1,\ldots, x_j,\ldots, x_i,\ldots, x_n)$$
+
+이 성립하는 것이다. 이러한 상황에서 $\mathcal{S}(M)$과 $\bigwedge\nolimits^n(M)$의 universal property는 다음과 같이 서술된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm13">**정리 13**</ins> 임의의 $A$-module $M,N$이 주어졌다 하고, 자연수 $n$을 고정하자. 그럼
+
+- $M^n$에서 $N$으로의 symmetric multilinear map과, $\mathcal{S}^n(M)$에서 $N$으로의 linear map 사이의 일대일대응이 존재한다.
+- $M^n$에서 $N$으로의 alternating multilinear map과, $\bigwedge\nolimits^n(M)$에서 $N$으로의 linear map 사이의 일대일대응이 존재한다.
+
+</div>
+
+
 
 ---
 
