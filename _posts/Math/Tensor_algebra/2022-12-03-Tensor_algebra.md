@@ -183,6 +183,26 @@ $$a\cdot m':=\rho(a)\cdot m',\qquad a\in A,m'\in M'$$
  
 </details>
 
+## Mixed tensor
+
+이제 commutative monoid $\Delta$를 $\mathbb{N}\times\mathbb{N}$인 것으로 생각하자. 고정된 $A$-module $M$에 대하여, 
+
+$$\mathcal{T}^{r,s}(M)=\underbrace{M\otimes\cdots\otimes M}_\text{$r$ copies}\otimes\underbrace{M^\ast\otimes\cdots\otimes M^\ast}_\text{$s$ copies}$$
+
+으로 정의한다. 특별히 $r=s=0$인 경우는 $\mathcal{T}^{0,0}(M)=A$인 것으로 생각한다. 이제 앞선 정의들에서와 마찬가지로 direct sum
+
+$$\mathcal{T}^{\bullet,\bullet}(M)=\bigoplus_{(r,s)\in\Delta} \mathcal{T}^{r,s}(M)$$
+
+를 생각하면 $\mathcal{T}^{\bullet,\bullet}(M)$이 $\Delta$-graded $A$-algebra가 되는 것은 자명하다. 여기에서 $\mathcal{T}^{\bullet,\bullet}(M)$의 두 원소 (*simple tensor*들)
+
+$$x=x_1\otimes x_2\otimes\cdots\otimes x_{r_1}\otimes \alpha^1\otimes \alpha^2\otimes\cdots\otimes \alpha^{s_1}, \quad y=y_1\otimes y_2\otimes\cdots\otimes y_{r_2}\otimes \beta^1\otimes \beta^2\otimes\cdots\otimes \beta^{s_2}$$
+
+에 대하여 곱셈 $x\otimes y$는
+
+$$x\otimes y=x_1\otimes \cdots\otimes x_{r_1}\otimes y_1\otimes \cdots\otimes y_{r_2}\otimes \alpha^1\otimes\cdots\otimes \alpha^{s_1}\otimes \beta^1\otimes\cdots\otimes \beta^{s_2}\in \mathcal{T}^{r_1+r_2, s_1+s_2}(V)\tag{1}$$
+
+으로 정의된다. 그럼 우리는 $\mathcal{T}^{\bullet,\bullet}(M)$를 $M$ 위에서의 *mixed tensor algebra*라 부르고, 이들의 원소를 *mixed tensor*라 부른다.
+
 ---
 
 **참고문헌**
