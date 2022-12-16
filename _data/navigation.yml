@@ -89,3 +89,25 @@ tensor_algebra-ko:
         url: ko/math/tensor_algebra/tensor_algebra
       - title: "대칭대수와 외대수"
         url: ko/math/tensor_algebra/symmetric_and_exterior_algebra
+
+manifold-ko:
+  - title: <a href="/ko/manifold/" class="sidebar_title">미분다양체</a>
+    children:
+      - title: "미분다양체"
+        url: ko/math/manifold/smooth_manifolds
+      - title: "미분다양체의 예시들"
+        url: ko/math/manifold/examples_of_manifolds
+      - title: "접공간"
+        url: ko/math/manifold/tangent_space
+      - title: "여접공간"
+        url: ko/math/manifold/cotangent_space
+      - title: "미분사상"
+        url: ko/math/manifold/differentials
+      - title: "미분사상의 예시들"
+        url: ko/math/manifold/examples_of_differentials
+      - title: "부분다양체와 역함수 정리"
+        url: ko/math/manifold/submanifolds
+      - title: "음함수 정리"
+        url: ko/math/manifold/implicit_function_theorem
+      - title: "벡터다발"
+        url: ko/math/manifold/vector_bundles
