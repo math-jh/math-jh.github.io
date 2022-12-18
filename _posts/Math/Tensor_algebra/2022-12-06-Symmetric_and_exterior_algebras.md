@@ -3,7 +3,7 @@
 title: "대칭대수와 외대수"
 excerpt: "대칭대수와 외대수의 정의, universal property와 성질들"
 
-categories: [Math / Tensor algebra]
+categories: [Math / Tensor Algebra]
 permalink: /ko/math/tensor_algebra/symmetric_and_exterior_algebras
 header:
     overlay_image: /assets/images/Tensor_algebra/Symmetric_and_exterior_algebras.png

@@ -3,7 +3,7 @@
 title: "미분"
 excerpt: "Differential module"
 
-categories: [Math / Tensor algebra]
+categories: [Math / Tensor Algebra]
 permalink: /ko/math/tensor_algebra/derivation
 header:
     overlay_image: /assets/images/Tensor_algebra/Derivation.png

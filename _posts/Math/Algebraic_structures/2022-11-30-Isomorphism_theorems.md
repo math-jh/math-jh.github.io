@@ -3,7 +3,7 @@
 title: "동형사상"
 excerpt: "동형사상 정리들"
 
-categories: [Math / Algebraic structures]
+categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/isomorphism_theorems
 header:
     overlay_image: /assets/images/Algebraic_structures/Isomorphism_theorems.png

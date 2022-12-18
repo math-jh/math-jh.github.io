@@ -87,11 +87,11 @@ $$R\subseteq \operatorname{pr}_1 R\times\operatorname{pr}_2R\subseteq A\times B$
 
 </div>
 
-## 이항관계의 상
+## 이항관계의 정의역과 상
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> 이항관계 $(R,A,B)$와 부분집합 $A'\subseteq A$를 생각하자. 그럼 <phrase>$R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $R$에 의한 $A'$의 *상<sub>image</sub>*라 부르고 , $R(A')$로 표기한다.
+<ins id="df5">**정의 5**</ins> 이항관계 $(R,A,B)$와 부분집합 $A'\subseteq A$를 생각하자. 그럼 <phrase>$R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $R$에 의한 $A'$의 *image<sub>상</sub>*이라 부르고 , $R(A')$로 표기한다.
 
 </div>
 
@@ -124,13 +124,13 @@ $y\in R(X)$라 하자. 그럼 어떤 $x\in X$가 존재하여 $(x,y)\in R(X)$이
 
 $$R(A)=\operatorname{pr}_2\{z\in R:\text{$\operatorname{pr}_1z\in A$}\}\subset\operatorname{pr}_2R$$
 
-이고, 따라서 $R(A)\subset\operatorname{pr}_2R$가 성립한다. 특히 $A=\emptyset$이라면 $R(A)=\emptyset$이며, 더 일반적으로 만일 $A\cap\operatorname{pr}_1R=\emptyset$이라면 $R(A)=\emptyset$이다.
+이고, 따라서 $R(A)\subset\operatorname{pr}_2R$가 성립한다. 특히 $A=\emptyset$이라면 $R(A)=\emptyset$이며, 더 일반적으로 만일 $A\cap\operatorname{pr}_1R=\emptyset$이라면 $R(A)=\emptyset$이다. 
 
 만일 어떤 $x$에 대해 $A=\\{x\\}$라면 $R(A)$를 마치 $x$에서의 $R$의 함숫값처럼 생각할 수 있다. 
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> 이항관계 $R$에 대하여, 집합 $R(\\{x\\})$를 $x$에서의 $R$의 *section*이라 부른다.
+<ins id="df7">**정의 7**</ins> 이항관계 $R$에 대하여, 집합 $R(\\{x\\})$를 $x$에서의 $R$의 *section<sub>단면</sub>*이라 부른다.
 
 </div>
 
@@ -144,4 +144,4 @@ $$R(A)=\operatorname{pr}_2\{z\in R:\text{$\operatorname{pr}_1z\in A$}\}\subset\o
 
 ---
 
-[^1]: **[Bou]**에서는 이러한 집합을 *그래프*라 부르고, 이항관계 중 그래프를 갖는 것과 갖지 않는 것을 구분하여 생각한다. 이는 그렇게 흔한 정의는 아니므로, 우리는 **[HJJ]**를 따라 위의 정의를 그대로 사용한다.
+[^1]: **[Bou]**에서는 이러한 집합을 *그래프*라 부르고, 이항관계 중 그래프를 갖는 것과 갖지 않는 것을 구분하여 생각한다. 이는 그렇게 흔한 정의는 아니므로, 우리는 **[HJJ]**를 따라 위의 정의를 그대로 사용한다. 이 경우 관계라는 단어의 정의가 애매해지긴 하는데, 이는 따로 정의하지 않고 넘어간다.

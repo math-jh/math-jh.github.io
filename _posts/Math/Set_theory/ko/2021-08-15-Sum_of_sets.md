@@ -21,11 +21,11 @@ weight: 9
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Family $(A\_i)\_{i\in I}$가 집합 $A$의 *covering<sub>덮개</sub>*이라는 것은 $A=\bigcup\_{i\in I} A\_i$임을 뜻한다. $A$의 두 covering $(A\_i)\_{i\in I}$와 $(A'\_j)\_{j\in J}$에 대하여, $(A'_j)\_{j\in J}$가 $(A_i)\_{i\in I}$보다 *세밀하다<sub>finer</sub>*는 것은 임의의 $j\in J$에 대하여, $A'\_j\subseteq A\_i$를 만족하는 $i\in I$가 존재하는 것이다.
+<ins id="df1">**정의 1**</ins> Family $(A\_i)\_{i\in I}$가 집합 $A$의 *covering<sub>덮개</sub>*이라는 것은 $A=\bigcup\_{i\in I} A\_i$임을 뜻한다. $A$의 두 covering $(A\_i)\_{i\in I}$와 $(A'\_j)\_{j\in J}$에 대하여, $(A'_j)\_{j\in J}$가 $(A_i)\_{i\in I}$보다 *finer<sub>섬세</sub>*하다는 것은 임의의 $j\in J$에 대하여, $A'\_j\subseteq A\_i$를 만족하는 $i\in I$가 존재하는 것이다.
 
 </div>
 
-집합 $A$의 covering $(A\_i)\_{i\in I}$이 주어졌다 하자. 그럼 임의의 함수 $f:B \rightarrow A$에 대하여, $B$의 부분집합들의 family $(f^{-1}(A\_i))\_{i\in I}$는 $B$의 covering이 된다. 이를 $(A\_i)$의 $f$에 의한 역상이라 부른다. 임의의 함수 $g:A\rightarrow C$에 대하여는 $C$의 부분집합들의 family $(g(A\_i))\_{i\in I}$가 $C$의 covering이 될 필요는 없지만, 만일 $g$가 전사함수라면 이들이 $C$를 덮는다. 이를 전사함수 $g$에 의한 $(A\_i)$의 상이라 부른다. 
+집합 $A$의 covering $(A\_i)\_{i\in I}$이 주어졌다 하자. 그럼 임의의 함수 $f:B \rightarrow A$에 대하여, $B$의 부분집합들의 family $(f^{-1}(A\_i))\_{i\in I}$는 $B$의 covering이 된다. 이를 $(A\_i)$의 $f$에 의한 preimage라 부른다. 임의의 함수 $g:A\rightarrow C$에 대하여는 $C$의 부분집합들의 family $(g(A\_i))\_{i\in I}$가 $C$의 covering이 될 필요는 없지만, 만일 $g$가 전사함수라면 이들이 $C$를 덮는다. 이를 전사함수 $g$에 의한 $(A\_i)$의 image라 부른다. 
 
 
 <div class="proposition" markdown="1">

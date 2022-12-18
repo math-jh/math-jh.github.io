@@ -3,7 +3,7 @@
 title: "군의 직접곱"
 excerpt: "Direct product of groups"
 
-categories: [Math / Algebraic structures]
+categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/product_group
 header:
     overlay_image: /assets/images/Algebraic_structures/Product_group.png

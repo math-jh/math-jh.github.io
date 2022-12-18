@@ -3,7 +3,7 @@
 title: "Grothendieck 군"
 excerpt: "Grothendieck group과 정수의 정의"
 
-categories: [Math / Algebraic structures]
+categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/Grothendieck_group
 header:
     overlay_image: /assets/images/Algebraic_structures/Grothendieck_group.png
@@ -201,7 +201,7 @@ $$\begin{aligned}\bar{f}\left([(a_1,b_1)]+[(a_2, b_2)]\right)&=\bar{f}\left([(a_
 
 </details>
 
-이렇게, 우리는 원했던 abelian semigroup $G_S$를 얻었다. 특히 정수를 엄밀한 방식으로 증명할 수 있다.
+이렇게, 우리는 원했던 abelian semigroup $G_S$를 얻었다. 특히 정수를 엄밀한 방식으로 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
