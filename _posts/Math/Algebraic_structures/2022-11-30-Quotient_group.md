@@ -3,7 +3,7 @@
 title: "몫군"
 excerpt: "정규부분군과 몫군"
 
-categories: [Math / Algebraic structures]
+categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/quotient_group
 header:
     overlay_image: /assets/images/Algebraic_structures/Quotient_group.png

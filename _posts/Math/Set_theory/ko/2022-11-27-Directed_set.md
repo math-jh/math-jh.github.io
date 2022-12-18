@@ -96,8 +96,8 @@ $f$가 순단조함수라 하자. 그럼 임의의 $x\neq y$에 대하여, $x > 
 
 </details>
 
-$A$가 ordered set이고, $a\leq b$라 하자. 그럼 $a\leq x\leq b$를 만족하는 모든 $x$를 모아둔 $X\subseteq A$를 *closed interval*이라 부르고 $[a,b]$로 적는다.  $a\leq x < b$인 $x$들을 모아둔 부분집합은 *half-open interval*이라 부르고 $\[a,b)$로 적으며, $(a,b\]$도 마찬가지다. $(a,b)$는 *open interval*이라 부르고, 이는 $a < x < b$를 만족하는 모든 $x$를 모아둔 집합이다.  
-추가로, $x\leq a$를 만족하는 모든 $x$를 모아둔 부분집합을 *unbounded closed interval*이라 부르고 $(-\infty, a]$로 적는다. $[a,\infty)$, $(-\infty, a)$, $(a, \infty)$도 유사하게 정의한다. 
+$A$가 ordered set이고, $a\leq b$라 하자. 그럼 $a\leq x\leq b$를 만족하는 모든 $x$를 모아둔 $X\subseteq A$를 *닫힌구간<sub>closed interval</sub>*이라 부르고 $[a,b]$로 적는다. 구간 $(a,b)$는 *열린구간<sub>open interval</sub>*이라 부르고, 이는 $a < x < b$를 만족하는 모든 $x$를 모아둔 집합이다.  
+추가로, $x\leq a$를 만족하는 모든 $x$를 모아둔 부분집합을 *unbounded*인 닫힌구간이라 부르고 $(-\infty, a]$로 적는다. $[a,\infty)$, $(-\infty, a)$, $(a, \infty)$도 유사하게 정의한다. 
 
 
 <ins id="pp8">**명제 8**</ins> Lattice에서 두 interval의 교집합도 interval이다.

@@ -3,7 +3,7 @@
 title: "등급구조"
 excerpt: "대수적 구조 위에 정의된 등급구조"
 
-categories: [Math / Tensor algebra]
+categories: [Math / Tensor Algebra]
 permalink: /ko/math/tensor_algebra/graduation
 header:
     overlay_image: /assets/images/Tensor_algebra/Graduation.png

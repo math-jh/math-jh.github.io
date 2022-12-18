@@ -3,7 +3,7 @@
 title: "텐서대수"
 excerpt: "텐서대수의 정의와 universal property"
 
-categories: [Math / Tensor algebra]
+categories: [Math / Tensor Algebra]
 permalink: /ko/math/tensor_algebra/tensor_algebra
 header:
     overlay_image: /assets/images/Tensor_algebra/Tensor_algebra.png
@@ -202,6 +202,16 @@ $$x=x_1\otimes x_2\otimes\cdots\otimes x_{r_1}\otimes \alpha^1\otimes \alpha^2\o
 $$x\otimes y=x_1\otimes \cdots\otimes x_{r_1}\otimes y_1\otimes \cdots\otimes y_{r_2}\otimes \alpha^1\otimes\cdots\otimes \alpha^{s_1}\otimes \beta^1\otimes\cdots\otimes \beta^{s_2}\in \mathcal{T}^{r_1+r_2, s_1+s_2}(V)\tag{1}$$
 
 으로 정의된다. 그럼 우리는 $\mathcal{T}^{\bullet,\bullet}(M)$를 $M$ 위에서의 *mixed tensor algebra*라 부르고, 이들의 원소를 *mixed tensor*라 부른다.
+
+정의에 의해 $\mathcal{T}^{r,0}(M)=\mathcal{T}^r(M)$이고 $\mathcal{T}^{0,s}(M)=\mathcal{T}^s(M^\ast)$이다. 만일 $M$이 finitely generated projective $A$-module이라면 
+
+$$\theta_M:M^\ast_AM\rightarrow\operatorname{End}_A(M)$$
+
+을 다음의 식
+
+$$\theta_M(x^\ast\otimes x)(y)=x^\ast(y)x$$
+
+으로 정의할 수 있으며, 이는 isomorphism이 된다.
 
 ---
 
