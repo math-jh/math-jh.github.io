@@ -97,7 +97,7 @@ weight: 13
 1. 만일 $(A\_i)\_{i\in I}$가 $R$-saturated인 부분집합들의 family라면, $\bigcup\_{i\in I} A_i$와 $\bigcap\_{i\in I} A_i$도 마찬가지다.
 2. $X\subseteq A$가 $R$-saturated라면 $A\setminus X$도 그러하다..
 
-이번에는 canonical map $p:A\rightarrow A/R$와 $X\subseteq A$를 생각하자. [§이항관계의 연산, 명제 7](/ko/math/set_theory/operation_of_binary_relations#pp7)에 의하여 
+이번에는 canonical projection $p:A\rightarrow A/R$와 $X\subseteq A$를 생각하자. [§이항관계의 연산, 명제 7](/ko/math/set_theory/operation_of_binary_relations#pp7)에 의하여 
 
 $$p^{-1}(p(X))\supseteq X$$
 
@@ -155,13 +155,13 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 만일 $q\circ f$이 $R$과 compatible하다면, $f$가 *$(R,S)$-compatible*하다고 한다. [명제 7](#p75)에 의해 이는 다시 $h:A/R\rightarrow B/S$가 존재하여 $h\circ p=q\circ f$인 것과 동치이다. 
 
-## 동치관계의 inverse image
+## 동치관계의 preimage
 
 함수 $f:A\rightarrow B$가 주어졌다 하고, 동치관계 $(S,B,B)$와 canonical $p:B\rightarrow B/S$를 생각하자.
 
 ![inverse_image_of_equivalence](/assets/images/Set_theory/Examples_of_equivalence-5.png){:width="145.5px"  class="invert" .align-center}
 
-그럼 자연스레 함수 $p\circ f:A\rightarrow B/S$가 정의되며, 이 함수가 [정의 2](#df2)를 통해 만드는 동치관계를 $f$에 의한 $S$의 *inverse image*라 부른다.
+그럼 자연스레 함수 $p\circ f:A\rightarrow B/S$가 정의되며, 이 함수가 [정의 2](#df2)를 통해 만드는 동치관계를 $f$에 의한 $S$의 *preimage*라 부른다.
 
 ## 동치관계의 quotient
 

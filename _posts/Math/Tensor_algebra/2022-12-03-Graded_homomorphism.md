@@ -3,7 +3,7 @@
 title: "등급대수"
 excerpt: "등급대수의 부분대수와 아이디얼, 극한"
 
-categories: [Math / Tensor algebra]
+categories: [Math / Tensor Algebra]
 permalink: /ko/math/tensor_algebra/graded_homomorphism
 header:
     overlay_image: /assets/images/Tensor_algebra/Graded_homomorphism.png

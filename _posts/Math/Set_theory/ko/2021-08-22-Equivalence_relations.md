@@ -91,7 +91,7 @@ $$\operatorname{pr}_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 <ins id="ex5">**예시 5**</ins> 집합 $A$ 위에서 <phrase>$x=y$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $x$의 equivalence class는 집합 $\{x\}$이다. 한편 동일한 예시에서 <phrase>$x\in A$이고 $y\in A$</phrase> 또한 동치관계였는데, 이 경우 $x$의 equivalence class는 $A$ 전체가 된다. 
 
-우리는 앞선 [예시 2](#ex2)에서 $\Delta_A$가 가장 <em_ko>작고</em_ko>, $A\times A$가 가장 <em_ko>크다</em_ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $\Delta_A$가 가장 *세밀한* 동치관계이고, $A\times A$는 가장 *성긴* 동치관계라고 하는 것이 일반적이다. ([§집합의 합, 정의 1](/ko/math/set_theory/sum_of_sets#df1))
+우리는 앞선 [예시 2](#ex2)에서 $\Delta_A$가 가장 <em_ko>작고</em_ko>, $A\times A$가 가장 <em_ko>크다</em_ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $\Delta_A$가 가장 *finer*한 동치관계이고, $A\times A$는 가장 *coarser*한 동치관계라고 하는 것이 일반적이다. ([§집합의 합, 정의 1](/ko/math/set_theory/sum_of_sets#df1))
 
 </div>
 
@@ -115,7 +115,7 @@ $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
 </details>
 
-위의 함수 $p$를 canonical이라 부른다. 그럼 $A$의 부분집합 $[x]\_R\subseteq A$는 몫집합의 원소 $[x]\_R\in A/R$의 함수 $p$에 대한 역상이므로 equivalence class들은 서로소임을 안다. 즉 동치관계 $(R,A,A)$는 $A$의 분할을 유도한다.
+위의 함수 $p$를 canonical projection이라 부른다. 그럼 $A$의 부분집합 $[x]\_R\subseteq A$는 몫집합의 원소 $[x]\_R\in A/R$의 함수 $p$에 대한 preimage이므로 equivalence class들은 서로소임을 안다. 즉 동치관계 $(R,A,A)$는 $A$의 분할을 유도한다.
 
 다음 명제는 그 역 또한 성립한다는 것을 보여준다.
 

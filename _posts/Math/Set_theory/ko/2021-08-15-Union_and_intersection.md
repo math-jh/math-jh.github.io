@@ -130,7 +130,7 @@ $$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subset\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\
 
 ## 합집합, 교집합의 상
 
-다음과 같이 합집합이나 교집합의 상도 생각해 볼 수 있다.
+다음과 같이 합집합이나 교집합의 image도 생각해 볼 수 있다.
 
 <div class="proposition" markdown="1">
 

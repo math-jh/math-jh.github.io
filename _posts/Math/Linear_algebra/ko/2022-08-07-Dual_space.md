@@ -133,11 +133,11 @@ $$\dim V\leq\dim W^\ast=\dim W,\qquad \dim W\leq\dim V^\ast=\dim V$$
 
 </details>
 
-특별히 $W=V^\ast$인 [예시 3](#ex3)의 canonical pairing에 이 따름정리를 적용하면 우리는 $V$에서 $V^{\ast\ast}$로의 isomorphism을 얻는다. 명시적으로 이 함수는 임의의 $f\in V^\ast$에 대하여 
+이러한 의미에서, 두 유한차원 벡터공간 사이의 non-degenerate pairing을 *perfect pairing*이라 부르기도 한다. 특별히 $W=V^\ast$인 [예시 3](#ex3)의 canonical pairing에 이 따름정리를 적용하면 우리는 $V$에서 $V^{\ast\ast}$로의 isomorphism을 얻는다. 명시적으로 이 함수는 임의의 $f\in V^\ast$에 대하여 
 
 $$\operatorname{ev}_v:f\mapsto f(v)$$
 
-으로 정의되는 *evaluation map*으로 생각하면 된다. 위의 논의는 $v\mapsto \operatorname{ev}_v$로 정의된 $V\rightarrow V^{\ast\ast}$가 isomorphism임을 보여준다.
+으로 정의되는 *evaluation map<sub>값매김사상</sub>*으로 생각하면 된다. 위의 논의는 $v\mapsto \operatorname{ev}_v$로 정의된 $V\rightarrow V^{\ast\ast}$가 isomorphism임을 보여준다.
 
 ## 쌍대사상
 

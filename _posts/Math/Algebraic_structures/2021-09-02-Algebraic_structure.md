@@ -3,7 +3,7 @@
 title: "대수적 구조"
 excerpt: "집합 위에 정의된 이항연산"
 
-categories: [Math / Algebraic structures]
+categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/algebraic_structure
 header:
     overlay_image: /assets/images/Algebraic_structures/Algebraic_structure.png
