@@ -3,7 +3,7 @@
 title: "준동형사상"
 excerpt: "준동형사상의 정의와 성질들, 준동형사상의 핵과 상"
 
-categories: [Math / Algebraic structures]
+categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/group_homomorphisms
 header:
     overlay_image: /assets/images/Algebraic_structures/Group_homomorphisms.png

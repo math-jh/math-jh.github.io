@@ -55,11 +55,9 @@ $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\
 
 <div class="notice--warning" markdown="1">
 Primary decomposition theorem, Cayley-Hamilton, Jordan canonical form  
-내적  
 QR, LU, SVD  
 
-분해정리끼리 묶기는 순서 애매; 일단 내적부터
-아예 pairing 다음에 내적을 넣을 걸 그랬나? 생각해보니 괜찮은듯
+내적 때문에 분해정리끼리 묶기는 순서 애매하니 묶으려면 앞에 내적 끼워넣어야 함
 
 </div>
 
