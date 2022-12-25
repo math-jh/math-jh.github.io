@@ -40,14 +40,14 @@ Category theory는 집합론과 함께, 현대 수학의 근간을 이루는 분
 
 <ins id="df1">**정의 1**</ins> *Category* $\mathcal{C}$는 다음 정보들로 이루어진 대상이다.
 
-- $\mathcal{C}$의 *object*들 $X,Y,Z,\ldots$로 이루어진 모임 $\operatorname{obj}(\mathcal{S})$
-- 각각의 $X,Y\in \operatorname{obj}(\mathcal{C})$마다 대응되는 *morphism*들의 모임 $\operatorname{Mor}(X,Y)$
-- 각각의 $X,Y,Z\in\operatorname{obj}(\mathcal{C})$에 대해, $\operatorname{Mor}(X,Y)$와 $\operatorname{Mor}(Y,Z)$의 원소들의 쌍을 $\operatorname{Mor}(X,Z)$로 보내는 *composition* $\circ: (f,g)\mapsto g\circ f$.
+- $\mathcal{C}$의 *object*들 $X,Y,Z,\ldots$로 이루어진 모임 $\obj(\mathcal{S})$
+- 각각의 $X,Y\in \obj(\mathcal{C})$마다 대응되는 *morphism*들의 모임 $\Mor(X,Y)$
+- 각각의 $X,Y,Z\in\obj(\mathcal{C})$에 대해, $\Mor(X,Y)$와 $\Mor(Y,Z)$의 원소들의 쌍을 $\Mor(X,Z)$로 보내는 *composition* $\circ: (f,g)\mapsto g\circ f$.
 
 이들은 다음의 조건을 만족해야 한다. 
 
 - Composition은 associative하다.
-- 각각의 $X\in\operatorname{obj}(\mathcal{C})$마다 *identity morphism* $\operatorname{id}\_X\in\operatorname{Mor}(X,X)$가 존재하여, 임의의 $f\in\operatorname{Mor}(X,Y)$와 $g\in\operatorname{Mor}(Z,X)$에 대하여 $f\circ \operatorname{id}\_X=f$이고 $\operatorname{id}\_X\circ g=g$이다.
+- 각각의 $X\in\obj(\mathcal{C})$마다 *identity morphism* $\id\_X\in\Mor(X,X)$가 존재하여, 임의의 $f\in\Mor(X,Y)$와 $g\in\Mor(Z,X)$에 대하여 $f\circ \id\_X=f$이고 $\id\_X\circ g=g$이다.
 
 </div>
 
@@ -57,7 +57,7 @@ Category theory는 집합론과 함께, 현대 수학의 근간을 이루는 분
 
 </div>
 
-위 예시에서는 미묘한 문제가 있다. $\operatorname{obj}(\mathbf{Set})$은 *모든 집합들의 모임*이고, 우리는 이러한 모임이 집합이 되지 못한다는 것을 알고 있다. ([Set Theory, §ZFC 공리계, 예시 4](/ko/math/set_theory/zfc_system#pp4)) 그러나 우리는 해당 예시에서 (strongly) inaccessible cardinal의 존재를 가정한다면 이런 문제를 피해갈 수 있다는 것을 아주 간략하게 언급하기도 했었다. 그 때와 마찬가지로, 우리는 이번에도 이런 집합론적인 문제들은 무시하고 지나가기로 한다.
+위 예시에서는 미묘한 문제가 있다. $\obj(\mathbf{Set})$은 *모든 집합들의 모임*이고, 우리는 이러한 모임이 집합이 되지 못한다는 것을 알고 있다. ([Set Theory, §ZFC 공리계, 예시 4](/ko/math/set_theory/zfc_system#pp4)) 그러나 우리는 해당 예시에서 (strongly) inaccessible cardinal의 존재를 가정한다면 이런 문제를 피해갈 수 있다는 것을 아주 간략하게 언급하기도 했었다. 그 때와 마찬가지로, 우리는 이번에도 이런 집합론적인 문제들은 무시하고 지나가기로 한다.
 
 마저 예시를 살펴보자.
 

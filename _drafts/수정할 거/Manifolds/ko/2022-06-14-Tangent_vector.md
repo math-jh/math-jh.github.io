@@ -45,9 +45,9 @@ $$\lim_{t\rightarrow 0}\frac{f(p+tv)-f(p)}{t}$$
 
 어쨌든 germ이라는 것은 적당한 equivalence relation의 equivalence class이고, 이 equivalence relation은 점 $p$의 어떤 근방에서 일치하는 두 함수를 같게 보는 relation이다. **[War]**를 따라 주어진 함수 $f$에 대하여[^1], 잠시동안 $f$의 germ을 $\mathbf{f}$로 표기하기로 하자. 이 표기법은 썩 좋은 표기법은 아니지만, 어차피 접벡터를 엄밀하게 정의한 이후에는 이를 잘 사용하지 않을 것이다.
 
-조금 더 고상한 표현을 빌리자면, $C^\infty(U)$를 열린집합 $U$ 위에서 정의된 $C^\infty$ 함수들의 모임, 그리고 $U\subseteq V$일 때마다 함수 $\operatorname{res}_{UV}:C^\infty(U)\rightarrow C^\infty(V)$를 
+조금 더 고상한 표현을 빌리자면, $C^\infty(U)$를 열린집합 $U$ 위에서 정의된 $C^\infty$ 함수들의 모임, 그리고 $U\subseteq V$일 때마다 함수 $\restrict_{UV}:C^\infty(U)\rightarrow C^\infty(V)$를 
 
-$$\operatorname{res}_{UV}:f\mapsto f|_V$$
+$$\restrict_{UV}:f\mapsto f|_V$$
 
 으로 정의할 때 germ들은 다음의 direct limit
 
@@ -91,9 +91,9 @@ $$\mathfrak{m}=\{\mathbf{f}\in C^\infty_p(M): \mathbf{f}(p)=0\}$$
 
 우선, 조건 $\mathbf{f}(p)=0$가 잘 정의되었다. 이는 $\mathbf{f}$에 속하는 함수들은 점 $p$에서는 모두 같은 값을 가져야 하기 때문이다. 어렵지 않게 $\mathfrak{m}$이 실제로 ideal이 된다는 것을 알 수 있다. 
 
-또, $\mathfrak{m}$이 maximal인 것은 *evaluation map* $\operatorname{ev}_p:C^\infty_p(M)\rightarrow\mathbb{R}$을 $\mathbf{f}\mapsto\mathbf{f}(p)$로 정의했을 때, 다음의 diagram
+또, $\mathfrak{m}$이 maximal인 것은 *evaluation map* $\ev_p:C^\infty_p(M)\rightarrow\mathbb{R}$을 $\mathbf{f}\mapsto\mathbf{f}(p)$로 정의했을 때, 다음의 diagram
 
-$$0\longrightarrow \mathfrak{m}\longrightarrow C^\infty_p(M)\overset{\operatorname{ev}_p}{\longrightarrow}\mathbb{R}\longrightarrow 0$$
+$$0\longrightarrow \mathfrak{m}\longrightarrow C^\infty_p(M)\overset{\ev_p}{\longrightarrow}\mathbb{R}\longrightarrow 0$$
 
 이 exact인 것으로부터 얻어진다. $C^\infty_p(M)/\mathfrak{m}$이 field가 되기 때문이다.
 
@@ -127,7 +127,7 @@ $$v(\mathbf{f}\mathbf{g})=\mathbf{f}(p)v(\mathbf{g})+\mathbf{g}(p)v(\mathbf{f})$
 
 </div>
 
-$C^\infty_p(M)$와 $\mathbb{R}$ 모두 $\mathbb{R}$-벡터공간이므로, $\operatorname{Hom}_\mathbb{R}(C^\infty_p(M),\mathbb{R})$ 또한 $\mathbb{R}$-벡터공간이다. 따라서 tangent space $T_pM$이 그 이름답게 $\mathbb{R}$-벡터공간이 된다는 것을 보이기 위해서는 $T_pM$이 덧셈과 상수곱에 대해 닫혀있음만 보이면 충분하다.  예를 들어, $v+w$가 다음의 식
+$C^\infty_p(M)$와 $\mathbb{R}$ 모두 $\mathbb{R}$-벡터공간이므로, $\Hom_\mathbb{R}(C^\infty_p(M),\mathbb{R})$ 또한 $\mathbb{R}$-벡터공간이다. 따라서 tangent space $T_pM$이 그 이름답게 $\mathbb{R}$-벡터공간이 된다는 것을 보이기 위해서는 $T_pM$이 덧셈과 상수곱에 대해 닫혀있음만 보이면 충분하다.  예를 들어, $v+w$가 다음의 식
 
 $$(v+w)(\mathbf{f})=v(\mathbf{f})+w(\mathbf{f})$$
 
@@ -170,7 +170,7 @@ $$C_p^\infty(M)\supset\mathfrak{m}\supset\mathfrak{m}^2\supset\cdots$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 임의의 $v\in T_pM$가 주어졌다 하자. 즉, 정의에 의하여 $v$는 $C_p^\infty(M)$에서 $\mathbb{R}$로의 derivation이고, 특히 이를 부분집합 $\mathfrak{m}$으로 restrict하면 $v\|\_\mathfrak{m}\in\operatorname{Hom}_\mathbb{R}(\mathfrak{m},\mathbb{R})$이 성립한다. 이제 $v\|\_\mathfrak{m}$이 linear map $\mathfrak{m}/\mathfrak{m}^2\rightarrow\mathbb{R}$을 잘 정의한다는 것을 보이려면 $\mathfrak{m}^2\subset\ker (v\|\_\mathfrak{m})$임을 보여야 한다. 적당한 index set $I$에 대하여, $\mathfrak{m}$가 $\mathbf{f}_i$들에 의해 생성되는 ideal이라 하자. 그럼 $\mathfrak{m}^2$은 $\mathbf{f}_i\mathbf{f}_j$들에 의하여 생성되는 ideal이다. 그런데
+우선 임의의 $v\in T_pM$가 주어졌다 하자. 즉, 정의에 의하여 $v$는 $C_p^\infty(M)$에서 $\mathbb{R}$로의 derivation이고, 특히 이를 부분집합 $\mathfrak{m}$으로 restrict하면 $v\|\_\mathfrak{m}\in\Hom_\mathbb{R}(\mathfrak{m},\mathbb{R})$이 성립한다. 이제 $v\|\_\mathfrak{m}$이 linear map $\mathfrak{m}/\mathfrak{m}^2\rightarrow\mathbb{R}$을 잘 정의한다는 것을 보이려면 $\mathfrak{m}^2\subset\ker (v\|\_\mathfrak{m})$임을 보여야 한다. 적당한 index set $I$에 대하여, $\mathfrak{m}$가 $\mathbf{f}_i$들에 의해 생성되는 ideal이라 하자. 그럼 $\mathfrak{m}^2$은 $\mathbf{f}_i\mathbf{f}_j$들에 의하여 생성되는 ideal이다. 그런데
 
 $$v(\mathbf{f}_i\mathbf{f}_j)=\mathbf{f}_i(p)v(\mathbf{f}_j)+\mathbf{f}_j(p)v(\mathbf{f}_i)=0$$
 

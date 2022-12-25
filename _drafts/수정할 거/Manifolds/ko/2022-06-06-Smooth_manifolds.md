@@ -63,11 +63,11 @@ $$f\circ\psi^{-1}=(f\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 
 예를 들어 $\mathbb{R}$은 다음의 $C^\infty$-atlas 
 
-$$\mathcal{A}=\{(\mathbb{R}, \operatorname{id}_\mathbb{R})\}$$
+$$\mathcal{A}=\{(\mathbb{R}, \id_\mathbb{R})\}$$
 
 도 갖지만, 또 다른 atlas 
 
-$$\mathcal{A}'=\{((-\infty, 1), \operatorname{id}_{(-\infty, 1)}), ((-1, \infty),\operatorname{id}_{(-1,\infty)})\}$$ 
+$$\mathcal{A}'=\{((-\infty, 1), \id_{(-\infty, 1)}), ((-1, \infty),\id_{(-1,\infty)})\}$$ 
 
 또한 갖는다. 이 두 atlas는 사실상 동일한 구조가 되며, 이와 같이 $\mathbb{R}$ 위에 동일한 미분구조를 주는 방법은 무수히 많을 것이다. 물론 서로 다른 atlas가 같은 미분구조를 줄 수도 있다고 생각하고 넘어갈 수도 있지만, 그 대신 미분구조를 *maximal* atlas가 주는 것으로 생각하면 maximality에 의하여 유일성이 잘 보장된다. 
 
@@ -104,9 +104,9 @@ $$\psi'\circ\psi^{-1}=(\psi'\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 
 <ins id="ex4">**예시 4**</ins> 실수집합 $\mathbb{R}$ 위에 두 개의 atlas
 
-$$\mathcal{A}_1=\{(\mathbb{R},\operatorname{id}_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{R}, x\mapsto x^3)\}$$
+$$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{R}, x\mapsto x^3)\}$$
 
-를 주자. 이들은 하나의 chart로 이루어진 atlas들이므로 당연히 $C^\infty$이다. 앞선 [명제 3](#pp3)에 의하여 이들 각각을 포함하는 미분구조가 존재한다. 그러나 이들은 서로 같지 않다. 두 chart $(\mathbb{R},\operatorname{id}_\mathbb{R})$과 $(\mathbb{R}, x\mapsto x^3)$이 서로 $C^\infty$-compatible이 아니기 때문이다. ($x\mapsto x^3$은 $C^\infty$ 함수지만, 그 역함수 $x\mapsto x^{1/3}$은 그렇지 않다)
+를 주자. 이들은 하나의 chart로 이루어진 atlas들이므로 당연히 $C^\infty$이다. 앞선 [명제 3](#pp3)에 의하여 이들 각각을 포함하는 미분구조가 존재한다. 그러나 이들은 서로 같지 않다. 두 chart $(\mathbb{R},\id_\mathbb{R})$과 $(\mathbb{R}, x\mapsto x^3)$이 서로 $C^\infty$-compatible이 아니기 때문이다. ($x\mapsto x^3$은 $C^\infty$ 함수지만, 그 역함수 $x\mapsto x^{1/3}$은 그렇지 않다)
 
 </div>
 

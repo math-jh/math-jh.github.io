@@ -101,7 +101,7 @@ $$\tilde{f}(x_1\otimes\cdots\otimes x_n)=f(x_1)\cdots f(x_n)$$
 
 ![Uniqueness_of_tensor_algebra_3](/assets/images/Tensor_algebra/Tensor_algebra-4.png){:width="166.95px" class="invert" .align-center}
 
-을 commute하도록 하는 $\mathcal{T}(M)\rightarrow\mathcal{T}(M)$ 또한 유일해야 하는데, $\operatorname{id}\_{\mathcal{T}(M)}$과 $\phi\circ\psi$가 모두 이를 commute하도록 하므로 $\operatorname{id}\_{\mathcal{T}(M)}=\phi\circ\psi$가 성립한다. 비슷하게 $\operatorname{id}\_{\mathcal{T}'(M)}=\psi\circ\phi$가 성립한다.
+을 commute하도록 하는 $\mathcal{T}(M)\rightarrow\mathcal{T}(M)$ 또한 유일해야 하는데, $\id\_{\mathcal{T}(M)}$과 $\phi\circ\psi$가 모두 이를 commute하도록 하므로 $\id\_{\mathcal{T}(M)}=\phi\circ\psi$가 성립한다. 비슷하게 $\id\_{\mathcal{T}'(M)}=\psi\circ\phi$가 성립한다.
 
 </details>
 
@@ -205,7 +205,7 @@ $$x\otimes y=x_1\otimes \cdots\otimes x_{r_1}\otimes y_1\otimes \cdots\otimes y_
 
 정의에 의해 $\mathcal{T}^{r,0}(M)=\mathcal{T}^r(M)$이고 $\mathcal{T}^{0,s}(M)=\mathcal{T}^s(M^\ast)$이다. 만일 $M$이 finitely generated projective $A$-module이라면 
 
-$$\theta_M:M^\ast_AM\rightarrow\operatorname{End}_A(M)$$
+$$\theta_M:M^\ast_AM\rightarrow\End_A(M)$$
 
 을 다음의 식
 

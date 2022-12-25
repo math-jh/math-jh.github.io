@@ -105,7 +105,7 @@ $$dF_p(v)=(F\circ\gamma)'(0)$$
 
 ## 벡터공간의 접공간
 
-우리는 앞서 [§미분다양체의 예시들, 예시 2](/ko/math/manifold/examples_of_manifolds#ex2)에서 임의의 $m$차원 $\mathbb{R}$-벡터공간 $V$가 $m$차원의 manifold 구조를 갖는다는 것을 살펴봤다. 그럼 임의의 점 $x\in V$에 대하여, 점 $x$에서의 tangent space $T_xV$ 또한 manifold $V$의 차원과 동일한 차원을 가지므로 $\dim T_xV=m$이 성립한다. 따라서 $V\cong T_xV$가 성립해야 한다. 
+우리는 앞서 [§미분다양체의 예시들, ⁋예시 2](/ko/math/manifold/examples_of_manifolds#ex2)에서 임의의 $m$차원 $\mathbb{R}$-벡터공간 $V$가 $m$차원의 manifold 구조를 갖는다는 것을 살펴봤다. 그럼 임의의 점 $x\in V$에 대하여, 점 $x$에서의 tangent space $T_xV$ 또한 manifold $V$의 차원과 동일한 차원을 가지므로 $\dim T_xV=m$이 성립한다. 따라서 $V\cong T_xV$가 성립해야 한다. 
 
 이는 본질적으로 유클리드 공간에서 $\mathbb{R}^m$의 표준벡터들과, $T_x\mathbb{R}^m$의 basis들
 
@@ -172,9 +172,9 @@ $$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> $n\times n$ 행렬들의 모임 $\operatorname{Mat}_n(\mathbb{R})$은 $n^2$차원 $\mathbb{R}$-벡터공간이다. 따라서, $\operatorname{Mat}_n(\mathbb{R})$의 임의의 점에서의 tangent space는 $\operatorname{Mat}_n(\mathbb{R})$과 동일하다. 
+<ins id="ex5">**예시 5**</ins> $n\times n$ 행렬들의 모임 $\Mat_n(\mathbb{R})$은 $n^2$차원 $\mathbb{R}$-벡터공간이다. 따라서, $\Mat_n(\mathbb{R})$의 임의의 점에서의 tangent space는 $\Mat_n(\mathbb{R})$과 동일하다. 
 
-특별히 $\operatorname{Mat}_n(\mathbb{R})$의 open submanifold인 $\operatorname{GL}_n(\mathbb{R})$을 생각하면, $\operatorname{GL}_n(\mathbb{R})$의 임의의 원소에서의 tangent space는 이 원소를 $\operatorname{Mat}_n(\mathbb{R})$의 원소로 보았을 때의 tangent space와 동일하고, 따라서 $\operatorname{Mat}_n(\mathbb{R})$과 같다. 
+특별히 $\Mat_n(\mathbb{R})$의 open submanifold인 $\GL_n(\mathbb{R})$을 생각하면, $\GL_n(\mathbb{R})$의 임의의 원소에서의 tangent space는 이 원소를 $\Mat_n(\mathbb{R})$의 원소로 보았을 때의 tangent space와 동일하고, 따라서 $\Mat_n(\mathbb{R})$과 같다. 
 
 </div>
 
@@ -222,7 +222,7 @@ $$dx^i|_p\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\frac{\partial}{\par
 
 </details>
 
-위 증명은 우리가 tangent space를 처음 도입할 때 증명했던 [§여접공간, 보조정리 1](/ko/math/manifold/cotangent_space#lem1)을 떠올리면 좀 더 그럴듯하다. 즉 첫째 등식에서 둘째 식으로 넘어가는 것은 differential $dx^i\|\_p$의 정의이기도 하지만, 동시에 
+위 증명은 우리가 tangent space를 처음 도입할 때 증명했던 [§여접공간, ⁋보조정리 1](/ko/math/manifold/cotangent_space#lem1)을 떠올리면 좀 더 그럴듯하다. 즉 첫째 등식에서 둘째 식으로 넘어가는 것은 differential $dx^i\|\_p$의 정의이기도 하지만, 동시에 
 
 $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_p/\mathfrak{m}^2_p$$
 

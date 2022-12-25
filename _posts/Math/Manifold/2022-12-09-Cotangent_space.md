@@ -21,7 +21,7 @@ weight: 4
 
 앞선 글에서 $T_pM$은 $\mathbb{R}$-벡터공간이 된다는 것을 살펴보았다. 이제 우리는 $T_pM$이 실은 유한차원이라는 것을 보일 것인데, 이를 직접 보이는 대신 $T_pM$의 dual space가 유한차원임을 보인다.
 
-[§접공간, 명제 2](/ko/math/manifold/tangent_space#pp2)에 의하여, $\mathcal{C}^\infty_p$의 ideal들의 descending chain
+[§접공간, ⁋명제 2](/ko/math/manifold/tangent_space#pp2)에 의하여, $\mathcal{C}^\infty_p$의 ideal들의 descending chain
 
 $$\mathcal{C}^\infty_p\supset\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$$
 
@@ -35,7 +35,7 @@ $$\mathcal{C}^\infty_p\supset\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 임의의 $v\in T\_pM$가 주어졌다 하자. 이를 부분집합 $\mathfrak{m}\_p$으로 restrict하면 $v\|\_{\mathfrak{m}\_p}\in\operatorname{Hom}_\mathbb{R}(\mathfrak{m}_p,\mathbb{R})$이 성립한다. 이제 $v\|\_{\mathfrak{m}_p}$이 linear map $\mathfrak{m}_p/\mathfrak{m}_p^2\rightarrow\mathbb{R}$을 잘 정의한다는 것을 보이려면 $\mathfrak{m}_p^2\subset\ker (v\|\_{\mathfrak{m}_p})$임을 보여야 한다. 적당한 index set $I$에 대하여, $\mathfrak{m}_p$가 $\mathbf{f}_i$들에 의해 생성되는 ideal이라 하자. 그럼 $\mathfrak{m}_p^2$은 $\mathbf{f}_i\mathbf{f}_j$들에 의하여 생성되는 ideal이다. 그런데
+우선 임의의 $v\in T\_pM$가 주어졌다 하자. 이를 부분집합 $\mathfrak{m}\_p$으로 restrict하면 $v\|\_{\mathfrak{m}\_p}\in\Hom_\mathbb{R}(\mathfrak{m}_p,\mathbb{R})$이 성립한다. 이제 $v\|\_{\mathfrak{m}_p}$이 linear map $\mathfrak{m}_p/\mathfrak{m}_p^2\rightarrow\mathbb{R}$을 잘 정의한다는 것을 보이려면 $\mathfrak{m}_p^2\subset\ker (v\|\_{\mathfrak{m}_p})$임을 보여야 한다. 적당한 index set $I$에 대하여, $\mathfrak{m}_p$가 $\mathbf{f}_i$들에 의해 생성되는 ideal이라 하자. 그럼 $\mathfrak{m}_p^2$은 $\mathbf{f}_i\mathbf{f}_j$들에 의하여 생성되는 ideal이다. 그런데
 
 $$v(\mathbf{f}_i\mathbf{f}_j)=\mathbf{f}_i(p)v(\mathbf{f}_j)+\mathbf{f}_j(p)v(\mathbf{f}_i)=0$$
 
@@ -45,7 +45,7 @@ $$v(\mathbf{f}_i\mathbf{f}_j)=\mathbf{f}_i(p)v(\mathbf{f}_j)+\mathbf{f}_j(p)v(\m
 
 $$v_L(\mathbf{f})=L((\mathbf{f}-\mathbf{f(p)})+\mathfrak{m}_p^2)$$
 
-으로 정의하는 것이 잘 정의된다. 이렇게 정의된 $v_L$이 linear map일 뿐만 아니라 [§접공간, 정의 3](/ko/math/manifold/tangent_space#df3)도 만족한다는 것을 보여야 하므로, 
+으로 정의하는 것이 잘 정의된다. 이렇게 정의된 $v_L$이 linear map일 뿐만 아니라 [§접공간, ⁋정의 3](/ko/math/manifold/tangent_space#df3)도 만족한다는 것을 보여야 하므로, 
 
 $$\begin{aligned}
             v_L(\mathbf{f}\cdot\mathbf{g})&=L((\mathbf{fg}-\mathbf{f(p)g(p)})+\mathfrak{m}_p^2)\\

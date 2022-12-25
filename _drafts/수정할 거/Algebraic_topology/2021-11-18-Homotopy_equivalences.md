@@ -88,7 +88,7 @@ $$F(s,0)=f_0(s),\quad F(s,1)=f_1(s),\quad F(0,t)=x_0,\quad F(1,t)=x_1$$
 
 <ins id="df5">**정의 5**</ins> Topological space $X$와 그 subspace $A$가 주어졌다 하자. 그럼 $X$에서 $A$로의 *deformation retraction*이라는 것은 
 
-$$f_0=\operatorname{id}_X, \quad f_1(X)=A,\quad f_t|_A=\operatorname{id}_A$$
+$$f_0=\id_X, \quad f_1(X)=A,\quad f_t|_A=\id_A$$
 
 를 만족하는 continuous map들의 family $(f_t)_{0\leq t\leq 1}$를 의미한다.
 
@@ -98,11 +98,11 @@ Deformation retract는, notation에서 볼 수 있듯이, 일종의 homotopy로 
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> Topological space $X$와 그 subspace $A$에 대하여, continuous map $r:X\rightarrow X$가 $A$ 위로의 *retraction*이라는 것은 $r(X)=A$이고 $r\|\_A=\operatorname{id}_A$가 성립하는 것이다. 
+<ins id="df6">**정의 6**</ins> Topological space $X$와 그 subspace $A$에 대하여, continuous map $r:X\rightarrow X$가 $A$ 위로의 *retraction*이라는 것은 $r(X)=A$이고 $r\|\_A=\id_A$가 성립하는 것이다. 
 
 </div>
 
-Deformation retract의 정의에 의해, $f_1(X)=A$이고, 또 마지막 조건에 $t=1$을 대입하면 $f_1\|\_A=\operatorname{id}_A$이므로 앞서 등장한 $f_1$은 retract여야 한다.[^2] 따라서 deformation retract는 다음 조건을 만족하는, identity map $\operatorname{id}_X$에서 retraction $f_1$로의 homotopy라 볼 수 있다.
+Deformation retract의 정의에 의해, $f_1(X)=A$이고, 또 마지막 조건에 $t=1$을 대입하면 $f_1\|\_A=\id_A$이므로 앞서 등장한 $f_1$은 retract여야 한다.[^2] 따라서 deformation retract는 다음 조건을 만족하는, identity map $\id_X$에서 retraction $f_1$로의 homotopy라 볼 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -110,11 +110,11 @@ Deformation retract의 정의에 의해, $f_1(X)=A$이고, 또 마지막 조건�
 
 </div>
 
-이제 homotopy equivalence를 정의하자. 앞서 살펴본 것과 같이, 만약 $X$가 subspace $A$로 deformation retract한다고 하자. $r:X\rightarrow A$를 이 때의 retraction (즉 $f_1$) 이라 하고, $i:A\rightarrow X$를 canonical injection이라 하면 $ri=\operatorname{id}_A$이다. $ir$은 정확하게 identity map이 되지는 않지만, 그 대신 $\operatorname{id}_X$와 homotopic하다. Deformation retract의 정의에 사용된 $f_t$들이 정확히 $\operatorname{id}_X$와 $ir=r$ 사이의 homotopy를 정의하기 때문이다. 이를 일반화한 게 homotopy equivalence다.
+이제 homotopy equivalence를 정의하자. 앞서 살펴본 것과 같이, 만약 $X$가 subspace $A$로 deformation retract한다고 하자. $r:X\rightarrow A$를 이 때의 retraction (즉 $f_1$) 이라 하고, $i:A\rightarrow X$를 canonical injection이라 하면 $ri=\id_A$이다. $ir$은 정확하게 identity map이 되지는 않지만, 그 대신 $\id_X$와 homotopic하다. Deformation retract의 정의에 사용된 $f_t$들이 정확히 $\id_X$와 $ir=r$ 사이의 homotopy를 정의하기 때문이다. 이를 일반화한 게 homotopy equivalence다.
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> 두 개의 topological space $X$, $Y$가 주어졌다고 하자. Continuous map $f:X\rightarrow Y$가 *homotopy equivalence*라는 것은, 적당한 map $g:Y\rightarrow X$가 존재하여 $fg\simeq\operatorname{id}_Y$이고 $gf\simeq \operatorname{id}_X$가 성립하는 것이다. $X$와 $Y$ 사이에 homotopy equivalence가 존재한다면, $X$와 $Y$가 *homotopy equivalent*하다 (혹은 같은 homotopy type을 갖는다)고 하고, 이를 $X\simeq Y$로 적는다.
+<ins id="df8">**정의 8**</ins> 두 개의 topological space $X$, $Y$가 주어졌다고 하자. Continuous map $f:X\rightarrow Y$가 *homotopy equivalence*라는 것은, 적당한 map $g:Y\rightarrow X$가 존재하여 $fg\simeq\id_Y$이고 $gf\simeq \id_X$가 성립하는 것이다. $X$와 $Y$ 사이에 homotopy equivalence가 존재한다면, $X$와 $Y$가 *homotopy equivalent*하다 (혹은 같은 homotopy type을 갖는다)고 하고, 이를 $X\simeq Y$로 적는다.
 
 </div>
 

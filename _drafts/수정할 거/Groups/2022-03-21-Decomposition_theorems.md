@@ -32,9 +32,9 @@ published: false
 <ins id="df1">**정의 1**</ins> 두 group $F,G$가 주어졌다 하자. Group $G$를 $F$를 통해 *extend*한다는 것은 다음과 같은 성질을 만족하는 triple $(E,i,p)$를 찾는 것이다.
 
 1. $E$는 group이며, $i:F\rightarrow E$는 injective homomorphism, $p:F\rightarrow G$는 surjective homomorphism이다.
-2. $\operatorname{im}i=\ker p$가 성립한다.
+2. $\imi=\ker p$가 성립한다.
 
-이 때, $r\circ i=\operatorname{id}_F$를 만족하는 $r:E\rightarrow F$와, $p\circ s=\operatorname{id}_G$를 만족하는 $s:G\rightarrow E$를 각각 이 extension의 *retraction*과 *section*이라 부른다. ([Set Theory, §함수, 정의 10](/ko/math/set_theory/functions#df10))
+이 때, $r\circ i=\id_F$를 만족하는 $r:E\rightarrow F$와, $p\circ s=\id_G$를 만족하는 $s:G\rightarrow E$를 각각 이 extension의 *retraction*과 *section*이라 부른다. ([Set Theory, §함수, 정의 10](/ko/math/set_theory/functions#df10))
 
 </div>
 

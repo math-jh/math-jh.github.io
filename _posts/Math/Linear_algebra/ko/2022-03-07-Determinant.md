@@ -25,7 +25,7 @@ weight: 20
 
 행렬을 살펴볼 때 가장 기본이 되는 도구는 행렬식이다. 행렬식은 $n$차 정사각행렬 $A$에 대응되는 스칼라 $\det A$이며, 대수적으로 행렬식은 그 값이 $0$인지 아닌지에 따라 $A^{-1}$의 존재 여부를 결정해주는 실수로 볼 수 있다. 행렬식을 계산하는 방법에는 여러가지가 있고, 이들 중 일부는 정의로 받아들여지기도 하지만 이들 중 어떤 것도 행렬식의 본질적인 의미를 담지 못한다. 우리는 우선 행렬식을 올바르게 정의한 후, 이에 대한 존재성을 증명하는 과정에서 행렬식의 계산을 소개한다.
 
-행렬식은 $\operatorname{Mat}_n(F)$에서 $F$로의 함수이다. 이제 $\operatorname{Mat}_n(F)$의 각 행렬들을 $F^n$에 속하는 $n$개의 벡터들의 모임으로 생각하면 행렬식은 $(F^n)^n$, 즉 벡터공간 $F^n$을 $n$개 곱한 공간에서 $F$로의 함수가 된다. 따라서 임의의 행렬 $A\in\operatorname{Mat}_n(F)$에 대하여, 우리는 $A$의 행렬식을 $\det(A)$로도 표기하고, 동시에 $A$의 열벡터들을 이용해 $\det(A_1,\ldots, A_n)$으로 표기하기도 한다. 이는 곧 두 $n^2$차원 $F$-벡터공간 $\operatorname{Mat}_n(F)$와 $(F^n)^n\cong F^{n^2}$을 다음의 isomorphism
+행렬식은 $\Mat_n(F)$에서 $F$로의 함수이다. 이제 $\Mat_n(F)$의 각 행렬들을 $F^n$에 속하는 $n$개의 벡터들의 모임으로 생각하면 행렬식은 $(F^n)^n$, 즉 벡터공간 $F^n$을 $n$개 곱한 공간에서 $F$로의 함수가 된다. 따라서 임의의 행렬 $A\in\Mat_n(F)$에 대하여, 우리는 $A$의 행렬식을 $\det(A)$로도 표기하고, 동시에 $A$의 열벡터들을 이용해 $\det(A_1,\ldots, A_n)$으로 표기하기도 한다. 이는 곧 두 $n^2$차원 $F$-벡터공간 $\Mat_n(F)$와 $(F^n)^n\cong F^{n^2}$을 다음의 isomorphism
 
 $$A=(A_1\;A_2\;\cdots\;A_n)\cong (A_1, A_2, \cdots, A_n)\cong \bigl((A_{11}, A_{21}, \ldots, A_{n1}), (A_{12},A_{22},\ldots, A_{n2}),\ldots, (A_{1n},A_{2n},\ldots, A_{nn})\bigr)$$
 
@@ -41,7 +41,7 @@ $$f:\underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightar
 
 </div>
 
-특별히 $n=2$인 경우, $f$를 *bilinear*하다고 부른다. ([§쌍대공간, 정의 1](/ko/math/linear_algebra/dual_space#df1))
+특별히 $n=2$인 경우, $f$를 *bilinear*하다고 부른다. ([§쌍대공간, ⁋정의 1](/ko/math/linear_algebra/dual_space#df1))
 
 <div class="definition" markdown="1">
 

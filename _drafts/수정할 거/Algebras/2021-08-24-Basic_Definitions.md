@@ -40,7 +40,7 @@ Algebra는 보통 학부 때에는 잘 다루지 않는 구조인데, 대학원�
 </div>
 
 위의 정의에서의 $R$-bilinear map을 algebra $A$에서의 곱셈으로 정의한다. $R$이 bilinear라는 사실로부터, algebra의 곱셈이 $R$-module의 덧셈과의 분배법칙을 갖는다는 사실을 확인할 수 있다. 따라서 $R$-algebra라는 구조는 $R$-module인 동시에 스스로가 ring처럼 행동하는 구조다. 그러나 $R$-algebra의 곱셈은 1을 가질 필요도, commutative할 필요도 없으며 심지어는 associative할 필요도 없다.  
-어쨌든, $A$는 기본적으로 $R$-module이므로 $A$의 원소들의 linear combination $\sum \alpha_ix_i$를 생각할 수 있다. (물론, 지금까지 그래왔듯 $\operatorname{supp}(\alpha_i)_{i\in I}$가 finite라는 것은 언급할 필요도 없이 당연하게 붙어있는 조건이다.) 그럼 임의의 두 linear combination
+어쨌든, $A$는 기본적으로 $R$-module이므로 $A$의 원소들의 linear combination $\sum \alpha_ix_i$를 생각할 수 있다. (물론, 지금까지 그래왔듯 $\supp(\alpha_i)_{i\in I}$가 finite라는 것은 언급할 필요도 없이 당연하게 붙어있는 조건이다.) 그럼 임의의 두 linear combination
 
 $$\sum_{i\in I}\alpha_ix_i,\qquad \sum_{j\in J}\beta_jy_j$$
 
@@ -52,10 +52,10 @@ $$\left(\sum_{i\in I}\alpha_ix_i\right)\left(\sum_{j\in J}\beta_jy_j\right)=\sum
 
 $$(\alpha x)y=(\alpha 1)\cdot (xy)=\alpha\cdot(xy)=(1\alpha)\cdot(xy)=x(\alpha y)$$
 
-을 얻는다. Ring에서와 같이, 곱셈 $(x,y)\mapsto xy$를 거꾸로 $(x,y)\mapsto yx$로 주어도 algebra structure를 얻으며, 이렇게 얻어진 구조를 *opposite algebra*라고 부르고 $A^\mathrm{op}$으로 적고, $A$에서 $A^\mathrm{op}$으로 가는 isomorphism은 *anti-automorphism*이라 부른다. 또, 만일 $A=A^\mathrm{op}$라면 (즉 algebra의 곱셈이 commutative하다면) $A$가 commutative하다고 부르고, algebra의 곱셈이 associative하다면 $A$가 associative하다고 한다. 마지막으로 만일 $A$가 곱셈에 대한 항등원을 가진다면 이 원소를 *unit element*라 부르고, algebra를 *unital algebra*라 부른다. 
+을 얻는다. Ring에서와 같이, 곱셈 $(x,y)\mapsto xy$를 거꾸로 $(x,y)\mapsto yx$로 주어도 algebra structure를 얻으며, 이렇게 얻어진 구조를 *opposite algebra*라고 부르고 $A^\op$으로 적고, $A$에서 $A^\op$으로 가는 isomorphism은 *anti-automorphism*이라 부른다. 또, 만일 $A=A^\op$라면 (즉 algebra의 곱셈이 commutative하다면) $A$가 commutative하다고 부르고, algebra의 곱셈이 associative하다면 $A$가 associative하다고 한다. 마지막으로 만일 $A$가 곱셈에 대한 항등원을 가진다면 이 원소를 *unit element*라 부르고, algebra를 *unital algebra*라 부른다. 
 
 <div class="example" markdown="1">
-<ins id="ex2">**예시 2**</ins> 일반적으로 algebra는 associative할 필요도, commutative할 필요도, unital일 필요도 없다. 간단한 예시로, 실수 $\mathbb{R}$ 위에서 정의된 general linear group $\operatorname{GL}_n(\mathbb{R})$을 생각하자. 여기에서 $\mathbb{R}$-module ($\mathbb{R}$은 field이므로, 사실은 $\mathbb{R}$-vector space) 구조는 그냥 자연스럽게 $n^2$-dimensional $\mathbb{R}$-vector space 구조로 주어진다. 만일 여기에 자연스러운 행렬의 곱셈을 준다면, $\operatorname{GL}_n(\mathbb{R})$은 associative unital $\mathbb{R}$-algebra가 된다.  그런데 일반적인 곱셈 대신, 다음의 *bracket*
+<ins id="ex2">**예시 2**</ins> 일반적으로 algebra는 associative할 필요도, commutative할 필요도, unital일 필요도 없다. 간단한 예시로, 실수 $\mathbb{R}$ 위에서 정의된 general linear group $\GL_n(\mathbb{R})$을 생각하자. 여기에서 $\mathbb{R}$-module ($\mathbb{R}$은 field이므로, 사실은 $\mathbb{R}$-vector space) 구조는 그냥 자연스럽게 $n^2$-dimensional $\mathbb{R}$-vector space 구조로 주어진다. 만일 여기에 자연스러운 행렬의 곱셈을 준다면, $\GL_n(\mathbb{R})$은 associative unital $\mathbb{R}$-algebra가 된다.  그런데 일반적인 곱셈 대신, 다음의 *bracket*
 
 $$[X,Y]=XY-YX$$
 
@@ -145,7 +145,7 @@ Algebra의 곱셈은 ring의 곱셈과 이름만 같지 얼마든지 다르게 �
 
 이 commutative diagram이라는 것과 동치이다. 한편, canonical하게 $R$-module들 $A\otimes_RA\otimes_RA\cong (A\otimes_RA)\otimes_RA\cong A\otimes_R(A\otimes_RA)$을 identify하고, 두 개의 map
 
-$$m\otimes\operatorname{id}_A: (A\otimes_RA)\otimes_RA\rightarrow A\otimes_RA,\qquad \operatorname{id}_A\otimes_RA: A\otimes_R(A\otimes_RA)\rightarrow A\otimes_RA$$
+$$m\otimes\id_A: (A\otimes_RA)\otimes_RA\rightarrow A\otimes_RA,\qquad \id_A\otimes_RA: A\otimes_R(A\otimes_RA)\rightarrow A\otimes_RA$$
 
 을 생각한다면, $R$-algebra $A$가 associative하다는 것은 다음의 diagram
 
@@ -202,13 +202,13 @@ $$\eta(r_1r_2)=(r_1r_2)\cdot e=(r_1r_2)\cdot(ee)=(r_1\cdot e)(r_2\cdot e)=\eta(r
 
 $$r\cdot x=(r1)\cdot(ex)=(r\cdot e)(1\cdot x)=\eta(r)x\tag{2}$$
 
-이므로, $\eta$라는 함수의 값만 정확히 알고 있다면 우리는 $A$ 위에서의 module structure를 거꾸로 복원해낼 수도 있다. 이 이야기는 잠시 뒤에 하기로 하고... 아무튼 $\eta$는 앞서 말한 것과 같이 $R$-algebra homomorphism이므로 $\eta$의 image는 $A$의 subalgebra가 되고, 또 임의의 $a\in A$와, $\eta(r)\in \operatorname{im}\eta$에 대하여
+이므로, $\eta$라는 함수의 값만 정확히 알고 있다면 우리는 $A$ 위에서의 module structure를 거꾸로 복원해낼 수도 있다. 이 이야기는 잠시 뒤에 하기로 하고... 아무튼 $\eta$는 앞서 말한 것과 같이 $R$-algebra homomorphism이므로 $\eta$의 image는 $A$의 subalgebra가 되고, 또 임의의 $a\in A$와, $\eta(r)\in \im\eta$에 대하여
 
 $$\eta(r)a=(r\cdot e)(1\cdot a)=(r1)\cdot(ea)=(1r)\cdot(ae)=(1\cdot a)(r\cdot e)=a\eta(r)$$
 
-이 성립하므로 $\operatorname{im}\eta$는 $A$의 모든 원소와 commute한다. 이제 $\ker\eta$를 생각해보자. 정의에 의해 $r\in\ker\eta\iff\eta(r)=0\iff r\cdot e=0$이므로, $\ker\eta$는 정확히 $e\in A$의 annihilator ideal이 되며, 앞서 $\eta$가 식 (2)와 같이 $A$ 위에 $R$-module structure를 주는 것을 확인하였으므로 사실 $\ker\eta$는 $A$의 annihilator ideal이기도 하다. 
+이 성립하므로 $\im\eta$는 $A$의 모든 원소와 commute한다. 이제 $\ker\eta$를 생각해보자. 정의에 의해 $r\in\ker\eta\iff\eta(r)=0\iff r\cdot e=0$이므로, $\ker\eta$는 정확히 $e\in A$의 annihilator ideal이 되며, 앞서 $\eta$가 식 (2)와 같이 $A$ 위에 $R$-module structure를 주는 것을 확인하였으므로 사실 $\ker\eta$는 $A$의 annihilator ideal이기도 하다. 
 
-아까 미뤄뒀던 이야기를 마저 해 보자. 만일 $A$가 associative unital $R$-algebra라면, $A$의 덧셈과 곱셈 구조는 정확하게 ring structure를 주고, 이 때 위에서 정의한 $\eta$가 ring homomorphism이 되는 것은 자명하다. 그런데 이 과정은 거꾸로 할 수도 있다. 즉, 임의의 ring homomorphism $\rho: R\rightarrow S$가 주어졌다고 하자. ($S$는 commutative ring with unity일 필요가 없다.) 만일 $\operatorname{im}\rho$의 모든 원소가 $S$의 원소들과 commute한다면, 즉 $\operatorname{im}\rho$가 $S$의 center에 포함된다면 $\rho$는 다음의 식
+아까 미뤄뒀던 이야기를 마저 해 보자. 만일 $A$가 associative unital $R$-algebra라면, $A$의 덧셈과 곱셈 구조는 정확하게 ring structure를 주고, 이 때 위에서 정의한 $\eta$가 ring homomorphism이 되는 것은 자명하다. 그런데 이 과정은 거꾸로 할 수도 있다. 즉, 임의의 ring homomorphism $\rho: R\rightarrow S$가 주어졌다고 하자. ($S$는 commutative ring with unity일 필요가 없다.) 만일 $\im\rho$의 모든 원소가 $S$의 원소들과 commute한다면, 즉 $\im\rho$가 $S$의 center에 포함된다면 $\rho$는 다음의 식
 
 $$r\cdot x=\rho(r)x$$
 

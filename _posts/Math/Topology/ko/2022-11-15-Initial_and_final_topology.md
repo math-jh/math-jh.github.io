@@ -1,6 +1,6 @@
 ---
 
-title: "Initial topology와 final topology<sup>†</sup>"
+title: "Initial topology와 final topology"
 excerpt: "Initial/final topology와 그 예시들"
 
 categories: [Math / Topology]
@@ -17,7 +17,7 @@ weight: 6
 
 ---
 
-[§연속함수, 예시 5](/ko/math/topology/continuous_functions#ex5)에서 함수 $\operatorname{id}$가 연속함수인 것은 정확하게 $\mathcal{T}_Y$가 $\mathcal{T}_X$보다 약한 위상이기 때문에 일어나는 일이다. ([§열린집합, 정의 3](/ko/math/topology/open_sets#df3)) 
+[§연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5)에서 함수 $\id$가 연속함수인 것은 정확하게 $\mathcal{T}_Y$가 $\mathcal{T}_X$보다 약한 위상이기 때문에 일어나는 일이다. ([§열린집합, ⁋정의 3](/ko/math/topology/open_sets#df3)) 
 
 ## Initial topology
 
@@ -43,7 +43,7 @@ $$\mathcal{S}=\{f_i^{-1}(U_i): \text{$U_i$ open in $Y_i$}\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Initial topology를 $\mathcal{T}\_\mathrm{ini}$으로 적고, $\mathcal{S}$를 subbasis로 하여 생성된 위상을 $\mathcal{T}$로 적자. $\mathcal{T}$는 정의에 의해 $f_i$들을 모두 연속으로 만들기 때문에, $\mathcal{T}\_\mathrm{ini}$는 $\mathcal{T}$보다 약한 위상이다. 따라서 $\mathcal{T}$가 $\mathcal{T}\_\mathrm{ini}$보다 약한 위상이라는 것만 보이면 충분한데, 이는 $\mathcal{T}$가 $\mathcal{S}$를 포함하는 위상 중 가장 약한 위상이기 때문에 자명하다.
+Initial topology를 $\mathcal{T}\_\ini$으로 적고, $\mathcal{S}$를 subbasis로 하여 생성된 위상을 $\mathcal{T}$로 적자. $\mathcal{T}$는 정의에 의해 $f_i$들을 모두 연속으로 만들기 때문에, $\mathcal{T}\_\ini$는 $\mathcal{T}$보다 약한 위상이다. 따라서 $\mathcal{T}$가 $\mathcal{T}\_\ini$보다 약한 위상이라는 것만 보이면 충분한데, 이는 $\mathcal{T}$가 $\mathcal{S}$를 포함하는 위상 중 가장 약한 위상이기 때문에 자명하다.
 
 </details>
 
@@ -86,7 +86,7 @@ $X$에 trivial topology가 주어졌다 하면, $X$로의 임의의 함수는 �
 
 <ins id="pp7">**명제 5**</ins> [정의 4](#df4)의 위상은 다음의 집합
 
-$$\mathcal{T}_\mathrm{fin}=\{U\subseteq X:f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
+$$\mathcal{T}_\fin=\{U\subseteq X:f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
 
 으로 정의된다.
 
@@ -94,9 +94,9 @@ $$\mathcal{T}_\mathrm{fin}=\{U\subseteq X:f^{-1}_i(U)\text{ is open in $Y_i$ for
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-주어진 위상 $\mathcal{T}\_\mathrm{fin}$가 실제로 위상이 된다는 것은 쉽게 확인할 수 있다. 따라서 $\mathcal{T}\_\mathrm{fin}$가 [정의 4](#df4)의 조건을 모두 만족한다는 것만 보이면 충분하다. 
+주어진 위상 $\mathcal{T}\_\fin$가 실제로 위상이 된다는 것은 쉽게 확인할 수 있다. 따라서 $\mathcal{T}\_\fin$가 [정의 4](#df4)의 조건을 모두 만족한다는 것만 보이면 충분하다. 
 
-우선, 임의의 $U\in\mathcal{T}\_\mathrm{fin}$와, 임의의 $i$에 대하여 $f_i^{-1}(U)$가 $Y_i$에서 open인 것은 $\mathcal{T}\_\mathrm{fin}$의 정의로부터 명확하다. 한편, $X$ 위에 주어진 조건을 만족하는 또 다른 topology $\mathcal{T}$가 주어졌다 하자. 그럼 임의의 $U\in\mathcal{T}$에 대하여, $f^{-1}_i(U)$가 $Y_i$에서 연속이어야 한다. 따라서, $\mathcal{T}\_\mathrm{fin}$의 정의에 의해 $U\in\mathcal{T}\_\mathrm{fin}$이고 따라서 $\mathcal{T}\_\mathrm{fin}$가 $\mathcal{T}$보다 강하다.
+우선, 임의의 $U\in\mathcal{T}\_\fin$와, 임의의 $i$에 대하여 $f_i^{-1}(U)$가 $Y_i$에서 open인 것은 $\mathcal{T}\_\fin$의 정의로부터 명확하다. 한편, $X$ 위에 주어진 조건을 만족하는 또 다른 topology $\mathcal{T}$가 주어졌다 하자. 그럼 임의의 $U\in\mathcal{T}$에 대하여, $f^{-1}_i(U)$가 $Y_i$에서 연속이어야 한다. 따라서, $\mathcal{T}\_\fin$의 정의에 의해 $U\in\mathcal{T}\_\fin$이고 따라서 $\mathcal{T}\_\fin$가 $\mathcal{T}$보다 강하다.
 
 </details>
 

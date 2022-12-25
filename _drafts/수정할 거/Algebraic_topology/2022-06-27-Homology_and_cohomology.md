@@ -29,9 +29,9 @@ weight: 101
 
 $$C_\bullet:\qquad\cdots C_{n+1}\overset{d_{n+1}}{\longrightarrow}C_n\overset{d_n}{\longrightarrow} C_{n-1}\longrightarrow\cdots$$
 
-에서 항상 $d_{n-1}d_n=0$, 혹은 더 간단히 $d^2=0$이 성립하는 것이다. 이는 곧 $\operatorname{im}(d_n)\subseteq\ker d_{n-1}$이 항상 성립한다는 것과 동치이며, 특별히 모든 $n$에 대해 $\operatorname{im}(d_n)=\ker(d_{n-1})$이 성립하면 우리는 $C_\bullet$이 *exact sequence*라 부른다. 이 때, $C_\bullet$의 $n$번째 *homology group<sub>호몰로지 군</sub>*[^1]은 다음의 식
+에서 항상 $d_{n-1}d_n=0$, 혹은 더 간단히 $d^2=0$이 성립하는 것이다. 이는 곧 $\im(d_n)\subseteq\ker d_{n-1}$이 항상 성립한다는 것과 동치이며, 특별히 모든 $n$에 대해 $\im(d_n)=\ker(d_{n-1})$이 성립하면 우리는 $C_\bullet$이 *exact sequence*라 부른다. 이 때, $C_\bullet$의 $n$번째 *homology group<sub>호몰로지 군</sub>*[^1]은 다음의 식
 
-$$H_n(C_\bullet)=\ker(d_{n-1})/\operatorname{im}(d_n)$$
+$$H_n(C_\bullet)=\ker(d_{n-1})/\im(d_n)$$
 
 으로 정의된다. 따라서 모든 $n$에 대해 $C_\bullet$의 homology group이 모두 $0$이라면 $C_\bullet$은 exact sequence가 된다. 
 
@@ -41,7 +41,7 @@ $$C^\bullet:\qquad\cdots C^{n-1}\overset{d^{n-1}}{\longrightarrow}C^n\overset{d^
 
 에서 다음의 식
 
-$$H^n(C^\bullet)=\ker(d^n)/\operatorname{im}(d^{n-1})$$
+$$H^n(C^\bullet)=\ker(d^n)/\im(d^{n-1})$$
 
 으로 정의된 $R$-module을 $C^\bullet$의 $n$번째 *cohomology group<sub>코호몰로지 군</sub>*이라 부른다. 
 

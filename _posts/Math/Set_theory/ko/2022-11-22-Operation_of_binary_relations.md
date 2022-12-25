@@ -40,7 +40,7 @@ $$(x,y)\in R\iff (y,x)\in R^{-1}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $R^{-1}$의 역은 $R$이다. 또, $\operatorname{pr}_1R^{-1}=\operatorname{pr}_2R$이고 $\operatorname{pr}_2R^{-1}=\operatorname{pr}_1R$이다.
+<ins id="pp2">**명제 2**</ins> $R^{-1}$의 역은 $R$이다. 또, $\pr_1R^{-1}=\pr_2R$이고 $\pr_2R^{-1}=\pr_1R$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -52,15 +52,15 @@ $$(x,y)\in R\iff (y,x)\in R^{-1}\iff (x,y)\in (R^{-1})^{-1}$$
 
 에 의해 자명하다. 
 
-둘째 주장을 보자. 만일 $x\in\operatorname{pr}_1R^{-1}$라면, 어떠한 $y$가 존재하여 $(x,y)\in R^{-1}$이다. 이제 $(y,x)\in R$이므로 $x\in\operatorname{pr}_2R$가 성립한다. 이 논증을 뒤집으면 $\operatorname{pr}_2R\subset\operatorname{pr}_1R^{-1}$임을 증명할 수 있다.
+둘째 주장을 보자. 만일 $x\in\pr_1R^{-1}$라면, 어떠한 $y$가 존재하여 $(x,y)\in R^{-1}$이다. 이제 $(y,x)\in R$이므로 $x\in\pr_2R$가 성립한다. 이 논증을 뒤집으면 $\pr_2R\subset\pr_1R^{-1}$임을 증명할 수 있다.
 
-아직 보이지 않은 $\operatorname{pr}_2R^{-1}=\operatorname{pr}_1R$의 경우, 방금 주장의 $R$ 자리에 대신 $R^{-1}$을 넣으면 된다.   
+아직 보이지 않은 $\pr_2R^{-1}=\pr_1R$의 경우, 방금 주장의 $R$ 자리에 대신 $R^{-1}$을 넣으면 된다.   
 
 </details>
 
 주어진 집합 $A,B$에 대하여, $A\times B$는 $A$를 source로, $B$를 target으로 갖는 가장 큰 이항관계였다. 따라서 두 개의 식
 
-$$\operatorname{pr}_1(A\times B)^{-1}=\operatorname{pr}_2(A\times B)=B,\qquad \operatorname{pr}_2(A\times B)^{-1}=\operatorname{pr}_1(A\times B)=A$$
+$$\pr_1(A\times B)^{-1}=\pr_2(A\times B)=B,\qquad \pr_2(A\times B)^{-1}=\pr_1(A\times B)=A$$
 
 에서, $(A\times B)^{-1}\subseteq B\times A$이다. 반대로, 만일 $(y,x)\in B\times A$라면 $x\in A$, $y\in B$이므로 $(x,y)\in A\times B$이고, 따라서 $(y,x)\in (A\times B)^{-1}$이므로 $(A\times B)^{-1}=B\times A$가 성립한다.
 
@@ -132,8 +132,8 @@ $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 
 <ins id="pp7">**명제 7**</ins> 이항관계 $(R,A,B)$에 대하여 $X\subseteq A$, $Y\subseteq B$라 하자. 그럼 
 
-1. $R^{-1}(R(X))\supset X\cap\operatorname{pr}_1R$  
-2. $R(R^{-1}(Y))\supset Y\cap\operatorname{pr}_2R$  
+1. $R^{-1}(R(X))\supset X\cap\pr_1R$  
+2. $R(R^{-1}(Y))\supset Y\cap\pr_2R$  
 
 가 각각 성립한다.
 
@@ -143,7 +143,7 @@ $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 
 본격적으로 증명을 시작하기 전에, 위의 두 식은 <em_ko>모든</em_ko> $R$에 대해 성립해야 하므로, $R$ 자리에 $R^{-1}$을 집어넣어도 성립해야 한다. 따라서, 1만 보이면 2는 [명제 2](#pp2)에 의해 자명하다.  
 
-이제 $x\in X\cap\operatorname{pr}\_1R$라 하자. 그럼 $x\in\operatorname{pr}\_1R$에서, 어떠한 $y$가 존재하여 $(x,y)\in R$이고, $x\in X$이므로 이 $y$는 $y\in R(X)$를 만족한다. 이제 $(y,x)\in R^{-1}$이므로, $x\in R^{-1}(R(X))$이다.
+이제 $x\in X\cap\pr\_1R$라 하자. 그럼 $x\in\pr\_1R$에서, 어떠한 $y$가 존재하여 $(x,y)\in R$이고, $x\in X$이므로 이 $y$는 $y\in R(X)$를 만족한다. 이제 $(y,x)\in R^{-1}$이므로, $x\in R^{-1}(R(X))$이다.
 
 </details>
 
@@ -151,7 +151,7 @@ $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 
 <ins id="pp8">**명제 8**</ins> $R\_1$, $R\_2$가 이항관계라 하자. 그럼 다음의 두 식이 성립한다.
 
-$$ \operatorname{pr}_1(R_2\circ R_1)=R_1^{-1}(\operatorname{pr}_1R_2),\quad \operatorname{pr}_2(R_2\circ R_1)=R_2(\operatorname{pr}_2R_1).$$
+$$ \pr_1(R_2\circ R_1)=R_1^{-1}(\pr_1R_2),\quad \pr_2(R_2\circ R_1)=R_2(\pr_2R_1).$$
 
 </div>
 <details class="proof" markdown="1">
@@ -160,10 +160,10 @@ $$ \operatorname{pr}_1(R_2\circ R_1)=R_1^{-1}(\operatorname{pr}_1R_2),\quad \ope
 다음 implication들의 chain
 
 $$\begin{aligned}
-    x\in\operatorname{pr}_1(R_2\circ R_1)&\iff \exists z\big((x,z)\in R_2\circ R_1\big)\\
+    x\in\pr_1(R_2\circ R_1)&\iff \exists z\big((x,z)\in R_2\circ R_1\big)\\
     &\iff\exists y,z\big(((x,y)\in R_1)\wedge((y,z)\in R_2)\big)\\
-    &\iff\exists y\big(((x,y)\in R_1)\wedge(y\in\operatorname{pr}_1R_2)\big)\\
-    &\iff x\in R_1^{-1}(\operatorname{pr}_1 R_2).
+    &\iff\exists y\big(((x,y)\in R_1)\wedge(y\in\pr_1R_2)\big)\\
+    &\iff x\in R_1^{-1}(\pr_1 R_2).
 \end{aligned}$$
 
 에 의해 자명하다. 두 번째 식도 마찬가지로 보일 수 있다.
@@ -182,7 +182,7 @@ $$\Delta_A=\{(x,x): x\in A\}$$
 
 </div>
 
-정의에 의해 $\operatorname{pr}_1\Delta_A=\operatorname{pr}_2\Delta_A=A$이므로, 이를 이항관계
+정의에 의해 $\pr_1\Delta_A=\pr_2\Delta_A=A$이므로, 이를 이항관계
 
 $$\left(\Delta_A,A,A\right)$$
 

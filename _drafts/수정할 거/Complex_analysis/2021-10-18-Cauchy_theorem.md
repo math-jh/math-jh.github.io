@@ -60,9 +60,9 @@ $$\left\lvert\int_T f(z)\mathop{dz}\right\rvert\leq\epsilon$$
 
 임을 보이면 충분하다. 어차피 우리가 지금 아는 적분에 대한 부등식은 
 
-$$\left\lvert\int_\gamma f(z)\mathop{dz}\right\rvert\leq\operatorname{length}(\gamma)\sup_{z\in\gamma}f(z)$$
+$$\left\lvert\int_\gamma f(z)\mathop{dz}\right\rvert\leq\length(\gamma)\sup_{z\in\gamma}f(z)$$
 
-뿐이므로, 마지막에는 결국 여기에 의존해야 할 것이다. 또, 위 부등식을 이용하기 위해서는 $\operatorname{length}(\gamma)$를 어떻게든 0으로 보내야 한다는 것도 대충 감이 온다. 여기에서 가장 crucial한 아이디어는, 이를 위해 삼각형을 다음과 같이 4등분하는 것이다.
+뿐이므로, 마지막에는 결국 여기에 의존해야 할 것이다. 또, 위 부등식을 이용하기 위해서는 $\length(\gamma)$를 어떻게든 0으로 보내야 한다는 것도 대충 감이 온다. 여기에서 가장 crucial한 아이디어는, 이를 위해 삼각형을 다음과 같이 4등분하는 것이다.
 
 ![<#description#>](/assets/images/<#path#>/<#name#>.png){:width="250px"  class="invert" .align-center}
 
@@ -158,7 +158,7 @@ $$F(z+h)-F(z)=f(z)\int_\eta \mathop{dw}+\int_\eta\psi(w)\mathop{dw}$$
 
 인데, $\int\_\eta \mathop{dw}$에서 피적분함수 1은 primitive $w$를 가지므로, 이 값은 그냥 양 끝값의 차이인 $h$가 되고, 남는 두 번째 항은
 
-$$\left\lvert\int_\eta\psi(w)\mathop{dw}\right\rvert\leq\operatorname{length}(\eta)\sup_{w\in\eta}\left\lvert\psi(w)\right\rvert=\sup_{w\in\eta}\left\lvert\psi(w)\right\rvert h$$
+$$\left\lvert\int_\eta\psi(w)\mathop{dw}\right\rvert\leq\length(\eta)\sup_{w\in\eta}\left\lvert\psi(w)\right\rvert=\sup_{w\in\eta}\left\lvert\psi(w)\right\rvert h$$
 
 가 된다. 따라서, 
 

@@ -21,7 +21,7 @@ weight: 4
 
 Tensor algebra $\mathcal{T}(M)$은 그 자체로도 흥미로운 대수적 대상이지만, 특별히 $\mathcal{T}(M)$에서 만들어지는 두 quotient algebra 구조가 중요하다. 
 
-우선 임의의 $x,y\in M$에 대해, commutator $x\otimes y-y\otimes x$으로 생성되는 two-sided ideal $\mathfrak{a}$를 생각하자. 특히 $\mathfrak{a}$는 차수 2짜리 homogeneous element들로 생성되므로, [§등급대수, 보조정리 2](/ko/math/tensor_algebra/graded_homomorphism#lem2)에 의해 $\mathfrak{a}$는 graded ideal이고 따라서 $\mathcal{T}(M)/\mathfrak{a}$는 graded algebra 구조를 갖는다. 
+우선 임의의 $x,y\in M$에 대해, commutator $x\otimes y-y\otimes x$으로 생성되는 two-sided ideal $\mathfrak{a}$를 생각하자. 특히 $\mathfrak{a}$는 차수 2짜리 homogeneous element들로 생성되므로, [§등급대수, ⁋보조정리 2](/ko/math/tensor_algebra/graded_homomorphism#lem2)에 의해 $\mathfrak{a}$는 graded ideal이고 따라서 $\mathcal{T}(M)/\mathfrak{a}$는 graded algebra 구조를 갖는다. 
 
 이번에는 임의의 $x\in M$에 대하여, $x\otimes x$들로 생성되는 two-sided ideal $\mathfrak{b}$를 생각하자. 그럼 마찬가지로 $\mathfrak{b}$는 차수 2짜리 homogeneous element들로 생성되므로 graded ideal이다. 따라서 $\mathcal{T}(M)/\mathfrak{b}$ 또한 graded algebra 구조를 갖는다.
 
@@ -115,21 +115,21 @@ $$(q_{M'}\circ u)(x)(q_{M'}\circ u)(y)=(q_{M'}\circ u)(y)(q_{M'}\circ u)(x)\qqua
 
 거꾸로 임의의 $A$-module $M$에 대하여, $A'\otimes_AM$은 자연스러운 $A'$-module 구조를 갖는다. 이 module의 symmetric algebra $\mathcal{S}_{A'}(A'\otimes_AM)$을 생각하면, 다음의 $A'$-module homomorphism
 
-$${\operatorname{id}_{A'}}\otimes q_M:A'\otimes_AM\rightarrow A'\otimes_A\mathcal{S}_A(M)$$
+$${\id_{A'}}\otimes q_M:A'\otimes_AM\rightarrow A'\otimes_A\mathcal{S}_A(M)$$
 
 은 임의의 $a'\otimes x,b'\otimes y\in A'\otimes_AM$에 대하여
 
-$$\begin{aligned}({\operatorname{id}_{A'}}\otimes q_M)(a'\otimes x)({\operatorname{id}_{A'}}\otimes q_M)(b'\otimes y)&=(a'\otimes q_M(x))(b'\otimes q_M(y))\\
+$$\begin{aligned}({\id_{A'}}\otimes q_M)(a'\otimes x)({\id_{A'}}\otimes q_M)(b'\otimes y)&=(a'\otimes q_M(x))(b'\otimes q_M(y))\\
 &=(a'b')\otimes (q_M(x)q_M(y))\\
 &=(b'a')\otimes (q_M(y)q_M(x))\\
 &=(a'\otimes q_M(x))(b'\otimes q_M(y))\\
-&=({\operatorname{id}_{A'}}\otimes q_M)(b'\otimes y)({\operatorname{id}_{A'}}\otimes q_M)(a'\otimes x)\end{aligned}$$
+&=({\id_{A'}}\otimes q_M)(b'\otimes y)({\id_{A'}}\otimes q_M)(a'\otimes x)\end{aligned}$$
 
 을 만족하고, 따라서 $A'\otimes_AM$의 모든 원소에 대하여 [정리 3](#thm3)의 조건이 만족된다. 이로부터 유일한 $A'$-module homomorphism $\mathcal{S}_{A'}(A'\otimes_AM)\rightarrow A'\otimes_A\mathcal{S}_A(M)$을 얻는다.
 
 ![Extension_of_scalars](/assets/images/Tensor_algebra/Symmetric_and_exterior_algebra-6.png){:width="306px" class="invert" .align-center}
 
-다음 명제는 [§텐서대수, 대칭대수와 외대수, 명제 6](/ko/math/tensor_algebra/tensor_algebra#pp6)과 마찬가지로 증명할 수 있으며, universal property를 보이기 위해서는 위와 같은 방식으로 $q$를 사용하면 된다.
+다음 명제는 [§텐서대수, ⁋명제 6](/ko/math/tensor_algebra/tensor_algebra#pp6)과 마찬가지로 증명할 수 있으며, universal property를 보이기 위해서는 위와 같은 방식으로 $q$를 사용하면 된다.
 <div class="proposition" markdown="1">
 
 <ins id="pp6">**명제 6**</ins> 위에서 정의한 $\mathcal{S}_{A'}(A'\otimes_AM)\rightarrow A'\otimes_A\mathcal{S}_A(M)$는 isomorphism이다.
@@ -138,7 +138,7 @@ $$\begin{aligned}({\operatorname{id}_{A'}}\otimes q_M)(a'\otimes x)({\operatorna
 
 ### 직합의 대칭대수
 
-[§텐서대수, 대칭대수와 외대수](/ko/math/tensor_algebra/tensor_algebra)에서도 $\mathcal{T}(M)$에 대하여 다음 명제와 비슷한 명제를 만들 수 있었을 것이나, 우변이 더 복잡하고 식 자체로는 별 의미가 없어 다루지 않았던 것이다.
+[§텐서대수](/ko/math/tensor_algebra/tensor_algebra)에서도 $\mathcal{T}(M)$에 대하여 다음 명제와 비슷한 명제를 만들 수 있었을 것이나, 우변이 더 복잡하고 식 자체로는 별 의미가 없어 다루지 않았던 것이다.
 
 <div class="proposition" markdown="1">
 
@@ -214,7 +214,7 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 ### Change of base ring
 
-위에서 다룬 대칭대수의 [Change of base ring](/ko/math/tensor_algebra/symmetric_algebra#change-of-base-ring)과 같은 상황을 가정하자. 그럼 다음 $A$-module들의 diagram
+위에서 다룬 대칭대수의 [§§§Change of base ring](#change-of-base-ring)과 같은 상황을 가정하자. 그럼 다음 $A$-module들의 diagram
 
 ![Restriction_of_scalars](/assets/images/Tensor_algebra/Symmetric_and_exterior_algebra-9.png){:width="241.35px" class="invert" .align-center}
 
