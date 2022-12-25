@@ -47,7 +47,7 @@ $$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§집합의 합, 명제 7](/ko/math/set_theory/sum_of_sets#pp7)에 의하여 우리는 cardinal들의 합을 mutually disjoint family의 합집합으로 취급할 수 있다. 이제, 첫 번째 식들은 각각 [§합집합과 교집합, 명제 4](/ko/math/set_theory/union_and_intersection#pp4), [§집합의 곱, 명제 5](/ko/math/set_theory/product_of_sets#pp5)의 결과들이며, 두 번째 식들은 [§합집합과 교집합, 명제 5](/ko/math/set_theory/union_and_intersection#pp5)와 [§곱집합의 성질, 명제 3](/ko/math/set_theory/property_of_products#pp3)의 결과들이다.
+[§집합의 합, ⁋명제 7](/ko/math/set_theory/sum_of_sets#pp7)에 의하여 우리는 cardinal들의 합을 mutually disjoint family의 합집합으로 취급할 수 있다. 이제, 첫 번째 식들은 각각 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#pp4), [§집합의 곱, ⁋명제 5](/ko/math/set_theory/product_of_sets#pp5)의 결과들이며, 두 번째 식들은 [§합집합과 교집합, ⁋명제 5](/ko/math/set_theory/union_and_intersection#pp5)와 [§곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#pp3)의 결과들이다.
 
 </details>
 
@@ -67,7 +67,7 @@ $$\sum_{i\in I}\mathfrak{a}_i=\sum_{i\in J}\mathfrak{a}_i,\quad \prod_{i\in I}\m
 
 </details>
 
-그리고, 이렇게 자명한 결과들 외에도, 곱과 합집합 사이의 분배법칙 ([§곱집합의 성질, 명제 7](/ko/math/set_theory/property_of_products#pp7))를 이용하면 다음의 명제를 얻는다. 
+그리고, 이렇게 자명한 결과들 외에도, 곱과 합집합 사이의 분배법칙 ([§곱집합의 성질, ⁋명제 7](/ko/math/set_theory/property_of_products#pp7))를 이용하면 다음의 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
 
@@ -102,7 +102,7 @@ $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§순서쌍, 명제 10](/ko/math/set_theory/ordered_pair#pp10)의 임의의 product로의 확장. 증명도 동일하게 하면 된다.
+[§순서쌍, ⁋명제 10](/ko/math/set_theory/ordered_pair#pp10)의 임의의 product로의 확장. 증명도 동일하게 하면 된다.
 
 </details>
 
@@ -134,13 +134,13 @@ $$f(x)=\begin{cases}a&\text{if }x=b\\ x&\text{otherwise}\end{cases}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> $\mathfrak{a}$와 $\mathfrak{b}$가 cardinal이고 $I$가 $\operatorname{card} I=\mathfrak{b}$를 만족하는 집합이라 하자. 만일 모든 $i\in I$에 대하여 $\mathfrak{a}\_i=\mathfrak{a}$라면 $\mathfrak{a}^\mathfrak{b}=\prod_{i\in I}\mathfrak{a}_i$이다.
+<ins id="pp8">**명제 8**</ins> $\mathfrak{a}$와 $\mathfrak{b}$가 cardinal이고 $I$가 $\card I=\mathfrak{b}$를 만족하는 집합이라 하자. 만일 모든 $i\in I$에 대하여 $\mathfrak{a}\_i=\mathfrak{a}$라면 $\mathfrak{a}^\mathfrak{b}=\prod_{i\in I}\mathfrak{a}_i$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$B^A$와 $\operatorname{Fun}(A,B)$ 간의 bijection이 존재하므로 자명하다.
+$B^A$와 $\Fun(A,B)$ 간의 bijection이 존재하므로 자명하다.
 
 </details>
 
@@ -168,7 +168,7 @@ $\mathbf{2}=\\{\alpha, \beta\\}$가 cardinal이라 하자. 임의의 $X\in\mathc
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$x\mapsto \\{x\\}$가 $\mathfrak{a}$에서 멱집합으로의 단사함수이이므로, $\mathfrak{a}\leq \mathbf{2}^\mathfrak{a}$임은 자명하다. 따라서 $\mathfrak{a}\neq\mathbf{2}^\mathfrak{a}$임만 보이자. 즉, 임의의 함수 $f:\mathfrak{a}\rightarrow\mathcal{P}(\mathfrak{a})$에 대하여, $\mathfrak{a}$의 상 밖에 항상 어떤 원소가 존재한다는 걸 보이면 된다.
+$x\mapsto \\{x\\}$가 $\mathfrak{a}$에서 멱집합으로의 단사함수이이므로, $\mathfrak{a}\leq \mathbf{2}^\mathfrak{a}$임은 자명하다. 따라서 $\mathfrak{a}\neq\mathbf{2}^\mathfrak{a}$임만 보이자. 즉, 임의의 함수 $f:\mathfrak{a}\rightarrow\mathcal{P}(\mathfrak{a})$에 대하여, $\mathfrak{a}$의 image 밖에 항상 어떤 원소가 존재한다는 걸 보이면 된다.
 
 $X$가 $x\not\in f(x)$를 만족하는 모든 $x\in\mathfrak{a}$들의 집합이라 하자. 만일 $x\in X$라면, $x\not\in f(x)$이고 따라서 $f(x)\neq X$이며, 반대로 $x\not\in X$라면 $x\in f(x)$이므로 다시 $f(x)\neq X$이다. 따라서 $X\not\in f(\mathfrak{a})$이므로 증명이 완료되었다. 
 

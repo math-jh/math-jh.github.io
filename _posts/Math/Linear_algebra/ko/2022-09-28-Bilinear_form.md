@@ -59,7 +59,7 @@ $$\langle v,w\rangle=-\langle w,v\rangle$$
 
 ## 비퇴화 쌍선형형식
 
-유한차원 $F$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow F$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow F$가 주어졌다면, 우리는 앞선 글의 [따름정리 5](/ko/math/linear_algebra/dual_space#crl5)로부터 $\langle -,-\rangle$이 isomorphism 
+유한차원 $F$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow F$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow F$가 주어졌다면, 우리는 [§쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#crl5)로부터 $\langle -,-\rangle$이 isomorphism 
 
 $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
@@ -91,7 +91,7 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 물론, 만일 $\langle -,-\rangle$이 symmetric하지 않았더라도 동일한 정의를 할 수 있으며, 실제로 $v$를 $\langle -,v\rangle$로 보내는지 혹은 $\langle v,-\rangle$으로 보내는지를 선택한 후 이 선택을 꾸준히 유지한다면 동일한 결과를 얻게 된다. 어쨌든 혹시 모를 혼란을 피하기 위해 우리는 $\langle -,-\rangle$이 symmetric이라는 조건을 유지한다.
 
-벡터 $w\in V$는 [따름정리 3](#crl3)에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, 정의 7](/ko/math/linear_algebra/dual_space#df7)의 의미에서 $v$의 orthogonal complement라면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space)의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
+벡터 $w\in V$는 [따름정리 3](#crl3)에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#df7)의 의미에서 $v$의 orthogonal complement라면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space)의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
 
 우선 두 유한차원 $F$-벡터공간 $V,W$ 위에 symmetric non-degnerate bilinear form $\langle -,-\rangle_V$와 $\langle -,-\rangle_W$가 주어졌다 하자. 또, 논의의 편의를 위하여 이들 bilinear form에 의해 결정되는 isomorphism들을 각각
 
@@ -131,7 +131,7 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 
 으로부터 확인할 수 있다. 이러한 식을 만족하는 $L'$을 우리는 linear map $L$의 *adjoint*라 부르고, 약간의 abuse of notation을 통해 $L^\ast$으로 적기도 한다. 
 
-[§쌍대공간, 직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $(Lv,f)=(v,L^\ast f)$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $\langle -,-\rangle$들에 대한 식 (1)로 대체하면 다음 결과들을 얻는다.
+[§쌍대공간, §§직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $(Lv,f)=(v,L^\ast f)$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $\langle -,-\rangle$들에 대한 식 (1)로 대체하면 다음 결과들을 얻는다.
 
 <div class="proposition" markdown="1">
 
@@ -139,18 +139,18 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 
 1. 임의의 부분공간 $U\subseteq V$에 대하여, $L(U)^\perp=(L^\ast)^{-1}(U^\perp)$가 성립한다.
 2. 임의의 부분공간 $U\subseteq W$에 대하여, $L^\ast(U)^\perp=L^{-1}(U^\perp)$가 성립한다.
-3. $(\operatorname{im}L)^\perp=\ker(L^\ast)$이 성립한다.
-4. $(\operatorname{im}L^\ast)^\perp=\ker L$이 성립한다.
+3. $(\im L)^\perp=\ker(L^\ast)$이 성립한다.
+4. $(\im L^\ast)^\perp=\ker L$이 성립한다.
 
 </div>
 
 특히, 3번과 4번에서 얻어지는 $V$와 $W$의 부분공간들
 
-$$\ker L, \quad(\ker L)^\perp, \quad\operatorname{im}L,\quad(\operatorname{im}L)^\perp$$
+$$\ker L, \quad(\ker L)^\perp, \quad\im L,\quad(\im L)^\perp$$
 
 를 $L$에 의해 결정되는 *네 개의 기본공간들<sub>four fundamental subspaces</sub>*이라 부르기도 한다. 특히 이들은 
 
-$$V=\ker L\oplus(\ker L)^\perp,\qquad W=\operatorname{im}L\oplus(\operatorname{im}L)^\perp$$
+$$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
 를 만족한다.
 
@@ -164,7 +164,7 @@ $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\operatorname{im}L\oplus(\operatorname{i
 
 $$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
 
-을 만족한다면 $F$의 *characteristic<sub>표수</sub>*이 $p$라고 하고 이를 $\operatorname{char}F=p$로 표기한다. 만일 위의 식을 만족하는 자연수 $p$가 존재하지 않는다면 $F$는 characteristic 0을 갖는 것으로 생각한다.
+을 만족한다면 $F$의 *characteristic<sub>표수</sub>*이 $p$라고 하고 이를 $\ch F=p$로 표기한다. 만일 위의 식을 만족하는 자연수 $p$가 존재하지 않는다면 $F$는 characteristic 0을 갖는 것으로 생각한다.
 
 </div>
 
@@ -176,11 +176,11 @@ $$0+0=0,\quad 0+1=1,\quad 1+0=1,\quad 1+1=2$$
 
 $$0\cdot 0=0,\quad 0\cdot 1=0,\quad 1\cdot 0=0,\quad 1\cdot 1=1$$
 
-으로 덧셈과 곱셈을 각각 정의한다면 $\mathbb{F}_2$는 field의 조건을 만족한다는 것을 확인할 수 있고, 이 때 $\operatorname{char}\mathbb{F}_2=2$이다. 
+으로 덧셈과 곱셈을 각각 정의한다면 $\mathbb{F}_2$는 field의 조건을 만족한다는 것을 확인할 수 있고, 이 때 $\ch\mathbb{F}_2=2$이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> $\operatorname{char}F\neq 2$인 field $F$에 대하여, symmetric non-degenerate bilinear form이 주어진 $F$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
+<ins id="pp7">**명제 7**</ins> $\ch F\neq 2$인 field $F$에 대하여, symmetric non-degenerate bilinear form이 주어진 $F$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
 
 </div>
 <details class="proof" markdown="1">
@@ -190,21 +190,21 @@ $$0\cdot 0=0,\quad 0\cdot 1=0,\quad 1\cdot 0=0,\quad 1\cdot 1=1$$
 
 $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rangle$$
 
-이고, 두 조건 $\langle u,v\rangle\neq 0$과 $\operatorname{char}F\neq 2$에서 좌변은 0이 아니다. 따라서 우변의 세 항 $\langle u+v,u+v\rangle, \langle u,u\rangle,\langle v,v\rangle$ 가운데 적어도 하나는 0이 아니다. 따라서,
+이고, 두 조건 $\langle u,v\rangle\neq 0$과 $\ch F\neq 2$에서 좌변은 0이 아니다. 따라서 우변의 세 항 $\langle u+v,u+v\rangle, \langle u,u\rangle,\langle v,v\rangle$ 가운데 적어도 하나는 0이 아니다. 따라서,
 
 > Non-degnerate symmetric bilinear form이 주어진 임의의 $F$-벡터공간에는 $\langle w,w\rangle\neq 0$을 만족하는 $w$가 반드시 존재한다.
 
-원래의 명제는 $V$의 차원에 대한 귀납법으로 증명한다. $\operatorname{dim}V=0$인 경우는 증명할 것이 없다. 이제 $\operatorname{dim}V=k$인 경우 증명이 완료되었다 가정하자. 그럼 $\operatorname{dim}V=k+1$를 만족하는 임의의 벡터공간 $V$에 대하여, $\langle w,w\rangle\neq 0$을 만족하는 벡터 $w$가 존재한다. 
+원래의 명제는 $V$의 차원에 대한 귀납법으로 증명한다. $\dim V=0$인 경우는 증명할 것이 없다. 이제 $\dim V=k$인 경우 증명이 완료되었다 가정하자. 그럼 $\dim V=k+1$를 만족하는 임의의 벡터공간 $V$에 대하여, $\langle w,w\rangle\neq 0$을 만족하는 벡터 $w$가 존재한다. 
 
-이제 $W=\operatorname{span}w$라 하고 $W^\perp$를 생각하자. 그럼 임의의 $v\in V$에 대하여, 다음의 식
+이제 $W=\spanw$라 하고 $W^\perp$를 생각하자. 그럼 임의의 $v\in V$에 대하여, 다음의 식
 
 $$v=\frac{\langle v,w\rangle}{\langle w,w\rangle}w+\left(v-\frac{\langle v,w\rangle}{\langle w,w\rangle}w\right)$$
 
-으로부터 $V$의 임의의 원소는 $W$와 $W^\perp$의 원소의 합으로 표현할 수 있다는 것을 안다. 또, 가정에 의해 $\langle w,w\rangle\neq 0$이므로 $W\cap W^\perp=\\{0\\}$이 성립한다. 따라서 [§벡터공간의 차원, 예시 8](/ko/math/linear_algebra/dimension#ex8)에 의하여
+으로부터 $V$의 임의의 원소는 $W$와 $W^\perp$의 원소의 합으로 표현할 수 있다는 것을 안다. 또, 가정에 의해 $\langle w,w\rangle\neq 0$이므로 $W\cap W^\perp=\\{0\\}$이 성립한다. 따라서 [§벡터공간의 차원, ⁋예시 8](/ko/math/linear_algebra/dimension#ex8)에 의하여
 
-$$k+1=\operatorname{dim}(V)=\operatorname{dim}(W+W^\perp)=\operatorname{dim}W+\operatorname{dim}W^\perp-\operatorname{dim}(W\cap W^\perp)$$
+$$k+1=\dim(V)=\dim(W+W^\perp)=\dimW+\dimW^\perp-\dim(W\cap W^\perp)$$
 
-으로부터 $\operatorname{dim}W^\perp=k$임을 안다. 뿐만 아니라, 임의의 $v\in W^\perp$에 대하여, $\langle u,v\rangle\neq 0$을 만족하는 $u$에 대하여, 
+으로부터 $\dimW^\perp=k$임을 안다. 뿐만 아니라, 임의의 $v\in W^\perp$에 대하여, $\langle u,v\rangle\neq 0$을 만족하는 $u$에 대하여, 
 
 $$u'=u-\frac{\langle u,w\rangle}{\langle w,w\rangle}w\in W^\perp$$
 
@@ -232,9 +232,9 @@ $V$ 위에 주어진 두 basis $\mathcal{B},\mathcal{C}$를 생각하자. 이들
 
 $$\langle v,w\rangle=[v]^t_\mathcal{B}G_\mathcal{B}[w]_\mathcal{B}=[v]^t_\mathcal{C}G_\mathcal{C}[w]_\mathcal{C}$$
 
-라 할 수 있다. 이제 $[v]\_\mathcal{C}=[\operatorname{id}]\_\mathcal{C}^\mathcal{B}[v]\_\mathcal{B}$이므로, 위의 식의 가장 우변은
+라 할 수 있다. 이제 $[v]\_\mathcal{C}=[\id]\_\mathcal{C}^\mathcal{B}[v]\_\mathcal{B}$이므로, 위의 식의 가장 우변은
 
-$$[v]_\mathcal{C}^tG_\mathcal{C}[w]_\mathcal{C}=\left([\operatorname{id}]_\mathcal{C}^\mathcal{B}[v]_\mathcal{B}\right)^tG_\mathcal{B}\left([\operatorname{id}]_\mathcal{C}^\mathcal{B}[w]_\mathcal{B}\right)=[v]_\mathcal{B}^t\left(([\operatorname{id}]_\mathcal{C}^\mathcal{B})^t G_\mathcal{B}[\operatorname{id}]_\mathcal{C}^\mathcal{B}\right)[w]_\mathcal{B}$$
+$$[v]_\mathcal{C}^tG_\mathcal{C}[w]_\mathcal{C}=\left([\id]_\mathcal{C}^\mathcal{B}[v]_\mathcal{B}\right)^tG_\mathcal{B}\left([\id]_\mathcal{C}^\mathcal{B}[w]_\mathcal{B}\right)=[v]_\mathcal{B}^t\left(([\id]_\mathcal{C}^\mathcal{B})^t G_\mathcal{B}[\id]_\mathcal{C}^\mathcal{B}\right)[w]_\mathcal{B}$$
 
 이 된다. 
 

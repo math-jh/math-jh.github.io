@@ -194,7 +194,7 @@ $$\int_\gamma f(z)\mathop{dz}=\int_a^b f(z(t))z'(t)\mathop{dt}$$
 
 1. $\alpha,\beta\in\mathbb{C}$에 대하여 $\int_\gamma (\alpha f(z)+\beta g(z))\mathop{dz}=\alpha\int_\gamma f(z)\mathop{dz}+\beta\int_\gamma g(z)\mathop{dz}$,
 2. $\int_\gamma f(z)\mathop{dz}=-\int_{\gamma^-}f(z)\mathop{dz}$, $\gamma^{-1}$은 $\gamma$의 반대 방향 reparametrization
-3. $\left\lvert\int_\gamma f(z)\mathop{dz}\right\rvert\leq\sup\lvert f(z)\rvert\operatorname{length}(\gamma)$.
+3. $\left\lvert\int_\gamma f(z)\mathop{dz}\right\rvert\leq\sup\lvert f(z)\rvert\length(\gamma)$.
 
 </div>
 

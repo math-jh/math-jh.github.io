@@ -176,9 +176,9 @@ $$(K[X]/(f))\otimes_KL\cong L[X]/(f)\cong\prod L[X]/(f_i)\cong L^n$$
 
 여러가지 이유에서 separable extension만큼 중요하게 사용되는 것은 정반대의 개념인 *purely inseparable extension*이다. 이건 separable extension을 더 잘 이해하도록 도와주기도 하고, 또 우리가 앞으로 해나갈 이야기의 많은 부분에서 도움을 준다.
 
-Algebraic extension $F/K$가 separable이라는 것은, 임의의 $u\in F$에 대해, $u$의 minimal polynomial $f$가 separable한 것은 $f$가 중근을 갖지 않는 것으로 정의된다. 따라서 [명제 7](#pp7)을 적용하면, 이는 다시 $f'$가 nonzero인 것과 동치이다. 즉, 만일 $\operatorname{char}K=0$이라면, nontrivial한 irreducible polynomial $f'$가 $f'=0$을 만족할 방법은 없고, 따라서 algebraic extension $F/K$가 항상 separable이다. 
+Algebraic extension $F/K$가 separable이라는 것은, 임의의 $u\in F$에 대해, $u$의 minimal polynomial $f$가 separable한 것은 $f$가 중근을 갖지 않는 것으로 정의된다. 따라서 [명제 7](#pp7)을 적용하면, 이는 다시 $f'$가 nonzero인 것과 동치이다. 즉, 만일 $\chK=0$이라면, nontrivial한 irreducible polynomial $f'$가 $f'=0$을 만족할 방법은 없고, 따라서 algebraic extension $F/K$가 항상 separable이다. 
 
-Separable extension은 algebraic extension이 아닌 경우에도 정의되긴 하지만, 위와 같은 이유로 우리가 purely inseparable extension을 생각할 때는 (항상 separable한) $\operatorname{char}K=0$ 대신, $\operatorname{char}K=p$인 경우만 생각한다. 따라서, 남은 부분에서 별 말이 없으면 $K$는 characteristic $p$의 field이다.
+Separable extension은 algebraic extension이 아닌 경우에도 정의되긴 하지만, 위와 같은 이유로 우리가 purely inseparable extension을 생각할 때는 (항상 separable한) $\chK=0$ 대신, $\chK=p$인 경우만 생각한다. 따라서, 남은 부분에서 별 말이 없으면 $K$는 characteristic $p$의 field이다.
 
 <div class="definition" markdown="1">
 

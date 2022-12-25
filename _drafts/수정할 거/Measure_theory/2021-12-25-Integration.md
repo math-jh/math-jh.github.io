@@ -33,11 +33,11 @@ published: false
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Complex function $s$가 *simple function*이라는 것은 $\operatorname{im}s$가 유한집합인 것이다.
+<ins id="df1">**정의 1**</ins> Complex function $s$가 *simple function*이라는 것은 $\ims$가 유한집합인 것이다.
 
 </div>
 
-따라서, 어떤 집합 $X$ 위에 정의된 simple function $s$가 주어진다면, 우리는 $\operatorname{im}s$의 각 원소의 preimage를 생각하여 $X$를 (유한한) partition으로 나눌 수 있다. 즉, $s$는 항상 다음과 같은 표현
+따라서, 어떤 집합 $X$ 위에 정의된 simple function $s$가 주어진다면, 우리는 $\ims$의 각 원소의 preimage를 생각하여 $X$를 (유한한) partition으로 나눌 수 있다. 즉, $s$는 항상 다음과 같은 표현
 
 $$s=\sum_{i=1}^n\alpha_i 1_{A_i}$$
 
@@ -499,9 +499,9 @@ $$E_3^{+\infty}=f^{-1}(\{+\infty\})\cap h^{-1}(\{+\infty\})$$
 
 이고 $\{+\infty\}$는 closed set이므로 $E_3^{+\infty}$는 두 measurable set의 교집합이므로 measurable이다. 한편 $E_3$의 남은 부분 
 
-$$E_3^\mathrm{fin}=X\setminus(E_3^{+\infty}\cup E_3^{-\infty})$$
+$$E_3^\fin=X\setminus(E_3^{+\infty}\cup E_3^{-\infty})$$
 
-은 $f,h$의 값이 finite이고 $f(x)=h(x)$인 부분인데, 이 부분에서 $f-h$는 잘 정의되므로, $E_3^\mathrm{fin}=(f-h)^{-1}(\\{0\\})$이고 따라서 measurable이다.
+은 $f,h$의 값이 finite이고 $f(x)=h(x)$인 부분인데, 이 부분에서 $f-h$는 잘 정의되므로, $E_3^\fin=(f-h)^{-1}(\\{0\\})$이고 따라서 measurable이다.
 
 </details>
 
@@ -633,7 +633,7 @@ $$W=\{x=(x_1,\ldots, x_d):x_i\in I_i,\text{ $I_i$ interval}\}$$
 
 그리고, 우리는 $2^{-r}$-box들은 모두 부피 
 
-$$\operatorname{vol}Q=2^{-rd},\qquad Q\in\Omega_r$$
+$$\volQ=2^{-rd},\qquad Q\in\Omega_r$$
 
 를 갖는다고 생각할 것이다. 더 일반적으로, 임의의 $d$-cell
 
@@ -641,7 +641,7 @@ $$W=\{x=(x_1,\ldots, x_d):x_i\in I_i,\text{ $I_i$ interval}\}$$
 
 은, 만일 $I_i$의 양 끝점이 $a_i\leq b_i$라면, 부피
 
-$$\operatorname{vol}W=\prod_{i=1}^d (b_i-a_i)$$
+$$\volW=\prod_{i=1}^d (b_i-a_i)$$
 
 를 갖는다고 생각할 수 있다.
 
@@ -667,11 +667,11 @@ $$\Lambda_n f=2^{-nd}\sum_{x\in P_n} f(x)$$
 
 으로 정의하자. $f$가 continuous이므로 이 값은 domain을 한 변의 길이가 $2^{-n}$인 $d$-cube들로 나눈 일반적인 리만적분으로 생각할 수 있다.
 
-우리는 우선 $C_c(\mathbb{R}^d)$는 이와 같은 센스에서 리만적분이 가능하다는 것을 보인다. $f$가 real-valued, compactly supported라 하고, $W$가 $\operatorname{supp}f$를 포함하는 $d$-cell이라 하자. $f$는 compactly supported continuous이므로 uniformly continuous이고, 따라서 충분히 큰 $N$에 대하여, (i) $\Omega_N$의 각 원소들에 restrict했을 때는 constant function이고, (ii) $g\leq f\leq h$, (iii) $h-g<\epsilon$ 이도록 하는 두 함수 $g,h$가 존재한다. 예컨대 $d=1$이었다면 이는 구분구적법에서 얻어지는 상적분/하적분의 모양과 동일할 것이다. 따라서, 임의의 $n>N$에 대해 넓이를 직접 대입하여 계산하면
+우리는 우선 $C_c(\mathbb{R}^d)$는 이와 같은 센스에서 리만적분이 가능하다는 것을 보인다. $f$가 real-valued, compactly supported라 하고, $W$가 $\suppf$를 포함하는 $d$-cell이라 하자. $f$는 compactly supported continuous이므로 uniformly continuous이고, 따라서 충분히 큰 $N$에 대하여, (i) $\Omega_N$의 각 원소들에 restrict했을 때는 constant function이고, (ii) $g\leq f\leq h$, (iii) $h-g<\epsilon$ 이도록 하는 두 함수 $g,h$가 존재한다. 예컨대 $d=1$이었다면 이는 구분구적법에서 얻어지는 상적분/하적분의 모양과 동일할 것이다. 따라서, 임의의 $n>N$에 대해 넓이를 직접 대입하여 계산하면
 
 $$\Lambda_Ng=\Lambda_ng\leq\Lambda_nf\leq\Lambda_nh=\Lambda_Nh$$
 
-가 성립한다. 그리고 (iii) 조건에 의하여 $\Lambda_nf$의 상적분과 하적분 값의 차이는 커봐야 $\epsilon\operatorname{vol}W$이고, 따라서 $\Lambda f=\lim_{n\rightarrow}\Lambda_nf$가 존재한다.
+가 성립한다. 그리고 (iii) 조건에 의하여 $\Lambda_nf$의 상적분과 하적분 값의 차이는 커봐야 $\epsilon\volW$이고, 따라서 $\Lambda f=\lim_{n\rightarrow}\Lambda_nf$가 존재한다.
 
 이 때, $\Lambda$가 positive linear functional이 된다는 것은 자명하므로, Riesz representation theorem을 $\Lambda$에 사용하면 measure $m$, $\sigma$-algebra $\mathfrak{M}$이 얻어진다. 그럼 $m$이 complete이라는 것은 Riesz theorem의 직접적인 결과이다. 또, 아직 증명하진 않았지만 2번의 경우, Riesz representation을 증명하며 $\mathbb{R}^d$가 갖는 특정한 성질 때문에 성립한다는 것을 알게 될 것이다. 따라서, 이를 제외하면 1, 3, 4번만 보이면 충분하다.
 
@@ -679,15 +679,15 @@ $$\Lambda_Ng=\Lambda_ng\leq\Lambda_nf\leq\Lambda_nh=\Lambda_Nh$$
 
 $$W=\{x=(x_1,\ldots, x_d):x_i\in (a_i,b_i)\}$$
 
-이라 하자. 그럼 각각의 $r$마다, $\Omega_r$의 어떤 원소의 closure가 $W$ 안에 속하도록 하는 원소들이 존재한다. (안할 수도 있고, 하지만 $r$이 충분히 크다면 존재해야 한다.) 이들의 합집합을 $E_r$이라 하자. Urysohn's lemma를 이용해서, $\overline{E_r}\prec f_r\prec W$인 continuous function $f_r$을 찾을 수 있다. $g_r=\max(f_1,\ldots, f_r)$이라 하자. 그럼 $f_r$은 $E_r$ 위에서는 identically 1이므로, $\operatorname{vol}(E_r)\leq\Lambda f_r$이고, 따라서
+이라 하자. 그럼 각각의 $r$마다, $\Omega_r$의 어떤 원소의 closure가 $W$ 안에 속하도록 하는 원소들이 존재한다. (안할 수도 있고, 하지만 $r$이 충분히 크다면 존재해야 한다.) 이들의 합집합을 $E_r$이라 하자. Urysohn's lemma를 이용해서, $\overline{E_r}\prec f_r\prec W$인 continuous function $f_r$을 찾을 수 있다. $g_r=\max(f_1,\ldots, f_r)$이라 하자. 그럼 $f_r$은 $E_r$ 위에서는 identically 1이므로, $\vol(E_r)\leq\Lambda f_r$이고, 따라서
 
-$$\operatorname{vol}(E_r)\leq \Lambda f_r\leq\Lambda g_r\leq\operatorname{vol}W$$
+$$\vol(E_r)\leq \Lambda f_r\leq\Lambda g_r\leq\volW$$
 
-가 성립한다. 이제 $r\rightarrow\infty$일 때, $\operatorname{vol}(E_r)$은 $\operatorname{vol}W$로 가므로 $\Lambda g_r$ 또한 $\operatorname{vol}(W)$로 가야 한다. 한편, $\Lambda g_r=\int g_r\mathop{dm}$의 값은, $g_r\nearrow 1_W$이므로 MCT에 의해
+가 성립한다. 이제 $r\rightarrow\infty$일 때, $\vol(E_r)$은 $\volW$로 가므로 $\Lambda g_r$ 또한 $\vol(W)$로 가야 한다. 한편, $\Lambda g_r=\int g_r\mathop{dm}$의 값은, $g_r\nearrow 1_W$이므로 MCT에 의해
 
 $$\Lambda g_r=\int g_r\mathop{dm}\rightarrow\int 1_W\mathop{dm}=m(W)$$
 
-이기도 하므로, 이 경우 $m(W)=\operatorname{vol}(W)$가 성립한다. 한편 임의의 (open일 필요는 없는) $d$-cell은 이러한 open $d$-cell들의 교집합으로 나타낼 수 있으므로 1번 성질은 모든 $d$-cell들에 대해 성립한다.
+이기도 하므로, 이 경우 $m(W)=\vol(W)$가 성립한다. 한편 임의의 (open일 필요는 없는) $d$-cell은 이러한 open $d$-cell들의 교집합으로 나타낼 수 있으므로 1번 성질은 모든 $d$-cell들에 대해 성립한다.
 
 한편, $\sigma$-algebra $\mathfrak{M}$ 위에 새로운 measure $\lambda$를 다음의 식
 

@@ -33,7 +33,7 @@ weight: 22
 
 $\mathcal{F}$를 $A$의 segment에서 $B$의 segment로의 isomorphism들의 집합이라 하자. 우선 우리는 $\mathcal{F}$가 inductive임을 보인다.
 
-$\mathcal{F}$의 totally ordered subset $\mathcal{G}$가 주어졌다고 하자. 그럼 $u\in\mathcal{G}$들의 정의역을 모두 합집합하여 집합 $S$를 만들 수 있다. 이 집합 $S$는 $A$의 segment들의 합집합이므로 다시 $A$의 segment이다. 한편, $\operatorname{fun}(A,B)$를 $A$의 부분집합에서 $B$로의 함수들의 모임이라 하자. 그럼 이 집합이 함수의 확장에 대해 inductive하다는 것은 자명하다. 이제 $\bigcup\mathcal{G}$는 $A$의 부분집합에서 $B$의 부분집합의 함수들이므로, $\mathcal{G}$의 $\operatorname{fun}(A,B)$에서의 least upper bound를 $v$라 하자. 그럼 $v(S)$는 $u\in\mathcal{G}$들의 치역의 합집합이므로 $F$의 segment가 되며, 임의의 $x, y$에 대하여 $x$와 $y$를 둘 다 포함하는 $u\in \mathcal{G}$를 골라오면
+$\mathcal{F}$의 totally ordered subset $\mathcal{G}$가 주어졌다고 하자. 그럼 $u\in\mathcal{G}$들의 정의역을 모두 합집합하여 집합 $S$를 만들 수 있다. 이 집합 $S$는 $A$의 segment들의 합집합이므로 다시 $A$의 segment이다. 한편, $\fun(A,B)$를 $A$의 부분집합에서 $B$로의 함수들의 모임이라 하자. 그럼 이 집합이 함수의 확장에 대해 inductive하다는 것은 자명하다. 이제 $\bigcup\mathcal{G}$는 $A$의 부분집합에서 $B$의 부분집합의 함수들이므로, $\mathcal{G}$의 $\fun(A,B)$에서의 least upper bound를 $v$라 하자. 그럼 $v(S)$는 $u\in\mathcal{G}$들의 치역의 합집합이므로 $F$의 segment가 되며, 임의의 $x, y$에 대하여 $x$와 $y$를 둘 다 포함하는 $u\in \mathcal{G}$를 골라오면
 
 $$v(x)=u(x) < u(y)=v(y)$$
   

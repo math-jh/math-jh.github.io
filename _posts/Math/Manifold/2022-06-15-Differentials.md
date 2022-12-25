@@ -32,7 +32,7 @@ weight: 5
 
 </div>
 
-앞서 manifold에서 $\mathbb{R}$로의 $C^\infty$ 함수를 정의했을 때와 마찬가지로, 이 정의 또한 coordinate system의 선택과 무관하다는 것을 보여야 하지만 이는 기본적으로 [§미분다양체, 정의 2](/ko/math/manifold/smooth_manifolds#df2) 이후에 증명한 것과 똑같기에 생략한다.
+앞서 manifold에서 $\mathbb{R}$로의 $C^\infty$ 함수를 정의했을 때와 마찬가지로, 이 정의 또한 coordinate system의 선택과 무관하다는 것을 보여야 하지만 이는 기본적으로 [§미분다양체, ⁋정의 2](/ko/math/manifold/smooth_manifolds#df2) 이후에 증명한 것과 똑같기에 생략한다.
 
 <div class="proposition" markdown="1">
 
@@ -53,7 +53,7 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $\operatorname{id}_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으로, 임의의 열린집합 $U\subseteq M$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, 정의 3](/ko/math/manifold/examples#df3)) inclusion map $U\hookrightarrow M$은 $C^\infty$ 함수이다. 
+<ins id="ex3">**예시 3**</ins> $\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으로, 임의의 열린집합 $U\subseteq M$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, ⁋정의 3](/ko/math/manifold/examples_of_manifolds#df3)) inclusion map $U\hookrightarrow M$은 $C^\infty$ 함수이다. 
 
 </div>
 
@@ -75,14 +75,14 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 만일 두 manifold $M,N$에 대하여, $F:M\rightarrow N$과 $G:N\rightarrow M$이 각각 존재하여 $G\circ F=\operatorname{id}_M$이고 $F\circ G=\operatorname{id}_N$이라면 $F$와 $G$ 각각을 *diffeomorphism<sub>미분동형사상</sub>*이라 부르고, $F$와 $G$가 *diffeomorphic<sub>미분동형</sub>*이라 말한다.
+<ins id="df6">**정의 6**</ins> 만일 두 manifold $M,N$에 대하여, $F:M\rightarrow N$과 $G:N\rightarrow M$이 각각 존재하여 $G\circ F=\id_M$이고 $F\circ G=\id_N$이라면 $F$와 $G$ 각각을 *diffeomorphism<sub>미분동형사상</sub>*이라 부르고, $F$와 $G$가 *diffeomorphic<sub>미분동형</sub>*이라 말한다.
 
 </div>
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 동일한 topological manifold $M$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $\mathcal{A}\_1$, $\mathcal{A}\_2$를 각각 single chart들 $(\mathbb{R},\operatorname{id}\_\mathbb{R})$, $(\mathbb{R}, x\mapsto x^{3})$을 통해 정의하자. 그럼 $\mathcal{A}_1$과 $\mathcal{A}\_2$는 서로 다른 미분구조를 정의한다. ([§미분다양체, 예시 4](/ko/math/manifold/smooth_manifolds#ex4))  
-편의상 $(M,\mathcal{A}\_1)$을 $M\_1$, $(M,\mathcal{A}\_2)$를 $M\_2$로 이름붙이고, $\varphi=\operatorname{id}\_\mathbb{R}$, 그리고 $\psi=(x\mapsto x^3)$이라 하자. 
+<ins id="rmk1">**참고**</ins> 동일한 topological manifold $M$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $\mathcal{A}\_1$, $\mathcal{A}\_2$를 각각 single chart들 $(\mathbb{R},\id\_\mathbb{R})$, $(\mathbb{R}, x\mapsto x^{3})$을 통해 정의하자. 그럼 $\mathcal{A}_1$과 $\mathcal{A}\_2$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifold/smooth_manifolds#ex4))  
+편의상 $(M,\mathcal{A}\_1)$을 $M\_1$, $(M,\mathcal{A}\_2)$를 $M\_2$로 이름붙이고, $\varphi=\id\_\mathbb{R}$, 그리고 $\psi=(x\mapsto x^3)$이라 하자. 
 
 이들 두 manifold $M_1, M_2$는 서로 diffeomorphic하다. $M\_1$에서 $M\_2$로의 함수 $F$를 $x\mapsto x^{1/3}$으로 정의하자. 그럼 자명하게 $F^{-1}$은 $y\mapsto y^3$으로 정의된다. 정의에 의해 $F$는 $C^\infty$이다. 임의의 점 $p\in M_1$에 대하여, $M_1$과 $M_2$ 각각에 정의된 두 coordinate system $(\mathbb{R},\varphi)$와 $(\mathbb{R},\psi)$을 잡으면 $p\in\mathbb{R}$,  $F(\mathbb{R})\subset\mathbb{R}$을 만족하는 것은 자명하고, 또 이들이
 
@@ -143,7 +143,7 @@ $$(dF_p(v))g=v(g\circ F)$$
 
 </div>
 
-정의로부터 몇 가지 결과는 자명하다. 우선 $\operatorname{id}\_M:M\rightarrow M$에 대하여 $d(\operatorname{id}\_M)\_p$는 항상 $T\_pM$에서 $T\_pM$으로의 identity인 $\operatorname{id}\_{T\_pM}$이 된다. 이는 [정의 7](#df7)의 식으로부터 명백하다. 또, 세 manifold $M,N,P$에 대하여 $F:M\rightarrow N$, $G:N\rightarrow P$가 $C^\infty$라면, 다음의 식
+정의로부터 몇 가지 결과는 자명하다. 우선 $\id\_M:M\rightarrow M$에 대하여 $d(\id\_M)\_p$는 항상 $T\_pM$에서 $T\_pM$으로의 identity인 $\id\_{T\_pM}$이 된다. 이는 [정의 7](#df7)의 식으로부터 명백하다. 또, 세 manifold $M,N,P$에 대하여 $F:M\rightarrow N$, $G:N\rightarrow P$가 $C^\infty$라면, 다음의 식
 
 $$d(G\circ F)_p=(dG_{F(p)})\circ (dF_p)$$ 
 
@@ -203,7 +203,7 @@ $$\begin{pmatrix}\partial(y^1\circ F)/\partial x^1&\partial(y^1\circ F)/\partial
 
 인 것을 알 수 있다. 즉, 이는 단지 유클리드 공간 사이의 함수 $\psi\circ F\circ\varphi^{-1}$의 Jacobian에 불과하다. 
 
-특별히 $M=N$이고 $F=\operatorname{id}_M$이지만 서로 다른 coordinate system $(U, \varphi)$와 $(V,\psi)$를 택한 경우, 이는 transition map $\psi\circ\varphi^{-1}$의 Jacobian matrix가 될 것이다. 
+특별히 $M=N$이고 $F=\id_M$이지만 서로 다른 coordinate system $(U, \varphi)$와 $(V,\psi)$를 택한 경우, 이는 transition map $\psi\circ\varphi^{-1}$의 Jacobian matrix가 될 것이다. 
 
 
 ---

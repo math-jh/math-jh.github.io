@@ -17,24 +17,24 @@ weight: 7
 
 ---
 
-앞선 글의 말미는 단사함수와 전사함수의 새로운 정의를 내릴 수 있도록 해 준다. ([§함수들 사이의 연산, 참고](/ko/math/set_theory/operation_of_functions#rmk1))
+앞선 글의 말미는 단사함수와 전사함수의 새로운 정의를 내릴 수 있도록 해 준다. ([§함수들 사이의 연산, ⁋참고](/ko/math/set_theory/operation_of_functions#rmk1))
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> 함수 $f:A\rightarrow B$를 생각하자. 만일 어떠한 $r:B\rightarrow A$가 존재하여 $r\circ f=\operatorname{id}\_A$라면 $f$는 단사함수다. 또 어떠한 $s:B\rightarrow A$가 존재하여 $f\circ s=\operatorname{id}\_B$라면 $f$는 전사함수다.  
+<ins id="pp1">**명제 1**</ins> 함수 $f:A\rightarrow B$를 생각하자. 만일 어떠한 $r:B\rightarrow A$가 존재하여 $r\circ f=\id\_A$라면 $f$는 단사함수다. 또 어떠한 $s:B\rightarrow A$가 존재하여 $f\circ s=\id\_B$라면 $f$는 전사함수다.  
 
-반대로, 만일 $f$가 전사함수라면 어떤 $s:B\rightarrow A$가 존재하여 $f\circ s=\operatorname{id}\_B$이고, 만일 $f$가 단사함수라면 어떤 $r:B\rightarrow A$가 존재하여 $r\circ f=\operatorname{id}\_A$이다.
+반대로, 만일 $f$가 전사함수라면 어떤 $s:B\rightarrow A$가 존재하여 $f\circ s=\id\_B$이고, 만일 $f$가 단사함수라면 어떤 $r:B\rightarrow A$가 존재하여 $r\circ f=\id\_A$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
-두 번째 부분은 이미 이전 글에서 보였다. 따라서 처음 부분만 보이면 된다. 우선 $r\circ f=\operatorname{id}\_A$라 하자. 만일 $f(x)=f(y)$라면 
+두 번째 부분은 이미 이전 글에서 보였다. 따라서 처음 부분만 보이면 된다. 우선 $r\circ f=\id\_A$라 하자. 만일 $f(x)=f(y)$라면 
 
-$$x=\operatorname{id}_{A}(x)=(r\circ f)(x)=r\circ(f(x))=r\circ(f(y))=(r\circ f)(y)=\operatorname{id}_{A}(y)=y$$ 
+$$x=\id_{A}(x)=(r\circ f)(x)=r\circ(f(x))=r\circ(f(y))=(r\circ f)(y)=\id_{A}(y)=y$$ 
 
-이므로 $f$는 단사함수이다. 이와 비슷하게, 만일 $f\circ s=\operatorname{id}\_{B}$라면 임의의 $y\in B$에 대하여
+이므로 $f$는 단사함수이다. 이와 비슷하게, 만일 $f\circ s=\id\_{B}$라면 임의의 $y\in B$에 대하여
 
-$$y=\operatorname{id}_{B}(y)=(f\circ s)(y)=f(s(y))$$ 
+$$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$ 
 
 이므로 $y\in f(A)$이고, 따라서 $f$는 전사함수이다.
 
@@ -52,8 +52,8 @@ $$y=\operatorname{id}_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> $f$가 $A$에서 $B$로의 단사함수라 하자. 그럼 $r\circ f=\operatorname{id}\_A$를 만족하는 함수 $r:B\rightarrow A$를 $f$의 *retraction<sub>수축</sub>*이라 한다.  
-만일 $f$가 $A$에서 $B$로의 전사함수라면, $f\circ s=\operatorname{id}\_B$를 만족하는 함수 $s:B\rightarrow A$를 $f$의 *section<sub>단면</sub>*이라 부른다.
+<ins id="df2">**정의 2**</ins> $f$가 $A$에서 $B$로의 단사함수라 하자. 그럼 $r\circ f=\id\_A$를 만족하는 함수 $r:B\rightarrow A$를 $f$의 *retraction<sub>수축</sub>*이라 한다.  
+만일 $f$가 $A$에서 $B$로의 전사함수라면, $f\circ s=\id\_B$를 만족하는 함수 $s:B\rightarrow A$를 $f$의 *section<sub>단면</sub>*이라 부른다.
 
 </div>
 
@@ -79,27 +79,27 @@ $$y=\operatorname{id}_{B}(y)=(f\circ s)(y)=f(s(y))$$
 <summary>증명</summary>
 
 1. 우선 $f''(a\_1)=f''(a\_2)$라 하자. 그럼 $f'(f(a\_1))=f'(f(a\_2))$이므로, $f'$와 $f$가 단사라는 사실을 순서대로 써 주면 $a_1=a_2$를 얻는다. 즉 $f''$은 단사함수이다.  
-    이제 $r$, $r'$을 각각 $f$, $f'$의 retraction이라 하자. 즉 $r\circ f=\operatorname{id}\_A$이고 $r'\circ f'=\operatorname{id}\_B$이다. 그럼 임의의 $a\in A$에 대하여, 
+    이제 $r$, $r'$을 각각 $f$, $f'$의 retraction이라 하자. 즉 $r\circ f=\id\_A$이고 $r'\circ f'=\id\_B$이다. 그럼 임의의 $a\in A$에 대하여, 
 
-      $$((r\circ r')\circ(f'\circ f))(a)=(r\circ\operatorname{id}_{B}\circ f)(a)=(r\circ f)(a)=\operatorname{id}_{A}(a)=a$$  
+      $$((r\circ r')\circ(f'\circ f))(a)=(r\circ\id_{B}\circ f)(a)=(r\circ f)(a)=\id_{A}(a)=a$$  
     
     이므로 $r\circ r'$는 $f''$의 retraction이다.
 
 2. $c\in C$라 하자. 그럼 $f'$가 전사이므로 $f'(b)=c$이도록 하는 $b\in B$가 존재한다. 이제 다시 $f$가 전사이므로 $f(a)=b$이도록 하는 $a\in A$가 존재한다. 따라서 $f''(a)=c$이고 $f''$는 전사함수이다. 이제 $s$와 $s'$를 $f$와 $f'$ 각각의 section이라 하면, 임의의 $c\in C$에 대하여
 
-      $$((f'\circ f)\circ(s\circ s'))(c)=(f'\circ\operatorname{id}_{B}\circ s')(c)=(f'\circ s')(c)=\operatorname{id}_{C}(c)=c$$  
+      $$((f'\circ f)\circ(s\circ s'))(c)=(f'\circ\id_{B}\circ s')(c)=(f'\circ s')(c)=\id_{C}(c)=c$$  
     
     이므로 $s\circ s'$는 $f''$의 section이다.
 
 3. 어떠한 $a_1$, $a_2\in A$에 대하여 $f(a_1)=f(a_2)$라 하자. 그럼 $f''(a_1)=f'(f(a_1))=f'(f(a_2))=f''(a_2)$이고, $f''$가 단사함수이므로 $a\_1=a\_2$이다. 따라서 $f$도 단사함수다. 이제 임의의 $a\in A$에 대하여,   
 
-     $$((r''\circ f')\circ f)(a)=(r''\circ f'')(a)=\operatorname{id}_A(a)=a $$ 
+     $$((r''\circ f')\circ f)(a)=(r''\circ f'')(a)=\id_A(a)=a $$ 
 
     이므로 $r''\circ f'$는 $f$의 retraction이다.
 
 4. $f''$가 전사함수이므로, 어떠한 $c\in C$에 대하여 $f''(a)=c$인 $a\in A$가 존재한다. 따라서 $f'(f(a))=c$이므로, $f(a)=b\in B$가 $f'(b)=c$를 만족한다. 또 임의의 $c\in C$에 대하여  
 
-     $$(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\operatorname{id}_C(c)=c.$$  
+     $$(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\id_C(c)=c.$$  
 
 </details>
 
@@ -148,15 +148,15 @@ $$y=\operatorname{id}_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
     이 성립한다. 한편  
 
-    $$g(s(g(x)))=\operatorname{id}_B(g(x))=g(x)$$  
+    $$g(s(g(x)))=\id_B(g(x))=g(x)$$  
 
     이므로, 주어진 조건에 의해 $f(s(g(x)))=f(x)$이다. 즉 $h(g(x))=f(x)$이므로 주어진 조건을 만족하는 $h$가 존재한다.
 
 2. 우선 $f=g\circ h$라 하자. 그럼 임의의 $y\in f(C)$에 대하여 $y=f(x)$라 하면 $y=f(x)=g(h(x))\in g(A)$ 이므로 $f(C)\subseteq g(A)$임은 자명하다. 1의 증명과 마찬가지로, 먼저 $h$의 유일성을 보이자. $h$는 $f=g\circ h$를 만족하는 함수로 정의되므로, $h$가 임의의 $y\in G$에 대하여 유일한 함숫값을 가짐을 보이기 위해서는 다음의 식  
 
-    $$h(y)=(\operatorname{id}_A\circ h)(y)=((r\circ g)\circ h)(y)=(r \circ f)(y)$$  
+    $$h(y)=(\id_A\circ h)(y)=((r\circ g)\circ h)(y)=(r \circ f)(y)$$  
 
-    의 우변이 retraction $r$의 선택에 관계없이 동일한 값을 가짐을 보이면 된다. 그런데 $r\circ g=r'\circ g=\operatorname{id}_A$이므로, 임의의 $g(x)\in g(A)$에 대하여 $r(g(x))=x=r'(g(x))$이다. 즉, $r\|\_{g(A)}=r'\|\_{g(A)}$이다. 이제 동치인 조건 중 나중의 조건에 의하여 $r$과 $r'$은 $f(y)\in f(C)\subseteq g(A)$ 위에서 같은 값을 가져야 한다. 따라서 $h$는 존재한다면 유일하다.  
+    의 우변이 retraction $r$의 선택에 관계없이 동일한 값을 가짐을 보이면 된다. 그런데 $r\circ g=r'\circ g=\id_A$이므로, 임의의 $g(x)\in g(A)$에 대하여 $r(g(x))=x=r'(g(x))$이다. 즉, $r\|\_{g(A)}=r'\|\_{g(A)}$이다. 이제 동치인 조건 중 나중의 조건에 의하여 $r$과 $r'$은 $f(y)\in f(C)\subseteq g(A)$ 위에서 같은 값을 가져야 한다. 따라서 $h$는 존재한다면 유일하다.  
 
     이제 반대방향을 보여야 한다. 유일성 증명에서 힌트를 얻어 $h=r\circ f$로 정의하자. 만일 $f(C)\subseteq g(A)$라면, 임의의 $x\in C$에 대하여   
 
@@ -164,7 +164,7 @@ $$y=\operatorname{id}_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
     이 성립한다. 그런데 $f(x)\in f(C)\subseteq g(A)$이므로, $f(x)=g(y)$라 하면   
 
-    $$(g\circ r)(f(x))=(g\circ r)(g(y))=(g\circ(r\circ g))(y)=(g\circ\operatorname{id}_A)(y)=g(y)=f(x)$$  
+    $$(g\circ r)(f(x))=(g\circ r)(g(y))=(g\circ(r\circ g))(y)=(g\circ\id_A)(y)=g(y)=f(x)$$  
 
     이므로 $(g\circ h)(x)=f(x)$가 모든 $x\in C$에 대해 성립한다. 즉 주어진 조건을 만족하는 $h$가 존재한다.
 

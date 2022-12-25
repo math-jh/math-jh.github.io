@@ -27,7 +27,7 @@ weight: 2
 
 </div>
 
-Graded algebra homomorphism $u:E\rightarrow E'$가 주어졌다 하자. 그럼 $\operatorname{im}u$는 $E'$의 graded subalgebra가 되고, $\ker u$는 $E$의 graded subalgebra가 될 뿐 아니라 $E$의 graded ideal이 된다. 
+Graded algebra homomorphism $u:E\rightarrow E'$가 주어졌다 하자. 그럼 $\im u$는 $E'$의 graded subalgebra가 되고, $\ker u$는 $E$의 graded subalgebra가 될 뿐 아니라 $E$의 graded ideal이 된다. 
 
 ## 등급대수의 부분대수, 아이디얼과 몫대수
 
@@ -83,13 +83,13 @@ $$x=\sum_{\beta\in\Delta}\sum_{\gamma\in\Delta}a_{\beta,\gamma}y_\beta=\sum_{\al
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> 임의의 graded algebra homomorphism $u:E\rightarrow E'$에 대하여, $\ker u$는 $E$의 two-sided graded ideal이며 $\operatorname{im}u$는 $E'$의 graded subalgebra이다.
+<ins id="pp4">**명제 4**</ins> 임의의 graded algebra homomorphism $u:E\rightarrow E'$에 대하여, $\ker u$는 $E$의 two-sided graded ideal이며 $\im u$는 $E'$의 graded subalgebra이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\ker u$가 $E$의 two-sided ideal이고, $\operatorname{im}u$가 $E'$의 subalgebra인 것이 자명하므로 이 명제를 보이기 위해서는 $\ker u$와 $\operatorname{im}u$가 각각 graded submodule임만 보이면 충분하다.
+$\ker u$가 $E$의 two-sided ideal이고, $\im u$가 $E'$의 subalgebra인 것이 자명하므로 이 명제를 보이기 위해서는 $\ker u$와 $\im u$가 각각 graded submodule임만 보이면 충분하다.
 
 우선 임의의 $x\in \ker u$를 택하고, $x=\sum_{\alpha\in\Delta} x_\alpha$라 하자. 그럼
 
@@ -97,11 +97,11 @@ $$0=u(x)=u\left(\sum_{\alpha\in\Delta}x_\alpha\right)=\sum_{\alpha\in\Delta} u(x
 
 이며, 이 때 $u(x\_\alpha)\in E'\_\alpha$이므로 모든 $\alpha$에 대하여 $u(x\_\alpha)=0$이다. 따라서 [보조정리 2](#lem2)의 둘째 조건으로부터 $\ker u$가 $E$의 graded submodule임을 안다.
 
-비슷하게 임의의 $y\in\operatorname{im}u$가 주어졌다 하자. 그럼 $y=u(x)$이도록 하는 $x\in E$가 존재하며, $x=\sum_{\alpha\in\Delta} x_\alpha$라 하면
+비슷하게 임의의 $y\in\im u$가 주어졌다 하자. 그럼 $y=u(x)$이도록 하는 $x\in E$가 존재하며, $x=\sum_{\alpha\in\Delta} x_\alpha$라 하면
 
 $$y=u(x)=u\left(\sum_{\alpha\in\Delta}x_\alpha\right)=\sum_{\alpha\in\Delta}u(x_\alpha)$$
 
-이고, 따라서 $y$의 $\alpha$번째 성분이 $u(x_\alpha)$와 같다는 것을 안다. 자명하게 $u(x_\alpha)\in\operatorname{im}u$이므로, 다시 [보조정리 2](#lem2)의 둘째 조건으로부터 $\operatorname{im}u$가 graded submodule임을 안다.
+이고, 따라서 $y$의 $\alpha$번째 성분이 $u(x_\alpha)$와 같다는 것을 안다. 자명하게 $u(x_\alpha)\in\im u$이므로, 다시 [보조정리 2](#lem2)의 둘째 조건으로부터 $\im u$가 graded submodule임을 안다.
 
 </details>
 

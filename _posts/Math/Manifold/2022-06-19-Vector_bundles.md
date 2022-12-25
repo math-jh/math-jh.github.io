@@ -83,7 +83,7 @@ $$v|_p\mapsto (p, dx^1(v),\ldots, dx^m(v))$$
 
 으로 정의하면 된다. 고정된 $\pi^{-1}(p)$ 위에서 $\phi$가 벡터공간 사이의 isomorphism이 되는 것은 자명하고, 또 임의의 $v_x$에 대하여 $(\pi\circ\phi)(x,v)=x$임도 자명하다. $\phi$가 diffeomorphism이 된다는 것은 
 
-$$\tilde{\varphi}=(\varphi\times\operatorname{id}_{\mathbb{R}^m})\circ\phi$$
+$$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
 이고, 이 식에서 $\phi$를 제외한 두 함수가 모두 diffeomorphism이기 때문에 성립한다.
 
@@ -120,7 +120,7 @@ Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 v
 
 </div>
 
-만일 $f\in\operatorname{Hom}(V,V'), g\in\operatorname{Hom}(W,W')$라면 $F(f,g)\in\operatorname{Hom}(F(V,W),F(V',W'))$이다. 이들은 모두 벡터공간이므로 [§미분다양체의 예시들, 예시 2](/ko/math/manifold/examples_of_manifolds#ex2)와 같은 미분구조가 주어져 있고, 이를 통해 위의 정의를 적용할 수 있다. 또, 어렵지 않게 이 정의를 일반적인 $k$-fold product 
+만일 $f\in\Hom(V,V'), g\in\Hom(W,W')$라면 $F(f,g)\in\Hom(F(V,W),F(V',W'))$이다. 이들은 모두 벡터공간이므로 [§미분다양체의 예시들, ⁋예시 2](/ko/math/manifold/examples_of_manifolds#ex2)와 같은 미분구조가 주어져 있고, 이를 통해 위의 정의를 적용할 수 있다. 또, 어렵지 않게 이 정의를 일반적인 $k$-fold product 
 
 $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$
 
@@ -128,22 +128,22 @@ $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarro
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> $\operatorname{Hom}(-,-)$은 smooth functor이다. 임의의 두 isomorphism $f:V\rightarrow V'$, $g:W\rightarrow W'$이 주어져 있다 하자. 그럼 $\operatorname{Hom}(f,g)$는 $\operatorname{Hom}(V,W)$에서 $\operatorname{Hom}(V',W')$로의 functor이며 아래 diagram
+<ins id="ex5">**예시 5**</ins> $\Hom(-,-)$은 smooth functor이다. 임의의 두 isomorphism $f:V\rightarrow V'$, $g:W\rightarrow W'$이 주어져 있다 하자. 그럼 $\Hom(f,g)$는 $\Hom(V,W)$에서 $\Hom(V',W')$로의 functor이며 아래 diagram
 
 ![Hom_functor](/assets/images/Manifold/Vector_bundles-2.png){:width="139.65px" class="invert" .align-center}
 
-을 commute하도록 한다. 이를 식으로 쓰면 $\operatorname{Hom}(f,g)(u)=g\circ u\circ f^{-1}$이라 할 수 있다. $\operatorname{Hom}(f,g)$가 $g$에 smooth하게 의존한다는 것을 쉽게 확인할 수 있다. 대응 $g\mapsto \operatorname{Hom}(f,g)$를 생각하자. 그럼 $\operatorname{Hom}(W,W')$의 basis $w\_i^j$에 대하여,
+을 commute하도록 한다. 이를 식으로 쓰면 $\Hom(f,g)(u)=g\circ u\circ f^{-1}$이라 할 수 있다. $\Hom(f,g)$가 $g$에 smooth하게 의존한다는 것을 쉽게 확인할 수 있다. 대응 $g\mapsto \Hom(f,g)$를 생각하자. 그럼 $\Hom(W,W')$의 basis $w\_i^j$에 대하여,
 
 $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 
-가 모든 $u$에 대해 성립하므로 이 대응의 $w\_i^j$-방향미분은 $u\mapsto w\_i^j\circ u\circ f^{-1}$가 되어 연속이다. 뿐만 아니라 이 논증은 $g$ 자리에 어떠한 linear map를 집어넣어도 성립하므로, 이로부터 $g\mapsto\operatorname{Hom}(f,g)$의 임의의 고차 방향미분이 항상 연속이라는 것을 안다. 즉, $g\mapsto\operatorname{Hom}(f,g)$는 $C^\infty$이다. 이 대응이 $f$에도 smooth하게 의존한다는 것은 $g$보다는 번거롭지만, $f$가 isomorphism이라는 것으로부터 $t$를 충분히 작게 택하여 $f+tw_i^j$가 invertible하도록 할 수 있고, 이후 위의 논증을 반복하면 된다.
+가 모든 $u$에 대해 성립하므로 이 대응의 $w\_i^j$-방향미분은 $u\mapsto w\_i^j\circ u\circ f^{-1}$가 되어 연속이다. 뿐만 아니라 이 논증은 $g$ 자리에 어떠한 linear map를 집어넣어도 성립하므로, 이로부터 $g\mapsto\Hom(f,g)$의 임의의 고차 방향미분이 항상 연속이라는 것을 안다. 즉, $g\mapsto\Hom(f,g)$는 $C^\infty$이다. 이 대응이 $f$에도 smooth하게 의존한다는 것은 $g$보다는 번거롭지만, $f$가 isomorphism이라는 것으로부터 $t$를 충분히 작게 택하여 $f+tw_i^j$가 invertible하도록 할 수 있고, 이후 위의 논증을 반복하면 된다.
 
 다음은 모두 smooth functor의 예시들이다.
 
-- Dual functor $(-)^\ast$ ([선형대수학, §쌍대공간](/ko/math/linear_algebra/dual_space)),
-- $k$-th tensor functor $\mathcal{T}^k(-)$ ([텐서대수, §텐서대수](/ko/math/tensor_algebra/tensor_algebra)),
-- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([텐서대수, §대칭대수와 외대수](/ko/math/tensor_algebra/symmetric_and_exterior_algebras)),
-- $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([텐서대수, §대칭대수와 외대수](/ko/math/tensor_algebra/symmetric_and_exterior_algebras)),
+- Dual functor $(-)^\ast$ ([\[선형대수학\] §쌍대공간](/ko/math/linear_algebra/dual_space)),
+- $k$-th tensor functor $\mathcal{T}^k(-)$ ([\[텐서대수\] §텐서대수](/ko/math/tensor_algebra/tensor_algebra)),
+- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([\[텐서대수\] §대칭대수와 외대수](/ko/math/tensor_algebra/symmetric_and_exterior_algebras)),
+- $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([\[텐서대수\] §대칭대수와 외대수](/ko/math/tensor_algebra/symmetric_and_exterior_algebras)),
 - Tensor product $-\otimes -$,
 - Direct sum $-\oplus-$.
 

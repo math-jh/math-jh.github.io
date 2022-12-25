@@ -35,13 +35,13 @@ $$U\subseteq f^{-1}(f(U))\subseteq f^{-1}(V)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 두 위상공간 $X,Y$ 사이의 함수 $f:X\rightarrow Y$가 점 $x$에서 연속이라 하자. 만일 어떠한 $A\subseteq B$에 대하여 $x\in\operatorname{cl}(A)$라면, $f(x)\in\operatorname{cl}(A)$이다.
+<ins id="pp2">**명제 2**</ins> 두 위상공간 $X,Y$ 사이의 함수 $f:X\rightarrow Y$가 점 $x$에서 연속이라 하자. 만일 어떠한 $A\subseteq B$에 대하여 $x\in\cl(A)$라면, $f(x)\in\cl(A)$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$f(x)\in Y$의 임의의 근방 $V$를 택하자. 그럼 $f^{-1}(V)$는 $x$의 근방이므로 $f^{-1}(V)\cap A\neq\emptyset$이고 ([§집합의 내부, 폐포, 경계, 명제 6](/ko/math/topology/other_concepts#pp6)), $x'\in f^{-1}(V)\cap A$라 하면 $f(x')\in V\cap f(A)$이다. 특히 $V\cap f(A)\neq\emptyset$이므로, 다시 [§집합의 내부, 폐포, 경계, 명제 6](/ko/math/topology/other_concepts#pp6)를 적용하면 $f(x)\in\operatorname{cl}(A)$임을 안다.
+$f(x)\in Y$의 임의의 근방 $V$를 택하자. 그럼 $f^{-1}(V)$는 $x$의 근방이므로 $f^{-1}(V)\cap A\neq\emptyset$이고 ([§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#pp6)), $x'\in f^{-1}(V)\cap A$라 하면 $f(x')\in V\cap f(A)$이다. 특히 $V\cap f(A)\neq\emptyset$이므로, 다시 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#pp6)를 적용하면 $f(x)\in\cl(A)$임을 안다.
 
 </details>
 
@@ -52,7 +52,7 @@ $f(x)\in Y$의 임의의 근방 $V$를 택하자. 그럼 $f^{-1}(V)$는 $x$의 �
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. ([집합론, §이항관계의 그래프, 명제 13](/ko/math/set_theory/binary_relation#pp13))
+$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. ([\[집합론\] §이항관계의 그래프, ⁋명제 13](/ko/math/set_theory/binary_relation#pp13))
 
 </details>
 
@@ -63,7 +63,7 @@ $(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서
 <ins is="thm4">**정리 4**</ins> 두 위상공간 $X,Y$와 함수 $f:X\rightarrow Y$에 대하여, 다음이 모두 동치이다.
 
 1. $f$가 연속이다. 
-2. $X$의 임의의 부분집합 $A$에 대하여, $f(\operatorname{cl}A)\subset\operatorname{cl}f(A)$가 성립한다.
+2. $X$의 임의의 부분집합 $A$에 대하여, $f(\cl A)\subset\cl f(A)$가 성립한다.
 3. $Y$의 임의의 닫힌집합 $C$에 대하여, $f^{-1}(C)$가 $X$에서 닫힌집합이다.
 4. $Y$의 임의의 열린집합 $V$에 대하여, $f^{-1}(V)$가 $X$에서 열린집합이다.
 
@@ -75,11 +75,11 @@ $(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서
 
 이제 둘째 조건을 가정하고 세 번째 조건을 보이자. $Y$의 임의의 닫힌집합 $C$에 대하여, 다음 포함관계
 
-$$f(\operatorname{cl}(f^{-1}(C))\subseteq \operatorname{cl}(f(f^{-1}(C))\subseteq\operatorname{cl}(C)=C$$
+$$f(\cl(f^{-1}(C))\subseteq \cl(f(f^{-1}(C))\subseteq\cl(C)=C$$
 
 가 성립하므로,
 
-$$\operatorname{cl}(f^{-1}(C))\subseteq f^{-1}(f(\operatorname{cl}(f^{-1}(C)))\subseteq f^{-1}(C)$$
+$$\cl(f^{-1}(C))\subseteq f^{-1}(f(\cl(f^{-1}(C)))\subseteq f^{-1}(C)$$
 
 로부터 $f^{-1}(C)$가 닫힌집합이라는 것을 안다. 식 $(f^{-1}(A))^c=f^{-1}(A^c)$가 임의의 부분집합 $A\subseteq Y$에 대해 성립하므로, 이로부터 넷째 조건 또한 얻어진다는 것이 자명하다. 
 
@@ -103,23 +103,23 @@ $$f^{-1}(y)\in f^\mathcal{T}(V_1)\setminus f^\mathcal{T}(V_2)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 일반적으로 $f^{\mathcal{T}}$가 전사함수가 될 필요는 없다. 가령 $\mathbb{N}$에 discrete topology를 준 공간을 $X$, trivial topology를 준 공간을 $Y$라 한 후, 집합으로서의 항등함수 $\operatorname{id}:\mathbb{N}\rightarrow\mathbb{N}$을 생각하면 $\operatorname{id}$는 연속인 전단사함수이지만 함수
+<ins id="ex5">**예시 5**</ins> 일반적으로 $f^{\mathcal{T}}$가 전사함수가 될 필요는 없다. 가령 $\mathbb{N}$에 discrete topology를 준 공간을 $X$, trivial topology를 준 공간을 $Y$라 한 후, 집합으로서의 항등함수 $\id:\mathbb{N}\rightarrow\mathbb{N}$을 생각하면 $\id$는 연속인 전단사함수이지만 함수
 
-$$\operatorname{id}^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$
+$$\id^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$
 
-는 전사함수가 될 수 없다. ([집합론, §기수, 명제 15](/ko/math/set_theory/cardinals#pp15))
+는 전사함수가 될 수 없다. ([\[집합론\] §기수, ⁋명제 15](/ko/math/set_theory/cardinals#pp15))
 
 </div>
 
 그러나 만일 전단사함수 $f$의 역함수 $f^{-1}$ 또한 연속함수라면 $(f^{-1})^\mathcal{T}:\mathcal{T}_X\rightarrow\mathcal{T}_Y$가 잘 정의되며 정의로부터
 
-$$f^\mathcal{T}\circ (f^{-1})^\mathcal{T}=\operatorname{id}_{\mathcal{T}_X},\qquad (f^{-1})^\mathcal{T}\circ f^\mathcal{T}=\operatorname{id}_{\mathcal{T}_Y}$$
+$$f^\mathcal{T}\circ (f^{-1})^\mathcal{T}=\id_{\mathcal{T}_X},\qquad (f^{-1})^\mathcal{T}\circ f^\mathcal{T}=\id_{\mathcal{T}_Y}$$
 
 임이 자명하므로 $f^\mathcal{T}$ 또한 전단사함수가 된다. 이와 같은 상황을 다음과 같이 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 연속함수 $f:X\rightarrow Y$가 *homeomorphism<sub>위상동형사상</sub>*이라는 것은, 또 다른 연속함수 $g:Y\rightarrow X$가 존재하여 $f\circ g=\operatorname{id}_Y$이고 $g\circ f=\operatorname{id}_X$인 것이다.
+<ins id="df6">**정의 6**</ins> 연속함수 $f:X\rightarrow Y$가 *homeomorphism<sub>위상동형사상</sub>*이라는 것은, 또 다른 연속함수 $g:Y\rightarrow X$가 존재하여 $f\circ g=\id_Y$이고 $g\circ f=\id_X$인 것이다.
 </div>
 
 ---

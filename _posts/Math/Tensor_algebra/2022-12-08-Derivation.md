@@ -59,9 +59,9 @@ $$\varepsilon(p,q)=(-1)^{pq}\qquad\text{for all $p,q\in\mathbb{Z}$}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $\Delta$-graded $A$-algebra $E=\bigoplus E_\alpha$와, 이 위에 정의된 degree $\operatorname{deg}(D)$의 homogeneous linear map $D$가 주어졌다 하자. 또, $\Delta$ 위에 commutation factor $\varepsilon$이 주어졌다 하자. 그럼 $D$가 *homogeneous $\varepsilon$-derivation*이라는 것은 모든 homogeneous element $a\in E$와 임의의 원소 $b\in E$에 대하여 다음의 식
+<ins id="df3">**정의 3**</ins> $\Delta$-graded $A$-algebra $E=\bigoplus E_\alpha$와, 이 위에 정의된 degree $\degree(D)$의 homogeneous linear map $D$가 주어졌다 하자. 또, $\Delta$ 위에 commutation factor $\varepsilon$이 주어졌다 하자. 그럼 $D$가 *homogeneous $\varepsilon$-derivation*이라는 것은 모든 homogeneous element $a\in E$와 임의의 원소 $b\in E$에 대하여 다음의 식
 
-$$D(ab)=D(a)b+\varepsilon(\operatorname{deg}(a),\operatorname{deg}(D))aD(b)$$
+$$D(ab)=D(a)b+\varepsilon(\degree(a),\degree(D))aD(b)$$
 
 이 성립하는 것이다. 
 
@@ -71,15 +71,15 @@ $$D(ab)=D(a)b+\varepsilon(\operatorname{deg}(a),\operatorname{deg}(D))aD(b)$$
 
 대부분의 경우 $\Delta=\mathbb{Z}$이고, commutation factor $\varepsilon$ 또한 $\mathbb{Z}$에서 값을 갖는다. 그럼 앞서 살펴본 것과 같이 가능한 sign은 다음의 두 가지가 있다.
 
-$$\varepsilon(\operatorname{deg}(a),\operatorname{deg}(D))=1,\qquad \varepsilon(\operatorname{deg}(a),\operatorname{deg}(D))=(-1)^{\operatorname{deg}(a)\operatorname{deg}(D)}.$$
+$$\varepsilon(\degree(a),\degree(D))=1,\qquad \varepsilon(\degree(a),\degree(D))=(-1)^{\degree(a)\degree(D)}.$$
 
-만일 $\operatorname{deg}(D)$가 짝수라면 두 가지 sign convention은 구별이 되지 않는다. 그러나 만일 $\operatorname{deg}(D)$가 홀수라면 두 sign convention이 구분되며, 전자의 경우 라이프니츠 법칙
+만일 $\degree(D)$가 짝수라면 두 가지 sign convention은 구별이 되지 않는다. 그러나 만일 $\degree(D)$가 홀수라면 두 sign convention이 구분되며, 전자의 경우 라이프니츠 법칙
 
 $$D(ab)=D(a)b+aD(b)$$
 
 을 만족하지만 후자는
 
-$$D(ab)=D(a)b+(-1)^{\operatorname{deg}(a)}D(b)$$
+$$D(ab)=D(a)b+(-1)^{\degree(a)}D(b)$$
 
 이 된다. 이를 *anti-derivation*이라 부른다.
 
