@@ -3,14 +3,14 @@ layout: splash
 permalink: /ko/
 hidden: true
 header:
-  overlay_image: /assets/images/Background/Main.png
+  overlay_image: /assets/images/Thumbnails/Main.png
   overlay_filter: 0.85
   actions:
     - label: "<i class='material-icons md-18' style='vertical-align:-.1em'>&#xE873;</i>  About this site"
-      url: "/about/about_this_site"
+      url: "/about/"
 excerpt: 
 feature_row:
-  - image_path: /assets/images/Background/Title-Set_theory.jpeg
+  - image_path: /assets/images/Thumbnails/Title-Set_theory.jpeg
     alt: "set_theory"
     title: "집합론"
     excerpt: "수학기초론 1: 집합론"

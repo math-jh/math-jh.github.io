@@ -74,7 +74,7 @@ Lattice $A$의 임의의 <em_ko>유한한</em_ko> 부분집합은 supremum과 in
 
 $$x=y,\qquad x < y,\qquad x > y$$
 
-중 하나가 성립한다. 이 경우엔 $x\leq y$의 부정이 $x > y$가 된다. 하지만 totally ordered set이라는 조건이 빠진 상태에서 이는 일반적으로 성립하지 않는다. ([§순서관계의 정의, 참고](/ko/math/set_theory/order_relations#rmk1))
+중 하나가 성립한다. 이 경우엔 $x\leq y$의 부정이 $x > y$가 된다. 하지만 totally ordered set이라는 조건이 빠진 상태에서 이는 일반적으로 성립하지 않는다. ([§순서관계의 정의, ⁋참고](/ko/math/set_theory/order_relations#rmk1))
 
 <ins id="pp6">**명제 6**</ins> Totally ordered set $A$에서 ordered set $B$로의 모든 순단조함수 $f$는 단사함수다. 만약 $f$가 순증가라면, $f$는 $A$에서 $f(A)$로의 isomorphism이다.
 {: .proposition}
@@ -84,7 +84,7 @@ $$x=y,\qquad x < y,\qquad x > y$$
 $f$가 순단조함수라 하자. 그럼 임의의 $x\neq y$에 대하여, $x > y$ 혹은 $x < y$가 성립하므로, $f(x) > f(y)$ 혹은 $f(x) < f(y)$이고, 따라서 $f(x)\neq f(y)$가 되어 $f$는 단사함수다. 특히 $f$가 순증가라면, 우리는 $f(x)\leq f(y)\implies x\leq y$라는 것을 보여야 하는데, 이는 대우명제가 자명하다.
 </details>
 
-위의 명제 또한 일반적인 ordered set에서는 성립하지 않았었다. ([§단사함수, 참고](/ko/math/set_theory/monotone_functions#rmk3))
+위의 명제 또한 일반적인 ordered set에서는 성립하지 않았었다. ([§단조함수, ⁋참고](/ko/math/set_theory/monotone_functions#rmk2))
 
 <ins id="pp7">**명제 7**</ins> $A$가 totally ordered set이고 $X$가 그 부분집합이라 하자. 그럼 $b\in A$가 $X$의 supremum인 것은 $b$가 $X$의 upper bound이고, $c < b$를 만족하는 임의의 $c\in A$에 대하여 $x\in X$이 존재하여 $c < x\leq b$인 것과 동치이다.
 {: .proposition}
@@ -96,8 +96,8 @@ $f$가 순단조함수라 하자. 그럼 임의의 $x\neq y$에 대하여, $x > 
 
 </details>
 
-$A$가 ordered set이고, $a\leq b$라 하자. 그럼 $a\leq x\leq b$를 만족하는 모든 $x$를 모아둔 $X\subseteq A$를 *closed interval*이라 부르고 $[a,b]$로 적는다.  $a\leq x < b$인 $x$들을 모아둔 부분집합은 *half-open interval*이라 부르고 $\[a,b)$로 적으며, $(a,b\]$도 마찬가지다. $(a,b)$는 *open interval*이라 부르고, 이는 $a < x < b$를 만족하는 모든 $x$를 모아둔 집합이다.  
-추가로, $x\leq a$를 만족하는 모든 $x$를 모아둔 부분집합을 *unbounded closed interval*이라 부르고 $(-\infty, a]$로 적는다. $[a,\infty)$, $(-\infty, a)$, $(a, \infty)$도 유사하게 정의한다. 
+$A$가 ordered set이고, $a\leq b$라 하자. 그럼 $a\leq x\leq b$를 만족하는 모든 $x$를 모아둔 $X\subseteq A$를 *닫힌구간<sub>closed interval</sub>*이라 부르고 $[a,b]$로 적는다. 구간 $(a,b)$는 *열린구간<sub>open interval</sub>*이라 부르고, 이는 $a < x < b$를 만족하는 모든 $x$를 모아둔 집합이다.  
+추가로, $x\leq a$를 만족하는 모든 $x$를 모아둔 부분집합을 *unbounded*인 닫힌구간이라 부르고 $(-\infty, a]$로 적는다. $[a,\infty)$, $(-\infty, a)$, $(a, \infty)$도 유사하게 정의한다. 
 
 
 <ins id="pp8">**명제 8**</ins> Lattice에서 두 interval의 교집합도 interval이다.
