@@ -9,7 +9,7 @@ header:
     overlay_image: /assets/images/Set_theory/Cardinals.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "set-ko"
+    nav: "set_theory-ko"
 
 date: 2021-09-04
 last_modified_at: 2022-11-29
