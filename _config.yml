@@ -35,9 +35,9 @@ masthead_title           : # overrides the website title displayed in the masthe
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "math-jh" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -56,11 +56,11 @@ comments:
     reactions_enabled    : # '1' for enabled (default), '0' for disabled
     theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
   staticman:
-    branch               : "main" # "master"
-    endpoint             : "https://math-jh-staticman.herokuapp.com/v2/entry/" # "https://{your Staticman v3 API}/v3/entry/github/"
+    branch               : # "main" # "master"
+    endpoint             : # "https://math-jh-staticman.herokuapp.com/v2/entry/" # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
-  siteKey                : "6LeiUpkgAAAAAN3VR6VD-g9b10-yf2r8DjRmfiVZ"
-  secret                 : "AE8k5EQKTRnYyp/vpHoMUhAH/YVkzv36tfI+ZZZ2N5c/pFI7Afio0TQfD/FJdDUOpJ8UH+n5K1x7Yeqc5tbcfG20rpKpWCXTiehLJSqiMixuj12oPGzg7iD4Qecehc9o02vSk6pRS/lCAoxuO2GU9zTs8EyKYSqgCkLIKEzoZDnnVJKvpWoPhhpqmaogaYG0AvuLyoKwDoN1C8EwZlGg69btCtVgtcIWgCscVb4eOlc/TH+b3FbKAn2XfLlRmRaDhGpsAl9HMWoIFURnqQ4ZDkcD3S6H9tGNrJd1uUtsWuhnXz7iz5nvg2Z82aWqOD8hqAaCH/jLpKWFNJiFVGqjgzVmxn665k9NCGmPx7rFPUkmQN8MFjJi1WO+w1WmUTdf0N6+A253f9Ls5ZKqJHRsoXDubd9c9bTuFI1YmaTiXiU45vJXMQRTgqO2XgWSbIANigWC4fQXa6D42pFZMVlOs9zjQ2dww84hMfNjqA1djAGf7C4oWBMNZqzyDiPbWvwBFZ1MQqSBq1SWrrrxF1l501U9GrYaOpgFlKBm0d1l4BE5Wft176EOzkyGGvgzhKfWMDla8CrOAQD8Qglpz3chIMAVTXucCIjvK74yNuNloZsXcGqGaFQguNsa9EhiAhWwviHFQmVCcxOl2bbMuc1QN0qsQC1TO1J0cQs9kbfWd8c="
+  siteKey                : # "6LeiUpkgAAAAAN3VR6VD-g9b10-yf2r8DjRmfiVZ"
+  secret                 : # "AE8k5EQKTRnYyp/vpHoMUhAH/YVkzv36tfI+ZZZ2N5c/pFI7Afio0TQfD/FJdDUOpJ8UH+n5K1x7Yeqc5tbcfG20rpKpWCXTiehLJSqiMixuj12oPGzg7iD4Qecehc9o02vSk6pRS/lCAoxuO2GU9zTs8EyKYSqgCkLIKEzoZDnnVJKvpWoPhhpqmaogaYG0AvuLyoKwDoN1C8EwZlGg69btCtVgtcIWgCscVb4eOlc/TH+b3FbKAn2XfLlRmRaDhGpsAl9HMWoIFURnqQ4ZDkcD3S6H9tGNrJd1uUtsWuhnXz7iz5nvg2Z82aWqOD8hqAaCH/jLpKWFNJiFVGqjgzVmxn665k9NCGmPx7rFPUkmQN8MFjJi1WO+w1WmUTdf0N6+A253f9Ls5ZKqJHRsoXDubd9c9bTuFI1YmaTiXiU45vJXMQRTgqO2XgWSbIANigWC4fQXa6D42pFZMVlOs9zjQ2dww84hMfNjqA1djAGf7C4oWBMNZqzyDiPbWvwBFZ1MQqSBq1SWrrrxF1l501U9GrYaOpgFlKBm0d1l4BE5Wft176EOzkyGGvgzhKfWMDla8CrOAQD8Qglpz3chIMAVTXucCIjvK74yNuNloZsXcGqGaFQguNsa9EhiAhWwviHFQmVCcxOl2bbMuc1QN0qsQC1TO1J0cQs9kbfWd8c="
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
