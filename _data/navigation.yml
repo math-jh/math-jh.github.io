@@ -1,8 +1,91 @@
-# main links
 main:
   - title: "About"
     url: /about/
   - title: "Category 🇰🇷"
-    url: ko/categories
+    url: ko/categories/
   - title: "Category 🇺🇸"
-    url: en/categories
+    url: en/categories/
+
+set-ko:
+  - title: <a href="/ko/set_theory/" class="sidebar_title">집합론</a>
+    children:
+      - title: "ZFC 공리계"
+        url: ko/math/set_theory/zfc_axioms
+      - title: "순서쌍"
+        url: ko/math/set_theory/ordered_pair
+      - title: "이항관계"
+        url: ko/math/set_theory/binary_relation
+      - title: "이항관계들 사이의 연산"
+        url: ko/math/set_theory/operation_of_binary_relations
+      - title: "함수"
+        url: /ko/math/set_theory/functions
+      - title: "함수들 사이의 연산"
+        url: ko/math/set_theory/operation_of_functions
+      - title: "Retraction과 section"
+        url: ko/math/set_theory/retraction_and_section
+      - title: "합집합과 교집합"
+        url: ko/math/set_theory/union_and_intersection
+      - title: "집합의 합"
+        url: ko/math/set_theory/sum_of_sets
+      - title: "집합의 곱"
+        url: ko/math/set_theory/product_of_sets
+      - title: "곱집합의 성질"
+        url: ko/math/set_theory/property_of_products
+      - title: "동치관계"
+        url: ko/math/set_theory/equivalence_relations
+      - title: "동치관계의 예시들"
+        url: ko/math/set_theory/examples_of_equivalence
+      - title: "순서관계의 정의"
+        url: ko/math/set_theory/order_relations
+      - title: "단조함수"
+        url: ko/math/set_theory/monotone_functions
+      - title: "순서집합의 원소들"
+        url: ko/math/set_theory/elements_in_ordered_set
+      - title: "유향집합"
+        url: ko/math/set_theory/directed_set
+      - title: "필터와 아이디얼, 갈루아 대응"
+        url: ko/math/set_theory/filter_and_ideal
+      - title: "서수와 정렬집합"
+        url: ko/math/set_theory/ordinals
+      - title: "정렬집합의 성질들"
+        url: ko/math/set_theory/well_ordering
+      - title: "선택공리"
+        url: ko/math/set_theory/axiom_of_choice
+      - title: "서수들 사이의 순서관계"
+        url: ko/math/set_theory/order_relations_between_ordinals
+      - title: "기수"
+        url: ko/math/set_theory/cardinals
+      - title: "기수들 사이의 연산"
+        url: ko/math/set_theory/operation_of_cardinals
+      - title: "자연수와 무한집합"
+        url: ko/math/set_theory/natural_numbers
+      - title: "극한"
+        url: ko/math/set_theory/limits
+          
+algebraic_structures-ko:
+  - title: <a href="/ko/algebraic_structures/" class="sidebar_title">대수적 구조</a>
+    children:
+      - title: "대수적 구조"
+        url: ko/math/algebraic_structures/algebraic_structure
+      - title: "준군, 모노이드, 군"
+        url: ko/math/algebraic_structures/group
+      - title: "Grothendieck 군"
+        url: ko/math/algebraic_structures/Grothendieck_group
+      - title: "준동형사상"
+        url: ko/math/algebraic_structures/group_homomorphisms
+      - title: "몫군"
+        url: ko/math/algebraic_structures/quotient_group
+      - title: "동형사상"
+        url: ko/math/algebraic_structures/isomorphism_theorems
+
+tensor_algebra-ko:
+  - title: <a href="/ko/tensor_algebra/" class="sidebar_title">텐서대수</a>
+    children:
+      - title: "등급구조"
+        url: ko/math/tensor_algebra/graduation
+      - title: "등급대수"
+        url: ko/math/tensor_algebra/graded_homomorphism
+      - title: "텐서대수"
+        url: ko/math/tensor_algebra/tensor_algebra
+      - title: "대칭대수와 외대수"
+        url: ko/math/tensor_algebra/symmetric_and_exterior_algebra
