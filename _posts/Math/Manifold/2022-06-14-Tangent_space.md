@@ -35,9 +35,9 @@ $$\lim_{t\rightarrow 0}\frac{f(p+tv)-f(p)}{t}$$
 
 대수기하의 언어에 익숙하지 않다면 바로 [다음 절](/ko/math/manifold/tangent_space#%EC%A0%91%EB%B2%A1%ED%84%B0)로 넘어가도 좋다.
 
-$C^\infty(U)$를 열린집합 $U$ 위에서 정의된 $C^\infty$ 함수들의 모임, 그리고 $U\subseteq V$일 때마다 함수 $\operatorname{res}_{UV}:C^\infty(U)\rightarrow C^\infty(V)$를 
+$C^\infty(U)$를 열린집합 $U$ 위에서 정의된 $C^\infty$ 함수들의 모임, 그리고 $V\subseteq U$일 때마다 함수 $\restrict_{UV}:C^\infty(U)\rightarrow C^\infty(V)$를 
 
-$$\operatorname{res}_{UV}:f\mapsto f|_V$$
+$$\restrict_{UV}:f\mapsto f|_V$$
 
 으로 정의하자. 그럼 이 구조는 $M$ 위에 정의된 ring들의 sheaf $\mathcal{C}^\infty_M$가 된다. 임의의 $p\in M$에서의 $\mathcal{C}^\infty$의 stalk은 $\mathcal{C}^\infty_{M,p}$, 혹은 혼동이 없을 때에는 $\mathcal{C}^\infty_p$로 적는다.
 
@@ -75,9 +75,9 @@ $$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p: \mathbf{f}(p)=0\}$$
 
 우선, 조건 $\mathbf{f}(p)=0$가 잘 정의되었다. 이는 $\mathbf{f}$에 속하는 함수들은 점 $p$에서는 모두 같은 값을 가져야 하기 때문이다. 어렵지 않게 $\mathfrak{m}_p$가 실제로 ideal이 된다는 것을 알 수 있다. 
 
-또, $\mathfrak{m}_p$가 maximal인 것은 *evaluation map* $\operatorname{ev}_p:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$을 $\mathbf{f}\mapsto\mathbf{f}(p)$로 정의했을 때, 다음의 diagram
+또, $\mathfrak{m}_p$가 maximal인 것은 *evaluation map* $\ev_p:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$을 $\mathbf{f}\mapsto\mathbf{f}(p)$로 정의했을 때, 다음의 diagram
 
-$$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\operatorname{ev}_p}{\longrightarrow}\mathbb{R}\longrightarrow 0$$
+$$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\ev_p}{\longrightarrow}\mathbb{R}\longrightarrow 0$$
 
 이 exact인 것으로부터 얻어진다. $\mathcal{C}^\infty_p/\mathfrak{m}_p$이 field $\mathbb{R}$이 되기 때문이다.
 
@@ -117,7 +117,7 @@ $$v(\mathbf{f}\mathbf{g})=\mathbf{f}(p)v(\mathbf{g})+\mathbf{g}(p)v(\mathbf{f})$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\mathcal{C}^\infty_p$와 $\mathbb{R}$ 모두 $\mathbb{R}$-벡터공간이므로, $\operatorname{Hom}_\mathbb{R}(\mathcal{C}^\infty_p,\mathbb{R})$ 또한 $\mathbb{R}$-벡터공간이다. 따라서 tangent space $T_pM$이 그 이름답게 $\mathbb{R}$-벡터공간이 된다는 것을 보이기 위해서는 $T_pM$이 덧셈과 상수곱에 대해 닫혀있음만 보이면 충분하다.  예를 들어, $v+w$가 다음의 식
+$\mathcal{C}^\infty_p$와 $\mathbb{R}$ 모두 $\mathbb{R}$-벡터공간이므로, $\Hom_\mathbb{R}(\mathcal{C}^\infty_p,\mathbb{R})$ 또한 $\mathbb{R}$-벡터공간이다. 따라서 tangent space $T_pM$이 그 이름답게 $\mathbb{R}$-벡터공간이 된다는 것을 보이기 위해서는 $T_pM$이 덧셈과 상수곱에 대해 닫혀있음만 보이면 충분하다.  예를 들어, $v+w$가 다음의 식
 
 $$(v+w)(\mathbf{f})=v(\mathbf{f})+w(\mathbf{f})$$
 
@@ -144,7 +144,7 @@ $$v(\mathbf{1})=v(\mathbf{1}\cdot\mathbf{1})=\mathbf{1}(p)v(\mathbf{1})+\mathbf{
 
 </details>
 
-그러나 아직 $T_pM$이 어떤 공간인지는 잘 알지 못한다. 특히 $T_pM$의 차원을 아직 알지 못한다. 이는 다음 글에서 살펴본다.
+그러나 아직 $T_pM$이 어떤 공간인지는 잘 알지 못한다. 특히 $T_pM$의 차원을 아직 모른다. 이는 다음 글에서 살펴본다.
 
 
 ---

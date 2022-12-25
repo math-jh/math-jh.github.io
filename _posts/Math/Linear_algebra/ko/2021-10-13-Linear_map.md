@@ -50,7 +50,7 @@ weight: 7
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, 명제 2](/ko/math/linear_algebra/vector_spaces#pp2), 그리고 [따름정리 3](/ko/math/linear_algebra/vector_spaces#crl3)의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
+Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#pp2), 그리고 [§벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#crl3)의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
 
 $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
@@ -112,9 +112,9 @@ $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(
 
 $$\ker L=\{v\in V: L(v)=0\}$$
 
-으로 정의되는 집합이다. 또, $L$의 *image<sub>상</sub>* $\operatorname{im}L$는 다음의 식
+으로 정의되는 집합이다. 또, $L$의 *image<sub>상</sub>* $\im L$는 다음의 식
 
-$$\operatorname{im}L=\{w\in W: L(v)=w\text{ for some $v\in V$}\}$$
+$$\im L=\{w\in W: L(v)=w\text{ for some $v\in V$}\}$$
 
 으로 정의되는 집합이다.
 
@@ -124,7 +124,7 @@ $$\operatorname{im}L=\{w\in W: L(v)=w\text{ for some $v\in V$}\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $\ker L\leq V$이고 $\operatorname{im}L\leq W$이다.
+<ins id="pp7">**명제 7**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $\ker L\leq V$이고 $\im L\leq W$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -140,30 +140,30 @@ $$L(v_1+v_2)=L(v_1)+L(v_2)=0+0=0$$
 
 이므로 $\alpha v\in\ker L$, $v_1+v_2\in\ker L$이 성립하기 때문이다.
 
-이와 비슷하게, $\operatorname{im}L$은 $W$의 부분공간이다. 임의의 $w,w_1,w_2\in W$와 $\alpha\in F$를 택해오면, 정의에 의해
+이와 비슷하게, $\im L$은 $W$의 부분공간이다. 임의의 $w,w_1,w_2\in W$와 $\alpha\in F$를 택해오면, 정의에 의해
 
 $$L(v)=w,\quad L(v_1)=w_1,\quad L(v_2)=w_2$$
 
 를 만족하는 $v,v_1,v_2\in V$가 존재하며 따라서
 
-$$\alpha w=\alpha L(v)=L(\alpha v)\in\operatorname{im}L$$
+$$\alpha w=\alpha L(v)=L(\alpha v)\in\im L$$
 
 그리고
 
-$$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \operatorname{im}L$$
+$$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 
 이기 때문이다.
 
 </details>
 
-이제 이들 $\ker L$과 $\operatorname{im}L$을 통해 $L$이 injective인지, surjective인지를 확인할 수 있다.
+이제 이들 $\ker L$과 $\im L$을 통해 $L$이 injective인지, surjective인지를 확인할 수 있다.
 
 <div class="proposition" markdown="1">
 
 <ins id="pp8">**명제 8**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, 
 
 1. $L$이 단사인 것은 $\ker L=\\{0\\}$인 것과 동치이고,
-2. $L$이 전사인 것은 $\operatorname{im}L=W$인 것과 동치이다.
+2. $L$이 전사인 것은 $\im L=W$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -183,14 +183,14 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
 </details>
 
-덜 엄밀하게 이야기하자면 $\ker L$이 작으면 작을수록 $L$은 단사함수에 가깝고, $\operatorname{im} L$이 크면 클수록 $L$은 전사함수에 가깝다.
+덜 엄밀하게 이야기하자면 $\ker L$이 작으면 작을수록 $L$은 단사함수에 가깝고, $\im L$이 크면 클수록 $L$은 전사함수에 가깝다.
 
 <div class="proposition" markdown="1">
 
 <ins id="crl9">**따름정리 9**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
 
 1. 만약 $L$이 단사라면, 임의의 일차독립인 부분집합 $S\subset V$에 대하여 $L(S)$ 또한 $W$에서 일차독립이다.
-2. 만약 $L$이 전사라면, $\operatorname{span}S=V$를 만족하는 $S\subset V$에 대해, $L(S)$ 또한 $\operatorname{span}L(S)=W$를 만족한다.
+2. 만약 $L$이 전사라면, $\span S=V$를 만족하는 $S\subset V$에 대해, $L(S)$ 또한 $\span L(S)=W$를 만족한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -206,7 +206,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
     이므로, 앞선 명제에 의해 $\sum\alpha_ix_i=0$이어야 한다. 이제, $S$는 일차독립인 부분집합이므로, $\alpha_i=0$이 모든 $i$에 대해 성립한다.
 
-2. 임의의 $w\in W$가 주어졌다 하자. 그럼 $\operatorname{im}L=W$이므로, 적당한 $v\in V$가 존재하여 $L(v)=w$이다. 한편, $\operatorname{span}S=V$이므로 $v$를 $S$의 원소들의 일차결합
+2. 임의의 $w\in W$가 주어졌다 하자. 그럼 $\im L=W$이므로, 적당한 $v\in V$가 존재하여 $L(v)=w$이다. 한편, $\span S=V$이므로 $v$를 $S$의 원소들의 일차결합
 
     $$v=\sum_{i=1}^n\alpha_ix_i$$
     
@@ -228,7 +228,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
 $$L(v)=0\text{ for all $v\in V$}$$
 
-으로 정의된 $L:V\rightarrow W$는 linear다. 이 경우, $\operatorname{im}L=\\{0\\}$이고 $\ker L=V$이다.
+으로 정의된 $L:V\rightarrow W$는 linear다. 이 경우, $\im L=\\{0\\}$이고 $\ker L=V$이다.
 
 </div>
 
@@ -240,39 +240,39 @@ $$L(v)=0\text{ for all $v\in V$}$$
 
 $$\iota(w)=w\text{ for all $w\in W$}$$
 
-으로 정의된 $\iota:W\rightarrow V$는 linear map이다. 이번에는 $\operatorname{im}\iota=W$이고, $\ker \iota=\\{0\\}$이다. 즉, $L$은 단사함수이다.
+으로 정의된 $\iota:W\rightarrow V$는 linear map이다. 이번에는 $\im\iota=W$이고, $\ker \iota=\\{0\\}$이다. 즉, $L$은 단사함수이다.
 
 </div>
 
-위의 예시에서 특별히 $W=V$인 경우 $L$은 항등함수 $\operatorname{id}_V$와 같게 된다. ([집합론, §함수 (1), 예시 8](/ko/math/set_theory/functions_1#ex8)) 
+위의 예시에서 특별히 $W=V$인 경우 $L$은 항등함수 $\id_V$와 같게 된다. ([\[집합론\] §함수들 사이의 연산, ⁋예시 4](/ko/math/set_theory/operation_of_functions#ex4)) 
 
 <div class="example" markdown="1">
 
 <ins id="ex12">**예시 12**</ins> 임의의 $F$-벡터공간 $V$, $W$와, 그들의 곱 $V\times W$를 생각하자. 그럼 다음의 식
 
-$$\operatorname{pr}_1((v,w))=v$$
+$$\pr_1((v,w))=v$$
 
-으로 정의된 $\operatorname{pr}_1:V\times W\rightarrow V$는 linear map이 된다. $\operatorname{im}\operatorname{pr}_1=V$이고, 
+으로 정의된 $\pr_1:V\times W\rightarrow V$는 linear map이 된다. $\im\pr_1=V$이고, 
 
-$$\ker \operatorname{pr}_1=\{(0,w):w\in W\}$$
+$$\ker \pr_1=\{(0,w):w\in W\}$$
 
-임을 쉽게 확인할 수 있다. 물론, 비슷하게 $\operatorname{pr}_2:V\times W\rightarrow W$를 정의할 수도 있으며, $n$개의 순서쌍으로 이를 확장할 수도 있다. 특히, 유클리드 공간 $F^n$에 대하여, 
+임을 쉽게 확인할 수 있다. 물론, 비슷하게 $\pr_2:V\times W\rightarrow W$를 정의할 수도 있으며, $n$개의 순서쌍으로 이를 확장할 수도 있다. 특히, 유클리드 공간 $F^n$에 대하여, 
 
-$$\operatorname{pr}_i((a_1,\ldots, a_n))=a_i$$
+$$\pr_i((a_1,\ldots, a_n))=a_i$$
 
-으로 정의된 $\operatorname{pr}_i:F^n\rightarrow F$도 linear다.
+으로 정의된 $\pr_i:F^n\rightarrow F$도 linear다.
 
 </div>
 
-$\operatorname{pr}$은 projection의 머릿글자로, 간단히 $p$, 혹은 $\pi$와 같이 쓰기도 한다.
+$\pr$은 projection의 머릿글자로, 간단히 $p$, 혹은 $\pi$와 같이 쓰기도 한다.
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> $F[\mathrm{x}]$ 위에 정의된 함수 $D:F[\mathrm{x}]\rightarrow F[\mathrm{x}]$를 다음의 식
+<ins id="ex13">**예시 13**</ins> $F[\x]$ 위에 정의된 함수 $D:F[\x]\rightarrow F[\x]$를 다음의 식
 
-$$D\left(\sum_{i=0}^\infty a_i\mathrm{x}^i\right)=\sum_{i=1}^\infty ia_i\mathrm{x}^{i-1}$$
+$$D\left(\sum_{i=0}^\infty a_i\x^i\right)=\sum_{i=1}^\infty ia_i\x^{i-1}$$
 
-으로 정의하자. (여기서 $(a_i)$는 finitely supported이다.) 그럼 $D$는 linear이고, $\operatorname{im} D= F[\mathrm{x}]$이다. 또, $\ker D$는 모든 constant polynomial들의 모임이다. 
+으로 정의하자. (여기서 $(a_i)$는 finitely supported이다.) 그럼 $D$는 linear이고, $\im D= F[\x]$이다. 또, $\ker D$는 모든 constant polynomial들의 모임이다. 
 
 </div>
 

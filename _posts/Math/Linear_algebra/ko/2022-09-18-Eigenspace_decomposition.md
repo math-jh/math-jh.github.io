@@ -29,19 +29,19 @@ $$Av=\lambda v$$
 
 더 일반적으로, $A$를 $F^n$에서 $F^n$으로의 linear map으로 생각하고, 정의역 $F^n$을 고유공간 $E_\lambda$들로 덮을 수 있다 가정하자. 즉
 
-$$F^n=\operatorname{span}\left(\bigcup_{\lambda\in\operatorname{Spec}(A)}E_\lambda\right)$$
+$$F^n=\span\left(\bigcup_{\lambda\in\Spec(A)}E_\lambda\right)$$
 
 이라 하자. 그럼 임의의 $v\in F^n$에 대하여, $v_\lambda\in E_\lambda$들이 각각 존재하여
 
-$$v=\sum_{\lambda\in\operatorname{Spec}(A)}v_\lambda$$
+$$v=\sum_{\lambda\in\Spec(A)}v_\lambda$$
 
 이라 쓸 수 있으며, 따라서 
 
-$$Av=A\left(\sum_{\lambda\in\operatorname{Spec}(A)}v_\lambda\right)=\sum_{\lambda\in\operatorname{Spec}(A)}Av_\lambda$$
+$$Av=A\left(\sum_{\lambda\in\Spec(A)}v_\lambda\right)=\sum_{\lambda\in\Spec(A)}Av_\lambda$$
 
 이고, 위의 논증에 의하여 $Av_\lambda=\lambda v_\lambda$이므로 다음의 식
 
-$$Av=\sum_{\lambda\in\operatorname{Spec}(A)}\lambda v_\lambda$$
+$$Av=\sum_{\lambda\in\Spec(A)}\lambda v_\lambda$$
 
 을 얻는다. 물론 위의 계산이 말이 되기 위해서는 $v$를 $v_\lambda$들의 합으로 나타내는 방법이 유일해야 한다. 이를 다음과 같이 정의한다.
 
@@ -134,7 +134,7 @@ $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
 $$\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_mx_m=0\tag{1}$$
 
-을 만족하며 모두 영은 아닌 스칼라들 $\alpha\_i$들이 존재한다. 이제 이를 만족하는 $(\alpha\_i)\_{1\leq i\leq m}$들 중, $\operatorname{supp}(\alpha\_i)$가 가장 작도록 하는 모임을 골라 이를 $(\beta\_i)\_{1\leq i\leq m}$라 하자. 즉, 만일 $\beta\_i\neq0$을 만족하는 $i$의 갯수가 $k$개라면, $k$개 미만의 $i$에 대하여 $\alpha\_i\neq 0$을 만족하는 $(\alpha\_i)\_{1\leq i\leq m}$은 위의 식 (1)을 만족하지 않는다.
+을 만족하며 모두 영은 아닌 스칼라들 $\alpha\_i$들이 존재한다. 이제 이를 만족하는 $(\alpha\_i)\_{1\leq i\leq m}$들 중, $\supp(\alpha\_i)$가 가장 작도록 하는 모임을 골라 이를 $(\beta\_i)\_{1\leq i\leq m}$라 하자. 즉, 만일 $\beta\_i\neq0$을 만족하는 $i$의 갯수가 $k$개라면, $k$개 미만의 $i$에 대하여 $\alpha\_i\neq 0$을 만족하는 $(\alpha\_i)\_{1\leq i\leq m}$은 위의 식 (1)을 만족하지 않는다.
 
 이제 적어도 2개의 $\beta\_i$에 대하여 $\beta\_i\neq 0$이므로, 일반성을 잃지 않고 $\beta\_m\neq 0$이라 하자. 그럼
 
@@ -162,17 +162,17 @@ $$0=\sum_{i=1}^{m-1}\beta_i(\lambda_i-\lambda_m)x_i$$
 
 이다. 만일 $(\beta''\_i)\_{1\leq i\leq n}$을 다음의 식
 
-$$\beta_i''=\left\{\begin{array}{l l}\beta_i(\lambda_i-\lambda_m)&1\leq i\leq m-1\\0&i=m\end{array}\right$$
+$$\beta_i''=\begin{cases}\beta_i(\lambda_i-\lambda_m)&1\leq i\leq m-1\\0&i=m\end{cases}$$
 
 으로 정의하면 위의 식은 
 
 $$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
 
-이 된다. 가정에 의해 $\lambda_i-\lambda_m\neq 0$이므로, $1\leq i\leq m-1$에 대해서는 $\beta_i''=0$인 것과 $\beta_i=0$인 것이 동치이다. 따라서 $\beta_i''\neq 0$을 만족하는 $1\leq i\leq m-1$은 $k-1$개이고, $\beta\_m''=0$이므로 $\operatorname{supp}(\beta\_i'')\_{1\leq i\leq m}$의 크기는 $k-1$이다. 이는 $(\beta\_i)\_{1\leq i\leq m}$의 최소성에 모순이므로, 집합 $\\{x_1,x_2,\ldots, x_m\right\\}$은 일차독립이다.
+이 된다. 가정에 의해 $\lambda_i-\lambda_m\neq 0$이므로, $1\leq i\leq m-1$에 대해서는 $\beta_i''=0$인 것과 $\beta_i=0$인 것이 동치이다. 따라서 $\beta_i''\neq 0$을 만족하는 $1\leq i\leq m-1$은 $k-1$개이고, $\beta\_m''=0$이므로 $\supp(\beta\_i'')\_{1\leq i\leq m}$의 크기는 $k-1$이다. 이는 $(\beta\_i)\_{1\leq i\leq m}$의 최소성에 모순이므로, 집합 $\\{x_1,x_2,\ldots, x_m\\}$은 일차독립이다.
 
 </details>
 
-이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\operatorname{Spec}(A)$, 이에 대응되는 고유공간들을 $E\_\lambda$, 그리고 이들의 basis를 $\mathcal{B}\_\lambda$라 한다면 $\mathcal{B}=\bigcup\_{\lambda\in\operatorname{Spec}(A)}\mathcal{B}\_\lambda$가 $F^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $F^n$의 basis가 될 이유는 없다. 가령 이전 글의 [예시 7](/ko/math/linear_algebra/characteristic_polynomial#ex7)을 보면, $F=\mathbb{R}$에서 $\operatorname{Spec}(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
+이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\Spec(A)$, 이에 대응되는 고유공간들을 $E\_\lambda$, 그리고 이들의 basis를 $\mathcal{B}\_\lambda$라 한다면 $\mathcal{B}=\bigcup\_{\lambda\in\Spec(A)}\mathcal{B}\_\lambda$가 $F^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $F^n$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/linear_algebra/characteristic_polynomial#ex7)을 보면, $F=\mathbb{R}$에서 $\Spec(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 

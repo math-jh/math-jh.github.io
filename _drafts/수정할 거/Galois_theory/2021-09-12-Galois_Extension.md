@@ -66,7 +66,7 @@ $$a_n(u(\alpha))^n+\cdots+a_1(u(\alpha))+a_0=0\tag{1}$$
 
 > $x\equiv y\mod R$ if and only if $x$ and $y$ are conjugate over $K$
 
-으로 정의하면, $R$은 $\Omega$ 위에 equivalence relation을 정의한다. $R$에 의해 생기는 equivalence class를 각각 *conjugacy class*라 부른다. 만일 우리가 $\Omega$ 위의 $K$-automorphism들의 group $\operatorname{Aut}_K\Omega$를 생각한다면, 이들은 $\operatorname{Aut}_K\Omega$가 $\Omega$ 위에 act할 때의 orbit이 된다.
+으로 정의하면, $R$은 $\Omega$ 위에 equivalence relation을 정의한다. $R$에 의해 생기는 equivalence class를 각각 *conjugacy class*라 부른다. 만일 우리가 $\Omega$ 위의 $K$-automorphism들의 group $\Aut_K\Omega$를 생각한다면, 이들은 $\Aut_K\Omega$가 $\Omega$ 위에 act할 때의 orbit이 된다.
 
 <div class="proposition" markdown="1">
 
@@ -81,7 +81,7 @@ $$a_n(u(\alpha))^n+\cdots+a_1(u(\alpha))+a_0=0\tag{1}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $\alpha$와 $\beta$가 conjugate이라 하자. 그럼 $u\in\operatorname{Aut}_K\Omega$가 존재하여 $u(\alpha)=\beta$이다. $\alpha$의 minimal polynomial을 $f$라 하자. 그럼 (1)의 계산과 마찬가지로, 
+우선 $\alpha$와 $\beta$가 conjugate이라 하자. 그럼 $u\in\Aut_K\Omega$가 존재하여 $u(\alpha)=\beta$이다. $\alpha$의 minimal polynomial을 $f$라 하자. 그럼 (1)의 계산과 마찬가지로, 
 
 $$f(\beta)=f(u(\alpha))=u(f(\alpha))=0$$
 
@@ -131,7 +131,7 @@ Quasi-Galois extension의 정의에 의하여, $E$가 $K$의 quasi-Galois extens
 
 </details>
 
-Quasi-Galois extension $E$를 생각하자. 만일 $E$가 또 다른 $\Omega$의 sub-$K$-extension과 conjugate이라면, 즉 어떤 $u\in\operatorname{Aut}_K\Omega$가 존재하여 $u(E)=F$라면, 위의 명제의 세 번째 동치조건에 의해 $F\subset E$여야하므로, $u$는 사실 $E$에서 $E$로의 homomorphism이고 따라서 $u(E)=E$가 되어 ([명제 1](#pp1)) $F=u(E)=E$가 성립한다. 즉, quasi-Galois extension $E$의 conjugate은 자신 뿐이다. 거꾸로 만일 $E$의 conjugate이 자기 자신뿐이라면, 임의의 $u\in\operatorname{Aut}_K\Omega$에 대해 항상 $u(E)=E$라는 것이므로, 앞선 명제의 동치조건에 의해 $E$는 quasi-Galois extension이다. 
+Quasi-Galois extension $E$를 생각하자. 만일 $E$가 또 다른 $\Omega$의 sub-$K$-extension과 conjugate이라면, 즉 어떤 $u\in\Aut_K\Omega$가 존재하여 $u(E)=F$라면, 위의 명제의 세 번째 동치조건에 의해 $F\subset E$여야하므로, $u$는 사실 $E$에서 $E$로의 homomorphism이고 따라서 $u(E)=E$가 되어 ([명제 1](#pp1)) $F=u(E)=E$가 성립한다. 즉, quasi-Galois extension $E$의 conjugate은 자신 뿐이다. 거꾸로 만일 $E$의 conjugate이 자기 자신뿐이라면, 임의의 $u\in\Aut_K\Omega$에 대해 항상 $u(E)=E$라는 것이므로, 앞선 명제의 동치조건에 의해 $E$는 quasi-Galois extension이다. 
 
 <div class="proposition" markdown="1">
 
@@ -141,13 +141,13 @@ Quasi-Galois extension $E$를 생각하자. 만일 $E$가 또 다른 $\Omega$의
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $E$-automorphism $u\in\operatorname{Aut}_E\Omega$는 $K$-automorphism이기도 하므로, $F$가 $K$에 대해 quasi-Galois라면 $u(F)=F$이고 따라서 $F$는 $E$에 대해서도 quasi-Galois이다. 
+임의의 $E$-automorphism $u\in\Aut_E\Omega$는 $K$-automorphism이기도 하므로, $F$가 $K$에 대해 quasi-Galois라면 $u(F)=F$이고 따라서 $F$는 $E$에 대해서도 quasi-Galois이다. 
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="crl6">**따름정리 6**</ins> $N$이 $K$의 quasi-Galois extension이고, $E$가 $N$의 subextension이라 하자. $u:E\rightarrow\Omega$가 $K$-homomorphism이라면 $u(E)\subset N$이고, 어떤  $K$-automorphism $v\in\operatorname{Aut}_KN$이 존재하여 $u$를 extend한다.
+<ins id="crl6">**따름정리 6**</ins> $N$이 $K$의 quasi-Galois extension이고, $E$가 $N$의 subextension이라 하자. $u:E\rightarrow\Omega$가 $K$-homomorphism이라면 $u(E)\subset N$이고, 어떤  $K$-automorphism $v\in\Aut_KN$이 존재하여 $u$를 extend한다.
 
 </div>
 
@@ -160,11 +160,11 @@ Quasi-Galois extension $E$를 생각하자. 만일 $E$가 또 다른 $\Omega$의
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선, 임의의 $K$-automorphism $u\in\operatorname{Aut}_K\Omega$에 대하여 $u(N_i)=N_i$가 항상 성립하므로 $u(N)=N$이 되어 $N$은 quasi-Galois이다. 똑같은 이유로 $M$ 또한 quasi-Galois이다.
+우선, 임의의 $K$-automorphism $u\in\Aut_K\Omega$에 대하여 $u(N_i)=N_i$가 항상 성립하므로 $u(N)=N$이 되어 $N$은 quasi-Galois이다. 똑같은 이유로 $M$ 또한 quasi-Galois이다.
 
 </details>
 
-$\Omega$의 부분집합 $A$를 생각하자. 그럼 $A$의 각 원소와 conjugate한 원소들의 집합 $B=\bigcup_{u\in\operatorname{Aut}_K\Omega}u(A)$는 $u(B)=B$를 만족한다. 그럼, $K(B)$는 $K\cup B$에 의해 generate되는 field인데, $u(K)=K$, $u(B)=B$이므로 $u(K(B))=K(B)$이다. 즉, $K(B)$는 quasi-Galois extension이 되고, 여기에 더해 $A$를 포함하는 quasi-Galois extension 중 가장 작은 것이다. 따라서 $K(B)$를 $A$로 *generate*된 quasi-Galois extension이라 부른다.
+$\Omega$의 부분집합 $A$를 생각하자. 그럼 $A$의 각 원소와 conjugate한 원소들의 집합 $B=\bigcup_{u\in\Aut_K\Omega}u(A)$는 $u(B)=B$를 만족한다. 그럼, $K(B)$는 $K\cup B$에 의해 generate되는 field인데, $u(K)=K$, $u(B)=B$이므로 $u(K(B))=K(B)$이다. 즉, $K(B)$는 quasi-Galois extension이 되고, 여기에 더해 $A$를 포함하는 quasi-Galois extension 중 가장 작은 것이다. 따라서 $K(B)$를 $A$로 *generate*된 quasi-Galois extension이라 부른다.
 
 특히, 방금의 정의는 다음과 같이 집합 $A$가 $K$의 extension일 때 자주 쓰이게 된다.
 
@@ -187,7 +187,7 @@ $E$가 $K$에 대해 finite degree를 가지므로, 어떤 유한집합 $A$에 �
 
 <ins id="pp9">**명제 9**</ins> $N$이 $K$의 algebraic extension이라 하자. 그럼 다음이 모두 동치이다.
 
-1. $\operatorname{Aut}_KN$에 대해 invariant인 $N$의 원소들은 모두 $K$의 원소들이다.
+1. $\Aut_KN$에 대해 invariant인 $N$의 원소들은 모두 $K$의 원소들이다.
 2. $N$이 $K$의 separable, quasi-Galois extension이다.
 3. 임의의 $x\in N$에 대하여, $x$의 minimal polynomial이 $N[x]$에서 linear factor들로 split한다.
 
@@ -201,9 +201,9 @@ $E$가 $K$에 대해 finite degree를 가지므로, 어떤 유한집합 $A$에 �
 
 $$g(x)=\prod_{\alpha\in A}(x-\alpha)$$
 
-를 생각하자. 임의의 $\sigma\in\operatorname{Aut}_KN$은 $A$의 permutation을 induce하므로, $g$의 계수를 고정한다. 즉, $g$는 사실 $K[x]$의 원소이고, $g(x)=0$이므로 $g$는 $f$의 배수이다. 그런데 $g$는 정의상 $f$의 factor가 아닌 factor를 가지지 않으므로, $g$는 $f$를 나누고 따라서 $g=f$이다. 즉, $x$의 minimal polynomial $f$는 $N[x]$에서 degree 1짜리 polynomial들로 split된다.
+를 생각하자. 임의의 $\sigma\in\Aut_KN$은 $A$의 permutation을 induce하므로, $g$의 계수를 고정한다. 즉, $g$는 사실 $K[x]$의 원소이고, $g(x)=0$이므로 $g$는 $f$의 배수이다. 그런데 $g$는 정의상 $f$의 factor가 아닌 factor를 가지지 않으므로, $g$는 $f$를 나누고 따라서 $g=f$이다. 즉, $x$의 minimal polynomial $f$는 $N[x]$에서 degree 1짜리 polynomial들로 split된다.
 
-거꾸로 $\alpha\in N$이 $K$에 들어있지 않다고 하자. $N$을 포함하는 $K$의 algebraic closure $\Omega$에 대하여, $f$가 $\alpha$의 minimal polynomial이라 하면 $\alpha\not\in K$이므로 $\alpha$의 degree는 최소 2이다. 그러므로, $f(x)$의 근들의 집합 $A$도 최소 두 개의 원소를 갖는다. 즉, $\alpha\neq\beta$인 $\beta\in A$가 존재하므로, $u(\alpha)=\beta$인 $K$-automorphism $u\in\operatorname{Aut}_K\Omega$가 존재한다. 그런데 3번의 가정에 의하여, $N$은 quasi-Galois이고 따라서 $u(N)=N$이다. 그러므로 $u$에 의해 induce되는 $\sigma\in\operatorname{Aut}_KN$은 $\sigma(\alpha)=\beta\neq\alpha$를 만족하므로, 귀류법에 의해 3번은 1번을 impliy한다.
+거꾸로 $\alpha\in N$이 $K$에 들어있지 않다고 하자. $N$을 포함하는 $K$의 algebraic closure $\Omega$에 대하여, $f$가 $\alpha$의 minimal polynomial이라 하면 $\alpha\not\in K$이므로 $\alpha$의 degree는 최소 2이다. 그러므로, $f(x)$의 근들의 집합 $A$도 최소 두 개의 원소를 갖는다. 즉, $\alpha\neq\beta$인 $\beta\in A$가 존재하므로, $u(\alpha)=\beta$인 $K$-automorphism $u\in\Aut_K\Omega$가 존재한다. 그런데 3번의 가정에 의하여, $N$은 quasi-Galois이고 따라서 $u(N)=N$이다. 그러므로 $u$에 의해 induce되는 $\sigma\in\Aut_KN$은 $\sigma(\alpha)=\beta\neq\alpha$를 만족하므로, 귀류법에 의해 3번은 1번을 impliy한다.
 
 </details>
 
@@ -221,15 +221,15 @@ $$g(x)=\prod_{\alpha\in A}(x-\alpha)$$
 
 </div>
 
-갈루아 이론의 기본적인 정신은, 어느샌가 우리 옆에 들어와있는 $\operatorname{Aut}_NK$들을 통해 field extension을 살펴보는 것이다. 이 group을 지금까지는 임시로 $\operatorname{Aut}_KN$으로 적었는데, 이제 정식으로 이름을 주자.
+갈루아 이론의 기본적인 정신은, 어느샌가 우리 옆에 들어와있는 $\Aut_NK$들을 통해 field extension을 살펴보는 것이다. 이 group을 지금까지는 임시로 $\Aut_KN$으로 적었는데, 이제 정식으로 이름을 주자.
 
 <div class="definition" markdown="1">
 
-<ins id="df12">**정의 12**</ins> Field $K$의 Galois extension $N$에 대하여, $N$ 위에서 정의된 $K$-automorphism들의 group을 *Galois group*이라 부르고 $\operatorname{Gal}(N/K)$으로 적는다.
+<ins id="df12">**정의 12**</ins> Field $K$의 Galois extension $N$에 대하여, $N$ 위에서 정의된 $K$-automorphism들의 group을 *Galois group*이라 부르고 $\Gal(N/K)$으로 적는다.
 
 </div>
 
-$K[x]$의 어떤 separable polynomial $f$가 주어졌다고 하자. $f$의 근들의 집합 $A$에 대하여, $K$의 extension field $K(A)$는 Galois extension이 된다. $N$ 위에 정의된 $K$-automorphism이 $A$를 fix하는 것은 자명하고, 또 $A$가 $N$을 generate하므로 $\sigma\in\operatorname{Gal}(N/K)$를 $A$ 위로 restrict하는 mapping은 $\operatorname{Gal}(N/K)$에서 $S_A$의 subgroup $\Gamma$로의 isomorphism이 된다. 따라서 다음이 모두 동치이다.
+$K[x]$의 어떤 separable polynomial $f$가 주어졌다고 하자. $f$의 근들의 집합 $A$에 대하여, $K$의 extension field $K(A)$는 Galois extension이 된다. $N$ 위에 정의된 $K$-automorphism이 $A$를 fix하는 것은 자명하고, 또 $A$가 $N$을 generate하므로 $\sigma\in\Gal(N/K)$를 $A$ 위로 restrict하는 mapping은 $\Gal(N/K)$에서 $S_A$의 subgroup $\Gamma$로의 isomorphism이 된다. 따라서 다음이 모두 동치이다.
 
 1. $x$, $y$가 conjugate이다.
 2. $x$, $y$가 $\Gamma$ 상에서 같은 orbit에 속한다.
@@ -239,7 +239,7 @@ $K[x]$의 어떤 separable polynomial $f$가 주어졌다고 하자. $f$의 근�
 
 <div class="proposition" markdown="1">
 
-<ins id="pp13">**명제 13**</ins> $\operatorname{Gal}(N/K)$에서 $\operatorname{Gal}(L/K)$로의 restriction homomorphism $\sigma\mapsto\sigma\|\_L$은 surjective이다.
+<ins id="pp13">**명제 13**</ins> $\Gal(N/K)$에서 $\Gal(L/K)$로의 restriction homomorphism $\sigma\mapsto\sigma\|\_L$은 surjective이다.
 
 </div>
 

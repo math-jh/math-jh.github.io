@@ -19,19 +19,19 @@ weight: 9
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 위상공간들의 family $(X\_i)\_{i\in I}$가 주어졌다 하자. 이들의 *곱<sub>product</sub>*은 곱집합 $X=\prod\_{i\in I}X\_i$ 위에 함수들 $\operatorname{pr}\_i:X\rightarrow X\_i$에 대한 initial topology가 주어진 위상공간이다.
+<ins id="df1">**정의 1**</ins> 위상공간들의 family $(X\_i)\_{i\in I}$가 주어졌다 하자. 이들의 *곱<sub>product</sub>*은 곱집합 $X=\prod\_{i\in I}X\_i$ 위에 함수들 $\pr\_i:X\rightarrow X\_i$에 대한 initial topology가 주어진 위상공간이다.
 
 </div>
 
-그럼 [§Initial topology와 final topology, 명제 2](/ko/math/topology/initial_and_final_topology#pp2)에 의하여 $X$ 위에 주어진 product topology는 다음의 집합
+그럼 [§Initial topology와 final topology, ⁋명제 2](/ko/math/topology/initial_and_final_topology#pp2)에 의하여 $X$ 위에 주어진 product topology는 다음의 집합
 
-$$\mathcal{S}=\{\operatorname{pr}_i^{-1}(U_i): U_i\text{ open in }X_i\}$$
+$$\mathcal{S}=\{\pr_i^{-1}(U_i): U_i\text{ open in }X_i\}$$
 
 을 subbasis로 하여 생성된 공간이다. 이 때, $\mathcal{S}$에 의하여 생성되는 basis $\mathcal{B}$는 
 
 $$\prod_{i\in I} U_i,\qquad \text{$U_i$ open in $X_i$, $U_i=\emptyset$ for all but finitely many $i$}$$
 
-들의 모임이다. 한편 [§Initial topology와 final topology, 명제 3](/ko/math/topology/initial_and_final_topology#pp3)을 적용하면 다음을 얻는다.
+들의 모임이다. 한편 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#pp3)을 적용하면 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
@@ -51,11 +51,8 @@ $$\prod_{i\in I} U_i,\qquad \text{$U_i$ open in $X_i$, $U_i=\emptyset$ for all b
 
 </div>
 
-## Section
+특히, 상수함수 $f$는 항상 연속이고, $f$가 모든 $x\in X$를 $y\in Y$로 보낸다고 하면 $\Gamma(f)=X\times\\{y\\}$가 된다. 따라서 $X$와 $X\times\\{y\\}$가 항상 homeomorphic하며, 비슷하게 $Y$와 $\\{x\\}\times Y$ 또한 항상 homeomorphic하다.
 
-<div class="proposition" markdown="1">
+## Closure와 곱집합
 
-<ins id="pp5">**명제 5**</ins> 두 위상공간 $X,Y$가 주어졌다 하자. 그럼 임의의 $x\in X$에 대하여, $Y$에서 $X$로의 함수 $y\mapsto (x,y)$는 $Y$와 $\\{x\\}\times Y$ 사이의 homeomorphism을 정의한다.
-
-</div>
 

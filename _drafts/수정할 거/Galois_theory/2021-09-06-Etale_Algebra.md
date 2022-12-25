@@ -30,23 +30,23 @@ published: false
 
 ## Linear independence of homomorphisms
 
-우선, $L$이 $K$의 extension field이고, $V$가 $K$-vector space라 하자. 그럼 $L$은 $K$-algebra이므로, $K$-vector space이기도 하고 따라서 $V$에서 $L$로의 모든 $K$-linear mapping들의 집합 $\operatorname{Hom}_K(V, L)$이 잘 정의된다. 이 집합은 다음의 자명한 연산
+우선, $L$이 $K$의 extension field이고, $V$가 $K$-vector space라 하자. 그럼 $L$은 $K$-algebra이므로, $K$-vector space이기도 하고 따라서 $V$에서 $L$로의 모든 $K$-linear mapping들의 집합 $\Hom_K(V, L)$이 잘 정의된다. 이 집합은 다음의 자명한 연산
 
 $$(f+g)(x)=f(x)+g(x),\qquad (\alpha f)(x)=\alpha f(x)\tag{1}$$
 
-을 통해 $L$-vector space structure를 갖는다. 한편, $K$-vector space $V$에 대하여, extension of scalar를 통해 새로운 $L$-vector space $V_{(L)}=L\otimes_K V$를 얻을 수 있다. $V_{(L)}$의 dual $(V_{(L)})^*$은 $\operatorname{Hom}\_L(V\_{(L)}, L)$이고, 그럼
+을 통해 $L$-vector space structure를 갖는다. 한편, $K$-vector space $V$에 대하여, extension of scalar를 통해 새로운 $L$-vector space $V_{(L)}=L\otimes_K V$를 얻을 수 있다. $V_{(L)}$의 dual $(V_{(L)})^*$은 $\Hom\_L(V\_{(L)}, L)$이고, 그럼
 
-$$\operatorname{Hom}_L(L\otimes_K V,L)\cong\operatorname{Hom}_L(V\otimes_KL, L)\cong\operatorname{Hom}_K(V, \operatorname{Hom}_L(L,L))\cong\operatorname{Hom}_K(V,L)$$
+$$\Hom_L(L\otimes_K V,L)\cong\Hom_L(V\otimes_KL, L)\cong\Hom_K(V, \Hom_L(L,L))\cong\Hom_K(V,L)$$
 
-이 성립한다. 특히, 만일 $V$가 finite-dimensional $K$-vector space라면 $\dim_KV=\dim_LV_{(L)}$이고, 따라서 $(V_{(L)})^*$ 또한 finite dimensional $L$-vector space가 된다. 앞선 식에서 $(V_{(L)})^\*\cong\operatorname{Hom}_K(V,L)$이었으므로, 우리는 다음의 식
+이 성립한다. 특히, 만일 $V$가 finite-dimensional $K$-vector space라면 $\dim_KV=\dim_LV_{(L)}$이고, 따라서 $(V_{(L)})^*$ 또한 finite dimensional $L$-vector space가 된다. 앞선 식에서 $(V_{(L)})^\*\cong\Hom_K(V,L)$이었으므로, 우리는 다음의 식
 
-$$[\operatorname{Hom}_K(V, L):L]=[V:K]$$
+$$[\Hom_K(V, L):L]=[V:K]$$
 
 를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-**<ins id="pp1">명제 1</ins>** $L$이 $K$의 extension field이고, $A$가 $K$-algebra라 하자. 그럼 $A$에서 $L$로의 $K$-algebra homomorphism들의 집합 $\operatorname{Hom}_{K\text{-alg}}(A, L)$은, $A$에서 $L$로의 $K$-vector space homomorphism들의 집합 $\operatorname{Hom}_K(A,L)$의 linearly independent subset이다.
+**<ins id="pp1">명제 1</ins>** $L$이 $K$의 extension field이고, $A$가 $K$-algebra라 하자. 그럼 $A$에서 $L$로의 $K$-algebra homomorphism들의 집합 $\Hom_{K\text{-alg}}(A, L)$은, $A$에서 $L$로의 $K$-vector space homomorphism들의 집합 $\Hom_K(A,L)$의 linearly independent subset이다.
 
 </div>
 
@@ -54,15 +54,15 @@ $$[\operatorname{Hom}_K(V, L):L]=[V:K]$$
 
 $$(\alpha f)(xy)=\alpha f(xy)=\alpha f(x)f(y)\neq(\alpha f(x))(\alpha f(y))=(\alpha f)(x)(\alpha f)(y)$$
 
-이기 때문이다. 즉, 수많은 $\operatorname{Hom}_K(A,L)$의 원소들 중 $K$-algebra homomorphism이 될 수 있는 것은 일종의 normalization을 거친 homomorphism들 뿐이고, 이는 어떻게 보면 $\operatorname{Hom}_K(A,L)$의 (standard한) basis를 찾는 느낌이기도 하다.  
-위의 명제는 이들 $\operatorname{Hom}\_{K\text{-alg}}(A,L)$들이 linearly independent하다는 것을 보여준다. 그렇다면 언제 이들이 $\operatorname{Hom}_K(A,L)$을 span하기도 할까? 즉, 언제 $\operatorname{Hom}\_{K\text{-alg}}(A,L)$이 $\operatorname{Hom}_K(A,L)$의 basis가 될까? 이것이 étale algebra의 정의다.
+이기 때문이다. 즉, 수많은 $\Hom_K(A,L)$의 원소들 중 $K$-algebra homomorphism이 될 수 있는 것은 일종의 normalization을 거친 homomorphism들 뿐이고, 이는 어떻게 보면 $\Hom_K(A,L)$의 (standard한) basis를 찾는 느낌이기도 하다.  
+위의 명제는 이들 $\Hom\_{K\text{-alg}}(A,L)$들이 linearly independent하다는 것을 보여준다. 그렇다면 언제 이들이 $\Hom_K(A,L)$을 span하기도 할까? 즉, 언제 $\Hom\_{K\text{-alg}}(A,L)$이 $\Hom_K(A,L)$의 basis가 될까? 이것이 étale algebra의 정의다.
 
 어쨌든, 이 명제를 증명해보자.
 
 <details class="proof--alone" markdown="1">
 <summary>명제 1의 증명</summary>
 
-$\operatorname{Hom}_{K\text{-alg}}(A,L)$의 임의의 유한집합이 linearly independent인 것을 보여야 한다. 이 유한집합의 cardinality에 대한 induction으로 진행한다. $n=0$인 경우는 자명하므로, $n\geq 1$이라 하고, $\operatorname{Hom}\_{K\text{-alg}}(A,L)$의 $n$개의 원소들 $u_1,\ldots, u_n$과 $L$의 원소들 $\alpha_1,\ldots, \alpha_n$에 대하여
+$\Hom_{K\text{-alg}}(A,L)$의 임의의 유한집합이 linearly independent인 것을 보여야 한다. 이 유한집합의 cardinality에 대한 induction으로 진행한다. $n=0$인 경우는 자명하므로, $n\geq 1$이라 하고, $\Hom\_{K\text{-alg}}(A,L)$의 $n$개의 원소들 $u_1,\ldots, u_n$과 $L$의 원소들 $\alpha_1,\ldots, \alpha_n$에 대하여
 
 $$\alpha_1u_1+\cdots+\alpha_nu_n=0\tag{2}$$
 
@@ -84,7 +84,7 @@ $$\begin{aligned}\sum_{i=1}^{n-1}\alpha_i[u_i(x)-u_n(x)]u_i(y)&=\sum_{i=1}^{n-1}
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-첫 번째 주장은 [명제 1](#pp1) 그 자체다. 나머지 부분만 보자면, $\dim_KE=[E:K]$가 유한이라면 $[\operatorname{Hom}_K(E,L):L]=[E:K]$도 마찬가지다. 따라서 $\operatorname{Hom}_K(E,L)$의 linearly independent subset인 $\operatorname{Hom}\_{K\text{-alg}}(E,L)$은 당연히 $\operatorname{Hom}_K[(E,L):L]=[E:K]$를 넘을 수 없다.  
+첫 번째 주장은 [명제 1](#pp1) 그 자체다. 나머지 부분만 보자면, $\dim_KE=[E:K]$가 유한이라면 $[\Hom_K(E,L):L]=[E:K]$도 마찬가지다. 따라서 $\Hom_K(E,L)$의 linearly independent subset인 $\Hom\_{K\text{-alg}}(E,L)$은 당연히 $\Hom_K[(E,L):L]=[E:K]$를 넘을 수 없다.  
 
 </details>
 
@@ -110,7 +110,7 @@ $$L\otimes_KA\cong L^n$$
 
 1. $A$가 diagonalizable algebra이다.
 2. $A$의 basis $(e_1,\ldots, e_n)$이 존재하여, $e_i^2=e_i$이고 $e_ie_j=0$이 $i\neq j$에 대하여 항상 성립한다.
-3. $A$에서 $K$로의 $K$-algebra homomorphism들의 집합 $\operatorname{Hom}_{K\text{-alg}}(A,K)$가 $K$-vector space $A$의 dual space를 generate한다.
+3. $A$에서 $K$로의 $K$-algebra homomorphism들의 집합 $\Hom_{K\text{-alg}}(A,K)$가 $K$-vector space $A$의 dual space를 generate한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -124,17 +124,17 @@ $$L\otimes_KA\cong L^n$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> $L$이 $K$의 extension field라 하자. 그럼 $\operatorname{Hom}_{K\text{-alg}}(A,L)$의 cardinality는 $[A:K]$보다 클 수 없으며, 등호는 정확히 $A$가 $L$에 의해 diagonalize될 때 성립한다. 이 경우, 위의 집합은 $\operatorname{Hom}_K(A,L)$의 basis가 된다. 
+<ins id="crl5">**따름정리 5**</ins> $L$이 $K$의 extension field라 하자. 그럼 $\Hom_{K\text{-alg}}(A,L)$의 cardinality는 $[A:K]$보다 클 수 없으며, 등호는 정확히 $A$가 $L$에 의해 diagonalize될 때 성립한다. 이 경우, 위의 집합은 $\Hom_K(A,L)$의 basis가 된다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-첫 번째 명제는 그냥 [따름정리 2](#crl2)다. 따라서 등호 조건만 살펴보면 충분하다. 우선 우리는 $L$-vector space들 간의 isomorphism $\operatorname{Hom}\_K(A,L)\cong A\_{(L)}^\ast$가 존재한다는 것을 알고 있다. 따라서, linearly independent subset $\operatorname{Hom}\_{K\text{-alg}}(A,L)\subset\operatorname{Hom}\_K(A,L)$의 $A\_{(L)}^\ast$에서의 image도 linearly independent subset이 된다. 뿐만 아니라, 이 isomorphism을 잘 살펴보면, 이 isomorphism $\pi$는 $u\in\operatorname{Hom}\_K(A,L)$을 다음의 식
+첫 번째 명제는 그냥 [따름정리 2](#crl2)다. 따라서 등호 조건만 살펴보면 충분하다. 우선 우리는 $L$-vector space들 간의 isomorphism $\Hom\_K(A,L)\cong A\_{(L)}^\ast$가 존재한다는 것을 알고 있다. 따라서, linearly independent subset $\Hom\_{K\text{-alg}}(A,L)\subset\Hom\_K(A,L)$의 $A\_{(L)}^\ast$에서의 image도 linearly independent subset이 된다. 뿐만 아니라, 이 isomorphism을 잘 살펴보면, 이 isomorphism $\pi$는 $u\in\Hom\_K(A,L)$을 다음의 식
 
 $$(\pi u)(1\otimes x)=u(x)$$
 
-을 통해 정의되는 $L$-algebra homomorphism $\pi u:A\_{(L)}\rightarrow L$로 보내며, 사실 *모든* $L$-algebra homomorphism은 이러한 꼴이라는 것을 알 수 있다. 즉, $\pi$는 $\operatorname{Hom}\_{K\text{-alg}}(A,L)$에서 $\operatorname{Hom}\_{L\text{-alg}}(A\_{(L)},L)$로의 surjective map을 정의한다. 이제 앞선 명제의 $1\iff 3$에서, $A$를 $A\_{(L)}$, $K$를 $L$로 바꾸면, $L$-algebra $A\_{(L)}$이 diagonalizable인 것은 (즉, $L$이 $A$를 diagonalize하는 것은)  $\operatorname{Hom}\_{L\text{-alg}}(A\_{(L)},L)$이 $L$-vector space $A\_{(L)}^\ast$를 generate하는 것과 동치라는 것을 알 수 있고, 따라서 원래의 집합 $\operatorname{Hom}\_{K\text{-alg}}(A,L)$는 $\operatorname{Hom}\_K(A,L)$의 basis가 된다.
+을 통해 정의되는 $L$-algebra homomorphism $\pi u:A\_{(L)}\rightarrow L$로 보내며, 사실 *모든* $L$-algebra homomorphism은 이러한 꼴이라는 것을 알 수 있다. 즉, $\pi$는 $\Hom\_{K\text{-alg}}(A,L)$에서 $\Hom\_{L\text{-alg}}(A\_{(L)},L)$로의 surjective map을 정의한다. 이제 앞선 명제의 $1\iff 3$에서, $A$를 $A\_{(L)}$, $K$를 $L$로 바꾸면, $L$-algebra $A\_{(L)}$이 diagonalizable인 것은 (즉, $L$이 $A$를 diagonalize하는 것은)  $\Hom\_{L\text{-alg}}(A\_{(L)},L)$이 $L$-vector space $A\_{(L)}^\ast$를 generate하는 것과 동치라는 것을 알 수 있고, 따라서 원래의 집합 $\Hom\_{K\text{-alg}}(A,L)$는 $\Hom\_K(A,L)$의 basis가 된다.
 
 </details>
 
@@ -153,7 +153,7 @@ $$(\pi u)(1\otimes x)=u(x)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $A$가 étale이라 하면, $A$는 $K$에 대해 finite degree를 갖는다. 이를 $n$이라 하자. 또, $L$이 $A$를 diagonalize하는 $K$의 extension field라 하자. 그럼 앞선 따름정리에 의하여, $\operatorname{Hom}_{K\text{-alg}}(A,L)$은 $n$개의 원소를 갖는다. 한편, 각각의 $u\in\operatorname{Hom}\_{K\text{-alg}}(A,L)$에 대하여, $[u(A):K]\leq [A:K]=n$이 성립한다. 따라서, $u(A)$들로 generate되는 $L$의 subextension은 $K$에 대해 finite degree를 갖는다. 이 subextension $L'$은 $u(A)$들을 모두 포함하고 있으므로, $A$에서 $L'$로 가는 homomorphism은 여전히 $n$개가 있고, 앞선 동치조건에 의하여 $L'$은 $A$를 diagonalize한다.  
+우선 $A$가 étale이라 하면, $A$는 $K$에 대해 finite degree를 갖는다. 이를 $n$이라 하자. 또, $L$이 $A$를 diagonalize하는 $K$의 extension field라 하자. 그럼 앞선 따름정리에 의하여, $\Hom_{K\text{-alg}}(A,L)$은 $n$개의 원소를 갖는다. 한편, 각각의 $u\in\Hom\_{K\text{-alg}}(A,L)$에 대하여, $[u(A):K]\leq [A:K]=n$이 성립한다. 따라서, $u(A)$들로 generate되는 $L$의 subextension은 $K$에 대해 finite degree를 갖는다. 이 subextension $L'$은 $u(A)$들을 모두 포함하고 있으므로, $A$에서 $L'$로 가는 homomorphism은 여전히 $n$개가 있고, 앞선 동치조건에 의하여 $L'$은 $A$를 diagonalize한다.  
 이제, 만약 2번이 성립한다면, finite-degree extension은 algebraic extension이고 따라서 $\Omega$의 subextension이므로 3번이 성립하는 것은 자명하다. 또, 3번에 의해 1번이 성립하는 것은 그냥 정의다.
 
 </details>
@@ -166,7 +166,7 @@ $$(\pi u)(1\otimes x)=u(x)$$
 
 ## Separable degree
 
-처음 시작하며 말했듯, étale algebra를 정의하는 이유는 separable extension을 정의하기 위한 것이다. Separable extension은 다음에 정의하게 되겠지만, 우선 separable degree를 정의할 수 있다. $K$에 대해 finite degree를 갖는 commutative algebra $A$에 대하여, 우리는 이 extension의 separable degree를 $A$에서 $K$의 algebraical closed extension $L$로 가는 $K$-algebra $\operatorname{Hom}_{K\text{-alg}}(A,L)$으로 정의할 것이다. 이 값은 $n$으로 bound되어있으므로 항상 유한하지만, 일반적으로 $K$의 algebraic closed extension은 유일하지 않으므로 이 값이 $L$의 선택에 의존하지 않음을 보여야 한다. 다음 보조정리에서, $\operatorname{Hom}\_{K\text{-alg}}(A,L)$의 값을 $h(L)$로 적자.  
+처음 시작하며 말했듯, étale algebra를 정의하는 이유는 separable extension을 정의하기 위한 것이다. Separable extension은 다음에 정의하게 되겠지만, 우선 separable degree를 정의할 수 있다. $K$에 대해 finite degree를 갖는 commutative algebra $A$에 대하여, 우리는 이 extension의 separable degree를 $A$에서 $K$의 algebraical closed extension $L$로 가는 $K$-algebra $\Hom_{K\text{-alg}}(A,L)$으로 정의할 것이다. 이 값은 $n$으로 bound되어있으므로 항상 유한하지만, 일반적으로 $K$의 algebraic closed extension은 유일하지 않으므로 이 값이 $L$의 선택에 의존하지 않음을 보여야 한다. 다음 보조정리에서, $\Hom\_{K\text{-alg}}(A,L)$의 값을 $h(L)$로 적자.  
 
 <div class="proposition" markdown="1">
 
@@ -186,11 +186,11 @@ $$(\pi u)(1\otimes x)=u(x)$$
 
 $$\begin{aligned}[A\otimes_KB:K]_s&=[A:K]_s[B:K]_s\\ [A_{(K')}:K']_s&=[A:K]_s\\ [A':K]_s&=[A':K']_s[K':K]_s\end{aligned}$$
 
-우선, 첫 번째 식을 보이기 위해 $\operatorname{Hom}\_{K\text{-alg}}(A, L)$, $\operatorname{Hom}\_{K\text{-alg}}(B, L)$, $\operatorname{Hom}_{K\text{-alg}}(A\otimes_KB, L)$들을 생각하자. 정의에 의해, 이들의 cardinality가 각각 $[A:K]_s$, $[B:K]_s$, $[A\otimes_KB:K]_s$이다. 그런데, tensor product의 universal property에 의해서 $\operatorname{Hom}\_{K\text{-alg}}(A, L)\times\operatorname{Hom}\_{K\text{-alg}}(B, L)$의 원소 $(u,v)$와, $\operatorname{Hom}\_{K\text{-alg}}(A\otimes_KB, L)$의 원소 $u\otimes v$가 일대일로 대응된다.
+우선, 첫 번째 식을 보이기 위해 $\Hom\_{K\text{-alg}}(A, L)$, $\Hom\_{K\text{-alg}}(B, L)$, $\Hom_{K\text{-alg}}(A\otimes_KB, L)$들을 생각하자. 정의에 의해, 이들의 cardinality가 각각 $[A:K]_s$, $[B:K]_s$, $[A\otimes_KB:K]_s$이다. 그런데, tensor product의 universal property에 의해서 $\Hom\_{K\text{-alg}}(A, L)\times\Hom\_{K\text{-alg}}(B, L)$의 원소 $(u,v)$와, $\Hom\_{K\text{-alg}}(A\otimes_KB, L)$의 원소 $u\otimes v$가 일대일로 대응된다.
 
-두 번째 식은 간단히 $\operatorname{Hom}\_\text{K'-alg}(A_{(K')}, L)$와 $\operatorname{Hom}_{K\text{-alg}}(A, L)$ 사이의 일대일 대응이 $\hat{u}(x)\leftrightarrow u(1\otimes x)$으로 주어지므로 자명하다.
+두 번째 식은 간단히 $\Hom\_\text{K'-alg}(A_{(K')}, L)$와 $\Hom_{K\text{-alg}}(A, L)$ 사이의 일대일 대응이 $\hat{u}(x)\leftrightarrow u(1\otimes x)$으로 주어지므로 자명하다.
 
-마지막 식을 보이기 위해, 두 개의 집합 $\operatorname{Hom}_{K\text{-alg}}(K', L)$, $\operatorname{Hom}\_{K\text{-alg}}(A',L)$을 생각하자. 각각의 $\sigma\in\operatorname{Hom}\_{K\text{-alg}}(K', L)$에 대하여, $\operatorname{Hom}\_{K\text{-alg}}(A',L)$의 부분집합 $S\_\sigma$를 $f(\alpha\cdot 1)=\sigma(\alpha)$를 만족하는 $f$들의 모임으로 정의하자. 그럼 $S\_\sigma$들의 모임은 $\operatorname{Hom}\_{K\text{-alg}}(A',L)$의 partition이 된다. 그런데 각각의 $S\_\sigma$는 정의에 의해 $A'$에서 $L$로의 *$K'$-algebra homomorphism*들로 이루어져 있으므로, 각각의 $S\_\sigma$의 cardinality는 $[A':K']_s$가 되어 증명이 끝난다. 
+마지막 식을 보이기 위해, 두 개의 집합 $\Hom_{K\text{-alg}}(K', L)$, $\Hom\_{K\text{-alg}}(A',L)$을 생각하자. 각각의 $\sigma\in\Hom\_{K\text{-alg}}(K', L)$에 대하여, $\Hom\_{K\text{-alg}}(A',L)$의 부분집합 $S\_\sigma$를 $f(\alpha\cdot 1)=\sigma(\alpha)$를 만족하는 $f$들의 모임으로 정의하자. 그럼 $S\_\sigma$들의 모임은 $\Hom\_{K\text{-alg}}(A',L)$의 partition이 된다. 그런데 각각의 $S\_\sigma$는 정의에 의해 $A'$에서 $L$로의 *$K'$-algebra homomorphism*들로 이루어져 있으므로, 각각의 $S\_\sigma$의 cardinality는 $[A':K']_s$가 되어 증명이 끝난다. 
 
 <div class="proposition" markdown="1">
 

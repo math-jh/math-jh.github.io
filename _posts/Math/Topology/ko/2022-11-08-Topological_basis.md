@@ -27,7 +27,7 @@ weight: 2
 
 </div>
 
-특별히 $X\in\mathcal{T}$이므로 $\mathcal{B}$는 $X$의 covering이기도 하다. ([집합론, §집합의 합, 정의 1](/ko/math/set_theory/sum_of_sets#df1)) 정의에 의해 $\mathcal{B}$의 원소들은 모두 열린집합들이니, 이를 $\mathcal{B}$가 $X$의 *open covering<sub>열린덮개</sub>*이라고 표현하면 적절할 것이다.
+특별히 $X\in\mathcal{T}$이므로 $\mathcal{B}$는 $X$의 covering이기도 하다. ([\[집합론\] §집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#df1)) 정의에 의해 $\mathcal{B}$의 원소들은 모두 열린집합들이니, 이를 $\mathcal{B}$가 $X$의 *open covering<sub>열린덮개</sub>*이라고 표현하면 적절할 것이다.
 
 <div class="proposition" markdown="1">
 
@@ -68,15 +68,15 @@ $\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 
 
 ## 위상공간의 국소기저
 
-[§열린집합, 명제 6](/ko/math/topology/open_sets#pp6)은 위상공간 $X$와 한 점 $x$에 대하여, $x$를 중심으로 하는 neighborhood filter $\mathcal{N}(x)$를 묘사할 수 있다면 $X$의 위상구조를 완전히 복원할 수 있다는 것을 보여준다. 한편 $\mathcal{N}(x)$는 [§열린집합, 명제 6](/ko/math/topology/open_sets#pp6)의 조건들, 특히 첫째 조건을 만족하므로 이 집합을 묘사하는 데에는 $\mathcal{N}(x)$가 모두 필요하지는 않다.
+[§열린집합, ⁋명제 6](/ko/math/topology/open_sets#pp6)은 위상공간 $X$와 한 점 $x$에 대하여, $x$를 중심으로 하는 neighborhood filter $\mathcal{N}(x)$를 묘사할 수 있다면 $X$의 위상구조를 완전히 복원할 수 있다는 것을 보여준다. 한편 $\mathcal{N}(x)$는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#pp6)의 조건들, 특히 첫째 조건을 만족하므로 이 집합을 묘사하는 데에는 $\mathcal{N}(x)$가 모두 필요하지는 않다.
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, $A$에서의 *local basis<sub>국소기저</sub>*는 $(\mathcal{N}(A),\subseteq)$의 coinitial subset을 의미한다. ([집합론, §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set))
+<ins id="df4">**정의 4**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, $A$에서의 *local basis<sub>국소기저</sub>*는 $(\mathcal{N}(A),\subseteq)$의 coinitial subset을 의미한다. ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set))
 
 </div>
 
-[§열린집합, 정의 4](/ko/math/topology/open_sets#df4)와 마찬가지로, $A$가 한점집합 $\\{x\\}$일 경우, $A$의 local basis를 점 $x$에서의 local basis라 부른다. 그럼 다음이 성립한다.
+[§열린집합, ⁋정의 4](/ko/math/topology/open_sets#df4)와 마찬가지로, $A$가 한점집합 $\\{x\\}$일 경우, $A$의 local basis를 점 $x$에서의 local basis라 부른다. 그럼 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -120,7 +120,7 @@ $$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}}\math
 - $\mathcal{N}(x)$의 임의의 원소 $V$에 대하여, $W\subseteq V$를 만족하는 $W\in\mathcal{B}(x)$가 존재하므로 $x\in V$이다.
 - $\mathcal{N}(x)$의 임의의 원소 $V$에 대하여, $W\subseteq V$를 만족하는 $W\in\mathcal{B}(x)$를 택하자. 그럼 임의의 $W\in\mathcal{B}$이며, 따라서 임의의 $y\in W$에 대해 $W\in\mathcal{B}(y)$이다. $W\subseteq V$이므로, 이로부터 $V\in\mathcal{N}(y)$가 모든 $y$에 대해 성립함을 안다.
 
-이제 [§열린집합, 명제 6](/ko/math/topology/open_sets#pp6)을 적용하여 위상공간 $\mathcal{T}$를 얻을 수 있고, 이 위상공간에서 $\mathcal{B}(x)$는 $x$에서의 local basis가 되므로 [명제 5](#pp5)에 의해 $\mathcal{B}$는 $\mathcal{T}$의 basis가 된다.
+이제 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#pp6)을 적용하여 위상공간 $\mathcal{T}$를 얻을 수 있고, 이 위상공간에서 $\mathcal{B}(x)$는 $x$에서의 local basis가 되므로 [명제 5](#pp5)에 의해 $\mathcal{B}$는 $\mathcal{T}$의 basis가 된다.
 
 </details>
 

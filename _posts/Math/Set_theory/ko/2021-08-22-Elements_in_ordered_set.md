@@ -81,7 +81,7 @@ Lower bound (resp. upper bound)를 갖는 집합을 *bounded below<sub>아래로
 
 다음의 ordered set $A=\\{a,b,c,d,e\\}$를 생각하자.
 
-![upper_and_lower_bounds](/assets/images/Set_theory/Elements_in_ordered_set-4.png){:width="158.4px" class="invert" .align-center}
+![upper_and_lower_bounds](/assets/images/Set_theory/Elements_in_ordered_set-3.png){:width="158.4px" class="invert" .align-center}
 
 그럼 $a$는 집합 $X=\left\\{c,d,e\right\\}$의 upper bound지만 $b$는 그렇지 않다. 집합 $X'=\left\\{d,e\right\\}$를 생각한다면, $a$와 $b$ 모두가 이 집합의 upper bound이다. 위의 예시로부터 집합 $X$의 lower bound가 $X$에 포함될 필요는 없지만, 만일 이것이 성립한다면 그 원소는 $X$의 least element가 된다.
 
@@ -140,7 +140,7 @@ $b_k=\sup\_{i\in J_k} x_i$라 적자. 우선 $(x_i)\_{i\in I}$가 supremum을 �
 
 </details>
 
-<ins id="pp11">**명제 11**</ins>  Ordered set $(A_i)\_{i\in I}$들의 곱 $A=\prod A_i$와 그 부분집합 $X$에 대해 $X_i=\operatorname{pr}\_i X$라 하자. 그럼 $\sup_AX$가 존재하는 것과 각각의 $\sup\_{A_i}X_i$가 존재하는 것은 동치이며, $\sup_AX=(\sup\_{A_i}X_i)$이다.
+<ins id="pp11">**명제 11**</ins>  Ordered set $(A_i)\_{i\in I}$들의 곱 $A=\prod A_i$와 그 부분집합 $X$에 대해 $X_i=\pr\_i X$라 하자. 그럼 $\sup_AX$가 존재하는 것과 각각의 $\sup\_{A_i}X_i$가 존재하는 것은 동치이며, $\sup_AX=(\sup\_{A_i}X_i)$이다.
 {: .proposition}
 <details class="proof" markdown="1">
 <summary>증명</summary>

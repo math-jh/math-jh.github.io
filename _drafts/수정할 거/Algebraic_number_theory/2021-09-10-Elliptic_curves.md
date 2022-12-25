@@ -128,9 +128,9 @@ $$\begin{pmatrix}b-r_{11}&-r_{12}&\cdots&-r_{1n}\\ -r_{21}&b-r_{22}&\cdots&-r_{2
 
 $$A^\text{adj}A\begin{pmatrix}m_1\\m_2\\ \vdots\\ m_n\end{pmatrix}=d\begin{pmatrix}m_1\\m_2\\ \vdots\\ m_n\end{pmatrix}=0$$
 
-이 되므로 모순이다. 따라서 $d=0$이어야 한다. 이제 다항식 $f(\mathrm{x})$를 다음의 식
+이 되므로 모순이다. 따라서 $d=0$이어야 한다. 이제 다항식 $f(\x)$를 다음의 식
 
-$$f(\mathrm{x})=\det(\mathrm{x}I-B)$$
+$$f(\x)=\det(\xI-B)$$
 
 이라 하면, $f$는 모든 계수가 $R$의 원소인 monic polynomial이 되고, $f(b)=0$임을 앞서 보였으므로 $b$는 원하던 것과 같이 $R$에 대해 integral이다.
 
@@ -198,7 +198,7 @@ Integrality는 다음과 같이 transitive하게 잘 작동한다.
 
 임의의 $b\in R\'\'$을 골라오자. 그럼 $b$는 $R'$에 대해 integral이므로, $R'$의 원소들 $t_i$가 존재하여
 
-$$f(\mathrm{x})=\mathrm{x}^n+t_{n-1}\mathrm{x}^{n-1}+\cdots+t_1\mathrm{x}+t_0$$
+$$f(\x)=\x^n+t_{n-1}\x^{n-1}+\cdots+t_1\x+t_0$$
 
 이 $f(b)=0$을 만족한다. 그런데 $B=R[t_1,\ldots, t_{n-1}]$에 [명제 4](#pp4)에서 증명했던 claim을 적용하면, 이는 $R$-module로서 finitely generated이고, 따라서 $B[b]$도 finitely generated $R$-module이므로 [명제 3](#pp3)의 세 번째 동치조건에 의해 $b$는 $R$에 대해 integral이다.
 
@@ -208,7 +208,7 @@ $$f(\mathrm{x})=\mathrm{x}^n+t_{n-1}\mathrm{x}^{n-1}+\cdots+t_1\mathrm{x}+t_0$$
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> 임의의 unique factorization domain은 integrally closed이다. $R$이 unique factorization domain이라 하고, $K=\operatorname{Frac}R$이라 하자. $R$이 integrally closed임을 보이는 것은, 임의의 $x/y\in K$가 integral이라면, 사실 $x/y\in R$도 성립함을 보이는 것이다. $R$에서의 unique factorization을 이용하여, $x$와 $y$가 non-unit인 common factor를 갖지 않도록 할 수 있다. 이제 $x/y$가 다음의 식
+<ins id="ex7">**예시 7**</ins> 임의의 unique factorization domain은 integrally closed이다. $R$이 unique factorization domain이라 하고, $K=\FracR$이라 하자. $R$이 integrally closed임을 보이는 것은, 임의의 $x/y\in K$가 integral이라면, 사실 $x/y\in R$도 성립함을 보이는 것이다. $R$에서의 unique factorization을 이용하여, $x$와 $y$가 non-unit인 common factor를 갖지 않도록 할 수 있다. 이제 $x/y$가 다음의 식
 
 $$\left(\frac{x}{y}\right)^n+s_{n-1}\left(\frac{x}{y}\right)^{n-1}+\cdots+s_0=0,\qquad s_i\in R$$
 

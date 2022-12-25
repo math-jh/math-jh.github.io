@@ -23,7 +23,7 @@ weight: 10
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 vector bundle $\pi:E\rightarrow M$에 대하여, $\pi\circ\sigma=\operatorname{id}_M$을 만족하는 $\sigma:M\rightarrow E$를 vector bundle $E\rightarrow M$의 *section*이라 부른다. 
+<ins id="df1">**정의 1**</ins> 임의의 vector bundle $\pi:E\rightarrow M$에 대하여, $\pi\circ\sigma=\id_M$을 만족하는 $\sigma:M\rightarrow E$를 vector bundle $E\rightarrow M$의 *section*이라 부른다. 
 
 </div>
 
@@ -65,7 +65,7 @@ $$x^i\circ\pi\circ (X|_U),\quad dx^i\circ(X|_U)$$
 
 들이 $C^\infty$임을 보이면 된다. 그런데 직접 계산을 해 보면
 
-$$x^i\circ\pi\circ (X|_U)=x^i\circ\operatorname{id}_U=x^i,\qquad dx^i\circ(X|_U)=X(x^i)$$
+$$x^i\circ\pi\circ (X|_U)=x^i\circ\id_U=x^i,\qquad dx^i\circ(X|_U)=X(x^i)$$
 
 가 성립하므로 이들은 모두 $C^\infty$가 된다.
 
@@ -87,7 +87,7 @@ $$(\alpha X)_p=\alpha\cdot X_p$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $M=\mathbb{R}$로 두자. 여기서 $M$은 하나의 chart $(\mathbb{R},\mathrm{id})$을 통해 manifold 구조가 주어진 것으로 생각한다. 그럼 각 점 $p$에서 tangent space $T_pM$은 $d/dx\vert_p$을 통해 생성되는 1차원 벡터공간이며, 따라서 다음 대응
+<ins id="ex3">**예시 3**</ins> $M=\mathbb{R}$로 두자. 여기서 $M$은 하나의 chart $(\mathbb{R},\id)$을 통해 manifold 구조가 주어진 것으로 생각한다. 그럼 각 점 $p$에서 tangent space $T_pM$은 $d/dx\vert_p$을 통해 생성되는 1차원 벡터공간이며, 따라서 다음 대응
 
 $$X:M\rightarrow TM;\qquad p\mapsto \frac{d}{dx}\bigg\vert_p$$
 
@@ -115,7 +115,7 @@ $$X_1(p)=h(p, e_1),\quad X_2(p)=h(p,e_2),\quad\ldots,\quad X_m(p)=h(p,e_m)\tag{1
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Manifold $M$이 주어졌다 하고, $\operatorname{dim}M=m$이라 하자.
+<ins id="df4">**정의 4**</ins> Manifold $M$이 주어졌다 하고, $\dim M=m$이라 하자.
 
 - $X_1,\ldots, X_k$가 $M$의 부분집합 $A$에서 *일차독립<sub>linearly independent</sub>*이라는 것은 각각의 $p\in A$마다 $T_pM$의 벡터들 $X_1(p),\ldots, X_k(p)$이 linearly independent인 것이다.
 - $X_1,\ldots, X_k$가 $M$의 부분집합 $A$에서 tangent bundle $TM$을 *생성<sub>span</sub>*한다는 것은 각각의 $p\in A$마다 $T_pM$의 벡터들 $X_1(p),\ldots, X_k(p)$이 $T_pM$을 생성하는 것이다.

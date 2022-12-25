@@ -47,13 +47,13 @@ $L$에서의 $K$의 relative separable closure를 $E$라 하자. 그럼 $E/K$는
 
 우리는 우선 $R'$이 Dedekind domian인 것을 보인다. 이는 $R'$이 integrally closed Noetherian domain이고, 또 $R'$의 모든 prime ideal이 곧 maximal ideal이라는 것을 보이면 된다. $R'$은 $R$의 integral closure이므로 $R'$이 integrally closed가 되는 것은 자명하다. 또, $R'$은 field $L$의 subring이므로, integral domain이 되는 것 또한 자명하다. 
 
-이제 $R'$이 Noetherian이라는 것을 보이자. $E/K$는 finite-dimensional extension이므로 basis $a_1,\ldots,a_n$을 잡을 수 있다. 한편, $E$의 임의의 원소 $x$는 $K[\mathrm{x}]$에서 minimal polynomial을 가진다. 이 minimal polynomial을 $f$라 하고, 식
+이제 $R'$이 Noetherian이라는 것을 보이자. $E/K$는 finite-dimensional extension이므로 basis $a_1,\ldots,a_n$을 잡을 수 있다. 한편, $E$의 임의의 원소 $x$는 $K[\x]$에서 minimal polynomial을 가진다. 이 minimal polynomial을 $f$라 하고, 식
 
-$$f(\mathrm{x})=\mathrm{x}+\frac{r_{n-1}}{s_{n-1}}\mathrm{x}^{n-1}+\cdots+\frac{r_1}{s_1}\mathrm{x}+\frac{r_0}{s_0}=0$$
+$$f(\x)=\x+\frac{r_{n-1}}{s_{n-1}}\x^{n-1}+\cdots+\frac{r_1}{s_1}\x+\frac{r_0}{s_0}=0$$
 
 의 양 변에 $s_i$들의 least common multiple $s$를 곱하면 약간의 renaming을 통해
 
-$$(s\mathrm{x})^n+r_{n-1}'(s\mathrm{x})^{n-1}+\cdots+r_1'(s\mathrm{x})+r_0'=0$$
+$$(s\x)^n+r_{n-1}'(s\x)^{n-1}+\cdots+r_1'(s\x)+r_0'=0$$
 
 이라 할 수 있다. $x$는 위의 식을 만족하므로, $\mathrm{t}=sx$는 다음의 식
 
@@ -77,9 +77,9 @@ $$(y,a_i)=\left(\sum c_jb_j, a_i\right)=\sum c_j(b_j,a_i)=c_i $$
 
 $\mathfrak{P}\cap A$가 nonzero임만 보이면 나머지는 분명하다. 임의의 nonzero $x\in\mathfrak{P}$에 대하여, $x$의 minimal polynomial
 
-$$f(\mathrm{x})=\mathrm{x}^{r+1}+a_r\mathrm{x}^r+\cdots+a_1\mathrm{x}+a_0$$
+$$f(\x)=\x^{r+1}+a_r\x^r+\cdots+a_1\x+a_0$$
 
-이 $\operatorname{Frac}A$에 대한 minimal polynomial이라 하자. 그럼 이들 계수들은 모두 $A$에 속하고, $f(\mathrm{x})$의 irreducibility에 의해 $a_0\neq 0$이다. 따라서
+이 $\FracA$에 대한 minimal polynomial이라 하자. 그럼 이들 계수들은 모두 $A$에 속하고, $f(\x)$의 irreducibility에 의해 $a_0\neq 0$이다. 따라서
 
 $$a_0=-a_1x-a_2x^2-\cdots-x^{r+1}\in\mathfrak{P}\cap A.$$
 
@@ -87,13 +87,13 @@ $$a_0=-a_1x-a_2x^2-\cdots-x^{r+1}\in\mathfrak{P}\cap A.$$
 
 $\mathfrak{P}$를 $R'$의 nonzero prime ideal이라 하자. $R'$이 Dedekind domain임을 보이기 위해, 우리는 $\mathfrak{P}$가 maximal임을 보여야 한다. 앞선 claim에 의하여, $\mathfrak{p}=\mathfrak{P}\cap R$은 $R$의 nonzero prime ideal이 된다. 그런데 $R$은 Dedekind ring이므로 $R/\mathfrak{p}$는 field이다. 한편, $R'/\mathfrak{P}$는 integral domain이고 $R/\mathfrak{p}$를 포함한다. 이제 $\bar{x}=x+\mathfrak{P}$를 임의로 고르자. 그럼 $x\in R'$에 대해 integral이므로, monic polynomial
 
-$$f(\mathrm{x})=\mathrm{x}^m+r_{m-1}\mathrm{x}^{m-1}+\cdots+r_1\mathrm{x}+r_0$$
+$$f(\x)=\x^m+r_{m-1}\x^{m-1}+\cdots+r_1\x+r_0$$
 
-이 존재하여 $f(x)=0$이다. 따라서, 양 변을 $\mathfrak{p}$로 나누면 $f$는 $R/\mathfrak{p}[\mathrm{x}]$의 polynomial이고, 이는 $\bar{x}$를 근으로 갖는다. 이제 $R'/\mathfrak{P}$는 $R/\mathfrak{p}$에 대해 integral이고, 그러므로 $R'/\mathfrak{P}$는 field가 되어 $\mathfrak{P}$는 $R'$의 maximal ideal이 된다.
+이 존재하여 $f(x)=0$이다. 따라서, 양 변을 $\mathfrak{p}$로 나누면 $f$는 $R/\mathfrak{p}[\x]$의 polynomial이고, 이는 $\bar{x}$를 근으로 갖는다. 이제 $R'/\mathfrak{P}$는 $R/\mathfrak{p}$에 대해 integral이고, 그러므로 $R'/\mathfrak{P}$는 field가 되어 $\mathfrak{P}$는 $R'$의 maximal ideal이 된다.
 
 이제 남은 것은 $R'$이 Dedekind domain이 된다는 것을 이용하여, purely inseparable extension $L/E$에서의 $R'$의 integral closure $R\'\'$ 또한 Dedekind domain이 된다는 것을 보이는 일이다. 이를 위해 우리는 $R\'\'$의 임의의 원소가 유한하게 많은 prime ideal에만 속해있으며, 또 $R\'\'$의 maximal ideal에서의 localization이 DVR이 됨을 보일 것이다. 
 
-$L/E$는 finite-dimensional purely inseparable extension이므로, $\operatorname{char} L=p$이고, $q=p^r$에 대해 $x^q\in E$가 모든 $x\in L$에 대해 성립하도록 하는 $r>0$이 존재한다. 만약 $x\in R\'\'$이라면, $x\in E\cap R\'\'$이고, $R'$은 integrally closed이므로 $x^q\in R'$이다. 또, 반대로 만일 $x^q\in R'$이라면 $x$는 $R'$에 대해 integral이므로 $x\in R\'\'$이다. 
+$L/E$는 finite-dimensional purely inseparable extension이므로, $\ch L=p$이고, $q=p^r$에 대해 $x^q\in E$가 모든 $x\in L$에 대해 성립하도록 하는 $r>0$이 존재한다. 만약 $x\in R\'\'$이라면, $x\in E\cap R\'\'$이고, $R'$은 integrally closed이므로 $x^q\in R'$이다. 또, 반대로 만일 $x^q\in R'$이라면 $x$는 $R'$에 대해 integral이므로 $x\in R\'\'$이다. 
 
 임의의 원소 $a\in R\'\'$에 대하여, $a$를 포함하는 $R\'\'$의 prime ideal은 많아야 유한 개 뿐이라는 것을 증명해야 한다. 이는 $R\'\'$의 prime ideal들과 $R\'$의 prime ideal들 사이의 일대일대응을 만들어서 해결할 것이다. $\mathfrak{P}$가 $R\'\'$의 nonzero prime ideal이라 하자. 그럼 $\mathfrak{p}=\mathfrak{P}\cap R'$은 $R'$의 nonzero prime ideal이고, 따라서 $\mathfrak{p}$는 maximal이다. 그럼 이제 임의의 $x\in\mathfrak{P}$에 대하여, $x^q\in\mathfrak{p}$이다. 반대로 만일 $x^q\in\mathfrak{p}$라면 $x$는 $R'$에 대해 integral이므로 $R\'\'$에 포함된다. 따라서 이는 prime ideal들 사이의 correspondence가 되고, $a^q$를 포함하는 $R'$의 prime ideal은 유한 개 뿐이므로, $a$를 포함하는 $R\'\'$의 prime ideal 또한 유한 개 뿐이다. 
 
@@ -154,13 +154,13 @@ $$\mathfrak{p}R'=\mathfrak{P}_1^{e_1}\cdots\mathfrak{P}_g^{e_g}$$
 
 </div>
 
-세 번째 조건은 특히 $R$이 Dedekind ring이고, $K=\operatorname{Frac}R$, $L/K$가 finite-dimensional separable extension, 그리고 $R'$이 $R$의 $L$에서의 integral closure일 때 성립한다. 이는 우리가 항상 다뤄왔던 경우와 동일하다.
+세 번째 조건은 특히 $R$이 Dedekind ring이고, $K=\FracR$, $L/K$가 finite-dimensional separable extension, 그리고 $R'$이 $R$의 $L$에서의 integral closure일 때 성립한다. 이는 우리가 항상 다뤄왔던 경우와 동일하다.
 
 그런데 만일 여기에 더해 $L/K$가 normal extension이기도 하다면, 즉 $L/K$가 Galois라면 다음과 같이 더 강력한 결과가 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6**</ins> $R$이 Dedekind domain, $K=\operatorname{Frac}R$이고 $L/K$가 finite-dimensional Galois extension, 그리고 $R'$이 $R$의 $L$에서의 integral closure라 하자. 그럼 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}R'$은 다음과 같은 factorization
+<ins id="thm6">**정리 6**</ins> $R$이 Dedekind domain, $K=\FracR$이고 $L/K$가 finite-dimensional Galois extension, 그리고 $R'$이 $R$의 $L$에서의 integral closure라 하자. 그럼 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}R'$은 다음과 같은 factorization
 
 $$\mathfrak{p}R'=(\mathfrak{P}_1\cdots\mathfrak{P}_g)^e$$
 
@@ -170,7 +170,7 @@ $$\mathfrak{p}R'=(\mathfrak{P}_1\cdots\mathfrak{P}_g)^e$$
 
 ## Ramification
 
-여기에서 $R$은 Dedekind domain, $K=\operatorname{Frac}R$, $L/K$는 finite-dimensional separable extension이고 $R'$은 $L$에서의 $R$의 integral closure이다. 
+여기에서 $R$은 Dedekind domain, $K=\FracR$, $L/K$는 finite-dimensional separable extension이고 $R'$은 $L$에서의 $R$의 integral closure이다. 
 
 <div class="definition" markdown="1">
 
@@ -216,9 +216,9 @@ Discriminant ideal이 중요한 이유는 다음 정리 때문이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm11">**정리 11 (Kummer)**</ins> $\mathfrak{p}$가 nonzero prime ideal이라 하자. 만일 어떤 $\theta\in L$이 존재하여 $R_\mathfrak{p}$의 $L$에서의 integral closure가 $R_\mathfrak{p}[\theta]$이도록 할 수 있다면, $\theta$의 minimal polynomial이 존재한다. 이를 $f(\mathrm{x})\in K[\mathrm{x}]$라 하고, $\bar{f}(\mathrm{x})$를 $f(\mathrm{x})$의 계수들을 $\mathfrak{p}$로 reduce하여 얻어진 $R/\mathfrak{p}[\mathrm{x}]$의 다항식이라 하자. $\bar{f}$가 다음의 식
+<ins id="thm11">**정리 11 (Kummer)**</ins> $\mathfrak{p}$가 nonzero prime ideal이라 하자. 만일 어떤 $\theta\in L$이 존재하여 $R_\mathfrak{p}$의 $L$에서의 integral closure가 $R_\mathfrak{p}[\theta]$이도록 할 수 있다면, $\theta$의 minimal polynomial이 존재한다. 이를 $f(\x)\in K[\x]$라 하고, $\bar{f}(\x)$를 $f(\x)$의 계수들을 $\mathfrak{p}$로 reduce하여 얻어진 $R/\mathfrak{p}[\x]$의 다항식이라 하자. $\bar{f}$가 다음의 식
 
-$$\bar{f}(\mathrm{x})=g_1(\mathrm{x})^{a_1}\cdots g_t(\mathrm{x})^{a_t}$$
+$$\bar{f}(\x)=g_1(\x)^{a_1}\cdots g_t(\x)^{a_t}$$
 
 으로 인수분해된다면, 적당한 $R'$의 prime ideal들이 존재하여
 
@@ -243,7 +243,7 @@ $$\mathfrak{p}R'=\mathfrak{P}_1^{a_1}\cdots\mathfrak{P}_t^{a_t}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem13">**보조정리 13**</ins> $L=K(\theta)$가 dimension $n$의 separable extension이라 하고, $f(\mathrm{x})$가 $\theta$의 minimum polynomial이라 하자. 그럼 다음의 식
+<ins id="lem13">**보조정리 13**</ins> $L=K(\theta)$가 dimension $n$의 separable extension이라 하고, $f(\x)$가 $\theta$의 minimum polynomial이라 하자. 그럼 다음의 식
 
 $$\Delta(\theta)=(-1)^{n(n-1)/2}N_{L/K}(f'(\theta))$$
 

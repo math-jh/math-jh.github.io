@@ -49,7 +49,7 @@ $$\exists i(i\in I\wedge x\in A_i)$$
 
 $$\forall i(i\in I\implies x\in A_i)$$
 
-를 만족하는 $x$들의 모임이다. 만일 $I=\emptyset$이라면 $i\in I$가 거짓이 되어 전체 문장이 $x$에 관계없이 참이 되고 $\bigcap\_{i\in\emptyset} A\_i$는 전체집합이 되어야 하므로 모순이다. ([§ZFC 공리계, 예시 4](/ko/math/set_theory/zfc_axioms#ex4)) $(A\_i)\_{i\in I}$의 target $\mathcal{S}$를 잘 정해준다면 이러한 모순을 피해 교집합을 정의할 수 있다.
+를 만족하는 $x$들의 모임이다. 만일 $I=\emptyset$이라면 $i\in I$가 거짓이 되어 전체 문장이 $x$에 관계없이 참이 되고 $\bigcap\_{i\in\emptyset} A\_i$는 전체집합이 되어야 하므로 모순이다. ([§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4)) $(A\_i)\_{i\in I}$의 target $\mathcal{S}$를 잘 정해준다면 이러한 모순을 피해 교집합을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 

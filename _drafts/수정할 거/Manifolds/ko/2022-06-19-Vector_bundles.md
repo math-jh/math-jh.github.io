@@ -103,7 +103,7 @@ $$v|_p\mapsto (p, dx^1(v),\ldots, dx^m(v))$$
 
 으로 정의하면 된다. 고정된 $\pi^{-1}(p)$ 위에서 $\phi$가 벡터공간 사이의 isomorphism이 되는 것은 자명하고, 또 임의의 $v_x$에 대하여 $(\pi\circ\phi)(x,v)=x$임도 자명하다. $\phi$가 diffeomorphism이 된다는 것은 
 
-$$\tilde{\varphi}=(\varphi\times\operatorname{id}_{\mathbb{R}^m})\circ\phi$$
+$$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
 이고, 이 식에서 $\phi$를 제외한 두 함수가 모두 diffeomorphism이기 때문에 성립한다.
 
@@ -129,7 +129,7 @@ Rank $k$의 $C^\infty$ vector bundle $\pi:E\rightarrow M$이 주어졌다 하자
 
 <div class="proposition" markdown="1">
 
-<ins id="lem4">**보조정리 4**</ins> $\pi:E\rightarrow M$이 rank $k$의 $C^\infty$ vector bundle이라 하자. $\phi:\pi^{-1}(U)\rightarrow U\times\mathbb{R}^k$와 $\psi:\pi^{-1}(V)\rightarrow V\times\mathbb{R}^k$가 두 local trivialization이라 하면, 적당한 $C^\infty$ 함수 $\tau:U\cap V\rightarrow\operatorname{GL}_k(\mathbb{R})$이 존재하여 
+<ins id="lem4">**보조정리 4**</ins> $\pi:E\rightarrow M$이 rank $k$의 $C^\infty$ vector bundle이라 하자. $\phi:\pi^{-1}(U)\rightarrow U\times\mathbb{R}^k$와 $\psi:\pi^{-1}(V)\rightarrow V\times\mathbb{R}^k$가 두 local trivialization이라 하면, 적당한 $C^\infty$ 함수 $\tau:U\cap V\rightarrow\GL_k(\mathbb{R})$이 존재하여 
 
 $$\phi\circ\psi^{-1}(p,v)=(p, \tau(p)v)$$
 
@@ -141,11 +141,11 @@ $$\phi\circ\psi^{-1}(p,v)=(p, \tau(p)v)$$
 
 주어진 vector bundle $\pi:E\rightarrow M$에 대하여, 열린집합 $U\subseteq M$에서 정의된 *local section*은 다음의 식
 
-$$\pi\circ \sigma=\operatorname{id}_U$$
+$$\pi\circ \sigma=\id_U$$
 
 을 만족하는 연속함수 $\sigma:U\rightarrow E$를 뜻한다. ([집합론, §함수 (2), 정의 2](/ko/math/set_theory/functions_2#df2)) 만일 $U=M$이라면 $\sigma$를 *global section*이라 부른다. 만일 $E$가 $C^\infty$ vector bundle이고, $\sigma$가 $C^\infty$ 함수라면 이를 $C^\infty$ section이라 부른다. 
 
-조건 $\pi\circ\sigma=\operatorname{id}_U$가 성립하기 위해서는 각각의 $p\in U$에 대하여 $\sigma(p)$가 $\pi^{-1}(p)$에 속해 있어야 한다. 따라서, $E$를 $M$의 각 점 $p$마다 $\mathbb{R}^k$가 붙어있는 모습으로 상상한다면, $\sigma$가 local section이라는 것은 각각의 점 $p$마다, 이 점에 붙어있는 $\mathbb{R}^k$의 원소가 대응되며, 이 대응이 $E$ 위에 주어진 위상구조에 대해 연속이라는 것이다. 
+조건 $\pi\circ\sigma=\id_U$가 성립하기 위해서는 각각의 $p\in U$에 대하여 $\sigma(p)$가 $\pi^{-1}(p)$에 속해 있어야 한다. 따라서, $E$를 $M$의 각 점 $p$마다 $\mathbb{R}^k$가 붙어있는 모습으로 상상한다면, $\sigma$가 local section이라는 것은 각각의 점 $p$마다, 이 점에 붙어있는 $\mathbb{R}^k$의 원소가 대응되며, 이 대응이 $E$ 위에 주어진 위상구조에 대해 연속이라는 것이다. 
 
 Local section $\sigma$는 각 점 $p$마다 <em_ko>하나의</em_ko> 벡터 $\sigma(p)$를 대응시킨다. $\mathbb{R}^k$는 $k$개의 일차독립인 벡터가 존재하면 완벽하게 표현할 수 있으므로, 다음을 정의할 수 있다.
 

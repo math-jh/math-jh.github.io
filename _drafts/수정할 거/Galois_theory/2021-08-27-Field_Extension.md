@@ -53,7 +53,7 @@ Ring homomorphism $f:\mathbb{Z}\rightarrow A$를 생각하자. 이 homomorphism�
 
 우리 이야기에서, 위의 정의는 특히 $R$이 field인 경우에 자주 쓰이게 된다. 아무튼 우리가 정의하기로 했던 characteristic을 정의할 차례다.
 
-<ins id="df3">**정의 3**</ins> Subfield를 갖는 임의의 ring $R$에 대하여, $R$의 prime subfield가 $\mathbb{Q}$라면 $R$이 characteristic zero, 그렇지 않고 $F_p$라면 $R$의 characteristic이 $p$라고 한다. $R$의 characteristic을 $\operatorname{char}R$로 표기한다. 
+<ins id="df3">**정의 3**</ins> Subfield를 갖는 임의의 ring $R$에 대하여, $R$의 prime subfield가 $\mathbb{Q}$라면 $R$이 characteristic zero, 그렇지 않고 $F_p$라면 $R$의 characteristic이 $p$라고 한다. $R$의 characteristic을 $\chR$로 표기한다. 
 {: .definition}
 
 많은 저자들이 ring의 characteristic을 정의하는 방법과는 차이가 있는데, 대부분은 임의의 ring에 대해 characteristic을 정의하지만 부르바키는 그러지 않았다. 하지만 앞서 말했듯, 우리가 관심을 갖는 경우는 $R$이 field인 경우이므로 (따라서 subfield를 갖는 경우이므로) 우리가 다룰 경우들에서는 항상 두 정의가 동일하다.
@@ -62,15 +62,15 @@ Ring homomorphism $f:\mathbb{Z}\rightarrow A$를 생각하자. 이 homomorphism�
 
 <ins id="pp4">**명제 4**</ins> $R$이 ring이라 하자. 그럼 다음이 성립한다.
 
-1. $\operatorname{char}R=0$인 것은 임의의 $n\neq 0$에 대하여, mapping $x\mapsto n\cdot x$가 bijective인 것과 동치이다.
-2. $\operatorname{char}R=p$인 것은 임의의 $x\in R$에 대하여 $p\cdot x=0$인 것과 동치이다.
+1. $\chR=0$인 것은 임의의 $n\neq 0$에 대하여, mapping $x\mapsto n\cdot x$가 bijective인 것과 동치이다.
+2. $\chR=p$인 것은 임의의 $x\in R$에 대하여 $p\cdot x=0$인 것과 동치이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 3](#pp3)의 증명과 마찬가지로, $f:\mathbb{Z}\rightarrow R$을 생각하자. 그럼 임의의 $n\in\mathbb{Z}$와 $x\in R$에 대하여, $n\cdot x=f(n)x$이므로, $\operatorname{char}R=0$인 것은 $f$가 $\bar{f}:\mathbb{Q}\rightarrow R$로 extend되는 것과 동치이고, 이는 다시 임의의 $f(n)\in R$이 invertible하다는 것과 동치이므로 1번이 성립한다. 비슷하게, $\operatorname{char}R=p$인 것은 $f(p\mathbb{Z})=0$인 것과 동치이고, 이는 다시 $f(p)=0$, 그리고 $p\cdot x=0$인 것과 동치가 된다.
+[명제 3](#pp3)의 증명과 마찬가지로, $f:\mathbb{Z}\rightarrow R$을 생각하자. 그럼 임의의 $n\in\mathbb{Z}$와 $x\in R$에 대하여, $n\cdot x=f(n)x$이므로, $\chR=0$인 것은 $f$가 $\bar{f}:\mathbb{Q}\rightarrow R$로 extend되는 것과 동치이고, 이는 다시 임의의 $f(n)\in R$이 invertible하다는 것과 동치이므로 1번이 성립한다. 비슷하게, $\chR=p$인 것은 $f(p\mathbb{Z})=0$인 것과 동치이고, 이는 다시 $f(p)=0$, 그리고 $p\cdot x=0$인 것과 동치가 된다.
 
 </details>
 
@@ -92,9 +92,9 @@ $$(a+b)^p=a^p+b^p,\qquad (ab)^p=a^pb^p$$
 
 </details>
 
-이 명제에 의해, 예를 들어, 다항식 $x^p-a^p$는 $\operatorname{char}K=p$인 field에서 $(x-a)^p$와 같이 인수분해된다. 이 부분이 나중에 Galois theory를 본격적으로 시작했을 때 이야기가 갈리는 부분이다. 
+이 명제에 의해, 예를 들어, 다항식 $x^p-a^p$는 $\chK=p$인 field에서 $(x-a)^p$와 같이 인수분해된다. 이 부분이 나중에 Galois theory를 본격적으로 시작했을 때 이야기가 갈리는 부분이다. 
 
-아무튼 위의 명제에 의해, $\operatorname{char}R=p$인 commutative ring $R$에는 자연스러운 endomorphism $a\mapsto a^p$가 존재한다. 이를 *Frobenius endomorphism*이라 부른다. 임의의 정수 $r$에 대하여, 이 Frobenius endomorphism을 $r$번 합성한 결과는 $x\mapsto x^{p^r}$이다. 임의의 부분집합 $S\subset R$에 대하여, 이 endomorphism에 의해 생기는 $S$의 image를 $S^{p^r}$로 표현하자. 만일 $S$가 subring이었다면, subring의 homomorphic image로써 $S^{p^r}$ 또한 subring이 된다. 
+아무튼 위의 명제에 의해, $\chR=p$인 commutative ring $R$에는 자연스러운 endomorphism $a\mapsto a^p$가 존재한다. 이를 *Frobenius endomorphism*이라 부른다. 임의의 정수 $r$에 대하여, 이 Frobenius endomorphism을 $r$번 합성한 결과는 $x\mapsto x^{p^r}$이다. 임의의 부분집합 $S\subset R$에 대하여, 이 endomorphism에 의해 생기는 $S$의 image를 $S^{p^r}$로 표현하자. 만일 $S$가 subring이었다면, subring의 homomorphic image로써 $S^{p^r}$ 또한 subring이 된다. 
 
 <ins id="rmk1">**참고**</ins> 위의 표기 $x\mapsto x^{p^r}$은 꽤나 그럴듯한게, 만일 $x\mapsto x^{p^r}$과 $x\mapsto x^{p^s}$를 합성한다면 $x\mapsto (x^{p^r})^{p^s}=x^{p^{r+s}}$가 된다. 즉, 지수법칙이 문제없이 적용되며, 나중에 이 endomorphism이 bijective하다면, inverse 또한 지수법칙을 잘 만족하게 할 수 있다.
 {: .remark}
@@ -104,7 +104,7 @@ $R$의 임의의 subring $S$와 부분집합 $A$에 대하여, 앞으로 $S[A]$�
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $R$이 commutative이고, $\operatorname{char}R=p$라 하자. $R$의 subring $K$와 부분집합 $S$에 대하여, 다음이 성립한다.
+<ins id="pp6">**명제 6**</ins> $R$이 commutative이고, $\chR=p$라 하자. $R$의 subring $K$와 부분집합 $S$에 대하여, 다음이 성립한다.
 
 1. 임의의 정수 $r$에 대하여, $(K[S])^{p^r}=K^{p^r}[S^{p^r}]$이고, 만일 $R$이 field였다면 $K(S)^{p^r}=K^{p^r}(S^{p^r})$도 성립한다.
 2. 만일 $K[S]$가 $K$-module로써 $R$의 원소들 $(x_i)_{i\in I}$들로 generate됐다면, $K[S^{p^r}]$은 $(x_i^{p^r})\_{i\in I}$에 의해 generate된다.
@@ -121,7 +121,7 @@ $R$의 임의의 subring $S$와 부분집합 $A$에 대하여, 앞으로 $S[A]$�
 
 이제 마지막으로 perfect ring을 정의한 후, 메인 주제인 field extension으로 넘어간다. 
 
-<ins id="df7">**정의 7**</ins> $\operatorname{char}R=p$인 ring $R$이 *perfect*라는 것은 $R$이 commutative하고, Frobenius endomorphism $x\mapsto x^p$가 bijective한 것이다.
+<ins id="df7">**정의 7**</ins> $\chR=p$인 ring $R$이 *perfect*라는 것은 $R$이 commutative하고, Frobenius endomorphism $x\mapsto x^p$가 bijective한 것이다.
 {: .definition}
 
 따라서, perfect ring에서는 Frobenius endomorphism, 혹은 더 일반적으로 이를 $r$번 합성한 $x\mapsto x^{p^r}$이 automorphism이 된다. 이 때의 inverse를 $x\mapsto x^{p^{-r}}$로 표기하면 앞선 [참고](#rmk1)에서 언급했듯 이 표기법 또한 지수법칙을 잘 유지해준다.
@@ -247,7 +247,7 @@ $E\otimes\_KF$를 생각하자. 이제 $i:E\rightarrow E\otimes\_KF$와 $j:F\rig
 
 친절한 저자라면 이쯤에서 algebraic extension을 소개할테지만, 부르바키의 서술 스타일은 (직관에 대한 별다른 고려 없이...) 일관적으로 아주 general한 곳으로부터 특수한 경우로 논의를 좁혀나가는 스타일이다보니, linear disjointness부터 소개한다. 이건, 예를 들면 Hungerford 기준으로는 Galois theory를 챕터 5에서 소개한 후, separability를 일반적인 field extension으로 확장하며 나오는 내용인데, 어쨌든 부르바키는 이렇게 motivation을 주기보다는 처음부터 linear disjointness의 개념을 소개해서 separability를 이를 통해 증명하는 것을 택했다.
 
-$A$와 $B$가 $\Omega$의 subalgebra라 하자. 그럼 $\varphi: A\otimes_KB\rightarrow \Omega$를 $x\otimes y\mapsto xy$로 정의할 수 있다. 그럼 $\operatorname{im}\varphi$는 $A\cup B$에 의해 generate된 $\Omega$의 subring이다. 
+$A$와 $B$가 $\Omega$의 subalgebra라 하자. 그럼 $\varphi: A\otimes_KB\rightarrow \Omega$를 $x\otimes y\mapsto xy$로 정의할 수 있다. 그럼 $\im\varphi$는 $A\cup B$에 의해 generate된 $\Omega$의 subring이다. 
 
 <div class="definition" markdown="1">
 
@@ -255,7 +255,7 @@ $A$와 $B$가 $\Omega$의 subalgebra라 하자. 그럼 $\varphi: A\otimes_KB\rig
 
 </div>
 
-이 조건을 만족시키는 extension들이 linearly disjoint라 불리는 이유를 살펴보자. 만일 $A$와 $B$가 각각 $(a_i)$, $(b_j)$를 basis로 갖는다면, $\operatorname{im}\varphi$의 모든 원소들은 어차피 $\varphi(\sum\alpha_k'\otimes\beta_k')=\sum\alpha_k'\beta_k'$의 꼴이므로, 예를 들어 $\alpha_k'$들을 모두 basis를 이용해 쪼갠다면 적절한 $\beta_i$들에 대하여 $\sum\beta_ia_i$의 꼴로 나타날 것이다. 이와 비슷한 일을 $\beta_k'$들을 basis $(b_j)$를 이용해 쪼개어 반복할 수도 있고, 혹은 $\alpha_k'$들과 $\beta_k'$들을 모두 분해하여 반복할 수도 있다. 따라서, $\operatorname{im}\varphi$의 원소들은
+이 조건을 만족시키는 extension들이 linearly disjoint라 불리는 이유를 살펴보자. 만일 $A$와 $B$가 각각 $(a_i)$, $(b_j)$를 basis로 갖는다면, $\im\varphi$의 모든 원소들은 어차피 $\varphi(\sum\alpha_k'\otimes\beta_k')=\sum\alpha_k'\beta_k'$의 꼴이므로, 예를 들어 $\alpha_k'$들을 모두 basis를 이용해 쪼갠다면 적절한 $\beta_i$들에 대하여 $\sum\beta_ia_i$의 꼴로 나타날 것이다. 이와 비슷한 일을 $\beta_k'$들을 basis $(b_j)$를 이용해 쪼개어 반복할 수도 있고, 혹은 $\alpha_k'$들과 $\beta_k'$들을 모두 분해하여 반복할 수도 있다. 따라서, $\im\varphi$의 원소들은
 
 $$\sum_{i\in I}\beta_ia_i,\qquad\sum_{j\in J}\alpha_jb_j,\qquad\sum_{(i,j)\in I\times J}\gamma_{ij}a_ib_j$$
 
@@ -344,7 +344,7 @@ Ring $E(F)=K(E\cup F)$를 생각하자. 앞서 말했던 것과 같이, $K[E\cup
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-만일 $E$, $F$가 lienarly disjoint하다면 이들의 subextension들도 linearly disjoint하다는 것은 자명하다. 따라서 반대방향만 보이면 충분하다. 그런데 이것도 거의 자명한게, 어차피 linearly disjoint의 조건은 linearly independence로 정의되므로 finiteness가 어차피 정의에 포함되어 있다. 즉, 엄밀하게 증명하자면, ([명제 18](#pp18)의 3번 조건을 이용하기 위해) $E$와 $F$의 basis $(a_i)$, $(b_j)$에 대하여, 임의의 linear combination $\sum\gamma_{ij}a_ib_j$가 주어졌다고 하자. 이제 $\operatorname{supp}(\gamma)_{I\times J}$는 유한하므로, $(i,j)\in\operatorname{supp}(\gamma)\_{I\times J}$이도록 하는 index들의 부분집합 $I'$와 $J'$도 모두 유한집합이다.  그러므로, $(a_i)\_{i\in I'}$와 $(b_j)\_{j\in J'}$에 의해 generate되는 algebra들은 finitely generated이고, 가정에 의해 이들은 linearly disjoint하므로 모든 pair $i$, $j$에 대해 $\gamma\_{ij}=0$이다.  
+만일 $E$, $F$가 lienarly disjoint하다면 이들의 subextension들도 linearly disjoint하다는 것은 자명하다. 따라서 반대방향만 보이면 충분하다. 그런데 이것도 거의 자명한게, 어차피 linearly disjoint의 조건은 linearly independence로 정의되므로 finiteness가 어차피 정의에 포함되어 있다. 즉, 엄밀하게 증명하자면, ([명제 18](#pp18)의 3번 조건을 이용하기 위해) $E$와 $F$의 basis $(a_i)$, $(b_j)$에 대하여, 임의의 linear combination $\sum\gamma_{ij}a_ib_j$가 주어졌다고 하자. 이제 $\supp(\gamma)_{I\times J}$는 유한하므로, $(i,j)\in\supp(\gamma)\_{I\times J}$이도록 하는 index들의 부분집합 $I'$와 $J'$도 모두 유한집합이다.  그러므로, $(a_i)\_{i\in I'}$와 $(b_j)\_{j\in J'}$에 의해 generate되는 algebra들은 finitely generated이고, 가정에 의해 이들은 linearly disjoint하므로 모든 pair $i$, $j$에 대해 $\gamma\_{ij}=0$이다.  
 
 </details>
 

@@ -172,9 +172,9 @@ $$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> $n\times n$ 행렬들의 모임 $\operatorname{Mat}_n(\mathbb{R})$은 $n^2$차원 $\mathbb{R}$-벡터공간이다. 따라서, $\operatorname{Mat}_n(\mathbb{R})$의 임의의 점에서의 tangent space는 $\operatorname{Mat}_n(\mathbb{R})$과 동일하다. 
+<ins id="ex5">**예시 5**</ins> $n\times n$ 행렬들의 모임 $\Mat_n(\mathbb{R})$은 $n^2$차원 $\mathbb{R}$-벡터공간이다. 따라서, $\Mat_n(\mathbb{R})$의 임의의 점에서의 tangent space는 $\Mat_n(\mathbb{R})$과 동일하다. 
 
-특별히 $\operatorname{Mat}_n(\mathbb{R})$의 open submanifold인 $\operatorname{GL}_n(\mathbb{R})$을 생각하면, $\operatorname{GL}_n(\mathbb{R})$의 임의의 원소에서의 tangent space는 이 원소를 $\operatorname{Mat}_n(\mathbb{R})$의 원소로 보았을 때의 tangent space와 동일하고, 따라서 $\operatorname{Mat}_n(\mathbb{R})$과 같다. 
+특별히 $\Mat_n(\mathbb{R})$의 open submanifold인 $\GL_n(\mathbb{R})$을 생각하면, $\GL_n(\mathbb{R})$의 임의의 원소에서의 tangent space는 이 원소를 $\Mat_n(\mathbb{R})$의 원소로 보았을 때의 tangent space와 동일하고, 따라서 $\Mat_n(\mathbb{R})$과 같다. 
 
 </div>
 

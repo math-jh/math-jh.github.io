@@ -69,7 +69,7 @@ $$N(\mathfrak{P})=\mathfrak{p}^f$$
 
 따라서, 만일 $\mathfrak{A}$가 $R'$에서 prime ideal로의 factorization $\mathfrak{A}=\prod\mathfrak{P}_i^{a_i}$를 갖는다면 $\mathfrak{p}_i=\mathfrak{P}_i\cap R$, 그리고 $f_i=f(\mathfrak{P}/R)$에 대해 $N(\mathfrak{A})=\prod\mathfrak{p}_i^{a_if_i}$가 성립한다.
 
-특별히 $K=\mathbb{Q}$이고 $R=\mathbb{Z}$인 경우를 생각하자. 그럼 $\operatorname{char}\mathbb{Q}=0$이므로 임의의 extension은 항상 separable이다. $L/\mathbb{Q}$가 finite dimensional extension이고, $R'$이 여기에서의 $\mathbb{Z}$의 integral closure라 하면 $\mathbb{Z}$는 PID이므로 $N(\mathfrak{A})$는 $R'$의 임의의 ideal $\mathfrak{A}$에 대하여 항상 principal ideal $m\mathbb{Z}$가 된다. $m$의 choice는 (up to multiple $-1$) 유일하고, 다음이 성립한다.
+특별히 $K=\mathbb{Q}$이고 $R=\mathbb{Z}$인 경우를 생각하자. 그럼 $\ch\mathbb{Q}=0$이므로 임의의 extension은 항상 separable이다. $L/\mathbb{Q}$가 finite dimensional extension이고, $R'$이 여기에서의 $\mathbb{Z}$의 integral closure라 하면 $\mathbb{Z}$는 PID이므로 $N(\mathfrak{A})$는 $R'$의 임의의 ideal $\mathfrak{A}$에 대하여 항상 principal ideal $m\mathbb{Z}$가 된다. $m$의 choice는 (up to multiple $-1$) 유일하고, 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 

@@ -19,7 +19,7 @@ weight: 12
 
 ---
 
-지난 글에서 각각 $n$차원, $m$차원인 두 $F$-벡터공간 $V,W$에 대하여 $\operatorname{Hom}(V,W)$는 $mn$차원 $F$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\operatorname{Mat}_{m\times n}(F)$ 또한 $mn$차원의 $F$-벡터공간이다. 그럼 [§동형사상, 따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#crl4)로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
+지난 글에서 각각 $n$차원, $m$차원인 두 $F$-벡터공간 $V,W$에 대하여 $\Hom(V,W)$는 $mn$차원 $F$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\Mat_{m\times n}(F)$ 또한 $mn$차원의 $F$-벡터공간이다. 그럼 [§동형사상, ⁋따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#crl4)로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
 
 이번 글에서 증명할 선형대수학의 기본정리[^1]는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em_ko>자연스러운</em_ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 이 <em_ko>자연스럽다</em_ko>는 말의 뜻은 다음 글에서 조금 더 자세히 살펴본다.
 
@@ -47,7 +47,7 @@ $$\begin{pmatrix}\alpha_{11}&\alpha_{12}&\cdots&\alpha_{1n}\\\alpha_{21}&\alpha_
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> 유클리드 $n$-공간 $F^n$과, 행렬 $A\in\operatorname{Mat}\_{m\times n}(F)$를 생각하자. 임의의 $x\in F^n$에 대하여, $L_A(x)$를 다음의 식
+<ins id="ex1">**예시 1**</ins> 유클리드 $n$-공간 $F^n$과, 행렬 $A\in\Mat\_{m\times n}(F)$를 생각하자. 임의의 $x\in F^n$에 대하여, $L_A(x)$를 다음의 식
 
 $$L_A(x)=Ax$$
 
@@ -57,15 +57,15 @@ $$L_A(x)=Ax$$
 
 $F^n$에서 $F^m$으로의 임의의 linear map $L$이 주어졌다 하자. 어렵지 않게 $L=L\_{[L]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}}$임을 확인할 수 있다. 따라서 다음의 대응이 존재한다.
 
-$$\{\text{linear maps from $F^n$ to $F^m$}\}\longleftrightarrow\operatorname{Mat}_{m\times n}(F)$$
+$$\{\text{linear maps from $F^n$ to $F^m$}\}\longleftrightarrow\Mat_{m\times n}(F)$$
   
 더 정확하게 말하자면 $L\mapsto [L]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}$, 그리고 $A\mapsto L_A$ ([예시 1](#ex1)의 정의)이 서로의 역함수가 되는 전단사함수가 된다. 
 
-그런데 왼쪽의 집합은 $\operatorname{Hom}(F^n, F^m)$와 같으므로, 이 대응이 전단사인 linear map, 곧 isomorphism이 되는지를 확인해볼 수 있다. 이에 대한 답은 그렇다는 것이며, 이 다음의 [정리 3](#thm3)과 함께 이 결과를 선형대수학의 기본정리라 부른다.
+그런데 왼쪽의 집합은 $\Hom(F^n, F^m)$와 같으므로, 이 대응이 전단사인 linear map, 곧 isomorphism이 되는지를 확인해볼 수 있다. 이에 대한 답은 그렇다는 것이며, 이 다음의 [정리 3](#thm3)과 함께 이 결과를 선형대수학의 기본정리라 부른다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**정리 2**</ins> $\operatorname{Hom}(F^n,F^m)\cong\operatorname{Mat}_{m\times n}(F)$
+<ins id="thm2">**정리 2**</ins> $\Hom(F^n,F^m)\cong\Mat_{m\times n}(F)$
 
 </div>
 <details class="proof" markdown="1">
@@ -73,7 +73,7 @@ $$\{\text{linear maps from $F^n$ to $F^m$}\}\longleftrightarrow\operatorname{Mat
 
 주어진 함수 $L\mapsto[L]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}$가 linear임을 보여야 한다.
 
-$L_1,L_2$가 모두 $\operatorname{Hom}(F^n,F^m)$의 원소라 하자. 그럼 각각의 $e_i\in\mathcal{E}_n$에 대하여, 
+$L_1,L_2$가 모두 $\Hom(F^n,F^m)$의 원소라 하자. 그럼 각각의 $e_i\in\mathcal{E}_n$에 대하여, 
 
 $$\begin{aligned}L_1(e_1)&=\alpha_{1,1}e_1+\alpha_{2,1}e_2+\cdots+\alpha_{m,1}e_m\\L_1(e_2)&=\alpha_{1,2}e_1+\alpha_{2,2}e_2+\cdots+\alpha_{m,2}e_m\\&\vdots\\L_1(e_n)&=\alpha_{1,n}e_1+\alpha_{2,n}e_2+\cdots+\alpha_{m,n}e_m\end{aligned}$$
 
@@ -89,7 +89,7 @@ $$\begin{aligned}(L_1+L_2)(e_1)&=(\alpha_{1,1}+\beta_{1,1})e_1+(\alpha_{2,1}+\be
 
 </details>
 
-뿐만 아니라 행렬들의 곱 또한 $\operatorname{Hom}(F^n,F^m)$에서 특별한 의미를 갖는다. 
+뿐만 아니라 행렬들의 곱 또한 $\Hom(F^n,F^m)$에서 특별한 의미를 갖는다. 
 
 <div class="proposition" markdown="1">
 
@@ -115,7 +115,7 @@ $$\begin{aligned}(L_2\circ L_1)(e_i)&=L_2(\alpha_{1,i}e_1+\cdots+\alpha_{m,i}e_m
 
 $$(L_2\circ L_1)(e_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)e_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)e_k.$$
 
-$[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$번째 열은 $e_i$가 $L_2\circ L_1$에 의해 옮겨지는 벡터이므로, 행렬 $[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum\_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 이제 [§행렬, 정의 3](/ko/math/linear_algebra/matrix#df3) 직후의 계산으로부터 이것이 두 행렬 $[L\_2]\_{\mathcal{E}\_k}^{\mathcal{E}\_m}$, $[L\_1]\_{\mathcal{E}\_m}^{\mathcal{E}\_n}$의 곱의 $(i,j)$ 성분이라는 것을 안다.
+$[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$번째 열은 $e_i$가 $L_2\circ L_1$에 의해 옮겨지는 벡터이므로, 행렬 $[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum\_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 이제 [§행렬, ⁋정의 3](/ko/math/linear_algebra/matrix#df3) 직후의 계산으로부터 이것이 두 행렬 $[L\_2]\_{\mathcal{E}\_k}^{\mathcal{E}\_m}$, $[L\_1]\_{\mathcal{E}\_m}^{\mathcal{E}\_n}$의 곱의 $(i,j)$ 성분이라는 것을 안다.
 
 </details>
 
@@ -147,7 +147,7 @@ $$[L(v)]_\mathcal{C}=[L]^\mathcal{B}_\mathcal{C}[v]_\mathcal{B}\tag{3}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm4">**정리 4**</ins> $\operatorname{Hom}(V,W)\cong \operatorname{Mat}_{m\times n}(F)$.
+<ins id="thm4">**정리 4**</ins> $\Hom(V,W)\cong \Mat_{m\times n}(F)$.
 
 </div>
 <details class="proof" markdown="1">
@@ -155,7 +155,7 @@ $$[L(v)]_\mathcal{C}=[L]^\mathcal{B}_\mathcal{C}[v]_\mathcal{B}\tag{3}$$
 
 $V$, $W$의 기저 $\mathcal{B}$, $\mathcal{C}$를 각각 고정하자. 함수 $L\mapsto[L]^\mathcal{B}\_\mathcal{C}$가 linear임을 보여야 한다.
 
-$L_1,L_2$가 모두 $\operatorname{Hom}(V,W)$의 원소라 하자. 그럼 각각의 $x_i\in\mathcal{B}$에 대하여, 
+$L_1,L_2$가 모두 $\Hom(V,W)$의 원소라 하자. 그럼 각각의 $x_i\in\mathcal{B}$에 대하여, 
 
 $$\begin{aligned}L_1(x_1)&=\alpha_{1,1}y_1+\alpha_{2,1}y_2+\cdots+\alpha_{m,1}y_m\\L_1(x_2)&=\alpha_{1,2}y_1+\alpha_{2,2}y_2+\cdots+\alpha_{m,2}y_m\\&\vdots\\L_1(x_n)&=\alpha_{1,n}y_1+\alpha_{2,n}y_2+\cdots+\alpha_{m,n}y_m\end{aligned}$$
 
@@ -205,13 +205,13 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 
 ## 기본정리의 결과들
 
-선형대수학의 기본정리는 $V,W$에 대한 basis를 선택하기만 하면 $\operatorname{Hom}(V,W)$와 $\operatorname{Mat}\_{m\times n}(F)$를 같은 것으로 취급할 수 있다는 것을 보여준다. 예컨대 $\operatorname{Mat}\_{m\times n}(F)$의 $mn$개의 basis는 [§선형사상들의 공간, 명제 5](/ko/math/linear_algebra/space_of_linear_maps#pp5)에서 살펴본 $mn$개의 basis에 대응된다. 
+선형대수학의 기본정리는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat\_{m\times n}(F)$를 같은 것으로 취급할 수 있다는 것을 보여준다. 예컨대 $\Mat\_{m\times n}(F)$의 $mn$개의 basis는 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#pp5)에서 살펴본 $mn$개의 basis에 대응된다. 
 
 다음 따름정리 또한 기본정리의 결과이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="crl6">**따름정리 6**</ins> 두 $n$차원 $F$-벡터공간 $V,W$가 주어졌다 하고, 이들의 기저 $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 $L\in\operatorname{Hom}(V,W)$에 대하여, $L^{-1}\in\operatorname{Hom}(W,V)$의 기저 $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}\_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}\_\mathcal{C}$의 역행렬과 같다.
+<ins id="crl6">**따름정리 6**</ins> 두 $n$차원 $F$-벡터공간 $V,W$가 주어졌다 하고, 이들의 기저 $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 $L\in\Hom(V,W)$에 대하여, $L^{-1}\in\Hom(W,V)$의 기저 $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}\_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}\_\mathcal{C}$의 역행렬과 같다.
 
 </div>
 <details class="proof" markdown="1">
@@ -221,7 +221,7 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 
 </details>
 
-이와 같이 [§행렬](/ko/math/linear_algebra/matrix)에서 정의한 대부분의 개념들을 $\operatorname{Hom}(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 다다음 글에서 쌍대공간에 대해 자세히 살펴보면 적절한 의미를 부여할 수 있다.
+이와 같이 [§행렬](/ko/math/linear_algebra/matrix)에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 다다음 글에서 쌍대공간에 대해 자세히 살펴보면 적절한 의미를 부여할 수 있다.
 
 
 ---

@@ -31,7 +31,7 @@ $$\cdots\longrightarrow X\overset{f}{\longrightarrow} Y\overset{g}{\longrightarr
 
 </div>
 
-조건 $gf=0$은 $\operatorname{im}(f)\subseteq\ker(g)$와 동치이다. 특별히 $\operatorname{im}(f)=\ker(g)$가 성립할 경우, 우리는 위의 열이 $Y$에서 *exact<sub>완전</sub>*하다 하고, 각 성분에서 모두 exact인 열을 *exact sequence<sub>완전열</sub>*라 부른다. 
+조건 $gf=0$은 $\im(f)\subseteq\ker(g)$와 동치이다. 특별히 $\im(f)=\ker(g)$가 성립할 경우, 우리는 위의 열이 $Y$에서 *exact<sub>완전</sub>*하다 하고, 각 성분에서 모두 exact인 열을 *exact sequence<sub>완전열</sub>*라 부른다. 
 
 임의의 $R$-module $X$에 대하여, zero module $0$에서 $X$로 가는 유일한 map은 $0$을 $0$으로 보내는 영함수뿐이고, 거꾸로 $X$에서 $0$으로 가는 함수 또한 $X$의 모든 원소를 $0$으로 보내는 영함수뿐이다. 이러한 상황에서는 
 
@@ -67,11 +67,11 @@ $$0\longrightarrow X\overset{f}{\longrightarrow}Y$$
 
 $$X\overset{f}{\longrightarrow}Y\longrightarrow 0 $$
 
-이 exact라는 것은 $\operatorname{im}(f)=Y$라는 것, 즉 $f$가 전사라는 것이다. 따라서 다음의 열
+이 exact라는 것은 $\im(f)=Y$라는 것, 즉 $f$가 전사라는 것이다. 따라서 다음의 열
 
 $$0\longrightarrow X\overset{f}{\longrightarrow}Y\longrightarrow 0$$
 
-이 exact라는 것은 $\ker(f)=0$이고 $\operatorname{im}(f)=Y$라는 것이므로, $f$가 전단사라는 것이다.
+이 exact라는 것은 $\ker(f)=0$이고 $\im(f)=Y$라는 것이므로, $f$가 전단사라는 것이다.
 
 </div>
 
@@ -141,11 +141,11 @@ $$0=g(z)-g(z)=i(j(z))-i(j'(z))=i(j(z)-j'(z))$$
 
 </details>
 
-이제 임의의 함수 $f:X\rightarrow Y$를 고정하자. 그럼 quotient module $Y/\operatorname{im}(f)$와, 자연스러운 projection $Y\rightarrow Y/\operatorname{im}(f)$가 잘 정의된다.
+이제 임의의 함수 $f:X\rightarrow Y$를 고정하자. 그럼 quotient module $Y/\im(f)$와, 자연스러운 projection $Y\rightarrow Y/\im(f)$가 잘 정의된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $C=Y/\operatorname{im}(f)$, 그리고 자연스러운 projection $p:Y\rightarrow C$를 생각하자. 그럼 $pf=0$이며, 뿐만 아니라 $p:Y\rightarrow C$는 다음의 universal property를 만족한다.
+<ins id="pp6">**명제 6**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $C=Y/\im(f)$, 그리고 자연스러운 projection $p:Y\rightarrow C$를 생각하자. 그럼 $pf=0$이며, 뿐만 아니라 $p:Y\rightarrow C$는 다음의 universal property를 만족한다.
 
 > 임의의 $g:Y\rightarrow Z$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:C\rightarrow Z$가 존재하여 $g=jp$이다. 
 >
@@ -161,7 +161,7 @@ $$0=g(y)-g(y)=j(p(y))-j'(p(y))=(j-j')(p(y))$$
 
 가 성립한다. 그런데 $p$는 전사이므로, 이는 곧 모든 $c\in C$에 대하여 $j(c)-j'(c)=0$, 곧 $j=j'$라는 뜻이다.
 
-존재성의 경우, $\ker(p)=\operatorname{im}(f)\subseteq\ker(g)$이므로 <#ref#>로부터 자명하다. 
+존재성의 경우, $\ker(p)=\im(f)\subseteq\ker(g)$이므로 <#ref#>로부터 자명하다. 
 
 </details>
 
@@ -169,7 +169,7 @@ $$0=g(y)-g(y)=j(p(y))-j'(p(y))=(j-j')(p(y))$$
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, module $Y/\operatorname{im}(f)$를 $f$의 *cokernel<sub>여핵</sub>*이라 부르고 $\operatorname{coker}(f)$으로 적는다.
+<ins id="df7">**정의 7**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, module $Y/\im(f)$를 $f$의 *cokernel<sub>여핵</sub>*이라 부르고 $\coker(f)$으로 적는다.
 
 </div>
 
@@ -179,7 +179,7 @@ $$0=g(y)-g(y)=j(p(y))-j'(p(y))=(j-j')(p(y))$$
 
 <ins id="pp8">**명제 8**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, 다음의 sequence
 
-$$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrightarrow \operatorname{coker}(f)\longrightarrow 0$$
+$$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrightarrow \coker(f)\longrightarrow 0$$
 
 은 exact sequence가 된다.
 
@@ -191,7 +191,7 @@ $$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 
 $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarrow}Z\longrightarrow\cdots$$
 
-의 경우, $Y$의 submodule $\ker(g)=\operatorname{im}(f)$은 항상 $Y$의 direct summand로 생각할 수 있다. 물론 일반적인 경우 이것이 성립할 이유가 없으므로, 다음과 같이 정의한다.
+의 경우, $Y$의 submodule $\ker(g)=\im(f)$은 항상 $Y$의 direct summand로 생각할 수 있다. 물론 일반적인 경우 이것이 성립할 이유가 없으므로, 다음과 같이 정의한다.
 
 <div class="definition" markdown="1">
 
@@ -199,7 +199,7 @@ $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarro
 
 $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarrow}Z\longrightarrow\cdots$$
 
-에서 $\ker(g)=\operatorname{im}(f)$가 $Y$의 direct summand라면 위의 열이 $Y$에서 *split*한다고 한다. 모든 성분에서 split하는 exact sequence를 *splitting exact sequence*, 혹은 간단히 *split-exact*라 부른다. 
+에서 $\ker(g)=\im(f)$가 $Y$의 direct summand라면 위의 열이 $Y$에서 *split*한다고 한다. 모든 성분에서 split하는 exact sequence를 *splitting exact sequence*, 혹은 간단히 *split-exact*라 부른다. 
 
 </div>
 
@@ -211,7 +211,7 @@ $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarro
 
 가 $Y$에서 split-exact라면,
 
-$$Y\cong\operatorname{im}(f)\oplus\operatorname{im}(g)$$
+$$Y\cong\im(f)\oplus\im(g)$$
 
 가 성립한다.
 
@@ -219,11 +219,11 @@ $$Y\cong\operatorname{im}(f)\oplus\operatorname{im}(g)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-편의상 $A=\operatorname{im}(f)=\ker(g)$라 하자. 정의에 의해 $Y=A\oplus B$이도록 하는 $Y$의 submodule $B$가 존재한다. 주어진 명제를 증명하기 위해서는 $B\cong\operatorname{im}(g)$임을 증명하면 된다.
+편의상 $A=\im(f)=\ker(g)$라 하자. 정의에 의해 $Y=A\oplus B$이도록 하는 $Y$의 submodule $B$가 존재한다. 주어진 명제를 증명하기 위해서는 $B\cong\im(g)$임을 증명하면 된다.
 
-우선 $g:Y\rightarrow Z$를 $B$ 위로 제한한 $g\|\_B$를 생각하자. 그럼 $A\cap B=0$이므로, $g\|\_B$는 단사이고, 따라서 $g\|\_B$의 치역이 $\operatorname{im}(g)$와 같다는 것만 보이면 충분하다.
+우선 $g:Y\rightarrow Z$를 $B$ 위로 제한한 $g\|\_B$를 생각하자. 그럼 $A\cap B=0$이므로, $g\|\_B$는 단사이고, 따라서 $g\|\_B$의 치역이 $\im(g)$와 같다는 것만 보이면 충분하다.
 
-임의의 $z\in\operatorname{im}(g)$를 택하고, $y\in Y$가 $g(y)=z$를 만족하는 원소라 하자. 그럼 $Y=A\oplus B$이므로, 유일한 $a\in A, b\in B$가 존재하여 $y=a+b$이다. 이제 
+임의의 $z\in\im(g)$를 택하고, $y\in Y$가 $g(y)=z$를 만족하는 원소라 하자. 그럼 $Y=A\oplus B$이므로, 유일한 $a\in A, b\in B$가 존재하여 $y=a+b$이다. 이제 
 
 $$z=g(y)=g(a+b)=g(a)+g(b)=g(b)=(g\|\_B)(b)$$
 
@@ -253,7 +253,7 @@ $$g:(a, [b_0], [b_1], \ldots, )\mapsto ([a], [b_0], [b_1],\ldots)$$
 
 으로 정의하면 위의 열이 exact인 것을 확인할 수 있다. 
 
-위의 diagram을 commute하게 하는 isomorphism $\alpha:B\rightarrow A\oplus C$가 존재한다 가정하자. 그럼 $\alpha\circ f={\operatorname{incl}}\circ{\operatorname{id}}$으로부터, 임의의 $n\in A$에 대하여
+위의 diagram을 commute하게 하는 isomorphism $\alpha:B\rightarrow A\oplus C$가 존재한다 가정하자. 그럼 $\alpha\circ f={\incl}\circ{\id}$으로부터, 임의의 $n\in A$에 대하여
 
 $$\alpha(f(n))=(n,0)$$
 

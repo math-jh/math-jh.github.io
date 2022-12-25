@@ -49,13 +49,13 @@ Commutative semigroup $(S,+)$가 주어졌다고 하자. 그럼 $(S,+)$를 포�
 
 $H$에 대한 universal property를 사용하면 $\epsilon=\overline{\epsilon}\circ\eta$이도록 하는 $\overline{\epsilon}:H\rightarrow G_S$가 존재한다. 그럼
 
-$$\overline{\eta}\circ\overline{\epsilon}\circ\eta=\overline{\eta}\circ \epsilon=\eta=\operatorname{id}_{H}\circ \eta $$
+$$\overline{\eta}\circ\overline{\epsilon}\circ\eta=\overline{\eta}\circ \epsilon=\eta=\id_{H}\circ \eta $$
 
-이고, 다시 universal property에 의하여 $f\circ \eta=\eta$를 만족하는 $f$는 유일하므로 $f=\operatorname{id}_H=\overline{\eta}\circ \overline{\epsilon}$이 성립한다. 혹은, diagram의 언어로는, 다음 diagram을 commute하게 만드는 $H\rightarrow H$는 유일하므로 $\operatorname{id}_H=\overline{\eta}\circ \overline{\epsilon}$여야 한다.
+이고, 다시 universal property에 의하여 $f\circ \eta=\eta$를 만족하는 $f$는 유일하므로 $f=\id_H=\overline{\eta}\circ \overline{\epsilon}$이 성립한다. 혹은, diagram의 언어로는, 다음 diagram을 commute하게 만드는 $H\rightarrow H$는 유일하므로 $\id_H=\overline{\eta}\circ \overline{\epsilon}$여야 한다.
 
 ![uniqueness_3](/assets/images/Groups/Grothendieck_group-4.png){:width="180px"  class="invert" .align-center}
 
-비슷하게 $\operatorname{id}\_{G_S}=\overline{\epsilon}\circ \overline{\eta}$가 성립한다는 것도 보일 수 있고, 따라서 $G_S\cong H$가 성립한다.
+비슷하게 $\id\_{G_S}=\overline{\epsilon}\circ \overline{\eta}$가 성립한다는 것도 보일 수 있고, 따라서 $G_S\cong H$가 성립한다.
 </details>
 
 한편, $S$가 이미 abelian group이었다면, $G_S$는 다른 원소를 추가할 필요 없이 $S$ 그 자체가 나와야 한다.
@@ -68,7 +68,7 @@ $$\overline{\eta}\circ\overline{\epsilon}\circ\eta=\overline{\eta}\circ \epsilon
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$S$와 $\operatorname{id}_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#pp1)에 의하여 universal property를 만족하는 임의의 abelian group은 $S$와 동형이어야 한다.
+$S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#pp1)에 의하여 universal property를 만족하는 임의의 abelian group은 $S$와 동형이어야 한다.
 
 </details>
 
@@ -78,7 +78,7 @@ $S$와 $\operatorname{id}_S$가 자명하게 universal property를 만족하므�
 
 $S$가 abelian group이 될 수 없는 이유는 임의의 원소에 대한 역원이 존재하지 않을 수도 있기 때문이다. 직관적으로 이는 <em_ko>음수</em_ko>를 추가하여 해결할 수 있다.
 
-주어진 commutative semigroup $(S,+)$에 대하여, product semigroup $S\times S$를 생각하자. ([§대수적 구조, 예시 5](/ko/math/groups/algebraic_structure#ex5)) $S\times S$의 둘째 부분을 음수처럼 생각하면, 다음 식
+주어진 commutative semigroup $(S,+)$에 대하여, product semigroup $S\times S$를 생각하자. ([§대수적 구조, ⁋예시 5](/ko/math/groups/algebraic_structure#ex5)) $S\times S$의 둘째 부분을 음수처럼 생각하면, 다음 식
 
 $$(a_1, b_1)+(a_2, b_2)=(a_1+a_2, b_1+b_2)$$
 

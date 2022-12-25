@@ -78,7 +78,7 @@ $$f|_X=f\circ i$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> 정의에 의해, $\operatorname{id}_A=(\Delta_A,A,A)$가 전단사임은 자명하다.
+<ins id="ex4">**예시 4**</ins> 정의에 의해, $\id_A=(\Delta_A,A,A)$가 전단사임은 자명하다.
 
 </div>
 
@@ -94,22 +94,22 @@ $$f|_X=f\circ i$$
 
 만일 $f^{-1}$가 전단사라면 이는 전사함수이기도 하므로 그 정의역은 $B$가 된다. 또, $f$는 단사함수이기도 하므로 $f^{-1}$이 함수가 된다.
 
-이제 역으로 $f^{-1}$이 함수라 하자. 그럼 정의에 의해 $\operatorname{pr}\_1 f^{-1}=B$이다. 그런데 [§이항관계들 사이의 연산, 명제 8](/ko/math/set_theory/operation_of_binary_relations#pp8)의 첫 번째 식에 $R\_2=\operatorname{id}\_A$, $R\_1=f^{-1}$을 넣으면 $\operatorname{pr}\_1f^{-1}=f(A)$이므로, $B=f(A)$이고 따라서 $f$는 전사함수다. 
+이제 역으로 $f^{-1}$이 함수라 하자. 그럼 정의에 의해 $\pr\_1 f^{-1}=B$이다. 그런데 [§이항관계들 사이의 연산, ⁋명제 8](/ko/math/set_theory/operation_of_binary_relations#pp8)의 첫 번째 식에 $R\_2=\id\_A$, $R\_1=f^{-1}$을 넣으면 $\pr\_1f^{-1}=f(A)$이므로, $B=f(A)$이고 따라서 $f$는 전사함수다. 
 
 또, $(x,f(x))\in F$와 $(y, f(y))\in F$가 잘 정의된다고 가정하자. 그럼 $(f(x), x)\in F^{-1}$, $(f(y),y)\in F^{-1}$이다. 여기에 더해 만일 $f(x)=f(y)$라면 $f^{-1}$가 함수라는 것으로부터 $x=y$이다. 따라서 $f$는 단사함수이다.
 
 </details>
 
-이렇게 정의된 $f^{-1}$을 $f$의 *역함수*라 부른다. 우리는 $f^{-1}\circ f=\operatorname{id}_A$이고 $f\circ f^{-1}=\operatorname{id}_B$임을 쉽게 확인할 수 있다.
+이렇게 정의된 $f^{-1}$을 $f$의 *역함수*라 부른다. 우리는 $f^{-1}\circ f=\id_A$이고 $f\circ f^{-1}=\id_B$임을 쉽게 확인할 수 있다.
 
 아래 참고는 다음 글에서 retraction, section을 정의할 때 중요한 직관이 된다.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 두 식 $f^{-1}\circ f=\operatorname{id}_A$이고 $f\circ f^{-1}=\operatorname{id}_B$은 $f$가 전단사함수가 아니라, 전사함수 혹은 단사함수 각각만 되더라도 일부는 참이 된다.  
+<ins id="rmk1">**참고**</ins> 두 식 $f^{-1}\circ f=\id_A$이고 $f\circ f^{-1}=\id_B$은 $f$가 전단사함수가 아니라, 전사함수 혹은 단사함수 각각만 되더라도 일부는 참이 된다.  
 
-- $f$가 단사함수라면 $f$는 $A$와 $f(A)\subseteq B$ 사이의 전단사함수이므로 $\tilde{f}^{-1}:f(A)\rightarrow A$가 존재할 것이다. 이제 $\tilde{f}^{-1}\circ f=\operatorname{id}\_A$이다.   
-- $f$가 단사함수라면, 임의의 $y\in B$에 대해 항상 어떠한 $x$가 존재하여 $f(x)=y$이다. 이제 $\tilde{f}^{-1}$를 이렇게 결정된 $y$를 $x$에 대응시키는 함수라 하면 $f\circ \tilde{f}^{-1}=\operatorname{id}\_B$가 된다.
+- $f$가 단사함수라면 $f$는 $A$와 $f(A)\subseteq B$ 사이의 전단사함수이므로 $\tilde{f}^{-1}:f(A)\rightarrow A$가 존재할 것이다. 이제 $\tilde{f}^{-1}\circ f=\id\_A$이다.   
+- $f$가 단사함수라면, 임의의 $y\in B$에 대해 항상 어떠한 $x$가 존재하여 $f(x)=y$이다. 이제 $\tilde{f}^{-1}$를 이렇게 결정된 $y$를 $x$에 대응시키는 함수라 하면 $f\circ \tilde{f}^{-1}=\id\_B$가 된다.
 
 </div>
 
@@ -132,7 +132,7 @@ $f$가 이변수함수라면 우리는 $(x,y)$에서의 $f$의 값을 표현하�
 
 임의의 두 함수 $u:A\rightarrow C$와 $v:B\rightarrow D$에 대하여, 우리는 항상 이들을 묶어 $A\times B$에서 $C\times D$로의 이변수 함수로 만들 수 있다. 즉, 
 
-$$z\mapsto (u(\operatorname{pr}_1 z),v(\operatorname{pr}_2z))$$
+$$z\mapsto (u(\pr_1 z),v(\pr_2z))$$
 
 로 두면 된다. 이 함수를 $u$와 $v$의 *product*라 부르고, $u\times v$로 적는다. 물론 이 함수는 두 함숫값 $u(x)$와 $v(x)$를 곱해서 만들어지는 함수와는 전혀 관련이 없다.
 
