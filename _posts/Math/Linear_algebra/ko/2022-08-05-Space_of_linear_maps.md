@@ -86,14 +86,14 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 
 으로 이해할 수 있다.
 
-위의 정리를 이용하면 [집합론, §함수 (2), 명제 1](/ko/math/set_theory/functions_2#pp1)에 대응되는 다음 명제를 증명할 수 있다.
+위의 정리를 이용하면 [\[집합론\] §Retraction과 section, ⁋명제 1](/ko/math/set_theory/retraction_and_section#pp1)에 대응되는 다음 명제를 증명할 수 있다.
 
 <div class="proposition" markdown="1">
 
 <ins id="crl2">**따름정리 2**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
 
-1. 만일 $L$이 단사함수라면, 적당한 linear map $R:W\rightarrow V$가 존재하여 $R\circ L=\operatorname{id}_V$이다.
-2. 만일 $L$이 전사함수라면, 적당한 linear map $S:W\rightarrow V$가 존재하여 $L\circ S=\operatorname{id}_W$이다.
+1. 만일 $L$이 단사함수라면, 적당한 linear map $R:W\rightarrow V$가 존재하여 $R\circ L=\id_V$이다.
+2. 만일 $L$이 전사함수라면, 적당한 linear map $S:W\rightarrow V$가 존재하여 $L\circ S=\id_W$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -103,13 +103,13 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
     
     $$r(v)=\begin{cases}x_i&\text{if $v=L(x_i)$}\\0&\text{otherwise}\end{cases}$$
 
-    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $R$이라 하자. 그럼 $V$의 basis $\\{x_1,\ldots,x_n\\}$의 임의의 원소 $x_i$에 대하여 $(R\circ L)(x_i)=x_i$이고, 따라서 정리 1의 유일성 부분에 의하여 $R\circ L=\operatorname{id}_V$가 성립한다.
+    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $R$이라 하자. 그럼 $V$의 basis $\\{x_1,\ldots,x_n\\}$의 임의의 원소 $x_i$에 대하여 $(R\circ L)(x_i)=x_i$이고, 따라서 정리 1의 유일성 부분에 의하여 $R\circ L=\id_V$가 성립한다.
 
 2. $L$이 전사함수라 하고, $V$의 basis $x_1,\ldots,x_n$을 택하자. 그럼 $L(x_1),\ldots, L(x_n)$은 $W$를 span하므로 이 벡터들 중 일부를 택하여 $W$의 basis $\mathcal{B}$를 찾을 수 있다. 일반성을 잃지 않고 $\mathcal{B}=\\{L(x_1),\ldots, L(x_m)\\}$ ($m\leq n$)이라 하자. 함수 $s:\mathcal{B}\rightarrow V$를 다음의 식
     
     $$s(v)=x_k\qquad v=L(x_k)$$
 
-    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $S$라 하자. 이제 $W$의 basis $\mathcal{B}$의 임의의 원소 $L(x_k)$에 대하여 $(L\circ S)(L(x_k))=L(x_k)$이므로 다시 정리 1의 유일성 부분에 의하여 $L\circ S=\operatorname{id}_W$가 성립한다.
+    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $S$라 하자. 이제 $W$의 basis $\mathcal{B}$의 임의의 원소 $L(x_k)$에 대하여 $(L\circ S)(L(x_k))=L(x_k)$이므로 다시 정리 1의 유일성 부분에 의하여 $L\circ S=\id_W$가 성립한다.
 
 </details>
 
@@ -152,13 +152,13 @@ $$\begin{aligned}
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $F$-벡터공간을 $\operatorname{Hom}_F(V,W)$, 혹은 문맥에 따라 field $F$가 명확할 때는 $\operatorname{Hom}(V,W)$로 적는다. 
+<ins id="df4">**정의 4**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $F$-벡터공간을 $\Hom_F(V,W)$, 혹은 문맥에 따라 field $F$가 명확할 때는 $\Hom(V,W)$로 적는다. 
 
-특별히 $W=F$일 경우, $\operatorname{Hom}(V,F)$를 $V$의 *dual space<sub>쌍대공간</sub>*이라 부르고 $V^\*$으로 적는다. $V^\ast$의 원소들을 *linear functional*들이라 부른다. 
+특별히 $W=F$일 경우, $\Hom(V,F)$를 $V$의 *dual space<sub>쌍대공간</sub>*이라 부르고 $V^\*$으로 적는다. $V^\ast$의 원소들을 *linear functional*들이라 부른다. 
 
 </div>
 
-벡터공간 $\operatorname{Hom}(V,W)$에서 영벡터에 해당하는 원소는 모든 원소를 0으로 보내는 함수 $0$이다. ([§선형사상, 예시 10](/ko/math/linear_algebra/linear_map#ex10)) 이 함수를 지칭할 때는 편의상 영함수라 지칭하자.
+벡터공간 $\Hom(V,W)$에서 영벡터에 해당하는 원소는 모든 원소를 0으로 보내는 함수 $0$이다. ([§선형사상, ⁋예시 10](/ko/math/linear_algebra/linear_map#ex10)) 이 함수를 지칭할 때는 편의상 영함수라 지칭하자.
 
 두 공간 $V,W$가 모두 유한차원이고, $\mathcal{B}=\\{x_1,\ldots, x_n\\}$, $\mathcal{C}=\\{y_1,\ldots, y_m\\}$이 $V,W$ 각각의 basis라 하자. $\mathcal{B}$에서 $W$로의 $mn$개의 함수들
 
@@ -168,7 +168,7 @@ $$f_i^j(x)=\begin{cases}y_j&\text{if $x=x_i$}\\0&\text{otherwise}\end{cases}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 두 유한차원 $F$-벡터공간 $V,W$가 각각 basis $\\{x_1,\ldots,x_n\\}$, $\\{y_1,\ldots,y_m\\}$을 갖는다 하자. 그럼 $\operatorname{Hom}(V,W)$는 $mn$차원 벡터공간이며, 이 때 위의 $mn$개의 linear map들 $B_i^j$가 $\operatorname{Hom}(V,W)$의 basis가 된다.
+<ins id="pp5">**명제 5**</ins> 두 유한차원 $F$-벡터공간 $V,W$가 각각 basis $\\{x_1,\ldots,x_n\\}$, $\\{y_1,\ldots,y_m\\}$을 갖는다 하자. 그럼 $\Hom(V,W)$는 $mn$차원 벡터공간이며, 이 때 위의 $mn$개의 linear map들 $B_i^j$가 $\Hom(V,W)$의 basis가 된다.
 
 </div>
 <details class="proof" markdown="1">
@@ -194,7 +194,7 @@ $$\alpha_{1k}y_1+\alpha_{2k}y_2+\cdots+\alpha_{mk}y_k=0$$
 
 이 된다. 이제 $y_1,\ldots,y_k$는 일차독립이므로 $\alpha_{1k},\ldots,\alpha_{mk}$는 모두 $0$이다. $k$는 임의로 택할 수 있으므로 $\alpha_{11},\ldots,\alpha_{mn}$는 모두 0이고 $B_i^j$는 일차독립이다.
 
-한편 이들 $B_i^j$는 $\operatorname{Hom}(V,W)$를 span한다. 임의의 $L\in\operatorname{Hom}(V,W)$가 주어졌다 하자. 그럼 도입부의 식 (1)을 만족하는 스칼라들 $\alpha_{11},\ldots,\alpha_{mn}$을 찾을 수 있다. 이제 다음의 식
+한편 이들 $B_i^j$는 $\Hom(V,W)$를 span한다. 임의의 $L\in\Hom(V,W)$가 주어졌다 하자. 그럼 도입부의 식 (1)을 만족하는 스칼라들 $\alpha_{11},\ldots,\alpha_{mn}$을 찾을 수 있다. 이제 다음의 식
 
 $$L'(v)=\sum_{i,j}\alpha_{ji}B_i^j(v)$$
 

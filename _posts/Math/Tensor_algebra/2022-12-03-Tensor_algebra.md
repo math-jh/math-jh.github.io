@@ -3,7 +3,7 @@
 title: "텐서대수"
 excerpt: "텐서대수의 정의와 universal property"
 
-categories: [Math / Tensor algebra]
+categories: [Math / Tensor Algebra]
 permalink: /ko/math/tensor_algebra/tensor_algebra
 header:
     overlay_image: /assets/images/Tensor_algebra/Tensor_algebra.png
@@ -101,7 +101,7 @@ $$\tilde{f}(x_1\otimes\cdots\otimes x_n)=f(x_1)\cdots f(x_n)$$
 
 ![Uniqueness_of_tensor_algebra_3](/assets/images/Tensor_algebra/Tensor_algebra-4.png){:width="166.95px" class="invert" .align-center}
 
-을 commute하도록 하는 $\mathcal{T}(M)\rightarrow\mathcal{T}(M)$ 또한 유일해야 하는데, $\operatorname{id}\_{\mathcal{T}(M)}$과 $\phi\circ\psi$가 모두 이를 commute하도록 하므로 $\operatorname{id}\_{\mathcal{T}(M)}=\phi\circ\psi$가 성립한다. 비슷하게 $\operatorname{id}\_{\mathcal{T}'(M)}=\psi\circ\phi$가 성립한다.
+을 commute하도록 하는 $\mathcal{T}(M)\rightarrow\mathcal{T}(M)$ 또한 유일해야 하는데, $\id\_{\mathcal{T}(M)}$과 $\phi\circ\psi$가 모두 이를 commute하도록 하므로 $\id\_{\mathcal{T}(M)}=\phi\circ\psi$가 성립한다. 비슷하게 $\id\_{\mathcal{T}'(M)}=\psi\circ\phi$가 성립한다.
 
 </details>
 
@@ -182,6 +182,36 @@ $$a\cdot m':=\rho(a)\cdot m',\qquad a\in A,m'\in M'$$
 을 commute하도록 하는 유일한 $A'$-algebra homomorphism $A'\otimes\_A\mathcal{T}\_A(M)\rightarrow\mathcal{T}\_{A'}(A'\otimes\_AM)$이 존재한다. 이 함수가 위에서 얻은 $\mathcal{T}\_{A'}(A'\otimes AM)\rightarrow A'\otimes\_A\mathcal{T}\_A(M)$의 역함수임을 쉽게 확인할 수 있다.
  
 </details>
+
+## Mixed tensor
+
+이제 commutative monoid $\Delta$를 $\mathbb{N}\times\mathbb{N}$인 것으로 생각하자. 고정된 $A$-module $M$에 대하여, 
+
+$$\mathcal{T}^{r,s}(M)=\underbrace{M\otimes\cdots\otimes M}_\text{$r$ copies}\otimes\underbrace{M^\ast\otimes\cdots\otimes M^\ast}_\text{$s$ copies}$$
+
+으로 정의한다. 특별히 $r=s=0$인 경우는 $\mathcal{T}^{0,0}(M)=A$인 것으로 생각한다. 이제 앞선 정의들에서와 마찬가지로 direct sum
+
+$$\mathcal{T}^{\bullet,\bullet}(M)=\bigoplus_{(r,s)\in\Delta} \mathcal{T}^{r,s}(M)$$
+
+를 생각하면 $\mathcal{T}^{\bullet,\bullet}(M)$이 $\Delta$-graded $A$-algebra가 되는 것은 자명하다. 여기에서 $\mathcal{T}^{\bullet,\bullet}(M)$의 두 원소 (*simple tensor*들)
+
+$$x=x_1\otimes x_2\otimes\cdots\otimes x_{r_1}\otimes \alpha^1\otimes \alpha^2\otimes\cdots\otimes \alpha^{s_1}, \quad y=y_1\otimes y_2\otimes\cdots\otimes y_{r_2}\otimes \beta^1\otimes \beta^2\otimes\cdots\otimes \beta^{s_2}$$
+
+에 대하여 곱셈 $x\otimes y$는
+
+$$x\otimes y=x_1\otimes \cdots\otimes x_{r_1}\otimes y_1\otimes \cdots\otimes y_{r_2}\otimes \alpha^1\otimes\cdots\otimes \alpha^{s_1}\otimes \beta^1\otimes\cdots\otimes \beta^{s_2}\in \mathcal{T}^{r_1+r_2, s_1+s_2}(V)\tag{1}$$
+
+으로 정의된다. 그럼 우리는 $\mathcal{T}^{\bullet,\bullet}(M)$를 $M$ 위에서의 *mixed tensor algebra*라 부르고, 이들의 원소를 *mixed tensor*라 부른다.
+
+정의에 의해 $\mathcal{T}^{r,0}(M)=\mathcal{T}^r(M)$이고 $\mathcal{T}^{0,s}(M)=\mathcal{T}^s(M^\ast)$이다. 만일 $M$이 finitely generated projective $A$-module이라면 
+
+$$\theta_M:M^\ast_AM\rightarrow\End_A(M)$$
+
+을 다음의 식
+
+$$\theta_M(x^\ast\otimes x)(y)=x^\ast(y)x$$
+
+으로 정의할 수 있으며, 이는 isomorphism이 된다.
 
 ---
 
