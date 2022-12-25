@@ -98,7 +98,7 @@ Maximal ideal $I$에 대해, $x\wedge y\in I$라 하자. 결론에 반하여 $x,
 특별히 maximal filter를 *ultrafilter*라 부르기도 한다. 
 
 
-두 ordered set $A,B$에 대해 증가함수 $f:A\rightarrow B$를 생각하자. 또, $B$의 임의의 lower set $Y$가 주어졌다 하고 $X=f^{-1}(Y)$이라 하자. 만일 어떤 $y\in A$에 대해 적당한 $x\in X$가 존재하여 $y\leq x$라면 $f(y)\leq f(x)$이고, $Y$는 lower set이므로 $f(y)\in Y$이 성립하여 $y\in X$이다. 즉, lower set의 역상 $X$ 또한 lower set이 된다. 
+두 ordered set $A,B$에 대해 증가함수 $f:A\rightarrow B$를 생각하자. 또, $B$의 임의의 lower set $Y$가 주어졌다 하고 $X=f^{-1}(Y)$이라 하자. 만일 어떤 $y\in A$에 대해 적당한 $x\in X$가 존재하여 $y\leq x$라면 $f(y)\leq f(x)$이고, $Y$는 lower set이므로 $f(y)\in Y$이 성립하여 $y\in X$이다. 즉, lower set의 preimage $X$ 또한 lower set이 된다. 
 
 ## Galois connection
 

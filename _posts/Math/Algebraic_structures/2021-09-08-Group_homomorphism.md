@@ -3,7 +3,7 @@
 title: "준동형사상"
 excerpt: "준동형사상의 정의와 성질들, 준동형사상의 핵과 상"
 
-categories: [Math / Algebraic structures]
+categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/group_homomorphisms
 header:
     overlay_image: /assets/images/Algebraic_structures/Group_homomorphisms.png
@@ -19,7 +19,7 @@ weight: 4
 
 ## 준동형사상의 기본 성질들
 
-[§준군, 모노이드, 군, 정의 9](/ko/math/groups/group#df9) 이후에 우리는 두 group $G,G'$ 사이의 임의의 magma homomorphism은 모두 group의 구조를 보존하는 것을 확인했다. 따라서 group homomorphism을 간단히 homomorphism이라 부르더라도 혼동의 여지가 없으므로, 이들을 구분할 필요가 없을 때에는 항상 간단한 이름으로 부르기로 한다.
+[§준군, 모노이드, 군, ⁋정의 9](/ko/math/algebraic_structures/group#df9) 이후에 우리는 두 group $G,G'$ 사이의 임의의 magma homomorphism은 모두 group의 구조를 보존하는 것을 확인했다. 따라서 group homomorphism을 간단히 homomorphism이라 부르더라도 혼동의 여지가 없으므로, 이들을 구분할 필요가 없을 때에는 항상 간단한 이름으로 부르기로 한다.
 
 <div class="proposition" markdown="1">
 
@@ -38,7 +38,7 @@ $$(f_2\circ f_1)(xy)=f_2(f_1(xy))=f_2(f_1(x)f_1(y))=f_2(f_1(x))f_2(f_1(y))=(f_2\
 
 </details>
 
-또한, 항등함수가 homomorphism인 것은 증명할 것도 없이 자명하다. 한편 [§대수적 구조, 정의 6](/ko/math/groups/algebraic_structure#df6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [집합론, §함수들 사이의 연산, 명제 5](/ko/math/set_theory/operation_of_functions#pp5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. Group의 경우에는 그 역 또한 성립한다.
+또한, 항등함수가 homomorphism인 것은 증명할 것도 없이 자명하다. 한편 [§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structure#df6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#pp5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. Group의 경우에는 그 역 또한 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -61,21 +61,21 @@ $$f^{-1}(yy')=f^{-1}(f(x)f(x'))=f^{-1}(f(xx'))=xx'=f^{-1}(y)f^{-1}(y')$$
 
 ## 준동형사상의 kernel과 image
 
-앞서 우리는 임의의 magma homomorphism $f:A\rightarrow A'$이 주어졌을 때, 그 상 $\operatorname{im}f$이 $A'$의 부분마그마가 되는 것을 확인했다. 일반적으로 group의 부분마그마는 subgroup일 필요가 없으므로, 다음의 명제는 별도로 증명해야 한다. 
+앞서 우리는 임의의 magma homomorphism $f:A\rightarrow A'$이 주어졌을 때, 그 image $\im f$이 $A'$의 부분마그마가 되는 것을 확인했다. 일반적으로 group의 부분마그마는 subgroup일 필요가 없으므로, 다음의 명제는 별도로 증명해야 한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $\operatorname{im}f$는 $G'$의 subgroup이다.
+<ins id="pp3">**명제 3**</ins> 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $\im f$는 $G'$의 subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\operatorname{im}f$가 $G'$의 부분마그마인 것은 이미 알고 있으므로, [§준군, 모노이드, 군, 명제 12](/ko/math/groups/group#pp12)를 이용하면 $\operatorname{im}f$가 역원을 취하는 것에 대해 닫혀있음만 보이면 된다. $y\in\operatorname{im}f$라 하고, $x\in G$가 $f(x)=y$를 만족한다 하자. 그럼
+$\im f$가 $G'$의 부분마그마인 것은 이미 알고 있으므로, [§준군, 모노이드, 군, ⁋명제 12](/ko/math/algebraic_structures/group#pp12)를 이용하면 $\im f$가 역원을 취하는 것에 대해 닫혀있음만 보이면 된다. $y\in\im f$라 하고, $x\in G$가 $f(x)=y$를 만족한다 하자. 그럼
 
 $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 
-로부터 $y^{-1}\in\operatorname{im}f$임을 안다.
+로부터 $y^{-1}\in\im f$임을 안다.
 
 </details>
 
@@ -128,9 +128,10 @@ $$f(ab^{-1})=f(a)f(b)^{-1}=e'(e')^{-1}=e'$$
 
 
 ---
-**Reference**
 
-**[Bou]** Bourbaki, N. Algebra. I. Chapters 1-3. Translated from the French. Reprint of the 1989 English translation. *Elements of Mathematics. Springer-Verlag, Berlin,* 1998. 
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
 
 ---
 

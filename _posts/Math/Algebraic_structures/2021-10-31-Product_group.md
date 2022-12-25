@@ -3,7 +3,7 @@
 title: "군의 직접곱"
 excerpt: "Direct product of groups"
 
-categories: [Math / Algebraic structures]
+categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/product_group
 header:
     overlay_image: /assets/images/Algebraic_structures/Product_group.png
@@ -19,29 +19,29 @@ weight: 7
 
 ## 직접곱의 정의
 
-대수적 구조에 곱을 정의할 때에는 [집합론, §집합의 곱, 정리 3](/ko/math/set_theory/product_of_sets#thm3)과 마찬가지 방법으로 universal property를 이용해 정의한다. 어차피 universal property를 만족하는 대상이 존재한다는 것을 보이기 위해서 아래 [보조정리 2](#lem2)와 같이 직접 대상을 정의해주어야 하는 것은 마찬가지지만, universal property를 사용하는 정의가 조금 더 본질적이기 때문이다.
+대수적 구조에 곱을 정의할 때에는 [\[집합론\] §집합의 곱, ⁋정리 3](/ko/math/set_theory/product_of_sets#thm3)과 마찬가지 방법으로 universal property를 이용해 정의한다. 어차피 universal property를 만족하는 대상이 존재한다는 것을 보이기 위해서 아래 [보조정리 2](#lem2)와 같이 직접 대상을 정의해주어야 하는 것은 마찬가지지만, universal property를 사용하는 정의가 조금 더 본질적이기 때문이다.
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Group들의 family $(G_i)$가 주어졌다고 하자. 그럼 어떤 group $G$와, group homomorphism들 $\operatorname{pr}_i:G\rightarrow G_i$가 이들 family의 *direct product<sub>직접곱</sub>*라는 것은, 다음의 universal property가 성립하는 것이다.
+<ins id="df1">**정의 1**</ins> Group들의 family $(G_i)$가 주어졌다고 하자. 그럼 어떤 group $G$와, group homomorphism들 $\pr_i:G\rightarrow G_i$가 이들 family의 *direct product<sub>직접곱</sub>*라는 것은, 다음의 universal property가 성립하는 것이다.
 
-> 임의의 group $H$와 group homomorphism들 $f_i:H\rightarrow G_i$들이 주어졌을 때, $f\_i=\operatorname{pr}\_i\circ f$이도록 하는 유일한 group homomorphism $f:H\rightarrow \prod\_{i\in I} G\_i $가 존재한다.
+> 임의의 group $H$와 group homomorphism들 $f_i:H\rightarrow G_i$들이 주어졌을 때, $f\_i=\pr\_i\circ f$이도록 하는 유일한 group homomorphism $f:H\rightarrow \prod\_{i\in I} G\_i $가 존재한다.
 >
 > ![universal_property_of_direct_product](/assets/images/Algebraic_structures/Product_group-1.png){:width="240px" class="invert" .align-center}
 
 </div>
 
-이 정의가 말이 되기 위해서는 이러한 성질을 만족하는 $(G,(\operatorname{pr}\_i)\_{i\in I})$가 적어도 하나 존재해야 한다.
+이 정의가 말이 되기 위해서는 이러한 성질을 만족하는 $(G,(\pr\_i)\_{i\in I})$가 적어도 하나 존재해야 한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**보조정리 2**</ins> [정의 1](#df1)의 universal property를 만족하는 $(G,(\operatorname{pr}\_i)\_{i\in I})$이 존재한다.
+<ins id="lem2">**보조정리 2**</ins> [정의 1](#df1)의 universal property를 만족하는 $(G,(\pr\_i)\_{i\in I})$이 존재한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 주어진 성질을 만족하는 곱집합 $\prod\_{i\in I} G\_i$는 이미 [집합론, §집합의 곱, 정의 1](/ko/math/set_theory/product_of_sets#df1)에서 정의했다. 표기상의 편의를 위해 $\prod_{i\in I}G_i$의 원소 $f:I\rightarrow \bigcup G_i$를 순서쌍 $(a\_i)\_{i\in I}$으로 표기하기로 한다.
+우선 주어진 성질을 만족하는 곱집합 $\prod\_{i\in I} G\_i$는 이미 [\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#df1)에서 정의했다. 표기상의 편의를 위해 $\prod_{i\in I}G_i$의 원소 $f:I\rightarrow \bigcup G_i$를 순서쌍 $(a\_i)\_{i\in I}$으로 표기하기로 한다.
 
 이제 집합 $\prod_{i\in I}G_i$의 임의의 두 원소 $x=(x\_i)\_{i\in I},y=(y\_i)\_{i\in I}$에 대하여, 
 
@@ -49,15 +49,15 @@ $$xy=(x_i)_{i\in I}(y_i)_{i\in I}=(x_iy_i)_{i\in I}$$
 
 으로 정의하자. 그럼 $\prod\_{i\in I}G\_i$는 이 연산에 대해 group의 구조를 가지며, 항등원은 $(e\_i)\_{i\in I}$이고 $x=(x\_i)_{i\in I}$의 역원은 $(x\_i^{-1})\_{i\in I}$인 것을 알 수 있다. 또, 임의의 $j\in I$에 대하여
 
-$$\operatorname{pr}_j(xy)=\operatorname{pr}_j(x_iy_i)_{i\in I}=x_jy_j=\operatorname{pr}_j(x)\operatorname{pr}_j(y)$$
+$$\pr_j(xy)=\pr_j(x_iy_i)_{i\in I}=x_jy_j=\pr_j(x)\pr_j(y)$$
 
-이므로 $\operatorname{pr}_j$가 group homomorphism이다. 
+이므로 $\pr_j$가 group homomorphism이다. 
 
-이제 이렇게 정의한 $(G=\prod\_{i\in I}G\_i,(\operatorname{pr}\_i)\_{i\in I})$가 [정의 1](#df1)의 universal property를 만족하는 것을 증명하자. 이를 위해서는 곱집합의 universal property로 얻어지는 함수 $f:H\rightarrow G$가 group homomorphism이라는 것만 보이면 충분하다. 이제 임의의 $x,y\in H$와 임의의 $i\in I$에 대하여, 
+이제 이렇게 정의한 $(G=\prod\_{i\in I}G\_i,(\pr\_i)\_{i\in I})$가 [정의 1](#df1)의 universal property를 만족하는 것을 증명하자. 이를 위해서는 곱집합의 universal property로 얻어지는 함수 $f:H\rightarrow G$가 group homomorphism이라는 것만 보이면 충분하다. 이제 임의의 $x,y\in H$와 임의의 $i\in I$에 대하여, 
 
 $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\in I}=f(x)f(y)$$
 
-이므로 $f$는 group homomorphism이 되고 따라서 위의 $(G=\prod\_{i\in I}G\_i,(\operatorname{pr}\_i)\_{i\in I})$가 universal property를 만족한다. 
+이므로 $f$는 group homomorphism이 되고 따라서 위의 $(G=\prod\_{i\in I}G\_i,(\pr\_i)\_{i\in I})$가 universal property를 만족한다. 
 
 </details>
 
@@ -71,7 +71,7 @@ $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[정의 1](#df1)의 universal property를 만족하는 두 $(G,(\operatorname{pr}_i)),(G',(\operatorname{pr}_i'))$이 존재한다 가정하자. 그럼 $G$의 universal property로부터 다음 diagram을 commute하도록 하는 $\psi$가 유일하게 존재한다.
+[정의 1](#df1)의 universal property를 만족하는 두 $(G,(\pr_i)),(G',(\pr_i'))$이 존재한다 가정하자. 그럼 $G$의 universal property로부터 다음 diagram을 commute하도록 하는 $\psi$가 유일하게 존재한다.
 
 img
 
@@ -79,11 +79,11 @@ img
 
 img
 
-이제 두 group homomorphism $\operatorname{id}_G, \phi\circ\psi$가 모두 다음의 diagram
+이제 두 group homomorphism $\id_G, \phi\circ\psi$가 모두 다음의 diagram
 
 img
 
-을 commute하도록 하므로, universal property에 의하여 $\operatorname{id}_G=\phi\circ\psi$가 성립한다. 비슷한 논리에 의해 $\operatorname{id}_{G'}=\psi\circ\phi$가 성립하고 따라서 $\phi$와 $\psi$는 isomorphism이다. 
+을 commute하도록 하므로, universal property에 의하여 $\id_G=\phi\circ\psi$가 성립한다. 비슷한 논리에 의해 $\id_{G'}=\psi\circ\phi$가 성립하고 따라서 $\phi$와 $\psi$는 isomorphism이다. 
 
 </details>
 
@@ -93,27 +93,27 @@ img
 
 img
 
-을 commute하도록 하는 유일한 group homomorphism $f:\prod G_i\rightarrow\prod H_i$이 존재한다. 이 때 $\ker f=\prod\ker f_i$이고, $\operatorname{im}f=\prod\operatorname{im}f_i$이다.
+을 commute하도록 하는 유일한 group homomorphism $f:\prod G_i\rightarrow\prod H_i$이 존재한다. 이 때 $\ker f=\prod\ker f_i$이고, $\im f=\prod\im f_i$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$f$를 만들기 위해서는 group homomorphism들 $f_i\circ\operatorname{pr}_i$에 $H$의 universal property를 적용하면 된다.
+$f$를 만들기 위해서는 group homomorphism들 $f_i\circ\pr_i$에 $H$의 universal property를 적용하면 된다.
 
 ![mapping_induced_to_product](/assets/images/Groups/Direct_product-5.png){:width="240px" class="invert" .align-center}
 
 이 때, 
 
-$$x\in\ker f\iff f(x)=e\iff \forall i(\operatorname{pr}_i(f(x))=e_i)\iff \forall i((f_i\circ{\operatorname{pr}_i})(x)=e_i)\iff \forall i({\operatorname{pr}_i}(x)\in\ker f_i)$$
+$$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i(f(x))=e_i)\iff \forall i((f_i\circ{\pr_i})(x)=e_i)\iff \forall i({\pr_i}(x)\in\ker f_i)$$
 
 이므로 $\ker f=\prod\ker f_i$가 성립한다.
 
-이와 유사하게, $y\in\prod H_i$에 대해 $y\in\operatorname{im}f$인 것은 $y=f(x)$인 $x\in H_i$가 존재하는 것과 동치이고, 이러한 $x$에 대하여
+이와 유사하게, $y\in\prod H_i$에 대해 $y\in\im f$인 것은 $y=f(x)$인 $x\in H_i$가 존재하는 것과 동치이고, 이러한 $x$에 대하여
 
-$$\operatorname{pr}_i(y)=\operatorname{pr}_i(f(x))=f_i(\operatorname{pr}_i(x))\in\operatorname{im}f_i$$
+$$\pr_i(y)=\pr_i(f(x))=f_i(\pr_i(x))\in\im f_i$$
 
-이므로 $\operatorname{im}f=\prod\operatorname{im} f_i$ 또한 성립한다.
+이므로 $\im f=\prod\im f_i$ 또한 성립한다.
 
 </details>
 
@@ -129,7 +129,7 @@ $$\operatorname{pr}_i(y)=\operatorname{pr}_i(f(x))=f_i(\operatorname{pr}_i(x))\i
 
 ![product_of_normal_subgroups](/assets/images/Groups/Direct_product-6.png){:width="280px" class="invert" .align-center}
 
-$p_i\circ\operatorname{pr}_i$들 각각은 surjective homomorphism들의 합성이므로 surjective하고 따라서 $\operatorname{im}p$는 $\prod(G_i/H_i)$와 같다. 또, 이들 각각의 kernel은 (partial product로써) $H_i$와 같다. 따라서 first isomorphism theorem에 의하여
+$p_i\circ\pr_i$들 각각은 surjective homomorphism들의 합성이므로 surjective하고 따라서 $\im p$는 $\prod(G_i/H_i)$와 같다. 또, 이들 각각의 kernel은 (partial product로써) $H_i$와 같다. 따라서 first isomorphism theorem에 의하여
 
 $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{i\in I}H_i\biggr)\cong\prod_{i\in I} (G_i/H_i)$$
 
@@ -158,3 +158,11 @@ Inclusion homomorphism들 $\iota_i:H_i\hookrightarrow G_i$에 앞선 명제를 �
 위의 따름정리들은 다음의 상황에서 특히 유용하다. 
 
 $(G\_i)\_{i\in I}$가 group들의 family라 하고, $I$의 부분집합 $J$를 생각하자. 그럼 product $\prod_{j\in J}G_j$가 잘 정의된다. 
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
+
+---
