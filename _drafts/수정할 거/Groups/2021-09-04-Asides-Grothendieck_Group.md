@@ -65,13 +65,13 @@ $G_S$에 대한 이 정의는 많은 정보를 담고 있다. 예를 들어, 위
 
 $H$에 대한 universal property를 사용하면 $\epsilon=\overline{\epsilon}\circ\eta$이도록 하는 $\overline{\epsilon}:H\rightarrow G_S$가 존재한다. 그럼
 
-$$\overline{\eta}\circ\overline{\epsilon}\circ\eta=\overline{\eta}\circ \epsilon=\eta=\operatorname{id}_{H}\circ \eta $$
+$$\overline{\eta}\circ\overline{\epsilon}\circ\eta=\overline{\eta}\circ \epsilon=\eta=\id_{H}\circ \eta $$
 
-이고, 다시 universal property에 의하여 $f\circ \eta=\eta$를 만족하는 $f$는 유일하므로 $f=\operatorname{id}_H=\overline{\eta}\circ \overline{\epsilon}$이 성립한다. 혹은, diagram의 언어로는, 다음 diagram을 commute하게 만드는 $H\rightarrow H$는 유일하므로 $\operatorname{id}_H=\overline{\eta}\circ \overline{\epsilon}$여야 한다.
+이고, 다시 universal property에 의하여 $f\circ \eta=\eta$를 만족하는 $f$는 유일하므로 $f=\id_H=\overline{\eta}\circ \overline{\epsilon}$이 성립한다. 혹은, diagram의 언어로는, 다음 diagram을 commute하게 만드는 $H\rightarrow H$는 유일하므로 $\id_H=\overline{\eta}\circ \overline{\epsilon}$여야 한다.
 
 ![uniqueness_3](/assets/images/Groups/Grothendieck_group-4.png){:width="180px"  class="invert" .align-center}
 
-비슷하게 $\operatorname{id}\_{G_S}=\overline{\epsilon}\circ \overline{\eta}$가 성립한다는 것도 보일 수 있고, 따라서 $G_S\cong H$가 성립한다.
+비슷하게 $\id\_{G_S}=\overline{\epsilon}\circ \overline{\eta}$가 성립한다는 것도 보일 수 있고, 따라서 $G_S\cong H$가 성립한다.
 </details>
 
 한편, $S$가 이미 가환군이었다면, $G_S$는 $S$와 동형이어야 할 것이다.
@@ -84,7 +84,7 @@ $$\overline{\eta}\circ\overline{\epsilon}\circ\eta=\overline{\eta}\circ \epsilon
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-*증명.* $S$와, 준동형사상 $\operatorname{id}_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#pp1)에 의하여 universal property를 만족하는 임의의 가환군은 $S$와 동형이어야 한다.
+*증명.* $S$와, 준동형사상 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#pp1)에 의하여 universal property를 만족하는 임의의 가환군은 $S$와 동형이어야 한다.
 
 </details>
 

@@ -50,7 +50,7 @@ Lie derivative를 이용하면 벡터장이나 differential form을 미분할 �
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $(\nabla_XY)_p$가 점 $p$의 열린근방 $U$에서의 벡터장에만 의존한다는 것을 보이자. 두 벡터장 $Y_1,Y_2$가 $p$의 열린근방 $U$에서 같다면 $(\nabla_XY_1)_p=(\nabla_XY_2)_p$임을 보여야 하므로, 이를 위해서는 벡터장 $Y$가 열린근방 $U$의 모든 점에서 항등적으로 $0$이라면 $(\nabla_XY)_p$가 $0$임을 보이면 충분하다. $\varphi$를 $\operatorname{supp}(\varphi)\subseteq U$, $\varphi(p)=1$을 만족하는 bump function이라 하면 벡터장 $\varphi Y$는 $M$ 전체에서 항등적으로 $0$이다. 따라서 [정의 1](#df1)의 둘째 조건으로부터 $\nabla_X(\varphi Y)=0$이다. 한편 라이프니츠 법칙에 의해,
+우선 $(\nabla_XY)_p$가 점 $p$의 열린근방 $U$에서의 벡터장에만 의존한다는 것을 보이자. 두 벡터장 $Y_1,Y_2$가 $p$의 열린근방 $U$에서 같다면 $(\nabla_XY_1)_p=(\nabla_XY_2)_p$임을 보여야 하므로, 이를 위해서는 벡터장 $Y$가 열린근방 $U$의 모든 점에서 항등적으로 $0$이라면 $(\nabla_XY)_p$가 $0$임을 보이면 충분하다. $\varphi$를 $\supp(\varphi)\subseteq U$, $\varphi(p)=1$을 만족하는 bump function이라 하면 벡터장 $\varphi Y$는 $M$ 전체에서 항등적으로 $0$이다. 따라서 [정의 1](#df1)의 둘째 조건으로부터 $\nabla_X(\varphi Y)=0$이다. 한편 라이프니츠 법칙에 의해,
 
 $$0=\nabla_X(\varphi Y)=\varphi\nabla_XY+(X\varphi)Y$$
 

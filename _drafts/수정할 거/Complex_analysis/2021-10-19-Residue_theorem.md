@@ -128,15 +128,15 @@ $$g(w)=\frac{1}{f(w)-a}$$
 
 $$f(w)=\frac{a_{-N}}{(w-z)^n}+\cdots+\frac{a_{-1}}{w-z}+G(z)\tag{1}$$
 
-을 얻는다. 여기서 $G(z)$는 holomorphic function이다. 그럼 계수 $a_{-1}$을 $f$의 *residue*라 부르며, 이를 $\operatorname{res}_{z} f$로 적는다. 
+을 얻는다. 여기서 $G(z)$는 holomorphic function이다. 그럼 계수 $a_{-1}$을 $f$의 *residue*라 부르며, 이를 $\residue_{z} f$로 적는다. 
 
-곧 살펴보겠지만, residue는 많은 적분을 간편하게 계산하게 해 준다. 따라서 이 residue의 값을 계산하는 방법이 궁금하다. $f$가 simple root를 가질 때는 $N=1$이므로, 그냥 간단히 $(w-z)f(w)$의 상수항을 찾으면 된다. 즉, 이 때 $\operatorname{res}\_zf=\lim\_{w\rightarrow z}(w-z)f(w)$가 성립한다. 더 일반적으로 다음이 성립한다.
+곧 살펴보겠지만, residue는 많은 적분을 간편하게 계산하게 해 준다. 따라서 이 residue의 값을 계산하는 방법이 궁금하다. $f$가 simple root를 가질 때는 $N=1$이므로, 그냥 간단히 $(w-z)f(w)$의 상수항을 찾으면 된다. 즉, 이 때 $\residue\_zf=\lim\_{w\rightarrow z}(w-z)f(w)$가 성립한다. 더 일반적으로 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
 <ins id="pp6">**명제 6**</ins> $f$가 $z$에서 order $N$의 pole을 갖는다면, 다음의 식
 
-$$\operatorname{res}_zf=\lim_{w\rightarrow z}\frac{1}{(n-1)!}\left(\frac{d}{dw}\right)^{n-1}(w-z)^nf(w)$$
+$$\residue_zf=\lim_{w\rightarrow z}\frac{1}{(n-1)!}\left(\frac{d}{dw}\right)^{n-1}(w-z)^nf(w)$$
 
 이 성립한다.
 </div>
@@ -155,7 +155,7 @@ $$\operatorname{res}_zf=\lim_{w\rightarrow z}\frac{1}{(n-1)!}\left(\frac{d}{dw}\
 
 <ins id="thm7">**정리 7 (The residue theorem)**</ins> Open disc $D$와 $D$의 어떤 점 $z$에 대하여, $f$가 $D\setminus z$에서 holomorphic하고 $z$에서 pole을 갖는다 하자. 그럼 다음의 식
 
-$$\int_{\partial D} f(z)\mathop{dz}=2\pi i\operatorname{res}_zf$$
+$$\int_{\partial D} f(z)\mathop{dz}=2\pi i\residue_zf$$
 
 이 성립한다.
 

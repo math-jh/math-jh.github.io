@@ -19,7 +19,7 @@ weight: 11
 
 ## 벡터다발들
 
-[§벡터다발, 예시 5](/ko/math/manifold/vector_bundles#ex5)와 [§벡터다발, 정리 6](/ko/math/manifold/vector_bundles#thm6)을 이용하면 다음을 정의할 수 있다.
+[§벡터다발, ⁋예시 5](/ko/math/manifold/vector_bundles#ex5)와 [§벡터다발, ⁋정리 6](/ko/math/manifold/vector_bundles#thm6)을 이용하면 다음을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -43,7 +43,7 @@ $$\omega=\alpha^1\otimes\cdots\otimes \alpha^r\otimes u_{r+1}\otimes\cdots\otime
 
 $$(\omega,u)=\alpha^1(u_1)\alpha^2(u_2)\cdots \alpha^{r+s}(u_{r+s})$$
 
-으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\mathcal{T}^{r,s}(T\_p^\ast M)\cong\mathcal{T}^{r,s}(T\_pM)^\ast$이 성립한다. ([선형대수학, §쌍대공간, 따름정리 5](/ko/math/linear_algebra/dual_space#crl5))
+으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\mathcal{T}^{r,s}(T\_p^\ast M)\cong\mathcal{T}^{r,s}(T\_pM)^\ast$이 성립한다. ([\[선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#crl5))
 
 이와 유사하게, 두 원소
 
@@ -77,13 +77,13 @@ $$(\omega\wedge\eta)_p=\omega_p\wedge\eta_p\qquad\text{for all $p\in M$}$$
 
 $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
-으로 생각할 수 있다. ([텐서대수, §등급구조, 정의 5](/ko/math/tensor_algebra/graduation#df5)) 
+으로 생각할 수 있다. ([\[텐서대수\] §등급구조, ⁋정의 5](/ko/math/tensor_algebra/graduation#df5)) 
 
 이제 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 linear map $dF_p:T_pM\rightarrow T_{F(p)}N$가 잘 정의된다. 따라서 $dF_p$의 dual map에 exterior algebra의 functoriality를 적용하면
 
 $$\bigwedge({dF}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M)$$
 
-를 얻는다. ([텐서대수, §대칭대수와 외대수, 따름정리 9](/ko/math/tensor_algebra/symmetric_and_exterior_algebras#crl9)) 각 점 $p$마다 $\bigwedge({dF}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
+를 얻는다. ([\[텐서대수\] §대칭대수와 외대수, ⁋따름정리 9](/ko/math/tensor_algebra/symmetric_and_exterior_algebras#crl9)) 각 점 $p$마다 $\bigwedge({dF}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
 
 $$(F^\ast\omega)_p=\bigwedge({dF}_p^\ast)(\omega_{F(p)})$$
 
@@ -97,11 +97,11 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 
 ## 외미분과 드람 코호몰로지
 
-앞서 우리는 $\Omega^0(M)=C^\infty(M)$인 것을 확인했다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $df$는 각 점 $p\in M$을 받아 $df_p:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, 정의 6](/ko/math/manifold/examples_of_differentials#df6)) 즉, $df\in T^\ast M=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
+앞서 우리는 $\Omega^0(M)=C^\infty(M)$인 것을 확인했다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $df$는 각 점 $p\in M$을 받아 $df_p:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifold/examples_of_differentials#df6)) 즉, $df\in T^\ast M=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**정리 2**</ins> Manifold $M$에 대하여, degree $1$의 anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$가 유일하게 존재하여 다음의 두 조건을 만족한다. ([텐서대수, §미분, Derivation과 anti-derivation](/ko/math/tensor_algebra/derivation#derivation%EA%B3%BC-anti-derivation))
+<ins id="thm2">**정리 2**</ins> Manifold $M$에 대하여, degree $1$의 anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$가 유일하게 존재하여 다음의 두 조건을 만족한다. ([\[텐서대수\] §미분, Derivation과 anti-derivation](/ko/math/tensor_algebra/derivation#derivation%EA%B3%BC-anti-derivation))
 
 1. $d^2=0$,
 2. 임의의 $f\in\Omega^0(M)$에 대하여, $df$는 위와 같이 $f$의 differential과 동일하다.

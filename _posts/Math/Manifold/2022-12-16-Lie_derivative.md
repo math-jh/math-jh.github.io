@@ -27,9 +27,9 @@ $$\lim_{t \rightarrow0}\frac{f(p+tv)-f(p)}{t}$$
 
 $$\lim_{h\rightarrow 0}\frac{f(\gamma(h))-f(p)}{h}\tag{1}$$
 
-을 통해 방향미분의 값을 구해낼 수 있다는 것을 알고 있다. ([§미분사상의 예시들, 정의 1](/ko/math/manifold/examples_of_differentials#df1)) 
+을 통해 방향미분의 값을 구해낼 수 있다는 것을 알고 있다. ([§미분사상의 예시들, ⁋정의 1](/ko/math/manifold/examples_of_differentials#df1)) 
 
-이제 $M$ 위에 벡터장 $X$가 주어졌다 하고, 각 점 $p$에서 $X_p$ 방향으로의 방향미분 $X_pf$를 구하는 문제를 생각해보자. 이는 기하학적으로는 위와 같이 모든 점 $p$마다 $\gamma(0)=p$, $\gamma'(0)=X_p$를 만족하는 곡선 $\gamma_p$를 잡아 위의 식 (1)을 적용하는 것과 같다. 그런데 우리는 이러한 성질을 만족하는 곡선이 반드시 존재한다는 것을 알고 있다. ([§벡터장, 정리 6](/ko/math/manifold/vector_fields#thm6))
+이제 $M$ 위에 벡터장 $X$가 주어졌다 하고, 각 점 $p$에서 $X_p$ 방향으로의 방향미분 $X_pf$를 구하는 문제를 생각해보자. 이는 기하학적으로는 위와 같이 모든 점 $p$마다 $\gamma(0)=p$, $\gamma'(0)=X_p$를 만족하는 곡선 $\gamma_p$를 잡아 위의 식 (1)을 적용하는 것과 같다. 그런데 우리는 이러한 성질을 만족하는 곡선이 반드시 존재한다는 것을 알고 있다. ([§벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6))
 
 <div class="definition" markdown="1">
  
@@ -47,7 +47,7 @@ $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\
 
 가장 간단한 예시는 벡터장의 미분이다. 벡터장 $Y$는 $M$에서 $TM$으로의 함수이므로, 위의 [정의 1](#df1)과 유사한 방법을 사용하여 미분을 시도해볼 수 있으나 이는 만만한 일이 아니다. 여기에는 함수의 미분보다 조금 더 근본적인 문제가 있는데, $Y(\phi^t(p))$는 $T_{\phi^t(p)}$의 원소인 반면 $Y(p)$는 $T_pM$의 원소이므로 이들 둘의 차 $Y_{\phi^t(p)}-Y_p$를 계산하는 방법이 애초부터 없기 때문이다. 
 
-그럼에도 불구하고 우리 상황에서는 이를 미분하는 것이 가능하다. [§벡터장, 정리 6](/ko/math/manifold/vector_fields#thm6)을 생각하면 $\phi^t$는 diffeomorphism이므로, $d\phi^t$는 $T_pM$에서 $T_{\phi^t(p)}$으로의 isomorphism을 유도한다. 또, 같은 정리에서 이 isomorphism의 역함수는 $d\phi^{-t}$라는 것 또한 안다. 따라서 $Y_{\phi^t(p)}$를 $d\phi^{-t}$를 통해 $T_pM$으로 가져오면 다음과 같이 정의할 수 있다.
+그럼에도 불구하고 우리 상황에서는 이를 미분하는 것이 가능하다. [§벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6)을 생각하면 $\phi^t$는 diffeomorphism이므로, $d\phi^t$는 $T_pM$에서 $T_{\phi^t(p)}$으로의 isomorphism을 유도한다. 또, 같은 정리에서 이 isomorphism의 역함수는 $d\phi^{-t}$라는 것 또한 안다. 따라서 $Y_{\phi^t(p)}$를 $d\phi^{-t}$를 통해 $T_pM$으로 가져오면 다음과 같이 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -123,7 +123,7 @@ $$[X,Y]f=X(Yf)-Y(Xf)$$
 
 두 manifold $M,N$ 사이의 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 $dF_p:T_pM\rightarrow T_{F(p)}N$은 $M$의 한 점 $p$에서 정의된 tangent vector $v$를 $N$의 한 점 $F(p)$에서 정의된 tangent vector $dF_p(v)$로 보내주는 함수이다. 그러나 일반적으로 이것이 벡터장에 대해 가능할 필요는 없다. 즉, $M$ 위에서 정의된 벡터장 $X$가 주어져 있다 하여, 이를 $dF_p$ 등을 통해 $N$ 위에서 정의된 벡터장을 만들 수 없다. 
 
-예컨대 $F$가 전사가 아니라면, $F$의 상에 속하지 않는 점 $q\in N$에서의 tangent vector를 대응시키는 방법이 자연스럽게 존재하지 않는다. 이는 치역을 제한하는 등의 방식으로 해결한다 치더라도, 만일 $F$가 단사가 아니고 $F(p_1)=F(p_2)=q\in N$라면, 이 공통의 점 $q$에서의 tangent vector를 $dF\_{p\_1} v\_1$과 $dF\_{p\_2} v\_2$ 중 어떤 것을 택해야 할지도 정해야 한다.
+예컨대 $F$가 전사가 아니라면, $F$의 image에 속하지 않는 점 $q\in N$에서의 tangent vector를 대응시키는 방법이 자연스럽게 존재하지 않는다. 이는 치역을 제한하는 등의 방식으로 해결한다 치더라도, 만일 $F$가 단사가 아니고 $F(p_1)=F(p_2)=q\in N$라면, 이 공통의 점 $q$에서의 tangent vector를 $dF\_{p\_1} v\_1$과 $dF\_{p\_2} v\_2$ 중 어떤 것을 택해야 할지도 정해야 한다.
 
 때문에 $X\in\mathfrak{X}(M)$을 $F$를 통해 움직이려 하기보다는 이미 주어진 $Y\in\mathfrak{X}(N)$이 원하는 성질을 만족하는 경우를 살펴보는 편이 현명하다.
 

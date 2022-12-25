@@ -42,7 +42,7 @@ weight: 2
 
 스칼라곱도 마찬가지로 $\alpha\cdot u$와 같은 표기 대신 $\alpha u$와 같이 적기로 한다. 이 경우 유일한 걱정은 $\alpha\beta u$라고 쓸 때 이것이 $(\alpha\beta)u$인지, $\alpha(\beta u)$인지 헷갈릴 수 있다는 것인데, 위 정의의 첫 번째 조건에 의해 어떤 것을 선택하더라도 그 값은 동일하므로 이는 걱정할 필요가 없다.  
 
-벡터공간은 abelian group $V$ 위에 추가적인 구조인 $F$-스칼라곱이 정의된 형태이다. 때문에 $V$는 abelian group이 갖는 성질을 모두 갖는다. ([§가환군과 체, 명제 2](/ko/math/linear_algebra/fields#pp2) 그리고 같은 글의 [따름정리 3](/ko/math/linear_algebra/fields))
+벡터공간은 abelian group $V$ 위에 추가적인 구조인 $F$-스칼라곱이 정의된 형태이다. 때문에 $V$는 abelian group이 갖는 성질을 모두 갖는다. ([§가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#pp2) 그리고 [§가환군과 체, ⁋따름정리 3](/ko/math/linear_algebra/fields))
 
 다음 성질들은 $F$-스칼라곱에 의해 결정되는 추가적인 성질들이다.
 
@@ -59,7 +59,7 @@ weight: 2
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-처음 두 주장은 앞선 글의 [명제 6](/ko/math/linear_algebra/fields#pp6)과 비슷하게 진행하면 된다. 예를 들어, 
+처음 두 주장은 [§가환군과 체, ⁋명제 6](/ko/math/linear_algebra/fields#pp6)과 비슷하게 진행하면 된다. 예를 들어, 
 
 $$\alpha0+\alpha0=\alpha(0+0)=\alpha0$$
 
@@ -129,17 +129,17 @@ $$\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix}+\begin{pmatrix}b_1\\b_2\\\vd
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**</ins> $I$가 어떤 구간이라 하고, $I$에서 $\mathbb{R}$로의 함수들의 모임 $\operatorname{Fun}(I,\mathbb{R})$을 생각하자. 이제 이 집합 위에, 덧셈과 스칼라곱을 다음의 식
+<ins id="ex6">**예시 6**</ins> $I$가 어떤 구간이라 하고, $I$에서 $\mathbb{R}$로의 함수들의 모임 $\Fun(I,\mathbb{R})$을 생각하자. 이제 이 집합 위에, 덧셈과 스칼라곱을 다음의 식
 
 $$f+g:t\mapsto f(t)+g(t),\qquad \alpha f:t\mapsto \alpha f(t)$$
 
-으로 정의하면 $\operatorname{Fun}(I,\mathbb{R})$이 벡터공간 구조를 갖는 것을 확인할 수 있다. 즉, $f+g$는 임의의 $t\in I$를 $f(t)+g(t)$라는 값으로 보내는 함수로, $\alpha f$는 임의의 $t\in I$를 $\alpha f(t)$로 보내는 함수로 정의된다. 
+으로 정의하면 $\Fun(I,\mathbb{R})$이 벡터공간 구조를 갖는 것을 확인할 수 있다. 즉, $f+g$는 임의의 $t\in I$를 $f(t)+g(t)$라는 값으로 보내는 함수로, $\alpha f$는 임의의 $t\in I$를 $\alpha f(t)$로 보내는 함수로 정의된다. 
 
-뿐만 아니라, $\operatorname{Fun}(I,\mathbb{R})$의 여러 부분집합들도 $\mathbb{R}$-벡터공간이 된다. 예를 들어, $I$에서 $\mathbb{R}$로의 연속함수들의 모임 $C(I)$ 또한 $\mathbb{R}$-벡터공간이고, 더 일반적으로 $k$번째 도함수가 연속인 함수들의 모임 $C^k(I)$들의 모임도 $\mathbb{R}$-벡터공간이 된다는 것을 확인할 수 있다.
+뿐만 아니라, $\Fun(I,\mathbb{R})$의 여러 부분집합들도 $\mathbb{R}$-벡터공간이 된다. 예를 들어, $I$에서 $\mathbb{R}$로의 연속함수들의 모임 $C(I)$ 또한 $\mathbb{R}$-벡터공간이고, 더 일반적으로 $k$번째 도함수가 연속인 함수들의 모임 $C^k(I)$들의 모임도 $\mathbb{R}$-벡터공간이 된다는 것을 확인할 수 있다.
 
 </div>
 
-$\operatorname{Fun}(I,\mathbb{R})$을 product set $\mathbb{R}^I$라 생각하면 [예시 6](#ex6)은 [예시 5](#ex5)의 자연스러운 일반화로 볼 수도 있다. ([집합론, §집합의 곱, 정의 1](/ko/math/set_theory/product_of_sets#df1))
+$\Fun(I,\mathbb{R})$을 product set $\mathbb{R}^I$라 생각하면 [예시 6](#ex6)은 [예시 5](#ex5)의 자연스러운 일반화로 볼 수도 있다. ([\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#df1))
 
 ---
 

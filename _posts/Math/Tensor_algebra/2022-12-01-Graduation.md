@@ -17,7 +17,7 @@ weight: 1
 
 ---
 
-이제 우리는 주어진 대수적 구조가 특정한 등급 $\Delta$에 의해 나뉘어진 구조를 살펴본다. 이 구조의 가장 자연스러운 예시는 polynomial algebra $A[\mathrm{x}]$로, $\mathrm{x}$의 차수에 따라 단항식들을 $0$차식, $1$차식 등과 같이 나눌 수 있다. 이를 $\mathbb{Z}^{\geq 0}$-graded algebra라고 부른다. 
+이제 우리는 주어진 대수적 구조가 특정한 등급 $\Delta$에 의해 나뉘어진 구조를 살펴본다. 이 구조의 가장 자연스러운 예시는 polynomial algebra $A[\x]$로, $\x$의 차수에 따라 단항식들을 $0$차식, $1$차식 등과 같이 나눌 수 있다. 이를 $\mathbb{Z}^{\geq 0}$-graded algebra라고 부른다. 
 
 이번 글에서 $(\Delta, +,0)$는 항상 commutative monoid를 뜻한다.
 
@@ -57,9 +57,9 @@ $$A_\alpha A_\beta\subseteq A_{\alpha+\beta}$$
 
 </div>
 
-예를 들어, $A[\mathrm{x}]$의 $A$-module 구조를 잊어버리고 이를 ring으로 생각한다면, 
+예를 들어, $A[\x]$의 $A$-module 구조를 잊어버리고 이를 ring으로 생각한다면, 
 
-$$A[\mathrm{x}]=\bigoplus_{n\geq 0}A\mathrm{x}^n$$
+$$A[\x]=\bigoplus_{n\geq 0}A\x^n$$
 
 을 통해 $A$를 graded ring으로 생각할 수 있으며, 이 때 위의 조건 $A_\alpha A_\beta\subseteq A_{\alpha+\beta}$는 차수 $\alpha$의 단항식과 차수 $\beta$의 단항식을 곱할 경우, 차수 $\alpha+\beta$의 단항식이 나온다는 것을 뜻한다. 
 

@@ -203,4 +203,4 @@ Manifold $M$과 submanifold $F:N\rightarrow M$에 대하여, $N$이 $\mathscr{I}
 
 ---
 
-[^1]: Vector field $X$가 주어졌을 때, $X_p$로 span되는 공간 $\operatorname{span}(X_p)$를 뜻한다.
+[^1]: Vector field $X$가 주어졌을 때, $X_p$로 span되는 공간 $\span(X_p)$를 뜻한다.

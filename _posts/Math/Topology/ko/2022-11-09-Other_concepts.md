@@ -43,7 +43,7 @@ $X$ 위의 임의의 위상 $\mathcal{T}$에서 $\emptyset$과 $X$는 열린집�
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-다음의 De Morgan 법칙 ([집합론, §합집합과 교집합, 명제 8](/ko/math/set_theory/union_and_intersection#pp8))
+다음의 De Morgan 법칙 ([\[집합론\] §합집합과 교집합, ⁋명제 8](/ko/math/set_theory/union_and_intersection#pp8))
 
 $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 
@@ -83,23 +83,23 @@ $$V\cap\bigcap_{j\in J} A_j^c$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> 위상공간 $X$의 임의의 부분집합 $A$에 대하여, $A$를 포함하는 가장 작은 닫힌집합을 $A$의 *closure<sub>폐포</sub>*, $A$에 포함된 가장 큰 열린집합을 $A$의 *interior<sub>내부</sub>*라 부르고, 이를 각각 $\operatorname{cl}(A)$와 $\operatorname{int}(A)$로 적는다. 
+<ins id="df5">**정의 5**</ins> 위상공간 $X$의 임의의 부분집합 $A$에 대하여, $A$를 포함하는 가장 작은 닫힌집합을 $A$의 *closure<sub>폐포</sub>*, $A$에 포함된 가장 큰 열린집합을 $A$의 *interior<sub>내부</sub>*라 부르고, 이를 각각 $\cl(A)$와 $\interior(A)$로 적는다. 
 
 </div>
 
-이렇게 정의하면 두 연산자 $\mathrm{cl}$과 $\mathrm{int}$가 포함관계를 유지한다는 것은 자명하다. 
+이렇게 정의하면 두 연산자 $\cl$과 $\interior$가 포함관계를 유지한다는 것은 자명하다. 
 
 다음의 식
 
-$$\operatorname{int}(A^c)=(\operatorname{cl}(A))^c$$
+$$\interior(A^c)=(\cl(A))^c$$
 
-을 증명해보자. 정의에 의해, $\operatorname{int}(A^c)$는 $A^c$에 포함된 열린집합 중 가장 큰 것이고, 이는 $A$를 포함하지 않는 열린집합 중 가장 큰 것이라는 말과 동일하다. 한편 $\operatorname{cl}(A)$는 $A$를 포함하는 닫힌집합 중 가장 작은 것이고, 따라서 $(\operatorname{cl}(A))^c$는 $A$를 포함하지 않는 열린집합 중 가장 큰 것이 되어 이 둘은 동일해야 한다. 우리는 이 집합을 $A$의 *exterior<sub>외부</sub>*라 부른다.
+을 증명해보자. 정의에 의해, $\interior(A^c)$는 $A^c$에 포함된 열린집합 중 가장 큰 것이고, 이는 $A$를 포함하지 않는 열린집합 중 가장 큰 것이라는 말과 동일하다. 한편 $\cl(A)$는 $A$를 포함하는 닫힌집합 중 가장 작은 것이고, 따라서 $(\cl(A))^c$는 $A$를 포함하지 않는 열린집합 중 가장 큰 것이 되어 이 둘은 동일해야 한다. 우리는 이 집합을 $A$의 *exterior<sub>외부</sub>*라 부른다.
 
 위와 같은 논증을 통해 interior와 closure, exterior 중 어느 하나만 있더라도 다른 둘을 만들 수 있다는 것을 안다. 
 
-집합 $A$의 interior를 생각하자. $x\in\operatorname{int}(A)$라는 것은 $x$를 포함하고, $A$에 포함되는 열린집합 $U$가 존재한다는 뜻이고, 따라서 $A$가 $x$의 근방이라는 것과 동치이다. 따라서 임의의 두 집합 $A,B$에 대하여, $x\in\operatorname{int}(A\cap B)$인 것은 $x\in\operatorname{int}(A)\cap\operatorname{int}(B)$인 것과 동치이다. ([§열린집합, 명제 6](/ko/math/topology/open_sets#pp6)의 둘째 조건) 이를 위에서 설명한 방식을 따라 closure에 대한 명제로 바꾸면 다음 등식
+집합 $A$의 interior를 생각하자. $x\in\interior(A)$라는 것은 $x$를 포함하고, $A$에 포함되는 열린집합 $U$가 존재한다는 뜻이고, 따라서 $A$가 $x$의 근방이라는 것과 동치이다. 따라서 임의의 두 집합 $A,B$에 대하여, $x\in\interior(A\cap B)$인 것은 $x\in\interior(A)\cap\interior(B)$인 것과 동치이다. ([§열린집합, ⁋명제 6](/ko/math/topology/open_sets#pp6)의 둘째 조건) 이를 위에서 설명한 방식을 따라 closure에 대한 명제로 바꾸면 다음 등식
 
-$$\operatorname{cl}(A\cup B)=\operatorname{cl}(A)\cup\operatorname{cl}(B)$$
+$$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 
 을 얻는다.
 
@@ -107,7 +107,7 @@ $$\operatorname{cl}(A\cup B)=\operatorname{cl}(A)\cup\operatorname{cl}(B)$$
 
 <ins id="pp6">**명제 6**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, 두 조건 
 
-1. $x\in\operatorname{cl}A$인 것,
+1. $x\in\cl A$인 것,
 2. $x$의 임의의 근방 $U$가 $A$와 만나는 것
 
 이 서로 동치이다.
@@ -116,9 +116,9 @@ $$\operatorname{cl}(A\cup B)=\operatorname{cl}(A)\cup\operatorname{cl}(B)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-대우명제를 보이는 것이 편하다. $x\not\in\operatorname{cl}A$라 하자. 그럼 $x\in(\operatorname{cl}A)^c=\operatorname{ext}A$는 $x$를 포함하며, $\operatorname{cl}A$와 만나지 않는 열린집합이고, 따라서 $A$와도 만나지 않는 열린집합이 된다. 즉, 명제 <phrase>$A$와 만나지 않는 $x$의 어떠한 근방이 존재한다</phrase>가 참이다. 
+대우명제를 보이는 것이 편하다. $x\not\in\cl A$라 하자. 그럼 $x\in(\cl A)^c=\ext A$는 $x$를 포함하며, $\cl A$와 만나지 않는 열린집합이고, 따라서 $A$와도 만나지 않는 열린집합이 된다. 즉, 명제 <phrase>$A$와 만나지 않는 $x$의 어떠한 근방이 존재한다</phrase>가 참이다. 
 
-거꾸로, $A$와 만나지 않는 $x$의 어떠한 근방이 존재한다 가정하자. 그럼 이 근방에 포함된 $x$의 열린근방 $U$가 $A$와 만나지 않으므로, $U\cap A=\emptyset$이다. 이제 $U^c\cap A=A$이므로 $U^c$는 $A$를 포함하는 닫힌집합이고, closure의 최소성에 의하여 $U^c$는 $\operatorname{cl}A$ 또한 포함한다. 즉, $x\not\in U^c$이면 $x\not\in\operatorname{cl}A$이고, 따라서 반대방향도 성립한다.  
+거꾸로, $A$와 만나지 않는 $x$의 어떠한 근방이 존재한다 가정하자. 그럼 이 근방에 포함된 $x$의 열린근방 $U$가 $A$와 만나지 않으므로, $U\cap A=\emptyset$이다. 이제 $U^c\cap A=A$이므로 $U^c$는 $A$를 포함하는 닫힌집합이고, closure의 최소성에 의하여 $U^c$는 $\cl A$ 또한 포함한다. 즉, $x\not\in U^c$이면 $x\not\in\cl A$이고, 따라서 반대방향도 성립한다.  
 
 </details>
 
@@ -126,7 +126,7 @@ $$\operatorname{cl}(A\cup B)=\operatorname{cl}(A)\cup\operatorname{cl}(B)$$
 
 <ins id="crl7">**따름정리 7**</ins> 위상공간 $X$가 주어졌다 하자. 열린집합 $A$와 임의의 집합 $B$에 대하여, 다음의 식
 
-$$A\cap\operatorname{cl}(B)\subseteq\operatorname{cl}(A\cap B)$$
+$$A\cap\cl(B)\subseteq\cl(A\cap B)$$
 
 이 성립한다.
 
@@ -134,7 +134,7 @@ $$A\cap\operatorname{cl}(B)\subseteq\operatorname{cl}(A\cap B)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$x\in A\cap\operatorname{cl}(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의의 근방 $V$에 대하여 $V\cap A$ 또한 $x$의 근방이 된다. 따라서 $x\in\operatorname{cl}(B)$인 것과 [명제 6](#pp6)으로부터 $(V\cap A)\cap B\neq\emptyset$임을 안다. 그런데 이는 $A\cap B$와 $V$의 교집합이 공집합이 아니라는 것으로 해석할 수도 있고, $V$는 $x$의 임의의 근방이므로 다시 [명제 6](#pp6)에 의하여 $x\in\operatorname{cl}(A\cap B)$이다.
+$x\in A\cap\cl(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의의 근방 $V$에 대하여 $V\cap A$ 또한 $x$의 근방이 된다. 따라서 $x\in\cl(B)$인 것과 [명제 6](#pp6)으로부터 $(V\cap A)\cap B\neq\emptyset$임을 안다. 그런데 이는 $A\cap B$와 $V$의 교집합이 공집합이 아니라는 것으로 해석할 수도 있고, $V$는 $x$의 임의의 근방이므로 다시 [명제 6](#pp6)에 의하여 $x\in\cl(A\cap B)$이다.
 
 </details>
 
@@ -144,7 +144,7 @@ $x\in A\cap\operatorname{cl}(B)$라 하자. $A$는 $x$의 열린근방이므로,
 
 </div>
 
-만일 $x\in\operatorname{cl}(A)\setminus A$라면, [명제 6](#pp6)에 의하여 $x$는 반드시 $A$의 limit point여야 하는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\\{x\\}$이도록 할 수 있다면 $x$가 $A$의 *isolated point<sub>고립접</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
+만일 $x\in\cl(A)\setminus A$라면, [명제 6](#pp6)에 의하여 $x$는 반드시 $A$의 limit point여야 하는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\\{x\\}$이도록 할 수 있다면 $x$가 $A$의 *isolated point<sub>고립접</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
 
 ## 집합의 경계
 
@@ -152,7 +152,7 @@ $x\in A\cap\operatorname{cl}(B)$라 하자. $A$는 $x$의 열린근방이므로,
 
 <ins id="df9">**정의 9**</ins> 위상공간 $X$의 임의의 부분집합 $A$에 대하여, $A$의 *boundary<sub>경계</sub>*는 다음의 식
 
-$$\partial A=\operatorname{cl}A\setminus\operatorname{int}A$$
+$$\partial A=\cl A\setminus\interior A$$
 
 으로 정의되는 집합 $\partial A$이다. 
 
@@ -164,7 +164,7 @@ $$\partial A=\operatorname{cl}A\setminus\operatorname{int}A$$
 
 <div class="definition" markdown="1">
 
-<ins id="df10">**정의 10**</ins> 위상공간 $X$의 임의의 부분집합 $A$가 *dense subset<sub>조밀 부분집합</sub>*이라는 것은 $\operatorname{cl}(A)=X$인 것이다.
+<ins id="df10">**정의 10**</ins> 위상공간 $X$의 임의의 부분집합 $A$가 *dense subset<sub>조밀 부분집합</sub>*이라는 것은 $\cl(A)=X$인 것이다.
 
 </div>
 
@@ -174,7 +174,7 @@ $$\partial A=\operatorname{cl}A\setminus\operatorname{int}A$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp11">**명제 11**</ins> 위상공간 $X$의 basis $\mathcal{B}$에 대하여, $\operatorname{card}(D)\leq\operatorname{card}(\mathcal{B})$이도록 하는 $X$의 dense subset $D$가 존재한다.
+<ins id="pp11">**명제 11**</ins> 위상공간 $X$의 basis $\mathcal{B}$에 대하여, $\card(D)\leq\card(\mathcal{B})$이도록 하는 $X$의 dense subset $D$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">

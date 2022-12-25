@@ -23,11 +23,11 @@ weight: 26
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Cardinal $\mathfrak{a}$가 *유한하다<sub>finite</sub>*는 것은 $\mathfrak{a}\neq\mathfrak{a}+\mathbf{1}$인 것이다. 유한한 cardinal을 *자연수<sub>natural number</sub>*라고 부른다. 집합 $E$에 대하여, cardinal $\operatorname{card} E$가 유한하다면 이 집합을 유한하다고 부르며, 이 때 $\operatorname{card} E$를 집합 $E$의 *원소의 갯수*라고 부른다.
+<ins id="df1">**정의 1**</ins> Cardinal $\mathfrak{a}$가 *유한하다<sub>finite</sub>*는 것은 $\mathfrak{a}\neq\mathfrak{a}+\mathbf{1}$인 것이다. 유한한 cardinal을 *자연수<sub>natural number</sub>*라고 부른다. 집합 $E$에 대하여, cardinal $\card E$가 유한하다면 이 집합을 유한하다고 부르며, 이 때 $\card E$를 집합 $E$의 *원소의 갯수*라고 부른다.
 
 </div>
 
-자연수는 cardinal들의 집합의 부분집합이므로 well-ordered이다. ([§기수, 정리 5](/ko/math/set_theory/cardinals#thm5)) 따라서 자연수에서 귀납법을 사용할 수 있다. ([§정렬집합의 성질들, 보조정리 7](/ko/math/set_theory/well_ordering#lem7))
+자연수는 cardinal들의 집합의 부분집합이므로 well-ordered이다. ([§기수, ⁋정리 5](/ko/math/set_theory/cardinals#thm5)) 따라서 자연수에서 귀납법을 사용할 수 있다. ([§정렬집합의 성질들, ⁋보조정리 7](/ko/math/set_theory/well_ordering#lem7))
 
 <div class="proposition" markdown="1">
 
@@ -38,7 +38,7 @@ weight: 26
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§기수들 사이의 연산, 명제 6](/ko/math/set_theory/operation_of_cardinals#pp6)에 의하여, $\mathfrak{a}=\mathfrak{b}$인 것은 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$인 것과 동치이다. 이제 $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$로 잡으면, 가정에 의해 $\mathfrak{a}\neq\mathfrak{b}$이고, 따라서
+[§기수들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_cardinals#pp6)에 의하여, $\mathfrak{a}=\mathfrak{b}$인 것은 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$인 것과 동치이다. 이제 $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$로 잡으면, 가정에 의해 $\mathfrak{a}\neq\mathfrak{b}$이고, 따라서
 
 $$\mathfrak{b}=\mathfrak{a}+\mathbf{1}\neq\mathfrak{b}+\mathbf{1}$$
 
@@ -156,7 +156,7 @@ $$\begin{aligned}
 
 <div class="proposition" markdown="1">
 
-<ins id="thm10">**정리 10**</ins>  $a$와 $b$가 $b>0$를 만족하는 자연수들이라 하자. 그럼 유일한 자연수 $Q$와 $R$가 존재하여 $a=bq+r$이고 $r<b$이다.
+<ins id="thm10">**정리 10**</ins>  $a$와 $b$가 $b>0$를 만족하는 자연수들이라 하자. 그럼 유일한 자연수 $q$와 $r$이 존재하여 $a=bq+r$이고 $r< b$이다.
 
 </div>
 
@@ -205,7 +205,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§서수들 사이의 순서관계, 명제 1](/ko/math/set_theory/order_relations_between_ordinals#pp1))
+$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§서수들 사이의 순서관계, ⁋명제 1](/ko/math/set_theory/order_relations_between_ordinals#pp1))
 
 </details>
 <div class="proposition" markdown="1">
@@ -232,27 +232,27 @@ $A$가 cardinal $\mathfrak{a}$를 갖는 집합이라 하자. 그럼 첫 번째 
 
 $B$를 포함하는 $A$의 부분집합 $X$와, 그 위에서 정의된 $f$의 extension $\psi:X\rightarrow X\times X$에 대해 $\mathfrak{M}$이 이러한 쌍 $(X,\psi)$들의 모임이라 하자. 그럼 $\mathfrak{M}$의 임의의 chain에 대하여 가장 큰 정의역을 갖는 쌍이 maximal element가 되므로, $\mathfrak{M}$은 inductive한 집합이고, 따라서 Zorn's lemma에 의해 $\mathfrak{M}$의 maximal element $(F, \tilde{f})$가 존재한다.
 
-이제 $\operatorname{card} F=\mathfrak{a}$임을 보이면 충분하다. 만일 $\operatorname{card} F=\mathfrak{b}&lt;\mathfrak{a}$라면, bijection $\tilde{f}$에 의해 $\mathfrak{b}=\mathfrak{b}^2$이므로 
+이제 $\card F=\mathfrak{a}$임을 보이면 충분하다. 만일 $\card F=\mathfrak{b}&lt;\mathfrak{a}$라면, bijection $\tilde{f}$에 의해 $\mathfrak{b}=\mathfrak{b}^2$이므로 
 
 $$\mathfrak{b}\leq 2\mathfrak{b}\leq 3\mathfrak{b}\leq \mathfrak{b}^2=\mathfrak{b}$$
 
-에서 $\mathfrak{b}=2\mathfrak{b}=3\mathfrak{b}$이다. 그럼 $\mathfrak{b}&lt;\mathfrak{a}$에서 $\operatorname{card}(A\setminus F)>\mathfrak{b}$이다. 그렇지 않다면
+에서 $\mathfrak{b}=2\mathfrak{b}=3\mathfrak{b}$이다. 그럼 $\mathfrak{b}&lt;\mathfrak{a}$에서 $\card(A\setminus F)>\mathfrak{b}$이다. 그렇지 않다면
 
-$$\mathfrak{a}=\operatorname{card} A=\operatorname{card}(F\cup(A\setminus F))\leq\operatorname{card} F+\operatorname{card}(A\setminus F)\leq\mathfrak{b}+\mathfrak{b}=2\mathfrak{b}=\mathfrak{b}$$
+$$\mathfrak{a}=\card A=\card(F\cup(A\setminus F))\leq\card F+\card(A\setminus F)\leq\mathfrak{b}+\mathfrak{b}=2\mathfrak{b}=\mathfrak{b}$$
 
-가 되어 모순이기 때문이다. 따라서 어떤 $Y\subseteq A\setminus F$가 존재하여 $\operatorname{card} Y=\mathfrak{b}$이다. $Z=F\cup Y$라 하자. 그럼
+가 되어 모순이기 때문이다. 따라서 어떤 $Y\subseteq A\setminus F$가 존재하여 $\card Y=\mathfrak{b}$이다. $Z=F\cup Y$라 하자. 그럼
 
 $$Z\times Z=(F\times F)\cup(F\times Y)\cup(Y\times F)\cup (Y\times Y)$$
 
 이고, 우변의 네 항들은 모두 서로소인 집합들이다. $F$와 $Y$가 equipotent하므로, 
 
-$$\operatorname{card}(F\times Y)=\operatorname{card}(Y\times F)=\operatorname{card}(F\times F)=\mathfrak{b}^2=\mathfrak{b}$$
+$$\card(F\times Y)=\card(Y\times F)=\card(F\times F)=\mathfrak{b}^2=\mathfrak{b}$$
 
 이고 따라서
 
-$$\operatorname{card}((F\times Y)\cup(Y\times F)\cup(Y\times Y))=3\mathfrak{b}=\mathfrak{b}=\operatorname{card} Y$$
+$$\card((F\times Y)\cup(Y\times F)\cup(Y\times Y))=3\mathfrak{b}=\mathfrak{b}=\card Y$$
 
-이다. 그러므로 $Y$에서 이 집합들의 합집합으로의 전단사함수가 존재하고, 따라서 $Z=F\cup Y$에서 $Z\times Z$로의 전단사함수가 존재한다. $F$에서는 $\tilde{f}:F\rightarrow F\times F$로, $Y$에서는 방금 만든 전단사함수를 이용하면 되기 때문이다. 이는 $F$의 maximality에 모순이므로 $\operatorname{card} F=\mathfrak{a}$여야 한다.
+이다. 그러므로 $Y$에서 이 집합들의 합집합으로의 전단사함수가 존재하고, 따라서 $Z=F\cup Y$에서 $Z\times Z$로의 전단사함수가 존재한다. $F$에서는 $\tilde{f}:F\rightarrow F\times F$로, $Y$에서는 방금 만든 전단사함수를 이용하면 되기 때문이다. 이는 $F$의 maximality에 모순이므로 $\card F=\mathfrak{a}$여야 한다.
 
 </details>
 

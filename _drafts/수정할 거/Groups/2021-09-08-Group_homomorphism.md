@@ -74,7 +74,7 @@ $$e=f(e)=f(xx^{-1})=f(x)f(x^{-1})$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> 임의의 군 $G$에 대하여, $\operatorname{id}_G:G\rightarrow G$는 자명하게 군 준동형사상이다. 또 다른 군 $G'$가 주어졌을 때, 상수함수 $f:G\rightarrow G'$가 군 준동형사상이 되기 위해서는 그 값이 $e$여야만 한다.
+<ins id="ex4">**예시 4**</ins> 임의의 군 $G$에 대하여, $\id_G:G\rightarrow G$는 자명하게 군 준동형사상이다. 또 다른 군 $G'$가 주어졌을 때, 상수함수 $f:G\rightarrow G'$가 군 준동형사상이 되기 위해서는 그 값이 $e$여야만 한다.
 
 </div>
 
@@ -101,11 +101,11 @@ $$(f_2\circ f_1)(xy)=f_2(f_1(xy))=f_2(f_1(x)f_1(y))=f_2(f_1(x))f_2(f_1(y))=(f_2\
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 군 준동형사상 $f:G\rightarrow G'$에 대하여, 적당한 군 준동형사상 $g:G'\rightarrow G$가 존재하여 $f\circ g=\operatorname{id}_{G'}$이고 $g\circ f=\operatorname{id}_G$라면 $f$가 *동형사상*이라 하고, $g$를 $f$의 *역 준동형사상*라 부른다. 
+<ins id="df6">**정의 6**</ins> 군 준동형사상 $f:G\rightarrow G'$에 대하여, 적당한 군 준동형사상 $g:G'\rightarrow G$가 존재하여 $f\circ g=\id_{G'}$이고 $g\circ f=\id_G$라면 $f$가 *동형사상*이라 하고, $g$를 $f$의 *역 준동형사상*라 부른다. 
 
 </div>
 
-$\operatorname{id}\_G$와 $\operatorname{id}\_{G'}$는 모두 bijection이므로, [Set Theory, §함수, 명제 11](/ko/math/set_theory/functions#pp11)을 $f\circ g=\operatorname{id}_{G'}$와 $g\circ f=\operatorname{id}_G$에 각각 적용하면 동형사상은 항상 bijection이라는 것을 보일 수 있다. 뿐만 아니라, 그 역도 성립한다.
+$\id\_G$와 $\id\_{G'}$는 모두 bijection이므로, [Set Theory, §함수, 명제 11](/ko/math/set_theory/functions#pp11)을 $f\circ g=\id_{G'}$와 $g\circ f=\id_G$에 각각 적용하면 동형사상은 항상 bijection이라는 것을 보일 수 있다. 뿐만 아니라, 그 역도 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -126,7 +126,7 @@ $$f^{-1}(yy')=f^{-1}(f(x)f(x')=f^{-1}(f(xx'))=xx'=f^{-1}(y)f^{-1}(y')$$
 
 </details>
 
-위의 명제의 증명에서 눈치챌 수 있겠지만, 만약 $f:G\rightarrow G'$가 동형사상이라면, 그 역 준동형사상 $g:G'\rightarrow G$는 유일하다. 또 다른 $g':G'\rightarrow G$가 $f\circ g'=\operatorname{id}_{G'}$, 그리고 $g'\circ f=\operatorname{id}_G$를 만족한다 가정하자. 임의로 주어진 $y\in G'$에 대하여, 유일한 $x\in G$가 존재하여 $f(x)=y$이고, 그럼
+위의 명제의 증명에서 눈치챌 수 있겠지만, 만약 $f:G\rightarrow G'$가 동형사상이라면, 그 역 준동형사상 $g:G'\rightarrow G$는 유일하다. 또 다른 $g':G'\rightarrow G$가 $f\circ g'=\id_{G'}$, 그리고 $g'\circ f=\id_G$를 만족한다 가정하자. 임의로 주어진 $y\in G'$에 대하여, 유일한 $x\in G$가 존재하여 $f(x)=y$이고, 그럼
 
 $$g'(y)=g'(f(x))=x=g(f(x))=g(y)$$
 
@@ -140,25 +140,25 @@ Surjective 준동형사상을 어떻게 characterize해야할지는 꽤나 자�
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> 군 준동형사상 $f:G\rightarrow G'$에 대하여, $f$의 함수로서의 image $f(G)$를 군 준동형사상 $f$의 *image*라 부르고, $\operatorname{im}f$으로 적는다.
+<ins id="df8">**정의 8**</ins> 군 준동형사상 $f:G\rightarrow G'$에 대하여, $f$의 함수로서의 image $f(G)$를 군 준동형사상 $f$의 *image*라 부르고, $\imf$으로 적는다.
 
 </div>
 
-그럼 $f$가 surjective 준동형사상인 것은 $\operatorname{im}f=G'$인 것과 동치이다. 뿐만 아니라, 다음이 성립한다.
+그럼 $f$가 surjective 준동형사상인 것은 $\imf=G'$인 것과 동치이다. 뿐만 아니라, 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> 임의의 군 준동형사상 $f:G\rightarrow G'$의 image $\operatorname{im}f$는 $G'$의 부분군이다.
+<ins id="pp9">**명제 9**</ins> 임의의 군 준동형사상 $f:G\rightarrow G'$의 image $\imf$는 $G'$의 부분군이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $y_1, y_2\in \operatorname{im}f$를 택하자. 그럼 적절한 $x_1,x_2\in G$가 존재하여 $f(x_i)=y_i$가 $i=1,2$에 대하여 성립한다. 이제 $f(x_2^{-1})=f(x_2)^{-1}=y_2^{-1}$이고 ([따름정리 3](#crl3)), 따라서 
+임의의 $y_1, y_2\in \imf$를 택하자. 그럼 적절한 $x_1,x_2\in G$가 존재하여 $f(x_i)=y_i$가 $i=1,2$에 대하여 성립한다. 이제 $f(x_2^{-1})=f(x_2)^{-1}=y_2^{-1}$이고 ([따름정리 3](#crl3)), 따라서 
 
 $$y_1y_2^{-1}=f(x_1)f(x_2)^{-1}=f(x_1)f(x_2^{-1})=f(x_1x_2^{-1})$$
 
-이 성립한다. 당연히 $x_1x_2^{-1}\in G$이므로, $y_1y_2^{-1}\in\operatorname{im}f$가 성립하고 $\operatorname{im}f$는 $G'$의 부분군이다. 
+이 성립한다. 당연히 $x_1x_2^{-1}\in G$이므로, $y_1y_2^{-1}\in\imf$가 성립하고 $\imf$는 $G'$의 부분군이다. 
 
 </details>
 
@@ -241,11 +241,11 @@ $$\tilde{f}(\bar{a}\bar{b})=\tilde{f}(p(a)p(b))=\tilde{f}(p(ab))=f(ab)=f(a)f(b)=
 
 ![elements]({{ site.url }}{{ site.baseurl }}/assets/images/<#name#>.png){:width="250px"  class="invert" .align-center}
 
-을 얻고, 여기서 $\tilde{f}:G/\ker f\rightarrow \operatorname{im}f$는 bijection이므로 $\tilde{f}$는 동형사상이다. 이를 다음과 같이 이름붙인다.
+을 얻고, 여기서 $\tilde{f}:G/\ker f\rightarrow \imf$는 bijection이므로 $\tilde{f}$는 동형사상이다. 이를 다음과 같이 이름붙인다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm13">**정리 13 (The first isomorphism theorem)**</ins> 임의의 군 준동형사상 $f:G\rightarrow G'$에 대하여, $G/\ker f\cong \operatorname{im}f$가 항상 성립한다.
+<ins id="thm13">**정리 13 (The first isomorphism theorem)**</ins> 임의의 군 준동형사상 $f:G\rightarrow G'$에 대하여, $G/\ker f\cong \imf$가 항상 성립한다.
 
 </div>
 
@@ -283,11 +283,11 @@ $$\ker(\pi\iota)=(\pi\iota)^{-1}(e)=\iota^{-1}(\ker\pi)=\iota^{-1}(N)=K\cap N$$
 
 이므로, $\pi\iota$에 first isomorphism theorem을 적용하면
 
-$$K/\ker(\pi\iota)=K/(K\cap N)\cong\operatorname{im}(\pi\iota)$$
+$$K/\ker(\pi\iota)=K/(K\cap N)\cong\im(\pi\iota)$$
 
 를 얻는다. 그런데 $NK/N$의 임의의 원소는 모두 $nkN$의 꼴이고, 적당한 $n'\in N$이 존재하여 $nk=kn'$이라 할 수 있으므로, $NK/N$의 임의의 원소 $nkN$은
 
-$$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\operatorname{im}(\pi\iota)$$
+$$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 
 을 만족하므로 원하는 결과를 얻는다.
 </details>

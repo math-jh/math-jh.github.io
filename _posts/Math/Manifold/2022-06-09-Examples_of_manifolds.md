@@ -24,7 +24,7 @@ Manifold는 국소적으로 $\mathbb{R}^m$과 닮은 구조이므로, 가장 간
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> Standard topology가 주어진 $\mathbb{R}^m$ 위에 정의된 *standard differentiable structure*는 atlas $\\{(\mathbb{R}^m,\operatorname{id}_{\mathbb{R}^m})\\}$으로 주어진다. 
+<ins id="ex1">**예시 1**</ins> Standard topology가 주어진 $\mathbb{R}^m$ 위에 정의된 *standard differentiable structure*는 atlas $\\{(\mathbb{R}^m,\id_{\mathbb{R}^m})\\}$으로 주어진다. 
 
 </div>
 
@@ -41,7 +41,7 @@ Manifold는 국소적으로 $\mathbb{R}^m$과 닮은 구조이므로, 가장 간
 
 이에 대한 특수한 경우로, 
 
-1. $n\times n$ 행렬들의 집합 $\operatorname{Mat}_n(\mathbb{R})$은 $n^2$차원 벡터공간이므로 미분구조를 갖는다.
+1. $n\times n$ 행렬들의 집합 $\Mat_n(\mathbb{R})$은 $n^2$차원 벡터공간이므로 미분구조를 갖는다.
 2. $\mathbb{C}^n$의 경우, $2n$차원 $\mathbb{R}$-벡터공간으로 생각할 수 있으므로 역시 미분구조를 갖는다.
 
 </div>
@@ -65,19 +65,19 @@ Manifold는 국소적으로 $\mathbb{R}^m$과 닮은 구조이므로, 가장 간
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> $\operatorname{Mat}_{n}(\mathbb{R})$의 원소들 중, 역행렬을 갖는 $n\times n$ 행렬들의 집합 $\operatorname{GL}_n(\mathbb{R})$은 $\det(A)\neq 0$을 만족하는 행렬들의 모임이다. 행렬식 $\det$를 $\operatorname{Mat}_n(\mathbb{R})$에서 $\mathbb{R}$로의 함수로 보면, 이 함수는 다항함수이므로 연속이고, 따라서 열린집합 $\mathbb{R}\setminus\\{0\\}$의 preimage인 $\operatorname{GL}_n(\mathbb{R})$ 또한 $\operatorname{Mat}_n(\mathbb{R})$의 열린집합이다. 따라서 $\operatorname{GL}_n(\mathbb{R})$은 $n^2$차원 manifold이다. 
+<ins id="ex4">**예시 4**</ins> $\Mat_{n}(\mathbb{R})$의 원소들 중, 역행렬을 갖는 $n\times n$ 행렬들의 집합 $\GL_n(\mathbb{R})$은 $\det(A)\neq 0$을 만족하는 행렬들의 모임이다. 행렬식 $\det$를 $\Mat_n(\mathbb{R})$에서 $\mathbb{R}$로의 함수로 보면, 이 함수는 다항함수이므로 연속이고, 따라서 열린집합 $\mathbb{R}\setminus\\{0\\}$의 preimage인 $\GL_n(\mathbb{R})$ 또한 $\Mat_n(\mathbb{R})$의 열린집합이다. 따라서 $\GL_n(\mathbb{R})$은 $n^2$차원 manifold이다. 
 
-한편, $\operatorname{GL}_n(\mathbb{R})$은 $\det A&gt;0$인 행렬들과 $\det A&lt;0$인 행렬들의 disjoint union이며, 이들 집합 각각은 위와 마찬가지 이유로 열린집합이므로 $\operatorname{GL}_n(\mathbb{R})$은 connected는 아니다.
+한편, $\GL_n(\mathbb{R})$은 $\det A&gt;0$인 행렬들과 $\det A&lt;0$인 행렬들의 disjoint union이며, 이들 집합 각각은 위와 마찬가지 이유로 열린집합이므로 $\GL_n(\mathbb{R})$은 connected는 아니다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 열린집합 $U\subset\mathbb{R}^m$과 $C^\infty$ 함수 $f:U\rightarrow\mathbb{R}^n$에 대하여 $f$의 *그래프* $\operatorname{graph}(f)$를 다음의 집합
+<ins id="ex5">**예시 5**</ins> 열린집합 $U\subset\mathbb{R}^m$과 $C^\infty$ 함수 $f:U\rightarrow\mathbb{R}^n$에 대하여 $f$의 *그래프* $\graph(f)$를 다음의 집합
 
-$$\operatorname{graph}(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n: \text{$x\in U$, $y=f(x)$}\}$$
+$$\graph(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n: \text{$x\in U$, $y=f(x)$}\}$$
 
-으로 정의하자. 그럼 $f:U\rightarrow\operatorname{graph}(f)$와, 앞의 $m$개의 좌표로의 projection $\operatorname{pr}:\operatorname{graph}(f)\rightarrow U$가 모두 연속이고, 서로의 역함수가 되므로 $\operatorname{graph}(f)$와 $U$는 homeomorphic이다. 따라서 $\operatorname{graph}(f)$는 topological manifold이며, 특히 projection $\operatorname{pr}:\operatorname{graph}(f)\rightarrow U$이 하나의 chart로 이루어진 atlas $\\{(\operatorname{graph}(f),\operatorname{pr})\\}$를 이루므로 자연스러운 (differentiable) manifold 구조 또한 갖는다. 
+으로 정의하자. 그럼 $f:U\rightarrow\graph(f)$와, 앞의 $m$개의 좌표로의 projection $\pr:\graph(f)\rightarrow U$가 모두 연속이고, 서로의 역함수가 되므로 $\graph(f)$와 $U$는 homeomorphic이다. 따라서 $\graph(f)$는 topological manifold이며, 특히 projection $\pr:\graph(f)\rightarrow U$이 하나의 chart로 이루어진 atlas $\\{(\graph(f),\pr)\\}$를 이루므로 자연스러운 (differentiable) manifold 구조 또한 갖는다. 
 
 </div>
 
@@ -103,7 +103,7 @@ $$U_{n+1}^+=\{(x^1, x^2, \ldots, x^{n+1})\in\mathbb{R}^{n+1}:x^{n+1}>0\}$$
 
 $$f(x)=\sqrt{1-\lvert x\rvert^2}$$
 
-으로 정의하자. 그럼 $f$는 $D^n$에서 $C^\infty$이고, 더 나아가 $D^n$과 $\operatorname{graph}(f)=U_{n+1}^+$사이의 homeomorphism을 정의한다. 따라서 locally Euclidean 조건이 성립한다. 
+으로 정의하자. 그럼 $f$는 $D^n$에서 $C^\infty$이고, 더 나아가 $D^n$과 $\graph(f)=U_{n+1}^+$사이의 homeomorphism을 정의한다. 따라서 locally Euclidean 조건이 성립한다. 
 
 뿐만 아니라 이들 $U_i^\pm$들과, $i$번째 좌표를 제외한 $n$개의 좌표로의 projection $\varphi_i^\pm$들을 모은 다음의 집합
 
@@ -147,17 +147,17 @@ $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> 집합 $\mathbb{R}^{n+1}\setminus\\{0\\}$에 $x\sim y\iff \exists\lambda(x=\lambda y)$으로 정의된 relation이 주어졌다 하자. 어렵지 않게 $\sim$이 equivalence relation임을 확인할 수 있다. 이제 quotient set $\mathbb{R}\mathrm{P}^n=\mathbb{R}\mathrm{P}^n/\sim$을 canonical projection $\pi:\mathbb{R}^{n+1}\setminus\\{0\\}\rightarrow \mathbb{R}\mathrm{P}^n$을 통해 정의된 quotient topology로 생각하고, $[x]$가 $x\in\mathbb{R}^{n+1}\setminus\\{0\\}$의 representative라 하자. 
+<ins id="ex8">**예시 8**</ins> 집합 $\mathbb{R}^{n+1}\setminus\\{0\\}$에 $x\sim y\iff \exists\lambda(x=\lambda y)$으로 정의된 relation이 주어졌다 하자. 어렵지 않게 $\sim$이 equivalence relation임을 확인할 수 있다. 이제 quotient set $\RP^n=\RP^n/\sim$을 canonical projection $\pi:\mathbb{R}^{n+1}\setminus\\{0\\}\rightarrow \RP^n$을 통해 정의된 quotient topology로 생각하고, $[x]$가 $x\in\mathbb{R}^{n+1}\setminus\\{0\\}$의 representative라 하자. 
 
 각각의 $i=1,\ldots, n+1$에 대하여, $\mathbb{R}^{n+1}\setminus\\{0\\}$의 열린집합 
 
 $$\tilde{U}_i=\{(x^1,\ldots, x^{n+1}): x^i\neq 0\}$$
 
-을 생각하자. 그럼 $\tilde{U}_i$는 saturated인 열린집합이므로, [위상수학, §몫위상, 명제 8](/ko/math/topology/quotient_topology#pp8)에 의하여 quotient map $\pi$가 $\tilde{U}_i$로 잘 제한된다. 따라서, 함수 $\varphi_i:U_i\rightarrow\mathbb{R}^n$을
+을 생각하자. 그럼 $\tilde{U}_i$는 saturated인 열린집합이므로, [\[위상수학\] §몫위상, ⁋명제 8](/ko/math/topology/quotient_topology#pp8)에 의하여 quotient map $\pi$가 $\tilde{U}_i$로 잘 제한된다. 따라서, 함수 $\varphi_i:U_i\rightarrow\mathbb{R}^n$을
 
 $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i},\frac{x^{i+1}}{x^i},\ldots, \frac{x^{n+1}}{x^i}\right)$$
 
-으로 정의하면[^1] 함수 $\varphi\_i\circ\pi\|\_{\tilde{U}\_i}$가 연속이고 따라서 [위상수학, §몫위상, 명제 9](/ko/math/topology/quotient_topology#pp9)에 의해 $\varphi_i$ 또한 연속이다. 
+으로 정의하면[^1] 함수 $\varphi\_i\circ\pi\|\_{\tilde{U}\_i}$가 연속이고 따라서 [\[위상수학\] §몫위상, ⁋명제 9](/ko/math/topology/quotient_topology#pp9)에 의해 $\varphi_i$ 또한 연속이다. 
 
 ![quotient_map](/assets/images/Manifold/Examples_of_manifolds-2.png){:width="159.15px" class="invert" .align-center}
 
@@ -165,7 +165,7 @@ $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i
 
 $$\psi_i:(u^1, \ldots, u^n)\mapsto [u^1, \ldots, u^{i-1}, 1, u^i,\ldots, u^n]$$
 
-이 $\varphi_i$의 역함수임을 쉽게 확인할 수 있으므로, 이들 $U_i$들은 모두 $\mathbb{R}^n$과 homeomorphic하다. 즉, $\mathbb{R}\mathrm{P}^n$은 $n$차원 locally Euclidean이다. Quotient topology의 성질로부터 $\mathbb{R}\mathrm{P}^n$이 Hausdorff이고 second countable임을 알 수 있으므로, $\mathbb{R}\mathrm{P}^n$은 topological manifold가 된다.
+이 $\varphi_i$의 역함수임을 쉽게 확인할 수 있으므로, 이들 $U_i$들은 모두 $\mathbb{R}^n$과 homeomorphic하다. 즉, $\RP^n$은 $n$차원 locally Euclidean이다. Quotient topology의 성질로부터 $\RP^n$이 Hausdorff이고 second countable임을 알 수 있으므로, $\RP^n$은 topological manifold가 된다.
 
 한편, 이들 $(U_i,\varphi_i),(U_j,\varphi_j)$들 간의 transition map을 생각해보면, 우선 $\varphi_j^{-1}$에 의하여
 
@@ -201,4 +201,4 @@ $$\mathcal{A}=\{(U_\alpha\times V_\beta,\varphi_\alpha\times\psi_\beta): (U_\alp
 
 ---
 
-[^1]: 사실은 이 함수는 $\mathbb{R}\mathrm{P}^n$의 부분집합에서 $\mathbb{R}^n$으로의 함수이므로, 우변의 결과가 representative의 선택에 의존하지 않는 것을 보여야 한다. 즉 만일 $[\lambda x^1,\ldots, \lambda x^{n+1}]$을 representative로 택했어도 같은 결과가 나와야 하는데, 이는 식으로부터 명확하다.
+[^1]: 사실은 이 함수는 $\RP^n$의 부분집합에서 $\mathbb{R}^n$으로의 함수이므로, 우변의 결과가 representative의 선택에 의존하지 않는 것을 보여야 한다. 즉 만일 $[\lambda x^1,\ldots, \lambda x^{n+1}]$을 representative로 택했어도 같은 결과가 나와야 하는데, 이는 식으로부터 명확하다.

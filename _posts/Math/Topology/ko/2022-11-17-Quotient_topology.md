@@ -17,7 +17,7 @@ weight: 8
 
 ---
 
-이제 우리는 몫집합 위에 위상을 정의하는 방법을 살펴본다. ([집합론, §동치관계, 정의 6](/ko/math/set_theory/equivalence_relations#df6))
+이제 우리는 몫집합 위에 위상을 정의하는 방법을 살펴본다. ([\[집합론\] §동치관계, ⁋정의 6](/ko/math/set_theory/equivalence_relations#df6))
 
 ## Locally closed subspace
 
@@ -33,21 +33,21 @@ weight: 8
 
 1. $A$가 $X$에서 locally closed이다.
 2. $A$은 $X$의 열린집합과 닫힌집합의 교집합이다.
-3. $A$은 자기 자신의 ($X$에서의) closure $\operatorname{cl}A$에 대하여 열린집합이다.
+3. $A$은 자기 자신의 ($X$에서의) closure $\cl A$에 대하여 열린집합이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $A$가 locally closed라 하고, 임의의 $x\in A$에 대하여 [정의 1](#df1)의 조건을 만족하는 $X$에서의 $x$의 열린근방을 $V_x$라 하자. 그럼 $U=\bigcup\_{x\in A} V\_x$는 열린집합이다. 또, [§부분공간, 명제 6 (1)](/ko/math/topology/subspace#pp6)을 적용하면 $A$는 $U$에서 닫힌집합임을 안다. 따라서 $X$의 적당한 닫힌집합 $C$에 대하여 $A=U\cap C$이므로 둘째 조건이 성립한다.
+우선 $A$가 locally closed라 하고, 임의의 $x\in A$에 대하여 [정의 1](#df1)의 조건을 만족하는 $X$에서의 $x$의 열린근방을 $V_x$라 하자. 그럼 $U=\bigcup\_{x\in A} V\_x$는 열린집합이다. 또, [§부분공간, ⁋명제 6 (1)](/ko/math/topology/subspace#pp6)을 적용하면 $A$는 $U$에서 닫힌집합임을 안다. 따라서 $X$의 적당한 닫힌집합 $C$에 대하여 $A=U\cap C$이므로 둘째 조건이 성립한다.
 
-이제 $X$의 열린집합 $U$와 닫힌집합 $C$에 대하여 $A=U\cap C$가 성립한다고 가정하자. 그럼 $\operatorname{cl}A\subseteq C$이므로,
+이제 $X$의 열린집합 $U$와 닫힌집합 $C$에 대하여 $A=U\cap C$가 성립한다고 가정하자. 그럼 $\cl A\subseteq C$이므로,
 
-$$A\subseteq U\cap\operatorname{cl}A\subseteq U\cap C=A$$
+$$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 
-가 성립하고, 특히 $A=U\cap\operatorname{cl}A$이다. 이로부터 $A$가 $\operatorname{cl}A$의 열린집합임을 안다.
+가 성립하고, 특히 $A=U\cap\cl A$이다. 이로부터 $A$가 $\cl A$의 열린집합임을 안다.
 
-마지막으로 만일 $A=U\cap\operatorname{cl}A$를 만족하는 $X$의 열린집합 $U$가 존재한다면, $A$는 집합 $U$의 닫힌집합이고 따라서 locally closed이다.
+마지막으로 만일 $A=U\cap\cl A$를 만족하는 $X$의 열린집합 $U$가 존재한다면, $A$는 집합 $U$의 닫힌집합이고 따라서 locally closed이다.
 
 </details>
 
@@ -61,9 +61,9 @@ $$A\subseteq U\cap\operatorname{cl}A\subseteq U\cap C=A$$
 
 </div>
 
-[§Initial topology와 final topology, 명제 5](/ko/math/topology/initial_and_final_topology#pp5)에 의하여 $X/R$에서의 열린집합은 정확하게 $p^{-1}(U)$가 $X$에서 열린집합이도록 하는 집합을 의미한다.[^1] [집합론, §동치관계, 정의 13](/ko/math/set_theory/equivalence_relations#df13)의 언어로 이를 풀어쓰면, $X/R$ 위의 열린집합들은 $R$에 대해 *saturated*인 $X$의 열린집합에 일대일로 대응된다는 것을 확인할 수 있다. 
+[§Initial topology와 final topology, ⁋명제 5](/ko/math/topology/initial_and_final_topology#pp5)에 의하여 $X/R$에서의 열린집합은 정확하게 $p^{-1}(U)$가 $X$에서 열린집합이도록 하는 집합을 의미한다.[^1] [\[집합론\] §동치관계, ⁋정의 13](/ko/math/set_theory/equivalence_relations#df13)의 언어로 이를 풀어쓰면, $X/R$ 위의 열린집합들은 $R$에 대해 *saturated*인 $X$의 열린집합에 일대일로 대응된다는 것을 확인할 수 있다. 
 
-한편 [§Initial topology와 final topology, 명제 6](/ko/math/topology/initial_and_final_topology#pp6)에 의하여 다음이 성립한다.
+한편 [§Initial topology와 final topology, ⁋명제 6](/ko/math/topology/initial_and_final_topology#pp6)에 의하여 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -79,7 +79,7 @@ $$A\subseteq U\cap\operatorname{cl}A\subseteq U\cap C=A$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$(X/S)/(R/S)\rightarrow X/R$이 전단사함수가 되는 것은 [집합론, §동치관계, 정의 16](/ko/math/set_theory/equivalence_relations#df16)에서 이미 보인 것이다. [명제 4](#pp4)에 의하여, 이 함수가 연속인 것은 $X/S\rightarrow X/R$이 연속인 것과 동치이고, 다시 이 함수의 연속성은 $X\rightarrow X/R$이 연속인 것으로부터 얻어진다. 
+$(X/S)/(R/S)\rightarrow X/R$이 전단사함수가 되는 것은 [\[집합론\] §동치관계, ⁋정의 16](/ko/math/set_theory/equivalence_relations#df16)에서 이미 보인 것이다. [명제 4](#pp4)에 의하여, 이 함수가 연속인 것은 $X/S\rightarrow X/R$이 연속인 것과 동치이고, 다시 이 함수의 연속성은 $X\rightarrow X/R$이 연속인 것으로부터 얻어진다. 
 
 이와 유사하게 $X/R\rightarrow(X/S)/(R/S)$의 연속성은 $X\rightarrow(X/S)/(R/S)$의 연속성으로부터 얻어지며, 이 함수는 두 연속함수의 합성
 
@@ -89,11 +89,11 @@ $$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
 
 </details>
 
-한편 위상공간 $X,Y$와 연속함수 $f:X\rightarrow Y$가 주어졌다 하고, $f$에 의해 정의된 동치관계 $R$을 생각하자. ([집합론, §동치관계, 정의 5](/ko/math/set_theory/equivalence_relations#df5)) 그럼 $f$의 canonical decomposition 
+한편 위상공간 $X,Y$와 연속함수 $f:X\rightarrow Y$가 주어졌다 하고, $f$에 의해 정의된 동치관계 $R$을 생각하자. ([\[집합론\] §동치관계, ⁋정의 5](/ko/math/set_theory/equivalence_relations#df5)) 그럼 $f$의 canonical decomposition 
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 
-을 생각할 수 있다. 이제 $f(X)$에 부분위상을 부여하면, [명제 4](#pp4)와 [§Initial topology와 final topology, 명제 3](/ko/math/topology/initial_and_final_topology#pp3)에 의하여 $\bar{f}$가 연속인 것은 자명하다. 또, canonical decomposition의 정의에 의하여 $\bar{f}$는 전단사함수이다. 일반적으로 $\bar{f}$가 homeomorphism이 될 필요는 없지만 ([§연속함수, 예시 5](/ko/math/topology/continuous_functions#ex5)), 다음의 성립한다. 
+을 생각할 수 있다. 이제 $f(X)$에 부분위상을 부여하면, [명제 4](#pp4)와 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#pp3)에 의하여 $\bar{f}$가 연속인 것은 자명하다. 또, canonical decomposition의 정의에 의하여 $\bar{f}$는 전단사함수이다. 일반적으로 $\bar{f}$가 homeomorphism이 될 필요는 없지만 ([§연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5)), 다음의 성립한다. 
 
 <div class="proposition" markdown="1">
 
@@ -107,13 +107,13 @@ $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset
 
 이는 두 번째 혹은 세 번째 조건이 정확히 $\bar{f}^{-1}$ 또한 연속이라는 의미이기 때문에 자명하다.
 
-한편, 위와 동일한 상황에서 $f$의 <em_ko>연속인</em_ko> section $s:Y\rightarrow X$가 존재한다 하자. 그럼 $f$는 전사함수이므로 $i=\operatorname{id}_Y$이다. 이제 $\bar{f}$와 $p\circ s$는 모두 연속이며,
+한편, 위와 동일한 상황에서 $f$의 <em_ko>연속인</em_ko> section $s:Y\rightarrow X$가 존재한다 하자. 그럼 $f$는 전사함수이므로 $i=\id_Y$이다. 이제 $\bar{f}$와 $p\circ s$는 모두 연속이며,
 
-$$\bar{f}\circ(p\circ s)=f\circ s=\operatorname{id}_Y$$
+$$\bar{f}\circ(p\circ s)=f\circ s=\id_Y$$
 
 이고, 위의 식의 왼쪽에 $\bar{f}^{-1}$, 오른쪽에 $\bar{f}$를 각각 합성해주면 
 
-$$(p\circ s)\circ\bar{f}=\operatorname{id}_{X/R}$$
+$$(p\circ s)\circ\bar{f}=\id_{X/R}$$
 
 를 얻는다. 따라서 이 경우 $\bar{f}$는 homeomorphism이 된다. 
 

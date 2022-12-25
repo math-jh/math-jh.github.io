@@ -100,7 +100,7 @@ $$i_1 < i_2 < \cdots < i_k$$
 
 <ins id="df2">**정의 2**</ins> $\mathbb{R}$-벡터공간 $V$에 대하여, multilinear map $V^r\rightarrow W$가 *alternating<sub>교대적</sub>*이라는 것은 임의의 $\sigma\in S_r$에 대하여 
 
-$$h(v_{\sigma(1)},\ldots, v_{\sigma(r)})=\operatorname{sgn}(\sigma)h(v_1,\ldots, v_r)$$
+$$h(v_{\sigma(1)},\ldots, v_{\sigma(r)})=\sgn(\sigma)h(v_1,\ldots, v_r)$$
 
 이 성립하는 것이다. $V^r$에서 $\mathbb{R}$로의 모든 alternating multilinear map들의 모임을 $A^r(V)$로 적고, 편의상 $A^0(V)=\mathbb{R}$인 것으로 한다.
 

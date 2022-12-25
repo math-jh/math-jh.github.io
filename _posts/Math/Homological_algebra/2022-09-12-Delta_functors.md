@@ -27,7 +27,7 @@ $$0\longrightarrow A_\bullet\longrightarrow B_\bullet\longrightarrow C_\bullet\l
 
 $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1}(A)\rightarrow \cdots$$
 
-를 만들 수 있다는 것을 증명했었다. ([§호몰로지, 정리 9](/ko/math/homological_algebra/homology#thm9)) 이 증명의 가장 핵심적인 부분은 connecting map $\delta$를 정의하는 부분인데, 이 과정을 일반화하여 다음과 같이 정의한다. 
+를 만들 수 있다는 것을 증명했었다. ([§호몰로지, ⁋정리 9](/ko/math/homological_algebra/homology#thm9)) 이 증명의 가장 핵심적인 부분은 connecting map $\delta$를 정의하는 부분인데, 이 과정을 일반화하여 다음과 같이 정의한다. 
 
 <div class="definition" markdown="1">
 
@@ -104,7 +104,7 @@ Category $\mathbf{Mod}\_R$에서, *projective module*은 diagram을 이용해 �
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 임의의 abelian category $\mathcal{A}$에 대하여, $M$이 projective인 것과 $\operatorname{Hom}\_\mathcal{A}(M,-):\mathcal{A}\rightarrow\mathbf{Ab}$이 exact functor인 것이 동치이다.
+<ins id="pp5">**명제 5**</ins> 임의의 abelian category $\mathcal{A}$에 대하여, $M$이 projective인 것과 $\Hom\_\mathcal{A}(M,-):\mathcal{A}\rightarrow\mathbf{Ab}$이 exact functor인 것이 동치이다.
 
 </div>
 

@@ -65,7 +65,7 @@ $$x^i\circ\pi\circ (X|_U),\quad dx^i\circ(X|_U)$$
 
 들이 $C^\infty$임을 보이면 된다. 그런데 직접 계산을 해 보면
 
-$$x^i\circ\pi\circ (X|_U)=x^i\circ\operatorname{id}_U=x^i,\qquad dx^i\circ(X|_U)=X(x^i)$$
+$$x^i\circ\pi\circ (X|_U)=x^i\circ\id_U=x^i,\qquad dx^i\circ(X|_U)=X(x^i)$$
 
 가 성립하므로 이들은 모두 $C^\infty$가 된다.
 

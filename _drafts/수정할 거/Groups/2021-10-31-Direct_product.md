@@ -35,9 +35,9 @@ published: false
 
 우선 explicit하게 집합들의 product를 정의할 수 있었다. ([Set Theory, §집합의 연산, 정의 18](/ko/math/set_theory/set_operations#df18))  다른 방법은 universal property를 이용한 방법이다. 즉, 
 
-> 집합들의 모임 $(S_i)$들에 대하여, 집합 $S$, 그리고 $i$마다 정의된 함수들 $\operatorname{pr}_i:S\rightarrow S_i$가 *product*라는 것은, 또 다른 집합 $R$과 함수들 $f_i:R\rightarrow S_i$들이 주어졌을 때, $f_i=\operatorname{pr}_i\circ f$이도록 하는 유일한 함수 $f$가 존재하는 것이다.
+> 집합들의 모임 $(S_i)$들에 대하여, 집합 $S$, 그리고 $i$마다 정의된 함수들 $\pr_i:S\rightarrow S_i$가 *product*라는 것은, 또 다른 집합 $R$과 함수들 $f_i:R\rightarrow S_i$들이 주어졌을 때, $f_i=\pr_i\circ f$이도록 하는 유일한 함수 $f$가 존재하는 것이다.
 
-를 만족하는 집합 $S$와, $\operatorname{pr}\_i$들의 pair를 *product set*이라 불렀다. (같은 글의 [정리 20](/ko/math/set_theory/set_operations#thm20)) 마찬가지로 set들의 sum을 정의하는 방법도 두 가지가 있었다. (마찬가지로 같은 글의 [정의 14](/ko/math/set_theory/set_operations#df14)와 [정리 16](/ko/math/set_theory/set_operations#thm16))
+를 만족하는 집합 $S$와, $\pr\_i$들의 pair를 *product set*이라 불렀다. (같은 글의 [정리 20](/ko/math/set_theory/set_operations#thm20)) 마찬가지로 set들의 sum을 정의하는 방법도 두 가지가 있었다. (마찬가지로 같은 글의 [정의 14](/ko/math/set_theory/set_operations#df14)와 [정리 16](/ko/math/set_theory/set_operations#thm16))
 
 Group들 사이에 product와 sum을 정의할 때에도 이와 비슷한 방법을 사용할 것이다.
 
@@ -94,9 +94,9 @@ $$p_i(\cdots, x_i,\cdots)=x_i,\qquad p_i(\cdots, y_i,\cdots)=x_i,\qquad p_i(\cdo
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> Group들의 family $(G_i)$가 주어졌다고 하자. 그럼 어떤 group $G$와, group homomorphism들 $\operatorname{pr}_i:G\rightarrow G_i$가 이들 family의 *product*라는 것은, 다음의 universal property
+<ins id="df2">**정의 2**</ins> Group들의 family $(G_i)$가 주어졌다고 하자. 그럼 어떤 group $G$와, group homomorphism들 $\pr_i:G\rightarrow G_i$가 이들 family의 *product*라는 것은, 다음의 universal property
 
-> 임의의 group $H$와 group homomorphism들 $f_i:H\rightarrow G_i$들이 주어졌을 때, $f\_i=\operatorname{pr}\_i\circ f$이도록 하는 유일한 group homomorphism $f:H\rightarrow \prod\_{i\in I} G\_i $가 존재한다.
+> 임의의 group $H$와 group homomorphism들 $f_i:H\rightarrow G_i$들이 주어졌을 때, $f\_i=\pr\_i\circ f$이도록 하는 유일한 group homomorphism $f:H\rightarrow \prod\_{i\in I} G\_i $가 존재한다.
 
 ![universal_property_of_direct_product](/assets/images/Groups/Direct_product-1.png){:width="240px" class="invert" .align-center}
 
@@ -118,8 +118,8 @@ $$p_i(\cdots, x_i,\cdots)=x_i,\qquad p_i(\cdots, y_i,\cdots)=x_i,\qquad p_i(\cdo
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Universal property를 만족시키는 두 개의 pair $\bigl(G,(\operatorname{pr}\_i)\_{i\in I}\bigr)$, $\bigl(G',(\operatorname{pr}\_i')\_{i\in I}\bigr)$가 주어졌다 하자. 우선, $G$와 $\operatorname{pr}_i$들은 unversal property를 만족하므로, 또 다른 group $G'$와 group homomorphism들 $\operatorname{pr}_i':G'\rightarrow G_i$에 대해, $\operatorname{pr}_i'={\operatorname{pr}_i}\circ p'$이도록 하는 $p':G'\rightarrow G$가 존재한다.  
-한편, 이번에는 $G'$의 universal property를 활용하면, 마찬가지로 group $G$와 $\operatorname{pr}_i:G\rightarrow G_i$들에 대해 $\operatorname{pr}_i={\operatorname{pr}_i}'\circ p$이도록 하는 $p:G\rightarrow G'$가 존재한다는 것을 안다.
+Universal property를 만족시키는 두 개의 pair $\bigl(G,(\pr\_i)\_{i\in I}\bigr)$, $\bigl(G',(\pr\_i')\_{i\in I}\bigr)$가 주어졌다 하자. 우선, $G$와 $\pr_i$들은 unversal property를 만족하므로, 또 다른 group $G'$와 group homomorphism들 $\pr_i':G'\rightarrow G_i$에 대해, $\pr_i'={\pr_i}\circ p'$이도록 하는 $p':G'\rightarrow G$가 존재한다.  
+한편, 이번에는 $G'$의 universal property를 활용하면, 마찬가지로 group $G$와 $\pr_i:G\rightarrow G_i$들에 대해 $\pr_i={\pr_i}'\circ p$이도록 하는 $p:G\rightarrow G'$가 존재한다는 것을 안다.
 
 즉 지금까지 우리는 다음의 두 diagram
 
@@ -127,13 +127,13 @@ Universal property를 만족시키는 두 개의 pair $\bigl(G,(\operatorname{pr
 
 을 얻었다. 그런데 $p$와 $p'$가 만족하는 식들로부터,  
 
-$${\operatorname{pr}_i}\circ(p'\circ p)=({\operatorname{pr}_i}\circ p')\circ p={\operatorname{pr}_i}'\circ p=\operatorname{pr}_i,\qquad {\operatorname{pr}_i'}\circ(p'\circ p)=({\operatorname{pr}_i}'\circ p')\circ p={\operatorname{pr}_i}\circ p=\operatorname{pr}_i'$$
+$${\pr_i}\circ(p'\circ p)=({\pr_i}\circ p')\circ p={\pr_i}'\circ p=\pr_i,\qquad {\pr_i'}\circ(p'\circ p)=({\pr_i}'\circ p')\circ p={\pr_i}\circ p=\pr_i'$$
 
-를 만족한다는 것을 알 수 있다. 그런데 이 식은 $p'\circ p$와 $p\circ p'$ 이전에, identity homomorphism $\operatorname{id}\_G$와 $\operatorname{id}\_{G'}$가 만족하는 식이다. 
+를 만족한다는 것을 알 수 있다. 그런데 이 식은 $p'\circ p$와 $p\circ p'$ 이전에, identity homomorphism $\id\_G$와 $\id\_{G'}$가 만족하는 식이다. 
 
 ![uniqueness_2](/assets/images/Groups/Direct_product-3.png){:width="500px" class="invert" .align-center}
 
-따라서 universal property의 *유일한 group homomorphism* 조건에 의하여, 이들은 사실 각각 같은 homomorphism이어야 한다. 즉, $p'\circ p=\operatorname{id}\_G$이고 $p\circ p'=\operatorname{id}\_{G'}$이다. 따라서 $p$와 $p'$는 서로를 inverse로 갖는 isomorphism들이고, $G$와 $G'$ 또한 isomorphic하다.
+따라서 universal property의 *유일한 group homomorphism* 조건에 의하여, 이들은 사실 각각 같은 homomorphism이어야 한다. 즉, $p'\circ p=\id\_G$이고 $p\circ p'=\id\_{G'}$이다. 따라서 $p$와 $p'$는 서로를 inverse로 갖는 isomorphism들이고, $G$와 $G'$ 또한 isomorphic하다.
 </details>
 
 이러한 universal property를 만족하는 pair가 실제로 존재함을 보여야 한다. 이를 위해서는 앞서 정의한 direct product가 universal property를 만족함을 보이면 충분하다.
@@ -164,7 +164,7 @@ Direct product의 대부분의 성질들은 universal property만을 이용해�
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> Product group $\prod_{i\in I}G_i$에 대하여, $x\in \prod_{i\in I}G_i$가 identity element인 것은 모든 $i\in I$에 대하여 $\operatorname{pr}_ix=e_i$인 것과 동치이다.
+<ins id="lem5">**보조정리 5**</ins> Product group $\prod_{i\in I}G_i$에 대하여, $x\in \prod_{i\in I}G_i$가 identity element인 것은 모든 $i\in I$에 대하여 $\pr_ix=e_i$인 것과 동치이다.
 
 </div>
 
@@ -173,39 +173,39 @@ Direct product의 대부분의 성질들은 universal property만을 이용해�
 <details class="proof--alone" markdown="1">
 <summary>보조정리 5의 증명</summary>
 
-우선, 만일 $x$가 항등원이라면 group homomorphism들 $\operatorname{pr}_i$들은 항등원을 항등원으로 보내므로 $\operatorname{pr}_ix=e_i$가 되어야 한다는 것은 자명하다.
+우선, 만일 $x$가 항등원이라면 group homomorphism들 $\pr_i$들은 항등원을 항등원으로 보내므로 $\pr_ix=e_i$가 되어야 한다는 것은 자명하다.
 
 반대 방향을 보이자. Trivial group $\\{e\\}$을 생각하고, 각각의 함수들 $\iota_i:\\{e\\}\rightarrow G_i$를 $e\mapsto e_i$로 정의하자. Group이기 이전에, 집합으로서 $\prod G_i$는 product set이므로 Set Theory, §집합의 연산, 정리 20 직후의 [remark](/ko/math/set_theory/set_operations#rmk2)가 그대로 적용이 된다. 
 
 ![projection_determines_element](/assets/images/Groups/Direct_product-4.png){:width="250px" class="invert" .align-center}
 
-즉 $\operatorname{pr}_ix=e_i$를 모든 $i$에 대해 만족하는 원소 $x=\iota(e)$는 유일하다. 물론 $\iota$는 group homomorphism이므로 항등원을 항등원으로 보내고, 따라서 $x$는 $\prod G_i$의 항등원이 되어야 한다. 
+즉 $\pr_ix=e_i$를 모든 $i$에 대해 만족하는 원소 $x=\iota(e)$는 유일하다. 물론 $\iota$는 group homomorphism이므로 항등원을 항등원으로 보내고, 따라서 $x$는 $\prod G_i$의 항등원이 되어야 한다. 
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $(G_i)$, $(H_i)$가 동일한 집합 $I$를 index set으로 갖는 group들의 family이고, 각각의 $i$마다 group homomorphism $f_i:G_i\rightarrow H_i$가 주어졌다 하자. 그럼 유일한 group homomorphism $f:\prod G_i\rightarrow\prod H_i$가 존재하여, 모든 $i\in I$마다 $\operatorname{pr}_i\circ f=f_i\circ\operatorname{pr}_i$가 성립[^2]하도록 할 수 있다. 특히, 이 때 $\ker f=\prod\ker f_i$이고, $\operatorname{im}f=\prod\operatorname{im}f_i$이다.
+<ins id="pp6">**명제 6**</ins> $(G_i)$, $(H_i)$가 동일한 집합 $I$를 index set으로 갖는 group들의 family이고, 각각의 $i$마다 group homomorphism $f_i:G_i\rightarrow H_i$가 주어졌다 하자. 그럼 유일한 group homomorphism $f:\prod G_i\rightarrow\prod H_i$가 존재하여, 모든 $i\in I$마다 $\pr_i\circ f=f_i\circ\pr_i$가 성립[^2]하도록 할 수 있다. 특히, 이 때 $\ker f=\prod\ker f_i$이고, $\imf=\prod\imf_i$이다.
     
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$f$를 만들기 위해서는 group homomorphism들 $f_i\circ\operatorname{pr}_i$에 $H$의 universal property를 적용하면 된다.
+$f$를 만들기 위해서는 group homomorphism들 $f_i\circ\pr_i$에 $H$의 universal property를 적용하면 된다.
 
 ![mapping_induced_to_product](/assets/images/Groups/Direct_product-5.png){:width="240px" class="invert" .align-center}
 
 이 때, 
 
-$$x\in\ker f\iff f(x)=e\iff \forall i(\operatorname{pr}_i(f(x))=e_i)\iff \forall i((f_i\circ{\operatorname{pr}_i})(x)=e_i)\iff \forall i({\operatorname{pr}_i}(x)\in\ker f_i)$$
+$$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i(f(x))=e_i)\iff \forall i((f_i\circ{\pr_i})(x)=e_i)\iff \forall i({\pr_i}(x)\in\ker f_i)$$
 
 이므로 $\ker f=\prod\ker f_i$가 성립한다.
 
-이와 유사하게, $y\in\prod H_i$에 대해 $y\in\operatorname{im}f$인 것은 $y=f(x)$인 $x\in H_i$가 존재하는 것과 동치이고, 이러한 $x$에 대하여
+이와 유사하게, $y\in\prod H_i$에 대해 $y\in\imf$인 것은 $y=f(x)$인 $x\in H_i$가 존재하는 것과 동치이고, 이러한 $x$에 대하여
 
-$$\operatorname{pr}_i(y)=\operatorname{pr}_i(f(x))=f_i(\operatorname{pr}_i(x))\in\operatorname{im}f_i$$
+$$\pr_i(y)=\pr_i(f(x))=f_i(\pr_i(x))\in\imf_i$$
 
-이므로 $\operatorname{im}f=\prod\operatorname{im} f_i$ 또한 성립한다.
+이므로 $\imf=\prod\im f_i$ 또한 성립한다.
 
 </details>
 
@@ -221,7 +221,7 @@ $$\operatorname{pr}_i(y)=\operatorname{pr}_i(f(x))=f_i(\operatorname{pr}_i(x))\i
 
 ![product_of_normal_subgroups](/assets/images/Groups/Direct_product-6.png){:width="280px" class="invert" .align-center}
 
-$p_i\circ\operatorname{pr}_i$들 각각은 surjective homomorphism들의 합성이므로 surjective하고 따라서 $\operatorname{im}p$는 $\prod(G_i/H_i)$와 같다. 또, 이들 각각의 kernel은 (partial product로써) $H_i$와 같다. 따라서 first isomorphism theorem에 의하여
+$p_i\circ\pr_i$들 각각은 surjective homomorphism들의 합성이므로 surjective하고 따라서 $\imp$는 $\prod(G_i/H_i)$와 같다. 또, 이들 각각의 kernel은 (partial product로써) $H_i$와 같다. 따라서 first isomorphism theorem에 의하여
 
 $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{i\in I}H_i\biggr)\cong\prod_{i\in I} (G_i/H_i)$$
 
@@ -249,11 +249,11 @@ Inclusion homomorphism들 $\iota_i:H_i\hookrightarrow G_i$에 앞선 명제를 �
 
 위의 따름정리들은 다음의 상황에서 특히 유용하다. 
 
-$(G\_i)\_{i\in I}$가 group들의 family라 하고, $I$의 부분집합 $J$를 생각하자. 그럼 product $\prod_{j\in J}G_j$가 잘 정의된다. 혼동을 피하기 위해, $\prod_{i\in I}G_i$들에 대한 projection map들을 $\operatorname{pr}\_i$들로 적고, $\prod\_{j\in J}G\_j$들에 대한 projection map들은 $\operatorname{pr}\_j^J$와 같이 적자. 
+$(G\_i)\_{i\in I}$가 group들의 family라 하고, $I$의 부분집합 $J$를 생각하자. 그럼 product $\prod_{j\in J}G_j$가 잘 정의된다. 혼동을 피하기 위해, $\prod_{i\in I}G_i$들에 대한 projection map들을 $\pr\_i$들로 적고, $\prod\_{j\in J}G\_j$들에 대한 projection map들은 $\pr\_j^J$와 같이 적자. 
 
 Group homomorphism들 $\iota^J_i:\prod_{j\in J}G_j\rightarrow G_i$를 다음의 식
 
-$$\iota^J_i(x)=\begin{cases}\operatorname{pr}_i^J(x)&\text{$i\in J$}\\e_i&\text{otherwise}\end{cases}$$
+$$\iota^J_i(x)=\begin{cases}\pr_i^J(x)&\text{$i\in J$}\\e_i&\text{otherwise}\end{cases}$$
 
 으로 정의하면, 다시 $\iota^J:\prod_{j\in J}G_j\rightarrow\prod_{i\in I} G_i$가 존재하여 다음의 diagram을 commute하게 할 수 있다.
 
@@ -263,43 +263,43 @@ $$\iota^J_i(x)=\begin{cases}\operatorname{pr}_i^J(x)&\text{$i\in J$}\\e_i&\text{
 
 우선 $x\in\ker\iota^J$라 하자. 그럼 $\iota^J(x)$는 $\prod_{i\in I}G_i$의 항등원이고, 따라서 다음의 식
 
-$$\operatorname{pr}_i\bigl(\iota^J(x)\bigr)=e_i$$
+$$\pr_i\bigl(\iota^J(x)\bigr)=e_i$$
 
-이 모든 $i\in I$에 대해 성립한다. 그런데 ${\operatorname{pr}_i}\circ\iota^J=\iota_i^J$이므로, 위 식은
+이 모든 $i\in I$에 대해 성립한다. 그런데 ${\pr_i}\circ\iota^J=\iota_i^J$이므로, 위 식은
 
 $$\iota_i^J(x)=e_i$$
 
 와 같고, 특히 $j\in J$인 경우에만 한정하여 보면 이 식은
 
-$$\operatorname{pr}_j^J(x)=e_j$$
+$$\pr_j^J(x)=e_j$$
 
 와 같다. 따라서 [보조정리 5](#lem5)에 의하여 $x$는 $\prod_{j\in J}G_j$의 항등원이어야만 하고, $\iota^J$는 injective이다.
 
-한편, $x\in\prod_{i\in I} G_i$라 하자. 만일 $\operatorname{pr}_ix\neq e_i$가 $i\in I\setminus J$에 대해 성립한다면, 위의 diagram의 commutativity로부터 $x\not\in\operatorname{im}\iota^J$인 것을 알 수 있다. 따라서, $G_i$들의 subgroup들의 family $(H_i)$를 다음의 식
+한편, $x\in\prod_{i\in I} G_i$라 하자. 만일 $\pr_ix\neq e_i$가 $i\in I\setminus J$에 대해 성립한다면, 위의 diagram의 commutativity로부터 $x\not\in\im\iota^J$인 것을 알 수 있다. 따라서, $G_i$들의 subgroup들의 family $(H_i)$를 다음의 식
 
 $$H_i=\begin{cases} G_i&i\in J\\ \{e\}&i\in I\setminus J\end{cases}$$
 
 으로 정의한다면, 
 
-$$\operatorname{im}\iota^J\subset\prod_{i\in I}H_i$$
+$$\im\iota^J\subset\prod_{i\in I}H_i$$
 
-가 성립한다. 어렵지 않게 위의 포함관계가 사실은 $=$인 것을 알 수 있다. $x\in\prod H_i$라 하자. 그럼 $\operatorname{pr}\_ix=e_i$가 임의의 $i\in I\setminus J$에 대해 성립한다. 우선 다음의 diagram
+가 성립한다. 어렵지 않게 위의 포함관계가 사실은 $=$인 것을 알 수 있다. $x\in\prod H_i$라 하자. 그럼 $\pr\_ix=e_i$가 임의의 $i\in I\setminus J$에 대해 성립한다. 우선 다음의 diagram
 
 ![partial_product_surjection](/assets/images/Groups/Direct_product-9.png){:width="250px" class="invert" .align-center}
 
 을 통해 $p:\prod_{i\in I}G_i\rightarrow\prod_{j\in J}G_j$를 얻자. 이 때 $p$는 *모든 $j\in J$에 대하여*
 
-$${\operatorname{pr}_j^J}\circ p=\operatorname{pr}_j$$
+$${\pr_j^J}\circ p=\pr_j$$
 
-를 만족하는 group homomorphism이다. 이제 $p(x)\in \prod_{j\in J}G_j$이다. 한편, $\iota^J(p(x))$의 값을 생각해보면 $\operatorname{im}\iota^J\subset\prod H_i$로부터 $\operatorname{pr}_i(\iota^J(p(x)))=e_i$가 임의의 $i\in I\setminus J$에 대해 성립하는 것을 알 수 있고, $j\in J$에 대해서는
+를 만족하는 group homomorphism이다. 이제 $p(x)\in \prod_{j\in J}G_j$이다. 한편, $\iota^J(p(x))$의 값을 생각해보면 $\im\iota^J\subset\prod H_i$로부터 $\pr_i(\iota^J(p(x)))=e_i$가 임의의 $i\in I\setminus J$에 대해 성립하는 것을 알 수 있고, $j\in J$에 대해서는
 
-$$\operatorname{pr}_j\bigl(\iota^J(p(x))\bigr)=\iota_j^J(p(x))=\operatorname{pr}_j^J(p(x))=\operatorname{pr}_jx$$
+$$\pr_j\bigl(\iota^J(p(x))\bigr)=\iota_j^J(p(x))=\pr_j^J(p(x))=\pr_jx$$
 
-임을 알 수 있다. 다시 [보조정리 5](#lem5)에 의하여, 이 식들은 $\iota^J(p(x))$의 값을 유일하게 정의한다. 그런데 마찬가지 식들이 $x$에 대해서도 성립하므로, $\iota^J(p(x))=x$이고 따라서 $x\in\operatorname{im}\iota^J$이 성립한다.
+임을 알 수 있다. 다시 [보조정리 5](#lem5)에 의하여, 이 식들은 $\iota^J(p(x))$의 값을 유일하게 정의한다. 그런데 마찬가지 식들이 $x$에 대해서도 성립하므로, $\iota^J(p(x))=x$이고 따라서 $x\in\im\iota^J$이 성립한다.
 
 그러므로, 위에서 정의한 $(H_i)$들에 대해
 
-$$\prod_{j\in J}G_j\cong\operatorname{im}\iota^J=\prod_{i\in I}H_i$$
+$$\prod_{j\in J}G_j\cong\im\iota^J=\prod_{i\in I}H_i$$
 
 가 성립한다. 즉 $\prod_{j\in J}G_j$를 canonical하게 $\prod_{i\in I}G_i$의 subgroup으로 취급할 수 있고, 우리는 이를 *partial product*라 부른다. 
 
@@ -323,7 +323,7 @@ $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{j\in J}G_j\biggr)\cong\pro
 
 을 얻고, 이 때 $\iota^i$는 injection이다. 이 때 $\iota^i$들을 $G_i$의 *canonical inclusion*이라 부른다.
 
-$\iota^i(G_i)$들의 원소는 모두 $\operatorname{pr}_j$에 의해 $e_j$로 옮겨지므로 $\iota^i(G_i)$와 $\iota^j(G_j)$는 $\prod G_i$의 항등원 $e=\iota^i(e_i)=\iota^j(e_j)$를 제외하면 교집합이 없다. 뿐만 아니라, 만일 $x\in G_i$이고 $y\in G_j$라면 $\iota^i(x)\iota^j(y)=\iota^j(y)\iota^i(x)$임을 확인할 수 있다. 이는 임의의 $i\in I$에 대해 $\operatorname{pr}_i(xy)$의 값과 $\operatorname{pr}_i(yx)$의 값이 같기 때문이다.
+$\iota^i(G_i)$들의 원소는 모두 $\pr_j$에 의해 $e_j$로 옮겨지므로 $\iota^i(G_i)$와 $\iota^j(G_j)$는 $\prod G_i$의 항등원 $e=\iota^i(e_i)=\iota^j(e_j)$를 제외하면 교집합이 없다. 뿐만 아니라, 만일 $x\in G_i$이고 $y\in G_j$라면 $\iota^i(x)\iota^j(y)=\iota^j(y)\iota^i(x)$임을 확인할 수 있다. 이는 임의의 $i\in I$에 대해 $\pr_i(xy)$의 값과 $\pr_i(yx)$의 값이 같기 때문이다.
 
 이번 절에서는 inclusion map이나 partial product 등의 개념을 완벽하게 universal property만을 이용해 설명했고, 앞으로 이야기할 내용들도 모두 이와 같은 방법으로, 즉 특정한 construction에 의존하지 않도록 논리를 전개해나갈 수 있다. 하지만 $\prod_{i\in I} G_i$가 concrete하게 주어졌었다면, 가령 inclusion map을 
 
@@ -345,13 +345,13 @@ $$(\bar{1},\bar{1},\cdots)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df9">**정의 9**</ins> Group들의 family $(G_i)$에 대하여, $\operatorname{pr}\_i x=e\_i$가 유한개를 제외한 모든 $i$에 대해 성립하는 $x$들로 이루어진 subgroup을 $G\_i$들의 *weak direct product*라 부르고,
+<ins id="df9">**정의 9**</ins> Group들의 family $(G_i)$에 대하여, $\pr\_i x=e\_i$가 유한개를 제외한 모든 $i$에 대해 성립하는 $x$들로 이루어진 subgroup을 $G\_i$들의 *weak direct product*라 부르고,
 
 $${\prod_{i\in I}}^w G_i$$
 
 으로 표기한다.
 
-더 일반적으로, $G_i$들의 subgroup $H_i$들에 대하여 $\operatorname{pr}\_ix\in H\_i$가 유한개를 제외한 모든 $i$에 대해 성립하는 $x$들로 이루어진 subgroup을 $H_i$에 대한 $G_i$들의 *restricted sum*이라 부르고 $\coprod G_i$라 표현한다.
+더 일반적으로, $G_i$들의 subgroup $H_i$들에 대하여 $\pr\_ix\in H\_i$가 유한개를 제외한 모든 $i$에 대해 성립하는 $x$들로 이루어진 subgroup을 $H_i$에 대한 $G_i$들의 *restricted sum*이라 부르고 $\coprod G_i$라 표현한다.
 
 </div>
 
@@ -381,21 +381,21 @@ $$\left\langle\bigcup \iota^i(G_i)\right\rangle={\prod_{i\in I}}^w G_i$$
 
 이제 $f$의 존재성을 보여야 한다. 임의의 $x\in \prod^w G_i$에 대하여, $f(x)$를 다음의 식
 
-$$f(x)=\prod_{i\in I} f_i(\operatorname{pr}_ix)$$
+$$f(x)=\prod_{i\in I} f_i(\pr_ix)$$
 
-으로 정의하자. 이 때 $\prod$는 일반적인 원소들의 곱을 의미한다. $x$는 $\prod^w G_i$의 원소이므로, 우번의 $f_i(\operatorname{pr}_ix)$는 유한개의 $i$를 제외하면 모두 항등원이고, 따라서 이 곱은 잘 정의된다. 
+으로 정의하자. 이 때 $\prod$는 일반적인 원소들의 곱을 의미한다. $x$는 $\prod^w G_i$의 원소이므로, 우번의 $f_i(\pr_ix)$는 유한개의 $i$를 제외하면 모두 항등원이고, 따라서 이 곱은 잘 정의된다. 
 
 식 $f_i=f\circ\iota^i$가 성립하는 것은 자명하고, $f$가 group homomorphism인 것은 임의의 $x,y\in\prod^wG_i$에 대해
 
-$$f(xy)=\prod_{i\in I}f_i(\operatorname{pr}_i(xy))=\prod_{i\in I}f_i(\operatorname{pr}_ix)f_i(\operatorname{pr}_iy)$$
+$$f(xy)=\prod_{i\in I}f_i(\pr_i(xy))=\prod_{i\in I}f_i(\pr_ix)f_i(\pr_iy)$$
 
-가 성립하므로, $\operatorname{pr}_i(xy)$가 $e_i$가 아니도록 하는 유한개의 값만 골라 이 index들을 $1,\ldots, n$이라 하면
+가 성립하므로, $\pr_i(xy)$가 $e_i$가 아니도록 하는 유한개의 값만 골라 이 index들을 $1,\ldots, n$이라 하면
 
-$$f_1(\operatorname{pr}_1x)f_1(\operatorname{pr}_1y)f_2(\operatorname{pr}_2x)f_2(\operatorname{pr}_2y)\cdots f_n(\operatorname{pr}_nx)f_n(\operatorname{pr}_ny)$$
+$$f_1(\pr_1x)f_1(\pr_1y)f_2(\pr_2x)f_2(\pr_2y)\cdots f_n(\pr_nx)f_n(\pr_ny)$$
 
-가 되고, 이 때 $f_i(\operatorname{pr}_ix)$와 $f_j(\operatorname{pr}_jy)$는 $i\neq j$라면 항상 commute하므로 이 식을
+가 되고, 이 때 $f_i(\pr_ix)$와 $f_j(\pr_jy)$는 $i\neq j$라면 항상 commute하므로 이 식을
 
-$$f_1(\operatorname{pr}_1x)f_2(\operatorname{pr}_2x)\cdots f_n(\operatorname{pr}_nx)f_1(\operatorname{pr}_1y)f_2(\operatorname{pr}_2y)\cdots f_n(\operatorname{pr}_ny)$$
+$$f_1(\pr_1x)f_2(\pr_2x)\cdots f_n(\pr_nx)f_1(\pr_1y)f_2(\pr_2y)\cdots f_n(\pr_ny)$$
 
 으로 바꾸어 쓸 수 있다. 따라서 $f(xy)=f(x)f(y)$이고 $f$는 group homomorphism이 된다. $f_i=f\circ\iota^i$인 것은 자명하다.
 
@@ -448,7 +448,7 @@ Weak direct product의 universal property에 대해서는 조금 더 할 말이 
 
 $G$가 $H_i$들의 internal weak direct product임을 보이기 위해서는 이렇게 유도된 $\iota$가 isomorphism인 것을 보여야 한다. 우선 1번 조건에 의해, 임의의 $a\in G$는 $\bigcup H_i$들의 *finite*한 operation들을 통해 얻어진다. 또 $H_i$들이 서로 commute하므로, $a$를 
 
-$$a=\prod_{i\in I} h_i=\prod_{i\in I}\iota^i(h_i),\qquad\text{$\operatorname{supp}(h_i)$ finite and $h_i\in H_i$}$$
+$$a=\prod_{i\in I} h_i=\prod_{i\in I}\iota^i(h_i),\qquad\text{$\supp(h_i)$ finite and $h_i\in H_i$}$$
 
 로 적을 수 있다. $h=\prod_{i\in I} \iota^i(h_i)\in\prod^w H_i$라 하면, 
 
@@ -460,11 +460,11 @@ $$a=\prod_{i\in I}\iota^i(h_i)=\iota^i\left(\prod_{i\in I}h_i\right)=\iota^i(h)$
 
 $$\iota(a)=\prod_{i\in I}\iota^i(a_i)=\prod_{i\in I} a_i=e$$
   
-으로부터, 만일 $\operatorname{supp}(a_i)$가 하나 이상의 원소를 갖고, $i\in\operatorname{supp}(a_i)$라 하면
+으로부터, 만일 $\supp(a_i)$가 하나 이상의 원소를 갖고, $i\in\supp(a_i)$라 하면
 
 $$a_i^{-1}=\prod_{j\in I\setminus\{i\}}a_j\in H_i\cap \left\langle\bigcup_{j\neq i} H_i\right\rangle=\{e\}$$
 
-가 되어 $i\in\operatorname{supp}(a_i)$라는 가정에 모순이다. 따라서 $\operatorname{supp}(a_i)$는 공집합이고 $a$는 항등원이다. 
+가 되어 $i\in\supp(a_i)$라는 가정에 모순이다. 따라서 $\supp(a_i)$는 공집합이고 $a$는 항등원이다. 
 
 </details>
 
@@ -604,5 +604,5 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 ---
 
 [^1]: 이 정의가 낯설다면 [Set Theory, §집합의 연산, Remark 1](/ko/math/set_theory/set_operations#rmk1)과, 같은 글에서 product set을 정의할 때의 [motivation](/ko/math/set_theory/set_operations#product-of-sets)을 다시 살펴볼 필요가 있다. 
-[^2]: 물론 좌변의 $\operatorname{pr}_i$는 $H\rightarrow H_i$, 우변의 $\operatorname{pr}_i$는 $G\rightarrow G_i$를 의미한다.
+[^2]: 물론 좌변의 $\pr_i$는 $H\rightarrow H_i$, 우변의 $\pr_i$는 $G\rightarrow G_i$를 의미한다.
 [^3]: 이후 이렇게 이어붙여진 word를 reduced word로 만드는 것 포함.

@@ -43,7 +43,7 @@ $$x\sim y\iff xy^{-1}\ker f$$
 
 $$f(y)=e'f(y)=f(xy^{-1})f(y)=f(xy^{-1}y)=f(x)$$
 
-으로부터 $x\sim y\iff f(x)=f(y)$임을 알 수 있다. 즉, $\sim$은 별다른 것이 아니라 함수 $f$에 의해 정의되는 동치관계이며 ([집합론, §동치관계의 예시들, 정의 2](/ko/math/set_theory/examples_of_equivalence#df2)), quotient group의 정의로부터 canonical map $p:G\rightarrow G/\ker f$는 homomorphism이 된다. 이제 $f$의 canonical decomposition을 생각하면 전단사함수 $h:G/\ker f\rightarrow\operatorname{im}f$를 얻는다. 그럼 임의의 $[x], [x']\in G/\ker f$에 대하여
+으로부터 $x\sim y\iff f(x)=f(y)$임을 알 수 있다. 즉, $\sim$은 별다른 것이 아니라 함수 $f$에 의해 정의되는 동치관계이며 ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#df2)), quotient group의 정의로부터 canonical map $p:G\rightarrow G/\ker f$는 homomorphism이 된다. 이제 $f$의 canonical decomposition을 생각하면 전단사함수 $h:G/\ker f\rightarrow\im f$를 얻는다. 그럼 임의의 $[x], [x']\in G/\ker f$에 대하여
 
 $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
@@ -51,11 +51,11 @@ $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**정리 2 (The first isomorphism theorem)**</ins> 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $G/\ker f\cong \operatorname{im}f$가 항상 성립한다.
+<ins id="thm2">**정리 2 (The first isomorphism theorem)**</ins> 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $G/\ker f\cong \im f$가 항상 성립한다.
 
 </div>
 
-한편 [집합론, §동치관계의 예시들, 명제 7](/ko/math/set_theory/examples_of_equivalence#pp7)을 이용하면 다음 명제를 얻는다. 
+한편 [\[집합론\] §동치관계의 예시들, ⁋명제 7](/ko/math/set_theory/examples_of_equivalence#pp7)을 이용하면 다음 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
 
@@ -108,11 +108,11 @@ $$\ker(\pi\iota)=(\pi\iota)^{-1}(e)=\iota^{-1}(\ker\pi)=\iota^{-1}(N)=K\cap N$$
 
 이므로, $\pi\iota$에 first isomorphism theorem을 적용하면
 
-$$K/\ker(\pi\iota)=K/(K\cap N)\cong\operatorname{im}(\pi\iota)$$
+$$K/\ker(\pi\iota)=K/(K\cap N)\cong\im(\pi\iota)$$
 
 를 얻는다. 그런데 $NK/N$의 임의의 원소는 모두 $nkN$의 꼴이고, 적당한 $n'\in N$이 존재하여 $nk=kn'$이라 할 수 있으므로, $NK/N$의 임의의 원소 $nkN$은
 
-$$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\operatorname{im}(\pi\iota)$$
+$$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 
 을 만족하므로 원하는 결과를 얻는다.
 
@@ -128,7 +128,7 @@ $$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\operatorname{im}(\pi\iota)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[집합론, §동치관계의 예시들, 정의 8](/ko/math/set_theory/examples_of_equivalence#df8) 이후의 decomposition.
+[\[집합론\] §동치관계의 예시들, ⁋정의 8](/ko/math/set_theory/examples_of_equivalence#df8) 이후의 decomposition.
 
 </details>
 

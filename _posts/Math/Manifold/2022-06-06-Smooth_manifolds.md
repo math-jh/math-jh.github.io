@@ -21,7 +21,7 @@ weight: 1
 
 ## 표기법
 
-앞으로 $m$차원의 좌표계를 다룰 일이 많으므로 다음과 같이 표기법을 고정하기로 한다. $\mathbb{R}^m$에 대하여, $i$번째 projection $\operatorname{pr}_i$를 $r^i$로 표기한다. 비슷하게, 임의의 집합 $X$와 함수 $f:X\rightarrow\mathbb{R}^m$에 대하여, $f$의 $i$번째 *성분함수*는 식 $f^i=r^i\circ f$으로 정의된다. 
+앞으로 $m$차원의 좌표계를 다룰 일이 많으므로 다음과 같이 표기법을 고정하기로 한다. $\mathbb{R}^m$에 대하여, $i$번째 projection $\pr_i$를 $r^i$로 표기한다. 비슷하게, 임의의 집합 $X$와 함수 $f:X\rightarrow\mathbb{R}^m$에 대하여, $f$의 $i$번째 *성분함수*는 식 $f^i=r^i\circ f$으로 정의된다. 
 
 이제 함수 $f$가 $\mathbb{R}^m$에서 $\mathbb{R}$로의 함수라 하자. 그럼 $f$의 $i$번째 성분에 대한 편미분을 다음의 식
 
@@ -53,11 +53,11 @@ $M$ 위에 정의된 $C^k$-atlas 중, 포함관계에 대해 maximal인 atlas를
 
 이 정의에서 *maximal* atlas가 미분구조를 주는 것으로 생각하는 이유는 maximal atlas가 아닌 두 atlas가 본질적으로 같은 미분구조를 주는 것이 얼마든 가능하기 때문이다. 예를 들어 $\mathbb{R}$은 다음의 $C^\infty$-atlas 
 
-$$\mathcal{A}=\{(\mathbb{R}, \operatorname{id}_\mathbb{R})\}$$
+$$\mathcal{A}=\{(\mathbb{R}, \id_\mathbb{R})\}$$
 
 도 갖지만, 또 다른 atlas 
 
-$$\mathcal{A}'=\{((-\infty, 1), \operatorname{id}_{(-\infty, 1)}), ((-1, \infty),\operatorname{id}_{(-1,\infty)})\}$$ 
+$$\mathcal{A}'=\{((-\infty, 1), \id_{(-\infty, 1)}), ((-1, \infty),\id_{(-1,\infty)})\}$$ 
 
 또한 갖는다. 그러나 [명제 3](#pp3)에서 확인할 수 있듯, 임의의 atlas가 주어진다면 이를 포함하는 maximal atlas가 유일하게 결정되므로 본질적인 의미에서 이는 그렇게 큰 차이는 아니다.
 
@@ -106,9 +106,9 @@ $$\psi'\circ\psi^{-1}=(\psi'\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 
 <ins id="ex4">**예시 4**</ins> 실수집합 $\mathbb{R}$ 위에 두 개의 atlas
 
-$$\mathcal{A}_1=\{(\mathbb{R},\operatorname{id}_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{R}, x\mapsto x^3)\}$$
+$$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{R}, x\mapsto x^3)\}$$
 
-를 주자. 이들은 하나의 chart로 이루어진 atlas들이므로 당연히 $C^\infty$이다. 앞선 [명제 3](#pp3)에 의하여 이들 각각을 포함하는 미분구조가 존재한다. 그러나 이들은 서로 같지 않다. 두 chart $(\mathbb{R},\operatorname{id}_\mathbb{R})$과 $(\mathbb{R}, x\mapsto x^3)$이 서로 $C^\infty$-compatible이 아니기 때문이다. ($x\mapsto x^3$은 $C^\infty$ 함수지만, 그 역함수 $x\mapsto x^{1/3}$은 그렇지 않다)
+를 주자. 이들은 하나의 chart로 이루어진 atlas들이므로 당연히 $C^\infty$이다. 앞선 [명제 3](#pp3)에 의하여 이들 각각을 포함하는 미분구조가 존재한다. 그러나 이들은 서로 같지 않다. 두 chart $(\mathbb{R},\id_\mathbb{R})$과 $(\mathbb{R}, x\mapsto x^3)$이 서로 $C^\infty$-compatible이 아니기 때문이다. ($x\mapsto x^3$은 $C^\infty$ 함수지만, 그 역함수 $x\mapsto x^{1/3}$은 그렇지 않다)
 
 </div>
 

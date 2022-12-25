@@ -35,7 +35,7 @@ $$\iota^{-1}\left(\bigcup_{i\in I} U_i\right)=\left(\bigcup_{i\in I} U_i\right)\
 
 $$\iota^{-1}\left(\bigcap_{i\in I} U_i\right)=\left(\bigcap_{i\in I} U_i\right)\cap A=\bigcap_{i\in I} (U_i\cap A)=\bigcap_{i\in I} \iota^{-1}(U)$$
 
-이 성립하므로 [§Initial topology와 final topology, 명제 2](/ko/math/topology/initial_and_final_topology#pp2)에 의하여 부분위상 $\mathcal{T}_A$는 다음의 식
+이 성립하므로 [§Initial topology와 final topology, ⁋명제 2](/ko/math/topology/initial_and_final_topology#pp2)에 의하여 부분위상 $\mathcal{T}_A$는 다음의 식
 
 $$\mathcal{T}_A=\{U\cap A: U\in\mathcal{T}\}$$
 
@@ -97,9 +97,9 @@ $A$는 $A$에서 $x$의 근방이므로 한쪽 방향은 자명하다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 위상공간 $X$와 부분집합들 $A\subseteq B\subseteq X$를 생각하자. 그럼 $B$에 대한 $A$의 closure $\operatorname{cl}_BA$는 
+<ins id="pp5">**명제 5**</ins> 위상공간 $X$와 부분집합들 $A\subseteq B\subseteq X$를 생각하자. 그럼 $B$에 대한 $A$의 closure $\cl_BA$는 
 
-$$\operatorname{cl}_BA=B\cap\operatorname{cl}_XA$$
+$$\cl_BA=B\cap\cl_XA$$
 
 와 같다.
 
@@ -107,21 +107,21 @@ $$\operatorname{cl}_BA=B\cap\operatorname{cl}_XA$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $x\in B$에 대하여, $x$의 $B$에서의 근방은 항상 $x$의 $X$에서의 적당한 근방 $V$에 대하여 $V\cap B$의 형태로 쓰여진다. 이제 $V\cap A=(V\cap B)\cap A$와 [§집합의 내부, 폐포, 경계, 명제 6](/ko/math/topology/other_concepts#pp6)을 사용하면 원하는 결과를 얻는다.
+임의의 $x\in B$에 대하여, $x$의 $B$에서의 근방은 항상 $x$의 $X$에서의 적당한 근방 $V$에 대하여 $V\cap B$의 형태로 쓰여진다. 이제 $V\cap A=(V\cap B)\cap A$와 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#pp6)을 사용하면 원하는 결과를 얻는다.
 
 </details>
 
 따라서 $A\subseteq B\subseteq X$에 대하여, $A$가 $B$의 dense subset인 것은
 
-$$B=\operatorname{cl}_BA=B\cap\operatorname{cl}_XA$$
+$$B=\cl_BA=B\cap\cl_XA$$
 
-인 것과 동치이고, 다시 이로부터 $B\subseteq\operatorname{cl}_XA$인 것과 동치임을 알 수 있다. 
+인 것과 동치이고, 다시 이로부터 $B\subseteq\cl_XA$인 것과 동치임을 알 수 있다. 
 
 <div class="proposition" markdown="1">
 
 <ins id="pp6">**명제 6**</ins> 위상공간 $X$와, $X$의 부분집합들 $(A\_i)\_{i\in I}$가 주어졌다 하고, 다음 두 조건 중 하나가 성립한다 하자.
 
-1. $X=\bigcup_{i\in I}\operatorname{int}(A_i)$가 성립하거나,
+1. $X=\bigcup_{i\in I}\interior(A_i)$가 성립하거나,
 2. $(A\_i)\_{i\in I}$가 $X$의 locally finite, closed covering이다.
 
 그럼 $X$의 임의의 부분집합 $B$가 $X$에서 열린집합 (resp. 닫힌집합)인 것은 모든 $A_i$에 대하여 $B\cap A\_i$가 $A\_i$에서 열린집합 (resp. 닫힌집합)인 것과 동치이다.
@@ -136,18 +136,18 @@ $$X\setminus B\cap A_i=A_i\setminus (B\cap A_i)$$
 
 으로부터, 이 명제는 열린집합 혹은 닫힌집합 중 하나에 대해서만 보이면 충분하다. 또, $B$가 $X$에서 열린집합이라면 $B\cap A\_i$가 $A\_i$에서 열린집합인 것은 정의이므로, 이 명제의 핵심은 반대방향이다. 
 
-1. $(A\_i)$들이 첫 번째 조건을 만족한다 하고, $B\cap A\_i$가 $A\_i$에서 열린집합임을 가정하자. $A\_i$를 전체집합으로 보고, $\operatorname{int}A\_i$를 부분공간으로 본다면 이로부터 $B\cap\operatorname{int}A\_i$가 $\operatorname{int}A\_i$에서 열린집합임을 안다. 이제 $\operatorname{int}A\_i$는 열린집합이므로, [보조정리 2](#lem2)를 적용하면 $B\cap\operatorname{int}A\_i$는 $X$에서 열린집합임을 안다. 따라서 
+1. $(A\_i)$들이 첫 번째 조건을 만족한다 하고, $B\cap A\_i$가 $A\_i$에서 열린집합임을 가정하자. $A\_i$를 전체집합으로 보고, $\interior A\_i$를 부분공간으로 본다면 이로부터 $B\cap\interior A\_i$가 $\interior A\_i$에서 열린집합임을 안다. 이제 $\interior A\_i$는 열린집합이므로, [보조정리 2](#lem2)를 적용하면 $B\cap\interior A\_i$는 $X$에서 열린집합임을 안다. 따라서 
     
-    $$B=B\cap X=B\cap\left(\bigcup_{i\in I} \operatorname{int}A_i\right)=\bigcup_{i\in I}(B\cap\operatorname{int}A_i)$$
+    $$B=B\cap X=B\cap\left(\bigcup_{i\in I} \interior A_i\right)=\bigcup_{i\in I}(B\cap\interior A_i)$$
     
     으로부터 $B$는 열린집합임을 안다.
-2. 이제 $(A\_i)$가 두 번째 조건을 만족한다 하자. 이번에는 $B\cap A\_i$들이 모두 $A\_i$에서 닫힌집합임을 가정한다. 그럼 $B\cap A\_i$는 [보조정리 3](#lem3)에 의하여 $X$에서 닫힌 집합이다. 이제 $(B\cap A\_i)$는 locally finite인 닫힌집합들의 모임이며, $B=\bigcup (B\cap A\_i)$이므로 [§집합의 내부, 폐포, 경계, 명제 4](/ko/math/topology/other_concepts#pp4)에 의하여 $B$는 닫힌집합이다.
+2. 이제 $(A\_i)$가 두 번째 조건을 만족한다 하자. 이번에는 $B\cap A\_i$들이 모두 $A\_i$에서 닫힌집합임을 가정한다. 그럼 $B\cap A\_i$는 [보조정리 3](#lem3)에 의하여 $X$에서 닫힌 집합이다. 이제 $(B\cap A\_i)$는 locally finite인 닫힌집합들의 모임이며, $B=\bigcup (B\cap A\_i)$이므로 [§집합의 내부, 폐포, 경계, ⁋명제 4](/ko/math/topology/other_concepts#pp4)에 의하여 $B$는 닫힌집합이다.
 
 </details>
 
 ## 부분공간과 연속함수
 
-위상공간 $X,Y$와 함수 $f:X\rightarrow Y$가 주어졌다 하자. 그럼 $f(X)\subseteq B\subseteq Y$를 만족하는 집합 $Y$에 대하여, $f$의 공역을 $B$로 제한하여 얻어진 함수는 연속이다. 이는 [정의 1](#df1)과 [§Initial topology와 final topology<sup>†</sup>, 명제 3](/ko/math/topology/initial_and_final_topology#pp3)에 의하여 자명하다.
+위상공간 $X,Y$와 함수 $f:X\rightarrow Y$가 주어졌다 하자. 그럼 $f(X)\subseteq B\subseteq Y$를 만족하는 집합 $Y$에 대하여, $f$의 공역을 $B$로 제한하여 얻어진 함수는 연속이다. 이는 [정의 1](#df1)과 [§Initial topology와 final topology<sup>†</sup>, ⁋명제 3](/ko/math/topology/initial_and_final_topology#pp3)에 의하여 자명하다.
 
 이번에는 위와 같은 상황에서, $X$의 부분집합 $A$가 주어졌다 하자. 그럼 $f:X\rightarrow Y$를 $A$로 제한한 함수 $f\|\_A$는 $\iota:A\hookrightarrow X$에 대하여 $f\circ\iota$와 같다. 이는 연속함수 둘의 합성이므로 자명하게 $f\|\_A$ 또한 연속임을 확인할 수 있다. 그러나 일반적으로 그 역은 성립하지 않는다. 
 

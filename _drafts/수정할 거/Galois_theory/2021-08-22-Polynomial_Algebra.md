@@ -40,10 +40,10 @@ $$f(X)=a_dX^d+a_{d-1}X^{d-1}+\cdots+a_1X+a_0$$
 
 $$f(X)=\sum_{n\in\mathbb{N}} a_nX^n$$
 
-의 꼴이라 할 수도 있을 것이다. 그럼, 우리는 집합 $\operatorname{supp}(a\_n)\_{n\in\mathbb{N}}$의 maximal element $d$를 $f(X)$의 *degree*라 하고, $a\_dX^d$를 leading term, $a_d$를 leading coefficient라 부른다. Leading coefficient가 $1$이라면, 이 다항식 $f$를 monic polynomial이라 부른다. 우리는 $f(X)$를 이루는 각각의 $a\_nX^n$를 degree $n$짜리 *term*이라 부르고, 하나의 term만으로 이루어진 다항식들 $X^n$들은 각각 degree $n$의 *monomial*들이라 부른다. 
+의 꼴이라 할 수도 있을 것이다. 그럼, 우리는 집합 $\supp(a\_n)\_{n\in\mathbb{N}}$의 maximal element $d$를 $f(X)$의 *degree*라 하고, $a\_dX^d$를 leading term, $a_d$를 leading coefficient라 부른다. Leading coefficient가 $1$이라면, 이 다항식 $f$를 monic polynomial이라 부른다. 우리는 $f(X)$를 이루는 각각의 $a\_nX^n$를 degree $n$짜리 *term*이라 부르고, 하나의 term만으로 이루어진 다항식들 $X^n$들은 각각 degree $n$의 *monomial*들이라 부른다. 
 
 더 일반적으로, variable들의 family $(X\_i)\_{i\in I}$가 주어졌다 하고, 이들에 의해 generate된 free $R$-algebra $R[X]$를 생각히자. 이 $R$-algebra의 모든 원소들을 표현하려면 다음과 같은 multi-index notation을 먼저 도입하는 편이 좋다.  
-$\mathbb{N}^{(I)}$를 $\operatorname{supp}(\alpha\_i)\_{i\in I}$가 finite인 자연수 수열들의 모임이라 하자. 수열 $\alpha=(\alpha_i)\_{i\in I}\in\mathbb{N}^{(I)}$에 대하여, 다음의 식
+$\mathbb{N}^{(I)}$를 $\supp(\alpha\_i)\_{i\in I}$가 finite인 자연수 수열들의 모임이라 하자. 수열 $\alpha=(\alpha_i)\_{i\in I}\in\mathbb{N}^{(I)}$에 대하여, 다음의 식
 
 $$X^\alpha=\prod_{i\in I}X_i^{\alpha_i}$$
 
@@ -51,7 +51,7 @@ $$X^\alpha=\prod_{i\in I}X_i^{\alpha_i}$$
 
 $$f(X)=\sum_{\lvert\alpha\rvert=0}^\infty a_\alpha X^\alpha$$
 
-의 꼴로 나타낼 수 있다. 물론 single-variable polynomial때와 마찬가지로, $(a\_\alpha)\_{\lvert\alpha\rvert\in\mathbb{N}}$은 finitely supported이다. 우리는 $X^\alpha$를 degree $\alpha$의 monomial이라 부르기로 하였으므로,  $a\_\alpha X^\alpha$는 degree $\alpha$짜리 term이라 부르면 적절할 것이다. 또, $f(X)$의 degree $\deg f$는 $\operatorname{supp}(a\_\alpha)\_{\lvert\alpha\rvert\in\mathbb{N}}$의 원소들 중 최대의 degree로 정의된다. 
+의 꼴로 나타낼 수 있다. 물론 single-variable polynomial때와 마찬가지로, $(a\_\alpha)\_{\lvert\alpha\rvert\in\mathbb{N}}$은 finitely supported이다. 우리는 $X^\alpha$를 degree $\alpha$의 monomial이라 부르기로 하였으므로,  $a\_\alpha X^\alpha$는 degree $\alpha$짜리 term이라 부르면 적절할 것이다. 또, $f(X)$의 degree $\deg f$는 $\supp(a\_\alpha)\_{\lvert\alpha\rvert\in\mathbb{N}}$의 원소들 중 최대의 degree로 정의된다. 
 
 다음의 사실은 자명하다.
 
@@ -225,11 +225,11 @@ $$(fg)'=f'g+fg'.$$
 1. $D$는 $R$에서 $M$으로의 additive map이다 (즉, $R$, $M$의 underlying group structure들 간의 group homomorphism이다)
 2. $D$는 Leibniz rule을 만족한다. 즉, $D(ab)=aD(b)+bD(a)$가 성립한다. 
 
-을 만족하는 map $D$이다. $R$에서 $M$으로의 모든 derivation들을 모아둔 집합을 $\operatorname{Der}(R, M)$이라 적는다.
+을 만족하는 map $D$이다. $R$에서 $M$으로의 모든 derivation들을 모아둔 집합을 $\Der(R, M)$이라 적는다.
 
 </div>
 
-$\operatorname{Der}(R,M)$은 $\operatorname{Hom}(R, M)$에서 자연스럽게 물려받은 $R$-module structure를 갖는다.
+$\Der(R,M)$은 $\Hom(R, M)$에서 자연스럽게 물려받은 $R$-module structure를 갖는다.
 
 한편, 임의의 derivation $D$에 대하여 $D^{-1}(0)$은 $R$의 subring이다. 만일 $a, b\in D^{-1}(0)$이라면  $D(a+b)=0$인 것은 $D$의 linearity로부터 자명하고, 또 $D(ab)=aD(b)+bD(a)=a0+b0=0$이기 때문이다. 특히, 
 
@@ -249,7 +249,7 @@ $$D(1)=D(1\cdot1)=1D(1)+1D(1)$$
 2. $D$는 Leibniz rule을 만족한다. 즉, $D(ab)=aD(b)+bD(a)$가 성립한다.
 3. 임의의 $r\in R$에 대하여, $D(r\cdot 1)=0$이 항상 성립한다.
 
-을 만족하는 map $D$이다. 이러한 $R$-derivation들의 모임을 $\operatorname{Der}_R(A, M)$으로 쓰고, 만일 $M=A$라면 간단히 $\operatorname{Der}_R(A)$로 적는다. 
+을 만족하는 map $D$이다. 이러한 $R$-derivation들의 모임을 $\Der_R(A, M)$으로 쓰고, 만일 $M=A$라면 간단히 $\Der_R(A)$로 적는다. 
 </div>
 
 우선 지금까지의 construction만으로도 이 페이지에서의 내용은 충분히 커버할 수 있다. Leibniz rule에 의해, 
@@ -276,7 +276,7 @@ Commutative, associative unital $R$-algebra $A$가 주어졌을 때, 어떤 $A$-
 $$\epsilon(a\otimes a')=aa',\qquad \lambda_1(a)=a\otimes 1,\qquad\lambda_2(a)=1\otimes a$$
 
 으로 정의할 수 있다. 우선 $A$에서 $B$로 가는 map (편의상 $\lambda_1$로 고정하자)이 주어졌으므로, $B$는 자연스럽게 $A$-algebra structure를 갖는다. 즉 임의의 $a\in A$에 대해, $B$의 임의의 원소와의 scalar multiplication을 $a\cdot b=\lambda_1(a)b$으로 정의한다. 한편, $B$의 ideal $\ker\epsilon=I$라 하면, $I/I^2$이 잘 정의된다. 그런데 $I$와 $I^2$은 모두 $A$-module로 생각할 수도 있으므로, $I/I^2$ 또한 $A$-module이 된다. 이를 $\Omega_R(A)$로 적자.  
-이제 $d:A\rightarrow \Omega_R(A)$를 정의해야 한다. 우선 $\epsilon\lambda_1=\epsilon\lambda_2=\operatorname{id}_A$이므로, $\epsilon(\lambda_2-\lambda_1):A\rightarrow A$는 zero map이고, 특히 $d^*=\lambda_2-\lambda_1$의 image가 $\ker\epsilon=I$에 포함된다. 따라서 canonical surjection $p:B\rightarrow B/I^2$에 대하여, $pd^\*$는 $A$에서 $\Omega_R(A)$로의 map이 된다. 물론 $d=pd^\*$가 derivation이 된다는 것은 보여야 한다. 이를 위해 임의의 $a,b\in A$가 주어졌다 하자. 우선 $d^\*(a)$, $d^\*(b)\in I$이므로, $d^\*(a)d^\*(b)=0\pmod I$이고, 따라서
+이제 $d:A\rightarrow \Omega_R(A)$를 정의해야 한다. 우선 $\epsilon\lambda_1=\epsilon\lambda_2=\id_A$이므로, $\epsilon(\lambda_2-\lambda_1):A\rightarrow A$는 zero map이고, 특히 $d^*=\lambda_2-\lambda_1$의 image가 $\ker\epsilon=I$에 포함된다. 따라서 canonical surjection $p:B\rightarrow B/I^2$에 대하여, $pd^\*$는 $A$에서 $\Omega_R(A)$로의 map이 된다. 물론 $d=pd^\*$가 derivation이 된다는 것은 보여야 한다. 이를 위해 임의의 $a,b\in A$가 주어졌다 하자. 우선 $d^\*(a)$, $d^\*(b)\in I$이므로, $d^\*(a)d^\*(b)=0\pmod I$이고, 따라서
 
 $$\begin{aligned}
 d^*(a)d^*(b)&=(1\otimes a-a\otimes 1)(1\otimes b-b\otimes 1)\\
@@ -401,17 +401,17 @@ $$(a_1\otimes l_1)\otimes(a_2\otimes l_2)\mapsto (a_1\otimes l_1)(a_2\otimes l_2
 
 으로 정의하면 임의의 $(a_1\otimes l_1), (a_2\otimes l_2)\in A_{(L)}\otimes_LA_{(L)}$에 대하여
 
-$$(\epsilon\otimes\operatorname{id}_L)((a_1\otimes a_2)\otimes l_1l_2)=(a_1a_2)\otimes(l_1l_2)=\epsilon_{(L)}((a_1\otimes l_1)\otimes(a_2\otimes l_2))$$
+$$(\epsilon\otimes\id_L)((a_1\otimes a_2)\otimes l_1l_2)=(a_1a_2)\otimes(l_1l_2)=\epsilon_{(L)}((a_1\otimes l_1)\otimes(a_2\otimes l_2))$$
 
 이고, 또 임의의 $(a_1\otimes a_2)\otimes l\in (A\otimes_KA)\otimes_KL$에 대하여
 
-$$\epsilon_{(L)}((a_1\otimes l)\otimes(a_2\otimes 1))=(a_1a_2)\otimes l=(\epsilon\otimes\operatorname{id}_L)((a_1\otimes a_2)\otimes l)$$
+$$\epsilon_{(L)}((a_1\otimes l)\otimes(a_2\otimes 1))=(a_1a_2)\otimes l=(\epsilon\otimes\id_L)((a_1\otimes a_2)\otimes l)$$
 
 이 성립한다. 즉, 다음의 diagram이 commute한다.
 
 ![elements]({{ site.url }}{{ site.baseurl }}/assets/images/<#name#>.png){:width="250px"  class="invert" .align-center}
 
-따라서 위의 isomorphism에 의하여, $\ker(\epsilon\otimes\operatorname{id}\_L)=I\otimes_KL$과 $I_{(L)}=\ker(\epsilon_{(L)})$을 identify할 수 있다. 
+따라서 위의 isomorphism에 의하여, $\ker(\epsilon\otimes\id\_L)=I\otimes_KL$과 $I_{(L)}=\ker(\epsilon_{(L)})$을 identify할 수 있다. 
 
 </details>
 
@@ -428,15 +428,15 @@ $$\Omega_K(A)\otimes_AB\overset{v}{\longrightarrow}\Omega_K(B)\overset{u}{\longr
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선, $\Omega_A(B)$의 임의의 원소는 $db$들의 $B$-linear combination으로 표현되므로 $u$가 surjective인 것은 자명하다. 또, $d\psi(a)=0$이므로, $uv=0$이다. 따라서 $\ker u\subset\operatorname{im}v$인 것만 보이면 된다. 주어진 sequence에 $\operatorname{Hom}_B(-, T)$를 적용하면
+우선, $\Omega_A(B)$의 임의의 원소는 $db$들의 $B$-linear combination으로 표현되므로 $u$가 surjective인 것은 자명하다. 또, $d\psi(a)=0$이므로, $uv=0$이다. 따라서 $\ker u\subset\imv$인 것만 보이면 된다. 주어진 sequence에 $\Hom_B(-, T)$를 적용하면
 
-$$0\longrightarrow\operatorname{Hom}_B(\Omega_A(B),T)\longrightarrow\operatorname{Hom}_B(\Omega_K(B),T)\longrightarrow\operatorname{Hom}_B(\Omega_K(A)\otimes_A B,T)$$
+$$0\longrightarrow\Hom_B(\Omega_A(B),T)\longrightarrow\Hom_B(\Omega_K(B),T)\longrightarrow\Hom_B(\Omega_K(A)\otimes_A B,T)$$
 
 를 얻는다. 그런데, 
 
-$$\operatorname{Hom}_B(\Omega_K(A)\otimes_AB,T)\cong\operatorname{Hom}_A(\Omega_K(A),T)\cong\operatorname{Der}_K(A,T)$$
+$$\Hom_B(\Omega_K(A)\otimes_AB,T)\cong\Hom_A(\Omega_K(A),T)\cong\Der_K(A,T)$$
 
-이고, 비슷하게 $\operatorname{Hom}_B(\Omega_K(B),T)\cong\operatorname{Der}_K(B,T)$ 그리고 $\operatorname{Hom}_B(\Omega_A(B), T)\cong\operatorname{Der}_A(B,T)$를 얻는다. 그런데 $\operatorname{Der}_A(B,T)\rightarrow\operatorname{Der}_K(B,T)$는 정의에 의해 $A$에서 vanish하고, 이는 또 정확히 $\operatorname{Der}_K(B,T)\rightarrow\operatorname{Der}_K(A,T)$의 kernel이다. 따라서 원래의 sequence가 exact가 된다.
+이고, 비슷하게 $\Hom_B(\Omega_K(B),T)\cong\Der_K(B,T)$ 그리고 $\Hom_B(\Omega_A(B), T)\cong\Der_A(B,T)$를 얻는다. 그런데 $\Der_A(B,T)\rightarrow\Der_K(B,T)$는 정의에 의해 $A$에서 vanish하고, 이는 또 정확히 $\Der_K(B,T)\rightarrow\Der_K(A,T)$의 kernel이다. 따라서 원래의 sequence가 exact가 된다.
 
 </details>
 

@@ -97,7 +97,7 @@ weight: 13
 1. 만일 $(A\_i)\_{i\in I}$가 $R$-saturated인 부분집합들의 family라면, $\bigcup\_{i\in I} A_i$와 $\bigcap\_{i\in I} A_i$도 마찬가지다.
 2. $X\subseteq A$가 $R$-saturated라면 $A\setminus X$도 그러하다..
 
-이번에는 canonical projection $p:A\rightarrow A/R$와 $X\subseteq A$를 생각하자. [§이항관계의 연산, 명제 7](/ko/math/set_theory/operation_of_binary_relations#pp7)에 의하여 
+이번에는 canonical projection $p:A\rightarrow A/R$와 $X\subseteq A$를 생각하자. [§이항관계의 연산, ⁋명제 7](/ko/math/set_theory/operation_of_binary_relations#pp7)에 의하여 
 
 $$p^{-1}(p(X))\supseteq X$$
 
@@ -125,7 +125,7 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 
 </div>
 
-즉, $f$가 $R$과 compatible하려면 $f$는 각각의 equivalence class로 제한하였을 때 상수함수가 되어야 한다. 이제 [§Retraction과 section, 명제 4](/ko/math/set_theory/retraction_and_section#pp4)를 적용하면 다음을 얻는다.
+즉, $f$가 $R$과 compatible하려면 $f$는 각각의 equivalence class로 제한하였을 때 상수함수가 되어야 한다. 이제 [§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#pp4)를 적용하면 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
@@ -165,7 +165,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 ## 동치관계의 quotient
 
-다음 정의는 이미 [§동치관계, 예시 5](/ko/math/set_theory/equivalence_relation#ex5)에서 언급했던 것이다.
+다음 정의는 이미 [§동치관계, ⁋예시 5](/ko/math/set_theory/equivalence_relations#ex5)에서 언급했던 것이다.
 
 <div class="definition" markdown="1">
 
@@ -177,7 +177,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 ![third_iso_1](/assets/images/Set_theory/Examples_of_equivalence-6.png){:width="171.3px"  class="invert" .align-center}
 
-그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 $p_R=h\circ p_S$이도록 하는 유일한 $h:A/S \rightarrow A/R$이 존재한다. ([§Retraction과 section, 명제 4](/ko/math/set_theory/retraction_and_section#pp4)) 이 때, $h$가 $A/S$ 위에 정의하는 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. Canonical decomposition을 거치면
+그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 $p_R=h\circ p_S$이도록 하는 유일한 $h:A/S \rightarrow A/R$이 존재한다. ([§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#pp4)) 이 때, $h$가 $A/S$ 위에 정의하는 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. Canonical decomposition을 거치면
 
 ![third_iso_2](/assets/images/Set_theory/Examples_of_equivalence-7.png){:width="368.25px"  class="invert" .align-center}
 
@@ -202,7 +202,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 $$\begin{aligned}u\sim_{\tiny S}v&\iff (f\times f')(u)=(f\times f')(v)\iff (f(x),f'(x')=(f(y),f'(y'))\\
 &\iff (f(x)=f(y))\wedge(f'(x')=f'(y'))\iff (x\sim_{\tiny R}y)\wedge(x'\sim_{\tiny R'}y')\\&\iff u\sim_{\tiny R\times R'}v\end{aligned}$$
 
-이므로 $S=R\times R'$이다. 이 때 $f\times f'$에 의한 $A\times A'$의 상은 $f(A)\times f'(A')$와 같으므로, $f\times f'$의 canonical decomposition을 생각하면 $(A\times A')/(R\times R')$과 $f(A)\times f'(A')$ 사이의 전단사함수가 존재한다.
+이므로 $S=R\times R'$이다. 이 때 $f\times f'$에 의한 $A\times A'$의 image는 $f(A)\times f'(A')$와 같으므로, $f\times f'$의 canonical decomposition을 생각하면 $(A\times A')/(R\times R')$과 $f(A)\times f'(A')$ 사이의 전단사함수가 존재한다.
 
 ![canonical_bijection_between_product](/assets/images/Set_theory/Examples_of_equivalence-8.png){:width="523.5px" class="invert" .align-center}
 

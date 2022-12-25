@@ -101,19 +101,19 @@ $$f(x\star y)=f(x)\star'f(y)$$
 
 을 모든 $x$, $y\in A$에 대해 만족한다면, 이 함수 $f$를 *homomorphism<sub>준동형사상</sub>*, 강조가 필요할 때는 *magma homomorphism<sub>마그마 준동형사상</sub>*이라 부른다. 만약 또 다른 homomorphism $g:A'\rightarrow A$가 존재하여 
 
-$$g\circ f=\operatorname{id}_A,\qquad f\circ g=\operatorname{id}_{A'}$$
+$$g\circ f=\id_A,\qquad f\circ g=\id_{A'}$$
 
 가 성립한다면, $f$와 $g$가 서로의 *역<sub>inverse</sub>*이라 부르고, $f$와 $g$를 *isomorphism<sub>동형사상</sub>*이라 부른다. 이 때, $A$와 $A'$는 *isomorphic<sub>동형</sub>*하다고 부르고, 기호로 $A\cong A'$와 같이 표기한다.
 
 </div>
 
-대수학에서는 $f$의 상을 $f(A)$ 대신 $\operatorname{im}f$와 같이 적는 것이 보통이다. 
+대수학에서는 $f$의 image를  $f(A)$ 대신 $\im f$와 같이 적는 것이 보통이다. 
 
-임의의 $w,z\in\operatorname{im}f$를 택하자. 그럼 어떤 $x,y\in A$가 존재하여 $w=f(x)$이고, $z=f(y)$이다. 이제
+임의의 $w,z\in\im f$를 택하자. 그럼 어떤 $x,y\in A$가 존재하여 $w=f(x)$이고, $z=f(y)$이다. 이제
 
 $$w\star'z=f(x)\star'f(y)=f(x\star y)$$
 
-이고, $x\star y\in A$이므로, $w\star'z\in\operatorname{im}f$가 성립한다.
+이고, $x\star y\in A$이므로, $w\star'z\in\im f$가 성립한다.
 
 이와 같이 연산에 대해 닫혀있는 마그마의 부분집합을 다음과 같이 정의한다.
 
@@ -150,7 +150,7 @@ $$x\equiv x'\implies x\star a\equiv x'\star a$$
 
 물론 위의 식에서 $\equiv$는 항상 관계 $R$에 대한 것을 뜻한다.
 
-$R$이 동치관계라면 집합으로써 *몫집합* $A/R$이 잘 정의된다는 것은 이미 집합론에서 살펴본 적이 있다. ([집합론, §동치관계, 정의 4](/ko/math/set_theory/equivalence_relations#df4)) 집합 $A/R$ 위의 연산 $\tiny\char\"2606$을 정의하기 위한 가장 자연스러운 시도는
+$R$이 동치관계라면 집합으로써 *몫집합* $A/R$이 잘 정의된다는 것은 이미 집합론에서 살펴본 적이 있다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#df4)) 집합 $A/R$ 위의 연산 $\tiny\char\"2606$을 정의하기 위한 가장 자연스러운 시도는
 
 $$[x]\mathbin{\tiny\char"2606}[y]=[x\star y]$$
 

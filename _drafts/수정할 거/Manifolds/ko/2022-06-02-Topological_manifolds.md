@@ -19,7 +19,7 @@ weight: 1
 
 ## 표기법
 
-앞으로 $m$차원의 좌표계를 다룰 일이 많으므로 다음과 같이 표기법을 고정하기로 한다. $\mathbb{R}^m$에 대하여, $i$번째 projection $\operatorname{pr}_i$를 $r^i$로 표기한다. 비슷하게, 임의의 집합 $X$와 함수 $f:X\rightarrow\mathbb{R}^m$에 대하여, $f$의 $i$번째 *성분함수*는 식 $f^i=r^i\circ f$으로 정의된다. 
+앞으로 $m$차원의 좌표계를 다룰 일이 많으므로 다음과 같이 표기법을 고정하기로 한다. $\mathbb{R}^m$에 대하여, $i$번째 projection $\pr_i$를 $r^i$로 표기한다. 비슷하게, 임의의 집합 $X$와 함수 $f:X\rightarrow\mathbb{R}^m$에 대하여, $f$의 $i$번째 *성분함수*는 식 $f^i=r^i\circ f$으로 정의된다. 
 
 이제 함수 $f$가 $\mathbb{R}^m$에서 $\mathbb{R}$로의 함수라 하자. 그럼 $f$의 $i$번째 성분에 대한 편미분을 다음의 식
 
@@ -107,7 +107,7 @@ $$X\setminus C=X\setminus\bigcup_{i\in I} C_i= \bigcap_{i\in I} (X\setminus C_i)
 
 1. 임의의 $p\in M$에 대하여, $p$를 포함하는 적절한 열린집합 $U$는 $\varphi:U\rightarrow U'$에 의해 $\mathbb{R}^m$의 열린집합 $U'$와 homeomorphic하다. 이제 $B(\varphi(p),\epsilon)\subseteq U'$를 만족하는 적절한 $\epsilon>0$을 잡으면, 두 집합
 
-    $$V'=B(\varphi(p),\epsilon/2),\qquad K'=\operatorname{cl}V$$
+    $$V'=B(\varphi(p),\epsilon/2),\qquad K'=\clV$$
 
     가 정의되며, $V'$는 열린집합, $K'$는 compact이다.  
 
@@ -115,7 +115,7 @@ $$X\setminus C=X\setminus\bigcup_{i\in I} C_i= \bigcap_{i\in I} (X\setminus C_i)
 
     $$V=\bigcup_{\substack{B\in\mathcal{B}\\B\subseteq V}}B$$
 
-    로 쓸 수 있는데, 우변의 합집합의 조건을 만족하는 $B$는 $B\subseteq V\subseteq K$를 만족하므로, $\operatorname{cl}B\subseteq K$이고 따라서 relatively compact가 되어 $\\{U_i\\}$에 속한다. 즉, 임의의 $p\in M$에 대하여 $p\in U_i$이도록 하는 적절한 $i$가 존재한다.
+    로 쓸 수 있는데, 우변의 합집합의 조건을 만족하는 $B$는 $B\subseteq V\subseteq K$를 만족하므로, $\clB\subseteq K$이고 따라서 relatively compact가 되어 $\\{U_i\\}$에 속한다. 즉, 임의의 $p\in M$에 대하여 $p\in U_i$이도록 하는 적절한 $i$가 존재한다.
 
 2. 비슷하게, 임의의 $U_i,U_j$에 대하여 $p\in U_i\cap U_j$라 하자. 그럼 1번에서 만든 것과 동일하게 열린집합 $V_i,V_j$와 compact set들 $K_i$, $K_j$를 만들 수 있다. 이제 $V_i\cap V_j$를 $\mathcal{B}$의 원소들의 합집합으로 표현하면 $V_i\cap V_j\subseteq K_i\cap K_j$이므로 다시
     
@@ -131,12 +131,12 @@ $$G_k=U_1\cup\cdots\cup U_{j_k}$$
 
 가 정의되었다 하자. 귀납적으로 $j_{k+1}$을 
 
-$$\operatorname{cl} G_k\subset\bigcup_{i=1}^{j_{k+1}} U_i$$
+$$\cl G_k\subset\bigcup_{i=1}^{j_{k+1}} U_i$$
 
-가 성립하고, $j_k$보다 큰 정수 중 가장 작은 것으로 두면 $\\{G_k\\}$는 열린집합들의 ascending chain이고 $\\{\operatorname{cl}G_k\\}$는 exhaustion이다. (<#ref#>)
+가 성립하고, $j_k$보다 큰 정수 중 가장 작은 것으로 두면 $\\{G_k\\}$는 열린집합들의 ascending chain이고 $\\{\clG_k\\}$는 exhaustion이다. (<#ref#>)
 
-이를 이용해 $M$이 paracompact임을 보일 수 있다. $\\{V_\alpha\\}\_{\alpha\in\Lambda}$가 임의의 open covering이라 하자. 각각의 $i$에 대하여, $\operatorname{cl}(G_i)\setminus G_{i-1}$은 집합 $G_{i+1}\setminus\operatorname{cl}(G_{i-2})$에 포함된 compact set이다. 이제 $\\{V_\alpha\\}$의 open refinement $\\{V\_\alpha\cap(G_{i+1}\setminus\operatorname{cl}(G_{i-2}))\\}$는 compact set $\operatorname{cl}(G_i)\setminus G_{i-1}$의 open covering으로서, finite subcover를 가진다. 또, 비슷하게 index가 작은 $\operatorname{cl}(G_2)\subseteq G_3$의 경우에도 $\operatorname{cl}G_2$를 덮는 유한한 $\\{V\_\alpha\cap G\_3\\}$의 subcover를 생각할 수 있다.  
-이렇게 만든 subcover들의 모임이 $\\{V_\alpha\\}$의 open refinement가 되는 것은 자명하다. 또, 이 모임은 countable한 compact set $\operatorname{cl}(G_i)\setminus G_{i-1}$마다 유한히 많은 원소들을 모아서 만들어진 모임이므로 자연스럽게 countable이다. 임의의 점 $p\in M$은 정확히 하나의 $\operatorname{cl}(G_i)\setminus G_{i-1}$에만 포함되므로 이 모임은 locally finite이고, 마지막으로 이 모임의 임의의 원소는 충분히 큰 $N$에 대하여 compact set $\operatorname{cl}G_N$의 부분집합이므로 relatively compact이다.
+이를 이용해 $M$이 paracompact임을 보일 수 있다. $\\{V_\alpha\\}\_{\alpha\in\Lambda}$가 임의의 open covering이라 하자. 각각의 $i$에 대하여, $\cl(G_i)\setminus G_{i-1}$은 집합 $G_{i+1}\setminus\cl(G_{i-2})$에 포함된 compact set이다. 이제 $\\{V_\alpha\\}$의 open refinement $\\{V\_\alpha\cap(G_{i+1}\setminus\cl(G_{i-2}))\\}$는 compact set $\cl(G_i)\setminus G_{i-1}$의 open covering으로서, finite subcover를 가진다. 또, 비슷하게 index가 작은 $\cl(G_2)\subseteq G_3$의 경우에도 $\clG_2$를 덮는 유한한 $\\{V\_\alpha\cap G\_3\\}$의 subcover를 생각할 수 있다.  
+이렇게 만든 subcover들의 모임이 $\\{V_\alpha\\}$의 open refinement가 되는 것은 자명하다. 또, 이 모임은 countable한 compact set $\cl(G_i)\setminus G_{i-1}$마다 유한히 많은 원소들을 모아서 만들어진 모임이므로 자연스럽게 countable이다. 임의의 점 $p\in M$은 정확히 하나의 $\cl(G_i)\setminus G_{i-1}$에만 포함되므로 이 모임은 locally finite이고, 마지막으로 이 모임의 임의의 원소는 충분히 큰 $N$에 대하여 compact set $\clG_N$의 부분집합이므로 relatively compact이다.
 
 </details>
 

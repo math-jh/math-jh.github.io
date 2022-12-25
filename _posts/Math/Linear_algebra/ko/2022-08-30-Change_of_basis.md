@@ -25,7 +25,7 @@ weight: 14
 
 <ins id="df1">**정의 1**</ins> 임의의 유한차원 $F$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *기저변환행렬<sub>change-of-basis matrix</sub>*은 
 
-$$[\operatorname{id}_V]_{\mathcal{B}'}^\mathcal{B}$$
+$$[\id_V]_{\mathcal{B}'}^\mathcal{B}$$
 
 를 의미한다.
 
@@ -33,7 +33,7 @@ $$[\operatorname{id}_V]_{\mathcal{B}'}^\mathcal{B}$$
 
 벡터공간의 차원이 잘 정의된다는 것으로부터 이러한 행렬은 반드시 정사각행렬이 되어야 한다는 것이 자명하다. 또, 다음의 식
 
-$$I=[\operatorname{id}_V]^{\mathcal{B}}_{\mathcal{B}}=[\operatorname{id}_V]_{\mathcal{B}}^{\mathcal{B}'}[\operatorname{id}_V]^\mathcal{B}_{\mathcal{B}'}$$
+$$I=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=[\id_V]_{\mathcal{B}}^{\mathcal{B}'}[\id_V]^\mathcal{B}_{\mathcal{B}'}$$
 
 으로부터 이러한 행렬은 항상 가역이라는 것을 알 수 있다.
 
@@ -43,7 +43,7 @@ Change-of-basis matrix가 어떤 방식으로 작동하는지를 살펴보기 �
 
 이 때 두 개의 수직방향 함수는 각각 $v\mapsto [v]\_\mathcal{B}$와 $v\mapsto[v]\_{\mathcal{B}'}$를 의미한다. 따라서 기저변환행렬은 $v\in V$의 $\mathcal{B}$에 대한 좌표표현을 받아, $\mathcal{B}'$에 대한 좌표표현으로 바꾸어주는 행렬이라 생각할 수 있다. 더 일반적으로 임의의 linear map $L:V\rightarrow W$가 주어졌다 하고, $V,W$의 basis $\mathcal{B},\mathcal{C}$, 그리고 또 다른 basis $\mathcal{B}',\mathcal{C}'$가 주어졌다 하면, 선형대수학의 기본정리로부터 다음의 식
 
-$$[L]_{\mathcal{C}'}^{\mathcal{B}'}=[\operatorname{id}_W]_{\mathcal{C}'}^\mathcal{C}[L]_{\mathcal{C}}^\mathcal{B}[\operatorname{id}_V]^{\mathcal{B}'}_{\mathcal{B}}$$
+$$[L]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_W]_{\mathcal{C}'}^\mathcal{C}[L]_{\mathcal{C}}^\mathcal{B}[\id_V]^{\mathcal{B}'}_{\mathcal{B}}$$
 
 를 얻는다.
 
@@ -53,7 +53,7 @@ $$B=PAQ$$
 
 를 만족한다면 $A$와 $B$를 같은 것으로 취급하고 싶은 유혹이 있다. 이는 고정된 linear map $L$이 주어졌을 때, $L$의 정의역과 공역의 basis를 잘 택하여 얻어지는 행렬표현들을 모두 같은 것으로 생각한다는 것이다. 
 
-그러나 이렇게 그럴듯한 동기에 비해 그 결과는 별로 좋지 않다. $L$의 정의역과 공역의 basis를 모두 변화시킬 수 있다면, 정의역의 임의의 basis $\\{x\_1,\ldots, x_n\\}$을 택하고, 이후 공역에서는 $L(x_1),\ldots, L(x_n)$들 중 일차독립인 $L(x_1),\ldots, L(x_k)$를 택한 후 [§벡터공간의 차원, 명제 6](/ko/math/linear_algebra/dimension#pp6)을 이용하여 공역의 basis를 만들면 이 linear map은 항상 블록행렬
+그러나 이렇게 그럴듯한 동기에 비해 그 결과는 별로 좋지 않다. $L$의 정의역과 공역의 basis를 모두 변화시킬 수 있다면, 정의역의 임의의 basis $\\{x\_1,\ldots, x_n\\}$을 택하고, 이후 공역에서는 $L(x_1),\ldots, L(x_n)$들 중 일차독립인 $L(x_1),\ldots, L(x_k)$를 택한 후 [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#pp6)을 이용하여 공역의 basis를 만들면 이 linear map은 항상 블록행렬
 
 $$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
 
@@ -69,7 +69,7 @@ $$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
 
 즉 행렬 $A,B$가 닮은 행렬이라는 것은, 고정된 벡터공간 $V$에 대해 $A$를 <em_ko>basis $\mathcal{B}$에 대한 선형변환 $L:V\rightarrow V$의 행렬표현</em_ko>이라 생각했을 때, 적당한 basis $\mathcal{C}$가 존재하여 $B$를 <em_ko>basis $\mathcal{C}$에 대한 $L$의 행렬표현</em_ko>이라 생각할 수 있는 것이다. 그럼 이 때 
 
-$$A=[L]_{\mathcal{B}}^\mathcal{B}=[\operatorname{id}_V]^\mathcal{B}_\mathcal{C}[L]^\mathcal{C}_\mathcal{C}[\operatorname{id}_V]^\mathcal{C}_\mathcal{B}=PBP^{-1}$$
+$$A=[L]_{\mathcal{B}}^\mathcal{B}=[\id_V]^\mathcal{B}_\mathcal{C}[L]^\mathcal{C}_\mathcal{C}[\id_V]^\mathcal{C}_\mathcal{B}=PBP^{-1}$$
 
 이 된다. 
 

@@ -31,13 +31,13 @@ published: false
 
 ## Monoid acting on a set
 
-집합 $E$가 주어졌다 하고, 집합 $\operatorname{Fun}(E,E)$를 생각하자. $\operatorname{Fun}(E,E)$는 자연스러운 monoid structure를 갖는다. ([§Introduction, 정의 16](/ko/math/groups/introduction#df16) 직후의 remark) 
+집합 $E$가 주어졌다 하고, 집합 $\Fun(E,E)$를 생각하자. $\Fun(E,E)$는 자연스러운 monoid structure를 갖는다. ([§Introduction, 정의 16](/ko/math/groups/introduction#df16) 직후의 remark) 
 
-$\operatorname{Fun}(E,E)$의 임의의 원소 $f$를 택하자. 그럼 $f$는 집합 $E$ 위의 함수이다. 즉, 임의의 $x\in E$에 대하여
+$\Fun(E,E)$의 임의의 원소 $f$를 택하자. 그럼 $f$는 집합 $E$ 위의 함수이다. 즉, 임의의 $x\in E$에 대하여
 
 $$x\mapsto f(x)$$
 
-라는 대응이 잘 정의된다. 뿐만 아니라 이 대응은 monoid structure를 잘 보존해준다. 즉, 임의의 $f,g\in \operatorname{Fun}(E,E)$에 대하여, $\operatorname{Fun}(E,E)$의 원소 $f\circ g$도 마찬가지로 함수가 될텐데, 이는
+라는 대응이 잘 정의된다. 뿐만 아니라 이 대응은 monoid structure를 잘 보존해준다. 즉, 임의의 $f,g\in \Fun(E,E)$에 대하여, $\Fun(E,E)$의 원소 $f\circ g$도 마찬가지로 함수가 될텐데, 이는
 
 $$x\mapsto (f\circ g)(x)$$
 
@@ -45,9 +45,9 @@ $$x\mapsto (f\circ g)(x)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Monoid $M$가 주어졌다 하자. $M$이 집합 $E$ 위에 *left monoid action*을 정의한다는 것은 각각의 $\alpha\in M$마다 $\operatorname{Fun}(E,E)$의 원소 $f_\alpha$가 하나씩 대응되어, 다음의 두 조건
+<ins id="df1">**정의 1**</ins> Monoid $M$가 주어졌다 하자. $M$이 집합 $E$ 위에 *left monoid action*을 정의한다는 것은 각각의 $\alpha\in M$마다 $\Fun(E,E)$의 원소 $f_\alpha$가 하나씩 대응되어, 다음의 두 조건
 
-1. $f_e=\operatorname{id}_E$,
+1. $f_e=\id_E$,
 2. 모든 $\alpha,\beta\in M$에 대해 $f_{\alpha\beta}=f_\alpha\circ f_\beta$ 
 
 을 만족하는 것이다. 이 때 $E$를 *left $M$-set*이라 부른다. 만일 2번 조건을 
@@ -60,17 +60,17 @@ $$x\mapsto (f\circ g)(x)$$
 
 </div>
 
-즉 $M$이 집합 $E$ 위에 left action을 정의한다는 것은 monoid homomorphism $\phi:M\rightarrow\operatorname{Fun}(E,E)$가 주어졌다는 것과 같다. 1번 조건은 정확히 $\phi(e)$가 $\operatorname{Fun}(E,E)$의 항등원이 되어야 한다는 조건이고, 2번 조건은 $\phi$가 monoid $M$의 연산을 잘 보존해야 한다는 뜻이기 때문이다. 
+즉 $M$이 집합 $E$ 위에 left action을 정의한다는 것은 monoid homomorphism $\phi:M\rightarrow\Fun(E,E)$가 주어졌다는 것과 같다. 1번 조건은 정확히 $\phi(e)$가 $\Fun(E,E)$의 항등원이 되어야 한다는 조건이고, 2번 조건은 $\phi$가 monoid $M$의 연산을 잘 보존해야 한다는 뜻이기 때문이다. 
 
 한편, group $G$가 집합 $E$ 위에 act할 경우, 임의의 $\alpha\in G$에 대하여 $\alpha\alpha^{-1}=\alpha^{-1}\alpha=e$인 원소 $\alpha^{-1}$이 존재하므로, 위의 조건들에 의하여 반드시
 
-$$f_\alpha\circ f_{\alpha^{-1}}=f_{\alpha\alpha^{-1}}=f_e=\operatorname{id}_E$$
+$$f_\alpha\circ f_{\alpha^{-1}}=f_{\alpha\alpha^{-1}}=f_e=\id_E$$
 
 그리고 유사하게 
 
-$$f_{\alpha^{-1}}\circ f_\alpha=f_{\alpha^{-1}\alpha}=f_e=\operatorname{id}_E$$
+$$f_{\alpha^{-1}}\circ f_\alpha=f_{\alpha^{-1}\alpha}=f_e=\id_E$$
 
-이 성립해야 한다. 그러므로 group action에서는 임의의 $\alpha$에 대응된 $f_\alpha$가 invertible하며, 그 inverse는 $f_{\alpha^{-1}}$과 같게 된다. 즉, 정의에서는 $f_\alpha$가 $\operatorname{Fun}(E,E)$의 원소라고 하였지만, group action의 경우는 $f_\alpha$가 $\operatorname{Fun}(E,E)$ 대신 그 부분집합인 *bijective*한 함수들의 모임에 속한다고 해도 된다. 이 모임은 자연스러운 *group structure* 구조를 가지며, 우리는 이를 $E$ 위에서 정의된 *symmetric group*이라 부르고 $S_E$로 적기로 했었다. ([§Examples, Symmetric group](/ko/math/groups/examples#symmetric-groups)) 
+이 성립해야 한다. 그러므로 group action에서는 임의의 $\alpha$에 대응된 $f_\alpha$가 invertible하며, 그 inverse는 $f_{\alpha^{-1}}$과 같게 된다. 즉, 정의에서는 $f_\alpha$가 $\Fun(E,E)$의 원소라고 하였지만, group action의 경우는 $f_\alpha$가 $\Fun(E,E)$ 대신 그 부분집합인 *bijective*한 함수들의 모임에 속한다고 해도 된다. 이 모임은 자연스러운 *group structure* 구조를 가지며, 우리는 이를 $E$ 위에서 정의된 *symmetric group*이라 부르고 $S_E$로 적기로 했었다. ([§Examples, Symmetric group](/ko/math/groups/examples#symmetric-groups)) 
 
 한편, 두 개의 $M$-set $E,F$가 주어졌다면, 이들 사이의 *$M$-set homomorphism*또한 쉽게 정의할 수 있다. 이는 정확히 다음의 식
 
@@ -97,7 +97,7 @@ $$s(k)=\begin{cases}0&\text{if $k=0$,}\\ n-k&\text{otherwise} \end{cases}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> 이번엔 고정된 field $F$에 대하여, $\operatorname{Mat}_n(F)$가 $F^n$ 위에 act하는 상황을 생각할 수 있다. 즉 임의의 $n\times n$ matrix
+<ins id="ex3">**예시 3**</ins> 이번엔 고정된 field $F$에 대하여, $\Mat_n(F)$가 $F^n$ 위에 act하는 상황을 생각할 수 있다. 즉 임의의 $n\times n$ matrix
 
 $$\begin{pmatrix}a_{11}&a_{12}&\ldots&a_{1n}\\a_{21}&a_{22}&\ldots&a_{2n}\\ \vdots&\vdots&\ddots&\vdots\\ a_{n1}&a_{n2}&\ldots&a_{nn}\end{pmatrix}$$
 
@@ -109,27 +109,27 @@ $$\begin{pmatrix}x_1\\ x_2\\ \vdots\\ x_n\end{pmatrix}\mapsto \begin{pmatrix}a_{
 
 </div>
 
-위의 예시들은 $D_{2n}$이나 $\operatorname{Mat}_n(F)$ 등이 자연스럽게 group action을 정의한다는 것을 보여준다. 사실 이들은 처음 정의할 때부터 집합 ($V$ 또는 $F^n$) 위의 함수들로 정의되었으니 당연한 결과이기도 하다. 
+위의 예시들은 $D_{2n}$이나 $\Mat_n(F)$ 등이 자연스럽게 group action을 정의한다는 것을 보여준다. 사실 이들은 처음 정의할 때부터 집합 ($V$ 또는 $F^n$) 위의 함수들로 정의되었으니 당연한 결과이기도 하다. 
 
 앞으로 어떤 monoid $M$이 집합 $E$ 위에 act할 때에는, $\alpha\in M$과 $x\in E$에 대해 정의된 값 $f_\alpha(x)$를 간단하게 $\alpha\cdot x$로 적거나, 더 간단하게는 $\alpha x$로도 적는다. 물론 right action의 경우에는 다른 notation $x\cdot\alpha$ 혹은 $x\alpha$이 필요하겠지만, 다음 정의에 의해 right action은 모두 left action으로 환원시켜 생각할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Monoid $(M,\star, e)$가 주어졌다 하자. 그럼 이 monoid $M$의 *opposite monoid* $M^\mathrm{op}$는 다음과 같이 정의된 연산
+<ins id="df4">**정의 4**</ins> Monoid $(M,\star, e)$가 주어졌다 하자. 그럼 이 monoid $M$의 *opposite monoid* $M^\op$는 다음과 같이 정의된 연산
 
-$$x\star^\mathrm{op} y=y\star x$$
+$$x\star^\op y=y\star x$$
 
-을 통해 정의되는 monoid $(M, \star^\mathrm{op}, e)$를 뜻한다.
+을 통해 정의되는 monoid $(M, \star^\op, e)$를 뜻한다.
 
 </div>
 
-어떤 monoid $M$이 집합 $E$ 위에 right action을 정의할 경우, 우리는 이를 $M^\mathrm{op}$가 집합 $E$ 위에 left action을 정의한다고 생각할 수 있으므로 action에 대해 살펴보기 위해서는 left action에 대한 이론만 만들면 충분하다. 따라서 앞으로 monoid (resp. group) action이라 부르는 것들은 모두 *left* monoid (resp. group) action만을 의미한다. 
+어떤 monoid $M$이 집합 $E$ 위에 right action을 정의할 경우, 우리는 이를 $M^\op$가 집합 $E$ 위에 left action을 정의한다고 생각할 수 있으므로 action에 대해 살펴보기 위해서는 left action에 대한 이론만 만들면 충분하다. 따라서 앞으로 monoid (resp. group) action이라 부르는 것들은 모두 *left* monoid (resp. group) action만을 의미한다. 
 
 Action에 대해 몇 가지 추가적인 정의를 하자. 
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> Monoid $M$과 $M$-set $E$를 생각하고, 이 action이 $\phi:M\rightarrow\operatorname{Fun}(E,E)$로 주어졌다 하자.
+<ins id="df5">**정의 5**</ins> Monoid $M$과 $M$-set $E$를 생각하고, 이 action이 $\phi:M\rightarrow\Fun(E,E)$로 주어졌다 하자.
 
 1. 이 action이 *faithful*하다는 것은 $\ker\phi=\\{e\\}$가 성립하는 것이다.
 2. 이 action이 *transitive*하다는 것은 임의의 $x,y\in E$에 대해 $\alpha x=y$를 만족하는 $\alpha$가 항상 존재하는 것이다.
@@ -166,7 +166,7 @@ $$\alpha A=\{\alpha x: x\in A\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 항등원 $e$는 임의의 $x\in E$에 대하여 $e\cdot x=\operatorname{id}_E(x)=x$를 만족하므로 $A$의 fixer에 속한다. 또, 임의의 $\alpha,\beta\in M$과 임의의 $x\in E$에 대하여 다음의 식
+우선 항등원 $e$는 임의의 $x\in E$에 대하여 $e\cdot x=\id_E(x)=x$를 만족하므로 $A$의 fixer에 속한다. 또, 임의의 $\alpha,\beta\in M$과 임의의 $x\in E$에 대하여 다음의 식
 
 $$(\alpha\beta)x=\alpha(\beta x)$$
 
@@ -194,7 +194,7 @@ $$A=(\alpha^{-1}\alpha)A=\alpha^{-1}(\alpha A)=\alpha^{-1}A$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$F$가 $G$의 normal subgroup인 것만 보이면 충분하다. 그런데 앞서 말한 1번의 결과에 의하여, $S$는 집합 $A$ 위에 act한다. 즉, group homomorphism $\phi:S\rightarrow S_A$가 잘 정의된다. 그럼 $F\subset S$는 정확히 $\phi$에 의해 $\operatorname{id}_A$로 옮겨지는 원소들의 모임, 즉 $\ker\phi$이므로 $S$의 normal subgroup이 된다. 
+$F$가 $G$의 normal subgroup인 것만 보이면 충분하다. 그런데 앞서 말한 1번의 결과에 의하여, $S$는 집합 $A$ 위에 act한다. 즉, group homomorphism $\phi:S\rightarrow S_A$가 잘 정의된다. 그럼 $F\subset S$는 정확히 $\phi$에 의해 $\id_A$로 옮겨지는 원소들의 모임, 즉 $\ker\phi$이므로 $S$의 normal subgroup이 된다. 
 
 </details>
 
@@ -226,9 +226,9 @@ $$(\alpha^{-1}\beta\alpha)x=(\alpha^{-1}\beta\alpha)(\alpha^{-1}\alpha x)=\alpha
 
 우리는 앞서 group action의 예시를 몇 가지 살펴보았다. 학부 수준의 group theory에서 다루는 group action들 중 재미있는 것은 대부분 $G$가 자기 자신 위에 act하는 경우, 그 중에서도 conjugation으로 act하는 경우 생긴다. ([§Examples, 예시 24](/ko/math/groups/examples#ex24) 이후의 remark)
 
-Monoid $\operatorname{Fun}(G,G)$를 생각하자. 이제는 $G$가 단순히 집합이 아니라 연산이 주어진 group이므로, 우리가 관심있는 대상들 또한 $G$에서 $G$로의 함수들이 아니라 $G$에서 $G$로의 *homomorphism*들로 바뀌게 된다. $G$에서 $G$로의 homomorphism들을 우리는 *endomorphism*이라 부르고, 이들의 모임을 $\operatorname{End}(G)$로 적는다. 이 모임이 함수의 합성에 대해 monoid structure를 이룬다는 것은 자명하다.
+Monoid $\Fun(G,G)$를 생각하자. 이제는 $G$가 단순히 집합이 아니라 연산이 주어진 group이므로, 우리가 관심있는 대상들 또한 $G$에서 $G$로의 함수들이 아니라 $G$에서 $G$로의 *homomorphism*들로 바뀌게 된다. $G$에서 $G$로의 homomorphism들을 우리는 *endomorphism*이라 부르고, 이들의 모임을 $\End(G)$로 적는다. 이 모임이 함수의 합성에 대해 monoid structure를 이룬다는 것은 자명하다.
 
-Monoid $\operatorname{End}(G)$는 일반적으로 group이 되지 않는다. 그리고 그 이유는 정확히 역원을 갖지 않는다는 것 하나 때문이므로, $G$에서 $G$로의 *bijective* homomorphism들을 모아두면 이는 group structure를 갖게 된다. 이렇게 $G$ 위에서 정의된 bijective endomorphism들을 우리는 *automorphism*이라 부르고, 이들이 이루는 group을 $\operatorname{Aut}(G)$로 적기로 한다.
+Monoid $\End(G)$는 일반적으로 group이 되지 않는다. 그리고 그 이유는 정확히 역원을 갖지 않는다는 것 하나 때문이므로, $G$에서 $G$로의 *bijective* homomorphism들을 모아두면 이는 group structure를 갖게 된다. 이렇게 $G$ 위에서 정의된 bijective endomorphism들을 우리는 *automorphism*이라 부르고, 이들이 이루는 group을 $\Aut(G)$로 적기로 한다.
 
 <div class="proposition" markdown="1">
 
@@ -236,47 +236,47 @@ Monoid $\operatorname{End}(G)$는 일반적으로 group이 되지 않는다. 그
 
 $$y\mapsto xyx^{-1}$$
 
-으로 정의되는 $G$에서 $G$로의 함수를 $\operatorname{Inn}(x)$로 적자. 그럼 $\operatorname{Inn}(x)$는 $G$의 automorphism이 된다. 또, $G$에서 $\operatorname{Aut}(G)$로의 mapping $\operatorname{Inn}:G\rightarrow\operatorname{Aut}(G)$을 다음의 식
+으로 정의되는 $G$에서 $G$로의 함수를 $\Inn(x)$로 적자. 그럼 $\Inn(x)$는 $G$의 automorphism이 된다. 또, $G$에서 $\Aut(G)$로의 mapping $\Inn:G\rightarrow\Aut(G)$을 다음의 식
 
-$$x\mapsto\operatorname{Inn}(x)$$
+$$x\mapsto\Inn(x)$$
 
-으로 정의하면 이는 group homomorphism이 되며, $\operatorname{Inn}$의 kernel은 $G$의 center, 그리고 image는 $\operatorname{Aut}(G)$의 normal subgroup이 된다. 
+으로 정의하면 이는 group homomorphism이 되며, $\Inn$의 kernel은 $G$의 center, 그리고 image는 $\Aut(G)$의 normal subgroup이 된다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $\operatorname{Inn}(x)$가 $G$의 automorphism인 것을 보여야 한다. 임의의 $y,z\in G$에 대하여, 
+우선 $\Inn(x)$가 $G$의 automorphism인 것을 보여야 한다. 임의의 $y,z\in G$에 대하여, 
 
-$$\operatorname{Inn}(x)(yz)=x(yz)x^{-1}=(xyx^{-1})(xzx^{-1})=\operatorname{Inn}(x)(y)\operatorname{Inn}(x)(z)$$
+$$\Inn(x)(yz)=x(yz)x^{-1}=(xyx^{-1})(xzx^{-1})=\Inn(x)(y)\Inn(x)(z)$$
 
-이 성립하므로 $\operatorname{Inn}(x)$는 $G$ 위의 endomorphism을 정의한다. 한편, 우리는 임의의 $x,y\in G$와 임의의 $z\in G$에 대하여
+이 성립하므로 $\Inn(x)$는 $G$ 위의 endomorphism을 정의한다. 한편, 우리는 임의의 $x,y\in G$와 임의의 $z\in G$에 대하여
 
-$$\operatorname{Inn}(xy)(z)=(xy)z(xy)^{-1}=x(yzy^{-1})x^{-1}=\bigl(\operatorname{Inn}(x)\circ\operatorname{Inn}(y)\bigr)(z)$$
+$$\Inn(xy)(z)=(xy)z(xy)^{-1}=x(yzy^{-1})x^{-1}=\bigl(\Inn(x)\circ\Inn(y)\bigr)(z)$$
 
-이 성립하는 것을 쉽게 확인할 수 있고, 또 $\operatorname{Inn}(e)=\operatorname{id}_G$이므로 $x\mapsto\operatorname{Inn}(x)$는 $G$에서 $\operatorname{End}(G)$로의 monoid homomorphism을 정의한다. 그런데 $G$의 임의의 원소는 invertible하므로, 다음의 식
+이 성립하는 것을 쉽게 확인할 수 있고, 또 $\Inn(e)=\id_G$이므로 $x\mapsto\Inn(x)$는 $G$에서 $\End(G)$로의 monoid homomorphism을 정의한다. 그런데 $G$의 임의의 원소는 invertible하므로, 다음의 식
 
-$$\operatorname{Inn}(x)\circ\operatorname{Inn}(x^{-1})=\operatorname{Inn}(e)=\operatorname{Inn}(x^{-1})\circ\operatorname{Inn}(x)$$
+$$\Inn(x)\circ\Inn(x^{-1})=\Inn(e)=\Inn(x^{-1})\circ\Inn(x)$$
 
-으로부터 $\operatorname{Inn}(x)$ 또한 invertible하다는 것을 알 수 있다. 즉, $\operatorname{Inn}(x)$들은 모두 실은 $\operatorname{Aut}(G)$의 원소들이고, 따라서 $\operatorname{Inn}:G\rightarrow\operatorname{Aut}(G)$는 group homomorphism이 된다. 
+으로부터 $\Inn(x)$ 또한 invertible하다는 것을 알 수 있다. 즉, $\Inn(x)$들은 모두 실은 $\Aut(G)$의 원소들이고, 따라서 $\Inn:G\rightarrow\Aut(G)$는 group homomorphism이 된다. 
 
-이제 $\operatorname{Inn}$의 kernel과 image를 찾아보자. 우선 $x\in \ker\operatorname{Inn}$이기 위해서는 $\operatorname{Inn}(x)=\operatorname{id}_G$여야 하고, 이는 곧 임의의 $y\in G$에 대하여 다음의 식
+이제 $\Inn$의 kernel과 image를 찾아보자. 우선 $x\in \ker\Inn$이기 위해서는 $\Inn(x)=\id_G$여야 하고, 이는 곧 임의의 $y\in G$에 대하여 다음의 식
 
-$$y=\operatorname{id}_G=\operatorname{Inn}(x)(y)=xyx^{-1}$$
+$$y=\id_G=\Inn(x)(y)=xyx^{-1}$$
 
-이 성립하는 것과 동치이다. 그런데 위 식은 $yx=xy$와 동치이므로, $x\in\ker\operatorname{Inn}$인 것은 $x$가 임의의 $y$와 commute한다, 곧 $x$가 $G$의 center에 포함된다는 것과 동치이다.
+이 성립하는 것과 동치이다. 그런데 위 식은 $yx=xy$와 동치이므로, $x\in\ker\Inn$인 것은 $x$가 임의의 $y$와 commute한다, 곧 $x$가 $G$의 center에 포함된다는 것과 동치이다.
 
-마지막으로 $\operatorname{Inn}$의 image가 $\operatorname{Aut}(G)$의 normal subgroup이 된다는 것을 보여야 한다. 임의의 $\alpha\in\operatorname{Aut}(G)$가 주어졌다 하자. 그럼 임의의 $\operatorname{Inn}(x)\in \operatorname{im}(\operatorname{Inn})$과 임의의 $y\in G$에 대하여,
+마지막으로 $\Inn$의 image가 $\Aut(G)$의 normal subgroup이 된다는 것을 보여야 한다. 임의의 $\alpha\in\Aut(G)$가 주어졌다 하자. 그럼 임의의 $\Inn(x)\in \im(\Inn)$과 임의의 $y\in G$에 대하여,
 
-$$(\alpha\circ\operatorname{Inn}(x)\circ\alpha^{-1})(y)=\alpha(x\alpha^{-1}(y)x^{-1})=\alpha(x) y\alpha(x)^{-1}=\operatorname{Inn}(\alpha(x))\in\operatorname{im}(\operatorname{Inn})$$
+$$(\alpha\circ\Inn(x)\circ\alpha^{-1})(y)=\alpha(x\alpha^{-1}(y)x^{-1})=\alpha(x) y\alpha(x)^{-1}=\Inn(\alpha(x))\in\im(\Inn)$$
 
-이 되므로 $\operatorname{Inn}$의 image는 $\operatorname{Aut}(G)$의 normal subgroup이 된다.  
+이 되므로 $\Inn$의 image는 $\Aut(G)$의 normal subgroup이 된다.  
  
 </details>
 
 <div class="definition" markdown="1">
 
-<ins id="df11">**정의 11**</ins> Group $G$에 대하여, $y\mapsto xyx^{-1}$ 꼴로 정의되는 $G$의 automorphism을 $G$의 *inner automorphism*이라 부른다. Inner automorphism들의 모임을 $\operatorname{Inn}(G)$로 표기한다. 
+<ins id="df11">**정의 11**</ins> Group $G$에 대하여, $y\mapsto xyx^{-1}$ 꼴로 정의되는 $G$의 automorphism을 $G$의 *inner automorphism*이라 부른다. Inner automorphism들의 모임을 $\Inn(G)$로 표기한다. 
 
 </div>
 
@@ -284,11 +284,11 @@ $$(\alpha\circ\operatorname{Inn}(x)\circ\alpha^{-1})(y)=\alpha(x\alpha^{-1}(y)x^
 
 <div class="definition" markdown="1">
 
-<ins id="df12">**정의 12**</ins> Group $G$의 subgroup $H$가 *characteristic subgroup*이라는 것은 임의의 $\alpha\in\operatorname{Aut}(G)$에 대해 $\alpha(H)=H$가 성립하는 것이다.
+<ins id="df12">**정의 12**</ins> Group $G$의 subgroup $H$가 *characteristic subgroup*이라는 것은 임의의 $\alpha\in\Aut(G)$에 대해 $\alpha(H)=H$가 성립하는 것이다.
 
 </div>
 
-예를 들어 $G$의 center $C(G)$는 characteristic subgroup이 된다. 임의의 automorphism $\alpha\in\operatorname{Aut}(G)$와 $\alpha (x)\in \alpha(C(G))$, 그리고 임의의 $y\in G$에 대하여  
+예를 들어 $G$의 center $C(G)$는 characteristic subgroup이 된다. 임의의 automorphism $\alpha\in\Aut(G)$와 $\alpha (x)\in \alpha(C(G))$, 그리고 임의의 $y\in G$에 대하여  
 
 $$\alpha(x)y=\alpha(x)\alpha(\alpha^{-1}(y))=\alpha(x\alpha^{-1}(y))=\alpha(\alpha^{-1}(y)x)=\cdots=y\alpha(x)$$
 
@@ -304,11 +304,11 @@ $$\alpha(x)y=\alpha(x)\alpha(\alpha^{-1}(y))=\alpha(x\alpha^{-1}(y))=\alpha(\alp
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\operatorname{Aut}(G)$의 임의의 원소 $\alpha$가 주어졌다 하자. $H$는 characteristic subgroup이므로, $\alpha\|\_H$는 $\operatorname{Aut}(H)$의 원소이고, $K$는 $H$의 characteristic subgroup이므로 $\alpha(K)=\alpha\|\_H(K)=K$가 성립한다.
+$\Aut(G)$의 임의의 원소 $\alpha$가 주어졌다 하자. $H$는 characteristic subgroup이므로, $\alpha\|\_H$는 $\Aut(H)$의 원소이고, $K$는 $H$의 characteristic subgroup이므로 $\alpha(K)=\alpha\|\_H(K)=K$가 성립한다.
 
 </details>
 
-만일 $H$가 $G$의 normal subgroup이었다면, $\operatorname{Inn}(G)$의 임의의 원소가 $H$로 잘 restrict되므로 위와 동일한 증명에 의하여 
+만일 $H$가 $G$의 normal subgroup이었다면, $\Inn(G)$의 임의의 원소가 $H$로 잘 restrict되므로 위와 동일한 증명에 의하여 
 
 > $H$가 $G$의 normal subgroup이고, $K$가 $H$의 characteristic subgroup이라면 $K$는 $G$의 normal subgroup이다.
 
@@ -338,11 +338,11 @@ $$g\cdot(xH)=(gx)H$$
 
 $$(xH)\cdot n=xHn=(xn)H$$
 
-으로 act하며, 이는 $N$의 right action을 정의한다. 또, 만일 $n\in H$라면 $Hn=nH=H$이므로 이 action의 kernel은 $H$이고, 따라서 $N/H$가 $G/H$ 위에 right action을 정의한다. 우리가 맨 처음에 지적했듯, 이러한 상황에서는 opposite group $(N/H)^{\mathrm{op}}$이 $G/H$ 위에 (left) act하는 것으로 취급할 수 있다. 
+으로 act하며, 이는 $N$의 right action을 정의한다. 또, 만일 $n\in H$라면 $Hn=nH=H$이므로 이 action의 kernel은 $H$이고, 따라서 $N/H$가 $G/H$ 위에 right action을 정의한다. 우리가 맨 처음에 지적했듯, 이러한 상황에서는 opposite group $(N/H)^{\op}$이 $G/H$ 위에 (left) act하는 것으로 취급할 수 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp15">**명제 15**</ins> 위와 같은 상황에서, $(N/H)^{\mathrm{op}}$의 action은 transitive하다. 또, 만일 이 action을 $\phi:(N/H)^{\mathrm{op}}\rightarrow S_{G/H}$으로 적으면, $\phi$는 $(N/H)^\mathrm{op}$와, $G$-set $G/H$의 bijective $G$-set homomorphism들의 group 사이의 isomorphism이다. 
+<ins id="pp15">**명제 15**</ins> 위와 같은 상황에서, $(N/H)^{\op}$의 action은 transitive하다. 또, 만일 이 action을 $\phi:(N/H)^{\op}\rightarrow S_{G/H}$으로 적으면, $\phi$는 $(N/H)^\op$와, $G$-set $G/H$의 bijective $G$-set homomorphism들의 group 사이의 isomorphism이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -352,11 +352,11 @@ $G/H$에서, $eH$의 orbit은 $G/H$ 전체가 되므로 action이 transitive함�
 
 > $G$-set $G/H$의 bijective $G$-set homomorphism들의 group
 
-을 $\Phi$로 적자. 주어진 명제는 group homomorphism $\phi:(N/H)^{\mathrm{op}}\rightarrow S_{G/H}$가 injective이고, 사실 $\operatorname{im}\phi$는 정확히 $\Phi$가 된다는 뜻이다. 
+을 $\Phi$로 적자. 주어진 명제는 group homomorphism $\phi:(N/H)^{\op}\rightarrow S_{G/H}$가 injective이고, 사실 $\im\phi$는 정확히 $\Phi$가 된다는 뜻이다. 
 
  먼저 $\ker\phi\leq H$이므로, $\phi$에 의해 identity map에 대응되는 모든 $N$의 원소들은 $N/H$에서 $eH$에 포함되고 따라서 $\phi$는 injective이다. 
 
-또, 위의 식에서 알 수 있듯, $(N/H)^\mathrm{op}$의 left action과 $G$의 left action은 서로 commute하므로, $(N/H)^\mathrm{op}$의 원소들 각각은 $G/H$에서 $G/H$로의 $G$-set homomorphism을 정의하고, 이들 원소는 모두 invertible하므로 사실 이들에 대응되는 $G/H$ 위에서의 $G$-set endomorphism은 사실 $G$-set automorphism이 되어야 한다. 즉 $\operatorname{im}\phi\leq\Phi$가 성립한다.
+또, 위의 식에서 알 수 있듯, $(N/H)^\op$의 left action과 $G$의 left action은 서로 commute하므로, $(N/H)^\op$의 원소들 각각은 $G/H$에서 $G/H$로의 $G$-set homomorphism을 정의하고, 이들 원소는 모두 invertible하므로 사실 이들에 대응되는 $G/H$ 위에서의 $G$-set endomorphism은 사실 $G$-set automorphism이 되어야 한다. 즉 $\im\phi\leq\Phi$가 성립한다.
 
 이제 반대방향 포함관계를 보여야 하므로, $f\in\Phi$라 하자. 우선 $f(eH)$의 stabilizer $G_{f(eH)}를 생각하면, 이는 $g\cdot f(eH)=f(eH)$를 만족하는 모든 $g\in G$들의 모임이다. 그런데 $f$는 $G$-set automorphism이므로, 위의 식은
 

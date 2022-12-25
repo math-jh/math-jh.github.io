@@ -45,7 +45,7 @@ $$r_x(u_i)=u_ix=\sum_j a_{ij}u_j$$
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $L/K$가 finite-dimensional field extension이라 하자. 그럼 $L/K$의 *trace*는 $T_{L/K}(x)=\operatorname{tr}(r_x)$, $L/K$의 *norm*은 $N_{L/K}(x)=\det(r_x)$으로 정의된 함수이다.
+<ins id="df1">**정의 1**</ins> $L/K$가 finite-dimensional field extension이라 하자. 그럼 $L/K$의 *trace*는 $T_{L/K}(x)=\tr(r_x)$, $L/K$의 *norm*은 $N_{L/K}(x)=\det(r_x)$으로 정의된 함수이다.
 
 </div>
 
@@ -123,9 +123,9 @@ $$\begin{pmatrix}(1,1)&(1,\theta)&\cdots&(1,\theta^{n-1})\\ (\theta,1)&(\theta,\
 
 이 nonsingular인 것과 동치이다. $f$가 $\theta$의 minimal polynomial이라 하자. 그럼 $f$의 degree는 $[L:K]$와 같다. 적당한 splitting field $E$에 대하여, $f$를
 
-$$f(\mathrm{x})=(\mathrm{x}-\theta_1)(\mathrm{x}-\theta_2)\cdots(\mathrm{x}-\theta_n),\quad \theta=\theta_1$$
+$$f(\x)=(\x-\theta_1)(\x-\theta_2)\cdots(\x-\theta_n),\quad \theta=\theta_1$$
 
-이라 쓸 수 있고, $f$는 separable이므로 이들 $\theta_i$들은 모두 서로 다르다. 한편, $\theta$의 (linear map $r_\theta$로서의) characteristic polynomial 또한 마찬가지로 degree $n$이므로, $f$가 정확하게 $\theta$의 characteristic polynomial이 된다. 따라서 $f$의 $\mathrm{x}^{n-1}$의 계수를 비교하면,
+이라 쓸 수 있고, $f$는 separable이므로 이들 $\theta_i$들은 모두 서로 다르다. 한편, $\theta$의 (linear map $r_\theta$로서의) characteristic polynomial 또한 마찬가지로 degree $n$이므로, $f$가 정확하게 $\theta$의 characteristic polynomial이 된다. 따라서 $f$의 $\x^{n-1}$의 계수를 비교하면,
 
 $$T_{L/K}(\theta)=\theta_1+\theta_2+\cdots+\theta_n$$
 
@@ -157,7 +157,7 @@ $$\det V=\prod_{i>j}(\theta_i-\theta_j)$$
 
 이제 반대방향을 보여야 한다. $L/K$가 separable이 아니라 하면, $K$는 characteristic $p$를 가진다. $L$에 대한 $K$의 relative separable closure를 $F$라 하자. 그럼 임의의 $x\in L\setminus F$와 $y\in L$에 대해 $(x,y)=0$이 성립한다. 즉, bilinear form $(-,-)$이 degenerate한다. 이를 증명하기 위해 우리는 두 가지 경우를 나눠 생각한다.
 
-1. 우선 $xy\not\in F$라 하자. 그럼 적당한 $a\in F$가 존재하여, $xy$의 $F$에 대한 minimal polynomial은 $\mathrm{x}^p-a$이다. 한편, $L/F$에서 $xy$의 characteristic polynomial은 이제 degree를 고려하면 $(\mathrm{x}^p-a)^{p^{m-1}}$이 되어야 하므로 ($[L:F]=p^m$), 이 식을 전개한 후 trace를 살펴보면 $T_{L/F}(xy)=0$임을 알고 따라서 trace의 transitivity에 의해 $T_{L/K}(xy)=0$이 성립한다. 
+1. 우선 $xy\not\in F$라 하자. 그럼 적당한 $a\in F$가 존재하여, $xy$의 $F$에 대한 minimal polynomial은 $\x^p-a$이다. 한편, $L/F$에서 $xy$의 characteristic polynomial은 이제 degree를 고려하면 $(\x^p-a)^{p^{m-1}}$이 되어야 하므로 ($[L:F]=p^m$), 이 식을 전개한 후 trace를 살펴보면 $T_{L/F}(xy)=0$임을 알고 따라서 trace의 transitivity에 의해 $T_{L/K}(xy)=0$이 성립한다. 
 
 2. 이제 $xy\in F$인 경우를 생각하면, $T_{L/F}(xy)=xyT_{L/F}(1)$이고, $T_{L/F}=p^m$이므로 마찬가지로 $T_{L/F}(xy)=0$이 되어 transitivity에 의해 $T_{L/K}(xy)=0$이다. 
 
@@ -165,7 +165,7 @@ $$\det V=\prod_{i>j}(\theta_i-\theta_j)$$
 
 ## Galois extensions
 
-$F/L/K$가 separable field extension들의 tower이고, $F/K$가 Galois라 하자. 그럼 $G=\operatorname{Gal}(F/K)$는 $H=\operatorname{Gal}(F/L)$을 포함하는 group이 되며, 이 때 $H$는 $L$을 fix하는 $K$-automorphism들의 subgroup이다. $G/H$의 원소들을
+$F/L/K$가 separable field extension들의 tower이고, $F/K$가 Galois라 하자. 그럼 $G=\Gal(F/K)$는 $H=\Gal(F/L)$을 포함하는 group이 되며, 이 때 $H$는 $L$을 fix하는 $K$-automorphism들의 subgroup이다. $G/H$의 원소들을
 
 $$\sigma_1H,\sigma_2H,\ldots, \sigma_nH$$
 
@@ -183,11 +183,11 @@ $$T_{L/K}(x)=\sigma_1(x)+\cdots+\sigma_n(x),\qquad N_{L/K}(x)=\sigma_1(x)\cdots\
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $x\in L$에 대하여, $x$의 $K$에 대한 minimal polynomial을 $q(\mathrm{x})$라 하자. 그럼 앞서 살펴본 것과 같이, $q$는 정확히 $r_x:K(x)\rightarrow K(x)$의 characteristic polynomial이 된다. 이제 $[L:K(x)]=d$, $[K(x):K]=m$이라 하면 $L$은 $d$개의 $K(x)$들의 direct sum이 되고, 따라서 $x$의 characteristic polynomial은 $q(\mathrm{x})^d$가 된다. 이제 $x_1,\ldots, x_m$이 $q(\mathrm{x})$의 근이라 하고, $x=x_1$이라 하자. 즉,
+임의의 $x\in L$에 대하여, $x$의 $K$에 대한 minimal polynomial을 $q(\x)$라 하자. 그럼 앞서 살펴본 것과 같이, $q$는 정확히 $r_x:K(x)\rightarrow K(x)$의 characteristic polynomial이 된다. 이제 $[L:K(x)]=d$, $[K(x):K]=m$이라 하면 $L$은 $d$개의 $K(x)$들의 direct sum이 되고, 따라서 $x$의 characteristic polynomial은 $q(\x)^d$가 된다. 이제 $x_1,\ldots, x_m$이 $q(\x)$의 근이라 하고, $x=x_1$이라 하자. 즉,
 
-$$q(\mathrm{x})=\prod(\mathrm{x}-x_i)$$
+$$q(\x)=\prod(\x-x_i)$$
 
-이다. 그럼 $L$ 위에서 $r_x$의 characteristic polynomial은 $q(\mathrm{x})^d$이므로, 이를 전개한 후 계수를 비교해보면
+이다. 그럼 $L$ 위에서 $r_x$의 characteristic polynomial은 $q(\x)^d$이므로, 이를 전개한 후 계수를 비교해보면
 
 $$T_{L/K}(x)=d(x_1+\cdots+x_m),\qquad N_{L/K}(x)=(x_1x_2\ldots x_m)^d$$
 

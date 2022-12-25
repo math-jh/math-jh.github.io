@@ -51,7 +51,7 @@ $$\Lambda f=\int_X f\mathop{d\mu}\qquad\text{ for all $f\in C_c(X)$}$$
 우선, 증명이 좀 길기 때문에 (자잘한 걸 제외하고 10단계다) 몇 가지 notational convention을 좀 만들자. 언제나 그랬듯이, $V$는 항상 open set을 의미하고 $K$는 항상 compact set을 의미한다. 우리는 새로운 notation $\prec$을 도입할 것인데, 임의의 $f\in C_c(X)$에 대하여
 
 1. $K\prec f$라는 것은, $0\leq f(x)\leq 1$이 모든 $x\in X$에 대해 성립하며, $f$의 값은 $K$ 위에서 identically 1이라는 것이다.
-2. $f\prec V$라는 것은, $0\leq f(x)\leq 1$이 모든 $x\in X$에 대해 성립하며, $f$의 값은 $V$ 바깥에서는 identically 0이라는 것이다. (즉, $\operatorname{supp}f\subset V$라는 것이다.)
+2. $f\prec V$라는 것은, $0\leq f(x)\leq 1$이 모든 $x\in X$에 대해 성립하며, $f$의 값은 $V$ 바깥에서는 identically 0이라는 것이다. (즉, $\suppf\subset V$라는 것이다.)
 
 그럼 $K\prec f\prec V$라는 것은, $K\subset V$이며, $f$가 $K$ 위에서는 identically 1이고, $V$ 바깥에서는 identically zero, 그리고 $K$와 $V$ 사이에서는 0과 1 사이의 함숫값을 갖는다는 이야기이다. 즉, $f$는 일종의 bump function과 같은 역할을 한다. 이런 상황에서 우리가 잘 알고 있는 Urysohn's lemma는 다음과 같이 state될 수 있다.
 
@@ -138,7 +138,7 @@ $$\mu(A\cap K)\leq \mu(A)=0$$
 
 $$\mu(V_1\cup V_2)\leq\mu(V_1)+\mu(V_2)$$
 
-인 것을 보인다. $g\prec V_1\cup V_2$인 $g\in C_c(X)$를 잡자. $K=\operatorname{supp}g$라 하면 우리는 다음의 두 조건
+인 것을 보인다. $g\prec V_1\cup V_2$인 $g\in C_c(X)$를 잡자. $K=\suppg$라 하면 우리는 다음의 두 조건
 
 1. $h_1\prec V_1$, $h_2\prec V_2$,
 2. $h_1(x)+h_2(x)=1$ for all $x\in K$.
@@ -155,7 +155,7 @@ $$\mu(V_1\cup V_2)\leq\mu(V_1)+\mu(V_2)$$
 
 이제 이를 open set이 아닌 집합들의 countable한 union으로 일반화해야 한다. 만일 어떤 $i$에 대해, $\mu(E_i)=\infty$라면 $\mu$의 monotonicity에 의해 $\mu(\bigcup E_i)$ 또한 $\infty$가 될 것이므로, 우리는 일반성을 잃지 않고 $\mu(E_i)<\infty$라 가정해도 된다. 
 
-임의의 $\epsilon>0$이 주어졌다 하자. 그럼 $\mu$의 정의에 의하여, $E_i$를 포함하는 open set $V_i$들이 존재하여 $\mu(V_i)<\mu(E_i)+2^{-i}\epsilon$이도록 할 수 있다. 이제 $V=\bigcup_1^\infty V_i$라 하고, $f\prec V$를 만족하는 임의의 $f\in C_c(X)$를 고르자. 그럼 $\operatorname{supp}f$는 compact이고 $V_i$들이 이를 덮으므로, 적당한 $N$이 존재하여 $V_1\cup\cdots\cup V_N$이 $\operatorname{supp}f$를 덮도록 할 수 있다. 그럼
+임의의 $\epsilon>0$이 주어졌다 하자. 그럼 $\mu$의 정의에 의하여, $E_i$를 포함하는 open set $V_i$들이 존재하여 $\mu(V_i)<\mu(E_i)+2^{-i}\epsilon$이도록 할 수 있다. 이제 $V=\bigcup_1^\infty V_i$라 하고, $f\prec V$를 만족하는 임의의 $f\in C_c(X)$를 고르자. 그럼 $\suppf$는 compact이고 $V_i$들이 이를 덮으므로, 적당한 $N$이 존재하여 $V_1\cup\cdots\cup V_N$이 $\suppf$를 덮도록 할 수 있다. 그럼
 
 $$\Lambda f\leq \mu(V_1\cup \cdots \cup V_N)\leq\mu(V_1)+\cdots+\mu(V_N)\leq\sum_{i=1}^\infty \mu(V_i)=\sum_{i=1}^\infty\mu(E_i)+\epsilon$$
 
@@ -199,7 +199,7 @@ $$\mu(K)\leq \Lambda f\leq\mu(V)<\mu(K)+\epsilon$$
 
 <details class="proof" id="pf3" markdown="1">
 <summary>단계 3</summary>
-$\alpha<\mu(V)$를 만족하는 임의의 $\alpha$를 택하자. 그럼 $\mu$의 정의에 의해, $\alpha<\Lambda f$를 만족하는 $f\prec V$가 존재한다. 이제 $K=\operatorname{supp}f$라 하고, $W$가 $K$를 포함하는 open set이라 하자. 그럼 $\Lambda f\leq\mu(W)$이고, $\mu(K)$는 이러한 $\mu(W)$들의 infimum이므로 $\Lambda f\leq\mu(K)$이다. 따라서, $\alpha<\mu(K)$를 만족하는 compact set $K\subset V$가 항상 존재하며, $\alpha$ $\mu(V)$보다 작은 임의의 상수이므로 
+$\alpha<\mu(V)$를 만족하는 임의의 $\alpha$를 택하자. 그럼 $\mu$의 정의에 의해, $\alpha<\Lambda f$를 만족하는 $f\prec V$가 존재한다. 이제 $K=\suppf$라 하고, $W$가 $K$를 포함하는 open set이라 하자. 그럼 $\Lambda f\leq\mu(W)$이고, $\mu(K)$는 이러한 $\mu(W)$들의 infimum이므로 $\Lambda f\leq\mu(K)$이다. 따라서, $\alpha<\mu(K)$를 만족하는 compact set $K\subset V$가 항상 존재하며, $\alpha$ $\mu(V)$보다 작은 임의의 상수이므로 
 
 $$\mu(V)=\sup\{\mu(K):K\subset V,\;K\text{ compact}\}$$
 
@@ -341,7 +341,7 @@ $$-\Lambda f=\Lambda (-f)\leq\int_X(-f)\mathop{d\mu}=-\int_Xf\mathop{d\mu}$$
 
 <details class="proof" id="pf10" markdown="1">
 <summary>단계 10</summary>
-임의의 $f\in C_c(X)$를 택하고, $K=\operatorname{supp}f$라 하자. Extreme value theorem에 의하여, 적당한 interval $[a,b]$가 존재하여 $f(X)\subset [a,b]$가 성립한다. 이제 $\epsilon>0$을 임의로 택하고, $[a,b]$를 길이가 $\epsilon$보다 작은 partition들
+임의의 $f\in C_c(X)$를 택하고, $K=\suppf$라 하자. Extreme value theorem에 의하여, 적당한 interval $[a,b]$가 존재하여 $f(X)\subset [a,b]$가 성립한다. 이제 $\epsilon>0$을 임의로 택하고, $[a,b]$를 길이가 $\epsilon$보다 작은 partition들
 
 $$a=y_0<y_1<\cdots<y_n=b$$
 
