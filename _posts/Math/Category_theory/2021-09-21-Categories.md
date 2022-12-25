@@ -167,6 +167,6 @@ $$h_1\circ f=h_2\circ f\implies h_1=h_2$$
 
 **참고문헌**
 
-**[Rie]** E. Riehl. <i>Category Theory in Context</i>. Dover Publications, 2017. (Also available in her [website](https://emilyriehl.github.io/files/context.pdf))
+**[Rie]** E. Riehl. <i>Category Theory in Context</i>. Dover Publications, 2017. [링크](https://emilyriehl.github.io/files/context.pdf)
 
 ---
