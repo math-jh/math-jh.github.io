@@ -133,4 +133,13 @@ $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=
 
 </div>
 
+---
+
+**참고문헌**
+
+**[Wei]** C.A. Weibel. *An Introduction to Homological Algebra*. Cambridge Studies in Advanced Mathematics. Cambridge University Press, 1995.  
+**[Vak]** R. Vakil, *The rising sea: foundations of algebraic geometry*. 2015. Preprint. [링크](http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf)
+
+---
+
 [^1]: 이들이 실제로 집합이라는 것은 $B^A$가 집합이라는 사실로부터 자명하다. 따라서, 해당 예시에서 다룬 대수적 구조들의 카테고리는 모두 국소적으로 작은 카테고리이다. 
