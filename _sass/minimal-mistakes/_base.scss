@@ -116,6 +116,19 @@ phrase {
   box-decoration-break: clone;
 }
 
+selected {
+  color: #00c853;
+  font-weight: bold;
+}
+
+unselected {
+  color: $gray;
+}
+
+.indented {
+  margin-left: 2em;
+}
+
 /* Material icons */
 .material-icons {
   font-family: 'Material Icons';
