@@ -11,7 +11,7 @@ header:
     overlay_filter: 0.5
 
 sidebar: 
-    nav: "set-ko"
+    nav: "set_theory-ko"
 
 date: 2022-11-23
 last_modified_at: 2022-11-23

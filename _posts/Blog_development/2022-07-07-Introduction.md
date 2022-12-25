@@ -8,7 +8,7 @@ categories: [Blog Development]
 permalink: /ko/blog_dev/introduction
 
 sidebar: 
-    nav: "blog_dev-ko"
+    nav: "blog_development-ko"
 
 date: 2022-07-07
 last_modified_at: 2022-07-07

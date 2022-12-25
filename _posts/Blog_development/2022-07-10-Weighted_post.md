@@ -9,7 +9,7 @@ categories: [Blog Development]
 permalink: /ko/blog_dev/weight
 
 sidebar: 
-    nav: "blog_dev-ko"
+    nav: "blog_development-ko"
     
 date: 2022-07-10
 last_modified_at: 2022-07-10
