@@ -46,7 +46,7 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 <ins id="pp3">**명제 3**</ins> 이항관계 $(R,A,A)$가 동치관계인 것은 다음의 세 조건
 
-$$\operatorname{pr}_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
+$$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 과 동치이다.
 
@@ -55,7 +55,7 @@ $$\operatorname{pr}_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 <summary>증명</summary>
 
 우선 $R$이 동치관계라 가정하자.  
-- 모든 $x\in A$에 대하여 $(x,x)\in R$이므로 $\operatorname{pr}\_1R=A$가 성립한다.  
+- 모든 $x\in A$에 대하여 $(x,x)\in R$이므로 $\pr\_1R=A$가 성립한다.  
 - 또, $R$은 symmetric이므로 $x\sim_\tiny{R} y\iff y\sim_\tiny{R}x$가 성립하고 따라서
     
     $$(x,y)\in R\iff (y,x)\in R\iff (x,y)\in R^{-1}\tag{1}$$
@@ -67,7 +67,7 @@ $$\operatorname{pr}_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 - $R=R^{-1}$이 성립하는 것으로부터, 식 (1)의 논리를 거꾸로 하여 $R$이 symmetric임을 안다.
 - $x\mathrel{R}y$와 $y\mathrel{R}z$가 성립한다 가정하자. 그럼 $(x,z)\in R\circ R=R$이므로 $R$이 transitive임을 안다.
-- 마지막으로 $\operatorname{pr}_1R=A$인 것으로부터 적당한 $y\in A$가 존재하여 $(x,y)\in R$임을 안다. 이제 $R$은 symmetric이므로 $y\mathrel{R}x$ 또한 성립하고, transitivity로부터 $(x\mathrel{R}y)\wedge(y\mathrel{R}x)\implies x\mathrel{R}x$가 성립한다. 즉 $R$은 reflexive하다.
+- 마지막으로 $\pr_1R=A$인 것으로부터 적당한 $y\in A$가 존재하여 $(x,y)\in R$임을 안다. 이제 $R$은 symmetric이므로 $y\mathrel{R}x$ 또한 성립하고, transitivity로부터 $(x\mathrel{R}y)\wedge(y\mathrel{R}x)\implies x\mathrel{R}x$가 성립한다. 즉 $R$은 reflexive하다.
 
 </details>
 
@@ -91,7 +91,7 @@ $$\operatorname{pr}_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 <ins id="ex5">**예시 5**</ins> 집합 $A$ 위에서 <phrase>$x=y$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $x$의 equivalence class는 집합 $\{x\}$이다. 한편 동일한 예시에서 <phrase>$x\in A$이고 $y\in A$</phrase> 또한 동치관계였는데, 이 경우 $x$의 equivalence class는 $A$ 전체가 된다. 
 
-우리는 앞선 [예시 2](#ex2)에서 $\Delta_A$가 가장 <em_ko>작고</em_ko>, $A\times A$가 가장 <em_ko>크다</em_ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $\Delta_A$가 가장 *세밀한* 동치관계이고, $A\times A$는 가장 *성긴* 동치관계라고 하는 것이 일반적이다. ([§집합의 합, 정의 1](/ko/math/set_theory/sum_of_sets#df1))
+우리는 앞선 [예시 2](#ex2)에서 $\Delta_A$가 가장 <em_ko>작고</em_ko>, $A\times A$가 가장 <em_ko>크다</em_ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $\Delta_A$가 가장 *finer*한 동치관계이고, $A\times A$는 가장 *coarser*한 동치관계라고 하는 것이 일반적이다. ([§집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#df1))
 
 </div>
 
@@ -105,7 +105,7 @@ $$\operatorname{pr}_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 우선 위의 식으로 정의된 $p$가 실제로 함수가 된다는 것은 어렵지 않게 보일 수 있다. 여기에서는 동치관계만 보인다.
 
-우선 $x\sim\_{\tiny R} y$이라 가정하자. 그럼 $y\in [x]\_R=R(x)$로부터 $\\{y\\}\subseteq R(x)$이고, 따라서 [§이항관계들 사이의 연산, 명제 6](/ko/math/set_theory/operation_of_binary_relations#pp6)과 [명제 3](#pp3)에 의하여
+우선 $x\sim\_{\tiny R} y$이라 가정하자. 그럼 $y\in [x]\_R=R(x)$로부터 $\\{y\\}\subseteq R(x)$이고, 따라서 [§이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#pp6)과 [명제 3](#pp3)에 의하여
 
 $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
@@ -115,7 +115,7 @@ $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
 </details>
 
-위의 함수 $p$를 canonical이라 부른다. 그럼 $A$의 부분집합 $[x]\_R\subseteq A$는 몫집합의 원소 $[x]\_R\in A/R$의 함수 $p$에 대한 역상이므로 equivalence class들은 서로소임을 안다. 즉 동치관계 $(R,A,A)$는 $A$의 분할을 유도한다.
+위의 함수 $p$를 canonical projection이라 부른다. 그럼 $A$의 부분집합 $[x]\_R\subseteq A$는 몫집합의 원소 $[x]\_R\in A/R$의 함수 $p$에 대한 preimage이므로 equivalence class들은 서로소임을 안다. 즉 동치관계 $(R,A,A)$는 $A$의 분할을 유도한다.
 
 다음 명제는 그 역 또한 성립한다는 것을 보여준다.
 

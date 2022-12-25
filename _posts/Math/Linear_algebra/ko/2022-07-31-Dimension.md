@@ -21,7 +21,7 @@ weight: 5
 
 ## 벡터공간의 차원
 
-이전 글의 [예시 9](/ko/math/linear_algebra/basis#ex9)와 [예시 11](/ko/math/linear_algebra/basis#ex11)로부터 벡터공간 $V$의 basis는 유일할 필요가 없다는 것을 알 수 있다. 그런데, 이 예시들을 보면 공통적으로 basis의 원소의 갯수들은 동일하게 유지된다는 것도 확인할 수 있다. 이는 우연이 아니다.
+[§벡터공간의 기저, ⁋예시 9](/ko/math/linear_algebra/basis#ex9)와 [§벡터공간의 기저, ⁋예시 11](/ko/math/linear_algebra/basis#ex11)로부터 벡터공간 $V$의 basis는 유일할 필요가 없다는 것을 알 수 있다. 그런데, 이 예시들을 보면 공통적으로 basis의 원소의 갯수들은 동일하게 유지된다는 것도 확인할 수 있다. 이는 우연이 아니다.
 
 <div class="proposition" markdown="1">
 
@@ -35,7 +35,7 @@ weight: 5
 2. 그러므로 $V$의 어떤 basis가 유한하다면, 다른 basis들도 모두 유한해야 한다.
 3. 마지막으로, 만일 $V$의 두 유한한 basis가 주어진다면, 이들 두 basis의 원소의 갯수는 동일하다.
 
-물론 이 정리도 지금 증명하자면 못할 것은 없지만, 앞선 글의 [정리 10](/ko/math/linear_algebra/basis#thm10)과 마찬가지로 이를 증명하기 위해는 약간의 집합론적인 지식이 필요하므로 별도의 글로 분리한다. 다만 마지막 단계는 별다른 배경지식 없이도 증명할 수 있다.
+물론 이 정리도 지금 증명하자면 못할 것은 없지만, [§벡터공간의 기저, ⁋정리 10](/ko/math/linear_algebra/basis#thm10)과 마찬가지로 이를 증명하기 위해는 약간의 집합론적인 지식이 필요하므로 별도의 글로 분리한다. 다만 마지막 단계는 별다른 배경지식 없이도 증명할 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -47,7 +47,7 @@ weight: 5
 
 $\mathcal{B}_1=\\{x_1,x_2,\ldots, x_m\\}$, 그리고 $\mathcal{B}_2=\\{y_1,y_2,\ldots, y_n\\}$이라 하고, $m=n$임을 보여야 한다. 결론에 반하여 $m>n$이라 하자.
 
-우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, 명제 6](/ko/math/linear_algebra/basis#pp6)에 의하여, 집합 $\\{x_1,y_1,y_2,\ldots, y_n\\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
+우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, ⁋명제 6](/ko/math/linear_algebra/basis#pp6)에 의하여, 집합 $\\{x_1,y_1,y_2,\ldots, y_n\\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
 
 $$\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_n y_n=0\tag{1}$$
 
@@ -106,7 +106,7 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $F$-벡터공간 $V$에 대하여, $V$의 basis의 cardinality를 $V$의 *차원*이라 하고, $\operatorname{dim}V$, 혹은 $F$를 강조할 필요가 있을 때는 $\operatorname{dim}_FV$로 적는다. 만일 $\operatorname{dim}V$가 유한이라면, $V$는 *유한차원* 벡터공간이고, 그렇지 않다면 $V$는 *무한차원* 벡터공간이다.
+<ins id="df3">**정의 3**</ins> $F$-벡터공간 $V$에 대하여, $V$의 basis의 cardinality를 $V$의 *차원*이라 하고, $\dim V$, 혹은 $F$를 강조할 필요가 있을 때는 $\dim_FV$로 적는다. 만일 $\dim V$가 유한이라면, $V$는 *유한차원* 벡터공간이고, 그렇지 않다면 $V$는 *무한차원* 벡터공간이다.
 
 </div>
 
@@ -116,9 +116,9 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 1. Trivial vector space $\\{0\\}$의 basis는 $\emptyset$이므로, 이 공간의 차원은 $\lvert\emptyset\rvert=0$이다.
 2. 임의의 field $F$에 대하여, $F$ 자기 자신은 1차원 $F$-벡터공간이다.
-3. 임의의 field $F$에 대하여, 유클리드 $n$-공간 $F^n$의 차원은 $\operatorname{dim}F^n=n$이다.
-4. $\operatorname{dim}_\mathbb{R}\mathbb{C}=2$. 
-5. $F[\mathrm{x}]$는 무한차원 벡터공간이다.
+3. 임의의 field $F$에 대하여, 유클리드 $n$-공간 $F^n$의 차원은 $\dim F^n=n$이다.
+4. $\dim_\mathbb{R}\mathbb{C}=2$. 
+5. $F[\x]$는 무한차원 벡터공간이다.
 
 </div>
 
@@ -135,13 +135,13 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-만약 $\operatorname{span}S=V$라면, 더 이상 증명할 것이 없다. 그렇지 않다면 $v\not\in\operatorname{span}S$인 $v\in V$가 존재한다. 이제 집합 $S_1=S\cup\\{v\\}$이라 하자. 그럼 $S_1$은 일차독립이다. 자명하게 $v\neq0$이며, 이제 $S_1$의 임의의 일차결합 
+만약 $\span S=V$라면, 더 이상 증명할 것이 없다. 그렇지 않다면 $v\not\in\span S$인 $v\in V$가 존재한다. 이제 집합 $S_1=S\cup\\{v\\}$이라 하자. 그럼 $S_1$은 일차독립이다. 자명하게 $v\neq0$이며, 이제 $S_1$의 임의의 일차결합 
 
 $$\sum_{x\in S_1} \alpha_xx=\sum_{x\in S}\alpha_xx+\alpha_vv=0$$  
 
 이라 하면, $\alpha_v\neq 0$일 경우 $\alpha_vv$를 이항한 후 $-\alpha_v^{-1}$를 곱해주면 $v$를 $S$의 원소들의 일차결합으로 나타낼 수 있는데, 이는 $v$의 선택에 모순이기 때문이다. 따라서 $\alpha_v=0$이고, 그럼 $S$의 각 원소들은 일차독립이므로 $\alpha_x=0$이 모든 $x\in S$에 대해 성립한다. 따라서, $\alpha_x=0$이 모든 $x\in S_1$에 대해 성립한다.
 
-이제 만일 $\operatorname{span}S_1=V$라면 다시 증명 끝이고, 그렇지 않다면 똑같은 방식으로 $S_2=S_1\cup\\{v'\\}$을 정의하여 반복할 수 있다. 물론 $S_2$가 일차독립이라는 것을 보여야 하지만, $v'$를 $V\setminus\operatorname{span}S_1$에서 뽑아왔기 때문에 이는 위에서 보인 것과 정확하게 같은 논리로 가능하다. 
+이제 만일 $\span S_1=V$라면 다시 증명 끝이고, 그렇지 않다면 똑같은 방식으로 $S_2=S_1\cup\\{v'\\}$을 정의하여 반복할 수 있다. 물론 $S_2$가 일차독립이라는 것을 보여야 하지만, $v'$를 $V\setminus\span S_1$에서 뽑아왔기 때문에 이는 위에서 보인 것과 정확하게 같은 논리로 가능하다. 
 
 이 과정은 앞선 [보조정리3](#lem3)에 의해 많아야 $\dim V$번째 과정 안에 끝나며, 이 과정이 끝날 때 우리는 원하는 basis $S_n$을 얻게 된다.
 
@@ -157,19 +157,19 @@ $V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$S_0=\emptyset$이라 하자. 그럼 $\operatorname{span}S_0=\\{0\\}$이다. 이제 $S\setminus\operatorname{span}S_0$의 원소 $x_1$을 택해 $S_1=\\{x_1\\}=S_0\cup\\{x_1\\}$이라 하고, 비슷하게 $S\setminus\operatorname{span}S_1$의 원소 $x_2$를 택해 $S_2=\\{x_1,x_2\\}=S_1\cup \\{x_2\\}$를 만드는 과정을 반복한다.
+$S_0=\emptyset$이라 하자. 그럼 $\span S_0=\\{0\\}$이다. 이제 $S\setminus\span S_0$의 원소 $x_1$을 택해 $S_1=\\{x_1\\}=S_0\cup\\{x_1\\}$이라 하고, 비슷하게 $S\setminus\span S_1$의 원소 $x_2$를 택해 $S_2=\\{x_1,x_2\\}=S_1\cup \\{x_2\\}$를 만드는 과정을 반복한다.
 
-이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\operatorname{span}S_i$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 모든 $i < n = \dim V$에 대하여 $S\setminus\operatorname{span}S_i$가 공집합이 아니라는 것을 보이면 충분하다. 
+이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\span S_i$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 모든 $i < n = \dim V$에 대하여 $S\setminus\span S_i$가 공집합이 아니라는 것을 보이면 충분하다. 
 
-자연수 $m$을 $S\setminus\operatorname{span}S_m=\emptyset$이도록 택하자. 즉 $S\subseteq\operatorname{span}S_m$이다. 이제 [§벡터공간의 기저, 보조정리 4](/ko/math/linear_algebra/basis#lem4)로부터 $\operatorname{span}$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
+자연수 $m$을 $S\setminus\span S_m=\emptyset$이도록 택하자. 즉 $S\subseteq\span S_m$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4)로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
 
-$$\operatorname{span}S\subseteq\operatorname{span}\bigl(\operatorname{span}S_m\bigr)$$
+$$\span S\subseteq\span\bigl(\span S_m\bigr)$$
 
-이고, 우변의 $\operatorname{span}S_m$은 이미 $V$의 부분공간이므로 같은 글의 [보조정리 3](/ko/math/linear_algebra/basis#lem3)으로부터 $\operatorname{span}\bigl(\operatorname{span}S\bigr)=\operatorname{span}S_m$임을 안다. 따라서
+이고, 우변의 $\span S_m$은 이미 $V$의 부분공간이므로 [§벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3)으로부터 $\span\bigl(\span S\bigr)=\span S_m$임을 안다. 따라서
 
-$$V=\operatorname{span}S\subseteq\operatorname{span}\bigl(\operatorname{span}S_m\bigr)=\operatorname{span}S_m$$
+$$V=\span S\subseteq\span\bigl(\span S_m\bigr)=\span S_m$$
 
-으로부터 $\operatorname{span}S_m=V$임을 안다. 
+으로부터 $\span S_m=V$임을 안다. 
 
 </details>
 
@@ -195,7 +195,7 @@ $$\mathcal{B}=\{(x, y): x\in \mathcal{B}_1\text{ and }y\in \mathcal{B}_2\}$$
 
 > 두 부분공간 $W_1$, $W_2$를 포함하는 $V$의 부분공간 중 가장 작은 것
 
-으로 정의된다. 식으로 쓰자면 $W_1+W_2=\operatorname{span}(W_1\cup W_2)$라 할 수 있다. 
+으로 정의된다. 식으로 쓰자면 $W_1+W_2=\span(W_1\cup W_2)$라 할 수 있다. 
 
 이제 $W_1,W_2$가 모두 유한차원이라 가정하면
 

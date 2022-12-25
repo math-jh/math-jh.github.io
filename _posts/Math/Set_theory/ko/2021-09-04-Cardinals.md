@@ -65,7 +65,7 @@ weight: 24
 
 그럼
 
-1. 임의의 집합 $A$에 대하여, $\operatorname{id}_A$는 $A$에서 $A$로의 전단사함수이다.
+1. 임의의 집합 $A$에 대하여, $\id_A$는 $A$에서 $A$로의 전단사함수이다.
 2. 임의의 집합 $A,B$ 사이에 전단사함수 $f:A\rightarrow B$가 존재한다면 그 역함수 $f^{-1}:B\rightarrow A$는 $B$에서 $A$로의 전단사함수이다.
 3. 두 전단사함수의 합성 또한 전단사함수이다.
 
@@ -75,11 +75,11 @@ weight: 24
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 집합 $A$의 equivalence class의 한 representative를 $A$의 *cardinal*이라 부르고, $\operatorname{card} A$로 적는다.
+<ins id="df2">**정의 2**</ins> 집합 $A$의 equivalence class의 한 representative를 $A$의 *cardinal*이라 부르고, $\card A$로 적는다.
 
 </div>
 
-공집합은 유일하므로, $\operatorname{card}\emptyset$은 정확히 $\emptyset$이다. Cardinal을 다룰 때는 이 집합을 $\mathbf{0}$으로 적는다. 원소 하나짜리 집합들, 예컨대 $\\{a\\}$와 $\\{b\\}$들은 모두 서로 equipotent하다. $\\{(a,b)\\}$가 $\\{a\\}$에서 $\\{b\\}$로의 전단사함수이기 때문이다. 이를 $\mathbf{1}$로 적자. 아직 이들이 자연수가 되는 것은 아니지만, 우리는 곧 cardinal들에 연산들을 주어 자연수처럼 볼 것이다.
+공집합은 유일하므로, $\card\emptyset$은 정확히 $\emptyset$이다. Cardinal을 다룰 때는 이 집합을 $\mathbf{0}$으로 적는다. 원소 하나짜리 집합들, 예컨대 $\\{a\\}$와 $\\{b\\}$들은 모두 서로 equipotent하다. $\\{(a,b)\\}$가 $\\{a\\}$에서 $\\{b\\}$로의 전단사함수이기 때문이다. 이를 $\mathbf{1}$로 적자. 아직 이들이 자연수가 되는 것은 아니지만, 우리는 곧 cardinal들에 연산들을 주어 자연수처럼 볼 것이다.
 
 연산을 정의하기 전에 carinal 간의 대소관계부터 정의하자.
 

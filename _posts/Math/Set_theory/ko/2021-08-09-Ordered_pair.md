@@ -53,7 +53,7 @@ $x\in A\implies x\in A$가 항상 참이다.
 
 </details>
 
-위 두 명제로부터 $\subseteq$가 집합들 사이의 순서관계가 된다는 것을 안다. ([§순서관계 (1), 정의 1](/ko/math/set_theory/order_relations#df1))
+위 두 명제로부터 $\subseteq$가 집합들 사이의 순서관계가 된다는 것을 안다. ([§순서관계 (1), ⁋정의 1](/ko/math/set_theory/order_relations#df1))
 
 ## 순서쌍
 
@@ -137,13 +137,13 @@ $$\left\{s\in\bigcup z: P(s)\right\}$$
 
 <ins id="df7">**정의 7**</ins> 위의 과정으로 얻어진 두 집합 $\\{x\\}$, $\\{y\\}$에 대하여, $\\{x\\}$의 유일한 원소 $x$를 $z=(x,y)$의 *첫 번째 성분*, $\\{y\\}$의 유일한 원소 $y$를 $z=(x,y)$의 *두 번째 성분*이라 부르며, 이를 각각 
 
-$$x=\operatorname{pr}_1 z,\qquad y=\operatorname{pr}_2 z$$
+$$x=\pr_1 z,\qquad y=\pr_2 z$$
 
 와 같이 표시한다. 
 
 </div>
 
-여기서 $\operatorname{pr}$은 **pr**ojection의 약자이다. 한편, 다음과 같이 두 집합 $A$, $B$의 곱 $A\times B$를 정의할 수 있다.
+여기서 $\pr$은 **pr**ojection의 약자이다. 한편, 다음과 같이 두 집합 $A$, $B$의 곱 $A\times B$를 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -199,5 +199,5 @@ $A,B$ 둘 중 하나가 공집합일 때는 다음 명제를 적용할 수 있�
 
 ---
 
-[^1]: 물론 이 "집합"은 집합이 아니다. ([§ZFC 공리계, 예시 4](/ko/math/set_theory/zfc_axioms#ex4))
+[^1]: 물론 이 "집합"은 집합이 아니다. ([§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4))
 [^2]: 이 보조정리의 증명을 끝으로, 더 이상 증명과정에서 사용한 공리들을 언급하지 않는다.

@@ -3,7 +3,7 @@
 title: "몫군"
 excerpt: "정규부분군과 몫군"
 
-categories: [Math / Algebraic structures]
+categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/quotient_group
 header:
     overlay_image: /assets/images/Algebraic_structures/Quotient_group.png
@@ -17,11 +17,11 @@ weight: 5
 
 ---
 
-앞서 [§대수적 구조, 몫구조](/ko/math/groups/algebraic_structure#%EB%AA%AB%EA%B5%AC%EC%A1%B0)에서 우리는 동치관계 $R$이 마그마 $A$의 연산과 compatible할 경우 그 몫집합 $A/R$ 위에 자연스러운 방식으로 마그마 구조를 줄 수 있다는 것을 증명하였으며, 뿐만 아니라 [§준군, 모노이드, 군](/ko/math/groups/group)의 말미에서 우리는 $A$가 group일 경우, 이 방식으로 만들어진 마그마 $A/R$ 또한 group이 된다는 것을 살펴보았다. 이 때 group $A/R$을 *quotient group<sub>몫군</sub>*이라 부른다.
+앞서 [§대수적 구조, §§몫구조](/ko/math/groups/algebraic_structure#%EB%AA%AB%EA%B5%AC%EC%A1%B0)에서 우리는 동치관계 $R$이 마그마 $A$의 연산과 compatible할 경우 그 몫집합 $A/R$ 위에 자연스러운 방식으로 마그마 구조를 줄 수 있다는 것을 증명하였으며, 뿐만 아니라 [§준군, 모노이드, 군](/ko/math/groups/group)의 말미에서 우리는 $A$가 group일 경우, 이 방식으로 만들어진 마그마 $A/R$ 또한 group이 된다는 것을 살펴보았다. 이 때 group $A/R$을 *quotient group<sub>몫군</sub>*이라 부른다.
 
 ## 정규부분군
 
-한편 [집합론, §동치관계, 명제 7](/ko/math/set_theory/equivalence_relations#pp7)을 통해 우리는 다음 두 가지가 같다는 것을 안다.
+한편 [\[집합론\] §동치관계, ⁋명제 7](/ko/math/set_theory/equivalence_relations#pp7)을 통해 우리는 다음 두 가지가 같다는 것을 안다.
 
 집합 $G$에 동치관계 $R$을 주는 것 $\iff$ 집합 $G$의 분할 $(G\_i)\_{i\in I}$을 택하는 것
 {: .text-center}
@@ -38,7 +38,7 @@ weight: 5
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$a,b\in [e]$라 하자. 즉 $a\sim e\sim b$이다. 이제 $R$은 $G$의 연산과 compatible하므로, $a\sim b$의 양 변의 오른쪽에 $b^{-1}$을 곱하여 $ab^{-1}\sim e$를 얻는다. 즉 $ab^{-1}\in[e]$이므로 [§준군, 모노이드, 군, 명제 12](/ko/math/groups/group#pp12)에 의하여 $[e]$는 subgroup인 것을 안다.
+$a,b\in [e]$라 하자. 즉 $a\sim e\sim b$이다. 이제 $R$은 $G$의 연산과 compatible하므로, $a\sim b$의 양 변의 오른쪽에 $b^{-1}$을 곱하여 $ab^{-1}\sim e$를 얻는다. 즉 $ab^{-1}\in[e]$이므로 [§준군, 모노이드, 군, ⁋명제 12](/ko/math/groups/group#pp12)에 의하여 $[e]$는 subgroup인 것을 안다.
 
 </details>
 

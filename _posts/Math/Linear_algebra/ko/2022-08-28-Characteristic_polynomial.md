@@ -25,19 +25,19 @@ weight: 23
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 $n$차 정사각행렬 $A$에 대하여, $A$의 *특성다항식<sub>characteristic polynomial</sub>*을 $\mathrm{x}$에 대한 다항식 $\det(\mathrm{x}I-A)$으로 정의한다.
+<ins id="df1">**정의 1**</ins> 임의의 $n$차 정사각행렬 $A$에 대하여, $A$의 *특성다항식<sub>characteristic polynomial</sub>*을 $\x$에 대한 다항식 $\det(\x I-A)$으로 정의한다.
 
 </div>
 
 다음의 식
 
-$$\det(\mathrm{x}I-A)=\sum_{\sigma\in S_n}\operatorname{sgn}(\sigma)(\mathrm{x}I-A)_{\sigma(1),1}\cdots(\mathrm{x}I-A)_{\sigma(n),n}\tag{1}$$
+$$\det(\x I-A)=\sum_{\sigma\in S_n}\sgn(\sigma)(\x I-A)_{\sigma(1),1}\cdots(\x I-A)_{\sigma(n),n}\tag{1}$$
 
-으로부터, $A$의 특성다항식의 차수는 많아봐야 $n$차라는 것을 알 수 있다. 우변에서 더해지는 다항식은 $n$개 항들의 곱인데, 이 때 각 $(\mathrm{x}I-A)\_{\sigma(k),k}$는 $\sigma(k)=k$일 때에만 $x$에 대한 일차식이고, 그렇지 않으면 상수이기 때문이다. 이로부터 만일 특성다항식이 실제로 $n$차식이라면, 차수 $n$의 항은 <em_ko>반드시</em_ko> 모든 $k$에 대해 $\sigma(k)=k$를 만족하는 $\sigma$, 즉 $\sigma=\operatorname{id}\_{S\_n}$일 때에만 나타난다는 것을 안다. 이 때, 해당하는 항은
+으로부터, $A$의 특성다항식의 차수는 많아봐야 $n$차라는 것을 알 수 있다. 우변에서 더해지는 다항식은 $n$개 항들의 곱인데, 이 때 각 $(\x I-A)\_{\sigma(k),k}$는 $\sigma(k)=k$일 때에만 $x$에 대한 일차식이고, 그렇지 않으면 상수이기 때문이다. 이로부터 만일 특성다항식이 실제로 $n$차식이라면, 차수 $n$의 항은 <em_ko>반드시</em_ko> 모든 $k$에 대해 $\sigma(k)=k$를 만족하는 $\sigma$, 즉 $\sigma=\id\_{S\_n}$일 때에만 나타난다는 것을 안다. 이 때, 해당하는 항은
 
-$$(\mathrm{x}I-A)_{1,1}\cdots(\mathrm{x}I-A)_{n,n}=(\mathrm{x}-A_{11})\cdots(\mathrm{x}-A_{nn})\tag{2}$$
+$$(\x I-A)_{1,1}\cdots(\x I-A)_{n,n}=(\x-A_{11})\cdots(\x-A_{nn})\tag{2}$$
 
-이 되며, 이를 전개하면 $\mathrm{x}$의 계수는 $1$이므로 특성다항식의 차수는 항상 $n$이라는 것을 알 수 있다. 
+이 되며, 이를 전개하면 $\x$의 계수는 $1$이므로 특성다항식의 차수는 항상 $n$이라는 것을 알 수 있다. 
 
 만일 $\sigma(i)\neq i$인 $i$가 하나 존재한다면, 비둘기집 원리에 의해 반드시 또 다른 $j$에 대하여 $\sigma(j)\neq j$가 성립한다. 이로부터 식 (1)의 우변에서 더해지는 항들에는 $n-1$차식이 존재하지 않음을 안다. 즉, 특성다항식의 $n-1$차 항은 반드시 식 (2)에 의해서만 생기고, 이 때의 계수는 
 
@@ -45,7 +45,7 @@ $$-(A_{1,1}+\cdots+A_{n,n})$$
 
 임을 알 수 있다.
 
-마지막으로 특성다항식의 상수항을 구해보자. 이를 위해서는 특성다항식에 $\mathrm{x}=0$을 대입하면 된다. 그럼 그 결과는
+마지막으로 특성다항식의 상수항을 구해보자. 이를 위해서는 특성다항식에 $\x=0$을 대입하면 된다. 그럼 그 결과는
 
 $$\det(0I-A)=\det(-A)=(-1)^n\det(A)$$
 
@@ -55,7 +55,7 @@ $$\det(0I-A)=\det(-A)=(-1)^n\det(A)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $n$차 정사각행렬의 특성다항식은 반드시 $n$차다항식이며, 특성다항식의 $n-1$차항의 계수는 $-\operatorname{tr}A$와 같고, 상수항은 $(-1)^n\det A$와 같다.
+<ins id="pp2">**명제 2**</ins> $n$차 정사각행렬의 특성다항식은 반드시 $n$차다항식이며, 특성다항식의 $n-1$차항의 계수는 $-\tr A$와 같고, 상수항은 $(-1)^n\det A$와 같다.
 
 </div>
 
@@ -63,13 +63,13 @@ $$\det(0I-A)=\det(-A)=(-1)^n\det(A)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $n\times n$ 행렬 $A$에 대하여, $A$의 특성다항식 $\det(\mathrm{x}I-A)=0$의 해를 $A$의 *고윳값<sub>eigenvalue</sub>*이라 부른다. $A$의 고윳값들의 모임을 $A$의 *spectrum<sub>스펙트럼</sub>*이라 부르고, 이 집합을 $\operatorname{Spec}(A)$으로 표기한다.
+<ins id="df3">**정의 3**</ins> $n\times n$ 행렬 $A$에 대하여, $A$의 특성다항식 $\det(\x I-A)=0$의 해를 $A$의 *고윳값<sub>eigenvalue</sub>*이라 부른다. $A$의 고윳값들의 모임을 $A$의 *spectrum<sub>스펙트럼</sub>*이라 부르고, 이 집합을 $\Spec(A)$으로 표기한다.
 
 </div>
 
 두 닮은 $n\times n$ 행렬 $A,B$를 생각하자. 그럼 $A=PBP^{-1}$로부터, 
 
-$$\det(\mathrm{x}I-A)=\det(\mathrm{x}I-PBP^{-1})=\det(P(\mathrm{x}I-B)P^{-1})=\det P\det(\mathrm{x}I-B)\det P^{-1}=\det(\mathrm{x}I-B)$$
+$$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det P^{-1}=\det(\x I-B)$$
 
 를 얻는다. 따라서 $A$와 $B$의 특성다항식은 서로 같다. 이로부터 다음의 따름정리들을 얻는다.
 
@@ -81,7 +81,7 @@ $$\det(\mathrm{x}I-A)=\det(\mathrm{x}I-PBP^{-1})=\det(P(\mathrm{x}I-B)P^{-1})=\d
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, 정의 2]로부터 두 행렬표현 $[L]\_\mathcal{B}^\mathcal{B}$와 $[L]\_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
+즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋정의 2]로부터 두 행렬표현 $[L]\_\mathcal{B}^\mathcal{B}$와 $[L]\_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
 
 </details>
 
@@ -107,13 +107,13 @@ $$\det(\mathrm{x}I-A)=\det(\mathrm{x}I-PBP^{-1})=\det(P(\mathrm{x}I-B)P^{-1})=\d
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> $F[\mathrm{x}]$의 임의의 다항식 $p(\mathrm{x})$이 주어졌다 하고, $a\in F$가 $p(\mathrm{x})=0$의 해라 하자. 만일 $(\mathrm{x}-a)^k$가 $p(\mathrm{x})$를 나누지만, $(\mathrm{x}-a)^{k+1}$은 $p(\mathrm{x})$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
+<ins id="df6">**정의 6**</ins> $F[\x]$의 임의의 다항식 $p(\x)$이 주어졌다 하고, $a\in F$가 $p(\x)=0$의 해라 하자. 만일 $(\x-a)^k$가 $p(\x)$를 나누지만, $(\x-a)^{k+1}$은 $p(\x)$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
 
 </div>
 
-$n\times n$ 행렬 $A$의 특성다항식을 $p_A(\mathrm{x})$라 하고, $\lambda$가 $A$의 한 고윳값이라 하자. 그럼 $p_A$의 해로서의 $\lambda$의 중복도를 $\lambda$의 *대수적 중복도<sub>algebraic multiplicity</sub>*라 부른다. 이는 곧 정의할 *기하적 중복도*와 구분하기 위한 용어이다. 
+$n\times n$ 행렬 $A$의 특성다항식을 $p_A(\x)$라 하고, $\lambda$가 $A$의 한 고윳값이라 하자. 그럼 $p_A$의 해로서의 $\lambda$의 중복도를 $\lambda$의 *대수적 중복도<sub>algebraic multiplicity</sub>*라 부른다. 이는 곧 정의할 *기하적 중복도*와 구분하기 위한 용어이다. 
 
-$F[\mathrm{x}]$의 임의의 원소 $p(\mathrm{x})$가 주어졌다 하자. $p$가 $n$차식이라 하면, $p$는 많아야 $n$개의 해를 가진다. 그러나 $p$가 정확히 $n$개의 해를 가져야만 하는 것은 아니다.
+$F[\x]$의 임의의 원소 $p(\x)$가 주어졌다 하자. $p$가 $n$차식이라 하면, $p$는 많아야 $n$개의 해를 가진다. 그러나 $p$가 정확히 $n$개의 해를 가져야만 하는 것은 아니다.
 
 <div class="example" markdown="1">
 
@@ -121,7 +121,7 @@ $F[\mathrm{x}]$의 임의의 원소 $p(\mathrm{x})$가 주어졌다 하자. $p$�
 
 $$J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$$
 
-을 생각하자. 그럼 $J$의 특성다항식은 $\mathrm{x}^2+1$이며, 이 다항식은 $\mathbb{R}$에서 해를 갖지 않는다. 
+을 생각하자. 그럼 $J$의 특성다항식은 $\x^2+1$이며, 이 다항식은 $\mathbb{R}$에서 해를 갖지 않는다. 
 
 </div>
 

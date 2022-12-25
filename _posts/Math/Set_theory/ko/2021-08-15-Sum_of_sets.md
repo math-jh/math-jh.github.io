@@ -21,11 +21,11 @@ weight: 9
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Family $(A\_i)\_{i\in I}$가 집합 $A$의 *covering<sub>덮개</sub>*이라는 것은 $A=\bigcup\_{i\in I} A\_i$임을 뜻한다. $A$의 두 covering $(A\_i)\_{i\in I}$와 $(A'\_j)\_{j\in J}$에 대하여, $(A'_j)\_{j\in J}$가 $(A_i)\_{i\in I}$보다 *세밀하다<sub>finer</sub>*는 것은 임의의 $j\in J$에 대하여, $A'\_j\subseteq A\_i$를 만족하는 $i\in I$가 존재하는 것이다.
+<ins id="df1">**정의 1**</ins> Family $(A\_i)\_{i\in I}$가 집합 $A$의 *covering<sub>덮개</sub>*이라는 것은 $A=\bigcup\_{i\in I} A\_i$임을 뜻한다. $A$의 두 covering $(A\_i)\_{i\in I}$와 $(A'\_j)\_{j\in J}$에 대하여, $(A'_j)\_{j\in J}$가 $(A_i)\_{i\in I}$보다 *finer<sub>섬세</sub>*하다는 것은 임의의 $j\in J$에 대하여, $A'\_j\subseteq A\_i$를 만족하는 $i\in I$가 존재하는 것이다.
 
 </div>
 
-집합 $A$의 covering $(A\_i)\_{i\in I}$이 주어졌다 하자. 그럼 임의의 함수 $f:B \rightarrow A$에 대하여, $B$의 부분집합들의 family $(f^{-1}(A\_i))\_{i\in I}$는 $B$의 covering이 된다. 이를 $(A\_i)$의 $f$에 의한 역상이라 부른다. 임의의 함수 $g:A\rightarrow C$에 대하여는 $C$의 부분집합들의 family $(g(A\_i))\_{i\in I}$가 $C$의 covering이 될 필요는 없지만, 만일 $g$가 전사함수라면 이들이 $C$를 덮는다. 이를 전사함수 $g$에 의한 $(A\_i)$의 상이라 부른다. 
+집합 $A$의 covering $(A\_i)\_{i\in I}$이 주어졌다 하자. 그럼 임의의 함수 $f:B \rightarrow A$에 대하여, $B$의 부분집합들의 family $(f^{-1}(A\_i))\_{i\in I}$는 $B$의 covering이 된다. 이를 $(A\_i)$의 $f$에 의한 preimage라 부른다. 임의의 함수 $g:A\rightarrow C$에 대하여는 $C$의 부분집합들의 family $(g(A\_i))\_{i\in I}$가 $C$의 covering이 될 필요는 없지만, 만일 $g$가 전사함수라면 이들이 $C$를 덮는다. 이를 전사함수 $g$에 의한 $(A\_i)$의 image라 부른다. 
 
 
 <div class="proposition" markdown="1">
@@ -50,7 +50,7 @@ $$f(x)=(f|_{A_i})(x)=(g|_{A_i})(x)=g(x)$$
 
 이므로 첫 번째 주장이 성립한다.
 
-두 번째 주장의 경우, 주어진 함수들 $f\_i=(F\_i,A\_i,B)$를 사용하여 $F=\bigcup F\_i$를 만들고, 새로운 triple $f=(F,A,B)$를 생각하자. 그럼 $\operatorname{pr}\_1F=A$임이 자명하며, 따라서 $f$가 함수임을 보이기 위해서는 임의의 $x\in A$에 대하여 $(x,y)\in F$가 참이도록 하는 $y$가 유일함을 보이면 충분하다.
+두 번째 주장의 경우, 주어진 함수들 $f\_i=(F\_i,A\_i,B)$를 사용하여 $F=\bigcup F\_i$를 만들고, 새로운 triple $f=(F,A,B)$를 생각하자. 그럼 $\pr\_1F=A$임이 자명하며, 따라서 $f$가 함수임을 보이기 위해서는 임의의 $x\in A$에 대하여 $(x,y)\in F$가 참이도록 하는 $y$가 유일함을 보이면 충분하다.
 
 $y,y'\in B$가 $(x,y)\in F$, $(x,y')\in F$를 만족한다 하자. 그럼 $(x,y)\in F\_i$, $(x,y')\in F\_j$이도록 하는 $i,j$가 각각 존재한다. 이제 
 
@@ -113,7 +113,7 @@ $f_i:A_i\rightarrow S_i$가 [명제 5](#pp5)의 조건을 만족하는 전단사
 
 </details>
 
-이를 집합의 합이라고 부르는 것에 대한 직관은 나중에 나온다. ([§Cardinal, 정의 6](/ko/math/set_theory/cardinals#df6))
+이를 집합의 합이라고 부르는 것에 대한 직관은 나중에 나온다. ([§Cardinal, ⁋정의 6](/ko/math/set_theory/cardinals#df6))
 
 ## Universal property
 
@@ -172,9 +172,9 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 
 $$\iota_i'=\phi'\circ\iota_i=\phi'\circ(\phi\circ\iota_i')=(\phi'\circ\phi)\circ\iota_i'$$
 
-이다. 한편, 함수들 $\iota_i':A_i\rightarrow S'$에 이번에는 $S'$의 universal property를 적용하자. 그럼 어떤 유일한 함수 $\psi:S'\rightarrow S'$가 존재하여 $\iota_i'=\psi\circ\iota_i'$를 만족한다. 이는 당연히 $\psi=\operatorname{id}\_{S'}$에 의해 만족되는 식이므로, 유일성에 의해 이 식을 만족하는 모든 함수 $\psi$들은 $\operatorname{id}\_{S'}$와 같다. 따라서 $\phi'\circ\phi=\operatorname{id}\_{S'}$이고, $\operatorname{id}\_{S'}$는 전단사이므로 $\phi'$는 전사함수, $\phi$는 단사함수이다. ([§Retraction과 section, 명제 3](/ko/math/set_theory/retraction_and_section#pp3))
+이다. 한편, 함수들 $\iota_i':A_i\rightarrow S'$에 이번에는 $S'$의 universal property를 적용하자. 그럼 어떤 유일한 함수 $\psi:S'\rightarrow S'$가 존재하여 $\iota_i'=\psi\circ\iota_i'$를 만족한다. 이는 당연히 $\psi=\id\_{S'}$에 의해 만족되는 식이므로, 유일성에 의해 이 식을 만족하는 모든 함수 $\psi$들은 $\id\_{S'}$와 같다. 따라서 $\phi'\circ\phi=\id\_{S'}$이고, $\id\_{S'}$는 전단사이므로 $\phi'$는 전사함수, $\phi$는 단사함수이다. ([§Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#pp3))
 
-마찬가지로, $\phi\circ\phi'=\operatorname{id}\_S$임을 보일 수 있고, 이로 인해 $\phi$는 전사함수, $\phi'$는 단사함수다. 즉, 이들은 각각 전단사함수가 되므로 $S$와 $S'$ 사이의 전단사함수가 존재한다. 
+마찬가지로, $\phi\circ\phi'=\id\_S$임을 보일 수 있고, 이로 인해 $\phi$는 전사함수, $\phi'$는 단사함수다. 즉, 이들은 각각 전단사함수가 되므로 $S$와 $S'$ 사이의 전단사함수가 존재한다. 
 
 </details>
 
