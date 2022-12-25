@@ -1,10 +1,171 @@
+########## 마스트헤드 ##########
 main:
-  - title: "About"
-    url: /about/
+  # - title: "About"
+  #   url: /about/
   - title: "Category 🇰🇷"
-    url: ko/categories/
-  - title: "Category 🇺🇸"
-    url: en/categories/
+    url: ko/categories
+  # - title: "Category 🇺🇸"
+    # url: en/categories/
+
+########## 본문 사이드바 ##########
+          
+algebraic_structures-ko:
+  - title: <a href="/ko/algebraic_structures/" class="sidebar_title">대수적 구조</a>
+    children:
+      - title: "대수적 구조"
+        url: ko/math/algebraic_structures/algebraic_structure
+      - title: "준군, 모노이드, 군"
+        url: ko/math/algebraic_structures/group
+      - title: "Grothendieck 군"
+        url: ko/math/algebraic_structures/Grothendieck_group
+      - title: "준동형사상"
+        url: ko/math/algebraic_structures/group_homomorphisms
+      - title: "몫군"
+        url: ko/math/algebraic_structures/quotient_group
+      - title: "동형사상"
+        url: ko/math/algebraic_structures/isomorphism_theorems
+
+blog_dev-ko:
+  - title: <a href="/ko/blog_dev/" class="sidebar_title">블로그 개발</a>
+    children:
+      - title: "Github pages와 Jekyll"
+        url: ko/blog_dev/introduction
+      - title: "Github pages에서 블로그 만들기"
+        url: ko/blog_dev/getting_started
+      - title: "기본 설정"
+        url: ko/blog_dev/initial_settings
+      - title: "블로그 폰트 추가"
+        url: ko/blog_dev/fonts
+      - title: "수식 입력 지원"
+        url: ko/blog_dev/KaTeX
+      - title: "스킨 수정"
+        url: ko/blog_dev/skin
+      - title: "Notice 클래스 활용하기"
+        url: ko/blog_dev/notices
+      - title: "블로그 커스터마이징"
+        url: ko/blog_dev/personalization
+      - title: "맨 위로 버튼 만들기"
+        url: ko/blog_dev/back_to_top
+      - title: "다크모드 추가"
+        url: ko/blog_dev/dark_theme
+      - title: "포스트 순서 정렬하기"
+        url: ko/blog_dev/weight
+      - title: "댓글 기능 추가 (1)"
+        url: ko/blog_dev/comments_1
+      - title: "댓글 기능 추가 (2)"
+        url: ko/blog_dev/comments_2
+      - title: "다국어 지원"
+        url: ko/blog_dev/multilingual
+
+category_theory-ko:
+  - title: <a href="/ko/category_theory/" class="sidebar_title">범주론</a>
+    children:
+      - title: "카테고리"
+        url: ko/math/category_theory/categories
+      - title: "함자들"
+        url: ko/math/category_theory/functors
+      - title: "아벨 카테고리"
+        url: ko/math/category_theory/abelian_categories
+
+homological_algebra-ko:
+  - title: <a href="/ko/homological_algebra/" class="sidebar_title">호몰로지 대수학</a>
+    children:
+      - title: "완전열"
+        url: ko/math/homological_algebra/exact_sequences
+      - title: "Diagram chasing"
+        url: ko/math/homological_algebra/diagram_chasing
+      - title: "호몰로지"
+        url: ko/math/homological_algebra/homology
+      - title: "사슬 호모토피"
+        url: ko/math/homological_algebra/chain_homotopy
+      - title: "Mapping cone"
+        url: ko/math/homological_algebra/mapping_cone
+      - title: "Delta functor"
+        url: ko/math/homological_algebra/delta_functor
+
+linear_algebra-ko:
+  - title: <a href="/ko/linear_algebra/" class="sidebar_title">선형대수학</a>
+    children:
+      - title: "가환군과 체"
+        url: ko/math/linear_algebra/fields
+      - title: "벡터공간"
+        url: ko/math/linear_algebra/vector_spaces
+      - title: "부분공간"
+        url: ko/math/linear_algebra/subspaces
+      - title: "벡터공간의 기저"
+        url: ko/math/linear_algebra/basis
+      - title: "벡터공간의 차원"
+        url: ko/math/linear_algebra/dimension
+      - title: "무한차원 벡터공간<sup>†</sup>"
+        url: ko/math/linear_algebra/infinite_dimensional_vector_space
+      - title: "선형사상"
+        url: ko/math/linear_algebra/linear_map
+      - title: "행렬"
+        url: ko/math/linear_algebra/matrix
+      - title: "가우스 소거법"
+        url: ko/math/linear_algebra/Gaussian_elimination
+      - title: "동형사상"
+        url: ko/math/linear_algebra/isomorphic_vector_spaces
+      - title: "선형사상들의 공간"
+        url: ko/math/linear_algebra/space_of_linear_maps
+      - title: "선형대수학의 기본정리"
+        url: ko/math/linear_algebra/ftla
+      - title: "기본정리: categorical viewpoint<sup>†</sup>"
+        url: ko/math/linear_algebra/ftla_categorical_viewpoint
+      - title: "기저변환"
+        url: ko/math/linear_algebra/change_of_basis
+      - title: "쌍대공간"
+        url: ko/math/linear_algebra/dual_space
+      - title: "쌍선형형식"
+        url: ko/math/linear_algebra/bilinear_form
+      - title: "내적공간"
+        url: ko/math/linear_algebra/inner_product_space
+      - title: "최소제곱법"
+        url: ko/math/linear_algebra/least_squares_method
+      - title: "행렬식"
+        url: ko/math/linear_algebra/determinant
+      - title: "행렬식의 존재성과 유일성"
+        url: ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+      - title: "역행렬"
+        url: ko/math/linear_algebra/inverse_matrix
+      - title: "특성다항식"
+        url: ko/math/linear_algebra/characteristic_polynomial
+      - title: "고유공간분해"
+        url: ko/math/linear_algebra/eigenspace_decomposition
+      - title: "대각화"
+        url: ko/math/linear_algebra/diagonalization
+
+manifold-ko:
+  - title: <a href="/ko/manifold/" class="sidebar_title">미분다양체</a>
+    children:
+      - title: "미분다양체"
+        url: ko/math/manifold/smooth_manifolds
+      - title: "미분다양체의 예시들"
+        url: ko/math/manifold/examples_of_manifolds
+      - title: "접공간"
+        url: ko/math/manifold/tangent_space
+      - title: "여접공간"
+        url: ko/math/manifold/cotangent_space
+      - title: "미분사상"
+        url: ko/math/manifold/differentials
+      - title: "미분사상의 예시들"
+        url: ko/math/manifold/examples_of_differentials
+      - title: "부분다양체와 역함수 정리"
+        url: ko/math/manifold/submanifolds
+      - title: "음함수 정리"
+        url: ko/math/manifold/implicit_function_theorem
+      - title: "벡터다발"
+        url: ko/math/manifold/vector_bundles
+      - title: "벡터장"
+        url: ko/math/manifold/vector_fields
+      - title: "미분형식"
+        url: ko/math/manifold/differential_forms
+      - title: "리만 계량"
+        url: ko/math/manifold/Riemannian_metric
+      - title: "리 미분"
+        url: ko/math/manifold/Lie_derivative
+      - title: "접속"
+        url: ko/math/manifold/connection
 
 set-ko:
   - title: <a href="/ko/set_theory/" class="sidebar_title">집합론</a>
@@ -61,22 +222,12 @@ set-ko:
         url: ko/math/set_theory/natural_numbers
       - title: "극한"
         url: ko/math/set_theory/limits
-          
-algebraic_structures-ko:
-  - title: <a href="/ko/algebraic_structures/" class="sidebar_title">대수적 구조</a>
+
+symplectic_geometry-ko:
+  - title: <a href="/ko/symplectic_geometry/" class="sidebar_title">사교기하학</a>
     children:
-      - title: "대수적 구조"
-        url: ko/math/algebraic_structures/algebraic_structure
-      - title: "준군, 모노이드, 군"
-        url: ko/math/algebraic_structures/group
-      - title: "Grothendieck 군"
-        url: ko/math/algebraic_structures/Grothendieck_group
-      - title: "준동형사상"
-        url: ko/math/algebraic_structures/group_homomorphisms
-      - title: "몫군"
-        url: ko/math/algebraic_structures/quotient_group
-      - title: "동형사상"
-        url: ko/math/algebraic_structures/isomorphism_theorems
+      - title: "고전역학"
+        url: ko/math/symplectic_geometry/classical_mechanics
 
 tensor_algebra-ko:
   - title: <a href="/ko/tensor_algebra/" class="sidebar_title">텐서대수</a>
@@ -90,89 +241,29 @@ tensor_algebra-ko:
       - title: "대칭대수와 외대수"
         url: ko/math/tensor_algebra/symmetric_and_exterior_algebra
 
-manifold-ko:
-  - title: <a href="/ko/manifold/" class="sidebar_title">미분다양체</a>
+topology-ko:
+  - title: <a href="/ko/topology/" class="sidebar_title">위상수학</a>
     children:
-      - title: "미분다양체"
-        url: ko/math/manifold/smooth_manifolds
-      - title: "미분다양체의 예시들"
-        url: ko/math/manifold/examples_of_manifolds
-      - title: "접공간"
-        url: ko/math/manifold/tangent_space
-      - title: "여접공간"
-        url: ko/math/manifold/cotangent_space
-      - title: "미분사상"
-        url: ko/math/manifold/differentials
-      - title: "미분사상의 예시들"
-        url: ko/math/manifold/examples_of_differentials
-      - title: "부분다양체와 역함수 정리"
-        url: ko/math/manifold/submanifolds
-      - title: "음함수 정리"
-        url: ko/math/manifold/implicit_function_theorem
-      - title: "벡터다발"
-        url: ko/math/manifold/vector_bundles
-      - title: "벡터장"
-        url: ko/math/manifold/vector_fields
-      - title: "미분형식"
-        url: ko/math/manifold/differential_forms
-      - title: "리만 계량"
-        url: ko/math/manifold/Riemannian_metric
-      - title: "리 미분"
-        url: ko/math/manifold/Lie_derivative
-      - title: "접속"
-        url: ko/math/manifold/connection
-
-linear_algebra-ko:
-  - title: <a href="/ko/linear_algebra/" class="sidebar_title">선형대수학</a>
-    children:
-      - title: "가환군과 체"
-        url: ko/math/linear_algebra/fields
-      - title: "벡터공간"
-        url: ko/math/linear_algebra/vector_spaces
+      - title: "열린집합"
+        url: ko/math/topology/open_sets
+      - title: "위상공간의 기저"
+        url: ko/math/topology/topological_basis
+      - title: "집합의 내부, 폐포, 경계"
+        url: ko/math/topology/other_concepts
+      - title: "위상공간의 다른 정의들"
+        url: ko/math/topology/equivalent_formulation_of_topology
+      - title: "연속함수"
+        url: ko/math/topology/continuous_functions
+      - title: "Initial topology와 final topology"
+        url: ko/math/topology/initial_and_final_topology
       - title: "부분공간"
-        url: ko/math/linear_algebra/subspaces
-      - title: "벡터공간의 기저"
-        url: ko/math/linear_algebra/basis
-      - title: "벡터공간의 차원"
-        url: ko/math/linear_algebra/dimension
-      - title: "무한차원 벡터공간<sup>†</sup>"
-        url: ko/math/linear_algebra/infinite_dimensional_vector_space
-      - title: "선형사상"
-        url: ko/math/linear_algebra/linear_map
-      - title: "행렬"
-        url: ko/math/linear_algebra/matrix
-      - title: "가우스 소거법"
-        url: ko/math/linear_algebra/Gaussian_elimination
-      - title: "동형사상"
-        url: ko/math/linear_algebra/isomorphic_vector_spaces
-      - title: "선형사상들의 공간"
-        url: ko/math/linear_algebra/space_of_linear_maps
-      - title: "선형대수학의 기본정리"
-        url: ko/math/linear_algebra/ftla
-      - title: "기본정리: categorical viewpoint<sup>†</sup>"
-        url: ko/math/linear_algebra/ftla_categorical_viewpoint
-      - title: "기저변환"
-        url: ko/math/linear_algebra/change_of_basis
-      - title: "쌍대공간"
-        url: ko/math/linear_algebra/dual_space
-      - title: "쌍선형형식"
-        url: ko/math/linear_algebra/bilinear_form
-      - title: "내적공간"
-        url: ko/math/linear_algebra/inner_product_space
-      - title: "최소제곱법"
-        url: ko/math/linear_algebra/least_squares_method
-      - title: "행렬식"
-        url: ko/math/linear_algebra/determinant
-      - title: "행렬식의 존재성과 유일성"
-        url: ko/math/linear_algebra/existence_and_uniqueness_of_determinant
-      - title: "역행렬"
-        url: ko/math/linear_algebra/inverse_matrix
-      - title: "특성다항식"
-        url: ko/math/linear_algebra/characteristic_polynomial
-      - title: "고유공간분해"
-        url: ko/math/linear_algebra/eigenspace_decomposition
-      - title: "대각화"
-        url: ko/math/linear_algebra/diagonalization
+        url: ko/math/topology/subspace
+      - title: "몫공간"
+        url: ko/math/topology/quotient_topology
+      - title: "곱공간"
+        url: ko/math/topology/product_topology
+
+########## 메인화면 사이드바 ##########
 
 category-ko:
   - title: "Basics"
@@ -185,8 +276,8 @@ category-ko:
     children:
       - title: "집합론"
         url: ko/set_theory/
-      # - title: "범주론"
-        # url: ko/category_theory/
+      - title: "범주론"
+        url: ko/category_theory/
   - title: "Algebra"
     children:
       - title: "대수적 구조"
