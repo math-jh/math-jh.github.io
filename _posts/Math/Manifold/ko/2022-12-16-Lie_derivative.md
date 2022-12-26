@@ -139,7 +139,7 @@ $$dF_p(X_p)=Y_{F(p)}$$
 
 즉, $X$와 $Y$가 $F$-related라는 것은 다음의 diagram이 commute한다는 것이다.
 
-![F-related](/assets/images/Manifold/Lie_derivative-1.png){:width="160px" class="invert" .align-center}
+![F-related](/assets/images/Manifold/Lie_derivative-1.png){:width="160.65px" class="invert" .align-center}
 
 [명제 2](#pp2)에서 $X$가 $C^\infty$임을 각각의 함수 $f$에 적용해보아 알 수 있듯, $X$와 $Y$가 $F$-related인지의 여부 또한 마찬가지로 각각의 함수에 적용하여 알아낼 수 있다.
 

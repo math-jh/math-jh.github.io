@@ -196,15 +196,15 @@ $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rang
 
 원래의 명제는 $V$의 차원에 대한 귀납법으로 증명한다. $\dim V=0$인 경우는 증명할 것이 없다. 이제 $\dim V=k$인 경우 증명이 완료되었다 가정하자. 그럼 $\dim V=k+1$를 만족하는 임의의 벡터공간 $V$에 대하여, $\langle w,w\rangle\neq 0$을 만족하는 벡터 $w$가 존재한다. 
 
-이제 $W=\spanw$라 하고 $W^\perp$를 생각하자. 그럼 임의의 $v\in V$에 대하여, 다음의 식
+이제 $W=\span w$라 하고 $W^\perp$를 생각하자. 그럼 임의의 $v\in V$에 대하여, 다음의 식
 
 $$v=\frac{\langle v,w\rangle}{\langle w,w\rangle}w+\left(v-\frac{\langle v,w\rangle}{\langle w,w\rangle}w\right)$$
 
 으로부터 $V$의 임의의 원소는 $W$와 $W^\perp$의 원소의 합으로 표현할 수 있다는 것을 안다. 또, 가정에 의해 $\langle w,w\rangle\neq 0$이므로 $W\cap W^\perp=\\{0\\}$이 성립한다. 따라서 [§벡터공간의 차원, ⁋예시 8](/ko/math/linear_algebra/dimension#ex8)에 의하여
 
-$$k+1=\dim(V)=\dim(W+W^\perp)=\dimW+\dimW^\perp-\dim(W\cap W^\perp)$$
+$$k+1=\dim V=\dim(W+W^\perp)=\dim W+\dim W^\perp-\dim(W\cap W^\perp)$$
 
-으로부터 $\dimW^\perp=k$임을 안다. 뿐만 아니라, 임의의 $v\in W^\perp$에 대하여, $\langle u,v\rangle\neq 0$을 만족하는 $u$에 대하여, 
+으로부터 $\dim W^\perp=k$임을 안다. 뿐만 아니라, 임의의 $v\in W^\perp$에 대하여, $\langle u,v\rangle\neq 0$을 만족하는 $u$에 대하여, 
 
 $$u'=u-\frac{\langle u,w\rangle}{\langle w,w\rangle}w\in W^\perp$$
 

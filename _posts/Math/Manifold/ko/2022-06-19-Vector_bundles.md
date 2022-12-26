@@ -149,7 +149,7 @@ $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 
 </div>
 
-다음 정리의 증명은 **[Mil]**의 정리 3.6에서 찾을 수 있다.
+다음 정리의 증명은 **[MS]**의 정리 3.6에서 찾을 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -179,7 +179,7 @@ $T^\ast M$은 점 $p$마다 벡터공간 $T_p^\ast M$이 붙어있는 공간이�
 
 **참고문헌**
 
-**[Mil]** John W. Milnor, *Characteristic classes*, Princeton university press, 1974.
+**[MS]** J.W. Milnor and J.D. Stasheff, *Characteristic classes*, Princeton university press, 1974.
 
 ---
 
