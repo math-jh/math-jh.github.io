@@ -84,7 +84,7 @@ $$\nabla_{fX}Y=f\nabla_XY$$
 
 이므로 $Y$와 $f$를 잘 택하여 $\nabla_{fX}Y\neq\mathcal{L}_{fX}Y$이도록 하는 것이 항상 가능하다.
 
-한편, $TM$ 위에서 정의된 connection을 생각하면, [명제 2](#pp2)에 의하여 점 $p$에서의 $\nabla_XY$의 값은 $p$ 근방에서의 local frame $(E_i)$들에 의해 완전히 결정된다. 이는
+어쨌든 $TM$ 위에서 정의된 connection을 생각하면, [명제 2](#pp2)에 의하여 점 $p$에서의 $\nabla_XY$의 값은 $p$ 근방에서의 local frame $(E_i)$들에 의해 완전히 결정된다. 이는
 
 $$(\nabla_XY)_p=\nabla_{\sum X^i(p)E_i(p)}\left(\sum Y^i(p)E_i(p)\right)$$
 
@@ -104,7 +104,7 @@ $$\nabla_XY=\sum_{k=1}^n\left(\sum_{i,j=1}^nX(Y^k)+X^iY^j\Gamma_{ij}^k\right)E_k
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 위에서 정의한 $n^3$개의 함수 $\Gamma_{ij}^k$를 *Christoffel symbol<sub>크리스토펠 심볼</sub>*이라 부른다.
+<ins id="df3">**정의 3**</ins> 위에서 정의한 $n^3$개의 함수 $\Gamma_{ij}^k$를 *connection coefficient<sub>접속 계수</sub>*이라 부른다.
 
 </div>
 
@@ -148,13 +148,15 @@ $$\begin{aligned}(\nabla_X^\ast f\alpha)_pY&=X(f\cdot\alpha(Y))-(f\alpha)_p(\nab
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> Tensor field $\mathcal{T}^{r,s}(M)$들 위에 다음 두 조건을 만족하는 connection $\nabla:\mathfrak{X}(M)\times\mathcal{T}^{r,s}(M)\rightarrow\mathcal{T}^{r,s}(M)$들이 유일하게 존재한다.
+<ins id="pp5">**명제 5**</ins> Tangent bundle $TM\rightarrow M$ 위에 정의된 connection $\nabla$가 주어졌다 하자. 그럼 $\nabla$를 모든 tensor field $\mathcal{T}^{r,s}(M)$들 위에 다음 두 조건
 
-$$\nabla_X(F\otimes G)=(\nabla_X F)\otimes G+F\otimes(\nabla_XG),\qquad\nabla_X(F+G)=\nabla_XF+\nabla_XG.$$
+$$\nabla_X(F\otimes G)=(\nabla_X F)\otimes G+F\otimes(\nabla_XG),\qquad\nabla_X(F+G)=\nabla_XF+\nabla_XG$$
+
+을 만족하도록 확장할 수 있으며, 추가로 $\mathcal{T}^{0,0}M$에서 $\nabla_Xf=Xf$이도록 하는 확장이 유일하게 결정된다.
 
 </div>
 
-한편, 임의의 $(r,s)$-tensor $F$는 다음의 linear map
+임의의 $(r,s)$-tensor $F$는 다음의 linear map
 
 $$\underbrace{\Omega^1(M)\times\cdots\times \Omega^1(M)}_\text{\small $r$ times}\times\underbrace{\mathfrak{X}(M)\times\cdots\times \mathfrak{X}(M)}_\text{\small $s$ times}\rightarrow C^\infty(M)$$
 
@@ -181,15 +183,27 @@ $$\begin{aligned}\nabla_XF(\omega_1,\ldots,\omega^r,Y_1,\ldots, Y_s)&=X(F(\omega
 &\phantom{=aa}-\sum_{i=1}^r F(\omega^1,\ldots,\nabla_X\omega^i,\ldots,\omega^r,Y_1,\ldots, Y_s)\\
 &\phantom{=aaaa}-\sum_{j=1}^s F(\omega^1,\ldots, \omega^r,Y_1,\ldots, \nabla_XY_j,\ldots, Y_s)\end{aligned}$$
 
-을 얻는다. 이 식은 simple $(r,s)$-tensor에 대해서 모두 성립하므로 모든 $(r,s)$-tensor에 대해서도 성립한다.
+을 얻는다. 이 식은 simple $(r,s)$-tensor에 대해서 모두 성립하므로 모든 $(r,s)$-tensor에 대해서도 성립한다. 이제 이렇게 정의된 $\nabla$가 원하는 조건을 만족하고, 조건 $\nabla_Xf=Xf$에 의해 유일하게 결정된다는 것은 단순한 계산의 결과이다.
 
-## 이계 공변미분
+## Total connection
 
 위에서 정의한 $\mathcal{T}^{r,s}(M)$ 위에서의 connection $\nabla$를 생각하자. 임의의 $(r,s)$-tensor $F$에 대하여, $\nabla F$는 $r$개의 $1$-form들 $\omega^1,\ldots,\omega^r$과 $s+1$개의 벡터장들 $Y_1,\ldots, Y_s, X$를 받아 $C^\infty(M)$ 함수
 
 $$(\nabla_XF)(\omega^1,\ldots,\omega^r,Y_1,\ldots, Y_s)$$
 
-을 내놓는 $(r,s+1)$-tensor $\nabla F$로 생각할 수 있다. 이러한 관점에서, 이계 공변미분 $\nabla_{X,Y}^2 F$는 다음의 식
+을 내놓는 $(r,s+1)$-tensor $\nabla F$로 생각할 수 있다.
+
+특히 $(0,0)$-tensor, 즉 $C^\infty$ 함수 $f$에 $\nabla$를 적용하면 $(0,1)$-tensor $\nabla f$를 얻는다. 정의에 의하여 covector $\nabla f$는 다음의 식
+
+$$X\mapsto \nabla_Xf=Xf$$
+
+으로 정의된다. 한편, $M=\mathbb{R}^m$으로 두고 [§리만 계량, §§Musical isomorphism](/ko/math/manifold/Riemannian_metric#musical-isomorphism)에서와 같이 함수 $f$의 그라디언트 벡터 $\operatorname{grad} f$를 다음의 식
+
+$$X\mapsto \langle X, \operatorname{grad} f\rangle$$
+
+으로 정의된 covector로 본다면, 그라디언트 벡터의 성질에 의하여 $\langle X,\operatorname{grad} f\rangle=Xf$임을 알 수 있다. 이로부터 기존에 그라디언트 벡터를 표기할 때 $\nabla f$로 표기하기도 하는 것이 설명된다. 이를 일반적인 manifold에서 다루기 위해서는 필연적으로 Riemannian metric을 가져와야 하므로 자세한 내용은 다음 글에서 다루기로 한다.
+
+이제 *second covariant derivative<sub>이계 공변미분</sub>* $\nabla_{X,Y}^2 F$는 다음의 식
 
 $$\nabla_{X,Y}^2F(\ldots)=(\nabla^2 F)(\cdots, Y,X)$$
 
@@ -211,12 +225,4 @@ $$\nabla_{X,Y}^2F=\nabla_X(\nabla_YF)-\nabla_{\nabla_XY}F$$
 
 </details>
 
-특히 $(0,0)$-tensor $C^\infty(M)$에 이를 적용하면 *covariant Hessian* $\nabla^2 u$를 얻는다. $\nabla^2u$는
-
-$$\nabla^2u =\nabla(\nabla u)=\nabla(du)$$
-
-으로 주어지며, $(0,2)$-tensor로서 벡터장 $X,Y$에서의 값이
-
-$$\nabla^2u(Y,X)=\nabla_{X,Y}^2u=\nabla_X(\nabla_Yu)-\nabla_{\nabla_XY}u=Y(Xu)-(\nabla_YX)u$$
-
-으로 주어진다.
+특히 $(0,0)$-tensor $C^\infty(M)$에 이를 적용하면 *covariant Hessian* $\nabla^2 u$를 얻는다. 

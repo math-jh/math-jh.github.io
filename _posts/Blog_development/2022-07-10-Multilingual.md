@@ -6,7 +6,7 @@ excerpt: "다국어 지원 및 사이트 구조 수정"
 read_time: false
 
 categories: [Blog Development]
-permalink: /ko/blog_dev/multilingual
+permalink: /ko/blog_development/multilingual
 
 sidebar: 
     nav: "blog_development-ko"
