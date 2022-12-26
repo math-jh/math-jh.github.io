@@ -6,7 +6,7 @@ excerpt: "본문 너비 늘리기, 파비콘 적용, 머티리얼 아이콘 적�
 read_time: false
 
 categories: [Blog Development]
-permalink: /ko/blog_dev/personalization
+permalink: /ko/blog_development/personalization
 
 sidebar: 
     nav: "blog_development-ko"
