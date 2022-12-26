@@ -5,7 +5,7 @@ excerpt: "Jekyll과 티스토리, 네이버 블로그"
 read_time: false
 
 categories: [Blog Development]
-permalink: /ko/blog_dev/introduction
+permalink: /ko/blog_development/introduction
 
 sidebar: 
     nav: "blog_development-ko"

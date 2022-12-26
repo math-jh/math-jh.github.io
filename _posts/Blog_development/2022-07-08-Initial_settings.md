@@ -6,7 +6,7 @@ excerpt: "Minimal-mistakes 초기 설정"
 read_time: false
 
 categories: [Blog Development]
-permalink: /ko/blog_dev/initial_settings
+permalink: /ko/blog_development/initial_settings
 
 sidebar: 
     nav: "blog_development-ko"
@@ -109,8 +109,8 @@ author:
 ```yml
 # Site Author
 author:
-  name             : "MathHolic"
-  avatar           : /assets/images/Octahedral.jpeg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : "Junhyeok Kim"
+  avatar           : /assets/images/home/Octahedral.jpeg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Grad. student in mathematics"
   location         : "Seoul, Korea"
   email            : "kujuburi@icloud.com"
@@ -161,7 +161,7 @@ author_profile: true
 
 title: "Minimal mistakes 테마의 기본 설정"
 categories: [Blog Development]
-permalink: /ko/blog_dev/initial_settings
+permalink: /ko/blog_development/initial_settings
 sidebar: 
     nav: "blog_development-ko"
 date: 2022-07-08

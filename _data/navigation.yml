@@ -26,7 +26,7 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/isomorphism_theorems
 
 blog_development-ko:
-  - title: <a href="/ko/blog_dev/" class="sidebar_title">블로그 개발</a>
+  - title: <a href="/ko/blog_development/" class="sidebar_title">블로그 개발</a>
     children:
       - title: "Github pages와 Jekyll"
         url: ko/blog_dev/introduction
@@ -315,6 +315,6 @@ category-ko:
   - title: "Misc"
     children:
       - title: "블로그 개발"
-        url: ko/blog_dev/
+        url: ko/blog_development/
       - title: "찾아보기"
         url: ko/misc/index

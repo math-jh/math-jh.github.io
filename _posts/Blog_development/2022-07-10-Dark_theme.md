@@ -6,7 +6,7 @@ excerpt: "Minimal mistakes 테마 다크모드 추가하기"
 read_time: false
 
 categories: [Blog Development]
-permalink: /ko/blog_dev/dark_theme
+permalink: /ko/blog_development/dark_theme
 
 sidebar: 
     nav: "blog_development-ko"

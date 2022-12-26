@@ -6,7 +6,7 @@ excerpt: "새로운 변수를 통한 순서 정렬"
 read_time: false
 
 categories: [Blog Development]
-permalink: /ko/blog_dev/weight
+permalink: /ko/blog_development/weight
 
 sidebar: 
     nav: "blog_development-ko"
@@ -81,7 +81,7 @@ Minimal-mistakes 테마는 포스트를 배열할 때 날짜순으로 우선 정
 
 title: "포스트 순서 정렬하기"
 categories: [Blog Development]
-permalink: /ko/blog_dev/weight
+permalink: /ko/blog_development/weight
 date: 2022-07-10
 last_modified_at: 2022-07-10
 weight: 11

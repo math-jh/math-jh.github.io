@@ -81,7 +81,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋정의 2]로부터 두 행렬표현 $[L]\_\mathcal{B}^\mathcal{B}$와 $[L]\_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
+즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋정의 2](/ko/math/linear_algebra/change_of_basis#df2) 이후의 식으로부터 두 행렬표현 $[L]\_\mathcal{B}^\mathcal{B}$와 $[L]\_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
 
 </details>
 

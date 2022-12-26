@@ -6,7 +6,7 @@ excerpt: "Github 블로그 저장소 만들기"
 read_time: false
 
 categories: [Blog Development]
-permalink: /ko/blog_dev/getting_started
+permalink: /ko/blog_development/getting_started
 
 sidebar: 
     nav: "blog_development-ko"
