@@ -5,8 +5,8 @@ excerpt: "Minimal-mistakes 초기 설정"
 
 read_time: false
 
-categories: [Blog Development]
-permalink: /ko/blog_development/initial_settings
+categories: [Misc / Blog Development]
+permalink: /ko/misc/blog_development/initial_settings
 
 sidebar: 
     nav: "blog_development-ko"
@@ -160,8 +160,8 @@ author_profile: true
 ---
 
 title: "Minimal mistakes 테마의 기본 설정"
-categories: [Blog Development]
-permalink: /ko/blog_development/initial_settings
+categories: [Misc / Blog Development]
+permalink: /ko/misc/blog_development/initial_settings
 sidebar: 
     nav: "blog_development-ko"
 date: 2022-07-08
