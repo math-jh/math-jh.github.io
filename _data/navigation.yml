@@ -25,8 +25,8 @@ algebraic_structures-ko:
       - title: "동형사상"
         url: ko/math/algebraic_structures/isomorphism_theorems
 
-blog_dev-ko:
-  - title: <a href="/ko/blog_dev/" class="sidebar_title">블로그 개발</a>
+blog_development-ko:
+  - title: <a href="/ko/blog_development/" class="sidebar_title">블로그 개발</a>
     children:
       - title: "Github pages와 Jekyll"
         url: ko/blog_dev/introduction
@@ -167,7 +167,7 @@ manifold-ko:
       - title: "접속"
         url: ko/math/manifold/connection
 
-set-ko:
+set_theory-ko:
   - title: <a href="/ko/set_theory/" class="sidebar_title">집합론</a>
     children:
       - title: "ZFC 공리계"
@@ -315,6 +315,6 @@ category-ko:
   - title: "Misc"
     children:
       - title: "블로그 개발"
-        url: ko/blog_dev/
+        url: ko/blog_development/
       - title: "찾아보기"
         url: ko/misc/index
