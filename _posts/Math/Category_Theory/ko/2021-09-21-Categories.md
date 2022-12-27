@@ -55,8 +55,8 @@ weight: 1
 
 <ins id="ex2">**예시 2 (대수적 구조들)**</ins> 
 
-- 집합들의 카테고리 $\Set$이 존재한다. $\Set$의 대상들은 집합들이며, 임의의 두 대상 $A,B\in\obj(\Set)$에 대하여 $\Mor_\Set(A,B)=\Fun(A,B)$으로 정의된다. 두 morphism들의 합성은 함수의 합성과 같으며, identity morphism은 정확히 항등함수와 같다.
-- Group들의 카테고리 $\Group$이 존재한다. $\Group$의 대상들은 group들이며, 임의의 두 대상 $G,H\in\obj(\Group)$에 대하여 $\Mor_\Group(G,H)$는 $G$에서 $H$로의 group homomorphism들의 모임으로 정의된다. 두 morphism들의 합성과 identity morphism은 위와 마찬가지로 정의된다.
+- 집합들의 카테고리 $\Set$이 존재한다. $\Set$의 대상들은 집합들이며, 임의의 두 대상 $A,B\in\obj(\Set)$에 대하여 $\Mor_\Set(A,B)=\Fun(A,B)$으로 정의된다. 두 morphism들의 합성은 함수의 합성과 같다. ([\[집합론\] §함수들 사이의 연산, ⁋명제 1](/ko/math/set_theory/operation_of_functions#pp1)) Identity morphism은 정확히 항등함수와 같다.
+- Group들의 카테고리 $\Group$이 존재한다. $\Group$의 대상들은 group들이며, 임의의 두 대상 $G,H\in\obj(\Group)$에 대하여 $\Mor_\Group(G,H)$는 $G$에서 $H$로의 group homomorphism들의 모임으로 정의된다. 두 morphism들의 합성과 identity morphism은 위와 마찬가지로 정의된다. ([\[대수적 구조\] §준동형사상, 명제 1](/ko/math/algebraic_structures/group_homomorphisms#pp1))
 - Abelian group들의 카테고리 $\Ab$이 존재한다. $\Ab$의 대상들은 abelian group들이며, 임의의 두 대상 $G,H\in\obj(\Ab)$에 대하여 $\Mor_\Ab(G,H)$는 $G$에서 $H$로의 group homomorphism들의 모임이다. 두 morphism들의 합성과 identity morphism은 위와 마찬가지로 정의된다.
 - (항등원을 갖는) ring들의 카테고리 $\Ring$이 잘 정의된다. $\Ring$의 대상들은 항등원을 갖는 ring들이며, 두 대상 $R,S\in\obj(\Ring)$에 대하여 $\Mor_\Ring(R,S)$는 $R$에서 $S$로의 *unital* ring homomorphism들의 모임으로 정의된다.
 - 카테고리 $\Rng$는 항등원 (**i**dentity)을 가질 수도, 갖지 않을 수도 있는 ring들의 카테고리다. 따라서 두 "rng"들 사이의 morphism은 ring homomorphism들이며, 설령 정의역 $R$과 공역 $S$가 모두 항등원을 갖는다 하더라도 $\Mor_\Rng(R,S)$의 원소들은 항등원을 보존할 필요가 없다.
@@ -71,8 +71,8 @@ weight: 1
 
 <ins id="ex3">**예시 3**</ins> 
 
-- 위상공간들의 카테고리 $\Top$이 존재한다. $\Top$의 대상들은 위상공간들이며, 두 대상 $X,Y\in\obj(\Top)$에 대하여 $\Mor_\Top(X,Y)$는 $X$에서 $Y$로의 연속함수들의 모임이다. 
-- 카테고리 $\Man$은 (smooth) manifold들의 모임이다. 이들 사이의 morphism들은 smooth map들이다.
+- 위상공간들의 카테고리 $\Top$이 존재한다. $\Top$의 대상들은 위상공간들이며, 두 대상 $X,Y\in\obj(\Top)$에 대하여 $\Mor_\Top(X,Y)$는 $X$에서 $Y$로의 연속함수들의 모임이다. ([\[위상수학\] §연속함수, ⁋명제 3](/ko/math/topology/continuous_functions#pp3))
+- 카테고리 $\Man$은 (smooth) manifold들의 모임이다. 이들 사이의 morphism들은 smooth map들이다. ([\[미분다양체\] §미분사상, ⁋명제 5](/ko/math/manifold/differentials#pp3))
 
 </div>
 
@@ -137,7 +137,7 @@ $$h_1\circ f=h_2\circ f\implies h_1=h_2$$
 <ins id="ex8">**예시 8**</ins> 
 
 - 카테고리 $\Set$에서 monomorphism들은 정확히 단사함수들이고, epimorphism들은 정확히 전사함수들이며 따라서 bimorphism들은 정확히 전단사함수들이다. 즉, $\Set$에서는 bimorphism과 isomorphism이 동일한 개념이다.
-- 카테고리 $\Ring$에서 monomorphism들은 마찬가지로 정확히 단사인 ring homomorphism들이다. 그러나 epimorphism은 전사인 ring homomorphism을 의미하지 <em_ko>않는다</em_ko>. 가령 $\mathbb{Z}\hookrightarrow\mathbb{Q}$가 epimorphism이라는 것이 바로 localization의 universal property이다.
+- 카테고리 $\Ring$에서 monomorphism들은 마찬가지로 정확히 단사인 ring homomorphism들이다. 그러나 epimorphism은 전사인 ring homomorphism을 의미하지 <em_ko>않는다</em_ko>. 가령 $\mathbb{Z}\hookrightarrow\mathbb{Q}$가 epimorphism이라는 것이 바로 localization의 universal property이다. 이는 $\Ring$에서 bimorphism이지만 isomorphism은 아닌 예시가 존재함을 보여준다.
 
 </div>
 
@@ -158,7 +158,7 @@ $$h_1\circ f=h_2\circ f\implies h_1=h_2$$
 
 정의로부터, $f$가 $\mathcal{C}$에서 monomorphism이라면 $f^\op$는 $\mathcal{C}^\op$에서 epimorphism이고, $f$가 $\mathcal{C}$에서 epimorphism이라면 $f^\op$는 $\mathcal{C}^\op$에서 monomorphism이다. 
 
-한편, [\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section)에서 우리는 retraction과 section을 정의했었는데, 이들 또한 서로의 정의에서 <em_ko>화살표를 뒤집어서</em_ko> 얻어지므로 해당 글의 모든 명제들이 전사함수와 단사함수 각각에서 성립했던 것은 duality에 의한 것으로 생각할 수 있다.
+한편, [\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section)에서 우리는 retraction과 section을 정의했었는데, 이들 또한 서로의 정의에서 <em_ko>화살표를 뒤집어서</em_ko> 얻어지므로 해당 글의 모든 명제들이 전사함수와 단사함수 각각에서 성립했던 것은 duality에 의한 것으로 생각할 수 있다. 
 
 ---
 
