@@ -3,14 +3,15 @@ layout: splash
 permalink: /ko/
 hidden: true
 header:
-  overlay_image: /assets/images/Background/Main.png
-  overlay_filter: 0.85
+  overlay_image: /assets/images/home/Stationary_main.png
+  overlay_filter: 0.9
+  caption: "Mirror symmetry and Schrödinger's cat. <br/>From [*Horizon* $(2018,\\text{ vol.}1)$](https://horizon.kias.re.kr/6469/)<br/>Photo by [**mareykrap**](https://notefolio.net/mareykrap/104880)"
   actions:
-    - label: "<i class='material-icons md-18' style='vertical-align:-.1em'>&#xE873;</i>  About this site"
-      url: "/about/about_this_site"
+    - label: "<span class='material-icons md-18' style='vertical-align:-.1em'>&#xE873;</span>  About"
+      url: "/ko/about/"
 excerpt: 
 feature_row:
-  - image_path: /assets/images/Background/Title-Set_theory.jpeg
+  - image_path: /assets/images/Thumbnails/Title-Set_theory.jpeg
     alt: "set_theory"
     title: "집합론"
     excerpt: "수학기초론 1: 집합론"
