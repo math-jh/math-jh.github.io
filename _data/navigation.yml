@@ -29,33 +29,33 @@ blog_development-ko:
   - title: <a href="/ko/blog_development/" class="sidebar_title">블로그 개발</a>
     children:
       - title: "Github pages와 Jekyll"
-        url: ko/blog_dev/introduction
+        url: ko/misc/blog_development/introduction
       - title: "Github pages에서 블로그 만들기"
-        url: ko/blog_dev/getting_started
+        url: ko/misc/blog_development/getting_started
       - title: "기본 설정"
-        url: ko/blog_dev/initial_settings
+        url: ko/misc/blog_development/initial_settings
       - title: "블로그 폰트 추가"
-        url: ko/blog_dev/fonts
+        url: ko/misc/blog_development/fonts
       - title: "수식 입력 지원"
-        url: ko/blog_dev/KaTeX
+        url: ko/misc/blog_development/KaTeX
       - title: "스킨 수정"
-        url: ko/blog_dev/skin
+        url: ko/misc/blog_development/skin
       - title: "Notice 클래스 활용하기"
-        url: ko/blog_dev/notices
+        url: ko/misc/blog_development/notices
       - title: "블로그 커스터마이징"
-        url: ko/blog_dev/personalization
+        url: ko/misc/blog_development/personalization
       - title: "맨 위로 버튼 만들기"
-        url: ko/blog_dev/back_to_top
+        url: ko/misc/blog_development/back_to_top
       - title: "다크모드 추가"
-        url: ko/blog_dev/dark_theme
+        url: ko/misc/blog_development/dark_theme
       - title: "포스트 순서 정렬하기"
-        url: ko/blog_dev/weight
+        url: ko/misc/blog_development/weight
       - title: "댓글 기능 추가 (1)"
-        url: ko/blog_dev/comments_1
+        url: ko/misc/blog_development/comments_1
       - title: "댓글 기능 추가 (2)"
-        url: ko/blog_dev/comments_2
+        url: ko/misc/blog_development/comments_2
       - title: "다국어 지원"
-        url: ko/blog_dev/multilingual
+        url: ko/misc/blog_development/multilingual
 
 category_theory-ko:
   - title: <a href="/ko/category_theory/" class="sidebar_title">범주론</a>

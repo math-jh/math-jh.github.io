@@ -5,8 +5,8 @@ excerpt: "맨 위로 버튼 만들기, 숨기기"
 
 read_time: false
 
-categories: [Blog Development]
-permalink: /ko/blog_development/back_to_top
+categories: [Misc / Blog Development]
+permalink: /ko/misc/blog_development/back_to_top
 
 sidebar: 
     nav: "blog_development-ko"
