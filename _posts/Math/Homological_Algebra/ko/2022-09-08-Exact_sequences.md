@@ -6,7 +6,7 @@ excerpt: "기본정의"
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/exact_sequences
 header:
-    overlay_image: /assets/images/Homological_algebra/a.png
+    overlay_image: /assets/images/Homological_algebra/Exact_sequences.png
     overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
@@ -17,13 +17,66 @@ weight: 1
 
 ---
 
-앞으로 항상 $R$은 곱셈에 대한 항등원 $1$을 갖고, commutative인 것으로 생각한다. 또, $R$-module homomorphism을 간단히 함수, 혹은 map이라 부르기로 한다.
+앞으로 항상 $R$은 곱셈에 대한 항등원 $1$을 갖고, commutative인 것으로 생각한다. 또, 편의상 앞으로 $R$-module 사이의 map이라는 것은 모두 $R$-module homomorphism을 의미하는 것으로 생각한다.
 
-## Exactness
+## 카테고리 $\lmod{R}$
+
+우리는 카테고리 $\lmod{R}$이 [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#df7)의 조건을 모두 만족한다는 것을 보인다. 역사적으로는 $\lmod{R}$의 성질을 바탕으로 아벨 카테고리를 정의한 것이다.
+
+우선 $\lmod{R}$이 additive category가 된다는 사실은 자명하다. 또, [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#df7) 이후와 같은 논증을 통하여 임의의 monomorphism은 cokernel의 kernel이고, 임의의 epimorphism은 kernel의 cokernel인 것을 확인할 수 있다. 따라서 우리는 $\lmod{R}$에서의 kernel과 cokernel이 universal property를 만족한다는 사실만 보이면 충분하다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#df3))
+
+<div class="proposition" markdown="1">
+
+<ins id="pp1">**명제 1**</ins> 임의의 $R$-module homomorphism $f:X\rightarrow Y$이 주어졌다 하고, $K=\ker f$, 그리고 자연스러운 inclusion $i:K\rightarrow X$를 생각하자. 그럼 $fi=0$이며, 뿐만 아니라 $i:K\rightarrow X$는 다음의 universal property를 만족한다.
+
+> 임의의 $g:Z\rightarrow X$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:Z\rightarrow K$가 존재하여 $g=ij$이다. 
+>
+> ![universal_property_of_kernel](/assets/images/Homological_algebra/Exact_sequences-1.png){:width="212.85px" class="invert" .align-center}
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 유일성을 보이자. 만일 $ij=g=ij'$이도록 하는 두 함수 $j, j':Z\rightarrow K$가 존재한다면, 임의의 $z\in Z$에 대하여
+
+$$0=g(z)-g(z)=i(j(z))-i(j'(z))=i(j(z)-j'(z))$$
+
+가 성립한다. 그런데 $i$는 단사이므로, 이를 위해서는 모든 $z\in Z$에 대하여 $j(z)-j'(z)=0$, 즉 $j=j'$여야 한다. 
+
+존재성 또한 자명하다. $g$의 공역을 $K$로 제한한 것이 주어진 조건을 만족하기 때문이다.
+
+</details>
+
+이제 임의의 함수 $f:X\rightarrow Y$를 고정하자. 그럼 quotient module $Y/\im(f)$와, 자연스러운 projection $Y\rightarrow Y/\im(f)$가 잘 정의된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="pp2">**명제 2**</ins> 임의의 $R$-module homomorphism $f:X\rightarrow Y$이 주어졌다 하고, $C=Y/\im(f)$, 그리고 자연스러운 projection $p:Y\rightarrow C$를 생각하자. 그럼 $pf=0$이며, 뿐만 아니라 $p:Y\rightarrow C$는 다음의 universal property를 만족한다.
+
+> 임의의 $g:Y\rightarrow Z$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:C\rightarrow Z$가 존재하여 $g=jp$이다. 
+>
+> ![universal_property_of_cokernel](/assets/images/Homological_algebra/Exact_sequences-2.png){:width="210px" class="invert" .align-center}
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 유일성을 보이자. 만일 $jp=g=j'p$이도록 하는 $j,j':C\rightarrow Z$가 존재한다면, 임의의 $y\in Y$에 대하여
+
+$$0=g(y)-g(y)=j(p(y))-j'(p(y))=(j-j')(p(y))$$
+
+가 성립한다. 그런데 $p$는 전사이므로, 이는 곧 모든 $c\in C$에 대하여 $j(c)-j'(c)=0$, 곧 $j=j'$라는 뜻이다.
+
+존재성의 경우, $\ker(p)=\im(f)\subseteq\ker(g)$이므로 <#ref#>로부터 자명하다. 
+
+</details>
+
+## 완전열
+
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $R$-module들의 열
+<ins id="df3">**정의 3**</ins> $R$-module들의 열
 
 $$\cdots\longrightarrow X\overset{f}{\longrightarrow} Y\overset{g}{\longrightarrow} Z\longrightarrow \cdots$$
 
@@ -59,7 +112,7 @@ $$\cdots\longrightarrow 0\longrightarrow 0\longrightarrow X\longrightarrow \cdot
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> 임의의 $R$-module $X$에 대하여, 다음의 열
+<ins id="ex4">**예시 4**</ins> 임의의 $R$-module $X$에 대하여, 다음의 열
 
 $$0\longrightarrow X\overset{f}{\longrightarrow}Y$$
 
@@ -91,7 +144,17 @@ $$0\longrightarrow X\longrightarrow Y\longrightarrow Z\longrightarrow 0$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> 임의의 $R$-module $X$가 주어졌다 하자. Submodule $A\subseteq X$에 대하여, quotient module $X/A$를 생각하면 자연스러운 projection map $p:X\rightarrow X/A$가 존재하며, $\ker(p)=A$이다. 따라서 $A$에서 $X$로의 inclusion map을 생각하면, 다음의 열
+<ins id="ex5">**예시 5**</ins> $R$의 ideal은 항상 $R$-module 구조를 갖는다. 이제 $R$의 두 ideal $I,J$에 대하여 $R=I+J$라 가정하자. 그럼 다음의 short exact sequence
+
+$$0\longrightarrow I\cap J\longrightarrow I\oplus J\longrightarrow R\longrightarrow 0$$
+
+가 존재한다. 여기서 첫째 함수는 $x\mapsto (x,-x)$로 정의된 함수이고, 둘째 함수는 $(x,y)\mapsto x+y$로 정의된 함수이다.
+
+</div>
+
+<div class="example" markdown="1">
+
+<ins id="ex6">**예시 6**</ins> 임의의 $R$-module $X$가 주어졌다 하자. Submodule $A\subseteq X$에 대하여, quotient module $X/A$를 생각하면 자연스러운 projection map $p:X\rightarrow X/A$가 존재하며, $\ker(p)=A$이다. 따라서 $A$에서 $X$로의 inclusion map을 생각하면, 다음의 열
     
 $$0\longrightarrow A\longrightarrow X\longrightarrow X/A\longrightarrow 0$$
     
@@ -105,79 +168,11 @@ $$0\longrightarrow \ker f\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 
 </div>
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> $R$의 ideal은 항상 $R$-module 구조를 갖는다. 이제 $R$의 두 ideal $I,J$에 대하여 $R=I+J$라 가정하자. 그럼 다음의 short exact sequence
-
-$$0\longrightarrow I\cap J\longrightarrow I\oplus J\longrightarrow R\longrightarrow 0$$
-
-가 존재한다. 여기서 첫째 함수는 $x\mapsto (x,-x)$로 정의된 함수이고, 둘째 함수는 $(x,y)\mapsto x+y$로 정의된 함수이다.
-
-</div>
-
-## Kernel, cokernel
-
-위의 예시를 일반화하여, 임의의 map $f:X\rightarrow Y$가 주어졌다 하고, 이로부터 만들어지는 exact sequence를 생각할 수 있다. 적절한 직관을 부여하기 위해 우선 다음 명제를 증명하자.
+더 일반적으로 다음과 같이 <em_ko>임의의</em_ko> map을 exact sequence로 분리할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $K=\ker f$, 그리고 자연스러운 inclusion $i:K\rightarrow X$를 생각하자. 그럼 $fi=0$이며, 뿐만 아니라 $i:K\rightarrow X$는 다음의 universal property를 만족한다.
-
-> 임의의 $g:Z\rightarrow X$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:Z\rightarrow K$가 존재하여 $g=ij$이다. 
->
-> ![universal_property_of_kernel](/assets/images/Homological_algebra/Exact_sequences-1.png){:width="212.85px" class="invert" .align-center}
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-우선 유일성을 보이자. 만일 $ij=g=ij'$이도록 하는 두 함수 $j, j':Z\rightarrow K$가 존재한다면, 임의의 $z\in Z$에 대하여
-
-$$0=g(z)-g(z)=i(j(z))-i(j'(z))=i(j(z)-j'(z))$$
-
-가 성립한다. 그런데 $i$는 단사이므로, 이를 위해서는 모든 $z\in Z$에 대하여 $j(z)-j'(z)=0$, 즉 $j=j'$여야 한다. 
-
-존재성 또한 자명하다. $g$의 공역을 $K$로 제한한 것이 주어진 조건을 만족하기 때문이다.
-
-</details>
-
-이제 임의의 함수 $f:X\rightarrow Y$를 고정하자. 그럼 quotient module $Y/\im(f)$와, 자연스러운 projection $Y\rightarrow Y/\im(f)$가 잘 정의된다.
-
-<div class="proposition" markdown="1">
-
-<ins id="pp6">**명제 6**</ins> 임의의 map $f:X\rightarrow Y$이 주어졌다 하고, $C=Y/\im(f)$, 그리고 자연스러운 projection $p:Y\rightarrow C$를 생각하자. 그럼 $pf=0$이며, 뿐만 아니라 $p:Y\rightarrow C$는 다음의 universal property를 만족한다.
-
-> 임의의 $g:Y\rightarrow Z$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:C\rightarrow Z$가 존재하여 $g=jp$이다. 
->
-> ![universal_property_of_cokernel](/assets/images/Homological_algebra/Exact_sequences-2.png){:width="210px" class="invert" .align-center}
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-우선 유일성을 보이자. 만일 $jp=g=j'p$이도록 하는 $j,j':C\rightarrow Z$가 존재한다면, 임의의 $y\in Y$에 대하여
-
-$$0=g(y)-g(y)=j(p(y))-j'(p(y))=(j-j')(p(y))$$
-
-가 성립한다. 그런데 $p$는 전사이므로, 이는 곧 모든 $c\in C$에 대하여 $j(c)-j'(c)=0$, 곧 $j=j'$라는 뜻이다.
-
-존재성의 경우, $\ker(p)=\im(f)\subseteq\ker(g)$이므로 <#ref#>로부터 자명하다. 
-
-</details>
-
-위의 두 명제로부터, 위에서 정의한 $C$를 다음과 같이 부르는 것이 자연스럽다.
-
-<div class="definition" markdown="1">
-
-<ins id="df7">**정의 7**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, module $Y/\im(f)$를 $f$의 *cokernel<sub>여핵</sub>*이라 부르고 $\coker(f)$으로 적는다.
-
-</div>
-
-이를 이용하면 임의의 $f:X\rightarrow Y$를 exact sequence의 언어로 설명할 수 있다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="pp8">**명제 8**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, 다음의 sequence
+<ins id="pp7">**명제 7**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, 다음의 sequence
 
 $$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrightarrow \coker(f)\longrightarrow 0$$
 
@@ -195,7 +190,7 @@ $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarro
 
 <div class="definition" markdown="1">
 
-<ins id="df9">**정의 9**</ins> 주어진 exact sequence
+<ins id="df8">**정의 8**</ins> 주어진 exact sequence
 
 $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarrow}Z\longrightarrow\cdots$$
 
@@ -205,7 +200,7 @@ $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarro
 
 <div class="proposition" markdown="1">
 
-<ins id="pp10">**명제 10**</ins> 다음 exact sequence 
+<ins id="pp9">**명제 9**</ins> 다음 exact sequence 
 
 $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarrow}Z\longrightarrow\cdots$$
 
@@ -243,7 +238,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> $R=\mathbb{Z}$라 하고, $A=\mathbb{Z}$, $C=\prod\_\mathbb{N}(\mathbb{Z}/2\mathbb{Z})$, 그리고 $B=A\oplus C$라 하자. 
+<ins id="ex10">**예시 10**</ins> $R=\mathbb{Z}$라 하고, $A=\mathbb{Z}$, $C=\prod\_\mathbb{N}(\mathbb{Z}/2\mathbb{Z})$, 그리고 $B=A\oplus C$라 하자. 
 
 $$0\longrightarrow A\overset{f}{\longrightarrow}B\overset{g}{\longrightarrow}C\longrightarrow 0$$
 
@@ -273,7 +268,7 @@ $$1=\tilde{f}(f(1))=\tilde{f}(2,0)=2\tilde{f}(1,0)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp12">**명제 12**</ins> $R$-module들의 short exact sequence
+<ins id="pp11">**명제 12**</ins> $R$-module들의 short exact sequence
 
 $$0\longrightarrow A\overset{f}{\longrightarrow}B\overset{g}{\longrightarrow}C\longrightarrow 0$$
 

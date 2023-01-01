@@ -9,5 +9,5 @@ permalink: /ko/blog_development/
   {% assign lang = lang_prefix | remove_first: "/" %}
 {% endif %}
 
-{% assign posts = site.categories['Blog Development'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% assign posts = site.categories['Misc / Blog Development'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
