@@ -29,43 +29,66 @@ blog_development-ko:
   - title: <a href="/ko/blog_development/" class="sidebar_title">블로그 개발</a>
     children:
       - title: "Github pages와 Jekyll"
-        url: ko/blog_dev/introduction
+        url: ko/misc/blog_development/introduction
       - title: "Github pages에서 블로그 만들기"
-        url: ko/blog_dev/getting_started
+        url: ko/misc/blog_development/getting_started
       - title: "기본 설정"
-        url: ko/blog_dev/initial_settings
+        url: ko/misc/blog_development/initial_settings
       - title: "블로그 폰트 추가"
-        url: ko/blog_dev/fonts
+        url: ko/misc/blog_development/fonts
       - title: "수식 입력 지원"
-        url: ko/blog_dev/KaTeX
+        url: ko/misc/blog_development/KaTeX
       - title: "스킨 수정"
-        url: ko/blog_dev/skin
+        url: ko/misc/blog_development/skin
       - title: "Notice 클래스 활용하기"
-        url: ko/blog_dev/notices
+        url: ko/misc/blog_development/notices
       - title: "블로그 커스터마이징"
-        url: ko/blog_dev/personalization
+        url: ko/misc/blog_development/personalization
       - title: "맨 위로 버튼 만들기"
-        url: ko/blog_dev/back_to_top
+        url: ko/misc/blog_development/back_to_top
       - title: "다크모드 추가"
-        url: ko/blog_dev/dark_theme
+        url: ko/misc/blog_development/dark_theme
       - title: "포스트 순서 정렬하기"
-        url: ko/blog_dev/weight
+        url: ko/misc/blog_development/weight
       - title: "댓글 기능 추가 (1)"
-        url: ko/blog_dev/comments_1
+        url: ko/misc/blog_development/comments_1
       - title: "댓글 기능 추가 (2)"
-        url: ko/blog_dev/comments_2
+        url: ko/misc/blog_development/comments_2
       - title: "다국어 지원"
-        url: ko/blog_dev/multilingual
+        url: ko/misc/blog_development/multilingual
 
 category_theory-ko:
   - title: <a href="/ko/category_theory/" class="sidebar_title">범주론</a>
     children:
       - title: "카테고리"
         url: ko/math/category_theory/categories
-      - title: "함자들"
+      - title: "함자"
         url: ko/math/category_theory/functors
+      - title: "자연변환"
+        url: ko/math/category_theory/natural_transformations
       - title: "아벨 카테고리"
         url: ko/math/category_theory/abelian_categories
+      # - title: "수반함자"
+        # url: ko/math/category_theory/adjoints
+      # - title: "표현 가능한 함자"
+        # url: ko/math/category_theory/representable_functor
+      # - title: "요네다 보조정리"
+        # url: ko/math/category_theory/Yoneda_lemma
+      # - title: "극한"
+        # url: ko/math/category_theory/limits
+      # - title: "모나드"
+        # url: ko/math/category_theory/monads
+      # - title: "오퍼라드"
+        # url: ko/math/category_theory/operads
+      # - title: "칸 확장"
+        # url: ko/math/category_theory/Kan_extension
+      # - title: "고차 카테고리"
+        # url: ko/math/category_theory/higher_categories
+      # - title: "Infinite category"
+        # url: ko/math/category_theory/infinite_categories
+      # - title: "A-infinity category"
+        # url: ko/math/category_theory/A-infinity_categories
+
 
 homological_algebra-ko:
   - title: <a href="/ko/homological_algebra/" class="sidebar_title">호몰로지 대수학</a>
