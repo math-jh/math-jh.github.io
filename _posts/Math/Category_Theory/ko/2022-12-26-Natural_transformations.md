@@ -97,9 +97,7 @@ $$v^\ast(v')=L^\ast\bigl((Lv)^\ast\bigr)(v')=(Lv)^\ast(Lv')=v^\ast(L^\ast L)v'$$
 
 ## 동등한 카테고리들
 
-자연변환의 또 다른 motivation 중 하나는 이 개념이 동등한 카테고리의 개념을 정의할 때 사용된다는 것이다. 대수적 위상수학에서 우리는 두 공간의 "뼈대"가 같으면 두 공간을 동등한 것으로 취급할 수 있었다.
-
-img
+자연변환의 또 다른 motivation 중 하나는 이 개념이 동등한 카테고리의 개념을 정의할 때 사용된다는 것이다. 대수적 위상수학에서 우리는 두 공간의 "뼈대"가 같으면 두 공간을 동등한 것으로 취급할 수 있었다. 가령, 한 점으로 이루어진 공간 $\ast$와 직선 $\mathbb{R}$은 당연히 homeomorphic하지 않지만, 그럼에도 이들 둘은 거의 같은 것으로 생각할 수 있다.
 
 이와 마찬가지로 두 카테고리의 "뼈대"가 동일하다면 두 카테고리를 동등한 것으로 취급할 수 있다. ([명제 8](#pp8)) 대수위상에서 이를 가능하게 해 주는 도구는 homotopy였는데, 카테고리에서 이 역할을 해 주는 것이 natural transformation이다.
 
@@ -141,16 +139,3 @@ img
 으로 이루어진 카테고리로 정의한다. 이를 *functor category*라 부른다.
 
 </div>
-
-Natural transformation
-Abelian category
-Adjoint pair
-Representables
-Yoneda lemma
-Limit
-Monad
-Operad
-Kan extension
-Higher category
-Infinite category
-A infinity category
