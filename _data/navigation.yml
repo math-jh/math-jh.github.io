@@ -62,10 +62,33 @@ category_theory-ko:
     children:
       - title: "카테고리"
         url: ko/math/category_theory/categories
-      - title: "함자들"
+      - title: "함자"
         url: ko/math/category_theory/functors
+      - title: "자연변환"
+        url: ko/math/category_theory/natural_transformations
       - title: "아벨 카테고리"
         url: ko/math/category_theory/abelian_categories
+      # - title: "수반함자"
+        # url: ko/math/category_theory/adjoints
+      # - title: "표현 가능한 함자"
+        # url: ko/math/category_theory/representable_functor
+      # - title: "요네다 보조정리"
+        # url: ko/math/category_theory/Yoneda_lemma
+      # - title: "극한"
+        # url: ko/math/category_theory/limits
+      # - title: "모나드"
+        # url: ko/math/category_theory/monads
+      # - title: "오퍼라드"
+        # url: ko/math/category_theory/operads
+      # - title: "칸 확장"
+        # url: ko/math/category_theory/Kan_extension
+      # - title: "고차 카테고리"
+        # url: ko/math/category_theory/higher_categories
+      # - title: "Infinite category"
+        # url: ko/math/category_theory/infinite_categories
+      # - title: "A-infinity category"
+        # url: ko/math/category_theory/A-infinity_categories
+
 
 homological_algebra-ko:
   - title: <a href="/ko/homological_algebra/" class="sidebar_title">호몰로지 대수학</a>
