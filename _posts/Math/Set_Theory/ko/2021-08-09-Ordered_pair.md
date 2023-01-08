@@ -6,7 +6,7 @@ categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/ordered_pair
 
 header:
-    overlay_image: /assets/images/Set_theory/Ordered_pair.png
+    overlay_image: /assets/images/Math/Set_Theory/Ordered_pair.png
     overlay_filter: 0.5
 
 sidebar: 

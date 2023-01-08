@@ -6,7 +6,7 @@ excerpt: "미분다양체의 부분구조"
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/submanifolds
 header:
-    overlay_image: /assets/images/Manifold/Submanifolds.png
+    overlay_image: /assets/images/Math/Manifold/Submanifolds.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
@@ -33,7 +33,7 @@ weight: 7
 
 함수 $F:M\rightarrow N$이 submanifold라는 것은 직관적으로 $F$가 inclusion $M\hookrightarrow N$의 역할을 하는 것으로 생각할 수 있다. 이 때, $F$의 image $F(M)\subseteq N$에 위상구조를 주는 방법은 두 가지가 있는데, 하나는 bijection $F:M\rightarrow F(M)$을 통해 $M$의 위상 옮겨오는 것이고, 다른 하나는 $N$에 주어진 위상구조를 subspace topology를 통해 가져오는 것이다. 만일 이 두 위상이 서로 동일하다면 $F$를 *embedded* submanifold라 부르는 것이고, 그렇지 않다면 이를 단순히 submanifold라 부른다.
 
-![Immersion, submanifold, immersion](/assets/images/Manifold/Submanifolds-1.png){:width="500px" class="invert" .align-center}
+![Immersion, submanifold, immersion](/assets/images/Math/Manifold/Submanifolds-1.png){:width="500px" class="invert" .align-center}
 
 예를 들어, 위의 그림에서 $M=\mathbb{R}$, $N=\mathbb{R}^2$이며, (a)는 immersion이지만 submanifold는 아니고, (b)는 submanifold이지만 embedded submanifold는 아니며, (c)는 embedded submanifold이다. 편의상 (b)에서 $t\rightarrow \infty$일 때 $F(t)$가 향하는 점을 $F(0)$이라 하면, $\mathbb{R}$에서 $(-1,1)$은 열린집합이지만, $N$에 주어진 subspace topology 상에서 $F\bigl((-1,1)\bigr)$은 열린집합이 될 수 없다.
 
