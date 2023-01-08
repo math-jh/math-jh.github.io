@@ -6,7 +6,7 @@ excerpt: "집합 위에 정의된 이항연산"
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/algebraic_structure
 header:
-    overlay_image: /assets/images/Algebraic_structures/Algebraic_structure.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Algebraic_structure.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"

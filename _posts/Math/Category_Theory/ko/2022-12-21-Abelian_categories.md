@@ -6,7 +6,7 @@ excerpt: "아벨 카테고리"
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/abelian_categories
 header:
-    overlay_image: /assets/images/Category_theory/Abelian_categories.png
+    overlay_image: /assets/images/Math/Category_Theory/Abelian_categories.png
     overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-ko"
@@ -70,10 +70,10 @@ $\mathbf{Set}$은 initial object를 갖지 않고, 따라서 zero object도 갖�
 - Morphism $i:K\rightarrow A$가 $f$의 *kernel<sub>핵</sub>*이라는 것은 $f\circ i=0$이며, 다음의 universal property를 만족하는 것이다.
     > 임의의 $j:Z\rightarrow A$가 $f\circ j=0$을 만족한다면, 다음 diagram을 commute하도록 하는 유일한 morphism $Z\rightarrow K$가 항상 존재한다.
     >
-    > ![universal_property_of_kernel](/assets/images/Category_theory/Abelian_categories-3.png){:width="209.55px" class="invert" .align-center}
+    > ![universal_property_of_kernel](/assets/images/Math/Category_Theory/Abelian_categories-3.png){:width="209.55px" class="invert" .align-center}
 - 비슷하게, $f$의 *cokernel<sub>여핵</sub>*은 다음 diagram에 해당하는 universal property를 만족하는 morphism $p:B\rightarrow C$로 정의된다.
 
-![universal_property_of_cokernel](/assets/images/Category_theory/Abelian_categories-4.png){:width="206.7px" class="invert" .align-center}
+![universal_property_of_cokernel](/assets/images/Math/Category_Theory/Abelian_categories-4.png){:width="206.7px" class="invert" .align-center}
 
 </div>
 
@@ -159,7 +159,7 @@ $$C_{n+1}\overset{d_{n+1}}{\longrightarrow} C_n\overset{d_n}{\longrightarrow} C_
 
 이 $d_{n+1}\circ d_n=0$을 만족한다면, 다음의 diagram
 
-![homology_in_abelilan_category](/assets/images/Category_theory/Abelian_categories-5.png){:width="390.75px" class="invert" .align-center}
+![homology_in_abelilan_category](/assets/images/Math/Category_Theory/Abelian_categories-5.png){:width="390.75px" class="invert" .align-center}
 
 을 따라 monomorphism $\im(d_{n+1})\rightarrow\ker(d_n)$을 정의할 수 있으며, 따라서 quotient $H_n(C)=\ker(d_n)/\im(d_{n+1})$이 잘 정의된다. 이 때 위의 chain complex가 $C_n$에서 *exact*라는 것은 $H_n(C)=0$인 것이다.
 

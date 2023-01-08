@@ -24,6 +24,12 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/quotient_group
       - title: "동형사상"
         url: ko/math/algebraic_structures/isomorphism_theorems
+      - title: "군의 직접곱"
+        url: ko/math/algebraic_structures/direct_product
+      - title: "제한합"
+        url: ko/math/algebraic_structures/restricted_sum
+      - title: "자유곱"
+        url: ko/math/algebraic_structures/free_product
 
 blog_development-ko:
   - title: <a href="/ko/blog_development/" class="sidebar_title">블로그 개발</a>

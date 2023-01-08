@@ -6,7 +6,7 @@ excerpt: "Differential form"
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/differential_forms
 header:
-    overlay_image: /assets/images/Manifold/Differential_forms.png
+    overlay_image: /assets/images/Math/Manifold/Differential_forms.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
@@ -116,7 +116,7 @@ $$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{
 
 가 cochain complex가 된다. 또, $d$가 $F^\ast$와 commute하며, $F^\ast$는 graded algebra homomorphism이므로 위의 언어로는 $F^\ast$가 de Rham complex들 사이의 chain map을 유도한다고 이야기할 수 있다. 
 
-![Chain_map_in_dR](/assets/images/Manifold/Differential_forms-1.png){:width="523.95px" class="invert" .align-center}
+![Chain_map_in_dR](/assets/images/Math/Manifold/Differential_forms-1.png){:width="523.95px" class="invert" .align-center}
 
 우리는 (2)의 cochain complex에 해당하는 homology group을 *de Rham cohomology group<sub>드람 코호몰로지 군</sub>*이라 부르고 $H^\ast_\text{dR}(M)$으로 적는다. <#ref#> 드람 정리는 이렇게 얻어진 $H_\text{dR}^\ast(M)$이 위상적으로 정의한 다른 cohomology group들과 동일한 정보를 담고 있다는 것을 보여준다.
 

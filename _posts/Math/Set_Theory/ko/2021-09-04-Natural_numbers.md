@@ -6,7 +6,7 @@ excerpt: "자연수의 정의와 무한집합의 성질들"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/natural_numbers
 header:
-    overlay_image: /assets/images/Set_theory/Natural_numbers.png
+    overlay_image: /assets/images/Math/Set_Theory/Natural_numbers.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"

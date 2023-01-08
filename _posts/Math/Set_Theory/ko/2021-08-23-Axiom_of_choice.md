@@ -6,7 +6,7 @@ excerpt: "선택공리와 그 동치들"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/axiom_of_choice
 header:
-    overlay_image: /assets/images/Set_theory/Axiom_of_choice.png
+    overlay_image: /assets/images/Math/Set_Theory/Axiom_of_choice.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"

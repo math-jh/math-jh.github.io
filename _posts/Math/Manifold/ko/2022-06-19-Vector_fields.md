@@ -6,7 +6,7 @@ excerpt: "Vector fields"
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/vector_fields
 header:
-    overlay_image: /assets/images/Manifold/Vector_fields.png
+    overlay_image: /assets/images/Math/Manifold/Vector_fields.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
@@ -103,7 +103,7 @@ $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{dx}\bigg\vert_p$$
 
 위에서는 $\mathfrak{X}(M)$이 벡터장 $d/dx$로 생성되었지만, 일반적으로 $C^\infty(M)$은 field가 아니므로 basis를 갖지 않는 $C^\infty(M)$-module이 얼마든지 존재할 수 있다. 가령 잘 알려진 [hairy ball theorem](https://en.wikipedia.org/wiki/Hairy_ball_theorem)은 3차원 상에 있는 단위구 $S^2$ 상에 정의된 연속인 벡터장은 반드시 $0$이 되는 점이 존재한다는 것을 보여준다. 
 
-![Hairy_ball](/assets/images/Manifold/Vector_fields-1.png){:width="200px" class="invert" .align-center}
+![Hairy_ball](/assets/images/Math/Manifold/Vector_fields-1.png){:width="200px" class="invert" .align-center}
 
 $2$-manifold $M=S^2$ 위에 정의된 두 vector field $X_1,X_2$가 $\mathfrak{X}(M)$을 $C^\infty(M)$-module로서 생성한다고 가정하자. 그럼 hairy ball theorem으로부터 $X_1(p)=0$인 점 $p\in S^2$가 존재한다. 그럼 $T_pM$은 $\\{0,X_2(p)\\}$로 생성되어야 하는데, 이는 $T_pM$이 2차원이라는 것에 모순이다. 따라서 $\mathfrak{X}(M)$을 두 벡터장 $\\{X_1,X_2\\}$으로 생성할 수는 없다. 
 

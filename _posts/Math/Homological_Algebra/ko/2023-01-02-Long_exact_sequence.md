@@ -6,7 +6,7 @@ excerpt: "긴 완전열"
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/long_exact_sequence
 header:
-    overlay_image: /assets/images/Homological_algebra/Long_exact_sequence.png
+    overlay_image: /assets/images/Math/Homological_Algebra/Long_exact_sequence.png
     overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
@@ -67,13 +67,13 @@ $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1
 
 이는 다음의 diagram 
 
-![long_exact_sequence](/assets/images/Homological_algebra/Long_exact_sequence-1.png){:width="655.2px" class="invert" .align-center}
+![long_exact_sequence](/assets/images/Math/Homological_Algebra/Long_exact_sequence-1.png){:width="655.2px" class="invert" .align-center}
 
 을 생각하면 된다. 여기에서 $\partial$들은 모두 $\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$과 같이 정의된 함수들이다. 그럼 위의 diagram에서 $\ker\partial^A$는 $H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$와 같고, $\coker\partial^A$는 $H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$과 같다는 것을 쉽게 확인할 수 있다. 
 
 따라서, 위와 아래의 행이 모두 exact라는 것만 보인다면, snake lemma에 의해 주어진 long exact sequence가 잘 유도된다. 이를 보이기 위해 다시 다음의 diagram
 
-![long_exact_sequence_exactness](/assets/images/Homological_algebra/Long_exact_sequence-2.png){:width="463.95px" class="invert" .align-center}
+![long_exact_sequence_exactness](/assets/images/Math/Homological_Algebra/Long_exact_sequence-2.png){:width="463.95px" class="invert" .align-center}
 
 을 생각하자. 이 diagram에 snake lemma (더 정확하게는 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)) 를 다시 한 번 적용하면, 두 exact sequence
 
@@ -90,3 +90,4 @@ $$\coker(d_n^A)\rightarrow\coker(d_n^B)\rightarrow\coker(d_n^C)\rightarrow 0$$
 ## Naturality
 
 위에서 만든 long exact sequence는 다음과 같은 센스에서 자연스럽다. 
+

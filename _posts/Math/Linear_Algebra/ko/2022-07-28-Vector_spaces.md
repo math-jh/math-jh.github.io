@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Vector_spaces.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Vector_spaces.png
     overlay_filter: 0.5
 
 date: 2022-07-28

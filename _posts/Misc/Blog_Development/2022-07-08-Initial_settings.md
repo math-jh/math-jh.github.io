@@ -120,11 +120,11 @@ author:
 
 이 과정을 거치면 
 
-![Before_config](/assets/images/Blog_development/Initial_settings-1.png){:width="600px" .align-center}
+![Before_config](/assets/images/Misc/Blog_Development/Initial_settings-1.png){:width="600px" .align-center}
 
 이랬던 사이트가
 
-![After_config](/assets/images/Blog_development/Initial_settings-2.png){:width="600px" .align-center}
+![After_config](/assets/images/Misc/Blog_Development/Initial_settings-2.png){:width="600px" .align-center}
 
 이렇게 바뀐 것을 확인할 수 있다. 우측 상단의 Quick-Start Guide는 `_data/navigation.yml`을 열어서 수정하면 된다. 나는 간단히
 ```yml

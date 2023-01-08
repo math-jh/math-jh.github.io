@@ -6,7 +6,7 @@ excerpt: "위상수학의 기본 개념들"
 categories: [Math / Topology]
 permalink: /ko/math/topology/other_concepts
 header:
-    overlay_image: /assets/images/Topology/Other_concepts.png
+    overlay_image: /assets/images/Math/Topology/Other_concepts.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
