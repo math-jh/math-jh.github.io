@@ -74,11 +74,11 @@ a {
 ```
 원래는 아래 그림과 같이 각 링크마다 밑줄이 적혀있었는데,
 
-![Before_hyperlink](/assets/images/Blog_development/Personalization-1.png){:width="500px" .align-center}
+![Before_hyperlink](/assets/images/Misc/Blog_Development/Personalization-1.png){:width="500px" .align-center}
 
 이렇게 코드를 수정하고 나면 다음과 같이 밑줄이 없어진 것을 확인할 수 있다.
 
-![After_hyperlink](/assets/images/Blog_development/Personalization-2.png){:width="500px" .align-center}
+![After_hyperlink](/assets/images/Misc/Blog_Development/Personalization-2.png){:width="500px" .align-center}
 
 ## 본문 너비 늘리기
 
@@ -108,7 +108,7 @@ $right-sidebar-width-wide: 250px !default;
 
 으로 수정해주면 된다. 그럼 위의 그림과 같던 본문의 너비가 
 
-![After_text_width](/assets/images/Blog_development/Personalization-3.png){:width="500px" .align-center}
+![After_text_width](/assets/images/Misc/Blog_Development/Personalization-3.png){:width="500px" .align-center}
 
 이와 같이 넓어진 것을 확인할 수 있다.
 

@@ -6,7 +6,7 @@ breadcrumbs: false
 permalink: /ko/about
 author_profile: true
 header:
-  image: /assets/images/home/Main.gif
+  image: /assets/images/Pages/Home/Main.gif
   caption: "Mirror symmetry and Schrödinger's cat. <br/>From [*Horizon* $(2018,\\text{ vol.}1)$](https://horizon.kias.re.kr/6469/)<br/>Photo by [**mareykrap**](https://notefolio.net/mareykrap/104880)"
 sidebar: 
     nav: "category-ko"
@@ -19,7 +19,7 @@ sidebar:
 
 이 블로그의 프로토타입은 군대에 있을 때 싸지방에서 overleaf를 이용해서 작성한 600페이지 가량의 $\TeX$ 문서인데, 이를 한글로 옮기고 적당히 수정하여 글을 쓰고 있습니다. 
 
-![](/assets/images/home/notice.png){:width="250px" class="invert" .align-center}
+![](/assets/images/Pages/About/notice.png){:width="250px" class="invert" .align-center}
 
 다만 이 문서는 학부 때 배운 내용들만 정리해 둔 것이라, 학부에서 제가 배우지 않은 카테고리들은 처음부터 새로 써야 해서 업데이트 주기가 뜸합니다. 또, 저 문서를 작성한 후 새로 배운 것들을 잘 섞어서 글에 넣느라 하나를 작성하는 데에 시간이 좀 걸려서 학부 때 배운 내용들도 업데이트 주기가 뜸합니다.  
 (그냥 모든 문서의 업데이트 주기가 뜸합니다.)

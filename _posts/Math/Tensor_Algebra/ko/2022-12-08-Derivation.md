@@ -6,7 +6,7 @@ excerpt: "Differential module"
 categories: [Math / Tensor Algebra]
 permalink: /ko/math/tensor_algebra/derivation
 header:
-    overlay_image: /assets/images/Tensor_algebra/Derivation.png
+    overlay_image: /assets/images/Math/Tensor_Algebra/Derivation.png
     overlay_filter: 0.5
 sidebar: 
     nav: "tensor_algebra-ko"

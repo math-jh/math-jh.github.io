@@ -6,7 +6,7 @@ excerpt: "미분다양체의 다양한 예시들"
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/examples_of_manifolds
 header:
-    overlay_image: /assets/images/Manifold/Examples_of_manifolds.png
+    overlay_image: /assets/images/Math/Manifold/Examples_of_manifolds.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
@@ -95,7 +95,7 @@ $$U_{n+1}^+=\{(x^1, x^2, \ldots, x^{n+1})\in\mathbb{R}^{n+1}:x^{n+1}>0\}$$
 
 그림으로 보면 거의 자명하게 $U_{n+1}^+$와 $D^n$이 homeomorphic하다는 것을 알 수 있다.
 
-![sphere_chart](/assets/images/Manifold/Examples_of_manifolds-1.png){:width="300px" class="invert" .align-center}
+![sphere_chart](/assets/images/Math/Manifold/Examples_of_manifolds-1.png){:width="300px" class="invert" .align-center}
 <cap markdown="1">[Lee], p.6. Fig. 1.3.</cap>
 
 
@@ -159,7 +159,7 @@ $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i
 
 으로 정의하면[^1] 함수 $\varphi\_i\circ\pi\|\_{\tilde{U}\_i}$가 연속이고 따라서 [\[위상수학\] §몫위상, ⁋명제 9](/ko/math/topology/quotient_topology#pp9)에 의해 $\varphi_i$ 또한 연속이다. 
 
-![quotient_map](/assets/images/Manifold/Examples_of_manifolds-2.png){:width="159.15px" class="invert" .align-center}
+![quotient_map](/assets/images/Math/Manifold/Examples_of_manifolds-2.png){:width="159.15px" class="invert" .align-center}
 
 뿐만 아니라 다음의 연속함수
 
