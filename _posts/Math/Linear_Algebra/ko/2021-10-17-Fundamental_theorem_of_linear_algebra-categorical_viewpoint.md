@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
     overlay_filter: 0.5
 
 date: 2021-10-17

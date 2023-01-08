@@ -6,7 +6,7 @@ excerpt: "집합들 간의 합집합과 교집합"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/union_and_intersection
 header:
-    overlay_image: /assets/images/Set_theory/Union_and_intersection.png
+    overlay_image: /assets/images/Math/Set_Theory/Union_and_intersection.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"

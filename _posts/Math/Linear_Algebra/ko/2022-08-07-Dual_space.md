@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Dual_space.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Dual_space.png
     overlay_filter: 0.5
 
 date: 2022-08-05
@@ -147,7 +147,7 @@ $$L^\ast(f)=f\circ L$$
 
 을 통해 정의할 수 있다. 이는 diagram으로 보면 다음과 같다.
 
-![dual_map](/assets/images/Linear_algebra/Dual_space-1.png){:width="127.65px" class="invert" .align-center}
+![dual_map](/assets/images/Math/Linear_Algebra/Dual_space-1.png){:width="127.65px" class="invert" .align-center}
 
 혹은, 위에서 정의한 canonical pairing에 따르면 $L^\ast$는 다음의 식
 

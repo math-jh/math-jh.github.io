@@ -6,7 +6,7 @@ excerpt: "연속함수의 성질들"
 categories: [Math / Topology]
 permalink: /ko/math/topology/continuous_functions
 header:
-    overlay_image: /assets/images/Topology/Continuous_functions.png
+    overlay_image: /assets/images/Math/Topology/Continuous_functions.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"

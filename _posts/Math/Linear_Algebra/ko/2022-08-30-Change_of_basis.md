@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Change_of_basis.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Change_of_basis.png
     overlay_filter: 0.5
 
 date: 2022-08-30
@@ -39,7 +39,7 @@ $$I=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=[\id_V]_{\mathcal{B}}^{\mathcal{B}'}[\id
 
 Change-of-basis matrix가 어떤 방식으로 작동하는지를 살펴보기 위해, 유한차원 $F$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
 
-![change_of_basis](/assets/images/Linear_algebra/Change_of_basis-1.png){:width="144.00px" class="invert" .align-center}
+![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_basis-1.png){:width="144.00px" class="invert" .align-center}
 
 이 때 두 개의 수직방향 함수는 각각 $v\mapsto [v]\_\mathcal{B}$와 $v\mapsto[v]\_{\mathcal{B}'}$를 의미한다. 따라서 기저변환행렬은 $v\in V$의 $\mathcal{B}$에 대한 좌표표현을 받아, $\mathcal{B}'$에 대한 좌표표현으로 바꾸어주는 행렬이라 생각할 수 있다. 더 일반적으로 임의의 linear map $L:V\rightarrow W$가 주어졌다 하고, $V,W$의 basis $\mathcal{B},\mathcal{C}$, 그리고 또 다른 basis $\mathcal{B}',\mathcal{C}'$가 주어졌다 하면, 선형대수학의 기본정리로부터 다음의 식
 

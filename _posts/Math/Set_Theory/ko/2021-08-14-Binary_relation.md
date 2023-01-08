@@ -7,7 +7,7 @@ categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/binary_relation
 
 header:
-    overlay_image: /assets/images/Set_theory/Binary_relation.png
+    overlay_image: /assets/images/Math/Set_Theory/Binary_relation.png
     overlay_filter: 0.5
 
 sidebar: 

@@ -6,7 +6,7 @@ excerpt: "동치관계의 정의와 성질들"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/equivalence_relations
 header:
-    overlay_image: /assets/images/Set_theory/Equivalence_relations.png
+    overlay_image: /assets/images/Math/Set_Theory/Equivalence_relations.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
@@ -83,7 +83,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 정의에 의하여 $R(x)$는 동치관계 $R$에 의해 $x$와 동등한 것으로 취급되는 원소들의 모임이다. 많은 경우 $x$를 포함하는 equivalence class를 $[x]_R$로 적기도 한다. 혼동의 여지가 없을 경우, 이들의 집합 $A/R$을 $A/\mathord{\sim}$으로 표기하기도 한다.
 
-![Quotient_set](/assets/images/Set_theory/Equivalence_relations-1.png){:width="600px" class="invert" .align-center}
+![Quotient_set](/assets/images/Math/Set_Theory/Equivalence_relations-1.png){:width="600px" class="invert" .align-center}
 
 <cap>집합 $A$ (왼쪽), 그 위에 정의된 동치관계 $R$ (가운데), 몫집합 $A/R$ (오른쪽). $A/R$의 각 원소는 중간 그림의 equivalence class $[x]_R$이다.</cap>
 

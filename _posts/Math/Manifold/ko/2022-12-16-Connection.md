@@ -6,7 +6,7 @@ excerpt: "Vector bundle 위에서 정의된 미분"
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/connection
 header:
-    overlay_image: /assets/images/Manifold/Connection.png
+    overlay_image: /assets/images/Math/Manifold/Connection.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"

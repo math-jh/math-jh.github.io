@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/Riemannian_metric
 header:
-    overlay_image: /assets/images/Manifold/Riemannian_metric.png
+    overlay_image: /assets/images/Math/Manifold/Riemannian_metric.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
