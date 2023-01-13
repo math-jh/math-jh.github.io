@@ -6,7 +6,7 @@ excerpt: "Ordinal의 정의와 정렬집합의 성질들"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/well_ordering
 header:
-    overlay_image: /assets/images/Set_theory/Well_ordering.png
+    overlay_image: /assets/images/Math/Set_Theory/Well_ordering.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"

@@ -6,7 +6,7 @@ excerpt: "순서집합의 연산과 단조함수"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/monotone_functions
 header:
-    overlay_image: /assets/images/Set_theory/Monotone_functions.png
+    overlay_image: /assets/images/Math/Set_Theory/Monotone_functions.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"

@@ -6,7 +6,7 @@ excerpt: "집합들 사이의 곱"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/product_of_sets
 header:
-    overlay_image: /assets/images/Set_theory/Product_of_sets.png
+    overlay_image: /assets/images/Math/Set_Theory/Product_of_sets.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
@@ -41,7 +41,7 @@ weight: 10
 
 함수들 $u:A'\rightarrow A$와 $v:B\rightarrow B'$가 주어졌다고 하고, 다음의 diagram을 생각하자.
 
-![induced_mapping](/assets/images/Set_theory/Product_of_sets-1.png){:width="129.3px"  class="invert" .align-center}
+![induced_mapping](/assets/images/Math/Set_Theory/Product_of_sets-1.png){:width="129.3px"  class="invert" .align-center}
 
 이 diagram에서, 어떤 함수 $f:A\rightarrow B$가 주어질 때마다 우리는 이에 해당하는 $A'$에서 $B'$로의 함수 $\tilde{f}=v\circ f\circ u$를 생각할 수 있다. 이 대응 $f\mapsto \tilde{f}$는 $\Fun(A, B)$에서 $\Fun(A', B')$로의 함수이다.
 
@@ -99,7 +99,7 @@ $$\pr_i(f(y))=f_i(y)=\pr_i(f'(y))$$
 
 이제 [정리 3](#thm3)의 조건을 만족하는 $(P, \pr\_i)$가 적어도 하나는 존재하므로 ([정의 1](#df1)), 이를 곱집합의 정의로 삼아도 된다. 즉,  $(A\_i)\_{i\in I}$들의 곱은 다음의 universal property를 만족하는 집합 $\prod\_{i\in I} A\_i$와 함수들 $\pr\_i:\prod\_{i\in I}A\_i\rightarrow A_i$이라 할 수 있다.
 
-![universal_property_of_product](/assets/images/Set_theory/Product_of_sets-2.png){:width="283.65px" class="invert" .align-center}
+![universal_property_of_product](/assets/images/Math/Set_Theory/Product_of_sets-2.png){:width="283.65px" class="invert" .align-center}
 
 [§집합의 합, ⁋따름정리 9](/ko/math/set_theory/sum_of_sets#crl9)와 정확하게 같은 논리를 펼치면 이 universal property를 만족하는 대상 및 $\pr\_i$들 또한 전단사함수에 대해 유일함을 확인할 수 있다. 
 
@@ -152,7 +152,7 @@ $$\begin{aligned}
 <summary>증명</summary>
 다음의 diagram을 생각하자.
 
-![induced_bijection](/assets/images/Set_theory/Product_of_sets-3.png){:width="275.25px"  class="invert" .align-center}
+![induced_bijection](/assets/images/Math/Set_Theory/Product_of_sets-3.png){:width="275.25px"  class="invert" .align-center}
 
 여기서 $v$는 $(x_i)\_{i\in I}$를 $(x\_{u(k)})\_{k\in K}$로 대응시키는 전단사함수이다. 그럼 위의 [명제 2](#pp2)에 의하여 $F\mapsto F\circ U$는 전단사다.
 </details>

@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Determinant.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Determinant.png
     overlay_filter: 0.5
 
 date: 2022-03-07
@@ -107,20 +107,20 @@ $$\begin{aligned}0&=f(v_1,\ldots, v_i,\ldots, v_i,\ldots, v_n)+f(v_1,\ldots, v_i
 
 $n$차원 공간에서 일차독립인 $n$개의 벡터가 주어졌다 하자. 그럼 이들은 $n$차원의 입방체를 만들게 된다. 가령 $n=3$인 경우, 세 개의 벡터 $v_1,v_2,v_3$은 다음과 같이 평행육면체를 만든다.
 
-![parallelepiped](/assets/images/Linear_algebra/Determinant-1.png){:width="363.45px" class="invert" .align-center}
+![parallelepiped](/assets/images/Math/Linear_Algebra/Determinant-1.png){:width="363.45px" class="invert" .align-center}
 
 서술의 편의상 앞으로의 내용은 모두 2차원 상에서의 넓이를 이용해 설명하지만, 어렵지 않게 이 내용들을 모두 $n$차원 공간으로 일반화할 수 있다. 
 
 우선 우리는 어떠한 평행사변형이 단위넓이 1을 갖는지를 정의해야 한다. 물론 여기에는 많은 선택의 여지가 있으나, 가장 합리적인 방법은 한 변의 길이가 1인 정사각형을 단위넓이 1을 갖는 평행사변형으로 정의하는 것이다.
 
-![Square](/assets/images/Linear_algebra/Determinant-2.png){:width="112.05px" class="invert" .align-center}
+![Square](/assets/images/Math/Linear_Algebra/Determinant-2.png){:width="112.05px" class="invert" .align-center}
 
 한편, 위의 정사각형에서 출발하여 다음의 두 규칙을 적용하면 모든[^1] 평행사변형을 만들 수 있다는 것이 명확하다. 
 
 1. 등적변형: 평행사변형의 한 변을 고정하고, 남은 한 변의 끝점을 고정한 한 변의 방향으로 평행이동하는 변형.
 2. 한 변은 고정된 상태로, 남은 한 변의 길이를 $k>0$배 하는 변형.
 
-![Transformation](/assets/images/Linear_algebra/Determinant-3.png){:width="310.05px" class="invert" .align-center}
+![Transformation](/assets/images/Math/Linear_Algebra/Determinant-3.png){:width="310.05px" class="invert" .align-center}
 
 따라서 1번과 2번 각각의 규칙을 따라 평행사변형을 변형하였을 때, 넓이가 어떻게 변형되는지만 정의한다면 모든 평행사변형의 넓이를 정의하는 것이 된다. 1번의 경우, 우리는 넓이가 변하지 않는 것으로 정의하고, 2번의 경우 넓이가 $k$배가 된 것으로 정의한다. 이렇게 정의한다면 모든 평행사변형의 넓이는 우리가 기존에 알던 평행사변형의 넓이와 동일해진다.[^2]
 
@@ -134,7 +134,7 @@ $D$가 음의 부호를 가질 수 있다는 사실만 제외한다면, $D$를 �
 
 일반적인 넓이의 개념에서는 평행사변형의 한 변의 길이를 $-1$배 하여도 넓이가 양수가 된다. 그러나 이 도형을 원래 도형과 반대되는 방향을 갖는 것으로 생각한다면 넓이를 음수로 볼 수도 있고, 그럼 $D$가 한 변의 길이의 임의의 스칼라배를 보존한다는 것을 확인할 수 있으며, 등적변형을 생각하면 $D$는 다음과 같이 한 변에 해당하는 두 벡터를 더한 결과 또한 보존한다.
 
-![Multilinearity](/assets/images/Linear_algebra/Determinant-4.png){:width="152.85px" class="invert" .align-center}
+![Multilinearity](/assets/images/Math/Linear_Algebra/Determinant-4.png){:width="152.85px" class="invert" .align-center}
 
 뿐만 아니라, 등적변형을 생각하면 고정된 한 변 $v_n$에 대하여, 밑면을 이루는 $n-1$개의 벡터 $v_1,\ldots, v_{n-1}$의 일차결합을 $v_n$에 더하여도 $D$의 값은 유지된다. 이는 곧, 만일 $v_n$이 $v_1,\ldots, v_{n-1}$의 일차결합이라면 $D(v_1,\ldots, v_n)=0$이라는 것이고 따라서 [명제 3](#pp3)에 의해 이는 $D$가 alternating이라는 것과 동치가 된다.
 

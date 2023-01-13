@@ -6,7 +6,7 @@ excerpt: "정규부분군과 몫군"
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/quotient_group
 header:
-    overlay_image: /assets/images/Algebraic_structures/Quotient_group.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Quotient_group.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"

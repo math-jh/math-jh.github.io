@@ -6,7 +6,7 @@ excerpt: "전사함수와 단사함수의 성질들"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/retraction_and_section
 header:
-    overlay_image: /assets/images/Set_theory/Retraction_and_section.png
+    overlay_image: /assets/images/Math/Set_Theory/Retraction_and_section.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
@@ -42,11 +42,11 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 따라서 함수 $f:A\rightarrow B$가 단사함수라는 것은 다음의 diagram 
 
-![injection](/assets/images/Set_theory/Retraction_and_section-1.png){:width="120.9px" class="invert" .align-center}
+![injection](/assets/images/Math/Set_Theory/Retraction_and_section-1.png){:width="120.9px" class="invert" .align-center}
 
 이 commute하도록 하는 $r:B\rightarrow A$가 있다는 것과 같은 말이고, $f:A\rightarrow B$가 전사함수라는 것은 다음의 diagram
 
-![surjection](/assets/images/Set_theory/Retraction_and_section-2.png){:width="120.9px" class="invert" .align-center}
+![surjection](/assets/images/Math/Set_Theory/Retraction_and_section-2.png){:width="120.9px" class="invert" .align-center}
 
 이 commute하도록 하는 $s:B\rightarrow A$가 있다는 것과 같은 말이다. 이러한 성질을 만족하는 $r,s$에도 이름이 있다.
 
@@ -115,11 +115,11 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 1번의 결과는 다음의 diagram
 
-![surjection](/assets/images/Set_theory/Retraction_and_section-3.png){:width="123.75px"  class="invert" .align-center}
+![surjection](/assets/images/Math/Set_Theory/Retraction_and_section-3.png){:width="123.75px"  class="invert" .align-center}
 
 이 commute하도록 하는 $h$가 존재한다는 것이고, 2번의 경우는 다음과 같은 diagram
 
-![injection](/assets/images/Set_theory/Retraction_and_section-4.png){:width="123.75px"  class="invert" .align-center}
+![injection](/assets/images/Math/Set_Theory/Retraction_and_section-4.png){:width="123.75px"  class="invert" .align-center}
 
 이 commute하도록 하는 $h$가 존재한다는 것이다.
 

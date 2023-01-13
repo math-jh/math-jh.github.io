@@ -6,7 +6,7 @@ excerpt: "접벡터와 접공간"
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/cotangent_space
 header:
-    overlay_image: /assets/images/Manifold/Cotangent_space.png
+    overlay_image: /assets/images/Math/Manifold/Cotangent_space.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"

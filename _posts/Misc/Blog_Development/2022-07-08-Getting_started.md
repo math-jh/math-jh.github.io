@@ -28,7 +28,7 @@ Jekyll은 많은 사람들이 사용하다보니 구글링을 해 보면 수많�
 
 나는 Minimal-mistakes 테마를 선택했다.
 
-![Minimal-mistakes](/assets/images/Blog_development/Getting_started-1.png){:width="600px" .align-center}
+![Minimal-mistakes](/assets/images/Misc/Blog_Development/Getting_started-1.png){:width="600px" .align-center}
 
 테마를 고른 후에는 해당 테마의 Github 저장소로 이동한다. Jekyll themes 사이트에서 테마를 골랐다면 위의 사진과 같이 Homepage 버튼이 있는데, 이를 통해 이동할 수 있다. 
 
@@ -36,39 +36,39 @@ Jekyll은 많은 사람들이 사용하다보니 구글링을 해 보면 수많�
 
 1. 저장소 오른쪽 위에 있는 Fork 버튼을 눌러 저장소를 내 Github 계정으로 Fork해온다. 이 때 github pages를 이용해 사이트를 호스팅하기 위해서는 저장소 이름이 `(본인 Username).github.io`여야 하므로, Repository name을 이에 맞게 수정해준다. 
 
-    ![Forking_repository](/assets/images/Blog_development/Getting_started-2.png){:width="600px" .align-center}
+    ![Forking_repository](/assets/images/Misc/Blog_Development/Getting_started-2.png){:width="600px" .align-center}
         
     내 경우에는 이미 내 계정에 `math-jh.github.io` 이름을 가진 저장소가 있어서 오류가 뜨지만, 처음 한다면 문제가 없이 진행되어야 한다.
 
 2. 혹은 테마 저장소에서 `Code > Download ZIP`을 눌러 저장소의 파일을 다운받은 후, 이를 내 github 저장소에 직접 올릴 수도 있다. 이렇게 하면 해당 저장소의 파일만 내 저장소로 복사해오게 되므로 원작자가 테마를 작성할 때 생긴 커밋 히스토리등은 가져오지 않게 된다.  
     이렇게 하기 위해서는 저장소를 우선 만들어야 하는데, 앞서 Github에 회원가입을 한 후 아무것도 하지 않았다면 텅 빈 홈 화면에 `Create a new repository` 버튼이 있을 것이다. 
 
-    ![Create_repository](/assets/images/Blog_development/Getting_started-3.png){:width="600px" .align-center}
+    ![Create_repository](/assets/images/Misc/Blog_Development/Getting_started-3.png){:width="600px" .align-center}
 
     위에서와 마찬가지로 저장소의 이름은 `(본인 Username).github.io`로 지정해야 하며, 그 외의 설정은 어떻게 해도 무방하다. Public/Private 설정도 이 저장소가 public일지 private일지를 결정하는 것이고, github pages로 호스팅된 사이트는 둘 중 어떤 것을 택하더라도 접근이 가능하므로 뭘 선택해도 상관이 없다. 
 
     이렇게 저장소를 만들고 나면 아래와 같은 창이 뜨는데, 우리는 앞서 테마의 저장소를 다운받아뒀으므로 `uploading an existing file`을 택하여 다운받은 저장소를 통째로 올린다. 
 
-    ![New_repository](/assets/images/Blog_development/Getting_started-4.png){:width="600px" .align-center}
+    ![New_repository](/assets/images/Misc/Blog_Development/Getting_started-4.png){:width="600px" .align-center}
 
     그럼 1번과 동일한 결과물이 나오지만, 테마의 커밋 히스토리는 정리된 상태가 된다. 다만 이렇게 올릴 수 있는 파일의 개수는 100개로 제한되어 있으므로 Github desktop을 설치하는 것이 편하다. 
 
     `Set up in Desktop` 버튼을 눌러 Github Desktop 앱을 설치한 후 로그인을 하자. 아래와 같은 화면이 뜨는데, 오른쪽에 방금 만든 repository `(본인 username).github.io`를 선택하여 clone을 진행하면 된다. 
 
-    ![Github_desktop](/assets/images/Blog_development/Getting_started-5.png){:width="600px" .align-center}
+    ![Github_desktop](/assets/images/Misc/Blog_Development/Getting_started-5.png){:width="600px" .align-center}
 
     Clone을 진행할 때, Local path는 이 github 저장소가 내 컴퓨터에서는 어디에 저장될지를 의미한다. Clone을 완료한 후, 이 path에 아까 받아둔 테마 파일을 통째로 복사한 후 첫 번째 commit을 진행하면 된다. Commit을 하려면 commit summary를 필수로 적어주어야 한다.
 
-    ![First_commit](/assets/images/Blog_development/Getting_started-6.png){:width="600px" .align-center}
+    ![First_commit](/assets/images/Misc/Blog_Development/Getting_started-6.png){:width="600px" .align-center}
 
     아직 브랜치가 없는 상태이기 때문에, 이렇게 commit을 한 후 publish branch를 누르면 Github 저장소에 테마 파일들이 모두 저장된다.
 
-    ![Publish_branch](/assets/images/Blog_development/Getting_started-7.png){:width="600px" .align-center}
+    ![Publish_branch](/assets/images/Misc/Blog_Development/Getting_started-7.png){:width="600px" .align-center}
 
     물론 Github desktop 대신 CLI를 써도 된다. 
 
 1번 혹은 2번을 택해서 진행했다면, 1\~2분정도 기다린 후 인터넷 주소창에 `(본인 Username).github.io`를 입력하여 접속하면 기본화면이 뜬다. 
 
-![Initial_homepage](/assets/images/Blog_development/Getting_started-8.png){:width="600px" .align-center}
+![Initial_homepage](/assets/images/Misc/Blog_Development/Getting_started-8.png){:width="600px" .align-center}
 
 물론 아직은 아무것도 없으니 열심히 블로그를 다듬어야 한다. 

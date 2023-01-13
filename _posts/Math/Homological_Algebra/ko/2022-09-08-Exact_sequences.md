@@ -6,7 +6,7 @@ excerpt: "기본정의"
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/exact_sequences
 header:
-    overlay_image: /assets/images/Homological_algebra/Exact_sequences.png
+    overlay_image: /assets/images/Math/Homological_Algebra/Exact_sequences.png
     overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
@@ -31,7 +31,7 @@ weight: 1
 
 > 임의의 $g:Z\rightarrow X$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:Z\rightarrow K$가 존재하여 $g=ij$이다. 
 >
-> ![universal_property_of_kernel](/assets/images/Homological_algebra/Exact_sequences-1.png){:width="212.85px" class="invert" .align-center}
+> ![universal_property_of_kernel](/assets/images/Math/Homological_Algebra/Exact_sequences-1.png){:width="212.85px" class="invert" .align-center}
 
 </div>
 <details class="proof" markdown="1">
@@ -55,7 +55,7 @@ $$0=g(z)-g(z)=i(j(z))-i(j'(z))=i(j(z)-j'(z))$$
 
 > 임의의 $g:Y\rightarrow Z$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:C\rightarrow Z$가 존재하여 $g=jp$이다. 
 >
-> ![universal_property_of_cokernel](/assets/images/Homological_algebra/Exact_sequences-2.png){:width="210px" class="invert" .align-center}
+> ![universal_property_of_cokernel](/assets/images/Math/Homological_Algebra/Exact_sequences-2.png){:width="210px" class="invert" .align-center}
 
 </div>
 <details class="proof" markdown="1">
@@ -232,7 +232,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 이 split이라면, $B\cong A\oplus C$가 성립한다. 하지만 그 역은 성립하지 않는다. 위의 short exact sequence가 split이기 위해서는 다음의 *commutative* diagram
 
-![nonsplitting_direct_sum](/assets/images/Homological_algebra/Exact_sequences-3.png){:width="408px" class="invert" .align-center}
+![nonsplitting_direct_sum](/assets/images/Math/Homological_Algebra/Exact_sequences-3.png){:width="408px" class="invert" .align-center}
 
 에서, 가운데의 map $\alpha:B\rightarrow A\oplus C$가 isomorphism이어야 하는데, 단순히 isomorphism $\alpha$가 존재한다는 것만으로는 위의 diagram이 commute한다는 것을 보장할 수 없기 때문이다.
 

@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Characteristic_polynomial.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Characteristic_polynomial.png
     overlay_filter: 0.5
 
 date: 2022-08-28

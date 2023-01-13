@@ -6,14 +6,14 @@ excerpt: ""
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/Riemannian_metric
 header:
-    overlay_image: /assets/images/Manifold/Riemannian_metric.png
+    overlay_image: /assets/images/Math/Manifold/Riemannian_metric.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 
 date: 2022-12-16
 last_modified_at: 2022-12-16
-weight: 12
+weight: 112
 
 ---
 
