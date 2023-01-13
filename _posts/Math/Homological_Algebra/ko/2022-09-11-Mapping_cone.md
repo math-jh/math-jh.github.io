@@ -6,14 +6,14 @@ excerpt: "기본정의"
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/mapping_cone
 header:
-    overlay_image: /assets/images/Homological_algebra/a.png
+    overlay_image: /assets/images/Math/Homological_Algebra/a.png
     overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
 
 date: 2022-09-11
 last_modified_at: 2022-09-11
-weight: 5
+weight: 6
 
 ---
 
