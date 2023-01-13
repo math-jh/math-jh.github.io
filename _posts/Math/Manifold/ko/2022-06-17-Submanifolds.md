@@ -21,21 +21,21 @@ weight: 7
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 
+<ins id="df1">**정의 1**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:N\rightarrow M$이 주어졌다 하자. 
 
-1. $F$가 *immersion<sub>몰입</sub>*이라는 것은 모든 $p\in M$에 대하여 $dF_p$가 injective인 것이고, 비슷하게 $F$가 *submersion<sub>침몰</sub>*이라는 것은 모든 $p\in M$에 대하여 $dF_p$가 surjective인 것이다.
-2. 만일 $F:M\rightarrow N$이 immersion인 동시에 injection이기도 하다면, $F$를 $N$의 *submanifold<sub>부분다양체</sub>*라 한다.
-3. 만일 $F:M\rightarrow N$가 $N$의 submanifold일 뿐만 아니라 $M$과, subspace topology가 주어진 $F(M)\subseteq N$ 사이의 homeomorphism이기도 하다면 $F$를 *embedding<sub>매장</sub>*, 혹은 2번의 정의와 맞추어 *embedded submanifold*라 부른다.
+1. $F$가 *immersion<sub>몰입</sub>*이라는 것은 모든 $p\in N$에 대하여 $dF_p$가 단사인 것이고, 비슷하게 $F$가 *submersion<sub>침몰</sub>*이라는 것은 모든 $p\in N$에 대하여 $dF_p$가 전사인 것이다.
+2. 만일 $F$가 immersion인 동시에 단사함수이기도 하다면, $F$를 $M$의 *submanifold<sub>부분다양체</sub>*라 한다.
+3. 만일 $F$가 $M$의 submanifold일 뿐만 아니라, subspace topology가 주어진 $F(N)\subseteq M$과 $N$ 사이의 homeomorphism을 정의하기도 하다면 $F$를 *embedding<sub>매장</sub>*, 혹은 2번의 정의와 맞추어 *embedded submanifold*라 부른다.
 
 </div>
 
 3번의 embedded submanifold와 더 명확하게 구별하기 위해 2번을 *immersed submanifold*라 부르기도 한다. 우리는 위의 정의 그대로, 수식어 없는 submanifold를 immersed manifold의 뜻으로 사용하고, embedded submanifold는 축약하지 않고 그대로 사용한다.
 
-함수 $F:M\rightarrow N$이 submanifold라는 것은 직관적으로 $F$가 inclusion $M\hookrightarrow N$의 역할을 하는 것으로 생각할 수 있다. 이 때, $F$의 image $F(M)\subseteq N$에 위상구조를 주는 방법은 두 가지가 있는데, 하나는 bijection $F:M\rightarrow F(M)$을 통해 $M$의 위상 옮겨오는 것이고, 다른 하나는 $N$에 주어진 위상구조를 subspace topology를 통해 가져오는 것이다. 만일 이 두 위상이 서로 동일하다면 $F$를 *embedded* submanifold라 부르는 것이고, 그렇지 않다면 이를 단순히 submanifold라 부른다.
+함수 $F:N\rightarrow M$이 submanifold라는 것은 직관적으로 $F$가 inclusion $N\hookrightarrow M$의 역할을 하는 것으로 생각할 수 있다. 이 때, $F$의 image $F(N)\subseteq M$에 위상구조를 주는 방법은 두 가지가 있는데, 하나는 전단사함수 $F:N\rightarrow F(N)$을 통해 $N$의 위상을 옮겨오는 것이고, 다른 하나는 $M$에 주어진 위상구조를 subspace topology를 통해 가져오는 것이다. 만일 이 두 위상이 서로 동일하다면 $F$를 *embedded* submanifold라 부르는 것이고, 그렇지 않다면 이를 단순히 submanifold라 부른다.
 
 ![Immersion, submanifold, immersion](/assets/images/Math/Manifold/Submanifolds-1.png){:width="500px" class="invert" .align-center}
 
-예를 들어, 위의 그림에서 $M=\mathbb{R}$, $N=\mathbb{R}^2$이며, (a)는 immersion이지만 submanifold는 아니고, (b)는 submanifold이지만 embedded submanifold는 아니며, (c)는 embedded submanifold이다. 편의상 (b)에서 $t\rightarrow \infty$일 때 $F(t)$가 향하는 점을 $F(0)$이라 하면, $\mathbb{R}$에서 $(-1,1)$은 열린집합이지만, $N$에 주어진 subspace topology 상에서 $F\bigl((-1,1)\bigr)$은 열린집합이 될 수 없다.
+예를 들어, 위의 그림에서 $N=\mathbb{R}$, $M=\mathbb{R}^2$이며, (a)는 immersion이지만 submanifold는 아니고, (b)는 submanifold이지만 embedded submanifold는 아니며, (c)는 embedded submanifold이다. 편의상 (b)에서 $t\rightarrow \infty$일 때 $F(t)$가 향하는 점을 $F(0)$이라 하면, $\mathbb{R}$에서 $(-1,1)$은 열린집합이지만, $N$에 주어진 subspace topology 상에서 $F\bigl((-1,1)\bigr)$은 열린집합이 될 수 없다.
 
 
 <div class="example" markdown="1">
@@ -43,6 +43,8 @@ weight: 7
 <ins id="ex2">**예시 2**</ins> Manifold $M$과 그 open submanifold $U$에 대하여, $\iota:U\hookrightarrow M$은 $M$의 embedded submanifold이다. 모든 $p\in U$에 대하여 $d\iota_p$가 injective라는 것은 $T_pU$와 $T_{\iota(p)}M$ 사이의 isomorphism이라는 사실로부터 명확하고, 또 open submanifold의 정의에 의해 $\iota(U)$에는 subspace topology가 주어져 있다.
 
 </div>
+
+다음 글에서 우리는 일반적인 submanifold $F:M\rightarrow N$을 부분집합 $F(M)\hookrightarrow N$으로 볼 수 있다는 것을 증명한다. (<#ref#>)
 
 <div class="example" markdown="1">
 
@@ -55,6 +57,7 @@ $$\graph(f)=\{(x,y)\in M\times N: x\in U, y=f(x)\}$$
 또한 embedded submanifold이며, 이 때 embedding은 당연히 $x\mapsto (x,f(x))$으로 주어진다.
 
 </div>
+
 
 ## 역함수 정리와 그 결과들
 

@@ -1,19 +1,19 @@
 ---
 
-title: "벡터다발"
-excerpt: "Vector bundle, tangent bundle, cotangent bundle"
+title: "접다발과 여접다발"
+excerpt: "Vector bundle의 정의와 tangent, cotangent bundle"
 
 categories: [Math / Manifold]
-permalink: /ko/math/manifold/vector_bundles
+permalink: /ko/math/manifold/tangent_and_cotangent_bundles
 header:
-    overlay_image: /assets/images/Math/Manifold/Vector_bundles.png
+    overlay_image: /assets/images/Math/Manifold/Tangent_and_cotangent_bundles.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 
 date: 2022-06-19
 last_modified_at: 2022-12-11
-weight: 9
+weight: 10
 
 ---
 
