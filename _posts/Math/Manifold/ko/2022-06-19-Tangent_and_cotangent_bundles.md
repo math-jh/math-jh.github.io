@@ -1,19 +1,19 @@
 ---
 
-title: "벡터다발"
-excerpt: "Vector bundle, tangent bundle, cotangent bundle"
+title: "접다발과 여접다발"
+excerpt: "Vector bundle의 정의와 tangent, cotangent bundle"
 
 categories: [Math / Manifold]
-permalink: /ko/math/manifold/vector_bundles
+permalink: /ko/math/manifold/tangent_and_cotangent_bundles
 header:
-    overlay_image: /assets/images/Manifold/Vector_bundles.png
+    overlay_image: /assets/images/Math/Manifold/Tangent_and_cotangent_bundles.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 
 date: 2022-06-19
 last_modified_at: 2022-12-11
-weight: 9
+weight: 10
 
 ---
 
@@ -101,7 +101,7 @@ Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 v
 
 <ins id="df3">**정의 3**</ins> 두 vector bundle $E\rightarrow B$, $E'\rightarrow B'$가 주어졌다 하자. 그럼 $E \rightarrow B$에서 $E' \rightarrow B'$의 *bundle map<sub>벡터다발 준동형사상</sub>*은 다음의 diagram
 
-![bundle_map](/assets/images/Manifold/Vector_bundles-1.png){:width="127.95px" class="invert" .align-center}
+![bundle_map](/assets/images/Math/Manifold/Vector_bundles-1.png){:width="127.95px" class="invert" .align-center}
 
 을 commute하도록 하는 쌍 $E\rightarrow E', B \rightarrow B'$ 중, $E_b\rightarrow E'_{b'}$가 isomorphism인 것들을 의미한다.
 
@@ -130,7 +130,7 @@ $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarro
 
 <ins id="ex5">**예시 5**</ins> $\Hom(-,-)$은 smooth functor이다. 임의의 두 isomorphism $f:V\rightarrow V'$, $g:W\rightarrow W'$이 주어져 있다 하자. 그럼 $\Hom(f,g)$는 $\Hom(V,W)$에서 $\Hom(V',W')$로의 functor이며 아래 diagram
 
-![Hom_functor](/assets/images/Manifold/Vector_bundles-2.png){:width="139.65px" class="invert" .align-center}
+![Hom_functor](/assets/images/Math/Manifold/Vector_bundles-2.png){:width="139.65px" class="invert" .align-center}
 
 을 commute하도록 한다. 이를 식으로 쓰면 $\Hom(f,g)(u)=g\circ u\circ f^{-1}$이라 할 수 있다. $\Hom(f,g)$가 $g$에 smooth하게 의존한다는 것을 쉽게 확인할 수 있다. 대응 $g\mapsto \Hom(f,g)$를 생각하자. 그럼 $\Hom(W,W')$의 basis $w\_i^j$에 대하여,
 

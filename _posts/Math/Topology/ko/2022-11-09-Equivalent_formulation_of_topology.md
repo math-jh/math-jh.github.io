@@ -6,7 +6,7 @@ excerpt: "닫힌집합, 폐포, neighborhood filter를 이용한 위상의 정�
 categories: [Math / Topology]
 permalink: /ko/math/topology/equivalent_formulation_of_topology
 header:
-    overlay_image: /assets/images/Topology/Equivalent_formulation_of_topology.png
+    overlay_image: /assets/images/Math/Topology/Equivalent_formulation_of_topology.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"

@@ -6,7 +6,7 @@ excerpt: "Cardinal number의 연산"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/operation_of_cardinals
 header:
-    overlay_image: /assets/images/Set_theory/Operation_of_cardinals.png
+    overlay_image: /assets/images/Math/Set_Theory/Operation_of_cardinals.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
