@@ -6,7 +6,7 @@ excerpt: "Filter와 ideal"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/filter_and_ideal
 header:
-    overlay_image: /assets/images/Set_theory/Filter_and_ideal.png
+    overlay_image: /assets/images/Math/Set_Theory/Filter_and_ideal.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"

@@ -6,7 +6,7 @@ excerpt: "Grothendieck group과 정수의 정의"
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/Grothendieck_group
 header:
-    overlay_image: /assets/images/Algebraic_structures/Grothendieck_group.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Grothendieck_group.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
@@ -25,9 +25,9 @@ Commutative semigroup $(S,+)$가 주어졌다고 하자. 그럼 $(S,+)$를 포�
 
 > Abelian group $G_S$와 semigroup homomorphism $\epsilon:S\rightarrow G_S$는 다음과 같은 성질을 만족하는 쌍이다.  
 >
->![universal_property](/assets/images/Groups/Grothendieck_group-1.png){:width="120px"  class="invert" .align-center}
+>![universal_property](/assets/images/Math/Algebraic_Structures/Grothendieck_group-1.png){:width="130.95px"  class="invert" .align-center}
 >     
->(Universal mapping problem) 임의의 abelian group $G$와, 임의의 semigroup homomorphism $f:S\rightarrow G$가 주어질 때마다 *group homomorphism* $\overline{f}:G_S\rightarrow G$가 유일하게 존재하여 $f=\overline{f}\circ\epsilon$이 성립한다.
+>(Universal mapping problem) 임의의 abelian group $G$와, 임의의 semigroup homomorphism $f:S\rightarrow G$가 주어질 때마다 *group homomorphism* $\bar{f}:G_S\rightarrow G$가 유일하게 존재하여 $f=\bar{f}\circ\epsilon$이 성립한다.
 
 위의 성질을 만족하는 $G_S$는 isomorphism에 대해 유일하다.
 
@@ -41,21 +41,21 @@ Commutative semigroup $(S,+)$가 주어졌다고 하자. 그럼 $(S,+)$를 포�
 
 우선 다음 diagram을 살펴보자.
 
-![uniqueness_1](/assets/images/Groups/Grothendieck_group-2.png){:width="160px"  class="invert" .align-center}
+![uniqueness_1](/assets/images/Math/Algebraic_Structures/Grothendieck_group-2.png){:width="133.35px"  class="invert" .align-center}
 
-그럼 universal property에서, $\eta= \overline{\eta}\circ\epsilon$이도록 하는 $\overline{\eta}: G_S\rightarrow H$가 존재한다. 한편, 다시 다음의 diagram에서
+그럼 universal property에서, $\eta= \bar{\eta}\circ\epsilon$이도록 하는 $\bar{\eta}: G_S\rightarrow H$가 존재한다. 한편, 다시 다음의 diagram에서
 
-![uniqueness_2](/assets/images/Groups/Grothendieck_group-3.png){:width="160px"  class="invert" .align-center}
+![uniqueness_2](/assets/images/Math/Algebraic_Structures/Grothendieck_group-3.png){:width="133.35px"  class="invert" .align-center}
 
-$H$에 대한 universal property를 사용하면 $\epsilon=\overline{\epsilon}\circ\eta$이도록 하는 $\overline{\epsilon}:H\rightarrow G_S$가 존재한다. 그럼
+$H$에 대한 universal property를 사용하면 $\epsilon=\bar{\epsilon}\circ\eta$이도록 하는 $\bar{\epsilon}:H\rightarrow G_S$가 존재한다. 그럼
 
-$$\overline{\eta}\circ\overline{\epsilon}\circ\eta=\overline{\eta}\circ \epsilon=\eta=\id_{H}\circ \eta $$
+$$\bar{\eta}\circ\bar{\epsilon}\circ\eta=\bar{\eta}\circ \epsilon=\eta=\id_{H}\circ \eta $$
 
-이고, 다시 universal property에 의하여 $f\circ \eta=\eta$를 만족하는 $f$는 유일하므로 $f=\id_H=\overline{\eta}\circ \overline{\epsilon}$이 성립한다. 혹은, diagram의 언어로는, 다음 diagram을 commute하게 만드는 $H\rightarrow H$는 유일하므로 $\id_H=\overline{\eta}\circ \overline{\epsilon}$여야 한다.
+이고, 다시 universal property에 의하여 $f\circ \eta=\eta$를 만족하는 $f$는 유일하므로 $f=\id_H=\bar{\eta}\circ \bar{\epsilon}$이 성립한다. 혹은, diagram의 언어로는, 다음 diagram을 commute하게 만드는 $H\rightarrow H$는 유일하므로 $\id_H=\bar{\eta}\circ \bar{\epsilon}$여야 한다.
 
-![uniqueness_3](/assets/images/Groups/Grothendieck_group-4.png){:width="180px"  class="invert" .align-center}
+![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_group-4.png){:width="180px"  class="invert" .align-center}
 
-비슷하게 $\id\_{G_S}=\overline{\epsilon}\circ \overline{\eta}$가 성립한다는 것도 보일 수 있고, 따라서 $G_S\cong H$가 성립한다.
+비슷하게 $\id\_{G_S}=\bar{\epsilon}\circ \bar{\eta}$가 성립한다는 것도 보일 수 있고, 따라서 $G_S\cong H$가 성립한다.
 </details>
 
 한편, $S$가 이미 abelian group이었다면, $G_S$는 다른 원소를 추가할 필요 없이 $S$ 그 자체가 나와야 한다.

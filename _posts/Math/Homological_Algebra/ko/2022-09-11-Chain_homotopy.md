@@ -6,14 +6,14 @@ excerpt: "기본정의"
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/chain_homotopy
 header:
-    overlay_image: /assets/images/Homological_algebra/a.png
+    overlay_image: /assets/images/Math/Homological_Algebra/a.png
     overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
 
 date: 2022-09-11
 last_modified_at: 2022-09-11
-weight: 4
+weight: 5
 
 ---
 
@@ -51,7 +51,7 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 
 <ins id="df3">**정의 3**</ins> 두 chain complex $C,D$와 chain map $f,g:C\rightarrow D$가 주어졌다 하자. 그럼 $f$와 $g$ 사이의 *chain homotopy<sub>사슬 호모토피</sub>*은 다음 diagram
 
-![chain_homotopy](/assets/images/Homological_algebra/Chain_homotopy-1.png){:width="612px" class="invert" .align-center}
+![chain_homotopy](/assets/images/Math/Homological_Algebra/Chain_homotopy-1.png){:width="612px" class="invert" .align-center}
 
 에서, $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$가 성립하도록 하는 $h_n:C_n\rightarrow D_{n+1}$의 모임이다. 만일 $f,g$ 사이의 chain homotopy가 존재한다면, $f$와 $g$가 *homotopic*한 chain map이라 부른다. 
 
@@ -101,7 +101,7 @@ $\mathbf{K}(\mathcal{C})$는 $\mathbf{Ch}(\mathcal{C})$와 동일한 object를 �
 
 두 homotopic chain map $f,g:C\rightarrow D$가 주어졌다 하자. 임의의 $u:B\rightarrow C$, $v:D\rightarrow E$에 대하여 두 map $vfu$와 $vgu$를 생각하자. 다음 diagram
 
-![composition_in_homotopy_category](/assets/images/Homological_algebra/Chain_homotopy-2.png){:width="612px" class="invert" .align-center}
+![composition_in_homotopy_category](/assets/images/Math/Homological_Algebra/Chain_homotopy-2.png){:width="612px" class="invert" .align-center}
 
 을 생각하면,
 

@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Linear_algebra/Space_of_linear_maps.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Space_of_linear_maps.png
     overlay_filter: 0.5
 
 date: 2022-08-05
@@ -52,7 +52,7 @@ $$G(v)=\sum_{x\in\mathcal{B}} v_xg(x)$$
 
 즉, 다음의 diagram이 항상 commute하도록 하는 $G:V\rightarrow W$를 찾을 수 있다.
 
-![extend_by_linearity](/assets/images/Linear_algebra/Space_of_linear_maps-1.png){:width="127.2px" class="invert" .align-center}
+![extend_by_linearity](/assets/images/Math/Linear_Algebra/Space_of_linear_maps-1.png){:width="127.2px" class="invert" .align-center}
 
 반대로 임의의 linear map $G:V\rightarrow W$가 주어진다면 이를 $\mathcal{B}$로 제한하여 함수 $g=G\circ\iota$를 정의할 수 있으며, 위 정리의 유일성 파트에 의하여 이 등식을 만족하는 linear map은 오직 $G$ 뿐이다. 따라서 다음 두 집합 사이의 전단사함수가 존재한다.
 

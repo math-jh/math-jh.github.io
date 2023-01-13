@@ -6,7 +6,7 @@ excerpt: "동치관계의 예시들, 동치관계의 포화, isomorphism theorem
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/examples_of_equivalence
 header:
-    overlay_image: /assets/images/Set_theory/Examples_of_equivalence.png
+    overlay_image: /assets/images/Math/Set_Theory/Examples_of_equivalence.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
@@ -88,7 +88,7 @@ weight: 13
 
 </div>
 
-![saturated_set](/assets/images/Set_theory/Examples_of_equivalence-1.png){:width="600px" class="invert" .align-center}
+![saturated_set](/assets/images/Math/Set_Theory/Examples_of_equivalence-1.png){:width="600px" class="invert" .align-center}
 
 <cap>주어진 몫집합 (위쪽) 에서의 saturated subset (왼쪽)과 saturated가 아닌 부분집합 (오른쪽)</cap>
 
@@ -135,13 +135,13 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 
 즉, 다음의 diagram이 commute한다.
 
-![induced_injection](/assets/images/Set_theory/Examples_of_equivalence-2.png){:width="147.6px"  class="invert" .align-center}
+![induced_injection](/assets/images/Math/Set_Theory/Examples_of_equivalence-2.png){:width="147.6px"  class="invert" .align-center}
 
 이 때 $h$는 $p$의 section $s$에 의하여 $h=f\circ s$로 유일하게 결정된다. 
 
 특별히 $R$이 $f$에 의해 정의된 동치관계라 하자. ([정의 2](#df2)) 그럼 다음의 diagram을 생각할 수 있다.
 
-![canonical_decomposition](/assets/images/Set_theory/Examples_of_equivalence-3.png){:width="262.05px"  class="invert" .align-center}
+![canonical_decomposition](/assets/images/Math/Set_Theory/Examples_of_equivalence-3.png){:width="262.05px"  class="invert" .align-center}
 
 이 때 $\tilde{f}$는 $f$의 공역 $F$를 $f(A)$로 제한하여 얻어지는 함수이고, $j$는 canonical injection이다. 위 그림의 commutativity로부터 식
 
@@ -151,7 +151,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 추가로 공역 $B$에 동치관계 $S$가 주어졌다고 하자. 그럼 우선 다음의 diagram을 얻는다.
 
-![induced_mapping_of_equivalence](/assets/images/Set_theory/Examples_of_equivalence-4.png){:width="172.5px"  class="invert" .align-center}
+![induced_mapping_of_equivalence](/assets/images/Math/Set_Theory/Examples_of_equivalence-4.png){:width="172.5px"  class="invert" .align-center}
 
 만일 $q\circ f$이 $R$과 compatible하다면, $f$가 *$(R,S)$-compatible*하다고 한다. [명제 7](#p75)에 의해 이는 다시 $h:A/R\rightarrow B/S$가 존재하여 $h\circ p=q\circ f$인 것과 동치이다. 
 
@@ -159,7 +159,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 함수 $f:A\rightarrow B$가 주어졌다 하고, 동치관계 $(S,B,B)$와 canonical $p:B\rightarrow B/S$를 생각하자.
 
-![inverse_image_of_equivalence](/assets/images/Set_theory/Examples_of_equivalence-5.png){:width="145.5px"  class="invert" .align-center}
+![inverse_image_of_equivalence](/assets/images/Math/Set_Theory/Examples_of_equivalence-5.png){:width="145.5px"  class="invert" .align-center}
 
 그럼 자연스레 함수 $p\circ f:A\rightarrow B/S$가 정의되며, 이 함수가 [정의 2](#df2)를 통해 만드는 동치관계를 $f$에 의한 $S$의 *preimage*라 부른다.
 
@@ -175,11 +175,11 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 집합 $A$ 위에 정의된 두 동치관계 $R,S$가 주어졌고, $S$가 $R$보다 finer하다고 하자. 
 
-![third_iso_1](/assets/images/Set_theory/Examples_of_equivalence-6.png){:width="171.3px"  class="invert" .align-center}
+![third_iso_1](/assets/images/Math/Set_Theory/Examples_of_equivalence-6.png){:width="171.3px"  class="invert" .align-center}
 
 그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 $p_R=h\circ p_S$이도록 하는 유일한 $h:A/S \rightarrow A/R$이 존재한다. ([§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#pp4)) 이 때, $h$가 $A/S$ 위에 정의하는 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. Canonical decomposition을 거치면
 
-![third_iso_2](/assets/images/Set_theory/Examples_of_equivalence-7.png){:width="368.25px"  class="invert" .align-center}
+![third_iso_2](/assets/images/Math/Set_Theory/Examples_of_equivalence-7.png){:width="368.25px"  class="invert" .align-center}
 
 와 같으며, 특히 $k$는 전단사함수이다.
 
@@ -204,11 +204,11 @@ $$\begin{aligned}u\sim_{\tiny S}v&\iff (f\times f')(u)=(f\times f')(v)\iff (f(x)
 
 이므로 $S=R\times R'$이다. 이 때 $f\times f'$에 의한 $A\times A'$의 image는 $f(A)\times f'(A')$와 같으므로, $f\times f'$의 canonical decomposition을 생각하면 $(A\times A')/(R\times R')$과 $f(A)\times f'(A')$ 사이의 전단사함수가 존재한다.
 
-![canonical_bijection_between_product](/assets/images/Set_theory/Examples_of_equivalence-8.png){:width="523.5px" class="invert" .align-center}
+![canonical_bijection_between_product](/assets/images/Math/Set_Theory/Examples_of_equivalence-8.png){:width="523.5px" class="invert" .align-center}
 
 한편 다음의 diagram을 생각하자.
 
-![canonical_bijection_between_product_2](/assets/images/Set_theory/Examples_of_equivalence-9.png){:width="415.8px" class="invert" .align-center}
+![canonical_bijection_between_product_2](/assets/images/Math/Set_Theory/Examples_of_equivalence-9.png){:width="415.8px" class="invert" .align-center}
 
 여기서 $A/R\rightarrow f(A)$와 $A'/R'\rightarrow f'(A')$는 각각 $f$와 $f'$의 canonical decomposition들로부터 얻어지는 전단사함수이다. 따라서 이들에 의해 유도되는 함수 $(A/R)\times (A/R')\rightarrow f(A)\times f'(A')$ 또한 전단사함수이다. 
 

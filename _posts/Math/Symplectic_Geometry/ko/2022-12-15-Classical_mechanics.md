@@ -6,7 +6,7 @@ excerpt: "고전역학과 phase space"
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/classical_mechanics
 header:
-    overlay_image: /assets/images/Classical_mechanics.png
+    overlay_image: /assets/images/Math/Symplectic_Geometry/Classical_mechanics.png
     overlay_filter: 0.5
 sidebar: 
     nav: "symplectic_geometry-ko"

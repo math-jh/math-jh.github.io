@@ -6,14 +6,14 @@ excerpt: "미분다양체에서의 음함수 정리와 그 결과들"
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/implicit_function_theorem
 header:
-    overlay_image: /assets/images/Manifold/Implicit_function_theorem.png
+    overlay_image: /assets/images/Math/Manifold/Implicit_function_theorem.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 
 date: 2022-06-19
 last_modified_at: 2022-12-10
-weight: 8
+weight: 9
 
 ---
 

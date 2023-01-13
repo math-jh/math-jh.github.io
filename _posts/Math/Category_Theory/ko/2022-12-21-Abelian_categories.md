@@ -6,7 +6,7 @@ excerpt: "아벨 카테고리"
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/abelian_categories
 header:
-    overlay_image: /assets/images/Category_theory/Abelian_categories.png
+    overlay_image: /assets/images/Math/Category_Theory/Abelian_categories.png
     overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-ko"
@@ -70,10 +70,10 @@ $\mathbf{Set}$은 initial object를 갖지 않고, 따라서 zero object도 갖�
 - Morphism $i:K\rightarrow A$가 $f$의 *kernel<sub>핵</sub>*이라는 것은 $f\circ i=0$이며, 다음의 universal property를 만족하는 것이다.
     > 임의의 $j:Z\rightarrow A$가 $f\circ j=0$을 만족한다면, 다음 diagram을 commute하도록 하는 유일한 morphism $Z\rightarrow K$가 항상 존재한다.
     >
-    > ![universal_property_of_kernel](/assets/images/Category_theory/Abelian_categories-3.png){:width="209.55px" class="invert" .align-center}
+    > ![universal_property_of_kernel](/assets/images/Math/Category_Theory/Abelian_categories-3.png){:width="209.55px" class="invert" .align-center}
 - 비슷하게, $f$의 *cokernel<sub>여핵</sub>*은 다음 diagram에 해당하는 universal property를 만족하는 morphism $p:B\rightarrow C$로 정의된다.
 
-![universal_property_of_cokernel](/assets/images/Category_theory/Abelian_categories-4.png){:width="206.7px" class="invert" .align-center}
+![universal_property_of_cokernel](/assets/images/Math/Category_Theory/Abelian_categories-4.png){:width="206.7px" class="invert" .align-center}
 
 </div>
 
@@ -137,25 +137,33 @@ $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=
 
 </div>
 
-Abelian category에서는 임의의 homomorphism $f:A\rightarrow B$에 대해 $f$의 kernel $i:\ker f\rightarrow A$와 cokernel $p:B\rightarrow \coker f$가 존재한다. 
+Abelian category에서는 임의의 homomorphism $f:A\rightarrow B$에 대해 $f$의 kernel $i:\ker f\rightarrow A$와 cokernel $p:B\rightarrow \coker f$가 존재한다. 직관적으로 $\lmod{R}$에서 살펴보면, $i:\ker f\rightarrow A$는 $A$의 submodule $\ker f$의 $A$로의 canonical inclusion으로 생각할 수 있고, cokernel $p:B\rightarrow \coker f$는 canonical projection으로 생각할 수 있다. ([\[호몰로지 대수학\] §완전열, 명제 2](/ko/math/homological_algebra/exact_sequences#pp2))
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8**</ins> 카테고리 $\lmod{R}$에서 kernel은 kernel이고 cokernel은 cokernel이다. 
-
-(호몰로지 처음에 있는거 여기로 옮기기)
-
-</div>
-
-한편, $f$의 *image*는 다음의 morphism
+임의의 abelian category $\mathcal{A}$에서, $f$의 *image*는 다음의 morphism
 
 $$\ker(\coker f)\rightarrow\coker f$$
 
-으로 정의된다. 이를 $\lmod{R}$에서 살펴보면 $f$의 cokernel은 canonical projection $p:B\rightarrow B/\im f$이고, 따라서 $\ker p=\ker(\coker f)$는 $\lmod{R}$에서 우리가 알고 있는 image의 개념과 잘 맞아떨어진다.
+으로 정의된다. 이를 $\lmod{R}$에서 살펴보면 $f$의 cokernel은 canonical projection $p:B\rightarrow B/\im f$이고, 따라서 $\ker p=\ker(\coker f)$는 $\lmod{R}$에서 우리가 알고 있는 image의 개념과 잘 맞아떨어진다. 비슷하게, $f$의 *coimage*는 다음의 morphism
+
+$$\coim(f)=\coker(\ker(f))$$
+
+으로 정의한다.
 
 일반적인 abelian category에서, monomorphism $f:A\rightarrow B$가 주어진다면 $\coker f$를 *quotient object*라 부르고 $B\rightarrow B/A$, 혹은 더 간단히 $B/A$라 표기한다. 이 또한 $\lmod{R}$에서는 자명한 것이다. 
 
-이제 abelian category에서는 kernel과 image가 잘 정의되며, 이들의 quotient object로 호몰로지를 정의할 수 있고, 이것이 $0$이 된다는 것이 exactness이므로 $\mathcal{A}$에서 short exact sequence 또한 잘 정의된다. 즉 abelian category에서는 "diagram chasing"을 할 수 있다.
+<div class="example" markdown="1">
+
+<ins id="ex8">**예시 8 (Homology)**</ins> Abelian category $\mathcal{A}$에서는 kernel과 image가 잘 정의되며, 이들의 quotient object로 호몰로지를 정의할 수 있고, 이것이 $0$이 된다는 것이 exactness이므로 $\mathcal{A}$에서 short exact sequence 또한 잘 정의된다. 즉 abelian category에서는 "diagram chasing"을 할 수 있다. 예컨대
+
+$$C_{n+1}\overset{d_{n+1}}{\longrightarrow} C_n\overset{d_n}{\longrightarrow} C_{n-1}$$
+
+이 $d_{n+1}\circ d_n=0$을 만족한다면, 다음의 diagram
+
+![homology_in_abelilan_category](/assets/images/Math/Category_Theory/Abelian_categories-5.png){:width="390.75px" class="invert" .align-center}
+
+을 따라 monomorphism $\im(d_{n+1})\rightarrow\ker(d_n)$을 정의할 수 있으며, 따라서 quotient $H_n(C)=\ker(d_n)/\im(d_{n+1})$이 잘 정의된다. 이 때 위의 chain complex가 $C_n$에서 *exact*라는 것은 $H_n(C)=0$인 것이다.
+
+</div>
 
 ## Freyd-Mitchell embedding theorem
 
@@ -169,7 +177,7 @@ $$\ker(\coker f)\rightarrow\coker f$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8 (Freyd-Mitchell embedding theorem)**</ins> 임의의 small abelian category $\mathcal{A}$에 대하여, 적당한 ring $R$과 fully faithful, exact functor $F:\mathcal{A}\rightarrow\lmod{R}$이 존재한다.
+<ins id="thm9">**정리 9 (Freyd-Mitchell embedding theorem)**</ins> 임의의 small abelian category $\mathcal{A}$에 대하여, 적당한 ring $R$과 fully faithful, exact functor $F:\mathcal{A}\rightarrow\lmod{R}$이 존재한다.
 
 </div>
 
