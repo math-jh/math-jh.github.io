@@ -13,7 +13,7 @@ sidebar:
 
 date: 2022-12-16
 last_modified_at: 2022-12-16
-weight: 13
+weight: 14
 
 ---
 
@@ -214,4 +214,11 @@ $$\begin{aligned}dF_p([X_1,X_2]_p)f&=[X_1,X_2]_p(f\circ F)\\
 
 </details>
 
-$\mathfrak{X}(M)$은 
+---
+
+**참고문헌**
+
+**[War]** Frank W. Warner. *Foundations of Differentiable Manifolds and Lie Groups*, Graduate texts in mathematics, Springer, 2013  
+**[Lee]** John M. Lee. *Introduction to Smooth Manifolds*, Graduate texts in mathematics, Springer, 2012  
+
+---
