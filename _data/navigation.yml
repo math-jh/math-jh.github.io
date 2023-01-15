@@ -181,10 +181,12 @@ manifold-ko:
         url: ko/math/manifold/examples_of_differentials
       - title: "부분다양체와 역함수 정리"
         url: ko/math/manifold/submanifolds
+      - title: "부분다양체의 유일성"
+        url: ko/math/manifold/uniqueness_of_submanifold
       - title: "음함수 정리"
         url: ko/math/manifold/implicit_function_theorem
-      - title: "벡터다발"
-        url: ko/math/manifold/vector_bundles
+      - title: "접다발과 여접다발"
+        url: ko/math/manifold/tangent_and_cotangent_bundles
       - title: "벡터장"
         url: ko/math/manifold/vector_fields
       - title: "미분형식"
@@ -195,6 +197,12 @@ manifold-ko:
         url: ko/math/manifold/Lie_derivative
       - title: "접속"
         url: ko/math/manifold/connection
+      - title: "레비-치비타 접속"
+        url: ko/math/manifold/Levi-Civita_connection
+      - title: "Distribution"
+        url: ko/math/manifold/distribution
+      - title: "미분 아이디얼"
+        url: ko/math/manifold/differential_ideal
 
 set_theory-ko:
   - title: <a href="/ko/set_theory/" class="sidebar_title">집합론</a>
