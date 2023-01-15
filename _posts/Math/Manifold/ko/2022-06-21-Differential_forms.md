@@ -77,7 +77,7 @@ $$(\omega\wedge\eta)_p=\omega_p\wedge\eta_p\qquad\text{for all $p\in M$}$$
 
 $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
-으로 생각할 수 있다. ([\[텐서대수\] §등급구조, ⁋정의 5](/ko/math/tensor_algebra/graduation#df5)) 
+으로 생각할 수 있다. ([\[텐서대수\] §등급구조, ⁋정의 5](/ko/math/tensor_algebra/graduation#df5)) 뿐만 아니라, $\Omega^\ast(M)$에서의 $\mathbb{R}$에 의한 스칼라곱은 사실 각 점 $p$마다 수행할 수 있기 때문에, $\Omega^\ast(M)$의 계수를 $C^\infty(M)$으로 생각할 수도 있다. 대수적으로 이는 ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$을 통해 coefficient ring을 바꾸어 주는 것으로 생각할 수도 있으며, 앞으로 $\Omega^\ast(M)$은 항상 이러한 식으로 $\mathbb{N}$-graded $C^\infty(M)$-algebra 구조가 주어진 것으로 생각한다.
 
 이제 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 linear map $dF_p:T_pM\rightarrow T_{F(p)}N$가 잘 정의된다. 따라서 $dF_p$의 dual map에 exterior algebra의 functoriality를 적용하면
 
