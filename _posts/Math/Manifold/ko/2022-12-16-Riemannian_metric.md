@@ -100,3 +100,11 @@ $$d_g(p,q)=\inf_{\gamma\text{ connecting }p,q}\length(\gamma)$$
 $$d\iota(T_pS)\subseteq T_pM$$
 
 에 의하여 $T_pS$은 $T_pM$의 부분공간으로 볼 수 있고 따라서 $T_pS$는 $T_pM$의 direct summand이다. 일반적으로 $T_pS$의 complementary subspace를 주는 표준적인 방법은 존재하지 않지만, 지금처럼 $T_pM$이 내적공간이라면 이를 $(T_pS)^\perp$으로 정의할 수 있다. 각 점 $p$마다 이러한 bundle $(T_pS)^\perp$이 붙어있는 $\iota(S)$ 위의 vector bundle을 우리는 $S$의 *normal bundle*이라 부르고 $NS$로 적는다.
+
+---
+
+**참고문헌**
+
+**[Lee]** John M. Lee. *Introduction to Riemannian Manifolds*, Graduate texts in mathematics, Springer, 2019  
+
+---
