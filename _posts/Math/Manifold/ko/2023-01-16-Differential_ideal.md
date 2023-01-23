@@ -95,7 +95,7 @@ $\Omega^\ast(M)$는 differential graded algebra이므로, ideal들 또한 differ
 
 </div>
 
-## 제목?
+## 그래프와 differential form
 
 다음 정리는 리 군과 리 대수 사이의 관계를 탐구하는 데에 중요하게 사용된다.
 
@@ -105,12 +105,12 @@ $\Omega^\ast(M)$는 differential graded algebra이므로, ideal들 또한 differ
 
 1. 임의의 $f:N\rightarrow M$에 대하여, $\graph(f)$는 다음의 집합
 
-    $$\{(d(\pi_1\circ f))^\ast(\omega_i)-(d\pi_2)^\ast(\omega_i): i=1,\ldots, d\}$$
+    $$\{(d(f\circ \pi_1))^\ast(\omega_i)-(d\pi_2)^\ast(\omega_i): i=1,\ldots, m\}$$
 
     으로 생성되는 ideal $\mathcal{I}$의 integral manifold이다.
 2. $N$ 위의 1-form들 $\alpha_1,\ldots,\alpha_m$에 대하여, 다음의 집합
 
-    $$\{(d\pi_1)^\ast(\alpha_i)-(d\pi_2)^\ast(\omega_i):i=1,\ldots,d\}$$
+    $$\{(d\pi_1)^\ast(\alpha_i)-(d\pi_2)^\ast(\omega_i):i=1,\ldots,m\}$$
 
     으로 생성되는 ideal이 differential ideal이라 가정하자. 그럼 임의의 $q_0\in N,p_0\in M$이 주어질 때마다, $q_0$의 적당한 열린근방 $U$와, $f(q_0)=p_0$을 만족하는 $C^\infty$ 함수 $f:U\rightarrow M$이 존재하여
 
@@ -119,4 +119,38 @@ $\Omega^\ast(M)$는 differential graded algebra이므로, ideal들 또한 differ
     가 성립하도록 할 수 있다.
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
+간단히 흐름만 소개한다.
+
+1. 우선 [§미분다양체의 예시들, ⁋예시 5](/ko/math/manifold/examples_of_manifolds#ex5)를 따라 다음의 집합
+    
+    $$\graph(f)=\{(p,q):f(p)=q\}$$
+    
+    이 $N\times M$의 submanifold가 된다는 것을 보인다. 이 때 inclusion map은 자연스러운 함수
+    
+    $$\iota:\graph(f)\rightarrow N\times M;\qquad (p,q)\mapsto (p,q)$$
+    
+    로 주어진다. 이제 $\mathcal{I}$가 이를 integral manifold로 갖는다는 것을 증명하려면 주어진 form들 
+
+    $$\mu_i:=(d(f\circ\pi_1))^\ast(\omega_i)-(d\pi_2)^\ast(\omega_i)$$
+
+    이 $(d\iota)^\ast(\omega_i)=0$을 만족한다는 것을 보여야 한다. 이는
+    
+    $$(d\iota)^\ast(\mu_i)=(d(\pi_1\circ\iota))^\ast(df)^\ast(\omega_i)-(d(\pi_2\circ\iota))^\ast(\omega_i)=(df)^\ast(\omega_i)-(df)^\ast(\omega_i)=0$$
+
+    으로부터 분명하다.
+
+2. 주어진 form들의 집합으로 생성되는 ideal을 $\mathcal{I}$라 하자. 그럼 프로베니우스 정리에 의하여, $\mathcal{I}$는 $(m+n)-m=c$차원의 integral manifold $I$를 갖는다. 이후, 임의의 점 $q\in I$에 대하여, $d\pi_1$을 $I_q$로 제한한 것이 전단사함수임을 보이면 된다. 
+
+</details>
+
+---
+
+**참고문헌**
+
+**[War]** Frank W. Warner. *Foundations of Differentiable Manifolds and Lie Groups*, Graduate texts in mathematics, Springer, 2013  
+**[Lee]** John M. Lee. *Introduction to Smooth Manifolds*, Graduate texts in mathematics, Springer, 2012  
+
+---
