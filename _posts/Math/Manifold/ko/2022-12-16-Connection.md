@@ -226,3 +226,11 @@ $$\nabla_{X,Y}^2F=\nabla_X(\nabla_YF)-\nabla_{\nabla_XY}F$$
 </details>
 
 특히 $(0,0)$-tensor $C^\infty(M)$에 이를 적용하면 *covariant Hessian* $\nabla^2 u$를 얻는다. 
+
+---
+
+**참고문헌**
+
+**[Lee]** John M. Lee. *Introduction to Riemannian Manifolds*, Graduate texts in mathematics, Springer, 2019  
+
+---

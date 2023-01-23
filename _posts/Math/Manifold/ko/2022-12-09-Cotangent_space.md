@@ -143,3 +143,12 @@ $$\sum_{i=1}^m v(x^i)\frac{\partial}{\partial x^i}\bigg|_p x^j=\sum_{i=1}^m v(x^
 이 되므로 앞선 식이 성립한다. 
 
 이제 우리는 tangent vector를 엄밀한 언어로 정의하였으므로, 다음 글부터는 $\mathcal{C}^\infty_p$의 원소들을 germ $\mathbf{f}$로 쓰지 않고, 간단히 $f$로만 적기로 한다. 이 때 $f\in \mathcal{C}^\infty_p$이라는 것은 $f$가 $p\in M$의 적당한 열린근방에서 정의된 $C^\infty$ 함수라는 뜻이다.
+
+---
+
+**참고문헌**
+
+**[War]** Frank W. Warner. *Foundations of Differentiable Manifolds and Lie Groups*, Graduate texts in mathematics, Springer, 2013  
+**[Lee]** John M. Lee. *Introduction to Smooth Manifolds*, Graduate texts in mathematics, Springer, 2012  
+
+---

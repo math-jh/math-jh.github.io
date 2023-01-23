@@ -17,3 +17,10 @@ weight: 16
 
 ---
 
+---
+
+**참고문헌**
+
+**[Lee]** John M. Lee. *Introduction to Riemannian Manifolds*, Graduate texts in mathematics, Springer, 2019
+
+---
