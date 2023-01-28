@@ -17,7 +17,7 @@ weight: 18
 
 ---
 
-우리는 앞서 differential form들의 모임이 $C^\infty(M)$
+우리는 앞서 differential form들의 모임이 $C^\infty(M)$-algebra가 된다는 것을 확인했다. 대수적으로 이 모임의 아이디얼을 생각할 수 있으며, 뿐만 아니라 이 모임 $\Omega^\ast(M)$은 dg-algebra였으므로 정확한 맥락에서는 지금 정의할 *differential ideal*을 생각하는 것이 더 자연스럽다.
 
 ## 미분 아이디얼의 정의
 
