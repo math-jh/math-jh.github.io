@@ -52,3 +52,7 @@ $$G\times G\rightarrow G;\qquad (x,y)\mapsto xy^{-1}$$
 3. $\GL_n(\mathbb{R})$의 곱셈, 그리고 역원은 (분모가 $0$이 되지 않는) 유리함수에 불과하므로 $C^\infty$이고, 따라서 $\GL_n(\mathbb{R})$ 또한 Lie group이다. $\SL_n(\mathbb{R})$ 또한 마찬가지이다.
 
 </div>
+
+## 리 대수
+
+리 군이 정의되면, 이 위에 정의된 자연스러운 리 대수의 구조가 존재한다. 
