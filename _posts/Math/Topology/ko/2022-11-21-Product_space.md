@@ -4,9 +4,9 @@ title: "곱공간"
 excerpt: "곱공간의 성질들"
 
 categories: [Math / Topology]
-permalink: /ko/math/topology/product_topology
+permalink: /ko/math/topology/product_space
 header:
-    overlay_image: /assets/images/Math/Topology/Product_topology.png
+    overlay_image: /assets/images/Math/Topology/Product_space.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"

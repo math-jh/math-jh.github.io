@@ -4,9 +4,9 @@ title: "몫공간"
 excerpt: "부분공간의 성질들"
 
 categories: [Math / Topology]
-permalink: /ko/math/topology/quotient_topology
+permalink: /ko/math/topology/quotient_space
 header:
-    overlay_image: /assets/images/Math/Topology/quotient_topology.png
+    overlay_image: /assets/images/Math/Topology/Quotient_space.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
