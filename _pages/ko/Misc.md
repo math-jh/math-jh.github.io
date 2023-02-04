@@ -1,7 +1,7 @@
 ---
 title: "기타"
 layout: archive_custom
-permalink: /ko/misc/
+permalink: /ko/misc
 author_profile: true
 ---
 
