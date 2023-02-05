@@ -17,7 +17,7 @@ weight: 4
 
 ---
 
-아벨 카테고리의 개념은 [호몰로지 대수학](/ko/homological_algebra/)에서 자주 쓰이지만, 우선은 범주론 카테고리에 두었다. 아벨 카테고리를 정의할 때 그 원형은 $\Ab$, 더 일반적으로는 $\lmod{R}$인데, 여기에는 product나 coproduct, kernel과 cokernel 등이 잘 정의되며, 뿐만 아니라 morphism들의 모임이 자연스러운 abelian group의 구조를 갖는다. 
+아벨 카테고리의 개념은 [호몰로지 대수학](/ko/homological_algebra)에서 자주 쓰이지만, 우선은 범주론 카테고리에 두었다. 아벨 카테고리를 정의할 때 그 원형은 $\Ab$, 더 일반적으로는 $\lmod{R}$인데, 여기에는 product나 coproduct, kernel과 cokernel 등이 잘 정의되며, 뿐만 아니라 morphism들의 모임이 자연스러운 abelian group의 구조를 갖는다. 
 
 ## 기본개념들
 

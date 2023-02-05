@@ -510,8 +510,21 @@
   border-bottom: 1px solid $border-color;
 }
 
-.dsq-widget a{
- color: #071734;
+.dsq-widget {
+ background: $background-color;
+}
+
+#dsq-combo-tabs {
+  visibility: hidden !important;
+}
+
+#dsq-combo-logo {
+  visibility: hidden !important;
+}
+
+.dsq-combo-box {
+  background: $background-color !important;
+  color: $text-color !important;
 }
 
 /*
