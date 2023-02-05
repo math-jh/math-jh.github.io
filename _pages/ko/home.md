@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /ko/
+permalink: /ko
 hidden: true
 header:
   overlay_image: /assets/images/Pages/Home/Stationary_main.png
@@ -15,7 +15,7 @@ feature_row:
     alt: "set_theory"
     title: "집합론"
     excerpt: "수학기초론 1: 집합론"
-    url: "/ko/set_theory/"
+    url: "/ko/set_theory"
     btn_class: "btn--primary"
     btn_label: "Read more"
   
