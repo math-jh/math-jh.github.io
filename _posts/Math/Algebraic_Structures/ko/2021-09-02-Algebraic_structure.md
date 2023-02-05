@@ -17,7 +17,7 @@ weight: 1
 
 ---
 
-[대수적 구조](/ko/algebraic_structures/) 카테고리에서 우리는 group과 ring을 정의하고, 이들의 기본적인 성질들을 탐구한다. 이들은 집합 위에 이항연산의 구조를 추가하여 얻어지는데, group은 하나의 연산을, ring은 두 개의 연산을 추가하여 얻어지는 구조이다. 이들에 추가적으로 ring의 action을 주면 module과 algebra를 얻는다. 이들 대수적 구조 외에 갈루아 이론이나 tensor algebra 등은 별도의 카테고리로 분리하였다.
+[대수적 구조](/ko/algebraic_structures) 카테고리에서 우리는 group과 ring을 정의하고, 이들의 기본적인 성질들을 탐구한다. 이들은 집합 위에 이항연산의 구조를 추가하여 얻어지는데, group은 하나의 연산을, ring은 두 개의 연산을 추가하여 얻어지는 구조이다. 이들에 추가적으로 ring의 action을 주면 module과 algebra를 얻는다. 이들 대수적 구조 외에 갈루아 이론이나 tensor algebra 등은 별도의 카테고리로 분리하였다.
 
 ## 이항연산
 

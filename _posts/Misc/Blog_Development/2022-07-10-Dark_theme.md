@@ -22,7 +22,7 @@ weight: 10
 
 ## 다크모드 설정하기
 
-나는 보통 밤에 블로그를 관리하므로, 블로그의 전반적인 테마가 어두웠으면 하는 바람이 있었다. 물론 단순히 어두운 테마를 사용해도 되는 일이긴 하지만, 그보다는 다크모드를 사용하고 싶었다. [이 글](https://etch-cure.github.io/blog/toggle-dark-mode/)에서 방법을 찾았다.
+나는 보통 밤에 블로그를 관리하므로, 블로그의 전반적인 테마가 어두웠으면 하는 바람이 있었다. 물론 단순히 어두운 테마를 사용해도 되는 일이긴 하지만, 그보다는 다크모드를 사용하고 싶었다. [이 글](https://etch-cure.github.io/blog/toggle-dark-mode)에서 방법을 찾았다.
 
 우선 `_config.yml` 파일에서 다음과 같이 다크모드를 사용할 것임을 알린다. 또, 어떤 스킨을 다크모드로 사용할지를 알려줘야 한다. 나는 새로 `custom-dark.scss` 파일을 추가했다.
 ```yml
@@ -239,4 +239,4 @@ document.head.querySelector("#scrollbar-color").innerHTML=`
 
 **참고자료**
 
-앞서 말한 것과 같이 다크모드 설정과 관련된 코드는 모두 [이 글](https://etch-cure.github.io/blog/toggle-dark-mode/)로부터 왔다. `invert`를 해 주는 것은 구글링을 통해 [이 글](https://dev.to/colinmcdermott/darkmode-hacks-1-inverted-images-jga)을 찾았다. 스크롤바를 테마에 따라 바꾸는 것은 이리저리 삽질을 하다 만든 것이긴 하지만, 스크롤바 색상을 바꾸는 게 가능하다는 것은 [이 글](https://ansohxxn.github.io/)에서 확인했다. 
+앞서 말한 것과 같이 다크모드 설정과 관련된 코드는 모두 [이 글](https://etch-cure.github.io/blog/toggle-dark-mode)로부터 왔다. `invert`를 해 주는 것은 구글링을 통해 [이 글](https://dev.to/colinmcdermott/darkmode-hacks-1-inverted-images-jga)을 찾았다. 스크롤바를 테마에 따라 바꾸는 것은 이리저리 삽질을 하다 만든 것이긴 하지만, 스크롤바 색상을 바꾸는 게 가능하다는 것은 [이 글](https://ansohxxn.github.io)에서 확인했다. 

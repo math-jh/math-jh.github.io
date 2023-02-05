@@ -1,7 +1,7 @@
 ---
 title: "위상수학"
 layout: archive_custom
-permalink: /ko/topology/
+permalink: /ko/topology
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

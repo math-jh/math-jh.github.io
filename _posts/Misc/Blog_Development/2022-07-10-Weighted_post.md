@@ -31,7 +31,7 @@ Minimal-mistakes 테마는 포스트를 배열할 때 날짜순으로 우선 정
 
 ## 같은 카테고리 내에서 이전 글/다음 글 움직이기
 
-우선 포스트 하단의 이전 글/다음 글 버튼을 눌러보면, 같은 카테고리 내에서 이동하는 대신 블로그의 모든 포스트들을 날짜순으로 배열하여 이전 글/다음 글을 정하는 것을 알 수 있다. 이는 `post_pagintation.html`을 기준으로 이루어지는데, [이 글](https://ansohxxn.github.io/blog/prevnext/)을 따라 이 파일을 다음 코드로 대체하면 정상적으로 같은 카테고리 내에서 움직이는 것을 알 수 있다.
+우선 포스트 하단의 이전 글/다음 글 버튼을 눌러보면, 같은 카테고리 내에서 이동하는 대신 블로그의 모든 포스트들을 날짜순으로 배열하여 이전 글/다음 글을 정하는 것을 알 수 있다. 이는 `post_pagintation.html`을 기준으로 이루어지는데, [이 글](https://ansohxxn.github.io/blog/prevnext)을 따라 이 파일을 다음 코드로 대체하면 정상적으로 같은 카테고리 내에서 움직이는 것을 알 수 있다.
 
 {% raw %}
 ```html
@@ -192,4 +192,4 @@ layout: archive
 
 **참고자료**
 
-`weight` 태그와 관련된 부분은 기본적으로 혼자 삽질한 결과물이긴 하지만, liquid 문법은 shopify liquid의 [documentation](https://shopify.github.io/liquid/)을 참고했다.
+`weight` 태그와 관련된 부분은 기본적으로 혼자 삽질한 결과물이긴 하지만, liquid 문법은 shopify liquid의 [documentation](https://shopify.github.io/liquid)을 참고했다.

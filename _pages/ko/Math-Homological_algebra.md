@@ -1,7 +1,7 @@
 ---
 title: "호몰로지 대수학"
 layout: archive_custom
-permalink: /ko/homological_algebra/
+permalink: /ko/homological_algebra
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
