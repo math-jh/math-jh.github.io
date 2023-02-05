@@ -1,7 +1,7 @@
 ---
 title: "블로그 개발"
 layout: archive_custom
-permalink: /ko/blog_development/
+permalink: /ko/blog_development
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

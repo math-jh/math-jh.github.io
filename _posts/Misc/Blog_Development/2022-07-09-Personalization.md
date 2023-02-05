@@ -114,7 +114,7 @@ $right-sidebar-width-wide: 250px !default;
 
 ## 파비콘 추가
 
-파비콘은 웹사이트 옆에 붙는 아이콘이다. 이를 수정하면 github 블로그도 자기만의 아이콘을 갖도록 할 수 있다. [이 글](https://ansohxxn.github.io/blog/favicon/)을 참고했으며, 간단해서 별달리 첨언할 것이 없다. 다만 나는 `assets/favicons/` 밑에 파비콘 파일을 두었기 때문에, `custom.html`에 붙여넣는 링크가 조금 달라졌다.
+파비콘은 웹사이트 옆에 붙는 아이콘이다. 이를 수정하면 github 블로그도 자기만의 아이콘을 갖도록 할 수 있다. [이 글](https://ansohxxn.github.io/blog/favicon)을 참고했으며, 간단해서 별달리 첨언할 것이 없다. 다만 나는 `assets/favicons/` 밑에 파비콘 파일을 두었기 때문에, `custom.html`에 붙여넣는 링크가 조금 달라졌다.
 
 ## 머티리얼 디자인 아이콘 적용
 

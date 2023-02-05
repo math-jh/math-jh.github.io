@@ -17,6 +17,9 @@ weight: 20
 
 ---
 
+리 군의 예씨는 많은 것들을 포함한다. 
+
+
 Lie grp 예시
 
 Lie correspondence + closed subgroup thm

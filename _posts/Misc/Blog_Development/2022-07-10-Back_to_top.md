@@ -22,7 +22,7 @@ weight: 9
 
 ## 목표
 
-포스팅을 하다보니 한 포스트의 길이가 과도하게 길어지는 일이 종종 발생했다. 때문에 맨 위로 버튼을 만들고 싶어서 구글링을 하였고, [이 글](https://masunii.github.io/blog_custom/top_button/)에서 방법을 알게 되었다.
+포스팅을 하다보니 한 포스트의 길이가 과도하게 길어지는 일이 종종 발생했다. 때문에 맨 위로 버튼을 만들고 싶어서 구글링을 하였고, [이 글](https://masunii.github.io/blog_custom/top_button)에서 방법을 알게 되었다.
 
 ## 맨 위로 버튼 만들기
 
@@ -118,7 +118,7 @@ $(window).on('mousemove', function(){
 
 위의 Javascript를 구동시키기 위해서는 jQuery가 필요하다. 또, 위의 스크립트 또한 불러와야 하므로, 이 두 파일을 `_config.yml`에서 불러와야 한다. jQuery의 경우, `/assets/js/vendor/jquery/` 내에 `jquery-3.6.0.js`가 들어있지만 `_config.yml`의 `# Reading Files`에서 `exclude: assets/js/vendor`를 통해 해당 디렉터리를 무시하도록 되어있어 이를 불러오는 것이 불가능하다. 
 
-나는 우선 jQuery [사이트](https://jquery.com/download/)에서 `jquery-3.6.0.min.js`를 받아 `/assets/js/vendor/jquery-min` 아래에 저장하고, `_config.yml`의 해당 부분을
+나는 우선 jQuery [사이트](https://jquery.com/download)에서 `jquery-3.6.0.min.js`를 받아 `/assets/js/vendor/jquery-min` 아래에 저장하고, `_config.yml`의 해당 부분을
 ```yml
 # Reading Files
 include: 
@@ -143,4 +143,4 @@ head_scripts:
 
 **참고자료**
 
-맨 위로 버튼을 만드는 것은 위에서 달아둔 것과 같이 [이 글](https://masunii.github.io/blog_custom/top_button/)을, 그리고 자동으로 숨기는 기능은 stack exchange의 이 [질문글](https://stackoverflow.com/questions/41021611/how-to-show-divs-when-the-mouse-moves-anywhere-on-screen-not-just-the-element-i)을 참고하였다.
+맨 위로 버튼을 만드는 것은 위에서 달아둔 것과 같이 [이 글](https://masunii.github.io/blog_custom/top_button)을, 그리고 자동으로 숨기는 기능은 stack exchange의 이 [질문글](https://stackoverflow.com/questions/41021611/how-to-show-divs-when-the-mouse-moves-anywhere-on-screen-not-just-the-element-i)을 참고하였다.

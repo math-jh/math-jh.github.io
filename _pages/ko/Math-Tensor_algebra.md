@@ -1,7 +1,7 @@
 ---
 title: "텐서대수"
 layout: archive_custom
-permalink: /ko/tensor_algebra/
+permalink: /ko/tensor_algebra
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
