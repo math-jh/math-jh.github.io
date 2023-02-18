@@ -1,6 +1,6 @@
 ---
 
-title: "역행렬"
+title: "역행렬 (작성중)"
 excerpt: "역행렬의 계산"
 
 categories: [Math / Linear Algebra]

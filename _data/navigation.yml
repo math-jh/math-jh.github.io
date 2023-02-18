@@ -203,6 +203,12 @@ manifold-ko:
         url: ko/math/manifold/distribution
       - title: "미분 아이디얼"
         url: ko/math/manifold/differential_ideal
+      - title: "리 군"
+        url: ko/math/manifold/Lie_groups
+      - title: "고전군"
+        url: ko/math/manifold/classical_groups
+      - title: "리 대응"
+        url: ko/math/manifold/Lie_correspondence
 
 set_theory-ko:
   - title: <a href="/ko/set_theory/" class="sidebar_title">집합론</a>

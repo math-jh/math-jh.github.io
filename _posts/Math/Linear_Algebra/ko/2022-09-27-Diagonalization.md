@@ -1,6 +1,6 @@
 ---
 
-title: "대각화"
+title: "대각화 (작성중)"
 excerpt: "행렬의 대각화"
 
 categories: [Math / Linear Algebra]
@@ -27,7 +27,7 @@ weight: 25
 
 $$XAX^{-1}=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
 
-의 왼쪽 위 $k\times k$ 블록행렬가 대각행렬 $\lambda I_k$가 된다는 것을 보았다. 그런데 만일 $A$가 [§고유공간분해, ⁋명제 5](/ko/math/linear_algebra/eigenspace_decomposition#pp5)의 조건을 모두 만족한다면, $n-k$개의 벡터들 $x\_{k+1},\ldots, x_n$을 마구잡이로 추가할 것이 아니라, $n$개의 벡터들 $x_1,\ldots, x_n$이 모두 $A$의 고유공간의 basis가 되도록 잡을 수 있다. 그럼 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#pp4)의 증명 중
+의 왼쪽 위 $k\times k$ 블록행렬이 대각행렬 $\lambda I_k$가 된다는 것을 보았다. 그런데 만일 $A$가 [§고유공간분해, ⁋명제 5](/ko/math/linear_algebra/eigenspace_decomposition#pp5)의 조건을 모두 만족한다면, $n-k$개의 벡터들 $x\_{k+1},\ldots, x_n$을 마구잡이로 추가할 것이 아니라, $n$개의 벡터들 $x_1,\ldots, x_n$이 모두 $A$의 고유공간의 basis가 되도록 잡을 수 있다. 그럼 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#pp4)의 증명 중
 
 $$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
 

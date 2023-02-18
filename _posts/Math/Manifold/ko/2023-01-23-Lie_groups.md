@@ -13,7 +13,7 @@ sidebar:
 
 date: 2023-01-23
 last_modified_at: 2023-01-23
-weight: 19
+weight: 17
 
 ---
 
@@ -41,17 +41,18 @@ $$G\times G\rightarrow G;\qquad (x,y)\mapsto xy^{-1}$$
 
 </div>
 
-위와 같이, 특별한 경우를 제외하고는 대수학에서의 표기를 따라 $G$의 항등원은 $e$로, $G$에서의 연산은 $xy$와 같이 표기한다. 
-
 <div class="example" markdown="1">
 
 <ins id="ex2">**예시 2**</ins> Lie group은 우리가 이미 알고 있는 많은 예시들을 포함하는 개념이다.
 
 1. $\mathbb{R}^n$에 덧셈구조를 주면 $\mathbb{R}^n$은 Lie group이 된다. 이는 $(\mathbf{x},\mathbf{y})\mapsto \mathbf{x}-\mathbf{y}$으로 정의된 연산 $\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$이 $C^\infty$이기 때문이다.
 2. 두 Lie group $G,H$에 대하여, $G\times H$ 또한 Lie group이 된다. 
-3. $\GL_n(\mathbb{R})$의 곱셈, 그리고 역원은 (분모가 $0$이 되지 않는) 유리함수에 불과하므로 $C^\infty$이고, 따라서 $\GL_n(\mathbb{R})$ 또한 Lie group이다. $\SL_n(\mathbb{R})$ 또한 마찬가지이다.
+3. $\GL(n,\mathbb{R})$의 곱셈, 그리고 역원은 (분모가 $0$이 되지 않는) 유리함수에 불과하므로 $C^\infty$이고, 따라서 $\GL(n,\mathbb{R})$ 또한 Lie group이다. 
+4. 정의에 의하여 $\SL(n,\mathbb{R})$은 $\GL(n,\mathbb{R})$의 원소들 가운데 행렬식이 $1$인 것만을 모아둔 집합이다. 그런데 행렬식은 $\GL(n,\mathbb{R})$에서 $\mathbb{R}^\times$로의 함수이고, 이 함수는 다항식으로 정의되었으므로 $C^\infty$ 함수이고, 또 모든 점에서 regular임을 확인할 수 있다. 따라서 [§음함수 정리, 따름정리 4](/ko/math/manifold/implicit_function_theorem#crl4)로부터 $\SL(n,\mathbb{R})$은 $n^2-1$차원 manifold가 된다는 것을 알 수 있다. 또, 이 때 inclusion map $\SL(n,\mathbb{R})\hookrightarrow\GL(n,\mathbb{R})$이 embedding이므로 $\SL(n,\mathbb{R})$에 정의된 곱셈과 역원이 모두 $C^\infty$임을 보일 수 있다.
 
 </div>
+
+위와 같이, 특별한 경우를 제외하고는 대수학에서의 표기를 따라 $G$의 항등원은 $e$로, $G$에서의 연산은 $xy$와 같이 표기한다. 다만 행렬들의 모임의 경우, 우리는 항등원을 $I$로 적는 것이 더 익숙하므로 이 관례는 그대로 유지하기로 한다.
 
 ## 리 대수
 
@@ -147,6 +148,46 @@ $$\left(d(L_g)\right)(X_p)=X_{gp}$$
 </details>
 
 위의 과정을 통해 얻어진 Lie algebra $\mathfrak{g}$를 *$G$의 Lie algebra*라 부른다. 일반적으로 Lie group을 $G$라 적으면, 이에 해당하는 프락투어 소문자 $\mathfrak{g}$를 통해 $G$의 Lie algebra를 적는 것이 보통이다. 
+
+## Left invariant forms
+
+<div class="definition" markdown="1">
+
+<ins id="df7">**정의 7**</ins> Lie group $G$ 위에 정의된 form $\omega$가 *left invariant*라는 것은 임의의 $g\in G$에 대하여 $(dL_g)\omega=\omega$가 성립하는 것이다. $G$ 위에 정의된 left invariant $k$-form들의 모임은 $\Omega_\text{l.inv}^k(G)$로 적고, $G$ 위에 정의된 모든 left invariant form들의 모임은 $\Omega_\text{l.inv}^\ast(G)$으로 적는다.
+
+</div>
+
+특별히 $\Omega_\text{l.inv}^1(G)$의 원소들은 *Maurer-Cartan form*이라 부른다.
+
+[명제 6](#pp6)과 마찬가지 방식으로 다음 명제를 증명할 수 있다.
+    
+<div class="proposition" markdown="1">
+
+<ins id="pp8">**명제 8**</ins> Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한다.
+
+1. $\Omega_\text{l.inv}^\ast(G)$의 임의의 원소는 $C^\infty$이다. 
+2. $\Omega_\text{l.inv}^\ast(G)$는 $\Omega^\ast(G)$의 $C^\infty(G)$-subalgebra이며, 함수 $\omega\mapsto\omega_e$는 $\Omega_\text{l.inv}^\ast(G)$에서 $\bigwedge(T_e^\ast G)$로의 $C^\infty(G)$-algebra isomorphism이다.
+3. 임의의 $\omega\in\Omega_\text{l.inv}^1(G)$와 left invariant인 벡터장 $X$에 대하여, $\omega(X)$는 $G$ 위에서 정의된 상수함수이다.
+4. 임의의 $\omega\in\Omega_\text{l.inv}^1(G)$와 $X,Y\in\mathfrak{g}$에 대하여 
+    
+    $$d\omega(X,Y)=-\omega[X,Y]$$
+
+    이 성립한다.
+5. $\mathfrak{g}$의 basis $X_1,\ldots, X_d$와 그 dual basis $\omega_1,\ldots,\omega_d$에 대하여, 다음의 식
+    
+    $$[X_i,X_j]=\sum_{k=1}^d c_{ij}^kX_k$$
+
+    을 만족하는 $d^3$개의 상수들 $c_{ij}^k$이 존재한다. 이들은 다음 두 조건
+
+    $$c_{ij}^k+c_{ji}^k=0,\qquad\sum_r (c_{ij}^rc_{rk}^s+c_{jk}^rc_{ri}^s+c_{ki}^rc_{rj}^s)=0\quad\text{for all $s$}$$
+
+    을 만족하며, 따라서 다음의 식
+
+    $$d\omega_i=\sum_{j < k} c_{jk}^i\omega_k\wedge\omega_j$$
+
+    이 성립한다.
+
+</div>
 
 ---
 
