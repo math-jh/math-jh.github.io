@@ -1,6 +1,6 @@
 ---
 
-title: "Delta functor"
+title: "Delta functor (작성중)"
 excerpt: "기본정의"
 
 categories: [Math / Homological Algebra]

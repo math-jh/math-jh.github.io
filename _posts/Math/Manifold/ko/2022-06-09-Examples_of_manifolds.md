@@ -65,9 +65,9 @@ Manifold는 국소적으로 $\mathbb{R}^m$과 닮은 구조이므로, 가장 간
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> $\Mat_{n}(\mathbb{R})$의 원소들 중, 역행렬을 갖는 $n\times n$ 행렬들의 집합 $\GL_n(\mathbb{R})$은 $\det(A)\neq 0$을 만족하는 행렬들의 모임이다. 행렬식 $\det$를 $\Mat_n(\mathbb{R})$에서 $\mathbb{R}$로의 함수로 보면, 이 함수는 다항함수이므로 연속이고, 따라서 열린집합 $\mathbb{R}\setminus\\{0\\}$의 preimage인 $\GL_n(\mathbb{R})$ 또한 $\Mat_n(\mathbb{R})$의 열린집합이다. 따라서 $\GL_n(\mathbb{R})$은 $n^2$차원 manifold이다. 
+<ins id="ex4">**예시 4**</ins> $\Mat_{n}(\mathbb{R})$의 원소들 중, 역행렬을 갖는 $n\times n$ 행렬들의 집합 $\GL(n,\mathbb{R})$은 $\det(A)\neq 0$을 만족하는 행렬들의 모임이다. 행렬식 $\det$를 $\Mat_n(\mathbb{R})$에서 $\mathbb{R}$로의 함수로 보면, 이 함수는 다항함수이므로 연속이고, 따라서 열린집합 $\mathbb{R}\setminus\\{0\\}$의 preimage인 $\GL(n,\mathbb{R})$ 또한 $\Mat_n(\mathbb{R})$의 열린집합이다. 따라서 $\GL(n,\mathbb{R})$은 $n^2$차원 manifold이다. 
 
-한편, $\GL_n(\mathbb{R})$은 $\det A&gt;0$인 행렬들과 $\det A&lt;0$인 행렬들의 disjoint union이며, 이들 집합 각각은 위와 마찬가지 이유로 열린집합이므로 $\GL_n(\mathbb{R})$은 connected는 아니다.
+한편, $\GL(n,\mathbb{R})$은 $\det A&gt;0$인 행렬들과 $\det A&lt;0$인 행렬들의 disjoint union이며, 이들 집합 각각은 위와 마찬가지 이유로 열린집합이므로 $\GL(n,\mathbb{R})$은 connected는 아니다.
 
 </div>
 

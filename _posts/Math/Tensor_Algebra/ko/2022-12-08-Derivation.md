@@ -1,6 +1,6 @@
 ---
 
-title: "미분"
+title: "미분 (작성중)"
 excerpt: "Differential module"
 
 categories: [Math / Tensor Algebra]

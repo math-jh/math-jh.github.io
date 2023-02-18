@@ -1,6 +1,6 @@
 ---
 
-title: "긴 완전열"
+title: "긴 완전열 (작성중)"
 excerpt: "긴 완전열"
 
 categories: [Math / Homological Algebra]

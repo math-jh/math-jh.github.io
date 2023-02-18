@@ -1,6 +1,6 @@
 ---
 
-title: "최소제곱법"
+title: "최소제곱법 (작성중)"
 excerpt: "정사영과 최소제곱법"
 
 categories: [Math / Linear Algebra]

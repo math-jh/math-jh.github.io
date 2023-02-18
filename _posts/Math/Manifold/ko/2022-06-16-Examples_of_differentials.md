@@ -170,11 +170,17 @@ $$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L
 
 </details>
 
+위의 명제에서 만든 isomorphism $V\cong T_xV$는 basis의 선택에 의존하지 않지만, 만일 $V$의 어떤 basis $e_1,\ldots, e_n$과 그 dual basis $r^1,\ldots, r^n$이 주어진다면 이 isomorphism은
+
+$$\sum a_ie_i\leftrightarrow\sum a_i\frac{\partial}{\partial r^i}$$
+
+과 같다는 것을 확인할 수 있다. 
+
 <div class="example" markdown="1">
 
 <ins id="ex5">**예시 5**</ins> $n\times n$ 행렬들의 모임 $\Mat_n(\mathbb{R})$은 $n^2$차원 $\mathbb{R}$-벡터공간이다. 따라서, $\Mat_n(\mathbb{R})$의 임의의 점에서의 tangent space는 $\Mat_n(\mathbb{R})$과 동일하다. 
 
-특별히 $\Mat_n(\mathbb{R})$의 open submanifold인 $\GL_n(\mathbb{R})$을 생각하면, $\GL_n(\mathbb{R})$의 임의의 원소에서의 tangent space는 이 원소를 $\Mat_n(\mathbb{R})$의 원소로 보았을 때의 tangent space와 동일하고, 따라서 $\Mat_n(\mathbb{R})$과 같다. 
+특별히 $\Mat_n(\mathbb{R})$의 open submanifold인 $\GL(n,\mathbb{R})$을 생각하면, $\GL(n,\mathbb{R})$의 임의의 원소에서의 tangent space는 이 원소를 $\Mat_n(\mathbb{R})$의 원소로 보았을 때의 tangent space와 동일하고, 따라서 $\Mat_n(\mathbb{R})$과 같다. 
 
 </div>
 
