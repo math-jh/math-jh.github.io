@@ -1,6 +1,6 @@
 ---
 
-title: "곱공간"
+title: "곱공간 (작성중)"
 excerpt: "곱공간의 성질들"
 
 categories: [Math / Topology]

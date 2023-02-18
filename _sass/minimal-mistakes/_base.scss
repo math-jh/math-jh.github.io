@@ -22,6 +22,11 @@ body {
   }
 }
 
+::selection {
+  color: $background-color;
+  background: $text-color;
+}
+
 h1,
 h2,
 h3,
