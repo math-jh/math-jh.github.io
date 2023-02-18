@@ -1,6 +1,6 @@
 ---
 
-title: "레비-치비타 접속"
+title: "레비-치비타 접속 (작성중)"
 excerpt: "Riemannian manifold 위에서의 connection"
 
 categories: [Math / Manifold]
@@ -13,7 +13,7 @@ sidebar:
 
 date: 2022-12-27
 last_modified_at: 2022-12-27
-weight: 16
+weight: 116
 
 ---
 

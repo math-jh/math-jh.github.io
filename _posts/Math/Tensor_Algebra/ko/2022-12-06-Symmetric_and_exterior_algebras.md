@@ -198,7 +198,7 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 <div class="proposition" markdown="1">
 
-<ins id="crl9">**따름정리 9**</ins> 임의의 $A$-module homomorphism $u:M \rightarrow N$에 대하여, 다음 diagram
+<ins id="crl9">**따름정리 9**</ins> 임의의 $A$-module homomorphism $u:M \rightarrow M'$에 대하여, 다음 diagram
 
 ![Functoriality_of_exterior_algebra](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebra-8.png){:width="207.9px" class="invert" .align-center}
 
@@ -208,7 +208,7 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 <div class="proposition" markdown="1">
 
-<ins id="crl10">**따름정리 10**</ins> [따름정리 9](#crl9)에서 정의된 $\mathcal{S}(u)$는 합성을 보존한다. 즉 $\mathcal{S}(v\circ u)=\mathcal{S}(v)\circ\mathcal{S}(u)$가 성립한다.
+<ins id="crl10">**따름정리 10**</ins> [따름정리 9](#crl9)에서 정의된 $\bigwedge(u)$는 합성을 보존한다. 즉 $\bigwedge(v\circ u)=\bigwedge(v)\circ\bigwedge(u)$가 성립한다.
 
 </div>
 
