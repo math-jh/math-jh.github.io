@@ -86,7 +86,7 @@ $$f\circ\psi^{-1}=(f\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 
 $\mathcal{A}'$를 다음의 식
 
-$$\mathcal{A}'=\{(V,\psi):\psi\circ\varphi_\lambda^{-1}, \varphi_\lambda\circ\psi^{-1}\text{ are $C^k$ for all $\varphi_\lambda\in\mathcal{A}$}\}$$
+$$\mathcal{A}'=\{(V,\psi)\mid\psi\circ\varphi_\lambda^{-1}, \varphi_\lambda\circ\psi^{-1}\text{ are $C^k$ for all $\varphi_\lambda\in\mathcal{A}$}\}$$
 
 으로 정의하면 된다. 그럼 $\mathcal{A}'$는 $\mathcal{A}$를 포함하고, 따라서 $M$을 coordinate chart들로 덮을 수 있다. 한편, $(V,\psi)$, $(V',\psi')$가 $\mathcal{A}'$의 원소들이고 $V\cap V'\neq\emptyset$이라면 transition map
 

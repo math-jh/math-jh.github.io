@@ -25,7 +25,7 @@ weight: 9
 
 그럼 [§Initial topology와 final topology, ⁋명제 2](/ko/math/topology/initial_and_final_topology#pp2)에 의하여 $X$ 위에 주어진 product topology는 다음의 집합
 
-$$\mathcal{S}=\{\pr_i^{-1}(U_i): U_i\text{ open in }X_i\}$$
+$$\mathcal{S}=\{\pr_i^{-1}(U_i)\mid U_i\text{ open in }X_i\}$$
 
 을 subbasis로 하여 생성된 공간이다. 이 때, $\mathcal{S}$에 의하여 생성되는 basis $\mathcal{B}$는 
 

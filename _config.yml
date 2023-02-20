@@ -21,7 +21,7 @@ multilingual             : true
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "수학쟁이의 낙서장"
+title                    : "Blackbox"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Junhyeok Kim"

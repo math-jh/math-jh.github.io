@@ -108,7 +108,7 @@ $$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}1x_2\phantom{+
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> $m\times n$ 행렬 $A$가 주어졌다 하자. 임의의 $1\leq i\leq m$에 대해 정수 $j_0(i)=\min\\{j\leq n:a_{ij}\neq 0\\}$이 잘 정의된다면 $a_{i,j_0(i)}$를 $i$번째 행의 *선행계수*라 부른다. 추가적으로 만일 다음의 두 조건
+<ins id="df2">**정의 2**</ins> $m\times n$ 행렬 $A$가 주어졌다 하자. 임의의 $1\leq i\leq m$에 대해 정수 $j_0(i)=\min\\{j\leq n\mid a_{ij}\neq 0\\}$이 잘 정의된다면 $a_{i,j_0(i)}$를 $i$번째 행의 *선행계수*라 부른다. 추가적으로 만일 다음의 두 조건
 
 1. 만일 $a_{i1}, a_{i2},\ldots, a_{in}=0$이라면, $i < k$를 만족하는 모든 $k$에 대해 $a_{k1}, a_{k2},\ldots, a_{kn}=0$이다.
 2. 만일 $i < i'$이며 두 정수 $j_0(i), j_0(i')$이 모두 잘 정의된다면 반드시 $j_0(i) < j_0(i')$이다.

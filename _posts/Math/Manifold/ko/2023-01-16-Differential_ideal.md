@@ -35,7 +35,7 @@ $$\omega_p(v_1,\ldots, v_l)=0,\qquad v_i\in\mathcal{D}(p)$$
 
 이 때, $\mathcal{D}$를 annihilate하는 differential form들의 모임을
 
-$$\mathcal{I}(\mathcal{D})=\{\omega\in\Omega^\ast(M):\text{$\omega$ annihilates $\mathcal{D}$}\}$$
+$$\mathcal{I}(\mathcal{D})=\{\omega\in\Omega^\ast(M)\mid\text{$\omega$ annihilates $\mathcal{D}$}\}$$
 
 으로 정의한다. 
 
@@ -105,12 +105,12 @@ $\Omega^\ast(M)$는 differential graded algebra이므로, ideal들 또한 differ
 
 1. 임의의 $f:N\rightarrow M$에 대하여, $\graph(f)$는 다음의 집합
 
-    $$\{(d(f\circ \pi_1))^\ast(\omega_i)-(d\pi_2)^\ast(\omega_i): i=1,\ldots, m\}$$
+    $$\{(d(f\circ \pi_1))^\ast(\omega_i)-(d\pi_2)^\ast(\omega_i)\mid i=1,\ldots, m\}$$
 
     으로 생성되는 ideal $\mathcal{I}$의 integral manifold이다.
 2. $N$ 위의 1-form들 $\alpha_1,\ldots,\alpha_m$에 대하여, 다음의 집합
 
-    $$\{(d\pi_1)^\ast(\alpha_i)-(d\pi_2)^\ast(\omega_i):i=1,\ldots,m\}$$
+    $$\{(d\pi_1)^\ast(\alpha_i)-(d\pi_2)^\ast(\omega_i)\mid i=1,\ldots,m\}$$
 
     으로 생성되는 ideal이 differential ideal이라 가정하자. 그럼 임의의 $q_0\in N,p_0\in M$이 주어질 때마다, $q_0$의 적당한 열린근방 $U$와, $f(q_0)=p_0$을 만족하는 $C^\infty$ 함수 $f:U\rightarrow M$이 존재하여
 
@@ -126,7 +126,7 @@ $\Omega^\ast(M)$는 differential graded algebra이므로, ideal들 또한 differ
 
 1. 우선 [§미분다양체의 예시들, ⁋예시 5](/ko/math/manifold/examples_of_manifolds#ex5)를 따라 다음의 집합
     
-    $$\graph(f)=\{(p,q):f(p)=q\}$$
+    $$\graph(f)=\{(p,q)\mid f(p)=q\}$$
     
     이 $N\times M$의 submanifold가 된다는 것을 보인다. 이 때 inclusion map은 자연스러운 함수
     

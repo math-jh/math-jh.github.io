@@ -110,11 +110,11 @@ $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(
 
 <ins id="df6">**정의 6**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $L$의 *kernel<sub>핵</sub>* $\ker L$은 다음의 식
 
-$$\ker L=\{v\in V: L(v)=0\}$$
+$$\ker L=\{v\in V\mid L(v)=0\}$$
 
 으로 정의되는 집합이다. 또, $L$의 *image<sub>상</sub>* $\im L$는 다음의 식
 
-$$\im L=\{w\in W: L(v)=w\text{ for some $v\in V$}\}$$
+$$\im L=\{w\in W\mid L(v)=w\text{ for some $v\in V$}\}$$
 
 으로 정의되는 집합이다.
 
@@ -254,7 +254,7 @@ $$\pr_1((v,w))=v$$
 
 으로 정의된 $\pr_1:V\times W\rightarrow V$는 linear map이 된다. $\im\pr_1=V$이고, 
 
-$$\ker \pr_1=\{(0,w):w\in W\}$$
+$$\ker \pr_1=\{(0,w)\mid w\in W\}$$
 
 임을 쉽게 확인할 수 있다. 물론, 비슷하게 $\pr_2:V\times W\rightarrow W$를 정의할 수도 있으며, $n$개의 순서쌍으로 이를 확장할 수도 있다. 특히, 유클리드 공간 $F^n$에 대하여, 
 
