@@ -35,7 +35,7 @@ weight: 6
 
 <ins id="pp2">**명제 2**</ins> [정의 1](#df1)의 initial topology는 정확하게 다음의 집합
 
-$$\mathcal{S}=\{f_i^{-1}(U_i): \text{$U_i$ open in $Y_i$}\}$$
+$$\mathcal{S}=\{f_i^{-1}(U_i)\mid \text{$U_i$ open in $Y_i$}\}$$
 
 을 subbasis로 하여 생성된 위상과 같다.
 
@@ -86,7 +86,7 @@ $X$에 trivial topology가 주어졌다 하면, $X$로의 임의의 함수는 �
 
 <ins id="pp7">**명제 5**</ins> [정의 4](#df4)의 위상은 다음의 집합
 
-$$\mathcal{T}_\fin=\{U\subseteq X:f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
+$$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
 
 으로 정의된다.
 

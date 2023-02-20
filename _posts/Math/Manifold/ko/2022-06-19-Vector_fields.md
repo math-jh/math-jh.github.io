@@ -149,7 +149,7 @@ $$(p,a_1X_1(p)+\cdots+a_mX_m(p))\mapsto (p,a_1e_1+\cdots+a_me_m)$$
 2. $\phi_p$는 $X$의 integral flow이다.
 3. 만일 $\mu:(c,d)\rightarrow M$이 위의 두 조건을 만족하는 $C^\infty$ 함수라면 $(c,d)\subseteq \bigl(a(p),b(p)\bigr)$이고, $\mu$는 $\phi_p$를 $(c,d)$로 제한한 것과 동일한 함수이다.
 4. 각각의 $p\in M$마다 적당한 열린근방 $V$와 양수 $\epsilon$이 존재하여, $(t,p)\mapsto \phi^{t}(p):=\phi_p(t)$가 잘 정의되며, 이 함수는 $(-\epsilon,\epsilon)\times V$에서 $M$으로의 $C^\infty$ 함수이다.
-5. 임의의 $t$에 대해 $\mathcal{D}_t=\left\\{p\in M: t\in\bigl(a(p),b(p)\bigr)\right\\}$가 열린집합이다.
+5. 임의의 $t$에 대해 $\mathcal{D}_t=\left\\{p\in M\mid t\in\bigl(a(p),b(p)\bigr)\right\\}$가 열린집합이다.
 6. $\bigcup\_{t>0}\mathcal{D}_t=M$.
 7. $\phi^{t}:\mathcal{D}\_t\rightarrow\mathcal{D}\_{-t}$는 diffeomorphism이고, 그 역함수는 $\phi^{-t}$이다.
 8. $\phi^s\circ \phi^t$의 정의역은 $\mathcal{D}\_{s+t}$에 포함되며, 특히 $s$와 $t$가 같은 부호일 경우 이 함수의 정의역은 정확히 $\mathcal{D}\_{s+t}$와 동일하다. 또, 이 정의역 상에서 $\phi^s\circ \phi^t=\phi^{t+s}$이다.
@@ -166,7 +166,7 @@ $$\phi^{t}(p)=\phi_p(t)$$
 
 정의되는 함수이며, 여기에서 초기값은 시간이 $0$일 때 $\phi_p(0)=p$으로 고정한다는 의미이다. 이 때, $\phi^{t}$의 정의역을  
 
-$$\mathcal{D}_t=\left\{p\in M: t\in\bigl(a(p),b(p)\bigr)\right\}$$
+$$\mathcal{D}_t=\left\{p\in M\mid t\in\bigl(a(p),b(p)\bigr)\right\}$$
 
 로 나타낸다. 즉 $\phi^{t}$은 시간 $0$에서 점 $p$에 있던 점이 integral flow를 따라 움직일 경우 $t$초 후에 있을 위치를 나타내는 함수로 생각할 수 있고, $\mathcal{D}_t$는 이렇게 integral flow를 따라 $t$초만큼 움직이는 것이 가능한 점들의 모임이다. 
 

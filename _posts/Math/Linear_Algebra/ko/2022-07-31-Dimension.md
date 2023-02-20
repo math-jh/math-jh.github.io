@@ -183,7 +183,7 @@ $$(v_1, w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2),\quad\alpha(v,w)=(\alpha v,\alpha w)$$
 
 으로 주어진다. 어렵지 않게, 만일 $\mathcal{B}_1$, $\mathcal{B}_2$가 각각 $V$, $W$의 basis들이라면, $V\times W$의 부분집합
 
-$$\mathcal{B}=\{(x, y): x\in \mathcal{B}_1\text{ and }y\in \mathcal{B}_2\}$$
+$$\mathcal{B}=\{(x, y)\mid x\in \mathcal{B}_1\text{ and }y\in \mathcal{B}_2\}$$
 
 이 $V\times W$의 basis가 되는 것을 확인할 수 있다. 특히, 만일 $V$, $W$가 모두 유한차원이라면 $V\times W$도 그러하고 $\dim(V\times W)$는 $(\dim V)+(\dim W)$와 같게 된다.
 

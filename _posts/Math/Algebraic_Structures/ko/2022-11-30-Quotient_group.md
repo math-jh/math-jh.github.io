@@ -94,7 +94,7 @@ $$x\in [a]_{\tiny r}\iff x\sim_{\tiny r} a\iff xa^{-1}\in H$$
 
 임을 안다. 따라서 집합 $Ha$를 다음의 식
 
-$$Ha:=\{ha: h\in H\}$$
+$$Ha:=\{ha\mid h\in H\}$$
 
 으로 정의하면 $[a]\_{\tiny r}=Ha$가 성립한다. 비슷하게, $G/{\sim_{\tiny l}}$에 대하여는 $[a]\_{\tiny l}=aH$가 성립한다. 물론 $G$의 연산이 덧셈으로 적혀있었다면 이들은 각각 $H+a$와 $a+H$로 적는 것이 관례이다.
 
