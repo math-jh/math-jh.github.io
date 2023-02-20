@@ -73,7 +73,7 @@ $$dy^j\left(\sum v^i\frac{\partial}{\partial x^i}\bigg|_{\varphi^{-1}(p)}\right)
 
 한편 $TM$의 위상은 다음의 집합들
 
-$$\{\tilde{\varphi}^{-1}(W): \text{$W$ open in $\mathbb{R}^{2m}$, $(U,\varphi)\in\mathcal{A}$}\}$$
+$$\{\tilde{\varphi}^{-1}(W)\mid \text{$W$ open in $\mathbb{R}^{2m}$, $(U,\varphi)\in\mathcal{A}$}\}$$
 
 을 basis로 하여 얻어진다. $W=\mathbb{R}^{m}$으로 두면 위의 집합에 의해 만들어지는 위상에서 $\pi^{-1}(U)$들이 모두 열린집합임을 확인할 수 있고, 이 위상이 $2m$차원의 topological manifold를 만든다는 것도 확인할 수 있다. 
 

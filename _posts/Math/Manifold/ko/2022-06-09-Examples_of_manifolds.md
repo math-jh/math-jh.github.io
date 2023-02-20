@@ -55,7 +55,7 @@ Manifold는 국소적으로 $\mathbb{R}^m$과 닮은 구조이므로, 가장 간
 1. $M$의 위상으로부터 주어지는 subspace topology,
 2. $M$에 정의된 미분구조 $\mathcal{A}$에 대하여, 
     
-    $$\mathcal{A}_V=\{(U_\alpha\cap V,\varphi_\alpha|_{U_\alpha\cap V}):(U_\alpha,\varphi_\alpha)\in\mathcal{A}\}$$
+    $$\mathcal{A}_V=\{(U_\alpha\cap V,\varphi_\alpha|_{U_\alpha\cap V})\mid(U_\alpha,\varphi_\alpha)\in\mathcal{A}\}$$
 
 를 주면, $V$는 $M$과 동일한 차원의 manifold가 된다. 이러한 manifold 구조를 $M$의 *open submanifold*라 부른다. 
 
@@ -75,7 +75,7 @@ Manifold는 국소적으로 $\mathbb{R}^m$과 닮은 구조이므로, 가장 간
 
 <ins id="ex5">**예시 5**</ins> 열린집합 $U\subset\mathbb{R}^m$과 $C^\infty$ 함수 $f:U\rightarrow\mathbb{R}^n$에 대하여 $f$의 *그래프* $\graph(f)$를 다음의 집합
 
-$$\graph(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n: \text{$x\in U$, $y=f(x)$}\}$$
+$$\graph(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n\mid \text{$x\in U$, $y=f(x)$}\}$$
 
 으로 정의하자. 그럼 $f:U\rightarrow\graph(f)$와, 앞의 $m$개의 좌표로의 projection $\pr:\graph(f)\rightarrow U$가 모두 연속이고, 서로의 역함수가 되므로 $\graph(f)$와 $U$는 homeomorphic이다. 따라서 $\graph(f)$는 topological manifold이며, 특히 projection $\pr:\graph(f)\rightarrow U$이 하나의 chart로 이루어진 atlas $\\{(\graph(f),\pr)\\}$를 이루므로 자연스러운 (differentiable) manifold 구조 또한 갖는다. 
 
@@ -89,7 +89,7 @@ $$\graph(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n: \text{$x\in U$, $y=f(x)$}\
 
 임의의 $p\in S^n$을 고르자. $0\not\in S^n$이므로, $p$의 어떤 좌표는 반드시 0이 아니다. 일반성을 잃지 않고, 이 좌표가 $n+1$ 번째 좌표라 하고, 또 양수라 하자. 즉 $p$는 다음의 집합
 
-$$U_{n+1}^+=\{(x^1, x^2, \ldots, x^{n+1})\in\mathbb{R}^{n+1}:x^{n+1}>0\}$$
+$$U_{n+1}^+=\{(x^1, x^2, \ldots, x^{n+1})\in\mathbb{R}^{n+1}\mid x^{n+1}>0\}$$
 
 의 원소이다. 
 
@@ -107,7 +107,7 @@ $$f(x)=\sqrt{1-\lvert x\rvert^2}$$
 
 뿐만 아니라 이들 $U_i^\pm$들과, $i$번째 좌표를 제외한 $n$개의 좌표로의 projection $\varphi_i^\pm$들을 모은 다음의 집합
 
-$$\mathcal{A}=\{(U_i^\pm, \varphi_i^\pm:i=1,2,\ldots, n+1\}$$
+$$\mathcal{A}=\{(U_i^\pm, \varphi_i^\pm\mid i=1,2,\ldots, n+1\}$$
 
 이 atlas가 된다. 이를 위해서는 위 atlas를 구성하는 chart들이 모두 $C^\infty$-compatible이라는 것을 보여야 한다. $U_i^+$와 $U_i^-$는 만나지 않으므로 자명하게 서로 $C^\infty$-compatible하다. 서로 다른 index $i,j$를 갖는 두 chart $(U_i^\pm, \varphi_i^\pm)$와 $(U_j^\pm,\varphi_j^\pm)$가 주어졌다 하자. 그럼 우선 $(\varphi_i^\pm)^{-1}$에 의하여
 
@@ -151,7 +151,7 @@ $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 
 각각의 $i=1,\ldots, n+1$에 대하여, $\mathbb{R}^{n+1}\setminus\\{0\\}$의 열린집합 
 
-$$\tilde{U}_i=\{(x^1,\ldots, x^{n+1}): x^i\neq 0\}$$
+$$\tilde{U}_i=\{(x^1,\ldots, x^{n+1})\mid x^i\neq 0\}$$
 
 을 생각하자. 그럼 $\tilde{U}_i$는 saturated인 열린집합이므로, [\[위상수학\] §몫위상, ⁋명제 8](/ko/math/topology/quotient_topology#pp8)에 의하여 quotient map $\pi$가 $\tilde{U}_i$로 잘 제한된다. 따라서, 함수 $\varphi_i:U_i\rightarrow\mathbb{R}^n$을
 
@@ -185,7 +185,7 @@ $$[u^1, \ldots, u^{j-1}, 1, u^j,\ldots, u^n]\mapsto \left(\frac{u^1}{u^i},\ldots
 
 <ins id="ex9">**예시 9**</ins> 각각 $m,n$차원의 manifold $(M,\mathcal{A}_M),(N,\mathcal{A}_N)$들이 주어졌다 하자. 그럼 이들의 *product manifold*는 $M\times N$에 product topology를 준 후, differentiable structure는 
 
-$$\mathcal{A}=\{(U_\alpha\times V_\beta,\varphi_\alpha\times\psi_\beta): (U_\alpha,\varphi_\alpha)\in\mathcal{A}_M,(V_\beta,\psi_\beta)\in\mathcal{A}_N\}$$
+$$\mathcal{A}=\{(U_\alpha\times V_\beta,\varphi_\alpha\times\psi_\beta)\mid (U_\alpha,\varphi_\alpha)\in\mathcal{A}_M,(V_\beta,\psi_\beta)\in\mathcal{A}_N\}$$
 
 을 통해 정의되는 manifold이다.
 

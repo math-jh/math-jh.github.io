@@ -144,7 +144,7 @@ $$0=\frac{d}{dt}\bigg|_{t=0}\det(\gamma(t))=(d(\det))_I(X_I)=\tr(X_I)$$
 
 가 성립한다. 즉 $\sl(n,\mathbb{R})$은 식 $\tr X=0$으로 정의된 $\gl(n,\mathbb{R})$의 $n^2-1$차원 부분공간에 속해야 한다. 그런데 $\sl(n,\mathbb{R})$ 또한 $n^2-1$차원이므로 이 두 공간은 동일하다. 즉
 
-$$\sl(n,\mathbb{R})=\{X\in\Mat_n(\mathbb{R}): \tr X=0\}.$$
+$$\sl(n,\mathbb{R})=\{X\in\Mat_n(\mathbb{R})\mid \tr X=0\}.$$
 
 어렵지 않게 $\sl(n,\mathbb{R})$은 Lie bracket $[-,-]$에 대하여 닫혀있다는 것을 보일 수 있으며, [예시 2](#ex2)와 마찬가지 방식을 통해 $\beta$가 Lie algebra homomorphism이 되는 것을 확인할 수 있다. 
 
@@ -154,7 +154,7 @@ $$\sl(n,\mathbb{R})=\{X\in\Mat_n(\mathbb{R}): \tr X=0\}.$$
 
 이번에는 orthogonal group
 
-$$\Omat(n)=\{A\in\Mat_n(\mathbb{R}): A^TA=I\}$$
+$$\Omat(n)=\{A\in\Mat_n(\mathbb{R})\mid A^TA=I\}$$
 
 을 생각하자. 그럼 $\Omat(n)$은 다음의 식
 
@@ -166,7 +166,7 @@ $$\gamma'(t)^T\gamma(t)+\gamma(t)^T\gamma'(t)=0$$
 
 이 되므로, $t=0$을 대입하면 $X^T+X=0$을 얻는다. 앞선 예시와 마찬가지로 이들의 차원을 생각하면 $\Omat(n)$의 Lie algebra $\omat(n)$은 실제로 
 
-$$\omat(n)=\{X\in\Mat_n(\mathbb{R}):X+X^T=0\}$$
+$$\omat(n)=\{X\in\Mat_n(\mathbb{R})\mid X+X^T=0\}$$
 
 으로 주어진다는 것을 알 수 있다. 
 
@@ -176,15 +176,15 @@ Orthogonal group의 원소들 중 행렬식이 1인 것들을 모아둔 *special
 
 앞서 살펴본 orthogonal matrix들의 경우, 별 말이 없으면 실수 위에서 정의된 행렬들만을 생각하는 것이 일반적이다. $\GL(n,\mathbb{R})$에서 $\GL(n,\mathbb{C})$를 생각하듯 이를 $\Omat(n,\mathbb{C})$로 확장하는 것 또한 가능하지만, 보편적으로 $\mathbb{C}$ 위의 행렬들을 생각할 때는 다음의 *unitary group*
 
-$$\Umat(n)=\{A\in\Mat_n(\mathbb{C}): A^\ast A=I\}$$
+$$\Umat(n)=\{A\in\Mat_n(\mathbb{C})\mid A^\ast A=I\}$$
 
 의 원소들을 생각하게 된다. 마찬가지로 위의 논증을 반복하면 $\Umat(n)$의 Lie algebra $\umat(n)$은 다음의 식
 
-$$\umat(n)=\{X\in\Mat_n(\mathbb{C}): X^\ast+X=0\}$$
+$$\umat(n)=\{X\in\Mat_n(\mathbb{C})\mid X^\ast+X=0\}$$
 
 이 경우, $\umat(n)$의 원소들은 $\tr X=0$을 만족할 필요가 없기 때문에 *special unitary group* $\SU(n)$의 Lie algebra $\su(n)$은
 
-$$\su(n)=\{X\in\Mat_n(\mathbb{C}): X^\ast+X=0,\tr X=0\}$$
+$$\su(n)=\{X\in\Mat_n(\mathbb{C})\mid X^\ast+X=0,\tr X=0\}$$
 
 으로 주어지게 되며, 일반적으로 $\umat(n)$의 proper subalgebra가 된다.
 
@@ -192,11 +192,11 @@ $$\su(n)=\{X\in\Mat_n(\mathbb{C}): X^\ast+X=0,\tr X=0\}$$
 
 마지막으로 살펴볼 *symplectic group*은 다음의 식
 
-$$\Sp(2n)=\{A\in\Mat_{2n}(\mathbb{R}): A^TJA=J\},\qquad J=\begin{pmatrix}0&I\\-I&0\end{pmatrix}$$
+$$\Sp(2n)=\{A\in\Mat_{2n}(\mathbb{R})\mid A^TJA=J\},\qquad J=\begin{pmatrix}0&I\\-I&0\end{pmatrix}$$
 
 으로 정의된다. 그럼 $\Sp(2n)$의 Lie algebra $\sp(2n)$은 다음의 식
 
-$$\sp(2n)=\{X\in\Mat_{2n}(\mathbb{R}):X^TJ+JX=0\}$$
+$$\sp(2n)=\{X\in\Mat_{2n}(\mathbb{R})\mid X^TJ+JX=0\}$$
 
 으로 주어진다.
 

@@ -93,7 +93,7 @@ $$\pi=3\cdot 1+1\cdot 0.1+4\cdot 0.01+\cdots$$
 
 <ins id="df4">**정의 4**</ins> Field $F$의 원소들의 family $(\alpha\_i)\_{i\in I}$에 대하여, $(\alpha\_i)\_{i\in I}$의 *support<sub>지지집합</sub>*는 다음의 집합
 
-$$\supp(\alpha_i)_{i\in I}=\{i\in I:\alpha_i\neq 0\}$$
+$$\supp(\alpha_i)_{i\in I}=\{i\in I\mid\alpha_i\neq 0\}$$
 
 을 뜻한다. 이 집합이 유한집합이라면 $(\alpha\_i)\_{i\in I}$가 *finitely supported*라고 한다. 
 

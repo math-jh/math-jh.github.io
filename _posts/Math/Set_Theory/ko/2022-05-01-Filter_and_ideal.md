@@ -37,13 +37,13 @@ weight: 18
 
 <ins id="ex2">**예시 2**</ins> Ordered set $A$가 주어졌다 하자. 임의의 $x\in A$에 대하여, $x$의 *downward closure*[^1]
 
-$$\downarrow x=\{y\in A: y\leq x\}$$
+$$\downarrow x=\{y\in A\mid y\leq x\}$$
 
 는 $A$의 ideal이 된다. 이러한 ideal을 *principal ideal*이라 부른다.
 
 물론, 비슷하게, $x$의 *upward closure* 
 
-$$\uparrow x=\{y\in A: y\geq x\}$$
+$$\uparrow x=\{y\in A\mid y\geq x\}$$
 
 는 $A$의 filter가 되며 이러한 filter를 *principal filter*라 부른다.
 

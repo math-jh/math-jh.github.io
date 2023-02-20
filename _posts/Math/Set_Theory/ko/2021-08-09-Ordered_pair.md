@@ -129,7 +129,7 @@ $$\bigcup z=\{x\}\cup\{x,y\}=\{x,y\}$$
 
 을 정의하면, 우리는 앞선 집합 $\bigcup z$의 부분집합  
 
-$$\left\{s\in\bigcup z: P(s)\right\}$$  
+$$\left\{s\in\bigcup z\mid P(s)\right\}$$  
 
 을 얻게 된다. 이 집합은 원소 하나짜리 집합 $\\{x\\}$이다. 성질 $Q$를 비슷하게 잘 정의하면 원소 하나짜리 집합 $\\{y\\}$를 얻는다. 
 
@@ -149,7 +149,7 @@ $$x=\pr_1 z,\qquad y=\pr_2 z$$
 
 <ins id="df8">**정의 8**</ins> 두 집합 $A$, $B$에 대하여, 다음의 집합
 
-$$\{z:(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
+$$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 을 $A$와 $B$의 *cartesian product<sub>데카르트 곱</sub>*라 부르고, 간단히 $A\times B$로 표시한다. 
 

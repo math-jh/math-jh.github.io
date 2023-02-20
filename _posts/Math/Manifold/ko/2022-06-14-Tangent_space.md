@@ -65,7 +65,7 @@ $$(f|_{U\cap V}+g|_{U\cap V}, U\cap V)$$
 
 <ins id="pp2">**명제 2**</ins> Ring $\mathcal{C}^\infty_p$은 local ring이며, 그 maximal ideal은 다음의 식
 
-$$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p: \mathbf{f}(p)=0\}$$
+$$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p\mid \mathbf{f}(p)=0\}$$
 
 으로 주어진다.
 
@@ -91,7 +91,7 @@ $$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\e
 
 뿐만 아니라, 두 함수 $f,g$가 점 $p$의 어떤 열린근방 $U$ 위에서 동일한 함수를 정의한다면, 점 $p$에서의 이들의 미분 또한 동일해지므로 방향미분을 다룰 때 이들은 동일한 것으로 취급해도 된다. 그럼 우리가 관심있는 대상들은 더 이상 함수가 아니라 함수들의 equivalence class가 되며, 명시적으로 이는 다음과 같다.
 
-$$\mathcal{C}^\infty_p=\{(f,U):f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some $W\subseteq U\cap V$ open}$$
+$$\mathcal{C}^\infty_p=\{(f,U)\mid f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some $W\subseteq U\cap V$ open}$$
 
 $f$의 equivalence class를 $\mathbf{f}$로 적자. 그럼 $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$와 같이 $\mathcal{C}^\infty$ 위에 스칼라곱과 덧셈, 더 나아가 곱셈까지 잘 정의된다는 것이 [명제 1](#pp1)의 내용이다.
 

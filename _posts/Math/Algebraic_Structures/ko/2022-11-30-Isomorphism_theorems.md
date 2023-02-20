@@ -67,7 +67,7 @@ $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
 두 번째 isomorphism theorem을 증명하기 위해서는 다음 보조정리를 보여야 한다. 다음 명제에서 $N\vee K$는 합집합 $N\cup K$를 포함하는 가장 작은 $G$의 subgroup, 즉 $\langle N\cup K\rangle$을 의미하며, $NK$는 집합
 
-$$NK=\{nk:n\in N,k\in K\}$$
+$$NK=\{nk\mid n\in N,k\in K\}$$
 
 을 의미한다.
 

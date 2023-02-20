@@ -52,7 +52,7 @@ weight: 7
 
 더 일반적으로 두 manifold $M,N$과, open submanifold $U\subseteq M$에서 정의된 $C^\infty$ 함수 $f:U\rightarrow N$이 주어졌다 하자. 그럼 $f$의 그래프
 
-$$\graph(f)=\{(x,y)\in M\times N: x\in U, y=f(x)\}$$
+$$\graph(f)=\{(x,y)\in M\times N\mid x\in U, y=f(x)\}$$
 
 또한 embedded submanifold이며, 이 때 embedding은 당연히 $x\mapsto (x,f(x))$으로 주어진다.
 
@@ -169,7 +169,7 @@ $$(dF_p)^\ast(dy^i|_{F(p)})=dy^i|_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j|_p$$
 
 <ins id="crl10">**따름정리 10 (Rank theorem, Immersion case)**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, $dF_p$가 injective라 하자. 그럼 점 $F(p)$ 근방에서 정의된 coordinate system $\psi=(y^j)_{j=1}^n$에 대하여, 다음 집합
 
-$$\{x^j=y^j\circ F: j=1,\ldots, n\}$$
+$$\{x^j=y^j\circ F\mid j=1,\ldots, n\}$$
 
 의 부분집합이 점 $p$ 근방에서 $M$의 coordinate system을 이룬다.
 
