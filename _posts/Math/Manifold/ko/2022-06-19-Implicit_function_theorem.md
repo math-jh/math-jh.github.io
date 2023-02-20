@@ -23,7 +23,7 @@ weight: 9
 
 <ins id="df1">**정의 1**</ins> Manifold $M$과 coordinate system $(U,\varphi)$가 주어졌다 하자. 이 때 $\varphi=(x^i)\_{i=1}^m$이고, $0\leq k\leq m$라 하고, $p\in \varphi(U)$에 대해 다음의 집합
 
-$$S=\{q\in U: x^i(q)=r^i(p), k+1\leq i\leq m\}$$
+$$S=\{q\in U\mid x^i(q)=r^i(p), k+1\leq i\leq m\}$$
 
 에 subspace topology와 coordinate system $(S, (x^j\|\_S)_{j=1}^k)$이 부여된 manifold를 $(U,\varphi)$의 *slice*라 부른다.
 

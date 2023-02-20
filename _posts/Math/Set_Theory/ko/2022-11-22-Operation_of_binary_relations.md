@@ -176,7 +176,7 @@ $$\begin{aligned}
 
 <ins id="df9">**정의 9**</ins> 집합 $A$에 대하여, $\Delta_A$는 이항관계
 
-$$\Delta_A=\{(x,x): x\in A\}$$
+$$\Delta_A=\{(x,x)\mid x\in A\}$$
 
 를 뜻한다. 이를 $A\times A$의 *diagonal<sub>대각집합</sub>*이라 부른다.
 

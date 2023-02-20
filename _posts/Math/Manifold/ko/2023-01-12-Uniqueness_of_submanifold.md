@@ -70,7 +70,7 @@ $$F_0=\bar{\Phi}^{-1}\circ F$$
 
 $F_0$가 연속이라 가정하고, $F_0$이 $C^\infty$이기도 하다는 것을 보이자. 즉 임의의 $x\in N$에 대하여, $x$를 중심으로 하는 coordinate system $(U,\varphi)$가 존재하여 $F_0$을 $U$로 제한한 것이 $C^\infty$임을 보여야 한다. 그런데 $F_0$가 연속인 전단사함수임을 가정하였으므로, 이를 보이기 위해서는 임의의 $y\in P$를 포함하는 coordinate system $(V,\psi)$가 존재하여, $\psi\circ F_0$을 <em_ko>열린집합</em_ko> $F_0^{-1}(V)$로 제한한 것이 $C^\infty$임을 보이면 충분하다. 
 
-이제 $y\in P$가 임의로 주어졌다 하고, $\Phi(y)$를 포함하는 $M$의 coordinate system $(W,z^1,\ldots, z^m)$를 택하자. 그럼 [§부분다양체와 역함수 정리, ⁋따름정리 10](/ko/math/manifold/submanifolds#crl10)으로부터 집합 $\\{z^k\circ\Phi:1\leq k\leq m\\}$의 부분집합을 적당한 열린근방 $V$로 제한한 것이 점 $y\in P$의 coordinate system을 이룬다는 것을 안다. 
+이제 $y\in P$가 임의로 주어졌다 하고, $\Phi(y)$를 포함하는 $M$의 coordinate system $(W,z^1,\ldots, z^m)$를 택하자. 그럼 [§부분다양체와 역함수 정리, ⁋따름정리 10](/ko/math/manifold/submanifolds#crl10)으로부터 집합 $\\{z^k\circ\Phi\mid 1\leq k\leq m\\}$의 부분집합을 적당한 열린근방 $V$로 제한한 것이 점 $y\in P$의 coordinate system을 이룬다는 것을 안다. 
 
 이제 이들을 $\\{z^1\circ\Phi,\ldots,z^p\circ\Phi\\}$라 하자. 일반성을 잃지 않고, $\gamma=(z^1,\ldots, z^m)$이 $\mathbb{R}^m$으로의 전사함수라 하면, 위의 주장은 projection $\pi:\mathbb{R}^m\rightarrow\mathbb{R}^p$를 통해 $(V,\pi\circ\gamma\circ\Phi)$가 $y$의 coordinate system이 된다는 것과 동일한 말이다. 이제
 
