@@ -81,8 +81,16 @@ $$\operatorname{id}_{\Delta^2}:\Delta^2\rightarrow\Delta^2$$
 
 <ins id="ex3">**예시 3**</ins> 예를 들어, 2차원 torus $T^2$는 다음의 그림
 
-img
+![Torus](/assets/images/Math/Algebraic_Topology/Simplicial_complex-1.png){:width="700px" class="invert" .align-center}
 
 과 같이 나타날 수 있으며, 이 그림은 동시에 $T^2$에 $\Delta$-complex의 구조를 준다.
 
 </div>
+
+--- 
+
+**참고문헌**
+
+[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.
+
+---
