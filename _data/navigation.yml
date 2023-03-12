@@ -31,6 +31,14 @@ algebraic_structures-ko:
       - title: "자유곱"
         url: ko/math/algebraic_structures/free_product
 
+algebraic_topology-ko:
+  - title: <a href="/ko/algebraic_topology/" class="sidebar_title">대수적 위상수학</a>
+    children:
+      - title: "심플렉스 복합체"
+        url: ko/math/algebraic_topology/simplicial_complex
+      - title: "호몰로지"
+        url: ko/math/algebraic_topology/homology
+
 blog_development-ko:
   - title: <a href="/ko/blog_development/" class="sidebar_title">블로그 개발</a>
     children:
