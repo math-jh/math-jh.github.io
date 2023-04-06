@@ -199,14 +199,8 @@ manifold-ko:
         url: ko/math/manifold/vector_fields
       - title: "미분형식"
         url: ko/math/manifold/differential_forms
-      - title: "리만 계량"
-        url: ko/math/manifold/Riemannian_metric
       - title: "리 미분"
         url: ko/math/manifold/Lie_derivative
-      - title: "접속"
-        url: ko/math/manifold/connection
-      - title: "레비-치비타 접속"
-        url: ko/math/manifold/Levi-Civita_connection
       - title: "Distribution"
         url: ko/math/manifold/distribution
       - title: "미분 아이디얼"
@@ -353,8 +347,8 @@ category-ko:
     children:
       - title: "위상수학"
         url: ko/topology/
-      # - title: "대수적 위상수학"
-      #   url: ko/algebraic_topology/
+      - title: "대수적 위상수학"
+        url: ko/algebraic_topology/
       - title: "미분다양체"
         url: ko/manifold/
       # - title: "복소다양체"
