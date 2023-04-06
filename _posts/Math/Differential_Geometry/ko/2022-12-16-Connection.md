@@ -3,17 +3,17 @@
 title: "접속"
 excerpt: "Vector bundle 위에서 정의된 미분"
 
-categories: [Math / Manifold]
-permalink: /ko/math/manifold/connection
+categories: [Math / Differential Geometry]
+permalink: /ko/math/differential_geometry/connection
 header:
-    overlay_image: /assets/images/Math/Manifold/Connection.png
+    overlay_image: /assets/images/Math/Differential_Geometry/Connection.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 
 date: 2022-12-16
 last_modified_at: 2022-12-16
-weight: 115
+weight: 2
 
 ---
 
