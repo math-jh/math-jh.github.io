@@ -73,7 +73,7 @@ $$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg|_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)
 
 </div>
 
-뿐만 아니라, 어렵지 않게 임의의 tensor field로도 이 정의를 확장할 수 있다. 특히 Riemannian metric 또한 잘 정의된 Lie derivative를 가질 것이다. 그러나 이는 우리가 사용할 내용은 아니므로 넘기기로 한다.
+뿐만 아니라, 어렵지 않게 임의의 tensor field로도 이 정의를 확장할 수 있다. 이는 우리가 당장 사용할 내용은 아니므로 넘기기로 한다.
 
 다음 명제의 일부는 이미 증명하였던 것이고, 일부는 새로운 것이지만 증명을 모두 적기에는 길기 때문에 생략한다.
 
