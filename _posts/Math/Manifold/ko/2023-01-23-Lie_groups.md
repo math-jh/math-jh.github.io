@@ -48,7 +48,7 @@ $$G\times G\rightarrow G;\qquad (x,y)\mapsto xy^{-1}$$
 1. $\mathbb{R}^n$에 덧셈구조를 주면 $\mathbb{R}^n$은 Lie group이 된다. 이는 $(\mathbf{x},\mathbf{y})\mapsto \mathbf{x}-\mathbf{y}$으로 정의된 연산 $\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$이 $C^\infty$이기 때문이다.
 2. 두 Lie group $G,H$에 대하여, $G\times H$ 또한 Lie group이 된다. 
 3. $\GL(n,\mathbb{R})$의 곱셈, 그리고 역원은 (분모가 $0$이 되지 않는) 유리함수에 불과하므로 $C^\infty$이고, 따라서 $\GL(n,\mathbb{R})$ 또한 Lie group이다. 
-4. 정의에 의하여 $\SL(n,\mathbb{R})$은 $\GL(n,\mathbb{R})$의 원소들 가운데 행렬식이 $1$인 것만을 모아둔 집합이다. 그런데 행렬식은 $\GL(n,\mathbb{R})$에서 $\mathbb{R}^\times$로의 함수이고, 이 함수는 다항식으로 정의되었으므로 $C^\infty$ 함수이고, 또 모든 점에서 regular임을 확인할 수 있다. 따라서 [§음함수 정리, 따름정리 4](/ko/math/manifold/implicit_function_theorem#crl4)로부터 $\SL(n,\mathbb{R})$은 $n^2-1$차원 manifold가 된다는 것을 알 수 있다. 또, 이 때 inclusion map $\SL(n,\mathbb{R})\hookrightarrow\GL(n,\mathbb{R})$이 embedding이므로 $\SL(n,\mathbb{R})$에 정의된 곱셈과 역원이 모두 $C^\infty$임을 보일 수 있다.
+4. 정의에 의하여 $\SL(n,\mathbb{R})$은 $\GL(n,\mathbb{R})$의 원소들 가운데 행렬식이 $1$인 것만을 모아둔 집합이다. 그런데 행렬식은 $\GL(n,\mathbb{R})$에서 $\mathbb{R}^\times$로의 함수이고, 이 함수는 다항식으로 정의되었으므로 $C^\infty$ 함수이고, 또 모든 점에서 regular임을 확인할 수 있다. 따라서 [§음함수 정리, ⁋따름정리 4](/ko/math/manifold/implicit_function_theorem#crl4)로부터 $\SL(n,\mathbb{R})$은 $n^2-1$차원 manifold가 된다는 것을 알 수 있다. 또, 이 때 inclusion map $\SL(n,\mathbb{R})\hookrightarrow\GL(n,\mathbb{R})$이 embedding이므로 $\SL(n,\mathbb{R})$에 정의된 곱셈과 역원이 모두 $C^\infty$임을 보일 수 있다.
 
 </div>
 

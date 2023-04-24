@@ -137,7 +137,7 @@ $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=
 
 </div>
 
-Abelian category에서는 임의의 homomorphism $f:A\rightarrow B$에 대해 $f$의 kernel $i:\ker f\rightarrow A$와 cokernel $p:B\rightarrow \coker f$가 존재한다. 직관적으로 $\lmod{R}$에서 살펴보면, $i:\ker f\rightarrow A$는 $A$의 submodule $\ker f$의 $A$로의 canonical inclusion으로 생각할 수 있고, cokernel $p:B\rightarrow \coker f$는 canonical projection으로 생각할 수 있다. ([\[호몰로지 대수학\] §완전열, 명제 2](/ko/math/homological_algebra/exact_sequences#pp2))
+Abelian category에서는 임의의 homomorphism $f:A\rightarrow B$에 대해 $f$의 kernel $i:\ker f\rightarrow A$와 cokernel $p:B\rightarrow \coker f$가 존재한다. 직관적으로 $\lmod{R}$에서 살펴보면, $i:\ker f\rightarrow A$는 $A$의 submodule $\ker f$의 $A$로의 canonical inclusion으로 생각할 수 있고, cokernel $p:B\rightarrow \coker f$는 canonical projection으로 생각할 수 있다. ([\[호몰로지 대수학\] §완전열, ⁋명제 2](/ko/math/homological_algebra/exact_sequences#pp2))
 
 임의의 abelian category $\mathcal{A}$에서, $f$의 *image*는 다음의 morphism
 
