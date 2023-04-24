@@ -129,7 +129,7 @@ $$X_p=\frac{\partial}{\partial y^1}\bigg|_p$$
 
 $$(-\epsilon,\epsilon)\times V\rightarrow M;\qquad(t,q)\mapsto X_t(q)$$
 
-가 잘 정의된 $C^\infty$라고 가정할 수 있다. ([§벡터장, 정리 6](/ko/math/manifold/vector_fields#thm6)) 뿐만 아니라, $\epsilon>0$을 다음 포함관계
+가 잘 정의된 $C^\infty$라고 가정할 수 있다. ([§벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6)) 뿐만 아니라, $\epsilon>0$을 다음 포함관계
 
 $$(-\epsilon,\epsilon)\times W\subseteq V,\qquad \text{$W$ is an open neighborhood of the origin in $\mathbb{R}^{d-1}$}$$
 
