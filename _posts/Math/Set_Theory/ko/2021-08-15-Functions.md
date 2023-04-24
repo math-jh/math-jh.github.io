@@ -47,7 +47,7 @@ $${<}(1)=\{2,3,\ldots\}$$
 
 인 것이다. 이 때의 $y$를 $f$의 $x$에서의 *함숫값*이라 부르고, 이 때 집합 $F(\\{x\\})$의 유일한 원소를 $f(x)$로 표기한다. 또, 집합 $A=\pr_1F$를 $f$의 *정의역<sub>domain</sub>*이라 부른다.
 
-위의 표기를 따라, 이항관계 $F$에 대한 집합 $X\subseteq A$의 image는 $F(X)$ 대신 $f(X)$로, 집합 $Y\subseteq B$의 preimage도 $F^{-1}(Y)$ 대신 $f^{-1}(Y)$로 적는다. ([§이항관계, ⁋정의 5](/ko/math/set_theory/binary_relation#df5)와 [§이항관계들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_binary_relation#df1)) 또, triple $f=(F,A,B)$는 간단히 $f:A\rightarrow B$과 같이 적는다.
+위의 표기를 따라, 이항관계 $F$에 대한 집합 $X\subseteq A$의 image는 $F(X)$ 대신 $f(X)$로, 집합 $Y\subseteq B$의 preimage도 $F^{-1}(Y)$ 대신 $f^{-1}(Y)$로 적는다. ([§이항관계, ⁋정의 5](/ko/math/set_theory/binary_relation#df5)와 [§이항관계들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_binary_relations#df1)) 또, triple $f=(F,A,B)$는 간단히 $f:A\rightarrow B$과 같이 적는다.
 
 한편, 함수 $f=(F,A,B)$를 나타내는 집합
 

@@ -1,7 +1,7 @@
 ---
 title: "미분다양체"
 layout: archive_custom
-permalink: /ko/manifold
+permalink: /ko/manifold/
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

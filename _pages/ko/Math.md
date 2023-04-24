@@ -1,7 +1,7 @@
 ---
 title: "수학"
 layout: archive_custom
-permalink: /ko/math
+permalink: /ko/math/
 author_profile: true
 ---
 {% assign lang = site.locale %}
@@ -12,23 +12,23 @@ author_profile: true
 
 ## 교양수학
 
-- [선형대수학](/ko/linear_algebra)
+- [선형대수학](/ko/linear_algebra/)
 
 ## 수학기초론
 
-- [집합론](/ko/set_theory)
+- [집합론](/ko/set_theory/)
 
 ## 대수학
 
-- [대수적 구조](/ko/algebraic_structures)
-- [텐서대수](/ko/tensor_algebra)
-- [호몰로지 대수학](/ko/homological_algebra)
+- [대수적 구조](/ko/algebraic_structures/)
+- [텐서대수](/ko/tensor_algebra/)
+- [호몰로지 대수학](/ko/homological_algebra/)
 
 ## 기하학 및 위상수학
 
-- [위상수학](/ko/topology)
-- [미분다양체](/ko/manifold)
-- [사교기하학](/ko/symplectic_geometry)
+- [위상수학](/ko/topology/)
+- [미분다양체](/ko/manifold/)
+- [사교기하학](/ko/symplectic_geometry/)
 
 ## 기타
 
