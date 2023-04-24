@@ -4,7 +4,7 @@ title: "리 대응"
 excerpt: "Lie correspondence"
 
 categories: [Math / Manifold]
-permalink: /ko/math/manifold/lie_correspondence
+permalink: /ko/math/manifold/Lie_correspondence
 header:
     overlay_image: /assets/images/Math/Manifold/Lie_correspondence.png
     overlay_filter: 0.5

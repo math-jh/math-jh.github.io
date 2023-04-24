@@ -1,7 +1,7 @@
 ---
 title: "집합론"
 layout: archive_custom
-permalink: /ko/set_theory
+permalink: /ko/set_theory/
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

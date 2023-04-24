@@ -19,7 +19,7 @@ weight: 12
 
 ## 벡터다발들
 
-[§벡터다발, ⁋예시 5](/ko/math/manifold/vector_bundles#ex5)와 [§벡터다발, ⁋정리 6](/ko/math/manifold/vector_bundles#thm6)을 이용하면 다음을 정의할 수 있다.
+[§접다발과 여접다발, ⁋예시 5](/ko/math/manifold/tangent_and_cotangent_bundles#ex5)와 [§접다발과 여접다발, ⁋정리 6](/ko/math/manifold/tangent_and_cotangent_bundles#thm6)을 이용하면 다음을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 

@@ -1,7 +1,7 @@
 ---
 title: "범주론"
 layout: archive_custom
-permalink: /ko/category_theory
+permalink: /ko/category_theory/
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
