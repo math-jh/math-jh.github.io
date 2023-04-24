@@ -197,7 +197,7 @@ $$(\nabla_XF)(\omega^1,\ldots,\omega^r,Y_1,\ldots, Y_s)$$
 
 $$X\mapsto \nabla_Xf=Xf$$
 
-으로 정의된다. 한편, $M=\mathbb{R}^m$으로 두고 [§리만 계량, §§Musical isomorphism](/ko/math/manifold/Riemannian_metric#musical-isomorphism)에서와 같이 함수 $f$의 그라디언트 벡터 $\operatorname{grad} f$를 다음의 식
+으로 정의된다. 한편, $M=\mathbb{R}^m$으로 두고 [§리만 계량, §§Musical isomorphism](/ko/math/differential_geometry/Riemannian_metric#musical-isomorphism)에서와 같이 함수 $f$의 그라디언트 벡터 $\operatorname{grad} f$를 다음의 식
 
 $$X\mapsto \langle X, \operatorname{grad} f\rangle$$
 

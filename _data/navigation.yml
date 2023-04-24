@@ -284,7 +284,7 @@ tensor_algebra-ko:
       - title: "텐서대수"
         url: ko/math/tensor_algebra/tensor_algebra
       - title: "대칭대수와 외대수"
-        url: ko/math/tensor_algebra/symmetric_and_exterior_algebra
+        url: ko/math/tensor_algebra/symmetric_and_exterior_algebras
 
 topology-ko:
   - title: <a href="/ko/topology/" class="sidebar_title">위상수학</a>
@@ -304,9 +304,9 @@ topology-ko:
       - title: "부분공간"
         url: ko/math/topology/subspace
       - title: "몫공간"
-        url: ko/math/topology/quotient_topology
+        url: ko/math/topology/quotient_space
       - title: "곱공간"
-        url: ko/math/topology/product_topology
+        url: ko/math/topology/product_space
 
 ########## 메인화면 사이드바 ##########
 

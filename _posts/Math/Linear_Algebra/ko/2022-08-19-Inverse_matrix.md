@@ -43,7 +43,7 @@ weight: 22
 
 $$L_A\circ L_B=\id_{F^n}$$
 
-이 성립한다. 이제 $\id_{F^n}$이 전단사함수라는 것으로부터 $L_A:F^n\rightarrow F^n$이 전사함수라는 것을 안다. ([\[집합론\] §함수 (2), ⁋명제 3](/ko/math/set_theory/functions_2#pp3)) 따라서 다음의 식 ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7))
+이 성립한다. 이제 $\id_{F^n}$이 전단사함수라는 것으로부터 $L_A:F^n\rightarrow F^n$이 전사함수라는 것을 안다. ([\[집합론\] §Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#pp3)) 따라서 다음의 식 ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7))
 
 $$\rank L_A+\nullity L_A=\dim F^n=n$$
 

@@ -1,7 +1,7 @@
 ---
 title: "선형대수학"
 layout: archive_custom
-permalink: /ko/linear_algebra
+permalink: /ko/linear_algebra/
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

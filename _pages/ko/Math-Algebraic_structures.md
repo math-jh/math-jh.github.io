@@ -1,7 +1,7 @@
 ---
 title: "대수적 구조"
 layout: archive_custom
-permalink: /ko/algebraic_structures
+permalink: /ko/algebraic_structures/
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
