@@ -56,7 +56,7 @@ weight: 1
 <ins id="ex2">**예시 2 (대수적 구조들)**</ins> 
 
 - 집합들의 카테고리 $\Set$이 존재한다. $\Set$의 대상들은 집합들이며, 임의의 두 대상 $A,B\in\obj(\Set)$에 대하여 $\Mor_\Set(A,B)=\Fun(A,B)$으로 정의된다. 두 morphism들의 합성은 함수의 합성과 같다. ([\[집합론\] §함수들 사이의 연산, ⁋명제 1](/ko/math/set_theory/operation_of_functions#pp1)) Identity morphism은 정확히 항등함수와 같다.
-- Group들의 카테고리 $\Group$이 존재한다. $\Group$의 대상들은 group들이며, 임의의 두 대상 $G,H\in\obj(\Group)$에 대하여 $\Mor_\Group(G,H)$는 $G$에서 $H$로의 group homomorphism들의 모임으로 정의된다. 두 morphism들의 합성과 identity morphism은 위와 마찬가지로 정의된다. ([\[대수적 구조\] §준동형사상, 명제 1](/ko/math/algebraic_structures/group_homomorphisms#pp1))
+- Group들의 카테고리 $\Group$이 존재한다. $\Group$의 대상들은 group들이며, 임의의 두 대상 $G,H\in\obj(\Group)$에 대하여 $\Mor_\Group(G,H)$는 $G$에서 $H$로의 group homomorphism들의 모임으로 정의된다. 두 morphism들의 합성과 identity morphism은 위와 마찬가지로 정의된다. ([\[대수적 구조\] §준동형사상, ⁋명제 1](/ko/math/algebraic_structures/group_homomorphisms#pp1))
 - Abelian group들의 카테고리 $\Ab$이 존재한다. $\Ab$의 대상들은 abelian group들이며, 임의의 두 대상 $G,H\in\obj(\Ab)$에 대하여 $\Mor_\Ab(G,H)$는 $G$에서 $H$로의 group homomorphism들의 모임이다. 두 morphism들의 합성과 identity morphism은 위와 마찬가지로 정의된다.
 - (항등원을 갖는) ring들의 카테고리 $\Ring$이 잘 정의된다. $\Ring$의 대상들은 항등원을 갖는 ring들이며, 두 대상 $R,S\in\obj(\Ring)$에 대하여 $\Mor_\Ring(R,S)$는 $R$에서 $S$로의 *unital* ring homomorphism들의 모임으로 정의된다.
 - 카테고리 $\Rng$는 항등원 (**i**dentity)을 가질 수도, 갖지 않을 수도 있는 ring들의 카테고리다. 따라서 두 "rng"들 사이의 morphism은 ring homomorphism들이며, 설령 정의역 $R$과 공역 $S$가 모두 항등원을 갖는다 하더라도 $\Mor_\Rng(R,S)$의 원소들은 항등원을 보존할 필요가 없다.
