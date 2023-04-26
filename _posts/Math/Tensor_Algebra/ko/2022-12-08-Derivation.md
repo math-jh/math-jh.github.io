@@ -47,7 +47,7 @@ $$\varepsilon(p,q)=1\qquad\text{for all $p,q\in\mathbb{Z}$}$$
 
 $$\varepsilon(p,q)=(-1)^{pq}\qquad\text{for all $p,q\in\mathbb{Z}$}$$
 
-으로 주어진다. 특별히 후자의 경우를 *Koszul sign*이라 부른다.
+으로 주어진다. 특별히 후자의 경우를 *Koszul sign*이라 부른다. 보통 chain complex $C_\bullet,D_\bullet$들의 double complex 등을 생각할 때, differential이 잘 정의되기 위해서는 Koszul sign을 쓰는 것이 필수적이다.
 
 ## Derivation과 anti-derivation
 
@@ -81,7 +81,7 @@ $$D(ab)=D(a)b+aD(b)$$
 
 $$D(ab)=D(a)b+(-1)^{\degree(a)}D(b)$$
 
-이 된다. 이를 *anti-derivation*이라 부른다.
+이 된다. 이를 *anti-derivation*이라 부른다. 이는 
 
 ## 캘러 미분
 
