@@ -29,7 +29,7 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 이 각각의 $A,A'\in\obj(\mathcal{A})$마다 다음의 diagram
 
-![natural_transformation](/assets/images/Category_Theory/Natural_transformations-1.png){:width="193.65px" class="invert" .align-center}
+![natural_transformation](/assets/images/Math/Category_Theory/Natural_transformations-1.png){:width="193.65px" class="invert" .align-center}
 
 을 commute하도록 한다면, $\alpha=(\alpha\_A)\_{A\in\obj(\mathcal{A})}$를 *natural transformation<sub>자연변환</sub>*이라 부르고 이를 $\alpha:F\Rightarrow G$와 같이 표기한다.
 
@@ -52,7 +52,7 @@ $$(L^{\ast\ast}(v^{\ast\ast}))(w^\ast)=(v^{\ast\ast}\circ L^\ast)(w^\ast)=v^{\as
 
 으로 정의되는 linear map이다. 그럼 identity functor $\id\_\Vect{k}$와 double dual functor $(-)^{\ast\ast}$이 naturally equivalent하다. 이는 임의의 $L:V\rightarrow W$에 대하여 다음 diagram
 
-![naturality_of_double_dual](/assets/images/Category_Theory/Natural_transformations-2.png){:width="413.25px" class="invert" .align-center}
+![naturality_of_double_dual](/assets/images/Math/Category_Theory/Natural_transformations-2.png){:width="413.25px" class="invert" .align-center}
 
 이 commute한다는 뜻이며, 이 사실은 임의의 $w^\ast\in W^\ast$에 대하여
 
@@ -68,7 +68,7 @@ $$(Lv)^{\ast\ast}(w^\ast)=w^\ast(Lv)=v^{\ast\ast}(w^\ast\circ L)$$
 
 <ins id="ex3">**예시 3 (Dual functor)**</ins> Dual functor $(-)^\ast$를 나타내는 diagram은 다음과 같다.
 
-![unnaturality_of_dual_functor](/assets/images/Category_Theory/Natural_transformations-3.png){:width="358.65px" class="invert" .align-center}
+![unnaturality_of_dual_functor](/assets/images/Math/Category_Theory/Natural_transformations-3.png){:width="358.65px" class="invert" .align-center}
 
 따라서, $(-)^\ast$에 요구될만한 "naturality"는 다음의 식
 

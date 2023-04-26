@@ -31,11 +31,11 @@ weight: 4
 
 > 임의의 $B\in\obj(\mathcal{A})$와, morphism들의 family $(f\_i:B\rightarrow A\_i)\_{i\in I}$가 주어졌다면, 다음 diagram을 commute하도록 하는 morphism $f:B\rightarrow A$가 유일하게 존재한다.
 >
-> ![universal_property_of_product](/assets/images/Category_Theory/Abelian_categories-1.png){:width="251.4px" class="invert" .align-center}
+> ![universal_property_of_product](/assets/images/Math/Category_Theory/Abelian_categories-1.png){:width="251.4px" class="invert" .align-center}
 
 비슷하게, 이들 family의 *쌍대곱<sub>coproduct</sub>*은 다음 diagram에 해당하는 universal property로 정의되는 대상과 morphism들을 의미한다.
 
-![universal_property_of_coproduct](/assets/images/Category_Theory/Abelian_categories-2.png){:width="251.4px" class="invert" .align-center}
+![universal_property_of_coproduct](/assets/images/Math/Category_Theory/Abelian_categories-2.png){:width="251.4px" class="invert" .align-center}
 
 </div>
 

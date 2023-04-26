@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /ko
+permalink: /ko/
 hidden: true
 header:
   overlay_image: /assets/images/Pages/Home/Stationary_main.png
