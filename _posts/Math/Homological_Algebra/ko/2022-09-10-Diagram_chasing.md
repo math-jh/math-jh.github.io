@@ -6,7 +6,7 @@ excerpt: "기본정의"
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/diagram_chasing
 header:
-    overlay_image: /assets/images/Math/Homological_Algebra/a.png
+    overlay_image: /assets/images/Math/Homological_Algebra/Diagram_chasing.png
     overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"

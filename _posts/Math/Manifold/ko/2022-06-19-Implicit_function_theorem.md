@@ -43,7 +43,7 @@ $$S=\{q\in U\mid x^i(q)=r^i(p), k+1\leq i\leq m\}$$
 
 위의 보조정리에서, $M$의 열린집합 $U$에 대하여 $F(U)$가 $(V,\varphi)$의 slice가 된다는 것을 신경써서 볼 필요가 있다. 예를 들어, $F(M)\cap V$는 일반적으로 slice가 될 필요가 없으며, 이는 심지어 $F$가 submanifold일 경우에도 마찬가지이다.
 
-![](/assets/images//.png){:width="250px" class="invert" .align-center}
+![counterexample](/assets/images/Math/Manifold/Implicit_function_theorem-1.png){:width="250px" class="invert" .align-center}
 
 하지만 만일 $M$이 embedding이었다면 $(V,\varphi)$를 적당히 잡아 $F(M)\cap V$가 $V$의 slice가 되도록 할 수 있다. 이러한 관점에서 위 보조정리를 
 

@@ -6,7 +6,7 @@ excerpt: "기본정의"
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/delta_functor
 header:
-    overlay_image: /assets/images/Math/Homological_Algebra/a.png
+    overlay_image: /assets/images/Math/Homological_Algebra/Delta_functors.png
     overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
@@ -44,11 +44,11 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
     가 exact이다.
 2. (Naturality) Short exact sequence들 사이의 homomorphism
     
-    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Delta_functor-1.png){:width="393.3px" class="invert" .align-center}
+    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Delta_functors-1.png){:width="393.3px" class="invert" .align-center}
 
     이 주어졌을 때, 다음의 diagram
 
-    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Delta_functor-2.png){:width="708.9px" class="invert" .align-center}
+    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Delta_functors-2.png){:width="708.9px" class="invert" .align-center}
 
     이 commute한다.
 
@@ -76,7 +76,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 마다 commute하도록 하는 $\alpha_n:S_n\Rightarrow T_n$들의 모임이다. 
 
-![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Delta_functor-3.png){:width="815.25px" class="invert" .align-center}
+![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Delta_functors-3.png){:width="815.25px" class="invert" .align-center}
 
 <div class="definition" markdown="1">
 

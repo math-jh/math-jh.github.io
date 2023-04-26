@@ -3,7 +3,7 @@ main:
   # - title: "About"
   #   url: /about/
   - title: "Category 🇰🇷"
-    url: ko/categories
+    url: ko/categories/
   # - title: "Category 🇺🇸"
     # url: en/categories/
 

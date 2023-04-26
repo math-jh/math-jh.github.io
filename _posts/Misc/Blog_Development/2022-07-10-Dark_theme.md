@@ -141,7 +141,7 @@ dark_skin                 : "custom-dark"
 
 우선 나는 라이트 모드일 때에도 배경이 완전한 하얀색이 아니라 대다수의 그림들 (주로 diagram들)이 배경이 지워진 상태의, 검은 색이었는데 이런 그림은 다크모드로 전환하였을 때 거의 보이지 않는다는 문제가 있었다.
 
-![octahedral axiom](/assets/images/home/Octahedral.png){:width="500px" .align-center}
+![octahedral axiom](/assets/images/Pages/Profile/Octahedral.png){:width="500px" .align-center}
 
 때문에 다크모드에서는 이런 그림들에 색상을 반전시켜줄 필요가 있어서, 이들 그림에 `invert` 클래스를 추가해준 후, `_main-dark.scss` 파일의 말미에 다음의 코드
 ```scss
@@ -151,7 +151,7 @@ img.invert {
 ```
 를 추가해주었다. 
 
-![octahedral axiom](/assets/images/home/Octahedral.png){:width="500px" class="invert" .align-center}
+![octahedral axiom](/assets/images/Pages/Profile/Octahedral.png){:width="500px" class="invert" .align-center}
 
 잘 작동하는 것 같다. 
 
