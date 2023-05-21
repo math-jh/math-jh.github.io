@@ -1,7 +1,7 @@
 ---
 title: "찾아보기"
 layout: archive_custom
-permalink: /ko/misc/index
+permalink: /ko/misc/
 ---
 
 블로그에서 사용한 용어들을 정리해둔 페이지입니다. 한글용어와 영문용어 중, 주로 사용할 것에 체크 (&#9745;) 표시를 해 두었습니다.

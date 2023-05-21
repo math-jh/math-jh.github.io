@@ -38,11 +38,13 @@ $$(f_2\circ f_1)(xy)=f_2(f_1(xy))=f_2(f_1(x)f_1(y))=f_2(f_1(x))f_2(f_1(y))=(f_2\
 
 </details>
 
-또한, 항등함수가 homomorphism인 것은 증명할 것도 없이 자명하다. 한편 [§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structure#df6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#pp5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. Group의 경우에는 그 역 또한 성립한다.
+또한, 항등함수가 homomorphism인 것은 증명할 것도 없이 자명하다. 한편 [§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structure#df6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#pp5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 임의의 homomorphism $f:G\rightarrow G'$가 isomorphism인 것은 $f$가 전단사인 것과 동치이다.
+<ins id="pp2">**명제 2**</ins> 임의의 magma homomorphism $f:A\rightarrow A'$가 isomorphism인 것은 $f$가 전단사인 것과 동치이다. 
+
+만일 $A$가 항등원 $e$를 갖고, $f:A\rightarrow A'$가 전단사함수라면 $f(e)$는 $A'$의 항등원이며, 따라서 $f^{-1}$은 $A'$의 항등원을 $A$의 항등원으로 보내는 magma homomorphism이다.
 
 </div>
 
@@ -51,11 +53,17 @@ $$(f_2\circ f_1)(xy)=f_2(f_1(xy))=f_2(f_1(x)f_1(y))=f_2(f_1(x))f_2(f_1(y))=(f_2\
 
 반대쪽 방향만 보이면 충분하다. $f$는 전단사이므로, 함수로써 역함수 $f^{-1}:G'\rightarrow G$가 존재한다. 만일 $f^{-1}$이 homomorphism이기만 하다면, 정의에 의해 $f$는 isomorphism이 될 것이다.
 
-임의의 $y, y'\in  G'$를 택하자. 그럼 $f$는 전단사이므로, 적당한 $x$, $x'$가 유일하게 존재하여 $f(x)=y$이고 $f(x')=y'$이다. 이제
+임의의 $y, y'\in  A'$를 택하자. 그럼 $f$는 전단사이므로, 적당한 $x$, $x'$가 유일하게 존재하여 $f(x)=y$이고 $f(x')=y'$이다. 이제
 
 $$f^{-1}(yy')=f^{-1}(f(x)f(x'))=f^{-1}(f(xx'))=xx'=f^{-1}(y)f^{-1}(y')$$
 
 이므로, $f^{-1}$은 homomorphism이고 따라서 $f$는 isomorphism이다. 
+
+한편 $f:A\rightarrow A'$가 전단사함수라면, 임의의 $y\in A'$에 대하여 $f(x)=y$를 만족하는 유일한 $x\in A$가 존재한다. 이제
+
+$$y=f(x)=f(xe)=f(x)f(e),\qquad y=f(x)=f(ex)=f(e)f(x)$$
+
+이므로 $f(e)$는 $A'$의 항등원이다.
 
 </details>
 
