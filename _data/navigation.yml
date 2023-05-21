@@ -273,6 +273,10 @@ symplectic_geometry-ko:
     children:
       - title: "고전역학"
         url: ko/math/symplectic_geometry/classical_mechanics
+      - title: "사교벡터공간"
+        url: ko/math/symplectic_geometry/linear_symplectic_geometry
+      - title: "사교다양체"
+        url: ko/math/symplectic_geometry/symplectic_manifold
 
 tensor_algebra-ko:
   - title: <a href="/ko/tensor_algebra/" class="sidebar_title">텐서대수</a>

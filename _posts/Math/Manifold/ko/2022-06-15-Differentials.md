@@ -79,6 +79,8 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 </div>
 
+따라서, manifold들과 smooth function들은 카테고리 $\Man$을 이룬다.
+
 <div class="remark" markdown="1">
 
 <ins id="rmk1">**참고**</ins> 동일한 topological manifold $M$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $\mathcal{A}\_1$, $\mathcal{A}\_2$를 각각 single chart들 $(\mathbb{R},\id\_\mathbb{R})$, $(\mathbb{R}, x\mapsto x^{3})$을 통해 정의하자. 그럼 $\mathcal{A}_1$과 $\mathcal{A}\_2$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifold/smooth_manifolds#ex4))  
