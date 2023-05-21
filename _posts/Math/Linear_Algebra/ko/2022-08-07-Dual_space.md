@@ -219,13 +219,13 @@ $$[L^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}=\begin{pmatrix}\alpha_{11}&\alp
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> Canonical pairing $(-,-)$이 주어진 $F$-벡터공간 $V$가 주어졌다 하고, 임의의 부분집합 $S\subseteq V$을 생각하자. 임의의 $v\in S$에 대하여 $(v,f)=0$을 만족하는 $f\in V^\ast$의 모임을 $S$의 *orthogonal complement<sub>직교여공간</sub>*라 부르고, $S^\perp$로 표기한다. 
+<ins id="df7">**정의 7**</ins> Canonical pairing $(-,-)$이 주어진 $F$-벡터공간 $V$가 주어졌다 하고, 임의의 부분집합 $S\subseteq V$을 생각하자. 임의의 $v\in S$에 대하여 $(v,f)=0$을 만족하는 $f\in V^\ast$의 모임을 $S$의 *orthogonal complement<sub>직교여공간</sub>* 혹은 *annihilator<sub>소멸자</sub>*라 부르고, $S^\perp$로 표기한다. 
 
 이와 비슷하게, 임의의 부분집합 $T\subseteq V^\ast$가 주어졌다 하자. 그럼 임의의 $f\in T$에 대하여 $(v,f)=0$을 만족하는 $v\in V$의 모임을 $T$의 orthogonal complement라 부르고 $T^\perp$로 표기한다.
 
 </div>
 
-특별히 $S$ 혹은 $T$가 singleton인 경우 이를 $v^\perp$ 혹은 $f^\perp$와 같이 표현하기도 한다.
+특별히 $S$ 혹은 $T$가 singleton인 경우 이를 $v^\perp$ 혹은 $f^\perp$와 같이 표현하기도 한다. 
 
 임의의 $v\in V$에 대하여 $v^\perp$가 $V^\ast$의 부분공간이 된다는 것은 $(-,-)$이 bilinear라는 사실로부터 자명하다. 이제 다음 등식
 
