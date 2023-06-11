@@ -23,17 +23,17 @@ weight: 20
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> Well-ordered set $A$의 segment들을 모두 모은 집합을 $A^\ast$라 하자. 그럼 $(A^\ast,\subseteq)$ 또한 well-ordered set이며, 함수 $x\mapsto S_x$는 $A$와 $A^\ast\setminus\\{A\\}$ 간의 order isomorphism이다.
+<ins id="prop1">**명제 1**</ins> Well-ordered set $A$의 segment들을 모두 모은 집합을 $A^\ast$라 하자. 그럼 $(A^\ast,\subseteq)$ 또한 well-ordered set이며, 함수 $x\mapsto S_x$는 $A$와 $A^\ast\setminus\\{A\\}$ 간의 order isomorphism이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§유향집합, ⁋명제 6](/ko/math/set_theory/directed_set#pp16)을 사용한다. $S$가 순증가이고 $s(A)=A^\ast\setminus\\{A\\}$임을 보이자. 
+[§유향집합, ⁋명제 6](/ko/math/set_theory/directed_set#prop16)을 사용한다. $S$가 순증가이고 $s(A)=A^\ast\setminus\\{A\\}$임을 보이자. 
 
-$s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라면, $a < x\leq y$이므로 $a\in S_y$이기 때문이다. 또, 이 포함관계는 strict한데, 만약 $x < y$라면, $x\not< x$이고 $x < y$이므로 $x\not\in S_x$지만 $x\in S_y$이기 때문이다. 따라서 함수 $s$는 $A$와 그 image 사이의 isomorphism이다. 따라서 [§서수와 정렬집합, ⁋명제 5](/ko/math/set_theory/ordinals#pp5)에 의해 $s(A)=A^\ast\setminus\\{A\\}$이다.
+$s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라면, $a < x\leq y$이므로 $a\in S_y$이기 때문이다. 또, 이 포함관계는 strict한데, 만약 $x < y$라면, $x\not< x$이고 $x < y$이므로 $x\not\in S_x$지만 $x\in S_y$이기 때문이다. 따라서 함수 $s$는 $A$와 그 image 사이의 isomorphism이다. 따라서 [§서수와 정렬집합, ⁋명제 5](/ko/math/set_theory/ordinals#prop5)에 의해 $s(A)=A^\ast\setminus\\{A\\}$이다.
 
-마지막으로 $A^\ast$가 well-ordered임을 보이자. $s(A)$가 well-ordered이므로, $s(A)=A^\ast\setminus\\{A\\}$에 최대원소 $A$를 추가하면 ([§순서집합의 원소들, ⁋명제 4](/ko/math/set_theory/elements_in_ordered_set#pp4)) $A^\ast$를 얻고, 이렇게 얻어진 집합은 다시 well-ordered이다. 
+마지막으로 $A^\ast$가 well-ordered임을 보이자. $s(A)$가 well-ordered이므로, $s(A)=A^\ast\setminus\\{A\\}$에 최대원소 $A$를 추가하면 ([§순서집합의 원소들, ⁋명제 4](/ko/math/set_theory/elements_in_ordered_set#prop4)) $A^\ast$를 얻고, 이렇게 얻어진 집합은 다시 well-ordered이다. 
 
 </details>
 
@@ -45,7 +45,7 @@ $s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2 (von Neumann)**</ins> 집합 $S$가 *ordinal<sub>서수</sub>*이라는 것은, $S$의 각각의 원소들이 $\in$으로 strictly well-ordered되어있고, 또 $S$의 각각의 원소들이 $S$의 부분집합이기도 한 것이다. 
+<ins id="def2">**정의 2 (von Neumann)**</ins> 집합 $S$가 *ordinal<sub>서수</sub>*이라는 것은, $S$의 각각의 원소들이 $\in$으로 strictly well-ordered되어있고, 또 $S$의 각각의 원소들이 $S$의 부분집합이기도 한 것이다. 
 
 </div>
 
@@ -55,7 +55,7 @@ $\emptyset$은 vacuous하게 ordinal이고, 모든 자연수들도 ordinal이 �
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 만일 $\alpha$가 ordinal number라면, $\alpha$의 successor $S(\alpha)=\alpha\cup\\{\alpha\\}$ 또한 ordinal이다.
+<ins id="prop3">**명제 3**</ins> 만일 $\alpha$가 ordinal number라면, $\alpha$의 successor $S(\alpha)=\alpha\cup\\{\alpha\\}$ 또한 ordinal이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -69,7 +69,7 @@ $\emptyset$은 vacuous하게 ordinal이고, 모든 자연수들도 ordinal이 �
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> $(A_i)\_{i\in I}$가 well-ordered set들의 family이고, 어떠한 $i,j\in I$에 대해서도 $A_i$와 $A_j$ 중 어느 하나는 다른 하나의 segment라 하자. 그럼 집합 $A=\bigcup\_{i\in I}A_i$ 위에서의 유일한 order relation이 존재한다. 이는 well-ordering이고 $A_i$의 segment는 $A$의 segment가 되며, $A$ 자기자신을 제외한 $A$의 segment는 어떤 $A_i$의 segment가 된다.
+<ins id="prop4">**명제 4**</ins> $(A_i)\_{i\in I}$가 well-ordered set들의 family이고, 어떠한 $i,j\in I$에 대해서도 $A_i$와 $A_j$ 중 어느 하나는 다른 하나의 segment라 하자. 그럼 집합 $A=\bigcup\_{i\in I}A_i$ 위에서의 유일한 order relation이 존재한다. 이는 well-ordering이고 $A_i$의 segment는 $A$의 segment가 되며, $A$ 자기자신을 제외한 $A$의 segment는 어떤 $A_i$의 segment가 된다.
 
 </div>
 
@@ -110,7 +110,7 @@ $$0,1,2,\cdots; \omega$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 임의의 ordinal $\alpha$에 대하여, $\alpha$의 maximal element $\beta$가 존재하면 $\alpha$를 *successor ordinal<sub>따름서수</sub>*이라 정의하고, 그렇지 않다면 $\alpha$를 *limit ordinal<sub>극한서수</sub>*이라 부른다.
+<ins id="def6">**정의 6**</ins> 임의의 ordinal $\alpha$에 대하여, $\alpha$의 maximal element $\beta$가 존재하면 $\alpha$를 *successor ordinal<sub>따름서수</sub>*이라 정의하고, 그렇지 않다면 $\alpha$를 *limit ordinal<sub>극한서수</sub>*이라 부른다.
 
 </div>
 

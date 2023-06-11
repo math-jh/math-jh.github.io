@@ -29,7 +29,7 @@ Family $(A\_i)\_{i\in I}$의 모든 집합들이 어떤 집합 $A$의 부분집�
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $(A\_i)\_{i\in I}$가 집합들의 family라 하자. 그럼 <phrase>적어도 하나의 $A_i$에 속해있는 $x$들을 모두 모아둔 집합</phrase>을 이 family의 *합집합<sub>union</sub>*이라 하고, 이를 $\bigcup\_{i\in I}A\_i$로 적는다.
+<ins id="def1">**정의 1**</ins> $(A\_i)\_{i\in I}$가 집합들의 family라 하자. 그럼 <phrase>적어도 하나의 $A_i$에 속해있는 $x$들을 모두 모아둔 집합</phrase>을 이 family의 *합집합<sub>union</sub>*이라 하고, 이를 $\bigcup\_{i\in I}A\_i$로 적는다.
 
 </div>
 
@@ -41,7 +41,7 @@ $$\exists i(i\in I\wedge x\in A_i)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> $(A\_i)\_{i\in I}$가 집합들의 family이고, $I$가 공집합이 아니라 하자. 그럼 <phrase>모든 $A_i$에 속해있는 $x$들의 집합</phrase>을 이 family의 *교집합<sub>intersection</sub>*이라 하고 $\bigcap\_{i\in I}A\_i$로 적는다.
+<ins id="def2">**정의 2**</ins> $(A\_i)\_{i\in I}$가 집합들의 family이고, $I$가 공집합이 아니라 하자. 그럼 <phrase>모든 $A_i$에 속해있는 $x$들의 집합</phrase>을 이 family의 *교집합<sub>intersection</sub>*이라 하고 $\bigcap\_{i\in I}A\_i$로 적는다.
 
 </div>
 
@@ -53,7 +53,7 @@ $$\forall i(i\in I\implies x\in A_i)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 집합들의 family $(A\_i)\_{i\in I}$가 집합 $A$의 부분집합들의 family라 하자. 그럼 <phrase>$A$의 원소이면서 동시에 모든 $A_i$에 속해있는 $x$들의 집합</phrase>을 이 family의 *교집합*이라 부르며, $\bigcap\_{i\in I}A\_i$로 적는다.
+<ins id="def3">**정의 3**</ins> 집합들의 family $(A\_i)\_{i\in I}$가 집합 $A$의 부분집합들의 family라 하자. 그럼 <phrase>$A$의 원소이면서 동시에 모든 $A_i$에 속해있는 $x$들의 집합</phrase>을 이 family의 *교집합*이라 부르며, $\bigcap\_{i\in I}A\_i$로 적는다.
 
 </div>
 
@@ -65,7 +65,7 @@ $$(x\in A)\wedge (\forall i(i\in I\implies x\in A_i))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> 집합들의 family $(A\_i)\_{i\in I}$와 전사함수 $f:K\rightarrow I$를 생각하자. 그럼 다음의 두 식
+<ins id="prop4">**명제 4**</ins> 집합들의 family $(A\_i)\_{i\in I}$와 전사함수 $f:K\rightarrow I$를 생각하자. 그럼 다음의 두 식
 
 $$\bigcup_{k\in K}A_{f(k)}=\bigcup_{i\in I}A_i,\qquad \bigcap_{k\in K}A_{f(k)}=\bigcap_{i\in I}A_i$$
 
@@ -107,7 +107,7 @@ $$\bigcup_{j\in J}A_j\subset\bigcup_{i\in I} A_i,\qquad\bigcap_{j\in J}A_j\supse
 
 <div class="proposition" markdown="1">
 
-<ins id="df5">**명제 5**</ins>  $(A\_i)\_{i\in I}$가 집합들의 family고, index set $I$가 family $(J\_k)\_{k\in K}$들의 합집합이라 하자. 그럼
+<ins id="def5">**명제 5**</ins>  $(A\_i)\_{i\in I}$가 집합들의 family고, index set $I$가 family $(J\_k)\_{k\in K}$들의 합집합이라 하자. 그럼
 
 $$\bigcup_{i\in I} A_i=\bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right),\quad \bigcap_{i\in I}A_i=\bigcap_{k\in K}\left(\bigcap_{j\in J_k} A_j\right)$$
 
@@ -134,7 +134,7 @@ $$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subset\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins>  $(A\_i)\_{i\in I}$가 집합 $A$의 부분집합의 family고 $(R,A,B)$가 이항관계라 하자. 그럼
+<ins id="prop6">**명제 6**</ins>  $(A\_i)\_{i\in I}$가 집합 $A$의 부분집합의 family고 $(R,A,B)$가 이항관계라 하자. 그럼
 
 $$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subset\bigcap_{i\in I}R(A_i)$$
 
@@ -152,7 +152,7 @@ $$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins>  $f:A\rightarrow B$가 함수라 하고 $(B\_i)\_{i\in I}$가 $B$의 부분집합들의 family라 하자. 그럼 
+<ins id="prop7">**명제 7**</ins>  $f:A\rightarrow B$가 함수라 하고 $(B\_i)\_{i\in I}$가 $B$의 부분집합들의 family라 하자. 그럼 
   
   $$f^{-1}\left(\bigcap_{i\in I} B_i\right)=\bigcap_{i\in I} f^{-1}(B_i)$$
 
@@ -172,7 +172,7 @@ $$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8 (De Morgan's law)**</ins> 집합 $A$의 부분집합들의 Family $(A\_i)\_{i\in I}$에 대하여, 
+<ins id="prop8">**명제 8 (De Morgan's law)**</ins> 집합 $A$의 부분집합들의 Family $(A\_i)\_{i\in I}$에 대하여, 
   
 $$A\setminus \left(\bigcup_{i\in I}A_i\right)=\bigcap_{i\in I}(A\setminus A_i),\quad A\setminus\left(\bigcap_{i\in I} A_i\right)=\bigcup_{i\in I} (A\setminus A_i)$$
 

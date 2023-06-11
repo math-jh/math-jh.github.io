@@ -23,7 +23,7 @@ Preorder relation $(R,A,A)$을 생각하고, 임의의 부분집합 $A'\subseteq
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> 위의 집합 $R\cap (A'\times A')$는 $A'$ 위에 정의된 preorder relation이다.
+<ins id="prop1">**명제 1**</ins> 위의 집합 $R\cap (A'\times A')$는 $A'$ 위에 정의된 preorder relation이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -47,7 +47,7 @@ $$x\leq y\iff \forall i((i\in I)\implies(x_i\leq_{\tiny R_i} y_i))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 위의 관계 $\leq$는 $\prod A_i$ 위에 정의된 preorder relation이다.
+<ins id="prop2">**명제 2**</ins> 위의 관계 $\leq$는 $\prod A_i$ 위에 정의된 preorder relation이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -67,11 +67,11 @@ $$x_i\leq y_i\leq z_i\implies x_i\leq z_i$$
 
 <ins id="ex3">**예시 3**</ins>  임의의 집합 $A$에서 $B$로의 함수 $f$는 index set을 $A$로 하여, 각각의 $a\in A$마다 $B$를 곱한 집합 $B^A=\prod_{a\in A}B$의 원소로 볼 수 있다.
 
-이제 집합 $B$ 위에 preorder relation $R$이 정의되었다 하자. 앞선 [명제 2](#pp2)에 의하여 preorder relation들의 곱은 함수들의 집합 $B^A$ 위에 preorder relation을 정의한다. 이를 $\leq$라 적기로 하면, $f\leq g$는 임의의 $x\in A$에 대하여 $f(x)\leq_{\tiny R} g(x)$임을 의미한다. 
+이제 집합 $B$ 위에 preorder relation $R$이 정의되었다 하자. 앞선 [명제 2](#prop2)에 의하여 preorder relation들의 곱은 함수들의 집합 $B^A$ 위에 preorder relation을 정의한다. 이를 $\leq$라 적기로 하면, $f\leq g$는 임의의 $x\in A$에 대하여 $f(x)\leq_{\tiny R} g(x)$임을 의미한다. 
 
 </div>
 
-앞선 두 절의 내용은 preorder relation을 모두 order relation으로 바꾸어도 성립한다. 즉 원래 주어진 preorder relation이 antisymmetry를 가져서 order relation이 되었다면, [명제 1](#pp1)과 [명제 2](#pp2)에서 얻어지는 preorder relation 또한 antisymmetry를 만족하고 따라서 order relation이 된다.
+앞선 두 절의 내용은 preorder relation을 모두 order relation으로 바꾸어도 성립한다. 즉 원래 주어진 preorder relation이 antisymmetry를 가져서 order relation이 되었다면, [명제 1](#prop1)과 [명제 2](#prop2)에서 얻어지는 preorder relation 또한 antisymmetry를 만족하고 따라서 order relation이 된다.
 
 이 경우 strict order를 살펴볼 때에는 약간의 주의가 필요하다. 가령 집합 $B$에 order relation $R$이 주어졌다 하고, $R$에 의해 정의되는 strict order를 $S$라 하자. [예시 3](#ex3)을 통해 만들어진 order relation $\leq$로부터 만들어지는 strict order $&lt;$는 다음의 관계
 
@@ -81,7 +81,7 @@ $$f< g\iff\forall x\bigl((x\in A)\implies (f(x)<_{\tiny R}g(x))\bigr)$$
 
 ## 단조함수
 
-<ins id="df4">**정의 4**</ins> Preorder $R,R'$가 주어진 집합 $A$와 $A'$를 생각하자. 함수 $f:A\rightarrow A'$가 *증가함수<sub>increasing function</sub>*이라는 것은 $x\leq\_{\tiny R} y\implies f(x)\leq\_{\tiny R'} f(y)$가 항상 성립하는 것이다. 만약 $x\leq\_{\tiny R}y\implies f(y)\leq\_{\tiny R'} f(x)$가 항상 성립한다면, 이 함수는 *감소함수<sub>decreasing function</sub>*라 불린다. 증가함수와 감소함수를 통틀어 *단조함수<sub>monotone function</sub>*라 부른다.
+<ins id="def4">**정의 4**</ins> Preorder $R,R'$가 주어진 집합 $A$와 $A'$를 생각하자. 함수 $f:A\rightarrow A'$가 *증가함수<sub>increasing function</sub>*이라는 것은 $x\leq\_{\tiny R} y\implies f(x)\leq\_{\tiny R'} f(y)$가 항상 성립하는 것이다. 만약 $x\leq\_{\tiny R}y\implies f(y)\leq\_{\tiny R'} f(x)$가 항상 성립한다면, 이 함수는 *감소함수<sub>decreasing function</sub>*라 불린다. 증가함수와 감소함수를 통틀어 *단조함수<sub>monotone function</sub>*라 부른다.
 {: .definition}
 
 <ins id="rmk1">**참고**</ins> 임의의 상수함수는 증가함수인 동시에 감소함수이다. 그러나 이 역이 성립하는 것은 아니다. $A$가 하나 이상의 원소를 갖는 집합이라 하고. 이 위에 정의된 order relation $=$를 생각하자. 그럼 $A$에서 $A$로의 항등함수는 증가함수인 동시에 감소함수지만 상수함수는 아니다.
@@ -89,7 +89,7 @@ $$f< g\iff\forall x\bigl((x\in A)\implies (f(x)<_{\tiny R}g(x))\bigr)$$
 
 그리고, $\leq$를 $&lt;$로 바꾸면 다음 정의를 얻는다.
 
-<ins id="df5">**정의 5**</ins> Strict order $S,S'$가 주어진 집합 $A$와 $A'$를 생각하자. 함수 $f:A\rightarrow A'$가 *순증가함수<sub>strictly increasing function</sub>*라는 것은 $x <\_{\tiny S} y\implies f(x) <\_{\tiny S'} f(y)$가 항상 참인 것이고, *순감소함수<sub>strictly decreasing function</sub>*라는 것은 $x <\_{\tiny S} y\implies f(y)<\_{\tiny S'}f(x)$가 항상 성립하는 것이다. 순증가함수, 순감소함수들을 통틀어 *순단조함수<sub>strictly monotone function</sub>*라 한다.
+<ins id="def5">**정의 5**</ins> Strict order $S,S'$가 주어진 집합 $A$와 $A'$를 생각하자. 함수 $f:A\rightarrow A'$가 *순증가함수<sub>strictly increasing function</sub>*라는 것은 $x <\_{\tiny S} y\implies f(x) <\_{\tiny S'} f(y)$가 항상 참인 것이고, *순감소함수<sub>strictly decreasing function</sub>*라는 것은 $x <\_{\tiny S} y\implies f(y)<\_{\tiny S'}f(x)$가 항상 성립하는 것이다. 순증가함수, 순감소함수들을 통틀어 *순단조함수<sub>strictly monotone function</sub>*라 한다.
 {: .definition}
 
 <div class="remark" markdown="1">
@@ -101,7 +101,7 @@ $$m\prec n\iff ((m-n\text{ is even}) \wedge (m<n))$$
 으로 정의하고, 이 집합을 $A$라 하자. 즉, $A$에서는 짝수는 짝수끼리, 홀수는 홀수끼리 크기 비교가 가능하지만 짝수와 홀수의 크기 비교는 불가능하다. 또, 자연수 집합 $\mathbb{N}$에 일상적인 strict order $&lt;$를 부여한 ordered set을 $B$라 하자. 그럼 $A$에서 $B$로의 함수 $m\mapsto \lfloor m/2\rfloor$은 순증가지만 단사함수는 아니다.
 </div>
 
-<ins id="pp6">**명제 6**</ins> $A$, $A'$가 ordered set이고 $u:A\rightarrow A'$, $v:A'\rightarrow A$가 감소함수이며, $v(u(x))\geq x$와 $u(v(x'))\geq x'$이 모든 $x\in A$, $x'\in A'$에 대해 성립한다고 하자. 그럼 $u\circ v\circ u=u$ 이고 $v\circ u\circ v=v$이다.
+<ins id="prop6">**명제 6**</ins> $A$, $A'$가 ordered set이고 $u:A\rightarrow A'$, $v:A'\rightarrow A$가 감소함수이며, $v(u(x))\geq x$와 $u(v(x'))\geq x'$이 모든 $x\in A$, $x'\in A'$에 대해 성립한다고 하자. 그럼 $u\circ v\circ u=u$ 이고 $v\circ u\circ v=v$이다.
 {: .proposition}
 
 <details class="proof" markdown="1">
