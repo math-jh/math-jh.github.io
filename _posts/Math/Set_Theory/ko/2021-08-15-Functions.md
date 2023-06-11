@@ -25,7 +25,7 @@ $${<}=\{(0,1),(0,2),\ldots, (1,2),(1,3),\ldots, \}$$
 
 ![elements](/assets/images/Math/Set_Theory/Functions-1.png){:width="297.45px" class="invert" .align-center}
 
-이제 [§이항관계, ⁋정의 7](/ko/math/set_theory/binary_relation#df7)의 표기를 따르면 ${<}(1)$은 $(1,n)\in\mathbb{N}$이도록 하는 모든 $n\in\mathbb{N}$들의 모임이고 따라서
+이제 [§이항관계, ⁋정의 7](/ko/math/set_theory/binary_relation#def7)의 표기를 따르면 ${<}(1)$은 $(1,n)\in\mathbb{N}$이도록 하는 모든 $n\in\mathbb{N}$들의 모임이고 따라서
 
 $${<}(1)=\{2,3,\ldots\}$$
 
@@ -37,7 +37,7 @@ $${<}(1)=\{2,3,\ldots\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 공집합이 아닌 집합 $A$에 대하여, 이항관계 $f=(F,A,B)$가 *함수<sub>function</sub>*라는 것은 $A=\pr_1F$이고 각각의 $x\in A$에 대하여 $F(\\{x\\})$가 한원소집합[^1]인 것이다.
+<ins id="def1">**정의 1**</ins> 공집합이 아닌 집합 $A$에 대하여, 이항관계 $f=(F,A,B)$가 *함수<sub>function</sub>*라는 것은 $A=\pr_1F$이고 각각의 $x\in A$에 대하여 $F(\\{x\\})$가 한원소집합[^1]인 것이다.
 
 </div>
 
@@ -47,7 +47,7 @@ $${<}(1)=\{2,3,\ldots\}$$
 
 인 것이다. 이 때의 $y$를 $f$의 $x$에서의 *함숫값*이라 부르고, 이 때 집합 $F(\\{x\\})$의 유일한 원소를 $f(x)$로 표기한다. 또, 집합 $A=\pr_1F$를 $f$의 *정의역<sub>domain</sub>*이라 부른다.
 
-위의 표기를 따라, 이항관계 $F$에 대한 집합 $X\subseteq A$의 image는 $F(X)$ 대신 $f(X)$로, 집합 $Y\subseteq B$의 preimage도 $F^{-1}(Y)$ 대신 $f^{-1}(Y)$로 적는다. ([§이항관계, ⁋정의 5](/ko/math/set_theory/binary_relation#df5)와 [§이항관계들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_binary_relations#df1)) 또, triple $f=(F,A,B)$는 간단히 $f:A\rightarrow B$과 같이 적는다.
+위의 표기를 따라, 이항관계 $F$에 대한 집합 $X\subseteq A$의 image는 $F(X)$ 대신 $f(X)$로, 집합 $Y\subseteq B$의 preimage도 $F^{-1}(Y)$ 대신 $f^{-1}(Y)$로 적는다. ([§이항관계, ⁋정의 5](/ko/math/set_theory/binary_relation#def5)와 [§이항관계들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_binary_relations#def1)) 또, triple $f=(F,A,B)$는 간단히 $f:A\rightarrow B$과 같이 적는다.
 
 한편, 함수 $f=(F,A,B)$를 나타내는 집합
 
@@ -57,7 +57,15 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 
 특수한 경우에는 함숫값을 나타내기 위해 $f_x$ 등과 같은 표현도 사용한다. 이러한 표기법을 사용할 때에는 특별히 $f$의 정의역을 *index set<sub>첨수집합</sub>*이라 부르고, 이 때 $F$를 *family*라 부른다. $f=(F,I,A)$를 family로 생각할 때에는 $F$를 나타낼 때 $(f\_i)\_{i\in I}$와 같이 표기한다.
 
-만일 $f$가 어떠한 집합 $A$에서 $A$로의 함수라면, $x\in A$가 $f$에 의해 *고정된다*는 것은 $f(x)=x$인 것이다. 예컨대 *항등함수* $\id_A=(\Delta_A,A,A)$는 모든 $A$의 원소를 고정하는 함수가 된다. 
+만일 $f$가 어떠한 집합 $A$에서 $A$로의 함수라면, $x\in A$가 $f$에 의해 *고정된다*는 것은 $f(x)=x$인 것이다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def2">**정의 2**</ins> 임의의 집합 $A$에 대하여, *항등함수* $\id_A$를 triple $(\Delta_A,A,A)$으로 정의한다. 즉, $\id_A$는 임의의 $x\in A$에 대하여, 식 $f(x)=x$로 정의되는 함수이다.
+
+</div>
+
+정의에 의하여, $\id_A$는 $A$의 모든 원소를 고정하는 함수이다.
 
 ## Commutative diagram
 
@@ -81,7 +89,7 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 
 $${\id_B}\circ h=f\circ g,\qquad h\circ{\id_C}=f\circ{\id_A}\circ g,\quad\cdots$$
 
-를 모두 포함하는 것이다. 그러나 [§이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#df9)에서 살펴본 항등함수의 성질에 의해 위의 식들은 모두 $h=f\circ g$와 다를 것이 없다. 반면
+를 모두 포함하는 것이다. 그러나 [§이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9)에서 살펴본 항등함수의 성질에 의해 위의 식들은 모두 $h=f\circ g$와 다를 것이 없다. 반면
 
 ![commuting_triangle_2](/assets/images/Math/Set_Theory/Functions-5.png){:width="122.4px" class="invert" .align-center}
 
@@ -99,7 +107,7 @@ $${\id_A}=g\circ h\circ f,\quad {\id_B}=f\circ g\circ h,\quad {\id_C}=h\circ f\c
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 두 함수 $f=(F,A,B),f'=(F',A',B')$가 집합 $S$에서 *compatible*하다는 것은 $S$가 $f$와 $f'$의 정의역에 각각 포함되어 있고, 모든 $x\in S$에 대하여 $f(x)=f'(x)$인 것이다.
+<ins id="def3">**정의 3**</ins> 두 함수 $f=(F,A,B),f'=(F',A',B')$가 집합 $S$에서 *compatible*하다는 것은 $S$가 $f$와 $f'$의 정의역에 각각 포함되어 있고, 모든 $x\in S$에 대하여 $f(x)=f'(x)$인 것이다.
 
 </div>
 
@@ -111,7 +119,7 @@ $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\ca
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 두 함수 $f=(F,A,B)$, $f'=(F',A',B')$가 주어졌다 하자. 만일 $F\subseteq F'$이고 $B\subseteq B'$라면 $f'$를 $f$의 *extension<sub>확장</sub>*이라 부르고, $f'$가 $f$를 확장한다고 말한다.
+<ins id="def4">**정의 4**</ins> 두 함수 $f=(F,A,B)$, $f'=(F',A',B')$가 주어졌다 하자. 만일 $F\subseteq F'$이고 $B\subseteq B'$라면 $f'$를 $f$의 *extension<sub>확장</sub>*이라 부르고, $f'$가 $f$를 확장한다고 말한다.
 
 </div>
 
@@ -123,7 +131,7 @@ $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\ca
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 위와 같이 정의된 함수 $g$를 $f$의 $A$ 위로의 *restriction<sub>제한</sub>*이라 부르며, 이를 $f\|\_{X}$와 같이 적는다.
+<ins id="def5">**정의 5**</ins> 위와 같이 정의된 함수 $g$를 $f$의 $A$ 위로의 *restriction<sub>제한</sub>*이라 부르며, 이를 $f\|\_{X}$와 같이 적는다.
 
 </div>
 

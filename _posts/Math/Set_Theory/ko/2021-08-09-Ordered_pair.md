@@ -23,7 +23,7 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $A\subseteq B$라는 것은 임의의 $x$에 대하여, 명제 $x\in A\implies x\in B$이 항상 참인 것이다. 
+<ins id="def1">**정의 1**</ins> $A\subseteq B$라는 것은 임의의 $x$에 대하여, 명제 $x\in A\implies x\in B$이 항상 참인 것이다. 
 
 </div>
 
@@ -31,7 +31,7 @@ weight: 2
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $A\subseteq A$가 항상 성립한다.
+<ins id="prop2">**명제 2**</ins> $A\subseteq A$가 항상 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -43,7 +43,7 @@ $x\in A\implies x\in A$가 항상 참이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> $A\subseteq B$이고 $B\subseteq C$이면 $A\subseteq C$이다.
+<ins id="prop3">**명제 3**</ins> $A\subseteq B$이고 $B\subseteq C$이면 $A\subseteq C$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -53,7 +53,7 @@ $x\in A\implies x\in A$가 항상 참이다.
 
 </details>
 
-위 두 명제로부터 $\subseteq$가 집합들 사이의 순서관계가 된다는 것을 안다. ([§순서관계 (1), ⁋정의 1](/ko/math/set_theory/order_relations#df1))
+위 두 명제로부터 $\subseteq$가 집합들 사이의 순서관계가 된다는 것을 안다. ([§순서관계 (1), ⁋정의 1](/ko/math/set_theory/order_relations#def1))
 
 ## 순서쌍
 
@@ -71,7 +71,7 @@ $$F=\{(x_1,f(x_1)), (x_2,f(x_2)),\cdots\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> *순서쌍<sub>ordered pair</sub>* $(x,y)$를 집합 $\big\\{\\{x\\}, \\{x,y\\}\big\\}$으로 정의한다.
+<ins id="def4">**정의 4**</ins> *순서쌍<sub>ordered pair</sub>* $(x,y)$를 집합 $\big\\{\\{x\\}, \\{x,y\\}\big\\}$으로 정의한다.
 
 </div>
 
@@ -95,7 +95,7 @@ $$F=\{(x_1,f(x_1)), (x_2,f(x_2)),\cdots\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 두 순서쌍 $(x,y)$, $(x',y')$에 대하여, <phrase>$(x,y)=(x',y')$인 것</phrase>과 <phrase>$x=x'$이고 $y=y'$인 것</phrase>이 서로 동치이다.
+<ins id="prop6">**명제 6**</ins> 두 순서쌍 $(x,y)$, $(x',y')$에 대하여, <phrase>$(x,y)=(x',y')$인 것</phrase>과 <phrase>$x=x'$이고 $y=y'$인 것</phrase>이 서로 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -135,7 +135,7 @@ $$\left\{s\in\bigcup z\mid P(s)\right\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> 위의 과정으로 얻어진 두 집합 $\\{x\\}$, $\\{y\\}$에 대하여, $\\{x\\}$의 유일한 원소 $x$를 $z=(x,y)$의 *첫 번째 성분*, $\\{y\\}$의 유일한 원소 $y$를 $z=(x,y)$의 *두 번째 성분*이라 부르며, 이를 각각 
+<ins id="def7">**정의 7**</ins> 위의 과정으로 얻어진 두 집합 $\\{x\\}$, $\\{y\\}$에 대하여, $\\{x\\}$의 유일한 원소 $x$를 $z=(x,y)$의 *첫 번째 성분*, $\\{y\\}$의 유일한 원소 $y$를 $z=(x,y)$의 *두 번째 성분*이라 부르며, 이를 각각 
 
 $$x=\pr_1 z,\qquad y=\pr_2 z$$
 
@@ -147,13 +147,13 @@ $$x=\pr_1 z,\qquad y=\pr_2 z$$
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> 두 집합 $A$, $B$에 대하여, 다음의 집합
+<ins id="def8">**정의 8**</ins> 두 집합 $A$, $B$에 대하여, 다음의 집합
 
 $$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 을 $A$와 $B$의 *cartesian product<sub>데카르트 곱</sub>*라 부르고, 간단히 $A\times B$로 표시한다. 
 
-또, [정의 7](#df7)과 유사하게 집합 $A$와 $B$를 $A\times B$의 첫 번째와 두 번째 성분이라 부른다.
+또, [정의 7](#def7)과 유사하게 집합 $A$와 $B$를 $A\times B$의 첫 번째와 두 번째 성분이라 부른다.
 
 </div>
 
@@ -161,7 +161,7 @@ $$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> 공집합이 아닌 두 집합 $A'$, $B'$에 대하여, <phrase>$A'\times B'\subseteq A\times B$인 것</phrase>과 <phrase>$A'\subseteq A$이고 $B'\subseteq B$인 것</phrase>이 동치이다.
+<ins id="prop9">**명제 9**</ins> 공집합이 아닌 두 집합 $A'$, $B'$에 대하여, <phrase>$A'\times B'\subseteq A\times B$인 것</phrase>과 <phrase>$A'\subseteq A$이고 $B'\subseteq B$인 것</phrase>이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -179,7 +179,7 @@ $A,B$ 둘 중 하나가 공집합일 때는 다음 명제를 적용할 수 있�
 
 <div class="proposition" markdown="1">
 
-<ins id="pp10">**명제 10**</ins> 두 집합 $A$, $B$에 대하여, <phrase>$A\times B=\emptyset$인 것</phrase>과 <phrase>$A=\emptyset$이거나 $B=\emptyset$인 것</phrase>이 동치이다.
+<ins id="prop10">**명제 10**</ins> 두 집합 $A$, $B$에 대하여, <phrase>$A\times B=\emptyset$인 것</phrase>과 <phrase>$A=\emptyset$이거나 $B=\emptyset$인 것</phrase>이 동치이다.
 
 </div>
 <details class="proof" markdown="1">

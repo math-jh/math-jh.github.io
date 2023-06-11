@@ -25,7 +25,7 @@ weight: 1
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 집합 $A$에 대하여, $A\times A$에서 $E$로의 함수 $\star$를 *이항연산*이라 부른다. 이항연산이 주어져 있는 집합을 *마그마*라 부른다.
+<ins id="def1">**정의 1**</ins> 집합 $A$에 대하여, $A\times A$에서 $E$로의 함수 $\star$를 *이항연산*이라 부른다. 이항연산이 주어져 있는 집합을 *마그마*라 부른다.
 
 </div>
 
@@ -51,7 +51,7 @@ $$4-(1-2)=5\neq 1=(4-1)-2$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 마그마 $(A,\star)$에 대하여, 임의의 $x$, $y$, $z\in A$에 대해 다음의 식
+<ins id="def3">**정의 3**</ins> 마그마 $(A,\star)$에 대하여, 임의의 $x$, $y$, $z\in A$에 대해 다음의 식
 
 $$x\star(y\star z)=(x\star y)\star z$$
 
@@ -69,7 +69,7 @@ $$(x\star y)\star z=x\star(y\star z)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 마그마 $(A, \star)$에 대하여, 만일 임의의 $x,y\in A$에 대해 다음의 식
+<ins id="def4">**정의 4**</ins> 마그마 $(A, \star)$에 대하여, 만일 임의의 $x,y\in A$에 대해 다음의 식
 
 $$x\star y=y\star x$$
 
@@ -95,7 +95,7 @@ $$(x_i)_{i\in I}\star(y_i)_{i\in I}=(x_i\star_i y_i)_{i\in I}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 두 마그마 $(A,\star)$, $(A',\star')$ 사이의 함수 $f:A\rightarrow A'$가 다음의 식
+<ins id="def6">**정의 6**</ins> 두 마그마 $(A,\star)$, $(A',\star')$ 사이의 함수 $f:A\rightarrow A'$가 다음의 식
 
 $$f(x\star y)=f(x)\star'f(y)$$
 
@@ -107,9 +107,25 @@ $$g\circ f=\id_A,\qquad f\circ g=\id_{A'}$$
 
 </div>
 
-대수학에서는 $f$의 image를  $f(A)$ 대신 $\im f$와 같이 적는 것이 보통이다. 
+<div class="proposition" markdown="1">
 
-임의의 $w,z\in\im f$를 택하자. 그럼 어떤 $x,y\in A$가 존재하여 $w=f(x)$이고, $z=f(y)$이다. 이제
+<ins id="prop7">**명제 7**</ins> Magma homomorphism $f:A_1\rightarrow A_2$, $g:A_2\rightarrow A_3$에 대하여 합성 $g\circ f$는 magma homomorphism이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+임의의 $x,y\in A_1$에 대하여,
+
+$$(g\circ f)(x\star_1 y)=g(f(x\star_1y))=g(f(x)\star_2f(y))=g(f(x))\star_3g(f(y))=(g\circ f)(x)\star_3(g\circ f)(y)$$
+
+이 성립한다.
+
+</details>
+
+따라서 magma들을 대상으로, magma homomorphism을 morphism으로 갖는 카테고리 $\Magma$가 존재한다.
+
+대수학에서는 $f$의 image를 $f(A)$ 대신 $\im f$와 같이 적는 것이 보통이다. 임의의 $w,z\in\im f$를 택하자. 그럼 어떤 $x,y\in A$가 존재하여 $w=f(x)$이고, $z=f(y)$이다. 이제
 
 $$w\star'z=f(x)\star'f(y)=f(x\star y)$$
 
@@ -119,7 +135,7 @@ $$w\star'z=f(x)\star'f(y)=f(x\star y)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> 마그마 $(A,\star)$에 대하여, 만일 $A$의 어떤 부분집합 $S$가 $\star$에 대해 닫혀있다면, $S$를 $A$의 *부분마그마<sub>submagma</sub>*라고 부른다.
+<ins id="def8">**정의 8**</ins> 마그마 $(A,\star)$에 대하여, 만일 $A$의 어떤 부분집합 $S$가 $\star$에 대해 닫혀있다면, $S$를 $A$의 *부분마그마<sub>submagma</sub>*라고 부른다.
 
 </div>
 
@@ -137,7 +153,7 @@ $$x\star y\equiv x'\star y'\pmod{R}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> 마그마 $(A,\star)$ 위에 동치관계 $R$이 정의되었다고 하자. 임의의 $a\in A$에 대하여
+<ins id="def9">**정의 9**</ins> 마그마 $(A,\star)$ 위에 동치관계 $R$이 정의되었다고 하자. 임의의 $a\in A$에 대하여
 
 $$x\equiv x'\implies a\star x\equiv a\star x'$$
 
@@ -150,7 +166,7 @@ $$x\equiv x'\implies x\star a\equiv x'\star a$$
 
 물론 위의 식에서 $\equiv$는 항상 관계 $R$에 대한 것을 뜻한다.
 
-$R$이 동치관계라면 집합으로써 *몫집합* $A/R$이 잘 정의된다는 것은 이미 집합론에서 살펴본 적이 있다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#df4)) 집합 $A/R$ 위의 연산 $\tiny\char\"2606$을 정의하기 위한 가장 자연스러운 시도는
+$R$이 동치관계라면 집합으로써 *몫집합* $A/R$이 잘 정의된다는 것은 이미 집합론에서 살펴본 적이 있다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4)) 집합 $A/R$ 위의 연산 $\tiny\char\"2606$을 정의하기 위한 가장 자연스러운 시도는
 
 $$[x]\mathbin{\tiny\char"2606}[y]=[x\star y]$$
 
@@ -168,7 +184,7 @@ $$x'\star y\equiv x\star y\mod R$$
 
 <div class="definition" markdown="1">
 
-<ins id="df9">**정의 9**</ins> 마그마 $(A,\star)$ 위에 $\star$와 compatible한 동치관계 $R$이 주어졌다 하자. 위와 같이 얻어지는 마그마 $(A/R,\mathbin{\tiny\char\"2606})$을 *몫마그마<sub>quotient magma</sub>*라 부른다.
+<ins id="def10">**정의 10**</ins> 마그마 $(A,\star)$ 위에 $\star$와 compatible한 동치관계 $R$이 주어졌다 하자. 위와 같이 얻어지는 마그마 $(A/R,\mathbin{\tiny\char\"2606})$을 *몫마그마<sub>quotient magma</sub>*라 부른다.
 
 </div>
 

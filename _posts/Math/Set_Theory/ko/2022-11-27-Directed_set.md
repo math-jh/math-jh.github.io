@@ -27,14 +27,14 @@ Preordered set $A$에 대하여, $X\subseteq A$가 $A$에서 *cofinal* (resp. *c
 
 Hasse diagram에서, 큰 원소는 위쪽에 적는 것이 보편적이지만 바로 위의 diagram과 같이 큰 원소를 오른쪽에 적을 때도 있다.
 
-<ins id="df1">**정의 1**</ins>  Preordered set $A$가 *right directed<sub>오른쪽으로 유향</sub>*이라는 것은 $A$의 원소 두 개짜리 임의의 부분집합이 bounded above인 것이다. 이와 비슷하게 preordered set $A$가 *left directed<sub>왼쪽으로 유향</sub>*라는 것은 $A$의 원소 두 개짜리 부분집합이 bounded below인 것이다.
+<ins id="def1">**정의 1**</ins>  Preordered set $A$가 *right directed<sub>오른쪽으로 유향</sub>*이라는 것은 $A$의 원소 두 개짜리 임의의 부분집합이 bounded above인 것이다. 이와 비슷하게 preordered set $A$가 *left directed<sub>왼쪽으로 유향</sub>*라는 것은 $A$의 원소 두 개짜리 부분집합이 bounded below인 것이다.
 {: .definition}
 
 예컨대 임의의 집합 $A$에 대하여, 순서집합 $(\mathcal{P}(A),\subseteq)$는 right directed이다. 임의의 $X, Y\in\mathcal{P}(A)$에 대하여, $X\cup Y$는 $\mathcal{P}(A)$의 원소이고 $X$와 $Y$의 upper bound이기 때문이다. 이를 diagram으로 나타내면 다음과 같다.
 
 ![directed_system](/assets/images/Math/Set_Theory/Directed_set-2.png){:width="394.05px" class="invert" .align-center}
 
-<ins id="pp2">**명제 2**</ins>  Ordered set $A$가 right directed라면 $A$의 maximal element는 greatest element이기도 하다.
+<ins id="prop2">**명제 2**</ins>  Ordered set $A$가 right directed라면 $A$의 maximal element는 greatest element이기도 하다.
 {: .proposition}
 
 <details class="proof" markdown="1">
@@ -45,7 +45,7 @@ $A$가 right directed이므로, 임의의 $x\in A$와 maximal element $a$로 이
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> $(A_i)$가 right directed set들의 family라면 $\prod A\_i$ 또한 right directed이다.
+<ins id="prop3">**명제 3**</ins> $(A_i)$가 right directed set들의 family라면 $\prod A\_i$ 또한 right directed이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -59,7 +59,7 @@ $(x\_i),(y\_i)\in\prod A\_i$라 하자. 그럼 각각의 $i$에 대하여, $x\_i
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Ordered set $A$가 *lattice*라는 것은 $A$의 임의의 원소 두 개짜리 부분집합이 supremum과 infimum을 갖는 것이다. 이 때, 두 원소 $\sup\\{x,y\\}$와 $\inf\\{x,y\\}$를 각각 $x,y$의 *join*과 *meet*이라 부르고, $x\vee y$와 $x\wedge y$로 적는다. 
+<ins id="def4">**정의 4**</ins> Ordered set $A$가 *lattice*라는 것은 $A$의 임의의 원소 두 개짜리 부분집합이 supremum과 infimum을 갖는 것이다. 이 때, 두 원소 $\sup\\{x,y\\}$와 $\inf\\{x,y\\}$를 각각 $x,y$의 *join*과 *meet*이라 부르고, $x\vee y$와 $x\wedge y$로 적는다. 
 
 </div>
 
@@ -67,7 +67,7 @@ Lattice $A$의 임의의 <em_ko>유한한</em_ko> 부분집합은 supremum과 in
 
 ## Totally ordered set
 
-<ins id="df5">**정의 5**</ins> Preordered set $A$에서의 두 원소 $x$, $y$가 *comparable<sub>비교가능</sub>*하다는 것은 명제 <phrase>$x\leq y$ 혹은 $y\leq x$</phrase>이 성립하는 것이다. 만약 집합 $A$의 임의의 두 원소가 comparable하다면, 이를 *totally ordered set<sub>전순서집합</sub>*이라 부른다.
+<ins id="def5">**정의 5**</ins> Preordered set $A$에서의 두 원소 $x$, $y$가 *comparable<sub>비교가능</sub>*하다는 것은 명제 <phrase>$x\leq y$ 혹은 $y\leq x$</phrase>이 성립하는 것이다. 만약 집합 $A$의 임의의 두 원소가 comparable하다면, 이를 *totally ordered set<sub>전순서집합</sub>*이라 부른다.
 {: .definition}
 
 만약 $A$가 totally ordered set이라면, trichotomy가 성립한다. 즉,임의의 $x, y\in A$에 대하여,  
@@ -76,7 +76,7 @@ $$x=y,\qquad x < y,\qquad x > y$$
 
 중 하나가 성립한다. 이 경우엔 $x\leq y$의 부정이 $x > y$가 된다. 하지만 totally ordered set이라는 조건이 빠진 상태에서 이는 일반적으로 성립하지 않는다. ([§순서관계의 정의, ⁋참고](/ko/math/set_theory/order_relations#rmk1))
 
-<ins id="pp6">**명제 6**</ins> Totally ordered set $A$에서 ordered set $B$로의 모든 순단조함수 $f$는 단사함수다. 만약 $f$가 순증가라면, $f$는 $A$에서 $f(A)$로의 isomorphism이다.
+<ins id="prop6">**명제 6**</ins> Totally ordered set $A$에서 ordered set $B$로의 모든 순단조함수 $f$는 단사함수다. 만약 $f$가 순증가라면, $f$는 $A$에서 $f(A)$로의 isomorphism이다.
 {: .proposition}
 <details class="proof" markdown="1">
 <summary>증명</summary>
@@ -86,7 +86,7 @@ $f$가 순단조함수라 하자. 그럼 임의의 $x\neq y$에 대하여, $x > 
 
 위의 명제 또한 일반적인 ordered set에서는 성립하지 않았었다. ([§단조함수, ⁋참고](/ko/math/set_theory/monotone_functions#rmk2))
 
-<ins id="pp7">**명제 7**</ins> $A$가 totally ordered set이고 $X$가 그 부분집합이라 하자. 그럼 $b\in A$가 $X$의 supremum인 것은 $b$가 $X$의 upper bound이고, $c < b$를 만족하는 임의의 $c\in A$에 대하여 $x\in X$이 존재하여 $c < x\leq b$인 것과 동치이다.
+<ins id="prop7">**명제 7**</ins> $A$가 totally ordered set이고 $X$가 그 부분집합이라 하자. 그럼 $b\in A$가 $X$의 supremum인 것은 $b$가 $X$의 upper bound이고, $c < b$를 만족하는 임의의 $c\in A$에 대하여 $x\in X$이 존재하여 $c < x\leq b$인 것과 동치이다.
 {: .proposition}
 
 <details class="proof" markdown="1">
@@ -100,7 +100,7 @@ $A$가 ordered set이고, $a\leq b$라 하자. 그럼 $a\leq x\leq b$를 만족�
 추가로, $x\leq a$를 만족하는 모든 $x$를 모아둔 부분집합을 *unbounded*인 닫힌구간이라 부르고 $(-\infty, a]$로 적는다. $[a,\infty)$, $(-\infty, a)$, $(a, \infty)$도 유사하게 정의한다. 
 
 
-<ins id="pp8">**명제 8**</ins> Lattice에서 두 interval의 교집합도 interval이다.
+<ins id="prop8">**명제 8**</ins> Lattice에서 두 interval의 교집합도 interval이다.
 {: .proposition}
 
 ---

@@ -23,7 +23,7 @@ weight: 12
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 이항관계 $(R,A,A)$가 *symmetric<sub>대칭적</sub>*이라는 것은 $x\mathrel{R}y$가 성립하면 $y\mathrel{R}x$도 성립하는 것이다. 만일 
+<ins id="def1">**정의 1**</ins> 이항관계 $(R,A,A)$가 *symmetric<sub>대칭적</sub>*이라는 것은 $x\mathrel{R}y$가 성립하면 $y\mathrel{R}x$도 성립하는 것이다. 만일 
 
 $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
@@ -44,7 +44,7 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 이항관계 $(R,A,A)$가 동치관계인 것은 다음의 세 조건
+<ins id="prop3">**명제 3**</ins> 이항관계 $(R,A,A)$가 동치관계인 것은 다음의 세 조건
 
 $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
@@ -77,7 +77,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 동치관계 $(R,A,A)$를 생각하자. 임의의 $x\in A$에 대하여, $x$에서의 section $R(x)$를 $R$에서 $x$의 *equivalence class<sub>동치류</sub>*라 부른다. 이러한 equivalence class들의 모임을 $R$의 *quotient set<sub>몫집합</sub>*이라 부르고, $A/R$로 표기한다.
+<ins id="def4">**정의 4**</ins> 동치관계 $(R,A,A)$를 생각하자. 임의의 $x\in A$에 대하여, $x$에서의 section $R(x)$를 $R$에서 $x$의 *equivalence class<sub>동치류</sub>*라 부른다. 이러한 equivalence class들의 모임을 $R$의 *quotient set<sub>몫집합</sub>*이라 부르고, $A/R$로 표기한다.
 
 </div>
 
@@ -91,7 +91,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 <ins id="ex5">**예시 5**</ins> 집합 $A$ 위에서 <phrase>$x=y$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $x$의 equivalence class는 집합 $\{x\}$이다. 한편 동일한 예시에서 <phrase>$x\in A$이고 $y\in A$</phrase> 또한 동치관계였는데, 이 경우 $x$의 equivalence class는 $A$ 전체가 된다. 
 
-우리는 앞선 [예시 2](#ex2)에서 $\Delta_A$가 가장 <em_ko>작고</em_ko>, $A\times A$가 가장 <em_ko>크다</em_ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $\Delta_A$가 가장 *finer*한 동치관계이고, $A\times A$는 가장 *coarser*한 동치관계라고 하는 것이 일반적이다. ([§집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#df1))
+우리는 앞선 [예시 2](#ex2)에서 $\Delta_A$가 가장 <em_ko>작고</em_ko>, $A\times A$가 가장 <em_ko>크다</em_ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $\Delta_A$가 가장 *finer*한 동치관계이고, $A\times A$는 가장 *coarser*한 동치관계라고 하는 것이 일반적이다. ([§집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#def1))
 
 </div>
 
@@ -105,7 +105,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 우선 위의 식으로 정의된 $p$가 실제로 함수가 된다는 것은 어렵지 않게 보일 수 있다. 여기에서는 동치관계만 보인다.
 
-우선 $x\sim\_{\tiny R} y$이라 가정하자. 그럼 $y\in [x]\_R=R(x)$로부터 $\\{y\\}\subseteq R(x)$이고, 따라서 [§이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#pp6)과 [명제 3](#pp3)에 의하여
+우선 $x\sim\_{\tiny R} y$이라 가정하자. 그럼 $y\in [x]\_R=R(x)$로부터 $\\{y\\}\subseteq R(x)$이고, 따라서 [§이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#prop6)과 [명제 3](#prop3)에 의하여
 
 $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
@@ -121,7 +121,7 @@ $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
 <div class="definition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> $(A_i)\_{i\in I}$가 $A$의 분할이라 하자. 그럼 
+<ins id="prop7">**명제 7**</ins> $(A_i)\_{i\in I}$가 $A$의 분할이라 하자. 그럼 
 
 > 어떤 $i$가 존재하여 $x,y\in A_i$이다
 
