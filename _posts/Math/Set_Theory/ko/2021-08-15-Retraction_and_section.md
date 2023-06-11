@@ -21,7 +21,7 @@ weight: 7
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> 함수 $f:A\rightarrow B$를 생각하자. 만일 어떠한 $r:B\rightarrow A$가 존재하여 $r\circ f=\id\_A$라면 $f$는 단사함수다. 또 어떠한 $s:B\rightarrow A$가 존재하여 $f\circ s=\id\_B$라면 $f$는 전사함수다.  
+<ins id="prop1">**명제 1**</ins> 함수 $f:A\rightarrow B$를 생각하자. 만일 어떠한 $r:B\rightarrow A$가 존재하여 $r\circ f=\id\_A$라면 $f$는 단사함수다. 또 어떠한 $s:B\rightarrow A$가 존재하여 $f\circ s=\id\_B$라면 $f$는 전사함수다.  
 
 반대로, 만일 $f$가 전사함수라면 어떤 $s:B\rightarrow A$가 존재하여 $f\circ s=\id\_B$이고, 만일 $f$가 단사함수라면 어떤 $r:B\rightarrow A$가 존재하여 $r\circ f=\id\_A$이다.
 
@@ -52,7 +52,7 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> $f$가 $A$에서 $B$로의 단사함수라 하자. 그럼 $r\circ f=\id\_A$를 만족하는 함수 $r:B\rightarrow A$를 $f$의 *retraction<sub>수축</sub>*이라 한다.  
+<ins id="def2">**정의 2**</ins> $f$가 $A$에서 $B$로의 단사함수라 하자. 그럼 $r\circ f=\id\_A$를 만족하는 함수 $r:B\rightarrow A$를 $f$의 *retraction<sub>수축</sub>*이라 한다.  
 만일 $f$가 $A$에서 $B$로의 전사함수라면, $f\circ s=\id\_B$를 만족하는 함수 $s:B\rightarrow A$를 $f$의 *section<sub>단면</sub>*이라 부른다.
 
 </div>
@@ -63,7 +63,7 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 두 함수 $f:A\rightarrow B$와 $f':B\rightarrow C$에 대하여, $f''=f'\circ f$라 하자.
+<ins id="prop3">**명제 3**</ins> 두 함수 $f:A\rightarrow B$와 $f':B\rightarrow C$에 대하여, $f''=f'\circ f$라 하자.
 
 1. 만일 $f$와 $f'$가 모두 단사함수라면 $f''$ 또한 마찬가지이다.  
    이 때 $r$과 $r'$을 $f$와 $f'$ 각각의 retraction이라 하면, $r\circ r'$이 $f''$의 retraction이 된다.
@@ -105,7 +105,7 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins>
+<ins id="prop4">**명제 4**</ins>
 
 1. $A,B,C$가 집합이라 하고, 전사함수 $g:A\rightarrow B$와 함수 $f:A\rightarrow C$를 생각하자. 그럼 <phrase>$f=h\circ g$를 만족하는 $h:B\rightarrow C$가 존재하는 것</phrase>은 <phrase>$(g(x)=g(y))\implies(f(x)=f(y))$가 성립하는 것</phrase>과 동치이다.  
    만약 이 조건들이 만족되면, $f=h\circ g$를 만족하는 $h$는 $h$는 $f$에 의해 유일하게 결정되며, 만일 $s$가 $g$의 section이라면 $h=f\circ s$이다. 

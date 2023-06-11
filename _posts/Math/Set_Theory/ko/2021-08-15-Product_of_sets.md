@@ -27,7 +27,7 @@ weight: 10
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $(A_i)\_{i\in I}$가 집합들의 family라 하자. 그럼 $I$에서 $\bigcup A_i$로의 모든 함수들 중, $x_i=f(i)\in A_i$를 만족하는 것들의 모임 $P$를 이 family의 *곱<sub>product</sub>*이라 부른다.
+<ins id="def1">**정의 1**</ins> $(A_i)\_{i\in I}$가 집합들의 family라 하자. 그럼 $I$에서 $\bigcup A_i$로의 모든 함수들 중, $x_i=f(i)\in A_i$를 만족하는 것들의 모임 $P$를 이 family의 *곱<sub>product</sub>*이라 부른다.
 
 집합들의 family를 표기할 때와 마찬가지로, $P$의 원소들을 $(x_i)\_{i\in I}$로 적으며, 각각의 $x_i$를 *$i$번째 성분*이라 부르며, $F\in P$를 $F(i)$로 대응시키는 함수를 *$i$번째 성분함수*라 부르고 $\pr\_i$로 적는다.
 
@@ -47,7 +47,7 @@ weight: 10
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 위의 diagram에서, $u$가 전사함수고 $v$가 단사함수라면 $f\mapsto \tilde{f}$는 단사함수다. 만일 $u$가 단사함수고 $v$가 전사함수라면, $f\mapsto \tilde{f}$는 전사함수다.
+<ins id="prop2">**명제 2**</ins> 위의 diagram에서, $u$가 전사함수고 $v$가 단사함수라면 $f\mapsto \tilde{f}$는 단사함수다. 만일 $u$가 단사함수고 $v$가 전사함수라면, $f\mapsto \tilde{f}$는 전사함수다.
 
 </div>
 <details class="proof" markdown="1">
@@ -97,15 +97,15 @@ $$\pr_i(f(y))=f_i(y)=\pr_i(f'(y))$$
 
 </details>
 
-이제 [정리 3](#thm3)의 조건을 만족하는 $(P, \pr\_i)$가 적어도 하나는 존재하므로 ([정의 1](#df1)), 이를 곱집합의 정의로 삼아도 된다. 즉,  $(A\_i)\_{i\in I}$들의 곱은 다음의 universal property를 만족하는 집합 $\prod\_{i\in I} A\_i$와 함수들 $\pr\_i:\prod\_{i\in I}A\_i\rightarrow A_i$이라 할 수 있다.
+이제 [정리 3](#thm3)의 조건을 만족하는 $(P, \pr\_i)$가 적어도 하나는 존재하므로 ([정의 1](#def1)), 이를 곱집합의 정의로 삼아도 된다. 즉,  $(A\_i)\_{i\in I}$들의 곱은 다음의 universal property를 만족하는 집합 $\prod\_{i\in I} A\_i$와 함수들 $\pr\_i:\prod\_{i\in I}A\_i\rightarrow A_i$이라 할 수 있다.
 
 ![universal_property_of_product](/assets/images/Math/Set_Theory/Product_of_sets-2.png){:width="283.65px" class="invert" .align-center}
 
-[§집합의 합, ⁋따름정리 9](/ko/math/set_theory/sum_of_sets#crl9)와 정확하게 같은 논리를 펼치면 이 universal property를 만족하는 대상 및 $\pr\_i$들 또한 전단사함수에 대해 유일함을 확인할 수 있다. 
+[§집합의 합, ⁋따름정리 9](/ko/math/set_theory/sum_of_sets#cor9)와 정확하게 같은 논리를 펼치면 이 universal property를 만족하는 대상 및 $\pr\_i$들 또한 전단사함수에 대해 유일함을 확인할 수 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> 집합 $A$, $B$, $C$에 대해 $f:B\times C\rightarrow A$라 하자. 만일 $\tilde{f}$가 $C$에서 $\Fun(B,A)$로의 함수 $y\mapsto f(-,y)$라면, $f\mapsto\tilde{f}$는 전단사함수이다. 즉, $\Fun(B\times C,A)$와 $\Fun(C, \Fun(B, A))$ 사이의 전단사함수가 존재한다.
+<ins id="prop4">**명제 4**</ins> 집합 $A$, $B$, $C$에 대해 $f:B\times C\rightarrow A$라 하자. 만일 $\tilde{f}$가 $C$에서 $\Fun(B,A)$로의 함수 $y\mapsto f(-,y)$라면, $f\mapsto\tilde{f}$는 전단사함수이다. 즉, $\Fun(B\times C,A)$와 $\Fun(C, \Fun(B, A))$ 사이의 전단사함수가 존재한다.
 
 </div>
 
@@ -144,7 +144,7 @@ $$\begin{aligned}
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> $(A_i)\_{i\in I}$가 집합들의 family이고 $u:K\rightarrow I$가 전단사라 하자. 임의의 $f:I\rightarrow \prod_{i\in I}A\_i$에 대해, 이를 $f\circ u: K\rightarrow \prod\_{i\in I} A\_i$로 보내는 함수 $f\mapsto f\circ u$는 전단사함수이다.
+<ins id="prop5">**명제 5**</ins> $(A_i)\_{i\in I}$가 집합들의 family이고 $u:K\rightarrow I$가 전단사라 하자. 임의의 $f:I\rightarrow \prod_{i\in I}A\_i$에 대해, 이를 $f\circ u: K\rightarrow \prod\_{i\in I} A\_i$로 보내는 함수 $f\mapsto f\circ u$는 전단사함수이다.
 
 </div>
 
@@ -154,7 +154,7 @@ $$\begin{aligned}
 
 ![induced_bijection](/assets/images/Math/Set_Theory/Product_of_sets-3.png){:width="275.25px"  class="invert" .align-center}
 
-여기서 $v$는 $(x_i)\_{i\in I}$를 $(x\_{u(k)})\_{k\in K}$로 대응시키는 전단사함수이다. 그럼 위의 [명제 2](#pp2)에 의하여 $F\mapsto F\circ U$는 전단사다.
+여기서 $v$는 $(x_i)\_{i\in I}$를 $(x\_{u(k)})\_{k\in K}$로 대응시키는 전단사함수이다. 그럼 위의 [명제 2](#prop2)에 의하여 $F\mapsto F\circ U$는 전단사다.
 </details>
 
 

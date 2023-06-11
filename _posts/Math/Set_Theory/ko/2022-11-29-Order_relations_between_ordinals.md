@@ -23,7 +23,7 @@ weight: 22
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> $A,B$가 두 well-ordered set들이라 하자. 그럼 적어도 다음 중 하나가 성립한다.
+<ins id="prop1">**명제 1**</ins> $A,B$가 두 well-ordered set들이라 하자. 그럼 적어도 다음 중 하나가 성립한다.
 1. $A$에서 $B$의 segment로의 order isomorphism이 존재하거나,
 2. $B$에서 $A$의 segment로의 order isomorphism이 존재한다.
 
@@ -105,7 +105,7 @@ $A$가 well-ordered set이라 하고, 집합 $X$를
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 임의의 집합 $A$에 대하여, $A$의 어떠한 부분집합과도 전단사함수가 존재하지 않는 가장 작은 ordinal number를 $A$의 *Hartogs number*라고 부르고, $h(A)$로 표기한다. 
+<ins id="def3">**정의 3**</ins> 임의의 집합 $A$에 대하여, $A$의 어떠한 부분집합과도 전단사함수가 존재하지 않는 가장 작은 ordinal number를 $A$의 *Hartogs number*라고 부르고, $h(A)$로 표기한다. 
 
 </div>
 
@@ -113,7 +113,7 @@ Successor ordinal들은 이들의 <em_ko>이전</em_ko> ordinal과의 전단사�
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Ordinal $\alpha$가 *initial ordinal*이라는 것은, $\beta&lt;\alpha$를 만족하는 모든 $\beta$에 대해, $\beta$와 $\alpha$ 사이의 전단사함수가 존재하지 않는 것이다.
+<ins id="def4">**정의 4**</ins> Ordinal $\alpha$가 *initial ordinal*이라는 것은, $\beta&lt;\alpha$를 만족하는 모든 $\beta$에 대해, $\beta$와 $\alpha$ 사이의 전단사함수가 존재하지 않는 것이다.
 
 </div>
 

@@ -29,7 +29,7 @@ weight: 16
 
 ## 극대원소와 극소원소
 
-<ins id="df1">**정의 1**</ins> Ordered set $A$의 원소 $a$가 $A$의 *minimal element<sub>극소원소</sub>* (resp. *maximal element<sub>극대원소</sub>*)라는 것은 모든 $x\in A$에 대하여 $a\leq x$ (resp. $a\geq x$)이면 $x=a$가 성립하는 것이다.
+<ins id="def1">**정의 1**</ins> Ordered set $A$의 원소 $a$가 $A$의 *minimal element<sub>극소원소</sub>* (resp. *maximal element<sub>극대원소</sub>*)라는 것은 모든 $x\in A$에 대하여 $a\leq x$ (resp. $a\geq x$)이면 $x=a$가 성립하는 것이다.
 {: .definition}
 
 Minimal element가 유일할 필요는 없다. 예컨대
@@ -40,12 +40,12 @@ Minimal element가 유일할 필요는 없다. 예컨대
 
 ## 최대원소와 최소원소
 
-<ins id="df2">**정의 2**</ins> Ordered set $A$의 원소 $a$가 $A$의 *least element<sub>최소원소</sub>* (resp. *greatest element<sub>최대원소</sub>*)라는 것은 모든 $x\in A$에 대해서 $a\leq x$ (resp. $x\leq a$)인 것이다.
+<ins id="def2">**정의 2**</ins> Ordered set $A$의 원소 $a$가 $A$의 *least element<sub>최소원소</sub>* (resp. *greatest element<sub>최대원소</sub>*)라는 것은 모든 $x\in A$에 대해서 $a\leq x$ (resp. $x\leq a$)인 것이다.
 {: .definition}
 
 앞선 예시에서, $b$와 $c$는 least element가 될 수 없다. $b\leq c$와 $c\leq b$가 성립하지 않기 때문이다. 정의에 의해 least element는 유일하다. 더욱이 다음이 성립한다.
 
-<ins id="pp3">**명제 3**</ins> 만일 $A$가 least element $a$를 갖는다면, $a$는 $A$의 유일한 minimal element이다.
+<ins id="prop3">**명제 3**</ins> 만일 $A$가 least element $a$를 갖는다면, $a$는 $A$의 유일한 minimal element이다.
 {: .proposition}
 
 <details class="proof" markdown="1">
@@ -53,13 +53,13 @@ Minimal element가 유일할 필요는 없다. 예컨대
 
 $A$의 임의의 원소 $x$에 대하여 $a\leq x$가 성립한다. 따라서 만일 $x\leq a$가 성립하는 $x\in A$가 존재한다면, $\leq$의 antisymmetry로부터 $x=a$여야 한다. 이로부터 $a$가 $A$의 minimal element가 된다는 것을 안다. 
 
-만일 $a'$가 $A$의 다른 minimal element이고, $a'\neq a$라면 [정의 1](#df1)의 대우명제로부터 $a'\not\leq a$여야 하는데, 이는 $a$가 least element라는 사실에 모순이므로 $a'=a$여야 한다.
+만일 $a'$가 $A$의 다른 minimal element이고, $a'\neq a$라면 [정의 1](#def1)의 대우명제로부터 $a'\not\leq a$여야 하는데, 이는 $a$가 least element라는 사실에 모순이므로 $a'=a$여야 한다.
 
 </details>
 
 때때로 ordered set의 모든 원소보다 큰 새로운 원소, 혹은 모든 원소보다 작은 새로운 원소를 생각해야 할 필요가 있다. 이러한 가상의 원소는 $\pm\infty$으로 쓰는 것이 보편적이다.
 
-<ins id="pp4">**명제 4**</ins> $A$가 ordered set이고 $A'=A\sqcup\\{+\infty\\}$이라 하자. 그럼 $A$에서 정의된 order relation을 확장하며, $a$를 greatest element로 갖는 $A'$의 order relation이 존재한다.
+<ins id="prop4">**명제 4**</ins> $A$가 ordered set이고 $A'=A\sqcup\\{+\infty\\}$이라 하자. 그럼 $A$에서 정의된 order relation을 확장하며, $a$를 greatest element로 갖는 $A'$의 order relation이 존재한다.
 {: .proposition}
 
 <details class="proof" markdown="1">
@@ -73,7 +73,7 @@ $A$의 임의의 원소 $x$에 대하여 $a\leq x$가 성립한다. 따라서 �
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> Preordered set $A$와 그 부분집합 $X$가 주어졌다 하자. $a\in A$가 모든 $x\in X$에 대해 $a\leq x$ (resp. $a\geq x$)를 만족한다면, 이를 $A$에서의 $X$의 *lower bound<sub>하계</sub>* (resp. *upper bound<sub>상계</sub>*)라 부른다.
+<ins id="def5">**정의 5**</ins> Preordered set $A$와 그 부분집합 $X$가 주어졌다 하자. $a\in A$가 모든 $x\in X$에 대해 $a\leq x$ (resp. $a\geq x$)를 만족한다면, 이를 $A$에서의 $X$의 *lower bound<sub>하계</sub>* (resp. *upper bound<sub>상계</sub>*)라 부른다.
 
 Lower bound (resp. upper bound)를 갖는 집합을 *bounded below<sub>아래로 유계</sub>* (resp. *bounded above<sub>위로 유계</sub>*)라 하고, bounded below이면서 bounded above인 집합을 간단히 *bounded<sub>유계</sub>*라 한다.
 
@@ -85,14 +85,14 @@ Lower bound (resp. upper bound)를 갖는 집합을 *bounded below<sub>아래로
 
 그럼 $a$는 집합 $X=\left\\{c,d,e\right\\}$의 upper bound지만 $b$는 그렇지 않다. 집합 $X'=\left\\{d,e\right\\}$를 생각한다면, $a$와 $b$ 모두가 이 집합의 upper bound이다. 위의 예시로부터 집합 $X$의 lower bound가 $X$에 포함될 필요는 없지만, 만일 이것이 성립한다면 그 원소는 $X$의 least element가 된다.
 
-<ins id="df6">**정의 6**</ins> $A$가 ordered set이고 $X\subseteq A$이라 하자. $A$의 어떤 원소 $a$가 $X$의 *greatest lower bound<sub>최대하계</sub>* (혹은 *infimum<sub>하한</sub>*)라는 것은 이 원소가 $X$의 lower bound 중 greatest element라는 것이다. 이와 유사하게 *least upper bound<sub>최소상계</sub>* (혹은 *supremum<sub>상한</sub>*)도 정의한다.
+<ins id="def6">**정의 6**</ins> $A$가 ordered set이고 $X\subseteq A$이라 하자. $A$의 어떤 원소 $a$가 $X$의 *greatest lower bound<sub>최대하계</sub>* (혹은 *infimum<sub>하한</sub>*)라는 것은 이 원소가 $X$의 lower bound 중 greatest element라는 것이다. 이와 유사하게 *least upper bound<sub>최소상계</sub>* (혹은 *supremum<sub>상한</sub>*)도 정의한다.
 {: .definition}
 
 $X\subseteq A$의 supremum이 존재한다면, 이를 $\sup_AX$로 쓰고, infimum은 $\inf_AX$로 쓴다. 정의에 의하여, $X\subseteq A$가 greatest element $a$를 갖는다면 $a=\sup_AX$임을 쉽게 확인할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> $A$가 ordered set이고 $X\subset A$가 supremum과 infimum을 모두 갖는다 하자. 
+<ins id="prop7">**명제 7**</ins> $A$가 ordered set이고 $X\subset A$가 supremum과 infimum을 모두 갖는다 하자. 
 
 1. 만일 $X\neq\emptyset$일 경우 $\inf_A X\leq\sup_A X$이다.
 2. 만일 $X=\emptyset$이라면, $\sup_AX$와 $\inf_AX$는 각각 $A$의 least, greatest element가 된다.
@@ -111,7 +111,7 @@ $X\subseteq A$의 supremum이 존재한다면, 이를 $\sup_AX$로 쓰고, infim
 
 이제 지금까지 살펴본 집합의 연산과 상한, 하한의 관계를 살펴본다.
 
-<ins id="pp8">**명제 8**</ins> Ordered set $A$의 두 부분집합 $X,X'$에 대하여, $\sup_AX,\sup_AX'$가 각각 정의되고 $X'\subseteq X$라면 $\sup X'\leq\sup X$이다.
+<ins id="prop8">**명제 8**</ins> Ordered set $A$의 두 부분집합 $X,X'$에 대하여, $\sup_AX,\sup_AX'$가 각각 정의되고 $X'\subseteq X$라면 $\sup X'\leq\sup X$이다.
 {: .proposition}
 
 <details class="proof" markdown="1">
@@ -119,7 +119,7 @@ $X\subseteq A$의 supremum이 존재한다면, 이를 $\sup_AX$로 쓰고, infim
 $x\in X'$를 임의로 택하자. $X'\subseteq X$이므로, $x\in X$이다. 한편 임의의 $x\in X$에 대하여 $x\leq \sup X$가 성립하고 따라서 $\sup X$는 $X'$의 upper bound이다. 이제 정의에 의해 $\sup X'\leq \sup X$이다. 
 </details>
 
-<ins id="pp9">**명제 9**</ins> Ordered set $A$에 대해, 모든 $i\in I$에 대해 $x_i\leq y_i$를 만족하는 family $(x_i)\_{i\in I}$, $(y_i)\_{i\in I}$를 생각하자. 이들이 모두 $A$에서 supremum을 갖는다면, $\sup_{i\in I} x_i\leq \sup_{i\in I} y_i$이다.
+<ins id="prop9">**명제 9**</ins> Ordered set $A$에 대해, 모든 $i\in I$에 대해 $x_i\leq y_i$를 만족하는 family $(x_i)\_{i\in I}$, $(y_i)\_{i\in I}$를 생각하자. 이들이 모두 $A$에서 supremum을 갖는다면, $\sup_{i\in I} x_i\leq \sup_{i\in I} y_i$이다.
 {: .proposition}
 
 <details class="proof" markdown="1">
@@ -128,7 +128,7 @@ $x\in X'$를 임의로 택하자. $X'\subseteq X$이므로, $x\in X$이다. 한�
 임의의 $i\in I$에 대하여, $x_i\leq y_i$이고 $y_i\leq \sup y_i$이므로 모든 $i$에 대해 $x_i\leq \sup y_i$이고 따라서 $\sup x_i$의 minimality에 의해 $\sup x_i\leq\sup y_i$이다.
 </details>
 
-<ins id="pp10">**명제 10**</ins>  Ordered set $A$와 index set $I$, 그리고 $I$의 covering $(J_k)_{i\in I}$에 대하여, $(x_i)\_{i\in J_k}$가 $A$에서 supremum을 갖는다 하자. 그럼 $\sup\_{i\in I} x_i$가 존재하는 것은 $\sup\_{k\in K}(\sup\_{j\in J_k}x_j)$가 존재하는 것과 동치이며 두 값은 같다.
+<ins id="prop10">**명제 10**</ins>  Ordered set $A$와 index set $I$, 그리고 $I$의 covering $(J_k)_{i\in I}$에 대하여, $(x_i)\_{i\in J_k}$가 $A$에서 supremum을 갖는다 하자. 그럼 $\sup\_{i\in I} x_i$가 존재하는 것은 $\sup\_{k\in K}(\sup\_{j\in J_k}x_j)$가 존재하는 것과 동치이며 두 값은 같다.
 {: .proposition}
 
 <details class="proof" markdown="1">
@@ -140,7 +140,7 @@ $b_k=\sup\_{i\in J_k} x_i$라 적자. 우선 $(x_i)\_{i\in I}$가 supremum을 �
 
 </details>
 
-<ins id="pp11">**명제 11**</ins>  Ordered set $(A_i)\_{i\in I}$들의 곱 $A=\prod A_i$와 그 부분집합 $X$에 대해 $X_i=\pr\_i X$라 하자. 그럼 $\sup_AX$가 존재하는 것과 각각의 $\sup\_{A_i}X_i$가 존재하는 것은 동치이며, $\sup_AX=(\sup\_{A_i}X_i)$이다.
+<ins id="prop11">**명제 11**</ins>  Ordered set $(A_i)\_{i\in I}$들의 곱 $A=\prod A_i$와 그 부분집합 $X$에 대해 $X_i=\pr\_i X$라 하자. 그럼 $\sup_AX$가 존재하는 것과 각각의 $\sup\_{A_i}X_i$가 존재하는 것은 동치이며, $\sup_AX=(\sup\_{A_i}X_i)$이다.
 {: .proposition}
 <details class="proof" markdown="1">
 <summary>증명</summary>
@@ -165,7 +165,7 @@ $b_k=\sup\_{i\in J_k} x_i$라 적자. 우선 $(x_i)\_{i\in I}$가 supremum을 �
 
 <div class="proposition" markdown="1">
 
-<ins id="pp12">**명제 12**</ins>  $A$가 ordered set이고, $X'\subseteq X\subseteq A$이라 하자. 만일 $\sup_AX'$와 $\sup_XX'$이 모두 존재한다면 $\sup_AX'\leq\sup_XX'$이다. 만일 $\sup_AX'$이 존재하고 $X$에 속한다면 $\sup_XX'$도 존재하고 이 값은 $\sup_AX'$와 같다.
+<ins id="prop12">**명제 12**</ins>  $A$가 ordered set이고, $X'\subseteq X\subseteq A$이라 하자. 만일 $\sup_AX'$와 $\sup_XX'$이 모두 존재한다면 $\sup_AX'\leq\sup_XX'$이다. 만일 $\sup_AX'$이 존재하고 $X$에 속한다면 $\sup_XX'$도 존재하고 이 값은 $\sup_AX'$와 같다.
 
 </div>
 <details class="proof" markdown="1">

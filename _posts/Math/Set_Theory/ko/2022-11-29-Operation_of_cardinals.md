@@ -23,7 +23,7 @@ weight: 25
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $(\mathfrak{a}\_i)\_{i\in I}$가 cardinal들의 family라 하자. 집합 $\mathfrak{a}\_i$들의 곱 (resp. 합)의 cardinal을 이들의 *cardinal product*(resp. *cardinal sum*)이라 부르고 $\prod\_{i\in I}\mathfrak{a}\_i$ (resp. $\sum\_{i\in I}\mathfrak{a}_i$)로 적는다.
+<ins id="def1">**정의 1**</ins> $(\mathfrak{a}\_i)\_{i\in I}$가 cardinal들의 family라 하자. 집합 $\mathfrak{a}\_i$들의 곱 (resp. 합)의 cardinal을 이들의 *cardinal product*(resp. *cardinal sum*)이라 부르고 $\prod\_{i\in I}\mathfrak{a}\_i$ (resp. $\sum\_{i\in I}\mathfrak{a}_i$)로 적는다.
 
 </div>
 
@@ -33,7 +33,7 @@ weight: 25
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $(\mathfrak{a}\_i)\_{i\in I}$가 cardinal들의 family이고, $f$가 $K$에서 $I$로의 bijection이라 하자. 그럼 
+<ins id="prop2">**명제 2**</ins> $(\mathfrak{a}\_i)\_{i\in I}$가 cardinal들의 family이고, $f$가 $K$에서 $I$로의 bijection이라 하자. 그럼 
 
 $$\sum_{k\in K}\mathfrak{a}_{f(k)}=\sum_{i\in I}\mathfrak{a}_i,\quad \prod_{k\in K}\mathfrak{a}_{f(k)}=\prod_{i\in I}\mathfrak{a}_i$$ 
 
@@ -47,13 +47,13 @@ $$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§집합의 합, ⁋명제 7](/ko/math/set_theory/sum_of_sets#pp7)에 의하여 우리는 cardinal들의 합을 mutually disjoint family의 합집합으로 취급할 수 있다. 이제, 첫 번째 식들은 각각 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#pp4), [§집합의 곱, ⁋명제 5](/ko/math/set_theory/product_of_sets#pp5)의 결과들이며, 두 번째 식들은 [§합집합과 교집합, ⁋명제 5](/ko/math/set_theory/union_and_intersection#pp5)와 [§곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#pp3)의 결과들이다.
+[§집합의 합, ⁋명제 7](/ko/math/set_theory/sum_of_sets#prop7)에 의하여 우리는 cardinal들의 합을 mutually disjoint family의 합집합으로 취급할 수 있다. 이제, 첫 번째 식들은 각각 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#prop4), [§집합의 곱, ⁋명제 5](/ko/math/set_theory/product_of_sets#prop5)의 결과들이며, 두 번째 식들은 [§합집합과 교집합, ⁋명제 5](/ko/math/set_theory/union_and_intersection#prop5)와 [§곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3)의 결과들이다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> $(\mathfrak{a}\_i)\_{i\in I}$가 cardinal들의 family이고, $J$ (resp. $K$)가 $I$의 부분집합 중 다음의 식 $\mathfrak{a}\_i=\mathbf{0}$ for all $i\not\in J$ (resp. $\mathfrak{a}\_i=\mathbf{1}$ for all $i\not\in K$)을 만족하는 부분집합이라 하자. 그럼 
+<ins id="prop3">**명제 3**</ins> $(\mathfrak{a}\_i)\_{i\in I}$가 cardinal들의 family이고, $J$ (resp. $K$)가 $I$의 부분집합 중 다음의 식 $\mathfrak{a}\_i=\mathbf{0}$ for all $i\not\in J$ (resp. $\mathfrak{a}\_i=\mathbf{1}$ for all $i\not\in K$)을 만족하는 부분집합이라 하자. 그럼 
 
 $$\sum_{i\in I}\mathfrak{a}_i=\sum_{i\in J}\mathfrak{a}_i,\quad \prod_{i\in I}\mathfrak{a}_i=\prod_{i\in K}\mathfrak{a}_i$$
 
@@ -67,11 +67,11 @@ $$\sum_{i\in I}\mathfrak{a}_i=\sum_{i\in J}\mathfrak{a}_i,\quad \prod_{i\in I}\m
 
 </details>
 
-그리고, 이렇게 자명한 결과들 외에도, 곱과 합집합 사이의 분배법칙 ([§곱집합의 성질, ⁋명제 7](/ko/math/set_theory/property_of_products#pp7))를 이용하면 다음의 명제를 얻는다. 
+그리고, 이렇게 자명한 결과들 외에도, 곱과 합집합 사이의 분배법칙 ([§곱집합의 성질, ⁋명제 7](/ko/math/set_theory/property_of_products#prop7))를 이용하면 다음의 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> Cardinal들의 double-index가 주어진 family $((\mathfrak{a}\_{j,k})\_{j\in J_k})\_{k\in K}$에 대하여, $I=\prod\_{k\in K}J_k$라 하면 
+<ins id="prop4">**명제 4**</ins> Cardinal들의 double-index가 주어진 family $((\mathfrak{a}\_{j,k})\_{j\in J_k})\_{k\in K}$에 대하여, $I=\prod\_{k\in K}J_k$라 하면 
 
 $$\prod_{k\in K}\left(\sum_{j\in J_k}\mathfrak{a}_{j,k}\right)=\sum_{f\in I}\left(\prod_{k\in K}\mathfrak{a}_{k, f(k)}\right)$$
 
@@ -88,7 +88,7 @@ $$\prod_{k\in K}\left(\sum_{j\in J_k}\mathfrak{a}_{j,k}\right)=\sum_{f\in I}\lef
 
 $$\mathfrak{b}=\sum_{i\in I} \mathfrak{c}_i,\qquad \mathfrak{c}_i=1\text{ for all $i\in I$}$$
 
-을 얻고, 양 변에 $\mathfrak{a}$를 곱하여 앞선 [명제 4](#pp4)를 적용하면
+을 얻고, 양 변에 $\mathfrak{a}$를 곱하여 앞선 [명제 4](#prop4)를 적용하면
 
 $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=\sum_{i\in I}\mathfrak{a}\mathfrak{c}_i=\sum_{i\in I}\mathfrak{a}$$
 
@@ -96,19 +96,19 @@ $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> $(\mathfrak{a}\_i)\_{i\in I}$가 cardinal들의 family라 하자. 그럼 $\prod\_{i\in I}\mathfrak{a}\_i\neq \mathbf{0}$인 것은 모든 $i\in I$에 대하여 $\mathfrak{a}_i\neq \mathbf{0}$인 것과 동치이다.
+<ins id="prop5">**명제 5**</ins> $(\mathfrak{a}\_i)\_{i\in I}$가 cardinal들의 family라 하자. 그럼 $\prod\_{i\in I}\mathfrak{a}\_i\neq \mathbf{0}$인 것은 모든 $i\in I$에 대하여 $\mathfrak{a}_i\neq \mathbf{0}$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§순서쌍, ⁋명제 10](/ko/math/set_theory/ordered_pair#pp10)의 임의의 product로의 확장. 증명도 동일하게 하면 된다.
+[§순서쌍, ⁋명제 10](/ko/math/set_theory/ordered_pair#prop10)의 임의의 product로의 확장. 증명도 동일하게 하면 된다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 만일 $\mathfrak{a}$와 $\mathfrak{b}$가 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$를 만족하는 cardinal들이라면, $\mathfrak{a}=\mathfrak{b}$이다.
+<ins id="prop6">**명제 6**</ins> 만일 $\mathfrak{a}$와 $\mathfrak{b}$가 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$를 만족하는 cardinal들이라면, $\mathfrak{a}=\mathfrak{b}$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -126,7 +126,7 @@ $$f(x)=\begin{cases}a&\text{if }x=b\\ x&\text{otherwise}\end{cases}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> $\mathfrak{a}$와 $\mathfrak{b}$가 cardinal이라 하자. $\mathfrak{b}$에서 $\mathfrak{a}$로의 함수들의 집합의 cardinal를 $\mathfrak{b}^\mathfrak{a}$로 적는다.
+<ins id="def7">**정의 7**</ins> $\mathfrak{a}$와 $\mathfrak{b}$가 cardinal이라 하자. $\mathfrak{b}$에서 $\mathfrak{a}$로의 함수들의 집합의 cardinal를 $\mathfrak{b}^\mathfrak{a}$로 적는다.
 
 </div>
 
@@ -134,7 +134,7 @@ $$f(x)=\begin{cases}a&\text{if }x=b\\ x&\text{otherwise}\end{cases}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> $\mathfrak{a}$와 $\mathfrak{b}$가 cardinal이고 $I$가 $\card I=\mathfrak{b}$를 만족하는 집합이라 하자. 만일 모든 $i\in I$에 대하여 $\mathfrak{a}\_i=\mathfrak{a}$라면 $\mathfrak{a}^\mathfrak{b}=\prod_{i\in I}\mathfrak{a}_i$이다.
+<ins id="prop8">**명제 8**</ins> $\mathfrak{a}$와 $\mathfrak{b}$가 cardinal이고 $I$가 $\card I=\mathfrak{b}$를 만족하는 집합이라 하자. 만일 모든 $i\in I$에 대하여 $\mathfrak{a}\_i=\mathfrak{a}$라면 $\mathfrak{a}^\mathfrak{b}=\prod_{i\in I}\mathfrak{a}_i$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -148,7 +148,7 @@ Cardinal $\mathbf{0}$과 $\mathbf{1}$에 대한 성질들, 예컨대 $\mathfrak{
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> $A$가 집합이고 $\mathfrak{a}$가 그 cardinal이라 하자. 그럼 $\mathcal{P}(A)$의 cardinal는 $\mathbf{2}^\mathfrak{a}$이다.
+<ins id="prop9">**명제 9**</ins> $A$가 집합이고 $\mathfrak{a}$가 그 cardinal이라 하자. 그럼 $\mathcal{P}(A)$의 cardinal는 $\mathbf{2}^\mathfrak{a}$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -162,7 +162,7 @@ $\mathbf{2}=\\{\alpha, \beta\\}$가 cardinal이라 하자. 임의의 $X\in\mathc
 
 <div class="proposition" markdown="1">
 
-<ins id="pp10">**명제 10 (Cantor)**</ins> 임의의 cardinal $\mathfrak{a}$에 대하여 $\mathbf{2}^\mathfrak{a}>\mathfrak{a}$가 항상 성립한다.
+<ins id="prop10">**명제 10 (Cantor)**</ins> 임의의 cardinal $\mathfrak{a}$에 대하여 $\mathbf{2}^\mathfrak{a}>\mathfrak{a}$가 항상 성립한다.
 
 </div>
 <details class="proof" markdown="1">

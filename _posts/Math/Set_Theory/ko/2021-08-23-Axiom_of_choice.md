@@ -55,13 +55,13 @@ $\mathcal{M}$을 다음의 조건을 만족하는 관계들 $R\subseteq A\times 
 1. $G$는 $R=\pr\_1R$에서의 well-ordering이다.
 2. 각각의 $x\in U$에 대하여, $S_x\in\mathcal{S}$이고 $p(S_x)=x$이다.
 
-우리는 $\mathcal{M}$의 원소 $G$마다 정의된 $U=\pr\_1G$가 [§정렬집합의 성질들, ⁋명제 4](/ko/math/set_theory/well_ordering#pp4)의 조건을 만족함을 보일 것이다. 이를 위해 임의의 $U$, $U'$에 대하여 $U$가 $U'$의 segment이거나 그 반대라는 것을 보이자.
+우리는 $\mathcal{M}$의 원소 $G$마다 정의된 $U=\pr\_1G$가 [§정렬집합의 성질들, ⁋명제 4](/ko/math/set_theory/well_ordering#prop4)의 조건을 만족함을 보일 것이다. 이를 위해 임의의 $U$, $U'$에 대하여 $U$가 $U'$의 segment이거나 그 반대라는 것을 보이자.
 
 $G$, $G'\in \mathcal{M}$가 임의로 주어졌고 $U$, $U'$가 그 정의역이라 하자. 이 때, (1) $x$를 끝점으로 갖는 segment가 $U$와 $U'$에서 동일한 집합을 나타내고, (2) 그 segment 위에서의 order가 $G$와 동일하도록 하는, $x\in U\cap U'$들을 모아 그 집합을 $V$라 하자. 만일 $x\in V$이고 $y\in U$가 $y\leq x$를 만족한다면, $U$와 $U'$ 모두에서 $y\in S_x$이다. 또, $U$에서 $y$보다 작은 원소는 $U'$에서도 $y$보다 작다. 따라서 $y\in V$이고, $V$는 $U$의 segment이다.
 
 이제 $U$와 $U'$가 원하는 조건을 만족하기 위해서는, $U=V$이거나 반대로 $U'=V$임만 보이면 충분하다. $V\neq U$이고 $V\neq U'$라 가정하자. 그럼 $U\setminus V$와 $U'\setminus V$의 least element $x$와 $x'$에 대하여, $V=S_x=S\_{x'}$가 $U$와 $U'$ 각각에서 성립한다. 그런데 두 번째 조건에 의하여 $V\in\mathcal{S}$이므로 $x=p(S_x)=p(V)=p(S\_{x'})=x'$이고, 따라서 $x\in V$이다.
 
-이제 [§정렬집합의 성질들, ⁋명제 4](/ko/math/set_theory/well_ordering#pp4)를 활용하여 well-ordered set $M=\bigcup\_{G\in\mathcal{M}}\pr\_1G$를 얻는다. 자명하게 $M\in\mathcal{M}$이므로 $M$은 명제의 성질 1을 만족한다. 만일 $M\in\mathcal{S}$라면 $\mathcal{S}$의 조건에서 $p(M)\not\in M$이 된다. 이제 $M$에 greatest element $a=p(M)$를 추가하면, 우리는 또 다른 well-ordered set $M'=M\cup\\{a\\}$ ($S_a=M$)를 얻는다. $S_a=M\in\mathcal{S}$이고 $p(S_a)=a$이므로, $M'$은 $\mathcal{M}$의 원소가 되어 $M$의 최대성에 모순이다. 따라서 명제의 성질 2도 성립한다.
+이제 [§정렬집합의 성질들, ⁋명제 4](/ko/math/set_theory/well_ordering#prop4)를 활용하여 well-ordered set $M=\bigcup\_{G\in\mathcal{M}}\pr\_1G$를 얻는다. 자명하게 $M\in\mathcal{M}$이므로 $M$은 명제의 성질 1을 만족한다. 만일 $M\in\mathcal{S}$라면 $\mathcal{S}$의 조건에서 $p(M)\not\in M$이 된다. 이제 $M$에 greatest element $a=p(M)$를 추가하면, 우리는 또 다른 well-ordered set $M'=M\cup\\{a\\}$ ($S_a=M$)를 얻는다. $S_a=M\in\mathcal{S}$이고 $p(S_a)=a$이므로, $M'$은 $\mathcal{M}$의 원소가 되어 $M$의 최대성에 모순이다. 따라서 명제의 성질 2도 성립한다.
 </details>
 
 <details class="proof--alone" markdown="1">
@@ -72,7 +72,7 @@ $\mathcal{S}=\mathcal{P}(A)\setminus\\{A\\}$라 하자. 또, 함수 $p:\mathcal{
 
 이제 가장 범용적으로 쓰이는 선택공리의 동치인 Zorn's lemma를 소개할 차례다. 우선 다음을 정의하자.
 
-<ins id="df3">**정의 3**</ins> Ordered set $A$가 *inductive*하다는 것은 임의의 totally ordered subset이 upper bound를 갖는 것이다.
+<ins id="def3">**정의 3**</ins> Ordered set $A$가 *inductive*하다는 것은 임의의 totally ordered subset이 upper bound를 갖는 것이다.
 {: .definition}
 
 Inductive set은 저자에 따라 전혀 다른 개념을 뜻하기도 하므로 주의가 필요하다. Totally ordered subset은 *chain*이라 부르기도 한다. 
@@ -82,7 +82,7 @@ Inductive set은 저자에 따라 전혀 다른 개념을 뜻하기도 하므로
 
 모든 well-ordered set은 totally ordered set이기도 하므로, 만일 우리가 다음의 정리를 증명할 수 있다면 위의 정리는 자명하다.
 
-<ins id="pp5">**명제 5**</ins> 모든 well-ordered subset이 bounded above인 ordered set $A$는 maximal element를 갖는다.
+<ins id="prop5">**명제 5**</ins> 모든 well-ordered subset이 bounded above인 ordered set $A$는 maximal element를 갖는다.
 {: .proposition}
 
 <details class="proof" markdown="1">

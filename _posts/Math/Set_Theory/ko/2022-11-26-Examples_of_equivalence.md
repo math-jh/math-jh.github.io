@@ -25,7 +25,7 @@ weight: 13
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> 집합 $A$와 이를 정의역으로 갖는 함수 $f$가 주어졌다 하자. 그럼 $x$, $y$ 사이의 관계 <phrase>$x$, $y\in A$이고 $f(x)=f(y)$</phrase>는 $A$ 위에서의 동치관계다.
+<ins id="prop1">**명제 1**</ins> 집합 $A$와 이를 정의역으로 갖는 함수 $f$가 주어졌다 하자. 그럼 $x$, $y$ 사이의 관계 <phrase>$x$, $y\in A$이고 $f(x)=f(y)$</phrase>는 $A$ 위에서의 동치관계다.
 </div>
 
 <details class="proof" markdown="1">
@@ -37,17 +37,17 @@ weight: 13
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 위의 명제에서 정의된 동치관계를 *$f$에 의해 정의된 동치관계*라 부른다.
+<ins id="def2">**정의 2**</ins> 위의 명제에서 정의된 동치관계를 *$f$에 의해 정의된 동치관계*라 부른다.
 
 </div>
 
-동치관계 $(R,A,A)$와 이로부터 유도된 $p:A\rightarrow A/R$에 대하여, 동치관계 $R$은 [정의 2](#df2)를 $p$에 적용하여 얻은 동치관계와 정확하게 같다는 것을 확인할 수 있다.
+동치관계 $(R,A,A)$와 이로부터 유도된 $p:A\rightarrow A/R$에 대하여, 동치관계 $R$은 [정의 2](#def2)를 $p$에 적용하여 얻은 동치관계와 정확하게 같다는 것을 확인할 수 있다.
 
 ## 단항관계와 compatible한 동치관계
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $(R,A,A)$가 동치관계라 하자. 그럼 단항관계 $P$가 $R$과 *compatible*하다는 것은 $P(x)\wedge (x\sim\_{\tiny R}y)\implies P(y)$인 것이다.
+<ins id="def3">**정의 3**</ins> $(R,A,A)$가 동치관계라 하자. 그럼 단항관계 $P$가 $R$과 *compatible*하다는 것은 $P(x)\wedge (x\sim\_{\tiny R}y)\implies P(y)$인 것이다.
 
 </div>
 
@@ -63,7 +63,7 @@ weight: 13
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> $R$이 집합 $A$ 위에서의 동치관계이고, $P$가 $R$과 compatible한 단항관계라 하자. 그럼 <phrase>$t\in A/R$이고 어떤 $x\in t$가 존재하여 $P(x)$인 것</phrase>과 <phrase>$t\in A/R$이고 모든 $x\in t$에 대하여 $P(x)$인 것</phrase>이 서로 동치이다.
+<ins id="prop4">**명제 4**</ins> $R$이 집합 $A$ 위에서의 동치관계이고, $P$가 $R$과 compatible한 단항관계라 하자. 그럼 <phrase>$t\in A/R$이고 어떤 $x\in t$가 존재하여 $P(x)$인 것</phrase>과 <phrase>$t\in A/R$이고 모든 $x\in t$에 대하여 $P(x)$인 것</phrase>이 서로 동치이다.
 
 </div>
 
@@ -84,7 +84,7 @@ weight: 13
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> $R$이 $A$ 위에서의 동치관계이고 $X$가 $A$의 부분집합이라 하자. $X$가 $R$에 대해 *saturated<sub>포화</sub>*되었다는 것은 단항관계 $x\in A$가 $R$과 compatible한 것이다.
+<ins id="def5">**정의 5**</ins> $R$이 $A$ 위에서의 동치관계이고 $X$가 $A$의 부분집합이라 하자. $X$가 $R$에 대해 *saturated<sub>포화</sub>*되었다는 것은 단항관계 $x\in A$가 $R$과 compatible한 것이다.
 
 </div>
 
@@ -97,7 +97,7 @@ weight: 13
 1. 만일 $(A\_i)\_{i\in I}$가 $R$-saturated인 부분집합들의 family라면, $\bigcup\_{i\in I} A_i$와 $\bigcap\_{i\in I} A_i$도 마찬가지다.
 2. $X\subseteq A$가 $R$-saturated라면 $A\setminus X$도 그러하다..
 
-이번에는 canonical projection $p:A\rightarrow A/R$와 $X\subseteq A$를 생각하자. [§이항관계의 연산, ⁋명제 7](/ko/math/set_theory/operation_of_binary_relations#pp7)에 의하여 
+이번에는 canonical projection $p:A\rightarrow A/R$와 $X\subseteq A$를 생각하자. [§이항관계의 연산, ⁋명제 7](/ko/math/set_theory/operation_of_binary_relations#prop7)에 의하여 
 
 $$p^{-1}(p(X))\supseteq X$$
 
@@ -121,15 +121,15 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 동치관계 $(R,A,A)$와 $A$를 정의역으로 갖는 함수 $f$에 대하여, $f$가 $R$과 *compatible*하다는 것은 $x$에 대한 단항관계 $y=f(x)$가 $R$과 compatible하다는 것을 의미한다.
+<ins id="def6">**정의 6**</ins> 동치관계 $(R,A,A)$와 $A$를 정의역으로 갖는 함수 $f$에 대하여, $f$가 $R$과 *compatible*하다는 것은 $x$에 대한 단항관계 $y=f(x)$가 $R$과 compatible하다는 것을 의미한다.
 
 </div>
 
-즉, $f$가 $R$과 compatible하려면 $f$는 각각의 equivalence class로 제한하였을 때 상수함수가 되어야 한다. 이제 [§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#pp4)를 적용하면 다음을 얻는다.
+즉, $f$가 $R$과 compatible하려면 $f$는 각각의 equivalence class로 제한하였을 때 상수함수가 되어야 한다. 이제 [§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#prop4)를 적용하면 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 동치관계 $(R,A,A)$와 canonical $p:A\rightarrow A/R$을 생각하자. 그럼 $f:A\rightarrow B$가 $R$과 compatible한 것은 $f=h\circ p$이도록 하는 $h:A/R\rightarrow B$가 존재하는 것과 동치이다.
+<ins id="prop7">**명제 7**</ins> 동치관계 $(R,A,A)$와 canonical $p:A\rightarrow A/R$을 생각하자. 그럼 $f:A\rightarrow B$가 $R$과 compatible한 것은 $f=h\circ p$이도록 하는 $h:A/R\rightarrow B$가 존재하는 것과 동치이다.
 
 </div>
 
@@ -139,7 +139,7 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 
 이 때 $h$는 $p$의 section $s$에 의하여 $h=f\circ s$로 유일하게 결정된다. 
 
-특별히 $R$이 $f$에 의해 정의된 동치관계라 하자. ([정의 2](#df2)) 그럼 다음의 diagram을 생각할 수 있다.
+특별히 $R$이 $f$에 의해 정의된 동치관계라 하자. ([정의 2](#def2)) 그럼 다음의 diagram을 생각할 수 있다.
 
 ![canonical_decomposition](/assets/images/Math/Set_Theory/Examples_of_equivalence-3.png){:width="262.05px"  class="invert" .align-center}
 
@@ -161,7 +161,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 ![inverse_image_of_equivalence](/assets/images/Math/Set_Theory/Examples_of_equivalence-5.png){:width="145.5px"  class="invert" .align-center}
 
-그럼 자연스레 함수 $p\circ f:A\rightarrow B/S$가 정의되며, 이 함수가 [정의 2](#df2)를 통해 만드는 동치관계를 $f$에 의한 $S$의 *preimage*라 부른다.
+그럼 자연스레 함수 $p\circ f:A\rightarrow B/S$가 정의되며, 이 함수가 [정의 2](#def2)를 통해 만드는 동치관계를 $f$에 의한 $S$의 *preimage*라 부른다.
 
 ## 동치관계의 quotient
 
@@ -169,7 +169,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> 집합 $A$ 위에 정의된 두 동치관계 $R,S$에 대해, $S$가 $R$보다 *finer<sub>세밀하다</sub>*하다는 것은 $x\sim\_{\tiny S}y\implies x\sim\_{\tiny R}y$가 항상 성립하는 것이다.
+<ins id="def8">**정의 8**</ins> 집합 $A$ 위에 정의된 두 동치관계 $R,S$에 대해, $S$가 $R$보다 *finer<sub>세밀하다</sub>*하다는 것은 $x\sim\_{\tiny S}y\implies x\sim\_{\tiny R}y$가 항상 성립하는 것이다.
 
 </div>
 
@@ -177,7 +177,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 ![third_iso_1](/assets/images/Math/Set_Theory/Examples_of_equivalence-6.png){:width="171.3px"  class="invert" .align-center}
 
-그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 $p_R=h\circ p_S$이도록 하는 유일한 $h:A/S \rightarrow A/R$이 존재한다. ([§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#pp4)) 이 때, $h$가 $A/S$ 위에 정의하는 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. Canonical decomposition을 거치면
+그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 $p_R=h\circ p_S$이도록 하는 유일한 $h:A/S \rightarrow A/R$이 존재한다. ([§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#prop4)) 이 때, $h$가 $A/S$ 위에 정의하는 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. Canonical decomposition을 거치면
 
 ![third_iso_2](/assets/images/Math/Set_Theory/Examples_of_equivalence-7.png){:width="368.25px"  class="invert" .align-center}
 

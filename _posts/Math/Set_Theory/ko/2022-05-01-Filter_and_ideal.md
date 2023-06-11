@@ -25,7 +25,7 @@ weight: 18
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Ordered set $A$에 대하여, 부분집합 $X\subseteq A$가 *lower set<sub>하집합</sub>* (resp. *upper set<sub>상집합</sub>*)이라는 것은 $y\in A$가 어떤 $x\in X$에 대해 $y\leq x$ (resp. $x\leq y$)를 만족하면 반드시 $y\in X$인 것이다.
+<ins id="def1">**정의 1**</ins> Ordered set $A$에 대하여, 부분집합 $X\subseteq A$가 *lower set<sub>하집합</sub>* (resp. *upper set<sub>상집합</sub>*)이라는 것은 $y\in A$가 어떤 $x\in X$에 대해 $y\leq x$ (resp. $x\leq y$)를 만족하면 반드시 $y\in X$인 것이다.
 
 공집합이 아닌 right directed lower set을 *ideal*, 공집합이 아닌 left directed upper set을 *filter*라 부른다.
 
@@ -70,7 +70,7 @@ $$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Lattice $A$가 주어졌다 하고, $I$와 $F$가 각각 $E$의 proper ideal과 proper filter라 하자. $I$가 *prime ideal*이라는 것은 임의의 $x,y\in A$에 대하여 $x\wedge y\in I$이면 반드시 $x\in I$ 혹은 $y\in I$가 성립하는 것이다. 비슷하게 $F$가 *prime filter*라는 것은 임의의 $x,y\in A$에 대하여 $x\vee y\in F$이면 반드시 $x\in F$ 혹은 $y\in F$가 성립하는 것이다. (<#ref#>)
+<ins id="def4">**정의 4**</ins> Lattice $A$가 주어졌다 하고, $I$와 $F$가 각각 $E$의 proper ideal과 proper filter라 하자. $I$가 *prime ideal*이라는 것은 임의의 $x,y\in A$에 대하여 $x\wedge y\in I$이면 반드시 $x\in I$ 혹은 $y\in I$가 성립하는 것이다. 비슷하게 $F$가 *prime filter*라는 것은 임의의 $x,y\in A$에 대하여 $x\vee y\in F$이면 반드시 $x\in F$ 혹은 $y\in F$가 성립하는 것이다. (<#ref#>)
 
 </div>
 
@@ -78,7 +78,7 @@ $$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 두 연산 $\vee$와 $\wedge$ 사이의 분배법칙이 성립하는 lattice $A$가 주어졌다 하자. 그럼 임의의 maximal ideal은 prime ideal이고 임의의 maximal filter는 prime filter이다.
+<ins id="prop5">**명제 5**</ins> 두 연산 $\vee$와 $\wedge$ 사이의 분배법칙이 성립하는 lattice $A$가 주어졌다 하자. 그럼 임의의 maximal ideal은 prime ideal이고 임의의 maximal filter는 prime filter이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -106,7 +106,7 @@ Maximal ideal $I$에 대해, $x\wedge y\in I$라 하자. 결론에 반하여 $x,
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 두 ordered set $A,B$가 주어졌다 하자. 
+<ins id="def6">**정의 6**</ins> 두 ordered set $A,B$가 주어졌다 하자. 
 
 1. 두 증가함수 $F:A\rightarrow B$와 $G:B\rightarrow A$가 임의의 $a\in A$, $b\in B$에 대해 다음의 조건
 
@@ -140,7 +140,7 @@ $$b\leq F(G(b))\iff G(b)\leq G(b)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 두 ordered set $A,B$와 이들 사이의 monotone Galois connection $F:A\rightarrow B$, $G:B\rightarrow A$이 주어졌다 하자. 임의의 $y\in B$에 대하여 $GFG(y)=G(y)$가 항상 성립한다. 
+<ins id="prop7">**명제 7**</ins> 두 ordered set $A,B$와 이들 사이의 monotone Galois connection $F:A\rightarrow B$, $G:B\rightarrow A$이 주어졌다 하자. 임의의 $y\in B$에 대하여 $GFG(y)=G(y)$가 항상 성립한다. 
 
 만일 이들이 antitone Galois connection이라면, 임의의 $x\in A$와 $y\in B$에 대해 $GFG(y)=G(y)$와 $FGF(x)=F(x)$가 모두 성립한다.
 
@@ -158,7 +158,7 @@ $$b\leq F(G(b))\iff G(b)\leq G(b)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> Ordered set $A$에 대하여, 함수 $f:A\rightarrow A$가 *closure operator<sub>폐포 연산자</sub>*라는 것은 다음의 세 조건이 모두 성립하는 것이다.
+<ins id="def8">**정의 8**</ins> Ordered set $A$에 대하여, 함수 $f:A\rightarrow A$가 *closure operator<sub>폐포 연산자</sub>*라는 것은 다음의 세 조건이 모두 성립하는 것이다.
 
 1. 임의의 $x\in A$에 대해 $x\leq f(x)$가 성립한다.
 2. 임의의 $x\in A$에 대해 $f(x)=f(f(x))$.
@@ -168,13 +168,13 @@ $$b\leq F(G(b))\iff G(b)\leq G(b)$$
 
 </div>
 
-Antitone Galois connection을 고정하자. [명제 7](#pp7)의 결과인 $GFG(y)=G(y)$로부터, 임의의 $x\in A$에 대하여 $y=F(x)$를 대입하면
+Antitone Galois connection을 고정하자. [명제 7](#prop7)의 결과인 $GFG(y)=G(y)$로부터, 임의의 $x\in A$에 대하여 $y=F(x)$를 대입하면
 
 $$GFGF(x)=GF(x)$$
 
 이 성립한다. 따라서 함수 $GF$는 위의 모든 조건을 만족하므로 closure operator이다. 마찬가지로 antitone Galois connection에서는 $FG$ 또한 closure operator가 된다. 
 
-정의에 의하여, $x,y$가 긱긱 $GF$와 $FG$에 대해 closed라는 것은 각각 $GF(x)=x$, 그리고 $FG(y)=y$가 성립한다는 것이다. 우리는 [명제 7](#pp7)로부터 $F$와 $G$의 image에 속한 원소들은 모두 closed라는 것을 안다. 거꾸로 임의의 원소 $x$가 $GF$에 대해 closed라면 $GF(x)=x$로부터 $x$가 $G$의 image에 속한다는 것을 알고, 비슷하게 $FG$에 대한 명제 또한 증명할 수 있다.
+정의에 의하여, $x,y$가 긱긱 $GF$와 $FG$에 대해 closed라는 것은 각각 $GF(x)=x$, 그리고 $FG(y)=y$가 성립한다는 것이다. 우리는 [명제 7](#prop7)로부터 $F$와 $G$의 image에 속한 원소들은 모두 closed라는 것을 안다. 거꾸로 임의의 원소 $x$가 $GF$에 대해 closed라면 $GF(x)=x$로부터 $x$가 $G$의 image에 속한다는 것을 알고, 비슷하게 $FG$에 대한 명제 또한 증명할 수 있다.
 
 우리는 이 과정을 통해 ordered set $A,B$ 사이의 Galois connection에 대해, closed subset들의 모임 $A'\subseteq A$, $B'\subseteq B$를 만들 수 있으며, $F$와 $G$를 이 모임에 제한한 것이 잘 정의된다. 뿐만 아니라 이들 $F\|\_{A'}$와 $G\|\_{B'}$는 일대일 대응이며, *anti-isomorphism*이 된다. 이들을 특별히 *Galois correspondence<sub>갈루아 대응</sub>*라 부른다.
 

@@ -20,7 +20,7 @@ weight: 14
 ## 순서관계
 
 <div class="definition" markdown="1">
-<ins id="df1">**정의 1**</ins> 이항관계 $R$이 *anti-symmetric<sub>반대칭적</sub>*이라는 것은 
+<ins id="def1">**정의 1**</ins> 이항관계 $R$이 *anti-symmetric<sub>반대칭적</sub>*이라는 것은 
 
 > $x\mathrel{R}y$이고 $y\mathrel{R}x$이면 $x=y$
 
@@ -31,27 +31,27 @@ weight: 14
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins>  이항관계 $(R,A,A)$가 *order relation<sub>순서관계</sub>*이라는 것은 $R$이 reflexive하며, transitive, anti-symmetric한 것이다.
+<ins id="def2">**정의 2**</ins>  이항관계 $(R,A,A)$가 *order relation<sub>순서관계</sub>*이라는 것은 $R$이 reflexive하며, transitive, anti-symmetric한 것이다.
 
 </div>
 
 이 경우, 우리는 $A$가 <em_ko>$R$에 의해 순서가 부여되었다</em_ko>고 하고, 종종 $A$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $x\mathrel{R}y$를 $x\leq\_{\tiny R}y$로 적는다. 
 
-<ins id="ex3">**예시 3**</ins> 이항관계 <phrase>$x=y$</phrase>는 order relation이다. 관계 <phrase>$x\subseteq y$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#pp2)와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#pp3))
+<ins id="ex3">**예시 3**</ins> 이항관계 <phrase>$x=y$</phrase>는 order relation이다. 관계 <phrase>$x\subseteq y$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2)와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3))
 {: .example}
 
 Ordered set은 $ \leq $라는 관계가 추가적으로 정의된 집합이므로, 이들 사이의 함수를 생각할 때는 $ \leq $ 또한 보존하는 함수를 주로 생각하게 된다. 특별히 다음을 정의한다.
 
-<ins id="df4">**정의 4**</ins> 만일 두 order relation $(R, A, A)$과 $(R', A',A')$에 대해 어떠한 전단사함수 $f$가 존재하여 $x\leq\_{\tiny R}y$와 $f(x)\leq\_{\tiny R'}f(y)$가 동치라면 $f$를 *order isomorphism*이라 부른다. 
+<ins id="def4">**정의 4**</ins> 만일 두 order relation $(R, A, A)$과 $(R', A',A')$에 대해 어떠한 전단사함수 $f$가 존재하여 $x\leq\_{\tiny R}y$와 $f(x)\leq\_{\tiny R'}f(y)$가 동치라면 $f$를 *order isomorphism*이라 부른다. 
 {: .definition}
 
 앞으로 ordered set들 사이에서 isomorphism이라 하면 항상 order isomorphism을 뜻하는 것으로 이해한다. 
 
-[§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#pp3)과 비슷한 것을 순서관계에 대해서도 할 수 있다.
+[§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3)과 비슷한 것을 순서관계에 대해서도 할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="df5">**명제 5**</ins> 이항관계 $(R,A,A)$가 order relation인 것은 다음의 두 조건과 동치이다.
+<ins id="def5">**명제 5**</ins> 이항관계 $(R,A,A)$가 order relation인 것은 다음의 두 조건과 동치이다.
 
 $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 
@@ -59,7 +59,7 @@ $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-첫 번째 조건이 transitivity와 동등한 것은 [§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#pp3)의 증명에서 이미 살펴보았다. 두 번째 조건은 reflexive와 antisymmetry를 섞어둔 것이라는 것도 쉽게 보일 수 있다.
+첫 번째 조건이 transitivity와 동등한 것은 [§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3)의 증명에서 이미 살펴보았다. 두 번째 조건은 reflexive와 antisymmetry를 섞어둔 것이라는 것도 쉽게 보일 수 있다.
 
 </details>
 
@@ -69,7 +69,7 @@ $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**</ins> 함수 $f:A\rightarrow B$를 생각하고, $B$ 위에 order relation $\leq$가 정의되었다고 하자. 그럼 우리는 함수로부터 동치관계를 유도하듯, $A$ 위에 다음과 같이 정의된 관계 $\preceq$를 정의할 수 있다. ([§동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#df2))
+<ins id="ex6">**예시 6**</ins> 함수 $f:A\rightarrow B$를 생각하고, $B$ 위에 order relation $\leq$가 정의되었다고 하자. 그럼 우리는 함수로부터 동치관계를 유도하듯, $A$ 위에 다음과 같이 정의된 관계 $\preceq$를 정의할 수 있다. ([§동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2))
 
 $$x\preceq y\iff f(x)\leq f(y)$$
 
@@ -78,7 +78,7 @@ $$x\preceq y\iff f(x)\leq f(y)$$
 
 따라서 antisymmetry 조건을 빼서 다음과 같이 정의한다.
 
-<ins id="df7">**정의 7**</ins> Reflexive하고 transitive한 관계 $R$을 *preorder relation<sub>원순서관계</sub>*라 부른다.
+<ins id="def7">**정의 7**</ins> Reflexive하고 transitive한 관계 $R$을 *preorder relation<sub>원순서관계</sub>*라 부른다.
 {: .definition}
 
 $R$이 preorder relation이라면 이를 $\preceq\_{\tiny R}$과 같이 적기도 하지만, 많은 경우 preorder는 order relation과 비슷한 성질을 공유하기 때문에 order relation과 동일한 기호 $\leq\_{\tiny R}$를 사용하기도 한다. 우리도 특별한 경우가 아닌 한 $\leq\_{\tiny R}$를 사용한다.
@@ -87,7 +87,7 @@ Preorder relation의 성질을 알기 위해 우리는 order relation의 성질�
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins>  $R$이 preorder relation이라 하자. 그럼 관계 <phrase>$x\leq_{\tiny R}y$이고 $y\leq_{\tiny R}x$</phrase>은 동치관계다.
+<ins id="prop8">**명제 8**</ins>  $R$이 preorder relation이라 하자. 그럼 관계 <phrase>$x\leq_{\tiny R}y$이고 $y\leq_{\tiny R}x$</phrase>은 동치관계다.
 
 </div>
 <details class="proof" markdown="1">
@@ -113,14 +113,14 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\leq_{\tiny R}y)\
 
 주어진 order relation $\leq$에 대하여, $ < $을 <phrase>$x\leq y$이고 $x\neq y$</phrase>로 정의된 관계라 하자. 이 때 $ < $는 antisymmetry를 만족하지 않으므로 order relation이 될 수는 없고, 또 reflexive하지도 않으므로 preorder 또한 될 수 없다. 대신 다음을 정의하자.
 
-<ins id="df9">**정의 9**</ins> 관계 $R$이 *asymmetric<sub>비대칭적</sub>*이라는 것은 $x\mathrel{R}y$이면 $y\not \mathrel{R}x$인 것이다. Asymmetric, transitive relation을 *strict order*라 부른다.
+<ins id="def9">**정의 9**</ins> 관계 $R$이 *asymmetric<sub>비대칭적</sub>*이라는 것은 $x\mathrel{R}y$이면 $y\not \mathrel{R}x$인 것이다. Asymmetric, transitive relation을 *strict order*라 부른다.
 {: .definition}
 
 Strict order를 표현하기 위해서 우리는 $<_{\tiny S}$를 사용한다. 그럼 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp10">**명제 10**</ins>  $R$이 order relation이라 하자. 그럼 새로운 관계 <phrase>$x\leq_{\tiny R}y$이고 $x\neq y$</phrase>는 strict order이다.  
+<ins id="prop10">**명제 10**</ins>  $R$이 order relation이라 하자. 그럼 새로운 관계 <phrase>$x\leq_{\tiny R}y$이고 $x\neq y$</phrase>는 strict order이다.  
 
 반대로 $S$가 strict order라 하자. 그럼 새로운 관계 <phrase>$x<_{\tiny S}y$이거나 $x=y$</phrase>는 order relation이다.
 </div>

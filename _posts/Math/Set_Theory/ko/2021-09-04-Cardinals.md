@@ -23,7 +23,7 @@ weight: 24
 
 <div class="definition" markdown="1">
 
-<ins id="df-3">**정의**</ins> 집합 $A$ 위에서 정의된 totally ordered set $R$이 *well-ordering*이라는 것은 공집합이 아닌 $A$의 임의의 부분집합 $X$가 least element를 갖는 것이다. 
+<ins id="def-3">**정의**</ins> 집합 $A$ 위에서 정의된 totally ordered set $R$이 *well-ordering*이라는 것은 공집합이 아닌 $A$의 임의의 부분집합 $X$가 least element를 갖는 것이다. 
 
 </div>
 
@@ -43,7 +43,7 @@ weight: 24
 
 <div class="proposition" markdown="1">
 
-<ins id="pp-0">**명제**</ins> $A,B$가 두 well-ordered set들이라 하자. 그럼 적어도 다음 중 하나가 성립한다.
+<ins id="prop-0">**명제**</ins> $A,B$가 두 well-ordered set들이라 하자. 그럼 적어도 다음 중 하나가 성립한다.
 1. $A$에서 $B$의 segment로의 order isomorphism이 존재하거나,
 2. $B$에서 $A$의 segment로의 order isomorphism이 존재한다.
 
@@ -59,7 +59,7 @@ weight: 24
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 집합 $A$가 집합 $B$와 *equipotent*하다는 것은 $A$에서 $B$로의 전단사함수가 존재하는 것이다.
+<ins id="def1">**정의 1**</ins> 집합 $A$가 집합 $B$와 *equipotent*하다는 것은 $A$에서 $B$로의 전단사함수가 존재하는 것이다.
 
 </div>
 
@@ -75,7 +75,7 @@ weight: 24
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 집합 $A$의 equivalence class의 한 representative를 $A$의 *cardinal*이라 부르고, $\card A$로 적는다.
+<ins id="def2">**정의 2**</ins> 집합 $A$의 equivalence class의 한 representative를 $A$의 *cardinal*이라 부르고, $\card A$로 적는다.
 
 </div>
 
@@ -85,7 +85,7 @@ weight: 24
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> Cardinal들 간의 관계
+<ins id="def3">**정의 3**</ins> Cardinal들 간의 관계
 
 > $\mathfrak{a}$는 $\mathfrak{b}$의 부분집합과 equipotent하다.
 
@@ -133,7 +133,7 @@ $$h(x)=\begin{cases} f(x)&x\in C\\ x&x\not\in C\end{cases}$$
 
 집합 $A=\bigcup_{\mathfrak{a}\in E}\mathfrak{a}$를 생각하자. 그럼 임의의 cardinal $\mathfrak{a}\in E$는 $A$의 부분집합이다.
 
-Well-ordering principle에 의하여 이 집합 위에 well-order가 존재한다. 이를 $\leq$라 하자. 또, $A$의 임의의 부분집합은 $A$의 segment와 equipotent하다 (Review의 [명제](#pp0)). 따라서 임의의 cardinal $\mathfrak{a}$에 대하여, 이와 equipotent한 $A$의 segment들의 집합은 공집합이 아니며, 따라서 $A^\*$의 well-orderedness에 의하여 least element가 존재한다. 이 원소를 $\varphi(\mathfrak{a})$라 하자.  
+Well-ordering principle에 의하여 이 집합 위에 well-order가 존재한다. 이를 $\leq$라 하자. 또, $A$의 임의의 부분집합은 $A$의 segment와 equipotent하다 (Review의 [명제](#prop0)). 따라서 임의의 cardinal $\mathfrak{a}$에 대하여, 이와 equipotent한 $A$의 segment들의 집합은 공집합이 아니며, 따라서 $A^\*$의 well-orderedness에 의하여 least element가 존재한다. 이 원소를 $\varphi(\mathfrak{a})$라 하자.  
 만일 우리가 $\mathfrak{a}\leq\mathfrak{b}$가 $\varphi(\mathfrak{a})\subset\varphi(\mathfrak{b})$와 동치임을 보인다면, $A$의 well-orderedness로부터 증명이 완료될 것이다. 
 
 우선 나중의 조건이 첫번째 조건을 imply하는 것은 자명하다. 반대로 만일 $\mathfrak{a}\leq\mathfrak{b}$라면, 즉 $\mathfrak{a}$가 $\mathfrak{b}=\varphi(\mathfrak{b})$ (등호는 cardinal로써 성립) 의 부분집합과 equipotent하다고 가정하자. 만일 $\varphi(\mathfrak{b})\subset\varphi(\mathfrak{a})$이고 $\varphi(\mathfrak{a})\neq\varphi(\mathfrak{b})$라면, $\varphi(\mathfrak{b})$의 어떤 segment가 존재하여 $\mathfrak{a}$와 equipotent한 segment를 가질 것이고, 이는 $\varphi(\mathfrak{b})$의 정의에 모순이므로 두 조건은 동치이다.

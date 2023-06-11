@@ -60,7 +60,7 @@ weight: 1
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 어떠한 원소도 갖지 않는 집합은 많아야 하나 존재한다.
+<ins id="prop2">**명제 2**</ins> 어떠한 원소도 갖지 않는 집합은 많아야 하나 존재한다.
 
 </div>
 <details class="proof" markdown="1">

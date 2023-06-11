@@ -33,7 +33,7 @@ Commutative semigroup $(S,+)$가 주어졌다고 하자. 그럼 $(S,+)$를 포�
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> Abelian group $H$과 semigroup homomorphism $\eta$가 위의 universal mapping problem을 만족한다면, $G_S\cong H$가 성립한다.
+<ins id="prop1">**명제 1**</ins> Abelian group $H$과 semigroup homomorphism $\eta$가 위의 universal mapping problem을 만족한다면, $G_S\cong H$가 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -62,13 +62,13 @@ $$\bar{\eta}\circ\bar{\epsilon}\circ\eta=\bar{\eta}\circ \epsilon=\eta=\id_{H}\c
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 만일 $S$가 abelian group이라면 위의 universal mapping problem을 만족하는 abelian group $G_S$는 $G_S\cong S$를 만족한다.
+<ins id="prop2">**명제 2**</ins> 만일 $S$가 abelian group이라면 위의 universal mapping problem을 만족하는 abelian group $G_S$는 $G_S\cong S$를 만족한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#pp1)에 의하여 universal property를 만족하는 임의의 abelian group은 $S$와 동형이어야 한다.
+$S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#prop1)에 의하여 universal property를 만족하는 임의의 abelian group은 $S$와 동형이어야 한다.
 
 </details>
 
@@ -165,7 +165,7 @@ $$[(a,b)]+[(b+a)]=[(a+b,a+b)]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> Commutative semigroup $(S, +)$에 대하여, 위와 같이 만들어진 가환군 $G_S$와, 자연스러운 semigroup homomorphism $\epsilon:S\rightarrow G_S$는 universal property를 만족한다.
+<ins id="prop5">**명제 5**</ins> Commutative semigroup $(S, +)$에 대하여, 위와 같이 만들어진 가환군 $G_S$와, 자연스러운 semigroup homomorphism $\epsilon:S\rightarrow G_S$는 universal property를 만족한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -205,7 +205,7 @@ $$\begin{aligned}\bar{f}\left([(a_1,b_1)]+[(a_2, b_2)]\right)&=\bar{f}\left([(a_
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> Monoid $(\mathbb{N},+)$에 대하여, 위의 과정을 통해 얻어지는 abelian group을 $(\mathbb{Z},+)$으로 적는다.
+<ins id="def6">**정의 6**</ins> Monoid $(\mathbb{N},+)$에 대하여, 위의 과정을 통해 얻어지는 abelian group을 $(\mathbb{Z},+)$으로 적는다.
 
 </div>
 

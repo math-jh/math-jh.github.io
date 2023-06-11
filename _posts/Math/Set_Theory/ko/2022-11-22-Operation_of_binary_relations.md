@@ -26,7 +26,7 @@ weight: 4
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $R$이 이항관계라 하자. 그럼 $(x,y)\in R$를 만족하는 모든 $(y,x)$들로 이루어진 이항관계를 $R$의 *역<sub>inverse</sub>*이라 부르고 이를 $R^{-1}$로 표기한다. 또, 집합 $R^{-1}(X)$를 $X$의 *preimage<sub>역상</sub>*라 부른다. 만일 $R^{-1}=R$라면 $R$이 *symmetric<sub>대칭적</sub>*하다고 한다.
+<ins id="def1">**정의 1**</ins> $R$이 이항관계라 하자. 그럼 $(x,y)\in R$를 만족하는 모든 $(y,x)$들로 이루어진 이항관계를 $R$의 *역<sub>inverse</sub>*이라 부르고 이를 $R^{-1}$로 표기한다. 또, 집합 $R^{-1}(X)$를 $X$의 *preimage<sub>역상</sub>*라 부른다. 만일 $R^{-1}=R$라면 $R$이 *symmetric<sub>대칭적</sub>*하다고 한다.
 
 </div>
 
@@ -40,7 +40,7 @@ $$(x,y)\in R\iff (y,x)\in R^{-1}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $R^{-1}$의 역은 $R$이다. 또, $\pr_1R^{-1}=\pr_2R$이고 $\pr_2R^{-1}=\pr_1R$이다.
+<ins id="prop2">**명제 2**</ins> $R^{-1}$의 역은 $R$이다. 또, $\pr_1R^{-1}=\pr_2R$이고 $\pr_2R^{-1}=\pr_1R$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -68,7 +68,7 @@ $$\pr_1(A\times B)^{-1}=\pr_2(A\times B)=B,\qquad \pr_2(A\times B)^{-1}=\pr_1(A\
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $R\_1$과 $R\_2$이 이항관계라 하자. 이 두 이항관계의 *합성<sub>composition</sub>* $R\_2\circ R\_1$는 $(x,y)\in R\_1$이고 $(y,z)\in R\_2$이도록 하는 $y$가 존재하는 순서쌍들 $(x,z)$의 집합이다.
+<ins id="def3">**정의 3**</ins> $R\_1$과 $R\_2$이 이항관계라 하자. 이 두 이항관계의 *합성<sub>composition</sub>* $R\_2\circ R\_1$는 $(x,y)\in R\_1$이고 $(y,z)\in R\_2$이도록 하는 $y$가 존재하는 순서쌍들 $(x,z)$의 집합이다.
 
 </div>
 
@@ -76,7 +76,7 @@ $$\pr_1(A\times B)^{-1}=\pr_2(A\times B)=B,\qquad \pr_2(A\times B)^{-1}=\pr_1(A\
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> $R\_1$, $R\_2$가 이항관계라 하자. 그럼 $R\_2\circ R\_1$의 역은 $R\_2^{-1}\circ R\_1^{-1}$이다.
+<ins id="prop4">**명제 4**</ins> $R\_1$, $R\_2$가 이항관계라 하자. 그럼 $R\_2\circ R\_1$의 역은 $R\_2^{-1}\circ R\_1^{-1}$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -90,7 +90,7 @@ $(z,x)\in (R\_2\circ R\_1)^{-1}$인 것은 $(x,z)\in R\_2\circ R\_1$인 것과 �
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 이항관계의 합성은 결합법칙을 만족한다. 즉, 세 이항관계 $R\_1,R\_2,R\_3$에 대하여 
+<ins id="prop5">**명제 5**</ins> 이항관계의 합성은 결합법칙을 만족한다. 즉, 세 이항관계 $R\_1,R\_2,R\_3$에 대하여 
 
 $$(R_3\circ R_2)\circ R_1=R_3\circ(R_2\circ R_1)$$
 
@@ -112,7 +112,7 @@ $$(R_3\circ R_2)\circ R_1=R_3\circ(R_2\circ R_1)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $R\_1$, $R\_2$가 이항관계이고 $A$가 집합이라 하자. 그럼
+<ins id="prop6">**명제 6**</ins> $R\_1$, $R\_2$가 이항관계이고 $A$가 집합이라 하자. 그럼
 
 $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 
@@ -130,7 +130,7 @@ $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 이항관계 $(R,A,B)$에 대하여 $X\subseteq A$, $Y\subseteq B$라 하자. 그럼 
+<ins id="prop7">**명제 7**</ins> 이항관계 $(R,A,B)$에 대하여 $X\subseteq A$, $Y\subseteq B$라 하자. 그럼 
 
 1. $R^{-1}(R(X))\supset X\cap\pr_1R$  
 2. $R(R^{-1}(Y))\supset Y\cap\pr_2R$  
@@ -141,7 +141,7 @@ $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-본격적으로 증명을 시작하기 전에, 위의 두 식은 <em_ko>모든</em_ko> $R$에 대해 성립해야 하므로, $R$ 자리에 $R^{-1}$을 집어넣어도 성립해야 한다. 따라서, 1만 보이면 2는 [명제 2](#pp2)에 의해 자명하다.  
+본격적으로 증명을 시작하기 전에, 위의 두 식은 <em_ko>모든</em_ko> $R$에 대해 성립해야 하므로, $R$ 자리에 $R^{-1}$을 집어넣어도 성립해야 한다. 따라서, 1만 보이면 2는 [명제 2](#prop2)에 의해 자명하다.  
 
 이제 $x\in X\cap\pr\_1R$라 하자. 그럼 $x\in\pr\_1R$에서, 어떠한 $y$가 존재하여 $(x,y)\in R$이고, $x\in X$이므로 이 $y$는 $y\in R(X)$를 만족한다. 이제 $(y,x)\in R^{-1}$이므로, $x\in R^{-1}(R(X))$이다.
 
@@ -149,7 +149,7 @@ $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> $R\_1$, $R\_2$가 이항관계라 하자. 그럼 다음의 두 식이 성립한다.
+<ins id="prop8">**명제 8**</ins> $R\_1$, $R\_2$가 이항관계라 하자. 그럼 다음의 두 식이 성립한다.
 
 $$ \pr_1(R_2\circ R_1)=R_1^{-1}(\pr_1R_2),\quad \pr_2(R_2\circ R_1)=R_2(\pr_2R_1).$$
 
@@ -174,7 +174,7 @@ $$\begin{aligned}
 
 <div class="definition" markdown="1">
 
-<ins id="df9">**정의 9**</ins> 집합 $A$에 대하여, $\Delta_A$는 이항관계
+<ins id="def9">**정의 9**</ins> 집합 $A$에 대하여, $\Delta_A$는 이항관계
 
 $$\Delta_A=\{(x,x)\mid x\in A\}$$
 

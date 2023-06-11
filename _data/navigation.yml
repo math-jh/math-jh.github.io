@@ -80,8 +80,6 @@ category_theory-ko:
         url: ko/math/category_theory/functors
       - title: "자연변환"
         url: ko/math/category_theory/natural_transformations
-      - title: "아벨 카테고리"
-        url: ko/math/category_theory/abelian_categories
       # - title: "수반함자"
         # url: ko/math/category_theory/adjoints
       # - title: "표현 가능한 함자"
