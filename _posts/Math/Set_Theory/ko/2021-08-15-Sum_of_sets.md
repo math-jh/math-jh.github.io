@@ -21,7 +21,7 @@ weight: 9
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Family $(A\_i)\_{i\in I}$가 집합 $A$의 *covering<sub>덮개</sub>*이라는 것은 $A=\bigcup\_{i\in I} A\_i$임을 뜻한다. $A$의 두 covering $(A\_i)\_{i\in I}$와 $(A'\_j)\_{j\in J}$에 대하여, $(A'_j)\_{j\in J}$가 $(A_i)\_{i\in I}$보다 *finer<sub>섬세</sub>*하다는 것은 임의의 $j\in J$에 대하여, $A'\_j\subseteq A\_i$를 만족하는 $i\in I$가 존재하는 것이다.
+<ins id="def1">**정의 1**</ins> Family $(A\_i)\_{i\in I}$가 집합 $A$의 *covering<sub>덮개</sub>*이라는 것은 $A=\bigcup\_{i\in I} A\_i$임을 뜻한다. $A$의 두 covering $(A\_i)\_{i\in I}$와 $(A'\_j)\_{j\in J}$에 대하여, $(A'_j)\_{j\in J}$가 $(A_i)\_{i\in I}$보다 *finer<sub>섬세</sub>*하다는 것은 임의의 $j\in J$에 대하여, $A'\_j\subseteq A\_i$를 만족하는 $i\in I$가 존재하는 것이다.
 
 </div>
 
@@ -30,7 +30,7 @@ weight: 9
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins>  집합 $A$와 그 covering $(A_i)\_{i\in I}$를 생각하고, 임의의 집합 $B$를 택하자.
+<ins id="prop2">**명제 2**</ins>  집합 $A$와 그 covering $(A_i)\_{i\in I}$를 생각하고, 임의의 집합 $B$를 택하자.
 
 1. 함수 $f,g:A\rightarrow B$가 임의의 $i\in I$가 주어질 때마다 $f\|\_{A\_i}=g\|\_{A\_i}$를 만족한다 하자. 그럼 $f=g$이다. 
 2. 함수들의 family $(f\_i:A\_i\rightarrow B)\_{i\in I}$가 다음의 조건
@@ -64,13 +64,13 @@ $$y=(f_i)(x)=(f_i|_{A_i\cap A_j})(x)=(f_j|_{A_i\cap A_j})(x)=(f_j)(x)=y'$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 집합 $A$와 $B$가 *서로소<sub>disjoint</sub>*라는 것은 $A\cap B=\emptyset$인 것이다. 더 일반적으로, $(A_i)\_{i\in I}$가 *쌍마다 서로소<sub>pairwise disjoint</sub>*라는 것은 임의의 $i, j\in I$에 대하여 $i\neq j$라면 $A_i\cap A_j=\emptyset$인 것이다.
+<ins id="def3">**정의 3**</ins> 집합 $A$와 $B$가 *서로소<sub>disjoint</sub>*라는 것은 $A\cap B=\emptyset$인 것이다. 더 일반적으로, $(A_i)\_{i\in I}$가 *쌍마다 서로소<sub>pairwise disjoint</sub>*라는 것은 임의의 $i, j\in I$에 대하여 $i\neq j$라면 $A_i\cap A_j=\emptyset$인 것이다.
 
 </div>
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 집합 $A$의 *분할<sub>partition</sub>*은 $A$의 쌍마다 서로소인 covering을 뜻한다.
+<ins id="def4">**정의 4**</ins> 집합 $A$의 *분할<sub>partition</sub>*은 $A$의 쌍마다 서로소인 covering을 뜻한다.
 
 </div>
 
@@ -95,7 +95,7 @@ $S_i$를 <phrase>$x\in A_i$를 만족하는 $(x, i)$들로 이루어진 집합</
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 위의 조건을 만족하는 $S$를 family $(A_i)\_{i\in I}$들의 *합<sub>sum</sub>*이라 하며, $\sum\_{i\in I} A_i$로 적는다.
+<ins id="def6">**정의 6**</ins> 위의 조건을 만족하는 $S$를 family $(A_i)\_{i\in I}$들의 *합<sub>sum</sub>*이라 하며, $\sum\_{i\in I} A_i$로 적는다.
 
 </div>
 
@@ -103,27 +103,27 @@ $S_i$를 <phrase>$x\in A_i$를 만족하는 $(x, i)$들로 이루어진 집합</
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 쌍마다 서로소인 family $(A_i)\_{i\in I}$를 생각하자. 이들의 합집합을 $A$, 합을 $S$라 하면 $A$와 $S$ 간의 전단사함수가 존재한다.
+<ins id="prop7">**명제 7**</ins> 쌍마다 서로소인 family $(A_i)\_{i\in I}$를 생각하자. 이들의 합집합을 $A$, 합을 $S$라 하면 $A$와 $S$ 간의 전단사함수가 존재한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$f_i:A_i\rightarrow S_i$가 [명제 5](#pp5)의 조건을 만족하는 전단사함수라면, [명제 2](#pp2)를 통해 $(f_i)\_{i\in I}$를 $\bigcup\_{i\in I} A_i=A$로 확장하면 된다.
+$f_i:A_i\rightarrow S_i$가 [명제 5](#prop5)의 조건을 만족하는 전단사함수라면, [명제 2](#prop2)를 통해 $(f_i)\_{i\in I}$를 $\bigcup\_{i\in I} A_i=A$로 확장하면 된다.
 
 </details>
 
-이를 집합의 합이라고 부르는 것에 대한 직관은 나중에 나온다. ([§Cardinal, ⁋정의 6](/ko/math/set_theory/cardinals#df6))
+이를 집합의 합이라고 부르는 것에 대한 직관은 나중에 나온다. ([§Cardinal, ⁋정의 6](/ko/math/set_theory/cardinals#def6))
 
 ## Universal property
 
-[정의 6](#df6)에서 우리가 언급하지 않은 사실이 있다. 집합들의 family $(A_i)$들의 합 $X$는 유일하지 않다는 것이다. [명제 5](#pp5)의 조건을 만족하는 집합은 무수히 많다. 예를 들어 해당 명제의 증명에서는 $S$를 $(x,i)$들의 집합으로 두었는데, $(i,x)$들의 집합으로 두어도 합의 정의를 만족한다는 것을 알 수 있다. 때문에 엄밀히 말하자면 $A_i$들의 합을 $\sum A_i$로 적는 것은 잘 정의된 표현이 아니다.
+[정의 6](#def6)에서 우리가 언급하지 않은 사실이 있다. 집합들의 family $(A_i)$들의 합 $X$는 유일하지 않다는 것이다. [명제 5](#prop5)의 조건을 만족하는 집합은 무수히 많다. 예를 들어 해당 명제의 증명에서는 $S$를 $(x,i)$들의 집합으로 두었는데, $(i,x)$들의 집합으로 두어도 합의 정의를 만족한다는 것을 알 수 있다. 때문에 엄밀히 말하자면 $A_i$들의 합을 $\sum A_i$로 적는 것은 잘 정의된 표현이 아니다.
 
 우선 다음과 같이 합의 *universal property<sub>보편성질</sub>*를 살펴보자.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8 (Universal property of sum)**</ins> 집합들의 family $(A_i)$와 [명제 5](#pp5)에서 정의한 집합 $S$, 그리고 단사함수들 $\iota_i:A_i\rightarrow S$가 주어졌다 하자. 그럼, 또 다른 어떤 집합 $B$와, $f_i:A_i\rightarrow B$들이 주어질 때마다, 이에 해당하는 유일한 $f:S\rightarrow B$가 존재하여 $f_i=f\circ\iota_i$가 성립한다. 
+<ins id="thm8">**정리 8 (Universal property of sum)**</ins> 집합들의 family $(A_i)$와 [명제 5](#prop5)에서 정의한 집합 $S$, 그리고 단사함수들 $\iota_i:A_i\rightarrow S$가 주어졌다 하자. 그럼, 또 다른 어떤 집합 $B$와, $f_i:A_i\rightarrow B$들이 주어질 때마다, 이에 해당하는 유일한 $f:S\rightarrow B$가 존재하여 $f_i=f\circ\iota_i$가 성립한다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -140,13 +140,13 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 </details>
 
 
-많은 경우에 [명제 5](#pp5)의 증명에 등장한 집합 $S$를 $A_i$들의 합이라 정의하지만, 사실 이는 주객이 전도된 정의다. 우리가 많은 분야들에서 $S$를 $A_i$들의 합으로 생각하는 이유는 표기법 상의 편리함 때문이지, $S$라는 집합 자체가 특별한 의미를 가져서가 아니다. 합의 성질은 집합 $S$에서 나오는 것이 아니라, 위의 universal property에서 나온다.
+많은 경우에 [명제 5](#prop5)의 증명에 등장한 집합 $S$를 $A_i$들의 합이라 정의하지만, 사실 이는 주객이 전도된 정의다. 우리가 많은 분야들에서 $S$를 $A_i$들의 합으로 생각하는 이유는 표기법 상의 편리함 때문이지, $S$라는 집합 자체가 특별한 의미를 가져서가 아니다. 합의 성질은 집합 $S$에서 나오는 것이 아니라, 위의 universal property에서 나온다.
 
 따라서 애초에 다음과 같이 정의를 해 버릴 수도 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="df6-1">**정의 6$'$**</ins> 주어진 집합들의 family $(A_i)$의 *합*은 다음과 같은 조건
+<ins id="def6-1">**정의 6$'$**</ins> 주어진 집합들의 family $(A_i)$의 *합*은 다음과 같은 조건
  
 > 임의의 집합 $B$와 $f_i:A_i\rightarrow B$가 주어질 때마다, 유일한 함수 $f:\sum A_i\rightarrow B$가 존재하여 $f_i=f\circ\iota_i$가 성립한다.
 
@@ -158,11 +158,11 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 
 물론 이를 정의로 쓰기 위해서는 universal property를 만족하는 대상이 적어도 하나 존재한다는 것은 보여줘야 한다. 그리고 [정리 8](#thm8)이 정확히 그런 역할을 해 준다. 
 
-우리는 앞서 $\sum A_i$라는 집합이 엄밀한 의미에서는 잘 정의되지 않는다는 것을 언급했다. 하지만 이러한 집합 자체는 잘 정의되지 않더라도, 이러한 집합들이 여럿 주어진다면 이들 사이의 전단사함수가 존재한다. 이런 상황을 *전단사함수에 대하여 유일하다<sub>unique up to bijection</sub>*고 말한다. [정의 6$'$](#df6-1)으로부터 집합의 합은 전단사함수에 대하여 유일하다는 것을 보일 수 있다. 
+우리는 앞서 $\sum A_i$라는 집합이 엄밀한 의미에서는 잘 정의되지 않는다는 것을 언급했다. 하지만 이러한 집합 자체는 잘 정의되지 않더라도, 이러한 집합들이 여럿 주어진다면 이들 사이의 전단사함수가 존재한다. 이런 상황을 *전단사함수에 대하여 유일하다<sub>unique up to bijection</sub>*고 말한다. [정의 6$'$](#def6-1)으로부터 집합의 합은 전단사함수에 대하여 유일하다는 것을 보일 수 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="crl9">**따름정리 9**</ins> 집합들의 family $(A_i)$에 대하여, $\sum A_i$는 전단사함수에 대하여 유일하다.
+<ins id="cor9">**따름정리 9**</ins> 집합들의 family $(A_i)$에 대하여, $\sum A_i$는 전단사함수에 대하여 유일하다.
 
 </div>
 <details class="proof" markdown="1">
@@ -172,7 +172,7 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 
 $$\iota_i'=\phi'\circ\iota_i=\phi'\circ(\phi\circ\iota_i')=(\phi'\circ\phi)\circ\iota_i'$$
 
-이다. 한편, 함수들 $\iota_i':A_i\rightarrow S'$에 이번에는 $S'$의 universal property를 적용하자. 그럼 어떤 유일한 함수 $\psi:S'\rightarrow S'$가 존재하여 $\iota_i'=\psi\circ\iota_i'$를 만족한다. 이는 당연히 $\psi=\id\_{S'}$에 의해 만족되는 식이므로, 유일성에 의해 이 식을 만족하는 모든 함수 $\psi$들은 $\id\_{S'}$와 같다. 따라서 $\phi'\circ\phi=\id\_{S'}$이고, $\id\_{S'}$는 전단사이므로 $\phi'$는 전사함수, $\phi$는 단사함수이다. ([§Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#pp3))
+이다. 한편, 함수들 $\iota_i':A_i\rightarrow S'$에 이번에는 $S'$의 universal property를 적용하자. 그럼 어떤 유일한 함수 $\psi:S'\rightarrow S'$가 존재하여 $\iota_i'=\psi\circ\iota_i'$를 만족한다. 이는 당연히 $\psi=\id\_{S'}$에 의해 만족되는 식이므로, 유일성에 의해 이 식을 만족하는 모든 함수 $\psi$들은 $\id\_{S'}$와 같다. 따라서 $\phi'\circ\phi=\id\_{S'}$이고, $\id\_{S'}$는 전단사이므로 $\phi'$는 전사함수, $\phi$는 단사함수이다. ([§Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#prop3))
 
 마찬가지로, $\phi\circ\phi'=\id\_S$임을 보일 수 있고, 이로 인해 $\phi$는 전사함수, $\phi'$는 단사함수다. 즉, 이들은 각각 전단사함수가 되므로 $S$와 $S'$ 사이의 전단사함수가 존재한다. 
 

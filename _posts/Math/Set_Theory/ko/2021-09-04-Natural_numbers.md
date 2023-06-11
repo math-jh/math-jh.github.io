@@ -23,7 +23,7 @@ weight: 26
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Cardinal $\mathfrak{a}$가 *유한하다<sub>finite</sub>*는 것은 $\mathfrak{a}\neq\mathfrak{a}+\mathbf{1}$인 것이다. 유한한 cardinal을 *자연수<sub>natural number</sub>*라고 부른다. 집합 $E$에 대하여, cardinal $\card E$가 유한하다면 이 집합을 유한하다고 부르며, 이 때 $\card E$를 집합 $E$의 *원소의 갯수*라고 부른다.
+<ins id="def1">**정의 1**</ins> Cardinal $\mathfrak{a}$가 *유한하다<sub>finite</sub>*는 것은 $\mathfrak{a}\neq\mathfrak{a}+\mathbf{1}$인 것이다. 유한한 cardinal을 *자연수<sub>natural number</sub>*라고 부른다. 집합 $E$에 대하여, cardinal $\card E$가 유한하다면 이 집합을 유한하다고 부르며, 이 때 $\card E$를 집합 $E$의 *원소의 갯수*라고 부른다.
 
 </div>
 
@@ -31,14 +31,14 @@ weight: 26
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> Cardinal $\mathfrak{a}$가 유한한 것과 $\mathfrak{a}+\mathbf{1}$이 유한한 것이 동치이다.
+<ins id="prop2">**명제 2**</ins> Cardinal $\mathfrak{a}$가 유한한 것과 $\mathfrak{a}+\mathbf{1}$이 유한한 것이 동치이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§기수들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_cardinals#pp6)에 의하여, $\mathfrak{a}=\mathfrak{b}$인 것은 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$인 것과 동치이다. 이제 $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$로 잡으면, 가정에 의해 $\mathfrak{a}\neq\mathfrak{b}$이고, 따라서
+[§기수들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_cardinals#prop6)에 의하여, $\mathfrak{a}=\mathfrak{b}$인 것은 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$인 것과 동치이다. 이제 $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$로 잡으면, 가정에 의해 $\mathfrak{a}\neq\mathfrak{b}$이고, 따라서
 
 $$\mathfrak{b}=\mathfrak{a}+\mathbf{1}\neq\mathfrak{b}+\mathbf{1}$$
 
@@ -64,7 +64,7 @@ $\mathfrak{a}\geq\mathfrak{b}$인 것은, cardinal $\mathfrak{a}$와 $\mathfrak{
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> $n$이 자연수라 하자. 그럼 $\mathfrak{a}\leq n$을 만족하는 모든 cardinal $\mathfrak{a}$도 자연수이다. 만일 $n\neq 0$이라면, 유일한 자연수 $m$이 존재하여 $n=m+1$이다. 이 때, $a$에 관한 unary relation $a&lt;n$은 $a\leq m$과 동치이다.
+<ins id="prop4">**명제 4**</ins> $n$이 자연수라 하자. 그럼 $\mathfrak{a}\leq n$을 만족하는 모든 cardinal $\mathfrak{a}$도 자연수이다. 만일 $n\neq 0$이라면, 유일한 자연수 $m$이 존재하여 $n=m+1$이다. 이 때, $a$에 관한 unary relation $a&lt;n$은 $a\leq m$과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -92,7 +92,7 @@ $$a\leq m+1=n$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> $a$와 $b$가 자연수라 하자. $a&lt;b$는 어떤 자연수 $c>0$가 존재하여 $b=a+c$인 것과 동치이다.
+<ins id="prop5">**명제 5**</ins> $a$와 $b$가 자연수라 하자. $a&lt;b$는 어떤 자연수 $c>0$가 존재하여 $b=a+c$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -106,7 +106,7 @@ $$a\leq m+1=n$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $a$와 $b$가 자연수라 하자. 그럼 함수 $x\mapsto a+x$는 구간 $[0,b]$에서 $[a,a+b]$로의 strictly increasing order isomorphism이다.
+<ins id="prop6">**명제 6**</ins> $a$와 $b$가 자연수라 하자. 그럼 함수 $x\mapsto a+x$는 구간 $[0,b]$에서 $[a,a+b]$로의 strictly increasing order isomorphism이다.
 
 </div>
 
@@ -114,7 +114,7 @@ $$a\leq m+1=n$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> $(a_i)_{i\in I}$가 자연수를 값으로 갖는 유한수열이라 하자. 그럼 $\sum a_i$와 $\prod a_i$는 모두 자연수이다.
+<ins id="prop7">**명제 7**</ins> $(a_i)_{i\in I}$가 자연수를 값으로 갖는 유한수열이라 하자. 그럼 $\sum a_i$와 $\prod a_i$는 모두 자연수이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -128,7 +128,7 @@ $I$가 유한이므로, 임의의 자연수 $a$와 $b$에 대해 $a+b$와 $ab$�
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> $A$가 공집합이 아니고 $X$가 $A$의 부분집합이라 하자. $X$의 *특성함수<sub>characteristic function</sub>*는 함수 $\chi_X:E\rightarrow \\{0,1\\}$이며, 그 값은 다음의 식
+<ins id="def8">**정의 8**</ins> $A$가 공집합이 아니고 $X$가 $A$의 부분집합이라 하자. $X$의 *특성함수<sub>characteristic function</sub>*는 함수 $\chi_X:E\rightarrow \\{0,1\\}$이며, 그 값은 다음의 식
 
 $$\chi_X(x)=\begin{cases}1&\text{if $x\in X$}\\ 0&\text{if $x\in A\setminus X$}\end{cases}$$
 
@@ -140,7 +140,7 @@ $$\chi_X(x)=\begin{cases}1&\text{if $x\in X$}\\ 0&\text{if $x\in A\setminus X$}\
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> 집합 $A$의 두 부분집합 $X$와 $Y$에 대하여,
+<ins id="prop9">**명제 9**</ins> 집합 $A$의 두 부분집합 $X$와 $Y$에 대하여,
 
 $$\begin{aligned}
 \chi_{A\setminus X}(x)&=1-\chi_X(x)\\
@@ -175,7 +175,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl11">**따름정리 11 (Bézout's lemma)**</ins> 임의의 두 정수 $a$, $b$가 최대공약수 $d$를 갖는다고 하자. 그럼 적당한 두 정수 $x$와 $b$가 존재하여 $ax+by$이도록 할 수 있다. 
+<ins id="cor11">**따름정리 11 (Bézout's lemma)**</ins> 임의의 두 정수 $a$, $b$가 최대공약수 $d$를 갖는다고 하자. 그럼 적당한 두 정수 $x$와 $b$가 존재하여 $ax+by$이도록 할 수 있다. 
 
 </div>
 
@@ -183,7 +183,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
 <div class="definition" markdown="1">
 
-<ins id="df11">**정의 11**</ins> 집합이 *무한하다<sub>infinite</sub>*는 것은 유한하지 않다는 것이다.
+<ins id="def11">**정의 11**</ins> 집합이 *무한하다<sub>infinite</sub>*는 것은 유한하지 않다는 것이다.
 
 </div>
 
@@ -191,7 +191,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp12">**명제 12**</ins> 모든 infinite cardinal $\mathfrak{a}$에 대하여 $\mathfrak{a}^2=\mathfrak{a}$가 성립한다.
+<ins id="prop12">**명제 12**</ins> 모든 infinite cardinal $\mathfrak{a}$에 대하여 $\mathfrak{a}^2=\mathfrak{a}$가 성립한다.
 
 </div>
 
@@ -205,7 +205,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§서수들 사이의 순서관계, ⁋명제 1](/ko/math/set_theory/order_relations_between_ordinals#pp1))
+$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§서수들 사이의 순서관계, ⁋명제 1](/ko/math/set_theory/order_relations_between_ordinals#prop1))
 
 </details>
 <div class="proposition" markdown="1">
@@ -260,7 +260,7 @@ $$\card((F\times Y)\cup(Y\times F)\cup(Y\times Y))=3\mathfrak{b}=\mathfrak{b}=\c
 
 <div class="proposition" markdown="1">
 
-<ins id="crl15">**따름정리 15**</ins> $\mathfrak{a}$가 infinite cardinal이라면, 임의의 $n\geq 1$에 대해 $\mathfrak{a}^n=\mathfrak{a}$이다. 0이 아닌 cardinal들의 유한한 family $(\mathfrak{a}\_i)_{i\in I}$에 대하여, 만일 이들 중 가장 큰 cardinal이 infinite cardinal $\mathfrak{a}$라면 이들의 곱과 합은 모두 $\mathfrak{a}$이다.
+<ins id="cor15">**따름정리 15**</ins> $\mathfrak{a}$가 infinite cardinal이라면, 임의의 $n\geq 1$에 대해 $\mathfrak{a}^n=\mathfrak{a}$이다. 0이 아닌 cardinal들의 유한한 family $(\mathfrak{a}\_i)_{i\in I}$에 대하여, 만일 이들 중 가장 큰 cardinal이 infinite cardinal $\mathfrak{a}$라면 이들의 곱과 합은 모두 $\mathfrak{a}$이다.
 
 </div>
 

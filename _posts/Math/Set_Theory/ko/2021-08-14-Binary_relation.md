@@ -26,7 +26,7 @@ weight: 3
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 집합 $R$이 *이항관계<sub>binary relation</sub>*라는 것은 $R$의 모든 원소가 순서쌍이라는 것이다.[^1]
+<ins id="def1">**정의 1**</ins> 집합 $R$이 *이항관계<sub>binary relation</sub>*라는 것은 $R$의 모든 원소가 순서쌍이라는 것이다.[^1]
 
 </div>
 
@@ -46,7 +46,7 @@ $$E=\{(A,A)\mid\text{$A$ any set}\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> $R$이 이항관계라 하자. 그럼 유일한 두 개의 집합 $A$, $B$가 존재하여,  
+<ins id="prop3">**명제 3**</ins> $R$이 이항관계라 하자. 그럼 유일한 두 개의 집합 $A$, $B$가 존재하여,  
 
 <ul>
 <li> <phrase>$x\in A$인 것</phrase>과 <phrase>어떤 $y$가 존재하여 $(x,y)\in R$인 것</phrase>이 동치이고,</li>
@@ -73,13 +73,13 @@ $$A=\left\{x\mid\left(x\in\bigcup\left(\bigcup R\right)\right)\wedge P(x)\right\
 
 </details>
 
-[§순서쌍, ⁋정의 7](/ko/math/set_theory/ordered_pair#df7)과 마찬가지로 이들을 각각 첫 번째와 두 번째 *projection*이라 부르고, $\pr_1R$과 $\pr_2R$로 쓴다.
+[§순서쌍, ⁋정의 7](/ko/math/set_theory/ordered_pair#def7)과 마찬가지로 이들을 각각 첫 번째와 두 번째 *projection*이라 부르고, $\pr_1R$과 $\pr_2R$로 쓴다.
 
 간혹 이항관계의 첫 번째 성분과 두 번째 성분이 어느 집합에 속하는지를 명확하게 해야 할 때가 있다. 이를 위해 주어진 두 집합 $A,B$와 $\pr\_1R\subseteq A$, $\pr\_2R\subseteq B$를 만족하는 이항관계 $R$을 triple $(R,A,B)$와 같이 생각하기도 한다. 이 경우, $A$를 $R$의 *source*, $B$를 $R$의 *target*이라 부르며, 이런 상황에서는 같은 집합 $R$에 대해서도 $(R,A,B)$와 $(R,A',B')$를 다른 것으로 생각한다. 
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 위의 조건 $\pr\_1R\subseteq A$, $\pr\_2R\subseteq B$를 만족하는 이항관계 $R$이 주어졌다 하자. [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#pp9)에 의하여,
+<ins id="rmk1">**참고**</ins> 위의 조건 $\pr\_1R\subseteq A$, $\pr\_2R\subseteq B$를 만족하는 이항관계 $R$이 주어졌다 하자. [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#prop9)에 의하여,
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
@@ -91,7 +91,7 @@ $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> 이항관계 $(R,A,B)$와 부분집합 $A'\subseteq A$를 생각하자. 그럼 <phrase>$R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $R$에 의한 $A'$의 *image<sub>상</sub>*이라 부르고 , $R(A')$로 표기한다.
+<ins id="def5">**정의 5**</ins> 이항관계 $(R,A,B)$와 부분집합 $A'\subseteq A$를 생각하자. 그럼 <phrase>$R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $R$에 의한 $A'$의 *image<sub>상</sub>*이라 부르고 , $R(A')$로 표기한다.
 
 </div>
 
@@ -109,7 +109,7 @@ $$\{y\mid(x,y)\in R\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $R$이 이항관계라 하고, 임의의 집합 $A$와 그 부분집합 $X$를 생각하자. 그럼 $R(X)\subseteq R(A)$가 성립한다.
+<ins id="prop6">**명제 6**</ins> $R$이 이항관계라 하고, 임의의 집합 $A$와 그 부분집합 $X$를 생각하자. 그럼 $R(X)\subseteq R(A)$가 성립한다.
 
 </div>
 
@@ -130,7 +130,7 @@ $$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subset\pr_2R$$
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> 이항관계 $R$에 대하여, 집합 $R(\\{x\\})$를 $x$에서의 $R$의 *section<sub>단면</sub>*이라 부른다.
+<ins id="def7">**정의 7**</ins> 이항관계 $R$에 대하여, 집합 $R(\\{x\\})$를 $x$에서의 $R$의 *section<sub>단면</sub>*이라 부른다.
 
 </div>
 

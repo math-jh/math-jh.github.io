@@ -19,30 +19,13 @@ weight: 4
 
 ## 준동형사상의 기본 성질들
 
-[§준군, 모노이드, 군, ⁋정의 9](/ko/math/algebraic_structures/group#df9) 이후에 우리는 두 group $G,G'$ 사이의 임의의 magma homomorphism은 모두 group의 구조를 보존하는 것을 확인했다. 따라서 group homomorphism을 간단히 homomorphism이라 부르더라도 혼동의 여지가 없으므로, 이들을 구분할 필요가 없을 때에는 항상 간단한 이름으로 부르기로 한다.
+[§준군, 모노이드, 군, ⁋정의 10](/ko/math/algebraic_structures/group#def10) 이후에 우리는 두 group $G,G'$ 사이의 임의의 magma homomorphism은 모두 group의 구조를 보존하는 것을 확인했다. 따라서 group homomorphism을 간단히 homomorphism이라 부르더라도 혼동의 여지가 없으므로, 이들을 구분할 필요가 없을 때에는 항상 간단한 이름으로 부르기로 한다.
+
+한편 [§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structure#def6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#prop5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> 두 homomorphism의 합성 또한 homomorphism이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-두 homomorphism $f_1:G_0\rightarrow G_1$, $f_2:G_1\rightarrow G_2$가 주어졌다 하자. 그럼 임의의 $x, y\in G_0$에 대하여, 
-
-$$(f_2\circ f_1)(xy)=f_2(f_1(xy))=f_2(f_1(x)f_1(y))=f_2(f_1(x))f_2(f_1(y))=(f_2\circ f_1)(x)(f_2\circ f_1)(y)$$
-
-이므로 주어진 명제가 성립한다. 
-
-</details>
-
-또한, 항등함수가 homomorphism인 것은 증명할 것도 없이 자명하다. 한편 [§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structure#df6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#pp5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
-
-<div class="proposition" markdown="1">
-
-<ins id="pp2">**명제 2**</ins> 임의의 magma homomorphism $f:A\rightarrow A'$가 isomorphism인 것은 $f$가 전단사인 것과 동치이다. 
+<ins id="prop2">**명제 2**</ins> 임의의 magma homomorphism $f:A\rightarrow A'$가 isomorphism인 것은 $f$가 전단사인 것과 동치이다. 
 
 만일 $A$가 항등원 $e$를 갖고, $f:A\rightarrow A'$가 전단사함수라면 $f(e)$는 $A'$의 항등원이며, 따라서 $f^{-1}$은 $A'$의 항등원을 $A$의 항등원으로 보내는 magma homomorphism이다.
 
@@ -73,13 +56,13 @@ $$y=f(x)=f(xe)=f(x)f(e),\qquad y=f(x)=f(ex)=f(e)f(x)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $\im f$는 $G'$의 subgroup이다.
+<ins id="prop3">**명제 3**</ins> 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $\im f$는 $G'$의 subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\im f$가 $G'$의 부분마그마인 것은 이미 알고 있으므로, [§준군, 모노이드, 군, ⁋명제 12](/ko/math/algebraic_structures/group#pp12)를 이용하면 $\im f$가 역원을 취하는 것에 대해 닫혀있음만 보이면 된다. $y\in\im f$라 하고, $x\in G$가 $f(x)=y$를 만족한다 하자. 그럼
+$\im f$가 $G'$의 부분마그마인 것은 이미 알고 있으므로, [§준군, 모노이드, 군, ⁋명제 12](/ko/math/algebraic_structures/group#prop12)를 이용하면 $\im f$가 역원을 취하는 것에 대해 닫혀있음만 보이면 된다. $y\in\im f$라 하고, $x\in G$가 $f(x)=y$를 만족한다 하자. 그럼
 
 $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 
@@ -91,7 +74,7 @@ $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> Homomorphism $f:G\rightarrow G'$가 단사함수인 것은 $f^{-1}(e')=\\{e\\}$인 것과 동치이다.
+<ins id="prop4">**명제 4**</ins> Homomorphism $f:G\rightarrow G'$가 단사함수인 것은 $f^{-1}(e')=\\{e\\}$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -111,7 +94,7 @@ $$e'=f(x)f(y)^{-1}=f(xy^{-1})$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> Homomorphism $f:G\rightarrow G'$의 *kernel<sub>핵</sub>*을 집합 $f^{-1}(e')$으로 정의하고, $\ker f$로 적는다.
+<ins id="def5">**정의 5**</ins> Homomorphism $f:G\rightarrow G'$의 *kernel<sub>핵</sub>*을 집합 $f^{-1}(e')$으로 정의하고, $\ker f$로 적는다.
 
 </div>
 
@@ -119,7 +102,7 @@ $$e'=f(x)f(y)^{-1}=f(xy^{-1})$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $\ker f$는 $G$의 subgroup이다.
+<ins id="prop6">**명제 6**</ins> 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $\ker f$는 $G$의 subgroup이다.
 
 </div>
 <details class="proof" markdown="1">

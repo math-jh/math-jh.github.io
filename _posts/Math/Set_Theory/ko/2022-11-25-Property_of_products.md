@@ -26,7 +26,7 @@ weight: 11
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Family $(A_i)\_{i\in I}$와 그 product $\prod\_{i\in I} A_i$가 주어졌다고 하자. 그럼 index set의 부분집합 $J\subseteq I$에 대하여, $\prod\_{j\in J} A_j$를 *부분곱<sub>partial product</sub>*이라 부른다. 
+<ins id="def1">**정의 1**</ins> Family $(A_i)\_{i\in I}$와 그 product $\prod\_{i\in I} A_i$가 주어졌다고 하자. 그럼 index set의 부분집합 $J\subseteq I$에 대하여, $\prod\_{j\in J} A_j$를 *부분곱<sub>partial product</sub>*이라 부른다. 
 
 </div>
 
@@ -44,7 +44,7 @@ $$\prod_{i\in I}A_i\longrightarrow \prod_{j\in J}A_j\longrightarrow \prod_{k\in 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 모든 성분들이 공집합이 아닌 family $(A\_i)\_{i\in I}$를 생각하고, $J\subseteq I$라 하자. 만일 $g:J\rightarrow\bigcup\_{i\in I} A_i$가 $g(j)\in A_j$를 만족한다면, $g$의 extension $f:I\rightarrow\bigcup_{i\in I} A\_i$가 존재하여 $f(i)\in A_i$가 성립한다.
+<ins id="prop2">**명제 2**</ins> 모든 성분들이 공집합이 아닌 family $(A\_i)\_{i\in I}$를 생각하고, $J\subseteq I$라 하자. 만일 $g:J\rightarrow\bigcup\_{i\in I} A_i$가 $g(j)\in A_j$를 만족한다면, $g$의 extension $f:I\rightarrow\bigcup_{i\in I} A\_i$가 존재하여 $f(i)\in A_i$가 성립한다.
 
 </div>
 
@@ -61,14 +61,14 @@ $$F=G\cup\biggl(\bigcup_{i\in I\setminus J}\{(i, x_i)\}\biggr)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 공집합이 아닌 index set $I$를 갖는 family $(A\_i)\_{i\in I}$가 $I\neq\emptyset$가 주어졌다 하자. 만일 $(J_k)\_{k\in K}$이 $I$의 분할이라면, $\prod\_{i\in I}A_i$에서 $\prod\_{k\in K}\left(\prod\_{j\in J_k}A_j\right)$로의 함수 $f\mapsto (\pr\_{J_k}(f))\_{k\in K}$ 또한 전단사함수이다.
+<ins id="prop3">**명제 3**</ins> 공집합이 아닌 index set $I$를 갖는 family $(A\_i)\_{i\in I}$가 $I\neq\emptyset$가 주어졌다 하자. 만일 $(J_k)\_{k\in K}$이 $I$의 분할이라면, $\prod\_{i\in I}A_i$에서 $\prod\_{k\in K}\left(\prod\_{j\in J_k}A_j\right)$로의 함수 $f\mapsto (\pr\_{J_k}(f))\_{k\in K}$ 또한 전단사함수이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명 1</summary>
 
-$(J_k)\_{k\in K}$이 분할이므로, $f_k:J_k\rightarrow \bigcup\_{i\in I} A_i$는 쌍마다 서로소인 정의역을 갖는 함수들의 family이고, 따라서 [§집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#pp2)를 적용하면 전단사함수를 얻는다.
+$(J_k)\_{k\in K}$이 분할이므로, $f_k:J_k\rightarrow \bigcup\_{i\in I} A_i$는 쌍마다 서로소인 정의역을 갖는 함수들의 family이고, 따라서 [§집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2)를 적용하면 전단사함수를 얻는다.
 
 </details>
 
@@ -131,13 +131,13 @@ $(A_i)\_{i\in I}$, $(B_i)\_{i\in I}$가 같은 index를 갖는 family이고, 함
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 위에서 정의한 함수 $f\mapsto u_f$를 $(g_i)$들의 *곱<sub>product</sub>*이라 하고, $\prod_{i\in I}g_i$으로 적는다.
+<ins id="def4">**정의 4**</ins> 위에서 정의한 함수 $f\mapsto u_f$를 $(g_i)$들의 *곱<sub>product</sub>*이라 하고, $\prod_{i\in I}g_i$으로 적는다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> $(A_i)\_{i\in I}$, $(B_i)\_{i\in I}$, $(C_i)\_{i\in I}$가 세 family라 하고, $(f_i)\_{i\in I}$, $(g_i)\_{i\in I}$가 각각 $A_i$에서 $B_i$, $B_i$에서 $C_i$로의 함수들의 family라 하자. 그럼
+<ins id="prop5">**명제 5**</ins> $(A_i)\_{i\in I}$, $(B_i)\_{i\in I}$, $(C_i)\_{i\in I}$가 세 family라 하고, $(f_i)\_{i\in I}$, $(g_i)\_{i\in I}$가 각각 $A_i$에서 $B_i$, $B_i$에서 $C_i$로의 함수들의 family라 하자. 그럼
 
 $$\prod_{i\in I} (g_i\circ f_i)=\left(\prod_{i\in I} g_i\right)\circ\left(\prod_{i\in I}f_i\right)$$
 
@@ -166,7 +166,7 @@ $\id\_{A\_i}$들의 곱이 $\id\_{\prod A\_i}$라는 것은 자명하므로, 위
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $((A\_{k,i})\_{i\in J\_k})\_{k\in K}$가 집합들의 family들의 family라 하자. 추가로 $K\neq\emptyset$이고, $J_k\neq\emptyset$가 모든 $k\in K$에 대해 성립한다고 하자. 그럼 $I=\prod\_{k\in K} J_k\neq\emptyset$에 대하여,
+<ins id="prop6">**명제 6**</ins> $((A\_{k,i})\_{i\in J\_k})\_{k\in K}$가 집합들의 family들의 family라 하자. 추가로 $K\neq\emptyset$이고, $J_k\neq\emptyset$가 모든 $k\in K$에 대해 성립한다고 하자. 그럼 $I=\prod\_{k\in K} J_k\neq\emptyset$에 대하여,
 
 $$\bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)=\bigcap_{f\in I}\left(\bigcup_{k\in K}A_{k,f(k)}\right),\quad\bigcap_{k\in K}\left(\bigcup_{i\in J}A_{k,i}\right)=\bigcup_{f\in I}\left(\bigcap_{k\in K}A_{k,f(k)}\right)$$
 
@@ -185,7 +185,7 @@ Product와 union, 그리고 product와 intersection 사이에도 다음과 같�
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> $((A\_{k,i})\_{i\in J\_k})\_{k\in K}$가 집합들의 family들의 family이고, $I$를 위의 명제와 동일하게 정의하자. 그럼 
+<ins id="prop7">**명제 7**</ins> $((A\_{k,i})\_{i\in J\_k})\_{k\in K}$가 집합들의 family들의 family이고, $I$를 위의 명제와 동일하게 정의하자. 그럼 
 
 $$\prod_{k\in K}\left(\bigcup_{i\in J_k}A_{k,i}\right)=\bigcup_{f\in I}\left(\prod_{k\in K}A_{k,f(k)}\right),\quad\prod_{k\in K}\left(\bigcap_{i\in J}A_{k,i}\right)=\bigcap_{f\in I}\left(\prod_{k\in K}A_{k,f(k)}\right)$$
 
