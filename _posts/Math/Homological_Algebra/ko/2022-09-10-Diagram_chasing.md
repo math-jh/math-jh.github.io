@@ -23,7 +23,7 @@ weight: 2
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1 (The four lemma)**</ins> $R$-module들의 commutative diagram
+<ins id="prop1">**명제 1 (The four lemma)**</ins> $R$-module들의 commutative diagram
 
 ![Four_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-1.png){:width="300.15px" class="invert" .align-center}
 
@@ -73,7 +73,7 @@ weight: 2
 
 <div class="proposition" markdown="1">
 
-<ins id="crl2">**따름정리 2 (The five lemma)**</ins> $R$-module들의 commutative diagram
+<ins id="cor2">**따름정리 2 (The five lemma)**</ins> $R$-module들의 commutative diagram
 
 ![five_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-2.png){:width="410.25px" class="invert" .align-center}
 
@@ -83,7 +83,7 @@ weight: 2
 
 <div class="proposition" markdown="1">
 
-<ins id="crl3">**따름정리 3 (The short five lemma)**</ins> $R$-module들의 commutative diagram
+<ins id="cor3">**따름정리 3 (The short five lemma)**</ins> $R$-module들의 commutative diagram
 
 ![short_five_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-3.png){:width="384.45px" class="invert" .align-center}
 
@@ -115,7 +115,7 @@ $i:\ker(h)\rightarrow X$와 $\xi$의 합성 $\xi\circ i:\ker h\rightarrow X'$를
 
 $$h'\circ(\xi\circ i)=(\eta\circ h)\circ i=\eta\circ 0=0$$
 
-이므로, [§완전열, ⁋명제 5](/ko/math/homological_algebra/exact_sequences#pp5)로부터 유일한 $\xi^\sharp:\ker(h)\rightarrow\ker(h')$가 존재한다는 것을 안다. 
+이므로, [§완전열, ⁋명제 5](/ko/math/homological_algebra/exact_sequences#prop5)로부터 유일한 $\xi^\sharp:\ker(h)\rightarrow\ker(h')$가 존재한다는 것을 안다. 
 
 ![induced_morphism_kernel](/assets/images/Math/Homological_Algebra/Diagram_chasing-5.png){:width="274.2px" class="invert" .align-center}
 
@@ -265,7 +265,7 @@ Snake lemma는 보통 다음 글에서와 같이 long exact sequence를 그릴 �
 
 <div class="proposition" markdown="1">
 
-<ins id="crl7">**따름정리 7 (The 3×3 lemma)**</ins> $R$-module들의 commutative diagram
+<ins id="cor7">**따름정리 7 (The 3×3 lemma)**</ins> $R$-module들의 commutative diagram
 
 ![Nine_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-10.png){:width="392.7px" class="invert" .align-center}
 

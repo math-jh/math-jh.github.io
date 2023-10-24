@@ -27,7 +27,7 @@ weight: 10
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 monoid $M$이 주어졌다 하고, 집합 $E$를 고정하자. $M$이 $E$ 위에 왼쪽에서 *act<sub>작용</sub>*한다는 것은 monoid homomorphism $\rho:M\rightarrow\End(E)$가 주어진 것이다. 이 때, 집합 $E$를 *left $M$-set*이라 부른다.
+<ins id="def1">**정의 1**</ins> 임의의 monoid $M$이 주어졌다 하고, 집합 $E$를 고정하자. $M$이 $E$ 위에 왼쪽에서 *act<sub>작용</sub>*한다는 것은 monoid homomorphism $\rho:M\rightarrow\End(E)$가 주어진 것이다. 이 때, 집합 $E$를 *left $M$-set*이라 부른다.
 
 임의의 $\alpha\in M$과 $x\in E$에 대하여, 함숫값 $\rho(\alpha)(x)$를 간단히 $\alpha\cdot x$로 표기한다. 
 
@@ -39,11 +39,11 @@ $$(\alpha\beta)\cdot x=\alpha\cdot(\beta\cdot x),\qquad e\cdot x=x$$
 
 이 성립하는 것이다. 
 
-일반적인 경우, 우리는 위와 같이 주어진 대상이 다른 대상에 왼쪽에서 act하는 경우를 생각하지만, 종종 오른쪽에서 act하는 것이 자연스러울 때도 있다. 이를 [정의 1](#df1)과 비슷한 형태로 정의하기 위해서는 다음 정의가 필요하다.
+일반적인 경우, 우리는 위와 같이 주어진 대상이 다른 대상에 왼쪽에서 act하는 경우를 생각하지만, 종종 오른쪽에서 act하는 것이 자연스러울 때도 있다. 이를 [정의 1](#def1)과 비슷한 형태로 정의하기 위해서는 다음 정의가 필요하다.
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 임의의 마그마 $(M,\ast)$에 대하여, $M$의 *opposite magma<sub>반대 마그마</sub>* $(M^\op,\ast^\op)$는 다음과 같이 정의된 마그마이다.
+<ins id="def2">**정의 2**</ins> 임의의 마그마 $(M,\ast)$에 대하여, $M$의 *opposite magma<sub>반대 마그마</sub>* $(M^\op,\ast^\op)$는 다음과 같이 정의된 마그마이다.
 
 1. $M^\op=M$이다.
 2. 임의의 $x,y\in M^\op$에 대하여, $x\ast^\op y$는 $y\ast x$로 정의된다.
@@ -54,7 +54,7 @@ $$(\alpha\beta)\cdot x=\alpha\cdot(\beta\cdot x),\qquad e\cdot x=x$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 임의의 monoid $M$과 집합 $E$에 대하여, $M$이 $E$ 위에 오른쪽에서 *act<sub>작용</sub>*한다는 것은 monoid homomorphism $\rho:M\rightarrow \End(E)^\op$가 주어진 것이다. 이 때, 집합 $E$를 *right $M$-set*이라 부른다.
+<ins id="def3">**정의 3**</ins> 임의의 monoid $M$과 집합 $E$에 대하여, $M$이 $E$ 위에 오른쪽에서 *act<sub>작용</sub>*한다는 것은 monoid homomorphism $\rho:M\rightarrow \End(E)^\op$가 주어진 것이다. 이 때, 집합 $E$를 *right $M$-set*이라 부른다.
 
 임의의 $\alpha\in M$과 $x\in E$에 대하여, 함숫값 $\rho(\alpha)(x)$를 간단히 $x\cdot\alpha$로 표기한다.
 
@@ -72,7 +72,7 @@ Left action과 right action은 표기상의 차이일 뿐, 본질적으로는 �
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Monoid $M$이 고정되었다 하고, $E,E'$가 $M$-set들이라 하자. 함수 $f:E\rightarrow E'$가 *$M$-set homomorphism*이라는 것은 모든 $x\in E$와 $\alpha\in M$에 대하여
+<ins id="def4">**정의 4**</ins> Monoid $M$이 고정되었다 하고, $E,E'$가 $M$-set들이라 하자. 함수 $f:E\rightarrow E'$가 *$M$-set homomorphism*이라는 것은 모든 $x\in E$와 $\alpha\in M$에 대하여
 
 $$f(\alpha\cdot x)=\alpha\cdot f(x)$$
 
@@ -100,7 +100,7 @@ $$x\sim y\implies\alpha\cdot x\sim\alpha\cdot y$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> $M$-set $E$의 부분집합 $A$에 대하여, $A$의 *stabilizer<sub>안정자</sub>*는 $\alpha A\subseteq A$를 만족하는 $\alpha$들의 집합을 뜻한다. 이를 $\Stab (A)$로 적는다.
+<ins id="def5">**정의 5**</ins> $M$-set $E$의 부분집합 $A$에 대하여, $A$의 *stabilizer<sub>안정자</sub>*는 $\alpha A\subseteq A$를 만족하는 $\alpha$들의 집합을 뜻한다. 이를 $\Stab (A)$로 적는다.
 
 </div>
 
@@ -108,7 +108,7 @@ $$x\sim y\implies\alpha\cdot x\sim\alpha\cdot y$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $M$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $M$의 submonoid이다. 
+<ins id="prop6">**명제 6**</ins> $M$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $M$의 submonoid이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -124,7 +124,7 @@ $$(\alpha\beta)\cdot x=\alpha\cdot(\beta\cdot x)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl7">**따름정리 7**</ins> Group $G$가 주어졌다 하자. $G$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $G$의 subgroup이다.
+<ins id="cor7">**따름정리 7**</ins> Group $G$가 주어졌다 하자. $G$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $G$의 subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -152,7 +152,7 @@ $$\alpha^{-1}\cdot y=\alpha^{-1}(\alpha\cdot x)=x\in A$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> Group $G$의 임의의 원소 $g$에 대하여, $\rho_g\in\End(G)$를 다음의 식
+<ins id="prop8">**명제 8**</ins> Group $G$의 임의의 원소 $g$에 대하여, $\rho_g\in\End(G)$를 다음의 식
 
 $$\rho_g(x)=gxg^{-1}$$
 
@@ -178,13 +178,13 @@ $$\rho_{gh}(x)=(gh)x(gh)^{-1}=g(hxh^{-1})g^{-1}=(\rho_g\circ\rho_h)(x)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df9">**정의 9**</ins> Group $G$가 주어졌다 하자. [명제 8](#pp8)의 automorphism $\rho_g$를 $g$에 의해 정의되는 *inner automorphism*이라 부르고, 이들의 모임을 $\Inn(G)$로 적는다.
+<ins id="def9">**정의 9**</ins> Group $G$가 주어졌다 하자. [명제 8](#prop8)의 automorphism $\rho_g$를 $g$에 의해 정의되는 *inner automorphism*이라 부르고, 이들의 모임을 $\Inn(G)$로 적는다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp10">**명제 10**</ins> Group $G$에 대하여, inner automorphism들의 모임 $\Inn(G)$는 $\Aut(G)$의 normal subgroup이다.
+<ins id="prop10">**명제 10**</ins> Group $G$에 대하여, inner automorphism들의 모임 $\Inn(G)$는 $\Aut(G)$의 normal subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -211,7 +211,7 @@ $$G/\ker\rho\cong\Inn(G)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df11">**정의 11**</ins> Group $G$와, [명제 8](#pp8)에서 정의한 group homomorphism $\rho:G\rightarrow\Inn(G)$에 대하여, $\ker\rho$를 $G$의 *center<sub>중심</sub>*이라 부르고 $C(G)$로 표기한다.
+<ins id="def11">**정의 11**</ins> Group $G$와, [명제 8](#prop8)에서 정의한 group homomorphism $\rho:G\rightarrow\Inn(G)$에 대하여, $\ker\rho$를 $G$의 *center<sub>중심</sub>*이라 부르고 $C(G)$로 표기한다.
 
 </div>
 

@@ -50,7 +50,7 @@ Manifold는 국소적으로 $\mathbb{R}^m$과 닮은 구조이므로, 가장 간
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> Manifold $M$이 주어졌다 하자. $M$의 열린집합 $V$에 다음의 두 구조
+<ins id="def3">**정의 3**</ins> Manifold $M$이 주어졌다 하자. $M$의 열린집합 $V$에 다음의 두 구조
 
 1. $M$의 위상으로부터 주어지는 subspace topology,
 2. $M$에 정의된 미분구조 $\mathcal{A}$에 대하여, 
@@ -153,11 +153,11 @@ $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 
 $$\tilde{U}_i=\{(x^1,\ldots, x^{n+1})\mid x^i\neq 0\}$$
 
-을 생각하자. 그럼 $\tilde{U}_i$는 saturated인 열린집합이므로, [\[위상수학\] §몫공간, ⁋명제 8](/ko/math/topology/quotient_space#pp8)에 의하여 quotient map $\pi$가 $\tilde{U}_i$로 잘 제한된다. 따라서, 함수 $\varphi_i:U_i\rightarrow\mathbb{R}^n$을
+을 생각하자. 그럼 $\tilde{U}_i$는 saturated인 열린집합이므로, [\[위상수학\] §몫공간, ⁋명제 8](/ko/math/topology/quotient_space#prop8)에 의하여 quotient map $\pi$가 $\tilde{U}_i$로 잘 제한된다. 따라서, 함수 $\varphi_i:U_i\rightarrow\mathbb{R}^n$을
 
 $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i},\frac{x^{i+1}}{x^i},\ldots, \frac{x^{n+1}}{x^i}\right)$$
 
-으로 정의하면[^1] 함수 $\varphi\_i\circ\pi\|\_{\tilde{U}\_i}$가 연속이고 따라서 [\[위상수학\] §몫공간, ⁋명제 9](/ko/math/topology/quotient_space#pp9)에 의해 $\varphi_i$ 또한 연속이다. 
+으로 정의하면[^1] 함수 $\varphi\_i\circ\pi\|\_{\tilde{U}\_i}$가 연속이고 따라서 [\[위상수학\] §몫공간, ⁋명제 9](/ko/math/topology/quotient_space#prop9)에 의해 $\varphi_i$ 또한 연속이다. 
 
 ![quotient_map](/assets/images/Math/Manifold/Examples_of_manifolds-2.png){:width="159.15px" class="invert" .align-center}
 

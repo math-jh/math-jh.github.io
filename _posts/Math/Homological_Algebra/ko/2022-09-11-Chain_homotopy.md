@@ -25,7 +25,7 @@ weight: 5
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 두 chain complex $C_\bullet$, $D_\bullet$이 주어졌다 하자. 그럼 $C_\bullet$과 $D_\bullet$이 *isomorphic*하다는 것은 임의의 두 chain map $f:C_\bullet\rightarrow D_\bullet$, $g:D_\bullet\rightarrow C_\bullet$이 존재하여 $fg=\id\_D$이고 $gf=\id\_C$인 것이다. 이 때, $f,g$를 두 chain complex 사이의 *isomorphism*이라 부른다.
+<ins id="def1">**정의 1**</ins> 두 chain complex $C_\bullet$, $D_\bullet$이 주어졌다 하자. 그럼 $C_\bullet$과 $D_\bullet$이 *isomorphic*하다는 것은 임의의 두 chain map $f:C_\bullet\rightarrow D_\bullet$, $g:D_\bullet\rightarrow C_\bullet$이 존재하여 $fg=\id\_D$이고 $gf=\id\_C$인 것이다. 이 때, $f,g$를 두 chain complex 사이의 *isomorphism*이라 부른다.
 
 </div>
 
@@ -33,7 +33,7 @@ weight: 5
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 두 chain complex $C_\bullet$, $D_\bullet$이 *quasi-isomorphic*하다는 것은 모든 $n$에 대하여 $H_n(C)\cong H_n(D)$인 것이다. 만일 어떤 chain map $f:C\rightarrow D$과 모든 $n$에 대해 $H_n(f)$가 isomorphism이 된다면, $f$를 *quasi-isomorphism*이라 부른다.
+<ins id="def2">**정의 2**</ins> 두 chain complex $C_\bullet$, $D_\bullet$이 *quasi-isomorphic*하다는 것은 모든 $n$에 대하여 $H_n(C)\cong H_n(D)$인 것이다. 만일 어떤 chain map $f:C\rightarrow D$과 모든 $n$에 대해 $H_n(f)$가 isomorphism이 된다면, $f$를 *quasi-isomorphism*이라 부른다.
 
 </div>
 
@@ -49,7 +49,7 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 두 chain complex $C,D$와 chain map $f,g:C\rightarrow D$가 주어졌다 하자. 그럼 $f$와 $g$ 사이의 *chain homotopy<sub>사슬 호모토피</sub>*은 다음 diagram
+<ins id="def3">**정의 3**</ins> 두 chain complex $C,D$와 chain map $f,g:C\rightarrow D$가 주어졌다 하자. 그럼 $f$와 $g$ 사이의 *chain homotopy<sub>사슬 호모토피</sub>*은 다음 diagram
 
 ![chain_homotopy](/assets/images/Math/Homological_Algebra/Chain_homotopy-1.png){:width="612px" class="invert" .align-center}
 
@@ -61,7 +61,7 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> 두 homotopic chain map $f,g:C\rightarrow D$는 homology들 위에서 같은 함수를 유도한다.
+<ins id="prop4">**명제 4**</ins> 두 homotopic chain map $f,g:C\rightarrow D$는 homology들 위에서 같은 함수를 유도한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -87,7 +87,7 @@ $$f_n(a)-g_n(a)=d_{n+1}^D)(h_n(a))\in\im(d_{n+1}^D)$$
 
 ## Homotopy category
 
-[명제 4](#pp4)에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{C})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 첫 번째 보조정리는 자명하다.
+[명제 4](#prop4)에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{C})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 첫 번째 보조정리는 자명하다.
 
 <div class="proposition" markdown="1">
 

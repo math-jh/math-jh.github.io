@@ -27,7 +27,7 @@ weight: 1
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Abelian group $G$가 *$\Delta$-graded abelian group<sub>$\Delta$-등급가환군</sub>*이라는 것은 $G$의 subgroup들 $(G\_\alpha)\_{\alpha\in\Delta}$가 존재하여 $G=\bigoplus_{\alpha\in\Delta} G\_\alpha$가 성립하는 것이다.
+<ins id="def1">**정의 1**</ins> Abelian group $G$가 *$\Delta$-graded abelian group<sub>$\Delta$-등급가환군</sub>*이라는 것은 $G$의 subgroup들 $(G\_\alpha)\_{\alpha\in\Delta}$가 존재하여 $G=\bigoplus_{\alpha\in\Delta} G\_\alpha$가 성립하는 것이다.
 
 이 경우, 원소 $x\in G$가 $x\in G\_\alpha$를 만족한다면 $x$가 *homogeneous of degree $\alpha$<sub>$\alpha$차 동차원소</sub>*라 부른다.
 
@@ -49,7 +49,7 @@ $$G_\alpha'=\bigoplus_{\gamma\in\Delta_2}G_{\alpha,\gamma},\qquad G_\beta''=\big
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 주어진 ring $A$가 *$\Delta$-graded ring<sub>$\Delta$-등급환</sub>*이라는 것은 $(A,+,0)$이 $\Delta$-graded abelian group $A=\bigoplus_{\alpha\in\Delta}A_\alpha$인 동시에, 임의의 $\alpha,\beta\in\Delta$에 대해 
+<ins id="def2">**정의 2**</ins> 주어진 ring $A$가 *$\Delta$-graded ring<sub>$\Delta$-등급환</sub>*이라는 것은 $(A,+,0)$이 $\Delta$-graded abelian group $A=\bigoplus_{\alpha\in\Delta}A_\alpha$인 동시에, 임의의 $\alpha,\beta\in\Delta$에 대해 
 
 $$A_\alpha A_\beta\subseteq A_{\alpha+\beta}$$
 
@@ -65,7 +65,7 @@ $$A[\x]=\bigoplus_{n\geq 0}A\x^n$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> Graded ring $A=\bigoplus A\_\alpha$에 대하여, $A_0$은 덧셈과 곱셈에 대하여 닫혀있다. 
+<ins id="prop3">**명제 3**</ins> Graded ring $A=\bigoplus A\_\alpha$에 대하여, $A_0$은 덧셈과 곱셈에 대하여 닫혀있다. 
 
 만일 $\Delta$의 임의의 원소 $\alpha,\beta,\gamma$에 대하여 다음 식
 
@@ -101,7 +101,7 @@ $$x=1x=\sum_{\alpha\in\Delta}e_\alpha x$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> $\Delta$-graded ring $A=\bigoplus A\_\alpha$이 주어졌다 하자. 그럼 $A$-module $M$이 *$\Delta$-graded left $A$-module<sub>$\Delta$-등급왼쪽가군</sub>*이라는 것은 $(M,+,0)$이 $\Delta$-graded abelian group $M=\bigoplus_{\alpha\in \Delta}M\_\alpha$인 동시에, 임의의 $\alpha,\beta\in\Delta$에 대하여
+<ins id="def4">**정의 4**</ins> $\Delta$-graded ring $A=\bigoplus A\_\alpha$이 주어졌다 하자. 그럼 $A$-module $M$이 *$\Delta$-graded left $A$-module<sub>$\Delta$-등급왼쪽가군</sub>*이라는 것은 $(M,+,0)$이 $\Delta$-graded abelian group $M=\bigoplus_{\alpha\in \Delta}M\_\alpha$인 동시에, 임의의 $\alpha,\beta\in\Delta$에 대하여
 
 $$A_\alpha M_\beta\subseteq M_{\alpha+\beta}$$
 
@@ -121,7 +121,7 @@ $$A_0=A,\quad A_\alpha=0\text{ for all $\alpha\neq 0$}\tag{1}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> $\Delta$-graded commutative ring $A=\bigoplus A\_\alpha$이 주어졌다 하자. 그럼 $A$-algebra $E$가 *$\Delta$-graded $A$-algebra<sub>$\Delta$-등급대수</sub>*라는 것은 $(E,+,0)$이 $\Delta$-graded abelian group $E=\bigoplus_{\alpha\in\Delta} E_\alpha$인 동시에 다음 식
+<ins id="def5">**정의 5**</ins> $\Delta$-graded commutative ring $A=\bigoplus A\_\alpha$이 주어졌다 하자. 그럼 $A$-algebra $E$가 *$\Delta$-graded $A$-algebra<sub>$\Delta$-등급대수</sub>*라는 것은 $(E,+,0)$이 $\Delta$-graded abelian group $E=\bigoplus_{\alpha\in\Delta} E_\alpha$인 동시에 다음 식
 
 $$A_\alpha E_\beta\subseteq E_{\alpha+\beta},\qquad E_\alpha E_\beta\subseteq E_{\alpha+\beta}$$
 

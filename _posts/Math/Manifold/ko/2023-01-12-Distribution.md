@@ -29,7 +29,7 @@ $$\sigma'(t)=X(\sigma(t)),\qquad \sigma(0)=p\tag{1}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $m$차원 manifold $M$이 주어졌다 하고, $1\leq k\leq m$인 정수 $k$가 주어졌다 하자. 각각의 $p\in M$마다 $T_pM$의 $k$차원 부분공간 $\mathcal{D}$를 대응시키는 함수 $p\rightarrow\mathcal{D}(p)$를 *$k$차원 distribution*이라 부른다. 
+<ins id="def1">**정의 1**</ins> $m$차원 manifold $M$이 주어졌다 하고, $1\leq k\leq m$인 정수 $k$가 주어졌다 하자. 각각의 $p\in M$마다 $T_pM$의 $k$차원 부분공간 $\mathcal{D}$를 대응시키는 함수 $p\rightarrow\mathcal{D}(p)$를 *$k$차원 distribution*이라 부른다. 
 
 $k$차원 distribution $\mathcal{D}$가 $C^\infty$인 것은 각각의 $p\in M$마다 적당한 열린근방 $U$와, 이 위에서 정의된 $C^\infty$ 벡터장들 $X_1,\ldots, X_k$가 존재하여, 각각의 $x\in U$마다 다음의 식
 
@@ -47,7 +47,7 @@ $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> $M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$에 대하여, 다음의 식
+<ins id="def2">**정의 2**</ins> $M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$에 대하여, 다음의 식
 
 $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
@@ -99,7 +99,7 @@ $$d\Phi_x:T_xS\rightarrow\mathcal{D}(\Phi(x))$$
 
 $$d\Phi_s(\tilde{X}_s)=X_p,\qquad d\Phi_s(\tilde{Y}_s)=Y_p$$
 
-을 만족하는 두 벡터장 $\tilde{X},\tilde{Y}$를 찾을 수 있다. 그럼 이들은 각각 $X,Y$와 $\Phi$-related인 벡터장들이므로, [§리 미분, ⁋명제 9](/ko/math/manifold/Lie_derivative#pp9)에 의하여 $[\tilde{X},\tilde{Y}]$는 $[X,Y]$와 $\Phi$-related이다. 따라서
+을 만족하는 두 벡터장 $\tilde{X},\tilde{Y}$를 찾을 수 있다. 그럼 이들은 각각 $X,Y$와 $\Phi$-related인 벡터장들이므로, [§리 미분, ⁋명제 9](/ko/math/manifold/Lie_derivative#prop9)에 의하여 $[\tilde{X},\tilde{Y}]$는 $[X,Y]$와 $\Phi$-related이다. 따라서
 
 $$[X,Y]_p=d\Phi_s([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
 

@@ -46,21 +46,7 @@ $(x,z),(x,z')\in G\circ F$라 가정하자. 그럼 $G\circ F$의 정의에 의�
 
 따라서, 함수의 합성은 별다른 것이 아니라 단순히 이항관계의 합성과 같으며, 그 결과로 얻어지는 이항관계가 항상 함수가 된다. 
 
-<div class="proposition" markdown="1">
 
-<ins id="cor2">**따름정리 2**</ins> 집합을 대상으로, 집합들 사이의 함수를 morphism으로 하는 카테고리 $\Set$이 존재한다. ([\[범주론\] §카테고리, ⁋정의 1](/ko/math/category_theory/categories_and_functors#def1))
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-정의에 의해 함수는 이항관계이며, 따라서 [§이항관계들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_binary_relations#prop5)에 의하여 함수들의 합성은 결합법칙을 만족한다. 뿐만 아니라, [§함수, ⁋정의 2](/ko/math/set_theory/functions#def2)에서 정의한 항등함수 $\id_A$는 임의의 함수 $f:A\rightarrow B$와 $g:C\rightarrow A$에 대하여
-
-$$(f\circ\id_A)(x)=f(\id_A(x))=f(x),\qquad (\id_A\circ g)(y)=\id_A(g(y))=g(y)\qquad\text{for all $x\in A,y\in C$}$$
-
-을 만족한다. 
-
-</details>
 
 ## 역함수
 
@@ -68,7 +54,7 @@ $$(f\circ\id_A)(x)=f(\id_A(x))=f(x),\qquad (\id_A\circ g)(y)=\id_A(g(y))=g(y)\qq
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 함수 $f:A\rightarrow B$를 생각하자. $f$가 *단사<sub>injective</sub>*라는 것은 $A$의 임의의 두 원소가 $f$에서 다른 함숫값을 갖는 것이다. $f$가 *전사<sub>surjective</sub>*라는 것은 $f(A)=B$인 것이다. 만일 $f$가 단사함수인 동시에 전사함수라면, 이 함수가 *전단사<sub>bijective</sub>*라고 한다.
+<ins id="def2">**정의 2**</ins> 함수 $f:A\rightarrow B$를 생각하자. $f$가 *단사<sub>injective</sub>*라는 것은 $A$의 임의의 두 원소가 $f$에서 다른 함숫값을 갖는 것이다. $f$가 *전사<sub>surjective</sub>*라는 것은 $f(A)=B$인 것이다. 만일 $f$가 단사함수인 동시에 전사함수라면, 이 함수가 *전단사<sub>bijective</sub>*라고 한다.
 
 </div>
 
@@ -82,7 +68,7 @@ $$(f\circ\id_A)(x)=f(\id_A(x))=f(x),\qquad (\id_A\circ g)(y)=\id_A(g(y))=g(y)\qq
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> $A\subseteq B$라 하자. $f:A\rightarrow B$를 $x\mapsto x$로 정의하면 이 함수는 단사함수가 된다. 이 함수를 *canonical injection*이라 부른다. 
+<ins id="ex3">**예시 3**</ins> $A\subseteq B$라 하자. $f:A\rightarrow B$를 $x\mapsto x$로 정의하면 이 함수는 단사함수가 된다. 이 함수를 *canonical injection*이라 부른다. 
 
 임의의 함수 $f:A\rightarrow B$와 부분집합 $X\subseteq A$, 그리고 canonical injection $i:X\hookrightarrow A$에 대하여
 
@@ -94,7 +80,7 @@ $$f|_X=f\circ i$$
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 정의에 의해, $\id_A=(\Delta_A,A,A)$가 전단사임은 자명하다.
+<ins id="ex4">**예시 4**</ins> 정의에 의해, $\id_A=(\Delta_A,A,A)$가 전단사임은 자명하다.
 
 </div>
 
@@ -102,7 +88,7 @@ $$f|_X=f\circ i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> 함수 $f:A\rightarrow B$에 대하여, $f^{-1}$이 함수인 것과 $f$가 전단사함수인 것이 동치이다.
+<ins id="prop5">**명제 5**</ins> 함수 $f:A\rightarrow B$에 대하여, $f^{-1}$이 함수인 것과 $f$가 전단사함수인 것이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -133,7 +119,7 @@ $$f|_X=f\circ i$$
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> *이변수함수*는 정의역이 순서쌍들의 집합인 함수이다.
+<ins id="def6">**정의 6**</ins> *이변수함수*는 정의역이 순서쌍들의 집합인 함수이다.
 
 </div>
 
@@ -142,7 +128,7 @@ $f$가 이변수함수라면 우리는 $(x,y)$에서의 $f$의 값을 표현하�
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> $f:A\rightarrow B$가 이변수함수라 하자. 모든 $y$에 대하여 $A\_y$를 $(x,y)\in A$이도록 하는 모든 $x$들의 집합으로 정의하자. 그럼 $A\_{y\_0}$에서 $B$로의 함수 $x\mapsto f(x,y\_0)$를 $y_0$에서의 $f$의 *partial mapping*이라 부르고, $f(-,y\_0)$로 적는다. 이와 비슷하게 $f(x\_0,-)$ 또한 정의한다.
+<ins id="def7">**정의 7**</ins> $f:A\rightarrow B$가 이변수함수라 하자. 모든 $y$에 대하여 $A\_y$를 $(x,y)\in A$이도록 하는 모든 $x$들의 집합으로 정의하자. 그럼 $A\_{y\_0}$에서 $B$로의 함수 $x\mapsto f(x,y\_0)$를 $y_0$에서의 $f$의 *partial mapping*이라 부르고, $f(-,y\_0)$로 적는다. 이와 비슷하게 $f(x\_0,-)$ 또한 정의한다.
 
 </div>
 

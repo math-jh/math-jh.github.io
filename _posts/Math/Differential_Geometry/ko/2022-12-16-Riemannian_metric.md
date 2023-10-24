@@ -25,11 +25,11 @@ $$\bigwedge\nolimits(T^\ast M)\cong\bigoplus_{k=0}^n\bigwedge\nolimits^k(T^\ast 
 
 을 정의하고, 이 bundle의 smooth section을 differential form으로 정의했다. 비슷한 일을 symmetric algebra를 사용해서도 할 수 있으며, exterior algebra와는 다르게 $k=2$인 경우가 관심의 대상이 된다. 이는 $k=2$인 경우 생기는 $\mathcal{S}^2(T^\ast M)$의 원소들이 $TM$ 위에 symmetric bilinear form을 정의하기 때문이다. 
 
-점 $p\in M$을 고정하자. 그럼 $g_p$는 $\mathcal{S}^2(T^\ast_pM)$의 원소이다. 이제 [\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifold/differential_forms#df1) 이후에 확인한 것과 마찬가지 논증을 거쳐 $\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$임을 알 수 있고, [\[텐서대수\] §대칭대수와 외대수, ⁋정리 13](/ko/math/tensor_algebra/symmetric_and_exterior_algebras#thm13)에 의해 $g_p$를 $T_pM\times T_pM$에서 $\mathbb{R}$로의 symmetric multilinear map으로 생각할 수 있다. 따라서 $g_p$에 적절한 non-degenerate 조건만 준다면 이를 $T_pM$ 위에 정의된 내적으로 생각할 수 있다. ([\[선형대수학\] §내적공간, ⁋정의 1](/ko/math/linear_algebra/inner_product_space))
+점 $p\in M$을 고정하자. 그럼 $g_p$는 $\mathcal{S}^2(T^\ast_pM)$의 원소이다. 이제 [\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifold/differential_forms#def1) 이후에 확인한 것과 마찬가지 논증을 거쳐 $\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$임을 알 수 있고, [\[텐서대수\] §대칭대수와 외대수, ⁋정리 13](/ko/math/tensor_algebra/symmetric_and_exterior_algebras#thm13)에 의해 $g_p$를 $T_pM\times T_pM$에서 $\mathbb{R}$로의 symmetric multilinear map으로 생각할 수 있다. 따라서 $g_p$에 적절한 non-degenerate 조건만 준다면 이를 $T_pM$ 위에 정의된 내적으로 생각할 수 있다. ([\[선형대수학\] §내적공간, ⁋정의 1](/ko/math/linear_algebra/inner_product_space))
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Manifold $M$ 위에 주어진 *Riemannian metric<sub>리만 계량</sub>*은 다음과 같은 센스에서 positive-definite인 smooth section $g\in\Gamma(\mathcal{S}^2(T^\ast M))$을 의미한다.
+<ins id="def1">**정의 1**</ins> Manifold $M$ 위에 주어진 *Riemannian metric<sub>리만 계량</sub>*은 다음과 같은 센스에서 positive-definite인 smooth section $g\in\Gamma(\mathcal{S}^2(T^\ast M))$을 의미한다.
 
 > (Positive-definiteness) 임의의 $p\in M$에 대하여, $g_p(v,v)>0$이 영이 아닌 모든 $v\in T_pM$에 대하여 성립한다.
 
@@ -79,7 +79,7 @@ $$\tilde{g}(X)=\sum_{i,j=1}^n g_{ij}X^idx^j$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> Riemannian manifold $(M,g)$와, 이 위에 정의된 곡선 $\gamma:[a,b]\rightarrow M$이 있다 하자. 그럼 $\gamma$의 *길이<sub>length</sub>* $\length(\gamma)$는 다음의 식
+<ins id="def2">**정의 2**</ins> Riemannian manifold $(M,g)$와, 이 위에 정의된 곡선 $\gamma:[a,b]\rightarrow M$이 있다 하자. 그럼 $\gamma$의 *길이<sub>length</sub>* $\length(\gamma)$는 다음의 식
 
 $$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\mathop{dt}$$
 

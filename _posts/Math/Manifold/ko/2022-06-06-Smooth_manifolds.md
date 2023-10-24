@@ -41,7 +41,7 @@ $$\frac{\partial^2 f}{\partial x^2},\quad\frac{\partial^2 f}{\partial x\partial 
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Topological manifold $M$이 주어졌다 하자. $0\leq k\leq\infty$에 대해, coordinate chart들 $(U,\varphi)$와 $(V,\psi)$가 *$C^k$-compatible*인 것은 두 *transition map*들 
+<ins id="def1">**정의 1**</ins> Topological manifold $M$이 주어졌다 하자. $0\leq k\leq\infty$에 대해, coordinate chart들 $(U,\varphi)$와 $(V,\psi)$가 *$C^k$-compatible*인 것은 두 *transition map*들 
 
 $$\psi\circ\varphi^{-1}:\varphi(U\cap V)\rightarrow\psi(U\cap V),\qquad\varphi\circ\psi^{-1}:\psi(U\cap V)\rightarrow\varphi(U\cap V)$$
 
@@ -59,13 +59,13 @@ $$\mathcal{A}=\{(\mathbb{R}, \id_\mathbb{R})\}$$
 
 $$\mathcal{A}'=\{((-\infty, 1), \id_{(-\infty, 1)}), ((-1, \infty),\id_{(-1,\infty)})\}$$ 
 
-또한 갖는다. 그러나 [명제 3](#pp3)에서 확인할 수 있듯, 임의의 atlas가 주어진다면 이를 포함하는 maximal atlas가 유일하게 결정되므로 본질적인 의미에서 이는 그렇게 큰 차이는 아니다.
+또한 갖는다. 그러나 [명제 3](#prop3)에서 확인할 수 있듯, 임의의 atlas가 주어진다면 이를 포함하는 maximal atlas가 유일하게 결정되므로 본질적인 의미에서 이는 그렇게 큰 차이는 아니다.
 
 한편, 수학에서 어떠한 대상을 알기 위해서는 이 대상 위에 정의된 함수를 알면 된다. 앞으로 모든 manifold는 smooth differentiable manifold인 것으로 생각한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> Manifold $M$과 한 점 $p\in M$을 생각하자. $p$의 적당한 열린근방에서 정의된 함수 $f$가 $p$에서 $C^\infty$이라는 것은 $p$를 포함하는 어떤 coorinate chart $(U,\varphi)$에 대하여, 함수 $f\circ\varphi^{-1}:U'\rightarrow \mathbb{R}$이 점 $\varphi(p)$에서 $C^\infty$인 것이다.
+<ins id="def2">**정의 2**</ins> Manifold $M$과 한 점 $p\in M$을 생각하자. $p$의 적당한 열린근방에서 정의된 함수 $f$가 $p$에서 $C^\infty$이라는 것은 $p$를 포함하는 어떤 coorinate chart $(U,\varphi)$에 대하여, 함수 $f\circ\varphi^{-1}:U'\rightarrow \mathbb{R}$이 점 $\varphi(p)$에서 $C^\infty$인 것이다.
 
 </div>
 
@@ -77,7 +77,7 @@ $$f\circ\psi^{-1}=(f\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> Topological manifold $M$ 위에 $C^k$-atlas $\mathcal{A}$가 주어졌다 하자. 그럼 $\mathcal{A}$를 포함하는 maximal $C^k$-atlas가 유일하게 존재한다. 따라서 임의의 $C^k$-atlas $\mathcal{A}$는 $M$ 위에 유일한 $C^k$-differentiable structure를 정의한다. 
+<ins id="prop3">**명제 3**</ins> Topological manifold $M$ 위에 $C^k$-atlas $\mathcal{A}$가 주어졌다 하자. 그럼 $\mathcal{A}$를 포함하는 maximal $C^k$-atlas가 유일하게 존재한다. 따라서 임의의 $C^k$-atlas $\mathcal{A}$는 $M$ 위에 유일한 $C^k$-differentiable structure를 정의한다. 
 
 </div>
 
@@ -108,7 +108,7 @@ $$\psi'\circ\psi^{-1}=(\psi'\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 
 $$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{R}, x\mapsto x^3)\}$$
 
-를 주자. 이들은 하나의 chart로 이루어진 atlas들이므로 당연히 $C^\infty$이다. 앞선 [명제 3](#pp3)에 의하여 이들 각각을 포함하는 미분구조가 존재한다. 그러나 이들은 서로 같지 않다. 두 chart $(\mathbb{R},\id_\mathbb{R})$과 $(\mathbb{R}, x\mapsto x^3)$이 서로 $C^\infty$-compatible이 아니기 때문이다. ($x\mapsto x^3$은 $C^\infty$ 함수지만, 그 역함수 $x\mapsto x^{1/3}$은 그렇지 않다)
+를 주자. 이들은 하나의 chart로 이루어진 atlas들이므로 당연히 $C^\infty$이다. 앞선 [명제 3](#prop3)에 의하여 이들 각각을 포함하는 미분구조가 존재한다. 그러나 이들은 서로 같지 않다. 두 chart $(\mathbb{R},\id_\mathbb{R})$과 $(\mathbb{R}, x\mapsto x^3)$이 서로 $C^\infty$-compatible이 아니기 때문이다. ($x\mapsto x^3$은 $C^\infty$ 함수지만, 그 역함수 $x\mapsto x^{1/3}$은 그렇지 않다)
 
 </div>
 

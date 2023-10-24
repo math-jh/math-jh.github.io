@@ -31,7 +31,7 @@ $$(x\wedge y)\wedge z=x\wedge(y\wedge z)=x\wedge(- z\wedge y)=(x\wedge -z)\wedge
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Commutative monoid $\Delta$가 주어졌다 하고, 항등원 $1$을 갖는 commutative ring $A$를 고정하자. 그럼 $\Delta$ 위에 정의된 *commutation factor over $A$*는 다음의 조건을 만족하는 함수 $\varepsilon:\Delta\times\Delta\rightarrow A$이다.
+<ins id="def1">**정의 1**</ins> Commutative monoid $\Delta$가 주어졌다 하고, 항등원 $1$을 갖는 commutative ring $A$를 고정하자. 그럼 $\Delta$ 위에 정의된 *commutation factor over $A$*는 다음의 조건을 만족하는 함수 $\varepsilon:\Delta\times\Delta\rightarrow A$이다.
 
 $$\varepsilon(\alpha_1+\alpha_2,\beta)=\varepsilon(\alpha_1,\beta)\varepsilon(\alpha_2,\beta),\quad\varepsilon(\alpha,\beta_1+\beta_2)=\varepsilon(\alpha,\beta_1)\varepsilon(\alpha,\beta_2),\quad \varepsilon(\alpha,\beta)\varepsilon(\beta,\alpha)=1$$
 
@@ -53,13 +53,13 @@ $$\varepsilon(p,q)=(-1)^{pq}\qquad\text{for all $p,q\in\mathbb{Z}$}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> $\Delta$-graded $A$-algebra $E=\bigoplus E_\alpha$에 대하여, linear map $D:E\rightarrow E$가 *homogeneous*라는 것은 고정된 $\alpha\in\Delta$가 존재하여, 모든 $\beta\in\Delta$마다 $D(E_\beta)\subseteq E_{\alpha+\beta}$가 성립하는 것이다. 이 때 $\alpha$를 $D$의 *degree*라 부른다.
+<ins id="def2">**정의 2**</ins> $\Delta$-graded $A$-algebra $E=\bigoplus E_\alpha$에 대하여, linear map $D:E\rightarrow E$가 *homogeneous*라는 것은 고정된 $\alpha\in\Delta$가 존재하여, 모든 $\beta\in\Delta$마다 $D(E_\beta)\subseteq E_{\alpha+\beta}$가 성립하는 것이다. 이 때 $\alpha$를 $D$의 *degree*라 부른다.
 
 </div>
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $\Delta$-graded $A$-algebra $E=\bigoplus E_\alpha$와, 이 위에 정의된 degree $\degree(D)$의 homogeneous linear map $D$가 주어졌다 하자. 또, $\Delta$ 위에 commutation factor $\varepsilon$이 주어졌다 하자. 그럼 $D$가 *homogeneous $\varepsilon$-derivation*이라는 것은 모든 homogeneous element $a\in E$와 임의의 원소 $b\in E$에 대하여 다음의 식
+<ins id="def3">**정의 3**</ins> $\Delta$-graded $A$-algebra $E=\bigoplus E_\alpha$와, 이 위에 정의된 degree $\degree(D)$의 homogeneous linear map $D$가 주어졌다 하자. 또, $\Delta$ 위에 commutation factor $\varepsilon$이 주어졌다 하자. 그럼 $D$가 *homogeneous $\varepsilon$-derivation*이라는 것은 모든 homogeneous element $a\in E$와 임의의 원소 $b\in E$에 대하여 다음의 식
 
 $$D(ab)=D(a)b+\varepsilon(\degree(a),\degree(D))aD(b)$$
 

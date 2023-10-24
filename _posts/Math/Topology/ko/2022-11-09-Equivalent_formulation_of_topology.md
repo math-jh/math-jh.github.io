@@ -21,20 +21,20 @@ weight: 4
 
 ## 닫힌집합
 
-[§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#pp2)에 의하여, 집합 $X$ 위에 <em_ko>어떠한 집합이 닫힌 집합인지</em_ko>를 알려주는 집합들의 모임 $\mathcal{C}$를 정의하는 것으로 $X$에 위상구조를 줄 수 있다. 이는 원래의 정의와 거의 다르지 않지만, 특히 대수기하학에서 Zariski topology를 정의할 때 유용하게 사용할 수 있다.
+[§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)에 의하여, 집합 $X$ 위에 <em_ko>어떠한 집합이 닫힌 집합인지</em_ko>를 알려주는 집합들의 모임 $\mathcal{C}$를 정의하는 것으로 $X$에 위상구조를 줄 수 있다. 이는 원래의 정의와 거의 다르지 않지만, 특히 대수기하학에서 Zariski topology를 정의할 때 유용하게 사용할 수 있다.
 
 ## Closure axiom
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1 (Kuratowski closure axiom)**</ins> 임의의 <em_ko>집합</em_ko> $X$에 대하여, 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 다음의 조건들을 모두 만족한다 하자.
+<ins id="def1">**정의 1 (Kuratowski closure axiom)**</ins> 임의의 <em_ko>집합</em_ko> $X$에 대하여, 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 다음의 조건들을 모두 만족한다 하자.
 
 - $A\subset\cl(A)$
 - $\cl(\cl(A))=\cl(A)$
 - $\cl(A\cup B)=\cl(A)\cup\cl(B)$
 - $\cl(\emptyset)=\emptyset$
 
-이 조건들을 만족하는 함수를 *closure operator*라 부른다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 8](/ko/math/set_theory/filter_and_ideal#df8))
+이 조건들을 만족하는 함수를 *closure operator*라 부른다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 8](/ko/math/set_theory/filter_and_ideal#def8))
 
 </div>
 
@@ -60,7 +60,7 @@ $$\cl(A)\subset\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**정리 2**</ins> [정의 1](#df1)의 조건을 모두 만족하는 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 주어졌다 하자. $\mathcal{C}$를 <phrase>$\cl(C)=C$를 만족하는 모든 $C$들의 모임</phrase>으로 정의하면, $\mathcal{C}$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#pp2)의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다.
+<ins id="thm2">**정리 2**</ins> [정의 1](#def1)의 조건을 모두 만족하는 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 주어졌다 하자. $\mathcal{C}$를 <phrase>$\cl(C)=C$를 만족하는 모든 $C$들의 모임</phrase>으로 정의하면, $\mathcal{C}$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다.
 
 </div>
 
@@ -81,11 +81,11 @@ $$\cl(A)\subset\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 ## Neighborhood filter
 
-우리는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#pp6)에서 각 점 $x$마다 *neighborhood filter* $\mathcal{N}(x)$를 주면, 이 정보 또한 유일한 방식으로 $X$에 위상구조를 준다는 것을 확인했다. 해당 명제에서 $\mathcal{N}(x)$가 만족해야 할 첫 번째부터 세 번째 조건은 filter의 조건이며, 다음 정의 또한 이미 정의하였던 것이지만 나중의 reference를 위해 남겨둔다.
+우리는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)에서 각 점 $x$마다 *neighborhood filter* $\mathcal{N}(x)$를 주면, 이 정보 또한 유일한 방식으로 $X$에 위상구조를 준다는 것을 확인했다. 해당 명제에서 $\mathcal{N}(x)$가 만족해야 할 첫 번째부터 세 번째 조건은 filter의 조건이며, 다음 정의 또한 이미 정의하였던 것이지만 나중의 reference를 위해 남겨둔다.
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 집합 $X$ 위에서 정의된 *filter*라는 것은 다음의 세 조건을 만족하는 $\mathcal{P}(X)$의 부분집합 $\mathcal{F}$를 뜻한다.
+<ins id="def3">**정의 3**</ins> 집합 $X$ 위에서 정의된 *filter*라는 것은 다음의 세 조건을 만족하는 $\mathcal{P}(X)$의 부분집합 $\mathcal{F}$를 뜻한다.
 
 1. $\mathcal{F}$의 원소를 포함하는 $X$의 부분집합은 $\mathcal{F}$에 속한다.
 2. $\mathcal{F}$의 원소들의 유한한 교집합은 $\mathcal{F}$에 속한다.
@@ -93,7 +93,7 @@ $$\cl(A)\subset\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 </div>
 
-Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 1](/ko/math/set_theory/filter_and_ideal#df1)에서 정의한 것과 동일하지만 조건 $\emptyset\not\in\mathcal{F}$가 추가된 것으로 생각할 수 있다. 그럼 $\mathcal{N}(x)$가 만족해야 할 네 가지 조건 중 앞의 세 가지는 $\mathcal{N}(x)$가 모든 $x$에 대하여 filter 구조를 갖는다는 것으로 축약할 수 있다. 네 번째 조건은 별도로 이름을 갖는다.
+Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 1](/ko/math/set_theory/filter_and_ideal#def1)에서 정의한 것과 동일하지만 조건 $\emptyset\not\in\mathcal{F}$가 추가된 것으로 생각할 수 있다. 그럼 $\mathcal{N}(x)$가 만족해야 할 네 가지 조건 중 앞의 세 가지는 $\mathcal{N}(x)$가 모든 $x$에 대하여 filter 구조를 갖는다는 것으로 축약할 수 있다. 네 번째 조건은 별도로 이름을 갖는다.
 
 <div class="misc" markdown="1">
 
@@ -101,7 +101,7 @@ Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집�
 
 </div>
 
-뿐만 아니라, $\mathcal{N}(x)$를 local base와 같은 역할을 한다고 생각하면, 이를 통해 위상공간이 basis $\mathcal{B}$를 통해서도 정의됨을 보일 수 있었다. ([§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_basis#crl6))
+뿐만 아니라, $\mathcal{N}(x)$를 local base와 같은 역할을 한다고 생각하면, 이를 통해 위상공간이 basis $\mathcal{B}$를 통해서도 정의됨을 보일 수 있었다. ([§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_basis#cor6))
 
 서두에서 말한 것과 같이, 이번 글은 본질적으로는 우리가 그 동안 다뤄왔던 개념들을 다른 방식으로 적은 것에 불과하다. 다른 분야, 특히 해석학에서 많이 쓰이는 일반화는 지금까지 살펴본 내용과는 별개의 것이며 이를 제대로 살펴보기 위해서는 약간 더 기다릴 필요가 있다. <#ref#>
 

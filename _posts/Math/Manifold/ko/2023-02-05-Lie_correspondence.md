@@ -25,7 +25,7 @@ Lie group과 Lie algebra의 homomorphism은 언제나와 같이 이들의 구조
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 두 Lie group $G,H$에 대하여, $F:G\rightarrow H$가 *Lie group homorphism<sub>리 군 준동형사상</sub>*인 것은 $F$가 $C^\infty$인 동시에 group homomorphism인 것이다. 만일 여기에 더해, $F$가 diffeomorphism이라면 이를 *Lie group isomorphism<sub>리 군 동형사상</sub>*이라 부른다.
+<ins id="def1">**정의 1**</ins> 임의의 두 Lie group $G,H$에 대하여, $F:G\rightarrow H$가 *Lie group homorphism<sub>리 군 준동형사상</sub>*인 것은 $F$가 $C^\infty$인 동시에 group homomorphism인 것이다. 만일 여기에 더해, $F$가 diffeomorphism이라면 이를 *Lie group isomorphism<sub>리 군 동형사상</sub>*이라 부른다.
 
 임의의 두 Lie algebra $\mathfrak{g},\mathfrak{h}$에 대하여, $L:\mathfrak{g}\rightarrow \mathfrak{h}$가 *Lie algebra homomorphism<sub>리 대수 준동형사상</sub>*인 것은 $L$이 linear map인 동시에 Lie bracket을 보존하는 것이다. 만일 여기에 더해, $L$이 전단사함수라면 이를 *Lie algebra isomorphism<sub>리 대수 동형사상</sub>*이라 부른다.
 
@@ -37,11 +37,11 @@ Lie group과 Lie algebra의 homomorphism은 언제나와 같이 이들의 구조
 
 $$(dF)_e:T_eG\rightarrow T_{F(e)}H=T_e H$$
 
-와 [§리 군, ⁋명제 6](/ko/math/manifold/Lie_groups#pp6)으로부터, $dF$가 $\mathfrak{g}$에서 $\mathfrak{h}$로의 homomorphism을 유도한다는 것을 쉽게 증명할 수 있다.
+와 [§리 군, ⁋명제 6](/ko/math/manifold/Lie_groups#prop6)으로부터, $dF$가 $\mathfrak{g}$에서 $\mathfrak{h}$로의 homomorphism을 유도한다는 것을 쉽게 증명할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> Lie group homomorphism $F:G \rightarrow H$가 주어졌다 하자.
+<ins id="prop2">**명제 2**</ins> Lie group homomorphism $F:G \rightarrow H$가 주어졌다 하자.
 
 1. 임의의 $X\in \mathfrak{g}$에 대하여, $dF(X)$와 $X$는 $F$-related이다.
 2. $dF:\mathfrak{g} \rightarrow \mathfrak{h}$는 homomorphism이다.
@@ -60,7 +60,7 @@ $$(dF)_e:T_eG\rightarrow T_{F(e)}H=T_e H$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Lie group $G$에 대하여, submanifold $\Phi:H\hookrightarrow G$가 *Lie subgroup<sub>리 부분군</sub>*이라는 것은 $H$가 Lie group이며 $\iota$가 group homomorphism인 것이다. 
+<ins id="def4">**정의 4**</ins> Lie group $G$에 대하여, submanifold $\Phi:H\hookrightarrow G$가 *Lie subgroup<sub>리 부분군</sub>*이라는 것은 $H$가 Lie group이며 $\iota$가 group homomorphism인 것이다. 
 
 </div>
 
@@ -86,7 +86,7 @@ Lie subgroup을 다룰 때 중요하게 사용할 수 있는 정리는 다음의
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 두 connected Lie group $G,H$과 homomorphism $F:G\rightarrow H$를 생각하자. 그럼 $F$가 covering map인 것과 $dF:G_e \rightarrow H_e$가 isomorphism인 것이 동치이다.
+<ins id="prop7">**명제 7**</ins> 두 connected Lie group $G,H$과 homomorphism $F:G\rightarrow H$를 생각하자. 그럼 $F$가 covering map인 것과 $dF:G_e \rightarrow H_e$가 isomorphism인 것이 동치이다.
 
 </div>
 
@@ -102,7 +102,7 @@ $(\mathbb{R},+)$은 Lie group이므로, 임의의 Lie group $G$에 대하여 cur
 
 <div class="definition" markdown="1">
 
-<ins id="df9">**정의 9**</ins> 만일 $\gamma:\mathbb{R}\rightarrow G$가 Lie group들 사이의 homomorphism이기도 하다면, $\gamma$를 *1-parameter subgroup*이라 부른다.
+<ins id="def9">**정의 9**</ins> 만일 $\gamma:\mathbb{R}\rightarrow G$가 Lie group들 사이의 homomorphism이기도 하다면, $\gamma$를 *1-parameter subgroup*이라 부른다.
 
 </div>
 
@@ -114,11 +114,11 @@ $$\gamma(s+t)=\gamma(s)\gamma(t)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp10">**명제 10**</ins> Lie group $G$가 임의로 주어졌다 하자. 그럼 임의의 $X\in\mathfrak{g}$에 대하여, 
+<ins id="prop10">**명제 10**</ins> Lie group $G$가 임의로 주어졌다 하자. 그럼 임의의 $X\in\mathfrak{g}$에 대하여, 
 
 $$(d\gamma_X)\left(r\frac{d}{dt}\right)=rX$$
 
-을 만족하는 1-parameter subgroup $\gamma_X:\mathbb{R}\rightarrow G$가 유일하게 존재한다. (참고: [§미분사상의 예시들, ⁋명제 2](/ko/math/manifold/examples_of_differentials#pp2))
+을 만족하는 1-parameter subgroup $\gamma_X:\mathbb{R}\rightarrow G$가 유일하게 존재한다. (참고: [§미분사상의 예시들, ⁋명제 2](/ko/math/manifold/examples_of_differentials#prop2))
 
 </div>
 <details class="proof" markdown="1">
@@ -140,7 +140,7 @@ $$X\mapsto\gamma_X(1)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp11">**명제 11**</ins> Lie group $G$와 $X\in \mathfrak{g}$에 대하여 다음이 성립한다.
+<ins id="prop11">**명제 11**</ins> Lie group $G$와 $X\in \mathfrak{g}$에 대하여 다음이 성립한다.
 
 1. $\exp(tX)=\gamma_X(t)$
 2. $\exp(t_1+t_2)X=(\exp t_1X)(\exp t_2X)$
@@ -155,7 +155,7 @@ $$X\mapsto\gamma_X(1)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 [명제 2](#pp2)로부터, $\mathbb{R}$ 위에 정의된 벡터장 $d/dt$와 $G$ 위에 정의된 벡터장
+우선 [명제 2](#prop2)로부터, $\mathbb{R}$ 위에 정의된 벡터장 $d/dt$와 $G$ 위에 정의된 벡터장
 
 $$(d\gamma_X)\left(\frac{d}{dt}\right)$$
 
@@ -190,7 +190,7 @@ $$\exp_X(s+t)=\exp_X(s)\exp_X(t)$$
 
 $$(d\exp_X)_{t=0}\left(\frac{d}{dt}\bigg|_{t=0}\right)=\frac{d}{dt}\bigg|_{t=0}\exp(tX)=\exp(0X)X=X$$
 
-이므로 유일성에 의해 $\exp_X$는 [명제 10](#pp10)을 Lie group $\GL(n,\mathbb{R})$에 적용하여 얻어지는 1-parameter subgroup과 같다.
+이므로 유일성에 의해 $\exp_X$는 [명제 10](#prop10)을 Lie group $\GL(n,\mathbb{R})$에 적용하여 얻어지는 1-parameter subgroup과 같다.
 
 </div>
 
@@ -210,7 +210,7 @@ $$(d\exp_X)_{t=0}\left(\frac{d}{dt}\bigg|_{t=0}\right)=\frac{d}{dt}\bigg|_{t=0}\
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $X\in\mathfrak{g}$에 대하여, $t\mapsto F(\exp tX)$는 $t=0$에서 $F(0)$을 지나고 그 때의 tangent vector가 $dF(X_e)$이다. 이제 주어진 diagram이 commute하는 것은 [명제 10](#pp10)에서의 유일성에 의해 자명하다.
+임의의 $X\in\mathfrak{g}$에 대하여, $t\mapsto F(\exp tX)$는 $t=0$에서 $F(0)$을 지나고 그 때의 tangent vector가 $dF(X_e)$이다. 이제 주어진 diagram이 commute하는 것은 [명제 10](#prop10)에서의 유일성에 의해 자명하다.
 
 </details>
 

@@ -17,7 +17,7 @@ weight: 8
 
 ---
 
-앞서 우리는 [§군의 직접곱](/ko/math/algebraic_structures/direct_product)에서 universal property를 통해 $\prod G_i$를 정의했다. 이는 [\[집합론\], §집합의 곱, ⁋정리 3](/ko/math/set_theory/product_of_sets#thm3)에서와 동일한 과정이었는데, 그렇다면 [\[집합론\], §집합의 합, ⁋정리 8](/ko/math/set_theory/sum_of_sets#thm8)과 동일한 성질을 만족하는 group이 존재하는지가 자연스러운 질문이 된다. 그러나 [\[집합론\], §집합의 합, ⁋명제 5](/ko/math/set_theory/sum_of_sets#pp5)에서 만든 $\bigsqcup A_i$의 경우, 이 집합에 group 구조를 주는 것부터가 자명하지 않으므로, 이 질문에 대한 답을 찾는 것이 쉽지 않다. 
+앞서 우리는 [§군의 직접곱](/ko/math/algebraic_structures/direct_product)에서 universal property를 통해 $\prod G_i$를 정의했다. 이는 [\[집합론\], §집합의 곱, ⁋정리 3](/ko/math/set_theory/product_of_sets#thm3)에서와 동일한 과정이었는데, 그렇다면 [\[집합론\], §집합의 합, ⁋정리 8](/ko/math/set_theory/sum_of_sets#thm8)과 동일한 성질을 만족하는 group이 존재하는지가 자연스러운 질문이 된다. 그러나 [\[집합론\], §집합의 합, ⁋명제 5](/ko/math/set_theory/sum_of_sets#prop5)에서 만든 $\bigsqcup A_i$의 경우, 이 집합에 group 구조를 주는 것부터가 자명하지 않으므로, 이 질문에 대한 답을 찾는 것이 쉽지 않다. 
 
 우리는 우선 abelian group들의 경우에 대해 [\[집합론\], §집합의 합, ⁋정리 8](/ko/math/set_theory/sum_of_sets#thm8)의 universal property를 만족하는 abelian group이 존재함을 보인다. 다음 글에서는 이번 글과는 다른 방식을 통해 <em_ko>임의의</em_ko> group들에 대하여도 이러한 universal property를 만족하는 group이 존재함을 보인다.
 
@@ -35,7 +35,7 @@ $$(\bar{1},\bar{1},\cdots)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Group들의 family $(G_i)$가 주어졌다 하고, $G_i$들의 subgroup $H_i$들을 고정하자. 그럼 유한개를 제외한 모든 $i$에 대해 $\pr\_ix\in H\_i$를 만족하는 $x$들로 이루어진 subgroup을 $H_i$에 대한 $G_i$들의 *restricted sum*이라 부르고 $\prod^H G_i$라 표현한다.
+<ins id="def1">**정의 1**</ins> Group들의 family $(G_i)$가 주어졌다 하고, $G_i$들의 subgroup $H_i$들을 고정하자. 그럼 유한개를 제외한 모든 $i$에 대해 $\pr\_ix\in H\_i$를 만족하는 $x$들로 이루어진 subgroup을 $H_i$에 대한 $G_i$들의 *restricted sum*이라 부르고 $\prod^H G_i$라 표현한다.
 
 특별히 모든 $i$에 대해 $H_i=\\{e\\}$인 경우 $G\_i$들의 *weak direct product*라 부르고, 간단히
 
@@ -101,7 +101,7 @@ Weak direct product의 universal property를 이용하면 direct product때와 �
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> $G_i$들이 group이고, $H_i$들이 $G_i$들의 normal subgroup이라 하면 $\prod^w H_i$들 또한 $\prod^w G_i$들의 normal subgroup이고 그 quotient group은 $\prod^w (G_i/H_i)$와 같다.
+<ins id="prop3">**명제 3**</ins> $G_i$들이 group이고, $H_i$들이 $G_i$들의 normal subgroup이라 하면 $\prod^w H_i$들 또한 $\prod^w G_i$들의 normal subgroup이고 그 quotient group은 $\prod^w (G_i/H_i)$와 같다.
 
 </div>
 
@@ -113,7 +113,7 @@ $G$가 group이고, $(H_i)$들이 $G$의 subgroup들의 family라 하자. 만일
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins>  위와 같은 상황에서, 만일 $\iota$가 isomorphism이라면 $G$가 $H_i$들의 *internal weak direct product*라고 부른다. 
+<ins id="def4">**정의 4**</ins>  위와 같은 상황에서, 만일 $\iota$가 isomorphism이라면 $G$가 $H_i$들의 *internal weak direct product*라고 부른다. 
 
 </div>
 
@@ -127,7 +127,7 @@ $G$가 group이고, $(H_i)$들이 $G$의 subgroup들의 family라 하자. 만일
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> Group $G$의 normal subgroup들 $(H_i)$가 다음의 두 조건
+<ins id="prop5">**명제 5**</ins> Group $G$의 normal subgroup들 $(H_i)$가 다음의 두 조건
 
 1. $G=\bigl\langle\bigcup_{i\in I} H_i\bigr\rangle$,
 2. $H_k\cap \bigl\langle\bigcup_{i\neq k} H_i\bigr\rangle=\\{e\\}$
@@ -181,7 +181,7 @@ $$a_i^{-1}=\prod_{j\in I\setminus\{i\}}a_j\in H_i\cap \left\langle\bigcup_{j\neq
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> Abelian group들의 family $(G_i)$와, 이들의 weak direct product $\prod^w G_i$, 그리고 inclusion map들 $\iota_i$가 주어졌다 하자. 그럼 $\prod^w G_i$와 $\iota_i$들을 묶어 $G_i$들의 *direct sum<sub>직합</sub>*이라 부르고 이를 $\sum G_i$로 표현한다.  
+<ins id="def7">**정의 7**</ins> Abelian group들의 family $(G_i)$와, 이들의 weak direct product $\prod^w G_i$, 그리고 inclusion map들 $\iota_i$가 주어졌다 하자. 그럼 $\prod^w G_i$와 $\iota_i$들을 묶어 $G_i$들의 *direct sum<sub>직합</sub>*이라 부르고 이를 $\sum G_i$로 표현한다.  
 
 </div>
 

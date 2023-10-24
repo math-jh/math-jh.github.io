@@ -49,7 +49,7 @@ $$\begin{aligned}ab&=f_1(1)f_2(1)=f(\iota_1(1))f(\iota_2(1))=f(\iota_1(1)+\iota_
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 공집합이 아닌 집합 $X$에 대하여, $X$에 의해 정의된 *free group*은 다음과 같은 universal mapping problem의 solution $(F,\iota)$으로 정해진다.
+<ins id="def2">**정의 2**</ins> 공집합이 아닌 집합 $X$에 대하여, $X$에 의해 정의된 *free group*은 다음과 같은 universal mapping problem의 solution $(F,\iota)$으로 정해진다.
 
 > 임의의 group $G$에 대하여, 만일 어떤 함수 $f:X\rightarrow G$가 주어졌다면 유일한 group homomorphism $\bar{f}:F\rightarrow G$가 존재하여 $\bar{f}\circ\iota=f$를 만족한다.
 
@@ -71,11 +71,11 @@ $$x_3^{-2}x_2x_1^{-1}$$
 
 이 되며, 실제로 이들 둘을 연산해보면 $e$가 됨을 확인할 수 있다. 
 
-이제 우리는 group $F$를 만들었으며, 여기서 $X$의 원소로 이루어진 길이 1짜리 원소들을 $X$의 원소와 동일시하면 $\iota:X\rightarrow F$ 또한 얻는다. 그럼 이들이 [정의 2](#df2)의 universal property를 만족한다는 것을 쉽게 보일 수 있다. 이를 위해서는 $\bar{f}$를 $F$에 등장하는 원소들 $x\in X$들을 모두 $g(x)$로 바꿔주는 함수로 정의한 후, 이것이 group homomorphism이 된다는 것을 확인하면 된다.
+이제 우리는 group $F$를 만들었으며, 여기서 $X$의 원소로 이루어진 길이 1짜리 원소들을 $X$의 원소와 동일시하면 $\iota:X\rightarrow F$ 또한 얻는다. 그럼 이들이 [정의 2](#def2)의 universal property를 만족한다는 것을 쉽게 보일 수 있다. 이를 위해서는 $\bar{f}$를 $F$에 등장하는 원소들 $x\in X$들을 모두 $g(x)$로 바꿔주는 함수로 정의한 후, 이것이 group homomorphism이 된다는 것을 확인하면 된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="crl3">**따름정리 3**</ins> 임의의 group $G$는 free group의 homomorphic image이다.
+<ins id="cor3">**따름정리 3**</ins> 임의의 group $G$는 free group의 homomorphic image이다.
 
 </div>
 <details class="proof" markdown="1">

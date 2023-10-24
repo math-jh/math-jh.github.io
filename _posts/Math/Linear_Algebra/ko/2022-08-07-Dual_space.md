@@ -21,13 +21,13 @@ weight: 15
 
 ## 쌍대기저
 
-$V$가 유한차원 $F$-벡터공간이라 하자. [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#pp5)에서 $W=F$로 두면 $V^\ast=\Hom(V,F)$은 $V$와 같은 차원을 갖는다는 것을 안다. 특히, 만일 $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 $V$의 basis라면 $x_i$만을 1로, 나머지 $x_j$들은 0으로 보내는 linear map $\xi^i$들의 모임
+$V$가 유한차원 $F$-벡터공간이라 하자. [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 $W=F$로 두면 $V^\ast=\Hom(V,F)$은 $V$와 같은 차원을 갖는다는 것을 안다. 특히, 만일 $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 $V$의 basis라면 $x_i$만을 1로, 나머지 $x_j$들은 0으로 보내는 linear map $\xi^i$들의 모임
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\}$$
 
 이 $V^\ast$의 basis가 된다는 것을 안다. 이를 $\mathcal{B}$의 *dual basis<sub>쌍대기저</sub>*라 부른다. 
 
-$V$가 무한차원이라 하더라도 basis $\mathcal{B}$에 대하여, 위의 식과 같이 정의된 집합 $\mathcal{B}^\ast$가 일차독립이라는 것은 어떠한 수정도 없이 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#pp5)의 증명과 동일한 증명을 이용할 수 있다. 따라서 항상 $\dim V\leq\dim V^\ast$가 성립하며, 사실 $V$가 무한차원인 경우 반드시 $\dim V<\dim V^\ast$이다. 이를 살펴보기 위해서는 임의의 $\mathcal{B}$의 모든 원소들을 $1$로 보내는 함수를 extend하여 얻이진 함수가 $\mathcal{B}^\ast$의 원소들의 일차결합으로 나타날 수 없음만 확인하면 된다.
+$V$가 무한차원이라 하더라도 basis $\mathcal{B}$에 대하여, 위의 식과 같이 정의된 집합 $\mathcal{B}^\ast$가 일차독립이라는 것은 어떠한 수정도 없이 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)의 증명과 동일한 증명을 이용할 수 있다. 따라서 항상 $\dim V\leq\dim V^\ast$가 성립하며, 사실 $V$가 무한차원인 경우 반드시 $\dim V<\dim V^\ast$이다. 이를 살펴보기 위해서는 임의의 $\mathcal{B}$의 모든 원소들을 $1$로 보내는 함수를 extend하여 얻이진 함수가 $\mathcal{B}^\ast$의 원소들의 일차결합으로 나타날 수 없음만 확인하면 된다.
 
 ## 이중쌍대공간
 
@@ -37,7 +37,7 @@ $V$와 $V^\ast$가 isomorphic하다는 것을 보이기 위해서는 특정한 b
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 세 $F$-벡터공간 $U,V,W$에 대하여, 함수 $f:U\times V\rightarrow W$이 *bilinear*라는 것은 임의의 $u,u_1,u_2\in U$, $v,v_1,v_2\in V$, 그리고 스칼라 $\alpha$에 대하여
+<ins id="def1">**정의 1**</ins> 세 $F$-벡터공간 $U,V,W$에 대하여, 함수 $f:U\times V\rightarrow W$이 *bilinear*라는 것은 임의의 $u,u_1,u_2\in U$, $v,v_1,v_2\in V$, 그리고 스칼라 $\alpha$에 대하여
 
 $$f(u_1+u_2,v)=f(u_1,v)+f(u_2,v),\qquad f(u,v_1+v_2)=f(u,v_1)+f(u,v_2),\qquad f(\alpha u,v)=\alpha f(u,v)=f(u,\alpha v)$$
 
@@ -49,7 +49,7 @@ $$f(u_1+u_2,v)=f(u_1,v)+f(u_2,v),\qquad f(u,v_1+v_2)=f(u,v_1)+f(u,v_2),\qquad f(
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$와 $W$의 *pairing*은 bilinear map $(-,-):V\times W\rightarrow F$를 의미한다. 만일 영벡터가 아닌 임의의 $v\in V$에 대하여 다음의 linear map
+<ins id="def2">**정의 2**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$와 $W$의 *pairing*은 bilinear map $(-,-):V\times W\rightarrow F$를 의미한다. 만일 영벡터가 아닌 임의의 $v\in V$에 대하여 다음의 linear map
 
 $$(v,-): W\rightarrow F$$
 
@@ -99,7 +99,7 @@ $$(\alpha v,f)=f(\alpha v)=\alpha f(v)=(\alpha f)(v)=(v,\alpha f)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow F$가 주어진 두 $F$-벡터공간 $V,W$에 대하여, 다음의 식
+<ins id="prop4">**명제 4**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow F$가 주어진 두 $F$-벡터공간 $V,W$에 대하여, 다음의 식
 
 $$v\mapsto (v,-)$$
 
@@ -119,7 +119,7 @@ $$w\mapsto (-,w)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow F$가 주어진 두 <em_ko>유한차원</em_ko> $F$-벡터공간 $V,W$는 isomorphic하다.
+<ins id="cor5">**따름정리 5**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow F$가 주어진 두 <em_ko>유한차원</em_ko> $F$-벡터공간 $V,W$는 isomorphic하다.
 
 </div>
 <details class="proof" markdown="1">
@@ -191,7 +191,7 @@ $$[L^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}=\begin{pmatrix}\alpha_{11}&\alp
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 
+<ins id="prop6">**명제 6**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 
 
 1. 만약 $L$이 단사라면 $L^\ast$는 전사이다.
 2. 만약 $L$이 전사라면 $L^\ast$는 단사이다.
@@ -200,7 +200,7 @@ $$[L^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}=\begin{pmatrix}\alpha_{11}&\alp
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-두 주장 모두 [§선형사상들의 공간, ⁋따름정리 2](/ko/math/linear_algebra/space_of_linear_maps#crl2)에 의해 자명하다. 
+두 주장 모두 [§선형사상들의 공간, ⁋따름정리 2](/ko/math/linear_algebra/space_of_linear_maps#cor2)에 의해 자명하다. 
 
 1. 만약 $L$이 단사라면 $R\circ L=\id_V$를 만족하는 $R:W\rightarrow V$가 존재한다. 따라서 임의의 $f\in V^\ast$에 대하여, $f\circ R$은 $W$에서 $F$로의 함수, 즉 $W^\ast$의 원소이고
     
@@ -219,7 +219,7 @@ $$[L^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}=\begin{pmatrix}\alpha_{11}&\alp
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> Canonical pairing $(-,-)$이 주어진 $F$-벡터공간 $V$가 주어졌다 하고, 임의의 부분집합 $S\subseteq V$을 생각하자. 임의의 $v\in S$에 대하여 $(v,f)=0$을 만족하는 $f\in V^\ast$의 모임을 $S$의 *orthogonal complement<sub>직교여공간</sub>* 혹은 *annihilator<sub>소멸자</sub>*라 부르고, $S^\perp$로 표기한다. 
+<ins id="def7">**정의 7**</ins> Canonical pairing $(-,-)$이 주어진 $F$-벡터공간 $V$가 주어졌다 하고, 임의의 부분집합 $S\subseteq V$을 생각하자. 임의의 $v\in S$에 대하여 $(v,f)=0$을 만족하는 $f\in V^\ast$의 모임을 $S$의 *orthogonal complement<sub>직교여공간</sub>* 혹은 *annihilator<sub>소멸자</sub>*라 부르고, $S^\perp$로 표기한다. 
 
 이와 비슷하게, 임의의 부분집합 $T\subseteq V^\ast$가 주어졌다 하자. 그럼 임의의 $f\in T$에 대하여 $(v,f)=0$을 만족하는 $v\in V$의 모임을 $T$의 orthogonal complement라 부르고 $T^\perp$로 표기한다.
 
@@ -235,7 +235,7 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 임의의 부분공간 $U\subseteq V$와 그 orthogonal complement $U^\perp$에 대하여,
+<ins id="prop8">**명제 8**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 임의의 부분공간 $U\subseteq V$와 그 orthogonal complement $U^\perp$에 대하여,
 
 $$L(U)^\perp=(L^\ast)^{-1}(U^\perp)$$
 
@@ -255,21 +255,21 @@ $$\upsilon\in L(U)^\perp\iff (L(u),\upsilon)=0\text{ for all $u\in U$}\iff (u, L
 
 <div class="proposition" markdown="1">
 
-<ins id="crl9">**따름정리 9**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 그럼 $(\im L)^\perp=\ker(L^\ast)$이 성립한다.
+<ins id="cor9">**따름정리 9**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 그럼 $(\im L)^\perp=\ker(L^\ast)$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 8](#pp8)에서 $U=V$로 두면 된다. Canonical pairing $(-,-)$의 non-degenerate 조건으로부터 $U^\perp=\\{0\\}$이 되어 원하는 결과를 얻는다.
+[명제 8](#prop8)에서 $U=V$로 두면 된다. Canonical pairing $(-,-)$의 non-degenerate 조건으로부터 $U^\perp=\\{0\\}$이 되어 원하는 결과를 얻는다.
 
 </details>
 
-[명제 8](#pp8)에서 $U\subseteq V$ 대신, $U\subseteq W^\ast$로 시작할 수도 있었다. 이 경우 다음의 명제를 얻는다.
+[명제 8](#prop8)에서 $U\subseteq V$ 대신, $U\subseteq W^\ast$로 시작할 수도 있었다. 이 경우 다음의 명제를 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp10">**명제 10**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 임의의 부분공간 $U\subseteq W^\ast$와 그 orthogonal complement $U^\perp$에 대하여,
+<ins id="prop10">**명제 10**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 임의의 부분공간 $U\subseteq W^\ast$와 그 orthogonal complement $U^\perp$에 대하여,
 
 $$\bigl(L^\ast(U)\bigr)^\perp=L^{-1}(U^\perp)$$
 
@@ -289,13 +289,13 @@ $$x\in \bigl(L^\ast(U)\bigr)^\perp\iff (x, L^\ast(\upsilon))=0\text{ for all $\u
 
 <div class="proposition" markdown="1">
 
-<ins id="crl11">**따름정리 11**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 그럼 $\bigl(\im L^\ast\bigr)^\perp=\ker L$이 성립한다.
+<ins id="cor11">**따름정리 11**</ins> 두 $F$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 그럼 $\bigl(\im L^\ast\bigr)^\perp=\ker L$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 10](#pp10)에서 $U=W^\ast$로 두면 된다.
+[명제 10](#prop10)에서 $U=W^\ast$로 두면 된다.
 
 </details>
 

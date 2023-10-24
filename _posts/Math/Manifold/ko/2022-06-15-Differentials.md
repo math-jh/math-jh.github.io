@@ -23,7 +23,7 @@ weight: 5
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 두 manifold $M,N$이 주어졌다 하자. 함수 $F:M\rightarrow N$이 점 $p\in M$에서 $C^\infty$라는 것은, $p$를 포함하는 적당한 coordinate system $(U,\varphi)$와, $F(U)\subseteq V$인 적당한 coordinate system $(V,\psi)$가 존재하여 $\psi\circ F\circ\varphi^{-1}$이 $C^\infty$인 것이다. 
+<ins id="def1">**정의 1**</ins> 두 manifold $M,N$이 주어졌다 하자. 함수 $F:M\rightarrow N$이 점 $p\in M$에서 $C^\infty$라는 것은, $p$를 포함하는 적당한 coordinate system $(U,\varphi)$와, $F(U)\subseteq V$인 적당한 coordinate system $(V,\psi)$가 존재하여 $\psi\circ F\circ\varphi^{-1}$이 $C^\infty$인 것이다. 
 
 ![smooth_map](/assets/images/Math/Manifold/Differentials-1.png){:width="500px" class="invert" .align-center}
 <cap>[Lee], p.34. Fig. 2.2</cap>
@@ -32,17 +32,17 @@ weight: 5
 
 </div>
 
-앞서 manifold에서 $\mathbb{R}$로의 $C^\infty$ 함수를 정의했을 때와 마찬가지로, 이 정의 또한 coordinate system의 선택과 무관하다는 것을 보여야 하지만 이는 기본적으로 [§미분다양체, ⁋정의 2](/ko/math/manifold/smooth_manifolds#df2) 이후에 증명한 것과 똑같기에 생략한다.
+앞서 manifold에서 $\mathbb{R}$로의 $C^\infty$ 함수를 정의했을 때와 마찬가지로, 이 정의 또한 coordinate system의 선택과 무관하다는 것을 보여야 하지만 이는 기본적으로 [§미분다양체, ⁋정의 2](/ko/math/manifold/smooth_manifolds#def2) 이후에 증명한 것과 똑같기에 생략한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 두 manifold $M,N$이 주어졌다 하자. 만일 $F:M\rightarrow N$이 점 $p\in M$에서 $C^\infty$라면, 이 함수는 $p$에서 연속이다. 
+<ins id="prop2">**명제 2**</ins> 두 manifold $M,N$이 주어졌다 하자. 만일 $F:M\rightarrow N$이 점 $p\in M$에서 $C^\infty$라면, 이 함수는 $p$에서 연속이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[정의 1](#df1)의 상황을 그대로 가정하자. 그럼 우선 유클리드 공간 사이의 함수 $\psi\circ F\circ\varphi^{-1}:\varphi(U)\rightarrow\psi(V)$가 $C^\infty$이다. 이 함수는 미분가능하므로 당연히 연속이다. 그런데 $\varphi$와 $\psi$는 모두 homeomorphism이므로, 
+[정의 1](#def1)의 상황을 그대로 가정하자. 그럼 우선 유클리드 공간 사이의 함수 $\psi\circ F\circ\varphi^{-1}:\varphi(U)\rightarrow\psi(V)$가 $C^\infty$이다. 이 함수는 미분가능하므로 당연히 연속이다. 그런데 $\varphi$와 $\psi$는 모두 homeomorphism이므로, 
 
 $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
@@ -53,7 +53,7 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으로, 임의의 열린집합 $U\subseteq M$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, ⁋정의 3](/ko/math/manifold/examples_of_manifolds#df3)) inclusion map $U\hookrightarrow M$은 $C^\infty$ 함수이다. 
+<ins id="ex3">**예시 3**</ins> $\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으로, 임의의 열린집합 $U\subseteq M$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, ⁋정의 3](/ko/math/manifold/examples_of_manifolds#def3)) inclusion map $U\hookrightarrow M$은 $C^\infty$ 함수이다. 
 
 </div>
 
@@ -67,7 +67,7 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 세 manifold $M,N,P$에 대하여, 만일 $F:M\rightarrow N$과 $G:N\rightarrow P$가 모두 $C^\infty$라면 이들의 합성 $G\circ F$ 또한 $C^\infty$이다.
+<ins id="prop5">**명제 5**</ins> 세 manifold $M,N,P$에 대하여, 만일 $F:M\rightarrow N$과 $G:N\rightarrow P$가 모두 $C^\infty$라면 이들의 합성 $G\circ F$ 또한 $C^\infty$이다.
 
 </div>
 
@@ -75,7 +75,7 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 만일 두 manifold $M,N$에 대하여, $F:M\rightarrow N$과 $G:N\rightarrow M$이 각각 존재하여 $G\circ F=\id_M$이고 $F\circ G=\id_N$이라면 $F$와 $G$ 각각을 *diffeomorphism<sub>미분동형사상</sub>*이라 부르고, $F$와 $G$가 *diffeomorphic<sub>미분동형</sub>*이라 말한다.
+<ins id="def6">**정의 6**</ins> 만일 두 manifold $M,N$에 대하여, $F:M\rightarrow N$과 $G:N\rightarrow M$이 각각 존재하여 $G\circ F=\id_M$이고 $F\circ G=\id_N$이라면 $F$와 $G$ 각각을 *diffeomorphism<sub>미분동형사상</sub>*이라 부르고, $F$와 $G$가 *diffeomorphic<sub>미분동형</sub>*이라 말한다.
 
 </div>
 
@@ -137,7 +137,7 @@ $$\begin{aligned}(v\circ F^\ast)(fg)&=v(F^\ast(fg))=v((f\circ F)(g\circ F))\\
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> $F:M\rightarrow N$이 두 manifold 사이의 $C^\infty$ 함수라 하자. 임의의 $p\in M$에 대하여, $F$의 점 $p$에서의 *differential<sub>미분사상</sub>* $dF_p:T_pM\rightarrow T_{F(p)}N$은 임의의 $v\in T_pM$과 임의의 $g\in \mathcal{C}^\infty_{N,F(p)}$에 대하여
+<ins id="def7">**정의 7**</ins> $F:M\rightarrow N$이 두 manifold 사이의 $C^\infty$ 함수라 하자. 임의의 $p\in M$에 대하여, $F$의 점 $p$에서의 *differential<sub>미분사상</sub>* $dF_p:T_pM\rightarrow T_{F(p)}N$은 임의의 $v\in T_pM$과 임의의 $g\in \mathcal{C}^\infty_{N,F(p)}$에 대하여
 
 $$(dF_p(v))g=v(g\circ F)$$
 
@@ -145,17 +145,17 @@ $$(dF_p(v))g=v(g\circ F)$$
 
 </div>
 
-정의로부터 몇 가지 결과는 자명하다. 우선 $\id\_M:M\rightarrow M$에 대하여 $d(\id\_M)\_p$는 항상 $T\_pM$에서 $T\_pM$으로의 identity인 $\id\_{T\_pM}$이 된다. 이는 [정의 7](#df7)의 식으로부터 명백하다. 또, 세 manifold $M,N,P$에 대하여 $F:M\rightarrow N$, $G:N\rightarrow P$가 $C^\infty$라면, 다음의 식
+정의로부터 몇 가지 결과는 자명하다. 우선 $\id\_M:M\rightarrow M$에 대하여 $d(\id\_M)\_p$는 항상 $T\_pM$에서 $T\_pM$으로의 identity인 $\id\_{T\_pM}$이 된다. 이는 [정의 7](#def7)의 식으로부터 명백하다. 또, 세 manifold $M,N,P$에 대하여 $F:M\rightarrow N$, $G:N\rightarrow P$가 $C^\infty$라면, 다음의 식
 
 $$d(G\circ F)_p=(dG_{F(p)})\circ (dF_p)$$ 
 
-이 성립한다. 이는 differential을 정의할 때 사용한 pullback이 합성을 잘 보존한다는 것으로부터도 자명하고, 혹은 마찬가지로 [정의 7](#df7)의 식에 $G\circ F$를 직접 대입해보아도 된다. 이로부터 diffeomorphism $F$에 대해 $dF_p$는 항상 벡터공간 사이의 isomorphism이 된다는 것 등을 보일 수 있다. 
+이 성립한다. 이는 differential을 정의할 때 사용한 pullback이 합성을 잘 보존한다는 것으로부터도 자명하고, 혹은 마찬가지로 [정의 7](#def7)의 식에 $G\circ F$를 직접 대입해보아도 된다. 이로부터 diffeomorphism $F$에 대해 $dF_p$는 항상 벡터공간 사이의 isomorphism이 된다는 것 등을 보일 수 있다. 
 
 그러나 differential이 isomorphism이 되는 $C^\infty$ 함수 중 diffeomorphism이 아닌 것은 매우 많다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> Manifold $M$과, $M$의 open submanifold $U$에 대하여, inclusion map $\iota:U\hookrightarrow M$은 모든 $p\in U$에 대하여 tangent space 사이의 isomorphism을 유도한다. 즉, $d\iota_p$가 항상 isomorphism이다.
+<ins id="prop8">**명제 8**</ins> Manifold $M$과, $M$의 open submanifold $U$에 대하여, inclusion map $\iota:U\hookrightarrow M$은 모든 $p\in U$에 대하여 tangent space 사이의 isomorphism을 유도한다. 즉, $d\iota_p$가 항상 isomorphism이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -179,7 +179,7 @@ $$\frac{\partial}{\partial x^1}\bigg|_p,\cdots,\frac{\partial}{\partial x^m}\big
 
 $$\frac{\partial}{\partial x^i}\bigg|_pf=\frac{\partial}{\partial r^i}\bigg|_p (f\circ\varphi^{-1})$$
 
-이다. 그런데 [정의 7](#df7)을 염두에 두고 이 식을 다시 살펴보면, 이는 $\varphi^{-1}:\varphi(U)\rightarrow U$의 differential과 동일한 모양임을 알 수 있다.[^1] 즉 tangent space의 basis는 다른 것이 아니라, 단지 $\mathbb{R}^m$의 tangent space $T_{\varphi(p)}\mathbb{R}^m$의 $m$개의 basis들을 differential $d\varphi^{-1}_{\varphi(p)}$를 통해 옮겨온 것일 뿐이다.
+이다. 그런데 [정의 7](#def7)을 염두에 두고 이 식을 다시 살펴보면, 이는 $\varphi^{-1}:\varphi(U)\rightarrow U$의 differential과 동일한 모양임을 알 수 있다.[^1] 즉 tangent space의 basis는 다른 것이 아니라, 단지 $\mathbb{R}^m$의 tangent space $T_{\varphi(p)}\mathbb{R}^m$의 $m$개의 basis들을 differential $d\varphi^{-1}_{\varphi(p)}$를 통해 옮겨온 것일 뿐이다.
 
 이를 좀 더 선형대수학적인 관점에서 보자면, $\mathcal{B}$를 $\mathbb{R}^m$의 standard basis, $\mathcal{C}$를 $\partial/\partial x^i$들로 이루어진 $T_pM$의 basis라 하면 $(T_{\varphi(p)}\mathbb{R}^n, \mathcal{B})$에서 $(T_pM, \mathcal{C})$로의 linear map $d\varphi^{-1}_{\varphi(p)}$의 행렬표현이 정확히 항등행렬이 된다고 할 수 있다.
 

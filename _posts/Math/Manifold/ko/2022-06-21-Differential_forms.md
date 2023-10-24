@@ -23,7 +23,7 @@ weight: 12
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Manifold $M$에 대하여, 
+<ins id="def1">**정의 1**</ins> Manifold $M$에 대하여, 
 
 $$\mathcal{T}^{r,s}(M)=\mathcal{T}^{r,s}(TM),\quad \bigwedge\nolimits^\ast(M)=\bigwedge(T^\ast M),\quad \bigwedge\nolimits^k(M)=\bigwedge\nolimits^k(T^\ast M)$$
 
@@ -43,7 +43,7 @@ $$\omega=\alpha^1\otimes\cdots\otimes \alpha^r\otimes u_{r+1}\otimes\cdots\otime
 
 $$(\omega,u)=\alpha^1(u_1)\alpha^2(u_2)\cdots \alpha^{r+s}(u_{r+s})$$
 
-으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\mathcal{T}^{r,s}(T\_p^\ast M)\cong\mathcal{T}^{r,s}(T\_pM)^\ast$이 성립한다. ([\[선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#crl5))
+으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\mathcal{T}^{r,s}(T\_p^\ast M)\cong\mathcal{T}^{r,s}(T\_pM)^\ast$이 성립한다. ([\[선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#cor5))
 
 이와 유사하게, 두 원소
 
@@ -65,7 +65,7 @@ $$\bigwedge(T_p^\ast M)=\bigoplus_{k\geq 0}\bigwedge\nolimits^k(T_p^\ast M)=\big
 
 ## 미분형식과 pullback
 
-위의 [정의 1](#df1) 중 특히 $\Omega^\ast(M)$의 원소들이 관심의 대상이 된다. 정의에 의하여 임의의 differential form $\omega\in\Omega^\ast(M)$은 함수 $M\rightarrow\bigwedge\nolimits^\ast(M)$이며, 이 함수값을
+위의 [정의 1](#def1) 중 특히 $\Omega^\ast(M)$의 원소들이 관심의 대상이 된다. 정의에 의하여 임의의 differential form $\omega\in\Omega^\ast(M)$은 함수 $M\rightarrow\bigwedge\nolimits^\ast(M)$이며, 이 함수값을
 
 $$p\mapsto \omega_p\in\bigwedge\nolimits^\ast(T_pM)$$
 
@@ -77,13 +77,13 @@ $$(\omega\wedge\eta)_p=\omega_p\wedge\eta_p\qquad\text{for all $p\in M$}$$
 
 $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
-으로 생각할 수 있다. ([\[텐서대수\] §등급구조, ⁋정의 5](/ko/math/tensor_algebra/graduation#df5)) 뿐만 아니라, $\Omega^\ast(M)$에서의 $\mathbb{R}$에 의한 스칼라곱은 사실 각 점 $p$마다 수행할 수 있기 때문에, $\Omega^\ast(M)$의 계수를 $C^\infty(M)$으로 생각할 수도 있다. 대수적으로 이는 ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$을 통해 coefficient ring을 바꾸어 주는 것으로 생각할 수도 있으며, 앞으로 $\Omega^\ast(M)$은 항상 이러한 식으로 $\mathbb{N}$-graded $C^\infty(M)$-algebra 구조가 주어진 것으로 생각한다.
+으로 생각할 수 있다. ([\[텐서대수\] §등급구조, ⁋정의 5](/ko/math/tensor_algebra/graduation#def5)) 뿐만 아니라, $\Omega^\ast(M)$에서의 $\mathbb{R}$에 의한 스칼라곱은 사실 각 점 $p$마다 수행할 수 있기 때문에, $\Omega^\ast(M)$의 계수를 $C^\infty(M)$으로 생각할 수도 있다. 대수적으로 이는 ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$을 통해 coefficient ring을 바꾸어 주는 것으로 생각할 수도 있으며, 앞으로 $\Omega^\ast(M)$은 항상 이러한 식으로 $\mathbb{N}$-graded $C^\infty(M)$-algebra 구조가 주어진 것으로 생각한다.
 
 이제 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 linear map $dF_p:T_pM\rightarrow T_{F(p)}N$가 잘 정의된다. 따라서 $dF_p$의 dual map에 exterior algebra의 functoriality를 적용하면
 
 $$\bigwedge({dF}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M)$$
 
-를 얻는다. ([\[텐서대수\] §대칭대수와 외대수, ⁋따름정리 9](/ko/math/tensor_algebra/symmetric_and_exterior_algebras#crl9)) 각 점 $p$마다 $\bigwedge({dF}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
+를 얻는다. ([\[텐서대수\] §대칭대수와 외대수, ⁋따름정리 9](/ko/math/tensor_algebra/symmetric_and_exterior_algebras#cor9)) 각 점 $p$마다 $\bigwedge({dF}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
 
 $$(F^\ast\omega)_p=\bigwedge({dF}_p^\ast)(\omega_{F(p)})$$
 
@@ -97,7 +97,7 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 
 ## 외미분과 드람 코호몰로지
 
-앞서 우리는 $\Omega^0(M)=C^\infty(M)$인 것을 확인했다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $df$는 각 점 $p\in M$을 받아 $df_p:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifold/examples_of_differentials#df6)) 즉, $df\in T^\ast M=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
+앞서 우리는 $\Omega^0(M)=C^\infty(M)$인 것을 확인했다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $df$는 각 점 $p\in M$을 받아 $df_p:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifold/examples_of_differentials#def6)) 즉, $df\in T^\ast M=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
 
 <div class="proposition" markdown="1">
 
@@ -124,7 +124,7 @@ $$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> Manifold $M$ 위에 주어진 vector field $X$를 생각하자. 그럼 $\iota_X:\Omega^\ast(M) \rightarrow\Omega^\ast(M)$은 임의의 $k$-form $\omega$에 다음의 식
+<ins id="def3">**정의 3**</ins> Manifold $M$ 위에 주어진 vector field $X$를 생각하자. 그럼 $\iota_X:\Omega^\ast(M) \rightarrow\Omega^\ast(M)$은 임의의 $k$-form $\omega$에 다음의 식
 
 $$(\iota_X\omega)(X_1,\ldots, X_{k-1})=\omega(X,X_1,\ldots, X_{k-1})$$
 
@@ -134,7 +134,7 @@ $$(\iota_X\omega)(X_1,\ldots, X_{k-1})=\omega(X,X_1,\ldots, X_{k-1})$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> Manifold $M$과 그 위에 주어진 임의의 vector field $X$에 대하여, interior multiplication $\iota_X$는 degree $-1$의 antiderivation이다.
+<ins id="prop4">**명제 4**</ins> Manifold $M$과 그 위에 주어진 임의의 vector field $X$에 대하여, interior multiplication $\iota_X$는 degree $-1$의 antiderivation이다.
 
 </div>
 

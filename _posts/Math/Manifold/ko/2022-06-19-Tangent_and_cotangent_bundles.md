@@ -23,7 +23,7 @@ weight: 10
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 위상공간 $B$ 위에 정의된 *vector bundle<sub>벡터다발</sub>*은 $\pi:E \rightarrow B$는 다음과 같이 정의된 대상이다.
+<ins id="def1">**정의 1**</ins> 위상공간 $B$ 위에 정의된 *vector bundle<sub>벡터다발</sub>*은 $\pi:E \rightarrow B$는 다음과 같이 정의된 대상이다.
 
 - *Total space* $E$와 *base space* $B$는 모두 위상공간이며, $\pi:E \rightarrow B$는 연속인 전사함수다.
 - 각각의 $b\in B$에 대하여, $E_b=\pi^{-1}(b)$는 $k$차원 벡터공간의 구조를 갖는다.
@@ -99,7 +99,7 @@ Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 v
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 두 vector bundle $E\rightarrow B$, $E'\rightarrow B'$가 주어졌다 하자. 그럼 $E \rightarrow B$에서 $E' \rightarrow B'$의 *bundle map<sub>벡터다발 준동형사상</sub>*은 다음의 diagram
+<ins id="def3">**정의 3**</ins> 두 vector bundle $E\rightarrow B$, $E'\rightarrow B'$가 주어졌다 하자. 그럼 $E \rightarrow B$에서 $E' \rightarrow B'$의 *bundle map<sub>벡터다발 준동형사상</sub>*은 다음의 diagram
 
 ![bundle_map](/assets/images/Math/Manifold/Vector_bundles-1.png){:width="127.95px" class="invert" .align-center}
 
@@ -116,7 +116,7 @@ Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 v
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Functor $F:\mathbf{FVect}\_\text{iso}\times\mathbf{FVect}\_\text{iso}\rightarrow \mathbf{FVect}\_\text{iso}$이 *smooth functor<sub>매끄러운 함자</sub>*라는 것은 $F(f,g)$가 $f,g$에 대해 smooth하게 의존하는 것이다.
+<ins id="def4">**정의 4**</ins> Functor $F:\mathbf{FVect}\_\text{iso}\times\mathbf{FVect}\_\text{iso}\rightarrow \mathbf{FVect}\_\text{iso}$이 *smooth functor<sub>매끄러운 함자</sub>*라는 것은 $F(f,g)$가 $f,g$에 대해 smooth하게 의존하는 것이다.
 
 </div>
 
@@ -169,7 +169,7 @@ $$E_b=F((E_1)_b,\ldots,(E_n)_b)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> Manifold $M$ 위에 정의된 *cotangent bundle<sub>여접다발</sub>*은 [정리 6](#thm6)에 의해 얻어진 vector bundle $(TM)^\ast$을 의미한다. Cotangent space $T_p^\ast M$의 표기에 맞추어 이를 $T^\ast M$으로 표기한다.
+<ins id="def7">**정의 7**</ins> Manifold $M$ 위에 정의된 *cotangent bundle<sub>여접다발</sub>*은 [정리 6](#thm6)에 의해 얻어진 vector bundle $(TM)^\ast$을 의미한다. Cotangent space $T_p^\ast M$의 표기에 맞추어 이를 $T^\ast M$으로 표기한다.
 
 </div>
 

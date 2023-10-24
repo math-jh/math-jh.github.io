@@ -23,7 +23,7 @@ weight: 5
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 위상공간 $X$, $Y$ 사이의 함수 $f:X\rightarrow Y$가 $x\in X$에서 *연속<sub>continuous</sub>*이라는 것은 $f(x)\in Y$의 임의의 근방 $V$에 대하여, $f(U)\subseteq V$이도록 하는 $x$의 근방 $U$가 존재하는 것이다. 
+<ins id="def1">**정의 1**</ins> 임의의 위상공간 $X$, $Y$ 사이의 함수 $f:X\rightarrow Y$가 $x\in X$에서 *연속<sub>continuous</sub>*이라는 것은 $f(x)\in Y$의 임의의 근방 $V$에 대하여, $f(U)\subseteq V$이도록 하는 $x$의 근방 $U$가 존재하는 것이다. 
 
 </div>
 
@@ -35,24 +35,24 @@ $$U\subseteq f^{-1}(f(U))\subseteq f^{-1}(V)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 두 위상공간 $X,Y$ 사이의 함수 $f:X\rightarrow Y$가 점 $x$에서 연속이라 하자. 만일 어떠한 $A\subseteq B$에 대하여 $x\in\cl(A)$라면, $f(x)\in\cl(A)$이다.
+<ins id="prop2">**명제 2**</ins> 두 위상공간 $X,Y$ 사이의 함수 $f:X\rightarrow Y$가 점 $x$에서 연속이라 하자. 만일 어떠한 $A\subseteq B$에 대하여 $x\in\cl(A)$라면, $f(x)\in\cl(A)$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$f(x)\in Y$의 임의의 근방 $V$를 택하자. 그럼 $f^{-1}(V)$는 $x$의 근방이므로 $f^{-1}(V)\cap A\neq\emptyset$이고 ([§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#pp6)), $x'\in f^{-1}(V)\cap A$라 하면 $f(x')\in V\cap f(A)$이다. 특히 $V\cap f(A)\neq\emptyset$이므로, 다시 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#pp6)를 적용하면 $f(x)\in\cl(A)$임을 안다.
+$f(x)\in Y$의 임의의 근방 $V$를 택하자. 그럼 $f^{-1}(V)$는 $x$의 근방이므로 $f^{-1}(V)\cap A\neq\emptyset$이고 ([§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)), $x'\in f^{-1}(V)\cap A$라 하면 $f(x')\in V\cap f(A)$이다. 특히 $V\cap f(A)\neq\emptyset$이므로, 다시 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)를 적용하면 $f(x)\in\cl(A)$임을 안다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 위상공간들 $X,Y,Z$가 주어졌다고 하자. 만일 $f:X\rightarrow Y$가 점 $x\in X$에서 연속이고, $g:Y\rightarrow Z$가 $f(x)$에서 연속이라면 그 합성 $g\circ f$ 또한 연속이다.
+<ins id="prop3">**명제 3**</ins> 위상공간들 $X,Y,Z$가 주어졌다고 하자. 만일 $f:X\rightarrow Y$가 점 $x\in X$에서 연속이고, $g:Y\rightarrow Z$가 $f(x)$에서 연속이라면 그 합성 $g\circ f$ 또한 연속이다.
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. ([\[집합론\] §이항관계의 그래프, ⁋명제 13](/ko/math/set_theory/binary_relation#pp13))
+$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. ([\[집합론\] §이항관계의 그래프, ⁋명제 13](/ko/math/set_theory/binary_relation#prop13))
 
 </details>
 
@@ -71,7 +71,7 @@ $(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-첫 번째 조건이 성립하면 두 번째 조건 또한 성립한다는 것은 [명제 2](#pp2)의 결과이다.
+첫 번째 조건이 성립하면 두 번째 조건 또한 성립한다는 것은 [명제 2](#prop2)의 결과이다.
 
 이제 둘째 조건을 가정하고 세 번째 조건을 보이자. $Y$의 임의의 닫힌집합 $C$에 대하여, 다음 포함관계
 
@@ -87,7 +87,7 @@ $$\cl(f^{-1}(C))\subseteq f^{-1}(f(\cl(f^{-1}(C)))\subseteq f^{-1}(C)$$
 
 </details>
 
-[명제 3](#pp3)에 의하여, 두 연속함수 $f:X\rightarrow Y$, $g:Y\rightarrow Z$가 주어진다면 $g\circ f$ 또한 연속이라는 것을 안다. 
+[명제 3](#prop3)에 의하여, 두 연속함수 $f:X\rightarrow Y$, $g:Y\rightarrow Z$가 주어진다면 $g\circ f$ 또한 연속이라는 것을 안다. 
 
 두 위상공간 $(X,\mathcal{T}\_X), (Y,\mathcal{T}\_Y)$ 사이의 연속함수 $f:X\rightarrow Y$가 주어졌다 하자. 그럼 임의의 $V\in\mathcal{T}\_Y$에 대하여 $f^{-1}(V)\in\mathcal{T}\_X$가 성립하므로, 다음의 식
 
@@ -107,7 +107,7 @@ $$f^{-1}(y)\in f^\mathcal{T}(V_1)\setminus f^\mathcal{T}(V_2)$$
 
 $$\id^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$
 
-는 전사함수가 될 수 없다. ([\[집합론\] §기수, ⁋명제 15](/ko/math/set_theory/cardinals#pp15))
+는 전사함수가 될 수 없다. ([\[집합론\] §기수, ⁋명제 15](/ko/math/set_theory/cardinals#prop15))
 
 </div>
 
@@ -119,8 +119,11 @@ $$f^\mathcal{T}\circ (f^{-1})^\mathcal{T}=\id_{\mathcal{T}_X},\qquad (f^{-1})^\m
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 연속함수 $f:X\rightarrow Y$가 *homeomorphism<sub>위상동형사상</sub>*이라는 것은, 또 다른 연속함수 $g:Y\rightarrow X$가 존재하여 $f\circ g=\id_Y$이고 $g\circ f=\id_X$인 것이다.
+<ins id="def6">**정의 6**</ins> 연속함수 $f:X\rightarrow Y$가 *homeomorphism<sub>위상동형사상</sub>*이라는 것은, 또 다른 연속함수 $g:Y\rightarrow X$가 존재하여 $f\circ g=\id_Y$이고 $g\circ f=\id_X$인 것이다.
+
 </div>
+
+이 정의에 따르면, 위의 [예시 5](#ex5)는 전단사인 연속함수이지만 homeomorphism은 아닌 예시가 된다.
 
 ---
 

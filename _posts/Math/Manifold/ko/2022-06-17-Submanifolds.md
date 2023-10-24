@@ -21,7 +21,7 @@ weight: 7
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:N\rightarrow M$이 주어졌다 하자. 
+<ins id="def1">**정의 1**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:N\rightarrow M$이 주어졌다 하자. 
 
 1. $F$가 *immersion<sub>몰입</sub>*이라는 것은 모든 $p\in N$에 대하여 $dF_p$가 단사인 것이고, 비슷하게 $F$가 *submersion<sub>침몰</sub>*이라는 것은 모든 $p\in N$에 대하여 $dF_p$가 전사인 것이다.
 2. 만일 $F$가 immersion인 동시에 단사함수이기도 하다면, $F$를 $M$의 *submanifold<sub>부분다양체</sub>*라 한다.
@@ -77,7 +77,7 @@ $$\begin{pmatrix}\partial(r^1\circ f)/\partial r^1&\partial(r^1\circ f)/\partial
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> $F:M\rightarrow N$이 manifold들 사이의 $C^\infty$ 함수이고 $p\in M$이라 하자. 만일 $dF_p:T_pM\rightarrow T_{F(p)}N$이 isomorphism이라면 적당한 열린집합 $U\subseteq M$이 존재하여, $p\in U$이고 $F\|\_U:U\rightarrow F(U)$가 $U$와 $F(U)$ 사이의 diffeomorphism을 정의한다.
+<ins id="cor5">**따름정리 5**</ins> $F:M\rightarrow N$이 manifold들 사이의 $C^\infty$ 함수이고 $p\in M$이라 하자. 만일 $dF_p:T_pM\rightarrow T_{F(p)}N$이 isomorphism이라면 적당한 열린집합 $U\subseteq M$이 존재하여, $p\in U$이고 $F\|\_U:U\rightarrow F(U)$가 $U$와 $F(U)$ 사이의 diffeomorphism을 정의한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -97,7 +97,7 @@ Manifold $M$과 $p\in M$에 대하여, $C_p^\infty(M)$의 원소들 $y^1, \ldots
 
 <div class="proposition" markdown="1">
 
-<ins id="crl6">**따름정리 6**</ins> $m$차원 manifold $M$을 생각하자. 만일 $y^1, \ldots, y^m$들이 점 $p_0\in M$에서 independent라면, $(y^1, \ldots, y^m)$은 $p$ 근방에서 coordinate system이 된다.
+<ins id="cor6">**따름정리 6**</ins> $m$차원 manifold $M$을 생각하자. 만일 $y^1, \ldots, y^m$들이 점 $p_0\in M$에서 independent라면, $(y^1, \ldots, y^m)$은 $p$ 근방에서 coordinate system이 된다.
 
 </div>
 <details class="proof" markdown="1">
@@ -113,7 +113,7 @@ $$\varphi(p)=(y^1(p),\ldots, y^m(p))$$
 
 $$d\varphi_{p_0}\left(dr^i|_{\varphi(p_0)}\right)=\left(dr^i|_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i|_{p_0}$$
 
-이므로, $T_{\varphi(p_0)}^\ast\mathbb{R}^m$에서의 basis $dr^i\|\_{\varphi(p_0)}$들이 모두 $T_{p_0}^\ast M$의 basis로 각각 옮겨지고 따라서 $(d\varphi_{p_0})^\ast$는 isomorphism이다. 따라서 $d\varphi_{p_0}$도 isomorphism이며, 따라서 [따름정리 5](#crl5)를 적용하면 $p_0\in V\subseteq U$를 만족하는 적당한 $V$가 존재하여 $\varphi\|\_V:V\rightarrow\varphi(V)$가 coordinate system이 된다는 것을 알 수 있다.
+이므로, $T_{\varphi(p_0)}^\ast\mathbb{R}^m$에서의 basis $dr^i\|\_{\varphi(p_0)}$들이 모두 $T_{p_0}^\ast M$의 basis로 각각 옮겨지고 따라서 $(d\varphi_{p_0})^\ast$는 isomorphism이다. 따라서 $d\varphi_{p_0}$도 isomorphism이며, 따라서 [따름정리 5](#cor5)를 적용하면 $p_0\in V\subseteq U$를 만족하는 적당한 $V$가 존재하여 $\varphi\|\_V:V\rightarrow\varphi(V)$가 coordinate system이 된다는 것을 알 수 있다.
 
 </details>
 
@@ -121,25 +121,25 @@ $$d\varphi_{p_0}\left(dr^i|_{\varphi(p_0)}\right)=\left(dr^i|_{\varphi(p_0)}\rig
 
 <div class="proposition" markdown="1">
 
-<ins id="crl7">**따름정리 7**</ins> $m$차원 manifold $M$과 $p_0\in M$, 정수 $0&lt;k&lt;m$에 대하여, $\mathcal{C}_{M,p_0}^\infty$의 원소들 $y^1,\ldots, y^k$가 $p_0$에서 independent한 함수들이라 하자. 그럼 적당한 함수 $x^{k+1},\ldots, x^{m}$들이 존재하여 $(y^1,\ldots, y^k, x^{k+1}, \ldots, x^m)$들이 $p_0$ 근방에서 coordinate system을 정의한다.
+<ins id="cor7">**따름정리 7**</ins> $m$차원 manifold $M$과 $p_0\in M$, 정수 $0&lt;k&lt;m$에 대하여, $\mathcal{C}_{M,p_0}^\infty$의 원소들 $y^1,\ldots, y^k$가 $p_0$에서 independent한 함수들이라 하자. 그럼 적당한 함수 $x^{k+1},\ldots, x^{m}$들이 존재하여 $(y^1,\ldots, y^k, x^{k+1}, \ldots, x^m)$들이 $p_0$ 근방에서 coordinate system을 정의한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-점 $p_0$에 대한 coordinate system $(U,\varphi)$, $\varphi=(x^i)\_{i=1}^{m}$이 주어졌다 하자. 그럼 $dx^i$들이 $T\_{p\_0}^\ast M$의 basis가 된다. 이제 [\[선형대수학\] §백터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#crl2)의 증명과 마찬가지로 $dy^i$들을 하나씩 넣고, $dx^j$들을 하나씩 빼며 적절히 index를 수정해주면 된다.
+점 $p_0$에 대한 coordinate system $(U,\varphi)$, $\varphi=(x^i)\_{i=1}^{m}$이 주어졌다 하자. 그럼 $dx^i$들이 $T\_{p\_0}^\ast M$의 basis가 된다. 이제 [\[선형대수학\] §백터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#cor2)의 증명과 마찬가지로 $dy^i$들을 하나씩 넣고, $dx^j$들을 하나씩 빼며 적절히 index를 수정해주면 된다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="crl8">**따름정리 8**</ins> $m$차원 manifold $M$과 점 $p_0\in M$에 대하여, $\mathcal{C}\_{M,p_0}^\infty$의 원소들 $y^1,\ldots, y^k$들이 주어졌다 하자. 만일 $dy^i$들이 $T_{p_0}^\ast M$을 span한다면 집합 $\\{y_1,\ldots, y_k\\}$의 적절한 부분집합이 $p\_0$ 근방의 coordinate system을 이룬다.
+<ins id="cor8">**따름정리 8**</ins> $m$차원 manifold $M$과 점 $p_0\in M$에 대하여, $\mathcal{C}\_{M,p_0}^\infty$의 원소들 $y^1,\ldots, y^k$들이 주어졌다 하자. 만일 $dy^i$들이 $T_{p_0}^\ast M$을 span한다면 집합 $\\{y_1,\ldots, y_k\\}$의 적절한 부분집합이 $p\_0$ 근방의 coordinate system을 이룬다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$T_{p_0}^\ast M$의 basis를 이루는 집합 $\\{dy^1,\ldots, dy^k\\}$의 적절한 부분집합을 찾으면 이 부분집합은 반드시 $m$개의 원소로 이루어져 있다. 따라서 [따름정리 6](#crl6)을 적용하면 된다.
+$T_{p_0}^\ast M$의 basis를 이루는 집합 $\\{dy^1,\ldots, dy^k\\}$의 적절한 부분집합을 찾으면 이 부분집합은 반드시 $m$개의 원소로 이루어져 있다. 따라서 [따름정리 6](#cor6)을 적용하면 된다.
 
 </details>
 
@@ -147,7 +147,7 @@ $T_{p_0}^\ast M$의 basis를 이루는 집합 $\\{dy^1,\ldots, dy^k\\}$의 적�
 
 <div class="proposition" markdown="1">
 
-<ins id="crl9">**따름정리 9 (Rank theorem, Submersion case)**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, $dF_p$가 surjective라 하자. 그럼 점 $F(p)$ 근방에서 정의된 coordinate system $\psi=(y^j)_{j=1}^n$에 대하여 적당한 함수들 $x^{n+1},\ldots, x^m$이 존재하여 다음의 함수들
+<ins id="cor9">**따름정리 9 (Rank theorem, Submersion case)**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, $dF_p$가 surjective라 하자. 그럼 점 $F(p)$ 근방에서 정의된 coordinate system $\psi=(y^j)_{j=1}^n$에 대하여 적당한 함수들 $x^{n+1},\ldots, x^m$이 존재하여 다음의 함수들
 
 $$x^1=y^1\circ F,\quad x^2=y^2\circ F,\quad\ldots,\quad x^n=y^n\circ F,\qquad x^{n+1},\quad \ldots,\quad x^m$$
 
@@ -161,13 +161,13 @@ $dF_p$가 surjective이므로, 그 dual $(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow 
 
 $$(dF_p)^\ast(dy^i|_{F(p)})=dy^i|_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j|_p$$
 
-이 $T_p^\ast M$에서 linearly independent하다. 따라서 [따름정리 7](#crl7)에 의하여 원하는 결과를 얻는다. 
+이 $T_p^\ast M$에서 linearly independent하다. 따라서 [따름정리 7](#cor7)에 의하여 원하는 결과를 얻는다. 
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="crl10">**따름정리 10 (Rank theorem, Immersion case)**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, $dF_p$가 injective라 하자. 그럼 점 $F(p)$ 근방에서 정의된 coordinate system $\psi=(y^j)_{j=1}^n$에 대하여, 다음 집합
+<ins id="cor10">**따름정리 10 (Rank theorem, Immersion case)**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, $dF_p$가 injective라 하자. 그럼 점 $F(p)$ 근방에서 정의된 coordinate system $\psi=(y^j)_{j=1}^n$에 대하여, 다음 집합
 
 $$\{x^j=y^j\circ F\mid j=1,\ldots, n\}$$
 
@@ -181,7 +181,7 @@ $dF_p$가 injective이므로, 그 dual $(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T
 
 $$(dF_p)^\ast(dy^i|_{F(p)})=dy^i|_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j|_p$$
 
-들이 $T_p^\ast M$을 span해야 하고, 따라서 [따름정리 8](#crl8)에 의해 주어진 집합의 부분집합이 $p$ 근방에서 $M$의 coordinate system을 이룬다. 
+들이 $T_p^\ast M$을 span해야 하고, 따라서 [따름정리 8](#cor8)에 의해 주어진 집합의 부분집합이 $p$ 근방에서 $M$의 coordinate system을 이룬다. 
 
 </details>
 

@@ -23,7 +23,7 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 두 $\Delta$-graded $A$-algebra $E,E'$에 대하여, $A$-algebra homomorphism $u:E\rightarrow E'$이 *graded algebra homomorphism*이라는 것은 임의의 $\alpha\in\Delta$에 대하여 $u(E_\alpha)\subseteq E_\alpha'$이 성립하는 것이다.
+<ins id="def1">**정의 1**</ins> 두 $\Delta$-graded $A$-algebra $E,E'$에 대하여, $A$-algebra homomorphism $u:E\rightarrow E'$이 *graded algebra homomorphism*이라는 것은 임의의 $\alpha\in\Delta$에 대하여 $u(E_\alpha)\subseteq E_\alpha'$이 성립하는 것이다.
 
 </div>
 
@@ -75,7 +75,7 @@ $$x=\sum_{\beta\in\Delta}\sum_{\gamma\in\Delta}a_{\beta,\gamma}y_\beta=\sum_{\al
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $\Delta$-graded $A$-algebra $E$가 주어졌다 하자. $E$의 subalgebra $F$가 *graded subalgebra<sub>부분등급대수</sub>*라는 것은 $F$가 $E$의 graded submodule인 것이다.
+<ins id="def3">**정의 3**</ins> $\Delta$-graded $A$-algebra $E$가 주어졌다 하자. $E$의 subalgebra $F$가 *graded subalgebra<sub>부분등급대수</sub>*라는 것은 $F$가 $E$의 graded submodule인 것이다.
 
 </div>
 
@@ -83,7 +83,7 @@ $$x=\sum_{\beta\in\Delta}\sum_{\gamma\in\Delta}a_{\beta,\gamma}y_\beta=\sum_{\al
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> 임의의 graded algebra homomorphism $u:E\rightarrow E'$에 대하여, $\ker u$는 $E$의 two-sided graded ideal이며 $\im u$는 $E'$의 graded subalgebra이다.
+<ins id="prop4">**명제 4**</ins> 임의의 graded algebra homomorphism $u:E\rightarrow E'$에 대하여, $\ker u$는 $E$의 two-sided graded ideal이며 $\im u$는 $E'$의 graded subalgebra이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -109,7 +109,7 @@ $$y=u(x)=u\left(\sum_{\alpha\in\Delta}x_\alpha\right)=\sum_{\alpha\in\Delta}u(x_
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> Graded ring $A=\bigoplus_{\alpha\in\Delta} A_\alpha$와 $\Delta$-graded $A$-algebra $E$가 주어졌다 하자. 그럼 $E$의 two-sided graded ideal $\mathfrak{a}$에 대하여, $E/\mathfrak{a}$ 또한 $\Delta$-graded $A$-algebra이고 이 때 canonical projection map $E\rightarrow E/\mathfrak{a}$는 graded algebra homomorphism이다.
+<ins id="prop5">**명제 5**</ins> Graded ring $A=\bigoplus_{\alpha\in\Delta} A_\alpha$와 $\Delta$-graded $A$-algebra $E$가 주어졌다 하자. 그럼 $E$의 two-sided graded ideal $\mathfrak{a}$에 대하여, $E/\mathfrak{a}$ 또한 $\Delta$-graded $A$-algebra이고 이 때 canonical projection map $E\rightarrow E/\mathfrak{a}$는 graded algebra homomorphism이다.
 
 </div>
 <details class="proof" markdown="1">

@@ -21,7 +21,7 @@ weight: 5
 
 ## 정규부분군
 
-한편 [\[집합론\] §동치관계, ⁋명제 7](/ko/math/set_theory/equivalence_relations#pp7)을 통해 우리는 다음 두 가지가 같다는 것을 안다.
+한편 [\[집합론\] §동치관계, ⁋명제 7](/ko/math/set_theory/equivalence_relations#prop7)을 통해 우리는 다음 두 가지가 같다는 것을 안다.
 
 집합 $G$에 동치관계 $R$을 주는 것 $\iff$ 집합 $G$의 분할 $(G\_i)\_{i\in I}$을 택하는 것
 {: .text-center}
@@ -32,13 +32,13 @@ weight: 5
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> Quotient group $G/R$에 대하여, $[e]$는 $G$의 subgroup이다.
+<ins id="prop1">**명제 1**</ins> Quotient group $G/R$에 대하여, $[e]$는 $G$의 subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$a,b\in [e]$라 하자. 즉 $a\sim e\sim b$이다. 이제 $R$은 $G$의 연산과 compatible하므로, $a\sim b$의 양 변의 오른쪽에 $b^{-1}$을 곱하여 $ab^{-1}\sim e$를 얻는다. 즉 $ab^{-1}\in[e]$이므로 [§준군, 모노이드, 군, ⁋명제 12](/ko/math/algebraic_structures/group#pp12)에 의하여 $[e]$는 subgroup인 것을 안다.
+$a,b\in [e]$라 하자. 즉 $a\sim e\sim b$이다. 이제 $R$은 $G$의 연산과 compatible하므로, $a\sim b$의 양 변의 오른쪽에 $b^{-1}$을 곱하여 $ab^{-1}\sim e$를 얻는다. 즉 $ab^{-1}\in[e]$이므로 [§준군, 모노이드, 군, ⁋명제 12](/ko/math/algebraic_structures/group#prop12)에 의하여 $[e]$는 subgroup인 것을 안다.
 
 </details>
 
@@ -72,13 +72,13 @@ $$(ac)^{-1}(bc)=c^{-1}(a^{-1}b)c$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> Group $G$의 subgroup $H$가 *normal subgroup<sub>정규부분군</sub>*이라는 것은 임의의 $g\in G$와 임의의 $h\in H$에 대하여, $ghg^{-1}\in H$가 항상 성립하는 것이다.
+<ins id="def2">**정의 2**</ins> Group $G$의 subgroup $H$가 *normal subgroup<sub>정규부분군</sub>*이라는 것은 임의의 $g\in G$와 임의의 $h\in H$에 대하여, $ghg^{-1}\in H$가 항상 성립하는 것이다.
 
 </div>
 
 위의 논의에 의하여, $G$의 normal subgroup $H$가 주어졌을 때 그에 해당하는 quotient group을 얻을 수 있다. 이 때 얻어지는 quotient group을 $G/H$로 적는다.
 
-[명제 1](#pp1)에서, 임의의 $a\in [e]$에 대하여 다음 식
+[명제 1](#prop1)에서, 임의의 $a\in [e]$에 대하여 다음 식
 
 $$a\sim e\implies gag^{-1}\sim geg^{-1}=e$$
 
@@ -100,7 +100,7 @@ $$Ha:=\{ha\mid h\in H\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 위에서 정의한 두 집합 $Ha$와 $aH$를 각각 *right coset<sub>오른쪽 잉여류</sub>* 그리고 *left coset<sub>왼쪽 잉여류</sub>*이라 부른다.
+<ins id="def3">**정의 3**</ins> 위에서 정의한 두 집합 $Ha$와 $aH$를 각각 *right coset<sub>오른쪽 잉여류</sub>* 그리고 *left coset<sub>왼쪽 잉여류</sub>*이라 부른다.
 
 </div>
 
@@ -118,7 +118,7 @@ $$Ha\mapsto a^{-1}H$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Group $G$와 subgroup $H$에 대하여, $H$의 *index* $[G:H]$를 $\lvert G/H\rvert$으로 정의한다.
+<ins id="def4">**정의 4**</ins> Group $G$와 subgroup $H$에 대하여, $H$의 *index* $[G:H]$를 $\lvert G/H\rvert$으로 정의한다.
 
 </div>
 
@@ -126,7 +126,7 @@ $$Ha\mapsto a^{-1}H$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5 (Lagrange)**</ins> Group $G$와 subgroup $H$에 대하여 $\lvert G\rvert=[G:H]\lvert H\rvert$이 성립한다.
+<ins id="prop5">**명제 5 (Lagrange)**</ins> Group $G$와 subgroup $H$에 대하여 $\lvert G\rvert=[G:H]\lvert H\rvert$이 성립한다.
 
 </div>
 

@@ -53,7 +53,7 @@ $x\in A\implies x\in A$가 항상 참이다.
 
 </details>
 
-위 두 명제로부터 $\subseteq$가 집합들 사이의 순서관계가 된다는 것을 안다. ([§순서관계 (1), ⁋정의 1](/ko/math/set_theory/order_relations#def1))
+위 두 명제로부터 $\subseteq$가 집합들 사이의 순서관계가 된다는 것을 안다. ([§순서관계의 정의, ⁋정의 1](/ko/math/set_theory/order_relations#def1))
 
 ## 순서쌍
 

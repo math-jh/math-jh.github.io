@@ -25,7 +25,7 @@ weight: 17
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $\mathbb{R}$-벡터공간 $V$ 위에 정의된 symmetric bilinear form $\langle-,-\rangle$이 *내적<sub>inner product</sub>*이라는 것은 모든 $v\in V$에 대하여 $\langle v,v\rangle\geq 0$이고, 이 때 등호는 오직 $v=0$일 때만 성립하는 것이다. 내적이 주어진 공간 $V$를 간단하게 *내적공간<sub>inner product space</sub>*이라 부른다.
+<ins id="def1">**정의 1**</ins> $\mathbb{R}$-벡터공간 $V$ 위에 정의된 symmetric bilinear form $\langle-,-\rangle$이 *내적<sub>inner product</sub>*이라는 것은 모든 $v\in V$에 대하여 $\langle v,v\rangle\geq 0$이고, 이 때 등호는 오직 $v=0$일 때만 성립하는 것이다. 내적이 주어진 공간 $V$를 간단하게 *내적공간<sub>inner product space</sub>*이라 부른다.
 
 </div>
 
@@ -45,7 +45,7 @@ $$\langle v,v\rangle=\sum_{i=1}^n v_i^2\geq 0$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> $\mathbb{R}$-벡터공간 $V$ 위에 정의된 *norm<sub>노름</sub>*은 다음의 조건을 만족하는 함수 $\lVert -\rVert:V\rightarrow\mathbb{R}$이다.
+<ins id="def2">**정의 2**</ins> $\mathbb{R}$-벡터공간 $V$ 위에 정의된 *norm<sub>노름</sub>*은 다음의 조건을 만족하는 함수 $\lVert -\rVert:V\rightarrow\mathbb{R}$이다.
 
 1. $\lVert v\rVert\geq 0$이 모든 $v$에 대하여 성립하며, 특히 등호는 오직 $v=0$일 때만 성립한다.
 2. 임의의 $\alpha\in\mathbb{R}$과 $v\in V$에 대하여, $\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$이 성립한다.
@@ -57,7 +57,7 @@ $$\langle v,v\rangle=\sum_{i=1}^n v_i^2\geq 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3 (Cauchy-Schwarz)**</ins> $\mathbb{R}$-내적공간 $V$의 임의의 벡터 $v,w$에 대하여 다음의 식
+<ins id="prop3">**명제 3 (Cauchy-Schwarz)**</ins> $\mathbb{R}$-내적공간 $V$의 임의의 벡터 $v,w$에 대하여 다음의 식
 
 $$\lvert \langle v,w\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
 
@@ -86,7 +86,7 @@ $$0\leq \langle u,u\rangle-2\lambda\langle u,v\rangle+\lambda^2\langle v,v\rangl
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> $\mathbb{R}$-내적공간 $V$에 대하여, 다음의 식
+<ins id="prop4">**명제 4**</ins> $\mathbb{R}$-내적공간 $V$에 대하여, 다음의 식
 
 $$\lVert v\rVert:=\sqrt{\langle v,v\rangle}$$
 
@@ -114,7 +114,7 @@ $$\langle u,u\rangle+2\langle u,v\rangle+\langle v,v\rangle\leq \lVert u\rVert^2
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> $V$가 $\mathbb{R}$-내적공간이라 하자. 만일 $\lVert -\rVert$이 $V$의 내적으로부터 [명제 4](#pp4)의 식으로 얻어진 norm이라면, 다음의 *평행사변형 법칙<sub>parallelogram law</sub>*
+<ins id="prop5">**명제 5**</ins> $V$가 $\mathbb{R}$-내적공간이라 하자. 만일 $\lVert -\rVert$이 $V$의 내적으로부터 [명제 4](#prop4)의 식으로 얻어진 norm이라면, 다음의 *평행사변형 법칙<sub>parallelogram law</sub>*
 
 $$\lVert u+v\rVert^2+\lVert u-v\rVert^2=2\lVert u\rVert^2+2\lVert v\rVert^2$$
 
@@ -134,7 +134,7 @@ $$\lVert v\rVert_1=\sum_{i=1}^n \lvert v_i\rvert$$
 
 $$\lVert v\rVert_1=\sqrt{\langle v,v\rangle_1}$$
 
-의 꼴로 쓰여질 수 있었다면, [명제 5](#pp5)에 의하여 다음의 식
+의 꼴로 쓰여질 수 있었다면, [명제 5](#prop5)에 의하여 다음의 식
 
 $$\lVert u+v\rVert_1^2+\lVert u-v\rVert_1^2=2\lVert u\rVert^2_1+2\lVert v\rVert^2_1$$
 
@@ -142,7 +142,7 @@ $$\lVert u+v\rVert_1^2+\lVert u-v\rVert_1^2=2\lVert u\rVert^2_1+2\lVert v\rVert^
 
 </div>
 
-사실 [명제 5](#pp5)는 역 또한 성립한다. 즉, 만일 $\lVert-\rVert$이 평행사변형 법칙을 만족한다면, 다음의 식
+사실 [명제 5](#prop5)는 역 또한 성립한다. 즉, 만일 $\lVert-\rVert$이 평행사변형 법칙을 만족한다면, 다음의 식
 
 $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\right)$$
 
@@ -150,7 +150,7 @@ $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\rig
 
 ## 정규직교기저
 
-우리는 $\ch\mathbb{R}=0$임을 알고 있으므로, [§쌍선형형식, ⁋명제 6](/ko/math/linear_algebra/bilinear_form#pp6)으로부터 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다는 것을 안다. 
+우리는 $\ch\mathbb{R}=0$임을 알고 있으므로, [§쌍선형형식, ⁋명제 6](/ko/math/linear_algebra/bilinear_form#prop6)으로부터 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다는 것을 안다. 
 
 임의의 $\mathbb{R}$-내적공간 $V$가 주어졌다 하고, $V$에 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 주어졌다 하자. 우선
 
@@ -184,7 +184,7 @@ $$\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v, L^t Lw\rangle$$
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> 임의의 $A\in\Mat_n(\mathbb{R})$에 대해, 다음의 식
+<ins id="def7">**정의 7**</ins> 임의의 $A\in\Mat_n(\mathbb{R})$에 대해, 다음의 식
 
 $$A^tA=AA^t=I$$
 
