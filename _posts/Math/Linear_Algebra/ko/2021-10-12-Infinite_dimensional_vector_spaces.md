@@ -25,13 +25,13 @@ weight: 6
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 집합들의 family $\mathscr{B}$에 대하여, $A\in\mathscr{B}$가 *maximal*이라는 것은, 만약 임의의 $B\in\mathscr{B}$에 대하여 $A\subset B$라면 반드시 $A=B$인 것이다. (cf. [\[집합론\] §순서집합의 원소들, ⁋정의 1](/ko/math/set_theory/elements_in_ordered_set#df1)) 
+<ins id="def1">**정의 1**</ins> 집합들의 family $\mathscr{B}$에 대하여, $A\in\mathscr{B}$가 *maximal*이라는 것은, 만약 임의의 $B\in\mathscr{B}$에 대하여 $A\subset B$라면 반드시 $A=B$인 것이다. (cf. [\[집합론\] §순서집합의 원소들, ⁋정의 1](/ko/math/set_theory/elements_in_ordered_set#def1)) 
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 임의의 $F$-벡터공간 $V$에 대하여, $V$의 모든 일차독립인 부분집합들의 모임을 $\mathscr{B}$라 하자. 만약 $\mathscr{B}$의 maximal element $\mathcal{B}$가 존재한다면, $\mathcal{B}$는 $V$의 basis가 된다. 
+<ins id="prop2">**명제 2**</ins> 임의의 $F$-벡터공간 $V$에 대하여, $V$의 모든 일차독립인 부분집합들의 모임을 $\mathscr{B}$라 하자. 만약 $\mathscr{B}$의 maximal element $\mathcal{B}$가 존재한다면, $\mathcal{B}$는 $V$의 basis가 된다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -103,11 +103,11 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 
 </details>
 
-다음 두 따름정리는 모두 유한차원일 경우에는 증명을 했었지만 ([§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#pp5), [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#pp6)) 앞선 논증과 비슷하게, 무한차원 벡터공간에 대해서도 성립한다. 
+다음 두 따름정리는 모두 유한차원일 경우에는 증명을 했었지만 ([§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5), [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#prop6)) 앞선 논증과 비슷하게, 무한차원 벡터공간에 대해서도 성립한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> $F$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 basis $\mathcal{B}$가 존재한다.
+<ins id="cor5">**따름정리 5**</ins> $F$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 basis $\mathcal{B}$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -118,7 +118,7 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 </details>
 <div class="proposition" markdown="1">
 
-<ins id="crl6">**따름정리 6**</ins> $F$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다. 
+<ins id="cor6">**따름정리 6**</ins> $F$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -128,7 +128,7 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 
 > $S$에 포함된 모든 일차독립인 부분집합들의 집합
 
-으로 정의하자. 어렵지 않게 $\mathscr{C}$가 Zorn's lemma의 조건을 만족한다는 것을 확인할 수 있고, 따라서 maximal element $\mathcal{B}$가 존재한다. 이제 $\mathcal{B}$는 [명제 4](#pp4)에서 도입한 집합 $\mathscr{B}$ ($V$의 모든 일차독립인 부분집합들의 집합)에서도 maximal인 것을, 즉 $V$의 basis가 된다는 것을 증명하면 된다. 
+으로 정의하자. 어렵지 않게 $\mathscr{C}$가 Zorn's lemma의 조건을 만족한다는 것을 확인할 수 있고, 따라서 maximal element $\mathcal{B}$가 존재한다. 이제 $\mathcal{B}$는 [명제 4](#prop4)에서 도입한 집합 $\mathscr{B}$ ($V$의 모든 일차독립인 부분집합들의 집합)에서도 maximal인 것을, 즉 $V$의 basis가 된다는 것을 증명하면 된다. 
 
 결론에 반하여 $\mathcal{B}$가 $V$의 basis가 아니라 가정하자. 그럼 어떤 $v\in V$가 존재하여 $v\not\in\span\mathcal{B}$이다. 한편, $S$는 $V$를 span하므로, 적당한 finitely supported family $(\alpha_x)_{x\in S}$가 존재하여 
 

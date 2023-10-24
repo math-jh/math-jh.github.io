@@ -53,7 +53,7 @@ Submanifold를 단순히 원래의 manifold의 부분집합으로 본다면, 이
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> Manifold $M$의 submanifold $\Phi:P\rightarrow M$이 주어졌다 하자. 임의의 $C^\infty$ 함수 $F:N\rightarrow M$가 $F(N)\subseteq\Phi(P)$를 만족한다면, 다음의 식
+<ins id="prop2">**명제 2**</ins> Manifold $M$의 submanifold $\Phi:P\rightarrow M$이 주어졌다 하자. 임의의 $C^\infty$ 함수 $F:N\rightarrow M$가 $F(N)\subseteq\Phi(P)$를 만족한다면, 다음의 식
 
 $$F_0=\bar{\Phi}^{-1}\circ F$$
 
@@ -70,7 +70,7 @@ $$F_0=\bar{\Phi}^{-1}\circ F$$
 
 $F_0$가 연속이라 가정하고, $F_0$이 $C^\infty$이기도 하다는 것을 보이자. 즉 임의의 $x\in N$에 대하여, $x$를 중심으로 하는 coordinate system $(U,\varphi)$가 존재하여 $F_0$을 $U$로 제한한 것이 $C^\infty$임을 보여야 한다. 그런데 $F_0$가 연속인 전단사함수임을 가정하였으므로, 이를 보이기 위해서는 임의의 $y\in P$를 포함하는 coordinate system $(V,\psi)$가 존재하여, $\psi\circ F_0$을 <em_ko>열린집합</em_ko> $F_0^{-1}(V)$로 제한한 것이 $C^\infty$임을 보이면 충분하다. 
 
-이제 $y\in P$가 임의로 주어졌다 하고, $\Phi(y)$를 포함하는 $M$의 coordinate system $(W,z^1,\ldots, z^m)$를 택하자. 그럼 [§부분다양체와 역함수 정리, ⁋따름정리 10](/ko/math/manifold/submanifolds#crl10)으로부터 집합 $\\{z^k\circ\Phi\mid 1\leq k\leq m\\}$의 부분집합을 적당한 열린근방 $V$로 제한한 것이 점 $y\in P$의 coordinate system을 이룬다는 것을 안다. 
+이제 $y\in P$가 임의로 주어졌다 하고, $\Phi(y)$를 포함하는 $M$의 coordinate system $(W,z^1,\ldots, z^m)$를 택하자. 그럼 [§부분다양체와 역함수 정리, ⁋따름정리 10](/ko/math/manifold/submanifolds#cor10)으로부터 집합 $\\{z^k\circ\Phi\mid 1\leq k\leq m\\}$의 부분집합을 적당한 열린근방 $V$로 제한한 것이 점 $y\in P$의 coordinate system을 이룬다는 것을 안다. 
 
 이제 이들을 $\\{z^1\circ\Phi,\ldots,z^p\circ\Phi\\}$라 하자. 일반성을 잃지 않고, $\gamma=(z^1,\ldots, z^m)$이 $\mathbb{R}^m$으로의 전사함수라 하면, 위의 주장은 projection $\pi:\mathbb{R}^m\rightarrow\mathbb{R}^p$를 통해 $(V,\pi\circ\gamma\circ\Phi)$가 $y$의 coordinate system이 된다는 것과 동일한 말이다. 이제
 
@@ -84,7 +84,7 @@ $$(\pi\circ\gamma\circ\Phi)\circ F_0|_{F_0^{-1}(V)}=\pi\circ\gamma\circ F|_{F_0^
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> Manifold $M$과 두 submanifold $\Phi_1:N_1\rightarrow M$, $\Phi_2:N_2\rightarrow M$이 주어졌다 하자. 이들 둘이 *equivalent*하다는 것은 diffeomorphism $\theta:N_1\rightarrow N_2$가 존재하여 $\Phi_1=\Phi_2\circ\theta$가 성립하는 것이다.
+<ins id="def3">**정의 3**</ins> Manifold $M$과 두 submanifold $\Phi_1:N_1\rightarrow M$, $\Phi_2:N_2\rightarrow M$이 주어졌다 하자. 이들 둘이 *equivalent*하다는 것은 diffeomorphism $\theta:N_1\rightarrow N_2$가 존재하여 $\Phi_1=\Phi_2\circ\theta$가 성립하는 것이다.
 
 </div>
 
@@ -102,7 +102,7 @@ $$\iota=\Phi\circ\bar{\Phi}^{-1}$$
 
 ## 부분다양체의 유일성
 
-위의 절에서 정의한 $(A,\iota)$는 equivalence class $[(N,\Phi)]$마다 <em_ko>유일하게</em_ko> 결정된다. 우선 [정의 3](#df3)에서의 $\theta$는 diffeomorphism이므로 특히 전단사함수이고, 따라서 
+위의 절에서 정의한 $(A,\iota)$는 equivalence class $[(N,\Phi)]$마다 <em_ko>유일하게</em_ko> 결정된다. 우선 [정의 3](#def3)에서의 $\theta$는 diffeomorphism이므로 특히 전단사함수이고, 따라서 
 
 $$\Phi_2(N_2)=\Phi_1(\theta(N_2))=\Phi_1(N_1)$$
 
@@ -114,29 +114,29 @@ $$\Phi_2(N_2)=\Phi_1(\theta(N_2))=\Phi_1(N_1)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> Manifold $M$의 부분집합 $A$와, $A$ 위에 정의된 topology $\mathcal{T}$를 고정하자. 그럼 $(A,\iota)$를 $M$의 submanifold로 만드는 미분구조는 많아야 하나 존재한다.
+<ins id="prop4">**명제 4**</ins> Manifold $M$의 부분집합 $A$와, $A$ 위에 정의된 topology $\mathcal{T}$를 고정하자. 그럼 $(A,\iota)$를 $M$의 submanifold로 만드는 미분구조는 많아야 하나 존재한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 2](#pp2)의 첫째 주장에 의해 자명하다. 
+[명제 2](#prop2)의 첫째 주장에 의해 자명하다. 
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> Manifold $M$의 부분집합 $A$가 주어졌다 하자. 만일 $A$를 $M$의 subspace로 보았을 때, $(A,\iota)$를 $M$의 submanifold로 만드는 미분구조가 존재한다면, 이 미분구조와 subspace topology는 $(A,\iota)$에 줄 수 있는 유일한 manifold의 구조가 된다. 
+<ins id="prop5">**명제 5**</ins> Manifold $M$의 부분집합 $A$가 주어졌다 하자. 만일 $A$를 $M$의 subspace로 보았을 때, $(A,\iota)$를 $M$의 submanifold로 만드는 미분구조가 존재한다면, 이 미분구조와 subspace topology는 $(A,\iota)$에 줄 수 있는 유일한 manifold의 구조가 된다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 앞선 [명제 4](#pp4)를 subspace topology $\mathcal{T}$에 적용하면, $(A,\mathcal{T},\iota)$를 $M$의 submanifold로 만드는 미분구조는 유일하다. 이를 $\mathcal{A}$라 하자. 이제 $(A,\iota)$를 $M$의 submanifold로 만드는 위상 $\mathcal{T}'$와 미분구조 $\mathcal{A}'$가 주어졌다 하고, 다음 diagram을 생각하자.
+우선 앞선 [명제 4](#prop4)를 subspace topology $\mathcal{T}$에 적용하면, $(A,\mathcal{T},\iota)$를 $M$의 submanifold로 만드는 미분구조는 유일하다. 이를 $\mathcal{A}$라 하자. 이제 $(A,\iota)$를 $M$의 submanifold로 만드는 위상 $\mathcal{T}'$와 미분구조 $\mathcal{A}'$가 주어졌다 하고, 다음 diagram을 생각하자.
 
 ![uniqueness](/assets/images/Math/Manifold/Uniqueness_of_submanifold-4.png){:width="270.15px" class="invert" .align-center}
 
-여기서 $\iota$와 $\iota'$는 모두 $A\hookrightarrow M$이지만, 구별을 위해 다른 이름으로 표기하였다. 정의에 의해 $(A,\mathcal{T},\mathcal{A})$가 $M$의 embedded submanifold이므로, 수직방향의 $\iota$는 embedding이고 따라서 [명제 2](#pp2)에 의하여 $\operatorname{id}$는 $C^\infty$이다. 또, 연쇄법칙에 의하여
+여기서 $\iota$와 $\iota'$는 모두 $A\hookrightarrow M$이지만, 구별을 위해 다른 이름으로 표기하였다. 정의에 의해 $(A,\mathcal{T},\mathcal{A})$가 $M$의 embedded submanifold이므로, 수직방향의 $\iota$는 embedding이고 따라서 [명제 2](#prop2)에 의하여 $\operatorname{id}$는 $C^\infty$이다. 또, 연쇄법칙에 의하여
 
 $$d\iota'=d\iota\circ d(\id)$$
 

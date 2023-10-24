@@ -20,7 +20,7 @@ weight: 10
 
 수학에서 특정한 대상들을 정의한 후에는 보통 이들을 <em_ko>같은</em_ko> 것들끼리 묶어 분류하는 작업을 하게 된다. 예컨대 집합을 다룰 때는 크기가 같은 두 집합 $A,B$를 같은 것으로 취급하며, 이는 정의에 의하여 $A$와 $B$ 사이에 전단사함수가 존재한다는 것이다. 
 
-물론 이를 그대로 벡터공간으로 가져올 수는 없다. 만일 집합으로서 같은 크기를 갖는 두 벡터공간을 같은 것으로 생각한다면, [\[집합론\] §자연수와 무한집합, ⁋따름정리 15](/ko/math/set_theory/natural_numbers#crl15)에 의하여 무한한 field $F$ 위에서 정의된 유한차원 벡터공간들은 모두 같은 것으로 생각해야 한다. 또 일반적으로 함수는 벡터공간의 덧셈과 스칼라곱을 유지하지 않으므로 어쨌든 벡터공간을 다루기엔 부적절한 것은 분명하다.
+물론 이를 그대로 벡터공간으로 가져올 수는 없다. 만일 집합으로서 같은 크기를 갖는 두 벡터공간을 같은 것으로 생각한다면, [\[집합론\] §자연수와 무한집합, ⁋따름정리 15](/ko/math/set_theory/natural_numbers#cor15)에 의하여 무한한 field $F$ 위에서 정의된 유한차원 벡터공간들은 모두 같은 것으로 생각해야 한다. 또 일반적으로 함수는 벡터공간의 덧셈과 스칼라곱을 유지하지 않으므로 어쨌든 벡터공간을 다루기엔 부적절한 것은 분명하다.
 
 ## 동형인 벡터공간
 
@@ -28,7 +28,7 @@ weight: 10
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자. 이 때 $L$이 *isomorphism<sub>동형사상</sub>*이라는 것은 또 다른 linear map $L':W\rightarrow V$가 존재하여 $L\circ L'=\id_W$이고 $L'\circ L=\id_V$인 것이다. 이렇게 $V$와 $W$ 사이의 isomorphism이 존재할 경우, $V,W$가 *isomorphic<sub>동형</sub>*하다 하고 이를 $V\cong W$로 나타낸다. 
+<ins id="def1">**정의 1**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자. 이 때 $L$이 *isomorphism<sub>동형사상</sub>*이라는 것은 또 다른 linear map $L':W\rightarrow V$가 존재하여 $L\circ L'=\id_W$이고 $L'\circ L=\id_V$인 것이다. 이렇게 $V$와 $W$ 사이의 isomorphism이 존재할 경우, $V,W$가 *isomorphic<sub>동형</sub>*하다 하고 이를 $V\cong W$로 나타낸다. 
 
 </div>
 
@@ -52,11 +52,11 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 
 </details>
 
-다음 명제는 [\[집합론\] §기수, ⁋정의 1](/ko/math/set_theory/cardinals#df1) 이후에 간략하게 언급한 것과 동일한 집합론적 문제가 있다. 즉, <phrase>모든 $F$-벡터공간들의 모임</phrase>이 실제로 집합이 되는지가 불확실하지만 이는 더 이상 부연설명 없이 넘어가기로 한다.
+다음 명제는 [\[집합론\] §기수, ⁋정의 1](/ko/math/set_theory/cardinals#def1) 이후에 간략하게 언급한 것과 동일한 집합론적 문제가 있다. 즉, <phrase>모든 $F$-벡터공간들의 모임</phrase>이 실제로 집합이 되는지가 불확실하지만 이는 더 이상 부연설명 없이 넘어가기로 한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> [정의 1](#df1)의 관계 $\cong$는 동치관계이다.
+<ins id="prop3">**명제 3**</ins> [정의 1](#def1)의 관계 $\cong$는 동치관계이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -74,7 +74,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl4">**따름정리 4**</ins> 두 $n$차원 $F$-벡터공간은 항상 isomorphic하다.
+<ins id="cor4">**따름정리 4**</ins> 두 $n$차원 $F$-벡터공간은 항상 isomorphic하다.
 
 </div>
 <details class="proof" markdown="1">
@@ -88,13 +88,13 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 두 isomorphic한 $F$-벡터공간 $V,W$와 isomorphism $L:V\rightarrow W$가 주어졌다 하자. 만약 $\mathcal{B}$가 $V$의 basis라면, $L(\mathcal{B})$도 $V$의 basis가 된다.
+<ins id="prop5">**명제 5**</ins> 두 isomorphic한 $F$-벡터공간 $V,W$와 isomorphism $L:V\rightarrow W$가 주어졌다 하자. 만약 $\mathcal{B}$가 $V$의 basis라면, $L(\mathcal{B})$도 $V$의 basis가 된다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§선형사상, ⁋따름정리 9](/ko/math/linear_algebra/linear_map#crl9).
+[§선형사상, ⁋따름정리 9](/ko/math/linear_algebra/linear_map#cor9).
 
 </details>
 
@@ -104,7 +104,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$이 주어졌다 하자. 그럼 
+<ins id="def6">**정의 6**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$이 주어졌다 하자. 그럼 
 
 1. $\dim\ker L$을 $L$의 *nullity*라 하고, $\nullity L$로 표기한다.
 2. $\dim\im L$을 $L$의 *rank*라 하고, $\rank L$로 표기한다.

@@ -21,7 +21,7 @@ weight: 4
 
 앞선 글에서 $T_pM$은 $\mathbb{R}$-벡터공간이 된다는 것을 살펴보았다. 이제 우리는 $T_pM$이 실은 유한차원이라는 것을 보일 것인데, 이를 직접 보이는 대신 $T_pM$의 dual space가 유한차원임을 보인다.
 
-[§접공간, ⁋명제 2](/ko/math/manifold/tangent_space#pp2)에 의하여, $\mathcal{C}^\infty_p$의 ideal들의 descending chain
+[§접공간, ⁋명제 2](/ko/math/manifold/tangent_space#prop2)에 의하여, $\mathcal{C}^\infty_p$의 ideal들의 descending chain
 
 $$\mathcal{C}^\infty_p\supset\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$$
 
@@ -45,7 +45,7 @@ $$v(\mathbf{f}_i\mathbf{f}_j)=\mathbf{f}_i(p)v(\mathbf{f}_j)+\mathbf{f}_j(p)v(\m
 
 $$v_L(\mathbf{f})=L((\mathbf{f}-\mathbf{f(p)})+\mathfrak{m}_p^2)$$
 
-으로 정의하는 것이 잘 정의된다. 이렇게 정의된 $v_L$이 linear map일 뿐만 아니라 [§접공간, ⁋정의 3](/ko/math/manifold/tangent_space#df3)도 만족한다는 것을 보여야 하므로, 
+으로 정의하는 것이 잘 정의된다. 이렇게 정의된 $v_L$이 linear map일 뿐만 아니라 [§접공간, ⁋정의 3](/ko/math/manifold/tangent_space#def3)도 만족한다는 것을 보여야 하므로, 
 
 $$\begin{aligned}
             v_L(\mathbf{f}\cdot\mathbf{g})&=L((\mathbf{fg}-\mathbf{f(p)g(p)})+\mathfrak{m}_p^2)\\
@@ -122,7 +122,7 @@ $$a_j=\frac{\partial}{\partial r^j}\bigg|_0\sum a_i r^i=0$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> Manifold $M$과 $p\in M$이 주어졌다 하자. $p$을 포함하는 coordinate system $(U,\varphi)$, 그리고 $\varphi$의 component function들 $x^i$에 대하여, $x^i$ 방향의 *directional derivative*는 다음의 식
+<ins id="def3">**정의 3**</ins> Manifold $M$과 $p\in M$이 주어졌다 하자. $p$을 포함하는 coordinate system $(U,\varphi)$, 그리고 $\varphi$의 component function들 $x^i$에 대하여, $x^i$ 방향의 *directional derivative*는 다음의 식
 
 $$\left(\frac{\partial}{\partial x^i}\bigg|_p\right)f=\frac{\partial(f\circ \varphi^{-1})}{\partial r^i}\bigg|_{\varphi(p)}$$
 

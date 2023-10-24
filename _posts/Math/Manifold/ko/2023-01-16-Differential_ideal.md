@@ -25,7 +25,7 @@ weight: 15
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Manifold $M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$를 생각하자. $l$-form $\omega$가 $\mathcal{D}$를 *annihilate*한다는 것은 각각의 $p\in M$에 대하여
+<ins id="def1">**정의 1**</ins> Manifold $M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$를 생각하자. $l$-form $\omega$가 $\mathcal{D}$를 *annihilate*한다는 것은 각각의 $p\in M$에 대하여
 
 $$\omega_p(v_1,\ldots, v_l)=0,\qquad v_i\in\mathcal{D}(p)$$
 
@@ -41,7 +41,7 @@ $$\mathcal{I}(\mathcal{D})=\{\omega\in\Omega^\ast(M)\mid\text{$\omega$ annihilat
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> Manifold $M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$를 생각하자. 
+<ins id="prop2">**명제 2**</ins> Manifold $M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$를 생각하자. 
 
 1. $\mathcal{I}(\mathcal{D})$는 $\Omega^\ast(M)$의 ideal이다.
 2. $\mathcal{I}(\mathcal{D})$는 국소적으로 $m-k$개의 1-form들로 생성된다.
@@ -67,7 +67,7 @@ $\Omega^\ast(M)$는 differential graded algebra이므로, ideal들 또한 differ
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $\Omega^\ast(M)$의 ideal $\mathcal{I}$가 *differential ideal<sub>미분 아이디얼</sub>*이라는 것은 $\mathcal{I}$가 $d$에 대하여 닫혀있는 것이다.
+<ins id="def3">**정의 3**</ins> $\Omega^\ast(M)$의 ideal $\mathcal{I}$가 *differential ideal<sub>미분 아이디얼</sub>*이라는 것은 $\mathcal{I}$가 $d$에 대하여 닫혀있는 것이다.
 
 </div>
 
@@ -77,13 +77,13 @@ $\Omega^\ast(M)$는 differential graded algebra이므로, ideal들 또한 differ
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> Manifold $M$ 위에 정의된 distribution $\mathcal{D}$에 대하여, $\mathcal{D}$가 involutive인 것과 $\mathcal{I}(\mathcal{D})$가 differential ideal인 것이 동치이다.
+<ins id="prop4">**명제 4**</ins> Manifold $M$ 위에 정의된 distribution $\mathcal{D}$에 대하여, $\mathcal{D}$가 involutive인 것과 $\mathcal{I}(\mathcal{D})$가 differential ideal인 것이 동치이다.
 
 </div>
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> Manifold $M$과 submanifold $\Phi:N\rightarrow M$에 대하여, $N$이 ideal $\mathcal{I}$의 *integral manifold*인 것은 임의의 $\omega\in\mathcal{I}$에 대하여 $(d\Phi)^\ast(\omega)\equiv 0$이 성립하는 것이다. 
+<ins id="def5">**정의 5**</ins> Manifold $M$과 submanifold $\Phi:N\rightarrow M$에 대하여, $N$이 ideal $\mathcal{I}$의 *integral manifold*인 것은 임의의 $\omega\in\mathcal{I}$에 대하여 $(d\Phi)^\ast(\omega)\equiv 0$이 성립하는 것이다. 
 
 </div>
 

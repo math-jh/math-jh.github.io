@@ -23,7 +23,7 @@ weight: 21
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 집합 $\\{1,\ldots, n\\}$에서 자기 자신으로의 모든 전단사함수들의 모임을 *symmetric group<sub>대칭군</sub>*이라 부르고, $S_n$으로 표기한다. $S_n$의 원소들을 *permutation<sub>치환</sub>*이라 부른다.
+<ins id="def1">**정의 1**</ins> 집합 $\\{1,\ldots, n\\}$에서 자기 자신으로의 모든 전단사함수들의 모임을 *symmetric group<sub>대칭군</sub>*이라 부르고, $S_n$으로 표기한다. $S_n$의 원소들을 *permutation<sub>치환</sub>*이라 부른다.
 
 </div>
 
@@ -59,7 +59,7 @@ $$f(v_1,v_2,\ldots, v_n)=\sgn(\sigma)f(v_{\sigma(1)},v_{\sigma(2)},\ldots, v_{\s
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**보조정리 2**</ins> [§행렬식, ⁋정의 4](/ko/math/linear_algebra/determinant#df4)을 만족하는 함수 $D$는 유일하게 존재한다.
+<ins id="lem2">**보조정리 2**</ins> [§행렬식, ⁋정의 4](/ko/math/linear_algebra/determinant#def4)을 만족하는 함수 $D$는 유일하게 존재한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -74,7 +74,7 @@ $$v_i=v_1^ie_1+\cdots v_n^ie_n,\qquad i=1,\ldots, n$$
 $$\begin{aligned}f(v_1,\ldots, v_n)&=\sum_{i_1=1}^nv_{i_1}^1f(e_{i_1},v_2,\ldots, v_n)\\
 &=\sum_{i_1,i_2=1}^n v_{i_1}^1v_{i_2}^2f(e_{i_1},e_{i_2},v_3,\ldots, v_n)\\&=\cdots\\&=\sum_{i_1,\ldots, i_n=1}^nv_{i_1}^1v_{i_2}^2\ldots, v_{i_n}^nf(e_{i_1},\ldots, e_{i_n})\end{aligned}$$
 
-이 성립한다. [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#pp3)에 의하여, $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $f(e_{i_1},\ldots,e_{i_n})$의 값은 항상 0이 되므로, 우변의 식은 
+이 성립한다. [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여, $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $f(e_{i_1},\ldots,e_{i_n})$의 값은 항상 0이 되므로, 우변의 식은 
 
 $$f(v_1,\ldots, v_n)=\sum_{\sigma\in S_n}v^1_{\sigma(1)}v^2_{\sigma(2)}\cdots v^n_{\sigma(n)}f(e_{\sigma(1)},\ldots, e_{\sigma(n)})$$
 
@@ -108,7 +108,7 @@ $$\det A=\sum_{\sigma\in S_n}\sgn(\sigma)A_{\sigma(1)1}A_{\sigma(2)2}\cdots A_{\
 
 <div class="proposition" markdown="1">
 
-<ins id="crl4">**따름정리 4**</ins> 임의의 행렬 $A\in\Mat_n(F)$에 대하여, $\det(A^t)=\det A$가 성립한다.
+<ins id="cor4">**따름정리 4**</ins> 임의의 행렬 $A\in\Mat_n(F)$에 대하여, $\det(A^t)=\det A$가 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -156,13 +156,13 @@ $$\sum_{\tau\in S_n}\sgn(\tau)\det(A)B_{\tau(1)1}\cdots B_{\tau(n)n}=\det(A)\det
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 임의의 행렬 $A\in\Mat_n(F)$에 대하여, $\det A\neq 0$인 것과 $A$가 가역인 것이 동치이다.
+<ins id="prop6">**명제 6**</ins> 임의의 행렬 $A\in\Mat_n(F)$에 대하여, $\det A\neq 0$인 것과 $A$가 가역인 것이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-선형대수학의 기본정리로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:F^n\rightarrow F^n$이 가역인 것과 동치라는 것을 안다. $F^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#pp3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
+선형대수학의 기본정리로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:F^n\rightarrow F^n$이 가역인 것과 동치라는 것을 안다. $F^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
 
 거꾸로 $A$가 가역이라 가정하자. 그럼 다음의 식
 
@@ -176,7 +176,7 @@ $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl7">**따름정리 7**</ins> 가역행렬 $A\in\Mat_n(F)$에 대하여 $\det(A^{-1})=(\det A)^{-1}$이 성립한다.
+<ins id="cor7">**따름정리 7**</ins> 가역행렬 $A\in\Mat_n(F)$에 대하여 $\det(A^{-1})=(\det A)^{-1}$이 성립한다.
 
 </div>
 
@@ -186,18 +186,18 @@ $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> 행렬 $A\in\Mat\_n(F)$이 *상삼각행렬<sub>upper triangular matrix</sub>*이라는 것은 $i>j$일 때마다 $A_{ij}=0$인 것이다. 비슷하게, $i < j$일 때마다 $A\_{ij}=0$이라면 $A$를 *하삼각행렬<sub>lower triangular matrix</sub>*이라 부르고, 상삼각행렬과 하삼각행렬을 합쳐 간단히 *삼각행렬<sub>triangular matrix</sub>*이라 부른다.
+<ins id="def8">**정의 8**</ins> 행렬 $A\in\Mat\_n(F)$이 *상삼각행렬<sub>upper triangular matrix</sub>*이라는 것은 $i>j$일 때마다 $A_{ij}=0$인 것이다. 비슷하게, $i < j$일 때마다 $A\_{ij}=0$이라면 $A$를 *하삼각행렬<sub>lower triangular matrix</sub>*이라 부르고, 상삼각행렬과 하삼각행렬을 합쳐 간단히 *삼각행렬<sub>triangular matrix</sub>*이라 부른다.
 
 한편, 행렬 $A$의 성분들 $A\_{ii}$를 $A$의 *대각성분*이라 하고, 만일 $i\neq j$일 때마다 $A\_{ij}=0$이라면 $A$를 *대각행렬<sub>diagonal matrix</sub>*이라 부른다. 
 
 </div>
 
-특별히 모든 $n\times n$ 행사다리꼴행렬은 모두 상삼각행렬이다. ([§가우스 소거법, ⁋정의 2](/ko/math/linear_algebra/Gaussian_elimination#df2))
+특별히 모든 $n\times n$ 행사다리꼴행렬은 모두 상삼각행렬이다. ([§가우스 소거법, ⁋정의 2](/ko/math/linear_algebra/Gaussian_elimination#def2))
 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> 임의의 삼각행렬 $A$에 대하여, $\det(A)$는 대각성분들의 곱과 같다.
+<ins id="prop9">**명제 9**</ins> 임의의 삼각행렬 $A$에 대하여, $\det(A)$는 대각성분들의 곱과 같다.
 
 </div>
 <details class="proof" markdown="1">
@@ -231,7 +231,7 @@ $$\det E_{i,j}=-1,\quad \det E'_{i,r}=r$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp10">**명제 10**</ins> $A\in\Mat_k(F)$이고 $I$가 $l\times l$ 항등행렬이라 하자. 그럼 다음의 블록행렬
+<ins id="prop10">**명제 10**</ins> $A\in\Mat_k(F)$이고 $I$가 $l\times l$ 항등행렬이라 하자. 그럼 다음의 블록행렬
 
 $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 
@@ -241,7 +241,7 @@ $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 9](#pp9)의 증명과 거의 동일하다. 식 (2)을 통해 주어진 행렬의 행렬식을 계산하면
+[명제 9](#prop9)의 증명과 거의 동일하다. 식 (2)을 통해 주어진 행렬의 행렬식을 계산하면
 
 $$\det \begin{pmatrix}A&O\\O&I\end{pmatrix}=\sum_{\sigma\in S_{k+l}}\sgn(\sigma)A_{\sigma(1)1}A_{\sigma(2)2}\cdots A_{\sigma(k)k}B_{\sigma(k+1)(k+1)}\cdots B_{\sigma(k+l)(k+l)}$$
 
@@ -255,7 +255,7 @@ $$\sigma(k+1)=k+1,\ldots,\sigma(k+l)=k+1$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl11">**따름정리 11**</ins> $A\in\Mat\_k(F),B\in\Mat\_l(F), C\in\Mat\_{l\times k}(F)$에 대하여, 다음의 블록행렬
+<ins id="cor11">**따름정리 11**</ins> $A\in\Mat\_k(F),B\in\Mat\_l(F), C\in\Mat\_{l\times k}(F)$에 대하여, 다음의 블록행렬
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 
@@ -269,7 +269,7 @@ $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&E\end{pmatrix}\begin{pmatrix}I&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
 
-과 [명제 10](#pp10), 그리고 [보조정리 5](#lem5)에 의해 자명하다. 마지막 행렬의 경우, $l$번의 행 바꿈 후 $l$번의 열 바꿈을 하여 $2l$번의 부호 변경이 생겨 주어진 행렬의 행렬식이 $\det B$와 같게 된다.
+과 [명제 10](#prop10), 그리고 [보조정리 5](#lem5)에 의해 자명하다. 마지막 행렬의 경우, $l$번의 행 바꿈 후 $l$번의 열 바꿈을 하여 $2l$번의 부호 변경이 생겨 주어진 행렬의 행렬식이 $\det B$와 같게 된다.
 
 </details>
 
@@ -290,7 +290,7 @@ $n$차 정사각행렬 $A$가 주어졌을 때, $A$의 행렬식을 가장 쉽�
 
 <div class="definition" markdown="1">
 
-<ins id="df12">**정의 12**</ins> 행렬 $A\in\Mat_n(F)$이 주어졌다 하자. $1\leq i,j\leq n$에 대하여, $A^{(i,j)}$는 행렬 $A$의 $i$행, $j$열을 없애서 얻어지는 $(n-1)$차 정사각행렬이다.  
+<ins id="def12">**정의 12**</ins> 행렬 $A\in\Mat_n(F)$이 주어졌다 하자. $1\leq i,j\leq n$에 대하여, $A^{(i,j)}$는 행렬 $A$의 $i$행, $j$열을 없애서 얻어지는 $(n-1)$차 정사각행렬이다.  
 
 </div>
 
@@ -312,7 +312,7 @@ $$\det A=\sum_{j=1}^n(-1)^{i+j}A_{ij}\det (A^{(i,j)})$$
 
 $$B_j'=\begin{pmatrix}A_{ij}&0&\cdots&0\\A_{1j}&&&\\\vdots&&A^{(i,j)}&\\A_{nj}&&&\end{pmatrix}$$
 
-이다. 이제 [명제 10](#pp10)에 의하여 이 행렬의 행렬식은 $A_{ij}\det A^{(i,j)}$와 같고, 따라서
+이다. 이제 [명제 10](#prop10)에 의하여 이 행렬의 행렬식은 $A_{ij}\det A^{(i,j)}$와 같고, 따라서
 
 $$\det B_j=(-1)^{i+j-2}\det B_j'=(-1)^{i+j-2}A_{ij}\det A^{(i,j)}=(-1)^{i+j}A_{ij}\det A^{(i,j)}$$
 

@@ -25,7 +25,7 @@ weight: 23
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 $n$차 정사각행렬 $A$에 대하여, $A$의 *특성다항식<sub>characteristic polynomial</sub>*을 $\x$에 대한 다항식 $\det(\x I-A)$으로 정의한다.
+<ins id="def1">**정의 1**</ins> 임의의 $n$차 정사각행렬 $A$에 대하여, $A$의 *특성다항식<sub>characteristic polynomial</sub>*을 $\x$에 대한 다항식 $\det(\x I-A)$으로 정의한다.
 
 </div>
 
@@ -55,7 +55,7 @@ $$\det(0I-A)=\det(-A)=(-1)^n\det(A)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $n$차 정사각행렬의 특성다항식은 반드시 $n$차다항식이며, 특성다항식의 $n-1$차항의 계수는 $-\tr A$와 같고, 상수항은 $(-1)^n\det A$와 같다.
+<ins id="prop2">**명제 2**</ins> $n$차 정사각행렬의 특성다항식은 반드시 $n$차다항식이며, 특성다항식의 $n-1$차항의 계수는 $-\tr A$와 같고, 상수항은 $(-1)^n\det A$와 같다.
 
 </div>
 
@@ -63,7 +63,7 @@ $$\det(0I-A)=\det(-A)=(-1)^n\det(A)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $n\times n$ 행렬 $A$에 대하여, $A$의 특성다항식 $\det(\x I-A)=0$의 해를 $A$의 *고윳값<sub>eigenvalue</sub>*이라 부른다. $A$의 고윳값들의 모임을 $A$의 *spectrum<sub>스펙트럼</sub>*이라 부르고, 이 집합을 $\Spec(A)$으로 표기한다.
+<ins id="def3">**정의 3**</ins> $n\times n$ 행렬 $A$에 대하여, $A$의 특성다항식 $\det(\x I-A)=0$의 해를 $A$의 *고윳값<sub>eigenvalue</sub>*이라 부른다. $A$의 고윳값들의 모임을 $A$의 *spectrum<sub>스펙트럼</sub>*이라 부르고, 이 집합을 $\Spec(A)$으로 표기한다.
 
 </div>
 
@@ -75,13 +75,13 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 
 <div class="proposition" markdown="1">
 
-<ins id="crl4">**따름정리 4**</ins> 임의의 linear map $L:V\rightarrow V$에 대하여, $L$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
+<ins id="cor4">**따름정리 4**</ins> 임의의 linear map $L:V\rightarrow V$에 대하여, $L$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋정의 2](/ko/math/linear_algebra/change_of_basis#df2) 이후의 식으로부터 두 행렬표현 $[L]\_\mathcal{B}^\mathcal{B}$와 $[L]\_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
+즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋정의 2](/ko/math/linear_algebra/change_of_basis#def2) 이후의 식으로부터 두 행렬표현 $[L]\_\mathcal{B}^\mathcal{B}$와 $[L]\_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
 
 </details>
 
@@ -89,13 +89,13 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> 서로 닮은 행렬의 trace와 행렬식은 같다. 
+<ins id="cor5">**따름정리 5**</ins> 서로 닮은 행렬의 trace와 행렬식은 같다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-앞선 논증으로부터 $A$와 $B$는 같은 특성다항식을 갖는다는 것을 알고, [명제 2](#pp2)로부터 행렬의 trace와 행렬식은 특성다항식으로부터 결정된다. 
+앞선 논증으로부터 $A$와 $B$는 같은 특성다항식을 갖는다는 것을 알고, [명제 2](#prop2)로부터 행렬의 trace와 행렬식은 특성다항식으로부터 결정된다. 
 
 </details>
 
@@ -107,7 +107,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> $F[\x]$의 임의의 다항식 $p(\x)$이 주어졌다 하고, $a\in F$가 $p(\x)=0$의 해라 하자. 만일 $(\x-a)^k$가 $p(\x)$를 나누지만, $(\x-a)^{k+1}$은 $p(\x)$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
+<ins id="def6">**정의 6**</ins> $F[\x]$의 임의의 다항식 $p(\x)$이 주어졌다 하고, $a\in F$가 $p(\x)=0$의 해라 하자. 만일 $(\x-a)^k$가 $p(\x)$를 나누지만, $(\x-a)^{k+1}$은 $p(\x)$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
 
 </div>
 
@@ -145,7 +145,7 @@ $$(\lambda I-A)v=0$$
 
 <div class="definition" markdown="1">
 
-<ins id="df9">**정의 9**</ins> $n\times n$ 행렬 $A$와 고윳값 $\lambda$에 대하여, $Av=\lambda v$를 만족하는 벡터 $v$를 $\lambda$에 해당하는 $A$의 *고유벡터<sub>eigenvector</sub>*라 부른다. 
+<ins id="def9">**정의 9**</ins> $n\times n$ 행렬 $A$와 고윳값 $\lambda$에 대하여, $Av=\lambda v$를 만족하는 벡터 $v$를 $\lambda$에 해당하는 $A$의 *고유벡터<sub>eigenvector</sub>*라 부른다. 
 
 </div>
 
@@ -153,7 +153,7 @@ $$(\lambda I-A)v=0$$
 
 <div class="definition" markdown="1">
 
-<ins id="df10">**정의 10**</ins> $n\times n$ 행렬 $A$와 고윳값 $\lambda$에 대하여, $E\_\lambda$의 차원 $\dim E\_\lambda$를 $\lambda$의 *기하적 중복도<sub>geometric multiplicity</sub>*라 부른다. 
+<ins id="def10">**정의 10**</ins> $n\times n$ 행렬 $A$와 고윳값 $\lambda$에 대하여, $E\_\lambda$의 차원 $\dim E\_\lambda$를 $\lambda$의 *기하적 중복도<sub>geometric multiplicity</sub>*라 부른다. 
 
 </div>
 

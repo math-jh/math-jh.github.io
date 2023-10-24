@@ -21,7 +21,7 @@ weight: 9
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Manifold $M$과 coordinate system $(U,\varphi)$가 주어졌다 하자. 이 때 $\varphi=(x^i)\_{i=1}^m$이고, $0\leq k\leq m$라 하고, $p\in \varphi(U)$에 대해 다음의 집합
+<ins id="def1">**정의 1**</ins> Manifold $M$과 coordinate system $(U,\varphi)$가 주어졌다 하자. 이 때 $\varphi=(x^i)\_{i=1}^m$이고, $0\leq k\leq m$라 하고, $p\in \varphi(U)$에 대해 다음의 집합
 
 $$S=\{q\in U\mid x^i(q)=r^i(p), k+1\leq i\leq m\}$$
 
@@ -75,7 +75,7 @@ $$f(p,q)=0\iff q=g(p)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl4">**따름정리 4 (Submersion level set theorem)**</ins> $F:M\rightarrow N$이 $C^\infty$라 하고, $q\in F(M)$를 고정하고 $P=F^{-1}(q)$라 하자. 만일 임의의 $p\in P$마다 $dF_p:T_pM\rightarrow T_{F(p)}N$이 surjective라면, $P$ 위에 정의된 유일한 manifold 구조가 존재하여 canonical injection $\iota:P\hookrightarrow M$이 submanifold가 된다. 
+<ins id="cor4">**따름정리 4 (Submersion level set theorem)**</ins> $F:M\rightarrow N$이 $C^\infty$라 하고, $q\in F(M)$를 고정하고 $P=F^{-1}(q)$라 하자. 만일 임의의 $p\in P$마다 $dF_p:T_pM\rightarrow T_{F(p)}N$이 surjective라면, $P$ 위에 정의된 유일한 manifold 구조가 존재하여 canonical injection $\iota:P\hookrightarrow M$이 submanifold가 된다. 
 
 또, 이 때 $\iota$는 embedding이고, $P$의 codimension $\dim M-\dim P$가 $\dim N$과 동일해진다.
 
@@ -91,7 +91,7 @@ $$f(p,q)=0\iff q=g(p)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5 (Constant-rank level set theorem)**</ins> $F:M\rightarrow N$이 $C^\infty$라 하고, 각각의 $p\in P$마다 정의되는 $dF_p:T_pM\rightarrow T_{F(p)}N$이 모든 점 $p\in P$에서 같은 rank를 가진다고 하자. 그럼 $F:M\rightarrow N$은 embedded submanifold이다.
+<ins id="cor5">**따름정리 5 (Constant-rank level set theorem)**</ins> $F:M\rightarrow N$이 $C^\infty$라 하고, 각각의 $p\in P$마다 정의되는 $dF_p:T_pM\rightarrow T_{F(p)}N$이 모든 점 $p\in P$에서 같은 rank를 가진다고 하자. 그럼 $F:M\rightarrow N$은 embedded submanifold이다.
 
 </div>
 
@@ -107,7 +107,7 @@ $$f(x)=\lvert x\rvert^2=\sum_{i=1}^{n+1} r^i(x)^2$$
 
 $$df_x(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg|_{x}=2\sum r^i(x) v^i$$
 
-이 성립하며, 이로부터 $x$가 원점이 아니라면 $v$를 조절하여 $df_x(v)$가 임의의 실수값을 갖도록 할 수 있음을 안다. 즉, $df_x$가 원점을 제외하면 항상 surjective이므로, $f^{-1}(1)$이 $\mathbb{R}^{n+1}$의 submanifold이도록 하는 유일한 manifold 구조가 존재한다. 유일성에 의하여 이 구조는 $S^n$에 주어진 manifold 구조와 동일하며, 다시 [따름정리 5](#crl5)에 의해 이 구조는 $\mathbb{R}^{n+1}$의 embedded submanifold임을 알 수 있다.
+이 성립하며, 이로부터 $x$가 원점이 아니라면 $v$를 조절하여 $df_x(v)$가 임의의 실수값을 갖도록 할 수 있음을 안다. 즉, $df_x$가 원점을 제외하면 항상 surjective이므로, $f^{-1}(1)$이 $\mathbb{R}^{n+1}$의 submanifold이도록 하는 유일한 manifold 구조가 존재한다. 유일성에 의하여 이 구조는 $S^n$에 주어진 manifold 구조와 동일하며, 다시 [따름정리 5](#cor5)에 의해 이 구조는 $\mathbb{R}^{n+1}$의 embedded submanifold임을 알 수 있다.
 
 </div>
 

@@ -31,7 +31,7 @@ $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 두 abelian category $\mathcal{A},\mathcal{B}$가 주어졌다 하자. 그럼 $\mathcal{A}$에서 $\mathcal{B}$로의 *homological $\delta$-functor*는 additive functor들 $T_n:\mathcal{A}\rightarrow\mathcal{B}$ ($n\geq 0$), 그리고 임의의 short exact sequence
+<ins id="def1">**정의 1**</ins> 두 abelian category $\mathcal{A},\mathcal{B}$가 주어졌다 하자. 그럼 $\mathcal{A}$에서 $\mathcal{B}$로의 *homological $\delta$-functor*는 additive functor들 $T_n:\mathcal{A}\rightarrow\mathcal{B}$ ($n\geq 0$), 그리고 임의의 short exact sequence
 
 $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
@@ -66,7 +66,7 @@ $$\cdots\longrightarrow T_0(A)\longrightarrow T_0(B)\longrightarrow T_0(C)\longr
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 두 $\delta$-functor들 $S,T$가 주어졌다 하자. 그럼 $S$에서 $T$로의 *morphism* $S\rightarrow T$는 $S_n$에서 $T_n$으로의 natural transformation들의 모임들 중, $\delta$와 commute하는 것들을 의미한다.
+<ins id="def2">**정의 2**</ins> 두 $\delta$-functor들 $S,T$가 주어졌다 하자. 그럼 $S$에서 $T$로의 *morphism* $S\rightarrow T$는 $S_n$에서 $T_n$으로의 natural transformation들의 모임들 중, $\delta$와 commute하는 것들을 의미한다.
 
 </div>
 
@@ -80,7 +80,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 임의의 $\delta$-functor $T$가 *universal $\delta$-functor*라는 것은 임의의 $\delta$-functor $S$와 natural transformation $\alpha_0:S_0\rightarrow T_0$이 주어질 때마다, 이를 확장하는 유일한 $\delta$-functor들 사이의 morphism $(\alpha_n:S_n\Rightarrow T_n)$이 존재하는 것이다.
+<ins id="def3">**정의 3**</ins> 임의의 $\delta$-functor $T$가 *universal $\delta$-functor*라는 것은 임의의 $\delta$-functor $S$와 natural transformation $\alpha_0:S_0\rightarrow T_0$이 주어질 때마다, 이를 확장하는 유일한 $\delta$-functor들 사이의 morphism $(\alpha_n:S_n\Rightarrow T_n)$이 존재하는 것이다.
 
 </div>
 
@@ -92,7 +92,7 @@ Category $\mathbf{Mod}\_R$에서, *projective module*은 diagram을 이용해 �
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Abelian category $\mathcal{A}$의 object $P$가 *projective object<sub>사영 대상</sub>*라는 것은 다음의 *universal lifting property*가 성립하는 것이다.
+<ins id="def4">**정의 4**</ins> Abelian category $\mathcal{A}$의 object $P$가 *projective object<sub>사영 대상</sub>*라는 것은 다음의 *universal lifting property*가 성립하는 것이다.
 
 > (Universal lifting property) 임의의 epimorphism $g:B\rightarrow C$와 임의의 $\gamma:P\rightarrow c$에 대하여, $\gamma=g\circ\beta$이도록 하는 $\beta:P\rightarrow B$가 존재한다.
 >  
@@ -104,7 +104,7 @@ Category $\mathbf{Mod}\_R$에서, *projective module*은 diagram을 이용해 �
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 임의의 abelian category $\mathcal{A}$에 대하여, $M$이 projective인 것과 $\Hom\_\mathcal{A}(M,-):\mathcal{A}\rightarrow\mathbf{Ab}$이 exact functor인 것이 동치이다.
+<ins id="prop5">**명제 5**</ins> 임의의 abelian category $\mathcal{A}$에 대하여, $M$이 projective인 것과 $\Hom\_\mathcal{A}(M,-):\mathcal{A}\rightarrow\mathbf{Ab}$이 exact functor인 것이 동치이다.
 
 </div>
 
@@ -112,7 +112,7 @@ Category $\mathbf{Mod}\_R$에서, *projective module*은 diagram을 이용해 �
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> Abelian category $\mathcal{A}$가 *충분히 많은* projective object를 가진다는 것은 임의의 object $A\in\mathcal{A}$마다 적당한 projective object $P$와 epimorphism $P\rightarrow A$가 존재하는 것이다.
+<ins id="def6">**정의 6**</ins> Abelian category $\mathcal{A}$가 *충분히 많은* projective object를 가진다는 것은 임의의 object $A\in\mathcal{A}$마다 적당한 projective object $P$와 epimorphism $P\rightarrow A$가 존재하는 것이다.
 
 </div>
 
@@ -120,7 +120,7 @@ Category $\mathbf{Mod}\_R$에서, *projective module*은 diagram을 이용해 �
 
 <div class="definition" markdown="1"> 
 
-<ins id="df7">**정의 7**</ins> Abelian category $\mathcal{A}$의 임의의 원소 $M$에 대하여, $M$의 *left resolution*은 다음의 exact sequence
+<ins id="def7">**정의 7**</ins> Abelian category $\mathcal{A}$의 임의의 원소 $M$에 대하여, $M$의 *left resolution*은 다음의 exact sequence
 
 $$\cdots\overset{d}{\longrightarrow}P_2\overset{d}{\longrightarrow}P_1\overset{d}{\longrightarrow}P_0\overset{\epsilon}{\longrightarrow}M\longrightarrow 0$$
 
@@ -130,7 +130,7 @@ $$\cdots\overset{d}{\longrightarrow}P_2\overset{d}{\longrightarrow}P_1\overset{d
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> 충분히 많은 projective object를 갖는 abelian category $\mathcal{A}$의 object $M$은 항상 projective resolution을 갖는다.
+<ins id="prop8">**명제 8**</ins> 충분히 많은 projective object를 갖는 abelian category $\mathcal{A}$의 object $M$은 항상 projective resolution을 갖는다.
 
 </div>
 <details class="proof" markdown="1">

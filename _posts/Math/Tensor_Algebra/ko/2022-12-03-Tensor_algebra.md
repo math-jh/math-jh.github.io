@@ -47,7 +47,7 @@ $$(x_1\otimes\cdots\otimes x_p)\cdot (x_{p+1}\oplus\cdots\oplus x_{p+q})=x_1\oti
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 위와 같이 정의한 associative unital $\Delta$-graded $A$-algebra $\mathcal{T}(M)$을 $M$의 *tensor algebra<sub>텐서대수</sub>*라 부른다. 이 때, canonical injection $M=\mathcal{T}^1(M)\hookrightarrow\mathcal{T}(M)$을 *canonical injection*이라 부른다.
+<ins id="def1">**정의 1**</ins> 위와 같이 정의한 associative unital $\Delta$-graded $A$-algebra $\mathcal{T}(M)$을 $M$의 *tensor algebra<sub>텐서대수</sub>*라 부른다. 이 때, canonical injection $M=\mathcal{T}^1(M)\hookrightarrow\mathcal{T}(M)$을 *canonical injection*이라 부른다.
 
 </div>
 
@@ -83,7 +83,7 @@ $$\tilde{f}(x_1\otimes\cdots\otimes x_n)=f(x_1)\cdots f(x_n)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl3">**따름정리 3**</ins> [정리 2](#thm2)의 universal property를 만족하는 $\iota:M\rightarrow\mathcal{T}(M)$은 isomorphism에 대하여 유일하다.
+<ins id="cor3">**따름정리 3**</ins> [정리 2](#thm2)의 universal property를 만족하는 $\iota:M\rightarrow\mathcal{T}(M)$은 isomorphism에 대하여 유일하다.
 
 </div>
 <details class="proof" markdown="1">
@@ -107,7 +107,7 @@ $$\tilde{f}(x_1\otimes\cdots\otimes x_n)=f(x_1)\cdots f(x_n)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl4">**따름정리 4**</ins> 두 $A$-module 사이의 linear map $u:M\rightarrow N$이 주어졌다 하자. 그럼 유일한 $\mathcal{T}(u):\mathcal{T}(M)\rightarrow\mathcal{T}(N)$이 존재하여 $\iota_N\circ u=\mathcal{T}(u)\circ\iota_M$이 성립한다.
+<ins id="cor4">**따름정리 4**</ins> 두 $A$-module 사이의 linear map $u:M\rightarrow N$이 주어졌다 하자. 그럼 유일한 $\mathcal{T}(u):\mathcal{T}(M)\rightarrow\mathcal{T}(N)$이 존재하여 $\iota_N\circ u=\mathcal{T}(u)\circ\iota_M$이 성립한다.
 
 ![Functoriality_of_tensor_algebra](/assets/images/Math/Tensor_Algebra/Tensor_algebra-5.png){:width="196.95px" class="invert" .align-center}
 
@@ -131,7 +131,7 @@ $$\mathcal{T}^n(u)(x_1\otimes\cdots\otimes x_n)=u(x_1)\otimes\cdots\otimes u(x_n
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> [따름정리 4](#crl4)에서 정의된 $\mathcal{T}(u)$는 합성을 보존한다. 즉 $\mathcal{T}(v\circ u)=\mathcal{T}(v)\circ\mathcal{T}(u)$가 성립한다.
+<ins id="cor5">**따름정리 5**</ins> [따름정리 4](#cor4)에서 정의된 $\mathcal{T}(u)$는 합성을 보존한다. 즉 $\mathcal{T}(v\circ u)=\mathcal{T}(v)\circ\mathcal{T}(u)$가 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -165,7 +165,7 @@ $$a\cdot m':=\rho(a)\cdot m',\qquad a\in A,m'\in M'$$
 
 <div class="proposition" markdown="1">
  
-<ins id="pp6">**명제 6**</ins> 위에서 얻어지는 $\mathcal{T}_{A'}(A'\otimes_AM)\rightarrow A'\otimes_A\mathcal{T}_A(M)$은 isomorphism이다.
+<ins id="prop6">**명제 6**</ins> 위에서 얻어지는 $\mathcal{T}_{A'}(A'\otimes_AM)\rightarrow A'\otimes_A\mathcal{T}_A(M)$은 isomorphism이다.
  
 </div> 
 <details class="proof" markdown="1">

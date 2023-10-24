@@ -27,7 +27,7 @@ weight: 7
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 두 $F$-벡터공간 $V,W$가 주어졌다 하자. 함수 $L:V\rightarrow W$가 *linear map<sub>선형사상</sub>*이라는 것은, 
+<ins id="def1">**정의 1**</ins> 두 $F$-벡터공간 $V,W$가 주어졌다 하자. 함수 $L:V\rightarrow W$가 *linear map<sub>선형사상</sub>*이라는 것은, 
 
 1. 임의의 $\alpha\in F$와 $v\in V$에 대해 $L(\alpha v)=\alpha L(v)$이고,
 2. 임의의 $v_1,v_2\in V$에 대해 $L(v_1+v_2)=L(v_1)+L(v_2)$
@@ -40,7 +40,7 @@ weight: 7
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,
+<ins id="prop2">**명제 2**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,
 
 1. $L(0)=0$.
 2. 임의의 $v\in V$에 대하여 $L(-v)=-L(v)$.
@@ -50,7 +50,7 @@ weight: 7
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#pp2), 그리고 [§벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#crl3)의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
+Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#prop2), 그리고 [§벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#cor3)의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
 
 $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
@@ -60,7 +60,7 @@ $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$, 스칼라들 $\alpha_1,\ldots,\alpha_n$과 $V$의 벡터들 $v_1,\ldots, v_n$에 대하여
+<ins id="prop3">**명제 3**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$, 스칼라들 $\alpha_1,\ldots,\alpha_n$과 $V$의 벡터들 $v_1,\ldots, v_n$에 대하여
 
 $$L\left(\sum_{i=1}^k\alpha_i v_i\right)=\sum_{i=1}^kL(\alpha_iv_i)$$
 
@@ -78,7 +78,7 @@ $k$에 대한 귀납법에 의하여 자명하다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> 세 $F$-벡터공간 $U,V,W$와 linear map들 $L_1:U\rightarrow V$, $L_2:V\rightarrow W$에 대하여, $L_2\circ L_1:U\rightarrow W$는 linear이다.
+<ins id="prop4">**명제 4**</ins> 세 $F$-벡터공간 $U,V,W$와 linear map들 $L_1:U\rightarrow V$, $L_2:V\rightarrow W$에 대하여, $L_2\circ L_1:U\rightarrow W$는 linear이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -97,7 +97,7 @@ $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,
+<ins id="def5">**정의 5**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,
 
 1. $L(v_1)=L(v_2)$일 때마다 $v_1=v_2$라면, $L$이 *단사<sub>injective</sub>*라 힌다.
 2. 임의의 $w\in W$에 대해 $L(v)=w$를 만족하는 $v\in L$이 존재한다면, $L$이 *전사<sub>surjective</sub>*라 한다. 
@@ -108,7 +108,7 @@ $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $L$의 *kernel<sub>핵</sub>* $\ker L$은 다음의 식
+<ins id="def6">**정의 6**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $L$의 *kernel<sub>핵</sub>* $\ker L$은 다음의 식
 
 $$\ker L=\{v\in V\mid L(v)=0\}$$
 
@@ -124,7 +124,7 @@ $$\im L=\{w\in W\mid L(v)=w\text{ for some $v\in V$}\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $\ker L\leq V$이고 $\im L\leq W$이다.
+<ins id="prop7">**명제 7**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $\ker L\leq V$이고 $\im L\leq W$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -160,7 +160,7 @@ $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, 
+<ins id="prop8">**명제 8**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, 
 
 1. $L$이 단사인 것은 $\ker L=\\{0\\}$인 것과 동치이고,
 2. $L$이 전사인 것은 $\im L=W$인 것과 동치이다.
@@ -171,11 +171,11 @@ $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 
 둘째 주장은 동어반복이다.
 
-만약 $L$이 단사라면 $L(v)=0$을 만족하는 $v$는 유일해야 하고, [명제 2](#pp2)에 의해 $0$은 이 식을 만족하므로 $\ker L=\\{0\\}$이어야 한다. 따라서 첫째 주장 중에서도 다음의 명제
+만약 $L$이 단사라면 $L(v)=0$을 만족하는 $v$는 유일해야 하고, [명제 2](#prop2)에 의해 $0$은 이 식을 만족하므로 $\ker L=\\{0\\}$이어야 한다. 따라서 첫째 주장 중에서도 다음의 명제
 
 > $\ker L=\\{0\\}\implies\text{$L$ injective}$
 
-만 보이면 충분하다. $L(v_1)=L(v_2)$인 $v_1,v_2\in V$가 주어졌다 가정하자. 그럼 다시 [명제 3](#pp3)에 의하여,
+만 보이면 충분하다. $L(v_1)=L(v_2)$인 $v_1,v_2\in V$가 주어졌다 가정하자. 그럼 다시 [명제 3](#prop3)에 의하여,
 
 $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
@@ -187,7 +187,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl9">**따름정리 9**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
+<ins id="cor9">**따름정리 9**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
 
 1. 만약 $L$이 단사라면, 임의의 일차독립인 부분집합 $S\subset V$에 대하여 $L(S)$ 또한 $W$에서 일차독립이다.
 2. 만약 $L$이 전사라면, $\span S=V$를 만족하는 $S\subset V$에 대해, $L(S)$ 또한 $\span L(S)=W$를 만족한다.
@@ -200,7 +200,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
     $$\sum_{i=1}^k\alpha_i L(x_i)=0$$
 
-    라면, [명제 3](#pp3)에 의해
+    라면, [명제 3](#prop3)에 의해
 
     $$0=L\left(\sum_{i=1}^k\alpha_ix_i\right)$$
 
@@ -210,7 +210,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
     $$v=\sum_{i=1}^n\alpha_ix_i$$
     
-    으로 나타낼 수 있다. 양 변에 $L$을 취한 후 [명제 3](#pp3)을 적용하면
+    으로 나타낼 수 있다. 양 변에 $L$을 취한 후 [명제 3](#prop3)을 적용하면
     
     $$w=L(v)=L\left(\sum_{i=1}^n\alpha_ix_i\right)=\sum_{i=1}^n\alpha_i L(x_i)$$
     
@@ -244,7 +244,7 @@ $$\iota(w)=w\text{ for all $w\in W$}$$
 
 </div>
 
-위의 예시에서 특별히 $W=V$인 경우 $L$은 항등함수 $\id_V$와 같게 된다. ([\[집합론\] §함수들 사이의 연산, ⁋예시 4](/ko/math/set_theory/operation_of_functions#ex4)) 
+위의 예시에서 특별히 $W=V$인 경우 $L$은 항등함수 $\id_V$와 같게 된다. ([\[집합론\] §함수들 사이의 연산, ⁋예시 3](/ko/math/set_theory/operation_of_functions#ex3)) 
 
 <div class="example" markdown="1">
 

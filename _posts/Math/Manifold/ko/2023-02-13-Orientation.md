@@ -49,13 +49,13 @@ $$\bigwedge\nolimits^n(L):\bigwedge\nolimits^n(V)\rightarrow\bigwedge\nolimits^n
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $M$이 $m$차원의 connected manifold라 하자. 이 때, $M$이 *orientable*이라는 것은 $\bigwedge\nolimits^m(M)\setminus\\{0\\}$이 두 개의 component를 갖는 것이고, 이 때 두 component중 하나를 택하는 것을 $M$의 *orientation*이라 부른다. 
+<ins id="def1">**정의 1**</ins> $M$이 $m$차원의 connected manifold라 하자. 이 때, $M$이 *orientable*이라는 것은 $\bigwedge\nolimits^m(M)\setminus\\{0\\}$이 두 개의 component를 갖는 것이고, 이 때 두 component중 하나를 택하는 것을 $M$의 *orientation*이라 부른다. 
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $M$이 $m$차원의 connected manifold라 하자. 다음이 모두 동치이다.
+<ins id="prop2">**명제 2**</ins> $M$이 $m$차원의 connected manifold라 하자. 다음이 모두 동치이다.
 
 1. $M$이 orientable이다.
 2. $M$을 덮는 적당한 coordinate system들의 모임이 존재하여, 이들이 겹치는 곳에서 Jacobian이 항상 0보다 크도록 할 수 있다.

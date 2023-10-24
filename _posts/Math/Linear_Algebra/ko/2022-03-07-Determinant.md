@@ -33,7 +33,7 @@ $$A=(A_1\;A_2\;\cdots\;A_n)\cong (A_1, A_2, \cdots, A_n)\cong \bigl((A_{11}, A_{
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $F$-벡터공간 $V,W$에 대하여, 다음의 함수
+<ins id="def1">**정의 1**</ins> $F$-벡터공간 $V,W$에 대하여, 다음의 함수
 
 $$f:\underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
@@ -41,11 +41,11 @@ $$f:\underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightar
 
 </div>
 
-특별히 $n=2$인 경우, $f$를 *bilinear*하다고 부른다. ([§쌍대공간, ⁋정의 1](/ko/math/linear_algebra/dual_space#df1))
+특별히 $n=2$인 경우, $f$를 *bilinear*하다고 부른다. ([§쌍대공간, ⁋정의 1](/ko/math/linear_algebra/dual_space#def1))
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 두 $F$-벡터공간 $V,W$와 multilinear map 
+<ins id="def2">**정의 2**</ins> 두 $F$-벡터공간 $V,W$와 multilinear map 
 
 $$f: \underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
@@ -61,7 +61,7 @@ $$f(v_1,\ldots, v_i, \ldots, v_j,\ldots, v_n)=-f(v_1,\ldots, v_j,\ldots, v_i,\ld
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> Multilinear map $f:V\times\cdots\times V\rightarrow W$가 alternating인 것은 $f$가 antisymmetric인 것과 동치이다.
+<ins id="prop3">**명제 3**</ins> Multilinear map $f:V\times\cdots\times V\rightarrow W$가 alternating인 것은 $f$가 antisymmetric인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -91,7 +91,7 @@ $$\begin{aligned}0&=f(v_1,\ldots, v_i,\ldots, v_i,\ldots, v_n)+f(v_1,\ldots, v_i
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> $D(e_1,\ldots, e_n)=1$을 만족하는 alternating multilinear map $D:(F^n)^n\rightarrow F$를 *행렬식<sub>determinant</sub>*이라 부른다. 
+<ins id="def4">**정의 4**</ins> $D(e_1,\ldots, e_n)=1$을 만족하는 alternating multilinear map $D:(F^n)^n\rightarrow F$를 *행렬식<sub>determinant</sub>*이라 부른다. 
 
 </div>
 
@@ -136,9 +136,9 @@ $D$가 음의 부호를 가질 수 있다는 사실만 제외한다면, $D$를 �
 
 ![Multilinearity](/assets/images/Math/Linear_Algebra/Determinant-4.png){:width="152.85px" class="invert" .align-center}
 
-뿐만 아니라, 등적변형을 생각하면 고정된 한 변 $v_n$에 대하여, 밑면을 이루는 $n-1$개의 벡터 $v_1,\ldots, v_{n-1}$의 일차결합을 $v_n$에 더하여도 $D$의 값은 유지된다. 이는 곧, 만일 $v_n$이 $v_1,\ldots, v_{n-1}$의 일차결합이라면 $D(v_1,\ldots, v_n)=0$이라는 것이고 따라서 [명제 3](#pp3)에 의해 이는 $D$가 alternating이라는 것과 동치가 된다.
+뿐만 아니라, 등적변형을 생각하면 고정된 한 변 $v_n$에 대하여, 밑면을 이루는 $n-1$개의 벡터 $v_1,\ldots, v_{n-1}$의 일차결합을 $v_n$에 더하여도 $D$의 값은 유지된다. 이는 곧, 만일 $v_n$이 $v_1,\ldots, v_{n-1}$의 일차결합이라면 $D(v_1,\ldots, v_n)=0$이라는 것이고 따라서 [명제 3](#prop3)에 의해 이는 $D$가 alternating이라는 것과 동치가 된다.
 
-우리는 아직 행렬식의 유일성을 증명하지 않았지만, [정의 4](#df4)는 행렬식을 완전하게 결정해준다는 것을 확인할 수 있고, 따라서 행렬식을 부호가 있는 부피로 생각할 수 있다. 이제 이 그림 상에서, 행렬식이 $0$인 것과 $A$가 가역이 아닌 것이 동치인 이유는 $n$차원 공간에서, $n$차원 미만의 나란히꼴의 부피는 항상 0이기 때문임을 알 수 있다.
+우리는 아직 행렬식의 유일성을 증명하지 않았지만, [정의 4](#def4)는 행렬식을 완전하게 결정해준다는 것을 확인할 수 있고, 따라서 행렬식을 부호가 있는 부피로 생각할 수 있다. 이제 이 그림 상에서, 행렬식이 $0$인 것과 $A$가 가역이 아닌 것이 동치인 이유는 $n$차원 공간에서, $n$차원 미만의 나란히꼴의 부피는 항상 0이기 때문임을 알 수 있다.
 
 다음 글에서는 실제로 행렬식이 유일하게 존재한다는 것을 보인다. 이를 통해 행렬식의 여러 계산방법을 알게 된다.
 

@@ -23,7 +23,7 @@ weight: 11
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 vector bundle $\pi:E\rightarrow M$에 대하여, $\pi\circ\sigma=\id_M$을 만족하는 $\sigma:M\rightarrow E$를 vector bundle $E\rightarrow M$의 *section*이라 부른다. 
+<ins id="def1">**정의 1**</ins> 임의의 vector bundle $\pi:E\rightarrow M$에 대하여, $\pi\circ\sigma=\id_M$을 만족하는 $\sigma:M\rightarrow E$를 vector bundle $E\rightarrow M$의 *section*이라 부른다. 
 
 </div>
 
@@ -33,7 +33,7 @@ weight: 11
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> Manifold $M$ 위에서 정의된 벡터장 $X$를 생각하자. 다음이 모두 동치이다.
+<ins id="prop2">**명제 2**</ins> Manifold $M$ 위에서 정의된 벡터장 $X$를 생각하자. 다음이 모두 동치이다.
 
 1. $X$가 $C^\infty$이다.
 2. 임의의 coordinate system $(U,\varphi)$, $\varphi=(x^i)\_{i=1}^m$에 대하여, 다음의 식
@@ -95,7 +95,7 @@ $$X:M\rightarrow TM;\qquad p\mapsto \frac{d}{dx}\bigg\vert_p$$
 
 $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{dx}\bigg\vert_p$$
 
-또한 $\mathfrak{X}(M)$에 속하며 ([명제 2](#pp2)) 이 원소는 $f$가 상수함수가 아닌 이상 $fX$는 $X$의 상수배로 표현되지 않는다. 뿐만 아니라 $C^\infty(M)$은 $\mathbb{R}$ 위의 무한차원 벡터공간이므로 $\mathfrak{X}(M)$ 또한 무한차원 벡터공간이다.
+또한 $\mathfrak{X}(M)$에 속하며 ([명제 2](#prop2)) 이 원소는 $f$가 상수함수가 아닌 이상 $fX$는 $X$의 상수배로 표현되지 않는다. 뿐만 아니라 $C^\infty(M)$은 $\mathbb{R}$ 위의 무한차원 벡터공간이므로 $\mathfrak{X}(M)$ 또한 무한차원 벡터공간이다.
 
 </div>
 
@@ -115,7 +115,7 @@ $$X_1(p)=h(p, e_1),\quad X_2(p)=h(p,e_2),\quad\ldots,\quad X_m(p)=h(p,e_m)\tag{1
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Manifold $M$이 주어졌다 하고, $\dim M=m$이라 하자.
+<ins id="def4">**정의 4**</ins> Manifold $M$이 주어졌다 하고, $\dim M=m$이라 하자.
 
 - $X_1,\ldots, X_k$가 $M$의 부분집합 $A$에서 *일차독립<sub>linearly independent</sub>*이라는 것은 각각의 $p\in A$마다 $T_pM$의 벡터들 $X_1(p),\ldots, X_k(p)$이 linearly independent인 것이다.
 - $X_1,\ldots, X_k$가 $M$의 부분집합 $A$에서 tangent bundle $TM$을 *생성<sub>span</sub>*한다는 것은 각각의 $p\in A$마다 $T_pM$의 벡터들 $X_1(p),\ldots, X_k(p)$이 $T_pM$을 생성하는 것이다.
@@ -135,7 +135,7 @@ $$(p,a_1X_1(p)+\cdots+a_mX_m(p))\mapsto (p,a_1e_1+\cdots+a_me_m)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> Manifold $M$의 $C^\infty$ curve $\sigma$가 $X\in\mathfrak{X}(M)$의 *integral flow*라는 것은 $\sigma'(t)=X(\sigma(t))$가 모든 $t$에 대해 성립하는 것이다.
+<ins id="def5">**정의 5**</ins> Manifold $M$의 $C^\infty$ curve $\sigma$가 $X\in\mathfrak{X}(M)$의 *integral flow*라는 것은 $\sigma'(t)=X(\sigma(t))$가 모든 $t$에 대해 성립하는 것이다.
 
 </div>
 
@@ -177,7 +177,7 @@ $$\mathcal{D}_t=\left\{p\in M\mid t\in\bigl(a(p),b(p)\bigr)\right\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> $X\in\mathfrak{X}(M)$이 *complete*라는 것은 모든 $t$에 대하여 $\mathcal{D}_t=M$이라는 것이다. 이 때, $\phi^t$들은 $\circ$에 대한 group을 이루는데, 이를 $X$의 *one-parameter group*이라 부른다. 
+<ins id="def7">**정의 7**</ins> $X\in\mathfrak{X}(M)$이 *complete*라는 것은 모든 $t$에 대하여 $\mathcal{D}_t=M$이라는 것이다. 이 때, $\phi^t$들은 $\circ$에 대한 group을 이루는데, 이를 $X$의 *one-parameter group*이라 부른다. 
 
 </div>
 

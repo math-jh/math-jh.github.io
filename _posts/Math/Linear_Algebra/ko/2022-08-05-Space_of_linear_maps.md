@@ -86,11 +86,11 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 
 으로 이해할 수 있다.
 
-위의 정리를 이용하면 [\[집합론\] §Retraction과 section, ⁋명제 1](/ko/math/set_theory/retraction_and_section#pp1)에 대응되는 다음 명제를 증명할 수 있다.
+위의 정리를 이용하면 [\[집합론\] §Retraction과 section, ⁋명제 1](/ko/math/set_theory/retraction_and_section#prop1)에 대응되는 다음 명제를 증명할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="crl2">**따름정리 2**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
+<ins id="cor2">**따름정리 2**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
 
 1. 만일 $L$이 단사함수라면, 적당한 linear map $R:W\rightarrow V$가 존재하여 $R\circ L=\id_V$이다.
 2. 만일 $L$이 전사함수라면, 적당한 linear map $S:W\rightarrow V$가 존재하여 $L\circ S=\id_W$이다.
@@ -152,7 +152,7 @@ $$\begin{aligned}
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $F$-벡터공간을 $\Hom_F(V,W)$, 혹은 문맥에 따라 field $F$가 명확할 때는 $\Hom(V,W)$로 적는다. 
+<ins id="def4">**정의 4**</ins> 두 $F$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $F$-벡터공간을 $\Hom_F(V,W)$, 혹은 문맥에 따라 field $F$가 명확할 때는 $\Hom(V,W)$로 적는다. 
 
 특별히 $W=F$일 경우, $\Hom(V,F)$를 $V$의 *dual space<sub>쌍대공간</sub>*이라 부르고 $V^\*$으로 적는다. $V^\ast$의 원소들을 *linear functional*들이라 부른다. 
 
@@ -168,7 +168,7 @@ $$f_i^j(x)=\begin{cases}y_j&\text{if $x=x_i$}\\0&\text{otherwise}\end{cases}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 두 유한차원 $F$-벡터공간 $V,W$가 각각 basis $\\{x_1,\ldots,x_n\\}$, $\\{y_1,\ldots,y_m\\}$을 갖는다 하자. 그럼 $\Hom(V,W)$는 $mn$차원 벡터공간이며, 이 때 위의 $mn$개의 linear map들 $B_i^j$가 $\Hom(V,W)$의 basis가 된다.
+<ins id="prop5">**명제 5**</ins> 두 유한차원 $F$-벡터공간 $V,W$가 각각 basis $\\{x_1,\ldots,x_n\\}$, $\\{y_1,\ldots,y_m\\}$을 갖는다 하자. 그럼 $\Hom(V,W)$는 $mn$차원 벡터공간이며, 이 때 위의 $mn$개의 linear map들 $B_i^j$가 $\Hom(V,W)$의 basis가 된다.
 
 </div>
 <details class="proof" markdown="1">
