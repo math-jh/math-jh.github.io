@@ -43,7 +43,7 @@ $$x\sim y\iff xy^{-1}\ker f$$
 
 $$f(y)=e'f(y)=f(xy^{-1})f(y)=f(xy^{-1}y)=f(x)$$
 
-으로부터 $x\sim y\iff f(x)=f(y)$임을 알 수 있다. 즉, $\sim$은 별다른 것이 아니라 함수 $f$에 의해 정의되는 동치관계이며 ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#df2)), quotient group의 정의로부터 canonical map $p:G\rightarrow G/\ker f$는 homomorphism이 된다. 이제 $f$의 canonical decomposition을 생각하면 전단사함수 $h:G/\ker f\rightarrow\im f$를 얻는다. 그럼 임의의 $[x], [x']\in G/\ker f$에 대하여
+으로부터 $x\sim y\iff f(x)=f(y)$임을 알 수 있다. 즉, $\sim$은 별다른 것이 아니라 함수 $f$에 의해 정의되는 동치관계이며 ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2)), quotient group의 정의로부터 canonical map $p:G\rightarrow G/\ker f$는 homomorphism이 된다. 이제 $f$의 canonical decomposition을 생각하면 전단사함수 $h:G/\ker f\rightarrow\im f$를 얻는다. 그럼 임의의 $[x], [x']\in G/\ker f$에 대하여
 
 $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
@@ -55,11 +55,11 @@ $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
 </div>
 
-한편 [\[집합론\] §동치관계의 예시들, ⁋명제 7](/ko/math/set_theory/examples_of_equivalence#pp7)을 이용하면 다음 명제를 얻는다. 
+한편 [\[집합론\] §동치관계의 예시들, ⁋명제 7](/ko/math/set_theory/examples_of_equivalence#prop7)을 이용하면 다음 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 임의의 homomorphism $f:G\rightarrow G'$와 $G$의 normal subgroup $N$에 대하여, $f=\tilde{f}\circ p$를 만족하는 $\tilde{f}:G/H\rightarrow G'$가 존재할 필요충분조건은 $N\leq \ker f'$인 것이다. 
+<ins id="prop3">**명제 3**</ins> 임의의 homomorphism $f:G\rightarrow G'$와 $G$의 normal subgroup $N$에 대하여, $f=\tilde{f}\circ p$를 만족하는 $\tilde{f}:G/H\rightarrow G'$가 존재할 필요충분조건은 $N\leq \ker f'$인 것이다. 
 
 </div>
 
@@ -128,7 +128,7 @@ $$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[\[집합론\] §동치관계의 예시들, ⁋정의 8](/ko/math/set_theory/examples_of_equivalence#df8) 이후의 decomposition.
+[\[집합론\] §동치관계의 예시들, ⁋정의 8](/ko/math/set_theory/examples_of_equivalence#def8) 이후의 decomposition.
 
 </details>
 

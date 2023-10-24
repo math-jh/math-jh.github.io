@@ -13,7 +13,7 @@ sidebar:
 
 date: 2023-05-28
 last_modified_at: 2023-05-28
-weight: 2
+weight: 5
 
 ---
 
@@ -27,7 +27,7 @@ weight: 2
 
 $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
-이 각각의 $A,A'\in\obj(\mathcal{A})$마다 다음의 diagram
+이 각각의 $A_1,A_2\in\obj(\mathcal{A})$마다 다음의 diagram
 
 ![natural_transformation](/assets/images/Math/Category_Theory/Natural_transformations-1.png){:width="193.65px" class="invert" .align-center}
 
@@ -57,14 +57,14 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 $\mathcal{A}$가 small category라 하자. 그럼 집합 $\obj(\mathcal{A})$에서 서로 isomorphic한 대상들을 같은 것으로 본 후, 서로 다른 것들만을 뽑아 $\obj(\mathcal{A})$의 부분집합 $\mathcal{S}$를 만들 수 있다. 
 
-임의의 $A,B\in\mathcal{S}$에 대하여, $\Hom_\mathcal{S}(A,B)=\Hom_\mathcal{A}(A,B)$로 두자. 그럼 이렇게 정의된 대상들은 $\mathcal{A}$의 *subcategory*가 된다.
+임의의 $S_1,S_2\in\mathcal{S}$에 대하여, $\Hom_\mathcal{S}(S_1,S_2)=\Hom_\mathcal{A}(S_1,S_2)$로 두자. 그럼 이렇게 정의된 대상들은 $\mathcal{A}$의 *subcategory*가 된다.
 
 <div class="definition" markdown="1">
 
 <ins id="def4">**정의 4**</ins> 카테고리 $\mathcal{A}$에 대하여, $\mathcal{A}$의 *subcategory<sub>부분 카테고리</sub>* $\mathcal{S}$는 
 
 - $\obj(\mathcal{A})$의 부분 모임 $\obj(\mathcal{S})$,
-- 임의의 $A,A'\in\obj(\mathcal{S})$에 대하여, $\Hom_{\mathcal{A}}(A,A')$의 부분집합 $\Hom_{\mathcal{S}}(A,A')$
+- 임의의 $S_1,S_2\in\obj(\mathcal{S})$에 대하여, $\Hom_{\mathcal{A}}(S_1,S_2)$의 부분집합 $\Hom_{\mathcal{S}}(S_1,S_2)$
 
 그리고 $\mathcal{A}$로부터 물려받는 합성과 identity morphism을 모두 갖는 데이터로 주어진다. 
 
@@ -72,7 +72,7 @@ $\mathcal{A}$가 small category라 하자. 그럼 집합 $\obj(\mathcal{A})$에�
 
 정의로부터 $\mathcal{S}$가 $\mathcal{A}$의 subcategory라면, 자명하게 정의되는 inclusion functor $\mathcal{S}\hookrightarrow\mathcal{A}$가 faithful functor가 된다. 만일 이 functor가 full이기도 하다면 $\mathcal{S}$를 *full subcategory<sub>충만한 부분카테고리</sub>*라 부른다.
 
-앞선 논증과 같이 small category $\mathcal{A}$로부터 subcategory $\mathcal{S}$를 만들 경우, $\mathcal{S}$가 $\mathcal{A}$를 설명하기에 충분한 정보를 가지고 있는지가 당연한 의문이 된다. 가령 $\mathcal{A}$에서는 morphism $f:A\rightarrow B$가 존재하지만, $A,B$와 isomorphic한 대상들 $A',B'$를 택할 경우 morphism $A'\rightarrow B'$가 존재하지 않는다면 $\mathcal{S}$는 $\mathcal{A}$가 갖고 있는 정보를 잃어버렸다고 할 수 있을 것이다. 아주 조금만 생각을 해 보면, 이러한 일은 절대로 일어나지 않는다는 것을 알 수 있다. Morphism $f:A\rightarrow B$가 주어질 때마다, isomorphism들 $A'\rightarrow A$, $B\rightarrow B'$와 $f$를 합성하여 $A'\rightarrow B'$를 만들어낼 수 있기 때문이다.
+앞선 논증과 같이 small category $\mathcal{A}$로부터 subcategory $\mathcal{S}$를 만들 경우, $\mathcal{S}$가 $\mathcal{A}$를 설명하기에 충분한 정보를 가지고 있는지가 당연한 의문이 된다. 가령 $\mathcal{A}$에서는 morphism $f:A_1\rightarrow A_2$가 존재하지만, $A_1,A_2$와 isomorphic한 대상들 $A_1',A_2'$를 택할 경우 morphism $A_1'\rightarrow A_2'$가 존재하지 않는다면 $\mathcal{S}$는 $\mathcal{A}$가 갖고 있는 정보를 잃어버렸다고 할 수 있을 것이다. 하지만 조금만 생각을 해 보면, 이러한 일은 절대로 일어나지 않는다는 것을 알 수 있다. Morphism $f:A_1\rightarrow A_2$가 주어질 때마다, isomorphism들 $A_1'\rightarrow A_1$, $A_2\rightarrow A_2'$와 $f$를 합성하여 $A_1'\rightarrow A_2'$를 만들어낼 수 있기 때문이다.
 
 이러한 관점에서 위에서 만들어낸 카테고리 $\mathcal{S}$는 본질적으로 $\mathcal{A}$의 모든 정보를 담고 있는 것으로 생각할 수 있다. 물론 isomorphic한 대상들 중 어떤 것을 뽑는지에 따라 $\mathcal{S}$ 자체는 달라지겠지만, 다른 선택으로 얻어지는 카테고리도 반드시 $\mathcal{S}$와 isomorphic하다는 것은 쉽게 증명할 수 있다. 
 

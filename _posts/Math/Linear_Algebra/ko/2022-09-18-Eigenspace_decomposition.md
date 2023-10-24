@@ -47,7 +47,7 @@ $$Av=\sum_{\lambda\in\Spec(A)}\lambda v_\lambda$$
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 $F$-벡터공간 $V$가 그 부분공간 $(W\_i)\_{i\in I}$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $v\in V$가 주어질 때마다 적당한 $(v\_i)\_{i\in I}$가 <em_ko>유일하게</em_ko> 존재하여 
+<ins id="def1">**정의 1**</ins> 임의의 $F$-벡터공간 $V$가 그 부분공간 $(W\_i)\_{i\in I}$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $v\in V$가 주어질 때마다 적당한 $(v\_i)\_{i\in I}$가 <em_ko>유일하게</em_ko> 존재하여 
 
 $$v=\sum_{i\in I} v_i$$
 
@@ -59,7 +59,7 @@ $$v=\sum_{i\in I} v_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $F$-벡터공간 $V$의 두 부분공간 $W_1,W_2$에 대하여, $V=W_1\oplus W_2$인 것은 $V=W_1+W_2$이고 $W_1\cap W_2=\\{0\\}$인 것과 동치이다.
+<ins id="prop2">**명제 2**</ins> $F$-벡터공간 $V$의 두 부분공간 $W_1,W_2$에 대하여, $V=W_1\oplus W_2$인 것은 $V=W_1+W_2$이고 $W_1\cap W_2=\\{0\\}$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -69,7 +69,7 @@ $$v=\sum_{i\in I} v_i$$
 
 $$w=0+w=w+0$$
 
-이므로 [정의 1](#df1)에서의 유일성에 모순이 된다. 
+이므로 [정의 1](#def1)에서의 유일성에 모순이 된다. 
 
 거꾸로 $V=W_1+W_2$이고 $W_1\cap W_2=\\{0\\}$이라 하자. 임의의 $v\in V$에 대하여, $V=W_1+W_2$이므로 $v=w_1+w_2$이도록 하는 $w_1\in W_i$가 반드시 존재한다. 또, 이와 같은 표현은 유일하다. 만일
 
@@ -95,13 +95,13 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 임의의 $F$-벡터공간 $V$와, 부분공간 $(W\_i)\_{i\in I}$에 대하여 $V=\bigoplus\_{i\in I} W\_i$인 것은 $W_i$의 basis $\mathcal{B}\_i$들이 $i\neq j$일 때마다 $\mathcal{B}\_i\cap\mathcal{B}\_j=\emptyset$을 만족하고, $\bigcup\_{i\in I}\mathcal{B}\_i$가 $V$의 basis가 되는 것과 동치이다.
+<ins id="prop2">**명제 2**</ins> 임의의 $F$-벡터공간 $V$와, 부분공간 $(W\_i)\_{i\in I}$에 대하여 $V=\bigoplus\_{i\in I} W\_i$인 것은 $W_i$의 basis $\mathcal{B}\_i$들이 $i\neq j$일 때마다 $\mathcal{B}\_i\cap\mathcal{B}\_j=\emptyset$을 만족하고, $\bigcup\_{i\in I}\mathcal{B}\_i$가 $V$의 basis가 되는 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $V=\bigoplus W\_i$라 가정하고, $W\_i$들의 basis $\mathcal{B}\_i$를 택하자. 만일 $\mathcal{B}\_i\cap\mathcal{B}\_j\neq\emptyset$이라면 $W\_i\cap W\_j\neq\emptyset$가 되어 [명제 2](#pp2) 이후의 논의에 모순이므로, 반드시 $\mathcal{B}\_i\cap\mathcal{B}\_j=\emptyset$이어야 한다. 임의의 $v\in V$에 대하여, $V=\bigoplus W\_i$로부터 다음의 식
+우선 $V=\bigoplus W\_i$라 가정하고, $W\_i$들의 basis $\mathcal{B}\_i$를 택하자. 만일 $\mathcal{B}\_i\cap\mathcal{B}\_j\neq\emptyset$이라면 $W\_i\cap W\_j\neq\emptyset$가 되어 [명제 2](#prop2) 이후의 논의에 모순이므로, 반드시 $\mathcal{B}\_i\cap\mathcal{B}\_j=\emptyset$이어야 한다. 임의의 $v\in V$에 대하여, $V=\bigoplus W\_i$로부터 다음의 식
 
 $$v=\sum\_{i\in I} w\_i$$
 
@@ -115,7 +115,7 @@ $$v=\sum\_{i\in I} w\_i$$
 
 ## 대각화
 
-이제 $F^n$을 고유공간으로 분해하는 법을 살펴본다. 앞선 [명제 2](#pp2)로부터 벡터공간 $F^n$을 고유공간들 $E\_\lambda$로 분해하는 것은 $E\_\lambda$의 basis들을 모아서 $F^n$의 basis를 나타내는 것과 같다는 것을 안다. 또, 영이 아닌 벡터 $x\_1$이 고윳값 $\lambda\_1$에 대응되는 고유벡터라 하면, 또 다른 고윳값 $\lambda\_2$에 대하여
+이제 $F^n$을 고유공간으로 분해하는 법을 살펴본다. 앞선 [명제 2](#prop2)로부터 벡터공간 $F^n$을 고유공간들 $E\_\lambda$로 분해하는 것은 $E\_\lambda$의 basis들을 모아서 $F^n$의 basis를 나타내는 것과 같다는 것을 안다. 또, 영이 아닌 벡터 $x\_1$이 고윳값 $\lambda\_1$에 대응되는 고유벡터라 하면, 또 다른 고윳값 $\lambda\_2$에 대하여
 
 $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
@@ -123,7 +123,7 @@ $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 임의의 행렬 $A$에 대하여, $x\_1,\ldots, x\_m$들이 각각 서로 다른 고윳값들 $\lambda\_1,\ldots,\lambda\_m$들에 대응되는 고유벡터들이라 하자. 그럼 집합 $\\{x\_1,\ldots,x\_m\\}$은 일차독립이다. 
+<ins id="prop3">**명제 3**</ins> 임의의 행렬 $A$에 대하여, $x\_1,\ldots, x\_m$들이 각각 서로 다른 고윳값들 $\lambda\_1,\ldots,\lambda\_m$들에 대응되는 고유벡터들이라 하자. 그럼 집합 $\\{x\_1,\ldots,x\_m\\}$은 일차독립이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -182,7 +182,7 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> $n\times n$ 행렬 $A$의 고윳값 $\lambda\in F$에 대하여, $\lambda$의 기하적 중복도는 항상 $\lambda$의 대수적 중복도를 넘지 못한다.
+<ins id="prop4">**명제 4**</ins> $n\times n$ 행렬 $A$의 고윳값 $\lambda\in F$에 대하여, $\lambda$의 기하적 중복도는 항상 $\lambda$의 대수적 중복도를 넘지 못한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -212,11 +212,11 @@ $$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\
 
 </details>
 
-$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 3](#pp3) 이후의 논증으로부터, $F^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
+$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 3](#prop3) 이후의 논증으로부터, $F^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 임의의 $n\times n$ 행렬 $A$에 대하여, $F^n$이 $A$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
+<ins id="prop5">**명제 5**</ins> 임의의 $n\times n$ 행렬 $A$에 대하여, $F^n$이 $A$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
 
 1. $A$의 특성다항식이 중복도를 고려하였을 때 $n$개의 근을 가지며,
 2. 이 때 각각의 고윳값의 기하적 중복도와 대수적 중복도가 같은 것이다.

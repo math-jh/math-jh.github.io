@@ -27,13 +27,13 @@ $$\lim_{t \rightarrow0}\frac{f(p+tv)-f(p)}{t}$$
 
 $$\lim_{h\rightarrow 0}\frac{f(\gamma(h))-f(p)}{h}\tag{1}$$
 
-을 통해 방향미분의 값을 구해낼 수 있다는 것을 알고 있다. ([§미분사상의 예시들, ⁋정의 1](/ko/math/manifold/examples_of_differentials#df1)) 
+을 통해 방향미분의 값을 구해낼 수 있다는 것을 알고 있다. ([§미분사상의 예시들, ⁋정의 1](/ko/math/manifold/examples_of_differentials#def1)) 
 
 이제 $M$ 위에 벡터장 $X$가 주어졌다 하고, 각 점 $p$에서 $X_p$ 방향으로의 방향미분 $X_pf$를 구하는 문제를 생각해보자. 이는 기하학적으로는 위와 같이 모든 점 $p$마다 $\gamma(0)=p$, $\gamma'(0)=X_p$를 만족하는 곡선 $\gamma_p$를 잡아 위의 식 (1)을 적용하는 것과 같다. 그런데 우리는 이러한 성질을 만족하는 곡선이 반드시 존재한다는 것을 알고 있다. ([§벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6))
 
 <div class="definition" markdown="1">
  
-<ins id="df1">**정의 1**</ins> Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 $f$의 *Lie derivative<sub>리 미분</sub>* $\mathcal{L}_Xf$는 다음의 식
+<ins id="def1">**정의 1**</ins> Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 $f$의 *Lie derivative<sub>리 미분</sub>* $\mathcal{L}_Xf$는 다음의 식
 
 $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(p)}{t}$$
 
@@ -45,13 +45,13 @@ $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\
 
 ## 벡터장의 리 미분
 
-가장 간단한 예시는 벡터장의 미분이다. 벡터장 $Y$는 $M$에서 $TM$으로의 함수이므로, 위의 [정의 1](#df1)과 유사한 방법을 사용하여 미분을 시도해볼 수 있으나 이는 만만한 일이 아니다. 여기에는 함수의 미분보다 조금 더 근본적인 문제가 있는데, $Y(\phi^t(p))$는 $T_{\phi^t(p)}$의 원소인 반면 $Y(p)$는 $T_pM$의 원소이므로 이들 둘의 차 $Y_{\phi^t(p)}-Y_p$를 계산하는 방법이 애초부터 없기 때문이다. 
+가장 간단한 예시는 벡터장의 미분이다. 벡터장 $Y$는 $M$에서 $TM$으로의 함수이므로, 위의 [정의 1](#def1)과 유사한 방법을 사용하여 미분을 시도해볼 수 있으나 이는 만만한 일이 아니다. 여기에는 함수의 미분보다 조금 더 근본적인 문제가 있는데, $Y(\phi^t(p))$는 $T_{\phi^t(p)}$의 원소인 반면 $Y(p)$는 $T_pM$의 원소이므로 이들 둘의 차 $Y_{\phi^t(p)}-Y_p$를 계산하는 방법이 애초부터 없기 때문이다. 
 
 그럼에도 불구하고 우리 상황에서는 이를 미분하는 것이 가능하다. [§벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6)을 생각하면 $\phi^t$는 diffeomorphism이므로, $d\phi^t$는 $T_pM$에서 $T_{\phi^t(p)}$으로의 isomorphism을 유도한다. 또, 같은 정리에서 이 isomorphism의 역함수는 $d\phi^{-t}$라는 것 또한 안다. 따라서 $Y_{\phi^t(p)}$를 $d\phi^{-t}$를 통해 $T_pM$으로 가져오면 다음과 같이 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 또 다른 벡터장 $Y:M\rightarrow TM$이 주어졌다 하자. 그럼 $Y$의 *Lie derivative* $\mathcal{L}_XY$는 다음의 식
+<ins id="def2">**정의 2**</ins> Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 또 다른 벡터장 $Y:M\rightarrow TM$이 주어졌다 하자. 그럼 $Y$의 *Lie derivative* $\mathcal{L}_XY$는 다음의 식
 
 $$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi^t(p)})-Y_p}{t}$$
 
@@ -65,7 +65,7 @@ $$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, differential form $\omega\in\Omega^\ast(M)$이 주어졌다 하자. 그럼 $\omega$의 *Lie derivative* $\mathcal{L}_X\omega$는 다음의 식
+<ins id="def3">**정의 3**</ins> Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, differential form $\omega\in\Omega^\ast(M)$이 주어졌다 하자. 그럼 $\omega$의 *Lie derivative* $\mathcal{L}_X\omega$는 다음의 식
 
 $$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg|_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
 
@@ -79,7 +79,7 @@ $$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg|_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> 임의의 $X\in\mathfrak{X}(M)$에 대해 다음이 성립한다.
+<ins id="prop4">**명제 4**</ins> 임의의 $X\in\mathfrak{X}(M)$에 대해 다음이 성립한다.
 
 1. 임의의 $f\in C^\infty(M)$에 대하여 $\mathcal{L}_Xf=X(f)$.
 2. 임의의 $Y\in \mathfrak{X}(M)$에 대하여 $\mathcal{L}_XY=[X,Y]$.
@@ -109,7 +109,7 @@ $$(XY)(fg)=X(f(Yg)+g(Yf))=(Xf)(Yg)+f(XY)g+(Xg)(Yf)+g(XY)f\tag{2}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> $X,Y\in\mathfrak{X}(M)$에 대하여, $[X,Y]\in\mathfrak{X}(M)$은 다음의 식
+<ins id="def5">**정의 5**</ins> $X,Y\in\mathfrak{X}(M)$에 대하여, $[X,Y]\in\mathfrak{X}(M)$은 다음의 식
 
 $$[X,Y]f=X(Yf)-Y(Xf)$$
 
@@ -129,7 +129,7 @@ $$[X,Y]f=X(Yf)-Y(Xf)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> $F:M\rightarrow N$이 $C^\infty$ 함수라 하자. 만일 $X\in\mathfrak{X}(M)$과 $Y\in\mathfrak{X}(N)$이 다음의 식
+<ins id="def6">**정의 6**</ins> $F:M\rightarrow N$이 $C^\infty$ 함수라 하자. 만일 $X\in\mathfrak{X}(M)$과 $Y\in\mathfrak{X}(N)$이 다음의 식
 
 $$dF_p(X_p)=Y_{F(p)}$$
 
@@ -141,11 +141,11 @@ $$dF_p(X_p)=Y_{F(p)}$$
 
 ![F-related](/assets/images/Math/Manifold/Lie_derivative-1.png){:width="160.65px" class="invert" .align-center}
 
-[명제 2](#pp2)에서 $X$가 $C^\infty$임을 각각의 함수 $f$에 적용해보아 알 수 있듯, $X$와 $Y$가 $F$-related인지의 여부 또한 마찬가지로 각각의 함수에 적용하여 알아낼 수 있다.
+[명제 2](#prop2)에서 $X$가 $C^\infty$임을 각각의 함수 $f$에 적용해보아 알 수 있듯, $X$와 $Y$가 $F$-related인지의 여부 또한 마찬가지로 각각의 함수에 적용하여 알아낼 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> $F:M\rightarrow N$이 $C^\infty$ 함수라 하고, $X\in\mathfrak{X}(M)$, $Y\in\mathfrak{X}(N)$이라 하자. 그럼 $X,Y$가 $F$-related인 것은 임의의 $f$에 대하여, 다음의 식
+<ins id="prop7">**명제 7**</ins> $F:M\rightarrow N$이 $C^\infty$ 함수라 하고, $X\in\mathfrak{X}(M)$, $Y\in\mathfrak{X}(N)$이라 하자. 그럼 $X,Y$가 $F$-related인 것은 임의의 $f$에 대하여, 다음의 식
 
 $$X(f\circ F)=(Yf)\circ F$$
 
@@ -171,7 +171,7 @@ $$((Yf)\circ F)(p)=(Yf)(F(p))=Y_{F(p)}f$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> $F:M\rightarrow N$이 diffeomorphism이라면, 임의의 $X\in\mathfrak{X}(M)$마다 유일한 $Y\in\mathfrak{X}(N)$이 존재하여 $X,Y$가 $F$-related이도록 할 수 있다.
+<ins id="prop8">**명제 8**</ins> $F:M\rightarrow N$이 diffeomorphism이라면, 임의의 $X\in\mathfrak{X}(M)$마다 유일한 $Y\in\mathfrak{X}(N)$이 존재하여 $X,Y$가 $F$-related이도록 할 수 있다.
 
 </div>
 <details class="proof" markdown="1">
@@ -191,7 +191,7 @@ $$N\overset{F^{-1}}{\longrightarrow}M\overset{X}{\longrightarrow}TM\overset{dF}{
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> $F:M\rightarrow N$이 $C^\infty$라 하자. 만일 $i=1,2$에 대해 $X_i\in\mathfrak{X}(M)$, $Y_i\in\mathfrak{X}(N)$이고 $X_i$와 $Y_i$가 $F$-related라면 $[X_1,X_2]$는 $[Y_1,Y_2]$와 $F$-related이다.
+<ins id="prop9">**명제 9**</ins> $F:M\rightarrow N$이 $C^\infty$라 하자. 만일 $i=1,2$에 대해 $X_i\in\mathfrak{X}(M)$, $Y_i\in\mathfrak{X}(N)$이고 $X_i$와 $Y_i$가 $F$-related라면 $[X_1,X_2]$는 $[Y_1,Y_2]$와 $F$-related이다.
 
 </div>
 <details class="proof" markdown="1">

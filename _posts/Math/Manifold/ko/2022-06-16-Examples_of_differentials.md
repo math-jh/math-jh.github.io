@@ -23,7 +23,7 @@ weight: 6
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Manifold $M$에 대하여, $C^\infty$ 함수 $\gamma:(a,b)\rightarrow M$을 $M$ 위에서 정의된 $C^\infty$ 곡선이라 부르고, 임의의 $t\in (a,b)$에 대하여
+<ins id="def1">**정의 1**</ins> Manifold $M$에 대하여, $C^\infty$ 함수 $\gamma:(a,b)\rightarrow M$을 $M$ 위에서 정의된 $C^\infty$ 곡선이라 부르고, 임의의 $t\in (a,b)$에 대하여
 
 $$d\gamma_t\left(\frac{d}{dr}\bigg|_t\right)$$
 
@@ -41,7 +41,7 @@ $$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg|_t\right)f=\frac{d}{dr}\bigg|_t (
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> Manifold $M$과 점 $p\in M$을 고정하자. 영벡터가 아닌 임의의 $v\in T_pM$에 대하여, 점 $p$를 지나고 점 $p$에서의 속도벡터가 $v$인 $C^\infty$ 곡선 $\gamma$가 존재한다.
+<ins id="prop2">**명제 2**</ins> Manifold $M$과 점 $p\in M$을 고정하자. 영벡터가 아닌 임의의 $v\in T_pM$에 대하여, 점 $p$를 지나고 점 $p$에서의 속도벡터가 $v$인 $C^\infty$ 곡선 $\gamma$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -95,7 +95,7 @@ $$(F\circ\gamma)'(t)=dF_{\gamma(t)}(\gamma'(t))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$을 생각하자. 임의의 $v\in T_pM$에 대하여, $\gamma(0)=p$, $\gamma'(0)=v$를 만족하는 $C^\infty$ 곡선 $\gamma:(a,b)\rightarrow M$는 다음의 식
+<ins id="prop3">**명제 3**</ins> 두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$을 생각하자. 임의의 $v\in T_pM$에 대하여, $\gamma(0)=p$, $\gamma'(0)=v$를 만족하는 $C^\infty$ 곡선 $\gamma:(a,b)\rightarrow M$는 다음의 식
 
 $$dF_p(v)=(F\circ\gamma)'(0)$$
 
@@ -119,7 +119,7 @@ $$D_v|_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> Manifold 구조가 주어진 $m$차원 $\mathbb{R}$-벡터공간 $V$를 생각하자. $V$의 임의의 점 $x\in V$에 대하여, basis의 선택에 의존하지 않는 isomorphism $V\cong T_xV$가 존재한다. 뿐만 아니라 $V,W$가 두 $\mathbb{R}$-벡터공간이고, $L:V\rightarrow W$가 linear map이라면 다음의 diagram이 commute한다.
+<ins id="prop4">**명제 4**</ins> Manifold 구조가 주어진 $m$차원 $\mathbb{R}$-벡터공간 $V$를 생각하자. $V$의 임의의 점 $x\in V$에 대하여, basis의 선택에 의존하지 않는 isomorphism $V\cong T_xV$가 존재한다. 뿐만 아니라 $V,W$가 두 $\mathbb{R}$-벡터공간이고, $L:V\rightarrow W$가 linear map이라면 다음의 diagram이 commute한다.
 
 ![tangent_space_of_vector_space](/assets/images/Math/Manifold/Examples_of_differentials-1.png){:width="198.9px" class="invert" .align-center}
 
@@ -154,7 +154,7 @@ $$v\mapsto L(v)\mapsto D_{L(v)}|_{L(x)}$$
 
 $$v\mapsto D_v|_x$$
 
-를 얻고, 이후에는 $\gamma(t)=x+tv$를 이용해 [명제 3](#pp3)을 사용하면
+를 얻고, 이후에는 $\gamma(t)=x+tv$를 이용해 [명제 3](#prop3)을 사용하면
 
 $$dL_x(D_v|_x)=(L\circ \gamma)'(0)$$
 
@@ -186,7 +186,7 @@ $$\sum a_ie_i\leftrightarrow\sum a_i\frac{\partial}{\partial r^i}$$
 
 ## Tangent covector
 
-임의의 manifold $M$과 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 임의의 점 $p\in M$마다 differential $df_p:T_pM\rightarrow T_{f(p)}\mathbb{R}$이 잘 정의된다. 앞선 [명제 4](#pp4)에 의하여, 1차원 $\mathbb{R}$-벡터공간으로서 $\mathbb{R}$과 그 tangent space $T_{f(p)}\mathbb{R}$ 사이의 isomorphism이 존재한다. 그럼 이제
+임의의 manifold $M$과 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 임의의 점 $p\in M$마다 differential $df_p:T_pM\rightarrow T_{f(p)}\mathbb{R}$이 잘 정의된다. 앞선 [명제 4](#prop4)에 의하여, 1차원 $\mathbb{R}$-벡터공간으로서 $\mathbb{R}$과 그 tangent space $T_{f(p)}\mathbb{R}$ 사이의 isomorphism이 존재한다. 그럼 이제
 
 $$T_pM\overset{df_p}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longrightarrow}\mathbb{R}$$
 
@@ -194,7 +194,7 @@ $$T_pM\overset{df_p}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longright
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> Manifold $M$과 한 점 $p\in M$에 대하여, $\mathbb{R}$-벡터공간 $T_pM$의 dual space $(T_pM)^\ast$를 *cotangent space<sub>여접공간</sub>*라 부르고 간단하게 $T_p^\ast M$으로 적는다. $T_p^\ast M$의 원소들을 *tangent covector* 혹은 간단하게 *covector*라 부른다.
+<ins id="def6">**정의 6**</ins> Manifold $M$과 한 점 $p\in M$에 대하여, $\mathbb{R}$-벡터공간 $T_pM$의 dual space $(T_pM)^\ast$를 *cotangent space<sub>여접공간</sub>*라 부르고 간단하게 $T_p^\ast M$으로 적는다. $T_p^\ast M$의 원소들을 *tangent covector* 혹은 간단하게 *covector*라 부른다.
 
 </div>
 
@@ -214,7 +214,7 @@ $$(\xi^i |_p)\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\delta_{ij}\tag{
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 위와 같은 상황에서, $\xi^i\|\_p=dx^i\|\_p$이다. 즉, $(U,\varphi)$에 의하여 생기는 $T_pM$의 dual basis $(\xi^i \|\_p)$들은 사실 coordinate function들 $x^i$의 점 $p$에서의 differential과 같다.
+<ins id="prop7">**명제 7**</ins> 위와 같은 상황에서, $\xi^i\|\_p=dx^i\|\_p$이다. 즉, $(U,\varphi)$에 의하여 생기는 $T_pM$의 dual basis $(\xi^i \|\_p)$들은 사실 coordinate function들 $x^i$의 점 $p$에서의 differential과 같다.
 
 </div>
 <details class="proof" markdown="1">
@@ -245,4 +245,4 @@ $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_
 ---
 
 [^1]: 더 정확하게는 점 $p$에서 같은 속도벡터를 갖는 곡선들은 동일하게 취급하여 equivalence relation을 주어야 한다.
-[^2]: [명제 2](#pp2)에 의해 이러한 곡선은 적어도 하나 존재한다.
+[^2]: [명제 2](#prop2)에 의해 이러한 곡선은 적어도 하나 존재한다.

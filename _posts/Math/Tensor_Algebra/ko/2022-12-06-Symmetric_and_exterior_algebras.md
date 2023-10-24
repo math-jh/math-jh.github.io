@@ -27,7 +27,7 @@ Tensor algebra $\mathcal{T}(M)$은 그 자체로도 흥미로운 대수적 대�
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 위의 논의에서, quotient algebra $\mathcal{T}(M)/\mathfrak{a}$를 $M$의 *symmetric algebra<sub>대칭대수</sub>*, 그리고 $\mathcal{T}(M)/\mathfrak{b}$를 $M$의 *exterior algebra<sub>외대수</sub>*라 부른다. $M$의 symmetric algebra는 $\mathcal{S}(M)$, 그리고 $M$의 exterior algebra는 $\bigwedge(M)$으로 표기한다.
+<ins id="def1">**정의 1**</ins> 위의 논의에서, quotient algebra $\mathcal{T}(M)/\mathfrak{a}$를 $M$의 *symmetric algebra<sub>대칭대수</sub>*, 그리고 $\mathcal{T}(M)/\mathfrak{b}$를 $M$의 *exterior algebra<sub>외대수</sub>*라 부른다. $M$의 symmetric algebra는 $\mathcal{S}(M)$, 그리고 $M$의 exterior algebra는 $\bigwedge(M)$으로 표기한다.
 
 </div>
 
@@ -41,7 +41,7 @@ Tensor algebra $\mathcal{T}(M)$은 그 자체로도 흥미로운 대수적 대�
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $\mathcal{S}(M)$은 commutative algebra이다.
+<ins id="prop2">**명제 2**</ins> $\mathcal{S}(M)$은 commutative algebra이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -67,7 +67,7 @@ $$q(x)q(y)-q(y)q(x)=(p\circ\iota)(x)(p\circ\iota)(y)-(p\circ\iota)(y)(p\circ\iot
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 2](#pp2)의 증명과 같이, $\mathcal{S}(M)$들은 $q(x)$들로 생성되므로 $\tilde{f}$는 유일해야 한다는 것이 자명하다. 따라서 존재성만 증명하면 충분하다. 
+[명제 2](#prop2)의 증명과 같이, $\mathcal{S}(M)$들은 $q(x)$들로 생성되므로 $\tilde{f}$는 유일해야 한다는 것이 자명하다. 따라서 존재성만 증명하면 충분하다. 
 
 Tensor algebra $\mathcal{T}(M)$의 universal property에 의하여, 다음 diagram을 commute하도록 하는 유일한 $A$-algebra homomorphism $\mathcal{T}(M)\rightarrow E$가 존재한다. 
 
@@ -85,7 +85,7 @@ Tensor algebra $\mathcal{T}(M)$의 universal property에 의하여, 다음 diagr
 
 <div class="proposition" markdown="1">
 
-<ins id="crl4">**따름정리 4**</ins> 임의의 $A$-module homomorphism $u:M \rightarrow N$에 대하여, 다음 diagram
+<ins id="cor4">**따름정리 4**</ins> 임의의 $A$-module homomorphism $u:M \rightarrow N$에 대하여, 다음 diagram
 
 ![Functoriality_of_symmetric_algebra](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-4.png){:width="192px" class="invert" .align-center}
 
@@ -95,7 +95,7 @@ Tensor algebra $\mathcal{T}(M)$의 universal property에 의하여, 다음 diagr
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> [따름정리 4](#crl4)에서 정의된 $\mathcal{S}(u)$는 합성을 보존한다. 즉 $\mathcal{S}(v\circ u)=\mathcal{S}(v)\circ\mathcal{S}(u)$가 성립한다.
+<ins id="cor5">**따름정리 5**</ins> [따름정리 4](#cor4)에서 정의된 $\mathcal{S}(u)$는 합성을 보존한다. 즉 $\mathcal{S}(v\circ u)=\mathcal{S}(v)\circ\mathcal{S}(u)$가 성립한다.
 
 </div>
 
@@ -129,10 +129,10 @@ $$\begin{aligned}({\id_{A'}}\otimes q_M)(a'\otimes x)({\id_{A'}}\otimes q_M)(b'\
 
 ![Extension_of_scalars](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-6.png){:width="306px" class="invert" .align-center}
 
-다음 명제는 [§텐서대수, ⁋명제 6](/ko/math/tensor_algebra/tensor_algebra#pp6)과 마찬가지로 증명할 수 있으며, universal property를 보이기 위해서는 위와 같은 방식으로 $q$를 사용하면 된다.
+다음 명제는 [§텐서대수, ⁋명제 6](/ko/math/tensor_algebra/tensor_algebra#prop6)과 마찬가지로 증명할 수 있으며, universal property를 보이기 위해서는 위와 같은 방식으로 $q$를 사용하면 된다.
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 위에서 정의한 $\mathcal{S}_{A'}(A'\otimes_AM)\rightarrow A'\otimes_A\mathcal{S}_A(M)$는 isomorphism이다.
+<ins id="prop6">**명제 6**</ins> 위에서 정의한 $\mathcal{S}_{A'}(A'\otimes_AM)\rightarrow A'\otimes_A\mathcal{S}_A(M)$는 isomorphism이다.
 
 </div>
 
@@ -142,7 +142,7 @@ $$\begin{aligned}({\id_{A'}}\otimes q_M)(a'\otimes x)({\id_{A'}}\otimes q_M)(b'\
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> $A$-module들의 유한한 family $(M\_i)\_{1\leq i\leq n}$가 주어졌다 하자. 그럼 $M=\bigoplus M\_i$에 대하여, 
+<ins id="prop7">**명제 7**</ins> $A$-module들의 유한한 family $(M\_i)\_{1\leq i\leq n}$가 주어졌다 하자. 그럼 $M=\bigoplus M\_i$에 대하여, 
 
 $$\mathcal{S}(M)\cong\bigotimes_{i=1}^n\mathcal{S}(M_i)$$
 
@@ -198,7 +198,7 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 <div class="proposition" markdown="1">
 
-<ins id="crl9">**따름정리 9**</ins> 임의의 $A$-module homomorphism $u:M \rightarrow M'$에 대하여, 다음 diagram
+<ins id="cor9">**따름정리 9**</ins> 임의의 $A$-module homomorphism $u:M \rightarrow M'$에 대하여, 다음 diagram
 
 ![Functoriality_of_exterior_algebra](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-8.png){:width="207.9px" class="invert" .align-center}
 
@@ -208,7 +208,7 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 <div class="proposition" markdown="1">
 
-<ins id="crl10">**따름정리 10**</ins> [따름정리 9](#crl9)에서 정의된 $\bigwedge(u)$는 합성을 보존한다. 즉 $\bigwedge(v\circ u)=\bigwedge(v)\circ\bigwedge(u)$가 성립한다.
+<ins id="cor10">**따름정리 10**</ins> [따름정리 9](#cor9)에서 정의된 $\bigwedge(u)$는 합성을 보존한다. 즉 $\bigwedge(v\circ u)=\bigwedge(v)\circ\bigwedge(u)$가 성립한다.
 
 </div>
 
@@ -218,11 +218,11 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 ![Restriction_of_scalars](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-9.png){:width="241.35px" class="invert" .align-center}
 
-을 commute하도록 하는 $\bigwedge(u):\bigwedge\nolimits_A(M)\rightarrow\bigwedge\nolimits_{A'}(M')$이 존재한다. 또, [명제 6](#pp6)과 비슷하게 다음이 성립한다.
+을 commute하도록 하는 $\bigwedge(u):\bigwedge\nolimits_A(M)\rightarrow\bigwedge\nolimits_{A'}(M')$이 존재한다. 또, [명제 6](#prop6)과 비슷하게 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp11">**명제 11**</ins> 두 ring $A,A'$, 그리고 $A$-module $M$에 대하여
+<ins id="prop11">**명제 11**</ins> 두 ring $A,A'$, 그리고 $A$-module $M$에 대하여
 
 $$\bigwedge\nolimits_{A'}(A'\otimes_AM)\cong A'\otimes_A\bigwedge\nolimits_A(M)$$
 
@@ -236,7 +236,7 @@ $$\bigwedge\nolimits_{A'}(A'\otimes_AM)\cong A'\otimes_A\bigwedge\nolimits_A(M)$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp12">**명제 12**</ins> $A$-module들의 유한한 family $(M\_i)\_{1\leq i\leq n}$가 주어졌다 하자. 그럼 $M=\bigoplus M\_i$에 대하여, 
+<ins id="prop12">**명제 12**</ins> $A$-module들의 유한한 family $(M\_i)\_{1\leq i\leq n}$가 주어졌다 하자. 그럼 $M=\bigoplus M\_i$에 대하여, 
 
 $$\bigwedge(M)\cong\bigotimes_{i=1}^n\bigwedge(M_i)$$
 

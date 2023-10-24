@@ -21,7 +21,7 @@ weight: 3
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Manifold $M$ 위에 정의된 *symplectic form<sub>사교형식</sub>* $\omega$는 $d\omega=0$이고 모든 $p\in M$에 대하여 $\omega_p:T_pM\times T_pM\rightarrow \mathbb{R}$이 linear symplectic form이도록 하는 differential $2$-form을 뜻한다. 이 때 $(M,\omega)$를 *symplectic manifold<sub>사교다양체</sub>*라 부른다. 
+<ins id="def1">**정의 1**</ins> Manifold $M$ 위에 정의된 *symplectic form<sub>사교형식</sub>* $\omega$는 $d\omega=0$이고 모든 $p\in M$에 대하여 $\omega_p:T_pM\times T_pM\rightarrow \mathbb{R}$이 linear symplectic form이도록 하는 differential $2$-form을 뜻한다. 이 때 $(M,\omega)$를 *symplectic manifold<sub>사교다양체</sub>*라 부른다. 
 
 </div>
 

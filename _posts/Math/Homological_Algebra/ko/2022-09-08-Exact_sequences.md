@@ -21,13 +21,13 @@ weight: 1
 
 ## 카테고리 $\lmod{R}$
 
-우리는 카테고리 $\lmod{R}$이 [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#df7)의 조건을 모두 만족한다는 것을 보인다. 역사적으로는 $\lmod{R}$의 성질을 바탕으로 아벨 카테고리를 정의한 것이다.
+우리는 카테고리 $\lmod{R}$이 [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#def7)의 조건을 모두 만족한다는 것을 보인다. 역사적으로는 $\lmod{R}$의 성질을 바탕으로 아벨 카테고리를 정의한 것이다.
 
-우선 $\lmod{R}$이 additive category가 된다는 사실은 자명하다. 또, [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#df7) 이후와 같은 논증을 통하여 임의의 monomorphism은 cokernel의 kernel이고, 임의의 epimorphism은 kernel의 cokernel인 것을 확인할 수 있다. 따라서 우리는 $\lmod{R}$에서의 kernel과 cokernel이 universal property를 만족한다는 사실만 보이면 충분하다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#df3))
+우선 $\lmod{R}$이 additive category가 된다는 사실은 자명하다. 또, [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#def7) 이후와 같은 논증을 통하여 임의의 monomorphism은 cokernel의 kernel이고, 임의의 epimorphism은 kernel의 cokernel인 것을 확인할 수 있다. 따라서 우리는 $\lmod{R}$에서의 kernel과 cokernel이 universal property를 만족한다는 사실만 보이면 충분하다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#def3))
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> 임의의 $R$-module homomorphism $f:X\rightarrow Y$이 주어졌다 하고, $K=\ker f$, 그리고 자연스러운 inclusion $i:K\rightarrow X$를 생각하자. 그럼 $fi=0$이며, 뿐만 아니라 $i:K\rightarrow X$는 다음의 universal property를 만족한다.
+<ins id="prop1">**명제 1**</ins> 임의의 $R$-module homomorphism $f:X\rightarrow Y$이 주어졌다 하고, $K=\ker f$, 그리고 자연스러운 inclusion $i:K\rightarrow X$를 생각하자. 그럼 $fi=0$이며, 뿐만 아니라 $i:K\rightarrow X$는 다음의 universal property를 만족한다.
 
 > 임의의 $g:Z\rightarrow X$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:Z\rightarrow K$가 존재하여 $g=ij$이다. 
 >
@@ -51,7 +51,7 @@ $$0=g(z)-g(z)=i(j(z))-i(j'(z))=i(j(z)-j'(z))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 임의의 $R$-module homomorphism $f:X\rightarrow Y$이 주어졌다 하고, $C=Y/\im(f)$, 그리고 자연스러운 projection $p:Y\rightarrow C$를 생각하자. 그럼 $pf=0$이며, 뿐만 아니라 $p:Y\rightarrow C$는 다음의 universal property를 만족한다.
+<ins id="prop2">**명제 2**</ins> 임의의 $R$-module homomorphism $f:X\rightarrow Y$이 주어졌다 하고, $C=Y/\im(f)$, 그리고 자연스러운 projection $p:Y\rightarrow C$를 생각하자. 그럼 $pf=0$이며, 뿐만 아니라 $p:Y\rightarrow C$는 다음의 universal property를 만족한다.
 
 > 임의의 $g:Y\rightarrow Z$에 대하여, 만일 $gf=0$이 성립한다면 유일한 함수 $j:C\rightarrow Z$가 존재하여 $g=jp$이다. 
 >
@@ -76,7 +76,7 @@ $$0=g(y)-g(y)=j(p(y))-j'(p(y))=(j-j')(p(y))$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $R$-module들의 열
+<ins id="def3">**정의 3**</ins> $R$-module들의 열
 
 $$\cdots\longrightarrow X\overset{f}{\longrightarrow} Y\overset{g}{\longrightarrow} Z\longrightarrow \cdots$$
 
@@ -172,7 +172,7 @@ $$0\longrightarrow \ker f\longrightarrow X\overset{f}{\longrightarrow}Y\longrigh
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, 다음의 sequence
+<ins id="prop7">**명제 7**</ins> 두 $R$-module $X,Y$와 이들 사이의 map $f:X\rightarrow Y$에 대하여, 다음의 sequence
 
 $$0\longrightarrow\ker(f)\longrightarrow X\overset{f}{\longrightarrow}Y\longrightarrow \coker(f)\longrightarrow 0$$
 
@@ -190,7 +190,7 @@ $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarro
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> 주어진 exact sequence
+<ins id="def8">**정의 8**</ins> 주어진 exact sequence
 
 $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarrow}Z\longrightarrow\cdots$$
 
@@ -200,7 +200,7 @@ $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarro
 
 <div class="proposition" markdown="1">
 
-<ins id="pp9">**명제 9**</ins> 다음 exact sequence 
+<ins id="prop9">**명제 9**</ins> 다음 exact sequence 
 
 $$\cdots\longrightarrow X\overset{f}{\longrightarrow}Y\overset{g}{\longrightarrow}Z\longrightarrow\cdots$$
 
@@ -268,7 +268,7 @@ $$1=\tilde{f}(f(1))=\tilde{f}(2,0)=2\tilde{f}(1,0)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp11">**명제 12**</ins> $R$-module들의 short exact sequence
+<ins id="prop11">**명제 12**</ins> $R$-module들의 short exact sequence
 
 $$0\longrightarrow A\overset{f}{\longrightarrow}B\overset{g}{\longrightarrow}C\longrightarrow 0$$
 

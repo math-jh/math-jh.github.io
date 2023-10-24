@@ -27,7 +27,7 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> $F$가 field이고, $V$가 abelian group이라 하자. $V$가 *$F$에 대한 벡터공간<sub>vector space over $F$</sub>*, 혹은 간단히 *$F$-벡터공간<sub>$F$-vector space</sub>*이라는 것은 여기에 추가적인 연산 (*스칼라곱*) $\cdot:F\times V\rightarrow V$가 존재하여 
+<ins id="def1">**정의 1**</ins> $F$가 field이고, $V$가 abelian group이라 하자. $V$가 *$F$에 대한 벡터공간<sub>vector space over $F$</sub>*, 혹은 간단히 *$F$-벡터공간<sub>$F$-vector space</sub>*이라는 것은 여기에 추가적인 연산 (*스칼라곱*) $\cdot:F\times V\rightarrow V$가 존재하여 
 
 1. 임의의 $\alpha,\beta\in F$와 임의의 $u\in V$에 대하여 $\alpha\cdot(\beta\cdot u)=(\alpha\beta)\cdot u$가 성립한다.
 2. 임의의 $\alpha\in F$와 임의의 $u,v\in V$에 대하여 $\alpha\cdot(u+\_{\tiny V}v)=(\alpha\cdot u)+\_{\tiny V}(\alpha\cdot v)$가 성립한다.
@@ -42,13 +42,13 @@ weight: 2
 
 스칼라곱도 마찬가지로 $\alpha\cdot u$와 같은 표기 대신 $\alpha u$와 같이 적기로 한다. 이 경우 유일한 걱정은 $\alpha\beta u$라고 쓸 때 이것이 $(\alpha\beta)u$인지, $\alpha(\beta u)$인지 헷갈릴 수 있다는 것인데, 위 정의의 첫 번째 조건에 의해 어떤 것을 선택하더라도 그 값은 동일하므로 이는 걱정할 필요가 없다.  
 
-벡터공간은 abelian group $V$ 위에 추가적인 구조인 $F$-스칼라곱이 정의된 형태이다. 때문에 $V$는 abelian group이 갖는 성질을 모두 갖는다. ([§가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#pp2) 그리고 [§가환군과 체, ⁋따름정리 3](/ko/math/linear_algebra/fields))
+벡터공간은 abelian group $V$ 위에 추가적인 구조인 $F$-스칼라곱이 정의된 형태이다. 때문에 $V$는 abelian group이 갖는 성질을 모두 갖는다. ([§가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#prop2) 그리고 [§가환군과 체, ⁋따름정리 3](/ko/math/linear_algebra/fields))
 
 다음 성질들은 $F$-스칼라곱에 의해 결정되는 추가적인 성질들이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $F$-벡터공간 $V$가 주어졌다 하자. 그럼
+<ins id="prop2">**명제 2**</ins> $F$-벡터공간 $V$가 주어졌다 하자. 그럼
 
 1. 임의의 $\alpha\in F$에 대하여, $\alpha0=0$이고,
 2. 임의의 $v\in V$에 대하여, $0v=0$이다.
@@ -59,7 +59,7 @@ weight: 2
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-처음 두 주장은 [§가환군과 체, ⁋명제 6](/ko/math/linear_algebra/fields#pp6)과 비슷하게 진행하면 된다. 예를 들어, 
+처음 두 주장은 [§가환군과 체, ⁋명제 6](/ko/math/linear_algebra/fields#prop6)과 비슷하게 진행하면 된다. 예를 들어, 
 
 $$\alpha0+\alpha0=\alpha(0+0)=\alpha0$$
 
@@ -79,7 +79,7 @@ $$v=1v=(\alpha^{-1}\alpha)v=\alpha^{-1}(\alpha v)=\alpha^{-1}0=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl3">**따름정리 3**</ins> $F$-벡터공간 $V$의 임의의 원소 $v$에 대하여, $(-1)v=-v$가 항상 성립한다.
+<ins id="cor3">**따름정리 3**</ins> $F$-벡터공간 $V$의 임의의 원소 $v$에 대하여, $(-1)v=-v$가 항상 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -101,7 +101,7 @@ $$(-1)v+v=(-1)v+1v=((-1)+1)v=0v=0$$
 
 <ins id="ex4">**예시 4**</ins> 가장 간단한 벡터공간의 예시는 $\\{0\\}$이다. 이 집합에 더하기 구조를 줄 수 있는 방법은 하나 뿐이고 (즉 $0+0=0$), 이 구조 하에서 이 집합은 abelian group의 구조를 갖는다. 뿐만 아니라, 어떤 field $F$를 가져오더라도 이 집합에 스칼라곱을 정의할 수 있는 방법 또한 하나 뿐이며 (즉 $\alpha 0=0$), 이렇게 정의된 스칼라곱은 $\\{0\\}$를 $F$-벡터공간으로 만든다. 이를 *trivial space*이라 부른다.
 
-조금 덜 자명한 예시는 field 그 자체다. 임의의 field $F$에 대하여, $F$는 $F$-벡터공간이다. $F$는 field이므로, 덧셈에 대해 abelian group이 된다는 것은 자명하다. 여기에 스칼라곱 구조만 주면 충분한데, 이는 그냥 $F$에서의 곱하기 $F\times F\rightarrow F$로 주면 된다. 이렇게 정의하면 스칼라곱이 [정의 1](#df1)의 조건들을 모두 만족한다는 것을 확인할 수 있고, 따라서 $F$는 그 자체로 $F$-벡터공간이다. 
+조금 덜 자명한 예시는 field 그 자체다. 임의의 field $F$에 대하여, $F$는 $F$-벡터공간이다. $F$는 field이므로, 덧셈에 대해 abelian group이 된다는 것은 자명하다. 여기에 스칼라곱 구조만 주면 충분한데, 이는 그냥 $F$에서의 곱하기 $F\times F\rightarrow F$로 주면 된다. 이렇게 정의하면 스칼라곱이 [정의 1](#def1)의 조건들을 모두 만족한다는 것을 확인할 수 있고, 따라서 $F$는 그 자체로 $F$-벡터공간이다. 
 
 더 일반적으로 $F$가 field이고, 다른 어떤 field $K$가 존재하여 $K\supseteq F$라 하자. 그럼 $K$는 $F$-벡터공간이 된다. $K$는 field이므로, 아까 전과 같이 덧셈에 대해 abelian group을 이루며, $\alpha\in F$의 원소와의 스칼라곱은 $\alpha$를 $K$의 원소로 취급한 후 $K$에서의 곱셈구조를 이용하면 된다. 예를 들어 $\mathbb{C}$는 $\mathbb{R}$-벡터공간이고, $\mathbb{R}$은 $\mathbb{Q}$-벡터공간이다. 
 
@@ -139,7 +139,7 @@ $$f+g:t\mapsto f(t)+g(t),\qquad \alpha f:t\mapsto \alpha f(t)$$
 
 </div>
 
-$\Fun(I,\mathbb{R})$을 product set $\mathbb{R}^I$라 생각하면 [예시 6](#ex6)은 [예시 5](#ex5)의 자연스러운 일반화로 볼 수도 있다. ([\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#df1))
+$\Fun(I,\mathbb{R})$을 product set $\mathbb{R}^I$라 생각하면 [예시 6](#ex6)은 [예시 5](#ex5)의 자연스러운 일반화로 볼 수도 있다. ([\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#def1))
 
 ---
 

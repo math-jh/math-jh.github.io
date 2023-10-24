@@ -17,7 +17,7 @@ weight: 16
 
 ---
 
-[§리 미분, ⁋명제 4](/ko/math/manifold/Lie_derivative#pp4)에서 우리는 주어진 벡터장 $X$ 방향으로의 벡터장 $Y$의 미분 
+[§리 미분, ⁋명제 4](/ko/math/manifold/Lie_derivative#prop4)에서 우리는 주어진 벡터장 $X$ 방향으로의 벡터장 $Y$의 미분 
 
 $$\mathcal{L}_XY=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi^t(p)})-Y_p}{t}$$
 
@@ -33,7 +33,7 @@ $$(XY)f=X(Yf)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Group $G$가 *Lie group<sub>리 군</sub>*이라는 것은 $G$가 그 자체로 manifold 구조를 가지고 있으며, 이 manifold 구조에 대하여 다음의 함수
+<ins id="def1">**정의 1**</ins> Group $G$가 *Lie group<sub>리 군</sub>*이라는 것은 $G$가 그 자체로 manifold 구조를 가지고 있으며, 이 manifold 구조에 대하여 다음의 함수
 
 $$G\times G\rightarrow G;\qquad (x,y)\mapsto xy^{-1}$$
 
@@ -48,7 +48,7 @@ $$G\times G\rightarrow G;\qquad (x,y)\mapsto xy^{-1}$$
 1. $\mathbb{R}^n$에 덧셈구조를 주면 $\mathbb{R}^n$은 Lie group이 된다. 이는 $(\mathbf{x},\mathbf{y})\mapsto \mathbf{x}-\mathbf{y}$으로 정의된 연산 $\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$이 $C^\infty$이기 때문이다.
 2. 두 Lie group $G,H$에 대하여, $G\times H$ 또한 Lie group이 된다. 
 3. $\GL(n,\mathbb{R})$의 곱셈, 그리고 역원은 (분모가 $0$이 되지 않는) 유리함수에 불과하므로 $C^\infty$이고, 따라서 $\GL(n,\mathbb{R})$ 또한 Lie group이다. 
-4. 정의에 의하여 $\SL(n,\mathbb{R})$은 $\GL(n,\mathbb{R})$의 원소들 가운데 행렬식이 $1$인 것만을 모아둔 집합이다. 그런데 행렬식은 $\GL(n,\mathbb{R})$에서 $\mathbb{R}^\times$로의 함수이고, 이 함수는 다항식으로 정의되었으므로 $C^\infty$ 함수이고, 또 모든 점에서 regular임을 확인할 수 있다. 따라서 [§음함수 정리, ⁋따름정리 4](/ko/math/manifold/implicit_function_theorem#crl4)로부터 $\SL(n,\mathbb{R})$은 $n^2-1$차원 manifold가 된다는 것을 알 수 있다. 또, 이 때 inclusion map $\SL(n,\mathbb{R})\hookrightarrow\GL(n,\mathbb{R})$이 embedding이므로 $\SL(n,\mathbb{R})$에 정의된 곱셈과 역원이 모두 $C^\infty$임을 보일 수 있다.
+4. 정의에 의하여 $\SL(n,\mathbb{R})$은 $\GL(n,\mathbb{R})$의 원소들 가운데 행렬식이 $1$인 것만을 모아둔 집합이다. 그런데 행렬식은 $\GL(n,\mathbb{R})$에서 $\mathbb{R}^\times$로의 함수이고, 이 함수는 다항식으로 정의되었으므로 $C^\infty$ 함수이고, 또 모든 점에서 regular임을 확인할 수 있다. 따라서 [§음함수 정리, ⁋따름정리 4](/ko/math/manifold/implicit_function_theorem#cor4)로부터 $\SL(n,\mathbb{R})$은 $n^2-1$차원 manifold가 된다는 것을 알 수 있다. 또, 이 때 inclusion map $\SL(n,\mathbb{R})\hookrightarrow\GL(n,\mathbb{R})$이 embedding이므로 $\SL(n,\mathbb{R})$에 정의된 곱셈과 역원이 모두 $C^\infty$임을 보일 수 있다.
 
 </div>
 
@@ -60,7 +60,7 @@ $$G\times G\rightarrow G;\qquad (x,y)\mapsto xy^{-1}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $\mathbb{R}$-벡터공간 $\mathfrak{g}$가 $\mathbb{R}$ 위에 정의된 *Lie algebra<sub>리 대수</sub>*라는 것은 이 위에 다음의 두 조건
+<ins id="def3">**정의 3**</ins> $\mathbb{R}$-벡터공간 $\mathfrak{g}$가 $\mathbb{R}$ 위에 정의된 *Lie algebra<sub>리 대수</sub>*라는 것은 이 위에 다음의 두 조건
 
 1. (anticommutativity) $[x,y]=-[y,x]$,
 2. (Jacobi identity) $[[x,y],z]+[[y,z],x]+[[z,x],y]=0$
@@ -73,7 +73,7 @@ $$G\times G\rightarrow G;\qquad (x,y)\mapsto xy^{-1}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> 임의의 manifold $M$이 주어졌을 때, 그 위에 정의된 벡터장들의 모임 $\mathfrak{X}(M)$은 [§리 미분, ⁋정의 5](/ko/math/manifold/Lie_derivative#df5)에서 정의된 연산 $[-,-]:\mathfrak{X}(M)\times\mathfrak{X}(M)\rightarrow\mathfrak{X}(M)$를 bracket으로 하는 Lie algebra를 이룬다.
+<ins id="ex4">**예시 4**</ins> 임의의 manifold $M$이 주어졌을 때, 그 위에 정의된 벡터장들의 모임 $\mathfrak{X}(M)$은 [§리 미분, ⁋정의 5](/ko/math/manifold/Lie_derivative#def5)에서 정의된 연산 $[-,-]:\mathfrak{X}(M)\times\mathfrak{X}(M)\rightarrow\mathfrak{X}(M)$를 bracket으로 하는 Lie algebra를 이룬다.
 
 </div>
 
@@ -81,7 +81,7 @@ $$G\times G\rightarrow G;\qquad (x,y)\mapsto xy^{-1}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> Lie group $G$와, $G$의 임의의 원소 $g\in G$에 대하여, $g$에 의한 *left translation* $L_g$는
+<ins id="def5">**정의 5**</ins> Lie group $G$와, $G$의 임의의 원소 $g\in G$에 대하여, $g$에 의한 *left translation* $L_g$는
 
 $$L_g:G\rightarrow G;\qquad x\mapsto gx$$
 
@@ -107,7 +107,7 @@ $$\left(d(L_g)\right)(X_p)=X_{gp}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> Lie group $G$가 주어졌다 하고, $\mathfrak{g}$를 $G$ 위에서 정의된 모든 left invariant vector field들의 모임이라 하자. 
+<ins id="prop6">**명제 6**</ins> Lie group $G$가 주어졌다 하고, $\mathfrak{g}$를 $G$ 위에서 정의된 모든 left invariant vector field들의 모임이라 하자. 
 
 1. $\mathfrak{g}$는 $\mathbb{R}$-벡터공간이며, $\alpha:\mathfrak{g} \rightarrow T_eG$ 를 다음의 식
      
@@ -126,7 +126,7 @@ $$\left(d(L_g)\right)(X_p)=X_{gp}$$
     $$X_g=(dL_g)_e(X_e)=(dL_g)_e(Y_e)=Y_g$$
 
     이므로 $X=Y$이다. 거꾸로 임의의 $v\in T_eG$에 대하여 $X_g$를 $(dL_g)_e(v)$으로 정의하면 $X$가 left invariant인 벡터장이고, $\alpha(X)=v$를 만족함이 자명하다. 
-2. $X\in\mathfrak{g}$가 $C^\infty$임을 보이기 위해서는 임의의 함수 $f$에 대하여 $Xf$가 $C^\infty$임을 보이면 충분하다. ([§벡터장, ⁋명제 2](/ko/math/manifold/vector_fields#pp2)) 한편 임의의 $p\in G$에 대하여, 
+2. $X\in\mathfrak{g}$가 $C^\infty$임을 보이기 위해서는 임의의 함수 $f$에 대하여 $Xf$가 $C^\infty$임을 보이면 충분하다. ([§벡터장, ⁋명제 2](/ko/math/manifold/vector_fields#prop2)) 한편 임의의 $p\in G$에 대하여, 
     
     $$(Xf)(p)=X_pf=(dL_p)_e(X_e)f=X_e(f\circ L_p)$$
     
@@ -143,7 +143,7 @@ $$\left(d(L_g)\right)(X_p)=X_{gp}$$
     $$\begin{aligned}\bigl((0,Y)(f\circ m)\bigr)(\iota_1^e(p))&=(0,Y)_{(p,e)}(f\circ m)=0_p(f\circ m\circ\iota_1^e)+Y_e(f\circ m\circ\iota_2^p)\\&=X_e(f\circ m\circ\iota_2^p)=X_e(f\circ L_p)\end{aligned}$$
 
     이므로 원하는 결과를 얻는다.
-3. [§리 미분, ⁋명제 9](/ko/math/manifold/Lie_derivative#pp9)에 의하여 자명하다.
+3. [§리 미분, ⁋명제 9](/ko/math/manifold/Lie_derivative#prop9)에 의하여 자명하다.
 
 </details>
 
@@ -153,17 +153,17 @@ $$\left(d(L_g)\right)(X_p)=X_{gp}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> Lie group $G$ 위에 정의된 form $\omega$가 *left invariant*라는 것은 임의의 $g\in G$에 대하여 $(dL_g)\omega=\omega$가 성립하는 것이다. $G$ 위에 정의된 left invariant $k$-form들의 모임은 $\Omega_\text{l.inv}^k(G)$로 적고, $G$ 위에 정의된 모든 left invariant form들의 모임은 $\Omega_\text{l.inv}^\ast(G)$으로 적는다.
+<ins id="def7">**정의 7**</ins> Lie group $G$ 위에 정의된 form $\omega$가 *left invariant*라는 것은 임의의 $g\in G$에 대하여 $(dL_g)\omega=\omega$가 성립하는 것이다. $G$ 위에 정의된 left invariant $k$-form들의 모임은 $\Omega_\text{l.inv}^k(G)$로 적고, $G$ 위에 정의된 모든 left invariant form들의 모임은 $\Omega_\text{l.inv}^\ast(G)$으로 적는다.
 
 </div>
 
 특별히 $\Omega_\text{l.inv}^1(G)$의 원소들은 *Maurer-Cartan form*이라 부른다.
 
-[명제 6](#pp6)과 마찬가지 방식으로 다음 명제를 증명할 수 있다.
+[명제 6](#prop6)과 마찬가지 방식으로 다음 명제를 증명할 수 있다.
     
 <div class="proposition" markdown="1">
 
-<ins id="pp8">**명제 8**</ins> Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한다.
+<ins id="prop8">**명제 8**</ins> Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한다.
 
 1. $\Omega_\text{l.inv}^\ast(G)$의 임의의 원소는 $C^\infty$이다. 
 2. $\Omega_\text{l.inv}^\ast(G)$는 $\Omega^\ast(G)$의 $C^\infty(G)$-subalgebra이며, 함수 $\omega\mapsto\omega_e$는 $\Omega_\text{l.inv}^\ast(G)$에서 $\bigwedge(T_e^\ast G)$로의 $C^\infty(G)$-algebra isomorphism이다.

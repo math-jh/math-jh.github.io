@@ -17,11 +17,13 @@ weight: 4
 
 ---
 
+당분간 우리는 group의 성질들을 탐구한다.
+
 ## 준동형사상의 기본 성질들
 
 [§준군, 모노이드, 군, ⁋정의 10](/ko/math/algebraic_structures/group#def10) 이후에 우리는 두 group $G,G'$ 사이의 임의의 magma homomorphism은 모두 group의 구조를 보존하는 것을 확인했다. 따라서 group homomorphism을 간단히 homomorphism이라 부르더라도 혼동의 여지가 없으므로, 이들을 구분할 필요가 없을 때에는 항상 간단한 이름으로 부르기로 한다.
 
-한편 [§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structure#def6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#prop5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
+한편 [§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structure#def6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 4](/ko/math/set_theory/operation_of_functions#prop4)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
 
 <div class="proposition" markdown="1">
 

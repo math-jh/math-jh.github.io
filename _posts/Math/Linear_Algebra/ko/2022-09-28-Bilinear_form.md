@@ -33,7 +33,7 @@ $$\langle -,-\rangle:V\times V^\ast\rightarrow F;\quad (v,f)\mapsto f(v)$$
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 pairing $\langle -,-\rangle:V\times W\rightarrow F$에 대하여, 만일 $W=V$라면 이 pairing을 $V$ 위에서 정의된 *bilinear form<sub>쌍선형형식</sub>*이라 부른다. $\langle -,-\rangle$이 *non-degenerate bilinear form<sub>비퇴화 쌍선형형식</sub>*이라는 것은 $\langle-,-\rangle$이 pairing으로서 non-degenerate인 것이다.
+<ins id="def1">**정의 1**</ins> 임의의 pairing $\langle -,-\rangle:V\times W\rightarrow F$에 대하여, 만일 $W=V$라면 이 pairing을 $V$ 위에서 정의된 *bilinear form<sub>쌍선형형식</sub>*이라 부른다. $\langle -,-\rangle$이 *non-degenerate bilinear form<sub>비퇴화 쌍선형형식</sub>*이라는 것은 $\langle-,-\rangle$이 pairing으로서 non-degenerate인 것이다.
 
 </div>
 
@@ -45,7 +45,7 @@ $$v\mapsto \langle v,-\rangle,\qquad v\mapsto \langle -,v\rangle$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow F$에 대하여, 다음의 식
+<ins id="def2">**정의 2**</ins> 임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow F$에 대하여, 다음의 식
 
 $$\langle v,w\rangle=\langle w,v\rangle$$
 
@@ -59,7 +59,7 @@ $$\langle v,w\rangle=-\langle w,v\rangle$$
 
 ## 비퇴화 쌍선형형식
 
-유한차원 $F$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow F$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow F$가 주어졌다면, 우리는 [§쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#crl5)로부터 $\langle -,-\rangle$이 isomorphism 
+유한차원 $F$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow F$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow F$가 주어졌다면, 우리는 [§쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#cor5)로부터 $\langle -,-\rangle$이 isomorphism 
 
 $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
@@ -69,7 +69,7 @@ $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl3">**따름정리 3**</ins> Symmetric non-degenerate bilinear form $\langle -,-\rangle$이 주어진 유한차원 $F$-벡터공간 $V$를 생각하자. 임의의 $f\in V^\ast$가 주어질 때마다, 적당한 $w\in V$가 유일하게 존재하여 
+<ins id="cor3">**따름정리 3**</ins> Symmetric non-degenerate bilinear form $\langle -,-\rangle$이 주어진 유한차원 $F$-벡터공간 $V$를 생각하자. 임의의 $f\in V^\ast$가 주어질 때마다, 적당한 $w\in V$가 유일하게 존재하여 
 
 $$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 
@@ -81,7 +81,7 @@ $$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Symmetric non-degenerate bilinear form $\langle -,-\rangle$이 주어진 유한차원 $F$-벡터공간 $V$를 생각하자. 임의의 $v\in V$에 대하여, 다음의 식 $\langle w,v\rangle=0$을 만족하는 모든 $w\in V$들의 모임을 $v$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $v^\perp$로 적는다. 더 일반적으로, 임의의 집합 $S$에 대하여, 다음 집합
+<ins id="def4">**정의 4**</ins> Symmetric non-degenerate bilinear form $\langle -,-\rangle$이 주어진 유한차원 $F$-벡터공간 $V$를 생각하자. 임의의 $v\in V$에 대하여, 다음의 식 $\langle w,v\rangle=0$을 만족하는 모든 $w\in V$들의 모임을 $v$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $v^\perp$로 적는다. 더 일반적으로, 임의의 집합 $S$에 대하여, 다음 집합
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
@@ -91,7 +91,7 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 물론, 만일 $\langle -,-\rangle$이 symmetric하지 않았더라도 동일한 정의를 할 수 있으며, 실제로 $v$를 $\langle -,v\rangle$로 보내는지 혹은 $\langle v,-\rangle$으로 보내는지를 선택한 후 이 선택을 꾸준히 유지한다면 동일한 결과를 얻게 된다. 어쨌든 혹시 모를 혼란을 피하기 위해 우리는 $\langle -,-\rangle$이 symmetric이라는 조건을 유지한다.
 
-벡터 $w\in V$는 [따름정리 3](#crl3)에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#df7)의 의미에서 $v$의 orthogonal complement라면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space)의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
+벡터 $w\in V$는 [따름정리 3](#cor3)에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)의 의미에서 $v$의 orthogonal complement라면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space)의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
 
 우선 두 유한차원 $F$-벡터공간 $V,W$ 위에 symmetric non-degnerate bilinear form $\langle -,-\rangle_V$와 $\langle -,-\rangle_W$가 주어졌다 하자. 또, 논의의 편의를 위하여 이들 bilinear form에 의해 결정되는 isomorphism들을 각각
 
@@ -135,7 +135,7 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> Symmetric non-degnerate bilinear form들이 주어진 두 $F$-벡터공간 $V,W$, linear map $L:V\rightarrow W$와 그 adjoint $L^\ast:W\rightarrow V$가 주어졌다 하자. 그럼
+<ins id="prop5">**명제 5**</ins> Symmetric non-degnerate bilinear form들이 주어진 두 $F$-벡터공간 $V,W$, linear map $L:V\rightarrow W$와 그 adjoint $L^\ast:W\rightarrow V$가 주어졌다 하자. 그럼
 
 1. 임의의 부분공간 $U\subseteq V$에 대하여, $L(U)^\perp=(L^\ast)^{-1}(U^\perp)$가 성립한다.
 2. 임의의 부분공간 $U\subseteq W$에 대하여, $L^\ast(U)^\perp=L^{-1}(U^\perp)$가 성립한다.
@@ -160,7 +160,7 @@ $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> Field $F$가 다음의 조건
+<ins id="def6">**정의 6**</ins> Field $F$가 다음의 조건
 
 $$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
 
@@ -180,7 +180,7 @@ $$0\cdot 0=0,\quad 0\cdot 1=0,\quad 1\cdot 0=0,\quad 1\cdot 1=1$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp7">**명제 7**</ins> $\ch F\neq 2$인 field $F$에 대하여, symmetric non-degenerate bilinear form이 주어진 $F$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
+<ins id="prop7">**명제 7**</ins> $\ch F\neq 2$인 field $F$에 대하여, symmetric non-degenerate bilinear form이 주어진 $F$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
 
 </div>
 <details class="proof" markdown="1">

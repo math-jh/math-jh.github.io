@@ -25,7 +25,7 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 벡터공간 $(V,\omega)$가 *symplectic vector space*라는 것은 $\omega:V\times V\rightarrow \mathbb{R}$이 다음 두 조건을 만족하는 것이다.
+<ins id="def1">**정의 1**</ins> 벡터공간 $(V,\omega)$가 *symplectic vector space*라는 것은 $\omega:V\times V\rightarrow \mathbb{R}$이 다음 두 조건을 만족하는 것이다.
 
 - (Skew-symmetry) 임의의 $v,w\in V$에 대하여, $\omega(v,w)=-\omega(w,v)$이다.
 - (Nondegeneracy) $\omega(v,w)=0$이 모든 $w\in V$에 대해 성립하도록 하는 $v$는 오직 $v=0$ 뿐이다.
@@ -97,7 +97,7 @@ $$e_1,\ldots, e_n, f_1,\ldots, f_n$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $(V,\omega)$가 symplectic vector space라 하고, $W\leq V$가 임의의 부분공간이라 하자. 그럼 $W$의 *symplectic complement*는
+<ins id="def3">**정의 3**</ins> $(V,\omega)$가 symplectic vector space라 하고, $W\leq V$가 임의의 부분공간이라 하자. 그럼 $W$의 *symplectic complement*는
 
 $$W^\omega=\{v\in V:\omega(v,w)=0\text{ for all $w\in W$}\}$$
 
@@ -123,9 +123,9 @@ $$W^\omega=\{v\in V:\omega(v,w)=0\text{ for all $w\in W$}\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $\omega$는 non-degenerate pairing이므로, $v\mapsto \omega(v,-)$는 $V$에서 $V^\ast$로의 isomorphism을 정의한다. ([\[선형대수학\], §쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#pp4)) 
+1. $\omega$는 non-degenerate pairing이므로, $v\mapsto \omega(v,-)$는 $V$에서 $V^\ast$로의 isomorphism을 정의한다. ([\[선형대수학\], §쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)) 
     
-    $W$의 annihilator를 $W^\perp\subseteq V^\ast$라 하자. ([\[선형대수학\], §쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#df7)) 임의의 $u\in W^\omega$에 대하여
+    $W$의 annihilator를 $W^\perp\subseteq V^\ast$라 하자. ([\[선형대수학\], §쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)) 임의의 $u\in W^\omega$에 대하여
     
     $$\omega(u,w)=0\qquad\text{for all $w\in W$}$$
     

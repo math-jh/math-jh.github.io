@@ -29,7 +29,7 @@ weight: 1
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 자연수 $k$에 대하여, 일반적인 방식으로 배열된 $k+1$개의 점 $v_0,\ldots, v_k\in\mathbb{R}^d$가 주어졌다 하자. 그럼 이들로 만들어지는 *$k$-simplex<sub>$k$-심플렉스, $k$-단체</sub>*는 집합 $\\{v_0,\ldots, v_k\\}$을 포함하는 볼록집합 중 가장 작은 것이다.
+<ins id="def1">**정의 1**</ins> 임의의 자연수 $k$에 대하여, 일반적인 방식으로 배열된 $k+1$개의 점 $v_0,\ldots, v_k\in\mathbb{R}^d$가 주어졌다 하자. 그럼 이들로 만들어지는 *$k$-simplex<sub>$k$-심플렉스, $k$-단체</sub>*는 집합 $\\{v_0,\ldots, v_k\\}$을 포함하는 볼록집합 중 가장 작은 것이다.
 
 </div>
 
@@ -63,7 +63,7 @@ $$[v_0,\ldots,\hat{v}_i,\ldots, v_k]=[v_0,\ldots, v_{i-1},v_{i+1},\ldots, v_k]$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> 위상공간 $X$에 대하여, 이 위에 주어진 *$\Delta$-complex 구조*는 다음과 같이 정의된 함수 $\sigma_\alpha:\Delta^{n(\alpha)}\rightarrow X$들의 모임이다.
+<ins id="def2">**정의 2**</ins> 위상공간 $X$에 대하여, 이 위에 주어진 *$\Delta$-complex 구조*는 다음과 같이 정의된 함수 $\sigma_\alpha:\Delta^{n(\alpha)}\rightarrow X$들의 모임이다.
 
 1. $\sigma_\alpha$를 $\interior(\Delta^{n(\alpha)})$로 제한한 것이 단사이며, $X$의 임의의 점 $x$에 대해 $x\in \sigma\_\alpha(\interior(\Delta^{n(\alpha)}))$를 만족하는 $\alpha$가 정확하게 하나 존재한다.
 2. $\sigma_\alpha$를 $\Delta^{n(\alpha)}$의 한 면으로 제한한 $\sigma\_\alpha\|\_{\Delta^{n(\alpha)-1}}:\Delta^{n(\alpha)-1}\rightarrow X$ 또한 이 함수들의 모임에 속한다.

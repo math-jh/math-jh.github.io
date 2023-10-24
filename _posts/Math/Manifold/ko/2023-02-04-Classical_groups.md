@@ -23,7 +23,7 @@ weight: 17
 
 $$\sum a_ie_i\leftrightarrow \sum a_i\frac{\partial}{\partial r^i}\tag{1}$$
 
-이 존재한다는 것을 알고 있다. ([§미분사상의 예시들, ⁋명제 4](/ko/math/manifold/examples_of_differentials#pp4)) 이를 바탕으로 우리는 다양한 matrix group들의 구조를 파악할 수 있다. 가령 임의의 $A\in\Mat_n(\mathbb{R})$에 대하여
+이 존재한다는 것을 알고 있다. ([§미분사상의 예시들, ⁋명제 4](/ko/math/manifold/examples_of_differentials#prop4)) 이를 바탕으로 우리는 다양한 matrix group들의 구조를 파악할 수 있다. 가령 임의의 $A\in\Mat_n(\mathbb{R})$에 대하여
 
 $$T_A\Mat_n(\mathbb{R})\cong\Mat_n(\mathbb{R})$$
 
@@ -87,7 +87,7 @@ $$\exp(X)=\sum_{i=0}^\infty\frac{X^k}{k!}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 임의의 $X\in\Mat_n(\mathbb{R})$에 대하여 
+<ins id="prop2">**명제 2**</ins> 임의의 $X\in\Mat_n(\mathbb{R})$에 대하여 
 
 $$\frac{d}{dt}\exp(tX)=X\exp(tX)=\exp(tX)X$$
 
@@ -97,7 +97,7 @@ $$\frac{d}{dt}\exp(tX)=X\exp(tX)=\exp(tX)X$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> 임의의 $X\in\Mat_n(\mathbb{R})$에 대하여 $\det(\exp X)=\exp(\tr X)$이 성립한다. 
+<ins id="prop3">**명제 3**</ins> 임의의 $X\in\Mat_n(\mathbb{R})$에 대하여 $\det(\exp X)=\exp(\tr X)$이 성립한다. 
 
 </div>
 
@@ -113,7 +113,7 @@ $\SL(n,\mathbb{R})$이 $n^2-1$차원의 Lie group이라는 것은 자명하지�
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 [§미분사상의 예시들, ⁋명제 2](/ko/math/manifold/examples_of_differentials#pp2)로부터 우리는 다음 두 조건
+우선 [§미분사상의 예시들, ⁋명제 2](/ko/math/manifold/examples_of_differentials#prop2)로부터 우리는 다음 두 조건
 
 $$\gamma(0)=I,\qquad (d\gamma)_0\left(\frac{d}{dt}\bigg|_0\right)=X_I$$
 
@@ -130,7 +130,7 @@ $$\begin{aligned}(d(\det))_I(X_I)&=\frac{d}{dt}\bigg|_{t=0}\det(\exp(tX))=\frac{
 
 <ins id="ex5">**예시 5 (Special linear group)**</ins> $\sl(n,\mathbb{R})$을 구하기 위해서는 임의의 tangent vector $X_I\in T_I\SL(n,\mathbb{R})$이 만족해야 할 조건만 찾으면 충분하다. 
 
-다시 [§미분사상의 예시들, ⁋명제 2](/ko/math/manifold/examples_of_differentials#pp2)을 통해 다음 두 조건
+다시 [§미분사상의 예시들, ⁋명제 2](/ko/math/manifold/examples_of_differentials#prop2)을 통해 다음 두 조건
 
 $$\gamma(0)=I,\qquad (d\gamma)_0\left(\frac{d}{dt}\bigg|_0\right)=X_I$$
 

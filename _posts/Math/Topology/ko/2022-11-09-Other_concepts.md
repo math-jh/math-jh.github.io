@@ -23,7 +23,7 @@ weight: 3
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 위상공간 $X$에 대하여, 집합 $A$가 *닫힌집합<sub>closed set</sub>*이라는 것은 $A$의 여집합 $A^c=X\setminus A$가 열린집합인 것이다.
+<ins id="def1">**정의 1**</ins> 위상공간 $X$에 대하여, 집합 $A$가 *닫힌집합<sub>closed set</sub>*이라는 것은 $A$의 여집합 $A^c=X\setminus A$가 열린집합인 것이다.
 
 </div>
 
@@ -31,7 +31,7 @@ $X$ 위의 임의의 위상 $\mathcal{T}$에서 $\emptyset$과 $X$는 열린집�
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 집합 $X$ 위에 다음의 조건들을 만족하는 모임 $\mathcal{C}$가 주어졌다 하자.
+<ins id="prop2">**명제 2**</ins> 집합 $X$ 위에 다음의 조건들을 만족하는 모임 $\mathcal{C}$가 주어졌다 하자.
 
 1. $\emptyset$, $X\in\mathcal{C}$
 2. $\mathcal{C}$는 임의의 교집합에 대하여 닫혀있다.
@@ -43,7 +43,7 @@ $X$ 위의 임의의 위상 $\mathcal{T}$에서 $\emptyset$과 $X$는 열린집�
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-다음의 De Morgan 법칙 ([\[집합론\] §합집합과 교집합, ⁋명제 8](/ko/math/set_theory/union_and_intersection#pp8))
+다음의 De Morgan 법칙 ([\[집합론\] §합집합과 교집합, ⁋명제 8](/ko/math/set_theory/union_and_intersection#prop8))
 
 $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 
@@ -55,7 +55,7 @@ $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigc
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 위상공간 $X$가 주어졌다 하고, $X$의 부분집합들의 family $(A\_i)\_{i\in I}$가 주어졌다 하자. 그럼 $(A\_i)$가 *locally finite<sub>국소적으로 유한</sub>*이라는 것은 임의의 $x\in X$마다, 적당한 근방 $V$가 존재하여 $V\cap A_i\neq\emptyset$을 만족하는 $i$가 오직 유한 개 뿐인 것이다.
+<ins id="def3">**정의 3**</ins> 위상공간 $X$가 주어졌다 하고, $X$의 부분집합들의 family $(A\_i)\_{i\in I}$가 주어졌다 하자. 그럼 $(A\_i)$가 *locally finite<sub>국소적으로 유한</sub>*이라는 것은 임의의 $x\in X$마다, 적당한 근방 $V$가 존재하여 $V\cap A_i\neq\emptyset$을 만족하는 $i$가 오직 유한 개 뿐인 것이다.
 
 </div>
 
@@ -63,7 +63,7 @@ $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigc
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> 위상공간 $X$가 주어졌다 하자. 만일 $(A\_i)\_{i\in I}$가 locally finite인 닫힌집합들의 모임이라면, $A=\bigcup A\_i$는 닫힌집합이다.
+<ins id="prop4">**명제 4**</ins> 위상공간 $X$가 주어졌다 하자. 만일 $(A\_i)\_{i\in I}$가 locally finite인 닫힌집합들의 모임이라면, $A=\bigcup A\_i$는 닫힌집합이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -83,7 +83,7 @@ $$V\cap\bigcap_{j\in J} A_j^c$$
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> 위상공간 $X$의 임의의 부분집합 $A$에 대하여, $A$를 포함하는 가장 작은 닫힌집합을 $A$의 *closure<sub>폐포</sub>*, $A$에 포함된 가장 큰 열린집합을 $A$의 *interior<sub>내부</sub>*라 부르고, 이를 각각 $\cl(A)$와 $\interior(A)$로 적는다. 
+<ins id="def5">**정의 5**</ins> 위상공간 $X$의 임의의 부분집합 $A$에 대하여, $A$를 포함하는 가장 작은 닫힌집합을 $A$의 *closure<sub>폐포</sub>*, $A$에 포함된 가장 큰 열린집합을 $A$의 *interior<sub>내부</sub>*라 부르고, 이를 각각 $\cl(A)$와 $\interior(A)$로 적는다. 
 
 </div>
 
@@ -97,7 +97,7 @@ $$\interior(A^c)=(\cl(A))^c$$
 
 위와 같은 논증을 통해 interior와 closure, exterior 중 어느 하나만 있더라도 다른 둘을 만들 수 있다는 것을 안다. 
 
-집합 $A$의 interior를 생각하자. $x\in\interior(A)$라는 것은 $x$를 포함하고, $A$에 포함되는 열린집합 $U$가 존재한다는 뜻이고, 따라서 $A$가 $x$의 근방이라는 것과 동치이다. 따라서 임의의 두 집합 $A,B$에 대하여, $x\in\interior(A\cap B)$인 것은 $x\in\interior(A)\cap\interior(B)$인 것과 동치이다. ([§열린집합, ⁋명제 6](/ko/math/topology/open_sets#pp6)의 둘째 조건) 이를 위에서 설명한 방식을 따라 closure에 대한 명제로 바꾸면 다음 등식
+집합 $A$의 interior를 생각하자. $x\in\interior(A)$라는 것은 $x$를 포함하고, $A$에 포함되는 열린집합 $U$가 존재한다는 뜻이고, 따라서 $A$가 $x$의 근방이라는 것과 동치이다. 따라서 임의의 두 집합 $A,B$에 대하여, $x\in\interior(A\cap B)$인 것은 $x\in\interior(A)\cap\interior(B)$인 것과 동치이다. ([§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 둘째 조건) 이를 위에서 설명한 방식을 따라 closure에 대한 명제로 바꾸면 다음 등식
 
 $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 
@@ -105,7 +105,7 @@ $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, 두 조건 
+<ins id="prop6">**명제 6**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, 두 조건 
 
 1. $x\in\cl A$인 것,
 2. $x$의 임의의 근방 $U$가 $A$와 만나는 것
@@ -124,7 +124,7 @@ $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl7">**따름정리 7**</ins> 위상공간 $X$가 주어졌다 하자. 열린집합 $A$와 임의의 집합 $B$에 대하여, 다음의 식
+<ins id="cor7">**따름정리 7**</ins> 위상공간 $X$가 주어졌다 하자. 열린집합 $A$와 임의의 집합 $B$에 대하여, 다음의 식
 
 $$A\cap\cl(B)\subseteq\cl(A\cap B)$$
 
@@ -134,23 +134,23 @@ $$A\cap\cl(B)\subseteq\cl(A\cap B)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$x\in A\cap\cl(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의의 근방 $V$에 대하여 $V\cap A$ 또한 $x$의 근방이 된다. 따라서 $x\in\cl(B)$인 것과 [명제 6](#pp6)으로부터 $(V\cap A)\cap B\neq\emptyset$임을 안다. 그런데 이는 $A\cap B$와 $V$의 교집합이 공집합이 아니라는 것으로 해석할 수도 있고, $V$는 $x$의 임의의 근방이므로 다시 [명제 6](#pp6)에 의하여 $x\in\cl(A\cap B)$이다.
+$x\in A\cap\cl(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의의 근방 $V$에 대하여 $V\cap A$ 또한 $x$의 근방이 된다. 따라서 $x\in\cl(B)$인 것과 [명제 6](#prop6)으로부터 $(V\cap A)\cap B\neq\emptyset$임을 안다. 그런데 이는 $A\cap B$와 $V$의 교집합이 공집합이 아니라는 것으로 해석할 수도 있고, $V$는 $x$의 임의의 근방이므로 다시 [명제 6](#prop6)에 의하여 $x\in\cl(A\cap B)$이다.
 
 </details>
 
 <div class="definition" markdown="1">
 
-<ins id="df8">**정의 8**</ins> 위상공간 $X$와 $X$의 임의의 부분집합 $A$에 대하여, $x\in X$가 $A$의 *limit point<sub>극한점</sub>*이라는 것은 $x$의 임의의 근방이 $x$ 자기 자신을 제외한 점에서 $A$와 만나는 것이다. 
+<ins id="def8">**정의 8**</ins> 위상공간 $X$와 $X$의 임의의 부분집합 $A$에 대하여, $x\in X$가 $A$의 *limit point<sub>극한점</sub>*이라는 것은 $x$의 임의의 근방이 $x$ 자기 자신을 제외한 점에서 $A$와 만나는 것이다. 
 
 </div>
 
-만일 $x\in\cl(A)\setminus A$라면, [명제 6](#pp6)에 의하여 $x$는 반드시 $A$의 limit point여야 하는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\\{x\\}$이도록 할 수 있다면 $x$가 $A$의 *isolated point<sub>고립접</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
+만일 $x\in\cl(A)\setminus A$라면, [명제 6](#prop6)에 의하여 $x$는 반드시 $A$의 limit point여야 하는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\\{x\\}$이도록 할 수 있다면 $x$가 $A$의 *isolated point<sub>고립접</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
 
 ## 집합의 경계
 
 <div class="definition" markdown="1">
 
-<ins id="df9">**정의 9**</ins> 위상공간 $X$의 임의의 부분집합 $A$에 대하여, $A$의 *boundary<sub>경계</sub>*는 다음의 식
+<ins id="def9">**정의 9**</ins> 위상공간 $X$의 임의의 부분집합 $A$에 대하여, $A$의 *boundary<sub>경계</sub>*는 다음의 식
 
 $$\partial A=\cl A\setminus\interior A$$
 
@@ -164,17 +164,17 @@ $$\partial A=\cl A\setminus\interior A$$
 
 <div class="definition" markdown="1">
 
-<ins id="df10">**정의 10**</ins> 위상공간 $X$의 임의의 부분집합 $A$가 *dense subset<sub>조밀 부분집합</sub>*이라는 것은 $\cl(A)=X$인 것이다.
+<ins id="def10">**정의 10**</ins> 위상공간 $X$의 임의의 부분집합 $A$가 *dense subset<sub>조밀 부분집합</sub>*이라는 것은 $\cl(A)=X$인 것이다.
 
 </div>
 
-[명제 6](#pp6)에 의하여, $A$가 $X$에서 dense라는 것은 공집합이 아닌 $X$의 열린집합이 반드시 $A$와 만난다는 것을 의미한다. 직관적으로 $X$의 dense subset을 찾으면, 약간의 perturbation만 거치면 $X$를 전부 얻어낼 수 있다는 것으로 생각할 수 있다. 이를 더 일상적인 언어로 쓰면 $X$의 dense subset은 $X$의 "거의 모든" 부분을 포함한다고 생각할 수 있다.
+[명제 6](#prop6)에 의하여, $A$가 $X$에서 dense라는 것은 공집합이 아닌 $X$의 열린집합이 반드시 $A$와 만난다는 것을 의미한다. 직관적으로 $X$의 dense subset을 찾으면, 약간의 perturbation만 거치면 $X$를 전부 얻어낼 수 있다는 것으로 생각할 수 있다. 이를 더 일상적인 언어로 쓰면 $X$의 dense subset은 $X$의 "거의 모든" 부분을 포함한다고 생각할 수 있다.
 
 한편, 위상수학에서도 크기의 개념은 basis의 크기로 주어지는데, 이는 다음 명제에 따른 것이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp11">**명제 11**</ins> 위상공간 $X$의 basis $\mathcal{B}$에 대하여, $\card(D)\leq\card(\mathcal{B})$이도록 하는 $X$의 dense subset $D$가 존재한다.
+<ins id="prop11">**명제 11**</ins> 위상공간 $X$의 basis $\mathcal{B}$에 대하여, $\card(D)\leq\card(\mathcal{B})$이도록 하는 $X$의 dense subset $D$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">

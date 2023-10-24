@@ -43,7 +43,7 @@ $$\restrict_{UV}:f\mapsto f|_V$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> 임의의 manifold $M$에 대하여 $\mathcal{C}^\infty_p$은 $\mathbb{R}$-algebra 구조를 갖는다.
+<ins id="prop1">**명제 1**</ins> 임의의 manifold $M$에 대하여 $\mathcal{C}^\infty_p$은 $\mathbb{R}$-algebra 구조를 갖는다.
 
 </div>
 <details class="proof" markdown="1">
@@ -63,7 +63,7 @@ $$(f|_{U\cap V}+g|_{U\cap V}, U\cap V)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> Ring $\mathcal{C}^\infty_p$은 local ring이며, 그 maximal ideal은 다음의 식
+<ins id="prop2">**명제 2**</ins> Ring $\mathcal{C}^\infty_p$은 local ring이며, 그 maximal ideal은 다음의 식
 
 $$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p\mid \mathbf{f}(p)=0\}$$
 
@@ -93,13 +93,13 @@ $$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\e
 
 $$\mathcal{C}^\infty_p=\{(f,U)\mid f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some $W\subseteq U\cap V$ open}$$
 
-$f$의 equivalence class를 $\mathbf{f}$로 적자. 그럼 $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$와 같이 $\mathcal{C}^\infty$ 위에 스칼라곱과 덧셈, 더 나아가 곱셈까지 잘 정의된다는 것이 [명제 1](#pp1)의 내용이다.
+$f$의 equivalence class를 $\mathbf{f}$로 적자. 그럼 $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$와 같이 $\mathcal{C}^\infty$ 위에 스칼라곱과 덧셈, 더 나아가 곱셈까지 잘 정의된다는 것이 [명제 1](#prop1)의 내용이다.
 
 이제 접벡터라는 것은 $\mathcal{C}^\infty_p$의 각 원소마다 실수값을 대응시키는 방향미분이다. 여기에서 미분은 라이프니츠 법칙을 만족하는 linear map으로 정의된다.
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> Manifold $M$과 한 점 $p\in M$을 생각하자. 다음의 라이프니츠 법칙
+<ins id="def3">**정의 3**</ins> Manifold $M$과 한 점 $p\in M$을 생각하자. 다음의 라이프니츠 법칙
 
 $$v(\mathbf{f}\mathbf{g})=\mathbf{f}(p)v(\mathbf{g})+\mathbf{g}(p)v(\mathbf{f})$$
 
@@ -111,7 +111,7 @@ $$v(\mathbf{f}\mathbf{g})=\mathbf{f}(p)v(\mathbf{g})+\mathbf{g}(p)v(\mathbf{f})$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> [정의 3](#df3)에서 정의한 $T_pM$은 $\mathbb{R}$-벡터공간이다.
+<ins id="prop4">**명제 4**</ins> [정의 3](#def3)에서 정의한 $T_pM$은 $\mathbb{R}$-벡터공간이다.
 
 </div>
 <details class="proof" markdown="1">

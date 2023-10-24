@@ -76,14 +76,18 @@ category_theory-ko:
     children:
       - title: "카테고리"
         url: ko/math/category_theory/categories
+      - title: "카테고리의 예시들"
+        url: ko/math/category_theory/examples_of_categories
       - title: "함자"
         url: ko/math/category_theory/functors
+      - title: "함자의 예시들"
+        url: ko/math/category_theory/examples_of_functors
       - title: "자연변환"
         url: ko/math/category_theory/natural_transformations
+      - title: "표현 가능한 함자"
+        url: ko/math/category_theory/representable_functors
       # - title: "수반함자"
         # url: ko/math/category_theory/adjoints
-      # - title: "표현 가능한 함자"
-        # url: ko/math/category_theory/representable_functor
       # - title: "요네다 보조정리"
         # url: ko/math/category_theory/Yoneda_lemma
       # - title: "극한"

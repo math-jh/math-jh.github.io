@@ -23,15 +23,15 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 위상공간 $(X,\mathcal{T})$에 대하여, $\mathcal{T}$의 부분집합 $\mathcal{B}$가 $\mathcal{T}$의 *basis<sub>기저</sub>*라는 것은 임의의 $U\in\mathcal{T}$에 대하여, $U=\bigcup\_{i\in I} B\_i$를 만족하는 $\mathcal{B}$의 원소들의 family $(B\_i)\_{i\in I}$가 존재하는 것이다.
+<ins id="def1">**정의 1**</ins> 위상공간 $(X,\mathcal{T})$에 대하여, $\mathcal{T}$의 부분집합 $\mathcal{B}$가 $\mathcal{T}$의 *basis<sub>기저</sub>*라는 것은 임의의 $U\in\mathcal{T}$에 대하여, $U=\bigcup\_{i\in I} B\_i$를 만족하는 $\mathcal{B}$의 원소들의 family $(B\_i)\_{i\in I}$가 존재하는 것이다.
 
 </div>
 
-특별히 $X\in\mathcal{T}$이므로 $\mathcal{B}$는 $X$의 covering이기도 하다. ([\[집합론\] §집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#df1)) 정의에 의해 $\mathcal{B}$의 원소들은 모두 열린집합들이니, 이를 $\mathcal{B}$가 $X$의 *open covering<sub>열린덮개</sub>*이라고 표현하면 적절할 것이다.
+특별히 $X\in\mathcal{T}$이므로 $\mathcal{B}$는 $X$의 covering이기도 하다. ([\[집합론\] §집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#def1)) 정의에 의해 $\mathcal{B}$의 원소들은 모두 열린집합들이니, 이를 $\mathcal{B}$가 $X$의 *open covering<sub>열린덮개</sub>*이라고 표현하면 적절할 것이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> 위상공간 $(X,\mathcal{T})$에 대하여, $\mathcal{B}$가 $\mathcal{T}$의 basis인 것은 세 가지 조건
+<ins id="prop2">**명제 2**</ins> 위상공간 $(X,\mathcal{T})$에 대하여, $\mathcal{B}$가 $\mathcal{T}$의 basis인 것은 세 가지 조건
 
 1. 각각의 $x\in X$에 대하여, 적어도 하나의 $B\in \mathcal{B}$가 존재하여 $x\in B$이고,
 2. 만일 $x$를 포함하는 $\mathcal{B}$의 두 원소 $B\_1$, $B\_2$가 존재한다면, 또 다른 $B\_3\in\mathcal{B}$가 존재하여 $x\in B\_3$이고 $B\_3\subseteq B\_1\cap B\_2$를 만족하고,
@@ -56,11 +56,11 @@ weight: 2
 
 이 질문에 대한 답은 긍정적이며, **[Mun]**에서는 이를 직접 증명했지만 우리는 local basis를 정의한 후 더 간단한 방식으로 증명하기로 한다.
 
-한편 [정의 1](#df1)을 더 다듬어서 다음과 같이 *subbasis*를 정의할 수 있다.
+한편 [정의 1](#def1)을 더 다듬어서 다음과 같이 *subbasis*를 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 위상공간 $(X,\mathcal{T})$의 *subbasis<sub>부분기저</sub>* $\mathcal{S}$는 임의의 $U\in\mathcal{T}$에 대하여, $S\subseteq U$인 $S\in\mathcal{S}$가 존재하는 $X$의 open covering을 의미한다.
+<ins id="def3">**정의 3**</ins> 위상공간 $(X,\mathcal{T})$의 *subbasis<sub>부분기저</sub>* $\mathcal{S}$는 임의의 $U\in\mathcal{T}$에 대하여, $S\subseteq U$인 $S\in\mathcal{S}$가 존재하는 $X$의 open covering을 의미한다.
 
 </div>
 
@@ -68,19 +68,19 @@ $\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 
 
 ## 위상공간의 국소기저
 
-[§열린집합, ⁋명제 6](/ko/math/topology/open_sets#pp6)은 위상공간 $X$와 한 점 $x$에 대하여, $x$를 중심으로 하는 neighborhood filter $\mathcal{N}(x)$를 묘사할 수 있다면 $X$의 위상구조를 완전히 복원할 수 있다는 것을 보여준다. 한편 $\mathcal{N}(x)$는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#pp6)의 조건들, 특히 첫째 조건을 만족하므로 이 집합을 묘사하는 데에는 $\mathcal{N}(x)$가 모두 필요하지는 않다.
+[§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)은 위상공간 $X$와 한 점 $x$에 대하여, $x$를 중심으로 하는 neighborhood filter $\mathcal{N}(x)$를 묘사할 수 있다면 $X$의 위상구조를 완전히 복원할 수 있다는 것을 보여준다. 한편 $\mathcal{N}(x)$는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 조건들, 특히 첫째 조건을 만족하므로 이 집합을 묘사하는 데에는 $\mathcal{N}(x)$가 모두 필요하지는 않다.
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, $A$에서의 *local basis<sub>국소기저</sub>*는 $(\mathcal{N}(A),\subseteq)$의 coinitial subset을 의미한다. ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set))
+<ins id="def4">**정의 4**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, $A$에서의 *local basis<sub>국소기저</sub>*는 $(\mathcal{N}(A),\subseteq)$의 coinitial subset을 의미한다. ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set))
 
 </div>
 
-[§열린집합, ⁋정의 4](/ko/math/topology/open_sets#df4)와 마찬가지로, $A$가 한점집합 $\\{x\\}$일 경우, $A$의 local basis를 점 $x$에서의 local basis라 부른다. 그럼 다음이 성립한다.
+[§열린집합, ⁋정의 4](/ko/math/topology/open_sets#def4)와 마찬가지로, $A$가 한점집합 $\\{x\\}$일 경우, $A$의 local basis를 점 $x$에서의 local basis라 부른다. 그럼 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> 위상공간 $(X,\mathcal{T})$가 주어졌다 하자. 그럼 $\mathcal{T}$의 부분집합 $\mathcal{B}$가 $X$의 basis인 것은 각각의 $x\in X$에 대하여 <phrase>$x$를 포함하는 $\mathcal{B}$의 원소들</phrase>이 $x$에서의 local basis를 정의하는 것과 동치이다.
+<ins id="prop5">**명제 5**</ins> 위상공간 $(X,\mathcal{T})$가 주어졌다 하자. 그럼 $\mathcal{T}$의 부분집합 $\mathcal{B}$가 $X$의 basis인 것은 각각의 $x\in X$에 대하여 <phrase>$x$를 포함하는 $\mathcal{B}$의 원소들</phrase>이 $x$에서의 local basis를 정의하는 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -94,11 +94,11 @@ $\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 
 
 </details>
 
-앞서 [명제 2](#pp2)의 첫 번째와 두 번째 조건을 만족하는 임의의 모임이 주어졌을 때, 이를 basis로 갖는 $X$의 위상이 존재하느냐는 질문을 던졌었는데, 이는 위 명제의 쉬운 따름정리가 된다.
+앞서 [명제 2](#prop2)의 첫 번째와 두 번째 조건을 만족하는 임의의 모임이 주어졌을 때, 이를 basis로 갖는 $X$의 위상이 존재하느냐는 질문을 던졌었는데, 이는 위 명제의 쉬운 따름정리가 된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="crl6">**따름정리 6**</ins> 집합 $X$가 주어졌다 하고, $\mathcal{P}(X)$의 부분집합 $\mathcal{B}$가 다음의 두 조건을 만족한다 가정하자.
+<ins id="cor6">**따름정리 6**</ins> 집합 $X$가 주어졌다 하고, $\mathcal{P}(X)$의 부분집합 $\mathcal{B}$가 다음의 두 조건을 만족한다 가정하자.
 
 1. 각각의 $x$에 대하여, 적어도 하나의 $B\in\mathcal{B}$가 존재하여 $x\in B$이다.
 2. $x$를 포함하는 $B_1,B_2\in\mathcal{B}$가 존재한다면, 또 다른 $B_3\in\mathcal{B}$가 존재하여 $x\in B_3\subseteq B_1\cap B_2$이다.
@@ -116,11 +116,11 @@ $$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}}\math
 으로 정의하자. 즉 $\mathcal{N}(x)$는 주어진 $x\in X$를 포함하는 $\mathcal{B}$의 원소, 그리고 이 원소보다 큰 $\mathcal{P}(X)$의 원소들을 모두 포함하는 모임이다.
 
 - 임의의 $V\in\mathcal{N}(x)$에 대하여, $V\subseteq V'$라 하자. $\mathcal{N}(x)$의 정의에 의하여, $U\subseteq V$를 만족하는 $U\in\mathcal{B}(x)$가 존재하며, 이러한 $U$에 대해 $U\subseteq V'$이므로 $V'\in\mathcal{N}(x)$이다.
-- $\mathcal{N}(x)$의 원소들 $V_1,\ldots, V_n$이 주어졌다 하자. 그럼 $U_i\subseteq V_i$를 만족하는 $U_i\in\mathcal{B}(x)$들이 존재한다. [명제 2](#pp2)의 두 번째 조건을 귀납적으로 사용하면, 적당한 $U\in\mathcal{B}(x)$가 존재하여 $U\subseteq U_1\cap\cdots\cap U_n$임을 알 수 있다. 특히 $U\subseteq V_1\cap\cdots\cap V_n$이므로, $V_1\cap\cdots\cap V_n\in\mathcal{N}(x)$이다.
+- $\mathcal{N}(x)$의 원소들 $V_1,\ldots, V_n$이 주어졌다 하자. 그럼 $U_i\subseteq V_i$를 만족하는 $U_i\in\mathcal{B}(x)$들이 존재한다. [명제 2](#prop2)의 두 번째 조건을 귀납적으로 사용하면, 적당한 $U\in\mathcal{B}(x)$가 존재하여 $U\subseteq U_1\cap\cdots\cap U_n$임을 알 수 있다. 특히 $U\subseteq V_1\cap\cdots\cap V_n$이므로, $V_1\cap\cdots\cap V_n\in\mathcal{N}(x)$이다.
 - $\mathcal{N}(x)$의 임의의 원소 $V$에 대하여, $W\subseteq V$를 만족하는 $W\in\mathcal{B}(x)$가 존재하므로 $x\in V$이다.
 - $\mathcal{N}(x)$의 임의의 원소 $V$에 대하여, $W\subseteq V$를 만족하는 $W\in\mathcal{B}(x)$를 택하자. 그럼 임의의 $W\in\mathcal{B}$이며, 따라서 임의의 $y\in W$에 대해 $W\in\mathcal{B}(y)$이다. $W\subseteq V$이므로, 이로부터 $V\in\mathcal{N}(y)$가 모든 $y$에 대해 성립함을 안다.
 
-이제 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#pp6)을 적용하여 위상공간 $\mathcal{T}$를 얻을 수 있고, 이 위상공간에서 $\mathcal{B}(x)$는 $x$에서의 local basis가 되므로 [명제 5](#pp5)에 의해 $\mathcal{B}$는 $\mathcal{T}$의 basis가 된다.
+이제 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)을 적용하여 위상공간 $\mathcal{T}$를 얻을 수 있고, 이 위상공간에서 $\mathcal{B}(x)$는 $x$에서의 local basis가 되므로 [명제 5](#prop5)에 의해 $\mathcal{B}$는 $\mathcal{T}$의 basis가 된다.
 
 </details>
 

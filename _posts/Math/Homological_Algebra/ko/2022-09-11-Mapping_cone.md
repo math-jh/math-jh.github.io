@@ -19,7 +19,7 @@ weight: 6
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 임의의 chain map $f:B\rightarrow C$에 대하여, $f$의 *mapping cone* $\cone(f)$는 다음의 chain complex
+<ins id="def1">**정의 1**</ins> 임의의 chain map $f:B\rightarrow C$에 대하여, $f$의 *mapping cone* $\cone(f)$는 다음의 chain complex
 
 $$\cdots\longrightarrow\underbrace{B_n\oplus C_{n+1}}_{\cone(f)_{n+1}}\overset{d_{n+1}}{\longrightarrow}\underbrace{B_{n-1}\oplus C_n}_{\cone(f)_n}\overset{d_n}{\longrightarrow}\underbrace{B_{n-2}\oplus C_{n-1}}_{\cone(f)_{n-1}}\longrightarrow\cdots$$
 

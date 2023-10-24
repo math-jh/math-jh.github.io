@@ -47,7 +47,7 @@ $$A^tAx=A^ty$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> 임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\mathbb{R}^m$에 대하여, 벡터 $x\in\mathbb{R}^n$이 실수 $\lVert Au-y\rVert$의 값을 최소로 하는 것은 다음 방정식
+<ins id="prop1">**명제 1**</ins> 임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\mathbb{R}^m$에 대하여, 벡터 $x\in\mathbb{R}^n$이 실수 $\lVert Au-y\rVert$의 값을 최소로 하는 것은 다음 방정식
 
 $$A^tAx=A^ty$$
 
