@@ -31,7 +31,7 @@ $$f\circ g=\id_B,\qquad g\circ f=\id_A$$
 
 이 성립하는 것이다.
 
-집합 위에 특정한 조건들을 만족하는 연산을 추가하여 우리는 *group*을 정의할 수 있다. ([§가환군과 체, ⁋정의 1](/ko/math/linear_algebra/fields#df1)) $\mathbf{Grp}$을 group들의 모임이라 하자. 두 group $G,H$가 주어졌다 하고, 이들의 연산을 더하기로 표기하자. 함수 $f:G\rightarrow H$가 *group homomorphism<sub>군 준동형사상</sub>*이라는 것은 임의의 $x,y\in G$에 대해 다음의 식
+집합 위에 특정한 조건들을 만족하는 연산을 추가하여 우리는 *group*을 정의할 수 있다. ([§가환군과 체, ⁋정의 1](/ko/math/linear_algebra/fields#def1)) $\mathbf{Grp}$을 group들의 모임이라 하자. 두 group $G,H$가 주어졌다 하고, 이들의 연산을 더하기로 표기하자. 함수 $f:G\rightarrow H$가 *group homomorphism<sub>군 준동형사상</sub>*이라는 것은 임의의 $x,y\in G$에 대해 다음의 식
 
 $$f(x+y)=f(x)+f(y)$$
 
@@ -53,7 +53,7 @@ $$L\circ L'=\id_W,\qquad L'\circ L=\id_V$$
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> *Category<sub>범주</sub>* $\mathcal{C}$는 다음 정보들로 이루어진 대상이다.
+<ins id="def1">**정의 1**</ins> *Category<sub>범주</sub>* $\mathcal{C}$는 다음 정보들로 이루어진 대상이다.
 
 - $\mathcal{C}$의 *대상<sub>object</sub>*들 $X,Y,Z,\ldots$로 이루어진 모임 $\obj(\mathcal{C})$
 - 각각의 $X,Y\in \obj(\mathcal{C})$마다 대응되는 *morphism<sub>사상</sub>*들의 모임 $\Mor(X,Y)$
@@ -70,7 +70,7 @@ $$L\circ L'=\id_W,\qquad L'\circ L=\id_V$$
 
 <div class="definition" markdown="1">
 
-<ins id="df2">**정의 2**</ins> Category $\mathcal{C}$와 임의의 $f\in \Mor(X,Y)$에 대하여, 만일 적당한 $g\in\Mor(Y,X)$가 존재하여 $f\circ g=\id_Y$이고 $g\circ f=\id_X$라면 $f$가 *isomorphism*이라 하고, $X$와 $Y$가 *isomorphic*하다고 한다.
+<ins id="def2">**정의 2**</ins> Category $\mathcal{C}$와 임의의 $f\in \Mor(X,Y)$에 대하여, 만일 적당한 $g\in\Mor(Y,X)$가 존재하여 $f\circ g=\id_Y$이고 $g\circ f=\id_X$라면 $f$가 *isomorphism*이라 하고, $X$와 $Y$가 *isomorphic*하다고 한다.
 
 </div>
 
@@ -104,7 +104,7 @@ Category에서 모든 대상은 morphism을 통해 다른 대상과 연결되어
 
 <div class="definition" markdown="1">
 
-<ins id="df6">**정의 6**</ins> 두 개의 category $\mathcal{C}$, $\mathcal{D}$가 주어졌다 하자. $F:\mathcal{C}\rightarrow\mathcal{D}$가 이들 사이의 *functor<sub>함자</sub>*라는 것은,
+<ins id="def6">**정의 6**</ins> 두 개의 category $\mathcal{C}$, $\mathcal{D}$가 주어졌다 하자. $F:\mathcal{C}\rightarrow\mathcal{D}$가 이들 사이의 *functor<sub>함자</sub>*라는 것은,
 
 1. $F$는 $\mathcal{C}$의 대상을 $\mathcal{D}$의 대상으로 옮긴다. 즉, 임의의 $A\in\obj(\mathcal{C})$에 대하여 $F(A)\in\obj(\mathcal{D})$가 성립한다.
 2. $F$는 $\mathcal{C}$의 morphism을 $\mathcal{D}$의 morphism으로 옮긴다. 즉, 임의의 $f:A\rightarrow B$는 $F$에 의해 $F(f): F(A)\rightarrow F(B)$로 옮겨진다.
@@ -118,7 +118,7 @@ Category들 사이의 functor가 *isomorphism*이라는 것은 위의 예시들�
 
 <div class="definition" markdown="1">
 
-<ins id="df7">**정의 7**</ins> 두 개의 category $\mathcal{C}$, $\mathcal{D}$ 그리고 functor $F:\mathcal{C}\rightarrow\mathcal{D}$가 주어졌다 하자. 고정된 $A,B\in\obj(\mathcal{C})$에 대해, 함수
+<ins id="def7">**정의 7**</ins> 두 개의 category $\mathcal{C}$, $\mathcal{D}$ 그리고 functor $F:\mathcal{C}\rightarrow\mathcal{D}$가 주어졌다 하자. 고정된 $A,B\in\obj(\mathcal{C})$에 대해, 함수
 
 $$F_{A,B}:\Mor_\mathcal{C}\rightarrow\Mor_\mathcal{D}(F(A),F(B))$$
 

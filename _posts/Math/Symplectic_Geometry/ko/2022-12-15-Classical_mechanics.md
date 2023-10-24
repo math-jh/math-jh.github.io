@@ -63,7 +63,7 @@ weight: 1
 
 <div class="proposition" markdown="1">
 
-<ins id="pp1">**명제 1**</ins> Phase space 상의 경로 $z(t)=(x(t),y(t))$ ($t_0\leq t\leq t_1$)가 위치조건 $x(t\_0)=x\_0$, $x(t\_1)=x\_1$을 만족하는 경로들 가운데 $\mathcal{A}\_H$의 극값인 것은 $z$가 다음의 *Hamilton's equation*
+<ins id="prop1">**명제 1**</ins> Phase space 상의 경로 $z(t)=(x(t),y(t))$ ($t_0\leq t\leq t_1$)가 위치조건 $x(t\_0)=x\_0$, $x(t\_1)=x\_1$을 만족하는 경로들 가운데 $\mathcal{A}\_H$의 극값인 것은 $z$가 다음의 *Hamilton's equation*
 
 $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\partial x}$$
 

@@ -23,7 +23,7 @@ weight: 7
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Group들의 family $(G_i)$가 주어졌다고 하자. 그럼 어떤 group $G$와, group homomorphism들 $\pr_i:G\rightarrow G_i$가 이들 family의 *direct product<sub>직접곱</sub>*라는 것은, 다음의 universal property가 성립하는 것이다.
+<ins id="def1">**정의 1**</ins> Group들의 family $(G_i)$가 주어졌다고 하자. 그럼 어떤 group $G$와, group homomorphism들 $\pr_i:G\rightarrow G_i$가 이들 family의 *direct product<sub>직접곱</sub>*라는 것은, 다음의 universal property가 성립하는 것이다.
 
 > 임의의 group $H$와 group homomorphism들 $f_i:H\rightarrow G_i$들이 주어졌을 때, $f\_i=\pr\_i\circ f$이도록 하는 유일한 group homomorphism $f:H\rightarrow \prod\_{i\in I} G\_i $가 존재한다.
 >
@@ -35,13 +35,13 @@ weight: 7
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**보조정리 2**</ins> [정의 1](#df1)의 universal property를 만족하는 $(G,(\pr\_i)\_{i\in I})$이 존재한다.
+<ins id="lem2">**보조정리 2**</ins> [정의 1](#def1)의 universal property를 만족하는 $(G,(\pr\_i)\_{i\in I})$이 존재한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 주어진 성질을 만족하는 곱집합 $\prod\_{i\in I} G\_i$는 이미 [\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#df1)에서 정의했다. 표기상의 편의를 위해 $\prod_{i\in I}G_i$의 원소 $f:I\rightarrow \bigcup G_i$를 순서쌍 $(a\_i)\_{i\in I}$으로 표기하기로 한다.
+우선 주어진 성질을 만족하는 곱집합 $\prod\_{i\in I} G\_i$는 이미 [\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#def1)에서 정의했다. 표기상의 편의를 위해 $\prod_{i\in I}G_i$의 원소 $f:I\rightarrow \bigcup G_i$를 순서쌍 $(a\_i)\_{i\in I}$으로 표기하기로 한다.
 
 이제 집합 $\prod_{i\in I}G_i$의 임의의 두 원소 $x=(x\_i)\_{i\in I},y=(y\_i)\_{i\in I}$에 대하여, 
 
@@ -53,7 +53,7 @@ $$\pr_j(xy)=\pr_j(x_iy_i)_{i\in I}=x_jy_j=\pr_j(x)\pr_j(y)$$
 
 이므로 $\pr_j$가 group homomorphism이다. 
 
-이제 이렇게 정의한 $(G=\prod\_{i\in I}G\_i,(\pr\_i)\_{i\in I})$가 [정의 1](#df1)의 universal property를 만족하는 것을 증명하자. 이를 위해서는 곱집합의 universal property로 얻어지는 함수 $f:H\rightarrow G$가 group homomorphism이라는 것만 보이면 충분하다. 이제 임의의 $x,y\in H$와 임의의 $i\in I$에 대하여, 
+이제 이렇게 정의한 $(G=\prod\_{i\in I}G\_i,(\pr\_i)\_{i\in I})$가 [정의 1](#def1)의 universal property를 만족하는 것을 증명하자. 이를 위해서는 곱집합의 universal property로 얻어지는 함수 $f:H\rightarrow G$가 group homomorphism이라는 것만 보이면 충분하다. 이제 임의의 $x,y\in H$와 임의의 $i\in I$에 대하여, 
 
 $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\in I}=f(x)f(y)$$
 
@@ -61,17 +61,17 @@ $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\
 
 </details>
 
-다음 따름정리들은 [정의 1](#df1)로부터 자명하다.
+다음 따름정리들은 [정의 1](#def1)로부터 자명하다.
 
 <div class="proposition" markdown="1">
 
-<ins id="crl3">**따름정리 3**</ins> Group들의 family $(G_i)$에 대하여, 이들 family의 product는 isomorphism에 대해 유일하다. 
+<ins id="cor3">**따름정리 3**</ins> Group들의 family $(G_i)$에 대하여, 이들 family의 product는 isomorphism에 대해 유일하다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[정의 1](#df1)의 universal property를 만족하는 두 $(G,(\pr_i)),(G',(\pr_i'))$이 존재한다 가정하자. 그럼 $G$의 universal property로부터 다음 diagram을 commute하도록 하는 $\psi$가 유일하게 존재한다.
+[정의 1](#def1)의 universal property를 만족하는 두 $(G,(\pr_i)),(G',(\pr_i'))$이 존재한다 가정하자. 그럼 $G$의 universal property로부터 다음 diagram을 commute하도록 하는 $\psi$가 유일하게 존재한다.
 
 ![uniqueness_1](/assets/images/Math/Algebraic_Structures/Direct_product-2.png){:width="229.05px" class="invert" .align-center}
 
@@ -89,7 +89,7 @@ $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\
 
 <div class="proposition" markdown="1">
 
-<ins id="crl4">**따름정리 4**</ins> $(G_i)$, $(H_i)$가 동일한 집합 $I$를 index set으로 갖는 group들의 family이고, 각각의 $i$마다 group homomorphism $f_i:G_i\rightarrow H_i$가 주어졌다 하자. 그럼 다음의 diagram
+<ins id="cor4">**따름정리 4**</ins> $(G_i)$, $(H_i)$가 동일한 집합 $I$를 index set으로 갖는 group들의 family이고, 각각의 $i$마다 group homomorphism $f_i:G_i\rightarrow H_i$가 주어졌다 하자. 그럼 다음의 diagram
 
 ![Product_of_map](/assets/images/Math/Algebraic_Structures/Direct_product-5.png){:width="263.1px" class="invert" .align-center}
 
@@ -119,13 +119,13 @@ $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="crl5">**따름정리 5**</ins> Group들의 family $(G\_i)\_{i\in I}$가 주어졌다 하자. 각각의 $i\in I$에 대하여 $H_i$들이 $G_i$의 normal subgroup이라면, $\prod H_i$도 $\prod G_i$의 normal subgroup이고 그 quotient group은 $\prod (G_i/H_i)$와 같다.
+<ins id="cor5">**따름정리 5**</ins> Group들의 family $(G\_i)\_{i\in I}$가 주어졌다 하자. 각각의 $i\in I$에 대하여 $H_i$들이 $G_i$의 normal subgroup이라면, $\prod H_i$도 $\prod G_i$의 normal subgroup이고 그 quotient group은 $\prod (G_i/H_i)$와 같다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이번에는 canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 4](#crl4)를 적용하면 된다.
+이번에는 canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 4](#cor4)를 적용하면 된다.
 
 ![product_of_normal_subgroups](/assets/images/Math/Algebraic_Structures/Direct_product-7.png){:width="374.7px" class="invert" .align-center}
 
@@ -141,13 +141,13 @@ $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{i\in I}H_i\biggr)\cong\pro
 
 <div class="proposition" markdown="1">
 
-<ins id="crl6">**따름정리 6**</ins> Group들의 family $(G\_i)\_{i\in I}$가 주어졌다 하자. 만일 각각의 $i\in I$에 대하여 $H_i\leq G_i$라면, $\prod H_i$는 $\prod G_i$의 subgroup이다.
+<ins id="cor6">**따름정리 6**</ins> Group들의 family $(G\_i)\_{i\in I}$가 주어졌다 하자. 만일 각각의 $i\in I$에 대하여 $H_i\leq G_i$라면, $\prod H_i$는 $\prod G_i$의 subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Inclusion homomorphism들 $\iota_i:H_i\hookrightarrow G_i$에 [따름정리 4](#crl4)를 적용하면, $\iota$는 단사이고 $\prod H_i$는 정확히 $\iota$의 image이므로 $\prod G_i$의 subgroup이다.
+Inclusion homomorphism들 $\iota_i:H_i\hookrightarrow G_i$에 [따름정리 4](#cor4)를 적용하면, $\iota$는 단사이고 $\prod H_i$는 정확히 $\iota$의 image이므로 $\prod G_i$의 subgroup이다.
 
 ![product_of_subgroups](/assets/images/Math/Algebraic_Structures/Direct_product-8.png){:width="259.05px" class="invert" .align-center}
 
@@ -165,7 +165,7 @@ $$G_i'=\begin{cases} G_i&i\in J\\ \{e\}&i\not\in J\end{cases}$$
 
 $$f_i=\begin{cases} \id_{G_i}&i\in J\\ \iota_i&i\not\in J\end{cases}$$
 
-을 생각하자. 그럼 어렵지 않게 $\prod_{i\in I}G\_i'\cong\prod_{j\in J}G_j$임을 보일 수 있으며, 따라서 [따름정리 5](#crl5)에 의하여 다음의 식
+을 생각하자. 그럼 어렵지 않게 $\prod_{i\in I}G\_i'\cong\prod_{j\in J}G_j$임을 보일 수 있으며, 따라서 [따름정리 5](#cor5)에 의하여 다음의 식
 
 $$\biggl(\prod_{i\in I}G_i\biggr)\bigg/\biggl(\prod_{j\in J}G_j\biggr)\cong\prod_{i\in I\setminus J} G_i$$
 

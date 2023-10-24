@@ -23,7 +23,7 @@ Lie derivative를 이용하면 벡터장이나 differential form을 미분할 �
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> Manifold $M$ 위에 정의된 vector bundle $E\rightarrow M$에 대하여, $E$ 위에서 정의된 *connection<sub>접속</sub>* $\nabla:\mathfrak{X}(M)\times\Gamma(E)\rightarrow\Gamma(E)$는 다음 조건들을 만족하는 함수이다.
+<ins id="def1">**정의 1**</ins> Manifold $M$ 위에 정의된 vector bundle $E\rightarrow M$에 대하여, $E$ 위에서 정의된 *connection<sub>접속</sub>* $\nabla:\mathfrak{X}(M)\times\Gamma(E)\rightarrow\Gamma(E)$는 다음 조건들을 만족하는 함수이다.
 
 1. (Tensoriality) $\nabla_XY$는 첫째 성분에 대하여 $C^\infty$-linear이다.
 2. (Linearity) $\nabla_XY$는 둘째 성분에 대하여 $\mathbb{R}$-linear이다.
@@ -39,7 +39,7 @@ Lie derivative를 이용하면 벡터장이나 differential form을 미분할 �
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> Manifold $M$이 주어졌다 하고, $X\in\mathfrak{X}(M)$, $Y\in\Gamma(E)$라 하자. 임의의 점 $p\in M$에 대하여, $(\nabla_XY)_p$는 
+<ins id="prop2">**명제 2**</ins> Manifold $M$이 주어졌다 하고, $X\in\mathfrak{X}(M)$, $Y\in\Gamma(E)$라 하자. 임의의 점 $p\in M$에 대하여, $(\nabla_XY)_p$는 
 
 1. 점 $p$에서의 벡터장 $X$의 값 $X_p$,
 2. 점 $p$의 열린근방에서의 벡터장 $Y\vert_U$
@@ -50,7 +50,7 @@ Lie derivative를 이용하면 벡터장이나 differential form을 미분할 �
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $(\nabla_XY)_p$가 점 $p$의 열린근방 $U$에서의 벡터장에만 의존한다는 것을 보이자. 두 벡터장 $Y_1,Y_2$가 $p$의 열린근방 $U$에서 같다면 $(\nabla_XY_1)_p=(\nabla_XY_2)_p$임을 보여야 하므로, 이를 위해서는 벡터장 $Y$가 열린근방 $U$의 모든 점에서 항등적으로 $0$이라면 $(\nabla_XY)_p$가 $0$임을 보이면 충분하다. $\varphi$를 $\supp(\varphi)\subseteq U$, $\varphi(p)=1$을 만족하는 bump function이라 하면 벡터장 $\varphi Y$는 $M$ 전체에서 항등적으로 $0$이다. 따라서 [정의 1](#df1)의 둘째 조건으로부터 $\nabla_X(\varphi Y)=0$이다. 한편 라이프니츠 법칙에 의해,
+우선 $(\nabla_XY)_p$가 점 $p$의 열린근방 $U$에서의 벡터장에만 의존한다는 것을 보이자. 두 벡터장 $Y_1,Y_2$가 $p$의 열린근방 $U$에서 같다면 $(\nabla_XY_1)_p=(\nabla_XY_2)_p$임을 보여야 하므로, 이를 위해서는 벡터장 $Y$가 열린근방 $U$의 모든 점에서 항등적으로 $0$이라면 $(\nabla_XY)_p$가 $0$임을 보이면 충분하다. $\varphi$를 $\supp(\varphi)\subseteq U$, $\varphi(p)=1$을 만족하는 bump function이라 하면 벡터장 $\varphi Y$는 $M$ 전체에서 항등적으로 $0$이다. 따라서 [정의 1](#def1)의 둘째 조건으로부터 $\nabla_X(\varphi Y)=0$이다. 한편 라이프니츠 법칙에 의해,
 
 $$0=\nabla_X(\varphi Y)=\varphi\nabla_XY+(X\varphi)Y$$
 
@@ -84,7 +84,7 @@ $$\nabla_{fX}Y=f\nabla_XY$$
 
 이므로 $Y$와 $f$를 잘 택하여 $\nabla_{fX}Y\neq\mathcal{L}_{fX}Y$이도록 하는 것이 항상 가능하다.
 
-어쨌든 $TM$ 위에서 정의된 connection을 생각하면, [명제 2](#pp2)에 의하여 점 $p$에서의 $\nabla_XY$의 값은 $p$ 근방에서의 local frame $(E_i)$들에 의해 완전히 결정된다. 이는
+어쨌든 $TM$ 위에서 정의된 connection을 생각하면, [명제 2](#prop2)에 의하여 점 $p$에서의 $\nabla_XY$의 값은 $p$ 근방에서의 local frame $(E_i)$들에 의해 완전히 결정된다. 이는
 
 $$(\nabla_XY)_p=\nabla_{\sum X^i(p)E_i(p)}\left(\sum Y^i(p)E_i(p)\right)$$
 
@@ -104,7 +104,7 @@ $$\nabla_XY=\sum_{k=1}^n\left(\sum_{i,j=1}^nX(Y^k)+X^iY^j\Gamma_{ij}^k\right)E_k
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> 위에서 정의한 $n^3$개의 함수 $\Gamma_{ij}^k$를 *connection coefficient<sub>접속 계수</sub>*이라 부른다.
+<ins id="def3">**정의 3**</ins> 위에서 정의한 $n^3$개의 함수 $\Gamma_{ij}^k$를 *connection coefficient<sub>접속 계수</sub>*이라 부른다.
 
 </div>
 
@@ -120,7 +120,7 @@ $$\nabla_vY:=v(Y^1)\frac{\partial}{\partial x^i}+\cdots+v(Y^n)\frac{\partial}{\p
 
 <div class="proposition" markdown="1">
 
-<ins id="pp4">**명제 4**</ins> Manifold $M$과, tangent bundle $TM$ 위의 connection $\nabla$가 주어졌다 하자. 함수 $\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$을 다음의 식
+<ins id="prop4">**명제 4**</ins> Manifold $M$과, tangent bundle $TM$ 위의 connection $\nabla$가 주어졌다 하자. 함수 $\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$을 다음의 식
 
 $$(\nabla_X^\ast\alpha)_p(Y)=X\bigl(\alpha(Y)\bigr)-\alpha_p\bigl(\nabla_XY\bigr)_p$$
 
@@ -148,7 +148,7 @@ $$\begin{aligned}(\nabla_X^\ast f\alpha)_pY&=X(f\cdot\alpha(Y))-(f\alpha)_p(\nab
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> Tangent bundle $TM\rightarrow M$ 위에 정의된 connection $\nabla$가 주어졌다 하자. 그럼 $\nabla$를 모든 tensor field $\mathcal{T}^{r,s}(M)$들 위에 다음 두 조건
+<ins id="prop5">**명제 5**</ins> Tangent bundle $TM\rightarrow M$ 위에 정의된 connection $\nabla$가 주어졌다 하자. 그럼 $\nabla$를 모든 tensor field $\mathcal{T}^{r,s}(M)$들 위에 다음 두 조건
 
 $$\nabla_X(F\otimes G)=(\nabla_X F)\otimes G+F\otimes(\nabla_XG),\qquad\nabla_X(F+G)=\nabla_XF+\nabla_XG$$
 
@@ -211,7 +211,7 @@ $$\nabla_{X,Y}^2F(\ldots)=(\nabla^2 F)(\cdots, Y,X)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> 임의의 $(r,s)$-tensor $F$에 대하여,
+<ins id="prop6">**명제 6**</ins> 임의의 $(r,s)$-tensor $F$에 대하여,
 
 $$\nabla_{X,Y}^2F=\nabla_X(\nabla_YF)-\nabla_{\nabla_XY}F$$
 

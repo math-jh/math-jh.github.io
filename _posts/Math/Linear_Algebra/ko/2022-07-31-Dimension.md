@@ -47,7 +47,7 @@ weight: 5
 
 $\mathcal{B}_1=\\{x_1,x_2,\ldots, x_m\\}$, 그리고 $\mathcal{B}_2=\\{y_1,y_2,\ldots, y_n\\}$이라 하고, $m=n$임을 보여야 한다. 결론에 반하여 $m>n$이라 하자.
 
-우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, ⁋명제 6](/ko/math/linear_algebra/basis#pp6)에 의하여, 집합 $\\{x_1,y_1,y_2,\ldots, y_n\\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
+우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, ⁋명제 6](/ko/math/linear_algebra/basis#prop6)에 의하여, 집합 $\\{x_1,y_1,y_2,\ldots, y_n\\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
 
 $$\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_n y_n=0\tag{1}$$
 
@@ -106,7 +106,7 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 <div class="definition" markdown="1">
 
-<ins id="df3">**정의 3**</ins> $F$-벡터공간 $V$에 대하여, $V$의 basis의 cardinality를 $V$의 *차원*이라 하고, $\dim V$, 혹은 $F$를 강조할 필요가 있을 때는 $\dim_FV$로 적는다. 만일 $\dim V$가 유한이라면, $V$는 *유한차원* 벡터공간이고, 그렇지 않다면 $V$는 *무한차원* 벡터공간이다.
+<ins id="def3">**정의 3**</ins> $F$-벡터공간 $V$에 대하여, $V$의 basis의 cardinality를 $V$의 *차원*이라 하고, $\dim V$, 혹은 $F$를 강조할 필요가 있을 때는 $\dim_FV$로 적는다. 만일 $\dim V$가 유한이라면, $V$는 *유한차원* 벡터공간이고, 그렇지 않다면 $V$는 *무한차원* 벡터공간이다.
 
 </div>
 
@@ -129,7 +129,7 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="pp5">**명제 5**</ins> $F$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 basis $\mathcal{B}$가 존재한다.
+<ins id="prop5">**명제 5**</ins> $F$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 basis $\mathcal{B}$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -147,11 +147,11 @@ $$\sum_{x\in S_1} \alpha_xx=\sum_{x\in S}\alpha_xx+\alpha_vv=0$$
 
 </details>
 
-$V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의 명제는 일차독립인 집합에 적절하게 벡터를 추가하여 $V$를 span하도록 할 수 있다는 것을 말한다. 반대로 $V$를 span하는 집합이 있다면, 이들 중 겹치는 일부를 적절하게 빼서 일차독립 조건도 만족하도록 할 수 있다. 이 명제의 증명의 기본 아이디어는 [명제 5](#pp5)과 동일하지만, $S$는 무한집합일 수 있으므로 $S$에서 원소를 하나하나 빼가는 것으로는 증명이 성립하지 않는다.
+$V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의 명제는 일차독립인 집합에 적절하게 벡터를 추가하여 $V$를 span하도록 할 수 있다는 것을 말한다. 반대로 $V$를 span하는 집합이 있다면, 이들 중 겹치는 일부를 적절하게 빼서 일차독립 조건도 만족하도록 할 수 있다. 이 명제의 증명의 기본 아이디어는 [명제 5](#prop5)과 동일하지만, $S$는 무한집합일 수 있으므로 $S$에서 원소를 하나하나 빼가는 것으로는 증명이 성립하지 않는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp6">**명제 6**</ins> $F$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다.
+<ins id="prop6">**명제 6**</ins> $F$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다.
 
 </div>
 <details class="proof" markdown="1">

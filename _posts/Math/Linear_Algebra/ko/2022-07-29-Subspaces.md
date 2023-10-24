@@ -25,13 +25,13 @@ weight: 3
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 어떤 $F$-벡터공간 $V$에 대하여, $V$의 부분집합 $W$가 $V$의 *부분공간<sub>subspace</sub>*이라는 것은, $V$ 위에 정의된 덧셈과 스칼라곱을 $W$ 위로 제한하였을 때 얻어지는 연산들이 $W$ 위에 다시 $F$-벡터공간을 정의하는 것이다. 이를 $W\leq V$와 같이 표현한다.
+<ins id="def1">**정의 1**</ins> 어떤 $F$-벡터공간 $V$에 대하여, $V$의 부분집합 $W$가 $V$의 *부분공간<sub>subspace</sub>*이라는 것은, $V$ 위에 정의된 덧셈과 스칼라곱을 $W$ 위로 제한하였을 때 얻어지는 연산들이 $W$ 위에 다시 $F$-벡터공간을 정의하는 것이다. 이를 $W\leq V$와 같이 표현한다.
 
 </div>
 
 정의에 의해, $C^k(I)$는 $C(I)$의 부분공간이고, $C(I)$는 $\Fun(I,\mathbb{R})$의 부분공간이 된다.
 
-정의를 그대로 사용하여 $V$의 임의의 부분집합 $W$가 부분공간인지를 체크하기 위해서는 이들의 덧셈이 abelian group을 이루는지, 그리고 스칼라곱이 [§벡터공간, ⁋정의 1](/ko/math/linear_algebra/vector_spaces#df1)의 조건을 모두 만족하는지 등을 모두 따져봐야 한다. 하지만, $W$ 위에 정의될 덧셈과 스칼라곱은 $V$로부터 받아오는 것이므로, 몇 가지 성질들은 굳이 체크할 필요가 없다. 
+정의를 그대로 사용하여 $V$의 임의의 부분집합 $W$가 부분공간인지를 체크하기 위해서는 이들의 덧셈이 abelian group을 이루는지, 그리고 스칼라곱이 [§벡터공간, ⁋정의 1](/ko/math/linear_algebra/vector_spaces#def1)의 조건을 모두 만족하는지 등을 모두 따져봐야 한다. 하지만, $W$ 위에 정의될 덧셈과 스칼라곱은 $V$로부터 받아오는 것이므로, 몇 가지 성질들은 굳이 체크할 필요가 없다. 
 
 예를 들어, 임의의 $w\_1,w\_2\in W$에 대해
 
@@ -43,11 +43,11 @@ $$w_1+w_2=w_2+w_1$$
 2. 이와 비슷하게, $V$가 덧셈에 대한 항등원과 역원을 갖는지도 체크해봐야 한다. 물론 $V$는 $0$과 $-w$를 포함하지만, 이들이 $W$에 포함되리라는 보장은 없기 때문이다.
 3. 또, 임의의 스칼라 $\alpha\in F$와 $w\in W$에 대하여, $\alpha w\in W$인지의 여부도 체크해봐야 한다.
 
-하지만 여기에서 조금 더 조건을 간추릴 수도 있다. 만일 $W$가 스칼라곱에 대해 닫혀있기만 하다면, [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#pp2)와 [벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#crl3)에 의해 두 번째 조건은 통째로 생략할 수 있다. $W$가 스칼라곱에 대해 닫혀있으므로, $0w\in W$이고 $(-1)w\in W$여야 하는데, 이들이 각각 $0$과 $-w$이기 때문이다. 따라서 방금 우리는 다음 명제를 증명했다.
+하지만 여기에서 조금 더 조건을 간추릴 수도 있다. 만일 $W$가 스칼라곱에 대해 닫혀있기만 하다면, [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#prop2)와 [벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#cor3)에 의해 두 번째 조건은 통째로 생략할 수 있다. $W$가 스칼라곱에 대해 닫혀있으므로, $0w\in W$이고 $(-1)w\in W$여야 하는데, 이들이 각각 $0$과 $-w$이기 때문이다. 따라서 방금 우리는 다음 명제를 증명했다.
 
 <div class="proposition" markdown="1">
 
-<ins id="pp2">**명제 2**</ins> $F$-벡터공간 $V$에 대하여, $V$의 공집합이 아닌 부분집합 $W$가 $V$의 부분공간인 것은, $W$가 덧셈과 스칼라곱에 대해 닫혀있는 것과 동치이다.
+<ins id="prop2">**명제 2**</ins> $F$-벡터공간 $V$에 대하여, $V$의 공집합이 아닌 부분집합 $W$가 $V$의 부분공간인 것은, $W$가 덧셈과 스칼라곱에 대해 닫혀있는 것과 동치이다.
 
 </div>
 
@@ -59,7 +59,7 @@ $F$-벡터공간 $V$와 그 부분공간 $W$를 생각하자. $W$의 임의의 �
 
 <div class="proposition" markdown="1">
 
-<ins id="pp3">**명제 3**</ins> $V$가 $F$-벡터공간이고 $W$가 $V$의 부분공간이라 하자. $W$의 원소들 $w_1,\ldots, w_n$과 스칼라들 $\alpha_1,\ldots,\alpha_n$에 대하여 다음의 유한합
+<ins id="prop3">**명제 3**</ins> $V$가 $F$-벡터공간이고 $W$가 $V$의 부분공간이라 하자. $W$의 원소들 $w_1,\ldots, w_n$과 스칼라들 $\alpha_1,\ldots,\alpha_n$에 대하여 다음의 유한합
 
 $$\sum_{i=1}^n\alpha_i w_i=\alpha_1w_1+\alpha_2w_2+\cdots+\alpha_nw_n\tag{1}$$
 
@@ -69,7 +69,7 @@ $$\sum_{i=1}^n\alpha_i w_i=\alpha_1w_1+\alpha_2w_2+\cdots+\alpha_nw_n\tag{1}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-귀납법을 이용하여 진행한다. $n=1$인 경우는 보일 것이 없으므로 $n=2$인 경우부터 생각하자. 이 경우 [명제 2](#pp2)에 의하여 $\alpha\_1w\_1,\alpha\_2w\_2$ 각각은 $W$의 원소이고 따라서 이들의 합 $\alpha\_1w\_1+\alpha\_2w\_2$ 또한 $W$의 원소이다.
+귀납법을 이용하여 진행한다. $n=1$인 경우는 보일 것이 없으므로 $n=2$인 경우부터 생각하자. 이 경우 [명제 2](#prop2)에 의하여 $\alpha\_1w\_1,\alpha\_2w\_2$ 각각은 $W$의 원소이고 따라서 이들의 합 $\alpha\_1w\_1+\alpha\_2w\_2$ 또한 $W$의 원소이다.
 
 일반적인 $n$에 대하여, $W$에서의 덧셈은 결합법칙을 만족하므로
 
@@ -91,7 +91,7 @@ $$\pi=3\cdot 1+1\cdot 0.1+4\cdot 0.01+\cdots$$
 
 <div class="definition" markdown="1">
 
-<ins id="df4">**정의 4**</ins> Field $F$의 원소들의 family $(\alpha\_i)\_{i\in I}$에 대하여, $(\alpha\_i)\_{i\in I}$의 *support<sub>지지집합</sub>*는 다음의 집합
+<ins id="def4">**정의 4**</ins> Field $F$의 원소들의 family $(\alpha\_i)\_{i\in I}$에 대하여, $(\alpha\_i)\_{i\in I}$의 *support<sub>지지집합</sub>*는 다음의 집합
 
 $$\supp(\alpha_i)_{i\in I}=\{i\in I\mid\alpha_i\neq 0\}$$
 
@@ -107,7 +107,7 @@ $$\sum_{i\in I}\alpha_i\overset{\text{def}}{=}\sum_{i\in\supp(\alpha_i)}\alpha_i
 
 <div class="definition" markdown="1">
 
-<ins id="df5">**정의 5**</ins> $F$-벡터공간 $V$와 그 원소들의 family $(v\_i)\_{i\in I}$에 대하여, 이들의 *일차결합<sub>linear combination</sub>*은
+<ins id="def5">**정의 5**</ins> $F$-벡터공간 $V$와 그 원소들의 family $(v\_i)\_{i\in I}$에 대하여, 이들의 *일차결합<sub>linear combination</sub>*은
 
 $$\sum_{i\in I}\alpha_i v_i,\qquad\text{$(\alpha_i)_{i\in I}$ finitely supported}$$
 
@@ -179,7 +179,7 @@ $$\gamma p(\x)=\sum_{i=0}^\infty(\gamma\alpha_i)\x^i$$
 
 </div>
 
-무한합 $\sum_{i=1}^\infty\alpha_i v_i$는 그 정의로부터 유한합과 본질적으로 다를 것이 없다. 하지만 만약 우리가 [정의 5](#df5)의 표기법 대신 유한합만 생각했다면, 예를 들어 위에서 $p(\x)+q(\x)$를 정의할 떄, 
+무한합 $\sum_{i=1}^\infty\alpha_i v_i$는 그 정의로부터 유한합과 본질적으로 다를 것이 없다. 하지만 만약 우리가 [정의 5](#def5)의 표기법 대신 유한합만 생각했다면, 예를 들어 위에서 $p(\x)+q(\x)$를 정의할 떄, 
 
 > 만약 $m>n$이라면,  
 >
@@ -189,7 +189,7 @@ $$\gamma p(\x)=\sum_{i=0}^\infty(\gamma\alpha_i)\x^i$$
 >
 > $$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^m c_i'\x^i,\qquad c_i'=\begin{cases}a_i+\beta_i&\text{if $0\leq i\leq m$}\\ a_i&\text{if $m < i\leq n$}\end{cases}.$$
 
-와 같이 복잡한 정의가 필요했을 것이다. 이렇게 표기법 상의 편리함이 있을 경우는 [정의 5](#df5)의 표기법을 따르기로 한다.
+와 같이 복잡한 정의가 필요했을 것이다. 이렇게 표기법 상의 편리함이 있을 경우는 [정의 5](#def5)의 표기법을 따르기로 한다.
 
 <div class="example" markdown="1">
 
