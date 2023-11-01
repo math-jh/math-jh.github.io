@@ -35,22 +35,22 @@ weight: 1
 
 </div>
 
-위상공간 $(X,\mathcal{T})$가 주어졌다 하자. 카테고리 $\Top(X)$를 
+위상공간 $(X,\mathscr{T})$가 주어졌다 하자. 카테고리 $\Top(X)$를 
 
-- $\obj(\Top(X))=\mathcal{T}$,
+- $\obj(\Top(X))=\mathscr{T}$,
 - 임의의 $U,V\in\obj(\Top(X))$에 대하여 
   
   $$\Mor_{\Top(X)}(U,V)=\begin{cases}U\hookrightarrow V&\text{if $U\subseteq V$,}\\\emptyset&\text{otherwise.}\end{cases}$$
 
 으로 정의한다. 그럼 $X$ 위에 presheaf를 정의하는 것은 정확하게 contravariant functor $\mathscr{F}:\Top(X)\rightarrow\Set$을 생각하는 것과 같다. 따라서 위의 [정의 1](#def1)에서, $\mathscr{F}(U)$를 집합이 아닌 abelian group이나 ring 등으로 바꿀 경우, $\mathscr{F}$를 $\Top(X)$에서 $\Ab$, $\Ring$으로의 contravariant functor로 취급할 수 있다. 그러나 presheaf와 sheaf에 대한 기본적인 성질을 살펴볼 때에는 이러한 대수적인 구조를 사용할 일이 없으므로, 우선은 이러한 차이에 관심을 두지 않는다.
 
-한편, $\mathscr{F}(U)$들의 모임은 directed system을 이룬다. ([\[집합론\], §극한, ⁋정의 12](/ko/math/set_theory/limits#def12)) 이를 확인하기 위해, $\mathcal{T}$ 위에 순서관계 $\leq$를
+한편, $\mathscr{F}(U)$들의 모임은 directed system을 이룬다. ([\[집합론\], §극한, ⁋정의 12](/ko/math/set_theory/limits#def12)) 이를 확인하기 위해, $\mathscr{T}$ 위에 순서관계 $\leq$를
 
 $$V\leq U\iff U\subseteq V$$
 
-으로 정의하자.[^1] 그럼 임의의 $U,V\in\mathscr{T}$에 대하여, $U,V\leq U\cap V$이므로 $(\mathcal{T},\leq)$는 right directed set이다. 또, [정의 1](#def1)에서 restriction map들에 대한 두 조건은 정확히 다음 데이터
+으로 정의하자.[^1] 그럼 임의의 $U,V\in\mathscr{T}$에 대하여, $U,V\leq U\cap V$이므로 $(\mathscr{T},\leq)$는 right directed set이다. 또, [정의 1](#def1)에서 restriction map들에 대한 두 조건은 정확히 다음 데이터
 
-$$\bigl((\mathscr{F}(U))_{U\in\mathcal{T}},(\rho_{VU})_{V\leq U}\bigr)$$
+$$\bigl((\mathscr{F}(U))_{U\in\mathscr{T}},(\rho_{VU})_{V\leq U}\bigr)$$
 
 가 directed system임을 보여준다. 따라서 이 directed system의 direct limit ([\[집합론\], §극한, ⁋정의 13](/ko/math/set_theory/limits#def13))이 잘 정의된다.
 
@@ -66,7 +66,7 @@ $$\mathscr{F}_p=\varinjlim_{p\in U}\mathscr{F}(U)$$
 
 [\[집합론\], §극한, ⁋정의 13](/ko/math/set_theory/limits#def13) 이후에 소개한 $\varinjlim\mathscr{F}(U)$의 construction을 생각하면, 
 
-$$\mathscr{F}_p=\{(f,U):p\in U\in\mathcal{T},f\in\mathscr{F}(U)\}/\mathnormal{\sim}$$
+$$\mathscr{F}_p=\{(f,U):p\in U\in\mathscr{T},f\in\mathscr{F}(U)\}/\mathnormal{\sim}$$
 
 임을 알 수 있다. 여기서 $\sim$은 
 
@@ -78,9 +78,9 @@ $$(f,U)\sim(g,V)\iff\text{$\exists$ open neighborhood $W\subseteq U\cap V$ of $p
 
 <ins id="def3">**정의 3**</ins> 위상공간 $X$가 주어졌다 하고, 이 위에 두 presheaf $\mathscr{F},\mathscr{G}$가 주어졌다 하자. 그럼 $\mathscr{F}$에서 $\mathscr{G}$로의 *presheaf morphism<sub>준층 사상</sub>* $\phi:\mathscr{F}\rightarrow\mathscr{G}$는 $U\hookrightarrow V$일 때마다 다음 diagram
 
-img
+![presheaf_morphism](/assets/images/Math/Algebraic_Geometry/Presheaves-1.png){:width="186.15px" class="invert" .align-center}
 
-을 commute하도록 하는 함수들의 모임 $(\phi(U))_{U\in\mathcal{T}}$이다. $X$ 위에서 정의된 presheaf들 $\mathscr{F}:X\rightarrow\mathcal{C}$를 object로, presheaf morphism들을 morphism으로 갖는 category를 $\PSh(X,\mathcal{C})$으로 표기한다.
+을 commute하도록 하는 함수들의 모임 $(\phi(U))_{U\in\mathscr{T}}$이다. $X$ 위에서 정의된 presheaf들 $\mathscr{F}:X\rightarrow\mathscr{C}$를 object로, presheaf morphism들을 morphism으로 갖는 category를 $\PSh(X,\mathscr{C})$으로 표기한다.
 
 </div>
 
@@ -88,7 +88,7 @@ Presheaf $\mathscr{F}$를 $\Top(X)$에서 $\Set$으로의 contravariant functor�
 
 한편, presheaf를 direct system
 
-$$\bigl((\mathscr{F}(U))_{U\in\mathcal{T}},(\rho_{VU})_{V\leq U}\bigr)$$
+$$\bigl((\mathscr{F}(U))_{U\in\mathscr{T}},(\rho_{VU})_{V\leq U}\bigr)$$
 
 으로 생각한다면, 위의 [정의 3](#def3)은 presheaf morphism이 directed system 사이의 함수라는 의미가 된다. [\[집합론\], §극한](/ko/math/set_theory/limits)에서는 direct limit에 대한 정리를 거의 소개하지 않았지만, [\[집합론\], §극한, ⁋정의 7](/ko/math/set_theory/limits#def7)과 [\[집합론\], §극한, ⁋명제 8](/ko/math/set_theory/limits#prop8)을 direct system에 맞도록 적절히 변형하면 다음 명제를 얻는다.
 
@@ -142,5 +142,7 @@ img
 </details>
 
 이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 두 presheaf $\mathscr{F},\mathscr{G}$의 coproduct $\mathscr{F}\oplus\mathscr{G}$는 $U\mapsto \mathscr{F}(U)\times\mathscr{G}(U)$으로 정의된다. 
+
+a
 
 [^1]: Functor $\mathscr{F}$가 contravariant이기 때문에, 어디에선가는 포함관계를 반대로 뒤집어주어야 한다.
