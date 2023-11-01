@@ -8,6 +8,20 @@ main:
     # url: en/categories/
 
 ########## 본문 사이드바 ##########
+
+algebraic_geometry-ko:
+  - title: <a href="/ko/algebraic_geometry/" class="sidebar_title">대수기하학</a>
+    children:
+      - title: "준층"
+        url: ko/math/algebraic_geometry/presheaves
+      - title: "층"
+        url: ko/math/algebraic_geometry/sheaves
+      - title: "Locally ringed space"
+        url: ko/math/algebraic_geometry/locally_ringed_spaces
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
           
 algebraic_structures-ko:
   - title: <a href="/ko/algebraic_structures/" class="sidebar_title">대수적 구조</a>
@@ -30,6 +44,10 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/restricted_sum
       - title: "자유곱"
         url: ko/math/algebraic_structures/free_product
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 algebraic_topology-ko:
   - title: <a href="/ko/algebraic_topology/" class="sidebar_title">대수적 위상수학</a>
@@ -38,6 +56,10 @@ algebraic_topology-ko:
         url: ko/math/algebraic_topology/simplicial_complex
       - title: "호몰로지"
         url: ko/math/algebraic_topology/homology
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 blog_development-ko:
   - title: <a href="/ko/blog_development/" class="sidebar_title">블로그 개발</a>
@@ -104,6 +126,10 @@ category_theory-ko:
         # url: ko/math/category_theory/infinite_categories
       # - title: "A-infinity category"
         # url: ko/math/category_theory/A-infinity_categories
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 
 homological_algebra-ko:
@@ -121,6 +147,10 @@ homological_algebra-ko:
         url: ko/math/homological_algebra/mapping_cone
       - title: "Delta functor"
         url: ko/math/homological_algebra/delta_functor
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 linear_algebra-ko:
   - title: <a href="/ko/linear_algebra/" class="sidebar_title">선형대수학</a>
@@ -173,6 +203,10 @@ linear_algebra-ko:
         url: ko/math/linear_algebra/eigenspace_decomposition
       - title: "대각화"
         url: ko/math/linear_algebra/diagonalization
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 manifold-ko:
   - title: <a href="/ko/manifold/" class="sidebar_title">미분다양체</a>
@@ -213,6 +247,10 @@ manifold-ko:
         url: ko/math/manifold/classical_groups
       - title: "리 대응"
         url: ko/math/manifold/Lie_correspondence
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 set_theory-ko:
   - title: <a href="/ko/set_theory/" class="sidebar_title">집합론</a>
@@ -269,6 +307,10 @@ set_theory-ko:
         url: ko/math/set_theory/natural_numbers
       - title: "극한"
         url: ko/math/set_theory/limits
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 symplectic_geometry-ko:
   - title: <a href="/ko/symplectic_geometry/" class="sidebar_title">사교기하학</a>
@@ -279,6 +321,10 @@ symplectic_geometry-ko:
         url: ko/math/symplectic_geometry/linear_symplectic_geometry
       - title: "사교다양체"
         url: ko/math/symplectic_geometry/symplectic_manifold
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 tensor_algebra-ko:
   - title: <a href="/ko/tensor_algebra/" class="sidebar_title">텐서대수</a>
@@ -291,6 +337,10 @@ tensor_algebra-ko:
         url: ko/math/tensor_algebra/tensor_algebra
       - title: "대칭대수와 외대수"
         url: ko/math/tensor_algebra/symmetric_and_exterior_algebras
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 topology-ko:
   - title: <a href="/ko/topology/" class="sidebar_title">위상수학</a>
@@ -313,6 +363,10 @@ topology-ko:
         url: ko/math/topology/quotient_space
       - title: "곱공간"
         url: ko/math/topology/product_space
+  - title: 
+    children:
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 ########## 메인화면 사이드바 ##########
 
@@ -359,8 +413,8 @@ category-ko:
         url: ko/manifold/
       # - title: "복소다양체"
       #   url: ko/complex_manifold/
-      # - title: "대수기하학"
-      #   url: ko/algebraic_geometry/
+      - title: "대수기하학"
+        url: ko/algebraic_geometry/
       - title: "사교기하학"
         url: ko/symplectic_geometry/
   - title: "Misc"
@@ -368,4 +422,4 @@ category-ko:
       - title: "블로그 개발"
         url: ko/blog_development/
       - title: "찾아보기"
-        url: ko/misc/index
+        url: ko/misc/index_ko
