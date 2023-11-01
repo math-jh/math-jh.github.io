@@ -1,7 +1,7 @@
 ---
 title: "찾아보기"
 layout: archive_custom
-permalink: /ko/misc/
+permalink: /ko/misc/index_ko
 ---
 
 블로그에서 사용한 용어들을 정리해둔 페이지입니다. 한글용어와 영문용어 중, 주로 사용할 것에 체크 (&#9745;) 표시를 해 두었습니다.
@@ -328,6 +328,7 @@ permalink: /ko/misc/
 | <unselected id="power_set">power set</unselected> | <selected> 멱집합 &#9745;</selected> | [\[집합론\] §ZFC 공리계](/ko/math/set_theory/zfc_axioms) |  |
 | <selected id="preimage">preimage &#9745;</selected> | <unselected>역상</unselected> | [\[집합론\] §이항관계들 사이의 연산](/ko/math/set_theory/operation_of_binary_relations)<br/> [\[집합론\] §동치관계의 예시들](/ko/math/set_theory/examples_of_equivalence) (동치관계)<br/>|  |
 | <selected id="preorder_relation">preorder relation &#9745;</selected> | <unselected>원순서관계</unselected> | [\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations) | [Order relation](#order_relation) |
+| <selected id="presheaf">presheaf &#9745;</selected> | <unselected>준층</unselected> | [\[대수기하학\] §준층](/ko/math/algebraic_geometry/presheaves) |  |
 | <unselected id="product">product</unselected> | <selected>곱 &#9745;</selected> | [\[집합론\] §집합의 곱](/ko/math/set_theory/product_of_sets) (집합)<br/>[\[집합론\] §곱집합의 성질](/ko/math/set_theory/property_of_products) (함수)<br/>[\[집합론\] §동치관계의 예시들](/ko/math/set_theory/examples_of_equivalence) (동치관계)<br/>[\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) <br/> [\[집합론\] §기수들 사이의 연산](/ko/math/set_theory/operation_of_cardinals) (cardinal) <br/> [\[미분다양체\] §미분다양체의 예시들](/ko/math/manifold/examples_of_manifolds) (manifold) <br/> [\[위상수학\] §곱공간](/ko/math/topology/product_space) <br/> [\[대수적 구조\] §대수적 구조](/ko/math/algebraic_structures/algebraic_structure) |  |  
 | <selected id="projection">projection &#9745;</selected> | <unselected>사영</unselected> | [\[집합론\] §순서쌍](/ko/math/set_theory/ordered_pair) (순서쌍) <br/>[\[집합론\] §집합의 곱](/ko/math/set_theory/product_of_sets) (집합) |  |
 | <selected id="projection_theorem">projection theorem &#9745;</selected> | <unselected>사영정리</unselected> | [\[선형대수학\] §내적공간](/ko/math/linear_algebra/inner_product_space) |  |
@@ -357,6 +358,7 @@ permalink: /ko/misc/
 | <selected id="restriction">restriction &#9745;</selected> | <unselected>제한</unselected> | [\[집합론\] §함수](/ko/math/set_theory/functions) (함수)<br/> [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
 | <selected id="retraction">retraction &#9745;</selected> | <unselected>수축</unselected> | [\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section) | [Section](#section) |
 | <selected id="Riemannian_metric">Riemannian metric &#9745;</selected> | <unselected>리만 계량</unselected> | [\[미분기하학\] §리만 계량](/ko/math/differential_geometry/Riemannian_metric) |  | 
+| <selected id="ringed_space">ringed space &#9745;</selected> | <unselected>환 달린 공간</unselected> | [\[대수기하학\] §아핀 스킴](/ko/math/algebraic_geometry/affine_schemes) |  |
 | <unselected id="row_echelon_matrix">row échelon matrix</unselected> | <selected>행사다리꼴행렬 &#9745;</selected> | [\[선형대수학\] §가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination) |  |
 | <unselected id="Russell's_paradox">Russell's paradox</unselected> | <selected> 러셀의 역설 &#9745;</selected> | [\[집합론\] §ZFC 공리계](/ko/math/set_theory/zfc_axioms) |  |
 
@@ -370,6 +372,8 @@ permalink: /ko/misc/
 | <selected id="section">section &#9745;</selected> | <unselected>단면</unselected> | [\[집합론\] §이항관계](/ko/math/set_theory/binary_relation) <br/> [\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section) <br/> [\[미분다양체\] §벡터장](/ko/math/manifold/vector_fields) | [Retraction](#retraction) |
 | <selected id="segment">segment &#9745;</selected> | <unselected>절편</unselected> | [\[집합론\] §서수와 정렬집합](/ko/math/set_theory/ordinals)|  |
 | <selected id="semigroup">semigroup &#9745;</selected> | <unselected>준군</unselected> | [\[대수적 구조\] §준군, 모노이드, 군](/ko/math/algebraic_structures/group) |  | 
+| <selected id="sheaf">sheaf &#9745;</selected> | <unselected>층</unselected> | [\[대수기하학\] §층](/ko/math/algebraic_geometry/sheaves) |  |
+| <selected id="sheafification">sheafification &#9745;</selected> | <unselected>층화</unselected> | [\[대수기하학\] §층](/ko/math/algebraic_geometry/sheaves) |  |
 | <unselected id="similar_matrix">similar matrix</unselected> | <selected> 닮은 행렬 &#9745;</selected> | [\[선형대수학\] §기저변환](/ko/math/linear_algebra/change_of_basis) |  |
 | <selected id="singular_matrix">singular matrix &#9745;</selected> | <unselected>특이행렬</unselected> | [\[선형대수학\] §행렬](/ko/math/linear_algebra/matrix) |  |
 | <selected id="slice">slice &#9745;</selected> | <unselected>조각</unselected> |[\[미분다양체\] §음함수 정리](/ko/math/manifold/implicit_function_theorem) |
@@ -381,6 +385,7 @@ permalink: /ko/misc/
 | <selected id="spanning_set">spanning set &#9745;</selected> | <unselected>생성집합</unselected> | [\[선형대수학\] §벡터공간의 기저](/ko/math/linear_algebra/basis) |  |
 | <selected id="spectrum">spectrum &#9745;</selected> | <unselected>스펙트럼</unselected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
 | <selected id="split">split &#9745;</selected> | <unselected>분해</unselected> | [\[호몰로지 대수학\] §완전열](/ko/math/homological_algebra/exact_sequences) |  |
+| <selected id="stalk">stalk &#9745;</selected> | <unselected>줄기</unselected> | [\[대수기하학\] §준층](/ko/math/algebraic_geometry/presheaves) |  |
 | <selected id="strict_ordering">strict ordering &#9745;</selected> | <unselected>강한 순서관계</unselected> | [\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations) | [Order relation](#order_relation) |
 | <unselected id="strictly_decreasing">strictly decreasing</unselected> | <selected>순감소 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
 | <unselected id="strictly_increasing">strictly increasing</unselected> | <selected>순증가 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
