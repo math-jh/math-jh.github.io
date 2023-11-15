@@ -115,7 +115,7 @@ $$\bigl((\mathscr{F}(U))_{U\in\mathscr{T}},(\rho_{VU})_{V\leq U}\bigr)$$
 - 각각의 열린집합 $U\subseteq X$마다, $U\mapsto \ker(\phi(U))$
 - 포함관계에 있는 두 열린집합 $U\subseteq V$마다 다음의 diagram
   
-  img
+  ![presheaf_kernel-1](/assets/images/Math/Algebraic_Geometry/Presheaves-2.png){:width="421.05px" class="invert" .align-center}
 
   을 통해 유일하게 결정되는 restriction map $\rho_{VU}:\ker(\phi(V))\rightarrow\ker(\phi(U))$
 
@@ -133,16 +133,22 @@ $$\bigl((\mathscr{F}(U))_{U\in\mathscr{T}},(\rho_{VU})_{V\leq U}\bigr)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-다음의 두 diagram
+다음의 diagram
 
-img
+![presheaf_kernel-2](/assets/images/Math/Algebraic_Geometry/Presheaves-3.png){:width="438.75px" class="invert" .align-center}
 
 와 kernel의 universal property에 의해 자명하다. 
 
 </details>
 
-이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 두 presheaf $\mathscr{F},\mathscr{G}$의 coproduct $\mathscr{F}\oplus\mathscr{G}$는 $U\mapsto \mathscr{F}(U)\times\mathscr{G}(U)$으로 정의된다. 
+이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 두 presheaf $\mathscr{F},\mathscr{G}$의 coproduct $\mathscr{F}\oplus\mathscr{G}$는 $U\mapsto \mathscr{F}(U)\times\mathscr{G}(U)$으로 정의된다. 따라서 주어진 위상공간 $X$ 위에서 정의된 abelian presheaf들의 카테고리 $\PSh^\Ab(X)$은 abelian category가 된다.
 
-a
+---
+**참고문헌**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/). 
+
+---
 
 [^1]: Functor $\mathscr{F}$가 contravariant이기 때문에, 어디에선가는 포함관계를 반대로 뒤집어주어야 한다.
