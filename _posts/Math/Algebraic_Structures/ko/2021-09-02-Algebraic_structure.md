@@ -107,6 +107,8 @@ $$g\circ f=\id_A,\qquad f\circ g=\id_{A'}$$
 
 </div>
 
+어렵지 않게 전단사인 magma homomorphism은 magma isomorphism이라는 것을 안다. 또, 다음이 성립한다.
+
 <div class="proposition" markdown="1">
 
 <ins id="prop7">**명제 7**</ins> Magma homomorphism $f:A_1\rightarrow A_2$, $g:A_2\rightarrow A_3$에 대하여 합성 $g\circ f$는 magma homomorphism이다.
