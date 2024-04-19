@@ -1,0 +1,165 @@
+\documentclass[convert={density=1024}]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{../../preamble/quiver}
+\usepackage{../../preamble/Math-operators}
+\begin{document}
+
+% Restriction_of_scalars (Symmetric_and_exterior_algebra-9.png)
+\begin{tikzcd}
+	M & {M'} \\
+	{\bigwedge\nolimits_{A}(M)} & {\bigwedge\nolimits_{A'}(M')}
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-1, to=1-2]
+	\arrow[dashed, from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}
+
+% Universal_property_of_tensor_algebra (Tensor_algebra-1.png)
+\begin{tikzcd}
+	M\ar[dr, "f" below left]\rar["\iota"]&\mathcal{T}(M)\dar[dashed, "\tilde{f}"]\\
+	&E
+\end{tikzcd}
+
+% Uniqueness_of_tensor_algebra_1 (Tensor_algebra-2.png)
+\begin{tikzcd}
+	M\ar[dr, "\iota'" below left]\rar["\iota"]&\mathcal{T}(M)\dar[dashed, "\psi"]\\
+	&\mathcal{T}'(M)
+\end{tikzcd}
+
+% Uniqueness_of_tensor_algebra_2 (Tensor_algebra-3.png)
+\begin{tikzcd}
+	M\ar[dr, "\iota" below left]\rar["\iota'"]&\mathcal{T}'(M)\dar[dashed, "\phi"]\\
+	&\mathcal{T}(M)
+\end{tikzcd}
+
+% Uniqueness_of_tensor_algebra_3 (Tensor_algebra-4.png)
+\begin{tikzcd}
+	M\ar[dr, "\iota" below left]\rar["\iota"]&\mathcal{T}(M)\dar[dashed]\\
+	&\mathcal{T}(M)
+\end{tikzcd}
+
+% Functoriality_of_tensor_algebra (Tensor_algebra-5.png)
+\begin{tikzcd}
+	M\dar["\iota_M" left]\rar["u", above]&N\dar["\iota_N", right]\\
+	\mathcal{T}(M)\rar["\mathcal{T}(u)" below, dashed]&\mathcal{T}(N)
+\end{tikzcd}
+
+% Functoriality_proof (Tensor_algebra-6.png)
+\begin{tikzcd}
+	M\ar[dr, "\iota_N\circ u" below left]\rar["\iota_M"]&\mathcal{T}(M)\dar[dashed, "\mathcal{T}(u)"]\\
+	&\mathcal{T}(N)
+\end{tikzcd}
+
+% Composition (Tensor_algebra-7.png)
+\begin{tikzcd}
+	M\dar["\iota_M" left]\rar["u" above]&N\dar["\iota_N" right]\rar["v" above]&P\dar["\iota_P" right]\\
+	\mathcal{T}(M)\rar["\mathcal{T}(u)" below, dashed]&\mathcal{T}(N)\rar["\mathcal{T}(v)" below, dashed]&\mathcal{T}(P)
+\end{tikzcd}
+
+% Restriction_of_scalar (Tensor_algebra-8.png)
+\begin{tikzcd}
+	M\rar["u" above]\dar["\iota_M" left]&M'\dar["\iota_{M'}" right]\\
+	\mathcal{T}_A(M)\rar[dashed]&\mathcal{T}_{A'}(M')
+\end{tikzcd}
+
+% Extension_of_scalar (Tensor_algebra-9.png)
+\begin{tikzcd}
+	A'\otimes_AM\rar["\iota_{A'\otimes M}" above]\drar["{\operatorname{id}_{A'}}\otimes\iota_M" below left]&\mathcal{T}_{A'}(A'\otimes_AM)\dar[dashed]\\
+	&A'\otimes_A\mathcal{T}_A(M)
+\end{tikzcd}
+
+% Extension_of_scalar_proof (Tensor_algebra-10.png)
+\begin{tikzcd}
+	M & {\mathcal{T}_A(M)} \\
+	& {\mathcal{T}_{A'}(A'\otimes_AM)}
+	\arrow["{\iota_M}", from=1-1, to=1-2]
+	\arrow["{\iota_{A'\otimes M}\circ(1\otimes {\operatorname{id}_M})}"'{pos=0.5}, from=1-1, to=2-2]
+	\arrow[dashed, from=1-2, to=2-2]
+\end{tikzcd}
+
+% Extension_of_scalar_proof (Tensor_algebra-11.png)
+\begin{tikzcd}
+	{\mathcal{T}_A(M)} & {A'\otimes_A\mathcal{T}_A(M)} \\
+	& {\mathcal{T}_{A'}(A'\otimes_AM)}
+	\arrow["{1\otimes{\operatorname{id}_{\mathcal{T}_AM}}}", from=1-1, to=1-2]
+	\arrow[dashed, from=1-2, to=2-2]
+	\arrow[from=1-1, to=2-2]
+\end{tikzcd}
+
+% Universal_property_of_symmetric_algebra (Symmetric_and_exterior_algebra-1.png)
+\begin{tikzcd}
+	M & {\mathcal{S}(M)} \\
+	& E
+	\arrow["q", from=1-1, to=1-2]
+	\arrow[dashed, from=1-2, to=2-2]
+	\arrow["f"', from=1-1, to=2-2]
+\end{tikzcd}
+
+% Universal_property_of_tensor_algebra (Symmetric_and_exterior_algebra-2.png)
+\begin{tikzcd}
+	M & {\mathcal{T}(M)} \\
+	& E
+	\arrow["\iota", from=1-1, to=1-2]
+	\arrow["f"', from=1-1, to=2-2]
+	\arrow[dashed, from=1-2, to=2-2]
+\end{tikzcd}
+
+% First_isomorphism (Symmetric_and_exterior_algebra-3.png)
+\begin{tikzcd}
+	M & {\mathcal{T}(M)} \\
+	& E
+	\arrow["\iota", from=1-1, to=1-2]
+	\arrow["f"', from=1-1, to=2-2]
+	\arrow[dashed, from=1-2, to=2-2]
+\end{tikzcd}
+
+% Functoriality_of_symmetric_algebra (Symmetric_and_exterior_algebra-4.png)
+\begin{tikzcd}
+	M & N \\
+	{\mathcal{S}(M)} & {\mathcal{S}(N)}
+	\arrow["u", from=1-1, to=1-2]
+	\arrow["{q_N}", from=1-2, to=2-2]
+	\arrow["{q_M}"', from=1-1, to=2-1]
+	\arrow["{\mathcal{S}(u)}"', dashed, from=2-1, to=2-2]
+\end{tikzcd}
+
+% Restriction_of_scalars (Symmetric_and_exterior_algebra-5.png)
+\begin{tikzcd}
+	M & {M'} \\
+	{\mathcal{S}_A(M)} & {\mathcal{S}_{A'}(M')}
+	\arrow["u", from=1-1, to=1-2]
+	\arrow["{q_M}"', from=1-1, to=2-1]
+	\arrow["{q_{M'}}", from=1-2, to=2-2]
+	\arrow[dashed, from=2-1, to=2-2]
+\end{tikzcd}
+
+% Extension_of_scalars (Symmetric_and_exterior_algebra-6.png)
+\begin{tikzcd}
+	{A'\otimes_AM} & {\mathcal{S}_{A'}(A'\otimes_AM)} \\
+	& {A'\otimes_A\mathcal{S}_A(M)}
+	\arrow["{q_{A'\otimes M}}", from=1-1, to=1-2]
+	\arrow[dashed, from=1-2, to=2-2]
+	\arrow["{{\operatorname{id}_{A'}}\otimes q_M}"', from=1-1, to=2-2]
+\end{tikzcd}
+
+% Universal_property_of_exterior_algebra (Symmetric_and_exterior_algebra-7.png)
+\begin{tikzcd}
+	M & {\bigwedge(M)} \\
+	& E
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-2]
+	\arrow[dashed, from=1-2, to=2-2]
+\end{tikzcd}
+
+% Functoriality_of_exterior_algebra (Symmetric_and_exterior_algebra-8.png)
+\begin{tikzcd}
+	M & {M'} \\
+	{\bigwedge(M)} & {\bigwedge(M')}
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-1, to=1-2]
+	\arrow[dashed, from=2-1, to=2-2]
+\end{tikzcd}
