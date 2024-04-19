@@ -66,21 +66,50 @@ $$x\cdot(\beta\alpha)=(x\cdot\beta)\cdot\alpha,\qquad x\cdot e=x$$
 
 라 할 수 있다. 
 
-Left action과 right action은 표기상의 차이일 뿐, 본질적으로는 동일한 의미를 갖는다. 즉, $E$가 left $M$-set이라 하면 이는 자연스럽게 right $M^\op$-set으로 생각할 수 있고, 거꾸로 $E$가 right $M$-set이라 하면 이는 자연스럽게 left $M^\op$-set으로 생각할 수 있다. 따라서 앞으로 일반적인 이론을 전개할 때는 모든 action이 left action인 것으로 생각한다.
+Left action과 right action은 표기상의 차이일 뿐, 본질적으로는 동일한 의미를 갖는다. 즉, $E$가 left $M$-set이라 하면 이는 자연스럽게 right $M^\op$-set으로 생각할 수 있고, 거꾸로 $E$가 right $M$-set이라 하면 이는 자연스럽게 left $M^\op$-set으로 생각할 수 있다. 따라서 앞으로 일반적인 이론을 전개할 때는 모든 action이 left action인 것으로 생각한다. 
+
+<div class="example" markdown="1">
+
+<ins id="ex4">**예시 4**</ins> Monoid $M$과 $M$-set $E$가 주어졌다 하자. 그럼 $\mathcal{P}(E)$도 자연스러운 $M$-set 구조를 갖는다. 임의의 $\alpha\in M$과 $A\in \mathcal{P}(E)$에 대하여, $\alpha\cdot A$를 다음 식
+
+$$\alpha\cdot A=\{\alpha\cdot a:a\in A\}$$
+
+으로 정의하자. 그럼 
+
+$$(\alpha\beta)\cdot A=\{(\alpha\beta)\cdot a:a\in A\}=\{\alpha\cdot(\beta\cdot a):a\in A\}=\alpha\cdot\{\beta\cdot a:a\in A\}=\alpha\cdot(\beta\cdot A)$$
+
+이므로 이것이 $\mathcal{P}(E)$ 위에 $M$-set 구조를 정의한다.
+
+</div>
 
 ## $M$-set homomorphism
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Monoid $M$이 고정되었다 하고, $E,E'$가 $M$-set들이라 하자. 함수 $f:E\rightarrow E'$가 *$M$-set homomorphism*이라는 것은 모든 $x\in E$와 $\alpha\in M$에 대하여
+<ins id="def5">**정의 5**</ins> Monoid $M$이 고정되었다 하고, $E,E'$가 $M$-set들이라 하자. 함수 $f:E\rightarrow E'$가 *$M$-set homomorphism*이라는 것은 모든 $x\in E$와 $\alpha\in M$에 대하여
 
 $$f(\alpha\cdot x)=\alpha\cdot f(x)$$
 
-이 성립하는 것이다.
+이 성립하는 것이다. 
 
 </div>
 
 어렵지 않게 $M$-set homomorphism들의 합성이 $M$-set homomorphism이고, 또 항등함수가 $M$-set homomorphism인 것을 확인할 수 있다. 즉, (left) $M$-set들의 모임은 카테고리를 이룬다. 이를 $\lset{M}$으로 적는다.
+
+임의의 monoid homomorphism $\phi:M \rightarrow M'$을 고정하자. 그럼 임의의 $M'$-set $E$에 대하여, 다음 합성
+
+$$M\overset{\phi}{\longrightarrow}M'\overset{\rho}{\longrightarrow}\End(E)$$
+
+을 통해 $E$를 $M$-set으로 생각할 수 있다. 이렇게 정의되는 action을 $\phi^\ast\rho$라 적자. 그럼 명시적으로 $\phi^\ast\rho$는 임의의 $\alpha\in M$과 $x\in E$에 대해,
+
+$$(\phi^\ast\rho)(\alpha)(x)=\rho(\phi(\alpha))(x)$$
+
+으로 정의되는 action이다. 이제 두 $M'$-action $\rho:M' \rightarrow \End(E)$와 $\rho':M' \rightarrow \End(E)$가 주어졌다 하고, 이들 사이의 $M'$-homomorphism $f:E \rightarrow E'$가 주어졌다 하자. 그럼 임의의 $\alpha\in M$과 $x\in E$에 대하여,
+
+$$f((\phi^\ast\rho)(\alpha)(x))=f(\rho(\phi(\alpha))(x))=\rho'(\phi(\alpha))(f(x))=(\phi^\ast\rho')(f(x))$$
+
+이 성립한다. 즉 임의의 monoid homomorphism $\phi:M \rightarrow M'$은 $\lset{M'}$에서 $\lset{M}$으로의 functor를 정의한다. 툭별히 $\iota$가 submonoid의 inclusion이라면 이는 monoid action의 restriction이 된다. 
+
 
 한편, $(E_i)$들이 $M$-set들의 모임이면 이들의 product $\prod E_i$에 다음의 식
 
@@ -100,7 +129,7 @@ $$x\sim y\implies\alpha\cdot x\sim\alpha\cdot y$$
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> $M$-set $E$의 부분집합 $A$에 대하여, $A$의 *stabilizer<sub>안정자</sub>*는 $\alpha A\subseteq A$를 만족하는 $\alpha$들의 집합을 뜻한다. 이를 $\Stab (A)$로 적는다.
+<ins id="def6">**정의 6**</ins> $M$-set $E$의 부분집합 $A$에 대하여, $A$의 *stabilizer<sub>안정자</sub>*는 $\alpha A\subseteq A$를 만족하는 $\alpha$들의 집합을 뜻한다. 이를 $\Stab (A)$로 적는다.
 
 </div>
 
@@ -108,7 +137,7 @@ $$x\sim y\implies\alpha\cdot x\sim\alpha\cdot y$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> $M$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $M$의 submonoid이다. 
+<ins id="prop7">**명제 7**</ins> $M$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $M$의 submonoid이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -124,7 +153,7 @@ $$(\alpha\beta)\cdot x=\alpha\cdot(\beta\cdot x)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor7">**따름정리 7**</ins> Group $G$가 주어졌다 하자. $G$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $G$의 subgroup이다.
+<ins id="cor8">**따름정리 8**</ins> Group $G$가 주어졌다 하자. $G$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $G$의 subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -142,7 +171,7 @@ $$\alpha^{-1}\cdot y=\alpha^{-1}(\alpha\cdot x)=x\in A$$
 
 </details>
 
-위의 따름정리의 증명으로부터, group $G$가 집합 $E$에 act할 때, $\rho_g$는 반드시 bijection임을 안다. 즉 $\im\rho\subseteq \Aut(E)$가 항상 성립한다.
+위의 따름정리의 증명으로부터, group $G$가 집합 $E$에 act할 때, $\rho_g$는 반드시 전단사임을 안다. 즉 $\im\rho\subseteq \Aut(E)$가 항상 성립한다.
 
 ## 자기 자신 위에 작용하는 군
 
@@ -150,13 +179,17 @@ $$\alpha^{-1}\cdot y=\alpha^{-1}(\alpha\cdot x)=x\in A$$
 
 일반적으로 대수적인 대상이 주어졌을 때, endomorphism monoid의 원소들은 대수적인 구조를 보존해야 한다. 집합 $E$는 별도의 대수적인 구조가 없었으므로 $\End(E)=\Fun(E,E)$가 성립하지만, 가령 monoid $M$에 대해서 $\End(M)$이라 하면 항상 $M$의 *monoid endomorphism*들의 모임을 뜻하는 것으로 이해하며, $\Aut(M)$ 또한 마찬가지이다. 
 
+특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. 즉 $\rho:G\rightarrow\End(G)$가 주어져 있다 하면, [따름정리 8](#cor8)의 증명으로부터 $\rho$의 image는 모두 전단사라는 것을 안다. 그런데 전단사인 group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structure#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
+
+자기 자신 위에서 정의된 group action 중 몇 가지는 기억해둘 만한 가치가 있다.
+
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> Group $G$의 임의의 원소 $g$에 대하여, $\rho_g\in\End(G)$를 다음의 식
+<ins id="prop9">**명제 9**</ins> Group $G$의 임의의 원소 $g$에 대하여, $\rho_g\in\Aut(G)$를 다음의 식
 
 $$\rho_g(x)=gxg^{-1}$$
 
-으로 정의하면 $\rho_g\in\Aut(G)$가 성립하며, 대응 $\rho:g\mapsto \rho_g$는 group homomorphism이 된다. 
+으로 정의하면 대응 $\rho:g\mapsto \rho_g$는 group homomorphism이 된다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -166,7 +199,7 @@ $$\rho_g(x)=gxg^{-1}$$
 
 $$\rho_g(xy)=g(xy)g^{-1}=(gxg^{-1})(gyg^{-1})=\rho_g(x)\rho_g(y)$$
 
-가 성립하는 것으로부터 $\rho_g$가 group homomorphism이라는 것을 안다. 따라서 $\im\rho_g\subseteq\Aut(G)$가 성립한다. 
+가 성립하는 것으로부터 $\rho_g$가 group homomorphism이라는 것을 안다. 따라서 $\im\rho\subseteq\Aut(G)$가 성립한다. 
 
 한편 임의의 $g,h\in G$와 $x\in G$에 대하여,
 
@@ -178,13 +211,13 @@ $$\rho_{gh}(x)=(gh)x(gh)^{-1}=g(hxh^{-1})g^{-1}=(\rho_g\circ\rho_h)(x)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Group $G$가 주어졌다 하자. [명제 8](#prop8)의 automorphism $\rho_g$를 $g$에 의해 정의되는 *inner automorphism*이라 부르고, 이들의 모임을 $\Inn(G)$로 적는다.
+<ins id="def10">**정의 10**</ins> Group $G$가 주어졌다 하자. [명제 9](#prop9)의 automorphism $\rho_g$를 $g$에 의해 정의되는 *inner automorphism*이라 부르고, 이들의 모임을 $\Inn(G)$로 적는다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> Group $G$에 대하여, inner automorphism들의 모임 $\Inn(G)$는 $\Aut(G)$의 normal subgroup이다.
+<ins id="prop11">**명제 11**</ins> Group $G$에 대하여, inner automorphism들의 모임 $\Inn(G)$는 $\Aut(G)$의 normal subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -200,9 +233,6 @@ $$(f\circ\rho_g\circ f^{-1})(x)=f(gf^{-1}(x)g^{-1})=f(g)xf(g^{-1})=\rho_{f(g)}(x
 
 </details>
 
-임의의 group $G$가 주어졌을 때, $\Aut(G)$는 $\Aut(G)\hookrightarrow \Fun(G,G)$를 통해 $G$에 act하며 
-
-
 한편, $\rho:G\rightarrow\Inn(G)$는 전사이며, 따라서 first isomorphism theorem에 의하여
 
 $$G/\ker\rho\cong\Inn(G)$$
@@ -211,7 +241,7 @@ $$G/\ker\rho\cong\Inn(G)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> Group $G$와, [명제 8](#prop8)에서 정의한 group homomorphism $\rho:G\rightarrow\Inn(G)$에 대하여, $\ker\rho$를 $G$의 *center<sub>중심</sub>*이라 부르고 $C(G)$로 표기한다.
+<ins id="def12">**정의 12**</ins> Group $G$와, [명제 9](#prop9)에서 정의한 group homomorphism $\rho:G\rightarrow\Inn(G)$에 대하여, $\ker\rho$를 $G$의 *center<sub>중심</sub>*이라 부르고 $C(G)$로 표기한다.
 
 </div>
 
@@ -225,7 +255,7 @@ $$C(G)=\{g\in G:gx=xg\text{ for all $x\in G$}\}$$
 
 가 성립한다. 
 
-$\Aut(G)\hookrightarrow\End(G)$는 monoid homomorphism이며, 따라서 
+한편, $G$의 endomorphism monoid $\End(G)$는 자명한 방식으로 $G$ 위에 act한다. [예시 4](#ex4)에 의하여, 이 action으로부터 $\mathcal{P}(G)$ 위에 $\End(G)$-set 구조를 정의할 수 있으며, [정의 5]($def5) 이후의 논증으로부터 $\End(G)$의 임의의 subgroup, 가령 $\Aut(G)$와 $\Inn(G)$ 또한 $\mathcal{P}(G)$에 act하는 것을 안다. 이제 $G$의 subgroup $N$이 normal subgroup인 것은 모든 $g\in G$에 대하여 $gNg^{-1}=N$이 성립하는 것과 동치이므로, 
 
 ---
 

@@ -16,8 +16,10 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/presheaves
       - title: "층"
         url: ko/math/algebraic_geometry/sheaves
-      - title: "Locally ringed space"
-        url: ko/math/algebraic_geometry/locally_ringed_spaces
+      - title: "스펙트럼"
+        url: ko/math/algebraic_geometry/spectrum
+      - title: "스킴"
+        url: ko/math/algebraic_geometry/schemes
   - title: 
     children:
       - title: "찾아보기"
