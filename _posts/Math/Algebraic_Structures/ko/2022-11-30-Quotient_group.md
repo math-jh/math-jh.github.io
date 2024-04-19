@@ -76,7 +76,7 @@ $$(ac)^{-1}(bc)=c^{-1}(a^{-1}b)c$$
 
 </div>
 
-위의 논의에 의하여, $G$의 normal subgroup $H$가 주어졌을 때 그에 해당하는 quotient group을 얻을 수 있다. 이 때 얻어지는 quotient group을 $G/H$로 적는다.
+한편, $g$를 임의로 택할 수 있으므로, $H$가 normal subgroup인 것은 임의의 $g$에 대하여 $gHg^{-1}=H$가 성립하는 것과 동치라는 것을 보일 수 있다. 위의 논의에 의하여, $G$의 normal subgroup $H$가 주어졌을 때 그에 해당하는 quotient group을 얻을 수 있다. 이 때 얻어지는 quotient group을 $G/H$로 적는다.
 
 [명제 1](#prop1)에서, 임의의 $a\in [e]$에 대하여 다음 식
 
