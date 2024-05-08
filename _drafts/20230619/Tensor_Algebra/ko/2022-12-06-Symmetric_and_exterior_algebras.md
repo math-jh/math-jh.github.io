@@ -3,13 +3,13 @@
 title: "대칭대수와 외대수"
 excerpt: "대칭대수와 외대수의 정의, universal property와 성질들"
 
-categories: [Math / Tensor Algebra]
-permalink: /ko/math/tensor_algebra/symmetric_and_exterior_algebras
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/symmetric_and_exterior_algebras
 header:
-    overlay_image: /assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "tensor_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2022-12-06
 last_modified_at: 2022-12-06
@@ -21,7 +21,7 @@ weight: 4
 
 Tensor algebra $\mathcal{T}(M)$은 그 자체로도 흥미로운 대수적 대상이지만, 특별히 $\mathcal{T}(M)$에서 만들어지는 두 quotient algebra 구조가 중요하다. 
 
-우선 임의의 $x,y\in M$에 대해, commutator $x\otimes y-y\otimes x$으로 생성되는 two-sided ideal $\mathfrak{a}$를 생각하자. 특히 $\mathfrak{a}$는 차수 2짜리 homogeneous element들로 생성되므로, [§등급대수, ⁋보조정리 2](/ko/math/tensor_algebra/graded_homomorphism#lem2)에 의해 $\mathfrak{a}$는 graded ideal이고 따라서 $\mathcal{T}(M)/\mathfrak{a}$는 graded algebra 구조를 갖는다. 
+우선 임의의 $x,y\in M$에 대해, commutator $x\otimes y-y\otimes x$으로 생성되는 two-sided ideal $\mathfrak{a}$를 생각하자. 특히 $\mathfrak{a}$는 차수 2짜리 homogeneous element들로 생성되므로, [§등급대수, ⁋보조정리 2](/ko/math/multilinear_algebra/graded_homomorphism#lem2)에 의해 $\mathfrak{a}$는 graded ideal이고 따라서 $\mathcal{T}(M)/\mathfrak{a}$는 graded algebra 구조를 갖는다. 
 
 이번에는 임의의 $x\in M$에 대하여, $x\otimes x$들로 생성되는 two-sided ideal $\mathfrak{b}$를 생각하자. 그럼 마찬가지로 $\mathfrak{b}$는 차수 2짜리 homogeneous element들로 생성되므로 graded ideal이다. 따라서 $\mathcal{T}(M)/\mathfrak{b}$ 또한 graded algebra 구조를 갖는다.
 
@@ -61,7 +61,7 @@ $$q(x)q(y)-q(y)q(x)=(p\circ\iota)(x)(p\circ\iota)(y)-(p\circ\iota)(y)(p\circ\iot
 
 <ins id="thm3">**정리 3**</ins> $A$-module $M$을 고정하고, $A$-algebra $E$로의 $A$-module homomorphism $f:M\rightarrow E$가 모든 $x,y\in M$에 대해 $f(x)f(y)=f(y)f(x)$를 만족한다 하자. 그럼 다음 diagram을 commute하도록 하는 유일한 $A$-algebra homomorphism $\tilde{f}:\mathcal{S}(M)\rightarrow E$가 존재한다.
 
-![universal_property_of_symmetric_algebra](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-1.png){:width="164.55px" class="invert" .align-center}
+![universal_property_of_symmetric_algebra](/assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras-1.png){:width="164.55px" class="invert" .align-center}
 
 </div>
 <details class="proof" markdown="1">
@@ -71,11 +71,11 @@ $$q(x)q(y)-q(y)q(x)=(p\circ\iota)(x)(p\circ\iota)(y)-(p\circ\iota)(y)(p\circ\iot
 
 Tensor algebra $\mathcal{T}(M)$의 universal property에 의하여, 다음 diagram을 commute하도록 하는 유일한 $A$-algebra homomorphism $\mathcal{T}(M)\rightarrow E$가 존재한다. 
 
-![universal_property_of_tensor_algebra](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-2.png){:width="166.95px" class="invert" .align-center}
+![universal_property_of_multilinear_algebra](/assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras-2.png){:width="166.95px" class="invert" .align-center}
 
 그런데 주어진 조건 $f(x)f(y)-f(y)f(x)=0$에 의해 이 함수의 kernel이 $\mathfrak{a}$를 포함하므로, 다음의 diagram
 
-![first_isomorphism](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-3.png){:width="182.25px" class="invert" .align-center}
+![first_isomorphism](/assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras-3.png){:width="182.25px" class="invert" .align-center}
 
 을 commute하도록 하는 유일한 $\mathcal{T}(M)/\mathfrak{a}\rightarrow E$가 존재한다. 이로부터 원하는 결과를 얻는다.
 
@@ -87,7 +87,7 @@ Tensor algebra $\mathcal{T}(M)$의 universal property에 의하여, 다음 diagr
 
 <ins id="crl4">**따름정리 4**</ins> 임의의 $A$-module homomorphism $u:M \rightarrow N$에 대하여, 다음 diagram
 
-![Functoriality_of_symmetric_algebra](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-4.png){:width="192px" class="invert" .align-center}
+![Functoriality_of_symmetric_algebra](/assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras-4.png){:width="192px" class="invert" .align-center}
 
 을 commute하도록 하는 유일한 $A$-algebra homomorphism $\mathcal{S}(u)$이 존재한다.
 
@@ -109,7 +109,7 @@ $$(q_{M'}\circ u)(x)(q_{M'}\circ u)(y)=(q_{M'}\circ u)(y)(q_{M'}\circ u)(x)\qqua
 
 이 만족되는 것을 알 수 있다. 이제 symmetric algebra의 universal property로부터 $A$-module들의 diagram
 
-![Restriction_of_scalars](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-5.png){:width="231.75px" class="invert" .align-center}
+![Restriction_of_scalars](/assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras-5.png){:width="231.75px" class="invert" .align-center}
 
 이 commute하도록 하는 유일한 $\mathcal{S}\_A(M)\rightarrow\mathcal{S}\_{A'}(M')$이 존재한다. 약간의 abuse of notation을 통해 이 또한 $\mathcal{S}(u)$로 표기한다.
 
@@ -127,9 +127,9 @@ $$\begin{aligned}({\id_{A'}}\otimes q_M)(a'\otimes x)({\id_{A'}}\otimes q_M)(b'\
 
 을 만족하고, 따라서 $A'\otimes_AM$의 모든 원소에 대하여 [정리 3](#thm3)의 조건이 만족된다. 이로부터 유일한 $A'$-module homomorphism $\mathcal{S}_{A'}(A'\otimes_AM)\rightarrow A'\otimes_A\mathcal{S}_A(M)$을 얻는다.
 
-![Extension_of_scalars](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-6.png){:width="306px" class="invert" .align-center}
+![Extension_of_scalars](/assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras-6.png){:width="306px" class="invert" .align-center}
 
-다음 명제는 [§텐서대수, ⁋명제 6](/ko/math/tensor_algebra/tensor_algebra#pp6)과 마찬가지로 증명할 수 있으며, universal property를 보이기 위해서는 위와 같은 방식으로 $q$를 사용하면 된다.
+다음 명제는 [§다중선형대수, ⁋명제 6](/ko/math/multilinear_algebra/multilinear_algebra#pp6)과 마찬가지로 증명할 수 있으며, universal property를 보이기 위해서는 위와 같은 방식으로 $q$를 사용하면 된다.
 <div class="proposition" markdown="1">
 
 <ins id="pp6">**명제 6**</ins> 위에서 정의한 $\mathcal{S}_{A'}(A'\otimes_AM)\rightarrow A'\otimes_A\mathcal{S}_A(M)$는 isomorphism이다.
@@ -138,7 +138,7 @@ $$\begin{aligned}({\id_{A'}}\otimes q_M)(a'\otimes x)({\id_{A'}}\otimes q_M)(b'\
 
 ### 직합의 대칭대수
 
-[§텐서대수](/ko/math/tensor_algebra/tensor_algebra)에서도 $\mathcal{T}(M)$에 대하여 다음 명제와 비슷한 명제를 만들 수 있었을 것이나, 우변이 더 복잡하고 식 자체로는 별 의미가 없어 다루지 않았던 것이다.
+[§다중선형대수](/ko/math/multilinear_algebra/multilinear_algebra)에서도 $\mathcal{T}(M)$에 대하여 다음 명제와 비슷한 명제를 만들 수 있었을 것이나, 우변이 더 복잡하고 식 자체로는 별 의미가 없어 다루지 않았던 것이다.
 
 <div class="proposition" markdown="1">
 
@@ -192,7 +192,7 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 <ins id="thm8">**정리 8**</ins> $A$-module $M$을 고정하고, $A$-algebra $E$로의 $A$-module homomorphism $f:M\rightarrow E$가 모든 $x\in M$에 대해 $f(x)^2=0$를 만족한다 하자. 그럼 다음 diagram을 commute하도록 하는 유일한 $A$-algebra homomorphism $\tilde{f}:\bigwedge(M)\rightarrow E$가 존재한다.
 
-![Universal_property_of_exterior_algebra](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-7.png){:width="167.7px" class="invert" .align-center}
+![Universal_property_of_exterior_algebra](/assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras-7.png){:width="167.7px" class="invert" .align-center}
 
 </div>
 
@@ -200,7 +200,7 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 <ins id="crl9">**따름정리 9**</ins> 임의의 $A$-module homomorphism $u:M \rightarrow M'$에 대하여, 다음 diagram
 
-![Functoriality_of_exterior_algebra](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-8.png){:width="207.9px" class="invert" .align-center}
+![Functoriality_of_exterior_algebra](/assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras-8.png){:width="207.9px" class="invert" .align-center}
 
 을 commute하도록 하는 유일한 $A$-algebra homomorphism $\bigwedge(u)$이 존재한다.
 
@@ -216,7 +216,7 @@ $$M\rightarrow \mathcal{T}(M)\rightarrow\mathcal{T}(M)/\mathfrak{b}=\bigwedge(M)
 
 위에서 다룬 대칭대수의 [§§§Change of base ring](#change-of-base-ring)과 같은 상황을 가정하자. 그럼 다음 $A$-module들의 diagram
 
-![Restriction_of_scalars](/assets/images/Math/Tensor_Algebra/Symmetric_and_exterior_algebras-9.png){:width="241.35px" class="invert" .align-center}
+![Restriction_of_scalars](/assets/images/Math/Multilinear_Algebra/Symmetric_and_exterior_algebras-9.png){:width="241.35px" class="invert" .align-center}
 
 을 commute하도록 하는 $\bigwedge(u):\bigwedge\nolimits_A(M)\rightarrow\bigwedge\nolimits_{A'}(M')$이 존재한다. 또, [명제 6](#pp6)과 비슷하게 다음이 성립한다.
 

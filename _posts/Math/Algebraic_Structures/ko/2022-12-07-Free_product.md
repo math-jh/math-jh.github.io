@@ -107,7 +107,7 @@ $$x_1x_2\cdots x_n$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> [예시 11](#ex11)과 동일한 상황을 생각하자. 대신 표기상의 편의를 위해 $G_1=\langle a\rangle\cong\mathbb{Z}$, $G_2=\langle b\rangle\cong\mathbb{Z}$이라 하자. 그럼 $G\_1\ast G\_2$의 원소는 다음과 같은 원소들
+<ins id="ex4">**예시 4**</ins> [예시 1](#ex1)과 동일한 상황을 생각하자. 대신 표기상의 편의를 위해 $G_1=\langle a\rangle\cong\mathbb{Z}$, $G_2=\langle b\rangle\cong\mathbb{Z}$이라 하자. 그럼 $G\_1\ast G\_2$의 원소는 다음과 같은 원소들
 
 $$ab, a^2b, a^{-1}ba^3, bab^2, \cdots$$
 
@@ -119,7 +119,7 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 
 이 때 $\langle a\rangle$과 $\langle b\rangle$은 $G\_1\ast G\_2$의 cyclic subgroup이고, 따라서 $G_1$과 $G_2$에서 $G\_1\ast G\_2$으로의 homomorphism을 $a\mapsto a$, $b\mapsto b$로 정의하면 자연스러운 inclusion map $\iota_1$과 $\iota_2$를 얻는다. 
 
-물론 [예시 1](#ex11)과 같은 문제 또한 일어나지 않는다. $\iota_1(a)\iota_2(b)=ab$이고 $\iota_2(b)\iota_1(a)=ba$인데, 이 두 원소는 $\prod^\ast G_i$의 서로 다른 원소이기 때문이다.
+물론 [예시 1](#ex1)과 같은 문제 또한 일어나지 않는다. $\iota_1(a)\iota_2(b)=ab$이고 $\iota_2(b)\iota_1(a)=ba$인데, 이 두 원소는 $\prod^\ast G_i$의 서로 다른 원소이기 때문이다.
 
 </div>
 
