@@ -3,13 +3,13 @@
 title: "등급구조"
 excerpt: "대수적 구조 위에 정의된 등급구조"
 
-categories: [Math / Tensor Algebra]
-permalink: /ko/math/tensor_algebra/graduation
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/graduation
 header:
-    overlay_image: /assets/images/Math/Tensor_Algebra/Graduation.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Graduation.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "tensor_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2022-12-02
 last_modified_at: 2022-12-02

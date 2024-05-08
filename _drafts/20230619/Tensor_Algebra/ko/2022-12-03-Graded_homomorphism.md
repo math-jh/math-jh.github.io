@@ -3,13 +3,13 @@
 title: "등급대수"
 excerpt: "등급대수의 부분대수와 아이디얼, 극한"
 
-categories: [Math / Tensor Algebra]
-permalink: /ko/math/tensor_algebra/graded_homomorphism
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/graded_homomorphism
 header:
-    overlay_image: /assets/images/Math/Tensor_Algebra/Graded_homomorphism.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Graded_homomorphism.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "tensor_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2022-12-03
 last_modified_at: 2022-12-03

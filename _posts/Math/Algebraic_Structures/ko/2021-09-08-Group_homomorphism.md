@@ -1,7 +1,7 @@
 ---
 
-title: "준동형사상"
-excerpt: "준동형사상의 정의와 성질들, 준동형사상의 핵과 상"
+title: "군 준동형사상"
+excerpt: "군 준동형사상의 정의와 성질들, 군 준동형사상의 핵과 상"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/group_homomorphisms
@@ -19,7 +19,7 @@ weight: 4
 
 당분간 우리는 group의 성질들을 탐구한다.
 
-## 준동형사상의 기본 성질들
+## 군 준동형사상의 기본 성질들
 
 [§준군, 모노이드, 군, ⁋정의 10](/ko/math/algebraic_structures/group#def10) 이후에 우리는 두 group $G,G'$ 사이의 임의의 magma homomorphism은 모두 group의 구조를 보존하는 것을 확인했다. 따라서 group homomorphism을 간단히 homomorphism이라 부르더라도 혼동의 여지가 없으므로, 이들을 구분할 필요가 없을 때에는 항상 간단한 이름으로 부르기로 한다.
 
