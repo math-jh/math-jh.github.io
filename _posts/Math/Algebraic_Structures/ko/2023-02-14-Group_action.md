@@ -1,6 +1,6 @@
 ---
 
-title: "군의 작용 (작성중)"
+title: "군의 작용"
 excerpt: "Group action"
 
 categories: [Math / Algebraic Structures]
@@ -125,55 +125,70 @@ $$x\sim y\implies\alpha\cdot x\sim\alpha\cdot y$$
 
 가 항상 참이라면 $E/\mathnormal{\sim}$은 자연스러운 $M$-set의 구조를 갖는다. 
 
-## Stabilizer
+## Stabilizer, fixer
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> $M$-set $E$의 부분집합 $A$에 대하여, $A$의 *stabilizer<sub>안정자</sub>*는 $\alpha A\subseteq A$를 만족하는 $\alpha$들의 집합을 뜻한다. 이를 $\Stab (A)$로 적는다.
+<ins id="def6">**정의 6**</ins> $M$-set $E$의 부분집합 $A$가 주어졌다 하자. 
+- $A$의 *stabilizer<sub>안정자</sub>*는 $\alpha A\subseteq A$를 만족하는 $\alpha$들의 집합을 뜻하고, 이를 $\stab (A)$로 적는다.
+- $A$의 *strict stabilizer<sub>강한 안정자</sub>*는 $\alpha A=A$를 만족하는 $\alpha$들의 집합을 뜻하고, 이를 $\Stab(A)$로 적는다.
+- $A$의 *fixer<sub>고정자</sub>*는 모든 $a\in A$에 대해 $\alpha a=a$를 만족하는 $\alpha$들의 집합을 뜻하며, 이를 $\Fix(A)$로 적는다.
 
 </div>
 
-임의의 부분집합 $A$에 대하여 $e\in\Stab (A)$가 성립한다는 것이 자명하다. 뿐만 아니라 다음이 성립한다.
+임의의 부분집합 $A$에 대하여 $\Fix(A)\subseteq \Stab(A)\subseteq \stab(A)$가 성립한다. 또, $e\in\Fix(A)$임이 자명하다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $M$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $M$의 submonoid이다. 
+<ins id="prop7">**명제 7**</ins> $M$-set $E$와 그 부분집합 $A$에 대하여, $\stab(A)$, $\Stab (A)$와 $\Fix(A)$는 $M$의 submonoid이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $x\in A$에 대하여 $e\cdot x=x\in A$이므로 $e\in\Stab A$임은 자명하다. 임의의 $\alpha,\beta\in A$에 대하여, 
+이들 집합이 연산에 대해 닫혀있음만 보이면 충분하다. 만일 $\alpha,\beta\in\stab(A)$라 하면, 
 
-$$(\alpha\beta)\cdot x=\alpha\cdot(\beta\cdot x)$$
+$$(\alpha\beta)A=\alpha(\beta A)\subseteq \alpha A\subseteq A$$
 
-이고, $\beta\in\Stab A$로부터 $\beta\cdot x\in A$이므로 우변은 $A$의 원소이다.
+으로부터 $\alpha\beta\in \stab(A)$임을 안다. 비슷하게 만일 $\alpha,\beta\in\Stab(A)$라 하면,
+
+$$(\alpha\beta)A=\alpha(\beta A)=\alpha A=A$$
+
+이므로 $\alpha\beta\in \Stab(A)$이고 주장이 성립한다. 마지막으로 만일 $\alpha,\beta\in\Fix(A)$라면 임의의 $a\in A$에 대해
+
+$$(\alpha\beta)a=\alpha(\beta a)=\alpha a=a$$
+
+이므로 $\alpha\beta\in \Fix(A)$이다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="cor8">**따름정리 8**</ins> Group $G$가 주어졌다 하자. $G$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$는 $G$의 subgroup이다.
+<ins id="cor8">**따름정리 8**</ins> Group $G$가 주어졌다 하자. $G$-set $E$와 그 부분집합 $A$에 대하여, $\Stab (A)$와 $\Fix(A)$는 $G$의 subgroup이며, 특히 $\Fix(A)$는 $\Stab(A)$의 normal subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $\alpha\in \Stab A$에 대하여, $\alpha^{-1}\in\Stab (A)$임만 보이면 충분하다. 그런데 임의의 $x\in A$에 대하여 
+첫 번째 주장은 주어진 집합들이 역원에 대해 닫혀있음만 보이면 충분하고, 이는 임의의 $\alpha\in\Stab(A)$에 대해 다음 식
 
-$$x=e\cdot x=\alpha\cdot(\alpha^{-1}\cdot x)$$
+$$A=(\alpha^{-1}\alpha)A=\alpha^{-1}(\alpha A)=\alpha^{-1}A$$
 
-이므로 $x\in \alpha A$이고, 따라서 $A=\alpha A$가 성립한다. 이제 임의의 $y\in A=\alpha A$에 대하여, $y=\alpha\cdot x$라 하면
+이 성립하고, 임의의 $\alpha\in\Fix(A)$와 $a\in A$에 대해 
 
-$$\alpha^{-1}\cdot y=\alpha^{-1}(\alpha\cdot x)=x\in A$$
+$$a=(\alpha^{-1}\alpha)a=\alpha^{-1}(\alpha a)=\alpha^{-1}a$$
 
-이므로 $\alpha^{-1}\in\Stab (A)$가 성립한다.
+이 성립하는 것으로부터 자명하다. 두 번째 주장은 임의의 $\alpha\in\Fix(A)$, $\beta\in\Stab(A)$가 주어졌다 하고, 임의의 $a\in A$에 대해 $(\beta\alpha\beta^{-1})a$를 계산해보면
+
+$$(\beta\alpha\beta^{-1})a=\beta(\alpha(\beta^{-1}a))=\beta\beta^{-1}a=a$$
+
+이므로 $\beta\alpha\beta^{-1}\in\Fix(A)$가 되어 성립한다. 
 
 </details>
 
 위의 따름정리의 증명으로부터, group $G$가 집합 $E$에 act할 때, $\rho_g$는 반드시 전단사임을 안다. 즉 $\im\rho\subseteq \Aut(E)$가 항상 성립한다.
 
-## 자기 자신 위에 작용하는 군
+## 내부자기동형사상
 
 이제 우리는 집합 $E$ 위에 추가적인 구조가 주어진 경우를 생각한다. 가령 $E$ 또한 monoid 구조를 가진다 하고, 주어진 monoid $M$이 $E$ 위에 act한다 하자. 그럼 우리는 이제 $M$의 action이 $E$의 monoid 구조를 보존하기를 원한다. 
 
@@ -211,7 +226,7 @@ $$\rho_{gh}(x)=(gh)x(gh)^{-1}=g(hxh^{-1})g^{-1}=(\rho_g\circ\rho_h)(x)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> Group $G$가 주어졌다 하자. [명제 9](#prop9)의 automorphism $\rho_g$를 $g$에 의해 정의되는 *inner automorphism*이라 부르고, 이들의 모임을 $\Inn(G)$로 적는다.
+<ins id="def10">**정의 10**</ins> Group $G$가 주어졌다 하자. [명제 9](#prop9)의 automorphism $\rho_g$를 $g$에 의해 정의되는 *inner automorphism<sub>내부자기동형사상</sub>*이라 부르고, 이들의 모임을 $\Inn(G)$로 적는다.
 
 </div>
 
@@ -249,13 +264,7 @@ $$G/\ker\rho\cong\Inn(G)$$
 
 $$g\in\ker\rho\iff\rho_g=\id_G\iff gxg^{-1}=x\quad\text{for all $x\in G$}$$
 
-이므로
-
-$$C(G)=\{g\in G:gx=xg\text{ for all $x\in G$}\}$$
-
-가 성립한다. 
-
-한편, $G$의 endomorphism monoid $\End(G)$는 자명한 방식으로 $G$ 위에 act한다. [예시 4](#ex4)에 의하여, 이 action으로부터 $\mathcal{P}(G)$ 위에 $\End(G)$-set 구조를 정의할 수 있으며, [정의 5]($def5) 이후의 논증으로부터 $\End(G)$의 임의의 subgroup, 가령 $\Aut(G)$와 $\Inn(G)$ 또한 $\mathcal{P}(G)$에 act하는 것을 안다. 이제 $G$의 subgroup $N$이 normal subgroup인 것은 모든 $g\in G$에 대하여 $gNg^{-1}=N$이 성립하는 것과 동치이므로, 
+이므로, $G$가 inner automorphism으로 자기 자신 위에 작용하는 상황에서의 fixer $\Fix(G)$가 정확히 $C(G)$이다. 더 일반적으로, 임의의 부분집합 $A\subseteq G$에 대하여 $A$의 fixer $\Fix(A)$를 $A$의 *centralizer* $C_G(A)$를 $\Fix(A)$로 정의한다. 이와 비슷하게 $A$의 *normalizer* $N_G(A)$를 $\Stab(A)$로 정의한다. 
 
 ---
 

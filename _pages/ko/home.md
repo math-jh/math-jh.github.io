@@ -42,11 +42,11 @@ feature_row:
     url: "/ko/algebraic_structures"
     btn_class: "btn--primary"
     btn_label: "Read more"
-  - image_path: /assets/images/Pages/Thumbnails/Tensor_Algebra.jpeg
-    alt: "tensor_algebra"
-    title: "텐서대수"
-    excerpt: "대수학: 텐서대수"
-    url: "/ko/tensor_algebra"
+  - image_path: /assets/images/Pages/Thumbnails/Multilinear_Algebra.jpeg
+    alt: "multilinear_algebra"
+    title: "다중선형대수"
+    excerpt: "대수학: 다중선형대수"
+    url: "/ko/multilinear_algebra"
     btn_class: "btn--primary"
     btn_label: "Read more"
   - image_path: /assets/images/Pages/Thumbnails/Homological_Algebra.jpeg

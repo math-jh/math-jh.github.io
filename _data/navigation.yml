@@ -34,11 +34,11 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/group
       - title: "Grothendieck 군"
         url: ko/math/algebraic_structures/Grothendieck_group
-      - title: "준동형사상"
+      - title: "군 준동형사상"
         url: ko/math/algebraic_structures/group_homomorphisms
       - title: "몫군"
         url: ko/math/algebraic_structures/quotient_group
-      - title: "동형사상"
+      - title: "군 동형사상"
         url: ko/math/algebraic_structures/isomorphism_theorems
       - title: "군의 직접곱"
         url: ko/math/algebraic_structures/direct_product
@@ -46,6 +46,14 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/restricted_sum
       - title: "자유곱"
         url: ko/math/algebraic_structures/free_product
+      - title: "군의 작용"
+        url: ko/math/algebraic_structures/group_action
+      - title: "환의 정의"
+        url: ko/math/algebraic_structures/ring
+      - title: "몫환, 환 동형사상"
+        url: ko/math/algebraic_structures/quotient_ring
+      - title: "중국인의 나머지 정리"
+        url: ko/math/algebraic_structures/chinese_remainder_theorem
   - title: 
     children:
       - title: "찾아보기"
@@ -328,17 +336,17 @@ symplectic_geometry-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
-tensor_algebra-ko:
-  - title: <a href="/ko/tensor_algebra/" class="sidebar_title">텐서대수</a>
+multilinear_algebra-ko:
+  - title: <a href="/ko/multilinear_algebra/" class="sidebar_title">다중선형대수</a>
     children:
       - title: "등급구조"
-        url: ko/math/tensor_algebra/graduation
+        url: ko/math/multilinear_algebra/graduation
       - title: "등급대수"
-        url: ko/math/tensor_algebra/graded_homomorphism
-      - title: "텐서대수"
-        url: ko/math/tensor_algebra/tensor_algebra
+        url: ko/math/multilinear_algebra/graded_homomorphism
+      - title: "다중선형대수"
+        url: ko/math/multilinear_algebra/multilinear_algebra
       - title: "대칭대수와 외대수"
-        url: ko/math/tensor_algebra/symmetric_and_exterior_algebras
+        url: ko/math/multilinear_algebra/symmetric_and_exterior_algebras
   - title: 
     children:
       - title: "찾아보기"
@@ -389,8 +397,8 @@ category-ko:
     children:
       - title: "대수적 구조"
         url: ko/algebraic_structures/
-      - title: "텐서대수"
-        url: ko/tensor_algebra/
+      - title: "다중선형대수"
+        url: ko/multilinear_algebra/
       # - title: "갈루아 이론"
       #   url: ko/Galois_theory/
       - title: "호몰로지 대수학"

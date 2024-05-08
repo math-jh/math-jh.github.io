@@ -148,7 +148,7 @@ permalink: /ko/misc/index_ko
 | <selected id="exact_sequence">exact sequence &#9745;</selected> | <unselected>완전열</unselected> | [\[호몰로지 대수학\] §완전열](/ko/math/homological_algebra/exact_sequences) |  |
 | <selected id="extension">extension &#9745;</selected> | <unselected>확장</unselected> | [\[집합론\] §함수](/ko/math/set_theory/functions) |  |
 | <selected id="exterior">exterior &#9745;</selected> | <unselected>외부</unselected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  |
-| <selected id="exterior_algebra">exterior algebra &#9745;</selected> | <unselected>대칭대수</unselected> | [\[텐서대수\] §대칭대수와 외대수](/ko/math/tensor_algebra/symmetric_and_exterior_algebras) |  |
+| <selected id="exterior_algebra">exterior algebra &#9745;</selected> | <unselected>대칭대수</unselected> | [\[다중선형대수\] §대칭대수와 외대수](/ko/math/multilinear_algebra/symmetric_and_exterior_algebras) |  |
 | <selected id="exterior_bundle">exterior bundle &#9745;</selected> | <unselected>외다발</unselected> | [\[미분다양체\] §미분형식](/ko/math/manifold/differential_forms) |  |
 | <selected id="exterior_derivative">exterior derivative &#9745;</selected> | <unselected>외미분</unselected> | [\[미분다양체\] §미분형식](/ko/math/manifold/differential_forms) |  | 
 
@@ -177,9 +177,9 @@ permalink: /ko/misc/index_ko
 | <selected id="Galois_correspondence">Galois correspondence &#9745;</selected> | <unselected>갈루아 대응</unselected> | [\[집합론\] §필터와 아이디얼, 갈루아 대응](/ko/math/set_theory/filter_and_ideal)|  |
 | <selected id="general_linear_group">general linear group &#9745;</selected> | <unselected>일반선형군</unselected> | [\[선형대수학\] §행렬](/ko/math/linear_algebra/matrix) |  |
 | <unselected id="geometric_multiplicity">geometric multiplicity</unselected> | <selected> 기하적 중복도 &#9745;</selected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
-| <selected id="graduation">graduation &#9745;</selected> | <unselected>등급</unselected> | [\[텐서대수\] §등급구조](/ko/math/tensor_algebra/graduation) |  |
-| <selected id="graded_homomorphism">graded homomorphism &#9745;</selected> | <unselected>등급준동형사상</unselected> | [\[텐서대수\] §등급대수](/ko/math/tensor_algebra/graded_homomorphism) |  |
-| <selected id="graded_ideal">graded ideal &#9745;</selected> | <unselected>등급 아이디얼</unselected> | [\[텐서대수\] §등급대수](/ko/math/tensor_algebra/graded_homomorphism) |  |
+| <selected id="graduation">graduation &#9745;</selected> | <unselected>등급</unselected> | [\[다중선형대수\] §등급구조](/ko/math/multilinear_algebra/graduation) |  |
+| <selected id="graded_homomorphism">graded homomorphism &#9745;</selected> | <unselected>등급준동형사상</unselected> | [\[다중선형대수\] §등급대수](/ko/math/multilinear_algebra/graded_homomorphism) |  |
+| <selected id="graded_ideal">graded ideal &#9745;</selected> | <unselected>등급 아이디얼</unselected> | [\[다중선형대수\] §등급대수](/ko/math/multilinear_algebra/graded_homomorphism) |  |
 | <selected id="Gram_matrix">Gram matrix &#9745;</selected> | <unselected>그람 행렬</unselected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form) |  |
 | <unselected id="Gram-Schmidt_process">Gram-Schmidt process</unselected> | <selected>Gram-Schmidt 과정 &#9745;</selected> | [\[선형대수학\] §내적공간](/ko/math/linear_algebra/inner_product_space) |  |
 | <unselected id="graph">graph</unselected> | <selected>그래프 &#9745;</selected> |
@@ -406,7 +406,7 @@ permalink: /ko/misc/index_ko
 | <selected id="support">support &#9745;</selected> | <unselected>지지집합</unselected> |[\[선형대수학\] §부분공간](/ko/math/linear_algebra/subspaces) |  |
 | <selected id="supremum">supremum (least upper bound) &#9745;</selected> | <unselected>상한 (최소상계)</unselected> | [\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)|  |
 | <selected id="symmetric">symmetric &#9745;</selected> | <unselected>대칭적</unselected> | [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations) (관계) <br/> [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form) (bilinear form)|  |
-| <selected id="symmetric_algebra">symmetric algebra &#9745;</selected> | <unselected>대칭대수</unselected> | [\[텐서대수\] §대칭대수와 외대수](/ko/math/tensor_algebra/symmetric_and_exterior_algebras) |  |
+| <selected id="symmetric_algebra">symmetric algebra &#9745;</selected> | <unselected>대칭대수</unselected> | [\[다중선형대수\] §대칭대수와 외대수](/ko/math/multilinear_algebra/symmetric_and_exterior_algebras) |  |
 | <selected id="symmetric_group">symmetric group &#9745;</selected> | <unselected>대칭군</unselected> |
 | <unselected id="set_difference">set difference</unselected> | <selected> 차집합 &#9745;</selected> | [\[집합론\] §ZFC 공리계](/ko/math/set_theory/zfc_axioms) |  |
 
@@ -418,7 +418,7 @@ permalink: /ko/misc/index_ko
 | <selected id="tangent_space">tangent space &#9745;</selected> | <unselected>접공간</unselected> | [\[미분다양체\] §접공간](/ko/math/manifold/tangent_space) |
 | <selected id="tangent_vector">tangent vector &#9745;</selected> | <unselected>접벡터</unselected> | [\[미분다양체\] §접공간](/ko/math/manifold/tangent_space) |
 | <selected id="target">target &#9745;</selected> | <unselected>타겟</unselected> | [\[집합론\] §이항관계](/ko/math/set_theory/binary_relation) |  |
-| <selected id="tensor_algebra">tensor algebra &#9745;</selected> | <unselected>텐서대수</unselected> | [\[텐서대수\] §텐서대수](/ko/math/tensor_algebra/tensor_algebra) |  |
+| <selected id="multilinear_algebra">tensor algebra &#9745;</selected> | <unselected>다중선형대수</unselected> | [\[다중선형대수\] §다중선형대수](/ko/math/multilinear_algebra/multilinear_algebra) |  |
 | <selected id="tensor_bundle">tensor bundle &#9745;</selected> | <unselected>텐서다발</unselected> | [\[미분다양체\] §미분형식](/ko/math/manifold/differential_forms) |  | 
 | <selected id="tensor_field">tensor field &#9745;</selected> | <unselected>텐서장</unselected> | [\[미분다양체\] §미분형식](/ko/math/manifold/differential_forms) |  |
 | <unselected id="topological_space">topological space</unselected> | <selected> 위상공간 &#9745;</selected> | [\[위상수학\] §열린집합](/ko/math/topology/open_sets) |  |
