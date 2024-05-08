@@ -3,13 +3,13 @@
 title: "미분 (작성중)"
 excerpt: "Differential module"
 
-categories: [Math / Tensor Algebra]
-permalink: /ko/math/tensor_algebra/derivation
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/derivation
 header:
-    overlay_image: /assets/images/Math/Tensor_Algebra/Derivation.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Derivation.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "tensor_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2022-12-12
 last_modified_at: 2022-12-12

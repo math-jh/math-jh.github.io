@@ -1,15 +1,15 @@
 ---
 
-title: "텐서대수"
-excerpt: "텐서대수의 정의와 universal property"
+title: "다중선형대수"
+excerpt: "다중선형대수의 정의와 universal property"
 
-categories: [Math / Tensor Algebra]
-permalink: /ko/math/tensor_algebra/tensor_algebra
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/multilinear_algebra
 header:
-    overlay_image: /assets/images/Math/Tensor_Algebra/Tensor_algebra.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Tensor_algebra.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "tensor_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2022-12-03
 last_modified_at: 2022-12-03
@@ -19,7 +19,7 @@ weight: 3
 
 이제 드디어 텐서 대수를 정의한다. 이번 글에서 $A$는 항상 commutative ring with unity인 것으로 가정한다. 또, 편의상 $\mathbb{N}$-graduation이 주어진 구조를 모두 간단하게 graded라 부르기로 한다.
 
-## 텐서대수의 정의
+## 다중선형대수의 정의
 
 임의의 $A$-module $M$에 대하여, 
 
@@ -47,11 +47,11 @@ $$(x_1\otimes\cdots\otimes x_p)\cdot (x_{p+1}\oplus\cdots\oplus x_{p+q})=x_1\oti
 
 <div class="definition" markdown="1">
 
-<ins id="df1">**정의 1**</ins> 위와 같이 정의한 associative unital $\Delta$-graded $A$-algebra $\mathcal{T}(M)$을 $M$의 *tensor algebra<sub>텐서대수</sub>*라 부른다. 이 때, canonical injection $M=\mathcal{T}^1(M)\hookrightarrow\mathcal{T}(M)$을 *canonical injection*이라 부른다.
+<ins id="df1">**정의 1**</ins> 위와 같이 정의한 associative unital $\Delta$-graded $A$-algebra $\mathcal{T}(M)$을 $M$의 *tensor algebra<sub>다중선형대수</sub>*라 부른다. 이 때, canonical injection $M=\mathcal{T}^1(M)\hookrightarrow\mathcal{T}(M)$을 *canonical injection*이라 부른다.
 
 </div>
 
-## 텐서대수의 universal property
+## 다중선형대수의 universal property
 
 Tensor algebra 또한 다음과 같은 universal property를 갖는다.
 
@@ -59,7 +59,7 @@ Tensor algebra 또한 다음과 같은 universal property를 갖는다.
 
 <ins id="thm2">**정리 2**</ins> 임의의 unital $A$-algebra $E$와, $A$-linear map $f:M\rightarrow E$가 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $\tilde{f}:\mathcal{T}(M)\rightarrow E$가 존재하여 $f=\tilde{f}\circ\iota$를 만족한다.
 
-![universal_property_of_tensor_product](/assets/images/Math/Tensor_Algebra/Tensor_algebra-1.png){:width="166.95px" class="invert" .align-center}
+![universal_property_of_tensor_product](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-1.png){:width="166.95px" class="invert" .align-center}
 
 </div>
 <details class="proof" markdown="1">
@@ -91,15 +91,15 @@ $$\tilde{f}(x_1\otimes\cdots\otimes x_n)=f(x_1)\cdots f(x_n)$$
 
 또 다른 $\iota':M\rightarrow \mathcal{T}'(M)$이 존재하여 위의 universal property를 만족한다고 가정하자. 그럼 $\iota:M\rightarrow\mathcal{T}(M)$의 universal property로부터 다음의 diagram을 commute하도록 하는 유일한 $\psi:\mathcal{T}(M)\rightarrow\mathcal{T}'(M)$이 존재한다.
 
-![Uniqueness_of_tensor_algebra_1](/assets/images/Math/Tensor_Algebra/Tensor_algebra-2.png){:width="172.95px" class="invert" .align-center}
+![Uniqueness_of_multilinear_algebra_1](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-2.png){:width="172.95px" class="invert" .align-center}
 
 비슷하게 $\iota':M\rightarrow\mathcal{T}'(M)$의 universal property로부터 다음의 diagram을 commute하도록 하는 유일한 $\phi:\mathcal{T}'(M)\rightarrow\mathcal{T}(M)$이 존재한다.
 
-![Uniqueness_of_tensor_algebra_2](/assets/images/Math/Tensor_Algebra/Tensor_algebra-3.png){:width="172.95px" class="invert" .align-center}
+![Uniqueness_of_multilinear_algebra_2](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-3.png){:width="172.95px" class="invert" .align-center}
 
 이제 다음의 diagram
 
-![Uniqueness_of_tensor_algebra_3](/assets/images/Math/Tensor_Algebra/Tensor_algebra-4.png){:width="166.95px" class="invert" .align-center}
+![Uniqueness_of_multilinear_algebra_3](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-4.png){:width="166.95px" class="invert" .align-center}
 
 을 commute하도록 하는 $\mathcal{T}(M)\rightarrow\mathcal{T}(M)$ 또한 유일해야 하는데, $\id\_{\mathcal{T}(M)}$과 $\phi\circ\psi$가 모두 이를 commute하도록 하므로 $\id\_{\mathcal{T}(M)}=\phi\circ\psi$가 성립한다. 비슷하게 $\id\_{\mathcal{T}'(M)}=\psi\circ\phi$가 성립한다.
 
@@ -109,7 +109,7 @@ $$\tilde{f}(x_1\otimes\cdots\otimes x_n)=f(x_1)\cdots f(x_n)$$
 
 <ins id="crl4">**따름정리 4**</ins> 두 $A$-module 사이의 linear map $u:M\rightarrow N$이 주어졌다 하자. 그럼 유일한 $\mathcal{T}(u):\mathcal{T}(M)\rightarrow\mathcal{T}(N)$이 존재하여 $\iota_N\circ u=\mathcal{T}(u)\circ\iota_M$이 성립한다.
 
-![Functoriality_of_tensor_algebra](/assets/images/Math/Tensor_Algebra/Tensor_algebra-5.png){:width="196.95px" class="invert" .align-center}
+![Functoriality_of_multilinear_algebra](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-5.png){:width="196.95px" class="invert" .align-center}
 
 </div>
 <details class="proof" markdown="1">
@@ -117,7 +117,7 @@ $$\tilde{f}(x_1\otimes\cdots\otimes x_n)=f(x_1)\cdots f(x_n)$$
 
 자명
 
-![proof_of_functoriality](/assets/images/Math/Tensor_Algebra/Tensor_algebra-6.png){:width="176.1px" class="invert" .align-center}
+![proof_of_functoriality](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-6.png){:width="176.1px" class="invert" .align-center}
 
 </details>
 
@@ -137,7 +137,7 @@ $$\mathcal{T}^n(u)(x_1\otimes\cdots\otimes x_n)=u(x_1)\otimes\cdots\otimes u(x_n
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-![Composition_proof](/assets/images/Math/Tensor_Algebra/Tensor_algebra-7.png){:width="316.35px" class="invert" .align-center}
+![Composition_proof](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-7.png){:width="316.35px" class="invert" .align-center}
     
 </details>
 
@@ -153,13 +153,13 @@ $$a\cdot m':=\rho(a)\cdot m',\qquad a\in A,m'\in M'$$
 
 이러한 상황에서 $A$-module homomorphism $u:M\rightarrow M'$이 주어졌다 하자. 그럼 $\iota_{M'}\circ u$ 또한 $A$-module homomorphism이고 따라서 tensor algebra의 universal property로부터 다음 $A$-module들의 diagram
 
-![restriction_of_scalar](/assets/images/Math/Tensor_Algebra/Tensor_algebra-8.png){:width="229.05px" class="invert" .align-center}
+![restriction_of_scalar](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-8.png){:width="229.05px" class="invert" .align-center}
 
 을 commute하도록 하는 유일한 $A$-module homomorphism이 존재한다. 약간의 표기법의 남용을 통해 이 또한 $\mathcal{T}(u)$로 적는다. 
 
 거꾸로 임의의 $A$-module $M$에 대하여, $A'\otimes_A M$은 자연스러운 $A'$-module 구조를 갖는다. 이제 $A'$-module $A'\otimes_A M$의 tensor algebra $\mathcal{T}_{A'}(A'\otimes_A M)$를 생각하면 다음의 commutative diagram
 
-![extension_of_scalar](/assets/images/Math/Tensor_Algebra/Tensor_algebra-9.png){:width="304.65px" class="invert" .align-center}
+![extension_of_scalar](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-9.png){:width="304.65px" class="invert" .align-center}
 
 을 얻는다.
 
@@ -173,11 +173,11 @@ $$a\cdot m':=\rho(a)\cdot m',\qquad a\in A,m'\in M'$$
  
 역함수를 만들면 충분하다. 우선 $\mathcal{T}_{A'}(A'\otimes_AM)$을 $A$-algebra로 보면, $\mathcal{T}_A(M)$의 universal property로부터 다음 diagram
 
-![Extension_of_scalar_proof](/assets/images/Math/Tensor_Algebra/Tensor_algebra-10.png){:width="308.4px" class="invert" .align-center}
+![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-10.png){:width="308.4px" class="invert" .align-center}
 
 을 commute하도록 하는 $A$-algebra homomorphism $\mathcal{T}\_A(M)\rightarrow\mathcal{T}\_{A'}(A'\otimes\_AM)$이 유일하게 존재한다. 이제 이렇게 얻어진 $A$-algebra homomorphism에 대하여, $A'\otimes\_A\mathcal{T}\_A(M)$의 universal property로부터 다음의 diagram
 
-![Extension_of_scalar_proof](/assets/images/Math/Tensor_Algebra/Tensor_algebra-11.png){:width="284.85px" class="invert" .align-center}
+![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-11.png){:width="284.85px" class="invert" .align-center}
 
 을 commute하도록 하는 유일한 $A'$-algebra homomorphism $A'\otimes\_A\mathcal{T}\_A(M)\rightarrow\mathcal{T}\_{A'}(A'\otimes\_AM)$이 존재한다. 이 함수가 위에서 얻은 $\mathcal{T}\_{A'}(A'\otimes AM)\rightarrow A'\otimes\_A\mathcal{T}\_A(M)$의 역함수임을 쉽게 확인할 수 있다.
  
