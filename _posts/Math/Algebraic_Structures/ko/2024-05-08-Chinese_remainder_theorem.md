@@ -133,27 +133,40 @@ $$\mathfrak{b}_n\cap(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})=\left(\sum_
 
 </details>
 
-## 곱환
+## 환의 직접곱
 
-Ring들의 family $(A_i)$가 주어졌다 하자. 그럼 이들의 product $\prod A_i$ 위에 덧셈과 곱셈을 성분별로 정의하여 $\prod A_i$에 ring 구조를 줄 수 있다. 이는 [§군의 직접곱, ⁋정의 1](/ko/math/algebraic_structures/direct_product#def1)과 마찬가지 universal property를 만족한다. 
+Ring들의 family $(A\_i)\_{i\in I}$가 주어졌다 하자. 그럼 이들의 product $\prod A_i$ 위에 덧셈과 곱셈을 성분별로 정의하여 $\prod A_i$에 ring 구조를 줄 수 있다. 이는 [§군의 직접곱, ⁋정의 1](/ko/math/algebraic_structures/direct_product#def1)과 마찬가지 universal property를 만족한다. 즉,
+
+> 임의의 ring $B$와 ring homomorphism들 $f_i:B \rightarrow A_i$들이 주어졌을 때, $f_i=\pr_i\circ f$이도록 하는 유일한 ring homomorphism $f:B \rightarrow \prod A_i$이 존재한다.
+> ![universal_property_of_product](/assets/images/Math/Algebraic_Structures/Chinese_remainder_theorem-1.png){:width="251.4px" class="invert" .align-center}
 
 ## 중국인의 나머지 정리
 
-Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 그럼 projection들 $\pi_i:A \rightarrow A/\mathfrak{a}_i$이 존재하며, 이들로부터 ring homomorphism $A \rightarrow\prod A/\mathfrak{a}_i$가 정의된다.
+Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 그럼 projection들 $\pi_i:A \rightarrow A/\mathfrak{a}_i$이 존재하며, 이들로부터 ring homomorphism $\pi:A \rightarrow\prod A/\mathfrak{a}_i$가 정의된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop">**명제 **</ins> Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 만일 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$가 항상 성립한다면 위에서 정의한 $A \rightarrow \prod A/\mathfrak{a}_i$는 surjective이고, 이 map의 kernel은 $\bigcap \mathfrak{a}_i$와 같다.
+<ins id="prop5">**명제 5**</ins> Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 만일 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$가 항상 성립한다면 위에서 정의한 $\pi:A \rightarrow \prod_1^n A/\mathfrak{a}_i$는 surjective이고, 이 map의 kernel은 $\bigcap \mathfrak{a}_i$와 같다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+우선 $\ker\pi=\bigcap \mathfrak{a}_i$인 것은 자명하므로, $\pi$가 surjective임을 보이면 충분하다. 이는 다음과 같이 귀납법으로 보일 수 있다.
 
+우선 $n=1$인 경우는 quotient ring의 성질로부터 자명하다. 이제 적당한 $y\in A$가 존재하여, 모든 $i=1,\ldots, n-1$에 대해 $\pi\_i(y)=x\_i+\mathfrak{a}\_i$가 성립한다 하자. 만일 모든 $i=1,\ldots, n$에 대해 $\pi\_i(x)=x\_i+\mathfrak{a}\_i$를 만족하는 $x\in A$가 존재한다면, 적당한 $z\in A$에 대해 $x=y+z$라 쓸 수 있고, 이 때 $x$와 $y$의 조건으로부터 $z\in\bigcap_{i=1}^{n-1} \mathfrak{a}_i$가 성립하여야 한다. 또, $z+\mathfrak{a}_n=x_n-y \mathfrak{a}_n$이 성립하여야 하며, 거꾸로 이러한 $z$가 존재한다면 $x=y+z$가 원하는 $x$가 된다. 그런데 [명제 3](#prop3)으로부터 $\mathfrak{a}_n+\bigcap_1^{n-1} \mathfrak{a}_i=A$이 성립하므로 이러한 $z$를 반드시 찾을 수 있다. 
 
 </details>
 
-따라서 만일 $\bigcap \mathfrak{a}\_i=0$이라면 isomorphism $A\cong\prod A/\mathfrak{a}\_i$를 얻는다. 
+따라서, first isomorphism theorem에 의하여 다음의 canonical isomorphism
+
+$$\frac{A}{\bigcap_{i=1}^n \mathfrak{a}_i}\cong \prod_{i=1}^n A/\mathfrak{a}_i$$
+
+이 존재하며, 만일 $A$가 commutative라면 [명제 4](#prop4)에 의하여 
+
+$$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
+
+으로 쓸 수 있다. 특히 $\bigcap \mathfrak{a}\_i=0$이라면 isomorphism $A\cong\prod A/\mathfrak{a}\_i$를 얻는다. 
 
 특별히 $A=\mathbb{Z}$인 경우를 생각하고, 쌍마다 서로소인 $n_1,\ldots, n_r$에 대해 $\mathfrak{a}_i=n_i \mathbb{Z}$라 하자. $n=n_1\cdots n_r$이라 하면, 위의 명제와 first isomorphism theorem에 의하여 isomorphism $\mathbb{Z}/n \mathbb{Z}\cong\prod \mathbb{Z}/n_i \mathbb{Z}$을 얻는다. 즉 위의 명제로부터 원래의 중국인의 나머지 정리를 얻어낼 수 있다. 
 
@@ -161,7 +174,7 @@ Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop">**명제 **</ins> Ring $A$와, $A$의 center $C(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
+<ins id="prop6">**명제 6**</ins> Ring $A$와, $A$의 center $C(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
 
 1. 위에서 정의한 $A \rightarrow \prod A/\mathfrak{a}_i$가 isomorphism이다.
 2. 모든 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$이고 $\bigcap \mathfrak{a}_i=0$이다.
@@ -169,4 +182,9 @@ Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 
 4. $C(A)$의 원소들 $e_1,\ldots, e_n$이 존재하여 $\sum e_i=1$이며, 모든 $i$에 대하여 $e_i^2=e_i$, 모든 $i\neq j$에 대하여 $e_ie_j=0$이 성립하고, 모든 $i$에 대해 $\mathfrak{a}_i=A(1-e_i)$이다.
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
+마지막 조건의 $e_i$들은 $\prod A/\mathfrak{a}_i$의 각 성분 중, $i$번째 성분만 $1$이고 나머지는 모두 $0$인 원소들을 의미한다. 이를 염두에 두면 네 조건이 모두 동치라는 것을 쉽게 보일 수 있다.
+
+</details>
