@@ -209,6 +209,24 @@ $$\begin{aligned}\bar{f}\left([(a_1,b_1)]+[(a_2, b_2)]\right)&=\bar{f}\left([(a_
 
 </div>
 
+## Monoid of fractions
+
+위의 논의에서 우리는 $S$의 모든 원소들의 역원을 추가하여 $G_S$를 얻었다. 한편 [정의 6](#def6)을 살펴보면 우리가 실제로 하는 것은 $\mathbb{N}$의 부분집합 $\mathbb{N}\setminus\\{0\\}$의 원소들의 역원만 추가하는 것이다. 이 또한 위의 논의들을 약간 수정하면 얻어질 수 있는데, 증명은 생략하고 과정들만 살펴보자.
+
+Commutative monoid $E$와 $E$의 부분집합 $S$, 그리고 $S$에 의해 생성되는 $E$의 submonoid $S'$를 생각하자. 또 $E$의 연산은 곱셈으로 적힌 것으로 생각한다. $E\times S'$ 위에 다음 관계
+
+$$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $s\in S'$}$$
+
+를 정의하면, 이 관계는 $E\times S'$ 위의 연산과 compatible한 동치관계이고 따라서 $(E\times S')/R$이 monoid가 된다.
+
+<div class="definition" markdown="1">
+
+<ins id="def7">**정의 7**</ins> 위와 같이 얻어지는 monoid $(E\times S')/R$을 $S$를 분모로 갖는 *$E$의 monoid of fraction*이라 부르고 $E_S$로 표기한다. 이 monoid의 원소 $(a,p)$는 $a/p$로 표기한다. 
+
+</div>
+
+이 때, $E$는 monoid이므로 위의 논의와는 다르게 항등원 $1$을 가진다. 그럼 [명제 5](#prop5)에서의 homomorphism $\epsilon$은 명시적으로, $a\mapsto a/1$로 생각할 수 있다. 
+
 ---
 
 **참고문헌**

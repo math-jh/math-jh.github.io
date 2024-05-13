@@ -43,23 +43,12 @@ layout: default
       {% endunless %}
 
       <section class="page__content e-content" itemprop="text">
-        {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc" style="margin-bottom: 5vh;">
               <header><h4 class="nav__title"><span class="material-icons md-18" style="vertical-align:-.2em">&#xE8DE;</span> {{ page.toc_label | default: site.data.ui-text[lang].toc_label | default: "On this page" }}</h4></header>
               {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>
-            <div class="dsq-widget" style="font-size:12px; font-family: sans-serif; font-weight: 400; color: black; padding: 0.5rem 0.75rem;">
-              <script type="text/javascript" src="https://math-jh.disqus.com/combination_widget.js?default_tab=recent&hide_avatars=1"></script>
-            </div>
           </aside>
-        {% else %}
-          <aside class="sidebar__right sticky">
-            <div class="dsq-widget" style="font-size:12px; font-family: sans-serif; font-weight: 400; color: black; padding: 0.5rem 0.75rem;">
-              <script type="text/javascript" src="https://math-jh.disqus.com/combination_widget.js?num_items=5&hide_mods=0&color=grey&default_tab=recent&excerpt_length=100&hide_avatars=1"></script>
-            </div>
-          </aside>
-        {% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[lang].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
