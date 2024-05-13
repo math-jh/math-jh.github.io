@@ -81,7 +81,6 @@ $$D(ab)=D(a)b+aD(b)$$
 
 $$D(ab)=D(a)b+(-1)^{\degree(a)}D(b)$$
 
-이 된다. 이를 *anti-derivation*이라 부른다. 이는 
+이 된다. 이를 *anti-derivation*이라 부른다. 
 
-## 캘러 미분
 
