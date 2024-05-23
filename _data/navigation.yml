@@ -12,6 +12,8 @@ main:
 algebraic_geometry-ko:
   - title: <a href="/ko/algebraic_geometry/" class="sidebar_title">대수기하학</a>
     children:
+      - title: "대수다양체"
+        url: ko/math/algebraic_geometry/algebraic_varieties
       - title: "준층"
         url: ko/math/algebraic_geometry/presheaves
       - title: "층"
