@@ -181,10 +181,9 @@ $$a_i^{-1}=\prod_{j\in I\setminus\{i\}}a_j\in H_i\cap \left\langle\bigcup_{j\neq
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Abelian group들의 family $(G_i)$와, 이들의 weak direct product $\prod^w G_i$, 그리고 inclusion map들 $\iota_i$가 주어졌다 하자. 그럼 $\prod^w G_i$와 $\iota_i$들을 묶어 $G_i$들의 *direct sum<sub>직합</sub>*이라 부르고 이를 $\sum G_i$로 표현한다.  
+<ins id="def7">**정의 7**</ins> Abelian group들의 family $(G_i)$와, 이들의 weak direct product $\prod^w G_i$, 그리고 inclusion map들 $\iota_i$가 주어졌다 하자. 그럼 $\prod^w G_i$와 $\iota_i$들을 묶어 $G_i$들의 *direct sum<sub>직합</sub>*이라 부르고 이를 $\bigoplus G_i$로 표현한다.  
 
 </div>
-
 
 ---
 

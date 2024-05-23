@@ -147,11 +147,15 @@ $$v=v1=vua=a$$
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Ring $A$가 *integral domain<sub>정역</sub>*이라는 것은 $A$가 commutative이고, $0\neq 1$이며, $A$가 zero-divisor를 갖지 않는 것이다.
+<ins id="def5">**정의 5**</ins> Ring $A$의 원소 $a,b$가 $ab=0$이지만 $a\neq 0$이고 $b\neq 0$일 경우, $a,b$를 *zero divisor<sub>영인자</sub>*라 부른다. Ring $A$가 *integral domain<sub>정역</sub>*이라는 것은 $A$가 commutative이고, $0\neq 1$이며, $A$가 zero-divisor를 갖지 않는 것이다.
 
 </div>
 
-여기서 zero-divisor란 $ab=0$을 만족하는 $a,b\neq 0$을 의미한다. 가령 $\mathbb{Z}/4 \mathbb{Z}$에서는 $2\cdot 2=0$이므로 $2$는 zero-divisor이다. 정의에 의해 integral domain의 subring은 integral domain임이 자명하다. 
+정의에 의해 integral domain의 subring은 integral domain임이 자명하다. 임의의 nonzero ring $A,B$에 대하여, $A\times B$는 다음 식
+
+$$(1,0)(0,1)=(0,0)$$
+
+으로부터 항상 integral domain이 될 수 없다. 
 
 <div class="proposition" markdown="1">
 
@@ -173,7 +177,7 @@ $A$가 integral domain이라는 가정으로부터, $S=A\setminus\\{0\\}$임을 
 
 ## 소아이디얼
 
-Ring homomorphism의 fourth isomorphism theorem으로부터, 임의의 ring $A\neq 0$과 maximal left ideal $\mathfrak{m}$에 대하여 $\mathfrak{A}/\mathfrak{m}$의 유일한 left ideal은 $0$과 $A/\mathfrak{m}$ 자기 자신 뿐임을 안다. 따라서 [명제 4](#prop4)에 의하여 $A/\mathfrak{m}$은 division ring이다. Integral domain 또한 비슷한 식으로 특징지을 수 있다.
+Ring homomorphism의 fourth isomorphism theorem으로부터, 임의의 ring $A\neq 0$과 maximal left ideal $\mathfrak{m}$에 대하여 $A/\mathfrak{m}$의 유일한 left ideal은 $0$과 $A/\mathfrak{m}$ 자기 자신 뿐임을 안다. 따라서 [명제 4](#prop4)에 의하여 $A/\mathfrak{m}$은 division ring이다. Integral domain 또한 비슷한 식으로 특징지을 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -197,13 +201,84 @@ $$(x+\mathfrak{p})(y+\mathfrak{p})=0+\mathfrak{p}$$
 
 모든 field는 integral domain이므로, 모든 maximal ideal은 prime ideal이다. 그 역은 성립하지 않는데, 가령 $\mathbb{Z}$의 prime ideal은 $(0)$과, 소수 $p$에 대해 $(p)$ 꼴 뿐이라는 것을 쉽게 확인할 수 있다. 그럼 $(0)$은 prime ideal이지만 maximal ideal은 아니다.
 
+한편 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9**</ins> Commutative ring $A,B$ 사이의 ring homomorphism $f:A \rightarrow B$와 $B$의 prime ideal $\mathfrak{p}$에 대하여, $f^{-1}(\mathfrak{p})$는 $A$의 prime ideal이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+
+
+</details>
+
 한편, [명제 8](#prop8)의 2번 동치에 의하여, commutative ring $A$를 $A$를 multiplicative monoid로 본다면, 그 prime ideal $\mathfrak{p}$에 대해 $A\setminus\mathfrak{p}$는 $A$의 submonoid로 볼 수 있다. 따라서 ring of fractions $(A\setminus \mathfrak{p})^{-1}A$가 잘 정의되며, 이 ring의 분모에 들어가는 것은 오직 $A\setminus \mathfrak{p}$의 원소들 뿐이다. 이를 다음과 같이 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Commutative ring $A$와 prime ideal $\mathfrak{p}$에 대하여, $A$의 $\mathfrak{p}$에서의 *localization<sub>국소화</sub>*을 $(A\setminus \mathfrak{p})^{-1}A$로 정의하고, 이를 간단히 $A_\mathfrak{p}$로 적는다.
+<ins id="def10">**정의 10**</ins> Commutative ring $A$와 prime ideal $\mathfrak{p}$에 대하여, $A$의 $\mathfrak{p}$에서의 *localization<sub>국소화</sub>*을 $(A\setminus \mathfrak{p})^{-1}A$로 정의하고, 이를 간단히 $A_\mathfrak{p}$로 적는다.
 
 </div>
+
+## 멱영원
+
+<div class="definition" markdown="1">
+
+<ins id="def11">**정의 11**</ins> Ring $A$의 원소 $x$가 *nilpotent<sub>멱영</sub>*이라는 것은 적당한 $n>0$이 존재하여 $x^n=0$이 성립하는 것이다. 만일 $A$가 영이 아닌 nilpotent element를 갖지 않으면 $A$를 *reduced<sub>기약</sub>*라 부른다.
+
+</div>
+
+정의에 의하여, 영이 아닌 nilpotent element는 zero-divisor이다. 따라서 모든 integral domain은 (commutative) reduced ring이다. 뿐만 아니라, commutative ring으로 한정하면 다음을 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop12">**명제 12**</ins> Commutative ring $A$에 대하여, nilpotent element들의 모임 $\mathfrak{N}$은 ideal이 된다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+만일 $x\in \mathfrak{N}$이라면 $x^n=0$이도록 하는 $n>0$이 존재할 것이고, 임의의 $a\in A$에 대하여 $(ax)^n=a^nx^n=0$이 되어 $ax\in \mathfrak{N}$임을 보일 수 있다. 
+
+이제 $\mathfrak{N}$이 덧셈에 대해 닫혀있다는 것을 보여야 한다. 임의의 $x,y\in \mathfrak{N}$이 주어졌다 하고, 적당한 $m,n>0$에 대하여 $x^m=0$이고 $y^n=0$이라 하자. 그럼
+
+$$(x+y)^{m+n}=x^{m+n}+\binom{m+n}{1}x^{m+n-1}y+\cdots+\binom{m+n}{n}x^my^n+\binom{m+n}{n+1}x^{m-1}y^{n+1}+\cdots+y^n$$
+
+이고, 우변의 모든 항들이 $0$임을 알 수 있다. 이상에서 $x+y\in \mathfrak{N}$이다.
+
+</details>
+
+<div class="definition" markdown="1">
+
+<ins id="def13">**정의 13**</ins> [명제 12](#prop12)의 ideal $\mathfrak{N}$을 $A$의 *nilradical*이라 부른다.
+
+</div>
+
+정의에 의하여 $A$가 reduced인 것은 $A$의 nilradical이 $0$인 것과 동치이다. 한편, 만일 $x\in \mathfrak{N}$이라면, 식 $x^n=0$과 prime ideal의 정의로부터 $x\in \mathfrak{p}$이 모든 prime ideal $\mathfrak{p}$에 대해 성립하는 것을 안다. 즉 다음 포함관계
+
+$$\mathfrak{N}\subseteq\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
+
+이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop14">**명제 14**</ins> Commutative ring $A$와 nilradical $\mathfrak{N}$에 대하여, 
+
+$$\mathfrak{N}=\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
+
+이 성립한다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+만일 $x\not\in \mathfrak{N}$이라면, 적당한 $\mathfrak{p}$에 대해 $x\not\in \mathfrak{p}$임을 보이면 충분하다. 우선 multiplicative subset $S=\\{1,x,x^2,\ldots\\}$으로 만들어진 ring of fractions $A_x=S^{-1}A$를 생각하자. 그럼 $A_x$의 곱셈에 대한 항등원 $x/x$이 반드시 $0/1$과 다르다는 것을 확인할 수 있고, 특히 $A_x\neq 0$이다. 이제 Krull 정리로부터 $A_x$의 maximal ideal $\mathfrak{m}$이 반드시 존재하고, 모든 maximal ideal은 prime ideal이므로 $A_x$는 prime ideal을 갖는다. 이제 [명제 9](#prop9)를 $\epsilon:A \rightarrow A_x$에 적용하면 $\epsilon^{-1}(\mathfrak{p})$는 $A$의 prime ideal이며, 만일 $x\in\epsilon^{-1}(\mathfrak{p})$라면 $x/1\in \mathfrak{p}$이고 $x/1$은 $A_x$에서 invertible이므로 $\mathfrak{p}=A_x$가 되어 모순이다. 
+
+</details>
+
 
 ---
 
