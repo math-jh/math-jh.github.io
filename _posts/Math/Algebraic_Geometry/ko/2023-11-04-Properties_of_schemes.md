@@ -17,7 +17,7 @@ weight: 6
 
 ---
 
-이제 우리는 scheme이 갖는 여러가지 성질들을 정의한다. 여기에서는 [§대수다양체](/ko/math/algebraic_geometry/algebraic_varieties)에서와 같이 $\mathbb{A}^2$에서의 그림이 도움이 된다. 
+이제 우리는 scheme이 갖는 여러가지 성질들을 정의한다. 여기에서는 [§대수다양체](/ko/math/algebraic_geometry/algebraic_varieties)에서와 같이 $\mathbb{A}^2$에서의 그림이 도움이 된다. 이제
 
 ## Integrality
 
@@ -29,7 +29,7 @@ weight: 6
 
 위의 두 성질들은 $\lvert X\rvert$의 언어로 표현된다는 점에서 위상적인 성질들이라 할 수 있다. Connected가 아닌 scheme의 예시는 $V(x(x-1))$이 있으며, connected이지만 irreducible하지 않은 scheme의 예시로는 $V(xy)$이 있다. 
 
-img
+![counterexamples](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-1.png){:width="424.2px" class="invert" .align-center}
 
 한편 $X$는 대수적인 대상이기도 하므로, 대수적인 성질들을 정의할 수도 있다.
 
@@ -39,9 +39,15 @@ img
 
 </div>
 
-Non-reduced scheme의 예시로는 $V(y=x^2)$이 있다. 
+Non-reduced scheme의 예시로는 $V(y-x^2)$이 있다. 
 
-img
+![counterexample_reduced](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-2.png){:width="242.7px" class="invert" .align-center}
+
+이는 대수적으로는
+
+$$\mathbb{C}[x,y]/(y-x^2)\cong \mathbb{C}[x]/(x^2)$$
+
+이므로, $x$가 nilpotent element이기 때문이다. 
 
 [명제 4](#prop4)는 이러한 대수적인 성질과 위상적인 성질들 사이의 관계를 보여준다. 증명을 위해서는 다음 보조정리를 먼저 보이는 것이 쓸만하다.
 
@@ -101,7 +107,32 @@ $$f,g\not\in \mathfrak{N}(A)\implies fg\not\in \mathfrak{N}(A)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Partition of unity
+한쪽 방향은 자명하다. 따라서 $X$가 locally noetherian이라 하고, 임의의 affine open subset $U=\Spec A$를 택하자. 우선 다음 주장을 보인다.
+
+> **주장 1.** Locally noetherian scheme $X$는 noetherian ring들의 spectrum으로 이루어진 basis를 갖는다.  
+> *증명.* 우선 $X$가 locally noetherian이므로, $X$를 noetherian ring들의 spectrum $\Spec B_i$들로 덮을 수 있다. 한편, $B_i$들의 localization $(B\_i)\_f$들은 모두 noetherian이고, $D(f)\cong \Spec(B\_i)\_f$들이 $\Spec B\_i$의 basis를 이룬다. 이제 임의의 열린집합 $U\subseteq X$에 대해 $U_i=U\cap\Spec B_i$라 하면 $U_i$는 $\Spec B_i$의 열린집합이고, 따라서 $\Spec(B\_i)\_f$들의 합집합으로 나타날 수 있다. 이로부터 임의의 열린집합 $U\subseteq X$가 noetherian ring들의 spectrum들의 합집합으로 쓰일 수 있음을 안다.
+
+주장 1에 의해, 임의의 affine open set $U=\Spec A$는 noetherian ring들의 spectrum으로 덮일 수 있다. 이제 다음 주장을 보이자.
+
+> **주장 2.** 만일 affine scheme $U=\Spec A$가 noetherian ring들의 spectrum으로 덮일 수 있다면, 유한 개의 $f_1,\ldots, f_r\in A$가 존재하여 $U$를 $\Spec A\_{f\_1},\ldots, \Spec A\_{f\_r}$로 덮을 수 있다.  
+> *증명.* 우선 가정을 통해, $U$의 open affine subset $V=\Spec B$을 $B$가 noetherian이도록 잡자. 그럼 적당한 $f\in A$에 대하여 $D(f)\subseteq V$이도록 할 수 있다. 한편, $f$의 $B$에서의 image를 $\bar{f}$라 하면 $A_f\cong B_{\bar{f}}$가 성립한다. 이로부터 $A_f$가 noetherian임을 안다. 이러한 방식으로 $U$를 noetherian ring들 $A_f$들의 spectrum $\Spec A_f$들로 덮을 수 있다. 그런데 
+> 
+> $$X=\bigcup \Spec(A_f)\iff A=\sum A_f\iff 1\in\sum A_f$$
+> 
+> 이고, 가장 우측의 조건은 *유한 개의* $A\_{f\_1},\ldots, A\_{f\_r}$들과, 이들의 원소 $x_1,\ldots, x_r$가 존재하여 $x_1+\cdots+x\_r=1$이라는 뜻이므로 이러한 $\Spec A_f$들은 유한 개만이 필요하다. 
+
+따라서 우리가 보이고자 하는 것은 다음의 대수적인 주장이다.
+
+> **주장 3.** Ring $A$의 원소들 $f_1,\ldots, f_r$이 다음 조건을 만족한다 하자.  
+> 1. $(f_1,\ldots, f_r)=A$이다.
+> 2. $A_{f_i}$들은 모두 noetherian ring들이다.
+> 
+> 그럼, $A$도 noetherian이다.  
+> *증명.* $A$의 임의의 ideal $\mathfrak{a}$와 localization map $\varphi\_i:A \rightarrow A\_{f\_i}$에 대하여, $\mathfrak{a}=\bigcap\varphi_i^{-1}(\varphi_i(\mathfrak{a})\cdot A\_{f\_i})$이 성립한다. 따라서, 임의의 ascending chain $\mathfrak{a}_1\subseteq \mathfrak{a}_2\subseteq\cdots$에 대하여
+>
+>  $$\varphi_i(\mathfrak{a}_1)A_{f_i}\subseteq\varphi_i(\mathfrak{a}_2)A_{f_i}\subseteq\cdots$$
+> 
+> 이 언젠가 반드시 멈춰야 한다는 사실을 이용하면 원하는 결과를 얻는다.
 
 </details>
 
@@ -115,7 +146,7 @@ Partition of unity
 
 예를 들어, inclusion $k[x]\rightarrow k[x,y]$를 생각하면, 이로부터 나오는 projection $\mathbb{A}_k^2 \rightarrow \mathbb{A}_k^1$은 morphism of finite type이다. 이와 같이 finite type morphism은 기하적으로는 (generic) fiber가 finite dimensional인 것으로 생각할 수 있으며, 이는 대수적으로 $k[x,y]$가 finitely generated $k[x]$-algebra인 것으로 설명된다. 
 
-img
+![finite_type](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-3.png){:width="546px" class="invert" .align-center}
 
 <div class="definition" markdown="1">
 
@@ -125,7 +156,7 @@ img
 
 예를 들어, 위의 inclusion $k[x] \rightarrow k[x,y]$에 projection $k[x,y] \rightarrow k[x,y]/(y^2-x)$을 합성하면 ring homomorphism $k[x] \rightarrow k[x,y]/(y^2-x)$을 얻으며, 기하적으로 이는 포물선 $y^2=x$에서 $x$축 방향으로 수선의 발을 내리는 projection map에 해당한다. 이 또한 기하적으로는 fiber가 유한집합이라는 것과 관련이 있다. $\Spec k[x]$의 prime ideal $(x-a)$를 생각하면, 이 prime ideal의 projection에 대한 fiber는 두 개, 즉 $(x-a,y-\sqrt{a})$와 $(x-a,y+\sqrt{a})$의 두 개가 있다. 
 
-img
+![finite_morphism](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-4.png){:width="502.65px" class="invert" .align-center}
 
 ## Dimension
 
@@ -133,8 +164,59 @@ img
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Scheme $X$의 *dimension*은 $X$의 위상공간으로서의 차원을 뜻한다. 만일 $Z$가 $X$의 irreducivle closed subsetdㅣ라면, $Z$의 $X$에서의 *codimension*은 을 뜻한다.
+<ins id="def9">**정의 9**</ins> Scheme $X$의 *dimension*은 irreducible closed subset들의 chain
+
+$$\empty=C_0\subsetneq\cdots\subsetneq C_n$$
+
+의 length $n$의 supremum으로 정의한다. 비슷하게 만일 $Z$가 $X$의 irreducible closed subset이라면, $Z$의 $X$에서의 *codimension*은 orreducible closed subset들의 chain
+
+$$Z=Z_0\subsetneq \cdots \subsetneq Z_n$$ 
+
+의 length $n$의 supremum을 뜻하며, 이를 $\codim(Z,X)$로 적는다. 이를 이용해 임의의 닫힌집합 $Y$에 대하여
+
+$$\codim(Y,X)=\inf_\text{\scriptsize $Z\subseteq Y$ irred.} \codim(Z,X)$$
+
+으로 정의한다.
 
 </div>
 
 ## Fiber product
+
+한편, scheme morphism의 fiber를 정의하기 위해서는 fiber product를 이용한다. 이를 직관적으로 이해하기 위해서는 집합에서의 fiber product를 기억하면 좋다. 두 함수 $f:X \rightarrow Z$, $g:Y \rightarrow Z$에 대하여, 이들의 *fiber product*는 다음 두 조건을 만족하는 집합 $X\times_ZY$와 함수들 $p:X\times_ZY \rightarrow X$, $q:X\times_ZY \rightarrow Y$를 의미한다.
+
+> 1. $f\circ p = g\circ q$.
+> 2. $X\times_ZY$는 다음 universal property를 만족한다. 만일 $W$가 $f\circ p' = g\circ q'$를 만족하는 함수들 $p':W\rightarrow X$, $q':W\rightarrow Y$를 갖는 집합이라면, $W$에서 $X\times_ZY$로 가는 함수 $W\rightarrow X\times_ZY$가 유일하게 존재한다.
+> 
+> ![fiber_product](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-5.png){:width="273.75px" class="invert" .align-center}
+
+그럼 $X\times_ZY$는 명시적으로는 다음의 집합
+
+$$X\times_ZY=\{(x,y):f(x)=g(y)\}$$
+
+그리고 두 projection map들로 쓸 수 있으며, 당연히 universal property에 의하여 fiber product는 isomorphism에 대하여 유일하게 결정된다. 
+
+이러한 세팅에서 함수 $g:Y \rightarrow Z$의 $z\in Z$ 위에서의 fiber는 다음과 같이 정의된다. 우선 $z\in Z$는 한점 집합 $\\{\ast\\}$과, ($\ast$를 $z$으로 보내는) 함수 $f:\\{\ast\\}\rightarrow Z$로 이해할 수 있다. 그럼 $g$의 $z$에서의 fiber는 $f$와 $g$의 fiber product $\\{\ast\\}\times_ZY$로 볼 수 있다. 명시적으로 식을 써 보면 $f(\ast)=z$으로부터
+
+$$\{\ast\}\times_ZY=\{(\ast, y):z=f(\ast)=g(y)\}$$
+
+이기 때문이다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm10">**정리 10**</ins> Scheme morphism $f:X \rightarrow Z$와 $g:Y \rightarrow Z$에 대하여, fiber product $X\times_ZY$가 존재한다.
+
+</div>
+
+이 정리는 꽤 긴 증명울 필요로 하는데, 본질적으로 이는 affine scheme들 사이에서는 
+
+$$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_CB)$$
+
+으로 얻어지고, 이를 잘 붙여서 일반적인 scheme들 사이에서도 fiber product가 존재함을 보임으로써 얻어진다. 
+
+---
+**참고문헌**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+
+---
+
