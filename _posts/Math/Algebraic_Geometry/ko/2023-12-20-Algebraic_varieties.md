@@ -36,7 +36,7 @@ $$V(I)=\bigcap_{f\in I} V(f)$$
 
 <ins id="ex1">**예시 1**</ins> $\mathbb{R}^2$에서, $V(x,y)$는 두 직선 $x=0$과 $y=0$의 교집합이므로 원점 $(0,0)$을 의미한다. 마찬가지로 $V(y-x^2, y)$를 생각하면, 이는 포물선 $y=x^2$과 직선 $y=0$의 교집합이므로 원점 $(0,0)$을 의미한다. 
 
-img
+![reduced_scheme](/assets/images/Math/Algebraic_Geometry/Algebraic_varieties-1.png){:width="666px" class="invert" .align-center}
 
 위의 그림에서 첫 번째 경우와 두 번째 경우 사이에는 multiplicity로부터 오는 차이가 있지만, 단순히 $V(I)$만 생각해서는 이 둘을 구별할 수 없다.
 
