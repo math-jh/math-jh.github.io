@@ -13,17 +13,17 @@ sidebar:
 
 date: 2023-05-28
 last_modified_at: 2023-05-28
-weight: 5
+weight: 4
 
 ---
 
 ## 자연변환의 정의
 
-이번 글에서 우리는 natural transformation을 정의하고, 이를 바탕으로 카테고리들 사이의 equivalence를 정의한다. 
+우리는 앞서 category들의 category가 존재한다는 것을 보았다. 역시 모든 것이 category라는 믿음을 가지면, 두 category $\mathcal{A},\mathcal{B}$가 주어졌을 때 $\mathcal{A}$에서 $\mathcal{B}$로의 functor들의 category $\Fun(\mathcal{A},\mathcal{B})$가 존재한다는 사실도 어느정도 믿을 수 있다. 우리가 대답해야 할 질문은, 그럼 두 functor $F,G:\mathcal{A}\rightarrow \mathcal{B}$가 주어졌을 때 $F$에서 $G$로의 morphism은 무엇인지이고, 그것이 바로 이번 글에서 정의할 natural transformation이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 두 카테고리 $\mathcal{A},\mathcal{B}$가 주어졌다 하고, $\mathcal{A}$에서 $\mathcal{B}$로의 두 functor $F,G$가 주어졌다 하자. 만일 $\obj(\mathcal{A})$를 index set으로 갖는 morphism들의 family 
+<ins id="def1">**정의 1**</ins> 두 category $\mathcal{A},\mathcal{B}$가 주어졌다 하고, $\mathcal{A}$에서 $\mathcal{B}$로의 두 functor $F,G$가 주어졌다 하자. 만일 $\obj(\mathcal{A})$를 index set으로 갖는 morphism들의 family 
 
 $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
@@ -36,6 +36,8 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 만일 각각의 $\alpha_A$들이 모두 isomorphism이라면 이를 *natural isomorphism<sub>자연동형변환</sub>*이라 부르고, 두 functor $F,G$가 *naturally equivalent<sub>자연변환에 대해 동등</sub>*하다고 한다. 이를 $F\simeq G$로 표기한다.
 
 </div>
+
+이를 바탕으로 category $\mathcal{A}$로부터 $\mathcal{B}$로의 *functor category<sub>함자 카테고리</sub>* $\Fun(\mathcal{A},\mathcal{B})$를 정의할 수 있다. 이는 $\mathcal{A}$에서 $\mathcal{B}$로의 functor들로 이루어진 category로, morphism들은 functor들 사이의 natural transformation이다. 이 category에서의 isomorphism은 natural isomorphism으로 주어진다.
 
 ## 동등한 카테고리들
 

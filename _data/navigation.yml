@@ -22,6 +22,8 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/spectrum
       - title: "스킴"
         url: ko/math/algebraic_geometry/schemes
+      - title: "스킴의 성질들"
+        url: ko/math/algebraic_geometry/properties_of_schemes
   - title: 
     children:
       - title: "찾아보기"
