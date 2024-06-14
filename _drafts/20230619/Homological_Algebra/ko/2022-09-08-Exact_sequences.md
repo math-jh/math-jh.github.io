@@ -19,11 +19,11 @@ weight: 1
 
 앞으로 항상 $R$은 곱셈에 대한 항등원 $1$을 갖고, commutative인 것으로 생각한다. 또, 편의상 앞으로 $R$-module 사이의 map이라는 것은 모두 $R$-module homomorphism을 의미하는 것으로 생각한다.
 
-## 카테고리 $\lmod{R}$
+## 카테고리 $\lMod{R}$
 
-우리는 카테고리 $\lmod{R}$이 [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#df7)의 조건을 모두 만족한다는 것을 보인다. 역사적으로는 $\lmod{R}$의 성질을 바탕으로 아벨 카테고리를 정의한 것이다.
+우리는 카테고리 $\lMod{R}$이 [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#df7)의 조건을 모두 만족한다는 것을 보인다. 역사적으로는 $\lMod{R}$의 성질을 바탕으로 아벨 카테고리를 정의한 것이다.
 
-우선 $\lmod{R}$이 additive category가 된다는 사실은 자명하다. 또, [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#df7) 이후와 같은 논증을 통하여 임의의 monomorphism은 cokernel의 kernel이고, 임의의 epimorphism은 kernel의 cokernel인 것을 확인할 수 있다. 따라서 우리는 $\lmod{R}$에서의 kernel과 cokernel이 universal property를 만족한다는 사실만 보이면 충분하다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#df3))
+우선 $\lMod{R}$이 additive category가 된다는 사실은 자명하다. 또, [\[범주론\], §아벨 카테고리, §정의 7](/ko/math/category_theory/abelian_categories#df7) 이후와 같은 논증을 통하여 임의의 monomorphism은 cokernel의 kernel이고, 임의의 epimorphism은 kernel의 cokernel인 것을 확인할 수 있다. 따라서 우리는 $\lMod{R}$에서의 kernel과 cokernel이 universal property를 만족한다는 사실만 보이면 충분하다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#df3))
 
 <div class="proposition" markdown="1">
 
