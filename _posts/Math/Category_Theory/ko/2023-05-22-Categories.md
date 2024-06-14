@@ -54,7 +54,7 @@ weight: 1
 - Ring들과 ring homomorphism들의 category $\Ring$
 - Field들과 field extension들의 category $\Field$
 - Left, right $G$-set들과 $G$-set homomorphism들의 category $\lset{G},\rset{G}$
-- Left, right $R$-module들과 $R$-module homomorphism들의 category $\lmod{R},\rmod{R}$
+- Left, right $R$-module들과 $R$-module homomorphism들의 category $\lMod{R},\rMod{R}$
 - $k$-벡터공간들과 linear map들의 category $\Vect_k$
 - 유한차원 $k$-벡터공간들과 linear map들의 category $\FVect_k$
 - 위상공간들과 연속함수들의 category $\Top$

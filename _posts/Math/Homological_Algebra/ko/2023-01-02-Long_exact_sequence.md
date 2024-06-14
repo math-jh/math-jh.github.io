@@ -47,7 +47,7 @@ $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 이 short exact sequence라는 것과 동치라는 것을 확인할 수 있다. 이러한 가정 하에서 우리는 homology들의 long exact sequence를 만들 수 있다. 
 
-다음 정리의 증명에서 snake lemma가 중요한 역할을 하며, 또 카테고리가 $\lmod{R}$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로 [\[범주론\] §아벨 카테고리, ⁋정리 9](/ko/math/category_theory/abelian_categories#thm9)을 적극적으로 이용하여 $\lmod{R}$ 카테고리에서 다음 정리에 대한 증명을 진행한다.
+다음 정리의 증명에서 snake lemma가 중요한 역할을 하며, 또 카테고리가 $\lMod{R}$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로 [\[범주론\] §아벨 카테고리, ⁋정리 9](/ko/math/category_theory/abelian_categories#thm9)을 적극적으로 이용하여 $\lMod{R}$ 카테고리에서 다음 정리에 대한 증명을 진행한다.
 
 <div class="proposition" markdown="1">
 
