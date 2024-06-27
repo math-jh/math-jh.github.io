@@ -24,7 +24,7 @@ locale                   : "ko-KR"
 title                    : "Blackbox"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Junhyeok Kim"
+name                     : "K"
 description              : "수학쟁이의 낙서장"
 url                      : "https://math-jh.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -109,8 +109,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "Junhyeok Kim"
-  avatar           : /assets/images/Pages/Profile/Octahedral.jpeg
+  name             : "K"
+  avatar           : /assets/images/Pages/Profile/Pochacco.png
   bio              : "Grad. student in mathematics"
   location         : "Seoul, Korea"
   email            : "kujuburi@icloud.com"
