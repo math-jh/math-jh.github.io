@@ -5,16 +5,33 @@
 \usepackage{../.preamble/Operators}
 \begin{document}
 
-%% identity (Monoid_objects-6.png)
+%% Universal_property-2 (Limits-5.png)
 \begin{tikzcd}
-	G & {G\times G} \\
-	{G\times G} & G
-	\arrow["{(e_G,\id_G)}", from=1-1, to=1-2]
-	\arrow["{(\id_G,e_G)}"', from=1-1, to=2-1]
-	\arrow["{\id_G}"{description}, from=1-1, to=2-2]
-	\arrow["\mu", from=1-2, to=2-2]
-	\arrow["\mu"', from=2-1, to=2-2]
+	&&& {B} \\
+	&&& \lim F \\
+	\cdots & {F(-2)} & {F(-1)} & {F(0)} & {F(1)} & {F(2)} & \cdots
+	\arrow[from=1-4, to=2-4, gray!50]
+	\arrow[from=1-4, to=3-2]
+	\arrow[from=1-4, to=3-3]
+	\arrow[curve={height=6pt}, from=1-4, to=3-4]
+	\arrow[from=1-4, to=3-5]
+	\arrow[from=1-4, to=3-6]
+	\arrow[from=2-4, to=3-2]
+	\arrow[from=2-4, to=3-3]
+	\arrow[from=2-4, to=3-4]
+	\arrow[from=2-4, to=3-5]
+	\arrow[from=2-4, to=3-6]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=3-4, to=3-5]
+	\arrow[from=3-5, to=3-6]
+	\arrow[from=3-6, to=3-7]
 \end{tikzcd}
+
+
+
+
 
 \end{document}
 
@@ -147,6 +164,105 @@
 	\arrow[tail reversed, from=3-2, to=3-3]
 \end{tikzcd}
 
+% Yoneda_proof (Representable_functors-1.png)
+\begin{tikzcd}
+	{\Hom_\mathcal{A}(A,A)} & {F(A)} \\
+	{\Hom_\mathcal{A}(A,X)} & {F(X)}
+	\arrow["{\Psi(x)_A}", from=1-1, to=1-2]
+	\arrow["{\Hom_\mathcal{A}(A,f)}"', from=1-1, to=2-1]
+	\arrow["{F(f)}", from=1-2, to=2-2]
+	\arrow["{\Psi(x)_X}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+
+%% Commuting_triangle (Limits-1.png)
+\begin{tikzcd}
+	a && c \\
+	& b
+	\arrow["\gamma", from=1-1, to=1-3]
+	\arrow["\alpha"', from=1-1, to=2-2]
+	\arrow["\beta"', from=2-2, to=1-3]
+\end{tikzcd}
+
+%% Commuting_triangle-F (Limits-2.png)
+\begin{tikzcd}
+	F(a) && F(c) \\
+	& F(b)
+	\arrow["F(\gamma)", from=1-1, to=1-3]
+	\arrow["F(\alpha)"', from=1-1, to=2-2]
+	\arrow["F(\beta)"', from=2-2, to=1-3]
+\end{tikzcd}
+
+%% Cone (Limits-3.png)
+\begin{tikzcd}
+	&[-10pt]&[-10pt]&[-10pt]&[-10pt]&[-10pt]&[-10pt]&[-10pt]&[-10pt]&[-10pt]&[-10pt]&[-10pt] A&[-10pt]&[-10pt]&[-10pt] \\[-15pt]
+	&&&&&&&\overset{F}{\rightsquigarrow}\\[-15pt]
+	\cdots & {-2} & {-1} & 0 & 1 & 2 & \cdots && \cdots & {F(-2)} & {F(-1)} & {F(0)} & {F(1)} & {F(2)} & \cdots
+	\arrow[from=1-12, to=3-10]
+	\arrow[from=1-12, to=3-11]
+	\arrow[from=1-12, to=3-12]
+	\arrow[from=1-12, to=3-13]
+	\arrow[from=1-12, to=3-14]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=3-4, to=3-5]
+	\arrow[from=3-5, to=3-6]
+	\arrow[from=3-6, to=3-7]
+	\arrow[from=3-9, to=3-10]
+	\arrow[from=3-10, to=3-11]
+	\arrow[from=3-11, to=3-12]
+	\arrow[from=3-12, to=3-13]
+	\arrow[from=3-13, to=3-14]
+	\arrow[from=3-14, to=3-15]
+\end{tikzcd}
+
+%% Functoriality_of_cone (Limits-4.png)
+\begin{tikzcd}
+	&&& {A'} \\
+	&&& \color{gray!50} A \\
+	\cdots & {F(-2)} & {F(-1)} & {F(0)} & {F(1)} & {F(2)} & \cdots
+	\arrow[from=1-4, to=2-4, gray!50]
+	\arrow[from=1-4, to=3-2]
+	\arrow[from=1-4, to=3-3]
+	\arrow[curve={height=6pt}, from=1-4, to=3-4]
+	\arrow[from=1-4, to=3-5]
+	\arrow[from=1-4, to=3-6]
+	\arrow[from=2-4, to=3-2, gray!50]
+	\arrow[from=2-4, to=3-3, gray!50]
+	\arrow[from=2-4, to=3-4, gray!50]
+	\arrow[from=2-4, to=3-5, gray!50]
+	\arrow[from=2-4, to=3-6, gray!50]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=3-4, to=3-5]
+	\arrow[from=3-5, to=3-6]
+	\arrow[from=3-6, to=3-7]
+\end{tikzcd}
+
+%% Universal_property (Limits-5.png)
+\begin{tikzcd}
+	&&& {B} \\
+	&&&\\
+	\cdots & {F(-2)} & {F(-1)} & {F(0)} & {F(1)} & {F(2)} & \cdots
+	\arrow[from=1-4, to=3-2]
+	\arrow[from=1-4, to=3-3]
+	\arrow[from=1-4, to=3-4]
+	\arrow[from=1-4, to=3-5]
+	\arrow[from=1-4, to=3-6]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=3-4, to=3-5]
+	\arrow[from=3-5, to=3-6]
+	\arrow[from=3-6, to=3-7]
+\end{tikzcd}
+
+
+
+
+
 %% Associativity (Monoidal_categories-1.png)
 \begin{tikzcd}
 	{M\times M\times M} & {M\times M} \\
@@ -169,25 +285,9 @@
 	\arrow["{\pr_1}", from=1-3, to=2-2]
 \end{tikzcd}
 
-%% Commuting_triangle (Monoidal_categories-3.png)
-\begin{tikzcd}
-	a && c \\
-	& b
-	\arrow["\gamma", from=1-1, to=1-3]
-	\arrow["\alpha"', from=1-1, to=2-2]
-	\arrow["\beta"', from=2-2, to=1-3]
-\end{tikzcd}
 
-%% Commuting_triangle-F (Monoidal_categories-4.png)
-\begin{tikzcd}
-	F(a) && F(c) \\
-	& F(b)
-	\arrow["F(\gamma)", from=1-1, to=1-3]
-	\arrow["F(\alpha)"', from=1-1, to=2-2]
-	\arrow["F(\beta)"', from=2-2, to=1-3]
-\end{tikzcd}
 
-%%Pentagon_identity (Monoidal_categories-5.png)
+%%Pentagon_identity (Monoidal_categories-3.png)
 \begin{tikzcd}
 	&[-80pt]&[-45pt] {(A\otimes B)\otimes(C\otimes D)}&[-45pt]&[-80pt] \\[20pt]
 	{A\otimes(B\otimes(C\otimes D))} &&&& {((A\otimes B)\otimes C)\otimes D} \\[30pt]
@@ -199,7 +299,7 @@
 	\arrow["{\alpha_{A,B,C}\otimes\id_D}"', from=3-4, to=2-5]
 \end{tikzcd}
 
-%% Unitor_diagram (Monoidal_categories-6.png)
+%% Unitor_diagram (Monoidal_categories-4.png)
 \begin{tikzcd}
 	{A\otimes(I\otimes B)} && {(A\otimes I)\otimes B} \\
 	& {A\otimes B}
@@ -208,7 +308,7 @@
 	\arrow["{\rho_A\otimes \id_B}", from=1-3, to=2-2]
 \end{tikzcd}
 
-%% Associativity_coherence (Monoidal_categories-7.png)
+%% Associativity_coherence (Monoidal_categories-5.png)
 \begin{tikzcd}
 	{A\otimes(B\otimes C)} & {A\otimes(C\otimes B)} & {(A\otimes C)\otimes B} \\
 	{(A\otimes B)\otimes C} & {C\otimes(A\otimes B)} & {(C\otimes A)\otimes B}
@@ -220,7 +320,7 @@
 	\arrow["{\alpha_{C,A,B}}"', from=2-2, to=2-3]
 \end{tikzcd}
 
-%% Symmetor (Monoidal_categories-8.png)
+%% Symmetor (Monoidal_categories-6.png)
 \begin{tikzcd}
 	{A\otimes I} && {I\otimes A} \\
 	& A
@@ -229,7 +329,7 @@
 	\arrow["{\lambda_A}", from=1-3, to=2-2]
 \end{tikzcd}
 
-%% Symmetor_inverse (Monoidal_Categories-9.png)
+%% Symmetor_inverse (Monoidal_categories-7.png)
 \begin{tikzcd}
 	{A\otimes B} && {A\otimes B} \\
 	& {B\otimes A}
@@ -238,7 +338,7 @@
 	\arrow["{\gamma_{B,A}}"', from=2-2, to=1-3]
 \end{tikzcd}
 
-%% Diagonal_morphism (Monoidal_categories-10.png)
+%% Diagonal_morphism (Monoidal_categories-8.png)
 \begin{tikzcd}
 	X \\
 	& {X\times X} & X \\
@@ -324,4 +424,15 @@
 	\arrow["{e_G}"{description}, from=1-1, to=2-2]
 	\arrow["\mu", from=1-2, to=2-2]
 	\arrow["\mu"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% Hopf_monoid (Monoid_objects-8.png)
+\begin{tikzcd}
+	H & I & H \\
+	{H\otimes H} && {H\otimes H}
+	\arrow["\epsilon", from=1-1, to=1-2]
+	\arrow["\Delta"', from=1-1, to=2-1]
+	\arrow["\eta", from=1-2, to=1-3]
+	\arrow["{\id_H\otimes \iota}"', from=2-1, to=2-3]
+	\arrow["\mu"', from=2-3, to=1-3]
 \end{tikzcd}
