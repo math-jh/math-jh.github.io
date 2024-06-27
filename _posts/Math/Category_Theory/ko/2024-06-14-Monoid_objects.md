@@ -13,7 +13,7 @@ sidebar:
 
 date: 2024-06-14
 last_modified_at: 2024-06-14
-weight: 6
+weight: 106
 
 ---
 
@@ -37,6 +37,8 @@ weight: 6
 ![unit](/assets/images/Math/Category_Theory/Monoid_objects-2.png){:width="348.6px" class="invert" .align-center}
 
 </div>
+
+임의의 monoidal category $(\mathcal{A},\otimes, I)$는 항상 monoid object $I$를 갖는다. 또, $M$이 symmetric monoidal category의 monoid object라면 $M\otimes M$ 또한 monoid object가 된다는 것을 쉽게 확인할 수 있다. 
 
 <div class="example" markdown="1">
 
@@ -134,6 +136,60 @@ $$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
 </div>
 
 마지막 예시만이 조금 덜 자명해보일 수 있지만, 이는 inverse $\iota$가 group homomorphism이 되어야하기 때문에 이 조건으로부터 commutativity가 나오게 된다는 것을 확인할 수 있다. 
+
+## Hopf monoid
+
+위의 [정의 3](#def3)을 만들 때 필요했던 것을 살펴보면, 우리가 필요한 것은 정확히 diagonal map $\Delta: G \rightarrow G\otimes G$와 augmentation map $G \rightarrow I$, 그리고 inverse map $I \rightarrow G$이다. 여기에서 필요한 것들을 잘 나눠보면 우선 다음을 정의할 수 있다.
+
+<div class="definition" markdown="1">
+
+<ins id="def5">**정의 5**</ins> Monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. $\mathcal{A}$의 대상 $M$이 *comonoid<sub>쌍대모노이드</sub>*라는 것은 $M$이 $\mathcal{A}^\op$에서 monoid object인 것이다.
+
+</div>
+
+이를 풀어 써 보자면, comonoid가 담고 있는 정보는 *comultiplication<sub>쌍대곱</sub>* $\Delta: G \rightarrow G\otimes G$와 *counit<sub>쌍대단위원</sub>* $\epsilon:G \rightarrow I$으로 이루어지며, 이들은 [정의 1](#def1)의 두 조건의 dual 버전을 만족한다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def6">**정의 6**</ins> Symmetric monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. 그럼 $(M,\mu,\eta,\Delta,\epsilon)$이 *bimonoid*라는 것은 다음과 같은 뜻이다.
+
+- $(M,\mu,\eta)$이 monoid이다.
+- $(M,\Delta,\epsilon)$이 comonoid이다.
+- Comultiplication과 counit이 모두 monoid morphism이다.
+
+</div>
+
+Monoid object $M$이 주어졌을 때, $M\otimes M$에 monoid 구조를 주기 위해서는 symmetor의 역할이 중요하기 때문에, 일반적으로 bimonoid의 개념도 symmetric monoidal category에서만 정의한다. 이제 Hopf monoid를 다음과 같이 정의한다.
+
+<div class="definition" markdown="1">
+
+<ins id="def7">**정의 7**</ins> Symmetric monoidal category $(\mathcal{A},\otimes,I)$에서 $(H,\mu,\eta,\Delta,\epsilon,\iota)$가 *Hopf monoid<sub>호프 모노이드</sub>*라는 것은 $(H,\mu,\eta,\Delta,\epsilon)$이 bimonoid이고 $\iota$가 [정의 3](#def3)의 마지막 diagram과 동일한 조건을 만족하는 것이다.
+
+</div>
+
+$\iota$에 대한 조건을 명시적으로 쓰기 위해서는 [정의 3](#def3)에서 주어졌던 diagram을 모두 Hopf monoid가 갖고 있는 정보로 옮겨야 하는데, 가령 한쪽 삼각형은 다음의 diagram
+
+![Hopf_inverse](/assets/images/Math/Category_Theory/Monoid_objects-8.png){:width="297.45px" class="invert" .align-center}
+
+으로 풀어쓸 수 있고, 비슷하게 $\iota\otimes\id_H$을 쓰면 다른 쪽 삼각형을 얻는다.
+
+<div class="example" markdown="1">
+
+<ins id="ex8">**예시 8**</ins> 다음은 모두 Hopf monoid의 예시이다.
+
+- 임의의 cartesian monoidal category에서의 monoid object는 자연스러운 bimonoid 구조를 가지며, 따라서 임의의 cartesian monoidal category에서의 group object는 모두 Hopf monoid이다.
+- $\Vect$에서의 Hopf monoid는 Hopf algebra이다.
+
+</div>
+
+---
+
+**참고문헌**
+
+**[nLab]** nLab. *Monoidal category*. ([Link](https://ncatlab.org/nlab/show/monoidal+category))  
+**[Rie]** Emily Riehl. *Category Theory in Context*. Dover Publications, 2016.
+
+---
 
 [^1]: 이전 글에서 motivation을 위해 살펴보았던 monoid의 associativity에 대한 diagram에서는 $(M\times M)\times M$과 $M\times(M\times M)$을 모두 같은 것으로 보아 diagram이 사각형이었지만, 여기에서는 $(M\otimes M)\otimes M$과 $M\otimes(M\otimes M)$이 다른 대상이므로 오각형이 되었다.
 [^2]: 두 morphism의 곱은 product category에서부터 나온다고 착각할 수도 있는데, 두 morphism $f:G\rightarrow G$와 $g:G\rightarrow G$를 곱하면 $(f,g):G\times G \rightarrow G\times G$가 나온다. 뒤쪽 $G\times G$에 monoidal product $\otimes$를 적용하면 $(f,g)$의 target을 $G\otimes G$로 만들어줄 수는 있지만, 
