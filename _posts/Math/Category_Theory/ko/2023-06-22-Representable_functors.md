@@ -13,7 +13,7 @@ sidebar:
 
 date: 2023-06-22
 last_modified_at: 2023-06-22
-weight: 7
+weight: 5
 
 ---
 
@@ -23,7 +23,7 @@ weight: 7
 
 $$\Hom_\mathcal{A}(A,-):\mathcal{A}\rightarrow\Set,\qquad \Hom_\mathcal{A}(-,A):\mathcal{A}\rightarrow\Set$$
 
-를 정의하며, 첫 번째는 covariant functor, 두 번째는 contravariant functor가 된다.
+를 정의하며, 첫 번째는 covariant functor, 두 번째는 contravariant functor가 된다. ([§함자, ⁋예시 4](/ko/math/category_theory/functors#ex4))
 
 <div class="definition" markdown="1">
 
@@ -36,11 +36,25 @@ $$\Hom_\mathcal{A}(A,-):\mathcal{A}\rightarrow\Set,\qquad \Hom_\mathcal{A}(-,A):
 
 </div>
 
+<div class="example" markdown="1">
+
+<ins id="ex2">**예시 2**</ins> 예를 들어, $\id_\Set:\Set \rightarrow \Set$은 representable이다. 이는 임의의 singleton $\ast$에 대하여 다음 natural isomorphism
+
+$$\id_\Set\cong\Hom_\Set(\ast,-)$$
+
+이 성립하기 때문이다. 임의의 집합 $A$에 대하여, 전단사함수
+
+$$\id_\Set(A)=A\rightarrow\Hom_\Set(\ast,A)$$
+
+는 $A$의 임의의 원소 $a$를 받아서, 그 image가 $a$인 함수 $a:\ast\rightarrow A$로 주어지며, 거꾸로 함수 $\ast\rightarrow A$의 image를 보면 $A$의 원소를 얻어낼 수 있다. 이 대응의 naturality는 임의의 함수 $f:A \rightarrow B$가 주어졌을 때, 임의의 $a\in A$에 대해 $b=f(a)$라 하면 $\id_\Set(B)\rightarrow\Hom_\Set(\ast,B)$는 그 image가 $b$인 함수 $b:\ast \rightarrow B$이고, 이것이 정확히 합성 $\ast\overset{a}{\longrightarrow}A\overset{f}{\longrightarrow}B$와 같기 때문에 얻어진다.
+
+</div>
+
 이와 관련된 가장 중요한 정리는 다음의 요네다 보조정리이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**정리 2 (Yoneda)**</ins> 임의의 functor $F:\mathcal{A}\rightarrow\Set$과, 임의의 $A\in\obj(\mathcal{A})$에 대하여, 집합 사이의 bijection
+<ins id="thm3">**정리 3(Yoneda)**</ins> 임의의 functor $F:\mathcal{A}\rightarrow\Set$과, 임의의 $A\in\obj(\mathcal{A})$에 대하여, 집합 사이의 bijection
 
 $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(A,-)$ to $F$}\}\rightarrow F(A);\qquad \alpha\mapsto \alpha_A(\id_A)$$
 
@@ -72,7 +86,7 @@ $$\Psi(x)_X(f)=F(f)(x)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm3">**정리 3 (Yoneda)**</ins> 임의의 contravariant functor $F:\mathcal{A}\rightarrow\Set$과, 임의의 $A\in\obj(\mathcal{A})$에 대하여, 집합 사이의 bijection
+<ins id="thm4">**정리 4 (Yoneda)**</ins> 임의의 contravariant functor $F:\mathcal{A}\rightarrow\Set$과, 임의의 $A\in\obj(\mathcal{A})$에 대하여, 집합 사이의 bijection
 
 $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(-,A)$ to $F$}\}\rightarrow F(A);\qquad \alpha\mapsto \alpha_A(\id_A)$$
 
@@ -84,11 +98,11 @@ $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(-,A)$ to $F$}\}\ri
 
 ## Universal property
 
-[정의 1](#def1)을 보면, 우리는 object $A$와 natural isomorphism $F\cong\Hom_\mathcal{A}(A,-)$의 선택을 통틀어 *representation*이라 부르기로 하였다. 그런데 [정리 2](#thm2)에 의하여 natural isomorphism을 택하는 것은 $F(A)$의 적절한 원소를 하나 뽑아오는 것과 같다. 이를 다음과 같이 정의한다. 
+[정의 1](#def1)을 보면, 우리는 object $A$와 natural isomorphism $F\cong\Hom_\mathcal{A}(A,-)$의 선택을 통틀어 *representation*이라 부르기로 하였다. 그런데 [정리 3](#thm3)에 의하여 natural isomorphism을 택하는 것은 $F(A)$의 적절한 원소를 하나 뽑아오는 것과 같다. 이를 다음과 같이 정의한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Representable functor $F:\mathcal{A}\rightarrow\Set$가 주어졌다 하자. Natural isomorphism $\Hom_\mathcal{A}(-,A)\cong F$에 대하여, $F(A)$의 원소 $x\in F(A)$를 *universal element*라 부르고, $A$와 $x$를 묶어 *universal property*라 부른다. 
+<ins id="def5">**정의 5**</ins> Representable functor $F:\mathcal{A}\rightarrow\Set$가 주어졌다 하자. Natural isomorphism $\Hom_\mathcal{A}(-,A)\cong F$에 대하여, $F(A)$의 원소 $x\in F(A)$를 *universal element*라 부르고, $A$와 $x$를 묶어 *universal property*라 부른다. 
 
 </div>
 
@@ -96,7 +110,7 @@ $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(-,A)$ to $F$}\}\ri
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 두 $k$-벡터공간 $V,W$를 고정하고, category $\Vect_k$에서 $\Set$으로의 functor $\operatorname{Bilin}(V,W;-)$을
+<ins id="ex6">**예시 6**</ins> 두 $k$-벡터공간 $V,W$를 고정하고, category $\Vect_k$에서 $\Set$으로의 functor $\operatorname{Bilin}(V,W;-)$을
 
 $$\operatorname{Bilin}(V,W;U)=\{\text{bilinear maps from $V\times W$ to $U$}\}$$
 
@@ -110,11 +124,12 @@ $$\Hom_{\Vect_k}(V\otimes W,-)\cong\operatorname{Bilin}(V,W;-)$$
 
 </div>
 
-위의 예시를 통해 다양한 분야에서 universal property를 통해 정의된 대상들이 실은 위의 꼴인 것을 확인할 수 있다. 그러나 범주론의 관점에서만 보자면 아직까지는 이들을 universal property라 부르는 이유는 [정의 4](#def4)에서 그렇게 이름을 붙였다는 것 외에는 찾아볼 수 없다. [명제 7](#prop7)은 여기에 적절한 답을 준다. 즉, 이러한 대상들은 모두 적절한 카테고리의 initial (혹은 terminal) object로 생각할 수 있다. 이를 설명하기 위해서는 다음 정의가 필요하다. 
+위의 예시를 통해 다양한 분야에서 universal property를 통해 정의된 대상들이 실은 위의 꼴인 것을 확인할 수 있다. 그러나 범주론의 관점에서만 보자면 아직까지는 이들을 universal property라 부르는 이유는 [정의 5](#def5)에서 그렇게 이름을 붙였다는 것 외에는 찾아볼 수 없다.  
+이를 정당화하기 위해 category $\mathcal{A}$의 어떠한 대상 $I$가, 임의의 대상 $A$가 주어질 때마다 유일한 morphism $I\rightarrow A$를 가질 때 이를 $\mathcal{A}$의 *initial object<sub>시작 대상</sub>*라 부르자. 비슷하게 *terminal object<sub>끝 대상</sub>* 또한 정의한다. 그럼 [명제 8](#prop8)은 위의 질문에 적절한 답을 준다. 즉, 이러한 대상들은 모두 적절한 카테고리의 initial (혹은 terminal) object로 생각할 수 있다. 이를 설명하기 위해서는 다음 정의가 필요하다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Functor $F: \mathcal{A}\rightarrow \Set$의 *category of elements*는 다음의 데이터로 이루어진 카테고리 $\int F$이다.
+<ins id="def7">**정의 7**</ins> Functor $F: \mathcal{A}\rightarrow \Set$의 *category of elements*는 다음의 데이터로 이루어진 카테고리 $\int F$이다.
 
 - $\int F$의 대상들은 $A\in \mathcal{A}$와 $x\in F(A)$로 이루어진 pair $(A,x)$이다.
 - $\int F$의 morphism $(A\_1,x\_1) \rightarrow (A\_2, x\_2)$는 $F(f)(x_1)=x_2$를 만족하는 $\mathcal{A}$의 morphism $f$이다. 
@@ -132,7 +147,7 @@ $$\Hom_{\Vect_k}(V\otimes W,-)\cong\operatorname{Bilin}(V,W;-)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Functor $F:\mathcal{A}\rightarrow\Set$이 representable인 것과 $\int F$가 initial object를 갖는 것이 동치이다.
+<ins id="prop8">**명제 8**</ins> Functor $F:\mathcal{A}\rightarrow\Set$이 representable인 것과 $\int F$가 initial object를 갖는 것이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -140,7 +155,7 @@ $$\Hom_{\Vect_k}(V\otimes W,-)\cong\operatorname{Bilin}(V,W;-)$$
 
 $F$가 representable하다면 $F\cong\Hom_\mathcal{A}(A,-)$이도록 하는 적절한 $A$와 natural isomorphism $\alpha$가 존재한다. 그럼 이를 통해 $\int F$에서 $\int\Hom_\mathcal{A}(A,-)$로의 isomorphism $(X,x)\mapsto (X,\alpha_X(x))$을 만들 수 있다. 그런데 $\int\Hom_\mathcal{A}(A,-)={}_{A/}\mathcal{A}$은 initial object $\id_A$를 갖는다. 
 
-이제 $\int F$가 initial object $(A,x)$를 갖는다 하고 이로부터 natural isomorphism $\Hom_\mathcal{A}(A,-)\Rightarrow F$를 만들어야 한다. 우선 [정리 2](#thm2)로부터, 우리는 bijection
+이제 $\int F$가 initial object $(A,x)$를 갖는다 하고 이로부터 natural isomorphism $\Hom_\mathcal{A}(A,-)\Rightarrow F$를 만들어야 한다. 우선 [정리 3](#thm3)로부터, 우리는 bijection
 
 $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(A,-)$ to $F$}\}\rightarrow F(A)$$
 

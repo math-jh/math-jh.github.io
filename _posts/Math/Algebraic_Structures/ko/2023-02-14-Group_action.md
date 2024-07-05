@@ -13,7 +13,7 @@ sidebar:
 
 date: 2023-02-14
 last_modified_at: 2023-02-14
-weight: 10
+weight: 11
 
 ---
 
@@ -194,7 +194,7 @@ $$(\beta\alpha\beta^{-1})a=\beta(\alpha(\beta^{-1}a))=\beta\beta^{-1}a=a$$
 
 일반적으로 대수적인 대상이 주어졌을 때, endomorphism monoid의 원소들은 대수적인 구조를 보존해야 한다. 집합 $E$는 별도의 대수적인 구조가 없었으므로 $\End(E)=\Fun(E,E)$가 성립하지만, 가령 monoid $M$에 대해서 $\End(M)$이라 하면 항상 $M$의 *monoid endomorphism*들의 모임을 뜻하는 것으로 이해하며, $\Aut(M)$ 또한 마찬가지이다. 
 
-특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. 즉 $\rho:G\rightarrow\End(G)$가 주어져 있다 하면, [따름정리 8](#cor8)의 증명으로부터 $\rho$의 image는 모두 전단사라는 것을 안다. 그런데 전단사인 group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structure#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
+특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. 즉 $\rho:G\rightarrow\End(G)$가 주어져 있다 하면, [따름정리 8](#cor8)의 증명으로부터 $\rho$의 image는 모두 전단사라는 것을 안다. 그런데 전단사인 group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
 
 자기 자신 위에서 정의된 group action 중 몇 가지는 기억해둘 만한 가치가 있다.
 

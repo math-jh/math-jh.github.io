@@ -179,7 +179,7 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 
 </div>
 
-어렵지 않게 $\End(A)$와 $\Aut(A)$가 대수적으로 정의된 monoid와 group의 조건을 만족하는 것을 알 수 있다. ([\[대수적 구조\] §준군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/group#def3)과 [정의 10](/ko/math/algebraic_structures/group#def10)) 범주론에서는 monoid와 group을 다음과 같이 정의할 수 있다.
+어렵지 않게 $\End(A)$와 $\Aut(A)$가 대수적으로 정의된 monoid와 group의 조건을 만족하는 것을 알 수 있다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)과 [⁋정의 11](/ko/math/algebraic_structures/groups#def11)) 범주론에서는 monoid와 group을 다음과 같이 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -195,6 +195,34 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 
 </div>
 
+## 카테고리의 예시들
+
+이제 이미 존재하는 category로부터 새로운 category들을 만드는 방법을 살펴본다. 
+
+
+<div class="example" markdown="1">
+
+<ins id="ex12">**예시 12**</ins> 두 category $\mathcal{A},\mathcal{B}$가 주어졌다 하자. 이들의 *product category<sub>곱 카테고리</sub>* $\mathcal{A}\times \mathcal{B}$는 다음의 데이터로 이루어진다.
+
+- $\obj(\mathcal{A}\times \mathcal{B})$의 대상들은 쌍 $(A,B)$의 꼴이다.
+- 임의의 $(A_1,B_1),(A_2,B_2)\in\obj(\mathcal{A}\times \mathcal{B})$에 대하여, $\Hom_{\mathcal{A}\times \mathcal{B}}((A_1,B_1),(A_2,B_2))$는 $f\in\Hom_\mathcal{A}(A_1,A_2),g\in\Hom_\mathcal{B}(B_1,B_2)$에 대해 $(f,g)$의 꼴이다. 
+- 임의의 $A\times B\in \mathcal{A}\times \mathcal{B}$에 대하여, $A\times B$에서의 identity는 $(\id_A,\id_B)$로 주어진다.
+- 임의의 $(f_1,g_1):(A_1,B_1)\rightarrow(A_2,B_2)$, $(f_2,g_2):(A_2,B_2)\rightarrow(A_3,B_3)$에 대해, 이들의 합성은 $(f_2\circ f_1,g_2\circ g_1)\in\Hom((A_1,B_1),(A_3,B_3))$으로 주어진다. 
+
+</div>
+
+<div class="example" markdown="1">
+
+<ins id="ex13">**예시 13**</ins> Category $\mathcal{A}$가 주어졌다 하고, $A\in\obj(\mathcal{A})$를 고정하자. 
+
+- $\mathcal{A}$의 *slice category over $A$<sub>$A$ 위에서의 조각 범주</sub>* $A_{/\mathcal{A}}$는 다음과 같은 데이터로 주어진다.
+  - $\mathcal{A}_{/A}$의 object들은 $\mathcal{A}$의 morphism들 $f:A_1\rightarrow A$이다.
+  - 임의의 $(A\_1\overset{f\_1}{\longrightarrow}A)\in\obj(\mathcal{A}\_{/A})$와 $(A\_2\overset{f\_2}{\longrightarrow}A)\in\obj(\mathcal{A}\_{/A})$에 대하여, $f_1$에서 $f_2$로의 morphism은 $f_1=g\circ f_2$가 성립하도록 하는 $g:A_1\rightarrow A_2$이다.
+- $\mathcal{A}$의 *slice category under $A$<sub>$A$ 위에서의 쌍대 조각 범주</sub>* ${}_{A/}\mathcal{A}$는 다음과 같은 데이터로 주어진다.
+  - ${}_{A/}\mathcal{A}$의 object들은 $\mathcal{A}$의 morphism들 $f:A\rightarrow A_1$이다.
+  - 임의의 $(A\overset{f\_1}{\longrightarrow}A\_1)\in\obj({}\_{A/}\mathcal{A})$와 $(A\overset{f\_2}{\longrightarrow}A\_2)\in\obj({}\_{A/}\mathcal{A})$에 대하여, $f_1$에서 $f_2$로의 morphism은 $f_2=g\circ f_1$가 성립하도록 하는 $g:A_1\rightarrow A_2$이다.
+
+</div>
 
 ---
 

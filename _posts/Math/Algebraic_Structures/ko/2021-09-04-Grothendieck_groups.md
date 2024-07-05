@@ -4,9 +4,9 @@ title: "Grothendieck 군"
 excerpt: "Grothendieck group과 정수의 정의"
 
 categories: [Math / Algebraic Structures]
-permalink: /ko/math/algebraic_structures/Grothendieck_group
+permalink: /ko/math/algebraic_structures/Grothendieck_groups
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Grothendieck_group.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Grothendieck_groups.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
@@ -17,6 +17,8 @@ weight: 3
 
 ---
 
+**Adjoint 쓰고 마저 약팔기**
+
 우리는 앞선 글에서 monoid의 정의를 살펴보았는데, 대표적으로 집합론에서 정의한 자연수는 덧셈에 대한 commutative monoid가 된다. Group의 대표적인 예시는 정수 $\mathbb{Z}$지만, 이는 아직 엄밀한 방식으로 정의되지는 않았다. 이번 글에서 우리는 commutative semigroup으로부터 abelian group을 얻어내는 방법을 소개한다. 
 
 ## Universal mapping problem
@@ -25,7 +27,7 @@ Commutative semigroup $(S,+)$가 주어졌다고 하자. 그럼 $(S,+)$를 포�
 
 > Abelian group $G_S$와 semigroup homomorphism $\epsilon:S\rightarrow G_S$는 다음과 같은 성질을 만족하는 쌍이다.  
 >
->![universal_property](/assets/images/Math/Algebraic_Structures/Grothendieck_group-1.png){:width="130.95px"  class="invert" .align-center}
+>![universal_property](/assets/images/Math/Algebraic_Structures/Grothendieck_groups-1.png){:width="130.95px"  class="invert" .align-center}
 >     
 >(Universal mapping problem) 임의의 abelian group $G$와, 임의의 semigroup homomorphism $f:S\rightarrow G$가 주어질 때마다 *group homomorphism* $\bar{f}:G_S\rightarrow G$가 유일하게 존재하여 $f=\bar{f}\circ\epsilon$이 성립한다.
 
@@ -41,11 +43,11 @@ Commutative semigroup $(S,+)$가 주어졌다고 하자. 그럼 $(S,+)$를 포�
 
 우선 다음 diagram을 살펴보자.
 
-![uniqueness_1](/assets/images/Math/Algebraic_Structures/Grothendieck_group-2.png){:width="133.35px"  class="invert" .align-center}
+![uniqueness_1](/assets/images/Math/Algebraic_Structures/Grothendieck_groups-2.png){:width="133.35px"  class="invert" .align-center}
 
 그럼 universal property에서, $\eta= \bar{\eta}\circ\epsilon$이도록 하는 $\bar{\eta}: G_S\rightarrow H$가 존재한다. 한편, 다시 다음의 diagram에서
 
-![uniqueness_2](/assets/images/Math/Algebraic_Structures/Grothendieck_group-3.png){:width="133.35px"  class="invert" .align-center}
+![uniqueness_2](/assets/images/Math/Algebraic_Structures/Grothendieck_groups-3.png){:width="133.35px"  class="invert" .align-center}
 
 $H$에 대한 universal property를 사용하면 $\epsilon=\bar{\epsilon}\circ\eta$이도록 하는 $\bar{\epsilon}:H\rightarrow G_S$가 존재한다. 그럼
 
@@ -53,7 +55,7 @@ $$\bar{\eta}\circ\bar{\epsilon}\circ\eta=\bar{\eta}\circ \epsilon=\eta=\id_{H}\c
 
 이고, 다시 universal property에 의하여 $f\circ \eta=\eta$를 만족하는 $f$는 유일하므로 $f=\id_H=\bar{\eta}\circ \bar{\epsilon}$이 성립한다. 혹은, diagram의 언어로는, 다음 diagram을 commute하게 만드는 $H\rightarrow H$는 유일하므로 $\id_H=\bar{\eta}\circ \bar{\epsilon}$여야 한다.
 
-![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_group-4.png){:width="180px"  class="invert" .align-center}
+![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_groups-4.png){:width="180px"  class="invert" .align-center}
 
 비슷하게 $\id\_{G_S}=\bar{\epsilon}\circ \bar{\eta}$가 성립한다는 것도 보일 수 있고, 따라서 $G_S\cong H$가 성립한다.
 </details>
@@ -78,7 +80,7 @@ $S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [�
 
 $S$가 abelian group이 될 수 없는 이유는 임의의 원소에 대한 역원이 존재하지 않을 수도 있기 때문이다. 직관적으로 이는 <em_ko>음수</em_ko>를 추가하여 해결할 수 있다.
 
-주어진 commutative semigroup $(S,+)$에 대하여, product semigroup $S\times S$를 생각하자. ([§대수적 구조, ⁋예시 5](/ko/math/algebraic_structures/algebraic_structure#ex5)) $S\times S$의 둘째 부분을 음수처럼 생각하면, 다음 식
+주어진 commutative semigroup $(S,+)$에 대하여, product semigroup $S\times S$를 생각하자. ([§대수적 구조, ⁋예시 5](/ko/math/algebraic_structures/algebraic_structures#ex5)) $S\times S$의 둘째 부분을 음수처럼 생각하면, 다음 식
 
 $$(a_1, b_1)+(a_2, b_2)=(a_1+a_2, b_1+b_2)$$
 
