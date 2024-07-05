@@ -59,7 +59,7 @@ $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 임의의 homomorphism $f:G\rightarrow G'$와 $G$의 normal subgroup $N$에 대하여, $f=\bar{f}\circ p$를 만족하는 $\bar{f}:G/H\rightarrow G'$가 존재할 필요충분조건은 $N\leq \ker f'$인 것이다. 
+<ins id="prop3">**명제 3**</ins> 임의의 homomorphism $f:G\rightarrow G'$와 $G$의 normal subgroup $N$에 대하여, $f=\bar{f}\circ p$를 만족하는 $\bar{f}:G/N\rightarrow G'$가 존재할 필요충분조건은 $N\leq \ker f$인 것이다. 
 
 </div>
 
@@ -141,6 +141,38 @@ $$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 <ins id="thm7">**정리 7 (The fourth isomorphism theorem)**</ins> $G$가 group이고, $N$이 $G$의 normal subgroup이라 하자. 그럼 *$N$을 포함하는 $G$의 subgroup들의 집합*과 *$G/N$의 subgroup들의 집합* 사이의 inclusion-preserving bijection이 존재한다. 뿐만 아니라, 이 bijection은 교집합이나 index, normal subgroup등의 관계를 모두 보존한다.
 
 </div>
+
+## 준동형사상의 coequalizer
+
+이제 두 group homomorphism $f,g:G \rightarrow H$가 주어졌다 하자. 앞서 우리는 $f,g$의 equalizer $\Eq(f,g)$는 항상 $G$의 subgroup이 된다는 것을 살펴보았다. 이들의 coequalizer는 상황이 조금 복잡하다.
+
+우선 coequalizer의 universal property를 생각하면, $q:H\rightarrow\CoEq(f,g)$는 $q\circ f=q\circ g$를 만족하는 것들 중 initial인 것이다. 만일 우리가 $\Set$에서 이러한 상황을 마주쳤다면 $H$ 위에 equivalence relation $\sim$을
+
+$$f(x)\sim g(x)\qquad\text{for all $x\in G$}$$
+
+에 의해 생성되는 relation으로 준 후, projection $H\rightarrow H/{\sim}$을 생각하면 이것이 coequalizer가 될 것이나 $\Grp$에서는 위에서 정의한 $\sim$이 $H$의 group operation과 compatible한지를 알 수 없다. 즉 다음 subset
+
+$$S=\{f(x)g(x)^{-1}:x\in X\}$$
+
+이 normal subgroup이 아니므로, $H/S$가 정의되지 않는다. 
+
+이를 해결하기 위해 $\overline{S}$를 $S$의 *normal closure*, 즉 $S$를 포함하는 normal subgroup 중 가장 작은 것이라 하자. 그럼 $\overline{S}$에 의한 $H$의 quotient $H/\overline{S}$가 잘 정의된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop8">**명제 8**</ins> 위와 같이 정의된 quotient $q: H \rightarrow H/\overline{S}$는 coequalizer이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+임의의 group homomorphism $q': G \rightarrow H'$가 존재하여 $q'\circ f=q'\circ g$를 만족한다 하자. 그럼 [보조정리 1](#lem1)에 의해 $\ker q'$는 normal subgroup이고, 조건 $q'\circ f=q'\circ g$에 의하여
+
+$$q'(f(x))=q'(g(x))\iff q'(f(x)g(x)^{-1})=e$$
+
+이므로 $f(x)g(x)^{-1}\in\ker q'$이 모든 $x\in g$에 대해 성립한다. 따라서, $\overline{S}$의 정의에 의해 $\overline{S}\leq\ker q'$이고, [명제 3](#prop3)을 적용하면 원하는 결과를 얻는다.
+
+</details>
 
 ---
 

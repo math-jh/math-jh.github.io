@@ -17,9 +17,13 @@ weight: 8
 
 ---
 
-앞서 우리는 [§군의 직접곱](/ko/math/algebraic_structures/direct_product)에서 universal property를 통해 $\prod G_i$를 정의했다. 이는 [\[집합론\], §집합의 곱, ⁋정리 3](/ko/math/set_theory/product_of_sets#thm3)에서와 동일한 과정이었는데, 그렇다면 [\[집합론\], §집합의 합, ⁋정리 8](/ko/math/set_theory/sum_of_sets#thm8)과 동일한 성질을 만족하는 group이 존재하는지가 자연스러운 질문이 된다. 그러나 [\[집합론\], §집합의 합, ⁋명제 5](/ko/math/set_theory/sum_of_sets#prop5)에서 만든 $\bigsqcup A_i$의 경우, 이 집합에 group 구조를 주는 것부터가 자명하지 않으므로, 이 질문에 대한 답을 찾는 것이 쉽지 않다. 
+앞서 우리는 [§군의 직접곱](/ko/math/algebraic_structures/direct_products)에서 $\Grp$에서 임의의 product가 존재한다는 것을 확인하였고, [§군 준동형사상, ⁋명제 2](/ko/math/algebraic_structures/group_homomorphisms)에서 $\Grp$의 임의의 morphism은 equalizer를 갖는다는 것을 확인하였다. 따라서 [\[범주론\] §극한, ⁋예시 7](/ko/math/category_theory/limits#ex7) 이후의 논증에 의해 $\Grp$은 complete category가 된다. 
 
-우리는 우선 abelian group들의 경우에 대해 [\[집합론\], §집합의 합, ⁋정리 8](/ko/math/set_theory/sum_of_sets#thm8)의 universal property를 만족하는 abelian group이 존재함을 보인다. 다음 글에서는 이번 글과는 다른 방식을 통해 <em_ko>임의의</em_ko> group들에 대하여도 이러한 universal property를 만족하는 group이 존재함을 보인다.
+한편 $\Grp$의 임의의 morphism은 coequalizer를 갖는다. ([§군 동형사상, ⁋명제 8](/ko/math/algebraic_structures/isomorphism_theorems#prop8)) 따라서 $\Grp$이 임의의 coproduct를 갖는다면, $\Grp$은 cocomplete category가 되고 따라서 bicomplete category가 될 것이다. 
+
+그러나 [§군의 직접곱, ⁋보조정리 1](/ko/math/algebraic_structures/direct_products#lem1)과 같이 $\Set$에서의 coproduct $\coprod G_i$ 위에 group 구조를 주는 방법을 자명하게 찾는 것은 힘들어 보인다. ([\[집합론\], §집합의 합, ⁋명제 5](/ko/math/set_theory/sum_of_sets#prop5))
+
+이 글에서 우리는 우선 abelian group이 coproduct를 갖는 category임을 보인다. 다음 글에서는 이번 글과는 다른 방식을 통해 <em_ko>임의의</em_ko> group들에 대하여도 coproduct의 universal property를 만족하는 group이 존재함을 보인다.
 
 ## Restricted sum
 

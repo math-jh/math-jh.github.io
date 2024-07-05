@@ -1,6 +1,6 @@
 ---
 
-title: "모노이드 카테고리"
+title: "모노이드 범주"
 excerpt: ""
 
 categories: [Math / Category Theory]
@@ -13,15 +13,17 @@ sidebar:
 
 date: 2024-06-12
 last_modified_at: 2024-06-12
-weight: 105
+weight: 7
 
 ---
+
+범주론 카테고리의 글은 기본적으로 [\[집합론\]](/ko/set_theory/) 카테고리의 글만 읽으면 이해할 수 있도록 되어있고, 이번 글에서 다루는 모노이드 카테고리 또한 그런 방식으로 글을 쓸 수도 있지만 
 
 이번 글과 다음 글에서는 monoidal category와 그 안에서 정의된 monoidal object에 대해 살펴본다. 대략적으로 이야기해서 monoid object란 대수적으로 정의했던 monoid와 비슷한 성질을 갖는 어떤 category의 대상인데, 이 때 monoid와 비슷한 성질을 갖는다는 이야기를 하기 위해서는 이 category가 monoidal category여야 한다. 따라서 우리는 우선 대수적으로 monoid가 어떤 것이었는지를 가볍게 복습한 후, 어떻게 하면 이 이야기를 category의 언어로 바꾸어 쓸 수 있는지를 생각해본다.
 
 ## 모노이드
 
-우리는 associative unital magma를 *monoid<sub>모노이드</sub>*라 부르기로 하였다. ([\[대수적 구조\] §준군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/group#def3)) 이를 풀어 써보자면 $M$이 monoid라는 것은 다음과 같은 뜻이다. 
+우리는 associative unital magma를 *monoid<sub>모노이드</sub>*라 부르기로 하였다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)) 이를 풀어 써보자면 $M$이 monoid라는 것은 다음과 같은 뜻이다. 
 
 > $M$ 위에서 정의된 이항연산 $\mu:M\times M \rightarrow M$과, $M$의 원소 $e\in M$이 존재하여,
 >
@@ -48,37 +50,7 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
 
 이 commute한다는 것으로 쓸 수 있다.
 
-범주론에서는 어떤 대상에서 원소를 뽑아오거나 하는 것이 불가능하다. 따라서 맨 처음 살펴본 monoid의 정의는 범주론을 이용하여 설명하기 부적절하다. 그러나 위와 같이 모든 것을 diagram으로 나타내게 되면, 이를 적당히 범주론의 언어로 올려줄 수 있다. 이를 위해서는 우선 우리가 자연스럽게 사용했던 $M\times M$이 무엇인지부터 정의해야 할 것이다.[^1] 이를 살펴보기 앞서, 우리는 쉬어가는 의미에서 commutative diagram이라는 것도 사실 범주론의 언어로 쓸 수 있다는 것을 살펴본다.
-
-
-
-
-
-## Bifunctor
-
-다음 정의는 우리가 이미 알고있는 것들로만 이루어져 있긴 하지만, 그래도 이름을 붙여주면 종종 요긴하게 사용할 수 있다.
-
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 세 category $\mathcal{A}, \mathcal{B}, \mathcal{C}$에 대하여, functor $\mathcal{A}\times \mathcal{B}\rightarrow \mathcal{C}$를 *bifunctor*라 부른다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> 임의의 (locally small) category $\mathcal{A}$에 대하여, $\Hom_\mathcal{A}(-,-): \mathcal{A}^\op\times \mathcal{A}\rightarrow \Set$는 bifunctor이다.
-
-이를 확인하기 위해서는 functoriality만 확인하면 충분하다. 정의에 의하여, $\mathcal{A}^\op\times \mathcal{A}$의 morphism은 
-
-$$(g,h):(A_1,A_2) \rightarrow (A_1',A_2');\qquad g\in \Hom_{\mathcal{A}^\op}(A_1,A_1'),\quad h\in \Hom_\mathcal{A}(A_2,A_2')$$
-
-의 꼴이며, bifunctor $\Hom_\mathcal{A}(-,-)$를 통해 이 morphism은 다음 morphism
-
-$$\Hom_\mathcal{A}(g,h):\Hom_\mathcal{A}(A_1,A_2) \rightarrow \Hom_\mathcal{A}(A_1',A_2');\qquad f\mapsto h\circ f\circ g$$
-
-으로 보내진다. 여기에서 $\mathcal{A}'$에서의 morphism $g$를 $\mathcal{A}$에서의 morphism $A_1'\rightarrow A_1$으로 보았다.
-
-</div>
+범주론에서는 어떤 대상에서 원소를 뽑아오거나 하는 것이 불가능하다. 따라서 맨 처음 살펴본 monoid의 정의는 범주론을 이용하여 설명하기 부적절하다. 그러나 위와 같이 모든 것을 diagram으로 나타내게 되면, 이를 적당히 범주론의 언어로 올려줄 수 있다. 이를 위해서는 우선 우리가 자연스럽게 사용했던 $M\times M$이 무엇인지부터 정의해야 할 것이다.[^1] 
 
 ## 모노이드 카테고리
 
@@ -88,7 +60,7 @@ $$\Hom_\mathcal{A}(g,h):\Hom_\mathcal{A}(A_1,A_2) \rightarrow \Hom_\mathcal{A}(A
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5 (Monoidal category)**</ins> *Monoidal category<sub>모노이드 카테고리</sub>*는 데이터 $(\mathcal{A},\otimes, I)$로 이루어진다. 여기서 $\mathcal{A}$는 category이고, $I\in\obj(\mathcal{A})$이며, $\otimes:\mathcal{A}\times \mathcal{A}\rightarrow \mathcal{A}$가 bifunctor이다. 이들은 다음 조건을 만족한다. 
+<ins id="def5">**정의 5 (Monoidal category)**</ins> *Monoidal category<sub>모노이드 범주</sub>*는 데이터 $(\mathcal{A},\otimes, I)$로 이루어진다. 여기서 $\mathcal{A}$는 category이고, $I\in\obj(\mathcal{A})$이며, $\otimes:\mathcal{A}\times \mathcal{A}\rightarrow \mathcal{A}$가 bifunctor이다. 이들은 다음 조건을 만족한다. 
 
 1. $\mathcal{A}\times \mathcal{A}\times \mathcal{A}$에서 $\mathcal{A}$로의 두 functor $-\otimes(-\otimes-)$와 $(-\otimes-)\otimes-$사이의 natural isomorphism
     
@@ -130,7 +102,7 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 
 <ins id="ex6">**예시 6**</ins> 다음은 모두 monoidal category의 예시들이다.
 
-- $\Set$에 일반적인 cartesian product ([\[집합론\] §순서쌍, ⁋정의 8](/ko/math/set_theory/ordered_pair#def8))를 장착하고, $I$는 아무 singleton으로 가져오면 $\Set$은 symmetric monoidal category가 된다.
+- $\Set$에 일반적인 product ([§극한, ⁋예시 6](/ko/math/category_theory/limits#ex6))를 장착하고, $I$는 아무 singleton으로 가져오면 $\Set$은 symmetric monoidal category가 된다.
 - $\Grp$에 일반적인 product를 장착하고, $I$는 trivial group $\\{e\\}$으로 가져오면 $\Grp$이 symmetric monoidal category가 된다. 
 - $\Top$에 product 구조를 product topology로 주고, $I$는 아무 singleton으로 가져오면 $\Top$은 symmetric monoidal category가 된다. 
 - 임의의 commutative ring $R$에 대하여, $R$-module들의 카테고리 $\lMod{R}$은 tensor product $\otimes$에 대해 symmetric monoidal category이다.
@@ -142,24 +114,19 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Category $\mathcal{A}$가 주어졌다 하자. 대상들의 family $(X\_i)\_{i\in I}$에 대하여, 대상 $X$와 morphism들 $\pr\_i:X \rightarrow X\_i$가 *categorical product*라는 것은 다음의 universal property에 의해 정의된다.
-
-> 임의의 대상 $Y$와 임의의 family of morphism들 $(f\_i:Y\rightarrow X\_i)\_{i\in I}$에 대하여, 유일한 morphism $f:Y\rightarrow X$가 존재하여 다음 diagram이 commute한다.
-> img
-
-만일 임의의 유한한 family가 categorical product를 갖는다면, 이 category를 *Cartesian category*라 부른다.
+<ins id="def7">**정의 7**</ins> Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical product를 갖는다면, 이 category를 *cartesian category*라 부른다. 
 
 </div>
 
-그럼 앞선 예시에서, $\Set$과 $\Grp$에서의 곱 또한 동일한 universal property를 이용하여 정의되었으므로 $\Set$과 $\Grp$의 임의의 family는 categorical product를 가지고, 따라서 이들은 Cartesian category가 된다. 특히 공집합으로 index가 주어진 empty family의 곱은 terminal object가 된다. 마찬가지로 $\Top$이나 $\Man^\infty$ 등도 모두 Cartesian category이다.
+그럼 앞선 예시에서, $\Set$과 $\Grp$은 cartesian category가 된다. 마찬가지로 $\Top$이나 $\Man^\infty$ 등도 모두 cartesian category이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 임의의 Cartesian category는 monoidal category의 구조를 갖는다. 
+<ins id="prop8">**명제 8**</ins> 임의의 cartesian category는 monoidal category의 구조를 갖는다. 
 
 </div>
 
-이 명제의 증명을 위해서는 많은 말을 덧붙여야 하긴 하지만, 본질적으로 이는 $(A\times B)\times C\cong A\times(B\times C)$와 $I\times M\cong M\cong M\times I$들이 어떻게 나왔는지를 떠올린 후, 계산들을 반복하면 된다. 이와 같이, monoidal product가 categorical product로 주어진 monoidal category를 *cartesian monoidal category*라 부른다. 
+이 명제의 증명을 위해서는 많은 말을 덧붙여야 하긴 하지만, 본질적으로 이는 $(A\times B)\times C\cong A\times(B\times C)$와 $I\times M\cong M\cong M\times I$들이 어떻게 나왔는지를 떠올린 후, 계산들을 반복하면 된다. 이와 같이, monoidal product가 product로 주어진 monoidal category를 *cartesian monoidal category*라 부른다. 
 
 Cartesian monoidal category가 일반적인 monoidal category와 다른 점 중 하나는 몇 가지 자연스러운 morphism들이 잘 정의가 된다는 것이다. 가령 일반적인 monoidal category에서는 잘 정의되지 않는 diagonal morphism $\Delta_X:X \rightarrow X\times X$이나 augmentation morphism $\epsilon_X:X \rightarrow I$가 잘 정의된다. $\epsilon_X$는 $I$가 terminal object이므로 자연스럽게 정의되고, $\Delta_X$는 다음 diagram을 통해 얻어진다.
 
