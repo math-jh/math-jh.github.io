@@ -45,6 +45,8 @@ $$\begin{aligned}ab&=f_1(1)f_2(1)=f(\iota_1(1))f(\iota_2(1))=f(\iota_1(1)+\iota_
 
 ## Free group
 
+** Adjoint 쓰고 나서 약팔기**
+
 우선 다음 정의를 먼저 살펴보자.
 
 <div class="definition" markdown="1">
@@ -87,7 +89,7 @@ $G$의 generator들의 모임 $X$를 생각한 후, $X$에 대한 free group $F$
 
 ## Free product
 
-위의 아이디어를 응용하면 비슷하게 free product 또한 정의할 수 있으며, 이는 우리가 찾아헤매던 [\[집합론\], §집합의 합, ⁋정리 8](/ko/math/set_theory/sum_of_sets#thm8)와 같은 universal property를 갖는 group이 된다. 마찬가지로 construction은 간략하게만 소개한다. 
+위의 아이디어를 응용하면 비슷하게 free product 또한 정의할 수 있으며, 이는 우리가 찾아헤매던 coproduct가 된다. 마찬가지로 construction은 간략하게만 소개한다. 
 
 Group들의 family $(G_i)$가 주어졌다 하자. 편의를 위해 이들이 모두 서로 disjoint하다고 하고, $X=\bigcup G_i$라 하자. 즉, 임의의 원소 $x\in X$에 대하여 $x\in G_i$인 $i$를 유일하게 찾을 수 있다. $G_i$들은 이미 역원을 포함하고 있으므로, generator들의 모임으로는 $X\cup\\{e\\}$만 생각하면 충분하다. 
 

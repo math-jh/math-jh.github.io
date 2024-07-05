@@ -4,9 +4,9 @@ title: "대수적 구조"
 excerpt: "집합 위에 정의된 이항연산"
 
 categories: [Math / Algebraic Structures]
-permalink: /ko/math/algebraic_structures/algebraic_structure
+permalink: /ko/math/algebraic_structures/algebraic_structures
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Algebraic_structure.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Algebraic_structures.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
@@ -25,7 +25,7 @@ weight: 1
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 집합 $A$에 대하여, $A\times A$에서 $E$로의 함수 $\star$를 *이항연산*이라 부른다. 이항연산이 주어져 있는 집합을 *마그마*라 부른다.
+<ins id="def1">**정의 1**</ins> 집합 $A$에 대하여, $A\times A$에서 $A$로의 함수 $\star$를 *이항연산*이라 부른다. 이항연산이 주어져 있는 집합을 *마그마*라 부른다.
 
 </div>
 
@@ -63,9 +63,11 @@ $$x\star(y\star z)=(x\star y)\star z$$
 
 $$(x\star y)\star z=x\star(y\star z)$$
 
-이므로 혼동의 여지 없이 $x\star y\star z$가 명확한 의미를 갖는다.
+이므로 혼동의 여지 없이 $x\star y\star z$가 명확한 의미를 갖는다. 이는 diagram으로 나타내면 다음 diagram
 
-한편, 앞선 연산들은 또 다른 차이점이 있다. 
+![associativity](/assets/images/Math/Algebraic_Structures/Algebraic_structure-1.png){:width="245.25px" class="invert" .align-center}
+
+이 commute한다는 의미이다. 한편, 앞선 연산들은 또 다른 차이점이 있다. 
 
 <div class="definition" markdown="1">
 
@@ -77,15 +79,27 @@ $$x\star y=y\star x$$
 
 </div>
 
+교솬법칙은 다음의 diagram
+
+![commutativity](/assets/images/Math/Algebraic_Structures/Algebraic_structure-2.png){:width="288.6px" class="invert" .align-center}
+
+이 commute한다는 의미이다. 여기서 $\sigma$는 $(x,y)\mapsto (y,x)$로 정의된 함수이다. 
+
 일반적으로 교환법칙이 성립하더라도 결합법칙은 성립하지 않을 수 있고, 거꾸로 결합법칙이 성립하더라도 교환법칙이 성립하지 않을 수도 있다.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 마그마들의 family $(A_i, \star_i)_{i\in I}$를 생각하자. 곱집합 $\prod A_i$ 위에, 다음과 같은 연산
+<ins id="ex5">**예시 5**</ins> 마그마들의 family $(A_i, \star_i)_{i\in I}$를 생각하자. 그럼
 
-$$(x_i)_{i\in I}\star(y_i)_{i\in I}=(x_i\star_i y_i)_{i\in I}$$
+$$\prod_{i\in I} (A_i\times A_i)\cong\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$
 
-을 주면 $\prod A_i$는 $\star$에 대해 마그마 구조를 갖는다. 이렇게 얻어지는 마그마 $(\prod A_i, \star)$를 *곱<sub>product magma</sub>*이라고 부른다. 만일 $\star_i$들이 모두 교환법칙을 만족하거나, 모두 결합법칙을 만족한다면 $\star$ 또한 그렇다는 것을 쉽게 알 수 있다. 
+이므로 ([\[집합론\] §곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3)), 함수
+
+$$\prod_{i\in I}\star_i:\prod_{i\in I} (A_i\times A_i) \rightarrow \prod_{i\in I} A_i$$
+
+를 $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$에서 $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$로의 함수로 볼 수 있다. ([\[집합론\] §곱집합의 성질, ⁋정의 4](/ko/math/set_theory/property_of_products#def4)) 따라서 $\prod A_i$는 $\star=\prod\star_i$에 대해 마그마 구조를 갖는다. 이렇게 얻어지는 마그마 $(\prod A_i, \star)$를 *곱<sub>product magma</sub>*이라고 부른다. 
+
+위의 두 diagram들을 모든 $i\in I$에 대하여 곱하면, 만일 $\star_i$들이 모두 교환법칙을 만족하거나, 모두 결합법칙을 만족한다면 $\star$ 또한 그렇다는 것을 알 수 있다. 
 
 </div>
 
@@ -125,7 +139,7 @@ $$(g\circ f)(x\star_1 y)=g(f(x\star_1y))=g(f(x)\star_2f(y))=g(f(x))\star_3g(f(y)
 
 </details>
 
-따라서 magma들을 대상으로, magma homomorphism을 morphism으로 갖는 카테고리 $\Magma$가 존재한다.
+따라서 magma들을 대상으로, magma homomorphism을 morphism으로 갖는 cartesian monoidal category $\Magma$가 존재한다.
 
 대수학에서는 $f$의 image를 $f(A)$ 대신 $\im f$와 같이 적는 것이 보통이다. 임의의 $w,z\in\im f$를 택하자. 그럼 어떤 $x,y\in A$가 존재하여 $w=f(x)$이고, $z=f(y)$이다. 이제
 
