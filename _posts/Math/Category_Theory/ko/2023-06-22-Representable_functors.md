@@ -54,7 +54,7 @@ $$\id_\Set(A)=A\rightarrow\Hom_\Set(\ast,A)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm3">**정리 3(Yoneda)**</ins> 임의의 functor $F:\mathcal{A}\rightarrow\Set$과, 임의의 $A\in\obj(\mathcal{A})$에 대하여, 집합 사이의 bijection
+<ins id="thm3">**정리 3 (Yoneda)**</ins> 임의의 functor $F:\mathcal{A}\rightarrow\Set$과, 임의의 $A\in\obj(\mathcal{A})$에 대하여, 집합 사이의 bijection
 
 $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(A,-)$ to $F$}\}\rightarrow F(A);\qquad \alpha\mapsto \alpha_A(\id_A)$$
 
