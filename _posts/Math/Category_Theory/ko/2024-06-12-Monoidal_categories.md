@@ -17,7 +17,7 @@ weight: 7
 
 ---
 
-범주론 카테고리의 글은 기본적으로 [\[집합론\]](/ko/set_theory/) 카테고리의 글만 읽으면 이해할 수 있도록 되어있고, 이번 글에서 다루는 모노이드 카테고리 또한 그런 방식으로 글을 쓸 수도 있지만 
+범주론 카테고리의 글은 기본적으로 [\[집합론\]](/ko/set_theory/) 카테고리의 글만 읽으면 이해할 수 있도록 되어있고, 이번 글에서 다루는 모노이드 카테고리 또한 그런 방식으로 글을 쓸 수도 있지만 특별히 이번 글의 첫 번째 부분은 이해를 돕기 위해 [\[대수적 구조\]](/ko/math/algebraic_structures) 카테고리의 글을 가져오게 되었다.
 
 이번 글과 다음 글에서는 monoidal category와 그 안에서 정의된 monoidal object에 대해 살펴본다. 대략적으로 이야기해서 monoid object란 대수적으로 정의했던 monoid와 비슷한 성질을 갖는 어떤 category의 대상인데, 이 때 monoid와 비슷한 성질을 갖는다는 이야기를 하기 위해서는 이 category가 monoidal category여야 한다. 따라서 우리는 우선 대수적으로 monoid가 어떤 것이었는지를 가볍게 복습한 후, 어떻게 하면 이 이야기를 category의 언어로 바꾸어 쓸 수 있는지를 생각해본다.
 
@@ -96,7 +96,7 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
 
 Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem을 증명할 때 사용된다. 대략적으로 말해서, 이는 $n$개의 대상들의 곱 $A_1\otimes\cdots\otimes A_n$이 주어졌을 때, 이를 어떤 것부터 계산하거나 (symmetric monoidal category의 경우) 배열된 순서를 바꾸어 계산하더라도 그 결과들이 naturally isomorphic하며, 이것이 associator, unitor, (symmetric monoidal category인 경우) symmetor들의 합성으로 유일하게 나타난다는 것이다. 
 
-어쨌든 coherence theorem 덕분에 우리는 monoidal productㅏ 계산순서 혹은 이들이 나열된 순서에 의존하지 않는다는 것을 알고 있으므로 이제 이들 natural isomorphism은 상대적으로 덜 신경써도 된다. 
+어쨌든 coherence theorem 덕분에 우리는 monoidal product가 계산순서 혹은 이들이 나열된 순서에 의존하지 않는다는 것을 알고 있으므로 이제 이들 natural isomorphism은 상대적으로 덜 신경써도 된다. 
 
 <div class="example" markdown="1">
 

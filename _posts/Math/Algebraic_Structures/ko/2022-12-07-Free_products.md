@@ -4,9 +4,9 @@ title: "자유곱"
 excerpt: "Free product와 universal property"
 
 categories: [Math / Algebraic Structures]
-permalink: /ko/math/algebraic_structures/free_product
+permalink: /ko/math/algebraic_structures/free_products
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Free_product.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Free_products.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
@@ -29,7 +29,7 @@ $$f_1(1)=a, \qquad f_2(1)=b$$
 
 그러나 우리는 다음의 diagram
 
-![counterexample](/assets/images/Math/Algebraic_Structures/Free_product-1.png){:width="239.55px" class="invert" .align-center}
+![counterexample](/assets/images/Math/Algebraic_Structures/Free_products-1.png){:width="239.55px" class="invert" .align-center}
 
 을 commute하게 만드는 $f:\mathbb{Z}\times\mathbb{Z}\rightarrow G$는 존재하지 않음을 알 수 있다. 만일 그러한 $f$가 존재한다면 
 
@@ -41,23 +41,25 @@ $$\begin{aligned}ab&=f_1(1)f_2(1)=f(\iota_1(1))f(\iota_2(1))=f(\iota_1(1)+\iota_
 
 </div>
 
-그러므로 일반적인 group들 사이에서 direct sum과 같이, universal property를 만족하는 대상을 찾기 위해서는 새로운 방법을 도입해야 한다.
+그러므로 일반적인 group들 사이에서 direct sum과 같이, universal property를 만족하는 대상을 찾기 위해서는 새로운 방법을 도입해야 한다. 이를 위해서는 우선 free group을 먼저 정의해야 한다. 
 
 ## Free group
 
-** Adjoint 쓰고 나서 약팔기**
+임의의 group $G$는 적당한 집합 위에 이항연산과 항등원, 역원의 개념을 추가한 것으로 생각할 수 있다. 뿐만 아니라, 임의의 group homomorphism은 자연스럽게 집합들 사이의 함수로 볼 수도 있다. 즉, forgetful functor $U: \Grp \rightarrow\Set$이 존재한다. 이 섹션에서 우리는 $U$의 left adjoint $F:\Set \rightarrow\Grp$을 정의한다. Left adjoint functor의 정의에 의해, 이는 다음의 natural isomorphism
 
-우선 다음 정의를 먼저 살펴보자.
+$$\Hom_\Set(X, U(G))\cong\Hom_\Grp(F(X), G)$$
+
+을 만족하는 functor이다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1)) 즉 functor $F$는 임의의 집합 $X$와 임의의 group $G$에 대하여, $f\in\Hom_\Set(X, U(G))$마다 $\Hom_\Grp(F(X),G)$의 원소를 유일하게 대응시키는 bijection으로 주어진다. 이를 다시 쓰면 다음과 같다.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 공집합이 아닌 집합 $X$에 대하여, $X$에 의해 정의된 *free group*은 다음과 같은 universal mapping problem의 solution $(F,\iota)$으로 정해진다.
+<ins id="def2">**정의 2**</ins> 공집합이 아닌 집합 $X$에 대하여, $X$에 의해 정의된 *free group<sub>자유군</sub>* $F(X)$는 다음과 같은 universal mapping problem의 solution $(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$으로 정해진다.
 
-> 임의의 group $G$에 대하여, 만일 어떤 함수 $f:X\rightarrow G$가 주어졌다면 유일한 group homomorphism $\bar{f}:F\rightarrow G$가 존재하여 $\bar{f}\circ\iota=f$를 만족한다.
+> 임의의 group $G$에 대하여, 만일 어떤 함수 $f:X\rightarrow U(G)$가 주어졌다면 유일한 group homomorphism $\hat{f}:F(X)\rightarrow G$가 존재하여 $U(\hat{f})\circ\eta_X=f$를 만족한다.
 
 </div>
 
-위의 정의를 만족하는 쌍들은 모두 전단사함수에 대해 유일함이 분명하다. 문제는 이러한 pair가 적어도 하나는 존재한다는 것을 보이는 부분이다.
+여기에서 $\eta_X$는 adjunction $F\dashv U$의 unit에 불과하다. 물론 이를 위해서는 $F(X)$를 실제로 만들어내야 한다. 
 
 대략적인 흐름을 소개한다. 우선 $X$와 disjoint하며 같은 cardinality를 갖는 집합 $X^{-1}$을 생각하자. $X^{-1}$은 어떤 특별한 집합이 될 이유는 없지만, 우리는 bijection $X\rightarrow X^{-1}$ 하나를 골라 $x\in X$의 $X^{-1}$에서의 image를 $x^{-1}$으로 표기할 것이다. 또, $X\cup X^{-1}$과 disjoint한 한원소집합을 하나 골라 이 집합의 원소를 $e$라 하자. 
 
@@ -91,7 +93,7 @@ $G$의 generator들의 모임 $X$를 생각한 후, $X$에 대한 free group $F$
 
 위의 아이디어를 응용하면 비슷하게 free product 또한 정의할 수 있으며, 이는 우리가 찾아헤매던 coproduct가 된다. 마찬가지로 construction은 간략하게만 소개한다. 
 
-Group들의 family $(G_i)$가 주어졌다 하자. 편의를 위해 이들이 모두 서로 disjoint하다고 하고, $X=\bigcup G_i$라 하자. 즉, 임의의 원소 $x\in X$에 대하여 $x\in G_i$인 $i$를 유일하게 찾을 수 있다. $G_i$들은 이미 역원을 포함하고 있으므로, generator들의 모임으로는 $X\cup\\{e\\}$만 생각하면 충분하다. 
+Group들의 family $(G_i)$가 주어졌다 하자. 편의를 위해 이들이 모두 서로 disjoint하다고 하고, $X=\coprod G_i$라 하자. 즉, 임의의 원소 $x\in X$에 대하여 $x\in G_i$인 $i$를 유일하게 찾을 수 있다. $G_i$들은 이미 역원을 포함하고 있으므로, generator들의 모임으로는 $X\cup\\{e\\}$만 생각하면 충분하다. 
 
 $(G_i)$들의 *free product* $\prod^\ast  G_i$는 이 집합 $X\cup\\{e\\}$에서 만들어지는 reduced word들의 모임이다. 큰 흐름은 free group을 정의할 때와 같지만, 이번에는 $G_i$의 원소들이 자신들끼리 연산이 가능하므로 reduced word를 정의할 때 조금 더 신경을 써 주어야 한다. Free product를 정의할 때 사용하는 reduced word라는 말은 집합 $X\cup\\{e\\}$의 원소들로 만들어진 word
 
@@ -124,6 +126,32 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 물론 [예시 1](#ex1)과 같은 문제 또한 일어나지 않는다. $\iota_1(a)\iota_2(b)=ab$이고 $\iota_2(b)\iota_1(a)=ba$인데, 이 두 원소는 $\prod^\ast G_i$의 서로 다른 원소이기 때문이다.
 
 </div>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop5">**명제 5**</ins> Free product $\prod^\ast G_i$는 $\Grp$에서의 coproduct이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+임의의 group $H$와 group homomorphism들 $f_i:G_i\rightarrow H$가 주어졌다 하자. 그럼 $X=\coprod U(G_i)$의 universal property에 의하여, inclusion map $\iota_i:U(G_i)\rightarrow X$들에 대해 $U(f_i)=f\circ \iota_i$를 만족하는 유일한 함수 $f:X\rightarrow U(H)$가 존재한다. 이제 free product의 universal property ([정의 2](#def2))로부터 group homomorphism $\hat{f}:F(X)\rightarrow H$를 얻으며, 이 때 $f_i$들이 group homomorphism이었다는 사실을 사용하면 $f$가 위의 reduction 과정을 통해 factor하며, 따라서 $\prod^\ast G_i\rightarrow H$를 정의한다는 것을 안다.
+
+</details>
+
+한편 임의의 group $G$에 대하여, group homomorphism $\mathbb{Z}\rightarrow G$는 $1\in \mathbb{Z}$가 $G$의 어떠한 원소로 옮겨지는지에 의해 유일하게 결정된다. 즉 다음 isomorphism
+
+$$\Hom_\Grp(\mathbb{Z},G)\cong U(G)$$
+
+가 존재하며, [\[범주론\] §표현가능한 함자, 예시 2](/ko/math/category_theory/representable_functors#ex2)와 비슷한 논증으로 위의 isomorphism이 $U$의 representation임을 알 수 있으며, 뿐만 아니라
+
+$$\Hom_\Grp(\mathbb{Z},G)\cong \Hom_\Set(\ast, U(G))$$
+
+으로 생각하면 $\mathbb{Z}=F(\ast)$인 것으로 해석할 수 있다. 따라서 임의의 집합 $X$에 대하여 [\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)를 이용하면 free group $F(X)$를 $\mathbb{Z}$들의 free product
+
+$$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong \coprod_{x\in X} F(\ast)={\prod_{x\in X}}^\ast \mathbb{Z}$$
+
+으로 나타낼 수 있다. 
 
 ---
 

@@ -4,9 +4,9 @@ title: "군의 직접곱"
 excerpt: "Direct product of groups"
 
 categories: [Math / Algebraic Structures]
-permalink: /ko/math/algebraic_structures/direct_product
+permalink: /ko/math/algebraic_structures/direct_products
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Direct_product.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Direct_products.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
