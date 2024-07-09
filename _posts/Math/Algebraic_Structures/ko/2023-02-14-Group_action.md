@@ -21,13 +21,11 @@ weight: 11
 
 ## 집합 위에 작용하는 모노이드
 
-임의의 집합 $E$가 주어졌다 하고, $E$에서 자기 자신으로의 함수들의 집합 $\Fun(E,E)$를 생각하자. 그럼 이 집합 $\Fun(E,E)$는 단순한 집합이 아니라, 함수의 합성 $\circ$, 그리고 항등원 $\id_E$을 갖는 monoid 구조를 갖는다. 일반적으로 대수적 대상에서 자기 자신으로 가는 함수를 *endomorphism*이라 부르므로, 이 monoid $\Fun(E,E)$를 집합 $E$의 *endomorphism monoid*라 부르고 $\End(E)$로 적는다. 
-
-또, $\End(E)$의 원소들 가운데 역함수가 존재하는 것들을 *(set) automorphism*이라 부르고, 이들의 모임을 $\Aut(E)$로 적는다.
+임의의 집합 $E$와 그 endomorphism monoid $\End(E)$와 automorphism group $\Aut(E)$를 생각하자. ([\[범주론\] §범주, ⁋정의 9](/ko/math/category_theory/categories#def9))
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 monoid $M$이 주어졌다 하고, 집합 $E$를 고정하자. $M$이 $E$ 위에 왼쪽에서 *act<sub>작용</sub>*한다는 것은 monoid homomorphism $\rho:M\rightarrow\End(E)$가 주어진 것이다. 이 때, 집합 $E$를 *left $M$-set*이라 부른다.
+<ins id="def1">**정의 1**</ins> 임의의 monoid $M$과 임의의 집합 $E$에 대하여, monoid homomorphism $\rho:M \rightarrow \End(E)$를 *$M$의 $E$ 위에서의 left action<sub>왼쪽 작용</sub>*이라 부르고, $E$를 *left $M$-set*이라 부른다.
 
 임의의 $\alpha\in M$과 $x\in E$에 대하여, 함숫값 $\rho(\alpha)(x)$를 간단히 $\alpha\cdot x$로 표기한다. 
 
@@ -54,7 +52,7 @@ $$(\alpha\beta)\cdot x=\alpha\cdot(\beta\cdot x),\qquad e\cdot x=x$$
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 임의의 monoid $M$과 집합 $E$에 대하여, $M$이 $E$ 위에 오른쪽에서 *act<sub>작용</sub>*한다는 것은 monoid homomorphism $\rho:M\rightarrow \End(E)^\op$가 주어진 것이다. 이 때, 집합 $E$를 *right $M$-set*이라 부른다.
+<ins id="def3">**정의 3**</ins> 임의의 monoid $M$과 임의의 집합 $E$에 대하여, monoid homomorphism $\rho:M^\op \rightarrow \End(E)$를 *$M$의 $E$ 위에서의 right action<sub>왼쪽 작용</sub>*이라 부르고, $E$를 *right $M$-set*이라 부른다.
 
 임의의 $\alpha\in M$과 $x\in E$에 대하여, 함숫값 $\rho(\alpha)(x)$를 간단히 $x\cdot\alpha$로 표기한다.
 
@@ -190,11 +188,9 @@ $$(\beta\alpha\beta^{-1})a=\beta(\alpha(\beta^{-1}a))=\beta\beta^{-1}a=a$$
 
 ## 내부자기동형사상
 
-이제 우리는 집합 $E$ 위에 추가적인 구조가 주어진 경우를 생각한다. 가령 $E$ 또한 monoid 구조를 가진다 하고, 주어진 monoid $M$이 $E$ 위에 act한다 하자. 그럼 우리는 이제 $M$의 action이 $E$의 monoid 구조를 보존하기를 원한다. 
+이제 우리는 집합 $E$ 위에 추가적인 구조가 주어진 경우를 생각한다. 가령 $E$ 또한 monoid 구조를 가진다 하고, 주어진 monoid $M$이 $E$ 위에 act한다 하면, $M$-action은 monoid homomorphism $M \rightarrow\End(E)=\End_\Mon(E)$로 주어진다. 
 
-일반적으로 대수적인 대상이 주어졌을 때, endomorphism monoid의 원소들은 대수적인 구조를 보존해야 한다. 집합 $E$는 별도의 대수적인 구조가 없었으므로 $\End(E)=\Fun(E,E)$가 성립하지만, 가령 monoid $M$에 대해서 $\End(M)$이라 하면 항상 $M$의 *monoid endomorphism*들의 모임을 뜻하는 것으로 이해하며, $\Aut(M)$ 또한 마찬가지이다. 
-
-특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. 즉 $\rho:G\rightarrow\End(G)$가 주어져 있다 하면, [따름정리 8](#cor8)의 증명으로부터 $\rho$의 image는 모두 전단사라는 것을 안다. 그런데 전단사인 group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
+특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. 즉 $\rho:G\rightarrow\End(G)=\End_\Grp(G)$가 주어져 있다 하면, [따름정리 8](#cor8)의 증명으로부터 $\rho$의 image는 모두 전단사라는 것을 안다. 그런데 전단사인 group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
 
 자기 자신 위에서 정의된 group action 중 몇 가지는 기억해둘 만한 가치가 있다.
 
