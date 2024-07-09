@@ -95,7 +95,7 @@ $$1=a'+b_2=a'+1b_2=a'+(a+b_1)b_2=(a+a'b_2)+b_1b_2\in \mathfrak{a}+\mathfrak{b}_1
 
 </details>
 
-이를 이용하면 다음 명제를 보일 수 있으며, 이는
+이를 이용하면 다음 명제를 보일 수 있으며, 이는 아래 중국인의 나머지 정리를 예쁘게 적을 때 요긴하게 사용된다.
 
 <div class="proposition" markdown="1">
 
@@ -133,12 +133,30 @@ $$\mathfrak{b}_n\cap(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})=\left(\sum_
 
 </details>
 
-## 환의 직접곱
+## 환의 직접곱과 equalizer
 
-Ring들의 family $(A\_i)\_{i\in I}$가 주어졌다 하자. 그럼 이들의 product $\prod A_i$ 위에 덧셈과 곱셈을 성분별로 정의하여 $\prod A_i$에 ring 구조를 줄 수 있고, 이렇게 정의한 것이 $\Ring$에서의 product가 된다는 것을 확인할 수 있다.
+이전에 group을 정의할 때의 흐름을 따르자면, 우리는 category $\Ring$에서의 limit과 colimit를 (존재한다면) 정의하여야 한다. 이를 위해서는 당연히 $\Ring$에서의 product와 coproduct, 그리고 equalizer와 coequalizer가 존재한다는 것을 보여야 한다.
 
-> 임의의 ring $B$와 ring homomorphism들 $f_i:B \rightarrow A_i$들이 주어졌을 때, $f_i=\pr_i\circ f$이도록 하는 유일한 ring homomorphism $f:B \rightarrow \prod A_i$이 존재한다.
-> ![universal_property_of_product](/assets/images/Math/Algebraic_Structures/Chinese_remainder_theorem-1.png){:width="251.4px" class="invert" .align-center}
+<div class="proposition" markdown="1">
+
+<ins id="prop5">**명제 5**</ins> $\Ring$은 complete category이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Ring들의 family $(A\_i)$의 product의 경우, $\Grp$에서와 마찬가지로 집합 $\prod A_i$ 위에 성분별로 덧셈과 곱셈 구조를 주면 이것이 universal property를 만족한다는 것을 보일 수 있다. 
+
+비슷하게, 임의의 두 ring homomorphism $f,g:A \rightarrow B$에 대해 
+
+$$\Eq(f,g)=\{x\in A: f(x)=g(x)\}$$
+
+이 ring 구조를 가지며 $\Ring$에서 $f,g$의 equalizer임을 알 수 있다.
+
+</details>
+
+$\Ring$에서의 coequalizer의 경우도 $\Grp$에서의 coequalizer와 비슷하게 정의된다. $\Grp$에서 $\CoEq(f,g)$는 
+
 
 ## 중국인의 나머지 정리
 

@@ -164,7 +164,11 @@ $$f(x,y_1+y_2)=f(x,y_1)+f(x,y_2),\qquad f(x_1+x_2,y)=f(x_1,y)+f(x_2,y)$$
 
 $$\Bilin(G,H;A)=\{\text{bilinear maps from $G\times H$ to $A$}\}$$
 
-으로 정의하면, $\Bilin(G,H;-)$이 $\Ab$에서 $\Set$으로의 functor가 된다는 것을 확인할 수 있다. 
+으로 정의하자. 위의 논증에 의해 [예시 8](#ex8)의 첫 번째 식의 좌변을 $\Bilin(G,H;A)$로 바꾼다면 isomorphism
+
+$$\Bilin(G,H;A)\cong \Hom_\Ab(G,\Hom_\Ab(H,A))$$
+
+을 얻는다는 것을 확인할 수 있다. 뿐만 아니라, $\Bilin(G,H;-)$이 $\Ab$에서 $\Set$으로의 representable functor가 된다는 것을 확인할 수 있다. 
 
 <div class="proposition" markdown="1">
 
@@ -180,6 +184,8 @@ $$S=\left\langle (x, y_1+y_2)-(x,y_1)-(x,y_2), (x_1+x_2,y)-(x_1,y)-(x_2,y)\matho
 
 으로 정의하자. 그럼 free abelian group의 universal property에 의하여, 임의의 함수 $f:G\times H \rightarrow A$가 주어질 때마다 group homomorphism $\hat{f}:F_\Ab(G\times H)\rightarrow A$가 존재하고, $f$가 bilinear라면 이 $\hat{f}$의 kernel이 $S$를 포함하므로 $\hat{f}$가 $F_\Ab(G\times H)/S$에서 $A$로의 group homomorphism을 정의한다. 
 
+Isomorphism $\Bilin(G,H;A)\cong\Hom_\Ab(F_\Ab(G\times H)/S,A)$의 naturality는 추가적으로 보여야 하긴 하지만, 단순한 계산이므로 생략한다. 
+
 </details>
 
 <div class="definition" markdown="1">
@@ -188,16 +194,43 @@ $$S=\left\langle (x, y_1+y_2)-(x,y_1)-(x,y_2), (x_1+x_2,y)-(x_1,y)-(x_2,y)\matho
 
 </div>
 
-그럼 $\otimes$가 $\mathbb{Z}$를 monoidal unit으로 갖는 monoidal product임을 확인할 수 있다. 이렇게 $(\Ab,\otimes, \mathbb{Z})$를 symmetric monoidal category로 생각하고 나면, 다음이 성립한다.
+그럼 $\otimes$가 $\mathbb{Z}$를 tensor unit으로 갖는 monoidal product임을 확인할 수 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="thm12">**정리 12 ($\otimes\dashv\Hom$)**</ins> Adjunction 
+<ins id="thm12">**정리 12**</ins> $(\Ab,\otimes, \mathbb{Z})$는 symmetric monoidal category이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Associator $\alpha$와 symmetor $\sigma$는 $\otimes$의 universal property에 의해 얻어진다. $\mathbb{Z}$가 tensor unit이라는 것은 다음 isomorphism
+
+$$\Hom_\Ab(\mathbb{Z}\otimes G, H)\cong\Bilin(\mathbb{Z},G;H)
+
+
+
+\Hom_\Ab(\mathbb{Z},\Hom_\Ab(G,H))\cong\Hom_\Ab(G,H)$$
+
+이 natural하다는 것으로부터 얻어진다. 
+
+</details>
+
+
+이렇게 $(\Ab,\otimes, \mathbb{Z})$를 symmetric monoidal category로 생각하고 나면, 다음이 성립한다는 것을 이미 확인하였다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm13">**정리 13 ($\otimes\dashv\Hom$)**</ins> Adjunction 
 
 $$\Hom_\Ab(G\otimes H, A)\cong\Hom_\Ab(G,\Hom_\Ab(H, A))\cong\Hom_\Ab(H,\Hom_\Ab(G, A))$$
 
-이 존재한다.
+이 존재한다. 따라서, $\Hom_\Ab(-,-)$를 $(\Ab,\otimes,\mathbb{Z})$의 internal $\Hom$으로 생각할 수 있다. 
 
 </div>
 
-즉 $\Hom_\Ab(-,-)$를 symmetric monoidal category $(\Ab,\otimes,\mathbb{Z})$의 internal $\Hom$으로 생각할 수 있다. 
+---
+
+**참고문헌**
+
+**[nLab]** *Tensor product of abelian groups*. [Link](https://ncatlab.org/nlab/show/tensor+product+of+abelian+groups)
