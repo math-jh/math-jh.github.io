@@ -4,9 +4,9 @@ title: "몫환, 환 동형사상"
 excerpt: "Quotient ring과 ring isomorphism theorems"
 
 categories: [Math / Algebraic Structures]
-permalink: /ko/math/algebraic_structures/quotient_ring
+permalink: /ko/math/algebraic_structures/quotient_rings
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Quotient_ring.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Quotient_rings.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
@@ -17,7 +17,7 @@ weight: 102
 
 ---
 
-이번 글에서 우리는 quotient ring의 개념을 정의한다. [§몫군](/ko/math/algebraic_structures/quotient_group)을 정의할 때를 떠올려보면, group $G$의 임의의 subgroup $H$에 대해 $G/H$는 집합으로서는 항상 정의되지만 이것이 항상 group의 구조를 갖는 것은 아니었고, 이를 위해서는 $H$가 normal subgroup이라는 조건이 필요했다. 마찬가지로 ring $A$와 subring $B$에 대하여 $A/B$가 항상 ring structure를 갖는 것은 아니다. 
+이번 글에서 우리는 quotient ring의 개념을 정의한다. [§몫군](/ko/math/algebraic_structures/quotient_groups)을 정의할 때를 떠올려보면, group $G$의 임의의 subgroup $H$에 대해 $G/H$는 집합으로서는 항상 정의되지만 이것이 항상 group의 구조를 갖는 것은 아니었고, 이를 위해서는 $H$가 normal subgroup이라는 조건이 필요했다. 마찬가지로 ring $A$와 subring $B$에 대하여 $A/B$가 항상 ring structure를 갖는 것은 아니다. 
 
 ## 몫환의 정의
 
@@ -50,7 +50,7 @@ $$(a+b)(a'+b')=aa'+ba'+ab'+bb'$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $\pi$가 덧셈에 대해 abelian group homomorphism을 정의한다는 것은 [§몫군](/ko/math/algebraic_structures/quotient_group)의 결과로부터 자명하다. $\pi$가 곱셈을 보존하는 것 또한 위의 논의로부터 자명하며, 따라서 $1+\mathfrak{a}$가 $A/\mathfrak{a}$의 $1$이 되는 것을 확인할 수 있다.
+1. $\pi$가 덧셈에 대해 abelian group homomorphism을 정의한다는 것은 [§몫군](/ko/math/algebraic_structures/quotient_groups)의 결과로부터 자명하다. $\pi$가 곱셈을 보존하는 것 또한 위의 논의로부터 자명하며, 따라서 $1+\mathfrak{a}$가 $A/\mathfrak{a}$의 $1$이 되는 것을 확인할 수 있다.
 2. 우선 $f$를 abelian group homomorphism으로 생각하자. 그럼 주어진 조건에 의하여 $A$의 subgroup $\mathfrak{a}$가 $\ker f$에 포함되므로, $A/\mathfrak{a}$에서 $B$로 가는 유일한 *group* homomorphism $\bar{f}:A/\mathfrak{a}\rightarrow B$가 존재하여. ([§동형사상, ⁋명제 3](/ko/math/algebraic_structures/isomorphism_theorems#prop3])) $f=\bar{f}\circ\pi$가 성립한다.  
     이제 $A/\mathfrak{a}$의 두 원소 $x+\mathfrak{a}, y+\mathfrak{a}$를 임의로 택하자. 그럼
 

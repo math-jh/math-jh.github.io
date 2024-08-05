@@ -13,11 +13,11 @@ sidebar:
 
 date: 2023-11-04
 last_modified_at: 2023-11-04
-weight: 6
+weight: 7
 
 ---
 
-이제 우리는 scheme이 갖는 여러가지 성질들을 정의한다. 여기에서는 [§대수다양체](/ko/math/algebraic_geometry/algebraic_varieties)에서와 같이 $\mathbb{A}^2$에서의 그림이 도움이 된다. 이제
+이제 우리는 scheme이 갖는 여러가지 성질들을 정의한다. 여기에서는 [§대수다양체](/ko/math/algebraic_geometry/algebraic_varieties)에서와 같이 $\mathbb{A}^2$에서의 그림이 도움이 된다. 
 
 ## Integrality
 
@@ -160,7 +160,7 @@ $$f,g\not\in \mathfrak{N}(A)\implies fg\not\in \mathfrak{N}(A)$$
 
 ## Dimension
 
-위의 직관을 제대로 설명하기 위해서는 차원과 fiber를 각각 정의해야 한다. 차원은 정의하기 쉽다.
+우리는 fiber가 어떤 의미인지 정확하게 알고 있으므로 (ref), 
 
 <div class="definition" markdown="1">
 
@@ -180,38 +180,9 @@ $$\codim(Y,X)=\inf_\text{\scriptsize $Z\subseteq Y$ irred.} \codim(Z,X)$$
 
 </div>
 
-## Fiber product
 
-한편, scheme morphism의 fiber를 정의하기 위해서는 fiber product를 이용한다. 이를 직관적으로 이해하기 위해서는 집합에서의 fiber product를 기억하면 좋다. 두 함수 $f:X \rightarrow Z$, $g:Y \rightarrow Z$에 대하여, 이들의 *fiber product*는 다음 두 조건을 만족하는 집합 $X\times_ZY$와 함수들 $p:X\times_ZY \rightarrow X$, $q:X\times_ZY \rightarrow Y$를 의미한다.
 
-> 1. $f\circ p = g\circ q$.
-> 2. $X\times_ZY$는 다음 universal property를 만족한다. 만일 $W$가 $f\circ p' = g\circ q'$를 만족하는 함수들 $p':W\rightarrow X$, $q':W\rightarrow Y$를 갖는 집합이라면, $W$에서 $X\times_ZY$로 가는 함수 $W\rightarrow X\times_ZY$가 유일하게 존재한다.
-> 
-> ![fiber_product](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-5.png){:width="273.75px" class="invert" .align-center}
 
-그럼 $X\times_ZY$는 명시적으로는 다음의 집합
-
-$$X\times_ZY=\{(x,y):f(x)=g(y)\}$$
-
-그리고 두 projection map들로 쓸 수 있으며, 당연히 universal property에 의하여 fiber product는 isomorphism에 대하여 유일하게 결정된다. 
-
-이러한 세팅에서 함수 $g:Y \rightarrow Z$의 $z\in Z$ 위에서의 fiber는 다음과 같이 정의된다. 우선 $z\in Z$는 한점 집합 $\\{\ast\\}$과, ($\ast$를 $z$으로 보내는) 함수 $f:\\{\ast\\}\rightarrow Z$로 이해할 수 있다. 그럼 $g$의 $z$에서의 fiber는 $f$와 $g$의 fiber product $\\{\ast\\}\times_ZY$로 볼 수 있다. 명시적으로 식을 써 보면 $f(\ast)=z$으로부터
-
-$$\{\ast\}\times_ZY=\{(\ast, y):z=f(\ast)=g(y)\}$$
-
-이기 때문이다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="thm10">**정리 10**</ins> Scheme morphism $f:X \rightarrow Z$와 $g:Y \rightarrow Z$에 대하여, fiber product $X\times_ZY$가 존재한다.
-
-</div>
-
-이 정리는 꽤 긴 증명울 필요로 하는데, 본질적으로 이는 affine scheme들 사이에서는 
-
-$$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_CB)$$
-
-으로 얻어지고, 이를 잘 붙여서 일반적인 scheme들 사이에서도 fiber product가 존재함을 보임으로써 얻어진다. 
 
 ---
 **참고문헌**

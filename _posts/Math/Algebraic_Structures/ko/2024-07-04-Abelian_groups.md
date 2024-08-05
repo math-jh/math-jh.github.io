@@ -194,7 +194,7 @@ Isomorphism $\Bilin(G,H;A)\cong\Hom_\Ab(F_\Ab(G\times H)/S,A)$의 naturality는 
 
 </div>
 
-그럼 $\otimes$가 $\mathbb{Z}$를 tensor unit으로 갖는 monoidal product임을 확인할 수 있다. 
+$A\otimes B$의 원소는 $a\otimes b$의 꼴의 원소들의 유한한 합으로 나타난다는 것을 알 수 있다. 그럼 $\otimes$가 $\mathbb{Z}$를 tensor unit으로 갖는 monoidal product임을 확인할 수 있다. 
 
 <div class="proposition" markdown="1">
 
@@ -216,7 +216,7 @@ $$\Hom_\Ab(\mathbb{Z}\otimes G, H)\cong\Bilin(\mathbb{Z},G;H)
 
 </details>
 
-
+특히, 임의의 $f:A \rightarrow A'$, $g:B \rightarrow B'$에 대하여 $\otimes$는 bifunctor이므로, morphism $f\otimes g:A\otimes B \rightarrow A'\otimes B'$가 존재한다. 이는 $a\otimes b$ 꼴의 원소들을 $f(a)\otimes g(b)$로 보내는 것을 통해 결정되는 group homomorphism이다.
 이렇게 $(\Ab,\otimes, \mathbb{Z})$를 symmetric monoidal category로 생각하고 나면, 다음이 성립한다는 것을 이미 확인하였다.
 
 <div class="proposition" markdown="1">
