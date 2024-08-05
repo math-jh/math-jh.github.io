@@ -4,9 +4,9 @@ title: "제한합"
 excerpt: "Group들의 restricted sum"
 
 categories: [Math / Algebraic Structures]
-permalink: /ko/math/algebraic_structures/restricted_sum
+permalink: /ko/math/algebraic_structures/restricted_sums
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Restricted_sum.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Restricted_sums.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
