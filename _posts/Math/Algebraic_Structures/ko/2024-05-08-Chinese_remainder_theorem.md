@@ -155,7 +155,15 @@ $$\Eq(f,g)=\{x\in A: f(x)=g(x)\}$$
 
 </details>
 
-$\Ring$에서의 coequalizer의 경우도 $\Grp$에서의 coequalizer와 비슷하게 정의된다. $\Grp$에서 $\CoEq(f,g)$는 
+$\Ring$에서의 coequalizer의 경우도 $\Grp$에서의 coequalizer와 비슷하게 정의된다. $\Grp$에서 $\CoEq(f,g)$는 $f(x)g(x)^{-1}$로 생성되는 $H$의 normal subgroup $\overline{S}$을 생각한 후, $H/\overline{S}$으로 정의하였는데 이와 마찬가지로 우리는 normal subgroup $\overline{S}$만 $f(x)-g(x)$로 생성되는 two-sided ideal로 바꾸어 정의한다. 
+
+$\Ring$에서의 coproduct의 경우 증명하기가 약간 까다롭긴 하지만, 본질적으로는 $\Grp$에서의 free product ([§자유곱, ⁋명제 5](/ko/math/algebraic_structures/free_products#prop5))과 크게 다르지 않다. 다만 현재로서는 이를 증명할 이유가 별로 없어 다음과 같이 명제를 적기만 하고 넘어간다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop6">**명제 6**</ins> $\Ring$은 cocomplete category이다.
+
+</div>
 
 
 ## 중국인의 나머지 정리
@@ -164,7 +172,7 @@ Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 만일 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$가 항상 성립한다면 위에서 정의한 $\pi:A \rightarrow \prod_1^n A/\mathfrak{a}_i$는 surjective이고, 이 map의 kernel은 $\bigcap \mathfrak{a}_i$와 같다.
+<ins id="prop7">**명제 7**</ins> Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 만일 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$가 항상 성립한다면 위에서 정의한 $\pi:A \rightarrow \prod_1^n A/\mathfrak{a}_i$는 surjective이고, 이 map의 kernel은 $\bigcap \mathfrak{a}_i$와 같다.
 
 </div>
 <details class="proof" markdown="1">
@@ -192,7 +200,7 @@ $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Ring $A$와, $A$의 center $C(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
+<ins id="prop8">**명제 8**</ins> Ring $A$와, $A$의 center $C(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
 
 1. 위에서 정의한 $A \rightarrow \prod A/\mathfrak{a}_i$가 isomorphism이다.
 2. 모든 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$이고 $\bigcap \mathfrak{a}_i=0$이다.
@@ -206,3 +214,11 @@ $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 마지막 조건의 $e_i$들은 $\prod A/\mathfrak{a}_i$의 각 성분 중, $i$번째 성분만 $1$이고 나머지는 모두 $0$인 원소들을 의미한다. 이를 염두에 두면 네 조건이 모두 동치라는 것을 쉽게 보일 수 있다.
 
 </details>
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
+
+---

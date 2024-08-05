@@ -6,14 +6,14 @@
 \begin{document}
 
 \begin{tikzcd}
-	{\Spec K} & X \\
-	{\Spec R} & Y
-	\arrow[from=1-1, to=1-2]
-	\arrow[from=1-1, to=2-1]
-	\arrow["f", from=1-2, to=2-2]
-	\arrow[dashed, from=2-1, to=1-2]
-	\arrow[from=2-1, to=2-2]
+	X & A \\
+	B & C
+	\arrow["a"', from=1-2, to=1-1]
+	\arrow["b", from=2-1, to=1-1]
+	\arrow["f"', from=2-2, to=1-2]
+	\arrow["g", from=2-2, to=2-1]
 \end{tikzcd}
+
 
 
 
@@ -185,6 +185,16 @@
 \end{tikzcd}
 
 % valuative_criterion_for_separatedness (Valuative_criteria-2.png)
+\begin{tikzcd}
+	{\Spec K} & X \\
+	{\Spec R} & Y
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["f", from=1-2, to=2-2]
+	\arrow[dashed, from=2-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}
+
 \begin{tikzcd}
 	{\Spec K} & X \\
 	{\Spec R} & Y
