@@ -6,16 +6,19 @@
 \begin{document}
 
 \begin{tikzcd}
-	G & H \\
-	& {\Gr(S)} \\
-	& H
-	\arrow["\eta_S'", from=1-1, to=1-2]
-	\arrow["\eta_S"{description}, from=1-1, to=2-2]
-	\arrow["{\bar{\eta}_S}", dashed, from=1-2, to=2-2]
-	\arrow["{\bar{\eta}_S'}", dashed, from=2-2, to=3-2]
-	\arrow["\eta_S'"', from=1-1, to=3-2]
-	\arrow["{\mathrm{id}_H}", curve={height=-22pt}, dashed, from=1-2, to=3-2]
+	{E\otimes A\otimes A} & {E\otimes A} && {E\otimes I} && {E\otimes A} \\
+	{E\otimes A} & E &&& E
+	\arrow["{\rho\otimes \id_A}", from=1-1, to=1-2]
+	\arrow["{\id_E\otimes\cdot}"', from=1-1, to=2-1]
+	\arrow["\rho", from=1-2, to=2-2]
+	\arrow["{\id_E\otimes 1}", from=1-4, to=1-6]
+	\arrow[from=1-4, to=2-5]
+	\arrow["\rho", from=1-6, to=2-5]
+	\arrow["\rho"', from=2-1, to=2-2]
 \end{tikzcd}
+
+
+
 
 
 \end{document}
@@ -231,3 +234,19 @@
 	\arrow["{\mathrm{pr}_i}"', from=1-2, to=1-1]
 	\arrow["f"', dashed, from=2-2, to=1-2]
 \end{tikzcd}
+
+
+
+%% left_module (Modules-1.png)
+\begin{tikzcd}
+	{A\otimes A\otimes E} & {A\otimes E} && {I\otimes E} && {A\otimes E} \\
+	{A\otimes E} & E &&& E
+	\arrow["{\id_A\otimes \rho}", from=1-1, to=1-2]
+	\arrow["{\cdot\otimes \id_E}"', from=1-1, to=2-1]
+	\arrow["\rho", from=1-2, to=2-2]
+	\arrow["{1\otimes\id_E}", from=1-4, to=1-6]
+	\arrow[from=1-4, to=2-5]
+	\arrow["\rho", from=1-6, to=2-5]
+	\arrow["\rho"', from=2-1, to=2-2]
+\end{tikzcd}
+

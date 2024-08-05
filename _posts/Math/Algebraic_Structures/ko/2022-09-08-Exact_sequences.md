@@ -31,11 +31,11 @@ $$\cdots\longrightarrow E\overset{f}{\longrightarrow} F\overset{g}{\longrightarr
 
 조건 $gf=0$은 $\im(f)\subseteq\ker(g)$와 동치이다. 특별히 $\im(f)=\ker(g)$가 성립할 경우, 우리는 위의 열이 $F$에서 *exact<sub>완전</sub>*하다 하고, 각 성분에서 모두 exact인 열을 *exact sequence<sub>완전열</sub>*라 부른다. 
 
-임의의 $A$-module $E$에 대하여, zero module $0$에서 $E$로 가는 유일한 map은 $0$을 $0$으로 보내는 영함수뿐이고, $E$에서 $0$으로 가는 함수 또한 $X$의 모든 원소를 $0$으로 보내는 영함수뿐이다. 이러한 상황에서는 
+$\lMod{A}$는 zero object $0$을 가지므로, 이것이 포함된 상황에서는 
 
 $$0\longrightarrow E,\qquad E\longrightarrow 0$$
 
-와 같이 함수에 따로 이름을 붙이지 않는다. 한편, 임의의 두 $A$-module $E,F$에 대하여, $E$의 모든 원소를 $0\in F$로 보내는 영함수 또한 생각할 수 있는데, 이러한 영함수는 두 함수 $E\rightarrow 0$과 $0\rightarrow F$의 합성으로 생각할 수 있으므로 열
+와 같이 함수에 따로 이름을 붙이지 않는다. 한편, 임의의 두 $A$-module $E,F$에 대하여, zero map $0:E \rightarrow F$는 zero object를 통과하는 map $E \rightarrow 0 \rightarrow F$로 생각할 수 있으므로 열
 
 $$\cdots\longrightarrow D\longrightarrow E\overset{0}{\longrightarrow} F\longrightarrow G\longrightarrow\cdots$$
 
@@ -108,15 +108,6 @@ $$0\longrightarrow\ker(f)\longrightarrow E\overset{f}{\longrightarrow}F\longrigh
 </div>
 
 이제 다음 글부터 우리는 exact sequence를 통하여 module의 성질들을 살펴본다. 기본적으로, exactness를 보존하는 연산들은 정보를 일어버리지 않는 것들이고, 그렇지 못한 것들은 원래의 정보를 잃어버리는 것으로 생각하는 것이 큰 흐름이다.
-
-Product/sum 정도 하고
-split/free 하고
-change of scalar 하고
-
-홈
-텐서
-어드조인트
-
 
 
 
