@@ -21,15 +21,27 @@ weight: 11
 
 ## 집합 위에 작용하는 모노이드
 
-임의의 집합 $E$와 그 endomorphism monoid $\End(E)$와 automorphism group $\Aut(E)$를 생각하자. ([\[범주론\] §범주, ⁋정의 9](/ko/math/category_theory/categories#def9))
-
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 monoid $M$과 임의의 집합 $E$에 대하여, monoid homomorphism $\rho:M \rightarrow \End(E)$를 *$M$의 $E$ 위에서의 left action<sub>왼쪽 작용</sub>*이라 부르고, $E$를 *left $M$-set*이라 부른다.
+<ins id="def1">**정의 1**</ins> Monoidal category $(\mathcal{A},\otimes, I)$와 $\mathcal{A}$의 monoid object $(A,\cdot, 1)$를 고정하자. 그럼 morphism $\rho: A\otimes E\rightarrow E$이 대상 $E\in\obj(\mathcal{A})$ 위에 정의된 $A$의 *left action<sub>왼쪽 작용</sub>*이라는 것은 다음 두 diagram이 모두 commute하는 것이다.
 
-임의의 $\alpha\in M$과 $x\in E$에 대하여, 함숫값 $\rho(\alpha)(x)$를 간단히 $\alpha\cdot x$로 표기한다. 
+![left_module](/assets/images/Math/Algebraic_Structures/Modules-1.png){:width="635.85px" class="invert" .align-center}
+
+여기서 $I\otimes E \rightarrow E$는 left unitor이다. 이 상황을 $A\circlearrowright E$로 적는다.
+
+비슷하게, morphism $\rho: E\otimes A\rightarrow E$이 대상 $E\in\obj(\mathcal{A})$ 위에 정의된 $A$의 *right action<sub>오른쪽 작용</sub>*이라는 것은 다음 두 diagram이 모두 commute하는 것이다.
+
+![right_module](/assets/images/Math/Algebraic_Structures/Modules-2.png){:width="635.85px" class="invert" .align-center}
+
+마찬가지로 $E\otimes I \rightarrow E$는 right unitor이다. 이 상황을 $E \circlearrowleft A$로 적는다.
 
 </div>
+
+Monoidal category $(\Set,\times, I)$ 위의 monoid object $(M,\cdot,1)$을 고정하자. 그럼 이를 통해 임의의 집합 $E$ 위에 정의된 $M$의 left action을 생각할 수 있다. 그럼 [\[집합론\] §집합의 곱, ⁋명제 4](/ko/math/set_theory/product_of_sets#prop4)로부터
+
+$$\Hom_\Set(M\times E,E)\cong\Hom_\Set(M,\Hom_\Set(E,E))\cong\Hom_\Set(M, \End(E))$$
+
+이므로, 임의의 left action은 함수 $M \rightarrow \End(E)$를 정의한다. 그럼 [정의 1](#def1)의 두 diagram이 commutative라는 것은 이 함수가 실은 monoid homomorphism이라는 것과 같다. 
 
 바꿔 말하자면 $M$이 $E$에 왼쪽에서 act한다는 것은 임의의 $\alpha,\beta\in M$과 $x\in E$에 대하여, 다음의 식
 
@@ -37,38 +49,26 @@ $$(\alpha\beta)\cdot x=\alpha\cdot(\beta\cdot x),\qquad e\cdot x=x$$
 
 이 성립하는 것이다. 
 
-일반적인 경우, 우리는 위와 같이 주어진 대상이 다른 대상에 왼쪽에서 act하는 경우를 생각하지만, 종종 오른쪽에서 act하는 것이 자연스러울 때도 있다. 이를 [정의 1](#def1)과 비슷한 형태로 정의하기 위해서는 다음 정의가 필요하다.
+일반적인 경우, 우리는 위와 같이 주어진 대상이 다른 대상에 왼쪽에서 act하는 경우를 생각하지만, 종종 오른쪽에서 act하는 것이 자연스러울 때도 있다. 이는 다음 정의에 의해 사실은 같은 것이다.
 
 <div class="definition" markdown="1">
 
 <ins id="def2">**정의 2**</ins> 임의의 마그마 $(M,\ast)$에 대하여, $M$의 *opposite magma<sub>반대 마그마</sub>* $(M^\op,\ast^\op)$는 다음과 같이 정의된 마그마이다.
 
-1. $M^\op=M$이다.
-2. 임의의 $x,y\in M^\op$에 대하여, $x\ast^\op y$는 $y\ast x$로 정의된다.
+1. 집합으로서 $M^\op=M$이다.
+2. 임의의 $x,y\in A^\op$에 대하여, $x\ast^\op y$는 $y\ast x$로 정의된다.
 
 </div>
 
-그럼 monoid의 *right action*은 다음과 같이 정의된다.
-
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 임의의 monoid $M$과 임의의 집합 $E$에 대하여, monoid homomorphism $\rho:M^\op \rightarrow \End(E)$를 *$M$의 $E$ 위에서의 right action<sub>왼쪽 작용</sub>*이라 부르고, $E$를 *right $M$-set*이라 부른다.
-
-임의의 $\alpha\in M$과 $x\in E$에 대하여, 함숫값 $\rho(\alpha)(x)$를 간단히 $x\cdot\alpha$로 표기한다.
-
-</div>
-
-이를 다시 쓰자면 
+그럼 right $M$-action은 left $M^\op$-action과 같은 것임을 확인할 수 있다. 이를 다시 쓰자면 
 
 $$x\cdot(\beta\alpha)=(x\cdot\beta)\cdot\alpha,\qquad x\cdot e=x$$
 
-라 할 수 있다. 
-
-Left action과 right action은 표기상의 차이일 뿐, 본질적으로는 동일한 의미를 갖는다. 즉, $E$가 left $M$-set이라 하면 이는 자연스럽게 right $M^\op$-set으로 생각할 수 있고, 거꾸로 $E$가 right $M$-set이라 하면 이는 자연스럽게 left $M^\op$-set으로 생각할 수 있다. 따라서 앞으로 일반적인 이론을 전개할 때는 모든 action이 left action인 것으로 생각한다. 
+라 할 수 있다. 이렇게 left action과 right action은 표기상의 차이일 뿐, 본질적으로는 동일한 의미를 갖는다. 따라서 앞으로 일반적인 이론을 전개할 때는 모든 action이 left action인 것으로 생각한다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> Monoid $M$과 $M$-set $E$가 주어졌다 하자. 그럼 $\mathcal{P}(E)$도 자연스러운 $M$-set 구조를 갖는다. 임의의 $\alpha\in M$과 $A\in \mathcal{P}(E)$에 대하여, $\alpha\cdot A$를 다음 식
+<ins id="ex3">**예시 3**</ins> Monoid $M$과 $M$-set $E$가 주어졌다 하자. 그럼 $\mathcal{P}(E)$도 자연스러운 $M$-set 구조를 갖는다. 임의의 $\alpha\in M$과 $A\in \mathcal{P}(E)$에 대하여, $\alpha\cdot A$를 다음 식
 
 $$\alpha\cdot A=\{\alpha\cdot a:a\in A\}$$
 
@@ -76,7 +76,15 @@ $$\alpha\cdot A=\{\alpha\cdot a:a\in A\}$$
 
 $$(\alpha\beta)\cdot A=\{(\alpha\beta)\cdot a:a\in A\}=\{\alpha\cdot(\beta\cdot a):a\in A\}=\alpha\cdot\{\beta\cdot a:a\in A\}=\alpha\cdot(\beta\cdot A)$$
 
-이므로 이것이 $\mathcal{P}(E)$ 위에 $M$-set 구조를 정의한다.
+이므로 이것이 $\mathcal{P}(E)$ 위에 $M$-action을 정의한다.
+
+</div>
+
+논의의 편의를 위해 다음과 같이 정의한다.
+
+<div class="definition" markdown="1">
+
+<ins id="def4">**정의 4**</ins> Monoid $M$이 집합 $E$ 위에 left action을 정의할 때, $E$와 이 action을 통틀 (left) $M$-set이라 부른다. 
 
 </div>
 

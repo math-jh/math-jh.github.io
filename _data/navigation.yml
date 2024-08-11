@@ -44,7 +44,7 @@ algebraic_structures-ko:
     children:
       - title: "대수적 구조"
         url: ko/math/algebraic_structures/algebraic_structures
-      - title: "준군, 모노이드, 군"
+      - title: "반군, 모노이드, 군"
         url: ko/math/algebraic_structures/groups
       - title: "Grothendieck 군"
         url: ko/math/algebraic_structures/Grothendieck_groups
@@ -68,18 +68,22 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/rings
       - title: "몫환, 환 동형사상"
         url: ko/math/algebraic_structures/quotient_rings
-      - title: "중국인의 나머지 정리"
-        url: ko/math/algebraic_structures/chinese_remainder_theorem
-      - title: "정역"
-        url: ko/math/algebraic_structures/integral_domains
+      - title: "환의 곱, 쌍대곱, 텐서곱"
+        url: ko/math/algebraic_structures/operations_of_rings
+      - title: "분수체"
+        url: ko/math/algebraic_structures/field_of_fractions
+      - title: "등급환"
+        url: ko/math/algebraic_structures/graded_rings
       - title: "가군"
         url: ko/math/algebraic_structures/modules
-      - title: "완전열"
-        url: ko/math/algebraic_structures/exact_sequences
-      - title: "가군의 곱과 합"
-        url: ko/math/algebraic_structures/products_and_sums_of_modules
       - title: "자유가군"
         url: ko/math/algebraic_structures/free_modules
+      - title: "가군의 곱과 합, 텐서곱"
+        url: ko/math/algebraic_structures/operations_of_modules
+      - title: "스칼라의 변환"
+        url: ko/math/algebraic_structures/change_of_base_ring
+      - title: "등급가군"
+        url: ko/math/algebraic_structures/graded_modules
   - title: 
     children:
       - title: "블로그 소개"

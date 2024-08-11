@@ -1,19 +1,19 @@
 ---
 
-title: "정역"
+title: "분수체"
 excerpt: "Localization, ring of fraction, prime ideal"
 
 categories: [Math / Algebraic Structures]
-permalink: /ko/math/algebraic_structures/integral_domains
+permalink: /ko/math/algebraic_structures/field_of_fractions
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Integral_domains.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Field_of_fractions.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 
 date: 2024-05-08
 last_modified_at: 2024-05-08
-weight: 104
+weight: 105
 
 ---
 
@@ -144,6 +144,8 @@ $$v=v1=vua=a$$
 </details>
 
 ## 정역
+
+$\mathbb{Q}$는 그 정의에 의하여 $\mathbb{Z}$의 total ring of fraction이다. 이것이 field가 되는 것은 졍의에 의해 자명하며, 이는 다음과 같이 확장할 수 있다. 
 
 <div class="definition" markdown="1">
 
