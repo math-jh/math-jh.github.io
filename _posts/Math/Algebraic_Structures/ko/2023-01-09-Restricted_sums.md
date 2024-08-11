@@ -171,24 +171,6 @@ $$a_i^{-1}=\prod_{j\in I\setminus\{i\}}a_j\in H_i\cap \left\langle\bigcup_{j\neq
 </details>
 
 
-## Direct sum of abelian groups
-
-[정리 2](#thm2)에서 보인 weak direct product의 universal property는 특히 group $H$가 abelian group일 경우 잘 적용된다. 즉 다음이 성립한다.
-
-<div class="proposition" markdown="1">
-
-<ins id="thm6">**정리 6**</ins> Abelian group들의 family $(G_i)$가 주어졌다 하고, $\prod^w G_i$와 inclusion map들 $\iota_i$를 생각하자. 그럼 임의의 abelian group $H$와 group homomorphism들 $f_i:G_i\rightarrow H$에 대하여, $f_i=f\circ\iota_i$이도록 하는 유일한 group homomorphism $f:\prod^wG_i\rightarrow H$가 존재한다.
-
-</div>
-
-따라서, 적어도 abelian group들 사이에서는 weak direct product $\prod^w G_i$가 우리가 찾던 [\[집합론\], §집합의 합, ⁋정리 8](/ko/math/set_theory/sum_of_sets#thm8)의 universal property에 대한 답이 된다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> Abelian group들의 family $(G_i)$와, 이들의 weak direct product $\prod^w G_i$, 그리고 inclusion map들 $\iota_i$가 주어졌다 하자. 그럼 $\prod^w G_i$와 $\iota_i$들을 묶어 $G_i$들의 *direct sum<sub>직합</sub>*이라 부르고 이를 $\bigoplus G_i$로 표현한다.  
-
-</div>
-
 ---
 
 **참고문헌**

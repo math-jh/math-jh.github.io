@@ -76,3 +76,13 @@ $$(a+b)(a'+b')=aa'+ba'+ab'+bb'$$
 4. $A$의 two-sided ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$의 two-sided ideal의 집합과, $\mathfrak{a}$를 포함하는 $A$의 ideal들의 집합 사이의 inclusion-preserving bijection이 존재한다.
 
 </div>
+
+이에 대한 증명은 [§동형사상](/ko/math/algebraic_structures/isomorphism_theorems)에서 다루었던 것과 거의 동일하므로 생략한다. 
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
+
+---
