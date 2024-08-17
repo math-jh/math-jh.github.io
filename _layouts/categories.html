@@ -10,46 +10,90 @@ layout: archive
 
 {{ content }}
 
-{% assign categories_max = 0 %}
-{% for category in site.categories %}
-  {% assign posts=category[1] | where_exp: "post", "post.permalink contains lang_full" %}
-  {% if posts.size > categories_max %}
-    {% assign categories_max = category[1].size %}
-  {% endif %}
-{% endfor %}
-
 <ul class="taxonomy__index">
-  {% for i in (1..categories_max) reversed %}
-    {% for category in site.categories %}
-    {% assign posts=category[1] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' %}
-      {% if posts.size == i %}
-        <li>
-          <a href="#{{ category[0] | slugify }}">
-            <strong>{{ category[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
+{% for ordered_cat in site.categories_order %}
+  {% assign posts=site.categories[ordered_cat] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' %}
+  <li>
+    <a href="#{{ ordered_cat | slugify }}">
+      <strong>{{ ordered_cat }}</strong> <span class="taxonomy__count">{{ posts.size }}</span>
+    </a>
+  </li>
+{% endfor %}
 </ul>
 
 {% assign entries_layout = page.entries_layout | default: 'list'%}
-{% for i in (1..categories_max) reversed %}
-  {% for category in site.categories %}
-    {% assign posts=category[1] | where_exp: "post", "post.permalink contains lang_full" %}
-    {% if posts.size > 0 %}
-      {% if category[1].size == i %}
-      {% assign posts=category[1] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' | reverse %}
-        <section id="{{ category[0] | slugify | downcase }}" class="taxonomy__section">
-          <h2 class="archive__subtitle">{{ category[0] }}</h2>
-          <div class="entries-{{ entries_layout }}">
-            {% for post in posts reversed %}
-              {% include archive-single.html type=entries_layout %}
-            {% endfor %}
-          </div>
-          <a href="#page-title" class="back-to-top">{{ site.data.ui-text[lang].back_to_top | default: 'Back to Top' }} &uarr;</a>
-        </section>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+{% for ordered_cat in site.categories_order %}
+  {% assign posts=site.categories.[ordered_cat] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' | reverse %}
+   <section id="{{ ordered_cat | slugify }}" class="taxonomy__section">
+     <h2 class="archive__subtitle">{{ ordered_cat }}</h2>
+     <div class="entries-{{ entries_layout }}">
+       {% for post in posts reversed %}
+         {% include archive-single.html type=entries_layout %}
+       {% endfor %}
+     </div>
+     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[lang].back_to_top | default: 'Back to Top' }} &uarr;</a>
+   </section>
 {% endfor %}
+
+
+<ul class="taxonomy__index">
+  {% assign posts=site.categories.["Math / Set Theory"] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' %}
+  <li>
+    <a href="#math-set-theory">
+      <strong>Math / Set Theory</strong> <span class="taxonomy__count">{{ posts.size }}</span>
+    </a>
+  </li>
+  {% assign posts=site.categories.["Math / Category Theory"] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' %}
+  <li>
+    <a href="#math-category-theory">
+      <strong>Math / Category Theory</strong> <span class="taxonomy__count">{{ posts.size }}</span>
+    </a>
+  </li>
+  {% assign posts=site.categories.["Math / Algebraic Structures"] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' %}
+  <li>
+    <a href="#math-algebraic-structures">
+      <strong>Math / Algebraic Structures</strong> <span class="taxonomy__count">{{ posts.size }}</span>
+    </a>
+  </li>
+  {% assign posts=site.categories.["Math / Linear Algebra"] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' %}
+  <li>
+    <a href="#math-linear-algebra">
+      <strong>Math / Linear Algebra</strong> <span class="taxonomy__count">{{ posts.size }}</span>
+    </a>
+  </li>
+
+</ul>
+
+{% assign entries_layout = page.entries_layout | default: 'list'%}
+<h1 id="math-foundations" class="archive__title">Foundations</h1>
+  {% assign posts=site.categories.["Math / Set Theory"] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' | reverse %}
+   <section id="math-set-theory" class="taxonomy__section">
+     <h2 class="archive__subtitle">집합론</h2>
+     <div class="entries-{{ entries_layout }}">
+       {% for post in posts reversed %}
+         {% include archive-single.html type=entries_layout %}
+       {% endfor %}
+     </div>
+     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[lang].back_to_top | default: 'Back to Top' }} &uarr;</a>
+   </section>
+   {% assign posts=site.categories.["Math / Category Theory"] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' | reverse %}
+   <section id="math-caregory-theory" class="taxonomy__section">
+     <h2 class="archive__subtitle">범주론</h2>
+     <div class="entries-{{ entries_layout }}">
+       {% for post in posts reversed %}
+         {% include archive-single.html type=entries_layout %}
+       {% endfor %}
+     </div>
+     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[lang].back_to_top | default: 'Back to Top' }} &uarr;</a>
+   </section>
+<h1 id="math-foundations" class="archive__title">Algebra</h1>
+   {% assign posts=site.categories.["Math / Algebraic Structures"] | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' | reverse %}
+   <section id="math-algebraic-structures" class="taxonomy__section">
+     <h2 class="archive__subtitle">대수적 구조</h2>
+     <div class="entries-{{ entries_layout }}">
+       {% for post in posts reversed %}
+         {% include archive-single.html type=entries_layout %}
+       {% endfor %}
+     </div>
+     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[lang].back_to_top | default: 'Back to Top' }} &uarr;</a>
+   </section>
