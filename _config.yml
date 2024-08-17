@@ -272,6 +272,19 @@ category_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
+categories_order:
+  - Math / Set Theory
+  - Math / Category Theory
+  - Math / Algebraic Structures
+  - Math / Linear Algebra
+  - Math / Multilinear Algebra
+#  - Math / Commutative Algebra
+  - Math / Topology
+  - Math / Manifold
+  - Math / Differential Geometry
+  - Math / Algebraic Geometry
+  - Misc / Blog Development
+
 github: [metadata]
 
 # HTML Compression
