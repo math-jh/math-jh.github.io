@@ -207,7 +207,7 @@ function lang_home() {
 ## Site.locale 수정
 
 영어만 할 수 있는 사람이 영어로 검색하여 내 사이트의 영어 버전에 접속하였을 때, 본문 내용만 영어고 나머지 메뉴는 모두 한글이라면 당혹스러울 것이다.  
-위의 코드에서 보듯이 minimal-mistakes는 각 용어들의 번역이 담긴 `data/ui-text.yml` 파일에서 `site.locale`에 해당하는 언어를 골라서 페이지를 빌드한다. 따라서 `site.locale`자리에 현재 페이지의 언어를 감지하도록 `lang`을 넣어주면 한/영 버전의 사이트 모두에서 자신의 언어에 해당하는 메뉴를 볼 수 있게 된다. 
+위의 코드에서 보듯이 minimal-mistakes는 각 용어들의 번역이 담긴 `data/ui-text.yml` 파일에서 `site.locale`에 해당하는 언어를 골라서 페이지를 빌드한다. 따라서 `site.locale`자리에 현재 페이지의 언어를 감지하도록 `lang`을 넣어주면 한/영 버전의 사이트 모두에서 자신의 언어에 해당하는 메뉴를 볼 수 있게 된다. 이와 같은 이유에서 나는 `site.locale`을 사용하는 모든 파일들에서 `lang` 태그를 추가하고 `site.locale`을 `lang`으로 바꾸는 과정을 수행했다. 이 과정에서 핋요하다면 포스트를 보는 `post` 등의 변수를 정의할 때 `where_exp` 필터를 이용해서 해당되는 언어만 가져오도록 정의하였다.
 
 
 [^1]: 예를 들어, masthead에 {% raw %}`{{ page.url }}`{% endraw %}을 넣어보면 이 사실을 알 수 있다. 만일 Jekyll이 페이지별로 `masthead.html`을 따로따로 불러온다면, masthead에 적힌 {% raw %}`{{ page.url }}`{% endraw %}는 페이지마다 다른 주소값을 주어야 할 것이나, 실제로는 모든 페이지에서 특정한 페이지의 url만 보인다.
