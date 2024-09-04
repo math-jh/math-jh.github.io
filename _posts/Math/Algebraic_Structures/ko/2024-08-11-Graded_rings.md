@@ -61,6 +61,78 @@ $$x=1x=\sum_{i\in I} e_ix\in A_j$$
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Commutative monoid $I$와 두 $I$-graded ring $A,A'$에 대하여, ring homomorphism $f:A \rightarrow A'$가 *graded homomorphism*이라는 것은 
+<ins id="def4">**정의 4**</ins> Commutative monoid $I$와 두 $I$-graded ring $A,A'$에 대하여, ring homomorphism $f:A \rightarrow A'$가 *graded homomorphism*이라는 것은 임의의 $i\in I$에 대하여 $f(A_i)\subseteq A_i'$이 모든 $i\in I$에 대해 성립하는 것이다.
 
 </div>
+
+어렵지 않게 $I$-graded ring과 $I$-graded homomorphism이 category $\gr_I\Ring$을 이루는 것을 안다. 
+
+## 동차아이디얼과 등급환의 몫
+
+Graded ring $A=\bigoplus_{i\in I} A_i$에 대해, $A$의 ideal $\mathfrak{a}$에 대한 quotient ring $A/\mathfrak{a}$가 항상 graded ring이 되지는 않을 수도 있다. 
+
+<div class="example" markdown="1">
+
+<ins id="ex5">**예시 5**</ins> Ring $A$를 고정하고, $A$의 원소들을 계수로 가지는 *polynomial ring*
+
+$$A[x]=\{a_nx^n+\cdots+a_1x+a_0: a_i\in A\}$$
+
+을 생각하자. 그럼 이는 다음의 decomposition
+
+$$A[x]=\bigoplus_{n\geq 0} Ax^n$$
+
+에 의하여 graded ring의 구조를 갖는다. 한편 $x-1$로 생성된 ideal $(x-1)$을 생각하자. 그럼 ring으로서
+
+$$A[x]/(x-1)\cong A$$
+
+이며, 명시적으로 이 isomorphism은
+
+$$a_nx^n +\cdots+a_1x+a_0\quad \mapsto\quad a_n+\cdots+a_1+a_0$$
+
+으로 정의된 evaluation map에 first isomorphism theorem을 적용하여 얻어진다. 그러나 위의 homomorphism은 graded homomorphism이 아니다.
+
+</div>
+
+이를 피하기 위해 *homogeneous ideal*의 개념을 도입한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop6">**명제 6**</ins> $I$-graded ring $A=\bigoplus\_{i\in I} A\_i$와 $A$의 ideal $\mathfrak{a}$에 대하여 다음이 모두 동치이다. 
+
+1. $\mathfrak{a}$는 $\mathfrak{a}\cap A_i$들의 합이다.
+2. $\mathfrak{a}$의 임의의 원소를 homogeneous element로 분해하면, 각각의 원소들도 모두 $\mathfrak{a}$에 속한다. 
+3. $\mathfrak{a}$는 homogeneous element로 생성된다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$A$의 원소로서, $\mathfrak{a}$의 모든 원소들은 homogeneous element들의 합으로 유일하게 나타난다. 따라서 처음 두 조건이 동치인 것은 자명하며, 1번 조건이 3번 조건을 함의하는 것 또한 자명하다. 이제 세 번째 조건을 가정하고 두 번째 조건을 증명한다. $\mathfrak{a}$가 homogeneous element들 $(x_j)_{j\in J}$로 생성된다 가정하자. 그럼 임의의 $x\in \mathfrak{a}$가 다음의 식
+
+$$x=\sum_{j\in J} a_j x_j,\qquad\text{$(a_j)_{j\in J}$ finitely supported}$$
+
+으로 나타난다. 이제 $a_j$들 각각은 다시 $A$의 원소로서 homogeneous element들의 합
+
+$$a_j=\sum_{k\in K_j} a_{jk},\qquad \text{$(a_{jk})_{k\in K_j}$ finitely supported}$$
+
+으로 나타난다. 따라서
+
+$$x=\sum_{j\in J}\sum_{k\in K_j}a_{jk}x_j,\qquad \text{$(a_{jk})_{j\in J,k\in K_j}$ finitely supported}$$
+
+이고, $a_{jk}x_j$들은 모두 각각 homogeneous element들이며 모두 $\mathfrak{a}$에 속한다. 이로부터 2번 조건을 보일 수 있다.
+
+</details>
+
+위의 동치조건을 만족하는 ideal을 *homogeneous ideal<sub>동차 아이디얼</sub>*이라 부른다. 그럼 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7**</ins> Homogeneous ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$가 graded ideal이며, 그 decomposition이 다음 식
+
+$$A/\mathfrak{a}=\bigoplus_{i\in I}A_i/(\mathfrak{a}\cap A_i)$$
+
+으로 주어진다.
+
+</div>
+
+이에 대한 증명은 자명하므로 생략한다.

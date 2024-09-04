@@ -20,7 +20,7 @@ weight: 10
 
 ## 가환군들의 합
 
-우선, [§제한합, ⁋정리 2](/ko/math/algebraic_structures/restricted_sums#thm2)에서 보인 weak direct product의 universal property는 특히 group $H$가 abelian group일 경우 잘 적용된다. 즉 다음이 성립한다.
+우선, [§제한합, ⁋정리 2](/ko/math/algebraic_structures/restricted_sums#thm2)에서 보인 weak direct product의 universal property는 특히 group $H$가 abelian group일 경우 잘 적용된다.
 
 <div class="proposition" markdown="1">
 
@@ -36,15 +36,23 @@ weight: 10
 
 </div>
 
+약간의 표기법의 남용을 통해 $\iota_i(G_i)$와 $G_i$를 같은 것으로 보면, $\bigoplus G_i$의 임의의 원소는 다음 식
+
+$$x=\sum_{i\in I} x_i,\qquad\text{$x_i\in G_i$, $x_i=0$ for all but finitely many $i$}$$
+
+으로 쓸 수 있다. 이러한 상황에서 $x_i\neq 0$을 만족하는 $I$의 부분집합을 $x$의 *support<sub>지지집합</sub>*라 부르고 $\supp(x)$로 적고, 위의 조건이 성립하면 family $(x_i)$가 *finitely supported*라 부른다.
+
 ## Abelianization
 
 이제 다음을 정의하자.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 임의의 group $G$에 대하여 $G$의 commutator subgroup $[G,G]$는 $G$의 모든 commutator들에 의해 생성된 subgroup으로 정의된다. 즉, $[G,G]$는 다음과 같이 정의된다.
+<ins id="def3">**정의 3**</ins> 임의의 group $G$에 대하여 $G$의 commutator subgroup $[G,G]$는 $G$의 모든 commutator들에 의해 생성된 subgroup으로 정의된다. 즉,
 
 $$[G,G]=\left\langle [x,y]: x,y\in G\right\rangle, \qquad [x,y]=xyx^{-1}y^{-1}$$
+
+이다. 
 
 </div>
 
