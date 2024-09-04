@@ -5,18 +5,6 @@
 \usepackage{../.preamble/Operators}
 \begin{document}
 
-\begin{tikzcd}
-	{E\otimes A\otimes A} & {E\otimes A} && {E\otimes I} && {E\otimes A} \\
-	{E\otimes A} & E &&& E
-	\arrow["{\rho\otimes \id_A}", from=1-1, to=1-2]
-	\arrow["{\id_E\otimes\cdot}"', from=1-1, to=2-1]
-	\arrow["\rho", from=1-2, to=2-2]
-	\arrow["{\id_E\otimes 1}", from=1-4, to=1-6]
-	\arrow[from=1-4, to=2-5]
-	\arrow["\rho", from=1-6, to=2-5]
-	\arrow["\rho"', from=2-1, to=2-2]
-\end{tikzcd}
-
 
 
 
@@ -250,3 +238,52 @@
 	\arrow["\rho"', from=2-1, to=2-2]
 \end{tikzcd}
 
+%% right_module (Modules-1.png)
+\begin{tikzcd}
+	{E\otimes A\otimes A} & {E\otimes A} && {E\otimes I} && {E\otimes A} \\
+	{E\otimes A} & E &&& E
+	\arrow["{\rho\otimes \id_A}", from=1-1, to=1-2]
+	\arrow["{\id_E\otimes\cdot}"', from=1-1, to=2-1]
+	\arrow["\rho", from=1-2, to=2-2]
+	\arrow["{\id_E\otimes 1}", from=1-4, to=1-6]
+	\arrow[from=1-4, to=2-5]
+	\arrow["\rho", from=1-6, to=2-5]
+	\arrow["\rho"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% Restriction_of_scalars (Change_of_base_ring-1.png)
+\begin{tikzcd}
+	{A\otimes N} & {B\otimes N} & N
+	\arrow["{\phi\otimes\id_N}", from=1-1, to=1-2]
+	\arrow["{\rho_N}", from=1-2, to=1-3]
+\end{tikzcd}
+
+
+%% Restrictions_of_scalars_functoriality (Change_of_base_ring-2.png)
+\begin{tikzcd}
+	{A\otimes N} & {B\otimes N} & N \\
+	{A\otimes N'} & {B\otimes N'} & {N'}
+	\arrow["{\phi\otimes\id_N}", from=1-1, to=1-2]
+	\arrow["{\id_A\otimes f}"', from=1-1, to=2-1]
+	\arrow["{\rho_N}", from=1-2, to=1-3]
+	\arrow["{\id_B\otimes f}"', from=1-2, to=2-2]
+	\arrow["f", from=1-3, to=2-3]
+	\arrow["{\phi\otimes\id_{N'}}"', from=2-1, to=2-2]
+	\arrow["{\rho_{N'}}"', from=2-2, to=2-3]
+\end{tikzcd}
+
+%% Adjointness-1 (Change_of_base_ring-3.png)
+\begin{tikzcd}
+	M & {A\otimes_AM} & {\phi^\ast B\otimes_AM} & N
+	\arrow["\cong", from=1-1, to=1-2]
+	\arrow["{\phi\otimes_A\id_M}", from=1-2, to=1-3]
+	\arrow["f", from=1-3, to=1-4]
+\end{tikzcd}
+
+%% Adjointness-2 (Change_of_base_ring-4.png)
+\begin{tikzcd}
+	{\phi^\ast B\otimes_A M} & {\phi^\ast B\otimes_A\phi^\ast N} & {\phi^\ast(B\otimes_BN)} & {\phi^\ast N}
+	\arrow["{\id_{\phi^\ast B}\otimes_Ag}", from=1-1, to=1-2]
+	\arrow["\Phi", from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+\end{tikzcd}
