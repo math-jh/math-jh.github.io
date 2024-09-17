@@ -3,13 +3,13 @@
 title: "고유공간분해"
 excerpt: "벡터공간의 고유공간분해"
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/eigenspace_decomposition
+categories: [Math / Basic Linear Algebra]
+permalink: /ko/math/basic_linear_algebra/eigenspace_decomposition
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "basic_linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Eigenspace_decomposition.png
+    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Eigenspace_decomposition.png
     overlay_filter: 0.5
 
 date: 2022-09-18
@@ -31,7 +31,7 @@ $$Av=\lambda v$$
 
 $$F^n=\span\left(\bigcup_{\lambda\in\Spec(A)}E_\lambda\right)$$
 
-이라 하자. 그럼 임의의 $v\in F^n$에 대하여, $v_\lambda\in E_\lambda$들이 각각 존재하여
+이라 하자. 그럼 임의의 $v\in\mathbb{k}^n$에 대하여, $v_\lambda\in E_\lambda$들이 각각 존재하여
 
 $$v=\sum_{\lambda\in\Spec(A)}v_\lambda$$
 
@@ -47,7 +47,7 @@ $$Av=\sum_{\lambda\in\Spec(A)}\lambda v_\lambda$$
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 $F$-벡터공간 $V$가 그 부분공간 $(W\_i)\_{i\in I}$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $v\in V$가 주어질 때마다 적당한 $(v\_i)\_{i\in I}$가 <em_ko>유일하게</em_ko> 존재하여 
+<ins id="def1">**정의 1**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$가 그 부분공간 $(W\_i)\_{i\in I}$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $v\in V$가 주어질 때마다 적당한 $(v\_i)\_{i\in I}$가 <em_ko>유일하게</em_ko> 존재하여 
 
 $$v=\sum_{i\in I} v_i$$
 
@@ -59,7 +59,7 @@ $$v=\sum_{i\in I} v_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> $F$-벡터공간 $V$의 두 부분공간 $W_1,W_2$에 대하여, $V=W_1\oplus W_2$인 것은 $V=W_1+W_2$이고 $W_1\cap W_2=\\{0\\}$인 것과 동치이다.
+<ins id="prop2">**명제 2**</ins> $\mathbb{k}$-벡터공간 $V$의 두 부분공간 $W_1,W_2$에 대하여, $V=W_1\oplus W_2$인 것은 $V=W_1+W_2$이고 $W_1\cap W_2=\\{0\\}$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -95,7 +95,7 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 임의의 $F$-벡터공간 $V$와, 부분공간 $(W\_i)\_{i\in I}$에 대하여 $V=\bigoplus\_{i\in I} W\_i$인 것은 $W_i$의 basis $\mathcal{B}\_i$들이 $i\neq j$일 때마다 $\mathcal{B}\_i\cap\mathcal{B}\_j=\emptyset$을 만족하고, $\bigcup\_{i\in I}\mathcal{B}\_i$가 $V$의 basis가 되는 것과 동치이다.
+<ins id="prop2">**명제 2**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$와, 부분공간 $(W\_i)\_{i\in I}$에 대하여 $V=\bigoplus\_{i\in I} W\_i$인 것은 $W_i$의 basis $\mathcal{B}\_i$들이 $i\neq j$일 때마다 $\mathcal{B}\_i\cap\mathcal{B}\_j=\emptyset$을 만족하고, $\bigcup\_{i\in I}\mathcal{B}\_i$가 $V$의 basis가 되는 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -172,7 +172,7 @@ $$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
 
 </details>
 
-이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\Spec(A)$, 이에 대응되는 고유공간들을 $E\_\lambda$, 그리고 이들의 basis를 $\mathcal{B}\_\lambda$라 한다면 $\mathcal{B}=\bigcup\_{\lambda\in\Spec(A)}\mathcal{B}\_\lambda$가 $F^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $F^n$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/linear_algebra/characteristic_polynomial#ex7)을 보면, $F=\mathbb{R}$에서 $\Spec(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
+이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\Spec(A)$, 이에 대응되는 고유공간들을 $E\_\lambda$, 그리고 이들의 basis를 $\mathcal{B}\_\lambda$라 한다면 $\mathcal{B}=\bigcup\_{\lambda\in\Spec(A)}\mathcal{B}\_\lambda$가 $F^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $F^n$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/basic_linear_algebra/characteristic_polynomial#ex7)을 보면, $F=\mathbb{R}$에서 $\Spec(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -182,7 +182,7 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> $n\times n$ 행렬 $A$의 고윳값 $\lambda\in F$에 대하여, $\lambda$의 기하적 중복도는 항상 $\lambda$의 대수적 중복도를 넘지 못한다.
+<ins id="prop4">**명제 4**</ins> $n\times n$ 행렬 $A$의 고윳값 $\lambda\in\mathbb{k}$에 대하여, $\lambda$의 기하적 중복도는 항상 $\lambda$의 대수적 중복도를 넘지 못한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -223,7 +223,7 @@ $n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$�
 
 </div>
 
-특별히 $F$가 algebraically closed field라면 첫째 조건은 항상 만족되므로, 둘째 조건만 고려하면 된다.
+특별히 $\mathbb{k}$가 algebraically closed field라면 첫째 조건은 항상 만족되므로, 둘째 조건만 고려하면 된다.
 
 
 

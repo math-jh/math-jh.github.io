@@ -25,7 +25,7 @@ $$\bigwedge\nolimits(T^\ast M)\cong\bigoplus_{k=0}^n\bigwedge\nolimits^k(T^\ast 
 
 을 정의하고, 이 bundle의 smooth section을 differential form으로 정의했다. 비슷한 일을 symmetric algebra를 사용해서도 할 수 있으며, exterior algebra와는 다르게 $k=2$인 경우가 관심의 대상이 된다. 이는 $k=2$인 경우 생기는 $\mathcal{S}^2(T^\ast M)$의 원소들이 $TM$ 위에 symmetric bilinear form을 정의하기 때문이다. 
 
-점 $p\in M$을 고정하자. 그럼 $g_p$는 $\mathcal{S}^2(T^\ast_pM)$의 원소이다. 이제 [\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifold/differential_forms#def1) 이후에 확인한 것과 마찬가지 논증을 거쳐 $\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$임을 알 수 있고, [\[다중선형대수\] §대칭대수와 외대수, ⁋정리 13](/ko/math/multilinear_algebra/symmetric_and_exterior_algebras#thm13)에 의해 $g_p$를 $T_pM\times T_pM$에서 $\mathbb{R}$로의 symmetric multilinear map으로 생각할 수 있다. 따라서 $g_p$에 적절한 non-degenerate 조건만 준다면 이를 $T_pM$ 위에 정의된 내적으로 생각할 수 있다. ([\[선형대수학\] §내적공간, ⁋정의 1](/ko/math/linear_algebra/inner_product_space))
+점 $p\in M$을 고정하자. 그럼 $g_p$는 $\mathcal{S}^2(T^\ast_pM)$의 원소이다. 이제 [\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifold/differential_forms#def1) 이후에 확인한 것과 마찬가지 논증을 거쳐 $\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$임을 알 수 있고, [\[다중선형대수\] §대칭대수와 외대수, ⁋정리 13](/ko/math/multilinear_algebra/symmetric_and_exterior_algebras#thm13)에 의해 $g_p$를 $T_pM\times T_pM$에서 $\mathbb{R}$로의 symmetric multilinear map으로 생각할 수 있다. 따라서 $g_p$에 적절한 non-degenerate 조건만 준다면 이를 $T_pM$ 위에 정의된 내적으로 생각할 수 있다. ([\[기초 선형대수학\] §내적공간, ⁋정의 1](/ko/math/basic_linear_algebra/inner_product_space))
 
 <div class="definition" markdown="1">
 
@@ -51,7 +51,7 @@ $$(g+g')(v,w)=g(v,w)+g'(v,w)$$
 
 ## Musical isomorphism
 
-대수적으로 보았을 때, non-degenerate pairing이 주는 가장 좋은 결과들 중 하나는 이 pairing이 $V$와 그 dual space $V^\ast$ 사이의 isomorphism을 유도한다는 것이다. ([\[선형대수학\] §쌍선형형식, §§비퇴화 쌍선형형식](/ko/math/linear_algebra/bilinear_form#비퇴화-쌍선형형식)) 마찬가지로 Riemannian metric $g$가 주어졌다면, $g$는 다음의 식
+대수적으로 보았을 때, non-degenerate pairing이 주는 가장 좋은 결과들 중 하나는 이 pairing이 $V$와 그 dual space $V^\ast$ 사이의 isomorphism을 유도한다는 것이다. ([\[기초 선형대수학\] §쌍선형형식, §§비퇴화 쌍선형형식](/ko/math/basic_linear_algebra/bilinear_form#비퇴화-쌍선형형식)) 마찬가지로 Riemannian metric $g$가 주어졌다면, $g$는 다음의 식
 
 $$\tilde{g}:T_pM\rightarrow T_p^\ast M;\qquad(p,v)\mapsto (p,\langle v,-\rangle)\tag{1}$$
 
