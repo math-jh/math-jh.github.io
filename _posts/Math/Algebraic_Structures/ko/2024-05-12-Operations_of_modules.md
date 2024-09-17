@@ -1,6 +1,6 @@
 ---
 
-title: "가군의 곱과 합, 텐서곱"
+title: "가군의 직접곱과 직합, 텐서곱"
 excerpt: ""
 
 categories: [Math / Algebraic Structures]
@@ -17,7 +17,7 @@ weight: 202
 
 ---
 
-## 가군의 곱과 합
+## 가군의 직접곱과 직합
 
 Category $\lMod{A}$는 bicomplete category이다. 이를 보이기 위해서는 $\lMod{A}$에서의 임의의 product와 coproduct를 만들어야 하는데, 이를 보이기 위해서는 $\Ab$에서의 product와 coproduct 위에 자연스러운 $A$-action이 존재한다는 것을 보이면 된다.
 

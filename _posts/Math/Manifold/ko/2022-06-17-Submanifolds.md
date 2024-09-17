@@ -127,7 +127,7 @@ $$d\varphi_{p_0}\left(dr^i|_{\varphi(p_0)}\right)=\left(dr^i|_{\varphi(p_0)}\rig
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-점 $p_0$에 대한 coordinate system $(U,\varphi)$, $\varphi=(x^i)\_{i=1}^{m}$이 주어졌다 하자. 그럼 $dx^i$들이 $T\_{p\_0}^\ast M$의 basis가 된다. 이제 [\[선형대수학\] §백터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#cor2)의 증명과 마찬가지로 $dy^i$들을 하나씩 넣고, $dx^j$들을 하나씩 빼며 적절히 index를 수정해주면 된다.
+점 $p_0$에 대한 coordinate system $(U,\varphi)$, $\varphi=(x^i)\_{i=1}^{m}$이 주어졌다 하자. 그럼 $dx^i$들이 $T\_{p\_0}^\ast M$의 basis가 된다. 이제 [\[기초 선형대수학\] §백터공간의 차원, ⁋보조정리 2](/ko/math/basic_linear_algebra/dimension#cor2)의 증명과 마찬가지로 $dy^i$들을 하나씩 넣고, $dx^j$들을 하나씩 빼며 적절히 index를 수정해주면 된다.
 
 </details>
 
