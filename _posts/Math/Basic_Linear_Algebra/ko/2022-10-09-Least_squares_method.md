@@ -3,13 +3,13 @@
 title: "최소제곱법 (작성중)"
 excerpt: "정사영과 최소제곱법"
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/least_squares_method
+categories: [Math / Basic Linear Algebra]
+permalink: /ko/math/basic_linear_algebra/least_squares_method
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "basic_linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Least_squares_method.png
+    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Least_squares_method.png
     overlay_filter: 0.5
 
 date: 2022-10-09
@@ -21,7 +21,7 @@ weight: 18
 
 ## 최소제곱법
 
-지금 소개할 최소제곱법은 우선 유클리드 공간 $\mathbb{R}^n$들과 이 위에 주어진 dot product에 대해서 생각한다. 그러나 [§쌍선형형식, §§비퇴화 쌍선형형식](/ko/math/linear_algebra/bilinear_form#비퇴화-쌍선형형식)에서 했던 것과 동일한 방식으로 이를 일반적인 $\mathbb{R}$-내적공간으로 일반화할 수 있다.
+지금 소개할 최소제곱법은 우선 유클리드 공간 $\mathbb{R}^n$들과 이 위에 주어진 dot product에 대해서 생각한다. 그러나 [§쌍선형형식, §§비퇴화 쌍선형형식](/ko/math/basic_linear_algebra/bilinear_form#비퇴화-쌍선형형식)에서 했던 것과 동일한 방식으로 이를 일반적인 $\mathbb{R}$-내적공간으로 일반화할 수 있다.
 
 임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 연립일차방정식 $Ax=y$를 생각하자. 만일 $m=n$이고 $A$가 가역이라면 이 방정식은 유일한 해를 갖지만, 일반적인 경우는 그렇지 않다. 특별히 $m>n$인 경우를 생각하자. 그럼 $\rank(A)\leq n< m$이므로, $A$의 image에 해당하는 벡터들을 제외한 대부분의 $y$에 대해서는 이 방정식을 풀 수 없다. 
 

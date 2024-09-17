@@ -3,13 +3,13 @@
 title: "선형사상"
 excerpt: "선형사상의 정의와 예시"
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/linear_map
+categories: [Math / Basic Linear Algebra]
+permalink: /ko/math/basic_linear_algebra/linear_map
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "basic_linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Linear_map.png
+    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Linear_map.png
     overlay_filter: 0.5
 
 date: 2021-10-13
@@ -23,13 +23,13 @@ weight: 7
 
 ## 선형사상
 
-벡터공간은 기본적으로 집합이기 때문에 두 벡터공간 $V,W$ 사이의 함수가 집합들 간의 함수로서 존재한다. 그러나 벡터공간의 경우, 일반적인 집합과는 다르게 원소들 간의 덧셈과, $F$의 원소에 의한 스칼라곱이 정의되므로 우리는 벡터공간들 사이의 (집합으로서의) 함수들 가운데 이들 연산을 보존하는 함수들에만 관심이 있다.
+벡터공간은 기본적으로 집합이기 때문에 두 벡터공간 $V,W$ 사이의 함수가 집합들 간의 함수로서 존재한다. 그러나 벡터공간의 경우, 일반적인 집합과는 다르게 원소들 간의 덧셈과, $\mathbb{k}$의 원소에 의한 스칼라곱이 정의되므로 우리는 벡터공간들 사이의 (집합으로서의) 함수들 가운데 이들 연산을 보존하는 함수들에만 관심이 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 두 $F$-벡터공간 $V,W$가 주어졌다 하자. 함수 $L:V\rightarrow W$가 *linear map<sub>선형사상</sub>*이라는 것은, 
+<ins id="def1">**정의 1**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$가 주어졌다 하자. 함수 $L:V\rightarrow W$가 *linear map<sub>선형사상</sub>*이라는 것은, 
 
-1. 임의의 $\alpha\in F$와 $v\in V$에 대해 $L(\alpha v)=\alpha L(v)$이고,
+1. 임의의 $\alpha\in\mathbb{k}$와 $v\in V$에 대해 $L(\alpha v)=\alpha L(v)$이고,
 2. 임의의 $v_1,v_2\in V$에 대해 $L(v_1+v_2)=L(v_1)+L(v_2)$
 
 가 모두 성립하는 것이다.
@@ -40,7 +40,7 @@ weight: 7
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,
+<ins id="prop2">**명제 2**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,
 
 1. $L(0)=0$.
 2. 임의의 $v\in V$에 대하여 $L(-v)=-L(v)$.
@@ -50,7 +50,7 @@ weight: 7
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#prop2), 그리고 [§벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#cor3)의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
+Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, ⁋명제 2](/ko/math/basic_linear_algebra/vector_spaces#prop2), 그리고 [§벡터공간, ⁋따름정리 3](/ko/math/basic_linear_algebra/vector_spaces#cor3)의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
 
 $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
@@ -60,7 +60,7 @@ $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$, 스칼라들 $\alpha_1,\ldots,\alpha_n$과 $V$의 벡터들 $v_1,\ldots, v_n$에 대하여
+<ins id="prop3">**명제 3**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$, 스칼라들 $\alpha_1,\ldots,\alpha_n$과 $V$의 벡터들 $v_1,\ldots, v_n$에 대하여
 
 $$L\left(\sum_{i=1}^k\alpha_i v_i\right)=\sum_{i=1}^kL(\alpha_iv_i)$$
 
@@ -78,13 +78,13 @@ $k$에 대한 귀납법에 의하여 자명하다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> 세 $F$-벡터공간 $U,V,W$와 linear map들 $L_1:U\rightarrow V$, $L_2:V\rightarrow W$에 대하여, $L_2\circ L_1:U\rightarrow W$는 linear이다.
+<ins id="prop4">**명제 4**</ins> 세 $\mathbb{k}$-벡터공간 $U,V,W$와 linear map들 $L_1:U\rightarrow V$, $L_2:V\rightarrow W$에 대하여, $L_2\circ L_1:U\rightarrow W$는 linear이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $\alpha\in F$, $u\in U$에 대하여
+임의의 $\alpha\in\mathbb{k}$, $u\in U$에 대하여
 
 $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(u)))=\alpha(L_2\circ L_1)(u)$$
 
@@ -97,7 +97,7 @@ $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,
+<ins id="def5">**정의 5**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,
 
 1. $L(v_1)=L(v_2)$일 때마다 $v_1=v_2$라면, $L$이 *단사<sub>injective</sub>*라 힌다.
 2. 임의의 $w\in W$에 대해 $L(v)=w$를 만족하는 $v\in L$이 존재한다면, $L$이 *전사<sub>surjective</sub>*라 한다. 
@@ -108,7 +108,7 @@ $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $L$의 *kernel<sub>핵</sub>* $\ker L$은 다음의 식
+<ins id="def6">**정의 6**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $L$의 *kernel<sub>핵</sub>* $\ker L$은 다음의 식
 
 $$\ker L=\{v\in V\mid L(v)=0\}$$
 
@@ -124,13 +124,13 @@ $$\im L=\{w\in W\mid L(v)=w\text{ for some $v\in V$}\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $\ker L\leq V$이고 $\im L\leq W$이다.
+<ins id="prop7">**명제 7**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, $\ker L\leq V$이고 $\im L\leq W$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $\ker L$은 $V$의 부분공간이다. 임의의 $\alpha\in F$, $v\in\ker L$에 대하여
+우선 $\ker L$은 $V$의 부분공간이다. 임의의 $\alpha\in\mathbb{k}$, $v\in\ker L$에 대하여
 
 $$L(\alpha v)=\alpha L(v)=\alpha\cdot 0=0$$
 
@@ -140,7 +140,7 @@ $$L(v_1+v_2)=L(v_1)+L(v_2)=0+0=0$$
 
 이므로 $\alpha v\in\ker L$, $v_1+v_2\in\ker L$이 성립하기 때문이다.
 
-이와 비슷하게, $\im L$은 $W$의 부분공간이다. 임의의 $w,w_1,w_2\in W$와 $\alpha\in F$를 택해오면, 정의에 의해
+이와 비슷하게, $\im L$은 $W$의 부분공간이다. 임의의 $w,w_1,w_2\in W$와 $\alpha\in\mathbb{k}$를 택해오면, 정의에 의해
 
 $$L(v)=w,\quad L(v_1)=w_1,\quad L(v_2)=w_2$$
 
@@ -160,7 +160,7 @@ $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, 
+<ins id="prop8">**명제 8**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여, 
 
 1. $L$이 단사인 것은 $\ker L=\\{0\\}$인 것과 동치이고,
 2. $L$이 전사인 것은 $\im L=W$인 것과 동치이다.
@@ -187,10 +187,10 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor9">**따름정리 9**</ins> 두 $F$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
+<ins id="cor9">**따름정리 9**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
 
 1. 만약 $L$이 단사라면, 임의의 일차독립인 부분집합 $S\subset V$에 대하여 $L(S)$ 또한 $W$에서 일차독립이다.
-2. 만약 $L$이 전사라면, $\span S=V$를 만족하는 $S\subset V$에 대해, $L(S)$ 또한 $\span L(S)=W$를 만족한다.
+2. 만약 $L$이 전사라면, $\langle S\rangle=V$를 만족하는 $S\subset V$에 대해, $L(S)$ 또한 $\span L(S)=W$를 만족한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -206,7 +206,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
     이므로, 앞선 명제에 의해 $\sum\alpha_ix_i=0$이어야 한다. 이제, $S$는 일차독립인 부분집합이므로, $\alpha_i=0$이 모든 $i$에 대해 성립한다.
 
-2. 임의의 $w\in W$가 주어졌다 하자. 그럼 $\im L=W$이므로, 적당한 $v\in V$가 존재하여 $L(v)=w$이다. 한편, $\span S=V$이므로 $v$를 $S$의 원소들의 일차결합
+2. 임의의 $w\in W$가 주어졌다 하자. 그럼 $\im L=W$이므로, 적당한 $v\in V$가 존재하여 $L(v)=w$이다. 한편, $\langle S\rangle=V$이므로 $v$를 $S$의 원소들의 일차결합
 
     $$v=\sum_{i=1}^n\alpha_ix_i$$
     
@@ -224,7 +224,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> 임의의 $F$-벡터공간 $V$와 $W$에 대하여, 다음의 식
+<ins id="ex10">**예시 10**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$와 $W$에 대하여, 다음의 식
 
 $$L(v)=0\text{ for all $v\in V$}$$
 
@@ -236,7 +236,7 @@ $$L(v)=0\text{ for all $v\in V$}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> 임의의 $F$-벡터공간 $V$와, $W\leq V$가 주어졌다 하자. 다음의 식
+<ins id="ex11">**예시 11**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$와, $W\leq V$가 주어졌다 하자. 다음의 식
 
 $$\iota(w)=w\text{ for all $w\in W$}$$
 
@@ -248,7 +248,7 @@ $$\iota(w)=w\text{ for all $w\in W$}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> 임의의 $F$-벡터공간 $V$, $W$와, 그들의 곱 $V\times W$를 생각하자. 그럼 다음의 식
+<ins id="ex12">**예시 12**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$, $W$와, 그들의 곱 $V\times W$를 생각하자. 그럼 다음의 식
 
 $$\pr_1((v,w))=v$$
 
@@ -280,17 +280,17 @@ $$D\left(\sum_{i=0}^\infty a_i\x^i\right)=\sum_{i=1}^\infty ia_i\x^{i-1}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> 임의의 $n$차원 $F$-벡터공간 $V$가 주어졌다 하고, $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 $V$의 basis라 하자. 즉 임의의 $v\in V$에 대하여, 
+<ins id="ex14">**예시 14**</ins> 임의의 $n$차원 $\mathbb{k}$-벡터공간 $V$가 주어졌다 하고, $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 $V$의 basis라 하자. 즉 임의의 $v\in V$에 대하여, 
 
 $$v=\sum_{i=1}^n v_i x_i$$
 
-이도록 하는 스칼라들 $v_1,\ldots, v_n$이 항상 존재하며, 유일하게 결정된다. 따라서, 함수 $L:V\rightarrow F^n$을 식 $v\mapsto (v_1,v_2,\ldots, v_n)\in F^n$으로 정의할 수 있다.
+이도록 하는 스칼라들 $v_1,\ldots, v_n$이 항상 존재하며, 유일하게 결정된다. 따라서, 함수 $L:V\rightarrow F^n$을 식 $v\mapsto (v_1,v_2,\ldots, v_n)\in\mathbb{k}^n$으로 정의할 수 있다.
 
 그럼 $L$은 linear다. 임의의 $v,w\in V$에 대하여,
 
 $$v=\sum_{i=1}^n v_i x_i,\quad w=\sum_{i=1}^n w_i x_i$$
 
-이라 하면, 임의의 $\alpha\in F$에 대하여
+이라 하면, 임의의 $\alpha\in\mathbb{k}$에 대하여
 
 $$\alpha L(v)=\alpha(v_1,v_2,\ldots,v_n)=(\alpha v_1,\alpha v_2,\ldots,\alpha v_n)$$
 
@@ -304,7 +304,7 @@ $$L(v)+L(w)=(v_1+w_1,v_2+w_2,\ldots,v_n+w_n)=L(v+w)$$
 
 가 성립한다.
 
-$\ker L$은 $\mathcal{B}$가 일차독립이므로 $\\{0\\}$이 된다. 한편, 임의의 $(\alpha_1,\ldots,\alpha_n)\in F^n$에 대하여 다음의 일차결합
+$\ker L$은 $\mathcal{B}$가 일차독립이므로 $\\{0\\}$이 된다. 한편, 임의의 $(\alpha_1,\ldots,\alpha_n)\in\mathbb{k}^n$에 대하여 다음의 일차결합
 
 $$\sum_{i=1}^n\alpha_i x_i$$
 

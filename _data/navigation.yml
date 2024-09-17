@@ -78,7 +78,7 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/modules
       - title: "자유가군"
         url: ko/math/algebraic_structures/free_modules
-      - title: "가군의 곱과 합, 텐서곱"
+      - title: "가군의 직접곱과 직합, 텐서곱"
         url: ko/math/algebraic_structures/operations_of_modules
       - title: "스칼라의 변환"
         url: ko/math/algebraic_structures/change_of_base_ring
@@ -98,6 +98,64 @@ algebraic_topology-ko:
         url: ko/math/algebraic_topology/simplicial_complex
       - title: "호몰로지"
         url: ko/math/algebraic_topology/homology
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
+basic_linear_algebra-ko:
+  - title: <a href="/ko/basic_linear_algebra/" class="sidebar_title">선형대수학</a>
+    children:
+      - title: "가환군과 체"
+        url: ko/math/basic_linear_algebra/fields
+      - title: "벡터공간"
+        url: ko/math/basic_linear_algebra/vector_spaces
+      - title: "부분공간"
+        url: ko/math/basic_linear_algebra/subspaces
+      - title: "벡터공간의 기저"
+        url: ko/math/basic_linear_algebra/basis
+      - title: "벡터공간의 차원"
+        url: ko/math/basic_linear_algebra/dimension
+      - title: "무한차원 벡터공간<sup>†</sup>"
+        url: ko/math/basic_linear_algebra/infinite_dimensional_vector_space
+      - title: "선형사상"
+        url: ko/math/basic_linear_algebra/linear_map
+      - title: "행렬"
+        url: ko/math/basic_linear_algebra/matrix
+      - title: "가우스 소거법"
+        url: ko/math/basic_linear_algebra/Gaussian_elimination
+      - title: "동형사상"
+        url: ko/math/basic_linear_algebra/isomorphic_vector_spaces
+      - title: "선형사상들의 공간"
+        url: ko/math/basic_linear_algebra/space_of_linear_maps
+      - title: "선형대수학의 기본정리"
+        url: ko/math/basic_linear_algebra/ftla
+      - title: "기본정리: categorical viewpoint<sup>†</sup>"
+        url: ko/math/basic_linear_algebra/ftla_categorical_viewpoint
+      - title: "기저변환"
+        url: ko/math/basic_linear_algebra/change_of_basis
+      - title: "쌍대공간"
+        url: ko/math/basic_linear_algebra/dual_space
+      - title: "쌍선형형식"
+        url: ko/math/basic_linear_algebra/bilinear_form
+      - title: "내적공간"
+        url: ko/math/basic_linear_algebra/inner_product_space
+      - title: "최소제곱법"
+        url: ko/math/basic_linear_algebra/least_squares_method
+      - title: "행렬식"
+        url: ko/math/basic_linear_algebra/determinant
+      - title: "행렬식의 존재성과 유일성"
+        url: ko/math/basic_linear_algebra/existence_and_uniqueness_of_determinant
+      - title: "역행렬"
+        url: ko/math/basic_linear_algebra/inverse_matrix
+      - title: "특성다항식"
+        url: ko/math/basic_linear_algebra/characteristic_polynomial
+      - title: "고유공간분해"
+        url: ko/math/basic_linear_algebra/eigenspace_decomposition
+      - title: "대각화"
+        url: ko/math/basic_linear_algebra/diagonalization
   - title: 
     children:
       - title: "블로그 소개"
@@ -199,64 +257,6 @@ homological_algebra-ko:
         url: ko/math/homological_algebra/mapping_cone
       - title: "Delta functor"
         url: ko/math/homological_algebra/delta_functor
-  - title: 
-    children:
-      - title: "블로그 소개"
-        url: ko/about
-      - title: "찾아보기"
-        url: ko/misc/index_ko
-
-linear_algebra-ko:
-  - title: <a href="/ko/linear_algebra/" class="sidebar_title">선형대수학</a>
-    children:
-      - title: "가환군과 체"
-        url: ko/math/linear_algebra/fields
-      - title: "벡터공간"
-        url: ko/math/linear_algebra/vector_spaces
-      - title: "부분공간"
-        url: ko/math/linear_algebra/subspaces
-      - title: "벡터공간의 기저"
-        url: ko/math/linear_algebra/basis
-      - title: "벡터공간의 차원"
-        url: ko/math/linear_algebra/dimension
-      - title: "무한차원 벡터공간<sup>†</sup>"
-        url: ko/math/linear_algebra/infinite_dimensional_vector_space
-      - title: "선형사상"
-        url: ko/math/linear_algebra/linear_map
-      - title: "행렬"
-        url: ko/math/linear_algebra/matrix
-      - title: "가우스 소거법"
-        url: ko/math/linear_algebra/Gaussian_elimination
-      - title: "동형사상"
-        url: ko/math/linear_algebra/isomorphic_vector_spaces
-      - title: "선형사상들의 공간"
-        url: ko/math/linear_algebra/space_of_linear_maps
-      - title: "선형대수학의 기본정리"
-        url: ko/math/linear_algebra/ftla
-      - title: "기본정리: categorical viewpoint<sup>†</sup>"
-        url: ko/math/linear_algebra/ftla_categorical_viewpoint
-      - title: "기저변환"
-        url: ko/math/linear_algebra/change_of_basis
-      - title: "쌍대공간"
-        url: ko/math/linear_algebra/dual_space
-      - title: "쌍선형형식"
-        url: ko/math/linear_algebra/bilinear_form
-      - title: "내적공간"
-        url: ko/math/linear_algebra/inner_product_space
-      - title: "최소제곱법"
-        url: ko/math/linear_algebra/least_squares_method
-      - title: "행렬식"
-        url: ko/math/linear_algebra/determinant
-      - title: "행렬식의 존재성과 유일성"
-        url: ko/math/linear_algebra/existence_and_uniqueness_of_determinant
-      - title: "역행렬"
-        url: ko/math/linear_algebra/inverse_matrix
-      - title: "특성다항식"
-        url: ko/math/linear_algebra/characteristic_polynomial
-      - title: "고유공간분해"
-        url: ko/math/linear_algebra/eigenspace_decomposition
-      - title: "대각화"
-        url: ko/math/linear_algebra/diagonalization
   - title: 
     children:
       - title: "블로그 소개"
@@ -441,8 +441,8 @@ category-ko:
     children:
       # - title: "미적분학"
       #   url: ko/calculus/
-      - title: "선형대수학"
-        url: ko/linear_algebra/
+      - title: "기초 선형대수학"
+        url: ko/basic_linear_algebra/
   - title: "Foundation"
     children:
       - title: "집합론"
@@ -453,6 +453,8 @@ category-ko:
     children:
       - title: "대수적 구조"
         url: ko/algebraic_structures/
+      - title: "선형대수학"
+        url: ko/linear_algebra/
       - title: "다중선형대수"
         url: ko/multilinear_algebra/
       # - title: "갈루아 이론"
