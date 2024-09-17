@@ -13,21 +13,25 @@ sidebar:
 
 date: 2024-08-21
 last_modified_at: 2024-08-21
-weight: 102
+weight: 1
 
 ---
 
-임의의 $A$-linear map $f:M \rightarrow N$에 대하여, $f$가 injective인 것은 $\ker f=0$인 것과 동치이고, $f$가 surjective인 것은 $\coker f=0$인 것과 동치이다. 한편, category $\lMod{A}$는 bicomplete category이며, 이 때 $A$-module들의 family의 product는 direct product로, coproduct는 direct sum으로 주어졌다. ([\[대수적 구조\] §가군의 곱과 합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 다음 식
+[\[대수적 구조\]](/ko/algebraic_structures/)에서 우리는 임의의 ring $A$ 위에 정의된 $A$-module을 정의하고, 이에 대한 기본적인 성질들을 살펴보았다. 이제 우리는 (left) $A$-module들에 대한 성질을 더 살펴본다.
+
+## 핵과 여핵
+
+임의의 $A$-linear map $f:M \rightarrow N$에 대하여, $f$가 injective인 것은 $\ker f=0$인 것과 동치이고, $f$가 surjective인 것은 $\coker f=0$인 것과 동치이다. 한편, category $\lMod{A}$는 bicomplete category이며, 이 때 $A$-module들의 family의 product는 direct product로, coproduct는 direct sum으로 주어졌다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 다음 식
 
 $$\ker \prod f_i=\prod \ker f_i,\qquad \coker \bigoplus f_i=\bigoplus \coker f_i $$
 
-이 성립하며, 위의 논의를 통해  [\[대수적 구조\] §가군의 곱과 합, 텐서곱, ⁋명제 2](/ko/math/algebraic_structures/operations_of_modules#prop2)를 다시 써보면 다음의 두 식
+이 성립하며, 위의 논의를 통해  [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 2](/ko/math/algebraic_structures/operations_of_modules#prop2)를 다시 써보면 다음의 두 식
 
 $$\ker \bigoplus f_i=\bigoplus \ker f_i,\qquad \coker \prod f_i=\prod \coker f_i$$
 
 또한 얻게 된다. 
 
-비슷한 맥락에서 $\Hom$ functor와 $\otimes$ functor에 대한 성질을 다시 살펴볼 수 있으며, 여기에서 $\Hom$과 $\otimes$의 adjoint를 사용하게 된다. ([\[대수적 구조\] §가군의 곱과 합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)과 [\[대수적 구조\] §가군의 곱과 합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9))
+비슷한 맥락에서 $\Hom$ functor와 $\otimes$ functor에 대한 성질을 다시 살펴볼 수 있으며, 여기에서 $\Hom$과 $\otimes$의 adjoint를 사용하게 된다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)과 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9))
 
 ## 직접곱과 직합
 
@@ -49,7 +53,7 @@ $$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes
 
 $$\left(\bigoplus_{i\in I} M_i\right)\otimes_A\left(\bigoplus_{j\in J} N_j\right)\cong\bigoplus_{(i,j)\in I\times J}M_i\otimes_AN_j$$
 
-을 얻는다. 만일 $A$가 commutative ring이었다면, [\[대수적 구조\] §가군의 곱과 합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6) 대신 [\[대수적 구조\] §가군의 곱과 합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9)을 사용하여 위의 isomorphism들이 $A$-module들 사이의 isomorphism이 되도록 할 수 있다.
+을 얻는다. 만일 $A$가 commutative ring이었다면, [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6) 대신 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9)을 사용하여 위의 isomorphism들이 $A$-module들 사이의 isomorphism이 되도록 할 수 있다.
 
 ## 사영가군과 단사가군
 

@@ -3,13 +3,13 @@
 title: "기저변환"
 excerpt: "기저변환행렬"
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/change_of_basis
+categories: [Math / Basic Linear Algebra]
+permalink: /ko/math/basic_linear_algebra/change_of_basis
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "basic_linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Change_of_basis.png
+    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Change_of_basis.png
     overlay_filter: 0.5
 
 date: 2022-08-30
@@ -19,11 +19,11 @@ weight: 14
 
 ---
 
-우리는 [선형대수학의 기본정리]()로부터, 두 $F$-벡터공간 $V,W$에 basis의 선택이 주어진다면 임의의 linear map $L:V\rightarrow W$를 그 행렬표현 $[L]_\mathcal{C}^\mathcal{B}$와 동일하게 취급할 수 있다는 것을 살펴보았다. 이제 우리는 basis가 바뀌었을 때 이 표현들이 어떻게 바뀌는지를 살펴본다. 
+우리는 [선형대수학의 기본정리]()로부터, 두 $\mathbb{k}$-벡터공간 $V,W$에 basis의 선택이 주어진다면 임의의 linear map $L:V\rightarrow W$를 그 행렬표현 $[L]_\mathcal{C}^\mathcal{B}$와 동일하게 취급할 수 있다는 것을 살펴보았다. 이제 우리는 basis가 바뀌었을 때 이 표현들이 어떻게 바뀌는지를 살펴본다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 유한차원 $F$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *기저변환행렬<sub>change-of-basis matrix</sub>*은 
+<ins id="def1">**정의 1**</ins> 임의의 유한차원 $\mathbb{k}$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *기저변환행렬<sub>change-of-basis matrix</sub>*은 
 
 $$[\id_V]_{\mathcal{B}'}^\mathcal{B}$$
 
@@ -37,9 +37,9 @@ $$I=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=[\id_V]_{\mathcal{B}}^{\mathcal{B}'}[\id
 
 으로부터 이러한 행렬은 항상 가역이라는 것을 알 수 있다.
 
-Change-of-basis matrix가 어떤 방식으로 작동하는지를 살펴보기 위해, 유한차원 $F$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
+Change-of-basis matrix가 어떤 방식으로 작동하는지를 살펴보기 위해, 유한차원 $\mathbb{k}$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
 
-![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_basis-1.png){:width="144.00px" class="invert" .align-center}
+![change_of_basis](/assets/images/Math/Basic_Linear_Algebra/Change_of_basis-1.png){:width="144.00px" class="invert" .align-center}
 
 이 때 두 개의 수직방향 함수는 각각 $v\mapsto [v]\_\mathcal{B}$와 $v\mapsto[v]\_{\mathcal{B}'}$를 의미한다. 따라서 기저변환행렬은 $v\in V$의 $\mathcal{B}$에 대한 좌표표현을 받아, $\mathcal{B}'$에 대한 좌표표현으로 바꾸어주는 행렬이라 생각할 수 있다. 더 일반적으로 임의의 linear map $L:V\rightarrow W$가 주어졌다 하고, $V,W$의 basis $\mathcal{B},\mathcal{C}$, 그리고 또 다른 basis $\mathcal{B}',\mathcal{C}'$가 주어졌다 하면, 선형대수학의 기본정리로부터 다음의 식
 
@@ -53,7 +53,7 @@ $$B=PAQ$$
 
 를 만족한다면 $A$와 $B$를 같은 것으로 취급하고 싶은 유혹이 있다. 이는 고정된 linear map $L$이 주어졌을 때, $L$의 정의역과 공역의 basis를 잘 택하여 얻어지는 행렬표현들을 모두 같은 것으로 생각한다는 것이다. 
 
-그러나 이렇게 그럴듯한 동기에 비해 그 결과는 별로 좋지 않다. $L$의 정의역과 공역의 basis를 모두 변화시킬 수 있다면, 정의역의 임의의 basis $\\{x\_1,\ldots, x_n\\}$을 택하고, 이후 공역에서는 $L(x_1),\ldots, L(x_n)$들 중 일차독립인 $L(x_1),\ldots, L(x_k)$를 택한 후 [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#prop6)을 이용하여 공역의 basis를 만들면 이 linear map은 항상 블록행렬
+그러나 이렇게 그럴듯한 동기에 비해 그 결과는 별로 좋지 않다. $L$의 정의역과 공역의 basis를 모두 변화시킬 수 있다면, 정의역의 임의의 basis $\\{x\_1,\ldots, x_n\\}$을 택하고, 이후 공역에서는 $L(x_1),\ldots, L(x_n)$들 중 일차독립인 $L(x_1),\ldots, L(x_k)$를 택한 후 [§벡터공간의 차원, ⁋명제 6](/ko/math/basic_linear_algebra/dimension#prop6)을 이용하여 공역의 basis를 만들면 이 linear map은 항상 블록행렬
 
 $$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
 

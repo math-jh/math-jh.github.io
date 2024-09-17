@@ -3,13 +3,13 @@
 title: "특성다항식"
 excerpt: "행렬의 특성다항식"
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/characteristic_polynomial
+categories: [Math / Basic Linear Algebra]
+permalink: /ko/math/basic_linear_algebra/characteristic_polynomial
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "basic_linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Characteristic_polynomial.png
+    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Characteristic_polynomial.png
     overlay_filter: 0.5
 
 date: 2022-08-28
@@ -81,7 +81,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋정의 2](/ko/math/linear_algebra/change_of_basis#def2) 이후의 식으로부터 두 행렬표현 $[L]\_\mathcal{B}^\mathcal{B}$와 $[L]\_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
+즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋정의 2](/ko/math/basic_linear_algebra/change_of_basis#def2) 이후의 식으로부터 두 행렬표현 $[L]\_\mathcal{B}^\mathcal{B}$와 $[L]\_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
 
 </details>
 
@@ -107,7 +107,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> $F[\x]$의 임의의 다항식 $p(\x)$이 주어졌다 하고, $a\in F$가 $p(\x)=0$의 해라 하자. 만일 $(\x-a)^k$가 $p(\x)$를 나누지만, $(\x-a)^{k+1}$은 $p(\x)$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
+<ins id="def6">**정의 6**</ins> $F[\x]$의 임의의 다항식 $p(\x)$이 주어졌다 하고, $a\in\mathbb{k}$가 $p(\x)=0$의 해라 하자. 만일 $(\x-a)^k$가 $p(\x)$를 나누지만, $(\x-a)^{k+1}$은 $p(\x)$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
 
 </div>
 

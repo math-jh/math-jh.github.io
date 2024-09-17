@@ -3,13 +3,13 @@
 title: "선형대수학의 기본정리"
 excerpt: "선형대수학의 기본정리"
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/ftla
+categories: [Math / Basic Linear Algebra]
+permalink: /ko/math/basic_linear_algebra/ftla
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "basic_linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
+    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
     overlay_filter: 0.5
 
 date: 2021-10-16
@@ -19,13 +19,13 @@ weight: 12
 
 ---
 
-지난 글에서 각각 $n$차원, $m$차원인 두 $F$-벡터공간 $V,W$에 대하여 $\Hom(V,W)$는 $mn$차원 $F$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\Mat_{m\times n}(F)$ 또한 $mn$차원의 $F$-벡터공간이다. 그럼 [§동형사상, ⁋따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#cor4)로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
+지난 글에서 각각 $n$차원, $m$차원인 두 $\mathbb{k}$-벡터공간 $V,W$에 대하여 $\Hom(V,W)$는 $mn$차원 $\mathbb{k}$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\Mat_{m\times n}(F)$ 또한 $mn$차원의 $\mathbb{k}$-벡터공간이다. 그럼 [§동형사상, ⁋따름정리 4](/ko/math/basic_linear_algebra/isomorphic_vector_spaces#cor4)로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
 
 이번 글에서 증명할 선형대수학의 기본정리[^1]는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em_ko>자연스러운</em_ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 이 <em_ko>자연스럽다</em_ko>는 말의 뜻은 다음 글에서 조금 더 자세히 살펴본다.
 
 ## 기본정리: 유클리드 공간
 
-[§선형사상들의 공간](/ko/math/linear_algebra/space_of_linear_maps)에서 우리는 다음의 식
+[§선형사상들의 공간](/ko/math/basic_linear_algebra/space_of_linear_maps)에서 우리는 다음의 식
 
 $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(x_2)&=\alpha_{12}y_1+\alpha_{22}y_2+\cdots+\alpha_{m2}y_m\\&\phantom{a}\vdots\\L(x_n)&=\alpha_{1n}y_1+\alpha_{2n}y_2+\cdots+\alpha_{mn}y_m\end{aligned}$$
 
@@ -47,7 +47,7 @@ $$\begin{pmatrix}\alpha_{11}&\alpha_{12}&\cdots&\alpha_{1n}\\\alpha_{21}&\alpha_
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> 유클리드 $n$-공간 $F^n$과, 행렬 $A\in\Mat\_{m\times n}(F)$를 생각하자. 임의의 $x\in F^n$에 대하여, $L_A(x)$를 다음의 식
+<ins id="ex1">**예시 1**</ins> 유클리드 $n$-공간 $F^n$과, 행렬 $A\in\Mat\_{m\times n}(F)$를 생각하자. 임의의 $x\in\mathbb{k}^n$에 대하여, $L_A(x)$를 다음의 식
 
 $$L_A(x)=Ax$$
 
@@ -115,21 +115,21 @@ $$\begin{aligned}(L_2\circ L_1)(e_i)&=L_2(\alpha_{1,i}e_1+\cdots+\alpha_{m,i}e_m
 
 $$(L_2\circ L_1)(e_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)e_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)e_k.$$
 
-$[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$번째 열은 $e_i$가 $L_2\circ L_1$에 의해 옮겨지는 벡터이므로, 행렬 $[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum\_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 이제 [§행렬, ⁋정의 3](/ko/math/linear_algebra/matrix#def3) 직후의 계산으로부터 이것이 두 행렬 $[L\_2]\_{\mathcal{E}\_k}^{\mathcal{E}\_m}$, $[L\_1]\_{\mathcal{E}\_m}^{\mathcal{E}\_n}$의 곱의 $(i,j)$ 성분이라는 것을 안다.
+$[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$번째 열은 $e_i$가 $L_2\circ L_1$에 의해 옮겨지는 벡터이므로, 행렬 $[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum\_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 이제 [§행렬, ⁋정의 3](/ko/math/basic_linear_algebra/matrix#def3) 직후의 계산으로부터 이것이 두 행렬 $[L\_2]\_{\mathcal{E}\_k}^{\mathcal{E}\_m}$, $[L\_1]\_{\mathcal{E}\_m}^{\mathcal{E}\_n}$의 곱의 $(i,j)$ 성분이라는 것을 안다.
 
 </details>
 
 ## 기본정리: 일반적인 경우
 
-앞서 우리가 증명한 기본정리는 유클리드 공간에 대해서만 적용되지만, 아주 작은 수정만 있으면 일반적인 유한차원 $F$-벡터공간에 대해서도 성립한다. 이 과정은 다음의 diagram으로 간단하게 요약할 수 있다.
+앞서 우리가 증명한 기본정리는 유클리드 공간에 대해서만 적용되지만, 아주 작은 수정만 있으면 일반적인 유한차원 $\mathbb{k}$-벡터공간에 대해서도 성립한다. 이 과정은 다음의 diagram으로 간단하게 요약할 수 있다.
 
-![FTLA](/assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-1.png){:width="291.3px" class="invert" .align-center} 
+![FTLA](/assets/images/Math/Basic_Linear_Algebra/Fundamental_theorem_of_linear_algebra-1.png){:width="291.3px" class="invert" .align-center} 
 
-임의의 유한차원 $F$-벡터공간 $V$와 그 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$에 대해 정의된 *좌표표현*은 다음의 isomorphism
+임의의 유한차원 $\mathbb{k}$-벡터공간 $V$와 그 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$에 대해 정의된 *좌표표현*은 다음의 isomorphism
 
-$$v=\sum_{i=1}^n v_ix_i\mapsto [v]_\mathcal{B}=\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}\in F^n$$
+$$v=\sum_{i=1}^n v_ix_i\mapsto [v]_\mathcal{B}=\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}\in\mathbb{k}^n$$
 
-이다. 비슷하게 또 다른 유한차원 $F$-벡터공간 $W$과 그 basis $\mathcal{C}=\\{y_1,\ldots, y_m\\}$가 주어졌다 하고, linear map $L:V\rightarrow W$가 다음의 식
+이다. 비슷하게 또 다른 유한차원 $\mathbb{k}$-벡터공간 $W$과 그 basis $\mathcal{C}=\\{y_1,\ldots, y_m\\}$가 주어졌다 하고, linear map $L:V\rightarrow W$가 다음의 식
 
 $$\begin{aligned}L(x_1)&=\alpha_{1,1}y_1+\alpha_{2,1}y_2+\cdots+\alpha_{m,1}y_m\\L(x_2)&=\alpha_{1,2}y_1+\alpha_{2,2}y_2+\cdots+\alpha_{m,2}y_m\\&\vdots\\L(x_n)&=\alpha_{1,n}y_1+\alpha_{2,n}y_2+\cdots+\alpha_{m,n}y_m\end{aligned}$$
 
@@ -175,7 +175,7 @@ $$\begin{aligned}(L_1+L_2)(x_1)&=(\alpha_{1,1}+\beta_{1,1})y_1+(\alpha_{2,1}+\be
 
 <div class="proposition" markdown="1">
 
-<ins id="thm5">**정리 5**</ins> 세 개의 $F$-벡터공간 $V\_1,V\_2,V\_3$와 이들 각각의 basis $\mathcal{B}\_1=\\{x_1,\ldots,x_n\\}$, $\mathcal{B}\_2=\\{y_1,\ldots, y_m\\}$, $\mathcal{B}\_3=\\{z_1,\ldots, z_k\\}$가 주어졌다 하자. 그럼 임의의 $L\_1:V\_1\rightarrow V\_2$, $L\_2:V\_2\rightarrow V\_3$에 대하여 항상
+<ins id="thm5">**정리 5**</ins> 세 개의 $\mathbb{k}$-벡터공간 $V\_1,V\_2,V\_3$와 이들 각각의 basis $\mathcal{B}\_1=\\{x_1,\ldots,x_n\\}$, $\mathcal{B}\_2=\\{y_1,\ldots, y_m\\}$, $\mathcal{B}\_3=\\{z_1,\ldots, z_k\\}$가 주어졌다 하자. 그럼 임의의 $L\_1:V\_1\rightarrow V\_2$, $L\_2:V\_2\rightarrow V\_3$에 대하여 항상
 
 $$[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}=[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$$
 
@@ -205,13 +205,13 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 
 ## 기본정리의 결과들
 
-선형대수학의 기본정리는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat\_{m\times n}(F)$를 같은 것으로 취급할 수 있다는 것을 보여준다. 예컨대 $\Mat\_{m\times n}(F)$의 $mn$개의 basis는 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 살펴본 $mn$개의 basis에 대응된다. 
+선형대수학의 기본정리는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat\_{m\times n}(F)$를 같은 것으로 취급할 수 있다는 것을 보여준다. 예컨대 $\Mat\_{m\times n}(F)$의 $mn$개의 basis는 [§선형사상들의 공간, ⁋명제 5](/ko/math/basic_linear_algebra/space_of_linear_maps#prop5)에서 살펴본 $mn$개의 basis에 대응된다. 
 
 다음 따름정리 또한 기본정리의 결과이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor6">**따름정리 6**</ins> 두 $n$차원 $F$-벡터공간 $V,W$가 주어졌다 하고, 이들의 기저 $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 $L\in\Hom(V,W)$에 대하여, $L^{-1}\in\Hom(W,V)$의 기저 $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}\_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}\_\mathcal{C}$의 역행렬과 같다.
+<ins id="cor6">**따름정리 6**</ins> 두 $n$차원 $\mathbb{k}$-벡터공간 $V,W$가 주어졌다 하고, 이들의 기저 $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 $L\in\Hom(V,W)$에 대하여, $L^{-1}\in\Hom(W,V)$의 기저 $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}\_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}\_\mathcal{C}$의 역행렬과 같다.
 
 </div>
 <details class="proof" markdown="1">
@@ -221,7 +221,7 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 
 </details>
 
-이와 같이 [§행렬](/ko/math/linear_algebra/matrix)에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 다다음 글에서 쌍대공간에 대해 자세히 살펴보면 적절한 의미를 부여할 수 있다.
+이와 같이 [§행렬](/ko/math/basic_linear_algebra/matrix)에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 다다음 글에서 쌍대공간에 대해 자세히 살펴보면 적절한 의미를 부여할 수 있다.
 
 
 ---

@@ -3,13 +3,13 @@
 title: "내적공간"
 excerpt: "실수집합 위에서 정의된 내적의 성질"
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/inner_product_space
+categories: [Math / Basic Linear Algebra]
+permalink: /ko/math/basic_linear_algebra/inner_product_space
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "basic_linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Inner_product_space.png
+    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Inner_product_space.png
     overlay_filter: 0.5
 
 date: 2022-10-02
@@ -29,7 +29,7 @@ weight: 17
 
 </div>
 
-정의를 살펴보면, 내적의 정의에서 $\langle v,v\rangle\geq 0$이라는 조건은 field $F$가 대소관계의 개념을 가지고 있어야 하기 때문에 일반적인 field $F$에 대해서는 잘 정의되지 않는다는 것을 알 수 있다. 때문에 우리는 대소관계가 잘 정의되어 있는 field인 $\mathbb{R}$에서만 이론을 전개하고, 다음 글에서는 이를 이용하여 $\mathbb{C}$에서도 내적을 정의한다. 혼동을 피하기 위해 지금부터 실수 위에 정의된 내적공간을 $\mathbb{R}$-내적공간이라 적는다.
+정의를 살펴보면, 내적의 정의에서 $\langle v,v\rangle\geq 0$이라는 조건은 field $\mathbb{k}$가 대소관계의 개념을 가지고 있어야 하기 때문에 일반적인 field $\mathbb{k}$에 대해서는 잘 정의되지 않는다는 것을 알 수 있다. 때문에 우리는 대소관계가 잘 정의되어 있는 field인 $\mathbb{R}$에서만 이론을 전개하고, 다음 글에서는 이를 이용하여 $\mathbb{C}$에서도 내적을 정의한다. 혼동을 피하기 위해 지금부터 실수 위에 정의된 내적공간을 $\mathbb{R}$-내적공간이라 적는다.
 
 내적의 대표적인 예시는 $\mathbb{R}^n$ 상에서 정의된 *dot product*
 
@@ -150,7 +150,7 @@ $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\rig
 
 ## 정규직교기저
 
-우리는 $\ch\mathbb{R}=0$임을 알고 있으므로, [§쌍선형형식, ⁋명제 6](/ko/math/linear_algebra/bilinear_form#prop6)으로부터 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다는 것을 안다. 
+우리는 $\ch\mathbb{R}=0$임을 알고 있으므로, [§쌍선형형식, ⁋명제 6](/ko/math/basic_linear_algebra/bilinear_form#prop6)으로부터 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다는 것을 안다. 
 
 임의의 $\mathbb{R}$-내적공간 $V$가 주어졌다 하고, $V$에 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 주어졌다 하자. 우선
 
