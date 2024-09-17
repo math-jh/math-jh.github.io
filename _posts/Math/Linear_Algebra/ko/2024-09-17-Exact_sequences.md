@@ -27,7 +27,7 @@ weight: 1
 
 ## 가군의 합
 
-우선 다음의 간단한 보조정리부터 시작한다.
+이번 글의 목표는 몇 가지 exact sequence들을 소개하고, splitting exact sequence의 개념을 정의하는 것이다. 우선 다음의 간단한 보조정리부터 시작한다.
 
 <div class="proposition" markdown="1">
 
@@ -63,7 +63,7 @@ weight: 1
 
 </details>
 
-특별히 $A$-module $M$의 submodule들의 family $(N_i)_{i\in I}$가 주어졌다 하자. 그럼 $M$의 부분집합 $\bigcup N_i$로 생성된 $M$의 submodule $\left\langle \bigcup N_i\right\rangle$을 $\sum N_i$로 표기한다. 이제 각각의 $i$에 대하여, $N_i$는 $M$의 submodule이므로 inclusion들 $N_i \hookrightarrow M$이 존재한다. 이로부터 다음의 canonical morphism
+특별히 $A$-module $M$의 submodule들의 family $(N\_i)\_{i\in I}$가 주어졌다 하자. 그럼 $M$의 부분집합 $\bigcup N_i$로 생성된 $M$의 submodule $\left\langle \bigcup N_i\right\rangle$을 $\sum N_i$로 표기한다. 이제 각각의 $i$에 대하여, $N_i$는 $M$의 submodule이므로 inclusion들 $N_i \hookrightarrow M$이 존재한다. 이로부터 다음의 canonical morphism
 
 $$\bigoplus_{i\in I} N_i \rightarrow M$$
 
@@ -77,42 +77,35 @@ $$\bigoplus_{i\in I} N_i \rightarrow M$$
 
 즉 다음의 exact sequence
 
-$$\bigoplus_{i\in I} N_i \rightarrow M \rightarrow M\bigg/\sum_{i\in I} N_i \rightarrow 0$$
+$$\bigoplus_{i\in I} N_i \rightarrow M \rightarrow M\bigg/\sum_{i\in I} N_i \rightarrow 0\tag{$\ast$}$$
 
 가 존재한다.
 
+이번에는 $A$-module $M$의 submodule들의 family $(N\_i)\_{i\in I}$가 주어졌다 하고, canonical surjection들 $M \twoheadrightarrow M/N_i$가 주어졌다 하자. 그럼 이들로부터 다음의 canonical morphism 
 
+$$M \rightarrow \prod_{i\in I} M/N_i$$
 
-
-앞서 우리는 $A$-module의 성질들을 정의하며 exact sequence와 exact functor의 개념을 사용했다. 이번 글에서는 몇가지 exact sequence들을 도입한다.
-
-## 가군의 합
-
-우선 다음을 정의하자.
-
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $A$-module $M$의 부분집합 $X$가 주어졌다 하자. 그럼 $X$의 원소들의 일차결합들로 이루어진 $M$의 부분집합을 $\langle X\rangle$으로 적는다.
-
-</div>
-
-그럼 다음이 성립한다. 
+이 주어진다. 다음 명제 또한 자명하다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> $A$-module $M$과 그 부분집합 $X$가 주어졌다 하자. 그럼 $\langle X\rangle$은 $M$의 submodule이며, 
+<ins id="prop5">**명제 5**</ins> 위에서 정의한 canonical morphism $M \rightarrow \prod_{i\in I} M/N_i$의 kernel이 $\bigcap N_i$이다.
 
 </div>
 
+즉, 다음의 exact sequence
 
+$$0 \rightarrow \bigcap_{i\in I} N_i \rightarrow M \rightarrow\prod_{i\in I} M/N_i$$
 
-어렵지 않게 $X$를 포함하는 $M$의 submoule 중 가장 작은 것이 정확히 $\langle X\rangle$가 된다는 것을 확인할 수 있다. 특별히 $M$의 submodule들 $(N\_i)\_{i\in I}$에 대하여, 집합 $\bigcup_i N_i$로 generate되는 $M$의 submodule $\left\langle \bigcup N_i\right\rangle$를 $\sum N_i$로 적는다. 
+이 존재한다. 
 
-이 submodule은 direct sum과도 어느정도 관련이 있다. 위의 family $(N_i)$에 대하여, canonical inclusion들 $N_i \rightarrow M$을 통해 얻어지는 canonical $A$-linear map $\bigoplus N_i \rightarrow M$의 image를 $N_i$들의 $M$에서의 direct sum이라 하고, 약간의 표기법의 남용을 통해 이를 $\bigoplus N_i$로 적는다.
+## 가군의 직합과 합
+
+주어진 $A$-module $M$과 $M$의 submodule들의 family $(N\_i)\_{i\in I}$에 대하여, 만일 canonical morphism $\bigoplus N_i \rightarrow M$이 isomorphism이라면, $M$을 $N_i$들의 direct sum이라 부른다. 이를 위해서는 우선 $(\ast)$로부터 $M=\sum N_i$여야 함을 안다. 즉 $M$의 모든 원소들이 $N_i$의 원소들의 일차결합으로 표현되어야 한다. 한편, canonical morphism $\bigoplus N_i \rightarrow M$이 injective라는 것은 이렇게 일차결합을 적는 방법이 유일하다는 것과 동치임을 확인할 수 있다. 더 일반적으로 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 위와 같은 상황에서 다음이 모두 동치이다.
+<ins id="prop6">**명제 6**</ins> 위와 같은 상황에서 다음이 모두 동치이다.
 
 1. $\sum_{i\in I} N_i=\bigoplus_{i\in I} N_i$이다.
 2. 만일 $x_i\in N_i$를 만족하는 $x_i$들에 대하여 $\sum_{i\in I} x_i=0$이라면 모든 $i$에 대하여 $x_i=0$이다.
@@ -130,13 +123,97 @@ $$x_j=\sum_{i\neq j}(-x_i)$$
 
 </details>
 
+## 보조부분가군
 
-$A$-module $M$을 고정하고, $M$의 submodule들의 family $(N_i)\_{i\in I}$가 주어졌다 하자. 그럼 $\bigcap N_i$는 $M$의 submodule이라는 것을 안다. 한편 각각의 $i$에 대하여, canonical homomorphism $M \rightarrow M/N_i$를 통해 얻어지는
+다음 명제는 특별히 $M$이 두 개의 submodule $N_1,N_2$의 direct sum일 때 [명제 6](#def6)을 조금 더 직관적으로 살펴보도록 도와준다. 
 
-$$\phi: M \rightarrow \prod_{i\in I} M/N_i$$
+<div class="proposition" markdown="1">
 
-를 생각하자. 그럼 어렵지 않게 $\ker\phi=\bigcap N_i$라는 것을 확인할 수 있고, 그럼 다음의 exact sequence
+<ins id="prop7">**명제 7**</ins> $A$-module $M$의 두 submodule $N_1,N_2$가 주어졌다 하자. 그럼 다음의 두 exact sequence
 
-$$0 \rightarrow \bigcap_{i\in I} N_i \rightarrow M  \rightarrow \prod_{i\in I} M/N_i$$
+$$0 \longrightarrow N_1\cap N_2 \overset{\Delta}{\longrightarrow} N_1\oplus N_2 \overset{i_1-i_2}{\longrightarrow} N_1+N_2\longrightarrow 0$$
 
-가 얻어진다. 특히 만일 $\bigcap_{i\in I} N_i=0$이라면 위의 sequence는 isomorphisom $M\cong\prod M/N_i$를 준다. 
+와
+
+$$0 \longrightarrow M/(N_1\cap N_2)\overset{\Delta'}{\longrightarrow}(M/N_1)\oplus(M/N_2)\overset{p_1-p_2}{\longrightarrow}M/(N_1+N_2)\longrightarrow 0$$
+
+이 존재한다. 여기서 $i_k,p_k$는 각각 canonical morphism들
+
+$$i_k: N_k \rightarrow N_1+N_2,\qquad p_k:M/N_k \rightarrow M/(N_1+N_2)$$
+
+이며 $\Delta, \Delta'$는 각각 다음의 식
+
+$$\Delta(x)=(x,x),\qquad \Delta'(x+(N_1+N_2))=(x+N_1,x+N_2)$$
+
+으로 정의된 morphism들이다. 
+
+</div>
+
+이에 대한 증명은 단순 계산이므로 생략한다. 어쨌든 첫 번째 exact sequence를 설명하자면, 
+
+$$N_1\oplus N_2=\{(x_1,x_2): x_k\in N_k\}$$
+
+이므로 $M$ 안에서 $N_1$과 $N_2$이 어떻게 놓여있든지 $N_1$과 $N_2$의 원소는 $N_1\oplus N_2$ 안에서는 각각 $(x_1,0)$ 그리고 $(0,x_2)$꼴의 원소로 나타나기 때문에 이들은 서로 다른 것으로 취급된다. 특히 $x\in N_1\cap N_2$이더라도, $x$가 $0$이 아닌 이상 $x\in N_1$과 $x\in N_2$는 $N_1\oplus N_2$ 안에서는 다른 원소이다. 그런데 
+
+$$i_1-i_2:N_1\oplus N_2 \rightarrow N_1+N_2;\qquad (x_1,x_2)\mapsto x_1-x_2$$
+
+를 통해 이를 $N_1+N_2$로 보내고 나면 이러한 방식으로 다르게 취급된 원소들은 그 image가 $0$이 되어야 하고, 따라서 $i_1-i_2$의 kernel이 정확히 $N_1\cap N_2$가 된다. 
+
+한편, 우리는 다음과 같이 정의한다.
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> 임의의 $A$-module $M$과 $M$의 두 submodule $N_1, N_2$에 대하여, 만일 $M$이 $N_1$과 $N_2$의 direct sum이라면 $N_1,N_2$를 서로에 대한 *supplementary submodule<sub>보조부분가군</sub>*이라 부른다. 만일 $M$의 submodule $N$이 supplementary submodule을 갖는다면 $N$을 $M$의 *direct summand*라 부른다. 
+
+</div>
+
+즉, 이와 같은 상황에서 $N_1+N_2=M$이고 $N_1\cap N_2=0$이다. 그럼 이를 이용하여 canonical morphism $M \rightarrow M/N_1$의 정의역을 $N_2$로 제한한 것이 isomorphism이고, 비슷하게 $M \rightarrow M/N_2$의 정의역을 $N_1$으로 제한한 것이 isomorphism임을 확인할 수 있다. 
+
+## 분해완전열
+
+마지막으로 splitting exact sequence를 정의하기 전에 다음 보조정리를 소개한다. 이에 대한 증명은 <#ref#>에 있다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="lem9">**보조정리 9 (Four lemma)**</ins> $A$-module들의 commutative diagram
+
+img
+
+을 생각하자. 그럼 다음이 성립한다.
+
+1. 
+2. 
+
+</div>
+
+이제 다음 명제를 통해 splitting exact sequence를 정의한다. Splitting exact sequence는 다음의 exact sequence
+
+$$0\rightarrow N_1\hookrightarrow N_1\oplus N_2\twoheadrightarrow N_2 \rightarrow 0$$
+
+와 같은 형태의 exact sequence를 의미하는데, 이를 정확히 풀어쓰자면 다음과 같다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10**</ins> $A$-module들의 exact sequence
+
+$$0\longrightarrow M \overset{f}{\longrightarrow}L \overset{g}{\longrightarrow}N \longrightarrow 0$$
+
+에 대하여, 다음 조건들이 모두 동치이다.
+
+1. $f$의 linear retraction $r:L \rightarrow M$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
+2. $g$의 linear section $s:N \rightarrow L$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
+3. 다음의 diagram
+    
+    img
+    
+    을 commute하도록 하는 isomorphism $\alpha: L \rightarrow M\oplus N$이 존재한다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 3번 조건을 가정하자. 그럼 $r=\pr_M\circ\alpha$로 두면 1번 조건을 얻으며, 비슷하게 canonical inclusion $i_N: N \rightarrow M\oplus N$과 $\alpha$를 합성하여 $s=\alpha^{-1}\circ i_N$으로 두면 2번 조건을 얻는다.
+
+나머지 방향은 1번과 2번 조건을 각각 가정하고 3번 조건을 보인다. 만일 1번 조건이 성립한다면 $\beta: M\oplus N \rightarrow L$을 $(x,y)\mapsto f(x)+s(y)$로 정의하고, 2번 조건이 성립한다면 $\alpha:L \rightarrow M\oplus N$을 $z\mapsto (r(z), g(z))$로 정의한다. 그럼 [보조정리 9](#lem9)에 의하여 $\alpha,\beta^{-1}$가 3번 조건에서 요구하는 isomorphism을 정의한다는 것을 알 수 있다. 
+
+</details>
