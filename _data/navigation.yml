@@ -76,8 +76,6 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/graded_rings
       - title: "가군"
         url: ko/math/algebraic_structures/modules
-      - title: "자유가군"
-        url: ko/math/algebraic_structures/free_modules
       - title: "가군의 직접곱과 직합, 텐서곱"
         url: ko/math/algebraic_structures/operations_of_modules
       - title: "스칼라의 변환"
@@ -264,6 +262,18 @@ homological_algebra-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
+linear_algebra-ko:
+  - title: <a href="/ko/linear_algebra/" class="sidebar_title">선형대수학</a>
+    children:
+      - title: "완전열"
+        url: ko/math/linear_algebra/exact_sequences
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
 manifold-ko:
   - title: <a href="/ko/manifold/" class="sidebar_title">미분다양체</a>
     children:
@@ -303,6 +313,24 @@ manifold-ko:
         url: ko/math/manifold/classical_groups
       - title: "리 대응"
         url: ko/math/manifold/Lie_correspondence
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
+multilinear_algebra-ko:
+  - title: <a href="/ko/multilinear_algebra/" class="sidebar_title">다중선형대수</a>
+    children:
+      - title: "등급구조"
+        url: ko/math/multilinear_algebra/graduation
+      - title: "등급대수"
+        url: ko/math/multilinear_algebra/graded_homomorphism
+      - title: "다중선형대수"
+        url: ko/math/multilinear_algebra/multilinear_algebra
+      - title: "대칭대수와 외대수"
+        url: ko/math/multilinear_algebra/symmetric_and_exterior_algebras
   - title: 
     children:
       - title: "블로그 소개"
@@ -381,24 +409,6 @@ symplectic_geometry-ko:
         url: ko/math/symplectic_geometry/linear_symplectic_geometry
       - title: "사교다양체"
         url: ko/math/symplectic_geometry/symplectic_manifold
-  - title: 
-    children:
-      - title: "블로그 소개"
-        url: ko/about
-      - title: "찾아보기"
-        url: ko/misc/index_ko
-
-multilinear_algebra-ko:
-  - title: <a href="/ko/multilinear_algebra/" class="sidebar_title">다중선형대수</a>
-    children:
-      - title: "등급구조"
-        url: ko/math/multilinear_algebra/graduation
-      - title: "등급대수"
-        url: ko/math/multilinear_algebra/graded_homomorphism
-      - title: "다중선형대수"
-        url: ko/math/multilinear_algebra/multilinear_algebra
-      - title: "대칭대수와 외대수"
-        url: ko/math/multilinear_algebra/symmetric_and_exterior_algebras
   - title: 
     children:
       - title: "블로그 소개"
