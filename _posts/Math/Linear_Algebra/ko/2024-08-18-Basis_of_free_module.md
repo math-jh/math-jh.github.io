@@ -23,48 +23,13 @@ $$F(X)=\bigoplus_{x\in X} A$$
 
 으로 주어지는 것을 살펴보았다. ([\[대수적 구조\] §가군의 작접곱과 직합, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_modules#prop3)) 이번 글에서 우리는 free $A$-module의 성질을 조금 더 자세히 살펴본다. 
 
-## 가군의 합
-
-본격적으로 이야기를 시작하기에 앞서 몇 가지 개념들을 정의하는 것이 좋다.
-
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $A$-module $M$의 부분집합 $X$가 주어졌다 하자. 그럼 $X$의 원소들의 일차결합들로 이루어진 $M$의 submodule을 $\langle X\rangle$으로 적고, 이를 $X$에 의해 generate되는 $M$의 submodule이라 부른다.
-
-</div>
-
-어렵지 않게 $X$를 포함하는 $M$의 submoule 중 가장 작은 것이 정확히 $\langle X\rangle$가 된다는 것을 확인할 수 있다. 특별히 $M$의 submodule들 $(N\_i)\_{i\in I}$에 대하여, 집합 $\bigcup_i N_i$로 generate되는 $M$의 submodule $\left\langle \bigcup N_i\right\rangle$를 $\sum N_i$로 적는다. 
-
-이 submodule은 direct sum과도 어느정도 관련이 있다. 위의 family $(N_i)$에 대하여, canonical inclusion들 $N_i \rightarrow M$을 통해 얻어지는 canonical $A$-linear map $\bigoplus N_i \rightarrow M$의 image를 $N_i$들의 $M$에서의 direct sum이라 하고, 약간의 표기법의 남용을 통해 이를 $\bigoplus N_i$로 적는다.
-
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> 위와 같은 상황에서 다음이 모두 동치이다.
-
-1. $\sum_{i\in I} N_i=\bigoplus_{i\in I} N_i$이다.
-2. 만일 $x_i\in N_i$를 만족하는 $x_i$들에 대하여 $\sum_{i\in I} x_i=0$이라면 모든 $i$에 대하여 $x_i=0$이다.
-3. 임의의 $j\in I$에 대하여, $N_j$와 $\sum_{i\neq j} N_i$의 교집합이 $0$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-처음 두 조건의 동치관계는 자명하며, 또 $\bigoplus N_i$를 좌표별로 써 보면 첫 번째 조건이 마지막 조건을 함의하는 것도 자명하다. 이제 마지막 조건을 가정하고 두 번째 조건을 보이자. $\sum x_i=0$을 만족하는 $x_i\in N_i$들이 주어졌다 하자. 그럼 임의의 $j\in I$에 대하여,
-
-$$x_j=\sum_{i\neq j}(-x_i)$$
-
-이고, 마지막 조건을 가정한다면 위의 식으로부터 $x_j=0$이어야 하므로 증명이 완료된다.
-
-</details>
-
-
 ## 기저
 
 이제 임의의 $A$-module $M$이 주어졌다 하고, $M$의 원소들의 family $(x\_i)\_{i\in I}$들이 주어졌다 하자. 함수 $e:I \rightarrow M$을 $e(i)=x_i$로 정의한다면 adjunction $F\dashv U$에 의하여 유일한 $A$-linear map $\varepsilon:F(I) \rightarrow M$이 존재한다. 만일 $(x\_i)\_{i\in I}$가 $M$의 generating set이었다면, $\varepsilon$이 surjective여야 하고, 그 역 또한 성립한다. 이와 비슷한 맥락에서 다음을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 임의의 $A$-module $M$과, $M$의 원소들의 family $(x\_i)\_{i\in I}$가 주어졌다 하자. 위에서 정의한 $A$-linear map $\varepsilon:F(I) \rightarrow M$에 대하여, 다음을 정의한다.
+<ins id="def1">**정의 1**</ins> 임의의 $A$-module $M$과, $M$의 원소들의 family $(x\_i)\_{i\in I}$가 주어졌다 하자. 위에서 정의한 $A$-linear map $\varepsilon:F(I) \rightarrow M$에 대하여, 다음을 정의한다.
 
 1. Family $(x\_i)\_{i\in I}$가 *free family<sub>자유족</sub>*라는 것은 $\varepsilon$이 injective인 것이다.
 2. Family $(x\_i)\_{i\in I}$가 $M$을 *generate<sub>생성</sub>*하는 것은 $\varepsilon$이 surjective인 것이다.
@@ -80,7 +45,7 @@ Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것�
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> 임의의 $A$-module $M$은 적당한 free $A$-module의 quotient와 isomorphic하다.
+<ins id="prop2">**명제 2**</ins> 임의의 $A$-module $M$은 적당한 free $A$-module의 quotient와 isomorphic하다.
 
 </div>
 <details class="proof" markdown="1">
@@ -94,7 +59,7 @@ $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> $A$-module $M$이 *monogenous<sub>단일생성</sub>*이라는 것은 $M$이 $A$-module로서 하나의 원소 $x$에 의해 생성되는 것이다.
+<ins id="def3">**정의 3**</ins> $A$-module $M$이 *monogenous<sub>단일생성</sub>*이라는 것은 $M$이 $A$-module로서 하나의 원소 $x$에 의해 생성되는 것이다.
 
 </div>
 
@@ -106,7 +71,7 @@ $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> $M=\bigoplus_{i\in I} N_i$이고, $I$가 무한집합이고 $N_i\neq 0$이라 하자. 그럼 $E$의 임의의 generating set $X$에 대하여, $\card X\geq \card I$가 성립한다.
+<ins id="prop4">**명제 4**</ins> $M=\bigoplus_{i\in I} N_i$이고, $I$가 무한집합이고 $N_i\neq 0$이라 하자. 그럼 $E$의 임의의 generating set $X$에 대하여, $\card X\geq \card I$가 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -116,16 +81,16 @@ $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 
 
 </details>
 
-[정의 5](#def5)의 상황에서, $M$의 임의의 원소는 적당한 $\alpha\in A$에 대하여 $\alpha x$의 꼴로 쓸 수 있다. 따라서 이러한 경우 $M$을 $Ax$와 같이 표기하기도 한다. 이 표기를 이용하면, 임의의 $A$-module $M$과 그 원소들의 family $(x_i)\_{i\in I}$에 대하여,
+[정의 3](#def3)의 상황에서, $M$의 임의의 원소는 적당한 $\alpha\in A$에 대하여 $\alpha x$의 꼴로 쓸 수 있다. 따라서 이러한 경우 $M$을 $Ax$와 같이 표기하기도 한다. 이 표기를 이용하면, 임의의 $A$-module $M$과 그 원소들의 family $(x_i)\_{i\in I}$에 대하여,
 
 - $(x\_i)\_{i\in I}$가 $M$의 generating family인 것은 $M=\sum_{i\in I}Ax_i$인 것과 동치이다.
 - $(x\_i)\_{i\in I}$가 $M$의 basis인 것은 위의 sum $\sum_{i\in I}Ax_i$가 direct sum이고, 각각의 $x_i$가 모두 free element인 것과 동치이다.
 
-이를 통해 [명제 6](#prop6)을 각각의 $N_i$가 monogeneous이고 free element인 경우로 한정하면, 임의의 free $A$-module $M$가 무한한 basis를 갖는다면 $A$의 모든 basis는 같은 cardinality를 갖는다는 것을 안다. 그러나 유한한 basis를 갖는 경우 이것이 항상 성립하는 것은 아니다.
+이를 통해 [명제 4](#prop4)을 각각의 $N_i$가 monogeneous이고 free element인 경우로 한정하면, 임의의 free $A$-module $M$가 무한한 basis를 갖는다면 $A$의 모든 basis는 같은 cardinality를 갖는다는 것을 안다. 그러나 유한한 basis를 갖는 경우 이것이 항상 성립하는 것은 아니다.
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 임의의 ring $A$에 대하여, $A^m\cong A^n$인 것과 $m=n$인 것이 항상 동치일 경우, $A$가 *invariant basis number property<sub>불변 기저수 성질</sub>*을 만족한다고 한다. 
+<ins id="def5">**정의 5**</ins> 임의의 ring $A$에 대하여, $A^m\cong A^n$인 것과 $m=n$인 것이 항상 동치일 경우, $A$가 *invariant basis number property<sub>불변 기저수 성질</sub>*을 만족한다고 한다. 
 
 </div>
 
@@ -135,7 +100,7 @@ $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> Ring $A$에 대하여, 적당한 field $\mathbb{k}$와 homomorphism $\phi: A \rightarrow \mathbb{k}$가 존재한다 하자. 그럼 $A$는 IBN property를 가진다.
+<ins id="prop6">**명제 6**</ins> Ring $A$에 대하여, 적당한 field $\mathbb{k}$와 homomorphism $\phi: A \rightarrow \mathbb{k}$가 존재한다 하자. 그럼 $A$는 IBN property를 가진다.
 
 </div>
 <details class="proof" markdown="1">
@@ -157,7 +122,7 @@ $$\phi^\ast M\cong\phi^\ast\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Ring $A$가 IBN을 만족한다 하자. 그럼 임의의 free $A$-module $M$에 대하여, $M$의 basis의 크기를 $M$의 *rank<sub>랭크</sub>*라 한다. 
+<ins id="def7">**정의 7**</ins> Ring $A$가 IBN을 만족한다 하자. 그럼 임의의 free $A$-module $M$에 대하여, $M$의 basis의 크기를 $M$의 *rank<sub>랭크</sub>*라 한다. 
 
 </div>
 
