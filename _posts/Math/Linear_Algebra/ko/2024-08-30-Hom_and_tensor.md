@@ -17,7 +17,7 @@ weight: 5
 
 ---
 
-이번 글에서 우리는 $\Hom$과 텐곱 사이의 관계를 살펴본다. 
+이번 글에서 우리는 $\Hom$과 텐서곱 사이의 관계를 살펴본다. 
 
 ## Homomorphism $M^\ast\otimes_AN \rightarrow \Hom_{\lMod{A}}(M,N)$
 
