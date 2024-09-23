@@ -1,6 +1,6 @@
 ---
 
-title: "행렬과 선형 사상"
+title: "행렬과 선형사상"
 excerpt: ""
 
 categories: [Math / Linear Algebra]

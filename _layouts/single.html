@@ -42,15 +42,17 @@ layout: default
         </header>
       {% endunless %}
 
-      <section class="page__content e-content" itemprop="text">
+      <section class="page__content" itemprop="text">
+        {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-            <nav class="toc" style="margin-bottom: 5vh;">
-              <header><h4 class="nav__title"><span class="material-icons md-18" style="vertical-align:-.2em">&#xE8DE;</span> {{ page.toc_label | default: site.data.ui-text[lang].toc_label | default: "On this page" }}</h4></header>
+            <nav class="toc">
+              <header><h4 class="nav__title"><span class="material-icons md-18" style="vertical-align:-.2em">&#xE8DE;</span> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
               {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>
           </aside>
+        {% endif %}
         {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[lang].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
       <footer class="page__meta">
