@@ -12,8 +12,9 @@ sidebar:
     nav: "linear_algebra-ko"
 
 date: 2024-09-05
-last_modified_at: 2024-09-05
+last_modified_at: 2024-09-19
 weight: 7
 
 ---
 
+이제 우리는 행렬과 선형사상 사이의 관계를 살펴본다. 
