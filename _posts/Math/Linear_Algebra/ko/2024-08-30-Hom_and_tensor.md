@@ -12,7 +12,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 date: 2024-08-30
-last_modified_at: 2024-08-30
+last_modified_at: 2024-09-23
 weight: 5
 
 ---
