@@ -74,6 +74,10 @@ algolia:
   index_name             : math-jh_blog # YOUR_INDEX_NAME
   search_only_api_key    : cf2a0afdacacf7bc3328a49c5f755203 # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : false # true (default), false
+  files_to_exclude       : 
+    - _pages/ko/Index_ko.md
+    - _pages/ko/Music.md
+    - _posts/Misc/Music/*.md
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true

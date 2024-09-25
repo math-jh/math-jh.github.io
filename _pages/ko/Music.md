@@ -2,6 +2,8 @@
 title: "음악"
 layout: archive_custom
 permalink: /ko/music/
+search: false
+sitemap: false
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
