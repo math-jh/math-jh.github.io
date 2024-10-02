@@ -17,23 +17,21 @@ weight: 1
 
 ---
 
-이제 드디어 텐서 대수를 정의한다. 이번 글에서 $A$는 항상 commutative ring with unity인 것으로 가정한다. 또, 편의상 $\mathbb{N}$-graduation이 주어진 구조를 모두 간단하게 graded라 부르기로 한다.
-
 ## 텐서대수의 정의
 
-임의의 $A$-module $M$에 대하여, 
+Commutative ring $A$를 고정하자. 그럼 임의의 두 $A$-module $M_1,M_2$에 대하여 이들의 tensor product $M_1\otimes_AM_2$ 또한 $A$-module이며, 뿐만 아니라 다음의 associativity
 
-$$\mathcal{T}^n(M)=M^{\otimes n}=\underbrace{M\otimes\cdots\otimes M}_\text{\small $n$ times}$$
+$$M_1\otimes_A(M_2\otimes M_3)\cong (M_1\otimes_AM_2)\otimes_AM_3$$
 
-으로 정의하자. $n=0$인 경우 $\mathcal{T}^0(M)=A$인 것으로 생각한다. 그럼 $\mathcal{T}(M)$을 다음의 식
+가 성립한다. 특히 임의의 $A$-module $M$에 대하여 tensor product
+
+$$M^{\otimes n}=\underbrace{M\otimes_A\cdots\otimes_AM}_\text{\small{$n$ times}}$$
+
+가 잘 정의된다. 이제 $\mathcal{T}(M)$을 다음의 식
 
 $$\mathcal{T}(M)=\bigoplus_{n\geq 0}\mathcal{T}^n(M)$$
 
-으로 정의할 수 있다. $A$를 trivial $\mathbb{N}$-graduation
-
-$$A=A\oplus 0\oplus\cdots$$
-
-이 주어진 것으로 생각하면, $\mathcal{T}(M)$이 graded $A$-module 구조를 갖는다. 
+으로 정의하면, $\mathcal{T}(M)$는 graded $A$-module 구조를 갖는다. 
 
 한편 $\mathcal{T}(M)$에서의 곱셈을 정의하기 위해서는 $\mathcal{T}(M)$의 homogeneous element들
 
@@ -53,7 +51,7 @@ $$(x_1\otimes\cdots\otimes x_p)\cdot (x_{p+1}\oplus\cdots\oplus x_{p+q})=x_1\oti
 
 ## 텐서대수의 universal property
 
-Tensor algebra 또한 다음과 같은 universal property를 갖는다.
+Tensor algebra는 다음과 같은 universal property를 갖는다.
 
 <div class="proposition" markdown="1">
 
@@ -79,7 +77,7 @@ $$\tilde{f}(x_1\otimes\cdots\otimes x_n)=f(x_1)\cdots f(x_n)$$
 
 </details>
 
-그럼 다음 따름정리들은 위의 정리로부터 명확하다.
+그럼 다음 따름정리는 자명하다. 
 
 <div class="proposition" markdown="1">
 
@@ -104,6 +102,8 @@ $$\tilde{f}(x_1\otimes\cdots\otimes x_n)=f(x_1)\cdots f(x_n)$$
 을 commute하도록 하는 $\mathcal{T}(M)\rightarrow\mathcal{T}(M)$ 또한 유일해야 하는데, $\id\_{\mathcal{T}(M)}$과 $\phi\circ\psi$가 모두 이를 commute하도록 하므로 $\id\_{\mathcal{T}(M)}=\phi\circ\psi$가 성립한다. 비슷하게 $\id\_{\mathcal{T}'(M)}=\psi\circ\phi$가 성립한다.
 
 </details>
+
+뿐만 아니라, 이로부터 $\mathcal{T}$가 $\lMod{A}$에서 $\grlMod{A}$로의 functor임을 알 수 있다. 
 
 <div class="proposition" markdown="1">
 
