@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/various_modules
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Various_modules.png
+    overlay_image: /assets/images/Math/multilinear_Algebra/Various_modules.png
     overlay_filter: 0.5
 sidebar: 
     nav: "linear_algebra-ko"
@@ -21,13 +21,13 @@ weight: 2
 
 ## 핵과 여핵
 
-임의의 $A$-linear map $f:M \rightarrow N$에 대하여, $f$가 injective인 것은 $\ker f=0$인 것과 동치이고, $f$가 surjective인 것은 $\coker f=0$인 것과 동치이다. 한편, category $\lMod{A}$는 bicomplete category이며, 이 때 $A$-module들의 family의 product는 direct product로, coproduct는 direct sum으로 주어졌다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 다음 식
+임의의 $A$-linear map $u:M \rightarrow N$에 대하여, $u$가 injective인 것은 $\ker u=0$인 것과 동치이고, $u$가 surjective인 것은 $\coker u=0$인 것과 동치이다. 한편, category $\lMod{A}$는 bicomplete category이며, 이 때 $A$-module들의 family의 product는 direct product로, coproduct는 direct sum으로 주어졌다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 다음 식
 
-$$\ker \prod f_i=\prod \ker f_i,\qquad \coker \bigoplus f_i=\bigoplus \coker f_i $$
+$$\ker \prod u_i=\prod \ker u_i,\qquad \coker \bigoplus u_i=\bigoplus \coker u_i $$
 
 이 성립하며, 위의 논의를 통해  [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 2](/ko/math/algebraic_structures/operations_of_modules#prop2)를 다시 써보면 다음의 두 식
 
-$$\ker \bigoplus f_i=\bigoplus \ker f_i,\qquad \coker \prod f_i=\prod \coker f_i$$
+$$\ker \bigoplus u_i=\bigoplus \ker u_i,\qquad \coker \prod u_i=\prod \coker u_i$$
 
 또한 얻게 된다. 
 
@@ -57,34 +57,34 @@ $$\left(\bigoplus_{i\in I} M_i\right)\otimes_A\left(\bigoplus_{j\in J} N_j\right
 
 ## 사영가군과 단사가군
 
-이번에는 임의의 $A$-linear map $f:M \rightarrow M'$와 $A$-module $N$이 주어졌다 하자. 그럼 다음의 abelian group homomorphism
+이번에는 임의의 $A$-linear map $u:M \rightarrow M'$와 $A$-module $N$이 주어졌다 하자. 그럼 다음의 abelian group homomorphism
 
-$$\Hom_{\lMod{A}}(f,N):\Hom_{\lMod{A}}(M', N) \rightarrow \Hom_{\lMod{A}}(M,N)$$
+$$\Hom_{\lMod{A}}(u,N):\Hom_{\lMod{A}}(M', N) \rightarrow \Hom_{\lMod{A}}(M,N)$$
 
 에 대하여, 그런데 $\Hom$은 right adjoint이므로
 
-$$\ker(\Hom_{\lMod{A}}(f,N))\cong\Hom_{\lMod{A}}(\coker f, N)\tag{2}$$
+$$\ker(\Hom_{\lMod{A}}(u,N))\cong\Hom_{\lMod{A}}(\coker u, N)\tag{2}$$
 
 이 성립한다. 비슷하게 다음의 abelian group homomorphism
 
-$$\Hom_{\lMod{A}}(N, f):\Hom_{\lMod{A}}(M, N) \rightarrow\Hom_{\lMod{A}}(M', N)$$
+$$\Hom_{\lMod{A}}(N, u):\Hom_{\lMod{A}}(M, N) \rightarrow\Hom_{\lMod{A}}(M', N)$$
 
 에 대해서는 
 
-$$\ker(\Hom_{\lMod{A}}(N, f))\cong\Hom_{\lMod{A}}(N, \ker f)\tag{3}$$
+$$\ker(\Hom_{\lMod{A}}(N, u))\cong\Hom_{\lMod{A}}(N, \ker u)\tag{3}$$
 
 이 성립한다. 따라서 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> $A$-linear map $f:M \rightarrow M'$이 주어졌다 하자.
+<ins id="prop1">**명제 1**</ins> $A$-linear map $u:M \rightarrow M'$이 주어졌다 하자.
 
-1. $f$가 injective인 것은 임의의 $A$-module $N$에 대하여 $\Hom(N, f)$가 injective인 것과 동치이다.
-2. $f$가 surjective인 것은 임의의 $A$-module $N$에 대하여 $\Hom(f, N)$이 injective인 것과 동치이다.
+1. $u$가 injective인 것은 임의의 $A$-module $N$에 대하여 $\Hom(N, u)$가 injective인 것과 동치이다.
+2. $u$가 surjective인 것은 임의의 $A$-module $N$에 대하여 $\Hom(u, N)$이 injective인 것과 동치이다.
 
 </div>
 
-그러나 일반적으로, $f$가 surjective이더라도 $\Hom(f, N)$이 surjective는 아닐 수도 있고, $f$가 injective이더라도 $\Hom(N, f)$가 surjective는 아닐 수도 있다. 
+그러나 일반적으로, $u$가 surjective이더라도 $\Hom(u, N)$이 surjective는 아닐 수도 있고, $u$가 injective이더라도 $\Hom(N, u)$가 surjective는 아닐 수도 있다. 
 
 한편 $\lMod{A}$는 abelian category이므로, 식 (2)의 isomorphism은 본질적으로 다음의 short exact sequence
 
@@ -123,7 +123,7 @@ $$0 \rightarrow \Hom_\lMod{A}(N, M_1)\rightarrow\Hom_\lMod{A}(N, M_2) \rightarro
 
 그럼 식 (1)로부터 module들의 direct product가 injective인 것과 각각의 성분이 injective인 것이 동치인 것을 알고, module들의 direct sum이 projective인 것은 각각의 direct summand가 projective인 것과 동치임을 안다. 특히 다음의 homomorphism
 
-$$\Hom(A, f):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
+$$\Hom(A, u):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
 
 이 isomorphism이라는 사실로부터 $A$ 자기 자신은 projective임을 알고, 따라서 임의의 free module은 projective module이다. 
 
@@ -135,31 +135,31 @@ $$\Hom(A, f):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/linear_algebra/basis#prop2)에 의하여 적당한 free $A$-module $F$와 surjection $\pi:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수
+임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/linear_algebra/basis#prop2)에 의하여 적당한 free $A$-module $F$와 surjection $p:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수
 
-$$\Hom_{\lMod{A}}(P, \pi):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
+$$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
 
 가 surjective라는 것이므로, 적당한 $i\in \Hom_{\lMod{A}}(P,F)$가 존재하여 
 
-$$\id_P=\Hom_{\lMod{A}}(P,\pi)(i)=\pi\circ i$$
+$$\id_P=\Hom_{\lMod{A}}(P,p)(i)=p\circ i$$
 
-이도록 할 수 있다. 이 식으로부터 $i$는 injective이므로 $P$와 $\im i$를 같은 것으로 볼 수 있고, 그럼 $F\cong\ker\pi\oplus\im i$인 것을 확인할 수 있다.
+이도록 할 수 있다. 이 식으로부터 $i$는 injective이므로 $P$와 $\im i$를 같은 것으로 볼 수 있고, 그럼 $F\cong\ker p\oplus\im i$인 것을 확인할 수 있다.
 
 </details>
 
 ## 평탄가군
 
-이번에는 right $A$-module $M$과 left $A$-module들 사이의 $A$-linear map $g:N \rightarrow N'$이 주어졌다 하자. 그럼 다음의 abelian group homomorphism
+이번에는 right $A$-module $M$과 left $A$-module들 사이의 $A$-linear map $v:N \rightarrow N'$이 주어졌다 하자. 그럼 다음의 abelian group homomorphism
 
-$$M\otimes_A g:M\otimes_AN \rightarrow M\otimes_AN'$$
+$$M\otimes_A v:M\otimes_AN \rightarrow M\otimes_AN'$$
 
 이 존재한다. 그럼 $\otimes$는 left adjoint이므로 colimit을 보존하고, 따라서 다음 abelian group들 사이의 isomorphism
 
-$$\coker(M\otimes_Ag)\cong M\otimes_A(\coker g)$$
+$$\coker(M\otimes_Av)\cong M\otimes_A(\coker v)$$
 
-이 존재한다. 비슷하게 right $A$-module들 사이의 $A$-linear map $f:M \rightarrow M'$과 고정된 left $A$-module $N$에 대하여 다음의 isomorphism
+이 존재한다. 비슷하게 right $A$-module들 사이의 $A$-linear map $u:M \rightarrow M'$과 고정된 left $A$-module $N$에 대하여 다음의 isomorphism
 
-$$\coker(f\otimes_AN)\cong (\coker f)\otimes_A N$$
+$$\coker(u\otimes_AN)\cong (\coker u)\otimes_A N$$
 
 이 존재한다. 
 
@@ -167,8 +167,8 @@ $$\coker(f\otimes_AN)\cong (\coker f)\otimes_A N$$
 
 <ins id="prop5">**명제 5**</ins> 다음이 성립한다.
 
-1. Right $A$-module들 사이의 linear map $f:M \rightarrow M'$이 surjective인 것은 임의의 left $A$-module $N$에 대하여, $f\otimes_A N$이 surjective인 것과 동치이다.
-2. Left $A$-module들 사이의 linear map $g:N \rightarrow N'$이 surjective인 것은 임의의 right $A$-module $M$에 대하여, $M\otimes_A f$이 surjective인 것과 동치이다.
+1. Right $A$-module들 사이의 linear map $u:M \rightarrow M'$이 surjective인 것은 임의의 left $A$-module $N$에 대하여, $u\otimes_A N$이 surjective인 것과 동치이다.
+2. Left $A$-module들 사이의 linear map $v:N \rightarrow N'$이 surjective인 것은 임의의 right $A$-module $M$에 대하여, $M\otimes_A v$이 surjective인 것과 동치이다.
 
 </div>
 
@@ -201,7 +201,7 @@ $$M\otimes_AN_1 \rightarrow M\otimes_AN_2 \rightarrow M\otimes_AN_3 \rightarrow 
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Left $A$-module $N$이 *flat module<sub>평탄가군</sub>*이라는 것은 임의의 right $A$-module들 사이의 injective $A$-linear map $f:M \rightarrow M'$에 대하여, $f\otimes_A N$이 injective인 것이다. 비슷하게 flat right $A$-module을 정의할 수 있다. 
+<ins id="def7">**정의 7**</ins> Left $A$-module $N$이 *flat module<sub>평탄가군</sub>*이라는 것은 임의의 right $A$-module들 사이의 injective $A$-linear map $u:M \rightarrow M'$에 대하여, $u\otimes_A N$이 injective인 것이다. 비슷하게 flat right $A$-module을 정의할 수 있다. 
 
 </div>
 

@@ -27,9 +27,9 @@ $$Av=\lambda v$$
 
 을 만족한다. 따라서, $E_\lambda$로 제한했을 때 $A$는 아주 다루기 쉬운 대상인 $v\mapsto \lambda v$가 된다. 
 
-더 일반적으로, $A$를 $F^n$에서 $F^n$으로의 linear map으로 생각하고, 정의역 $F^n$을 고유공간 $E_\lambda$들로 덮을 수 있다 가정하자. 즉
+더 일반적으로, $A$를 $\mathbb{k}^n$에서 $\mathbb{k}^n$으로의 linear map으로 생각하고, 정의역 $\mathbb{k}^n$을 고유공간 $E_\lambda$들로 덮을 수 있다 가정하자. 즉
 
-$$F^n=\span\left(\bigcup_{\lambda\in\Spec(A)}E_\lambda\right)$$
+$$\mathbb{k}^n=\span\left(\bigcup_{\lambda\in\Spec(A)}E_\lambda\right)$$
 
 이라 하자. 그럼 임의의 $v\in\mathbb{k}^n$에 대하여, $v_\lambda\in E_\lambda$들이 각각 존재하여
 
@@ -91,7 +91,7 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
 와 같이, $e_1+e_2\in V$를 나타내는 방법이 유일하지 않기 때문이다. 
 
-또 다른 예시로, $V$의 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$을 하나 택하자. $W_i=Fx_i$이라 하면, $\mathcal{B}$가 basis라는 조건은 정확하게 $V$가 $W_i$들의 direct sum이라는 조건과 일치하게 된다. 더 일반적으로 다음이 성립한다.
+또 다른 예시로, $V$의 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$을 하나 택하자. $W_i=\mathbb{k}x_i$이라 하면, $\mathcal{B}$가 basis라는 조건은 정확하게 $V$가 $W_i$들의 direct sum이라는 조건과 일치하게 된다. 더 일반적으로 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -115,7 +115,7 @@ $$v=\sum\_{i\in I} w\_i$$
 
 ## 대각화
 
-이제 $F^n$을 고유공간으로 분해하는 법을 살펴본다. 앞선 [명제 2](#prop2)로부터 벡터공간 $F^n$을 고유공간들 $E\_\lambda$로 분해하는 것은 $E\_\lambda$의 basis들을 모아서 $F^n$의 basis를 나타내는 것과 같다는 것을 안다. 또, 영이 아닌 벡터 $x\_1$이 고윳값 $\lambda\_1$에 대응되는 고유벡터라 하면, 또 다른 고윳값 $\lambda\_2$에 대하여
+이제 $\mathbb{k}^n$을 고유공간으로 분해하는 법을 살펴본다. 앞선 [명제 2](#prop2)로부터 벡터공간 $\mathbb{k}^n$을 고유공간들 $E\_\lambda$로 분해하는 것은 $E\_\lambda$의 basis들을 모아서 $\mathbb{k}^n$의 basis를 나타내는 것과 같다는 것을 안다. 또, 영이 아닌 벡터 $x\_1$이 고윳값 $\lambda\_1$에 대응되는 고유벡터라 하면, 또 다른 고윳값 $\lambda\_2$에 대하여
 
 $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
@@ -172,7 +172,7 @@ $$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
 
 </details>
 
-이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\Spec(A)$, 이에 대응되는 고유공간들을 $E\_\lambda$, 그리고 이들의 basis를 $\mathcal{B}\_\lambda$라 한다면 $\mathcal{B}=\bigcup\_{\lambda\in\Spec(A)}\mathcal{B}\_\lambda$가 $F^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $F^n$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/basic_linear_algebra/characteristic_polynomial#ex7)을 보면, $F=\mathbb{R}$에서 $\Spec(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
+이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\Spec(A)$, 이에 대응되는 고유공간들을 $E\_\lambda$, 그리고 이들의 basis를 $\mathcal{B}\_\lambda$라 한다면 $\mathcal{B}=\bigcup\_{\lambda\in\Spec(A)}\mathcal{B}\_\lambda$가 $\mathbb{k}^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $\mathbb{k}^n$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/basic_linear_algebra/characteristic_polynomial#ex7)을 보면, $\mathbb{k}=\mathbb{R}$에서 $\Spec(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -188,7 +188,7 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\lambda$의 기하적 중복도가 $k$라 하고, $E_\lambda(A)$를 span하는 $k$개의 일차독립인 벡터들 $x_1,\ldots, x_k$를 생각하자. 여기에 $(n-k)$개의 벡터 $x_{k+1},\ldots, x_k$를 추가하여 $F^n$의 새로운 basis $\\{x_1,\ldots, x_n\\}$을 만들 수 있다. 이제 행렬 $X$를
+$\lambda$의 기하적 중복도가 $k$라 하고, $E_\lambda(A)$를 span하는 $k$개의 일차독립인 벡터들 $x_1,\ldots, x_k$를 생각하자. 여기에 $(n-k)$개의 벡터 $x_{k+1},\ldots, x_k$를 추가하여 $\mathbb{k}^n$의 새로운 basis $\\{x_1,\ldots, x_n\\}$을 만들 수 있다. 이제 행렬 $X$를
 
 $$X=(x_1|x_2|\cdots|x_n)$$
 
@@ -212,11 +212,11 @@ $$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\
 
 </details>
 
-$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 3](#prop3) 이후의 논증으로부터, $F^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
+$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 3](#prop3) 이후의 논증으로부터, $\mathbb{k}^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 임의의 $n\times n$ 행렬 $A$에 대하여, $F^n$이 $A$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
+<ins id="prop5">**명제 5**</ins> 임의의 $n\times n$ 행렬 $A$에 대하여, $\mathbb{k}^n$이 $A$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
 
 1. $A$의 특성다항식이 중복도를 고려하였을 때 $n$개의 근을 가지며,
 2. 이 때 각각의 고윳값의 기하적 중복도와 대수적 중복도가 같은 것이다.

@@ -13,9 +13,9 @@ excerpt:
 feature_row:
   - image_path: /assets/images/Pages/Thumbnails/Linear_Algebra.jpeg
     alt: "linear_algebra"
-    title: "선형대수학"
-    excerpt: "교양수학: 선형대수학"
-    url: "/ko/linear_algebra"
+    title: "기초 선형대수학"
+    excerpt: "교양수학: 기초 선형대수학"
+    url: "/ko/basic_linear_algebra"
     btn_class: "btn--primary"
     btn_label: "Read more"
   - title: ""
@@ -44,9 +44,9 @@ feature_row:
     btn_label: "Read more"
   - image_path: /assets/images/Pages/Thumbnails/Multilinear_Algebra.jpeg
     alt: "multilinear_algebra"
-    title: "다중선형대수"
-    excerpt: "대수학: 다중선형대수"
-    url: "/ko/multilinear_algebra"
+    title: "선형대수학"
+    excerpt: "대수학: 선형대수학"
+    url: "/ko/linear_algebra"
     btn_class: "btn--primary"
     btn_label: "Read more"
   - image_path: /assets/images/Pages/Thumbnails/Homological_Algebra.jpeg

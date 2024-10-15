@@ -112,3 +112,13 @@ $$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{
 $$(a\otimes b)(a'\otimes b')=aa'\otimes bb'$$
 
 를 통해 정의된다. 
+
+한 가지 흥미로운 사실은, $\otimes$가 $\CRing$에서의 coproduct와 같다는 것이다. 이를 확인하기 위해서는 임의의 commutative ring $A,B$와 다음 식
+
+$$\iota_A: A \hookrightarrow A\otimes B;a\mapsto a\otimes 1$$
+
+그리고 비슷한 방식으로 정의된 $\iota_B$가 coproduct의 universal property를 만족함을 보이면 된다. 임의의 $f_A: A \rightarrow C$, $f_B: B \rightarrow C$가 주어졌다 하자. 만일 coproduct의 universal property를 만족하는 $f: A\otimes B \rightarrow C$가 존재한다면, 이는 반드시
+
+$$f(a\otimes b)=f((a\otimes 1)(1\otimes b))=\cdots=f_A(a)f_B(b)$$
+
+를 만족해야 하므로 유일하다는 것을 알 수 있다. 한편, $A\times B$에서 $C$로의 함수 $(a,b)\mapsto f_A(a)f_B(b)$가 bilinear이므로, tensor product의 universal property로부터 $a\otimes b\mapsto f_A(a)f_B(b)$를 만족하는 ring homomorphism $A\otimes B \rightarrow C$가 존재하게 되고, 이것이 정확히 $f$가 된다. 

@@ -256,11 +256,11 @@ $$\pr_1((v,w))=v$$
 
 $$\ker \pr_1=\{(0,w)\mid w\in W\}$$
 
-임을 쉽게 확인할 수 있다. 물론, 비슷하게 $\pr_2:V\times W\rightarrow W$를 정의할 수도 있으며, $n$개의 순서쌍으로 이를 확장할 수도 있다. 특히, 유클리드 공간 $F^n$에 대하여, 
+임을 쉽게 확인할 수 있다. 물론, 비슷하게 $\pr_2:V\times W\rightarrow W$를 정의할 수도 있으며, $n$개의 순서쌍으로 이를 확장할 수도 있다. 특히, 유클리드 공간 $\mathbb{k}^n$에 대하여, 
 
 $$\pr_i((a_1,\ldots, a_n))=a_i$$
 
-으로 정의된 $\pr_i:F^n\rightarrow F$도 linear다.
+으로 정의된 $\pr_i:\mathbb{k}^n\rightarrow \mathbb{k}$도 linear다.
 
 </div>
 
@@ -268,11 +268,11 @@ $\pr$은 projection의 머릿글자로, 간단히 $p$, 혹은 $\pi$와 같이 �
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> $F[\x]$ 위에 정의된 함수 $D:F[\x]\rightarrow F[\x]$를 다음의 식
+<ins id="ex13">**예시 13**</ins> $\mathbb{k}[\x]$ 위에 정의된 함수 $D:\mathbb{k}[\x]\rightarrow \mathbb{k}[\x]$를 다음의 식
 
 $$D\left(\sum_{i=0}^\infty a_i\x^i\right)=\sum_{i=1}^\infty ia_i\x^{i-1}$$
 
-으로 정의하자. (여기서 $(a_i)$는 finitely supported이다.) 그럼 $D$는 linear이고, $\im D= F[\x]$이다. 또, $\ker D$는 모든 constant polynomial들의 모임이다. 
+으로 정의하자. (여기서 $(a_i)$는 finitely supported이다.) 그럼 $D$는 linear이고, $\im D= \mathbb{k}[\x]$이다. 또, $\ker D$는 모든 constant polynomial들의 모임이다. 
 
 </div>
 
@@ -284,7 +284,7 @@ $$D\left(\sum_{i=0}^\infty a_i\x^i\right)=\sum_{i=1}^\infty ia_i\x^{i-1}$$
 
 $$v=\sum_{i=1}^n v_i x_i$$
 
-이도록 하는 스칼라들 $v_1,\ldots, v_n$이 항상 존재하며, 유일하게 결정된다. 따라서, 함수 $L:V\rightarrow F^n$을 식 $v\mapsto (v_1,v_2,\ldots, v_n)\in\mathbb{k}^n$으로 정의할 수 있다.
+이도록 하는 스칼라들 $v_1,\ldots, v_n$이 항상 존재하며, 유일하게 결정된다. 따라서, 함수 $L:V\rightarrow \mathbb{k}^n$을 식 $v\mapsto (v_1,v_2,\ldots, v_n)\in\mathbb{k}^n$으로 정의할 수 있다.
 
 그럼 $L$은 linear다. 임의의 $v,w\in V$에 대하여,
 

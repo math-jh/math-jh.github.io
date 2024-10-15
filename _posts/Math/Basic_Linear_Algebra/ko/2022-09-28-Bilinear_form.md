@@ -19,9 +19,9 @@ weight: 16
 
 ---
 
-앞선 글에서 우리는 벡터공간 $V$의 쌍대공간 $V^\ast$를 정의하고, 만일 $V$가 유한차원이라면 $V^\ast$의 쌍대공간인 $V^{\ast\ast}$와 $V$가 isomorphic하다는 것을 살펴봤다. 이 과정에서 핵심적으로 쓰인 사실은 non-degenerate pairing $\langle -,-\rangle:V\times W \rightarrow F$가 $V$에서 $W^\ast$, 그리고 $W$에서 $V^\ast$로의 단사인 linear map을 정의한다는 것이었다. 우리는 이 사실을 canonical pairing
+앞선 글에서 우리는 벡터공간 $V$의 쌍대공간 $V^\ast$를 정의하고, 만일 $V$가 유한차원이라면 $V^\ast$의 쌍대공간인 $V^{\ast\ast}$와 $V$가 isomorphic하다는 것을 살펴봤다. 이 과정에서 핵심적으로 쓰인 사실은 non-degenerate pairing $\langle -,-\rangle:V\times W \rightarrow \mathbb{k}$가 $V$에서 $W^\ast$, 그리고 $W$에서 $V^\ast$로의 단사인 linear map을 정의한다는 것이었다. 우리는 이 사실을 canonical pairing
 
-$$\langle -,-\rangle:V\times V^\ast\rightarrow F;\quad (v,f)\mapsto f(v)$$
+$$\langle -,-\rangle:V\times V^\ast\rightarrow \mathbb{k};\quad (v,f)\mapsto f(v)$$
 
 에 적용하고, 차원을 고려하여 $V$와 $V^{\ast\ast}$가 isomorphic하다는 것을 살펴보았다. 이렇게 유도되는 $V\rightarrow V^{\ast\ast}$를 기술하기 위해서는 $V$에서 basis를 선택할 필요가 없었다.
 
@@ -33,7 +33,7 @@ $$\langle -,-\rangle:V\times V^\ast\rightarrow F;\quad (v,f)\mapsto f(v)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 pairing $\langle -,-\rangle:V\times W\rightarrow F$에 대하여, 만일 $W=V$라면 이 pairing을 $V$ 위에서 정의된 *bilinear form<sub>쌍선형형식</sub>*이라 부른다. $\langle -,-\rangle$이 *non-degenerate bilinear form<sub>비퇴화 쌍선형형식</sub>*이라는 것은 $\langle-,-\rangle$이 pairing으로서 non-degenerate인 것이다.
+<ins id="def1">**정의 1**</ins> 임의의 pairing $\langle -,-\rangle:V\times W\rightarrow \mathbb{k}$에 대하여, 만일 $W=V$라면 이 pairing을 $V$ 위에서 정의된 *bilinear form<sub>쌍선형형식</sub>*이라 부른다. $\langle -,-\rangle$이 *non-degenerate bilinear form<sub>비퇴화 쌍선형형식</sub>*이라는 것은 $\langle-,-\rangle$이 pairing으로서 non-degenerate인 것이다.
 
 </div>
 
@@ -45,7 +45,7 @@ $$v\mapsto \langle v,-\rangle,\qquad v\mapsto \langle -,v\rangle$$
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow F$에 대하여, 다음의 식
+<ins id="def2">**정의 2**</ins> 임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow \mathbb{k}$에 대하여, 다음의 식
 
 $$\langle v,w\rangle=\langle w,v\rangle$$
 
@@ -59,7 +59,7 @@ $$\langle v,w\rangle=-\langle w,v\rangle$$
 
 ## 비퇴화 쌍선형형식
 
-유한차원 $\mathbb{k}$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow F$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow F$가 주어졌다면, 우리는 [§쌍대공간, ⁋따름정리 5](/ko/math/basic_linear_algebra/dual_space#cor5)로부터 $\langle -,-\rangle$이 isomorphism 
+유한차원 $\mathbb{k}$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow \mathbb{k}$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow \mathbb{k}$가 주어졌다면, 우리는 [§쌍대공간, ⁋따름정리 5](/ko/math/basic_linear_algebra/dual_space#cor5)로부터 $\langle -,-\rangle$이 isomorphism 
 
 $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
@@ -164,7 +164,7 @@ $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
 $$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
 
-을 만족한다면 $\mathbb{k}$의 *characteristic<sub>표수</sub>*이 $p$라고 하고 이를 $\ch F=p$로 표기한다. 만일 위의 식을 만족하는 자연수 $p$가 존재하지 않는다면 $\mathbb{k}$는 characteristic 0을 갖는 것으로 생각한다.
+을 만족한다면 $\mathbb{k}$의 *characteristic<sub>표수</sub>*이 $p$라고 하고 이를 $\ch \mathbb{k}=p$로 표기한다. 만일 위의 식을 만족하는 자연수 $p$가 존재하지 않는다면 $\mathbb{k}$는 characteristic 0을 갖는 것으로 생각한다.
 
 </div>
 
@@ -180,7 +180,7 @@ $$0\cdot 0=0,\quad 0\cdot 1=0,\quad 1\cdot 0=0,\quad 1\cdot 1=1$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $\ch F\neq 2$인 field $\mathbb{k}$에 대하여, symmetric non-degenerate bilinear form이 주어진 $\mathbb{k}$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
+<ins id="prop7">**명제 7**</ins> $\ch \mathbb{k}\neq 2$인 field $\mathbb{k}$에 대하여, symmetric non-degenerate bilinear form이 주어진 $\mathbb{k}$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
 
 </div>
 <details class="proof" markdown="1">
@@ -190,7 +190,7 @@ $$0\cdot 0=0,\quad 0\cdot 1=0,\quad 1\cdot 0=0,\quad 1\cdot 1=1$$
 
 $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rangle$$
 
-이고, 두 조건 $\langle u,v\rangle\neq 0$과 $\ch F\neq 2$에서 좌변은 0이 아니다. 따라서 우변의 세 항 $\langle u+v,u+v\rangle, \langle u,u\rangle,\langle v,v\rangle$ 가운데 적어도 하나는 0이 아니다. 따라서,
+이고, 두 조건 $\langle u,v\rangle\neq 0$과 $\ch \mathbb{k}\neq 2$에서 좌변은 0이 아니다. 따라서 우변의 세 항 $\langle u+v,u+v\rangle, \langle u,u\rangle,\langle v,v\rangle$ 가운데 적어도 하나는 0이 아니다. 따라서,
 
 > Non-degnerate symmetric bilinear form이 주어진 임의의 $\mathbb{k}$-벡터공간에는 $\langle w,w\rangle\neq 0$을 만족하는 $w$가 반드시 존재한다.
 
@@ -218,7 +218,7 @@ $$\langle u',v\rangle=\langle u,v\rangle\neq 0$$
 
 ## Gram matrix
 
-임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow F$가 주어졌다 하자. 만일 $V$의 basis $\\{x_1,\ldots, x_n\\}$가 고정되었다고 하면, 임의의 $v=\sum v_ix_i, w=\sum w_jx_j$에 대하여 다음의 식
+임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow \mathbb{k}$가 주어졌다 하자. 만일 $V$의 basis $\\{x_1,\ldots, x_n\\}$가 고정되었다고 하면, 임의의 $v=\sum v_ix_i, w=\sum w_jx_j$에 대하여 다음의 식
 
 $$\langle v,w\rangle=\left\langle\sum_{i=1}^nv_ix_i,\sum_{j=1}^n w_jx_j\right\rangle=\sum_{i,j=1}^n v_iw_j\langle x_i,x_j\rangle$$
 

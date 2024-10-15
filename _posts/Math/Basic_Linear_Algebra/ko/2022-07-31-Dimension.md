@@ -106,7 +106,7 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> $\mathbb{k}$-벡터공간 $V$에 대하여, $V$의 basis의 cardinality를 $V$의 *차원*이라 하고, $\dim V$, 혹은 $\mathbb{k}$를 강조할 필요가 있을 때는 $\dim_FV$로 적는다. 만일 $\dim V$가 유한이라면, $V$는 *유한차원* 벡터공간이고, 그렇지 않다면 $V$는 *무한차원* 벡터공간이다.
+<ins id="def3">**정의 3**</ins> $\mathbb{k}$-벡터공간 $V$에 대하여, $V$의 basis의 cardinality를 $V$의 *차원*이라 하고, $\dim V$, 혹은 $\mathbb{k}$를 강조할 필요가 있을 때는 $\dim_\mathbb{k}V$로 적는다. 만일 $\dim V$가 유한이라면, $V$는 *유한차원* 벡터공간이고, 그렇지 않다면 $V$는 *무한차원* 벡터공간이다.
 
 </div>
 
@@ -116,9 +116,9 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 1. Trivial vector space $\\{0\\}$의 basis는 $\emptyset$이므로, 이 공간의 차원은 $\lvert\emptyset\rvert=0$이다.
 2. 임의의 field $\mathbb{k}$에 대하여, $\mathbb{k}$ 자기 자신은 1차원 $\mathbb{k}$-벡터공간이다.
-3. 임의의 field $\mathbb{k}$에 대하여, 유클리드 $n$-공간 $F^n$의 차원은 $\dim F^n=n$이다.
+3. 임의의 field $\mathbb{k}$에 대하여, 유클리드 $n$-공간 $\mathbb{k}^n$의 차원은 $\dim \mathbb{k}^n=n$이다.
 4. $\dim_\mathbb{R}\mathbb{C}=2$. 
-5. $F[\x]$는 무한차원 벡터공간이다.
+5. $\mathbb{k}[\x]$는 무한차원 벡터공간이다.
 
 </div>
 

@@ -82,6 +82,8 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/change_of_base_ring
       - title: "등급가군"
         url: ko/math/algebraic_structures/graded_modules
+      - title: "대수"
+        url: ko/math/algebraic_structures/algebras
   - title: 
     children:
       - title: "블로그 소개"
@@ -192,6 +194,8 @@ blog_development-ko:
         url: ko/misc/blog_development/comments_2
       - title: "다국어 지원"
         url: ko/misc/blog_development/multilingual
+      - title: "카테고리 순서 정렬하기"
+        url: ko/misc/blog_development/weighted_categories
   - title: 
     children:
       - title: "블로그 소개"
@@ -263,10 +267,32 @@ homological_algebra-ko:
         url: ko/misc/index_ko
 
 linear_algebra-ko:
-  - title: <a href="/ko/linear_algebra/" class="sidebar_title">선형대수학</a>
+  - title: <a href="/ko/linear_algebra/" class="sidebar_title">선형대수</a>
     children:
       - title: "완전열"
         url: ko/math/linear_algebra/exact_sequences
+      - title: "사영가군, 단사가군, 평탄가군"
+        url: ko/math/linear_algebra/various_modules
+      - title: "기저"
+        url: ko/math/linear_algebra/basis
+      - title: "쌍대공간"
+        url: ko/math/linear_algebra/dual_spaces
+      - title: "Hom과 텐서곱"
+        url: ko/math/linear_algebra/hom_and_tensor
+      - title: "행렬"
+        url: ko/math/linear_algebra/matrices
+      - title: "행렬과 선형사상"
+        url: ko/math/linear_algebra/matrices_and_linear_maps
+      - title: "기저변환"
+        url: ko/math/linear_algebra/change_of_basis
+      - title: "행렬의 텐서곱"
+        url: ko/math/linear_algebra/tensor_product_of_matrices
+      - title: "텐서대수"
+        url: ko/math/linear_algebra/tensor_algebras
+      - title: "행렬식"
+        url: ko/math/linear_algebra/determinants
+      - title: "노름과 대각합"
+        url: ko/math/linear_algebra/norm_and_trace
   - title: 
     children:
       - title: "블로그 소개"
@@ -313,24 +339,6 @@ manifold-ko:
         url: ko/math/manifold/classical_groups
       - title: "리 대응"
         url: ko/math/manifold/Lie_correspondence
-  - title: 
-    children:
-      - title: "블로그 소개"
-        url: ko/about
-      - title: "찾아보기"
-        url: ko/misc/index_ko
-
-multilinear_algebra-ko:
-  - title: <a href="/ko/multilinear_algebra/" class="sidebar_title">다중선형대수</a>
-    children:
-      - title: "등급구조"
-        url: ko/math/multilinear_algebra/graduation
-      - title: "등급대수"
-        url: ko/math/multilinear_algebra/graded_homomorphism
-      - title: "다중선형대수"
-        url: ko/math/multilinear_algebra/multilinear_algebra
-      - title: "대칭대수와 외대수"
-        url: ko/math/multilinear_algebra/symmetric_and_exterior_algebras
   - title: 
     children:
       - title: "블로그 소개"
@@ -465,8 +473,6 @@ category-ko:
         url: ko/algebraic_structures/
       - title: "선형대수학"
         url: ko/linear_algebra/
-      - title: "다중선형대수"
-        url: ko/multilinear_algebra/
       # - title: "갈루아 이론"
       #   url: ko/Galois_theory/
       - title: "호몰로지 대수학"

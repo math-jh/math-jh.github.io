@@ -107,17 +107,17 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> $F[\x]$의 임의의 다항식 $p(\x)$이 주어졌다 하고, $a\in\mathbb{k}$가 $p(\x)=0$의 해라 하자. 만일 $(\x-a)^k$가 $p(\x)$를 나누지만, $(\x-a)^{k+1}$은 $p(\x)$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
+<ins id="def6">**정의 6**</ins> $\mathbb{k}[\x]$의 임의의 다항식 $p(\x)$이 주어졌다 하고, $a\in\mathbb{k}$가 $p(\x)=0$의 해라 하자. 만일 $(\x-a)^k$가 $p(\x)$를 나누지만, $(\x-a)^{k+1}$은 $p(\x)$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
 
 </div>
 
 $n\times n$ 행렬 $A$의 특성다항식을 $p_A(\x)$라 하고, $\lambda$가 $A$의 한 고윳값이라 하자. 그럼 $p_A$의 해로서의 $\lambda$의 중복도를 $\lambda$의 *대수적 중복도<sub>algebraic multiplicity</sub>*라 부른다. 이는 곧 정의할 *기하적 중복도*와 구분하기 위한 용어이다. 
 
-$F[\x]$의 임의의 원소 $p(\x)$가 주어졌다 하자. $p$가 $n$차식이라 하면, $p$는 많아야 $n$개의 해를 가진다. 그러나 $p$가 정확히 $n$개의 해를 가져야만 하는 것은 아니다.
+$\mathbb{k}[\x]$의 임의의 원소 $p(\x)$가 주어졌다 하자. $p$가 $n$차식이라 하면, $p$는 많아야 $n$개의 해를 가진다. 그러나 $p$가 정확히 $n$개의 해를 가져야만 하는 것은 아니다.
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> 예를 들어, $F=\mathbb{R}$이라 하고, $2\times 2$ 정사각행렬
+<ins id="ex7">**예시 7**</ins> 예를 들어, $\mathbb{k}=\mathbb{R}$이라 하고, $2\times 2$ 정사각행렬
 
 $$J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$$
 
