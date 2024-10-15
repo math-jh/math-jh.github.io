@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/exact_sequences
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Exact_sequences.png
+    overlay_image: /assets/images/Math/multilinear_Algebra/Exact_sequences.png
     overlay_filter: 0.5
 sidebar: 
     nav: "linear_algebra-ko"
@@ -196,12 +196,12 @@ $$0\rightarrow N_1\hookrightarrow N_1\oplus N_2\twoheadrightarrow N_2 \rightarro
 
 <ins id="prop10">**명제 10**</ins> $A$-module들의 exact sequence
 
-$$0\longrightarrow M \overset{f}{\longrightarrow}L \overset{g}{\longrightarrow}N \longrightarrow 0$$
+$$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N \longrightarrow 0$$
 
 에 대하여, 다음 조건들이 모두 동치이다.
 
-1. $f$의 linear retraction $r:L \rightarrow M$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
-2. $g$의 linear section $s:N \rightarrow L$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
+1. $u$의 linear retraction $r:L \rightarrow M$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
+2. $v$의 linear section $s:N \rightarrow L$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
 3. 다음의 diagram
     
     img
@@ -214,6 +214,6 @@ $$0\longrightarrow M \overset{f}{\longrightarrow}L \overset{g}{\longrightarrow}N
 
 우선 3번 조건을 가정하자. 그럼 $r=\pr_M\circ\alpha$로 두면 1번 조건을 얻으며, 비슷하게 canonical inclusion $i_N: N \rightarrow M\oplus N$과 $\alpha$를 합성하여 $s=\alpha^{-1}\circ i_N$으로 두면 2번 조건을 얻는다.
 
-나머지 방향은 1번과 2번 조건을 각각 가정하고 3번 조건을 보인다. 만일 1번 조건이 성립한다면 $\beta: M\oplus N \rightarrow L$을 $(x,y)\mapsto f(x)+s(y)$로 정의하고, 2번 조건이 성립한다면 $\alpha:L \rightarrow M\oplus N$을 $z\mapsto (r(z), g(z))$로 정의한다. 그럼 [보조정리 9](#lem9)에 의하여 $\alpha,\beta^{-1}$가 3번 조건에서 요구하는 isomorphism을 정의한다는 것을 알 수 있다. 
+나머지 방향은 1번과 2번 조건을 각각 가정하고 3번 조건을 보인다. 만일 1번 조건이 성립한다면 $\beta: M\oplus N \rightarrow L$을 $(x,y)\mapsto u(x)+s(y)$로 정의하고, 2번 조건이 성립한다면 $\alpha:L \rightarrow M\oplus N$을 $z\mapsto (r(z), v(z))$로 정의한다. 그럼 [보조정리 9](#lem9)에 의하여 $\alpha,\beta^{-1}$가 3번 조건에서 요구하는 isomorphism을 정의한다는 것을 알 수 있다. 
 
 </details>
