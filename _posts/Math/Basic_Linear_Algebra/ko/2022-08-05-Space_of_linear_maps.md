@@ -152,9 +152,9 @@ $$\begin{aligned}
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $\mathbb{k}$-벡터공간을 $\Hom_F(V,W)$, 혹은 문맥에 따라 field $\mathbb{k}$가 명확할 때는 $\Hom(V,W)$로 적는다. 
+<ins id="def4">**정의 4**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $\mathbb{k}$-벡터공간을 $\Hom_\mathbb{k}(V,W)$, 혹은 문맥에 따라 field $\mathbb{k}$가 명확할 때는 $\Hom(V,W)$로 적는다. 
 
-특별히 $W=F$일 경우, $\Hom(V,F)$를 $V$의 *dual space<sub>쌍대공간</sub>*이라 부르고 $V^\*$으로 적는다. $V^\ast$의 원소들을 *linear functional*들이라 부른다. 
+특별히 $W=\mathbb{k}$일 경우, $\Hom(V,\mathbb{k})$를 $V$의 *dual space<sub>쌍대공간</sub>*이라 부르고 $V^\*$으로 적는다. $V^\ast$의 원소들을 *linear functional*들이라 부른다. 
 
 </div>
 
