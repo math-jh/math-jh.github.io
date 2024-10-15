@@ -204,7 +204,7 @@ $$\Bilin_A(M,N;L)=\{\text{$A$-bilinear maps from $M\times N$ to $L$}\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm9">**정리 9**</ins> Adjunction
+<ins id="thm9">**정리 9**</ins> Commutative ring $A$에 대하여, adjunction
 
 $$\Hom_A(M\otimes_AN, L)\cong\Hom_A(M,\Hom_A(N,L))\cong\Hom_A(N,\Hom_A(M,L))$$
 

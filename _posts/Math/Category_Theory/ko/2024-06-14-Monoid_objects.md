@@ -46,7 +46,7 @@ weight: 8
 
 - Cartesian monoidal category $\Set$에서 monoid object는 일반적인 의미에서의 monoid이다.
 - $\Top$에서의 monoidal object는 *topological monoid*이다.
-- 임의의 commutative ring $R$에 대하여, $(\lMod{R},\otimes_R, R)$의 monoid object는 $R$-algebra이다.
+- 임의의 commutative ring $R$에 대하여, $(\lMod{R},\otimes_R, R)$의 monoid object는 associative unital $R$-algebra이다.
 - 임의의 commutative ring $R$에 대하여, $(\Ch(R),\otimes_R, R)$의 monoid object는 differential graded $R$-algebra이다. 여기서 unit $R$은 degree $0$에 $R$이 있고, 나머지 degree는 모두 $0$인 chain complex이다.
 
 </div>

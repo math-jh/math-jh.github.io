@@ -3,17 +3,17 @@
 title: "미분 (작성중)"
 excerpt: "Differential module"
 
-categories: [Math / Multilinear Algebra]
-permalink: /ko/math/multilinear_algebra/derivation
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/derivation
 header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Derivation.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Derivation.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "multilinear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 date: 2022-12-12
 last_modified_at: 2022-12-12
-weight: 5
+weight: 120
 
 ---
 

@@ -21,7 +21,7 @@ weight: 15
 
 ## 쌍대기저
 
-$V$가 유한차원 $\mathbb{k}$-벡터공간이라 하자. [§선형사상들의 공간, ⁋명제 5](/ko/math/basic_linear_algebra/space_of_linear_maps#prop5)에서 $W=F$로 두면 $V^\ast=\Hom(V,F)$은 $V$와 같은 차원을 갖는다는 것을 안다. 특히, 만일 $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 $V$의 basis라면 $x_i$만을 1로, 나머지 $x_j$들은 0으로 보내는 linear map $\xi^i$들의 모임
+$V$가 유한차원 $\mathbb{k}$-벡터공간이라 하자. [§선형사상들의 공간, ⁋명제 5](/ko/math/basic_linear_algebra/space_of_linear_maps#prop5)에서 $W=\mathbb{k}$로 두면 $V^\ast=\Hom(V,\mathbb{k})$은 $V$와 같은 차원을 갖는다는 것을 안다. 특히, 만일 $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 $V$의 basis라면 $x_i$만을 1로, 나머지 $x_j$들은 0으로 보내는 linear map $\xi^i$들의 모임
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\}$$
 
@@ -49,13 +49,13 @@ $$f(u_1+u_2,v)=f(u_1,v)+f(u_2,v),\qquad f(u,v_1+v_2)=f(u,v_1)+f(u,v_2),\qquad f(
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$에 대하여, $V$와 $W$의 *pairing*은 bilinear map $(-,-):V\times W\rightarrow F$를 의미한다. 만일 영벡터가 아닌 임의의 $v\in V$에 대하여 다음의 linear map
+<ins id="def2">**정의 2**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$에 대하여, $V$와 $W$의 *pairing*은 bilinear map $(-,-):V\times W\rightarrow \mathbb{k}$를 의미한다. 만일 영벡터가 아닌 임의의 $v\in V$에 대하여 다음의 linear map
 
-$$(v,-): W\rightarrow F$$
+$$(v,-): W\rightarrow \mathbb{k}$$
 
 가 항상 영함수가 아니라면 이 pairing이 *왼쪽에서 non-degenerate*이라 하고, 비슷하게 영벡터가 아닌 임의의 $w\in W$에 대하여
 
-$$(-,w):U\rightarrow F$$
+$$(-,w):U\rightarrow \mathbb{k}$$
 
 가 항상 영함수가 아니라면 이 pairing이 *오른쪽에서 non-degenerate*라 한다. 왼쪽과 오른쪽 모두에서 non-degenerate인 pairing을 간단히 *non-degenerate pairing*이라 부른다.
 
@@ -73,7 +73,7 @@ $$(v,w_1+w_2)=(v,w_1)+(v,w_2),\qquad (v_1+v_2,w)=(v_1,w)+(v_2,w),\qquad (\alpha 
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$와, $V$의 dual space $V^\ast$에 대하여 $(-,-):V\times V^\ast\rightarrow F$를 다음의 식
+<ins id="ex3">**예시 3**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$와, $V$의 dual space $V^\ast$에 대하여 $(-,-):V\times V^\ast\rightarrow \mathbb{k}$를 다음의 식
 
 $$(v,f)=f(v)$$
 
@@ -99,7 +99,7 @@ $$(\alpha v,f)=f(\alpha v)=\alpha f(v)=(\alpha f)(v)=(v,\alpha f)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow F$가 주어진 두 $\mathbb{k}$-벡터공간 $V,W$에 대하여, 다음의 식
+<ins id="prop4">**명제 4**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow \mathbb{k}$가 주어진 두 $\mathbb{k}$-벡터공간 $V,W$에 대하여, 다음의 식
 
 $$v\mapsto (v,-)$$
 
@@ -119,7 +119,7 @@ $$w\mapsto (-,w)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor5">**따름정리 5**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow F$가 주어진 두 <em_ko>유한차원</em_ko> $\mathbb{k}$-벡터공간 $V,W$는 isomorphic하다.
+<ins id="cor5">**따름정리 5**</ins> Non-degenerate pairing $(-,-):V\times W\rightarrow \mathbb{k}$가 주어진 두 <em_ko>유한차원</em_ko> $\mathbb{k}$-벡터공간 $V,W$는 isomorphic하다.
 
 </div>
 <details class="proof" markdown="1">
