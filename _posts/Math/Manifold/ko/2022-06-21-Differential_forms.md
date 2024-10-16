@@ -43,7 +43,7 @@ $$\omega=\alpha^1\otimes\cdots\otimes \alpha^r\otimes u_{r+1}\otimes\cdots\otime
 
 $$(\omega,u)=\alpha^1(u_1)\alpha^2(u_2)\cdots \alpha^{r+s}(u_{r+s})$$
 
-으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\mathcal{T}^{r,s}(T\_p^\ast M)\cong\mathcal{T}^{r,s}(T\_pM)^\ast$이 성립한다. ([\[기초 선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/basic_linear_algebra/dual_space#cor5))
+으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\mathcal{T}^{r,s}(T\_p^\ast M)\cong\mathcal{T}^{r,s}(T\_pM)^\ast$이 성립한다. ([\[선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#cor5))
 
 이와 유사하게, 두 원소
 

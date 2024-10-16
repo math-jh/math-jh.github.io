@@ -123,9 +123,9 @@ $$W^\omega=\{v\in V:\omega(v,w)=0\text{ for all $w\in W$}\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $\omega$는 non-degenerate pairing이므로, $v\mapsto \omega(v,-)$는 $V$에서 $V^\ast$로의 isomorphism을 정의한다. ([\[기초 선형대수학\], §쌍대공간, ⁋명제 4](/ko/math/basic_linear_algebra/dual_space#prop4)) 
+1. $\omega$는 non-degenerate pairing이므로, $v\mapsto \omega(v,-)$는 $V$에서 $V^\ast$로의 isomorphism을 정의한다. ([\[선형대수학\], §쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)) 
     
-    $W$의 annihilator를 $W^\perp\subseteq V^\ast$라 하자. ([\[기초 선형대수학\], §쌍대공간, ⁋정의 7](/ko/math/basic_linear_algebra/dual_space#def7)) 임의의 $u\in W^\omega$에 대하여
+    $W$의 annihilator를 $W^\perp\subseteq V^\ast$라 하자. ([\[선형대수학\], §쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)) 임의의 $u\in W^\omega$에 대하여
     
     $$\omega(u,w)=0\qquad\text{for all $w\in W$}$$
     

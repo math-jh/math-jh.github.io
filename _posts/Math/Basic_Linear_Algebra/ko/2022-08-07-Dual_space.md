@@ -3,13 +3,13 @@
 title: "쌍대공간"
 excerpt: "쌍대공간, 쌍대사상, 그리고 직교여공간"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/dual_space
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/dual_space
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Dual_space.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Dual_space.png
     overlay_filter: 0.5
 
 date: 2022-08-05
@@ -21,13 +21,13 @@ weight: 15
 
 ## 쌍대기저
 
-$V$가 유한차원 $\mathbb{k}$-벡터공간이라 하자. [§선형사상들의 공간, ⁋명제 5](/ko/math/basic_linear_algebra/space_of_linear_maps#prop5)에서 $W=\mathbb{k}$로 두면 $V^\ast=\Hom(V,\mathbb{k})$은 $V$와 같은 차원을 갖는다는 것을 안다. 특히, 만일 $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 $V$의 basis라면 $x_i$만을 1로, 나머지 $x_j$들은 0으로 보내는 linear map $\xi^i$들의 모임
+$V$가 유한차원 $\mathbb{k}$-벡터공간이라 하자. [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 $W=\mathbb{k}$로 두면 $V^\ast=\Hom(V,\mathbb{k})$은 $V$와 같은 차원을 갖는다는 것을 안다. 특히, 만일 $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 $V$의 basis라면 $x_i$만을 1로, 나머지 $x_j$들은 0으로 보내는 linear map $\xi^i$들의 모임
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\}$$
 
 이 $V^\ast$의 basis가 된다는 것을 안다. 이를 $\mathcal{B}$의 *dual basis<sub>쌍대기저</sub>*라 부른다. 
 
-$V$가 무한차원이라 하더라도 basis $\mathcal{B}$에 대하여, 위의 식과 같이 정의된 집합 $\mathcal{B}^\ast$가 일차독립이라는 것은 어떠한 수정도 없이 [§선형사상들의 공간, ⁋명제 5](/ko/math/basic_linear_algebra/space_of_linear_maps#prop5)의 증명과 동일한 증명을 이용할 수 있다. 따라서 항상 $\dim V\leq\dim V^\ast$가 성립하며, 사실 $V$가 무한차원인 경우 반드시 $\dim V<\dim V^\ast$이다. 이를 살펴보기 위해서는 임의의 $\mathcal{B}$의 모든 원소들을 $1$로 보내는 함수를 extend하여 얻이진 함수가 $\mathcal{B}^\ast$의 원소들의 일차결합으로 나타날 수 없음만 확인하면 된다.
+$V$가 무한차원이라 하더라도 basis $\mathcal{B}$에 대하여, 위의 식과 같이 정의된 집합 $\mathcal{B}^\ast$가 일차독립이라는 것은 어떠한 수정도 없이 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)의 증명과 동일한 증명을 이용할 수 있다. 따라서 항상 $\dim V\leq\dim V^\ast$가 성립하며, 사실 $V$가 무한차원인 경우 반드시 $\dim V<\dim V^\ast$이다. 이를 살펴보기 위해서는 임의의 $\mathcal{B}$의 모든 원소들을 $1$로 보내는 함수를 extend하여 얻이진 함수가 $\mathcal{B}^\ast$의 원소들의 일차결합으로 나타날 수 없음만 확인하면 된다.
 
 ## 이중쌍대공간
 
@@ -147,7 +147,7 @@ $$L^\ast(f)=f\circ L$$
 
 을 통해 정의할 수 있다. 이는 diagram으로 보면 다음과 같다.
 
-![dual_map](/assets/images/Math/Basic_Linear_Algebra/Dual_space-1.png){:width="127.65px" class="invert" .align-center}
+![dual_map](/assets/images/Math/Linear_Algebra/Dual_space-1.png){:width="127.65px" class="invert" .align-center}
 
 혹은, 위에서 정의한 canonical pairing에 따르면 $L^\ast$는 다음의 식
 
@@ -159,7 +159,7 @@ $$(Lv, f)=(v,L^\ast f)\qquad\text{for all $v\in V$ and $f\in W^\ast$}\tag{1}$$
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots,\xi^n\},\qquad\mathcal{C}^\ast=\{\upsilon^1,\ldots,\upsilon^m\}$$
 
-이라 하자. [§선형대수학의 기본정리](/ko/math/basic_linear_algebra/ftla)에 의하여 모든 linear map은 basis의 선택이 주어진다면 행렬로 나타낼 수 있으므로, $L^\ast$를 두 basis $\mathcal{C}^\ast$와 $\mathcal{B}^\ast$에 대한 행렬로 표현할 수 있다. 우선 $L$이 basis $\mathcal{B},\mathcal{C}$에 대해 다음의 행렬
+이라 하자. [§선형대수학의 기본정리](/ko/math/linear_algebra/ftla)에 의하여 모든 linear map은 basis의 선택이 주어진다면 행렬로 나타낼 수 있으므로, $L^\ast$를 두 basis $\mathcal{C}^\ast$와 $\mathcal{B}^\ast$에 대한 행렬로 표현할 수 있다. 우선 $L$이 basis $\mathcal{B},\mathcal{C}$에 대해 다음의 행렬
 
 $$[L]_\mathcal{C}^\mathcal{B}=\begin{pmatrix}\alpha_{11}&\alpha_{12}&\cdots&\alpha_{1n}\\\alpha_{21}&\alpha_{22}&\cdots&\alpha_{2n}\\\vdots&\vdots&\ddots&\vdots\\\alpha_{m1}&\alpha_{m2}&\cdots&\alpha_{mn}\end{pmatrix}$$
 
@@ -200,7 +200,7 @@ $$[L^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}=\begin{pmatrix}\alpha_{11}&\alp
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-두 주장 모두 [§선형사상들의 공간, ⁋따름정리 2](/ko/math/basic_linear_algebra/space_of_linear_maps#cor2)에 의해 자명하다. 
+두 주장 모두 [§선형사상들의 공간, ⁋따름정리 2](/ko/math/linear_algebra/space_of_linear_maps#cor2)에 의해 자명하다. 
 
 1. 만약 $L$이 단사라면 $R\circ L=\id_V$를 만족하는 $R:W\rightarrow V$가 존재한다. 따라서 임의의 $f\in V^\ast$에 대하여, $f\circ R$은 $W$에서 $\mathbb{k}$로의 함수, 즉 $W^\ast$의 원소이고
     
@@ -231,7 +231,7 @@ $$[L^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}=\begin{pmatrix}\alpha_{11}&\alp
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
-과 [§벡터공간의 기저, ⁋보조정리 3](/ko/math/basic_linear_algebra/basis#lem3)을 이용하면 $S^\perp$가 $V^\ast$의 부분공간임을 안다. 이와 비슷하게 임의의 $T\subseteq V^\ast$에 대하여 $T^\perp$는 $V$의 부분공간이 된다. 
+과 [§벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3)을 이용하면 $S^\perp$가 $V^\ast$의 부분공간임을 안다. 이와 비슷하게 임의의 $T\subseteq V^\ast$에 대하여 $T^\perp$는 $V$의 부분공간이 된다. 
 
 <div class="proposition" markdown="1">
 

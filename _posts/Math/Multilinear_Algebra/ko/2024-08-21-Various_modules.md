@@ -3,13 +3,13 @@
 title: "사영가군, 단사가군, 평탄가군"
 excerpt: ""
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/various_modules
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/various_modules
 header:
-    overlay_image: /assets/images/Math/multilinear_Algebra/Various_modules.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Various_modules.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2024-08-21
 last_modified_at: 2024-09-23
@@ -135,7 +135,7 @@ $$\Hom(A, u):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/linear_algebra/basis#prop2)에 의하여 적당한 free $A$-module $F$와 surjection $p:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수
+임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/multilinear_algebra/basis#prop2)에 의하여 적당한 free $A$-module $F$와 surjection $p:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수
 
 $$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
 

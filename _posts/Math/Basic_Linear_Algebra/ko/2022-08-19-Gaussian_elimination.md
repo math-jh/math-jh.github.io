@@ -3,13 +3,13 @@
 title: "가우스 소거법"
 excerpt: "가우스 소거법과 역행렬"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/Gaussian_elimination
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/Gaussian_elimination
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Gaussian_elimination.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Gaussian_elimination.png
     overlay_filter: 0.5
 
 date: 2022-08-19

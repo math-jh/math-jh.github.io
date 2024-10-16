@@ -3,13 +3,13 @@
 title: "무한차원 벡터공간<sup>†</sup>"
 excerpt: "무한차원 벡터공간의 기저와 차원"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/infinite_dimensional_vector_space
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/infinite_dimensional_vector_space
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Infinite_dimensional_vector_spaces.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Infinite_dimensional_vector_spaces.png
     overlay_filter: 0.5
 
 date: 2021-10-12
@@ -103,7 +103,7 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 
 </details>
 
-다음 두 따름정리는 모두 유한차원일 경우에는 증명을 했었지만 ([§벡터공간의 차원, ⁋명제 5](/ko/math/basic_linear_algebra/dimension#prop5), [§벡터공간의 차원, ⁋명제 6](/ko/math/basic_linear_algebra/dimension#prop6)) 앞선 논증과 비슷하게, 무한차원 벡터공간에 대해서도 성립한다. 
+다음 두 따름정리는 모두 유한차원일 경우에는 증명을 했었지만 ([§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5), [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#prop6)) 앞선 논증과 비슷하게, 무한차원 벡터공간에 대해서도 성립한다. 
 
 <div class="proposition" markdown="1">
 

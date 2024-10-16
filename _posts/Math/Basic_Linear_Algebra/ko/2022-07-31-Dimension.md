@@ -3,13 +3,13 @@
 title: "벡터공간의 차원"
 excerpt: "벡터공간의 기저와 차원"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/dimension
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/dimension
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Dimension.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Dimension.png
     overlay_filter: 0.5
 
 date: 2022-07-31
@@ -21,7 +21,7 @@ weight: 5
 
 ## 벡터공간의 차원
 
-[§벡터공간의 기저, ⁋예시 9](/ko/math/basic_linear_algebra/basis#ex9)와 [§벡터공간의 기저, ⁋예시 11](/ko/math/basic_linear_algebra/basis#ex11)로부터 벡터공간 $V$의 basis는 유일할 필요가 없다는 것을 알 수 있다. 그런데, 이 예시들을 보면 공통적으로 basis의 원소의 갯수들은 동일하게 유지된다는 것도 확인할 수 있다. 이는 우연이 아니다.
+[§벡터공간의 기저, ⁋예시 9](/ko/math/linear_algebra/basis#ex9)와 [§벡터공간의 기저, ⁋예시 11](/ko/math/linear_algebra/basis#ex11)로부터 벡터공간 $V$의 basis는 유일할 필요가 없다는 것을 알 수 있다. 그런데, 이 예시들을 보면 공통적으로 basis의 원소의 갯수들은 동일하게 유지된다는 것도 확인할 수 있다. 이는 우연이 아니다.
 
 <div class="proposition" markdown="1">
 
@@ -35,7 +35,7 @@ weight: 5
 2. 그러므로 $V$의 어떤 basis가 유한하다면, 다른 basis들도 모두 유한해야 한다.
 3. 마지막으로, 만일 $V$의 두 유한한 basis가 주어진다면, 이들 두 basis의 원소의 갯수는 동일하다.
 
-물론 이 정리도 지금 증명하자면 못할 것은 없지만, [§벡터공간의 기저, ⁋정리 10](/ko/math/basic_linear_algebra/basis#thm10)과 마찬가지로 이를 증명하기 위해는 약간의 집합론적인 지식이 필요하므로 별도의 글로 분리한다. 다만 마지막 단계는 별다른 배경지식 없이도 증명할 수 있다.
+물론 이 정리도 지금 증명하자면 못할 것은 없지만, [§벡터공간의 기저, ⁋정리 10](/ko/math/linear_algebra/basis#thm10)과 마찬가지로 이를 증명하기 위해는 약간의 집합론적인 지식이 필요하므로 별도의 글로 분리한다. 다만 마지막 단계는 별다른 배경지식 없이도 증명할 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -47,7 +47,7 @@ weight: 5
 
 $\mathcal{B}_1=\\{x_1,x_2,\ldots, x_m\\}$, 그리고 $\mathcal{B}_2=\\{y_1,y_2,\ldots, y_n\\}$이라 하고, $m=n$임을 보여야 한다. 결론에 반하여 $m>n$이라 하자.
 
-우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, ⁋명제 6](/ko/math/basic_linear_algebra/basis#prop6)에 의하여, 집합 $\\{x_1,y_1,y_2,\ldots, y_n\\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
+우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, ⁋명제 6](/ko/math/linear_algebra/basis#prop6)에 의하여, 집합 $\\{x_1,y_1,y_2,\ldots, y_n\\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
 
 $$\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_n y_n=0\tag{1}$$
 
@@ -161,11 +161,11 @@ $S_0=\emptyset$이라 하자. 그럼 $\langle S\rangle_0=\\{0\\}$이다. 이제 
 
 이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\langle S\rangle_i$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 모든 $i < n = \dim V$에 대하여 $S\setminus\langle S\rangle_i$가 공집합이 아니라는 것을 보이면 충분하다. 
 
-자연수 $m$을 $S\setminus\langle S\rangle_m=\emptyset$이도록 택하자. 즉 $S\subseteq\langle S\rangle_m$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/basic_linear_algebra/basis#lem4)로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
+자연수 $m$을 $S\setminus\langle S\rangle_m=\emptyset$이도록 택하자. 즉 $S\subseteq\langle S\rangle_m$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4)로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
 
 $$\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)$$
 
-이고, 우변의 $\langle S\rangle_m$은 이미 $V$의 부분공간이므로 [§벡터공간의 기저, ⁋보조정리 3](/ko/math/basic_linear_algebra/basis#lem3)으로부터 $\span\bigl(\langle S\rangle\bigr)=\langle S\rangle_m$임을 안다. 따라서
+이고, 우변의 $\langle S\rangle_m$은 이미 $V$의 부분공간이므로 [§벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3)으로부터 $\span\bigl(\langle S\rangle\bigr)=\langle S\rangle_m$임을 안다. 따라서
 
 $$V=\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)=\langle S\rangle_m$$
 
