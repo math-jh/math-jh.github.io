@@ -3,13 +3,13 @@
 title: "동형사상"
 excerpt: "서로 동등한 벡터공간들"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/isomorphic_vector_spaces
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/isomorphic_vector_spaces
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Isomorphic_vector_spaces.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Isomorphic_vector_spaces.png
     overlay_filter: 0.5
 
 date: 2022-08-02
@@ -80,7 +80,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§선형사상, ⁋에시 14](/ko/math/basic_linear_algebra/linear_map#ex14)는 임의의 $n$차원 $\mathbb{k}$-벡터공간 $V$가 $V\cong \mathbb{k}^n$을 만족한다는 뜻이다. 또 다른 $n$차원 $\mathbb{k}$-벡터공간 $W$에 대하여도 $W\cong \mathbb{k}^n$이므로, $\cong$가 동치관계라는 것으로부터 $V\cong W$임을 안다.
+[§선형사상, ⁋에시 14](/ko/math/linear_algebra/linear_map#ex14)는 임의의 $n$차원 $\mathbb{k}$-벡터공간 $V$가 $V\cong \mathbb{k}^n$을 만족한다는 뜻이다. 또 다른 $n$차원 $\mathbb{k}$-벡터공간 $W$에 대하여도 $W\cong \mathbb{k}^n$이므로, $\cong$가 동치관계라는 것으로부터 $V\cong W$임을 안다.
 
 </details>
 
@@ -94,7 +94,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§선형사상, ⁋따름정리 9](/ko/math/basic_linear_algebra/linear_map#cor9).
+[§선형사상, ⁋따름정리 9](/ko/math/linear_algebra/linear_map#cor9).
 
 </details>
 

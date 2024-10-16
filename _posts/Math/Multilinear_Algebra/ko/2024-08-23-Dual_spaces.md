@@ -3,13 +3,13 @@
 title: "쌍대공간"
 excerpt: ""
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/dual_spaces
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/dual_spaces
 header:
-    overlay_image: /assets/images/Math/multilinear_Algebra/Dual_spaces.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Dual_spaces.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2024-08-23
 last_modified_at: 2024-09-19
@@ -116,7 +116,7 @@ $$\langle u(x),\xi\rangle=\langle x, u^\ast\xi\rangle$$
 
 ## 쌍대기저
 
-$A$-module $M$이 basis $(x\_i)\_{i\in I}$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/linear_algebra/basis_of_free_module#def1)) 즉 다음의 isomorphism
+$A$-module $M$이 basis $(x\_i)\_{i\in I}$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/multilinear_algebra/basis_of_free_module#def1)) 즉 다음의 isomorphism
 
 $$\varepsilon: A^{\oplus I} \rightarrow M$$
 

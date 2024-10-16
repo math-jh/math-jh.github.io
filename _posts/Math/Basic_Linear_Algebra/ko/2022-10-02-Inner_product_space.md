@@ -3,13 +3,13 @@
 title: "내적공간"
 excerpt: "실수집합 위에서 정의된 내적의 성질"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/inner_product_space
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/inner_product_space
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Inner_product_space.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Inner_product_space.png
     overlay_filter: 0.5
 
 date: 2022-10-02
@@ -150,7 +150,7 @@ $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\rig
 
 ## 정규직교기저
 
-우리는 $\ch\mathbb{R}=0$임을 알고 있으므로, [§쌍선형형식, ⁋명제 6](/ko/math/basic_linear_algebra/bilinear_form#prop6)으로부터 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다는 것을 안다. 
+우리는 $\ch\mathbb{R}=0$임을 알고 있으므로, [§쌍선형형식, ⁋명제 6](/ko/math/linear_algebra/bilinear_form#prop6)으로부터 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다는 것을 안다. 
 
 임의의 $\mathbb{R}$-내적공간 $V$가 주어졌다 하고, $V$에 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$이 주어졌다 하자. 우선
 

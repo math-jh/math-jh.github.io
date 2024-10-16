@@ -3,13 +3,13 @@
 title: "Hom과 텐서곱"
 excerpt: ""
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/hom_and_tensor
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/hom_and_tensor
 header:
-    overlay_image: /assets/images/Math/multilinear_Algebra/Hom_and_tensor.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Hom_and_tensor.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2024-08-30
 last_modified_at: 2024-09-23
