@@ -3,13 +3,13 @@
 title: "선형사상"
 excerpt: "선형사상의 정의와 예시"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/linear_map
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/linear_map
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Linear_map.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Linear_map.png
     overlay_filter: 0.5
 
 date: 2021-10-13
@@ -50,7 +50,7 @@ weight: 7
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, ⁋명제 2](/ko/math/basic_linear_algebra/vector_spaces#prop2), 그리고 [§벡터공간, ⁋따름정리 3](/ko/math/basic_linear_algebra/vector_spaces#cor3)의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
+Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#prop2), 그리고 [§벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#cor3)의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
 
 $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 

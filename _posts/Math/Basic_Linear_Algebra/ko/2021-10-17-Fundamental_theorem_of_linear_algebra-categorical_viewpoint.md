@@ -3,13 +3,13 @@
 title: "기본정리: categorical viewpoint<sup>†</sup>"
 excerpt: "선형대수학의 기본정리와 범주론"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/ftla_categorical_viewpoint
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/ftla_categorical_viewpoint
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
     overlay_filter: 0.5
 
 date: 2021-10-17
@@ -31,7 +31,7 @@ $$f\circ g=\id_B,\qquad g\circ f=\id_A$$
 
 이 성립하는 것이다.
 
-집합 위에 특정한 조건들을 만족하는 연산을 추가하여 우리는 *group*을 정의할 수 있다. ([§가환군과 체, ⁋정의 1](/ko/math/basic_linear_algebra/fields#def1)) $\mathbf{Grp}$을 group들의 모임이라 하자. 두 group $G,H$가 주어졌다 하고, 이들의 연산을 더하기로 표기하자. 함수 $f:G\rightarrow H$가 *group homomorphism<sub>군 준동형사상</sub>*이라는 것은 임의의 $x,y\in G$에 대해 다음의 식
+집합 위에 특정한 조건들을 만족하는 연산을 추가하여 우리는 *group*을 정의할 수 있다. ([§가환군과 체, ⁋정의 1](/ko/math/linear_algebra/fields#def1)) $\mathbf{Grp}$을 group들의 모임이라 하자. 두 group $G,H$가 주어졌다 하고, 이들의 연산을 더하기로 표기하자. 함수 $f:G\rightarrow H$가 *group homomorphism<sub>군 준동형사상</sub>*이라는 것은 임의의 $x,y\in G$에 대해 다음의 식
 
 $$f(x+y)=f(x)+f(y)$$
 
@@ -147,12 +147,12 @@ Essentially surjective한 fully faithful functor $\mathbb{k}$를 $\mathcal{C}$�
 1. 우선 $\mathbf{FVect}_\mathbb{k}$의 대상인 유한차원 $\mathbb{k}$-벡터공간 $V$는 $D$에 의하여 $\dim V\in\obj(\mathbf{Mat}_\mathbb{k})$으로 옮겨진다.
 2. $\mathbf{FVect}\_F$의 임의의 morphism $L\in\Mor(V,W)$는 $D$에 의하여 $[L]^\mathcal{B}\_\mathcal{C}$로 옮겨진다. 
 
-그럼 $D$는 $\mathbf{FVect}_\mathbb{k}$에서 $\mathbf{Mat}_\mathbb{k}$로의 functor이다. ([§선형대수학의 기본정리, ⁋정리 5](/ko/math/basic_linear_algebra/ftla#thm5)) 뿐만 아니라, $D$는 fully faithful이기도 하다. ([§선형대수학의 기본정리, ⁋정리 4](/ko/math/basic_linear_algebra/ftla#thm4)) 마지막으로 임의의 $n\in\mathbf{Mat}_\mathbb{k}$에 대하여, $n$차원 $\mathbb{k}$-벡터공간이 존재하는 것은 자명하므로 $D$는 essentially surjective이기도 하다.[^2] 따라서 $D$는 두 category 사이의 equivalence를 정의한다.
+그럼 $D$는 $\mathbf{FVect}_\mathbb{k}$에서 $\mathbf{Mat}_\mathbb{k}$로의 functor이다. ([§선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)) 뿐만 아니라, $D$는 fully faithful이기도 하다. ([§선형대수학의 기본정리, ⁋정리 4](/ko/math/linear_algebra/ftla#thm4)) 마지막으로 임의의 $n\in\mathbf{Mat}_\mathbb{k}$에 대하여, $n$차원 $\mathbb{k}$-벡터공간이 존재하는 것은 자명하므로 $D$는 essentially surjective이기도 하다.[^2] 따라서 $D$는 두 category 사이의 equivalence를 정의한다.
 
 당연히 두 category 사이의 equivalence는 동치관계가 된다. 이 말은 $\mathbf{FVect}_\mathbb{k}$에서 $\mathbf{Mat}_\mathbb{k}$로의 equivalence 뿐만 아니라, $\mathbf{Mat}_\mathbb{k}$에서 $\mathbf{FVect}_\mathbb{k}$로의 equivalence 또한 있다는 의미이다. 이는 $I:\mathbf{Mat}_\mathbb{k}\rightarrow\mathbf{FVect}_\mathbb{k}$를 
 
 1. 임의의 $n\in\mathbf{Mat}_\mathbb{k}$는 $I$를 통해 $\mathbf{FVect}_\mathbb{k}$의 원소인 $\mathbb{k}^n$으로 옮겨진다. (이 때, $\mathbb{k}^n$은 standard basis $\mathcal{E}_n$이 주어진 것으로 생각한다.)
-2. $\mathbf{Mat}_\mathbb{k}$의 임의의 morphism $A\in\Mor(m,n)$은 $I$를 통해 $L_A:\mathbb{k}^m\rightarrow \mathbb{k}^n$으로 옮겨진다. ([§선형대수학의 기본정리, ⁋예시 1](/ko/math/basic_linear_algebra/ftla#ex1))
+2. $\mathbf{Mat}_\mathbb{k}$의 임의의 morphism $A\in\Mor(m,n)$은 $I$를 통해 $L_A:\mathbb{k}^m\rightarrow \mathbb{k}^n$으로 옮겨진다. ([§선형대수학의 기본정리, ⁋예시 1](/ko/math/linear_algebra/ftla#ex1))
 
 으로 정의하면 된다. $I$가 equivalence라는 것은 $D$가 equivalence라는 것과 아주 크게 다르지는 않으므로 생략한다. 
 

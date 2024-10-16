@@ -3,13 +3,13 @@
 title: "기저변환"
 excerpt: ""
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/change_of_basis
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/change_of_basis
 header:
-    overlay_image: /assets/images/Math/multilinear_Algebra/Change_of_basis.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Change_of_basis.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2024-10-06
 last_modified_at: 2024-10-06
@@ -35,7 +35,7 @@ weight: 8
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\Mat_n(A)$가 associative $A$-algebra인 것은 [§행렬, §§행렬의 곱셈](/ko/math/linear_algebra/matrices#행렬의-곱셈)에서부터 자명하다. $\Mat_n(A)$의 곱셈에 대한 항등원은 다음의 항등행렬
+$\Mat_n(A)$가 associative $A$-algebra인 것은 [§행렬, §§행렬의 곱셈](/ko/math/multilinear_algebra/matrices#행렬의-곱셈)에서부터 자명하다. $\Mat_n(A)$의 곱셈에 대한 항등원은 다음의 항등행렬
 
 $$I_n=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\end{pmatrix}$$
 
@@ -55,7 +55,7 @@ $$E_{ij}E_{jk}=\delta_{jh}E_{ik}$$
 
 </div>
 
-Free $A$-module $M$의 basis $\mathcal{B}=(e\_i)\_{i\in I}$를 고정하고, $\lvert I\rvert=n$이라 하자. 그럼 임의의 $u\in \End_{\lMod{A}}(M)$에 대하여, $\[u\]\_{\mathcal{B}}^\mathcal{B}\in\Mat\_n(A)$이며, 만일 $u$가 isomorphism이라면 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/linear_algebra/matrices_and_linear_maps#lem4)에 의하여 $\[u\]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$이다. 그럼 [§쌍대공간, ⁋명제 5](/ko/math/linear_algebra/dual_spaces#prop5)와 [§행렬과 선형사상, ⁋명제 5](/ko/math/linear_algebra/matrices_and_linear_maps#prop5)에 의하여 다음 식
+Free $A$-module $M$의 basis $\mathcal{B}=(e\_i)\_{i\in I}$를 고정하고, $\lvert I\rvert=n$이라 하자. 그럼 임의의 $u\in \End_{\lMod{A}}(M)$에 대하여, $\[u\]\_{\mathcal{B}}^\mathcal{B}\in\Mat\_n(A)$이며, 만일 $u$가 isomorphism이라면 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#lem4)에 의하여 $\[u\]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$이다. 그럼 [§쌍대공간, ⁋명제 5](/ko/math/multilinear_algebra/dual_spaces#prop5)와 [§행렬과 선형사상, ⁋명제 5](/ko/math/multilinear_algebra/matrices_and_linear_maps#prop5)에 의하여 다음 식
 
 $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\mathcal{B}^\ast}^{\mathcal{B}^\ast}\bigr)^{-1}$$
 
@@ -113,7 +113,7 @@ $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathc
 
 </div>
 
-[\[기초선형대수학\] §기저변환, ⁋정의 2](/ko/math/basic_linear_algebra/change_of_basis#def2) 이전의 논의와 같은 맥락에서, equivalent matrix보다는 더 세밀한 다음의 동치관계를 생각하는 것이 좋다.
+[\[기초선형대수학\] §기저변환, ⁋정의 2](/ko/math/linear_algebra/change_of_basis#def2) 이전의 논의와 같은 맥락에서, equivalent matrix보다는 더 세밀한 다음의 동치관계를 생각하는 것이 좋다.
 
 <div class="definition" markdown="1">
 

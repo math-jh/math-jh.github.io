@@ -3,13 +3,13 @@
 title: "행렬식의 존재성과 유일성"
 excerpt: "행렬식의 존재성, 유일성 증명, 계산방법"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/existence_and_uniqueness_of_determinant
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Existence_and_uniqueness_of_determinant.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Existence_and_uniqueness_of_determinant.png
     overlay_filter: 0.5
 
 date: 2022-08-12
@@ -59,7 +59,7 @@ $$f(v_1,v_2,\ldots, v_n)=\sgn(\sigma)f(v_{\sigma(1)},v_{\sigma(2)},\ldots, v_{\s
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**보조정리 2**</ins> [§행렬식, ⁋정의 4](/ko/math/basic_linear_algebra/determinant#def4)을 만족하는 함수 $D$는 유일하게 존재한다.
+<ins id="lem2">**보조정리 2**</ins> [§행렬식, ⁋정의 4](/ko/math/linear_algebra/determinant#def4)을 만족하는 함수 $D$는 유일하게 존재한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -74,7 +74,7 @@ $$v_i=v_1^ie_1+\cdots v_n^ie_n,\qquad i=1,\ldots, n$$
 $$\begin{aligned}f(v_1,\ldots, v_n)&=\sum_{i_1=1}^nv_{i_1}^1f(e_{i_1},v_2,\ldots, v_n)\\
 &=\sum_{i_1,i_2=1}^n v_{i_1}^1v_{i_2}^2f(e_{i_1},e_{i_2},v_3,\ldots, v_n)\\&=\cdots\\&=\sum_{i_1,\ldots, i_n=1}^nv_{i_1}^1v_{i_2}^2\ldots, v_{i_n}^nf(e_{i_1},\ldots, e_{i_n})\end{aligned}$$
 
-이 성립한다. [§행렬식, ⁋명제 3](/ko/math/basic_linear_algebra/determinant#prop3)에 의하여, $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $f(e_{i_1},\ldots,e_{i_n})$의 값은 항상 0이 되므로, 우변의 식은 
+이 성립한다. [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여, $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $f(e_{i_1},\ldots,e_{i_n})$의 값은 항상 0이 되므로, 우변의 식은 
 
 $$f(v_1,\ldots, v_n)=\sum_{\sigma\in S_n}v^1_{\sigma(1)}v^2_{\sigma(2)}\cdots v^n_{\sigma(n)}f(e_{\sigma(1)},\ldots, e_{\sigma(n)})$$
 
@@ -162,7 +162,7 @@ $$\sum_{\tau\in S_n}\sgn(\tau)\det(A)B_{\tau(1)1}\cdots B_{\tau(n)n}=\det(A)\det
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-선형대수학의 기본정리로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{k}^n\rightarrow \mathbb{k}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{k}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/basic_linear_algebra/determinant#prop3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
+선형대수학의 기본정리로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{k}^n\rightarrow \mathbb{k}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{k}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
 
 거꾸로 $A$가 가역이라 가정하자. 그럼 다음의 식
 
@@ -192,7 +192,7 @@ $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 
 </div>
 
-특별히 모든 $n\times n$ 행사다리꼴행렬은 모두 상삼각행렬이다. ([§가우스 소거법, ⁋정의 2](/ko/math/basic_linear_algebra/Gaussian_elimination#def2))
+특별히 모든 $n\times n$ 행사다리꼴행렬은 모두 상삼각행렬이다. ([§가우스 소거법, ⁋정의 2](/ko/math/linear_algebra/Gaussian_elimination#def2))
 
 
 <div class="proposition" markdown="1">
@@ -211,7 +211,7 @@ $$\det A=\sum_{\sigma\in S_n}\sgn(\sigma)A_{\sigma(1)1}A_{\sigma(2)2}\cdots A_{\
 
 </details>
 
-[§가우스 소거법](/ko/math/basic_linear_algebra/Gaussian_elimination)에 의해 임의의 행렬은 기본행연산을 반복하여 행사다리꼴행렬로 바꿀 수 있다. 임의의 행사다리꼴행렬은 모두 상삼각행렬이므로, 위의 명제를 통하면 이렇게 얻어진 행사다리꼴행렬의 행렬식을 매우 쉽게 구할 수 있다. 한편 기본행연산을 적용하는 것은 기본행렬들을 곱하는 것과 같다. 따라서, 만일 행렬 $A$로부터 기본행연산 $E_1,\ldots, E_k$를 반복하여 행사다리꼴행렬 $A'$를 얻었다면, 
+[§가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination)에 의해 임의의 행렬은 기본행연산을 반복하여 행사다리꼴행렬로 바꿀 수 있다. 임의의 행사다리꼴행렬은 모두 상삼각행렬이므로, 위의 명제를 통하면 이렇게 얻어진 행사다리꼴행렬의 행렬식을 매우 쉽게 구할 수 있다. 한편 기본행연산을 적용하는 것은 기본행렬들을 곱하는 것과 같다. 따라서, 만일 행렬 $A$로부터 기본행연산 $E_1,\ldots, E_k$를 반복하여 행사다리꼴행렬 $A'$를 얻었다면, 
 
 $$A'=E_kE_{k-1}\cdots E_1 A$$
 

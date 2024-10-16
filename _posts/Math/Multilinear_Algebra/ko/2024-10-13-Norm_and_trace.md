@@ -3,13 +3,13 @@
 title: "노름과 대각합"
 excerpt: ""
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/norm_and_trace
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/norm_and_trace
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Norm_and_trace.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Norm_and_trace.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2024-10-13
 last_modified_at: 2024-10-13
@@ -40,3 +40,7 @@ $$\tr_{M/A}(\alpha)=\tr(\alpha_M),\qquad N_{M/A}(\alpha)=\det(\alpha_M),\qquad \
 $$\tr_{M/A}(\alpha+\beta)=\tr_{M/A}(\alpha)+\tr_{M/A}(\beta),\qquad \tr_{M/A}(\alpha\beta)=\tr_{M/A}(\beta\alpha),\qquad N_{M/A}(\alpha\beta)=N_{M/A}(\alpha)N_{M/A}(\beta)$$
 
 를 얻는다. 또, 이들을 행렬의 trace, determinant, characteristic polynomial로 볼 수 있는 것도 앞선 글에서 살펴보았다. 
+
+주목할 만한 사실은 위의 선택은 $M$의 isomorphism class에만 의존한다는 것이다. 이는 $M$에서 $M'$로의 isomorphism이 있다면 이 isomorphism을 따라 $M$의 basis가 $M'$의 basis로 옮겨지며, 이 basis에 대해 $\alpha_{M'}$을 행렬로 나타낸 것이 원래의 basis에 대해 $\alpha_M$을 행렬로 나타낸 것과 같기 때문이다.
+
+한편 

@@ -3,13 +3,13 @@
 title: "행렬식"
 excerpt: ""
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/determinants
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/determinants
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Determinants.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Determinants.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2024-10-07
 last_modified_at: 2024-10-07
@@ -68,11 +68,11 @@ Free $A$-module $M$과 그 basis $e_1,\ldots, e_n$을 고정하면, 임의의 $M
 
 $$x_1\wedge \cdots\wedge x_n=\alpha e_1\wedge\cdots\wedge e_n$$
 
-이도록 하는 $\alpha$가 존재하며, 이를 $\det(x_1,\ldots, x_n)$과 같이 적는다. 이 값을 실제로 계산하기 위해서는 $x_i$들 각각을 $e_1,\ldots, e_n$에 대한 linear combination으로 나타낸 후 $e_i\wedge e_i=0$과 $e_i\wedge e_j=-e_j\wedge e_i$를 이용하여 이를 모두 정리해주면 된다. $A=\mathbb{k}$인 경우 이는 이미 [\[기초 선형대수학\] §행렬식의 존재성과 유일성, 식 (2)](/ko/math/basic_linear_algebra/existence_and_uniqueness_of_determinant#lem2)에서 살펴본 것이다. 조금 더 자세히 설명하자면, 임의의 $X\in\Mat_n(A)$를 열벡터들을 이용해 $X=(x_1,\ldots, x_n)$으로 적을 경우, $u(e_i)=x_i$를 만족하는 유일한 $u\in\End_\rMod{A}(M)$에 대하여 $\det(u)$가 잘 정의되며, 이는 [따름정리 3](#cor3)의 증명에서 나온 식과 비교해보면 $\det (x_1,\ldots, x_n)=\det(u)$이다. 그럼 이로부터 [명제 2](#prop2)의 행렬 버전의 명제를 만들 수 있으며, 이를 계산하는 과정이 곧 [\[기초 선형대수학\] §행렬식의 존재성과 유일성, 식 (2)](/ko/math/basic_linear_algebra/existence_and_uniqueness_of_determinant#lem2)이 된다. 특히 이로부터 $\det(u^\ast)=\det(u)$인 것을 알 수 있다.
+이도록 하는 $\alpha$가 존재하며, 이를 $\det(x_1,\ldots, x_n)$과 같이 적는다. 이 값을 실제로 계산하기 위해서는 $x_i$들 각각을 $e_1,\ldots, e_n$에 대한 linear combination으로 나타낸 후 $e_i\wedge e_i=0$과 $e_i\wedge e_j=-e_j\wedge e_i$를 이용하여 이를 모두 정리해주면 된다. $A=\mathbb{k}$인 경우 이는 이미 [\[선형대수학\] §행렬식의 존재성과 유일성, 식 (2)](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2)에서 살펴본 것이다. 조금 더 자세히 설명하자면, 임의의 $X\in\Mat_n(A)$를 열벡터들을 이용해 $X=(x_1,\ldots, x_n)$으로 적을 경우, $u(e_i)=x_i$를 만족하는 유일한 $u\in\End_\rMod{A}(M)$에 대하여 $\det(u)$가 잘 정의되며, 이는 [따름정리 3](#cor3)의 증명에서 나온 식과 비교해보면 $\det (x_1,\ldots, x_n)=\det(u)$이다. 그럼 이로부터 [명제 2](#prop2)의 행렬 버전의 명제를 만들 수 있으며, 이를 계산하는 과정이 곧 [\[선형대수학\] §행렬식의 존재성과 유일성, 식 (2)](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2)이 된다. 특히 이로부터 $\det(u^\ast)=\det(u)$인 것을 알 수 있다.
 
 ## 행렬의 소행렬식
 
-한편 행렬식을 계산하는 방법 중, 라플라스 전개를 이용하는 [\[기초 선형대수학\] §행렬식의 존재성과 유일성, ⁋정리 13](/ko/math/basic_linear_algebra/existence_and_uniqueness_of_determinant#thm13)이 있었는데, 이 계산 자체는 이미 다루었으므로 반복하지 않지만, 여기에서 등장했던 $\det A^{(i,j)}$들을 일반화할 수 있다.
+한편 행렬식을 계산하는 방법 중, 라플라스 전개를 이용하는 [\[선형대수학\] §행렬식의 존재성과 유일성, ⁋정리 13](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#thm13)이 있었는데, 이 계산 자체는 이미 다루었으므로 반복하지 않지만, 여기에서 등장했던 $\det A^{(i,j)}$들을 일반화할 수 있다.
 
 이를 위해 임의의 $X=(\xi_{ij})\in\Mat_{I\times J}$가 주어졌다 하자. $I$와 $J$ 위에 정의된 total ordering를 하나 고정하면, 임의의 유한한 부분집합 $H\subseteq I$, $K\subseteq J$가 주어질 때마다 이들로 만들어진 부분행렬 $X_{H,K}=(\xi_{i,j})_{i\in H,j\in K}$의 index에도 total order가 주어진다. 특히 만일 $\lvert H\rvert=\lvert K\rvert$인 경우를 생각하자. 그럼 다음의 보조정리는 자명하다.
 
