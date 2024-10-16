@@ -277,11 +277,11 @@ category_archive:
 #     tag: /tags/:name/
 
 categories_order:
-  - Math / Basic Linear Algebra
+  - Math / Linear Algebra
   - Math / Set Theory
   - Math / Category Theory
   - Math / Algebraic Structures
-  - Math / Linear Algebra
+  - Math / Multilinear Algebra
   - Math / Commutative Algebra
   - Math / Topology
   - Math / Manifold

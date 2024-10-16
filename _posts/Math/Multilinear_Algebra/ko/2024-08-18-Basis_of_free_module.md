@@ -3,13 +3,13 @@
 title: "기저"
 excerpt: ""
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/basis
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/basis
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Basis.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Basis.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2024-08-18
 last_modified_at: 2024-09-23
@@ -63,7 +63,7 @@ $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 
 
 </div>
 
-주의할 점은 $x$가 free element일 필요가 없다는 것이다. 즉, 어떠한 $\alpha\neq 0$이 존재하여 $\alpha x=0$이 될 수도 있으며, 이것이 [\[기초 선형대수학\]]()에서 다루던 것과 다른 점이다. 
+주의할 점은 $x$가 free element일 필요가 없다는 것이다. 즉, 어떠한 $\alpha\neq 0$이 존재하여 $\alpha x=0$이 될 수도 있으며, 이것이 [\[선형대수학\]]()에서 다루던 것과 다른 점이다. 
 
 ## 불변기저수
 
@@ -96,7 +96,7 @@ $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 
 
 예를들어, $A=0$은 이 성질을 만족하지 않는다. 임의의 $m,n$에 대해 $0^m\cong 0^n$이기 때문이다. 
 
-[\[기초 선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/basic_linear_algebra/dimension#lem2)에 의해, 임의의 field는 invariant basis number property를 갖는다. 이를 사용하면 다음의 더 일반적인 명제를 보일 수 있다.
+[\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)에 의해, 임의의 field는 invariant basis number property를 갖는다. 이를 사용하면 다음의 더 일반적인 명제를 보일 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -114,7 +114,7 @@ $$M\cong \bigoplus_{i\in I} Ax_i$$
 
 $$\phi^\ast M\cong\phi^\ast\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{i\in I}\phi^\ast Ax_i$$
 
-이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 또, $x_i$가 free element라는 사실로부터 $Ax_i\cong A$이고, $\phi^\ast A\cong \mathbb{k}$이므로 $\phi^\ast M\cong \bigoplus_{i\in I}\mathbb{k}$이다. 이제 [\[기초 선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/basic_linear_algebra/dimension#lem2)를 적용하면 원하는 결과를 얻는다.
+이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 또, $x_i$가 free element라는 사실로부터 $Ax_i\cong A$이고, $\phi^\ast A\cong \mathbb{k}$이므로 $\phi^\ast M\cong \bigoplus_{i\in I}\mathbb{k}$이다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)를 적용하면 원하는 결과를 얻는다.
 
 </details>
 

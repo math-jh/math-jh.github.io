@@ -3,13 +3,13 @@
 title: "벡터공간"
 excerpt: "벡터공간의 정의, 간단한 성질과 예시들"
 
-categories: [Math / Basic Linear Algebra]
-permalink: /ko/math/basic_linear_algebra/vector_spaces
+categories: [Math / Linear Algebra]
+permalink: /ko/math/linear_algebra/vector_spaces
 sidebar: 
-    nav: "basic_linear_algebra-ko"
+    nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Basic_Linear_Algebra/Vector_spaces.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Vector_spaces.png
     overlay_filter: 0.5
 
 date: 2022-07-28
@@ -42,7 +42,7 @@ weight: 2
 
 스칼라곱도 마찬가지로 $\alpha\cdot u$와 같은 표기 대신 $\alpha u$와 같이 적기로 한다. 이 경우 유일한 걱정은 $\alpha\beta u$라고 쓸 때 이것이 $(\alpha\beta)u$인지, $\alpha(\beta u)$인지 헷갈릴 수 있다는 것인데, 위 정의의 첫 번째 조건에 의해 어떤 것을 선택하더라도 그 값은 동일하므로 이는 걱정할 필요가 없다.  
 
-벡터공간은 abelian group $V$ 위에 추가적인 구조인 $\mathbb{k}$-스칼라곱이 정의된 형태이다. 때문에 $V$는 abelian group이 갖는 성질을 모두 갖는다. ([§가환군과 체, ⁋명제 2](/ko/math/basic_linear_algebra/fields#prop2) 그리고 [§가환군과 체, ⁋따름정리 3](/ko/math/basic_linear_algebra/fields))
+벡터공간은 abelian group $V$ 위에 추가적인 구조인 $\mathbb{k}$-스칼라곱이 정의된 형태이다. 때문에 $V$는 abelian group이 갖는 성질을 모두 갖는다. ([§가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#prop2) 그리고 [§가환군과 체, ⁋따름정리 3](/ko/math/linear_algebra/fields))
 
 다음 성질들은 $\mathbb{k}$-스칼라곱에 의해 결정되는 추가적인 성질들이다.
 
@@ -59,7 +59,7 @@ weight: 2
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-처음 두 주장은 [§가환군과 체, ⁋명제 6](/ko/math/basic_linear_algebra/fields#prop6)과 비슷하게 진행하면 된다. 예를 들어, 
+처음 두 주장은 [§가환군과 체, ⁋명제 6](/ko/math/linear_algebra/fields#prop6)과 비슷하게 진행하면 된다. 예를 들어, 
 
 $$\alpha0+\alpha0=\alpha(0+0)=\alpha0$$
 

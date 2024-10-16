@@ -3,13 +3,13 @@
 title: "행렬과 선형사상"
 excerpt: ""
 
-categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/matrices_and_linear_maps
+categories: [Math / Multilinear Algebra]
+permalink: /ko/math/multilinear_algebra/matrices_and_linear_maps
 header:
     overlay_image: /assets/images/Math/multilinear_Algebra/Matrices_and_linear_maps.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "linear_algebra-ko"
+    nav: "multilinear_algebra-ko"
 
 date: 2024-09-05
 last_modified_at: 2024-09-19
@@ -19,7 +19,7 @@ weight: 7
 
 ## 좌표표현
 
-이제 우리는 행렬과 linear map 사이의 관계를 살펴본다. 이는 [\[기초 선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/basic_linear_algebra/ftla#thm5)의 일반화라 생각할 수 있다. 편의를 위해 
+이제 우리는 행렬과 linear map 사이의 관계를 살펴본다. 이는 [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)의 일반화라 생각할 수 있다. 편의를 위해 
 
 Free $A$-module $M$이 주어졌다 하고, $M$의 basis $\mathcal{B}=(e\_i)\_{i\in I}$를 고정하자. 그럼 임의의 $x\in M$은 
 
@@ -29,7 +29,7 @@ $$x=\sum_{i\in I} x_i e_i,\qquad x_i\in A$$
 
 $$x_i=\langle x,e_i^\ast\rangle\tag{1}$$
 
-으로 적을 수 있는 것도 눈여겨 볼 만하다. ([§쌍대공간, ⁋정의 6](/ko/math/linear_algebra/dual_spaces#def6))
+으로 적을 수 있는 것도 눈여겨 볼 만하다. ([§쌍대공간, ⁋정의 6](/ko/math/multilinear_algebra/dual_spaces#def6))
 
 ## 선형사상의 행렬표현
 
@@ -79,7 +79,7 @@ $$u(e_i)=\sum_{j\in J} \langle u(e_i),f_j^\ast\rangle f_j$$
 
 ## 행렬표현의 곱
 
-우리는 앞서 두 행렬의 곱을 정의하는 방법을 살펴보았다. [\[기초 선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/basic_linear_algebra/ftla#thm5)와 마찬가지로, 이들 행렬의 곱은 선형사상의 합성에 대응된다. 우선 다음 명제를 보이자.
+우리는 앞서 두 행렬의 곱을 정의하는 방법을 살펴보았다. [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)와 마찬가지로, 이들 행렬의 곱은 선형사상의 합성에 대응된다. 우선 다음 명제를 보이자.
 
 <div class="proposition" markdown="1">
 
@@ -93,7 +93,7 @@ $$[u(x)]_\mathcal{C}=[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우변의 식은 열벡터가 나오는 것을 확인할 수 있으며, 이 때 [§행렬, §§행렬의 곱셈](/ko/math/linear_algebra/matrices#행렬의-곱셈)의 식 (2)에 의하여, 우변의 식의 $j$번째 성분은 
+우변의 식은 열벡터가 나오는 것을 확인할 수 있으며, 이 때 [§행렬, §§행렬의 곱셈](/ko/math/multilinear_algebra/matrices#행렬의-곱셈)의 식 (2)에 의하여, 우변의 식의 $j$번째 성분은 
 
 $$\left([u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}\right)_{j0}=\sum_{i\in I}\left([u]_\mathcal{C}^\mathcal{B}\right)_{ji}\left([x]_\mathcal{B}\right)_{i0}=\sum_{i\in I}\left\langle u(e_i),f_j^\ast\right\rangle \left\langle x,e_i^\ast\right\rangle$$
 
@@ -143,7 +143,7 @@ $$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^\ast\right]_{\mathcal{B}^\a
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§쌍대공간, ⁋명제 8](/ko/math/linear_algebra/dual_spaces#prop8)에 의하여 $M$과 $M^{\ast\ast}$를 같은 것으로 취급할 수 있고, 이 때 $\mathcal{B}$는 $\mathcal{B}^\ast$의 dual basis $\mathcal{B}^{\ast\ast}$에 대응되게 된다. 이제
+[§쌍대공간, ⁋명제 8](/ko/math/multilinear_algebra/dual_spaces#prop8)에 의하여 $M$과 $M^{\ast\ast}$를 같은 것으로 취급할 수 있고, 이 때 $\mathcal{B}$는 $\mathcal{B}^\ast$의 dual basis $\mathcal{B}^{\ast\ast}$에 대응되게 된다. 이제
 
 $$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^\ast(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^\ast(f^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
 
@@ -153,7 +153,7 @@ $$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\l
 
 ## 행렬표현과 trace
 
-앞서 우리는 [§Hom과 텐서곱, ⁋정의 4](/ko/math/linear_algebra/hom_and_tensor#def4)에서 linear map의 trace를 정의하였다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
+앞서 우리는 [§Hom과 텐서곱, ⁋정의 4](/ko/math/multilinear_algebra/hom_and_tensor#def4)에서 linear map의 trace를 정의하였다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$
 
