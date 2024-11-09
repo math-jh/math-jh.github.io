@@ -13,57 +13,45 @@ sidebar:
 
 date: 2024-09-05
 last_modified_at: 2024-10-16
-weight: 1
+weight: 2
 
 ---
 
-이 카테고리의 모든 글에서 등장하는 ring은 commutative ring이다. 또, 임의의 $A$-algebra는 항상 commutative associative unital $A$-algebra인 것으로 생각한다. 
+## 국소환
 
-## 기본 정의들
-
-우선 이 카테고리에서 사용할 몇 가지 정의를 소개한다. 
+이번 글에서 우리는 localization을 정의한다. 간단히 이야기해서 localization은 ring $A$를 local ring으로 만드는 과정이라 생각할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 $A$-module $M$에 대하여, $M$의 *annihilator<sub>소멸자</sub>* $\ann(M)$을 다음 식
-
-$$\ann(M)=\{a\in A: aM=0\}$$
-
-으로 정의한다. 
+<ins id="def1">**정의 1**</ins> Ring $A$가 *local ring<sub>국소환</sub>*이라는 것은 $A$가 유일한 maximal ideal을 갖는 것이다.
 
 </div>
 
-더 일반적으로 $A$의 두 ideal $\mathfrak{a},\mathfrak{b}$에 대하여 *ideal quotient* $(\mathfrak{a}:\mathfrak{b})$를 다음 식
+그럼 다음 동치관계를 보일 수 있다.
 
-$$(\mathfrak{a}:\mathfrak{b})=\{a\in A: \mathfrak{b}\subseteq \mathfrak{a}\}$$
+<div class="proposition" markdown="1">
 
-으로 정의하자. 이 ideal은 대략적으로 $\mathfrak{a}/\mathfrak{b}$ 정도로 생각하면 된다. 그럼 $A$-module $M$의 두 submodule $N_1,N_2$에 대하여 
+<ins id="prop2">**명제 2**</ins> Ring $A$에 대하여, 다음이 동치이다.
 
-$$(N_1:N_2)=\{a\in A: aN_2\subseteq N_1\}$$
-
-으로 정의한다. 
-
-한편 우리는 [\[다중선형대수학\] §완전열, ⁋명제 7](/ko/math/multilinear_algebra/exact_sequences#prop7)에서 유용한 두 개의 short exact sequence를 살펴보았는데, 여기에 다음의 short exact sequence
-
-$$0 \rightarrow A/(\mathfrak{a}:a) \rightarrow A/\mathfrak{a}\rightarrow A/(\mathfrak{a}+(a)) \rightarrow 0$$
-
-을 추가하여 기억할 가치가 있다. 여기에서 $A/ \mathfrak{a} \rightarrow A/(\mathfrak{a}+(a))$는 $x+\mathfrak{a}\mapsto x+(\mathfrak{a}+(a))$으로 정의되는 $A$-linear map이며, 이 함수의 kernel을 생각해보면 정확히 $a+\mathfrak{a}$로 생성되는 $A/\mathfrak{a}$의 submodule인 것을 알 수 있다. 이 kernel은 monogeneous $A$-module로서, 적당한 ideal $\mathfrak{b}$를 사용하여 $A/\mathfrak{b}$로 나타낼 수 있으며, 정의에 의하여 $\mathfrak{b}$는 이 원소 $a+\mathfrak{a}$의 annihilator여야 한다. 이로부터 위의 short exact sequence를 얻는다. 
-
-마지막으로 다음을 정의한다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> $A$-module $M$이 *finitely presented*라는 것은 적당한 $m,n$이 존재하여 다음의 exact sequence
-
-$$A^{\otimes m} \rightarrow A^{\otimes n} \rightarrow M \rightarrow 0$$
-
-이 존재하는 것이다. 
+1. $A$가 local ring이다. 
+2. $A$의 임의의 non-unit은 모두 $A$의 어떠한 ideal $\mathfrak{m}\subsetneq A$에 속한다.
+3. $A$의 모든 non-unit을 모아둔 것이 ideal을 이룬다.
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 1번을 가정하고, $A$의 임의의 non-unit $a\in A$가 주어졌다 하자. 그럼 $(a)$는 $A$의 ideal이므로 [\[대수적 구조\] §환의 정의, ⁋정리 9](/ko/math/algebraic_structures/rings#thm9)에 의하여 어떠한 maximal ideal에 포함된다. 그런데 $A$는 유일한 maximal ideal $\mathfrak{m}$을 가지므로, $(a)\subseteq \mathfrak{m}$일 수밖에 없고, 따라서 $a\in \mathfrak{m}$이다.
+
+이제 2번을 가정하고 3번을 보이자. 이를 위해서는 $A$의 non-unit들을 모아둔 것이 덧셈에 대해 닫혀있음만 보이면 충분하다. 우선 $\mathfrak{m}\neq A$인 것으로부터 $\mathfrak{m}$은 $A$의 unit을 포함하지 않음을 안다. 이로부터 $A$의 non-unit을 모두 모아두면 반드시 이것이 $\mathfrak{m}$과 같아야 함을 안다. 
+
+마지막으로 3번 조건을 가정하고 1번 조건을 보여야 한다. 임의의 ideal $\mathfrak{a}\subsetneq A$에 대하여, 앞선 관찰로부터 $\mathfrak{a}$는 non-unit들로만 이루어져 있다는 것을 알고, 따라서 $\mathfrak{a}$는 $A$의 모든 non-unit들을 모아둔 ideal $\mathfrak{m}$에 속한다. 한편 $\mathfrak{m}$은 maximal ideal인데, 이는 $A\setminus \mathfrak{m}$의 임의의 원소는 $A$의 unit이므로, $\mathfrak{m}$을 포함하는 ideal은 $A$ 뿐이기 때문이다.
+
+</details>
 
 ## 가군의 국소화
 
-이제 본격적으로 localization을 정의한다. 
+앞선 글에서 설명한 것과 마찬가지로, ring의 localization을 보기 위해 우리는 더 일반적으로 module의 localization을 정의한다. 
 
 <div class="definition" markdown="1">
 
@@ -171,16 +159,6 @@ Ring의 localization은 다음과 같은 universal property를 갖는다.
 
 </details>
 
-Ring $A$에 대하여, $A$의 ideal들의 increasing sequence
-
-$$\mathfrak{a}_1\subseteq \mathfrak{a}_2\subseteq \cdots$$
-
-가 주어질 때마다 적당한 $k$가 존재하여 $\mathfrak{a}\_k=\mathfrak{a}\_{k+1}=\cdots$를 만족하면 $A$가 *ascending chain condition*을 만족한다 하고, 이러한 ring을 *noetherian ring<sub>뇌터 환</sub>*이라 부른다. 더 일반적으로 $A$-module $M$이 noetherian인 것은 임의의 submodule들의 increasing sequence
-
-$$M_1\subseteq M_2\subseteq \cdots$$
-
-가 주어질 때마다 적당한 $k$가 존재하여 $M_k=M_{k+1}=\cdots$를 만족하는 것이다.
-
 위의 명제로부터 다음이 자명하다.
 
 <div class="proposition" markdown="1">
@@ -191,3 +169,44 @@ $$M_1\subseteq M_2\subseteq \cdots$$
 
 한편 [명제 7](#prop7)로부터, $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여 $\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$는 $A_\mathfrak{p}$의 *maximal* ideal이라는 것이 자명하다. 따라서 quotient field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$가 잘 정의된다. 이를 $A$의 $\mathfrak{p}$에서의 *residue field*라 부르고 $\kappa(\mathfrak{p})$로 적는다. 
 
+## 아이디얼의 근기
+
+다음의 결과는 엄밀히 이야기하면 localization과는 관계가 없지만, 이를 적어주는 데에 multiplicative subset을 사용하므로 여기에서 언급하고 넘어간다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9**</ins> Ring $A$와 multiplicative subset $S$에 대하여, $\mathfrak{a}$가 $S$와 만나지 않는 ideal 중 maximal한 것이라 가정하자. 그럼 $\mathfrak{a}$는 prime ideal이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$A$의 두 원소 $a_1,a_2$가 주어졌다 하고, $a_1,a_2\not\in \mathfrak{a}$라면 $a_1a_2\not\in \mathfrak{a}$임을 보이자. $\mathfrak{a}$의 maximality에 의하여, 두 ideal $\mathfrak{a}+(a_1)$과 $\mathfrak{a}+(a_2)$는 반드시 $S$와 만나야 하므로, 적당한 $b_1,b_2\in A$와 $x_1,x_2\in \mathfrak{a}$에 대하여 $a_ib_i+x_i\in S$가 성립해야 한다. 그런데 $S$는 곱셈에 대해 닫혀있으므로, 다음 원소
+
+$$(a_1b_1+x_1)(a_2b_2+x_2)=a_1a_2b_1b_2+a_1b_1x_2+a_2b_2x_1+x_1x_2$$
+
+또한 $S$에 속해있어야 한다. 만일 결론에 반하여 $a_1a_2\in \mathfrak{a}$라면, 우변의 네 항은 모두 $\mathfrak{a}$에 속하므로 이는 $\mathfrak{a}$와 $S$가 만나지 않는다는 가정에 모순이다.
+
+</details>
+
+비슷한 맥락에서 다음을 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="cor10">**따름정리 10**</ins> Ring $A$의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *radical<sub>근기</sub>* $\sqrt{\mathfrak{a}}$를 다음 식
+
+$$\sqrt{\mathfrak{a}}=\{a: a^k\in \mathfrak{a}\text{ for some $k\in \mathbb{N}$}\}$$
+
+으로 정의하자. 그럼
+
+$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $\mathfrak{a}$} \mathfrak{p}$$
+
+이 성립한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\\{a^k: k\geq 1\\}$로 두고 [명제 9](#prop9)를 적용하면 된다.
+
+</details>

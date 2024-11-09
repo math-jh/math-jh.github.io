@@ -153,7 +153,7 @@ $$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\l
 
 ## 행렬표현과 trace
 
-앞서 우리는 [§Hom과 텐서곱, ⁋정의 4](/ko/math/multilinear_algebra/hom_and_tensor#def4)에서 linear map의 trace를 정의하였다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
+앞서 우리는 [§Hom과 텐서곱, ⁋정의 4](/ko/math/multilinear_algebra/hom_and_tensor#def6)에서 linear map의 trace를 정의하였다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$
 

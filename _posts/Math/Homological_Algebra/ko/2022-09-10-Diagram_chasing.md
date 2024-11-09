@@ -1,7 +1,7 @@
 ---
 
 title: "Diagram chasing"
-excerpt: "기본정의"
+excerpt: "Five lemma, snake lemma"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/diagram_chasing
@@ -12,22 +12,24 @@ sidebar:
     nav: "homological_algebra-ko"
 
 date: 2022-09-10
-last_modified_at: 2022-09-10
-weight: 2
+last_modified_at: 2024-10-31
+weight: 1
 
 ---
 
-호몰로지 대수학에서는 diagram chasing이라 부르는 증명방법이 많이 사용된다. 이번 글에서는 이를 사용한 몇 가지 결과를 정리한다.
+호몰로지 대수학은 말 그대로 chain complex들이 주어졌을 때 이들의 호몰로지를 이용하여 그 성질을 살펴보는 학문이다. ([\[범주론\] §아벨 카테고리, ⁋정의 4](/ko/math/category_theory/abelian_categories#def4)) Chain complex는 임의의 abelian category에서 정의되지만, Freyd-Mitchell embedding theorem에 의해 이들은 모두 적당한 $\lMod{A}$의 full subcategory로 embed될 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정리 9](/ko/math/category_theory/abelian_categories#thm9)) 
 
-## The five lemma
+이번 글에서는 호몰로지 대수를 할 때 필수적인 보조정리인 5항 보조정리와 뱀 보조정리를 증명한다. 이들의 증명은 kernel과 cokernel의 universal property를 사용하여 하는 것이 가능하지만, 이는 증명을 불필요하게 길게 만들 수 있으므로 우리는 모든 증명을 $\lMod{A}$에서 진행한다. 이는 특히 각 대상들에서 원소를 뽑아올 수 있음을 의미한다. 이와 같은 증명을 diagram chasing이라 부르며, 임의의 abelian category 대신 $\lMod{A}$에서 증명을 진행하는 것은 위에서 언급한 Freyd-Mitchell embedding theorem에 의해 정당화될 수 있다.
+
+## 5항 보조정리
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1 (The four lemma)**</ins> $R$-module들의 commutative diagram
+<ins id="prop1">**명제 1 (The four lemma)**</ins> 각 행들이 exact인 commutative diagram
 
 ![Four_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-1.png){:width="300.15px" class="invert" .align-center}
 
-이 주어졌다 하자. 이 때 위와 아래의 행은 모두 exact이다. $\alpha$가 전사이고, $\delta$가 단사라 가정하자. 그럼
+이 주어졌다 하고, $\alpha$가 전사이고, $\delta$가 단사라 가정하자. 그럼
 
 1. 만일 $\gamma$가 전사라면 $\beta$ 또한 전사이다.
 2. 만일 $\beta$가 단사라면 $\gamma$ 또한 단사이다.
@@ -73,31 +75,31 @@ weight: 2
 
 <div class="proposition" markdown="1">
 
-<ins id="cor2">**따름정리 2 (The five lemma)**</ins> $R$-module들의 commutative diagram
+<ins id="cor2">**따름정리 2 (The five lemma)**</ins> 각 행이 exact인 commutative diagram
 
 ![five_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-2.png){:width="410.25px" class="invert" .align-center}
 
-이 주어졌다 하자. 이 때 위와 아래의 행은 모두 exact이다. 만일 $\alpha,\beta,\delta,\epsilon$이 모두 전단사라면, $\gamma$ 또한 전단사이다.
+이 주어졌다 하자. 만일 $\alpha,\beta,\delta,\epsilon$이 모두 전단사라면, $\gamma$ 또한 전단사이다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="cor3">**따름정리 3 (The short five lemma)**</ins> $R$-module들의 commutative diagram
+<ins id="cor3">**따름정리 3 (The short five lemma)**</ins> 각 행이 exact인 commutative diagram
 
 ![short_five_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-3.png){:width="384.45px" class="invert" .align-center}
 
-이 주어졌다 하자. 이 때 위와 아래의 행은 모두 exact이다. 이제 $\alpha,\gamma$가 모두 단사라면 $\beta$도 단사이고, $\alpha,\gamma$가 모두 전사라면 $\beta$도 전사이다.
+이 주어졌다 하자. 만일 $\alpha,\gamma$가 모두 단사라면 $\beta$도 단사이고, $\alpha,\gamma$가 모두 전사라면 $\beta$도 전사이다.
 
 </div>
 
-## The snake lemma
+## 뱀 보조정리
 
-이번 글에서 우리의 주된 목표는 snake lemma를 증명하는 것인데, 이 보조정리는 보여야 할 것이 많아서 **[Hu]**의 연습문제를 순서대로 따라가는 것이 더 좋아보인다.
+남은 글에서 우리의 주된 목표는 뱀 보조정리를 증명하는 것인데, 이를 위해서는 두 개의 보조정리가 필요하다.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem4">**보조정리 4**</ins> $R$-module들의 commutative square
+<ins id="lem4">**보조정리 4**</ins> Commutative square
 
 ![induced_morphism](/assets/images/Math/Homological_Algebra/Diagram_chasing-4.png){:width="135.9px" class="invert" .align-center}
 
@@ -115,7 +117,7 @@ $i:\ker(h)\rightarrow X$와 $\xi$의 합성 $\xi\circ i:\ker h\rightarrow X'$를
 
 $$h'\circ(\xi\circ i)=(\eta\circ h)\circ i=\eta\circ 0=0$$
 
-이므로, [§완전열, ⁋명제 5](/ko/math/homological_algebra/exact_sequences#prop5)로부터 유일한 $\xi^\sharp:\ker(h)\rightarrow\ker(h')$가 존재한다는 것을 안다. 
+이므로, kernel의 universal property로부터 유일한 $\xi^\sharp:\ker(h)\rightarrow\ker(h')$가 존재한다는 것을 안다. 
 
 ![induced_morphism_kernel](/assets/images/Math/Homological_Algebra/Diagram_chasing-5.png){:width="274.2px" class="invert" .align-center}
 
@@ -139,7 +141,7 @@ $$\ker(h)\subseteq\ker(p\circ\xi)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> $R$-module들의 commutative diagram
+<ins id="lem5">**보조정리 5**</ins> 각 행이 exact인 commutative diagram
 
 ![induced_exact_sequence](/assets/images/Math/Homological_Algebra/Diagram_chasing-7.png){:width="220.65px" class="invert" .align-center}
 
@@ -193,7 +195,7 @@ $$((f')^\ast)(a'+\im(\alpha))=b'+\im(\beta)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6 (The snake lemma)**</ins> $R$-module들의 commutative diagram
+<ins id="thm6">**정리 6 (The snake lemma)**</ins> 각 행이 exact인 commutative diagram
 
 ![snake_diagram](/assets/images/Math/Homological_Algebra/Diagram_chasing-8.png){:width="384.45px" class="invert" .align-center}
 
@@ -227,7 +229,7 @@ $$0=(g'\circ f')(a_1'-a_1)=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
 
 $$f'(\alpha(a))=\beta(f(a))=\beta(b_1)-\beta(b)=f'(a_1'-a')$$
 
-이고, $f'$가 단사이므로 $\alpha(a)=a_1'-a'$가 성립한다. 즉, $a_1'\equiv a' \mod \im(\alpha)$이고, $\delta$가 잘 정의된다. 어렵지 않게 $\delta$가 $R$-module들 사이의 homomorphism임을 보일 수 있다.
+이고, $f'$가 단사이므로 $\alpha(a)=a_1'-a'$가 성립한다. 즉, $a_1'\equiv a' \mod \im(\alpha)$이고, $\delta$가 잘 정의된다. 어렵지 않게 $\delta$가 $A$-module들 사이의 homomorphism임을 보일 수 있다.
 
 이렇게 만든 $\delta$가 다음의 열
 
@@ -265,11 +267,11 @@ Snake lemma는 보통 다음 글에서와 같이 long exact sequence를 그릴 �
 
 <div class="proposition" markdown="1">
 
-<ins id="cor7">**따름정리 7 (The 3×3 lemma)**</ins> $R$-module들의 commutative diagram
+<ins id="cor7">**따름정리 7 (The 3×3 lemma)**</ins> 각 행이 exact인 commutative diagram
 
 ![Nine_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-10.png){:width="392.7px" class="invert" .align-center}
 
-이 주어졌다 하자. 만일 세 개의 행과 첫 두 개의 열이 모두 short exact sequence가 된다면, 마지막 열 또한 short exact sequence가 된다. 마찬가지로, 세 개의 행과 마지막 두 개의 열이 모두 short exact sequence가 된다면, 첫 열 또한 short exact sequence가 된다.
+이 주어졌다 하자. 만일 첫 두 개의 열이 모두 short exact sequence라면 마지막 열 또한 short exact sequence가 되고, 마지막 두 개의 열이 모두 short exact sequence라면 첫 열 또한 short exact sequence가 된다.
 
 </div>
 
