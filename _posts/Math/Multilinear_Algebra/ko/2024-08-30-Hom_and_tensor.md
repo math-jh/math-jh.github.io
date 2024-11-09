@@ -17,7 +17,57 @@ weight: 5
 
 ---
 
-이번 글에서 우리는 $\Hom$과 텐서곱 사이의 관계를 살펴본다. 
+이번 글에서 우리는 $\Hom$과 텐서곱에 대해 조금 더 자세히 살펴보자. 
+
+## Hom functor
+
+앞서 우리는 $\Hom_{\lMod{A}}(-,N)$과 $\Hom_\lMod{A}(M,-)$이 left exact functor가 된다는 것을 살펴보았으며, 이들이 각각 exact functor가 되도록 하는 $M$과 $N$을 각각 *projective*, *injective* module이라 불렀다. 다음의 두 명제는 이와는 조금 다른 방향의 명제로, 임의의 *splitting* exact sequence는 $\Hom$을 취하여도 반드시 exact sequence가 된다는 것을 보여준다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop1">**명제 1**</ins> Splitting exact sequence
+
+$$0 \longrightarrow M \overset{u}{\longrightarrow} L \overset{v}{\longrightarrow} N \rightarrow 0$$
+
+와 임의의 $A$-module $K$에 대하여, 이들이 유도하는 다음의 sequence
+
+$$0 \rightarrow \Hom_\lMod{A}(N,K) \rightarrow\Hom_\lMod{A}(L,K) \rightarrow\Hom_\lMod{A}(M,K) \rightarrow 0$$
+
+은 splitting exact sequence이다. 거꾸로 만일 위의 sequence가 임의의 $K$에 대하여 exact sequence라면 원래의 exact sequence는 splitting exact sequence이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+주어진 exact sequence $0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$이 split하는 것은 적당한 retraction $r:L \rightarrow M$이 존재하는 것과 동치이다. ([§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)) 이제 
+
+$$\Hom_\lMod{A}(r, \id_K):\Hom_\lMod{A}(M,K) \rightarrow\Hom_\lMod{A}(L,K)$$
+
+를 생각하면, 식 $r\circ u=\id_M$으로부터 $\Hom_\lMod{A}(r,\id_K)$가 section을 갖는다는 사실을 알고 다시 [§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)를 적용하면 두 번째 sequence가 split한다는 것을 보일 수 있다. 
+
+반대 방향은 $K=M$으로 두고 short exact sequence
+
+$$0 \rightarrow \Hom_\lMod{A}(N,M) \rightarrow \Hom_\lMod{A}(L,M) \rightarrow\Hom_\lMod{A}(M,M) \rightarrow 0$$
+
+를 생각하면 적당한 $f\in\Hom_\lMod{A}(L,M)$이 존재하여 $f\circ u=\id_M$이도록 할 수 있으므로 다시 [§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)를 적용하면 된다.
+
+</details>
+
+비슷하게, 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop2">**명제 2**</ins> Splitting exact sequence
+
+$$0 \longrightarrow M \overset{u}{\longrightarrow} L \overset{v}{\longrightarrow} N \rightarrow 0$$
+
+와 임의의 $A$-module $K$에 대하여, 이들이 유도하는 다음의 sequence
+
+$$0 \rightarrow \Hom_\lMod{A}(K,M) \rightarrow\Hom_\lMod{A}(K,L) \rightarrow\Hom_\lMod{A}(K,N) \rightarrow 0$$
+
+은 splitting exact sequence이다. 거꾸로 만일 위의 sequence가 임의의 $K$에 대하여 exact sequence라면 원래의 exact sequence는 splitting exact sequence이다.
+
+</div>
 
 ## Homomorphism $M^\ast\otimes_AN \rightarrow \Hom_{\rMod{A}}(M,N)$
 
@@ -39,7 +89,7 @@ $$x\mapsto u(x)\otimes_Ay$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 위와 같이 정의된 $\nu$에 대하여, 다음이 성립한다.
+<ins id="prop3">**명제 3**</ins> 위와 같이 정의된 $\nu$에 대하여, 다음이 성립한다.
 
 1. 만일 $N$이 projective $A$-module이라면 $\nu$는 injective이다. 또, $N$이 finitely generated projective라면 $\nu$는 bijective이다.
 2. 만일 $M$이 fintiely generated projective $A$-module이라면, $\nu$는 bijective이다.
@@ -50,7 +100,7 @@ $$x\mapsto u(x)\otimes_Ay$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor2">**따름정리 2**</ins> 임의의 두 $A$-module $M,N$이 주어졌다 하자. 만일 $M$ 또는 $N$이 finitely generated projective $A$-module이라면, 다음의 isomorphism
+<ins id="cor4">**따름정리 4**</ins> 임의의 두 $A$-module $M,N$이 주어졌다 하자. 만일 $M$ 또는 $N$이 finitely generated projective $A$-module이라면, 다음의 isomorphism
 
 $$M^\ast \otimes_AN\cong \Hom_{\rMod{A}}(M,N)$$
 
@@ -62,7 +112,7 @@ $$M^\ast \otimes_AN\cong \Hom_{\rMod{A}}(M,N)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor3">**따름정리 3**</ins> 다음의 $A$-linear map
+<ins id="cor5">**따름정리 5**</ins> 다음의 $A$-linear map
 
 $$\Hom_\rMod{A}(M,L)\otimes_A\Hom_\rMod{A}(M',L') \rightarrow \Hom_\rMod{A}(M\otimes M', L\otimes L')$$
 
@@ -84,11 +134,11 @@ $$M^\ast\times M \rightarrow A;\qquad (\xi,x) \mapsto \langle x, \xi\rangle$$
 
 $$\tau: M^\ast\otimes_A M \rightarrow A$$
 
-을 만족한다. 이제 만일 $M$이 finitely generated projective $A$-module이라면 [따름정리 2](#cor2)에 의하여 좌변을 $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$과 identify할 수 있고, 따라서 $\End_\rMod{A}(M)$에서 $A$로 가는 유일한 $A$-linear map이 정의된다.
+을 만족한다. 이제 만일 $M$이 finitely generated projective $A$-module이라면 [따름정리 4](#cor4)에 의하여 좌변을 $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$과 identify할 수 있고, 따라서 $\End_\rMod{A}(M)$에서 $A$로 가는 유일한 $A$-linear map이 정의된다.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 위와 같이 정의된 map을 *trace map*이라 하고, $\tr$로 표기한다.
+<ins id="def6">**정의 6**</ins> 위와 같이 정의된 map을 *trace map*이라 하고, $\tr$로 표기한다.
 
 </div>
 
@@ -96,7 +146,7 @@ $$\tau: M^\ast\otimes_A M \rightarrow A$$
 
 $$\sum_i \xi_i\otimes_A x_i\tag{1}$$
 
-으로 쓸 수 있으며, 이 원소가 [따름정리 2](#cor2)에 의해 $u$에 대응된다는 것은 다음의 식
+으로 쓸 수 있으며, 이 원소가 [따름정리 4](#cor4)에 의해 $u$에 대응된다는 것은 다음의 식
 
 $$u(x)=\sum_i\langle x,\xi_i\rangle x_i\qquad\text{for all $x\in M$}\tag{2}$$
 
@@ -110,7 +160,7 @@ $$\tr(u)=\sum_i\langle x_i,\xi_i\rangle$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 임의의 두 finitely generated projective $A$-module $M,N$과 이들 사이의 $A$-linear map $u:M \rightarrow N$, $v:N \rightarrow M$에 대하여
+<ins id="prop7">**명제 7**</ins> 임의의 두 finitely generated projective $A$-module $M,N$과 이들 사이의 $A$-linear map $u:M \rightarrow N$, $v:N \rightarrow M$에 대하여
 
 $$\tr(u\circ v)=\tr(v\circ u)$$
 

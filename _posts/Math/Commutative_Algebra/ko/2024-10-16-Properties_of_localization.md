@@ -13,7 +13,7 @@ sidebar:
 
 date: 2024-10-16
 last_modified_at: 2024-10-16
-weight: 2
+weight: 3
 
 ---
 
@@ -47,7 +47,11 @@ $$\frac{1}{s}\otimes x=\frac{1}{s'}\otimes x'$$
 
 </details>
 
-따라서 다음이 성립한다. 
+특히 이를 이용하여 module의 localization의 functoriality 또한 보일 수 있다. 임의의 $u: M \rightarrow M'$에 대하여 $S^{-1}M \rightarrow S^{-1}M'$을 다음 함수
+
+$$S^{-1}\otimes_A u: S^{-1}\otimes_AM \rightarrow S^{-1}\otimes_AM'$$
+
+의 양 변을 localization과 동일시하여 정의하면 되기 때문이다. 일반적으로 텐서곱은 right exact이지만, 이 경우에는 exact functor가 된다.
 
 <div class="proposition" markdown="1">
 
@@ -57,7 +61,7 @@ $$\frac{1}{s}\otimes x=\frac{1}{s'}\otimes x'$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 injective $A$-linear map $u:M \rightarrow M'$이 주어졌다 하고, $u\otimes_AS^{-1}A$이 injective인 것을 보여야 한다. 그런데 [보조정리 1](#lem1)에 의해, 이는 linear map $S^{-1}M \rightarrow S^{-1}M'$이 injective인 것을 보이면 충분하다. 어떠한 $x/s\in S^{-1}M$에 대하여, 이를 $S^{-1}M'$으로 보낸 원소인 $u(x)/s$가 $S^{-1}M'$에서 $0$이라 하자. 그럼 $u(x)/s=0/1$로부터 적당한 $t\in S$가 존재하여 
+임의의 injective $A$-linear map $u:M \rightarrow M'$이 주어졌다 하고, $S^{-1}A\otimes_A u$이 injective인 것을 보여야 한다. 그런데 [보조정리 1](#lem1)에 의해, 이는 linear map $S^{-1}M \rightarrow S^{-1}M'$이 injective인 것을 보이면 충분하다. 어떠한 $x/s\in S^{-1}M$에 대하여, 이를 $S^{-1}M'$으로 보낸 원소인 $u(x)/s$가 $S^{-1}M'$에서 $0$이라 하자. 그럼 $u(x)/s=0/1$로부터 적당한 $t\in S$가 존재하여 
 
 $$tu(x)=u(tx)=0$$
 
@@ -65,11 +69,13 @@ $$tu(x)=u(tx)=0$$
 
 $$\frac{x}{s}=\frac{tx}{ts}=\frac{0}{ts}=0$$
 
-이므로 원하는 결과를 얻는다.
+이므로 원하는 결과를 얻는다. 
 
 </details>
 
-한편 다음 보조정리가 성립한다.
+## 국소화에 의해 결정되는 성질들
+
+위의 [명제 2](#prop2)에 의하여, $u:M \rightarrow M'$이 injective (resp. surjective, bijective)라면 이로부터 유도되는 $S^{-1}M \rightarrow S^{-1}M'$ 또한 그러하다는 것을 안다. [명제 4](#prop4)는 이에 대한 일종의 (강력한) 역이라고 생각할 수 있다. 이를 위해 우선 다음 보조정리를 보인다.
 
 <div class="proposition" markdown="1">
 
@@ -131,104 +137,30 @@ $$F \rightarrow G \rightarrow M \rightarrow 0$$
 
 </details>
 
-## 가군들의 chain
+특별히 다음의 short exact sequence
 
-우리는 앞서 noetherian ring을 ascending chain condition을 만족하는 ring으로 정의했는데, 비슷하게 artinian ring은 descending chain condition을 만족하는 ring으로 정의된다. 즉 임의의 ideal들의 descending chain
+$$0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$$
 
-$$\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq\cdots$$
+이 주어졌다 하자. 그럼 이 exact sequence가 splitting exact sequence인 것은 임의의 $A$-module $K$에 대하여
 
-이 주어진다면 적당한 $k$가 존재하여 $\mathfrak{a}\_k$ 이후의 ideal들은 모두 $\mathfrak{a}\_k$와 같아야 한다. 
+$$0 \rightarrow \Hom_\rMod{A}(K,M) \rightarrow \Hom_\rMod{A}(K,L)\rightarrow \Hom_\rMod{A}(K,N) \rightarrow 0$$
 
-위의 chain condition을 더 일반화하기 위해 다음을 정의한다. 
+이 splitting exact sequence인 것과 동치이며, [\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1)의 증명을 보면 실은 $K=N$일 때 위의 sequence가 exact이기만 하면, 즉
 
-<div class="definition" markdown="1">
+$$\Hom_\rMod{A}(N,L) \rightarrow \Hom_\rMod{A}(N,N) \rightarrow 0$$
 
-<ins id="def6">**정의 6**</ins> $A$-module $M$이 *simple<sub>단순</sub>*이라는 것은 $M\neq 0$이며, $M$의 submodule이 오직 $0$과 $M$ 뿐인 것이다.
-
-</div>
-
-Simple module은 반드시 하나의 원소 $x\in M$으로 생성되어야 함이 자명하지만 $\mathbb{Z}/6\mathbb{Z}$를 생각하면 그 역은 성립하지 않는다. 한편 simple module $M$이 $x$로 생성된다면, $A$-module homomorphism $A \rightarrow M$을 $1\mapsto x$로 주면 isomorphism
-
-$$A/\ann(M)=A/\ann(x)\cong M$$
-
-을 얻는다. 만일 $\ann(M)$이 maximal ideal이 아니라면, $\ann(M)$을 포함하는 $A$의 maximal ideal $\mathfrak{m}$에 대하여 $\mathfrak{m}/\ann(M)$이 $M$의 submodule이 될 것이므로 $\ann(M)$은 반드시 $A$의 maximal ideal이 되어야 함도 자명하다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> $A$-module $M$을 고정하자. $M$의 submodule들의 decreasing sequence
-
-$$M=M_0\supsetneq M_1\supsetneq \cdots\supsetneq M_n=0$$
-
-을 길이 $n$의 chain이라 부른다. 이 chain이 *composition series<sub>합성열</sub>*이라는 것은 모든 $k$에 대하여 $M_k/M_{k+1}$이 simple module인 것이다. 이러한 composition series들의 길이 중 가장 작은 것을 $M$의 *length<sub>길이</sub>*라 부르고 $\length(M)$으로 적는다. 만일 $M$의 composition series가 존재하지 않는다면 $\length(M)=\infty$로 정의한다. 
-
-</div>
-
-그럼 다음 정리는 module 버전의 Jordan-Hölder 정리라 할 수 있다. 
+이 surjective이기만 하면 원래의 exact sequence $0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$이 splitting exact sequence임을 안다. 따라서 다음을 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8**</ins> $A$-module $M$이 유한한 composition series를 갖는 것은 $M$이 artinian인 동시에 noetherian인 것과 동치이다. 이 조건이 만족되어 길이 $n$짜리 composition series
+<ins id="cor6">**따름정리 6**</ins> 임의의 short exact sequence
 
-$$M=M_0\supsetneq M_1\supsetneq \cdots\supsetneq M_n=0$$
+$$0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$$
 
-가 주어졌다 하자. 그럼 다음이 성립한다. 
+가 주어졌다 하자. 만일 $N$이 finitely presented이고, 모든 maximal ideal $\mathfrak{m}$에 대하여
 
-1. 길이가 $n$ 이하인 $M$의 임의의 submodule들의 chain들은 모두 composition series로의 refinement를 갖는다. 
-2. $M_k/M_{k+1}\cong A/\mathfrak{m}$이도록 하는 $k$가 존재하는 maximal ideal들의 모임에 대하여, isomorphism $M\cong\bigoplus_{\mathfrak{m}}M_\mathfrak{m}$이 존재한다. 
-3. 만일 어떤 $k$에 대하여 $\mathfrak{p}^k$가 $M$을 annihilate한다면 $M=M_\mathfrak{p}$이다. 
+$$0 \rightarrow M_\mathfrak{m} \rightarrow L_\mathfrak{m} \rightarrow N_\mathfrak{m} \rightarrow 0$$
 
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-우선 $M$이 artinian인 동시에 noetherian이라 하자. 우선 $M$이 noetherian이라는 조건으로부터 $M$의 적당한 maximal proper submodule $M_1$을 찾을 수 있다. 한편 noetherian module의 submodule은 반드시 noetherian이어야 함이 자명하므로, 이를 반복하여 $M_k$의 maximal proper submodule $M_{k+1}$을 찾을 수 있다. 그런데 이렇게 정의한 chain 
-
-$$M=M_0\supsetneq M_1\supsetneq \cdots$$
-
-은 artinian 조건으로부터 그 길이가 유한하며, $M_{k+1}$이 $M_k$의 maximal proper submodule인 것으로부터 이 chain이 composition series임을 안다. 
-
-첫 번째 결과는 Jordan-Hölder 정리와 동일하게 증명하므로 별도로 증명하지 않는다. 이제 이를 받아들이고 나면, 임의의 chain이 주어질 때마다 이 chain을 composition series로 refine할 수 있고, 따라서 앞선 동치관계의 반대 방향까지 보일 수 있다.
-
-이제 두 번째 결과를 보인다. 주어진 chain의 유한성으로부터 조건을 만족하는 maximal ideal들 또한 유한하다는 것을 알고, 따라서 $\bigoplus_\mathfrak{m} M_\mathfrak{m}$은 $\prod_\mathfrak{m} M_\mathfrak{m}$으로 볼 수 있으며 이 때 주어진 함수는 $M \rightarrow M_\mathfrak{m}$들에 direct product의 universal property를 적용하여 얻어진다. 이 함수가 isomorphism이 된다는 것을 보이려면 [명제 4](#prop4)를 적용하여 maximal ideal에서의 localization을 보면 충분하다. 
-
-이를 위해 우선 $M\cong R/\mathfrak{m}$이라면 임의의 maximal ideal $\mathfrak{m}'$에 대하여
-
-$$M_{\mathfrak{m}'}=\begin{cases}M&\text{if $\mathfrak{m}=\mathfrak{m}'$,}\\0&\text{otherwise.}\end{cases}$$
-
-이다. 이로부터 $M$의 composition series
-
-$$M=M_0\supsetneq M_1\supsetneq \cdots\supsetneq M_n=0$$
-
-가 주어졌다면, 이를 maximal ideal $\mathfrak{m}$에서 localization을 하면 
-
-$$M_\mathfrak{m}=(M_0)_\mathfrak{m}\supsetneq (M_1)_\mathfrak{m}\supsetneq \cdots\supsetneq (M_n)_\mathfrak{m}=0$$
-
-을 얻는다. 그런데 localization functor가 exact functor인 것과 ([명제 2](#prop2)) 방금 전의 계산을 종합하면, 
-
-$$(M_k)_\mathfrak{m}/(M_{k+1})_\mathfrak{m}\cong (M_k/M_{k+1})_\mathfrak{m}=\begin{cases}M_k/M_{k+1}&\text{if $M_k/M_{k+1}\cong A/\mathfrak{m}$,}\\0&\text{otherwise}\end{cases}$$
-
-이 성립한다. 이로부터 두 번째 결과를 얻으며, 세 번째 결과는 위의 계산과 유사하게 증명할 수 있다.
-
-</details>
-
-## 아틴환과 뇌터환의 성질들
-
-다음 두 정리는 분량의 문제로 증명을 생략한다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**정리 9**</ins> Ring $A$에 대해 다음이 모두 동치이다.
-
-1. $A$가 noetherian이고 임의의 prime ideal이 maximal이다.
-2. $A$는 $A$-module로서 유한한 길이를 갖는다.
-3. $A$는 artinian이다.
-
-</div>
-
-이로부터 임의의 artinian ring은 local artinian ring들의 유한한 product임을 보일 수 있다. Noetherian ring에 대해서는 다음이 성립한다.
-
-<div class="proposition" markdown="1">
-
-<ins id="thm10">**정리 10**</ins> Noetherian ring $A$에 대하여, $A$가 domain들의 유한한 product인 것은 $A$의 임의의 maximal ideal에 대하여 $A_\mathfrak{m}$이 domain인 것과 동치이다.
+이 splitting exact sequence라면 원래의 exact sequence가 split한다.
 
 </div>

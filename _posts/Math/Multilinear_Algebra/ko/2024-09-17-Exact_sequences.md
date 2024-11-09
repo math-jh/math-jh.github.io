@@ -171,18 +171,18 @@ $$i_1-i_2:N_1\oplus N_2 \rightarrow N_1+N_2;\qquad (x_1,x_2)\mapsto x_1-x_2$$
 
 ## 분해완전열
 
-마지막으로 splitting exact sequence를 정의하기 전에 다음 보조정리를 소개한다. 이에 대한 증명은 <#ref#>에 있다. 
+마지막으로 splitting exact sequence를 정의하기 전에 다음 보조정리를 소개한다. 이에 대한 증명은 [\[호몰로지 대수학\] §Diagram chasing, ⁋명제 1](/ko/math/homological_algebra/diagram_chasing#prop1)에 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem9">**보조정리 9 (Four lemma)**</ins> $A$-module들의 commutative diagram
+<ins id="lem9">**보조정리 9 (Four lemma)**</ins> 각 행들이 exact인 commutative diagram
 
-img
+![Four_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-1.png){:width="300.15px" class="invert" .align-center}
 
-을 생각하자. 그럼 다음이 성립한다.
+이 주어졌다 하고, $\alpha$가 전사이고, $\delta$가 단사라 가정하자. 그럼
 
-1. 
-2. 
+1. 만일 $\gamma$가 전사라면 $\beta$ 또한 전사이다.
+2. 만일 $\beta$가 단사라면 $\gamma$ 또한 단사이다.
 
 </div>
 

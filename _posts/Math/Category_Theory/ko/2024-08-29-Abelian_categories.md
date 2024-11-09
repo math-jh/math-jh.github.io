@@ -53,11 +53,49 @@ $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=
 
 </details>
 
+## Abelian category
+
+이제 abelian category를 정의할 수 있다.
+
+<div class="definition" markdown="1">
+
+<ins id="def3">**정의 3**</ins> Additive category $\mathcal{A}$가 *abelian category<sub>아벨 카테고리</sub>*라는 것은 다음 조건들이 추가로 성립하는 것이다.
+
+1. 임의의 homomorphism이 kernel과 cokernel을 갖는다.
+2. 임의의 monomorphism $f$는 $\coker f$의 kernel과 같다.
+3. 임의의 epimorphism $f$는 $\ker f$의 cokernel과 같다.
+
+</div>
+
+Additive category $\mathcal{A}$의 임의의 morphism $f:A \rightarrow B$의 kernel은 $0:A \rightarrow B$와의 equalizer $\Eq(f,0)$으로 정의되며, 비슷하게 $f$의 cokernel은 $0$과의 coequalizer $\CoEq(f,0)$으로 정의된다. 
+
+특히, 이러한 상황에서는 다음의 exact sequence
+
+$$0 \rightarrow A \rightarrow B \rightarrow C$$
+
+가 주어졌을 때 $A$를 $B \rightarrow C$의 kernel과 동일시할 수 있고, 또 다음의 exact sequence
+
+$$A \rightarrow B \rightarrow C \rightarrow 0$$
+
+이 주어졌을 때 $C$를 $A \rightarrow B$의 cokernel과 동일시할 수 있다. Abelian category에서는 임의의 homomorphism $f:A\rightarrow B$에 대해 $f$의 kernel $i:\ker f\rightarrow A$와 cokernel $p:B\rightarrow \coker f$가 존재한다. 
+
+임의의 abelian category $\mathcal{A}$에서, $f$의 *image*는 다음의 morphism
+
+$$\ker(\coker f)\rightarrow\coker f$$
+
+으로 정의된다. 비슷하게, $f$의 *coimage*는 다음의 morphism
+
+$$\coim(f)=\coker(\ker(f))$$
+
+으로 정의한다.
+
+일반적인 abelian category에서, monomorphism $f:A\rightarrow B$가 주어진다면 $\coker f$를 *quotient object*라 부르고 $B\rightarrow B/A$, 혹은 더 간단히 $B/A$라 표기한다. 
+
 ## 사슬 복합체
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Additive category $\mathcal{A}$에서 정의된 다음의 데이터를 생각하자.
+<ins id="def4">**정의 4**</ins> Additive category $\mathcal{A}$에서 정의된 다음의 데이터를 생각하자.
 
 - 대상들의 모임 $(A\_n)\_{n\in \mathbb{Z}}$,
 - morphism들의 모임 $(d_n:A_n \rightarrow A\_{n-1})_{n\in \mathbb{Z}}$
@@ -68,7 +106,9 @@ $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=
 
 한편, chain complex $A_\bullet$, $B_\bullet$ 사이의 morphism을 *chain map*이라 부르며, 이는 조건 $d_n^B\circ f_n=f_{n-1}\circ d_n^A$를 만족하는 morphism들의 모임 $(f_n: A_n \rightarrow B_n)_{n\in \mathbb{Z}}$으로 주어진다. 이를 통해 chain complex들의 category $\Ch(\mathcal{A})$를 정의할 수 있다.
 
-Chain complex를 다룰 때 흔히 사용하는 이름과 표기를 고정하자. 우선, 각각의 $d_n$들은 문맥에 따라 *differential* 혹은 *boundary map*이라 부른다. 이들의 kernel과 image를 각각
+$\mathcal{A}$가 abelian category였다면 이를 조금 더 자세히 살펴볼 수 있다. 이러한 상황에서 chain complex를 다룰 때 흔히 사용하는 이름과 표기를 고정하자. 우선, 각각의 $d_n$들은 문맥에 따라 *differential* 혹은 *boundary map*이라 부른다. 
+
+이들의 kernel과 image를 각각
 
 $$Z_n=\ker(d_{n-1}),\qquad B_n=\im(d_n)$$
 
@@ -82,7 +122,7 @@ $\mathcal{A}^\op$에서의 chain complex는 *cochain complex<sub>공사슬복합
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 임의의 chain complex $A_\bullet$이 주어졌다 하자. 그럼
+<ins id="def5">**정의 5**</ins> 임의의 chain complex $A_\bullet$이 주어졌다 하자. 그럼
 
 $$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\longrightarrow}A_n\overset{d_n}{\longrightarrow}A_{n-1}\rightarrow\cdots$$
 
@@ -92,7 +132,7 @@ $$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\longrightarrow}A_n\overset{d_n}{\
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 다음의 chain complex
+<ins id="ex6">**예시 6**</ins> 다음의 chain complex
 
 $$\cdots 0 \rightarrow 0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0 \rightarrow 0 \rightarrow \cdots$$
 
@@ -112,7 +152,7 @@ $$\cdots \rightarrow F(A_{n+1}) \overset{F(d_{n+1})}{\longrightarrow} F(A_n) \ov
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Additive functor $F: \mathcal{A} \rightarrow \mathcal{B}$가 *left exact*인 것은 임의의 short exact sequence
+<ins id="def7">**정의 7**</ins> Additive functor $F: \mathcal{A} \rightarrow \mathcal{B}$가 *left exact*인 것은 임의의 short exact sequence
 
 $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
@@ -128,49 +168,13 @@ $$A \rightarrow B \rightarrow C \rightarrow 0$$
 
 </div>
 
+즉, kernel을 보존하는 additive functor를 left exact functor라 부르고, cokernel을 보존하는 functor를 right exact functor라 부른다. 그럼 특히 left adjoint functor는 right exact이고, right adjoint functor는 left exact임을 확인할 수 있다.
+
 $F$가 contravariant였더라도 위의 정의와 마찬가지로 left exactness와 right exactness를 정의할 수 있다. 
-
-## Abelian category
-
-이제 abelian category를 정의할 수 있다.
-
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> Additive category $\mathcal{A}$가 *abelian category<sub>아벨 카테고리</sub>*라는 것은 다음 조건들이 추가로 성립하는 것이다.
-
-1. 임의의 homomorphism이 kernel과 cokernel을 갖는다.
-2. 임의의 monomorphism $f$는 $\coker f$의 kernel과 같다.
-3. 임의의 epimorphism $f$는 $\ker f$의 cokernel과 같다.
-
-</div>
-
-특히, 이러한 상황에서는 다음의 exact sequence
-
-$$0 \rightarrow A \rightarrow B \rightarrow C$$
-
-가 주어졌을 때 $A$를 $B \rightarrow C$의 kernel과 동일시할 수 있고, 또 다음의 exact sequence
-
-$$A \rightarrow B \rightarrow C \rightarrow 0$$
-
-이 주어졌을 때 $C$를 $A \rightarrow B$의 cokernel과 동일시할 수 있다. 따라서 이를 바탕으로 [정의 6](#def6)을 다시 쓰자면, kernel을 보존하는 additive functor를 left exact functor라 부르고, cokernel을 보존하는 functor를 right exact functor라 부른다. 그럼 특히 left adjoint functor는 right exact이고, right adjoint functor는 left exact임을 확인할 수 있다.
-
-Abelian category에서는 임의의 homomorphism $f:A\rightarrow B$에 대해 $f$의 kernel $i:\ker f\rightarrow A$와 cokernel $p:B\rightarrow \coker f$가 존재한다. 
-
-임의의 abelian category $\mathcal{A}$에서, $f$의 *image*는 다음의 morphism
-
-$$\ker(\coker f)\rightarrow\coker f$$
-
-으로 정의된다. 비슷하게, $f$의 *coimage*는 다음의 morphism
-
-$$\coim(f)=\coker(\ker(f))$$
-
-으로 정의한다.
-
-일반적인 abelian category에서, monomorphism $f:A\rightarrow B$가 주어진다면 $\coker f$를 *quotient object*라 부르고 $B\rightarrow B/A$, 혹은 더 간단히 $B/A$라 표기한다. 
 
 ## Freyd-Mitchell embedding theorem
 
-한편, 앞서 살펴본 것처럼 abelian category에서는 kernel, cokernel, image와 quotient 등이 모두 정의된다. 이로부터 $\lmod{A}$에서의 정리들을 임의의 abelian category로 옮겨올 수 있다. 가령 first isomorphism theorem을 임의의 abelian category의 언어로 바꾸어 쓰자면, 
+한편, 앞서 살펴본 것처럼 abelian category에서는 kernel, cokernel, image와 quotient 등이 모두 정의된다. 이로부터 $\lMod{A}$에서의 정리들을 임의의 abelian category로 옮겨올 수 있다. 가령 first isomorphism theorem을 임의의 abelian category의 언어로 바꾸어 쓰자면, 
 
 > 임의의 abelian category $\mathcal{A}$의 morphism $f:A\rightarrow B$가 주어졌다 하자. 그럼 $A/\ker f\cong \im f$가 성립한다.
 
@@ -180,9 +184,11 @@ $$\coim(f)=\coker(\ker(f))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8 (Freyd-Mitchell embedding theorem)**</ins> 임의의 small abelian category $\mathcal{A}$에 대하여, 적당한 ring $A$과 fully faithful, exact functor $F:\mathcal{A}\rightarrow\lmod{A}$이 존재한다.
+<ins id="thm8">**정리 8 (Freyd-Mitchell embedding theorem)**</ins> 임의의 small abelian category $\mathcal{A}$에 대하여, 적당한 ring $A$와 fully faithful, exact functor $F:\mathcal{A}\rightarrow\lMod{A}$이 존재한다.
 
 </div>
+
+따라서, 임의의 abelian category의 대상들을 $A$-module로 생각하고, 이들의 morphism을 $A$-linear map으로 생각한 후 계산을 해도 무관하다.
 
 ---
 
