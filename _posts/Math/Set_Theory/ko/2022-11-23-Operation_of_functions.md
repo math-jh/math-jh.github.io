@@ -102,16 +102,16 @@ $$f|_X=f\circ i$$
 
 </details>
 
-이렇게 정의된 $f^{-1}$을 $f$의 *역함수*라 부른다. 우리는 $f^{-1}\circ f=\id_A$이고 $f\circ f^{-1}=\id_B$임을 쉽게 확인할 수 있다.
+이렇게 정의된 $f^{-1}$을 $f$의 *역함수*라 부른다. 우리는 $f^{-1}\circ f=\id_A$이고 $f\circ f^{-1}=\id_B$임을 쉽게 확인할 수 있다. 
 
-아래 참고는 다음 글에서 retraction, section을 정의할 때 중요한 직관이 된다.
+아래 참고는 다음 글에서 retraction, section을 정의할 때 중요한 직관이 된다. 한편 
 
 <div class="remark" markdown="1">
 
 <ins id="rmk1">**참고**</ins> 두 식 $f^{-1}\circ f=\id_A$이고 $f\circ f^{-1}=\id_B$은 $f$가 전단사함수가 아니라, 전사함수 혹은 단사함수 각각만 되더라도 일부는 참이 된다.  
 
 - $f$가 단사함수라면 $f$는 $A$와 $f(A)\subseteq B$ 사이의 전단사함수이므로 $\tilde{f}^{-1}:f(A)\rightarrow A$가 존재할 것이다. 이제 $\tilde{f}^{-1}\circ f=\id\_A$이다.   
-- $f$가 단사함수라면, 임의의 $y\in B$에 대해 항상 어떠한 $x$가 존재하여 $f(x)=y$이다. 이제 $\tilde{f}^{-1}$를 이렇게 결정된 $y$를 $x$에 대응시키는 함수라 하면 $f\circ \tilde{f}^{-1}=\id\_B$가 된다.
+- $f$가 전사함수라면, 임의의 $y\in B$에 대해 항상 어떠한 $x$가 존재하여 $f(x)=y$이다. 이제 $\tilde{f}^{-1}$를 이렇게 결정된 $y$를 $x$에 대응시키는 함수라 하면 $f\circ \tilde{f}^{-1}=\id\_B$가 된다.
 
 </div>
 

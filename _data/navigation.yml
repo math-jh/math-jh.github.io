@@ -12,26 +12,24 @@ main:
 algebraic_geometry-ko:
   - title: <a href="/ko/algebraic_geometry/" class="sidebar_title">대수기하학</a>
     children:
-      - title: "대수다양체"
-        url: ko/math/algebraic_geometry/algebraic_varieties
-      - title: "준층"
-        url: ko/math/algebraic_geometry/presheaves
-      - title: "층"
-        url: ko/math/algebraic_geometry/sheaves
       - title: "스펙트럼"
         url: ko/math/algebraic_geometry/spectrums
-      - title: "아핀 스킴"
+      - title: "아핀스킴"
         url: ko/math/algebraic_geometry/affine_schemes
       - title: "스킴"
         url: ko/math/algebraic_geometry/schemes
       - title: "스킴의 성질들"
         url: ko/math/algebraic_geometry/properties_of_schemes
+      - title: "스킴 사상의 성질들"
+        url: ko/math/algebraic_geometry/properties_of_scheme_morphisms
+      - title: "닫힌 부분스킴"
+        url: ko/math/algebraic_geometry/closed_embeddings
+      - title: "올곱"
+        url: ko/math/algebraic_geometry/fiber_products
       - title: "값매김환"
         url: ko/math/algebraic_geometry/valuative_criteria
-      - title: "준연접층"
-        url: /ko/math/algebraic_geometry/quasicoherent_sheaves
-      - title: "준연접층의 성질들"
-        url: /ko/math/algebraic_geometry/properties_of_quasicoherent_sheaves
+      - title: "차원"
+        url: /ko/math/algebraic_geometry/dimension
   - title: 
     children:
       - title: "블로그 소개"

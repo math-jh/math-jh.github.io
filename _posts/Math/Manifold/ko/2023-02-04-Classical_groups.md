@@ -73,7 +73,7 @@ $$Yr^{ij}=\sum_k\beta(Y)_{kj}r^{ik},\qquad Xr^{ij}=\sum_k\beta(X)_{kj}r^{ik}$$
 
 ## Matrix exponential
 
-$\mathbb{R}$ 위에 정의된 임의의 유한차원 벡터공간에 norm을 정의하는 방법은 위상적으로는 유일하며, 이렇게 정의된 norm은 $\mathbb{R}$의 completeness에 의하여 complete metric을 정의한다. (<#ref#>) 특히 $\Mat_n(\mathbb{R})$에 operator norm을 줄 경우 다음의 식
+$\mathbb{R}$ 위에 정의된 임의의 유한차원 벡터공간에 norm을 정의하는 방법은 위상적으로는 유일하며, 이렇게 정의된 norm은 $\mathbb{R}$의 completeness에 의하여 complete metric을 정의한다. ([##ref##]()) 특히 $\Mat_n(\mathbb{R})$에 operator norm을 줄 경우 다음의 식
 
 $$\lVert XY\rVert\leq\lVert X\rVert\lVert Y\rVert$$
 

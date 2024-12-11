@@ -101,7 +101,7 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**정리 2**</ins> Manifold $M$에 대하여, degree $1$의 anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$가 유일하게 존재하여 다음의 두 조건을 만족한다. ([\[다중선형대수\] §미분, Derivation과 anti-derivation](/ko/math/multilinear_algebra/derivation#derivation%EA%B3%BC-anti-derivation))
+<ins id="thm2">**정리 2**</ins> Manifold $M$에 대하여, degree $1$의 anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$가 유일하게 존재하여 다음의 두 조건을 만족한다. ([##ref##]())
 
 1. $d^2=0$,
 2. 임의의 $f\in\Omega^0(M)$에 대하여, $df$는 위와 같이 $f$의 differential과 동일하다.
@@ -118,7 +118,7 @@ $$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{
 
 ![Chain_map_in_dR](/assets/images/Math/Manifold/Differential_forms-1.png){:width="523.95px" class="invert" .align-center}
 
-우리는 (2)의 cochain complex에 해당하는 homology group을 *de Rham cohomology group<sub>드람 코호몰로지 군</sub>*이라 부르고 $H^\ast_\text{dR}(M)$으로 적는다. <#ref#> 드람 정리는 이렇게 얻어진 $H_\text{dR}^\ast(M)$이 위상적으로 정의한 다른 cohomology group들과 동일한 정보를 담고 있다는 것을 보여준다.
+우리는 (2)의 cochain complex에 해당하는 homology group을 *de Rham cohomology group<sub>드람 코호몰로지 군</sub>*이라 부르고 $H^\ast_\text{dR}(M)$으로 적는다. 드람 정리는 이렇게 얻어진 $H_\text{dR}^\ast(M)$이 위상적으로 정의한 다른 cohomology group들과 동일한 정보를 담고 있다는 것을 보여준다.
 
 ## Interior multiplication
 

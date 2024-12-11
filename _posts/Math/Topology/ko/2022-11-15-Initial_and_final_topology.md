@@ -37,13 +37,13 @@ weight: 6
 
 $$\mathcal{S}=\{f_i^{-1}(U_i)\mid \text{$U_i$ open in $Y_i$}\}$$
 
-을 subbasis로 하여 생성된 위상과 같다.
+을 subbase로 하여 생성된 위상과 같다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Initial topology를 $\mathcal{T}\_\ini$으로 적고, $\mathcal{S}$를 subbasis로 하여 생성된 위상을 $\mathcal{T}$로 적자. $\mathcal{T}$는 정의에 의해 $f_i$들을 모두 연속으로 만들기 때문에, $\mathcal{T}\_\ini$는 $\mathcal{T}$보다 약한 위상이다. 따라서 $\mathcal{T}$가 $\mathcal{T}\_\ini$보다 약한 위상이라는 것만 보이면 충분한데, 이는 $\mathcal{T}$가 $\mathcal{S}$를 포함하는 위상 중 가장 약한 위상이기 때문에 자명하다.
+Initial topology를 $\mathcal{T}\_\ini$으로 적고, $\mathcal{S}$를 subbase로 하여 생성된 위상을 $\mathcal{T}$로 적자. $\mathcal{T}$는 정의에 의해 $f_i$들을 모두 연속으로 만들기 때문에, $\mathcal{T}\_\ini$는 $\mathcal{T}$보다 약한 위상이다. 따라서 $\mathcal{T}$가 $\mathcal{T}\_\ini$보다 약한 위상이라는 것만 보이면 충분한데, 이는 $\mathcal{T}$가 $\mathcal{S}$를 포함하는 위상 중 가장 약한 위상이기 때문에 자명하다.
 
 </details>
 

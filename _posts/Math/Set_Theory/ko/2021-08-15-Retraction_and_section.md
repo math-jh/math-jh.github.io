@@ -62,7 +62,19 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 만일 $f$가 단사함수이고 $r$이 retraction이라면 $f$를 $r$의 section으로 볼 수 있고, 반대로 $f$가 전사함수이고 $s$가 section이라면 $f$를 $s$의 retraction으로 볼 수도 있다. 따라서 retraction은 전사이고 section은 단사이다.
 
-다음 명제의 증명은 모두 자명하지만, 결과는 기억할 필요가 있다.
+한편, 함수 $f:A \rightarrow B$와 $X\subseteq A, Y\subseteq B$에 대하여 항상 다음의 두 식
+
+$$X\subseteq f^{-1}(f(X)),\qquad f(f^{-1}(Y))\subseteq Y$$
+
+가 성립하며 그 증명 또한 자명하다. 만일 $f$가 단사라면, [§함수들 사이의 연산, ⁋참고](/ko/math/set_theory/operation_of_functions#rmk1)와 같이 정의된 $r$에 대하여
+
+$$f^{-1}(f(X))=r(f(X))=\id_A(X)=X$$
+
+이고, 만일 $f$가 전사라면 마찬가지로 [§함수들 사이의 연산, ⁋참고](/ko/math/set_theory/operation_of_functions#rmk1)와 같이 정의된 $s$에 대하여
+
+$$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
+
+이므로 위의 식들은 등호가 된다. 다음 명제의 증명은 모두 자명하지만, 결과는 기억할 필요가 있다.
 
 <div class="proposition" markdown="1">
 
