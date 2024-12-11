@@ -17,3 +17,53 @@ weight: 9
 
 ---
 
+<div class="proposition" markdown="1">
+
+<ins id="prop1">**명제 1**</ins> Integral extension $A\subseteq B$가 주어졌다 하자.
+
+1. (Lying over) $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, 적당한 $B$의 prime ideal $\mathfrak{q}$가 존재하여 $\mathfrak{q}\cap A=\mathfrak{p}$이도록 할 수 있다.
+2. (Going up) $\mathfrak{q}'\cap A\subseteq \mathfrak{p}$를 만족하는 $B$의 임의의 ideal $\mathfrak{q}'$가 주어질 때마다, $\mathfrak{q}\cap A=\mathfrak{p}$이고 $\mathfrak{q}'\subseteq \mathfrak{q}$이도록 하는 prime ideal $\mathfrak{q}$가 존재한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="lem2">**보조정리 2**</ins> Integral domain $A\subseteq B$에 대하여, 만일 $\Frac(A) \rightarrow \Frac(B)$가 algebraic extension이라면 $B$의 임의의 nonzero ideal은 $A$와 nontrivial하게 만난다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="cor3">**따름정리 3**</ins> 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="cor4">**따름정리 4**</ins> 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+
+
+</details>
