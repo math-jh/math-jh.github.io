@@ -170,11 +170,11 @@ $$\partial A=\cl A\setminus\interior A$$
 
 [명제 6](#prop6)에 의하여, $A$가 $X$에서 dense라는 것은 공집합이 아닌 $X$의 열린집합이 반드시 $A$와 만난다는 것을 의미한다. 직관적으로 $X$의 dense subset을 찾으면, 약간의 perturbation만 거치면 $X$를 전부 얻어낼 수 있다는 것으로 생각할 수 있다. 이를 더 일상적인 언어로 쓰면 $X$의 dense subset은 $X$의 "거의 모든" 부분을 포함한다고 생각할 수 있다.
 
-한편, 위상수학에서도 크기의 개념은 basis의 크기로 주어지는데, 이는 다음 명제에 따른 것이다.
+한편, 위상수학에서도 크기의 개념은 base의 크기로 주어지는데, 이는 다음 명제에 따른 것이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> 위상공간 $X$의 basis $\mathcal{B}$에 대하여, $\card(D)\leq\card(\mathcal{B})$이도록 하는 $X$의 dense subset $D$가 존재한다.
+<ins id="prop11">**명제 11**</ins> 위상공간 $X$의 base $\mathcal{B}$에 대하여, $\card(D)\leq\card(\mathcal{B})$이도록 하는 $X$의 dense subset $D$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">

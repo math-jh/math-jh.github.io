@@ -129,7 +129,7 @@ $M/N$의 임의의 submodule은 $M$의 적당한 submodule $L$에 대하여 $L/N
 
 한쪽 방향은 이미 증명하였다. 따라서 $N, M/N$이 noetherian이라 가정하고 $M$이 noetherian임을 보이면 충분하다. $M$의 임의의 submodule $L$을 고정하자. 그럼 $L$의 $M/N$에서의 image $L/N$은 finitely generated이며, $L\cap N$ 또한 $N$의 submodul이므로 finitely generated이다. 이제 $x_1,\ldots, x_m\in L$을 $L/N$으로 보낸 것이 $L/N$의 generator가 된다 하고, $y_1,\ldots, y_n\in L\cap N$이 $L\cap N$의 generator라 하자. 그럼 임의의 $x\in L$에 대하여 
 
-$$x\equiv \alpha_1x_1+\cdots+\alpha_ x_m\pmod{N}$$
+$$x\equiv \alpha_1x_1+\cdots+\alpha_m x_m\pmod{N}$$
 
 이도록 하는 $\alpha_i\in A$들이 존재한다. 따라서 
 
@@ -165,7 +165,7 @@ $$M=\langle x_1,\ldots, x_n\mid \text{relations on $x_i$}\rangle$$
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> $A$-module $M$이 *finitely presented<sub>유한표시가군</sub>*라는 것은 적당한 $m,n$이 존재하여 다음의 exact sequence
+<ins id="def7">**정의 7**</ins> $A$-module $M$이 *finitely presented<sub>유한표시가군</sub>*라는 것은 적당한 $m,n$이 존재하여 다음의 exact sequence
 
 $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 
@@ -183,6 +183,38 @@ $$A^{\oplus m} \rightarrow \ker u \rightarrow 0$$
 
 을 생각한 후, 합성 $A^{\oplus m} \rightarrow \ker \rightarrow A^{\oplus n}$을 사용하면 다음의 exact sequence
 
-$$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M rar 0$$
+$$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 
-을 얻는다. 
+을 얻는다. 한편 다음을 정의한다.
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> $A$-module $M$이 *coherent module<sub>연접가군</sub>*이라는 것은 $M$이 finitely generated이고, 임의의 $A$-linear map $A^{\oplus n} \rightarrow M$이 주어질 때마다 이 linear map의 kernel이 finitely generated인 것이다.
+
+</div>
+
+그럼 다음 명제가 자명하다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9**</ins> Noetherian ring $A$와 $A$-module $M$에 대하여, 다음이 모두 동치이다.
+
+1. $M$이 finitely generated이다.
+2. $M$이 finitely presented이다.
+3. $M$이 coherent이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+1번 조건과 2번 조건이 동치인 것은 이미 살펴보았다. 또, 정의에 의해 coherent $A$-module은 항상 finitely generated이다. 따라서 $M$이 finitely generated인 것을 가정하고 $M$이 coherent라는 것을 보이면 충분하다. 이는 임의의 $A$-linear map $A^{\oplus n}\rightarrow M$이 주어졌을 때, 이 linear map의 kernel은 $A^{\oplus n}$의 submodule이고, 여기에 [명제 5](#prop5)를 적용하여 얻어진다.
+
+</details>
+
+---
+
+**참고문헌**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
+
+---

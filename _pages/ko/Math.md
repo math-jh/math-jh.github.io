@@ -21,7 +21,7 @@ author_profile: true
 ## 대수학
 
 - [대수적 구조](/ko/algebraic_structures/)
-- [다중선형대수gkr](/ko/multilinear_algebra/)
+- [다중선형대수학](/ko/multilinear_algebra/)
 - [호몰로지 대수학](/ko/homological_algebra/)
 
 ## 기하학 및 위상수학

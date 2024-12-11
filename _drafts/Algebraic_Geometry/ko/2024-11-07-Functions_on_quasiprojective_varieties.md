@@ -128,14 +128,32 @@ $$(\lambda\xi_0:\cdots:\lambda\xi_{n-d-1}:\eta\zeta_{n-d}+\lambda\xi_{n-d}:\cdot
 
 </div>
 
+<div class="example" markdown="1">
+
+<ins id="ex8">**예시 8**</ins> $\X_0,\ldots, \X_n$을 변수로 갖는 차수 $m$의 다항식들의 $\mathbb{k}$-벡터공간을 생각하자. 이 벡터공간은 차수 $m$의 monomial들을 basis로 가지며, 따라서 $\binom{n+m}{m}$ 차원이 된다. 
+
+한편, 차수 $m$의 다항식은 $\mathbb{k}[\X_0,\ldots, \X_n]$이 만드는 $\mathbb{P}^n$ 안에서의 hypersurface를 정의한다. 다항식의 zero set은 다항식을 상수배 하는 것에 영향을 받지 않으므로, 이들 hypersurface를 모아둔 것은 $N=\binom{n+m}{m}-1$이라 할 때 $\mathbb{P}^N$의 한 점에 대응되는 것이라 생각할 수 있다. 이제 $\mathbb{P}^N$의 homogeneous coordinate을 $i_0+\cdots+i_n=m$을 만족하는 $i_0,\ldots,i_n$들을 이용하여 
+
+$$v_{i_0,\ldots, i_n},\qquad i_0+\cdots+i_n=m,\quad i_k\geq 0$$
+
+으로 주고 $v:\mathbb{P}^n \rightarrow \mathbb{P}^N$을
+
+$$v=(v_{i_0,\ldots, i_n})_{i_0+\cdots+i_n=m}=(u_0^{i_0}\cdots u_n^{i_n})_{i_0+\cdots+i_n=m}$$
+
+으로 정의할 수 있다. 그럼 $u_0^m,\]ldots, u_n^m$을 보면 $v$들이 모두 동시에 $0$이 될 수 없다는 것을 알고 따라서 $v$는 $\mathbb{P}^N$으로의 regular map을 정의한다. 이를 *Veronese embedding*이라 부른다. 
+
+
+</div>
+
 ## 유리함수들
 
 Quasiprojective variety $X$ 위에서의 rational function을 정의하기 위해서는 $X$가 $\mathbb{P}^n$ 안에 있는 것으로 두고 앞서 살펴본 $\mathbb{P}^n$의 rational function을 사용하면 된다. 몇가지 표기를 고정하자. 우선 $X$ 위에 정의된 rational function들 $f=P/Q$의 모임을 $\mathcal{O}_X$라 적는다. 여기에서, $Q$는 $X$ 위에서 항등적으로 $0$은 아니어야 한다. 그럼 $\mathcal{O}_X$가 ring인 것을 쉽게 보일 수 있으며, 이 때 $P$가 $X$ 위에서 항등적으로 $0$이 되는 함수들을 생각하면 이 모임은 $\mathcal{O}_X$의 maximal ideal $\mathfrak{m}_X$를 이룬다. 이로부터 다음을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Irreducible quasiprojective variety $X\subseteq \mathbb{P}^n$에 대하여, $\mathbb{k}(X)=\mathcal{O}_X/\mathfrak{m}_X$로 정의한다. 
+<ins id="def9">**정의 9**</ins> Irreducible quasiprojective variety $X\subseteq \mathbb{P}^n$에 대하여, $\mathbb{k}(X)=\mathcal{O}_X/\mathfrak{m}_X$로 정의한다. 
 
 </div>
 
-이 다음 글로 Segre 적어야 함
+## 세그레 매장
+

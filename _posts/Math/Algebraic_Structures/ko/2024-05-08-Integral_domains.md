@@ -201,7 +201,7 @@ $$(x+\mathfrak{p})(y+\mathfrak{p})=0+\mathfrak{p}$$
 
 </details>
 
-모든 field는 integral domain이므로, 모든 maximal ideal은 prime ideal이다. 그 역은 성립하지 않는데, 가령 $\mathbb{Z}$의 prime ideal은 $(0)$과, 소수 $p$에 대해 $(p)$ 꼴 뿐이라는 것을 쉽게 확인할 수 있다. 그럼 $(0)$은 prime ideal이지만 maximal ideal은 아니다.
+위의 동치조건을 만족하는 ideal $\mathfrak{p}$를 *prime ideal<sub>소아이디얼</sub>*이라 부른다. 모든 field는 integral domain이므로, 모든 maximal ideal은 prime ideal이다. 그 역은 성립하지 않는데, 가령 $\mathbb{Z}$의 prime ideal은 $(0)$과, 소수 $p$에 대해 $(p)$ 꼴 뿐이라는 것을 쉽게 확인할 수 있다. 그럼 $(0)$은 prime ideal이지만 maximal ideal은 아니다.
 
 한편 다음이 성립한다.
 

@@ -129,7 +129,7 @@ $$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha
 
 으로 정의된다. 어렵지 않게 이들 정의가 $\mathbb{k}[\x]$에 $\mathbb{k}$-벡터공간 구조를 부여한다는 것을 확인할 수 있다.
 
-이제 $n$차 이하의 차수를 갖는 다항식들의 집합 $\mathbb{k}[\x]_\text{degree\scriptsize$\leq n$}$는 $\mathbb{k}[\x]$의 부분공간이라는 것을 확인할 수 있다. 반면, <em_ko>정확히</em_ko> 차수 $n$을 갖는 다항식들의 집합은 부분공간이 아니다. 
+이제 $n$차 이하의 차수를 갖는 다항식들의 집합 $\mathbb{k}[\x]_\text{degree\scriptsize$\leq n$}$는 $\mathbb{k}[\x]$의 부분공간이라는 것을 확인할 수 있다. 반면, <em_ko>정확히</em_ko> 차수 $n$을 갖는 다항식들의 집합은 $0$을 포함하지 않으므로 부분공간은 되지 않지만, $0$만 넣어주면 부분공간이 된다. 
 
 </div>
 

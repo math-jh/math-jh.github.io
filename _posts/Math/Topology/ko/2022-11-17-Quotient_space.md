@@ -13,7 +13,7 @@ sidebar:
 
 date: 2022-11-17
 last_modified_at: 2022-11-17
-weight: 8
+weight: 10
 
 ---
 
@@ -61,7 +61,7 @@ $$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 
 </div>
 
-[§Initial topology와 final topology, ⁋명제 5](/ko/math/topology/initial_and_final_topology#prop5)에 의하여 $X/R$에서의 열린집합은 정확하게 $p^{-1}(U)$가 $X$에서 열린집합이도록 하는 집합을 의미한다.[^1] [\[집합론\] §동치관계, ⁋정의 13](/ko/math/set_theory/equivalence_relations#def13)의 언어로 이를 풀어쓰면, $X/R$ 위의 열린집합들은 $R$에 대해 *saturated*인 $X$의 열린집합에 일대일로 대응된다는 것을 확인할 수 있다. 
+[§Initial topology와 final topology, ⁋명제 5](/ko/math/topology/initial_and_final_topology#prop5)에 의하여 $X/R$에서의 열린집합은 정확하게 $p^{-1}(U)$가 $X$에서 열린집합이도록 하는 집합을 의미한다.[^1] [\[집합론\] §동치관계의 예시들, ⁋정의 5](/ko/math/set_theory/examples_of_equivalence#def5)의 언어로 이를 풀어쓰면, $X/R$ 위의 열린집합들은 $R$에 대해 *saturated*인 $X$의 열린집합에 일대일로 대응된다는 것을 확인할 수 있다. 
 
 한편 [§Initial topology와 final topology, ⁋명제 6](/ko/math/topology/initial_and_final_topology#prop6)에 의하여 다음이 성립한다.
 
@@ -79,7 +79,7 @@ $$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$(X/S)/(R/S)\rightarrow X/R$이 전단사함수가 되는 것은 [\[집합론\] §동치관계, ⁋정의 16](/ko/math/set_theory/equivalence_relations#def16)에서 이미 보인 것이다. [명제 4](#prop4)에 의하여, 이 함수가 연속인 것은 $X/S\rightarrow X/R$이 연속인 것과 동치이고, 다시 이 함수의 연속성은 $X\rightarrow X/R$이 연속인 것으로부터 얻어진다. 
+$(X/S)/(R/S)\rightarrow X/R$이 전단사함수가 되는 것은 [\[집합론\] §동치관계의 예시들, ⁋정의 8](/ko/math/set_theory/examples_of_equivalence#def8)에서 이미 보인 것이다. [명제 4](#prop4)에 의하여, 이 함수가 연속인 것은 $X/S\rightarrow X/R$이 연속인 것과 동치이고, 다시 이 함수의 연속성은 $X\rightarrow X/R$이 연속인 것으로부터 얻어진다. 
 
 이와 유사하게 $X/R\rightarrow(X/S)/(R/S)$의 연속성은 $X\rightarrow(X/S)/(R/S)$의 연속성으로부터 얻어지며, 이 함수는 두 연속함수의 합성
 
