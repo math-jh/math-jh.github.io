@@ -44,8 +44,6 @@ weight: 7
 
 </div>
 
-다음 글에서 우리는 일반적인 submanifold $F:M\rightarrow N$을 부분집합 $F(M)\hookrightarrow N$으로 볼 수 있다는 것을 증명한다. (<#ref#>)
-
 <div class="example" markdown="1">
 
 <ins id="ex3">**예시 3**</ins> 두 manifold $M,N$과 그 product $M\times N$을 생각하자. 그럼 임의의 $q\in N$에 대하여, 부분집합 $M\times\\{q\\}$은 $M$과 diffeomorphic한 $M\times N$의 embedded submanifold이고, 비슷하게 임의의 $p\in M$에 대하여 부분집합 $\\{p\\}\times N$은 $N$과 diffeomorphic한 embedded submanifold이며, 이 때의 embedding은 각각 $x\mapsto (x,q)$와 $y\mapsto (p,y)$으로 주어진다.

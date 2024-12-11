@@ -39,7 +39,7 @@ Free family가 아닌 family를 *related family*라 부른다.
 
 </div>
 
-Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $A$가 field이고, $M$이 $A$ 위에 정의된 벡터공간이었다면 $M$의 원소들의 family $(x\_i)\_{i\in I}$가 free family라는 것은 $x\_i$들이 일차독립인 것과 동치이다. (<#ref#>) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*이라 부른다. 
+Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $A$가 field이고, $M$이 $A$ 위에 정의된 벡터공간이었다면 $M$의 원소들의 family $(x\_i)\_{i\in I}$가 free family라는 것은 $x\_i$들이 일차독립인 것과 동치이다. ([\[선형대수학\] §벡터공간의 기저, ⁋정의 5](/ko/math/linear_algebra/basis#def5)) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*이라 부른다. 
 
 한편, 임의의 $A$-module $M$은 항상 생성집합을 갖는다. 이는 적어도 $M$의 원소들을 전부 모아두면 이것이 $M$을 생성하기 때문이다.  이로부터 다음을 얻는다.
 
@@ -118,7 +118,7 @@ $$\phi^\ast M\cong\phi^\ast\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{
 
 </details>
 
-<#ref#>에서 우리는 $\mathbb{k}$가 commutative라는 성질을 사용하지 않았으므로, 위의 명제는 더 일반적으로 $\mathbb{k}$를 division ring $D$로 바꾸어도 성립한다. 한편 임의의 commutative ring은 $A \rightarrow \Frac A$가 존재하므로 항상 IBN property를 갖는다.
+[\[선형대수학\] §무한차원 벡터공간<sup>†</sup>, ⁋정리 4](/ko/math/linear_algebra/infinite_dimensional_vector_space#thm4)에서 우리는 $\mathbb{k}$가 commutative라는 성질을 사용하지 않았으므로, 위의 명제는 더 일반적으로 $\mathbb{k}$를 division ring $D$로 바꾸어도 성립한다. 한편 임의의 commutative ring은 $A \rightarrow \Frac A$가 존재하므로 항상 IBN property를 갖는다.
 
 <div class="definition" markdown="1">
 

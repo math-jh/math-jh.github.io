@@ -133,7 +133,7 @@ $$(p'\circ\eta)\circ h=p'\circ(h'\circ\xi)=(p'\circ h')\circ\xi=0\circ\xi=0$$
 
 $$\ker(h)\subseteq\ker(p\circ\xi)$$
 
-이고, 따라서 $p\circ\xi$가 $\xi^\ast:X/\ker(h)\rightarrow X'/\ker(h')$를 유도한다. (<#ref#>)
+이고, 따라서 $p\circ\xi$가 $\xi^\ast:X/\ker(h)\rightarrow X'/\ker(h')$를 유도한다.
 
 </details>
 

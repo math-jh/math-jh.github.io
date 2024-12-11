@@ -43,7 +43,9 @@ weight: 7
 
 우선 첫 번째 조건이 성립한다 하면, 정의에 의하여 $\mathfrak{p}$가 $M$의 유일한 associated prime ideal이다. 이제 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 1번 조건에 의하여 $\mathfrak{p}$는 반드시 $\ann(M)$을 포함하는 prime ideal 중 minimal한 것이어야 하며, 2번 조건에 의하여 $\mathfrak{p}$ 바깥에 있는 원소들은 $M$의 zero divisor가 아니다.
 
-이제 두 번째 조건이 성립한다 가정하자. 그럼 $A\setminus \mathfrak{p}$의 원소들은 $M$의 zero divisor가 아니므로, localization $M_\mathfrak{p}$를 생각할 수 있고 
+이제 두 번째 조건이 성립한다 가정하자. 그럼 $A\setminus \mathfrak{p}$의 원소들은 $M$의 zero divisor가 아니므로, localization $M_\mathfrak{p}$에서 주어진 주장을 증명하면 충분하다. 즉 $(A, \mathfrak{p})$가 local ring이라 가정할 수 있고, 이제 $\mathfrak{p}$가 $\ann(M)$에 대해 minimal하다는 가정과 [§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)로부터 원하는 결과를 얻는다.
+
+마지막으로 세 번째 조건이 성립한다 하면 $\mathfrak{p}$가 $\ann M$을 포함하는 prime ideal들 가운데 minimal하다는 것은 자명하며, 따라서 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 조건에 의하여 $\mathfrak{p}$는 $M$의 associated prime ideal이다. 또, $\mathfrak{p}$ 바깥에 있는 원소들은 모두 zero divisor가 아니므로, 다시 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘때 조건에 의하여 임의의 associated prime은 항상 $\mathfrak{p}$ 안에 속한다는 것을 안다. 즉, $\mathfrak{p}$가 $M$의 유일한 associated prime ideal이다.
 
 </details>
 
@@ -66,10 +68,21 @@ weight: 7
 
 이 정리에 대한 증명은 다소 긴 감이 있어서 생략하기로 한다. 
 
+한편, 다음 정리는 primary decomposition이 우리가 알고 있던 인수분해의 개념을 일반화한 것임을 보여준다.
+
 <div class="proposition" markdown="1">
 
 <ins id="thm3">**정리 3**</ins> Noetherian domain $A$에 대해 다음이 성립한다.
 
-1. $f\in A$
+1. $f\in A$가 다음 식 $f=u p_1^{e_1}\cdots p_n^{e_n}$으로 인수분해된다 하자. 여기서 $u$는 unit이고 $p_i$는 $(p_i)$들이 서로 다른 prime ideal이도록 하는 원소들이다. 그럼 $(f)=\bigcap(p_i^{e_i})$가 $(f)$의 minimal primary decomposition이다.
+2. $A$가 UFD인 것과, principal ideal에 대한 minimal prime ideal들이 모두 principal인 것이 동치이다.
 
 </div>
+
+---
+
+**참고문헌**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
+
+---

@@ -164,3 +164,53 @@ $$0 \rightarrow M_\mathfrak{m} \rightarrow L_\mathfrak{m} \rightarrow N_\mathfra
 이 splitting exact sequence라면 원래의 exact sequence가 split한다.
 
 </div>
+
+## 아이디얼의 근기
+
+다음의 결과는 엄밀히 이야기하면 localization과는 관계가 없지만, 이를 적어주는 데에 multiplicative subset을 사용하므로 여기에서 언급하고 넘어간다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7**</ins> Ring $A$와 multiplicative subset $S$에 대하여, $\mathfrak{a}$가 $S$와 만나지 않는 ideal 중 maximal한 것이라 가정하자. 그럼 $\mathfrak{a}$는 prime ideal이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$A$의 두 원소 $a_1,a_2$가 주어졌다 하고, $a_1,a_2\not\in \mathfrak{a}$라면 $a_1a_2\not\in \mathfrak{a}$임을 보이자. $\mathfrak{a}$의 maximality에 의하여, 두 ideal $\mathfrak{a}+(a_1)$과 $\mathfrak{a}+(a_2)$는 반드시 $S$와 만나야 하므로, 적당한 $b_1,b_2\in A$와 $x_1,x_2\in \mathfrak{a}$에 대하여 $a_ib_i+x_i\in S$가 성립해야 한다. 그런데 $S$는 곱셈에 대해 닫혀있으므로, 다음 원소
+
+$$(a_1b_1+x_1)(a_2b_2+x_2)=a_1a_2b_1b_2+a_1b_1x_2+a_2b_2x_1+x_1x_2$$
+
+또한 $S$에 속해있어야 한다. 만일 결론에 반하여 $a_1a_2\in \mathfrak{a}$라면, 우변의 네 항은 모두 $\mathfrak{a}$에 속하므로 이는 $\mathfrak{a}$와 $S$가 만나지 않는다는 가정에 모순이다.
+
+</details>
+
+비슷한 맥락에서 다음을 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="cor8">**따름정리 8**</ins> Ring $A$의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *radical<sub>근기</sub>* $\sqrt{\mathfrak{a}}$를 다음 식
+
+$$\sqrt{\mathfrak{a}}=\{a: a^k\in \mathfrak{a}\text{ for some $k\in \mathbb{N}$}\}$$
+
+으로 정의하자. 그럼
+
+$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $\mathfrak{a}$} \mathfrak{p}$$
+
+이 성립한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\\{a^k: k\geq 1\\}$로 두고 [§국소화, ⁋명제 10](/ko/math/commutative_algebra/localization#prop10)를 적용하면 된다.
+
+</details>
+
+---
+
+**참고문헌**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
+
+---
