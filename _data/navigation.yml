@@ -459,21 +459,35 @@ topology-ko:
       - title: "열린집합"
         url: ko/math/topology/open_sets
       - title: "위상공간의 기저"
-        url: ko/math/topology/topological_basis
+        url: ko/math/topology/topological_bases
       - title: "집합의 내부, 폐포, 경계"
         url: ko/math/topology/other_concepts
       - title: "위상공간의 다른 정의들"
-        url: ko/math/topology/equivalent_formulation_of_topology
+        url: ko/math/topology/equivalent_formulations_of_topology
       - title: "연속함수"
         url: ko/math/topology/continuous_functions
       - title: "Initial topology와 final topology"
         url: ko/math/topology/initial_and_final_topology
       - title: "부분공간"
-        url: ko/math/topology/subspace
+        url: ko/math/topology/subspaces
+      - title: "준층"
+        url: ko/math/topology/presheaves
+      - title: "층"
+        url: ko/math/topology/sheaves
       - title: "몫공간"
-        url: ko/math/topology/quotient_space
+        url: ko/math/topology/quotient_spaces
       - title: "곱공간"
-        url: ko/math/topology/product_space
+        url: ko/math/topology/product_spaces
+      - title: "열린사상과 닫힌사상"
+        url: ko/math/topology/open_mappings_and_closed_mappings
+      - title: "하우스도르프 공간"
+        url: ko/math/topology/Hausdorff_spaces
+      - title: "옹골공간"
+        url: ko/math/topology/compact_spaces
+      - title: "옹골성과 필터의 수렴"
+        url: ko/math/topology/filter_convergence
+      - title: "옹골성"
+        url: ko/math/topology/compactness
   - title: 
     children:
       - title: "블로그 소개"

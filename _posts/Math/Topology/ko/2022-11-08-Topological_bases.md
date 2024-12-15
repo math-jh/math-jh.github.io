@@ -4,9 +4,9 @@ title: "위상공간의 기저"
 excerpt: "위상공간의 기저와 부분기저, 국소기저"
 
 categories: [Math / Topology]
-permalink: /ko/math/topology/topological_base
+permalink: /ko/math/topology/topological_bases
 header:
-    overlay_image: /assets/images/Math/Topology/Topological_base.png
+    overlay_image: /assets/images/Math/Topology/Topological_bases.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
@@ -72,7 +72,7 @@ $\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, $A$에서의 *local base<sub>국소기저</sub>*는 $(\mathcal{N}(A),\subseteq)$의 coinitial subset을 의미한다. ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set))
+<ins id="def4">**정의 4**</ins> 위상공간 $X$와 부분집합 $A$에 대하여, $A$에서의 *local base<sub>국소기저</sub>*는 열린집합들로 이루어진 $(\mathcal{N}(A),\subseteq)$의 coinitial subset을 의미한다. ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set))
 
 </div>
 
