@@ -144,7 +144,7 @@ $x\in A\cap\cl(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의
 
 </div>
 
-만일 $x\in\cl(A)\setminus A$라면, [명제 6](#prop6)에 의하여 $x$는 반드시 $A$의 limit point여야 하는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\\{x\\}$이도록 할 수 있다면 $x$가 $A$의 *isolated point<sub>고립접</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
+그럼 정의에 의하여 $\cl(A)$는 $A$의 limit point들과 $A$의 합집합이다. 만일 $x\in\cl(A)\setminus A$라면, [명제 6](#prop6)에 의하여 $x$는 반드시 $A$의 limit point여야 하는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\\{x\\}$이도록 할 수 있다면 $x$가 $A$의 *isolated point<sub>고립접</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
 
 ## 집합의 경계
 

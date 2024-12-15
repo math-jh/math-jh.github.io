@@ -35,7 +35,7 @@ $$U\subseteq f^{-1}(f(U))\subseteq f^{-1}(V)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 두 위상공간 $X,Y$ 사이의 함수 $f:X\rightarrow Y$가 점 $x$에서 연속이라 하자. 만일 어떠한 $A\subseteq B$에 대하여 $x\in\cl(A)$라면, $f(x)\in\cl(A)$이다.
+<ins id="prop2">**명제 2**</ins> 두 위상공간 $X,Y$ 사이의 함수 $f:X\rightarrow Y$가 점 $x$에서 연속이라 하자. 만일 어떠한 $A\subseteq X$에 대하여 $x\in\cl(A)$라면, $f(x)\in\cl(A)$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -52,7 +52,7 @@ $f(x)\in Y$의 임의의 근방 $V$를 택하자. 그럼 $f^{-1}(V)$는 $x$의 �
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. ([\[집합론\] §이항관계의 그래프, ⁋명제 13](/ko/math/set_theory/binary_relation#prop13))
+$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. ([\[집합론\] §이항관계의 연산, ⁋명제 13](/ko/math/set_theory/operation_of_binary_relations#prop6))
 
 </details>
 
