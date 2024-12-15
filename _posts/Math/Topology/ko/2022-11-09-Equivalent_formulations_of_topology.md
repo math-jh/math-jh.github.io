@@ -4,9 +4,9 @@ title: "위상공간의 다른 정의들"
 excerpt: "닫힌집합, 폐포, neighborhood filter를 이용한 위상의 정의"
 
 categories: [Math / Topology]
-permalink: /ko/math/topology/equivalent_formulation_of_topology
+permalink: /ko/math/topology/equivalent_formulations_of_topology
 header:
-    overlay_image: /assets/images/Math/Topology/Equivalent_formulation_of_topology.png
+    overlay_image: /assets/images/Math/Topology/Equivalent_formulations_of_topology.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
@@ -93,7 +93,15 @@ $$\cl(A)\subset\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 </div>
 
-Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 1](/ko/math/set_theory/filter_and_ideal#def1)에서 정의한 것과 동일하지만 조건 $\emptyset\not\in\mathcal{F}$가 추가된 것으로 생각할 수 있다. 그럼 $\mathcal{N}(x)$가 만족해야 할 네 가지 조건 중 앞의 세 가지는 $\mathcal{N}(x)$가 모든 $x$에 대하여 filter 구조를 갖는다는 것으로 축약할 수 있다. 네 번째 조건은 별도로 이름을 갖는다.
+<div class="example" markdown="1">
+
+<ins id="ex4">**예시 4**</ins> 무한집합 $X$에 대하여, $X\setminus A$가 유한집합이도록 하는 $A$들의 모임은 filter이다. 특별히 $X=\mathbb{N}$인 경우 이 filter를 *Fréchet filter*라 부른다.
+
+</div>
+
+Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 1](/ko/math/set_theory/filter_and_ideal#def1)에서 정의한 것과 동일하지만 조건 $\emptyset\not\in\mathcal{F}$가 추가된 것으로 생각할 수 있다. 비슷하게, $X$ 위에 정의된 *ultrafilter* 또한 $\emptyset$을 포함하지 않는 maximal filter를 의미하는 것으로 생각한다.
+
+그럼 $\mathcal{N}(x)$가 만족해야 할 네 가지 조건 중 앞의 세 가지는 $\mathcal{N}(x)$가 모든 $x$에 대하여 filter 구조를 갖는다는 것으로 축약할 수 있다. 네 번째 조건은 별도로 이름을 갖는다.
 
 <div class="misc" markdown="1">
 
@@ -101,7 +109,55 @@ Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집�
 
 </div>
 
-뿐만 아니라, $\mathcal{N}(x)$를 local base와 같은 역할을 한다고 생각하면, 이를 통해 위상공간이 base $\mathcal{B}$를 통해서도 정의됨을 보일 수 있었다. ([§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_base#cor6))
+뿐만 아니라, $\mathcal{N}(x)$를 local base와 같은 역할을 한다고 생각하면, 이를 통해 위상공간이 base $\mathcal{B}$를 통해서도 정의됨을 보일 수 있었다. ([§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_bases#cor6))
 
-서두에서 말한 것과 같이, 이번 글은 본질적으로는 우리가 그 동안 다뤄왔던 개념들을 다른 방식으로 적은 것에 불과하지만, 이와 같은 형태의 정의가 유용한 분야들이 존재한다.
+한편, 더 일반적으로 filter의 base를 정의할 수 있다. 
 
+<div class="definition" markdown="1">
+
+<ins id="def5">**정의 5**</ins> $\mathcal{P}(X)$의 부분집합 $\mathcal{B}$가 다음 두 조건을 만족한다고 가정하자.
+
+1. $\mathcal{B}$의 임의의 두 원소의 교집합은 $\mathcal{B}$의 어떠한 원소를 포함한다.
+2. $\mathcal{B}$는 적어도 하나의 원소를 포함하며, $\emptyset\not\in \mathcal{B}$이다.
+
+그럼 $\uparrow \mathcal{B}$는 $X$의 filter를 정의하며, 이 때 $\mathcal{B}$를 $\uparrow \mathcal{B}$의 *filter base*라 부른다. 
+
+</div>
+
+어렵지 않게 다음을 확인할 수 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop6">**명제 6**</ins> $X$ 위에 정의된 filter $\mathcal{F}$의 부분집합 $\mathcal{B}$가 $\mathcal{F}$의 filter base인 것은 $\mathcal{F}$의 임의의 원소가 $\mathcal{B}$의 어떠한 원소를 포함하는 것과 동치이다. 
+
+</div>
+
+또, 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7**</ins> $X$ 위에 정의된 filter $\mathcal{F}$를 생각하자. 그럼 임의의 함수 $f:X \rightarrow Y$에 대하여, 
+
+$$f(\mathcal{F})=\{f(F): F\in \mathcal{F}\}$$
+
+은 $Y$의 filter base이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+이는 $f(F_1\cap F_2)\subseteq f(F_1)\cap f(F_2)$, 그리고 $\emptyset\not\in\mathcal{F}\implies \emptyset\not\in f(\mathcal{F})$로부터 자명하다.
+
+</details>
+
+한편 집합 $X$ 위에 정의된 filter $\mathcal{F}$와 임의의 부분집합 $A$에 대하여, 다음 집합
+
+$$\mathcal{F}\vert_A=\{F\cap A: F\in \mathcal{F}\}$$
+
+은 일반적으로 $A$의 filter가 되지 않는다. 이는 생각해보면 오직 $\mathcal{F}\vert_A$가 공집합을 포함할 수도 있기 때문이다. 즉, $\mathcal{F}$의 모든 원소가 $A$와 서로소가 아니라면 $\mathcal{F}\vert_A$는 $A$ 위에 filter를 정의한다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> 만일 위의 상황에서 $\mathcal{F}\vert_A$가 $A$의 filter를 정의한다면, filter $\mathcal{F}$를 $A$의 filter라 부른다. 
+
+</div>

@@ -49,7 +49,7 @@ $$\uparrow x=\{y\in A\mid y\geq x\}$$
 
 </div>
 
-우리는 대부분 $A$가 lattice인 경우에 관심이 있다. 이 때,
+우리는 대부분 $A$가 lattice인 경우에 관심이 있다. 이 때, ([§유향집합, ⁋정의 4](/ko/math/set_theory/directed_set#def4))
 
 - 공집합이 아닌 lower set $I$가 ideal인 것은 임의의 $x,y\in I$에 대하여 $x\vee y\in I$인 것과 동치이다.
 - 공집합이 아닌 upper set $F$가 filter인 것은 임의의 $x,y\in F$에 대하여 $x\wedge y\in F$인 것과 동치이다.
