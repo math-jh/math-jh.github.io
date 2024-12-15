@@ -4,7 +4,7 @@ title: "하우스도르프 공간"
 excerpt: ""
 
 categories: [Math / Topology]
-permalink: /ko/math/topology/hausdorff_spaces
+permalink: /ko/math/topology/Hausdorff_spaces
 header:
     overlay_image: /assets/images/Math/Topology/Hausdorff_spaces.png
     overlay_filter: 0.5
@@ -23,7 +23,7 @@ weight: 13
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 위상공간 $X$에 대하여, 함수 $\mathbb{N} \rightarrow X$를 $X$의 점들로 이루어진 *점열<sub>sequence</sub>*이라 부르고, 이를 $(x\_n)\_{n\geq 1}$과 같이 나타낸다. 점열 $(x\_n)\_{i\geq 1}$이 $x\in X$로 *수렴<sub>converge</sub>*한다는 것은 $x$의 임의의 근방 $U$가 주어질 때마다, 적당한 $N\in \mathbb{N}$이 존재하여 다음 명제 
+<ins id="def1">**정의 1**</ins> 위상공간 $X$에 대하여, 함수 $\mathbb{N} \rightarrow X$를 $X$의 점들로 이루어진 *점열<sub>sequence</sub>*이라 부르고, 이를 $(x\_n)\_{n\geq 1}$과 같이 나타낸다. 점열 $(x\_n)\_{n\geq 1}$이 $x\in X$로 *수렴<sub>converge</sub>*한다는 것은 $x$의 임의의 근방 $U$가 주어질 때마다, 적당한 $N\in \mathbb{N}$이 존재하여 다음 명제 
 
 $$n\geq N\implies x_n\in U$$
 
@@ -35,21 +35,54 @@ $$n\geq N\implies x_n\in U$$
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> 임의의 집합 $X$에 trivial topology를 주어 $X$를 위상공간으로 생각하자. 그럼 $X$의 임의의 수열은 $X$의 임의의 점으로 수렴한다. 
+<ins id="ex2">**예시 2**</ins> 임의의 집합 $X$에 trivial topology를 주어 $X$를 위상공간으로 생각하자. 그럼 $X$의 임의의 점열은 $X$의 임의의 점으로 수렴한다. 
+
+</div>
+
+## 분리공리들
+
+위의 [예시 2](#ex2)와 같은 현상이 일어나는 이유는 직관적으로 $X$ 위에 정의된 위상이 $X$의 점들을 분리시켜줄만큼 충분히 강하지 않기 때문이다. 우리는 위상공간에서 점들을 분리하는 정도에 따라 다양한 종류의 *separation axiom<sub>분리공리</sub>*들을 정의하고 이들 각각을 만족하는 공간들을 분류할 수 있다. 이를 위해 몇 가지 용어를 정리하자.
+
+- 위상공간 $X$의 두 점 $x,y$가 서로 다르다는 것은 $x\neq y$인 것이다. 
+- 위상공간 $X$의 두 점 $x,y$가 *위상적으로 구별가능<sub>topologically distinguishable</sub>*하다는 것은 $\mathcal{N}(x)\neq \mathcal{N}(y)$인 것이다.[^1] ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter))
+- 위상공간 $X$의 두 부분집합 $A,B$가 *분리가능<sub>separated</sub>*이라는 것은 $x,y$ 각각이 서로를 포함하지 않는 근방을 갖는 것이다.
+- 위상공간 $X$의 두 부분집합 $A,B$가 *근방으로 분리가능<sub>separated by neighborhoods</sub>*이라는 것은 이들이 서로소인 근방을 갖는 것이다.
+- 위상공간 $X$의 두 부분집합 $A,B$가 *닫힌근방으로 분리가능<sub>separated by closed neighborhoods</sub>*이라는 것은 이들이 서로소인 닫힌근방을 갖는 것이다.
+- 위상공간 $X$의 두 부분집합 $A,B$가 *연속함수로 분리가능<sub>separated by continuous functions</sub>*이라는 것은 적당한 연속함수 $f:X \rightarrow \mathbb{R}$이 존재하여 $A\subseteq f^{-1}(\\{0\\})$이고 $B\subseteq f^{-1}(\\{1\\})$인 것이다. 
+- 위상공간 $X$의 두 부분집합 $A,B$가 *연속함수로 정확히 분리가능<sub>precisely separated by continuous functions</sub>*이라는 것은 적당한 연속함수 $f:X \rightarrow \mathbb{R}$이 존재하여 $A= f^{-1}(\\{0\\})$이고 $B= f^{-1}(\\{1\\})$인 것이다. 
+
+위의 조건들은 강한 순서대로 나열되어 있다. 즉, 연속함수로 정확히 분리가능한 두 부분집합은 연속함수로 분리가능하고, 연속함수로 분리가능한 두 부분집합은 닫힌근방으로 분리가능하며, 닫힌근방으로 분리가능한 두 부분집합은 근방으로 분리가능하고, 근방으로 분리가능한 두 부분집합은 분리가능하고, 분리가능한 두 점은 위상적으로 구별가능하며 모든 위상적으로 구별가능한 점들은 서로 다르다.
+
+이제 다음을 정의한다.
+
+<div class="definition" markdown="1">
+
+<ins id="def3">**정의 3**</ins> 위상공간 $X$에 대하여, 다음을 정의한다. 
+
+1. $X$가 *$T_0$-space<sub>$T_0$-공간</sub>*, 혹은 *Kolmogorov space<sub>콜모고로프 공간</sub>*라는 것은 임의의 서로 다른 두 점 $x,y$가 위상적으로 구별가능한 것이다.
+2. $X$가 *$R_0$-space<sub>$R_0$-공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 분리가능한 것이다.
+3. $X$가 *$T_1$-space<sub>$T_1$-공간</sub>*, 혹은 *Fréchet space<sub>프레셰 공간</sub>*라는 것은 임의의 서로 다른 두 점이 분리가능한 것이다. 따라서, $X$가 $T_1$인 것과 $X$가 $T_0$이며 $R_0$인 것이 동치이다.
+4. $X$가 *$R_1$-space<sub>$R_1$-공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 근방으로 분리가능한 것이다. 따라서 임의의 $R_1$-space는 $R_0$-space이다.
+5. $X$가 *$T_2$-space<sub>$T_2$-공간</sub>*이라는 것은 임의의 서로 다른 두 점이 근방으로 분리가능한 것이다. 따라서, $X$가 $T_2$인 것과 $X$가 $T_0$이며 $R_1$인 것이 동치이고, 임의의 $T_2$-space는 $T_1$이다. 
+6. $X$가 *$T_{2\frac{1}{2}}$-space<sub>$T_{2\frac{1}{2}}$-공간</sub>*, 혹은 *Urysohn space<sub>유리손 공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 닫힌근방으로 분리가능한 것이다. 따라서, 임의의 $T_{2\frac{1}{2}}$-space는 $T_2$이다. 
+7. $X$가 *completely $T_2$-space<sub>완전 $T_2$-공간</sub>*, 혹은 *completely Hausdorff space<sub>완전 하우스도르프 공간</sub>*인 것은 임의의 서로 다른 두 점이 연속함수로 분리 가능한 것이다.
+8. $X$가 *regular space<sub>정칙공간</sub>*이라는 것은 임의의 점 $x\in X$와 $x$를 포함하지 않는 닫힌집합 $A\subseteq X$가 항상 근방으로 분리가능한 것이다.
+9. $X$가 *$T_3$-space<sub>$T_3$-공간</sub>*, 혹은 *regular Hausdorff space<sub>정칙 하우스도르프 공간</sub>*이라는 것은 $X$가 $T_0$이며 regular인 것이다. 임의의 $T_3$-space는 $T_{2\frac{1}{2}}$이다. 
+10. $X$가 *completely regular space<sub>완전정칙공간</sub>*이라는 것은 임의의 점 $x\in X$와 $x$를 포함하지 않는 닫힌집합 $A\subseteq X$가 항상 연속함수로 분리가능한 것이다.
+11. $X$가 *completely $T_3$-space<sub>완전 $T_3$-공간</sub>*, 혹은 *Tychonoff space<sub>티코노프 공간</sub>*인 것은 $X$가 $T_0$이고 completely regular인 것이다. 따라서 $X$가 completely $T_3$이면 completely Hausdorff이고 regular Hausdorff이므로, 이를 *completely regular Hausdorff space<sub>완전 정칙 하우스도르프 공간</sub>*라 부르기도 한다.
+12. $X$가 *normal space<sub>정규공간</sub>*인 것은 임의의 서로소인 두 닫힌집합이 근방으로 분리가능한 것이다. 
+13. $X$가 *normal regular space<sub>정규정칙공간</sub>*인 것은 $X$가 normal이고 $R_0$인 것이다. 따라서 $X$가 normal regular라면 $X$는 completely regular이다. 
+14. $X$가 *$T_4$-space<sub>$T_4$-공간</sub>*, 혹은 *normal Hausdorff space<sub>정규 하우스도르프 공간</sub>*인 것은 $X$가 $T_1$이며 normal인 것이다. 임의의 $T_1$-space는 $R_0$이므로 임의의 $T_4$-space는 normal regular이고, 따라서 completely regular이다. 한편 임의의 $T_1$-space는 $T_0$-space이므로 이로부터 임의의 $T_4$-space는 completely $T_3$인 것을 안다.
+15. $X$가 *completely normal space<sub>완전정규공간</sub>*인 것은 임의의 두 분리가능한 집합이 근방으로 분리가능한 것이다. 그럼 임의의 completely normal space는 normal이다.
+16. $X$가 *completely $T_4$-space<sub>완전 $T_4$-공간</sub>*인 것은 $X$가 completely normal이고 $T_1$인 것이다. 따라서 임의의 completely $T_4$-space는 $T_4$이다.
+17. $X$가 *perfectly normal space*인 것은 임의의 두 서로소인 닫힌집합이 연속함수로 정확히 분리가능한 것이다.
+18. $X$가 *perfectly $T_4$-space*인 것은 $X$가 perfectly normal이고 $T_0$인 것이다. 
 
 </div>
 
 ## 하우스도르프 공간
 
-위의 [예시 2](#ex2)와 같은 현상이 일어나는 이유는 직관적으로 $X$ 위에 정의된 위상이 $X$의 점들을 분리시켜줄만큼 충분히 강하지 않기 때문이다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 위상공간 $X$가 *Hausdorff space<sub>하우스도르프 공간</sub>*이라는 것은 임의의 $x_1,x_2\in X$가 주어질 때마다 서로소인 이들의 근방 $U_1,U_2$를 잡을 수 있는 것이다. 
-
-</div>
-
-그럼 위의 예시와 같은 일은 일어나지 않는다.
+[정의 3](#def3)에서 특히 중요한 것 중 하나는 Hausdorff space이다. 여기에서는 우리의 직관이 잘 성립한다. 
 
 <div class="proposition" markdown="1">
 
@@ -59,7 +92,7 @@ $$n\geq N\implies x_n\in U$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-결론에 반하여 $(x_n)$이 두 점 $x,y$로 수렴한다 하자. 그럼 $x$와 $y$의 서로소인 근방 $U,V$를 각각 잡을 수 있다. 이제 $(x_n)$이 $x$와 $y$로 각각 수렴한다는 가정으로부터, 적당한 $M,N$이 존재하여
+결론에 반하여 $(x_n)$이 두 점 $x,y$로 수렴한다 하자. 그럼 $x$와 $y$의 서로소인 열린근방 $U,V$를 각각 잡을 수 있다. 이제 $(x_n)$이 $x$와 $y$로 각각 수렴한다는 가정으로부터, 적당한 $M,N$이 존재하여
 
 $$m\geq M \implies x_m\in U,\qquad n\geq N\implies x_n\in V$$
 
@@ -165,20 +198,6 @@ $$x\sim y\iff f(x)=f(y)$$
 
 </div>
 
-## Separation axioms
-
-Hausdorff space는 직관적으로 임의의 서로 다른 두 점이 주어졌을 때, 이들을 열린집합을 사용하여 분리시켜주는 것이라 할 수 있다. 이와 같은 방식으로 위상공간에서 점들을 분리하는 정도에 따라 다양한 종류의 *separation axiom<sub>분리공리</sub>*들을 정의하고 이들 각각을 만족하는 공간들을 분류할 수 있다. 이를 위해 몇 가지 용어를 정리하자.
-
-- 위상공간 $X$의 
-
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> 위상공간 $X$에 대하여, 다음을 정의한다. 
-
-1. $X$가 *$T_0$-space<sub>$T_0$-공간</sub>*, 혹은 *Kolmogorov space<sub>콜모고로프 공간</sub>*라는 것은 임의의 두 점 $x,y$가 위상적으로 구분 가능한 것이다. 즉, $\mathcal{N}(x)\neq \mathcal{N}(y)$인 것이다. 
-2. $X$가 *$T_1$-space<sub>$T_1$-공간</sub>*, 혹은 *Fréchet space<sub>프레셰 공간</sub>*라는 것은 임의의 두 점 $x,y$가 주어졌을 때, $y$를 포함하지 않는 $x$의 근방 $U$와, $x$를 포함하지 않는 $y$의 근방 $V$가 각각 존재하는 것이다. 
-3. $X$가 *$T_2$-space<sub>$T_2$-공간</sub>*, 혹은 *Hausdorff space<sub>하우스도르프 공간</sub>*이라는 것은 임의의 두 점 $x,y$가 주어졌을 때, $x$의 근방 $U$, $y$의 근방 $V$가 각각 존재하여 $U\cap V=\emptyset$인 것이다.
-4. $X$가 *$T_{2\frac{1}{2}}$-space<sub>$T_{2\frac{1}{2}}$-공간</sub>* 혹은 *Urysohn space<sub>유리손 공간</sub>*이라는 것은 임의의 두 점 $x,y$가 주어졌을 때, $x$를 포함하지만 $y$를 포함하지 않는 닫힌집합 $A$와 $y$를 포함하지만 $x$를 포함하지 않는 닫힌집합 $B$가 존재하여 $A\cap B=\emptyset$인 것이다. 
 
 
-</div>
+[^1]: 이는 $x$와 $y$를 각각 포함하는 열린집합들의 모임이 서로 같지 않다는 것과 동치이다. 
