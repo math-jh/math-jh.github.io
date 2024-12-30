@@ -13,7 +13,7 @@ sidebar:
 
 date: 2024-11-30
 last_modified_at: 2024-11-30
-weight: 100
+weight: 14
 
 ---
 
@@ -130,58 +130,8 @@ $$S=\{g\in A: D(f)\subseteq D(g)\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> Scheme $X$와 그 위에 정의된 $\mathscr{O}\_X$-module $\mathscr{F}$에 대하여, $\mathscr{F}$가 *of finite type*이라는 것은 임의의 affine open subset $U=\Spec A$마다 $\mathscr{F}\vert_{\Spec A}\cong \widetilde{M}$이도록 하는 *finitely generated* $A$-module $M$이 존재하는 것이다. 비슷하게 $\mathscr{F}$가 *finitely presented*이라는 것은 임의의 affine open subset $U=\Spec A$마다 $\mathscr{F}\vert_{\Spec A}\cong \widetilde{M}$이도록 하는 *finitely presented* $A$-module $M$이 존재하는 것이며, $\mathscr{F}$가 *coherent*라는 것은 affine open subset $U=\Spec A$마다 $\mathscr{F}\vert_{\Spec A}\cong \widetilde{M}$이도록 하는 *coherent* $A$-module $M$이 존재하는 것이다.
+<ins id="def10">**정의 10**</ins> Scheme $X$와 그 위에 정의된 $\mathscr{O}\_X$-module $\mathscr{F}$에 대하여, $\mathscr{F}$가 *of finite type*이라는 것은 임의의 affine open subset $U=\Spec A$마다 $\mathscr{F}\vert\_{\Spec A}\cong \widetilde{M}$이도록 하는 *finitely generated* $A$-module $M$이 존재하는 것이다. 비슷하게 $\mathscr{F}$가 *finitely presented*이라는 것은 임의의 affine open subset $U=\Spec A$마다 $\mathscr{F}\vert\_{\Spec A}\cong \widetilde{M}$이도록 하는 *finitely presented* $A$-module $M$이 존재하는 것이며, $\mathscr{F}$가 *coherent*라는 것은 affine open subset $U=\Spec A$마다 $\mathscr{F}\vert\_{\Spec A}\cong \widetilde{M}$이도록 하는 *coherent* $A$-module $M$이 존재하는 것이다.
 
 </div>
 
 그럼 [명제 9](#prop9)에 의하여, 임의의 locally noetherian scheme $X$ 위에 정의된 coherent sheaf는 locally free sheaf이다. 앞서 quasi-coherent sheaf들 $\QCoh(X)$가 (infinite rank일 수 있는) locally free sheaf들을 포함하는 abelian category였듯, coherent sheaf들의 카테고리 $\Coh(X)$는 finite rank locally free sheaf를 포함하는 abelian category가 된다. 
-
-## 국소자유가군층의 동반점
-
-[\[가환대수학\] §동반소아이디얼, ⁋정의 1](/ko/math/commutative_algebra/associated_primes#def1)에서 우리는 $A$-module $M$의 associated prime ideal을 정의했다. 이번에는 이를 대수기하의 언어로 옮겨보자. 편의상 우리는 $X$가 noetherian scheme인 것으로 가정한다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def11">**정의 11**</ins> Noetherian scheme $X$가 주어졌다 하고, $X$ 위에 정의된 coherent sheaf $\mathscr{F}$을 생각하자. 그럼 점 $x\in X$가 $\mathscr{F}$의 *associated point<sub>동반점</sub>*이라는 것은 $\mathfrak{m}_x$가 $\mathscr{O}_{X,x}$-module $\mathscr{F}_x$의 associated prime ideal인 것이다. $\mathscr{F}$의 associated point들의 모임을 $\Ass(\mathscr{F})$로 쓰고, 특별히 $\mathscr{F}=\mathscr{O}_X$인 경우에 $\mathscr{O}_X$의 associated point들을 간단히 $X$의 associated point라 부른다. 
-
-</div>
-
-그럼 $X$가 noetherian이라는 가정으로부터, 임의의 $x\in X$와 $x$를 prime ideal $\mathfrak{p}$로서 포함하는 affine neighborhood $U=\Spec A$, 그리고 $A$-module $M=\mathscr{F}(U)$에 대하여 $\mathfrak{p}\in\Ass(M)$인 것과 $x\in \Ass(\mathscr{F})$인 것이 동치임을 보일 수 있다. 그럼 [\[가환대수학\] §동반소아이디얼](/ko/math/commutative_algebra/associated_primes)의 결과들로부터 다음 성질들을 알 수 있다.
-
-1. $\Ass(\mathscr{F})\subseteq \supp(\mathscr{F})$이다.
-2. Quasi-coherent sheaf들의 short exact sequence $0 \rightarrow \mathscr{F}_1 \rightarrow \mathscr{F}_2 \rightarrow \mathscr{F}_3 \rightarrow 0$에 대하여, $\Ass(\mathscr{F}_2)\subseteq \Ass(\mathscr{F}_1)\cup \Ass(\mathscr{F}_3)$이고 $\Ass(\mathscr{F}_1)\subseteq\Ass(\mathscr{F}_2)$이다.
-3. $\Ass(\mathscr{F})$는 유한집합이다.
-4. 만일 $\Ass(\mathscr{F})\subseteq U$라면 $\mathscr{F}(X) \rightarrow \mathscr{F}(U)$가 단사이다.
-5. 만일 $x\in \supp(\mathscr{F})$가 $\supp(\mathscr{F})$에 포함되는 다른 점의 specialization이 아니라면, $x\in \Ass(\mathscr{F})$이다. 
-
-여기서
-
-$$\supp\mathscr{F}=\{x\in X: \mathscr{F}_x\neq 0\}$$
-
-으로 정의되며, 특히 마지막 결과에서 $\mathscr{F}=\mathscr{O}_X$로 두면 $X$의 임의의 irreducible component의 generic point는 $X$의 associated point인 것을 안다. 한편 4번 결과의 증명은 더 일반적으로 다음의 morphism
-
-$$\mathscr{F}(U) \rightarrow \prod_{\mathfrak{p}\in \Ass(\mathscr{F}\cap U)}\mathscr{F}_\mathfrak{p}$$
-
-으로부터 얻어지는데, 이를 이용하면 다음을 정의할 수 있다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def12">**정의 12**</ins> Noetherian scheme $X$ 위에 정의된 coherent sheaf $\mathscr{F}$에 대하여, $\mathscr{F}$의 *rational section*은 $\Ass(\mathscr{F})$를 포함하는 열린집합 $U$에 대하여, $\mathscr{F}(U)$의 위의 injection에 의한 image로 정의한다. 이 때, 만일 $(U,s)$와 $(U, s')$가 $U\cap U'$ 위에서 같은 rational section을 정의하면 이들을 같은 것으로 생각한다. 
-
-</div>
-
-특별히 $\mathscr{F}=\mathscr{O}_X$일 경우, 이들 rational section들을 rational function들이라 부르고, 이들이 이루는 ring을 total fraction ring이라 부른다. 만일 $X$가 integral일 경우 다음과 같이 더 간단한 설명이 존재한다.
-
-일반적으로 irreducible scheme은 유일한 generic point를 갖는다는 것이 알려져 있으므로, $X$의 유일한 generic point $\xi$가 존재한다. 이제 $X$의 임의의 affine open subset $U=\Spec A$를 생각하자. 그럼 정의에 의해 $\xi\in U$여야 하고, $\xi$가 generic point인 것을 이용하면 이 집합에서 $\xi$는 $A$의 가장 작은 prime ideal, 즉 $(0)$에 대응되어야 한다는 사실은 안다. 즉 
-
-$$\mathscr{O}_{X,\xi}\cong \mathscr{O}_{U,\xi}\cong A_{(0)}\cong\Frac(A)$$
-
-이 성립한다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def13">**정의 13**</ins> Integral scheme $X$와 generic point $\xi$에 대하여, local ring $\mathscr{O}_{X,\xi}$를 $X$의 *function field*라 부르고, $K(X)$로 표기한다. 
-
-</div>
-
-우리는 $A$를 열린집합 $U\subseteq X$ 위에서 정의된 함수들의 ring으로 생각한다. 그럼 위의 식이 말해주는 것은 $\mathscr{O}_{X,\xi}$를 affine open set $U$에서 보면 우리가 흔히 생각하는 rational function들의 모임처럼 보인다는 뜻이고, 따라서 위와 같은 이름을 붙이는 것이 어색하지 않다. 이들은 진정한 의미에서의 함수는 아닌데, 전체 공간 $X$에서 정의되지는 않기 때문이다. 
