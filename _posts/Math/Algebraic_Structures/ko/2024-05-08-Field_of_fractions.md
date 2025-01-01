@@ -21,7 +21,7 @@ weight: 105
 
 [\[집합론\] §자연수와 무한집합](/ko/math/set_theory/natural_numbers)에서 정의한 자연수들의 monoid $\mathbb{N}$은 (약간의 기술적인 문제를 제외하면) 집합론의 언어로 쓰여질 수 있었다. 그리고 $\mathbb{Z}$는 commutative monoid $\mathbb{N}$의 Grothendieck group으로 정의되었다. 중학교 때 배우는 수체계를 생각해보면 이 다음 정의해야 할 대상은 유리수 집합 $\mathbb{Q}$이다. 
 
-$\mathbb{Z}$의 덧셈구조를 잊어버리고, 곱셈구조만 기억한다면 $(\mathbb{Z},\cdot,1)$은 commutative monoid이다. 우리가 해야 할 일은 역수들을 추가하는 것이고, $1/0$은 정의되지 않으므로 $S=\mathbb{Z}\setminus\\{0\\}$으로 두고 ([§Grothendieck 군, ⁋정의 7](/ko/math/algebraic_structures/Grothendieck_group#def7))의 monoid of fractions을 생각하면 multiplicative group $\mathbb{Q}$를 얻게 된다. 
+$\mathbb{Z}$의 덧셈구조를 잊어버리고, 곱셈구조만 기억한다면 $(\mathbb{Z},\cdot,1)$은 commutative monoid이다. 우리가 해야 할 일은 역수들을 추가하는 것이고, $1/0$은 정의되지 않으므로 $S=\mathbb{Z}\setminus\\{0\\}$으로 두고 ([§Grothendieck 군, ⁋정의 7](/ko/math/algebraic_structures/Grothendieck_groups#def7))의 monoid of fractions을 생각하면 multiplicative group $\mathbb{Q}$를 얻게 된다. 
 
 일반적으로 이 과정은 다음 정리를 통해 가능하다.
 
@@ -36,7 +36,7 @@ $\mathbb{Z}$의 덧셈구조를 잊어버리고, 곱셈구조만 기억한다면
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-증명을 시작하기에 앞서 [§Grothendieck 군, ⁋정의 7](/ko/math/algebraic_structures/Grothendieck_group#def7)의 construction을 잠깐 리뷰하자. 우리는 $S$에 의해 생성된 $A$의 submonoid $S'$를 생각하고, monoid $A\times S'$에 다음 동치관계
+증명을 시작하기에 앞서 [§Grothendieck 군, ⁋정의 7](/ko/math/algebraic_structures/Grothendieck_groups#def7)의 construction을 잠깐 리뷰하자. 우리는 $S$에 의해 생성된 $A$의 submonoid $S'$를 생각하고, monoid $A\times S'$에 다음 동치관계
 
 $$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $s\in S'$}$$
 
