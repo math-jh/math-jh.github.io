@@ -169,7 +169,7 @@ $$(f,U)\sim(g,V)\iff\text{$\exists$ open neighborhood $W\subseteq U\cap V$ of $x
 
 </div>
 
-다음 예시들은 위의 [준층의 예시들](/ko/math/algebraic_geometry/presheaves#준층의-예시들) 아래에 있었어야 했지만, 아직 presheaf morphism을 정의하지 않았었기 때문에 뒤로 밀렸다. 
+다음 예시들은 위의 [준층의 예시들](#준층의-예시들) 아래에 있었어야 했지만, 아직 presheaf morphism을 정의하지 않았었기 때문에 뒤로 밀렸다. 
 
 <div class="example" markdown="1">
 

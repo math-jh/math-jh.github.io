@@ -116,7 +116,7 @@ $$\langle u(x),\xi\rangle=\langle x, u^\ast\xi\rangle$$
 
 ## 쌍대기저
 
-$A$-module $M$이 basis $(x\_i)\_{i\in I}$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/multilinear_algebra/basis_of_free_module#def1)) 즉 다음의 isomorphism
+$A$-module $M$이 basis $(x\_i)\_{i\in I}$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/multilinear_algebra/basis_of_free_modules#def1)) 즉 다음의 isomorphism
 
 $$\varepsilon: A^{\oplus I} \rightarrow M$$
 

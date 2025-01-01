@@ -43,7 +43,7 @@ $$\mathcal{T}_A=\{U\cap A\mid U\in\mathcal{T}\}$$
 
 부분공간을 다룰 때 주의해야 하는 것은 어떤 집합이 $\mathcal{T}_A$에서 열린집합이라 하더라도 $\mathcal{T}$에서는 열린집합이 아닐 수 있다는 것이다.
 
-![open_in_subspace_but_not_in_whole](/assets/images/Math/Topology/Subspace-1.png){:width="250px"  class="invert" .align-center}
+![open_in_subspace_but_not_in_whole](/assets/images/Math/Topology/Subspaces-1.png){:width="250px"  class="invert" .align-center}
 
 이러한 상황은 $A$가 열린집합이었다면 쉽게 해결된다.
 
