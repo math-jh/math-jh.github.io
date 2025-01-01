@@ -4,12 +4,12 @@ title: "내적공간"
 excerpt: "실수집합 위에서 정의된 내적의 성질"
 
 categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/inner_product_space
+permalink: /ko/math/linear_algebra/inner_product_spaces
 sidebar: 
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Inner_product_space.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Inner_product_spaces.png
     overlay_filter: 0.5
 
 date: 2022-10-02

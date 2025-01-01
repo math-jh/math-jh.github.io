@@ -17,7 +17,7 @@ weight: 10
 
 ---
 
-이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 텐서대수와 대칭대수, 외대수를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis#prop6))
+이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 텐서대수와 대칭대수, 외대수를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
 
 ## 텐서대수의 정의
 
@@ -79,7 +79,7 @@ $$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n},\qquad\text{$s$ a finite sequence $(i_
 
 </div>
 
-이는 $T^n(M)$ 각각이 길이 $n$짜리 유한한 수열 $s$를 사용해 정의한 $e_s$들을 basis로 갖고, 이들의 direct sum이 $T(M)$이기 때문이다. 한편 우리는 [§기저, ⁋정의 9](/ko/math/multilinear_algebra/basis#def9)의 structure constant를 사용하면 $T(M)$의 곱셈을 서술할 수 있다는 것을 알고 있는데, 위의 설명에 따르면 이는 다른 것이 아니라 단순히 수열을 이어쓰기하여 얻어지는 것이다. 즉 두 수열
+이는 $T^n(M)$ 각각이 길이 $n$짜리 유한한 수열 $s$를 사용해 정의한 $e_s$들을 basis로 갖고, 이들의 direct sum이 $T(M)$이기 때문이다. 한편 우리는 [§기저, ⁋정의 9](/ko/math/multilinear_algebra/basis_of_free_modules#def9)의 structure constant를 사용하면 $T(M)$의 곱셈을 서술할 수 있다는 것을 알고 있는데, 위의 설명에 따르면 이는 다른 것이 아니라 단순히 수열을 이어쓰기하여 얻어지는 것이다. 즉 두 수열
 
 $$s=(i_1,\ldots, i_m),\qquad t=(j_1,\ldots, j_n)$$
 

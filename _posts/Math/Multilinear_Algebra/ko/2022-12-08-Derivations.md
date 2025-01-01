@@ -4,9 +4,9 @@ title: "미분 (작성중)"
 excerpt: "Differential module"
 
 categories: [Math / Multilinear Algebra]
-permalink: /ko/math/multilinear_algebra/derivation
+permalink: /ko/math/multilinear_algebra/derivations
 header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Derivation.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Derivations.png
     overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"
