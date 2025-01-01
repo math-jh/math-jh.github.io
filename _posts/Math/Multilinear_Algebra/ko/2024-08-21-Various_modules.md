@@ -135,7 +135,7 @@ $$\Hom(A, u):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/multilinear_algebra/basis#prop2)에 의하여 적당한 free $A$-module $F$와 surjection $p:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수
+임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2)에 의하여 적당한 free $A$-module $F$와 surjection $p:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수
 
 $$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
 
