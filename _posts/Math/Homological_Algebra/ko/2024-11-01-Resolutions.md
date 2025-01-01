@@ -107,7 +107,7 @@ $$\im(d_n)=\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})=\ker(\epsilon_{n-1})
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[\[다중선형대수학\] §기저, ⁋명제 2](/ko/math/multilinear_algebra/basis#prop2) 그리고 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4)에 의하여 자명하다.
+[\[다중선형대수학\] §기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2) 그리고 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4)에 의하여 자명하다.
 
 </details>
 

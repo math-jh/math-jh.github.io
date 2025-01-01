@@ -4,9 +4,9 @@ title: "노름과 대각합"
 excerpt: ""
 
 categories: [Math / Multilinear Algebra]
-permalink: /ko/math/multilinear_algebra/norm_and_trace
+permalink: /ko/math/multilinear_algebra/norms_and_traces
 header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Norm_and_trace.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Norms_and_traces.png
     overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"
