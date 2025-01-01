@@ -77,13 +77,13 @@ $$(\omega\wedge\eta)_p=\omega_p\wedge\eta_p\qquad\text{for all $p\in M$}$$
 
 $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
-으로 생각할 수 있다. ([\[다중선형대수\] §등급구조, ⁋정의 5](/ko/math/multilinear_algebra/graduation#def5)) 뿐만 아니라, $\Omega^\ast(M)$에서의 $\mathbb{R}$에 의한 스칼라곱은 사실 각 점 $p$마다 수행할 수 있기 때문에, $\Omega^\ast(M)$의 계수를 $C^\infty(M)$으로 생각할 수도 있다. 대수적으로 이는 ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$을 통해 coefficient ring을 바꾸어 주는 것으로 생각할 수도 있으며, 앞으로 $\Omega^\ast(M)$은 항상 이러한 식으로 $\mathbb{N}$-graded $C^\infty(M)$-algebra 구조가 주어진 것으로 생각한다.
+으로 생각할 수 있다. 뿐만 아니라, $\Omega^\ast(M)$에서의 $\mathbb{R}$에 의한 스칼라곱은 사실 각 점 $p$마다 수행할 수 있기 때문에, $\Omega^\ast(M)$의 계수를 $C^\infty(M)$으로 생각할 수도 있다. 대수적으로 이는 ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$을 통해 coefficient ring을 바꾸어 주는 것으로 생각할 수도 있으며, 앞으로 $\Omega^\ast(M)$은 항상 이러한 식으로 $\mathbb{N}$-graded $C^\infty(M)$-algebra 구조가 주어진 것으로 생각한다.
 
 이제 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 linear map $dF_p:T_pM\rightarrow T_{F(p)}N$가 잘 정의된다. 따라서 $dF_p$의 dual map에 exterior algebra의 functoriality를 적용하면
 
 $$\bigwedge({dF}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M)$$
 
-를 얻는다. ([\[다중선형대수\] §대칭대수와 외대수, ⁋따름정리 9](/ko/math/multilinear_algebra/symmetric_and_exterior_algebras#cor9)) 각 점 $p$마다 $\bigwedge({dF}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
+를 얻는다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10)) 각 점 $p$마다 $\bigwedge({dF}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
 
 $$(F^\ast\omega)_p=\bigwedge({dF}_p^\ast)(\omega_{F(p)})$$
 
