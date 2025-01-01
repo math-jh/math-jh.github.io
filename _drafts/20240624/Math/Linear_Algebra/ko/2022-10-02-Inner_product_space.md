@@ -4,7 +4,7 @@ title: "내적공간"
 excerpt: "실수집합 위에서 정의된 내적의 성질"
 
 categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/inner_product_space
+permalink: /ko/math/linear_algebra/inner_product_spaces
 sidebar: 
     nav: "linear_algebra-ko"
 
