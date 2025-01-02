@@ -255,7 +255,7 @@ linear_algebra-ko:
       - title: "선형사상"
         url: ko/math/linear_algebra/linear_map
       - title: "행렬"
-        url: ko/math/linear_algebra/matrix
+        url: ko/math/linear_algebra/matrices
       - title: "가우스 소거법"
         url: ko/math/linear_algebra/Gaussian_elimination
       - title: "동형사상"
@@ -273,7 +273,7 @@ linear_algebra-ko:
       - title: "쌍선형형식"
         url: ko/math/linear_algebra/bilinear_form
       - title: "내적공간"
-        url: ko/math/linear_algebra/inner_product_space
+        url: ko/math/linear_algebra/inner_product_spaces
       - title: "최소제곱법"
         url: ko/math/linear_algebra/least_squares_method
       - title: "행렬식"
@@ -349,7 +349,7 @@ multilinear_algebra-ko:
       - title: "사영가군, 단사가군, 평탄가군"
         url: ko/math/multilinear_algebra/various_modules
       - title: "기저"
-        url: ko/math/multilinear_algebra/basis
+        url: ko/math/multilinear_algebra/basis_of_free_modules
       - title: "쌍대공간"
         url: ko/math/multilinear_algebra/dual_spaces
       - title: "Hom과 텐서곱"
@@ -367,7 +367,7 @@ multilinear_algebra-ko:
       - title: "행렬식"
         url: ko/math/multilinear_algebra/determinants
       - title: "노름과 대각합"
-        url: ko/math/multilinear_algebra/norm_and_trace
+        url: ko/math/multilinear_algebra/norms_and_traces
   - title: 
     children:
       - title: "블로그 소개"

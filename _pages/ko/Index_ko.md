@@ -11,7 +11,7 @@ permalink: /ko/misc/index_ko
 | 영문 용어 | 한글 용어 | 정의 | 참고 |
 | --- | --- | --- | --- |
 | <selected id="abelian_category">abelian category &#9745;</selected> | <unselected>아벨 카테고리</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |
-| <selected id="abelian_group">abelian group &#9745;</selected> | <unselected>가환군</unselected> | [\[대수적 구조\] §반군, 모노이드, 군](/ko/math/algebraic_structures/group#def9)<br/>[\[선형대수학\] §가환군과 체](/ko/math/linear_algebra/fields) | [Group](#group) |
+| <selected id="abelian_group">abelian group &#9745;</selected> | <unselected>가환군</unselected> | [\[대수적 구조\] §반군, 모노이드, 군](/ko/math/algebraic_structures/groups)<br/>[\[선형대수학\] §가환군과 체](/ko/math/linear_algebra/fields) | [Group](#group) |
 | <selected id="additive_category">additive category &#9745;</selected> | <unselected>덧셈 카테고리</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |
 | <unselected id="algebraic_multiplicity">algebraic multiplicity</unselected> | <selected> 대수적 중복도 &#9745;</selected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
 | <selected id="alternating">alternating &#9745;</selected> | <unselected>교대적</unselected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form) <br/> [\[선형대수학\] §행렬식](/ko/math/linear_algebra/determinant) |  |

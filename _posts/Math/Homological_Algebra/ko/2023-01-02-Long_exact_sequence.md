@@ -77,11 +77,11 @@ $$\coker(d_n^A)\rightarrow\coker(d_n^B)\rightarrow\coker(d_n^C)\rightarrow 0$$
 
 <ins id="prop2">**명제 2**</ins> 두 short exact sequence들 사이의 chain map
 
-img
+![morphism_in_SES](/assets/images/Math/Homological_Algebra/Long_exact_sequence-3.png){:width="393.3px" class="invert" .align-center}
 
 이 주어졌다 하면, 이에 대응하는 long exact sequence들 사이의 chain map
 
-img
+![functoriality](/assets/images/Math/Homological_Algebra/Long_exact_sequence-4.png){:width="708.9px" class="invert" .align-center}
 
 이 존재한다.
 
@@ -127,7 +127,7 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 
 <ins id="def5">**정의 5**</ins> 두 chain complex $C,D$와 chain map $f,g:C\rightarrow D$가 주어졌다 하자. 그럼 $f$와 $g$ 사이의 *chain homotopy<sub>사슬 호모토피</sub>*은 다음 diagram
 
-![chain_homotopy](/assets/images/Math/Homological_Algebra/Chain_homotopy-1.png){:width="612px" class="invert" .align-center}
+![chain_homotopy](/assets/images/Math/Homological_Algebra/Long_exact_sequence-5.png){:width="612px" class="invert" .align-center}
 
 에서, $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$가 성립하도록 하는 $h_n:C_n\rightarrow D_{n+1}$의 모임이다. 만일 $f,g$ 사이의 chain homotopy가 존재한다면, $f$와 $g$가 *homotopic*한 chain map이라 부른다. 
 
@@ -177,7 +177,7 @@ $\mathbf{K}(\mathcal{C})$는 $\mathbf{Ch}(\mathcal{C})$와 동일한 object를 �
 
 두 homotopic chain map $f,g:C\rightarrow D$가 주어졌다 하자. 임의의 $u:B\rightarrow C$, $v:D\rightarrow E$에 대하여 두 map $vfu$와 $vgu$를 생각하자. 다음 diagram
 
-![composition_in_homotopy_category](/assets/images/Math/Homological_Algebra/Chain_homotopy-2.png){:width="612px" class="invert" .align-center}
+![composition_in_homotopy_category](/assets/images/Math/Homological_Algebra/Long_exact_sequence-6.png){:width="612px" class="invert" .align-center}
 
 을 생각하면,
 
