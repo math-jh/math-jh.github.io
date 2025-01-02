@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/matrices_and_linear_maps
 header:
-    overlay_image: /assets/images/Math/multilinear_algebra/Matrices_and_linear_maps.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Matrices_and_linear_maps.png
     overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"

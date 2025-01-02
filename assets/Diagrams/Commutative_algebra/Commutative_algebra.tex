@@ -5,6 +5,28 @@
 \usepackage{../.preamble/Operators}
 \begin{document}
 
+%% functoriality (Differentials-2.png)
+\begin{tikzcd}
+	A & {A'} \\
+	\Omega_{E/A} & \Omega_{E'/A}
+	\arrow["\phi", from=1-1, to=1-2]
+	\arrow["d_{E/A}"', from=1-1, to=2-1]
+	\arrow["d_{E'/A'}", from=1-2, to=2-2]
+	\arrow["\Omega_{\varphi/\phi}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}
+
+% simplest_case (Properties_of_localization-1.png)
+\begin{tikzcd}
+	{E\otimes_A\Hom_A(A,N)} & {\Hom_E(E\otimes_AA, E\otimes_AN)} \\
+	{E\otimes_AN} & {E\otimes_AN}
+	\arrow["\alpha", from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[Rightarrow, no head, from=2-1, to=2-2]
+\end{tikzcd}
+
 % general_case (Properties_of_localization-2.png)
 \begin{tikzcd}
 	0 & {E\otimes_A\Hom_A(M,N)} & {E\otimes_A\Hom_A(G,N)} & {E\otimes_A\Hom_A(F,N)} \\
@@ -21,14 +43,12 @@
 \end{tikzcd}
 
 
-\end{document}
-
-% simplest_case (Properties_of_localization-1.png)
+%% setup (Differentials-1.png)
 \begin{tikzcd}
-	{E\otimes_A\Hom_A(A,N)} & {\Hom_E(E\otimes_AA, E\otimes_AN)} \\
-	{E\otimes_AN} & {E\otimes_AN}
-	\arrow["\alpha", from=1-1, to=1-2]
-	\arrow[from=1-1, to=2-1]
-	\arrow[from=1-2, to=2-2]
-	\arrow[Rightarrow, no head, from=2-1, to=2-2]
+	A & {A'} \\
+	E & {E'}
+	\arrow["\phi", from=1-1, to=1-2]
+	\arrow["\rho"', from=1-1, to=2-1]
+	\arrow["{\rho'}", from=1-2, to=2-2]
+	\arrow["\varphi"', from=2-1, to=2-2]
 \end{tikzcd}

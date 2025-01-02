@@ -35,11 +35,17 @@ $$F(M)=\bigoplus_{n\geq 0} M^{\otimes n}$$
 
 이들 각각의 성분 $M^{\otimes n}$을 $T^n(M)$으로 표기하기로 한다. 그럼 $T^1(M)=M$이므로, $M$에서 $T(M)$으로의 canonical injection $\iota: M \rightarrow T(M)$이 존재한다. 
 
-한편 adjoint $F\dashv U$로부터 다음의 universal property를 얻는다.
+이제 adjoint $T\dashv U$를 생각하면, $\iota$는 다음 adjunction
+
+$$\Hom_{\Alg{A}}(T(M), T(M))\cong \Hom_{\rMod{A}}(M, UT(M))$$
+
+에 의한 $\id_{T(M)}$의 image이고, $T(M)$을 $\mathbb{N}$-graded associative unital algebra로 보면 좌변을 적절한 category로 바꿔주면 된다. 이 adjoint를 universal property로 풀어쓰면 다음과 같다.  
 
 <div class="proposition" markdown="1">
 
 <ins id="prop2">**명제 2**</ins> 임의의 $A$-algebra $E$와 $A$-linear map $u:M \rightarrow E$가 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: T(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
+
+추가로, 만일 $E$가 $\mathbb{N}$-graded $A$-algebra이고, $u(M)\subseteq E_1$이 성립한다면 위에서 얻어지는 $A$-algebra homomorphism $g$는 $\mathbb{N}$-graded $A$-algebra homomorphism이 된다.
 
 </div>
 
@@ -47,7 +53,7 @@ $$F(M)=\bigoplus_{n\geq 0} M^{\otimes n}$$
 
 ## 탠서대수의 성질들
 
-이제 우리는 $\rMod{A}$에서의 연산들이 functor $T:\rMod{A} \rightarrow \Alg{A}$를 통해 옮겨졌을 때, 이들이 어떻게 행동하는지를 살펴본다. 특히 direct sum과 extension of scalar에 관심이 있다. 
+이제 우리는 $\rMod{A}$에서의 연산들이 functor $T:\rMod{A} \rightarrow \Alg{A}$를 통해 옮겨졌을 때, 이들이 어떻게 행동하는지를 살펴본다. 특히 direct sum과 extension of scalar에 관심이 있다. 이 절의 논의는 [명제 2](#prop2)와 같이, $T$를 $\rMod{A}$에서 associative unital $\mathbb{N}$-graded $A$-algebra들의 category들로 가는 functor로 이해하여도 동일한 논증이 성립하지만, 표기상의 복잡함을 해소하기 위해 target category를 $\Alg{A}$로 적기로 한다. 
 
 우선 direct sum의 경우를 살펴본다. $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하자. 그럼 $\otimes$가 $\Hom$의 left adjoint라는 사실과 약간의 귀납법을 통해 다음의 isomorphism
 
@@ -93,30 +99,38 @@ $$e_se_t=e_{st}$$
 
 이 된다. 
 
-Extension of scalar의 경우, ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하고, $M$이 $A$-module이라 하자. 그럼 extension of scalar $\phi_!: \rMod{A} \rightarrow\lMod{B}$와 두 functor $T_A: \rMod{A} \rightarrow \Alg{A}$, $T_B:\rMod{B} \rightarrow \Alg{B}$가 존재하며, 자명한 방식으로 $\phi_!:\Alg{A} \rightarrow\Alg{B}$ 또한 정의된다. 이를 통해 다음의 diagram
+Extension of scalar의 경우, ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하고, $M$이 $A$-module이라 하자. 그럼 extension of scalar $\phi_!: \rMod{A} \rightarrow\rMod{B}$와 두 functor $T_A: \rMod{A} \rightarrow \Alg{A}$, $T_B:\rMod{B} \rightarrow \Alg{B}$가 존재하며, 자명한 방식으로 $\phi_!:\Alg{A} \rightarrow\Alg{B}$ 또한 정의된다. 이를 통해 다음의 (graded) $B$-linear map
 
-img
+![extension_of_scalars](/assets/images/Math/Multilinear_Algebra/Tensor_algebras-1.png){:width="366px" class="invert" .align-center}
 
 을 얻는다. 
 
 <div class="proposition" markdown="1">
  
-<ins id="prop4">**명제 4**</ins> 위에서 얻어지는 $T_{B}(B\otimes_AM)\rightarrow B\otimes_AT_A(M)$은 isomorphism이다.
+<ins id="prop4">**명제 4**</ins> 위에서 얻어지는 $B$-linear map $T_{B}(B\otimes_AM)\rightarrow B\otimes_AT_A(M)$은 isomorphism이다.
  
 </div> 
 <details class="proof" markdown="1">
 <summary>증명</summary>
  
-역함수를 만들면 충분하다. 우선 $T_{B}(B\otimes_AM)$을 $A$-algebra로 보면, $T_A(M)$의 universal property로부터 다음 diagram
+역함수를 만들면 충분하다. 이를 위해, 우선 adjoint
 
-![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_algebra-10.png){:width="308.4px" class="invert" .align-center}
+$$\Hom_\rMod{B}(\phi_!M,\phi_!M)\cong\Hom_\rMod{A}(M, \phi^\ast \phi_!M)$$
 
-을 commute하도록 하는 $A$-algebra homomorphism $T\_A(M)\rightarrowT\_{B}(B\otimes\_AM)$이 유일하게 존재한다. 이제 이렇게 얻어진 $A$-algebra homomorphism에 대하여, $B\otimes\_AT\_A(M)$의 universal property로부터 다음의 diagram
+로부터 $\id_{\phi_!M}$에 해당하는 $A$-linear map $i: M \rightarrow \phi^\ast\phi_!M$을 얻자. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)) 그 후, $A$-module $\phi^\ast\phi_!M$을 $B$-module $\phi_!M$으로 본 후 
 
-img
+$$\iota_{\phi_!M}: \phi_!M \rightarrow T_B(\phi_!M)$$
 
-을 commute하도록 하는 유일한 $B$-algebra homomorphism $B\otimes\_AT\_A(M)\rightarrowT\_{B}(B\otimes\_AM)$이 존재한다. 이 함수가 위에서 얻은 $T\_{B}(B\otimes AM)\rightarrow B\otimes\_AT\_A(M)$의 역함수임을 쉽게 확인할 수 있다.
- 
+을 생각하면 이는 $A$-module $M$에서 $A$-module $\phi^\ast T_B(\phi_!M)$ (더 정확히는 $U\phi^\ast T_B(\phi^\ast\phi_!M)$)으로의 $A$-linear map이다. 따라서 [명제 2](#prop2)에 의하여 다음의 diagram
+
+![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_algebras-2.png){:width="218.1px" class="invert" .align-center}
+
+을 commute하도록 하는 $A$-algebra homomorphism $T\_A(M)\rightarrow \phi^\ast T\_{B}(\phi_!M)$이 유일하게 존재한다. 이제 다음의 adjoint
+
+$$\Hom_{\Alg{A}}(T_A(M), \phi^\ast T_B(\phi_!M))\cong \Hom_\Alg{B}(\phi_! T_A(M), T_B(\phi_!M))$$
+
+에 의하여 이를 $B$-linear map $\phi_!T_A(M) \rightarrow T_B(\phi_!M)$으로 보면 이것이 위의 $B$-linear map의 inverse가 되는 것을 확인할 수 있다. 
+
 </details>
 
 ## Mixed tensor
@@ -225,7 +239,7 @@ $\bigwedge(M)$에서의 원소들의 곱셈은 $\wedge$로 적는 것이 관례�
 
 $$u(x)^2=0\qquad\text{for all $x\in M$}$$
 
-주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: S(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
+주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \bigwedge(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
 
 </div>
 

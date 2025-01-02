@@ -137,12 +137,12 @@ $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 
 <ins id="thm6">**정리 6**</ins> Projective resolution $P_\bullet \rightarrow M$과 임의의 $u:M \rightarrow N$이 주어졌다 하자. 그럼 임의의 left resolution $Q_\bullet \rightarrow N$가 주어질 때마다 다음의 diagram
 
-img
+![comparison_proj](/assets/images/Math/Homological_Algebra/Resolutions-7.png){:width="406.5px" class="invert" .align-center}
 
 을 commute하게 하는 chain map $f:P_\bullet \rightarrow Q_\bullet$이 up to homotopy로 유일하게 존재한다.  
 비슷하게, injective resolution $N \rightarrow I^\bullet$과 임의의 $u: M \rightarrow N$이 주어졌다 하자. 그럼 임의의 right resolution $M \rightarrow J^\bullet$가 주어질 때마다 다음의 diagram
 
-img
+![comparison_inj](/assets/images/Math/Homological_Algebra/Resolutions-8.png){:width="400.65px" class="invert" .align-center}
 
 을 commute하게 하는 chain map $f:J^\bullet \rightarrow I^\bullet$이 존재한다. 
 
@@ -174,15 +174,15 @@ $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
 우선 주어진 상황을 diagram으로 그려보면 다음과 같다.
 
-img
+![horseshoe-initial](/assets/images/Math/Homological_Algebra/Resolutions-9.png){:width="412.65px" class="invert" .align-center}
 
-이제 $P_0''$이 projective라는 조건으로부터 $P_0'' \rightarrow A''$을 정의할 수 있다. 한편 $P_0' \rightarrow A$는 $i_A$와 $\epsilon'$의 합성으로 이미 주어지므로, 이들의 direct sum을 생각하면 $\epsilon:P_0 \rightarrow A$를 얻는다. 이제 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)으로부터 다음의 diagram
+이제 $P_0''$이 projective라는 조건으로부터 $P_0'' \rightarrow A$을 정의할 수 있다. 한편 $P_0' \rightarrow A$는 $i_A$와 $\epsilon'$의 합성으로 이미 주어지므로, 이들의 direct sum을 생각하면 $\epsilon:P_0 \rightarrow A$를 얻는다. 이제 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)으로부터 다음의 diagram
 
-img
+![horseshoe-induction](/assets/images/Math/Homological_Algebra/Resolutions-10.png){:width="422.55px" class="invert" .align-center}
 
 을 얻고, 특히 다음의 diagram
 
-img
+![horseshoe-finish](/assets/images/Math/Homological_Algebra/Resolutions-11.png){:width="437.25px" class="invert" .align-center}
 
 을 얻게 된다. 이 과정을 반복하여 $P_\bullet$을 얻는다.
 

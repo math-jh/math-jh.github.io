@@ -204,7 +204,7 @@ $$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N
 2. $v$의 linear section $s:N \rightarrow L$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
 3. 다음의 diagram
     
-    img
+    ![splitting_sequence](/assets/images/Math/Multilinear_Algebra/Exact_sequences-1.png){:width="427.5px" class="invert" .align-center}
     
     을 commute하도록 하는 isomorphism $\alpha: L \rightarrow M\oplus N$이 존재한다. 
 
