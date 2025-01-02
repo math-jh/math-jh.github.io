@@ -39,7 +39,7 @@ $$\det[x_1\;x_2\;\cdots\;x_m]$$
 
 ## 행렬식과 방향
 
-$V,W$가 $n$차원 $\mathbb{R}$ 벡터공간이라 하고, linear map $L:V\rightarrow W$가 주어졌다 하자. 그럼 [\[다중선형대수\] §대칭대수와 외대수, ⁋정리 13](/ko/math/multilinear_algebra/symmetric_and_exterior_algebras#thm13)의 universal property에 의하여, 다음의 linear map
+$V,W$가 $n$차원 $\mathbb{R}$ 벡터공간이라 하고, linear map $L:V\rightarrow W$가 주어졌다 하자. 그럼 [\[다중선형대수\] §텐서대수, ⁋명제 11](/ko/math/multilinear_algebra/tensor_algebras#prop11)의 universal property에 의하여, 다음의 linear map
 
 $$\bigwedge\nolimits^n(L):\bigwedge\nolimits^n(V)\rightarrow\bigwedge\nolimits^n(W)$$
 
