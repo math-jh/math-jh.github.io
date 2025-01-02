@@ -75,13 +75,7 @@ $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-다음 cone
-
-img
-
-이 존재하고 $\prod H_i$는 이러한 cone들의 모임의 terminal object이다. ([\[범주론\] §극한, §§극한의 보편성질](/ko/math/category_theory/limits#극한의-보편성질))
-
-한편 이렇게 정의되는 commutative diagram에 의하여
+$\prod H_i$는 주어진 조건을 만족하는 cone들의 모임의 terminal object이다. ([\[범주론\] §극한, §§극한의 보편성질](/ko/math/category_theory/limits#극한의-보편성질)) 이렇게 정의되는 commutative diagram에 의하여
 
 $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ \pr_i^G)(x)=e_i)\iff \forall i(\pr_i^G(x)\in\ker f_i)$$
 

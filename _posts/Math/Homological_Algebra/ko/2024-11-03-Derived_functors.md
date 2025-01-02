@@ -44,11 +44,11 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
     가 exact이다.
 2. (Naturality) Short exact sequence들 사이의 homomorphism
     
-    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Delta_functors-1.png){:width="393.3px" class="invert" .align-center}
+    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Derived_functors-1.png){:width="393.3px" class="invert" .align-center}
 
     이 주어졌을 때, 다음의 diagram
 
-    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Delta_functors-2.png){:width="708.9px" class="invert" .align-center}
+    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_functors-2.png){:width="708.9px" class="invert" .align-center}
 
     이 commute한다.
 
@@ -76,7 +76,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 마다 commute하도록 하는 $\alpha_n:S_n\Rightarrow T_n$들의 모임이다. 
 
-![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Delta_functors-3.png){:width="815.25px" class="invert" .align-center}
+![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_functors-3.png){:width="815.25px" class="invert" .align-center}
 
 <div class="definition" markdown="1">
 
@@ -168,7 +168,7 @@ $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \
 
 또한 short exact sequence이며 ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1), 여기에서 homology sequence를 생각하면 원하는 connecting map들과, left derived functor들의 long exact sequence
 
-img
+$$\cdots\overset{\partial}{\longrightarrow}L_iF(A')\longrightarrow L_iF(A)\longrightarrow L_iF(A'')\overset{\partial}{\longrightarrow}L_{i-1}F(A')\longrightarrow L_{i-1}F(A)\longrightarrow L_iF(A'')\overset{\partial}{\longrightarrow}\cdots$$
 
 를 얻는다. 이렇게 얻어진 정보가 [정의 1](#def1)의 두 번째 조건을 만족한다는 것은 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 사용하면 된다.
 
