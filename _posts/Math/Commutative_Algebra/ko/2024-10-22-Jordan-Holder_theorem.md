@@ -99,14 +99,36 @@ $$(M_k)_\mathfrak{m}/(M_{k+1})_\mathfrak{m}\cong (M_k/M_{k+1})_\mathfrak{m}=\beg
 <ins id="thm4">**정리 4**</ins> Ring $A$에 대해 다음이 모두 동치이다.
 
 1. $A$가 noetherian이고 임의의 prime ideal이 maximal이다.
-2. $A$는 $A$-module로서 유한한 길이를 갖는다.
+2. $A$는 $A$-module로서 유한한 length를 갖는다.
 3. $A$는 artinian이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+우선 첫째 조건을 가정하고 둘째 조건을 보이자. 결론에 반하여 $A$가 첫째 조건을 만족하지만, finite length가 아니라 하자. 이제 $\mathfrak{a}$를 $A/\mathfrak{a}$가 finite length가 아니도록 하는 $A$의 ideal들 중 maximal인 것이라 하자. 그럼 만일 $ab\in \mathfrak{a}$이고 $a\not\in \mathfrak{a}$라면, 다음의 short exact sequence
 
+$$0\longrightarrow A/(\mathfrak{a}:a)\overset{a}{\longrightarrow}A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a))\longrightarrow 0$$
+
+을 생각할 수 있다. ([§기본 개념들, §§기본 정의들](/ko/math/commutative_algebra/basic_notions#기본-정의들)) 이제 $\mathfrak{a}+(a)$는 $\mathfrak{a}$를 strict하게 포함하는 ideal이므로, 정의에 의해 $A/(\mathfrak{a}+(a))$는 finite length여야 한다. 한편 정의로부터 $\mathfrak{a}\subseteq (\mathfrak{a}:(a))$인데, 만일 $b\not\in \mathfrak{a}$라면 $\mathfrak{a}\subsetneq (\mathfrak{a}:(a))$가 되므로, 마찬가지로 $\mathfrak{a}$의 정의에 의해 $A/(\mathfrak{a}:a)$는 finite lenngth여야 한다. 따라서 이들 composition series들을 통해 $A/\mathfrak{a}$의 composition series를 얻고, 이는 $A$가 finite length가 아니라는 가정에 모순이므로 $b\in \mathfrak{a}$이다. 즉 $\mathfrak{a}$는 prime ideal이다. 이제 1번 조건의 가정에 의해 $\mathfrak{a}$는 maximal이므로, $A/\mathfrak{a}$는 field이고 이는 $A/\mathfrak{a}$가 finite length가 아니라는 가정에 다시 모순이므로 원하는 결과를 얻는다.
+
+이제 둘째 조건을 가정하면 셋째 조건은 [정리 3](#thm3)으로부터 자명하다. 따라서 셋째 조건을 가정하고 첫째 조건을 보이면 충분하다. 이를 위해 $A$의 maximal ideal들의 곱으로 얻어지는 ideal들의 모임을 생각하자. 그럼 $A$가 artinian이므로, 이 모임에서의 minimal한 ideal $\mathfrak{a}$가 존재한다. 그럼 $\mathfrak{a}=0$이고, 따라서 zero ideal은 maximal ideal들의 곱 $0=\mathfrak{m}\_1\cdots\mathfrak{m}\_k$으로 적을 수 있다. 
+
+이 주장을 보이기 위해 우선, 임의의 maximal ideal $\mathfrak{m}$에 대하여, $\mathfrak{a}$의 minimality는 임의의 maximal ideal $\mathfrak{m}$에 대하여 $\mathfrak{m}\mathfrak{a}=\mathfrak{a}$인 것을 의미한다는 것을 관찰하자. 즉, $\mathfrak{a}\subseteq \mathfrak{m}$이다. 비슷한 논리로 $\mathfrak{a}^2$는 maximal ideal들의 곱이므로 $\mathfrak{a}^2=\mathfrak{a}$도 성립한다. 이제 결론에 반하여 $\mathfrak{a}\neq 0$이라 가정하면, $\mathfrak{a}\mathfrak{b}\neq 0$이도록 하는 ideal이 존재하며, 다시 $A$가 artinian이라는 가정으로부터 $\mathfrak{b}$를 이러한 성질을 만족하는 ideal들 중 minimal한 것으로 택할 수 있다. 그럼
+
+$$(\mathfrak{b}\mathfrak{a})\mathfrak{a}=\mathfrak{b}\mathfrak{a}^2=\mathfrak{b}\mathfrak{a}\neq 0$$
+
+이므로, $\mathfrak{b}$의 minimality로부터 $\mathfrak{b}\mathfrak{a}=\mathfrak{b}$여야 함을 안다.
+
+이제 $\mathfrak{b}$의 정의로부터, 적당한 $y\in \mathfrak{b}$에 대해 $y \mathfrak{a}\neq 0$이여야 함을 알고, $\mathfrak{b}$의 minimality로부터 $\mathfrak{b}=(y)$여야 함을 안다. 이제 위의 등식 $\mathfrak{b}\mathfrak{a}=\mathfrak{b}$로부터 적당한 $x\in \mathfrak{a}$에 대하여 $xy=y$가 성립해야 함을 안다. 즉, $(1-x)y=0$이어야 한다. 그런데 $x\in \mathfrak{a}$이고, $\mathfrak{a}$는 임의의 maximal ideal에 포함되므로 $1-x$는 어떠한 maximal ideal에도 포함되지 않는다. 즉 $1-x$는 unit이며, 이로부터 $y=0$이고 이는 $\mathfrak{b}$의 정의에 모순이다. 즉, $\mathfrak{a}=0$이고 따라서 zero ideal을 maximal ideal들의 곱 $0=\mathfrak{m}\_1\cdots\mathfrak{m}\_k$으로 적을 수 있다. 
+
+이제 각각의 $l=1,\ldots, k-1$에 대하여, $\mathfrak{m}\_1\cdots\mathfrak{m}\_l/\mathfrak{m}\_1\cdots\mathfrak{m}\_{l+1}$을 $A/\mathfrak{m}\_{l+1}$-vector space로 보면 이 vector space의 submodule은 $\mathfrak{a}/\mathfrak{m}\_1\cdots\mathfrak{m}\_{l+1}$ 꼴의 submodule, 즉 $A$의 ideal 중 $\mathfrak{m}\_1\cdots\mathfrak{m}\_{l+1}$를 포함하는 ideal로 생각할 수 있으며, $A$는 artinian이므로 이로부터 $\mathfrak{m}\_1\cdots\mathfrak{m}\_l/\mathfrak{m}\_1\cdots\mathfrak{m}\_{l+1}$가 유한차원임을 안다. 이제 이들을 모두 모아두면 $A$의 composition series를 얻고, 따라서 [정리 3](#thm3)에 의해 $A$는 noetherian이다. 
+
+남은 조건을 보이기 위해 $A$의 임의의 prime ideal $\mathfrak{p}$를 택하면,
+
+$$\mathfrak{m}_1\cdots\mathfrak{m}_k=0\subseteq \mathfrak{p}$$
+
+인 것으로부터 어떠한 $l$에 대해서는 $\mathfrak{m}\_l\subseteq \mathfrak{p}$가 성립해야 함을 알고 따라서 $\mathfrak{m}\_l=\mathfrak{p}$이다. 이로부터 첫째 조건이 모두 성립한다.
 
 </details>
 
@@ -120,6 +142,28 @@ $$(M_k)_\mathfrak{m}/(M_{k+1})_\mathfrak{m}\cong (M_k/M_{k+1})_\mathfrak{m}=\beg
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+우선 $A$가 domain의 유한한 product $A=\prod A_i$라 하자. 그럼 $A$의 임의의 prime ideal은 $A_i$의 unit $e_i$를 포함할 수 없으므로 multiplicative subset에 들어가며, 이 원소 $e_i$는 $i\neq j$를 만족하는 $A_j$를 annihilate하므로 $A=(A_i)_\mathfrak{p}$이 성립한다. ([§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5))
 
+거꾸로 $A$의 임의의 maximal ideal $\mathfrak{m}$에서의 localization이 domain이라 가정하고, $\\{\mathfrak{q}\_i\\}$를 $A$의 prime ideal들 중 minimal한 것이라 하자. 그럼 다음 글에서 증명할 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의하여 $\\{\mathfrak{q}\_i\\}$는 유한집합이며, 이를 받아들이고 나면 $A$에서 유한히 많은 domain들의 direct product로의 자연스러운 map
+
+$$A \rightarrow \prod_{i\in I} A/\mathfrak{q}_i$$
+
+이 존재한다. 이제 이 map이 isomorphism임을 보이자. 이는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의하여 임의의 maximal ideal에서 localization을 하여 다음의 map
+
+$$A_\mathfrak{m} \rightarrow \left(\prod_{i\in I} A/\mathfrak{q}_i\right)_\mathfrak{m}$$
+
+이 isomorphism임을 보이면 충분하다. 한편, [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $A$의 minimal prime ideal 중 $\mathfrak{m}$에 속하는 것과, $A_\mathfrak{m}$의 minimal prime ideal 사이의 일대일 대응이 존재한다. 그런데 가정에 의하여 $A_\mathfrak{m}$은 domain이므로, $A_\mathfrak{m}$은 유일한 minimal prime ideal $(0)$을 가지고, 따라서 $\mathfrak{q}_i$ 중 오직 하나만이 $\mathfrak{m}$에 속한다. 이제 이로부터
+
+$$\left(\prod_{i\in I} A/\mathfrak{q}_i\right)_\mathfrak{m}=(A/\mathfrak{q}_i)_\mathfrak{m}=A_\mathfrak{m}$$
+
+이므로, 위의 map이 isomorphism이 된다.
 
 </details>
+
+---
+
+**참고문헌**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
+
+---
