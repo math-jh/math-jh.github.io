@@ -35,7 +35,7 @@ $$\ann(M)=\{a\in A: aM=0\}$$
 
 한편, ring $A$의 두 ideal $\mathfrak{a},\mathfrak{b}$에 대하여 *ideal quotient<sub>아이디얼 몫</sub>* $(\mathfrak{a}:\mathfrak{b})$를 다음 식
 
-$$(\mathfrak{a}:\mathfrak{b})=\{a\in A: \mathfrak{b}\subseteq \mathfrak{a}\}$$
+$$(\mathfrak{a}:\mathfrak{b})=\{a\in A: a\mathfrak{b}\subseteq \mathfrak{a}\}$$
 
 으로 정의하고, 비슷하게 $A$-module $M$의 두 submodule $N_1,N_2$에 대하여는
 
@@ -45,13 +45,21 @@ $$(N_1:N_2)=\{a\in A: aN_2\subseteq N_1\}$$
 
 한편 우리는 [\[다중선형대수학\] §완전열, ⁋명제 7](/ko/math/multilinear_algebra/exact_sequences#prop7)에서 유용한 두 개의 short exact sequence를 살펴보았는데, 여기에 다음의 short exact sequence
 
-$$0 \rightarrow A/(\mathfrak{a}:(a)) \rightarrow A/\mathfrak{a}\rightarrow A/(\mathfrak{a}+(a)) \rightarrow 0$$
+$$0 \longrightarrow A/(\mathfrak{a}:(a)) \overset{a}{\longrightarrow} A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a)) \longrightarrow 0$$
 
-을 추가하여 기억할 가치가 있다. 여기에서 함수 $A/\mathfrak{a} \rightarrow A/(\mathfrak{a}+(a))$는 다음의 식
+을 추가하여 기억할 가치가 있다. 첫 번째 함수 $A/(\mathfrak{a}:(a)) \rightarrow A/\mathfrak{a}$는 다음의 식
+
+$$x+(\mathfrak{a}:(a))\mapsto ax+\mathfrak{a}$$
+
+로 주어지며, 이것이 잘 정의된다는 것은
+
+$$y\in (\mathfrak{a}:(a))\iff ay\in \mathfrak{a}$$
+
+인 것으로부터 자명하다. 이제 두 번째 함수 $A/\mathfrak{a} \rightarrow A/(\mathfrak{a}+(a))$는 다음의 식
 
 $$x+\mathfrak{a}\mapsto x+(\mathfrak{a}+(a))$$
 
-으로 정의된다. 그럼 이 함수가 surjective인 것은 자명하며, 그 kernel을 생각해보면 정확히 $a+\mathfrak{a}$로 생성되는 $A/\mathfrak{a}$의 submodule인 것을 알 수 있다. 
+으로 정의되며, 이것이 surjective이고 그 kernel이 정확히 $a+\mathfrak{a}$로 생성되는 $A/\mathfrak{a}$의 submodule인 것을 확인할 수 있다.
 
 ## Finiteness condition
 
