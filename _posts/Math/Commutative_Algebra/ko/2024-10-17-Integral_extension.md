@@ -56,6 +56,8 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
 </details>
 
+## 정수적 확장
+
 이제 다음을 정의한다.
 
 <div class="definition" markdown="1">
