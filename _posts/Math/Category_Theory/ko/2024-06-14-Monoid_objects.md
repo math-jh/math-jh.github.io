@@ -32,9 +32,9 @@ weight: 8
 으로 주어진다. 이들은 다음 조건을 만족한다. 
 
 - (Associativity)[^1]
-![associativity](/assets/images/Math/Category_Theory/Monoid_objects-1.png){:width="588px" class="invert" .align-center}
+![associativity](/assets/images/Math/Category_Theory/Monoid_objects-1.png){:style="width:26em" class="invert" .align-center}
 - (Unit)
-![unit](/assets/images/Math/Category_Theory/Monoid_objects-2.png){:width="348.6px" class="invert" .align-center}
+![unit](/assets/images/Math/Category_Theory/Monoid_objects-2.png){:style="width:16.6em" class="invert" .align-center}
 
 </div>
 
@@ -84,7 +84,7 @@ $$\mu(\eta(1)\otimes m)=\mu((\eta\otimes\id_M)(1\otimes m))=\lambda_M(1\otimes m
 
 그런데 이를 monoidal category의 언어로 옮겨쓰려면 문제가 있다. 둘째 조건을 diagram으로 써 보면, 
 
-![group_axiom](/assets/images/Math/Category_Theory/Monoid_objects-3.png){:width="206.25px" class="invert" .align-center}
+![group_axiom](/assets/images/Math/Category_Theory/Monoid_objects-3.png){:style="width:10em" class="invert" .align-center}
 
 가 되어야 할 것이다. 여기에서 $e_G$는 $G$의 모든 원소를 $G$의 항등원으로 보내는 group homomorphism이고, $(-1)^{-1}\times \id_G$는 두 map $(-)^{-1}:G \rightarrow G$와 $\id_G:G \rightarrow G$의 곱이다. 물론 두 데이터를 전부 추가해서 이를 group object라 할 수도 있겠지만, 그렇게 한다면 예컨대 (monoid object로서의) unit $\eta:I \rightarrow G$와 새로 정의한 morphism $e_G$가 서로 아무런 관련이 없을 것이기 때문에 좋은 해결책이 아니다.
 
@@ -94,7 +94,7 @@ $$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
 
 으로 주어진다. 여기에서 $\epsilon_G$는 $G$에서 terminal object $\\{e\\}$로 가는 유일한 morphism이고 $\eta$는 monoid object로서의 $G$의 unit이다. 뿐만 아니라, cartesian monoidal category에서는 monoidal product가 categorical product이므로, 다음 diagram
 
-![inverse_morphism](/assets/images/Math/Category_Theory/Monoid_objects-4.png){:width="249.75px" class="invert" .align-center}
+![inverse_morphism](/assets/images/Math/Category_Theory/Monoid_objects-4.png){:style="width:12.6em" class="invert" .align-center}
 
 을 통해 $(-1)^{-1}\times \id_G$이 잘 정의된다. 
 
@@ -109,13 +109,13 @@ $$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
 으로 주어진다. $e_G$를 합성 $G\rightarrow I\overset{\eta}{\rightarrow}G$라 하면, 이들은 다음 조건을 만족한다. 
 
 - (Associativity) 다음 diagram
-  ![associative_group_law](/assets/images/Math/Category_Theory/Monoid_objects-5.png){:width="249.15px" class="invert" .align-center}
+  ![associative_group_law](/assets/images/Math/Category_Theory/Monoid_objects-5.png){:style="width:12em" class="invert" .align-center}
   이 commute한다.
 - (Unit element) 다음 diagram
-  ![identity_element](/assets/images/Math/Category_Theory/Monoid_objects-6.png){:width="242.4px" class="invert" .align-center}
+  ![identity_element](/assets/images/Math/Category_Theory/Monoid_objects-6.png){:style="width:11.6em" class="invert" .align-center}
   이 commute한다. 
 - (Inverse element) 다음 diagram
-  ![inverse_element](/assets/images/Math/Category_Theory/Monoid_objects-7.png){:width="228.3px" class="invert" .align-center}
+  ![inverse_element](/assets/images/Math/Category_Theory/Monoid_objects-7.png){:style="width:11.6em" class="invert" .align-center}
   이 commute한다.
 
 </div>
@@ -169,7 +169,7 @@ Monoid object $M$이 주어졌을 때, $M\otimes M$에 monoid 구조를 주기 �
 
 $\iota$에 대한 조건을 명시적으로 쓰기 위해서는 [정의 3](#def3)에서 주어졌던 diagram을 모두 Hopf monoid가 갖고 있는 정보로 옮겨야 하는데, 가령 한쪽 삼각형은 다음의 diagram
 
-![Hopf_inverse](/assets/images/Math/Category_Theory/Monoid_objects-8.png){:width="297.45px" class="invert" .align-center}
+![Hopf_inverse](/assets/images/Math/Category_Theory/Monoid_objects-8.png){:style="width:14em" class="invert" .align-center}
 
 으로 풀어쓸 수 있고, 비슷하게 $\iota\otimes\id_H$을 쓰면 다른 쪽 삼각형을 얻는다.
 

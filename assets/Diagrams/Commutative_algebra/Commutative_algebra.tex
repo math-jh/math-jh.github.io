@@ -5,15 +5,16 @@
 \usepackage{../.preamble/Operators}
 \begin{document}
 
-%% functoriality (Differentials-2.png)
+% injective (Primary_decomposition-1.png)
 \begin{tikzcd}
-	A & {A'} \\
-	\Omega_{E/A} & \Omega_{E'/A}
-	\arrow["\phi", from=1-1, to=1-2]
-	\arrow["d_{E/A}"', from=1-1, to=2-1]
-	\arrow["d_{E'/A'}", from=1-2, to=2-2]
-	\arrow["\Omega_{\varphi/\phi}"', from=2-1, to=2-2]
+	M & {M_{\mathfrak{p}_k}} \\
+	{M/M_k} & {(M/M_k)_{\mathfrak{p}_k}}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
 \end{tikzcd}
+
 
 \end{document}
 
@@ -51,4 +52,14 @@
 	\arrow["\rho"', from=1-1, to=2-1]
 	\arrow["{\rho'}", from=1-2, to=2-2]
 	\arrow["\varphi"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% functoriality (Differentials-2.png)
+\begin{tikzcd}
+	A & {A'} \\
+	\Omega_{E/A} & \Omega_{E'/A}
+	\arrow["\phi", from=1-1, to=1-2]
+	\arrow["d_{E/A}"', from=1-1, to=2-1]
+	\arrow["d_{E'/A'}", from=1-2, to=2-2]
+	\arrow["\Omega_{\varphi/\phi}"', from=2-1, to=2-2]
 \end{tikzcd}

@@ -93,3 +93,11 @@ $$I(Z(\mathfrak{a}))=\sqrt{\mathfrak{a}}$$
 이 성립하며, 따라서 $I$와 $Z$는 $\mathbb{k}[\x_1,\ldots,\x_n]$의 radical ideal들과 $\mathbb{k}^n$의 algebraic subset 사이에 일대일대응을 정의한다.
 
 </div>
+
+---
+
+**참고문헌**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
+
+---

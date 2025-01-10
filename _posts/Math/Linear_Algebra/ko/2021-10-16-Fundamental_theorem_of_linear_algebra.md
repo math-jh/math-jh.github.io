@@ -123,7 +123,7 @@ $[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$번째 열은 $e_i$�
 
 앞서 우리가 증명한 기본정리는 유클리드 공간에 대해서만 적용되지만, 아주 작은 수정만 있으면 일반적인 유한차원 $\mathbb{k}$-벡터공간에 대해서도 성립한다. 이 과정은 다음의 diagram으로 간단하게 요약할 수 있다.
 
-![FTLA](/assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-1.png){:width="291.3px" class="invert" .align-center} 
+![FTLA](/assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-1.png){:style="width:14em" class="invert" .align-center} 
 
 임의의 유한차원 $\mathbb{k}$-벡터공간 $V$와 그 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$에 대해 정의된 *좌표표현*은 다음의 isomorphism
 

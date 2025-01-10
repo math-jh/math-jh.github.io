@@ -25,7 +25,7 @@ weight: 5
 
 <ins id="def1">**정의 1**</ins> 두 manifold $M,N$이 주어졌다 하자. 함수 $F:M\rightarrow N$이 점 $p\in M$에서 $C^\infty$라는 것은, $p$를 포함하는 적당한 coordinate system $(U,\varphi)$와, $F(U)\subseteq V$인 적당한 coordinate system $(V,\psi)$가 존재하여 $\psi\circ F\circ\varphi^{-1}$이 $C^\infty$인 것이다. 
 
-![smooth_map](/assets/images/Math/Manifold/Differentials-1.png){:width="500px" class="invert" .align-center}
+![smooth_map](/assets/images/Math/Manifold/Differentials-1.png){:style="width:500px" class="invert" .align-center}
 <cap>[Lee], p.34. Fig. 2.2</cap>
 
 만일 $F$가 모든 점에서 $C^\infty$라면 이를 간단히 $C^\infty$ 함수라 한다.
@@ -115,7 +115,7 @@ $$F^\ast(f+g)=(f+g)\circ F=f\circ F+g\circ F=F^\ast(f)+F^\ast(g),\quad F^\ast(\a
 
 한편, $T_pM$과 $T_{F(p)}N$은 $\mathcal{C}^\infty_{M,p}$과 $\mathcal{C}^\infty_{N,F(p)}$에서 $\mathbb{R}$로의 linear map들 중 라이프니츠 법칙을 만족하는 원소들이므로, 이들은 각각의 dual space $(\mathcal{C}^\infty_{M,p})^\ast$과 $(\mathcal{C}^\infty_{N,F(p)})^\ast$의 부분공간이 된다. 따라서, 위에서 얻은 linear map $F^\ast:\mathcal{C}^\infty_{N,F(p)}\rightarrow \mathcal{C}^\infty_{M,p}$의 dual map $(F^\ast)^\ast:(\mathcal{C}^\infty_{M,p})^\ast\rightarrow(\mathcal{C}^\infty_{N,F(p)})^\ast$를 생각할 수 있다. 
 
-![differential](/assets/images/Math/Manifold/Differentials-2.png){:width="368.85px" class="invert" .align-center}
+![differential](/assets/images/Math/Manifold/Differentials-2.png){:style="width:17.6em" class="invert" .align-center}
 
 명시적으로, 이 함수는 임의의 linear map $L\in (\mathcal{C}^\infty_{M,p})^\ast$에 대하여
 

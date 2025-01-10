@@ -139,11 +139,21 @@ $$\bigcap_{k\neq j} M_k=\left(\bigcap_{k\neq j} M_k\right)\bigg/\left(M_k\cap \b
 
 가 되어 $\bigcap_{k\neq j} M_k$는 $\mathfrak{p}_j$-coprimary이다. 이로부터 원하는 결과를 얻는다.
 
-이제 세 번째 결과를 보이자. 일반적으로 $\mathfrak{p}$-primary submodule들의 교집합 또한 $\mathfrak{p}$-primary이므로, 주어진 조건을 만족하기 위해서는 $\mathfrak{p}_k$들이 모두 다른 prime ideal들이어야 한다. 이제 $\mathfrak{p}_k$들이 aniihilator ideal을 포함하는 것 중 minimal한 것이라면, 다음의 commutative diagram
+이제 세 번째 결과를 보이자. 일반적으로 $\mathfrak{p}$-primary submodule들의 교집합 또한 $\mathfrak{p}$-primary이므로, 주어진 조건을 만족하기 위해서는 $\mathfrak{p}_k$들이 모두 다른 prime ideal들이어야 한다. 이제 $\mathfrak{p}\_k$들이 annihilator ideal을 포함하는 것 중 minimal한 것이라 가정하고, $\Ass(M/M\_k)=\\{\mathfrak{p}\_k\\}$임을 보이자. 이를 위해서는 $0$이 아닌 임의의 $x+M_k\in M/M_k$에 대하여 $\ann(x)=\mathfrak{p}\_k$가 성립해야 하는 것을 보여야 하므로, [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 이는 $\varepsilon: M \rightarrow M\_{\mathfrak{p}\_k}$의 kernel이 $M_k$임을 보이면 충분하다. 
 
-img
+이제 다음의 commutative diagram
 
-으로부터 $M_k$가 $M \rightarrow M\_{\mathfrak{p}\_k}$의 kernel임을 알 수 있다. 
+![injective](/assets/images/Math/Commutative_Algebra/Primary_decomposition-1.png){:style="width:12em" class="invert" .align-center}
+
+을 생각하자. 그럼 $M \rightarrow M/M_k$의 kernel이 $M_k$이므로, 원하는 주장을 보이기 위해서는 $M\_{\mathfrak{p}\_k}\rightarrow (M/M_k)\_{\mathfrak{p}\_k}$ 그리고 $M/M_k \rightarrow (M/M_k)\_{\mathfrak{p}\_k}$가 모두 injective임을 보이면 충분하다. 우선 $M/M_k \rightarrow (M/M_k)\_{\mathfrak{p}\_k}$이 injective인 것은 $M_k$가 $\mathfrak{p}_k$-primary라는 것으로부터 자명하다. 그럼 맨 처음 살펴본 것과 같이 
+
+$$M \rightarrow \bigoplus_{k=1}^n M/M_k$$
+
+이 injective이며, 따라서 이 함수의 localization
+
+$$M_{\mathfrak{p}_k} \rightarrow \left(\bigoplus_{k=1}^n M/M_k\right)_{\mathfrak{p}_k} $$
+
+또한 injective이다. 한편, 각각의 $j\neq k$에 대하여 $M/M_j$는 $\mathfrak{p}_j$-coprimary이고, minimality로부터 $\mathfrak{p}_j$는 $\mathfrak{p}_i$에 속하지 않아야 하므로 $(M/M_j)\_{\mathfrak{p}_k}=0$이 성립하게 되고, 이렇게 얻어지는 함수가 정확히 $M\_{\mathfrak{p}\_k}\rightarrow (M/M_k)\_{\mathfrak{p}\_k}$이므로 원하는 결과를 얻는다.
 
 마지막 주장은 거의 자명하다.
 

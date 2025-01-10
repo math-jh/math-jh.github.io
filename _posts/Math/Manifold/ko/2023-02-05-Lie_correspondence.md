@@ -202,7 +202,7 @@ $$(d\exp_X)_{t=0}\left(\frac{d}{dt}\bigg|_{t=0}\right)=\frac{d}{dt}\bigg|_{t=0}\
 
 <ins id="thm13">**정리 13**</ins> 임의의 Lie group homomorphism $F:G\rightarrow H$에 대하여, 다음의 diagram
 
-![Exponential_map](/assets/images/Math/Manifold/Lie_correspondence-1.png){:width="158.25px" class="invert" .align-center}
+![Exponential_map](/assets/images/Math/Manifold/Lie_correspondence-1.png){:style="width:7.2em" class="invert" .align-center}
 
 이 commute한다.
 

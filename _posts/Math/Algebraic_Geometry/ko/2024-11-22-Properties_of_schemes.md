@@ -49,17 +49,17 @@ $$\Spec A=\bigcup_{i,j}D(f_{ij})\iff A=\sum_{i,j} (f_{ij})$$
 
 예컨대 $\mathbb{A}^n\_\mathbb{k}$와 $\mathbb{P}^n_k$는 irreducible이다.
 
-Connected가 아닌 scheme의 예시는 $\mathbb{A}^1\_\mathbb{k}$의 (closed) subscheme 
+Connected가 아닌 scheme의 예시는 $\mathbb{A}^2\_\mathbb{k}$의 (closed) subscheme 
 
-$$\Spec \frac{\mathbb{k}[\x]}{(\x(\x-1))}$$
+$$\Spec \frac{\mathbb{k}[\x,\y]}{(\x(\x-1))}$$
 
 이 있으며, connected이지만 irreducible하지 않은 scheme의 예시로는 
 
-$$V(\x\y)=\Spec \frac{\mathbb{k}[\x,\y]}{(\x\y)}$$
+$$Z(\x\y)=\Spec \frac{\mathbb{k}[\x,\y]}{(\x\y)}$$
 
 이 있다. 
 
-![counterexamples](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-1.png){:width="424.2px" class="invert" .align-center}
+![counterexamples](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-1.png){:style="width:20em" class="invert" .align-center}
 
 ## 대수적 성질들
 
@@ -73,11 +73,11 @@ $$V(\x\y)=\Spec \frac{\mathbb{k}[\x,\y]}{(\x\y)}$$
 
 Non-reduced scheme의 예시로는 $\mathbb{A}^2\_\mathbb{k}$의 두 subscheme
 
-$$V(\y-\x^2)=\Spec \frac{\mathbb{k}[\x,\y]}{(\y-\x^2)},\quad V(\y)=\Spec\frac{\mathbb{k}[\x,\y]}{(y)}$$
+$$Z(\y-\x^2)=\Spec \frac{\mathbb{k}[\x,\y]}{(\y-\x^2)},\quad Z(\y)=\Spec\frac{\mathbb{k}[\x,\y]}{(y)}$$
 
 이 있다. 
 
-![counterexample_reduced](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-2.png){:width="242.7px" class="invert" .align-center}
+![counterexample_reduced](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-2.png){:style="width:12em" class="invert" .align-center}
 
 이는 대수적으로는
 

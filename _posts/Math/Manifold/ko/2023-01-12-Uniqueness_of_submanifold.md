@@ -33,17 +33,17 @@ Submanifold를 단순히 원래의 manifold의 부분집합으로 본다면, 이
 
 <ins id="ex1">**예시 1**</ins> 두 manifold $N,P$가 모두 자연스러운 manifold 구조가 주어진 $\mathbb{R}$이라 하고, $M=\mathbb{R}^2$에도 자연스러운 manifold 구조가 주어졌다 하자. 두 submanifold $\Phi:N\rightarrow M$과 $\Psi:P\rightarrow M$을 다음의 두 그림
 
-![counterexample_1](/assets/images/Math/Manifold/Uniqueness_of_submanifold-1.png){:width="400px" class="invert" .align-center}
+![counterexample_1](/assets/images/Math/Manifold/Uniqueness_of_submanifold-1.png){:style="width:200px" class="invert" .align-center}
 
 과
 
-![counterexample_2](/assets/images/Math/Manifold/Uniqueness_of_submanifold-2.png){:width="400px" class="invert" .align-center}
+![counterexample_2](/assets/images/Math/Manifold/Uniqueness_of_submanifold-2.png){:style="width:200px" class="invert" .align-center}
 
 처럼 정의하자. 그럼 $\Phi(N)=\Psi(P)$이며, 따라서 $N$에서 $P$로의 전단사함수 $\bar{\Psi}^{-1}\circ\Phi$가 잘 정의된다.
 
 이제 $N$에서 원점의 충분히 작은 열린근방 $U$를 생각하고, $U$의 $\bar{\Psi}^{-1}\circ\Phi$에 의한 image를 생각하면 $(\bar{\Psi}^{-1}\circ\Phi)(U)$는 $P$에서 열린집합이 아니다. 
 
-![counterexample_3](/assets/images/Math/Manifold/Uniqueness_of_submanifold-3.png){:width="400px" class="invert" .align-center}
+![counterexample_3](/assets/images/Math/Manifold/Uniqueness_of_submanifold-3.png){:style="width:300px" class="invert" .align-center}
 
 즉 $(\bar{\Psi}^{-1}\circ\Phi)^{-1}$이 연속이 아니므로 이 함수는 $C^\infty$ 함수조차 되지 않는다.
 
@@ -134,13 +134,13 @@ $$\Phi_2(N_2)=\Phi_1(\theta(N_2))=\Phi_1(N_1)$$
 
 우선 앞선 [명제 4](#prop4)를 subspace topology $\mathcal{T}$에 적용하면, $(A,\mathcal{T},\iota)$를 $M$의 submanifold로 만드는 미분구조는 유일하다. 이를 $\mathcal{A}$라 하자. 이제 $(A,\iota)$를 $M$의 submanifold로 만드는 위상 $\mathcal{T}'$와 미분구조 $\mathcal{A}'$가 주어졌다 하고, 다음 diagram을 생각하자.
 
-![uniqueness](/assets/images/Math/Manifold/Uniqueness_of_submanifold-4.png){:width="270.15px" class="invert" .align-center}
+![uniqueness](/assets/images/Math/Manifold/Uniqueness_of_submanifold-4.png){:style="width:12.6em" class="invert" .align-center}
 
 여기서 $\iota$와 $\iota'$는 모두 $A\hookrightarrow M$이지만, 구별을 위해 다른 이름으로 표기하였다. 정의에 의해 $(A,\mathcal{T},\mathcal{A})$가 $M$의 embedded submanifold이므로, 수직방향의 $\iota$는 embedding이고 따라서 [명제 2](#prop2)에 의하여 $\operatorname{id}$는 $C^\infty$이다. 또, 연쇄법칙에 의하여
 
 $$d\iota'=d\iota\circ d(\id)$$
 
-이 성립하고, $d\iota'$는 모든 점에서 단사이므로 $d(\id)$ 또한 모든 점에서 단사이다. 따라서 $d\id$가 모든 점에서 전사임을 보이면 충분하다.
+이 성립하고, $d\iota'$는 모든 점에서 단사이므로 $d(\id)$ 또한 모든 점에서 단사이다. 따라서 $d(\id)$가 모든 점에서 전사임을 보이면 충분하다.
 
 결론에 반하여 $d(\id)$가 전사가 아닌 점 $a$가 존재한다 가정하자. 그럼 이 점에서의 tangent space의 차원을 생각하면
 

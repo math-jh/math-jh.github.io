@@ -67,3 +67,11 @@ weight: 9
 
 
 </details>
+
+---
+
+**참고문헌**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
+
+---

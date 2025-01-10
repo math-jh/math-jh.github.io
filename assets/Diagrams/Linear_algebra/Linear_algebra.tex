@@ -1,11 +1,18 @@
 \documentclass[convert={density=1024}]{standalone}
-\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{amsmath, amsthm, amsfonts, bbold}
 \usepackage{tikz-cd, kotex}
-\usepackage{../../preamble/quiver}
+\usepackage{../.preamble/quiver}
 
 \begin{document}
 
-
+\begin{tikzcd}
+	V & W \\
+	& \Bbbk
+	\arrow["L", from=1-1, to=1-2]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "f", from=1-2, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{f\circ L}"', dashed, from=1-1, to=2-2]
+	\arrow[curve={height=3pt}, shorten <=3pt, shorten >=3pt, Rightarrow, from=0, to=1, "L^\ast" {font=\tiny, above=2pt}, pos=.3]
+\end{tikzcd}
 
 \end{document}
 %% Extend_by_linearity (Matrix-1.png)
@@ -31,14 +38,14 @@ $\displaystyle\begin{pmatrix}
 \begin{tikzcd}
 \color{gray}v\ar[rrr, |->, gray]\dar[ddd, |->, gray]&[-20pt]&&[-30pt]\color{gray}L(v)\dar[ddd, |->, gray]\\[-15pt]
 &V\rar["L"]\dar[-, double]&W\dar[-, double]\\
-&F^n\rar["{[L]_\mathcal{C}^\mathcal{B}}" below]&F^m\\[-15pt]
+&\Bbbk^n\rar["{[L]_\mathcal{C}^\mathcal{B}}" below]&\Bbbk^m\\[-15pt]
 \color{gray}{[v]_\mathcal{B}}\ar[rrr, |->, gray]&&&\color{gray}\substack{[L(v)]_\mathcal{C}\\[2pt]={[L]_\mathcal{C}^\mathcal{B}[v]_{\mathcal{B}}}}
 \end{tikzcd}
 
 %% Dual_map (Dual_space-1.png)
 \begin{tikzcd}
 	V & W \\
-	& F
+	& \Bbbk
 	\arrow["L", from=1-1, to=1-2]
 	\arrow[""{name=0, anchor=center, inner sep=0}, "f", from=1-2, to=2-2]
 	\arrow[""{name=1, anchor=center, inner sep=0}, "{f\circ L}"', dashed, from=1-1, to=2-2]
@@ -100,7 +107,7 @@ $\displaystyle\begin{pmatrix}
 %% Change-of-basis matrix (Change_of_basis-1.png)
 \begin{tikzcd}
 	V\rar["\operatorname{id}_V"]\dar&V\dar\\
-	F^n\rar["{[\operatorname{id}_V]^\mathcal{B}_{\mathcal{B}'}}"]
+	\Bbbk^n\rar["{[\operatorname{id}_V]^\mathcal{B}_{\mathcal{B}'}}"]&\Bbbk^n
 \end{tikzcd}
 
 %% B-identification (Bilinear_form-1.png)
