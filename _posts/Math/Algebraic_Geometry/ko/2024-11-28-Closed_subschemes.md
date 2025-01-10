@@ -85,7 +85,7 @@ $$\Spec A_f \rightarrow \Spec A \rightarrow X$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor5">**따름정리 5**</ins> Scheme $X$와 global section $s\in \Gamma(X, \mathscr{O}_X)$에 대하여, 각각의 affine open subset $U=\Spec A$마다 $\mathscr{I}(U)=(s\vert_U)\subseteq A$으로 정의하면 ideal sheaf $\mathscr{I}$는 $X$의 closed subscheme $V(s)$를 정의한다.  
+<ins id="cor5">**따름정리 5**</ins> Scheme $X$와 global section $s\in \Gamma(X, \mathscr{O}_X)$에 대하여, 각각의 affine open subset $U=\Spec A$마다 $\mathscr{I}(U)=(s\vert_U)\subseteq A$으로 정의하면 ideal sheaf $\mathscr{I}$는 $X$의 closed subscheme $Z(s)$를 정의한다.  
 
 </div>
 
@@ -103,15 +103,15 @@ $$\Spec A_f \rightarrow \Spec A \rightarrow X$$
 
 <ins id="ex7">**예시 7**</ins> Affine scheme이 아닌 예시 중 가장 간단한 것은 projective space $\mathbb{P}^n_A$이다. 
 
-[§스킴, §§사영공간과 Proj](/ko/math/algebraic_geometry/schemes#사영공간과-proj)에서 우리가 $\Proj S$를 정의한 직관은 $\mathbb{P}^n_A$ 위에서 homogeneous polynomial $f\in \mathbb{k}[\x_0,\ldots, \x_n]$은 잘 정의된 함수는 아니지만, $V(f)$는 $\mathbb{P}^n_A$의 닫힌집합을 잘 정의한다는 것이었다. 이제 우리는 $V(f)$가 $\mathbb{P}^n_A$의 closed subscheme이라는 것을 알 수 있는데, 각각의 affine cover 
+[§스킴, §§사영공간과 Proj](/ko/math/algebraic_geometry/schemes#사영공간과-proj)에서 우리가 $\Proj S$를 정의한 직관은 $\mathbb{P}^n_A$ 위에서 homogeneous polynomial $f\in \mathbb{k}[\x_0,\ldots, \x_n]$은 잘 정의된 함수는 아니지만, $Z(f)$는 $\mathbb{P}^n_A$의 닫힌집합을 잘 정의한다는 것이었다. 이제 우리는 $Z(f)$가 $\mathbb{P}^n_A$의 closed subscheme이라는 것을 알 수 있는데, 각각의 affine cover 
 
 $$U_i=\{[x_0:\cdots:x_n]\in \mathbb{P}^n_A\mid x_i\neq 0\}=\Spec A[\x_{0/i}, \ldots, \x_{(i-1)/i},\x_{(i+1)/i},\ldots,\x_{n/i}]$$
 
-에서, $V(f)$를 정의하는 ideal은 정확히
+에서, $Z(f)$를 정의하는 ideal은 정확히
 
 $$\mathscr{I}(U_i)=(f(\x_{0/i},\ldots, \x_{(i-1)/i},1,\x_{(i+1)/i},\ldots, \x_{n/i}))$$
 
-이다. 이와 같이 $V(f)$로 정의되는 closed subscheme을 $\mathbb{P}^n_A$의 *hypersurface*라 부르고, 그 차수를 $f$의 차수로 정의한다. 
+이다. 이와 같이 $Z(f)$로 정의되는 closed subscheme을 $\mathbb{P}^n_A$의 *hypersurface*라 부르고, 그 차수를 $f$의 차수로 정의한다. 
 
 </div>
 

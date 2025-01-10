@@ -179,3 +179,10 @@ $$\mathfrak{a}\left(\bigcap \mathfrak{a}^iM\right)=\left(\bigcap \mathfrak{a}^iM
 
 </details>
 
+---
+
+**참고문헌**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
+
+---

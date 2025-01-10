@@ -41,7 +41,7 @@ weight: 12
 
 이로부터 $\Spec A$는 두 개의 점 $(0)$, $\mathfrak{m}$으로 이루어져 있으며,
 
-$$V((0))=\{(0),\mathfrak{m}\},\quad V(\mathfrak{m})=\{\mathfrak{m}\}$$
+$$Z((0))=\{(0),\mathfrak{m}\},\quad Z(\mathfrak{m})=\{\mathfrak{m}\}$$
 
 이므로 $\Spec A$의 자명하지 않은 열린집합은
 
@@ -71,7 +71,7 @@ $$\kappa((0))=\Frac(A), \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A
 
 <ins id="def3">**정의 3**</ins> Scheme morphism $f:X \rightarrow Y$에 대하여, *diagonal morphism<sub>대각사상</sub>*을 $\Delta: X \rightarrow X \times_Y X$으로 정의한다. 
 
-![diagonal_morphism](/assets/images/Math/Algebraic_Geometry/Valuative_criteria-1.png){:width="275.4px" class="invert" .align-center}
+![diagonal_morphism](/assets/images/Math/Algebraic_Geometry/Valuative_criteria-1.png){:style="width:12em" class="invert" .align-center}
 
 만일 $\Delta$가 closed immersion이라면 $f$를 *separated<sub>분리사상</sub>*라 부르고, $X$가 $Y$에 대해 *seperated*라 부른다. 만일 $X$가 $\Spec \mathbb{Z}$에 대해 separated이면, $X$를 간단히 *separated* scheme이라 부른다.
 
@@ -114,7 +114,7 @@ $X\times X$에 어떻게 들어갈지를 생각해보면 좌표축 바깥에서�
 
 <ins id="thm6">**정리 6**</ins> Noetherian scheme $X$와 scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 separated인 것은 임의의 valuation ring $A$과 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
-![valuative_criterion_for_separatedness](/assets/images/Math/Algebraic_Geometry/Valuative_criteria-2.png){:width="173.85px" class="invert" .align-center}
+![valuative_criterion_for_separatedness](/assets/images/Math/Algebraic_Geometry/Valuative_criteria-2.png){:style="width:8em" class="invert" .align-center}
 
 의 바깥쪽 square가 주어질 때마다, 많아야 하나의 $\Spec A \rightarrow X$가 전체 diagram이 commute하도록 하는 것이 동치이다.
 
@@ -150,7 +150,7 @@ $X\times X$에 어떻게 들어갈지를 생각해보면 좌표축 바깥에서�
 
 <ins id="thm6">**정리 6**</ins> Noetherian scheme $X$와 scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 separated인 것은 임의의 valuation ring $A$과 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
-![valuative_criterion_for_separatedness](/assets/images/Math/Algebraic_Geometry/Valuative_criteria-2.png){:width="173.85px" class="invert" .align-center}
+![valuative_criterion_for_separatedness](/assets/images/Math/Algebraic_Geometry/Valuative_criteria-2.png){:style="width:8em" class="invert" .align-center}
 
 의 바깥쪽 square가 주어질 때마다, 정확히 하나의 $\Spec A \rightarrow X$가 존재하여 전체 diagram이 commute하는 것이 동치이다.
 
