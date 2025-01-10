@@ -27,7 +27,7 @@ weight: 1
 
 <ins id="prop1">**명제 1 (The four lemma)**</ins> 각 행들이 exact인 commutative diagram
 
-![Four_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-1.png){:width="300.15px" class="invert" .align-center}
+![Four_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-1.png){:style="width:14em" class="invert" .align-center}
 
 이 주어졌다 하고, $\alpha$가 전사이고, $\delta$가 단사라 가정하자. 그럼
 
@@ -77,7 +77,7 @@ weight: 1
 
 <ins id="cor2">**따름정리 2 (The five lemma)**</ins> 각 행이 exact인 commutative diagram
 
-![five_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-2.png){:width="410.25px" class="invert" .align-center}
+![five_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-2.png){:style="width:17.8em" class="invert" .align-center}
 
 이 주어졌다 하자. 만일 $\alpha,\beta,\delta,\epsilon$이 모두 전단사라면, $\gamma$ 또한 전단사이다.
 
@@ -87,7 +87,7 @@ weight: 1
 
 <ins id="cor3">**따름정리 3 (The short five lemma)**</ins> 각 행이 exact인 commutative diagram
 
-![short_five_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-3.png){:width="384.45px" class="invert" .align-center}
+![short_five_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-3.png){:style="width:18em" class="invert" .align-center}
 
 이 주어졌다 하자. 만일 $\alpha,\gamma$가 모두 단사라면 $\beta$도 단사이고, $\alpha,\gamma$가 모두 전사라면 $\beta$도 전사이다.
 
@@ -101,7 +101,7 @@ weight: 1
 
 <ins id="lem4">**보조정리 4**</ins> Commutative square
 
-![induced_morphism](/assets/images/Math/Homological_Algebra/Diagram_chasing-4.png){:width="135.9px" class="invert" .align-center}
+![induced_morphism](/assets/images/Math/Homological_Algebra/Diagram_chasing-4.png){:style="width:6em" class="invert" .align-center}
 
 가 주어졌다 하자. 그럼 $\xi$는 $\ker(h)$를 $\ker(h')$로, $\eta$는 $\im(h)$를 $\im(h')$로 보내며, 특히 다음의 함수들
 
@@ -119,7 +119,7 @@ $$h'\circ(\xi\circ i)=(\eta\circ h)\circ i=\eta\circ 0=0$$
 
 이므로, kernel의 universal property로부터 유일한 $\xi^\sharp:\ker(h)\rightarrow\ker(h')$가 존재한다는 것을 안다. 
 
-![induced_morphism_kernel](/assets/images/Math/Homological_Algebra/Diagram_chasing-5.png){:width="274.2px" class="invert" .align-center}
+![induced_morphism_kernel](/assets/images/Math/Homological_Algebra/Diagram_chasing-5.png){:style="width:13em" class="invert" .align-center}
 
 비슷하게 $p'\circ\eta:Y\rightarrow \coker (h')$로부터,
 
@@ -127,7 +127,7 @@ $$(p'\circ\eta)\circ h=p'\circ(h'\circ\xi)=(p'\circ h')\circ\xi=0\circ\xi=0$$
 
 이고, $\coker(h)$의 universal property로부터 $\eta^\ast$를 정의할 수 있다.
 
-![induced_morphism_cokernel](/assets/images/Math/Homological_Algebra/Diagram_chasing-6.png){:width="294.3px" class="invert" .align-center}
+![induced_morphism_cokernel](/assets/images/Math/Homological_Algebra/Diagram_chasing-6.png){:style="width:13.6em" class="invert" .align-center}
 
 정의에 의해 $\coker(h)=Y/\im(h), \coker(h')=Y'/\im(h')$이므로, $\eta^\ast$가 $0$을 $0$으로 보내는 것으로부터 $\eta^\sharp$ 또한 잘 정의된다. 마지막으로 $\xi^\ast$의 경우, $p:X'\rightarrow X'/\ker(h')$를 생각하면 
 
@@ -143,7 +143,7 @@ $$\ker(h)\subseteq\ker(p\circ\xi)$$
 
 <ins id="lem5">**보조정리 5**</ins> 각 행이 exact인 commutative diagram
 
-![induced_exact_sequence](/assets/images/Math/Homological_Algebra/Diagram_chasing-7.png){:width="220.65px" class="invert" .align-center}
+![induced_exact_sequence](/assets/images/Math/Homological_Algebra/Diagram_chasing-7.png){:style="width:10.4em" class="invert" .align-center}
 
 이 주어졌다 하자. 그럼 $f,g$와 $f',g'$는 각각 다음의 두 열
 
@@ -197,7 +197,7 @@ $$((f')^\ast)(a'+\im(\alpha))=b'+\im(\beta)$$
 
 <ins id="thm6">**정리 6 (The snake lemma)**</ins> 각 행이 exact인 commutative diagram
 
-![snake_diagram](/assets/images/Math/Homological_Algebra/Diagram_chasing-8.png){:width="384.45px" class="invert" .align-center}
+![snake_diagram](/assets/images/Math/Homological_Algebra/Diagram_chasing-8.png){:style="width:18.8em" class="invert" .align-center}
 
 이 주어졌다 하자. 이 때, 위와 아래의 행은 각각 exact이다. 그럼 [보조정리 5](#lem5)에서부터 얻어진 두 개의 exact sequence 
 
@@ -261,7 +261,7 @@ $$\gamma(g(b))=(g'\circ\beta)(b)=(g'\circ f')(a')=0$$
 
 이 정리를 snake lemma라고 부르는 것은 connecting map $\delta$를 그렸을 때, 다음과 같은 모양이 나오기 때문이다.
 
-![connecting_map_of_snake_diagram](/assets/images/Math/Homological_Algebra/Diagram_chasing-9.png){:width="550.8px" class="invert" .align-center}
+![connecting_map_of_snake_diagram](/assets/images/Math/Homological_Algebra/Diagram_chasing-9.png){:style="width:27em" class="invert" .align-center}
 
 Snake lemma는 보통 다음 글에서와 같이 long exact sequence를 그릴 때 사용되지만, 다음의 또 다른 따름정리 또한 갖는다.
 
@@ -269,7 +269,7 @@ Snake lemma는 보통 다음 글에서와 같이 long exact sequence를 그릴 �
 
 <ins id="cor7">**따름정리 7 (The 3×3 lemma)**</ins> 각 행이 exact인 commutative diagram
 
-![Nine_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-10.png){:width="392.7px" class="invert" .align-center}
+![Nine_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-10.png){:style="width:19em" class="invert" .align-center}
 
 이 주어졌다 하자. 만일 첫 두 개의 열이 모두 short exact sequence라면 마지막 열 또한 short exact sequence가 되고, 마지막 두 개의 열이 모두 short exact sequence라면 첫 열 또한 short exact sequence가 된다.
 

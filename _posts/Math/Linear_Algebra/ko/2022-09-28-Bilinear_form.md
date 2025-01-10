@@ -117,7 +117,7 @@ $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(
 
 이라 하자. 만일 dual map $L^\ast:W^\ast\rightarrow V^\ast$를 위의 identification $\varphi$들을 통해 $W$에서 $V$로의 map으로 생각한다면, 즉 다음의 diagram
 
-![identification](/assets/images/Math/Linear_Algebra/Bilinear_form-1.png){:width="169.95px" class="invert" .align-center}
+![identification](/assets/images/Math/Linear_Algebra/Bilinear_form-1.png){:style="width:7em" class="invert" .align-center}
 
 을 통해 정의되는 $L':W\rightarrow V$를 생각한다면 이 linear map의 두 basis $\mathcal{C}'$, $\mathcal{B}'$에 대한 행렬표현이 $[L']\_{\mathcal{B}'}^{\mathcal{C}'}$가 됨을 확인할 수 있다. 
 

@@ -51,7 +51,7 @@ $$A=\mathbb{k}[\x_1,\ldots, \x_n]\rightarrow \frac{\mathbb{k}[\x_1,\ldots,\x_n]}
 
 에 의한 $f$의 image로 주어진다. 더 일반적으로 $\Spec A$의 임의의 점 $\mathfrak{p}$에 대해서도 $f$의 함숫값은 $f$의 $A/\mathfrak{p}$에서의 image로 생각할 수 있다. 
 
-한편, 우리는 전통적으로 다항식 뿐만 아니라 이들을 분모에 넣어서 얻어지는 유리함수들에도 관심을 가져왔었는데, 이 또한 우리의 논의로 들여오기는 어려운 일이 아니다. 물론 다항식을 분모에 넣기 위해서는 이 다항식이 정의역의 모든 점에서 $0$이 되지 않아야 하지만, 이것이 정확히 sheaf가 하는 일이다. 즉, 분모에 넣고자 하는 함수를 $f$라 하면, Zariski topology 상에서 $V(f)$는 closed subset이므로 그 complement $D(f)$는 open subset이고, 이 때 $\mathscr{O}\_{\Spec A}(D(f))$에서는 $f$가 분모에 있는 형태를 마음껏 다뤄도 된다.
+한편, 우리는 전통적으로 다항식 뿐만 아니라 이들을 분모에 넣어서 얻어지는 유리함수들에도 관심을 가져왔었는데, 이 또한 우리의 논의로 들여오기는 어려운 일이 아니다. 물론 다항식을 분모에 넣기 위해서는 이 다항식이 정의역의 모든 점에서 $0$이 되지 않아야 하지만, 이것이 정확히 sheaf가 하는 일이다. 즉, 분모에 넣고자 하는 함수를 $f$라 하면, Zariski topology 상에서 $Z(f)$는 closed subset이므로 그 complement $D(f)$는 open subset이고, 이 때 $\mathscr{O}\_{\Spec A}(D(f))$에서는 $f$가 분모에 있는 형태를 마음껏 다뤄도 된다.
 
 <div class="definition" markdown="1">
 
@@ -73,7 +73,7 @@ $$S=\{g\in A: D(f)\subseteq D(g)\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\Spec A$의 임의의 열린집합 $U$가 주어졌다 하자. 즉 적당한 $\mathfrak{a}$에 대하여 $U=V(\mathfrak{a})^c$이다. 이제 임의의 $\mathfrak{p}\in U$에 대하여, $\mathfrak{p}\not\supseteq \mathfrak{a}$이므로 적당한 $f\in \mathfrak{a}\setminus \mathfrak{p}$가 존재한다. 이제 $D(f)$가 $\mathfrak{p}$를 포함하며 $U$에 속한다.
+$\Spec A$의 임의의 열린집합 $U$가 주어졌다 하자. 즉 적당한 $\mathfrak{a}$에 대하여 $U=Z(\mathfrak{a})^c$이다. 이제 임의의 $\mathfrak{p}\in U$에 대하여, $\mathfrak{p}\not\supseteq \mathfrak{a}$이므로 적당한 $f\in \mathfrak{a}\setminus \mathfrak{p}$가 존재한다. 이제 $D(f)$가 $\mathfrak{p}$를 포함하며 $U$에 속한다.
 
 </details>
 
@@ -103,7 +103,7 @@ $\Spec A$의 임의의 열린집합 $U$가 주어졌다 하자. 즉 적당한 $\
 
     $$\mathfrak{a}=\{x\in A: x(af^m-bf^n)=0\}$$
 
-    를 생각하면, 이러한 $h$의 존재로부터 $\mathfrak{a}\not\subseteq\mathfrak{p}$, 즉 $\mathfrak{p}\not\in V(\mathfrak{a})$임을 안다. 한편 이것이 모든 점 $\mathfrak{p}\in D(f)$에 대해 성립하므로 $V(\mathfrak{a})\cap D(f)=\emptyset$이고, 따라서 $V(\mathfrak{a})\subseteq V(f)$로부터 $\sqrt{\mathfrak{a}}\supseteq \sqrt{(f)}$이 성립한다. 그럼
+    를 생각하면, 이러한 $h$의 존재로부터 $\mathfrak{a}\not\subseteq\mathfrak{p}$, 즉 $\mathfrak{p}\not\in Z(\mathfrak{a})$임을 안다. 한편 이것이 모든 점 $\mathfrak{p}\in D(f)$에 대해 성립하므로 $Z(\mathfrak{a})\cap D(f)=\emptyset$이고, 따라서 $Z(\mathfrak{a})\subseteq Z(f)$로부터 $\sqrt{\mathfrak{a}}\supseteq \sqrt{(f)}$이 성립한다. 그럼
 
     $$f\in \sqrt{(f)}\subseteq \sqrt{\mathfrak{a}}$$
 
@@ -119,7 +119,7 @@ $\Spec A$의 임의의 열린집합 $U$가 주어졌다 하자. 즉 적당한 $\
     으로 적을 수 있다.  
     이제 대략 partition of unity와 비슷한 방식으로 $\psi(a/f^n)=s$를 만족하는 $a/f^n\in A_f$를 찾을 수 있다. 이를 위해 우선 우리는 $D(f)$를 위와 같이 $D(h_i)$들의 합집합으로 표현할 때, 오직 <em_ko>유한 개의</em_ko> $D(h_i)$들만 있으면 충분하다는 것을 보인다. 이는 
 
-    $$D(f)\subseteq \bigcup D(h_i)\iff V(f)\supseteq \bigcap V(h_i)=V(\sum (h_i))\iff \sqrt{(f)}\subseteq \sqrt{\sum (h_i)}$$
+    $$D(f)\subseteq \bigcup D(h_i)\iff Z(f)\supseteq \bigcap Z(h_i)=Z(\sum (h_i))\iff \sqrt{(f)}\subseteq \sqrt{\sum (h_i)}$$
 
     로부터, $f^n$을 유한합 $\sum b_ih_i$로 적을 수 있고, 따라서 이 유한합에 등장하는 $h_i$들에 대해서만 합집합을 돌려도 $D(f)\subseteq D(h_i)$가 성립하기 때문에 가능하다. 따라서
 
@@ -188,7 +188,7 @@ $\Spec A$의 임의의 열린집합 $U$가 주어졌다 하자. 즉 적당한 $\
 
     을 생각하자. 그럼 정의와 [⁋명제 5](#prop5)의 첫째 결과에 의하여, $f^\sharp_\mathfrak{p}$는 $A_{f(\mathfrak{p})}\rightarrow B(\mathfrak{p})$으로 생각할 수 있으며, 동시에 $\phi$의 정의에 의해 다음의 commutative diagram이 존재한다.
 
-    ![localization](/assets/images/Math/Algebraic_Geometry/Schemes-1.png){:width="162.9px" class="invert" .align-center}
+    ![localization](/assets/images/Math/Algebraic_Geometry/Affine_schemes-1.png){:style="width:7.5em" class="invert" .align-center}
 
     그런데 가정에 의하여 $f^\sharp_\mathfrak{p}$는 local homomorphism이므로, $A_{f(\mathfrak{o})}$의 유일한 maximal ideal (즉 $f(\mathfrak{p})$의 $A_{f(\mathfrak{p})}$에서의 상)이 $f^\sharp_\mathfrak{p}$에 의해 $B$의 유일한 maximal ideal (즉 $\mathfrak{p}$의 $B$에서의 상)으로 옮겨진다. 바꿔말하면 $\phi^{-!}(\mathfrak{p})=f(\mathfrak{p})$이 성립한다. 처음부터 $\mathfrak{p}$는 임의의 prime ideal로 잡았으므로 $\Spec\phi=f$이고, 이제 어렵지 않게 $f^\sharp$이 $\phi$로부터 유도되는 것을 보일 수 있다.
 

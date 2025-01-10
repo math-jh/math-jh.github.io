@@ -51,13 +51,13 @@ $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1
 
 이는 다음의 diagram 
 
-![long_exact_sequence](/assets/images/Math/Homological_Algebra/Long_exact_sequence-1.png){:width="655.2px" class="invert" .align-center}
+![long_exact_sequence](/assets/images/Math/Homological_Algebra/Long_exact_sequence-1.png){:style="width:30em" class="invert" .align-center}
 
 을 생각하면 된다. 여기에서 $\partial$들은 모두 $\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$과 같이 정의된 함수들이다. 그럼 위의 diagram에서 $\ker\partial^A$는 $H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$와 같고, $\coker\partial^A$는 $H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$과 같다는 것을 쉽게 확인할 수 있다. 
 
 따라서, 위와 아래의 행이 모두 exact라는 것만 보인다면, snake lemma에 의해 주어진 long exact sequence가 잘 유도된다. 이를 보이기 위해 다시 다음의 diagram
 
-![long_exact_sequence_exactness](/assets/images/Math/Homological_Algebra/Long_exact_sequence-2.png){:width="463.95px" class="invert" .align-center}
+![long_exact_sequence_exactness](/assets/images/Math/Homological_Algebra/Long_exact_sequence-2.png){:style="width:21.4em" class="invert" .align-center}
 
 을 생각하자. 이 diagram에 snake lemma (더 정확하게는 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)) 를 다시 한 번 적용하면, 두 exact sequence
 
@@ -77,11 +77,11 @@ $$\coker(d_n^A)\rightarrow\coker(d_n^B)\rightarrow\coker(d_n^C)\rightarrow 0$$
 
 <ins id="prop2">**명제 2**</ins> 두 short exact sequence들 사이의 chain map
 
-![morphism_in_SES](/assets/images/Math/Homological_Algebra/Long_exact_sequence-3.png){:width="393.3px" class="invert" .align-center}
+![morphism_in_SES](/assets/images/Math/Homological_Algebra/Long_exact_sequence-3.png){:style="width:18em" class="invert" .align-center}
 
 이 주어졌다 하면, 이에 대응하는 long exact sequence들 사이의 chain map
 
-![functoriality](/assets/images/Math/Homological_Algebra/Long_exact_sequence-4.png){:width="708.9px" class="invert" .align-center}
+![functoriality](/assets/images/Math/Homological_Algebra/Long_exact_sequence-4.png){:style="width:32em" class="invert" .align-center}
 
 이 존재한다.
 
@@ -127,7 +127,7 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 
 <ins id="def5">**정의 5**</ins> 두 chain complex $C,D$와 chain map $f,g:C\rightarrow D$가 주어졌다 하자. 그럼 $f$와 $g$ 사이의 *chain homotopy<sub>사슬 호모토피</sub>*은 다음 diagram
 
-![chain_homotopy](/assets/images/Math/Homological_Algebra/Long_exact_sequence-5.png){:width="612px" class="invert" .align-center}
+![chain_homotopy](/assets/images/Math/Homological_Algebra/Long_exact_sequence-5.png){:style="width:28em" class="invert" .align-center}
 
 에서, $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$가 성립하도록 하는 $h_n:C_n\rightarrow D_{n+1}$의 모임이다. 만일 $f,g$ 사이의 chain homotopy가 존재한다면, $f$와 $g$가 *homotopic*한 chain map이라 부른다. 
 
@@ -177,7 +177,7 @@ $\mathbf{K}(\mathcal{C})$는 $\mathbf{Ch}(\mathcal{C})$와 동일한 object를 �
 
 두 homotopic chain map $f,g:C\rightarrow D$가 주어졌다 하자. 임의의 $u:B\rightarrow C$, $v:D\rightarrow E$에 대하여 두 map $vfu$와 $vgu$를 생각하자. 다음 diagram
 
-![composition_in_homotopy_category](/assets/images/Math/Homological_Algebra/Long_exact_sequence-6.png){:width="612px" class="invert" .align-center}
+![composition_in_homotopy_category](/assets/images/Math/Homological_Algebra/Long_exact_sequence-6.png){:style="width:28em" class="invert" .align-center}
 
 을 생각하면,
 
