@@ -150,7 +150,7 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
  
 > 임의의 집합 $B$와 $f_i:A_i\rightarrow B$가 주어질 때마다, 유일한 함수 $f:\sum A_i\rightarrow B$가 존재하여 $f_i=f\circ\iota_i$가 성립한다.
 
-![universal_property_of_sum](/assets/images/Math/Set_Theory/Sum_of_sets-1.png){:width="285.9px" class="invert" .align-center}
+![universal_property_of_sum](/assets/images/Math/Set_Theory/Sum_of_sets-1.png){:style="width:12em" class="invert" .align-center}
 
 을 만족하는 집합 $\sum A_i$와 $\iota_i:A_i\rightarrow \sum A_i$들의 모임이다.
 

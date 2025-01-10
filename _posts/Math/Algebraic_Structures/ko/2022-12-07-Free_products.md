@@ -29,7 +29,7 @@ $$f_1(1)=a, \qquad f_2(1)=b$$
 
 그러나 우리는 다음의 diagram
 
-![counterexample](/assets/images/Math/Algebraic_Structures/Free_products-1.png){:width="239.55px" class="invert" .align-center}
+![counterexample](/assets/images/Math/Algebraic_Structures/Free_products-1.png){:style="width:11.6em" class="invert" .align-center}
 
 을 commute하게 만드는 $f:\mathbb{Z}\times\mathbb{Z}\rightarrow G$는 존재하지 않음을 알 수 있다. 만일 그러한 $f$가 존재한다면 
 

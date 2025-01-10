@@ -19,11 +19,11 @@ weight: 16
 
 다음의 diagram
 
-![diagram_representing_single_ordering](/assets/images/Math/Set_Theory/Elements_in_ordered_set-1.png){:width="29.4px" class="invert" .align-center}
+![diagram_representing_single_ordering](/assets/images/Math/Set_Theory/Elements_in_ordered_set-1.png){:style="width:1.4em" class="invert" .align-center}
 
 이 $b\leq a$를 뜻하는 것이라 하자. 예를 들어, 다음의 diagram
 
-![diagram_representing_two_orderings](/assets/images/Math/Set_Theory/Elements_in_ordered_set-2.png){:width="135.45px" class="invert" .align-center}
+![diagram_representing_two_orderings](/assets/images/Math/Set_Theory/Elements_in_ordered_set-2.png){:style="width:6em" class="invert" .align-center}
 
 은 $b\leq a$이고 $c\leq a$이지만, $b$와 $c$ 사이에는 별 관계가 없는 상황을 나타낸다. 이러한 diagram을 *Hasse diagram*이라 부른다.
 
@@ -34,7 +34,7 @@ weight: 16
 
 Minimal element가 유일할 필요는 없다. 예컨대
     
-![diagram_representing_two_orderings](/assets/images/Math/Set_Theory/Elements_in_ordered_set-2.png){:width="135.45px" class="invert" .align-center}
+![diagram_representing_two_orderings](/assets/images/Math/Set_Theory/Elements_in_ordered_set-2.png){:style="width:6em" class="invert" .align-center}
 
 에서, $b$와 $c$는 모두 집합 $\\{a,b,c\\}$의 minimal element이다. 수학자들은 보통 이런 성질을 가지는 원소가 유일하기를 바라므로, 이 상황은 그렇게 달가운 상황이 아니다. 
 
@@ -81,12 +81,15 @@ Lower bound (resp. upper bound)를 갖는 집합을 *bounded below<sub>아래로
 
 다음의 ordered set $A=\\{a,b,c,d,e\\}$를 생각하자.
 
-![upper_and_lower_bounds](/assets/images/Math/Set_Theory/Elements_in_ordered_set-3.png){:width="158.4px" class="invert" .align-center}
+![upper_and_lower_bounds](/assets/images/Math/Set_Theory/Elements_in_ordered_set-3.png){:style="width:7em" class="invert" .align-center}
 
 그럼 $a$는 집합 $X=\left\\{c,d,e\right\\}$의 upper bound지만 $b$는 그렇지 않다. 집합 $X'=\left\\{d,e\right\\}$를 생각한다면, $a$와 $b$ 모두가 이 집합의 upper bound이다. 위의 예시로부터 집합 $X$의 lower bound가 $X$에 포함될 필요는 없지만, 만일 이것이 성립한다면 그 원소는 $X$의 least element가 된다.
 
+<div class="definition" markdown="1">
+
 <ins id="def6">**정의 6**</ins> $A$가 ordered set이고 $X\subseteq A$이라 하자. $A$의 어떤 원소 $a$가 $X$의 *greatest lower bound<sub>최대하계</sub>* (혹은 *infimum<sub>하한</sub>*)라는 것은 이 원소가 $X$의 lower bound 중 greatest element라는 것이다. 이와 유사하게 *least upper bound<sub>최소상계</sub>* (혹은 *supremum<sub>상한</sub>*)도 정의한다.
-{: .definition}
+
+</div>
 
 $X\subseteq A$의 supremum이 존재한다면, 이를 $\sup_AX$로 쓰고, infimum은 $\inf_AX$로 쓴다. 정의에 의하여, $X\subseteq A$가 greatest element $a$를 갖는다면 $a=\sup_AX$임을 쉽게 확인할 수 있다.
 

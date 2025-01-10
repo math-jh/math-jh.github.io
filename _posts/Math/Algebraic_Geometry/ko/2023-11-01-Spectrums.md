@@ -25,15 +25,15 @@ weight: 5
 
 ## $\Spec$ 함자
 
-우선 위상공간으로서 $\Spec A$가 무엇인지를 정의해야 한다. Ring $A$의 prime ideal들의 집합을 $\Spec A$로 적고, 임의의 ideal $\mathfrak{a}\leq A$에 대하여, $V(\mathfrak{a})$를 $\mathfrak{a}$를 포함하는 prime ideal들의 모임이라 하자. 
+우선 위상공간으로서 $\Spec A$가 무엇인지를 정의해야 한다. Ring $A$의 prime ideal들의 집합을 $\Spec A$로 적고, 임의의 ideal $\mathfrak{a}\leq A$에 대하여, $Z(\mathfrak{a})$를 $\mathfrak{a}$를 포함하는 prime ideal들의 모임이라 하자. 
 
 <div class="proposition" markdown="1">
 
 <ins id="lem1">**보조정리 1**</ins> 다음이 성립한다.
 
-1. $A$의 임의의 ideal $\mathfrak{a},\mathfrak{b}$에 대하여, $V(\mathfrak{ab})=V(\mathfrak{a})\cup V(\mathfrak{b})$가 성립한다.
-2. $A$의 ideal들의 모임 $\\{\mathfrak{a}\_i\\}$에 대하여, $V(\sum \mathfrak{a}\_i)=\bigcap V(\mathfrak{a}\_i)$가 성립한다.
-3. $A$의 임의의 ideal $\mathfrak{a},\mathfrak{b}$에 대하여, $V(\mathfrak{a})\subseteq V(\mathfrak{b})\iff \sqrt{\mathfrak{a}}\supseteq \sqrt{\mathfrak{b}}$이 성립한다.
+1. $A$의 임의의 ideal $\mathfrak{a},\mathfrak{b}$에 대하여, $Z(\mathfrak{ab})=Z(\mathfrak{a})\cup Z(\mathfrak{b})$가 성립한다.
+2. $A$의 ideal들의 모임 $\\{\mathfrak{a}\_i\\}$에 대하여, $Z(\sum \mathfrak{a}\_i)=\bigcap Z(\mathfrak{a}\_i)$가 성립한다.
+3. $A$의 임의의 ideal $\mathfrak{a},\mathfrak{b}$에 대하여, $Z(\mathfrak{a})\subseteq Z(\mathfrak{b})\iff \sqrt{\mathfrak{a}}\supseteq \sqrt{\mathfrak{b}}$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -45,7 +45,7 @@ weight: 5
 
 </details>
 
-그럼 [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)에 의하여, $V(\mathfrak{a})$들을 닫힌집합으로 갖는 유일한 위상 $\mathcal{T}$가 존재하여 $\Spec A$를 위상공간으로 만들어준다. 
+그럼 [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)에 의하여, $Z(\mathfrak{a})$들을 닫힌집합으로 갖는 유일한 위상 $\mathcal{T}$가 존재하여 $\Spec A$를 위상공간으로 만들어준다. 
 
 <div class="definition" markdown="1">
 
@@ -69,23 +69,23 @@ $$f: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\mathfrak{
 
 이를 위해서는 $\Spec A$의 임의의 닫힌집합을 가져왔을 때, 이 닫힌집합의 $f$에 의한 preimage도 $\Spec B$에서의 닫힌집합임을 보이면 충분하다. ([\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2))
 
-한편 $\Spec A$의 임의의 닫힌집합은 모두 $V(\mathfrak{a})$의 꼴이고, $\Spec B$의 닫힌집합은 모두 $V(\mathfrak{b})$의 꼴이므로 이를 보이기 위해서는 임의의 $A$의 ideal $\mathfrak{a}$가 주어질 때마다 다음의 식
+한편 $\Spec A$의 임의의 닫힌집합은 모두 $Z(\mathfrak{a})$의 꼴이고, $\Spec B$의 닫힌집합은 모두 $Z(\mathfrak{b})$의 꼴이므로 이를 보이기 위해서는 임의의 $A$의 ideal $\mathfrak{a}$가 주어질 때마다 다음의 식
 
-$$f^{-1}(V(\mathfrak{a}))=V(\mathfrak{b})$$
+$$f^{-1}(Z(\mathfrak{a}))=Z(\mathfrak{b})$$
 
 을 만족하는 $B$의 ideal $\mathfrak{b}$가 존재함을 보이면 충분하다. 우리의 주장은 다음의 식
 
-$$f^{-1}(V(\mathfrak{a}))=V(\phi(\mathfrak{a}))$$
+$$f^{-1}(Z(\mathfrak{a}))=Z(\phi(\mathfrak{a}))$$
 
 이 성립한다는 것이다. 그럼 $\phi(\mathfrak{a})$로 생성되는 ideal이 위의 식을 만족하므로 증명이 완료된다. 
 
-우선 $\mathfrak{q}\in\Spec B$가 좌변에 속한다 하자. 즉 $f(\mathfrak{q})=\phi^{-1}(\mathfrak{q})\in V(\mathfrak{a})$가 성립한다. 그럼 $\mathfrak{a}\subseteq \phi^{-1}(\mathfrak{q})$인 것으로부터 $\phi(\mathfrak{a})\subseteq \mathfrak{q}$이므로 $\mathfrak{q}\in V(\phi(\mathfrak{a}))$이 성립한다.
+우선 $\mathfrak{q}\in\Spec B$가 좌변에 속한다 하자. 즉 $f(\mathfrak{q})=\phi^{-1}(\mathfrak{q})\in Z(\mathfrak{a})$가 성립한다. 그럼 $\mathfrak{a}\subseteq \phi^{-1}(\mathfrak{q})$인 것으로부터 $\phi(\mathfrak{a})\subseteq \mathfrak{q}$이므로 $\mathfrak{q}\in Z(\phi(\mathfrak{a}))$이 성립한다.
 
 거꾸로 $\mathfrak{q}\in\Spec B$가 우변에 속한다 하자. 그럼 $\phi(\mathfrak{a})\subseteq \mathfrak{q}$인 것으로부터, 다음의 포함관계
 
 $$\mathfrak{a}\subseteq \phi^{-1}(\phi(\mathfrak{a}))\subseteq\phi^{-1}(\mathfrak{q})=f(\mathfrak{q})$$
 
-를 얻고 이것이 곧 $f(\mathfrak{q})\in V(\mathfrak{a})$, 즉 $\mathfrak{q}\in f^{-1}(V(\mathfrak{a}))$임을 증명한다. 
+를 얻고 이것이 곧 $f(\mathfrak{q})\in Z(\mathfrak{a})$, 즉 $\mathfrak{q}\in f^{-1}(Z(\mathfrak{a}))$임을 증명한다. 
 
 </details>
 
@@ -119,7 +119,7 @@ $\Spec$이 contravariant functor라는 것으로부터, surjective ring homomorp
 
 <ins id="ex6">**예시 6**</ins> $A=\mathbb{Z}$인 경우를 생각하면, $A$의 prime ideal은 소수 $p$에 대해 $(p)=p\mathbb{Z}$, 그리고 zero ideal $(0)$ 뿐이다. 그럼 $(p)$를 포함하는 prime ideal은 오직 $(p)$ 자기자신 뿐이고, 따라서 각각의 $(p)$들은 모두 closed point들이다. 
 
-반면, $(0)$은 $\mathbb{Z}$의 임의의 ideal에 포함되어 있으므로 $V((0))=\Spec \mathbb{Z}\neq \\{(0)\\}$이다. 즉 $(0)$은 closed point가 아니다.
+반면, $(0)$은 $\mathbb{Z}$의 임의의 ideal에 포함되어 있으므로 $Z((0))=\Spec \mathbb{Z}\neq \\{(0)\\}$이다. 즉 $(0)$은 closed point가 아니다.
 
 </div>
 
@@ -151,11 +151,11 @@ $$\Spec\kappa(\mathfrak{p})\rightarrow\Spec A$$
 
 $$(\x-x),\qquad x\in \mathbb{k}$$
 
-그리고 $(0)$ 뿐임을 알 수 있다. [예시 6](#ex6)와 마찬가지로 각각의 $(\x-x)$들은 모두 closed point이지만 $(0)$을 포함하는 닫힌집합 $V((0))$은 전체집합이 된다. 
+그리고 $(0)$ 뿐임을 알 수 있다. [예시 6](#ex6)와 마찬가지로 각각의 $(\x-x)$들은 모두 closed point이지만 $(0)$을 포함하는 닫힌집합 $Z((0))$은 전체집합이 된다. 
 
 </div>
 
-위의 예시에서 알 수 있듯, 임의의 prime ideal $\mathfrak{p}$가 closed point이기 위해서는 $V(\mathfrak{p})=\\{\mathfrak{p}\\}$여야 하고, 이는 곧 $\mathfrak{p}$가 maximal ideal이어야 한다는 뜻이다. 다음 예시를 살펴보자.
+위의 예시에서 알 수 있듯, 임의의 prime ideal $\mathfrak{p}$가 closed point이기 위해서는 $Z(\mathfrak{p})=\\{\mathfrak{p}\\}$여야 하고, 이는 곧 $\mathfrak{p}$가 maximal ideal이어야 한다는 뜻이다. 다음 예시를 살펴보자.
 
 <div class="example" markdown="1">
 
@@ -177,7 +177,7 @@ $$f(x_1,\ldots, x_n)=0$$
 
 </div>
 
-위의 예시에서 확인할 수 있듯, 다항식 $f$가 정의하는 닫힌집합 $V(f)$는 $f=0$의 해에 해당하는 점 $(x_1,\ldots, x_n)$를 포함한다. 그런데 만일 $f$가 irreducible이라면, $(f)$ 자체도 $\Spec A$의 원소가 되므로, 이 원소와 maximal ideal $(\x_1-x_1,\ldots, \x_n-x_n)$의 관계를 생각할 수 있다. 이는 다음과 같이 주어진다.
+위의 예시에서 확인할 수 있듯, 다항식 $f$가 정의하는 닫힌집합 $Z(f)$는 $f=0$의 해에 해당하는 점 $(x_1,\ldots, x_n)$를 포함한다. 그런데 만일 $f$가 irreducible이라면, $(f)$ 자체도 $\Spec A$의 원소가 되므로, 이 원소와 maximal ideal $(\x_1-x_1,\ldots, \x_n-x_n)$의 관계를 생각할 수 있다. 이는 다음과 같이 주어진다.
 
 <div class="definition" markdown="1">
 

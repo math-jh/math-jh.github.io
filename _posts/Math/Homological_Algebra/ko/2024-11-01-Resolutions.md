@@ -27,21 +27,21 @@ weight: 4
 
 1. $\mathcal{A}$의 대상 $P$가 *projective object<sub>사영 대상</sub>*라는 것은 다음의 diagram
     
-    ![Projective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-1.png){:width="201.45px" class="invert" .align-center}
+    ![Projective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-1.png){:style="width:9em" class="invert" .align-center}
 
     이 주어질 때마다, 다음 diagram
 
-    ![Projective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-2.png){:width="201.45px" class="invert" .align-center}
+    ![Projective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-2.png){:style="width:9em" class="invert" .align-center}
 
     을 commute하게 하는 $P \rightarrow B$가 적어도 하나 존재하는 것이다.  
     만일 $\mathcal{A}$의 임의의 대상 $A$마다 적당한 projective object $P$가 존재하여 $P \rightarrow A \rightarrow 0$이 exact이도록 할 수 있다면, $\mathcal{A}$가 *enough projective*를 갖는다 말한다. 
 1. $\mathcal{A}$의 대상 $I$가 *injective object<sub>단사 대상</sub>*라는 것은 다음의 diagram
     
-    ![Injective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-3.png){:width="200.7px" class="invert" .align-center}
+    ![Injective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-3.png){:style="width:8.8em" class="invert" .align-center}
 
     이 주어질 때마다, 다음 diagram
 
-    ![Injective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-4.png){:width="200.7px" class="invert" .align-center}
+    ![Injective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-4.png){:style="width:8.8em" class="invert" .align-center}
 
     을 commute하게 하는 $B \rightarrow I$가 적어도 하나 존재하는 것이다.  
     만일 $\mathcal{A}$의 임의의 대상 $A$마다 적당한 injective object $I$가 존재하여 $0 \rightarrow A \rightarrow I$이 exact이도록 할 수 있다면, $\mathcal{A}$가 *enough injective*를 갖는다 말한다. 
@@ -79,11 +79,11 @@ $\mathcal{A}$의 projective object는 $\mathcal{A}^\op$의 injective object이�
 
 우선 $\mathcal{A}$가 enough projective를 갖는 것으로부터 적당한 surjection $\epsilon_0:P_0 \rightarrow M$을 잡을 수 있다. $M_0=\ker \epsilon_0$이라 하자. 그럼 $\mathcal{A}$는 enough projective를 가지므로, 적당한 surjection $\epsilon_1:P_1 \rightarrow M_0$을 잡을 수 있다. 이제 $\epsilon_1: P_1 \rightarrow M_0$과 inclusion $\iota_0: M_0 \rightarrow P_0$을 합성한 $d_1=\iota_0\circ\epsilon_1$까지를 diagram으로 그리면 다음과 같다. 
 
-![splicing-1](/assets/images/Math/Homological_Algebra/Resolutions-5.png){:width="405.6px" class="invert" .align-center}
+![splicing-1](/assets/images/Math/Homological_Algebra/Resolutions-5.png){:style="width:18em" class="invert" .align-center}
 
 이러한 방식으로, $\epsilon_n:P_n \rightarrow M_{n-1}$이 주어질 때마다 $M_n=\ker \epsilon_n$으로 잡아 다음과 같은 commutative diagram
 
-![splicing-2](/assets/images/Math/Homological_Algebra/Resolutions-6.png){:width="791.1px" class="invert" .align-center}
+![splicing-2](/assets/images/Math/Homological_Algebra/Resolutions-6.png){:style="width:36em" class="invert" .align-center}
 
 을 얻는다. 그럼 가운데에서 얻어지는 
 
@@ -137,12 +137,12 @@ $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 
 <ins id="thm6">**정리 6**</ins> Projective resolution $P_\bullet \rightarrow M$과 임의의 $u:M \rightarrow N$이 주어졌다 하자. 그럼 임의의 left resolution $Q_\bullet \rightarrow N$가 주어질 때마다 다음의 diagram
 
-![comparison_proj](/assets/images/Math/Homological_Algebra/Resolutions-7.png){:width="406.5px" class="invert" .align-center}
+![comparison_proj](/assets/images/Math/Homological_Algebra/Resolutions-7.png){:style="width:18.4em" class="invert" .align-center}
 
 을 commute하게 하는 chain map $f:P_\bullet \rightarrow Q_\bullet$이 up to homotopy로 유일하게 존재한다.  
 비슷하게, injective resolution $N \rightarrow I^\bullet$과 임의의 $u: M \rightarrow N$이 주어졌다 하자. 그럼 임의의 right resolution $M \rightarrow J^\bullet$가 주어질 때마다 다음의 diagram
 
-![comparison_inj](/assets/images/Math/Homological_Algebra/Resolutions-8.png){:width="400.65px" class="invert" .align-center}
+![comparison_inj](/assets/images/Math/Homological_Algebra/Resolutions-8.png){:style="width:18em" class="invert" .align-center}
 
 을 commute하게 하는 chain map $f:J^\bullet \rightarrow I^\bullet$이 존재한다. 
 
@@ -174,15 +174,15 @@ $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
 우선 주어진 상황을 diagram으로 그려보면 다음과 같다.
 
-![horseshoe-initial](/assets/images/Math/Homological_Algebra/Resolutions-9.png){:width="412.65px" class="invert" .align-center}
+![horseshoe-initial](/assets/images/Math/Homological_Algebra/Resolutions-9.png){:style="width:18.4em" class="invert" .align-center}
 
 이제 $P_0''$이 projective라는 조건으로부터 $P_0'' \rightarrow A$을 정의할 수 있다. 한편 $P_0' \rightarrow A$는 $i_A$와 $\epsilon'$의 합성으로 이미 주어지므로, 이들의 direct sum을 생각하면 $\epsilon:P_0 \rightarrow A$를 얻는다. 이제 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)으로부터 다음의 diagram
 
-![horseshoe-induction](/assets/images/Math/Homological_Algebra/Resolutions-10.png){:width="422.55px" class="invert" .align-center}
+![horseshoe-induction](/assets/images/Math/Homological_Algebra/Resolutions-10.png){:style="width:19.8em" class="invert" .align-center}
 
 을 얻고, 특히 다음의 diagram
 
-![horseshoe-finish](/assets/images/Math/Homological_Algebra/Resolutions-11.png){:width="437.25px" class="invert" .align-center}
+![horseshoe-finish](/assets/images/Math/Homological_Algebra/Resolutions-11.png){:style="width:19em" class="invert" .align-center}
 
 을 얻게 된다. 이 과정을 반복하여 $P_\bullet$을 얻는다.
 

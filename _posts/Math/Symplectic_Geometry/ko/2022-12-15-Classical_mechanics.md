@@ -27,25 +27,25 @@ weight: 1
 
 이를 살펴보기 위해 하나의 축은 물체의 위치를, 다른 축은 물체의 운동량을 나타내는 *phase space<sub>위상공간</sub>*를 생각하자.  예를 들어, 1차원 공간에 해당하는 phase space는 위치 축과 운동량 축 하나씩으로 이루어진 2차원 공간이 될 것이고, 일반적으로 $n$차원 공간의 phase space는 $n$차원의 위치좌표와 $n$차원의 운동량좌표로 이루어진 $2n$차원 공간이 될 것이다.
 
-![phase_space](/assets/images/Math/Symplectic_Geometry/Classical_mechanics-1.png){:width="268.8px" class="invert" .align-center}
+![phase_space](/assets/images/Math/Symplectic_Geometry/Classical_mechanics-1.png){:style="width:268.8px" class="invert" .align-center}
 
 이러한 상황에서, 운동에너지 $K=\frac{1}{2}mv^2$ 혹은 위치에너지 $P=mgh$ 등은 상수인 $m$, $g$를 제외하면 위치좌표와 속도좌표를 통해 기술할 수 있는 물리량이 된다. 즉, 이들 에너지들은 phase space에서 $\mathbb{R}$로의 함수이다. 그럼 에너지 보존법칙은 물체의 운동을 phase space에 기술하였을 때, 그 궤적은 에너지 함수의 등위면에 완전하게 포함되어야 한다는 것을 의미한다. 
 
 가령 어떠한 힘도 작용하지 않는 1차원 상에서의 물체의 운동을 생각하자. 즉, 이 물체가 가지는 에너지는 오직 운동에너지 뿐이므로, 우리는 에너지 함수 $E:\mathbb{R}^2\rightarrow\mathbb{R}$을 $E(x,v)=v^2$이라 생각할 수 있다. 그럼 $E$의 등위면은 위치축과 평행하게 그려지는 선분들이다.
 
-![kinetic_energy](/assets/images/Math/Symplectic_Geometry/Classical_mechanics-2.png){:width="268.8px" class="invert" .align-center}
+![kinetic_energy](/assets/images/Math/Symplectic_Geometry/Classical_mechanics-2.png){:style="width:268.8px" class="invert" .align-center}
 
 에너지 보존법칙에 의하면, 시작점이 phase space 상의 한 점인 물체는 시간이 얼마나 흐르든 이 등위면을 벗어날 수 없다. 이를 물리적으로 해석하자면, 외부의 힘이 작용하지 않을 때 물체의 가속도는 0인 것으로 해석할 수 있다.
 
 고등학교 때 배우는 역학적 에너지 보존법칙은 일반적으로 운동에너지와 위치에너지의 합이 변하지 않는다는 것을 의미한다. 위와 비슷하게 그림을 그려보면 에너지 함수의 등위면은 대략적으로 다음과 같다.
 
-![mechanical_energy](/assets/images/Math/Symplectic_Geometry/Classical_mechanics-3.png){:width="240.3px" class="invert" .align-center}
+![mechanical_energy](/assets/images/Math/Symplectic_Geometry/Classical_mechanics-3.png){:style="width:240.3px" class="invert" .align-center}
 
 마찬가지로 에너지 보존법칙에 의하면 물체의 운동은 항상 이 에너지의 등위면 위에 있어야 한다.
 
 마지막으로 용수철에 달린 물체의 운동을 생각하자. Hooke's law에 따르면 용수철이 물체에 부여하는 위치에너지는 $\frac{1}{2}kx^2$으로 주어진다. 물체의 운동에너지는 $\frac{1}{2}mv^2$이므로, 에너지 함수 $E$를 $E(x,v)=\frac{1}{2}kx^2+\frac{1}{2}mv^2$으로 정의하면 된다. 이를 phase space 상에 그리면 다음과 같이 타원 형태가 나오게 된다.
 
-![harmonic_oscillator](/assets/images/Math/Symplectic_Geometry/Classical_mechanics-4.png){:width="391.35px" class="invert" .align-center}
+![harmonic_oscillator](/assets/images/Math/Symplectic_Geometry/Classical_mechanics-4.png){:style="width:391.35px" class="invert" .align-center}
 
 이는 물체의 운동이 주기운동이 될 것임을 암시한다.
 

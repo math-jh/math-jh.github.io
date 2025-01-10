@@ -23,7 +23,7 @@ $${<}=\{(0,1),(0,2),\ldots, (1,2),(1,3),\ldots, \}$$
 
 을 의미한다. 
 
-![elements](/assets/images/Math/Set_Theory/Functions-1.png){:width="297.45px" class="invert" .align-center}
+![elements](/assets/images/Math/Set_Theory/Functions-1.png){:style="width:14em" class="invert" .align-center}
 
 이제 [§이항관계, ⁋정의 7](/ko/math/set_theory/binary_relation#def7)의 표기를 따르면 ${<}(1)$은 $(1,n)\in\mathbb{N}$이도록 하는 모든 $n\in\mathbb{N}$들의 모임이고 따라서
 
@@ -71,17 +71,17 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 
 한번에 많은 수의 함수들을 다룰 때에는 다음과 같은 *diagram*들을 사용하는 것이 편하다.
 
-![commutative_diagram](/assets/images/Math/Set_Theory/Functions-2.png){:width="294.45px"  class="invert" .align-center}
+![commutative_diagram](/assets/images/Math/Set_Theory/Functions-2.png){:style="width:14em"  class="invert" .align-center}
 
 여기서 $A\overset{f}{\longrightarrow}B$는 $f:A\rightarrow B$의 간편한 표기이다.  
 
 위와 같은 상황에서 만일 임의의 $x\in B$에 대하여 $(i\circ g)(x)=(j\circ h)(x)$가 성립한다면, 다음의 사각형
 
-![commuting_square](/assets/images/Math/Set_Theory/Functions-3.png){:width="209.1px" class="invert" .align-center}
+![commuting_square](/assets/images/Math/Set_Theory/Functions-3.png){:style="width:10em" class="invert" .align-center}
 
 이 *commute<sub>가환</sub>*한다고 말한다. 이와 유사하게 다음의 diagram
 
-![commuting_triangle](/assets/images/Math/Set_Theory/Functions-4.png){:width="122.4px"  class="invert" .align-center}
+![commuting_triangle](/assets/images/Math/Set_Theory/Functions-4.png){:style="width:6em"  class="invert" .align-center}
 
 이 *commutative diagram<sub>가환그림</sub>*이라는 것은 $h(x)=(f\circ g)(x)$가 모든 $x$에 대해 성립함을 의미한다. 이 상황을 간략하게 $h=f\circ g$라고 표현하기도 하는데, 이 표기는 $H=F\circ G$가 성립한다는 것 뿐만 아니라 양변의 source와 target 또한 모두 일치한다는 것을 내포한다.
 
@@ -91,7 +91,7 @@ $${\id_B}\circ h=f\circ g,\qquad h\circ{\id_C}=f\circ{\id_A}\circ g,\quad\cdots$
 
 를 모두 포함하는 것이다. 그러나 [§이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9)에서 살펴본 항등함수의 성질에 의해 위의 식들은 모두 $h=f\circ g$와 다를 것이 없다. 반면
 
-![commuting_triangle_2](/assets/images/Math/Set_Theory/Functions-5.png){:width="122.4px" class="invert" .align-center}
+![commuting_triangle_2](/assets/images/Math/Set_Theory/Functions-5.png){:style="width:6em" class="invert" .align-center}
 
 가 commute한다는 것은 다음의 세 조건
 
@@ -99,7 +99,7 @@ $${\id_A}=g\circ h\circ f,\quad {\id_B}=f\circ g\circ h,\quad {\id_C}=h\circ f\c
 
 이 모두 성립하는 것이다. 특별히 다음의 diagram
 
-![inverses](/assets/images/Math/Set_Theory/Functions-6.png){:width="120.6px" class="invert" .align-center}
+![inverses](/assets/images/Math/Set_Theory/Functions-6.png){:style="width:6em" class="invert" .align-center}
 
 이 commute한다는 것은 $g\circ f=\id_A$이고 $f\circ g=\id_B$이라는 것이다.
 

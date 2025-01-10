@@ -67,7 +67,7 @@ $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\
 
 <ins id="cor3">**따름정리 3**</ins> $(G_i)$, $(H_i)$가 동일한 집합 $I$를 index set으로 갖는 group들의 family이고, 각각의 $i$마다 group homomorphism $f_i:G_i\rightarrow H_i$가 주어졌다 하자. 그럼 다음의 diagram
 
-![Product_of_map](/assets/images/Math/Algebraic_Structures/Direct_products-1.png){:width="263.1px" class="invert" .align-center}
+![Product_of_map](/assets/images/Math/Algebraic_Structures/Direct_products-1.png){:style="width:12em" class="invert" .align-center}
 
 을 commute하도록 하는 유일한 group homomorphism $f:\prod G_i\rightarrow\prod H_i$이 존재한다. 이 때 $\ker f=\prod\ker f_i$이고, $\im f=\prod\im f_i$이다.
 
@@ -99,7 +99,7 @@ $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 
 Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 3](#cor3)를 적용하면 된다.
 
-![product_of_normal_subgroups](/assets/images/Math/Algebraic_Structures/Direct_products-2.png){:width="374.7px" class="invert" .align-center}
+![product_of_normal_subgroups](/assets/images/Math/Algebraic_Structures/Direct_products-2.png){:style="width:16.4em" class="invert" .align-center}
 
 $p_i\circ\pr_i$들 각각은 전사인 homomorphism들의 합성이므로 전사이고 따라서 앞선 따름정리에 의해 $\im p$는 $\prod(G_i/H_i)$와 같다. 또, $p_i$들 각각의 kernel은 $H_i$와 같다. 따라서 first isomorphism theorem에 의하여
 

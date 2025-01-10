@@ -216,7 +216,7 @@ $$\left(\prod_{i\in I} \mathscr{F}_i\right)(U)=\prod_{i\in I} \mathscr{F}_i(U)$$
 - 각각의 열린집합 $U\subseteq X$마다, $U\mapsto \ker(\phi(U))$
 - 포함관계에 있는 두 열린집합 $U\subseteq V$마다 다음의 diagram
   
-  ![presheaf_kernel-1](/assets/images/Math/Topology/Presheaves-1.png){:width="421.05px" class="invert" .align-center}
+  ![presheaf_kernel-1](/assets/images/Math/Topology/Presheaves-1.png){:style="width:18em" class="invert" .align-center}
 
   을 통해 유일하게 결정되는 restriction map $\rho_{VU}:\ker(\phi(V))\rightarrow\ker(\phi(U))$
 
@@ -236,7 +236,7 @@ $$\left(\prod_{i\in I} \mathscr{F}_i\right)(U)=\prod_{i\in I} \mathscr{F}_i(U)$$
 
 다음의 diagram
 
-![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.png){:width="438.75px" class="invert" .align-center}
+![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.png){:style="width:18em" class="invert" .align-center}
 
 와 kernel의 universal property에 의해 자명하다. 
 

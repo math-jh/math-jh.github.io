@@ -103,17 +103,17 @@ $$\pr_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{\pr_k}{\longri
 
 으로 정의하자. 그럼 곱집합 $\prod_{i\in I}A_i$의 universal property로부터, 다음의 diagram을 commute하도록 하는 $\phi:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\rightarrow\prod_{i\in I}A_i$가 존재함을 안다.
 
-![partial_product_pf_1](/assets/images/Math/Set_Theory/Property_of_products-1.png){:width="378.6px" class="invert" .align-center}
+![partial_product_pf_1](/assets/images/Math/Set_Theory/Property_of_products-1.png){:style="width:18em" class="invert" .align-center}
 
 비슷하게 index set $K$에 대한 곱집합 $\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$의 universal property로부터, 다음의 diagram을 commute하게 하는 $\psi:\prod_{i\in I}A_i\rightarrow\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$가 존재함을 안다.
 
-![partial_product_pf_2](/assets/images/Math/Set_Theory/Property_of_products-2.png){:width="502.8px" class="invert" .align-center}
+![partial_product_pf_2](/assets/images/Math/Set_Theory/Property_of_products-2.png){:style="width:22em" class="invert" .align-center}
 
 그럼 $\phi\circ\psi$와 $\psi\circ\phi$가 각각 항등함수이고, 따라서 이들이 원하는 전단사함수가 된다. 
 
 예를 들어 $\phi\circ\psi$가 $\prod_{i\in I}A_i$에서 자기자신으로의 항등함수임을 보이자. 이를 위해서는 모든 $i\in I$에 대하여 다음의 diagram이 commute함을 보이면 충분하다.
 
-![partial_product_pf_3](/assets/images/Math/Set_Theory/Property_of_products-3.png){:width="184.35px" class="invert" .align-center}
+![partial_product_pf_3](/assets/images/Math/Set_Theory/Property_of_products-3.png){:style="width:8em" class="invert" .align-center}
 
 곱집합의 universal property는 위의 diagram을 commute하게 하는 <em_ko>유일한</em_ko> 함수 $\prod_{i\in I}A_i\rightarrow \prod_{i\in I}A_i$가 존재한다는 것을 의미하는데, 당연하게 $\prod_{i\in I}A_i$에서 자기자신으로의 항등함수 또한 위의 diagram을 commute하게 하고 따라서 유일성에 의해 이 함수는 $\phi\circ\psi$와 같아야 한다. 
 
@@ -123,7 +123,7 @@ $${\pr_i}\circ(\phi\circ\psi)=({\pr_i}\circ\phi)\circ\psi={\pr_{ik}}\circ\psi={\
 
 에서 원하는 결론을 얻는다. (마지막 등식은 $\pr_j$를 $\\{j\\}\subseteq I$로의 성분함수로 보았다.) 이 식은 복잡해보이지만, 그냥 다음의 diagram이 commute한다는 것을 식으로 쓴 것에 불과하다. 
 
-![partial_product_pf_4](/assets/images/Math/Set_Theory/Property_of_products-4.png){:width="349.05px" class="invert" .align-center}
+![partial_product_pf_4](/assets/images/Math/Set_Theory/Property_of_products-4.png){:style="width:16em" class="invert" .align-center}
 
 </details> 
 

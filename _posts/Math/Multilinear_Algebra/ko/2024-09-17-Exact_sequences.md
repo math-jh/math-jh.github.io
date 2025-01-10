@@ -177,7 +177,7 @@ $$i_1-i_2:N_1\oplus N_2 \rightarrow N_1+N_2;\qquad (x_1,x_2)\mapsto x_1-x_2$$
 
 <ins id="lem9">**보조정리 9 (Four lemma)**</ins> 각 행들이 exact인 commutative diagram
 
-![Four_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-1.png){:width="300.15px" class="invert" .align-center}
+![Four_lemma](/assets/images/Math/Homological_Algebra/Diagram_chasing-1.png){:style="width:14em" class="invert" .align-center}
 
 이 주어졌다 하고, $\alpha$가 전사이고, $\delta$가 단사라 가정하자. 그럼
 
@@ -204,7 +204,7 @@ $$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N
 2. $v$의 linear section $s:N \rightarrow L$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
 3. 다음의 diagram
     
-    ![splitting_sequence](/assets/images/Math/Multilinear_Algebra/Exact_sequences-1.png){:width="427.5px" class="invert" .align-center}
+    ![splitting_sequence](/assets/images/Math/Multilinear_Algebra/Exact_sequences-1.png){:style="width:20em" class="invert" .align-center}
     
     을 commute하도록 하는 isomorphism $\alpha: L \rightarrow M\oplus N$이 존재한다. 
 

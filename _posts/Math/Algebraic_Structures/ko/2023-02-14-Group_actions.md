@@ -25,13 +25,13 @@ weight: 11
 
 <ins id="def1">**정의 1**</ins> Monoidal category $(\mathcal{A},\otimes, I)$와 $\mathcal{A}$의 monoid object $(A,\cdot, 1)$를 고정하자. 그럼 morphism $\rho: A\otimes E\rightarrow E$이 대상 $E\in\obj(\mathcal{A})$ 위에 정의된 $A$의 *left action<sub>왼쪽 작용</sub>*이라는 것은 다음 두 diagram이 모두 commute하는 것이다.
 
-![left_module](/assets/images/Math/Algebraic_Structures/Modules-1.png){:width="635.85px" class="invert" .align-center}
+![left_module](/assets/images/Math/Algebraic_Structures/Modules-1.png){:style="width:30em" class="invert" .align-center}
 
 여기서 $I\otimes E \rightarrow E$는 left unitor이다. 이 상황을 $A\circlearrowright E$로 적는다.
 
 비슷하게, morphism $\rho: E\otimes A\rightarrow E$이 대상 $E\in\obj(\mathcal{A})$ 위에 정의된 $A$의 *right action<sub>오른쪽 작용</sub>*이라는 것은 다음 두 diagram이 모두 commute하는 것이다.
 
-![right_module](/assets/images/Math/Algebraic_Structures/Modules-2.png){:width="635.85px" class="invert" .align-center}
+![right_module](/assets/images/Math/Algebraic_Structures/Modules-2.png){:style="width:30em" class="invert" .align-center}
 
 마찬가지로 $E\otimes I \rightarrow E$는 right unitor이다. 이 상황을 $E \circlearrowleft A$로 적는다.
 
@@ -268,7 +268,7 @@ $$G/\ker\rho\cong\Inn(G)$$
 
 $$g\in\ker\rho\iff\rho_g=\id_G\iff gxg^{-1}=x\quad\text{for all $x\in G$}$$
 
-이므로, $G$가 inner automorphism으로 자기 자신 위에 작용하는 상황에서의 fixer $\Fix(G)$가 정확히 $C(G)$이다. 더 일반적으로, 임의의 부분집합 $A\subseteq G$에 대하여 $A$의 fixer $\Fix(A)$를 $A$의 *centralizer* $C_G(A)$를 $\Fix(A)$로 정의한다. 이와 비슷하게 $A$의 *normalizer* $N_G(A)$를 $\Stab(A)$로 정의한다. 
+이므로, $G$가 inner automorphism으로 자기 자신 위에 작용하는 상황에서의 fixer $\Fix(G)$가 정확히 $C(G)$이다. 더 일반적으로, 임의의 부분집합 $A\subseteq G$에 대하여 $A$의 fixer $\Fix(A)$를 $A$의 *centralizer* $C_G(A)$로 정의한다. 이와 비슷하게 $A$의 *normalizer* $N_G(A)$를 $\Stab(A)$로 정의한다. 
 
 ---
 

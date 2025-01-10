@@ -101,7 +101,7 @@ $$e_se_t=e_{st}$$
 
 Extension of scalar의 경우, ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하고, $M$이 $A$-module이라 하자. 그럼 extension of scalar $\phi_!: \rMod{A} \rightarrow\rMod{B}$와 두 functor $T_A: \rMod{A} \rightarrow \Alg{A}$, $T_B:\rMod{B} \rightarrow \Alg{B}$가 존재하며, 자명한 방식으로 $\phi_!:\Alg{A} \rightarrow\Alg{B}$ 또한 정의된다. 이를 통해 다음의 (graded) $B$-linear map
 
-![extension_of_scalars](/assets/images/Math/Multilinear_Algebra/Tensor_algebras-1.png){:width="366px" class="invert" .align-center}
+![extension_of_scalars](/assets/images/Math/Multilinear_Algebra/Tensor_algebras-1.png){:style="width:16.8em" class="invert" .align-center}
 
 을 얻는다. 
 
@@ -123,7 +123,7 @@ $$\iota_{\phi_!M}: \phi_!M \rightarrow T_B(\phi_!M)$$
 
 을 생각하면 이는 $A$-module $M$에서 $A$-module $\phi^\ast T_B(\phi_!M)$ (더 정확히는 $U\phi^\ast T_B(\phi^\ast\phi_!M)$)으로의 $A$-linear map이다. 따라서 [명제 2](#prop2)에 의하여 다음의 diagram
 
-![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_algebras-2.png){:width="218.1px" class="invert" .align-center}
+![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_algebras-2.png){:style="width:11em" class="invert" .align-center}
 
 을 commute하도록 하는 $A$-algebra homomorphism $T\_A(M)\rightarrow \phi^\ast T\_{B}(\phi_!M)$이 유일하게 존재한다. 이제 다음의 adjoint
 
