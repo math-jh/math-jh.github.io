@@ -72,7 +72,7 @@ $$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 
 </div>
 
-위의 정의에서 $\gr_\mathcal{J}M$은 $\gr_\mathfrak{a}A$-module 구조를 가지며, 이는 임의의 $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$과 $x\in M_l/M_{l+1}$에 대하여 이들의 representative $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$을 택한 후 $\tilde{a}\tilde{x}$를 $M_{k+l}/M_{k+l+1}$로 제한시킨 것이며, [보조정리 2](#lem2)와 유사한 계산을 통해 이것이 잘 정의된다는 것을 확인할 수 있다. 
+위의 정의에서 $\gr_\mathcal{J}M$은 $\gr_\mathfrak{a}A$-module 구조를 가지며, 이는 임의의 $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$과 $x\in M_l/M_{l+1}$에 대하여 이들의 representative $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$을 택한 후 $\tilde{a}\tilde{x}$를 $M_{k+l}/M_{k+l+1}$로 제한시킨 것이며, [보조정리 2](#lem2)와 유사한 계산을 통해 이것이 잘 정의된다는 것을 확인할 수 있다. 특별히 $M=A$이고 $M_i$들이 $A$의 ideal들인 경우, [정의 1](#def1)과 마찬가지로 $\gr_\mathcal{J}A$ 또한 ring의 구조를 가지며, 이 또한 filtration $\mathcal{J}$에 대한 associated graded ring이라 부른다. 
 
 이제 다음이 성립한다. 
 
@@ -176,6 +176,48 @@ $$\mathfrak{a}\left(\bigcap \mathfrak{a}^iM\right)=\left(\bigcap \mathfrak{a}^iM
 을 얻으므로, [§정수적 확장, ⁋보조정리 6](/ko/math/commutative_algebra/integral_extension#lem6)을 적용하면 첫째 결과를 얻는다. 
 
 둘째 결과를 보이기 위해 $M=A$로 두자. 첫째 결과에서 얻어진 $a$에 대하여, $1-a$가 zerodivisor가 아님을 보이면 충분하다. 우선 $\mathfrak{a}$가 $A$의 proper ideal이므로 $1-a\neq 0$이고, 이로부터 $A$가 domain인 경우는 더 이상 증명할 것이 없다. 만일 $A$가 local ring이라면 $\mathfrak{a}$는 $A$의 (유일한) maximal ideal $\mathfrak{m}$에 속할 것이므로 $a\in \mathfrak{m}$이고, 이로부터 $1-a$가 unit이어야 한다. 
+
+</details>
+
+마지막으로 다음을 정의한다.
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> $\mathfrak{a}$-filtration
+
+$$\mathcal{J}:\qquad M=M_0\supseteq M_1\supseteq\cdots$$
+
+이 주어진 $A$-module $M$과 associated graded module $\gr_\mathcal{J}M$이 주어졌다 하자. 그럼 임의의 $x\in M$에 대하여, $x$의 *initial form* $\initial(x)$를 다음의 식
+
+$$\initial(x)=x+M_{k+1}\quad\text{in $M_k/M_{k+1}$,}\qquad\text{where $k$ is the greatest integer satisfying $x\in M_k$}$$
+
+으로 정의한다. 
+
+</div>
+
+위와 같은 상황에서, 임의의 $A$-submodule $M'\subseteq M$이 주어졌다 하자. 그럼 $\gr_\mathcal{J}M$를 $\gr_\mathfrak{a}A$-module으로 보고, $\initial(M')$을 $x\in M'$들에 대해 $\initial(x)$으로 생성된 $\gr_\mathcal{J}M$의 $\gr_\mathfrak{a}A$-submodule로 정의할 수 있다. 
+
+<div class="example" markdown="1">
+
+<ins id="ex10">**예시 10**</ins> $A=\mathbb{k}[\x,\y]$라 하고, $\mathfrak{a}=(\x,\y)$라 하자. 그럼 $\gr_\mathfrak{a}A$는 다항식의 차수를 통해 grading이 결정된 graded ring이다. 이제 $M=A$로 두고, $M$의 $A$-submodule (즉 $A$의 ideal) $\mathfrak{b}=(\x^2, \y^2)$를 생각하자. 그럼 $\mathfrak{b}$의 임의의 원소는
+
+$$f(\x,\y)\x^2+g(\x,\y)\y^2$$
+
+의 꼴이므로, $\initial(\mathfrak{b})$는 $\x^2, \y^2$으로 생성되는 $\gr_\mathcal{a}A$의 homogeneous ideal이다. 
+
+</div>
+
+그러나 일반적으로 $\initial(M')$은 $M'$의 generator들의 initial form들로 생성되지는 않는다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="cor11">**따름정리 11**</ins> Noetherian local ring $A$와, $A$의 proper ideal $\mathfrak{a}$에 대하여, 만일 $\gr_\mathfrak{a}A$가 domain이라면 $A$ 또한 그러하다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$A$에서 $ab=0$임을 가정하고, $a,b=0$임을 보이면 충분하다. 이제 $\gr_\mathfrak{a}A$에서 $\initial(a)\initial(b)=0$이 성립해야 하고, 따라서 $\initial(x)$ 혹은 $\initial(y)$가 $0$이어야 한다. 이제 위의 따름정리로부터 $\bigcap \mathfrak{a}^n=0$이므로, $a=0$이거나 $b=0$이어야 한다. 
 
 </details>
 

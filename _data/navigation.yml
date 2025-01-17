@@ -190,7 +190,7 @@ commutative_algebra-ko:
         url: ko/math/commutative_algebra/basic_notions
       - title: "국소화"
         url: ko/math/commutative_algebra/localization
-      - title: "국소화의 성질"
+      - title: "국소화의 성질들"
         url: ko/math/commutative_algebra/properties_of_localization
       - title: "등급환의 국소화"
         url: ko/math/commutative_algebra/localization_of_graded_rings
@@ -208,6 +208,16 @@ commutative_algebra-ko:
         url: ko/math/commutative_algebra/integral_extension
       - title: "부풀림 대수"
         url: ko/math/commutative_algebra/blowup_algebra
+      - title: "평탄성"
+        url: ko/math/commutative_algebra/flatness
+      - title: "평탄성과 국소화"
+        url: ko/math/commutative_algebra/local_criterion_for_flatness
+      - title: "완비화"
+        url: ko/math/commutative_algebra/completion
+      - title: "완비화의 성질들"
+        url: ko/math/commutative_algebra/properties_of_completion
+      - title: "차원"
+        url: ko/math/commutative_algebra/Krull_dimension
   - title: 
     children:
       - title: "블로그 소개"
