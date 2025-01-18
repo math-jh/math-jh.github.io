@@ -71,11 +71,26 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
 </div>
 
-그럼 $E$가 $A$에 대하여 integral인 것과, $E$의 각각의 원소들이 integral인 것이 서로 관계가 있기를 기대하는 것이 자연스럽다. 이를 위해 우선 다음 보조정리를 보인다.
+그럼 우선 임의의 finite $A$-algebra $A \rightarrow E$와 임의의 $x\in E$에 대하여, $x$에 의한 multiplication map은 $E$의 $A$-algebra로서의 endomorphism이고 따라서 [정리 1](#thm1)을 적용하면 $x$가 $A$에 대해 integral인 것을 안다. 즉, finite $A$-algebra는 항상 integral이다. 이를 더 일반화하면 다음 보조정리를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem4">**보조정리 4**</ins> $A$-algebra $E$와 $E$의 원소 $x$가 주어졌다 하자. 그럼 $x$가 $A$에 대해 integral인 것은, 적당한 $E$-module $N$과 $N$의 $R$-submodule $M$이 존재하여, $M$은 $E$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $xM\subseteq M$이 성립하는 것과 동치이다. 
+<ins id="lem4">**보조정리 4**</ins> $A$-algebra $E$가 finite인 것은 $E$가 $A$-algebra로서 유한히 많은 integral element들로 생성되는 것과 동치이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+한쪽 방향은 위에서 보였다. 이제 역으로 $E$가 유한히 많은 integral element들에 의해 생성된다면, $E$가 $A$-module로서도 유한하게 생성된다는 것을 보여야 한다. 이를 위해 $E$의 ($A$-algebra로서의) generator들의 개수에 대한 induction을 사용하자. 만일 $E$가 $A$-algebra로서 $n$개의 integral element $x_1,\ldots, x_n$들로 생성된다 하면, 이들 중 $n-1$개의 원소들 $x_1,\ldots, x_{n-1}$로 생성되는 $E$의 $A$-subalgebra $E'$를 생각할 수 있고 이는 귀납적 가정에 의하여 $A$-module로서 유한하게 생성된다. $E'$의 ($A$-module로서의) generator들을 $\\{s_i\\}$라 하자. 그럼 $x_n$은 $A$에 대해 integral이므로 $E'$에 대해서도 integral이고, 따라서 $E'$-module로서 $E$는 유한하게 생성되어야 한다. 이 원소들을 $\\{t_j\\}$라 하면, $\\{s_i t_j\\}$가 $E$를 $A$-module로서 유한하게 생성하는 것을 알 수 있다. 
+
+</details>
+
+
+한편 $E$가 $A$에 대하여 integral인 것과, $E$의 각각의 원소들이 integral인 것이 서로 관계가 있기를 기대하는 것이 자연스럽다. 이를 위해 우선 다음 보조정리를 보인다.
+
+<div class="proposition" markdown="1">
+
+<ins id="lem5">**보조정리 5**</ins> $A$-algebra $E$와 $E$의 원소 $x$가 주어졌다 하자. 그럼 $x$가 $A$에 대해 integral인 것은, 적당한 $E$-module $N$과 $N$의 $R$-submodule $M$이 존재하여, $M$은 $E$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $xM\subseteq M$이 성립하는 것과 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -89,7 +104,7 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm5">**정리 5**</ins> $A$-algebra $E$에 대하여, $E$ 안에서 $A$의 integral extension은 다시 $A$-algebra이다. 
+<ins id="thm6">**정리 6**</ins> $A$-algebra $E$에 대하여, $E$ 안에서 $A$의 integral extension은 다시 $A$-algebra이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -99,7 +114,7 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
 $$(xx')MM'=(xM)(x'M)\subseteq MM',\qquad (x+x')MM'\subseteq xMM'+M(x'M')\subseteq MM'$$
 
-이므로 [보조정리 4](#lem4)를 이용하면 원하는 결과를 얻는다. 
+이므로 [보조정리 5](#lem5)를 이용하면 원하는 결과를 얻는다. 
 
 </details>
 
@@ -120,7 +135,7 @@ $$J(R)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem6">**보조정리 6**</ins> Finitely generated $A$-module $M$과 $A$의 ideal $\mathfrak{a}$가 $\mathfrak{a}M=M$을 만족한다 하자. 그럼 적당한 $a\in \mathfrak{a}$가 존재하여 $(1-a)M=0$이다.
+<ins id="lem7">**보조정리 7**</ins> Finitely generated $A$-module $M$과 $A$의 ideal $\mathfrak{a}$가 $\mathfrak{a}M=M$을 만족한다 하자. 그럼 적당한 $a\in \mathfrak{a}$가 존재하여 $(1-a)M=0$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -142,7 +157,7 @@ $$(1+p_1+\cdots_p_n)M=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem7">**보조정리 7 (Nakayama)**</ins> $A$의 Jacobson radical $J(A)$에 속하는 ideal $\mathfrak{a}$가 주어졌다 하고, $M$이 finitely generated $A$-module이라 하자. 그럼 다음이 성립한다.
+<ins id="lem8">**보조정리 8 (Nakayama)**</ins> $A$의 Jacobson radical $J(A)$에 속하는 ideal $\mathfrak{a}$가 주어졌다 하고, $M$이 finitely generated $A$-module이라 하자. 그럼 다음이 성립한다.
 
 1. 만일 $\mathfrak{a}M=M$이라면 $M=0$이다.
 2. 만일 $x_1,\ldots, x_n$의 $M/\mathfrak{a}M$에서의 image가 $M/\mathfrak{a}M$을 $A$-module로써 생성한다면, $x_1,\ldots, x_n$들은 $M$을 $A$-module로써 생성한다.
@@ -151,7 +166,7 @@ $$(1+p_1+\cdots_p_n)M=0$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1번 겷과의 경우 [보조정리 6](#lem6)으로부터 얻어지는 $a\in \mathfrak{a}$가 가정에 의하여 모든 maximal ideal에 속한다는 사실을 안다. 바꾸어 말하면 $1-a$는 어떠한 maximal ideal에도 속할 수 없으므로 $1-a$는 unit이다. 따라서 원하는 결과를 얻는다.
+1번 겷과의 경우 [보조정리 7](#lem7)으로부터 얻어지는 $a\in \mathfrak{a}$가 가정에 의하여 모든 maximal ideal에 속한다는 사실을 안다. 바꾸어 말하면 $1-a$는 어떠한 maximal ideal에도 속할 수 없으므로 $1-a$는 unit이다. 따라서 원하는 결과를 얻는다.
 
 2번 결과의 경우, $N=M/\sum\_i Ax\_i$라 하자. 그럼 $N/IN=0$임을 보일 수 있고 1번 결과로부터 $N=0$임을 안다.
 
@@ -163,7 +178,7 @@ $$(1+p_1+\cdots_p_n)M=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> Unique factorization domain은 normal domain이다.
+<ins id="prop9">**명제 9**</ins> Unique factorization domain은 normal domain이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -185,7 +200,7 @@ $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> Ring $A\subseteq B$가 주어졌다 하고 monic polynomial $p\in A[\x]$가 주어졌다 하자. 만일 $B[\x]$ 안에서 $p=q_1q_2$이도록 하는 monic polynomial들 $q_1,q_2\in B[\x]$를 찾을 수 있다면 $q_1,q_2$의 계수들은 $A$에 대해 integral이다.
+<ins id="prop10">**명제 10**</ins> Ring $A\subseteq B$가 주어졌다 하고 monic polynomial $p\in A[\x]$가 주어졌다 하자. 만일 $B[\x]$ 안에서 $p=q_1q_2$이도록 하는 monic polynomial들 $q_1,q_2\in B[\x]$를 찾을 수 있다면 $q_1,q_2$의 계수들은 $A$에 대해 integral이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -199,7 +214,7 @@ $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor10">**따름정리 10**</ins> Normal domain $A$에 대하여, 임의의 monic irreducible polynomial은 prime이다. 
+<ins id="cor11">**따름정리 11**</ins> Normal domain $A$에 대하여, 임의의 monic irreducible polynomial은 prime이다. 
 
 </div>
 
@@ -207,7 +222,7 @@ $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Ring $A\subseteq B$와 $A$의 multiplicative subset $S$를 고정하자. 그럼 $A$의 $B$에서의 integral closure $A'$에 대하여, $S^{-1}A'$는 $S^{-1}A$의 $S^{-1}B$ 안에서의 integral closure이다.
+<ins id="prop12">**명제 12**</ins> Ring $A\subseteq B$와 $A$의 multiplicative subset $S$를 고정하자. 그럼 $A$의 $B$에서의 integral closure $A'$에 대하여, $S^{-1}A'$는 $S^{-1}A$의 $S^{-1}B$ 안에서의 integral closure이다.
 
 </div>
 
