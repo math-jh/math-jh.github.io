@@ -32,7 +32,7 @@ weight: 15
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $A$가 noetherian이므로, $A/\mathfrak{a}$ 또한 noetherian이고 $\mathfrak{a}/\mathfrak{a}^2$은 finitely generated $A/\mathfrak{a}$-module이다. 이에 $\gr_\mathfrak{a}A$는 $A/\mathfrak{a}$-algebra로서, $\mathfrak{a}/\mathfrak{a}^2$에 의해 생성되고, 따라서 [%%ref%%](Hilbert_basis_thm)에 의하여 $\gr_\mathfrak{a}A$는 Noetherian이다. 이제 $\gr_{\widehat{\mathfrak{a}}}\widehat{A}=\gr_\mathfrak{a}A$이므로 $\gr_{\widehat{\mathfrak{a}}}\widehat{A}$ 또한 noetherian임을 안다. 한편, 임의의 ideal $\widehat{\mathfrak{a}}\subseteq \widehat{A}$에 대하여, initial ideal $\initial(\widehat{\mathfrak{a}})$은 위의 논증에 의해 유한히 많은 원소들로 생성되므로 [§완비화, ⁋명제 7](/ko/math/commutative_algebra/completion#prop7)에 의해 첫 번째 결과를 얻는다.
+우선 $A$가 noetherian이므로, $A/\mathfrak{a}$ 또한 noetherian이고 $\mathfrak{a}/\mathfrak{a}^2$은 finitely generated $A/\mathfrak{a}$-module이다. 이에 $\gr_\mathfrak{a}A$는 $A/\mathfrak{a}$-algebra로서, $\mathfrak{a}/\mathfrak{a}^2$에 의해 생성되고, 따라서 [##ref##](Hilbert_basis_thm)에 의하여 $\gr_\mathfrak{a}A$는 Noetherian이다. 이제 $\gr_{\widehat{\mathfrak{a}}}\widehat{A}=\gr_\mathfrak{a}A$이므로 $\gr_{\widehat{\mathfrak{a}}}\widehat{A}$ 또한 noetherian임을 안다. 한편, 임의의 ideal $\widehat{\mathfrak{a}}\subseteq \widehat{A}$에 대하여, initial ideal $\initial(\widehat{\mathfrak{a}})$은 위의 논증에 의해 유한히 많은 원소들로 생성되므로 [§완비화, ⁋명제 7](/ko/math/commutative_algebra/completion#prop7)에 의해 첫 번째 결과를 얻는다.
 
 한편 두 번째 결과의 경우 우리는 다시 [§완비화, ⁋명제 7](/ko/math/commutative_algebra/completion#prop7)에 의해 $\widehat{\mathfrak{a}}^i$와 $\mathfrak{a}^i \widehat{A}$가 같다는 것은 곧 이들의 initial ideal이 같다는 것임을 알고, 따라서 원하는 결과를 얻는다.
 
