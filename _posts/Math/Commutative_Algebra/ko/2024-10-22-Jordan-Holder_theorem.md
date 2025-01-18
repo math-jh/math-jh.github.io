@@ -160,6 +160,52 @@ $$\left(\prod_{i\in I} A/\mathfrak{q}_i\right)_\mathfrak{m}=(A/\mathfrak{q}_i)_\
 
 </details>
 
+<div class="proposition" markdown="1">
+
+<ins id="cor6">**따름정리 6**</ins> Noetherian ring $A$와 finiely generated $A$-module $M$에 대하여, 다음이 모두 동치이다. 
+
+1. $M$이 유한한 길이를 갖는다.
+2. 적당한 maximal ideal들의 곱 $\prod_{i=1}^n \mathfrak{m}\_i$가 $M$을 annihilate한다.
+3. $\ann(M)$을 포함하는 prime ideal들이 maximal이다.
+4. $A/\ann(M)$이 Artinian이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 첫째 조건을 가정하면 [정리 3](#thm3)의 두 번째와 세 번째 결과로부터 두 번째 조건이 성립하는 것이 자명하다. 이제 두 번째 조건을 가정하자. 그럼 $\ann(M)$을 포함하는 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}\supseteq\prod \mathfrak{m}\_i$이므로 어떠한 $i$에 대하여 $\mathfrak{p}\supseteq \mathfrak{m}_i$이고, 따라서 $\mathfrak{p}=\mathfrak{m} 
+_i$이다. 세 번째 조건이 네 번째 조건을 함의하는 것은 [정리 4](#thm4)의 첫째 조건과 셋째 조건의 동치이며, 마지막으로 네 번째 조건을 가정하면 $A/\ann(M)$은 [정리 4](#thm4)의 둘째 조건으로 인해 $A/\ann(M)$-module로서 유한한 길이를 가지고, $M$은 finitely generated $A/\ann(M)$-module이므로 원하는 결과를 얻는다. 
+
+</details>
+
+그럼 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="cor7">**따름정리 7**</ins> Noetherian ring $A$와 finitely generated $A$-module $M$, 그리고 $\ann(M)$을 포함하는 prime ideal $\mathfrak{p}$를 고정하자. 그럼 $A\_\mathfrak{p}$-module로서 $M\_\mathfrak{p}$가 유한한 길이를 갖는 것과 $\mathfrak{p}$가 $\ann(M)$을 포함하는 prime들 중 minimal인 것이 동치이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+만일 $\mathfrak{p}$가 $\ann(M)$을 포함하는 minimal prime ideal이라면, $A\_\mathfrak{p}$-module $M\_\mathfrak{p}$는 유한한 길이를 갖는다. 이는 localization $A\_\mathfrak{p}$를 생각하면, $A\_\mathfrak{p}$의 prime ideal들은 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의해 $\mathfrak{p}$에 속하는 prime ideal들인데, 그럼 $\mathfrak{p}$의 minimality로부터 $\ann(M)A\_\mathfrak{p}$를 포함하는 prime ideal은 오직 $\mathfrak{p}A\_\mathfrak{p}$ 뿐이고 이는 local ring $A\_\mathfrak{p}$의 (유일한) maximal ideal이기 때문이다. 
+
+거꾸로 $M\_\mathfrak{p}$이 유한한 길이를 갖는 $A\_\mathfrak{p}$-module이라 하면, [따름정리 6](#cor6)에 의해 $M\_\mathfrak{p}$의 annihilator $\ann(M)A\_\mathfrak{p}$를 포함하는 prime ideal들은 모두 maximal이고, 이들은 다시 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)을 통해 $\ann(M)$을 포함하며 $\mathfrak{p}$에 포함된 prime ideal과 일대일대응이 있으므로 위의 논증을 뒤집으면 된다.
+
+</details>
+
+특별히 $A$의 임의의 ideal $\mathfrak{a}$에 대하여, $A$-module $A/\mathfrak{a}$를 생각하면 $\ann(A/\mathfrak{a})=\mathfrak{a}$가 되며, 이로부터 다음을 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="cor8">**따름정리 8**</ins> Noetherian ring $A$와 임의의 ideal $\mathfrak{a}$, 그리고 $\mathfrak{a}$를 포함하는 prime ideal $\mathfrak{p}$에 대하여, 다음이 모두 동치이다.
+
+1. $\mathfrak{p}$는 $\mathfrak{a}$를 포함하는 prime ideal들 중 minimal이다.
+2. $A\_\mathfrak{p}/\mathfrak{a}A\_\mathfrak{p}$가 artinian이다.
+3. Localization $A\_\mathfrak{p}$ 안에서, 충분히 큰 $n$에 대하여 항상 $(\mathfrak{p}A_\mathfrak{p})^n\subseteq \mathfrak{a}A\_\mathfrak{p}$이 성립한다. 
+
+</div>
+
 ---
 
 **참고문헌**
