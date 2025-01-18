@@ -137,7 +137,7 @@ Affine variety $Y\subseteq \mathbb{A}_\mathbb{k}^n$에 대하여, $Y$ 위에서 
 
 정의에 의해 $Y$가 irreducible이므로 [명제 6](#prop6)에 의하여 $I(Y)$는 prime ideal이고, 따라서 $A(Y)$는 항상 integral domain이다. 뿐만 아니라, $A$가 $\mathbb{k}$-algebra로서 finitely generated이므로 $A(Y)$ 또한 그러하다. 거꾸로 임의의 finitely generated $\mathbb{k}$-algebra는 항성 적당한 affine variety의 coordinate ring으로 나오는 것을 확인할 수 있다.
 
-대수기하학에서 차원을 다룰 때는 Krull dimension을 사용한다. ([\[위상수학\] §차원, ⁋정의 9](/ko/math/topology/dimension#def9)) 한편 우리는 ring의 차원 또한 정의한 적이 있다. ([##ref##]()) 그럼 [명제 6](#prop6)의 결과에 의하여 다음이 자명하다.
+대수기하학에서 차원을 다룰 때는 Krull dimension을 사용한다. ([\[위상수학\] §차원, ⁋정의 9](/ko/math/topology/dimension#def9)) 한편 우리는 ring의 차원 또한 정의한 적이 있다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1)) 그럼 [명제 6](#prop6)의 결과에 의하여 다음이 자명하다.
 
 <div class="proposition" markdown="1">
 
@@ -145,7 +145,7 @@ Affine variety $Y\subseteq \mathbb{A}_\mathbb{k}^n$에 대하여, $Y$ 위에서 
 
 </div>
 
-특히 $\dim A(Y)$는 우리가 대수적으로 알고 있는 대상이므로, 예컨대 [##ref##]()와 같은 결과를 사용할 수 있다. 특히 다음이 성립한다.
+특히 $\dim A(Y)$는 우리가 대수적으로 알고 있는 대상이므로, 우리가 알고 있는 결과를 사용할 수 있다. 특히 다음이 성립한다. ([##ref##](Krull))
 
 <div class="proposition" markdown="1">
 

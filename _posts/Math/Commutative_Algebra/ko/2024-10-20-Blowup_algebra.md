@@ -173,7 +173,7 @@ $$\mathfrak{a}\left(\left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}^p M\ri
 
 $$\mathfrak{a}\left(\bigcap \mathfrak{a}^iM\right)=\left(\bigcap \mathfrak{a}^iM\right)$$
 
-을 얻으므로, [§정수적 확장, ⁋보조정리 6](/ko/math/commutative_algebra/integral_extension#lem6)을 적용하면 첫째 결과를 얻는다. 
+을 얻으므로, [§정수적 확장, ⁋보조정리 7](/ko/math/commutative_algebra/integral_extension#lem7)을 적용하면 첫째 결과를 얻는다. 
 
 둘째 결과를 보이기 위해 $M=A$로 두자. 첫째 결과에서 얻어진 $a$에 대하여, $1-a$가 zerodivisor가 아님을 보이면 충분하다. 우선 $\mathfrak{a}$가 $A$의 proper ideal이므로 $1-a\neq 0$이고, 이로부터 $A$가 domain인 경우는 더 이상 증명할 것이 없다. 만일 $A$가 local ring이라면 $\mathfrak{a}$는 $A$의 (유일한) maximal ideal $\mathfrak{m}$에 속할 것이므로 $a\in \mathfrak{m}$이고, 이로부터 $1-a$가 unit이어야 한다. 
 
