@@ -125,7 +125,7 @@ $$(xx')MM'=(xM)(x'M)\subseteq MM',\qquad (x+x')MM'\subseteq xMM'+M(x'M')\subsete
 
 $$\sqrt{(0)}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime} \mathfrak{p}$$
 
-으로 주어지는 것을 기억하자. ([§국소화, ⁋따름정리 10](/ko/math/commutative_algebra/localization#cor10)) 비슷한 식으로 $A$의 *Jacobson radical<sub>제이콥슨 근기</sub>*를 다음 식
+으로 주어지는 것을 기억하자. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra//ko/math/commutative_algebra/properties_of_localization#cor8)) 비슷한 식으로 $A$의 *Jacobson radical<sub>제이콥슨 근기</sub>*를 다음 식
 
 $$J(R)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
