@@ -15,6 +15,8 @@ date: 2024-10-20
 last_modified_at: 2024-10-20
 weight: 9
 
+toc: false
+
 ---
 
 <div class="proposition" markdown="1">

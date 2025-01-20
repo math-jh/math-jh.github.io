@@ -55,11 +55,13 @@ $A$의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}$의 *codimension<s
 
 $$\mathfrak{p}=\mathfrak{p}_r\supseteq \mathfrak{p}_{r-1}\supseteq\cdots\supseteq \mathfrak{p}_1\supseteq \mathfrak{p}_0$$
 
-의 길이의 supremum과 같다. 한편 그 이름과 같이, 다음의 식
+의 길이의 supremum과 같다. 따라서 다음의 부등식
 
-$$\dim \mathfrak{a}+\codim \mathfrak{a}=\dim A$$
+$$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
-을 기대하는 것이 자연스러울 것이지만, 이는 일반적으로 성립하지 않는다.
+이 성립한다. 그 이름과 다르게 일반적으로 반대방향 부등식은 성립하지 않는다.
+
+한편, local ring $(A, \mathfrak{m})$에 대하여, $\dim A$를 주는 prime ideal들의 chain에는 항상 시작 부분에 $\mathfrak{m}$을 끼워넣을 수 있으므로 반드시 $\dim A=\codim \mathfrak{m}$이 성립한다. 
 
 ## 차원의 계산
 
@@ -173,6 +175,16 @@ $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 주장과 같이 $\mathfrak{p}$가 codimension $c$라 하자. 우리는 ($0$개의 원소로 생성되는) zero ideal $(0)$으로부터 시작하여, 원소들 $x_1,\ldots, x_r$을 귀납적으로 택하여 원하는 ideal을 만들 것이다. 이제 $0\leq r< c$를 만족하는 $r$에 대하여, $x_1,\ldots, x_r$로 생성되는 ideal을 만들었다 하자.  그럼 우리는 ideal $(x_1,\ldots, x_r)$을 포함하는 prime ideal들 중 어느 것에도 속하지 않는 적당한 $x_{r+1}\in \mathfrak{p}$를 택해야 한다. 이제 이는 
 
 </details>
+
+특별히 noetherian local ring $(A, \mathfrak{m})$에 대하여는 $\dim A=\codim \mathfrak{m}$이 성립함을 살펴보았다. 따라서 $\codim \mathfrak{m}=d$이므로, [따름정리 8](#cor8)에 의해 $\mathfrak{m}$은 $d$개 이상의 원소로 생성되어야 한다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> Noetherian local ring $(A, \mathfrak{m})$이 *regular local ring<sub>정칙국소환</sub>*이라는 것은 $\mathfrak{m}$이 정확히 $d$개의 원소로 생성될 수 있는 것이다. 
+
+</div>
+
+그럼 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여, $a_1,\ldots, a_d\in \mathfrak{m}$의 $\mathfrak{m}/\mathfrak{m}^2$에서의 image가 $\mathfrak{m}/\mathfrak{m}^2$을 $A/\mathfrak{m}$-벡터공간으로서 생성하는 것과 $a_1,\ldots, a_d$가 $\mathfrak{m}$을 $A$-module로서 생성하는 것이 동치이다. 우리는 다음 글의 마지막에서 이들에 대한 성질을 더 살펴본다. 
 
 ---
 
