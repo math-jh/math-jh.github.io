@@ -158,30 +158,27 @@ $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 
 </div>
 
-즉, noetherian ring의 임의의 prime ideal은 descending chain condition을 만족하며, 이 때 $\mathfrak{p}$에서 시작하는 chain의 길이는 $\mathfrak{p}$의 generator의 개수보다 작거나 같다. 그럼에도 불구하고 무한한 차원을 갖는 noetherian ring이 존재한다. (Nagata 1962)
+즉, noetherian ring의 임의의 prime ideal은 descending chain condition을 만족하며, 이 때 $\mathfrak{p}$에서 시작하는 chain의 길이는 $\mathfrak{p}$의 generator의 개수보다 작거나 같다. 그럼에도 불구하고 무한한 차원을 갖는 noetherian ring이 존재한다. (**[Nag, Appendix, Example 1]**)
 
 한편 [정리 7](#thm7)은 다음과 같은 역 또한 존재한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor8">**따름정리 8**</ins> Codimension $c$의 prime ideal $\mathfrak{p}$는 $c$개의 원소로 생성되는 어떠한 ideal을 포함하는 prime ideal들 중 minimal한 것이다. 
+<ins id="cor8">**따름정리 8**</ins> Noetherian ring $A$에서, codimension $c$의 prime ideal $\mathfrak{p}$는 $c$개의 원소로 생성되는 어떠한 ideal을 포함하는 prime ideal들 중 minimal한 것이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-주장과 같이 $\mathfrak{p}$가 codimension $c$라 하자. 우리는 ($0$개의 원소로 생성되는) zero ideal $(0)$으로부터 시작하여, 원소들 $x_1,\ldots, x_r$을 귀납적으로 택하여 원하는 ideal을 만들 것이다. 이제 $0\leq r< c$를 만족하는 $r$에 대하여, $x_1,\ldots, x_r$로 생성되는 ideal을 만들었다 하자.  그럼 우리는 ideal $(x_1,\ldots, x_r)$을 포함하는 prime ideal들 중 어느 것에도 속하지 않는 적당한 $x_{r+1}\in \mathfrak{p}$를 택해야 한다. 
+주장과 같이 $\mathfrak{p}$가 codimension $c$라 하자. 우리는 ($0$개의 원소로 생성되는) zero ideal $(0)$으로부터 시작하여, 원소들 $x_1,\ldots, x_r$을 귀납적으로 택하여 원하는 ideal을 만들 것이다. 이제 $0\leq r< c$를 만족하는 $r$에 대하여, $x_1,\ldots, x_r$로 생성되는 ideal을 만들었다 하자.  그럼 우리는 ideal $(x_1,\ldots, x_r)$을 포함하는 prime ideal들 중 어느 것에도 속하지 않는 적당한 $x_{r+1}\in \mathfrak{p}$를 택해야 한다. 이제 이는 
 
 </details>
-
-## System of parameters
-
-
 
 ---
 
 **참고문헌**
 
-**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.  
+**[Nag]** Masayoshi Nagata. *Local Rings*. Interscience publishers, 1962.
 
 ---
