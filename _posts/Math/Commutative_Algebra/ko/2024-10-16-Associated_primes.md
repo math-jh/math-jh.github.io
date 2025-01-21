@@ -23,6 +23,8 @@ weight: 6
 
 <ins id="def1">**정의 1**</ins> Ring $A$와 $A$-module $M$에 대하여, $A$의 prime ideal $\mathfrak{p}$가 $M$의 *associated prime ideal<sub>동반소아이디얼</sub>*이라는 것은 어떠한 $x\in M$에 대해 $\mathfrak{p}=\ann(x)$인 것이다. Associated prime들의 모임을 $\Ass M$으로 적는다. 
 
+단, 특별히 $M=\mathfrak{a}$가 $A$의 ideal일 때에는, 관례상 $\mathfrak{a}$의 associated prime ideal은 $\Ass \mathfrak{a}$가 <em_ko>아니라</em_ko>, $\Ass A/\mathfrak{a}$를 의미한다.  
+
 </div>
 
 정의에 의하여 $\mathfrak{p}$가 $M$의 associated prime인 것과, $A/\mathfrak{p}$가 $M$의 적당한 submodule인 것이 동치이다. 이는 $A \rightarrow M$을 $1\mapsto x$로 잡고 first isomorphism theorem을 적용하면 바로 알 수 있다. 
@@ -88,7 +90,7 @@ $$(a)+\mathfrak{a}\subseteq \ann(bx)=\mathfrak{a}$$
 <ins id="cor4">**따름정리 4**</ins> Noetherian ring $A$ 위에서 정의된 module $M$을 생각하자. 그럼 다음이 성립한다. 
 
 1. $M$의 원소 $x$에 대하여, $x=0$인 것은 $M$의 maximal associated prime $\mathfrak{p}$가 주어질 때마다 $\epsilon_\mathfrak{p}(x)=0$인 것과 동치이다.
-2. $M$의 submodule $L$에 대하여, $L=0$인 것과 모든 $\mathfrak{p}\in\Ass M$에 대하여 $L_\mathfrak{p}$인 것이 동치이다.
+2. $M$의 submodule $L$에 대하여, $L=0$인 것과 모든 $\mathfrak{p}\in\Ass M$에 대하여 $L_\mathfrak{p}=0$인 것이 동치이다.
 3. $A$-linear map $u:M \rightarrow N$이 injective인 것은 임의의 $\mathfrak{p}\in \Ass M$에 대하여 $u_\mathfrak{p}$가 injective인 것과 동치이다.
 
 </div>
@@ -146,7 +148,7 @@ $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_{k+1}/M_k\con
 <ins id="thm7">**정리 7**</ins> Noetherian ring $A$ 위에 정의된 finitely generated module $M$에 대하여 다음이 성립한다.
 
 1. $\Ass M$은 공집합이 아닌 유한집합이며, 이들 각각의 원소는 $\ann M$을 포함한다. 뿐만 아니라, $\ann M$을 포함하는 prime ideal들의 집합에서 minimal한 prime ideal들은 모두 $\Ass M$에 포함된다.
-2. Associated prime들의 합집합은 $0$과, $M$의 모든 zero-divisor들의 모임으로 이루어진다.
+2. Associated prime들의 합집합은 $0$과, $M$의 어떤 zero-divisor들의 모임들로 이루어진다.
 3. 다음의 식
     
     $$\Ass_{S^{-1}A}S^{-1}M=\{\mathfrak{p}S^{-1}A: \mathfrak{p}\in\Ass M, \mathfrak{p}\cap S=\emptyset\}$$
@@ -181,7 +183,29 @@ $$\Ass M \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2}\cup \{\m
 
 첫 번째 결과의 나머지 부분은 세 번째 결과를 증명하여 얻어진다. 그 전에 두 번째 결과의 경우, 만일 $a\in A$가 어떤 $x\in M$의 annihilator ideal에 속한다면, 이 annihilator ideal를 포함하는 maximal한 annihilator ideal을 생각할 수 있고 이것이 $\Ass M$에 속하므로 자명하다. 세 번째 결과의 경우는 표기법에 유의하며 [§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5)를 사용하면 된다. 
 
-세 번째 결과를 가정하면 남은 부분도 자명하다. 만일 $\mathfrak{p}$가 $\ann M$을 포함하는 prime ideal들 중 minimal한 것이라면, 세 번째 결과를 이용하면 localization $A_\mathfrak{p}$에서의 maximal ideal $\mathfrak{p}$를 생각할 수 있는데, $\ann M$을 포함하는 유일한 prime ideal이 $\mathfrak{p}$ 뿐이므로 반드시 $\mathfrak{p}\in \Ass M$이어야 한다.  
+세 번째 결과를 가정하면 남은 부분도 자명하다. 만일 $\mathfrak{p}$가 $\ann M$을 포함하는 prime ideal들 중 minimal한 것이라면, 세 번째 결과를 이용하면 localization $A_\mathfrak{p}$에서의 maximal ideal $\mathfrak{p}$를 생각할 수 있는데, $\ann M$을 포함하는 유일한 prime ideal이 $\mathfrak{p}$ 뿐이므로 반드시 $\mathfrak{p}\in \Ass M$이어야 한다.
+
+</details>
+
+이를 통해 $M$에 대한 많은 정보를 얻어올 수 있다. 가령 $M=A$이고 $A$가 reduced인 경우 다음 따름정리를 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="cor8">**따름정리 8**</ins> Reduced noetherian ring $A$에 대하여, $A$의 total ring of fraction을 $K$라 하자. 그럼 $K$는 field들의 유한한 product이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 $M=A$로 두면 $\ann(A)=\\{0\\}$이다. 따라서, $A$의 minimal prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$들은 모두 $\Ass M$에 포함되며, 이들의 합집합은 $A$의 zero-divisor로 이루어져 있다. 
+
+또, 만일 $A$가 reduced ring이라면, 이들의 합집합이 정확히 $A$의 모든 zerodivisor들의 모임과 같다. 이를 확인하기 위해 우선 $A$가 reduced라는 가정으로부터,
+
+$$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime}\mathfrak{p}\supseteq \bigcap_{i=1}^k \mathfrak{p}_i$$
+
+임을 관찰하자. 그럼 임의의 zerodivisor $a\neq 0$과, $ab=0$이도록 하는 $b\neq 0$에 대하여, $b\not\in \mathfrak{p}\_i$이도록 하는 $\mathfrak{p}\_i$가 존재해야만 하고, 이 때 $ab=0\in \mathfrak{p}\_i$이므로 $a\in \mathfrak{p}\_i$여야만 한다.
+
+따라서, $A$의 total ring of fractions $K$는 $S=A\setminus(\mathfrak{p}\_1\cup\cdots\cup \mathfrak{p}\_k)$에 대하여 $K=S^{-1}A$이고, 이 ring의 prime ideal은 정확히 $\mathfrak{p}\_i$들의 image이며 $K$는 $S^{-1}A/\mathfrak{p}\_iS^{-1}A$들의 product임을 보일 수 있다.
 
 </details>
 
