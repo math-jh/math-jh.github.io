@@ -21,7 +21,7 @@ weight: 1
 
 ## 기본 정의들
 
-이 카테고리에서는 commutative ring $A$와 그 위에 정의된 module $M$에 대해 살펴본다. Ring $A$의 임의의 ideal $\mathfrak{a}$는 항상 $A$-module로 생각할 수 있으므로 많은 경우 우리는 $A$-module에 대한 이론을 전개하게 된다.
+이 카테고리에서는 commutative ring $A$와 그 위에 정의된 module $M$에 대해 살펴본다. Ring $A$의 임의의 ideal $\mathfrak{a}$는 항상 $A$-module로 생각할 수 있으므로 많은 경우 우리는 $A$-module에 대한 이론을 전개하게 된다. 앞서 [\[대수적 구조\]](/ko/algebraic_structures/) 카테고리의 글들에서는 혼동을 방지하기 위해 $A$-module $M$의 원소를 $x,y,\ldots$으로, $A$의 원소를 $\alpha,\beta,\ldots$로 썼었는데, $\mathfrak{a}$도 $A$-module로 생각하면 이와 같이 표기법을 구분하는 것이 오히려 더 혼란을 주게 되므로, 이 카테고리에서는 이와 같은 구분을 하지 않는다. 
 
 <div class="definition" markdown="1">
 

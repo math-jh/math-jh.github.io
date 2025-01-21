@@ -35,23 +35,23 @@ $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \pr
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-위의 함수를 직접 원소로 나타내면, $\prod A\_i$의 원소들은 순서쌍 $(a\_i)\_{i\in I}$의 꼴이며, 두 원소 $(a\_i)\_{i\in I}, (b\_i)\_{i\in I}\in \prod A\_i$에 대해 이들 둘을 위 함수에 넣은 결과는
+위의 함수를 직접 원소로 나타내면, $\prod A\_i$의 원소들은 순서쌍 $(\alpha\_i)\_{i\in I}$의 꼴이며, 두 원소 $(\alpha\_i)\_{i\in I}, (\beta\_i)\_{i\in I}\in \prod A\_i$에 대해 이들 둘을 위 함수에 넣은 결과는
 
-$$(a_i)_{i\in I}(b_i)_{i\in I}=(a_ib_i)_{i\in I}$$
+$$(\alpha_i)_{i\in I}(\beta_i)_{i\in I}=(\alpha_i\beta_i)_{i\in I}$$
 
 을 통해 곱셈이 주어지게 된다. 즉 주어진 함수는 두 원소의 성분별로 곱셈을 하는 함수이다. 이제 bilinearity 또한 성분별로 확인할 수 있다. 
 
 </details>
 
-이를 통해 $\prod A_i$ 또한 ring의 구조를 갖는다. 이 때, 이 ring의 덧셈에 대한 항등원은 모든 성분이 $0$인 원소이고 곱셈에 대한 항등원은 모든 성분이 $1$인 원소이다. 한편 임의의 두 ring homomorphism $f,g:A \rightarrow B$에 대하여, 
+이를 통해 $\prod A_i$ 또한 ring의 구조를 갖는다. 이 때, 이 ring의 덧셈에 대한 항등원은 모든 성분이 $0$인 원소이고 곱셈에 대한 항등원은 모든 성분이 $1$인 원소이다. 한편 임의의 두 ring homomorphism $\phi,\psi:A \rightarrow B$에 대하여, 
 
-$$\Eq(f,g)=\{x\in A: f(x)=g(x)\}$$
+$$\Eq(\phi,\psi)=\{\alpha\in A: \phi(\alpha)=\psi(\alpha)\}$$
 
-으로 정의하면 임의의 $x,y\in\Eq(f,g)$에 대하여
+으로 정의하면 이것은 [§군 준동형사상, ⁋명제 2](/ko/math/algebraic_structures/group_homomorphisms#prop2)에 의해 $A$의 subgrouop이고, 뿐만 아니라 임의의 $\alpha,\beta\in\Eq(\phi,\psi)$에 대하여
 
-$$f(xy)=f(x)f(y)=g(x)g(y)=g(xy)$$
+$$\phi(\alpha\beta)=\phi(\alpha)\phi(\beta)=\psi(\alpha)\psi(\beta)=\psi(\alpha\beta)$$
 
-이므로 $xy\in\Eq(f,g)$이다. 즉 $\Eq(f,g)$는 $A$의 subring이며, 이것이 $\Ring$에서 $f,g$의 equalizer를 정의한다. 이로부터 다음이 성립한다.
+이므로 $\alpha\beta\in\Eq(\phi,\psi)$이다. 즉 $\Eq(\phi,\psi)$는 $A$의 subring이며, 이것이 $\Ring$에서 $\phi$와 $\psi$의 equalizer를 정의한다. 이로부터 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -69,11 +69,11 @@ $$f(xy)=f(x)f(y)=g(x)g(y)=g(xy)$$
 
 </div>
 
-한편 임의의 두 ring homomorphism $f,g:A \rightarrow B$이 주어졌다 하자. $B$의 ideal $\mathfrak{b}$를 $f(x)-g(x)$들로 생성되는 two-sided ideal이라 하면 $B/\mathfrak{b}$가 잘 정의된다. 그럼 [§군 동형사상, ⁋명제 8](/ko/math/algebraic_structures/isomorphism_theorems#prop8)과 동일한 증명을 통해 다음이 성립한다.
+한편 임의의 두 ring homomorphism $\phi,\psi:A \rightarrow B$이 주어졌다 하자. $B$의 ideal $\mathfrak{b}$를 $\phi(\alpha)-\psi(\alpha)$들로 생성되는 two-sided ideal이라 하면 $B/\mathfrak{b}$가 잘 정의된다. 그럼 [§군 동형사상, ⁋명제 8](/ko/math/algebraic_structures/isomorphism_theorems#prop8)과 동일한 증명을 통해 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> 위와 같은 상황에서, $\CoEq(f,g)=B/\mathfrak{b}$는 $f,g$의 coequalizer를 정의한다.
+<ins id="prop4">**명제 4**</ins> 위와 같은 상황에서, $\CoEq(\phi,\psi)=B/\mathfrak{b}$는 $f,g$의 coequalizer를 정의한다.
 
 </div>
 
@@ -109,16 +109,16 @@ $$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{
 
 이를 통해 category $\Ring$이 symmetric monoidal category $(\Ring,\otimes, \mathbb{Z})$를 이룬다는 것을 확인할 수 있다. 명시적으로 $A\otimes B$ 위의 곱셈은
 
-$$(a\otimes b)(a'\otimes b')=aa'\otimes bb'$$
+$$(\alpha\otimes \beta)(\alpha'\otimes \beta')=\alpha\alpha'\otimes \beta\beta'$$
 
 를 통해 정의된다. 
 
-한 가지 흥미로운 사실은, $\otimes$가 $\CRing$에서의 coproduct와 같다는 것이다. 이를 확인하기 위해서는 임의의 commutative ring $A,B$와 다음 식
+한 가지 흥미로운 사실은, $\otimes$가 $\cRing$에서의 coproduct와 같다는 것이다. 이를 확인하기 위해서는 임의의 commutative ring $A,B$와 다음 식
 
-$$\iota_A: A \hookrightarrow A\otimes B;a\mapsto a\otimes 1$$
+$$\iota_A: A \hookrightarrow A\otimes B;\quad \alpha\mapsto \alpha\otimes 1$$
 
-그리고 비슷한 방식으로 정의된 $\iota_B$가 coproduct의 universal property를 만족함을 보이면 된다. 임의의 $f_A: A \rightarrow C$, $f_B: B \rightarrow C$가 주어졌다 하자. 만일 coproduct의 universal property를 만족하는 $f: A\otimes B \rightarrow C$가 존재한다면, 이는 반드시
+그리고 비슷한 방식으로 정의된 $\iota_B$가 coproduct의 universal property를 만족함을 보이면 된다. 임의의 $\phi_A: A \rightarrow C$, $\phi_B: B \rightarrow C$가 주어졌다 하자. 만일 coproduct의 universal property를 만족하는 $\phi: A\otimes B \rightarrow C$가 존재한다면, 이는 반드시
 
-$$f(a\otimes b)=f((a\otimes 1)(1\otimes b))=\cdots=f_A(a)f_B(b)$$
+$$\phi(\alpha\otimes \beta)=\phi((\alpha\otimes 1)(1\otimes \beta))=\cdots=\phi_A(\alpha)\phi_B(\beta)$$
 
-를 만족해야 하므로 유일하다는 것을 알 수 있다. 한편, $A\times B$에서 $C$로의 함수 $(a,b)\mapsto f_A(a)f_B(b)$가 bilinear이므로, tensor product의 universal property로부터 $a\otimes b\mapsto f_A(a)f_B(b)$를 만족하는 ring homomorphism $A\otimes B \rightarrow C$가 존재하게 되고, 이것이 정확히 $f$가 된다. 
+를 만족해야 하므로 유일하다는 것을 알 수 있다. 한편, $A\times B$에서 $C$로의 함수 $(\alpha,\beta)\mapsto \phi_A(\alpha)\phi_B(\beta)$가 bilinear이므로, tensor product의 universal property로부터 $\alpha\otimes \beta\mapsto \phi_A(\alpha)\phi_B(\beta)$를 만족하는 ring homomorphism $A\otimes B \rightarrow C$가 존재하게 되고, 이것이 정확히 $\phi$가 된다. 

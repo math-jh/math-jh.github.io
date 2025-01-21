@@ -63,7 +63,7 @@ $$\beta'\cdot_B(\beta\otimes_A x)=(\beta'\beta)\otimes_A x$$
 
 $$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast B)\otimes_AM \overset{\mu_B}{\longrightarrow} \phi^\ast B\otimes_AM$$
 
-으로 얻어지는 것으로 생각할 수도 있다.[^1] 또, 임의의 $A$-linear map $f:M \rightarrow M'$에 대하여 $\id_{\phi^\ast B}\otimes_A f$가 이렇게 정의된 두 $B$-module 사이의 $B$-linear map을 정의하는 것을 확인할 수 있다.
+으로 얻어지는 것으로 생각할 수도 있다.[^1] 또, 임의의 $A$-linear map $u:M \rightarrow M'$에 대하여 $\id_{\phi^\ast B}\otimes_A u$가 이렇게 정의된 두 $B$-module 사이의 $B$-linear map을 정의하는 것을 확인할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -126,11 +126,11 @@ $$(\alpha\cdot_A y_1,y_2)=(\phi(\alpha)\cdot_B y_1, y_2)\mapsto (\phi(\alpha)\cd
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $A$-module $M$, $B$-module $N$를 고정하자. 우선 임의의 $f\in\Hom_B(\phi_!M,N)$에 대하여, 함수들의 합성
+임의의 $A$-module $M$, $B$-module $N$를 고정하자. 우선 임의의 $v\in\Hom_B(\phi_!M,N)$에 대하여, 함수들의 합성
 
 ![Adjointness-1](/assets/images/Math/Algebraic_Structures/Change_of_base_ring-3.png){:style="width:21em" class="invert" .align-center}
 
-을 통해 함수 $M \rightarrow N$을 얻는다. 이 때 $M \rightarrow A\otimes_AM \rightarrow \phi^\ast B\otimes_AM$은 $A$-linear map들의 합성이고, $f:\phi^\ast B\otimes M \rightarrow N$은 $B$-linear map이다. 우선 임의의 $\alpha\in A$와 $x\in M$에 대하여 앞의 $A$-linear map들의 합성을 보면
+을 통해 함수 $M \rightarrow N$을 얻는다. 이 때 $M \rightarrow A\otimes_AM \rightarrow \phi^\ast B\otimes_AM$은 $A$-linear map들의 합성이고, $v:\phi^\ast B\otimes M \rightarrow N$은 $B$-linear map이다. 우선 임의의 $\alpha\in A$와 $x\in M$에 대하여 앞의 $A$-linear map들의 합성을 보면
 
 $$\alpha\cdot_Ax\mapsto \alpha\otimes_A x\mapsto \phi(\alpha)\otimes_A x$$
 
@@ -140,17 +140,17 @@ $$\phi(\alpha)\otimes_A x=(\phi(\alpha)1)\otimes_A x=\phi(\alpha)\cdot_B(1\otime
 
 을 이용하면
 
-$$f(\phi(\alpha)\otimes_A x)=f(\phi(\alpha)\cdot_B(1\otimes_A x))=\phi(\alpha)\cdot_B f(1\otimes_A x)$$
+$$v(\phi(\alpha)\otimes_A x)=v(\phi(\alpha)\cdot_B(1\otimes_A x))=\phi(\alpha)\cdot_B v(1\otimes_A x)$$
 
 이다. 즉, restriction of scalar를 통해 $N$을 $A$-module로 보면 위의 합성은 $A$-linear map인 것을 안다. 
 
-거꾸로, 임의의 $g\in\Hom_A(M, \phi^\ast N)$이 주어졌다 하자. 그럼 이번엔 다음 합성
+거꾸로, 임의의 $u\in\Hom_A(M, \phi^\ast N)$이 주어졌다 하자. 그럼 이번엔 다음 합성
 
 ![Adjointness-2](/assets/images/Math/Algebraic_Structures/Change_of_base_ring-4.png){:style="width:28em" class="invert" .align-center}
 
 을 통해 함수 $\phi_!M \rightarrow N$을 얻는다. 그럼 임의의 $\beta'\in B$와 $\beta\otimes_A x\in \phi^\ast B\otimes_AM$에 대하여, 
 
-$$\Phi(\id_{\phi^\ast B}\otimes_A g(\beta'\cdot_B(\beta\otimes_Ax)))=\Phi((\beta'\beta)\otimes_Ax)=(\beta'\beta)\otimes_B x$$
+$$\Phi(\id_{\phi^\ast B}\otimes_A u(\beta'\cdot_B(\beta\otimes_Ax)))=\Phi((\beta'\beta)\otimes_Ax)=(\beta'\beta)\otimes_B x$$
 
 이고, 이는 $B\otimes_BN\cong N$을 통해 $(\beta'\beta)\cdot_Bx=\beta'\cdot_B(\beta\cdot_Bx)$로 옮겨진다. 즉 위에서 정의한 함수는 $B$-linear map이다. 
 
