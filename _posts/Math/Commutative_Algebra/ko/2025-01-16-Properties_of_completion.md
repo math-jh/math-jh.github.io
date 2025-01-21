@@ -122,7 +122,7 @@ Complete ring의 대표적인 예시는 [§완비화, ⁋예시 4]()에서 살�
 
 <div class="proposition" markdown="1">
 
-<ins id="thm5">**정리 5**</ins> Ring $A$와 ideal $\mathfrak{a}$를 고정하고, $\mathfrak{a}$에 대해 complete인 $A$-algebra $E$가 주어졌다 하자. $\alpha_1,\ldots,\alpha_n\in \mathfrak{a}$라 하면, 다음이 성립한다.
+<ins id="thm5">**정리 5**</ins> Ring $A$와 $A$-algebra $E$를 고정하고, $E$가 어떠한 ideal $\mathfrak{a}\subseteq E$에 대해 complete라 하자. $\alpha_1,\ldots,\alpha_n\in \mathfrak{a}$라 하면, 다음이 성립한다.
 
 1. 각각의 $x_i$들을 $\alpha_i$로 보내는 유일한 $A$-algebra homomorphism $\phi:A[[\x_1,\ldots, \x_n]]\rightarrow E$이 존재한다. 
 2. 만일 $A \rightarrow E/\mathfrak{a}$가 epimorphism이고, $\alpha_i$들이 $\mathfrak{a}$를 생성한다면 $\phi$ 또한 epimorphism이다. 

@@ -31,13 +31,13 @@ Coproduct의 경우, $A\otimes-$은 $\Ab$에서 $\Ab$로의 left adjoint이므�
 
 $$A\otimes\left(\bigoplus_{i\in I} M_i\right)\cong\bigoplus_{i\in I}(A\otimes M_i)\overset{\bigoplus \rho_i}{\longrightarrow} \bigoplus_{i\in I}M_i$$
 
-를 통해 $\bigoplus M\_i$ 위에서의 action이 정의된다. Equalizer와 coequalizer의 경우, 두 module homomorphism $f,g:M \rightarrow N$에 대하여
+를 통해 $\bigoplus M\_i$ 위에서의 action이 정의된다. Equalizer와 coequalizer의 경우, 두 module homomorphism $u,v:M \rightarrow N$에 대하여
 
-$$\Eq(f,g)=\{x\in M: f(x)=g(x)\}$$
+$$\Eq(u,v)=\{x\in M: u(x)=v(x)\}$$
 
 그리고
 
-$$\CoEq(f,g)=N/N',\qquad N'=\langle f(x)-g(x)\rangle\rangle$$
+$$\CoEq(u,v)=N/N',\qquad N'=\langle u(x)-v(x)\rangle\rangle$$
 
 을 통해 정의할 수 있다. 즉 다음이 성립한다. 
 
@@ -51,24 +51,24 @@ $$\CoEq(f,g)=N/N',\qquad N'=\langle f(x)-g(x)\rangle\rangle$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 두 $A$-module들의 family $(M\_i)\_{i\in I},(N\_i)\_{i\in I}$와 이들 사이의 linear map들 $f\_i: M\_i \rightarrow N\_i$가 주어졌다 하고, 이들이 유도하는 함수 $\bigoplus f\_i:\bigoplus M\_i \rightarrow \bigoplus N\_i$와 $\prod f\_i: \prod M\_i \rightarrow \prod N\_i$를 생각하자. 그럼 다음이 성립한다.
+<ins id="prop2">**명제 2**</ins> 두 $A$-module들의 family $(M\_i)\_{i\in I},(N\_i)\_{i\in I}$와 이들 사이의 linear map들 $u\_i: M\_i \rightarrow N\_i$가 주어졌다 하고, 이들이 유도하는 함수 $\bigoplus u\_i:\bigoplus M\_i \rightarrow \bigoplus N\_i$와 $\prod u\_i: \prod M\_i \rightarrow \prod N\_i$를 생각하자. 그럼 다음이 성립한다.
 
-1. 만일 $f\_i$들 각각이 surjective라면 $\prod f\_i$도 surjective이고, 그 역도 성립한다.
-2. 만일 $f\_i$들 각각이 injective라면 $\bigoplus f\_i$도 injective이고, 그 역도 성립한다.
+1. 만일 $u\_i$들 각각이 surjective라면 $\prod u\_i$도 surjective이고, 그 역도 성립한다.
+2. 만일 $u\_i$들 각각이 injective라면 $\bigoplus u\_i$도 injective이고, 그 역도 성립한다.
 
 </div>
 
-이에 대한 증명은 $\prod f\_i$와 $\bigoplus f\_i$를 직접 좌표별로 써서 얻어진다. 특히 이 명제에 의해 direct product는 cokernel 또한 보존하고, direct sum은 kernel 또한 보존한다는 것을 알 수 있다. 
+이에 대한 증명은 $\prod u\_i$와 $\bigoplus u\_i$를 직접 좌표별로 써서 얻어진다. 특히 이 명제에 의해 direct product는 cokernel 또한 보존하고, direct sum은 kernel 또한 보존한다는 것을 알 수 있다. 
 
 앞서 우리는 임의의 $M,N\in\lMod{A}$에 대하여 $\Hom_{\lMod{A}}(M,N)$이 abelian group이 된다는 것을 살펴보았다. 어렵지 않게 이 덧셈이 합성에 대해 잘 행동하고, category $\lMod{A}$는 zero module $0$을 zero object로 갖는 additive category가 된다는 것을 확인할 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정의 1](/ko/math/category_theory/abelian_categories#def1))
 
-뿐만 아니라 $\lMod{A}$는 abelian category가 된다. ([\[범주론\] §아벨 카테고리, ⁋정의 7](/ko/math/category_theory/abelian_categories#def7)) 이를 확인하기 위해서는 임의의 monomorphism $f:M \rightarrow N$은 그 cokernel $N \rightarrow N/M$의 kernel과 같고, 임의의 epimorphism $g:M \rightarrow N$은 그 kernel $\ker g$의 cokernel $M \rightarrow M/\ker g$과 같다는 것을 확인하면 된다. 
+뿐만 아니라 $\lMod{A}$는 abelian category가 된다. ([\[범주론\] §아벨 카테고리, ⁋정의 7](/ko/math/category_theory/abelian_categories#def7)) 이를 확인하기 위해서는 임의의 monomorphism $u:M \rightarrow N$은 그 cokernel $N \rightarrow N/M$의 kernel과 같고, 임의의 epimorphism $v:M \rightarrow N$은 그 kernel $\ker v$의 cokernel $M \rightarrow M/\ker v$과 같다는 것을 확인하면 된다. 
 
 ## 자유가군
 
-[§가군, ⁋예시 5](/ko/math/algebraic_structures/modules#ex5)에서 우리는 ring $A$가 $A$-module의 구조를 가진다는 것을 살펴보았다. 그럼 임의의 $A$-module homomorphism $f:A \rightarrow M$는 $f(1)$에 의해 유일하게 결정된다. 임의의 $\alpha\in A$에 대하여, 
+[§가군, ⁋예시 5](/ko/math/algebraic_structures/modules#ex5)에서 우리는 ring $A$가 $A$-module의 구조를 가진다는 것을 살펴보았다. 그럼 임의의 $A$-module homomorphism $u:A \rightarrow M$는 $u(1)$에 의해 유일하게 결정된다. 임의의 $\alpha\in A$에 대하여, 
 
-$$f(\alpha)=f(\alpha\cdot 1)=\alpha\cdot f(1)$$
+$$u(\alpha)=u(\alpha\cdot 1)=\alpha\cdot u(1)$$
 
 이기 때문이다. 바꾸어 말하면 다음의 isomorphism
 
