@@ -159,7 +159,7 @@ $$\frac{M/aM}{\mathfrak{a}(M/aM)}\cong \frac{M}{((a)+\mathfrak{a})M}=\frac{M}{(a
 
 이 유한한 길이를 가지므로, $(a,a_1,\ldots, a_d)$는 $M$의 parameter ideal이 된다. 따라서 [명제 5](#prop5)의 셋째 조건에 의하여 $\dim M\leq 1+d$이다. 
 
-</details>
+</details> 
 
 ## 평탄사상과 차원
 
@@ -240,6 +240,7 @@ $$\mathfrak{q}\supseteq \mathfrak{q}_1\supseteq \mathfrak{q}_2\supseteq\cdots$$
 </div>
 
 
+---
 
 **참고문헌**
 

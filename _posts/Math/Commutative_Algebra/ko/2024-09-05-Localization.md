@@ -205,7 +205,7 @@ $$\mathfrak{b}_0\subseteq \mathfrak{b}_1\subseteq\cdots$$
 
 $$\mathfrak{b}_0^c\subseteq \mathfrak{b}_1^c\subseteq\cdots$$
 
-는 noetherian ring $A$의 ideal들의 ascending chain이므로 적당한 $N$이 존재하여, $n>N$일 때마다 $\mathfrak{b}_n^c=\mathfrak{b}_{n+1}^c$이다. 이제 그러한 $n$에 대하여
+는 noetherian ring $A$의 ideal들의 ascending chain이므로 적당한 $N$이 존재하여, $n>N$일 때마다 $\mathfrak{b}\_n^c=\mathfrak{b}\_{n+1}^c$이다. 이제 그러한 $n$에 대하여
 
 $$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$$
 
