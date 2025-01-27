@@ -219,6 +219,34 @@ $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 
 </details>
 
+## 소아이디얼
+
+마지막으로 우리는 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)에서 정의한 *prime ideal*의 개념이 필요하다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def10">**정의 10**</ins> Ring $A$의 ideal $\mathfrak{p}\subsetneq A$가 *prime ideal*이라는 것은, 만일 $ab\in \mathfrak{p}$라면 반드시 $a\in \mathfrak{p}$이거나 $b\in \mathfrak{p}$가 성립하는 것이다.
+
+</div>
+
+그럼 우리는 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)의 넷째 결과를 더 다듬어서 다음을 보일 수 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11**</ins> Ring $A$의 임의의 ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$의 prime ideal과, $A$의 prime ideal 중 $\mathfrak{a}$을 포함하는 것들 사이의 일대일대응이 존재한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)의 셋째 결과에 의하여, $\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$에 대하여
+
+$$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
+
+이 성립하며, 그 후 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)의 동치조건을 사용하면 된다. 
+
+</details>
+
 ---
 
 **참고문헌**

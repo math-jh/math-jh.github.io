@@ -205,7 +205,7 @@ commutative_algebra-ko:
       - title: "정수적 확장과 아이디얼"
         url: ko/math/commutative_algebra/lying_over_and_going_up
       - title: "영점정리"
-        url: ko/math/commutative_algebra/integral_extension
+        url: ko/math/commutative_algebra/nullstellensatz
       - title: "부풀림 대수"
         url: ko/math/commutative_algebra/blowup_algebra
       - title: "평탄성"
@@ -218,6 +218,14 @@ commutative_algebra-ko:
         url: ko/math/commutative_algebra/properties_of_completion
       - title: "차원"
         url: ko/math/commutative_algebra/Krull_dimension
+      - title: "매개계"
+        url: ko/math/commutative_algebra/system_of_parameters
+      - title: "정칙국소환"
+        url: ko/math/commutative_algebra/regular_local_rings
+      - title: "분수아이디얼"
+        url: ko/math/commutative_algebra/fractional_ideals
+      - title: "인자"
+        url: ko/math/commutative_algebra/divisors
   - title: 
     children:
       - title: "블로그 소개"
