@@ -148,9 +148,9 @@ $$(\mathfrak{q}A_\mathfrak{p})^{(n)}=\mathfrak{a}(\mathfrak{q}A_\mathfrak{p})^{(
 
 $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 
-이고, $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$이므로 $(\mathfrak{q}A_\mathfrak{q})^{n}=0$이다. 이제 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)의 둘째 조건과 셋째 조건의 동치로부터 $A\_\mathfrak{q}=A\_\mathfrak{q}/(0)$가 artinian이고, 따라서 [따름정리 3](#cor3)으로부터 $\dim A\_\mathfra{q}=0$임을 안다. 
+이고, $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$이므로 $(\mathfrak{q}A_\mathfrak{q})^{n}=0$이다. 이제 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)의 둘째 조건과 셋째 조건의 동치로부터 $A\_\mathfrak{q}=A\_\mathfrak{q}/(0)$가 artinian이고, 따라서 [따름정리 3](#cor3)으로부터 $\dim A\_\mathfrak{q}=0$임을 안다. 
 
-</details>
+</details> 
 
 이제 이를 이용해서 귀납적으로 다음을 보일 수 있다.
 
@@ -175,6 +175,18 @@ $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 주장과 같이 $\mathfrak{p}$가 codimension $c$라 하자. 우리는 ($0$개의 원소로 생성되는) zero ideal $(0)$으로부터 시작하여, 원소들 $x_1,\ldots, x_r$을 귀납적으로 택하여 원하는 ideal을 만들 것이다. 이제 $0\leq r< c$를 만족하는 $r$에 대하여, $x_1,\ldots, x_r$로 생성되는 ideal을 만들었다 하자.  그럼 우리는 ideal $(x_1,\ldots, x_r)$을 포함하는 prime ideal들 중 어느 것에도 속하지 않는 적당한 $x_{r+1}\in \mathfrak{p}$를 택해야 한다. 이제 이는 
 
 </details>
+
+만일 위의 따름정리에서 $\codim \mathfrak{p}=0$이라면, $\mathfrak{p}$는 $0$개의 원소로 생성되는 ideal, 즉 zero ideal을 포함하는 minimal prime이다. 이제 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의하여 이러한 prime ideal은 zerodivisor로만 이루어져 있다. 이를 [정리 6](#thm6)과 종합하면, 만일 $\mathfrak{p}$가 *non-zerodivisor* $a$를 포함하는 minimal prime ideal이라면 $\codim \mathfrak{p}=1$이어야 함을 안다. 
+
+특별히, non-zerodivisor $a$를 포함하는 minimal prime $\mathfrak{p}$에 대하여
+
+$$\dim A/\mathfrak{p}A+\codim \mathfrak{p}=\dim \mathfrak{p}+\codim \mathfrak{p}\leq \dim A$$
+
+이고, $\codim \mathfrak{p}=1$이므로 
+
+$$\dim A/\mathfrak{p}A\leq\dim A-1$$
+
+이 성립한다. 
 
 특별히 noetherian local ring $(A, \mathfrak{m})$에 대하여는 $\dim A=\codim \mathfrak{m}$이 성립함을 살펴보았다. 따라서 $\codim \mathfrak{m}=d$이므로, [따름정리 8](#cor8)에 의해 $\mathfrak{m}$은 $d$개 이상의 원소로 생성되어야 한다. 
 

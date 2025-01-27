@@ -127,7 +127,7 @@ $$\sqrt{(0)}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime} \mathfrak{p}$$
 
 으로 주어지는 것을 기억하자. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra//ko/math/commutative_algebra/properties_of_localization#cor8)) 비슷한 식으로 $A$의 *Jacobson radical<sub>제이콥슨 근기</sub>*를 다음 식
 
-$$J(R)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
+$$J(A)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
 으로 정의한다.
 
@@ -172,9 +172,9 @@ $$(1+p_1+\cdots_p_n)M=0$$
 
 </details>
 
-## 정규화
+## 국소화
 
-이제 우리는 normal domain과 normalization에 대해 살펴본다. 
+이제 우리는 localization과 관련된 몇몇 결과들을 살펴본다.  
 
 <div class="proposition" markdown="1">
 
@@ -225,6 +225,36 @@ $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 <ins id="prop12">**명제 12**</ins> Ring $A\subseteq B$와 $A$의 multiplicative subset $S$를 고정하자. 그럼 $A$의 $B$에서의 integral closure $A'$에 대하여, $S^{-1}A'$는 $S^{-1}A$의 $S^{-1}B$ 안에서의 integral closure이다.
 
 </div>
+
+국소화와 관련된 또 다른 결과 중 하나는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 다소 강화한 것이다. 우선 ring $A$가 *semilocal ring<sub>반국소환</sub>*이라는 것은 $A$가 유한히 많은 maximal ideal만을 갖는 것이다. 그럼 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop13">**명제 13**</ins> Semilocal ring $A$와 finitely presented $A$-module $M,N$에 대하여, 만일 $M\_\mathfrak{m}\cong N\_\mathfrak{m}$이 모든 maximal ideal $\mathfrak{m}$에 대해 성립한다면 $M\cong N$이 성립한다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 $A$의 maximal ideal들 $\mathfrak{m}\_1,\ldots, \mathfrak{m}\_n$이 주어졌다 하고, 각각의 $k$에 대하여 $u_k: M\_{\mathfrak{p}\_k}\rightarrow N\_{\mathfrak{p}\_k}$가 주어졌다 하자. 그럼 $A_\mathfrak{p}$는 flat $A$-module이고, 가정에 의해 $M$이 finitely presented이므로 다음의 isomorphism
+
+$$\Hom_{A_{\mathfrak{m}_k}}( M_{\mathfrak{m}_k}, N_{\mathfrak{m}_k}) \rightarrow \Hom_A(M,N)_{\mathfrak{m}_k}$$
+
+이 존재한다. ([§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5)) 이 isomorphism에 의한 $u_k$의 image는 $\Hom_A(M,N)$의 원소에 $A\setminus \mathfrak{m}_k$의 원소를 분모에 넣어준 것이므로, 필요하다면 $u_k$에 이 분모를 곱해주어 $v_k$를 $\Hom_A(M,N)$의 원소로 취급할 수 있다. 
+
+한편, $\mathfrak{m}\_k$는 prime이므로, 만일 $\bigcap\_{l\neq k} \mathfrak{m}\_l\subseteq \mathfrak{m}\_k$라면 어떠한 $l$에 대해 $\mathfrak{m}\_l\subseteq \mathfrak{m}\_k$가 되어야 하므로 모순이다. 즉, 다음의 식
+
+$$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
+
+이 성립하고 그럼 이로부터 $a_k\in \bigcap_{l\neq k}\mathfrak{m}\_l$이지만 $a_k\not\in \mathfrak{m}\_k$인 $a_k$가 존재한다. 이렇게 만들어진 $a_k$들에 대하여, $v=\sum_{k=1}^n a_kv_k$으로 정의하면, 이것이 우리가 원하는 isomorphism이 되며 그 증명을 위해서는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의해 각각의 maximal ideal들 $\mathfrak{m}\_k$에서의 localization을 보면 된다. 
+
+더 일반적으로 우리는 임의의 local ring $(B, \mathfrak{n})$과 finitely generated $B$-module 사이의 map들 $s,t:K \rightarrow L$에 대하여, 만일 $s$가 isomorphism이고 $t(K)\subseteq \mathfrak{n}L$이라면 $s+t$도 isomorphism인 것을 보인다. 그럼 이 결과를 local ring $(A\_{\mathfrak{m}\_k}, \mathfrak{m}\_kA\_{\mathfrak{m}\_k})$, 그리고 $M\_{\mathfrak{m}\_k}$에서 $N\_{\mathfrak{m}\_k}$로의 함수들 $s=a_k v_k$와 $t=\sum_{l\neq k} a_lv_l$에 적용하면 증명이 완료될 것이다. 
+
+이 주장을 증명하자. 우선 $t$는 $K$에서 $L/\mathfrak{n}L$로의 zero map으로 볼 수 있고, $s$는 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있므로 $s+t$ 또한 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있다. 그럼 [보조정리 8](#lem8)에 의해 $K$에서 $L$로의 morphism $s+t$도 epimorphism이다. 이제 isomorphism $s$의 inverse $s^{-1}$을 취하여 surjective endomorphism $s^{-1}(s+t): K \rightarrow K$를 생각하자. 그럼 [정리 1](#thm1)에 의하여 $s^{-1}(s+t)$는 isomorphism이기도 하고, 따라서 $s+t$는 monomorphism이므로 원하는 결과를 얻는다. 
+
+</details>
+
+
 
 ---
 

@@ -268,8 +268,8 @@ $$\chi_u(\x)\otimes_Ax=\chi_u(\x)(1\otimes_Ax)=\det(\x-\iota_!u)(1\otimes_Ax)$$
 
 이다. 그런데 라플라스 전개를 생각하면 임의의 행렬 $X$와 $X$의 cofactor $Y$에 대해 $XY^t=(\det X)I$가 성립하므로, 적당한 $v\in\End_\rMod{A[\x]}(\iota_!M)$이 존재하여 
 
-$$\det(\x-\iota_!u)(1\otimes_Ax)=(\x-\iota_!u)(v(1\otimes_A x)$$
+$$\det(\x-\iota_!u)(1\otimes_Ax)=(\x-\iota_!u)(v(1\otimes_A x))$$
 
-으로 쓸 수 있고 따라서 [명제 7](#prop7)에 의해 원하는 결과를 얻는다.w
+으로 쓸 수 있고 따라서 [명제 7](#prop7)에 의해 원하는 결과를 얻는다.
 
 </details>
