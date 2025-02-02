@@ -33,7 +33,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
-words_per_minute         : 250
+words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -174,7 +174,7 @@ exclude:
   - .jekyll-assets-cache
   - .sass-cache
   - assets/js/plugins
-  - assets/diagrams
+  - assets/Diagrams
   - assets/js/_main.js
   - assets/js/vendor/jquery/jquery-3.6.0.js
   - Capfile

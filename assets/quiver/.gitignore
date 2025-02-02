@@ -1,0 +1,5 @@
+src/KaTeX/*
+src/Workbox/*
+src/workbox-*
+src/service-worker.js*
+src/icon-*.png
