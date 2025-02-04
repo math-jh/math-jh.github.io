@@ -114,13 +114,37 @@ img
 
 </details>
 
-특히 irreducible space는 Hausdorff가 아니다. 위의 명제의 마지막 동치 때문에 irreducible space는 *hyperconnected space*라 부르기도 한다.
+특히 irreducible space는 Hausdorff가 아니다. 위의 명제의 마지막 동치 때문에 irreducible space는 *hyperconnected space*라 부르기도 한다. 비슷한 맥락에서 다음이 성립한다. (참고: [§연결공간, ⁋명제 3](/ko/math/topology/connected_spaces#prop3))
+
+<div class="proposition" markdown="1">
+
+<ins id="prop8">**명제 8**</ins> 만일 $X$가 irreducible open subset들의 합집합
+
+$$X=\bigcup_{i\in I} U_i$$
+
+이고 $U_i\cap U_j\neq \emptyset$이 모든 $i,j$에 대해 성립한다 하자. 그럼 $X$는 irreducible이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+임의의 두 열린집합 $V, W$가 주어졌다 하고, $V\cap W\neq\emptyset$임을 보이자. 그럼 주어진 가정으로부터 우선 $U_i\cap V\neq\emptyset$ 그리고 $U_j\cap W\neq\emptyset$을 만족하는 $i,j$가 존재한다. 이제 [명제 7](#prop7)의 셋째 결과와 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)로부터 $U_i$도 irreducible이므로, $U_i$의 두 nonempty subset $U_i\cap V$와 $U_i\cap U_j$도 반드시 공집합이 아닌 교집합을 가져야 한다. 즉
+
+$$(U_i\cap V)\cap (U_i\cap U_j)=U_i\cap U_j\cap V\neq\emptyset$$
+
+이고, $U_i\cap U_j\cap V$를 $U_j$의 nonempty subset으로 보면 마찬가지로 $U_j$의 irreducibilty로부터 다음의 식
+
+$$(U_i\cap U_j\cap V)\cap (U_j\cap W)=U_i\cap U_j\cap V\cap W\neq\emptyset$$
+
+을 얻고 특히 $V\cap W\neq\emptyset$이다. 
+
+</details>
 
 Connected component와 비슷하게 다음을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 위상공간 $X$의 부분집합 $A$에 대하여, $A$를 포함하는 *irreducible component*는 $A$를 포함하는 irreducible subset 중 가장 큰 것을 의미한다. 
+<ins id="def9">**정의 9**</ins> 위상공간 $X$의 부분집합 $A$에 대하여, $A$를 포함하는 *irreducible component*는 $A$를 포함하는 irreducible subset 중 가장 큰 것을 의미한다. 
 
 </div>
 
@@ -128,7 +152,7 @@ Connected component와 비슷하게 다음을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> 위상공간 $X$에 대하여, $X$의 irreducible closed subset들의 strictly descending chain
+<ins id="def10">**정의 10**</ins> 위상공간 $X$에 대하여, $X$의 irreducible closed subset들의 strictly descending chain
 
 $$A_n\supsetneq\cdots\supsetneq A_0$$
 
@@ -140,11 +164,11 @@ $$\dim X=\sup\{\text{length of strictly descending chains of irreducible closed 
 
 </div>
 
-그럼 다음과 같은 상황에서는 $X$의 Krull dimension은 항상 유한하다. 특히, 일반적인 위상이 주어졌을 때 
+그럼 다음과 같은 상황에서는 $X$의 Krull dimension은 항상 유한하다. 특히 Hausdorff space에서는 오직 singleton만이 irreducible subset이므로 Hausdorff space의 Krull dimension은 $0$이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> 위상공간 $X$가 *noetherian<sub>뇌터 공간</sub>*이라는 것은 임의의 닫힌집합들의 chain
+<ins id="def11">**정의 11**</ins> 위상공간 $X$가 *noetherian<sub>뇌터 공간</sub>*이라는 것은 임의의 닫힌집합들의 chain
 
 $$A_1\supseteq A_2\supseteq\cdots$$
 
@@ -156,7 +180,7 @@ $$A_1\supseteq A_2\supseteq\cdots$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Noetherian topological space $X$에 대하여, 다음이 성립한다.
+<ins id="prop12">**명제 12**</ins> Noetherian topological space $X$에 대하여, 다음이 성립한다.
 
 1. $X$의 임의의 부분공간은 noetherian이다.
 2. $X$는 유한히 많은 irreducible component를 가진다. 
@@ -170,10 +194,10 @@ $$A_1\supseteq A_2\supseteq\cdots$$
 
 </details>
 
-한편 위의 결과를 확인하고 나면, 서로 다른 차원을 갖는 irreducible component가 여럿 주어졌을 때 $X e$의 차원은 [명제 4](#prop4)와 비슷한 다음 결과를 만족하는 것도 자명하다. 
+한편 위의 결과를 확인하고 나면, 서로 다른 차원을 갖는 irreducible component가 여럿 주어졌을 때 $X$의 차원은 [명제 4](#prop4)와 비슷한 다음 결과를 만족하는 것도 자명하다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> 만일 위상공간 $X$의 두 유한차원 닫힌 부분공간 $Y,Z$가 존재하여 $X=Y\cup Z$라면, 이들의 Krull dimension 또한 식 $\dim X=\max(\dim Y,\dim Z)$을 만족한다.
+<ins id="prop13">**명제 13**</ins> 만일 위상공간 $X$의 두 유한차원 닫힌 부분공간 $Y,Z$가 존재하여 $X=Y\cup Z$라면, 이들의 Krull dimension 또한 식 $\dim X=\max(\dim Y,\dim Z)$을 만족한다.
 
 </div>

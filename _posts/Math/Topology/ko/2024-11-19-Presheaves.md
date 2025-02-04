@@ -50,7 +50,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 위상공간 $X$에 대하여, contravariant functor $\mathscr{F}:\Open(X) \rightarrow \Set$을 $X$ 위에 정의된 집합들의 *presheaf<sub>준층</sub>*라 부른다.
+<ins id="def2">**정의 2**</ins> 위상공간 $X$에 대하여, contravariant functor $\mathscr{F}:\Open(X)^\op \rightarrow \Set$을 $X$ 위에 정의된 집합들의 *presheaf<sub>준층</sub>*라 부른다.
 
 </div>
 
@@ -75,11 +75,11 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 
 - 임의의 열린집합 $U\subseteq X$에 대하여, $\mathscr{F}(U)$의 원소들을 $U$에서의 *section*이라 부른다. 특별히 $\mathscr{F}(X)$의 원소들은 *global section*이라 부른다.
 - 열린집합 $U\subseteq V$에 대하여, $\rho_{VU}:\mathscr{F}(V) \rightarrow \mathscr{F}(U)$를 $V$에서 $U$로의 *restriction map*이라 부른다. 
-- 특별히 열린집합들 $U\subseteq V$와 $f\in \mathscr{F}(V)$에 대하여, $\rho_{UV}(f)\in \mathscr{F}(U)$를 간단히 $f\vert_U$로 표기한다.
+- 특별히 열린집합들 $U\subseteq V$와 $s\in \mathscr{F}(V)$에 대하여, $\rho_{UV}(f)\in \mathscr{F}(U)$를 간단히 $s\vert_U$로 표기한다.
 
 </div>
 
-한편 위의 [정의 2](#def2)에서, $\Set$은 적절한 카테고리, 예를 들어 $\Ab$와 같은 카테고리로 바꿀 수도 있다. 가령 [예시 3](#ex3)에서 $Y=\mathbb{R}$이었다면, $\mathbb{R}$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $\mathscr{F}(U)$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $\mathscr{F}$를 $X$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $\mathscr{F}: \Open(X) \rightarrow \mathcal{A}$를 $\mathcal{A}$-valued presheaf라 부르기로 한다. Presheaf 중 위의 gluing condition ([보조정리 1](#lem1))을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
+한편 위의 [정의 2](#def2)에서, $\Set$은 적절한 카테고리, 예를 들어 $\Ab$와 같은 카테고리로 바꿀 수도 있다. 가령 [예시 3](#ex3)에서 $Y=\mathbb{R}$이었다면, $\mathbb{R}$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $\mathscr{F}(U)$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $\mathscr{F}$를 $X$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $\mathscr{F}: \Open(X)^\op \rightarrow \mathcal{A}$를 $\mathcal{A}$-valued presheaf라 부르기로 한다. Presheaf 중 위의 gluing condition ([보조정리 1](#lem1))을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
 
 ## 준층의 예시들
 
@@ -139,15 +139,15 @@ $$\mathscr{F}_x=\varinjlim_{x\in U}\mathscr{F}(U)$$
 
 특히 $\mathscr{F}$가 complete category valued presheaf라면 $\mathscr{F}_x$가 항상 잘 정의된다. 한편 concrete category에서 limit의 표현을 직접적으로 나타내보면
 
-$$\mathscr{F}_x=\{(f,U):x\in U\in\mathscr{T},f\in\mathscr{F}(U)\}/\mathnormal{\sim}$$
+$$\mathscr{F}_x=\{(s,U):x\in U\in\mathscr{T},s\in\mathscr{F}(U)\}/\mathnormal{\sim}$$
 
 이고, 여기서 동치관계 $\sim$은 
 
-$$(f,U)\sim(g,V)\iff\text{$\exists$ open neighborhood $W\subseteq U\cap V$ of $x$ satisfying $\rho_{UW}(f)=\rho_{VW}(g)$}$$
+$$(s,U)\sim(t,V)\iff\text{$\exists$ open neighborhood $W\subseteq U\cap V$ of $x$ satisfying $\rho_{UW}(s)=\rho_{VW}(t)$}$$
 
-을 통해 정의된다. 즉 직관적으로 $\mathscr{F}_x$의 원소 $(f,U)$들은 $x$에서의 함숫값 $f(x)$와, $x$ 근방에서 $f$의 국소적인 정보[^1]를 추가로 갖고 있는 대상이라 생각할 수 있다.
+을 통해 정의된다. 즉 직관적으로 $\mathscr{F}_x$의 원소 $(s,U)$들은 $x$에서의 함숫값 $s(x)$와, $x$ 근방에서 $s$의 국소적인 정보[^1]를 추가로 갖고 있는 대상이라 생각할 수 있다.
 
-편의상 임의의 $f\in \mathscr{F}(U)$에 대하여, $f$의 $\mathscr{F}(U) \rightarrow \mathscr{F}_x$에 의한 image를 $f_x$로 적는다. 
+편의상 임의의 $s\in \mathscr{F}(U)$에 대하여, $s$의 $\mathscr{F}(U) \rightarrow \mathscr{F}_x$에 의한 image를 $s_x$로 적는다. 
 
 ## 준층들 사이의 사상
 
