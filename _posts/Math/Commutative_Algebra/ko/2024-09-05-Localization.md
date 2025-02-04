@@ -12,7 +12,7 @@ sidebar:
     nav: "commutative_algebra-ko"
 
 date: 2024-09-05
-last_modified_at: 2024-10-16
+last_modified_at: 2025-02-02
 weight: 2
 
 ---
@@ -128,17 +128,17 @@ Ring의 localization은 다음과 같은 universal property를 갖는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Ring $A,B$와 $A$의 multiplicative subset $S$를 고정하자. 만일 ring homomorphism $f:A \rightarrow B$에 의한 $S$의 image $f(S)\subseteq B$가 $f(S)\subseteq B^\times$를 만족한다면, 유일한 ring homomorphism $\tilde{f}: S^{-1}A \rightarrow B$가 존재하여 $\tilde{f}\circ\epsilon=f$가 성립한다. 
+<ins id="prop6">**명제 6**</ins> Ring $A,B$와 $A$의 multiplicative subset $S$를 고정하자. 만일 ring homomorphism $f:A \rightarrow B$에 의한 $S$의 image $f(S)\subseteq B$가 $f(S)\subseteq B^\times$를 만족한다면, 유일한 ring homomorphism $\overline{f}: S^{-1}A \rightarrow B$가 존재하여 $\overline{f}\circ\epsilon=f$가 성립한다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-주어진 조건을 만족하는 $f$가 주어졌다 하자. 만일 주어진 조건을 만족하는 $\tilde{f}: S^{-1}A \rightarrow B$가 존재한다면, 임의의 $a/s\in S^{-1}A$에 대하여
+주어진 조건을 만족하는 $f$가 주어졌다 하자. 만일 주어진 조건을 만족하는 $\overline{f}: S^{-1}A \rightarrow B$가 존재한다면, 임의의 $a/s\in S^{-1}A$에 대하여
 
-$$\tilde{f}\left(\frac{a}{s}\right)=\tilde{f}\left(\frac{a}{1}\frac{1}{s}\right)=\tilde{f}(\epsilon(a)\epsilon(s)^{-1})=\tilde{f}(\epsilon(a))\tilde{f}(\epsilon(s)^{-1})=f(a)f(s)^{-1}$$
+$$\overline{f}\left(\frac{a}{s}\right)=\overline{f}\left(\frac{a}{1}\frac{1}{s}\right)=\overline{f}(\epsilon(a)\epsilon(s)^{-1})=\overline{f}(\epsilon(a))\overline{f}(\epsilon(s)^{-1})=f(a)f(s)^{-1}$$
 
-이어야 하므로 $\tilde{f}$가 존재한다면 위의 식에 의해 유일하게 결정된다. 이제 위의 식 $\tilde{f}(a/s)=f(a)f(s)^{-1}$으로 정의한 $\tilde{f}: S^{-1} \rightarrow B$가 ring homomorphism임을 보이면 되고, 이는 단순한 계산에 불과하다.
+이어야 하므로 $\overline{f}$가 존재한다면 위의 식에 의해 유일하게 결정된다. 이제 위의 식 $\overline{f}(a/s)=f(a)f(s)^{-1}$으로 정의한 $\overline{f}: S^{-1}A \rightarrow B$가 ring homomorphism임을 보이면 되고, 이는 단순한 계산에 불과하다.
 
 </details>
 
@@ -217,7 +217,7 @@ $$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> Ring $A$와 prime ideal $\mathfrak{p}$에 대하여, field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$를 $A$의 $\mathfrak{p}$에서의 *residue field*라 부르고 $\kappa(\mathfrak{p})$로 적는다. 
+<ins id="def10">**정의 10**</ins> Ring $A$와 prime ideal $\mathfrak{p}$에 대하여, field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$를 $A$의 $\mathfrak{p}$에서의 *residue field<sub>잉여류체</sub>*라 부르고 $\kappa(\mathfrak{p})$로 적는다. 
 
 </div>
 

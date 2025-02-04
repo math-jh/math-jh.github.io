@@ -1,12 +1,12 @@
 ---
 
-title: "스펙트럼의 위상구조"
+title: "스펙트럼"
 excerpt: ""
 
 categories: [Math / Algebraic Geometry]
-permalink: /ko/math/algebraic_geometry/topology_of_spectrums
+permalink: /ko/math/algebraic_geometry/spectrums
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Topology_of_spectrums.png
+    overlay_image: /assets/images/Math/Algebraic_Geometry/Spectrums.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_geometry-ko"
@@ -53,7 +53,7 @@ $$\Spec\phi: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\m
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Ring $A$와 그 spectrum $\Spec A$를 고정하자. $A$의 임의의 부분집합 $S$에 대하여, $\Spec A$의 부분집합 $Z(S)$을 다음 식
+<ins id="def3">**정의 3**</ins> Ring $A$와 그 spectrum $\Spec A$를 고정하자. $A$의 공집합이 아닌 임의의 부분집합 $S$에 대하여, $\Spec A$의 부분집합 $Z(S)$을 다음 식
 
 $$Z(S)=\{\mathfrak{p}\in\Spec A: S\subseteq \mathfrak{p}\}$$
 
@@ -111,7 +111,7 @@ $\Spec A$ 위에 위상구조를 정의할 때 가장 중요한 것은 다음의
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $\mathfrak{a}$ 혹은 $\mathfrak{b}$를 포함하는 prime ideal $\mathfrak{p}$는 그보다 작은 ideal $\mathfrak{ab}$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $\mathfrak{p}\supset \mathfrak{ab}$라 가정하자. 만일 $\mathfrak{p}\not\supseteq \mathfrak{b}$라 하면, $b\not\in \mathfrak{p}$인 $\mathfrak{b}$의 원소 $b$를 찾을 수 있다. 한편, 임의의 $a\in \mathfrak{a}$에 대하여, $ab\in \mathfrak{ab}\subseteq \mathfrak{p}$이고, 앞선 가정에 의해 $b\not\in \mathfrak{p}$이므로 반드시 $a\in \mathfrak{p}$이고 따라서 $a\subseteq \mathfrak{p}$가 성립한다.
+1. $\mathfrak{a}$ 혹은 $\mathfrak{b}$를 포함하는 prime ideal $\mathfrak{p}$는 그보다 작은 ideal $\mathfrak{ab}$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $\mathfrak{p}\supset \mathfrak{ab}$라 가정하자. 만일 $\mathfrak{p}\not\supseteq \mathfrak{b}$라 하면, $b\not\in \mathfrak{p}$인 $\mathfrak{b}$의 원소 $b$를 찾을 수 있다. 한편, 임의의 $a\in \mathfrak{a}$에 대하여, $ab\in \mathfrak{ab}\subseteq \mathfrak{p}$이고, 앞선 가정에 의해 $b\not\in \mathfrak{p}$이므로 반드시 $a\in \mathfrak{p}$이고 따라서 $\mathfrak{a}\subseteq \mathfrak{p}$가 성립한다.
 2. 이는 $\sum \mathfrak{a}_i$가 ideal들 $\mathfrak{a}_i$ 각각을 모두 포함하는 ideal 중 가장 작은 것으로 정의되므로 자명하다.
 3. [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8).
 
@@ -124,6 +124,8 @@ $\Spec A$ 위에 위상구조를 정의할 때 가장 중요한 것은 다음의
 <ins id="def7">**정의 7**</ins> 위와 같이 정의된 $\Spec A$의 위상을 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다.
 
 </div>
+
+Zariski topology는 일반적으로 우리가 좋다고 생각했던 위상이 아니다. 가령 임의의 integral domain $A$에 대하여, $(0)$은 그 자체로 prime ideal이며, 여기에 포함된 $A$의 공집합이 아닌 부분집합도 $(0)$ 뿐이다. 즉, $(0)\in\Spec A$를 포함하는 닫힌집합은 오직 $Z(0)=\Spec A$ 뿐이며, 따라서 $A$가 field가 아닌 이상 한점집합 $\\{(0)\\}$은 닫힌집합이 아니다. 특히 Zariski topology는 일반적으로 Hausdorff space가 아니다. 그러나 이 카테고리의 글들에서 논의를 진행해 나갈수록 우리는 이 구조에서 친숙한 기하학적인 개념들을 발견하게 될 것이다. 
 
 앞서 우리는 [명제 2](#prop2)에서 $\Spec$을 functor $\Spec: \cRing^\op \rightarrow \Set$으로 취급할 수 있음을 살펴보았다. 뿐만 아니라, $\Spec$은 $\cRing^\op$에서 $\Top$으로의 functor이기도 하다.
 
@@ -179,9 +181,15 @@ $$\mathfrak{a}\subseteq \phi^{-1}(\phi(\mathfrak{a}))\subseteq\phi^{-1}(\mathfra
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> Ring $A$의 임의의 원소 $f\in A$에 대하여, $V(f)$의 $\Spec A$에서의 complement $\Spec A\setminus Z(f)$를 $D(f)$라 적는다. 이러한 꼴의 열린집합을 *principal open set*이라 부른다. 
+<ins id="def10">**정의 10**</ins> Ring $A$의 임의의 원소 $f\in A$에 대하여, $Z(f)$의 $\Spec A$에서의 complement $\Spec A\setminus Z(f)$를 $D(f)$라 적는다. 이러한 꼴의 열린집합을 *principal open set*이라 부른다. 
 
 </div>
+
+이제 임의의 $f\in A$에 대하여, $S_f=\\{1,f,f^2,\ldots\\}$라 하고 $A_f=S_f^{-1}A$로 정의하자. 그럼 [명제 9](#prop9)에 의하여 $\Spec A_f$의 $\Spec \epsilon$에 의한 $\Spec A$에서의 image는 열린집합이다. 그럼 이 열린집합이 정확히 $D(f)$와 집합으로서 같은 것은
+
+$$\mathfrak{p}\not\in Z(f)\iff (f)\not\subseteq \mathfrak{p} \iff f\not\in \mathfrak{p}\iff f^k\not\in \mathfrak{p}\text{ for all $k\geq 0$}\iff S_f\cap \mathfrak{p}=\emptyset$$
+
+와 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의해 자명하다. 뿐만 아니라, $D(f)$가 $\Spec A_f$와 같은 위상구조를 갖는다는 것 또한 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)의 대응관계가 포함관계를 보존한다는 것으로부터 얻어진다. 
 
 <div class="proposition" markdown="1">
 
@@ -201,13 +209,42 @@ $$\Spec A\setminus Z(S)=\Spec A\setminus Z\left(\sum_{f\in S} (f)\right)=\Spec A
 
 그럼 이 보조정리와 유사한 계산을 통해 $D(fg)=D(f)\cap D(g)$임을 확인할 수 있다. 다만, 이 계산은 [보조정리 6](#lem6)의 첫째 결과를 사용하므로, 일반적으로 무한한 index에 대해 확장할 수는 없다. 
 
+이와 별개로, 우리는 $\Spec A$가 항상 [\[위상수학\] §옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1)의 조건을 만족한다는 것을 보일 수 있다. 그러나 일반적으로 우리가 compact space에 기대하는 많은 성질들은 Hausdorff 조건 또한 요구하는 경우가 많고 ([\[위상수학\] §옹골공간, §§옹골 하우스도르프 공간](/ko/math/topology/compact_spaces#옹골-하우스도르프-공간)) Zariski topology는 일반적으로 Hausdorff space가 되지 않으므로, 우리는 이를 quasi-compact라 부르기로 한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="lem12">**보조정리 12**</ins> $\Spec A$는 위상공간으로서 quasi-compact space이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[보조정리 11](#lem11)로부터 우리는 $\Spec A$를 덮는 principal open set들의 모임 $\\{D(f_i)\\}\_{i\in I}$이 주어질 때마다, $I$의 유한한 부분집합 $J$가 존재하여 여전히 $\Spec A=\bigcup\_{j\in J} D(f\_j)$임을 보이면 된다. 
+
+주어진 가정 $\Spec A=\bigcup\_{i\in I} D(f_i)$로부터 우리는
+
+$$\emptyset=\Spec A\setminus\bigcup_{i\in I} D(f_i)=\bigcap_{i\in I}(\Spec A\setminus D(f_i))=\bigcap_{i\in I} Z(f_i)$$
+
+임을 안다. 한편, [보조정리 6](#lem6)으로부터
+
+$$\emptyset=\bigcap_{i\in I} Z(f_i)=Z\left(\sum_{i\in I}(f_i)\right)$$
+
+이고, 만일 $\sum (f_i)$가 $A$의 proper ideal이라면 이를 포함하는 maximal ideal이 $\bigcap\_{i\in I} Z(f_i)$의 원소가 될 것이므로, 위의 식은 $\sum(f_i)=(1)$과 동치이다. 이제 $1\in\sum(f_i)$이므로, 적당한 유한집합 $J\subseteq I$와 $A$의 원소들의 family $(a\_j)\_{j\in J}$가 존재하여 $\sum_{j\in J} a_jf_j=1$이도록 할 수 있다. 즉
+
+$$Z\left(\sum_{j\in J} (f_j)\right)=\emptyset$$
+
+이고, 이로부터 위의 계산들을 거꾸로 뒤집으면 원하는 결과를 얻는다. 
+
+</details>
+
+
 ## 갈루아 대응
 
 정의에 의해 $Z$는 $A$의 ideal을 받아 $\Spec A$의 닫힌집합을 내놓는 함수이다. 거꾸로 다음을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> 임의의 부분집합 $T\subseteq \Spec A$에 대하여, 
+<ins id="def13">**정의 13**</ins> 임의의 부분집합 $T\subseteq \Spec A$에 대하여, 
 
 $$I(T)=\{f\in A:\text{$f\in \mathfrak{p}$ for all $\mathfrak{p}\in T$}\}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime in $T$} \mathfrak{p}$$
 
@@ -235,7 +272,7 @@ $$Z(I(Z(S)))=Z(S),\qquad I(Z(I(T)))=I(T)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> Closure operator $IZ: \mathcal{P}(A) \rightarrow \mathcal{P}(A)$, $ZI: \mathcal{P}(\Spec A) \rightarrow \mathcal{P}(\Spec A)$에 대하여, 다음이 성립한다.
+<ins id="prop14">**명제 14**</ins> Closure operator $IZ: \mathcal{P}(A) \rightarrow \mathcal{P}(A)$, $ZI: \mathcal{P}(\Spec A) \rightarrow \mathcal{P}(\Spec A)$에 대하여, 다음이 성립한다.
 
 1. $IZ(S)=\sqrt{(S)}$
 2. $ZI(T)=\cl(T)$
@@ -265,32 +302,46 @@ $$Z(I(Z(S)))=Z(S),\qquad I(Z(I(T)))=I(T)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm14">**정리 14**</ins> Ring $A$의 radical ideal들과, $\Spec A$의 닫힌집합들 사이의 Galois correspondence가 존재한다. 
+<ins id="thm15">**정리 15**</ins> Ring $A$의 radical ideal들과, $\Spec A$의 닫힌집합들 사이의 Galois correspondence가 존재한다. 
 
 </div>
 
 ## 고전적인 대수기하학
 
-다음 글에서 structure sheaf를 정의하기 전에, 간략하게 고전적인 대수기하학을 살펴보는 것이 도움이 된다. 남은 부분에서 우리는 algebraically closed field $\mathbb{k}$를 고정한다. 그럼 field $\mathbb{k}$ 위에 정의된 *affine $n$-space<sub>아핀공간</sub>*는 다음 집합
+다음 글에서 structure sheaf를 정의하기 전에, 간략하게 고전적인 대수기하학을 살펴보는 것이 도움이 된다. 남은 부분에서 우리는 algebraically closed field $\mathbb{k}$를 고정한다. 그럼 field $\mathbb{k}$ 위에 정의된 (classical) *affine $n$-space<sub>아핀공간</sub>*는 다음 집합
 
-$$\mathbb{A}_\mathbb{k}^n=\{(x_1,\ldots, x_n)ㅣ x_1,\ldots, x_n\in \mathbb{k}\}$$
+$$\mathbb{A}_{\mathbb{k},\text{classical}}^n=\{(x_1,\ldots, x_n)ㅣ x_1,\ldots, x_n\in \mathbb{k}\}$$
 
-을 의미한다. 이 때, $\mathbb{A}_\mathbb{k}^n$의 각 원소 $x=(x_1,\ldots, x_n)$을 *점<sub>point</sub>*라 하고, 각각의 $x_i$들을 $x$의 *$i$번째 좌표<sub>$i$-th coordinate</sub>*라 부른다. 
+을 의미한다. 이 때, $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$의 각 원소 $x=(x_1,\ldots, x_n)$을 *점<sub>point</sub>*라 하고, 각각의 $x_i$들을 $x$의 *$i$번째 좌표<sub>$i$-th coordinate</sub>*라 부른다. 
 
-이제 $\mathbb{k}$를 계수로 갖는 다항식들로 이루어진 polynomial ring $A=\mathbb{k}[\x_1,\ldots,\x_n]$를 생각하자. 그럼 임의의 $x=(x_1,\ldots, x_n)\in \mathbb{A}\_\mathbb{k}^n$에 대하여, $A$의 ideal $\mathfrak{m}_x$를
+이제 $\mathbb{k}$를 계수로 갖는 다항식들로 이루어진 polynomial ring $A=\mathbb{k}[\x_1,\ldots,\x_n]$를 생각하자. 그럼 임의의 $x=(x_1,\ldots, x_n)\in \mathbb{A}\_{\mathbb{k},\text{classical}}^n$에 대하여, $A$의 ideal $\mathfrak{m}_x$를
 
 $$\mathfrak{m}_x=(\x_1-x_1,\ldots, \x_n-x_n)\subseteq \mathbb{k}[\x_1,\ldots, \x_n]$$
 
-으로 정의할 수 있으며 [\[가환대수학\] §영점정리](/ko/math/commutative_algebra/nullstellensatz)에서 우리는 이것이 $A=\mathbb{k}[\x_1,\ldots, \x_n]$의 *모든* maximal ideal이라는 것을 증명했다. 
+으로 정의할 수 있으며 [\[가환대수학\] §영점정리](/ko/math/commutative_algebra/nullstellensatz)에서 우리는 이것이 $A=\mathbb{k}[\x_1,\ldots, \x_n]$의 *모든* maximal ideal이라는 것을 증명했다. 따라서 $A$의 maximal ideal들의 모임을 $\mSpec A$라 적으면, $\mathbb{A}\_{\mathbb{k},\text{classical}}^n= \mSpec A$이다. 
 
-그럼 임의의 $f\in A$를 다음의 식
+한편 우리는 임의의 $f\in A$를 다음의 식
 
-$$\mathbb{A}_\mathbb{k}^n \rightarrow \mathbb{k};\qquad (x_1,\ldots, x_n)\mapsto f(x_1,\ldots, x_n)$$
+$$\mathbb{A}\_{\mathbb{k},\text{classical}}^n \rightarrow \mathbb{k};\qquad (x_1,\ldots, x_n)\mapsto f(x_1,\ldots, x_n)$$
 
-을 통해 $\mathbb{A}\_\mathbb{k}^n$에서 $\mathbb{k}$로의 함수로 취급할 수 있다. 이제 $A$의 임의의 부분집합 $T$에 대하여, $\mathbb{A}\_\mathbb{k}^n$의 부분집합 $Z(T)$를 다음의 식
+을 통해 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$에서 $\mathbb{k}$로의 함수로 취급할 수 있다. 그럼 [정의 3](#def3)과 비슷하게 $A$의 임의의 집합 $S$에 대하여 
 
-$$Z(T)=\{(x_1,\ldots, x_n): \text{$f(x_1,\ldots, x_n)=0$ for all $f\in T$}\}$$
+$$Z(S)=\{(x_1,\ldots, x_n): \text{$f(x_1,\ldots, x_n)=0$ for all $f\in S$}\}$$
 
-으로 정의하자. 즉 $Z(T)$는 $\mathbb{A}_\mathbb{k}^n$ 위에 정의된 함수들의 모임 $T$의 공통근들으로 생각할 수 있다. 
+으로 정의하면 $Z(S)$는 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$ 위에 정의된 함수들의 모임 $S$의 공통근들으로 생각할 수 있으며, [보조정리 6](#lem6)과 비슷한 계산을 통해 $Z(S)$들을 닫힌집합으로 갖는 위상구조를 $\mSpec A$ 위에 정의할 수 있다. 
 
-한편, 부분집합 $T$로 생성되는 $A$의 ideal $\mathfrak{a}$를 생각하면, $Z(T)=Z(\mathfrak{a})$임이 자명하다. 한편 $A$는 noetherian이므로 ([##ref##](Hilbert_basis_thm)) 이러한 $\mathfrak{a}$는 유한히 많은 원소들 $f_1,\ldots, f_r$로 생성될 수 있고 따라서 임의의 $Z(T)$는 항상 유한히 많은 함수들의 공통근들의 모임으로 쓸 수 있다. 
+한편, [정의 12](#def12)와 마찬가지로 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$의 부분집합 $T$에 대하여
+
+$$I(T)=\{f\in A: \text{$f(x_1,\ldots, x_n)=0$ for all $x\in T$}\}$$
+
+라 하면, [정리 14](#thm14)에서 그러하듯이 $I$와 $Z$가 antitone Galois connection을 정의하는 것을 안다. $\mSpec A$에서의 [명제 13](#prop13)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋명제 4](/ko/math/commutative_algebra/nullstellensatz#prop4)로부터 $\mathbb{k}[\x_1,\ldots, \x_n]$이 Jacobson이기 때문에 얻어진다. 
+
+앞서 우리는 $A$의 원소들, 즉 다항식이 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$ 위의 함수처럼 행동한다는 것을 보았다. 더 일반적으로, principal open set $D(g)$ 위에서는 $f/g$ 또한 잘 정의되며, 대수기하학에서는 이러한 함수에 관심이 있다. 이러한 형태의 함수는 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$ 전체에서는 잘 정의되지 않으며, 때문에 우리는 모든 점에서, 적당한 근방을 잡아 $f/g$의 꼴로 나타낼 수 있는 함수들에 대해 살펴볼 것이다. 
+
+---
+**참고문헌**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).  
+
+---
