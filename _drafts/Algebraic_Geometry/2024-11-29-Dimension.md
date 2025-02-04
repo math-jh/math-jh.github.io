@@ -19,7 +19,7 @@ weight: 13
 
 ## 기본 정의들
 
-스킴은 위상공간이므로, 위상공간으로서의 Krull dimension이 정의된다. ([\[위상수학\] §차원, ⁋정의 9](/ko/math/topology/dimension#def9)) 그럼 $\Spec A$의 irreducible closed subset과 $A$의 prime ideal 사이의 일대일 대응이 있으므로, 다음 명제는 자명하다. 
+스킴은 위상공간이므로, 위상공간으로서의 Krull dimension이 정의된다. ([\[위상수학\] §차원, ⁋정의 10](/ko/math/topology/dimension#def10)) 그럼 $\Spec A$의 irreducible closed subset과 $A$의 prime ideal 사이의 일대일 대응이 있으므로, 다음 명제는 자명하다. 
 
 <div class="proposition" markdown="1">
 
@@ -29,7 +29,7 @@ weight: 13
 
 위상수학에서와 마찬가지로, 공간이 irreducible이 아닌 경우는 다소 주의를 기울일 필요가 있다. 때문에 대부분의 명제는 전체공간이 irreducible인 것으로 생각하는 것이 더 좋다.
 
-한편 [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 마찬가지 이유로 다음이 성립한다. 
+한편 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)와 마찬가지 이유로 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 

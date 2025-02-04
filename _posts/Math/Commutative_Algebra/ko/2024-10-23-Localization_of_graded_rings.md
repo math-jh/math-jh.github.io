@@ -49,7 +49,7 @@ $$xa \mathfrak{b}\subseteq x \mathfrak{a}\subseteq \mathfrak{a}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem1">**보조정리 1**</ins> Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 대하여 다음이 성립한다. 다음이 성립한다.
+<ins id="lem2">**보조정리 2**</ins> Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 대하여 다음이 성립한다. 다음이 성립한다.
 
 1. $\sqrt{\mathfrak{a}}$는 homogeneous ideal이다. 
 2. $(\mathfrak{a}:\mathfrak{b})$는 homogeneous ideal이다. 
@@ -83,7 +83,7 @@ $$xa \mathfrak{b}\subseteq x \mathfrak{a}\subseteq \mathfrak{a}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> $A$의 multiplicative subset $S$의 모든 원소가 homogeneous라 하자. 그럼 임의의 homogeneous element $x\in M_n$과 $s\in S$에 대하여, $x/s\in S^{-1}M$를 degree $n-\deg s$에 있는 것으로 정의하면 $S^{-1}M$는 $\mathbb{Z}$-graded $A$-module의 구조를 갖는다. 만일 $M=A$인 경우, 이 grading은 $S^{-1}A$ 위에 정의된 곱셈에 대하여도 잘 작동하여 $S^{-1}A$를 $\mathbb{Z}$-graded ring으로 만든다.
+<ins id="prop3">**명제 3**</ins> $A$의 multiplicative subset $S$의 모든 원소가 homogeneous라 하자. 그럼 임의의 homogeneous element $x\in M_n$과 $s\in S$에 대하여, $x/s\in S^{-1}M$를 degree $n-\deg s$에 있는 것으로 정의하면 $S^{-1}M$는 $\mathbb{Z}$-graded $A$-module의 구조를 갖는다. 만일 $M=A$인 경우, 이 grading은 $S^{-1}A$ 위에 정의된 곱셈에 대하여도 잘 작동하여 $S^{-1}A$를 $\mathbb{Z}$-graded ring으로 만든다.
 
 </div>
 
@@ -93,7 +93,7 @@ $$xa \mathfrak{b}\subseteq x \mathfrak{a}\subseteq \mathfrak{a}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 위와 같은 상황에서 다음의 isomorphism
+<ins id="prop4">**명제 4**</ins> 위와 같은 상황에서 다음의 isomorphism
 
 $$S^{-1}A\cong (S^{-1}A)_0[T, T^{-1}]$$
 
@@ -143,7 +143,7 @@ $$\left(\sum_{j\geq 1} a_{j,j}(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 앞서 정의한 $(S^{-1}A)\_0$와 $(S^{-1}M)\_0$을 각각 $A$와 $M$의 *homogeneous localization<sub>동차국소화</sub>*이라 부르고, $A\_{(S)}$와 $M\_{(S)}$와 같이 표현한다.
+<ins id="def5">**정의 5**</ins> 앞서 정의한 $(S^{-1}A)\_0$와 $(S^{-1}M)\_0$을 각각 $A$와 $M$의 *homogeneous localization<sub>동차국소화</sub>*이라 부르고, $A\_{(S)}$와 $M\_{(S)}$와 같이 표현한다.
 
 </div>
 
@@ -153,11 +153,11 @@ $$\left(\sum_{j\geq 1} a_{j,j}(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 
 
 $$M^{(d)}=\bigoplus_{k\geq 0} M_{kd}$$
 
-으로 적기로 한다. 그럼 다음은 [명제 3](#prop3)의 일반화이다.
+으로 적기로 한다. 그럼 다음은 [명제 4](#prop4)의 일반화이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> Degree $d$의 homogeneous element $f\in A$를 고정하자. 그럼 다음의 isomorphism
+<ins id="prop6">**명제 6**</ins> Degree $d$의 homogeneous element $f\in A$를 고정하자. 그럼 다음의 isomorphism
 
 $$M_{(f)}\cong M^{(d)}/(f-1)M^{(d)}$$
 
@@ -177,17 +177,17 @@ $$u_k:M_{kd} \rightarrow M_{(f)};\qquad x\mapsto x/f^k$$
 
 만일 $\deg f=1$이라면 위의 isomorphism은 $M_{(f)}\cong M/(f-1)M$으로 쓸 수 있다.
 
-한편, $S$가 degree $1$의 원소를 하나 이상 포함한다 하면 [명제 3](#prop3)을 각각의 원소에 적용하여 다음을 얻는다. 
+한편, $S$가 degree $1$의 원소를 하나 이상 포함한다 하면 [명제 4](#prop4)을 각각의 원소에 적용하여 다음을 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> $S$가 degree $1$의 원소를 적어도 하나 포함하는 homogeneous multiplicative set이라면 $S^{-1}A\cong (S^{-1}A)_0[T,T^{-1}]$이 성립한다.
+<ins id="prop7">**명제 7**</ins> $S$가 degree $1$의 원소를 적어도 하나 포함하는 homogeneous multiplicative set이라면 $S^{-1}A\cong (S^{-1}A)_0[T,T^{-1}]$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이는 본질적으로 [명제 3](#prop3)과 동일한 증명으로, $S$에 속하는 degree $1$의 원소 $f$를 택하여 [명제 3](#prop3)의 증명과 동일한 방식으로 homomorphism $(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$을 정의하면 된다. 그럼 이 homomorphism의 kernel이 $(T_1T_2-1)$이 되는 것은 동일한 증명으로 보일 수 있으며, 이 homomorphism이 surjective인 것은 임의의 degree $d$짜리 $S^{-1}A$의 원소 $a/s$를 다음의 꼴
+이는 본질적으로 [명제 4](#prop4)과 동일한 증명으로, $S$에 속하는 degree $1$의 원소 $f$를 택하여 [명제 4](#prop4)의 증명과 동일한 방식으로 homomorphism $(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$을 정의하면 된다. 그럼 이 homomorphism의 kernel이 $(T_1T_2-1)$이 되는 것은 동일한 증명으로 보일 수 있으며, 이 homomorphism이 surjective인 것은 임의의 degree $d$짜리 $S^{-1}A$의 원소 $a/s$를 다음의 꼴
 
 $$\frac{a}{s}=\frac{af^d}{s}\frac{1}{f^d}$$
 
@@ -203,7 +203,7 @@ $$S^{-1}A\cong A_{(\mathfrak{p})}[T,T^{-1}]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> 위와 같은 상황에서, homomorphism $p:A \rightarrow A/(f-1)$에 의한 $\mathfrak{p}$의 image를 $\mathfrak{q}$라 하자. 그럼 $\mathfrak{q}$는 prime ideal이며, 다음 식
+<ins id="prop8">**명제 8**</ins> 위와 같은 상황에서, homomorphism $p:A \rightarrow A/(f-1)$에 의한 $\mathfrak{p}$의 image를 $\mathfrak{q}$라 하자. 그럼 $\mathfrak{q}$는 prime ideal이며, 다음 식
 
 $$A_{(\mathfrak{p})}\cong\left(A/(f-1)\right)_\mathfrak{q}$$
 
@@ -217,7 +217,7 @@ Ring homomorphism $q:A \rightarrow A/\mathfrak{p}$를 생각하고, $q$에 의�
 
 $$\frac{A/(f-1)}{\mathfrak{q}}\cong \frac{A/\mathfrak{p}}{(\bar{f}-1)}$$
 
-이며, [명제 5](#prop5)에 의하여 우변은 다시 $(A/\mathfrak{p})[f^{-1}]_0$과 isomorphic하다. 그런데 $\mathfrak{p}$가 prime ideal이므로, $A/\mathfrak{p}$는 integral domain이고 따라서 localization $(A/\mathfrak{p})[f^{-1}]$ 또한 integral domain이고, 따라서 $(A/\mathfrak{p})[f^{-1}]_0$도 integral domain이다. 이로부터 $\mathfrak{q}$가 $A/(f-1)$의 prime ideal인 것을 안다. 편의상 $\mathfrak{a}=(f-1)$라 적으면, 원하는 isomorphism은 다음의 homomorphism
+이며, [명제 6](#prop6)에 의하여 우변은 다시 $(A/\mathfrak{p})[f^{-1}]_0$과 isomorphic하다. 그런데 $\mathfrak{p}$가 prime ideal이므로, $A/\mathfrak{p}$는 integral domain이고 따라서 localization $(A/\mathfrak{p})[f^{-1}]$ 또한 integral domain이고, 따라서 $(A/\mathfrak{p})[f^{-1}]_0$도 integral domain이다. 이로부터 $\mathfrak{q}$가 $A/(f-1)$의 prime ideal인 것을 안다. 편의상 $\mathfrak{a}=(f-1)$라 적으면, 원하는 isomorphism은 다음의 homomorphism
 
 $$A \overset{a\mapsto a/1}{\longrightarrow} S^{-1}A \overset{f\mapsto T}{\longrightarrow} A_{(\mathfrak{p})}[T, T^{-1}] \overset{T\mapsto 1}{\longrightarrow} A_{(\mathfrak{p})}$$
 
