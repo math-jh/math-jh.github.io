@@ -58,7 +58,7 @@ $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
 <ins id="lem3">**보조정리 3**</ins> 고정된 원소 $f\in A$에 대하여, 
 
-$$S(f)=\{h\in A: D(f)\subseteq D(h)\}$$
+$$S(f)=\{h\in A\mid D(f)\subseteq D(h)\}$$
 
 으로 정의하자. 그럼 $S(f)$는 $A$의 multiplicative subset이다. 
 
@@ -194,7 +194,7 @@ $$f_i^{m_i}s=0$$
 
 $$\Spec A=\bigcup_{i=1}^n D(f_i^{m_i})$$
 
-이고, 이로부터 $1=\sum_{i=1}^n a_i f_i^{m_i}$이도록 하는 $a_i\in A$들이 존재한다. (참고: [§스펙트럼, ⁋보조정리 12](/ko/math/algebraic_geometry/spectrums#lem12)의 증명)
+이고, 이로부터 $1=\sum_{i=1}^n a_i f_i^{m_i}$이도록 하는 $a_i\in A$들이 존재한다. (참고: [§스펙트럼, ⁋보조정리 12](/ko/math/algebraic_geometry/spectrums#lem12)의 증명, 혹은 [\[가환대수학\] §정수적 확장, ⁋명제 15](/ko/math/commutative_algebra/integral_extension#prop15)의 증명)
 
 따라서
 
@@ -296,7 +296,7 @@ $$A_\mathfrak{p}\cong \varinjlim_{\mathfrak{p}\not\ni f} A_f\tag{$\ast\ast$}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 대응 $A\mapsto (\Spec A, \mathscr{O}\_{\Spec A})$는 contravariant functor $\Spec: \cRing^\op \rightarrow \mathbf{LocallyRingedSpace}$를 정의한다. 
+<ins id="prop9">**명제 9**</ins> 대응 $A\mapsto (\Spec A, \mathscr{O}\_{\Spec A})$는 contravariant functor $\Spec: \cRing^\op \rightarrow \LRS$를 정의한다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -340,7 +340,7 @@ $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathscr{O}_{\Spec A, (\Spec \phi)(\mathfrak{q
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> [명제 8](#prop8)의 functor $\Spec:\cRing^\op \rightarrow \mathbf{LocallyRingedSpace}$의 essential image를 *affine scheme<sub>아핀스킴</sub>*으로 정의한다. 
+<ins id="def10">**정의 10**</ins> [명제 8](#prop8)의 functor $\Spec:\cRing^\op \rightarrow \LRS$의 essential image를 *affine scheme<sub>아핀스킴</sub>*으로 정의한다. 
 
 </div>
 
@@ -352,13 +352,13 @@ $$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\longrightarrow} B \overset{\id_B
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Functor $\Spec: \cRing^\op \rightarrow \AffSch$는 두 카테고리 사이의 equivalence이다. 
+<ins id="prop11">**명제 11**</ins> Functor $\Spec: \cRing^\op \rightarrow \LRS$는 fully faithful이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5))에 의해 $\Spec$이 full인 것만 보이면 충분하다. 임의의 두 affine scheme $(X, \mathscr{O}\_{X})$, $(Y, \mathscr{O}\_{Y})$와 이들 사이의 morphism
+ 임의의 두 affine scheme $(X, \mathscr{O}\_{X})$, $(Y, \mathscr{O}\_{Y})$와 이들 사이의 morphism
 
 $$(X, \mathscr{O}_{X}) \rightarrow (Y, \mathscr{O}_{Y})$$
 
@@ -388,6 +388,10 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 </details>
 
+따라서 $\Spec$을 $\cRing$에서 $\AffSch$로의 contravariant functor로 보면 $\Spec$은 두 카테고리 $\cRing^\op$와 $\AffSch$ 사이의 categorical equivalence이다. 뿐만 아니라, [명제 11](#prop11)에 의해 $\AffSch$는 $\LRS$의 full subcategory이다. 
+
+[\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)에 의해 $\Spec$이 full인 것만 보이면 충분하다.
+
 한편 임의의 스펙트럼 $(\Spec A, \mathscr{O}\_{\Spec A})$에 대하여, 우리는 정의에 의해 
 
 $$\mathscr{O}_{\Spec A}(A)=\mathscr{O}_{\Spec A}(D(1))\cong A$$
@@ -396,7 +400,7 @@ $$\mathscr{O}_{\Spec A}(A)=\mathscr{O}_{\Spec A}(D(1))\cong A$$
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> 임의의 locally ringed space $(X, \mathscr{O}\_X)$에 대하여, *global section functor* $\Gamma:\mathbf{LocallyRingedSpace} \rightarrow \cRing^\op$를 $X\mapsto \Gamma(X, \mathscr{O}_X)=\mathscr{O}\_X(X)$로 정의한다. 
+<ins id="def12">**정의 12**</ins> 임의의 locally ringed space $(X, \mathscr{O}\_X)$에 대하여, *global section functor* $\Gamma:\LRS \rightarrow \cRing^\op$를 $X\mapsto \Gamma(X, \mathscr{O}_X)=\mathscr{O}\_X(X)$로 정의한다.[^1] 
 
 </div>
 
@@ -404,15 +408,15 @@ $$\mathscr{O}_{\Spec A}(A)=\mathscr{O}_{\Spec A}(D(1))\cong A$$
 
 ![adjoint](/assets/images/Math/Algebraic_Geometry/Affine_schemes-11.png){:style="width:32em" class="invert" .align-center}
 
-을 사용하여도 비슷한 논증을 해 나갈 수 있으며, 이 때 결론의 $B$는 $\Gamma(X, \mathscr{O}\_X)$로 바뀌게 된다. 따라서 다음의 정리를 얻는다.
+을 사용하여도 비슷한 논증을 해 나갈 수 있으며, 이 때 결론의 $B$는 $\Gamma(X, \mathscr{O}\_X)$로 바뀌게 된다. 어차피 $\mathscr{O}_X$는 $X$에 의해 결정되는 데이터이므로, 이를 간략히 $\Gamma(X)$로만 표기하면 이로부터 다음의 정리를 얻는다.
 
 <div class="proposition" markdown="1">
 
 <ins id="thm13">**정리 13**</ins> 임의의 locally ringed space $(X, \mathscr{O}\_X)$와 ring $A$에 대하여, 다음의 natural isomorphism
 
-$$\Hom_\mathbf{LocallyRingedSpace}(X, \Spec A)\cong \Hom_{\cRing^\op}(\Gamma(X, \mathscr{O}_X), A)=\Hom_{\cRing}(A, \Gamma(X, \mathscr{O}_X))$$
+$$\Hom_\LRS(X, \Spec A)\cong \Hom_{\cRing^\op}(\Gamma(X), A)=\Hom_{\cRing}(A, \Gamma(X))$$
 
-이 존재한다. 즉, global section functor $\Gamma: \mathbf{LocallyRingedSpace} \rightarrow \cRing^\op$는 $\Spec$ functor $\Spec:\cRing^\op \rightarrow \mathbf{LocallyRingedSpace}$의 left adjoint이다. 
+이 존재한다. 즉, global section functor $\Gamma: \LRS \rightarrow \cRing^\op$는 $\Spec$ functor $\Spec:\cRing^\op \rightarrow \LRS$의 left adjoint이다. 
 
 </div>
 
@@ -423,3 +427,5 @@ $$\Hom_\mathbf{LocallyRingedSpace}(X, \Spec A)\cong \Hom_{\cRing^\op}(\Gamma(X, 
 **[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/). 
 
 ---
+
+[^1]: 일반적으로 우리는 임의의 $X$ 위의 sheaf $\mathscr{F}$에 대해 $\mathscr{F}(X)$를 $\Gamma(X, \mathscr{F})$로 표기한다. 

@@ -125,7 +125,7 @@ $$\nu(x+y)\geq \min(\nu(x), \nu(y))$$
 
 를 만족한다면 $\nu$를 *valuation<sub>값매김</sub>*이라 부른다. Valuation $\nu$에 대하여, 다음의 ring
 
-$$S=\nu^{-1}\left(\{g\in G: g\geq 0\}\right)$$
+$$S=\nu^{-1}\left(\{g\in G\mid g\geq 0\}\right)$$
 
 을 $\nu$의 *valuation ring<sub>값매김환</sub>*이라 부른다. 
 
@@ -187,7 +187,7 @@ $$\mathfrak{p}=\ann(b+\mathfrak{a})$$
 
 이며, 우리는 $\mathfrak{p}A\_\mathfrak{p}$가 $A\_\mathfrak{p}$의 principal ideal인 것을 보여야 한다. 이는 어차피 localization에 대한 것이므로, $(A,\mathfrak{p})$가 local ring이었다고 가정해도 상관 없으며, 이 때 $K$를 $A$의 field of fraction이라 하고, $\mathfrak{p}$의 inverse
 
-$$\mathfrak{p}^{-1}=\{x\in K: x \mathfrak{p}\subseteq A\}$$
+$$\mathfrak{p}^{-1}=\{x\in K\mid x \mathfrak{p}\subseteq A\}$$
 
 를 생각하면 $\mathfrak{p}^{-1}\mathfrak{p}$는 $\mathfrak{p}$와 $A$ 사이의 ideal이다. 이제 $\mathfrak{p}$의 maximality로부터 $\mathfrak{p}^{-1}\mathfrak{p}=\mathfrak{p}$이거나 $\mathfrak{p}^{-1}\mathfrak{p}=A$가 성립해야 한다. 그런데 만일 $\mathfrak{p}^{-1}\mathfrak{p}=\mathfrak{p}$라면 [§정수적 확장, ⁋보조정리 5](/ko/math/commutative_algebra/integral_extension#lem5)에 의하여 $\mathfrak{p}^{-1}$의 임의의 원소는 integral이고, 따라서 $\mathfrak{p}^{-1}\subseteq A$이다. 그런데 $\mathfrak{p}b\subseteq (a)$이므로, $b/a\in \mathfrak{p}^{-1}$이고 이로부터 $b\in (a)$가 되어 모순이다. 
 

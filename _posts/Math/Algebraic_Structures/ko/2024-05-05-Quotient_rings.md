@@ -71,7 +71,7 @@ $$(\alpha+x)(\alpha'+x')=\alpha\alpha'+x\alpha'+\alpha x'+xx'$$
 <ins id="thm3">**정리 3**</ins> Ring homomorphism $\phi:A \rightarrow B$와 kernel $\ker \phi$, 그리고 image $\im\phi$에 대하여, 다음이 성립한다.
 
 1. $\ker \phi$는 $A$의 two-sided ideal이며, $\alpha+\ker \phi \mapsto \phi(\alpha)$가 잘 정의된 isomorphism $A/\ker \phi \rightarrow \im \phi$을 정의한다.
-2. $A$의 subring $S$에 대하여, $S+\ker \phi=\{\alpha+x:\alpha\in S, x\in\ker \phi\}$는 $A$의 subring이고, $S\cap\ker \phi$는 $S$의 two-sided ideal이 되며, isomorphism $(S+\ker \phi)/\ker \phi\cong S/(S\cap \ker f)$이 존재한다. 
+2. $A$의 subring $S$에 대하여, $S+\ker \phi=\{\alpha+x\mid\alpha\in S, x\in\ker \phi\}$는 $A$의 subring이고, $S\cap\ker \phi$는 $S$의 two-sided ideal이 되며, isomorphism $(S+\ker \phi)/\ker \phi\cong S/(S\cap \ker f)$이 존재한다. 
 3. $A$의 두 two-sided ideal $\mathfrak{a}, \mathfrak{b}$가 $\mathfrak{b}\subseteq \mathfrak{a}$를 만족한다면, $\mathfrak{a}/\mathfrak{b}$는 $A/\mathfrak{b}$의 two-sided ideal이고 $(A/\mathfrak{b})/(\mathfrak{a}/\mathfrak{b})\cong A/\mathfrak{a}$이 성립한다.
 4. $A$의 two-sided ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$의 two-sided ideal의 집합과, $\mathfrak{a}$를 포함하는 $A$의 ideal들의 집합 사이의 inclusion-preserving bijection이 존재한다.
 

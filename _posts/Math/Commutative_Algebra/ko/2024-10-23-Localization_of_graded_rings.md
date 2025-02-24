@@ -25,13 +25,13 @@ $$M(n)_k=M_{n+k}\qquad\text{for all $k$}$$
 
 ## 몫아이디얼
 
-우선 임의의 ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여 다음을 정의한다.
+우선 임의의 ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, ideal quotient의 정의를 기억하자. ([§기본개념들, ⁋정의 1](/ko/math/commutative_algebra/basic_notions#def1))
 
 <div class="definition" markdown="1">
 
 <ins id="def1">**정의 1**</ins> Ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, *ideal quotient<sub>몫아이디얼</sub>*을 다음의 식
 
-$$(\mathfrak{a}:\mathfrak{b})=\{a\in A: a \mathfrak{b}\subseteq \mathfrak{a}\}$$
+$$(\mathfrak{a}:\mathfrak{b})=\{a\in A\mid a \mathfrak{b}\subseteq \mathfrak{a}\}$$
 
 으로 정의한다.
 
@@ -223,7 +223,7 @@ $$A \overset{a\mapsto a/1}{\longrightarrow} S^{-1}A \overset{f\mapsto T}{\longri
 
 과
 
-$$A\overset{a\mapsto a+(f-1)}{\longrightarrow}A/\mathfrak{a}\overset{a+(f-1)\mapsto\frac{a+(f-1)}{1}}{\longrightarrow}(A/(f-1))_\mathfrak{q}$$
+$$A\overset{a\mapsto a+\mathfrak{a}}{\longrightarrow}A/\mathfrak{a}\overset{a+\mathfrak{a}\mapsto\frac{a+\mathfrak{a}}{1}}{\longrightarrow}(A/\mathfrak{a})_\mathfrak{q}$$
 
 을 비교하여 나온다.
 

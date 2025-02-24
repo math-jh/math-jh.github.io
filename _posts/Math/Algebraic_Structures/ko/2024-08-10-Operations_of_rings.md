@@ -45,7 +45,7 @@ $$(\alpha_i)_{i\in I}(\beta_i)_{i\in I}=(\alpha_i\beta_i)_{i\in I}$$
 
 이를 통해 $\prod A_i$ 또한 ring의 구조를 갖는다. 이 때, 이 ring의 덧셈에 대한 항등원은 모든 성분이 $0$인 원소이고 곱셈에 대한 항등원은 모든 성분이 $1$인 원소이다. 한편 임의의 두 ring homomorphism $\phi,\psi:A \rightarrow B$에 대하여, 
 
-$$\Eq(\phi,\psi)=\{\alpha\in A: \phi(\alpha)=\psi(\alpha)\}$$
+$$\Eq(\phi,\psi)=\{\alpha\in A\mid \phi(\alpha)=\psi(\alpha)\}$$
 
 으로 정의하면 이것은 [§군 준동형사상, ⁋명제 2](/ko/math/algebraic_structures/group_homomorphisms#prop2)에 의해 $A$의 subgrouop이고, 뿐만 아니라 임의의 $\alpha,\beta\in\Eq(\phi,\psi)$에 대하여
 

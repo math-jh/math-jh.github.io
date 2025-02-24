@@ -73,7 +73,7 @@ $$\langle x, \xi_1+\xi_2\rangle=\langle x, \xi_1\rangle,+\langle x,\xi_2\rangle=
 
 임의의 부분집합 $T\subseteq M^\ast$에 대해서도 비슷하게 $T^\perp$를 다음 식
 
-$$T^\perp=\{x\in M: \langle x, \xi\rangle=0\text{ for all $\xi\in T$}\}$$
+$$T^\perp=\{x\in M\mid \langle x, \xi\rangle=0\text{ for all $\xi\in T$}\}$$
 
 으로 정의할 수 있는데, 여기에서는 $T^\perp$를 $M^{\ast\ast}$의 submodule이 아니라 $M$의 submodule로 정의한 것을 주의하여야 한다. 
 

@@ -69,13 +69,13 @@ $X$가 sequentially compact space라 하고, limit point를 갖지 않는 무한
 
 ## 점열의 수렴
 
-한편, [명제 5](#prop5)의 역 또한 성립하지 않는다. 이는 다소 의외라고 느껴질 수 있는데, limit point compact인 공간의 임의의 점열 $(x\_n)$이 주어졌을 때, 집합 $A=\\{x_n:n\geq 1\\}$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point를 갖기 때문이다. 문제는 집합 $A$의 limit point로 수렴하는 부분점열이 존재하지 않을수도 있다는 것에 있다. 
+한편, [명제 5](#prop5)의 역 또한 성립하지 않는다. 이는 다소 의외라고 느껴질 수 있는데, limit point compact인 공간의 임의의 점열 $(x\_n)$이 주어졌을 때, 집합 $A=\\{x_n\mid n\geq 1\\}$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point를 갖기 때문이다. 문제는 집합 $A$의 limit point로 수렴하는 부분점열이 존재하지 않을수도 있다는 것에 있다. 
 
 <div class="example" markdown="1">
 
 <ins id="ex6">**예시 6**</ins> $\mathbb{R}$의 부분집합들의 모임
 
-$$\mathcal{B}=\{(a,\infty): a\in \mathbb{R}\}$$
+$$\mathcal{B}=\{(a,\infty)\mid a\in \mathbb{R}\}$$
 
 을 생각하면 이 모임은 [§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_bases#cor6)의 조건을 만족하고 따라서 $\mathbb{R}$ 위에 위상구조를 준다.
 
@@ -83,7 +83,7 @@ $$\mathcal{B}=\{(a,\infty): a\in \mathbb{R}\}$$
 
 $$x_n=-n$$
 
-으로 정의하자. 그럼 $(x_n)$은 수렴하는 부분점열을 갖지 않는다. 반면 $A=\\{x_n:n\geq 1\\}$는 limit point를 갖는데, 가령 $-2$는 $A$의 limit point이다. 이는 $-2$를 포함하는 임의의 열린집합은 반드시 $-1\in A$ 또한 포함해야 하기 때문이다.
+으로 정의하자. 그럼 $(x_n)$은 수렴하는 부분점열을 갖지 않는다. 반면 $A=\\{x_n\mid n\geq 1\\}$는 limit point를 갖는데, 가령 $-2$는 $A$의 limit point이다. 이는 $-2$를 포함하는 임의의 열린집합은 반드시 $-1\in A$ 또한 포함해야 하기 때문이다.
 
 </div>
 
@@ -103,7 +103,7 @@ $x$의 임의의 열린근방 $U$를 택하자. 그럼 $x$로 수렴하는 점�
 
 따라서, 위상공간 $X$와 부분집합 $A$에 대하여, $A$의 *sequential closure* $\scl(A)$를 
 
-$$\scl(A)=\{x\in X: \text{there exists a sequence in $A$ that converges to $x$}\}$$
+$$\scl(A)=\{x\in X\mid \text{there exists a sequence in $A$ that converges to $x$}\}$$
 
 으로 정의하면 $\scl(A)\subseteq \cl(A)$가 성립하는 것이 당연하다. 
 
@@ -158,7 +158,7 @@ $X$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. �
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-앞서 언급한 것과 같이 임의의 점열 $(x\_n)$이 주어졌을 때, 집합 $A=\\{x_n:n\geq 1\\}$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point $x$를 갖는다. 만일 $x=x_n$가 무한히 많은 $n$에 대해 성립한다면 또 다시 자명한 이유로 $x$에 수렴하는 부분점열을 잡을 수 있으므로, $x_n=x$를 만족하는 $n$아 오직 유한 개밖에 없다고 가정할 수 있고 이는 점열의 수렴에 영향을 주지 않으므로 일반성을 잃지 않고 $x_n\neq x$가 모든 $n$에 대해 성립한다고 가정할 수 있다. 
+앞서 언급한 것과 같이 임의의 점열 $(x\_n)$이 주어졌을 때, 집합 $A=\\{x_n\mid n\geq 1\\}$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point $x$를 갖는다. 만일 $x=x_n$가 무한히 많은 $n$에 대해 성립한다면 또 다시 자명한 이유로 $x$에 수렴하는 부분점열을 잡을 수 있으므로, $x_n=x$를 만족하는 $n$아 오직 유한 개밖에 없다고 가정할 수 있고 이는 점열의 수렴에 영향을 주지 않으므로 일반성을 잃지 않고 $x_n\neq x$가 모든 $n$에 대해 성립한다고 가정할 수 있다. 
 
 한편 $X$는 first countable이므로, $x$의 countable local base $\mathcal{B}(x)$를 생각할 수 있다. $\mathcal{B}(x)$의 원소를 $B_1,B_2,\ldots$와 같이 적는다면, $B_n$을 $B_1\cap\cdots\cap B_n$으로 바꾸어 $B_{n+1}\subseteq B_n$이 모든 $n$에 대해 성립하도록 할 수 있다. 
 
@@ -212,7 +212,7 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 
 거꾸로 $x\in \cl(A)$라 하자. 그럼 $x$의 임의의 근방 $U$에 대하여, $U\cap A\neq\emptyset$이므로 다음 식
 
-$$\mathcal{N}(x)\vert_A=\{U\cap A: U\in \mathcal{N}(x)\}$$
+$$\mathcal{N}(x)\vert_A=\{U\cap A\mid U\in \mathcal{N}(x)\}$$
 
 은 filter base를 정의한다. 이제 $\mathcal{F}$를 $\mathcal{N}(x)\vert_A$에 의해 정의되는 filter라 하면 원하는 결과를 얻는다.
 

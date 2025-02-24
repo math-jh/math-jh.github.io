@@ -142,7 +142,7 @@ $$x_P=\gamma_{P,Q}e_{j_1}\wedge\cdots\wedge e_{j_{n-p}}\wedge u(e_{i_1})\wedge\c
 
 로 쓸 수 있다. 여기서 $\gamma_{P,Q}$는 이들의 순서를 바꾸며 생기는 부호이며, 구체적으로는 다음 식
 
-$$\gamma_{P,Q}=(-1)^{\lvert A\rvert},\qquad A=\{(p,q)\in P\times Q: p>q\}$$
+$$\gamma_{P,Q}=(-1)^{\lvert A\rvert},\qquad A=\{(p,q)\in P\times Q\mid p>q\}$$
 
 으로 주어진다. 그럼 $X$의 정의와 [보조정리 4](#lem4)에 의해 
 

@@ -95,7 +95,7 @@ $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
 <ins id="def5">**정의 5**</ins> Prime ideal $\mathfrak{p}\subseteq A$에 대하여, $\mathfrak{p}$의 *$n$th symbolic power* $\mathfrak{p}^{(n)}$을 다음 식
 
-$$\mathfrak{p}^{(n)}=\{a\in A:\text{$ba\in \mathfrak{p}^n$ for some $b\in A\setminus \mathfrak{p}$}\}$$
+$$\mathfrak{p}^{(n)}=\{a\in A\mid\text{$ba\in \mathfrak{p}^n$ for some $b\in A\setminus \mathfrak{p}$}\}$$
 
 으로 정의한다. 
 

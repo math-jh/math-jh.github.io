@@ -12,12 +12,12 @@ sidebar:
     nav: "commutative_algebra-ko"
 
 date: 2024-10-22
-last_modified_at: 2024-10-22
+last_modified_at: 2025-02-23
 weight: 1
 
 ---
 
-이 카테고리의 모든 글에서 등장하는 ring은 commutative ring이다. 또, 임의의 $A$-algebra는 항상 commutative associative unital $A$-algebra인 것으로 생각한다. 
+이 카테고리의 모든 글에서 등장하는 ring은 commutative ring이다. 또, 임의의 $A$-algebra는 항상 commutative associative unital $A$-algebra인 것으로 생각한다. 특히 우리는 [\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1) 이후에 associative unital $A$-algebra $E$와, ring homomorphism $A\rightarrow Z(E)$가 같은 것임을 살펴보았으므로, 앞으로의 논의에서 $A$-algebra는 ring homomorphism $A\rightarrow E$로 생각해도 충분하다. 
 
 ## 기본 정의들
 
@@ -27,7 +27,7 @@ weight: 1
 
 <ins id="def1">**정의 1**</ins> 임의의 $A$-module $M$에 대하여, $M$의 *annihilator<sub>소멸자</sub>* $\ann(M)$을 다음 식
 
-$$\ann(M)=\{a\in A: aM=0\}$$
+$$\ann(M)=\{a\in A\mid aM=0\}$$
 
 으로 정의한다. 
 
@@ -35,11 +35,11 @@ $$\ann(M)=\{a\in A: aM=0\}$$
 
 한편, ring $A$의 두 ideal $\mathfrak{a},\mathfrak{b}$에 대하여 *ideal quotient<sub>아이디얼 몫</sub>* $(\mathfrak{a}:\mathfrak{b})$를 다음 식
 
-$$(\mathfrak{a}:\mathfrak{b})=\{a\in A: a\mathfrak{b}\subseteq \mathfrak{a}\}$$
+$$(\mathfrak{a}:\mathfrak{b})=\{a\in A\mid a\mathfrak{b}\subseteq \mathfrak{a}\}$$
 
 으로 정의하고, 비슷하게 $A$-module $M$의 두 submodule $N_1,N_2$에 대하여는
 
-$$(N_1:N_2)=\{a\in A: aN_2\subseteq N_1\}$$
+$$(N_1:N_2)=\{a\in A\mid aN_2\subseteq N_1\}$$
 
 으로 정의한다. Ideal quotient $(\mathfrak{a}:\mathfrak{b})$는 대략적으로 $\mathfrak{a}/\mathfrak{b}$ 정도로 생각할 수 있으며, 임의의 $A$-module $M$에 대하여 $\ann(M)=(0:M)$이다. 
 

@@ -106,7 +106,7 @@ $$m\geq M \implies x_m\in U,\qquad n\geq N\implies x_n\in V$$
 
 <ins id="lem5">**보조정리 5**</ins> 위상공간 $X$가 Hausdorff space인 것은 $X\times X$의 부분집합
 
-$$\Delta_X=\{(x,x):x\in X\}$$
+$$\Delta_X=\{(x,x)\mid x\in X\}$$
 
 이 닫힌집합인 것과 동치이다.
 
@@ -130,7 +130,7 @@ $$\Delta_X=\{(x_i)_{i\in I}:\text{$x_i=x$ for all $i$, where $x\in X$}\}$$
 
 <ins id="cor6">**따름정리 6**</ins> 연속함수 $f,g:X \rightarrow Y$에 대하여, 만일 $Y$가 Hausdorff라면 다음 집합
 
-$$E=\{x\in X: f(x)=g(x)\}$$
+$$E=\{x\in X\mid f(x)=g(x)\}$$
 
 는 $X$의 닫힌집합이다.
 
@@ -146,7 +146,7 @@ $X$에서 $Y\times Y$로의 연속함수 $x\mapsto (f(x), g(x))$를 생각하면
 
 <ins id="cor7">**따름정리 7**</ins> 연속함수 $f:X \rightarrow Y$에 대하여, 만일 $Y$가 Hausdorff라면 다음 집합
 
-$$\Gamma(f)=\{(x,f(x)): x\in X\}$$
+$$\Gamma(f)=\{(x,f(x))\mid x\in X\}$$
 
 은 $X\times Y$의 닫힌집합이다.
 

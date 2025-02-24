@@ -70,11 +70,11 @@ $$x\cdot(\beta\alpha)=(x\cdot\beta)\cdot\alpha,\qquad x\cdot e=x$$
 
 <ins id="ex3">**예시 3**</ins> Monoid $M$과 $M$-set $E$가 주어졌다 하자. 그럼 $\mathcal{P}(E)$도 자연스러운 $M$-set 구조를 갖는다. 임의의 $\alpha\in M$과 $A\in \mathcal{P}(E)$에 대하여, $\alpha\cdot A$를 다음 식
 
-$$\alpha\cdot A=\{\alpha\cdot a:a\in A\}$$
+$$\alpha\cdot A=\{\alpha\cdot a\mid a\in A\}$$
 
 으로 정의하자. 그럼 
 
-$$(\alpha\beta)\cdot A=\{(\alpha\beta)\cdot a:a\in A\}=\{\alpha\cdot(\beta\cdot a):a\in A\}=\alpha\cdot\{\beta\cdot a:a\in A\}=\alpha\cdot(\beta\cdot A)$$
+$$(\alpha\beta)\cdot A=\{(\alpha\beta)\cdot a\mid a\in A\}=\{\alpha\cdot(\beta\cdot a)\mid a\in A\}=\alpha\cdot\{\beta\cdot a\mid a\in A\}=\alpha\cdot(\beta\cdot A)$$
 
 이므로 이것이 $\mathcal{P}(E)$ 위에 $M$-action을 정의한다.
 

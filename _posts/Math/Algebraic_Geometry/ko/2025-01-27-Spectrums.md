@@ -55,7 +55,7 @@ $$\Spec\phi: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\m
 
 <ins id="def3">**정의 3**</ins> Ring $A$와 그 spectrum $\Spec A$를 고정하자. $A$의 공집합이 아닌 임의의 부분집합 $S$에 대하여, $\Spec A$의 부분집합 $Z(S)$을 다음 식
 
-$$Z(S)=\{\mathfrak{p}\in\Spec A: S\subseteq \mathfrak{p}\}$$
+$$Z(S)=\{\mathfrak{p}\in\Spec A\mid S\subseteq \mathfrak{p}\}$$
 
 으로 정의한다. 
 
@@ -63,7 +63,7 @@ $$Z(S)=\{\mathfrak{p}\in\Spec A: S\subseteq \mathfrak{p}\}$$
 
 그럼 몇 가지 사실을 쉽게 증명할 수 있다. 우선, $Z$는 inclusion-reversing이다. 즉, 만일 $A$의 두 부분집합 $S_1\subseteq S_2$가 주어졌다면,
 
-$$Z(S_1)=\{\mathfrak{p}\in\Spec A: S_1\subseteq \mathfrak{p}\}\supseteq \{\mathfrak{p}\in\Spec A: S_2\subseteq \mathfrak{p}\}=Z(S_2)$$
+$$Z(S_1)=\{\mathfrak{p}\in\Spec A\mid S_1\subseteq \mathfrak{p}\}\supseteq \{\mathfrak{p}\in\Spec A\mid S_2\subseteq \mathfrak{p}\}=Z(S_2)$$
 
 이다. 그러나 위의 포함관계는 strict가 아닐 수도 있다.
 
@@ -209,7 +209,7 @@ $$\Spec A\setminus Z(S)=\Spec A\setminus Z\left(\sum_{f\in S} (f)\right)=\Spec A
 
 그럼 이 보조정리와 유사한 계산을 통해 $D(fg)=D(f)\cap D(g)$임을 확인할 수 있다. 다만, 이 계산은 [보조정리 6](#lem6)의 첫째 결과를 사용하므로, 일반적으로 무한한 index에 대해 확장할 수는 없다. 
 
-이와 별개로, 우리는 $\Spec A$가 항상 [\[위상수학\] §옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1)의 조건을 만족한다는 것을 보일 수 있다. 그러나 일반적으로 우리가 compact space에 기대하는 많은 성질들은 Hausdorff 조건 또한 요구하는 경우가 많고 ([\[위상수학\] §옹골공간, §§옹골 하우스도르프 공간](/ko/math/topology/compact_spaces#옹골-하우스도르프-공간)) Zariski topology는 일반적으로 Hausdorff space가 되지 않으므로, 우리는 이를 quasi-compact라 부르기로 한다. 
+이와 별개로, 우리는 $\Spec A$가 항상 [\[위상수학\] §옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1)의 조건을 만족한다는 것을 보일 수 있다. 그러나 일반적으로 우리가 compact space에 기대하는 많은 성질들은 Hausdorff 조건 또한 요구하는 경우가 많고 ([\[위상수학\] §옹골공간, §§옹골 하우스도르프 공간](/ko/math/topology/compact_spaces#옹골-하우스도르프-공간)) Zariski topology는 일반적으로 Hausdorff space가 되지 않으므로, 우리는 이를 *quasi-compact<sub>준옹골</sub>*라 부르기로 한다. 
 
 <div class="proposition" markdown="1">
 
@@ -246,7 +246,7 @@ $$Z\left(\sum_{j\in J} (f_j)\right)=\emptyset$$
 
 <ins id="def13">**정의 13**</ins> 임의의 부분집합 $T\subseteq \Spec A$에 대하여, 
 
-$$I(T)=\{f\in A:\text{$f\in \mathfrak{p}$ for all $\mathfrak{p}\in T$}\}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime in $T$} \mathfrak{p}$$
+$$I(T)=\{f\in A\mid\text{$f\in \mathfrak{p}$ for all $\mathfrak{p}\in T$}\}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime in $T$} \mathfrak{p}$$
 
 으로 정의한다.
 
@@ -306,11 +306,53 @@ $$Z(I(Z(S)))=Z(S),\qquad I(Z(I(T)))=I(T)$$
 
 </div>
 
+이 대응에서 다소 헷갈릴 수 있는 것은 $A$의 임의의 prime ideal은 항상 radical ideal이므로, ring $A$의 radical ideal들의 모임은 항상 (집합으로서) $\Spec A$를 포함한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop16">**명제 16**</ins> Ring $A$의 prime ideal들과, $\Spec A$의 irreducible closed subset들 사이의 Galois correspondence가 존재한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+즉 임의의 prime ideal $\mathfrak{p}$에 대하여 $Z(\mathfrak{p})$가 irreducible인 것과, 임의의 irreducible closed subset $Y$에 대하여 $I(Y)$가 prime ideal인 것을 보여야 한다.
+
+우선 $Z(\mathfrak{p})$가 irreducible이 아니라 가정하면, $Z(\mathfrak{p})$의 두 비자명한 닫힌집합 $Z(\mathfrak{a}), Z(\mathfrak{b})$가 존재하여 $Z(\mathfrak{p})=Z(\mathfrak{a})\cup Z(\mathfrak{b})$이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 이제 
+
+$$Z(\mathfrak{p})=Z(\mathfrak{a})\cup Z(\mathfrak{b})=Z(\mathfrak{ab})\iff \mathfrak{p}=\sqrt{\mathfrak{p}}=\sqrt{\mathfrak{ab}}=\sqrt{\mathfrak{a}\cap \mathfrak{b}}$$
+
+이다. 한편
+
+$$\sqrt{\mathfrak{a}\cap \mathfrak{b}}\supseteq \mathfrak{a}\cap \mathfrak{b}\supseteq \mathfrak{a}\mathfrak{b}$$
+
+이므로 위의 두 식을 종합하면 $\mathfrak{p}\supseteq \mathfrak{a}$ 혹은 $\mathfrak{p}\supseteq \mathfrak{b}$가 성립해야 하는 것을 알고 따라서 $Z(\mathfrak{p})=Z(\mathfrak{a})$ 혹은 $Z(\mathfrak{p})=Z(\mathfrak{b})$가 되어 모순이다.
+
+거꾸로 임의의 irreducible closed subset $Y$에 대하여, $I(Y)$가 prime ideal이라는 것을 보여야 한다. 우선 $Y$가 닫힌집합이므로 [명제 15](#prop15)와 [명제 5](#prop5)에 의하여 $Y=V(\mathfrak{a})$이도록 하는 radical ideal $\mathfrak{a}$가 존재한다. 그럼 $\mathfrak{a}=IZ(\mathfrak{a})=I(Y)$가 prime인 것을 보이면 충분하다. 
+
+이를 위해 $fg\in \mathfrak{a}$라 하고, 동시에 공집합은 아닌 $\Spec A$의 두 열린집합 $D(f), D(g)$를 생각하면 
+
+$$(D(f)\cap Y)\cap (D(g)\cap Y)=D(f)\cap D(g)\cap Y=D(fg)\cap Y$$
+
+가 공집합이어야 함을 안다. 그런데 $D(f)\cap Y$와 $D(g)\cap Y$는 irreducible closed set $Y$의 두 열린집합이므로, 이것이 성립하기 위해서는 둘 중 하나가 공집합이어야 한다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7)) 이로부터 $f\in \mathfrak{a}$ 혹은 $g\in \mathfrak{a}$가 성립해야 함을 알고, 따라서 $\mathfrak{a}$는 prime ideal이다. 
+
+</details>
+
+특히, prime ideal $\mathfrak{p}$에 대하여 $\mathfrak{q}\subsetneq \mathfrak{p}$를 만족하는 prime ideal이 없다면, 즉 $\mathfrak{p}$가 *minimal* prime ideal이라면 $Z(\mathfrak{p})$는 irreducible component 중 가장 큰 것, 즉 irreducible component가 된다. 이로부터 다음을 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="cor17">**따름정리 17**</ins> Ring $A$의 minimal prime ideal들과 $\Spec A$의 irreducible component 사이의 Galois correspondence가 존재한다. 
+
+</div>
+
+특히 위에서 생각한 예시인 integral domain의 spectrum은 irreducible이다.
+
 ## 고전적인 대수기하학
 
 다음 글에서 structure sheaf를 정의하기 전에, 간략하게 고전적인 대수기하학을 살펴보는 것이 도움이 된다. 남은 부분에서 우리는 algebraically closed field $\mathbb{k}$를 고정한다. 그럼 field $\mathbb{k}$ 위에 정의된 (classical) *affine $n$-space<sub>아핀공간</sub>*는 다음 집합
 
-$$\mathbb{A}_{\mathbb{k},\text{classical}}^n=\{(x_1,\ldots, x_n)ㅣ x_1,\ldots, x_n\in \mathbb{k}\}$$
+$$\mathbb{A}_{\mathbb{k},\text{classical}}^n=\{(x_1,\ldots, x_n)\mid x_1,\ldots, x_n\in \mathbb{k}\}$$
 
 을 의미한다. 이 때, $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$의 각 원소 $x=(x_1,\ldots, x_n)$을 *점<sub>point</sub>*라 하고, 각각의 $x_i$들을 $x$의 *$i$번째 좌표<sub>$i$-th coordinate</sub>*라 부른다. 
 
@@ -322,21 +364,143 @@ $$\mathfrak{m}_x=(\x_1-x_1,\ldots, \x_n-x_n)\subseteq \mathbb{k}[\x_1,\ldots, \x
 
 한편 우리는 임의의 $f\in A$를 다음의 식
 
-$$\mathbb{A}\_{\mathbb{k},\text{classical}}^n \rightarrow \mathbb{k};\qquad (x_1,\ldots, x_n)\mapsto f(x_1,\ldots, x_n)$$
+$$\mathbb{A}_{\mathbb{k},\text{classical}}^n \rightarrow \mathbb{k};\qquad (x_1,\ldots, x_n)\mapsto f(x_1,\ldots, x_n)$$
 
 을 통해 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$에서 $\mathbb{k}$로의 함수로 취급할 수 있다. 그럼 [정의 3](#def3)과 비슷하게 $A$의 임의의 집합 $S$에 대하여 
 
-$$Z(S)=\{(x_1,\ldots, x_n): \text{$f(x_1,\ldots, x_n)=0$ for all $f\in S$}\}$$
+$$Z(S)=\{(x_1,\ldots, x_n)\mid \text{$f(x_1,\ldots, x_n)=0$ for all $f\in S$}\}$$
 
 으로 정의하면 $Z(S)$는 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$ 위에 정의된 함수들의 모임 $S$의 공통근들으로 생각할 수 있으며, [보조정리 6](#lem6)과 비슷한 계산을 통해 $Z(S)$들을 닫힌집합으로 갖는 위상구조를 $\mSpec A$ 위에 정의할 수 있다. 
 
 한편, [정의 12](#def12)와 마찬가지로 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$의 부분집합 $T$에 대하여
 
-$$I(T)=\{f\in A: \text{$f(x_1,\ldots, x_n)=0$ for all $x\in T$}\}$$
+$$I(T)=\{f\in A\mid \text{$f(x_1,\ldots, x_n)=0$ for all $x\in T$}\}$$
 
 라 하면, [정리 14](#thm14)에서 그러하듯이 $I$와 $Z$가 antitone Galois connection을 정의하는 것을 안다. $\mSpec A$에서의 [명제 13](#prop13)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋명제 4](/ko/math/commutative_algebra/nullstellensatz#prop4)로부터 $\mathbb{k}[\x_1,\ldots, \x_n]$이 Jacobson이기 때문에 얻어진다. 
 
 앞서 우리는 $A$의 원소들, 즉 다항식이 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$ 위의 함수처럼 행동한다는 것을 보았다. 더 일반적으로, principal open set $D(g)$ 위에서는 $f/g$ 또한 잘 정의되며, 대수기하학에서는 이러한 함수에 관심이 있다. 이러한 형태의 함수는 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$ 전체에서는 잘 정의되지 않으며, 때문에 우리는 모든 점에서, 적당한 근방을 잡아 $f/g$의 꼴로 나타낼 수 있는 함수들에 대해 살펴볼 것이다. 
+
+## 환과 스펙트럼 사이의 관계
+
+이상의 논의를 종합하면 다음과 같이 정리할 수 있다. 마지막 줄들은 [§§고전적인 대수기하학](#고전적인-대수기하학)의 결과로, 아직은 일반적인 ring의 spectrum에서 이들이 어떻게 행동하는지를 살펴보지 않았지만 이는 곧 다음 글에서 확인하게 될 것이다. 
+
+<table class="ag"><thead>
+  <tr>
+    <th style="width:45%">$A$</th>
+    <th style="width:10%"></th>
+    <th style="width:45%">$\Spec A$</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="ag-tl">prime ideal</td>
+    <td class="ag-tc"></td>
+    <td class="ag-tr">점</td>
+  </tr>
+  <tr>
+    <td class="ag-bl">$\mathfrak{p}\subset A$</td>
+    <td class="ag-bc">$\longleftrightarrow$</td>
+    <td class="ag-br">$\mathfrak{p}\in \Spec A$</td>
+  </tr>
+  <tr>
+    <td class="ag-tl">maximal ideal</td>
+    <td class="ag-tc"></td>
+    <td class="ag-tr">닫힌점</td>
+  </tr>
+  <tr>
+    <td class="ag-bl">$\mathfrak{m}\subset A$</td>
+    <td class="ag-bc">$\longleftrightarrow$</td>
+    <td class="ag-br">$\mathfrak{m}\in \text{(m)}\Spec A$</td>
+  </tr>
+  <tr>
+    <td class="ag-tl">prime ideal</td>
+    <td class="ag-tc"></td>
+    <td class="ag-tr">irreducible closed subset</td>
+  </tr>
+  <tr>
+    <td class="ag-cl">$\mathfrak{p}$</td>
+    <td class="ag-cc">$\longrightarrow$</td>
+    <td class="ag-cr">$Z(\mathfrak{p})$</td>
+  </tr>
+  <tr>
+    <td class="ag-bl">$I(Y)$</td>
+    <td class="ag-bc">$\longleftarrow$</td>
+    <td class="ag-br">$Y$</td>
+  </tr>
+  <tr>
+    <td class="ag-tl">minimal prime ideal</td>
+    <td class="ag-tc"></td>
+    <td class="ag-tr">irreducible component</td>
+  </tr>
+  <tr>
+    <td class="ag-cl">$\mathfrak{p}$</td>
+    <td class="ag-cc">$\longrightarrow$</td>
+    <td class="ag-cr">$Z(\mathfrak{p})$</td>
+  </tr>
+  <tr>
+    <td class="ag-bl">$I(Y)$</td>
+    <td class="ag-bc">$\longleftarrow$</td>
+    <td class="ag-br">$Y$</td>
+  </tr>
+  <tr>
+    <td class="ag-tl">radical ideal</td>
+    <td class="ag-tc"></td>
+    <td class="ag-tr">닫힌집합</td>
+  </tr>
+  <tr>
+    <td class="ag-cl">$\mathfrak{a}$</td>
+    <td class="ag-cc">$\longrightarrow$</td>
+    <td class="ag-cr">$Z(\mathfrak{a})$</td>
+  </tr>
+  <tr>
+    <td class="ag-bl">$I(Y)$</td>
+    <td class="ag-bc">$\longleftarrow$</td>
+    <td class="ag-br">$Y$</td>
+  </tr>
+  <tr>
+    <td class="ag-tl">ideal sum</td>
+    <td class="ag-tc"></td>
+    <td class="ag-tr">intersection</td>
+  </tr>
+  <tr>
+    <td class="ag-cl">$\mathfrak{a}+\mathfrak{b}$</td>
+    <td class="ag-cc">$\longrightarrow$</td>
+    <td class="ag-cr">$Z(\mathfrak{a})\cap Z(\mathfrak{b})$</td>
+  </tr>
+  <tr>
+    <td class="ag-bl">$\sqrt{I(V)+I(W)}$</td>
+    <td class="ag-bc">$\longleftarrow$</td>
+    <td class="ag-br">$V\cap W$</td>
+  </tr>
+  <tr>
+    <td class="ag-tl">ideal product</td>
+    <td class="ag-tc"></td>
+    <td class="ag-tr">union</td>
+  </tr>
+  <tr>
+    <td class="ag-cl">$\mathfrak{a}\mathfrak{b}$</td>
+    <td class="ag-cc">$\longrightarrow$</td>
+    <td class="ag-cr">$Z(\mathfrak{a})\cup Z(\mathfrak{b})$</td>
+  </tr>
+  <tr>
+    <td class="ag-bl">$\sqrt{I(V)I(W)}$</td>
+    <td class="ag-bc">$\longleftarrow$</td>
+    <td class="ag-br">$V\cup W$</td>
+  </tr>
+  <tr>
+    <td class="ag-tl">원소</td>
+    <td class="ag-tc"></td>
+    <td class="ag-tr">함수</td>
+  </tr>
+  <tr>
+    <td class="ag-bl">$f\in A$</td>
+    <td class="ag-bc">$\longrightarrow$</td>
+    <td class="ag-br">$\mathfrak{p}\mapsto f\pmod{\mathfrak{p}}$</td>
+  </tr>
+</tbody>
+</table>
+
+
+
 
 ---
 **참고문헌**
