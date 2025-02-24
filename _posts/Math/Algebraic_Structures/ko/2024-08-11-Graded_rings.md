@@ -75,7 +75,7 @@ Graded ring $A=\bigoplus_{i\in I} A_i$에 대해, $A$의 ideal $\mathfrak{a}$에
 
 <ins id="ex5">**예시 5**</ins> Ring $A$를 고정하고, $A$의 원소들을 계수로 가지는 *polynomial ring*
 
-$$A[\x]=\{\alpha_n\x^n+\cdots+\alpha_1\x+\alpha_0: \alpha_i\in A\}$$
+$$A[\x]=\{\alpha_n\x^n+\cdots+\alpha_1\x+\alpha_0\mid \alpha_i\in A\}$$
 
 을 생각하자. 그럼 이는 다음의 decomposition
 

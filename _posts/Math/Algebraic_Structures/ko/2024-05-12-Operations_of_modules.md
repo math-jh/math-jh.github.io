@@ -33,7 +33,7 @@ $$A\otimes\left(\bigoplus_{i\in I} M_i\right)\cong\bigoplus_{i\in I}(A\otimes M_
 
 를 통해 $\bigoplus M\_i$ 위에서의 action이 정의된다. Equalizer와 coequalizer의 경우, 두 module homomorphism $u,v:M \rightarrow N$에 대하여
 
-$$\Eq(u,v)=\{x\in M: u(x)=v(x)\}$$
+$$\Eq(u,v)=\{x\in M\mid u(x)=v(x)\}$$
 
 그리고
 

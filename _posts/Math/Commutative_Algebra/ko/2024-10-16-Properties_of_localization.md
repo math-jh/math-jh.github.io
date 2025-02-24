@@ -191,7 +191,7 @@ $$(a_1b_1+x_1)(a_2b_2+x_2)=a_1a_2b_1b_2+a_1b_1x_2+a_2b_2x_1+x_1x_2$$
 
 <ins id="cor8">**따름정리 8**</ins> Ring $A$의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *radical<sub>근기</sub>* $\sqrt{\mathfrak{a}}$를 다음 식
 
-$$\sqrt{\mathfrak{a}}=\{a: a^k\in \mathfrak{a}\text{ for some $k\in \mathbb{N}$}\}$$
+$$\sqrt{\mathfrak{a}}=\{a\mid a^k\in \mathfrak{a}\text{ for some $k\in \mathbb{N}$}\}$$
 
 으로 정의하자. 그럼
 
@@ -203,7 +203,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\\{a^k: k\geq 1\\}$로 두고 [§국소화, ⁋명제 10](/ko/math/commutative_algebra/localization#prop10)를 적용하면 된다.
+한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\\{a^k\mid k\geq 1\\}$로 두고 [§국소화, ⁋명제 10](/ko/math/commutative_algebra/localization#prop10)를 적용하면 된다.
 
 </details>
 

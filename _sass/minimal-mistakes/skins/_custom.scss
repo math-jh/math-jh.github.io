@@ -4,15 +4,15 @@
 
 /* Colors */
 $text-color: #212121 !default;                                    //  Grey 900
-$muted-text-color: mix(#fff, $text-color, 20%) !default;
+$background-color: #e0e0e0 !default;
+$muted-text-color: mix($background-color, $text-color, 20%) !default;
 $primary-color: #020715 !default;
-$border-color: mix(#fff, $text-color, 75%) !default;
 $footer-background-color: #020715 !default;
 $link-color: #2962ff !default;                                    //  Indigo A700
 $masthead-link-color: #f5f5f5 !default;                           //  Grey 100
 $masthead-link-color-hover: #a9874a !default;
-$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
-$background-color: #e0e0e0 !default;
+$navicon-link-color-hover: mix($background-color, $text-color, 80%) !default;
+$border-color: mix($text-color, $background-color, 40%) !default;
 $highlight-color: #1c5dd2;                                        //  Lighten #071734 40
 $notice-background-mix: 0%;
 $highlight-background-mix: 8%;

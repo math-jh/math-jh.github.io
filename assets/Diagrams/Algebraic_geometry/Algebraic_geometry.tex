@@ -6,6 +6,17 @@
 \begin{document}
 
 
+% finite_morphism (Properties_of_scheme_morphisms-2.png)
+\begin{tikzpicture}
+	\draw (-.1,-4)--(4.9,-4) node[right]{$\mathbb{A}^1_\Bbbk\cong \Spec \Bbbk[\x]$};
+	\draw[domain=0:2.2] plot (\x^2,\x)node[right]{$\Spec \Bbbk[\x,\y]/(\y^2-\x)$};
+	\draw[domain=0:2.2] plot (\x^2,-\x);
+	\fill (4,-4) circle[radius=2pt];
+	\draw[dashed, gray] (4,2)--(4,-4); 
+	\draw[-{stealth}] (2.5,-2.5) -- (2.5,-3.5);
+	\fill[red] (4,2) circle[radius=2pt];
+	\fill[red] (4,-2) circle[radius=2pt];
+\end{tikzpicture}
 
 
 \end{document}
@@ -189,6 +200,17 @@
 	\draw (6.7,-4) node{$\mathbb{P}^n={\color{blue}\mathbb{R}^n}\coprod {\color{orange}\mathbb{P}^{n-1}}$};
 \end{tikzpicture}
 
+% finite_type_morphism (Properties_of_scheme_morphisms-1.png)
+\begin{tikzpicture}
+	\draw[blue] (-2,0) -- (2,0);
+	\fill[blue!30] (-2,1) rectangle (2,5);
+	\fill (-1,0) circle [radius=2pt];
+	\draw[thick] (-1,1) -- (-1,5);
+	\draw[-{stealth}] (0,0.8) -- (0,0.2);
+	\draw (4.5,3) node{$\mathbb{A}^2_\Bbbk\cong \Spec \Bbbk[\x,\y]\cong \Spec \Bbbk[\x][\y]$};
+	\draw (4,0) node{$\mathbb{A}^1_\Bbbk\cong \Spec \Bbbk[\x]$};
+\end{tikzpicture}
+
 
 
 
@@ -283,27 +305,8 @@
 	\draw (0,-.5) node{$Z(\mathrm{y}-\mathrm{x}^2)$};
 \end{tikzpicture}
 
-% finite_type_morphism (Properties_of_schemes-3.png)
-\begin{tikzpicture}
-	\draw[blue] (-2,0) -- (2,0);
-	\fill[blue!30] (-2,1) rectangle (2,5);
-	\fill (-1,0) circle [radius=2pt];
-	\draw[thick] (-1,1) -- (-1,5);
-	\draw[-{stealth}] (0,0.8) -- (0,0.2);
-	\draw (4.5,3) node{$\mathbb{A}^2_k\cong \Spec k[x,y]\cong \Spec k[x][y]$};
-	\draw (4,0) node{$\mathbb{A}^1_k\cong \Spec k[x]$};
-\end{tikzpicture}
 
-% finite_morphism (Properties_of_schemes-4.png)
-\begin{tikzpicture}
-	\draw (-.1,0)--(4.9,0) node[right]{$\mathbb{A}^1_k\cong \Spec k[x]$};
-	\draw[domain=0:2.2] plot (\x^2,\x)node[right]{$\Spec k[x,y]/(y^2-x)$};
-	\draw[domain=0:2.2] plot (\x^2,-\x);
-	\fill (4,0) circle[radius=2pt];
-	\draw[dashed] (4,2)--(4,-2); 
-	\fill[red] (4,2) circle[radius=2pt];
-	\fill[red] (4,-2) circle[radius=2pt];
-\end{tikzpicture}
+
 
 % fiber_product (Properties_of_schemes-5.png)
 \begin{tikzcd}

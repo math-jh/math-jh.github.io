@@ -51,7 +51,7 @@ $$\mathfrak{A}\mathfrak{B}=\left\{\sum_{i=1}^n a_ib_i: a_i\in \mathfrak{A}, b_i\
 
 다음 정리에서, $K$의 임의의 부분집합 $X$에 대하여, 
 
-$$X^{-1}=(A:_KX)=\{y\in K: yX\subseteq A\}$$
+$$X^{-1}=(A:_KX)=\{y\in K\mid yX\subseteq A\}$$
 
 이며, 위의 직관에 따르면 이는 대략적으로 $X$의 분모들의 모임 정도로 생각할 수 있다. 
 

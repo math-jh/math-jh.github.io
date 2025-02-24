@@ -56,7 +56,7 @@ $$y=f(x)=f(xe)=f(x)f(e),\qquad y=f(x)=f(ex)=f(e)f(x)$$
 
 <ins id="prop2">**명제 2**</ins> Group homomorphism $f,g:G \rightarrow H$가 주어졌다 하자. 그럼
 
-$$\Eq(f,g)=\{x\in G:f(x)=g(x)\}$$
+$$\Eq(f,g)=\{x\in G\mid f(x)=g(x)\}$$
 
 은 $G$의 subgroup이다.
 

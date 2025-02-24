@@ -27,6 +27,8 @@ weight: 14
 
 </div>
 
+정의에 의해, compact space들의 유한한 합집합은 다시 compact인 것을 안다. 이와 같이 compactness는 적당한 종류의 유한성과 관련이 있다.
+
 위상공간 $X$의 부분공간 $Y$를 생각하자. 그럼 $Y$ 또한 위상공간이므로, 이 위상공간이 compact인지를 살펴볼 수 있다. 다음 명제는 $Y$가 compact인 것을 따져보기 위해서는 $X$의 열린집합들로 이루어진 covering을 생각하면 된다는 것을 보여준다.
 
 <div class="proposition" markdown="1">

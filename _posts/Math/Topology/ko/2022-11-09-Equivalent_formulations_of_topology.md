@@ -138,7 +138,7 @@ Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집�
 
 <ins id="prop7">**명제 7**</ins> $X$ 위에 정의된 filter $\mathcal{F}$를 생각하자. 그럼 임의의 함수 $f:X \rightarrow Y$에 대하여, 
 
-$$f(\mathcal{F})=\{f(F): F\in \mathcal{F}\}$$
+$$f(\mathcal{F})=\{f(F)\mid F\in \mathcal{F}\}$$
 
 은 $Y$의 filter base이다.
 
@@ -152,7 +152,7 @@ $$f(\mathcal{F})=\{f(F): F\in \mathcal{F}\}$$
 
 한편 집합 $X$ 위에 정의된 filter $\mathcal{F}$와 임의의 부분집합 $A$에 대하여, 다음 집합
 
-$$\mathcal{F}\vert_A=\{F\cap A: F\in \mathcal{F}\}$$
+$$\mathcal{F}\vert_A=\{F\cap A\mid F\in \mathcal{F}\}$$
 
 은 일반적으로 $A$의 filter가 되지 않는다. 이는 생각해보면 오직 $\mathcal{F}\vert_A$가 공집합을 포함할 수도 있기 때문이다. 즉, $\mathcal{F}$의 모든 원소가 $A$와 서로소가 아니라면 $\mathcal{F}\vert_A$는 $A$ 위에 filter를 정의한다. 
 

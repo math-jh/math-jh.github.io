@@ -53,7 +53,7 @@ img
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-
+$X$가 $d$차원 위상공간이라 하고, $Y$의 임의의 open covering $\\{V\_j\\}$이 주어졌다 하자. 그럼 각각의 $V\_j$마다 $V\_j=U\_j\cap Y$이도록 하는 $X$의 open subset $U\_j$가 존재한다. 이제 $X$는 $U\_j$들과, $X\setminus Y$로 덮을 수 있다. 그럼 이 covering의 order$\leq d+1$짜리 refinement가 존재하며, 이를 다시 $Y$와 교집합하면 $\\{V\_j\\}$의 order$\leq d+1$짜리 refinement를 얻는다. 
 
 </details>
 
@@ -110,7 +110,7 @@ img
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-
+첫쨰 조건과 둘쨰 조건은 여집합을 생각하면 동치인 것이 자명하며, 둘째 조건과 셋째 조건이 동치인 것은 $X\setminus \cl U$와 $U$를 생각하면 자명하다. 마지막으로 둘째 조건과 넷째 조건이 정의에 의해 동치이다. 
 
 </details>
 
@@ -148,7 +148,7 @@ Connected component와 비슷하게 다음을 정의할 수 있다.
 
 </div>
 
-그럼 대수기하학의 언어에서, 앞선 그림 ([##ref##]())은 두 개의 irreducible component들로 쪼개진다. 
+그럼 [§연결공간, ⁋명제 2](/ko/math/topology/connected_spaces)과 비슷한 논증에 의하여, irreducible set의 closure는 irreducible인 것을 보일 수 있으므로 irreducible component는 반드시 closed subset이다. 
 
 <div class="definition" markdown="1">
 
@@ -176,11 +176,29 @@ $$A_1\supseteq A_2\supseteq\cdots$$
 
 </div>
 
-그럼 다음이 성립한다.
+Noetherian 조건은 강력한 유한성의 조건을 준다. 가령 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> Noetherian topological space $X$에 대하여, 다음이 성립한다.
+<ins id="prop12">**명제 12**</ins> Noetherian space는 compact이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Noetherian space $X$와 $X$의 open covering $\\{U\_i\\}\_{i\in I}$가 주어졌다 가정하자. 그럼
+
+$$\mathcal{C}=\left\{\bigcup_{j\in J} U_j:\text{$J$ finite subset of $I$}\right\}$$
+
+라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset을 생각하면, 이는 그 여집합들로 이루어진 닫힌집합들의 descending chain과 동치이고 따라서 $X$가 noetherian이라는 가정으로부터 이는 언젠가 멈춰야 한다. 즉, $\mathcal{C}$는 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 조건을 만족하고 따라서 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cap U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
+
+</details>
+
+추가적으로 noetherian space에 대해 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop13">**명제 13**</ins> Noetherian topological space $X$에 대하여, 다음이 성립한다.
 
 1. $X$의 임의의 부분공간은 noetherian이다.
 2. $X$는 유한히 많은 irreducible component를 가진다. 
@@ -190,14 +208,54 @@ $$A_1\supseteq A_2\supseteq\cdots$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+1. $X$의 임의의 부분공간 $Y$가 주어졌다 하고 $Y$의 임의의 닫힌집합들의 descending chain 
+    
+    $$A_1\supseteq A_2\supseteq \cdots$$
 
+    가 주어졌다 하자. 그럼 $A_i=A_i' \cap Y$를 만족하는 $X$의 닫힌집합 $A_i'$들이 존재한다. 이제 $B_i=A_1'\cap\cdots\cap A_i'$라 하면, $B_i\cap Y=A_i$이고 $B_i$는 $X$의 닫힌집합들의 descending chain이다. 
+2. $\mathcal{C}$를 $X$의 닫힌집합 중, 유한히 많은 irreducible component들의 합집합으로 나타낼 수 없는 집합들의 모임이라 하자. 그럼 $\mathcal{C}=\emptyset$임을 보이면 된다. 결론에 반하여 $\mathcal{C}$가 공집합이 아니라 하면, [명제 12](#prop12)의 증명에서와 마찬가지 방법으로 $\mathcal{C}$가 minimal element $A$를 갖는다는 것을 안다. 이제 $A$는 irreducible이 아니므로, 두 닫힌집합 $B_1,B_2$에 대해 $A=B_1\cup B_2$로 나타낼 수 있고 $B_1,B_2\not\in \mathcal{C}$라는 가정으로부터 이들 각각은 유한한 irreducible component를 갖는다. 약간의 계산을 통해 이 irreducible decomposition들을 사용하여 $A=B_1\cup B_2$의 유한한 irreducible decomposition을 찾을 수 있고, 이는 모순이므로 $\mathcal{C}=\emptyset$이어야 한다.
+3. $X=A_1\cup\cdots\cup A_n$이 irreducible decomposition이라 하고, $X\setminus (A_2\cup\cdots\cup A_n)$을 생각하면 이 집합이 $A\_1$에 포함되는 공집합이 아닌 $X$의 열린집합이다. 
 
 </details>
 
-한편 위의 결과를 확인하고 나면, 서로 다른 차원을 갖는 irreducible component가 여럿 주어졌을 때 $X$의 차원은 [명제 4](#prop4)와 비슷한 다음 결과를 만족하는 것도 자명하다. 
+그럼 만일 $X$가 noetherian이라면, $X$의 irreducible decomposition
+
+$$X=\bigcup_{i=1}^r X_i$$
+
+이 존재하며, $X_i$들은 모두 닫힌집합이고, $X_i$의 여집합도 닫힌집합들의 유한한 합집합이므로 $X_i$는 열린집합이기도 하다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> 만일 위상공간 $X$의 두 유한차원 닫힌 부분공간 $Y,Z$가 존재하여 $X=Y\cup Z$라면, 이들의 Krull dimension 또한 식 $\dim X=\max(\dim Y,\dim Z)$을 만족한다.
+<ins id="prop14">**명제 14**</ins> 위상공간 $X$와 열린집합 $U$에 대하여, $U$와 만나는 $X$의 irreducible closed subset과, $U$의 irreducible closed subset 사이의 일대일대응이 존재한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 $U\cap Z\neq\emptyset$을 만족하는 $X$의 irreducible subspace $Z$가 주어졌다 하고, $Z\cap U$의 공집합이 아닌 임의의 두 열린집합이 서로소가 아님을 보여야 한다. $Z\cap U$의 임의의 부분집합은 $Z$의 열린집합 $V_1, V_2$에 대하여 $V_1\cap U$, $V_2\cap U$의 꼴이므로, 다음의 식
+
+$$(V_1\cap U)\cap (V_2\cap U)=(V_1\cap V_2)\cap U$$
+
+으로부터 만일 $(V_1\cap U)\cap(V_2\cap U)\neq\emptyset$이라면 $V_1\cap V_2\neq\emptyset$이 되어 $Z$가 irreducible이라는 가정에 모순이다. 
+
+거꾸로 $U$의 irreducible closed subset $Y\subseteq U$가 주어졌다 하면 $Y$의 closure 또한 irreducible이므로 $X$의 irreducible $\cl_X(Y)$가 $U$와 만나는 $X$의 irreducible subset이 된다. 즉 이로부터 두 함수
+
+$$\{\text{irreducible closes subset of $X$ meeting $U$}\}\rightarrow \{\text{irreducible closed subset of $U$}\};\qquad Z\mapsto Z\cap U$$
+
+그리고 
+
+$$\{\text{irreducible closed subset of $U$}\} \rightarrow \{\text{irreducible closes subset of $X$ meeting $U$}\};\qquad Y\mapsto \cl_X(Y)$$
+
+를 얻으며, 이들이 서로의 bijection임을 확인할 수 있다.
+
+</details>
+
+뿐만 아니라, 위의 증명에서의 두 함수는 inclusion-preserving이므로, $U$와 만나는 $X$의 irreducible component와 $U$의 irreducible component 사이의 일대일대응이 존재한다.
+
+이제 다음 명제를 보이자.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop15">**명제 15**</ins> 만일 위상공간 $X$의 두 유한차원 닫힌 부분공간 $Y,Z$가 존재하여 $X=Y\cup Z$라면, 이들의 Krull dimension 또한 식 $\dim X=\max(\dim Y,\dim Z)$을 만족한다.
 
 </div>
