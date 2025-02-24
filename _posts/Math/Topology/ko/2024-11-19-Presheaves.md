@@ -12,7 +12,7 @@ sidebar:
     nav: "topology-ko"
 
 date: 2024-11-19
-last_modified_at: 2024-11-19
+last_modified_at: 2025-02-18
 weight: 8
 
 ---
@@ -89,7 +89,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 
 <ins id="ex5">**예시 5 (Skyscraper sheaf)**</ins> 고정된 위상공간 $X$와 한 점 $i_x:\\{x\\}\hookrightarrow X$가 주어졌다 하고, 대상 $A\in \mathcal{A}$를 고정하자. 그럼 다음의 식
 
-$$(i_x)_\ast\underline{A}(U)=\begin{cases}A&\text{if $x\in U$,}\\T&\text{if $x\not\in U$,}\end{cases}\qquad \text{$T$ a terminal object in $\mathcal{A}$}$$
+$$(i_x)_\ast A(U)=\begin{cases}A&\text{if $x\in U$,}\\T&\text{if $x\not\in U$,}\end{cases}\qquad \text{$T$ a terminal object in $\mathcal{A}$}$$
 
 으로 주고, restriction map은 $\id_A$ 혹은, terminal object $T$를 이용해 주면 이는 presheaf를 정의한다. 이를 *skyscraper sheaf*라 부른다.
 
@@ -139,7 +139,7 @@ $$\mathscr{F}_x=\varinjlim_{x\in U}\mathscr{F}(U)$$
 
 특히 $\mathscr{F}$가 complete category valued presheaf라면 $\mathscr{F}_x$가 항상 잘 정의된다. 한편 concrete category에서 limit의 표현을 직접적으로 나타내보면
 
-$$\mathscr{F}_x=\{(s,U):x\in U\in\mathscr{T},s\in\mathscr{F}(U)\}/\mathnormal{\sim}$$
+$$\mathscr{F}_x=\{(s,U)\mid x\in U\in\mathscr{T},s\in\mathscr{F}(U)\}/\mathnormal{\sim}$$
 
 이고, 여기서 동치관계 $\sim$은 
 

@@ -166,7 +166,7 @@ $$\overline{f}\left(\frac{a}{s}\right)=\overline{f}\left(\frac{a}{1}\frac{1}{s}\
 1. 임의의 ideal $\mathfrak{b}\subset S^{-1}A$에 대하여, $\mathfrak{b}=\mathfrak{b}^{ce}$이 성립한다.
 2. 임의의 ideal $\mathfrak{a}\subset A$에 대하여, 
   
-    $$\mathfrak{a}^{ec}=\{a\in A:\text{there exists $s\in S$ satisfying $sa\in \mathfrak{a}$}\}$$
+    $$\mathfrak{a}^{ec}=\{a\in A\mid\text{there exists $s\in S$ satisfying $sa\in \mathfrak{a}$}\}$$
   
     이 성립한다. 특히 $\mathfrak{a}^e=S^{-1}A$인 것과 $\mathfrak{a}\cap S\neq\emptyset$인 것이 동치이다.
 

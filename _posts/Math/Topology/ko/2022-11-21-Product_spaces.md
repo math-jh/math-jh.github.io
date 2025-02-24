@@ -55,7 +55,7 @@ $$\prod_{i\in I} U_i,\qquad \text{$U_i$ open in $X_i$, $U_i=X_i$ for all but fin
 
 임의의 집합 $X, Y$와 함수 $f:X \rightarrow Y$에 대하여, $f$의 *graph* $\Gamma(f)$는 $X\times Y$의 부분집합
 
-$$\Gamma(f)=\{(x,f(x): x\in X\}\subseteq X\times Y$$
+$$\Gamma(f)=\{(x,f(x)\mid x\in X\}\subseteq X\times Y$$
 
 으로 주어진다. 만일 $X, Y$가 모두 위상공간이었다면 $\Gamma(f)$는 product space $X\times Y$로부터 subspace topology를 물려받는다.
 
@@ -77,7 +77,7 @@ $$X\rightarrow X\times\{y_0\}$$
 
 을 얻는다. 한편 $X\times Y$의 임의의 집합 $A$를 생각하자. 그럼 
 
-$$A\cap (X\times \{y_0\})=\{(x,y): (x,y)\in A,\quad y=y_0\}=\{(x,y_0): (x,y_0)\in A\}$$
+$$A\cap (X\times \{y_0\})=\{(x,y)\mid (x,y)\in A,\quad y=y_0\}=\{(x,y_0)\mid (x,y_0)\in A\}$$
 
 이다. 이제 $\Gamma(f)$는 $X\times Y$의 subspace topology가 주어져 있으므로, 위의 집합은 $A$가 $X\times Y$의 열린집합이라면 $\Gamma(f)$의 열린집합이 되고, $A$가 $X\times Y$의 닫힌집합이라면 $\Gamma(f)$의 닫힌집합이 된다. 따라서 다시 [따름정리 4](#cor4)를 적용하여 위의 집합을 $X$로 보내면 해당하는 집합 또한 열린집합 혹은 닫힌집합이 된다. 이 집합을 $A(y_0)\subseteq X$로 적자. 물론 비슷한 논증을 $X$와 $Y$의 역할을 바꾸어 $Y$의 부분집합 $A(x_0)$을 얻을 수도 있다. 
 

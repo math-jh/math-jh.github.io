@@ -25,7 +25,7 @@ $$\mathcal{J}:\qquad G=H_0\supseteq H_1\supseteq\cdots$$
 
 가 주어졌다 하면, $G/ H_{i+1} \rightarrow G/H_{i}$들이 잘 정의되며, 더 일반적으로 이들의 적절한 합성을 통해 $j>i$일 때마다 $\rho_{ji}:G/H_j \rightarrow G/H_i$가 정의된다. 이들 데이터를 통해 inverse limit
 
-$$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i:\text{$\rho_{ji}(g_j)=g_i$ for all $j>i$}\right\}$$
+$$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i\,\middle\vert\,\text{$\rho_{ji}(g_j)=g_i$ for all $j>i$}\right\}$$
 
 그리고 canonical morphism들 $\rho_i:\widehat{G}\_{\mathcal{J}} \rightarrow G/ H_i$들이 주어지며, 이 때 $\rho_{ji}\circ\rho_j=\rho_i$가 모든 $j>i$에 대해 성립한다. 표기의 편의를 위해 $\mathcal{J}$가 문맥에 따라 명확할 경우 이를 간단히 $\widehat{G}$로 쓰기도 한다.
 
@@ -93,7 +93,7 @@ $$G=H_0\supseteq H_1\supseteq\cdots$$
 
 가 주어졌다 하자. 그럼 
 
-$$\mathcal{N}(0)=\{U\subseteq G:\text{$G_n\subseteq U$ for some $n$}\}$$
+$$\mathcal{N}(0)=\{U\subseteq G\mid\text{$G_n\subseteq U$ for some $n$}\}$$
 
 으로 정의하면 이것이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 안다. 이제 임의의 $g\in G$와 $U\in \mathcal{N}(0)$에 대하여, $g+U\in \mathcal{N}(g)$이도록 하면 이것이 $G$ 위에 위상구조를 준다. 
 
@@ -175,7 +175,7 @@ $$(1+\x)(1-\x+\x^2-\cdots+(-1)^i\x^i)=1+(-1)^i\x^i\in \mathfrak{m}^i$$
 
 <ins id="prop5">**명제 5**</ins> $A$가 ideal $\mathfrak{a}$에 대해 complete이라 하자. 그럼 다음 집합
 
-$$U=\{1+a: a\in \mathfrak{a}\}$$
+$$U=\{1+a\mid a\in \mathfrak{a}\}$$
 
 은 $A$의 unit들의 모임이며, $U$는 multiplicatively closed이다.
 

@@ -50,7 +50,7 @@ weight: 2
 
 우선 다음 집합
 
-$$\{u\in V: \omega(u,v)=0\text{ for all $v\in V$}\}$$
+$$\{u\in V\mid \omega(u,v)=0\text{ for all $v\in V$}\}$$
 
 이 $V$의 부분공간이 된다는 것을 쉽게 확인할 수 있다. 따라서 이 부분공간의 basis를 택하면 $u_1,\ldots, u_k$를 얻는다. 이제 $V=U\oplus W$라 하자. 그럼 $W$의 basis $e_1,\ldots, e_n,f_1,\ldots, f_n$을 다음과 같이 찾을 수 있다. 
 
@@ -99,7 +99,7 @@ $$e_1,\ldots, e_n, f_1,\ldots, f_n$$
 
 <ins id="def3">**정의 3**</ins> $(V,\omega)$가 symplectic vector space라 하고, $W\leq V$가 임의의 부분공간이라 하자. 그럼 $W$의 *symplectic complement*는
 
-$$W^\omega=\{v\in V:\omega(v,w)=0\text{ for all $w\in W$}\}$$
+$$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $w\in W$}\}$$
 
 으로 정의된 공간이다. 
 

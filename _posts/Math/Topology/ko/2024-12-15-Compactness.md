@@ -126,7 +126,7 @@ $$f(U)\quad\text{for $U$ open in $X$},\qquad X'\setminus f(C)\quad\text{for $C$ 
 
 <ins id="def6">**정의 6**</ins> 위상공간 $X$가 주어졌다 하자. 그럼 연속함수들의 집합
 
-$$F=\{f:X \rightarrow [0,1]: \text{$f$ continuous}\}$$
+$$F=\{f:X \rightarrow [0,1]\mid \text{$f$ continuous}\}$$
 
 이 *partition of unity<sub>단위분할</sub>*이라는 것은 다음의 두 조건
 
