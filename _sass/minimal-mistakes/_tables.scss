@@ -17,20 +17,21 @@ table {
 }
 
 thead {
-  background-color: #546e7a;
-  border-bottom: 2px solid mix(#000, $border-color, 25%);
+  background-color: mix($highlight-color, $background-color, 40%);
+  border-bottom: 2px solid;
 }
 
 th {
   padding: 0.5em;
   font-weight: bold;
   text-align: left;
-  color: #eceff1;
+  color: $text-color;
+  background-color: mix($highlight-color, $background-color, 40%);
 }
 
 td {
+  border-bottom: 1px solid;
   padding: 0.5em;
-  border-bottom: 1px solid mix(#000, $border-color, 25%);
 }
 
 tr,
@@ -38,3 +39,17 @@ td,
 th {
   vertical-align: middle;
 }
+
+.ag {border-collapse:collapse; border-spacing:0; text-align:center; border: none;}
+.ag thead{border-bottom: 2px solid $border-color;}
+.ag th{text-align: center;}
+.ag td{border:none;}
+.ag td.ag-tl{border:none;padding-top:.5em;padding-bottom:.2em;}
+.ag td.ag-cl{border:none;padding-top:.2em;padding-bottom:0em;}
+.ag td.ag-bl{border-bottom:solid 1px $border-color;padding-top:.2em;padding-bottom:.5em;}
+.ag td.ag-tc{border:none;padding-top:.5em;padding-bottom:.2em;}
+.ag td.ag-cc{border:none;padding-top:.4em;padding-bottom:0em;}
+.ag td.ag-bc{border-bottom:solid 1px $border-color;padding-top:.2em;padding-bottom:.5em;}
+.ag td.ag-tr{border:none;padding-top:.5em;padding-bottom:.2em;}
+.ag td.ag-cr{border:none;padding-top:.4em;padding-bottom:0em;}
+.ag td.ag-br{border-bottom:solid 1px $border-color;padding-top:.2em;padding-bottom:.5em;}

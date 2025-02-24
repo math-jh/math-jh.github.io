@@ -12,7 +12,7 @@ sidebar:
     nav: "commutative_algebra-ko"
 
 date: 2024-10-17
-last_modified_at: 2024-10-17
+last_modified_at: 2025-02-23
 weight: 8
 
 ---
@@ -58,24 +58,41 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
 ## 정수적 확장
 
-이제 다음을 정의한다.
+앞서 우리는 $A$-algebra $E$는 ring homomorphism $\phi:A \rightarrow E$와 동일한 데이터로 구성되어 있는 것을 살펴보았다. 더 정확히는 ring homomorphism $\phi:A \rightarrow E$는 restriction of scalar를 통해 $E$-module $E$ 위에 $A$-module 구조 $\phi^\ast E$를 주는 것이며, 이 때의 $A$-module 구조가 ($E$의 곱셈에 commutativity에 의하여) $E$의 곱셈구조를 보존하여 이를 $A$-algebra로도 볼 수 있는 것이다. 
+
+한편 임의의 ring homomorphism의 합성은 ring homomorphism으로, 우리는 $A$-algebra $E$에 대해 다음의 식
+
+$$A\overset{\phi}{\rightarrow}E\hookrightarrow E[\x]$$
+
+으로 정의된 ring homomorphism이 $E[\x]$에 $A$-algebra 구조를 주는 것을 안다. 따라서 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의해 유일한 $A$-algebra homomorphism $\phi[\x]:A[\x]\rightarrow E[\x]$가 정의되며, 구체적으로 이는 임의의 다항식
+
+$$p(\x)=a_n\x^n+\cdots+a_0\in A[\x]$$
+
+을 받아 다음의 식
+
+$$(\phi[\x](p))(\x)=\phi(a_n)\x^n+\cdots+\phi(a_0)\in E[\x]$$
+
+으로 주어진 다항식을 내놓는 함수이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 임의의 ring $A$와 $A$-algebra $E$를 생각하자.
+<ins id="def3">**정의 3**</ins> Ring homomorphism $\phi:A\rightarrow E$가 주어졌다 하자. 
 
-1. $E$의 원소 $x$가 $A$에 대해 *integral<sub>정수적</sub>*이라는 것은 적당한 monic polynomial $p\in A[\x]$가 존재하여 $p(x)=0$인 것이다. $E$의 모든 원소가 $A$에 대해 integral이라면 $E$가 $A$에 대하여 integral이라 부른다. 
-2. $A$-algebra $E$ 중, injective map $a\mapsto a\cdot 1_E$를 통해 $A$를 포함하고 있는 $E$를 $A$의 extension이라 부르고, 특히 $E$의 모든 원소가 integral이라면 $E$를 $A$의 *integral extension<sub>정수적 확장</sub>*이라 부른다. 
-3. 임의의 $A$-algebra $E$에 대하여, $E$의 원소들 중 $A$에 대해 integral인 것을 모두 모은 것을 $E$ 안에서의 $A$의 *normalization<sub>정규화</sub>*라 부른다. 특별히 임의의 integral domain $A$에 대하여, $\Frac(A)$ 안에서의 $A$의 normalization을 별다른 수식어 없이 $A$의 normalization이라 부르고, 자기 자신과 그 normalization이 같은 integral domain을 *normal domain<sub>정규정역</sub>*이라 부른다.
-4. $A$-algebra $E$가 $A$-module로서 유한하게 생성된다면, $E$가 *finite over $A$<sub>$A$에 대하여 유한</sub>*이라 부른다.
+1. 만일 $\phi$가 injective라면 $E$를 $A$의 *extension<sub>확장</sub>*이라 부른다.
+2. $E$의 원소 $x$가 $\phi$에 대해 *integral<sub>정수적</sub>*이라는 것은 적당한 monic polynomial $p\in A[\x]$가 존재하여 $(\phi\[\x\](p))(x)=0$인 것이다. $E$의 모든 원소가 $\phi$에 대해 integral이라면, $\phi$를 *integral homomorphism<sub>정수적 준동형사상</sub>*이라 부른다. 만일 extension $\phi$가 integral homomorphism이라면, $E$를 $A$의 *integral extension<sub>정수적 확장</sub>*이라 부른다. 
+3. $E$의 원소 중, $\phi$에 대해 integral인 원소를 모두 모은 것을 *$E$에서의 $A$의 integral closure<sub>정수적 폐포</sub>* 혹은 *$E$ 안에서의 $A$의 normalization<sub>정규화</sub>*라 부른다. 만일 $A$가 integral domain이라면, $\Frac(A)$ 안에서의 $A$의 integral closure를 별다른 수식어 없이 *$A$의 normalization*이라 부른다. Integral domain $A$가 *normal domain<sub>정규정역</sub>*인 것은 $A$의 normalization이 자기 자신인 것이다. 
+4. $A$-module $\phi^\ast E$가 finitely generated $A$-module이라면, $\phi: A \rightarrow E$를 *finite homomorphism<sub>유한 준동형사상</sub>*이라 부른다. 
+5. $A$-module $\phi^\ast E$가 <em_ko>$A$-algebra로서</em_ko> finitely generated라면, $\phi: A \rightarrow E$를 *finite type homomorphism<sub>유한형 준동형사상</sub>*이라 부른다. 
 
 </div>
 
-그럼 우선 임의의 finite $A$-algebra $A \rightarrow E$와 임의의 $x\in E$에 대하여, $x$에 의한 multiplication map은 $E$의 $A$-algebra로서의 endomorphism이고 따라서 [정리 1](#thm1)을 적용하면 $x$가 $A$에 대해 integral인 것을 안다. 즉, finite $A$-algebra는 항상 integral이다. 이를 더 일반화하면 다음 보조정리를 얻는다. 
+문맥상 structure morphism $\phi: A \rightarrow E$가 명확할 경우, $x$가 $\phi$에 대해 integral이라는 말 대신 $x$가 $A$에 대해 integral이라는 표현을 사용하기도 한다. 비슷하게, 이런 경우에는 $\phi$가 integral homomorphism이라는 말 대신 $E$가 $A$에 대해 integral이라 말한다. 
+
+임의의 finite homomorphism은 그 정의에 의해 finite type homomorphism이다. 한편 finite homomorphism $\phi: A \rightarrow E$에 대하여, $x\times-: E \rightarrow E$는 $A$-algebra endomorphism이므로 [정리 1](#thm1)을 적용하면 $x$가 $\phi$에 대해 integral임을 안다. 즉, finite homomorphism은 integral이기도 하다. 다음 보조정리는 이 역을 보여준다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem4">**보조정리 4**</ins> $A$-algebra $E$가 finite인 것은 $E$가 $A$-algebra로서 유한히 많은 integral element들로 생성되는 것과 동치이다.
+<ins id="lem4">**보조정리 4**</ins> Ring homomorphism $\phi$가 finite인 것은 $\phi$가 integral homomorphism of finite type인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -85,12 +102,11 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
 </details>
 
-
 한편 $E$가 $A$에 대하여 integral인 것과, $E$의 각각의 원소들이 integral인 것이 서로 관계가 있기를 기대하는 것이 자연스럽다. 이를 위해 우선 다음 보조정리를 보인다.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> $A$-algebra $E$와 $E$의 원소 $x$가 주어졌다 하자. 그럼 $x$가 $A$에 대해 integral인 것은, 적당한 $E$-module $N$과 $N$의 $R$-submodule $M$이 존재하여, $M$은 $E$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $xM\subseteq M$이 성립하는 것과 동치이다. 
+<ins id="lem5">**보조정리 5**</ins> Ring homomorphism $\phi: A \rightarrow E$와 $E$의 원소 $x$가 주어졌다 하자. 그럼 $x$가 $A$에 대해 integral인 것은, 적당한 $E$-module $N$과 $N$의 $R$-submodule $M$이 존재하여, $M$은 $E$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $xM\subseteq M$이 성립하는 것과 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -100,11 +116,11 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
 </details>
 
-이제 다음을 증명할 수 있다.
+다음 정리는 기대하는 것이 당연한 성질이지만, [보조정리 5](#lem5) 없이 이를 정의로부터 바로 증명하는 것은 거의 불가능하다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6**</ins> $A$-algebra $E$에 대하여, $E$ 안에서 $A$의 integral extension은 다시 $A$-algebra이다. 
+<ins id="thm6">**정리 6**</ins> $A$-algebra $E$에 대하여, $E$ 안에서 $A$의 integral closure는 다시 $A$-algebra이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -117,7 +133,6 @@ $$(xx')MM'=(xM)(x'M)\subseteq MM',\qquad (x+x')MM'\subseteq xMM'+M(x'M')\subsete
 이므로 [보조정리 5](#lem5)를 이용하면 원하는 결과를 얻는다. 
 
 </details>
-
 
 ## 나카야마 보조정리
 
@@ -254,7 +269,63 @@ $$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
 
 </details>
 
+이제 [정의 3](#def3)에서의 ring homomorphism들에 대한 성질들을 조금 더 살펴보자. 우선 다음의 명제부터 시작한다.
 
+<div class="proposition" markdown="1">
+
+<ins id="prop14">**명제 14**</ins> Ring homomorphism $\phi:A \rightarrow E$와 $\rho: A \rightarrow A'$가 주어졌다 하자. $E'=A'\otimes_AE$라 하면, $\rho_!\phi: A' \rightarrow E'$에 대하여 다음이 성립한다. 
+
+1. 만일 $\phi$가 integral이라면 $\rho_!\phi$도 integral이다. 
+2. 만일 $\phi$가 finite이라면 $\rho_!\phi$도 finite이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+두 주장의 증명 모두 유사하므로 첫 번째 주장만 증명한다. $\phi$가 integral이라 가정하고, 이 때 $E$를 생성하는 integral element들을 $x_i$라 하자. 그럼 각각의 $x_i$는 적당한 monic polynomial $p_i\in A[\x]$를 만족한다. 따라서 각각의 $1\otimes x_i$는 $E'$를 생성하며, $(\rho\[\x\])(p_i)$를 만족한다. 이로부터 $E'$가 $A'$에 대해 integral임을 안다. 
+
+</details>
+
+또, 다음이 성립한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop15">**명제 15**</ins> Ring homomorphism $\phi:A \rightarrow E$가 주어졌다 하자. $(a_1, \ldots, a_n)=A$라면, 다음이 성립한다. 
+
+1. 만일 각각의 $A\_{a\_i} \rightarrow E\_{a\_i}$가 integral이라면, $A \rightarrow E$도 그러하다. 
+2. 만일 각각의 $A\_{a\_i} \rightarrow E\_{a\_i}$가 finite이라면, $A \rightarrow E$도 그러하다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+위와 마찬가지로, 두 주장의 증명이 유사하므로 첫 번쨰 주장만 증명한다. 임의의 $x\in E$에 대하여, $A[\x]$의 원소들 중 $p(x)=0$을 만족하는 다항식들의 ideal을 $\mathfrak{A}$라 하자. 그럼 이 다항식들의 leading coefficient들을 모은 $A$의 부분집합 $\mathfrak{a}$가 $A$의 ideal이 되는 것을 확인할 수 있다. 
+
+한편, 각각의 $A_{a_i} \rightarrow E_{a_i}$가 integral이라는 가정으로부터, $x$의 $E\_{a\_i}$에서의 image는 $A\_{a\_i}$에 대해 integral이고, 따라서 이 원소의 integral equation을 쓴 후, 분모에 있는 $a_i$의 거듭제곱들을 모두 곱해주면 우리는 임의의 $i$가 주어질 때마다, 적절한 $n_i$가 존재하여 $a_i^{n_i}\in \mathfrak{a}$가 성립함을 안다. 한편 식
+
+$$1=\sum_{i=1}^n \alpha_i a_i$$
+
+의 양 변을 충분히 많이 거듭제곱해주면 우리는 이들 $a_i^{n_i}$들도 unit ideal을 생성하는 것을 알고 따라서 $1\in \mathfrak{a}$이다. 이로부터 정의에 의해 $x$가 integral임을 안다.
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop15">**명제 15**</ins> Ring homomorphism $\phi: A \rightarrow E$와 $x\in E$에 대하여, $x$가 $\phi$에 대해 integral인 것은, $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, $x$의 $A_\mathfrak{p}$에서의 image가 $\phi_\mathfrak{p}: A_\mathfrak{p} \rightarrow E_\mathfrak{p}$에 대해 integral인 것과 동치이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+한쪽 방향은 [보조정리 14](#lem14)를 이용하면 된다. 따라서 임의의 prime ideal $\mathfrak{p}\subset A$에 대하여, $x$의 $E_\mathfrak{p}$에서의 image가 $A_\mathfrak{p}$에 대해 integral이라 하고, $x$가 integral임을 보이자. 이를 위해서는 $\phi(A)$와 $x$로 생성되는 $E$의 $A$-subalgebra $E'$를 잡은 후, $A \rightarrow E'$가 integral임을 보이면 된다. 
+
+우선 가정으로부터, $E_\mathfrak{p}$에서 다음의 식
+
+$$x^d+\phi_\mathfrak{p}(a_{d-1})x^{d-1}+\cdots+\phi_\mathfrak{p}(a_0)=0$$
+
+이도록 하는 $a_i\in A_\mathfrak{p}$들이 존재한다. 이제 $\phi_\mathfrak{p}(a_k)$들의 분모를 통분하면, 우리는 적절한 $f\in A\setminus \mathfrak{p}$에 대하여 각각의 $a_k$들이 모두 $A_f$에 속하는 것으로 볼 수 있고, 그럼 위의 방정식은 $E_f$에서 성립하는 식이 되고, 이로부터 $A_f \rightarrow E_f'$가 finite homomorphism인 것을 안다. 
+
+</details>
 
 ---
 

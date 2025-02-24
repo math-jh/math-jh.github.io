@@ -127,7 +127,7 @@ $$\mathcal{F}'=\{F\cup\{\ast_X\}: F\in \mathcal{F}\}$$
 
 임의의 $X$ 위의 임의의 filter $\mathcal{F}$에 대하여, 위의 논증으로부터 얻어지는 $X'$를 생각하자. 또, $X\times X'$의 부분집합 $\Delta$를
 
-$$\Delta=\{(x,x): x\in X\}$$
+$$\Delta=\{(x,x)\mid x\in X\}$$
 
 으로 정의하자. 그럼 $\Delta$의 closure $\cl\Delta$를 생각할 수 있으며, 이 때 $f$가 universally closed라는 가정으로부터 $\cl\Delta$의 $f\times\id_{X'}:X\times X'\rightarrow \\{\ast\\}\times X'\cong X'$에 의한 image가 닫힌집합임을 안다. 이제 이 image는 $x$를 포함하므로, $\ast_X$가 closure에 포함된다는 가정으로부터 적당한 $x\in X$가 존재하여 $(x,\ast_X)\in \cl\Delta$임을 안다. 그럼 $x$가 $\mathcal{F}$의 cluster point이고, 따라서 $\mathcal{F}$를 포함하는 ultrafilter를 생각하면 $x$는 그 filter의 limit point임을 안다. 
 

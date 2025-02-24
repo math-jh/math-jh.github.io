@@ -63,7 +63,7 @@ Representing object $\Omega_{E/A}$는 다음과 같이 정의된다.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> $A$-algebra $E$에 대하여, $E$의 $A$에 대한 *Kähler differential module<sub>캘러 미분가군</sub>*은 $\\{df: f\in E\\}$로 생성되는 $E$-module에, 다음의 relation들
+<ins id="def3">**정의 3**</ins> $A$-algebra $E$에 대하여, $E$의 $A$에 대한 *Kähler differential module<sub>캘러 미분가군</sub>*은 $\\{df\mid f\in E\\}$로 생성되는 $E$-module에, 다음의 relation들
 
 $$\text{$d(xy)=x\,dy+y\,dx$ for all $x,y\in E$},\qquad \text{$d(ax+by)=a\,dx+b\,dy$ for all $x,y\in E$ and $a,b\in A$}$$
 

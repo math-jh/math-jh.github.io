@@ -17,11 +17,11 @@ weight: 4
 
 ---
 
-[§스킴, ⁋예시 8](/ko/math/algebraic_geometry/schemes#ex8)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{k}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여 projective scheme을 정의한다. 
+[§스킴, ⁋예시 9](/ko/math/algebraic_geometry/schemes#ex9)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{k}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여 projective scheme을 정의한다. 
 
 ## 사영공간
 
-[§스킴, ⁋예시 8](/ko/math/algebraic_geometry/schemes#ex8)을 그대로 일반화하면 scheme으로서 $\mathbb{P}^n$을 정의하는 것 자체는 어렵지 않다. 하지만 이를 일반화하여 projective scheme을 정의하기 위해서는 $\mathbb{P}^n$을 직관적으로 이해하는 것이 도움이 되므로, 이를 조금 더 찬찬히 뜯어보자.
+[§스킴, ⁋예시 9](/ko/math/algebraic_geometry/schemes#ex9)을 그대로 일반화하면 scheme으로서 $\mathbb{P}^n$을 정의하는 것 자체는 어렵지 않다. 하지만 이를 일반화하여 projective scheme을 정의하기 위해서는 $\mathbb{P}^n$을 직관적으로 이해하는 것이 도움이 되므로, 이를 조금 더 찬찬히 뜯어보자.
 
 우선 우리는 기존에 위상수학에서 정의하던 projective space를 간단히 살펴본다. 위상공간 $\mathbb{P}^n$을 만들기 위해 우리는 위상공간 $\mathbb{R}^{n+1}\setminus \\{0\\}$을 생각했다. 그럼 이 위에 다음의 동치관계
 
@@ -31,13 +31,13 @@ $$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$x_i=\lambda y_i$ for some $\
 
 이 때, canonical projection $\pi:\mathbb{R}^{n+1}\setminus\\{0\\}\rightarrow \mathbb{P}^n$를 생각하자. 그럼 $\mathbb{P}^n$의 한 점 $[x_0:x_1:\cdots:x_n]$의 fiber는 그 정의에 의하여
 
-$$\{(y_0,\ldots, y_n):\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}\}$$
+$$\{(y_0,\ldots, y_n)\mid\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}\}$$
 
 즉 원점과 $(x_0,\ldots, x_n)$을 지나는 직선 위의 점들 중, 원점을 제외한 점들의 집합으로 주어진다. 이 때문에 $\mathbb{P}^n$은 종종 $\mathbb{R}^{n+1}$에서의 직선들의 공간으로 생각되기도 한다.
 
 한편, $\mathbb{R}^{n+1}$에서, 임의의 평면 $P$와, $P$와 평행하지 않은 직선은 반드시 한 점에서 만난다. 따라서 평면 $P_i$를
 
-$$P_i=\{\x_i=1\}=\{(x_0,\ldots, x_n): x_i=1\}$$
+$$P_i=\{\x_i=1\}=\{(x_0,\ldots, x_n)\mid x_i=1\}$$
 
 로 정의한다면, $\mathbb{P}^n$의 점들 중 $\x_i$축과 수직인 직선들을 제외한 점들은 모두 $P_i$의 점과 일대일로 대응되며, 남아있는 점들은 $\x_0\x_1\cdots\x_{i-1}\x_{i+1}\cdots\x_n$-평면, 즉 $\mathbb{R}^n$의 직선이므로 다음의 decomposition
 
@@ -49,7 +49,7 @@ $$\mathbb{P}^n=\mathbb{R}^n\coprod \mathbb{P}^{n-1}$$
 
 이를 식으로 적으면, $\mathbb{P}^n$의 한 점 $[x_0:\cdots:x_n]$에 대하여, 만일 $x_i\neq 0$이라면 $[x_0:\cdots:x_n]$의 동치류 안에서 $i$번째 좌표가 $1$이 되는 점을 (유일하게) 찾을 수 있으며, 이 점을 $P_i$의 점으로 보아 다음 부분집합
 
-$$U_i=\{[x_0:\cdots:x_n]\in \mathbb{P}^n: x_i\neq 0\}$$
+$$U_i=\{[x_0:\cdots:x_n]\in \mathbb{P}^n\mid x_i\neq 0\}$$
 
 을 $P_i\cong \mathbb{R}^n$과 identify할 수 있다. 한편 $U_i$의 여집합에 속한 점들은 정확히 $x_i=0$인 점들이므로, 단순히 $i$번째 좌표를 생략해서 쓰는 것만으로 이를 $\mathbb{P}^{n-1}$의 점으로 이해할 수 있다. 
 
@@ -57,7 +57,7 @@ $$U_i=\{[x_0:\cdots:x_n]\in \mathbb{P}^n: x_i\neq 0\}$$
 
 $$[x_0:\cdots:x_n]\text{ in $U_i\subseteq \mathbb{P}^n$}\leftrightarrow\left(\frac{x_0}{x_i},\ldots, \frac{x_{i-1}}{x_i},1,\frac{x_{i+1}}{x_i},\ldots, \frac{x_n}{x_i}\right)\text{ in $P_i\subseteq \mathbb{R}^{n+1}$}$$
 
-으로 표현된다. 한편, [§스킴, ⁋예시 8](/ko/math/algebraic_geometry/schemes#ex8)의 과정은 이 과정을 거꾸로 진행하는 것이다. 즉, $n+1$개의 $n$차원 평면 $P_0,\ldots, P_n$들이 먼저 주어져 있다 하고 이들을 cocycle condition을 만족하는 isomorphism들을 통해서 옮겨주는 것이다. 그럼 cocycle condition이 어떻게 쓰여져야 하는지는 정확히 위의 identification에 의해 $\mathbb{P}^n$의 한 점이 서로 다른 $P_i$와 $P_j$에서 어떻게 쓰여지는지를 살펴보아 얻어진다. 이를 살펴보자. 우선 $P_i$와 $P_j$의 임의의 점은 다음의 꼴
+으로 표현된다. 한편, [§스킴, ⁋예시 9](/ko/math/algebraic_geometry/schemes#ex9)의 과정은 이 과정을 거꾸로 진행하는 것이다. 즉, $n+1$개의 $n$차원 평면 $P_0,\ldots, P_n$들이 먼저 주어져 있다 하고 이들을 cocycle condition을 만족하는 isomorphism들을 통해서 옮겨주는 것이다. 그럼 cocycle condition이 어떻게 쓰여져야 하는지는 정확히 위의 identification에 의해 $\mathbb{P}^n$의 한 점이 서로 다른 $P_i$와 $P_j$에서 어떻게 쓰여지는지를 살펴보아 얻어진다. 이를 살펴보자. 우선 $P_i$와 $P_j$의 임의의 점은 다음의 꼴
 
 $$(x_{0/i},\ldots, x_{(i-1)/i}, 1, x_{(i+1)/i}, \ldots, x_{n/i})\in P_i,\qquad (x_{0/j},\ldots, x_{(j-1)/j}, 1, x_{(j+1)/j}, \ldots, x_{n/j})\in P_j$$
 
@@ -75,7 +75,7 @@ $$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad 
 
 이 성립해야 한다. 마찬가지로 $P_j$의 점을 $P_i$의 점에 맞추면 $x_{k/j}/x_{i/j}=x_{k/i}$와 같은 식도 얻어질 것이지만, 이는 $x_{i/j}=1/x_{j/i}$에 의해 새로운 식은 아니다. 
 
-이제 이 계산을 바탕으로 [§스킴, ⁋예시 8](/ko/math/algebraic_geometry/schemes#ex8)를 일반화하자. 우선 $n+1$개의 affine $n$-space들
+이제 이 계산을 바탕으로 [§스킴, ⁋예시 9](/ko/math/algebraic_geometry/schemes#ex9)를 일반화하자. 우선 $n+1$개의 affine $n$-space들
 
 $$P_i=\Spec \mathbb{k}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
 
@@ -83,11 +83,11 @@ $$P_i=\Spec \mathbb{k}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
 
 $$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/\x_{i/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad \x_{j/i}\mapsto 1/\x_{i/j}$$
 
-을 통해 정의되는 isomorphism $\varphi_{ij}:P_{ij} \rightarrow P_{ji}$들이 [§스킴, ⁋보조정리 7](/ko/math/algebraic_geometry/schemes#lem7)의 cocycle condition을 만족하는 것이 거의 자명하며 따라서 유일한 scheme $\mathbb{P}^n$이 정의되고, 이 때 $\mathbb{P}^n$의 원소들을 $[x_0:\ldots:x_n]$의 형태로 쓴다면 $U_i$는 정확히 $x_i\neq 0$인 조건을 만족하는 집합이다. 
+을 통해 정의되는 isomorphism $\varphi_{ij}:P_{ij} \rightarrow P_{ji}$들이 [§스킴, ⁋보조정리 8](/ko/math/algebraic_geometry/schemes#lem8)의 cocycle condition을 만족하는 것이 거의 자명하며 따라서 유일한 scheme $\mathbb{P}^n$이 정의되고, 이 때 $\mathbb{P}^n$의 원소들을 $[x_0:\ldots:x_n]$의 형태로 쓴다면 $U_i$는 정확히 $x_i\neq 0$인 조건을 만족하는 집합이다. 
 
 ## 사영스킴
 
-현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $U_i$들이 $\mathbb{P}^n$의 open subscheme인 것은 [§스킴, ⁋보조정리 7](/ko/math/algebraic_geometry/schemes#lem7)의 결과이기는 하지만, 그 정의 자체로도 함수 $\x_i$가 $0$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $\x_i$가 $\mathbb{P}^n$ 위의 함수가 아니라는 데에 있다. 심지어 $n=1$인 경우만 보아도 우리는 $\mathscr{O}\_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{k}$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $\mathbb{R}^{n+1}\setminus \\{0\\}$의 한 점 $(x_0,\ldots, x_n)$을 받아 $x_i$를 내놓는 함수 $\x_i: \mathbb{R}^{n+1}\setminus\\{0\\} \rightarrow \mathbb{R}$은 $\sim$과 compatible하지 않고 따라서 $\mathbb{P}^n$ 위의 함수를 정의하지 않는다. 예를 들어 $\mathbb{R}^2\setminus\\{0\\}$ 위에서 정의된 함수 $f: \mathbb{R}^2\setminus\\{0\\} \rightarrow \mathbb{R}$가 다음의 식
+현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $U_i$들이 $\mathbb{P}^n$의 open subscheme인 것은 [§스킴, ⁋보조정리 8](/ko/math/algebraic_geometry/schemes#lem8)의 결과이기는 하지만, 그 정의 자체로도 함수 $\x_i$가 $0$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $\x_i$가 $\mathbb{P}^n$ 위의 함수가 아니라는 데에 있다. 심지어 $n=1$인 경우만 보아도 우리는 $\mathscr{O}\_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{k}$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $\mathbb{R}^{n+1}\setminus \\{0\\}$의 한 점 $(x_0,\ldots, x_n)$을 받아 $x_i$를 내놓는 함수 $\x_i: \mathbb{R}^{n+1}\setminus\\{0\\} \rightarrow \mathbb{R}$은 $\sim$과 compatible하지 않고 따라서 $\mathbb{P}^n$ 위의 함수를 정의하지 않는다. 또 다른 예시로 $\mathbb{R}^2\setminus\\{0\\}$ 위에서 정의된 함수 $f: \mathbb{R}^2\setminus\\{0\\} \rightarrow \mathbb{R}$가 다음의 식
 
 $$f(x_0,x_1)=x_0^2-x_1$$
 
@@ -95,7 +95,7 @@ $$f(x_0,x_1)=x_0^2-x_1$$
 
 $$f(\lambda x_0,\lambda x_1)=\lambda^2x_0^2-\lambda x_1\neq f(x_0,x_1)$$
 
-이기 때문이다. 그 대신, $f$를 *homogeneous polynomial*로 가져온다면, 함수로서 $f$는 잘 정의되지 않더라도 $f$의 zero locus $Z(f)$는 잘 정의된다. 이는 다음의 식
+이 되어 $f$가 잘 정의되지 않는다. 그 대신, $f$를 *homogeneous polynomial*로 가져온다면, 함수로서 $f$는 잘 정의되지 않더라도 $f$의 zero locus $Z(f)$는 잘 정의된다. 이는 다음의 식
 
 $$f(\lambda x_0,\ldots, \lambda x_n)=\lambda^{\deg f} f(x_0,\ldots, x_n),\qquad \lambda\neq 0$$
 
@@ -127,7 +127,7 @@ $$A_+=\bigoplus_{i=1}^\infty A_i=A_1\oplus A_2\oplus\cdots$$
 
 <ins id="def1">**정의 1**</ins> Graded ring $A_\bullet$에 대하여, $\Proj A_\bullet$은 다음의 집합
 
-$$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A:\text{$\mathfrak{p}$ is homogeneous and $A_+\not\subset \mathfrak{p}$}\}$$
+$$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogeneous and $A_+\not\subset \mathfrak{p}$}\}$$
 
 으로 정의된다.
 
@@ -141,7 +141,7 @@ $$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A:\text{$\mathfrak{p}$ is homogeneous
 
 <ins id="def2">**정의 2**</ins> Graded ring $A_\bullet$가 주어졌다 하자. $A_\bullet$의 homogeneous ideal $\mathfrak{a}$에 대하여
 
-$$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet: \mathfrak{a}\subseteq \mathfrak{p}\}$$
+$$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet\mid \mathfrak{a}\subseteq \mathfrak{p}\}$$
 
 으로 정의한다. 
 
@@ -277,7 +277,7 @@ $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})\subseteq \Spec A_{(f)}$$
 
 $$D(f^{\deg g}/g^{\deg f})\cong \Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$
 
-들은 [§스킴, ⁋보조정리 7](/ko/math/algebraic_geometry/schemes#lem7)의 조건들을 모두 만족하고, 따라서 $\Proj A_\bullet$ 위에 유일한 scheme structure를 준다. 
+들은 [§스킴, ⁋보조정리 8](/ko/math/algebraic_geometry/schemes#lem8)의 조건들을 모두 만족하고, 따라서 $\Proj A_\bullet$ 위에 유일한 scheme structure를 준다. 
 
 </div>
 
@@ -293,7 +293,39 @@ $$\mathscr{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 
 </div>
 
-다소 주의할 것은 $\Proj$는 $\Spec$과 다르게, $\bgr\_{\mathbb{N}\_{\geq 0}}\cRing^\op$에서 $\mathbf{LocallyRingedSpace}$로의 functor를 정의하지 않는다는 것이다. 이는 graded ring homomorphism $\phi_\bullet:A_\bullet \rightarrow B_\bullet$과 $B$의 임의의 homogeneous ideal $\mathfrak{q}$가 $B_+$를 포함하지 않더라도 그 inverse image $\phi^{-1}(\mathfrak{q})$는 $A_+$를 포함할 수도 있기 때문이다. 
+다소 주의할 것은 $\Proj$는 $\Spec$과 다르게, $\bgr\_{\mathbb{N}\_{\geq 0}}\cRing^\op$에서 $\LRS$로의 functor를 정의하지 않는다는 것이다. 이는 graded ring homomorphism $\phi_\bullet:A_\bullet \rightarrow B_\bullet$과 $B$의 임의의 homogeneous ideal $\mathfrak{q}$가 $B_+$를 포함하지 않더라도 그 inverse image $\phi^{-1}(\mathfrak{q})$는 $A_+$를 포함할 수도 있기 때문이다. 
+
+이제 마지막으로 우리는 맨 처음 motivation을 위해 살펴본 projective space를 대수기하의 언어로 (거의) 완전하게 옮겨본다.
+
+<div class="example" markdown="1">
+
+<ins id="ex12">**예시 12**</ins> 대수기하학에서, $\mathbb{P}^n_\mathbb{k}$는 다음의 식
+
+$$\mathbb{P}^n_\mathbb{k}=\Proj \mathbb{k}[\x_0,\ldots, \x_n]$$
+
+으로 정의한다. 여기서 polynomial algebra $\mathbb{k}[\x_0,\ldots, \x_n]$은 당연히 degree를 통해 grading이 주어진 graded ring이다. 
+
+그럼 projective space에서의 $n+1$개의 open cover는 이 언어에서는
+
+$$D_+(\x_i)\cong \Spec \mathbb{k}[\x_{0},\ldots, \x_{n}]_{(\x_{i})}$$
+
+으로 생각할 수 있으며, [\[가환대수학\] §등급환의 국소화, ⁋명제 6](/ko/math/commutative_algebra/localization_of_graded_rings#prop6)에 의하여
+
+$$\mathbb{k}[\x_{0},\ldots, \x_{n}]_{(\x_{i})}\cong \mathbb{k}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)$$
+
+이 되며, 명시적으로 이 isomorphism은 ring homomorphism
+
+$$\mathbb{k}[\x_{0/i}, \ldots, \x_{n/i}]\rightarrow \mathbb{k}[\x_0,\ldots, \x_n]_{(\x_i)};\qquad \x_{k/i}\mapsto \frac{\x_k}{\x_i}$$
+
+에 first isomorphism theorem을 적용하여 얻어지는 것이다. 
+
+이제 임의의 $\mathfrak{p}\in \mathbb{P}^n_\mathbb{k}$는 어떠한 $D_+(\x_i)$에 포함된다. 위의 isomorphism을 통하여 $D_+(\x_i)$의 점 $\mathfrak{p}$가 $U_i=\Spec \mathbb{k}[\x_{0/i}, \ldots, \x_{n/i}]/(\x_{i/i}-1)$의 점 $\mathfrak{q}$로 옮겨졌다 하자. 그럼 이 경우에 다음의 isomorphism
+
+$$\mathscr{O}_{\mathbb{P}^n_\mathbb{k},\mathfrak{p}}\cong \mathscr{O}_{U_i, \mathfrak{q}}$$
+
+을 기대하는 것이 당연할 것이다. 그리고 이는 물론 성립한다. ([\[가환대수학\] §등급환의 국소화, ⁋명제 8](/ko/math/commutative_algebra/localization_of_graded_rings#prop8)) 
+
+</div>
 
 ---
 **참고문헌**

@@ -20,6 +20,16 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/schemes
       - title: "사영스킴"
         url: ko/math/algebraic_geometry/projective_schemes
+      - title: "스킴의 위상구조"
+        url: ko/math/algebraic_geometry/topology_of_schemes
+      - title: "스킴의 대수구조"
+        url: ko/math/algebraic_geometry/algebra_of_schemes
+      - title: "스킴 사이의 사상"
+        url: ko/math/algebraic_geometry/morphism_of_schemes
+      - title: "스킴 사상의 성질들"
+        url: ko/math/algebraic_geometry/properties_of_scheme_morphisms
+      - title: "닫힌 부분스킴"
+        url: ko/math/algebraic_geometry/closed_subschemes
   - title: 
     children:
       - title: "블로그 소개"

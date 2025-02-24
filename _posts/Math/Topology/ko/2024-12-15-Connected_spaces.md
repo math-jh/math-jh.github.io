@@ -12,7 +12,7 @@ sidebar:
     nav: "topology-ko"
 
 date: 2024-12-15
-last_modified_at: 2024-12-15
+last_modified_at: 2025-02-08
 weight: 18
 
 ---
@@ -141,7 +141,7 @@ $$X=\bigcup_{i\in I} U_i$$
 
 $$x\sim y\iff \text{$x$ and $y$ lies in the same component}$$
 
-로 정의하자. 그럼 $X/{\sim}$은 totally didsconnected이다.
+로 정의하자. 그럼 $X/{\sim}$은 totally disconnected이다.
 
 </div>
 
