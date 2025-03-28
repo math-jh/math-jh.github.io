@@ -203,7 +203,9 @@ $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 
 ## 스킴의 족
 
-마지막 관점은 아직 엄밀하게 정의하기에는 우리가 가진 언어가 부족하므로, 기하학적인 직관만 설명하기로 한다. 우리는 scheme morphism $f:X \rightarrow Y$를 *family parametrized by $Y$* 혹은 간단히 $Y$-family라 부른다. 이는 기본적으로 다음과 같은 기하학적인 상황을 생각하면 된다.
+마지막 관점은 아직 엄밀하게 정의하기에는 우리가 가진 언어가 부족하므로, 기하학적인 직관만 설명하기로 한다. 우리는 scheme morphism $f:X \rightarrow S$를 *family parametrized by $S$* 혹은 간단히 $S$-family라 부른다. 따라서 정의에 의하여 $\Sch_{/S}$는 $S$로 parametrize된 family들의 category로 생각할 수 있다. 
+
+기하학적인 직관을 위해서는 기본적으로 다음과 같은 (scheme이 아닌) 상황을 생각하면 된다.
 
 <div class="example" markdown="1">
 
@@ -215,4 +217,12 @@ $$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}: y^2+z^2=1-x_0^2\}$$
 
 </div>
 
-그러나 이 예시를 scheme의 언어로 표현하기 위해서는 $\pi^{-1}(x_0)$과 같은 것을 잘 표현할 방법이 필요하다. 
+이 예시를 스킴으로 바로 나타낼 수 없는 이유 중 덜 본질적인 것은 $S$가 $\mathbb{R}^3$의 닫힌집합이고, 우리는 닫힌집합 위에 scheme structure를 주는 방법은 모른다는 것이다. 이는 [§닫힌 부분스킴](/ko/math/algebraic_geometry/closed_subschemes)에서 해결하게 된다. 더 미묘하고 본질적인 부분은 함수 $\pi$의 점 $x_0$에서의 fiber $\pi^{-1}(x_0)$을 나타낼 방법이 없는 것이다. 물론 scheme morphism은 기본적으로 연속함수이므로 이를 연속함수의 fiber로 볼 수 있겠지만, 그렇게 하였을 경우 $\pi^{-1}(x_0)$에 scheme structure를 주는 방법이 ([§닫힌 부분스킴](/ko/math/algebraic_geometry/closed_subschemes)의 내용을 가정하더라도) 존재하지 않는다. 이를 설명하기 위해서 우리는 조금 더 기다려야 한다. 
+
+---
+**참고문헌**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).  
+
+---

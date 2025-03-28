@@ -6,17 +6,18 @@
 \begin{document}
 
 
-% finite_morphism (Properties_of_scheme_morphisms-2.png)
-\begin{tikzpicture}
-	\draw (-.1,-4)--(4.9,-4) node[right]{$\mathbb{A}^1_\Bbbk\cong \Spec \Bbbk[\x]$};
-	\draw[domain=0:2.2] plot (\x^2,\x)node[right]{$\Spec \Bbbk[\x,\y]/(\y^2-\x)$};
-	\draw[domain=0:2.2] plot (\x^2,-\x);
-	\fill (4,-4) circle[radius=2pt];
-	\draw[dashed, gray] (4,2)--(4,-4); 
-	\draw[-{stealth}] (2.5,-2.5) -- (2.5,-3.5);
-	\fill[red] (4,2) circle[radius=2pt];
-	\fill[red] (4,-2) circle[radius=2pt];
-\end{tikzpicture}
+% adding_extra_variables (Fiber_products-7.png)
+\begin{tikzcd}
+	{\Spec A[\x_1,\ldots,\x_n]} & {\Spec B[\x_1,\ldots,\x_n]} \\
+	{\Spec A} & {\Spec B}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}
+
+
+
 
 
 \end{document}
@@ -158,7 +159,13 @@
 \end{tikzcd}
 
 
-%line_with_two_origin (Schemes-1.png)
+%% decomposition (Schemes-1.png)
+\begin{tikzcd}
+	\Spec A_f\rar["\Spec\epsilon"]\drar[sloped, swap, "\sim" above]\drar["\Spec\epsilon\vert^{D(f)}" {below, xshift=-12pt, yshift=-3pt}]&\Spec A\\
+	&D(f)\uar[hook, "\iota" right]
+\end{tikzcd}
+
+%line_with_two_origins (Schemes-2.png)
 \begin{tikzpicture}
 	\draw (-2,0)--(-.05,0);
 	\draw (.05,0)--(2,0);
@@ -166,7 +173,7 @@
 	\fill (0,-.05) circle[radius=.5pt];
 \end{tikzpicture}
 
-%projective_line (Schemes-2.png)
+%projective_line (Schemes-3.png)
 \begin{tikzpicture}
 	\draw (0,0) circle[radius=1];
 	\draw (0,0) circle[radius=1.05];
@@ -210,6 +217,102 @@
 	\draw (4.5,3) node{$\mathbb{A}^2_\Bbbk\cong \Spec \Bbbk[\x,\y]\cong \Spec \Bbbk[\x][\y]$};
 	\draw (4,0) node{$\mathbb{A}^1_\Bbbk\cong \Spec \Bbbk[\x]$};
 \end{tikzpicture}
+
+% finite_morphism (Properties_of_scheme_morphisms-2.png)
+\begin{tikzpicture}
+	\draw (-.1,-4)--(4.9,-4) node[right]{$\mathbb{A}^1_\Bbbk\cong \Spec \Bbbk[\x]$};
+	\draw[domain=0:2.2] plot (\x^2,\x)node[right]{$\Spec \Bbbk[\x,\y]/(\y^2-\x)$};
+	\draw[domain=0:2.2] plot (\x^2,-\x);
+	\fill (4,-4) circle[radius=2pt];
+	\draw[dashed, gray] (4,2)--(4,-4); 
+	\draw[-{stealth}] (2.5,-2.5) -- (2.5,-3.5);
+	\fill[red] (4,2) circle[radius=2pt];
+	\fill[red] (4,-2) circle[radius=2pt];
+\end{tikzpicture}
+
+
+%% fiber_diagram (Fiber_products-1.png)
+\begin{tikzcd}
+	{X\times_SY} & Y \\
+	X & S
+	\arrow["{\rho_Y}", from=1-1, to=1-2]
+	\arrow["{\rho_X}"', from=1-1, to=2-1]
+	\arrow["{\varphi_Y}", from=1-2, to=2-2]
+	\arrow["{\varphi_X}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% universal_property (Fiber_products-2.png)
+\begin{tikzcd}
+	Z \\
+	& {X\times_SY} & Y \\
+	& X & S
+	\arrow["\psi"{description}, dashed, from=1-1, to=2-2]
+	\arrow["{\psi_Y}", curve={height=-12pt}, from=1-1, to=2-3]
+	\arrow["{\psi_X}"', curve={height=12pt}, from=1-1, to=3-2]
+	\arrow["{\rho_Y}", from=2-2, to=2-3]
+	\arrow["{\rho_X}"', from=2-2, to=3-2]
+	\arrow["{\varphi_Y}", from=2-3, to=3-3]
+	\arrow["{\varphi_X}"', from=3-2, to=3-3]
+\end{tikzcd}
+
+% open_subscheme (Fiber_products-3.png)
+\begin{tikzcd}
+	{\varphi^{-1}(U)} & U \\
+	Y & Z
+	\arrow["{\varphi\vert^U}", from=1-1, to=1-2]
+	\arrow["{\iota'}"', from=1-1, to=2-1]
+	\arrow["\iota", from=1-2, to=2-2]
+	\arrow["\varphi"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% open_fiber_product-1 (Fiber_products-4.png)
+\begin{tikzcd}
+	{X\times_SY} & Y \\
+	X & S
+	\arrow["{\rho_Y}", from=1-1, to=1-2]
+	\arrow["{\rho_X}"', from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["{\varphi_Y}", from=1-2, to=2-2]
+	\arrow["{\varphi_X}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% open_fiber_product-2 (Fiber_products-5.png)
+\begin{tikzcd}
+	& {Y'} \\
+	{X\times_SY} & Y
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow["{\rho_Y}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% magic_square (Fiber_products-6.png)
+\begin{tikzcd}
+	{\rho_Y^{-1}(Y')} & {Y'} \\
+	{X\times_SY} & Y \\
+	X & S
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-1, to=3-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=2-1, to=3-2]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=3-1, to=3-2]
+\end{tikzcd}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

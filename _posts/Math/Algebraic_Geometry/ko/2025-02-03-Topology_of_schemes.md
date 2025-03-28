@@ -176,7 +176,7 @@ $$A=A\setminus \emptyset=A\setminus Z(1)=A\setminus Z\left(\sum_{i=1}^r Z(f_i)\r
 
 </div>
 
-반면 우리는 [§스킴, ⁋예시 7](/ko/math/algebraic_geometry/schemes#ex7)에서 affine scheme의 open subscheme이 affine이 되지 않을 수 있다는 것을 이미 살펴보았으므로 $P$가 ring의 local property라고 하여도 이러한 식으로 정의한 성질 $P$는 진정한 의미에서 local한 성질이 아니다. 이를 위해서는 다음과 같이 정의하면 된다. 
+반면 우리는 [§스킴, ⁋예시 8](/ko/math/algebraic_geometry/schemes#ex8)에서 affine scheme의 open subscheme이 affine이 되지 않을 수 있다는 것을 이미 살펴보았으므로 $P$가 ring의 local property라고 하여도 이러한 식으로 정의한 성질 $P$는 진정한 의미에서 local한 성질이 아니다. 이를 위해서는 다음과 같이 정의하면 된다. 
 
 <div class="definition" markdown="1">
 

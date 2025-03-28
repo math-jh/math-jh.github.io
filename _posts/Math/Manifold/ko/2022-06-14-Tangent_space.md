@@ -31,15 +31,13 @@ $$\lim_{t\rightarrow 0}\frac{f(p+tv)-f(p)}{t}$$
 
 을 잘 정의해준다. 우리의 아이디어는 이 <em_ko>방향미분</em_ko>이라는 연산자를 접벡터로 정의하는 것이다.
 
-## 미분가능한 함수들의 sheaf
+## 미분가능한 함수들의 층
 
-대수기하의 언어에 익숙하지 않다면 바로 [다음 절](/ko/math/manifold/tangent_space#%EC%A0%91%EB%B2%A1%ED%84%B0)로 넘어가도 좋다.
+$C^\infty(U)$를 열린집합 $U$ 위에서 정의된 $C^\infty$ 함수들의 모임, 그리고 $V\subseteq U$일 때마다 함수 $\rho_{UV}:C^\infty(U)\rightarrow C^\infty(V)$를 
 
-$C^\infty(U)$를 열린집합 $U$ 위에서 정의된 $C^\infty$ 함수들의 모임, 그리고 $V\subseteq U$일 때마다 함수 $\restrict_{UV}:C^\infty(U)\rightarrow C^\infty(V)$를 
+$$\rho_{UV}:f\mapsto f|_V$$
 
-$$\restrict_{UV}:f\mapsto f|_V$$
-
-으로 정의하자. 그럼 이 구조는 $M$ 위에 정의된 ring들의 sheaf $\mathcal{C}^\infty_M$가 된다. 임의의 $p\in M$에서의 $\mathcal{C}^\infty$의 stalk은 $\mathcal{C}^\infty_{M,p}$, 혹은 혼동이 없을 때에는 $\mathcal{C}^\infty_p$로 적는다.
+으로 정의하자. 그럼 이 구조는 $M$ 위에 정의된 ring들의 sheaf $\mathcal{C}^\infty_M$가 된다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 임의의 $p\in M$에서의 $\mathcal{C}^\infty$의 stalk은 $\mathcal{C}^\infty_{M,p}$, 혹은 혼동이 없을 때에는 $\mathcal{C}^\infty_p$로 적는다. ([\[위상수학\] §준층, ⁋정의 9](/ko/math/topology/presheaves#def9))
 
 <div class="proposition" markdown="1">
 
