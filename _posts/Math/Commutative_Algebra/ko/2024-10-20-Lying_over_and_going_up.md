@@ -19,6 +19,8 @@ toc: false
 
 ---
 
+## Lying over, going up
+
 <div class="proposition" markdown="1">
 
 <ins id="prop1">**명제 1**</ins> Integral extension $A\hookrightarrow B$가 주어졌다 하자.
@@ -48,7 +50,7 @@ $$1=\sum_{i=1}^n b_i a_i,\qquad a_i\in \mathfrak{p},\quad b_i\in B$$
 
 </details>
 
-이 글에서 남은 부분은 [따름정리 4](#cor4)를 증명하는 것으로, 대략적으로 [명제 1](#prop1)을 통해 $A$의 prime ideal $\mathfrak{p}$ 위에 있는 $B$의 두 prime ideal $\mathfrak{q}_1, \mathfrak{q}_2$가 주어졌다면 이들은 서로를 포함하지 않는다는 것이다. 
+이 글의 중요한 부분은 [따름정리 4](#cor4)를 증명하는 것으로, 대략적으로 [명제 1](#prop1)을 통해 $A$의 prime ideal $\mathfrak{p}$ 위에 있는 $B$의 두 prime ideal $\mathfrak{q}_1, \mathfrak{q}_2$가 주어졌다면 이들은 서로를 포함하지 않는다는 것이다. 
 
 <div class="proposition" markdown="1">
 

@@ -17,11 +17,11 @@ weight: 4
 
 ---
 
-[§스킴, ⁋예시 9](/ko/math/algebraic_geometry/schemes#ex9)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{k}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여 projective scheme을 정의한다. 
+[§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{k}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여 projective scheme을 정의한다. 
 
 ## 사영공간
 
-[§스킴, ⁋예시 9](/ko/math/algebraic_geometry/schemes#ex9)을 그대로 일반화하면 scheme으로서 $\mathbb{P}^n$을 정의하는 것 자체는 어렵지 않다. 하지만 이를 일반화하여 projective scheme을 정의하기 위해서는 $\mathbb{P}^n$을 직관적으로 이해하는 것이 도움이 되므로, 이를 조금 더 찬찬히 뜯어보자.
+[§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10)을 그대로 일반화하면 scheme으로서 $\mathbb{P}^n$을 정의하는 것 자체는 어렵지 않다. 하지만 이를 일반화하여 projective scheme을 정의하기 위해서는 $\mathbb{P}^n$을 직관적으로 이해하는 것이 도움이 되므로, 이를 조금 더 찬찬히 뜯어보자.
 
 우선 우리는 기존에 위상수학에서 정의하던 projective space를 간단히 살펴본다. 위상공간 $\mathbb{P}^n$을 만들기 위해 우리는 위상공간 $\mathbb{R}^{n+1}\setminus \\{0\\}$을 생각했다. 그럼 이 위에 다음의 동치관계
 
@@ -57,7 +57,7 @@ $$U_i=\{[x_0:\cdots:x_n]\in \mathbb{P}^n\mid x_i\neq 0\}$$
 
 $$[x_0:\cdots:x_n]\text{ in $U_i\subseteq \mathbb{P}^n$}\leftrightarrow\left(\frac{x_0}{x_i},\ldots, \frac{x_{i-1}}{x_i},1,\frac{x_{i+1}}{x_i},\ldots, \frac{x_n}{x_i}\right)\text{ in $P_i\subseteq \mathbb{R}^{n+1}$}$$
 
-으로 표현된다. 한편, [§스킴, ⁋예시 9](/ko/math/algebraic_geometry/schemes#ex9)의 과정은 이 과정을 거꾸로 진행하는 것이다. 즉, $n+1$개의 $n$차원 평면 $P_0,\ldots, P_n$들이 먼저 주어져 있다 하고 이들을 cocycle condition을 만족하는 isomorphism들을 통해서 옮겨주는 것이다. 그럼 cocycle condition이 어떻게 쓰여져야 하는지는 정확히 위의 identification에 의해 $\mathbb{P}^n$의 한 점이 서로 다른 $P_i$와 $P_j$에서 어떻게 쓰여지는지를 살펴보아 얻어진다. 이를 살펴보자. 우선 $P_i$와 $P_j$의 임의의 점은 다음의 꼴
+으로 표현된다. 한편, [§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10)의 과정은 이 과정을 거꾸로 진행하는 것이다. 즉, $n+1$개의 $n$차원 평면 $P_0,\ldots, P_n$들이 먼저 주어져 있다 하고 이들을 cocycle condition을 만족하는 isomorphism들을 통해서 옮겨주는 것이다. 그럼 cocycle condition이 어떻게 쓰여져야 하는지는 정확히 위의 identification에 의해 $\mathbb{P}^n$의 한 점이 서로 다른 $P_i$와 $P_j$에서 어떻게 쓰여지는지를 살펴보아 얻어진다. 이를 살펴보자. 우선 $P_i$와 $P_j$의 임의의 점은 다음의 꼴
 
 $$(x_{0/i},\ldots, x_{(i-1)/i}, 1, x_{(i+1)/i}, \ldots, x_{n/i})\in P_i,\qquad (x_{0/j},\ldots, x_{(j-1)/j}, 1, x_{(j+1)/j}, \ldots, x_{n/j})\in P_j$$
 
@@ -75,7 +75,7 @@ $$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad 
 
 이 성립해야 한다. 마찬가지로 $P_j$의 점을 $P_i$의 점에 맞추면 $x_{k/j}/x_{i/j}=x_{k/i}$와 같은 식도 얻어질 것이지만, 이는 $x_{i/j}=1/x_{j/i}$에 의해 새로운 식은 아니다. 
 
-이제 이 계산을 바탕으로 [§스킴, ⁋예시 9](/ko/math/algebraic_geometry/schemes#ex9)를 일반화하자. 우선 $n+1$개의 affine $n$-space들
+이제 이 계산을 바탕으로 [§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10)를 일반화하자. 우선 $n+1$개의 affine $n$-space들
 
 $$P_i=\Spec \mathbb{k}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
 
@@ -83,11 +83,11 @@ $$P_i=\Spec \mathbb{k}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
 
 $$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/\x_{i/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad \x_{j/i}\mapsto 1/\x_{i/j}$$
 
-을 통해 정의되는 isomorphism $\varphi_{ij}:P_{ij} \rightarrow P_{ji}$들이 [§스킴, ⁋보조정리 8](/ko/math/algebraic_geometry/schemes#lem8)의 cocycle condition을 만족하는 것이 거의 자명하며 따라서 유일한 scheme $\mathbb{P}^n$이 정의되고, 이 때 $\mathbb{P}^n$의 원소들을 $[x_0:\ldots:x_n]$의 형태로 쓴다면 $U_i$는 정확히 $x_i\neq 0$인 조건을 만족하는 집합이다. 
+을 통해 정의되는 isomorphism $\varphi_{ij}:P_{ij} \rightarrow P_{ji}$들이 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 cocycle condition을 만족하는 것이 거의 자명하며 따라서 유일한 scheme $\mathbb{P}^n$이 정의되고, 이 때 $\mathbb{P}^n$의 원소들을 $[x_0:\ldots:x_n]$의 형태로 쓴다면 $U_i$는 정확히 $x_i\neq 0$인 조건을 만족하는 집합이다. 
 
 ## 사영스킴
 
-현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $U_i$들이 $\mathbb{P}^n$의 open subscheme인 것은 [§스킴, ⁋보조정리 8](/ko/math/algebraic_geometry/schemes#lem8)의 결과이기는 하지만, 그 정의 자체로도 함수 $\x_i$가 $0$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $\x_i$가 $\mathbb{P}^n$ 위의 함수가 아니라는 데에 있다. 심지어 $n=1$인 경우만 보아도 우리는 $\mathscr{O}\_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{k}$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $\mathbb{R}^{n+1}\setminus \\{0\\}$의 한 점 $(x_0,\ldots, x_n)$을 받아 $x_i$를 내놓는 함수 $\x_i: \mathbb{R}^{n+1}\setminus\\{0\\} \rightarrow \mathbb{R}$은 $\sim$과 compatible하지 않고 따라서 $\mathbb{P}^n$ 위의 함수를 정의하지 않는다. 또 다른 예시로 $\mathbb{R}^2\setminus\\{0\\}$ 위에서 정의된 함수 $f: \mathbb{R}^2\setminus\\{0\\} \rightarrow \mathbb{R}$가 다음의 식
+현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $U_i$들이 $\mathbb{P}^n$의 open subscheme인 것은 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 결과이기는 하지만, 그 정의 자체로도 함수 $\x_i$가 $0$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $\x_i$가 $\mathbb{P}^n$ 위의 함수가 아니라는 데에 있다. 심지어 $n=1$인 경우만 보아도 우리는 $\mathscr{O}\_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{k}$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $\mathbb{R}^{n+1}\setminus \\{0\\}$의 한 점 $(x_0,\ldots, x_n)$을 받아 $x_i$를 내놓는 함수 $\x_i: \mathbb{R}^{n+1}\setminus\\{0\\} \rightarrow \mathbb{R}$은 $\sim$과 compatible하지 않고 따라서 $\mathbb{P}^n$ 위의 함수를 정의하지 않는다. 또 다른 예시로 $\mathbb{R}^2\setminus\\{0\\}$ 위에서 정의된 함수 $f: \mathbb{R}^2\setminus\\{0\\} \rightarrow \mathbb{R}$가 다음의 식
 
 $$f(x_0,x_1)=x_0^2-x_1$$
 
@@ -277,7 +277,7 @@ $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})\subseteq \Spec A_{(f)}$$
 
 $$D(f^{\deg g}/g^{\deg f})\cong \Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$
 
-들은 [§스킴, ⁋보조정리 8](/ko/math/algebraic_geometry/schemes#lem8)의 조건들을 모두 만족하고, 따라서 $\Proj A_\bullet$ 위에 유일한 scheme structure를 준다. 
+들은 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 조건들을 모두 만족하고, 따라서 $\Proj A_\bullet$ 위에 유일한 scheme structure를 준다. 
 
 </div>
 
