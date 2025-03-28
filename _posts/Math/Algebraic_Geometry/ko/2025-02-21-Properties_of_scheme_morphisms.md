@@ -130,7 +130,7 @@ $$\Hom_\Sch(\Spec A,\Spec B)\cong\Hom_\cRing (B, A)$$
 
 $$(\varphi\vert_U)^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_U(V)=\mathscr{O}_U(U)$$
 
-으로부터 얻어낼 수 있으면 좋을 것이다. 그러나 물론 임의의 scheme morphism $\varphi: X \rightarrow Y$에 대하여, $Y$의 affine open subset의 preimage가 affine이 되지는 않는다. ([§스킴, ⁋예시 7](/ko/math/algebraic_geometry/schemes#ex7))
+으로부터 얻어낼 수 있으면 좋을 것이다. 그러나 물론 임의의 scheme morphism $\varphi: X \rightarrow Y$에 대하여, $Y$의 affine open subset의 preimage가 affine이 되지는 않는다. ([§스킴, ⁋예시 8](/ko/math/algebraic_geometry/schemes#ex8))
 
 <div class="definition" markdown="1">
 

@@ -111,7 +111,7 @@ $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
-로 정의하면 $D_V(f)=D_U(f)\cap V=D(f\vert_{U\cap D_U(f)})\subseteq V$이고, 이것이 공집합이기 위해서는 $f\vert_{U\cap D_U(f)}$가 $\mathscr{O}_X(V)$의 nilpotent element이다. 그런데 $\mathscr{O}\_X(V)$는 위의 주장에 의하여 integral domain이므로, 이로부터 $f\vert_{U\cap D_U(f)}=0$이어야 함을 알고, 이것이 $U$의 임의의 open affine subset $V$에 대해 성립하므로 $f=0$이어야 한다. 
+로 정의하면 $D_V(f)=D_U(f)\cap V=D(f\vert_{U\cap D_U(f)})\subseteq V$이고, 이것이 공집합이기 위해서는 $f\vert\_{U\cap D\_U(f)}$가 $\mathscr{O}\_X(V)$의 nilpotent element이다. 그런데 $\mathscr{O}\_X(V)$는 위의 주장에 의하여 integral domain이므로, 이로부터 $f\vert\_{U\cap D\_U(f)}=0$이어야 함을 알고, 이것이 $U$의 임의의 open affine subset $V$에 대해 성립하므로 $f=0$이어야 한다. 
 
 </details>
 
@@ -264,16 +264,46 @@ $$X= Z(\x_2^2,\x_1\x_2)=Z(\x_2^2)\cap Z(\x_1\x_2)=\{(0,0)\}$$
 
 </div>
 
+## 유리함수
 
-
-
-
-
-한편 [\[가환대수학\] §동반소아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/associated_primes#cor4)의 둘쨰 결과에 의하여 다음의 함수
+이제 우리는 스킴 위에서 정의된 유리함수를 정의한다. 우선 [\[가환대수학\] §동반소아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/associated_primes#cor4)의 둘쨰 결과에 의하여 다음의 함수
 
 $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\mathfrak{p}$$
 
-는 ㅑnjective인 것을 안다. 
+는 injective인 것을 안다. 따라서 locally noetherian scheme $X$의 임의의 열린집합 $U$에 대하여 다음의 함수
+
+$$\Gamma(U, \mathscr{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathscr{O}_{X,x}\tag{$\ast$}$$
+
+가 injective이다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def12">**정의 12**</ins> Locally noetherian scheme $X$와, $X$의 associated point들을 모두 포함하는 열린집합 $U$에 대하여, $\Gamma(U, \mathscr{O}_X)$의 ($\ast$)에 의한 image를 $X$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
+
+</div>
+
+따라서, 정의에 의해 $X$ 위에 정의된 rational function은 (1) $X$의 모든 associated point들을 포함하는 *정의역* $U$와, (2) 그 위의 함수 $f\in \Gamma(U, \mathscr{O}_X)$의 데이터로 이루어지며, 이러한 pair $(U, f)$와 $(U',f')$는 만일 $U\cap U'$에서 $f$와 $f'$가 같은 함수를 정의하면 같은 함수가 된다. 
+
+<div class="example" markdown="1">
+
+<ins id="ex13">**예시 13**</ins> Affine scheme $X=\Spec \mathbb{k}[\x_1,\x_2]/(\x_2-\x_1^2)$을 생각하자. 그럼 $X$는 유일한 associated prime $(0)$을 가지며, $X$의 임의의 열린집합은 이 점을 포함하므로 $X$의 rational function은 공집합이 아닌 임의의 열린집합 $U$와 그 위에서의 함수 $f\in\Gamma(U, \mathscr{O}_X)$로 이루어진다. 
+
+한편, 우리는 affine scheme $X=\Spec A$의 임의의 (공집합이 아닌) 열린집합은 적당한 nonzero $f\in A$에 대하여 $\Spec A_f$의 꼴이며, 이 위에서의 함수는 $A_f$로 주어지는 것을 안다. 가령 이 예시에서 $f$를 $\x_1$(의 $A$에서의 image)로 택했다고 하면, isomorphism
+
+$$\left(\frac{\mathbb{k}[\x_1,\x_2]}{(\x_2-\x_1^2)}\right)_{\x_1}\cong\frac{\mathbb{k}[\x_1,\x_2]_{\x_1}}{(\x_2-\x_1^2)_{\x_1}}$$
+
+에 의하여, 열린집합 $\Spec A_{\x_1}$ 위에서 정의된 $1/\x_1$과 같은 함수들은 $X$ 위에서의 rational function이 된다. 이를 통해 분모에 $\x_2-\x_1^2$ 인자를 갖고 있지 않은 모든 유리식은 $X$ 위의 (적절한 열린집합에서의) 유리함수가 된다는 것을 안다. 
+
+</div>
+
+Locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 *total quotient ring* $K(X)$를 정의한다. 만일, 위와 같이 $X$가 integral scheme이라 하자. 그럼 특히 $X$는 irreducible이므로 유일한 generic point $x$를 갖는다. 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여, integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같다. 
+
+
+---
+**참고문헌**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).  
 
 ---
 [^1]: 이 과정에서 $X$의 irreducible component들이 유한히 많기 때문에 각각의 component들이 열린집합임을 사용하였다. 
