@@ -30,6 +30,14 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/properties_of_scheme_morphisms
       - title: "닫힌 부분스킴"
         url: ko/math/algebraic_geometry/closed_subschemes
+      - title: "올곱"
+        url: ko/math/algebraic_geometry/fiber_products
+      - title: "차원"
+        url: ko/math/algebraic_geometry/dimension
+      - title: "완전교차"
+        url: ko/math/algebraic_geometry/complete_intersections
+      - title: "사영공간의 닫힌 부분스킴"
+        url: ko/math/algebraic_geometry/closed_subschemes_of_projective_spaces
   - title: 
     children:
       - title: "블로그 소개"
