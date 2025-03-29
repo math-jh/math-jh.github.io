@@ -200,7 +200,7 @@ $$(\beta\alpha\beta^{-1})a=\beta(\alpha(\beta^{-1}a))=\beta\beta^{-1}a=a$$
 
 특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. 즉 $\rho:G\rightarrow\End(G)=\End_\Grp(G)$가 주어져 있다 하면, [따름정리 8](#cor8)의 증명으로부터 $\rho$의 image는 모두 전단사라는 것을 안다. 그런데 전단사인 group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
 
-자기 자신 위에서 정의된 group action 중 몇 가지는 기억해둘 만한 가치가 있다.
+자기 자신 위에서 정의된 group action 중 특히 다음의 예시는 기억해둘 만한 가치가 있다.
 
 <div class="proposition" markdown="1">
 
