@@ -19,3 +19,7 @@ weight: 2
 
 이 카테고리의 글에서 우리는 [대수적 구조](/ko/algebraic_structures)에서 다루지 않은 group의 성질들에 대해 살펴본다. 
 
+Jordan-Holder
+FTFGAG
+Sylow
+semidirect product
