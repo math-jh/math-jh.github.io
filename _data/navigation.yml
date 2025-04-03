@@ -241,6 +241,14 @@ commutative_algebra-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
+group_theory-ko:
+  - title: <a href="/ko/group_theory/" class="sidebar_title">군론</a>
+    children:
+      - title: "대칭군"
+        url: ko/math/group_theory/symmetric_groups
+      - title: "군의 확장"
+        url: ko/math/group_theory/extensions
+
 homological_algebra-ko:
   - title: <a href="/ko/homological_algebra/" class="sidebar_title">호몰로지 대수학</a>
     children:
