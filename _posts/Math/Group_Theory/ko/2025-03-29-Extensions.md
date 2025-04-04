@@ -162,7 +162,7 @@ $$N\rtimes_\rho H \rightarrow G;\qquad (x,y)\mapsto xy$$
 
 역함수를 만들어주면 충분하다. 이를 위해서는 조건 $NH=G$를 이용하여 $G$의 임의의 원소 $g$에 대해 $g=xy$를 만족하는 적당한 $x\in N$, $y\in H$를 찾아야 하는데, 이는 일반적으로는 불가능하지만 $N$이 $G$의 *normal* subgroup이므로 가능하다. 나머지는 단순한 계산이다.
 
-</detais>
+</details>
 
 이 경우 $G$가 $N$과 $H$의 (internal) semi-direct product라고 말한다. External semi-direct product와 internal semi-direct product의 차이는 단순히 처음 시작을 어디서 했느냐일 뿐이며 중요한 것은 아니다. 
 
