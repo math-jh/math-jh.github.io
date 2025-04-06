@@ -48,15 +48,15 @@ $$x=\sum_{i\in I} x_i,\qquad\text{$x_i\in G_i$, $x_i=0$ for all but finitely man
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 임의의 group $G$에 대하여 $G$의 commutator subgroup $[G,G]$는 $G$의 모든 commutator들에 의해 생성된 subgroup으로 정의된다. 즉,
+<ins id="def3">**정의 3**</ins> 임의의 group $G$와 $G$의 두 subgroup $H_1,H_2$에 대하여, $[H_1,H_2]$를 다음의 *commutator<sub>교환자</sub>*들
 
-$$[G,G]=\left\langle [x,y]: x,y\in G\right\rangle, \qquad [x,y]=xyx^{-1}y^{-1}$$
+$$[h_1,h_2]=h_1^{-1}h_2^{-1}h_1h_2,\qquad h_1\in H_1,h_2\in H_2$$
 
-이다. 
+로 생성된 $G$의 subgroup으로 정의한다.
 
 </div>
 
-만일 $G$가 abelian group이었다면, 모든 $x,y$에 대하여 $xyx^{-1}y^{-1}=e$이므로 $[G,G]=\\{e\\}$이다. 따라서 $[G,G]$는 $G$가 abelian group이 되는 것으로부터 얼마나 떨어져 있는지를 나타낸다고 생각할 수 있다. 
+특별히 우리가 이번 글에서 관심을 가지는 것은 $H_1=H_2=G$일 때이다. 만일 $G$가 abelian group이었다면, 모든 $x,y\in G$에 대하여 $x^{-1}y^{-1}xy=e$이므로 $[G,G]=\\{e\\}$이다. 따라서 $[G,G]$는 $G$가 abelian group이 되는 것으로부터 얼마나 떨어져 있는지를 나타낸다고 생각할 수 있다. 
 
 한편 다음이 성립한다.
 
@@ -70,17 +70,17 @@ $$[G,G]=\left\langle [x,y]: x,y\in G\right\rangle, \qquad [x,y]=xyx^{-1}y^{-1}$$
 
 임의의 $x,y\in G$와 $g\in G$에 대하여,
 
-$$g(xyx^{-1}y^{-1})g^{-1}=(gxg^{-1})(gyg^{-1})(gxg^{-1})^{-1}(gyg^{-1})^{-1}\in [G,G]$$
+$$g(x^{-1}y^{-1}xy)g^{-1}=(gx^{-1}g^{-1})(gy^{-1}g^{-1})(gxg^{-1})(gyg^{-1})=(gxg^{-1})^{-1}(gyg^{-1})^{-1}(gxg^{-1})(gyg^{-1})\in [G,G]$$
 
 이므로 자명하다. 
 
 </details>
 
-따라서, $G/[G,G]$가 잘 정의된다. 이는 $xyx^{-1}y^{-1}$꼴의 원소를 모두 $e$로 취급하겠다는 것이므로, $G/[G,G]$는 abelian group이 된다. 우리의 convention에 따르면 abelian group의 연산은 $+$로 적는 것이 맞으나, $G/[G,G]$는 동시에 $G$로부터 연산을 물려받으므로 이렇게 쓰면 혼동의 여지가 있을 수 있다. 따라서 $G/[G,G]$의 연산은 $+$가 아닌 곱셈으로 적기로 한다. 
+따라서, $G/[G,G]$가 잘 정의된다. 이는 $x^{-1}y^{-1}xy$꼴의 원소를 모두 $e$로 취급하겠다는 것이므로, $G/[G,G]$는 abelian group이 된다. 우리의 convention에 따르면 abelian group의 연산은 $+$로 적는 것이 맞으나, $G/[G,G]$는 동시에 $G$로부터 연산을 물려받으므로 이렇게 쓰면 혼동의 여지가 있을 수 있다. 따라서 $G/[G,G]$의 연산은 $+$가 아닌 곱셈으로 적기로 한다. 
 
 한편, 임의의 abelian group $H$에 대하여, 만일 group homomorphism $f:G\rightarrow H$가 주어졌다면 임의의 $x,y\in G$에 대해 다음 식
 
-$$e=f(x)f(y)f(x)^{-1}f(y)^{-1}=f(xyx^{-1}y^{-1})$$
+$$e=f(x)^{-1}f(y)^{-1}f(x)f(y)=f(x^{-1}y^{-1}xy)$$
 
 이 성립하므로, $[G,G]\leq\ker f$이다. 이제 [§군 동형사상, ⁋명제 3](/ko/math/algebraic_structures/isomorphism_theorems#prop3)에 의하여 다음을 얻는다.
 
