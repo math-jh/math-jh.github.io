@@ -17,3 +17,8 @@ weight: 3
 
 ---
 
+우리는 [\[대수적 구조\] §가환군, ⁋정의 6](/ko/math/algebraic_structures/abelian_groups#def6)에서 임의의 group $G$의 *abelianization* $G^\ab=G/[G,G]$을 살펴보았다. 이는 [\[대수적 구조\] §가환군, ⁋명제 7](/ko/math/algebraic_structures/abelian_groups#prop7)의 adjunction 
+
+$$\Hom_\Ab(G^\ab, H)\cong \Hom_\Grp(G, H)$$
+
+을 통해 
