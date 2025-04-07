@@ -270,6 +270,76 @@ $$g\in\ker\rho\iff\rho_g=\id_G\iff gxg^{-1}=x\quad\text{for all $x\in G$}$$
 
 이므로, $G$가 inner automorphism으로 자기 자신 위에 작용하는 상황에서의 fixer $\Fix(G)$가 정확히 $C(G)$이다. 더 일반적으로, 임의의 부분집합 $A\subseteq G$에 대하여 $A$의 fixer $\Fix(A)$를 $A$의 *centralizer* $C_G(A)$로 정의한다. 이와 비슷하게 $A$의 *normalizer* $N_G(A)$를 $\Stab(A)$로 정의한다. 
 
+## 궤도-안정자 정리
+
+이제 다시 우리는 일반적인 집합 $E$ 위에 정의된 group action을 생각한다. 우선 다음을 정의하자. 
+
+<div class="definition" markdown="1">
+
+<ins id="def13">**정의 13**</ins> 집합 $E$ 위에 group $G$의 action이 정의되었다 하자. 그럼 원소 $x\in E$의 *orbit*은 다음의 집합
+
+$$G\cdot x=\{g\cdot x\mid g\in G\}$$
+
+으로 주어진다. 
+
+</div>
+
+그럼 $E$ 위에 정의된 다음의 relation
+
+$$x\sim y\iff G\cdot x=G\cdot y\tag{$\ast$}$$
+
+은 equivalence relation이므로 quotient set $E/{\sim}$이 정의되며, 이는 orbit들로 이루어진 집합이다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm14">**정리 14 (Orbit-stabilizer theorem)**</ins> 집합 $E$ 위에 group $G$의 action이 주어졌다 하자. 그럼 다음의 식
+
+$$\lvert G\cdot x\rvert=[G:\Stab(x)]$$
+
+이 성립한다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+함수 $p:G \rightarrow G\cdot x$를 $g\mapsto g\cdot x$로 정의하면 $G\cdot x$의 정의에 의해 이 함수는 surjective이다. 한편, $p(g_1)=p(g_2)\iff g_1^{-1}g_2\in \Stab(x)$이므로 [\[집합론\] §동치관계의 예시들, ⁋명제 7](/ko/math/set_theory/examples_of_equivalence#prop7) 이후의 canonical decomposition으로부터 원하는 결과를 얻는다. 
+
+</details>
+
+따라서, 만일 $G$가 finite이라면 [§몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups)에 의하여 다음의 식
+
+$$\lvert G\cdot x\rvert=\frac{\lvert G\rvert}{\lvert\Stab(x)\rvert}\tag{$\ast\ast$}$$
+
+을 얻는다. 
+
+마찬가지로 $G$가 finite이라 하고, $G$가 유한집합 $E$ 위에 act한다 하자. $E^g$를 $g$에 의해 고정되는 원소들
+
+$$E^g=\{x\in E\mid g\cdot x=x\}$$
+
+로 정의하면
+
+$$\sum_{g\in G}\lvert E^g\rvert=\# \{(g, x)\in G\times E: g\cdot x=x\}=\sum_{x\in X}\lvert \Stab(x)\rvert$$
+
+이 성립한다. 이제 ($\ast\ast$)로부터 
+
+$$\sum_{x\in X}\lvert \Stab(x)\rvert=\sum_{x\in X}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}$$
+
+이다. 한편 ($\ast$)로부터 정의되는 quotient set $E/{\sim}$을 생각하면, 위의 합은 다시
+
+$$\sum_{x\in X}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}}\sum_{x\in O}\frac{1}{\lvert O\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}} 1=\lvert G\rvert\lvert E/{\sim}\rvert$$
+
+로 쓸 수 있다. 이로부터 다음 보조정리를 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="lem15">**보조정리 15**</ins> Finite group $G$가 유한집합 $E$ 위에 act한다고 하고, $E/{\sim}$을 orbit들로 이루어진 $E$의 quotient set이라 하자. 그럼 다음의 식
+
+$$\lvert E/{\sim}\rvert=\frac{1}{\lvert G\rvert}\sum_{g\in G}\lvert E^g\rvert$$
+
+이 성립한다. 
+
+</div>
+
 ---
 
 **참고문헌**
