@@ -10,3 +10,4 @@ assets/diagrams/
 *.aux
 *.log
 *.pdf
+.jekyll-metadata
