@@ -204,9 +204,10 @@ $$G=H_1\supseteq H_2\supseteq\cdots\supseteq H_{n+1}=H$$
 
 </details>
 
+
 ## 유도열과 가해군
 
-이제 우리는 다른 종류의 series를 정의한다.
+이제 우리는 다른 종류의 series를 정의한다. 
 
 <div class="definition" markdown="1">
 

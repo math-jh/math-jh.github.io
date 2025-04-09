@@ -248,6 +248,10 @@ group_theory-ko:
         url: ko/math/group_theory/symmetric_groups
       - title: "군의 확장"
         url: ko/math/group_theory/extensions
+      - title: "군의 열"
+        url: ko/math/group_theory/series_of_groups
+      - title: "실로우 정리"
+        url: ko/math/group_theory/Sylow_theorems
 
 homological_algebra-ko:
   - title: <a href="/ko/homological_algebra/" class="sidebar_title">호몰로지 대수학</a>
