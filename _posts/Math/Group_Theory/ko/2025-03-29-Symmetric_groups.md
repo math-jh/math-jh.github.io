@@ -239,11 +239,26 @@ $$\prod_{1\leq i< j\leq n}(x_{\tau(i)}-x_{\tau(j)})=(-1)^k\Delta$$
 
 </div>
 
-이렇게 정의한 alternating group은 또 중요한 성질을 갖는다. 즉, $A_n$은 simple group이다. 
+한편 다음을 정의한다. 
 
 <div class="definition" markdown="1">
 
 <ins id="def12">**정의 12**</ins> Group $G$가 *simple*이라는 것은 $G$가 $\\{e\\}$와 자기 자신을 제외한 normal subgroup을 갖지 않는 것이다.
+
+</div>
+
+특기할만한 사실 중 하나는 $A_5$가 simple이라는 것이다. 
+
+<div class="example" markdown="1">
+
+<ins id="ex13">**예시 13**</ins> $A_5$는 simple이다. 이는 Sylow theorem을 사용하여 조금 더 고상하게 보일 수 있지만 $A_5$는 그렇게 큰 group은 아니므로 약간의 고생을 하면 현재 우리의 지식만으로도 이를 보일 수 있다. 
+
+우선 $A_5$ 안의 permutation들은 다음과 같은 종류로 분류할 수 있다.
+
+- 항등원 $()$: 1개
+- 3-cycle (예: $(123)=(2\;3)(1\;3)$): $20=\binom{5}{3} * 2$개
+- 두 disjoint 2-cycle의 곱 (예: $(12)(34)$): 15개
+- 5-cycle (예: $(12345)=(4\;5)(3\;5)(2\;5)(1\;5)$): 12개짜리 conjugacy class 2개
 
 </div>
 
