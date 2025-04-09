@@ -3,11 +3,10 @@
 _site/
 .sass-cache/
 .jekyll-cache/
-.jekyll-metadata/
+*.jekyll-metadata
 *.lock
 assets/Tokens
 assets/diagrams/
 *.aux
 *.log
 *.pdf
-.jekyll-metadata
