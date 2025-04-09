@@ -17,10 +17,4 @@ weight: 1
 
 ---
 
-Integral domains
-CRT
-
---
-
-Galois
-
+이 카테고리의 글들에서 우리는 ring에 대한 기초적인 성질들을 살펴본다. 
