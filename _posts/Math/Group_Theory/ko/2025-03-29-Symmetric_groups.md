@@ -255,10 +255,14 @@ $$\prod_{1\leq i< j\leq n}(x_{\tau(i)}-x_{\tau(j)})=(-1)^k\Delta$$
 
 우선 $A_5$ 안의 permutation들은 다음과 같은 종류로 분류할 수 있다.
 
-- 항등원 $()$: 1개
-- 3-cycle (예: $(123)=(2\;3)(1\;3)$): $20=\binom{5}{3} * 2$개
-- 두 disjoint 2-cycle의 곱 (예: $(12)(34)$): 15개
-- 5-cycle (예: $(12345)=(4\;5)(3\;5)(2\;5)(1\;5)$): 12개짜리 conjugacy class 2개
+- 항등원 1개
+- 3-cycle ($(123)=(2\;3)(1\;3)$의 형태): $20=\binom{5}{3}\cdot2$개
+- 두 disjoint 2-cycle의 곱 ($(12)(34)$의 형태): $15=\binom{5}{2}\cdot\binom{3}{2}\cdot\frac{1}{2}$개
+- 5-cycle ($(12345)=(4\;5)(3\;5)(2\;5)(1\;5)$의 형태): $24=4!$개
+
+이들 네 종류의 permutation이 서로 다르다는 것은 각 원소들의 order를 보면 되고, 각 종류에 속하는 원소들이 서로 다른 것은 함수값을 직접 보면 된다. 
+
+한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7)을 사용하면, 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 각각 conjugacy class들이 되며, $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
 
 </div>
 
