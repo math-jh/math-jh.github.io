@@ -304,7 +304,5 @@ $$\frac{P_3P_5}{P_3}\cong P_5/\{e\}\implies \lvert P_3P_5\rvert=\lvert P_3\rvert
 
 이므로 결국 $G\cong \mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}$여야 한다. 
 
-물론 어렵지 않게 이 예시를 일반화하여, 크기 $pq$인 group은 오직 $\mathbb{Z}/p\mathbb{Z}\times\mathbb{Z}/q\mathbb{Z}$ 뿐이라는 것을 보일 수 있다. 유일하게 주의해야 할 것은 $G$의 크기가 $6=2\times3$일 때로, $n_2$가 3일 수도 있으므로 위의 논증을 그대로 사용할 수 없고, 실제로 $S_3$은 $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$와 isomorphic하지 않다. 
-
 </div>
 
