@@ -61,6 +61,22 @@ $$d''(\alpha\alpha') = (d\alpha) \cdot \alpha' + \varepsilon(\delta, \deg(\alpha
 
 </div>
 
+특별히 우리는 다음과 같은 두 경우에 관심이 있다.
+
+1. $ E = E',\ E'' $, $ F = F',\ F'' $, 그리고 세 개의 bilinear map $ \mu, \lambda_1, \lambda_2 $가 모두 동일한 경우
+2. $ E = E' = E'' $, $ F = F' = F'' $이고, 따라서 $\mu$에 의해 $E$가 *graded* algebra가 되며, 
+
+    $$\lambda_1: F \otimes_A E \to F, \qquad \lambda_2: E \otimes_A F \to F$$
+
+    이 모두 degree $0$인 경우. 이 경우, $$\varepsilon$-derivation이 만족해야 하는 조건은 다음의 식
+
+    $$d(xy)=(dx)y+\varepsilon(\delta, \deg(x))x(dy)$$
+
+    이 된다.
+
+특히 이들 두 경우가 모두 성립하여 $E=E'=E''=F=F'=F''$이고 $\lambda_1, \lambda_2$가 $E$에서의 곱셈인 경우가 가장 많이 등장한다. 그럼 
+
+
 
 Commutative ring $A$를 고정하고, unital associative $A$-algebra $E$를 고정하자. 
 
