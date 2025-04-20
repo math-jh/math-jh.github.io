@@ -1,11 +1,18 @@
-\documentclass[convert={density=1024}]{standalone}
+\documentclass[convert={ghostscript, density=1024}]{standalone}
 \usepackage{amsmath, amsthm, amsfonts}
 \usepackage{tikz-cd, kotex}
 \usepackage{../.preamble/quiver}
 \usepackage{../.preamble/Operators}
 \begin{document}
 
-
+\begin{tikzcd}
+	A & {A'} \\
+	E & {E'}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}
 
 \end{document}
 
