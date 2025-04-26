@@ -242,16 +242,23 @@ $$x\mapsto (x\otimes 1-1\otimes x)+\mathfrak{I}^2$$
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> $E$-module $\mathfrak{I}/\mathfrak{I}^2$는 *$A$-differential*들의  ($E$-)module이라 부르고 이를, $\Omega_{A}(E)$로 표기한다. 또, $\delta_{E/A}(x)$를 $d_{E/A}(x)$라 적으며, 혼동의 여지가 없으면 이를 간단히 $dx$라 적기도 한다. 각 $x \in E$에 대해 $d_{E/A}(x)$를 $x$의 *differential*이라 한다.
+<ins id="def9">**정의 9**</ins> $E$-module $\mathfrak{I}/\mathfrak{I}^2$는 *$A$-differential*들의  ($E$-)module이라 부르고 이를, $\Omega_{A}(E)$ 혹은 $\Omega_{E/A}$로 표기한다. 또, $\delta_{E/A}(x)$를 $d_{E/A}(x)$라 적으며, 혼동의 여지가 없으면 이를 간단히 $dx$라 적기도 한다. 각 $x \in E$에 대해 $d_{E/A}(x)$를 $x$의 *differential*이라 한다.
 
 </div>
+
+따라서, 우리는 다음의 canonical isomorphism
+
+$$\Hom_E(\Omega_{E/A}, N)\cong\Der_A(E, N)$$
+
+을 얻는다. 
+
 <div class="example" markdown="1">
 
 <ins id="ex10">**예시 10**</ins> Commutative ring $A$와 $A$-module $M$이 주어졌다 하자. 그럼 symmetric algebra $S(M)$은 commutative $A$-algebra이다. 따라서, 임의의 $S(M)$-module $N$과 $A$-derivation $D:S(M)\rightarrow N$이 주어질 때마다 다음의 식
 
 $$D=g\circ d_{S(M)/A}$$
 
-이 성립하도록 하는 $A$-linear map $g:\Omega_A(S(M))\rightarrow N$이 유일하게 존재한다. 
+이 성립하도록 하는 $A$-linear map $g:\Omega_{S(M)/A}\rightarrow N$이 유일하게 존재한다. 
 
 한편, 우리는 임의의 $A$-derivation $D:S(M)\rightarrow L$이 주어졌을 때, 이를 $M$으로 제한한 $D\vert_M$이 $M$에서 $L$로의 $A$-module homomorphism이며, 이 대응 $D\mapsto D\vert_M$이 실은 $S(M)$-module isomorphism이라는 것을 [명제 5](#prop5)를 통해 확인할 쑤 있다. 한편 $L$은 $S(M)$-module이므로 [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)에 의하여 
 
@@ -263,13 +270,13 @@ $$M\rightarrow M\otimes_AS(M);\qquad x\mapsto x\otimes1$$
 
 를 확장하여 얻어지는 $A$-derivation $D_0$과, 적당한 $h\in \Hom_{S(M)}(M\otimes_AS(M),L)$에 대하여 $D=h\circ D_0$의 꼴로 적을 수 있다는 것을 안다. 
 
-간단한 계산으로 첫째 계산에서 $N=M\otimes_AS(M)$일 때 얻어지는 $A$-linear map $\Omega_A(S(M))\rightarrow M\otimes_AS(M)$과, 둘째 계산에서 $L=\Omega_A(S(M))$일 때 얻어지는 $h$는 서로의 역함수이며 따라서 isomorphism
+간단한 계산으로 첫째 계산에서 $N=M\otimes_AS(M)$일 때 얻어지는 $A$-linear map $\Omega_{S(M)/A}\rightarrow M\otimes_AS(M)$과, 둘째 계산에서 $L=\Omega_A(S(M))$일 때 얻어지는 $h$는 서로의 역함수이며 따라서 isomorphism
 
-$$\Omega_A(S(M))\cong M\otimes_AS(M)$$
+$$\Omega_{S(M)/A}\cong M\otimes_AS(M)$$
 
-이 성립함을 알고, 뿐만 아니라 이 isomorphism을 $\omega:M\otimes_AS(M)\rightarrow\Omega_A(S(M))$이라 적는다면 임의의 $x\in M$에 대하여 $\omega(x\otimes1)=d_{S(M)/A}(x)=dx$임을 안다. 
+이 성립함을 알고, 뿐만 아니라 이 isomorphism을 $\omega:M\otimes_AS(M)\rightarrow\Omega_{S(M)/A}$이라 적는다면 임의의 $x\in M$에 대하여 $\omega(x\otimes1)=d_{S(M)/A}(x)=dx$임을 안다. 
 
-특히, 만일 $M$이 free $A$-module of finite rank $n$이라면, $S(M)$은 polynomial algebra $A[\x_1,\ldots, \x_n]$과 identify할 수 있으며 이 identification 하에서 $d\x_i$들은 <em_ko>정말로</em_ko> $\x_1$의 $d=d_{S(M)/A}$에 의한 image이며, 다항식 $p\in A[\x_1,\ldots, \x_n]$의 $d$에 의한 image를 $\Omega_A(S(M))$의 basis $d\x_i$들의 linear combination으로 나타낸다면 그 앞에 붙는 계수들이 정확히 $p$의 $i$번째 편미분 $\partial p/\partial \x_i$이 된다. 
+특히, 만일 $M$이 free $A$-module of finite rank $n$이라면, $S(M)$은 polynomial algebra $A[\x_1,\ldots, \x_n]$과 identify할 수 있으며 이 identification 하에서 $d\x_i$들은 <em_ko>정말로</em_ko> $\x_i$의 $d=d_{S(M)/A}$에 의한 image이며, 다항식 $p\in A[\x_1,\ldots, \x_n]$의 $d$에 의한 image를 $\Omega_{S(M)/A}$의 basis $d\x_i$들의 linear combination으로 나타낸다면 그 앞에 붙는 계수들이 정확히 $p$의 $i$번째 편미분 $\partial p/\partial \x_i$이 된다. 
 
 </div>
 
@@ -279,15 +286,15 @@ $$\Omega_A(S(M))\cong M\otimes_AS(M)$$
 
 <ins id="prop11">**명제 11**</ins> 다음의 commutative diagram
 
-img
+![change_of_base_ring-1](/assets/images/Math/Multilinear_Algebra/Differential_modules-1.png){:style="width:6.8em" class="invert" .align-center}
 
-이 주어졌다 하고, 수직방향의 map들을 통해 $E,E'$를 각각 $A,A'$-algebra로 생각하자. 그럼 다음의 diagram
+이 주어졌다 하고, 수직방향의 함수들을 통해 $E,E'$를 각각 $A,A'$-algebra로 생각하자. 그럼 다음의 diagram
 
-img
+![change_of_base_ring-2](/assets/images/Math/Multilinear_Algebra/Differential_modules-2.png){:style="width:10em" class="invert" .align-center}
 
 을 commute하게 하는 유일한 $A$-linear mapping
 
-$$\nu: \Omega_{A/K} \rightarrow \Omega_{A'/K'}$$
+$$\nu: \Omega_{E/A} \rightarrow \Omega_{E'/A'}$$
 
 가 존재한다.
 
@@ -307,13 +314,13 @@ $$\Omega_0(u):\Omega_A(E)\otimes_E E'\rightarrow\Omega_{A'}(E')$$
 
 를 얻으며, $i_E$를 canonical morphism $\Omega_A(E)\rightarrow \Omega_A(E)\otimes_EE'$라 하면 $\Omega(u)=\Omega_0(u)\circ i_E$임을 안다. 
 
-한편 이를 [명제 8](#prop8)의 universal property가 주는 다음의 isomorphism
+한편 [명제 8](#prop8)의 universal property가 주는 다음의 isomorphism
 
 $$\Hom_E(\Omega_A(E), M)\cong\Der_A(E, M)$$
 
 을 생각하면, 우리는 다음의 commutative diagram
 
-img
+![change_of_base_ring-3](/assets/images/Math/Multilinear_Algebra/Differential_modules-3.png){:style="width:28em" class="invert" .align-center}
 
 을 얻는다. 여기서 오른쪽의 수직방향 함수는 위의 isomorphism과 [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)의 isomorphism을 합친
 
@@ -323,29 +330,53 @@ $$\Hom_{E'}(\Omega_A(E)\otimes_EE', N) \rightarrow \Hom_E(\Omega_A(E), N)\righta
 
 $$\Der_{A'}(E', N) \rightarrow \Der_A(E, N);\qquad D\mapsto D\circ u$$
 
-이다. 그럼 아래쪽 $C(u)$가 bijective라는 사실로부터 다음이 얻어진다.
+이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> $E' = E \otimes_AA'$라고 하고, $\eta : A \to E'$, $u : E \to E'$를 canonica morphism들이라 하면, 위의 $A'$-linear map
+<ins id="prop12">**명제 12**</ins> $E' = E \otimes_AA'$라고 하고, $\eta : A \to E'$, $u : E \to E'$를 canonica morphism들이라 하면, $A'$-linear map
 
-$$\Omega_0(u) : \Omega_K(A) \otimes_A A' \to \Omega_{K'}(A')$$
+$$\Omega_0(u) : \Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A'}$$
 
 는 isomorphism이다.
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 수직방향 함수들이 모두 isomorphism이므로, $C(u)$가 isomorphism인 것을 보이면 임의의 $N$에 대해
+
+$$\Hom_{E'}(\Omega_{E'/A'} , N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_AE',N)$$
+
+이 isomorphism이라는 것을 안다. 즉, 다음의 sequence
+
+$$0\rightarrow\Hom_{E'}(\Omega_{E'/A'} , N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_AE',N)\rightarrow 0$$
+
+가 임의의 $N$에 대하여 exact이다. 이제 $\Hom$이 left exact functor이므로 ([§사영가군, 단사가군, 평탄가군, ⁋명제 2](/ko/math/multilinear_algebra/various_modules#prop2)) 위의 sequence가 모든 $N$에 대해 exact라는 것은 다음의 sequence
+
+$$0 \rightarrow\Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A'}\rightarrow 0$$
+
+이 exact라는 것과 동치이다. 따라서 주장을 보이기 위해서는 $C(u)$가 bijective라는 것만 보이면 충분하다. 
+
+우선
+
+$$\Hom(u, \id_N):\Hom_{A'}(E\otimes_AA', N) \rightarrow \Hom_A(E, N)$$
+
+는 isomorphism이고, $C(u)$는 이를 $\Der_{A'}(E', N)$으로 제한한 것에 불과하므로 $C(u)$가 injective임은 자명하다. $C(u)$가 surjective라는 것 또한 어렵지 않게 증명할 수 있다. 
+
+</details>
 
 특별히 $\rho:A \rightarrow A'$가 $\id_A: A\rightarrow A'$이고, 따라서 $u:E\rightarrow E'$가 $A$-algebra homomorphism인 경우를 생각하자. 그럼 위의 과정을 통해 $u$는 $E'$-linear homomorphism  
 
-$$\Omega_0(u): \Omega_A(E)\otimes_AE'\rightarrow\Omega_A(E')$$
+$$\Omega_0(u): \Omega_{E/A}\otimes_AE'\rightarrow\Omega_{E'/A}$$
 
-을 유도한다. 한편, $E'$를 $E\rightarrow E'$를 사용하여 $E$-algebra로 취급하면, 여기에서 얻어지는 derivation $d_{E'/E}: E' \rightarrow\Omega_E{E'}$는 $A$-derivation이기도 하므로 $\Omega_A(E')$의 universal property에 의하여 다음의 factorization
+을 유도한다. 한편, $E'$를 $E\rightarrow E'$를 사용하여 $E$-algebra로 취급하면, 여기에서 얻어지는 derivation $d_{E'/E}: E' \rightarrow\Omega_{E'/E}$는 $A$-derivation이기도 하므로 $\Omega_{E'/A}$의 universal property에 의하여 다음의 factorization
 
-$$E'\overset{d_{E'/A}}{\longrightarrow}\Omega_A(E')\overset{\Omega_u}{\longrightarrow}\Omega_E(E')$$
+$$E'\overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrightarrow}\Omega_{E'/E}$$
 
 이 존재한다. 그럼 다시 universal property에 의하여 다음의 commutative diagram
 
-img
+![change_of_base_ring-4](/assets/images/Math/Multilinear_Algebra/Differential_modules-4.png){:style="width:24em" class="invert" .align-center}
 
 이 존재한다. 
 
@@ -355,7 +386,7 @@ img
 
 <ins id="prop13">**명제 13**</ins> $E'$-module들의 sequence
 
-$$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_A(E')\overset{\Omega_u}{\longrightarrow}\Omega_E(E')\longrightarrow0$$
+$$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrightarrow}\Omega_{E'/E}\longrightarrow0$$
 
 가 exact이다. 
 
@@ -363,13 +394,21 @@ $$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_A(E')\overs
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+다시 $\Hom$이 left exact functor라는 사실로부터 ([§사영가군, 단사가군, 평탄가군, ⁋명제 2](/ko/math/multilinear_algebra/various_modules#prop2)) 다음의 sequence
 
+$$0 \rightarrow \Hom_{E'}(\Omega_{E'/E},N) \rightarrow \Hom_{E'}(\Omega_{E'/A}, N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_EE',N)$$
+
+가 임의의 $E'$-module $N$에 대하여 exact라는 것을 보이면 충분하다. 그런데 [명제 12](#prop12) 이전과 이후에 사용한 commutative diagram을 이용하면, 이를 derivation들의 module들의 sequence
+
+$$0 \rightarrow \Der_E(E', N) \rightarrow \Der_A(E', N) \rightarrow \Der_A(E, N)$$
+
+으로 바꿀 수 있으며, 이것이 exact라는 것은 [명제 2](#prop2) 직후에 보였다. 
 
 </details>
 
 이번에는 특히 $u:E \rightarrow E'$가 surjective이고, 따라서 $\mathfrak{I}=\ker u$에 대하여 isomorphism $E'\cong E/\mathfrak{I}$인 경우를 생각하자. 그럼 canonical derivation $d=d_{E/A}$의 $\mathfrak{I}$로의 restriction
 
-$$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\longrightarrow}\Omega_A(E)\overset{i_E}{\longrightarrow}\Omega_A(E)\otimes_EE'$$
+$$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\longrightarrow}\Omega_{E/A}\overset{i_E}{\longrightarrow}\Omega_{E/A}\otimes_EE'$$
 
 을 $d'$라 하면, 임의의 $x,y\in \mathfrak{I}$에 대하여
 
@@ -377,7 +416,7 @@ $$d'(xy)=d(xy)\otimes_1=dy\otimes u(x)+dx\otimes u(y)=0$$
 
 이므로 다음의 $E$-linear map
 
-$$\overline{d}:\mathfrak{I}/\mathfrak{I}^2\rightarrow\Omega_E(A)\otimes_EE'$$
+$$\overline{d}:\mathfrak{I}/\mathfrak{I}^2\rightarrow\Omega_{E/A}\otimes_EE'$$
 
 이 잘 정의된다. 뿐만 아니라 $\mathfrak{I}$가 $\mathfrak{I}/\mathfrak{I}^2$를 annihilate하므로, $\overline{d}$는 $E'=E/\mathfrak{I}$-linear map이다. 
 
@@ -385,8 +424,18 @@ $$\overline{d}:\mathfrak{I}/\mathfrak{I}^2\rightarrow\Omega_E(A)\otimes_EE'$$
 
 <ins id="prop14">**명제 14**</ins> 위의 상황에서, 다음의 $E'$-linear map들의 sequence
 
-$$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_A(E')\longrightarrow0$$
+$$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\longrightarrow0$$
 
 이 exact이다. 
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+앞선 논증의 표기에서, 우리는 $\Omega_{E/A}\otimes_EE'$를 $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$와 identify할 수 있다. 그럼 이 identification 하에서, $\overline{d)}$의 image는 $d(\mathfrak{I})\subset\Omega_{E/A}$의 quotient module $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$에서의 image가 된다. 따라서, $\Omega_{E/A}$의 $A$-submodule $I$를 $\mathfrak{I}\Omega_{E/A}$와 $d(\mathfrak{I})$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
+
+$$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{I}$$
+
+을 얻으며, 이를 통해 원하는 결과를 얻는다. 
+
+</details>

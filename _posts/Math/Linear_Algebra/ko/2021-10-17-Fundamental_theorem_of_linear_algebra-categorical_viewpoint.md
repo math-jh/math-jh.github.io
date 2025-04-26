@@ -41,7 +41,7 @@ $$f\circ g=\id_B,\qquad g\circ f=\id_A$$
 
 이 성립하는 것이다. 특별히 연산이 교환법칙을 만족하는 것들은 *abelian group*이라 부르는데, abelian group들의 모임 위에도 위와 같이 group homomorphism과 group isomorphism을 정의할 수 있다. 이들 모임을 $\mathbf{Ab}$으로 적는다.
 
-우리가 지금 관심을 갖고 살펴보고 있는 대상은 고정된 field $\mathbb{k}$ 위에서 정의된 벡터공간들[^1]의 모임, 곧 $\mathbf{Vect}_\mathbb{k}$이다. 두 벡터공간 사이에는 *linear map*이라는 것이 존재하며, 만일 두 벡터공간 $V,W$ 사이에 *isomorphism*이라는 것이 존재하면 이 두 벡터공간을 동등한 것으로 취급한다. 이 때 $L:V\rightarrow W$가 isomorphism이라는 것은 적당한 $L':W\rightarrow V$가 존재하여 다음의 두 식
+우리가 지금 관심을 갖고 살펴보고 있는 대상은 고정된 field $\mathbb{K}$ 위에서 정의된 벡터공간들[^1]의 모임, 곧 $\mathbf{Vect}_\mathbb{K}$이다. 두 벡터공간 사이에는 *linear map*이라는 것이 존재하며, 만일 두 벡터공간 $V,W$ 사이에 *isomorphism*이라는 것이 존재하면 이 두 벡터공간을 동등한 것으로 취급한다. 이 때 $L:V\rightarrow W$가 isomorphism이라는 것은 적당한 $L':W\rightarrow V$가 존재하여 다음의 두 식
 
 $$L\circ L'=\id_W,\qquad L'\circ L=\id_V$$
 
@@ -49,7 +49,7 @@ $$L\circ L'=\id_W,\qquad L'\circ L=\id_V$$
 
 ## Category
 
-위의 예시들 $\mathbf{Set}$, $\mathbf{Vect}_\mathbb{k}$, $\mathbf{Ab}$ 등은 공통적인 특징을 가지고 있다. 이들은 어떠한 대수적인 대상들의 모임이며, 대상들 사이에는 특정한 함수들 (함수, group homomorphism, linear map 등)이 정의된다.
+위의 예시들 $\mathbf{Set}$, $\mathbf{Vect}_\mathbb{K}$, $\mathbf{Ab}$ 등은 공통적인 특징을 가지고 있다. 이들은 어떠한 대수적인 대상들의 모임이며, 대상들 사이에는 특정한 함수들 (함수, group homomorphism, linear map 등)이 정의된다.
 
 <div class="definition" markdown="1">
 
@@ -78,7 +78,7 @@ $$L\circ L'=\id_W,\qquad L'\circ L=\id_V$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> 우선, <em_ko>유한차원</em_ko> $\mathbb{k}$-벡터공간들의 category $\mathbf{FVect}_\mathbb{k}$가 있다. 이 category는 $\mathbf{Vect}_\mathbb{k}$의 모든 정의를 공유하지만, category의 대상들을 모든 $\mathbb{k}$-벡터공간들 대신 유한차원의 $\mathbb{k}$-벡터공간으로만 제한했다는 점이 다르다. 이를 *subcategory*라 부르면 적절할 것이다.
+<ins id="ex4">**예시 4**</ins> 우선, <em_ko>유한차원</em_ko> $\mathbb{K}$-벡터공간들의 category $\mathbf{FVect}_\mathbb{K}$가 있다. 이 category는 $\mathbf{Vect}_\mathbb{K}$의 모든 정의를 공유하지만, category의 대상들을 모든 $\mathbb{K}$-벡터공간들 대신 유한차원의 $\mathbb{K}$-벡터공간으로만 제한했다는 점이 다르다. 이를 *subcategory*라 부르면 적절할 것이다.
 
 </div>
 
@@ -86,17 +86,17 @@ Category는 보편적으로 어떠한 대수적인 구조들과 그들 사이의
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> Category $\mathbf{Mat}_\mathbb{k}$를 다음과 같이 정의한다.
+<ins id="ex5">**예시 5**</ins> Category $\mathbf{Mat}_\mathbb{K}$를 다음과 같이 정의한다.
 
-- $\mathbf{Mat}_\mathbb{k}$의 대상들은 자연수들 $0,1,2,\ldots$이다.
-- 각각의 $m,n$에 대하여, morphism $\Mor(m,n)$은 $m\times n$ 행렬들의 모임 $\Mat\_{m\times n}(\mathbb{k})$로 주어진다.
-- 마지막으로, morphism들의 합성은 행렬의 곱으로 주어진다. 즉 만일 $A\in\Mor(m,n)=\Mat\_{m\times n}(\mathbb{k})$이고, $B\in\Mor(n,k)=\Mat\_{n\times k}(\mathbb{k})$라면 이들의 합성 $(A,B)\mapsto B\circ A$는 단순히 행렬의 곱 $BA\in\Mat\_{m\times k}(\mathbb{k})=\Mor(m,k)$으로 정의된다.
+- $\mathbf{Mat}_\mathbb{K}$의 대상들은 자연수들 $0,1,2,\ldots$이다.
+- 각각의 $m,n$에 대하여, morphism $\Mor(m,n)$은 $m\times n$ 행렬들의 모임 $\Mat\_{m\times n}(\mathbb{K})$로 주어진다.
+- 마지막으로, morphism들의 합성은 행렬의 곱으로 주어진다. 즉 만일 $A\in\Mor(m,n)=\Mat\_{m\times n}(\mathbb{K})$이고, $B\in\Mor(n,k)=\Mat\_{n\times k}(\mathbb{K})$라면 이들의 합성 $(A,B)\mapsto B\circ A$는 단순히 행렬의 곱 $BA\in\Mat\_{m\times k}(\mathbb{K})=\Mor(m,k)$으로 정의된다.
 
-자연수들 $1,2,3,\ldots$들 각각을 집합론적으로 $\\{0\\},\\{0,1\\},\ldots$ 등과 같이 취급하지 않는 이상, $\mathbf{Mat}_\mathbb{k}$의 object들은 모두 어떠한 대수적인 대상도 아니다. 또 임의의 $A\in \Mor(m,n)$ 또한 기존의 morphism들과는 다르다. 즉, $A$를 어떤 대수적인 대상 $m$에서 또 다른 대상 $n$으로 가는 함수라고 생각할 수도 없다. 
+자연수들 $1,2,3,\ldots$들 각각을 집합론적으로 $\\{0\\},\\{0,1\\},\ldots$ 등과 같이 취급하지 않는 이상, $\mathbf{Mat}_\mathbb{K}$의 object들은 모두 어떠한 대수적인 대상도 아니다. 또 임의의 $A\in \Mor(m,n)$ 또한 기존의 morphism들과는 다르다. 즉, $A$를 어떤 대수적인 대상 $m$에서 또 다른 대상 $n$으로 가는 함수라고 생각할 수도 없다. 
 
 </div>
 
-물론 $\mathbf{Mat}_\mathbb{k}$의 대상들 $1,2,3,\ldots$을 Euclidean $\mathbb{k}$-벡터공간들 $\mathbb{k}^1, \mathbb{k}^2,\mathbb{k}^3,\ldots$으로 보면 위의 $\mathbf{Mat}_\mathbb{k}$를 기존의 category들과 거의 동일하게 취급할 수 있지만, 어쨌든 category의 정의 중 어떠한 것도 대상들 혹은 morphism들의 모양을 강제하지 않는다.
+물론 $\mathbf{Mat}_\mathbb{K}$의 대상들 $1,2,3,\ldots$을 Euclidean $\mathbb{K}$-벡터공간들 $\mathbb{K}^1, \mathbb{K}^2,\mathbb{K}^3,\ldots$으로 보면 위의 $\mathbf{Mat}_\mathbb{K}$를 기존의 category들과 거의 동일하게 취급할 수 있지만, 어쨌든 category의 정의 중 어떠한 것도 대상들 혹은 morphism들의 모양을 강제하지 않는다.
 
 ## Functor
 
@@ -106,9 +106,9 @@ Category에서 모든 대상은 morphism을 통해 다른 대상과 연결되어
 
 <ins id="def6">**정의 6**</ins> 두 개의 category $\mathcal{C}$, $\mathcal{D}$가 주어졌다 하자. $F:\mathcal{C}\rightarrow\mathcal{D}$가 이들 사이의 *functor<sub>함자</sub>*라는 것은,
 
-1. $\mathbb{k}$는 $\mathcal{C}$의 대상을 $\mathcal{D}$의 대상으로 옮긴다. 즉, 임의의 $A\in\obj(\mathcal{C})$에 대하여 $F(A)\in\obj(\mathcal{D})$가 성립한다.
-2. $\mathbb{k}$는 $\mathcal{C}$의 morphism을 $\mathcal{D}$의 morphism으로 옮긴다. 즉, 임의의 $f:A\rightarrow B$는 $\mathbb{k}$에 의해 $F(f): F(A)\rightarrow F(B)$로 옮겨진다.
-3. $\mathbb{k}$는 합성과 identity morphism을 잘 보존한다. 즉, $F(\id\_A)=\id\_{F(A)}$가 성립하고, 또 임의의 $g\circ f$에 대하여 $F(g\circ f)=F(g)\circ F(f)$이다.
+1. $\mathbb{K}$는 $\mathcal{C}$의 대상을 $\mathcal{D}$의 대상으로 옮긴다. 즉, 임의의 $A\in\obj(\mathcal{C})$에 대하여 $F(A)\in\obj(\mathcal{D})$가 성립한다.
+2. $\mathbb{K}$는 $\mathcal{C}$의 morphism을 $\mathcal{D}$의 morphism으로 옮긴다. 즉, 임의의 $f:A\rightarrow B$는 $\mathbb{K}$에 의해 $F(f): F(A)\rightarrow F(B)$로 옮겨진다.
+3. $\mathbb{K}$는 합성과 identity morphism을 잘 보존한다. 즉, $F(\id\_A)=\id\_{F(A)}$가 성립하고, 또 임의의 $g\circ f$에 대하여 $F(g\circ f)=F(g)\circ F(f)$이다.
 
 </div>
 
@@ -124,13 +124,13 @@ $$F_{A,B}:\Mor_\mathcal{C}\rightarrow\Mor_\mathcal{D}(F(A),F(B))$$
 
 가 잘 정의된다. 만일
 
-1. 임의의 $A,B\in\obj(\mathcal{C})$에 대해 $F_{A,B}$가 injective라면 $\mathbb{k}$가 *faithful*이라 한다.
-2. 임의의 $A,B\in\obj(\mathcal{C})$에 대해 $F_{A,B}$가 surjective라면 $\mathbb{k}$가 *full*이라 한다.
-3. 임의의 $A,B\in\obj(\mathcal{C})$에 대해 $F_{A,B}$가 bijective라면 $\mathbb{k}$가 *fully faithful*이라 한다.
+1. 임의의 $A,B\in\obj(\mathcal{C})$에 대해 $F_{A,B}$가 injective라면 $\mathbb{K}$가 *faithful*이라 한다.
+2. 임의의 $A,B\in\obj(\mathcal{C})$에 대해 $F_{A,B}$가 surjective라면 $\mathbb{K}$가 *full*이라 한다.
+3. 임의의 $A,B\in\obj(\mathcal{C})$에 대해 $F_{A,B}$가 bijective라면 $\mathbb{K}$가 *fully faithful*이라 한다.
 
-또, 만일 임의의 $C\in\obj(\mathcal{D})$에 대하여 적당한 $A\in\obj(\mathcal{C})$가 존재하여 $C$와 $F(A)$가 isomorphic한 대상이라면, $\mathbb{k}$가 *essentially surjective*라 한다.
+또, 만일 임의의 $C\in\obj(\mathcal{D})$에 대하여 적당한 $A\in\obj(\mathcal{C})$가 존재하여 $C$와 $F(A)$가 isomorphic한 대상이라면, $\mathbb{K}$가 *essentially surjective*라 한다.
 
-Essentially surjective한 fully faithful functor $\mathbb{k}$를 $\mathcal{C}$에서 $\mathcal{D}$로의 *equivalence*라 부르고, 이 때 $\mathcal{C}$와 $\mathcal{D}$가 *equivalent*하다고 한다. 
+Essentially surjective한 fully faithful functor $\mathbb{K}$를 $\mathcal{C}$에서 $\mathcal{D}$로의 *equivalence*라 부르고, 이 때 $\mathcal{C}$와 $\mathcal{D}$가 *equivalent*하다고 한다. 
 
 </div>
 
@@ -140,19 +140,19 @@ Essentially surjective한 fully faithful functor $\mathbb{k}$를 $\mathcal{C}$�
 
 이제 위에서 정의한 용어를 사용하면, 선형대수학의 기본정리는 
 
-> 두 category $\mathbf{FVect}_\mathbb{k}$와 $\mathbf{Mat}_\mathbb{k}$가 equivalent하다.
+> 두 category $\mathbf{FVect}_\mathbb{K}$와 $\mathbf{Mat}_\mathbb{K}$가 equivalent하다.
 
-는 것으로 줄여쓸 수 있다. 여기에서 equivalence $D:\mathbf{FVect}_\mathbb{k}\rightarrow\mathbf{Mat}_\mathbb{k}$는 다음과 같이 주어진다.
+는 것으로 줄여쓸 수 있다. 여기에서 equivalence $D:\mathbf{FVect}_\mathbb{K}\rightarrow\mathbf{Mat}_\mathbb{K}$는 다음과 같이 주어진다.
 
-1. 우선 $\mathbf{FVect}_\mathbb{k}$의 대상인 유한차원 $\mathbb{k}$-벡터공간 $V$는 $D$에 의하여 $\dim V\in\obj(\mathbf{Mat}_\mathbb{k})$으로 옮겨진다.
+1. 우선 $\mathbf{FVect}_\mathbb{K}$의 대상인 유한차원 $\mathbb{K}$-벡터공간 $V$는 $D$에 의하여 $\dim V\in\obj(\mathbf{Mat}_\mathbb{K})$으로 옮겨진다.
 2. $\mathbf{FVect}\_F$의 임의의 morphism $L\in\Mor(V,W)$는 $D$에 의하여 $[L]^\mathcal{B}\_\mathcal{C}$로 옮겨진다. 
 
-그럼 $D$는 $\mathbf{FVect}_\mathbb{k}$에서 $\mathbf{Mat}_\mathbb{k}$로의 functor이다. ([§선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)) 뿐만 아니라, $D$는 fully faithful이기도 하다. ([§선형대수학의 기본정리, ⁋정리 4](/ko/math/linear_algebra/ftla#thm4)) 마지막으로 임의의 $n\in\mathbf{Mat}_\mathbb{k}$에 대하여, $n$차원 $\mathbb{k}$-벡터공간이 존재하는 것은 자명하므로 $D$는 essentially surjective이기도 하다.[^2] 따라서 $D$는 두 category 사이의 equivalence를 정의한다.
+그럼 $D$는 $\mathbf{FVect}_\mathbb{K}$에서 $\mathbf{Mat}_\mathbb{K}$로의 functor이다. ([§선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)) 뿐만 아니라, $D$는 fully faithful이기도 하다. ([§선형대수학의 기본정리, ⁋정리 4](/ko/math/linear_algebra/ftla#thm4)) 마지막으로 임의의 $n\in\mathbf{Mat}_\mathbb{K}$에 대하여, $n$차원 $\mathbb{K}$-벡터공간이 존재하는 것은 자명하므로 $D$는 essentially surjective이기도 하다.[^2] 따라서 $D$는 두 category 사이의 equivalence를 정의한다.
 
-당연히 두 category 사이의 equivalence는 동치관계가 된다. 이 말은 $\mathbf{FVect}_\mathbb{k}$에서 $\mathbf{Mat}_\mathbb{k}$로의 equivalence 뿐만 아니라, $\mathbf{Mat}_\mathbb{k}$에서 $\mathbf{FVect}_\mathbb{k}$로의 equivalence 또한 있다는 의미이다. 이는 $I:\mathbf{Mat}_\mathbb{k}\rightarrow\mathbf{FVect}_\mathbb{k}$를 
+당연히 두 category 사이의 equivalence는 동치관계가 된다. 이 말은 $\mathbf{FVect}_\mathbb{K}$에서 $\mathbf{Mat}_\mathbb{K}$로의 equivalence 뿐만 아니라, $\mathbf{Mat}_\mathbb{K}$에서 $\mathbf{FVect}_\mathbb{K}$로의 equivalence 또한 있다는 의미이다. 이는 $I:\mathbf{Mat}_\mathbb{K}\rightarrow\mathbf{FVect}_\mathbb{K}$를 
 
-1. 임의의 $n\in\mathbf{Mat}_\mathbb{k}$는 $I$를 통해 $\mathbf{FVect}_\mathbb{k}$의 원소인 $\mathbb{k}^n$으로 옮겨진다. (이 때, $\mathbb{k}^n$은 standard basis $\mathcal{E}_n$이 주어진 것으로 생각한다.)
-2. $\mathbf{Mat}_\mathbb{k}$의 임의의 morphism $A\in\Mor(m,n)$은 $I$를 통해 $L_A:\mathbb{k}^m\rightarrow \mathbb{k}^n$으로 옮겨진다. ([§선형대수학의 기본정리, ⁋예시 1](/ko/math/linear_algebra/ftla#ex1))
+1. 임의의 $n\in\mathbf{Mat}_\mathbb{K}$는 $I$를 통해 $\mathbf{FVect}_\mathbb{K}$의 원소인 $\mathbb{K}^n$으로 옮겨진다. (이 때, $\mathbb{K}^n$은 standard basis $\mathcal{E}_n$이 주어진 것으로 생각한다.)
+2. $\mathbf{Mat}_\mathbb{K}$의 임의의 morphism $A\in\Mor(m,n)$은 $I$를 통해 $L_A:\mathbb{K}^m\rightarrow \mathbb{K}^n$으로 옮겨진다. ([§선형대수학의 기본정리, ⁋예시 1](/ko/math/linear_algebra/ftla#ex1))
 
 으로 정의하면 된다. $I$가 equivalence라는 것은 $D$가 equivalence라는 것과 아주 크게 다르지는 않으므로 생략한다. 
 

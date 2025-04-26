@@ -23,7 +23,7 @@ weight: 11
 
 <div class="proposition" markdown="1">
 
-<ins id="thm1">**정리 1 (Extension by linearity)**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$와 basis $\mathcal{B}$가 주어졌다 하자. 또 다른 $\mathbb{k}$-벡터공간 $W$에 대하여, <em_ko>함수</em_ko> $g:\mathcal{B}\rightarrow W$가 주어질 때마다, $g=G\circ\iota$이도록 하는 유일한 <em_ko>linear map</em_ko> $G:V\rightarrow W$가 존재한다.
+<ins id="thm1">**정리 1 (Extension by linearity)**</ins> 임의의 $\mathbb{K}$-벡터공간 $V$와 basis $\mathcal{B}$가 주어졌다 하자. 또 다른 $\mathbb{K}$-벡터공간 $W$에 대하여, <em_ko>함수</em_ko> $g:\mathcal{B}\rightarrow W$가 주어질 때마다, $g=G\circ\iota$이도록 하는 유일한 <em_ko>linear map</em_ko> $G:V\rightarrow W$가 존재한다.
 
 </div>
 
@@ -60,7 +60,7 @@ $$\{\text{functions from $\mathcal{B}$ to $W$}\}\longleftrightarrow\{\text{linea
 
 즉 $V$에서 $W$로의 linear map은 $L$이 basis $\mathcal{B}$ 위에서 어떻게 행동하는지에 의해 완벽하게 결정되며, 만일 $V$가 유한차원이었다면 이는 linear map $L$이 오직 <em_ko>유한 개</em_ko>의 원소에서의 함수값에 의해서만 결정된다는 의미가 된다.
 
-특별히 공역 $W$ 또한 유한차원 $\mathbb{k}$-벡터공간이라 가정하고, $V$의 기저 $\mathcal{B}=\\{x\_1,\ldots, x\_n\\}$, 그리고 $W$의 기저 $\mathcal{C}=\\{y_1,\ldots,y_m\\}$를 고정하자. 그럼 앞선 논증에 의해 $V$에서 $W$로의 linear map $L$은 $W$의 $n$개의 벡터들
+특별히 공역 $W$ 또한 유한차원 $\mathbb{K}$-벡터공간이라 가정하고, $V$의 기저 $\mathcal{B}=\\{x\_1,\ldots, x\_n\\}$, 그리고 $W$의 기저 $\mathcal{C}=\\{y_1,\ldots,y_m\\}$를 고정하자. 그럼 앞선 논증에 의해 $V$에서 $W$로의 linear map $L$은 $W$의 $n$개의 벡터들
 
 $$L(x_1),L(x_2)\ldots, L(x_n)$$
 
@@ -90,7 +90,7 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 
 <div class="proposition" markdown="1">
 
-<ins id="cor2">**따름정리 2**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
+<ins id="cor2">**따름정리 2**</ins> 두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
 
 1. 만일 $L$이 단사함수라면, 적당한 linear map $R:W\rightarrow V$가 존재하여 $R\circ L=\id_V$이다.
 2. 만일 $L$이 전사함수라면, 적당한 linear map $S:W\rightarrow V$가 존재하여 $L\circ S=\id_W$이다.
@@ -117,7 +117,7 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 
 <div class="proposition" markdown="1">
 
-<ins id="lem3">**보조정리 3**</ins> 두 $\mathbb{k}$-벡터공간 $V$, $W$를 생각하자. $L,L_1,L_2$이 $V$에서 $W$로의 linear map들이고,  $\alpha\in\mathbb{k}$라면
+<ins id="lem3">**보조정리 3**</ins> 두 $\mathbb{K}$-벡터공간 $V$, $W$를 생각하자. $L,L_1,L_2$이 $V$에서 $W$로의 linear map들이고,  $\alpha\in\mathbb{K}$라면
 
 $$L_1+L_2:v\mapsto L_1(v)+L_2(v),\qquad \alpha L:v\mapsto \alpha L(v)$$
 
@@ -127,7 +127,7 @@ $$L_1+L_2:v\mapsto L_1(v)+L_2(v),\qquad \alpha L:v\mapsto \alpha L(v)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$v, v_1,v_2\in V$이고, $\alpha\in\mathbb{k}$라 하자. 그럼
+$v, v_1,v_2\in V$이고, $\alpha\in\mathbb{K}$라 하자. 그럼
 
 $$\begin{aligned}
         (L_1+L_2)(v_1+v_2)&=L_1(v_1+v_2)+L_2(v_1+v_2)\\
@@ -152,9 +152,9 @@ $$\begin{aligned}
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 두 $\mathbb{k}$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $\mathbb{k}$-벡터공간을 $\Hom_\mathbb{k}(V,W)$, 혹은 문맥에 따라 field $\mathbb{k}$가 명확할 때는 $\Hom(V,W)$로 적는다. 
+<ins id="def4">**정의 4**</ins> 두 $\mathbb{K}$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $\mathbb{K}$-벡터공간을 $\Hom_\mathbb{K}(V,W)$, 혹은 문맥에 따라 field $\mathbb{K}$가 명확할 때는 $\Hom(V,W)$로 적는다. 
 
-특별히 $W=\mathbb{k}$일 경우, $\Hom(V,\mathbb{k})$를 $V$의 *dual space<sub>쌍대공간</sub>*이라 부르고 $V^\*$으로 적는다. $V^\ast$의 원소들을 *linear functional*들이라 부른다. 
+특별히 $W=\mathbb{K}$일 경우, $\Hom(V,\mathbb{K})$를 $V$의 *dual space<sub>쌍대공간</sub>*이라 부르고 $V^\*$으로 적는다. $V^\ast$의 원소들을 *linear functional*들이라 부른다. 
 
 </div>
 
@@ -168,7 +168,7 @@ $$f_i^j(x)=\begin{cases}y_j&\text{if $x=x_i$}\\0&\text{otherwise}\end{cases}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 두 유한차원 $\mathbb{k}$-벡터공간 $V,W$가 각각 basis $\\{x_1,\ldots,x_n\\}$, $\\{y_1,\ldots,y_m\\}$을 갖는다 하자. 그럼 $\Hom(V,W)$는 $mn$차원 벡터공간이며, 이 때 위의 $mn$개의 linear map들 $B_i^j$가 $\Hom(V,W)$의 basis가 된다.
+<ins id="prop5">**명제 5**</ins> 두 유한차원 $\mathbb{K}$-벡터공간 $V,W$가 각각 basis $\\{x_1,\ldots,x_n\\}$, $\\{y_1,\ldots,y_m\\}$을 갖는다 하자. 그럼 $\Hom(V,W)$는 $mn$차원 벡터공간이며, 이 때 위의 $mn$개의 linear map들 $B_i^j$가 $\Hom(V,W)$의 basis가 된다.
 
 </div>
 <details class="proof" markdown="1">

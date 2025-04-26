@@ -25,7 +25,7 @@ weight: 5
 
 <div class="proposition" markdown="1">
 
-<ins id="thm1">**정리 1**</ins> $\mathbb{k}$-벡터공간 $V$에 대하여, $V$의 두 basis $\mathcal{B}_1$, $\mathcal{B}_2$가 주어졌다면 $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$이 성립한다.
+<ins id="thm1">**정리 1**</ins> $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 두 basis $\mathcal{B}_1$, $\mathcal{B}_2$가 주어졌다면 $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$이 성립한다.
 
 </div>
 
@@ -39,7 +39,7 @@ weight: 5
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**보조정리 2**</ins> $\mathbb{k}$-벡터공간 $V$에 대하여, 만일 $\mathcal{B}_1$과 $\mathcal{B}_2$이 모두 $V$의 basis이고 유한하다면, $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$가 성립한다.
+<ins id="lem2">**보조정리 2**</ins> $\mathbb{K}$-벡터공간 $V$에 대하여, 만일 $\mathcal{B}_1$과 $\mathcal{B}_2$이 모두 $V$의 basis이고 유한하다면, $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$가 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -100,13 +100,13 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 사실 위 명제의 증명은 원래의 명제보다 약간 더 강력한 다음의 명제
 
-> 어떤 $\mathbb{k}$-벡터공간 $V$기 유한한 basis $\mathcal{B}$를 갖는다 하자. 그럼 $\mathcal{B}$보다 원소의 개수가 많은 $V$의 부분집합은 반드시 일차종속이다.
+> 어떤 $\mathbb{K}$-벡터공간 $V$기 유한한 basis $\mathcal{B}$를 갖는다 하자. 그럼 $\mathcal{B}$보다 원소의 개수가 많은 $V$의 부분집합은 반드시 일차종속이다.
 
 를 증명한 것이다. 어쨌든 [정리 1](#thm1)에 의해 $V$의 basis는 모두 같은 크기를 가지므로 다음 정의가 말이 된다.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> $\mathbb{k}$-벡터공간 $V$에 대하여, $V$의 basis의 cardinality를 $V$의 *차원*이라 하고, $\dim V$, 혹은 $\mathbb{k}$를 강조할 필요가 있을 때는 $\dim_\mathbb{k}V$로 적는다. 만일 $\dim V$가 유한이라면, $V$는 *유한차원* 벡터공간이고, 그렇지 않다면 $V$는 *무한차원* 벡터공간이다.
+<ins id="def3">**정의 3**</ins> $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 basis의 cardinality를 $V$의 *차원*이라 하고, $\dim V$, 혹은 $\mathbb{K}$를 강조할 필요가 있을 때는 $\dim_\mathbb{K}V$로 적는다. 만일 $\dim V$가 유한이라면, $V$는 *유한차원* 벡터공간이고, 그렇지 않다면 $V$는 *무한차원* 벡터공간이다.
 
 </div>
 
@@ -115,10 +115,10 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 <ins id="ex4">**예시 4**</ins> 
 
 1. Trivial vector space $\\{0\\}$의 basis는 $\emptyset$이므로, 이 공간의 차원은 $\lvert\emptyset\rvert=0$이다.
-2. 임의의 field $\mathbb{k}$에 대하여, $\mathbb{k}$ 자기 자신은 1차원 $\mathbb{k}$-벡터공간이다.
-3. 임의의 field $\mathbb{k}$에 대하여, 유클리드 $n$-공간 $\mathbb{k}^n$의 차원은 $\dim \mathbb{k}^n=n$이다.
+2. 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}$ 자기 자신은 1차원 $\mathbb{K}$-벡터공간이다.
+3. 임의의 field $\mathbb{K}$에 대하여, 유클리드 $n$-공간 $\mathbb{K}^n$의 차원은 $\dim \mathbb{K}^n=n$이다.
 4. $\dim_\mathbb{R}\mathbb{C}=2$. 
-5. $\mathbb{k}[\x]$는 무한차원 벡터공간이다.
+5. $\mathbb{K}[\x]$는 무한차원 벡터공간이다.
 
 </div>
 
@@ -129,7 +129,7 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> $\mathbb{k}$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 basis $\mathcal{B}$가 존재한다.
+<ins id="prop5">**명제 5**</ins> $\mathbb{K}$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 basis $\mathcal{B}$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -151,7 +151,7 @@ $V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> $\mathbb{k}$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다.
+<ins id="prop6">**명제 6**</ins> $\mathbb{K}$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다.
 
 </div>
 <details class="proof" markdown="1">
@@ -177,7 +177,7 @@ $$V=\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)=\langle S\rangl
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> 두 $\mathbb{k}$-벡터공간 $V$, $W$가 주어졌다 하자. 그럼 이들의 *곱* $V\times W$는 임의의 $v\in V$, $w\in W$에 대하여 $(v,w)$의 꼴로 나타나는 벡터들의 벡터공간이다. 이들의 연산은 각각
+<ins id="ex7">**예시 7**</ins> 두 $\mathbb{K}$-벡터공간 $V$, $W$가 주어졌다 하자. 그럼 이들의 *곱* $V\times W$는 임의의 $v\in V$, $w\in W$에 대하여 $(v,w)$의 꼴로 나타나는 벡터들의 벡터공간이다. 이들의 연산은 각각
 
 $$(v_1, w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2),\quad\alpha(v,w)=(\alpha v,\alpha w)$$
 
@@ -191,7 +191,7 @@ $$\mathcal{B}=\{(x, y)\mid x\in \mathcal{B}_1\text{ and }y\in \mathcal{B}_2\}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> 이번에는 $\mathbb{k}$-벡터공간 $V$가 주어졌다 하고, $V$의 두 부분공간 $W_1$, $W_2$가 주어졌다 하자. 그럼 $V$의 부분공간 $W_1+W_2$는 
+<ins id="ex8">**예시 8**</ins> 이번에는 $\mathbb{K}$-벡터공간 $V$가 주어졌다 하고, $V$의 두 부분공간 $W_1$, $W_2$가 주어졌다 하자. 그럼 $V$의 부분공간 $W_1+W_2$는 
 
 > 두 부분공간 $W_1$, $W_2$를 포함하는 $V$의 부분공간 중 가장 작은 것
 

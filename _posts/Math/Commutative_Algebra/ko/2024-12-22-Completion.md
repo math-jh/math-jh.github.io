@@ -147,11 +147,11 @@ $$\sum_{j=1}^\infty b_j$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> 만일 $A=\mathbb{k}[\x]$이고 $\mathfrak{a}=(\x)$라면 $\widehat{A}$는 *formal power series*들의 ring $\mathbb{k}[[\x]]$이다.
+<ins id="ex4">**예시 4**</ins> 만일 $A=\mathbb{K}[\x]$이고 $\mathfrak{a}=(\x)$라면 $\widehat{A}$는 *formal power series*들의 ring $\mathbb{K}[[\x]]$이다.
 
 </div>
 
-Ring $\mathbb{k}[[\x]]$는 유일한 nonzero prime ideal $\mathfrak{m}=(\x)$를 갖는 discrete valuation ring이다. 즉 $(\x)$에 속하지 않는 임의의 원소는 unit이며, 이는 본질적으로 다음의 식
+Ring $\mathbb{K}[[\x]]$는 유일한 nonzero prime ideal $\mathfrak{m}=(\x)$를 갖는 discrete valuation ring이다. 즉 $(\x)$에 속하지 않는 임의의 원소는 unit이며, 이는 본질적으로 다음의 식
 
 $$\frac{1}{1+\x}=1-\x+\x^2-\cdots$$ 
 

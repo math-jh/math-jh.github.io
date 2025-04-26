@@ -256,7 +256,7 @@ $$\supp(f)=Z(\ann(f))$$
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> Affine scheme $X=\Spec \mathbb{k}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$를 생각하자. 그럼 [§스펙트럼, ⁋보조정리 6](/ko/math/algebraic_geometry/spectrums)과 [§스펙트럼, ⁋명제 9](/ko/math/algebraic_geometry/spectrums#prop9)에 의하여, 집합으로서 
+<ins id="ex11">**예시 11**</ins> Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$를 생각하자. 그럼 [§스펙트럼, ⁋보조정리 6](/ko/math/algebraic_geometry/spectrums)과 [§스펙트럼, ⁋명제 9](/ko/math/algebraic_geometry/spectrums#prop9)에 의하여, 집합으로서 
 
 $$X= Z(\x_2^2,\x_1\x_2)=Z(\x_2^2)\cap Z(\x_1\x_2)=\{(0,0)\}$$
 
@@ -286,11 +286,11 @@ $$\Gamma(U, \mathscr{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> Affine scheme $X=\Spec \mathbb{k}[\x_1,\x_2]/(\x_2-\x_1^2)$을 생각하자. 그럼 $X$는 유일한 associated prime $(0)$을 가지며, $X$의 임의의 열린집합은 이 점을 포함하므로 $X$의 rational function은 공집합이 아닌 임의의 열린집합 $U$와 그 위에서의 함수 $f\in\Gamma(U, \mathscr{O}_X)$로 이루어진다. 
+<ins id="ex13">**예시 13**</ins> Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$을 생각하자. 그럼 $X$는 유일한 associated prime $(0)$을 가지며, $X$의 임의의 열린집합은 이 점을 포함하므로 $X$의 rational function은 공집합이 아닌 임의의 열린집합 $U$와 그 위에서의 함수 $f\in\Gamma(U, \mathscr{O}_X)$로 이루어진다. 
 
 한편, 우리는 affine scheme $X=\Spec A$의 임의의 (공집합이 아닌) 열린집합은 적당한 nonzero $f\in A$에 대하여 $\Spec A_f$의 꼴이며, 이 위에서의 함수는 $A_f$로 주어지는 것을 안다. 가령 이 예시에서 $f$를 $\x_1$(의 $A$에서의 image)로 택했다고 하면, isomorphism
 
-$$\left(\frac{\mathbb{k}[\x_1,\x_2]}{(\x_2-\x_1^2)}\right)_{\x_1}\cong\frac{\mathbb{k}[\x_1,\x_2]_{\x_1}}{(\x_2-\x_1^2)_{\x_1}}$$
+$$\left(\frac{\mathbb{K}[\x_1,\x_2]}{(\x_2-\x_1^2)}\right)_{\x_1}\cong\frac{\mathbb{K}[\x_1,\x_2]_{\x_1}}{(\x_2-\x_1^2)_{\x_1}}$$
 
 에 의하여, 열린집합 $\Spec A_{\x_1}$ 위에서 정의된 $1/\x_1$과 같은 함수들은 $X$ 위에서의 rational function이 된다. 이를 통해 분모에 $\x_2-\x_1^2$ 인자를 갖고 있지 않은 모든 유리식은 $X$ 위의 (적절한 열린집합에서의) 유리함수가 된다는 것을 안다. 
 
