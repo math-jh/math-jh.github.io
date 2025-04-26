@@ -207,27 +207,27 @@ $$A\otimes_B \mathfrak{b} \rightarrow A\otimes_BB \rightarrow A\otimes_B (B/\mat
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> $Z=\Spec\mathbb{k}[\x,\y]$의 두 closed subscheme 
+<ins id="ex11">**예시 11**</ins> $Z=\Spec\mathbb{K}[\x,\y]$의 두 closed subscheme 
 
-$$X=\Spec \mathbb{k}[\x,\y]/(\y)=\Spec \mathbb{k}[\x],\qquad Y=\Spec \mathbb{k}[\x,\y]/(\x)=\Spec \mathbb{k}[\y]$$
+$$X=\Spec \mathbb{K}[\x,\y]/(\y)=\Spec \mathbb{K}[\x],\qquad Y=\Spec \mathbb{K}[\x,\y]/(\x)=\Spec \mathbb{K}[\y]$$
 
-을 생각하자. 그럼 $X$와 $Y$는 각각 $Z=\mathbb{A}^2_\mathbb{k}$의 $\x$축과 $\y$축에 해당하며, 그 closed embedding은 projection들
+을 생각하자. 그럼 $X$와 $Y$는 각각 $Z=\mathbb{A}^2_\mathbb{K}$의 $\x$축과 $\y$축에 해당하며, 그 closed embedding은 projection들
 
-$$\mathbb{k}[\x,\y] \rightarrow \mathbb{k}[\x],\qquad \mathbb{k}[\x,\y] \rightarrow \mathbb{k}[\y]$$
+$$\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x],\qquad \mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\y]$$
 
 로 주어진다. 이제 $X\times_ZY$는, [보조정리 2](#lem2)에 의하여, 
 
-$$\Spec\left(\frac{\mathbb{k}[\x,\y]}{(\x)}\otimes_{\mathbb{k}[\x,\y]} \frac{\mathbb{k}[\x,\y]}{(\y)}\right)\cong \Spec \mathbb{k}[\x,\y]/(\x,\y)\cong\Spec \mathbb{k}$$
+$$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\x)}\otimes_{\mathbb{K}[\x,\y]} \frac{\mathbb{K}[\x,\y]}{(\y)}\right)\cong \Spec \mathbb{K}[\x,\y]/(\x,\y)\cong\Spec \mathbb{K}$$
 
 로 주어지는 것을 확인할 수 있으며 이는 정확히 $\x$축과 $\y$축의 교점인 원점에 해당한다.
 
 이번에는 위의 계산에서 $Y$를 다음의 closed subscheme
 
-$$Y=\Spec \mathbb{k}[\x,\y]/(\y-\x^2)$$
+$$Y=\Spec \mathbb{K}[\x,\y]/(\y-\x^2)$$
 
 으로 바꿔보자. $\y=\x^2$과 $\x$축의 교점은 마찬가지로 원점이지만, 이번에는 중근이 존재하므로 scheme 구조는 위와 다르게 주어져야 할 것이다. 실제로 계산을 반복하면 $X\times_ZY$는
 
-$$\Spec\left(\frac{\mathbb{k}[\x,\y]}{(\y)}\otimes_{\mathbb{k}[\x,\y]}\frac{\mathbb{k}[\x,\y]}{(\y-\x^2)}\right)\cong\Spec \mathbb{k}[\x,\y]/(\y,\y-\x^2)\cong\Spec \mathbb{k}[\x]/(\x^2)$$
+$$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\y)}\otimes_{\mathbb{K}[\x,\y]}\frac{\mathbb{K}[\x,\y]}{(\y-\x^2)}\right)\cong\Spec \mathbb{K}[\x,\y]/(\y,\y-\x^2)\cong\Spec \mathbb{K}[\x]/(\x^2)$$
 
 이 된다. 
 
@@ -253,21 +253,21 @@ $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> Algebraically closed field $\mathbb{k}$에 대하여, ring homomorphism $\mathbb{k}[\x] \rightarrow \mathbb{k}[\y]$을 식 $\x \mapsto \y^2$으로 정의하고, 이로부터 얻어지는 scheme morphism $\varphi: \Spec \mathbb{k}[\y] \rightarrow \Spec \mathbb{k}[\x]$를 생각하자. 그럼 $\Spec\mathbb{k}[\x]$의 임의의 점 $(\x-a)$에서의 residue field는 
+<ins id="ex13">**예시 13**</ins> Algebraically closed field $\mathbb{K}$에 대하여, ring homomorphism $\mathbb{K}[\x] \rightarrow \mathbb{K}[\y]$을 식 $\x \mapsto \y^2$으로 정의하고, 이로부터 얻어지는 scheme morphism $\varphi: \Spec \mathbb{K}[\y] \rightarrow \Spec \mathbb{K}[\x]$를 생각하자. 그럼 $\Spec\mathbb{K}[\x]$의 임의의 점 $(\x-a)$에서의 residue field는 
 
-$$\Frac(\mathbb{k}[\x]/(\x-a))=\mathbb{k}[\x]/(\x-a)$$
+$$\Frac(\mathbb{K}[\x]/(\x-a))=\mathbb{K}[\x]/(\x-a)$$
 
-이다. 이제 임의의 $a\in \mathbb{k}$에 대하여,
+이다. 이제 임의의 $a\in \mathbb{K}$에 대하여,
 
-$$\varphi^{-1}((\x-a))=\Spec \mathbb{k}[\y]\otimes_{\Spec \mathbb{k}[\x]}\Spec \mathbb{k}[\x]/(\x-a)\cong \Spec(\mathbb{k}[\y]\otimes_{\mathbb{k}[\x]}\mathbb{k}[\x]/(\x-a))=\Spec \mathbb{k}[\y]/(\y^2-a)$$
+$$\varphi^{-1}((\x-a))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}[\x]/(\x-a)\cong \Spec(\mathbb{K}[\y]\otimes_{\mathbb{K}[\x]}\mathbb{K}[\x]/(\x-a))=\Spec \mathbb{K}[\y]/(\y^2-a)$$
 
-이며, 따라서 만일 $a=0$이라면 $\varphi^{-1}((\x))\cong\Spec \mathbb{k}[\y]/(\y^2)$이고, $a\neq 0$이라면 $\mathbb{k}$가 algebraically closed라는 가정으로부터 
+이며, 따라서 만일 $a=0$이라면 $\varphi^{-1}((\x))\cong\Spec \mathbb{K}[\y]/(\y^2)$이고, $a\neq 0$이라면 $\mathbb{K}$가 algebraically closed라는 가정으로부터 
 
-$$\Spec \mathbb{k}[\y]/(\y^2-a)\cong \Spec \mathbb{k}[\y]/(\y-\sqrt{a})\coprod \Spec \mathbb{k}[\y]/(\y+\sqrt{a})$$
+$$\Spec \mathbb{K}[\y]/(\y^2-a)\cong \Spec \mathbb{K}[\y]/(\y-\sqrt{a})\coprod \Spec \mathbb{K}[\y]/(\y+\sqrt{a})$$
 
-임을 안다. 한편 $\mathbb{k}[\x]$의 generic point $(0)$에 대해서는 $\kappa((0))=\mathbb{k}(\x)$이므로 
+임을 안다. 한편 $\mathbb{K}[\x]$의 generic point $(0)$에 대해서는 $\kappa((0))=\mathbb{K}(\x)$이므로 
 
-$$\varphi^{-1}((0))=\Spec \mathbb{k}[\y]\otimes_{\Spec \mathbb{k}[\x]}\Spec \mathbb{k}(\x)\cong \Spec\mathbb{k}(\y)$$
+$$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}(\x)\cong \Spec\mathbb{K}(\y)$$
 
 이 된다. 
 

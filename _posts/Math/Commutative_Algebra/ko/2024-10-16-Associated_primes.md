@@ -41,11 +41,11 @@ weight: 6
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-만일 $R$이 무한한 field $\mathbb{k}$를 포함한다면, ideal들 각각을 $\mathbb{k}$-벡터공간으로 본다면 
+만일 $R$이 무한한 field $\mathbb{K}$를 포함한다면, ideal들 각각을 $\mathbb{K}$-벡터공간으로 본다면 
 
 $$\mathfrak{b}=\bigcup_{i=1}^n (\mathfrak{b}\cap \mathfrak{a}_i)$$
 
-이고 임의의 $\mathbb{k}$-벡터공간은 자기 자신의 proper subspace들의 유한한 union으로 표현할 수 없으므로 자명하다. 
+이고 임의의 $\mathbb{K}$-벡터공간은 자기 자신의 proper subspace들의 유한한 union으로 표현할 수 없으므로 자명하다. 
 
 나머지 경우는 $n$에 대한 귀납법으로 증명한다. $n=1$일 경우는 증명할 것이 없다. 
 

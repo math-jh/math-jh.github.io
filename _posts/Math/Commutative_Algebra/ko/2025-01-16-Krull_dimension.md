@@ -31,7 +31,7 @@ $$\mathfrak{p}_r\supseteq \mathfrak{p}_{r-1}\supseteq\cdots\supseteq \mathfrak{p
 
 </div>
 
-간단히 ring $A$의 Krull dimension을 $A$의 dimension이라 부른다. 예를 들어, field $\mathbb{k}$는 유일한 prime ideal $(0)$을 가지므로 $\mathbb{k}$는 항상 $0$차원이다. 
+간단히 ring $A$의 Krull dimension을 $A$의 dimension이라 부른다. 예를 들어, field $\mathbb{K}$는 유일한 prime ideal $(0)$을 가지므로 $\mathbb{K}$는 항상 $0$차원이다. 
 
 더 일반적으로 다음을 정의한다.
 

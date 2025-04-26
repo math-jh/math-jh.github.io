@@ -214,27 +214,27 @@ $$(\varphi\vert_{U})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \maths
 
 <ins id="ex15">**예시 15**</ins> 이번 절에서 살펴본 morphism들의 예시를 살펴보자. Affine scheme들의 세상에서 이는 그저 [\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)의 예시들을 보는 것에 지나지 않는다. 이번 예시의 목적은 이들에 기하학적인 직관을 부여하는 것이다.
 
-우선 algebraically closed field $\mathbb{k}$에 대하여, ring map $\iota:\mathbb{k}[\x] \rightarrow \mathbb{k}[\x,\y]$를 생각하면 $\mathbb{k}[\x,\y]$는 $\mathbb{k}[\x]$-algebra로서 하나의 원소 $\y$에 의해 생성되므로 finite type ring homomorphism이지만, $\mathbb{k}[\x]$-module로서는 유한하게 생성되지 않으므로 finite ring homomorphism은 아니다. 
+우선 algebraically closed field $\mathbb{K}$에 대하여, ring map $\iota:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]$를 생각하면 $\mathbb{K}[\x,\y]$는 $\mathbb{K}[\x]$-algebra로서 하나의 원소 $\y$에 의해 생성되므로 finite type ring homomorphism이지만, $\mathbb{K}[\x]$-module로서는 유한하게 생성되지 않으므로 finite ring homomorphism은 아니다. 
 
-이제 이에 대응되는 scheme morphism $\Spec\iota: \Spec \mathbb{k}[\x,\y] \rightarrow\Spec \mathbb{k}[\x]$를 생각하자. 이는 임의의 prime ideal $\mathfrak{p}\subset \mathbb{k}[\x,\y]$를 받아 $\mathbb{k}[\x]$의 prime ideal $\mathfrak{p}\cap \mathbb{k}[\x]$를 내놓는 함수이다. 이는 기하적으로는 affine plane $\mathbb{A}^2\_\mathbb{k}$의 점 $(x,y)$를 affine line $\mathbb{A}^1\_\mathbb{k}$의 점 $x$에 대응시키는 함수이다. 
+이제 이에 대응되는 scheme morphism $\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$를 생각하자. 이는 임의의 prime ideal $\mathfrak{p}\subset \mathbb{K}[\x,\y]$를 받아 $\mathbb{K}[\x]$의 prime ideal $\mathfrak{p}\cap \mathbb{K}[\x]$를 내놓는 함수이다. 이는 기하적으로는 affine plane $\mathbb{A}^2\_\mathbb{K}$의 점 $(x,y)$를 affine line $\mathbb{A}^1\_\mathbb{K}$의 점 $x$에 대응시키는 함수이다. 
 
 ![finite_type_morphism](/assets/images/Math/Algebraic_Geometry/Properties_of_scheme_morphisms-1.png){:style="width:25em" class="invert" .align-center}
 
-이와 관련된 finite morphism의 예시로는 위의 ring homomorphism $\iota:\mathbb{k}[\x]\rightarrow \mathbb{k}[\x,\y]$에 projection map $\pi:\mathbb{k}[\x,\y] \rightarrow \mathbb{k}[\x,\y]/(\x-\y^2)$을 합성한 것이 있다. 그럼 $\mathbb{k}[\x,\y]/(\x-\y^2)$은 $\mathbb{k}[\x]$-module로서 $1$과 $\y$에 의해 생성되므로 $\phi:\mathbb{k}[\x] \rightarrow \mathbb{k}[\x,\y]/(\x-\y^2)$은 finite morphism이다. 
+이와 관련된 finite morphism의 예시로는 위의 ring homomorphism $\iota:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x,\y]$에 projection map $\pi:\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$을 합성한 것이 있다. 그럼 $\mathbb{K}[\x,\y]/(\x-\y^2)$은 $\mathbb{K}[\x]$-module로서 $1$과 $\y$에 의해 생성되므로 $\phi:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$은 finite morphism이다. 
 
 한편 우리는 ring homomorphism $\pi:A \rightarrow A/\mathfrak{a}$는 기하적으로 $\mathfrak{a}$가 정의하는 닫힌집합의 inclusion에 해당하는 것을 안다. 따라서 합성
 
-$$\phi: \mathbb{k}[\x] \rightarrow \mathbb{k}[\x,\y] \rightarrow \mathbb{k}[\x,y]/(\x-\y^2)$$
+$$\phi: \mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,y]/(\x-\y^2)$$
 
 이 정의하는 scheme morphism
 
-$$\Spec\phi: \Spec \frac{\mathbb{k}[\x,\y]}{(\x-\y^2)}\rightarrow \Spec \mathbb{k}[\x,\y] \rightarrow \Spec\mathbb{k}[\x]$$
+$$\Spec\phi: \Spec \frac{\mathbb{K}[\x,\y]}{(\x-\y^2)}\rightarrow \Spec \mathbb{K}[\x,\y] \rightarrow \Spec\mathbb{K}[\x]$$
 
 은 기하적으로 $\x=\y^2$의 zero set $Z(\x-\y^2)$에서 $x$축으로의 projection으로 볼 수 있다.
 
 ![finite_morphism](/assets/images/Math/Algebraic_Geometry/Properties_of_scheme_morphisms-2.png){:style="width:25em" class="invert" .align-center}
 
-이 두 예시의 기하학적인 차이는 꽤나 명확하다. 첫 번째 예시의 경우, target의 한 점에서의 fiber가 무한집합인 반면 두 번째 예시의 경우 한 점에서의 fiber가 유한집합이다. 대수적으로 이는 target $\mathbb{A}\_\mathbb{k}^1$의 임의의 점 $\mathfrak{p}=(\x-a)$를 가져왔을 때, 임의의 $\mathfrak{q}\_b=(\x-a, \y-b)\in \mathbb{A}\_\mathbb{k}^2$는 $(\Spec\iota)(\mathfrak{q}\_b)=\mathfrak{p}$를 만족하는 반면, 두 번째 예시에서는 오직 두 개의 점 $\mathfrak{q}\_+=(\x-a, \y-\sqrt{a})$와 $\mathfrak{q}\_-=(\x-a, \y+\sqrt{a})$만이 $(\Spec\phi)(\mathfrak{q}\_\pm)=\mathfrak{p}$를 만족하는 것으로 확인할 수 있다. 
+이 두 예시의 기하학적인 차이는 꽤나 명확하다. 첫 번째 예시의 경우, target의 한 점에서의 fiber가 무한집합인 반면 두 번째 예시의 경우 한 점에서의 fiber가 유한집합이다. 대수적으로 이는 target $\mathbb{A}\_\mathbb{K}^1$의 임의의 점 $\mathfrak{p}=(\x-a)$를 가져왔을 때, 임의의 $\mathfrak{q}\_b=(\x-a, \y-b)\in \mathbb{A}\_\mathbb{K}^2$는 $(\Spec\iota)(\mathfrak{q}\_b)=\mathfrak{p}$를 만족하는 반면, 두 번째 예시에서는 오직 두 개의 점 $\mathfrak{q}\_+=(\x-a, \y-\sqrt{a})$와 $\mathfrak{q}\_-=(\x-a, \y+\sqrt{a})$만이 $(\Spec\phi)(\mathfrak{q}\_\pm)=\mathfrak{p}$를 만족하는 것으로 확인할 수 있다. 
 
 이와 같이, finite type morphism은 기하적으로는 fiber가 유한차원인 것과 관련이 있고, finite morphism은 fiber가 유한집합인 것과 관련이 있다. 
 

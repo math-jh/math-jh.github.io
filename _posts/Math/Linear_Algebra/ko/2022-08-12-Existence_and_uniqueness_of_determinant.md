@@ -49,7 +49,7 @@ $$\sgn(\sigma\circ\sigma')=\sgn(\sigma)\sgn(\sigma')$$
 
 이 성립한다.
 
-임의의 alternating multilinear map $f:(\mathbb{k}^n)^n\rightarrow \mathbb{k}$가 주어졌다 하자. 그럼 $\sgn$의 정의에 의하여, 
+임의의 alternating multilinear map $f:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$가 주어졌다 하자. 그럼 $\sgn$의 정의에 의하여, 
 
 $$f(v_1,v_2,\ldots, v_n)=\sgn(\sigma)f(v_{\sigma(1)},v_{\sigma(2)},\ldots, v_{\sigma(n)})$$
 
@@ -108,7 +108,7 @@ $$\det A=\sum_{\sigma\in S_n}\sgn(\sigma)A_{\sigma(1)1}A_{\sigma(2)2}\cdots A_{\
 
 <div class="proposition" markdown="1">
 
-<ins id="cor4">**따름정리 4**</ins> 임의의 행렬 $A\in\Mat_n(\mathbb{k})$에 대하여, $\det(A^t)=\det A$가 성립한다.
+<ins id="cor4">**따름정리 4**</ins> 임의의 행렬 $A\in\Mat_n(\mathbb{K})$에 대하여, $\det(A^t)=\det A$가 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -126,7 +126,7 @@ $$\det(A^t)=\sum_{\sigma\in S_n}\sgn(\sigma)A_{1\sigma(1)}\cdots A_{n\sigma(n)}=
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> 임의의 행렬 $A,B\in\Mat_n(\mathbb{k})$에 대하여, $\det(AB)=\det(A)\det(B)$가 성립한다.
+<ins id="lem5">**보조정리 5**</ins> 임의의 행렬 $A,B\in\Mat_n(\mathbb{K})$에 대하여, $\det(AB)=\det(A)\det(B)$가 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -156,13 +156,13 @@ $$\sum_{\tau\in S_n}\sgn(\tau)\det(A)B_{\tau(1)1}\cdots B_{\tau(n)n}=\det(A)\det
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> 임의의 행렬 $A\in\Mat_n(\mathbb{k})$에 대하여, $\det A\neq 0$인 것과 $A$가 가역인 것이 동치이다.
+<ins id="prop6">**명제 6**</ins> 임의의 행렬 $A\in\Mat_n(\mathbb{K})$에 대하여, $\det A\neq 0$인 것과 $A$가 가역인 것이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-선형대수학의 기본정리로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{k}^n\rightarrow \mathbb{k}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{k}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
+선형대수학의 기본정리로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{K}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
 
 거꾸로 $A$가 가역이라 가정하자. 그럼 다음의 식
 
@@ -176,7 +176,7 @@ $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor7">**따름정리 7**</ins> 가역행렬 $A\in\Mat_n(\mathbb{k})$에 대하여 $\det(A^{-1})=(\det A)^{-1}$이 성립한다.
+<ins id="cor7">**따름정리 7**</ins> 가역행렬 $A\in\Mat_n(\mathbb{K})$에 대하여 $\det(A^{-1})=(\det A)^{-1}$이 성립한다.
 
 </div>
 
@@ -186,7 +186,7 @@ $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 행렬 $A\in\Mat\_n(\mathbb{k})$이 *상삼각행렬<sub>upper triangular matrix</sub>*이라는 것은 $i>j$일 때마다 $A_{ij}=0$인 것이다. 비슷하게, $i < j$일 때마다 $A\_{ij}=0$이라면 $A$를 *하삼각행렬<sub>lower triangular matrix</sub>*이라 부르고, 상삼각행렬과 하삼각행렬을 합쳐 간단히 *삼각행렬<sub>triangular matrix</sub>*이라 부른다.
+<ins id="def8">**정의 8**</ins> 행렬 $A\in\Mat\_n(\mathbb{K})$이 *상삼각행렬<sub>upper triangular matrix</sub>*이라는 것은 $i>j$일 때마다 $A_{ij}=0$인 것이다. 비슷하게, $i < j$일 때마다 $A\_{ij}=0$이라면 $A$를 *하삼각행렬<sub>lower triangular matrix</sub>*이라 부르고, 상삼각행렬과 하삼각행렬을 합쳐 간단히 *삼각행렬<sub>triangular matrix</sub>*이라 부른다.
 
 한편, 행렬 $A$의 성분들 $A\_{ii}$를 $A$의 *대각성분*이라 하고, 만일 $i\neq j$일 때마다 $A\_{ij}=0$이라면 $A$를 *대각행렬<sub>diagonal matrix</sub>*이라 부른다. 
 
@@ -231,7 +231,7 @@ $$\det E_{i,j}=-1,\quad \det E'_{i,r}=r$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> $A\in\Mat_k(\mathbb{k})$이고 $I$가 $l\times l$ 항등행렬이라 하자. 그럼 다음의 블록행렬
+<ins id="prop10">**명제 10**</ins> $A\in\Mat_k(\mathbb{K})$이고 $I$가 $l\times l$ 항등행렬이라 하자. 그럼 다음의 블록행렬
 
 $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 
@@ -245,7 +245,7 @@ $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 
 $$\det \begin{pmatrix}A&O\\O&I\end{pmatrix}=\sum_{\sigma\in S_{k+l}}\sgn(\sigma)A_{\sigma(1)1}A_{\sigma(2)2}\cdots A_{\sigma(k)k}B_{\sigma(k+1)(k+1)}\cdots B_{\sigma(k+l)(k+l)}$$
 
-과 같다. 여기서 $B_{k+i}$는 $k+i$번째 성분만 $1$이고, 나머지 성분은 모두 $0$인 $\mathbb{k}^{k+l}$의 원소이다. 그럼 
+과 같다. 여기서 $B_{k+i}$는 $k+i$번째 성분만 $1$이고, 나머지 성분은 모두 $0$인 $\mathbb{K}^{k+l}$의 원소이다. 그럼 
 
 $$\sigma(k+1)=k+1,\ldots,\sigma(k+l)=k+1$$
 
@@ -255,7 +255,7 @@ $$\sigma(k+1)=k+1,\ldots,\sigma(k+l)=k+1$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor11">**따름정리 11**</ins> $A\in\Mat\_k(\mathbb{k}),B\in\Mat\_l(\mathbb{k}), C\in\Mat\_{l\times k}(\mathbb{k})$에 대하여, 다음의 블록행렬
+<ins id="cor11">**따름정리 11**</ins> $A\in\Mat\_k(\mathbb{K}),B\in\Mat\_l(\mathbb{K}), C\in\Mat\_{l\times k}(\mathbb{K})$에 대하여, 다음의 블록행렬
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 
@@ -290,7 +290,7 @@ $n$차 정사각행렬 $A$가 주어졌을 때, $A$의 행렬식을 가장 쉽�
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> 행렬 $A\in\Mat_n(\mathbb{k})$이 주어졌다 하자. $1\leq i,j\leq n$에 대하여, $A^{(i,j)}$는 행렬 $A$의 $i$행, $j$열을 없애서 얻어지는 $(n-1)$차 정사각행렬이다.  
+<ins id="def12">**정의 12**</ins> 행렬 $A\in\Mat_n(\mathbb{K})$이 주어졌다 하자. $1\leq i,j\leq n$에 대하여, $A^{(i,j)}$는 행렬 $A$의 $i$행, $j$열을 없애서 얻어지는 $(n-1)$차 정사각행렬이다.  
 
 </div>
 
@@ -298,7 +298,7 @@ $n$차 정사각행렬 $A$가 주어졌을 때, $A$의 행렬식을 가장 쉽�
 
 <div class="proposition" markdown="1">
 
-<ins id="thm13">**정리 13**</ins> 임의의 행렬 $A\in\Mat_n(\mathbb{k})$과, 임의의 $1\leq i\leq n$에 대하여 다음의 식
+<ins id="thm13">**정리 13**</ins> 임의의 행렬 $A\in\Mat_n(\mathbb{K})$과, 임의의 $1\leq i\leq n$에 대하여 다음의 식
 
 $$\det A=\sum_{j=1}^n(-1)^{i+j}A_{ij}\det (A^{(i,j)})$$
 

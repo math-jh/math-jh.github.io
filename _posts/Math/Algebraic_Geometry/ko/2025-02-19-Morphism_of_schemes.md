@@ -39,25 +39,25 @@ weight: 7
 
 <ins id="ex2">**예시 2**</ins> Affine scheme들 사이의 morphism이 아닌 scheme morphism의 예시로, [§사영스킴, §§사영공간](/ko/math/algebraic_geometry/projective_schemes#사영공간)에서 motivation을 위해 처음 등장했던 map
 
-$$\varphi:\mathbb{A}_\mathbb{k}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{k}$$
+$$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영스킴, ⁋예시 12](/ko/math/algebraic_geometry/projective_schemes)에서 전통적인 projective space를 대수기하의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 $(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$을 만족하지만, $\mathbb{A}^{n+1}_\mathbb{k}$의 점들이 이러한 꼴만 있는 것은 아니고, 또 이 식은 structure sheaf에 대한 정보를 하나도 담고 있지 않으므로 scheme morphism이라 칭하기는 부적절할 것이다.
+이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영스킴, ⁋예시 12](/ko/math/algebraic_geometry/projective_schemes)에서 전통적인 projective space를 대수기하의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 $(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$을 만족하지만, $\mathbb{A}^{n+1}_\mathbb{K}$의 점들이 이러한 꼴만 있는 것은 아니고, 또 이 식은 structure sheaf에 대한 정보를 하나도 담고 있지 않으므로 scheme morphism이라 칭하기는 부적절할 것이다.
 
-이제 scheme morphism으로서 $\varphi$를 정의하기 위해 $\mathbb{P}^n_{\mathbb{k}}$의 affine open subscheme 
+이제 scheme morphism으로서 $\varphi$를 정의하기 위해 $\mathbb{P}^n_{\mathbb{K}}$의 affine open subscheme 
 
-$$D_+(\x_i)\cong \Spec \mathbb{k}[\x_0,\ldots, \x_n]_{(\x_i)}\cong \Spec \mathbb{k}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)$$
+$$D_+(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{(\x_i)}\cong \Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)$$
 
 을 생각하자. ([§사영스킴, ⁋예시 12](/ko/math/algebraic_geometry/projective_schemes#ex12)) 또, affine space 
 
-$$\mathbb{A}^{n+1}_\mathbb{k}=\Spec \mathbb{k}[\x_0,\ldots, \x_n]$$
+$$\mathbb{A}^{n+1}_\mathbb{K}=\Spec \mathbb{K}[\x_0,\ldots, \x_n]$$
 
 을 생각하자. 그럼 
 
-$$\mathbb{A}^{n+1}_\mathbb{k}\setminus \{0\}=\bigcup_{i=0}^n D(\x_i)$$
+$$\mathbb{A}^{n+1}_\mathbb{K}\setminus \{0\}=\bigcup_{i=0}^n D(\x_i)$$
 
-이고, $D(\x\_i)\cong \Spec \mathbb{k}[\x\_0,\ldots, \x\_n]\_{\x\_i}$이다. 이제 각각의 $i$에 대하여, $\varphi\_i: D(\x\_i) \rightarrow D\_+(\x\_i)$는 affine scheme들 사이의 morphism이므로 ring homomorphism과 동일하다. 그럼 다음 식
+이고, $D(\x\_i)\cong \Spec \mathbb{K}[\x\_0,\ldots, \x\_n]\_{\x\_i}$이다. 이제 각각의 $i$에 대하여, $\varphi\_i: D(\x\_i) \rightarrow D\_+(\x\_i)$는 affine scheme들 사이의 morphism이므로 ring homomorphism과 동일하다. 그럼 다음 식
 
-$$\phi_i:\mathbb{k}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{k}[\x_0,\ldots, \x_n]_{\x_i};\qquad \x_{k/i}\mapsto  \frac{\x_k}{\x_i}$$
+$$\phi_i:\mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{K}[\x_0,\ldots, \x_n]_{\x_i};\qquad \x_{k/i}\mapsto  \frac{\x_k}{\x_i}$$
 
 에 first isomorphism theorem을 적용하여 정의된 affine scheme 사이의 morphism $\varphi_i$가 원하는 morphism이 된다. 이들이 [명제 1](#prop1)의 조건을 만족하는 것도 약간의 계산을 통해 확인할 수 있다. 이제 [§사영스킴, §§사영공간](/ko/math/algebraic_geometry/projective_schemes#사영공간)에서의 표기를 다시 빌려오면, 이들은 각각의 $D(\x_i)$ 위에서 다음 식
 
@@ -89,15 +89,15 @@ $$(x_0,\ldots, x_n)\rightarrow [x_0:\cdots:x_n]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> Affine $n$-space $\mathbb{A}^n_\mathbb{k}=\Spec \mathbb{k}[\x_1,\ldots, \x_n]$을 생각하자. 그럼 $\mathbb{k}[\x_1,\ldots, \x_n]$은 $\mathbb{k}$-algebra이며, 이는 structure morphism
+<ins id="ex4">**예시 4**</ins> Affine $n$-space $\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$을 생각하자. 그럼 $\mathbb{K}[\x_1,\ldots, \x_n]$은 $\mathbb{K}$-algebra이며, 이는 structure morphism
 
-$$\mathbb{k}\hookrightarrow \mathbb{k}[\x_1,\ldots, \x_n]$$
+$$\mathbb{K}\hookrightarrow \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-을 통해 $\mathbb{k}$-algebra가 주어진 것이다. ([\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1) 이후의 논증)
+을 통해 $\mathbb{K}$-algebra가 주어진 것이다. ([\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1) 이후의 논증)
 
-그럼 이 structure morphism을 통해 우리는 $\mathbb{A}^n_\mathbb{k}$를 $\Spec\mathbb{k}$-scheme
+그럼 이 structure morphism을 통해 우리는 $\mathbb{A}^n_\mathbb{K}$를 $\Spec\mathbb{K}$-scheme
 
-$$\mathbb{A}^n_\mathbb{k}=\Spec \mathbb{k}[\x_1,\ldots, \x_n] \rightarrow \Spec \mathbb{k}$$
+$$\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \Spec \mathbb{K}$$
 
 으로 볼 수 있다. 
 
@@ -151,29 +151,29 @@ $$x\mapsto [f_0(x):\cdots: f_n(x)]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> Algebraically closed field $\mathbb{k}$와 그 위에 정의된 affine $n$-space $Y=\mathbb{A}^n_\mathbb{k}=\Spec \mathbb{k}[\x_1,\ldots, \x_n]$과 $X=\Spec \mathbb{k}$를 생각하자. 그럼 scheme morphism $X \rightarrow Y$는 affine scheme 사이의 morphism 
+<ins id="ex7">**예시 7**</ins> Algebraically closed field $\mathbb{K}$와 그 위에 정의된 affine $n$-space $Y=\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$과 $X=\Spec \mathbb{K}$를 생각하자. 그럼 scheme morphism $X \rightarrow Y$는 affine scheme 사이의 morphism 
 
-$$\Spec \mathbb{k} \rightarrow \Spec \mathbb{k}[\x_1,\ldots, \x_n]$$
+$$\Spec \mathbb{K} \rightarrow \Spec \mathbb{K}[\x_1,\ldots, \x_n]$$
 
 이므로, ring homomorphism
 
-$$\phi:\mathbb{k}[\x_1,\ldots, \x_n] \rightarrow \mathbb{k}$$
+$$\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}$$
 
-에 대응된다. 그럼 이 ring homomorphism은 반드시 surjective이다. Ring homomorphism의 정의로부터 $\phi(1)=1$이고 따라서 임의의 $x\in \mathbb{k}$에 대하여 $\phi(x)=x$이기 때문이다. 따라서 first isomorphism theorem에 의하여
+에 대응된다. 그럼 이 ring homomorphism은 반드시 surjective이다. Ring homomorphism의 정의로부터 $\phi(1)=1$이고 따라서 임의의 $x\in \mathbb{K}$에 대하여 $\phi(x)=x$이기 때문이다. 따라서 first isomorphism theorem에 의하여
 
-$$\mathbb{k}[\x_1,\ldots, \x_n]/\ker\phi\cong \mathbb{k}$$
+$$\mathbb{K}[\x_1,\ldots, \x_n]/\ker\phi\cong \mathbb{K}$$
 
-이다. 그럼 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)의 넷째 결과에 의하여 $\ker\phi$는 $\mathbb{k}[\x_1,\ldots, \x_n]$의 maximal ideal이어야 하고, 따라서 [\[가환대수학\] §영점정리, ⁋보조정리 5](/ko/math/commutative_algebra/nullstellensatz#lem5)로부터
+이다. 그럼 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)의 넷째 결과에 의하여 $\ker\phi$는 $\mathbb{K}[\x_1,\ldots, \x_n]$의 maximal ideal이어야 하고, 따라서 [\[가환대수학\] §영점정리, ⁋보조정리 5](/ko/math/commutative_algebra/nullstellensatz#lem5)로부터
 
 $$\ker\phi=(\x_1-x_1,\ldots, \x_n-x_n)$$
 
 의 꼴이며 $\phi$는 점 $x=(x_1,\ldots, x_n)$에서의 evaluation homomorphism $\ev_x$가 된다. 뿐만 아니라 해당 보조정리의 증명을 생각하면 $x_i=\phi(\x_i)$인 것 또한 알 수 있다. 즉, 역함수 관계에 있는 다음의 두 일대일대응
 
-$$\begin{aligned}\{\text{$\mathbb{k}$-point $\Spec \phi:\Spec\mathbb{k}\rightarrow \mathbb{A}^n_\mathbb{k}$}\}&\rightarrow \{\text{points $(x_1,\ldots, x_n)\in \mathbb{A}^n_\mathbb{k}$}\}\\\Spec\phi&\mapsto (\phi(\x_1),\ldots,\phi(\x_n))\end{aligned}$$
+$$\begin{aligned}\{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}&\rightarrow \{\text{points $(x_1,\ldots, x_n)\in \mathbb{A}^n_\mathbb{K}$}\}\\\Spec\phi&\mapsto (\phi(\x_1),\ldots,\phi(\x_n))\end{aligned}$$
 
 그리고
 
-$$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{A}^n_\mathbb{k}$}\}&\rightarrow \{\text{$\mathbb{k}$-point $\Spec \phi:\Spec\mathbb{k}\rightarrow \mathbb{A}^n_\mathbb{k}$}\}\\a=(a_1,\ldots, a_n)&\mapsto \Spec \ev_a\end{aligned}$$
+$$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{A}^n_\mathbb{K}$}\}&\rightarrow \{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}\\a=(a_1,\ldots, a_n)&\mapsto \Spec \ev_a\end{aligned}$$
 
 이 존재한다. 
 

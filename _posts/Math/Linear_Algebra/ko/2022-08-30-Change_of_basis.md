@@ -19,11 +19,11 @@ weight: 14
 
 ---
 
-우리는 [선형대수학의 기본정리]()로부터, 두 $\mathbb{k}$-벡터공간 $V,W$에 basis의 선택이 주어진다면 임의의 linear map $L:V\rightarrow W$를 그 행렬표현 $[L]_\mathcal{C}^\mathcal{B}$와 동일하게 취급할 수 있다는 것을 살펴보았다. 이제 우리는 basis가 바뀌었을 때 이 표현들이 어떻게 바뀌는지를 살펴본다. 
+우리는 [선형대수학의 기본정리]()로부터, 두 $\mathbb{K}$-벡터공간 $V,W$에 basis의 선택이 주어진다면 임의의 linear map $L:V\rightarrow W$를 그 행렬표현 $[L]_\mathcal{C}^\mathcal{B}$와 동일하게 취급할 수 있다는 것을 살펴보았다. 이제 우리는 basis가 바뀌었을 때 이 표현들이 어떻게 바뀌는지를 살펴본다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 유한차원 $\mathbb{k}$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *기저변환행렬<sub>change-of-basis matrix</sub>*은 
+<ins id="def1">**정의 1**</ins> 임의의 유한차원 $\mathbb{K}$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *기저변환행렬<sub>change-of-basis matrix</sub>*은 
 
 $$[\id_V]_{\mathcal{B}'}^\mathcal{B}$$
 
@@ -37,7 +37,7 @@ $$I=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=[\id_V]_{\mathcal{B}}^{\mathcal{B}'}[\id
 
 으로부터 이러한 행렬은 항상 가역이라는 것을 알 수 있다.
 
-Change-of-basis matrix가 어떤 방식으로 작동하는지를 살펴보기 위해, 유한차원 $\mathbb{k}$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
+Change-of-basis matrix가 어떤 방식으로 작동하는지를 살펴보기 위해, 유한차원 $\mathbb{K}$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
 
 ![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_basis-1.png){:style="width:7em" class="invert" .align-center}
 
