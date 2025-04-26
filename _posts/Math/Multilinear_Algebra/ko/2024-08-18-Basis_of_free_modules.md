@@ -100,7 +100,7 @@ $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Ring $A$에 대하여, 적당한 field $\mathbb{k}$와 homomorphism $\phi: A \rightarrow \mathbb{k}$가 존재한다 하자. 그럼 $A$는 IBN property를 가진다.
+<ins id="prop6">**명제 6**</ins> Ring $A$에 대하여, 적당한 field $\mathbb{K}$와 homomorphism $\phi: A \rightarrow \mathbb{K}$가 존재한다 하자. 그럼 $A$는 IBN property를 가진다.
 
 </div>
 <details class="proof" markdown="1">
@@ -110,15 +110,15 @@ $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 
 
 $$M\cong \bigoplus_{i\in I} Ax_i$$
 
-이 존재하고, $x_i$들 각각은 free element이다. 한편 $\phi^\ast:\lMod{A} \rightarrow \mathbb{k}$는 left adjoint이므로 다음 식
+이 존재하고, $x_i$들 각각은 free element이다. 한편 $\phi^\ast:\lMod{A} \rightarrow \mathbb{K}$는 left adjoint이므로 다음 식
 
 $$\phi^\ast M\cong\phi^\ast\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{i\in I}\phi^\ast Ax_i$$
 
-이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 또, $x_i$가 free element라는 사실로부터 $Ax_i\cong A$이고, $\phi^\ast A\cong \mathbb{k}$이므로 $\phi^\ast M\cong \bigoplus_{i\in I}\mathbb{k}$이다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)를 적용하면 원하는 결과를 얻는다.
+이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 또, $x_i$가 free element라는 사실로부터 $Ax_i\cong A$이고, $\phi^\ast A\cong \mathbb{K}$이므로 $\phi^\ast M\cong \bigoplus_{i\in I}\mathbb{K}$이다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)를 적용하면 원하는 결과를 얻는다.
 
 </details>
 
-[\[선형대수학\] §무한차원 벡터공간<sup>†</sup>, ⁋정리 4](/ko/math/linear_algebra/infinite_dimensional_vector_space#thm4)에서 우리는 $\mathbb{k}$가 commutative라는 성질을 사용하지 않았으므로, 위의 명제는 더 일반적으로 $\mathbb{k}$를 division ring $D$로 바꾸어도 성립한다. 한편 임의의 commutative ring은 $A \rightarrow \Frac A$가 존재하므로 항상 IBN property를 갖는다.
+[\[선형대수학\] §무한차원 벡터공간<sup>†</sup>, ⁋정리 4](/ko/math/linear_algebra/infinite_dimensional_vector_space#thm4)에서 우리는 $\mathbb{K}$가 commutative라는 성질을 사용하지 않았으므로, 위의 명제는 더 일반적으로 $\mathbb{K}$를 division ring $D$로 바꾸어도 성립한다. 한편 임의의 commutative ring은 $A \rightarrow \Frac A$가 존재하므로 항상 IBN property를 갖는다.
 
 <div class="definition" markdown="1">
 

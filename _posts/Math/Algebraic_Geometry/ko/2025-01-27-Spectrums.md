@@ -350,35 +350,35 @@ $$(D(f)\cap Y)\cap (D(g)\cap Y)=D(f)\cap D(g)\cap Y=D(fg)\cap Y$$
 
 ## 고전적인 대수기하학
 
-다음 글에서 structure sheaf를 정의하기 전에, 간략하게 고전적인 대수기하학을 살펴보는 것이 도움이 된다. 남은 부분에서 우리는 algebraically closed field $\mathbb{k}$를 고정한다. 그럼 field $\mathbb{k}$ 위에 정의된 (classical) *affine $n$-space<sub>아핀공간</sub>*는 다음 집합
+다음 글에서 structure sheaf를 정의하기 전에, 간략하게 고전적인 대수기하학을 살펴보는 것이 도움이 된다. 남은 부분에서 우리는 algebraically closed field $\mathbb{K}$를 고정한다. 그럼 field $\mathbb{K}$ 위에 정의된 (classical) *affine $n$-space<sub>아핀공간</sub>*는 다음 집합
 
-$$\mathbb{A}_{\mathbb{k},\text{classical}}^n=\{(x_1,\ldots, x_n)\mid x_1,\ldots, x_n\in \mathbb{k}\}$$
+$$\mathbb{A}_{\mathbb{K},\text{classical}}^n=\{(x_1,\ldots, x_n)\mid x_1,\ldots, x_n\in \mathbb{K}\}$$
 
-을 의미한다. 이 때, $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$의 각 원소 $x=(x_1,\ldots, x_n)$을 *점<sub>point</sub>*라 하고, 각각의 $x_i$들을 $x$의 *$i$번째 좌표<sub>$i$-th coordinate</sub>*라 부른다. 
+을 의미한다. 이 때, $\mathbb{A}\_{\mathbb{K},\text{classical}}^n$의 각 원소 $x=(x_1,\ldots, x_n)$을 *점<sub>point</sub>*라 하고, 각각의 $x_i$들을 $x$의 *$i$번째 좌표<sub>$i$-th coordinate</sub>*라 부른다. 
 
-이제 $\mathbb{k}$를 계수로 갖는 다항식들로 이루어진 polynomial ring $A=\mathbb{k}[\x_1,\ldots,\x_n]$를 생각하자. 그럼 임의의 $x=(x_1,\ldots, x_n)\in \mathbb{A}\_{\mathbb{k},\text{classical}}^n$에 대하여, $A$의 ideal $\mathfrak{m}_x$를
+이제 $\mathbb{K}$를 계수로 갖는 다항식들로 이루어진 polynomial ring $A=\mathbb{K}[\x_1,\ldots,\x_n]$를 생각하자. 그럼 임의의 $x=(x_1,\ldots, x_n)\in \mathbb{A}\_{\mathbb{K},\text{classical}}^n$에 대하여, $A$의 ideal $\mathfrak{m}_x$를
 
-$$\mathfrak{m}_x=(\x_1-x_1,\ldots, \x_n-x_n)\subseteq \mathbb{k}[\x_1,\ldots, \x_n]$$
+$$\mathfrak{m}_x=(\x_1-x_1,\ldots, \x_n-x_n)\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-으로 정의할 수 있으며 [\[가환대수학\] §영점정리](/ko/math/commutative_algebra/nullstellensatz)에서 우리는 이것이 $A=\mathbb{k}[\x_1,\ldots, \x_n]$의 *모든* maximal ideal이라는 것을 증명했다. 따라서 $A$의 maximal ideal들의 모임을 $\mSpec A$라 적으면, $\mathbb{A}\_{\mathbb{k},\text{classical}}^n= \mSpec A$이다. 
+으로 정의할 수 있으며 [\[가환대수학\] §영점정리](/ko/math/commutative_algebra/nullstellensatz)에서 우리는 이것이 $A=\mathbb{K}[\x_1,\ldots, \x_n]$의 *모든* maximal ideal이라는 것을 증명했다. 따라서 $A$의 maximal ideal들의 모임을 $\mSpec A$라 적으면, $\mathbb{A}\_{\mathbb{K},\text{classical}}^n= \mSpec A$이다. 
 
 한편 우리는 임의의 $f\in A$를 다음의 식
 
-$$\mathbb{A}_{\mathbb{k},\text{classical}}^n \rightarrow \mathbb{k};\qquad (x_1,\ldots, x_n)\mapsto f(x_1,\ldots, x_n)$$
+$$\mathbb{A}_{\mathbb{K},\text{classical}}^n \rightarrow \mathbb{K};\qquad (x_1,\ldots, x_n)\mapsto f(x_1,\ldots, x_n)$$
 
-을 통해 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$에서 $\mathbb{k}$로의 함수로 취급할 수 있다. 그럼 [정의 3](#def3)과 비슷하게 $A$의 임의의 집합 $S$에 대하여 
+을 통해 $\mathbb{A}\_{\mathbb{K},\text{classical}}^n$에서 $\mathbb{K}$로의 함수로 취급할 수 있다. 그럼 [정의 3](#def3)과 비슷하게 $A$의 임의의 집합 $S$에 대하여 
 
 $$Z(S)=\{(x_1,\ldots, x_n)\mid \text{$f(x_1,\ldots, x_n)=0$ for all $f\in S$}\}$$
 
-으로 정의하면 $Z(S)$는 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$ 위에 정의된 함수들의 모임 $S$의 공통근들으로 생각할 수 있으며, [보조정리 6](#lem6)과 비슷한 계산을 통해 $Z(S)$들을 닫힌집합으로 갖는 위상구조를 $\mSpec A$ 위에 정의할 수 있다. 
+으로 정의하면 $Z(S)$는 $\mathbb{A}\_{\mathbb{K},\text{classical}}^n$ 위에 정의된 함수들의 모임 $S$의 공통근들으로 생각할 수 있으며, [보조정리 6](#lem6)과 비슷한 계산을 통해 $Z(S)$들을 닫힌집합으로 갖는 위상구조를 $\mSpec A$ 위에 정의할 수 있다. 
 
-한편, [정의 12](#def12)와 마찬가지로 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$의 부분집합 $T$에 대하여
+한편, [정의 12](#def12)와 마찬가지로 $\mathbb{A}\_{\mathbb{K},\text{classical}}^n$의 부분집합 $T$에 대하여
 
 $$I(T)=\{f\in A\mid \text{$f(x_1,\ldots, x_n)=0$ for all $x\in T$}\}$$
 
-라 하면, [정리 14](#thm14)에서 그러하듯이 $I$와 $Z$가 antitone Galois connection을 정의하는 것을 안다. $\mSpec A$에서의 [명제 13](#prop13)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋명제 4](/ko/math/commutative_algebra/nullstellensatz#prop4)로부터 $\mathbb{k}[\x_1,\ldots, \x_n]$이 Jacobson이기 때문에 얻어진다. 
+라 하면, [정리 14](#thm14)에서 그러하듯이 $I$와 $Z$가 antitone Galois connection을 정의하는 것을 안다. $\mSpec A$에서의 [명제 13](#prop13)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋명제 4](/ko/math/commutative_algebra/nullstellensatz#prop4)로부터 $\mathbb{K}[\x_1,\ldots, \x_n]$이 Jacobson이기 때문에 얻어진다. 
 
-앞서 우리는 $A$의 원소들, 즉 다항식이 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$ 위의 함수처럼 행동한다는 것을 보았다. 더 일반적으로, principal open set $D(g)$ 위에서는 $f/g$ 또한 잘 정의되며, 대수기하학에서는 이러한 함수에 관심이 있다. 이러한 형태의 함수는 $\mathbb{A}\_{\mathbb{k},\text{classical}}^n$ 전체에서는 잘 정의되지 않으며, 때문에 우리는 모든 점에서, 적당한 근방을 잡아 $f/g$의 꼴로 나타낼 수 있는 함수들에 대해 살펴볼 것이다. 
+앞서 우리는 $A$의 원소들, 즉 다항식이 $\mathbb{A}\_{\mathbb{K},\text{classical}}^n$ 위의 함수처럼 행동한다는 것을 보았다. 더 일반적으로, principal open set $D(g)$ 위에서는 $f/g$ 또한 잘 정의되며, 대수기하학에서는 이러한 함수에 관심이 있다. 이러한 형태의 함수는 $\mathbb{A}\_{\mathbb{K},\text{classical}}^n$ 전체에서는 잘 정의되지 않으며, 때문에 우리는 모든 점에서, 적당한 근방을 잡아 $f/g$의 꼴로 나타낼 수 있는 함수들에 대해 살펴볼 것이다. 
 
 ## 환과 스펙트럼 사이의 관계
 

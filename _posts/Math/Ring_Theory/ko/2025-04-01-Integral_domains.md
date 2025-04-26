@@ -39,7 +39,7 @@ $$a = qb + r \qquad\text{with $r = 0$ or $N(r) < N(b)$}$$
 
 </div>
 
-이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}^{\geq0}$으로 보면 우리가 잘 알고 있는 정수에서의 나눗셈 알고리즘과 동일하다. 또 다른 예로, polynomial ring $\mathbb{k}[\x]$ 위에 $N$을 다항식의 차수를 주는 함수로 정의하면 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{k}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{k}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
+이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}^{\geq0}$으로 보면 우리가 잘 알고 있는 정수에서의 나눗셈 알고리즘과 동일하다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 차수를 주는 함수로 정의하면 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
 
 <div class="proposition" markdown="1">
 

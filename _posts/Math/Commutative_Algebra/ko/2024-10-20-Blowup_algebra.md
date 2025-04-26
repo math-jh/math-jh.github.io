@@ -199,7 +199,7 @@ $$\initial(x)=x+M_{k+1}\quad\text{in $M_k/M_{k+1}$,}\qquad\text{where $k$ is the
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> $A=\mathbb{k}[\x,\y]$라 하고, $\mathfrak{a}=(\x,\y)$라 하자. 그럼 $\gr_\mathfrak{a}A$는 다항식의 차수를 통해 grading이 결정된 graded ring이다. 이제 $M=A$로 두고, $M$의 $A$-submodule (즉 $A$의 ideal) $\mathfrak{b}=(\x^2, \y^2)$를 생각하자. 그럼 $\mathfrak{b}$의 임의의 원소는
+<ins id="ex10">**예시 10**</ins> $A=\mathbb{K}[\x,\y]$라 하고, $\mathfrak{a}=(\x,\y)$라 하자. 그럼 $\gr_\mathfrak{a}A$는 다항식의 차수를 통해 grading이 결정된 graded ring이다. 이제 $M=A$로 두고, $M$의 $A$-submodule (즉 $A$의 ideal) $\mathfrak{b}=(\x^2, \y^2)$를 생각하자. 그럼 $\mathfrak{b}$의 임의의 원소는
 
 $$f(\x,\y)\x^2+g(\x,\y)\y^2$$
 

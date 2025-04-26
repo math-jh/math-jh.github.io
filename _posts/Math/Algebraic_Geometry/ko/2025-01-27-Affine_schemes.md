@@ -18,7 +18,7 @@ weight: 2
 ---
 
 
-위상공간 위에 정의된 sheaf의 예시 중 가장 기본적인 것은 위상공간 위에 정의된 연속함수들의 모임이며, 우리가 정의할 $\mathscr{O}\_{\Spec A}$ 또한 비슷하다. 그러나 $\mathscr{O}\_{\Spec A}$가 $\Spec A$ 위에 정의된 연속함수들의 sheaf였다면 여기에 굳이 새로운 이름을 붙일 필요가 없을 것이다. 가장 간단한 예시로, 임의의 field $\mathbb{k}$의 유일한 prime ideal은 $(0)$이므로, 위상공간으로서 $\Spec \mathbb{k}$는 항상 singleton일 것이며 이 위에 위상구조를 주는 방법은 하나 뿐이다. 바꾸어 말하자면, isomorphic하지 않은 두 field의 스펙트럼을 서로 구별하고자 한다면 그 정보는 $\Spec \mathbb{k}$의 structure sheaf에 들어있어야 한다. 스펙트럼이 충분히 많은 대수적인 정보를 갖도록 하기 위해, 우리는 $\mathscr{O}\_{\Spec A}$를 $A$ 위에서 정의된 대수적인 함수들의 sheaf로 정의할 것이다.
+위상공간 위에 정의된 sheaf의 예시 중 가장 기본적인 것은 위상공간 위에 정의된 연속함수들의 모임이며, 우리가 정의할 $\mathscr{O}\_{\Spec A}$ 또한 비슷하다. 그러나 $\mathscr{O}\_{\Spec A}$가 $\Spec A$ 위에 정의된 연속함수들의 sheaf였다면 여기에 굳이 새로운 이름을 붙일 필요가 없을 것이다. 가장 간단한 예시로, 임의의 field $\mathbb{K}$의 유일한 prime ideal은 $(0)$이므로, 위상공간으로서 $\Spec \mathbb{K}$는 항상 singleton일 것이며 이 위에 위상구조를 주는 방법은 하나 뿐이다. 바꾸어 말하자면, isomorphic하지 않은 두 field의 스펙트럼을 서로 구별하고자 한다면 그 정보는 $\Spec \mathbb{K}$의 structure sheaf에 들어있어야 한다. 스펙트럼이 충분히 많은 대수적인 정보를 갖도록 하기 위해, 우리는 $\mathscr{O}\_{\Spec A}$를 $A$ 위에서 정의된 대수적인 함수들의 sheaf로 정의할 것이다.
 
 ## Locally ringed space
 
@@ -42,7 +42,7 @@ weight: 2
 
 ## $\Spec A$ 위에 정의된 대수적인 함수들
 
-이제 $\mathscr{O}\_{\Spec A}$를 정의해야 한다. 이는 이 글의 서두에서 언급한 것과 같이, $\Spec A$ 위에 정의된 대수적인 함수들의 sheaf이며, 우리는 [§스펙트럼, §§고전적인 대수기하학](/ko/math/algebraic_geometry/spectrums#고전적인-대수기하학)에서 $A=\mathbb{k}[\x_1,\ldots, \x_n]$일 경우 이들은 적당한 근방을 잡아 유리함수의 꼴로 나타낼 수 있는 함수임을 살펴보았다. 이 과정에서 중요한 역할을 한 것은 $A$의 원소, 즉 다항식을 $\mathbb{A}\_\mathbb{k}^n=\mSpec A$ 위에서의 함수로 취급할 수 있다는 것이었는데, 일반적인 경우에는 $A$의 원소는 다항식도 아니고, 또 $\Spec A$의 점들을 $A$의 원소에 대입할 수도 없다. 
+이제 $\mathscr{O}\_{\Spec A}$를 정의해야 한다. 이는 이 글의 서두에서 언급한 것과 같이, $\Spec A$ 위에 정의된 대수적인 함수들의 sheaf이며, 우리는 [§스펙트럼, §§고전적인 대수기하학](/ko/math/algebraic_geometry/spectrums#고전적인-대수기하학)에서 $A=\mathbb{K}[\x_1,\ldots, \x_n]$일 경우 이들은 적당한 근방을 잡아 유리함수의 꼴로 나타낼 수 있는 함수임을 살펴보았다. 이 과정에서 중요한 역할을 한 것은 $A$의 원소, 즉 다항식을 $\mathbb{A}\_\mathbb{K}^n=\mSpec A$ 위에서의 함수로 취급할 수 있다는 것이었는데, 일반적인 경우에는 $A$의 원소는 다항식도 아니고, 또 $\Spec A$의 점들을 $A$의 원소에 대입할 수도 없다. 
 
 따라서 이 논의를 일반화하기 위해 다음과 같이 생각하자. 우선 $A$의 원소는 앞선 예시와 마찬가지로 함수 $f$로 생각한다. 그럼 이 때 $f$의 점 $\mathfrak{p}\in\Spec A$에서의 <em_ko>함숫값</em_ko>은 canonical projection $\pr\_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$에 의한 $f$의 image이다. 그럼 특히 $f$가 점 $\mathfrak{p}$에서 $0$이 된다는 것은
 

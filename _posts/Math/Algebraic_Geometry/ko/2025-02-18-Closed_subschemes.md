@@ -48,19 +48,19 @@ $$\iota^{-1} \mathscr{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> 예를 들어 field $\mathbb{k}$를 고정하고, affine $1$-line $\mathbb{A}\_\mathbb{k}^1=\Spec \mathbb{k}[\x]$을 생각하자. 그럼 다음의 canonical surjection
+<ins id="ex1">**예시 1**</ins> 예를 들어 field $\mathbb{K}$를 고정하고, affine $1$-line $\mathbb{A}\_\mathbb{K}^1=\Spec \mathbb{K}[\x]$을 생각하자. 그럼 다음의 canonical surjection
 
-$$\pi_1:\mathbb{k}[\x] \rightarrow \mathbb{k}[\x]/(\x)\cong \mathbb{k},\qquad \pi_2:\mathbb{k}[\x] \rightarrow \mathbb{k}[\x]/(\x^2)$$
+$$\pi_1:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x)\cong \mathbb{K},\qquad \pi_2:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x^2)$$
 
 들이 존재하며, 구체적으로 $\pi_1$과 $\pi_2$는 각각 $\x\mapsto 0+(\x)$와 $\x\mapsto \x+(\x^2)$을 통해 정의된다. 
 
-한편 $\mathbb{k}[\x]/(\x)\cong \mathbb{k}$이므로 $\Spec \mathbb{k}[\x]/(\x)$는 한 점 $(0)$만을 가진다. 마찬가지로 $\Spec \mathbb{k}[\x]/(\x^2)$ 또한 한 점만을 가진다. 이는 $\mathbb{k}[\x]/(\x^2)$의 prime ideal과 $\x^2$을 포함하는 $\mathbb{k}[\x]$의 prime ideal 사이의 일대일대응이 존재하고, $\mathbb{k}[\x]$는 principal ideal domain이므로, $\mathbb{k}[\x]$의 prime ideal을 $(p(\x))$라 쓴다면 이 ideal이 $\x^2$을 포함하기 위해서는 $p(\x)$가 $\x^2$을 나눠야 하기 때문에 반드시 $p(\x)=\x$여야 함을 안다. 
+한편 $\mathbb{K}[\x]/(\x)\cong \mathbb{K}$이므로 $\Spec \mathbb{K}[\x]/(\x)$는 한 점 $(0)$만을 가진다. 마찬가지로 $\Spec \mathbb{K}[\x]/(\x^2)$ 또한 한 점만을 가진다. 이는 $\mathbb{K}[\x]/(\x^2)$의 prime ideal과 $\x^2$을 포함하는 $\mathbb{K}[\x]$의 prime ideal 사이의 일대일대응이 존재하고, $\mathbb{K}[\x]$는 principal ideal domain이므로, $\mathbb{K}[\x]$의 prime ideal을 $(p(\x))$라 쓴다면 이 ideal이 $\x^2$을 포함하기 위해서는 $p(\x)$가 $\x^2$을 나눠야 하기 때문에 반드시 $p(\x)=\x$여야 함을 안다. 
 
 따라서 이들이 정의하는 schememorphism
 
-$$\Spec\pi_1:\Spec \mathbb{k}[\x]/(\x) \rightarrow \Spec \mathbb{k}[\x],\qquad \Spec\pi_2:\Spec \mathbb{k}[\x]/(\x^2) \rightarrow \Spec \mathbb{k}[\x]$$
+$$\Spec\pi_1:\Spec \mathbb{K}[\x]/(\x) \rightarrow \Spec \mathbb{K}[\x],\qquad \Spec\pi_2:\Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$$
 
-을 생각하면, 연속함수로서 $\Spec\pi_1$은 $\Spec \mathbb{k}[\x]/(\x)$의 유일한 한 점 $(0)$을 $\Spec \mathbb{k}[\x]$의 한 점 $(\x)$으로, $\Spec\pi_2$는 $\Spec \mathbb{k}[\x]/(\x^2)$의 유일한 한 점 $(\x)$를 $\Spec \mathbb{k}[\x]$의 한 점 $(\x)$으로 보내는 것을 안다. 즉 연속함수로서 이들은 같은 함수를 정의하지만, 물론 $\Spec \mathbb{k}[\x]/(\x)$와 $\mathbb{k}[\x]/(\x^2)$는 scheme으로서 isomorphic하지 않다. 
+을 생각하면, 연속함수로서 $\Spec\pi_1$은 $\Spec \mathbb{K}[\x]/(\x)$의 유일한 한 점 $(0)$을 $\Spec \mathbb{K}[\x]$의 한 점 $(\x)$으로, $\Spec\pi_2$는 $\Spec \mathbb{K}[\x]/(\x^2)$의 유일한 한 점 $(\x)$를 $\Spec \mathbb{K}[\x]$의 한 점 $(\x)$으로 보내는 것을 안다. 즉 연속함수로서 이들은 같은 함수를 정의하지만, 물론 $\Spec \mathbb{K}[\x]/(\x)$와 $\mathbb{K}[\x]/(\x^2)$는 scheme으로서 isomorphic하지 않다. 
 
 </div>
 
@@ -212,15 +212,15 @@ $$\mathscr{I}_{Z/Y} \rightarrow \mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> [예시 1](#ex1)에서 살펴본 closed embedding의 예시 $\Spec\pi: \Spec \mathbb{k}[\x]/(\x^2) \rightarrow \Spec \mathbb{k}[\x]$를 약간 변형한 예시를 살펴보자. 이 예시에서는 구별을 위해 $\mathbb{k}[\x]/(\x^2)$를 $\mathbb{k}[\epsilon]/(\epsilon^2)$으로 적는다. 
+<ins id="ex11">**예시 11**</ins> [예시 1](#ex1)에서 살펴본 closed embedding의 예시 $\Spec\pi: \Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$를 약간 변형한 예시를 살펴보자. 이 예시에서는 구별을 위해 $\mathbb{K}[\x]/(\x^2)$를 $\mathbb{K}[\epsilon]/(\epsilon^2)$으로 적는다. 
 
-우리는 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의하여 $\mathbb{k}$-algebra homomorphism $\phi:\mathbb{k}[\x_1,\ldots, \x_n] \rightarrow \mathbb{k}[\epsilon]/(\epsilon^2)$는 $\x_i$의 값에 의해 완전히 결정된다는 것을 안다. 따라서 $\phi(\x_i)=a_i+b_i\epsilon$이라 하자. 만일 $0$이 아닌 $b_i$가 존재한다면 $\phi$가 surjective임을 보일 수 있고, 따라서 $\Spec\phi$는 closed embedding이며 $\Spec\phi$의 scheme-theoretic image는 $\Spec\phi$가 정의하는 closed subscheme 자기 자신이다. 구체적으로 이를 써 보면 $\Spec\phi$는 $\mathbb{k}[\epsilon]/(\epsilon^2)$의 유일한 prime ideal $(\epsilon)$을 $\Spec \mathbb{k}[\x_1,\ldots, \x_n]$의 prime ideal
+우리는 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의하여 $\mathbb{K}$-algebra homomorphism $\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}[\epsilon]/(\epsilon^2)$는 $\x_i$의 값에 의해 완전히 결정된다는 것을 안다. 따라서 $\phi(\x_i)=a_i+b_i\epsilon$이라 하자. 만일 $0$이 아닌 $b_i$가 존재한다면 $\phi$가 surjective임을 보일 수 있고, 따라서 $\Spec\phi$는 closed embedding이며 $\Spec\phi$의 scheme-theoretic image는 $\Spec\phi$가 정의하는 closed subscheme 자기 자신이다. 구체적으로 이를 써 보면 $\Spec\phi$는 $\mathbb{K}[\epsilon]/(\epsilon^2)$의 유일한 prime ideal $(\epsilon)$을 $\Spec \mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal
 
 $$(\Spec\phi)(\epsilon)=\phi^{-1}(\epsilon)=\left(\frac{\x_1}{b_1}-\frac{a_1}{b_1},\ldots \frac{\x_n}{b_n}-\frac{a_n}{b_n}\right)=(\x_1-a_1,\ldots, \x_n-a_n)$$
 
-로 보낸다. 즉 연속함수로서 $\Spec\phi$는 한점공간 $\Spec \mathbb{k}[\epsilon]/(\epsilon^2)$을 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$으로 보낸다.
+로 보낸다. 즉 연속함수로서 $\Spec\phi$는 한점공간 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$을 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$으로 보낸다.
 
-기하적으로 $\Spec\phi$는 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$에서의 tangent vector $(b_1,\ldots, b_n)$에 대응된다. 이는 $\mathbb{A}^n$의 임의의 함수 $f\in \mathbb{k}[\x_1,\ldots, \x_n]$의 점 $(a_1,\ldots, a_n)$에서 벡터 $(b_1,\ldots, b_n)$의 방향으로의 방향미분이 정확히 $\phi(f)$로 주어진다는 것으로부터 확인할 수 있다. 더 일반적으로 $\Spec \mathbb{k}[\epsilon]/(\epsilon^2)$ 대신 $\Spec \mathbb{k}[\epsilon]/(\epsilon^k)$를 생각하면 우리는 $k-1$차 미분계수까지 볼 수 있게 된다. 
+기하적으로 $\Spec\phi$는 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$에서의 tangent vector $(b_1,\ldots, b_n)$에 대응된다. 이는 $\mathbb{A}^n$의 임의의 함수 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$의 점 $(a_1,\ldots, a_n)$에서 벡터 $(b_1,\ldots, b_n)$의 방향으로의 방향미분이 정확히 $\phi(f)$로 주어진다는 것으로부터 확인할 수 있다. 더 일반적으로 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ 대신 $\Spec \mathbb{K}[\epsilon]/(\epsilon^k)$를 생각하면 우리는 $k-1$차 미분계수까지 볼 수 있게 된다. 
 
 </div>
 
@@ -244,9 +244,9 @@ $$\mathscr{I}(V):=\ker(\varphi^\sharp(V))\subset B$$
 
 <ins id="ex13">**예시 13**</ins> Scheme $X$를 다음의 식
 
-$$X=\coprod_{k\geq 0} \Spec \mathbb{k}[\epsilon]/(\epsilon^k)$$
+$$X=\coprod_{k\geq 0} \Spec \mathbb{K}[\epsilon]/(\epsilon^k)$$
 
-으로 정의하고 $Y=\Spec \mathbb{k}[\x]$이라 하자. 이제 $X$의 각각의 component마다 $\x\mapsto \epsilon$을 통해 scheme morphism $X \rightarrow Y$를 정의할 수 있다. 그럼 [예시 11](#ex11)으로부터 우리는 $X \rightarrow Y$의 (연속함수로서의) image는 한 점 $0\in \mathbb{A}^1$인 것을 안다. 
+으로 정의하고 $Y=\Spec \mathbb{K}[\x]$이라 하자. 이제 $X$의 각각의 component마다 $\x\mapsto \epsilon$을 통해 scheme morphism $X \rightarrow Y$를 정의할 수 있다. 그럼 [예시 11](#ex11)으로부터 우리는 $X \rightarrow Y$의 (연속함수로서의) image는 한 점 $0\in \mathbb{A}^1$인 것을 안다. 
 
 그러나 scheme morphism $\varphi:X \rightarrow Y$의 scheme-theoretic image는 $0$이 아니다. 이를 위해 structure sheaf들 사이의 morphism $\varphi^\sharp:\mathscr{O}\_Y \rightarrow \varphi\_\ast \mathscr{O}\_X$를 관찰하자. 그럼 $\mathcal{O}\_Y$의 원소 $f$가 $\varphi^\sharp(f)=0$을 만족하기 위해서는 임의의 $k$에 대하여 $f$의 $k$차 근사식이 $0$이 되어야 하므로, 반드시 $f=0$이어야 한다. 즉, $\mathscr{I}\_{Z/Y}$는 $0$이 되어야 하고 이로부터 $\varphi$의 scheme-theoretic image는 자기 자신임을 안다.
 

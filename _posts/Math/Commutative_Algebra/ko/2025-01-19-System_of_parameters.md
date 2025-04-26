@@ -233,7 +233,7 @@ $$\mathfrak{q}\supseteq \mathfrak{q}_1\supseteq \mathfrak{q}_2\supseteq\cdots$$
 
 <ins id="cor10">**따름정리 10**</ins> 다음이 성립한다.
 
-1. Field $\mathbb{k}$에 대하여, $\dim \mathbb{k}[\x_1,\ldots, \x_r]=r$이다. 
+1. Field $\mathbb{K}$에 대하여, $\dim \mathbb{K}[\x_1,\ldots, \x_r]=r$이다. 
 2. 임의의 ring $A$에 대하여, $\dim A[\x]=1+\dim A$가 성립한다.
 3. $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{q}\cap A=\mathfrak{p}$를 만족하는 $A[\x]$의 prime ideal $\mathfrak{q}$가 존재하며, 이 성질을 만족하는 것들 중 maximal한 $\mathfrak{q}$에 대하여 식 $\dim A[\x]\_\mathfrak{q}=1+\dim A\_\mathfrak{p}$이 성립한다. 
 

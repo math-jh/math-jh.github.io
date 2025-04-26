@@ -68,7 +68,7 @@ Free $A$-module $M$과 그 basis $e_1,\ldots, e_n$을 고정하면, 임의의 $M
 
 $$x_1\wedge \cdots\wedge x_n=\alpha e_1\wedge\cdots\wedge e_n$$
 
-이도록 하는 $\alpha$가 존재하며, 이를 $\det(x_1,\ldots, x_n)$과 같이 적는다. 이 값을 실제로 계산하기 위해서는 $x_i$들 각각을 $e_1,\ldots, e_n$에 대한 linear combination으로 나타낸 후 $e_i\wedge e_i=0$과 $e_i\wedge e_j=-e_j\wedge e_i$를 이용하여 이를 모두 정리해주면 된다. $A=\mathbb{k}$인 경우 이는 이미 [\[선형대수학\] §행렬식의 존재성과 유일성, 식 (2)](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2)에서 살펴본 것이다. 조금 더 자세히 설명하자면, 임의의 $X\in\Mat_n(A)$를 열벡터들을 이용해 $X=(x_1,\ldots, x_n)$으로 적을 경우, $u(e_i)=x_i$를 만족하는 유일한 $u\in\End_\rMod{A}(M)$에 대하여 $\det(u)$가 잘 정의되며, 이는 [따름정리 3](#cor3)의 증명에서 나온 식과 비교해보면 $\det (x_1,\ldots, x_n)=\det(u)$이다. 그럼 이로부터 [명제 2](#prop2)의 행렬 버전의 명제를 만들 수 있으며, 이를 계산하는 과정이 곧 [\[선형대수학\] §행렬식의 존재성과 유일성, 식 (2)](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2)이 된다. 특히 이로부터 $\det(u^\ast)=\det(u)$인 것을 알 수 있다.
+이도록 하는 $\alpha$가 존재하며, 이를 $\det(x_1,\ldots, x_n)$과 같이 적는다. 이 값을 실제로 계산하기 위해서는 $x_i$들 각각을 $e_1,\ldots, e_n$에 대한 linear combination으로 나타낸 후 $e_i\wedge e_i=0$과 $e_i\wedge e_j=-e_j\wedge e_i$를 이용하여 이를 모두 정리해주면 된다. $A=\mathbb{K}$인 경우 이는 이미 [\[선형대수학\] §행렬식의 존재성과 유일성, 식 (2)](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2)에서 살펴본 것이다. 조금 더 자세히 설명하자면, 임의의 $X\in\Mat_n(A)$를 열벡터들을 이용해 $X=(x_1,\ldots, x_n)$으로 적을 경우, $u(e_i)=x_i$를 만족하는 유일한 $u\in\End_\rMod{A}(M)$에 대하여 $\det(u)$가 잘 정의되며, 이는 [따름정리 3](#cor3)의 증명에서 나온 식과 비교해보면 $\det (x_1,\ldots, x_n)=\det(u)$이다. 그럼 이로부터 [명제 2](#prop2)의 행렬 버전의 명제를 만들 수 있으며, 이를 계산하는 과정이 곧 [\[선형대수학\] §행렬식의 존재성과 유일성, 식 (2)](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2)이 된다. 특히 이로부터 $\det(u^\ast)=\det(u)$인 것을 알 수 있다.
 
 ## 행렬의 소행렬식
 
