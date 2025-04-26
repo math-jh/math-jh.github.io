@@ -3,13 +3,13 @@
 title: "리만 계량"
 excerpt: ""
 
-categories: [Math / Differential Geometry]
-permalink: /ko/math/differential_geometry/Riemannian_metric
+categories: [Math / Riemannian Geometry]
+permalink: /ko/math/riemannian_geometry/Riemannian_metric
 header:
-    overlay_image: /assets/images/Math/Differential_Geometry/Riemannian_metric.png
+    overlay_image: /assets/images/Math/Riemannian_Geometry/Riemannian_metric.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "manifold-ko"
+    nav: "riemannian_geometry-ko"
 
 date: 2022-12-16
 last_modified_at: 2022-12-16

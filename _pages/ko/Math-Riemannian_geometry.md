@@ -1,7 +1,7 @@
 ---
-title: "미분기하학"
+title: "리만기하학"
 layout: archive_custom
-permalink: /ko/differential_geometry/
+permalink: /ko/riemannian_geometry/
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -9,7 +9,7 @@ permalink: /ko/differential_geometry/
   {% assign lang = lang_prefix | remove_first: "/" %}
 {% endif %}
 
-{% assign posts = site.categories['Math / Differential Geometry'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% assign posts = site.categories['Math / Riemannian Geometry'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
 
 [<span class="material-icons md-18" style="vertical-align:-.1em;">&#xE5C4;</span> Back to [Math] directory]({{ lang_prefix }}/math/)
