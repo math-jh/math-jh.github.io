@@ -6,7 +6,6 @@ _site/
 *.jekyll-metadata
 *.lock
 assets/Tokens
-assets/diagrams/
 *.aux
 *.log
 *.pdf

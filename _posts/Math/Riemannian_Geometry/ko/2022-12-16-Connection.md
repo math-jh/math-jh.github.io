@@ -3,13 +3,13 @@
 title: "접속"
 excerpt: "Vector bundle 위에서 정의된 미분"
 
-categories: [Math / Differential Geometry]
-permalink: /ko/math/differential_geometry/connection
+categories: [Math / Riemannian Geometry]
+permalink: /ko/math/riemannian_geometry/connection
 header:
-    overlay_image: /assets/images/Math/Differential_Geometry/Connection.png
+    overlay_image: /assets/images/Math/Riemannian_Geometry/Connection.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "manifold-ko"
+    nav: "riemannian_geometry-ko"
 
 date: 2022-12-16
 last_modified_at: 2022-12-16
@@ -197,7 +197,7 @@ $$(\nabla_XF)(\omega^1,\ldots,\omega^r,Y_1,\ldots, Y_s)$$
 
 $$X\mapsto \nabla_Xf=Xf$$
 
-으로 정의된다. 한편, $M=\mathbb{R}^m$으로 두고 [§리만 계량, §§Musical isomorphism](/ko/math/differential_geometry/Riemannian_metric#musical-isomorphism)에서와 같이 함수 $f$의 그라디언트 벡터 $\operatorname{grad} f$를 다음의 식
+으로 정의된다. 한편, $M=\mathbb{R}^m$으로 두고 [§리만 계량, §§Musical isomorphism](/ko/math/riemannian_geometry/Riemannian_metric#musical-isomorphism)에서와 같이 함수 $f$의 그라디언트 벡터 $\operatorname{grad} f$를 다음의 식
 
 $$X\mapsto \langle X, \operatorname{grad} f\rangle$$
 
