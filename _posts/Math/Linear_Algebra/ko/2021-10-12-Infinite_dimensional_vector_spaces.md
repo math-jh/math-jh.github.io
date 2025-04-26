@@ -31,7 +31,7 @@ weight: 6
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$에 대하여, $V$의 모든 일차독립인 부분집합들의 모임을 $\mathscr{B}$라 하자. 만약 $\mathscr{B}$의 maximal element $\mathcal{B}$가 존재한다면, $\mathcal{B}$는 $V$의 basis가 된다. 
+<ins id="prop2">**명제 2**</ins> 임의의 $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 모든 일차독립인 부분집합들의 모임을 $\mathscr{B}$라 하자. 만약 $\mathscr{B}$의 maximal element $\mathcal{B}$가 존재한다면, $\mathcal{B}$는 $V$의 basis가 된다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -63,7 +63,7 @@ $$\sum_{x\in\mathcal{B}'}\alpha_xx=0,\qquad\text{$(\alpha_x)_{x\in\mathcal{B}'}$
  
 </details>
 
-따라서, 임의의 $\mathbb{k}$-벡터공간의 basis가 존재한다는 것을 보이기 위해서는 집합 $\mathscr{B}$의 maximal element가 존재함을 보이면 된다. 당연히 이는 Zorn's lemma를 사용한다.
+따라서, 임의의 $\mathbb{K}$-벡터공간의 basis가 존재한다는 것을 보이기 위해서는 집합 $\mathscr{B}$의 maximal element가 존재함을 보이면 된다. 당연히 이는 Zorn's lemma를 사용한다.
 
 <div class="proposition" markdown="1">
 
@@ -85,7 +85,7 @@ $$\sum_{x\in\mathcal{B}'}\alpha_xx=0,\qquad\text{$(\alpha_x)_{x\in\mathcal{B}'}$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm4">**정리 4**</ins> 임의의 $\mathbb{k}$-벡터공간 $V$는 basis를 갖는다.
+<ins id="thm4">**정리 4**</ins> 임의의 $\mathbb{K}$-벡터공간 $V$는 basis를 갖는다.
 
 </div>
 <details class="proof" markdown="1">
@@ -107,7 +107,7 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor5">**따름정리 5**</ins> $\mathbb{k}$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 basis $\mathcal{B}$가 존재한다.
+<ins id="cor5">**따름정리 5**</ins> $\mathbb{K}$-벡터공간 $V$와 $V$의 임의의 일차독립인 부분집합 $S$에 대하여, $S$를 포함하는 $V$의 basis $\mathcal{B}$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -118,7 +118,7 @@ $$\sum_{x\in\mathcal{B}}\alpha_xx=0$$
 </details>
 <div class="proposition" markdown="1">
 
-<ins id="cor6">**따름정리 6**</ins> $\mathbb{k}$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다. 
+<ins id="cor6">**따름정리 6**</ins> $\mathbb{K}$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -144,11 +144,11 @@ $$v=\sum_{x\in S}\alpha_xx$$
 
 ## Well-definedness of dimension
 
-이렇게 basis의 존재성을 보이고 나면, 차원이 잘 정의된다는 것을 보여야 한다. 즉, 임의의 $\mathbb{k}$-벡터공간 $V$에 대하여, $\mathcal{B}_1$, $\mathcal{B}_2$가 두 basis라면 $\lvert\mathcal{B}\_1\rvert=\lvert\mathcal{B}\_2\rvert$임을 보여야 한다. 
+이렇게 basis의 존재성을 보이고 나면, 차원이 잘 정의된다는 것을 보여야 한다. 즉, 임의의 $\mathbb{K}$-벡터공간 $V$에 대하여, $\mathcal{B}_1$, $\mathcal{B}_2$가 두 basis라면 $\lvert\mathcal{B}\_1\rvert=\lvert\mathcal{B}\_2\rvert$임을 보여야 한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="thm7">**정리 7**</ins> 어떤 $\mathbb{k}$-벡터공간 $V$가 무한한 basis $\mathcal{B}\_1$을 갖는다면, $V$의 또 다른 basis $\mathcal{B}\_2$ 또한 무한하며 그 cardinality는 $\lvert\mathcal{B}\_1\rvert$와 같다.
+<ins id="thm7">**정리 7**</ins> 어떤 $\mathbb{K}$-벡터공간 $V$가 무한한 basis $\mathcal{B}\_1$을 갖는다면, $V$의 또 다른 basis $\mathcal{B}\_2$ 또한 무한하며 그 cardinality는 $\lvert\mathcal{B}\_1\rvert$와 같다.
 
 </div>
 <details class="proof" markdown="1">

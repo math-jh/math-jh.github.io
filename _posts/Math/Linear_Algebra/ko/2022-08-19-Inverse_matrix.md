@@ -25,11 +25,11 @@ weight: 22
 
 <div class="proposition" markdown="1">
 
-<ins id="lem1">**보조정리 1**</ins> 행렬 $A\in\Mat_n(\mathbb{k})$에 대하여, 다음 세 조건이 모두 동치이다.
+<ins id="lem1">**보조정리 1**</ins> 행렬 $A\in\Mat_n(\mathbb{K})$에 대하여, 다음 세 조건이 모두 동치이다.
 
 1. $A$가 가역이다.
-2. 적당한 $B\in\Mat_n(\mathbb{k})$가 존재하여 $AB=I$이다.
-3. 적당한 $B\in\Mat_n(\mathbb{k})$가 존재하여 $BA=I$이다.
+2. 적당한 $B\in\Mat_n(\mathbb{K})$가 존재하여 $AB=I$이다.
+3. 적당한 $B\in\Mat_n(\mathbb{K})$가 존재하여 $BA=I$이다.
 
 뿐만 아니라 둘째, 셋째 조건이 성립할 경우 $B=A^{-1}$이다.
 
@@ -39,13 +39,13 @@ weight: 22
 
 첫 번째 조건이 각각 두 번째와 세 번째를 함의하는 것은 자명하므로, 반대방향만 보이면 충분하다. 
 
-우선 적당한 $B\in\Mat_n(\mathbb{k})$가 존재하여 $AB=I$가 성립한다고 가정하자. 그럼 선형대수학의 기본정리에 의하여 
+우선 적당한 $B\in\Mat_n(\mathbb{K})$가 존재하여 $AB=I$가 성립한다고 가정하자. 그럼 선형대수학의 기본정리에 의하여 
 
-$$L_A\circ L_B=\id_{\mathbb{k}^n}$$
+$$L_A\circ L_B=\id_{\mathbb{K}^n}$$
 
-이 성립한다. 이제 $\id_{\mathbb{k}^n}$이 전단사함수라는 것으로부터 $L_A:\mathbb{k}^n\rightarrow \mathbb{k}^n$이 전사함수라는 것을 안다. ([\[집합론\] §Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#prop3)) 따라서 다음의 식 ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7))
+이 성립한다. 이제 $\id_{\mathbb{K}^n}$이 전단사함수라는 것으로부터 $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 전사함수라는 것을 안다. ([\[집합론\] §Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#prop3)) 따라서 다음의 식 ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7))
 
-$$\rank L_A+\nullity L_A=\dim \mathbb{k}^n=n$$
+$$\rank L_A+\nullity L_A=\dim \mathbb{K}^n=n$$
 
 으로부터 $\nullity L_A=0$임을 안다. 즉 $L_A$는 단사함수이기도 하고, 따라서 $L_A$는 전단사함수이고 행렬 $A$는 가역이다. 이제 식 $AB=I$의 양 변의 왼쪽에 $A^{-1}$을 곱하면 $B=A^{-1}$을 얻는다.
 
@@ -53,7 +53,7 @@ $$\rank L_A+\nullity L_A=\dim \mathbb{k}^n=n$$
 
 </details>
 
-$n\times n$ 가역행렬 $B$가 주어졌다 하자. $B$를 $\mathbb{k}^n$에서 $\mathbb{k}^n$으로의 linear map으로 생각하면, $B$는 $\mathbb{k}^n$의 basis $e_1,\ldots, e_n$을 어디로 옮기는지에 의해 완전하게 결정된다. 따라서 행렬 $A^{-1}$를 계산하기 위해서는 $A^{-1}$이 basis $e_i$를 어디로 옮기는지를 알면 된다. 이 값을 벡터 $v_i$라 하면, 행렬 $A$는 $(v\_1\|v\_2\|\cdots\|v\_n)$으로 주어질 것이며, 이 때 각각의 $v_i$들은 다음의 식
+$n\times n$ 가역행렬 $B$가 주어졌다 하자. $B$를 $\mathbb{K}^n$에서 $\mathbb{K}^n$으로의 linear map으로 생각하면, $B$는 $\mathbb{K}^n$의 basis $e_1,\ldots, e_n$을 어디로 옮기는지에 의해 완전하게 결정된다. 따라서 행렬 $A^{-1}$를 계산하기 위해서는 $A^{-1}$이 basis $e_i$를 어디로 옮기는지를 알면 된다. 이 값을 벡터 $v_i$라 하면, 행렬 $A$는 $(v\_1\|v\_2\|\cdots\|v\_n)$으로 주어질 것이며, 이 때 각각의 $v_i$들은 다음의 식
 
 $$v_i=A^{-1}e_i\iff Av_i=e_i$$
 

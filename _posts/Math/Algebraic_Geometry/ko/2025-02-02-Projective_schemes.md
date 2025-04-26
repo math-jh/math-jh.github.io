@@ -17,7 +17,7 @@ weight: 4
 
 ---
 
-[§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{k}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여 projective scheme을 정의한다. 
+[§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여 projective scheme을 정의한다. 
 
 ## 사영공간
 
@@ -77,7 +77,7 @@ $$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad 
 
 이제 이 계산을 바탕으로 [§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10)를 일반화하자. 우선 $n+1$개의 affine $n$-space들
 
-$$P_i=\Spec \mathbb{k}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
+$$P_i=\Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
 
 를 생각하자. 그럼 $P_i$의 open subscheme들 $P\_{ij}=D(\x\_{j/i})=(A^i)\_{\x\_{j/i}}$과, 다음의 ring homomorphism
 
@@ -87,7 +87,7 @@ $$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/
 
 ## 사영스킴
 
-현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $U_i$들이 $\mathbb{P}^n$의 open subscheme인 것은 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 결과이기는 하지만, 그 정의 자체로도 함수 $\x_i$가 $0$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $\x_i$가 $\mathbb{P}^n$ 위의 함수가 아니라는 데에 있다. 심지어 $n=1$인 경우만 보아도 우리는 $\mathscr{O}\_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{k}$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $\mathbb{R}^{n+1}\setminus \\{0\\}$의 한 점 $(x_0,\ldots, x_n)$을 받아 $x_i$를 내놓는 함수 $\x_i: \mathbb{R}^{n+1}\setminus\\{0\\} \rightarrow \mathbb{R}$은 $\sim$과 compatible하지 않고 따라서 $\mathbb{P}^n$ 위의 함수를 정의하지 않는다. 또 다른 예시로 $\mathbb{R}^2\setminus\\{0\\}$ 위에서 정의된 함수 $f: \mathbb{R}^2\setminus\\{0\\} \rightarrow \mathbb{R}$가 다음의 식
+현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $U_i$들이 $\mathbb{P}^n$의 open subscheme인 것은 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 결과이기는 하지만, 그 정의 자체로도 함수 $\x_i$가 $0$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $\x_i$가 $\mathbb{P}^n$ 위의 함수가 아니라는 데에 있다. 심지어 $n=1$인 경우만 보아도 우리는 $\mathscr{O}\_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $\mathbb{R}^{n+1}\setminus \\{0\\}$의 한 점 $(x_0,\ldots, x_n)$을 받아 $x_i$를 내놓는 함수 $\x_i: \mathbb{R}^{n+1}\setminus\\{0\\} \rightarrow \mathbb{R}$은 $\sim$과 compatible하지 않고 따라서 $\mathbb{P}^n$ 위의 함수를 정의하지 않는다. 또 다른 예시로 $\mathbb{R}^2\setminus\\{0\\}$ 위에서 정의된 함수 $f: \mathbb{R}^2\setminus\\{0\\} \rightarrow \mathbb{R}$가 다음의 식
 
 $$f(x_0,x_1)=x_0^2-x_1$$
 
@@ -101,7 +101,7 @@ $$f(\lambda x_0,\ldots, \lambda x_n)=\lambda^{\deg f} f(x_0,\ldots, x_n),\qquad 
 
 이 성립하기 때문이다. 
 
-즉, $\mathbb{P}^n$을 스펙트럼과 비슷한 방식으로 설명하기 위해서는 $\mathbb{A}^{n+1}$을 단순한 ring $\mathbb{k}[\x_0,\ldots, \x_n]$의 spectrum으로 볼 것이 아니라, 여기에 degree에 대한 정보를 추가하여 이를 *graded* ring으로 보고, 임의의 원소들의 zero locus가 아닌 *homogeneous*한 원소들의 zero locus를 보아야 한다. 그럼 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)를 생각하면 우리의 관심사 또한 *homogeneous* ideal들이 되어야 할 것이다. 
+즉, $\mathbb{P}^n$을 스펙트럼과 비슷한 방식으로 설명하기 위해서는 $\mathbb{A}^{n+1}$을 단순한 ring $\mathbb{K}[\x_0,\ldots, \x_n]$의 spectrum으로 볼 것이 아니라, 여기에 degree에 대한 정보를 추가하여 이를 *graded* ring으로 보고, 임의의 원소들의 zero locus가 아닌 *homogeneous*한 원소들의 zero locus를 보아야 한다. 그럼 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)를 생각하면 우리의 관심사 또한 *homogeneous* ideal들이 되어야 할 것이다. 
 
 이번 글의 남은 부분에서 우리는 graded ring에 $\Proj$를 취하여 projective scheme을 얻어내는 과정을 따라간다. 이를 위해 몇몇 표기를 고정한다. 
 
@@ -119,7 +119,7 @@ Graded ring $A_\bullet$이 주어졌다 하자. 그럼 다음의 부분집합
 
 $$A_+=\bigoplus_{i=1}^\infty A_i=A_1\oplus A_2\oplus\cdots$$
 
-은 $A_\bullet$의 homogeneous ideal이 되는 것이 자명하다. 그런데 $A_\bullet=\mathbb{k}[\x_0,\ldots, \x_n]$인 경우를 생각하면, $A_+$의 모든 원소들에 대해 함숫값이 $0$이 되는 점, 즉 모든 다항식에 대해 항등적으로 $0$이 되는 점은 오직 원점 뿐이다. 원점은 $\mathbb{P}^n$을 만들 때 빠지는 점이므로 ideal $A_+$를 포함하는 ideal은 우리의 논의의 대상에서 제외하는 것이 옳을 것이다. 이러한 관점에서 $A_+$를 *irrelevant ideal*이라 부른다. 
+은 $A_\bullet$의 homogeneous ideal이 되는 것이 자명하다. 그런데 $A_\bullet=\mathbb{K}[\x_0,\ldots, \x_n]$인 경우를 생각하면, $A_+$의 모든 원소들에 대해 함숫값이 $0$이 되는 점, 즉 모든 다항식에 대해 항등적으로 $0$이 되는 점은 오직 원점 뿐이다. 원점은 $\mathbb{P}^n$을 만들 때 빠지는 점이므로 ideal $A_+$를 포함하는 ideal은 우리의 논의의 대상에서 제외하는 것이 옳을 것이다. 이러한 관점에서 $A_+$를 *irrelevant ideal*이라 부른다. 
 
 이제 집합으로서 $\Proj A_\bullet$은 다음과 같이 정의된다.
 
@@ -133,7 +133,7 @@ $$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogene
 
 </div>
 
-정의에 의해 $\Proj A_\bullet$은 $\Spec A$의 부분집합이다. 즉, $\Proj A_\bullet$의 점들은 모두 $\Spec A$의 점들이기도 하다. 이는 $\Spec A$ 대신 $\mSpec A$를 사용했다면 다소 어색한 결과이지만, $\Spec A$에는 전통적인 점들 외에도 prime ideal들에 해당하는 점들이 존재한다. 가령 $A=\mathbb{k}[\x_1,\x_2]$의 ideal $(\x_1-\x_2)$를 생각하면, $\mathbb{k}[\x_1,\x_2]/(\x_1-\x_2)\cong \mathbb{k}[\x_1]$이므로 이 ideal은 prime ideal이다. 또, 이 ideal은 $\mathbb{k}[\x_1,\x_2]$를 graded ring $A_\bullet$으로 보았을 때, $A_+$를 포함하지 않는 homogeneous prime ideal이므로 $\Proj A_\bullet$의 점이기도 하다. 
+정의에 의해 $\Proj A_\bullet$은 $\Spec A$의 부분집합이다. 즉, $\Proj A_\bullet$의 점들은 모두 $\Spec A$의 점들이기도 하다. 이는 $\Spec A$ 대신 $\mSpec A$를 사용했다면 다소 어색한 결과이지만, $\Spec A$에는 전통적인 점들 외에도 prime ideal들에 해당하는 점들이 존재한다. 가령 $A=\mathbb{K}[\x_1,\x_2]$의 ideal $(\x_1-\x_2)$를 생각하면, $\mathbb{K}[\x_1,\x_2]/(\x_1-\x_2)\cong \mathbb{K}[\x_1]$이므로 이 ideal은 prime ideal이다. 또, 이 ideal은 $\mathbb{K}[\x_1,\x_2]$를 graded ring $A_\bullet$으로 보았을 때, $A_+$를 포함하지 않는 homogeneous prime ideal이므로 $\Proj A_\bullet$의 점이기도 하다. 
 
 아직까지 $\Proj A_\bullet$은 집합일 뿐이다. 여기에 위상구조를 주기 위해서는 함수의 zero locus를 사용해야 하고, 앞서 관찰했듯 우리는 *homogeneous* polynomial의 zero locus를 사용해야 한다. 
 
@@ -189,7 +189,7 @@ $$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet\mid \mathfrak{a}\subseteq \
 
 </div>
 
-또, 이 보조정리의 넷째 결과에 의해, 우리는 $\Proj A_\bullet$을 정의할 때는 $A_+$에 속한 homogeneous ideal들만 고려하면 된다는 것을 안다. 이는 직관적으로도 자명한데, $A=\mathbb{k}[\x_0,\ldots, \x_n]$이라 두면 $A_0$에 들어있는 원소들은 어차피 상수함수이기 때문이다. 
+또, 이 보조정리의 넷째 결과에 의해, 우리는 $\Proj A_\bullet$을 정의할 때는 $A_+$에 속한 homogeneous ideal들만 고려하면 된다는 것을 안다. 이는 직관적으로도 자명한데, $A=\mathbb{K}[\x_0,\ldots, \x_n]$이라 두면 $A_0$에 들어있는 원소들은 어차피 상수함수이기 때문이다. 
 
 이제 다음을 정의한다.
 
@@ -299,29 +299,29 @@ $$\mathscr{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> 대수기하학에서, $\mathbb{P}^n_\mathbb{k}$는 다음의 식
+<ins id="ex12">**예시 12**</ins> 대수기하학에서, $\mathbb{P}^n_\mathbb{K}$는 다음의 식
 
-$$\mathbb{P}^n_\mathbb{k}=\Proj \mathbb{k}[\x_0,\ldots, \x_n]$$
+$$\mathbb{P}^n_\mathbb{K}=\Proj \mathbb{K}[\x_0,\ldots, \x_n]$$
 
-으로 정의한다. 여기서 polynomial algebra $\mathbb{k}[\x_0,\ldots, \x_n]$은 당연히 degree를 통해 grading이 주어진 graded ring이다. 
+으로 정의한다. 여기서 polynomial algebra $\mathbb{K}[\x_0,\ldots, \x_n]$은 당연히 degree를 통해 grading이 주어진 graded ring이다. 
 
 그럼 projective space에서의 $n+1$개의 open cover는 이 언어에서는
 
-$$D_+(\x_i)\cong \Spec \mathbb{k}[\x_{0},\ldots, \x_{n}]_{(\x_{i})}$$
+$$D_+(\x_i)\cong \Spec \mathbb{K}[\x_{0},\ldots, \x_{n}]_{(\x_{i})}$$
 
 으로 생각할 수 있으며, [\[가환대수학\] §등급환의 국소화, ⁋명제 6](/ko/math/commutative_algebra/localization_of_graded_rings#prop6)에 의하여
 
-$$\mathbb{k}[\x_{0},\ldots, \x_{n}]_{(\x_{i})}\cong \mathbb{k}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)$$
+$$\mathbb{K}[\x_{0},\ldots, \x_{n}]_{(\x_{i})}\cong \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)$$
 
 이 되며, 명시적으로 이 isomorphism은 ring homomorphism
 
-$$\mathbb{k}[\x_{0/i}, \ldots, \x_{n/i}]\rightarrow \mathbb{k}[\x_0,\ldots, \x_n]_{(\x_i)};\qquad \x_{k/i}\mapsto \frac{\x_k}{\x_i}$$
+$$\mathbb{K}[\x_{0/i}, \ldots, \x_{n/i}]\rightarrow \mathbb{K}[\x_0,\ldots, \x_n]_{(\x_i)};\qquad \x_{k/i}\mapsto \frac{\x_k}{\x_i}$$
 
 에 first isomorphism theorem을 적용하여 얻어지는 것이다. 
 
-이제 임의의 $\mathfrak{p}\in \mathbb{P}^n_\mathbb{k}$는 어떠한 $D_+(\x_i)$에 포함된다. 위의 isomorphism을 통하여 $D_+(\x_i)$의 점 $\mathfrak{p}$가 $U_i=\Spec \mathbb{k}[\x_{0/i}, \ldots, \x_{n/i}]/(\x_{i/i}-1)$의 점 $\mathfrak{q}$로 옮겨졌다 하자. 그럼 이 경우에 다음의 isomorphism
+이제 임의의 $\mathfrak{p}\in \mathbb{P}^n_\mathbb{K}$는 어떠한 $D_+(\x_i)$에 포함된다. 위의 isomorphism을 통하여 $D_+(\x_i)$의 점 $\mathfrak{p}$가 $U_i=\Spec \mathbb{K}[\x_{0/i}, \ldots, \x_{n/i}]/(\x_{i/i}-1)$의 점 $\mathfrak{q}$로 옮겨졌다 하자. 그럼 이 경우에 다음의 isomorphism
 
-$$\mathscr{O}_{\mathbb{P}^n_\mathbb{k},\mathfrak{p}}\cong \mathscr{O}_{U_i, \mathfrak{q}}$$
+$$\mathscr{O}_{\mathbb{P}^n_\mathbb{K},\mathfrak{p}}\cong \mathscr{O}_{U_i, \mathfrak{q}}$$
 
 을 기대하는 것이 당연할 것이다. 그리고 이는 물론 성립한다. ([\[가환대수학\] §등급환의 국소화, ⁋명제 8](/ko/math/commutative_algebra/localization_of_graded_rings#prop8)) 
 

@@ -65,7 +65,7 @@ $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y) \rightarrow \Spec \kappa(y)$$
 
-는 integral morphism이며, integral morphism은 그 정의에 의해 affine morphism이므로 임의의 integral morphism $\Spec B \rightarrow \Spec \mathbb{k}$에 대하여 $\dim \Spec B=\dim B=0$임을 보이면 충분하다. 즉, 임의의 integral extension $\mathbb{k} \rightarrow B$에 대하여, $B$의 prime ideal들의 chain
+는 integral morphism이며, integral morphism은 그 정의에 의해 affine morphism이므로 임의의 integral morphism $\Spec B \rightarrow \Spec \mathbb{K}$에 대하여 $\dim \Spec B=\dim B=0$임을 보이면 충분하다. 즉, 임의의 integral extension $\mathbb{K} \rightarrow B$에 대하여, $B$의 prime ideal들의 chain
 
 $$\mathfrak{q}_1\subsetneq \mathfrak{q}_2$$
 
@@ -127,29 +127,29 @@ $$\dim Y+\codim_XY\leq \dim X$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8 (Noether normalization lemma)**</ins> 임의의 field $\mathbb{k}$와, finitely generated $\mathbb{k}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이고 
+<ins id="thm8">**정리 8 (Noether normalization lemma)**</ins> 임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이고 
 
-$$\trdeg_\mathbb{k}\Frac(A)=n$$
+$$\trdeg_\mathbb{K}\Frac(A)=n$$
 
-이라면 $A$의 적당한 원소들 $x_1,\ldots, x_n$이 존재하여 이들이 algebraically independent이고 $A$가 finite $\mathbb{k}[x_1,\ldots, x_n]$-module이도록 할 수 있다. 
+이라면 $A$의 적당한 원소들 $x_1,\ldots, x_n$이 존재하여 이들이 algebraically independent이고 $A$가 finite $\mathbb{K}[x_1,\ldots, x_n]$-module이도록 할 수 있다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$A$가 finitely generated $\mathbb{k}$-algebra라는 가정으로부터
+$A$가 finitely generated $\mathbb{K}$-algebra라는 가정으로부터
 
-$$A=\mathbb{k}[y_1,\ldots, y_m]/\mathfrak{p}$$
+$$A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$$
 
-로 적을 수 있다. 그럼 이들 $y_1,\ldots, y_m$의 $\Frac(A)$에서의 image가 $\mathbb{k}$의 field extension으로서 $\Frac(A)$를 생성하므로 반드시 $m\geq n$이어야 한다. 
+로 적을 수 있다. 그럼 이들 $y_1,\ldots, y_m$의 $\Frac(A)$에서의 image가 $\mathbb{K}$의 field extension으로서 $\Frac(A)$를 생성하므로 반드시 $m\geq n$이어야 한다. 
 
 이제 만일 $m=n$이라면, $y_i$들이 정확히 원하는 원소가 되므로 더 이상 증명할 것이 없다. 이제 주어진 주장을 보이기 위해 $m>n$이라 하고, $n\leq k< m$을 만족하는 임의의 $k$에 대하여 정리가 성립한다 하자. 그럼 $m>n$이라는 가정으로부터 $y_1,\ldots, y_m$들은 algebraically dependent이다. 즉, 다음의 식
 
 $$f(y_1,\ldots, y_m)=0$$
 
-을 만족하는 $\mathbb{k}$-계수 $m$변수 다항식 
+을 만족하는 $\mathbb{K}$-계수 $m$변수 다항식 
 
-$$f(\x_1,\ldots, \x_m)=\sum \alpha_{d_1d_2\cdots d_m}\x_1^{d_1}\cdots\x_m^{d_m}\in \mathbb{k}[\x_1,\ldots, \x_m]\tag{$\ast$}$$
+$$f(\x_1,\ldots, \x_m)=\sum \alpha_{d_1d_2\cdots d_m}\x_1^{d_1}\cdots\x_m^{d_m}\in \mathbb{K}[\x_1,\ldots, \x_m]\tag{$\ast$}$$
 
 이 존재한다. 이제 정수 $r_1,\ldots, r_{m-1}$에 대하여 다음의 식
 
@@ -167,15 +167,15 @@ $$\x_1=z_1+y_m^{r_1},\quad \ldots\quad,\quad \x_{m-1}=z_{m-1}+y_m^{r_{m-1}},\qua
 
 $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 
-과 $z_k$를 포함하는 그 외의 항들이 될 것이다. 이제 $r_1,\ldots, r_{m-1}$을 충분히 크게 잡으면, 이러한 형태의 항이 최고차항이 되도록 할 수 있고, 따라서 위의 등식 ($\ast\ast$)은 $y_m$이 $z_1,\ldots, z_{m-1}$에 대해 intgrally dependent임을 보여준다. 한편 $z_1,\ldots, z_{m-1}$로 생성되는 $A$의 $\mathbb{k}$-subalgebra $A'$, 즉 ($\ast\ast$)를 $y_m$의 일변수 다항식으로 보았을 때 그 계수들이 존재하는 $A$의 $\mathbb{k}$-subalgebra $A'$에 대해서는 귀납적 가정에 의해 원하는 조건을 만족하는 $x_1,\ldots, x_n\in A$들이 존재한다. 이제 $A$는 위의 논증에 의해 finite $A'$-module이고, $A'$는 귀납적 가정에 의해 finite $\mathbb{k}[x_1,\ldots, x_n]$-module이므로 원하는 결과를 얻는다.
+과 $z_k$를 포함하는 그 외의 항들이 될 것이다. 이제 $r_1,\ldots, r_{m-1}$을 충분히 크게 잡으면, 이러한 형태의 항이 최고차항이 되도록 할 수 있고, 따라서 위의 등식 ($\ast\ast$)은 $y_m$이 $z_1,\ldots, z_{m-1}$에 대해 intgrally dependent임을 보여준다. 한편 $z_1,\ldots, z_{m-1}$로 생성되는 $A$의 $\mathbb{K}$-subalgebra $A'$, 즉 ($\ast\ast$)를 $y_m$의 일변수 다항식으로 보았을 때 그 계수들이 존재하는 $A$의 $\mathbb{K}$-subalgebra $A'$에 대해서는 귀납적 가정에 의해 원하는 조건을 만족하는 $x_1,\ldots, x_n\in A$들이 존재한다. 이제 $A$는 위의 논증에 의해 finite $A'$-module이고, $A'$는 귀납적 가정에 의해 finite $\mathbb{K}[x_1,\ldots, x_n]$-module이므로 원하는 결과를 얻는다.
 
 </details>
 
-기하적으로 $A=\mathbb{k}[y_1,\ldots, y_m]/\mathfrak{p}$라 두는 것은 $\Spec A$가 affine space $\mathbb{A}^m_\mathbb{k}$의 integral closed subscheme이라는 것과 같으므로, 위의 정리의 결과로 얻어지는 finite ring homomorphism $\mathbb{k}[x_1,\ldots, x_n] \rightarrow \mathbb{k}[y_1,\ldots, y_m]/\mathfrak{p}$는 기하적으로는 finite scheme morphism $\Spec A \rightarrow \Spec \mathbb{k}[x_1,\ldots, x_n]$을 찾는 것과 같다. 이제 finite extension $\mathbb{k}[x_1,\ldots, x_n] \rightarrow A$은 integral extension이므로 [명제 5](#prop5)에 의하여 $\dim A=\dim \mathbb{k}[x_1,\ldots, x_n]$이므로, [\[가환대수학\] §매개계, ⁋따름정리 10](/ko/math/commutative_algebra/system_of_parameters#cor10)에 의하여 다음 결과를 얻는다.
+기하적으로 $A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$라 두는 것은 $\Spec A$가 affine space $\mathbb{A}^m_\mathbb{K}$의 integral closed subscheme이라는 것과 같으므로, 위의 정리의 결과로 얻어지는 finite ring homomorphism $\mathbb{K}[x_1,\ldots, x_n] \rightarrow \mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$는 기하적으로는 finite scheme morphism $\Spec A \rightarrow \Spec \mathbb{K}[x_1,\ldots, x_n]$을 찾는 것과 같다. 이제 finite extension $\mathbb{K}[x_1,\ldots, x_n] \rightarrow A$은 integral extension이므로 [명제 5](#prop5)에 의하여 $\dim A=\dim \mathbb{K}[x_1,\ldots, x_n]$이므로, [\[가환대수학\] §매개계, ⁋따름정리 10](/ko/math/commutative_algebra/system_of_parameters#cor10)에 의하여 다음 결과를 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 임의의 field $\mathbb{k}$와, finitely generated $\mathbb{k}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이라면, $\dim\Spec A=\trdeg_\mathbb{k} \Frac(A)$이 성립한다. 
+<ins id="prop9">**명제 9**</ins> 임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이라면, $\dim\Spec A=\trdeg_\mathbb{K} \Frac(A)$이 성립한다. 
 
 </div>
 
@@ -183,13 +183,13 @@ $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> 임의의 field $\mathbb{k}$와, finitely generated $\mathbb{k}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이고, $f\in A$가 non-unit이라면 $\dim A/(f)=\dim A-1$이 성립한다.  
+<ins id="prop10">**명제 10**</ins> 임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이고, $f\in A$가 non-unit이라면 $\dim A/(f)=\dim A-1$이 성립한다.  
 
 </div>
 
 ## Principal ideal theorem
 
-앞서 우리는 임의의 affine integral $\mathbb{k}$-scheme $X=\Spec A$에 대하여, $A$의 non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $A$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
+앞서 우리는 임의의 affine integral $\mathbb{K}$-scheme $X=\Spec A$에 대하여, $A$의 non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $A$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
 
 <div class="proposition" markdown="1">
 

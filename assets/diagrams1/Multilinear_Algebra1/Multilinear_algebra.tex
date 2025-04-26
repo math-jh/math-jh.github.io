@@ -1,20 +1,53 @@
-\documentclass[convert={ghostscript, density=1024}]{standalone}
+\documentclass[convert={gsdevice=pngalpha, density=1024}]{standalone}
 \usepackage{amsmath, amsthm, amsfonts}
 \usepackage{tikz-cd, kotex}
 \usepackage{../.preamble/quiver}
 \usepackage{../.preamble/Operators}
 \begin{document}
 
+%% fundamental_diagram (Differential_modules-4.png)
+\begin{tikzcd}
+	{\Hom_{E'}(\Omega_{E'/E}, N)} &[40pt] {\Hom_{E'}(\Omega_{E'/A}, N)} \\
+	{\Der_E(E', N)} & {\Der_A(E', N)}
+	\arrow["{\Hom_{E'}(\Omega_u, \id_N)}", from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[hook, from=2-1, to=2-2]
+\end{tikzcd}
+
+
+\end{document}
+
+%% change_of_base_ring-1 (Differential_modules-1.png)
 \begin{tikzcd}
 	A & {A'} \\
 	E & {E'}
-	\arrow[from=1-1, to=1-2]
-	\arrow[from=1-1, to=2-1]
-	\arrow[from=1-2, to=2-2]
-	\arrow[from=2-1, to=2-2]
+	\arrow["\rho", from=1-1, to=1-2]
+	\arrow["\eta"', from=1-1, to=2-1]
+	\arrow["{\eta'}", from=1-2, to=2-2]
+	\arrow["u"', from=2-1, to=2-2]
 \end{tikzcd}
 
-\end{document}
+%% change_of_base_ring-2 (Differential_modules-1.png)
+\begin{tikzcd}
+	E & {E'} \\
+	{\Omega_{E/A}} & {\Omega_{E'/A'}}
+	\arrow["u", from=1-1, to=1-2]
+	\arrow["{d_{E/A}}"', from=1-1, to=2-1]
+	\arrow["{d_{E'/A'}}", from=1-2, to=2-2]
+	\arrow["\nu"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% change_of_base_ring-3 (Differential_modules-3.png)
+\begin{tikzcd}
+	{\Hom_{E'}(\Omega_{E'/A'}, N)} &[50pt] {\Hom_{E'}(\Omega_{E/A}\otimes_EE', N)} \\
+	{\Der_{A'}(E',N)} & {\Der_A(E,N)}
+	\arrow["{\Hom_{E'}(\Omega_0(u),\id_N)}", from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{C(u)}"', from=2-1, to=2-2]
+\end{tikzcd}
+
 
 %%%%%%%%%% Obsolete %%%%%%%%%%
 	% Universal_property_of_multilinear_algebra (Tensor_algebra-1.png)

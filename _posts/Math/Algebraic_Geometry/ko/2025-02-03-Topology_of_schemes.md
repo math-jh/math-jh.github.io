@@ -51,7 +51,7 @@ $$Z(\mathfrak{p})=ZI(\{\mathfrak{p}\})=\cl(\{\mathfrak{p}\})=\{\mathfrak{p}\}$$
 
 특별히 $X$가 affine scheme $\Spec A$인 경우, 우리는 $\Spec A$의 임의의 irreducible closed set은 $A$의 적당한 prime ideal $\mathfrak{p}$에 대하여 $Z(\mathfrak{p})$의 꼴로 나타난다는 것을 확인하였다. 그럼 자명하게 $\mathfrak{p}\in Z(\mathfrak{p})$이고, 이 때 $Z(\mathfrak{p})$에 속하는 prime ideal들 중 $\mathfrak{p}$가 (유일하게) minimal한 것은 자명하므로 $Z(\mathfrak{p})$의 (유일한) generic point가 된다.
 
-이를 더욱 기하학적으로 만들기 위해, $A=\mathbb{k}[\x_1,\x_2]/(\x_2-\x_1^2)$이라 하자. 그럼 [§스펙트럼, ⁋명제 9](#prop9)에서 우리는 $\Spec A$가 $\mathbb{A}\_\mathbb{k}^2=\Spec \mathbb{k}[\x_1,\x_2]$의 닫힌집합임을 보였다. 이제 우리는 prime ideal $(\x_2-\x_1^2)\in \Spec \mathbb{k}[\x_1,\x_2]$이 $\Spec A\cong Z(\x_2-\x_1^2)$의 generic point임을 안다. 즉 generic point는 곡선 $\x_2-\x_1^2$ 그 자체를 나타내는 것으로 해석할 수 있다. 
+이를 더욱 기하학적으로 만들기 위해, $A=\mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$이라 하자. 그럼 [§스펙트럼, ⁋명제 9](#prop9)에서 우리는 $\Spec A$가 $\mathbb{A}\_\mathbb{K}^2=\Spec \mathbb{K}[\x_1,\x_2]$의 닫힌집합임을 보였다. 이제 우리는 prime ideal $(\x_2-\x_1^2)\in \Spec \mathbb{K}[\x_1,\x_2]$이 $\Spec A\cong Z(\x_2-\x_1^2)$의 generic point임을 안다. 즉 generic point는 곡선 $\x_2-\x_1^2$ 그 자체를 나타내는 것으로 해석할 수 있다. 
 
 ## 스킴의 위상적 성질들
 
@@ -75,29 +75,29 @@ Irreducibilty의 경우 다음 예시들을 보자.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $\\{0\\}$을 생각하면, $\\{0\\}$를 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{k}[\x_0,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}\_\mathbb{k}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n\_\mathbb{k}$는 irreducible open subset들 $D_+(\x_i)$을 가지므로 [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8)에 의해 $\mathbb{P}^n\_\mathbb{k}$ 또한 irreducible이다. 
+<ins id="ex5">**예시 5**</ins> 임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $\\{0\\}$을 생각하면, $\\{0\\}$를 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{K}[\x_0,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}\_\mathbb{K}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n\_\mathbb{K}$는 irreducible open subset들 $D_+(\x_i)$을 가지므로 [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8)에 의해 $\mathbb{P}^n\_\mathbb{K}$ 또한 irreducible이다. 
 
 거꾸로 scheme $X$의 임의의 irreducible closed set $Z$는 항상 generic point $I(Z)$를 갖는다. ([§스펙트럼, ⁋명제 16](/ko/math/algebraic_geometry/spectrums#prop16)) 
 
 </div>
 
-Irreducible space는 항상 connected이므로, 위의 예시들은 connected space의 예시이기도 하다. 다음 예시는 connected가 아닌 scheme과, connected이지만 irreducible이 아닌 scheme들의 예시를 위한 것으로, affine plane $\mathbb{A}^2\_\mathbb{k}$의 특정한 *closed subscheme*들이 주어져 있다. 
+Irreducible space는 항상 connected이므로, 위의 예시들은 connected space의 예시이기도 하다. 다음 예시는 connected가 아닌 scheme과, connected이지만 irreducible이 아닌 scheme들의 예시를 위한 것으로, affine plane $\mathbb{A}^2\_\mathbb{K}$의 특정한 *closed subscheme*들이 주어져 있다. 
 
 우리는 아직 closed subscheme을 정의하지 않았으나, 적어도 [§스펙트럼, ⁋명제 9](/ko/math/algebraic_geometry/spectrums#prop9)에서 우리는 affine scheme $\Spec A$와 $A$의 임의의 ideal $\mathfrak{a}$에 대하여 canonical morphism $A \rightarrow A/\mathfrak{a}$을 통해 $\Spec A/\mathfrak{a}$와 $Z(\mathfrak{a})\subseteq \Spec A$가 위상공간으로서 homeomorphic한 것은 이미 살펴보았다. Connectedness와 irreducibility는 모두 위상공간의 성질이므로, $\Spec A/\mathfrak{a}$의 위상적인 성질은 $\Spec A$의 닫힌집합 $Z(\mathfrak{a})$의 위상구조를 살펴보아 확인할 수 있다. 이들을 closed subscheme이라 부를 때, 부족한 것은 오직 $\Spec A/\mathfrak{a}$의 structure sheaf와 $\Spec A$의 structure sheaf(를 $Z(\mathfrak{a})$로 제한한 것)이 어떤 관계에 있는지 뿐이며, 이는 [§닫힌 부분스킴](/ko/math/algebraic_geometry/closed_subschemes)에서 다시 살펴보게 된다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**</ins> 우선 connected가 아닌 scheme의 예시는 $\mathbb{A}^2\_\mathbb{k}$의 closed subscheme 
+<ins id="ex6">**예시 6**</ins> 우선 connected가 아닌 scheme의 예시는 $\mathbb{A}^2\_\mathbb{K}$의 closed subscheme 
 
-$$\Spec \frac{\mathbb{k}[\x,\y]}{(\x(\x-1))}$$
+$$\Spec \frac{\mathbb{K}[\x,\y]}{(\x(\x-1))}$$
 
-이 있다. 이것이 connected가 아님을 보기 위해서는 이를 두 개의 subscheme $\Spec \mathbb{k}[\x,\y]/(\x)$와 $\Spec \mathbb{k}[\x,\y]/(\x-1)$의 disjoint union으로 쓸 수 있다는 것을 확인하면 된다. 
+이 있다. 이것이 connected가 아님을 보기 위해서는 이를 두 개의 subscheme $\Spec \mathbb{K}[\x,\y]/(\x)$와 $\Spec \mathbb{K}[\x,\y]/(\x-1)$의 disjoint union으로 쓸 수 있다는 것을 확인하면 된다. 
 
 한편 connected이지만 irreducible하지 않은 scheme의 예시로는 
 
-$$Z(\x\y)=\Spec \frac{\mathbb{k}[\x,\y]}{(\x\y)}$$
+$$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 
-이 있으며, 이 scheme의 irreducible component는 $\Spec\mathbb{k}[\x,\y]/(\x)$와 $\Spec \mathbb{k}[\x,\y]/(\y)$이다. 
+이 있으며, 이 scheme의 irreducible component는 $\Spec\mathbb{K}[\x,\y]/(\x)$와 $\Spec \mathbb{K}[\x,\y]/(\y)$이다. 
 
 ![counterexamples](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-1.png){:style="width:20em" class="invert" .align-center}
 

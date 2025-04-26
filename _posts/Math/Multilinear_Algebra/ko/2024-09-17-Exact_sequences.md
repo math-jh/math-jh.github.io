@@ -19,9 +19,9 @@ weight: 1
 
 [\[다중선형대수학\]](/ko/multilinear_algebra/) 카테고리에서 우리는 module의 성질에 대해 살펴본다. [\[대수적 구조\]](/ko/algebraic_structures/)에서 우리는 module의 성질을 살펴보긴 하였으나, 해당 카테고리에서는 일반적인 대수적인 구조들에서 공통적으로 정의하고 증명할 수 있는 것들에 초점을 두었다면, 이 카테고리에서는 조금 더 module만이 갖는 성질에 집중한다는 차이가 있다. 
 
-예컨대 특별히 field $\mathbb{k}$ 위에 정의된 module들, 즉 $\mathbb{k}$-벡터공간들에 대한 결과들은 [\[선형대수학\]](/ko/linear_algebra/)에서 살펴보았었는데, 여기에서 $\mathbb{k}$-벡터공간들의 기저를 잡거나 이를 사용하여 linear map을 행렬로 표현하는 등의 일들은 일반적인 대수적 구조에서 기대하기는 힘든 일들이다. 
+예컨대 특별히 field $\mathbb{K}$ 위에 정의된 module들, 즉 $\mathbb{K}$-벡터공간들에 대한 결과들은 [\[선형대수학\]](/ko/linear_algebra/)에서 살펴보았었는데, 여기에서 $\mathbb{K}$-벡터공간들의 기저를 잡거나 이를 사용하여 linear map을 행렬로 표현하는 등의 일들은 일반적인 대수적 구조에서 기대하기는 힘든 일들이다. 
 
-이와 같은 관점에서[\[다중선형대수학\]](/ko/multilinear_algebra/) 카테고리의 가장 큰 목표는 [\[선형대수학\]](/ko/linear_algebra/)에서의 결과들을 $\mathbb{k}$ 대신 일반적인 ring $A$로 바꾸어 최대한 일반화하는 것이라 할 수 있다. 한편 해당 카테고리의 글들은 비전공자 혹은 저년차 학부생을 염두에 두고 작성한 글들로 특히 [\[범주론\]](/ko/category_theory)의 언어를 거의 사용하지 않았었는데, 이와 같이 [\[선형대수학\]](/ko/linear_algebra/)의 내용들을 현대적인 언어로 바꾸는 것 또한 목표 중 하나이다. 
+이와 같은 관점에서[\[다중선형대수학\]](/ko/multilinear_algebra/) 카테고리의 가장 큰 목표는 [\[선형대수학\]](/ko/linear_algebra/)에서의 결과들을 $\mathbb{K}$ 대신 일반적인 ring $A$로 바꾸어 최대한 일반화하는 것이라 할 수 있다. 한편 해당 카테고리의 글들은 비전공자 혹은 저년차 학부생을 염두에 두고 작성한 글들로 특히 [\[범주론\]](/ko/category_theory)의 언어를 거의 사용하지 않았었는데, 이와 같이 [\[선형대수학\]](/ko/linear_algebra/)의 내용들을 현대적인 언어로 바꾸는 것 또한 목표 중 하나이다. 
 
 이 카테고리의 글들에서 $A$-module은 항상 left $A$-module을 뜻하며, 적절한 방식으로 동일한 논증을 right $A$-module에 대해서도 펼칠 수 있다. 같은 글 안에 left $A$-module과 right $A$-module이 동시에 등장해야 할 경우에는 혼동을 피하기 위해 이렇게 생략하지 않지만, 이러한 경우에도 left $A$-module을 right $A$-module로, right $A$-module을 left $A$-module로 서로 바꾸면 동일한 논증을 펼칠 수 있다.
 
@@ -37,7 +37,7 @@ weight: 1
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[\[선형대수학\] §벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3)의 증명은 $\mathbb{k}$가 field라는 사실을 사용하지 않았으므로 해당 증명을 동일하게 사용하면 된다.
+[\[선형대수학\] §벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3)의 증명은 $\mathbb{K}$가 field라는 사실을 사용하지 않았으므로 해당 증명을 동일하게 사용하면 된다.
 
 </details>
 

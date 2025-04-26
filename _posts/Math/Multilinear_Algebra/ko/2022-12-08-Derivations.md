@@ -92,9 +92,9 @@ $$d(xx')=(dx)x'+(-1)^{\deg x}x(dx')$$
 
 ## 미분형식
 
-지금까지의 논의가 어떻게 적용될 수 있는지를 알기 위해, 잠시 간단한 예시를 살펴보자. 여기에서 $\mathbb{k}$는 field이고 polynomial algebra $E=\mathbb{k}[\x_1,\ldots, \x_n]$이다. 
+지금까지의 논의가 어떻게 적용될 수 있는지를 알기 위해, 잠시 간단한 예시를 살펴보자. 여기에서 $\mathbb{K}$는 field이고 polynomial algebra $E=\mathbb{K}[\x_1,\ldots, \x_n]$이다. 
 
-우선 degree $0$ derivation은 항상 commutation factor를 무시할 수 있으므로, $E$를 non-graded $\mathbb{k}$-algebra로 본 후 $E$에서 $E$로의 derivation을 생각하면 $\varepsilon$은 등장하지 않는다. 이제 각각의 $i$에 대하여, $\partial_i:E \rightarrow E$를 편미분 $\partial/\partial \x_i$로 정의하면 Leibniz rule에 의해 [정의 2](#def2)의 등식이 만족된다. 
+우선 degree $0$ derivation은 항상 commutation factor를 무시할 수 있으므로, $E$를 non-graded $\mathbb{K}$-algebra로 본 후 $E$에서 $E$로의 derivation을 생각하면 $\varepsilon$은 등장하지 않는다. 이제 각각의 $i$에 대하여, $\partial_i:E \rightarrow E$를 편미분 $\partial/\partial \x_i$로 정의하면 Leibniz rule에 의해 [정의 2](#def2)의 등식이 만족된다. 
 
 이번에는 graded algebra의 예시를 보자. 위와 같이 정의된 polynomial algebra $E$에 대하여, free $A$-module $M$을 다음의 원소들 
 
