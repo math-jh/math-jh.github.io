@@ -9,5 +9,6 @@ permalink: /ko/peripherals
   {% assign lang = lang_prefix | remove_first: "/" %}
 {% endif %}
 
-{% assign posts = site.categories['Misc / Peripherals'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+## [키보드](/ko/keyboards/)
+## [마우스](ko/mouse/)
+## [기타](/ko/etc/)
