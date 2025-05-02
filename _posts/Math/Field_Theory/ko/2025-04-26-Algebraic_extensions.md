@@ -259,7 +259,7 @@ $$f(\x)=\x^n-\sum_{k=0}^{n-1}\frac{a_k}{a_n}\x^k$$
 <ins id="thm15">**정리 15**</ins> $\mathbb{K}$-algebra $E$의 algebraic element $x\in E$에 대하여, $x$의 degree를 $n$, minimal polynomial을 $f$라 하자. 그럼 다음이 성립한다. 
 
 1. $g \in \mathbb{K}[\x]$에 대해 $g(x) = 0$이 되기 위한 필요충분조건은 $g$가 $f$의 배수(multiple)인 것이다.
-2. $\mathbb{K}[\x] \rightarrow \mathbb{K}[x]$를 $g\mapsto g(x)$로 정의하자. 그럼 이 morphism은 quotient algebra $\mathbb{K}[\x]/(f)$로 factor through하며, 그 결과로 얻어지는 $\mathbb{K}[\x]/(f) \rightarrow \mathbb{K}[x]$는 isomorphism이다. 또, 이 때 $$1, x, \dots, x^{n-1}$은 $\mathbb{K}[x]$의 $\mathbb{K}$-basis를 이루며, 따라서 $[\mathbb{K}[x] : \mathbb{K}] = n$이 성립한다.
+2. $\mathbb{K}[\x] \rightarrow \mathbb{K}[x]$를 $g\mapsto g(x)$로 정의하자. 그럼 이 morphism은 quotient algebra $\mathbb{K}[\x]/(f)$로 factor through하며, 그 결과로 얻어지는 $\mathbb{K}[\x]/(f) \rightarrow \mathbb{K}[x]$는 isomorphism이다. 또, 이 때 $1, x, \dots, x^{n-1}$은 $\mathbb{K}[x]$의 $\mathbb{K}$-basis를 이루며, 따라서 $[\mathbb{K}[x] : \mathbb{K}] = n$이 성립한다.
 3. 만일 $E$가 integral domain이라면 $\mathbb{K}[x]$는 field이며, $f\in \mathbb{K}[\x]$는 $f(x) = 0$를 만족하는 유일한 monic irreducible polynomial이다.
 4. $x$가 $E$에서 invertible element가 되기 위한 필요충분조건은 $f(0) \neq 0$인 것이며, 이 때 $x^{-1} \in \mathbb{K}[x]$이다.
 
@@ -269,7 +269,7 @@ $$f(\x)=\x^n-\sum_{k=0}^{n-1}\frac{a_k}{a_n}\x^k$$
 
 <div class="definition" markdown="1">
 
-<ins id="def16">**정의 16**</ins> 모든 원소가 algebraic인 field extension $\mathbb{L}/\mathbb{K}$를 *algebraic extension<sub>대수적 확장</sub>*이라 부른다. 그렇지 않은 ㄹㅑeld extension은 *transcendental extension<sub>초월적 확장</sub>*이라 부른다. 
+<ins id="def16">**정의 16**</ins> 모든 원소가 algebraic인 field extension $\mathbb{L}/\mathbb{K}$를 *algebraic extension<sub>대수적 확장</sub>*이라 부른다. 그렇지 않은 field extension은 *transcendental extension<sub>초월적 확장</sub>*이라 부른다. 
 
 </div>
 
