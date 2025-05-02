@@ -9,6 +9,6 @@ permalink: /ko/peripherals
   {% assign lang = lang_prefix | remove_first: "/" %}
 {% endif %}
 
-## [키보드](/ko/keyboards/)
-## [마우스](ko/mouse/)
-## [기타](/ko/etc/)
+## [키보드](/ko/keyboards)
+## [마우스](ko/mouse)
+## [기타](/ko/etc)
