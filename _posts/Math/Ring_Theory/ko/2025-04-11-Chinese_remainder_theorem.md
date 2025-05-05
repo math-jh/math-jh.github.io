@@ -133,13 +133,6 @@ $$\mathfrak{b}_n\cap(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})=\left(\sum_
 
 </details>
 
-## 환의 직접곱
-
-Ring들의 family $(A\_i)\_{i\in I}$가 주어졌다 하자. 그럼 이들의 product $\prod A_i$ 위에 덧셈과 곱셈을 성분별로 정의하여 $\prod A_i$에 ring 구조를 줄 수 있다. 이는 [§군의 직접곱, ⁋정의 1](/ko/math/algebraic_structures/direct_product#def1)과 마찬가지 universal property를 만족한다. 즉,
-
-> 임의의 ring $B$와 ring homomorphism들 $f_i:B \rightarrow A_i$들이 주어졌을 때, $f_i=\pr_i\circ f$이도록 하는 유일한 ring homomorphism $f:B \rightarrow \prod A_i$이 존재한다.
-> ![universal_property_of_product](/assets/images/Math/Algebraic_Structures/Chinese_remainder_theorem-1.png){:width="251.4px" class="invert" .align-center}
-
 ## 중국인의 나머지 정리
 
 Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 그럼 projection들 $\pi_i:A \rightarrow A/\mathfrak{a}_i$이 존재하며, 이들로부터 ring homomorphism $\pi:A \rightarrow\prod A/\mathfrak{a}_i$가 정의된다.
