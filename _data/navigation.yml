@@ -241,6 +241,22 @@ commutative_algebra-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
+field_theory-ko:
+  - title: <a href="/ko/field_theory/" class="sidebar_title">체론</a>
+    children:
+      - title: "체"
+        url: ko/math/field_theory/fields
+      - title: "대수적 확장"
+        url: ko/math/field_theory/algebraic_extensions
+      - title: "대수적 폐포"
+        url: ko/math/field_theory/algebraically_closed_extensions
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
 group_theory-ko:
   - title: <a href="/ko/group_theory/" class="sidebar_title">군론</a>
     children:
@@ -406,6 +422,22 @@ multilinear_algebra-ko:
         url: ko/math/multilinear_algebra/determinants
       - title: "노름과 대각합"
         url: ko/math/multilinear_algebra/norms_and_traces
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
+ring_theory-ko:
+  - title: <a href="/ko/ring_theory/" class="sidebar_title">환론</a>
+    children:
+      - title: "정역"
+        url: ko/math/ring_theory/integral_domains
+      - title: "중국인의 나머지정리"
+        url: ko/math/ring_theory/chinese_remainder_theorem
+      - title: "다항식환"
+        url: ko/math/ring_theory/polynomial_rings
   - title: 
     children:
       - title: "블로그 소개"
