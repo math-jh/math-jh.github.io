@@ -417,3 +417,101 @@ UFD $A$에 대하여, $A[\x]$의 $0$이 아닌 원소를 $u(\x)$라 하고, $u(\
 [명제 6](#prop6)에 의해 $u$는 $(\Frac A)[\x]$에서 유일한 방식으로 인수분해를 할 수 있으며, [명제 14](#prop14)를 이 인수분해에 적용하면 우리는 $u$를 $A[\x]$에서 인수분해할 수 있다. 한편, $u$의 계수들의 최대공약수는 $1$이므로, 이렇게 얻어진 $u$의 factor들의 계수들의 최대공약수 또한 $1$이고 따라서 [따름정리 15](#cor15)에 의해 이들은 $A[\x]$에서 irreducible이다. 이로부터 $u$의 $A[\x]$에서의 인수분해를 얻으며, 유일성은 이들 각각의 성분이 $(\Frac A)[\x]$에서 해당하는 인수들의 $\Frac A$-multiple이라는 사실을 이용하면 자명하다. 
 
 </details>
+
+## 유리식환
+
+이제 우리는 다항식환의 변형인 유리수환과 멱급수환을 정의한다. 앞서 [명제 4](#prop4)에서 우리는 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}[\x\_i]\_{i\in I}$는 integral domain이라는 것을 증명하였다. 따라서 $\mathbb{K}[\x\_i]\_{i\in I}$의 field of fraction이 잘 정의된다.
+
+<div class="definition" markdown="1">
+
+<ins id="def17">**정의 17**</ins> Field $\mathbb{K}$ 위에 정의된 polynomial ring $\mathbb{K}[\x\_i]\_{i\in I}$의 field of fraction을 *field of rational functions*라 부르고 $\mathbb{K}(\x\_i)\_{i\in I}$으로 적는다. 
+
+</div>
+
+앞서 polynomial ring은 multidegree를 이용해 $\mathbb{N}$-graded ring으로 생각할 수 있다는 것을 살펴보았다. 비슷한 방식으로 $\mathbb{K}(\x_i)\_{i\in I}$ 위에도 degree를 정의하자. 자연스러운 선택은 $\mathbb{K}(\x_i)_{i\in I}$의 임의의 원소 $u/v$에 대하여
+
+$$\deg(u/v)=\deg(u)-\deg(v)$$
+
+으로 정의하는 것이며, 이것이 잘 정의된다는 것을 확인할 수 있다. 다항식에서와 마찬가지로 $\deg(0)=-\infty$로 정의한다. 
+
+그럼 다음 명제는 [명제 2](#prop2)의 analogue이다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop18">**명제 18**</ins> 두 rational fraction $r, s$에 대해 다음이 성립한다.
+
+1. $\deg r \ne \deg s$이면
+    
+    $$r + s \ne 0 \quad \text{이고} \quad \deg(r + s) = \sup(\deg r, \deg s)$$
+    
+    이 성립한다. 만일 $\deg r = \deg s$이면 $\deg(r + s) \leq \deg r$이다.
+2. $\deg(rs) = \deg r + \deg s$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+두 주장 모두 $r, s \ne 0$인 경우만 생각해도 충분하다. 따라서 $r =u/v$, $s = w/z$이고 $u, v, w, z$가 모두 0이 아닌 다항식이라 하자. 어떠한 경우건 아이디어는 주어진 식을 먼저 계산한 후, [§명제 2](#prop2)와 [§보조정리 3](#lem3)을 적용하는 것이다. 
+
+1. $r + s = (uz+vw)/(vz)$이다. 우선 $\deg r \ne \deg s$, 즉 $\deg u + \deg z \ne \deg w + \deg v$라 하자. 그러면 $uz + vw \ne 0$이고,
+    
+    $$\begin{aligned}\deg(r + s) &= \deg(uz + vw) - \deg(vz) \\
+    &= \sup(\deg(uz), \deg(vw)) - \deg(vz) \\
+    &= \sup(\deg(uz) - \deg(vz), \deg(vw) - \deg(vz)) \\
+    &= \sup(\deg r, \deg s).\end{aligned}$$
+    
+    이다.  한편 이제 $\deg r = \deg s$, 즉 $\deg u + \deg z = \deg w + \deg v$라고 하고, $r + s \ne 0$이라면
+    
+    $$\deg(r + s) = \deg(uz + vw) - \deg(vz)\leq \deg(uz) - \deg(vz) = \deg r$$
+
+    이므로 주장이 성립한다. 
+    
+2. $rs = (uw)/(vz)$이고, 따라서
+
+    $$\deg(rs) = \deg(uw) - \deg(vz) = \deg u - \deg v + \deg w - \deg z = \deg r + \deg s.$$
+    
+    이다. 
+
+</details>
+
+## 멱급수환
+
+멱급수환은 다항식환의 또 다른 변형으로, 우리는 이제 단항식들의 무한합
+
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu$ need not satisfy finiteness condition}$$
+
+들의 모임이다. 이를 $A[[\x_i]]\_{i\in I}$으로 적고, *ring of formal power series*라 부른다. 
+
+Formal power series들은 단항식의 <em_ko>무한한</em_ko> 합이라는 사실만 제외하면 다항식과 유사한 개념들을 정의할 수 있다. 가령 우리는 formal power series $u$의 degree $p$ 성분 $u_p$를 정의할 수 있다. 그러나 $u$의 (total) degree의 경우, 다항식이 아닌 한 원소들의 degree는 $+\infty$일 것이기 때문에 굳이 $A[[\x_i]]\_{i\in I}$에서 이를 사용할 이유가 없다. 대신 임의의 formal power series $u$에 대하여, $u$의 *order* $\omega(u)$를 $u_p\neq 0$이도록 하는 가장 <em_ko>작은</em_ko> $p$로 정한다. 마찬가지로 $\omega(0)=\infty$라 놓으면 다음의 식
+
+$$\omega(u+v)\geq \inf(\omega(u),\omega(v)),\quad\text{equality if $\omega(u)\neq\omega(v))$}$$
+
+그리고 다음의 식
+
+$$\omega(uv)\geq \omega(u)+\omega(v)$$
+
+이 성립한다. 
+
+Degree에 대해서는 위의 부등식이 만일 $A$가 integral domain이었다면 성립했었다. 이와 같이 다음이 성립한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop19">**명제 19**</ins> Integral domain $A$에 대하여 다음이 성립한다. 
+
+1. $A[[x\_i]]\_{i\in I}$이 integral domain이다. 
+2. 두 nonzero element $u,v\in A[[x\_i]]\_{i\in I}$에 대하여, $\omega(uv)+\omega(u)+\omega(v)$가 성립한다. 
+
+</div>
+
+단, 다소 주의할 것은 [명제 4](#prop4)와는 다르게 $A[[x\_i]]\_{i\in I}$의 unit은 $A$의 unit보다 크다는 것이다. 가령 다음의 식
+
+$$(1-\x)\left( \sum_{n=0}^\infty \x^n\right)=1$$
+
+을 생각하면 된다. 더 일반적으로 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop20">**명제 20**</ins> 임의의 $u\in A[[x\_i]]\_{i\in I}$에 대하여, $u$가 $A[[x\_i]]\_{i\in I}$에서 invertible인 것과 $u$의 상수항이 $A$에서 invertible인 것이 동치이다. 
+
+</div>
+
