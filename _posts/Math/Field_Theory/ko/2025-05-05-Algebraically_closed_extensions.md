@@ -54,17 +54,23 @@ weight: 3
 
 </div>
 
-이는 임의의 $f\in \overline{\mathbb{K}}[\x]$가 주어졌을 때, $f$는 $\Omega[\x]$의 원소로 볼 수도 있으므로 $\Omega$가 algebraically closed라는 가정으로부터 $f$의 $\Omega$에서의 한 근을 찾을 수 있고, 이 근이 $\overline{\mathbb{K}}$에 속해야 하기 때문이다. 
-
-다음 사실은 소수가 무한하다는 유클리드의 증명으로부터 거의 자명하다. 
+이는 임의의 $f\in \overline{\mathbb{K}}[\x]$가 주어졌을 때, $f$는 $\Omega[\x]$의 원소로 볼 수도 있으므로 $\Omega$가 algebraically closed라는 가정으로부터 $f$의 $\Omega$에서의 한 근을 찾을 수 있고, 이 근이 $\overline{\mathbb{K}}$에 속해야 하기 때문이다. 다음 사실은 소수가 무한하다는 유클리드의 증명을 활용한 것이다. 
 
 <div class="proposition" markdown="1">
 
 <ins id="prop4">**명제 4**</ins> 임의의 algebraically closed field는 무한하다. 
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-즉, 다항식 $1+\prod_{a\in\Omega}(\x-a)$를 생각하면 된다. 
+결론에 반하여 $\Omega$가 finite algebraically closed field라 하고, 다음의 다항식
+
+$$1+\prod_{a\in \Omega}(\x-a)$$
+
+을 생각하자. 이 다항식은 어떠한 $a$도 근으로 갖지 않는다. 
+
+</details>
 
 <div class="proposition" markdown="1">
 
@@ -97,7 +103,18 @@ weight: 3
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+Algebraic extension을 할 때는 어차피 다항식의 근만이 중요하므로, 주어진 다항식들 $f_i$들이 모두 monic polynomial이라 가정하여도 된다. 각각의 $f_i$가 degree $d_i$ monic polynomial이라 하자. 그럼 [##ref##](universal_decomposition_algebra)에 의하여, 각각의 $i$마다 다음의 두 조건
 
+1. $A_i$는 $\mathbb{K}$-algebra로서 $\xi_{i,1},\ldots, \xi_{i, d_i}$에 의해 생성된다. 
+2. $A_i[\x]$에서 $f_i(\x)=\prod_{k=1}^{d_i} (\x-\xi_{i,k})$이 성립한다. 
+
+$\mathbb{K}$-algebra $A_i$, 원소들 $\xi_{i,1},\ldots, \xi_{i, d_i}\in A_i$를 잡아줄 수 있다. 
+
+이제 이들을 이용하여 $\mathbb{K}$의 extension을 만들어야 한다. 
+
+$$A=\bigotimes_{i\in I} A_i$$
+
+이라 하면, Krull theorem에 의하여 $A$의 maximal ideal $\mathfrak{m}$이 존재하므로 $\mathbb{L}=A/\mathfrak{m}$이라 할 수 있으며, 이것이 원하는 splitting extension을 준다. 
 
 </details>
 
@@ -108,3 +125,27 @@ weight: 3
 <ins id="prop8">**명제 8**</ins> Field $\mathbb{K}$와 다항식들 $f_i\in \mathbb{K}[\x]$이 주어졌다 하고, extension $\Omega/\mathbb{K}$를 고정하자. 만일 두 subextension $\mathbb{L}_1$, $\mathbb{L}_2$가 이들의 splitting extension이라면, $\mathbb{L}_1=\mathbb{L}_2$이다. 
 
 </div>
+
+## 대수적 폐포
+
+이제 다음을 정의한다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> Field $\mathbb{K}$의 *algebraic closure*는 $\mathbb{K}$의 algebraic extension 중 그 자체로 algebraically closed인 것을 뜻한다. 
+
+</div>
+
+Algebraic closure의 존재성을 보이기 위해서 $\mathbb{K}[\x]$의 모든 (non-constant) 다항식들의 splitting field $\Omega$를 생각하는 것이 자연스러울 것이다. 그러나 $\Omega$가 algebraically closed임을 보이려면, $\mathbb{K}$에서 넣어준 근들을 계수로 갖는 다항식의 근들 또한 다시 $\Omega$에 속한다는 것을 보여야 하므로 이는 그렇기게 간단하지는 않다. 다음 명제는 이러한 상황을 고민할 필요가 없다는 것을 보여준다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10**</ins> Algebraic extension $\Omega/\mathbb{K}$가 algebraically closed인 것은 $\mathbb{K}[\x]$의 임의의 non-constant polynomial이 $\Omega[\x]$ 안에서 일차식의 곱으로 인수분해되는 것과 동치이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+당연히 한쪽 방향만 보이면 충분하다. 이를 위해 $\Omega$의 임의의 algebraic extension $\Omega'$를 잡고, $x\in\Omega'$라 하자. 우리는 $x\in \Omega$임을 보여야 한다. 우선 $x$는 $\Omega$에 대해 algebraic이고, $\Omega/\mathbb{K}$가 algebraic이므로 $x$는 $\mathbb{K}$에 대해서도 algebraic이다. 이제 $u\in \mathbb{K}[\x]$를 $x$의 minimal polynomial이라 하면, $u$는 $\Omega[\x]$에서 일차식들의 곱으로 쪼개지며 따라서 $x\in \Omega$이다. 
+
+</details>
