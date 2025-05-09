@@ -90,4 +90,39 @@ $$\Sym(M)=\bigoplus_{d=0}^\infty \Sym^d(M)$$
 
 $\Sym(M)$은 앞서 정의했던 symmetric algebra $S(M)$과는 구별해야 하지만, 좋은 경우에는 이들 둘이 서로 isomorphic하다는 것을 보일 수 있다. 
 
-우선 두 symmetric tensor의 곱을 정의하자. 
+우선 두 symmetric tensor의 곱을 정의하자. 일반적으로 임의의 두 symmetric tensor
+
+$$x=x_1\otimes x_2\otimes \cdots \otimes x_p,\qquad y=y_1\otimes y_2\otimes \cdots \otimes y_q$$
+
+를 가져왔을 떄, 이들의 텐서로서의 곱
+
+$$x\otimes y=x_1\otimes x_2\otimes \cdots \otimes x_p\otimes y_1\otimes y_2\otimes \cdots \otimes y_q$$
+
+이 symmetric tensor가 될 것이라는 보장은 없다. 간단히 위의 꼴에서 $x_i$와 $y_j$의 위치를 서로 바꾸는 원소를 생각하면 이것이 symmetric tensor의 조건을 만족하지 않을 수도 있기 대문이다. 
+
+대신 위의 형태의 곱은 $S_{p+q}$의 subgroup $S_p\times S_q$의 action에 대해서는 invariant하다. 따라서 
+
+$$xy=\tr_{S_{p+q}/S_p\times S_q}(x\otimes y)$$
+
+으로 정의하면 $xy\in M^{S_{p+q}}$이고 그 값은 
+
+$$\sum_{S_{p+q}/(S_p\times S_q)} \bar{\sigma}(x\otimes y)$$
+
+이다. 한편, $S_{p,q}$를 다음의 식
+
+$$\sigma(1)<\sigma(2)< \cdots < \sigma(p), \qquad \sigma(p+1)<\sigma(p+2)<\cdots< \sigma(p+q)$$
+
+를 만족하는 $\sigma$들로 이루어진 $S_{p+q}$의 subgroup이라 하면 어렵지 않게 $S_{p+q}/S_p\times S_q$와 $S_{p,q}$ 사이의 bijection을 찾을 수 있다. 따라서 위의 식은 다시
+
+$$xy=\sum_{\sigma\in S_{p,q}}\sigma(x\otimes y)$$
+
+으로 적을 수 있다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop4">**명제 4**</ins> 
+
+</div>
+
+. 여기서 $S_p\times S_q$는 각각 $\\{1,\ldots, p+q\\}$의 앞의 $p$개의 원소와 뒤의 $q$개의 원소를 보존하는 subgroup이다. 
+
