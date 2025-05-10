@@ -120,9 +120,75 @@ $$xy=\sum_{\sigma\in S_{p,q}}\sigma(x\otimes y)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> 
+<ins id="prop4">**명제 4**</ins> 임의의 $A$-module $M$에 대하여 다음이 성립한다.
+
+1. $\Sym(M)$은 위에서 정의한 곱셈에 의해 associative, commutative unital $A$-algebra가 된다. 
+2. 양의 정수 $p_1,\ldots, p_n$에 대하여, 다음의 식
+    
+    $$x_1x_2\cdots x_n=\tr_{S_{p_1+\cdots+p_n}/S_{p_1}\times\cdots\times S_{p_n}}(x_1\otimes \cdots\otimes x_n)$$
+
+    이 성립한다.
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-. 여기서 $S_p\times S_q$는 각각 $\\{1,\ldots, p+q\\}$의 앞의 $p$개의 원소와 뒤의 $q$개의 원소를 보존하는 subgroup이다. 
+둘째 주장부터 보이자. 귀납법으로 진행한다. $n=2$일 때는 정의와 같으므로, 귀납적으로
 
+$$x_2\cdots x_n=\tr_{S_{p_2+\dots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2 \otimes \dots \otimes x_n)$$
+
+이 성립한다고 가정하자. 이제 $S_{p_1+\cdots+p_n}$의 subgroup들의 tower
+
+$$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots p_n}\geq \left\{\id_{p_1}\right\}\times S_{p_2+\cdots+p_n}$$
+
+을 생각하면, [명제 2](#prop2)의 결과에 의하여
+
+$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)$$
+
+이 성립한다. 이제 우변을 계산하면, 위의 포함관계에 의해
+
+$$\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)=x_1\otimes\tr_{S_{p_2+\cdots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2\otimes\cdots\otimes x_n)=x_1\otimes (x_2\cdots x_n)$$
+
+이고 따라서
+
+$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}(x_1\otimes (x_2\cdots x_n))=x_1(x_2\cdots x_n)$$
+
+이 성립한다. 만일 처음 시작을 다음 subgroup들의 tower
+
+$$S_{p_1+\cdots+p_n}\geq S_{p_1+\cdots p_{n-1}}\times S_{p_n}\geq S_{p_1+\cdots p_{n-1}}\times 1$$
+
+로 시작했다면 
+
+$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=(x_1\cdots x_{n-1})x_n$$
+
+을 얻을 것이며 특히 $n=3$인 경우에는 이로부터 $\Sym(M)$의 associativity가 보여진다. Commutativity의 경우, $\sigma$를 $p_1+p_2$개의 원소 중, 앞의 $p_1$개의 원소와 뒤의 $p_2$개의 원소를 다음의 꼴
+
+$$\underbrace{p_2+1,\cdots p_2+p_1}_\text{\scriptsize$p_1$ elements},\qquad \underbrace{1,\ldots, p_2}_\text{\scriptsize$p_2$ elements}$$
+
+로 배열하는 $\sigma\in S_{p_1+p_2}$를 사용하여 [명제 2](#prop2)의 첫째 결과를 사용하면 된다. Unit은 당연하게 $1\in \Sym^0(M)$이다.
+
+</details>
+
+임의의 $x\in M$과 $k\in \mathbb{N}$에 대하여, 
+
+$$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$$
+
+으로 정의하자. 그럼 위의 명제를 사용하여 계산하면 다음의 따름정리를 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="cor5">**따름정리 5**</ins> 다음이 성립한다. 
+
+1. [명제 4](#prop4)에서 정의한 $x$의 곱 $x^k$는 $p!\gamma_k(x)$와 같다. 
+2. 임의의 $x_1,\ldots, x_n\in M$에 대하여,
+    
+    $$\gamma_p(x_1+\cdots+x_n)=\sum_{p_1+\cdots+p_n=p}\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)$$
+
+    이 성립한다. 
+3. 임의의 $x_1,\ldots, x_n\in M$에 대하여, $p=p_1+\cdots+p_n$이라 하자. 그럼 $\\{1,\ldots, p\\}=P_1\cup\cdots\cup P_n$이도록 하는 집합 $\\{1,\ldots, p\\}$의 분할들의 순서쌍
+
+    $$\mathscr{P}=\left\{(P_1,\ldots, P_n)\bigg\mid \bigcup_{k=1}^n P_k=\{1,\ldots, p\}, P_i\cap P_j=\emptyset\right\}$$
+
+    에 대하여, 
+
+</div>
