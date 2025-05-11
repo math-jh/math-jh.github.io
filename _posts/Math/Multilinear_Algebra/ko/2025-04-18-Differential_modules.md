@@ -88,11 +88,11 @@ $$(x,y)(x',y')=(xx', xy+\varepsilon(\delta, \deg x)xy')$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> Commutative ring $A$, $A$-module $M$에 대하여, $B=T(M)$, $S(M)$, $\bigwedge(M)$ 중 하나라 하고, $(B,B)$-bimodule $E$가 주어졌다 하자. 또, derivation $d_0: A \rightarrow E$와 abelian group homomorphism $d_1: M \rightarrow E$가 다음의 조건
+<ins id="prop5">**명제 5**</ins> Commutative ring $A$, $A$-module $M$에 대하여, $B=\T(M)$, $\S(M)$, $\bigwedge(M)$ 중 하나라 하고, $(B,B)$-bimodule $E$가 주어졌다 하자. 또, derivation $d_0: A \rightarrow E$와 abelian group homomorphism $d_1: M \rightarrow E$가 다음의 조건
 
 $$d_1(ax)=ad_1(x)+d_0(a)x$$
 
-을 만족한다고 가정하자. 만일 $B=S(M)$이라면 다음 조건
+을 만족한다고 가정하자. 만일 $B=\S(M)$이라면 다음 조건
 
 $$xd_1(y)+d_1(x)y=yd_1(x)+d_1(y)x$$
 
@@ -254,29 +254,29 @@ $$\Hom_E(\Omega_{E/A}, N)\cong\Der_A(E, N)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> Commutative ring $A$와 $A$-module $M$이 주어졌다 하자. 그럼 symmetric algebra $S(M)$은 commutative $A$-algebra이다. 따라서, 임의의 $S(M)$-module $N$과 $A$-derivation $D:S(M)\rightarrow N$이 주어질 때마다 다음의 식
+<ins id="ex10">**예시 10**</ins> Commutative ring $A$와 $A$-module $M$이 주어졌다 하자. 그럼 symmetric algebra $\S(M)$은 commutative $A$-algebra이다. 따라서, 임의의 $\S(M)$-module $N$과 $A$-derivation $D:\S(M)\rightarrow N$이 주어질 때마다 다음의 식
 
-$$D=g\circ d_{S(M)/A}$$
+$$D=g\circ d_{\S(M)/A}$$
 
-이 성립하도록 하는 $A$-linear map $g:\Omega_{S(M)/A}\rightarrow N$이 유일하게 존재한다. 
+이 성립하도록 하는 $A$-linear map $g:\Omega_{\S(M)/A}\rightarrow N$이 유일하게 존재한다. 
 
-한편, 우리는 임의의 $A$-derivation $D:S(M)\rightarrow L$이 주어졌을 때, 이를 $M$으로 제한한 $D\vert_M$이 $M$에서 $L$로의 $A$-module homomorphism이며, 이 대응 $D\mapsto D\vert_M$이 실은 $S(M)$-module isomorphism이라는 것을 [명제 5](#prop5)를 통해 확인할 쑤 있다. 한편 $L$은 $S(M)$-module이므로 [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)에 의하여 
+한편, 우리는 임의의 $A$-derivation $D:\S(M)\rightarrow L$이 주어졌을 때, 이를 $M$으로 제한한 $D\vert_M$이 $M$에서 $L$로의 $A$-module homomorphism이며, 이 대응 $D\mapsto D\vert_M$이 실은 $\S(M)$-module isomorphism이라는 것을 [명제 5](#prop5)를 통해 확인할 쑤 있다. 한편 $L$은 $\S(M)$-module이므로 [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)에 의하여 
 
-$$\Hom_{S(M)}(M\otimes_AS(M),L)\cong\Hom_A(M,L)$$
+$$\Hom_{\S(M)}(M\otimes_A\S(M),L)\cong\Hom_A(M,L)$$
 
-이 성립하므로, 이를 종합하면 임의의 $A$-derivation $D:S(M)\rightarrow N$은 canonical homomorphism
+이 성립하므로, 이를 종합하면 임의의 $A$-derivation $D:\S(M)\rightarrow N$은 canonical homomorphism
 
-$$M\rightarrow M\otimes_AS(M);\qquad x\mapsto x\otimes1$$
+$$M\rightarrow M\otimes_A\S(M);\qquad x\mapsto x\otimes1$$
 
-를 확장하여 얻어지는 $A$-derivation $D_0$과, 적당한 $h\in \Hom_{S(M)}(M\otimes_AS(M),L)$에 대하여 $D=h\circ D_0$의 꼴로 적을 수 있다는 것을 안다. 
+를 확장하여 얻어지는 $A$-derivation $D_0$과, 적당한 $h\in \Hom_{\S(M)}(M\otimes_A\S(M),L)$에 대하여 $D=h\circ D_0$의 꼴로 적을 수 있다는 것을 안다. 
 
-간단한 계산으로 첫째 계산에서 $N=M\otimes_AS(M)$일 때 얻어지는 $A$-linear map $\Omega_{S(M)/A}\rightarrow M\otimes_AS(M)$과, 둘째 계산에서 $L=\Omega_A(S(M))$일 때 얻어지는 $h$는 서로의 역함수이며 따라서 isomorphism
+간단한 계산으로 첫째 계산에서 $N=M\otimes_A\S(M)$일 때 얻어지는 $A$-linear map $\Omega_{\S(M)/A}\rightarrow M\otimes_A\S(M)$과, 둘째 계산에서 $L=\Omega_A(\S(M))$일 때 얻어지는 $h$는 서로의 역함수이며 따라서 isomorphism
 
-$$\Omega_{S(M)/A}\cong M\otimes_AS(M)$$
+$$\Omega_{\S(M)/A}\cong M\otimes_A\S(M)$$
 
-이 성립함을 알고, 뿐만 아니라 이 isomorphism을 $\omega:M\otimes_AS(M)\rightarrow\Omega_{S(M)/A}$이라 적는다면 임의의 $x\in M$에 대하여 $\omega(x\otimes1)=d_{S(M)/A}(x)=dx$임을 안다. 
+이 성립함을 알고, 뿐만 아니라 이 isomorphism을 $\omega:M\otimes_A\S(M)\rightarrow\Omega_{\S(M)/A}$이라 적는다면 임의의 $x\in M$에 대하여 $\omega(x\otimes1)=d_{\S(M)/A}(x)=dx$임을 안다. 
 
-특히, 만일 $M$이 free $A$-module of finite rank $n$이라면, $S(M)$은 polynomial algebra $A[\x_1,\ldots, \x_n]$과 identify할 수 있으며 이 identification 하에서 $d\x_i$들은 <em_ko>정말로</em_ko> $\x_i$의 $d=d_{S(M)/A}$에 의한 image이며, 다항식 $p\in A[\x_1,\ldots, \x_n]$의 $d$에 의한 image를 $\Omega_{S(M)/A}$의 basis $d\x_i$들의 linear combination으로 나타낸다면 그 앞에 붙는 계수들이 정확히 $p$의 $i$번째 편미분 $\partial p/\partial \x_i$이 된다. 
+특히, 만일 $M$이 free $A$-module of finite rank $n$이라면, $\S(M)$은 polynomial algebra $A[\x_1,\ldots, \x_n]$과 identify할 수 있으며 이 identification 하에서 $d\x_i$들은 <em_ko>정말로</em_ko> $\x_i$의 $d=d_{\S(M)/A}$에 의한 image이며, 다항식 $p\in A[\x_1,\ldots, \x_n]$의 $d$에 의한 image를 $\Omega_{\S(M)/A}$의 basis $d\x_i$들의 linear combination으로 나타낸다면 그 앞에 붙는 계수들이 정확히 $p$의 $i$번째 편미분 $\partial p/\partial \x_i$이 된다. 
 
 </div>
 
