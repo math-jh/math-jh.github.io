@@ -103,12 +103,12 @@ $$1+\prod_{a\in \Omega}(\x-a)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Algebraic extension을 할 때는 어차피 다항식의 근만이 중요하므로, 주어진 다항식들 $f_i$들이 모두 monic polynomial이라 가정하여도 된다. 각각의 $f_i$가 degree $d_i$ monic polynomial이라 하자. 그럼 [##ref##](universal_decomposition_algebra)에 의하여, 각각의 $i$마다 다음의 두 조건
+Algebraic extension을 할 때는 어차피 다항식의 근만이 중요하므로, 주어진 다항식들 $f_i$들이 모두 monic polynomial이라 가정하여도 된다. 각각의 $f_i$가 degree $d_i$ monic polynomial이라 하자. 그럼 [\[다중선형대수학\] §대칭텐서, ⁋명제 13](/ko/math/multilinear_algebra/symmetric_tensors#prop13)에 의하여, 각각의 $i$마다 다음의 두 조건
 
 1. $A_i$는 $\mathbb{K}$-algebra로서 $\xi_{i,1},\ldots, \xi_{i, d_i}$에 의해 생성된다. 
 2. $A_i[\x]$에서 $f_i(\x)=\prod_{k=1}^{d_i} (\x-\xi_{i,k})$이 성립한다. 
 
-$\mathbb{K}$-algebra $A_i$, 원소들 $\xi_{i,1},\ldots, \xi_{i, d_i}\in A_i$를 잡아줄 수 있다. 
+을 만족하는 $\mathbb{K}$-algebra $A_i$, 원소들 $\xi_{i,1},\ldots, \xi_{i, d_i}\in A_i$를 잡아줄 수 있다. 
 
 이제 이들을 이용하여 $\mathbb{K}$의 extension을 만들어야 한다. 
 
@@ -149,3 +149,20 @@ Algebraic closure의 존재성을 보이기 위해서 $\mathbb{K}[\x]$의 모든
 당연히 한쪽 방향만 보이면 충분하다. 이를 위해 $\Omega$의 임의의 algebraic extension $\Omega'$를 잡고, $x\in\Omega'$라 하자. 우리는 $x\in \Omega$임을 보여야 한다. 우선 $x$는 $\Omega$에 대해 algebraic이고, $\Omega/\mathbb{K}$가 algebraic이므로 $x$는 $\mathbb{K}$에 대해서도 algebraic이다. 이제 $u\in \mathbb{K}[\x]$를 $x$의 minimal polynomial이라 하면, $u$는 $\Omega[\x]$에서 일차식들의 곱으로 쪼개지며 따라서 $x\in \Omega$이다. 
 
 </details>
+
+따라서, 주어진 field $\mathbb{K}$의 algebraic closure를 찾기 위해서는 $\mathbb{K}$의 임의의 non-constant polynomial들의 splitting field를 생각하면 된다. 이는 [명제 8](#prop8)에 의해 반드시 유일하다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11**</ins> Field $\mathbb{K}$의 algebraic extension $\Omega/\mathbb{K}$에 대하여 다음이 성립한다.
+
+1. 만일 $\Omega$가 algebraically closed라면, $\mathbb{K}$의 임의의 algebraic extension은 $\Omega/\mathbb{K}$의 어떠한 subextension과 isomorphic하다.
+2. 거꾸로, 만일 $\mathbb{K}$의 임의의 finite degree algebraic extension이 $\Omega$의 subextension과 isomorphic하다면 $\Omega$는 algebraically closed이다. 
+
+</div>
+
+따라서 $\mathbb{K}$의 algebraic closure는 isomorphism에 대해 유일하게 존재한다. 이를 $\bar{\mathbb{K}}$로 적는다. 
+
+## 제곱근 확장
+
+Field $\mathbb{K}$의 characteristic이 $0$인 경우 우리는 $\mathbb{K}$의 characteristic exponent가 1이라 정의하였고, 그 외 $\mathbb{K}$의 characteristic exponent는 $\char \mathbb{K}$와 같은 것으로 두었다. 다음 글에서 
