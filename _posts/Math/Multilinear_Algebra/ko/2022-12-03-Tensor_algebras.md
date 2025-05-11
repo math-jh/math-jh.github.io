@@ -29,27 +29,27 @@ $$F(M)=\bigoplus_{n\geq 0} M^{\otimes n}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 위에서 정의한 $F(M)$을 $M$의 *tensor algebra<sub>텐서대수</sub>*라 부르고, $T(M)$으로 표기한다. 
+<ins id="def1">**정의 1**</ins> 위에서 정의한 $F(M)$을 $M$의 *tensor algebra<sub>텐서대수</sub>*라 부르고, $\T(M)$으로 표기한다. 
 
 </div>
 
-이들 각각의 성분 $M^{\otimes n}$을 $T^n(M)$으로 표기하기로 한다. 그럼 $T^1(M)=M$이므로, $M$에서 $T(M)$으로의 canonical injection $\iota: M \rightarrow T(M)$이 존재한다. 
+이들 각각의 성분 $M^{\otimes n}$을 $\T^n(M)$으로 표기하기로 한다. 그럼 $\T^1(M)=M$이므로, $M$에서 $\T(M)$으로의 canonical injection $\iota: M \rightarrow \T(M)$이 존재한다. 
 
 이제 adjoint $T\dashv U$를 생각하면, $\iota$는 다음 adjunction
 
-$$\Hom_{\Alg{A}}(T(M), T(M))\cong \Hom_{\rMod{A}}(M, UT(M))$$
+$$\Hom_{\Alg{A}}(\T(M), \T(M))\cong \Hom_{\rMod{A}}(M, U\T(M))$$
 
-에 의한 $\id_{T(M)}$의 image이고, $T(M)$을 $\mathbb{N}$-graded associative unital algebra로 보면 좌변을 적절한 category로 바꿔주면 된다. 이 adjoint를 universal property로 풀어쓰면 다음과 같다.  
+에 의한 $\id_{\T(M)}$의 image이고, $\T(M)$을 $\mathbb{N}$-graded associative unital algebra로 보면 좌변을 적절한 category로 바꿔주면 된다. 이 adjoint를 universal property로 풀어쓰면 다음과 같다.  
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 임의의 $A$-algebra $E$와 $A$-linear map $u:M \rightarrow E$가 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: T(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
+<ins id="prop2">**명제 2**</ins> 임의의 $A$-algebra $E$와 $A$-linear map $u:M \rightarrow E$가 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \T(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
 
 추가로, 만일 $E$가 $\mathbb{N}$-graded $A$-algebra이고, $u(M)\subseteq E_1$이 성립한다면 위에서 얻어지는 $A$-algebra homomorphism $g$는 $\mathbb{N}$-graded $A$-algebra homomorphism이 된다.
 
 </div>
 
-만일 위의 linear map $u$가 surjective라면, $T(N)$이 $T^1(N)$으로 생성되는 것으로부터 $T(u): T(M) \rightarrow T(N)$이 surjective가 되는 것을 안다. 
+만일 위의 linear map $u$가 surjective라면, $\T(N)$이 $\T^1(N)$으로 생성되는 것으로부터 $\T(u): \T(M) \rightarrow \T(N)$이 surjective가 되는 것을 안다. 
 
 ## 탠서대수의 성질들
 
@@ -57,15 +57,15 @@ $$\Hom_{\Alg{A}}(T(M), T(M))\cong \Hom_{\rMod{A}}(M, UT(M))$$
 
 우선 direct sum의 경우를 살펴본다. $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하자. 그럼 $\otimes$가 $\Hom$의 left adjoint라는 사실과 약간의 귀납법을 통해 다음의 isomorphism
 
-$$\bigoplus_{(i_1,\ldots, i_n)\in I^n}M_{i_1}\otimes\cdots\otimes M_{i_n}\cong T^n(M)$$
+$$\bigoplus_{(i_1,\ldots, i_n)\in I^n}M_{i_1}\otimes\cdots\otimes M_{i_n}\cong \T^n(M)$$
 
-을 얻고, 그럼 $T(M)$은 이들의 direct sum
+을 얻고, 그럼 $\T(M)$은 이들의 direct sum
 
-$$T(M)\cong\bigoplus_{n\geq 0} T^n(M)\cong\bigoplus_{n\geq 0}\bigoplus_{(i_1,\ldots, i_n)\in I^n}M_{i_1}\otimes\cdots\otimes M_{i_n}$$
+$$\T(M)\cong\bigoplus_{n\geq 0} \T^n(M)\cong\bigoplus_{n\geq 0}\bigoplus_{(i_1,\ldots, i_n)\in I^n}M_{i_1}\otimes\cdots\otimes M_{i_n}$$
 
 으로 주어진다. 이는 식으로는 복잡해보이지만, 기본적으로는 $T$가 left adjoint이므로 
 
-$$T\left(\bigoplus_{i\in I} M_i\right)\cong \coprod_{i\in I} T(M_i)$$
+$$T\left(\bigoplus_{i\in I} M_i\right)\cong \coprod_{i\in I} \T(M_i)$$
 
 로부터, 우변의 graded algebra들의 coproduct를 풀어쓴 것에 불과하다.[^1]
 
@@ -77,7 +77,7 @@ $$M=\bigoplus_{i\in I} Ae_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 위와 같은 상황에서, $T(M)$은 다음의 꼴
+<ins id="prop3">**명제 3**</ins> 위와 같은 상황에서, $\T(M)$은 다음의 꼴
 
 $$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n},\qquad\text{$s$ a finite sequence $(i_1,i_2,\ldots,i_n)$ in $I$}$$
 
@@ -85,7 +85,7 @@ $$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n},\qquad\text{$s$ a finite sequence $(i_
 
 </div>
 
-이는 $T^n(M)$ 각각이 길이 $n$짜리 유한한 수열 $s$를 사용해 정의한 $e_s$들을 basis로 갖고, 이들의 direct sum이 $T(M)$이기 때문이다. 한편 우리는 [§기저, ⁋정의 9](/ko/math/multilinear_algebra/basis_of_free_modules#def9)의 structure constant를 사용하면 $T(M)$의 곱셈을 서술할 수 있다는 것을 알고 있는데, 위의 설명에 따르면 이는 다른 것이 아니라 단순히 수열을 이어쓰기하여 얻어지는 것이다. 즉 두 수열
+이는 $\T^n(M)$ 각각이 길이 $n$짜리 유한한 수열 $s$를 사용해 정의한 $e_s$들을 basis로 갖고, 이들의 direct sum이 $\T(M)$이기 때문이다. 한편 우리는 [§기저, ⁋정의 9](/ko/math/multilinear_algebra/basis_of_free_modules#def9)의 structure constant를 사용하면 $\T(M)$의 곱셈을 서술할 수 있다는 것을 알고 있는데, 위의 설명에 따르면 이는 다른 것이 아니라 단순히 수열을 이어쓰기하여 얻어지는 것이다. 즉 두 수열
 
 $$s=(i_1,\ldots, i_m),\qquad t=(j_1,\ldots, j_n)$$
 
@@ -99,7 +99,7 @@ $$e_se_t=e_{st}$$
 
 이 된다. 
 
-Extension of scalar의 경우, ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하고, $M$이 $A$-module이라 하자. 그럼 extension of scalar $\phi_!: \rMod{A} \rightarrow\rMod{B}$와 두 functor $T_A: \rMod{A} \rightarrow \Alg{A}$, $T_B:\rMod{B} \rightarrow \Alg{B}$가 존재하며, 자명한 방식으로 $\phi_!:\Alg{A} \rightarrow\Alg{B}$ 또한 정의된다. 이를 통해 다음의 (graded) $B$-linear map
+Extension of scalar의 경우, ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하고, $M$이 $A$-module이라 하자. 그럼 extension of scalar $\phi_!: \rMod{A} \rightarrow\rMod{B}$와 두 functor $\T_A: \rMod{A} \rightarrow \Alg{A}$, $\T_B:\rMod{B} \rightarrow \Alg{B}$가 존재하며, 자명한 방식으로 $\phi_!:\Alg{A} \rightarrow\Alg{B}$ 또한 정의된다. 이를 통해 다음의 (graded) $B$-linear map
 
 ![extension_of_scalars](/assets/images/Math/Multilinear_Algebra/Tensor_algebras-1.png){:style="width:16.8em" class="invert" .align-center}
 
@@ -107,7 +107,7 @@ Extension of scalar의 경우, ring homomorphism $\phi: A \rightarrow B$가 주�
 
 <div class="proposition" markdown="1">
  
-<ins id="prop4">**명제 4**</ins> 위에서 얻어지는 $B$-linear map $T_{B}(B\otimes_AM)\rightarrow B\otimes_AT_A(M)$은 isomorphism이다.
+<ins id="prop4">**명제 4**</ins> 위에서 얻어지는 $B$-linear map $\T_{B}(B\otimes_AM)\rightarrow B\otimes_A\T_A(M)$은 isomorphism이다.
  
 </div> 
 <details class="proof" markdown="1">
@@ -119,23 +119,23 @@ $$\Hom_\rMod{B}(\phi_!M,\phi_!M)\cong\Hom_\rMod{A}(M, \phi^\ast \phi_!M)$$
 
 로부터 $\id_{\phi_!M}$에 해당하는 $A$-linear map $i: M \rightarrow \phi^\ast\phi_!M$을 얻자. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)) 그 후, $A$-module $\phi^\ast\phi_!M$을 $B$-module $\phi_!M$으로 본 후 
 
-$$\iota_{\phi_!M}: \phi_!M \rightarrow T_B(\phi_!M)$$
+$$\iota_{\phi_!M}: \phi_!M \rightarrow \T_B(\phi_!M)$$
 
-을 생각하면 이는 $A$-module $M$에서 $A$-module $\phi^\ast T_B(\phi_!M)$ (더 정확히는 $U\phi^\ast T_B(\phi^\ast\phi_!M)$)으로의 $A$-linear map이다. 따라서 [명제 2](#prop2)에 의하여 다음의 diagram
+을 생각하면 이는 $A$-module $M$에서 $A$-module $\phi^\ast \T_B(\phi_!M)$ (더 정확히는 $U\phi^\ast \T_B(\phi^\ast\phi_!M)$)으로의 $A$-linear map이다. 따라서 [명제 2](#prop2)에 의하여 다음의 diagram
 
 ![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_algebras-2.png){:style="width:11em" class="invert" .align-center}
 
 을 commute하도록 하는 $A$-algebra homomorphism $T\_A(M)\rightarrow \phi^\ast T\_{B}(\phi_!M)$이 유일하게 존재한다. 이제 다음의 adjoint
 
-$$\Hom_{\Alg{A}}(T_A(M), \phi^\ast T_B(\phi_!M))\cong \Hom_\Alg{B}(\phi_! T_A(M), T_B(\phi_!M))$$
+$$\Hom_{\Alg{A}}(\T_A(M), \phi^\ast \T_B(\phi_!M))\cong \Hom_\Alg{B}(\phi_! \T_A(M), \T_B(\phi_!M))$$
 
-에 의하여 이를 $B$-linear map $\phi_!T_A(M) \rightarrow T_B(\phi_!M)$으로 보면 이것이 위의 $B$-linear map의 inverse가 되는 것을 확인할 수 있다. 
+에 의하여 이를 $B$-linear map $\phi_!\T_A(M) \rightarrow \T_B(\phi_!M)$으로 보면 이것이 위의 $B$-linear map의 inverse가 되는 것을 확인할 수 있다. 
 
 </details>
 
 ## Mixed tensor
 
-이제 free $A$-module $M$을 고정하고, $M\oplus M^\ast$의 tensor algebra $T(M\oplus M^\ast)$를 생각하면, [명제 3](#prop3)의 결과로부터 $T^n(M\oplus M^\ast)$는 
+이제 free $A$-module $M$을 고정하고, $M\oplus M^\ast$의 tensor algebra $\T(M\oplus M^\ast)$를 생각하면, [명제 3](#prop3)의 결과로부터 $\T^n(M\oplus M^\ast)$는 
 
 아 이게 애매하네... tensor field를 저걸로 정의하면 깔끔할 것 같은데 저럼 순서가 다르면 다른걸로 취급하게 되니까... 암튼 이걸 해결한다면 contraction 먹여서 죽이는거 설명하면 될거같다
 
@@ -143,21 +143,21 @@ $$\Hom_{\Alg{A}}(T_A(M), \phi^\ast T_B(\phi_!M))\cong \Hom_\Alg{B}(\phi_! T_A(M)
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 임의의 $A$-module $M$에 대하여, tensor algebra $T(M)$의 two-sided ideal
+<ins id="def5">**정의 5**</ins> 임의의 $A$-module $M$에 대하여, tensor algebra $\T(M)$의 two-sided ideal
 
 $$\mathfrak{I}=\langle x\otimes y-y\otimes x\mid x,y\in M\rangle$$
 
-을 생각하자. 그럼 quotient algebra $T(M)/\mathfrak{I}$를 $M$의 *symmetric algebra<sub>대칭대수</sub>*라 부르고 $S(M)$으로 적는다. 
+을 생각하자. 그럼 quotient algebra $\T(M)/\mathfrak{I}$를 $M$의 *symmetric algebra<sub>대칭대수</sub>*라 부르고 $\S(M)$으로 적는다. 
 
 </div>
 
-정의로부터 $\mathfrak{I}$는 homogeneous ideal이므로 $T(M)/\mathfrak{I}$가 $\mathbb{Z}_{\geq 0}$-graded ideal이 되는 것은 자명하다. 또, 각각의 generator들 $x\otimes y-y\otimes x$는 모두 degree $2$의 원소이므로, $\mathfrak{I}$로 quotient를 취하는 것은 $T^0(M)$과 $T^1(M)$에는 아무런 영향을 미치지 않는다. 즉, $S^0(M)\cong A$이고 $S^1(M)\cong M$이다. 
+정의로부터 $\mathfrak{I}$는 homogeneous ideal이므로 $\T(M)/\mathfrak{I}$가 $\mathbb{Z}_{\geq 0}$-graded ideal이 되는 것은 자명하다. 또, 각각의 generator들 $x\otimes y-y\otimes x$는 모두 degree $2$의 원소이므로, $\mathfrak{I}$로 quotient를 취하는 것은 $\T^0(M)$과 $\T^1(M)$에는 아무런 영향을 미치지 않는다. 즉, $\S^0(M)\cong A$이고 $\S^1(M)\cong M$이다. 
 
-정의로부터 $S(M)$이 commutative unital associative algebra인 것은 자명하다. 이는 $S(M)$이 $S^1(M)$의 원소들로 생성되는데, 임의의 $x,y\in S^1(M)\cong M$에 대해서는
+정의로부터 $\S(M)$이 commutative unital associative algebra인 것은 자명하다. 이는 $\S(M)$이 $\S^1(M)$의 원소들로 생성되는데, 임의의 $x,y\in \S^1(M)\cong M$에 대해서는
 
 $$x\otimes y\equiv y\otimes x\pmod{\mathfrak{I}}$$
 
-이기 때문이다. $S(M)$의 두 원소의 곱은 곱셈처럼 $xy$ 등과 같이 쓰는 것이 관례이다.
+이기 때문이다. $\S(M)$의 두 원소의 곱은 곱셈처럼 $xy$ 등과 같이 쓰는 것이 관례이다.
 
 한편 quotient algebra의 universal property와 [명제 2](#prop2)로부터 다음의 universal property 또한 자명하게 얻어진다. 
 
@@ -167,7 +167,7 @@ $$x\otimes y\equiv y\otimes x\pmod{\mathfrak{I}}$$
 
 $$u(x)u(y)=u(y)u(x)\qquad\text{for all $x,y\in M$}$$
 
-주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: S(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
+주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \S(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
 
 </div>
 
@@ -179,15 +179,15 @@ $$f(x_{\sigma(1)},x_{\sigma(2)},\ldots, x_{\sigma(n)})=f(x_1,x_2,\ldots, x_n),\q
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> 두 $A$-module $M,N$에 대하여, 임의의 $A$-linear map $g:S^n(M) \rightarrow N$에 대하여 다음의 식
+<ins id="prop7">**명제 7**</ins> 두 $A$-module $M,N$에 대하여, 임의의 $A$-linear map $g:\S^n(M) \rightarrow N$에 대하여 다음의 식
 
 $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1x_2\cdots x_n)$$
 
-으로 정의되는 함수는 $n$-linear이고, 이 대응을 통해 $\Hom_{\lMod{A}}(S^n(M), N)$에서, symmetric $n$-linear map $M^n \rightarrow N$들의 $A$-module로의 bijective $A$-module homomorphism이 정의된다. 
+으로 정의되는 함수는 $n$-linear이고, 이 대응을 통해 $\Hom_{\lMod{A}}(\S^n(M), N)$에서, symmetric $n$-linear map $M^n \rightarrow N$들의 $A$-module로의 bijective $A$-module homomorphism이 정의된다. 
 
 </div>
 
-이 때, $A$-module $S^n(M)$을 $M$의 *$n$번째 symmetric power<sub>$n$번째 대칭곱</sub>*이라 부른다. 그럼 임의의 $A$-linear map $u:M \rightarrow N$에 대하여, $S^n(u): S^n(M) \rightarrow S^n(N)$이 유도되며 이들의 direct sum을 취하면 $S(u)$를 복원할 수 있다.
+이 때, $A$-module $\S^n(M)$을 $M$의 *$n$번째 symmetric power<sub>$n$번째 대칭곱</sub>*이라 부른다. 그럼 임의의 $A$-linear map $u:M \rightarrow N$에 대하여, $\S^n(u): \S^n(M) \rightarrow \S^n(N)$이 유도되며 이들의 direct sum을 취하면 $\S(u)$를 복원할 수 있다.
 
 ## 대칭대수의 성질들
 
@@ -195,7 +195,7 @@ $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1x_2\cdots x_n)$$
 
 우선 $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하자. 그럼 우리는 다음의 isomorphism
 
-$$S(M)\cong \bigotimes_{i\in I} S(M_i)$$
+$$\S(M)\cong \bigotimes_{i\in I} \S(M_i)$$
 
 를 얻는다. 이는 $S$가 forgetful functor $U:\cAlg{A}\rightarrow \rMod{M}$의 left adjoint이므로 colimit을 보존하고, $\cAlg{A}$에서의 colimit은 ($\cRing$에서의 coproduct가 tensor product이듯) $\otimes_A$로 주어지기 때문이다. 특히 [명제 3](#prop3)과 같이 free $A$-module의 basis $(e_i)$를 고정해두고 나면 다음의 명제를 얻는다.
 
@@ -205,17 +205,17 @@ $$S(M)\cong \bigotimes_{i\in I} S(M_i)$$
 
 $$e^\alpha=\prod_{i\in I} e_i^{\alpha(i)}$$
 
-라 하면, 이러한 원소들을 모두 모아둔 것이 $S(M)$의 basis가 된다.
+라 하면, 이러한 원소들을 모두 모아둔 것이 $\S(M)$의 basis가 된다.
 
 </div>
 
-이들의 multiplication은 $e^\alpha e^\beta=e^{\alpha+\beta}$로 주어진다. 즉 이 경우 $S(M)$은 정확하게 polynomial algebra $A[\x_i]_{i\in I}$가 된다. 
+이들의 multiplication은 $e^\alpha e^\beta=e^{\alpha+\beta}$로 주어진다. 즉 이 경우 $\S(M)$은 정확하게 polynomial algebra $A[\x_i]_{i\in I}$가 된다. 
 
 [명제 4](#prop4)에 대응되는 결과는 다음의 명제이며, 그 증명 또한 동일하다. 
 
 <div class="proposition" markdown="1">
  
-<ins id="prop9">**명제 9**</ins> $S_{B}(B\otimes_AM)\rightarrow B\otimes_AS_A(M)$은 isomorphism이다. 
+<ins id="prop9">**명제 9**</ins> $\S_{B}(B\otimes_AM)\rightarrow B\otimes_A\S_A(M)$은 isomorphism이다. 
 
 </div>
 
@@ -223,11 +223,11 @@ $$e^\alpha=\prod_{i\in I} e_i^{\alpha(i)}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> 임의의 $A$-module $M$에 대하여, tensor algebra $T(M)$의 two-sided ideal 
+<ins id="def10">**정의 10**</ins> 임의의 $A$-module $M$에 대하여, tensor algebra $\T(M)$의 two-sided ideal 
 
 $$\mathfrak{J}=\langle x\otimes x\mid x\in M\rangle$$
 
-을 생각하자. 그럼 quotient algbera $T(M)/\mathfrak{J}$를 $M$의 *exterior algebra<sub>외대수</sub>*라 부르고 $\bigwedge(M)$으로 적는다. 
+을 생각하자. 그럼 quotient algbera $\T(M)/\mathfrak{J}$를 $M$의 *exterior algebra<sub>외대수</sub>*라 부르고 $\bigwedge(M)$으로 적는다. 
 
 </div>
 
@@ -255,7 +255,7 @@ $$f(x_1,\ldots, x_i, x,x,x_{i+1},\ldots, x_{n-1})=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> 두 $A$-module $M,N$에 대하여, 임의의 $A$-linear map $g:S^n(M) \rightarrow N$에 대하여 다음의 식
+<ins id="prop12">**명제 12**</ins> 두 $A$-module $M,N$에 대하여, 임의의 $A$-linear map $g:\S^n(M) \rightarrow N$에 대하여 다음의 식
 
 $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1\wedge x_2\wedge\cdots\wedge x_n)$$
 
