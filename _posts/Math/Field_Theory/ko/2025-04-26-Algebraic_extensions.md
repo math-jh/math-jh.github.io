@@ -31,11 +31,19 @@ weight: 2
 
 이 이들 사이의 morphism이 된다. 이 때, $\mathbb{L}_1$과 $\mathbb{L}_2$는 모두 field이므로, morphism $\mathbb{L}_1 \rightarrow \mathbb{L}_2$는 반드시 injective여야 한다. 위의 주의사항을 지키는 선에서, 이 경우 우리는 $\mathbb{L}_1$이 $\mathbb{L}_2$의 *subextension*이라 부른다. 
 
-임의의 $\mathbb{K}$-algebra는 특히 $\mathbb{K}$-module, 즉 $\mathbb{K}$-벡터공간이므로 그 차원이 잘 정의된다. 특히 field extension $\mathbb{K} \rightarrow \mathbb{L}$을 통해 $\mathbb{L}$을 $\mathbb{K}$-algebra로 볼 경우, $\mathbb{L}$의 $\mathbb{K}$-벡터공간으로서의 차원이 잘 정의된다. ([\[다중선형대수학\] §기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
+따라서 임의의 field extension $\mathbb{L}/\mathbb{K}$는 (그 자체가 field인) associative unital $\mathbb{K}$-algebra로 생각할 수 있다. 
+
+<div class="remark" markdown="1">
+
+<ins id="rmk1">**참고**</ins> 우리가 $\mathbb{K}$-algebra와 이들 사이의 homomorpihsm을 생각하는 것은 위와 유사한 경우를 다루기 위해서이므로, 앞으로의 글에서 category $\Alg{\mathbb{K}}$는 항상 unital associative $\mathbb{K}$-algebra들의 category가 될 것이다. 즉, 앞으로 $\mathbb{K}$-algebra라고 함은 항상 unital associative $\mathbb{K}$-algebra가 될 것이며, $\mathbb{K}$-algebra homomorphism 또한 unital $\mathbb{K}$-algebra homomorpihsm을 의미할 것이다. 
+
+</div>
+
+임의의 $\mathbb{K}$-algebra는 $\mathbb{K}$-module이기도 하므로 그 차원이 잘 정의된다. ([\[다중선형대수학\] §기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $\dim_{\mathbb{K}}\mathbb{L}$을 extension $\mathbb{L}/\mathbb{K}$의 *degree*라 부르고 $[\mathbb{L}:\mathbb{K}]$로 표기한다. 
+<ins id="def1">**정의 1**</ins> 임의의 $\mathbb{K}$-algebra $A$에 대하여, $\dim_{\mathbb{K}}A$을 $A$의 *degree*라 부르고 $[A:\mathbb{K}]$로 표기한다. 
 
 </div>
 
