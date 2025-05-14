@@ -192,7 +192,7 @@ $$\lvert \Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})\rvert \leq [A:\mathbb{K}]$$
 
 우리는 이미 $\dim_\mathbb{L}\Hom_\mathbb{K}(A,\mathbb{L})=\dim_\mathbb{K}A$임을 알고 있으며, [정리 1](#thm1)에 의해 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$는 $\Hom_\mathbb{K}(A,\mathbb{L})$의 free subset임을 안다. 따라서, 주장의 부등식이 성립하는 것이 자명하며, 등호는 오직 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 $\Hom_\mathbb{K}(A,\mathbb{L})$의 basis일 때 성립한다. 
 
-한편 $\mathbb{L}$-vector space isomorphism $\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$는 집합 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$를 $\mathbb{L}$-algebra homomorphism $A_{(\mathbb{L})} \rightarrow \mathbb{L}$들의 집합 $\Hom_{\Alg{\mathbb{L}}}(A_{(\mathbb{L})}, \mathbb{L})$으로 보낸다. 이제 [명제 6](#prop6)의 셋째 동치조건에 의하여 이 집합 $\Hom\_\mathbb{L}(A_{(\mathbb{L})},\mathbb{L})$이 $(A\_{(\mathbb{L})})^\ast$를 생성하는 것이 $A$가 $\mathbb{L}$에 의해 diagonalize되는 것과 동치이므로 원하는 결과를 얻는다. 
+한편 $\mathbb{L}$-vector space isomorphism $\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$는 집합 $\mathscr{H}$를 algebra homomorphism $A_{(\mathbb{L})} \rightarrow \mathbb{L}$들의 집합 $\mathscr{H}\_\mathbb{L}$으로 보낸다. 이제 [명제 6](#prop6)의 셋째 동치조건에 의하여 이 집합 $\mathbb{H}_\mathbb{L}$이 $(A_{(\mathbb{L})})^\ast$를 생성하는 것이 $A$가 $\mathbb{L}$에 의해 diagonalize되는 것과 동치이므로 원하는 결과를 얻는다.
 
 </details>
 
@@ -288,7 +288,21 @@ $$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+1. $\mathbb{K}$의 algebraic closure $\mathbb{L}$을 고정하고 이를 사용해 세 집합
+    
+    $$\Hom_\Alg{\mathbb{K}}(A, \mathbb{L}),\qquad \Hom_\Alg{\mathbb{K}}(B, \mathbb{L}),\qquad \Hom_\Alg{\mathbb{K}}(A\otimes_\mathbb{K}B, \mathbb{L})$$
 
+    을 생각하자. 그럼 주어진 주장은 다음의 함수
+
+    $$\Hom_\Alg{\mathbb{K}}(A,\mathbb{L})\times \Hom_\Alg{\mathbb{K}}(B, \mathbb{L}) \rightarrow \Hom_\Alg{\mathbb{K}}(A\otimes_\mathbb{K}B,\mathbb{L}); (u,v)\mapsto u\otimes v$$
+
+    이 bijection인 것으로부터 자명하다. 
+2. $\mathbb{L}$을 $\mathbb{K}'$의 algebraic closureß라고 하자. 그러면 다음의 morphism
+    
+    $$\bar{u}(x) = u(1 \otimes x) \quad (x \in A)$$
+    
+    은 $\mathbb{K}'$-algebra homomorphism $u$의 집합과 $\mathbb{K}$-algebra homomorphism $\bar{u}$의 집합 사이의 전단사 대응을 정의한다. 그러므로 등식이 성립한다.
+3. 
 
 </details>
 
@@ -311,3 +325,4 @@ $$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$$
 3. 임의의 extension $\mathbb{K}'/\mathbb{K}$, $\mathbb{K}'$-algebra $A'$에 대하여, $A'$가 $\mathbb{K}$에 대해 étale인 것은 $A'$가 $\mathbb{K}'$에 대해 étale이고 $\mathbb{K}'$가 $\mathbb{K}$에 대해 étale인 것과 동치이다. 
 
 </div>
+
