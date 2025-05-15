@@ -13,7 +13,7 @@ sidebar:
 
 date: 2025-05-11
 last_modified_at: 2025-05-11
-weight: 4
+weight: 5
 
 ---
 
@@ -297,12 +297,20 @@ $$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$$
     $$\Hom_\Alg{\mathbb{K}}(A,\mathbb{L})\times \Hom_\Alg{\mathbb{K}}(B, \mathbb{L}) \rightarrow \Hom_\Alg{\mathbb{K}}(A\otimes_\mathbb{K}B,\mathbb{L}); (u,v)\mapsto u\otimes v$$
 
     이 bijection인 것으로부터 자명하다. 
-2. $\mathbb{L}$을 $\mathbb{K}'$의 algebraic closureß라고 하자. 그러면 다음의 morphism
+2. $\mathbb{L}$을 $\mathbb{K}'$의 algebraic closure라고 하자. 그러면 다음의 morphism
     
     $$\bar{u}(x) = u(1 \otimes x) \quad (x \in A)$$
     
-    은 $\mathbb{K}'$-algebra homomorphism $u$의 집합과 $\mathbb{K}$-algebra homomorphism $\bar{u}$의 집합 사이의 전단사 대응을 정의한다. 그러므로 등식이 성립한다.
-3. 
+    은 $\mathbb{K}'$-algebra homomorphism $u$의 집합과 $\mathbb{K}$-algebra homomorphism $\bar{u}$의 집합 사이의 bijection을 정의한다. 그러므로 등식이 성립한다.
+3. 마찬가지로 $\mathbb{L}$을 $\mathbb{K}'$의 algebraic closure라고 하자. 두 집합 $\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}', \mathbb{L})$, $\Hom_\Alg{\mathbb{K}}(A', \mathbb{L})$을 생각하자. 이제 각각의 $u\in\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}', \mathbb{L})$마다 다음의 집합
+    
+    $$\Hom_\Alg{\mathbb{K}}(A', \mathbb{L})_u=\left\{v\in \Hom_{\Alg{\mathbb{K}}}(A', \mathbb{L})\mid\text{$v(x.1)=u(x)$ for all $x\in \mathbb{K}'$}\right\}$$
+
+    을 생각하면 이들은 다음의 partition 
+
+    $$\Hom_\Alg{\mathbb{K}}(A', \mathbb{L})=\bigsqcup_{u\in \Hom_\Alg{\mathbb{K}}(\mathbb{K}', \mathbb{L})} \Hom_\Alg{\mathbb{K}}(A', \mathbb{L})_u$$
+
+    을 유도한다. 한편 각각의 고정된 $u$에 대하여, 위의 집합 $\Hom_\Alg{\mathbb{K}}(A', \mathbb{L})_u$는, $\mathbb{L}$이 $\mathbb{K}'$의 algebraic closure이므로, 그 정의에 의하여 $[A':\mathbb{K}']$와 같은 크기를 갖는다. 이로부터 원하는 등식을 얻는다. 
 
 </details>
 

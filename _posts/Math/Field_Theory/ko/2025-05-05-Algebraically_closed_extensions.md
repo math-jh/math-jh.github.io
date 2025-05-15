@@ -162,7 +162,3 @@ Algebraic closure의 존재성을 보이기 위해서 $\mathbb{K}[\x]$의 모든
 </div>
 
 따라서 $\mathbb{K}$의 algebraic closure는 isomorphism에 대해 유일하게 존재한다. 이를 $\bar{\mathbb{K}}$로 적는다. 
-
-## 제곱근 확장
-
-Field $\mathbb{K}$의 characteristic이 $0$인 경우 우리는 $\mathbb{K}$의 characteristic exponent가 1이라 정의하였고, 그 외 $\mathbb{K}$의 characteristic exponent는 $\char \mathbb{K}$와 같은 것으로 두었다. 다음 글에서 
