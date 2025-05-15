@@ -250,6 +250,12 @@ field_theory-ko:
         url: ko/math/field_theory/algebraic_extensions
       - title: "대수적 폐포"
         url: ko/math/field_theory/algebraically_closed_extensions
+      - title: "제곱근 확장"
+        url: ko/math/field_theory/radical_extensions
+      - title: "에탈대수"
+        url: ko/math/field_theory/etale_extensions
+      - title: "분해가능확대체"
+        url: ko/math/field_theory/separable_extensions
   - title: 
     children:
       - title: "블로그 소개"
