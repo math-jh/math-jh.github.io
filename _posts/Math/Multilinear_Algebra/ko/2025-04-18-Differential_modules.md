@@ -412,7 +412,7 @@ $$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\longrightarrow}\Omega_{E/A}\overs
 
 을 $d'$라 하면, 임의의 $x,y\in \mathfrak{I}$에 대하여
 
-$$d'(xy)=d(xy)\otimes_1=dy\otimes u(x)+dx\otimes u(y)=0$$
+$$d'(xy)=d(xy)\otimes1=dy\otimes u(x)+dx\otimes u(y)=0$$
 
 이므로 다음의 $E$-linear map
 
@@ -422,7 +422,7 @@ $$\overline{d}:\mathfrak{I}/\mathfrak{I}^2\rightarrow\Omega_{E/A}\otimes_EE'$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**명제 14**</ins> 위의 상황에서, 다음의 $E'$-linear map들의 sequence
+<ins id="prop14">**명제 14**</ins> 위의 상황에서, 다음의 $E'=\mathfrak{I}/\mathfrak{I}^2$-linear map들의 sequence
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\longrightarrow0$$
 
@@ -432,7 +432,7 @@ $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-앞선 논증의 표기에서, 우리는 $\Omega_{E/A}\otimes_EE'$를 $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$와 identify할 수 있다. 그럼 이 identification 하에서, $\overline{d)}$의 image는 $d(\mathfrak{I})\subset\Omega_{E/A}$의 quotient module $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$에서의 image가 된다. 따라서, $\Omega_{E/A}$의 $A$-submodule $I$를 $\mathfrak{I}\Omega_{E/A}$와 $d(\mathfrak{I})$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
+앞선 논증의 표기에서, 우리는 $\Omega_{E/A}\otimes_EE'$를 $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$와 identify할 수 있다. 그럼 이 identification 하에서, $\overline{d)$의 image는 $d(\mathfrak{I})\subset\Omega_{E/A}$의 quotient module $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$에서의 image가 된다. 따라서, $\Omega_{E/A}$의 $A$-submodule $I$를 $\mathfrak{I}\Omega_{E/A}$와 $d(\mathfrak{I})$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
 
 $$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{I}$$
 

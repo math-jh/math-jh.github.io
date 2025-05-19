@@ -192,7 +192,7 @@ $$\lvert \Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})\rvert \leq [A:\mathbb{K}]$$
 
 우리는 이미 $\dim_\mathbb{L}\Hom_\mathbb{K}(A,\mathbb{L})=\dim_\mathbb{K}A$임을 알고 있으며, [정리 1](#thm1)에 의해 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$는 $\Hom_\mathbb{K}(A,\mathbb{L})$의 free subset임을 안다. 따라서, 주장의 부등식이 성립하는 것이 자명하며, 등호는 오직 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 $\Hom_\mathbb{K}(A,\mathbb{L})$의 basis일 때 성립한다. 
 
-한편 $\mathbb{L}$-vector space isomorphism $\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$는 집합 $\mathscr{H}$를 algebra homomorphism $A_{(\mathbb{L})} \rightarrow \mathbb{L}$들의 집합 $\mathscr{H}\_\mathbb{L}$으로 보낸다. 이제 [명제 6](#prop6)의 셋째 동치조건에 의하여 이 집합 $\mathbb{H}_\mathbb{L}$이 $(A_{(\mathbb{L})})^\ast$를 생성하는 것이 $A$가 $\mathbb{L}$에 의해 diagonalize되는 것과 동치이므로 원하는 결과를 얻는다.
+한편 $\mathbb{L}$-vector space isomorphism $\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$는 부분집합 $\Hom_\Alg{\mathbb{K}}(A, \mathbb{L})$을 algebra homomorphism $A_{(\mathbb{L})} \rightarrow \mathbb{L}$들의 집합 $\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})$으로 보낸다. 이제 [명제 6](#prop6)의 셋째 동치조건에 의하여 이 집합 $\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})이 $(A\_{(\mathbb{L})})^\ast$를 생성하는 것이 $A$가 $\mathbb{L}$에 의해 diagonalize되는 것과 동치이므로 원하는 결과를 얻는다.
 
 </details>
 
