@@ -123,4 +123,20 @@ $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 
 위에서 언급한 것과 같이, $\mathbb{L}_s$를 ($\mathbb{L}/\mathbb{K}$에서의) *relative separable closure*라 부른다. 
 
-이 글의 gor심 결과는 임의의 algebraic extension은 항상 (relative separable closure에 해당하는) separable한 부분과, inseparable한 부분으로 완전하게 나뉜다는 것이다. 
+이 글의 핵심 결과는 임의의 algebraic extension은 항상 (relative separable closure에 해당하는) separable한 부분과, inseparable한 부분으로 완전하게 나뉜다는 것이다. 이는 다음과 같이 확인할 수 있다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm6">**정리 6**</ins> Algebraic extension $\mathbb{L}/\mathbb{K}$와, [명제 5](#prop5)에서 정의한 $\mathbb{L}_s$에 대하여, 다음이 성립한다.
+
+1. $\mathbb{L}/\mathbb{L}_s$는 $p$-radical extension이다.
+2. Subextension $\mathbb{M}/\mathbb{K}$에 대하여, $\mathbb{L}/\mathbb{M}$이 $p$-radical이라 하자. 그럼 $\mathbb{M}$은 $\mathbb{L}_s$를 포함한다. 
+3. $\mathbb{L}_s$는 $\mathbb{L}$의 subextension 중, $\mathbb{K}$에 대해 separable이고, 자신에 대해서는 $\mathbb{L}$이 $p$-radical이도록 하는 유일한 것이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 첫 번째 주장의 경우, $\ch(\mathbb{K})=0$인 경우는 자명하므로 $\ch(\mathbb{K})=p>0$인 경우를 생각하자. 이제 $x\in \mathbb{L}$와 그 minimal polynomial $f$를 생각하면, 적당한 $m\geq 0$이 존재하여 $f\in\mathbb{K}[\x^{p^m}]$이지만 $f\not\in \mathbb{K}[\x^{p^{m+1}}]$이도록 할 수 있으며, 이 때 
+
+</details>
