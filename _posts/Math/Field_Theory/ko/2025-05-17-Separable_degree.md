@@ -137,6 +137,27 @@ $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 첫 번째 주장의 경우, $\ch(\mathbb{K})=0$인 경우는 자명하므로 $\ch(\mathbb{K})=p>0$인 경우를 생각하자. 이제 $x\in \mathbb{L}$와 그 minimal polynomial $f$를 생각하면, 적당한 $m\geq 0$이 존재하여 $f\in\mathbb{K}[\x^{p^m}]$이지만 $f\not\in \mathbb{K}[\x^{p^{m+1}}]$이도록 할 수 있으며, 이 때 
+우선 첫 번째 주장의 경우, $\ch(\mathbb{K})=0$인 경우는 자명하므로 $\ch(\mathbb{K})=p>0$인 경우를 생각하자. 이제 $x\in \mathbb{L}$와 그 minimal polynomial $f$를 생각하면, 적당한 $m\geq 0$이 존재하여 $f\in\mathbb{K}[\x^{p^m}]$이지만 $f\not\in \mathbb{K}[\x^{p^{m+1}}]$이도록 할 수 있으며, 이 때 $f(\x)=g(\x^{p^m})$이도록 하는 다항식 $g$를 택할 수 있다. 그런데 $f$는 irreducible이므로, $g$ 또한 그러하고 따라서 $g$는 $\mathbb{K}$의 원소 $x^{p^m}$의 minimal polynomial이 된다. 이제 [§분해가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건으로부터 $g$는 separable이고, 따라서 $x^{p^m}$은 $\mathbb{L}_s$에 속한다. 따라서 $x$는 $\mathbb{L}/\mathbb{L}_s$에서 $p$-radical extension이고 이로부터 원하는 결과를 얻는다. 
+
+한편 둘째 가정을 만족하는 subextension $\mathbb{M}/\mathbb{K}$가 주어졌다 하고, $x\in \mathbb{L}_s$라 하자. 그럼 $x$는 $\mathbb{K}$에 대해 separable이므로, $\mathbb{M}$에 대해서도 separable이다. 그런데 $\mathbb{L}/\mathbb{M}$이 $p$-radical이므로 $x$는 $\mathbb{M}$에 대해 $p$-radical이다. 다시 [§분해가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건에서 $x$의 minimal polynomial은 $\mathbb{K}[\x^p]$에 속해야 하지만, 동시에 $x$가 $p$-radical이라는 조건으로부터 $x$의 height $e$에 대하여 $\x^{p^e}-x^{p^e}$가 $x$의 minimal polynomial이어야 한다. 따라서 $e=0$이고 $\x-x$가 $x$의 minimal polynomial이어야 하므로 $x\in \mathbb{M}$이어야 한다. 
+
+마지막 주장은 [명제 5](#prop5)의 유일성으로부터 얻어진다. 
 
 </details>
+
+그럼 algebraic extension이 separable한 것은 base change에 대해 stable하므로, 만일 어떠한 extension의 두 subextension $\mathbb{L}/\mathbb{K}$, $\mathbb{K}'/\mathbb{K}$, 그리고 $\mathbb{L}$에서의 $\mathbb{K}$의 relative separable closure $\mathbb{L}_s$에 대하여 $\mathbb{K}'(\mathbb{L}_s)$가 $\mathbb{K}'$의 $\mathbb{K}'(\mathbb{L})$에서의 relative seprable closure가 되는 것을 확인할 수 있다. 또, relative separable closure의 유일성으로부터, finite degree extension $\mathbb{L}/\mathbb{K}$에 대하여 다음의 식 
+
+$$\mathbb{L}_s=\bigcap_{n\geq 0} \mathbb{K}(\mathbb{L}^{p^n})$$
+
+이 성립하는 것을 확인할 수 있다. 
+
+(Absolute) Separable closure를 어떻게 정의해야 하는지는 자명하다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def7">**정의 7**</ins> Field $\mathbb{K}$가 *separably closed<sub>분해가능닫힘</sub>*이라는 것은 $\mathbb{K}$의 임의의 separable algebraic extension이 trivial인 것이다. Separable인 동시에 
+
+</div>
+
+그럼 임의의 separable extension은 algebraic이므로 algebraically closed field는 항상 separably closed이다. 거꾸로 임의의 *perfect* field $\mathbb{K}$의 임의의 algebraic extension은 separable이므로, separably closed perfect field는 algebraically closed이다. 
+
