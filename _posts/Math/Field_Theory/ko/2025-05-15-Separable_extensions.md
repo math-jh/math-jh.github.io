@@ -224,7 +224,13 @@ $$1=[\mathbb{K}(a):\mathbb{K}]_s\nleq [\mathbb{K}(a):\mathbb{K}]=p^e$$
 
 </div>
 
-즉, $x$의 minimal polynomial을 $f$라 한다면, $f$가 separable이어야 하고 이 때 $x$는 $f$의 simple root가 된다. 이들 개념은 (당연히) 다음과 같이 모두 같은 것을 의미한다. 
+정의에 의해, $x$의 minimal polynomial을 $f$라 한다면, $f$가 separable이어야 하고 이 때 $x$는 $f$의 simple root가 된다. 이들 개념은 (당연히) 모두 같은 것을 의미한다. 즉, extension $\mathbb{L}/\mathbb{K}$와 원소 $x\in\mathbb{L}$, 그리고 $x$의 minimal polynomial $f$에 대하여 다음이 모두 동치이다.
+
+1. $x$가 separable이다.
+2. $f$가 separable이다.
+3. $x$가 $f$의 simple root이다.
+
+뿐만 아니라, 모든 원소가 algebraic한 extension이 algebraic extension이듯이 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
