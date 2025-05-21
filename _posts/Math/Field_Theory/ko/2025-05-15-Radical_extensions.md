@@ -45,8 +45,7 @@ $$\x^2-2,\qquad \x^2-3$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> Field extension $\mathbb{L}/\mathbb{K}$와 $p$-radical element $x\in \mathbb{K}$ of height $e$를 고정하자. 그럼 $a=x^{p^e}\in K
-\mathbb{K}$에 대하여, $x$의 minimal polynomial은
+<ins id="prop2">**명제 2**</ins> Field extension $\mathbb{L}/\mathbb{K}$와 $p$-radical element $x\in \mathbb{K}$ of height $e$를 고정하자. 그럼 $a=x^{p^e}\in \mathbb{K}$에 대하여, $x$의 minimal polynomial은
 
 $$\x^{p^e}-a\in \mathbb{K}[\x]$$
 
