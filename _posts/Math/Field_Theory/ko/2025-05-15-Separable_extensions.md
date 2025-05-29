@@ -178,7 +178,9 @@ $\mathbb{L}_1\times\cdots\times \mathbb{L}_n$은 reduced이므로 한쪽 방향�
 
 </div>
 
-특히, 그 자체로 field인 임의의 finite degree $\mathbb{K}$-algebra $\mathbb{L}$에 대해서는 étale인 것과 separable인 것이 같은 말이다. 정의로부터 만일 $\mathbb{L}/\mathbb{K}$가 separable이라면 임의의 subextension이 separable인 것과, 역으로 임의의 (finite degree) subextension들이 모두 separable이라면 $\mathbb{L}/\mathbb{K}$도 separable인 것이 둘 다 자명하다. 
+우리는 이 개념을 algebraic하지 않은 field extension에 대해서도 정의할 수 있지만, 당분간은 separable algebraic extension에 대해서만 살펴본다. 
+
+정의에 의해 그 자체로 field인 임의의 finite degree $\mathbb{K}$-algebra $\mathbb{L}$에 대해서는 étale인 것과 separable인 것이 같은 말이다. 정의로부터 만일 $\mathbb{L}/\mathbb{K}$가 separable이라면 임의의 subextension이 separable인 것과, 역으로 임의의 (finite degree) subextension들이 모두 separable이라면 $\mathbb{L}/\mathbb{K}$도 separable인 것이 둘 다 자명하다. 
 
 앞서 약속했던 주장 또한 이제 쉽게 보일 수 있다. 
 
@@ -306,7 +308,7 @@ $$\mathbb{K}_h[x]=\mathbb{M}[x]=\mathbb{L}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> Extension $\mathbb{M}/\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{M}/\mathbb{K}$가 separable인 것과 $\mathbb{M}/\mathbb{L}$, $\mathbb{L}/\mathbb{K}$가 모두 separable인 것이 동치이다. 
+<ins id="prop15">**명제 15**</ins> Algebraic extension $\mathbb{M}/\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{M}/\mathbb{K}$가 separable인 것과 $\mathbb{M}/\mathbb{L}$, $\mathbb{L}/\mathbb{K}$가 모두 separable인 것이 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
