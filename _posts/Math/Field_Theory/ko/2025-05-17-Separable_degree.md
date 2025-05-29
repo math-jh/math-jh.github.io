@@ -111,41 +111,41 @@ $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> Field extension $\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{L}_s$를 $\mathbb{K}$에 대해 algebraic, separable한 원소들의 모임이라 하자. 그럼 $\mathbb{L}_s$는 $\mathbb{L}/\mathbb{K}$의 subextension이며, 뿐만 아니라 $\mathbb{L}$에 속하고 separable인 algebraic extension 중 가장 큰 것이다. 
+<ins id="prop5">**명제 5**</ins> Field extension $\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{L}\_s$를 $\mathbb{K}$에 대해 algebraic, separable한 원소들의 모임이라 하자. 그럼 $\mathbb{L}\_s$는 $\mathbb{L}/\mathbb{K}$의 subextension이며, 뿐만 아니라 $\mathbb{L}$에 속하고 separable인 algebraic extension 중 가장 큰 것이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 separable extension의 임의의 원소는 separable이므로 ([§분해가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)), separable인 $\mathbb{L}$의 subextension은 항상 $\mathbb{L}$에 포함된다. 한편, 역으로 separable element들로만 생성되는 algebraic extension은 마찬가지로 [§분해가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)에 의해 separable이므로, $\mathbb{K}(\mathbb{L}_s)$는 그 자체로 separable extension이며 다시 위의 주장에 의해 $\mathbb{K}(\mathbb{L}_s)\subseteq \mathbb{L}_s$가 성립한다. 즉, $\mathbb{K}(\mathbb{L}_s)=\mathbb{L}_s$가 성립하고 따라서 [명제 2](#prop2)로부터 원하는 결과를 얻는다. 
+우선 separable extension의 임의의 원소는 separable이므로 ([§분해가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)), separable인 $\mathbb{L}$의 subextension은 항상 $\mathbb{L}$에 포함된다. 한편, 역으로 separable element들로만 생성되는 algebraic extension은 마찬가지로 [§분해가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)에 의해 separable이므로, $\mathbb{K}(\mathbb{L}\_s)$는 그 자체로 separable extension이며 다시 위의 주장에 의해 $\mathbb{K}(\mathbb{L}\_s)\subseteq \mathbb{L}\_s$가 성립한다. 즉, $\mathbb{K}(\mathbb{L}\_s)=\mathbb{L}\_s$가 성립하고 따라서 [명제 2](#prop2)로부터 원하는 결과를 얻는다. 
 
 </details>
 
-위에서 언급한 것과 같이, $\mathbb{L}_s$를 ($\mathbb{L}/\mathbb{K}$에서의) *relative separable algebraic closure*라 부른다. 
+위에서 언급한 것과 같이, $\mathbb{L}\_s$를 ($\mathbb{L}/\mathbb{K}$에서의) *relative separable algebraic closure*라 부른다. 
 
 이 글의 핵심 결과는 임의의 algebraic extension은 항상 (relative separable closure에 해당하는) separable한 부분과, inseparable한 부분으로 완전하게 나뉜다는 것이다. 이는 다음과 같이 확인할 수 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6**</ins> Algebraic extension $\mathbb{L}/\mathbb{K}$와, [명제 5](#prop5)에서 정의한 $\mathbb{L}_s$에 대하여, 다음이 성립한다.
+<ins id="thm6">**정리 6**</ins> Algebraic extension $\mathbb{L}/\mathbb{K}$와, [명제 5](#prop5)에서 정의한 $\mathbb{L}\_s$에 대하여, 다음이 성립한다.
 
-1. $\mathbb{L}/\mathbb{L}_s$는 $p$-radical extension이다.
-2. Subextension $\mathbb{M}/\mathbb{K}$에 대하여, $\mathbb{L}/\mathbb{M}$이 $p$-radical이라 하자. 그럼 $\mathbb{M}$은 $\mathbb{L}_s$를 포함한다. 
-3. $\mathbb{L}_s$는 $\mathbb{L}$의 subextension 중, $\mathbb{K}$에 대해 separable이고, 자신에 대해서는 $\mathbb{L}$이 $p$-radical이도록 하는 유일한 것이다. 
+1. $\mathbb{L}/\mathbb{L}\_s$는 $p$-radical extension이다.
+2. Subextension $\mathbb{M}/\mathbb{K}$에 대하여, $\mathbb{L}/\mathbb{M}$이 $p$-radical이라 하자. 그럼 $\mathbb{M}$은 $\mathbb{L}\_s$를 포함한다. 
+3. $\mathbb{L}\_s$는 $\mathbb{L}$의 subextension 중, $\mathbb{K}$에 대해 separable이고, 자신에 대해서는 $\mathbb{L}$이 $p$-radical이도록 하는 유일한 것이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 첫 번째 주장의 경우, $\ch(\mathbb{K})=0$인 경우는 자명하므로 $\ch(\mathbb{K})=p>0$인 경우를 생각하자. 이제 $x\in \mathbb{L}$와 그 minimal polynomial $f$를 생각하면, 적당한 $m\geq 0$이 존재하여 $f\in\mathbb{K}[\x^{p^m}]$이지만 $f\not\in \mathbb{K}[\x^{p^{m+1}}]$이도록 할 수 있으며, 이 때 $f(\x)=g(\x^{p^m})$이도록 하는 다항식 $g$를 택할 수 있다. 그런데 $f$는 irreducible이므로, $g$ 또한 그러하고 따라서 $g$는 $\mathbb{K}$의 원소 $x^{p^m}$의 minimal polynomial이 된다. 이제 [§분해가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건으로부터 $g$는 separable이고, 따라서 $x^{p^m}$은 $\mathbb{L}_s$에 속한다. 따라서 $x$는 $\mathbb{L}/\mathbb{L}_s$에서 $p$-radical extension이고 이로부터 원하는 결과를 얻는다. 
+우선 첫 번째 주장의 경우, $\ch(\mathbb{K})=0$인 경우는 자명하므로 $\ch(\mathbb{K})=p>0$인 경우를 생각하자. 이제 $x\in \mathbb{L}$와 그 minimal polynomial $f$를 생각하면, 적당한 $m\geq 0$이 존재하여 $f\in\mathbb{K}[\x^{p^m}]$이지만 $f\not\in \mathbb{K}[\x^{p^{m+1}}]$이도록 할 수 있으며, 이 때 $f(\x)=g(\x^{p^m})$이도록 하는 다항식 $g$를 택할 수 있다. 그런데 $f$는 irreducible이므로, $g$ 또한 그러하고 따라서 $g$는 $\mathbb{K}$의 원소 $x^{p^m}$의 minimal polynomial이 된다. 이제 [§분해가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건으로부터 $g$는 separable이고, 따라서 $x^{p^m}$은 $\mathbb{L}\_s$에 속한다. 따라서 $x$는 $\mathbb{L}/\mathbb{L}\_s$에서 $p$-radical extension이고 이로부터 원하는 결과를 얻는다. 
 
-한편 둘째 가정을 만족하는 subextension $\mathbb{M}/\mathbb{K}$가 주어졌다 하고, $x\in \mathbb{L}_s$라 하자. 그럼 $x$는 $\mathbb{K}$에 대해 separable이므로, $\mathbb{M}$에 대해서도 separable이다. 그런데 $\mathbb{L}/\mathbb{M}$이 $p$-radical이므로 $x$는 $\mathbb{M}$에 대해 $p$-radical이다. 다시 [§분해가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건에서 $x$의 minimal polynomial은 $\mathbb{K}[\x^p]$에 속해야 하지만, 동시에 $x$가 $p$-radical이라는 조건으로부터 $x$의 height $e$에 대하여 $\x^{p^e}-x^{p^e}$가 $x$의 minimal polynomial이어야 한다. 따라서 $e=0$이고 $\x-x$가 $x$의 minimal polynomial이어야 하므로 $x\in \mathbb{M}$이어야 한다. 
+한편 둘째 가정을 만족하는 subextension $\mathbb{M}/\mathbb{K}$가 주어졌다 하고, $x\in \mathbb{L}\_s$라 하자. 그럼 $x$는 $\mathbb{K}$에 대해 separable이므로, $\mathbb{M}$에 대해서도 separable이다. 그런데 $\mathbb{L}/\mathbb{M}$이 $p$-radical이므로 $x$는 $\mathbb{M}$에 대해 $p$-radical이다. 다시 [§분해가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건에서 $x$의 minimal polynomial은 $\mathbb{K}[\x^p]$에 속해야 하지만, 동시에 $x$가 $p$-radical이라는 조건으로부터 $x$의 height $e$에 대하여 $\x^{p^e}-x^{p^e}$가 $x$의 minimal polynomial이어야 한다. 따라서 $e=0$이고 $\x-x$가 $x$의 minimal polynomial이어야 하므로 $x\in \mathbb{M}$이어야 한다. 
 
 마지막 주장은 [명제 5](#prop5)의 유일성으로부터 얻어진다. 
 
 </details>
 
-그럼 algebraic extension이 separable한 것은 base change에 대해 stable하므로, 만일 어떠한 extension의 두 subextension $\mathbb{L}/\mathbb{K}$, $\mathbb{K}'/\mathbb{K}$, 그리고 $\mathbb{L}$에서의 $\mathbb{K}$의 relative separable closure $\mathbb{L}_s$에 대하여 $\mathbb{K}'(\mathbb{L}_s)$가 $\mathbb{K}'$의 $\mathbb{K}'(\mathbb{L})$에서의 relative seprable closure가 되는 것을 확인할 수 있다. 또, relative separable closure의 유일성으로부터, finite degree extension $\mathbb{L}/\mathbb{K}$에 대하여 다음의 식 
+그럼 algebraic extension이 separable한 것은 base change에 대해 stable하므로, 만일 어떠한 extension의 두 subextension $\mathbb{L}/\mathbb{K}$, $\mathbb{K}'/\mathbb{K}$, 그리고 $\mathbb{L}$에서의 $\mathbb{K}$의 relative separable closure $\mathbb{L}\_s$에 대하여 $\mathbb{K}'(\mathbb{L}\_s)$가 $\mathbb{K}'$의 $\mathbb{K}'(\mathbb{L})$에서의 relative seprable closure가 되는 것을 확인할 수 있다. 또, relative separable closure의 유일성으로부터, finite degree extension $\mathbb{L}/\mathbb{K}$에 대하여 다음의 식 
 
 $$\mathbb{L}_s=\bigcap_{n\geq 0} \mathbb{K}(\mathbb{L}^{p^n})$$
 
@@ -167,14 +167,14 @@ $$\mathbb{L}_s=\bigcap_{n\geq 0} \mathbb{K}(\mathbb{L}^{p^n})$$
 
 <ins id="prop8">**명제 8**</ins> Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$를 고정하자. 
 
-1. $\overline{\mathbb{K}}$에서의 relative separable algebraic closure $\overline{\mathbb{K}}_s$는 $\mathbb{K}$의 separable closure이다. 
+1. $\overline{\mathbb{K}}$에서의 relative separable algebraic closure $\overline{\mathbb{K}}\_s$는 $\mathbb{K}$의 separable closure이다. 
 2. $\mathbb{K}$의 separable algebraic closure는 isomorphism에 대하여 유일하게 결쟁된다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $\overline{\mathbb{K}}_s$는 [명제 5](#prop5)에 의해 separable이고, algebraic closure $\overline{\mathbb{K}}$의 subextension이므로 algebraic이다. 따라서 주장은 임의의 separable algebraic extension $\mathbb{L}/\overline{\mathbb{K}}_s$가 주어졌을 때, $\mathbb{L}$이 $\overline{\mathbb{K}}_s$의 trivial extension임을 보이면 충분하다. 이는 우선 extension $\mathbb{L}/\overline{\mathbb{K}}_s$이 algebraic이므로 유일한 $\overline{\mathbb{K}}_s$-homomorphism $u:\mathbb{L}\rightarrow\overline{\mathbb{K}}$가 존재하며 ([§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)) 그 image $u(\mathbb{L})$은 [§분해가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)에 의해 separable algebraic이고, 따라서 $u(\mathbb{L})=\overline{\mathbb{K}}_s$가 성립한다. 
+1. $\overline{\mathbb{K}}\_s$는 [명제 5](#prop5)에 의해 separable이고, algebraic closure $\overline{\mathbb{K}}$의 subextension이므로 algebraic이다. 따라서 주장은 임의의 separable algebraic extension $\mathbb{L}/\overline{\mathbb{K}}\_s$가 주어졌을 때, $\mathbb{L}$이 $\overline{\mathbb{K}}\_s$의 trivial extension임을 보이면 충분하다. 이는 우선 extension $\mathbb{L}/\overline{\mathbb{K}}\_s$이 algebraic이므로 유일한 $\overline{\mathbb{K}}\_s$-homomorphism $u:\mathbb{L}\rightarrow\overline{\mathbb{K}}$가 존재하며 ([§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)) 그 image $u(\mathbb{L})$은 [§분해가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)에 의해 separable algebraic이고, 따라서 $u(\mathbb{L})=\overline{\mathbb{K}}\_s$가 성립한다. 
 2. 마찬가지로 [§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)를 이용하면 된다. 
 
 </details>
@@ -183,50 +183,52 @@ $$\mathbb{L}_s=\bigcap_{n\geq 0} \mathbb{K}(\mathbb{L}^{p^n})$$
 
 ## 분해가능차수
 
-[정리 6](#thm6)에 의해 임의의 finite degree extension $\mathbb{L}/\mathbb{K}$를 separable한 부분과 그렇지 않은 부분으로 나누어 $\mathbb{L}/\mathbb{L}_s/\mathbb{K}$와 같이 쓸 수 있다. 
+[정리 6](#thm6)에 의해 임의의 finite degree extension $\mathbb{L}/\mathbb{K}$를 separable한 부분과 그렇지 않은 부분으로 나누어 $\mathbb{L}/\mathbb{L}\_s/\mathbb{K}$와 같이 쓸 수 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 위와 같은 상황에서, $[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}_s:\mathbb{K}]$이다.
+<ins id="prop9">**명제 9**</ins> 위와 같은 상황에서, $[\mathbb{L}:\mathbb{K}]\_s=[\mathbb{L}\_s:\mathbb{K}]$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+정의에 의해 $[\mathbb{L}:\mathbb{K}]\_s$는 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$에 대하여, $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-algebra homomorphism들의 갯수로 정의된다. 그런데 $\overline{\mathbb{K}}$는 algebraically closed field이므로 perfect field이고, 따라서 [§제곱근확대체, ⁋명제 6](/ko/math/field_theory/radical_extensions#prop6)으로부터 임의의 $\mathbb{K}$-algebra homomorphism $\mathbb{L} \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 유일한 $\mathbb{L}\_s\rightarrow \overline{\mathbb{K}}$이 정의되며 거꾸로 $\mathbb{K}$-algebra homomorphism $\mathbb{L}\_s \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 이를 $\mathbb{L}$로 제한하여 $\mathbb{L}\rightarrow\overline{\mathbb{K}}$를 얻을 수 있다. 이로부터 등식 
+
+$$[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}_s:\mathbb{K}]_s$$
+
+를 얻는다. 한편 $\mathbb{L}\_s/\mathbb{K}$는 finite degree separable extension이므로 étale algebra이고, 따라서 [§에탈대수, ⁋명제 13](/ko/math/field_theory/etale_algebras#prop13)으로부터 $[\mathbb{L}\_s:\mathbb{K}]\_s=[\mathbb{L}\_s:\mathbb{K}]$가 되어 원하는 결과를 얻는다. 
+
 </details>
 
-따라서 $[\mathbb{L}:\mathbb{K}]_s$를 *separable degree*라 부르는 것이 정당하다. 뿐만 아니라, 다음 식 
+따라서 $[\mathbb{L}:\mathbb{K}]\_s$를 *separable degree*라 부르는 것이 정당하다. 뿐만 아니라, 다음 식 
 
 $$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{L}_s][\mathbb{L}_s:\mathbb{K}]=[\mathbb{L}:\mathbb{K}]_s[\mathbb{L}:\mathbb{L}_s]$$
 
-으로부터 우리는 extension $\mathbb{L}/\mathbb{K}$의 *inseparable degree*를 $[\mathbb{L}:\mathbb{K}]_i=[\mathbb{L}:\mathbb{L}_s]$으로 정의할 수 있다.
+으로부터 우리는 extension $\mathbb{L}/\mathbb{K}$의 *inseparable degree*를 $[\mathbb{L}:\mathbb{K}]\_i=[\mathbb{L}:\mathbb{L}_s]$으로 정의할 수 있다.
 
-만일 $\ch\mathbb{K}=0$이라면 $[\mathbb{L}:\mathbb{K}]_i=1$이 항상 성립하며, $\ch\mathbb{K}=p$라면 $[\mathbb{L}:\mathbb{K}]_i$는 항상 $p$의 거듭제곱이다. ([정리 6](#thm6)) 그러나 $p$-radical extension을 정의하지 않는 degree $p^e$의 다항식도 얼마든지 존재하므로 $[\mathbb{L}:\mathbb{K}]_i$의 값을 (가령) $[\mathbb{L}:\mathbb{K}]$만으로 알아내는 방법은 존재하지 않는다. 
+만일 $\ch\mathbb{K}=0$이라면 $[\mathbb{L}:\mathbb{K}]\_i=1$이 항상 성립하며, $\ch\mathbb{K}=p$라면 $[\mathbb{L}:\mathbb{K}]\_i$는 항상 $p$의 거듭제곱이다. ([정리 6](#thm6)) 그러나 $p$-radical extension을 정의하지 않는 degree $p^e$의 다항식도 얼마든지 존재하므로 $[\mathbb{L}:\mathbb{K}]\_i$의 값을 (가령) $[\mathbb{L}:\mathbb{K}]$만으로 알아내는 방법은 존재하지 않는다. 
 
 그러나 여전히 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins>  Extension $\Omega/\mathbb{K}$와 
-$\Omega$를 $K$의 확장이라 하고, $E$, $F$를 $\Omega$의 두 부분확장이라 하자. 이들은 $K$에 대해 유한 차수를 가진다고 하자.  
-a) $E \subseteq F$이면,
-$[F : K]_s = [F : E]_s \cdot [E : K]_s$ 이고  
-$[F : K]_i = [F : E]_i \cdot [E : K]_i$이다.  
-b) $K'$를 $\Omega$의 부분확장이라 하면, 다음이 성립한다:  
-\[
-[K'(E) : K']_s \leq [E : K]_s \quad \text{and} \quad [K'(E) : K']_i \leq [E : K]_i,
-\]
-그리고 $K'$가 $K$에 대해 $E$와 선형적으로 이산이면 등호가 성립한다.  
-c) 다음이 성립한다:  
-\[
-[K(E \cup F) : K]_s \leq [E : K]_s \cdot [F : K]_s \quad \text{and} \quad [K(E \cup F) : K]_i \leq [E : K]_i \cdot [F : K]_i,
-\]
-그리고 $E$와 $F$가 $K$에 대해 선형적으로 이산이면 등호가 성립한다.
+<ins id="prop10">**명제 10**</ins>  Extension $\Omega/\mathbb{K}$를 고정하고, $\Omega$의 두 finite degree subextension $\mathbb{L}/\mathbb{K}$, $\mathbb{M}/\mathbb{K}$을 생각하자. 다음이 성립한다. 
+
+1. 만일 $\mathbb{L}\subseteq \mathbb{M}$이라면, $[\mathbb{M}:\mathbb{K}]\_s=[\mathbb{M}:\mathbb{L}]\_s[\mathbb{L}:\mathbb{K}]\_s$이고 $[\mathbb{M}:\mathbb{K}]\_i=[\mathbb{M}:\mathbb{L}]\_i[\mathbb{L}:\mathbb{K}]\_i$이다. 
+2. $\Omega$의 임의의 subextension $\mathbb{K}'$에 대하여 다음의 식 
+    
+    $$[\mathbb{K}'(\mathbb{L}):\mathbb{K}']_s\leq [\mathbb{L}:\mathbb{K}]_s,\qquad [\mathbb{K}'(\mathbb{L}):\mathbb{K}']_i\leq [\mathbb{L}:\mathbb{K}]_i$$
+
+    이 성립하며, 등식은 $\mathbb{K}'$와 $\mathbb{L}$이 linearly disjoint일 때 성립한다. 
+3. 두 부등식
+    
+    $$[\mathbb{K}(\mathbb{L}\cup \mathbb{M}):\mathbb{K}]_s\leq [\mathbb{L}:\mathbb{K}]_s[\mathbb{M}:\mathbb{K}]_s,\qquad [\mathbb{K}(\mathbb{L}\cup \mathbb{M}):\mathbb{K}]_i\leq [\mathbb{L}:\mathbb{K}]_i[\mathbb{M}:\mathbb{K}]_i$$
+
+    이 성립하며, 등식은 $\mathbb{L},\mathbb{M}$이 linearly disjoint일 때 성립한다. 
+
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
+이에 대한 증명들은 거의 동어반복으로, 가령 첫째 결과의 경우 [§대수적 확장, ⁋명제 2](/ko/math/field_theory/algebraic_extensions#prop2)와 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12)로부터 얻어진다. 나머지 결과 또한 비슷한 결과가 extension degree와 separable degree에 대해 각각 성립하므로 inseparable degree에 대해서도 당연하게 성립하게 된다. 
 
-a)에 대한 separable 차수에 대한 주장은 (9) (V, p. 32)에서 따라온다.  
-$[F : K] = [F : E] \cdot [E : K]$이므로, inseparable 차수에 대한 주장은 이 사실과 (1)번에서 따라온다.
-</details>
+
