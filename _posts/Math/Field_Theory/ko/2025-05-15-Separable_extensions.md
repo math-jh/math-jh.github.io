@@ -1,6 +1,6 @@
 ---
 
-title: "분해가능확대체"
+title: "분리가능확대체"
 excerpt: ""
 
 categories: [Math / Field Theory]

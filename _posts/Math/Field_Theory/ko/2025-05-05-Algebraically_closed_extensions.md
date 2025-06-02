@@ -161,4 +161,4 @@ Algebraic closure의 존재성을 보이기 위해서 $\mathbb{K}[\x]$의 모든
 
 </div>
 
-따라서 $\mathbb{K}$의 algebraic closure는 isomorphism에 대해 유일하게 존재한다. 이를 $\bar{\mathbb{K}}$로 적는다. 
+따라서 $\mathbb{K}$의 algebraic closure는 isomorphism에 대해 유일하게 존재한다. $\mathbb{K}$의 하나 이상의 algebraic extension이 주어졌을 때 우리는 이들을 (아무) 공통된 algebraic closure에 넣어서 비교할 수 있는데, 이러한 상황에서는 $\mathbb{K}$의 특정한 algebraic closure를 택할 필요가 없으므로 이를 간단히 $\overline{\mathbb{K}}$로 적는다. 어차피 우리는 field를 다룰 때, 언제나 그러하듯 isomorphic한 field들은 같은 것으로 취급하므로 약간의 남용을 통해 $\mathbb{2}$의 모든 algebraic extension들을 $\overline{\mathbb{K}}$의 subextension으로 생각하기로 한다.
