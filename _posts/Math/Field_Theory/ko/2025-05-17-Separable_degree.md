@@ -1,6 +1,6 @@
 ---
 
-title: "분해가능차수"
+title: "분리가능차수"
 excerpt: ""
 
 categories: [Math / Field Theory]
@@ -47,7 +47,7 @@ $$[A:\mathbb{K}]=[A:\mathbb{K}]_s\leq[\mathbb{K}[A^p]:\mathbb{K}]_s\leq [\mathbb
 
 이제 거꾸로 $A=\mathbb{K}[A^p]$임을 가정하고 $A$가 étale임을 보이자. 이를 위해서는 뒤의 조건을 보이면 충분하다. $(a_i)$가 $A$의 $\mathbb{K}$-basis라 가정하면, $(a_i^p)$들이 $\mathbb{K}[A^p]$를 $\mathbb{K}$-벡터공간으로서 생성하는 것은 [§체, ⁋명제 12](/ko/math/field_theory/fields#prop12)의 결과이고, 그럼 주어진 가정 $A=\mathbb{K}[A^p]$로부터 $(a_i^p)$들은 $A$를 생성하기도 한다. 
 
-이제 [§분해가능확대체, ⁋정리 7](/ko/math/field_theory/separable_extensions#thm7)의 결과를 사용하기 위해, $\overline{\mathbb{K}}\otimes_\mathbb{K}A$가 reduced임을 보이자. 만일 어떤 $u\in\overline{\mathbb{K}}\otimes_\mathbb{K}A$에 대하여 $u^2=0$이라 가정하면 $u^p=0$이고, 이로부터 만일 $u=\sum \lambda_i\otimes a_i$라 쓴다면
+이제 [§분리가능확대체, ⁋정리 7](/ko/math/field_theory/separable_extensions#thm7)의 결과를 사용하기 위해, $\overline{\mathbb{K}}\otimes_\mathbb{K}A$가 reduced임을 보이자. 만일 어떤 $u\in\overline{\mathbb{K}}\otimes_\mathbb{K}A$에 대하여 $u^2=0$이라 가정하면 $u^p=0$이고, 이로부터 만일 $u=\sum \lambda_i\otimes a_i$라 쓴다면
 
 $$0=u^p=\sum_{i\in I} (\lambda_i\otimes a_i)^p=\sum_{i\in I} \lambda_i^p\otimes a_i^p$$
 
@@ -105,7 +105,7 @@ $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 
 </details>
 
-## 분해가능폐포
+## 분리가능폐포
 
 한편 algebraic closure 혹은 perfect closure 등과 마찬가지로 separable closure 또한 정의할 수 있다. 그럼 [§체, ⁋정리 15](/ko/math/field_theory/fields#thm15)에서의 perfect closure가 algebraic closure에 대한 relative perfect closure와 같듯, separable closure 또한 relative separable closure를 먼저 정의한 후, algebraic closure 안에서의 relative separable closure를 (absolute) separable closure라 정의하는 것이 자연스러울 것이다. 
 
@@ -117,7 +117,7 @@ $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 separable extension의 임의의 원소는 separable이므로 ([§분해가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)), separable인 $\mathbb{L}$의 subextension은 항상 $\mathbb{L}$에 포함된다. 한편, 역으로 separable element들로만 생성되는 algebraic extension은 마찬가지로 [§분해가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)에 의해 separable이므로, $\mathbb{K}(\mathbb{L}\_s)$는 그 자체로 separable extension이며 다시 위의 주장에 의해 $\mathbb{K}(\mathbb{L}\_s)\subseteq \mathbb{L}\_s$가 성립한다. 즉, $\mathbb{K}(\mathbb{L}\_s)=\mathbb{L}\_s$가 성립하고 따라서 [명제 2](#prop2)로부터 원하는 결과를 얻는다. 
+우선 separable extension의 임의의 원소는 separable이므로 ([§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)), separable인 $\mathbb{L}$의 subextension은 항상 $\mathbb{L}$에 포함된다. 한편, 역으로 separable element들로만 생성되는 algebraic extension은 마찬가지로 [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)에 의해 separable이므로, $\mathbb{K}(\mathbb{L}\_s)$는 그 자체로 separable extension이며 다시 위의 주장에 의해 $\mathbb{K}(\mathbb{L}\_s)\subseteq \mathbb{L}\_s$가 성립한다. 즉, $\mathbb{K}(\mathbb{L}\_s)=\mathbb{L}\_s$가 성립하고 따라서 [명제 2](#prop2)로부터 원하는 결과를 얻는다. 
 
 </details>
 
@@ -137,9 +137,9 @@ $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 첫 번째 주장의 경우, $\ch(\mathbb{K})=0$인 경우는 자명하므로 $\ch(\mathbb{K})=p>0$인 경우를 생각하자. 이제 $x\in \mathbb{L}$와 그 minimal polynomial $f$를 생각하면, 적당한 $m\geq 0$이 존재하여 $f\in\mathbb{K}[\x^{p^m}]$이지만 $f\not\in \mathbb{K}[\x^{p^{m+1}}]$이도록 할 수 있으며, 이 때 $f(\x)=g(\x^{p^m})$이도록 하는 다항식 $g$를 택할 수 있다. 그런데 $f$는 irreducible이므로, $g$ 또한 그러하고 따라서 $g$는 $\mathbb{K}$의 원소 $x^{p^m}$의 minimal polynomial이 된다. 이제 [§분해가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건으로부터 $g$는 separable이고, 따라서 $x^{p^m}$은 $\mathbb{L}\_s$에 속한다. 따라서 $x$는 $\mathbb{L}/\mathbb{L}\_s$에서 $p$-radical extension이고 이로부터 원하는 결과를 얻는다. 
+우선 첫 번째 주장의 경우, $\ch(\mathbb{K})=0$인 경우는 자명하므로 $\ch(\mathbb{K})=p>0$인 경우를 생각하자. 이제 $x\in \mathbb{L}$와 그 minimal polynomial $f$를 생각하면, 적당한 $m\geq 0$이 존재하여 $f\in\mathbb{K}[\x^{p^m}]$이지만 $f\not\in \mathbb{K}[\x^{p^{m+1}}]$이도록 할 수 있으며, 이 때 $f(\x)=g(\x^{p^m})$이도록 하는 다항식 $g$를 택할 수 있다. 그런데 $f$는 irreducible이므로, $g$ 또한 그러하고 따라서 $g$는 $\mathbb{K}$의 원소 $x^{p^m}$의 minimal polynomial이 된다. 이제 [§분리가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건으로부터 $g$는 separable이고, 따라서 $x^{p^m}$은 $\mathbb{L}\_s$에 속한다. 따라서 $x$는 $\mathbb{L}/\mathbb{L}\_s$에서 $p$-radical extension이고 이로부터 원하는 결과를 얻는다. 
 
-한편 둘째 가정을 만족하는 subextension $\mathbb{M}/\mathbb{K}$가 주어졌다 하고, $x\in \mathbb{L}\_s$라 하자. 그럼 $x$는 $\mathbb{K}$에 대해 separable이므로, $\mathbb{M}$에 대해서도 separable이다. 그런데 $\mathbb{L}/\mathbb{M}$이 $p$-radical이므로 $x$는 $\mathbb{M}$에 대해 $p$-radical이다. 다시 [§분해가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건에서 $x$의 minimal polynomial은 $\mathbb{K}[\x^p]$에 속해야 하지만, 동시에 $x$가 $p$-radical이라는 조건으로부터 $x$의 height $e$에 대하여 $\x^{p^e}-x^{p^e}$가 $x$의 minimal polynomial이어야 한다. 따라서 $e=0$이고 $\x-x$가 $x$의 minimal polynomial이어야 하므로 $x\in \mathbb{M}$이어야 한다. 
+한편 둘째 가정을 만족하는 subextension $\mathbb{M}/\mathbb{K}$가 주어졌다 하고, $x\in \mathbb{L}\_s$라 하자. 그럼 $x$는 $\mathbb{K}$에 대해 separable이므로, $\mathbb{M}$에 대해서도 separable이다. 그런데 $\mathbb{L}/\mathbb{M}$이 $p$-radical이므로 $x$는 $\mathbb{M}$에 대해 $p$-radical이다. 다시 [§분리가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건에서 $x$의 minimal polynomial은 $\mathbb{K}[\x^p]$에 속해야 하지만, 동시에 $x$가 $p$-radical이라는 조건으로부터 $x$의 height $e$에 대하여 $\x^{p^e}-x^{p^e}$가 $x$의 minimal polynomial이어야 한다. 따라서 $e=0$이고 $\x-x$가 $x$의 minimal polynomial이어야 하므로 $x\in \mathbb{M}$이어야 한다. 
 
 마지막 주장은 [명제 5](#prop5)의 유일성으로부터 얻어진다. 
 
@@ -155,7 +155,7 @@ $$\mathbb{L}_s=\bigcap_{n\geq 0} \mathbb{K}(\mathbb{L}^{p^n})$$
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Field $\mathbb{K}$가 *separably closed<sub>분해가능닫힘</sub>*이라는 것은 $\mathbb{K}$의 임의의 separable algebraic extension이 trivial인 것이다. Field $\mathbb{K}$의 extension $\mathbb{L}$이 separable algebraic인 동시에, $\mathbb{L}$이 separably closed라면 이를 $\mathbb{K}$의 *separable algebraic closure<sub>분해가능폐포</sub>*라 부른다.
+<ins id="def7">**정의 7**</ins> Field $\mathbb{K}$가 *separably closed<sub>분리가능닫힘</sub>*이라는 것은 $\mathbb{K}$의 임의의 separable algebraic extension이 trivial인 것이다. Field $\mathbb{K}$의 extension $\mathbb{L}$이 separable algebraic인 동시에, $\mathbb{L}$이 separably closed라면 이를 $\mathbb{K}$의 *separable algebraic closure<sub>분리가능폐포</sub>*라 부른다.
 
 </div>
 
@@ -174,14 +174,14 @@ $$\mathbb{L}_s=\bigcap_{n\geq 0} \mathbb{K}(\mathbb{L}^{p^n})$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $\overline{\mathbb{K}}\_s$는 [명제 5](#prop5)에 의해 separable이고, algebraic closure $\overline{\mathbb{K}}$의 subextension이므로 algebraic이다. 따라서 주장은 임의의 separable algebraic extension $\mathbb{L}/\overline{\mathbb{K}}\_s$가 주어졌을 때, $\mathbb{L}$이 $\overline{\mathbb{K}}\_s$의 trivial extension임을 보이면 충분하다. 이는 우선 extension $\mathbb{L}/\overline{\mathbb{K}}\_s$이 algebraic이므로 유일한 $\overline{\mathbb{K}}\_s$-homomorphism $u:\mathbb{L}\rightarrow\overline{\mathbb{K}}$가 존재하며 ([§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)) 그 image $u(\mathbb{L})$은 [§분해가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)에 의해 separable algebraic이고, 따라서 $u(\mathbb{L})=\overline{\mathbb{K}}\_s$가 성립한다. 
+1. $\overline{\mathbb{K}}\_s$는 [명제 5](#prop5)에 의해 separable이고, algebraic closure $\overline{\mathbb{K}}$의 subextension이므로 algebraic이다. 따라서 주장은 임의의 separable algebraic extension $\mathbb{L}/\overline{\mathbb{K}}\_s$가 주어졌을 때, $\mathbb{L}$이 $\overline{\mathbb{K}}\_s$의 trivial extension임을 보이면 충분하다. 이는 우선 extension $\mathbb{L}/\overline{\mathbb{K}}\_s$이 algebraic이므로 유일한 $\overline{\mathbb{K}}\_s$-homomorphism $u:\mathbb{L}\rightarrow\overline{\mathbb{K}}$가 존재하며 ([§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)) 그 image $u(\mathbb{L})$은 [§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)에 의해 separable algebraic이고, 따라서 $u(\mathbb{L})=\overline{\mathbb{K}}\_s$가 성립한다. 
 2. 마찬가지로 [§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)를 이용하면 된다. 
 
 </details>
 
 이로부터, separable algebraic closure는 가장 작은 separably closed algebraic extension임을 안다. 즉 $\mathbb{L}/\mathbb{K}$가 $\mathbb{K}$의 separable algebraic closure이고, field extension $\mathbb{M}/\mathbb{K}$에 대하여 $\mathbb{M}$이 separably closed라면 유일한 morphism $\mathbb{L}\rightarrow\mathbb{M}$이 존재한다. 
 
-## 분해가능차수
+## 분리가능차수
 
 [정리 6](#thm6)에 의해 임의의 finite degree extension $\mathbb{L}/\mathbb{K}$를 separable한 부분과 그렇지 않은 부분으로 나누어 $\mathbb{L}/\mathbb{L}\_s/\mathbb{K}$와 같이 쓸 수 있다. 
 
