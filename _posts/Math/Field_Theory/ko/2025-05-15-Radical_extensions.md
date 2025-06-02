@@ -91,7 +91,7 @@ $$\mathbb{L}_n=\{x\in \mathbb{L}\mid\text{$x$ is $p$-radical of height $\leq n$}
 
 이에 대한 증명은 본질적으로 자명하다.
 
-앞선 글에서 우리는 임의의 field $\mathbb{K}$는 (유일한) algebraic closure $\overline{\mathbb{K}}$를 갖는다는 것을 보았다. 따라서 [명제 5](#prop5)에서 $\mathbb{L}=\overline{\mathbb{K}}$로 둘 수 있다. 그럼 $\overline{\mathbb{K}}$는 perfect field이며, 뿐만 아니라 각각의 $n$에 대하여 $\overline{\mathbb{K}}_n$은 정확히 $\mathbb{K}^{p^{-n}}$과 같음을 안다. 이 상황에서의 (relative) $p$-radical closure를 $\mathbb{K}^{p^{-\infty}}$라 적자. 이는 정확히 [§체, ⁋정리 15](/ko/math/field_theory/fields#prop15)와 같은 것이다. 만일 $\mathbb{K}$가 imperfect라면, 즉 $\mathbb{K}\neq \mathbb{K}^p$라면 위의 ascending sequence는 strictly increasing이며, 따라서 $\mathbb{K}^{p^{-\infty}}/\mathbb{K}$는 infinite degree의 extension이 된다. 
+앞선 글에서 우리는 임의의 field $\mathbb{K}$는 algebraic closure $\overline{\mathbb{K}}$를 갖는다는 것을 보았다. 따라서 [명제 5](#prop5)에서 $\mathbb{L}=\overline{\mathbb{K}}$로 둘 수 있다. 그럼 $\overline{\mathbb{K}}$는 perfect field이며, 뿐만 아니라 각각의 $n$에 대하여 $\overline{\mathbb{K}}\_n$은 정확히 $\mathbb{K}^{p^{-n}}$과 같음을 안다. 이 상황에서의 (relative) $p$-radical closure를 $\mathbb{K}^{p^{-\infty}}$라 적자. 이는 정확히 [§체, ⁋정리 15](/ko/math/field_theory/fields#prop15)와 같은 것이다. 만일 $\mathbb{K}$가 imperfect라면, 즉 $\mathbb{K}\neq \mathbb{K}^p$라면 위의 ascending sequence는 strictly increasing이며, 따라서 $\mathbb{K}^{p^{-\infty}}/\mathbb{K}$는 infinite degree의 extension이 된다. 
 
 한편 다음이 성립한다. 
 
@@ -119,7 +119,7 @@ $$\mathbb{L}_n=\{x\in \mathbb{L}\mid\text{$x$ is $p$-radical of height $\leq n$}
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9**</ins> Field $\mathbb{K}=\mathbb{F}_p(t)$를 생각하자. 그럼 다항식 $u(\x)=\x^p-t\in \mathbb{K}[\x]$을 생각하고, 이를 통해 $p$-radical extension $\mathbb{L}=\mathbb{K}[\x]/(\x^p-t)$을 생각할 수 있다. 그럼 $\mathbb{L}$에서의 $u(\x)=0$의 근 $\alpha$에 대한 minimal polynomial이 $u(\x)$여야 하고 ([명제 2](#prop2)), 이를 미분하면 $Du=p\x^{p-1}=0$이므로 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)에 의하여 $\alpha$는 $u$의 중근임을 안다. 실은 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10)에 의해 $(\x-\alpha)^p=\x^p-\alpha^p=\x^p-t$이므로  $\alpha$는 multiplicity $p$를 갖는다. 
+<ins id="ex9">**예시 9**</ins> Field $\mathbb{K}=\mathbb{F}\_p(t)$를 생각하자. 그럼 다항식 $u(\x)=\x^p-t\in \mathbb{K}[\x]$을 생각하고, 이를 통해 $p$-radical extension $\mathbb{L}=\mathbb{K}[\x]/(\x^p-t)$을 생각할 수 있다. 그럼 $\mathbb{L}$에서의 $u(\x)=0$의 근 $\alpha$에 대한 minimal polynomial이 $u(\x)$여야 하고 ([명제 2](#prop2)), 이를 미분하면 $Du=p\x^{p-1}=0$이므로 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)에 의하여 $\alpha$는 $u$의 중근임을 안다. 실은 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10)에 의해 $(\x-\alpha)^p=\x^p-\alpha^p=\x^p-t$이므로  $\alpha$는 multiplicity $p$를 갖는다. 
 
 </div>
 
