@@ -93,7 +93,7 @@ $$\mathbb{K}(x)\cong \mathbb{K}[\x]/(f)\cong \mathbb{K}(y)$$
 <ins id="prop5">**명제 5**</ins> Algebraic extension $\mathbb{L}/\mathbb{K}$에 대하여, 다음이 모두 동치이다. 
 
 1. $\mathbb{L}/\mathbb{K}$가 quasi-Galois이다. 
-2. 암의의 $x\in \mathbb{L}$에 대하여, $x$의 ($\overline{\mathbb{K}})$에서의) conjugate들은 모두 $\mathbb{L}$에 속한다. 
+2. 암의의 $x\in \mathbb{L}$에 대하여, $x$의 ($\overline{\mathbb{K}}$에서의) conjugate들은 모두 $\mathbb{L}$에 속한다. 
 3. $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism은 $\mathbb{L}$을 $\mathbb{L}$로 보낸다, 
 4. $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 임의의 $\mathbb{K}$-homomorphism은 $\mathbb{L}$로 들어간다. 
 5. $\mathbb{L}$은 어떠한 non-constant polynomial들의 family $(f_i\in \mathbb{K}[\x])$의 splitting field이다. 
@@ -106,6 +106,10 @@ $$\mathbb{K}(x)\cong \mathbb{K}[\x]/(f)\cong \mathbb{K}(y)$$
 
 $$(1)\implies (5)\implies (3)\iff (4)\implies (2)$$
 
-이므로 $(2)\implies (1)$만 보이면 충분하다. 이를 위해 $\mathbb{L}$에서 근을 갖는 (monic) irreducible polynomial $f\in \mathbb{K}[\x]$가 주어졌다 하자. 
+이므로 $(2)\implies (1)$만 보이면 충분하다. 이를 위해 $\mathbb{L}$에서 근을 갖는 (monic) irreducible polynomial $f\in \mathbb{K}[\x]$가 주어졌다 하자. 그럼 우선 $\overline{\mathbb{K}}$가 algebraically closed이므로 $f$는 $\overline{\mathbb{K}}$에서 다음의 식 
+
+$$f(\x)=\prod_{i=1}^d (\x- a_i), \qquad a_i\in \overline{\mathbb{K}}$$
+
+으로 표현된다. 이제 각각의 $a_i$들은 conjugate이므로, 이로부터 
 
 </details>
