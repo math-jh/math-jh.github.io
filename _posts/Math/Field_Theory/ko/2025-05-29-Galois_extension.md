@@ -110,6 +110,69 @@ $$(1)\implies (5)\implies (3)\iff (4)\implies (2)$$
 
 $$f(\x)=\prod_{i=1}^d (\x- a_i), \qquad a_i\in \overline{\mathbb{K}}$$
 
-으로 표현된다. 이제 각각의 $a_i$들은 conjugate이므로, 이로부터 
+으로 표현된다. 이제 각각의 $a_i$들은 conjugate이고 따라서 가정에 의해 이들이 모두 $\mathbb{L}$에 속해야한다. 
+pf
+</details>
+
+이로부터 다음이 성립한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="cor6">**따름정리 6**</ins> 다음이 성립한다. 
+
+1. Algebraic extension $\mathbb{L}/\mathbb{K}$가 quasi-Galois인 것과, $\mathbb{L}$의 임의의 conjugate이 자기 자신 뿐인 것이 동치이다. 
+2. Algebraic extension $\mathbb{K}\subseteq \mathbb{L}\subseteq \mathbb{M}$에 대하여, 만일 $\mathbb{M}/\mathbb{K}$가 quasi-Galois라면 $\mathbb{L}/\mathbb{K}$ 또한 그러하다. 
+3. Quasi-Galois extension $\mathbb{M}/\mathbb{K}$와 그 subextension $\mathbb{L}/\mathbb{K}$가 주어졌다 하자. 그럼 임의의 $\mathbb{K}$-homomorphism $u: \mathbb{L}\rightarrow \overline{\mathbb{K}}$에 대해 $u(\mathbb{L})\subseteq \mathbb{M}$이 성립하며, 이를 확장하는 $\mathbb{M}$의 $\mathbb{K}$-automorphism $v$가 존재한다. 
+4. 임의의 field extension $\mathbb{K}'/\mathbb{K}$와 quasi-Galois extension $\mathbb{L}/\mathbb{K}$에 대해 $\mathbb{K}'(\mathbb{L})$은 $\mathbb{K}'$에 대해 quasi-Galois이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+1. [명제 5](#prop5)에 의해 $\mathbb{L}/\mathbb{K}$가 quasi-Galois인 것과 $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism이 $\mathbb{L}$을 $\mathbb{L}$로 보내는 것이 동치이다. 
+2. $\mathbb{M}/\mathbb{K}$가 quasi-Galois라 하자. 그럼 우선 $\overline{\mathbb{K}}$는 $\mathbb{L}$의 algebraic closure이기도 하므로, [명제 5](#prop5)에 의해 임의의 $\mathbb{L}$-automorphism $u: \overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$에 대해 $u(\mathbb{M})=\mathbb{M}$임을 보이면 충분하다. 그런데 $\mathbb{M}$은 $\mathbb{K}$의 quasi-Galois extension이고, $u$는 $\mathbb{L}$-automorphism이므로 자동적으로 $\mathbb{K}$-automorphism이기도 하다. 이로부터 $u$가 원하는 조건을 만족해야 함을 안다. 
+3. [명제 1](#prop1)로부터 $u$를 확장하는 $\mathbb{K}$-automorphism $v:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$이 존재함을 안다. 이 때, 이를 $\mathbb{M}$으로 제한한 것은 $\mathbb{M}$이 quasi-Galois라는 가정으로부터 $v(\mathbb{M})=\mathbb{M}$을 만족해야 하고, 따라서 원하는 주장이 성립한다. 
+4. $\mathbb{L}$이 $f_i\in \mathbb{K}[\x]$들의 splitting field라면, $\mathbb{L}'$이 $f_i\in \mathbb{K}'[\x]$들의 splitting field이다. 
 
 </details>
+
+위의 따름정리의 증명에서 볼 수 있듯 quasi-Galois extension $\mathbb{L}/\mathbb{K}$를 특징짓는 가장 중요한 성질은 임의의 $\mathbb{K}$-automorphism이 $\mathbb{L}$을 $\mathbb{L}$로 보년다는 것이다. 다음 명제도 이 사실로부터 자명하다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7**</ins> $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$ 안에서의 quasi-Galois extension들 $\mathbb{L}\_i$이 주어졌다 하자. 그럼 $\bigcap \mathbb{L}\_i$와 $\mathbb{K}(\bigcup \mathbb{L}\_i)$도 모두 quasi-Galois이다. 
+
+</div>
+
+특히 $\overline{\mathbb{K}}$의 임의의 원소들의 집합 $S$에 대하여, 이를 포함하는 quasi-Galois extenson 중 가장 작은 것을 생각할 수 있다. 이는 정의에 의해, $S$의 각 원소들의 conjugate들을 모두 모은 후, 이들로 생성되는 $\mathbb{K}$의 extension이다. 이를 $S$에 의해 생성되는 quasi-Galois extension이라 부른다. 
+
+[정의 4](#def3)에서 우리는 quasi-Galois extension을 정의할 때, irreducible polynomial $f$가 일차식들의 곱으로 쪼개질 것을 요구했지만 이들이 서로 다를 필요는 없었다. Galois extension은 여기에 separable 조건을 추가하여 얻어진다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm8">**정리 8**</ins> Algebraic extension $\mathbb{L}/\mathbb{K}$와, $\mathbb{L}$의 $\mathbb{K}$-automorphism들의 group $\Gamma$가 주어졌다 하자. 다음이 모두 동치이다. 
+
+1. $\mathbb{L}$의 $\Gamma$-invariant element들은 모두 $\mathbb{K}$의 원소이다. 
+2. $\mathbb{L}$은 $\mathbb{K}$의 separable quasi-Galois extension이다. 
+3. 임의의 $x\in \mathbb{L}$에 대하여, $x$의 minimal polynomial $f\in \mathbb{K}[\x]$는 $\mathbb{L}[\x]$에서 서로 다른 일차식들의 곱으로 쪼개진다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+둘째 조건과 셋째 조건이 동치임은 자명하므로, 이들과 첫째 조건이 동치임만 보이면 충분하다. 
+
+우선 첫째 조건을 가정하자. 임의의 $x\in \mathbb{L}$와 그 minimal polynomial $f\in \mathbb{K}[\x]$에 대하여 $f$가 $\mathbb{L}[\x]$에서 서로 다른 일차식들의 곱으로 쪼개진다는 것을 보여야 한다. 이를 위해 $f$의 $\mathbb{L}$에서의 모든 근들의 모임을 $S$라 하고, 새로운 다항식 
+
+$$g(\x)=\prod_{x\in S}(\x-x)$$
+
+이라 정의하면 $g$는 $\mathbb{L}[\x]$의 원소이며 밈믜믜 $\sigma\in\Gamma$에 대해 
+
+$$(\sigma\cdot g)(\x)=\prod_{x\in S}(\x-\sigma(x))=\prod_{x\in S}(\x-x)$$
+
+이므로 
+
+
+
+</details>
+
