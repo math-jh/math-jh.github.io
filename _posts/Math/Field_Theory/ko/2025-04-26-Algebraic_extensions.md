@@ -25,11 +25,11 @@ weight: 2
 
 [\[범주론\] §범주, ⁋예시 13](/ko/math/category_theory/categories)의 표기법과는 다소 차이가 있으나, 우리는 field extension $\mathbb{K}\rightarrow \mathbb{L}$을 종종 $\mathbb{L}/\mathbb{K}$와 같이 표기한다. 그럼 field extension $\mathbb{L}/\mathbb{K}$가 주어질 때마다 우리는 injective map $\mathbb{K}\hookrightarrow\mathbb{L}$을 통해 $\mathbb{K}$를 $\mathbb{L}$의 subfield와 identify할 수 있다. 그러나, 만일 $\mathbb{L}=\mathbb{K}$이고 $\mathbb{K}\hookrightarrow\mathbb{L}=\mathbb{K}$이 endomorphism인 경우, 이러한 identification은 혼동의 여지가 있으므로 이 경우에는 $\mathbb{K}$와 $\mathbb{L}$의 subfield를 identify하지 않는다.  
 
-정의에 의하여, 두 extension $\mathbb{K} \rightarrow \mathbb{L}_1$과 $\mathbb{K} \rightarrow \mathbb{L}_2$가 주어졌다 하면, 다음 commutative diagram
+정의에 의하여, 두 extension $\mathbb{K} \rightarrow \mathbb{L}\_1$과 $\mathbb{K} \rightarrow \mathbb{L}\_2$가 주어졌다 하면, 다음 commutative diagram
 
 ![morphism_of_field_extensions](/assets/images/Math/Field_Theory/Algebraic_extensions-1.png){:style="width:10em" class="invert" .align-center}
 
-이 이들 사이의 morphism이 된다. 이 때, $\mathbb{L}_1$과 $\mathbb{L}_2$는 모두 field이므로, morphism $\mathbb{L}_1 \rightarrow \mathbb{L}_2$는 반드시 injective여야 한다. 위의 주의사항을 지키는 선에서, 이 경우 우리는 $\mathbb{L}_1$이 $\mathbb{L}_2$의 *subextension*이라 부른다. 
+이 이들 사이의 morphism이 된다. 이 때, $\mathbb{L}\_1$과 $\mathbb{L}\_2$는 모두 field이므로, morphism $\mathbb{L}\_1 \rightarrow \mathbb{L}\_2$는 반드시 injective여야 한다. 위의 주의사항을 지키는 선에서, 이 경우 우리는 $\mathbb{L}\_1$이 $\mathbb{L}\_2$의 *subextension*이라 부른다. 
 
 따라서 임의의 field extension $\mathbb{L}/\mathbb{K}$는 (그 자체가 field인) associative unital $\mathbb{K}$-algebra로 생각할 수 있다. 
 
@@ -51,7 +51,7 @@ weight: 2
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> Field extension $\mathbb{L}_2/\mathbb{L}_1/\mathbb{K}$에 대하여, $[\mathbb{L}_2:\mathbb{K}]=[\mathbb{L}_2:\mathbb{L}_1][\mathbb{L}_1:\mathbb{K}]$이 성립한다. 
+<ins id="prop2">**명제 2**</ins> Field extension $\mathbb{L}\_2/\mathbb{L}\_1/\mathbb{K}$에 대하여, $[\mathbb{L}_2:\mathbb{K}]=[\mathbb{L}_2:\mathbb{L}_1][\mathbb{L}\_1:\mathbb{K}]$이 성립한다. 
 
 </div>
 
@@ -107,15 +107,15 @@ $$K(M \cup N) = K(M)(N) = K(N)(M)$$
 
 만일 $\mathbb{L}=\mathbb{K}(A)$이도록 하는 유한집합 $A$가 존재한다면, extension $\mathbb{L}/\mathbb{K}$를 *finite extension*이라 부른다. 그럼 특히 finite degree field extension은 finite extension이다. $\mathbb{L}$을 $\mathbb{K}$-벡터공간으로서의 basis가 $\mathbb{L}$의 field로서의 generator가 될 것이기 때문이다. 
 
-이제 두 개의 $\mathbb{K}$-extension $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{L}$이 주어졌다 하자. 그럼 우리는 $\mathbb{L}_1$과 $\mathbb{L}_2$를 동시에 포함하는 가장 작은 extension을 생각할 수 있다. 
+이제 두 개의 $\mathbb{K}$-extension $\mathbb{L}\_1/\mathbb{K}$, $\mathbb{L}\_2/\mathbb{L}$이 주어졌다 하자. 그럼 우리는 $\mathbb{L}\_1$과 $\mathbb{L}\_2$를 동시에 포함하는 가장 작은 extension을 생각할 수 있다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 두 개의 $\mathbb{K}$-extension $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{L}$에 대하여, $\mathbb{K}$-extension $\mathbb{K} \rightarrow \mathbb{M}$이 이들의 *composite*이라는 것은 다음의 diagram
+<ins id="def7">**정의 7**</ins> 두 개의 $\mathbb{K}$-extension $\mathbb{L}\_1/\mathbb{K}$, $\mathbb{L}\_2/\mathbb{L}$에 대하여, $\mathbb{K}$-extension $\mathbb{K} \rightarrow \mathbb{M}$이 이들의 *composite*이라는 것은 다음의 diagram
 
 ![composite_field](/assets/images/Math/Field_Theory/Algebraic_extensions-2.png){:style="width:10em" class="invert" .align-center}
 
-을 commute하도록 하는 $\mathbb{K}$-algebra homomorphism $\mathbb{L}_1 \rightarrow \mathbb{M}$과 $\mathbb{L}_2 \rightarrow \mathbb{M}$이 존재하는 것이다. 
+을 commute하도록 하는 $\mathbb{K}$-algebra homomorphism $\mathbb{L}\_1 \rightarrow \mathbb{M}$과 $\mathbb{L}\_2 \rightarrow \mathbb{M}$이 존재하는 것이다. 
 
 </div>
 
@@ -123,9 +123,9 @@ $$K(M \cup N) = K(M)(N) = K(N)(M)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins>  두 $\mathbb{K}$-extension $\mathbb{L}_1, \mathbb{L}_2$가 주어졌다 하자. 
+<ins id="prop8">**명제 8**</ins>  두 $\mathbb{K}$-extension $\mathbb{L}\_1, \mathbb{L}\_2$가 주어졌다 하자. 
 
-1. 이들의 composite field $\mathbb{M}$과 extension $u_i: \mathbb{L}_i \rightarrow \mathbb{M}$에 대하여, 다음의 식
+1. 이들의 composite field $\mathbb{M}$과 extension $u\_i: \mathbb{L}\_i \rightarrow \mathbb{M}$에 대하여, 다음의 식
     
     $$\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2 \rightarrow \mathbb{M};\qquad x_1\otimes x_2\mapsto u_1(x_1)u_2(x_2)$$
 
@@ -142,7 +142,7 @@ $$K(M \cup N) = K(M)(N) = K(N)(M)$$
 
 </details>
 
-뿐만 아니라, 두 번째 결과에 의해 얻어지는 composite field가 isomorphism에 대하여 유일하게 결정된다는 것 또한 자명하다. 한편, 임의의 두 $\mathbb{K}$-extension $\mathbb{L}_1, \mathbb{L}_2$에 대하여, $\mathbb{L}\_1\otimes\_\mathbb{K} \mathbb{L}\_2$는 항상 prime ideal을 가지므로 ([\[대수적 구조\] §환의 정의, ⁋정리 9](/ko/math/algebraic_structures/rings#thm9)) 임의의 두 $\mathbb{K}$-extension은 composite field를 갖는다는 것을 확인할 수 있다. 
+뿐만 아니라, 두 번째 결과에 의해 얻어지는 composite field가 isomorphism에 대하여 유일하게 결정된다는 것 또한 자명하다. 한편, 임의의 두 $\mathbb{K}$-extension $\mathbb{L}\_1, \mathbb{L}\_2$에 대하여, $\mathbb{L}\_1\otimes\_\mathbb{K} \mathbb{L}\_2$는 항상 prime ideal을 가지므로 ([\[대수적 구조\] §환의 정의, ⁋정리 9](/ko/math/algebraic_structures/rings#thm9)) 임의의 두 $\mathbb{K}$-extension은 composite field를 갖는다는 것을 확인할 수 있다. 
 
 ## 대수적 확장
 
@@ -162,9 +162,9 @@ $\Omega$의 임의의 두 $\mathbb{K}$-subalgebra $E,F$에 대하여, multiplica
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins>  두 $\mathbb{K}$-extension $\mathbb{L}_1, \mathbb{L}_2$에 대하여 다음이 성립한다. 
+<ins id="prop10">**명제 10**</ins>  두 $\mathbb{K}$-extension $\mathbb{L}\_1, \mathbb{L}\_2$에 대하여 다음이 성립한다. 
 
-1. $\mathbb{L}\_2$가 finite degree를 가지면, $\mathbb{L}\_1 \cup \mathbb{L}\_2$로 생성되는 $\Omega$의 subring은 field가 되며, 이는 $\mathbb{L}\_1(\mathbb{L}_2)$와 일치한다. 또한 $\mathbb{L}\_1(\mathbb{L}\_2)$의 $\mathbb{L}\_1$에 대한 degree도 유한하고,
+1. $\mathbb{L}\_2$가 finite degree를 가지면, $\mathbb{L}\_1 \cup \mathbb{L}\_2$로 생성되는 $\Omega$의 subring은 field가 되며, 이는 $\mathbb{L}\_1(\mathbb{L}\_2)$와 일치한다. 또한 $\mathbb{L}\_1(\mathbb{L}\_2)$의 $\mathbb{L}\_1$에 대한 degree도 유한하고,
     
     $$[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1] \leq [\mathbb{L}_2 : \mathbb{K}]$$
     
@@ -179,12 +179,12 @@ $\Omega$의 임의의 두 $\mathbb{K}$-subalgebra $E,F$에 대하여, multiplica
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $\mathbb{L}\_1 \cup \mathbb{L}\_2$로 생성되는 $\Omega$의 subring을 $G$라 하자. 만약 $(y\_j)\_{1 \leq j \leq n}$이 $\mathbb{L}\_2$의 $\mathbb{K}$-basis라면, $G$는 $\mathbb{L}\_1$-벡터공간으로서 $y\_j$들로 생성된다. 그러면 $G$는 finite rank $\leq n$을 가지는 $\mathbb{L}\_1$-algebra가 된다. 이제 $G$는 field $\Omega$ 안에 포함되어 있으므로 integral domain이며, 따라서 [명제 3](#prop3)에 의하여 field가 된다. 결과적으로 $G=\mathbb{L}_1(\mathbb{L}_2)$이고, 
+1. $\mathbb{L}\_1 \cup \mathbb{L}\_2$로 생성되는 $\Omega$의 subring을 $G$라 하자. 만약 $(y\_j)\_{1 \leq j \leq n}$이 $\mathbb{L}\_2$의 $\mathbb{K}$-basis라면, $G$는 $\mathbb{L}\_1$-벡터공간으로서 $y\_j$들로 생성된다. 그러면 $G$는 finite rank $\leq n$을 가지는 $\mathbb{L}\_1$-algebra가 된다. 이제 $G$는 field $\Omega$ 안에 포함되어 있으므로 integral domain이며, 따라서 [명제 3](#prop3)에 의하여 field가 된다. 결과적으로 $G=\mathbb{L}\_1(\mathbb{L}\_2)$이고, 
     
     $$[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1] \leq [\mathbb{L}_2 : \mathbb{K}]$$
 
     가 성립한다.  
-    또한 $[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1] = [\mathbb{L}_2 : \mathbb{K}]$이면 $y_j$들이 $\mathbb{L}_1$ 위에서 linearly independent여야 한다. 즉, $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint이다. 
+    또한 $[\mathbb{L}\_1(\mathbb{L}\_2) : \mathbb{L}\_1] = [\mathbb{L}\_2 : \mathbb{K}]$이면 $y\_j$들이 $\mathbb{L}\_1$ 위에서 linearly independent여야 한다. 즉, $\mathbb{L}\_1$와 $\mathbb{L}\_2$가 linearly disjoint이다. 
 2. 이는 다음의 식
     
     $$[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{K}] = [\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1][\mathbb{L}_1 : \mathbb{K}]$$
@@ -266,7 +266,7 @@ $$f(\x)=\x^n-\sum_{k=0}^{n-1}\frac{a_k}{a_n}\x^k$$
 
 <ins id="thm15">**정리 15**</ins> $\mathbb{K}$-algebra $E$의 algebraic element $x\in E$에 대하여, $x$의 degree를 $n$, minimal polynomial을 $f$라 하자. 그럼 다음이 성립한다. 
 
-1. $g \in \mathbb{K}[\x]$에 대해 $g(x) = 0$이 되기 위한 필요충분조건은 $g$가 $f$의 배수(multiple)인 것이다.
+1. $g \in \mathbb{K}[\x]$에 대해 $g(x) = 0$이 되기 위한 필요충분조건은 $g$가 $f$의 배수인 것이다.
 2. $\mathbb{K}[\x] \rightarrow \mathbb{K}[x]$를 $g\mapsto g(x)$로 정의하자. 그럼 이 morphism은 quotient algebra $\mathbb{K}[\x]/(f)$로 factor through하며, 그 결과로 얻어지는 $\mathbb{K}[\x]/(f) \rightarrow \mathbb{K}[x]$는 isomorphism이다. 또, 이 때 $1, x, \dots, x^{n-1}$은 $\mathbb{K}[x]$의 $\mathbb{K}$-basis를 이루며, 따라서 $[\mathbb{K}[x] : \mathbb{K}] = n$이 성립한다.
 3. 만일 $E$가 integral domain이라면 $\mathbb{K}[x]$는 field이며, $f\in \mathbb{K}[\x]$는 $f(x) = 0$를 만족하는 유일한 monic irreducible polynomial이다.
 4. $x$가 $E$에서 invertible element가 되기 위한 필요충분조건은 $f(0) \neq 0$인 것이며, 이 때 $x^{-1} \in \mathbb{K}[x]$이다.
