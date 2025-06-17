@@ -146,7 +146,7 @@ pf
 
 특히 $\overline{\mathbb{K}}$의 임의의 원소들의 집합 $S$에 대하여, 이를 포함하는 quasi-Galois extenson 중 가장 작은 것을 생각할 수 있다. 이는 정의에 의해, $S$의 각 원소들의 conjugate들을 모두 모은 후, 이들로 생성되는 $\mathbb{K}$의 extension이다. 이를 $S$에 의해 생성되는 quasi-Galois extension이라 부른다. 
 
-[정의 4](#def3)에서 우리는 quasi-Galois extension을 정의할 때, irreducible polynomial $f$가 일차식들의 곱으로 쪼개질 것을 요구했지만 이들이 서로 다를 필요는 없었다. Galois extension은 여기에 separable 조건을 추가하여 얻어진다. 
+[정의 4](#dzef3)에서 우리는 quasi-Galois extension을 정의할 때, irreducible polynomial $f$가 일차식들의 곱으로 쪼개질 것을 요구했지만 이들이 서로 다를 필요는 없었다. Galois extension은 여기에 separable 조건을 추가하여 얻어진다. 
 
 <div class="proposition" markdown="1">
 
@@ -164,15 +164,41 @@ pf
 
 우선 첫째 조건을 가정하자. 임의의 $x\in \mathbb{L}$와 그 minimal polynomial $f\in \mathbb{K}[\x]$에 대하여 $f$가 $\mathbb{L}[\x]$에서 서로 다른 일차식들의 곱으로 쪼개진다는 것을 보여야 한다. 이를 위해 $f$의 $\mathbb{L}$에서의 모든 근들의 모임을 $S$라 하고, 새로운 다항식 
 
-$$g(\x)=\prod_{x\in S}(\x-x)$$
+$$g(\x)=\prod_{a\in S}(\x-a)$$
 
-이라 정의하면 $g$는 $\mathbb{L}[\x]$의 원소이며 밈믜믜 $\sigma\in\Gamma$에 대해 
+이라 정의하면 $g$는 $\mathbb{L}[\x]$의 원소이며 임의의 $\sigma\in\Gamma$에 대해 
 
-$$(\sigma\cdot g)(\x)=\prod_{x\in S}(\x-\sigma(x))=\prod_{x\in S}(\x-x)$$
+$$(\sigma\cdot g)(\x)=\prod_{a\in S}(\x-\sigma(a))=\prod_{a\in S}(\x-a)$$
 
-이므로 
+이므로 $g$의 계수들은 $\sigma$에 의해 변하지 않고 따라서 첫째 조건의 가정으로부터 $g\in\mathbb{K}
+[\x]$이다. 이제 $g(x)=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $g$는 $f$를 나누며, 이들의 차수를 고려하면 $g=f$여야 함을 안다. 즉 셋째 조건이 성립한다. 
 
+거꾸로 셋째 조건을 가정하고 첫째 조건을 보이자. $x\in\mathbb{L}$이 $\mathbb{K}$에 속하지 않는다면 $x$를 다른 원소로 보내는 $\sigma\in\Gamma$가 존재함을 보여야 한다. $x$의 minimal polynomial을 $f$라 하면, $x\not\in\mathbb{K}$인 것으로부터 $f$는 2차 이상이고, 가정에 의해 
 
+$$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$S$ the set of comjugates of $x$ in $\overline{\mathbb{K}}$}$$
+
+로 쪼갤 수 있으며 한편 $\mathbb{L}/\mathbb{K}$는 quasi-Galois이므로 $x$를 자신과 다른 $a\in S$로 보내는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism $u$가 존재하며 이는 [명제 5](#prop5)에 의해 $\mathbb{L}$의 $\mathbb{K}$-automorphism이다. 이로부터 원하는 결과를 얻는다.
 
 </details>
 
+이제 다음을 정의할 수 있다.
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> Algebraic extension $\mathbb{L}/\mathbb{K}$이 *Galois<sub>갈루아</sub>*라는 것은 $\mathbb{L}/\mathbb{K}$이 [명제 8](#prop8)의 조건을 만족하는 것이다. 
+
+</div>
+
+그럼 [명제 7](#prop7)의 결과와 separable extension에 대한 결과로부터 다음의 두 명제를 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10**</ins> $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$ 안에서의 Galois extension들 $\mathbb{L}\_i$이 주어졌다 하자. 그럼 $\bigcap \mathbb{L}\_i$와 $\mathbb{K}(\bigcup \mathbb{L}\_i)$도 모두 Galois이다. 
+
+</div>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11**</ins> Galois extension $\mathbb{L}/\mathbb{K}$와 그 subextension $\mathbb{M}/\mathbb{K}$에 대하여,  
+
+</div>
