@@ -194,11 +194,39 @@ $$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$S$ the set of comjugates of $x$ in $
 <div class="proposition" markdown="1">
 
 <ins id="prop10">**명제 10**</ins> $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$ 안에서의 Galois extension들 $\mathbb{L}\_i$이 주어졌다 하자. 그럼 $\bigcap \mathbb{L}\_i$와 $\mathbb{K}(\bigcup \mathbb{L}\_i)$도 모두 Galois이다. 
-
+ 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Galois extension $\mathbb{L}/\mathbb{K}$와 그 subextension $\mathbb{M}/\mathbb{K}$에 대하여,  
+<ins id="prop11">**명제 11**</ins> Galois extension $\mathbb{L}/\mathbb{K}$와 finite degree subextension $\mathbb{M}/\mathbb{K}$가 주어졌다 하자. 그럼 $\mathbb{M}$을 포함하고, finite degree Galois인 $\mathbb{L}/\mathbb{K}$의 적당한 subextension $\mathbb{N}/\mathbb{K}$이 존재한다.
+
+</div>
+
+## 갈루아 군
+
+이미 살펴보았듯 Galois extension $\mathbb{L}/\mathbb{K}$을 다룰 때 중요하게 사용되는 것은 $\mathbb{L}$의 $\mathbb{K}$-automorphism들의 모임이다.
+
+<div class="definition" markdown="1">
+ 
+<ins id="def12">**정의 12**</ins> Galois extension $\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{L}$의 $\mathbb{K}$-automorphism들의 group을 *Galois group<sub>갈루아 군</sub>*이라 부르고 $\Gal(\mathbb{L}/\mathbb{K})$으로 적는다.
+
+</div> 
+
+특별히 field $\mathbb{K}$를 고정하고 그 algebraic closure $\overline{\mathbb{K}}$를 생각하자. $\mathbb{K}[\x]$의 separable polynomial $f$와, $f$의 근들의 집합 $A$에 대하여 $\mathbb{L}=\mathbb{K}(A)$는 $\mathbb{K}$의 Galois extension임을 이미 살펴보았다. 그런데 $\mathbb{L}$는 $S$에 의해 생성되므로 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$는 $A$에서의 값으로 완전히 결정되며 이로부터 injective group homomorphism 
+
+$$\Gal(\mathbb{L}/\mathbb{K})\rightarrow S_A$$
+
+이 유도된다. 일반적으로 이 homomorphism은 surjective일 필요가 없다. 즉 임의의 separable polynomial $f$의 근들 가운데 comjugate하지 않은 것들이 있을 수 있으며 이는 [명제 3](#prop3)에 의하여 이들 두 근 $x,y$가 서로 다른 minimal polynomial을 갖는 것과 동치이다. 한편 $x,y$가 $f$의 근이라면 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)로부터 이들의 minimal polynomial들은 각각 $f$를 나누며 따라서 $x$와 $y$는 서로 다른 $f$의 irreducible factor의 근이다. 이로부터 우리는 위의 injective homomorphism의 image가 어떻게 생겼는지까지 확인해줄 수 있다.
+
+한편 Galois extension $\mathbb{L}/\mathbb{K}$와, $\mathbb{L}$의 subextension인 또 다른 Galois extension $\mathbb{M}/\mathbb{K}$에 대하여, 우리는 [명제 1](#prop1)로부터 다음의 결과를 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop13">**명제 13**</ins> 위와 같은 상황에서 restriction homomorphism
+
+$$\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K});\qquad \sigma\mapsto \sigma\vert_\mathbb{M}$$
+
+은 surjective이다.
 
 </div>
