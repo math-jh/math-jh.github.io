@@ -133,7 +133,9 @@ $$f(x)=\begin{cases}1&\text{if $x\in U$}\\0&\text{if $x\in V$}\end{cases}$$
 
 $$X=\bigcup_{i\in I} U_i$$
 
-으로 나타낼 수 있다. 한편 [명제 2](#prop2)에 의하여 각각의 $U_i$들은 반드시 닫힌집합이어야 한다. 만일 $I$가 유한집합이라면, $U_i$들은 모두 열린집합인 동시에 닫힌집합이어야 함을 안다. 뿐만 아니라 다음이 성립한다.
+으로 나타낼 수 있다. 한편 [명제 2](#prop2)에 의하여 각각의 $U_i$들은 반드시 닫힌집합이어야 한다. 만일 $I$가 유한집합이라면, $U_i$들은 모두 열린집합인 동시에 닫힌집합이어야 함을 안다. 물론 이는 무한히 많은 connected component에 대해서는 적용되지 않지만, 임의의 위상공간의 clopen set은 반드시 connected component들의 union으로 나타나야한다. 만일 그렇지 않고 어떠한 connected component $C$가 clopen set $A$와 만나면서 동시에 $A$의 여집합과도 만난다면 $C\cap A$와 $C\setminus A$가 $C$를 나누는 두 열린집합이 될 것이기 때문이다. 
+
+뿐만 아니라 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
