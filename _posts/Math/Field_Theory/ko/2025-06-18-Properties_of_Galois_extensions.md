@@ -63,13 +63,12 @@ $$\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$$
 
 $$\sigma\in\ker\rho\iff \sigma\vert_\mathbb{M}=\id\vert_\mathbb{M}\iff\sigma\in U_\mathbb{M}(\id_\mathbb{L})$$
 
-이므로 각각의 $U_\mathbb{M}(\id_\mathbb{L})$들은 clopen이다. 한편 임의의 clopen set은 항상 connected component들의 합집합으로 쓸 수 있고, 따라서 clopen set들의 공집합이 아닌 임의의 교집합은 connected component를 포함해야 한다. 즉 다음이 성립한다. 
+이므로 각각의 $U_\mathbb{M}(\id_\mathbb{L})$들은 clopen이다. 한편 임의의 clopen set은 항상 connected component들의 합집합으로 쓸 수 있고, 따라서 clopen set들의 공집합이 아닌 임의의 교집합은 connected component를 포함해야 한다. 그러나 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
 <ins id="prop1">**명제 1**</ins> 위의 상황에서 다음의 식 
-
-$$\{1\}=\bigcap_{\mathbb{M}\in \Lambda'}U_\mathbb{M}(\id_\mathbb{L})$$
+$$\{\id_\mathbb{L}\}=\bigcap_{\mathbb{M}\in \Lambda'}U_\mathbb{M}(\id_\mathbb{L})$$
 
 이 성립한다.
 
@@ -77,6 +76,9 @@ $$\{1\}=\bigcap_{\mathbb{M}\in \Lambda'}U_\mathbb{M}(\id_\mathbb{L})$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-
+임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$이 주어졌다 하자. 만일 $\sigma\neq\id_\mathbb{L}$이라면 $\sigma(x)\neq x$이도록 하는 $x\in \mathbb{L}$이 존재한다. 그럼 $\mathbb{M}\mathbb{K}(x)$으로 잡으면 $\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$이 성립한다. 이제 앞서 살펴본 것과 같이 $\Lambda'$이 $\Lambda$의 cofinal subset이므로 원하는 결과를 얻는다.
 
 </details>
+
+따라서, 이 명제의 결과에 의해 $\id_\mathbb{L}$을 포함하는 connected component는 $\left\\{\id_\mathbb{L}\right\\}$이며, 이로부터 $\Gal(\mathbb{L}/\mathbb{K})$이 totally disconnected space임을 안다. [\[위상수학\] §, ⁋]()
+
