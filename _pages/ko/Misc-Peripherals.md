@@ -10,5 +10,4 @@ permalink: /ko/peripherals
 {% endif %}
 
 ## [키보드](/ko/keyboards)
-## [마우스](ko/mouse)
-## [기타](/ko/etc)
+## [키맵](ko/keymaps)
