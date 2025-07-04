@@ -3,15 +3,15 @@
 title: "서브라임 텍스트"
 excerpt: ""
 
-categories: [Misc / Keymaps]
-permalink: /ko/misc/keymaps/sublime_text
+categories: [Misc / Peripherals]
+permalink: /ko/misc/peripherals/keymaps/sublime_text
 header:
     overlay_image: 
     overlay_filter: 0.5
 toc: false
 date: 2025-07-03
 last_modified_at: 2025-07-03
-weight: 1
+weight: 101
 
 ---
 
