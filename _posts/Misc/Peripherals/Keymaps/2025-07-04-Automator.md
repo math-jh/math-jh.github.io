@@ -3,15 +3,15 @@
 title: "Apple Automator"
 excerpt: ""
 
-categories: [Misc / Keymaps]
-permalink: /ko/misc/keymaps/automator
+categories: [Misc / Peripherals]
+permalink: /ko/misc/peripherals/keymaps/automator
 header:
     overlay_image: 
     overlay_filter: 0.5
 toc: false
 date: 2025-07-04
 last_modified_at: 2025-07-04
-weight: 2
+weight: 102
 
 ---
 
@@ -19,7 +19,7 @@ weight: 2
 
 `Automator`는 맥에 기본으로 설치되어 있다. 이를 실행하면 다음과 같은 창이 뜬다. 
 
-![automator](/assets/images/Misc/Keymaps/Automator-1.png){:style="width:90%" .align-center}
+![automator](/assets/images/Misc/Peripherals/Automator-1.png){:style="width:90%" .align-center}
 
 그럼 빠른동작을 선택하고 코딩을 하면 된다. 이 글에서 설명할 것은 내가 사용하는 빠른동작들인 `Caffeinate`, `Jekyll`, 그리고 `New_document`이다. 마지막 빠른동작의 경우 나도 구글링해서 얻은 것을 그대로 쓰고 있어서 별도로 설명은 하지 않는다. 
 
@@ -127,4 +127,4 @@ do shell script "touch \"" & thefullpath & "\""
 
 위와 같이 빠른동작을 만들었다면 이 파일은 라이브러리 내의 `Services` 폴더에 저장된다. 이제 설정의 키보드로 가서, 키보드 단축키를 연 후 서비스 항목으로 가면 방금 만든 빠른동작들이 보이므로, 새로운 단축키를 지정해주면 된다. 
 
-![shortcuts](/assets/images/Misc/Keymaps/Automator-2.png){:style="width:90%" .align-center}
+![shortcuts](/assets/images/Misc/Peripherals/Automator-2.png){:style="width:90%" .align-center}
