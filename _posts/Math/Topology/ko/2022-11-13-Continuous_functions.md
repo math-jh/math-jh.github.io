@@ -103,11 +103,11 @@ $$f^{-1}(y)\in f^\mathcal{T}(V_1)\setminus f^\mathcal{T}(V_2)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 일반적으로 $f^{\mathcal{T}}$가 전사함수가 될 필요는 없다. 가령 $\mathbb{N}$에 discrete topology를 준 공간을 $X$, trivial topology를 준 공간을 $Y$라 한 후, 집합으로서의 항등함수 $\id:\mathbb{N}\rightarrow\mathbb{N}$을 생각하면 $\id$는 연속인 전단사함수이지만 함수
+<ins id="ex5">**예시 5**</ins> 일반적으로 $f^{\mathcal{T}}$가 전사함수가 될 필요는 없다. 가령 $\mathbb{N}$에 discrete topology $\mathcal{T}_1$을 준 공간을 $X_1$, trivial topology $\mathcal{T}_2$를 준 공간을 $X_2$라 한 후, 집합으로서의 항등함수 $\id:\mathbb{N}\rightarrow\mathbb{N}$을 생각하면 $\id$는 연속인 전단사함수이지만 함수
 
-$$\id^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$
+$$\id^\mathcal{T}:\mathcal{T}_2\rightarrow\mathcal{T}_1$$
 
-는 전사함수가 될 수 없다. ([\[집합론\] §기수, ⁋명제 15](/ko/math/set_theory/cardinals#prop15))
+는 전사함수가 될 수 없다. ([\[집합론\] §기수들 사이의 연산, ⁋명제 10](/ko/math/set_theory/operation_of_cardinals#prop10))
 
 </div>
 
@@ -123,7 +123,7 @@ $$f^\mathcal{T}\circ (f^{-1})^\mathcal{T}=\id_{\mathcal{T}_X},\qquad (f^{-1})^\m
 
 </div>
 
-이 정의에 따르면, 위의 [예시 5](#ex5)는 전단사인 연속함수이지만 homeomorphism은 아닌 예시가 된다.
+즉 두 위상공간 $X,Y$가 homeomorphic하다는 것은 이들이 집합으로서 bijection이 존재하는 것 뿐만 아니라, 이 bijection이 두 집합의 위상구조, 즉 열린집합들까지 정확히 같은 방식으로 행동하도록 하는 것이다. 전단사인 연속함수이지만 homeomorphism은 아닌 예시는 바로 위 [예시 5](#ex5)가 된다. 
 
 ---
 

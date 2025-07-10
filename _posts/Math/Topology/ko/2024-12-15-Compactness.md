@@ -17,11 +17,11 @@ weight: 16
 
 ---
 
-이제 우리는 옹골성과 관련된 남은 주제들을 조금 더 살펴본다.
+이제 우리는 옹골성과 관련된 남은 결과들 및 이 정의의 변주들을 살펴본다. 
 
 ## Tychonoff theorem
 
-첫 번째 결과는 compact space의 임의의 product가 compact라는 것이다. 이를 위해서는 다음 보조정리가 필요한데, 이는 [§필터의 수렴, ⁋명제 5](/ko/math/topology/filter_convergence#prop5)를 filter의 언어로 일반화한 것이다. 
+Compact space의 임의의 product는 다시 compact space가 된다. 만일 이 product가 유한이라면 이 결과는 보다 직관적인 방식으로 보일 수 있지만, 이 product가 무한하다면 이를 위해서는 다음 보조정리가 필요하다. 이는 [§옹골성과 필터의 수렴, ⁋명제 5](/ko/math/topology/filter_convergence#prop5)를 filter의 언어로 일반화한 것이다. 
 
 <div class="proposition" markdown="1">
 
@@ -65,7 +65,7 @@ $$X\setminus A=(X\setminus (A\cap U_{x_1}))\cap\cdots\cap (X\setminus (A\cap U_{
 
 ## 국소적 옹골공간
 
-그 다음으로 정의할 개념은 locally compact space이다. 
+공간 $X$가 compact인 것은 너무나 좋은 성질이라 우리가 다루는 공간들이 compact가 아닌 경우가 많다. 가령 실수집합 $\mathbb{R}$만 보아도, $(n,n+2)$로 이루어진 open cover들을 생각하면 compact가 아니다. 따라서 이 조건은 다소 약화시킬 필요가 있다. 
 
 <div class="definition" markdown="1">
 
@@ -112,50 +112,67 @@ $$f(U)\quad\text{for $U$ open in $X$},\qquad X'\setminus f(C)\quad\text{for $C$ 
 
 ## 위상다양체
 
-또, compactness를 다음과 같이 일반화한다.
+이번에는 옹골성에서 요구하는 유한성을 다소 약화시켜보자. 가령 위상공간 $X$의 임의의 open covering이 *locally* finite open subcover를 갖는 상황을 생각할 수 있다. ([§집합의 내부, 폐포, 경계, ⁋정의 3](/ko/math/topology/other_concepts#def3)) 그런데 약간의 말장난을 통해 이 조건은 사실 $X$의 compactness와 동치임을 보일 수 있으므로 이것만으로는 새로운 정의가 나오지 않는다. 이제 우리는 위상공간 두 open cover $(U\_i)\_{i\in I}$와 $(V\_j)\_{j\in J}$에 대하여, 임의의 $V\_j$를 온전히 포함하는 $U\_i$가 항상 존재한다면 $(V\_j)\_{j\in J}$가 $(U\_i)\_{i\in I}$의 *(open) refinement*라 부르기로 한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 위상공간 $X$가 *paracompact*라는 것은 $X$의 임의의 open covering이 locally finite open refinement를 갖는 것이다. ([§집합의 내부, 폐포, 경계, ⁋정의 3](/ko/math/topology/other_concepts#def3))
+<ins id="def5">**정의 5**</ins> 위상공간 $X$가 *paracompact*라는 것은 $X$의 임의의 open covering이 locally finite open refinement를 갖는 것이다. 
 
 </div>
 
-그럼 임의의 compact space는 paracompact임이 자명하다. 또, paracompact Hausdorff space의 닫힌집합이 다시 paracompact가 되는 것도 보일 수 있다. 이 조건을 사용하는 이유는 [명제 7](#prop7) 때문이다.
+만일 $X$가 compact라면, 임의의 open covering의 finite subcover가 곧 locally finite open refinment가 되므로 임의의 compact space는 paracompact이다. 
+
+우리가 다루는 거의 모든 공간은 Hausdorff space이다. 별도로 증명을 하지는 않지만, paracompact Hausdorff space를 특징짓는 중요한 성질 중 하나는 *partition of unity*의 존재성이다. ([정리 7](#thm7))
 
 <div class="definition" markdown="1">
 
 <ins id="def6">**정의 6**</ins> 위상공간 $X$가 주어졌다 하자. 그럼 연속함수들의 집합
 
-$$F=\{f:X \rightarrow [0,1]\mid \text{$f$ continuous}\}$$
+$$\Phi=\{\phi:X \rightarrow [0,1]\mid \text{$\phi$ continuous}\}$$
 
 이 *partition of unity<sub>단위분할</sub>*이라는 것은 다음의 두 조건
 
-1. 임의의 $x\in X$에 대하여, 적당한 열린근방 $U$가 존재하여 $f\vert_U\neq 0$을 만족하는 $f\in F$가 오직 유한 개 뿐이도록 할 수 있다.
-2. 임의의 $x\in X$에 대하여, $\sum_{f\in F} f(x)=1$이 성립한다.
+1. 임의의 $x\in X$에 대하여, 적당한 열린근방 $U$가 존재하여 $\phi\vert_U\neq 0$을 만족하는 $\phi\in \Phi$가 오직 유한 개 뿐이도록 할 수 있다.
+2. 임의의 $x\in X$에 대하여, $\sum_{\phi\in \Phi} \phi(x)=1$이 성립한다.
 
-이 성립하는 것이다. 특별히 $X$의 open covering $(U\_i)\_{i\in I}$에 대하여, $\supp f_i\subseteq U_i$를 만족하는 partition of unity $F=(f\_i)\_{i\in I}$를 *partition of unity subordinate to $(U_i)$*라 부른다. 
+이 성립하는 것이다. 특별히 $X$의 open covering $(U\_i)\_{i\in I}$에 대하여, $\supp \phi_i\subseteq U_i$를 만족하는 partition of unity $\Phi=(\phi\_i)\_{i\in I}$를 *partition of unity subordinate to $(U_i)$*라 부른다. 
 
 </div>
 
-그럼 다음이 성립한다.
+즉 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm7">**정리 7**</ins> $T_1$-space $X$가 paracompact Hausdorff space인 것과, $X$의 임의의 open cover $(U_i)$에 대하여 partition of unity subordinate to $(U_i)$가 존재하는 것이 동치이다.
+<ins id="thm7">**정리 7**</ins> 위상공간 $X$가 paracompact Hausdorff space인 것과, $X$의 임의의 open cover $(U_i)$에 대하여 partition of unity subordinate to $(U_i)$가 존재하는 것이 동치이다.
 
 </div>
 
-이에 대한 증명은 [위키피디아](https://en.wikipedia.org/wiki/Paracompact_space)에서 확인할 수 있다. 
-
-이로부터 다음을 정의할 수 있다.
+이에 대한 증명은 [위키피디아](https://en.wikipedia.org/wiki/Paracompact_space)에서 확인할 수 있다. 이를 그대로 옮겨적는 대신 이것이 어떠한 방식으로 사용되는지를 간략히 살펴보자. 이를 위해 우선 위상다양체를 정의한다. 위상다양체의 모델은 우리가 잘 알고 있는 공간, 곧 Euclidean space $\mathbb{R}^m$이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 자연수 $n$을 고정하자. 그럼 paracompact Hausdorff space $X$가 *topological manifold<sub>위상다양체</sub>*라는 것은 임의의 $x\in X$마다 열린근방 $U$가 존재하여 $U$가 $\mathbb{R}^n$과 homeomorphic한 것을 의미한다.
+<ins id="def8">**정의 8**</ins> 위상공간 $M$이 *locally Euclidean of dimension $m$*이라는 것은 임의의 $x\in M$이 주어질 때마다 $x$의 적당한 열린근방 $U$가 존재하여 $U$가 $\mathbb{R}^m$의 열린집합과 homeomorphic한 것이다. 
 
 </div>
 
-특히 topological manifold는 (continuous) partition of unity를 갖는다. 한편 위의 정의에서 $X$의 *차원*을 $n$으로 정의하고 싶지만, 차원의 정의는 더 일반적인 경우에서 할 수 있으므로 나중으로 미루기로 한다. 
+이 조건이 위상다양체의 본질이지만, 생각보다는 약한 조건이므로 우리는 여기에 몇몇 조건을 추가한다. 
 
+<div class="definition" markdown="1">
 
+<ins id="def9">**정의 9**</ins> Second countable, Hausdorff, locally Euclidean of dimension $m$인 공간을 *topological manifold of dimension $m$*이라 부른다. 
 
+</div>
+
+그럼 증명없이 언급할 또 다른 정리로 다음이 있다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm10">**정리 10**</ins> 임의의 Hausdorff locally Euclidean topological space $M$에 대하여, $M$이 second-countable인 것과, $M$이 paracompact이고 countable하게 많은 connected component를 갖는 것이 동치이다. ([§연결공간, ⁋정의 7](/ko/math/topology/connected_spaces#def7))
+
+</div>
+
+우리는 아직 connected component가 무엇인지 정의하지 않았지만, 어쨌든 위의 정리는 논리적으로 임의의 topological manifold $M$은 paracompact Hausdorff이고, 따라서 topological manifold $M$의 임의의 open cover $(U_i)$에 대하여 partition of unity subordinate to $(U_i)$가 존재한다는 것을 함의한다. 특히 우리는 locally Euclidean 조건을 활용하여 open cover $(U_i)$를 Euclidean space로 볼 수 있는데, 그럼 이 위에서 정의된 $\mathbb{R}$로의 연속함수라는 것은 우리가 미적분학을 배울 때부터 알고 있는 대상이다. 그럼 다음의 식 
+
+$$f=\sum \phi_i f_i$$
+
+을 통해 $M$ 전체에서 정의된 연속함수 $f$를 정의할 수 있으며 거꾸로 $M$ 전체에서 정의된 연속함수 $f$가 주어졌다 하면 각각의 $\phi_i f$가 $U_i$ 위에서 정의된 연속함수이다. 대부분의 경우 topological manifold는 단 하나의 connected component를 갖는 것으로 생각해도 별 문제가 없으므로, 사실상 paracompactness가 manifold를 다룰 때 필수적인 조건이라 생각할 수 있다. 

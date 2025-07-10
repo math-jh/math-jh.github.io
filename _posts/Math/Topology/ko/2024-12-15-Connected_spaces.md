@@ -25,7 +25,7 @@ weight: 18
 
 </div>
 
-그럼 다음의 간단한 결과가 성립한다. 
+즉 어떤 위상공간이 disconnected라는 것은 
 
 <div class="proposition" markdown="1">
 
@@ -164,3 +164,7 @@ $$x\sim y\iff \text{$x$ and $y$ lies in the same component}$$
 <ins id="prop10">**명제 10**</ins> $X$가 locally connected인 것과, $X$의 열린집합을 포함하는 임의의 component가 항상 open인 것이 동치이다. 
 
 </div>
+
+## 경로연결공간
+
+한편 우리는 
