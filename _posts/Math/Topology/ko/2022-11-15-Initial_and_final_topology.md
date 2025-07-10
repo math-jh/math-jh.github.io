@@ -17,9 +17,21 @@ weight: 6
 
 ---
 
-[§연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5)에서 함수 $\id$가 연속함수인 것은 정확하게 $\mathcal{T}_Y$가 $\mathcal{T}_X$보다 약한 위상이기 때문에 일어나는 일이다. ([§열린집합, ⁋정의 3](/ko/math/topology/open_sets#def3)) 
+[§연속함수](/ko/math/topology/continuous_functions)에서 우리는 연속함수 $f:X \rightarrow Y$에 대하여 다음의 식 
+
+$$f^\mathcal{T}(V)=f^{-1}(V)$$
+
+을 통해 함수 $f^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$를 정의했다. 그런데 거꾸로 생각해보면, *임의의* 함수 $f:X\rightarrow Y$에 대하여, $Y$의 임의의 부분집합을 받아 이 집합의 $f$에 대한 preimage를 대응시키는 함수 
+
+$$f^\text{pre}:\mathcal{P}(Y)\rightarrow\mathcal{P}(X); \qquad V\mapsto f^{-1}(V)$$
+
+는 항상 잘 정의되며, 이를 $\mathcal{P}(Y)$의 부분집합 $\mathcal{T}\_Y$로 제한한 것이 정확히 $f^\mathcal{T}$와 같다. 이 때 함수 $f^\text{pre}\vert_{\mathcal{T}(Y)}$의 image가 $\mathcal{T}\_X\subseteq \mathcal{P}(X)$에 들어가는 것이 정확하게 $f$가 연속함수일 조건이다. 
+
+특히, 임의의 집합 $X$와 그 위에 정의된 discrete topology $\mathcal{T}_1$, trivial topology $\mathcal{T}_2$를 고정하면, 위상공간 $(X, \mathcal{T}\_1)$에서 임의의 위상공간 $(Y, \mathcal{T})$로의 함수가 연속이고, 임의의 위상공간 $(Y,\mathcal{T})$에서 $(X, \mathcal{T}\_2)$로의 함수가 항상 연속이다. 
 
 ## Initial topology
+
+이번 글에서 우리는 위와 비슷한 성질로 정의되는 위상구조를 살펴본다. 
 
 <div class="definition" markdown="1">
 
@@ -27,7 +39,7 @@ weight: 6
 
 </div>
 
-집합 $X$ 위에 정의된 위상들의 family $(\mathcal{T}_i')$에 대하여, $\bigcap\mathcal{T}_i'$가 $X$ 위의 위상이 된다는 것을 쉽게 확인할 수 있다. 또, discrete topology를 정의역으로 삼는 임의의 함수는 항상 연속이므로 initial topology가 항상 존재한다는 것은 자명하다. 이런 종류의 논증이 항상 그렇듯이, 이는 initial topology의 존재성을 보여주는 데에는 흠잡을 곳 없는 논증이 되지만 initial topology가 어떻게 생겼는지를 살펴보는데는 별 도움이 되지 않는다. 때문에 조금 더 구체적으로 상황을 살펴볼 필요가 있다.
+$X$ 위에 정의된 위상 $(\mathcal{T}\_j)\_{j\in J}$들에 대하여, 위상공간 $(X, \mathcal{T}\_j)$에서 $(Y_i,\mathcal{T}_i)$로의 함수들 $f_i$들이 모두 연속이라 하자. 그럼 $\mathcal{T}=\bigcap\_{j\in J}\mathcal{T}\_j$가 $X$ 위의 위상을 정의하며 이 위상공간 $(X,\mathcal{T})$에서 $(Y_i,\mathcal{T}_i)$로의 함수들 $f_i$들이 모두 연속임을 보일 수 있다. 또, discrete topology를 정의역으로 삼는 임의의 함수는 항상 연속이므로 이러한 조건을 만족하는 위상은 항상 존재하고, 따라서 initial topology가 항상 존재한다는 것은 자명하다. 이런 종류의 논증이 항상 그렇듯이, 이는 initial topology의 존재성을 보여주는 데에는 흠잡을 곳 없는 논증이 되지만 initial topology가 어떻게 생겼는지를 살펴보는데는 별 도움이 되지 않는다. 때문에 조금 더 구체적으로 상황을 살펴볼 필요가 있다.
 
 함수 $f_i$가 연속이기 위해서는 $Y_i$의 임의의 열린집합 $U_i$에 대하여 $f_i^{-1}(U_i)$가 $X$에서 열린집합이어야 하므로, 우리가 정의할 initial topology는 $f_i^{-1}(U_i)$꼴의 원소들을 모두 가지고 있어야 한다. 한편, 이들 원소들을 포함하는 위상공간은 이들의 유한한 교집합과 임의의 합집합도 포함해야 한다. 따라서 다음의 명제를 증명할 수 있다.
 
@@ -47,7 +59,7 @@ Initial topology를 $\mathcal{T}\_\ini$으로 적고, $\mathcal{S}$를 subbase�
 
 </details>
 
-Initial topology는 다음과 같은 성질을 갖는다.
+그럼 initial topology는 다음과 같은 종류의 universal property를 갖는다.
 
 <div class="proposition" markdown="1">
 
@@ -100,7 +112,7 @@ $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all
 
 </details>
 
-역시 마찬가지로 final topology 또한 initial topology와 비슷한 다음의 성질을 만족한다. 
+역시 마찬가지로 final topology 또한 initial topology와 비슷한 다음의 universal property를 만족한다. 
 
 <div class="proposition" markdown="1">
 

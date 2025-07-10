@@ -1,6 +1,6 @@
 ---
 
-title: "필터의 수렴"
+title: "옹골성과 필터의 수렴"
 excerpt: ""
 
 categories: [Math / Topology]
