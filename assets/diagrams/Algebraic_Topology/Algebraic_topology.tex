@@ -2,26 +2,34 @@
 \usepackage{amsmath, amsthm, amsfonts,xcolor,pgfplots}
 \usepackage{tikz-cd, kotex}
 \usetikzlibrary{decorations.markings}
+\usetikzlibrary{3d}
 \usepgfplotslibrary{colorbrewer}
 \usepackage{../.preamble/quiver}
 \usepackage{../.preamble/Operators}
 \begin{document}
 \nopagecolor
 
-%% Torus_upper (Homology-8.png)
-\begin{tikzpicture}[scale=2]
-  \draw[-{stealth}, blue, thick] (0,0)--(0,.55); 
-  \draw[-{stealth}, blue, thick] (0,0)--(0,.5);
-  \draw[blue, thick] (0,0)--(0,1);
-  \draw[red, thick] (0,1)--(1,1);
-  \draw[red, thick, -{stealth}] (0,1)--(.55,1);
-  \draw[thick] (0,0)--(1,1);
-  \draw[thick,-{stealth}] (0,0)--(.55,.55);
-  \fill (0,0) circle[radius=.5pt] node[below left]{$v_0$};
-  \fill (0,1) circle[radius=.5pt] node[above left]{$v_1$};
-  \fill (1,1) circle[radius=.5pt] node[above right]{$v_2$};
-\end{tikzpicture}
 
+\begin{tikzpicture}[line join=round, line cap=round]
+  \fill[gray, opacity=.2] (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
+  \draw (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
+  \draw (1.5,.5) -- (1.5,2);
+  \draw[preaction={draw=white, line width=1.5pt}] (0,1.5) -- (2,1.5); 
+  \fill[gray, opacity=.4] (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle; 
+  \draw (0,0) -- (0,1.5);
+  \draw (2,0) -- (2,1.5);
+  \draw (0,1.5) --(1.5,2)--(2,1.5);
+  \draw[|-|] (3,0) --(3,1.5);
+  \draw (3,.75) node[right]{$I$};
+  \draw (3.1,0) node[right, scale=.5]{$t=0$};
+  \draw (3.1,1.5) node[right, scale=.5]{$t=1$};
+  \draw (0,0) node[below left, scale=.6]{$v_0$};
+  \draw (2,0) node[below right, scale=.6]{$v_1$};
+  \draw (1.5,.6) node[left, scale=.6]{$v_2$};
+  \draw (0,1.5) node[left, scale=.6]{$w_0$};
+  \draw (2,1.5) node[right, scale=.6]{$w_1$};
+  \draw (1.5,2) node[above, scale=.6]{$w_2$};
+\end{tikzpicture}
 
 
 \end{document}
@@ -316,4 +324,26 @@
   \fill (0,0) circle[radius=.5pt] node[below left]{$v_0$};
   \fill (1,0) circle[radius=.5pt] node[below right]{$v_1$};
   \fill (1,1) circle[radius=.5pt] node[above right]{$v_2$};
+\end{tikzpicture}
+
+%% Prism_1 (Homotopy-1.png)
+\begin{tikzpicture}[line join=round, line cap=round]
+  \fill[gray, opacity=.2] (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
+  \draw (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
+  \draw (1.5,.5) -- (1.5,2);
+  \draw[preaction={draw=white, line width=1.5pt}] (0,1.5) -- (2,1.5); 
+  \fill[gray, opacity=.4] (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle; 
+  \draw (0,0) -- (0,1.5);
+  \draw (2,0) -- (2,1.5);
+  \draw (0,1.5) --(1.5,2)--(2,1.5);
+  \draw[|-|] (3,0) --(3,1.5);
+  \draw (3,.75) node[right]{$I$};
+  \draw (3.1,0) node[right, scale=.5]{$t=0$};
+  \draw (3.1,1.5) node[right, scale=.5]{$t=1$};
+  \draw (0,0) node[below left, scale=.6]{$v_0$};
+  \draw (2,0) node[below right, scale=.6]{$v_1$};
+  \draw (1.5,.6) node[left, scale=.6]{$v_2$};
+  \draw (0,1.5) node[left, scale=.6]{$w_0$};
+  \draw (2,1.5) node[right, scale=.6]{$w_1$};
+  \draw (1.5,2) node[above, scale=.6]{$w_2$};
 \end{tikzpicture}
