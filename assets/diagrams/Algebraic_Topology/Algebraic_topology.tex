@@ -2,34 +2,33 @@
 \usepackage{amsmath, amsthm, amsfonts,xcolor,pgfplots}
 \usepackage{tikz-cd, kotex}
 \usetikzlibrary{decorations.markings}
-\usetikzlibrary{3d}
+\usetikzlibrary{3d,intersections}
 \usepgfplotslibrary{colorbrewer}
 \usepackage{../.preamble/quiver}
 \usepackage{../.preamble/Operators}
 \begin{document}
 \nopagecolor
 
-
-\begin{tikzpicture}[line join=round, line cap=round]
-  \fill[gray, opacity=.2] (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
-  \draw (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
-  \draw (1.5,.5) -- (1.5,2);
-  \draw[preaction={draw=white, line width=1.5pt}] (0,1.5) -- (2,1.5); 
-  \fill[gray, opacity=.4] (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle; 
-  \draw (0,0) -- (0,1.5);
-  \draw (2,0) -- (2,1.5);
-  \draw (0,1.5) --(1.5,2)--(2,1.5);
-  \draw[|-|] (3,0) --(3,1.5);
-  \draw (3,.75) node[right]{$I$};
-  \draw (3.1,0) node[right, scale=.5]{$t=0$};
-  \draw (3.1,1.5) node[right, scale=.5]{$t=1$};
-  \draw (0,0) node[below left, scale=.6]{$v_0$};
-  \draw (2,0) node[below right, scale=.6]{$v_1$};
-  \draw (1.5,.6) node[left, scale=.6]{$v_2$};
-  \draw (0,1.5) node[left, scale=.6]{$w_0$};
-  \draw (2,1.5) node[right, scale=.6]{$w_1$};
-  \draw (1.5,2) node[above, scale=.6]{$w_2$};
+\begin{tikzpicture}
+  \draw[blue, -{stealth}] (-1,0) -- (.1,0);
+  \draw[blue] (-1,0) -- (1,0);
+  \fill[red] (-1,0) circle[radius=1pt];
+  \fill[red] (1,0) circle[radius=1pt];
+  \begin{scope}[shift={(3,0)}]
+    \fill[orange, opacity=.2] (0,0) circle[radius=1];
+    \draw[-{stealth}, blue] (90:1) arc (90:150:1);
+    \draw[blue] (150:1) arc (150:210:1);
+    \draw[-{stealth}, blue] (210:1) arc (210:270:1);
+    \draw[-{stealth}, blue] (270:1) arc (270:275:1);
+    \draw[blue] (275:1) arc (275:330:1);
+    \draw[->, blue] (90:1) arc (90:30:1);
+    \draw[blue] (30:1) arc (30:-30:1);
+    \fill[red] (90:1) circle[radius=1pt];
+    \fill[red] (210:1) circle[radius=1pt];
+    \fill[red] (330:1) circle[radius=1pt];
+  \end{scope}
 \end{tikzpicture}
+
 
 
 \end{document}
@@ -326,24 +325,103 @@
   \fill (1,1) circle[radius=.5pt] node[above right]{$v_2$};
 \end{tikzpicture}
 
-%% Prism_1 (Homotopy-1.png)
+%% Prism (Homotopy-1.png)
 \begin{tikzpicture}[line join=round, line cap=round]
-  \fill[gray, opacity=.2] (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
-  \draw (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
-  \draw (1.5,.5) -- (1.5,2);
-  \draw[preaction={draw=white, line width=1.5pt}] (0,1.5) -- (2,1.5); 
-  \fill[gray, opacity=.4] (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle; 
-  \draw (0,0) -- (0,1.5);
-  \draw (2,0) -- (2,1.5);
-  \draw (0,1.5) --(1.5,2)--(2,1.5);
-  \draw[|-|] (3,0) --(3,1.5);
-  \draw (3,.75) node[right]{$I$};
-  \draw (3.1,0) node[right, scale=.5]{$t=0$};
-  \draw (3.1,1.5) node[right, scale=.5]{$t=1$};
+  \fill[draw=gray, fill=gray, fill opacity=.2] (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
+  \path[name path=1] (1.5,.5) -- (1.5,2);
+  \path[name path=2] (1.5,2) -- (0,0);
+  \path[name path=3] (1.5,2) -- (2,0);
+  \path[name path=4] (0,1.5) -- (2,1.5);
+  \path[name intersections={of=1 and 4, by=14}];
+  \draw[gray, shorten >=1pt] (1.5,.5) -- (14);
+  \draw[gray, shorten <=1pt] (14) -- (1.5,2);
+  \draw (0,0) -- (2,0) -- (2,1.5) -- (0,1.5) -- cycle;
+  \filldraw[fill=gray, fill opacity=.4] (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle;
   \draw (0,0) node[below left, scale=.6]{$v_0$};
   \draw (2,0) node[below right, scale=.6]{$v_1$};
-  \draw (1.5,.6) node[left, scale=.6]{$v_2$};
+  \draw (1.5,.6) node[left, scale=.6, gray]{$v_2$};
   \draw (0,1.5) node[left, scale=.6]{$w_0$};
   \draw (2,1.5) node[right, scale=.6]{$w_1$};
   \draw (1.5,2) node[above, scale=.6]{$w_2$};
+  \draw[|-|] (3,0) -- (3,1.5);
+  \draw (3,.75) node[right, scale=.6]{$I$};
+  \draw (3.1,0) node[right, scale=.4]{$t=0$};
+  \draw (3.1,1.5) node[right, scale=.4]{$t=1$};
+\end{tikzpicture}
+
+%% Prism_sliced (Homotopy-2.png)
+\begin{tikzpicture}[line join=round, line cap=round]
+    \begin{scope}[shift={(-4,0)}]
+      \fill[draw=gray, fill=gray, fill opacity=.02] (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
+      \path[name path=1] (1.5,.5) -- (1.5,2);
+      \path[name path=2] (1.5,2) -- (0,0);
+      \path[name path=3] (1.5,2) -- (2,0);
+      \path[name path=4] (0,1.5) -- (2,1.5);
+      \path[name path=5] (0,0) -- (2,1.5);
+      \path[name intersections={of=1 and 4, by=14}];
+      \path[name intersections={of=1 and 5, by=15}];
+      \path[name intersections={of=2 and 4, by=24}];
+      \path[name intersections={of=3 and 4, by=34}];
+      \path[name intersections={of=3 and 5, by=35}];
+      \draw[gray, shorten >=1pt] (1.5,.5) -- (15);
+      \draw[gray, shorten <=1pt, shorten >=1pt] (15) -- (14);
+      \draw[gray, shorten <=1pt] (14) -- (1.5,2);
+      \draw[gray, shorten >=1pt] (0,0) -- (24);
+      \draw[gray, shorten <=1pt] (24) -- (1.5,2);
+      \draw[gray, shorten >=1pt] (1.5,2) -- (34);
+      \draw[gray, shorten <=1pt, shorten >=1pt] (34) -- (35);
+      \draw[gray, shorten <=1pt] (35) -- (2,0);
+      \draw (0,0) -- (2,0) -- (2,1.5) -- (0,1.5) -- cycle;
+      \draw (0,0) -- (2,1.5);
+      \filldraw[fill=gray, fill opacity=.04] (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle;
+      \draw (0,0) node[below left, scale=.6]{$v_0$};
+      \draw (2,0) node[below right, scale=.6]{$v_1$};
+      \draw (1.5,.6) node[left, scale=.6, gray]{$v_2$};
+      \draw (0,1.5) node[left, scale=.6]{$w_0$};
+      \draw (2,1.5) node[right, scale=.6]{$w_1$};
+      \draw (1.5,2) node[above, scale=.6]{$w_2$};
+    \end{scope}
+    \draw[->] (-1.75,1) -- (-1.1,1);
+    \begin{scope}[shift={(-.8,.2)}]
+      \path[name path=1] (1.5,.5) -- (1.5,2);
+      \path[name path=2] (1.5,2) -- (0,0);
+      \path[name path=3] (1.5,2) -- (2,0);
+      \path[name path=4] (0,1.5) -- (2,1.5);
+      \path[name path=5] (0,0) -- (2,1.5);
+      \path[name intersections={of=1 and 4, by=14}];
+      \path[name intersections={of=1 and 5, by=15}];
+      \path[name intersections={of=2 and 4, by=24}];
+      \path[name intersections={of=3 and 4, by=34}];
+      \path[name intersections={of=3 and 5, by=35}];
+      \draw[gray, shorten >=1pt] (0,0) -- (24);
+      \draw[gray, shorten <=1pt] (24) -- (1.5,2);
+      \fill[red, opacity=.2] (0,0) -- (1.5,2) -- (2,1.5) -- cycle;
+      \draw (0,0) -- (0,1.5);
+      \draw (0,0) -- (2,1.5);
+      \draw (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle;
+    \end{scope}
+    \begin{scope}[shift={(.8,-.2)}]
+      \path[name path=1] (1.5,.5) -- (1.5,2);
+      \path[name path=2] (1.5,2) -- (0,0);
+      \path[name path=3] (1.5,2) -- (2,0);
+      \path[name path=4] (0,1.5) -- (2,1.5);
+      \path[name path=5] (0,0) -- (2,1.5);
+      \path[name intersections={of=1 and 4, by=14}];
+      \path[name intersections={of=1 and 5, by=15}];
+      \path[name intersections={of=2 and 4, by=24}];
+      \path[name intersections={of=3 and 4, by=34}];
+      \path[name intersections={of=3 and 5, by=35}];
+      \draw[gray, shorten >=1pt] (1.5,2) -- (35);
+      \draw[gray, shorten <=1pt] (35) -- (2,0);
+      \filldraw[fill=red, fill opacity=.2] (0,0) -- (1.5,2) -- (2,1.5) -- cycle;
+      \fill[blue, opacity=.2] (0,0) -- (1.5,2) -- (2,0) --cycle;
+      \draw (0,0) -- (2,0) -- (2,1.5);
+    \end{scope}
+    \begin{scope}[opacity=.4]
+    \draw[gray] (2,0)-- (1.5,.5) -- (0,0); 
+    \draw[gray] (1.5,2)--(1.5,.5);
+    \draw (0,0) -- (1.5,2) -- (2,0) -- cycle;
+    \fill[gray, opacity=.2] (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
+    \fill[blue, opacity=.2] (1.5,2) -- (2,0) -- (0,0) --cycle;
+    \end{scope}
 \end{tikzpicture}
