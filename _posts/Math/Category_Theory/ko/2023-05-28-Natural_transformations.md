@@ -29,7 +29,7 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 이 각각의 $A_1,A_2\in\obj(\mathcal{A})$마다 다음의 diagram
 
-![natural_transformation](/assets/images/Math/Category_Theory/Natural_transformations-1.png){:style="width:9em" class="invert" .align-center}
+![natural_transformation](/assets/images/Math/Category_Theory/Natural_transformations-1.png){:style="width:11em" class="invert" .align-center}
 
 을 commute하도록 한다면, $\alpha=(\alpha\_A)\_{A\in\obj(\mathcal{A})}$를 *natural transformation<sub>자연변환</sub>*이라 부르고 이를 $\alpha:F\Rightarrow G$와 같이 표기한다.
 
@@ -65,7 +65,7 @@ $\mathcal{A}$가 small category라 하자. 그럼 집합 $\obj(\mathcal{A})$에�
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 카테고리 $\mathcal{A}$의 *skeleton<sub>뼈대</sub>*은 $\mathcal{A}$의 subcategory 중 skeletal category인 것을 의미한다. 이를 $\sk(\mathcal{A})$으로 적는다.
+<ins id="def4">**정의 4**</ins> 카테고리 $\mathcal{A}$의 *skeleton<sub>뼈대</sub>*은 $\mathcal{A}$의 full subcategory 중 skeletal category인 것을 의미한다. 이를 $\sk(\mathcal{A})$으로 적는다.
 
 </div>
 

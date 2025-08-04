@@ -195,6 +195,8 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 
 </div>
 
+이는 그저 group의 모든 성질들이 성립하지만, group operation이 모든 원소들에 대해 정의되는 대신 특정한 원소들의 쌍에 대해서만 정의되어도 충분하다는 뜻이다. 
+
 ## 카테고리의 예시들
 
 이제 이미 존재하는 category로부터 새로운 category들을 만드는 방법을 살펴본다. 
