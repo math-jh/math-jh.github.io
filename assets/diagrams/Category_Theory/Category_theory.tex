@@ -1,21 +1,17 @@
-\documentclass[convert={density=1024}]{standalone}
+\documentclass[convert={imagemagick, density=1024}]{standalone}
 \usepackage{amsmath, amsthm, amsfonts}
 \usepackage{tikz-cd, kotex}
 \usepackage{../.preamble/quiver}
 \usepackage{../.preamble/Operators}
 \begin{document}
 
-
-%% Triangle_identity (Adjoints-2.png)
 \begin{tikzcd}
-	F & FGF && G & GFG \\
-	& F &&& G
-	\arrow["{F\eta}", Rightarrow, from=1-1, to=1-2]
-	\arrow["{\id_F}"', Rightarrow, from=1-1, to=2-2]
-	\arrow["{\epsilon F}", Rightarrow, from=1-2, to=2-2]
-	\arrow["{\eta G}", Rightarrow, from=1-4, to=1-5]
-	\arrow["{\id_G}"', Rightarrow, from=1-4, to=2-5]
-	\arrow["{G\epsilon}", Rightarrow, from=1-5, to=2-5]
+	{F(A_1)} & {F(A_2)} \\
+	{G(A_1)} & {G(A_2)}
+	\arrow["{\alpha_{A_1}}"', from=1-1, to=2-1]
+	\arrow["{\alpha_{A_2}}", from=1-2, to=2-2]
+	\arrow["{G(f)}"', from=2-1, to=2-2]
+	\arrow["{F(f)}", from=1-1, to=1-2]
 \end{tikzcd}
 
 
@@ -61,10 +57,10 @@
 
 %% Natural transformation (Natural_transformations-1.png)
 \begin{tikzcd}
-	{F(A)} & {F(A')} \\
-	{G(A)} & {G(A')}
-	\arrow["{\alpha_A}"', from=1-1, to=2-1]
-	\arrow["{\alpha_{A'}}", from=1-2, to=2-2]
+	{F(A_1)} & {F(A_2)} \\
+	{G(A_1)} & {G(A_2)}
+	\arrow["{\alpha_{A_1}}"', from=1-1, to=2-1]
+	\arrow["{\alpha_{A_2}}", from=1-2, to=2-2]
 	\arrow["{G(f)}"', from=2-1, to=2-2]
 	\arrow["{F(f)}", from=1-1, to=1-2]
 \end{tikzcd}
@@ -565,3 +561,16 @@
 	\arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=0, to=1]
 \end{tikzcd}
 
+
+
+%% Triangle_identity (Adjoints-2.png)
+\begin{tikzcd}
+	F & FGF && G & GFG \\
+	& F &&& G
+	\arrow["{F\eta}", Rightarrow, from=1-1, to=1-2]
+	\arrow["{\id_F}"', Rightarrow, from=1-1, to=2-2]
+	\arrow["{\epsilon F}", Rightarrow, from=1-2, to=2-2]
+	\arrow["{\eta G}", Rightarrow, from=1-4, to=1-5]
+	\arrow["{\id_G}"', Rightarrow, from=1-4, to=2-5]
+	\arrow["{G\epsilon}", Rightarrow, from=1-5, to=2-5]
+\end{tikzcd}
