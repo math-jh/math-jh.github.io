@@ -9,29 +9,46 @@
 \begin{document}
 \nopagecolor
 
+
+%% groupoid_van_Kampen (Covering_spaces-4.png)
+\begin{tikzcd}
+  {\Pi_1(U)} & {\Pi_1(X)} \\
+  {\Pi_1(U\cap V)} & {\Pi_1(V)}
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=2-1, to=1-1]
+  \arrow[from=2-1, to=2-2]
+  \arrow[from=2-2, to=1-2]
+\end{tikzcd}
+
+\end{document}
+
+
 \begin{tikzpicture}
   \draw[blue, -{stealth}] (-1,0) -- (.1,0);
   \draw[blue] (-1,0) -- (1,0);
   \fill[red] (-1,0) circle[radius=1pt];
   \fill[red] (1,0) circle[radius=1pt];
+  \draw (-1,0) node[below]{$v_0$};
+  \draw (1,0) node[below]{$v_1$};
+  \draw (0,0) node[above]{$a$};
   \begin{scope}[shift={(3,0)}]
     \fill[orange, opacity=.2] (0,0) circle[radius=1];
     \draw[-{stealth}, blue] (90:1) arc (90:150:1);
-    \draw[blue] (150:1) arc (150:210:1);
+    \draw[blue] (149:1) arc (149:210:1);
     \draw[-{stealth}, blue] (210:1) arc (210:270:1);
-    \draw[-{stealth}, blue] (270:1) arc (270:275:1);
-    \draw[blue] (275:1) arc (275:330:1);
+    \draw[-{stealth}, blue] (269:1) arc (269:275:1);
+    \draw[blue] (274:1) arc (274:330:1);
     \draw[->, blue] (90:1) arc (90:30:1);
-    \draw[blue] (30:1) arc (30:-30:1);
-    \fill[red] (90:1) circle[radius=1pt];
-    \fill[red] (210:1) circle[radius=1pt];
-    \fill[red] (330:1) circle[radius=1pt];
+    \draw[blue] (31:1) arc (31:-30:1);
+    \fill[red] (90:1) circle[radius=1pt] node[above, black]{$v_0$};
+    \fill[orange] (210:1) circle[radius=1pt] node[below left, black]{$v_1$};
+    \fill[purple] (330:1) circle[radius=1pt] node[below right, black]{$v_2$};
+    \draw (150:1) node[above left]{$c$};
+    \draw (270:1) node[below]{$b$};
+    \draw (30:1) node[above right]{$a$};
   \end{scope}
 \end{tikzpicture}
 
-
-
-\end{document}
 
 %% Simplices (Homology-1.png)
 \begin{tikzpicture}
@@ -325,6 +342,48 @@
   \fill (1,1) circle[radius=.5pt] node[above right]{$v_2$};
 \end{tikzpicture}
 
+%% cycle_in_D2 (Homology-10.png)
+\begin{tikzpicture}
+  \filldraw[fill=gray, fill opacity=.2, draw=black, ultra thick] (0,0) circle[radius=5];
+  \draw[blue, thick] (4,0) arc (0:-180:4) .. controls (-4,2) and (-2,2) .. (-2,0) ..controls (-2,-3) and (2,-3) .. (2,0) .. controls (2,2) and (4,2) .. (4,0);
+  \draw[->, ultra thick] (7,0)--(9,0);
+  \begin{scope}[shift={(16,0)}]
+    \filldraw[fill=gray, fill opacity=.2, draw=black, ultra thick] (0,0) circle[radius=5];
+    \filldraw[fill=blue, fill opacity=.4, draw=blue, very thick] (4,0) arc (0:-180:4) .. controls (-4,2) and (-2,2) .. (-2,0) ..controls (-2,-3) and (2,-3) .. (2,0) .. controls (2,2) and (4,2) .. (4,0);
+  \end{scope}
+\end{tikzpicture}
+
+%% cycle_in_punctured_D2 (Homology-11.png)
+\begin{tikzpicture}
+  \filldraw[fill=gray, fill opacity=.2, draw=black, ultra thick] (0,0) circle[radius=5];
+  \filldraw[fill=white, draw=black, ultra thick] (0,0) circle[radius=3pt];
+  \draw[blue, very thick] (0,0) circle[radius=3];
+  \draw[->, ultra thick] (7,0)--(9,0);
+  \draw (11,0) node[scale=5] {?};
+\end{tikzpicture}
+
+%% cycle_in_punctured_D3 (Homology-12.png)
+\begin{tikzpicture}
+  \filldraw[fill=gray, fill opacity=.2, draw=black, ultra thick] (0,0) circle[radius=5];
+  \draw (-5,0) .. controls (-4,-3) and (4,-3) .. (5,0);
+  \draw[dashed] (-5,0) .. controls (-4,3) and (4,3) .. (5,0);
+  \filldraw[fill=white, draw=black, thick] (0,0) circle[radius=3pt];
+  \draw[blue, very thick] (0,0) ellipse (3cm and 1.5cm);
+  \draw[->, ultra thick] (7,0)--(9,0);
+  \begin{scope}[shift={(16,0)}]
+    \filldraw[fill=gray, fill opacity=.2, draw=black, ultra thick] (0,0) circle[radius=5];
+    \draw (-5,0) .. controls (-4,-3) and (4,-3) .. (5,0);
+    \draw[dashed] (-5,0) .. controls (-4,3) and (4,3) .. (5,0);
+    \filldraw[fill=white, draw=black, thick] (0,0) circle[radius=3pt];
+    \fill[blue, opacity=.2] (3,0) arc (0:180:3cm) arc (180:360:3cm and 1.5cm);
+    \fill[blue, opacity=.2] (3,0) arc (0:180:3cm) arc (180:0:3cm and 1.5cm);
+    \draw[blue, very thick] (0,0) ellipse (3cm and 1.5cm);
+    \draw[blue] (3,0) arc (0:180:3cm);
+  \end{scope}
+\end{tikzpicture}
+
+
+
 %% Prism (Homotopy-1.png)
 \begin{tikzpicture}[line join=round, line cap=round]
   \fill[draw=gray, fill=gray, fill opacity=.2] (0,0) -- (2,0) -- (1.5,.5) -- cycle; 
@@ -425,3 +484,86 @@
     \fill[blue, opacity=.2] (1.5,2) -- (2,0) -- (0,0) --cycle;
     \end{scope}
 \end{tikzpicture}
+
+%% homotopy_invariance_of_Pi (Homotopy-3.png)
+\begin{tikzcd}
+  f_0(x_0) \rar["{[f_0\circ\alpha]}"]\dar["f_t(x_0)" left]&[20pt]f_0(x_1)\dar["f_t(x_1)"]\\
+  f_1(x_0) \rar["{[f_1\circ\alpha]}" below]&f_1(x_1)
+\end{tikzcd}
+
+
+%% Covering_space (Covering_spaces-1.png)
+\begin{tikzpicture}
+   \begin{axis}[
+ view={-20}{-20},
+ zmax=80,
+  xmax=2,
+   ymax=2,
+ height=12cm,
+ clip=false,hide axis
+]
+\addplot3+[domain=0:2.5,samples=500,samples y=0,black,no marks,thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+{2+4*x});
+\addplot3+[domain=2.6:2.5+2*pi,samples=500,samples y=0,black,no marks,thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+{2+4*x});
+\addplot3+[domain=2.6+2*pi:2.5+4*pi,samples=500,samples y=0,black,no marks,thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+{2+4*x});
+\addplot3+[domain=2.6+4*pi:8*pi,samples=500,samples y=0,black,no marks,thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+{2+4*x});
+\addplot3+[domain=0:2*pi,samples=500,samples y=0,black,no marks,very thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+-50);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,orange,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+-50);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,orange,no marks,very thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+{2+4*x});
+\addplot3+[domain=0.5+2*pi:1+2*pi,samples=3000,samples y=0,orange,no marks,very thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+{2+4*x});
+\addplot3+[domain=0.5+4*pi:1+4*pi,samples=3000,samples y=0,orange,no marks,very thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+{2+4*x});
+\addplot3+[domain=0.5+6*pi:1+6*pi,samples=3000,samples y=0,orange,no marks,very thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+{2+4*x});
+\end{axis}
+\draw (10,5.5) node{$E$};
+\draw (10,3) node{$B$};
+\draw[->] (10,5) -- (10,3.5) node[midway, right]{$p$};
+\end{tikzpicture}
+
+%% morphism_of_covering_spaces (Covering_spaces-2.png)
+\begin{tikzcd}
+  E\arrow[rr]\drar&[-15pt]&[-15pt]E'\dlar\\
+  &B
+\end{tikzcd}
+
+%%van_kampen (Covering_spaces-3.png)
+\begin{tikzcd}
+  && {\pi_1(X)} \\
+  {\pi_1(U)} & {\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)} \\
+  {\pi_1(U\cap V)} & {\pi_1(V)}
+  \arrow[curve={height=-12pt}, from=2-1, to=1-3]
+  \arrow[from=2-1, to=2-2]
+  \arrow[dashed, from=2-2, to=1-3]
+  \arrow[from=3-1, to=2-1]
+  \arrow[from=3-1, to=3-2]
+  \arrow[curve={height=18pt}, from=3-2, to=1-3]
+  \arrow[from=3-2, to=2-2]
+\end{tikzcd}
