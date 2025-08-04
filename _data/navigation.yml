@@ -100,10 +100,14 @@ algebraic_structures-ko:
 algebraic_topology-ko:
   - title: <a href="/ko/algebraic_topology/" class="sidebar_title">대수적 위상수학</a>
     children:
-      - title: "심플렉스 복합체"
-        url: ko/math/algebraic_topology/simplicial_complex
+      - title: "위상다양체"
+        url: /ko/math/algebraic_topology/topological_manifolds
       - title: "호몰로지"
         url: ko/math/algebraic_topology/homology
+      - title: "호모토피"
+        url: ko/math/algebraic_topology/homotopy
+      - title: "피복공간"
+        url: ko/math/algebraic_topology/covering_spaces
   - title: 
     children:
       - title: "블로그 소개"
