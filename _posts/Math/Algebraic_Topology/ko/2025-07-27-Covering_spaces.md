@@ -127,7 +127,7 @@ $$\widetilde{\alpha}(s)=(p\vert_{V_j})^{-1}(\alpha(s))$$
 
 </div>
 
-이에 대한 증명은 본질적으로 [보조정리 6](#lem6)와 다를 것이 없으므로 생략하기로 한다. 중요한 것은 이 보조정리가 주는 path homotopy에 의하여, covering space $p:E \rightarrow B$와, path의 homotopy type $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$이 주어졌다 하면 $y_0\in p^{-1}(x_0)$의 선택이 $E$의 path의 homotopy type $[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$을 유일하게 결정한다는 것이다. 
+이에 대한 증명은 본질적으로 [보조정리 6](#lem6)와 다를 것이 없으므로 생략하기로 한다. 중요한 것은 이 보조정리가 주는 path homotopy에 의하여, covering space $p:E \rightarrow B$와, path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$이 주어졌다 하면 $y_0\in p^{-1}(x_0)$의 선택이 $E$의 path class $[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$을 유일하게 결정한다는 것이다. 
 
 이제 다시 fundamental groupoid $\Pi_1(B)$를 생각하고, covering map $p:E \rightarrow B$을 고정하자. 그럼 evenly covered 조건에 의해, 각각의 $x\in B$에 대하여 $p^{-1}(x)$는 discrete set이다. 이 때 임의의 path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$에 대하여, $y_0\in p^{-1}(x_0)$을 택하면 [보조정리 7](#lem7)는 유일한 path class $[\widetilde{\alpha}]$를 정의하고, 따라서 $y_1\in p^{-1}(x)$를 정의한다. 즉 $[\alpha]$는 함수 $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$를 정의한다. 
 
@@ -184,15 +184,66 @@ $$M:\Cov(B) \rightarrow \Fun(\Pi_1(B), \Set)$$
 
 </div>
 
-이제 이 대응의 skeleton을 살펴보면, $\Cov(B)$의 skeleton은 $B$의 covering space들의 isomorphism class들이다. 한편, $B$가 path-connected라는 가정으로부터 $\Pi_1(B)\simeq\pi_1(B,x)$임을 알고 따라서 $B$의 covering space들(의 isomorphism class)의 category는 $\pi_1(B)$-set들(의 isomorphism class)의 category와 같다. 한편 만일 우리가 path-connected covering space들의 isomorphism class들만 생각한다고 하면, 임의의 두 fiber를 골랐을 때, 이들의 임의의 원소들의 쌍이 서로 path로 연결되므로 $\pi_1(B)$-action이 transitive하다. 따라서 orbit-stabilizer theorem을 생각하면 다음을 얻는다. 
+이제 $\Fun(\Pi_1(B), \Set)$이 무엇인지 살펴보아야 한다. 더 일반적으로 임의의 groupoid $\mathcal{G}$에 대하여 functor $\mathcal{G}\rightarrow \Set$이 무엇인지를 생각해보자. 이는 정의에 의해 
+
+- $\mathcal{G}$의 각각의 object $G\in \mathcal{G}$에 대응되는 집합 $S_G$,
+- $\mathcal{G}$의 각각의 (iso)morphism $G \rightarrow H$마다 대응되는 bijection $S_G \rightarrow S_H$
+
+로 이루어진다. 이것만으로는 여전히 functor $\mathcal{G}\rightarrow \Set$이 무엇인지 보이지 않으니 특별히 $\mathcal{G}$가 하나의 object $\ast$만을 가지고 따라서 $\mathcal{G}$의 모든 morphism들이 $\ast$의 automorphism이 되는 상황을 보자. 즉 $\mathcal{G}$는 group이다. 그럼 이 가정 하에서, functor $\mathcal{G}\rightarrow \Set$은 다음의 데이터이다. 
+
+- $\mathcal{G}$의 유일한 object에 대응되는 집합 $S$,
+- 임의의 automorphism $g:\ast \rightarrow \ast$에 대응되는 bijection $g\cdot-: S\rightarrow S$.
+
+즉, 표기에서 짐작할 수 있듯 이 정보는 정확하게 group $\mathcal{G}$의 action이며, $\Fun(\mathcal{G},\Set)$은 정확히 $\mathcal{G}$-set들의 모임이고 이들 사이의 morphism은 $\mathcal{G}$-equivariant map들이다. 일반적인 groupoid $\mathcal{G}$에 대하여는 그저 여러 개의 group이 여러 개의 집합에 따로따로 act하되, isomorphic한 $\mathcal{G}$의 두 object $G,H$는 각각의 (isomorphic한) 집합 $S_G$와 $S_H$에 같은 방식으로 act해야 하는 것이다. 
+
+그런데 공간 $B$가 path-connected이므로, fundamental groupoid $\Pi_1(B)$는 connected groupoid이고 따라서 $\Pi_1(B)$는 임의의 $x\in B$에 대하여 group $\pi_1(B,x)$와 category로서 equivalent하다. 즉 $\Pi_1(B)$의 groupoid action은 group $\pi_1(B,x)$의 group action을 groupoid $\Pi_1(B)$에서의 isomorphism을 따라 복제한 것에 불과하다. 따라서 위의 [정리 11](#thm11)에 담겨있는 정보는 본질적으로 skeleton에 담겨있다. 따라서 
+  
+$$\sk(M):\sk(\Cov(B))\rightarrow \sk(\Fun(\Pi_1(X), \Set))$$
+
+을 생각하자. 이는 covering space들의 isomorphism class를 받아 monodromy functor $M_p$를 up to natural isomorphism으로 내놓는 equivalence이다. 즉, $\Pi_1(X)$-sets up to isomorphism이다. 일반적으로 
+
+$$\sk(\Fun(\Pi_1(X),\Set))\simeq\Fun(\sk(\Pi_1(X)), \Set)$$
+
+이므로, 다시 여기에서 $X$가 path-connected임을 이용하면 우리는 covering space들의 isomorphism class를 받아 $\pi_1(X,x)$-set을 내놓는 categorical equivalence가 존재함을 안다. 
+
+그런데 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)와 그 증명을 생각하면, 임의의 $G$-set $E$가 주어졌을 때 우리는 $E$를 $G$의 orbit들로 분해할 수 있고, 그럼 이들 각각의 orbit들로 제한했을 때의 $G$-action은 transitive하며 이들은 $G$의 적당한 normal subgroup $N$에 대하여, canonical $G$-action이 주어진 $G/N$과 isomorphic하다. 따라서 transitive group action만 생각하기로 한다면, monodromy functor의 정의에 의해 이는 target에서는 *connected* cover들만 생각하는 것이 된다. 즉 다음의 equivalence
+
+$$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \left\{\text{transitive $\pi_1(B,x)$-sets}\right\}$$
+
+가 존재하며, 다시 transitive $\pi_1(B,x)$-set들을 isomorphism에 대해 분류한 skeleton category를 생각하면 최종적으로 다음의 equivalence
+
+$$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \left\{\text{conjugacy classes of subgroups of $\pi_1(B,x)$}\right\}$$
+
+를 얻는다. 이제 이들 각각의 category를 살펴보면, 이들은 그저 partially ordered set에 불과하며 ([\[범주론\] §범주, ⁋예시 3](/ko/math/category_theory/categories#ex3)) 이 equivalence는 poset 사이의 isomorphism임을 안다. 즉 다음의 결과를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="cor12">**따름정리 12 (Fundamental theorem of covering spaces, classical version)**</ins> Path-connected, locally path-connected, semi-locally simply connected space $B$에 대하여, path-connected covering space들의 isomorphism class들의 집합과, $\pi_1(B)$의 conjugacy class들 사이의 bijection이 존재한다. 
+<ins id="cor12">**따름정리 12 (Fundamental theorem of covering spaces, classical version)**</ins> Path-connected, locally path-connected, semi-locally simply connected space $B$에 대하여, connected covering space들의 isomorphism class들의 집합과, $\pi_1(B)$의 subgroup의 conjugacy class들 사이의 Galois correspondance가 존재한다. 
 
 </div>
 
-명시적으로, covering space $p:E \rightarrow B$가 주어지면 $\pi_1(p):\pi_1(E)\rightarrow \pi_1(B)$를 통해 subgroup이 정의되며, 이 때 두 transitive $G$-set $X\cong G/H$와 $Y\cong G/K$가 isomorphic한 것은 $H$와 $K$가 서로 conjugate인 것과 동치이므로 위의 결과를 얻는다. 한편 [정리 11](#thm11)에서 [따름정리 12](#cor12)로 넘어올 때 사라지는 정보들, 즉 covering space의 automorphism과 $\pi_1(B)$의 normal subgroup을 생각하면 우리는 *Deck transformation*과 conjugation action 사이의 관계 또한 확인할 수 있는데, 이는 일단은 우리의 관심사에 포함되지 않으므로 넘어가기로 한다. 
+명시적으로, covering space $p:E \rightarrow B$가 주어지면 $\pi_1(p):\pi_1(E)\rightarrow \pi_1(B)$를 통해 subgroup이 정의되며, 이 때 두 transitive $G$-set $X\cong G/H$와 $Y\cong G/K$가 isomorphic한 것은 $H$와 $K$가 서로 conjugate인 것과 동치이므로 위의 결과를 얻는다. 한편 만일 $\pi_1(B,x)$의 subgroup들의 conjugacy class들 대신 명시적인 subgroup들 그 자체를 생각한다면 이는 isomorphic한 covering space 중 하나를 택하는 것이 되고, 이는 정확히 $B$의 base point 하나를 고정한 다음, *pointed* covering map $p:(E, y)\rightarrow (B,x)$를 생각하여 이들 isomorphism class들의 원소를 따로따로 보는 것과 같다. 즉 다음의 Galois correspondance
+
+$$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $B$}\right\}\simeq \left\{\text{subgroups of $\pi_1(B,x)$}\right\}$$
+
+이 존재한다. 이를 조금 더 익숙한 형태로 만들면, 우리는 임의의 $H\leq \pi_1(B,x)$에 대하여 이에 대응되는 covering space $E_H$를 만들 수 있고 그럼 $E_H$의 automorphism group $\Aut(E_H/B)$에 대하여
+
+$$\Aut(E_H/B)\cong N_G(H)/H$$
+
+이 성립한다. 이를 $E_H$의 *Deck transformation group*이라 부른다. 
+
+
+
+한편 $\pi_1(B,x)$의 subgroup(들의 conjugacy class들)의 poset에는 minimal한 원소 $\left\\{e\right\\}$가 존재한다. 그럼 위의 Galois correspondance에 의해 여기에 대응되는 *universal cover* $\tilde{B}$가 존재한다.
+
+
+
+
+그럼 자연스럽게 (fiber $p^{-1}(x)$의 서로 다른 원소를 택하여 얻어지는) covering space들의 automorphism은 $\pi_1(B,x)$의 subgroup들에 inner automorphism을 취하는 것에 대응되며, 우리는 이를 *Deck transformation*이라 부른다.
+
+
+
+
 
 ## 자이페르트-반 캄펜 정리
 
@@ -221,6 +272,22 @@ $$\Cov(X)\simeq\Fun(\Pi_1(X),\Set)$$
 $$\Cov(X)\simeq \Fun(\Pi_1(U),\Set)\times_{\Fun(\Pi_1(U\cap V))}\Fun(\Pi_1(V),\Set)\simeq \Cov(U)\times_{\Cov(U\cap V)}\Cov(V)$$
 
 으로 바뀐다. 그런데 이는 $X$의 covering space는, 교집합에서 일치하는 $U$와 $V$의 covering space를 각각 주는 것과 같다는 뜻이므로 꽤나 믿을만한 결과이며, [정리 13](#thm13)은 그럼 fundamental groupoid의 pushout diagram에서 바로 얻어질 것이다. 
+
+## Hurewicz theorem
+
+Homology group은 fundamental group보다 더 단순한 구조를 가지고 있다. 가령 $\pi_1(X)$는 일반적으로 abelian group일 필요가 없지만, $H_1(X)$는 그 정의에 의해 abelian group이다. 그러나 [§호몰로지, ⁋예시 8](/ko/math/algebraic_topology/homology#ex8)에서 살펴본 것처럼 $H_1(X)$의 원소들도 일단은 일종의 loop들처럼 생각할 수 있으므로 이들 사이의 관계를 기대하는 것이 자연스럽다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm14">**정리 14 (Hurewicz)**</ins> Path-connected space $X$를 고정하자. 그럼 각각의 $n$에 대하여, group homomorphism  
+
+$$h_n:\pi_n(X) \rightarrow H_n(X)$$
+
+이 존재한다. 특별히 $n=1$인 경우, $h_1$은 surjective이고 $\ker h_1$은 $\pi_1(X)$의 commutator subgroup이 되어 isomorphism $\pi_1(X)^\ab\cong H_1(X)$를 준다. 일반적으로, 만일 모든 $i< n$에 대하여 $\pi_i(X)=0$이라면 $h_n$은 isomorphism이고 $h_{n+1)$은 surjective이다. 
+
+</div>
+
+Hurewicz homomorphism $h_n$은 임의의 $f:S^n \rightarrow X$가 주어졌을 때 $f_\ast([S^n])$으로 주어진다. 여기에서 $[S^n]$은 $H_n(S^n)\cong \mathbb{Z}$의 generator이다. 
 
 
 
