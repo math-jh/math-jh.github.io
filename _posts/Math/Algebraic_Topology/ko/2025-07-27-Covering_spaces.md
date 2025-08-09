@@ -184,17 +184,17 @@ $$M:\Cov(B) \rightarrow \Fun(\Pi_1(B), \Set)$$
 
 </div>
 
-이제 $\Fun(\Pi_1(B), \Set)$이 무엇인지 살펴보아야 한다. 더 일반적으로 임의의 groupoid $\mathcal{G}$에 대하여 functor $\mathcal{G}\rightarrow \Set$이 무엇인지를 생각해보자. 이는 정의에 의해 
+이제 $\Fun(\Pi_1(B), \Set)$이 무엇인지 살펴보아야 한다. 더 일반적으로 임의의 groupoid $\mathscr{G}$에 대하여 functor $\mathscr{G}\rightarrow \Set$이 무엇인지를 생각해보자. 이는 정의에 의해 
 
-- $\mathcal{G}$의 각각의 object $G\in \mathcal{G}$에 대응되는 집합 $S_G$,
-- $\mathcal{G}$의 각각의 (iso)morphism $G \rightarrow H$마다 대응되는 bijection $S_G \rightarrow S_H$
+- $\mathscr{G}$의 각각의 object $G\in \mathscr{G}$에 대응되는 집합 $S_G$,
+- $\mathscr{G}$의 각각의 (iso)morphism $G \rightarrow H$마다 대응되는 bijection $S_G \rightarrow S_H$
 
-로 이루어진다. 이것만으로는 여전히 functor $\mathcal{G}\rightarrow \Set$이 무엇인지 보이지 않으니 특별히 $\mathcal{G}$가 하나의 object $\ast$만을 가지고 따라서 $\mathcal{G}$의 모든 morphism들이 $\ast$의 automorphism이 되는 상황을 보자. 즉 $\mathcal{G}$는 group이다. 그럼 이 가정 하에서, functor $\mathcal{G}\rightarrow \Set$은 다음의 데이터이다. 
+로 이루어진다. 이것만으로는 여전히 functor $\mathscr{G}\rightarrow \Set$이 무엇인지 보이지 않으니 특별히 $\mathscr{G}$가 하나의 object $\ast$만을 가지고 따라서 $\mathscr{G}$의 모든 morphism들이 $\ast$의 automorphism이 되는 상황을 보자. 즉 $\mathscr{G}$는 group이다. 그럼 이 가정 하에서, functor $\mathscr{G}\rightarrow \Set$은 다음의 데이터이다. 
 
-- $\mathcal{G}$의 유일한 object에 대응되는 집합 $S$,
+- $\mathscr{G}$의 유일한 object에 대응되는 집합 $S$,
 - 임의의 automorphism $g:\ast \rightarrow \ast$에 대응되는 bijection $g\cdot-: S\rightarrow S$.
 
-즉, 표기에서 짐작할 수 있듯 이 정보는 정확하게 group $\mathcal{G}$의 action이며, $\Fun(\mathcal{G},\Set)$은 정확히 $\mathcal{G}$-set들의 모임이고 이들 사이의 morphism은 $\mathcal{G}$-equivariant map들이다. 일반적인 groupoid $\mathcal{G}$에 대하여는 그저 여러 개의 group이 여러 개의 집합에 따로따로 act하되, isomorphic한 $\mathcal{G}$의 두 object $G,H$는 각각의 (isomorphic한) 집합 $S_G$와 $S_H$에 같은 방식으로 act해야 하는 것이다. 
+즉, 표기에서 짐작할 수 있듯 이 정보는 정확하게 group $\mathscr{G}$의 action이며, $\Fun(\mathscr{G},\Set)$은 정확히 $\mathscr{G}$-set들의 모임이고 이들 사이의 morphism은 $\mathscr{G}$-equivariant map들이다. 일반적인 groupoid $\mathscr{G}$에 대하여는 그저 여러 개의 group이 여러 개의 집합에 따로따로 act하되, isomorphic한 $\mathscr{G}$의 두 object $G,H$는 각각의 (isomorphic한) 집합 $S_G$와 $S_H$에 같은 방식으로 act해야 하는 것이다. 
 
 그런데 공간 $B$가 path-connected이므로, fundamental groupoid $\Pi_1(B)$는 connected groupoid이고 따라서 $\Pi_1(B)$는 임의의 $x\in B$에 대하여 group $\pi_1(B,x)$와 category로서 equivalent하다. 즉 $\Pi_1(B)$의 groupoid action은 group $\pi_1(B,x)$의 group action을 groupoid $\Pi_1(B)$에서의 isomorphism을 따라 복제한 것에 불과하다. 따라서 위의 [정리 11](#thm11)에 담겨있는 정보는 본질적으로 skeleton에 담겨있다. 따라서 
   
@@ -230,22 +230,37 @@ $$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $B$}\r
 
 $$\Aut(E_H/B)\cong N_G(H)/H$$
 
-이 성립한다. 이를 $E_H$의 *Deck transformation group*이라 부른다. 
-
-
+이 성립한다. 이를 $E_H$의 *Deck transformation group*이라 부른다. 더 일반적으로 (fiber $p^{-1}(x)$의 서로 다른 원소를 택하여 얻어지는) covering space들의 automorphism은 $\pi_1(B,x)$의 subgroup들에 inner automorphism을 취하는 것에 대응되며, 우리는 이를 *Deck transformation*이라 부른다.
 
 한편 $\pi_1(B,x)$의 subgroup(들의 conjugacy class들)의 poset에는 minimal한 원소 $\left\\{e\right\\}$가 존재한다. 그럼 위의 Galois correspondance에 의해 여기에 대응되는 *universal cover* $\tilde{B}$가 존재한다.
 
-
-
-
-그럼 자연스럽게 (fiber $p^{-1}(x)$의 서로 다른 원소를 택하여 얻어지는) covering space들의 automorphism은 $\pi_1(B,x)$의 subgroup들에 inner automorphism을 취하는 것에 대응되며, 우리는 이를 *Deck transformation*이라 부른다.
-
-
-
-
-
 ## 자이페르트-반 캄펜 정리
+
+우리가 알고있는 좋은 공간들은 정의로부터 fundamental group 혹은 homology를 계산할 수도 있지만, 대부분의 경우 이를 정의로부터 계산하는 것은 과도하게 복잡하거나 거의 불가능하다. 우리의 아이디어는 큰 공간의 fundamental group을 계산하기 위해 이를 작은 공간들로 나타내는 것이다. 
+
+이러한 방법 중 가장 단순한 것은 공간 $X$가 두 열린집합들의 합집합 $X=U\cap V$로 나타나는 경우일 것이다. 그럼 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 우리는 다음의 diagram 
+
+img
+
+이 colimit diagram인 것을 안다. 이 경우 우리는 이 diagram에 fundamental groupoid functor $\Pi_1$을 취해 $\Pi_1(X)$를 $\Pi_1(U)$, $\Pi_1(V)$, 그리고 $\Pi_1(U\cap V)$를 이용하여 나타내는 것을 목표로 할 것이다. 한편 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)는 임의의 open covering $(U_i)$에 대하여 다음의 diagram 
+  
+img
+
+이 colimit diagram임을 안다. 우리의 주장은 만일 $(U_i)$와 이들의 finite intersection들의 fundamental groupoid가 모두 알려져 있다면 이들로부터 $\Pi_1(X)$의 fundamental groupoid를 계산할 수 있다는 것이다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm13">**정리 13 (Seifert-van Kampen)**</ins> 위상공간 $X$의 path-connected open cover $\mathcal{O}=(U_i)$가 주어졌다 하고, $\mathcal{O}$의 원소들의 유한한 교집합이 다시 $\mathcal{O}$에 속한다고 가정하자. 그럼 $\mathcal{O}$-shaped diagram $\Pi_1:\mathcal{O}\rightarrow\Grpd$의 colimit이 존재하며 이는 $\Pi_1(X)$와 isomorphic하다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+즉 임의의 groupoid $\mathscr{G}\in\Grpd$와 임의의 
+
+</details>
+
+
 
 자이페르트-반 캄펜 정리는 다음의 결과이다. 
 
@@ -287,7 +302,7 @@ $$h_n:\pi_n(X) \rightarrow H_n(X)$$
 
 </div>
 
-Hurewicz homomorphism $h_n$은 임의의 $f:S^n \rightarrow X$가 주어졌을 때 $f_\ast([S^n])$으로 주어진다. 여기에서 $[S^n]$은 $H_n(S^n)\cong \mathbb{Z}$의 generator이다. 
+Hurewicz homomorphism $h_n$은 임의의 $f:S^n \rightarrow X$가 주어졌을 때 $f_\ast([S^n])$으로 주어진다. 여기에서 $[S^n]$은 $H_n(S^n)\cong \mathbb{Z}$의 generator이다.
 
 
 
