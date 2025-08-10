@@ -9,16 +9,15 @@
 \begin{document}
 \nopagecolor
 
-
-%% groupoid_van_Kampen (Covering_spaces-4.png)
 \begin{tikzcd}
-  {\Pi_1(U)} & {\Pi_1(X)} \\
-  {\Pi_1(U\cap V)} & {\Pi_1(V)}
+  {\pi_1(U)} & {\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)} \\
+  {\pi_1(U\cap V)} & {\pi_1(V)}
   \arrow[from=1-1, to=1-2]
   \arrow[from=2-1, to=1-1]
   \arrow[from=2-1, to=2-2]
   \arrow[from=2-2, to=1-2]
 \end{tikzcd}
+
 
 \end{document}
 
@@ -554,16 +553,14 @@
   &B
 \end{tikzcd}
 
-%%van_kampen (Covering_spaces-3.png)
+%% colimit_in_Top (Covering_spaces-3.png)
 \begin{tikzcd}
-  && {\pi_1(X)} \\
-  {\pi_1(U)} & {\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)} \\
-  {\pi_1(U\cap V)} & {\pi_1(V)}
-  \arrow[curve={height=-12pt}, from=2-1, to=1-3]
-  \arrow[from=2-1, to=2-2]
-  \arrow[dashed, from=2-2, to=1-3]
-  \arrow[from=3-1, to=2-1]
-  \arrow[from=3-1, to=3-2]
-  \arrow[curve={height=18pt}, from=3-2, to=1-3]
-  \arrow[from=3-2, to=2-2]
+  U\rar[hook]&X\\
+  U\cap V\uar[hook]\rar[hook]&V\uar[hook]
+\end{tikzcd}
+
+%% colimit_in_Top_generalized (Covering_spaces-4.png)
+\begin{tikzcd}
+  U_i\rar[hook]&X\\
+  U_i\cap U_j\uar[hook]\rar[hook]&U_j\uar[hook]
 \end{tikzcd}

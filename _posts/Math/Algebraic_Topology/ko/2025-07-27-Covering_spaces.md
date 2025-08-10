@@ -240,11 +240,11 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 
 이러한 방법 중 가장 단순한 것은 공간 $X$가 두 열린집합들의 합집합 $X=U\cap V$로 나타나는 경우일 것이다. 그럼 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 우리는 다음의 diagram 
 
-img
+![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_spaces-3.png){:style="width:8em" class="invert" .align-center}
 
 이 colimit diagram인 것을 안다. 이 경우 우리는 이 diagram에 fundamental groupoid functor $\Pi_1$을 취해 $\Pi_1(X)$를 $\Pi_1(U)$, $\Pi_1(V)$, 그리고 $\Pi_1(U\cap V)$를 이용하여 나타내는 것을 목표로 할 것이다. 한편 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)는 임의의 open covering $(U_i)$에 대하여 다음의 diagram 
   
-img
+![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_spaces-4.png){:style="width:8em" class="invert" .align-center}
 
 이 colimit diagram임을 안다. 우리의 주장은 만일 $(U_i)$와 이들의 finite intersection들의 fundamental groupoid가 모두 알려져 있다면 이들로부터 $\Pi_1(X)$의 fundamental groupoid를 계산할 수 있다는 것이다. 
 
@@ -256,37 +256,21 @@ img
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-즉 임의의 groupoid $\mathscr{G}\in\Grpd$와 임의의 
+즉 임의의 groupoid $\mathscr{G}\in\Grpd$와 임의의 cocone $\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathscr{G}$에 대하여, 각각의 $U\in \mathcal{O}$마다 $\widetilde{\lambda}$와 $\lambda$가 같아지도록 하는 $\widetilde{\lambda}$가 존재한다는 것을 보이면 된다. 당연히 우리는 임의의 $x\in X$마다, $x\in U$를 만족하는 $U$를 찾은 뒤 이 위에서는 $\lambda_U$가 정의되므로 $\widetilde{\lambda}(x)$를 이 값 $\lambda_U(x)$로 정의하면 된다. 이것이 $U$의 선택에 무관하다는 것은 $x$를 포함하는 임의의 $U_1,U_2$에 대해 $\lambda_{U_1}(x)$와 $\lambda_{U_2}(x)$는 모두 $\lambda_{U_1\cap U_2}(x)$와 같은 값을 가져야 한다는 것으로부터 자명하다. 한편 morphism에 대하여도 비슷한 식으로 정의를 할 수 있는데, 어떠한 $U\in \mathcal{O}$에 완전하게 포함되는 path $f$에 대해서는 위와 마찬가지 이유로 이 정의가 잘 정의되며, 유일하게 보여야 하는 것은 path가 단일한 $U\in \mathcal{O}$에 속해있지 않은 경우 어떻게 정의해야 할지에 대한 것이다. 그런데 이 경우 그냥 path의 concatenation을 사융하면 된다. 이것이 항상 정의되며 잘 정의된다는 것을 보이면 된다. 
 
 </details>
 
-
-
-자이페르트-반 캄펜 정리는 다음의 결과이다. 
+이제 위의 [따름정리 12](#cor12)를 얻어낼 때와 마찬가지로 하나의 대상에서만 이 정리를 적용하고, 따라서 $\Grpd$를 $\Grp$로 바꿔준 후, $\Grp$의 colimit이 free product임을 사용하면 다음의 결과를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="thm13">**정리 13 (Seifert-van Kampen)**</ins> 위상공간 $X$가 두 connected open subset $U,V$의 합집합으로 나타난다고 하고, $U\cap V$가 connected라 하자. 그럼 다음의 pushout diagram
+<ins id="cor14">**따름정리 14 (Seifert-van Kampen theorem, classical version)**</ins> 위상공간 $X$가 두 connected open subset $U,V$의 합집합으로 나타난다고 하고, $U\cap V$가 connected라 하자. 그럼 다음의 diagram
 
-![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_spaces-3.png){:style="width:24em" class="invert" .align-center}
+![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_spaces-5.png){:style="width:20em" class="invert" .align-center}
 
-에서, $\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)\rightarrow \pi_1(X)$는 isomorphism이다. 
+이 pushout diagram이며 이로부터 나오는 $\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)\rightarrow \pi_1(X)$는 isomorphism이다. 
 
 </div>
-
-이를 직접 보이기 위해서는 path들과 homotopy를 직접 만져야하지만, 우리의 언어로 이를 기하학적으로 설명하는 것은 어렵지 않다. 우선 이 정리를 fundamental groupoid $\Pi_1(X)$으로 해석하면 이는 다음의 diagram
-
-![groupoid_van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_spaces-4.png){:style="width:12em" class="invert" .align-center}
-
-이 pushout diagram이라는 뜻이다. 그런데 fundamental theorem
-
-$$\Cov(X)\simeq\Fun(\Pi_1(X),\Set)$$
-
-에 이를 대입하면, $\Pi_1(X)$가 domain에 들어있으므로 이는 contravariant하게 다음의 pullback
-
-$$\Cov(X)\simeq \Fun(\Pi_1(U),\Set)\times_{\Fun(\Pi_1(U\cap V))}\Fun(\Pi_1(V),\Set)\simeq \Cov(U)\times_{\Cov(U\cap V)}\Cov(V)$$
-
-으로 바뀐다. 그런데 이는 $X$의 covering space는, 교집합에서 일치하는 $U$와 $V$의 covering space를 각각 주는 것과 같다는 뜻이므로 꽤나 믿을만한 결과이며, [정리 13](#thm13)은 그럼 fundamental groupoid의 pushout diagram에서 바로 얻어질 것이다. 
 
 ## Hurewicz theorem
 
@@ -294,7 +278,7 @@ Homology group은 fundamental group보다 더 단순한 구조를 가지고 있�
 
 <div class="proposition" markdown="1">
 
-<ins id="thm14">**정리 14 (Hurewicz)**</ins> Path-connected space $X$를 고정하자. 그럼 각각의 $n$에 대하여, group homomorphism  
+<ins id="thm15">**정리 15 (Hurewicz)**</ins> Path-connected space $X$를 고정하자. 그럼 각각의 $n$에 대하여, group homomorphism  
 
 $$h_n:\pi_n(X) \rightarrow H_n(X)$$
 
@@ -311,6 +295,7 @@ Hurewicz homomorphism $h_n$은 임의의 $f:S^n \rightarrow X$가 주어졌을 �
 **참고문헌**
 
 [Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
+[May] J. P. May, *A concise course in algebraic topology*.  
 [Mun] James Munkres, *Topology*. Prentice Hall, 2000.  
 [Tao] Terence Tao, [van Kampen's theorem via covering spaces](https://terrytao.wordpress.com/2012/10/28/van-kampens-theorem-via-covering-spaces/).
 
