@@ -9,14 +9,7 @@
 \begin{document}
 \nopagecolor
 
-\begin{tikzcd}
-  {\pi_1(U)} & {\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)} \\
-  {\pi_1(U\cap V)} & {\pi_1(V)}
-  \arrow[from=1-1, to=1-2]
-  \arrow[from=2-1, to=1-1]
-  \arrow[from=2-1, to=2-2]
-  \arrow[from=2-2, to=1-2]
-\end{tikzcd}
+
 
 
 \end{document}
@@ -31,7 +24,7 @@
   \draw (1,0) node[below]{$v_1$};
   \draw (0,0) node[above]{$a$};
   \begin{scope}[shift={(3,0)}]
-    \fill[orange, opacity=.2] (0,0) circle[radius=1];
+    \fill[orange, opacity=.2] (0,0) cihrcle[radius=1];
     \draw[-{stealth}, blue] (90:1) arc (90:150:1);
     \draw[blue] (149:1) arc (149:210:1);
     \draw[-{stealth}, blue] (210:1) arc (210:270:1);
@@ -563,4 +556,87 @@
 \begin{tikzcd}
   U_i\rar[hook]&X\\
   U_i\cap U_j\uar[hook]\rar[hook]&U_j\uar[hook]
+\end{tikzcd}
+
+%% classical_van_Kampen (Covering_spaces-5.png)
+\begin{tikzcd}
+  {\pi_1(U)} & {\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)} \\
+  {\pi_1(U\cap V)} & {\pi_1(V)}
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=2-1, to=1-1]
+  \arrow[from=2-1, to=2-2]
+  \arrow[from=2-2, to=1-2]
+\end{tikzcd}
+
+%% realtive_homology (Computation_of_homology-1.png)
+\begin{tikzcd}
+  C_\bullet(A)\rar[hook]\dar["C_\bullet(f\vert_A)" left]&C_\bullet(X)\dar["C_\bullet(f)"]\\
+  C_\bullet(B)\rar[hook]&C_\bullet(Y)
+\end{tikzcd}
+
+%% double_relative (Computation_of_homology-2.png)
+\begin{tikzcd}
+  & 0 & 0 & 0 \\
+  0 & {C_\bullet(A)} & {C_\bullet(U)} & {C_\bullet(U,A)} & 0 \\
+  0 & {C_\bullet(A)} & {C_\bullet(X)} & {C_\bullet(X,A)} & 0 \\
+  0 & 0 & {C_\bullet(X,U)} & {C_\bullet(X,U)} & 0 \\
+  & 0 & 0 & 0
+  \arrow[from=1-2, to=2-2]
+  \arrow[from=1-3, to=2-3]
+  \arrow[from=1-4, to=2-4]
+  \arrow[from=2-1, to=2-2]
+  \arrow[from=2-2, to=2-3]
+  \arrow[equals, from=2-2, to=3-2]
+  \arrow[from=2-3, to=2-4]
+  \arrow[from=2-3, to=3-3]
+  \arrow[from=2-4, to=2-5]
+  \arrow[from=2-4, to=3-4]
+  \arrow[from=3-1, to=3-2]
+  \arrow[from=3-2, to=3-3]
+  \arrow[from=3-2, to=4-2]
+  \arrow[from=3-3, to=3-4]
+  \arrow[from=3-3, to=4-3]
+  \arrow[from=3-4, to=3-5]
+  \arrow[from=3-4, to=4-4]
+  \arrow[from=4-1, to=4-2]
+  \arrow[from=4-2, to=4-3]
+  \arrow[from=4-2, to=5-2]
+  \arrow[equals, from=4-3, to=4-4]
+  \arrow[from=4-3, to=5-3]
+  \arrow[from=4-4, to=4-5]
+  \arrow[from=4-4, to=5-4]
+\end{tikzcd}
+  
+%% excision_1 (Compuatation_of_homology-3.png)
+\begin{tikzcd}
+  H_k(X,A)\rar\dar&H_k(X,U)\dar\\
+  H_k(X/A,[A])\rar&H_k(X/A,U/A)
+\end{tikzcd}
+
+%% excision_2 (Computation_of_homology-2.png)
+\begin{tikzcd}
+  H_k(X\setminus A, U\setminus A)\rar\dar&H_k(X,U)\dar\\
+  H_k((X/A)\setminus[A], (U/A)\setminus[A])\rar& H_k(X/A,U/A)
+\end{tikzcd}
+
+
+
+%% relative_homology_and_absolute_homology (Computation_of_homology-2.png)
+\begin{tikzcd}
+  \cdots & {H_k(A)} & {H_k(X)} & {H_k(X,A)} & {H_{k-1}(A)} & \cdots \\
+  \cdots & {H_k(A)} & {H_k(X)} & {H_k(X/A)} & {H_{k-1}(A)} & \cdots
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=1-2, to=1-3]
+  \arrow[equals, from=1-2, to=2-2]
+  \arrow[from=1-3, to=1-4]
+  \arrow[equals, from=1-3, to=2-3]
+  \arrow[from=1-4, to=1-5]
+  \arrow[from=1-4, to=2-4]
+  \arrow[from=1-5, to=1-6]
+  \arrow[equals, from=1-5, to=2-5]
+  \arrow[from=2-1, to=2-2]
+  \arrow[from=2-2, to=2-3]
+  \arrow[from=2-3, to=2-4]
+  \arrow[from=2-4, to=2-5]
+  \arrow[from=2-5, to=2-6]
 \end{tikzcd}
