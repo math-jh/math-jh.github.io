@@ -184,6 +184,8 @@ $$M:\Cov(B) \rightarrow \Fun(\Pi_1(B), \Set)$$
 
 </div>
 
+예를 들어 임의의 path-connected topological manifold는 항상 위의 조건을 만족한다. 
+
 이제 $\Fun(\Pi_1(B), \Set)$이 무엇인지 살펴보아야 한다. 더 일반적으로 임의의 groupoid $\mathscr{G}$에 대하여 functor $\mathscr{G}\rightarrow \Set$이 무엇인지를 생각해보자. 이는 정의에 의해 
 
 - $\mathscr{G}$의 각각의 object $G\in \mathscr{G}$에 대응되는 집합 $S_G$,
@@ -232,7 +234,7 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 
 이 성립한다. 이를 $E_H$의 *Deck transformation group*이라 부른다. 더 일반적으로 (fiber $p^{-1}(x)$의 서로 다른 원소를 택하여 얻어지는) covering space들의 automorphism은 $\pi_1(B,x)$의 subgroup들에 inner automorphism을 취하는 것에 대응되며, 우리는 이를 *Deck transformation*이라 부른다.
 
-한편 $\pi_1(B,x)$의 subgroup(들의 conjugacy class들)의 poset에는 minimal한 원소 $\left\\{e\right\\}$가 존재한다. 그럼 위의 Galois correspondance에 의해 여기에 대응되는 *universal cover* $\tilde{B}$가 존재한다.
+한편 $\pi_1(B,x)$의 subgroup(들의 conjugacy class들)의 poset에는 minimal한 원소 $\left\\{e\right\\}$가 존재한다. 그럼 위의 Galois correspondance에 의해 여기에 대응되는 *universal cover* $\widetilde{B}$가 존재한다. 이 covering space의 Deck transformation group은 $\pi_1(B,x)$와 isomorphic하며, 
 
 ## 자이페르트-반 캄펜 정리
 
@@ -282,7 +284,11 @@ Homology group은 fundamental group보다 더 단순한 구조를 가지고 있�
 
 $$h_n:\pi_n(X) \rightarrow H_n(X)$$
 
-이 존재한다. 특별히 $n=1$인 경우, $h_1$은 surjective이고 $\ker h_1$은 $\pi_1(X)$의 commutator subgroup이 되어 isomorphism $\pi_1(X)^\ab\cong H_1(X)$를 준다. 일반적으로, 만일 모든 $i< n$에 대하여 $\pi_i(X)=0$이라면 $h_n$은 isomorphism이고 $h_{n+1)$은 surjective이다. 
+이 존재한다. 특별히 $n=1$인 경우, $h_1$은 surjective이고 $\ker h_1$은 $\pi_1(X)$의 commutator subgroup $[\pi_1(X),\pi_1(X)]$이 되어 first isomorphism theorem에 의해
+
+$$H_1(X)\cong \pi_1(X)/\ker h_1=\pi_1(X)/[\pi_1(X),\pi_1(X)]=\pi_1(X)^\ab$$
+
+이 성립한다. 더 일반적으로, 만일 모든 $i< n$에 대하여 $\pi_i(X)=0$이라면 $h_n$은 isomorphism이고 $h_{n+1}$은 surjective이다. 
 
 </div>
 
