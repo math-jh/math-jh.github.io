@@ -108,6 +108,8 @@ algebraic_topology-ko:
         url: ko/math/algebraic_topology/homotopy
       - title: "피복공간"
         url: ko/math/algebraic_topology/covering_spaces
+      - title: "호몰로지의 계산"
+        url: /ko/math/algebraic_topology/computation_of_homology
   - title: 
     children:
       - title: "블로그 소개"
