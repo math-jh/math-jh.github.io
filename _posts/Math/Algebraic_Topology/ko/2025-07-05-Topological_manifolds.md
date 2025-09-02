@@ -98,3 +98,5 @@ $$\mathcal{B}=\left\{B_1\times B_2\mid B_i\in \mathcal{B}_i\right\}$$
 $X/R$이 locally Euclidean이므로 $X/R$을 Euclidean neighborhood들 $(U\_i)\_{i\in I}$로 덮을 수 있으며 이들의 premimage들의 모임 $(\pi^{-1}(U\_i))\_{i\in I}$들이 $X$를 덮는다. 이제 임의의 second-countable space는 Lindelöf이므로 ([##ref##](countability)) 적당한 countable subset $J\subset I$이 존재하여 $(\pi^{-1}(U\_i)\_{i\in J}$가 $X$의 countable open cover이며, 따라서 이들에 해당하는 $(U\_i)\_{i\in J}$들이 $X/R$의 countable cover가 된다. 그런데 이들 각각은 Euclidean neighborhood이므로 다시 countable base를 가지며, 이러한 것들이 countable하게 있으므로 이들을 모두 모은 것이 $X/R$의 countable base가 된다.
 
 </details>
+
+이 카테고리의 흐름으로만 본다면 우리의 관심은 위상다양체로 한정지어도 충분할 것이나, 특히 코호몰로지의 곱셈 구조를 다룰 때는 미분다양체에서의 적분의 개념을 떠올리는 것이 더 편하다. 
