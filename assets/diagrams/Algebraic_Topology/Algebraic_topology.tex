@@ -9,24 +9,21 @@
 \begin{document}
 \nopagecolor
 
-%% morphism_of_les (Computation_of_homology-8.png)
+
 \begin{tikzcd}
-  \cdots & {H_{n+1}(V, U\cap V)} & {H_n(U\cap V)} & {H_n(V)} & {H_n(V,U\cap V)} & \cdots \\
-  \cdots & {H_{n+1}(X,U)} & {H_n(U)} & {H_n(X)} & {H_n(X,U)} & \cdots
-  \arrow["p_V", from=1-1, to=1-2]
-  \arrow["\partial_V", from=1-2, to=1-3]
-  \arrow["i_V", from=1-2, to=2-2]
-  \arrow["j_V", from=1-3, to=1-4]
-  \arrow["j_U", from=1-3, to=2-3]
-  \arrow["p_V", from=1-4, to=1-5]
-  \arrow["k_V", from=1-4, to=2-4]
-  \arrow["\partial_V", from=1-5, to=1-6]
-  \arrow["i_V", from=1-5, to=2-5]
-  \arrow["p_X", from=2-1, to=2-2]
-  \arrow["\partial_X", from=2-2, to=2-3]
-  \arrow["k_U", from=2-3, to=2-4]
-  \arrow["p_X", from=2-4, to=2-5]
-  \arrow["\partial_X", from=2-5, to=2-6]
+  0 & {Z_n\otimes_\mathbb{Z}A} & {C_n\otimes_\mathbb{Z}A} & {B_{n-1}\otimes_\mathbb{Z}A} & 0 \\
+  0 & {Z_{n-1}\otimes_\mathbb{Z}A} & {C_{n-1}\otimes_\mathbb{Z}A} & {B_{n-2}\otimes_\mathbb{Z}A} & 0
+  \arrow[from=1-1, to=1-2]
+  \arrow["{\iota_n\otimes \id_A}", from=1-2, to=1-3]
+  \arrow["0", from=1-2, to=2-2]
+  \arrow["{\partial_n\otimes \id_A}", from=1-3, to=1-4]
+  \arrow["{\partial_n\otimes \id_A}", from=1-3, to=2-3]
+  \arrow[from=1-4, to=1-5]
+  \arrow["0", from=1-4, to=2-4]
+  \arrow[from=2-1, to=2-2]
+  \arrow["{\iota_{n-1}\otimes\id_A}"', from=2-2, to=2-3]
+  \arrow["{\partial_{n-1}\otimes\id_A}"', from=2-3, to=2-4]
+  \arrow[from=2-4, to=2-5]
 \end{tikzcd}
 
 
@@ -686,3 +683,22 @@
   U\cap V \uar[hook]\rar[hook]&V\uar[hook]
 \end{tikzcd}
 
+%% morphism_of_les (Computation_of_homology-8.png)
+\begin{tikzcd}
+  \cdots & {H_{n+1}(V, U\cap V)} & {H_n(U\cap V)} & {H_n(V)} & {H_n(V,U\cap V)} & \cdots \\
+  \cdots & {H_{n+1}(X,U)} & {H_n(U)} & {H_n(X)} & {H_n(X,U)} & \cdots
+  \arrow["p_V", from=1-1, to=1-2]
+  \arrow["\partial_V", from=1-2, to=1-3]
+  \arrow["i_V", from=1-2, to=2-2]
+  \arrow["j_V", from=1-3, to=1-4]
+  \arrow["j_U", from=1-3, to=2-3]
+  \arrow["p_V", from=1-4, to=1-5]
+  \arrow["k_V", from=1-4, to=2-4]
+  \arrow["\partial_V", from=1-5, to=1-6]
+  \arrow["i_V", from=1-5, to=2-5]
+  \arrow["p_X", from=2-1, to=2-2]
+  \arrow["\partial_X", from=2-2, to=2-3]
+  \arrow["k_U", from=2-3, to=2-4]
+  \arrow["p_X", from=2-4, to=2-5]
+  \arrow["\partial_X", from=2-5, to=2-6]
+\end{tikzcd}

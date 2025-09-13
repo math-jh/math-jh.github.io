@@ -221,19 +221,19 @@ $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6 (Eilenberg-Steenrod axioms)**</ins> 위상공간들의 pair들의 category에서 abelian group으로의 category러의 functor들 $H_n$과, 이들 사이의 natural transformation
+<ins id="def6">**정의 6 (Eilenberg-Steenrod axioms)**</ins> 위상공간들의 pair들의 category에서 abelian group들의 category로의 functor들 $H_k$과, 이들 사이의 natural transformation
 
-$$\partial:H_i(X,A)\rightarrow H_{i-1}(A,\emptyset):=H_{i-1}(A)$$
+$$\partial:H_k(X,A)\rightarrow H_{k-1}(A,\emptyset):=H_{k-1}(A)$$
 
 들에 대하여, *Eilenberg-Steenrod axiom*은 다음의 공리들을 뜻한다. 
 
-- (Homotopy) 두 homotopic map $(X,A) \rightarrow (Y,B)$이 주어졌다면, 이들이 유도하는 두 homomorphism들 $H_i(X,A) \rightarrow H_i(Y,B)$들도 동일하다. 
+- (Homotopy) 두 homotopic map $(X,A) \rightarrow (Y,B)$이 주어졌다면, 이들이 유도하는 두 homomorphism들 $H_k(X,A) \rightarrow H_k(Y,B)$들도 동일하다. 
 - (Excision) [정리 2](#thm2)의 조건을 만족하는 $(X,A,Z)$에 대하여, $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$는 isomorphism을 유도한다. 
-- (Dimension) One-point space $\ast$에 대하여, $H_n(\ast)=0$이 모든 $n$에 대해 성립한다. 
-- (Additivity) 만일 $X=\coprod X_\alpha$라면, $H_n(X)\cong\bigoplus H_n(X_\alpha)$이다. 
+- (Dimension) One-point space $\ast$에 대하여, $H_k(\ast)=0$이 모든 $k>0$에 대해 성립한다. 
+- (Additivity) 만일 $X=\coprod X_\alpha$라면, $H_k(X)\cong\bigoplus H_k(X_\alpha)$이다. 
 - (Exactness) 각각의 pair $(X,A)$와, 두 inclusion $(A,\emptyset) \hookrightarrow (X,\emptyset)$ 그리고 $(X,\emptyset)\hookrightarrow (X,A)$들은 다음의 long exact sequence
     
-    $$\cdots \rightarrow H_n(A)\rightarrow H_n(X) \rightarrow H_n(X,A) \rightarrow H_{n-1}(A)\rightarrow \cdots$$
+    $$\cdots \rightarrow H_k(A)\rightarrow H_k(X) \rightarrow H_k(X,A) \rightarrow H_{k-1}(A)\rightarrow \cdots$$
 
     에 들어간다. 
 
