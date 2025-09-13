@@ -329,4 +329,5 @@ head_scripts:
   - /assets/js/custom/Color_scheme.js
   - /assets/js/custom/HiddenTopButton.js
   - /assets/js/custom/Comments.js
+  - /assets/js/custom/Citation.js
   - /assets/js/custom/Multilingual.js
