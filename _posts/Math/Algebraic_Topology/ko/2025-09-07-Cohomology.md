@@ -33,7 +33,7 @@ $$H_k(X;A),\qquad H_k^\Delta(X;A)$$
 
 을 정의할 수 있다는 것을 살펴보았다. 이를 실질적으로 계산하기 위해서는 가령 $H_k(X;A)$ 혹은 $H_k^\Delta(X;A)$가 $H_k(X;A)\otimes_\mathbb{Z}A$ 혹은 $H_k^\Delta(X;A)\otimes_\mathbb{Z}A$와 같은 식으로 나오는지를 추가적으로 살펴보아야 할 것인데, 일반적으로 텐서곱은 right-exact이지만 left-exact는 아니므로 이는 과도한 기대일 것이며, 우리는 텐서를 취함으로써 손실되는 정보를 추가로 측정해주어야 할 것이다. 
 
-이를 위해, free abelian group들로 이루어진 chain complex $C_\bullet$을 생각하고, $\Ch(\Ab)$에서의 short exact sequence
+이를 위해, free abelian group들로 이루어진 chain complex $C_\bullet$을 생각하고, $\Ch_{\geq 0}(\Ab)$에서의 short exact sequence
 
 $$0 \rightarrow Z_\bullet \rightarrow C_\bullet \rightarrow B_{\bullet-1}\rightarrow 0\tag{1}$$
 
@@ -262,11 +262,11 @@ $$H_k(C\otimes_AM)\cong \left(H_k(C)\otimes_AM\right)\oplus \Tor_1^A(H_{k-1}(C),
 
 <ins id="thm65">**정리 5 (Universal coefficient theorem for cohomology, general version)**</ins> Principal ideal domain $A$와, free $A$-module들의 chain complex $C_\bullet$, 그리고 임의의 $A$-module $M$에 대하여 다음의 short exact sequence
 
-$$0\rightarrow\Ext_R^1(H_{k-1}(C), M)\rightarrow H_k(\Hom_R(C,M))\rightarrow \Hom_R(H_k(C),M)\rightarrow 0$$
+$$0\rightarrow\Ext_A^1(H_{k-1}(C), M)\rightarrow H_k(\Hom_A(C,M))\rightarrow \Hom_A(H_k(C),M)\rightarrow 0$$
 
 이 존재한다. 뿐만 아니라, 이 sequence는 (non-canonical하게) split하며 따라서 다음의 (non-canonical) isomorphism
 
-$$H_k(\Hom_R(C,M))\cong \Hom_R(H_k(C),M)\oplus \Ext^1_R(H_{k-1}(C),M)$$
+$$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 을 준다.
 
@@ -298,7 +298,7 @@ Mayer-Vietoris sequence를 사용하면 큰 공간의 작은 부분공간들의 
 
 <ins id="def7">**정의 7**</ins> Ring $A$와 $A$-module들의 chain complex $C_\bullet,D_\bullet$이 주어졌다 하자. 그럼 이들의 *tensor product* $(C\otimes D)_\bullet$은 각각의 $k$에 대하여
 
-$$(C\otimes D)_k=\bigoplus_{p+q=k}C_p\otimes_R D_q$$
+$$(C\otimes D)_k=\bigoplus_{p+q=k}C_p\otimes_A D_q$$
 
 로 정의하고, differential은 homogeneous element에 대해서는
 
@@ -316,11 +316,11 @@ $$\partial(x,y)=(\partial^Cx,y)+(-1)^{\deg(x)}(x,\partial^Dy)$$
 
 <ins id="lem8">**보조정리 8**</ins> Principal ideal doamin $A$와 $A$-module들의 chain complex $C_\bullet$, $D_\bullet$이 주어졌다 하고 $C_\bullet$이 free $A$-module들의 chain complex라 하자. 그럼 임의의 $k$에 대하여 다음의 short exact sequence
 
-$$0 \rightarrow \bigoplus_{p+q=k}H_p(C)\otimes_RH_q(D)\rightarrow H_k(C\otimes D)\rightarrow \bigoplus_{p+q=k-1}\Tor_1^R(H_p(C),H_q(D))\rightarrow 0$$
+$$0 \rightarrow \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\rightarrow H_k(C\otimes D)\rightarrow \bigoplus_{p+q=k-1}\Tor_1^A(H_p(C),H_q(D))\rightarrow 0$$
 
 가 존재한다. 뿐만 아니라, 이 short exact sequence는 (non-canonical하게) split하며 따라서 다음의 isomorphism
 
-$$H_k(C\otimes D)\cong \left( \bigoplus_{p+q=k}H_p(C)\otimes_RH_q(D)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^R(H_p(C),H_q(D)) \right)$$
+$$H_k(C\otimes D)\cong \left( \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(C),H_q(D)) \right)$$
 
 이 존재한다.
 
@@ -354,7 +354,7 @@ $$0 \rightarrow B_\bullet(C)\rightarrow Z_\bullet(C)\rightarrow H_\bullet(C)\rig
 
 를 생각하고, 여기에 $H_\bullet(D)$와의 tensor product로 얻어지는 다음의 exact sequence
 
-$$0 \rightarrow \Tor_1^R(H(C), H(D))_\bullet\rightarrow (B(C)\otimes H(D))_\bullet\rightarrow (Z(C) \otimes H(D))_\bullet \rightarrow (H(C)\otimes H(D))_\bullet \rightarrow 0$$
+$$0 \rightarrow \Tor_1^A(H(C), H(D))_\bullet\rightarrow (B(C)\otimes H(D))_\bullet\rightarrow (Z(C) \otimes H(D))_\bullet \rightarrow (H(C)\otimes H(D))_\bullet \rightarrow 0$$
 
 를 생각하자. 여기서 첫 항의 $0$은 $Z_\bullet(C)$이 free module들인 것으로부터 얻어진 것이다. 한편, free module은 flat이므로, free module과의 tensor product를 취하는 것은 호몰로지를 취하는 것과 commute하고 따라서 위의 sequence에서
 
@@ -362,7 +362,7 @@ $$(B(C)\otimes H(D))_\bullet\cong H_\bullet(B(C)\otimes D)\qquad (Z(C)\otimes H(
 
 임을 안다. 이 때 $(B(C)\otimes H(D))\_\bullet \rightarrow (Z(C)\otimes H(D))\_\bullet$은 inclusion $B\_\bullet(C)\rightarrow Z\_\bullet(C)$으로부터 얻어지는 것이며, 위의 identification을 거쳤을 때 $\delta_\bullet$과 같은 함수인 것을 안다. 따라서 
 
-$$\coker \delta_k\cong (H(C)\otimes H(D))_k,\qquad \ker \delta_{k-1}\cong \Tor_1^R(H(C),H(D))_{k-1}$$
+$$\coker \delta_k\cong (H(C)\otimes H(D))_k,\qquad \ker \delta_{k-1}\cong \Tor_1^A(H(C),H(D))_{k-1}$$
 
 을 얻는다. Splitting에 대한 주장의 경우, 
 
@@ -390,7 +390,7 @@ $$H_\bullet(C(X\times Y))\cong H_\bullet(C(X)\otimes C(Y))$$
 
 $$\AW:C_\bullet(X\times Y) \rightarrow (C(X)\otimes C(Y))_\bullet,\qquad \EZ:(C(X)\otimes C(Y))_\bullet \rightarrow C_\bullet(X\times Y)$$
 
-만 살펴볼 것이다. 
+만 살펴볼 것이다. Acyclic models theorem에 대한 증명은 흐름을 깨지 않기 위해 별도의 글로 적어둔다.
 
 우선 Alexander-Whitney map $\AW:C_\bullet(X\times Y) \rightarrow (C(X)\otimes C(Y))_\bullet$의 경우, 임의의 $k$-simplex $\sigma:\Delta^k \rightarrow X\times Y$를 
 
@@ -414,11 +414,11 @@ $$\AW\circ\EZ=\id_{(C(X)\otimes C(Y))_\bullet},\qquad \EZ\circ \AW\simeq \id_{C_
 
 <ins id="cor10">**따름정리 10 (Künneth)**</ins> 위상공간 $X,Y$를 고정하자. 그럼 이들의 곱공간 $X\times Y$와 principal ideal domain $A$에 대하여, 다음의 short exact sequence
 
-$$0 \rightarrow \bigoplus_{p+q=k}H_p(X;A)\otimes_RH_q(Y;A)\rightarrow H_k(X\times Y;A)\rightarrow \bigoplus_{p+q=k-1}\Tor_1^R(H_p(X;A),H_q(Y;A))\rightarrow 0$$
+$$0 \rightarrow \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\rightarrow H_k(X\times Y;A)\rightarrow \bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A))\rightarrow 0$$
 
 가 존재한다. 뿐만 아니라, 이 short exact sequence는 (non-canonical하게) split하며 따라서 다음의 isomorphism
 
-$$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_RH_q(Y;A)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^R(H_p(X;A),H_q(Y;A)) \right)$$
+$$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A)) \right)$$
 
 이 존재한다.
 
