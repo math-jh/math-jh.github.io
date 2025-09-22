@@ -9,25 +9,26 @@
 \begin{document}
 \nopagecolor
 
-
+%% fliipping (Acyclic_models_theorem-5.png)
 \begin{tikzcd}
-  0 & {Z_n\otimes_\mathbb{Z}A} & {C_n\otimes_\mathbb{Z}A} & {B_{n-1}\otimes_\mathbb{Z}A} & 0 \\
-  0 & {Z_{n-1}\otimes_\mathbb{Z}A} & {C_{n-1}\otimes_\mathbb{Z}A} & {B_{n-2}\otimes_\mathbb{Z}A} & 0
+  {C_\bullet(X;A)\otimes C_\bullet(Y;A)} & {C_\bullet(Y;A)\otimes C_\bullet (X;A)} \\
+  {C_\bullet(X\times Y;A)} & {C_\bullet(Y\times X;A)}
   \arrow[from=1-1, to=1-2]
-  \arrow["{\iota_n\otimes \id_A}", from=1-2, to=1-3]
-  \arrow["0", from=1-2, to=2-2]
-  \arrow["{\partial_n\otimes \id_A}", from=1-3, to=1-4]
-  \arrow["{\partial_n\otimes \id_A}", from=1-3, to=2-3]
-  \arrow[from=1-4, to=1-5]
-  \arrow["0", from=1-4, to=2-4]
+  \arrow[from=1-1, to=2-1]
+  \arrow[from=1-2, to=2-2]
   \arrow[from=2-1, to=2-2]
-  \arrow["{\iota_{n-1}\otimes\id_A}"', from=2-2, to=2-3]
-  \arrow["{\partial_{n-1}\otimes\id_A}"', from=2-3, to=2-4]
-  \arrow[from=2-4, to=2-5]
 \end{tikzcd}
 
 
 \end{document}
+
+
+
+
+
+
+
+
 
 
 \begin{tikzpicture}
@@ -701,4 +702,103 @@
   \arrow["k_U", from=2-3, to=2-4]
   \arrow["p_X", from=2-4, to=2-5]
   \arrow["\partial_X", from=2-5, to=2-6]
+\end{tikzcd}
+
+%% Proof_of_UCT (Cohomology-1.png)
+\begin{tikzcd}
+  0 & {Z_n\otimes_\mathbb{Z}A} & {C_n\otimes_\mathbb{Z}A} & {B_{n-1}\otimes_\mathbb{Z}A} & 0 \\
+  0 & {Z_{n-1}\otimes_\mathbb{Z}A} & {C_{n-1}\otimes_\mathbb{Z}A} & {B_{n-2}\otimes_\mathbb{Z}A} & 0
+  \arrow[from=1-1, to=1-2]
+  \arrow["{\iota_n\otimes \id_A}", from=1-2, to=1-3]
+  \arrow["0", from=1-2, to=2-2]
+  \arrow["{\partial_n\otimes \id_A}", from=1-3, to=1-4]
+  \arrow["{\partial_n\otimes \id_A}", from=1-3, to=2-3]
+  \arrow[from=1-4, to=1-5]
+  \arrow["0", from=1-4, to=2-4]
+  \arrow[from=2-1, to=2-2]
+  \arrow["{\iota_{n-1}\otimes\id_A}"', from=2-2, to=2-3]
+  \arrow["{\partial_{n-1}\otimes\id_A}"', from=2-3, to=2-4]
+  \arrow[from=2-4, to=2-5]
+\end{tikzcd}
+
+
+%% lifting (Acyclic_models_theorem-1.png)
+\begin{tikzcd}
+  {F_0(X)} & {G_0(X)} \\
+  {H_0(F(X))} & {H_0(G(X))}
+  \arrow["{f_0(X)}", dashed, from=1-1, to=1-2]
+  \arrow["{p_F}"', from=1-1, to=2-1]
+  \arrow[from=1-1, to=2-2]
+  \arrow["{p_G}"', from=1-2, to=2-2]
+  \arrow["{f(X)_0}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% lifting_general (Acyclic_models_theorem-2.png)
+\begin{tikzcd}
+  {F_n(X)} & {F_{n-1}(X)} & {F_{n-2}(X)} & \cdots \\
+  {G_n(X)} & {G_{n-1}(X)} & {G_{n-2}(X)} & \cdots
+  \arrow["{d_n^{F(X)}}", from=1-1, to=1-2]
+  \arrow[dashed, from=1-1, to=2-1]
+  \arrow["{d_{n-1}^{F(X)}}", from=1-2, to=1-3]
+  \arrow["{f_{n-1}(X)}"', from=1-2, to=2-2]
+  \arrow[from=1-3, to=1-4]
+  \arrow["{f_{n-2}(X)}"', from=1-3, to=2-3]
+  \arrow["{d_n^{G(X)}}"', from=2-1, to=2-2]
+  \arrow["{d_{n-1}^{G(X)}}"', from=2-2, to=2-3]
+  \arrow[from=2-3, to=2-4]
+\end{tikzcd}
+
+%% reduction_to_models (Acyclic_models_theorem-3.png)
+\begin{tikzcd}
+  {F_n(M)} & {F_n(X)} \\
+  {G_n(M)} & {G_n(X)}
+  \arrow["{F_n(u)}", from=1-1, to=1-2]
+  \arrow["{f_n(M)}"', from=1-1, to=2-1]
+  \arrow["{G_n(u)}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% lifting_reduced (Acyclic_models_theorem-4.png)
+\begin{tikzcd}
+  {F_n(M)} & {F_{n-1}(M)} & {F_{n-2}(M)} & \cdots \\
+  {G_n(M)} & {G_{n-1}(M)} & {G_{n-2}(M)} & \cdots
+  \arrow["{d_n^{F(M)}}", from=1-1, to=1-2]
+  \arrow[dashed, from=1-1, to=2-1]
+  \arrow["{d_{n-1}^{F(M)}}", from=1-2, to=1-3]
+  \arrow["{f_{n-1}(M)}"', from=1-2, to=2-2]
+  \arrow[from=1-3, to=1-4]
+  \arrow["{f_{n-2}(M)}"', from=1-3, to=2-3]
+  \arrow["{d_n^{G(M)}}"', from=2-1, to=2-2]
+  \arrow["{d_{n-1}^{G(M)}}"', from=2-2, to=2-3]
+  \arrow[from=2-3, to=2-4]
+\end{tikzcd}
+
+
+%% functoriality_of_cross_product (Cup_products-1.png)
+\begin{tikzcd}
+  {H^\ast(X;A)\otimes H^\ast(Y;A)\otimes H^\ast(X;A)\otimes H^\ast(Y;A)} & {H^\ast(X\times Y;A)\otimes H^\ast(X\times Y;A)} \\
+  {H^\ast(X;A)\otimes H^\ast(Y;A)} & {H^\ast(X\times Y;A)}
+  \arrow["{\times\otimes\times}", from=1-1, to=1-2]
+  \arrow["{\smile\otimes\smile}"', from=1-1, to=2-1]
+  \arrow["\smile", from=1-2, to=2-2]
+  \arrow["\times"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% functoriality (Cup_products-2.png)
+\begin{tikzcd}
+  {H^\bullet(Y;A)\otimes H^\bullet(Y;A)} & {H^\bullet(Y\times Y;A)} \\
+  {H^\bullet(X;A)\otimes H^\bullet(X;A)} & {H^\bullet(X\times X;A)}
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=1-1, to=2-1]
+  \arrow[from=1-2, to=2-2]
+  \arrow[from=2-1, to=2-2]
+\end{tikzcd}
+
+%% diagonal_and_f (Cup_products-3.png)
+\begin{tikzcd}
+  X & {X\times X} \\
+  Y & {Y\times Y}
+  \arrow["{\Delta_X}", from=1-1, to=1-2]
+  \arrow["f"', from=1-1, to=2-1]
+  \arrow["{(f,f)}", from=1-2, to=2-2]
+  \arrow["{\Delta_Y}"', from=2-1, to=2-2]
 \end{tikzcd}

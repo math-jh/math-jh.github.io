@@ -41,7 +41,7 @@ $$\cdots \longrightarrow C_k(X,A)\overset{\partial}{\longrightarrow} C_{k-1}(X,A
 
 </div>
 
-이제 category $\Ch(\Ab)$에서의 short exact sequence
+이제 category $\Ch_{\geq 0}(\Ab)$에서의 short exact sequence
 
 $$0 \rightarrow C_\bullet(A) \rightarrow C_\bullet(X) \rightarrow C_\bullet(X,A) \rightarrow 0$$ 
 
@@ -159,7 +159,7 @@ $$H_k(X,A)\cong \widetilde{H}_k(X/A)$$
 
 ## 심플렉스 호몰로지와 특이 호몰로지
 
-한편 relative homology는 정의한 방식은 $\Ch(\Ab)$에서의 monomorphism $C_\bullet(A)\rightarrow C_\bullet(X)$에 cokernel을 취한 것이었으므로, 이 과정은 $C^\Delta_\bullet(A) \rightarrow C^\Delta_\bullet(X)$에 대해 반복해도 된다. 그럼 그 결과로 우리는 simplicial homology 버전의 realtive homology $H_n^\Delta(X,A)$를 얻게 된다. 이제 simplicial homology는 "singular하지 않은" chain들이므로, inclusion 
+한편 relative homology는 정의한 방식은 $\Ch_{\geq 0}(\Ab)$에서의 monomorphism $C_\bullet(A)\rightarrow C_\bullet(X)$에 cokernel을 취한 것이었으므로, 이 과정은 $C^\Delta_\bullet(A) \rightarrow C^\Delta_\bullet(X)$에 대해 반복해도 된다. 그럼 그 결과로 우리는 simplicial homology 버전의 realtive homology $H_n^\Delta(X,A)$를 얻게 된다. 이제 simplicial homology는 "singular하지 않은" chain들이므로, inclusion 
 
 $$C_\bullet^\Delta(X) \rightarrow C_\bullet(X)$$
 
