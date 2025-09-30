@@ -110,6 +110,14 @@ algebraic_topology-ko:
         url: ko/math/algebraic_topology/covering_spaces
       - title: "호몰로지의 계산"
         url: /ko/math/algebraic_topology/computation_of_homology
+      - title: "코호몰로지"
+        url: /ko/math/algebraic_topology/cohomology
+      - title: "Acyclic models theorem"
+        url: /ko/math/algebraic_topology/acyclic_models_theorem
+      - title: "합곱"
+        url: /ko/math/algebraic_topology/cup_products
+      - title: "푸앵카레 쌍대성"
+        url: /ko/math/algebraic_topology/Poincare_duality
   - title: 
     children:
       - title: "블로그 소개"
