@@ -67,7 +67,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 
 </div>
 
-위의 예시를 일반화하여 다음과 같은 정의를 내린다. 
+특별히 이 정의는 projection $p:Y \rightarrow X$가 주어졌을 때, $X$에서 $Y$로의 continuous section들 ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))의 presheaf $\mathscr{F}$의 모임을 생각하는 식으로 응용할 수 있다. 이를 일반화하여 다음과 같은 정의를 내린다. 
 
 <div class="definition" markdown="1">
 
@@ -145,9 +145,17 @@ $$\mathscr{F}_x=\{(s,U)\mid x\in U\in\mathscr{T},s\in\mathscr{F}(U)\}/\mathnorma
 
 $$(s,U)\sim(t,V)\iff\text{$\exists$ open neighborhood $W\subseteq U\cap V$ of $x$ satisfying $\rho_{UW}(s)=\rho_{VW}(t)$}$$
 
-을 통해 정의된다. 즉 직관적으로 $\mathscr{F}_x$의 원소 $(s,U)$들은 $x$에서의 함숫값 $s(x)$와, $x$ 근방에서 $s$의 국소적인 정보[^1]를 추가로 갖고 있는 대상이라 생각할 수 있다.
+을 통해 정의된다. 즉 직관적으로 $\mathscr{F}_x$의 원소 $(s,U)$들은 $x$에서의 함숫값 $s(x)$와, $x$ 근방에서 $s$의 국소적인 정보[^1]를 추가로 갖고 있는 대상이라 생각할 수 있다. 편의상 임의의 $s\in \mathscr{F}(U)$에 대하여, $s$의 $\mathscr{F}(U) \rightarrow \mathscr{F}_x$에 의한 image를 $s_x$로 적는다. 
 
-편의상 임의의 $s\in \mathscr{F}(U)$에 대하여, $s$의 $\mathscr{F}(U) \rightarrow \mathscr{F}_x$에 의한 image를 $s_x$로 적는다. 
+현채로서 presheaf는 기하적인 대상이라기보다는 대수적인 정보를 추가로 넣어준 대상이라 할 수 있는데, 이를 기하적인 물건으로 만드는 것도 가능하다. 위상공간 $X$위에 정의된 presheaf $\mathscr{F}$를 생각하고, 다음의 집합
+
+$$\Spe(\mathscr{F})=\coprod_{x\in X} \mathscr{F}_x=\{(x,\xi)\mid x\in X, \xi\in \mathscr{F}_x\}$$
+
+을 생각하자. 그럼 임의의 열린집합 $U\subseteq X$와 임의의 $s\in \mathscr{F}(U)$에 대하여, 다음의 함수들 
+ 
+$$\tilde{s}:U \rightarrow \Spe(\mathscr{F}); \quad x\mapsto (x,s_x)$$
+
+이 존재한다. 이제 우리는 $\Spe(\mathscr{F})$에 이들 함수들의 family가 정의하는 final topology를 부여하고 ([§Initial topology와 final topology, ⁋정의 4](/ko/math/topology/initial_and_final_topology#def6)) 이 공간을 $\mathscr{F}$의 *étalé space*라 부른다.
 
 ## 준층들 사이의 사상
 
@@ -243,7 +251,7 @@ $$\left(\prod_{i\in I} \mathscr{F}_i\right)(U)=\prod_{i\in I} \mathscr{F}_i(U)$$
 </details>
 
 이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 따라서 주어진 위상공간 $X$ 위에서 정의된 abelian presheaf들의 카테고리 $\PSh(X,\Ab)$은 abelian category가 된다.
-
+  
 ---
 **참고문헌**
 
