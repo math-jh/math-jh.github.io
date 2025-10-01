@@ -9,15 +9,49 @@
 \begin{document}
 \nopagecolor
 
-%% fliipping (Acyclic_models_theorem-5.png)
-\begin{tikzcd}
-  {C_\bullet(X;A)\otimes C_\bullet(Y;A)} & {C_\bullet(Y;A)\otimes C_\bullet (X;A)} \\
-  {C_\bullet(X\times Y;A)} & {C_\bullet(Y\times X;A)}
-  \arrow[from=1-1, to=1-2]
-  \arrow[from=1-1, to=2-1]
-  \arrow[from=1-2, to=2-2]
-  \arrow[from=2-1, to=2-2]
-\end{tikzcd}
+%% Orientation_cover_of_S^1_glued (Poincare_duality-2.png)
+\begin{tikzpicture}
+   \begin{axis}[
+ view={-20}{-20},
+ zmax=80,
+  xmax=2,
+   ymax=2,
+ height=12cm,
+ clip=false,hide axis
+]
+\addplot3+[domain=0.7:1,samples=3000,samples y=0,red,no marks,thick,{stealth}-] 
+({sin(deg(1.3))*x}, 
+{cos(deg(1.3))*x}, 
+-50);
+\addplot3+[domain=1:1.3,samples=3000,samples y=0,blue,no marks,thick,-{stealth}] 
+({sin(deg(1.3))*x}, 
+{cos(deg(1.3))*x}, 
+-50);
+\addplot3+[domain=0:2*pi,samples=500,samples y=0,black,no marks,very thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+-50);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,orange,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+-50);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,red,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+0);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,blue,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+20);
+\end{axis}
+\draw (10,6) node{$\Spe(\mathrm{or}_{S^1})$};
+\draw (10,3) node{$S^1$};
+\draw[->] (10,5.5) -- (10,3.5) node[midway, right]{$p$};
+\draw (7,1.7) node[orange]{$U$};
+\draw (7,5.3) node[blue]{$U^+$};
+\draw (7,4.3) node[red]{$U^-$};
+\end{tikzpicture}
+
 
 
 \end{document}
@@ -772,6 +806,16 @@
   \arrow[from=2-3, to=2-4]
 \end{tikzcd}
 
+%% fliipping (Acyclic_models_theorem-5.png)
+\begin{tikzcd}
+  {C_\bullet(X;A)\otimes C_\bullet(Y;A)} & {C_\bullet(Y;A)\otimes C_\bullet (X;A)} \\
+  {C_\bullet(X\times Y;A)} & {C_\bullet(Y\times X;A)}
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=1-1, to=2-1]
+  \arrow[from=1-2, to=2-2]
+  \arrow[from=2-1, to=2-2]
+\end{tikzcd}
+
 
 %% functoriality_of_cross_product (Cup_products-1.png)
 \begin{tikzcd}
@@ -802,3 +846,46 @@
   \arrow["{(f,f)}", from=1-2, to=2-2]
   \arrow["{\Delta_Y}"', from=2-1, to=2-2]
 \end{tikzcd}
+
+%% Orientation_cover_of_S^1 (Poincare_duality-1.png)
+\begin{tikzpicture}
+   \begin{axis}[
+ view={-20}{-20},
+ zmax=80,
+  xmax=2,
+   ymax=2,
+ height=12cm,
+ clip=false,hide axis
+]
+\addplot3+[domain=0.7:1,samples=3000,samples y=0,red,no marks,thick,{stealth}-] 
+({sin(deg(1.3))*x}, 
+{cos(deg(1.3))*x}, 
+-50);
+\addplot3+[domain=1:1.3,samples=3000,samples y=0,blue,no marks,thick,-{stealth}] 
+({sin(deg(1.3))*x}, 
+{cos(deg(1.3))*x}, 
+-50);
+\addplot3+[domain=0:2*pi,samples=500,samples y=0,black,no marks,very thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+-50);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,orange,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+-50);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,red,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+0);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,blue,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+20);
+\end{axis}
+\draw (10,6) node{$\Spe(\mathrm{or}_{S^1})$};
+\draw (10,3) node{$S^1$};
+\draw[->] (10,5.5) -- (10,3.5) node[midway, right]{$p$};
+\draw (7,1.7) node[orange]{$U$};
+\draw (7,5.3) node[blue]{$U^+$};
+\draw (7,4.3) node[red]{$U^-$};
+\end{tikzpicture}
