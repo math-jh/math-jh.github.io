@@ -61,6 +61,23 @@ $$\or_M(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underline{\mat
 
 그럼 그 이름과 같이 $\Spe(\or_M)$은 $M$의 covering space이며, 뿐만 아니라 임의의 $x\in M$에 대하여, $x$의 chart $U$를 생각하면 canonical projection $p:\Spe(\or_M)\rightarrow M$에 의한 $U$의 preimage $p^{-1}(U)$가 $U$와 homeomorphic한 두 개의 disjoint open subset으로 나타난다. 
 
+<div class="example" markdown="1">
+
+<ins id="ex3">**예시 3**</ins> 예를 들어 $S^1$의 orientation double cover $p:\Spe(\or_{S^1})\rightarrow S^1$을 생각하자. 임의의 점 $x\in S^1$의 $p$에 의한 preimage $p^{-1}(x)$는 두 개의 점 $(p,+)$와 $(p,-)$로 이루어져 있으며, 이는 $x$를 포함하는 chart $U$에 대해서도 마찬가지가 되어 $p^{-1}(U)$가 두 개의 open subset $U^+,U^-$로 나뉘게 된다. 
+
+![Orientation_cover_of_S^1](/assets/images/Math/Algebraic_Topology/Poincare_duality-1.png){:style="width:30em" class="invert" .align-center}
+
+이제 $S^1$을 이러한 cover들로 덮어주면, 각각의 chart들이 겹치는 곳에서 orientation을 그대로 붙여주면 이들은 다음과 같이 두 개의 component를 갖는 double cover가 된다.
+
+img
+
+그러나 임의의 double cover가 항상 trivial cover가 되는 것은 아니다. 예를 들어 위의 $S^1$의 cover에서 빨간색과 파란색 component를 교차해서 붙이면 component가 하나인 double cover를 얻게 되며, 비슷한 일이 non-orientable manifold의 orientation double cover에서 일어난다. 
+
+이를 관찰하기 위해 뫼비우스 띠의 orientation cover를 생각하자. 
+
+
+</div>
+
 그러나 이것이 orientation double cover $\Spe(\or_M)$이 위상공간으로서 $M\times\\{\pm 1\\}$과 homeomorphic하다는 것은 아니다. 이를 직관적으로 확인하기 위해서는 뫼비우스 띠를 생각하면 되는데, 뫼비우스 띠의 한 점 $x$에서 바깥쪽을 향하는 화살표를 그린 후, 뫼비우스 띠를 따라 한 바퀴 돌아오면 이 화살표가 반대방향을 가리키고 있을 것이다. 즉 뫼비우스 띠 $M$의 orientation double cover $\Spe(\or_M)$를 생각하면 점 $x$의 fiber에 해당하는 두 점을 잇는 path가 존재할 것이며, 이는 두 개의 component를 가질 $M\times\\{\pm 1\\}$로서는 불가능한 일이기 때문이다. 이와 정확히 같은 이유로 global section $M \rightarrow \Spe(\or_M)$이 존재할 수 없으며, 이를 일반화하면 다음의 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
