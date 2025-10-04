@@ -9,49 +9,153 @@
 \begin{document}
 \nopagecolor
 
-%% Orientation_cover_of_S^1_glued (Poincare_duality-2.png)
-\begin{tikzpicture}
-   \begin{axis}[
- view={-20}{-20},
- zmax=80,
-  xmax=2,
-   ymax=2,
- height=12cm,
- clip=false,hide axis
-]
-\addplot3+[domain=0.7:1,samples=3000,samples y=0,red,no marks,thick,{stealth}-] 
-({sin(deg(1.3))*x}, 
-{cos(deg(1.3))*x}, 
--50);
-\addplot3+[domain=1:1.3,samples=3000,samples y=0,blue,no marks,thick,-{stealth}] 
-({sin(deg(1.3))*x}, 
-{cos(deg(1.3))*x}, 
--50);
-\addplot3+[domain=0:2*pi,samples=500,samples y=0,black,no marks,very thick] 
-({sin(deg(x))}, 
-{cos(deg(x))}, 
--50);
-\addplot3+[domain=0.5:1,samples=3000,samples y=0,orange,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
-({sin(deg(x))}, 
-{cos(deg(x))}, 
--50);
-\addplot3+[domain=0.5:1,samples=3000,samples y=0,red,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
-({sin(deg(x))}, 
-{cos(deg(x))}, 
-0);
-\addplot3+[domain=0.5:1,samples=3000,samples y=0,blue,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
-({sin(deg(x))}, 
-{cos(deg(x))}, 
-20);
-\end{axis}
-\draw (10,6) node{$\Spe(\mathrm{or}_{S^1})$};
-\draw (10,3) node{$S^1$};
-\draw[->] (10,5.5) -- (10,3.5) node[midway, right]{$p$};
-\draw (7,1.7) node[orange]{$U$};
-\draw (7,5.3) node[blue]{$U^+$};
-\draw (7,4.3) node[red]{$U^-$};
-\end{tikzpicture}
-
+%% Mobius_strip_3D (Homology-5.png)
+ \begin{tikzpicture}
+ \begin{scope}[xshift=3cm, yshift=-1.5cm, scale=.3]
+    \begin{axis}[
+    hide axis,
+    view = {40}{40},
+    colormap/Reds
+    ]
+    \addplot3 [
+    surf,
+    shader     = faceted interp,opacity = 0.7,
+    %shader = interp,
+    point meta = x,
+    samples    = 80,
+    samples y  = 4,
+    z buffer   = sort,
+    domain     = -50:10,
+    y domain   =-0.5:0.5
+    ] (
+    {(1+0.5*y*cos(x/2)))*cos(x)},
+    {(1+0.5*y*cos(x/2)))*sin(x)},
+    {0.5*y*sin(x/2)}
+    );
+    \addplot3 [color=red!50!black,thick,    
+    domain     = -50:10,samples y=0,samples=100,
+    ] (
+    {(1+0.5*0.5*cos(x/2)))*cos(x)},
+    {(1+0.5*0.5*cos(x/2)))*sin(x)},
+    {0.5*0.5*sin(x/2)}
+    );
+    \addplot3 [color=red!50!black,thick,    
+    domain     = 310:370,samples y=0,samples=100,
+    ] (
+    {(1+0.5*0.5*cos(x/2)))*cos(x)},
+    {(1+0.5*0.5*cos(x/2)))*sin(x)},
+    {0.5*0.5*sin(x/2)}
+    );
+    \end{axis}
+    \end{scope}
+    \begin{scope}[xshift=3cm, yshift=0cm, scale=.3]
+    \begin{axis}[
+    hide axis,
+    view = {40}{40},
+    colormap/Blues
+    ]
+    \addplot3 [
+    surf,
+    shader     = faceted interp,opacity = 0.7,
+    %shader = interp,
+    point meta = x,
+    samples    = 80,
+    samples y  = 4,
+    z buffer   = sort,
+    domain     = -50:10,
+    y domain   =-0.5:0.5
+    ] (
+    {(1+0.5*y*cos(x/2)))*cos(x)},
+    {(1+0.5*y*cos(x/2)))*sin(x)},
+    {0.5*y*sin(x/2)}
+    );
+    \addplot3 [color=blue!50!black,thick,    
+    domain     = -50:10,samples y=0,samples=100,
+    ] (
+    {(1+0.5*0.5*cos(x/2)))*cos(x)},
+    {(1+0.5*0.5*cos(x/2)))*sin(x)},
+    {0.5*0.5*sin(x/2)}
+    );
+    \addplot3 [color=blue!50!black,thick,    
+    domain     = 310:370,samples y=0,samples=100,
+    ] (
+    {(1+0.5*0.5*cos(x/2)))*cos(x)},
+    {(1+0.5*0.5*cos(x/2)))*sin(x)},
+    {0.5*0.5*sin(x/2)}
+    );
+    \end{axis}
+    \end{scope}
+    \begin{scope}[yshift=-7cm]
+    \begin{axis}[
+    hide axis,
+    view = {40}{40},
+    colormap/YlGn
+    ]
+    \addplot3 [color=green!10,thick,    
+    domain     = 360:720,samples y=0, samples=80,
+    ] (
+    {(1+0.5*0.5*cos(x/2)))*cos(x)},
+    {(1+0.5*0.5*cos(x/2)))*sin(x)},
+    {0.5*0.5*sin(x/2)}
+    );
+    \addplot3 [color=blue,thick,    
+    domain     = 0:-.1,samples y=0,samples=100,-{stealth}
+    ] (
+    {cos(30)+x},
+    {sin(-30)+x},
+    {x}
+    );
+    \addplot3 [
+    surf,
+    shader     = faceted interp,opacity = 0.1,
+    %shader = interp,
+    point meta = x,
+    samples    = 80,
+    samples y  = 4,
+    z buffer   = sort,
+    domain     = 0:360,
+    y domain   =-0.5:0.5
+    ] (
+    {(1+0.5*y*cos(x/2)))*cos(x)},
+    {(1+0.5*y*cos(x/2)))*sin(x)},
+    {0.5*y*sin(x/2)}
+    );
+    \addplot3 [
+    surf,
+    shader     = faceted interp,opacity = 0.7,
+    %shader = interp,
+    point meta = x,
+    samples    = 80,
+    samples y  = 4,
+    z buffer   = sort,
+    domain     = -40:10,
+    y domain   =-0.5:0.5
+    ] (
+    {(1+0.5*y*cos(x/2)))*cos(x)},
+    {(1+0.5*y*cos(x/2)))*sin(x)},
+    {0.5*y*sin(x/2)}
+    );
+    \addplot3 [color=green!20,thick,    
+    domain     = -140:497.5,samples y=0,samples=100,
+    ] (
+    {(1+0.5*0.5*cos(x/2)))*cos(x)},
+    {(1+0.5*0.5*cos(x/2)))*sin(x)},
+    {0.5*0.5*sin(x/2)}
+    );
+    \addplot3 [color=red,thick,    
+    domain     = 0:.1,samples y=0,samples=100,-{stealth}
+    ] (
+    {cos(30)+x},
+    {sin(-30)+x},
+    {x}
+    );
+    \end{axis}
+    \end{scope}
+    \draw (7,0) node{$\Spe(\mathrm{or}_M)$};
+    \draw (7,-5) node{$M$};
+    \draw[->] (7,-.5) -- (7,-4.5);
+    \draw (7,-2.5) node[right]{$p$};
+ \end{tikzpicture}
 
 
 \end{document}
@@ -847,6 +951,7 @@
   \arrow["{\Delta_Y}"', from=2-1, to=2-2]
 \end{tikzcd}
 
+
 %% Orientation_cover_of_S^1 (Poincare_duality-1.png)
 \begin{tikzpicture}
    \begin{axis}[
@@ -877,7 +982,7 @@
 ({sin(deg(x))}, 
 {cos(deg(x))}, 
 0);
-\addplot3+[domain=0.5:1,samples=3000,samples y=0,blue,no marks,ultra thick,{Parenthesis}-{Parenthesis}] 
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,blue,no marks,ultra thick, solid,{Parenthesis}-{Parenthesis}] 
 ({sin(deg(x))}, 
 {cos(deg(x))}, 
 20);
@@ -888,4 +993,44 @@
 \draw (7,1.7) node[orange]{$U$};
 \draw (7,5.3) node[blue]{$U^+$};
 \draw (7,4.3) node[red]{$U^-$};
+\end{tikzpicture}
+
+%% Orientation_cover_of_S^1_glued (Poincare_duality-2.png)
+\begin{tikzpicture}
+   \begin{axis}[
+ view={-20}{-20},
+ zmax=80,
+  xmax=2,
+   ymax=2,
+ height=12cm,
+ clip=false,hide axis
+]
+\addplot3+[domain=0.7:1,samples=100,samples y=0,red,no marks,thick,{stealth}-] 
+({sin(deg(1.3))*x}, 
+{cos(deg(1.3))*x}, 
+-50);
+\addplot3+[domain=1:1.3,samples=100,samples y=0,blue,no marks,thick,-{stealth}] 
+({sin(deg(1.3))*x}, 
+{cos(deg(1.3))*x}, 
+-50);
+\addplot3+[domain=0:2*pi,samples=500,samples y=0,black,no marks,very thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+-50);
+\addplot3+[domain=-1.7:2.4,samples=100,samples y=0,red,no marks,ultra thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+0);
+\addplot3+[domain=0:2*pi,samples=100,samples y=0,blue,no marks,ultra thick] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+20);
+\addplot3+[domain=2.6:4.3,samples=100,samples y=0,red,no marks,ultra thick,solid] 
+({sin(deg(x))}, 
+{cos(deg(x))}, 
+0);
+\end{axis}
+\draw (10,6) node{$\Spe(\mathrm{or}_{S^1})$};
+\draw (10,3) node{$S^1$};
+\draw[->] (10,5.5) -- (10,3.5) node[midway, right]{$p$};
 \end{tikzpicture}
