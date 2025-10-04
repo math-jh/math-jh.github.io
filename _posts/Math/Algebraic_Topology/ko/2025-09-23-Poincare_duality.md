@@ -65,24 +65,27 @@ $$\or_M(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underline{\mat
 
 <ins id="ex3">**예시 3**</ins> 예를 들어 $S^1$의 orientation double cover $p:\Spe(\or_{S^1})\rightarrow S^1$을 생각하자. 임의의 점 $x\in S^1$의 $p$에 의한 preimage $p^{-1}(x)$는 두 개의 점 $(p,+)$와 $(p,-)$로 이루어져 있으며, 이는 $x$를 포함하는 chart $U$에 대해서도 마찬가지가 되어 $p^{-1}(U)$가 두 개의 open subset $U^+,U^-$로 나뉘게 된다. 
 
-![Orientation_cover_of_S^1](/assets/images/Math/Algebraic_Topology/Poincare_duality-1.png){:style="width:30em" class="invert" .align-center}
+![Orientation_cover_of_S1](/assets/images/Math/Algebraic_Topology/Poincare_duality-1.png){:style="width:30em" class="invert" .align-center}
 
 이제 $S^1$을 이러한 cover들로 덮어주면, 각각의 chart들이 겹치는 곳에서 orientation을 그대로 붙여주면 이들은 다음과 같이 두 개의 component를 갖는 double cover가 된다.
 
-img
+![Orientation_cover_of_S1_glued](/assets/images/Math/Algebraic_Topology/Poincare_duality-2.png){:style="width:30em" class="invert" .align-center}
 
-그러나 임의의 double cover가 항상 trivial cover가 되는 것은 아니다. 예를 들어 위의 $S^1$의 cover에서 빨간색과 파란색 component를 교차해서 붙이면 component가 하나인 double cover를 얻게 되며, 비슷한 일이 non-orientable manifold의 orientation double cover에서 일어난다. 
+그러나 임의의 double cover가 항상 trivial cover가 되는 것은 아니다. 예를 들어 위의 $S^1$의 cover에서 위쪽과 아래쪽 component를 교차해서 붙이면 component가 하나인 double cover를 얻게 되며, 비슷한 일이 non-orientable manifold의 orientation double cover에서 일어난다. 
 
-이를 관찰하기 위해 뫼비우스 띠의 orientation cover를 생각하자. 
+이를 관찰하기 위해 뫼비우스 띠 $M$의 orientation cover를 생각하자. $S^1$과 마찬가지로, 임의의 점 $x\in M$에 대하여 $p^{-1}(x)$는 두 개의 점 $(x,+)$와 $(x,-)$로 이루어지며 이는 $M$의 임의의 점에 대해서도 마찬가지이다. 
 
+![orientation_cover_of_M](/assets/images/Math/Algebraic_Topology/Poincare_duality-3.png){:style="width:30em" class="invert" .align-center}
+
+그러나 이를 이어붙여 $M$ 전체를 이어붙이려 하면 문제가 생기는데, 이 그림에서 보여지는 두 개의 cover를, orientation을 고려해가며 반시계방향으로 붙여나가면, 다시 $x$로 돌아왔을 때 $(x,+)$와 $(x,-)$가 서로 뒤바뀌어 있으므로 위쪽과 아래쪽 component를 교차해서 붙여야 한다. 이렇게 만들어진 $M$의 double cover는 원기둥과 homeomorphic하게 된다. 
 
 </div>
 
-그러나 이것이 orientation double cover $\Spe(\or_M)$이 위상공간으로서 $M\times\\{\pm 1\\}$과 homeomorphic하다는 것은 아니다. 이를 직관적으로 확인하기 위해서는 뫼비우스 띠를 생각하면 되는데, 뫼비우스 띠의 한 점 $x$에서 바깥쪽을 향하는 화살표를 그린 후, 뫼비우스 띠를 따라 한 바퀴 돌아오면 이 화살표가 반대방향을 가리키고 있을 것이다. 즉 뫼비우스 띠 $M$의 orientation double cover $\Spe(\or_M)$를 생각하면 점 $x$의 fiber에 해당하는 두 점을 잇는 path가 존재할 것이며, 이는 두 개의 component를 가질 $M\times\\{\pm 1\\}$로서는 불가능한 일이기 때문이다. 이와 정확히 같은 이유로 global section $M \rightarrow \Spe(\or_M)$이 존재할 수 없으며, 이를 일반화하면 다음의 명제를 얻는다. 
+위의 예시를 일반화하면 다음의 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> (Connected) topological manifold $M$에 대하여, 다음이 동치이다. 
+<ins id="prop4">**명제 4**</ins> (Connected) topological manifold $M$에 대하여, 다음이 동치이다. 
 
 1. $M$이 orientable이다.
 2. $\Spe(\or_M)$이 두 개의 component를 갖는다. 
@@ -104,15 +107,15 @@ $$\or_M^A(U)=\prod_{x\in U}\Iso_A(H_m(M,M\setminus\{x\};A), \underline{A}_x)$$
 
 그리고 이로부터 정의되는 global $A$-orientation의 개념을 얻을 것이다. 
 
-이 정의에서 [명제 3](#prop3)과 같은 결과를 도출하기 위해 [§피복공간, ⁋정리 11](/ko/math/algebraic_topology/covering_spaces#thm11)를 다시 살펴보자. 우리는 각각의 covering space $p:E \rightarrow M$에 대하여, fiber $p^{-1}(x)$ 위에 monodromy functor가 정의하는 $\pi_1(M,x)$-action을 생각하였고, 이는 곧 group homomorphism $\pi_1(M,x)\rightarrow \Aut(p^{-1}(x))$를 생각하는 것과 같았다. 그렇다면 covering space $p:\Spe(\or_M)\rightarrow M$에 대하여 $\pi_1(M,x)$-action은 어떻게 정의되는지를 살펴보아야 하는데, 이 때 fiber $p^{-1}(x)$는 stalk $\mathbb{Z}$의 automorphism 
+이 정의에서 [명제 4](#prop4)과 같은 결과를 도출하기 위해 [§피복공간, ⁋정리 11](/ko/math/algebraic_topology/covering_spaces#thm11)를 다시 살펴보자. 우리는 각각의 covering space $p:E \rightarrow M$에 대하여, fiber $p^{-1}(x)$ 위에 monodromy functor가 정의하는 $\pi_1(M,x)$-action을 생각하였고, 이는 곧 group homomorphism $\pi_1(M,x)\rightarrow \Aut(p^{-1}(x))$를 생각하는 것과 같았다. 그렇다면 covering space $p:\Spe(\or_M)\rightarrow M$에 대하여 $\pi_1(M,x)$-action은 어떻게 정의되는지를 살펴보아야 하는데, 이 때 fiber $p^{-1}(x)$는 stalk $\mathbb{Z}$의 automorphism 
 
 $$\Iso_\mathbb{Z}(\mathbb{Z},\mathbb{Z})\cong \mathbb{Z}^\times\cong \{\pm 1\}$$
 
-으로부터 정의되는 것이고 따라서 $\pi_1(M,x)$-action은 정확하게 group homomorphism $\pi_1(M,x)\rightarrow \mathbb{Z}^\times$로 생각할 수 있다. 그럼 $A$에서 $A$로의 $A$-module isomorphism은 정확히 $A$의 unit group $A^\times$의 원소와 대응되므로, 이는 결과적으로 group homomorphism $\pi_1(M,x)\rightarrow A^\times$를 살펴보는 것과 같다. 즉 [명제 3](#prop3)은 다음과 같이 일반화할 수 있다.
+으로부터 정의되는 것이고 따라서 $\pi_1(M,x)$-action은 정확하게 group homomorphism $\pi_1(M,x)\rightarrow \mathbb{Z}^\times$로 생각할 수 있다. 그럼 $A$에서 $A$로의 $A$-module isomorphism은 정확히 $A$의 unit group $A^\times$의 원소와 대응되므로, 이는 결과적으로 group homomorphism $\pi_1(M,x)\rightarrow A^\times$를 살펴보는 것과 같다. 즉 [명제 4](#prop4)은 다음과 같이 일반화할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins>  (Connected) topological manifold $M$에 대하여, 다음이 동치이다. 
+<ins id="prop5">**명제 5**</ins>  (Connected) topological manifold $M$에 대하여, 다음이 동치이다. 
 
 1. $M$이 $A$-orientable이다.
 2. $\Spe(\or_M^A)$이 trivial covering $M\times \lvert A^\times\rvert$이다. 
@@ -143,7 +146,7 @@ $$H_m(M; A)\rightarrow H_m(M,M\setminus\{x\};A)\tag{1}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> Topological manifold $M$ of dimension $m$을 고정하자. $M$의 임의의 compact subset $C$에 대하여 다음이 성립한다.
+<ins id="lem6">**보조정리 6**</ins> Topological manifold $M$ of dimension $m$을 고정하자. $M$의 임의의 compact subset $C$에 대하여 다음이 성립한다.
 
 1. 임의의 section $s:M \rightarrow \Spe(\or_M^A)$가 주어질 때마다, 적당한 homology class 
     
@@ -186,35 +189,53 @@ $$0=H_{m+1}(M,M\setminus (C_1\cap C_2);A)\rightarrow H_m(M,M\setminus (C_1\cup C
 
 이 증명에서 compactness는 Mayer-Vietoris sequence를 사용하여 귀납적인 방식으로 $\alpha$를 구성할 때, 이 귀납적인 과정이 유한한 단계에서 끝나도록 하려면 반드시 필요하다. 실제로 compactness가 빠질 경우 푸앵카레 쌍대성은 다소 다른 형태를 띄게 되는데, 이를 공통된 식으로 표현하기 위해 도입해야 하는 것이 sheaf cohomology의 언어이다. 
 
-어쨌든 위의 [보조정리 5](#lem5)에 의하여, 만일 $M$이 compact topological manifold of dimension $M$이라면, $C=M$으로 두어 다음의 정리를 얻는다.
+어쨌든 위의 [보조정리 6](#lem6)에 의하여, 만일 $M$이 compact topological manifold of dimension $M$이라면, $C=M$으로 두어 다음의 정리를 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6**</ins> Compact connected topological manifold $M$ of dimension $m$이 주어졌다 하자. 그럼 orientation sheaf $\or_M^A$이 주어질 때마다 적당한 class $[M]\in H_m(M;A)$이 유일하게 존재하여 canonical homomorphism (1)에 의한 $[M]$의 image가 $s_x$와 일치하도록 할 수 있다. 
+<ins id="thm7">**정리 7**</ins> Compact connected topological manifold $M$ of dimension $m$이 주어졌다 하자. 그럼 orientation sheaf $\or_M^A$이 주어질 때마다 적당한 class $[M]\in H_m(M;A)$이 유일하게 존재하여 canonical homomorphism (1)에 의한 $[M]$의 image가 $s_x$와 일치하도록 할 수 있다. 
 
 </div>
 
-그럼 [보조정리 5](#lem5)에 의하여 $H_m(M;A)$는 $[M]$에 의해 생성되는 free $A$-module of rank 1이며, 서로 다른 global orientation의 선택은 서로 다른 $H_m(M;A)$의 generator의 선택에 대응된다. 
+그럼 [보조정리 6](#lem6)에 의하여 $H_m(M;A)$는 $[M]$에 의해 생성되는 free $A$-module of rank 1이며, 서로 다른 global orientation의 선택은 서로 다른 $H_m(M;A)$의 generator의 선택에 대응된다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 위의 [정리 6](#thm6)에서 정의한 $[M]$을 global orientation $s$가 정의하는 $M$의 *fundamental class<sub>기본류</sub>*라 부른다. 
+<ins id="def8">**정의 8**</ins> 위의 [정리 7](#thm7)에서 정의한 $[M]$을 global orientation $s$가 정의하는 $M$의 *fundamental class<sub>기본류</sub>*라 부른다. 
 
 </div>
 
-뿐만 아니라, 만일 [정리 6](#thm6)의 조건을 만족하는 homology class $[M]$이 존재한다면, 이로부터 global section $s:M \rightarrow \Spe(\or_M^A)$이 주어진다는 것을 안다. 
+뿐만 아니라, 만일 [정리 7](#thm7)의 조건을 만족하는 homology class $[M]$이 존재한다면, 이로부터 global section $s:M \rightarrow \Spe(\or_M^A)$이 주어진다는 것을 안다. 
 
 ## 푸앵카레 쌍대성
 
-이제 적어도 주어진 manifold가 $A$-orientable일 경우의 푸앵카레 정리를 증명할 수 있다. 
+이제 주어진 manifold가 $A$-orientable일 경우의 푸앵카레 정리를 증명할 수 있다. 이를 위해 다음의 cap product homomorphism
 
-증명 적기
+$$-\frown -: H^p(M;A)\otimes_A H_m(M;A) \rightarrow H_{m-p}(M;A)$$
+
+을 생각하자. 그럼 $H_m(M;A)\cong A$이므로, 이 homomorphism은 $H^p(M;A)$에서 $H_{m-p}(M;A)$로의 $A$-module homomorphism이라 생각할 수 있다. 특히 $H_m(M;A)$의 generator $[M]$을 도입하면, 이는 다음의 homomorphism
+
+$$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
+
+이 된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm9">**정리 9**</ins> $A$-orientable compact manifold $M$ of dimension $m$과 그 fundamental class $[M]$에 대하여, 위의 homomorphism
+
+$$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
+
+은 isomorphism이다. 
+
+</div>
+
+이에 대한 증명 또한 [보조정리 6](#lem6)의 증명과 마찬가지로 Mayer-Vietoris sequence를 이용한 귀납법으로 진행한다. 그러나 다소 다른 점은, [보조정리 6](#lem6)은 명제의 주장이 compact subset $C$에 대한 주장이어서 compactness를 적극적으로 사용할 수 있었지만, 이번에는 명제가 $M$ 자체에 대한 주장이기 때문에, 가령 $M$의 chart $U$가 주어졌다고 하면 이는 compact가 아니므로 단순한 귀납법으로 
 
 ## 층 코호몰로지와 체흐 코호몰로지
 
 fundamental class 존재성 중요한거 강조
 
-한편, 위에서 지적했듯 [보조정리 5](#lem5)의 증명에서 compactness는 필수적이다. 실제로 non-compact manifold인 $\mathbb{R}^m$을 생각해보면 $m$번째 homology group이 $0$이므로 여기에서 fundamental class를 택할 여지가 없다. 유사하게 우리가 알고 있는 non-($\mathbb{Z}$-)orientable manifold인 뫼비우스 띠를 생각해보면, 어렵지 않게 top homology group이 $0$임을 알 수 있다. 이들 두 경우에 fundamental class가 존재하지 않는 이유는 다소 다른데, sheaf cohomology는 non-orientable인 경우를 다루는데에 특히 도움을 준다. 
+한편, 위에서 지적했듯 [보조정리 6](#lem6)의 증명에서 compactness는 필수적이다. 실제로 non-compact manifold인 $\mathbb{R}^m$을 생각해보면 $m$번째 homology group이 $0$이므로 여기에서 fundamental class를 택할 여지가 없다. 유사하게 우리가 알고 있는 non-($\mathbb{Z}$-)orientable manifold인 뫼비우스 띠를 생각해보면, 어렵지 않게 top homology group이 $0$임을 알 수 있다. 이들 두 경우에 fundamental class가 존재하지 않는 이유는 다소 다른데, sheaf cohomology는 non-orientable인 경우를 다루는데에 특히 도움을 준다. 
 
 기본적인 아이디어는 non-orientability는 $\Spe(\or_M^A)$의 nontrivial한 monodromy에 의해 생기게 된다는 것이다. 그런데 covering space의 lifting property를 생각하면, 충분히 local한 범위에서는 nontrivial monodromy가 별 영향을 주지 않으므로, global section $M \rightarrow \Spe(\or_M^A)$ 뿐만 아니라 local section들을 따로따로 보면 정보를 잃지 않을 수 있을 것이다. 그리고 이러한 방식으로 데이터를 기록하는 것이 바로 sheaf이므로, sheaf cohomology가 나오는 것이 자연스럽다.
 
