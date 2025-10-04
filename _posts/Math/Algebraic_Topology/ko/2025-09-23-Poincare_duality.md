@@ -229,13 +229,35 @@ $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 
 </div>
 
-이에 대한 증명 또한 [보조정리 6](#lem6)의 증명과 마찬가지로 Mayer-Vietoris sequence를 이용한 귀납법으로 진행한다. 그러나 다소 다른 점은, [보조정리 6](#lem6)은 명제의 주장이 compact subset $C$에 대한 주장이어서 compactness를 적극적으로 사용할 수 있었지만, 이번에는 명제가 $M$ 자체에 대한 주장이기 때문에, 가령 $M$의 chart $U$가 주어졌다고 하면 이는 compact가 아니므로 단순한 귀납법으로 
+이에 대한 증명 또한 [보조정리 6](#lem6)의 증명과 마찬가지로 Mayer-Vietoris sequence를 이용한 귀납법으로 진행한다. 그러나 다소 다른 점은, [보조정리 6](#lem6)은 명제의 주장이 compact subset $C$에 대한 주장이어서 compactness를 적극적으로 사용할 수 있었지만, 이번에는 명제가 $M$ 자체에 대한 주장이기 때문에, 가령 $M$의 chart $U$가 주어졌다고 하면 이는 compact가 아니므로 단순한 귀납법으로 접근할 수는 없다. 이에 우리는 다음을 정의한다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def10">**정의 10**</ins> Cochain $\varphi\in C^i(M;A)$이 *compactly supported*라는 것은 적당한 compact set $K\subseteq M$이 존재하여 $\varphi(\sigma)=0$가 $M\setminus K$에 들어가는 모든 simplex에 대해 성립하는 것을 말한다. Compactly supported cochain들의 cochain complex의 $i$번째 호몰로지를 $i$번째 *compactly supported cohomology*라 부르고 $H_c^i(M;A)$로 적는다. 
+
+</div>
+
+그럼 다음의 식
+
+$$H_c^i(M;A)\cong \varinjlim_{K\text{ compact}}H^i(M,M\setminus K;A)$$
+
+이 성립하는 것이 직관적으로도 자명하며 증명도 명확하다. 특히 임의의 compact manifold $M$에 대하여 $H_c^i(M,A)\cong H^i(M;A)$이 성립하며, 따라서 원하는 결과는 다음의 보조정리에서 따라나온다.
+
+<div class="proposition" markdown="1">
+
+<ins id="lem11">**보조정리 11**</ins> 임의의 $A$-orientable $m$-manifold $M$에 대하여 다음의 isomorphism
+
+$$H_c^p(M;A)$ H_{m-p}(M;A)$$
+
+이 모든 $p$에 대하여 성립한다.
+
+</div> 
+
+이를 위해서는 우선 임의의 
 
 ## 층 코호몰로지와 체흐 코호몰로지
 
-fundamental class 존재성 중요한거 강조
 
-한편, 위에서 지적했듯 [보조정리 6](#lem6)의 증명에서 compactness는 필수적이다. 실제로 non-compact manifold인 $\mathbb{R}^m$을 생각해보면 $m$번째 homology group이 $0$이므로 여기에서 fundamental class를 택할 여지가 없다. 유사하게 우리가 알고 있는 non-($\mathbb{Z}$-)orientable manifold인 뫼비우스 띠를 생각해보면, 어렵지 않게 top homology group이 $0$임을 알 수 있다. 이들 두 경우에 fundamental class가 존재하지 않는 이유는 다소 다른데, sheaf cohomology는 non-orientable인 경우를 다루는데에 특히 도움을 준다. 
 
 기본적인 아이디어는 non-orientability는 $\Spe(\or_M^A)$의 nontrivial한 monodromy에 의해 생기게 된다는 것이다. 그런데 covering space의 lifting property를 생각하면, 충분히 local한 범위에서는 nontrivial monodromy가 별 영향을 주지 않으므로, global section $M \rightarrow \Spe(\or_M^A)$ 뿐만 아니라 local section들을 따로따로 보면 정보를 잃지 않을 수 있을 것이다. 그리고 이러한 방식으로 데이터를 기록하는 것이 바로 sheaf이므로, sheaf cohomology가 나오는 것이 자연스럽다.
 
