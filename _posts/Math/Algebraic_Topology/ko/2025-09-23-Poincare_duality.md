@@ -233,35 +233,125 @@ $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> Cochain $\varphi\in C^i(M;A)$이 *compactly supported*라는 것은 적당한 compact set $K\subseteq M$이 존재하여 $\varphi(\sigma)=0$가 $M\setminus K$에 들어가는 모든 simplex에 대해 성립하는 것을 말한다. Compactly supported cochain들의 cochain complex의 $i$번째 호몰로지를 $i$번째 *compactly supported cohomology*라 부르고 $H_c^i(M;A)$로 적는다. 
+<ins id="def10">**정의 10**</ins> Cochain $\varphi\in C^p(M;A)$이 *compactly supported*라는 것은 적당한 compact set $K\subseteq M$이 존재하여 $\varphi(\sigma)=0$가 $M\setminus K$에 들어가는 모든 simplex에 대해 성립하는 것을 말한다. Compactly supported cochain들의 cochain complex의 $i$번째 호몰로지를 $p$번째 *compactly supported cohomology*라 부르고 $H_c^p(M;A)$로 적는다. 
 
 </div>
 
 그럼 다음의 식
 
-$$H_c^i(M;A)\cong \varinjlim_{K\text{ compact}}H^i(M,M\setminus K;A)$$
+$$H_c^p(M;A)\cong \varinjlim_{\text{\scriptsize$K$ compact}}H^p(M,M\setminus K;A)$$
 
-이 성립하는 것이 직관적으로도 자명하며 증명도 명확하다. 특히 임의의 compact manifold $M$에 대하여 $H_c^i(M,A)\cong H^i(M;A)$이 성립하며, 따라서 원하는 결과는 다음의 보조정리에서 따라나온다.
+이 성립하는 것이 직관적으로도 자명하며 증명도 명확하다. 각각의 compact set $K$에 대하여, 
+
+$$H^p(M,M\setminus K;A)\rightarrow H_c^p(M;A)$$
+
+가 canonical하게 존재하며, 이것이 우변의 directed system과 호환되어 homomorphism
+
+$$\varinjlim_{\text{\scriptsize$K$ compact}}H^p(M,M\setminus K;A)\rightarrow H_c^p(M;A)$$
+
+이 잘 정의되기 때문이다. 이것이 isomorphism인 것은 직접 보이면 된다. 특히 임의의 compact manifold $M$에 대하여 $H_c^p(M,A)\cong H^p(M;A)$이 성립하며, 따라서 원하는 결과는 다음의 보조정리에서 따라나온다.
 
 <div class="proposition" markdown="1">
 
 <ins id="lem11">**보조정리 11**</ins> 임의의 $A$-orientable $m$-manifold $M$에 대하여 다음의 isomorphism
 
-$$H_c^p(M;A)$ H_{m-p}(M;A)$$
+$$H_c^p(M;A)\cong H_{m-p}(M;A)$$
 
 이 모든 $p$에 대하여 성립한다.
 
-</div> 
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-이를 위해서는 우선 임의의 
+이를 위해서는 우선 isomorphism을 정의해야 한다. 이를 위해, 임의의 compact subset $K$에 대하여 cap product
 
-## 층 코호몰로지와 체흐 코호몰로지
+$$H^p(M,M\setminus K;A)\times H_m(M,M\setminus K;A)\rightarrow H_{m-p}(M;A)$$
 
+을 생각하자. 그럼 [보조정리 6](#lem6)에 의하여, 우리는 각각의 point $x$로 제한했을 때 $M$의 orientation $x$와 맞아떨어지는 homology class
 
+$$s_K\in H_m(M,M\setminus K;A)$$
 
-기본적인 아이디어는 non-orientability는 $\Spe(\or_M^A)$의 nontrivial한 monodromy에 의해 생기게 된다는 것이다. 그런데 covering space의 lifting property를 생각하면, 충분히 local한 범위에서는 nontrivial monodromy가 별 영향을 주지 않으므로, global section $M \rightarrow \Spe(\or_M^A)$ 뿐만 아니라 local section들을 따로따로 보면 정보를 잃지 않을 수 있을 것이다. 그리고 이러한 방식으로 데이터를 기록하는 것이 바로 sheaf이므로, sheaf cohomology가 나오는 것이 자연스럽다.
+를 찾을 수 있다. 우리의 주장은 이러한 $s_K$들로 만드는 cap product homomorphism
 
-임의의 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, global section functor 
+$$-\frown s_K: H^p(M,M\setminus K;A) \rightarrow H_{m-p}(M;A)$$
+
+이 direct system에 대한 compatibility를 만족하고, 따라서 homomorphism $H_c^p(M;A)\rightarrow H_{m-p}(M;A)$을 정의한다는 것이다. 이를 확인하기 위해 $K$를 포함하는 또 다른 compact subset $K'$와 inclusion $i:K\rightarrow K'$이 주어졌다 하자. 그럼 임의의 $\alpha\in H^p(M,M\setminus K;A)$에 대하여, 
+
+$$i^\ast\alpha\frown s_{K'}=\alpha\frown i_\ast s_{K'}$$
+
+가 projection formula([§합곱, ⁋명제 6](/ko/math/algebraic_topology/cup_products#prop6))에 의해 성립하며, [보조정리 6](#lem6)의 유일성에 의하여 $i_\ast s_{K'}=s_K$이므로 이것이 homomorphism $H_c^p(M;A)\rightarrow H_{n-p}(M;A)$을 잘 정의하는 것을 안다. 
+
+우리 주장은 이 homomorphism $D_M:H_c^p(M;A)\rightarrow H_{n-p}(M;A)$이 isomorphism이라는 것이며, 이를 보이기 위해 [보조정리 6](#lem6)의 증명과 마찬가지로 Mayer-Vietoris sequence를 이용한 귀납법을 사용한다. 
+
+귀납법의 base step은 $M=\mathbb{R}^m$인 경우이다. 이 경우, 우리는 임의의 ball $B\subseteq \mathbb{R}^m$에 대하여, $B$의 orientation $s_B$가
+
+$$H_m(\mathbb{R}^m, \mathbb{R}^m\setminus B;A)\cong A$$
+
+을 주는 것을 알고, [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)으로부터 $H^m(\mathbb{R}^m,\mathbb{R}^m\setminus B;A)\cong A$이며, 이 때 $B$의 orientation의 dual basis에 해당하는 $\alpha_B$가 다음의 식
+
+$$\langle 1\smile \alpha_B, s_B\rangle=\langle 1,\alpha_B\frown s_B\rangle$$
+
+을 만족하므로 $\alpha_B\frown s_B$가 $H_0(\mathbb{R}^m)\cong A$의 generator에 해당하는 것을 알고, 따라서 
+
+$$H^p(\mathbb{R}^m,\mathbb{R}^m\setminus B;A)\cong H_{m-p}(\mathbb{R}^m;A)$$
+
+이 모든 $p$에 대해 성립한다. ($p\neq m$인 경우는 zero module 사이의 zero map이므로 isomorphism이다.) 이제 $B$의 반지름을 키워가며 $\mathbb{R}^m$ 전체를 덮는 directed system을 짜면 $H_c^p(M)\rightarrow H_{m-p}(M)$이 isomorphism임을 안다. 
+
+이제 다음 스텝으로, 만일 $M$의 두 열린집합 $U,V$가 존재하여 $M=U\cap V$이고 주어진 명제가 $U,V,U\cap V$에 대해 성립한다 가정하자. 그럼 각각의 compact subset $K\subset U$, $L\subset V$에 대하여 relative Mayer-Vietoris sequence
+
+$$\cdots\rightarrow H^k(M,M\setminus(K\cap L);A)\rightarrow H^k(M,M\setminus K;A)\oplus H^k(M,M\setminus L;A)\rightarrow H^k(M,M\setminus(K\cup L);A)\rightarrow \cdots$$
+
+를 생각한 후, excision을 하고 limit을 취하면 다음의 commutative diagram
+
+![MVseq_duality](/assets/images/Math/Algebraic_Topology/Poincare_duality-4.png){:style="width:36em" class="invert" .align-center}
+
+을 얻고, 귀납적 과정과 [\[호몰로지 대수학\] §Diagram chasing, ⁋정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)로부터 귀납법이 완성된다. 
+
+그러나 $M$이 compact라는 가정이 없으므로 약간의 논증을 덧붙여야 한다. 우선 만일 $M$이 open subset들의 nested family 
+
+$$U_1\subset U_2\subset\cdots$$
+
+의 union이고 이들 각각에 대하여 주어진 명제가 성립한다 하자. 그럼 $M$의 임의의 compact subset은 어떠한 $U_i$에는 반드시 포함되어야 하고, 이로부터 다음의 isomorphism
+
+$$H_c^p(M)=\varinjlim_i H^p_c(U_i),\qquad H_{m-p}(M)=\varinjlim_i H_{m-p}(U_i)$$
+
+을 얻는다. 가정에 의하여 $H^p_c(U_i)\rightarrow H_{m-p}(U_i)$들이 모두 isomorphism이므로 원하는 결과를 얻는다. 
+
+이제 $M$이 $\mathbb{R}^m$의 open subset안 경우를 생각하자. 그럼 우선 $M$을 $\mathbb{R}^m$과 homeomorphic한 convex open subset들 (즉 open ball들) counbable개 $U_1,U_2,\ldots$로 덮을 수 있으며, 임의의 convex open subset은 $\mathbb{R}^m$과 homeomorphic하므로 이들 각각에 대해서는 정리의 isomorphism이 성립함을 위의 base step에서 보았다. 또, convex set 두 개의 교집합은 다시 convex set이므로, 위의 귀납법에 의하여 $U_1\cup U_2$에 대해서도 결론이 성립한다. 이 다음 차례로 $U_1\cup U_2\cup U_3$에 대하여 결론이 성립하는 것을 보이기 위해서는 다음의 교집합
+
+$$(U_1\cup U_2)\cap U_3=(U_1\cap U_3)\cup (U_2\cap U_3)$$
+
+이 주어진 조건을 만족한다는 것을 보여야 하는데, 이 때 $U_1\cap U_3$, $U_2\cap U_3$, 그리고 $U_1\cap U_2\cap U_3$는 모두 $\mathbb{R}^m$의 convex open subset으로서 주어진 조건을 만족하는 것을 안다. 비슷한 방식으로 각각의 
+
+$$U_1,\quad U_1\cup U_2, \quad U_1\cup U_2\cup U_3,\quad \cdots$$
+
+이 모두 결론을 만족하는 것을 안다. 따라서 이로부터 nested open subset들의 sequence
+
+$$U_1\subset U_1\cup U_2\subset U_1\cup U_2\cup U_3\cdots$$
+
+에 앞선 (무한한) 귀납법을 적용하면 원하는 결과를 얻는다. 
+
+이제 마지막으로 $M$이 임의의 manifold일 경우, second countability를 이용하여 countable한 Euclidean chart로 $M$을 덮고 위와 마찬가지의 논증을 거치면 된다.
+
+</details>
+
+특히 증명에서, 만일 $M$이 그 자체로 compact였다면 dualilty map $D_M$은 정확하게 fundamental class $[M]$과의 cap product가 되었을 것이다.
+
+## 층 코호몰로지와 뒤틀린 호몰로지
+
+이제 우리는 non-orientable manifold인 경우 푸앵카레 쌍대성이 어떠한 꼴로 일반화될 수 있는지를 본다. 기본적인 아이디어는 non-orientability는 $\Spe(\or_M^A)$의 nontrivial한 monodromy에 의해 생기게 된다는 것이다. 그런데 covering space의 lifting property를 생각하면, 충분히 local한 범위에서는 nontrivial monodromy가 별 영향을 주지 않으므로, global section $M \rightarrow \Spe(\or_M^A)$ 뿐만 아니라 local section들을 따로따로 보면 정보를 잃지 않을 수 있을 것이다. 그리고 이러한 방식으로 데이터를 기록하는 것이 바로 sheaf이므로, sheaf cohomology가 나오는 것이 자연스럽다. 이에 대응되는 homology는 twisted homology이다. 
+
+우선 호몰로지 부분을 위하여 우리는 *twisted chain complex* $C_\bullet(M;\or_M^A)$를 singular chain들의 $A$-module들로 이루어진 $A$-module들의 chain complex로 정의하되, 이번에는 boundary amp을 정의할 때 monodromy action $\pi_1(X,x)\rightarrow \Aut(A_x)$를 이용하여 generator에 붙는 계수들을 바꿔서 만들기로 한다. 이렇게 정의된 homology를 $H_\bullet(X;\or_M^A)$로 적기로 하자. 
+
+그럼 푸앵카레 쌍대성은 우리에게 다음 isomorphism
+
+$$H^p(M;A)\rightarrow H_{N-p}(M;\or_M^A)$$
+
+을 준다. 
+
+더 일반적으로, 우리는 각각의 stalk이 $L$이고 $\pi_1(X,x)\rightarrow \Aut(L)$이 주어진 locally constant sheaf $\mathscr{L}$를 *local system*이라 부르는데, 그럼 local system이 monodromy action을 통해 뒤틀리는 것은 $\mathscr{L}\otimes\or_M^A$에 담겨 있다. 
+
+한편 임의의 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, global section functor 
 
 $$\Gamma(X,-):\Sh(X,\mathcal{A})\rightarrow \mathcal{A}$$
 
@@ -287,7 +377,7 @@ $$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{G}_1\r
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, Godement resolution의 global section들의 sequence
+<ins id="def12">**정의 12**</ins> 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, Godement resolution의 global section들의 sequence
 
 $$0 \rightarrow \mathscr{F}(X)\rightarrow \mathscr{G}_0(X)\rightarrow \mathscr{G}_1(X)\rightarrow \cdots$$
 
@@ -299,8 +389,10 @@ $$H^k(X; \mathscr{F})$$
 
 </div>
 
-어렵지 않게 $H^0(X, \mathscr{F})=\mathscr{F}(X)$임을 알 수 있다. 
+어렵지 않게 $H^0(X, \mathscr{F})=\mathscr{F}(X)$임을 알 수 있다. 또, 임의의 manifold $M$와 임의의 ring $A$에 대하여, $M$ 위에 $A$로부터 정의되는 constant sheaf $\underline{A}$를 생각하면 이것이 $A$를 계수르 갖는 cohomology를 정의하는 것을 안다. 
 
-직관적으로, Godement resolution은 local data를 global하게 붙일 때의 obstruction을 무한대로 보내는 것이라 생각할 수 있다. 
- 
-정의/증명/적분예시/왜 터지는지/compactly supported로 업그레이드/sheaf cohomology로 업그레이드/intersection
+그럼 임의의 local system $\mathscr{L}$에 대하여, (twisted) Poincaré duality는 다음의 isomorphism
+
+$$H^p(M;\mathscr{L})\cong H_{n-p}(M;\mathscr{L}\otimes \or_M^A)$$
+
+을 의미한다. 특히 만일 $\mathscr{L}$이 constant sheaf $\underline{A}$이고, $M$이 $A$-orientable이 되어 $\or_M^A$이 trivial인 경우 우리는 원래의 쌍대성을 얻는다.
