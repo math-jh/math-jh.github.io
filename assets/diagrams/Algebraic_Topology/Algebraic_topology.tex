@@ -890,7 +890,7 @@
 \end{tikzpicture}
 
 %% orientation_cover_of_M (Poincare_duality-3.png)
- \begin{tikzpicture}
+\begin{tikzpicture}
  \begin{scope}[xshift=3cm, yshift=-1.5cm, scale=.3]
     \begin{axis}[
     hide axis,
@@ -1035,4 +1035,21 @@
     \draw (7,-5) node{$M$};
     \draw[->] (7,-.5) -- (7,-4.5);
     \draw (7,-2.5) node[right]{$p$};
- \end{tikzpicture}
+\end{tikzpicture}
+
+%% MV_sequence_duality (Poincare_duality-4.png)
+\begin{tikzcd}
+  \cdots & {H^p_c(U\cap V)} & {H^p_c(U)\oplus H_c^p(V)} & {H^p(M)} & \cdots \\
+  \cdots & {H_{n-p}(U\cap V)} & {H_{n-p}(U)\oplus H_{n-p}(V)} & {H_{n-p}(M)} & \cdots
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=1-2, to=1-3]
+  \arrow["{D_{U\cap V}}", from=1-2, to=2-2]
+  \arrow[from=1-3, to=1-4]
+  \arrow["{D_U\oplus D_V}", from=1-3, to=2-3]
+  \arrow[from=1-4, to=1-5]
+  \arrow["{D_M}", from=1-4, to=2-4]
+  \arrow[from=2-1, to=2-2]
+  \arrow[from=2-2, to=2-3]
+  \arrow[from=2-3, to=2-4]
+  \arrow[from=2-4, to=2-5]
+\end{tikzcd}
