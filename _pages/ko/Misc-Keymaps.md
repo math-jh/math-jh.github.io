@@ -10,5 +10,5 @@ permalink: /ko/keymaps
 {% endif %}
 
 {% assign posts = site.categories['Misc / Peripherals'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% assign keyboard-posts = posts | where_exp: "post", "post.permalink contains '/keyboards/'" | sort: 'weight' %}
-{% for post in keyboard-posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% assign keymap-posts = posts | where_exp: "post", "post.permalink contains '/keymaps/'" | sort: 'weight' %}
+{% for post in keymap-posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

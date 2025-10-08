@@ -341,17 +341,17 @@ $$U_1\subset U_1\cup U_2\subset U_1\cup U_2\cup U_3\cdots$$
 
 이제 우리는 non-orientable manifold인 경우 푸앵카레 쌍대성이 어떠한 꼴로 일반화될 수 있는지를 본다. 기본적인 아이디어는 non-orientability는 $\Spe(\or_M^A)$의 nontrivial한 monodromy에 의해 생기게 된다는 것이다. 그런데 covering space의 lifting property를 생각하면, 충분히 local한 범위에서는 nontrivial monodromy가 별 영향을 주지 않으므로, global section $M \rightarrow \Spe(\or_M^A)$ 뿐만 아니라 local section들을 따로따로 보면 정보를 잃지 않을 수 있을 것이다. 그리고 이러한 방식으로 데이터를 기록하는 것이 바로 sheaf이므로, sheaf cohomology가 나오는 것이 자연스럽다. 이에 대응되는 homology는 twisted homology이다. 
 
-우선 호몰로지 부분을 위하여 우리는 *twisted chain complex* $C_\bullet(M;\or_M^A)$를 singular chain들의 $A$-module들로 이루어진 $A$-module들의 chain complex로 정의하되, 이번에는 boundary amp을 정의할 때 monodromy action $\pi_1(X,x)\rightarrow \Aut(A_x)$를 이용하여 generator에 붙는 계수들을 바꿔서 만들기로 한다. 이렇게 정의된 homology를 $H_\bullet(X;\or_M^A)$로 적기로 하자. 
+우선 호몰로지 부분을 위하여 우리는 *twisted chain complex* $C_\bullet(M;\Or_M^A)$를 singular chain들의 $A$-module들로 이루어진 $A$-module들의 chain complex로 정의하되, 이번에는 boundary map을 정의할 때 monodromy action $\pi_1(X,x)\rightarrow \Aut(A_x)$를 이용하여 generator에 붙는 계수들을 바꿔서 만들기로 한다. 이렇게 정의된 homology를 $H_\bullet(X;\Or_M^A)$로 적기로 하자. 
 
 그럼 푸앵카레 쌍대성은 우리에게 다음 isomorphism
 
-$$H^p(M;A)\rightarrow H_{N-p}(M;\or_M^A)$$
+$$H^p(M;A)\rightarrow H_{n-p}(M;\Or_M^A)$$
 
 을 준다. 
 
-더 일반적으로, 우리는 각각의 stalk이 $L$이고 $\pi_1(X,x)\rightarrow \Aut(L)$이 주어진 locally constant sheaf $\mathscr{L}$를 *local system*이라 부르는데, 그럼 local system이 monodromy action을 통해 뒤틀리는 것은 $\mathscr{L}\otimes\or_M^A$에 담겨 있다. 
+더 일반적으로, 우리는 각각의 stalk이 $L$이고 $\pi_1(X,x)\rightarrow \Aut(L)$이 주어진 locally constant sheaf $\mathscr{L}$를 *local system*이라 부르는데, 그럼 local system이 monodromy action을 통해 뒤틀리는 것은 $\mathscr{L}\otimes\Or_M^A$에 담겨 있다. 
 
-한편 임의의 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, global section functor 
+임의의 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, global section functor 
 
 $$\Gamma(X,-):\Sh(X,\mathcal{A})\rightarrow \mathcal{A}$$
 
@@ -389,10 +389,10 @@ $$H^k(X; \mathscr{F})$$
 
 </div>
 
-어렵지 않게 $H^0(X, \mathscr{F})=\mathscr{F}(X)$임을 알 수 있다. 또, 임의의 manifold $M$와 임의의 ring $A$에 대하여, $M$ 위에 $A$로부터 정의되는 constant sheaf $\underline{A}$를 생각하면 이것이 $A$를 계수르 갖는 cohomology를 정의하는 것을 안다. 
+어렵지 않게 $H^0(X, \mathscr{F})=\mathscr{F}(X)$임을 알 수 있다. 또, 임의의 manifold $M$와 임의의 ring $A$에 대하여, $M$ 위에 $A$로부터 정의되는 constant sheaf $\underline{A}$를 생각하면 이것이 $A$를 계수를 갖는 cohomology를 정의하는 것을 안다. 
 
 그럼 임의의 local system $\mathscr{L}$에 대하여, (twisted) Poincaré duality는 다음의 isomorphism
 
-$$H^p(M;\mathscr{L})\cong H_{n-p}(M;\mathscr{L}\otimes \or_M^A)$$
+$$H^p(M;\mathscr{L})\cong H_{n-p}(M;\mathscr{L}\otimes \Or_M^A)$$
 
-을 의미한다. 특히 만일 $\mathscr{L}$이 constant sheaf $\underline{A}$이고, $M$이 $A$-orientable이 되어 $\or_M^A$이 trivial인 경우 우리는 원래의 쌍대성을 얻는다.
+을 의미한다. 특히 만일 $\mathscr{L}$이 constant sheaf $\underline{A}$이고, $M$이 $A$-orientable이 되어 $\Spe(\or_M^A)$이 trivial인 경우 우리는 원래의 쌍대성을 얻는다.
