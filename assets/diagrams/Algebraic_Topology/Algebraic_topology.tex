@@ -9,8 +9,15 @@
 \begin{document}
 \nopagecolor
 
-
-
+%% universality-1 (Characteristic_clasees-4.png)
+\begin{tikzcd}
+  E & {E(\gamma_\infty^k)} \\
+  B & {\Gr_k(\mathbb{R}^\infty)}
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=1-1, to=2-1]
+  \arrow[from=1-2, to=2-2]
+  \arrow["f"', from=2-1, to=2-2]
+\end{tikzcd}
 
 \end{document}
 
@@ -841,7 +848,7 @@
 {cos(deg(x))}, 
 20);
 \end{axis}
-\draw (10,6) node{$\Spe(\mathrm{or}_{S^1})$};
+\draw (10,6) node{$\Spe(\omega_{S^1})$};
 \draw (10,3) node{$S^1$};
 \draw[->] (10,5.5) -- (10,3.5) node[midway, right]{$p$};
 \draw (7,1.7) node[orange]{$U$};
@@ -879,17 +886,16 @@
 ({sin(deg(x))}, 
 {cos(deg(x))}, 
 20);
-\addplot3+[domain=2.6:4.3,samples=100,samples y=0,red,no marks,ultra thick,solid] 
+\addplot3+[domain=2.65:4.3,samples=100,samples y=0,red,no marks,ultra thick,solid] 
 ({sin(deg(x))}, 
 {cos(deg(x))}, 
 0);
 \end{axis}
-\draw (10,6) node{$\Spe(\mathrm{or}_{S^1})$};
+\draw (10,6) node{$\Spe(\omega_{S^1})$};
 \draw (10,3) node{$S^1$};
 \draw[->] (10,5.5) -- (10,3.5) node[midway, right]{$p$};
 \end{tikzpicture}
 
-%% orientation_cover_of_M (Poincare_duality-3.png)
 \begin{tikzpicture}
  \begin{scope}[xshift=3cm, yshift=-1.5cm, scale=.3]
     \begin{axis}[
@@ -1031,7 +1037,7 @@
     );
     \end{axis}
     \end{scope}
-    \draw (7,0) node{$\Spe(\mathrm{or}_M)$};
+    \draw (7,0) node{$\Spe(\omega_M)$};
     \draw (7,-5) node{$M$};
     \draw[->] (7,-.5) -- (7,-4.5);
     \draw (7,-2.5) node[right]{$p$};
@@ -1071,5 +1077,36 @@
   \arrow["g", from=1-1, to=1-2]
   \arrow["{p_1}"', from=1-1, to=2-1]
   \arrow["{p_2}", from=1-2, to=2-2]
+  \arrow["f"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% pullback_of_trivial_bundle (Characteristic_classes-3.png)
+\begin{tikzcd}
+  E & V \\
+  B & \ast
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=1-1, to=2-1]
+  \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+  \arrow[from=1-2, to=2-2]
+  \arrow[from=2-1, to=2-2]
+\end{tikzcd}
+
+%% universality-1 (Characteristic_clasees-4.png)
+\begin{tikzcd}
+  E & {E(\gamma_\infty^k)} \\
+  B & {\Gr_k(\mathbb{R}^\infty)}
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=1-1, to=2-1]
+  \arrow[from=1-2, to=2-2]
+  \arrow["f"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% universality-2 (Characteristic_classes-5.png)
+\begin{tikzcd}
+  {f^\ast\gamma_\infty^k} & {E(\gamma_\infty^k)} \\
+  B & {\Gr_k(\mathbb{R}^\infty)}
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=1-1, to=2-1]
+  \arrow[from=1-2, to=2-2]
   \arrow["f"', from=2-1, to=2-2]
 \end{tikzcd}
