@@ -66,13 +66,13 @@ $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
 $n+1$차원 벡터공간 $\mathbb{R}^{n+1}$에 대하여, 원점을 지나는 직선들의 공간을 우리는 *projective $n$-space*라 부르고 $\RP^n$으로 표기한다. 원점을 지나는 직선 위의 점들 중, 원점까지의 거리가 $1$인 두 점은 같은 직선을 지정하므로, 우리는 이를 unit $n$-sphere $S^n$ 위의 antipodal point들을 identify하여 얻어지는 quotient space로 생각할 수 있다. 
 
-이제 이 공간 $\RP^n$을 base space $B$로 두고, 이 위에 정의된 vector bundle $\mathcal{O}(-1)$를 다음과 같이 정의하자. 집합으로서 
+이제 이 공간 $\RP^n$을 base space $B$로 두고, 이 위에 정의된 vector bundle $E(\gamma_n^1)$를 다음과 같이 정의하자. 집합으로서 
 
-$$\mathcal{O}(-1)=\{((x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid x\in \span(x)\}$$
+$$E(\gamma_n^1)=\{((x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid x\in \span(x)\}$$
 
-으로 정의되며, projection $\gamma_n^1:\mathcal{O}(-1)\rightarrow \RP^n$는 첫 번째 좌표로의 projection이다. 즉 $\gamma_n^1$는 각 점 $x\in \RP^n$마다, $x$가 원래 $\mathbb{R}^{n+1}$에 있을 때 속해있던 바로 그 직선을 붙여준 것이다.
+으로 정의되며, projection $\gamma_n^1:E(\gamma_n^1)\rightarrow \RP^n$는 첫 번째 좌표로의 projection이다. 즉 $\gamma_n^1$는 각 점 $x\in \RP^n$마다, $x$가 원래 $\mathbb{R}^{n+1}$에 있을 때 속해있던 바로 그 직선을 붙여준 것이다.
 
-이는 trivial bundle이 아니다. 만일 이것이 trivial bundle이었다면, non-vanishing continuous section $\RP^n\rightarrow \mathcal{O}(-1)$이 존재했을 것이다. 가령 $B$의 모든 점에 fiber의 $1$을 대응시키는 함수가 그러하다. 그런데 임의의 section $s:\RP^n \rightarrow \mathcal{O}(-1)$이 주어졌다 하고, quotient map $q:S^n \rightarrow \RP^n$을 사용한 다음의 합성
+이는 trivial bundle이 아니다. 만일 이것이 trivial bundle이었다면, non-vanishing continuous section $\RP^n\rightarrow E(\gamma_n^1)$이 존재했을 것이다. 가령 $B$의 모든 점에 fiber의 $1$을 대응시키는 함수가 그러하다. 그런데 임의의 section $s:\RP^n \rightarrow E(\gamma_n^1)$이 주어졌다 하고, quotient map $q:S^n \rightarrow \RP^n$을 사용한 다음의 합성
 
 $$S^n \overset{q}{\longrightarrow} \RP^n \overset{s}{\longrightarrow} E\overset{\pr_2}{\longrightarrow} \mathbb{R}^{n+1}$$
 
@@ -122,21 +122,144 @@ $$H_1(M)\rightarrow A^\times$$
 
 으로 factor through하고 이는 [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)에 의하여 $H^1(M;A)$의 원소이다. 만일 이 원소가 $0$이라면 monodromy action이 trivial action이라는 것과 같고, 이는 곧 $\Spe(\or_M^A)$이 trivial covering space라는 뜻이 되어 $M$이 $A$-orientable manifold가 되었다. 한편 임의의 commutative ring $A$에 대하여, $\cRing$의 initial object가 $\mathbb{Z}$이므로 임의의 manifold $M$에 대하여 $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$가 결정되면 이를 $\mathbb{Z}^\times\rightarrow A^\times$와 합성하여 $A$-orientation $H_1(M)\rightarrow A^\times$를 결정할 수 있으므로, $\Spe(\or_M^A)$가 trivial cover인지에 대한 본질적인 정보는 $H_1(M;\mathbb{Z}/2)$에 들어있는 것을 안다.
 
-이제 우리는 이를 일반화하여 *Stiefel-Whitney class*를 정의한다. 우선 이는 임의의 vector bundle $E\rightarrow B$가 주어질 때마다 정의되는 cohomology ring $H^\bullet(B;\mathbb{Z}/2)$의 원소 $w(E)$이며, 위와 마찬가지로 만일 $w(E)=0$이라면 $E$는 trivial bundle이 된다. 즉 만일 $w(E)=0$이라면, [명제 4](#prop4)에 의하여, $n=\rank(E)$개의 everywhere linearly independent continuous section이 존재한다. 뿐만 아니라 $w(E)$를 cohomology ring의 degree에 맞춰 
+이제 우리는 이를 일반화하여 *Stiefel-Whitney class*를 정의한다. 우선 이는 임의의 vector bundle $p:E\rightarrow B$가 주어질 때마다 정의되는 cohomology ring $H^\bullet(B;\mathbb{Z}/2)$의 원소 $w(p)$이며, 위와 마찬가지로 만일 $w(p)=0$이라면 $E$는 trivial bundle이 된다. 즉 만일 $w(p)=0$이라면, [명제 4](#prop4)에 의하여, $n=\rank(E)$개의 everywhere linearly independent continuous section이 존재한다. 뿐만 아니라 $w(p)$를 cohomology ring의 degree에 맞춰 
 
-$$w(E)=w_0(E)+w_1(E)+\cdots$$
+$$w(p)=w_0(p)+w_1(p)+\cdots$$
 
-으로 분해하면, 각각의 $w_i(E)$들은 $n-i+1$개의 everywhere linearly independentsection들을 고르는 것에 대한 *obstruction class*가 된다. 즉 만일 $w_i(E)\neq 0$이라면 $n-i+1$개의 everywhere linearly independent section이 존재할 수 없다. 특히 $w_n(E)\neq 0$이라면 $1$개의 everywhere linearly independent section조차도 존재할 수 없으므로 임의의 section은 반드시 어딘가에서 $0$이 되어야 한다.
+으로 분해하면, 각각의 $w_i(p)$들은 $n-i+1$개의 everywhere linearly independent section들을 고르는 것에 대한 *obstruction class*가 된다. 즉 만일 $w_i(p)\neq 0$이라면 $n-i+1$개의 everywhere linearly independent section이 존재할 수 없다. 특히 $w_n(p)\neq 0$이라면 $1$개의 everywhere linearly independent section조차도 존재할 수 없으므로 임의의 section은 반드시 어딘가에서 $0$이 되어야 한다.
 
-이제 우리는 $w(E)$가 만족하는 공리들을 제시한다. 
+편의상 projection map $p$와 base $B$가 명확할 경우 우리는 $w(p)$ 대신 $w(E)$와 같은 표기를 사용하기도 한다. 이제 우리는 $w(E)$가 만족하는 공리들을 제시한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Vector bundle $E \rightarrow B$ of rank $n$에 대하여, 다음의 공리를 만족하는 cohomology class $w_i(E)$를 *Stiefel-Whitney class<sub>슈티펠-휘트니 특성류</sub>*라 부른다. 
+<ins id="def5">**정의 5**</ins> Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에 대하여, 다음의 공리를 만족하는 cohomology class $w_i(E)\in H^i(B;\mathbb{Z}/2)$를 *Stiefel-Whitney class<sub>슈티펠-휘트니 특성류</sub>*라 부른다. 
 
 1. (Rank) $w_0(E)=1$이며, 만일 $i>n$이라면 $w_i(E)=0$이다. 
 2. (Naturality) 임의의 $f:B'\rightarrow B$에 대하여, $w(f^\ast E)=f^\ast w(E)$가 성립한다. 
 3. (Whitney product formula) $w(E\oplus F)=w(E)w(F)$가 성립한다. 
-4. (Normalization) [예시 3](#ex3)의 tautological line bundle $E \rightarrow \mathbb{RP}^1$에 대하여, 
+4. (Normalization) [예시 3](#ex3)의 tautological line bundle $\gamma_1^1:E(\gamma_1^1)\rightarrow \RP^1$에 대하여, $w_1(\gamma_1^1)\neq 0$이다. 
 
 </div>
+
+그럼 다음 결과들이 자명하다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop6">**명제 6**</ins> 두 vector bundle $p_1:E_1\rightarrow B_1$, $p_2:E_2\rightarrow B_2$에 대하여, 만일 $p_1,p_2$이 isomorphic하다면 $w(E_1)=w(E_2)$이다. 특히, 만일 $p:E\rightarrow B$가 trivial bundle이라면 $w(E)=0$이다. 
+
+</div>
+
+첫째 주장은 자명하다. 둘째 주장의 경우, trivial bundle은 다음의 pullback
+
+![trivial_bundle](/assets/images/Math/Algebraic_Topology/Characteristic_classes-3.png){:style="width:5.5em" class="invert" .align-center}
+
+으로 주어지는 것을 확인하면 된다.
+
+흥미로운 관찰은 $S^1$의 line bundle의 isomorphism class는 오직 두 가지, 즉 trivial line bundle과 [예시 3](#ex3)의 line bundle 뿐이라는 것이며, 실제로 $S^1$ 위에 정의된 line bundle 중, "두 번 꼬아" 얻어지는 line bundle은 trivial line bundle과 isomorphic하다는 것을 확인할 수 있다. 이는 [명제 6](#prop6)을 보면 어느정도 예측가능한 것으로, $S^1$ 위의 line bundle의 Stiefel-Whitney class는 $H^1(S^1;\mathbb{Z}/2)$에 존재해야 하며 이는 $\mathbb{Z}/2$와 isomorphic하기 때문이다. 
+
+이들은 $\RP^1$의 tautological line bundle의 pullback이라는 것이다. $S^1$의 trivial line bundle의 경우, $S^1$의 모든 점을 $\RP^1$의 고정된 점으로 보내는 연속함수로의 pullback이며 nontrivial한 line bundle은 quotient map $S^1 \rightarrow \RP^1$을 통한 line bundle의 pullback이다. 
+
+## 그라스만 다양체
+
+더 일반적으로, 임의의 공간 위의 rank $k$ vector bundle은 *infinite Grassmannian* $\Gr_k(\mathbb{R}^\infty)$의 universal bundle $\gamma^k_\infty:E(\gamma_\infty^k)\rightarrow \Gr_k(\mathbb{R}^\infty)$을 pullback하여 얻어진다. 즉 임의의 vector bundle $p:E \rightarrow B$가 주어졌다면, $p$에서 $\gamma_k^\infty$로의 유일한 bundle map이 존재하여 다음의 diagram
+
+![universality](/assets/images/Math/Algebraic_Topology/Characteristic_classes-4.png){:style="width:9em" class="invert" .align-center}
+
+을 commute하도록 할 수 있고, 이는 다음의 pullback diagram
+
+![universality-2](/assets/images/Math/Algebraic_Topology/Characteristic_classes-5.png){:style="width:10em" class="invert" .align-center}
+
+과 isomorphic하다. 뿐만 아니라, vector bundle $E$의 Stiefel-Whitney class 또한 universal bundle $\gamma^k_\infty$의 Stiefel-Whitney class $w(\gamma^k_\infty)$를 pullback하여 얻어진다. 
+
+따라서 우리는 (infinite) Grassmannian과 그 위의 universal bundle, 그리고 이 bundle의 Stiefel-Whitney class가 존재하는 infinite Grassmannian의 cohomology ring $H^\bullet(\Gr_k(\mathbb{R}^\infty), \mathbb{Z}/2)$에 대해 살펴보아야 한다. Grassmannian의 성질을 모두 엄밀하게 증명하는 것은 복잡한 일이므로, 이 절에서는 이들 성질에 대한 소개와, (가능하다면) 간단한 설명을 주는 것으로 만족하기로 한다.
+
+정의에 의해 $\Gr_k(\mathbb{R}^{n+k})$은 $\mathbb{R}^{n+k}$의 모든 $k$차원 linear subspace들의 공간이다. 예를 들어 $\Gr_1(\mathbb{R}^{n+1})$은 그 정의에 의하여 projective space $\RP^n$이다. $\Gr_k(\mathbb{R}^{n+k})$의 각각의 점들은 $\mathbb{R}^{n+k}$의 부분공간이므로, 우리는 두 점 (즉 $\mathbb{R}^{n+k}$의 두 $k$차원 부분공간)이 서로 얼마나 가까운지를 직관적으로 알고 있다. 이는 가령, $\mathbb{R}^{n+1}$에서 "기울기"가 비슷한 두 직선에 해당하는 점들이 $\RP^n$에서 가까운 점들인 것과 동일한 일이며, 이는 $(n+k)\times k$행렬을 이용하여 엄밀하게 정의할 수 있으며, 이 위상구조 하에서 $\Gr_k(\mathbb{R}^{n+k})$은 $kn$차원 compact topological manifold가 된다. 그럼 [예시 3](#ex3)과 같은 방식으로, $\Gr_k(\mathbb{R}^{n+k})$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
+
+$$E(\gamma^k_n)=\left\{([V], x)\in \Gr_k(\mathbb{R}^{n+k})\mid \text{$V$ a $k$-dimensional subspace of $\mathbb{R}^{n+k}$ and $x\in V$}\right\}$$
+
+이 존재하며 이를 $\Gr_k(\mathbb{R}^{n+k})$의 *tautological bundle*이라 부른다. 
+
+이제 각각의 $n$에 대하여, 다음의 식
+
+$$\mathbb{R}^{k+n} \rightarrow \mathbb{R}^{k+n+1};\qquad (x_1,\ldots,x_{k+n}) \mapsto (x_1,\ldots,x_{k+n},0)$$
+
+은 $\mathbb{R}^{k+n}$의 $\mathbb{R}^{k+n+1}$로의 inclusion을 정의하며, 우리는 이를 통해 $\mathbb{R}^{k+n}$의 $k$차원 subspace를 $\mathbb{R}^{k+n+1}$의 $k$차원 subspace로 볼 수 있다. 즉 위의 inclusion은 Grassmannian 사이의 inclusion $\Gr_k(\mathbb{R}^{k+n})\rightarrow \Gr_k(\mathbb{R}^{k+n+1})$을 유도한다. 이제 다음의 directed system
+
+$$\Gr_k(\mathbb{R}^k)\hookrightarrow \Gr_k(\mathbb{R}^{k+1})\hookrightarrow\cdots$$
+
+을 생각하면, 우리는 이들의 direct limit
+
+$$\Gr_k(\mathbb{R}^\infty)=\varinjlim_{n\geq 0}\Gr_k(\mathbb{R}^{k+i})$$
+
+을 *infinite Grassmannian*이라 부른다. 마찬가지 방식으로 total space들의 direct limit
+
+$$E(\gamma_\infty^k)=\varinjlim_{n\geq 0} E(\gamma^k_{k+n})$$
+
+이 정의되며 이것이 $\Gr_k(\mathbb{R}^\infty)$ 위의 rank $k$ vector bundle을 정의한다. 이들은 당연히 inclusion $\mathbb{R}^{k+n}\hookrightarrow \mathbb{R}^{k+n+1}$의 선택에 의존하지 않는다. 
+
+직관적으로 $\Gr_k(\mathbb{R}^\infty)$는 각각의 $\Gr_k(\mathbb{R}^{k+n})$들을 이어붙여 complex 구조를 주는 것으로 생각할 수 있다. 뿐만 아니라 tautological bundle들 $E(\gamma^k_{n+k})$들도 이 구조와 호환되도록 붙어있게 된다. 
+
+이제 임의의 cohomology class $c\in H^\bullet(\Gr_k(\mathbb{R}^\infty); A)$와 임의의 vector bundle $p:E \rightarrow B$에 대하여, 우리는 cohomology class $f^\ast c\in H^\bullet(B;A)$를 생각할 수 있으며, 앞서 언급한 것과 같이 임의의 vector bundle $p$의 Stiefel-Whitney class은 이러한 식으로 정의된다. 때문에 우리는 infinite Grassmannian의 cohomology ring $H^\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$를 살펴보아야 한다. 한편 우리는 $\mathbb{Z}/2$-coefficient를 사용하고 있으므로 [§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)에 의해 $\Gr_k(\mathbb{R}^\infty)$의 homology ring을 보아도 된다. 
+
+이를 위해 $\mathbb{R}^\infty$의 full flag
+
+$$F_\bullet:\qquad F_0\subset F_1\subset F_2\subset\cdots$$
+
+을 고정하자. 가령 위와 마찬가지의 embedding $\mathbb{R}^0\subset\mathbb{R}^1\subset\cdots$이라 생각해도 충분하다. 그럼 $F_n$에 속한 임의의 $k$-plane $X$는
+
+$$0=\dim (X\cap F_0)\leq\dim(X\cap F_1)\leq\cdots\leq \dim(X\cap F_n)=k$$
+
+을 정의하며, 이 수열은 $X$가 $F_n$ 안에 어떻게 들어있는지를 보여준다. 이를 추적하기 위해 우리는 *Schubert symbol* $\sigma=(\sigma_1,\ldots, \sigma_k)$을 다음 조건
+
+$$1\leq \sigma_1<\sigma_2<\cdots<\sigma_k\leq n$$
+
+을 만족하는 수열로 정의한다. 이들 $\sigma_i$들은 공간 $X\cap F_i$이 언제 커지는지를 보여준다. 즉 이들은
+
+$$\dim(X\cap F_{\sigma(i)})=i, \qquad \dim(X\cap F_{\sigma(i)-1})=i-1$$
+
+을 통해 차원이 뛰는 곳을 측정하는 정보를 담을 수 있다. 이를 거꾸로 뒤집으면 우리는 적당한 partition
+
+$$\lambda:\qquad \lambda_1\geq\lambda_2\geq\cdots\geq\lambda_k,\qquad \lambda_1\leq r$$
+
+에 다음의 조건
+
+$$\dim(X\cap F_{n-k+i-\lambda_i})\geq i$$
+
+을 부여하여 이 정보를 담을 수 있다. 이들 partition은, flag
+
+$$F_0\subset F_1\subset\cdots\subset F_n$$
+
+에서, $V\cap F_i$의 차원이 뛸 수 있는 가장 작은 index로부터 얼마 후에 실제로 차원이 뛰었는지를 보여준다. 그럼 위의 조건을 만족하는 부분집합
+
+$$\Omega_\lambda^\circ(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})= i$ for all $1\leq i\leq k$}\right\}$$
+
+들은 이들의 closure
+
+$$\Omega_\lambda(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})\geq i$ for all $1\leq i\leq k$}\right\}$$
+
+안에서 open submanifold이며, 이들 $\Omega_\lambda(F_\bullet)$들은 inclusion 
+
+$$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr_k(\mathbb{R}^n)$$
+
+을 통하여 $\Gr_k(\mathbb{R}^n)$의 homology class를 정의하며, 우리는 이들을 *Schubert cycle*이라 부른다. 즉 Schubert cycle들은 위의 clsoed submanifold들 $\Omega_\lambda(F_\bullet)$의 fundamental class를 inclusion을 통해 $\Gr_k(\mathbb{R}^n)$에 넣은 것이다. 이들의 degree, 즉 $\Omega_\lambda(F_\bullet)$의 codimension은 $\lvert\lambda\rvert=\sum\lambda_i$로 주어진다. 따라서 이들을 [§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)을 통해 cohomology class들로 보면 이들은 degree $\lvert\lambda\rvert$의 cohomology class이다. 
+
+이들 cohomology class들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert cycle들은 이 inclusion들에 대해 잘 행동한다. 즉 partition $\lambda$에 해당하는 $\Gr_k(\mathbb{R}^{k+i})$의 Schubert cycle을 $\Gr_k(\mathbb{R}^{k+i})\rightarrow \Gr_k(\mathbb{R}^{k+i+1})$를 통해 집어넣은 것이나, $\Gr_k(\mathbb{R}^{k+i+1})$에서 바로 partition $\lambda$에 해당하는 Schubert cycle을 $\Gr_k(\mathbb{R}^n)\subset \Gr_k(\mathbb{R}^{k+i+1})$과 교집합한 것이나 같은 결과를 준다.
+
+이제 $k$개의 partition들
+
+$$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(2,0,\cdots,0),\qquad \lambda_k=(k,0,\cdots,0)$$
+
+을 생각하자. 그럼 이들은 위의 논증에 의하여 $\Gr_k(\mathbb{R}^\infty)$의 homology class들이 되어 다음의 함수
+
+$$w_i: H_\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$w_i(\Omega_{\lambda_i}(F_\bullet))=1$ and is $0$ otherwise}$$
+
+들이 $i$번째 cohomology class $H^i(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$에 있으며, 따라서 우리는 
+
+$$w_1\in H^1(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2),\cdots, w_k\in H^k(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$$
+
+임을 안다. 그럼 $H^\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$는 *polynomial algebra로서* 이들 $w_i$에 의해 생성된다. 가령, 임의의 partition $(a_1,\cdots,a_n)$은 다음 monomial
+
+$$w_1^{a_1}w_2^{a_2}\cdots w_k^{a_k}$$
+
+에 대응되며 이는 $H^\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$의 (무한히 많은) *$\mathbb{Z}/2$-module로서의* gemerator 중 하나가 된다. 이제 이들 $w_i$들은 Stiefel-Whitney class가 만족하는 공리들을 모두 만족하며, 이것이 pullback에 의해 보존되는 것으로부터 존재성이 증명된다.
+
