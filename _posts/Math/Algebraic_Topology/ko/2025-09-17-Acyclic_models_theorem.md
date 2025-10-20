@@ -132,3 +132,12 @@ $$(X,Y)\mapsto C_\bullet(X\times Y;A),\quad (X,Y)\mapsto C_\bullet(Y\times X;A),
 ![flip_map](/assets/images/Math/Algebraic_Topology/Acyclic_models_theorem-5.png){:style="width:24em" class="invert" .align-center}
 
 을 얻는다. 
+
+
+--- 
+
+**참고문헌**
+
+[The method of acyclic models](https://amathew.wordpress.com/2010/09/11/the-method-of-acyclic-models/)
+
+---
