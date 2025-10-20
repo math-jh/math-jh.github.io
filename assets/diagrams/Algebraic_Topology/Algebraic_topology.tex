@@ -9,25 +9,21 @@
 \begin{document}
 \nopagecolor
 
-%% universality-1 (Characteristic_clasees-4.png)
-\begin{tikzcd}
-  E & {E(\gamma_\infty^k)} \\
-  B & {\Gr_k(\mathbb{R}^\infty)}
-  \arrow[from=1-1, to=1-2]
-  \arrow[from=1-1, to=2-1]
-  \arrow[from=1-2, to=2-2]
-  \arrow["f"', from=2-1, to=2-2]
-\end{tikzcd}
+
+\begin{tikzpicture}
+  \draw[thick] (-3,0) -- (3,0);
+  \draw[thick, domain=-3:3, smooth, variable=\x] plot ({\x},{-0.1*\x*\x+0.4});
+  \draw[thick, -{stealth}] (-3,0) -- (0,0);
+  \draw[thick, domain=-3:1, smooth, variable=\x, -{stealth}] plot ({\x},{-0.1*\x*\x+0.4});
+  \fill[red] (-2,0) circle[radius=2pt];
+  \fill[blue] (2,0) circle[radius=2pt];
+\end{tikzpicture}
+
+
+
+
 
 \end{document}
-
-
-
-
-
-
-
-
 
 
 \begin{tikzpicture}
@@ -1060,6 +1056,100 @@
   \arrow[from=2-4, to=2-5]
 \end{tikzcd}
 
+%% Torus_intersection (Poincare_duality-5.png)
+\begin{tikzpicture}
+  \begin{axis}[view={180}{50}, axis lines=none, colormap/YlGn]
+    % Draw the torus surface
+    \addplot3[
+      surf,
+      shader=faceted interp, 
+      samples=40,
+      domain=0:360,
+      y domain=0:360,
+      z buffer=sort,
+      opacity=.8
+    ]
+    (
+      { (3 + cos(x)) * cos(y) },
+      { (3 + cos(x)) * sin(y) },
+      { sin(x) }
+    );
+    \addplot3+ [red, thick,
+      domain=0:180,
+        samples y=0,
+        mark=none
+    ]
+    (
+      { 4 * cos(x) },
+      { 4 * sin(x) },
+      { 0 }
+    );
+    \addplot3+ [red, thick,
+      domain=0:110,
+        samples y=0,
+        mark=none,
+        -{stealth}
+    ]
+    (
+      { 4 * cos(x) },
+      { 4 * sin(x) },
+      { 0 }
+    );
+    \addplot3+ [red, thick, opacity=.2, dashed,
+      domain=180:360,
+        samples y=0,
+        mark=none
+    ]
+    (
+      { 4 * cos(x) },
+      { 4 * sin(x) },
+      { 0 }
+    );
+    \addplot3+ [blue, thick,
+      domain=-70:110,
+        samples y=0,
+        mark=none
+    ]
+    (
+      { (3 + cos(x)) * cos(120) },
+      { (3 + cos(x)) * sin(120) },
+      { sin(x) }
+    );
+    \addplot3+ [blue, thick,
+      domain=-70:30,
+        samples y=0,
+        mark=none,
+        -{stealth}
+    ]
+    (
+      { (3 + cos(x)) * cos(120) },
+      { (3 + cos(x)) * sin(120) },
+      { sin(x) }
+    );
+    \addplot3+ [blue, thick,
+      domain=-70:34,
+        samples y=0,
+        mark=none,
+        -{stealth}
+    ]
+    (
+      { (3 + cos(x)) * cos(120) },
+      { (3 + cos(x)) * sin(120) },
+      { sin(x) }
+    );
+    \addplot3+ [blue, thick, opacity=.1, dashed,
+      domain=110:290,
+        samples y=0,
+        mark=none
+    ]
+    (
+      { (3 + cos(x)) * cos(120) },
+      { (3 + cos(x)) * sin(120) },
+      { sin(x) }
+    );
+  \end{axis}
+\end{tikzpicture}
+
 
 %% Fiber_bundle (Characteristic_classes-1.png)
 \begin{tikzcd}
@@ -1101,6 +1191,7 @@
   \arrow["f"', from=2-1, to=2-2]
 \end{tikzcd}
 
+
 %% universality-2 (Characteristic_classes-5.png)
 \begin{tikzcd}
   {f^\ast\gamma_\infty^k} & {E(\gamma_\infty^k)} \\
@@ -1110,3 +1201,4 @@
   \arrow[from=1-2, to=2-2]
   \arrow["f"', from=2-1, to=2-2]
 \end{tikzcd}
+
