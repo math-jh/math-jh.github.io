@@ -103,17 +103,17 @@ $$\omega_M^\pre(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underl
 
 <ins id="ex5">**예시 5**</ins> 예를 들어 $S^1$의 orientation double cover $p:\Spe(\omega_{S^1})\rightarrow S^1$을 생각하자. 임의의 점 $x\in S^1$의 $p$에 의한 preimage $p^{-1}(x)$는 두 개의 점 $(p,+)$와 $(p,-)$로 이루어져 있으며, 이는 $x$를 포함하는 chart $U$에 대해서도 마찬가지가 되어 $p^{-1}(U)$가 두 개의 open subset $U^+,U^-$로 나뉘게 된다. 
 
-![Orientation_cover_of_S1](/assets/images/Math/Algebraic_Topology/Poincare_duality-1.png){:style="width:30em" class="invert" .align-center}
+![Orientation_cover_of_S1](/assets/images/Math/Algebraic_Topology/Poincare_duality-1.png){:style="width:45%" class="invert" .align-center}
 
 이제 $S^1$을 이러한 cover들로 덮어주면, 각각의 chart들이 겹치는 곳에서 orientation을 그대로 붙여주면 이들은 다음과 같이 두 개의 component를 갖는 double cover가 된다.
 
-![Orientation_cover_of_S1_glued](/assets/images/Math/Algebraic_Topology/Poincare_duality-2.png){:style="width:30em" class="invert" .align-center}
+![Orientation_cover_of_S1_glued](/assets/images/Math/Algebraic_Topology/Poincare_duality-2.png){:style="width:45%" class="invert" .align-center}
 
 그러나 임의의 double cover가 항상 trivial cover가 되는 것은 아니다. 예를 들어 위의 $S^1$의 cover에서 위쪽과 아래쪽 component를 교차해서 붙이면 component가 하나인 double cover를 얻게 되며, 비슷한 일이 non-orientable manifold의 orientation double cover에서 일어난다. 
 
 이를 관찰하기 위해 뫼비우스 띠 $M$의 orientation cover를 생각하자. $S^1$과 마찬가지로, 임의의 점 $x\in M$에 대하여 $p^{-1}(x)$는 두 개의 점 $(x,+)$와 $(x,-)$로 이루어지며 이는 $M$의 임의의 점에 대해서도 마찬가지이다. 
 
-![orientation_cover_of_M](/assets/images/Math/Algebraic_Topology/Poincare_duality-3.png){:style="width:30em" class="invert" .align-center}
+![orientation_cover_of_M](/assets/images/Math/Algebraic_Topology/Poincare_duality-3.png){:style="width:40%" class="invert" .align-center}
 
 그러나 이를 이어붙여 $M$ 전체를 이어붙이려 하면 문제가 생기는데, 이 그림에서 보여지는 두 개의 cover를, orientation을 고려해가며 반시계방향으로 붙여나가면, 다시 $x$로 돌아왔을 때 $(x,+)$와 $(x,-)$가 서로 뒤바뀌어 있으므로 위쪽과 아래쪽 component를 교차해서 붙여야 한다. 이렇게 만들어진 $M$의 double cover는 원기둥과 homeomorphic하게 된다. 
 
@@ -458,3 +458,48 @@ $$H^k(M;A)\cong H_{m-k}(M;\or_M^A)$$
 $$H^k(M;A)\cong H_{m-k}(M;A)$$
 
 을 복원할 수 있다.
+
+## 푸앵카레 쌍대성과 cup product
+
+지금까지 우리는 cohomology ring 위의 cup product와, 이로부터 정의된 cap product를 거리낌없이 사용해왔다. 그러나 누군가가 cup product가 *무엇인지* 묻는다면 대답하기가 곤란할 것이다. 이에 대한 답은 간단하다. 
+
+> Cup product는 교집합의 Poincaré dual이다.
+
+이것이 무슨 뜻인지를 엄밀하게 설명하기 위해서는 최소한 지금까지 들인 노력만큼이 추가로 필요하다. 그러나 이것이 직관적으로 무슨 뜻인지 살펴보는 것은 아마 다음 예시로 충분할 것이다.
+
+<div class="example" markdown="1">
+
+<ins id="ex15">**예시 15**</ins> Torus $T^2=S^1\times S^1$을 생각하자. 그럼 우리는 Kunneth formula로부터 $T^2$의 cohomology가
+
+$$H^0(T^2;\mathbb{Z})\cong \mathbb{Z}, \quad H^1(T^2;\mathbb{Z})\cong \mathbb{Z}^2,\quad H^2(T^2;\mathbb{Z})$$
+
+임을 안다. 이 cohomology ring에서 non-trivial한 곱은 $H^1(T^2;\mathbb{Z})$의 두 generator $\alpha,\beta$들의 곱 뿐이다. 이들은, [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)에 따르면, $T^2$의 두 원의 dual에 해당하는 것이다. 그럼 이들의 cup product를 취한 것은 $H^2(T^2;\mathbb{Z})$의 generator가 되며, 이는 cup product의 정의에서 바로 얻어지거나 대수적으로 
+
+$$H^2(T^2;\mathbb{Z})=H^1(T^2;\mathbb{Z})\otimes H^1(T^2;\mathbb{Z})\cong \mathbb{Z}\otimes \mathbb{Z}\cong \mathbb{Z}$$
+
+가 $\alpha\otimes \beta$에 의해 생성되므로 당연하다. 
+
+이 때, 이들의 cup product가 $\alpha\times \beta$의 $\pm 1$이 아닌 상수배로 나타나지 않는 이유는 기하학적으로 다음과 같다. $\alpha$, $\beta$에 해당하는 homology class들을 $a,b$라 하면, $a$와 $b$의 교집합이 다음 그림과 같이 한 점에서만 만나기 때문이다.
+
+![Torus_intersection](/assets/images/Math/Algebraic_Topology/Poincare_duality-5.png){:style="width:30%" class="invert" .align-center}
+
+이 때, 두 곡선이 어떻게 만나는지를 분류하여 하나는 양의 방향, 하나는 음의 방향으로 정하는 것이 곧 $T^2$의 orientation을 주는 것과 같다. 
+
+그렇다면 이 기하학적인 해석 하에서, $\alpha^2=0$인 것은 어떻게 설명할 수 있을까? 교집합 $a\cap a$를 문자 그대로 계산한다면 이는 다시 $a$가 된다. 이렇게 계산이 엉키는 이유는 두 cycle (이 경우에는 $a$의 두 copy)이 *general position*에 있지 않기 때문이다. 대략적으로, $\mathbb{R}^2$의 임의의 두 직선이 주어졌다 하면 이들은 (일치하는 경우를 포함해서) 서로 평행한 경우를 제외하면 일반적으로는 한 점에서 만날텐데, general position의 개념은 이를 일반화한 것이다. 
+
+이제 homology class가 $a$인 $T^2$의 곡선들을 생각하자. 그럼 이들은 서로 만나지 않을 가능성이 높고, 만약 만난다면 (마찬가지로 general position이 아닌, 접하는 경우를 제외하면) 다음의 모양
+
+![intersections_on_torus](/assets/images/Math/Algebraic_Topology/Poincare_duality-6.png){:style="width:40%" class="invert" .align-center}
+
+과 같이 만날 것이다. 이는 일견 두 개의 교점이 생기는 것 같지만, 위의 그림에서 양쪽 교점은 그 부호가 다르다, 즉, 가령 직선을 첫 번째 벡터, 곡선을 두 번째 벡터로 두고 외적을 할 경우, 하나는 바깥쪽, 다른 하나는 안쪽으로 들어가는 벡터가 나올 것이며 따라서 부호가 반대이다. 이렇게 두 교점이 상쇄되어 이들의 교집합은 $0$이 되고, 따라서 $\alpha\smile\alpha=0$이 된다.
+
+</div>
+
+--- 
+
+**참고문헌**
+
+[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
+[May] J. P. May, *A concise course in algebraic topology*.
+
+---
