@@ -313,6 +313,18 @@ homological_algebra-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
+Lie_theory-ko:
+  - title: <a href="/ko/Lie_theory/" class="sidebar_title">리 이론</a>
+    children:
+      - title: "리 군"
+        url: ko/math/Lie_theory/Lie_groups
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
 linear_algebra-ko:
   - title: <a href="/ko/linear_algebra/" class="sidebar_title">선형대수학</a>
     children:
