@@ -351,7 +351,7 @@ $$\exp(X)\exp(Y)=\exp\left(X+Y+\frac{1}{2}[X,Y]+\frac{1}{12}[X,[X,Y]]+\frac{1}{1
 
 이제 우리는 마지막으로 abelian Lie group의 classification을 한다. 정의에 의해 abelian Lie group은 그 group operation이 commutative인 것들을 뜻한다. 이제 우리는 inner automorphism
 
-$\rho_g: G \rightarrow G; \quad h\mapsto \rho_g(h)=ghg^{-1}$
+$$\rho_g: G \rightarrow G; \quad h\mapsto \rho_g(h)=ghg^{-1}$$
 
 을 생각하자. ([\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)) 이는 Lie group automorphism이며, 따라서 identity $h=e$에서 이를 미분하면 $d\rho_g: \mathfrak{g}\rightarrow \mathfrak{g}$를 얻으며 이는 Lie albebra automorphism이 된다. 
 
@@ -373,7 +373,19 @@ $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g})$$
 
 $$\ad(X)Y =[X,Y]$$
 
-이 성립한다. 그런데 만일 $G$가 abelian group이었다면 $\rho_g$는 그냥 identity map이고 따라서 $\Ad_g(X)=X$가 임의의 $g\in G$와 임의의 $X\in \mathfrak{g}$에 대해 성립하고, 따라서 그 미분인 $\mathfrak{g}$의 adjoint representation은 $0$이다. 즉, 임의의 abelian Lie group에 대하여, 그 Lie algebra의 Lie bracket은 항상 $0$이고 우리는 이를 *abelian* Lie algebra라 부른다. 이는 [정의 8](#def8)에 의해 anticommutative인 Lie bracket이 commutative이기도 하기 위한 유일한 방법이므로 그 이름이 어색하지 않다. 
+이 성립한다. 뿐만 아니라 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm20">**정리 20**</ins> Connected compact Lie group $G$에 대하여 다음이 성립한다.
+
+1. $d(\exp(e))=\id_\mathfrak{g}$
+2. $\Ad\circ\exp=\exp_{\GL(\mathfrak{g})}\circ \ad$
+3. $\rho_x\circ\exp=\exp\circ\Ad(x)$
+
+</div>
+
+만일 $G$가 abelian group이었다면 $\rho_g$는 그냥 identity map이고 따라서 $\Ad_g(X)=X$가 임의의 $g\in G$와 임의의 $X\in \mathfrak{g}$에 대해 성립하고, 따라서 그 미분인 $\mathfrak{g}$의 adjoint representation은 $0$이다. 즉, 임의의 abelian Lie group에 대하여, 그 Lie algebra의 Lie bracket은 항상 $0$이고 우리는 이를 *abelian* Lie algebra라 부른다. 이는 [정의 8](#def8)에 의해 anticommutative인 Lie bracket이 commutative이기도 하기 위한 유일한 방법이므로 그 이름이 어색하지 않다. 
 
 그럼, $G$가 abelian일 경우 특히 [정리 17](#thm17)에 의하여 $\exp(X+Y)=\exp(X)\exp(Y)$이 성립한다. 즉 $\exp$는 group homomorphism이다. 뿐만 아니라 이 경우 [정리 17](#thm17)의 우변 $\exp$ 안의 식은 반드시 수렴하며 이는 ($G$가 conencted일 경우) $\exp$가 *surjective* group homomorphism이라는 결과로 나타난다. 따라서, first isomorphism theorem에 의하여
 
