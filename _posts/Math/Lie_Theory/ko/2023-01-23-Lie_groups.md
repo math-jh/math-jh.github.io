@@ -353,7 +353,7 @@ $$\exp(X)\exp(Y)=\exp\left(X+Y+\frac{1}{2}[X,Y]+\frac{1}{12}[X,[X,Y]]+\frac{1}{1
 
 $$\rho_g: G \rightarrow G; \quad h\mapsto \rho_g(h)=ghg^{-1}$$
 
-을 생각하자. ([\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)) 이는 Lie group automorphism이며, 따라서 identity $h=e$에서 이를 미분하면 $d\rho_g: \mathfrak{g}\rightarrow \mathfrak{g}$를 얻으며 이는 Lie albebra automorphism이 된다. 
+을 생각하자. ([\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)) 이는 Lie group automorphism이며, 따라서 identity $h=e$에서 이를 미분하면 $d\rho_g: \mathfrak{g}\rightarrow \mathfrak{g}$를 얻으며 이는 Lie algebra automorphism이 된다. 
 
 <div class="definition" markdown="1">
 
@@ -363,7 +363,7 @@ $$\Ad:G\rightarrow \Aut(\mathfrak{g});\quad g\mapsto d\rho_g$$
 
 을 $G$의 *adjoint representation*이라 부른다. 이를 미분하여 얻어지는 
 
-$$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g})$$
+$$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
 을 $\mathfrak{g}$의 *adjoint representation*이라 부른다. 
 
