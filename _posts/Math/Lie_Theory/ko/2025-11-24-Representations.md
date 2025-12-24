@@ -204,4 +204,22 @@ $$\chi_{V\oplus W}=\chi_V+\chi_W$$
 
 ## 리 대수의 표현
 
-우리는 Lie group의 infinitesimal한 정보가 모두 그 Lie algebra에 들어있는 것을 알고, 적당한 위상적인 조건들 하에서 Lie algebra의 정보는 Lie group을 복원해내는데에 충분하다는 것을 안다. 그렇다면, 적어도 철학적으로는 Lie group의 representation의 infinitisimal한 정보를 Lie algebra의 representation에 담아줄 수 있을 것이다. 
+우리는 Lie group의 infinitesimal한 정보가 모두 그 Lie algebra에 들어있는 것을 알고, 적당한 위상적인 조건들 하에서 Lie algebra의 정보는 Lie group을 복원해내는데에 충분하다는 것을 안다. 그렇다면, 적어도 철학적으로는 Lie group의 representation의 infinitisimal한 정보를 Lie algebra의 representation에 담아줄 수 있을 것이다. 그리고 이는 정당한 직관이다. 
+
+임의의 $G$-module $V$가 주어졌다 하자. 그럼 $V$를 manifold로 본다면, 우리는 임의의 $X\in \mathfrak{g}$와 임의의 $v\in V$에 대하여, $v$에서 출발하여 $X$가 지정해주는 방향으로 움직이는 곡선 
+
+$$t\mapsto\exp(tX)\cdot v$$
+
+이 존재함을 안다. 그럼 이 action의 infinitesimal한 정보는 다음의 식
+
+$$\mathcal{L}_X v:=\lim_{t \rightarrow 0}\frac{\exp(tX)\cdot v-v}{t}$$
+
+에 담겨있는 것을 안다. 만일 우리가 $G$-module $V$를 $\rho:G\rightarrow \Aut(V)$로 해석한다면, 우변은 $\Aut(V)$의 Lie algebra에 해당하는 $\End(V)$의 원소이며, 더 나아가 $d\rho_e(X)$가 된다는 것을 안다. 즉 다음의 대응
+
+$$\mathfrak{g}\times V \rightarrow V;\qquad (X,v)\mapsto \mathcal{L}_Xv$$
+
+은 $G\times V \rightarrow V$의 infinitesimal한 버전으로 생각할 수 있으며, 이 대응은 그 자체로 *Lie algebra의 representation*을 준다. 여기서, 임의의 Lie algebra $L$과 벡터공간 $V$에 대하여 $L\times V \rightarrow V$가 Lie algebra representation이기 위해 우리가 요구하는 관계식은
+
+$$X(Yv)-Y(Xv)=[X,Y]v$$
+
+이다. 약간의 믿음을 가지면 simply connected Lie group $G$과 그 Lie algebra $\mathfrak{g}$에 대해서는 ([§리 군, ⁋정리 15](/ko/math/Lie_theory/Lie_groups#thm15)와 마찬가지 결과로) Lie algebra representation $\mathfrak{g}\times V \rightarrow V$이 Lie group의 representation $G\times V \rightarrow V$를 결정하는 것도 납득할 수 있다. 
