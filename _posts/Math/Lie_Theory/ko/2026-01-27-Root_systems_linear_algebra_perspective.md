@@ -1,6 +1,6 @@
 ---
 
-title: "근계: 선형대수에서 리 이론으로"
+title: "근계: G-모듈과 선형대수"
 excerpt: ""
 
 categories: [Math / Lie Theory]
@@ -17,53 +17,59 @@ weight: 3
 
 ---
 
-## 고유공간 분해에서의 출발
+## G-모듈로서의 표현
 
-선형대수에서 우리가 학습한 고유공간 분해(eigenspace decomposition)의 핵심은 다음과 같다. 행렬 $A\in \mathfrak{gl}(V)$에 대하여 $V$를 eigenspace들의 직합으로 표현할 수 있다:
+[§표현](/ko/math/Lie_theory/Representations)에서 우리는 Lie group $G$의 표현을 다음과 같이 정의했다: $G$의 표현은 벡터공간 $V$와 함께 행동 
 
-$$V = \bigoplus_{\lambda \in \sigma(A)} E_\lambda(A), \quad E_\lambda(A) = \ker(A - \lambda I)$$
+$$G \times V \to V, \quad (g, v) \mapsto \rho(g)(v)$$
 
-이러한 분해는 $A$의 구조를 완전히 파악하기 위한 기본적인 도구이다. 특히 diagonalizable operator의 경우, 이 분해만으로 operator의 모든 정보를 담을 수 있다.
+를 정의하는 것이다. 
 
-한편 우리는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form)에서 diagonalizable하지 않은 operator의 경우도 다루었다. 이 경우 eigenspace $E_\lambda = \ker(A-\lambda I)$는 너무 작을 수 있으므로, generalized eigenspace $G_\lambda = \ker(A-\lambda I)^k$ (충분히 큰 $k$에 대해)로 확장하여 전체 공간을 분해했다. 
+이를 다른 관점에서 보면, 우리는 벡터공간 $V$를 $G$-모듈로 생각할 수 있다. 즉, $G$의 각 원소가 $V$ 위의 선형변환으로 작용하는 구조를 가진 벡터공간이다. 더 나아가 $\mathfrak{g} = \text{Lie}(G)$의 표현도 마찬가지이다. Lie algebra의 표현은 벡터공간 $V$와 $\mathfrak{g} \to \mathfrak{gl}(V)$의 Lie algebra homomorphism $\rho$로 정의되며, 이를 통해 $V$를 $\mathfrak{g}$-모듈로 본다.
 
-이제 우리는 이러한 아이디어를 **Lie algebra의 세계로 옮기고자 한다**.
+이러한 관점은 매우 유용하다. 왜냐하면 **$\mathfrak{g}$-모듈 위의 구조를 이해하는 것은 선형대수의 관점에서 보면, 일련의 commuting (또는 related) linear operators 위의 구조를 이해하는 것**이기 때문이다. 
 
-## Cartan subalgebra와 동시 대각화
+## Adjoint representation과 root space decomposition
 
-Semisimple Lie algebra $\mathfrak{g}$를 고정하자. Adjoint representation $\ad: \mathfrak{g} \to \mathfrak{gl}(\mathfrak{g})$는 다음과 같이 정의된다:
+이제 특별한 표현 하나를 생각하자: adjoint representation이다. [§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19)에서 정의한 바와 같이, Lie algebra $\mathfrak{g}$는 adjoint action을 통해 자기 자신 위에 표현된다:
 
-$$\ad_X(Y) = [X, Y]$$
+$$\text{ad}: \mathfrak{g} \to \mathfrak{gl}(\mathfrak{g}), \quad \text{ad}_X(Y) = [X, Y]$$
 
-선형대수에서 여러 행렬을 동시에 대각화하는 아이디어를 생각해보자. 만약 행렬들이 서로 commute한다면, 공통의 eigenbasis를 가질 수 있다. Lie algebra에서도 유사한 상황이 일어난다.
+따라서 $\mathfrak{g}$는 $\mathfrak{g}$-모듈이다.
 
-**Cartan subalgebra** $\mathfrak{h}$는 maximal abelian subalgebra이다. 즉, $\mathfrak{h}$의 모든 원소들은 서로 commute한다:
+이제 Semisimple Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하자. $\mathfrak{h}$는 maximal abelian Lie subalgebra이므로, 그 위의 모든 원소들은 서로 commute한다:
 
 $$[H_1, H_2] = 0 \quad \text{for all } H_1, H_2 \in \mathfrak{h}$$
 
-이 성질의 중요한 결과는 $\mathfrak{h}$의 모든 원소들이 $\mathfrak{g}$ 위에서 동시에 대각화 가능하다는 것이다 (적절한 field extension 이후). 따라서 우리는 $\mathfrak{g}$를 다음과 같이 분해할 수 있다:
+선형대수의 관점에서 보면, $\mathfrak{h}$의 모든 adjoint operator들은 서로 commute한다:
 
-$$\mathfrak{g} = \bigoplus_{\lambda \in \mathfrak{h}^*} \mathfrak{g}_\lambda$$
+$$[\text{ad}_{H_1}, \text{ad}_{H_2}] = 0$$
 
-여기서 
+이는 중요한 결과를 의미한다. **Commuting linear operators들은 동시에 대각화 가능하다.** 따라서 우리는 $\mathfrak{g}$를 이들의 동시 고유공간(simultaneous eigenspace)들로 분해할 수 있다.
+
+구체적으로, 각 linear functional $\lambda: \mathfrak{h} \to \mathbb{C}$에 대하여, 다음과 같이 정의한다:
 
 $$\mathfrak{g}_\lambda = \{X \in \mathfrak{g} \mid [H, X] = \lambda(H)X \text{ for all } H \in \mathfrak{h}\}$$
 
-이고, $\lambda: \mathfrak{h} \to \mathbb{C}$는 linear functional이다.
+그러면 
 
-## Root space decomposition
+$$\mathfrak{g} = \bigoplus_{\lambda \in \mathfrak{h}^*} \mathfrak{g}_\lambda$$
 
-위의 분해에서 $\lambda = 0$인 경우를 특별히 살펴보자:
+이다. 이것이 **weight space decomposition**이다.
+
+## Root space와 근계의 정의
+
+이제 이 분해에서 특별한 부분들을 주목하자. $\lambda = 0$인 경우:
 
 $$\mathfrak{g}_0 = \{X \in \mathfrak{g} \mid [H, X] = 0 \text{ for all } H \in \mathfrak{h}\}$$
 
-이는 정확히 $\mathfrak{h}$의 centralizer이며, $\mathfrak{h}$가 maximal abelian이라는 조건에 의해 $\mathfrak{g}_0 = \mathfrak{h}$가 성립한다.
+이는 $\mathfrak{h}$의 centralizer이고, $\mathfrak{h}$의 maximality에 의해 $\mathfrak{g}_0 = \mathfrak{h}$이다.
 
-따라서 우리는 다음의 분해를 얻는다:
+따라서 분해를 다시 쓰면:
 
-$$\mathfrak{g} = \mathfrak{h} \oplus \bigoplus_{\lambda \neq 0} \mathfrak{g}_\lambda$$
+$$\mathfrak{g} = \mathfrak{h} \oplus \bigoplus_{\lambda \in \mathfrak{h}^* \setminus \{0\}} \mathfrak{g}_\lambda$$
 
-이제 **nonzero linear functionals** $\lambda$에 주목하되, $\mathfrak{g}_\lambda \neq 0$인 것들만 고려한다. 이러한 $\lambda$들을 **root**라고 부른다.
+**Nonzero functional들** 중에서 $\mathfrak{g}_\lambda \neq 0$인 것들을 **root**라고 부른다.
 
 <div class="definition" markdown="1">
 
@@ -71,41 +77,42 @@ $$\mathfrak{g} = \mathfrak{h} \oplus \bigoplus_{\lambda \neq 0} \mathfrak{g}_\la
 
 $$\Phi = \{\alpha \in \mathfrak{h}^* \setminus \{0\} \mid \mathfrak{g}_\alpha \neq 0\}$$
 
-이다. 각 $\alpha \in \Phi$에 대해 $\mathfrak{g}_\alpha$를 **root space**라 부른다. Root space의 원소들을 **root vector**라 부른다.
+이다. 각 $\alpha \in \Phi$에 대해 $\mathfrak{g}_\alpha$를 **root space**라 부른다.
 
 </div>
 
-이제 우리가 할 관찰은 다음과 같다. 이는 선형대수의 고유공간 분해와 정확히 같은 구조이다. 선형대수에서는:
+이제 root space decomposition은 다음과 같이 쓸 수 있다:
 
-- 고유벡터: $Av = \lambda v$ (단일 operator $A$)
-- 고유공간: $E_\lambda = \{v \mid Av = \lambda v\}$
+$$\mathfrak{g} = \mathfrak{h} \oplus \bigoplus_{\alpha \in \Phi} \mathfrak{g}_\alpha$$
 
-Lie theory에서는:
+선형대수와의 유사성을 명확히 하면:
 
-- 근 벡터: $[H, X] = \alpha(H)X$ (모든 $H \in \mathfrak{h}$)
-- 근 공간: $\mathfrak{g}_\alpha = \{X \mid [H, X] = \alpha(H)X \text{ for all } H \in \mathfrak{h}\}$
+| 선형대수 | Lie 이론 |
+|---------|---------|
+| 행렬 $A$의 고유값 | Cartan subalgebra $\mathfrak{h}$에 대한 root |
+| 고유공간 $E_\lambda$ | Root space $\mathfrak{g}_\alpha$ |
+| 고유벡터 | Root vector |
+| 고유공간 분해 $V = \bigoplus E_\lambda$ | Root space 분해 $\mathfrak{g} = \bigoplus \mathfrak{g}_\alpha$ |
 
-차이는 단일한 operator가 아니라 전체 Cartan subalgebra가 동시에 대각화되고 있다는 점뿐이다. 이는 동시 대각화(simultaneous diagonalization)의 자연스러운 확장이다.
+차이는 단일 operator $A$ 대신 Cartan subalgebra $\mathfrak{h}$라는 **전체 family of commuting operators**를 동시에 대각화한다는 점이다.
 
-## Killing form과 기하학적 구조
+## Killing form과 근계의 구조
 
-선형대수에서 고유벡터들 사이의 관계를 이해하기 위해 종종 내적을 사용한다. Lie algebra에서도 유사하게, Killing form을 통해 roots 사이의 기하학적 관계를 파악할 수 있다.
+지금까지는 purely algebraic한 구조를 다루었다. 이제 **기하학적 구조**를 도입한다.
 
 Semisimple Lie algebra는 Killing form을 가진다:
 
-$$B(X, Y) = \text{tr}(\ad_X \circ \ad_Y)$$
+$$B(X, Y) = \text{tr}(\text{ad}_X \circ \text{ad}_Y)$$
 
-이 form은 non-degenerate이며, $\mathfrak{h}$에 제한했을 때도 non-degenerate이다. 따라서 canonical isomorphism
+이 form은 non-degenerate이며, $\mathfrak{h}$ 위에도 non-degenerate하다. 따라서 canonical isomorphism 
 
-$$\mathfrak{h} \to \mathfrak{h}^*: H \mapsto B(H, \cdot)$$
+$$\mathfrak{h} \xrightarrow{\sim} \mathfrak{h}^*: H \mapsto B(H, \cdot)$$
 
-이 존재한다. 이를 통해 $\mathfrak{h}^*$를 Euclidean space로 볼 수 있으며, roots 위에도 자연스럽게 inner product가 정의된다. Specifically, $\alpha, \beta \in \mathfrak{h}^*$에 대하여, 이에 대응되는 $H_\alpha, H_\beta \in \mathfrak{h}$가 있을 때,
+이 존재한다. 이를 통해 $\mathfrak{h}^*$를 inner product space로 볼 수 있다. 구체적으로, $\alpha, \beta \in \mathfrak{h}^*$에 대응되는 $H_\alpha, H_\beta \in \mathfrak{h}$가 있을 때,
 
 $$(\alpha, \beta) := B(H_\alpha, H_\beta)$$
 
-로 정의한다.
-
-이제 roots 모임 $\Phi$가 특별한 기하학적 구조를 가지는지 살펴보자.
+로 정의한다. 이제 roots들이 이 inner product에 대해 어떤 구조를 가지는지 살펴보자.
 
 <div class="definition" markdown="1">
 
@@ -122,11 +129,7 @@ $$(\alpha, \beta) := B(H_\alpha, H_\beta)$$
 
 </div>
 
-Root system의 조건들은 roots의 기하학적 구조가 극도로 제한적임을 보여준다. 예를 들어, 조건 4의 정수성과 조건 2의 정규화 조건으로부터, 두 roots가 이룰 수 있는 각도는 극히 제한된다. 구체적으로,
-
-$$\langle \beta, \alpha \rangle \langle \alpha, \beta \rangle = 4\cos^2\theta$$
-
-이고 이는 정수이므로, $\cos\theta \in \{0, \pm\frac{1}{2}, \pm\frac{\sqrt{2}}{2}, \pm\frac{\sqrt{3}}{2}, \pm 1\}$이어야 한다. 조건 2에 의해 $\cos\theta = \pm 1$은 배제되므로, roots는 $30°, 45°, 60°, 90°, 120°, 135°, 150°$의 각도만 이룰 수 있다.
+Root system의 조건들은 roots의 기하학적 관계가 매우 제한적임을 보여준다. 조건 4의 정수성과 조건 2의 정규화로부터, 두 roots가 이룰 수 있는 각도는 $30°, 45°, 60°, 90°, 120°, 135°, 150°$ 등으로 극히 제한된다.
 
 <div class="proposition" markdown="1">
 
@@ -136,27 +139,35 @@ $$\langle \beta, \alpha \rangle \langle \alpha, \beta \rangle = 4\cos^2\theta$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-조건 1은 root space decomposition의 구조로부터 직접 따른다. 조건 2도 root의 정의에서 명백하다.
+조건 1은 root space decomposition으로부터 명백하다. 조건 2도 root의 정의에서 자명하다.
 
-조건 3의 경우, $s_\alpha$가 $\Phi$를 보존함은 다음과 같이 보인다. $E_\alpha \in \mathfrak{g}_\alpha$, $E_\beta \in \mathfrak{g}_\beta$라 하고, $\text{ad}_{E_\alpha}$를 생각하자. $\mathfrak{h}$의 모든 원소와 commute하고 root space들을 연결하는 성질들이 있으며, 이를 통해 $s_\alpha(\beta) \in \Phi$ (혹은 $s_\alpha(\beta) = 0$)임을 보일 수 있다. (자세한 증명은 adjoint representation의 성질에 관한 deeper analysis를 요구하므로 여기서는 생략한다.)
+조건 3을 위해, $\alpha, \beta \in \Phi$이고 $E_\alpha \in \mathfrak{g}_\alpha$, $E_\beta \in \mathfrak{g}_\beta$라 하자. Jacobi identity 
 
-조건 4의 정수성은 root space와 Killing form의 정의로부터 자명하다.
+$$[H, [E_\alpha, E_\beta]] = [[H, E_\alpha], E_\beta] + [E_\alpha, [H, E_\beta]]$$
+
+로부터
+
+$$[H, [E_\alpha, E_\beta]] = (\alpha(H) + \beta(H))[E_\alpha, E_\beta]$$
+
+가 따른다. 따라서 $[E_\alpha, E_\beta]$는 weight $\alpha + \beta$를 가지거나 영벡터이다. 더 자세한 분석 (예: string representation)을 통해 reflection $s_\alpha$가 roots를 보존함을 보일 수 있다.
+
+조건 4의 정수성은 root space와 Killing form의 구조로부터 자명하다.
 
 </details>
 
 ## Simple roots와 Cartan matrix
 
-선형대수에서 전체 eigenspace를 알기 위해 각 eigenvalue에 대한 하나의 고유벡터만 필요하듯이, Lie theory에서도 모든 roots를 알 필요는 없다. 다음의 개념이 중요하다.
+Root space decomposition의 구조는 매우 복잡하지만, 모든 roots를 명시적으로 알 필요는 없다. 마치 고유공간의 basis들로 충분하듯이, **simple roots**만으로 전체 root system을 재구성할 수 있다.
 
-먼저 positive root system $\Phi^+ \subset \Phi$를 선택한다. 이는 각 root $\alpha$에 대해 $\alpha \in \Phi^+$ 또는 $-\alpha \in \Phi^+$ 중 정확히 하나가 성립하도록 하고, $\alpha, \beta \in \Phi^+$이면 $\alpha + \beta \in \Phi^+$ (만약 $\alpha + \beta \in \Phi$이면) 조건을 만족한다.
+먼저 positive roots의 system $\Phi^+ \subset \Phi$를 선택한다. 이는 각 root에 대해 정확히 하나의 방향을 선택하는 것이고, 적절한 ordering으로부터 정의된다.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Positive root system $\Phi^+ \subset \Phi$에서, $\alpha \in \Phi^+$가 **simple root**라는 것은 $\alpha$를 $\Phi^+$의 다른 원소들의 합으로 표현할 수 없는 것이다. Simple roots의 모임을 $\Delta$라 표기한다.
+<ins id="def3">**정의 3**</ins> Positive roots $\Phi^+ \subset \Phi$에 대하여, $\alpha \in \Phi^+$가 **simple root**라는 것은 $\alpha$를 $\Phi^+$의 다른 원소들의 음이 아닌 정수 일차결합으로 표현할 수 없는 것이다. Simple roots의 모임을 $\Delta$라 표기한다.
 
 </div>
 
-중요한 사실은 $\Phi$의 모든 원소가 simple roots의 음이 아닌 정수 일차결합으로 표현된다는 것이다. 따라서 root system 전체는 simple roots 사이의 inner products만으로 결정된다.
+중요한 사실은 모든 positive root가 simple roots의 음이 아닌 정수 일차결합으로 **유일하게** 표현된다는 것이다. 따라서 root system 전체는 simple roots의 구조, 즉 그들 사이의 inner products에 의해 완전히 결정된다.
 
 <div class="definition" markdown="1">
 
@@ -170,26 +181,26 @@ $$A = (a_{ij})_{1 \le i,j \le l}, \quad a_{ij} = \langle \alpha_i, \alpha_j \ran
 
 Cartan matrix는 다음의 성질을 가진다:
 - 대각 성분: $a_{ii} = 2$
-- 비대각 성분: $a_{ij} \in \{-3, -2, -1, 0\}$ (root 사이의 각도 제약으로부터)
-- 행렬이 indecomposable이면 root system도 indecomposable이다.
+- 비대각 성분 $a_{ij}$ ($i \neq j$): root 사이의 각도 제약에 의해 $a_{ij} \in \{-3, -2, -1, 0\}$
+- 행과 열을 permute했을 때 다른 형태가 되면, root system도 decomposable이다.
 
-이 행렬 하나가 **전체 root system의 구조를 완전히 결정한다**. Roots 사이의 모든 관계가 이 유한한 데이터에 담겨있다.
+이 유한한 행렬 하나가 **전체 semisimple Lie algebra의 root space 구조를 완전히 결정한다**. 
 
-## Weyl group: 근계의 대칭
+## Weyl group과 근계의 대칭성
 
-Root system의 정의 조건 3에서, 각 root에 대한 reflection들이 $\Phi$를 보존한다고 했다. 이러한 reflections들로 생성되는 group을 정의하자.
+Root system의 정의 조건 3에서 각 root에 대한 reflection이 $\Phi$를 보존한다고 했다. 이러한 reflections들로 생성되는 group을 정의하자.
 
 <div class="definition" markdown="1">
 
 <ins id="def5">**정의 5**</ins> Root system $\Phi$의 **Weyl group**은
 
-$$W(\Phi) := \langle s_\alpha \mid \alpha \in \Phi \rangle$$
+$$W(\Phi) := \langle s_\alpha \mid \alpha \in \Phi \rangle \subset O(E)$$
 
-이다. 즉, roots에 대한 모든 reflections로 생성되는 orthogonal group의 부분군이다.
+이다. 즉, 모든 root reflections로 생성되는 orthogonal group의 부분군이다.
 
 </div>
 
-중요한 관찰은 다음과 같다:
+Weyl group은 root system의 **모든 대칭**을 담당한다. 
 
 <div class="proposition" markdown="1">
 
@@ -199,33 +210,29 @@ $$W(\Phi) := \langle s_\alpha \mid \alpha \in \Phi \rangle$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-각 reflection $s_\alpha$는 유한집합 $\Phi$ 위에 작용한다. Weyl group이 faithful하게 $\Phi$ 위에 작용하므로 (조건 1에 의해), Weyl group은 대칭군 $S_\Phi$의 부분군이다. 따라서 유한하다.
+각 reflection $s_\alpha$는 유한집합 $\Phi$ 위에 작용한다. Root system의 조건 3에 의해 모든 reflections는 $\Phi$를 보존하므로, Weyl group은 대칭군 $S_\Phi$의 부분군이다. 따라서 유한하다.
 
 </details>
 
-Simple reflections $s_{\alpha_i}$ (simple roots에 대한 reflection)는 Weyl group을 생성한다. 따라서 Cartan matrix와 simple roots의 관계만으로 전체 Weyl group의 구조를 파악할 수 있다.
+중요한 관찰은 Weyl group이 simple reflections $\{s_{\alpha_i}\}$ (simple roots에 대한 reflection)로 생성된다는 것이다. 따라서 Cartan matrix를 알면 Weyl group의 구조도 파악할 수 있다.
 
-## 선형대수와의 종합
+## 결론: 선형대수에서 근계로
 
-이제 우리가 한 전체 구성을 정리하자.
+우리는 다음과 같은 길을 걸어왔다:
 
-**선형대수**: 행렬 $A$의 고유공간 분해
-- Eigenvalue들: 스칼라
-- Eigenspace들: 각 eigenvalue에 대한 부분공간
-- 고유벡터들의 성질: 일반적으로 제약이 없음
+1. **G-모듈 관점**: Lie algebra $\mathfrak{g}$의 표현을 $\mathfrak{g}$-모듈로 본다.
+2. **동시 대각화**: Cartan subalgebra $\mathfrak{h}$의 모든 원소들이 동시에 대각화 가능하다.
+3. **Weight space decomposition**: $\mathfrak{g}$를 동시 고유공간들로 분해한다.
+4. **Root space decomposition**: Nonzero weight들만 따로 모아 roots를 정의한다.
+5. **기하학적 구조**: Killing form으로부터 정의된 inner product에서 roots는 root system을 이룬다.
+6. **간결한 표현**: Simple roots와 Cartan matrix로 전체 구조를 인코딩한다.
+7. **대칭성**: Weyl group이 모든 대칭을 담당한다.
 
-**Lie theory**: Semisimple Lie algebra의 root space decomposition
-- Roots: Cartan subalgebra 위의 linear functionals
-- Root spaces: 각 root에 대한 부분공간
-- Roots의 기하학적 관계: Root system의 엄격한 조건들로 제약됨
-
-후자는 전자의 자연스러운 확장이다. 단일 operator의 고유공간 분해에서 출발하여, commuting family of operators (Cartan subalgebra)의 동시 고유공간 분해로 나아갔고, 그 결과 얻어지는 구조 (root system)는 예상보다 훨씬 풍부한 기하학적 성질을 가진다.
-
-Root system은 단순한 대수적 대상이 아니라, 기하학적으로도 매우 특별한 구조이며, 이는 Lie algebra의 깊은 구조를 반영한다. Weyl group은 이러한 기하학적 구조의 모든 대칭을 담당하며, 결과적으로 Lie algebra를 완전히 결정한다.
+이는 모두 선형대수의 기본 개념 **"행렬의 동시 고유공간 분해"**에서 출발한 것이다. Lie theory는 이 아이디어를 여러 개의 non-commuting operators로 확장하고, 그 결과적 구조를 깊이 있게 분석하는 학문이라고 할 수 있다.
 
 ---
 
-**참고**
+**참고문헌**
 - Humphreys, J. E. *Introduction to Lie Algebras and Representation Theory*. Springer, 1972.
 - Serre, J.-P. *Complex Semisimple Lie Algebras*. Springer, 1987.
 
