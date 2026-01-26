@@ -173,7 +173,7 @@ $$(L-\lambda_{m+1}I)^{k_{m+1}}v_1 + \cdots + (L-\lambda_{m+1}I)^{k_{m+1}}v_m=0$$
 
 **3단계: 차원 계산 및 직합분해**
 
-$[따름정리 4](#cor4)로부터 각 $i$에 대해 적당한 $k_i$가 존재하여 $G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i}$이다. 이제 generalized eigenspace 위의 $(L-\lambda_i I)$의 작용을 이용하여 차원을 계산한다.
+[따름정리 4](#cor4)로부터 각 $i$에 대해 적당한 $k_i$가 존재하여 $G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i}$이다. 이제 generalized eigenspace 위의 $(L-\lambda_i I)$의 작용을 이용하여 차원을 계산한다.
 
 $G_{\lambda_i}(L)$의 basis를 선택하고 이를 다음과 같이 구성할 수 있다: 부분공간들의 filtration
 
