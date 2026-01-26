@@ -69,11 +69,19 @@ $$\ker (A-I)=\span \{(1,0,0)\}$$
 
 이다. 그런데 높은 차수의 계산을 수행해보면,
 
-$$\ker(A-I)^2=\ker \begin{pmatrix}0&0&1\\0&0&0\\0&0&0\end{pmatrix}\span \{(1,0,0), (0,1,0)\}$$
+$$(A-I)^2=\begin{pmatrix}0&0&1\\0&0&0\\0&0&0\end{pmatrix}$$
+
+이므로
+
+$$\ker(A-I)^2=\span \{(1,0,0), (0,1,0)\}$$
 
 그리고
 
-$$\ker (A-I)^3=\ker \begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}=\span \{(1,0,0), (0,1,0), (0,0,1)\}$$
+$$(A-I)^3=\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}$$
+
+이므로
+
+$$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$$
 
 임을 안다. 
 
@@ -105,7 +113,7 @@ $$G_\lambda(L)=\left\{v\in V\mid (L-\lambda I)^kv=0\text{ for some $k\geq 0$}\ri
 
 $$\ker(L-\lambda I)^k=\ker(L-\lambda I)^{k+1}=\cdots$$
 
-를 만족하는 $k$가 존재한다. 한편 정의에 의해 임의의 $v\in G_\lambda(L)$에 대하여, $(L-\lambda I)^m v=0$을 만족하는 $m$이 존재하는데, $k' =\max(k,m)$이라 하면 $(L-\lambda I)^{k'}v=0$이고 $k'\geq k$이므로 $v\in \ker(L-\lambda I)^{k'}=\ker(L-\lambda I)^k$이다.
+를 만족하는 $k$가 존재한다. 한편 정의에 의해 임의의 $v\in G_\lambda(L)$에 대하여, $(L-\lambda I)^m v=0$을 만족하는 $m$이 존재한다. $k' =\max(k,m)$이라 하면, 보조정리 1에서 filtration이 $k$를 넘으면 정지한다는 사실로부터 $\ker(L-\lambda I)^{k'} = \ker(L-\lambda I)^k$이다. 따라서 $(L-\lambda I)^{k'}v=0$이고 $k'\geq k$이므로 $v\in \ker(L-\lambda I)^{k'}=\ker(L-\lambda I)^k$이다.
 
 </details>
 
@@ -269,22 +277,29 @@ $$J=\begin{pmatrix}J_{k_1}(\lambda_1)&0&\cdots&0\\0&J_{k_2}(\lambda_2)&\cdots&0\
 
 [정리 5](#thm5)로부터 $V=\bigoplus_{i=1}^m G_{\lambda_i}(L)$이고, 각 $G_{\lambda_i}(L)$ 위에서 $L-\lambda_i I$는 nilpotent이다. 따라서 각 generalized eigenspace에서 적당한 basis를 택하면, 그 basis에 대한 $L$의 행렬 표현이 Jordan block들의 직합으로 나타난다는 것을 보이면 충분하다.
 
-Nilpotent operator $N:W\rightarrow W$에 대한 Jordan form을 구성하자. [보조정리 1](#lem1)로부터
+Nilpotent operator $N:W\rightarrow W$이 정의된 유한차원 벡터공간 $W$ 위에서 Jordan form을 구성하자. [보조정리 1](#lem1)로부터
 
 $$0=\ker N^0\subsetneq\ker N^1\subsetneq\cdots\subsetneq\ker N^{k-1}\subsetneq\ker N^k=W$$
 
-인 filtration이 존재한다. 이제 다음과 같이 basis를 구성한다:
+인 filtration이 존재하며, $k$는 $\ker N^k = \ker N^{k+1}$을 만족하는 최소 정수이다. 이제 역으로 이 filtration으로부터 Jordan basis를 구성한다.
 
-1. $\ker N^k/\ker N^{k-1}$의 basis를 택하고, 이를 $W$로 lift한 벡터들을 $v_1,\ldots, v_r$이라 하자.
-2. 이 벡터들에 $N$을 반복적으로 적용하여 만든 벡터들
+$j=k, k-1, \ldots, 1$에 대해 순서대로 다음을 수행한다: 각 $j$마다 $\ker N^j / \ker N^{j-1}$의 basis를 선택하고, 이 basis 원소들을 $W$로 lift한 벡터들을 $u_{j,1}, u_{j,2}, \ldots, u_{j,r_j}$라 하자. (여기서 $r_j = \dim(\ker N^j) - \dim(\ker N^{j-1})$이다.)
 
-$$v_i, Nv_i, N^2v_i,\ldots, N^{k-1}v_i$$
+각 벡터 $u_{j,i}$에 대해 다음의 Jordan chain을 구성한다:
 
-을 생각하자. 이들은 Jordan block에 대응되는 basis를 이룬다.
+$$u_{j,i}, Nu_{j,i}, N^2u_{j,i}, \ldots, N^{j-1}u_{j,i}$$
 
-3. 이 과정을 각 $\ker N^j/\ker N^{j-1}$에 대해 반복하면 $W$ 전체의 basis를 얻는다.
+이 chain은 정확히 $j$개의 원소를 가진다. 왜냐하면 $u_{j,i} \in \ker N^j \setminus \ker N^{j-1}$이므로 $N^{j-1}u_{j,i} \neq 0$이지만 $N^j u_{j,i} = 0$이기 때문이다.
 
-이렇게 구성된 basis에 대해 $N$의 행렬 표현은 Jordan block들의 직합이 된다. $L=N+\lambda I$이므로, $L$의 행렬 표현은 각 Jordan block $J_k(0)$을 $J_k(\lambda)$로 바꾼 형태가 된다.
+모든 $j=k, k-1, \ldots, 1$과 모든 $i=1, \ldots, r_j$에 대해 이러한 chain들을 모으면, 총
+
+$$\sum_{j=1}^k j \cdot r_j = \sum_{j=1}^k j(\dim(\ker N^j) - \dim(\ker N^{j-1})) = \dim W$$
+
+개의 벡터를 얻는다. (마지막 등식은 telescoping series이다.) 이 벡터들이 $W$의 basis를 이루며, 이 basis에 대해 $N$의 행렬 표현은 크기 $1, 2, \ldots, k$인 Jordan block $J_j(0)$들의 직합이 된다.
+
+$G_{\lambda_i}(L)$ 위에 이를 적용하면, $L - \lambda_i I$가 nilpotent이므로 위의 구성을 $N = L - \lambda_i I$, $W = G_{\lambda_i}(L)$으로 사용할 수 있다. 그러면 $L = (L-\lambda_i I) + \lambda_i I = N + \lambda_i I$이므로, $L$의 행렬 표현은 각 Jordan block $J_j(0)$을 $J_j(\lambda_i)$로 바꾼 형태가 된다.
+
+각 generalized eigenspace $G_{\lambda_i}(L)$에 대해 이 과정을 적용하고, 얻은 basis들을 합치면 $V$ 전체의 basis를 얻고, 이 basis에 대한 $L$의 행렬 표현은 정리 11의 형태가 된다.
 
 </details>
 
