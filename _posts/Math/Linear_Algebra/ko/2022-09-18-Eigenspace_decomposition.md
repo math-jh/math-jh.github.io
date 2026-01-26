@@ -15,7 +15,7 @@ header:
 date: 2022-09-18
 last_modified_at: 2022-09-18
 
-weight: 24
+weight: 16
 
 ---
 
@@ -95,7 +95,7 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 임의의 $\mathbb{K}$-벡터공간 $V$와, 부분공간 $(W\_i)\_{i\in I}$에 대하여 $V=\bigoplus\_{i\in I} W\_i$인 것은 $W_i$의 basis $\mathcal{B}\_i$들이 $i\neq j$일 때마다 $\mathcal{B}\_i\cap\mathcal{B}\_j=\emptyset$을 만족하고, $\bigcup\_{i\in I}\mathcal{B}\_i$가 $V$의 basis가 되는 것과 동치이다.
+<ins id="prop3">**명제 3**</ins> 임의의 $\mathbb{K}$-벡터공간 $V$와, 부분공간 $(W\_i)\_{i\in I}$에 대하여 $V=\bigoplus\_{i\in I} W\_i$인 것은 $W_i$의 basis $\mathcal{B}\_i$들이 $i\neq j$일 때마다 $\mathcal{B}\_i\cap\mathcal{B}\_j=\emptyset$을 만족하고, $\bigcup\_{i\in I}\mathcal{B}\_i$가 $V$의 basis가 되는 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -115,7 +115,7 @@ $$v=\sum\_{i\in I} w\_i$$
 
 ## 대각화
 
-이제 $\mathbb{K}^n$을 고유공간으로 분해하는 법을 살펴본다. 앞선 [명제 2](#prop2)로부터 벡터공간 $\mathbb{K}^n$을 고유공간들 $E\_\lambda$로 분해하는 것은 $E\_\lambda$의 basis들을 모아서 $\mathbb{K}^n$의 basis를 나타내는 것과 같다는 것을 안다. 또, 영이 아닌 벡터 $x\_1$이 고윳값 $\lambda\_1$에 대응되는 고유벡터라 하면, 또 다른 고윳값 $\lambda\_2$에 대하여
+이제 $\mathbb{K}^n$을 고유공간으로 분해하는 법을 살펴본다. 앞선 [명제 3](#prop3)으로부터 벡터공간 $\mathbb{K}^n$을 고유공간들 $E\_\lambda$로 분해하는 것은 $E\_\lambda$의 basis들을 모아서 $\mathbb{K}^n$의 basis를 나타내는 것과 같다는 것을 안다. 또, 영이 아닌 벡터 $x\_1$이 고윳값 $\lambda\_1$에 대응되는 고유벡터라 하면, 또 다른 고윳값 $\lambda\_2$에 대하여
 
 $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
@@ -123,7 +123,7 @@ $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 임의의 행렬 $A$에 대하여, $x\_1,\ldots, x\_m$들이 각각 서로 다른 고윳값들 $\lambda\_1,\ldots,\lambda\_m$들에 대응되는 고유벡터들이라 하자. 그럼 집합 $\\{x\_1,\ldots,x\_m\\}$은 일차독립이다. 
+<ins id="prop4">**명제 4**</ins> 임의의 행렬 $A$에 대하여, $x\_1,\ldots, x\_m$들이 각각 서로 다른 고윳값들 $\lambda\_1,\ldots,\lambda\_m$들에 대응되는 고유벡터들이라 하자. 그럼 집합 $\\{x\_1,\ldots,x\_m\\}$은 일차독립이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -182,7 +182,7 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> $n\times n$ 행렬 $A$의 고윳값 $\lambda\in\mathbb{K}$에 대하여, $\lambda$의 기하적 중복도는 항상 $\lambda$의 대수적 중복도를 넘지 못한다.
+<ins id="prop5">**명제 5**</ins> $n\times n$ 행렬 $A$의 고윳값 $\lambda\in\mathbb{K}$에 대하여, $\lambda$의 기하적 중복도는 항상 $\lambda$의 대수적 중복도를 넘지 못한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -204,7 +204,7 @@ $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmat
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda I_k&B\\ 0&C\end{pmatrix}\end{aligned}$$
 
-이 된다. 따라서 $A$의 특성다항식을 $p_A(\mathbf{x})$라 적으면, 이전 글의 [정의 3]() 다음의 논증으로부터 $p_A(\mathbf{x})=p_{A'}(\mathbf{x})$이고 따라서
+이 된다. 따라서 $A$의 특성다항식을 $p_A(\mathbf{x})$라 적으면, [§특성다항식, ⁋정리 4](/ko/math/linear_algebra/characteristic_polynomial#cor4)으로부터 $p_A(\mathbf{x})=p_{A'}(\mathbf{x})$이고 따라서
 
 $$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
@@ -212,11 +212,11 @@ $$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\
 
 </details>
 
-$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 3](#prop3) 이후의 논증으로부터, $\mathbb{K}^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
+$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 4](#prop4) 이후의 논증으로부터, $\mathbb{K}^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 임의의 $n\times n$ 행렬 $A$에 대하여, $\mathbb{K}^n$이 $A$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
+<ins id="prop6">**명제 6**</ins> 임의의 $n\times n$ 행렬 $A$에 대하여, $\mathbb{K}^n$이 $A$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
 
 1. $A$의 특성다항식이 중복도를 고려하였을 때 $n$개의 근을 가지며,
 2. 이 때 각각의 고윳값의 기하적 중복도와 대수적 중복도가 같은 것이다.
@@ -225,9 +225,143 @@ $n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$�
 
 특별히 $\mathbb{K}$가 algebraically closed field라면 첫째 조건은 항상 만족되므로, 둘째 조건만 고려하면 된다.
 
+우리는 행렬의 대각화를 다루는 동안에는 field $\mathbb{K}$가 algebraically closed임을 가정한다. 이는 오직 편의를 위한 것으로, 만일 $\mathbb{K}$가 algebraically closed가 아닐 경우, 관심있는 행렬의 특성다항식의 해를 직접 넣어준 field extension을 생각하면 된다. ([\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions)) 이는, 예를 들어 방정식 $\x^2+1=0$의 허근 $i$를 추가하여 $\mathbb{R}$에서 $\mathbb{C}$를 얻어내는 것과 정확히 똑같은 것이다. 
 
+## 행렬의 대각화
 
-[^1]: 물론, 언제나와 같이 이 합은 사실은 유한합인 것으로 가정한다. 즉 $(v\_i)\_{i\in I}$는 finitely supported인 것으로 가정한다.
+우리는 앞서 임의의 $n\times n$ 행렬 $A$가 주어졌을 때, $A$의 고윳값과 고유공간을 통해 $\mathbb{R}^n$을 분해하는 방법을 살펴보았고, [명제 6](#prop6)으로부터 이러한 분해가 언제 가능한지 또한 알게 되었다. 이를 증명하기 위해 사용했던 [명제 5](#prop5)의 증명을 다시 한 번 살펴보자. 우리는 $E_\lambda$의 basis $x_1,\ldots, x_k$에 $n-k$개의 임의의 벡터를 추가한 후, 이를 통해 행렬 $X=(x\_1\|\cdots\|x\_n)$을 정의한 후 계산을 통해
+
+$$XAX^{-1}=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
+
+의 왼쪽 위 $k\times k$ 블록행렬이 대각행렬 $\lambda I_k$가 된다는 것을 보았다. 그런데 만일 $A$가 [명제 6](#prop6)의 조건을 모두 만족한다면, $n-k$개의 벡터들 $x\_{k+1},\ldots, x_n$을 마구잡이로 추가할 것이 아니라, $n$개의 벡터들 $x_1,\ldots, x_n$이 모두 $A$의 고유공간의 basis가 되도록 잡을 수 있다. 그럼 [명제 5](#prop5)의 증명 중
+
+$$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
+
+으로부터 $C$도 대각행렬이 되고, $B$는 영행렬이 된다는 것을 알 수 있다. 따라서 다음이 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7**</ins> [명제 6](#prop6)의 조건을 모두 만족하는 $n\times n$ 행렬 $A$를 생각하고, 고유공간들의 basis로 이루어진 $\mathbb{R}^n$의 basis를 잡아 이를 $x_1,\ldots, x_n$이라 하자. $Ax_i=\lambda_ix_i$라 하고, $X=(x\_1\|\cdots\|x\_n)$이라 하면, 대각행렬
+
+$$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\lambda_n\end{pmatrix}$$
+
+에 대하여 $A=XDX^{-1}$이 성립한다. 
+
+</div>
+
+따라서 이 조건을 만족하는 행렬 $A$에 그럴듯한 이름을 붙여줄 수 있다.
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> [명제 5](#prop5)의 조건을 모두 만족하는 $n\times n$ 행렬 $A$를 *diagonalizable<sub>대각화가능</sub>*이라 한다.
+
+</div>
+
+혹은, [명제 6](#prop6)은 필요충분조건이었으므로, 대각행렬과 닮은 행렬을 diagonalizable한 행렬이라 불러도 아무런 문제가 없다. 바꾸어 말하자면 임의의 diagonalizable matrix의 eigenvalue에 의해 완전하게 결정된다. 
+
+Diagonalizable matrix들이 개념적으로 중요하다는 것은 위에서 충분히 살펴보았다. 이 뿐만 아니라 diagonalizable matrix들은 계산의 편의성 측면에서도 크게 도움이 된다. 가령 행렬 $A$가 대각화 가능하여 $A=XDX^{-1}$이라면, $A$의 거듭제곱은 $A^k=XD^kX^{-1}$로 주어지며 대각행렬의 거듭제곱은 각 성분의 거듭제곱으로 만들어진 대각행렬에 불과하므로 $A$의 거듭제곱을 계산하는 것은 아주 쉬운 일이 된다. 
+
+더 일반적으로 만일 행렬들 $A_1,\ldots, A_k$가 같은 행렬 $X$를 통해 diagonalizable이라면, 즉 
+
+$$A_i=XD_iX^{-1}$$
+
+라면
+
+$$A_1A_2\cdots A_k =XD_1D_2\cdots D_kX^{-1}$$
+
+이고 대각행렬의 곱은 대각성분들의 곱으로 이루어진 대각행렬에 불과하므로 $A_1A_2\cdots A_k$를 계산하는 것 또한 크게 어렵지 않은 일이 될 수도 있다. 이런 경우를 우리는 다음과 같이 이름붙인다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> 행렬들의 family $\\{A_i\\}$가 *simultaneously diagonalizable<sub>동시대각화가능</sub>*이라는 것은 적당한 invertible matrix $X$가 존재하여 모든 $i$에 대하여 $X^{-1}A_iX$이 대각행렬이도록 할 수 있다는 것이다. 
+
+</div>
+
+만일 두 행렬 $A,B$가 고정된 행렬 $X$를 통해 simultaneously diagonalizable이라면, 다음의 식
+
+$$AB=XD_AX^{-1}XD_BX^{-1}=XD_AD_BX^{-1}=XD_BD_AX^{-1}=BA$$
+
+으로부터 두 행렬 $A, B$는 commute한다는 것을 안다. 다음 명제는 (diagonalizable인 행렬에 대해서는) 그 역 또한 성립함을 보여준다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10**</ins> 두 diagonalizable matrix $A,B$가 조건 $AB=BA$를 만족한다면, $A, B$는 simultaneously diagonalizable이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+본질적으로, 이는 두 행렬 $A,B$가 같은 eigenspace decomposition을 준다는 것을 보이면 충분하다. $A$를 사용한 eigenspace decomposition
+
+$$V=\bigoplus_{\lambda}E_\lambda(A)$$
+
+를 생각하자. 그럼 임의의 $v\in E_\lambda(A)$에 대하여, 다음의 식
+
+$$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
+
+인 것으로부터 $Bv\in E_\lambda(A)$임을 안다. 이제 $B$를 벡터공간 $E_\lambda(A)$ 위에서의 linear operator로 보면, 원래의 linear operator $B$가 diabonalizable이었으므로 $B$는 $E_\lambda(A)$ 위에서도 diagonalizable이고 따라서 $B$의 eigenvector들로 이루어진 $E_\lambda(A)$의 basis가 존재한다. 이제 $E_\lambda(A)$의 임의의 원소는 $A$의 (eigenvalue $\lambda$에 해당하는) eigenvector들이므로, 이들은 $A$의 eigenvector이기도 하다. 
+
+</details>
+
+## 선형연산자의 고유공간분해
+
+지금까지 우리는 주어진 행렬을 대각화하는 과정을 살펴보았고, 기본적으로 이는 (대각화가능한) 선형연산자가 주어졌을 때 벡터공간을 고유공간들로 분해하는 것과 같다. 이에 대한 증명을 위해 우리는 고유공간의 기저를 적극적으로 활용했다. 이를 기저의 선택없이 설명하는 것은 다음 글에서 다룰 조르당 표준형을 살펴볼 때 도움이 될 것이다. 
+
+유한차원 벡터공간 $V$와 linear operator $L:V\rightarrow V$에 대하여, 우리는 다음의 식
+
+$$\rank L +\nullity L=\dim V$$
+
+이 성립하는 것을 보았다. ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)) 여기서 $\rank L=\dim\im L$이고 $\nullity L=\dim\ker L$이다. 그러나 이것이 곧 $V$를 $\im L$과 $\ker L$의 direct sum으로 나타낼 수 있다는 뜻은 아니다. 가령, [명제 4](#def4) 이후에 대각화 불가능한 예시였던 행렬 $A$에 대하여,
+
+$$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
+
+이 정의하는 operator를 생각하면 $\ker (A-I)\cap \im(A-I)\neq \\{0\\}$이다. 허나 만일 $\ker L\cap \im L=\\{0\\}$이 성립하기만 한다면, [§벡터공간의 차원, ⁋예시 8](/ko/math/linear_algebra/dimension#ex8)과 [명제 2](#prop2)로부터 우리는 반드시 $V=\ker L\oplus \im L$인 것을 안다. 다음 보조정리는 이 조건과 동치인 조건을 준다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="lem10">**보조정리 10**</ins> 위와 같은 상황에서, $\ker L\cap \im L=\\{0\\}$인 것은 $\ker L^2=\ker L$인 것과 동치이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+약간의 생각을 통해, $\ker L^2=\ker L$은 $\ker L^2\subset \ker L$과 동치임을 안다. 따라서 보여야 할 것은 다음의 동치관계
+
+$$\ker L\cap \im L=\{0\}\iff \ker L^2\subset\ker L$$
+
+이다. 
+
+우선 $\ker L\cap \im L=\\{0\\}$이라 하고 $v\in\ker L^2$이라 하자. 그럼 $0=L^2 v=L(Lv)$이므로 $Lv\in\ker L$이고, 따라서 가정에 의해 $Lv=0$이어야 한다. 즉 $v\in\ker L$이다. 거꾸로 $\ker L^2\subset \ker L$라 가정하고 $v\in \ker L\cap \im L$이라 하자. 그럼 $v\in \im L$이므로 $v=Lw$를 만족하는 $w\in V$가 존재한다. 그런데 $v\in\ker L$이기도 하므로,
+
+$$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subset \ker L$$
+
+이므로 $w\in \ker L$이다. 즉, $v=Lw=0$이다. 
+
+</details>
+
+다시 원래의 이야기로 돌아오면, 우리는 특별히 $L$이 어떠한 linear operator와 그 eigenvalue에 대하여 $A-\lambda I$의 꼴인 경우가 특별히 궁금하다. 다음 명제는 [보조정리 10](#lem10)을 사용하여 diagonalizability를 간결하게 특징짓는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11**</ins> Linear operator $L:V\rightarrow V$가 diagonalizable인 것은 모든 고윳값 $\lambda\in\Spec(L)$에 대하여 $\ker(L-\lambda I)^2=\ker(L-\lambda I)$인 것과 동치이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 $L$이 diagonalizable이라 하자. 그럼 $V=\bigoplus_{\mu\in\Spec(L)} E_\mu(L)$이다. 임의의 $v\in\ker(L-\lambda I)^2$를 취하면, $v=\sum_{\mu\in\Spec(L)}v_\mu$로 유일하게 쓸 수 있고, 
+
+$$(L-\lambda I)^2v=\sum_{\mu\in\Spec(L)}(L-\lambda I)^2v_\mu=\sum_{\mu\in\Spec(L)}(\mu-\lambda)^2v_\mu=0$$
+
+이다. 고유공간 분해의 유일성으로부터 $(\mu-\lambda)^2v_\mu=0$이 모든 $\mu$에 대해 성립해야 하고, $\mu\neq\lambda$일 때는 $v_\mu=0$이므로 $v=v_\lambda\in E_\lambda(L)=\ker(L-\lambda I)$이다.
+
+거꾸로 모든 고윳값 $\lambda$에 대하여 $\ker(L-\lambda I)^2=\ker(L-\lambda I)$라 하자. [보조정리 10](#lem10)으로부터 각 $\lambda$에 대해 $\ker(L-\lambda I)\cap\im(L-\lambda I)=\\{0\\}$이고, dimension theorem에 의해
+
+$$\dim\ker(L-\lambda I)+\dim\im(L-\lambda I)=\dim V$$
+
+이므로 $V=\ker(L-\lambda I)\oplus\im(L-\lambda I)$이다. 이제 $\im(L-\lambda I)$ 위에서 $L-\lambda I$를 다시 생각하면, 귀납적으로 $V$를 고유공간들로 분해할 수 있다.
+
+</details>
 
 ---
 
@@ -235,3 +369,5 @@ $n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$�
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 
 ---
+
+[^1]: 물론, 언제나와 같이 이 합은 사실은 유한합인 것으로 가정한다. 즉 $(v\_i)\_{i\in I}$는 finitely supported인 것으로 가정한다.

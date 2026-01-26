@@ -15,13 +15,13 @@ header:
 date: 2021-10-16
 last_modified_at: 2022-08-07
 
-weight: 12
+weight: 11
 
 ---
 
 지난 글에서 각각 $n$차원, $m$차원인 두 $\mathbb{K}$-벡터공간 $V,W$에 대하여 $\Hom(V,W)$는 $mn$차원 $\mathbb{K}$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\Mat_{m\times n}(\mathbb{K})$ 또한 $mn$차원의 $\mathbb{K}$-벡터공간이다. 그럼 [§동형사상, ⁋따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#cor4)로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
 
-이번 글에서 증명할 선형대수학의 기본정리[^1]는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em_ko>자연스러운</em_ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 이 <em_ko>자연스럽다</em_ko>는 말의 뜻은 다음 글에서 조금 더 자세히 살펴본다.
+이번 글에서 증명할 선형대수학의 기본정리[^1]는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em_ko>자연스러운</em_ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 
 
 ## 기본정리: 유클리드 공간
 
@@ -201,13 +201,7 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 
 </details>
 
-사실 [정리 4](#thm4)와 [정리 5](#thm5)를 증명하는 데에는 [정리 2](#thm2)와 [정리 3](#thm3)의 어떠한 결과도 사용되지 않았다. 그럼에도 불구하고 이들 정리를 별개로 서술해둔 이유는 다음 글에서 살펴본다.
-
-## 기본정리의 결과들
-
-선형대수학의 기본정리는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat\_{m\times n}(\mathbb{K})$를 같은 것으로 취급할 수 있다는 것을 보여준다. 예컨대 $\Mat\_{m\times n}(\mathbb{K})$의 $mn$개의 basis는 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 살펴본 $mn$개의 basis에 대응된다. 
-
-다음 따름정리 또한 기본정리의 결과이다.
+위의 [정리 4](#thm4)는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat\_{m\times n}(\mathbb{K})$를 같은 것으로 취급할 수 있다는 것을 보여준다. 예컨대 $\Mat\_{m\times n}(\mathbb{K})$의 $mn$개의 basis는 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 살펴본 $mn$개의 basis에 대응된다. 다음 따름정리 또한 기본정리의 결과이다.
 
 <div class="proposition" markdown="1">
 
@@ -221,8 +215,63 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 
 </details>
 
-이와 같이 [§행렬](/ko/math/linear_algebra/matrices)에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 다다음 글에서 쌍대공간에 대해 자세히 살펴보면 적절한 의미를 부여할 수 있다.
+이와 같이 [§행렬](/ko/math/linear_algebra/matrices)에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 나중에 쌍대공간을 살펴보면 그 의미를 알 수 있다. 
 
+## 기저변환 행렬
+
+[정리 4](#thm4)를 한 마디로 요약하자면, $n$차원 벡터공간 $V$에서 $m$차원 벡터공간 $W$로의 linear map은, 이들 각각의 basis $\mathcal{B}, \mathcal{C}$를 고정하면, 이를 $m\times n$로 나타낼 수 있고 거꾸로 임의의 $m\times n$ 행렬 또한 linear map으로 이해할 수 있다는 것이다. 그렇다면 자연스러운 질문 중 하나는 우리가 basis를 바꾸었을 때 어떠한 일이 생기는지이며, 이는 사실 [정리 5](#thm5)에 이미 그 답이 나와있다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def7">**정의 7**</ins> 임의의 유한차원 $\mathbb{K}$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *기저변환행렬<sub>change-of-basis matrix</sub>*은 
+
+$$[\id_V]_{\mathcal{B}'}^\mathcal{B}$$
+
+를 의미한다.
+
+</div>
+
+벡터공간의 차원이 잘 정의된다는 것으로부터 이러한 행렬은 반드시 정사각행렬이 되어야 한다는 것이 자명하다. 또, 다음의 식
+
+$$I=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=[\id_V]_{\mathcal{B}}^{\mathcal{B}'}[\id_V]^\mathcal{B}_{\mathcal{B}'}$$
+
+으로부터 이러한 행렬은 항상 가역이라는 것을 알 수 있다.
+
+기저변환행렬이 어떤 방식으로 작동하는지를 살펴보기 위해 유한차원 $\mathbb{K}$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
+
+![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_basis-1.png){:style="width:7em" class="invert" .align-center}
+
+이 때 두 개의 수직방향 함수는 각각 $v\mapsto [v]\_\mathcal{B}$와 $v\mapsto[v]\_{\mathcal{B}'}$를 의미한다. 따라서 기저변환행렬은 $v\in V$의 $\mathcal{B}$에 대한 좌표표현을 받아, $\mathcal{B}'$에 대한 좌표표현으로 바꾸어주는 행렬이라 생각할 수 있다. 더 일반적으로 임의의 linear map $L:V\rightarrow W$가 주어졌다 하고, $V,W$의 basis $\mathcal{B},\mathcal{C}$, 그리고 또 다른 basis $\mathcal{B}',\mathcal{C}'$가 주어졌다 하면, 선형대수학의 기본정리로부터 다음의 식
+
+$$[L]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_W]_{\mathcal{C}'}^\mathcal{C}[L]_{\mathcal{C}}^\mathcal{B}[\id_V]^{\mathcal{B}'}_{\mathcal{B}}$$
+
+를 얻는다.
+
+두 $m\times n$ 행렬 $A,B$가 주어졌다 하자. 그럼 위의 식에서부터, 만일 적당한 두 가역행렬 $P,Q$가 존재하여 다음의 식
+
+$$B=PAQ$$
+
+를 만족한다면 $A$와 $B$를 같은 것으로 취급하고 싶은 유혹이 있다. 이는 고정된 linear map $L$이 주어졌을 때, $L$의 정의역과 공역의 basis를 잘 택하여 얻어지는 행렬표현들을 모두 같은 것으로 생각한다는 것이다. 
+
+그러나 이렇게 그럴듯한 동기에 비해 그 결과는 별로 좋지 않다. $L$의 정의역과 공역의 basis를 모두 변화시킬 수 있다면, 정의역의 임의의 basis $\\{x\_1,\ldots, x_n\\}$을 택하고, 이후 공역에서는 $L(x_1),\ldots, L(x_n)$들 중 일차독립인 $L(x_1),\ldots, L(x_k)$를 택한 후 [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#prop6)을 이용하여 공역의 basis를 만들면 이 linear map은 항상 블록행렬
+
+$$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
+
+꼴로 나타낼 수 있기 때문이다. 즉, 이런 식으로 $L$의 행렬표현을 분류한다면 여기에 영향을 미치는 것은 오직 $L$의 rank 뿐이다.
+
+따라서 우리는 이 동치관계보다 세밀한 관계를 정의해야 한다.
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> 임의의 $n\times n$ 행렬 $A,B$가 주어졌다 하자. 그럼 $A$와 $B$가 *닮은 행렬<sub>similar matrix</sub>*이라는 것은 적당한 가역행렬 $P$가 존재하여 $A=PBP^{-1}$이 성립하는 것이다.
+
+</div>
+
+즉 행렬 $A,B$가 닮은 행렬이라는 것은, 고정된 벡터공간 $V$에 대해 $A$를 <em_ko>basis $\mathcal{B}$에 대한 선형변환 $L:V\rightarrow V$의 행렬표현</em_ko>이라 생각했을 때, 적당한 basis $\mathcal{C}$가 존재하여 $B$를 <em_ko>basis $\mathcal{C}$에 대한 $L$의 행렬표현</em_ko>이라 생각할 수 있는 것이다. 그럼 이 때 
+
+$$A=[L]_{\mathcal{B}}^\mathcal{B}=[\id_V]^\mathcal{B}_\mathcal{C}[L]^\mathcal{C}_\mathcal{C}[\id_V]^\mathcal{C}_\mathcal{B}=PBP^{-1}$$
+
+이 된다. 
 
 ---
 

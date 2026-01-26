@@ -36,7 +36,7 @@ weight: 7
 
 </div>
 
-다음 명제들은 거의 정의로부터 자명하다.
+특별히 $V=W$인 경우 우리는 이들을 *linear operator<sub>선형연산자</sub>*라 부른다. 다음 명제들은 거의 정의로부터 자명하다.
 
 <div class="proposition" markdown="1">
 
