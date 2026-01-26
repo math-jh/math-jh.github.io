@@ -131,9 +131,7 @@ $$p_L(\mathbf{x})=\prod_{i=1}^m (\mathbf{x}-\lambda_i)^{m_i}$$
 
 라 하자. 여기서 $m_i$는 $\lambda_i$의 대수적 중복도이고 $\sum_{i=1}^m m_i=\dim V$이다.
 
-**1단계: 서로 다른 generalized eigenspace의 교집합**
-
-$i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$임을 보이자. $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 $(L-\lambda_i I)^{k_i}v=0$과 $(L-\lambda_j I)^{k_j}v=0$을 만족하는 정수 $k_i, k_j$가 존재한다. 
+먼저 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$임을 보이자. $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 $(L-\lambda_i I)^{k_i}v=0$과 $(L-\lambda_j I)^{k_j}v=0$을 만족하는 정수 $k_i, k_j$가 존재한다. 
 
 $p$를 $(L-\lambda_i I)^{k_i}v=0$을 만족하는 최소 음이 아닌 정수라 하면, $w=(L-\lambda_i I)^p v$는 $Lw=\lambda_i w$를 만족하는 영이 아닌 벡터, 즉 고유값 $\lambda_i$에 대응하는 고유벡터이다.
 
@@ -143,15 +141,9 @@ $$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^p v=(L-\lambda_i I
 
 이다. 따라서 $w\in \ker(L-\lambda_j I)^{k_j}=G_{\lambda_j}(L)$이다. 그런데 $w$는 고유값 $\lambda_i$에 대응하는 고유벡터이면서 동시에 $G_{\lambda_j}(L)$에 속한다. 
 
-만약 $v'\in G_{\lambda_j}(L)$이고 $(L-\lambda_j I)^s v'=0$이면, 어떤 최소 양의 정수 $q$ 이전의 단계에서 $(L-\lambda_j I)^{q-1}v'\neq 0$이고 $(L-\lambda_j I)^q v'=0$이다. 즉 $(L-\lambda_j I)^{q-1}v'$는 고유값 $\lambda_j$에 대응하는 고유벡터이다. 따라서 generalized eigenspace의 모든 벡터는 같은 고유값에만 대응하는 고유벡터를 생성하므로, $w$가 고유값 $\lambda_i$에 대응하면서 동시에 $G_{\lambda_j}(L)$에 속할 수 없다. 이는 모순이므로 $v=0$이어야 한다.
+Generalized eigenspace의 모든 벡터 $v'\in G_{\lambda_j}(L)$에 대해 $(L-\lambda_j I)^s v'=0$을 만족하는 어떤 정수 $s$가 존재한다. 최소 양의 정수 $q$가 존재하여 $(L-\lambda_j I)^{q-1}v'\neq 0$이고 $(L-\lambda_j I)^q v'=0$이면, $(L-\lambda_j I)^{q-1}v'$는 고유값 $\lambda_j$에 대응하는 고유벡터이다. 따라서 generalized eigenspace의 모든 벡터로부터 생성되는 고유벡터는 모두 같은 고유값에 대응한다. 이는 $w$가 고유값 $\lambda_i$에 대응하면서 동시에 $G_{\lambda_j}(L)$에 속할 수 없다는 의미이다. 이는 모순이므로 $v=0$이어야 한다.
 
-**2단계: generalized eigenvector의 선형독립성**
-
-서로 다른 generalized eigenspace에서 각각 뽑은 벡터들의 모임은 일차독립임을 보이자. 귀납법을 사용한다.
-
-기저 단계: $m=1$일 때 당연하다.
-
-귀납 단계: $m$개의 distinct eigenvalue들에 대해 성립한다고 가정하고, $m+1$개에 대해 보이자.
+이제 서로 다른 generalized eigenspace에서 각각 뽑은 벡터들의 모임이 일차독립임을 귀납법으로 보이자. $m=1$일 때는 당연하다. $m$개의 distinct eigenvalue들에 대해 성립한다고 가정하고, $m+1$개에 대해 보이자.
 
 $v_i \in G_{\lambda_i}(L)$ ($i=1,\ldots,m+1$)에 대해 
 
@@ -161,33 +153,23 @@ $$v_1+v_2+\cdots+v_{m+1}=0$$
 
 $$(L-\lambda_{m+1}I)^{k_{m+1}}v_{m+1}=0$$
 
-이고, $i\leq m$에 대해
-
-$$(L-\lambda_{m+1}I)^{k_{m+1}}v_i \in G_{\lambda_i}(L)$$
-
-이다 ($G_{\lambda_i}(L)$은 $L$-invariant이므로 $(L-\lambda_{m+1}I)^{k_{m+1}}$에도 invariant). 따라서
+이고, $i\leq m$에 대해 $(L-\lambda_{m+1}I)^{k_{m+1}}v_i \in G_{\lambda_i}(L)$이다 ($G_{\lambda_i}(L)$은 $L$-invariant이므로 $(L-\lambda_{m+1}I)^{k_{m+1}}$에도 invariant). 따라서
 
 $$(L-\lambda_{m+1}I)^{k_{m+1}}v_1 + \cdots + (L-\lambda_{m+1}I)^{k_{m+1}}v_m=0$$
 
-귀납 가정에 의해 $(L-\lambda_{m+1}I)^{k_{m+1}}v_i=0$ for all $i\leq m$. 이는 $v_i\in G_{\lambda_i}(L)\cap G_{\lambda_{m+1}}(L)$이며, 1단계에서 보인 바에 따라 $v_i=0$ for all $i\leq m$. 따라서 $v_{m+1}=0$도 얻어진다.
+귀납 가정에 의해 $(L-\lambda_{m+1}I)^{k_{m+1}}v_i=0$ for all $i\leq m$. 이는 $v_i\in G_{\lambda_i}(L)\cap G_{\lambda_{m+1}}(L)$이며, 위에서 보인 바에 따라 $v_i=0$ for all $i\leq m$. 따라서 $v_{m+1}=0$도 얻어진다.
 
-**3단계: 차원 계산 및 직합분해**
-
-[따름정리 4](#cor4)로부터 각 $i$에 대해 적당한 $k_i$가 존재하여 $G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i}$이다. 이제 generalized eigenspace 위의 $(L-\lambda_i I)$의 작용을 이용하여 차원을 계산한다.
-
-$G_{\lambda_i}(L)$의 basis를 선택하고 이를 다음과 같이 구성할 수 있다: 부분공간들의 filtration
+마지막으로 차원을 계산하자. [따름정리 4](#cor4)로부터 각 $i$에 대해 적당한 $k_i$가 존재하여 $G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i}$이다. $G_{\lambda_i}(L)$의 basis를 부분공간들의 filtration
 
 $$0=\ker(L-\lambda_i I)^0 \subsetneq \ker(L-\lambda_i I)^1 \subsetneq \cdots \subsetneq \ker(L-\lambda_i I)^{k_i}=G_{\lambda_i}(L)$$
 
-에 대해, 각 $j=1,\ldots,k_i$마다 $\ker(L-\lambda_i I)^j/\ker(L-\lambda_i I)^{j-1}$의 basis를 택하고 이를 lift한 벡터들로부터 Jordan chain을 구성한다. 이렇게 하면 $G_{\lambda_i}(L)$의 basis의 개수는 정확히 $\dim G_{\lambda_i}(L)$이다.
+에 대해, 각 $j=1,\ldots,k_i$마다 $\ker(L-\lambda_i I)^j/\ker(L-\lambda_i I)^{j-1}$의 basis를 택하고 이를 lift한 벡터들로부터 구성할 수 있다. 
 
-한편, $G_{\lambda_i}(L)$ 위에서만 보면 $(L-\lambda_i I)$는 nilpotent이므로, [명제 7](#prop7)에 의해 적당한 $N_i$에 대해 $(L-\lambda_i I)^{N_i}|_{G_{\lambda_i}(L)}=0$이다. 
-
-우리는 $\dim G_{\lambda_i}(L)=m_i$임을 보여야 한다. $L$의 제한 $L|_{G_{\lambda_i}(L)}$을 생각하면, 이는 $G_{\lambda_i}(L)$ 위의 linear operator이며, $\lambda_i$만이 eigenvalue이다. 이 제한의 특성다항식을 $\chi_i(\mathbf{x})$라 하면,
+$L$의 제한 $L\vert_{G_{\lambda_i}(L)}$을 생각하면, 이는 $G_{\lambda_i}(L)$ 위의 linear operator이며, $\lambda_i$만이 eigenvalue이다. 이 제한의 특성다항식을 $\chi_i(\mathbf{x})$라 하면, 위의 일차독립성에 의해
 
 $$p_L(\mathbf{x})=\chi_1(\mathbf{x})\chi_2(\mathbf{x})\cdots\chi_m(\mathbf{x})$$
 
-이고 (2단계의 일차독립성과 직합), 각 $\chi_i(\mathbf{x})$의 차수는 $\dim G_{\lambda_i}(L)$이다. 
+이고, 각 $\chi_i(\mathbf{x})$의 차수는 $\dim G_{\lambda_i}(L)$이다. 
 
 $\chi_i(\mathbf{x})$의 유일한 근이 $\lambda_i$이고 중복도가 $\dim G_{\lambda_i}(L)$이므로,
 
@@ -201,7 +183,7 @@ $$\dim G_{\lambda_i}(L)=m_i$$
 
 $$\sum_{i=1}^m \dim G_{\lambda_i}(L)=\sum_{i=1}^m m_i=\dim V$$
 
-이고, 2단계의 일차독립성과 함께 이는 직합분해
+이고, 위의 일차독립성과 함께 이는 직합분해
 
 $$V=\bigoplus_{i=1}^m G_{\lambda_i}(L)$$
 
