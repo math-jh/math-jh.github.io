@@ -113,7 +113,15 @@ $$G_\lambda(L)=\left\{v\in V\mid (L-\lambda I)^kv=0\text{ for some $k\geq 0$}\ri
 
 $$\ker(L-\lambda I)^k=\ker(L-\lambda I)^{k+1}=\cdots$$
 
-를 만족하는 $k$가 존재한다. 한편 정의에 의해 임의의 $v\in G_\lambda(L)$에 대하여, $(L-\lambda I)^m v=0$을 만족하는 $m$이 존재한다. $k' =\max(k,m)$이라 하면, 보조정리 1에서 filtration이 $k$를 넘으면 정지한다는 사실로부터 $\ker(L-\lambda I)^{k'} = \ker(L-\lambda I)^k$이다. 따라서 $(L-\lambda I)^{k'}v=0$이고 $k'\geq k$이므로 $v\in \ker(L-\lambda I)^{k'}=\ker(L-\lambda I)^k$이다.
+를 만족하는 $k$가 존재한다. 한편, $v\in G_\lambda(L)$가 주어질 때마다, 정의에 의하여 다음의 식
+
+$$(L-\lambda I)^lv=0$$
+
+을 만족하는 $l$이 존재한다. 그런데 $k'=\max (k,l)$로 잡으면 $k'\geq l$인 것으로부터
+
+$$(L-\lambda I)^{k'}v =0$$
+
+임을 안다. 즉 $v\in\ker (L-\lambda I)^{k'}$이다. 그런데 $k$의 정의에 의하여 $\ker(L-\lambda I)^k=\ker(L-\lambda I)^{k'}$이고 이로부터 $v\in \ker (L-\lambda I)^k$이다. ($k'$는 $v$에 의존하지만, $k$는 그렇지 않다.) 포함관계 $\ker (L-\lambda I)^k\subset G_\lambda(L)$은 자명하므로 원하는 결과를 얻는다. 
 
 </details>
 

@@ -13,9 +13,11 @@ sidebar:
 
 date: 2025-11-12
 last_modified_at: 2025-11-12
-weight: 2
+weight: 3
 
 ---
+
+우리는 
 
 ## Adjoint representation
 
