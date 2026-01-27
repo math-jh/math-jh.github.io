@@ -90,6 +90,8 @@ algebraic_structures-ko:
         url: ko/math/algebraic_structures/graded_modules
       - title: "대수"
         url: ko/math/algebraic_structures/algebras
+      - title: "대수의 직접곱, 직합, 텐서곱"
+        url: ko/math/algebraic_structures/operations_of_algebras
   - title: 
     children:
       - title: "블로그 소개"
@@ -118,6 +120,8 @@ algebraic_topology-ko:
         url: /ko/math/algebraic_topology/cup_products
       - title: "푸앵카레 쌍대성"
         url: /ko/math/algebraic_topology/Poincare_duality
+      - title: "특성류"
+        url: /ko/math/algebraic_topology/characteristic_classes
   - title: 
     children:
       - title: "블로그 소개"
@@ -248,6 +252,10 @@ commutative_algebra-ko:
         url: ko/math/commutative_algebra/fractional_ideals
       - title: "인자"
         url: ko/math/commutative_algebra/divisors
+      - title: "뇌터 정규화"
+        url: ko/math/commutative_algebra/noether_normalization
+      - title: "미분"
+        url: ko/math/commutative_algebra/differentials
   - title: 
     children:
       - title: "블로그 소개"
@@ -318,6 +326,12 @@ Lie_theory-ko:
     children:
       - title: "리 군"
         url: ko/math/Lie_theory/Lie_groups
+      - title: "리 군의 표현"
+        url: ko/math/Lie_theory/representations
+      - title: "근계"
+        url: ko/math/Lie_theory/root_systems
+      - title: "근계: G-모듈과 선형대수 관점"
+        url: ko/math/Lie_theory/root_systems_linear_algebra_perspective
   - title: 
     children:
       - title: "블로그 소개"
@@ -358,8 +372,8 @@ linear_algebra-ko:
         url: ko/math/linear_algebra/characteristic_polynomial
       - title: "고유공간분해"
         url: ko/math/linear_algebra/eigenspace_decomposition
-      - title: "대각화"
-        url: ko/math/linear_algebra/diagonalization
+      - title: "조르당 표준형"
+        url: ko/math/linear_algebra/Jordan_canonical_form
       - title: "쌍대공간"
         url: ko/math/linear_algebra/dual_space
       - title: "쌍선형형식"
@@ -408,12 +422,10 @@ manifold-ko:
         url: ko/math/manifold/distribution
       - title: "미분 아이디얼"
         url: ko/math/manifold/differential_ideal
-      - title: "리 군"
-        url: ko/math/manifold/Lie_groups
-      - title: "고전군"
-        url: ko/math/manifold/classical_groups
-      - title: "리 대응"
-        url: ko/math/manifold/Lie_correspondence
+      - title: "향"
+        url: ko/math/manifold/orientation
+      - title: "적분"
+        url: ko/math/manifold/integration
   - title: 
     children:
       - title: "블로그 소개"
@@ -448,6 +460,28 @@ multilinear_algebra-ko:
         url: ko/math/multilinear_algebra/determinants
       - title: "노름과 대각합"
         url: ko/math/multilinear_algebra/norms_and_traces
+      - title: "미분"
+        url: ko/math/multilinear_algebra/derivation
+      - title: "미분가군"
+        url: ko/math/multilinear_algebra/differential_modules
+      - title: "대칭텐서"
+        url: ko/math/multilinear_algebra/symmetric_tensors
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
+Riemannian_geometry-ko:
+  - title: <a href="/ko/riemannian_geometry/" class="sidebar_title">리만기하학</a>
+    children:
+      - title: "리만 계량"
+        url: ko/math/riemannian_geometry/riemannian_metric
+      - title: "접속"
+        url: ko/math/riemannian_geometry/connection
+      - title: "레비-치비타 접속"
+        url: ko/math/riemannian_geometry/Levi-Civita_connection
   - title: 
     children:
       - title: "블로그 소개"
