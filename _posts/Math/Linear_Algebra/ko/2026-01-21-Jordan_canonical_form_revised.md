@@ -4,7 +4,7 @@ title: "조르당 표준형"
 excerpt: "일반화된 고유공간과 조르당 표준형"
 
 categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/Jordan_canonical_form
+permalink: /ko/math/linear_algebra/Jordan_canonical_form_revised
 header:
     overlay_image: /assets/images/Math/Linear_Algebra/Jordan_canonical_form.png
     overlay_filter: 0.5
