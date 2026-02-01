@@ -155,7 +155,7 @@ $$p_L(\mathbf{x})=\prod_{i=1}^m (\mathbf{x}-\lambda_i)^{m_i}$$
 
 $$(L-\lambda_iI)^pv=0\implies L(L-\lambda_iI)^{p-1}v=\lambda_i(L-\lambda_iI)^{p-1}v$$
 
-으로부터 $(L-\lambda_iI)^{p-1}v$는 $L$의 고유값 $\lambda_i$에 해당하는 고유벡터임을 안다. 한편, $v\in G_{\lambda_j}(L)$이므로 $(L-\lambda_j I)^{k_j}v=0$이고, $(L-\lambda_i I)$와 $(L-\lambda_j I)$는 commute하므로
+으로부터 $w=(L-\lambda_iI)^{p-1}v\neq 0$는 $L$의 고유값 $\lambda_i$에 해당하는 고유벡터임을 안다. 한편, $v\in G_{\lambda_j}(L)$이므로 $(L-\lambda_j I)^{k_j}v=0$이고, $(L-\lambda_i I)$와 $(L-\lambda_j I)$는 commute하므로
 
 $$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^p v=(L-\lambda_i I)^p(L-\lambda_j I)^{k_j}v=0$$
 
