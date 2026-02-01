@@ -99,7 +99,9 @@ $$G_\lambda(L)=\left\{v\in V\mid (L-\lambda I)^kv=0\text{ for some $k\geq 0$}\ri
 
 </div>
 
-직관적으로 generalized eigenspace들은 진짜 고유벡터들 뿐만 아니라, linear operator $(L-\lambda I)$를 거듭해서 적용했을 때 결국 $0$이 되는 벡터들을 포함하는 공간이다. 그럼 우리가 보이고 싶은 것은, 당연히, *임의의* linear operator $L:V \rightarrow V$를 generalized eigenspace들의 direct sum으로 분해할 수 있다는 것이며 이는 참이다. 한편, 우리는 [보조정리 1](#lem1)로부터 다음을 얻는다.
+직관적으로 generalized eigenspace들은 진짜 고유벡터들 뿐만 아니라, linear operator $(L-\lambda I)$를 거듭해서 적용했을 때 결국 $0$이 되는 벡터들을 포함하는 공간이다. 그럼 우리가 보이고 싶은 것은, 당연히, *임의의* linear operator $L:V \rightarrow V$를 generalized eigenspace들의 direct sum으로 분해할 수 있다는 것이며 이는 참이다. 
+
+한편, 우리는 [보조정리 1](#lem1)로부터 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
