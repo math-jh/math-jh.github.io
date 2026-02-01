@@ -9,3 +9,5 @@ assets/Tokens
 *.aux
 *.log
 *.pdf
+Gemfile
+gemfile
