@@ -149,17 +149,27 @@ $$p_L(\mathbf{x})=\prod_{i=1}^m (\mathbf{x}-\lambda_i)^{m_i}$$
 
 라 하자. 여기서 $m_i$는 $\lambda_i$의 대수적 중복도이고 $\sum_{i=1}^m m_i=\dim V$이다.
 
-먼저 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$임을 보이자. $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 $(L-\lambda_i I)^{k_i}v=0$과 $(L-\lambda_j I)^{k_j}v=0$을 만족하는 정수 $k_i, k_j$가 존재한다. 
+먼저 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$임을 보이자. $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 다음 두 식
+
+$$G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i},\qquad G_{\lambda_j}(L)=\ker(L-\lambda_j I)^{k_j}$$
+
+을 만족하는 정수 $k_i, k_j$가 존재한다. 
 
 이제 정수 $p$를 $(L-\lambda_iI)^kv=0$을 만족하는 $k$ 중 가장 작은 것이라 하자. 그럼 다음의 식
 
 $$(L-\lambda_iI)^pv=0\implies L(L-\lambda_iI)^{p-1}v=\lambda_i(L-\lambda_iI)^{p-1}v$$
 
-으로부터 $w=(L-\lambda_iI)^{p-1}v\neq 0$는 $L$의 고유값 $\lambda_i$에 해당하는 고유벡터임을 안다. 한편, $v\in G_{\lambda_j}(L)$이므로 $(L-\lambda_j I)^{k_j}v=0$이고, $(L-\lambda_i I)$와 $(L-\lambda_j I)$는 commute하므로
+으로부터 $w=(L-\lambda_iI)^{p-1}v\neq 0$는 $L$의 고유값 $\lambda_i$에 해당하는 고유벡터임을 안다. 한편 $v\in G_{\lambda_j}(L)$이므로 $(L-\lambda_j I)^{k_j}v=0$이고, $(L-\lambda_i I)$와 $(L-\lambda_j I)$는 commute하므로
 
 $$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^p v=(L-\lambda_i I)^p(L-\lambda_j I)^{k_j}v=0$$
 
-이다. 따라서 $w\in \ker(L-\lambda_j I)^{k_j}=G_{\lambda_j}(L)$이다. 그런데 $w$는 고유값 $\lambda_i$에 대응하는 고유벡터이면서 동시에 $G_{\lambda_j}(L)$에 속한다. 
+이다. 즉 $w\in G_{\lambda_j}(L)$이므로, $w$는 고유값 $\lambda_i$에 해당하는 고유벡터인 동시에 $G_{\lambda_j}(L)$에 속하는 벡터가 된다. 
+
+이것이 불가능함을 보이자. 우선 $k_j$의 정의로부터, 
+
+
+
+따라서 $w\in \ker(L-\lambda_j I)^{k_j}=G_{\lambda_j}(L)$이다. 그런데 $w$는 고유값 $\lambda_i$에 대응하는 고유벡터이면서 동시에 $G_{\lambda_j}(L)$에 속한다. 
 
 Generalized eigenspace의 모든 벡터 $v'\in G_{\lambda_j}(L)$에 대해 $(L-\lambda_j I)^s v'=0$을 만족하는 어떤 정수 $s$가 존재한다. 최소 양의 정수 $q$가 존재하여 $(L-\lambda_j I)^{q-1}v'\neq 0$이고 $(L-\lambda_j I)^q v'=0$이면, $(L-\lambda_j I)^{q-1}v'$는 고유값 $\lambda_j$에 대응하는 고유벡터이다. 따라서 generalized eigenspace의 모든 벡터로부터 생성되는 고유벡터는 모두 같은 고유값에 대응한다. 이는 $w$가 고유값 $\lambda_i$에 대응하면서 동시에 $G_{\lambda_j}(L)$에 속할 수 없다는 의미이다. 이는 모순이므로 $v=0$이어야 한다.
 
