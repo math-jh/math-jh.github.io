@@ -155,11 +155,7 @@ $$p_L(\mathbf{x})=\prod_{i=1}^m (\mathbf{x}-\lambda_i)^{m_i}$$
 
 $$(L-\lambda_iI)^pv=0\implies L(L-\lambda_iI)^{p-1}v=\lambda_i(L-\lambda_iI)^{p-1}v$$
 
-으로부터 $(L-\lambda_iI)^{p-1}v$는 $L$의 고유값 $\lambda_i$에 해당하는 고유벡터임을 안다. 한편, 
-
-$p$를 $(L-\lambda_i I)^{k_i}v=0$을 만족하는 최소 음이 아닌 정수라 하면, $w=(L-\lambda_i I)^p v$는 $Lw=\lambda_i w$를 만족하는 영이 아닌 벡터, 즉 고유값 $\lambda_i$에 대응하는 고유벡터이다.
-
-한편 $v\in G_{\lambda_j}(L)$이므로 $(L-\lambda_j I)^{k_j}v=0$이고, $(L-\lambda_i I)$와 $(L-\lambda_j I)$는 commute하므로
+으로부터 $(L-\lambda_iI)^{p-1}v$는 $L$의 고유값 $\lambda_i$에 해당하는 고유벡터임을 안다. 한편, $v\in G_{\lambda_j}(L)$이므로 $(L-\lambda_j I)^{k_j}v=0$이고, $(L-\lambda_i I)$와 $(L-\lambda_j I)$는 commute하므로
 
 $$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^p v=(L-\lambda_i I)^p(L-\lambda_j I)^{k_j}v=0$$
 
