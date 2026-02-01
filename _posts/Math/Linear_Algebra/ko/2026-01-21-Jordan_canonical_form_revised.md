@@ -6,7 +6,7 @@ excerpt: "일반화된 고유공간과 조르당 표준형"
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/Jordan_canonical_form
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Primary_decomposition_theorem.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Jordan_canonical_form.png
     overlay_filter: 0.5
 sidebar: 
     nav: "linear_algebra-ko"
@@ -16,8 +16,6 @@ last_modified_at: 2026-01-21
 weight: 17
 
 ---
-
-## 소개
 
 우리는 [§고유공간분해, ⁋정리 6](/ko/math/linear_algebra/eigenspace_decomposition#thm6)에서 모든 행렬이 대각화되지 않는다는 것을 보았다. 직관적으로 생각핵면, 이는 어떤 행렬들은 ''고유벡터가 부족하기" 때문이다. 
 
