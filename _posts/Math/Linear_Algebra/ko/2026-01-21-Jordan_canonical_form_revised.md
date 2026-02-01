@@ -19,7 +19,7 @@ weight: 17
 
 ## 소개
 
-우리는 [§고유공간분해, ⁋정리 6](/ko/math/linear_algebra/eigenspace_decomposition#thm6)에서 모든 행렬이 대각화되지 않는다는 것을 보았다. 직관적으로 생각핵면, 이는 어떤 행렬들은 "고유벡터가 부족하기" 때문이다. 
+우리는 [§고유공간분해, ⁋정리 6](/ko/math/linear_algebra/eigenspace_decomposition#thm6)에서 모든 행렬이 대각화되지 않는다는 것을 보았다. 직관적으로 생각핵면, 이는 어떤 행렬들은 ''고유벡터가 부족하기" 때문이다. 
 
 우리가 즉시 떠올릴 수 있는 예시는 다음과 같은 행렬이다:
 
