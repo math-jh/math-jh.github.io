@@ -173,7 +173,7 @@ $$0=(L-\lambda_jI)^{p_j}w=(L-\lambda_jI)w'$$
 
 $$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w_\lambda w'$$
 
-으로부터 $w'$ 또한 $\lambda_i$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\\{0\\}$임을 안다. 그럼 이 결과를 귀납적으로 적용하여 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 대응되는 결과를 
+으로부터 $w'$ 또한 $\lambda_i$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\\{0\\}$임을 안다. 그럼 이 결과를 귀납적으로 적용하여 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 대응되는 결과를 얻는다. 
 
 마지막으로 차원을 계산하자. [따름정리 4](#cor4)로부터 각 $i$에 대해 적당한 $k_i$가 존재하여 $G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i}$이다. $G_{\lambda_i}(L)$의 basis를 부분공간들의 filtration
 
