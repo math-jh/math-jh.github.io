@@ -173,29 +173,7 @@ $$0=(L-\lambda_jI)^{p_j}w=(L-\lambda_jI)w'$$
 
 $$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w_\lambda w'$$
 
-으로부터 $w'$ 또한 $\lambda_i$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\\{0\\}$임을 안다. 
-
-
-
-따라서 $w\in \ker(L-\lambda_j I)^{k_j}=G_{\lambda_j}(L)$이다. 그런데 $w$는 고유값 $\lambda_i$에 대응하는 고유벡터이면서 동시에 $G_{\lambda_j}(L)$에 속한다. 
-
-Generalized eigenspace의 모든 벡터 $v'\in G_{\lambda_j}(L)$에 대해 $(L-\lambda_j I)^s v'=0$을 만족하는 어떤 정수 $s$가 존재한다. 최소 양의 정수 $q$가 존재하여 $(L-\lambda_j I)^{q-1}v'\neq 0$이고 $(L-\lambda_j I)^q v'=0$이면, $(L-\lambda_j I)^{q-1}v'$는 고유값 $\lambda_j$에 대응하는 고유벡터이다. 따라서 generalized eigenspace의 모든 벡터로부터 생성되는 고유벡터는 모두 같은 고유값에 대응한다. 이는 $w$가 고유값 $\lambda_i$에 대응하면서 동시에 $G_{\lambda_j}(L)$에 속할 수 없다는 의미이다. 이는 모순이므로 $v=0$이어야 한다.
-
-이제 서로 다른 generalized eigenspace에서 각각 뽑은 벡터들의 모임이 일차독립임을 귀납법으로 보이자. $m=1$일 때는 당연하다. $m$개의 distinct eigenvalue들에 대해 성립한다고 가정하고, $m+1$개에 대해 보이자.
-
-$v_i \in G_{\lambda_i}(L)$ ($i=1,\ldots,m+1$)에 대해 
-
-$$v_1+v_2+\cdots+v_{m+1}=0$$
-
-이라 하자. $(L-\lambda_{m+1}I)^{k_{m+1}}$을 양변에 작용시키면 ($G_{\lambda_{m+1}}(L)=\ker(L-\lambda_{m+1}I)^{k_{m+1}}$),
-
-$$(L-\lambda_{m+1}I)^{k_{m+1}}v_{m+1}=0$$
-
-이고, $i\leq m$에 대해 $(L-\lambda_{m+1}I)^{k_{m+1}}v_i \in G_{\lambda_i}(L)$이다 ($G_{\lambda_i}(L)$은 $L$-invariant이므로 $(L-\lambda_{m+1}I)^{k_{m+1}}$에도 invariant). 따라서
-
-$$(L-\lambda_{m+1}I)^{k_{m+1}}v_1 + \cdots + (L-\lambda_{m+1}I)^{k_{m+1}}v_m=0$$
-
-귀납 가정에 의해 $(L-\lambda_{m+1}I)^{k_{m+1}}v_i=0$ for all $i\leq m$. 이는 $v_i\in G_{\lambda_i}(L)\cap G_{\lambda_{m+1}}(L)$이며, 위에서 보인 바에 따라 $v_i=0$ for all $i\leq m$. 따라서 $v_{m+1}=0$도 얻어진다.
+으로부터 $w'$ 또한 $\lambda_i$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\\{0\\}$임을 안다. 그럼 이 결과를 귀납적으로 적용하여 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 대응되는 결과를 
 
 마지막으로 차원을 계산하자. [따름정리 4](#cor4)로부터 각 $i$에 대해 적당한 $k_i$가 존재하여 $G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i}$이다. $G_{\lambda_i}(L)$의 basis를 부분공간들의 filtration
 
