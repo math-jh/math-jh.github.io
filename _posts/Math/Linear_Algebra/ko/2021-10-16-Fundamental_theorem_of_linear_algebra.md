@@ -1,284 +1,351 @@
 ---
 
-title: "선형대수학의 기본정리"
-excerpt: "선형대수학의 기본정리"
+title: "조르당 표준형"
+excerpt: ""
 
 categories: [Math / Linear Algebra]
-permalink: /ko/math/linear_algebra/ftla
+permalink: /ko/math/linear_algebra/Jordan_canonical_form
+header:
+    overlay_image: /assets/images/Math/Linear_Algebra/Primary_decomposition_theorem.png
+    overlay_filter: 0.5
 sidebar: 
     nav: "linear_algebra-ko"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
-    overlay_filter: 0.5
-
-date: 2021-10-16
-last_modified_at: 2022-08-07
-
-weight: 11
+date: 2026-01-21
+last_modified_at: 2026-01-21
+weight: 17
 
 ---
 
-지난 글에서 각각 $n$차원, $m$차원인 두 $\mathbb{K}$-벡터공간 $V,W$에 대하여 $\Hom(V,W)$는 $mn$차원 $\mathbb{K}$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\Mat_{m\times n}(\mathbb{K})$ 또한 $mn$차원의 $\mathbb{K}$-벡터공간이다. 그럼 [§동형사상, ⁋따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#cor4)로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
+## 일반화된 고유공간
 
-이번 글에서 증명할 선형대수학의 기본정리[^1]는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em_ko>자연스러운</em_ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 
+앞서 우리는 diagonalizable operator $A$가 주어질 때마다 주어진 공간을 eigenspace들로 분해하여 이 위에서는 $A$가 스칼라곱처럼 행동하도록 할 수 있음을 보았다. 그러나 [§고유공간분해, ⁋명제 6](/ko/math/linear_algebra/eigenspace_decomposition#prop6)에서 살펴봤듯, 설령 $\mathbb{K}$가 algebraically closed field라 가정하여도 (그리고, 해당 명제 이후에 살펴봤듯 우리는 항상 이를 가정할 것이다.) 모든 linear operator가 항상 diagonalizable인 것은 아니다. 
 
-## 기본정리: 유클리드 공간
+[§고유공간분해, ⁋명제 6](/ko/math/linear_algebra/eigenspace_decomposition#prop6)의 둘째 조건은 $A$의 어떤 고유값 $\lambda$에 대하여, $\lambda$의 기하적 중복도가 $\lambda$의 대수적 중복도보다 작을 때 발생한다는 것을 알려준다. ([§고유공간분해, ⁋명제 5](/ko/math/linear_algebra/eigenspace_decomposition#prop5)) 즉, 직관적으로 다음의 벡터공간
 
-[§선형사상들의 공간](/ko/math/linear_algebra/space_of_linear_maps)에서 우리는 다음의 식
+$$E_\lambda(A)=\ker(A-\lambda I)$$
 
-$$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(x_2)&=\alpha_{12}y_1+\alpha_{22}y_2+\cdots+\alpha_{m2}y_m\\&\phantom{a}\vdots\\L(x_n)&=\alpha_{1n}y_1+\alpha_{2n}y_2+\cdots+\alpha_{mn}y_m\end{aligned}$$
+이 <em_ko>너무 작은</em_ko> 것이다. 다음 보조정리는 이를 해결할만한 실마리를 준다. 
 
-을 만족하는 linear map $L$을 다음의 대응
+<div class="proposition" markdown="1">
 
-$$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{ji}v_i\right)y_j=L(v)\tag{1}$$
+<ins id="lem1">**보조정리 1**</ins> 유한차원 벡터공간 $V$ 위에 정의된 임의의 linear operator $L:V\rightarrow V$이 주어졌다 하자. 표기의 편의를 위하여 $L^0=\id_V$라 하면, 다음 filtration
 
-으로 이해하기로 하였다. 특히 만일 $V=\mathbb{K}^n$, $W=\mathbb{K}^m$이고, 이들 각각에 standard basis $\mathcal{E}_n=\\{e_1,\ldots, e_n\\},\mathcal{E}_m=\\{e_1,\ldots,e_m\\}$가 주어졌다 하면 위의 대응은 
+$$0=\ker L^0\subsetneq \ker L^1\subsetneq \ker L^2\subsetneq \cdots \subsetneq \ker L^{k-1}\subsetneq \ker L^k=\ker L^{k+1}$$
 
-$$\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}\quad\mapsto\quad\begin{pmatrix}\sum_{i=1}^n\alpha_{1i}v_i\\\sum_{i=1}^n\alpha_{2i}v_i\\\vdots\\\sum_{i=1}^n\alpha_{mi}v_i\end{pmatrix}$$
+이 존재한다. 
 
-으로 쓸 수 있다. 그런데 우변은 정확히 행렬과 벡터의 곱
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-$$\begin{pmatrix}\alpha_{11}&\alpha_{12}&\cdots&\alpha_{1n}\\\alpha_{21}&\alpha_{22}&\cdots&\alpha_{2n}\\\vdots&\vdots&\ddots&\vdots\\\alpha_{m1}&\alpha_{m2}&\cdots&\alpha_{mn}\end{pmatrix}\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}\tag{2}$$
+우선 임의의 $i$에 대하여 만일 $v\in \ker L^{i}$가 성립한다면, 
 
-과 동일한 모양이다. 위의 식에서의 $m\times n$ 행렬을 $\mathcal{E}_n,\mathcal{E}_m$에 대한 $L$의 *행렬표현*이라 부르고, 이를  $[L]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}$로 적는다.
+$$L^{i+1}v=L(L^iv)=L(0)=0$$
 
-반대로 $m\times n$ 행렬은 똑같은 방식으로 linear map을 지정해준다는 것을 확인할 수 있다.
+이므로 $\ker L^i\subseteq \ker L^{i+1}$인 것이 당연하다. 한편 $V$가 유한차원이므로 이 filtration은 언젠가는 증가하기를 멈춰야 한다. 우리가 보여야 할 것은 만일 $\ker L^k=\ker L^{k+1}$이라면, 이 이후의 항들은 <em_ko>모두</em_ko> $\ker L^k$와 같다는 것이다. 이를 위해, $k$가 $\ker L^k=\ker L^{k+1}$을 만족하는 정수 중 가장 작은 것이라 하자. 그럼 그 정의에 의하여 $\ker L^k=\ker L^{k+1}$이며, 우리는 이를 base step으로 삼아 귀납적으로 $\ker L^k=\ker L^{k+j}$가 모든 $j$에 대해 성립하는 것을 보일 수 있다. 즉, $\ker L^k=\ker L^{k+j}$가 성립함을 가정하고 $\ker L^k=\ker L^{k+j+1}$임을 보이자. 이를 위해서는 $\ker L^{k+j+1}\subseteq \ker L^k$임을 보이면 충분하다. 이제 임의의 $v\in \ker L^{k+j+1}$에 대하여, 우리는 $Lv\in \ker L^{k+j}=\ker L^k$임을 알고 있으므로 다음의 계산
+
+$$L^{k+1}v=L^k(Lv)=0\implies v\in \ker L^{k+1}$$
+
+과 base step $\ker L^k=\ker L^{k+1}$로부터 원하는 결과를 얻는다. 
+
+</details>
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> 유클리드 $n$-공간 $\mathbb{K}^n$과, 행렬 $A\in\Mat\_{m\times n}(\mathbb{K})$를 생각하자. 임의의 $x\in\mathbb{K}^n$에 대하여, $L_A(x)$를 다음의 식
+<ins id="ex2">**예시 2**</ins> 다음의 행렬
 
-$$L_A(x)=Ax$$
+$$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
-으로 정의하면, $L_A$는 $\mathbb{K}^n$에서 $\mathbb{K}^m$으로의 linear map이 된다. 
+을 생각하자. 우리는 앞선 글에서 이 행렬의 특성다항식은 $(\x-1)^3=0$이지만 (즉 유일한 고유값 $1$의 대수적 중복도가 $3$이지만) 이에 해당하는 고유공간 $E_1(A)$는 벡터 $(1,0,0)$으로 생성되는 $1$차원 공간임을 보았다. 
 
-</div>
+이제 linear operator
 
-$\mathbb{K}^n$에서 $\mathbb{K}^m$으로의 임의의 linear map $L$이 주어졌다 하자. 어렵지 않게 $L=L\_{[L]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}}$임을 확인할 수 있다. 따라서 다음의 대응이 존재한다.
+$$A-1I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
-$$\{\text{linear maps from $\mathbb{K}^n$ to $\mathbb{K}^m$}\}\longleftrightarrow\Mat_{m\times n}(\mathbb{K})$$
-  
-더 정확하게 말하자면 $L\mapsto [L]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}$, 그리고 $A\mapsto L_A$ ([예시 1](#ex1)의 정의)이 서로의 역함수가 되는 전단사함수가 된다. 
+에 위의 보조정리를 적용해보자. 언급한 것과 같이 
 
-그런데 왼쪽의 집합은 $\Hom(\mathbb{K}^n, \mathbb{K}^m)$와 같으므로, 이 대응이 전단사인 linear map, 곧 isomorphism이 되는지를 확인해볼 수 있다. 이에 대한 답은 그렇다는 것이며, 이 다음의 [정리 3](#thm3)과 함께 이 결과를 선형대수학의 기본정리라 부른다.
+$$\ker (A-I)=\span \{(1,0,0)\}$$
 
-<div class="proposition" markdown="1">
+이다. 그런데 높은 차수의 계산을 수행해보면,
 
-<ins id="thm2">**정리 2**</ins> $\Hom(\mathbb{K}^n,\mathbb{K}^m)\cong\Mat_{m\times n}(\mathbb{K})$
+$$(A-I)^2=\begin{pmatrix}0&0&1\\0&0&0\\0&0&0\end{pmatrix}$$
 
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
+이므로
 
-주어진 함수 $L\mapsto[L]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}$가 linear임을 보여야 한다.
-
-$L_1,L_2$가 모두 $\Hom(\mathbb{K}^n,\mathbb{K}^m)$의 원소라 하자. 그럼 각각의 $e_i\in\mathcal{E}_n$에 대하여, 
-
-$$\begin{aligned}L_1(e_1)&=\alpha_{1,1}e_1+\alpha_{2,1}e_2+\cdots+\alpha_{m,1}e_m\\L_1(e_2)&=\alpha_{1,2}e_1+\alpha_{2,2}e_2+\cdots+\alpha_{m,2}e_m\\&\vdots\\L_1(e_n)&=\alpha_{1,n}e_1+\alpha_{2,n}e_2+\cdots+\alpha_{m,n}e_m\end{aligned}$$
+$$\ker(A-I)^2=\span \{(1,0,0), (0,1,0)\}$$
 
 그리고
 
-$$\begin{aligned}L_2(e_1)&=\beta_{1,1}e_1+\beta_{2,1}e_2+\cdots+\beta_{m,1}e_m\\L_2(e_2)&=\beta_{1,2}e_1+\beta_{2,2}e_2+\cdots+\beta_{m,2}e_m\\&\vdots\\L_2(e_n)&=\beta_{1,n}e_1+\beta_{2,n}e_2+\cdots+\beta_{m,n}e_m\end{aligned}$$
+$$(A-I)^3=\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}$$
 
-이도록 하는 스칼라들의 family $(\alpha_{i,j})$, $(\beta_{i,j})$들이 존재한다. 이제, 
+이므로
 
-$$\begin{aligned}(L_1+L_2)(e_1)&=(\alpha_{1,1}+\beta_{1,1})e_1+(\alpha_{2,1}+\beta_{2,1})e_2+\cdots+(\alpha_{m,1}+\beta_{m,1})e_m\\(L_1+L_2)(e_2)&=(\alpha_{1,2}+\beta_{1,2})e_1+(\alpha_{2,2}+\beta_{2,2})e_2+\cdots+(\alpha_{m,2}+\beta_{m,2})e_m\\&\vdots\\(L_1+L_2)(e_n)&=(\alpha_{1,n}+\beta_{1,n})e_1+(\alpha_{2,n}+\beta_{2,n})e_2+\cdots+(\alpha_{m,n}+\beta_{m,n})e_m\end{aligned}$$
+$$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$$
 
-이고, 따라서 $L_1+L_2$의 행렬표현 $[L\_1+L\_2]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}$은 정확히 $[L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}+[L\_2]^{\mathcal{E}\_n}\_{\mathcal{E}\_m}$이 된다. 이와 유사하게 스칼라곱에 대한 것도 성립한다.
-
-</details>
-
-뿐만 아니라 행렬들의 곱 또한 $\Hom(\mathbb{K}^n,\mathbb{K}^m)$에서 특별한 의미를 갖는다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**정리 3**</ins> 세 유클리드 공간들 $\mathbb{K}^n,\mathbb{K}^m,\mathbb{K}^k$가 주어졌다 하자. 그럼 임의의 $L\_1:\mathbb{K}^n\rightarrow \mathbb{K}^m$, $L\_2:\mathbb{K}^m\rightarrow \mathbb{K}^k$에 대하여 항상
-
-$$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}=[L_2]^{\mathcal{E}_m}_{\mathcal{E}_k}[L_1]^{\mathcal{E}_n}_{\mathcal{E}_m}$$
-
-이 성립한다. 즉, linear map의 합성은 행렬의 곱과 같다. 
+임을 안다. 
 
 </div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
 
-좌변의 $[L_2\circ L_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$을 결정하기 위해서는 $L_2\circ L_1$에 의해 $\mathcal{E}\_n$의 원소 $e_i$들이 어디로 옮겨지는지만 확인하면 된다. $L_1$, $L_2$가 다음의 식
-
-$$[L_1]^{\mathcal{E}_n}_{\mathcal{E}_m}=\begin{pmatrix}\alpha_{1,1}&\alpha_{1,2}&\cdots&\alpha_{1,n}\\\alpha_{2,1}&\alpha_{2,2}&\cdots&\alpha_{2,n}\\\vdots&\vdots&\ddots&\vdots\\\alpha_{m,1}&\alpha_{m,2}&\cdots&\alpha_{m,n}\end{pmatrix},\quad[L_2]^{\mathcal{E}_m}_{\mathcal{E}_k}=\begin{pmatrix}\beta_{1,1}&\beta_{1,2}&\cdots&\beta_{1,m}\\\beta_{2,1}&\beta_{2,2}&\cdots&\beta_{2,m}\\\vdots&\vdots&\ddots&\vdots\\\beta_{k,1}&\beta_{k,2}&\cdots&\beta_{k,m}\end{pmatrix}$$
-
-으로 주어졌다 하자. 약간의 계산을 하면,
-
-$$\begin{aligned}(L_2\circ L_1)(e_i)&=L_2(\alpha_{1,i}e_1+\cdots+\alpha_{m,i}e_m)\\&=\alpha_{1,i}L_2(e_1)+\alpha_{2,i}L_2(e_2)+\cdots+\alpha_{m,i}L(e_m)\\&=\alpha_{1,i}(\beta_{1,1}e_1+\beta_{2,1}e_2+\cdots+\beta_{k,1}e_k)\\&\phantom{==}+\alpha_{2,i}(\beta_{1,2}e_1+\beta_{2,2}e_2+\cdots+\beta_{k,2}e_k)\\&\phantom{===}+\cdots\\&\phantom{====}+\alpha_{m,i}(\beta_{1,m}e_1+\beta_{2,m}e_2+\cdots+\beta_{k,m}e_k)\end{aligned}$$
-
-이제 위 식을 $\mathbb{K}^k$의 basis $e_1,\ldots, e_k$들끼리 묶으면, 
-
-$$(L_2\circ L_1)(e_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)e_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)e_k.$$
-
-$[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$번째 열은 $e_i$가 $L_2\circ L_1$에 의해 옮겨지는 벡터이므로, 행렬 $[L\_2\circ L\_1]^{\mathcal{E}\_n}\_{\mathcal{E}\_k}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum\_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 이제 [§행렬, ⁋정의 3](/ko/math/linear_algebra/matrices#def3) 직후의 계산으로부터 이것이 두 행렬 $[L\_2]\_{\mathcal{E}\_k}^{\mathcal{E}\_m}$, $[L\_1]\_{\mathcal{E}\_m}^{\mathcal{E}\_n}$의 곱의 $(i,j)$ 성분이라는 것을 안다.
-
-</details>
-
-## 기본정리: 일반적인 경우
-
-앞서 우리가 증명한 기본정리는 유클리드 공간에 대해서만 적용되지만, 아주 작은 수정만 있으면 일반적인 유한차원 $\mathbb{K}$-벡터공간에 대해서도 성립한다. 이 과정은 다음의 diagram으로 간단하게 요약할 수 있다.
-
-![FTLA](/assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-1.png){:style="width:14em" class="invert" .align-center} 
-
-임의의 유한차원 $\mathbb{K}$-벡터공간 $V$와 그 basis $\mathcal{B}=\\{x_1,\ldots, x_n\\}$에 대해 정의된 *좌표표현*은 다음의 isomorphism
-
-$$v=\sum_{i=1}^n v_ix_i\mapsto [v]_\mathcal{B}=\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}\in\mathbb{K}^n$$
-
-이다. 비슷하게 또 다른 유한차원 $\mathbb{K}$-벡터공간 $W$과 그 basis $\mathcal{C}=\\{y_1,\ldots, y_m\\}$가 주어졌다 하고, linear map $L:V\rightarrow W$가 다음의 식
-
-$$\begin{aligned}L(x_1)&=\alpha_{1,1}y_1+\alpha_{2,1}y_2+\cdots+\alpha_{m,1}y_m\\L(x_2)&=\alpha_{1,2}y_1+\alpha_{2,2}y_2+\cdots+\alpha_{m,2}y_m\\&\vdots\\L(x_n)&=\alpha_{1,n}y_1+\alpha_{2,n}y_2+\cdots+\alpha_{m,n}y_m\end{aligned}$$
-
-에 의해 결정된다 하자. 그럼 $\mathcal{B},\mathcal{C}$에 대한 $L$의 *행렬표현* $[L]^\mathcal{B}_\mathcal{C}$을 이번에는 다음의 식
-
-$$[L]^\mathcal{B}_\mathcal{C}=\begin{pmatrix}\alpha_{1,1}&\alpha_{1,2}&\cdots&\alpha_{1,n}\\\alpha_{2,1}&\alpha_{2,2}&\cdots&\alpha_{2,n}\\\vdots&\vdots&\ddots&\vdots\\\alpha_{m,1}&\alpha_{m,2}&\cdots&\alpha_{m,n}\end{pmatrix}$$
-
-으로 정의한다. 이제 식 (2)와 식 (1)을 비교해보면 임의의 $v\in V$에 대해, $L(v)$의 $\mathcal{C}$에 대한 좌표표현은 다음의 식
-
-$$[L(v)]_\mathcal{C}=[L]^\mathcal{B}_\mathcal{C}[v]_\mathcal{B}\tag{3}$$
-
-으로 주어진다는 것을 확인할 수 있다.
-
-그럼 [정리 2](#thm2)에 대한 일반적인 버전은 다음의 정리로 주어진다.
-
-<div class="proposition" markdown="1">
-
-<ins id="thm4">**정리 4**</ins> $\Hom(V,W)\cong \Mat_{m\times n}(\mathbb{K})$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$V$, $W$의 기저 $\mathcal{B}$, $\mathcal{C}$를 각각 고정하자. 함수 $L\mapsto[L]^\mathcal{B}\_\mathcal{C}$가 linear임을 보여야 한다.
-
-$L_1,L_2$가 모두 $\Hom(V,W)$의 원소라 하자. 그럼 각각의 $x_i\in\mathcal{B}$에 대하여, 
-
-$$\begin{aligned}L_1(x_1)&=\alpha_{1,1}y_1+\alpha_{2,1}y_2+\cdots+\alpha_{m,1}y_m\\L_1(x_2)&=\alpha_{1,2}y_1+\alpha_{2,2}y_2+\cdots+\alpha_{m,2}y_m\\&\vdots\\L_1(x_n)&=\alpha_{1,n}y_1+\alpha_{2,n}y_2+\cdots+\alpha_{m,n}y_m\end{aligned}$$
-
-그리고
-
-$$\begin{aligned}L_2(x_1)&=\beta_{1,1}y_1+\beta_{2,1}y_2+\cdots+\beta_{m,1}y_m\\L_2(x_2)&=\beta_{1,2}y_1+\beta_{2,2}y_2+\cdots+\beta_{m,2}y_m\\&\vdots\\L_2(x_n)&=\beta_{1,n}y_1+\beta_{2,n}y_2+\cdots+\beta_{m,n}y_m\end{aligned}$$
-
-이도록 하는 스칼라들의 family $(\alpha_{i,j})$, $(\beta_{i,j})$들이 존재한다. 이제, 
-
-$$\begin{aligned}(L_1+L_2)(x_1)&=(\alpha_{1,1}+\beta_{1,1})y_1+(\alpha_{2,1}+\beta_{2,1})y_2+\cdots+(\alpha_{m,1}+\beta_{m,1})y_m\\(L_1+L_2)(x_2)&=(\alpha_{1,2}+\beta_{1,2})y_1+(\alpha_{2,2}+\beta_{2,2})y_2+\cdots+(\alpha_{m,2}+\beta_{m,2})y_m\\&\vdots\\(L_1+L_2)(x_n)&=(\alpha_{1,n}+\beta_{1,n})y_1+(\alpha_{2,n}+\beta_{2,n})y_2+\cdots+(\alpha_{m,n}+\beta_{m,n})y_m\end{aligned}$$
-
-일 것이고, 따라서 $L_1+L_2$의 행렬표현 $[L\_1+L\_2]^\mathcal{B}\_\mathcal{C}$은 정확히 $[L\_1]^\mathcal{B}\_\mathcal{C}+[L\_2]^\mathcal{B}\_\mathcal{C}$이 된다. 이와 유사하게 스칼라곱에 대한 것도 성립한다.
-
-</details>
-
-[정리 3](#thm3) 또한 비슷한 일반화를 갖는다.
-
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**정리 5**</ins> 세 개의 $\mathbb{K}$-벡터공간 $V\_1,V\_2,V\_3$와 이들 각각의 basis $\mathcal{B}\_1=\\{x_1,\ldots,x_n\\}$, $\mathcal{B}\_2=\\{y_1,\ldots, y_m\\}$, $\mathcal{B}\_3=\\{z_1,\ldots, z_k\\}$가 주어졌다 하자. 그럼 임의의 $L\_1:V\_1\rightarrow V\_2$, $L\_2:V\_2\rightarrow V\_3$에 대하여 항상
-
-$$[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}=[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$$
-
-이 성립한다. 즉, linear map의 합성은 행렬의 곱과 같다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-좌변의 $[L_2\circ L_1]^{\mathcal{B}\_1}\_{\mathcal{B}\_3}$을 결정하기 위해서는 $L_2\circ L_1$에 의해 $\mathcal{B}\_1$의 원소들이 어디로 옮겨지는지만 확인하면 된다. $L_1$, $L_2$가 다음의 식
-
-$$[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}=\begin{pmatrix}\alpha_{1,1}&\alpha_{1,2}&\cdots&\alpha_{1,n}\\\alpha_{2,1}&\alpha_{2,2}&\cdots&\alpha_{2,n}\\\vdots&\vdots&\ddots&\vdots\\\alpha_{m,1}&\alpha_{m,2}&\cdots&\alpha_{m,n}\end{pmatrix},\quad[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}=\begin{pmatrix}\beta_{1,1}&\beta_{1,2}&\cdots&\beta_{1,m}\\\beta_{2,1}&\beta_{2,2}&\cdots&\beta_{2,m}\\\vdots&\vdots&\ddots&\vdots\\\beta_{k,1}&\beta_{k,2}&\cdots&\beta_{k,m}\end{pmatrix}$$
-
-으로 주어졌다 하자. 약간의 계산을 하면,
-
-$$\begin{aligned}(L_2\circ L_1)(x_i)&=L_2(\alpha_{1,i}y_1+\cdots+\alpha_{m,i}y_m)\\&=\alpha_{1,i}L_2(y_1)+\alpha_{2,i}L_2(y_2)+\cdots+\alpha_{m,i}L(y_m)\\&=\alpha_{1,i}(\beta_{1,1}z_1+\beta_{2,1}z_2+\cdots+\beta_{k,1}z_k)\\&\phantom{==}+\alpha_{2,i}(\beta_{1,2}z_1+\beta_{2,2}z_2+\cdots+\beta_{k,2}z_k)\\&\phantom{===}+\cdots\\&\phantom{====}+\alpha_{m,i}(\beta_{1,m}z_1+\beta_{2,m}z_2+\cdots+\beta_{k,m}z_k)\end{aligned}$$
-
-이제, 위 식을 $z$들끼리 묶으면, 
-
-$$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)z_k$$
-
-앞서 우리는 $[L\_2\circ L\_1]^{\mathcal{B}\_1}\_{\mathcal{B}\_3}$의 $i$번째 열은 정확히 $x_i$가 $L_2\circ L_1$이 옮겨지는 벡터의 $\mathcal{B}\_3$에서의 좌표표현이라는 것을 확인했으므로, 행렬 $[L\_2\circ L\_1]^{\mathcal{B}\_1}\_{\mathcal{B}\_3}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum\_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 앞서 [정리 3](#thm3)에서와 마찬가지로 이 성분은 행렬곱 $[L\_2]^{\mathcal{B}\_2}\_{\mathcal{B}\_3}[L\_1]^{\mathcal{B}\_1}\_{\mathcal{B}\_2}$의 $(i,j)$번째 성분이므로 증명이 완료된다.
-
-</details>
-
-위의 [정리 4](#thm4)는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat\_{m\times n}(\mathbb{K})$를 같은 것으로 취급할 수 있다는 것을 보여준다. 예컨대 $\Mat\_{m\times n}(\mathbb{K})$의 $mn$개의 basis는 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 살펴본 $mn$개의 basis에 대응된다. 다음 따름정리 또한 기본정리의 결과이다.
-
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**따름정리 6**</ins> 두 $n$차원 $\mathbb{K}$-벡터공간 $V,W$가 주어졌다 하고, 이들의 기저 $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 $L\in\Hom(V,W)$에 대하여, $L^{-1}\in\Hom(W,V)$의 기저 $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}\_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}\_\mathcal{C}$의 역행렬과 같다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-역행렬과 역함수의 유일성에 의하여 자명.
-
-</details>
-
-이와 같이 [§행렬](/ko/math/linear_algebra/matrices)에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 나중에 쌍대공간을 살펴보면 그 의미를 알 수 있다. 
-
-## 기저변환 행렬
-
-[정리 4](#thm4)를 한 마디로 요약하자면, $n$차원 벡터공간 $V$에서 $m$차원 벡터공간 $W$로의 linear map은, 이들 각각의 basis $\mathcal{B}, \mathcal{C}$를 고정하면, 이를 $m\times n$로 나타낼 수 있고 거꾸로 임의의 $m\times n$ 행렬 또한 linear map으로 이해할 수 있다는 것이다. 그렇다면 자연스러운 질문 중 하나는 우리가 basis를 바꾸었을 때 어떠한 일이 생기는지이며, 이는 사실 [정리 5](#thm5)에 이미 그 답이 나와있다. 
+즉, 위의 예시에서 고유공간 $\ker (A-I)$ 자체는 그 차원이 부족하지만, [보조정리 1](#lem1)을 사용하여 이 공간을 늘려가다 보면 "맞는 차원"을 얻게 된다. 이를 엄밀하게 서술하기 위해서는 몇가지 준비가 필요하다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 임의의 유한차원 $\mathbb{K}$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *기저변환행렬<sub>change-of-basis matrix</sub>*은 
+<ins id="def3">**정의 3**</ins> 유한차원 벡터공간 $V$ 위에 정의된 linear operator $L$와 $L$의 한 eigenvalue $\lambda$에 대하여, $L$의 $\lambda$에 대한 *generalized eigenspace*를 다음의 식
 
-$$[\id_V]_{\mathcal{B}'}^\mathcal{B}$$
+$$G_\lambda(L)=\left\{v\in V\mid (L-\lambda I)^kv=0\text{ for some $k\geq 0$}\right\}$$
+
+으로 정의한다. 
+
+</div>
+
+직관적으로 generalized eigenspace들은 진짜 고유벡터들 뿐만 아니라, linear operator $(L-\lambda I)$를 거듭해서 적용했을 때 결국 $0$이 되는 벡터들을 포함하는 공간이다. 그럼 우리가 보이고 싶은 것은, 당연히, *임의의* linear operator $L:V \rightarrow V$를 generalized eigenspace들의 direct sum으로 분해할 수 있다는 것이며 이는 참이다. 
+
+한편, 우리는 [보조정리 1](#lem1)로부터 다음을 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="cor4">**따름정리 4**</ins> 유한차원 벡터공간 $V$ 위에 정의된 linear operator $L:V\rightarrow V$과 그 eigenvalue $\lambda$에 대하여, 적당한 양의 정수 $k$가 존재하여 $G_\lambda(L)=\ker(L-\lambda I)^k$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[보조정리 1](#lem1)을 linear operator $L-\lambda I$에 적용하면, 
+
+$$\ker(L-\lambda I)^k=\ker(L-\lambda I)^{k+1}=\cdots$$
+
+를 만족하는 $k$가 존재한다. 한편, $v\in G_\lambda(L)$가 주어질 때마다, 정의에 의하여 다음의 식
+
+$$(L-\lambda I)^lv=0$$
+
+을 만족하는 $l$이 존재한다. 그런데 $k'=\max (k,l)$로 잡으면 $k'\geq l$인 것으로부터
+
+$$(L-\lambda I)^{k'}v =0$$
+
+임을 안다. 즉 $v\in\ker (L-\lambda I)^{k'}$이다. 그런데 $k$의 정의에 의하여 $\ker(L-\lambda I)^k=\ker(L-\lambda I)^{k'}$이고 이로부터 $v\in \ker (L-\lambda I)^k$이다. ($k'$는 $v$에 의존하지만, $k$는 그렇지 않다.) 포함관계 $\ker (L-\lambda I)^k\subset G_\lambda(L)$은 자명하므로 원하는 결과를 얻는다. 
+
+</details>
+
+## 일차분해정리
+
+이제 우리의 주요 정리를 증명할 준비가 되었다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm5">**정리 5 (일차분해정리)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 linear operator $L:V\rightarrow V$에 대하여, $L$의 모든 eigenvalue들을 $\lambda_1,\ldots,\lambda_m$이라 하자. 그럼 다음의 직합분해
+
+$$V=G_{\lambda_1}(L)\oplus G_{\lambda_2}(L)\oplus\cdots\oplus G_{\lambda_m}(L)$$
+
+가 성립한다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 각 $G_{\lambda_i}(L)$이 $V$의 부분공간임은 자명하다. $L$의 특성다항식을 
+
+$$p_L(\mathbf{x})=\prod_{i=1}^m (\mathbf{x}-\lambda_i)^{m_i}$$
+
+라 하자. 여기서 $m_i$는 $\lambda_i$의 대수적 중복도이고 $\sum_{i=1}^m m_i=\dim V$이다.
+
+먼저 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\\{0\\}$임을 보이자. $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 다음 두 식
+
+$$G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i},\qquad G_{\lambda_j}(L)=\ker(L-\lambda_j I)^{k_j}$$
+
+을 만족하는 정수 $k_i, k_j$가 존재한다. 
+
+이제 정수 $p_i$를 $(L-\lambda_iI)^kv=0$을 만족하는 $k$ 중 가장 작은 것이라 하자. 그럼 다음의 식
+
+$$(L-\lambda_iI)^{p_i}v=0\implies L(L-\lambda_iI)^{p_i-1}v=\lambda_i(L-\lambda_iI)^{p_i-1}v$$
+
+으로부터 $w=(L-\lambda_iI)^{p_i-1}v\neq 0$는 $L$의 고유값 $\lambda_i$에 해당하는 고유벡터임을 안다. 한편 $v\in G_{\lambda_j}(L)$이므로 $(L-\lambda_j I)^{k_j}v=0$이고, $(L-\lambda_i I)$와 $(L-\lambda_j I)$는 commute하므로
+
+$$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^{p_i}v=(L-\lambda_i I)^{p_i}(L-\lambda_j I)^{k_j}v=0$$
+
+이다. 즉 $w\in G_{\lambda_j}(L)$이므로, $w$는 고유값 $\lambda_i$에 해당하는 고유벡터인 동시에 $G_{\lambda_j}(L)$에 속하는 벡터가 된다. 
+
+이것이 불가능함을 보이자. 우선 $w\in G_{\lambda_j}(L)$이므로, 그 정의에 의해 $(L-\lambda_jI)^kw=0$이도록 하는 정수 $k$가 존재한다. (가령, $k=k_j$가 이를 만족하는 것을 위에서 보았다.) 이러한 조건을 만족하는 정수 $k$ 중 가장 작은 것을 $p_j$라 하면, 최소성에 의해 $w'=(L-\lambda_jI)^{p_j-1}w\neq 0$이고
+
+$$0=(L-\lambda_jI)^{p_j}w=(L-\lambda_jI)w'$$
+
+이므로 $w'$는 고유값 $\lambda_j$에 해당하는 고유벡터이다. 한편 $w$가 고유값 $\lambda_i$에 해당하는 고유벡터이므로, 다음 식
+
+$$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w_\lambda w'$$
+
+으로부터 $w'$ 또한 $\lambda_i$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\\{0\\}$임을 안다. 그럼 이 결과를 귀납적으로 적용하여 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 대응되는 결과를 얻는다. 
+
+마지막으로 차원을 계산하자. [따름정리 4](#cor4)로부터 각 $i$에 대해 적당한 $k_i$가 존재하여 $G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i}$이다. $G_{\lambda_i}(L)$의 basis를 부분공간들의 filtration
+
+$$0=\ker(L-\lambda_i I)^0 \subsetneq \ker(L-\lambda_i I)^1 \subsetneq \cdots \subsetneq \ker(L-\lambda_i I)^{k_i}=G_{\lambda_i}(L)$$
+
+에 대해, 각 $j=1,\ldots,k_i$마다 $\ker(L-\lambda_i I)^j/\ker(L-\lambda_i I)^{j-1}$의 basis를 택하고 이를 lift한 벡터들로부터 구성할 수 있다. 
+
+$L$의 제한 $L\vert_{G_{\lambda_i}(L)}$을 생각하면, 이는 $G_{\lambda_i}(L)$ 위의 linear operator이며, $\lambda_i$만이 eigenvalue이다. 이 제한의 특성다항식을 $\chi_i(\mathbf{x})$라 하면, 위의 일차독립성에 의해
+
+$$p_L(\mathbf{x})=\chi_1(\mathbf{x})\chi_2(\mathbf{x})\cdots\chi_m(\mathbf{x})$$
+
+이고, 각 $\chi_i(\mathbf{x})$의 차수는 $\dim G_{\lambda_i}(L)$이다. 
+
+$\chi_i(\mathbf{x})$의 유일한 근이 $\lambda_i$이고 중복도가 $\dim G_{\lambda_i}(L)$이므로,
+
+$$\chi_i(\mathbf{x})=(\mathbf{x}-\lambda_i)^{\dim G_{\lambda_i}(L)}$$
+
+이다. 한편 $p_L(\mathbf{x})=\prod_{i=1}^m (\mathbf{x}-\lambda_i)^{m_i}$이므로, 다항식의 유일 인수분해에 의해
+
+$$\dim G_{\lambda_i}(L)=m_i$$
+
+따라서 
+
+$$\sum_{i=1}^m \dim G_{\lambda_i}(L)=\sum_{i=1}^m m_i=\dim V$$
+
+이고, 위의 일차독립성과 함께 이는 직합분해
+
+$$V=\bigoplus_{i=1}^m G_{\lambda_i}(L)$$
 
 를 의미한다.
 
-</div>
+</details>
 
-벡터공간의 차원이 잘 정의된다는 것으로부터 이러한 행렬은 반드시 정사각행렬이 되어야 한다는 것이 자명하다. 또, 다음의 식
-
-$$I=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=[\id_V]_{\mathcal{B}}^{\mathcal{B}'}[\id_V]^\mathcal{B}_{\mathcal{B}'}$$
-
-으로부터 이러한 행렬은 항상 가역이라는 것을 알 수 있다.
-
-기저변환행렬이 어떤 방식으로 작동하는지를 살펴보기 위해 유한차원 $\mathbb{K}$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
-
-![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_basis-1.png){:style="width:7em" class="invert" .align-center}
-
-이 때 두 개의 수직방향 함수는 각각 $v\mapsto [v]\_\mathcal{B}$와 $v\mapsto[v]\_{\mathcal{B}'}$를 의미한다. 따라서 기저변환행렬은 $v\in V$의 $\mathcal{B}$에 대한 좌표표현을 받아, $\mathcal{B}'$에 대한 좌표표현으로 바꾸어주는 행렬이라 생각할 수 있다. 더 일반적으로 임의의 linear map $L:V\rightarrow W$가 주어졌다 하고, $V,W$의 basis $\mathcal{B},\mathcal{C}$, 그리고 또 다른 basis $\mathcal{B}',\mathcal{C}'$가 주어졌다 하면, 선형대수학의 기본정리로부터 다음의 식
-
-$$[L]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_W]_{\mathcal{C}'}^\mathcal{C}[L]_{\mathcal{C}}^\mathcal{B}[\id_V]^{\mathcal{B}'}_{\mathcal{B}}$$
-
-를 얻는다.
-
-두 $m\times n$ 행렬 $A,B$가 주어졌다 하자. 그럼 위의 식에서부터, 만일 적당한 두 가역행렬 $P,Q$가 존재하여 다음의 식
-
-$$B=PAQ$$
-
-를 만족한다면 $A$와 $B$를 같은 것으로 취급하고 싶은 유혹이 있다. 이는 고정된 linear map $L$이 주어졌을 때, $L$의 정의역과 공역의 basis를 잘 택하여 얻어지는 행렬표현들을 모두 같은 것으로 생각한다는 것이다. 
-
-그러나 이렇게 그럴듯한 동기에 비해 그 결과는 별로 좋지 않다. $L$의 정의역과 공역의 basis를 모두 변화시킬 수 있다면, 정의역의 임의의 basis $\\{x\_1,\ldots, x_n\\}$을 택하고, 이후 공역에서는 $L(x_1),\ldots, L(x_n)$들 중 일차독립인 $L(x_1),\ldots, L(x_k)$를 택한 후 [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#prop6)을 이용하여 공역의 basis를 만들면 이 linear map은 항상 블록행렬
-
-$$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
-
-꼴로 나타낼 수 있기 때문이다. 즉, 이런 식으로 $L$의 행렬표현을 분류한다면 여기에 영향을 미치는 것은 오직 $L$의 rank 뿐이다.
-
-따라서 우리는 이 동치관계보다 세밀한 관계를 정의해야 한다.
+일차분해정리의 중요한 결과는 generalized eigenspace $G_\lambda(L)$ 위에서 $L-\lambda I$가 nilpotent operator가 된다는 것이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 임의의 $n\times n$ 행렬 $A,B$가 주어졌다 하자. 그럼 $A$와 $B$가 *닮은 행렬<sub>similar matrix</sub>*이라는 것은 적당한 가역행렬 $P$가 존재하여 $A=PBP^{-1}$이 성립하는 것이다.
+<ins id="def6">**정의 6**</ins> Linear operator $N:V\rightarrow V$이 *nilpotent<sub>멱영</sub>*이라는 것은 적당한 양의 정수 $k$에 대하여 $N^k=0$인 것이다.
 
 </div>
 
-즉 행렬 $A,B$가 닮은 행렬이라는 것은, 고정된 벡터공간 $V$에 대해 $A$를 <em_ko>basis $\mathcal{B}$에 대한 선형변환 $L:V\rightarrow V$의 행렬표현</em_ko>이라 생각했을 때, 적당한 basis $\mathcal{C}$가 존재하여 $B$를 <em_ko>basis $\mathcal{C}$에 대한 $L$의 행렬표현</em_ko>이라 생각할 수 있는 것이다. 그럼 이 때 
+<div class="proposition" markdown="1">
 
-$$A=[L]_{\mathcal{B}}^\mathcal{B}=[\id_V]^\mathcal{B}_\mathcal{C}[L]^\mathcal{C}_\mathcal{C}[\id_V]^\mathcal{C}_\mathcal{B}=PBP^{-1}$$
+<ins id="prop7">**명제 7**</ins> 일차분해정리의 상황에서, 각 $G_{\lambda_i}(L)$ 위에서 $L-\lambda_i I$는 nilpotent operator이다.
 
-이 된다. 
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[따름정리 4](#cor4)로부터 적당한 $k$에 대해 $G_{\lambda_i}(L)=\ker(L-\lambda_i I)^k$이므로, 임의의 $v\in G_{\lambda_i}(L)$에 대해 $(L-\lambda_i I)^k v=0$이다.
+
+</details>
+
+## 조르당 블록
+
+이제 우리의 문제는 nilpotent operator의 "표준형"을 찾는 것으로 귀착된다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> 크기 $k$의 *Jordan block* $J_k(\lambda)$는 다음과 같은 $k\times k$ 행렬이다:
+
+$$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$$
+
+즉, 대각선 위 원소들은 모두 $\lambda$이고, 대각선 바로 위(superdiagonal)의 원소들은 모두 $1$이며, 나머지는 모두 $0$이다.
+
+</div>
+
+<div class="example" markdown="1">
+
+<ins id="ex9">**예시 9**</ins> 크기 $3$인 Jordan block $J_3(2)$는 다음과 같다:
+
+$$J_3(2)=\begin{pmatrix}2&1&0\\0&2&1\\0&0&2\end{pmatrix}$$
+
+</div>
+
+Jordan block의 중요한 성질은 다음과 같다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10**</ins> $J_k(\lambda)-\lambda I_k$는 nilpotent이며, $(J_k(\lambda)-\lambda I_k)^k=0$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$N=J_k(\lambda)-\lambda I_k$라 하면,
+
+$$N=\begin{pmatrix}0&1&0&\cdots&0\\0&0&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&0&1\\0&0&\cdots&0&0\end{pmatrix}$$
+
+이다. 직접 계산하면 $N^2$는 superdiagonal에서 한 칸 더 위의 대각선에만 $1$이 있고, 일반적으로 $N^i$는 $i$번째 위 대각선에만 $1$이 있다. 따라서 $N^k=0$이다.
+
+</details>
+
+## 조르당 표준형의 존재
+
+이제 우리의 주요 정리를 서술할 수 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm11">**정리 11 (조르당 표준형)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 임의의 linear operator $L:V\rightarrow V$에 대하여, $V$의 적당한 basis를 선택하면 $L$의 행렬 표현이 다음의 형태를 갖는다:
+
+$$J=\begin{pmatrix}J_{k_1}(\lambda_1)&0&\cdots&0\\0&J_{k_2}(\lambda_2)&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&J_{k_m}(\lambda_m)\end{pmatrix}$$
+
+여기서 각 $J_{k_i}(\lambda_i)$는 Jordan block이다. 이러한 형태의 행렬을 $L$의 *Jordan canonical form<sub>조르당 표준형</sub>*이라 한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[정리 5](#thm5)로부터 $V=\bigoplus_{i=1}^m G_{\lambda_i}(L)$이고, 각 $G_{\lambda_i}(L)$ 위에서 $L-\lambda_i I$는 nilpotent이다. 따라서 각 generalized eigenspace에서 적당한 basis를 택하면, 그 basis에 대한 $L$의 행렬 표현이 Jordan block들의 직합으로 나타난다는 것을 보이면 충분하다.
+
+Nilpotent operator $N:W\rightarrow W$이 정의된 유한차원 벡터공간 $W$ 위에서 Jordan form을 구성하자. [보조정리 1](#lem1)로부터
+
+$$0=\ker N^0\subsetneq\ker N^1\subsetneq\cdots\subsetneq\ker N^{k-1}\subsetneq\ker N^k=W$$
+
+인 filtration이 존재하며, $k$는 $\ker N^k = \ker N^{k+1}$을 만족하는 최소 정수이다. 이제 역으로 이 filtration으로부터 Jordan basis를 구성한다.
+
+$j=k, k-1, \ldots, 1$에 대해 순서대로 다음을 수행한다: 각 $j$마다 $\ker N^j / \ker N^{j-1}$의 basis를 선택하고, 이 basis 원소들을 $W$로 lift한 벡터들을 $u_{j,1}, u_{j,2}, \ldots, u_{j,r_j}$라 하자. (여기서 $r_j = \dim(\ker N^j) - \dim(\ker N^{j-1})$이다.)
+
+각 벡터 $u_{j,i}$에 대해 다음의 Jordan chain을 구성한다:
+
+$$u_{j,i}, Nu_{j,i}, N^2u_{j,i}, \ldots, N^{j-1}u_{j,i}$$
+
+이 chain은 정확히 $j$개의 원소를 가진다. 왜냐하면 $u_{j,i} \in \ker N^j \setminus \ker N^{j-1}$이므로 $N^{j-1}u_{j,i} \neq 0$이지만 $N^j u_{j,i} = 0$이기 때문이다.
+
+모든 $j=k, k-1, \ldots, 1$과 모든 $i=1, \ldots, r_j$에 대해 이러한 chain들을 모으면, 총
+
+$$\sum_{j=1}^k j \cdot r_j = \sum_{j=1}^k j(\dim(\ker N^j) - \dim(\ker N^{j-1})) = \dim W$$
+
+개의 벡터를 얻는다. (마지막 등식은 telescoping series이다.) 이 벡터들이 $W$의 basis를 이루며, 이 basis에 대해 $N$의 행렬 표현은 크기 $1, 2, \ldots, k$인 Jordan block $J_j(0)$들의 직합이 된다.
+
+$G_{\lambda_i}(L)$ 위에 이를 적용하면, $L - \lambda_i I$가 nilpotent이므로 위의 구성을 $N = L - \lambda_i I$, $W = G_{\lambda_i}(L)$으로 사용할 수 있다. 그러면 $L = (L-\lambda_i I) + \lambda_i I = N + \lambda_i I$이므로, $L$의 행렬 표현은 각 Jordan block $J_j(0)$을 $J_j(\lambda_i)$로 바꾼 형태가 된다.
+
+각 generalized eigenspace $G_{\lambda_i}(L)$에 대해 이 과정을 적용하고, 얻은 basis들을 합치면 $V$ 전체의 basis를 얻고, 이 basis에 대한 $L$의 행렬 표현은 정리 11의 형태가 된다.
+
+</details>
+
+<div class="example" markdown="1">
+
+<ins id="ex12">**예시 12**</ins> [예시 2](#ex2)의 행렬
+
+$$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
+
+의 Jordan canonical form을 구해보자. $A$의 유일한 eigenvalue는 $\lambda=1$이고,
+
+$$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
+
+이다. 우리는 이미 다음을 알고 있다:
+
+$$\ker(A-I)=\span\{(1,0,0)\},\quad \ker(A-I)^2=\span\{(1,0,0),(0,1,0)\},\quad \ker(A-I)^3=\mathbb{R}^3$$
+
+$(A-I)^3=0$이지만 $(A-I)^2\neq 0$이므로, 가장 긴 Jordan chain의 길이는 $3$이다. $\ker(A-I)^3/\ker(A-I)^2$의 basis로 $(0,0,1)$의 coset을 택하면, Jordan chain
+
+$$(0,0,1), (A-I)(0,0,1)=(0,1,0), (A-I)^2(0,0,1)=(1,0,0)$$
+
+을 얻는다. 따라서 basis $\{(0,0,1),(0,1,0),(1,0,0)\}$에 대한 $A$의 행렬 표현은
+
+$$J=\begin{pmatrix}1&1&0\\0&1&1\\0&0&1\end{pmatrix}=J_3(1)$$
+
+이다. 실제로 변환 행렬을
+
+$$P=\begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix}$$
+
+이라 하면, $P^{-1}AP=J$가 성립함을 확인할 수 있다.
+
+</div>
+
+조르당 표준형의 유일성은 Jordan block들의 크기가 $\dim\ker N^k-\dim\ker N^{k-1}$에 의해 결정된다는 사실로부터 따라온다. 이는 basis의 선택과 무관하므로, Jordan canonical form은 Jordan block들의 순서를 제외하고는 유일하게 결정된다.
 
 ---
 
-**참고문헌**
-
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 
 ---
-
-[^1]: 미적분학의 기본정리, 대수학의 기본정리 등등과는 달리 *선형대수학의 기본정리*는 저자에 따라 전혀 다른 정리들을 의미하기도 한다. 예를 들어 **[Goc]**에서는 이전 글에서의 rank-nullity 정리를, Gilbert Strang의 경우 다음 글에서 다룰 직교여공간에 대한 정리들을 선형대수학의 기본정리라고 부른다. 우리는 **[Lee]**를 따라 이 정리를 선형대수학의 기본정리라 부르기로 한다.
