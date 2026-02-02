@@ -149,7 +149,7 @@ $$p_L(\mathbf{x})=\prod_{i=1}^m (\mathbf{x}-\lambda_i)^{m_i}$$
 
 라 하자. 여기서 $m_i$는 $\lambda_i$의 대수적 중복도이고 $\sum_{i=1}^m m_i=\dim V$이다.
 
-먼저 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$임을 보이자. $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 다음 두 식
+먼저 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\\{0\\}$임을 보이자. $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 다음 두 식
 
 $$G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i},\qquad G_{\lambda_j}(L)=\ker(L-\lambda_j I)^{k_j}$$
 
@@ -173,7 +173,7 @@ $$0=(L-\lambda_jI)^{p_j}w=(L-\lambda_jI)w'$$
 
 $$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w_\lambda w'$$
 
-으로부터 $w'$ 또한 $\lambda_i$에 해당하는 고유벡터임을 안다. 이는 
+으로부터 $w'$ 또한 $\lambda_i$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\\{0\\}$임을 안다. 
 
 
 
