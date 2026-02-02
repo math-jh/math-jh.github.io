@@ -6,7 +6,6 @@ gem "kramdown-parser-gfm"
 gem "webrick", "~> 1.7"
 gem "nokogiri", ">= 1.13.2"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
-gem "faraday-retry"
 
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"

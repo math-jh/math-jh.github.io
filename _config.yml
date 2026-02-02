@@ -235,7 +235,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
+  # - jekyll-feed  # 임시 비활성화
   - jekyll-include-cache
   - jekyll-last-modified-at
 
@@ -244,7 +244,7 @@ whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-include-cache
 
 
