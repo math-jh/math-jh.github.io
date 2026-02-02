@@ -22,14 +22,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const citation = `[\\[${category}\\] §${postTitle}, ⁋${type} ${number}](${pagePath}#${insID})`;
 
-            navigator.clipboard.writeText(citation);
+            // Try modern Clipboard API first, fallback to execCommand
+            const copyToClipboard = (text) => {
+                if (navigator.clipboard && window.isSecureContext) {
+                    return navigator.clipboard.writeText(text);
+                } else {
+                    // Fallback for non-secure contexts or older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = text;
+                    textArea.style.position = 'fixed';
+                    textArea.style.left = '-9999px';
+                    document.body.appendChild(textArea);
+                    textArea.focus();
+                    textArea.select();
+                    try {
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        return Promise.resolve();
+                    } catch (err) {
+                        document.body.removeChild(textArea);
+                        return Promise.reject(err);
+                    }
+                }
+            };
 
-            // Optional: quick feedback (flash the background)
-            ins.style.transition = 'background 0.2s';
-            ins.style.background = 'rgba(180,220,255,0.4)';
-            setTimeout(function() {
-                ins.style.background = '';
-            }, 400);
+            copyToClipboard(citation).then(() => {
+                // Success feedback (flash the background)
+                ins.style.transition = 'background 0.2s';
+                ins.style.background = 'rgba(180,220,255,0.4)';
+                setTimeout(function() {
+                    ins.style.background = '';
+                }, 400);
+            }).catch(err => {
+                console.error('Failed to copy citation:', err);
+            });
             
             e.stopPropagation();
         });
