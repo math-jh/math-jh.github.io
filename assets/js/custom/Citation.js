@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const insID = ins.id;
             const pagePath = window.location.pathname;
 
-            const citation = `[\\[${category}\] §${postTitle}, ⁋${type} ${number}](${pagePath}#${insID})`;
+            const citation = `[\\[${category}\\] §${postTitle}, ⁋${type} ${number}](${pagePath}#${insID})`;
 
             navigator.clipboard.writeText(citation);
 
