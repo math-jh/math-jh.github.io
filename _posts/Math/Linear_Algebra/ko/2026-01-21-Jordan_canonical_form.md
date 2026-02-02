@@ -165,7 +165,7 @@ $$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^{p_i}v=(L-\lambda_
 
 이다. 즉 $w\in G_{\lambda_j}(L)$이므로, $w$는 고유값 $\lambda_i$에 해당하는 고유벡터인 동시에 $G_{\lambda_j}(L)$에 속하는 벡터가 된다. 
 
-이것이 불가능함을 보이자. 우선 $w\in G_{\lambda_j}(L)$이므로, 그 정의에 의해 $(L-\lambda_jI)^kw=0$이도록 하는 정수 $l$가 존재한다. 
+이것이 불가능함을 보이자. 우선 $w\in G_{\lambda_j}(L)$이므로, 그 정의에 의해 $(L-\lambda_jI)^kw=0$이도록 하는 정수 $k$가 존재한다. 
 
 
 
