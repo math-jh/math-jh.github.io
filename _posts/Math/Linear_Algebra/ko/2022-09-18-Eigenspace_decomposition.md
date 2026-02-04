@@ -363,7 +363,7 @@ $$\dim\ker(L-\lambda I)+\dim\im(L-\lambda I)=\dim V$$
 
 </details>
 
-즉, 행렬 $A$의 diagonalization은, 
+즉, 행렬 $A$의 eigenspace decomposition은 다음과 같이 얻어진다. 
 
 ---
 
