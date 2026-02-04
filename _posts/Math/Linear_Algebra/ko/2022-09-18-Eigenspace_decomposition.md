@@ -29,19 +29,19 @@ $$Av=\lambda v$$
 
 더 일반적으로, $A$를 $\mathbb{K}^n$에서 $\mathbb{K}^n$으로의 linear map으로 생각하고, 정의역 $\mathbb{K}^n$을 고유공간 $E_\lambda$들로 덮을 수 있다 가정하자. 즉
 
-$$\mathbb{K}^n=\span\left(\bigcup_{\lambda\in\Spec(A)}E_\lambda\right)$$
+$$\mathbb{K}^n=\span\left(\bigcup_{\lambda\in\sigma(A)}E_\lambda\right)$$
 
 이라 하자. 그럼 임의의 $v\in\mathbb{K}^n$에 대하여, $v_\lambda\in E_\lambda$들이 각각 존재하여
 
-$$v=\sum_{\lambda\in\Spec(A)}v_\lambda$$
+$$v=\sum_{\lambda\in\sigma(A)}v_\lambda$$
 
 이라 쓸 수 있으며, 따라서 
 
-$$Av=A\left(\sum_{\lambda\in\Spec(A)}v_\lambda\right)=\sum_{\lambda\in\Spec(A)}Av_\lambda$$
+$$Av=A\left(\sum_{\lambda\in\sigma(A)}v_\lambda\right)=\sum_{\lambda\in\sigma(A)}Av_\lambda$$
 
 이고, 위의 논증에 의하여 $Av_\lambda=\lambda v_\lambda$이므로 다음의 식
 
-$$Av=\sum_{\lambda\in\Spec(A)}\lambda v_\lambda$$
+$$Av=\sum_{\lambda\in\sigma(A)}\lambda v_\lambda$$
 
 을 얻는다. 물론 위의 계산이 말이 되기 위해서는 $v$를 $v_\lambda$들의 합으로 나타내는 방법이 유일해야 한다. 이를 다음과 같이 정의한다.
 
@@ -172,7 +172,7 @@ $$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
 
 </details>
 
-이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\Spec(A)$, 이에 대응되는 고유공간들을 $E\_\lambda$, 그리고 이들의 basis를 $\mathcal{B}\_\lambda$라 한다면 $\mathcal{B}=\bigcup\_{\lambda\in\Spec(A)}\mathcal{B}\_\lambda$가 $\mathbb{K}^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $\mathbb{K}^n$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/linear_algebra/characteristic_polynomial#ex7)을 보면, $\mathbb{K}=\mathbb{R}$에서 $\Spec(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
+이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\sigma(A)$, 이에 대응되는 고유공간들을 $E\_\lambda$, 그리고 이들의 basis를 $\mathcal{B}\_\lambda$라 한다면 $\mathcal{B}=\bigcup\_{\lambda\in\sigma(A)}\mathcal{B}\_\lambda$가 $\mathbb{K}^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $\mathbb{K}^n$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/linear_algebra/characteristic_polynomial#ex7)을 보면, $\mathbb{K}=\mathbb{R}$에서 $\sigma(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -343,23 +343,27 @@ $$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subset \ker L$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Linear operator $L:V\rightarrow V$가 diagonalizable인 것은 모든 고윳값 $\lambda\in\Spec(L)$에 대하여 $\ker(L-\lambda I)^2=\ker(L-\lambda I)$인 것과 동치이다.
+<ins id="prop11">**명제 11**</ins> Linear operator $A:V\rightarrow V$가 diagonalizable인 것은 모든 고윳값 $\lambda\in\MatSpec(A)$에 대하여 $\ker(L-\lambda I)^2=\ker(L-\lambda I)$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $L$이 diagonalizable이라 하자. 그럼 $V=\bigoplus_{\mu\in\Spec(L)} E_\mu(L)$이다. 임의의 $v\in\ker(L-\lambda I)^2$를 취하면, $v=\sum_{\mu\in\Spec(L)}v_\mu$로 유일하게 쓸 수 있고, 
+우선 $L$이 diagonalizable이라 하자. 그럼 $V=\bigoplus_{\mu\in\sigma(L)} E_\mu(L)$이다. 임의의 $v\in\ker(L-\lambda I)^2$를 취하면, $v=\sum_{\mu\in\sigma(L)}v_\mu$로 유일하게 쓸 수 있고, 
 
-$$(L-\lambda I)^2v=\sum_{\mu\in\Spec(L)}(L-\lambda I)^2v_\mu=\sum_{\mu\in\Spec(L)}(\mu-\lambda)^2v_\mu=0$$
+$$(L-\lambda I)^2v=\sum_{\mu\in\sigma(L)}(L-\lambda I)^2v_\mu=\sum_{\mu\in\sigma(L)}(\mu-\lambda)^2v_\mu=0$$
 
 이다. 고유공간 분해의 유일성으로부터 $(\mu-\lambda)^2v_\mu=0$이 모든 $\mu$에 대해 성립해야 하고, $\mu\neq\lambda$일 때는 $v_\mu=0$이므로 $v=v_\lambda\in E_\lambda(L)=\ker(L-\lambda I)$이다.
 
-거꾸로 모든 고윳값 $\lambda$에 대하여 $\ker(L-\lambda I)^2=\ker(L-\lambda I)$라 하자. [보조정리 10](#lem10)으로부터 각 $\lambda$에 대해 $\ker(L-\lambda I)\cap\im(L-\lambda I)=\\{0\\}$이고, dimension theorem에 의해
+거꾸로 모든 고윳값 $\lambda$에 대하여 $\ker(L-\lambda I)^2=\ker(L-\lambda I)$라 하자. [보조정리 10](#lem10)으로부터 각 $\lambda$에 대해 
+
+$$\ker(L-\lambda I)\cap\im(L-\lambda I)=\\{0\\}$$
+
+이고, [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 의하여
 
 $$\dim\ker(L-\lambda I)+\dim\im(L-\lambda I)=\dim V$$
 
-이므로 $V=\ker(L-\lambda I)\oplus\im(L-\lambda I)$이다. 이제 $\im(L-\lambda I)$ 위에서 $L-\lambda I$를 다시 생각하면, 귀납적으로 $V$를 고유공간들로 분해할 수 있다.
+이므로 $V=\ker(L-\lambda I)\oplus\im(L-\lambda I)$이다. 한편 [명제 4](#prop4)로부터, $\mu\neq\lambda$가 $L$의 다른 고유값이라면 $E_\lambda(L)\cap E_\mu(L)=\\{0\\}$이라는 것을 알고 있다. 이는 $E_\mu(L)$이 $\im(L-\lambda I)$에 속한다는 의미이고, 따라서 귀납적으로 $\im(L-\lambda I)$ 위에서 $(L-\mu I)$를 다시 생각하면, 귀납적으로 $V$를 고유공간들로 분해할 수 있다.
 
 </details>
 
