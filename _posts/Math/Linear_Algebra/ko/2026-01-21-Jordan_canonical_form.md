@@ -133,7 +133,7 @@ $$(L-\lambda I)^{k'}v =0$$
 
 $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 
-이 성립한다면 $V$를 $\ker (A-\lambda I)$ (즉 $\lambda$에 해당하는 $A$의 eigenspace)와 $\im (A-\lambda I)$의 direct sum으로 나타낼 수 있다는 것을 확인하였고 ([§고유공간분해, ⁋보조정리 10](/ko/math/linear_algebra/eigenspace_decomposition#lem10)) 
+이 성립한다면 $V$를 $\ker (A-\lambda I)$ (즉 $\lambda$에 해당하는 $A$의 eigenspace)와 $\im (A-\lambda I)$의 direct sum으로 나타낼 수 있다는 것을 확인하였고 이로부터 $V$의 eigenspace decomposition을 얻을 수 있었다. ([§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11))
 
 <div class="proposition" markdown="1">
 
