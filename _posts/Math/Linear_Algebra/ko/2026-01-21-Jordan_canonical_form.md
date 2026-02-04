@@ -103,7 +103,7 @@ $$\ker L^k=\ker L^{k+1}=\cdots$$
 
 $$\ker L^k=\ker L^{2k}$$
 
-이 성립하므로, [§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)에 의해 $V$는 $\ker L^k\oplus \im L^k$의 꼴로 나타낼 수 있을 것이다. 
+이 성립하므로, [§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)에 의해 $V$는 $\ker L^k\oplus \im L^k$의 꼴로 나타낼 수 있을 것이다.
 
 <div class="definition" markdown="1">
 
