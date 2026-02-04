@@ -4,7 +4,7 @@ title: "서브라임 텍스트"
 excerpt: ""
 
 categories: [Misc / Peripherals]
-permalink: /ko/misc/peripherals/keymaps/sublime_text
+permalink: /ko/misc/peripherals/tools/sublime_text
 header:
     overlay_image: 
     overlay_filter: 0.5

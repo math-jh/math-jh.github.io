@@ -4,7 +4,7 @@ title: "Apple Automator"
 excerpt: ""
 
 categories: [Misc / Peripherals]
-permalink: /ko/misc/peripherals/keymaps/automator
+permalink: /ko/misc/peripherals/tools/automator
 header:
     overlay_image: 
     overlay_filter: 0.5
