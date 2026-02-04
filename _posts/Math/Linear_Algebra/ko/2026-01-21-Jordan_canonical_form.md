@@ -135,7 +135,11 @@ $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 
 이 성립한다면 $V$를 $\ker (A-\lambda I)$ (즉 $\lambda$에 해당하는 $A$의 고유공간)와 $\im (A-\lambda I)$의 direct sum으로 나타낼 수 있다는 것을 확인하였고 이로부터 $V$의 eigenspace decomposition을 얻을 수 있었다. ([§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)) 따라서 위의 식이 모든 고유값 $\lambda$에 대해 성립한다면 $A$가 diagonalizable이 된다. 
 
-이제 우리는 [보조정리 1](#lem1)에서 
+이제 우리는 [보조정리 1](#lem1)에서, 임의의 linear operator $L:V\rightarrow V$마다 다음의 식
+
+$$\ker L^k=\ker L^{k+1}=\cdots$$
+
+을 만족하는 $k$가 존재함을 보았다. 
 
 <div class="proposition" markdown="1">
 
