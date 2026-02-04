@@ -363,6 +363,8 @@ $$\dim\ker(L-\lambda I)+\dim\im(L-\lambda I)=\dim V$$
 
 </details>
 
+즉, 행렬 $A$의 diagonalization은, 
+
 ---
 
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
