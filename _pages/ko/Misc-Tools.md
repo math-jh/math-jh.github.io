@@ -1,7 +1,7 @@
 ---
-title: "키맵"
+title: "도구"
 layout: archive_custom
-permalink: /ko/keymaps
+permalink: /ko/tools
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -10,5 +10,5 @@ permalink: /ko/keymaps
 {% endif %}
 
 {% assign posts = site.categories['Misc / Peripherals'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% assign keymap-posts = posts | where_exp: "post", "post.permalink contains '/keymaps/'" | sort: 'weight' %}
-{% for post in keymap-posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% assign tools-posts = posts | where_exp: "post", "post.permalink contains '/tools/'" | sort: 'weight' %}
+{% for post in tools-posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
