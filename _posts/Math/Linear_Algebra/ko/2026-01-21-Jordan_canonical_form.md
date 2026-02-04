@@ -139,7 +139,11 @@ $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 
 $$\ker L^k=\ker L^{k+1}=\cdots$$
 
-을 만족하는 $k$가 존재함을 보았다. 
+을 만족하는 $k$가 존재함을 보았다. 그럼 이러한 $k$에 대해서는 다음의 식
+
+$$\ker L^k=\ker L^{2k}$$
+
+이 성립하므로,
 
 <div class="proposition" markdown="1">
 
