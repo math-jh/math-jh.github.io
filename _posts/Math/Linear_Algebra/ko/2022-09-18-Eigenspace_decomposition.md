@@ -363,7 +363,11 @@ $$\dim\ker(L-\lambda I)+\dim\im(L-\lambda I)=\dim V$$
 
 </details>
 
-즉, 행렬 $A$의 eigenspace decomposition은 다음과 같이 얻어진다. 
+즉, 행렬 $A$의 eigenspace decomposition은 다음과 같이 얻어진다. 우리는 우선 $A$의 고유값들을 모두 계산한다. 만일 하나의 고유값 $\lambda$에 대하여 다음의 식
+
+$$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
+
+이 성립한다면, 
 
 ---
 
