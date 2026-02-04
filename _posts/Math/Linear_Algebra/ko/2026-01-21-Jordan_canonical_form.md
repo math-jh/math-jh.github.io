@@ -129,7 +129,11 @@ $$(L-\lambda I)^{k'}v =0$$
 
 ## 일차분해정리
 
-이제 우리의 주요 정리를 증명할 준비가 되었다.
+이제 우리의 주요 정리를 증명할 준비가 되었다. 우리의 핵심 관찰은 다음과 같다. 우리는 linear operator $A-\lambda I$가 주어졌을 때, 만일 다음의 식
+
+$$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
+
+이 성립한다면 $V$를 $\ker (A-\lambda I)$ (즉 $\lambda$에 해당하는 $A$의 eigenspace)와 $\im (A-\lambda I)$의 direct sum으로 나타낼 수 있다는 것을 확인하였고 ([§고유공간분해, ⁋보조정리 10](/ko/math/linear_algebra/eigenspace_decomposition#lem10)) 
 
 <div class="proposition" markdown="1">
 
