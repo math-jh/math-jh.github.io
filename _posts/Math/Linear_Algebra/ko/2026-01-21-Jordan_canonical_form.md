@@ -143,7 +143,11 @@ $$\ker L^k=\ker L^{k+1}=\cdots$$
 
 $$\ker L^k=\ker L^{2k}$$
 
-이 성립하므로, [§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)에 의해 $V$는 $\ker L^k\oplus \im L^k$의 꼴로 나타낼 수 있다. 
+이 성립하므로, [§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)에 의해 $V$는 $\ker L^k\oplus \im L^k$의 꼴로 나타낼 수 있다. 이제 $\ker L^k$와 $\im L^k$의 basis를 각각 택하고, 이를 사용하여 linear operator $L$을 다음의 block matrix
+
+$$A=\begin{pmatrix}B&0\\0&C\end{pmatrix}$$
+
+의 꼴로 나타낼 수 있다. 
 
 <div class="proposition" markdown="1">
 
