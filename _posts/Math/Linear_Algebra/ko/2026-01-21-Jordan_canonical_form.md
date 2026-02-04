@@ -51,6 +51,8 @@ $$L^{k+1}v=L^k(Lv)=0\implies v\in \ker L^{k+1}$$
 
 </details>
 
+우리의 핵심 관찰은, 고유공간 $E_\lambda(A)$는 그 차원이 부족하지만, [보조정리 1](#lem1)을 사용하여 이 공간을 늘려가다 보면 "맞는 차원"을 얻게 된다는 것이다. 
+
 <div class="example" markdown="1">
 
 <ins id="ex2">**예시 2**</ins> 다음의 행렬
@@ -87,7 +89,21 @@ $$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$$
 
 </div>
 
-즉, 위의 예시에서 고유공간 $\ker (A-I)$ 자체는 그 차원이 부족하지만, [보조정리 1](#lem1)을 사용하여 이 공간을 늘려가다 보면 "맞는 차원"을 얻게 된다. 이를 엄밀하게 서술하기 위해서는 몇가지 준비가 필요하다. 
+이는 다음과 같이 설명할 수 있다. 우리는 linear operator $A-\lambda I$가 주어졌을 때, 만일 다음의 식
+
+$$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
+
+이 성립한다면 $V$를 $\ker (A-\lambda I)$ (즉 $\lambda$에 해당하는 $A$의 고유공간)와 $\im (A-\lambda I)$의 direct sum으로 나타낼 수 있다는 것을 확인하였고 이로부터 $V$의 eigenspace decomposition을 얻을 수 있었다. ([§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)) 따라서 위의 식이 모든 고유값 $\lambda$에 대해 성립한다면 $A$가 diagonalizable이 된다. 
+
+이제 우리는 [보조정리 1](#lem1)에서, 임의의 linear operator $L:V\rightarrow V$마다 다음의 식
+
+$$\ker L^k=\ker L^{k+1}=\cdots$$
+
+을 만족하는 $k$가 존재함을 보았다. 그럼 이러한 $k$에 대해서는 다음의 식
+
+$$\ker L^k=\ker L^{2k}$$
+
+이 성립하므로, [§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)에 의해 $V$는 $\ker L^k\oplus \im L^k$의 꼴로 나타낼 수 있을 것이다. 
 
 <div class="definition" markdown="1">
 
@@ -129,21 +145,7 @@ $$(L-\lambda I)^{k'}v =0$$
 
 ## 일차분해정리
 
-이제 우리의 주요 정리를 증명할 준비가 되었다. 우리의 핵심 관찰은 다음과 같다. 우리는 linear operator $A-\lambda I$가 주어졌을 때, 만일 다음의 식
-
-$$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
-
-이 성립한다면 $V$를 $\ker (A-\lambda I)$ (즉 $\lambda$에 해당하는 $A$의 고유공간)와 $\im (A-\lambda I)$의 direct sum으로 나타낼 수 있다는 것을 확인하였고 이로부터 $V$의 eigenspace decomposition을 얻을 수 있었다. ([§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)) 따라서 위의 식이 모든 고유값 $\lambda$에 대해 성립한다면 $A$가 diagonalizable이 된다. 
-
-이제 우리는 [보조정리 1](#lem1)에서, 임의의 linear operator $L:V\rightarrow V$마다 다음의 식
-
-$$\ker L^k=\ker L^{k+1}=\cdots$$
-
-을 만족하는 $k$가 존재함을 보았다. 그럼 이러한 $k$에 대해서는 다음의 식
-
-$$\ker L^k=\ker L^{2k}$$
-
-이 성립하므로, [§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)에 의해 $V$는 $\ker L^k\oplus \im L^k$의 꼴로 나타낼 수 있다. 이제 $\ker L^k$와 $\im L^k$의 basis를 각각 택하고, 이를 사용하여 linear operator $L$을 다음의 block matrix
+이제 우리의 주요 정리를 증명할 준비가 되었다. 우리의 핵심 관찰은 다음과 같다. 다. 이제 $\ker L^k$와 $\im L^k$의 basis를 각각 택하고, 이를 사용하여 linear operator $L$을 다음의 block matrix
 
 $$A=\begin{pmatrix}B&0\\0&C\end{pmatrix}$$
 
