@@ -343,27 +343,47 @@ $$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subset \ker L$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Linear operator $A:V\rightarrow V$가 diagonalizable인 것은 모든 고윳값 $\lambda\in\MatSpec(A)$에 대하여 $\ker(L-\lambda I)^2=\ker(L-\lambda I)$인 것과 동치이다.
+<ins id="prop11">**명제 11**</ins> Linear operator $A:V\rightarrow V$가 diagonalizable인 것은 모든 고윳값 $\lambda\in\sigma(A)$에 대하여 
+
+$$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$
+
+인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $L$이 diagonalizable이라 하자. 그럼 $V=\bigoplus_{\mu\in\sigma(L)} E_\mu(L)$이다. 임의의 $v\in\ker(L-\lambda I)^2$를 취하면, $v=\sum_{\mu\in\sigma(L)}v_\mu$로 유일하게 쓸 수 있고, 
+우선 $A$가 diagonalizable이라 하자. 그럼 $V=\bigoplus_{\mu\in\sigma(A)} E_\mu(A)$이다. 임의의 $v\in\ker(A-\lambda I)^2$를 취하면, $v=\sum_{\mu\in\sigma(A)}v_\mu$로 유일하게 쓸 수 있고, 
 
-$$(L-\lambda I)^2v=\sum_{\mu\in\sigma(L)}(L-\lambda I)^2v_\mu=\sum_{\mu\in\sigma(L)}(\mu-\lambda)^2v_\mu=0$$
+$$(A-\lambda I)^2v=\sum_{\mu\in\sigma(A)}(A-\lambda I)^2v_\mu=\sum_{\mu\in\sigma(A)}(\mu-\lambda)^2v_\mu=0$$
 
-이다. 고유공간 분해의 유일성으로부터 $(\mu-\lambda)^2v_\mu=0$이 모든 $\mu$에 대해 성립해야 하고, $\mu\neq\lambda$일 때는 $v_\mu=0$이므로 $v=v_\lambda\in E_\lambda(L)=\ker(L-\lambda I)$이다.
+이다. 고유공간 분해의 유일성으로부터 $(\mu-\lambda)^2v_\mu=0$이 모든 $\mu$에 대해 성립해야 하고, $\mu\neq\lambda$일 때는 $v_\mu=0$이므로
 
-거꾸로 모든 고윳값 $\lambda$에 대하여 $\ker(L-\lambda I)^2=\ker(L-\lambda I)$라 하자. [보조정리 10](#lem10)으로부터 각 $\lambda$에 대해 
+$$v=v_\lambda\in E_\lambda(A)=\ker(A-\lambda I)$$
 
-$$\ker(L-\lambda I)\cap\im(L-\lambda I)=\\{0\\}$$
+이다.
+
+거꾸로 모든 고윳값 $\lambda$에 대하여 $\ker(A-\lambda I)^2=\ker(A-\lambda I)$라 하자. [보조정리 10](#lem10)으로부터 각 $\lambda$에 대해 
+
+$$\ker(A-\lambda I)\cap\im(A-\lambda I)=\{0\}$$
 
 이고, [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 의하여
 
-$$\dim\ker(L-\lambda I)+\dim\im(L-\lambda I)=\dim V$$
+$$\dim\ker(A-\lambda I)+\dim\im(A-\lambda I)=\dim V$$
 
-이므로 $V=\ker(L-\lambda I)\oplus\im(L-\lambda I)$이다. 한편 [명제 4](#prop4)로부터, $\mu\neq\lambda$가 $L$의 다른 고유값이라면 $E_\lambda(L)\cap E_\mu(L)=\\{0\\}$이라는 것을 알고 있다. 이는 $E_\mu(L)$이 $\im(L-\lambda I)$에 속한다는 의미이고, 따라서 귀납적으로 $\im(L-\lambda I)$ 위에서 $(L-\mu I)$를 다시 생각하면, 귀납적으로 $V$를 고유공간들로 분해할 수 있다.
+이므로 $V=\ker(A-\lambda I)\oplus\im(A-\lambda I)$이다. 편의를 위해 $\ker(A-\lambda I)=E_\lambda(A)$, $\im (A-\lambda I)=W_\lambda(A)$로 적자. 우리는 우선 임의의 $v\in W_\lambda(A)$에 대하여, $v=(A-\lambda I)w$라 하면
+
+$$Av=A(A-\lambda I)w=(A-\lambda I)Aw\in W_\lambda(A)$$
+
+인 것으로부터 $W_\lambda(A)$는 $A$-invariant subspace임을 안다. 즉
+
+$$A\vert_{W_\lambda(A)}: W_\lambda(A) \rightarrow W_\lambda(A)$$
+
+가 잘 정의된다. 그럼 [명제 4](#prop4)로부터, 만일 $w\in W_\lambda(A)$가 고유값 $\mu$를 갖는 $A\vert_{W_\lambda(A)}$의 고유벡터라면 $w$를 $V$의 원소로 본 것 또한 $A$의 (eigenvalue $\mu$에 해당하는) 고유벡터이며 거꾸로 $A$의 고유값 $\mu\neq \lambda$과 그에 해당하는 고유벡터가 주어진다면 이는 $A\vert_{W_\lambda(A)}$의 고유값--고유벡터 쌍으로 볼 수 있다는 것도 안다. 또, $A\vert_{W_\lambda(A)}$의 임의의 고유값 $\mu$에 대하여, 
+
+$$\ker (A_{W_\lambda(A)}-\mu I)_\ker (A_{W_\lambda(A)}-\mu I)^2$$
+
+도 비슷한 이유로 $W_\lambda(A)$ 위에서 성립하는 것을 안다. 즉, 우리는 이 과정을 귀납적으로 반복할 수 있다. 한편 우리는 $\mathbb{K}$가 algebraically closed임을 가정하고 있으므로 임의의 linear operator $W \rightarrow W$는, $W$가 $0$차원이 아닌 한, 항상 고유값을 가진다는 것을 알고 이로부터 이 귀납법이 <em_ko>정확히</em_ko> $A$의 eigenspace decomposition을 준다는 것을 안다. 
 
 </details>
 
