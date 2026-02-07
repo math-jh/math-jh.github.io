@@ -199,7 +199,7 @@ $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6 (일차분해정리)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 linear operator $L:V\rightarrow V$에 대하여, $L$의 모든 eigenvalue들을 $\lambda_1,\ldots,\lambda_m$이라 하자. 그럼 다음의 직합분해
+<ins id="thm6">**정리 6 (제1 분해정리)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 linear operator $L:V\rightarrow V$에 대하여, $L$의 모든 eigenvalue들을 $\lambda_1,\ldots,\lambda_m$이라 하자. 그럼 다음의 직합분해
 
 $$V=G_{\lambda_1}(L)\oplus G_{\lambda_2}(L)\oplus\cdots\oplus G_{\lambda_m}(L)$$
 
@@ -235,7 +235,35 @@ $$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambd
 
 가 nilpotent operator라는 사실이다. 이로부터, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $A$ 또한 표준형으로 나타낼 수 있다는 것을 안다. 
 
-임의의 벡터공간 $V$ 위에 정의된 nilpotent operator $N:V \rightarrow V$를 생각하고, 
+임의의 벡터공간 $V$ 위에 정의된 nilpotent operator $N:V \rightarrow V$를 생각하자. 그럼 임의의 $v\in V$에 대하여, $N^kv=0$이지만 $N^{k-1}v\neq 0$이도록 하는 정수 $k$가 존재한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="lem7">**보조정리 7**</ins> 위의 상황에서, 다음의 벡터들
+
+$$v, \quad Nv, \quad\cdots,\quad N^{k-1}v$$
+
+은 linearly independent이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+다음 식
+
+$$a_0v+a_1 Nv+\cdots a_{k-1}N^{k-1}v=0$$
+
+이 성립한다 가정하자. 양 변에 $N^{k-1}$을 취하면 $N^k=0$인 것으로부터 $a_0N^{k-1}v=0$임을 안다. 그런데 가정에 의하여 $N^{k-1}v\neq 0$이므로 반드시 $a_0=0$이므로 
+
+$$a_1Nv+\cdots a_{k-1}N^{k-1}v=0$$
+
+이다. 다시 양 변에 $N^{k-2}$을 취하면 $a_1=0$을 얻고, 이를 반복하면 원하는 결과를 얻는다. 
+
+</details>
+
+
+
+
 
 
 위와 같은 상황에서, [보조정리 1](#lem1)을 적용하여 다음의 filtration
