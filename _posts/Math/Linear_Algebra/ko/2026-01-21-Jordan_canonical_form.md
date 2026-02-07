@@ -199,7 +199,7 @@ $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6 (제1 분해정리)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 linear operator $L:V\rightarrow V$에 대하여, $L$의 모든 eigenvalue들을 $\lambda_1,\ldots,\lambda_m$이라 하자. 그럼 다음의 직합분해
+<ins id="thm6">**정리 6 (제1분해정리)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 linear operator $L:V\rightarrow V$에 대하여, $L$의 모든 eigenvalue들을 $\lambda_1,\ldots,\lambda_m$이라 하자. 그럼 다음의 direct sum decomposition
 
 $$V=G_{\lambda_1}(L)\oplus G_{\lambda_2}(L)\oplus\cdots\oplus G_{\lambda_m}(L)$$
 
@@ -261,94 +261,25 @@ $$a_1Nv+\cdots a_{k-1}N^{k-1}v=0$$
 
 </details>
 
+즉 $k$개의 벡터들 $v, Nv, \ldots, N^{k-1}v$은 $V$의 $k$차원 부분공간 (이러한 꼴의 부분공간을 $v$가 정의하는 *cyclic subspace*라 부른다.) $U$의 basis가 된다. 이 특정한 basis가 흥미로운 이유는, $N\vert_U$를 이 basis에 대하여 행렬로 표현해보면
+
+$$\begin{pmatrix}0&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\vdots\\ 0&0&0&\cdots&1\\ 0&0&0&\cdots&0\end{pmatrix}$$
+
+이 되기 때문이다. 이를 nilpotent operator의 표준형으로 삼는 것이 우리의 아이디어이다. 
+
+즉, 임의의 벡터공간 $V$와 그 위에 정의된 nilpotent operator $N$이 주어졌을 때, 이를 cyclic subspace들의 direct sum으로 나타내는 것이 우리에게 주어진 일이다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm8">**정리 8 (Cyclic decomposition theorem 혹은, 제2분해정리)**</ins> 
+
+</div>
 
 
 
 
 
-위와 같은 상황에서, [보조정리 1](#lem1)을 적용하여 다음의 filtration
 
-$$0\subsetneq \ker N_\lambda\subsetneq \ker N_\lambda^2\subsetneq \cdots \subsetneq \ker N_\lambda^{k_\lambda-1}\subsetneq \ker N_\lambda^{k_\lambda}=G_\lambda(A)$$
-
-을 생각하자. 여기서 $k_\lambda$는 $\ker N_\lambda^k=G_\lambda(A)$를 만족하는 $k$ 중 가장 작은 것이다. 이제 각각의 $1\leq i\leq k_\lambda$에 대하여, 
-
-$$d_{\lambda,i}=\dim \ker N_\lambda^i-\dim\ker N_\lambda^{i-1}$$
-
-으로 정의하자. 우리는 다음의 식
-
-$$\ker N_\lambda^i=\ker N_\lambda^{i-1}\oplus U_i$$
-
-을 만족하는 $\ker N_\lambda^i$의 $d_{\lambda, i}$차원 부분공간 $U_i$를 찾을 수 있고, 그럼 이로부터
-
-$$G_\lambda(A)=\ker N_\lambda^{k_\lambda}=\ker N_\lambda^{k_\lambda-1}\oplus U_{k_\lambda}=\cdots =U_{k_\lambda}\oplus \cdots \oplus U_1$$
-
-으로 나타낼 수 있다.
-
-우리의 construction은 다음의 관찰에 의존한다. 
-
-1. 만일 $u\in U_i$라면 $N_\lambda^i u=N_\lambda^{i-1}(N_\lambda u)=0$이므로 $N_\lambda u\in \ker N_\lambda^{i-1}$이다. 
-2. 만일 $u_1, \ldots, u_k$가 $U_i$에서 linearly independent라면 $N_\lambda u_1, \ldots, N_\lambda  u_k$들도 linearly independent이다. 다음 식
-    
-    $$a_1 N_\lambda u_1+\cdots +a_kN_\lambda u_k=0$$
-
-    이 성립한다고 하면
-
-    $$a_1u_1+\cdots+a_ku_k\in \ker N_\lambda \subset \ker N_\lambda^{i-1}$$
-
-    이고 정의에 의해 $\ker N_\lambda^{i-1}\cap U_i=\\{0\\}$이기 때문이다. 
-3. 뿐만 아니라, 
-
-
-첫째, 임의의 $i$에 대하여 $U_i$의 basis
-
-$$u_1, \cdots, u_{d_{\lambda, i}}$$
-
-가 주어졌다 하자. 그럼 정의에 의해 $N^i_\lambda(u_j)=0$이지만 $N^{i-1}_\lambda(u_j)\neq 0$이 모든 $j$에 대해 성립한다. 뿐만 아니라, 임의의 $0\leq k\leq i-1$에 대하여 다음 벡터들
-
-$$N_\lambda^k u_1, \cdots, N^k_\lambda u_{d_{\lambda,i}}$$
-
-은 모두 linearly independent이다. 만일
-
-$$a_0 N^k_\lambda u_1+\cdots +a_{d_{\lambda, i}} N^k_\lambda u_{d_\lambda, i}=0$$
-
-이라면 
-
-$$a_0u_1+\cdots + a_{d_{\lambda, i}} u_{d_\lambda, i}\in \ker N_\lambda^k\subset N_\lambda^{i-1}$$
-
-인데, $U_i$의 정의에 의하여 $N_\lambda^{i-1}\cap U_i=\\{0\\}$이기 때문이다. 
-
-이제 귀납적으로 우리는 다음과 같이 정의한다. 우선 $U_{k_\lambda}$의 basis
-
-$$u_1, \ldots, u_{d_{\lambda, k_\lambda}}$$
-
-를 택한다. 
-
-우선 임의의 $u\in U_i$에 대하여
-
-$$N_\lambda^iu=0\implies N_\lambda^{i-1}(N_\lambda u)=0$$
-
-이므로 $N_\lambda(U_i)\subseteq \ker N_\lambda^{i-1}$이 성립한다. 그런데 $N_\lambda$를 $U_i$로 제한한다면
-
-$$N_\lambda u=0\implies u\in \ker N_\lambda \cap U_i\subseteq \ker N_\lambda^{i-1}\cap U_i=\{0\}$$
-
-이 성립하므로 
-
-$$N_\lambda\vert_{U_i}: U_i \rightarrow \ker N_\lambda^{i-1}$$
-
-은 injective linear map이고, 따라서 $N_\lambda(U_i)$의 차원은 $U_i$의 차원과 같은 $d_{\lambda, i}$차원임을 안다. 
-
-이제 각각의 $u\in U_i$에 대하여, 다음의 벡터들
-
-$$u,\quad N_\lambda u, \quad N_\lambda^2 u,\quad\cdots, \quad N^{i-1}u$$
-
-을 생각하면 이들은 linearly independent이다. 만일
-
-$$a_0 u +a_1 N_\lambda u+\cdots a_{i-1}N^{i-1}u=0$$
-
-이라면, 
-
-
-이를 위해 다음을 정의한다. 
 
 <div class="definition" markdown="1">
 
