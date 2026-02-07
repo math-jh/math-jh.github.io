@@ -237,19 +237,47 @@ $$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambd
 
 위와 같은 상황에서, [보조정리 1](#lem1)을 적용하여 다음의 filtration
 
-$$0\subsetneq \ker N_\lambda\subsetneq \ker N_\lambda^2\subsetneq \cdots \subsetneq \ker N_\lambda^{d_\lambda-1}\subsetneq \ker N_\lambda^{d_\lambda}=G_\lambda(A)$$
+$$0\subsetneq \ker N_\lambda\subsetneq \ker N_\lambda^2\subsetneq \cdots \subsetneq \ker N_\lambda^{k_\lambda-1}\subsetneq \ker N_\lambda^{k_\lambda}=G_\lambda(A)$$
 
-을 생각하자. 이제 각각의 $i$에 대하여, 
+을 생각하자. 여기서 $k_\lambda$는 $\ker N_\lambda^k=G_\lambda(A)$를 만족하는 $k$ 중 가장 작은 것이다. 이제 각각의 $1\leq i\leq k_\lambda$에 대하여, 
 
 $$d_{\lambda,i}=\dim \ker N_\lambda^i-\dim\ker N_\lambda^{i-1}$$
 
-으로 정의하고, 다음의 식
+으로 정의하자. 우리는 다음의 식
 
 $$\ker N_\lambda^i=\ker N_\lambda^{i-1}\oplus U_i$$
 
-을 만족하는 $\ker N_\lambda^i$의 $d_{\lambda, i}$차원 부분공간 $U_i$를 찾을 수 있다. 우리가 하고싶은 일은 대략 다음과 같은 그림으로 표현할 수 있다. 
+을 만족하는 $\ker N_\lambda^i$의 $d_{\lambda, i}$차원 부분공간 $U_i$를 찾을 수 있고, 그럼 이로부터
+
+$$G_\lambda(A)=\ker N_\lambda^{k_\lambda}=\ker N_\lambda^{k_\lambda-1}\oplus U_{k_\lambda}=\cdots =U_{k_\lambda}\oplus \cdots \oplus U_1$$
+
+으로 나타낼 수 있다. 우리가 하고싶은 일은 대략 다음과 같은 그림으로 표현할 수 있다. 
 
 ![](/assets/images/Math/Linear_Algebra/Jordan_canonical_form-.png){:style="width:em" class="invert" .align-center}
+
+이를 염두에 두고, 임의의 $i$에 대하여 $U_i$의 basis
+
+$$u_1, \cdots, u_{d_{\lambda, i}}$$
+
+가 주어졌다 하자. 그럼 정의에 의해 $N^i_\lambda(u_j)=0$이지만 $N^{i-1}_\lambda(u_j)\neq 0$이 모든 $j$에 대해 성립한다. 뿐만 아니라, 임의의 $0\leq k\leq i-1$에 대하여 다음 벡터들
+
+$$N_\lambda^k u_1, \cdots, N^k_\lambda u_{d_{\lambda,i}}$$
+
+은 모두 linearly independent이다. 만일
+
+$$a_0 N^k_\lambda u_1+\cdots +a_{d_{\lambda, i}} N^k_\lambda u_{d_\lambda, i}=0$$
+
+이라면 
+
+$$a_0u_1+\cdots + a_{d_{\lambda, i}} u_{d_\lambda, i}\in \ker N_\lambda^k\subset N_\lambda^{i-1}$$
+
+인데, $U_i$의 정의에 의하여 $N_\lambda^{i-1}\cap U_i=\\{0\\}$이기 때문이다. 
+
+이제 귀납적으로 우리는 다음과 같이 정의한다. 우선 $U_{k_\lambda}$의 basis
+
+$$u_1, \ldots, u_{d_{\lambda, k_\lambda}}$$
+
+를 택한다. 
 
 우선 임의의 $u\in U_i$에 대하여
 
@@ -257,7 +285,7 @@ $$N_\lambda^iu=0\implies N_\lambda^{i-1}(N_\lambda u)=0$$
 
 이므로 $N_\lambda(U_i)\subseteq \ker N_\lambda^{i-1}$이 성립한다. 그런데 $N_\lambda$를 $U_i$로 제한한다면
 
-$$N_\lambda u=0\implies u\in \ker N_\lambda \cap U_i\subseteq \ker N_\lambda^{i-1}\cap U_i=\\{0\\}$$
+$$N_\lambda u=0\implies u\in \ker N_\lambda \cap U_i\subseteq \ker N_\lambda^{i-1}\cap U_i=\{0\}$$
 
 이 성립하므로 
 
