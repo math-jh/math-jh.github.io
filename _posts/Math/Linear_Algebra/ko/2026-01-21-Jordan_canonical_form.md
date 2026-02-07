@@ -271,11 +271,19 @@ $$\begin{pmatrix}0&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\v
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8 (Cyclic decomposition theorem 혹은, 제2분해정리)**</ins> 
+<ins id="thm8">**정리 8 (Cyclic decomposition theorem 혹은, 제2분해정리)**</ins> 임의의 벡터공간 $V$와 그 위에 정의된 nilpotent operator $N: V\rightarrow V$에 대하여, cyclic subspace로의 decomposition
+
+$$V=U_1\oplus \cdots\oplus U_e$$
+
+이 존재한다. 
 
 </div>
 
+이 정리에 대한 증명은 아이디어만 스케치하고 넘어가기로 한다. 우선 $N$이 nilpotent이므로, $N^k\equiv 0$이지만 $N^{k-1}\not\equiv 0$인 정수 $k$가 존재하고, 따라서 이 정수 $k$에 대하여 $N^kv=0$이지만 $N^{k-1}v\neq 0$인 벡터 $v$가 존재한다. 이 벡터가 정의하는 cyclic subspace
 
+$$U_1=\span (N^{k-1}v, \cdots, Nv, v)$$
+
+을 생각하자. 만일 $U_1=V$라면 더 이상 증명할 것이 없다. 그렇지 않다면 
 
 
 
