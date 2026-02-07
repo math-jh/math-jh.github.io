@@ -255,7 +255,7 @@ $$G_\lambda(A)=\ker N_\lambda^{k_\lambda}=\ker N_\lambda^{k_\lambda-1}\oplus U_{
 
 우리의 construction은 다음의 두 관찰에 의존한다. 
 
-1. 만일 $u\in U_i$라면, $N_\lambda u\in U_{i-1}$이다. 정의에 의하여 $u\in U_i$는 $N_\lambda^i u=0$이지만 $N_\lambda^{i-1} u\neq 0$이라는 것인데, 이는 바꿔말하면 $N_\lambda^{i-1}(N_\lambda u)=0$이지만 $N_\lambda^{i-2}(N_\lambda u)\neq 0$이라는 것이기 때문이다. 
+1. 만일 $u\in U_i$라면, $N_\lambda u\in \ker N_\lambda^{i-1}$이다. 정의에 의하여 $N_\lambda^i u=0$이지만 이는 바꿔말하면 $N_\lambda^{i-1}(N_\lambda u)=0$이라는 것이기 때문이다. 
 2. 
 
 첫째, 임의의 $i$에 대하여 $U_i$의 basis
