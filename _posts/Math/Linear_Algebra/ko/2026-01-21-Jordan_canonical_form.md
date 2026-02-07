@@ -243,13 +243,15 @@ $$0\subsetneq \ker N_\lambda\subsetneq \ker N_\lambda^2\subsetneq \cdots \subset
 
 $$d_{\lambda,i}=\dim \ker N_\lambda^i-\dim\ker N_\lambda^{i-1}$$
 
-으로 정의하면 $d_{\lambda, i}$는 
-
-이제 각각의 $i$에 대하여, 다음의 식
+으로 정의하고, 다음의 식
 
 $$\ker N_\lambda^i=\ker N_\lambda^{i-1}\oplus U_i$$
 
-을 만족하는 $\ker N_\lambda^i$의 부분공간 $U_i$를 찾을 수 있다. 그럼 임의의 $u\in U_i$에 대하여
+을 만족하는 $\ker N_\lambda^i$의 $d_{\lambda, i}$차원 부분공간 $U_i$를 찾을 수 있다. 우리가 하고싶은 일은 대략 다음과 같은 그림으로 표현할 수 있다. 
+
+![](/assets/images/Math/Linear_Algebra/Jordan_canonical_form-.png){:style="width:em" class="invert" .align-center}
+
+우선 임의의 $u\in U_i$에 대하여
 
 $$N_\lambda^iu=0\implies N_\lambda^{i-1}(N_\lambda u)=0$$
 
@@ -261,13 +263,17 @@ $$N_\lambda u=0\implies u\in \ker N_\lambda \cap U_i\subseteq \ker N_\lambda^{i-
 
 $$N_\lambda\vert_{U_i}: U_i \rightarrow \ker N_\lambda^{i-1}$$
 
-은 injective linera map이고, 따라서 $N_\lambda(U_i)$의 차원은 $U_i$의 차원과 같은 $d_{\lambda, i}$차원임을 안다. 
+은 injective linear map이고, 따라서 $N_\lambda(U_i)$의 차원은 $U_i$의 차원과 같은 $d_{\lambda, i}$차원임을 안다. 
 
 이제 각각의 $u\in U_i$에 대하여, 다음의 벡터들
 
-$$u,\quad N_\lambda U, \quad N_\lambda^2 U,\quad\cdots, \quad N^{i-1}$$
+$$u,\quad N_\lambda u, \quad N_\lambda^2 u,\quad\cdots, \quad N^{i-1}u$$
 
+을 생각하면 이들은 linearly independent이다. 만일
 
+$$a_0 u +a_1 N_\lambda u+\cdots a_{i-1}N^{i-1}u=0$$
+
+이라면, 
 
 
 이를 위해 다음을 정의한다. 
