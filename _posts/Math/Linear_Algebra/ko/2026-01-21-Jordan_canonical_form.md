@@ -227,7 +227,21 @@ $$p_{G_\lambda(A)}(\x)=(\x-\lambda)^{d_\lambda}$$
 
 $$V=\bigoplus_{\lambda\in\sigma(A)}G_\lambda(A)$$
 
-가 성립하며, 뿐만 아니라 각각의 $\lambda$에 대하여 $\dim G_\lambda(A)$가 우리가 기대하는 차원, 즉 $A$의 특성다항식에서 $\lambda$의 대수적 중복도와 맞아떨어지는 것을 확인한 것이다. 그렇다면 우리에게 남아있는 일은 $V$의 적당한 basis를 찾아 [§고유공간분해, ⁋명제 7](/ko/math/linear_algebra/eigenspace_decomposition#prop7)와 유사한 형태로 임의의 행렬을 표현하는 일이다. 이를 위해 다음을 정의한다. 
+가 성립하며, 뿐만 아니라 각각의 $\lambda$에 대하여 $\dim G_\lambda(A)$가 우리가 기대하는 차원, 즉 $A$의 특성다항식에서 $\lambda$의 대수적 중복도와 맞아떨어지는 것을 확인한 것이다. 그렇다면 우리에게 남아있는 일은 $V$의 적당한 basis를 찾아 [§고유공간분해, ⁋명제 7](/ko/math/linear_algebra/eigenspace_decomposition#prop7)와 유사한 형태로 임의의 행렬을 표현하는 일이다. 
+
+여기에서 유용하게 쓰이는 사실은 linear operator $A:V\rightarrow V$의 임의의 고유값 $\lambda\in \sigma(A)$에 대하여, generalized eigenspace $G_\lambda(A)$로 제한하였을 때 linear operator
+
+$$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambda(A)$$
+
+가 nilpotent operator라는 사실이다. 이로부터, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $A$ 또한 표준형으로 나타낼 수 있을 것이다. 
+
+이제 
+
+
+
+
+
+이를 위해 다음을 정의한다. 
 
 <div class="definition" markdown="1">
 
@@ -239,13 +253,9 @@ $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots
 
 </div>
 
-<div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> 크기 $3$인 Jordan block $J_3(2)$는 다음과 같다:
 
-$$J_3(2)=\begin{pmatrix}2&1&0\\0&2&1\\0&0&2\end{pmatrix}$$
 
-</div>
 
 Jordan block의 중요한 성질은 다음과 같다.
 
