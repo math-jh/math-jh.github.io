@@ -245,7 +245,27 @@ $$d_{\lambda,i}=\dim \ker N_\lambda^i-\dim\ker N_\lambda^{i-1}$$
 
 으로 정의하면 $d_{\lambda, i}$는 
 
-이제 각각의 $i$에 대하여, 
+이제 각각의 $i$에 대하여, 다음의 식
+
+$$\ker N_\lambda^i=\ker N_\lambda^{i-1}\oplus U_i$$
+
+을 만족하는 $\ker N_\lambda^i$의 부분공간 $U_i$를 찾을 수 있다. 그럼 임의의 $u\in U_i$에 대하여
+
+$$N_\lambda^iu=0\implies N_\lambda^{i-1}(N_\lambda u)=0$$
+
+이므로 $N_\lambda(U_i)\subseteq \ker N_\lambda^{i-1}$이 성립한다. 그런데 $N_\lambda$를 $U_i$로 제한한다면
+
+$$N_\lambda u=0\implies u\in \ker N_\lambda \cap U_i\subseteq \ker N_\lambda^{i-1}\cap U_i=\\{0\\}$$
+
+이 성립하므로 
+
+$$N_\lambda\vert_{U_i}: U_i \rightarrow \ker N_\lambda^{i-1}$$
+
+은 injective linera map이고, 따라서 $N_\lambda(U_i)$의 차원은 $U_i$의 차원과 같은 $d_{\lambda, i}$차원임을 안다. 
+
+이제 각각의 $u\in U_i$에 대하여, 다음의 벡터들
+
+$$u,\quad N_\lambda U, \quad N_\lambda^2 U,\quad\cdots, \quad N^{i-1}$$
 
 
 
