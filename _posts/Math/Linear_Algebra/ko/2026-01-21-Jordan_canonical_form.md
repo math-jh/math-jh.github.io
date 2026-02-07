@@ -233,10 +233,19 @@ $$V=\bigoplus_{\lambda\in\sigma(A)}G_\lambda(A)$$
 
 $$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambda(A)$$
 
-가 nilpotent operator라는 사실이다. 이로부터, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $A$ 또한 표준형으로 나타낼 수 있을 것이다. 
+가 nilpotent operator라는 사실이다. 이로부터, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $A$ 또한 표준형으로 나타낼 수 있다는 것을 안다. 
 
-이제 
+위와 같은 상황에서, [보조정리 1](#lem1)을 적용하여 다음의 filtration
 
+$$0\subsetneq \ker N_\lambda\subsetneq \ker N_\lambda^2\subsetneq \cdots \subsetneq \ker N_\lambda^{d_\lambda-1}\subsetneq \ker N_\lambda^{d_\lambda}=G_\lambda(A)$$
+
+을 생각하자. 이제 각각의 $i$에 대하여, 
+
+$$d_{\lambda,i}=\dim \ker N_\lambda^i-\dim\ker N_\lambda^{i-1}$$
+
+으로 정의하면 $d_{\lambda, i}$는 
+
+이제 각각의 $i$에 대하여, 
 
 
 
