@@ -223,17 +223,19 @@ $$p_{G_\lambda(A)}(\x)=(\x-\lambda)^{d_\lambda}$$
 
 이어야 하는 것을 알고 이로부터 $\dim G_\lambda(A)=d_\lambda$임을 안다. 
 
-## 조르당 블록
+따라서, 우리는 지금까지 임의의 linear operator $A:V \rightarrow V$에 대하여 다음의 분해
 
-일반적으로, 만일 linear operator $N:V\rightarrow V$이 적당한 양의 정수 $k$에 대하여 $N^k=0$을 만족한다면 $N$을 *nilpotent<sub>멱영</sub>*라 부른다. 그럼 위의 상황에서 우리는 각각의 $G_\lambda(A)$ 위에서 $A-\lambda I$들은 nilpotent operator가 된다는 것을 안다. 이제 우리의 문제는 nilpotent operator의 "표준형"을 찾는 것으로 귀착된다. 
+$$V=\bigoplus_{\lambda\in\sigma(A)}G_\lambda(A)$$
+
+가 성립하며, 뿐만 아니라 각각의 $\lambda$에 대하여 $\dim G_\lambda(A)$가 우리가 기대하는 차원, 즉 $A$의 특성다항식에서 $\lambda$의 대수적 중복도와 맞아떨어지는 것을 확인한 것이다. 그렇다면 우리에게 남아있는 일은 $V$의 적당한 basis를 찾아 [§고유공간분해, ⁋명제 7](/ko/math/linear_algebra/eigenspace_decomposition#prop7)와 유사한 형태로 임의의 행렬을 표현하는 일이다. 이를 위해 다음을 정의한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 크기 $k$의 *Jordan block* $J_k(\lambda)$는 다음과 같은 $k\times k$ 행렬이다:
+<ins id="def7">**정의 7**</ins> 크기 $k$의 *Jordan block* $J_k(\lambda)$를 다음의 $k\times k$ 행렬
 
 $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$$
 
-즉, 대각선 위 원소들은 모두 $\lambda$이고, 대각선 바로 위(superdiagonal)의 원소들은 모두 $1$이며, 나머지는 모두 $0$이다.
+로 정의한다. 
 
 </div>
 
