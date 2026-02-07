@@ -253,10 +253,20 @@ $$G_\lambda(A)=\ker N_\lambda^{k_\lambda}=\ker N_\lambda^{k_\lambda-1}\oplus U_{
 
 으로 나타낼 수 있다.
 
-우리의 construction은 다음의 두 관찰에 의존한다. 
+우리의 construction은 다음의 관찰에 의존한다. 
 
-1. 만일 $u\in U_i$라면, $N_\lambda u\in \ker N_\lambda^{i-1}$이다. 정의에 의하여 $N_\lambda^i u=0$이지만 이는 바꿔말하면 $N_\lambda^{i-1}(N_\lambda u)=0$이라는 것이기 때문이다. 
-2. 
+1. 만일 $u\in U_i$라면 $N_\lambda^i u=N_\lambda^{i-1}(N_\lambda u)=0$이므로 $N_\lambda u\in \ker N_\lambda^{i-1}$이다. 
+2. 만일 $u_1, \ldots, u_k$가 $U_i$에서 linearly independent라면 $N_\lambda u_1, \ldots, N_\lambda  u_k$들도 linearly independent이다. 다음 식
+    
+    $$a_1 N_\lambda u_1+\cdots +a_kN_\lambda u_k=0$$
+
+    이 성립한다고 하면
+
+    $$a_1u_1+\cdots+a_ku_k\in \ker N_\lambda \subset \ker N_\lambda^{i-1}$$
+
+    이고 정의에 의해 $\ker N_\lambda^{i-1}\cap U_i=\\{0\\}$이기 때문이다. 
+3. 뿐만 아니라, 
+
 
 첫째, 임의의 $i$에 대하여 $U_i$의 basis
 
