@@ -57,7 +57,7 @@ $$v\mapsto \left(\sum_{x\in G}a_xx\right)\cdot v=\sum_{x\in G}a_x(x\cdot v)$$
 
 을 통해 이 representation을 확장할 수 있다. 즉, $V$는 위의 식을 통해 $\mathbb{C}[G]$-module로 볼 수 있다. 
 
-이제 $G$의 유한 조건을 없애야 한다. [\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)에서는 이를 위해 finitely supported function들만 생각했지만, 우리 경우에는 $G$의 위상구조를 사용하면 이를 다루는데에 문제가 없다. 즉, 우리의 기본적인 철학은 위에서, 
+이제 $G$의 유한 조건을 없애야 한다. [\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)에서는 이를 위해 finitely supported function들만 생각했지만, 우리 경우에는 $G$의 위상구조를 사용하면 이를 다루는데에 문제가 없다. 즉, 우리의 기본적인 철학은 위에서,
 
 - $G$를 (compact) Lie group으로 바꾸고, 
 - 모든 함수들 $G\rightarrow \mathbb{C}$ 대신 연속함수들 $G\rightarrow \mathbb{C}$을 생각하고,
