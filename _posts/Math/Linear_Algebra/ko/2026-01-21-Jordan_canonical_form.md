@@ -353,9 +353,21 @@ $$\ker(A-I)=\span\{(1,0,0)\},\quad \ker(A-I)^2=\span\{(1,0,0),(0,1,0)\},\quad \k
 
 이제 $G_1(A)$ 위에서 [정리 8](#thm8)을 적용해야 한다. 앞서 살펴본 것과 같이 $(A-I)^3=0$이지만 $(A-I)^2\neq 0$이며, 실제로 $v=(0,0,1)$이 $(A-I)^2 v\neq 0$을 만족하는 것을 안다. 그럼 
 
-$$v=(0,0,1), (A-I)v=(1,1,0), (A-I)^2v=(1,0,0)$$
+$$v_1=(A-I)^2v=(1,0,0),\qquad v_2=(A-I)v=(1,1,0),\qquad v_3=v=(0,0,1)$$
 
-이며 이들이 $G_1(A)$를 생성한다. 
+이며 이들이 $G_1(A)$를 생성한다. 이제 $\mathcal{B}=(v_1, v_2, v_3)$를 $V$의 basis로 삼아 $A$를 표현하면:
+
+$$Av_1 = A\begin{pmatrix}1\\0\\0\end{pmatrix} = \begin{pmatrix}1\\0\\0\end{pmatrix} = v_1$$
+
+$$Av_2 = A\begin{pmatrix}1\\1\\0\end{pmatrix} = \begin{pmatrix}2\\1\\0\end{pmatrix} = v_1 + v_2$$
+
+$$Av_3 = A\begin{pmatrix}0\\0\\1\end{pmatrix} = \begin{pmatrix}1\\1\\1\end{pmatrix} = v_2 + v_3$$
+
+따라서 basis $\mathcal{B}$에 대한 $A$의 행렬 표현은
+
+$$[A]_{\mathcal{B}} = \begin{pmatrix}1&1&0\\0&1&1\\0&0&1\end{pmatrix} = J_3(1)$$
+
+이 되어, 크기 3의 Jordan block 하나로 구성된 Jordan canonical form을 얻는다.
 
 </div>
 
