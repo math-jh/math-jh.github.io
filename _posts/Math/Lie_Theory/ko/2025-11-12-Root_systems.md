@@ -17,7 +17,9 @@ weight: 3
 
 ---
 
-우리는 
+우리는 앞선 글에서 Lie group과 Lie algebra를 탐구하는 도구로서 이들의 representation을 도입했다. 가령 Lie group $G$의 representation $G\times V \rightarrow V$가 주어진다면, 이는 $G\rightarrow\Aut(V)$가 주어진 것과 같으므로 matrix Lie group들과 그 subgroup들을 살펴보아 원래의 Lie group에 대한 정보를 알 수 있을 것이었다. 
+
+
 
 ## Adjoint representation
 

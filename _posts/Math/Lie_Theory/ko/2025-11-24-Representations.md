@@ -4,7 +4,7 @@ title: "리 군의 표현"
 excerpt: ""
 
 categories: [Math / Lie Theory]
-permalink: /ko/math/lie_theory/representations
+permalink: /ko/math/Lie_theory/representations
 header:
     overlay_image: /assets/images/Math/Lie_Theory/Representations.png
     overlay_filter: 0.5
