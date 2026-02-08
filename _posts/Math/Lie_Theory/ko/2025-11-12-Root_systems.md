@@ -19,7 +19,7 @@ weight: 3
 
 우리는 앞선 글에서 Lie group과 Lie algebra를 탐구하는 도구로서 이들의 representation을 도입했다. 가령 Lie group $G$의 representation $G\times V \rightarrow V$가 주어진다면, 이는 $G\rightarrow\Aut(V)$가 주어진 것과 같으므로 matrix Lie group들과 그 subgroup들을 살펴보아 원래의 Lie group에 대한 정보를 알 수 있을 것이었다. 
 
-
+한편 우리의 기본적인 철학은, 이를 정당화하기에는 약간의 설명이 추가로 필요하지만, $G$-representation $G\times V \rightarrow V$는 결국 선형대수로 취급할 수 있다는 것이고 앞선 글에서 우리는 선형대수에서 기초적인 개념들, 가령 [§리 군의 표현, ⁋정의 10](/ko/math/Lie_theory/representations#def10)과 같은 것들을 이 analogy에 넣는 작업을 하였다. 
 
 ## Adjoint representation
 
