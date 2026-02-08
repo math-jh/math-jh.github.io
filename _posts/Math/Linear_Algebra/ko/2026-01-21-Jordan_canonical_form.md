@@ -199,9 +199,9 @@ $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6 (제1분해정리)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 linear operator $L:V\rightarrow V$에 대하여, $L$의 모든 eigenvalue들을 $\lambda_1,\ldots,\lambda_m$이라 하자. 그럼 다음의 direct sum decomposition
+<ins id="thm6">**정리 6 (제1분해정리)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 linear operator $A:V\rightarrow V$에 대하여, $A$의 모든 eigenvalue들을 $\lambda_1,\ldots,\lambda_m$이라 하자. 그럼 다음의 direct sum decomposition
 
-$$V=G_{\lambda_1}(L)\oplus G_{\lambda_2}(L)\oplus\cdots\oplus G_{\lambda_m}(L)$$
+$$V=G_{\lambda_1}(A)\oplus G_{\lambda_2}(A)\oplus\cdots\oplus G_{\lambda_m}(A)$$
 
 가 성립한다. 
 
@@ -233,13 +233,21 @@ $$V=\bigoplus_{\lambda\in\sigma(A)}G_\lambda(A)$$
 
 $$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambda(A)$$
 
-가 nilpotent operator라는 사실이다. 이로부터, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $A$ 또한 표준형으로 나타낼 수 있다는 것을 안다. 
+가 nilpotent operator라는 사실이다. 
 
-임의의 벡터공간 $V$ 위에 정의된 nilpotent operator $N:V \rightarrow V$를 생각하자. 그럼 임의의 $v\in V$에 대하여, $N^kv=0$이지만 $N^{k-1}v\neq 0$이도록 하는 정수 $k$가 존재한다. 
+<div class="definition" markdown="1">
+
+<ins id="def7">**정의 7**</ins> 벡터공간 $V$ 위에 정의된 linear operator $N:V \rightarrow V$가 *nilpotent<sub>멱영</sub>*라는 것은 적당한 정수 $k$가 존재하여 $N^k\equiv 0$을 만족하는 것이다. 이러한 $k$ 중 가장 작은 것을 $N$의 *(nilpotency) index<sub>멱영지수</sub>*라 부른다. 
+
+</div>
+
+즉, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $A$ 또한 표준형으로 나타낼 수 있게 된다. 
+
+Index $k$의 nilpotent operator $N: V\rightarrow V$가 주어졌다 하자. 그럼 적당한 $v\in V$가 존재하여 $N^{k-1}v\neq 0$이다. 이 벡터를 이용하면 우리는 [보조정리 1](#lem1)에서 포함관계가 strict하다는 것도 보일 수 있는데, $N^{k-i}v\in \ker N^i$이지만 $N^{k-1}v\not\in\ker N^{i-1}$이기 때문이다. 바꾸어 말하자면 $v, Nv, \ldots, N^{k-1}v$는 모두 다른 원소들이다. 더 일반적으로 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem7">**보조정리 7**</ins> 위의 상황에서, 다음의 벡터들
+<ins id="lem8">**보조정리 8**</ins> 벡터공간 $V$ 위에 정의된 linear operator $N: V\rightarrow V$와 벡터 $v$가 $N^kv=0$과 $N^{k-1}v\neq 0$을 만족한다 하자. 그럼 다음의 벡터들
 
 $$v, \quad Nv, \quad\cdots,\quad N^{k-1}v$$
 
@@ -261,9 +269,9 @@ $$a_1Nv+\cdots a_{k-1}N^{k-1}v=0$$
 
 </details>
 
-즉 $k$개의 벡터들 $v, Nv, \ldots, N^{k-1}v$은 $V$의 $k$차원 부분공간 (이러한 꼴의 부분공간을 $v$가 정의하는 *cyclic subspace*라 부른다.) $U$의 basis가 된다. 이 특정한 basis가 흥미로운 이유는, $N\vert_U$를 이 basis에 대하여 행렬로 표현해보면
+즉 $k$개의 벡터들 $v, Nv, \ldots, N^{k-1}v$은 $V$의 $k$차원 부분공간 (이러한 꼴의 부분공간을 $v$가 정의하는 *cyclic subspace*라 부른다.) $U$의 basis가 된다. 이 특정한 basis가 흥미로운 이유는, $N\vert_U$를 이 basis $N^{k-1}v, \ldots, Nv, v$에 대하여 행렬로 표현해보면
 
-$$\begin{pmatrix}0&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\vdots\\ 0&0&0&\cdots&1\\ 0&0&0&\cdots&0\end{pmatrix}$$
+$$\begin{pmatrix}0&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\vdots\\ 0&0&0&\cdots&1\\ 0&0&0&\cdots&0\end{pmatrix}\tag{1}$$
 
 이 되기 때문이다. 이를 nilpotent operator의 표준형으로 삼는 것이 우리의 아이디어이다. 
 
@@ -271,7 +279,7 @@ $$\begin{pmatrix}0&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\v
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8 (Cyclic decomposition theorem 혹은, 제2분해정리)**</ins> 임의의 벡터공간 $V$와 그 위에 정의된 nilpotent operator $N: V\rightarrow V$에 대하여, cyclic subspace로의 decomposition
+<ins id="thm9">**정리 9 (Cyclic decomposition theorem 혹은, 제2분해정리)**</ins> 임의의 벡터공간 $V$와 그 위에 정의된 nilpotent operator $N: V\rightarrow V$에 대하여, cyclic subspace로의 decomposition
 
 $$V=U_1\oplus \cdots\oplus U_e$$
 
@@ -279,23 +287,35 @@ $$V=U_1\oplus \cdots\oplus U_e$$
 
 </div>
 
-이 정리에 대한 증명은 다음과 같다. . 우선 $N$이 nilpotent이므로, $N^k=0$이도록 하는 정수 $k$가 존재한다. 이러한 $k$ 중 가장 작은 것을 $k_1$이라 하면, 이 정수 $k_1$에 대하여 $N^{k_1}v_1=0$이지만 $N^{k_1-1}v_1\neq 0$인 벡터 $v_1$가 존재한다. 이 벡터가 정의하는 cyclic subspace
+이 정리에 대한 증명은 다음과 같다. $N$의 nilpotency index를 $k_1$이라 하고 $N^{k_1}v_1=0$이지만 $N^{k_1-1}v_1\neq 0$인 벡터 $v_1$를 택하자. 이 벡터가 정의하는 cyclic subspace
 
 $$U_1=\span (N^{k_1-1}v_1, \cdots, Nv_1, v_1)$$
 
-을 생각하자. 만일 $U_1=V$라면 더 이상 증명할 것이 없다. 그렇지 않다면 우리는 $V=U_1\oplus W_1$이도록 하는 *$T$-invariant* subspace $W_1$을 찾는다. 그럼 $N\vert_{W_1}^k=0$이도록 하는 정수 $k$가 존재하므로, 다시 이러한 $k$ 중 가장 작은 것을 $k_2$라 할 수 있다. 다시 $N^{k_2}v_2=0$이지만 $N^{k_2-1}v_2\neq 0$이도록 하는 $v_2$가 존재하고, 다시 다음의 cyclic subspace
+을 생각하자. 만일 $U_1=V$라면 더 이상 증명할 것이 없다. 그렇지 않다면 우리는 $V=U_1\oplus W_1$이도록 하는 *$T$-invariant* subspace $W_1$을 찾는다. $N$이 $W_1$ 위에서도 nilpotent인 것은 자명하므로, $N\vert_{W_1}$의 nilpotency index $k_2$를 잡고, $N^{k_2}v_2=0$이지만 $N^{k_2-1}v_2\neq 0$이도록 하는 $v_2$를 잡을 수 있다. 이제 다시 다음의 cyclic subspace
 
 $$U_2=\span (N^{k-2-1}v_2, \cdots, Nv_2, v_2)$$
 
-를 얻는다. 이 과정을 반복해나가다보면 
+를 얻고, 다시 $U_2$의 $T$-invariant complement를 얻는 과정을 반복해나가다 보면 원하는 decomposition을 얻는다. 
 
+이 증명에서 가장 핵심적인 부분은 $U$의 complement $W$를 $T$-invariant가 되도록 잡을 수 있다는 것이다. 
 
+<div class="proposition" markdown="1">
 
+<ins id="lem9">**보조정리 9**</ins> 임의의 벡터공간 $V$와 그 위에서 정의된 index $k$의 nilpotent operator $N$을 생각하고, $N^{k-1}v\neq 0$을 만족하는 벡터 $v$를 택하자. 그럼 $v$가 생성하는 cyclic subspace 
 
+$$U=\span(v, Nv, \ldots, N^{k-1}v)$$
+
+에 대하여, $V=U\oplus W$이도록 하는 $T$-invariant space $W$가 존재한다. 
+
+</div>
+
+이에 대한 증명은 $N$의 nilpotency index에 대한 귀납법을 쓰면 되지만, 증명이 다소 귀찮은 감이 있어 생략하기로 한다. 
+
+어쨌든 이러한 과정을 거치고 나면 우리는 임의의 nilpotent operator $N$를 위의 식 (1) 형태의 direct sum (즉, 위의 행렬들이 대각성분에 있는 block diagonal matrix들)으로 나타낼 수 있음을 안다. $N$이 나오게 된 것은 generalized eigenspace $G_\lambda(A)$ 위에서의 nilpotent operator $A-\lambda I$ 때문이었으므로, 다음을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 크기 $k$의 *Jordan block* $J_k(\lambda)$를 다음의 $k\times k$ 행렬
+<ins id="def10">**정의 10**</ins> 크기 $k$의 *Jordan block* $J_k(\lambda)$를 다음의 $k\times k$ 행렬
 
 $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$$
 
@@ -303,71 +323,17 @@ $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots
 
 </div>
 
-
-
-
-
-Jordan block의 중요한 성질은 다음과 같다.
+그럼 [정리 6](#thm6)과 [정리 8](#thm8)을 합치면 다음의 정리를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> $J_k(\lambda)-\lambda I_k$는 nilpotent이며, $(J_k(\lambda)-\lambda I_k)^k=0$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$N=J_k(\lambda)-\lambda I_k$라 하면,
-
-$$N=\begin{pmatrix}0&1&0&\cdots&0\\0&0&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&0&1\\0&0&\cdots&0&0\end{pmatrix}$$
-
-이다. 직접 계산하면 $N^2$는 superdiagonal에서 한 칸 더 위의 대각선에만 $1$이 있고, 일반적으로 $N^i$는 $i$번째 위 대각선에만 $1$이 있다. 따라서 $N^k=0$이다.
-
-</details>
-
-## 조르당 표준형의 존재
-
-이제 우리의 주요 정리를 서술할 수 있다.
-
-<div class="proposition" markdown="1">
-
-<ins id="thm10">**정리 10 (조르당 표준형)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 임의의 linear operator $L:V\rightarrow V$에 대하여, $V$의 적당한 basis를 선택하면 $L$의 행렬 표현이 다음의 형태를 갖는다:
+<ins id="thm11">**정리 11 (Jordan canonical form)**</ins> 유한차원 벡터공간 $V$ 위에 정의된 임의의 linear operator $A:V\rightarrow V$에 대하여, $V$의 적당한 basis를 선택하면 $A$의 행렬 표현이 다음의 형태를 갖는다:
 
 $$J=\begin{pmatrix}J_{k_1}(\lambda_1)&0&\cdots&0\\0&J_{k_2}(\lambda_2)&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&J_{k_m}(\lambda_m)\end{pmatrix}$$
 
-여기서 각 $J_{k_i}(\lambda_i)$는 Jordan block이다. 이러한 형태의 행렬을 $L$의 *Jordan canonical form<sub>조르당 표준형</sub>*이라 한다.
+여기서 각 $J_{k_i}(\lambda_i)$는 Jordan block이다. 이러한 형태의 행렬을 $A$의 *Jordan canonical form<sub>조르당 표준형</sub>*이라 한다.
 
 </div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-[정리 6](#thm6)으로부터 $V=\bigoplus_{i=1}^m G_{\lambda_i}(L)$이고, 각 $G_{\lambda_i}(L)$ 위에서 $L-\lambda_i I$는 nilpotent이다. 따라서 각 generalized eigenspace에서 적당한 basis를 택하면, 그 basis에 대한 $L$의 행렬 표현이 Jordan block들의 직합으로 나타난다는 것을 보이면 충분하다.
-
-Nilpotent operator $N:W\rightarrow W$이 정의된 유한차원 벡터공간 $W$ 위에서 Jordan form을 구성하자. [보조정리 1](#lem1)로부터
-
-$$0=\ker N^0\subsetneq\ker N^1\subsetneq\cdots\subsetneq\ker N^{k-1}\subsetneq\ker N^k=W$$
-
-인 filtration이 존재하며, $k$는 $\ker N^k = \ker N^{k+1}$을 만족하는 최소 정수이다. 이제 역으로 이 filtration으로부터 Jordan basis를 구성한다.
-
-$j=k, k-1, \ldots, 1$에 대해 순서대로 다음을 수행한다: 각 $j$마다 $\ker N^j / \ker N^{j-1}$의 basis를 선택하고, 이 basis 원소들을 $W$로 lift한 벡터들을 $u_{j,1}, u_{j,2}, \ldots, u_{j,r_j}$라 하자. (여기서 $r_j = \dim(\ker N^j) - \dim(\ker N^{j-1})$이다.)
-
-각 벡터 $u_{j,i}$에 대해 다음의 Jordan chain을 구성한다:
-
-$$u_{j,i}, Nu_{j,i}, N^2u_{j,i}, \ldots, N^{j-1}u_{j,i}$$
-
-이 chain은 정확히 $j$개의 원소를 가진다. 왜냐하면 $u_{j,i} \in \ker N^j \setminus \ker N^{j-1}$이므로 $N^{j-1}u_{j,i} \neq 0$이지만 $N^j u_{j,i} = 0$이기 때문이다.
-
-모든 $j=k, k-1, \ldots, 1$과 모든 $i=1, \ldots, r_j$에 대해 이러한 chain들을 모으면, 총
-
-$$\sum_{j=1}^k j \cdot r_j = \sum_{j=1}^k j(\dim(\ker N^j) - \dim(\ker N^{j-1})) = \dim W$$
-
-개의 벡터를 얻는다. (마지막 등식은 telescoping series이다.) 이 벡터들이 $W$의 basis를 이루며, 이 basis에 대해 $N$의 행렬 표현은 크기 $1, 2, \ldots, k$인 Jordan block $J_j(0)$들의 직합이 된다.
-
-$G_{\lambda_i}(L)$ 위에 이를 적용하면, $L - \lambda_i I$가 nilpotent이므로 위의 구성을 $N = L - \lambda_i I$, $W = G_{\lambda_i}(L)$으로 사용할 수 있다. 그러면 $L = (L-\lambda_i I) + \lambda_i I = N + \lambda_i I$이므로, $L$의 행렬 표현은 각 Jordan block $J_j(0)$을 $J_j(\lambda_i)$로 바꾼 형태가 된다.
-
-각 generalized eigenspace $G_{\lambda_i}(L)$에 대해 이 과정을 적용하고, 얻은 basis들을 합치면 $V$ 전체의 basis를 얻고, 이 basis에 대한 $L$의 행렬 표현은 정리 11의 형태가 된다.
-
-</details>
 
 <div class="example" markdown="1">
 
@@ -379,23 +345,17 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
 $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
-이다. 우리는 이미 다음을 알고 있다:
+이며
 
 $$\ker(A-I)=\span\{(1,0,0)\},\quad \ker(A-I)^2=\span\{(1,0,0),(0,1,0)\},\quad \ker(A-I)^3=\mathbb{R}^3$$
 
-$(A-I)^3=0$이지만 $(A-I)^2\neq 0$이므로, 가장 긴 Jordan chain의 길이는 $3$이다. $\ker(A-I)^3/\ker(A-I)^2$의 basis로 $(0,0,1)$의 coset을 택하면, Jordan chain
+임을 이미 계산하였다. 즉 $A$에 [정리 6](#thm6)을 적용한 것은 그냥 $V=G_1(A)$이 된다. 
 
-$$(0,0,1), (A-I)(0,0,1)=(0,1,0), (A-I)^2(0,0,1)=(1,0,0)$$
+이제 $G_1(A)$ 위에서 [정리 8](#thm8)을 적용해야 한다. 앞서 살펴본 것과 같이 $(A-I)^3=0$이지만 $(A-I)^2\neq 0$이며, 실제로 $v=(0,0,1)$이 $(A-I)^2 v\neq 0$을 만족하는 것을 안다. 그럼 
 
-을 얻는다. 따라서 basis $\{(0,0,1),(0,1,0),(1,0,0)\}$에 대한 $A$의 행렬 표현은
+$$v=(0,0,1), (A-I)v=(1,1,0), (A-I)^2v=(1,0,0)$$
 
-$$J=\begin{pmatrix}1&1&0\\0&1&1\\0&0&1\end{pmatrix}=J_3(1)$$
-
-이다. 실제로 변환 행렬을
-
-$$P=\begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix}$$
-
-이라 하면, $P^{-1}AP=J$가 성립함을 확인할 수 있다.
+이며 이들이 $G_1(A)$를 생성한다. 
 
 </div>
 
@@ -403,7 +363,7 @@ $$P=\begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix}$$
 
 ---
 
-**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011. 
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 
 ---
