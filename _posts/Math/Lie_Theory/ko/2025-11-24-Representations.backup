@@ -25,7 +25,7 @@ weight: 2
 
 ## 유한군의 표현론
 
-우선 우리는 유한군의 표현론을 살펴본다. 이는 Lie 군 표현론의 기초를 다지는 데 유용하며, compact Lie group으로 자연스럽게 일반화된다. 
+우선 우리는 유한군의 표현론을 살펴본다. 이는 우선 
 
 ## 리 군의 표현론
 
@@ -41,7 +41,7 @@ $$\rho:G\times V \rightarrow V$$
 
 즉 Lie group automorphism은 언제나와 같이 homomorphism $G\rightarrow \Aut(V)$를 의미한다. 우리는 이 글에서 $V$가 유한차원 벡터공간이며, 그 base field는 $\mathbb{K}=\mathbb{C}$로 고정하기로 한다. 그럼 $V$ 위에 basis를 택하면, $\Aut(V)\cong \GL(n;\mathbb{C})$이므로 이러한 representation을 *matrix representation*이라 부르기도 한다. 
 
-가장 단순한 예시는 trivial representation $\rho(g)=I$ (항상 항등변환)와 standard representation (e.g., $S_n$의 permutation matrix)이다. 
+가장 단순한 예시는 
 
 
 
@@ -146,8 +146,6 @@ $$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle=\int_G \langle gu,gv\ra
 
 우리가 생각할 수 있는 가장 단순한 경우, 즉 $G$가 (compact) abelian Lie group인 경우, 임의의 $G$-module $V$의 임의의 subspace는 $G$-invariant이다. 따라서 abelian Lie group의 irreducible representation은 반드시 $1$차원이다.
 
-**예시 (SU(2))**: Fundamental rep는 2차원, spin $j=1/2$. Character 계산으로 irrep 분해 가능.
-
 이제 임의의 compact Lie group $G$에 대하여, irreducible $G$-module들의 isomorphism class들의 집합 $\Irr(G, \mathbb{C})$를 생각하자. 그럼 임의의 $W\in \Irr(G, \mathbb{C})$에 대하여, 다음의 함수
 
 $$d_W:\Hom_G(W,V)\otimes_\mathbb{C}W\rightarrow V; \qquad \varphi\otimes w\mapsto \varphi(w)$$
@@ -197,21 +195,11 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 
 ## 표현의 지표
 
-**Schur Orthogonality 예시 ($S_3$)**:
-
-| irrep | dim | $\chi(id)$ | $\chi((12))$ | $\chi((123))$ |
-|-------|-----|------------|--------------|---------------|
-| Triv  | 1   | 1          | 1            | 1             |
-| Sign  | 1   | 1          | -1           | 1             |
-| Std   | 2   | 2          | 0            | -1            |
-
-내적 $\langle \chi_i, \chi_j \rangle = \frac{1}{6} \sum \chi_i \bar{\chi_j} = \delta_{ij}$.
-
 이제 우리는 표현의 지표<sub>character</sub>에 대해 살펴 보겠다. 간단히 말해서 이는 임의의 $G$-representation $\rho:G\rightarrow \Aut_\mathbb{C}(V)$가 주어졌을 때, $G$의 임의의 원소 $g\in G$가 $V$에 act하는 것 (즉 $\rho(g)$의 행렬표현)의 trace를 대응시켜주는 함수 $\chi_\rho:G\rightarrow \mathbb{C}$이다. 이는 그 이름이 시사하는 바와 같이, 임의의 $G$-representation을 characterize하는 대상이다. 즉, 서로 같은 character function을 갖는 representation은 isomorphic하다. 뿐만 아니라, character function은 conjugacy class 위에서 같은 값을 지정한다. 
 
 임의의 character function이 class function인 것은 trace의 성질에 의해 자명하다. 뿐만 아니라 character function은 class function들의 vector space의 basis가 되는데, 이는 가령 다음의 식
 
-$$\chi_{V\oplus W}=\chi_V+\chi_W, \quad \chi_{V\otimes W}=\chi_V \chi_W$$
+$$\chi_{V\oplus W}=\chi_V+\chi_W$$
 
 에 의한 것이다. 그렇다면 class function들의 벡터공간에서의 projection 등이 어떻게 정의되는지를 탐구할 수 있을 것인데, 이러한 종류의 관계식을 *Schur orthogonality relation*이라 부른다. 
 
@@ -236,5 +224,3 @@ $$\mathfrak{g}\times V \rightarrow V;\qquad (X,v)\mapsto \mathcal{L}_Xv$$
 $$X(Yv)-Y(Xv)=[X,Y]v$$
 
 이다. 약간의 믿음을 가지면 simply connected Lie group $G$과 그 Lie algebra $\mathfrak{g}$에 대해서는 ([§리 군, ⁋정리 15](/ko/math/Lie_theory/Lie_groups#thm15)와 마찬가지 결과로) Lie algebra representation $\mathfrak{g}\times V \rightarrow V$이 Lie group의 representation $G\times V \rightarrow V$를 결정하는 것도 납득할 수 있다. 
-
-이는 root systems나 Weyl group 등 후속 주제로 이어진다. 
