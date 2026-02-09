@@ -17,7 +17,7 @@ weight: 2
 
 ---
 
-## 표현론의 철학
+## 표현론의 두 가지 관점
 
 일반적으로 그 구조가 복잡한 수학적인 대상을 다룰 때 좋은 전략 중 하나는 이 대상이 다른 단순한 대상 위에 어떻게 act하는지를 보는 것이다. Lie group의 경우 이러한 철학은 더 각별한데, Lie group의 대표적인 예시인 $\GL(n;\mathbb{R})$이나 $\Diff(M)$ 등을 생각하면 이들은 그 본질부터가 다른 대상 위에 act하는 것이기 때문이다. 이번 글에서 우리는 Lie group의 finite-dimensional representation을 살펴본다. 
 
@@ -31,9 +31,9 @@ $$\rho:G\times V \rightarrow V$$
 
 </div>
 
-즉 Lie group automorphism은 언제나와 같이 homomorphism $G\rightarrow \Aut(V)$를 의미한다. 우리는 이 글에서 $V$가 유한차원 벡터공간이며, 그 base field는 $\mathbb{K}=\mathbb{C}$로 고정하기로 한다. 
+즉 Lie group automorphism은 언제나와 같이 homomorphism $G\rightarrow \Aut(V)$를 의미한다. 우리는 이 글에서 $V$가 유한차원 벡터공간이며, 그 base field는 $\mathbb{K}=\mathbb{C}$로 고정하기로 한다. 그럼 $V$ 위에 basis를 택하면, $\Aut(V)\cong \GL(n;\mathbb{C})$이므로 이러한 representation을 *matrix representation*이라 부르기도 한다. 
 
-그럼 $V$ 위에 basis를 택하면, $\Aut(V)\cong \GL(n;\mathbb{C})$이므로 이러한 representation을 *matrix representation*이라 부르기도 한다. 
+우리가 표현론을 다룰 때는 두 가지 관점이 있다. 하나는 위에서 언급한 것처럼 
 
 기본적으로 representation theory는 적절한 algebra 위에서의 module theory로 생각할 수 있다. 우리의 경우 이 역할을 해 줄 것은 group ring $\mathbb{C}[G]$이다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5))
 
