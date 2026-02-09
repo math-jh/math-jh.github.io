@@ -25,7 +25,9 @@ weight: 2
 
 ## 유한군의 표현론
 
-우선 우리는 유한군의 표현론을 살펴본다. 이는 Lie 군 표현론의 기초를 다지는 데 유용하며, compact Lie group으로 자연스럽게 일반화된다. 
+우선 우리는 유한군의 표현론을 살펴본다. 임의의 finite group은 discrete topology와 자명한 미분구조가 주어진 Lie group이라 생각할 수 있으므로 
+
+
 
 ## 리 군의 표현론
 
