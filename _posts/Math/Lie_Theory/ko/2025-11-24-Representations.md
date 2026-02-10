@@ -25,7 +25,7 @@ weight: 2
 
 ## 유한군의 표현론
 
-우선 우리는 유한군의 표현론을 살펴본다. 임의의 finite group은 discrete topology와 자명한 미분구조가 주어진 Lie group이라 생각할 수 있으므로 
+우선 우리는 유한군의 표현론을 살펴본다. 임의의 finite group은 discrete topology와 자명한 미분구조가 주어진 Lie group이라 생각할 수 있으므로 이는 앞으로 살펴볼 일반적인 경우의 특수한 케이스로 생각할 수 있다. 
 
 
 
