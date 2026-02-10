@@ -27,11 +27,25 @@ weight: 2
 
 우선 우리는 유한군의 표현론을 살펴본다. 임의의 finite group은 discrete topology와 자명한 미분구조가 주어진 Lie group이라 생각할 수 있으므로 이는 앞으로 살펴볼 일반적인 경우의 특수한 케이스로 생각할 수 있다. 그러나 유한군의 경우, 원소들이 유한히 많다는 사실 덕분에 여러 결과들을 서술하는 것이 더 깔끔하므로 이 글의 시작을 유한군의 표현으로 시작하기로 한다. 
 
-임의의 finite group $G$에 대하여, $G$의 *representation<sub>표현</sub>*은 다음의 함수
+임의의 finite group $G$에 대하여, $G$의 *representation<sub>표현</sub>*은 벡터공간 $V$와, group action의 조건을 만족하는 함수
 
 $$\rho: G\times V \rightarrow V$$
 
-가 group action의 조건들을 만족하며 $\rho(g,-)$가 linear map인 것이다. 이는 간략하게 group homomorphism $G\rightarrow \Aut(V)$가 주어진 것으로 생각할 수도 있다. 그럼 임의의 
+가 주어져서 각각의 $\rho(g,-)$가 linear map인 것이다. 이는 간략하게 group homomorphism $G\rightarrow \Aut(V)$가 주어진 것으로 생각할 수도 있다. 일반적으로 ground field $\mathbb{K}$는 임의의 ring $A$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $\mathbb{K}=\mathbb{C}$로 두어도 충분하므로 이렇게 고정하기로 한다. 
+
+이제 group algebra $\mathbb{C}[G]$를 생각하자. 이는 $G$에서 $\mathbb{C}$로의 함수들의 모임이며, 각각의 $g\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
+
+$$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
+
+으로 정의하면 임의의 $f:G\rightarrow\mathbb{C}$는 다음의 꼴
+
+$$f(y)=\sum_{x\in G} f(x)\delta_x(y)$$
+
+로 나타낼 수 있으므로 $\delta_x$들이 $\mathbb{C}[G]$의 basis를 이룬다. 편의상 우리는 이러한 방식으로 $x\in G$와 $\delta_x\in \mathbb{C}[G]$를 identify한다. 그럼 이 표기 하에서,
+
+$$\left(\sum_{x\in G}f(x)\cdot x\right)\left(\sum_{y\in G} g(y)\cdot y\right)=\sum_{x,y\in G} f(x)g(y) \cdot(xy)=\sum_{z\in G}\left(\sum_{x\in G} f(x)g(x^{-1}z)\right)\cdot z$$
+
+이므로 
 
 
 ## 리 군의 표현론
