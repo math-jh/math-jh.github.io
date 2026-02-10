@@ -33,6 +33,8 @@ $$\rho: G\times V \rightarrow V$$
 
 가 주어져서 각각의 $\rho(g,-)$가 linear map인 것이다. 이는 간략하게 group homomorphism $G\rightarrow \Aut(V)$가 주어진 것으로 생각할 수도 있다. 일반적으로 ground field $\mathbb{K}$는 임의의 ring $A$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $\mathbb{K}=\mathbb{C}$로 두어도 충분하므로 이렇게 고정하기로 한다. 
 
+$G$-equivariant 정의부터
+
 이제 group algebra $\mathbb{C}[G]$를 생각하자. 이는 $G$에서 $\mathbb{C}$로의 함수들의 모임이며, 각각의 $g\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
@@ -45,8 +47,25 @@ $$f(y)=\sum_{x\in G} f(x)\delta_x(y)$$
 
 $$\left(\sum_{x\in G}f(x)\cdot x\right)\left(\sum_{y\in G} g(y)\cdot y\right)=\sum_{x,y\in G} f(x)g(y) \cdot(xy)=\sum_{z\in G}\left(\sum_{x\in G} f(x)g(x^{-1}z)\right)\cdot z$$
 
-이므로 
+이므로 두 함수 $f$와 $g$의 곱은 convolution으로 주어진다. 때문에 $\mathbb{C}[G]$를 *convolution algebra*라 부르기도 한다. 
 
+그럼 임의의 finite group representation $\rho:G\rightarrow \Aut(V)$에 대하여, 다음의 식
+
+$$\widetilde{\rho}: (\sum_{x\in G} a_x x, v)\mapsto \sum_{x\in G} a_x\rho(x)v$$
+
+은 $V$ 위에 $\mathbb{C}[G]$-module 구조를 준다. 거꾸로 임의의 $\mathbb{C}[G]$-module $V$가 주어졌다 하면, 즉 다음의 함수
+
+$$\mu: \mathbb{C}[G]\times V\rightarrow V$$
+
+가 주어졌다 하면 우리는 다음의 식
+
+$$g\mapsto \left( v\mapsto \mu(\delta_x, v)\right)$$
+
+을 통해 이를 $G$의 representation $G\rightarrow \Aut(V)$로 볼 수 있다. 이들 두 대응은 categorical equivalence
+
+$$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$\
+
+을 준다. 
 
 ## 리 군의 표현론
 
