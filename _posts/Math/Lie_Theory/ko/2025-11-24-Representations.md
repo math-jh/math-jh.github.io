@@ -47,6 +47,12 @@ $$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
 
 이 $G$-invariant subspace임을 안다. 따라서 representation $G\rightarrow \Aut(V)$이 irreducible representation이기 위해서는 $V^G=V$이거나 $V^G=\\{0\\}$이어야 한다. 그런데 $V^G=V$이라면, $V$의 임의의 subspace가 $G$-invariant일 것이므로 $G\rightarrow \Aut(V)$가 irreducible representation이기 위해서는 $V^G=\\{0\\}$이거나 $V=\\{0\\}$이어야 한다. 
 
+한편, $G$-fixed point set은 다음의 식
+
+$$P(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G} g\cdot v$$
+
+이 정의하는 linear map $P: V\rightarrow V^G$을 통해 얻어진다. 이는 
+
 $G$-equivariant 정의 / 카테고리 RepG / subrep, irrep.
 
 이제 group algebra $\mathbb{C}[G]$를 생각하자. 이는 $G$에서 $\mathbb{C}$로의 함수들의 모임이며, 각각의 $g\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
