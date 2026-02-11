@@ -65,12 +65,6 @@ $$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
 
 이 $G$-invariant subspace임을 안다. 따라서 representation $G\rightarrow \Aut(V)$이 irreducible representation이기 위해서는 $V^G=V$이거나 $V^G=\\{0\\}$이어야 한다. 그런데 $V^G=V$이라면, $V$의 임의의 subspace가 $G$-invariant일 것이므로 $G\rightarrow \Aut(V)$가 irreducible representation이기 위해서는 $V^G=\\{0\\}$이거나 $V$가 $1$차원이어야 한다. 
 
-한편, $G$-fixed point set은 다음의 식
-
-$$P(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G} g\cdot v$$
-
-이 정의하는 linear map $P: V\rightarrow V^G$을 통해 얻어지며, 이는 $P^2=P$를 만족하는 projection map이다. 
-
 이 $G$-fixed point set $V^G$은 주어진 $G$-representation $V$로부터 새로운 $G$-representation을 얻어내는 하나의 방법이다. 이 외에도 주어진 $G$-representation들로부터 새로운 $G$-representation을 구성하는 방법들이 여럿 존재한다. 가령 선형대수의 각종 construction들을 생각하면 다음을 정의할 수 있다. 
 
 <div class="definition" markdown="1">
@@ -86,29 +80,15 @@ $$P(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G} g\cdot v$$
 
 </div>
 
-이러한 construction들을 체계적으로 다루기 위해서는 group algebra의 언어가 유용하다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 집합으로서 $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임이었고, 이 집합에서 곱셈은 다음의 convolution
-
-$$$$
-
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Finite group $G$에 대하여, *group algebra* $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임
-
-$$\mathbb{C}[G]=\{f:G\rightarrow \mathbb{C}\}$$
-
-에 다음의 convolution 곱셈
-
-$$(f\ast g)(z)=\sum_{x\in G} f(x)g(x^{-1}z)$$
-
-을 준 대수이다.
-
-</div>
-
-각각의 $x\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
+이러한 construction들을 체계적으로 다루기 위해서는 group algebra의 언어가 유용하다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 집합으로서 $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임이었다. 각각의 $x\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 
-으로 정의하면, 임의의 $f\in\mathbb{C}[G]$는 $f=\sum_{x\in G}f(x)\delta_x$로 나타낼 수 있으므로 $\delta_x$들이 $\mathbb{C}[G]$의 basis를 이룬다. 편의상 $x\in G$와 $\delta_x\in \mathbb{C}[G]$를 동일시하여 표기하기로 한다.
+으로 정의하면, 임의의 $f\in\mathbb{C}[G]$는 $f=\sum_{x\in G}f(x)\delta_x$로 나타낼 수 있으므로 $\delta_x$들이 $\mathbb{C}[G]$의 basis를 이룬다. 그럼 이 표기 하에서,
+
+$$\left(\sum_{x\in G}f(x)\cdot x\right)\left(\sum_{y\in G} g(y)\cdot y\right)=\sum_{x,y\in G} f(x)g(y) \cdot(xy)=\sum_{z\in G}\left(\sum_{x\in G} f(x)g(x^{-1}z)\right)\cdot z$$
+
+이므로 두 함수 $f$와 $g$의 곱은 convolution으로 주어지는 것을 알고있다. 
 
 이제 임의의 $G$-representation $\rho:G\rightarrow \Aut(V)$에 대하여, 다음의 식
 
@@ -118,7 +98,7 @@ $$\widetilde{\rho}\left(\sum_{x\in G} a_x x, v\right)= \sum_{x\in G} a_x\rho(x)v
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 위의 대응들은 categorical equivalence
+<ins id="prop4">**명제 4**</ins> 위의 대응들은 categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
@@ -126,11 +106,19 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 </div>
 
+약간의 abuse of language를 통해 우리는 $\mathbb{C}[G]$-module을 간단히 $G$-module이라 부르기도 한다. 
+
+
+
+
+
+
+
 이제 Maschke 정리를 증명하자. 핵심은 임의의 inner product를 평균화하여 $G$-invariant한 inner product를 얻는 것이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> $G$-representation $V$ 위의 Hermitian inner product $\langle-,-\rangle$이 *$G$-invariant*라는 것은 임의의 $g\in G$와 $u,v\in V$에 대하여
+<ins id="def5">**정의 5**</ins> $G$-representation $V$ 위의 Hermitian inner product $\langle-,-\rangle$이 *$G$-invariant*라는 것은 임의의 $g\in G$와 $u,v\in V$에 대하여
 
 $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
@@ -138,7 +126,7 @@ $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
 </div>
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
 <ins id="thm7">**정리 7 (Maschke)**</ins> Finite group $G$와 $G$-representation $V$가 주어졌다 하고, $V$의 $G$-invariant subspace $W$를 고정하자. 그럼 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서 귀납적으로 임의의 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
 
