@@ -132,7 +132,7 @@ $$(x_1,y_1)(x_2,y_2)=(x_1\tau(y_1)(x_1), y_1y_2)$$
 
 $$i(x)=(x, e_H),\qquad p(x,y)=y$$
 
-으로 정의하자. 그럼 이 함수들은 group homomorphims이며, 이들로부터 얻어지는
+으로 정의하자. 그럼 이 함수들은 group homomorphim이며, 이들로부터 얻어지는
 
 $$\mathcal{E}_\tau: N \overset{i}{\rightarrow} N\rtimes_\tau H\overset{p}{\rightarrow} H$$
 
@@ -140,7 +140,7 @@ $$\mathcal{E}_\tau: N \overset{i}{\rightarrow} N\rtimes_\tau H\overset{p}{\right
 
 $$s(y)=(e_N, y)$$
 
-으로 정의하면 $s$는 $p$의 section이며, 따라서 [명제 4](#prop4)에 의하여 $\mathcal{E}_\tau$는 trivial extension이다.
+으로 정의하면 $s$는 $p$의 section이며, 이것이 $N\rtimes_\tau H$의 centralizer에 포함되므로 [명제 4](#prop4)에 의하여 $\mathcal{E}_\tau$는 trivial extension이다.
 
 </div>
 
