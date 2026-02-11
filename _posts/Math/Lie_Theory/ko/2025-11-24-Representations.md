@@ -108,7 +108,7 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 약간의 abuse of language를 통해 우리는 $\mathbb{C}[G]$-module을 간단히 $G$-module이라 부르기도 한다. 
 
-이제 우리는 $G$의 representation을 이루는 가장 기본 단위, 곧  핵심은 임의의 inner product를 평균화하여 $G$-invariant한 inner product를 얻는 것이다.
+이제 우리는 $G$의 representation을 이루는 가장 기본 단위, 곧 irreducible representation이 $n$ 핵심은 임의의 inner product를 평균화하여 $G$-invariant한 inner product를 얻는 것이다.
 
 <div class="definition" markdown="1">
 
