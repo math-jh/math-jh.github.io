@@ -39,19 +39,19 @@ $$\rho: G\times V \rightarrow V$$
 
 으로 주어진다. 이들 데이터는 category $\Rep_\mathbb{C}(G)$를 이룬다. 
 
-만일 $V$의 어떠한 subspace $W$가 존재하여, 임의의 $g\in G$와 임의의 $w\in W$에 대하여 $g\cdot w\in W$가 항상 성립한다면 $G$의 representation을 나타내기 위해 $V$ 전체가 필요한 것은 아니다. 즉 $G\rightarrow \Aut(V)$의 공역을 제한하여 $G\rightarrow \Aut(W)$를 보는 것으로 $G$-representation의 모든 정보를 알 수 있고, 이러한 이유로 $W$를 $V$의 *subrepresentation*이라 부른다. 만일 $G$-representation $V$의 subrepresentation이 자기 자신과 trivial representation $G\rightarrow \\{0\\}$ 뿐이라면 이를 *irreducible representation*이라 부른다. 
+만일 $V$의 어떠한 subspace $W$가 존재하여, 임의의 $g\in G$와 임의의 $w\in W$에 대하여 $g\cdot w\in W$가 항상 성립한다면 $G$의 representation을 나타내기 위해 $V$ 전체가 필요한 것은 아니다. 즉 $G\rightarrow \Aut(V)$의 공역을 제한하여 $G\rightarrow \Aut(W)$를 보는 것으로 $G$-representation의 모든 정보를 알 수 있고, 이러한 이유로 $W$를 $V$의 *subrepresentation*이라 부른다. 만일  영이 아닌 $G$-representation $V$의 subrepresentation이 자기 자신과 trivial representation $G\rightarrow \\{0\\}$ 뿐이라면 이를 *irreducible representation*이라 부른다. 
 
 임의의 representation $G\rightarrow \Aut(V)$가 주어졌을 때, 우리는 $G$-fixed point들의 집합
 
 $$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
 
-이 $G$-invariant subspace임을 안다. 따라서 representation $G\rightarrow \Aut(V)$이 irreducible representation이기 위해서는 $V^G=V$이거나 $V^G=\\{0\\}$이어야 한다. 그런데 $V^G=V$이라면, $V$의 임의의 subspace가 $G$-invariant일 것이므로 $G\rightarrow \Aut(V)$가 irreducible representation이기 위해서는 $V^G=\\{0\\}$이거나 $V=\\{0\\}$이어야 한다. 
+이 $G$-invariant subspace임을 안다. 따라서 representation $G\rightarrow \Aut(V)$이 irreducible representation이기 위해서는 $V^G=V$이거나 $V^G=\\{0\\}$이어야 한다. 그런데 $V^G=V$이라면, $V$의 임의의 subspace가 $G$-invariant일 것이므로 $G\rightarrow \Aut(V)$가 irreducible representation이기 위해서는 $V^G=\\{0\\}$이거나 $V$가 $1$차원이어야 한다. 
 
 한편, $G$-fixed point set은 다음의 식
 
 $$P(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G} g\cdot v$$
 
-이 정의하는 linear map $P: V\rightarrow V^G$을 통해 얻어진다. 이는 
+이 정의하는 linear map $P: V\rightarrow V^G$을 통해 얻어지며, 이는 $P^2=P$를 만족하는 projection map이다. 
 
 
 
@@ -86,7 +86,7 @@ $$g\mapsto \left( v\mapsto \mu(\delta_x, v)\right)$$
 
 을 통해 이를 $G$의 representation $G\rightarrow \Aut(V)$로 볼 수 있다. 이들 두 대응은 categorical equivalence
 
-$$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$\
+$$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 을 준다. 
 
