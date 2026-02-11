@@ -71,6 +71,91 @@ $$P(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G} g\cdot v$$
 
 이 정의하는 linear map $P: V\rightarrow V^G$을 통해 얻어지며, 이는 $P^2=P$를 만족하는 projection map이다. 
 
+이 $G$-fixed point set $V^G$은 주어진 $G$-representation $V$로부터 새로운 $G$-representation을 얻어내는 하나의 방법이다. 이 외에도 주어진 $G$-representation들로부터 새로운 $G$-representation을 구성하는 방법들이 여럿 존재한다. 가령 선형대수의 각종 construction들을 생각하면 다음을 정의할 수 있다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def3">**정의 3**</ins> $G$-representation $V, W$에 대하여, 다음의 $G$-action을 통해 새로운 $G$-representation들을 정의한다.
+
+1. Direct sum $V\oplus W$; $G$-action $g\cdot(v,w)=(g\cdot v,g\cdot w)$
+2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$
+3. $\Hom_\mathbb{C}(V,W)$; $G$-action $(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)$
+4. 3번에서 $W=\mathbb{C}$로 두어 얻어지는 *dual representation* $V^\ast$
+5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation* $\overline{V}$
+6. 그 외 exterior power $\bigwedge^k V$, symmetric power $\operatorname{Sym}^k V$ 등에도 자연스럽게 정의되는 $G$-action들.
+
+</div>
+
+이러한 construction들을 체계적으로 다루기 위해서는 group algebra의 언어가 유용하다.
+
+<div class="definition" markdown="1">
+
+<ins id="def4">**정의 4**</ins> Finite group $G$에 대하여, *group algebra* $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임
+
+$$\mathbb{C}[G]=\{f:G\rightarrow \mathbb{C}\}$$
+
+에 다음의 convolution 곱셈
+
+$$(f\ast g)(z)=\sum_{x\in G} f(x)g(x^{-1}z)$$
+
+을 준 대수이다.
+
+</div>
+
+각각의 $x\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
+
+$$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
+
+으로 정의하면, 임의의 $f\in\mathbb{C}[G]$는 $f=\sum_{x\in G}f(x)\delta_x$로 나타낼 수 있으므로 $\delta_x$들이 $\mathbb{C}[G]$의 basis를 이룬다. 편의상 $x\in G$와 $\delta_x\in \mathbb{C}[G]$를 동일시하여 표기하기로 한다.
+
+이제 임의의 $G$-representation $\rho:G\rightarrow \Aut(V)$에 대하여, 다음의 식
+
+$$\widetilde{\rho}\left(\sum_{x\in G} a_x x, v\right)= \sum_{x\in G} a_x\rho(x)v$$
+
+은 $V$ 위에 $\mathbb{C}[G]$-module 구조를 준다. 거꾸로 임의의 $\mathbb{C}[G]$-module $V$가 주어졌다 하면, 각 $x\in G$에 대하여 $x$가 $V$에 작용하는 방식을 통해 $G$-representation을 얻을 수 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop5">**명제 5**</ins> 위의 대응들은 categorical equivalence
+
+$$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
+
+을 준다.
+
+</div>
+
+이제 Maschke 정리를 증명하자. 핵심은 임의의 inner product를 평균화하여 $G$-invariant한 inner product를 얻는 것이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def6">**정의 6**</ins> $G$-representation $V$ 위의 Hermitian inner product $\langle-,-\rangle$이 *$G$-invariant*라는 것은 임의의 $g\in G$와 $u,v\in V$에 대하여
+
+$$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
+
+이 성립하는 것이다. $G$-invariant inner product를 갖는 representation을 *unitary representation*이라 부른다.
+
+</div>
+
+<div class="theorem" markdown="1">
+
+<ins id="thm7">**정리 7 (Maschke)**</ins> Finite group $G$와 $G$-representation $V$가 주어졌다 하고, $V$의 $G$-invariant subspace $W$를 고정하자. 그럼 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서 귀납적으로 임의의 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$V$ 위의 임의의 Hermitian inner product $\langle -,- \rangle$에 대하여, [정의 1](#def1)에서의 평균화 연산자와 유사하게 다음의 식
+
+$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
+
+을 통해 새로운 inner product $\langle\kern-1.5pt\langle-,-\rangle\kern-1.5pt\rangle$를 정의하자. 그럼 임의의 $h\in G$에 대하여
+
+$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
+
+이므로 이 inner product는 $G$-invariant이다. 이제 $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant subspace이며 $V = W \oplus W'$가 성립한다.
+
+</details>
 
 
 
