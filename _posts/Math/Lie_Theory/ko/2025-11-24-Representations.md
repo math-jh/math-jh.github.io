@@ -86,7 +86,9 @@ $$P(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G} g\cdot v$$
 
 </div>
 
-이러한 construction들을 체계적으로 다루기 위해서는 group algebra의 언어가 유용하다.
+이러한 construction들을 체계적으로 다루기 위해서는 group algebra의 언어가 유용하다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 집합으로서 $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임이었고, 이 집합에서 곱셈은 다음의 convolution
+
+$$$$
 
 <div class="definition" markdown="1">
 
