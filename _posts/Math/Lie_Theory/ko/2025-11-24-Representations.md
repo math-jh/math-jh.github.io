@@ -39,13 +39,24 @@ $$\rho: G\times V \rightarrow V$$
 
 혹은, 더 간략하게 group homomorphism $G\rightarrow \Aut(V)$가 주어진 것으로 생각할 수도 있다. 일반적으로 ground field $\mathbb{K}$는 임의의 ring $A$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $\mathbb{K}=\mathbb{C}$로 두어도 충분하므로 이렇게 고정하기로 한다. 
 
-고정된 (finite) group $G$와 $G$의 두 representation 사이의 morphism은 다음의 diagram
+고정된 (finite) group $G$와 $G$의 두 representation 사이의 morphism은 $G$-equivariant map들, 즉 다음의 diagram
 
-![G-equivariant_maps](/assets/images/Math/Lie_Theory/Representations-1.png){:style="width:8em" class="invert" .align-center}
+![G-equivariant_maps](/assets/images/Math/Lie_Theory/Representations-1.png){:style="width:10em" class="invert" .align-center}
 
-으로 주어진다. 이들 데이터는 category $\Rep_\mathbb{C}(G)$를 이룬다. 
+으로 주어진다. 이들의 합성이 잘 행동하는 것은 자명하므로, 고정된 group $G$에 대하여 $G$의 representation들의 category $\Rep_\mathbb{C}(G)$가 존재한다. 
 
-만일 $V$의 어떠한 subspace $W$가 존재하여, 임의의 $g\in G$와 임의의 $w\in W$에 대하여 $g\cdot w\in W$가 항상 성립한다면 $G$의 representation을 나타내기 위해 $V$ 전체가 필요한 것은 아니다. 즉 $G\rightarrow \Aut(V)$의 공역을 제한하여 $G\rightarrow \Aut(W)$를 보는 것으로 $G$-representation의 모든 정보를 알 수 있고, 이러한 이유로 $W$를 $V$의 *subrepresentation*이라 부른다. 만일  영이 아닌 $G$-representation $V$의 subrepresentation이 자기 자신과 trivial representation $G\rightarrow \\{0\\}$ 뿐이라면 이를 *irreducible representation*이라 부른다. 
+한편 $V$에 적용되는 선형대수학의 언어를 차용하면 다음을 정의할 수 있다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def2">**정의 2**</ins> Group $G$의 representation $G\times V\rightarrow V$에 대하여 다음을 정의한다. 
+
+1. $V$의 subspace $W$가 *$G$-invariant*라는 것은 임의의 $g\in G$와 임의의 $w\in W$에 대하여 $g\cdot w\in W$가 항상 성립하는 것이다.
+2. 임의의 
+
+</div>
+
+만일 $V$의 어떠한 subspace $W$가 존재하여, 임의의 한다면 $G$의 representation을 나타내기 위해 $V$ 전체가 필요한 것은 아니다. 즉 $G\rightarrow \Aut(V)$의 공역을 제한하여 $G\rightarrow \Aut(W)$를 보는 것으로 $G$-representation의 모든 정보를 알 수 있고, 이러한 이유로 $W$를 $V$의 *subrepresentation*이라 부른다. 만일  영이 아닌 $G$-representation $V$의 subrepresentation이 자기 자신과 trivial representation $G\rightarrow \\{0\\}$ 뿐이라면 이를 *irreducible representation*이라 부른다. 
 
 임의의 representation $G\rightarrow \Aut(V)$가 주어졌을 때, 우리는 $G$-fixed point들의 집합
 
