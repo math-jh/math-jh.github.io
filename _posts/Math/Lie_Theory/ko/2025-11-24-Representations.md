@@ -37,7 +37,10 @@ $$\rho: G\times V \rightarrow V$$
 
 </div>
 
-혹은, 더 간략하게 group homomorphism $G\rightarrow \Aut(V)$가 주어진 것으로 생각할 수도 있다. 일반적으로 ground field $\mathbb{K}$는 임의의 ring $A$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $\mathbb{K}=\mathbb{C}$로 두어도 충분하므로 이렇게 고정하기로 한다. 
+혹은, 더 간략하게 group homomorphism $G\rightarrow \Aut(V)$가 주어진 것으로 생각할 수도 있다. 우리는 편의를 위해 함수 $\rho$가 문맥에 따라 명확하다면 $V$를 $G$의 representation이라 부르기도 한다. 이러한 관점에서 
+
+
+일반적으로 ground field $\mathbb{K}$는 임의의 ring $A$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $\mathbb{K}=\mathbb{C}$로 두어도 충분하므로 이렇게 고정하기로 한다. 
 
 고정된 (finite) group $G$와 $G$의 두 representation 사이의 morphism은 $G$-equivariant map들, 즉 다음의 diagram
 
