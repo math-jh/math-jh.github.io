@@ -55,11 +55,9 @@ $$\rho: G\times V \rightarrow V$$
 
 1. $V$의 subspace $W$가 *$G$-invariant<sub>$G$-불변공간</sub>*라는 것은 임의의 $g\in G$와 임의의 $w\in W$에 대하여 $g\cdot w\in W$가 항상 성립하는 것이다.
 2. 임의의 $G$-invariant subspace $W$에 대하여, representation $G\times W\rightarrow W$를 $V$의 *subrepresentation<sub>부분표현</sub>*이라 부른다. 
-3. 만일 $V$가 zero representation이 아니고 $V$의 subrepresentation들이 trivial subrepresentation들, 즉 자기 자신과 $G\times\\{0\\}\rightarrow\\{0\\}$ 뿐이라면 $V$를 
+3. 만일 $V$가 zero representation이 아니고 $V$의 subrepresentation들이 trivial subrepresentation들, 즉 자기 자신과 $G\times\\{0\\}\rightarrow\\{0\\}$ 뿐이라면 $V$를 *irreducible representation<sub>기약표현</sub>*이라 부른다. 
 
 </div>
-
-만일 $V$의 어떠한 subspace $W$가 존재하여, 임의의 한다면 $G$의 representation을 나타내기 위해 $V$ 전체가 필요한 것은 아니다. 즉 $G\rightarrow \Aut(V)$의 공역을 제한하여 $G\rightarrow \Aut(W)$를 보는 것으로 $G$-representation의 모든 정보를 알 수 있고, 이러한 이유로 $W$를 $V$의 *subrepresentation*이라 부른다. 만일  영이 아닌 $G$-representation $V$의 subrepresentation이 자기 자신과 trivial representation $G\rightarrow \\{0\\}$ 뿐이라면 이를 *irreducible representation*이라 부른다. 
 
 임의의 representation $G\rightarrow \Aut(V)$가 주어졌을 때, 우리는 $G$-fixed point들의 집합
 
