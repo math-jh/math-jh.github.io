@@ -80,7 +80,7 @@ $$y=(f_i)(x)=(f_i|_{A_i\cap A_j})(x)=(f_j|_{A_i\cap A_j})(x)=(f_j)(x)=y'$$
 
 <div class="proposition" markdown="1">
 
-<ins id="p53">**명제 5**</ins> $(A_i)\_{i\in I}$가 어떤 집합들의 family라 하자. 그럼 어떠한 집합 $S$가 존재하여, 
+<ins id="prop5">**명제 5**</ins> $(A_i)\_{i\in I}$가 어떤 집합들의 family라 하자. 그럼 어떠한 집합 $S$가 존재하여, 
 
 - $S$는 쌍마다 서로소인 family $(S\_i)\_{i\in I}$들의 합집합이며, 
 - 모든 $i\in I$에 대하여 $A_i$에서 $S_i$로의 전단사함수가 존재한다.

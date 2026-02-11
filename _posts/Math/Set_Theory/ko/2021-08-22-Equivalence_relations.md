@@ -119,7 +119,7 @@ $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
 다음 명제는 그 역 또한 성립한다는 것을 보여준다.
 
-<div class="definition" markdown="1">
+<div class="proposition" markdown="1">
 
 <ins id="prop7">**명제 7**</ins> $(A_i)\_{i\in I}$가 $A$의 분할이라 하자. 그럼 
 
