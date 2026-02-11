@@ -33,9 +33,9 @@ $$\rho: G\times V \rightarrow V$$
 
 가 주어져서 각각의 $\rho(g,-)$가 linear map인 것이다. 이는 간략하게 group homomorphism $G\rightarrow \Aut(V)$가 주어진 것으로 생각할 수도 있다. 일반적으로 ground field $\mathbb{K}$는 임의의 ring $A$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $\mathbb{K}=\mathbb{C}$로 두어도 충분하므로 이렇게 고정하기로 한다. 
 
-고정된 (finite) group $G$와 $G$의 두 representation $G\rightarrow\Aut(V)$, $G\rightarrow \Aut(W)$에 대하여, 이들 사이의 morphism은 다음의 diagram
+고정된 (finite) group $G$와 $G$의 두 representation 사이의 morphism은 다음의 diagram
 
-img
+![G-equivariant_maps](/assets/images/Math/Lie_Theory/Representations-1.png){:style="width:8em" class="invert" .align-center}
 
 으로 주어진다. 이들 데이터는 category $\Rep_\mathbb{C}(G)$를 이룬다. 
 
