@@ -79,7 +79,7 @@ $S_n$의 원소들의 합성은 함수의 합성이고, 일반적으로 함수�
 
 집합 $[n]$ 위의 equivalence realtion $\sim$을
 
-$$i\sim j\iff \sigma^m(i)j\text{ for some $m$}$$
+$$i\sim j\iff \sigma^m(i)=j\text{ for some $m$}$$
 
 으로 정의하고, 그 quotient set을
 
