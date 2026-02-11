@@ -53,7 +53,10 @@ $$P(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G} g\cdot v$$
 
 이 정의하는 linear map $P: V\rightarrow V^G$을 통해 얻어진다. 이는 
 
-$G$-equivariant 정의 / 카테고리 RepG / subrep, irrep.
+
+
+
+
 
 이제 group algebra $\mathbb{C}[G]$를 생각하자. 이는 $G$에서 $\mathbb{C}$로의 함수들의 모임이며, 각각의 $g\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
 
