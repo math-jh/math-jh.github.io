@@ -271,8 +271,7 @@ $$\langle f,g\rangle_G:=\frac{1}{\lvert G\rvert}\sum_{x\in G}f(x)\overline{g(x)}
 
 $$p_f:=\frac{1}{|G|}\sum_{g\in G}\rho_W(g)\circ f\circ\rho_V(g^{-1})$$
 
-으로 정의하면 $G$-map $V\rightarrow W$을 얻는다. 그럼 [보조정리 8](#lem8)에 의하여, $V\not\cong W$이면 $p_f=0$이고 $V=W$이면 $p_f=\lambda_f\cdot\id_V$ ($\lambda_f\in\mathbb{C}$)이다. 
-이제 trace를 취하면:
+으로 정의하면 $G$-map $V\rightarrow W$을 얻는다. 우리는 [보조정리 8](#lem8)에 의하여 이 함수는 zero map이거나 isomorphism인 것을 갈고 있다. 실제로 만일 $V\not\cong W$이면 $p_f=0$이고 $V=W$이면 $p_f=\lambda_f\cdot\id_V$ ($\lambda_f\in\mathbb{C}$)이다. 이제 trace를 취하면
 
 $V\not\cong W$이면 $\frac{1}{|G|}\sum_{g\in G}\tr(\rho_W(g)f\rho_V(g^{-1}))=0$
 $V=W$이면 $\frac{1}{|G|}\sum_{g\in G}\tr(\rho_V(g)f\rho_V(g^{-1}))=\frac{\tr(f)}{\dim V}$
