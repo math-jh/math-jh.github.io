@@ -231,27 +231,6 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 
 약간의 믿음을 가지면 이러한 표현이 유일하다는 것도 납득할 수 있다. 
 
-### 예시: S₃의 기약표현
-
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> $S_3$ (3차 대칭군)은 $|G|=6$인 비아벨 군으로, 3개의 기약표현을 가진다 ($1^2+1^2+2^2=6$).
-
-1. **자명표현 (Trivial) $V_0$:** $\rho_0(g)=1$ for all $g\in S_3$
-2. **부호표현 (Sign) $V_1$:** $\rho_1(g)=\sgn(g)\in\{\pm 1\}$
-3. **표준표현 (Standard) $V_2$:** $\mathbb{C}^3$에서 $(1,1,1)$에 수직인 2차원 부분공간
-
-$V_2$의 기저 $\{e_1-e_2, e_2-e_3\}$에 대해:
-$$\rho_2((12))=\begin{pmatrix}0&1\\1&0\end{pmatrix}, \quad \rho_2((123))=\begin{pmatrix}0&-1\\1&-1\end{pmatrix}$$
-
-| Class | Size | $V_0$ | $V_1$ | $V_2$ |
-|-------|------|-------|-------|-------|
-| $\{e\}$ | 1 | 1 | 1 | 2 |
-| $\{3\text{-cycles}\}$ | 2 | 1 | 1 | -1 |
-| $\{2\text{-cycles}\}$ | 3 | 1 | -1 | 0 |
-
-</div>
-
 이제 우리는 다음을 정의한다. 
 
 <div class="definition" markdown="1">
@@ -310,6 +289,29 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 </div>
 
+
+<div class="example" markdown="1">
+
+<ins id="ex15">**예시 15**</ins> $S_3$은 $\lvert G\rvert=6$인 nonabelian group이다. 
+
+
+으로, 3개의 기약표현을 가진다 ($1^2+1^2+2^2=6$).
+
+1. **자명표현 (Trivial) $V_0$:** $\rho_0(g)=1$ for all $g\in S_3$
+2. **부호표현 (Sign) $V_1$:** $\rho_1(g)=\sgn(g)\in\{\pm 1\}$
+3. **표준표현 (Standard) $V_2$:** $\mathbb{C}^3$에서 $(1,1,1)$에 수직인 2차원 부분공간
+
+$V_2$의 기저 $\{e_1-e_2, e_2-e_3\}$에 대해:
+$$\rho_2((12))=\begin{pmatrix}0&1\\1&0\end{pmatrix}, \quad \rho_2((123))=\begin{pmatrix}0&-1\\1&-1\end{pmatrix}$$
+
+| Class | Size | $V_0$ | $V_1$ | $V_2$ |
+|-------|------|-------|-------|-------|
+| $\{e\}$ | 1 | 1 | 1 | 2 |
+| $\{3\text{-cycles}\}$ | 2 | 1 | 1 | -1 |
+| $\{2\text{-cycles}\}$ | 3 | 1 | -1 | 0 |
+
+</div>
+
 ## Compact Lie group
 
 이제 우리는 지금까지의 결과를 Lie group으로 옮길 수 있다는 것을 설명한다. 이는 간단한데, convolution algebra를 정의할 때 $G$에서 $\mathbb{C}$로의 모든 함수들의 모임 대신 $G$에서 $\mathbb{C}$로의 smooth function들의 모임들을 생각하고, 이 위에 전통적인 convolution을 정의하면 된다. 물론 이를 위해서는 $G$ 위에 정의된 적분이 필요하지만, 이는 Haar measure를 사용하면 된다.
@@ -318,7 +320,7 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> $SO(2)\cong U(1)=\{z\in\mathbb{C}\mid |z|=1\}$는 아벨 군으로, 모든 기약표현은 1차원이다. 각 정수 $n\in\mathbb{Z}$에 대하여,
+<ins id="ex16">**예시 16**</ins> $SO(2)\cong U(1)=\{z\in\mathbb{C}\mid |z|=1\}$는 아벨 군으로, 모든 기약표현은 1차원이다. 각 정수 $n\in\mathbb{Z}$에 대하여,
 
 $$\chi_n(e^{i\theta})=e^{in\theta}$$
 
@@ -332,7 +334,7 @@ $$\langle\chi_m,\chi_n\rangle_{U(1)}=\frac{1}{2\pi}\int_0^{2\pi} e^{i(m-n)\theta
 
 <div class="example" markdown="1">
 
-<ins id="ex16">**예시 16**</ins> $SU(2)$는 3차원 compact Lie group으로, 각 $n\in\mathbb{N}$에 대하여 $(n+1)$차원의 기약표현 $V_n$이 존재한다. $V_n$은 동차다항식 공간
+<ins id="ex17">**예시 17**</ins> $SU(2)$는 3차원 compact Lie group으로, 각 $n\in\mathbb{N}$에 대하여 $(n+1)$차원의 기약표현 $V_n$이 존재한다. $V_n$은 동차다항식 공간
 
 $$V_n = \{p:\mathbb{C}^2\to\mathbb{C}\mid p\text{ is homogeneous of degree }n\}$$
 
