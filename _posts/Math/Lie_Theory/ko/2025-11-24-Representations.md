@@ -134,9 +134,7 @@ $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
 이기 때문이다. 
 
-특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 우리는 특별히 semisimple module에 대한 이론은 잘 가지고 있으므로, 이 지식을 $G$의 representation theory에 적용하면 좋을 것이다. 
-
-핵심은 임의의 inner product를 평균화하여 $G$-invariant한 inner product를 얻는 것이다.
+특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
 
 <div class="definition" markdown="1">
 
