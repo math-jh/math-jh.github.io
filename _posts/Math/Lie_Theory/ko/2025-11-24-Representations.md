@@ -291,7 +291,7 @@ $$f\in Z(\mathbb{C}[G])\iff y\left(\sum_{x\in G}f_xx\right)y^{-1}=f\iff \sum_{x\
 
 이 성립하므로, $f\in Z(\mathbb{C}[G])$이 성립하는 것은 $f_x$들 각각이 conjugacy class 위에서 상수인 것과 동치이다. 즉 위에서 구한 $r$은 정확하게 $G$의 conjugacy class의 개수와 같다. 
 
-바꿔 말하자면, 우리는 앞서 $G$의 irreducible decomposition들에 해당하는 character들이 orthonormal함을 확인하였으며, 이들은 적어도 $r$개가 존재한다. 그러나 이러한 것들은 많아야 $r$개 존재하므로, 이로부터 우리는 앞선 
+바꿔 말하자면, 우리는 앞서 $G$의 irreducible decomposition들에 해당하는 character들이 orthonormal함을 확인하였으며, 이들은 적어도 $r$개가 존재한다. 그러나 이러한 것들은 많아야 $r$개 존재하므로, 이로부터 우리는 앞선 orthonormal set이 정확하게 orthonormal basis가 된다는 것을 안다. 
 
 <div class="proposition" markdown="1">
 
@@ -303,10 +303,11 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 </div>
 
+따라서 임의의 두 $\mathbb{C}[G]$-module이 isomorphic한 것과 character function이 같은 것이 정확히 동치인 것을 안다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> $S_3$은 $\lvert G\rvert=6$인 nonabelian group이다. 
+<ins id="ex15">**예시 15**</ins> $S_3$은 $\lvert G\rvert=6$인 nonabelian group이다. 한편 
 
 
 으로, 3개의 기약표현을 가진다 ($1^2+1^2+2^2=6$).
@@ -329,8 +330,6 @@ $$\rho_2((12))=\begin{pmatrix}0&1\\1&0\end{pmatrix}, \quad \rho_2((123))=\begin{
 ## Compact Lie group
 
 이제 우리는 지금까지의 결과를 Lie group으로 옮길 수 있다는 것을 설명한다. 이는 간단한데, convolution algebra를 정의할 때 $G$에서 $\mathbb{C}$로의 모든 함수들의 모임 대신 $G$에서 $\mathbb{C}$로의 smooth function들의 모임들을 생각하고, 이 위에 전통적인 convolution을 정의하면 된다. 물론 이를 위해서는 $G$ 위에 정의된 적분이 필요하지만, 이는 Haar measure를 사용하면 된다.
-
-### 예시: SO(2) ≅ U(1)의 기약표현
 
 <div class="example" markdown="1">
 
