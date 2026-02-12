@@ -172,7 +172,7 @@ $$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{
 
 <div class="proposition" markdown="1">
 
-<ins id="cor7">**따름정리 7 (Maschke)**</ins> Finite group $G$와 유한차원 $G$-representation $V$가 주어졌다 하고, $V$의 $G$-invariant subspace $W$를 고정하자. 그럼 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서 귀납적으로 임의의 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
+<ins id="cor7">**따름정리 7 (Maschke)**</ins> Finite group $G$와 유한차원 $G$-representation $V$가 주어졌다 하고, $V$의 $G$-invariant subspace $W$를 고정하자. 그럼 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서, 귀납적으로, 임의의 유한차원 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
 
 </div>
 
@@ -183,7 +183,7 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 </details>
 
-한편, 우리는 다음을 관찰할 수 있다. 
+이제 우리는 irreducible decomposition이 어떻게 생겼는지를 보인다. 본질적으로 
 
 <div class="proposition" markdown="1">
 
@@ -207,7 +207,7 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 위와 같은 상황에서, 다음의 함수 
+<ins id="prop9">**명제 9**</ins> 위와 같은 상황에서, 다음의 함수 
 
 $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}\Hom_G(W,V)\otimes_\mathbb{C}W\rightarrow V$$
 
@@ -215,11 +215,11 @@ $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}
 
 </div>
 
-이에 대한 증명은, 만일 $V$가 irreducible decomposition $V=\bigoplus V_j$을 갖는다면, 다음의 식
+이에 대한 증명은, $V$가 irreducible decomposition $V=\bigoplus V_j$을 가지므로 다음의 식
 
 $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j) $$
 
-과 [보조정리 7](#lem7)에 의해 자명하다. 즉 복잡하게 써 두기는 했지만, 위의 $d$는 각각의 irreducible $G$-module $W$(의 isomorphism class)들이 $V$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
+과 [보조정리 8](#lem8)에 의해 자명하다. 즉 복잡하게 써 두기는 했지만, 위의 $d$는 각각의 irreducible $G$-module $W$(의 isomorphism class)들이 $V$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
 
 <div class="definition" markdown="1">
 
