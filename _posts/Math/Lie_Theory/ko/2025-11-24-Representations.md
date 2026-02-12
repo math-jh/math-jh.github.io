@@ -132,7 +132,7 @@ $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (
 
 $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
-이기 때문이다. 
+이기 때문이다. 그럼 마찬가지로 [정의 3](#def3)에서 정의한 $\Hom$이 $\Rep_G(\mathbb{C})$를 closed monoidal category로 만드는 것 또한 보일 수 있다. 
 
 특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
 
@@ -182,6 +182,18 @@ $$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{
 $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant subspace이며 $V = W \oplus W'$가 성립한다.
 
 </details>
+
+이제 우리는 다음을 정의한다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> $G$의 representation $\rho:G\rightarrow\Aut(V)$에 대응하는 character $\chi_\rho:G\rightarrow\mathbb{C}$를
+
+$$\chi_\rho(g)=\tr(\rho(g))$$
+
+으로 정의한다. 
+
+</div>
 
 
 
