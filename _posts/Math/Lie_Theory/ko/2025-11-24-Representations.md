@@ -285,7 +285,7 @@ $$\lvert G\rvert=\sum_{i=1}^r n_i^2$$
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{n_i}(\mathbb{C})$$
 
-로부터 나오는 것이다. 그런데 
+로부터 나오는 것이다. 그런데 우리는 ㅁ
 
 <div class="proposition" markdown="1">
 
