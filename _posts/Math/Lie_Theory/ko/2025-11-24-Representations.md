@@ -183,17 +183,56 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 </details>
 
+한편, 우리는 다음을 관찰할 수 있다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="lem8">**보조정리 8**</ins> (Compact) group $G$와 irreducible $G$-module들 $V,W$가 주어졌다 하자. 그럼 다음이 성립한다. 
+
+1. 임의의 $G$-map $V\rightarrow W$는 zero map이거나 isomorphism이다. 
+2. 임의의 $G$-automorphism $f\in \Aut_G(V)$는 $f(v)=\lambda v$의 꼴이다. 
+3. $G$-map들의 모임 $\Hom_G(V,W)$은 $\mathbb{C}$이거나 $0$이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+1. 이는 kernel과 image를 각각 생각하면 자명하다. 
+2. 주어진 $f$는 $G$-linear map이기 이전에 $\mathbb{C}$-linear map이므로, $f$의 eigenvalue $\lambda$가 존재한다. 이제 이 eigenvalue에 대응되는 eigenspace를 $W$라 하고, 이것이 실은 $G$-submodule이 됨을 보이면 된다. 
+3. 위의 두 명제에 의해 자명하다. 
+
+</details>
+
+이를 사용하면 우리는 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop8">**명제 8**</ins> 위와 같은 상황에서, 다음의 함수 
+
+$$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}\Hom_G(W,V)\otimes_\mathbb{C}W\rightarrow V$$
+
+는 isomorphism이다. 
+
+</div>
+
+
+
+
+
 이제 우리는 다음을 정의한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> $G$의 representation $\rho:G\rightarrow\Aut(V)$에 대응하는 character $\chi_\rho:G\rightarrow\mathbb{C}$를
+<ins id="def8">**정의 8**</ins> $G$의 representation $\rho:G\rightarrow\Aut(V)$에 대응하는 *character* $\chi_\rho:G\rightarrow\mathbb{C}$를
 
 $$\chi_\rho(g)=\tr(\rho(g))$$
 
 으로 정의한다. 
 
 </div>
+
+
+
 
 
 
@@ -332,23 +371,7 @@ $$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle=\int_G \langle gu,gv\ra
 
 이에 대한 증명은 [정리 5](#thm5)에서 정의한 $G$-invariant inner product를 사용하여 $W$를 $V$의 orthogonal complement로 잡으면 된다. 이것이 바로 finite group에서의 [Maschke 정리](#thm-finite-maschke)와 완전히 동일한 구조임을 알 수 있다.
 
-<div class="proposition" markdown="1">
 
-<ins id="lem7">**보조정리 7**</ins> (Compact) group $G$와 irreducible $G$-module들 $V,W$가 주어졌다 하자. 그럼 다음이 성립한다. 
-
-1. 임의의 $G$-map $V\rightarrow W$는 zero map이거나 isomorphism이다. 
-2. 임의의 $G$-automorphism $f\in \Aut_G(V)$는 $f(v)=\lambda v$의 꼴이다. 
-3. $G$-map들의 모임 $\Hom_G(V,W)$은 $\mathbb{C}$이거나 $0$이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-1. 이는 kernel과 image를 각각 생각하면 자명하다. 
-2. 주어진 $f$는 $G$-linear map이기 이전에 $\mathbb{C}$-linear map이므로, $f$의 eigenvalue $\lambda$가 존재한다. 이제 이 eigenvalue에 대응되는 eigenspace를 $W$라 하고, 이것이 실은 $G$-submodule이 됨을 보이면 된다. 
-3. 위의 두 명제에 의해 자명하다. 
-
-</details>
 
 우리가 생각할 수 있는 가장 단순한 경우, 즉 $G$가 (compact) abelian Lie group인 경우, 임의의 $G$-module $V$의 임의의 subspace는 $G$-invariant이다. 따라서 abelian Lie group의 irreducible representation은 반드시 $1$차원이다.
 
@@ -364,15 +387,7 @@ $$g\cdot(\varphi\otimes w)=\varphi\otimes(g\cdot w)$$
 
 을 통해 $G$-action이 주어지는 $G$-module이다. 그럼 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 위와 같은 상황에서, 다음의 함수 
-
-$$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}\Hom_G(W,V)\otimes_\mathbb{C}W\rightarrow V$$
-
-는 isomorphism이다. 
-
-</div>
 
 이에 대한 증명은 만일 $V$가 "irreducible decomposition" $V=\bigoplus V_j$을 갖는다면, 다음의 식
 
