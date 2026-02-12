@@ -311,28 +311,21 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 $$e,\quad (1,2),\quad (1,2,3)$$
 
-로 대표된다. 
+로 대표된다. 그럼 위의 계산으로부터 이들은 각각 $1$차원, $1$차원, $2$차원이 되고, $1^2+1^2+2^2=6$이므로 우리가 놓친 것이 없는 것을 안다. 
 
-
-, $S_3$은 3개의 conjugacy class를 가지므로 $S_3$의 irreducible representation 또한 세 개이다. 이 중 하나는 당연히 trivial representation
+구체적으로 $e$의 conjugacy class에 해당하는 trivial representation은 
 
 $$\rho_1:S_3\rightarrow \Aut(\mathbb{C});\qquad \sigma\mapsto \id_\mathbb{C}$$
 
-이며, 나머지 둘은
+이며, $(1,2)$의 conjugacy class에 해당하는 representation은
 
 $$\rho_2:S_3 \rightarrow \Aut(\mathbb{C});\qquad \sigma\mapsto \sgn(\sigma)\in\Aut(\mathbb{C})$$
 
-그리고
+이다. 마지막으로 $(1,2,3)$의 conjugacy class에 해당하는 representation은
 
 $$\rho_3: S_3\rightarrow \Aut(\mathbb{C}^3);\qquad \sigma\mapsto \left((x_1,x_2,x_3)\mapsto (x_{\sigma(1)},x_{\sigma(2)},x_{\sigma(3)})$$
 
-이다. 
-
-으로, 3개의 기약표현을 가진다 ($1^2+1^2+2^2=6$).
-
-1. **자명표현 (Trivial) $V_0$:** $\rho_0(g)=1$ for all $g\in S_3$
-2. **부호표현 (Sign) $V_1$:** $\rho_1(g)=\sgn(g)\in\{\pm 1\}$
-3. **표준표현 (Standard) $V_2$:** $\mathbb{C}^3$에서 $(1,1,1)$에 수직인 2차원 부분공간
+에서, 이 representation이 $x_1+x_2+x_3=0$ 평면에 대해서는 invariant이므로 그 orthogonal complement를 택하면 2차원의 representation을 얻는다. 
 
 $V_2$의 기저 $\{e_1-e_2, e_2-e_3\}$에 대해:
 $$\rho_2((12))=\begin{pmatrix}0&1\\1&0\end{pmatrix}, \quad \rho_2((123))=\begin{pmatrix}0&-1\\1&-1\end{pmatrix}$$
