@@ -183,11 +183,11 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 </details>
 
-이제 우리는 irreducible decomposition이 어떻게 생겼는지를 보인다. 본질적으로 
+이제 우리는 irreducible decomposition이 어떻게 생겼는지를 보인다. 물론 본질적으로 irreducible decomposition으로 나타낸 후, 이들 중 겹치는 것 만큼을 multiplicity라 부르면 되겠지만 ([정의 10](#def10)) 다음 보조정리를 소개하기 위해 약간 먼 길을 돌아가기로 한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem8">**보조정리 8**</ins> (Compact) group $G$와 irreducible $G$-module들 $V,W$가 주어졌다 하자. 그럼 다음이 성립한다. 
+<ins id="lem8">**보조정리 8 (Schur)**</ins> (Compact) group $G$와 irreducible $G$-module들 $V,W$가 주어졌다 하자. 그럼 다음이 성립한다. 
 
 1. 임의의 $G$-map $V\rightarrow W$는 zero map이거나 isomorphism이다. 
 2. 임의의 $G$-automorphism $f\in \Aut_G(V)$는 $f(v)=\lambda v$의 꼴이다. 
@@ -203,7 +203,7 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 </details>
 
-이를 사용하면 우리는 
+이를 사용하면 우리는 다음 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
 
@@ -229,19 +229,19 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 
 약간의 믿음을 가지면 이러한 표현이 유일하다는 것도 납득할 수 있다. 
 
-
-
 이제 우리는 다음을 정의한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> $G$의 representation $\rho:G\rightarrow\Aut(V)$에 대응하는 *character* $\chi_\rho:G\rightarrow\mathbb{C}$를
+<ins id="def11">**정의 11**</ins> $G$의 representation $\rho:G\rightarrow\Aut(V)$에 대응하는 *character* $\chi_\rho:G\rightarrow\mathbb{C}$를
 
 $$\chi_\rho(g)=\tr(\rho(g))$$
 
 으로 정의한다. 
 
 </div>
+
+kg ltaj8jc j8mfje 
 
 
 
