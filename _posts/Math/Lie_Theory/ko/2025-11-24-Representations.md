@@ -215,7 +215,19 @@ $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}
 
 </div>
 
+이에 대한 증명은, 만일 $V$가 irreducible decomposition $V=\bigoplus V_j$을 갖는다면, 다음의 식
 
+$$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j) $$
+
+과 [보조정리 7](#lem7)에 의해 자명하다. 즉 복잡하게 써 두기는 했지만, 위의 $d$는 각각의 irreducible $G$-module $W$(의 isomorphism class)들이 $V$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> 위의 함수에 의한 $W\in\Irr(G, \mathbb{C})$의 image를 $V$의 *$W$-isotypical summand*라 부르고, $\Hom_G(W, V)$를 $W$의 *multiplicity*라 부른다. 
+
+</div>
+
+약간의 믿음을 가지면 이러한 표현이 유일하다는 것도 납득할 수 있다. 
 
 
 
@@ -238,41 +250,6 @@ $$\chi_\rho(g)=\tr(\rho(g))$$
 
 ## Draft
 
-이제 group algebra $\mathbb{C}[G]$를 생각하자. 이는 $G$에서 $\mathbb{C}$로의 함수들의 모임이며, 각각의 $g\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
-
-$$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
-
-으로 정의하면 임의의 $f:G\rightarrow\mathbb{C}$는 다음의 꼴
-
-$$f(y)=\sum_{x\in G} f(x)\delta_x(y)$$
-
-로 나타낼 수 있으므로 $\delta_x$들이 $\mathbb{C}[G]$의 basis를 이룬다. 편의상 우리는 이러한 방식으로 $x\in G$와 $\delta_x\in \mathbb{C}[G]$를 identify한다. 그럼 이 표기 하에서,
-
-$$\left(\sum_{x\in G}f(x)\cdot x\right)\left(\sum_{y\in G} g(y)\cdot y\right)=\sum_{x,y\in G} f(x)g(y) \cdot(xy)=\sum_{z\in G}\left(\sum_{x\in G} f(x)g(x^{-1}z)\right)\cdot z$$
-
-이므로 두 함수 $f$와 $g$의 곱은 convolution으로 주어진다. 때문에 $\mathbb{C}[G]$를 *convolution algebra*라 부르기도 한다. 
-
-그럼 임의의 finite group representation $\rho:G\rightarrow \Aut(V)$에 대하여, 다음의 식
-
-$$\widetilde{\rho}: (\sum_{x\in G} a_x x, v)\mapsto \sum_{x\in G} a_x\rho(x)v$$
-
-은 $V$ 위에 $\mathbb{C}[G]$-module 구조를 준다. 거꾸로 임의의 $\mathbb{C}[G]$-module $V$가 주어졌다 하면, 즉 다음의 함수
-
-$$\mu: \mathbb{C}[G]\times V\rightarrow V$$
-
-가 주어졌다 하면 우리는 다음의 식
-
-$$g\mapsto \left( v\mapsto \mu(\delta_x, v)\right)$$
-
-을 통해 이를 $G$의 representation $G\rightarrow \Aut(V)$로 볼 수 있다. 이들 두 대응은 categorical equivalence
-
-$$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
-
-을 준다. 
-
-
-
-## 리 군의 표현론
 
 <div class="definition" markdown="1">
 
@@ -389,19 +366,7 @@ $$g\cdot(\varphi\otimes w)=\varphi\otimes(g\cdot w)$$
 
 
 
-이에 대한 증명은 만일 $V$가 "irreducible decomposition" $V=\bigoplus V_j$을 갖는다면, 다음의 식
-
-$$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j) $$
-
-과 [보조정리 7](#lem7)에 의해 자명하다. 즉 복잡하게 써 두기는 했지만, 위의 $d$는 각각의 irreducible $G$-module $W$(의 isomorphism class)들이 $V$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def9">**정의 9**</ins> 위의 함수에 의한 $W\in\Irr(G, \mathbb{C})$의 image를 $V$의 *$W$-isotypical summand*라 부르고, $\Hom_G(W, V)$를 $W$의 *multiplicity*라 부른다. 
-
-</div>
-
-약간의 믿음을 가지면 이러한 표현이 유일하다는 것도 납득할 수 있다. 한편, 우리는 위의 $d_W$를 정의할 때 이미 $G$-action이 정의되어있는 $V.W$로부터 새로운 $G$-module 위에 $G$-action을 정의했는데, 이는 선형대수에서의 construction으로 만들어지는 벡터공간 위에 $G$-action만 추가한 것이다. 이들 action을 정의하는 것 또한 자연스럽겠지만, 혼란을 피하기 위해 적어둔다. 
+이에 대한 증명은 한편, 우리는 위의 $d_W$를 정의할 때 이미 $G$-action이 정의되어있는 $V.W$로부터 새로운 $G$-module 위에 $G$-action을 정의했는데, 이는 선형대수에서의 construction으로 만들어지는 벡터공간 위에 $G$-action만 추가한 것이다. 이들 action을 정의하는 것 또한 자연스럽겠지만, 혼란을 피하기 위해 적어둔다. 
 
 <div class="definition" markdown="1">
 
