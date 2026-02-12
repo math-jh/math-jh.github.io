@@ -128,7 +128,16 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (A\otimes M)\otimes (A\otimes N)\rightarrow M\otimes N$$
 
-을 사용해야 하기 때문이다. 이제 우리는 $G$의 representation을 이루는 가장 기본 단위, 곧 irreducible representation이 
+을 사용해야 하고, 이 때 사용하는 coproduct $A\rightarrow A\otimes A$이 $\mathbb{C}[G]$의 경우에는 
+
+$$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
+
+이기 때문이다. 
+
+특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
+
+
+이제 우리는 $G$의 representation을 이루는 가장 기본 단위, 곧 irreducible representation이 
 
 
 
