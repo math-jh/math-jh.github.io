@@ -281,7 +281,11 @@ $$\langle\chi_V,\chi_W\rangle_G=\delta_{VW}$$
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{n_i}(\mathbb{C})$$
 
-을 얻는다. 여기에서 각각의 $\Mat_{n_i}(\mathbb{C})$는 simple $\mathbb{C}[G]$-module이다. 
+을 얻는다. 여기에서 각각의 $\Mat_{n_i}(\mathbb{C})$는 simple $\mathbb{C}[G]$-module이다. 한편, 우리는 $\mathbb{C}[G]$의 center $Z(\mathbb{C}[G])$에 대하여, 위의 분해에 따르면
+
+$$Z(\mathbb{C}[G])=\mathbb{C}I_{n_1}\oplus \cdots\oplus \mathbb{C}I_{n_r}$$
+
+이므로 $Z(\mathbb{C}[G])$는 $r$차원 벡터공간이다. 그런데 임의의 $f\in \mathbb{C}[G]$에 대하여, 
 
 
 
