@@ -277,7 +277,15 @@ $$p_f:=\frac{1}{|G|}\sum_{g\in G}\rho_W(g)\circ f\circ\rho_V(g^{-1})$$
 
 $$\langle\chi_V,\chi_W\rangle_G=\delta_{VW}$$
 
-이 성립하는 것을 안다. 즉, irreducible representation의 character들은 class function들의 공간에서 orthonormal basis를 준다. 한편 우리는 Artin-Wedderburn 정리에 의하여 임의의 semisimple algebra는 matrix algebra들의 direct sum으로 나타난다는 것을 알고, [따름정리 7](#cor7)이 정확히 $\mathbb{C}[G]$가 semisimple인 것을 보여준다. 이로부터 만일 
+이 성립하는 것을 안다. 즉, irreducible representation의 character들은 class function들의 공간에서 orthonormal basis를 준다. 한편 우리는 Artin-Wedderburn 정리에 의하여 임의의 semisimple algebra는 matrix algebra들의 direct sum으로 나타난다는 것을 알고, [따름정리 7](#cor7)이 정확히 $\mathbb{C}[G]$가 semisimple인 것을 보여준다. 뿐만 아니라 우리는 $\mathbb{C}[G]$의 차원이 정학히 $G$의 크기와 같은 것을 알고 있으므로, 이들 decomposition을 통해 다음의 식
+
+$$\lvert G\rvert=\sum_{i=1}^r n_i^2$$
+
+을 얻는다. 이 때 $n_i$들은 $\mathbb{C}[G]$의 decomposition
+
+$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{n_i}(\mathbb{C})$$
+
+로부터 나오는 것이다. 
 
 <div class="proposition" markdown="1">
 
