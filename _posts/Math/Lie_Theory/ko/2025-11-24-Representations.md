@@ -271,33 +271,27 @@ $$\langle f,g\rangle_G:=\frac{1}{\lvert G\rvert}\sum_{x\in G}f(x)\overline{g(x)}
 
 $$p_f:=\frac{1}{|G|}\sum_{g\in G}\rho_W(g)\circ f\circ\rho_V(g^{-1})$$
 
-으로 정의하면 $G$-map $V\rightarrow W$을 얻는다. 우리는 [보조정리 8](#lem8)에 의하여 이 함수는 zero map이거나 isomorphism인 것을 갈고 있다. 실제로 만일 $V\not\cong W$이면 $p_f=0$이고 $V=W$이면 $p_f=\lambda_f\cdot\id_V$ ($\lambda_f\in\mathbb{C}$)이다. 이제 trace를 취하면
-
-$V\not\cong W$이면 $\frac{1}{|G|}\sum_{g\in G}\tr(\rho_W(g)f\rho_V(g^{-1}))=0$
-$V=W$이면 $\frac{1}{|G|}\sum_{g\in G}\tr(\rho_V(g)f\rho_V(g^{-1}))=\frac{\tr(f)}{\dim V}$
-여기서 적절한 choice of $f$ (e.g., rank 1 projection)를 하면 다음을 얻는다:
+으로 정의하면 $G$-map $V\rightarrow W$을 얻는다. 우리는 [보조정리 8](#lem8)에 의하여 이 함수는 zero map이거나 isomorphism인 것을 갈고 있다. 실제로 만일 $V\not\cong W$이면 $p_f=0$이고 $V=W$이면 $p_f=\lambda_f\cdot\id_V$ ($\lambda_f\in\mathbb{C}$)인 것을 확인할 수 있으며, 따라서 다음의 식
 
 $$\langle\chi_V,\chi_W\rangle_G=\delta_{VW}$$
 
-즉 서로 다른 irreducible representation의 characters는 직교한다.
+이 성립하는 것을 안다. 
 
-정리 (Schur Orthogonality) $G$의 서로 다른 isomorphism class에 속하는 irreducible representation $\rho,\rho'$에 대하여
+<div class="proposition" markdown="1">
+
+<ins id="thm14">**정리 14 (Schur orthogonality)**</ins>  $G$의 서로 다른 isomorphism class에 속하는 irreducible representation $\rho,\rho'$에 대하여
 
 $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
-가 성립한다. 특히 ${\chi_\rho}_{\rho\in\Irr(G,\mathbb{C})}$는 $\mathcal{Z}(\mathbb{C}[G])$의 정규직교기저를 이룬다.
+가 성립한다. 특히 ${\chi_\rho}_{\rho\in\Irr(G,\mathbb{C})}$는 class function들의 모임 위에 orthonormal basis를 이룬다. 
+
+</div>
+
 
 
 
 
 ## Draft
-
-
-Character function들의 가장 중요한 성질 중 하나는 *Schur orthogonality relation*이다. Finite group의 경우 이는 다음과 같이 표현된다. Irreducible representation들 $\rho_i$에 대응하는 character들 $\chi_i$가 주어졌을 때,
-
-$$\frac{1}{|G|}\sum_{g \in G} \chi_i(g)\overline{\chi_j(g)} = \delta_{ij}$$
-
-가 성립한다. 이는 서로 다른 irreducible representation의 character들이 평균내어진 내적에서 orthogonal함을 의미한다.
 
 ## Compact Lie Group의 표현
 
