@@ -94,19 +94,19 @@ $$(fg)(x)=f(x)g(x), \qquad \text{for all $x\in G$}$$
 
 으로 정의하는 대신 이 위에는 convolution product
 
-$$(f\ast g)(x)=\sum_{y\in G}f(y)g(xy^{-1})$$
+$$(f\ast g)(x)=\sum_{y\in G}f(y)g(y^{-1}x)$$
 
-가 곱셈을 정의한다. 
-
-
+가 곱셈을 정의한다. 만일 우리가 위의 delta function $\delta_x$와 $x\in G$를 identify한다면, 다음의 식
 
 $$\left(\sum_{x\in G}f(x)\cdot x\right)\left(\sum_{y\in G} g(y)\cdot y\right)=\sum_{x,y\in G} f(x)g(y) \cdot(xy)=\sum_{z\in G}\left(\sum_{x\in G} f(x)g(x^{-1}z)\right)\cdot z$$
 
-이므로 두 함수 $f$와 $g$의 곱은 convolution으로 주어지는 것을 알고있다. 가령 $\delta_x$와 $\delta_y$의 곱은 $0$이지만, 이 둘의 convolution은 $\delta_{xy}$이므로 
+이 성립하므로 이러한 곱셈을 선택하는 것이 자연스럽다. 가령 $\delta_x$와 $\delta_y$의 곱은 $0$이지만, 이 둘의 convolution은 $\delta_{xy}$이므로, group action에 포함되는 다음의 식
 
-$$(\delta_x\ast \delta_y)\cdot v=\delta_x\cdot(\delta_y\ast )$$
+$$(\delta_x\ast \delta_y)\cdot v=\delta_x\cdot(\delta_y\ast v)$$
 
-그럼 우선 임의의 $G$-representation $\rho:G\rightarrow \Aut(V)$에 대하여, 다음의 식
+와 같은 것들이 말이 되기 위해서는 이러한 선택이 필연적이다.
+
+임의의 $G$-representation $\rho:G\rightarrow \Aut(V)$에 대하여, 다음의 식
 
 $$\widetilde{\rho}\left(\sum_{x\in G} a_x x, v\right)= \sum_{x\in G} a_x\rho(x)v$$
 
