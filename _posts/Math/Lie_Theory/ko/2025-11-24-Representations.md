@@ -289,7 +289,7 @@ $$Z(\mathbb{C}[G])=\mathbb{C}I_{n_1}\oplus \cdots\oplus \mathbb{C}I_{n_r}$$
 
 $$f\in Z(\mathbb{C}[G])\iff y\left(\sum_{x\in G}f_xx\right)y^{-1}=f\iff \sum_{x\in G}f_xyxy^{-1}=f\iff \sum_{x\in G}f_{y^{-1}xy}x=f$$
 
-이 성립한다. 
+이 성립하므로, $f\in Z(\mathbb{C}[G])$이 성립하는 것은 
 
 준다. 뿐만 아니라 우리는 $\mathbb{C}[G]$의 차원이 정학히 $G$의 크기와 같은 것을 알고 있으므로, 이들 decomposition을 통해 다음의 식
 
