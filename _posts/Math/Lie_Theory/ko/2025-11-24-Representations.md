@@ -146,24 +146,40 @@ $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
 </div>
 
+그럼 임의의 유한차원 $G$-module $V$는 $G$-invariant inner product를 갖는다.
+
+<div class="proposition" markdown="1">
+ 
+<ins id="prop6">**명제 6**</ins> 임의의 유한차원 벡터공간 $V$와 representation $G\times V\rightarrow V$에 대하여, $V$ 위에 정의된 $G$-invariant inner product가 존재한다. 
+ 
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$V$ 위의 임의의 Hermitian inner product $\langle -,- \rangle$에 대하여, 
+
+$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
+
+을 통해 새로운 inner product $\langle\kern-1.5pt\langle-,-\rangle\kern-1.5pt\rangle$를 정의하면 된다. 그럼 임의의 $h\in G$에 대하여
+
+$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
+
+이므로 이 inner product는 $G$-invariant이다.
+
+</details>
+
+이를 사용하면 다음이 성립한다. 
+
 <div class="proposition" markdown="1">
 
-<ins id="thm7">**정리 7 (Maschke)**</ins> Finite group $G$와 $G$-representation $V$가 주어졌다 하고, $V$의 $G$-invariant subspace $W$를 고정하자. 그럼 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서 귀납적으로 임의의 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
+<ins id="cor7">**따름정리 7 (Maschke)**</ins> Finite group $G$와 유한차원 $G$-representation $V$가 주어졌다 하고, $V$의 $G$-invariant subspace $W$를 고정하자. 그럼 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서 귀납적으로 임의의 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$V$ 위의 임의의 Hermitian inner product $\langle -,- \rangle$에 대하여, [정의 1](#def1)에서의 평균화 연산자와 유사하게 다음의 식
-
-$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
-
-을 통해 새로운 inner product $\langle\kern-1.5pt\langle-,-\rangle\kern-1.5pt\rangle$를 정의하자. 그럼 임의의 $h\in G$에 대하여
-
-$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
-
-이므로 이 inner product는 $G$-invariant이다. 이제 $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant subspace이며 $V = W \oplus W'$가 성립한다.
+$W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant subspace이며 $V = W \oplus W'$가 성립한다.
 
 </details>
 
