@@ -294,43 +294,6 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 이제 우리는 지금까지의 결과를 Lie group으로 옮길 수 있다는 것을 설명한다. 이는 간단한데, convolution algebra를 정의할 때 $G$에서 $\mathbb{C}$로의 모든 함수들의 모임 대신 $G$에서 $\mathbb{C}$로의 smooth function들의 모임들을 생각하고, 이 위에 전통적인 convolution을 정의하면 된다. 물론 이를 위해서는 $G$ 위에 정의된 적분이 필요하지만, 이는 Haar measure를 사용하면 된다. 
 
 
-## Compact Lie Group의 표현
-
-이제 $G$를 *compact* Lie group으로 바꾸어보자. Finite group에서 compact Lie group으로 넘어갈 때, 우리가 해야 할 유일한 수정은 *평균*을 취하는 방식을 바꾸는 것뿐이다. Finite group에서는 $\frac{1}{|G|}\sum_{g \in G}$로 평균을 내었지만, compact Lie group에서는 *Haar measure*를 사용한 적분으로 대체된다.
-
-Compact topological group $G$ 위에는 left-invariant (또는 right-invariant) probability measure, 즉 Haar measure가 항상 존재하며 유일하다. 편의상 $G$ 위에 정의된 Haar measure에 대한 적분을
-
-$$\int_G f(g)\mathop{dg}$$
-
-와 같이 쓰기로 하자. 이는 Haar measure가 확률측도(total mass 1)로 정규화되었다는 것을 의미한다.
-
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> 임의의 $G$-module $V$에 대하여, $V$ 위에 정의된 Hermitian inner product $\langle-,-\rangle$이 *$G$-invariant*라는 것은 $\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$이 모든 $u,v,g$에 대해 성립하는 것이다. 만일 $V$가 $G$-invariant Hermitian inner product를 갖는다면 이를 *unitary representation*이라 부른다. 
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**정리 5**</ins> 임의의 compact group $G$와 $G$-module $V$에 대하여, $V$ 위의 임의의 Hermitian inner product $\langle-,-\rangle$에 대하여 다음의 식
-
-$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle=\int_G \langle gu,gv\rangle \mathop{dg}$$
-
-을 통해 이를 평균내주면 $G$-invariant Hermitian inner product를 정의할 수 있다. 즉, $V$는 항상 unitary representation이다. 
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> Compact group $G$와 $G$-module $U$가 주어졌다 하고, $U$의 $G$-submodule $V$를 고정하자. 그럼 적당한 $G$-submodule $W$가 존재하여 $U=V\oplus W$이도록 할 수 있으며, 따라서 귀납적으로 임의의 $G$-module은 irreducible $G$-module들의 direct sum이다. 
-
-</div>
-
-이에 대한 증명은 [정리 5](#thm5)에서 정의한 $G$-invariant inner product를 사용하여 $W$를 $V$의 orthogonal complement로 잡으면 된다. 이것이 바로 finite group에서의 [Maschke 정리](#thm-finite-maschke)와 완전히 동일한 구조임을 알 수 있다.
-
-
-
-우리가 생각할 수 있는 가장 단순한 경우, 즉 $G$가 (compact) abelian Lie group인 경우, 임의의 $G$-module $V$의 임의의 subspace는 $G$-invariant이다. 따라서 abelian Lie group의 irreducible representation은 반드시 $1$차원이다.
 
 **예시 (SU(2))**: Fundamental rep는 2차원, spin $j=1/2$. Character 계산으로 irrep 분해 가능.
 
