@@ -84,13 +84,17 @@ $$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 
-으로 정의하면, 임의의 $f\in\mathbb{C}[G]$는 $f=\sum_{x\in G}f(x)\delta_x$로 나타낼 수 있으므로 $\delta_x$들이 $\mathbb{C}[G]$의 basis를 이룬다. 그럼 이 표기 하에서,
+으로 정의하면, 임의의 $f\in\mathbb{C}[G]$는 $f=\sum_{x\in G}f(x)\delta_x$로 나타낼 수 있으므로 $\delta_x$들이 $\mathbb{C}[G]$의 basis를 이룬다. 우리가 다룰 $\mathbb{C}[G]$가 
+
+
 
 $$\left(\sum_{x\in G}f(x)\cdot x\right)\left(\sum_{y\in G} g(y)\cdot y\right)=\sum_{x,y\in G} f(x)g(y) \cdot(xy)=\sum_{z\in G}\left(\sum_{x\in G} f(x)g(x^{-1}z)\right)\cdot z$$
 
-이므로 두 함수 $f$와 $g$의 곱은 convolution으로 주어지는 것을 알고있다. 
+이므로 두 함수 $f$와 $g$의 곱은 convolution으로 주어지는 것을 알고있다. 가령 $\delta_x$와 $\delta_y$의 곱은 $0$이지만, 이 둘의 convolution은 $\delta_{xy}$이므로 
 
-이제 임의의 $G$-representation $\rho:G\rightarrow \Aut(V)$에 대하여, 다음의 식
+$$(\delta_x\ast \delta_y)\cdot v=\delta_x\cdot(\delta_y\ast )$$
+
+그럼 우선 임의의 $G$-representation $\rho:G\rightarrow \Aut(V)$에 대하여, 다음의 식
 
 $$\widetilde{\rho}\left(\sum_{x\in G} a_x x, v\right)= \sum_{x\in G} a_x\rho(x)v$$
 
@@ -108,7 +112,8 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 약간의 abuse of language를 통해 우리는 $\mathbb{C}[G]$-module을 간단히 $G$-module이라 부르기도 한다. 
 
-이제 우리는 $G$의 representation을 이루는 가장 기본 단위, 곧 irreducible representation이 $n$ 핵심은 임의의 inner product를 평균화하여 $G$-invariant한 inner product를 얻는 것이다.
+이제 우리는 $G$의 representation을 이루는 가장 기본 단위, 곧 irreducible representation이 $n1
+$ 핵심은 임의의 inner product를 평균화하여 $G$-invariant한 inner product를 얻는 것이다.
 
 <div class="definition" markdown="1">
 
