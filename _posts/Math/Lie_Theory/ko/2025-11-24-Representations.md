@@ -132,7 +132,7 @@ $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (
 
 $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
-이기 때문이다. 그럼 마찬가지로 [정의 3](#def3)에서 정의한 $\Hom$이 $\Rep_G(\mathbb{C})$를 closed monoidal category로 만드는 것 또한 보일 수 있다. 
+이기 때문이다. 그럼 마찬가지로 [정의 3](#def3)에서 정의한 $\Hom$이 이 $\otimes$와 adjunction 관계에 있고, 따라서 $\Rep_G(\mathbb{C})$를 closed monoidal category로 만드는 것 또한 보일 수 있다. 
 
 특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
 
@@ -241,7 +241,13 @@ $$\chi_\rho(g)=\tr(\rho(g))$$
 
 </div>
 
-kg ltaj8jc j8mfje 
+그 정의에 의하여 character $\chi_\rho$는 conjugacy class들 위에서 상수이다. 이러한 함수들에도 다음과 같은 이름을 붙인다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def12">**정의 12**</ins> 함수 $f:G\rightarrow\mathbb{C}$가 class function이라는 것은 $f(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. Class function들의 공간을 $\mathcal{Z}(\mathbb{C}[G])$로 표기한다.
+
+</div>
 
 
 
