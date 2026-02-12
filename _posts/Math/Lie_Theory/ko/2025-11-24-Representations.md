@@ -287,7 +287,11 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 </div>
 
+<div class="example" markdown="1">
 
+<ins id="ex">**예시 **</ins> 
+
+</div>
 
 
 
