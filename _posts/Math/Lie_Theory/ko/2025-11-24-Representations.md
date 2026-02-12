@@ -122,10 +122,13 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 </div>
 
-약간의 abuse of language를 통해 우리는 $\mathbb{C}[G]$-module을 간단히 $G$-module이라 부르기도 한다. 
+약간의 abuse of language를 통해 우리는 $\mathbb{C}[G]$-module을 간단히 $G$-module이라 부르기도 한다. 근본적으로 임의의 $x\in G$가 임의의 $v\in V$를 어디로 옮기는지만 알면 위의 식을 통해 $\mathbb{C}[G]$-action이 결정된다는 점에서 이 명칭은 상당히 적절하다고 할 수 있다. 
 
-이제 우리는 $G$의 representation을 이루는 가장 기본 단위, 곧 irreducible representation이 $n1
-$ 핵심은 임의의 inner product를 평균화하여 $G$-invariant한 inner product를 얻는 것이다.
+이제 우리는 $G$의 representation을 이루는 가장 기본 단위, 곧 irreducible representation이 
+
+
+
+핵심은 임의의 inner product를 평균화하여 $G$-invariant한 inner product를 얻는 것이다.
 
 <div class="definition" markdown="1">
 
