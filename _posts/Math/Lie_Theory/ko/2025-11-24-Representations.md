@@ -273,11 +273,11 @@ $$\langle f,g\rangle_G:=\frac{1}{\lvert G\rvert}\sum_{x\in G}f(x)\overline{g(x)}
 
 $$p_f:=\frac{1}{|G|}\sum_{g\in G}\rho_W(g)\circ f\circ\rho_V(g^{-1})$$
 
-으로 정의하면 $G$-map $V\rightarrow W$을 얻는다. 우리는 [보조정리 8](#lem8)에 의하여 이 함수는 zero map이거나 isomorphism인 것을 갈고 있다. 실제로 만일 $V\not\cong W$이면 $p_f=0$이고 $V=W$이면 $p_f=\lambda_f\cdot\id_V$ ($\lambda_f\in\mathbb{C}$)인 것을 확인할 수 있으며, 따라서 다음의 식
+으로 정의하면 $G$-map $V\rightarrow W$을 얻는다. 우리는 [보조정리 8](#lem8)에 의하여 이 함수는 zero map이거나 isomorphism인 것을 알고 있다. 실제로 만일 $V\not\cong W$이면 $p_f=0$이고 $V=W$이면 $p_f=\lambda_f\cdot\id_V$ ($\lambda_f\in\mathbb{C}$)인 것을 확인할 수 있으며, 따라서 다음의 식
 
 $$\langle\chi_V,\chi_W\rangle_G=\delta_{VW}$$
 
-이 성립하는 것을 안다. 
+이 성립하는 것을 안다. 즉, irreducible representation의 character들은 class function들의 공간에서 orthonormal basis를 준다. 한편 우리는 Artin-Wedderburn 정리에 의하여 임의의 semisimple algebra는 matrix algebra들의 direct sum으로 나타난다는 것을 알고, [따름정리 7](#cor7)이 정확히 $\mathbb{C}[G]$가 semisimple인 것을 보여준다. 이로부터 만일 
 
 <div class="proposition" markdown="1">
 
