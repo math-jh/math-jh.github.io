@@ -307,8 +307,17 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> $S_3$은 $\lvert G\rvert=6$인 nonabelian group이다. 한편 
+<ins id="ex15">**예시 15**</ins> $S_3$은 $\lvert G\rvert=6$인 nonabelian group이다. 또, $S_3$은 3개의 conjugacy class를 가지므로 $S_3$의 irreducible representation 또한 세 개이다. 이 중 하나는 당연히 trivial representation
 
+$$\rho_1:S_3\rightarrow \Aut(\mathbb{C});\qquad \sigma\mapsto \id_\mathbb{C}$$
+
+이며, 나머지 둘은
+
+$$\rho_2:S_3 \rightarrow \Aut(\mathbb{C});\qquad \sigma\mapsto \sgn(\sigma)\in\Aut(\mathbb{C})$$
+
+그리고
+
+$$\rho_3: S_3\rightarrow \Aut(\mathbb{C}^3);\qquad \sigma\mapsto $$
 
 으로, 3개의 기약표현을 가진다 ($1^2+1^2+2^2=6$).
 
