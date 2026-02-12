@@ -185,8 +185,6 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 </details>
 
-이를 이용하면 $\mathbb{C}[G]$가 semisimple ring인 것을 알고, 이로부터 ....
-
 이제 우리는 irreducible decomposition이 어떻게 생겼는지를 보인다. 물론 본질적으로 irreducible decomposition으로 나타낸 후, 이들 중 겹치는 것 만큼을 multiplicity라 부르면 되겠지만 ([정의 10](#def10)) 다음 보조정리를 소개하기 위해 약간 먼 길을 돌아가기로 한다. 
 
 <div class="proposition" markdown="1">
