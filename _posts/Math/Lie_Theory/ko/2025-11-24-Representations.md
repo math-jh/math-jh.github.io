@@ -289,17 +289,9 @@ $$Z(\mathbb{C}[G])=\mathbb{C}I_{n_1}\oplus \cdots\oplus \mathbb{C}I_{n_r}$$
 
 $$f\in Z(\mathbb{C}[G])\iff y\left(\sum_{x\in G}f_xx\right)y^{-1}=f\iff \sum_{x\in G}f_xyxy^{-1}=f\iff \sum_{x\in G}f_{y^{-1}xy}x=f$$
 
-이 성립하므로, $f\in Z(\mathbb{C}[G])$이 성립하는 것은 
+이 성립하므로, $f\in Z(\mathbb{C}[G])$이 성립하는 것은 $f_x$들 각각이 conjugacy class 위에서 상수인 것과 동치이다. 즉 위에서 구한 $r$은 정확하게 $G$의 conjugacy class의 개수와 같다. 
 
-준다. 뿐만 아니라 우리는 $\mathbb{C}[G]$의 차원이 정학히 $G$의 크기와 같은 것을 알고 있으므로, 이들 decomposition을 통해 다음의 식
-
-$$\lvert G\rvert=\sum_{i=1}^r n_i^2$$
-
-을 얻는다. 이 때 $n_i$들은 $\mathbb{C}[G]$의 simple module로의 decomposition
-
-$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{n_i}(\mathbb{C})$$
-
-로부터 나오는 것이다. 
+바꿔 말하자면, 우리는 앞서 $G$의 irreducible decomposition들에 해당하는 character들이 orthonormal함을 확인하였으며, 이들은 적어도 $r$개가 존재한다. 그러나 이러한 것들은 많아야 $r$개 존재하므로, 이로부터 우리는 앞선 
 
 <div class="proposition" markdown="1">
 
