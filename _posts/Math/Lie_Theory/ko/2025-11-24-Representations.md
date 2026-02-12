@@ -249,27 +249,29 @@ $$\chi_\rho(g)=\tr(\rho(g))$$
 
 </div>
 
+우리가 character function들과 class function들에 관심을 갖는 이유는 다음의 명제에 있다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop13">**명제 13**</ins> Finite group $G$의 representation $\rho:G\rightarrow\Aut(V)$를 고정하자. 그럼 다음이 성립한다. 
+
+1. 만일 $\rho\cong\rho'$이면 $\chi_\rho=\chi_{\rho'}$이 성립한다. 
+2. $\chi_{V\oplus W}=\chi_V+\chi_W$이 성립한다. 
+3. $\chi_{V\otimes W}=\chi_V \chi_W$이 성립한다.  
+
+</div>
+
+이에 대한 증명은 단순한 선형대수에 불과하다. 
+
 Class function들의 공간은 inner product
 
 $$\langle f,g\rangle_G:=\frac{1}{\lvert G\rvert}\sum_{x\in G}f(x)\overline{g(x)}$$
 
-를 갖는다. 뿐만 아니라, 만일 irreducible representation $\rho_i$
-
-우리가 character에 관심을 갖는 이유는 다음과 같다. Finite group $G$의 representation $\rho:G\rightarrow\Aut(V)$가 주어지면, 각 $g\in G$에 대해 $\rho(g)$는 선형작용소이며 그 trace $\chi_\rho(g)=\tr(\rho(g))$를 대응시킬 수 있다. 이 함수 $\chi_\rho$는 다음 성질을 갖는다:
-
-동형 불변량: $\rho\cong\rho'$이면 $\chi_\rho=\chi_{\rho'}$
-Class function: $\chi_\rho(hgh^{-1})=\chi_\rho(g)$ (similar matrices have same trace)
-가법성: $\chi_{V\oplus W}=\chi_V+\chi_W$
-곱셈성: $\chi_{V\otimes W}=\chi_V\cdot\chi_W$
-그렇다면 class function들의 공간 $\mathcal{Z}(\mathbb{C}[G])$에서 irreducible characters들이 어떤 위치를 차지하는지 보자. 다음 inner product를 정의한다:
-
-$$\langle f,h\rangle_G:=\frac{1}{|G|}\sum_{g\in G}f(g)\overline{h(g)}$$
-
-이 inner product가 잘 정의됨은 자명하다. 이제 $V,W$가 irreducible $G$-module이라 하자. 임의의 $f\in\Hom_\mathbb{C}(V,W)$에 대하여,
+를 갖는다. 이제 $V,W$가 irreducible $G$-module이라 하자. 임의의 $f\in\Hom_\mathbb{C}(V,W)$에 대하여,
 
 $$p_f:=\frac{1}{|G|}\sum_{g\in G}\rho_W(g)\circ f\circ\rho_V(g^{-1})$$
 
-은 $G$-map $V\rightarrow W$이다. Schur's lemma에 의해:
+으로 정의하면 $G$-map $V\rightarrow W$을 얻는다. 그럼 [보조정리 8](#lem8)에 의하여, 
 
 $V\not\cong W$이면 $p_f=0$
 $V=W$이면 $p_f=\lambda_f\cdot\id_V$ ($\lambda_f\in\mathbb{C}$)
