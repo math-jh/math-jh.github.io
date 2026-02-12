@@ -257,63 +257,6 @@ $$\chi_\rho(g)=\tr(\rho(g))$$
 ## Draft
 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Lie group $G$의 *representation<sub>표현</sub>*은 continuous action
-
-$$\rho:G\times V \rightarrow V$$
-
-중, 각각의 $g\in G$를 고정했을 때 $\rho(g,-)$가 linear map인 것이다. 
-
-</div>
-
-즉 Lie group automorphism은 언제나와 같이 homomorphism $G\rightarrow \Aut(V)$를 의미한다. 우리는 이 글에서 $V$가 유한차원 벡터공간이며, 그 base field는 $\mathbb{K}=\mathbb{C}$로 고정하기로 한다. 그럼 $V$ 위에 basis를 택하면, $\Aut(V)\cong \GL(n;\mathbb{C})$이므로 이러한 representation을 *matrix representation*이라 부르기도 한다. 
-
-가장 단순한 예시는 trivial representation $\rho(g)=I$ (항상 항등변환)와 standard representation (e.g., $S_n$의 permutation matrix)이다. 
-
-
-
-
-
-우리가 표현론을 다룰 때는 크게 두 가지 맥락을 생각할 수 있다. 하나는 위에서 언급한 것처럼 Lie group의 표현을 다루는 것이고, 또 다른 하나는 finite group의 표현을 다루는 것이다. 이들은 서로 유사한 정리들을 공유하며, finite group에서 먼저 익힌 직관들이 compact Lie group의 경우로 자연스럽게 확장된다. 따라서 우리는 먼저 finite group의 경우를 살펴 본 후, 이를 compact Lie group으로 일반화할 것이다.
-
-## Finite Group의 표현
-
-우선 *finite* group $G$와 $\mathbb{C}$ 위의 finite-dimensional vector space $V$를 생각하자. $G$의 *representation*은 group homomorphism
-
-$$\rho: G \longrightarrow \Aut(V) \cong \GL(n;\mathbb{C})$$
-
-을 의미한다. 이는 각각의 $g \in G$가 $V$ 위의 invertible linear operator로 작용함을 의미하며, $G$의 group structure가 $\Aut(V)$의 곱셈과 호환됨을 요구한다.
-
-<div class="proposition" markdown="1">
-
-<ins id="thm-finite-maschke">**정리 (Maschke)**</ins> Finite group $G$와 $G$-module $V$가 주어졌다 하고, $V$의 $G$-submodule $W$를 고정하자. 그럼 적당한 $G$-submodule $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서 귀납적으로 임의의 $G$-module은 irreducible $G$-module들의 direct sum이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$V$ 위의 임의의 Hermitian inner product $\langle -,- \rangle$에 대하여 다음의 식
-
-$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle gu, gv \rangle$$
-
-을 통해 이를 평균내주면 $G$-invariant Hermitian inner product를 정의할 수 있다. 즉 모든 $g \in G$에 대하여 $\langle\kern-1.5pt\langle gu, gv\rangle\kern-1.5pt\rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$이 성립한다. 이제 $W'$를 $W$의 orthogonal complement로 잡으면 된다.
-
-</details>
-
-Representation $\rho: G \rightarrow \Aut(V)$가 주어졌을 때, 이에 대응하는 *character* $\chi_\rho: G \rightarrow \mathbb{C}$는 다음과 같이 정의된다.
-
-$$\chi_\rho(g) = \tr(\rho(g))$$
-
-즉 각 $g \in G$가 $V$에 작용하는 linear operator의 trace를 대응시키는 함수이다. Character는 conjugacy class 위에서 상수값을 가지며, representation이 isomorphic할 때 같은 character를 갖는다.
-
-<div class="definition" markdown="1">
-
-<ins id="def-class-func">**정의**</ins> 함수 $f: G \rightarrow \mathbb{C}$가 *class function*이라는 것은 $G$의 각각의 conjugacy class 위에서 이 함수가 상수인 것이다.
-
-</div>
-
 Character function들의 가장 중요한 성질 중 하나는 *Schur orthogonality relation*이다. Finite group의 경우 이는 다음과 같이 표현된다. Irreducible representation들 $\rho_i$에 대응하는 character들 $\chi_i$가 주어졌을 때,
 
 $$\frac{1}{|G|}\sum_{g \in G} \chi_i(g)\overline{\chi_j(g)} = \delta_{ij}$$
