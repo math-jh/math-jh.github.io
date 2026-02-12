@@ -245,9 +245,15 @@ $$\chi_\rho(g)=\tr(\rho(g))$$
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> 함수 $f:G\rightarrow\mathbb{C}$가 class function이라는 것은 $f(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. Class function들의 공간을 $\mathcal{Z}(\mathbb{C}[G])$로 표기한다.
+<ins id="def12">**정의 12**</ins> 함수 $f:G\rightarrow\mathbb{C}$가 class function이라는 것은 $f(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. 
 
 </div>
+
+Class function들의 공간은 inner product
+
+$$\langle f,g\rangle_G:=\frac{1}{\lvert G\rvert}\sum_{x\in G}f(x)\overline{g(x)}$$
+
+를 갖는다. 
 
 
 
