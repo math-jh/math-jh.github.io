@@ -281,11 +281,11 @@ $$\langle\chi_V,\chi_W\rangle_G=\delta_{VW}$$
 
 $$\lvert G\rvert=\sum_{i=1}^r n_i^2$$
 
-을 얻는다. 이 때 $n_i$들은 $\mathbb{C}[G]$의 decomposition
+을 얻는다. 이 때 $n_i$들은 $\mathbb{C}[G]$의 simple module로의 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{n_i}(\mathbb{C})$$
 
-로부터 나오는 것이다. 
+로부터 나오는 것이다. 그런데 
 
 <div class="proposition" markdown="1">
 
