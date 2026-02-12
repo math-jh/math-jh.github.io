@@ -285,9 +285,11 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{n_i}(\mathbb{C})$$
 
 $$Z(\mathbb{C}[G])=\mathbb{C}I_{n_1}\oplus \cdots\oplus \mathbb{C}I_{n_r}$$
 
-이므로 $Z(\mathbb{C}[G])$는 $r$차원 벡터공간이다. 그런데 임의의 $f\in \mathbb{C}[G]$에 대하여, 
+이므로 $Z(\mathbb{C}[G])$는 $r$차원 벡터공간이다. 그런데 임의의 $f=\sum f_xx\in \mathbb{C}[G]$에 대하여, 
 
+$$f\in Z(\mathbb{C}[G])\iff y\left(\sum_{x\in G}f_xx\right)y^{-1}=f\iff \sum_{x\in G}f_xyxy^{-1}=f\iff \sum_{x\in G}f_{y^{-1}xy}x=f$$
 
+이 성립한다. 
 
 준다. 뿐만 아니라 우리는 $\mathbb{C}[G]$의 차원이 정학히 $G$의 크기와 같은 것을 알고 있으므로, 이들 decomposition을 통해 다음의 식
 
