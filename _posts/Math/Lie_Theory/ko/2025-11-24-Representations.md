@@ -231,6 +231,27 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 
 약간의 믿음을 가지면 이러한 표현이 유일하다는 것도 납득할 수 있다. 
 
+### 예시: S₃의 기약표현
+
+<div class="example" markdown="1">
+
+<ins id="ex3">**예시 3**</ins> $S_3$ (3차 대칭군)은 $|G|=6$인 비아벨 군으로, 3개의 기약표현을 가진다 ($1^2+1^2+2^2=6$).
+
+1. **자명표현 (Trivial) $V_0$:** $\rho_0(g)=1$ for all $g\in S_3$
+2. **부호표현 (Sign) $V_1$:** $\rho_1(g)=\sgn(g)\in\{\pm 1\}$
+3. **표준표현 (Standard) $V_2$:** $\mathbb{C}^3$에서 $(1,1,1)$에 수직인 2차원 부분공간
+
+$V_2$의 기저 $\{e_1-e_2, e_2-e_3\}$에 대해:
+$$\rho_2((12))=\begin{pmatrix}0&1\\1&0\end{pmatrix}, \quad \rho_2((123))=\begin{pmatrix}0&-1\\1&-1\end{pmatrix}$$
+
+| Class | Size | $V_0$ | $V_1$ | $V_2$ |
+|-------|------|-------|-------|-------|
+| $\{e\}$ | 1 | 1 | 1 | 2 |
+| $\{3\text{-cycles}\}$ | 2 | 1 | 1 | -1 |
+| $\{2\text{-cycles}\}$ | 3 | 1 | -1 | 0 |
+
+</div>
+
 이제 우리는 다음을 정의한다. 
 
 <div class="definition" markdown="1">
@@ -291,58 +312,39 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 ## Compact Lie group
 
-이제 우리는 지금까지의 결과를 Lie group으로 옮길 수 있다는 것을 설명한다. 이는 간단한데, convolution algebra를 정의할 때 $G$에서 $\mathbb{C}$로의 모든 함수들의 모임 대신 $G$에서 $\mathbb{C}$로의 smooth function들의 모임들을 생각하고, 이 위에 전통적인 convolution을 정의하면 된다. 물론 이를 위해서는 $G$ 위에 정의된 적분이 필요하지만, 이는 Haar measure를 사용하면 된다. 
+이제 우리는 지금까지의 결과를 Lie group으로 옮길 수 있다는 것을 설명한다. 이는 간단한데, convolution algebra를 정의할 때 $G$에서 $\mathbb{C}$로의 모든 함수들의 모임 대신 $G$에서 $\mathbb{C}$로의 smooth function들의 모임들을 생각하고, 이 위에 전통적인 convolution을 정의하면 된다. 물론 이를 위해서는 $G$ 위에 정의된 적분이 필요하지만, 이는 Haar measure를 사용하면 된다.
 
+### 예시: SO(2) ≅ U(1)의 기약표현
 
+<div class="example" markdown="1">
 
-**예시 (SU(2))**: Fundamental rep는 2차원, spin $j=1/2$. Character 계산으로 irrep 분해 가능.
+<ins id="ex15">**예시 15**</ins> $SO(2)\cong U(1)=\{z\in\mathbb{C}\mid |z|=1\}$는 아벨 군으로, 모든 기약표현은 1차원이다. 각 정수 $n\in\mathbb{Z}$에 대하여,
 
-이제 임의의 compact Lie group $G$에 대하여, irreducible $G$-module들의 isomorphism class들의 집합 $\Irr(G, \mathbb{C})$를 생각하자. 그럼 임의의 $W\in \Irr(G, \mathbb{C})$에 대하여, 다음의 함수
+$$\chi_n(e^{i\theta})=e^{in\theta}$$
 
-$$d_W:\Hom_G(W,V)\otimes_\mathbb{C}W\rightarrow V; \qquad \varphi\otimes w\mapsto \varphi(w)$$
+으로 정의되는 character $\chi_n$이 $U(1)$의 기약표현을 모두준다. 이들은 서로 동형이 아니며, 다음의 직교관계가 성립한다:
 
-는 잘 정의되며 $G$-map임을 보일 수 있다. 이 때 $\Hom_G(W,V)\otimes W$는 다음의 식
-
-$$g\cdot(\varphi\otimes w)=\varphi\otimes(g\cdot w)$$
-
-을 통해 $G$-action이 주어지는 $G$-module이다. 그럼 다음이 성립한다. 
-
-
-
-이에 대한 증명은 한편, 우리는 위의 $d_W$를 정의할 때 이미 $G$-action이 정의되어있는 $V.W$로부터 새로운 $G$-module 위에 $G$-action을 정의했는데, 이는 선형대수에서의 construction으로 만들어지는 벡터공간 위에 $G$-action만 추가한 것이다. 이들 action을 정의하는 것 또한 자연스럽겠지만, 혼란을 피하기 위해 적어둔다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> $G$-module $V,W$에 대하여 다음의 action을 통해 새로운 $G$-module들을 정의한다. 
-
-1. Direct sum $V\oplus W$; $G$-action $g\cdot(v,w)=(g\cdot v,g\cdot w)$
-2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$
-3. $\Hom_\mathbb{C}(V,W)$; $G$-action $g\cdot f=L_g\circ f\circ L_{g^{-1}}$[^1]
-4. 3번에서 $W=\mathbb{C}$로 두어 얻어지는 dual representation
-5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation*
-6. 그 외 exterior power, symmetric power 등에 비슷하게 정의되는 $G$-action들.
+$$\langle\chi_m,\chi_n\rangle_{U(1)}=\frac{1}{2\pi}\int_0^{2\pi} e^{i(m-n)\theta}d\theta=\delta_{mn}$$
 
 </div>
 
-## 표현의 지표
+### 예시: SU(2)의 기약표현
 
-**Schur Orthogonality 예시 ($S_3$)**:
+<div class="example" markdown="1">
 
-| irrep | dim | $\chi(id)$ | $\chi((12))$ | $\chi((123))$ |
-|-------|-----|------------|--------------|---------------|
-| Triv  | 1   | 1          | 1            | 1             |
-| Sign  | 1   | 1          | -1           | 1             |
-| Std   | 2   | 2          | 0            | -1            |
+<ins id="ex16">**예시 16**</ins> $SU(2)$는 3차원 compact Lie group으로, 각 $n\in\mathbb{N}$에 대하여 $(n+1)$차원의 기약표현 $V_n$이 존재한다. $V_n$은 동차다항식 공간
 
-내적 $\langle \chi_i, \chi_j \rangle = \frac{1}{6} \sum \chi_i \bar{\chi_j} = \delta_{ij}$.
+$$V_n = \{p:\mathbb{C}^2\to\mathbb{C}\mid p\text{ is homogeneous of degree }n\}$$
 
-이제 우리는 표현의 지표<sub>character</sub>에 대해 살펴 보겠다. 간단히 말해서 이는 임의의 $G$-representation $\rho:G\rightarrow \Aut_\mathbb{C}(V)$가 주어졌을 때, $G$의 임의의 원소 $g\in G$가 $V$에 act하는 것 (즉 $\rho(g)$의 행렬표현)의 trace를 대응시켜주는 함수 $\chi_\rho:G\rightarrow \mathbb{C}$이다. 이는 그 이름이 시사하는 바와 같이, 임의의 $G$-representation을 characterize하는 대상이다. 즉, 서로 같은 character function을 갖는 representation은 isomorphic하다. 뿐만 아니라, character function은 conjugacy class 위에서 같은 값을 지정한다. 
+으로 이해할 수 있으며, $g=\begin{pmatrix}a&b\\-\overline{b}&\overline{a}\end{pmatrix}\in SU(2)$의 작용은 $(g\cdot p)(z)=p(g^{-1}z)$이다.
 
-임의의 character function이 class function인 것은 trace의 성질에 의해 자명하다. 뿐만 아니라 character function은 class function들의 vector space의 basis가 되는데, 이는 가령 다음의 식
+$V_n$의 character는
 
-$$\chi_{V\oplus W}=\chi_V+\chi_W, \quad \chi_{V\otimes W}=\chi_V \chi_W$$
+$$\chi_n\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}=e^{in\theta}+e^{i(n-2)\theta}+\cdots+e^{-in\theta}$$
 
-에 의한 것이다. 그렇다면 class function들의 벡터공간에서의 projection 등이 어떻게 정의되는지를 탐구할 수 있을 것인데, 이러한 종류의 관계식을 *Schur orthogonality relation*이라 부른다. 
+으로 주어지며, Weyl character formula의 가장 간단한 예시이다. 특히 $V_1\cong\mathbb{C}^2$는 표준표현, $V_2\cong\mathbb{R}^3$은 adjoint 표현에 동형이다.
+
+</div> 
 
 ## 리 대수의 표현
 
