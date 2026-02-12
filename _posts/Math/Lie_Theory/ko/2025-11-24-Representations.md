@@ -342,9 +342,6 @@ $$\chi_n(e^{i\theta})=e^{in\theta}$$
 $$\langle\chi_m,\chi_n\rangle_{U(1)}=\frac{1}{2\pi}\int_0^{2\pi} e^{i(m-n)\theta}d\theta=\delta_{mn}$$
 
 </div>
-
-### 예시: SU(2)의 기약표현
-
 <div class="example" markdown="1">
 
 <ins id="ex17">**예시 17**</ins> $SU(2)$는 3차원 compact Lie group으로, 각 $n\in\mathbb{N}$에 대하여 $(n+1)$차원의 기약표현 $V_n$이 존재한다. $V_n$은 동차다항식 공간
