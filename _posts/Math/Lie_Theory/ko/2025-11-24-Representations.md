@@ -291,7 +291,7 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 ## Compact Lie group
 
-이제 우리는 지금까지의 결과를 Lie group으로 옮길 수 있다는 것을 설명한다. 이는 간단한데, 
+이제 우리는 지금까지의 결과를 Lie group으로 옮길 수 있다는 것을 설명한다. 이는 간단한데, convolution algebra를 정의할 때 $G$에서 $\mathbb{C}$로의 모든 함수들의 모임 대신 $G$에서 $\mathbb{C}$로의 smooth function들의 모임들을 생각하고, 이 위에 전통적인 convolution을 정의하면 된다. 물론 이를 위해서는 $G$ 위에 정의된 적분이 필요하지만, 이는 Haar measure를 사용하면 된다. 
 
 
 ## Compact Lie Group의 표현
