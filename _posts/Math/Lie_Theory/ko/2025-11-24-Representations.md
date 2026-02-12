@@ -23,7 +23,7 @@ weight: 2
 나중에 표현론 카테고리 만들면 빼기
 {% endcomment %}
 
-## 유한군의 표현론
+## 표현론의 기본 개념
 
 우선 우리는 유한군의 표현론을 살펴본다. 임의의 finite group은 discrete topology와 자명한 미분구조가 주어진 Lie group이라 생각할 수 있으므로 이는 앞으로 살펴볼 일반적인 경우의 특수한 케이스로 생각할 수 있다. 그러나 이 일반화의 과정은 상당히 단순한 것이며, 이 일반화 하에서 모든 원하는 결과들이 성립하므로 사실상 이 섹션에 우리의 주장들이 모두 담겨있다고 생각하여도 된다. 우선 다음의 정의부터 시작하자. 
 
@@ -135,6 +135,8 @@ $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 이기 때문이다. 그럼 마찬가지로 [정의 3](#def3)에서 정의한 $\Hom$이 이 $\otimes$와 adjunction 관계에 있고, 따라서 $\Rep_G(\mathbb{C})$를 closed monoidal category로 만드는 것 또한 보일 수 있다. 
 
 특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
+
+## Character function
 
 <div class="definition" markdown="1">
 
@@ -287,15 +289,10 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 </div>
 
-<div class="example" markdown="1">
+## Compact Lie group
 
-<ins id="ex">**예시 **</ins> 
+이제 우리는 지금까지의 결과를 Lie group으로 옮길 수 있다는 것을 설명한다. 이는 간단한데, 
 
-</div>
-
-
-
-## Draft
 
 ## Compact Lie Group의 표현
 
