@@ -25,7 +25,7 @@ weight: 1
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 finite group $G$에 대하여, $G$의 *representation<sub>표현</sub>*은 벡터공간 $V$와, group action의 조건을 만족하는 함수
+<ins id="def1">**정의 1**</ins> 임의의 finite group $G$에 대하여, $G$의 *representation<sub>표현</sub>*은 유한차원 벡터공간 $V$와, group action의 조건을 만족하는 함수
 
 $$\rho: G\times V \rightarrow V$$
 
@@ -33,7 +33,7 @@ $$\rho: G\times V \rightarrow V$$
 
 </div>
 
-일반적으로 ground field $\mathbb{K}$는 임의의 ring $A$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $\mathbb{K}=\mathbb{C}$로 두어도 충분하므로 이렇게 고정하기로 한다. 또, 우리는 주로 *유한차원* 벡터공간 $V$를 representation space로 갖는 경우를 생각한다.
+일반적으로 ground field $\mathbb{K}$는 임의의 ring $A$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $\mathbb{K}=\mathbb{C}$로 두어도 충분하므로 이렇게 고정하기로 한다. 또, 우리는 주로 *유한차원* 벡터공간 $V$를 representation space로 갖는 경우를 생각하고 있음을 기억하자. 이 또한 무한차원 벡터공간으로 일반화할 수 있지만, 이를 위해서는 $V$에 topological vector space 구조를 주는 등의 표준적인 방법들이 필요하다. 
 
 위의 정의는 간략하게 $G\rightarrow\Aut(V)$가 주어진 것으로 생각할 수 있다. 우리는 약간의 abuse of notation을 통해 $\rho(g,-): V\rightarrow V$를 간단히 $\rho(g)\in \Aut(V)$로 쓰기도 하고, 더욱 표기를 생략하여 $\rho(g)v$ 대신 $g\cdot v$와 같이 쓰기도 한다. 이 표기에서 알 수 있듯, 우리는 $V$를 $G$-module처럼 생각하며, 이러한 관점에서 (스칼라곱은 암묵적으로 주어졌다고 하고) $V$를 $G$의 representation이라 간단히 말하기도 한다. 
 
@@ -70,11 +70,12 @@ $$L(g\cdot v)=g\cdot L(v)\qquad\text{for all $g\in G$ and $v\in V$}$$
 3. $\Hom_\mathbb{C}(V,W)$; $G$-action $(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)$
 4. 3번에서 $W=\mathbb{C}$로 두어 얻어지는 *dual representation* $V^\ast$
 5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation* $\overline{V}$ (동일한 $G$-action)
-6. 그 외 .
 
 </div>
 
-이러한 construction들을 체계적으로 다루기 위해서는 group algebra의 언어가 유용하다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 이를 간단히 리뷰하자면 집합으로서 $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임이었다. 각각의 $x\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
+## Category $\lMod{\mathbb{C}[G]}$
+
+위의 [정의 3]에서 tensor product와 $\Hom$의 경우 다소 그 정의가 인위적으로 보일 수 있는데, 이를 탐구하기 위해서는  group algebra의 언어가 유용하다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 이를 간단히 리뷰하자면, 집합으로서 $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임이었다. 각각의 $x\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 
@@ -116,7 +117,7 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 </div>
 
-약간의 abuse of language를 통해 우리는 $\mathbb{C}[G]$-module을 간단히 $G$-module이라 부르기도 한다. 근본적으로 임의의 $x\in G$가 임의의 $v\in V$를 어디로 옮기는지만 알면 위의 식을 통해 $\mathbb{C}[G]$-action이 결정된다는 점에서 이 명칭은 상당히 적절하다고 할 수 있다. 
+즉 우리가  $G$-module이라 부르던 것은, 엄밀히 말하자면 $\mathbb{C}[G]$-module 구조에서 $G\hookrightarrow \mathbb{C}[G]$가 주어졌을 때의 action만 본 것이라 생각할 수도 있다. 
 
 실제로 위에서 논의한 대부분의 것들이 이 categorical equivalence로 설명될 수 있다. 가령 임의의 $G$-representation $V$에 대하여, $V$의 subrepresentation은 $V$의 $G$-submodule (정확히는 $\mathbb{C}[G]$-submodule)이다. 또, [정의 3](#def3)의 tensor product도 납득할만한데, 일반적으로 coproduct $\Delta:A\rightarrow A\otimes A$가 주어진 $\mathbb{K}$-algebra $A$와 두 $A$-module $M,N$에 대하여 이들의 텐서곱을 정의하기 위해서는 $\Delta$를 활용하여 
 
@@ -126,6 +127,10 @@ $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (
 
 $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
-이기 때문이다. 그럼 마찬가지로 [정의 3](#def3)에서 정의한 $\Hom$이 이 $\otimes$와 adjunction 관계에 있고, 따라서 $\Rep_G(\mathbb{C})$를 closed monoidal category로 만드는 것 또한 보일 수 있다. 
+이기 때문이다. 그럼 마찬가지로 [정의 3](#def3)에서 정의한 $\Hom$이 이 $\otimes$와 adjunction 관계에 있고, 이러한 이유로 다소 인위적으로 보이는 [정의 3](#def3)의 $G$-action들이 등장하는 것이다. 
 
 특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
+
+## 마슈케의 정리
+
+이제 우리는 유한군의 표현에 필요한 기본적인 개념들은 대충 살펴보았다. 본격적인 
