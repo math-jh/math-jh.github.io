@@ -17,6 +17,8 @@ weight: 2
 
 ---
 
+그냥 이 부분은 풀톤 갖고 따로--
+
 일반적으로 그 구조가 복잡한 수학적인 대상을 다룰 때 좋은 전략 중 하나는 이 대상이 다른 단순한 대상 위에 어떻게 작용하는지를 보는 것이다. Lie group의 경우 이러한 철학은 더 각별한데, Lie group의 대표적인 예시인 $\GL(n;\mathbb{R})$이나 $\Diff(M)$ 등을 생각하면 이들은 그 본질부터가 다른 대상 위에 act하는 것이기 때문이다. 이번 글에서 우리는 Lie group의 finite-dimensional representation을 살펴본다.
 
 {% comment %}
