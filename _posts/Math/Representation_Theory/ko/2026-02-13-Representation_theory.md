@@ -39,7 +39,7 @@ $$\rho: G\times V \rightarrow V$$
 
 고정된 (finite) group $G$와 $G$의 두 representation 사이의 morphism은 $G$-equivariant map들, 즉 다음의 diagram
 
-![G-equivariant_maps](/assets/images/Math/Lie_Theory/Representations-1.png){:style="width:10em" class="invert" .align-center}
+![G-equivariant_maps](/assets/images/Math/Representation_Theory/Representations_of_finite_groups-1.png){:style="width:10em" class="invert" .align-center}
 
 으로 주어진다. 이들의 합성이 잘 행동하는 것은 자명하므로, 고정된 group $G$에 대하여 $G$의 representation들의 category $\Rep_\mathbb{C}(G)$가 존재한다. 
 
