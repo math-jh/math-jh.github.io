@@ -269,7 +269,7 @@ Class function들의 공간은 inner product
 
 $$\langle f,g\rangle_G:=\frac{1}{\lvert G\rvert}\sum_{x\in G}f(x)\overline{g(x)}$$
 
-를 갖는다. 이제 $V,W$가 irreducible $G$-module이라 하자. 임의의 $f\in\Hom_\mathbb{C}(V,W)$에 대하여,
+를 갖는다. 이는 단순히 이제 $V,W$가 irreducible $G$-module이라 하자. 임의의 $f\in\Hom_\mathbb{C}(V,W)$에 대하여,
 
 $$p_f:=\frac{1}{|G|}\sum_{g\in G}\rho_W(g)\circ f\circ\rho_V(g^{-1})$$
 
@@ -307,17 +307,25 @@ $$\langle\chi_\rho,\chi_{\rho'}\rangle_G=\delta_{\rho\rho'}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> $S_3$은 $|G|=6$인 대칭군으로, 3개의 conjugacy class를 가지므로 3개의 기약표현을 갖는다.
+<ins id="ex15">**예시 15**</ins> 우리는 $S_3$에 대하여 지금까지의 논의를 적용해본다. $S_3$은 세 개의 conjugacy class를 가지며, 이들은 각각 다음의 원소들
 
-**Permutation representation.** $\mathbb{C}^3$에 $S_3$이 자연스럽게 작용한다:
-$$\sigma \cdot (x_1,x_2,x_3) = (x_{\sigma(1)}, x_{\sigma(2)}, x_{\sigma(3)})$$
-이 표현의 character는 $\chi_{\text{perm}}(g) = \#\{i \mid \sigma(i)=i\}$이다.
+$$e,\quad (1,2),\quad (1,2,3)$$
 
-**직합 분해.** $(1,1,1)$ 방향은 trivial representation $V_0$이다. 이에 수직인 2차원 부분공간을 $V_2$라 하면
-$$\mathbb{C}^3 \cong V_0 \oplus V_2$$
-가 성립한다. 따라서 $\chi_{V_2} = \chi_{\text{perm}} - \chi_{V_0}$이다.
+로 대표된다. 그럼 위의 계산으로부터 이들은 각각 $1$차원, $1$차원, $2$차원이 되고, $1^2+1^2+2^2=6$이므로 우리가 놓친 것이 없는 것을 안다. 
 
-**부호표현.** 순열의 부호 $\sgn: S_3 \to \{\pm 1\}$는 1차원 representation $V_1$을 정의한다.
+구체적으로 $e$의 conjugacy class에 해당하는 trivial representation은 
+
+$$\rho_1:S_3\rightarrow \Aut(\mathbb{C});\qquad \sigma\mapsto \id_\mathbb{C}$$
+
+이며, $(1,2)$의 conjugacy class에 해당하는 representation은
+
+$$\rho_2:S_3 \rightarrow \Aut(\mathbb{C});\qquad \sigma\mapsto \sgn(\sigma)\in\Aut(\mathbb{C})$$
+
+이다. 마지막으로 $(1,2,3)$의 conjugacy class에 해당하는 representation은
+
+$$\rho_3: S_3\rightarrow \Aut(\mathbb{C}^3);\qquad \sigma\mapsto \left((x_1,x_2,x_3)\mapsto (x_{\sigma(1)},x_{\sigma(2)},x_{\sigma(3)})$$
+
+에서, 이 representation이 $x_1+x_2+x_3=0$ 평면에 대해서는 invariant이므로 그 orthogonal complement를 택하면 2차원의 representation을 얻는다. 
 
 $V_2$의 기저 $\{e_1-e_2, e_2-e_3\}$에 대해:
 $$\rho_2((12))=\begin{pmatrix}0&1\\1&0\end{pmatrix}, \quad \rho_2((123))=\begin{pmatrix}0&-1\\1&-1\end{pmatrix}$$
@@ -327,8 +335,6 @@ $$\rho_2((12))=\begin{pmatrix}0&1\\1&0\end{pmatrix}, \quad \rho_2((123))=\begin{
 | $\{e\}$ | 1 | 1 | 1 | 2 |
 | $\{3\text{-cycles}\}$ | 2 | 1 | 1 | -1 |
 | $\{2\text{-cycles}\}$ | 3 | 1 | -1 | 0 |
-
-직교관계 $\langle \chi_i, \chi_i \rangle = 1$을 확인하면 위 값들이 유일함을 알 수 있다.
 
 </div>
 
