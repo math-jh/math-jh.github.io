@@ -1,0 +1,297 @@
+\documentclass[convert={density=1024}]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{../.preamble/quiver}
+\usepackage{../.preamble/Operators}
+\begin{document}
+
+%% Adjointness-2 (Change_of_base_ring-4.png)
+\begin{tikzcd}
+	{\phi^\ast B\otimes_A M} & {\phi^\ast B\otimes_A\phi^\ast N} & {\phi^\ast(B\otimes_BN)} & {\phi^\ast N}
+	\arrow["{\id_{\phi^\ast B}\otimes_Au}", from=1-1, to=1-2]
+	\arrow["\Phi", from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+\end{tikzcd}
+
+
+
+\end{document}
+
+%% Associativity (Algebraic_structures-1.png)
+\begin{tikzcd}
+	{A\times A\times A} & {A\times A} \\
+	{A\times A} & A
+	\arrow["{\id_A\times\star}", from=1-1, to=1-2]
+	\arrow["{\star\times\id_A}"', from=1-1, to=2-1]
+	\arrow["\star", from=1-2, to=2-2]
+	\arrow["\star"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% commutativity (Algebraic_structures-2.png)
+\begin{tikzcd}
+	{A\times A} && {A\times A} \\
+	& A
+	\arrow["\sigma", from=1-1, to=1-3]
+	\arrow["\star"', from=1-1, to=2-2]
+	\arrow["\star", from=1-3, to=2-2]
+\end{tikzcd}
+
+%% identity (Groups-1.png)
+\begin{tikzcd}
+	{\ast\times A} & A & {A\times\ast} \\
+	{A\times A} & A & {A\times A}
+	\arrow["{\pr_2}", from=1-1, to=1-2]
+	\arrow["{e\times \id_A}"', from=1-1, to=2-1]
+	\arrow["{\id_A}"{description}, from=1-2, to=2-2]
+	\arrow["{\pr_1}"', from=1-3, to=1-2]
+	\arrow["{\id_A\times e}", from=1-3, to=2-3]
+	\arrow["\star"', from=2-1, to=2-2]
+	\arrow["\star", from=2-3, to=2-2]
+
+%% Universal property of Grothendieck group (Grothendieck_groups-1.png)
+\begin{tikzcd}
+	S & {K(S)} \\
+	& G
+	\arrow["\eta_S", from=1-1, to=1-2]
+	\arrow["{\bar{f}}", dashed, from=1-2, to=2-2]
+	\arrow["f"', from=1-1, to=2-2]
+\end{tikzcd}
+\end{tikzcd}
+
+%% inverse (Groups-2.png)
+\begin{tikzcd}
+	G & {G\times G} \\
+	{G\times G} & G%% Universal property of Grothendieck group (Grothendieck_groups-1.png)
+\begin{tikzcd}
+	S & {K(S)} \\
+	& G
+	\arrow["\eta_S", from=1-1, to=1-2]
+	\arrow["{\bar{f}}", dashed, from=1-2, to=2-2]
+	\arrow["f"', from=1-1, to=2-2]
+\end{tikzcd}
+	\arrow["{(\id_G, (-)^{-1})}", from=1-1, to=1-2]
+	\arrow["{((-)^{-1},\id_G)}"', from=1-1, to=2-1]
+	\arrow["{\id_G}"{description}, from=1-1, to=2-2]
+	\arrow["\star", from=1-2, to=2-2]
+	\arrow["\star"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% Universal property of Grothendieck group (Grothendieck_groups-1.png)
+\begin{tikzcd}
+	S & {K(S)} \\
+	& G
+	\arrow["\eta_S", from=1-1, to=1-2]
+	\arrow["{\bar{f}}", dashed, from=1-2, to=2-2]
+	\arrow["f"', from=1-1, to=2-2]
+\end{tikzcd}
+
+
+
+%% Uniqueness_2 (Grothendieck_group-3.png)
+\begin{tikzcd}
+	S & H \\
+	& {K(S)}
+	\arrow["\eta_S'", from=1-1, to=1-2]
+	\arrow["\eta_S"', from=1-1, to=2-2]
+	\arrow["{\bar{\eta}_S}", dashed, from=1-2, to=2-2]
+\end{tikzcd}
+
+%% Uniqueness_3 (Grothendieck_group-4.png)
+\begin{tikzcd}
+	S & H \\
+	& {K(S)} \\
+	& H
+	\arrow["\eta_S'", from=1-1, to=1-2]
+	\arrow["\eta_S"{description}, from=1-1, to=2-2]
+	\arrow["{\scriptscriptstyle\bar{\eta}_S}"{description}, dashed, from=1-2, to=2-2]
+	\arrow["{\scriptscriptstyle\bar{\eta}_S'}"{description}, dashed, from=2-2, to=3-2]
+	\arrow["\eta_S'"', from=1-1, to=3-2]
+	\arrow["{\mathrm{id}_H}", curve={height=-15pt}, dashed, from=1-2, to=3-2]
+\end{tikzcd}
+
+%% Universal_property (Direct_product-1.png)
+\begin{tikzcd}
+	{G_i} & {\prod G_i} & {G_j} \\
+	& H
+	\arrow["{f_i}", from=2-2, to=1-1]
+	\arrow["{f_j}"', from=2-2, to=1-3]
+	\arrow["{\mathrm{pr}_j}", from=1-2, to=1-3]
+	\arrow["{\mathrm{pr}_i}"', from=1-2, to=1-1]
+	\arrow["f"', dashed, from=2-2, to=1-2]
+\end{tikzcd}
+
+%% Uniqueness_1 (Direct_product-2.png)
+\begin{tikzcd}
+	{G_i} & G & {G_j} \\
+	& {G'}
+	\arrow["{\mathrm{pr}_i'}", from=2-2, to=1-1]
+	\arrow["{\mathrm{pr}_j'}"', from=2-2, to=1-3]
+	\arrow["{\mathrm{pr}_j}", from=1-2, to=1-3]
+	\arrow["{\mathrm{pr}_i}"', from=1-2, to=1-1]
+	\arrow["\psi"', dashed, from=2-2, to=1-2]
+\end{tikzcd}
+
+%% Uniqueness_2 (Direct_product-3.png)
+\begin{tikzcd}
+	{G_i} & {G'} & {G_j} \\
+	& G
+	\arrow["{\mathrm{pr}_i}", from=2-2, to=1-1]
+	\arrow["{\mathrm{pr}_j}"', from=2-2, to=1-3]
+	\arrow["{\mathrm{pr}_j'}", from=1-2, to=1-3]
+	\arrow["{\mathrm{pr}_i'}"', from=1-2, to=1-1]
+	\arrow["\phi"', dashed, from=2-2, to=1-2]
+\end{tikzcd}
+
+%% Uniqueness_3 (Direct_product-4.png)
+\begin{tikzcd}
+	{G_i} & G & {G_j} \\
+	& G
+	\arrow["{\mathrm{pr}_i}", from=2-2, to=1-1]
+	\arrow["{\mathrm{pr}_j}"', from=2-2, to=1-3]
+	\arrow["{\mathrm{pr}_j}", from=1-2, to=1-3]
+	\arrow["{\mathrm{pr}_i}"', from=1-2, to=1-1]
+	\arrow[dashed, from=2-2, to=1-2]
+\end{tikzcd}
+
+%% Product of map (Direct_product-5.png)
+\begin{tikzcd}
+	{G_i} & {\prod G_i} & {G_j} \\
+	{H_i} & {\prod H_i} & {H_j}
+	\arrow["{f_i}"', from=1-1, to=2-1]
+	\arrow["{f_j}", from=1-3, to=2-3]
+	\arrow["{\mathrm{pr}_j^G}", from=1-2, to=1-3]
+	\arrow["{\mathrm{pr}_i^G}"', from=1-2, to=1-1]
+	\arrow["{\mathrm{pr}_i^H}", from=2-2, to=2-1]
+	\arrow["{\mathrm{pr}_j^H}"', from=2-2, to=2-3]
+	\arrow["f", dashed, from=1-2, to=2-2]
+\end{tikzcd}
+
+%% Induced map (Direct_product-6.png)
+\begin{tikzcd}
+	& {\prod G_i} \\
+	{H_i} & {\prod H_i} & {H_j}
+	\arrow["{\mathrm{pr}_i^H}", from=2-2, to=2-1]
+	\arrow["{\mathrm{pr}_j^H}"', from=2-2, to=2-3]
+	\arrow["f", dashed, from=1-2, to=2-2]
+	\arrow["{f_i\circ\mathrm{pr}_i^G}"', from=1-2, to=2-1]
+	\arrow["{f_j\circ\mathrm{pr}_j^G}", from=1-2, to=2-3]
+\end{tikzcd}
+
+%% Product of quotients (Direct_product-7.png)
+\begin{tikzcd}
+	{G_i} & {\prod G_i} & {G_j} \\
+	{G_i/H_i} & {\prod(G_i/H_i)} & {G_j/H_j}
+	\arrow[from=1-2, to=1-1]
+	\arrow[from=1-2, to=1-3]
+	\arrow["{p_j}", from=1-3, to=2-3]
+	\arrow[dashed, from=1-2, to=2-2]
+	\arrow["{p_i}"', from=1-1, to=2-1]
+	\arrow[from=2-2, to=2-1]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}
+
+%% Product of subgroups (Direct_product-8.png)
+\begin{tikzcd}
+	{H_i} & {\prod H_i} & {H_j} \\
+	{G_i} & {\prod G_i} & {G_j}
+	\arrow["{\iota_i}"', from=1-1, to=2-1]
+	\arrow[dashed, from=1-2, to=2-2]
+	\arrow["{\iota_j}", from=1-3, to=2-3]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=1-1]
+	\arrow[from=2-2, to=2-1]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}
+
+%% Product of quotients (Direct_product-7.png)
+\begin{tikzcd}
+	{G_i} & {\prod G_i} & {G_j} \\
+	{G_i/H_i} & {\prod(G_i/H_i)} & {G_j/H_j}
+	\arrow[from=1-2, to=1-1]
+	\arrow[from=1-2, to=1-3]
+	\arrow["{p_j}", from=1-3, to=2-3]
+	\arrow[dashed, from=1-2, to=2-2]
+	\arrow["{p_i}"', from=1-1, to=2-1]
+	\arrow[from=2-2, to=2-1]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}
+
+%% Counterexample for weak direct product (Free_product-1.png)
+\begin{tikzcd}
+	{\mathbb{Z}} & {\mathbb{Z}\times\mathbb{Z}} & {\mathbb{Z}} \\
+	& G
+	\arrow["{f_1}"', from=1-1, to=2-2]
+	\arrow["f", dashed, from=1-2, to=2-2]
+	\arrow["{f_2}", from=1-3, to=2-2]
+	\arrow["{\iota_1}", from=1-1, to=1-2]
+	\arrow["{\iota_2}"', from=1-3, to=1-2]
+\end{tikzcd}
+
+
+\begin{tikzcd}
+	{A_i} & {\prod A_i} & {A_j} \\
+	& B
+	\arrow["{f_i}", from=2-2, to=1-1]
+	\arrow["{f_j}"', from=2-2, to=1-3]
+	\arrow["{\mathrm{pr}_j}", from=1-2, to=1-3]
+	\arrow["{\mathrm{pr}_i}"', from=1-2, to=1-1]
+	\arrow["f"', dashed, from=2-2, to=1-2]
+\end{tikzcd}
+
+
+
+%% left_module (Modules-1.png)
+\begin{tikzcd}
+	{A\otimes A\otimes E} & {A\otimes E} && {I\otimes E} && {A\otimes E} \\
+	{A\otimes E} & E &&& E
+	\arrow["{\id_A\otimes \rho}", from=1-1, to=1-2]
+	\arrow["{\cdot\otimes \id_E}"', from=1-1, to=2-1]
+	\arrow["\rho", from=1-2, to=2-2]
+	\arrow["{1\otimes\id_E}", from=1-4, to=1-6]
+	\arrow[from=1-4, to=2-5]
+	\arrow["\rho", from=1-6, to=2-5]
+	\arrow["\rho"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% right_module (Modules-1.png)
+\begin{tikzcd}
+	{E\otimes A\otimes A} & {E\otimes A} && {E\otimes I} && {E\otimes A} \\
+	{E\otimes A} & E &&& E
+	\arrow["{\rho\otimes \id_A}", from=1-1, to=1-2]
+	\arrow["{\id_E\otimes\cdot}"', from=1-1, to=2-1]
+	\arrow["\rho", from=1-2, to=2-2]
+	\arrow["{\id_E\otimes 1}", from=1-4, to=1-6]
+	\arrow[from=1-4, to=2-5]
+	\arrow["\rho", from=1-6, to=2-5]
+	\arrow["\rho"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%% Restriction_of_scalars (Change_of_base_ring-1.png)
+\begin{tikzcd}
+	{A\otimes N} & {B\otimes N} & N
+	\arrow["{\phi\otimes\id_N}", from=1-1, to=1-2]
+	\arrow["{\rho_N}", from=1-2, to=1-3]
+\end{tikzcd}
+
+
+%% Restrictions_of_scalars_functoriality (Change_of_base_ring-2.png)
+\begin{tikzcd}
+	{A\otimes N} & {B\otimes N} & N \\
+	{A\otimes N'} & {B\otimes N'} & {N'}
+	\arrow["{\phi\otimes\id_N}", from=1-1, to=1-2]
+	\arrow["{\id_A\otimes v}"', from=1-1, to=2-1]
+	\arrow["{\rho_N}", from=1-2, to=1-3]
+	\arrow["{\id_B\otimes v}"', from=1-2, to=2-2]
+	\arrow["v", from=1-3, to=2-3]
+	\arrow["{\phi\otimes\id_{N'}}"', from=2-1, to=2-2]
+	\arrow["{\rho_{N'}}"', from=2-2, to=2-3]
+\end{tikzcd}
+
+%% Adjointness-1 (Change_of_base_ring-3.png)
+\begin{tikzcd}
+	M & {A\otimes_AM} & {\phi^\ast B\otimes_AM} & N
+	\arrow["\cong", from=1-1, to=1-2]
+	\arrow["{\phi\otimes_A\id_M}", from=1-2, to=1-3]
+	\arrow["v", from=1-3, to=1-4]
+\end{tikzcd}
+
