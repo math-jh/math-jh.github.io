@@ -62,3 +62,7 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 3. $\chi_{V^\ast}=\overline{\chi}_V$
 
 </div>
+
+## Projection formula
+
+임의의 
