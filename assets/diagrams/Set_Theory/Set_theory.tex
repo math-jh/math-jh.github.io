@@ -1,0 +1,291 @@
+\documentclass{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{../../preamble/quiver}
+\tikzcdset{arrow style=tikz, diagrams={>={stealth}}}
+
+\begin{document}
+
+\begin{tikzcd}
+	{A_i} && {A_j} \\
+	& {\varinjlim A_i} \\
+	& B
+	\arrow["{u_i}"', curve={height=6pt}, from=1-1, to=3-2]
+	\arrow["{u_j}", curve={height=-6pt}, from=1-3, to=3-2]
+	\arrow["{f_{ij}}", from=1-1, to=1-3]
+	\arrow["{f_i}"{description}, from=1-1, to=2-2]
+	\arrow["{f_j}"{description}, from=1-3, to=2-2]
+	\arrow["u"', dashed, from=2-2, to=3-2]
+\end{tikzcd}
+
+\end{document}
+
+% Functions_1-1.png (motivation)
+\begin{tabular}{c c c c c}
+&$(0,1)$&$(0,2)$&$(0,3)$&$\cdots$\\
+& &$(1,2)$&$(1,3)$&$\cdots$\\
+&&&	$(2,3)$&$\cdots$\\
+&&&&$\ddots$
+\end{tabular}
+
+% Functions_1-2.png (commutative diagram)
+\begin{tikzcd}
+&&C\arrow[dr, "i"]\\
+A\arrow[r, "f"]&B\arrow[ur, "g"]\arrow[dr, "h"]&&E\\
+&&D\arrow[ur, "j"]
+\end{tikzcd}
+
+% Functions_1-3.png (commuting square)
+\begin{tikzcd}
+&C\arrow[dr, "i"]\\
+B\arrow[ur, "g"]\arrow[dr, "h"]&&E\\
+&D\arrow[ur, "j"]
+\end{tikzcd}
+
+% Functions_1-4.png (commuting triangle)
+\begin{tikzcd}
+A\rar["f"]&B\\
+C\arrow[ru,"h" below right]\arrow[u,"g"]
+\end{tikzcd}
+
+% Functions_1-5.png (commuting triangle)
+\begin{tikzcd}
+A\rar["f"]&B\\
+C\arrow[from=ru,"h" below right]\arrow[u,"g"]
+\end{tikzcd}
+
+% Functions_1-6.png (inverse)
+\begin{tikzcd}
+A\rar["f", bend left=10]&B\lar["g", bend left=10]
+\end{tikzcd}
+
+% Functions_2-1.png (retractions)
+\begin{tikzcd}
+	A\rar["f"]\ar[rd, "\operatorname{id}_A" below left]&B\dar["r", dashed]\\
+	&A
+\end{tikzcd}
+
+% Functions_2-2.png (sections)
+\begin{tikzcd}
+	A\rar["f"]&B\\
+	B\ar[ru, "\operatorname{id}_B" below right]\uar["s" left, dashed]
+\end{tikzcd}
+
+% Functions_2-3.png
+\begin{tikzcd}
+&C\\
+A\ar[ru, "f"]\rar["g" description]&B\uar["h" right, dashed]\\
+B\ar[u, "s", gray]\ar[ur, "\operatorname{id}_B" below right]
+\end{tikzcd}
+
+% Functions_2-4.png
+\begin{tikzcd}
+C\ar[d, "h" left, dashed]\\
+A\rar["g" description]&B\ar[from=ul, "f" above right]\dar["r", gray]\\
+&A\ar[from=ul, "\operatorname{id}_A" below left]
+\end{tikzcd}
+
+% Sum_of_sets-1.png (universal property)
+\begin{tikzcd}
+	A_i\rar["\iota_i"]\drar["f_i" below left]&\sum_{i\in I} A_i\dar["f" right, dashed]&A_j\lar["\iota_j" above]\dlar["f_j" below right]\\
+	&B
+\end{tikzcd}
+
+% Product_of_sets-1.png (map of Fun induced by maps of sets)
+\begin{tikzcd}
+A'\dar[dashed]\rar["u"]&A\dar["f"]\\
+B'&B\lar["v"]
+\end{tikzcd}
+
+% Product_of_sets-2.png (universal property)
+\begin{tikzcd}
+	A_i\ar[from=r, "\operatorname{pr}_i" above]\ar[from=dr, "f_i" below left]&\prod_{i\in I} A_i\ar[from=d, "f" right, dashed]&A_j\ar[from=l, "\operatorname{pr}_j" above]\ar[from=dl, "f_j" below right]\\
+	&B
+\end{tikzcd}
+
+% Product_of_sets-3.png (permuting index set)
+\begin{tikzcd}
+K\rar["u"]\dar["F\circ U"]&I\dar["F"]\\
+\prod_{k\in K}A_{u(k)}&\prod_{i\in I}A_i\lar["v"]
+\end{tikzcd}
+
+% Product_of_sets-4.png (partial product 1)
+\begin{tikzcd}
+	A_i\ar[from=r, "\operatorname{pr}_i" above]\ar[from=dr, "\operatorname{pr}_{ik}" below left]&\prod_{i\in I} A_i\ar[from=d, "\phi" right, dashed]&A_j\ar[from=l, "\operatorname{pr}_j" above]\ar[from=dl, "\operatorname{pr}_{jk'}" below right]\\
+	&\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)
+\end{tikzcd}
+
+% Product_of_sets-5.png (partial product 2)
+\begin{tikzcd}
+\prod_{j\in J_k}A_j&\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\lar["\operatorname{pr}_k" above]\rar["\operatorname{pr}_{l}" above]&\prod_{j\in J_l}A_j\\
+&\prod_{i\in I}A_i\uar[dashed, "\psi" right]\ar[ul, "\operatorname{pr}_{J_k}" below left]\ar[ur, "\operatorname{pr}_{J_l}" below right]
+\end{tikzcd}
+
+% Product_of_sets-6.png (partial product 3)
+\begin{tikzcd}
+\prod_{i\in I}A_i\rar["\operatorname{pr}_i" above]&A_i\\
+\prod_{i\in I}A_i\uar["\phi\circ\psi"]\urar[\operatorname{pr}_i" below right]
+\end{tikzcd}
+
+% Product_of_sets-7.png (partial product 4)
+\begin{tikzcd}
+\prod_{i\in I} A_i\rar["\operatorname{pr}_i"]&A_i\\
+\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\uar["\phi"]\urar["\operatorname{pr}_{ik}" description]\rar["\operatorname{pr}_k"]&\prod_{j\in J_k}A_j\uar["\operatorname{pr}_i" right]\\
+\prod_{i\in I}A_i\uar["\psi"]\urar["\operatorname{pr}_{J_k}" below right]
+\end{tikzcd}
+
+% Product_of_sets-8.png (composition of product function 1)
+\begin{tikzcd}
+A_i\dar["f_i" left]&\prod_{i\in I}A_i\lar\rar\dar[dashed, "\prod_{i\in I} f_i"]&A_j\dar["f_j"]\\
+B_i\dar["g_i"left ]&\prod_{i\in I}B_i\lar\rar\dar[dashed, "\prod_{i\in I} g_i"]&B_j\dar["g_j"]\\
+C_i&\prod_{i\in I}C_i\lar\rar&C_j
+\end{tikzcd}
+
+% Product_of_sets-9.png (composition of product function 2)
+\begin{tikzcd}
+A_i\dar["g_i\circ f_i" left]&\prod_{i\in I}A_i\lar\rar\dar[dashed, "\prod_{i\in I}(g_i\circ f_i)"]&A_j\dar["g_j\circ f_j"]\\
+C_i&\prod_{i\in I}C_i\lar\rar&C_j
+\end{tikzcd}
+
+% Equivalence_relations-1.png (induced injection)
+\begin{tikzcd}
+A\dar["p" left, shift right=.5]\rar["f"]&B\\
+A/R\ar[ur, "h" below right, dashed]\uar["s" right, shift right=.5, gray]
+\end{tikzcd}
+
+% Equivalence_relations-2.png (canonical decomposition)
+\begin{tikzcd}
+	A\dar["p" left, shift right=.5]\rar["\tilde{f}" description]\arrow[rr, "f", bend left=20]&f(A)\rar["j" description]&B\\
+	A/R\uar["s" right, shift right=.5, gray]\arrow[ur,"h" below right, densely dashed]
+\end{tikzcd}
+
+% Equivalence_relations-3.png (compatible)
+\begin{tikzcd}
+A\rar["f"]\dar["p" left]\arrow[rd, "q\circ f" description, gray]&B\dar["q"]\\
+A/R&B/S	
+\end{tikzcd}
+
+% Equivalence_relations-4.png (inverse)
+\begin{tikzcd}
+A\drar["p\circ f" below left, dashed]\rar["f"]&B\dar["p"]\\
+&B/S
+\end{tikzcd}
+
+% Equivalence_relations-5.png (3rd iso)
+\begin{tikzcd}
+A\dar["p_S" left]\rar["p_R"]&A/R\\
+A/S	
+\end{tikzcd}	
+
+% Equivalence_relations-6.png (3rd iso, 2)
+\begin{tikzcd}
+A/S\rar["h"]\dar["p"]&A/R\rar["\id"]&A/R\\
+(A/S)/(R/S)\arrow[ru, "k" below right]	
+\end{tikzcd}
+
+% Equivalence_relations-7.png (canonical product)
+\begin{tikzcd}
+A\times A'\rar["f\times f'"]\dar&f(A)\times f'(A')\rar&B\times B'\\
+(A\times A')/(R\times R')\ar[ur, dashed]
+\end{tikzcd}
+
+% Equivalence_relations-8.png (canonical_product_2)
+\begin{tikzcd}
+A/R\dar&(A/R)\times (A'/R')\rar\lar\dar[dashed]&A'/R'\dar\\
+f(A)&f(A)\times f'(A')\lar\rar&f'(A')
+\end{tikzcd}
+
+% Elements_in_ordered_set-1.png (Hasse_1)
+\begin{tikzcd}
+a\dar[-]\\
+b
+\end{tikzcd}
+
+% Elements_in_ordered_set-2.png (Hasse_2)
+\begin{tikzcd}[column sep=small]
+&a\ar[-, dl]\ar[-, dr]\\
+b&&c
+\end{tikzcd}
+
+% Elements_in_ordered_set-3.png (cofinal)
+\begin{tikzcd}
+\cdots\rar[-,"\leq"]&a_{-1}\rar[-,"\leq"]&a_0\rar[-,"\leq"]&a_1\rar[-,"\leq"]&\cdots
+\end{tikzcd}
+
+% Elements_in_ordered_set-4 (upper bound)
+\hspace{-1.5pt}
+\tikz[overlay]{\filldraw[fill=red!10, rounded corners] (0,-1.3)--(1.7,-1.3)--(1.7,.12)--(0,.12)--cycle;}
+\begin{tikzcd}[column sep=small, every arrow/.append style={-}]
+&a&b\\
+c\arrow[ur, shorten <=3pt]& d\arrow[ur]\arrow[u]&\\
+e\arrow[u]\arrow[ru]
+\end{tikzcd}
+\hspace{2pt}
+
+% Elements_in_ordered_set-5 
+\begin{tikzcd}
+&&A&&\\[-20pt]
+&&\vdots&&\\[-10pt]
+&&X\cup Y\cup Z&&\\[10pt]
+&X\cup Y\ar[ur, -]&&Y\cup Z\ar[ul, -]&\\
+X\ar[ur, -]&&Y\ar[ur, -]\ar[ul, -]&&Z\ar[ul, -]
+\end{tikzcd}
+
+
+
+% Limits-1.png (inverse limit)
+
+\begin{tikzcd}
+	{A_i} && {A_j} \\
+	& {\varprojlim A_i} \\
+	& B
+	\arrow["{u_i}", curve={height=-6pt}, from=3-2, to=1-1]
+	\arrow["{u_j}"', curve={height=6pt}, from=3-2, to=1-3]
+	\arrow["{f_{ij}}"', from=1-3, to=1-1]
+	\arrow["{f_i}"{description}, from=2-2, to=1-1]
+	\arrow["{f_j}"{description}, from=2-2, to=1-3]
+	\arrow["u"', dashed, from=3-2, to=2-2]
+\end{tikzcd}
+
+% Limits-2.png (inverse system of maps)
+\begin{tikzcd}
+	{B_i} & {B_j} \\
+	{A_i} & {A_j}
+	\arrow["{u_i}", from=2-1, to=1-1]
+	\arrow["{u_j}"', from=2-2, to=1-2]
+	\arrow["{g_{ij}}"', from=1-2, to=1-1]
+	\arrow["{f_{ij}}", from=2-2, to=2-1]
+\end{tikzcd}
+
+
+% Limits-3.png (mapping induced by inverse system)
+\begin{tikzcd}
+	& {\varprojlim B_i} \\
+	{B_i} && {B_j} \\
+	& {\varprojlim A_i} \\
+	{A_i} && {A_j}
+	\arrow["{u_i}", from=4-1, to=2-1]
+	\arrow["{u_j}"', from=4-3, to=2-3]
+	\arrow["{f_i}"', from=3-2, to=4-1]
+	\arrow["{f_j}", from=3-2, to=4-3]
+	\arrow["{g_i}"', from=1-2, to=2-1]
+	\arrow["{g_j}", from=1-2, to=2-3]
+	\arrow["u"{description, pos=0.2}, dashed, from=3-2, to=1-2]
+	\arrow["{g_{ij}}"' pos=.4, from=2-3, to=2-1]
+	\arrow["{f_{ij}}", from=4-3, to=4-1]
+\end{tikzcd}
+
+% Limits-4.png (universal property of direct limit)
+\begin{tikzcd}
+	{A_i} && {A_j} \\
+	& {\varinjlim A_i} \\
+	& B
+	\arrow["{u_i}"', curve={height=6pt}, from=1-1, to=3-2]
+	\arrow["{u_j}", curve={height=-6pt}, from=1-3, to=3-2]
+	\arrow["{f_{ij}}", from=1-1, to=1-3]
+	\arrow["{f_i}"{description}, from=1-1, to=2-2]
+	\arrow["{f_j}"{description}, from=1-3, to=2-2]
+	\arrow["u"', dashed, from=2-2, to=3-2]
+\end{tikzcd}
+
+
