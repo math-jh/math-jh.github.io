@@ -45,18 +45,7 @@ $$p(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot v$$
 
 
 
-이를 사용하면 다음이 성립한다. 
 
-
-앞서 우리는 categorical equivalence
-
-$$\Rep_\mathbb{C}(G)\cong \lmod{\mathbb{C}[G]}$$
-
-을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다. 따라서 $\mathbb{C}[G]$는 그 자체로 Artinian semisimple ring이 되며 ([semisimple](##ref##)) 따라서 Artin-Wedderburn 정리 ([artin-wedderburn](##ref##))에 의하여 simple module들로의 decomposition
-
-$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
-
-이 존재한다는 것을 안다. 
 
 ## 슈어 직교성
 
