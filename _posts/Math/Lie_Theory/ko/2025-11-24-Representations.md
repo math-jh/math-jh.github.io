@@ -49,51 +49,7 @@ $$p(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot v$$
 
 ## 슈어 직교성
 
-이제 우리는 decomposition (1)에 표현론적인 의미를 부여한다. 이를 위해 다음 보조정리부터 시작한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**보조정리 8 (Schur)**</ins> (Compact) group $G$와 irreducible $G$-module들 $V,W$가 주어졌다 하자. 그럼 다음이 성립한다. 
-
-1. 임의의 $G$-map $V\rightarrow W$는 zero map이거나 isomorphism이다. 
-2. 임의의 $G$-automorphism $f\in \Aut_G(V)$는 $f(v)=\lambda v$의 꼴이다. 
-3. $G$-map들의 모임 $\Hom_G(V,W)$은 $\mathbb{C}$이거나 $0$이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-1. 이는 kernel과 image를 각각 생각하면 자명하다. 
-2. 주어진 $f$는 $G$-linear map이기 이전에 $\mathbb{C}$-linear map이므로, $f$의 eigenvalue $\lambda$가 존재한다. 이제 이 eigenvalue에 대응되는 eigenspace를 $W$라 하고, 이것이 실은 $G$-submodule이 됨을 보이면 된다. 
-3. 위의 두 명제에 의해 자명하다. 
-
-</details>
-
-이를 사용하면 우리는 다음 명제를 얻는다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> 위와 같은 상황에서, 다음의 함수 
-
-$$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}\Hom_G(W,V)\otimes_\mathbb{C}W\rightarrow V$$
-
-는 isomorphism이다. 
-
-</div>
-
-이에 대한 증명은, $V$가 irreducible decomposition $V=\bigoplus V_j$을 가지므로 다음의 식
-
-$$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j) $$
-
-과 [보조정리 8](#lem8)에 의해 자명하다. 즉 복잡하게 써 두기는 했지만, 위의 $d$는 각각의 irreducible $G$-module $W$(의 isomorphism class)들이 $V$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> 위의 함수에 의한 $W\in\Irr(G, \mathbb{C})$의 image를 $V$의 *$W$-isotypical summand*라 부르고, $\Hom_G(W, V)$를 $W$의 *multiplicity*라 부른다. 
-
-</div>
-
-약간의 믿음을 가지면 이러한 표현이 유일하다는 것도 납득할 수 있다. 
 
 이제 우리는 다음을 정의한다. 
 
