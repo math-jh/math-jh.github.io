@@ -136,13 +136,17 @@ $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
 특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
 
-## Schur orthogonality
+## 마슈케의 정리
 
-우리가 앞서 도입한 
+우리가 앞서 도입한 $V$의 $G$-invariant subspace
 
 $$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
 
-는 흥미로운 성질이 있는데, $G$
+는 흥미로운 성질이 있는데, 함수 $p: V \rightarrow V^G$를 다음의 식
+
+$$p(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot v$$
+
+으로 정의하면 이것이 $G$-invariant projection이 된다는 것이다. 이 함수에 대한 아이디어는 $v\in V$를 $G$ 전체에 대해 돌려가며 평균을 내는 것으로, 앞으로도 이 아이디어는 종종 접하게 될 것이다. 
 
 <div class="definition" markdown="1">
 
@@ -154,7 +158,7 @@ $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
 </div>
 
-그럼 임의의 유한차원 $G$-module $V$는 $G$-invariant inner product를 갖는다.
+그럼 임의의 유한차원 $G$-module $V$는 $G$-invariant inner product를 갖는다. 이는 위에서 언급한 아이디어를 활용하여 증명할 수 있다. 
 
 <div class="proposition" markdown="1">
  
@@ -183,13 +187,26 @@ $$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{
 <ins id="cor7">**따름정리 7 (Maschke)**</ins> Finite group $G$와 유한차원 $G$-representation $V$가 주어졌다 하고, $V$의 $G$-invariant subspace $W$를 고정하자. 그럼 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서, 귀납적으로, 임의의 유한차원 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
 
 </div>
-
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
 $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant subspace이며 $V = W \oplus W'$가 성립한다.
 
 </details>
+
+앞서 우리는 categorical equivalence
+
+$$\Rep_\mathbb{C}(G)\cong \lmod{\mathbb{C}[G]}$$
+
+을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다. 그런데 
+
+Artin-Wedderburn thy
+
+
+
+
+
+## 슈어 직교성
 
 이제 우리는 irreducible decomposition이 어떻게 생겼는지를 보인다. 물론 본질적으로 irreducible decomposition으로 나타낸 후, 이들 중 겹치는 것 만큼을 multiplicity라 부르면 되겠지만 ([정의 10](#def10)) 다음 보조정리를 소개하기 위해 약간 먼 길을 돌아가기로 한다. 
 
