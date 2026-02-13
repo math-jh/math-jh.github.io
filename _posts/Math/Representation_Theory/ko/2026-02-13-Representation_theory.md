@@ -35,24 +35,17 @@ $$\rho: G\times V \rightarrow V$$
 
 일반적으로 ground field $\mathbb{K}$는 임의의 ring $A$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $\mathbb{K}=\mathbb{C}$로 두어도 충분하므로 이렇게 고정하기로 한다. 또, 우리는 주로 *유한차원* 벡터공간 $V$를 representation space로 갖는 경우를 생각한다.
 
-위의 정의는 간략하게 $G\rightarrow\Aut(V)$가 주어진 것으로 생각할 수 있다. 우리는 $\rho(g,-): V\rightarrow V$
+위의 정의는 간략하게 $G\rightarrow\Aut(V)$가 주어진 것으로 생각할 수 있다. 우리는 약간의 abuse of notation을 통해 $\rho(g,-): V\rightarrow V$를 간단히 $\rho(g)\in \Aut(V)$로 쓰기도 하고, 더욱 표기를 생략하여 $\rho(g)v$ 대신 $g\cdot v$와 같이 쓰기도 한다. 이 표기에서 알 수 있듯, 우리는 $V$를 $G$-module처럼 생각하며, 이러한 관점에서 (스칼라곱은 암묵적으로 주어졌다고 하고) $V$를 $G$의 representation이라 간단히 말하기도 한다. 
 
-
-
-우리는 주로 표기 $\rho(g,v)$ 대신 $g\cdot v$와 같은 표현을 쓰기도 하고, 
-
-혹은, 더 간략하게 group homomorphism $G\rightarrow \Aut(V)$가 주어진 것으로 생각할 수도 있다. 우리는 편의를 위해 함수 $\rho$가 문맥에 따라 명확하다면 $V$를 $G$의 representation이라 부르기도 한다. 
-
-
-
-
-
-
-고정된 (finite) group $G$와 $G$의 두 representation 사이의 morphism은 $G$-equivariant map들, 즉 다음의 diagram
+Finite group $G$를 고정하고, 두 representation $V,W$가 주어졌다 하자. 그럼 $V$에서 $W$의 *morphism*은 다음의 diagram
 
 ![G-equivariant_maps](/assets/images/Math/Representation_Theory/Representations_of_finite_groups-1.png){:style="width:10em" class="invert" .align-center}
 
-으로 주어진다. 이들의 합성이 잘 행동하는 것은 자명하므로, 고정된 group $G$에 대하여 $G$의 representation들의 category $\Rep_\mathbb{C}(G)$가 존재한다. 
+으로 주어진다. 이는, 식으로 표현하면, 간단히
+
+$$L(g\cdot v)=g\cdot L(v)\qquad\text{for all $g\in G$ and $v\in V$}$$
+
+으로 적을 수 있다. 
 
 한편 $V$에 적용되는 선형대수학의 언어를 차용하면 다음을 정의할 수 있다. 
 
@@ -66,24 +59,18 @@ $$\rho: G\times V \rightarrow V$$
 
 </div>
 
-임의의 representation $G\rightarrow \Aut(V)$가 주어졌을 때, 우리는 $G$-fixed point들의 집합
-
-$$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
-
-이 $G$-invariant subspace임을 안다. 따라서 representation $G\rightarrow \Aut(V)$이 irreducible representation이기 위해서는 $V^G=V$이거나 $V^G=\\{0\\}$이어야 한다. 그런데 $V^G=V$이라면, $V$의 임의의 subspace가 $G$-invariant일 것이므로 $G\rightarrow \Aut(V)$가 irreducible representation이기 위해서는 $V^G=\\{0\\}$이거나 $V$가 $1$차원이어야 한다. 
-
-이 $G$-fixed point set $V^G$은 주어진 $G$-representation $V$로부터 새로운 $G$-representation을 얻어내는 하나의 방법이다. 이 외에도 주어진 $G$-representation들로부터 새로운 $G$-representation을 구성하는 방법들이 여럿 존재한다. 가령 선형대수의 각종 construction들을 생각하고, 그 위에 $G$-action을 정의해주면 다음을 얻는다. 
+이와 마찬가지 관점에서 우리는 임의의 representation $V,W$에 대하여, 이들의 벡터공간에서의 연산을 이용하여 $V\oplus W$, $V\otimes W$ 등을 정의할 수 있다. 다음 정의에서 다소 주의할 것은, 위의 [정의 2](#def2)와는 다르게 $V\otimes W$ 등에서는 <em_ko>자연스러운</em_ko> $G$-action이 존재하지 않을 수도 있다는 것으로, 우리는 이 때문에 각 벡터공간 위에 $G$-action을 명시적으로 정의해준다. 
 
 <div class="definition" markdown="1">
 
 <ins id="def3">**정의 3**</ins> $G$-representation $V, W$에 대하여, 다음의 $G$-action을 통해 새로운 $G$-representation들을 정의한다.
 
 1. Direct sum $V\oplus W$; $G$-action $g\cdot(v,w)=(g\cdot v,g\cdot w)$
-2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$
+2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$, 그리고 이로부터 얻어지는 exterior power $\bigwedge^k V$, symmetric power $\operatorname{Sym}^k V$와 그 위의 $G$-action들
 3. $\Hom_\mathbb{C}(V,W)$; $G$-action $(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)$
 4. 3번에서 $W=\mathbb{C}$로 두어 얻어지는 *dual representation* $V^\ast$
-5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation* $\overline{V}$
-6. 그 외 exterior power $\bigwedge^k V$, symmetric power $\operatorname{Sym}^k V$ 등에도 자연스럽게 정의되는 $G$-action들.
+5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation* $\overline{V}$ (동일한 $G$-action)
+6. 그 외 .
 
 </div>
 
