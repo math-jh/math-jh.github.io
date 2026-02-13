@@ -136,7 +136,13 @@ $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
 특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
 
-## Character function
+## Schur orthogonality
+
+우리가 앞서 도입한 
+
+$$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
+
+는 흥미로운 성질이 있는데, $G$
 
 <div class="definition" markdown="1">
 
