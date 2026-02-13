@@ -3,7 +3,7 @@
 title: ""
 excerpt: ""
 
-categories: [Math / Representation THeory]
+categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/representation_theory
 header:
     overlay_image: /assets/images/Math/Representation_THeory/Representation_theory.png
