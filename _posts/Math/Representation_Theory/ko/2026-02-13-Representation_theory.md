@@ -157,7 +157,7 @@ $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
 <div class="proposition" markdown="1">
  
-<ins id="prop6">**명제 6**</ins> 임의의 유한차원 벡터공간 $V$와 representation $G\times V\rightarrow V$에 대하여, $V$ 위에 정의된 $G$-invariant inner product가 존재한다. 
+<ins id="prop6">**명제 6**</ins> 임의의 representation $V$는 $G$-invariant inner product를 갖는다. 즉 임의의 representation은 unitary representation이다. 
  
 </div>
 <details class="proof" markdown="1">
@@ -175,11 +175,11 @@ $$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{
 
 </details>
 
-이번 섹션의 핵심적인 정리는 위의 명제로부터 따라나온다. 
+다소 주의할 것 중 하나는, 우리는 정의에 $V$가 유한차원임을 포함하고 있기 때문에 위와 같은 논증이 가능하다는 것이다. 어쨌든 이번 섹션의 핵심적인 정리는 위의 명제로부터 따라나온다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="cor7">**따름정리 7 (Maschke)**</ins> Finite group $G$와 유한차원 $G$-representation $V$가 주어졌다 하고, $V$의 $G$-invariant subspace $W$를 고정하자. 그럼 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서, 귀납적으로, 임의의 유한차원 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
+<ins id="cor7">**따름정리 7 (Maschke)**</ins> 임의의 유한차원 $G$-representation $V$와 $G$-invariant subspace $W$에 대하여, 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서, 귀납적으로, 임의의 유한차원 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
 
 </div>
 <details class="proof" markdown="1">
@@ -188,9 +188,6 @@ $$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{
 $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant subspace이며 $V = W \oplus W'$가 성립한다.
 
 </details>
-
-이를 사용하면 다음이 성립한다. 
-
 
 앞서 우리는 categorical equivalence
 
