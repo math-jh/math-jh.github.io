@@ -198,17 +198,15 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 $$\Rep_\mathbb{C}(G)\cong \lmod{\mathbb{C}[G]}$$
 
-을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다. 그런데 
+을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다. 따라서 $\mathbb{C}[G]$는 그 자체로 Artinian semisimple ring이 되며 ([semisimple](##ref##)) 따라서 Artin-Wedderburn 정리 ([artin-wedderburn](##ref##))에 의하여 simple module들로의 decomposition
 
-Artin-Wedderburn thy
+$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 
-
-
-
+이 존재한다는 것을 안다. 
 
 ## 슈어 직교성
 
-이제 우리는 irreducible decomposition이 어떻게 생겼는지를 보인다. 물론 본질적으로 irreducible decomposition으로 나타낸 후, 이들 중 겹치는 것 만큼을 multiplicity라 부르면 되겠지만 ([정의 10](#def10)) 다음 보조정리를 소개하기 위해 약간 먼 길을 돌아가기로 한다. 
+이제 우리는 decomposition (1)에 표현론적인 의미를 부여한다. 이를 위해 다음 보조정리부터 시작한다. 
 
 <div class="proposition" markdown="1">
 
@@ -300,11 +298,7 @@ $$p_f:=\frac{1}{|G|}\sum_{g\in G}\rho_W(g)\circ f\circ\rho_V(g^{-1})$$
 
 $$\langle\chi_V,\chi_W\rangle_G=\delta_{VW}$$
 
-이 성립하는 것을 안다. 즉, irreducible representation의 character들은 class function들의 공간에서 orthonormal basis를 준다. 한편 우리는 Artin-Wedderburn 정리에 의하여 임의의 semisimple algebra는 matrix algebra들의 direct sum으로 나타난다는 것을 안다. 그런데 [따름정리 7](#cor7)이 정확히 $\mathbb{C}[G]$가 semisimple인 것을 보여주므로, 우리는 다음 decomposition 
-
-$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{n_i}(\mathbb{C})$$
-
-을 얻는다. 여기에서 각각의 $\Mat_{n_i}(\mathbb{C})$는 simple $\mathbb{C}[G]$-module이다. 한편, 우리는 $\mathbb{C}[G]$의 center $Z(\mathbb{C}[G])$에 대하여, 위의 분해에 따르면
+이 성립하는 것을 안다. 즉, irreducible representation의 character들은 class function들의 공간에서 orthonormal basis를 준다. 여기에서 각각의 $\Mat_{n_i}(\mathbb{C})$는 simple $\mathbb{C}[G]$-module이다. 한편, 우리는 $\mathbb{C}[G]$의 center $Z(\mathbb{C}[G])$에 대하여, 위의 분해에 따르면
 
 $$Z(\mathbb{C}[G])=\mathbb{C}I_{n_1}\oplus \cdots\oplus \mathbb{C}I_{n_r}$$
 
