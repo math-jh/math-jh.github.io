@@ -65,4 +65,12 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 
 ## Projection formula
 
-임의의 
+임의의 representation $V$에 대하여, 다음의 fixed point들의 subspace
+
+$$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
+
+가 존재하며, 이 때
+
+$$p:V\rightarrow V^G;\qquad v\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot v$$
+
+이 $V$에서 $V^G$로의 $G$-invariant projection을 정의하는 것을 안다. 
