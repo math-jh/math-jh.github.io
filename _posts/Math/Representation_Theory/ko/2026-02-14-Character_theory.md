@@ -79,7 +79,7 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g
 
 ## 지표의 직교성
 
-임의의 representation $U$에 대하여, 다음의 fixed point들의 subspace
+앞선 글에서 살펴봤듯, 임의의 representation $U$에 대하여, 다음의 fixed point들의 subspace
 
 $$U^G=\{u\in U\mid g\cdot u=u\text{ for all $g\in G$}\}$$
 
@@ -87,7 +87,7 @@ $$U^G=\{u\in U\mid g\cdot u=u\text{ for all $g\in G$}\}$$
 
 $$p:U\rightarrow U^G;\qquad u\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot u$$
 
-이 $U$에서 $U$로의 $G$-invariant projection을 정의하고, 그 image는 $U^G$임을 안다. 그 정의에 의하여, $U^G$ 위에 정의된 subrepresentation은 정확히 trivial representation
+이 $U$에서 $U$로의 $G$-invariant projection을 정의하고, 그 image는 $U^G$이다. 그 정의에 의하여, $U^G$ 위에 정의된 subrepresentation은 정확히 trivial representation
 
 $$G\rightarrow \Aut(U^G);\quad g\mapsto \id_{U_G}$$
 
@@ -95,7 +95,7 @@ $$G\rightarrow \Aut(U^G);\quad g\mapsto \id_{U_G}$$
 
 $$U=U^G\oplus W$$
 
-를 얻는다.
+를 얻을 수 있다.
 
 뿐만 아니라, 우리는 $U^G$의 차원 또한 계산할 수 있다. 위의 decomposition에서 $U^G$와 $W$의 적절한 basis를 사용하여 이를 block matrix
 
@@ -125,7 +125,7 @@ $$\rchi_{\Hom_G(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
 
 을 통해 얻어지므로, 위의 식을 다시
 
-$$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\rchi_V(g)\overline{\rchi_W(g)}$$
+$$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_V(g)\overline{\rchi_W(g)}$$
 
 으로 쓸 수 있고 마지막으로 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
 
