@@ -73,4 +73,12 @@ $$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
 
 $$p:V\rightarrow V^G;\qquad v\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot v$$
 
-이 $V$에서 $V^G$로의 $G$-invariant projection을 정의하는 것을 안다. 
+이 $V$에서 $V^G$로의 $G$-invariant projection을 정의하는 것을 안다. 그 정의에 의하여, $V^G$ 위에 정의된 subrepresentation은 정확히 trivial representation
+
+$$G\rightarrow \Aut(V^G); g\mapsto \id_{V_G}$$
+
+이므로, 우리는 이로부터 representation $V$의 decomposition
+
+$$V=V^G\oplus W$$
+
+를 얻는다. 
