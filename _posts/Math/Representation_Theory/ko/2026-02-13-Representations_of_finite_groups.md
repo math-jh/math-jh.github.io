@@ -153,6 +153,12 @@ $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
 </div>
 
+만일 이러한 $G$-invariant inner product가 주어졌다면, 임의의 $g\in G$에 대하여 $\rho(g)\in \Aut(V)$는 unitary operator이다. 이를 관찰하기 위해 $G$-invariant inner product $\langle -,-\rangle$가 주어졌다 하고, 임의의 $g\in G$에 대해
+
+$$\langle v,w\rangle=\langle \rho(g) v,\rho(g) w\rangle=\langle \rho(g)^\dagger \rho(g)v,w\rangle$$
+
+이 <em_ko>모든</em_ko> $v,w\in V$에 대해 성립하기 때문이다. 
+
 그럼 임의의 유한차원 $G$-module $V$는 $G$-invariant inner product를 갖는다. 이는 위에서 언급한 아이디어를 활용하여 증명할 수 있다. 
 
 <div class="proposition" markdown="1">
@@ -175,7 +181,7 @@ $$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{
 
 </details>
 
-다소 주의할 것 중 하나는, 우리는 정의에 $V$가 유한차원임을 포함하고 있기 때문에 위와 같은 논증이 가능하다는 것이다. 어쨌든 이번 섹션의 핵심적인 정리는 위의 명제로부터 따라나온다. 
+어쨌든 이번 섹션의 핵심적인 정리는 위의 명제로부터 따라나온다. 
 
 <div class="proposition" markdown="1">
 
