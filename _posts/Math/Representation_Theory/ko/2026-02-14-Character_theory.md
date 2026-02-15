@@ -63,7 +63,7 @@ $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g
 
 </div>
 
-앞선 글에서 우리가 중요하게 생각했던 아이디어는 어떠한 값이 주어졌을 때, 이를 $G$ 전체에 대하여 평균내주어 $G$-invariant한 값을 얻어낼 수 있다는 것이었다. 가렁 우리는 다음과 같은 정의를 해줄 수 있다. 
+정의에 의해 class function들은 각 conjugacy class들 위에서의 함수값에 의해 결정되며, 따라서 벡터공간으로서 $\mathbb{C}_\class(G)$는 $G$의 conjugacy class의 개수만큼의 차원을 갖는다. 한편 앞선 글에서 우리가 중요하게 생각했던 아이디어는 어떠한 값이 주어졌을 때, 이를 $G$ 전체에 대하여 평균내주어 $G$-invariant한 값을 얻어낼 수 있다는 것이었는데, 이를 이용하면 $\mathbb{C}_\class(G)$ 위에 다음과 같은 정의를 해줄 수 있다. 
 
 <div class="definition" markdown="1">
 
@@ -75,39 +75,37 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g
 
 </div>
 
-그럼 $\langle-,-\rangle$은 $G$ 위에 정의된 class function들 위에 Hermitian inner product 구조를 준다. 
-
-
+이는 단순히 target space $\mathbb{C}$에 정의된 standard Hermitian product를 $\mathbb{C}_\class(G)$ 위에 옮겨준 것에 불과하다. 
 
 ## Projection formula
 
-임의의 representation $V$에 대하여, 다음의 fixed point들의 subspace
+임의의 representation $U$에 대하여, 다음의 fixed point들의 subspace
 
-$$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
+$$U^G=\{u\in U\mid g\cdot u=u\text{ for all $g\in G$}\}$$
 
 가 존재하며, 이 때
 
-$$p:V\rightarrow V^G;\qquad v\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot v$$
+$$p:U\rightarrow U^G;\qquad u\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot u$$
 
-이 $V$에서 $V$로의 $G$-invariant projection을 정의하고, 그 image는 $V^G$임을 안다. 그 정의에 의하여, $V^G$ 위에 정의된 subrepresentation은 정확히 trivial representation
+이 $U$에서 $U$로의 $G$-invariant projection을 정의하고, 그 image는 $U^G$임을 안다. 그 정의에 의하여, $U^G$ 위에 정의된 subrepresentation은 정확히 trivial representation
 
-$$G\rightarrow \Aut(V^G);\quad g\mapsto \id_{V_G}$$
+$$G\rightarrow \Aut(U^G);\quad g\mapsto \id_{U_G}$$
 
-이므로, 우리는 이로부터 representation $V$의 decomposition
+이므로, 우리는 이로부터 representation $U$를 trivial representation $U^G$와 그렇지 않은 부분 $W$로 분해하여
 
-$$V=V^G\oplus W$$
+$$U=U^G\oplus W$$
 
 를 얻는다.
 
-뿐만 아니라, 우리는 $V^G$의 차원 또한 계산할 수 있다. 위의 decomposition에서 $V^G$와 $W$의 적절한 basis를 사용하여 이를 block matrix
+뿐만 아니라, 우리는 $U^G$의 차원 또한 계산할 수 있다. 위의 decomposition에서 $U^G$와 $W$의 적절한 basis를 사용하여 이를 block matrix
 
-$$\begin{pmatrix}\id_{V^G}&0\\0&0\end{pmatrix}$$
+$$\begin{pmatrix}\id_{U^G}&0\\0&0\end{pmatrix}$$
 
-의 꼴로 나타낼 수 있으므로 $\varphi: V\rightarrow V$의 trace는 $\dim V^G$와 같다. 이제 정의에 의하여,
+의 꼴로 나타낼 수 있으므로 $\varphi: U\rightarrow U$의 trace는 $\dim U^G$와 같다. 이제 정의에 의하여,
 
-$$\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi(g)\tag{1}$$
+$$\dim U^G=\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi(g)\tag{1}$$
 
-이므로 이 부분에 해당하는 차원까지 계산해줄 수 있다. 
+이다. 
 
 더 일반적으로, 우리는 [§유한군의 표현론, ⁋정의 3](/ko/math/representation_theory/representations_of_finite_groups#def3)에서 임의의 $G$-representation $V,W$에 대하여, 이들의 (underlying $\mathbb{C}$-벡터공간으로서의) $\Hom$-set $\Hom_\mathbb{C}(V,W)$에 $G$-action
 
@@ -117,7 +115,7 @@ $$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
 
 $$\Hom_\mathbb{C}(V,W)^G=\Hom_G(V,W)$$
 
-이 성립하며, 따라서 식 (1)을 $\Hom(V,W)\to \Hom_G(V,W)$에 적용하면
+이 성립하며, 따라서 식 (1)을 $U=\Hom(V,W)$와 그에 대응되는 trace map $\varphi$에 적용하면
 
 $$\dim \Hom_G(V,W)=\tr(\varphi)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\Hom(V,W)}(g)$$
 
