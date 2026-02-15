@@ -73,7 +73,7 @@ $$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
 
 $$p:V\rightarrow V^G;\qquad v\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot v$$
 
-이 $V$에서 $V^G$로의 $G$-invariant projection을 정의하는 것을 안다. 그 정의에 의하여, $V^G$ 위에 정의된 subrepresentation은 정확히 trivial representation
+이 $V$에서 $V$로의 $G$-invariant projection을 정의하고, 그 image는 $V^G$임을 안다. 그 정의에 의하여, $V^G$ 위에 정의된 subrepresentation은 정확히 trivial representation
 
 $$G\rightarrow \Aut(V^G);\quad g\mapsto \id_{V_G}$$
 
@@ -81,7 +81,19 @@ $$G\rightarrow \Aut(V^G);\quad g\mapsto \id_{V_G}$$
 
 $$V=V^G\oplus W$$
 
-를 얻는다. 이제 임의의 $g\in G$에 대하여 $\rho(g)=\id_{V^G}$이므로, 우리는 
+를 얻는다.
+
+뿐만 아니라, 우리는 $V^G$의 차원 또한 계산할 수 있다. 위의 decomposition에서 $V^G$와 $W$의 적절한 basis를 사용하여 이를 block matrix
+
+$$\begin{pmatrix}\id_{V^G}&0\\0&0\end{pmatrix}$$
+
+의 꼴로 나타낼 수 있으므로 $\varphi: V\rightarrow V$의 trace는 $\dim V^G$와 같다. 이제 정의에 의하여,
+
+$$\tr(\varphi)=\tr\left(\sum_{g\in G}\rho(g)\right)$$
+
+
+
+이제 임의의 $g\in G$에 대하여 $\rho(g)=\id_{V^G}$이므로, 우리는 
 
 $$\dim V^G=\tr(\id_{V^G})$$
 
