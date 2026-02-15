@@ -225,3 +225,4 @@ $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g
 
 </details>
 
+이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $\alpha$에 대하여, $\langle \alpha,\rchi_V\rangle=0$이 모든 irreducible character $\rchi_V$에 대해 성립한다면 $\alpha=0$이라는 것을 보여야 한다. 이를 위해 위의 보조정리를 따라 $\rho_\phi$를 사용하면 
