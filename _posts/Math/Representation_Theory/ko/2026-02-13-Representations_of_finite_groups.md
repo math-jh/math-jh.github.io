@@ -157,9 +157,9 @@ $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
 $$\langle v,w\rangle=\langle \rho(g) v,\rho(g) w\rangle=\langle \rho(g)^\dagger \rho(g)v,w\rangle$$
 
-이 <em_ko>모든</em_ko> $v,w\in V$에 대해 성립하기 때문이다. 
+이 <em_ko>모든</em_ko> $v,w\in V$에 대해 성립하기 때문이다.
 
-그럼 임의의 유한차원 $G$-module $V$는 $G$-invariant inner product를 갖는다. 이는 위에서 언급한 아이디어를 활용하여 증명할 수 있다. 
+한편, 유한차원 $G$-module $V$는 $G$-invariant inner product를 갖는다. 이는 위에서 언급한 아이디어를 활용하여 증명할 수 있다. 
 
 <div class="proposition" markdown="1">
  
@@ -197,7 +197,7 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 앞서 우리는 categorical equivalence
 
-$$\Rep_\mathbb{C}(G)\cong \lmod{\mathbb{C}[G]}$$
+$$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다. 따라서 $\mathbb{C}[G]$는 그 자체로 Artinian semisimple ring이 되며 ([semisimple](##ref##)) 따라서 Artin-Wedderburn 정리 ([artin-wedderburn](##ref##))에 의하여 simple module들로의 decomposition
 
