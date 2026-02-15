@@ -48,7 +48,7 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 1. $\chi_{V\oplus W}=\chi_V\oplus \chi_W$
 2. $\chi_{V\otimes W}=\chi_V\chi_W$
 3. $\chi_{V^\ast}=\overline{\chi}_V$
-4. 테스트 $\chi_{\raisebox{-.5ex}{$\scriptstyle A$}}\chi_V\chi_{\raisebox{-.5ex}{$\scriptstyle V$}}{\raisebox{.5ex}\chi}$
+4. 테스트 $\chi_{\raisebox{-.5ex}{$\scriptstyle A$}}\chi_V\chi_{\raisebox{-.5ex}{$\scriptstyle V$}}{\raisebox{.5ex}{$\chi$}}$
 
 </div>
 
