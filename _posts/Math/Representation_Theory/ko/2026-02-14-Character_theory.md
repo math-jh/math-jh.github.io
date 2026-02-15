@@ -23,9 +23,9 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $G$의 representation $\rho:G\rightarrow\Aut(V)$에 대응하는 *character<sub>지표</sub>* $\chi_\rho:G\rightarrow\mathbb{C}$를
+<ins id="def1">**정의 1**</ins> $G$의 representation $\rho:G\rightarrow\Aut(V)$에 대응하는 *character<sub>지표</sub>* $\rchi_\rho:G\rightarrow\mathbb{C}$를
 
-$$\chi_\rho(g)=\tr(\rho(g))$$
+$$\rchi_\rho(g)=\tr(\rho(g))$$
 
 으로 정의한다. 
 
@@ -33,7 +33,7 @@ $$\chi_\rho(g)=\tr(\rho(g))$$
 
 즉, 각각의 $g\in G$를 받아서 이것이 정의하는 linear map $\rho(g):V\rightarrow V$의 trace를 내 주는 것이 이 함수가 하는 일이다. 앞으로 살펴보겠지만, 이 함수는 $G$의 representation을 설명하는데 큰 역할을 한다. 가령, 당장 볼 수 있는 것은 이 함수가 $V$의 차원을 담고 있는 것이다. 
 
-$$\chi_\rho(e)=\tr(\rho(e))=\tr(\id_V)=\dim V.$$
+$$\rchi_\rho(e)=\tr(\rho(e))=\tr(\id_V)=\dim V.$$
 
 비슷하게 우리는 두 linear map 
 
@@ -45,22 +45,21 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 
 <ins id="prop2">**명제 2**</ins> Representation $V, W$에 대해 다음이 성립한다. 
 
-1. $\chi_{V\oplus W}=\chi_V\oplus \chi_W$
-2. $\chi_{V\otimes W}=\chi_V\chi_W$
-3. $\chi_{V^\ast}=\overline{\chi}_V$
-4. 테스트 $\chi_{\raisebox{-.5ex}{$\scriptstyle A$}}\chi_V\chi_{\raisebox{-.5ex}{$\scriptstyle V$}}{\raisebox{.5ex}{$\chi$}}$
+1. $\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$
+2. $\rchi_{V\otimes W}=\rchi_V\rchi_W$
+3. $\rchi_{V^\ast}=\overline{\rchi}_V$
 
 </div>
 
 한편 정의에 의하여
 
-$$\chi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\chi_\rho(g)$$
+$$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g)$$
 
-가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5)), 우리는 이로부터 $\chi_\rho$가 $G$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
+가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5)), 우리는 이로부터 $\rchi_\rho$가 $G$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 함수 $\chi:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $\chi(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. $G$ 위에 정의된 모든 class function들의 모임을 $\mathbb{C}_\class(G)$으로 적는다. 
+<ins id="def3">**정의 3**</ins> 함수 $\rchi:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $\rchi(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. $G$ 위에 정의된 모든 class function들의 모임을 $\mathbb{C}_\class(G)$으로 적는다. 
 
 </div>
 
@@ -68,9 +67,9 @@ $$\chi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\chi_\rho(g)$
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 임의의 class function들 $\chi_1,\chi_2: G\rightarrow \mathbb{C}$에 대하여, 
+<ins id="def4">**정의 4**</ins> 임의의 class function들 $\rchi_1,\rchi_2: G\rightarrow \mathbb{C}$에 대하여, 
 
-$$\langle \chi_1,\chi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \chi_1(g)\overline{\chi_2(g)}$$
+$$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g)\overline{\rchi_2(g)}$$
 
 으로 정의한다. 
 
@@ -106,7 +105,7 @@ $$\begin{pmatrix}\id_{V^G}&0\\0&0\end{pmatrix}$$
 
 의 꼴로 나타낼 수 있으므로 $\varphi: V\rightarrow V$의 trace는 $\dim V^G$와 같다. 이제 정의에 의하여,
 
-$$\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\sum_{g\in G}\chi(g)\tag{1}$$
+$$\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi(g)\tag{1}$$
 
 이므로 이 부분에 해당하는 차원까지 계산해줄 수 있다. 
 
@@ -120,15 +119,15 @@ $$\Hom_\mathbb{C}(V,W)^G=\Hom_G(V,W)$$
 
 이 성립하며, 따라서 식 (1)을 $\Hom(V,W)\to \Hom_G(V,W)$에 적용하면
 
-$$\dim \Hom_G(V,W)=\tr(\varphi)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\chi_{\Hom(V,W)}(g)$$
+$$\dim \Hom_G(V,W)=\tr(\varphi)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\Hom(V,W)}(g)$$
 
 임을 안다. 한편 $\Hom_G(V,W)=V^\ast\otimes W$임을 활용하면 우변의 character는 다음의 식
 
-$$\chi_{\Hom_G(V,W)}(g)=\overline{\chi_V(g)}\chi_W(g)$$
+$$\rchi_{\Hom_G(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
 
 을 통해 얻어지므로, 위의 식을 다시
 
-$$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\chi_V(g)\overline{\chi_W(g)}$$
+$$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\rchi_V(g)\overline{\rchi_W(g)}$$
 
 으로 쓸 수 있고 마지막으로 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
 
