@@ -224,3 +224,4 @@ $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g
 와 같기 위해서는 정확히 $\phi(g)=\phi(hgh^{-1})$, 곧 $\phi$가 class function이어야 한다. 
 
 </details>
+
