@@ -81,4 +81,8 @@ $$G\rightarrow \Aut(V^G);\quad g\mapsto \id_{V_G}$$
 
 $$V=V^G\oplus W$$
 
-를 얻는다. 한편 
+를 얻는다. 이제 임의의 $g\in G$에 대하여 $\rho(g)=\id_{V^G}$이므로, 우리는 
+
+$$\dim V^G=\tr(\id_{V^G})$$
+
+임을 안다. 한편 원래의 representation $G\rightarrow \Aut(V)$에 해당하는 character $\chi$와 
