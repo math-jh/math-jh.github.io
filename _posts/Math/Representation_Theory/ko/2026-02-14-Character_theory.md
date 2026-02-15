@@ -230,3 +230,7 @@ $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g
 $$\lambda=\frac{1}{n}\tr(\rho_\phi)=\frac{1}{n}\sum_{g\in G}\phi(g)\rchi_V(g)=\frac{\lvert G\rvert}{n}\overline{(\alpha,\rchi_{V^\ast})}=0$$
 
 으로부터 얻어진다. 
+
+## 예시
+
+우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리하기로 한다. 
