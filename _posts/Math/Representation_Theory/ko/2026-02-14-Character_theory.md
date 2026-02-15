@@ -161,6 +161,8 @@ $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-로부터 임의의 $G$-representation이 $\mathbb{C}[G]$-module임을 보았다. 이러한 관점에서 우리는 $\mathbb{C}[G]$-module $\mathbb{C}[G]$에도 관심을 가질 수 있는데, $G$에는 canonical $G$-action (즉 translation map)이 존재하므로 이를 통해 $\mathbb{C}[G]$를 $G$의 representation으로 생각할 수 있다. 더 구체적으로 우리는 임의의 $\phi\in \mathbb{C}[G]$에 대하여 
+로부터 임의의 $G$-representation이 $\mathbb{C}[G]$-module임을 보았다. 이러한 관점에서 우리는 $\mathbb{C}[G]$-module $\mathbb{C}[G]$에도 관심을 가질 수 있는데, $G$에는 canonical $G$-action (즉 translation map)이 존재하므로 이를 통해 $\mathbb{C}[G]$를 $G$의 representation으로 생각할 수 있다. 더 구체적으로 우리는 임의의 $\phi\in \mathbb{C}[G]$에 대하여, 이를 $\sum \phi_xx$와 같이 표현한다면 다음의 action
 
-$$g\cdot \phi$$
+$$g\cdot \left(\sum \phi_xx\right)=\sum \phi_x gx$$
+
+으로 정의한다. 혹은 $\phi\in \mathbb{C}[G]$를 받아 $\phi\circ L_{g^{-1}}$을 주는 것으로 생각하여도 된다. 그럼 임의의 representation $V$와 임의의 $v\in V$에 대하여, 
