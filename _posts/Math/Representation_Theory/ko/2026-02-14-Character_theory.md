@@ -197,6 +197,6 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 <ins id="prop5">**명제 5**</ins> 임의의 함수 $\phi:G\rightarrow \mathbb{C}$에 대하여, 
 
-$$$$
+$$\rho_\phi=\sum \phi(g)g$$
 
 </div>
