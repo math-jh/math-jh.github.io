@@ -157,4 +157,8 @@ $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
 ## Regular representation
 
-우리는 $\mathbb{C}[G]$ 위에 $G$
+우리는 categorical equivalence
+
+$$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
+
+로부터 임의의 $G$-representation이 $\mathbb{C}[G]$-module임을 보았다. 이러한 관점에서 우리는 $\mathbb{C}[G]$-module $\mathbb{C}[G]$에도 관심을 가질 수 있는데, $G$에는 canonical $G$-action (즉 translation map)이 존재하므로 이를 통해 $\mathbb{C}[G]$를 $G$의 representation으로 생각할 수 있다. 더 구체적으로 우리는 임의의 $\varphi$

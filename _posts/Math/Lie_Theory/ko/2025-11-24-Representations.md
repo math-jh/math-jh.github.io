@@ -53,35 +53,15 @@ $$p(v)=\frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot v$$
 
 이제 우리는 다음을 정의한다. 
 
-<div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> $G$의 representation $\rho:G\rightarrow\Aut(V)$에 대응하는 *character* $\chi_\rho:G\rightarrow\mathbb{C}$를
-
-$$\chi_\rho(g)=\tr(\rho(g))$$
-
-으로 정의한다. 
-
-</div>
 
 그 정의에 의하여 character $\chi_\rho$는 conjugacy class들 위에서 상수이다. 이러한 함수들에도 다음과 같은 이름을 붙인다. 
 
-<div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> 함수 $f:G\rightarrow\mathbb{C}$가 class function이라는 것은 $f(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. 
-
-</div>
 
 우리가 character function들과 class function들에 관심을 갖는 이유는 다음의 명제에 있다. 
 
-<div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> Finite group $G$의 representation $\rho:G\rightarrow\Aut(V)$를 고정하자. 그럼 다음이 성립한다. 
-
-1. 만일 $\rho\cong\rho'$이면 $\chi_\rho=\chi_{\rho'}$이 성립한다. 
-2. $\chi_{V\oplus W}=\chi_V+\chi_W$이 성립한다. 
-3. $\chi_{V\otimes W}=\chi_V \chi_W$이 성립한다.  
-
-</div>
 
 이에 대한 증명은 단순한 선형대수에 불과하다. 
 
