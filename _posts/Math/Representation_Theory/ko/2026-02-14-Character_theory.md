@@ -166,3 +166,5 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 $$g\cdot \left(\sum \phi_xx\right)=\sum \phi_x gx$$
 
 으로 정의한다. 혹은 $\phi\in \mathbb{C}[G]$를 받아 $\phi\circ L_{g^{-1}}$을 주는 것으로 생각하여도 된다. 그럼 임의의 representation $V$와 임의의 $v\in V$에 대하여 $V$ 위에 정의된 $G$-action이 정확히 $\mathbb{C}[G]$와 같다는 것이 [§유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4)의 결과였다. 따라서 이와 같은 $G$-action이 주어진 $\mathbb{C}[G]$를 살펴보는 것이 중요하게 된다. 
+
+앞선 도구를 사용하여 이 계산을 실행해보면, 우리는 $\mathbb{C}[G]$가 
