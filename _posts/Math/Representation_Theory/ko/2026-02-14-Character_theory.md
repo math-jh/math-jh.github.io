@@ -237,6 +237,6 @@ $$\lambda=\frac{1}{n}\tr(\rho_\phi)=\frac{1}{n}\sum_{g\in G}\phi(g)\rchi_V(g)=\f
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**</ins> 
+<ins id="ex6">**예시 6**</ins> 가장 작은 non-abelian group인 $S_3$을 생각하자. 
 
 </div>
