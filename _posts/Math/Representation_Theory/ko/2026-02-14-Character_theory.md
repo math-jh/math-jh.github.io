@@ -211,12 +211,16 @@ $$\rho_\phi(h\cdot v)=h\cdot\rho_\phi(v)$$
 
 이 성립해야 한다. 좌변을 직접 계산해보면
 
-$$\rho_\phi(hv)=\sum_{g\in G}\phi(g)\rho(g)(hv)$$
+$$\rho_\phi(h\cdot v)=\sum_{g\in G}\phi(g)\rho(g)(h\cdot v)$$
 
 이며, 이 합을 $hgh^{-1}$에 대하여 취해도 같은 합이므로
 
-$$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(hv)$$
+$$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(h\cdot v)=\sum_{g\in G}\phi(hgh^{-1})\rho(h)\rho(g)(v)=\rho(h)\left(\sum_{g\in G}\phi(hgh^{-1})\rho(g)v\right)$$
 
-로 쓸 수 있다. 그런데 
+로 쓸 수 있다. 이제 이것이
+
+$$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g)(v))$$
+
+와 같기 위해서는 정확히 $\phi(g)=\phi(hgh^{-1})$, 곧 $\phi$가 class function이어야 한다. 
 
 </details>
