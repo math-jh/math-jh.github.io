@@ -234,3 +234,9 @@ $$\lambda=\frac{1}{n}\tr(\rho_\phi)=\frac{1}{n}\sum_{g\in G}\phi(g)\rchi_V(g)=\f
 ## 예시
 
 우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리하기로 한다. 
+
+<div class="example" markdown="1">
+
+<ins id="ex6">**예시 6**</ins> 
+
+</div>
