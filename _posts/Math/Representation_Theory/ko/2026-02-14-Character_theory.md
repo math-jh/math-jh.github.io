@@ -77,9 +77,13 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g
 
 이는 단순히 target space $\mathbb{C}$에 정의된 standard Hermitian product를 $\mathbb{C}\_\class(G)$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $\rho$의 character $\rchi_\rho$에 대해서는, 임의의 $g\in G$에 대하여
 
-$$\dim V=\tr(\id_V)=\rchi_\rho(gg^{-1})=\tr(\rho(g)\rho(g^{-1}))=\tr(\rho(g)\rho(g)^\dagger)$$
+$$\rchi_\rho(g^{-1})=\tr(\rho(g^{-1}))=\tr(\rho(g)^{-1})=\tr(\rho(g)^\dagger)=\overline{\tr(\rho(g))}=\overline{\rchi_\rho(g)}$$
 
-이 성립하므로 
+이 성립하므로, 두 character $\rchi_1,\rchi_2$에 대해서는 다음 식
+
+$$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g)\overline{\rchi_2(g)}=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g^{-1})\overline{\rchi_2(g^{-1})}=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_1(g)}\rchi_2(g)=\langle \rchi_2,\rchi_1\rangle$$
+
+이 성립하는 것을 안다. 즉 character들 위로 제한했을 때 이 
 
 ## 지표의 직교성
 
