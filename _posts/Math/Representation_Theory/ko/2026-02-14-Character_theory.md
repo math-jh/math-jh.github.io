@@ -195,9 +195,9 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> 임의의 함수 $\phi:G\rightarrow \mathbb{C}$에 대하여, 
+<ins id="lem5">**보조정리 5**</ins> 임의의 함수 $\phi:G\rightarrow \mathbb{C}$와 임의의 representation $\rho:G\rightarrow\Aut(V)$이 주어졌다 하자. 
 
-$$\rho_\phi=\sum \phi(g)g: V\rightarrow V$$
+$$\rho_\phi=\sum \phi(g)\rho(g): V\rightarrow V$$
 
 으로 정의하면, $\rho_\phi$가 $G$-map인 것과 $\phi$가 class function인 것이 동치이다. 
 
@@ -205,8 +205,16 @@ $$\rho_\phi=\sum \phi(g)g: V\rightarrow V$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\rho_\phi$가 $G$-map이기 위해서는 
+$\rho_\phi$가 $G$-map이기 위해서는 임의의 $h\in G$와 임의의 $v\in V$에 대하여 다음 식
 
-$$\rho_\phi(hv)=\sum_{g\in G}\phi(g)g(hv)=\sum_{g\in G}\phi(hgh^{-1})hgh^{-1}(hv)$$
+$$\rho_\phi(h\cdot v)=h\cdot\rho_\phi(v)$$
+
+이 성립해야 한다. 좌변을 직접 계산해보면
+
+$$\rho_\phi(hv)=\sum_{g\in G}\phi(g)\rho(g)(hv)$$
+
+이며, 이 합을 $hgh^{-1}$에 대하여 취해도 같은 합이므로
+
+$$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(hv)=h\left(\sum_{g\in G}\phi(hgh^{-1}\rho(g)(v)\right)$$
 
 </details>
