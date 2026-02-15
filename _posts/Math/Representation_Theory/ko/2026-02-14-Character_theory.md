@@ -77,7 +77,9 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g
 
 이는 단순히 target space $\mathbb{C}$에 정의된 standard Hermitian product를 $\mathbb{C}\_\class(G)$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $\rho$의 character $\rchi_\rho$에 대해서는, 임의의 $g\in G$에 대하여
 
-$$\dim V=\tr(\id_V)=B\rchi_\rho(gg^{-1})=\tr(\rho(g)\rho(g^{-1}))$$
+$$\dim V=\tr(\id_V)=\rchi_\rho(gg^{-1})=\tr(\rho(g)\rho(g^{-1}))=\tr(\rho(g)\rho(g)^\dagger)$$
+
+이 성립하므로 
 
 ## 지표의 직교성
 
