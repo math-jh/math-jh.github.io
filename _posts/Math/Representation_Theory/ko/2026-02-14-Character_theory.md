@@ -191,4 +191,4 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 ## Projection formula
 
-앞서 우리는 $\mathbb{C}_\class(G)$ 안에서 
+앞서 우리는 $\mathbb{C}_\class(G)$ 안에서 irreducible representation들의 character가 
