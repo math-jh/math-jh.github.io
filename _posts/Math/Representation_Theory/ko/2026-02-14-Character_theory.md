@@ -215,6 +215,8 @@ $$\rho_\phi(hv)=\sum_{g\in G}\phi(g)\rho(g)(hv)$$
 
 이며, 이 합을 $hgh^{-1}$에 대하여 취해도 같은 합이므로
 
-$$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(hv)=h\left(\sum_{g\in G}\phi(hgh^{-1}\rho(g)(v)\right)$$
+$$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(hv)$$
+
+로 쓸 수 있다. 그런데 
 
 </details>
