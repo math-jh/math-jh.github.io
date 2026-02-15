@@ -35,6 +35,23 @@ $$\chi_\rho(g)=\tr(\rho(g))$$
 
 $$\chi_\rho(e)=\tr(\rho(e))=\tr(\id_V)=\dim V.$$
 
+비슷하게 우리는 두 linear map 
+
+$$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
+
+이 주어졌을 때 이들의 direct sum $L_V\oplus L_W: V\oplus W\rightarrow V\oplus W$, 이들의 tensor product $L_V\otimes L_W: V\otimes W \rightarrow V\otimes W$ 등이 어떻게 정의되는지 알고 있고, 이들의 trace가 어떻게 되는지 또한 (가령 행렬로 두고 계산하면) 알고 있다. 이로부터 다음의 명제를 얻는다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop2">**명제 2**</ins> Representation $V, W$에 대해 다음이 성립한다. 
+
+1. $\chi_{V\oplus W}=\chi_V\oplus \chi_W$
+2. $\chi_{V\otimes W}=\chi_V\chi_W$
+3. $\chi_{V^\ast}=\overline{\chi}_V$
+4. 테스트 $\chi_{\raisebox{-.5ex}{$\scriptstyle A$}}\chi_V\chi_{\raisebox{-.5ex}{$\scriptstyle V$}}{\raisebox{.5ex}$
+
+</div>
+
 한편 정의에 의하여
 
 $$\chi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\chi_\rho(g)$$
@@ -43,23 +60,7 @@ $$\chi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\chi_\rho(g)$
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 함수 $\chi:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $\chi(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. 
-
-</div>
-
-한편, 우리는 두 linear map 
-
-$$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
-
-이 주어졌을 때 이들의 direct sum $L_V\oplus L_W: V\oplus W\rightarrow V\oplus W$, 이들의 tensor product $L_V\otimes L_W: V\otimes W \rightarrow V\otimes W$ 등이 어떻게 정의되는지 알고 있고, 이들의 trace가 어떻게 되는지 또한 (가령 행렬로 두고 계산하면) 알고 있다. 이로부터 다음의 명제를 얻는다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> Representation $V, W$에 대해 다음이 성립한다. 
-
-1. $\chi_{V\oplus W}=\chi_V\oplus \chi_W$
-2. $\chi_{V\otimes W}=\chi_V\chi_W$
-3. $\chi_{V^\ast}=\overline{\chi}_V$
+<ins id="def3">**정의 3**</ins> 함수 $\chi:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $\chi(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. $G$ 위에 정의된 모든 class function들의 모임을 $\mathbb{C}_\class(G)$으로 적는다. 
 
 </div>
 
