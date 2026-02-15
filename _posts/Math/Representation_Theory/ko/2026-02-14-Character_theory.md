@@ -89,7 +89,7 @@ $$\begin{pmatrix}\id_{V^G}&0\\0&0\end{pmatrix}$$
 
 의 꼴로 나타낼 수 있으므로 $\varphi: V\rightarrow V$의 trace는 $\dim V^G$와 같다. 이제 정의에 의하여,
 
-$$\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\chi(g)$$
+$$\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\sum_{g\in G}\chi(g)\tag{1}$$
 
 이므로 이 부분에 해당하는 차원까지 계산해줄 수 있다. 
 
@@ -101,7 +101,13 @@ $$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
 
 $$\Hom_\mathbb{C}(V,W)^G=\Hom_G(V,W)$$
 
-이 성립하며, 또 $\Hom_G(V,W)=V^\ast\otimes W$임을 활용하면 우변의 character는 다음의 식
+이 성립하며, 따라서 식 (1)을 $\Hom(V,W)\to \Hom_G(V,W)$에 적용하면
+
+$$\dim \Hom_G(V,W)=\tr(\varphi)=\frac{1}{\lvert G\rvert}\chi_{\Hom(V,W)}(g)$$
+
+임을 안다. 
+
+또 $\Hom_G(V,W)=V^\ast\otimes W$임을 활용하면 우변의 character는 다음의 식
 
 $$\chi_{\Hom_G(V,W)}(g)=\overline{\chi_V(g)}\chi_W(g)$$
 
@@ -109,6 +115,4 @@ $$\chi_{\Hom_G(V,W)}(g)=\overline{\chi_V(g)}\chi_W(g)$$
 
 $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
-이다. 이로부터 다음의 식
-
-$$\tr(\varphi)=$$
+이다. 이로부터, 
