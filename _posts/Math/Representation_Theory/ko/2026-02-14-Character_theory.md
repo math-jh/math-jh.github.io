@@ -167,4 +167,10 @@ $$g\cdot \left(\sum \phi_xx\right)=\sum \phi_x gx$$
 
 으로 정의한다. 혹은 $\phi\in \mathbb{C}[G]$를 받아 $\phi\circ L_{g^{-1}}$을 주는 것으로 생각하여도 된다. 그럼 임의의 representation $V$와 임의의 $v\in V$에 대하여 $V$ 위에 정의된 $G$-action이 정확히 $\mathbb{C}[G]$와 같다는 것이 [§유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4)의 결과였다. 따라서 이와 같은 $G$-action이 주어진 $\mathbb{C}[G]$를 살펴보는 것이 중요하게 된다. 
 
-앞선 도구를 사용하여 이 계산을 실행해보면, 우리는 $\mathbb{C}[G]$가 
+앞선 도구를 사용하여 이 계산을 실행해보면, 우리는 $\mathbb{C}[G]$가 각각의 $G$에 해당하는 basis $g$들 (정확히는 $\delta_g$들)을 가지고 있는 것을 알고 위에서 설명한 action은 정확히 이들 basis들 위에 작용하는 것을 안다. 이제 이 basis를 통해 각각의 $\rho(g)\in\Aut(\mathbb{C}[G])$를 행렬로 표현해보면, translation map $L_{g^{-1}}$이 faithful인 것으로부터 $\rho(g)$를 행렬로 나타내었을 때 이 행렬은 오직 $g=e$일 때만 항등행렬이고, 나머지 경우에는 trace가 $0$이 되는 것을 안다. 즉,
+
+$$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
+
+이다. 이제 만일 $V_i$가 $\mathbb{C}[G]$의 irreducible subrepresentation이라면,
+
+$$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\sum$$
