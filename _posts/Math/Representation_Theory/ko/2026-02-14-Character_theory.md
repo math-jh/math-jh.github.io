@@ -109,4 +109,6 @@ $$\chi_{\Hom_G(V,W)}(g)=\overline{\chi_V(g)}\chi_W(g)$$
 
 $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
-이다. 이로부터 
+이다. 이로부터 다음의 식
+
+$$\tr(\varphi)=$$
