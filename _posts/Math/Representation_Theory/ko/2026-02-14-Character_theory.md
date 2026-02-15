@@ -189,4 +189,6 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 과 같다는 것을 확인할 수 있다. 
 
-## 
+## Projection formula
+
+이제 우리는 임의의 class function이 
