@@ -43,7 +43,7 @@ $$\chi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\chi_\rho(g)$
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 함수 $f:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $f(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. 
+<ins id="def2">**정의 2**</ins> 함수 $\chi:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $\chi(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. 
 
 </div>
 
@@ -60,6 +60,16 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 1. $\chi_{V\oplus W}=\chi_V\oplus \chi_W$
 2. $\chi_{V\otimes W}=\chi_V\chi_W$
 3. $\chi_{V^\ast}=\overline{\chi}_V$
+
+</div>
+
+앞선 글에서 우리가 중요하게 생각했던 아이디어는 어떠한 값이 주어졌을 때, 이를 $G$ 전체에 대하여 평균내주어 $G$-invariant한 값을 얻어낼 수 있다는 것이었다. 가렁 우리는 다음과 같은 정의를 해줄 수 있다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def4">**정의 4**</ins> 임의의 class function들 $\chi_1,\chi_2: G\rightarrow \mathbb{C}$에 대하여, 
+
+$$\langle \chi_1,\chi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \chi_1(g)\overline{\chi_2(g)}$$
 
 </div>
 
