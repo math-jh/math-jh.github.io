@@ -191,12 +191,22 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 ## Projection formula
 
-앞서 우리는 $\mathbb{C}_\class(G)$ 안에서 irreducible representation들의 character가 orthonormal set을 이룬다는 것을 보았다. 이제 우리는 이들이 $\mathbb{C}_\class(G)$의 orthonormal basis가 된다는 것을 보인다. 
+앞서 우리는 $\mathbb{C}\_\class(G)$ 안에서 irreducible representation들의 character가 orthonormal set을 이룬다는 것을 보았다. 이제 우리는 이들이 $\mathbb{C}\_\class(G)$의 orthonormal basis가 된다는 것을 보인다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 임의의 함수 $\phi:G\rightarrow \mathbb{C}$에 대하여, 
+<ins id="lem5">**보조정리 5**</ins> 임의의 함수 $\phi:G\rightarrow \mathbb{C}$에 대하여, 
 
-$$\rho_\phi=\sum \phi(g)g$$
+$$\rho_\phi=\sum \phi(g)g: V\rightarrow V$$
+
+으로 정의하면, $\rho_\phi$가 $G$-map인 것과 $\phi$가 class function인 것이 동치이다. 
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$\rho_\phi$가 $G$-map이기 위해서는 
+
+$$\rho_\phi(hv)=\sum_{g\in G}\phi(g)g(hv)=\sum_{g\in G}\phi(hgh^{-1})hgh^{-1}(hv)$$
+
+</details>
