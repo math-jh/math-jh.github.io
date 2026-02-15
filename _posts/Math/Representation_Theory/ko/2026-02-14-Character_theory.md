@@ -51,6 +51,16 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 
 </div>
 
+특히 첫 번째 식에 의하여, 임의의 representation은 irreducible decomposition
+
+$$V\cong V_1^{\oplus a_1}\oplus\cdots\oplus V_r^{\oplus a_r}$$
+
+을 가지므로 임의의 representation의 character는
+
+$$\rchi_V=a_1\rchi_{V_1}+\cdots+a_r\rchi_{V_r}$$
+
+로 표현할 수 있음을 안다. 
+
 한편 정의에 의하여
 
 $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g)$$
@@ -135,7 +145,7 @@ $$\rchi_{\Hom_G(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
 
 $$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_V(g)}\rchi_W(g)=\langle \rchi_W, \rchi_V\rangle$$
 
-으로 쓸 수 있고 마지막으로 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
+으로 쓸 수 있다. 한편, 마지막으로 $V,W$가 irreducible representation들이라 가정하면 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
 
 $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
@@ -143,4 +153,4 @@ $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W
 
 $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
-을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 character들은 orthonormal set이다. 
+을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 irreducible character들은 orthonormal set이다. 우리는 $\mathbb{C}_\class(G)$가 
