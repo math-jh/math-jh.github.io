@@ -153,4 +153,4 @@ $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W
 
 $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
-을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 irreducible character들은 orthonormal set이다. 우리는 $\mathbb{C}_\class(G)$가 $G$의 conjugacy class들의 개수만큼의 차원을 가지고 있는 것을 알고 있으므로, 이로부터 irreducible representation들은 $G$의 conjugacy class의 개수보다 많을 수 없다는 것을 안다. 뿐만 아니라, 이 inner product를 사용하면 우리는 임의의 representation $V$의 character $\rchi_V$와, 고정된 irreducible representation $V_i$의 character $\rchi_{V_i}$을 내적하여 $V$ 안에서 $V_i$의 multiplicity를 계산할 수 있다. 
+을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 irreducible character들은 orthonormal set이다. 우리는 $\mathbb{C}\_\class(G)$가 $G$의 conjugacy class들의 개수만큼의 차원을 가지고 있는 것을 알고 있으므로, 이로부터 irreducible representation들은 $G$의 conjugacy class의 개수보다 많을 수 없다는 것을 안다. 뿐만 아니라, 이 inner product를 사용하면 우리는 임의의 representation $V$의 character $\rchi\_V$와, 고정된 irreducible representation $V_i$의 character $\rchi_{V_i}$을 내적하여 $V$ 안에서 $V_i$의 multiplicity를 계산할 수 있다. 
