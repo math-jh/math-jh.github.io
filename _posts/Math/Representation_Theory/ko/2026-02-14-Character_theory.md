@@ -93,7 +93,15 @@ $$\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\fra
 
 이므로 이 부분에 해당하는 차원까지 계산해줄 수 있다. 
 
-더 일반적으로, 우리는 [§유한군의 표현론, ⁋정의 3](/ko/math/representation_theory/representations_of_finite_groups#def3)에서 
+더 일반적으로, 우리는 [§유한군의 표현론, ⁋정의 3](/ko/math/representation_theory/representations_of_finite_groups#def3)에서 임의의 $G$-representation $V,W$에 대하여, 이들의 (underlying $\mathbb{C}$-벡터공간으로서의) $\Hom$-set $\Hom_\mathbb{C}(V,W)$에 $G$-action
+
+$$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
+
+을 정의하였다. 그럼 다음의 식
+
+$$\Hom_\mathbb{C}(V,W)^G=\Hom_G(V,W)$$
+
+이 성립하며
 
 
 
