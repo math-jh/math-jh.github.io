@@ -71,7 +71,13 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 
 $$\langle \chi_1,\chi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \chi_1(g)\overline{\chi_2(g)}$$
 
+으로 정의한다. 
+
 </div>
+
+그럼 $\langle-,-\rangle$은 $G$ 위에 정의된 class function들 위에 Hermitian inner product 구조를 준다. 
+
+
 
 ## Projection formula
 
@@ -121,7 +127,7 @@ $$\chi_{\Hom_G(V,W)}(g)=\overline{\chi_V(g)}\chi_W(g)$$
 
 을 통해 얻어지므로, 위의 식을 다시
 
-$$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\overline{\chi_V(g)}\chi_W(g)$$
+$$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\chi_V(g)\overline{\chi_W(g)}$$
 
 으로 쓸 수 있고 마지막으로 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
 
