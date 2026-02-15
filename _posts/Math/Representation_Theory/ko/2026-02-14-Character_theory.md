@@ -183,4 +183,10 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
 
 $$\lvert G\rvert=\sum_{i=1}^r (\dim V_i)^2$$
 
-임을 안다. 
+임을 안다. 뿐만 아니라, 이 decomposition이 $\mathbb{C}[G]$ 위에 어떻게 act하는지를 보면 이것이 정확하게 Artin-Wedderburn theorem이 주는 decomposition
+
+$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
+
+과 같다는 것을 확인할 수 있다. 
+
+## 
