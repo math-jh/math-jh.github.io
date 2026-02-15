@@ -101,8 +101,12 @@ $$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
 
 $$\Hom_\mathbb{C}(V,W)^G=\Hom_G(V,W)$$
 
-이 성립하며
+이 성립하며, 또 $\Hom_G(V,W)=V^\ast\otimes W$임을 활용하면 우변의 character는 다음의 식
 
+$$\chi_{\Hom_G(V,W)}(g)=\overline{\chi_V(g)}\chi_W(g)$$
 
+을 통해 얻어진다. 그런데 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
 
-[§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 
+$$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
+
+이다. 이로부터 
