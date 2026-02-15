@@ -175,4 +175,12 @@ $$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{
 
 $$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\mathbb{C}[G]}(g)\rchi_{V_i}(g)=\frac{1}{\lvert G\rvert} \rchi_{\mathbb{C}[G]}(e)\rchi_{V_i}(e)=\dim V_i$$
 
-이 성립한다. 즉, 
+이 성립한다. 즉, 우리는 다음의 decomposition
+
+$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
+
+을 얻고, 이로부터
+
+$$\lvert G\rvert=\sum_{i=1}^r (\dim V_i)^2$$
+
+임을 안다. 
