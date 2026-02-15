@@ -191,4 +191,12 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 ## Projection formula
 
-앞서 우리는 $\mathbb{C}_\class(G)$ 안에서 irreducible representation들의 character가 
+앞서 우리는 $\mathbb{C}_\class(G)$ 안에서 irreducible representation들의 character가 orthonormal set을 이룬다는 것을 보았다. 이제 우리는 이들이 $\mathbb{C}_\class(G)$의 orthonormal basis가 된다는 것을 보인다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop5">**명제 5**</ins> 임의의 함수 $\phi:G\rightarrow \mathbb{C}$에 대하여, 
+
+$$$$
+
+</div>
