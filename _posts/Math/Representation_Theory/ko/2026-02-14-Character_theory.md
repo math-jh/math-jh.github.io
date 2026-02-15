@@ -83,7 +83,7 @@ $$\rchi_\rho(g^{-1})=\tr(\rho(g^{-1}))=\tr(\rho(g)^{-1})=\tr(\rho(g)^\dagger)=\o
 
 $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g)\overline{\rchi_2(g)}=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g^{-1})\overline{\rchi_2(g^{-1})}=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_1(g)}\rchi_2(g)=\langle \rchi_2,\rchi_1\rangle$$
 
-이 성립하는 것을 안다. 즉 character들로 제한했을 때 이 
+이 성립하는 것을 안다. 즉 character들로 제한했을 때 이 inner product는 실수값을 가진다. 
 
 ## 지표의 직교성
 
@@ -133,10 +133,14 @@ $$\rchi_{\Hom_G(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
 
 을 통해 얻어지므로, 위의 식을 다시
 
-$$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_V(g)}\rchi_W(g)=\langle \rchi_W, $$
+$$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_V(g)}\rchi_W(g)=\langle \rchi_W, \rchi_V\rangle$$
 
 으로 쓸 수 있고 마지막으로 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
 
 $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
-임을 안다. 
+이고 이로부터 다음의 식
+
+$$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
+
+을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 character들은 orthonormal set이다. 
