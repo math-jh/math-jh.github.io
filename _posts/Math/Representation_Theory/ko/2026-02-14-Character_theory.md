@@ -173,4 +173,6 @@ $$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{
 
 이다. 이제 만일 $V_i$가 $\mathbb{C}[G]$의 irreducible subrepresentation이라면,
 
-$$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\sum$$
+$$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\mathbb{C}[G]}(g)\rchi_{V_i}(g)=\frac{1}{\lvert G\rvert} \rchi_{\mathbb{C}[G]}(e)\rchi_{V_i}(e)=\dim V_i$$
+
+이 성립한다. 즉, 
