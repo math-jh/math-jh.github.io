@@ -89,12 +89,8 @@ $$\begin{pmatrix}\id_{V^G}&0\\0&0\end{pmatrix}$$
 
 의 꼴로 나타낼 수 있으므로 $\varphi: V\rightarrow V$의 trace는 $\dim V^G$와 같다. 이제 정의에 의하여,
 
-$$\tr(\varphi)=\tr\left(\sum_{g\in G}\rho(g)\right)$$
+$$\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\chi(g)$$
 
+이므로 이 부분에 해당하는 차원까지 계산해줄 수 있다. 
 
-
-이제 임의의 $g\in G$에 대하여 $\rho(g)=\id_{V^G}$이므로, 우리는 
-
-$$\dim V^G=\tr(\id_{V^G})$$
-
-임을 안다. 한편 원래의 representation $G\rightarrow \Aut(V)$에 해당하는 character $\chi$와 
+더 일반적으로, [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 
