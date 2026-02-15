@@ -103,7 +103,7 @@ $$(\delta_x\ast \delta_y)\cdot v=\delta_x\cdot(\delta_y\ast v)$$
 
 임의의 $G$-representation $\rho:G\rightarrow \Aut(V)$에 대하여, 다음의 식
 
-$$\widetilde{\rho}\left(\sum_{x\in G} a_x x, v\right)= \sum_{x\in G} a_x\rho(x)v$$
+$$\widetilde{\rho}\left(\sum_{x\in G} \phi_x x, v\right)= \sum_{x\in G} \phi_x\rho(x)v$$
 
 은 $V$ 위에 $\mathbb{C}[G]$-module 구조를 준다. 거꾸로 임의의 $\mathbb{C}[G]$-module $V$가 주어졌다 하면, 각 $x\in G$에 대하여 $x$가 $V$에 작용하는 방식을 통해 $G$-representation을 얻을 수 있다.
 
