@@ -103,16 +103,18 @@ $$\Hom_\mathbb{C}(V,W)^G=\Hom_G(V,W)$$
 
 이 성립하며, 따라서 식 (1)을 $\Hom(V,W)\to \Hom_G(V,W)$에 적용하면
 
-$$\dim \Hom_G(V,W)=\tr(\varphi)=\frac{1}{\lvert G\rvert}\chi_{\Hom(V,W)}(g)$$
+$$\dim \Hom_G(V,W)=\tr(\varphi)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\chi_{\Hom(V,W)}(g)$$
 
-임을 안다. 
-
-또 $\Hom_G(V,W)=V^\ast\otimes W$임을 활용하면 우변의 character는 다음의 식
+임을 안다. 한편 $\Hom_G(V,W)=V^\ast\otimes W$임을 활용하면 우변의 character는 다음의 식
 
 $$\chi_{\Hom_G(V,W)}(g)=\overline{\chi_V(g)}\chi_W(g)$$
 
-을 통해 얻어진다. 그런데 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
+을 통해 얻어지므로, 위의 식을 다시
+
+$$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\overline{\chi_V(g)}\chi_W(g)$$
+
+으로 쓸 수 있고 마지막으로 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
 
 $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
-이다. 이로부터, 
+임을 안다. 
