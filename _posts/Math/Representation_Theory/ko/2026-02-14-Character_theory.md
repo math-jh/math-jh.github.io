@@ -265,4 +265,8 @@ $$\lvert S_3\rvert=6=1^2+1^2+2^2$$
 
 $$\{(\;)\},\qquad \{(1\;2),\,(1\;3),\,(2\;3)\},\qquad \{(1\;2\;3),\,(1\;3\;2)\}$$
 
-을 생각하자. $\rho_0$의 representation은 당연히 모든 conjugacy class 위에서 $\tr(\id_{V_0})=\dim V_0=1$이며, $\rho_\sgn$의 representation은 $\\{(1\;2),\,(1\;3),\,(2\;3)\\}$에서는 $-1$이고 나머지 둘 위에서는 $1$임을 안다. Standard representation에 대해서는 우선 permutation representation이 
+을 생각하자. $\rho_0$의 representation은 당연히 모든 conjugacy class 위에서 $\tr(\id_{V_0})=\dim V_0=1$이며, $\rho_\sgn$의 representation은 $\\{(1\;2),\,(1\;3),\,(2\;3)\\}$에서는 $-1$이고 나머지 둘 위에서는 $1$임을 안다. Standard representation에 대해서는 우선 permutation representation이 $\\{(\;)\\}$ 위에서는 $3$, $\\{(1\;2),\,(1\;3),\,(2\;3)\\}$ 위에서는 $1$, $\\{(1\;2\;3),\,(1\;3\;2)\\}$ 위에서는 $0$이며 위의 decomposition
+
+$$V_{\text{perm}}=V_0\oplus V_{\text{std}}$$
+
+에 의해 
