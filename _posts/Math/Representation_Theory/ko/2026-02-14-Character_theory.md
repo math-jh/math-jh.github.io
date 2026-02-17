@@ -163,9 +163,12 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 로부터 임의의 $G$-representation이 $\mathbb{C}[G]$-module임을 보았다. 이러한 관점에서 우리는 $\mathbb{C}[G]$-module $\mathbb{C}[G]$에도 관심을 가질 수 있는데, $G$에는 canonical $G$-action (즉 translation map)이 존재하므로 이를 통해 $\mathbb{C}[G]$를 $G$의 representation으로 생각할 수 있다. 더 구체적으로 우리는 임의의 $\phi\in \mathbb{C}[G]$에 대하여, 이를 $\sum \phi_xx$와 같이 표현한다면 다음의 action
 
-$$g\cdot \left(\sum \phi_xx\right)=\sum \phi_x gx$$
+$$g\cdot \left(\sum_{x\in G} \phi_xx\right)=\sum_{x\in G} \phi_x gx$$
 
-으로 정의한다. 혹은 $\phi\in \mathbb{C}[G]$를 받아 $\phi\circ L_{g^{-1}}$을 주는 것으로 생각하여도 된다. 그럼 임의의 representation $V$와 임의의 $v\in V$에 대하여 $V$ 위에 정의된 $G$-action이 정확히 $\mathbb{C}[G]$-module의 scalar multiplication과 같다는 것이 [§유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4)의 결과였다. 따라서 이와 같은 $G$-action이 주어진 $\mathbb{C}[G]$를 살펴보는 것이 중요하게 된다. 
+으로 정의한다. 이러한 representation을 *regular representation*이라 부르며, 구체적인 식으로는 $\phi\in \mathbb{C}[G]$를 받아 $\phi\circ L_{g^{-1}}$을 주는 것으로 생각하여도 된다. 이는 정확히 $\mathbb{C}[G]$의 곱셈을 $G$로 제한한 것이다. 
+
+
+그럼 임의의 representation $V$와 임의의 $v\in V$에 대하여 $V$ 위에 정의된 $G$-action이 정확히 $\mathbb{C}[G]$-module의 scalar multiplication과 같다는 것이 [§유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4)의 결과였다. 따라서 이와 같은 $G$-action이 주어진 $\mathbb{C}[G]$를 살펴보는 것이 중요하게 된다. 
 
 앞선 도구를 사용하여 이 계산을 실행해보면, 우리는 $\mathbb{C}[G]$가 각각의 $G$에 해당하는 basis $g$들 (정확히는 $\delta_g$들)을 가지고 있는 것을 알고 위에서 설명한 action은 정확히 이들 basis들 위에 작용하는 것을 안다. 이제 이 basis를 통해 각각의 $\rho(g)\in\Aut(\mathbb{C}[G])$를 행렬로 표현해보면, translation map $L_{g^{-1}}$이 faithful인 것으로부터 $\rho(g)$를 행렬로 나타내었을 때 이 행렬은 오직 $g=e$일 때만 항등행렬이고, 나머지 경우에는 trace가 $0$이 되는 것을 안다. 즉,
 
@@ -183,7 +186,11 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
 
 $$\lvert G\rvert=\sum_{i=1}^r (\dim V_i)^2$$
 
-임을 안다. 뿐만 아니라, 이 decomposition이 $\mathbb{C}[G]$ 위에 어떻게 act하는지를 보면 이것이 정확하게 Artin-Wedderburn theorem이 주는 decomposition
+임을 안다. 
+
+
+
+뿐만 아니라, 이 decomposition이 $\mathbb{C}[G]$ 위에 어떻게 act하는지를 보면 이것이 정확하게 Artin-Wedderburn theorem이 주는 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
