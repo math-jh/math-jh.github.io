@@ -257,4 +257,12 @@ $$V_2=\{(x_1,x_2,x_3)\mid x_1+x_2+x_3=0\}$$
 
 위에서 모든 작용이 이루어지는 것으로 볼 수 있으며 이 subrepresentation이 irreducible인 것도 확인할 수 있다. 이를 $S_3$의 *standard representation*이라 부른다. 
 
-이들 세 representation은 각각 $1,1,2$차원이므로, 
+이들 세 representation은 각각 $1,1,2$차원이고,
+
+$$\lvert S_3\rvert=6=1^2+1^2+2^2$$
+
+이므로 irreducible decomposition의 차원이 맞는 것을 확인할 수 있다. 조금 더 나아가기 위해 이들 세 irreducible representation의 character들을 계산하자. 이를 위해 $S_3$의 conjugacy class
+
+$$\{(\;)\},\qquad \{(1\;2),\,(1\;3),\,(2\;3)\},\qquad \{(1\;2\;3),\,(1\;3\;2)\}$$
+
+을 생각하자. $\rho_0$의 representation은 당연히 모든 conjugacy class 위에서 $\tr(\id_{V_0})=\dim V_0=1$이며, $\rho_\sgn$의 representation은 $\\{(1\;2),\,(1\;3),\,(2\;3)\\}$에서는 $-1$이고 나머지 둘 위에서는 $1$임을 안다. Standard representation에 대해서는 우선 permutation representation이 
