@@ -300,4 +300,8 @@ $$\rho_\perm((\;))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\p
 
 이므로 $\rchi_\perm$은 $(3,1,0)$임을 알고 이제 [명제 2](#prop2)로부터 $\rchi_\perm=\rchi_0+\rchi_\std$이므로 $\rchi_\std$이 $(2,0,-1)$임을 알 수 있다. 
 
-이렇게 구한 세 개의 character들 $\rchi_0,\rchi_\sgn,\rchi_\std$는 orthonormal임을 확인할 수 있다. 
+이렇게 구한 세 개의 character들 
+
+$$\rchi_0=(1,1,1),\qquad \rchi_\sgn,\rchi_\std$$
+
+는 orthonormal임을 확인할 수 있다. 
