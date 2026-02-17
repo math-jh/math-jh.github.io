@@ -229,7 +229,9 @@ $$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\p
 
 임을 안다. 이제 임의의 representation은 irreducible decomposition을 가지므로, $\sum \overline{\phi(g)}g$는 임의의 representation 위에서 $0$으로 작용해야 하는 것을 알고, 특히 regular representation $\mathbb{C}[G]$에서도 그러해야 한다. 그런데 regular representation에서 이 원소를 $\delta_e$에 작용시키면 그 값은
 
-$$\left(\sum\overline{\phi(g)}g\right)\cdot \delta_e=\sum_{g\in G}\overline{\phi(g)}$$
+$$\left(\sum\overline{\phi(g)}g\right)\cdot \delta_e=\sum_{g\in G}\overline{\phi(g)}g$$
+
+이고 
 
 ## 예시: $S_3$
 
