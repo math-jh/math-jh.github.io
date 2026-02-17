@@ -179,18 +179,7 @@ $$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
 
-을 얻는다. 
-
-
-고, 이로부터
-
-$$\lvert G\rvert=\sum_{i=1}^r (\dim V_i)^2$$
-
-임을 안다. 
-
-
-
-뿐만 아니라, 이 decomposition이 $\mathbb{C}[G]$ 위에 어떻게 act하는지를 보면 이것이 정확하게 Artin-Wedderburn theorem이 주는 decomposition
+을 얻는다. 뿐만 아니라, 이 decomposition이 $\mathbb{C}[G]$ 위에 어떻게 act하는지를 보면 이것이 정확하게 Artin-Wedderburn theorem이 주는 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
