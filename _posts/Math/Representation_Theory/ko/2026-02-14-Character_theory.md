@@ -231,7 +231,7 @@ $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g
 
 $$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\phi(g)}\rho(g)\right)=\sum_{g\in G}\overline{\phi(g)}\rchi_V(g)=\lvert G\rvert\langle \rchi_V,\phi\rangle=0$$
 
-임을 안다. 이제 $\mathbb{C}[G]$ 위에 $\overline{\phi}$가 regular representation으로 작용하는 경우를 생각하자. 그럼 
+임을 안다. 이제 $\mathbb{C}[G]$ 위에 $\overline{\phi}$가 regular representation으로 작용하는 경우를 생각하자. 그럼 앞선 
 
 
 으로부터 얻어진다. 
