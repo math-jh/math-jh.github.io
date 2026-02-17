@@ -221,20 +221,15 @@ $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g
 
 </details>
 
-이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $\phi$에 대하여, $\langle \phi,\rchi_V\rangle=0$이 모든 irreducible character $\rchi_V$에 대해 성립한다면 $\phi=0$이라는 것을 보여야 한다. 
+이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $\phi$에 대하여, $\langle \rchi_V,\phi\rangle=0$이 모든 irreducible character $\rchi_V$에 대해 성립한다면 $\phi=0$이라는 것을 보여야 한다. 
 
-우리는 $\phi$가 regular representation $\mathbb{C}[G]$ 위에서 $0$으로 작용한다는 것을 보인다. 그럼 특히 $\phi\ast \delta_e\in \mathbb{C}[G]$도 $0$이 되어야하며, 그럼
-
-$$(\phi\ast\delta_e)(g)=$$
-
-이를 위해 위의 보조정리를 class function $\phi$와 irreducible representation $\rho:G\rightarrow\Aut(V)$에 사용하자. $\phi$가 class function이므로 $\overline{\phi}$도 그러하고, 따라서 $\rho_{\overline{\phi}}$는 $G$-map이며 따라서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $\rho_{\overline{\phi}}$는 $\lambda\id_V$의 꼴이다. 이제 여기에 trace를 취하면
+이를 위해 위의 보조정리를 class function $\phi$와 irreducible representation $\rho:G\rightarrow\Aut(V)$에 사용하자. $\phi$가 class function이므로 $\overline{\phi}$도 그러하고, 따라서 $\rho_{\overline{\phi}}$는 $G$-map이며 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $\rho_{\overline{\phi}}$는 $\lambda\id_V$의 꼴이다. 이제 여기에 trace를 취하면
 
 $$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\phi(g)}\rho(g)\right)=\sum_{g\in G}\overline{\phi(g)}\rchi_V(g)=\lvert G\rvert\langle \rchi_V,\phi\rangle=0$$
 
-임을 안다. 이제 $\mathbb{C}[G]$의 irreducible decomposition을 생각하면, 
+임을 안다. 이제 임의의 representation은 irreducible decomposition을 가지므로, $\sum \overline{\phi(g)}g$는 임의의 representation 위에서 $0$으로 작용해야 하는 것을 알고, 특히 regular representation $\mathbb{C}[G]$에서도 그러해야 한다. 그런데 regular representation에서 이 원소를 $\delta_e$에 작용시키면 그 값은
 
-
-으로부터 얻어진다. 
+$$\left(\sum\overline{\phi(g)}g\right)\cdot \delta_e=\sum_{g\in G}\overline{\phi(g)}$$
 
 ## 예시: $S_3$
 
