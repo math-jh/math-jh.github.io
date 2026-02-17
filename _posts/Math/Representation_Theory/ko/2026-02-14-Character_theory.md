@@ -249,4 +249,12 @@ $$\rho_\sgn: S_3 \rightarrow \Aut(\mathbb{C})\qquad \sigma\mapsto \sgn(\sigma)\i
 
 이 $\sigma$의 두 irreducible representation이 되는 것은 자명하다. 한편 $S_3$은 $\mathbb{C}^3$ 위에 permutation을 통해
 
-$$$$
+$$\sigma\cdot(x_1,x_2,x_3)=(x_{\sigma(1)},x_{\sigma(2)},x_{\sigma(3)})$$
+
+으로 작용한다. 그런데 이 action은 $(1,1,1)$이 span하는 직선을 따라서는 trivial action이며, 이 직선에 직교하는 subspace
+
+$$V_2=\{(x_1,x_2,x_3)\mid x_1+x_2+x_3=0\}$$
+
+위에서 모든 작용이 이루어지는 것으로 볼 수 있으며 이 subrepresentation이 irreducible인 것도 확인할 수 있다. 이를 $S_3$의 *standard representation*이라 부른다. 
+
+이들 세 representation은 각각 $1,1,2$차원이므로, 
