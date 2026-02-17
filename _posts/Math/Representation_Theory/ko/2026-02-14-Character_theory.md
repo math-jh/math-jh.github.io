@@ -169,7 +169,7 @@ $$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in X}\delta_g(x)x\rig
 
 이제 $\mathbb{C}[G]$를 분해하기 위해 regular representation의 character theory를 생각한다. 위와 같이 $\mathbb{C}[G]$를 $g\in G$들(정확히는 $\delta_g$들)을 basis로 갖는 벡터공간으로 보고, 이를 통해 regular representation $\rho_\reg$가 주는 각각의 linear operator $\rho_\reg(g)$를 행렬로 나타내어 그 trace를 생각하면
 
-$$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
+$$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{otherwise}\end{cases}\tag{2}$$
 
 이다. 이제 만일 $V_i$가 $\mathbb{C}[G]$의 irreducible subrepresentation이라면,
 
@@ -290,10 +290,14 @@ $$\rho_\std((1\;2\;3))=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}$$
 
 이 되어 $\rchi_\std$는 $(2,0,-1)$임을 안다. 
 
-더 편리한 계산방법은 decomoposition 
+더 편리한 계산방법은 decomposition
 
-$\rho_0$의 representation은 당연히 모든 conjugacy class 위에서 $\tr(\id_{V_0})=\dim V_0=1$이며, $\rho_\sgn$의 representation은 $A_2$에서는 $-1$이고 나머지 둘 위에서는 $1$임을 안다. Standard representation에 대해서는 우선 permutation representation이 $A_0$ 위에서는 $3$, $\\{(1\;2),\,(1\;3),\,(2\;3)\\}$ 위에서는 $1$, $\\{(1\;2\;3),\,(1\;3\;2)\\}$ 위에서는 $0$이며 위의 decomposition
+$$V_\perm=V_0\oplus V_\std$$
 
-$$V_{\text{perm}}=V_0\oplus V_{\text{std}}$$
+을 이용하는 것이다. 우리는 이미 $V_0$의 character가 $(1,1,1)$임을 알고 있다. 이제 $V_\perm$의 action을 생각해보면,
 
-에 의해 
+$$\rho_\perm((\;))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2))=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2\;3))=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}$$
+
+이므로 $\rchi_\perm$은 $(3,1,0)$임을 알고 이제 [명제 2](#prop2)로부터 $\rchi_\perm=\rchi_0+\rchi_\std$이므로 $\rchi_\std$이 $(2,0,-1)$임을 알 수 있다. 
+
+이렇게 구한 세 개의 character들 $\rchi_0,\rchi_\sgn,\rchi_\std$는 orthonormal임을 확인할 수 있다. 
