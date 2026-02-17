@@ -163,14 +163,11 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 로부터 $G$의 representation이기도 하다는 것을 관찰하자. 이는 단순히 $\mathbb{C}[G]$ 위에 정의된 module 구조, 즉 $\mathbb{C}[G]$의 ring으로서의 곱셈 구조를 $G$로 제한하여 얻어지는 것으로, 명시적으로 임의의 $g\in G$의 $\mathbb{C}[G]$에서의 image $\delta_g=\sum_{x\in X}\delta_g(x)x$를 사용하면
 
-$$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in X}\delta_g(x)x\right)\left(\sum_{y\in G}\phi(y)y\right)=\sum_{z\in G}\left(\sum_{x\in G}\delta_g(x)\phi(x^{-1}z)\right)z=\sum_{z\in G}\phi(g^{-1}z)$$
+$$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in X}\delta_g(x)x\right)\left(\sum_{y\in G}\phi(y)y\right)=\sum_{z\in G}\left(\sum_{x\in G}\delta_g(x)\phi(x^{-1}z)\right)z=\sum_{z\in G}\phi(g^{-1}z)z=\sum_{z\in G}\phi(z)(gz)$$
 
-으로 쓸 수 있고, 이러한 representation을 *regular representation*이라 부른다.  구체적인 식으로는 $\phi\in \mathbb{C}[G]$를 받아 $\phi\circ L_{g^{-1}}$을 주는 것으로 생각하여도 된다. 이는 정확히 $\mathbb{C}[G]$의 곱셈을 $G$로 제한한 것이다. 
+으로 쓸 수 있고, 이러한 representation을 *regular representation*이라 부른다.
 
-
-그럼 임의의 representation $V$와 임의의 $v\in V$에 대하여 $V$ 위에 정의된 $G$-action이 정확히 $\mathbb{C}[G]$-module의 scalar multiplication과 같다는 것이 [§유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4)의 결과였다. 따라서 이와 같은 $G$-action이 주어진 $\mathbb{C}[G]$를 살펴보는 것이 중요하게 된다. 
-
-앞선 도구를 사용하여 이 계산을 실행해보면, 우리는 $\mathbb{C}[G]$가 각각의 $G$에 해당하는 basis $g$들 (정확히는 $\delta_g$들)을 가지고 있는 것을 알고 위에서 설명한 action은 정확히 이들 basis들 위에 작용하는 것을 안다. 이제 이 basis를 통해 각각의 $\rho(g)\in\Aut(\mathbb{C}[G])$를 행렬로 표현해보면, translation map $L_{g^{-1}}$이 faithful인 것으로부터 $\rho(g)$를 행렬로 나타내었을 때 이 행렬은 오직 $g=e$일 때만 항등행렬이고, 나머지 경우에는 trace가 $0$이 되는 것을 안다. 즉,
+이제 $\mathbb{C}[G]$를 분해하기 위해 regular representation의 character theory를 생각하자. 위와 같이 $\mathbb{C}[G]$를 $g\in G$들(정확히는 $\delta_g$들)을 basis로 갖는 벡터공간으로 보고 이를 통해 regular representation $\rho_\reg$가 주는 각각의 linear operator $\rho_\reg(g)$를 행렬로 나타내어 그 trace를 생각하면
 
 $$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
 
@@ -182,7 +179,10 @@ $$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
 
-을 얻고, 이로부터
+을 얻는다. 
+
+
+고, 이로부터
 
 $$\lvert G\rvert=\sum_{i=1}^r (\dim V_i)^2$$
 
