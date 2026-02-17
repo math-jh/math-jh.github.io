@@ -298,16 +298,18 @@ $$V_\perm=V_0\oplus V_\std$$
 
 $$\rho_\perm((\;))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2))=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2\;3))=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}$$
 
-이므로 $\rchi_\perm$은 $(3,1,0)$임을 알고 이제 [명제 2](#prop2)로부터 $\rchi_\perm=\rchi_0+\rchi_\std$이므로 $\rchi_\std$이 $(2,0,-1)$임을 알 수 있다. 
-
-이렇게 구한 세 개의 character들 
+이므로 $\rchi_\perm$은 $(3,1,0)$임을 알고 이제 [명제 2](#prop2)로부터 $\rchi_\perm=\rchi_0+\rchi_\std$이므로 $\rchi_\std$이 $(2,0,-1)$임을 알 수 있다. 이렇게 구한 세 개의 character들 
 
 $$\rchi_0=(1,1,1),\qquad \rchi_\sgn=(1,-1,1),\qquad \rchi_\std=(2,0,-1)$$
 
-는 orthonormal임을 확인할 수 있다. 
+는 (예상대로) orthonormal이다.
 
 우리는 regular representation의 character의 계산으로부터
 
 $$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
 
-임을 안다. (식 (2)) 이는 반드시 위의 
+임을 안다. (식 (2)) 이는 반드시 위의 세 character들의 $\mathbb{Z}^{\geq 0}$-linear combination이어야 할 것이며 실제로 
+
+$$\rchi_{\mathbb{C}[S_3]}=\rchi_0+\rchi_\sgn+2\rchi_\std$$
+
+임을 확인할 수 있다. 또한 이는 regular representation에서 각각의 irreducible factor의 multiplicity가 자기 자신의 차원과 같아야한다는 위의 논의와도 일치하는 결과이다. 
