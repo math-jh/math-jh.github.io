@@ -253,7 +253,7 @@ $$\sigma\cdot(x_1,x_2,x_3)=(x_{\sigma(1)},x_{\sigma(2)},x_{\sigma(3)})$$
 
 으로 작용한다. 그런데 이 action은 $(1,1,1)$이 span하는 직선을 따라서는 trivial action이며, 이 직선에 직교하는 subspace
 
-$$V_2=\{(x_1,x_2,x_3)\mid x_1+x_2+x_3=0\}$$
+$$V_\std=\{(x_1,x_2,x_3)\mid x_1+x_2+x_3=0\}$$
 
 위에서 모든 작용이 이루어지는 것으로 볼 수 있으며 이 subrepresentation이 irreducible인 것도 확인할 수 있다. 이를 $S_3$의 *standard representation*이라 부른다. 
 
@@ -263,9 +263,15 @@ $$\lvert S_3\rvert=6=1^2+1^2+2^2$$
 
 이므로 irreducible decomposition의 차원이 맞는 것을 확인할 수 있다. 조금 더 나아가기 위해 이들 세 irreducible representation의 character들을 계산하자. 이를 위해 $S_3$의 conjugacy class
 
-$$\{(\;)\},\qquad \{(1\;2),\,(1\;3),\,(2\;3)\},\qquad \{(1\;2\;3),\,(1\;3\;2)\}$$
+$$A_1=\{(\;)\},\qquad A_2=\{(1\;2),\,(1\;3),\,(2\;3)\},\qquad A_3=\{(1\;2\;3),\,(1\;3\;2)\}$$
 
-을 생각하자. $\rho_0$의 representation은 당연히 모든 conjugacy class 위에서 $\tr(\id_{V_0})=\dim V_0=1$이며, $\rho_\sgn$의 representation은 $\\{(1\;2),\,(1\;3),\,(2\;3)\\}$에서는 $-1$이고 나머지 둘 위에서는 $1$임을 안다. Standard representation에 대해서는 우선 permutation representation이 $\\{(\;)\\}$ 위에서는 $3$, $\\{(1\;2),\,(1\;3),\,(2\;3)\\}$ 위에서는 $1$, $\\{(1\;2\;3),\,(1\;3\;2)\\}$ 위에서는 $0$이며 위의 decomposition
+을 생각하자. 표기의 편의를 위해, character $\rchi$가 $A_1,A_2,A_3$ 위에서 값 $a_1,a_2,a_3$을 갖는다면 이를 벡터 $(a_1,a_2,a_3)$ 형태로 쓰기로 하자. 
+
+1. $\rho_0$은 $S_3$의 모든 원소를 $\id_\mathbb{C}\in \Aut(\mathbb{C})$으로 보내고, 이 $1\times 1$ 행렬의 trace는 $1$이므로 $\rchi_0$은 $(1,1,1)$이다. 
+2. $\rho_\sgn$은 $S_3$의 odd permutation들 (즉 $A_2$의 원소들)만 $-\id_\mathbb{C}\in\Aut(\mathbb{C})$으로 보내고, 나머지 원소들은 $\id_\mathbb{C}\in \Aut(\mathbb{C})$으로 보내므로 $\rchi_\sgn$은 $(1,-1,1)$이다. 
+3. $\rchi_\std$를 계산하는 데에는 두 가지 방법이 있으며 이 방법을 모두 소개하기로 한다. 우선 
+
+$\rho_0$의 representation은 당연히 모든 conjugacy class 위에서 $\tr(\id_{V_0})=\dim V_0=1$이며, $\rho_\sgn$의 representation은 $A_2$에서는 $-1$이고 나머지 둘 위에서는 $1$임을 안다. Standard representation에 대해서는 우선 permutation representation이 $A_0$ 위에서는 $3$, $\\{(1\;2),\,(1\;3),\,(2\;3)\\}$ 위에서는 $1$, $\\{(1\;2\;3),\,(1\;3\;2)\\}$ 위에서는 $0$이며 위의 decomposition
 
 $$V_{\text{perm}}=V_0\oplus V_{\text{std}}$$
 
