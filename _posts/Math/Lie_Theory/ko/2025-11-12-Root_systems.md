@@ -18,7 +18,8 @@ weight: 2
 ---
 
 
-넣어야 할것 
+넣어야 할것 finite grp rep 에서 Lie grp rep으로
+각각의 \rho(g)들에 해당하는 simultaneous eigenvector
 
 
 
