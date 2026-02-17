@@ -197,7 +197,7 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 <ins id="lem5">**보조정리 5**</ins> 임의의 함수 $\phi:G\rightarrow \mathbb{C}$와 임의의 representation $\rho:G\rightarrow\Aut(V)$이 주어졌다 하자. 
 
-$$\rho_\phi=\sum \phi(g)\rho(g): V\rightarrow V$$
+$$\rho_\phi=\sum_{g\in G} \phi(g)\rho(g): V\rightarrow V$$
 
 으로 정의하면, $\rho_\phi$가 $G$-map인 것과 $\phi$가 class function인 것이 동치이다. 
 
@@ -227,11 +227,10 @@ $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g
 
 이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $\phi$에 대하여, $\langle \phi,\rchi_V\rangle=0$이 모든 irreducible character $\rchi_V$에 대해 성립한다면 $\phi=0$이라는 것을 보여야 한다. 
 
-이를 위해 위의 보조정리를 사용한다. $\phi$가 class function이므로, $\rho_\phi$는 $G$-map이며 따라서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $\rho_\phi$는 $\lambda\id_V$의 꼴이다. 
+이를 위해 위의 보조정리를 class function $\phi$와 irreducible representation $\rho:G\rightarrow\Aut(V)$에 사용하자. $\phi$가 class function이므로, $\rho_{\overline{\phi}}$는 $G$-map이며 따라서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $\rho_{\overline{\phi}}$는 $\lambda\id_V$의 꼴이다. 이제 여기에 trace를 취하면
 
- $\rho_\phi$는 $G$-map이며 에 의해 $\rho_\phi$는 $\lambda\cdot\id_V$의 꼴임을 안다. 우리가 보여야 할 것은 $\lambda=0$이라는 것이다. 그런데 $
+$$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\phi(g)}\rho(g)\right)=\sum_{g\in G}\overline{\phi(g)}\rchi_V(g)=\lvert G\rvert\langle \rchi_V,\phi\rangle$$
 
-$$\lambda=\frac{1}{n}\tr(\rho_\phi)=\frac{1}{n}\sum_{g\in G}\phi(g)\rchi_V(g)=\frac{\lvert G\rvert}{n}\overline{(\alpha,\rchi_{V^\ast})}=0$$
 
 으로부터 얻어진다. 
 
