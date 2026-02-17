@@ -157,7 +157,7 @@ $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
 ## Regular representation
 
-이 섹션에서 우리는 지난 글에서 고려했던 Artin-Wedderburn decomposition ([§유한군의 표현론, 식 (1)](/ko/math/representation_theory/representations_of_finite_groups#cor7))을 명시적으로 얻어낸다. 이를 위해, 우선 $\mathbb{C}[G]$는 자기자신 위에 정의된 left $\mathbb{C}[G]$-module이고 따라서 categorical equivalence
+이 섹션에서 우리는 지난 글에서 고려했던 Artin-Wedderburn decomposition ([§유한군의 표현론, 식 (1)](/ko/math/representation_theory/representations_of_finite_groups#cor7))을 character를 이용해 얻어낸다. 이를 위해, 우선 $\mathbb{C}[G]$는 자기자신 위에 정의된 left $\mathbb{C}[G]$-module이고 따라서 categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
@@ -167,7 +167,7 @@ $$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in X}\delta_g(x)x\rig
 
 으로 쓸 수 있고, 이러한 representation을 *regular representation*이라 부른다.
 
-이제 $\mathbb{C}[G]$를 분해하기 위해 regular representation의 character theory를 생각하자. 위와 같이 $\mathbb{C}[G]$를 $g\in G$들(정확히는 $\delta_g$들)을 basis로 갖는 벡터공간으로 보고 이를 통해 regular representation $\rho_\reg$가 주는 각각의 linear operator $\rho_\reg(g)$를 행렬로 나타내어 그 trace를 생각하면
+이제 $\mathbb{C}[G]$를 분해하기 위해 regular representation의 character theory를 생각한다. 위와 같이 $\mathbb{C}[G]$를 $g\in G$들(정확히는 $\delta_g$들)을 basis로 갖는 벡터공간으로 보고, 이를 통해 regular representation $\rho_\reg$가 주는 각각의 linear operator $\rho_\reg(g)$를 행렬로 나타내어 그 trace를 생각하면
 
 $$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
 
@@ -179,7 +179,7 @@ $$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
 
-을 얻는다. 뿐만 아니라, 이 decomposition이 $\mathbb{C}[G]$ 위에 어떻게 act하는지를 보면 이것이 정확하게 Artin-Wedderburn theorem이 주는 decomposition
+을 얻는다. 뿐만 아니라 $\mathbb{C}[G]$는 자기 자신 위에 곱셈으로 작용하고, 이 작용 하에서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8) $V_i$는 $V_i$로만 간다는 것을 생각하면 각각의 $V_i^{\dim V_i}$이 정확하게 matrix algebra $\Mat_{d_i}(\mathbb{C})$라는 것을 알고,  Artin-Wedderburn theorem의 유일성으로부터 이것이 곧
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
@@ -222,6 +222,10 @@ $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g
 </details>
 
 이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $\phi$에 대하여, $\langle \phi,\rchi_V\rangle=0$이 모든 irreducible character $\rchi_V$에 대해 성립한다면 $\phi=0$이라는 것을 보여야 한다. 
+
+우리는 $\phi$가 regular representation $\mathbb{C}[G]$ 위에서 $0$으로 작용한다는 것을 보인다. 그럼 특히 $\phi\ast \delta_e\in \mathbb{C}[G]$도 $0$이 되어야하며, 그럼
+
+$$(\phi\ast\delta_e)(g)=$$
 
 이를 위해 위의 보조정리를 class function $\phi$와 irreducible representation $\rho:G\rightarrow\Aut(V)$에 사용하자. $\phi$가 class function이므로 $\overline{\phi}$도 그러하고, 따라서 $\rho_{\overline{\phi}}$는 $G$-map이며 따라서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $\rho_{\overline{\phi}}$는 $\lambda\id_V$의 꼴이다. 이제 여기에 trace를 취하면
 
