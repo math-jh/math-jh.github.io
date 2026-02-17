@@ -161,11 +161,11 @@ $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-로부터 $G$의 representation이기도 하다는 것을 관찰하자. 이는 단순히 $\mathbb{C}[G]$ 위에 정의된 module 구조, 즉 $\mathbb{C}[G]$의 ring으로서의 곱셈 구조를 $G$로 제한하여 얻어지는 것으로, 명시적으로는 다음의 식
+로부터 $G$의 representation이기도 하다는 것을 관찰하자. 이는 단순히 $\mathbb{C}[G]$ 위에 정의된 module 구조, 즉 $\mathbb{C}[G]$의 ring으로서의 곱셈 구조를 $G$로 제한하여 얻어지는 것으로, 명시적으로 임의의 $g\in G$의 $\mathbb{C}[G]$에서의 image $\delta_g=\sum_{x\in X}\delta_g(x)x$를 사용하면
 
-$$g\cdot \left(\sum_{x\in G} \phi_xx\right)=\delta_x\ast \phi=$$
+$$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in X}\delta_g(x)x\right)\left(\sum_{y\in G}\phi(y)y\right)=\sum_{z\in G}\left(\sum_{x\in G}\delta_g(x)\phi(x^{-1}z)\right)z=\sum_{z\in G}\phi(g^{-1}z)$$
 
-으로 정의하고, 이러한 representation을 *regular representation*이라 부르며, 구체적인 식으로는 $\phi\in \mathbb{C}[G]$를 받아 $\phi\circ L_{g^{-1}}$을 주는 것으로 생각하여도 된다. 이는 정확히 $\mathbb{C}[G]$의 곱셈을 $G$로 제한한 것이다. 
+으로 쓸 수 있고, 이러한 representation을 *regular representation*이라 부른다.  구체적인 식으로는 $\phi\in \mathbb{C}[G]$를 받아 $\phi\circ L_{g^{-1}}$을 주는 것으로 생각하여도 된다. 이는 정확히 $\mathbb{C}[G]$의 곱셈을 $G$로 제한한 것이다. 
 
 
 그럼 임의의 representation $V$와 임의의 $v\in V$에 대하여 $V$ 위에 정의된 $G$-action이 정확히 $\mathbb{C}[G]$-module의 scalar multiplication과 같다는 것이 [§유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4)의 결과였다. 따라서 이와 같은 $G$-action이 주어진 $\mathbb{C}[G]$를 살펴보는 것이 중요하게 된다. 
