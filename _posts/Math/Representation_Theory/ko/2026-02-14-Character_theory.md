@@ -302,6 +302,12 @@ $$\rho_\perm((\;))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\p
 
 이렇게 구한 세 개의 character들 
 
-$$\rchi_0=(1,1,1),\qquad \rchi_\sgn,\rchi_\std$$
+$$\rchi_0=(1,1,1),\qquad \rchi_\sgn=(1,-1,1),\qquad \rchi_\std=(2,0,-1)$$
 
 는 orthonormal임을 확인할 수 있다. 
+
+우리는 regular representation의 character의 계산으로부터
+
+$$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
+
+임을 안다. (식 (2)) 이는 반드시 위의 
