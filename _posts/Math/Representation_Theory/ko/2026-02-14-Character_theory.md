@@ -267,9 +267,28 @@ $$A_1=\{(\;)\},\qquad A_2=\{(1\;2),\,(1\;3),\,(2\;3)\},\qquad A_3=\{(1\;2\;3),\,
 
 을 생각하자. 표기의 편의를 위해, character $\rchi$가 $A_1,A_2,A_3$ 위에서 값 $a_1,a_2,a_3$을 갖는다면 이를 벡터 $(a_1,a_2,a_3)$ 형태로 쓰기로 하자. 
 
-1. $\rho_0$은 $S_3$의 모든 원소를 $\id_\mathbb{C}\in \Aut(\mathbb{C})$으로 보내고, 이 $1\times 1$ 행렬의 trace는 $1$이므로 $\rchi_0$은 $(1,1,1)$이다. 
-2. $\rho_\sgn$은 $S_3$의 odd permutation들 (즉 $A_2$의 원소들)만 $-\id_\mathbb{C}\in\Aut(\mathbb{C})$으로 보내고, 나머지 원소들은 $\id_\mathbb{C}\in \Aut(\mathbb{C})$으로 보내므로 $\rchi_\sgn$은 $(1,-1,1)$이다. 
-3. $\rchi_\std$를 계산하는 데에는 두 가지 방법이 있으며 이 방법을 모두 소개하기로 한다. 우선 
+- $\rho_0$은 $S_3$의 모든 원소를 $\id_\mathbb{C}\in \Aut(\mathbb{C})$으로 보내고, 이 $1\times 1$ 행렬의 trace는 $1$이므로 $\rchi_0$은 $(1,1,1)$이다. 
+- $\rho_\sgn$은 $S_3$의 odd permutation들 (즉 $A_2$의 원소들)만 $-\id_\mathbb{C}\in\Aut(\mathbb{C})$으로 보내고, 나머지 원소들은 $\id_\mathbb{C}\in \Aut(\mathbb{C})$으로 보내므로 $\rchi_\sgn$은 $(1,-1,1)$이다. 
+
+Standard representation $\rho_\std$의 character $\rchi_\std$를 계산하는 데에는 두 가지 방법이 있으며 이 방법을 모두 소개하기로 한다.
+
+우선 이를 직접 계산하기 위해 $V_\std$의 basis
+
+$$\{e_1=(1,0,-1), e_2=(0,1,-1)\}$$
+
+을 택하자. 그럼 $(\;)$는 이 basis를 건드리지 않으므로 당연히 $\rchi_\std$는 $A_1$ 위에서 값 $2$를 갖는다. $A_2$ 위에서는, 가령, $(1\;2)$를 작용하면 이는 basis를 서로 바꿔주므로 다음 행렬
+
+$$\rho_\std((1\;2))\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
+
+에 대응되며 그 trace는 $0$이다. 참고로 만일 $(1\;3)$이 이 basis 위에 작용한다면, $e_1$은 $-e_1$으로, $e_2$는 $(-1,1,0)=-e_1+e_2$로 옮겨지므로 다음 행렬
+
+$$\rho_\std((1\;3))=\begin{pmatrix}-1&-1\\0&1\end{pmatrix}$$
+
+에 대응되며 이 행렬의 trace 또한 $0$이므로 character function이 class function이라는 것을 계산으로 확인할 수 있다. $A_3$의 경우 $e_1$을 $(-1,1,0)=-e_1+e_2$, $e_2$을 $(-1,0,1)=-e_1$으로 옮기므로 
+
+$$\rho_\std((1\;2\;3))=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}$$
+
+이 되어 $\rchi_\std$는 $(2,0,-1)$임을 안다. 
 
 $\rho_0$의 representation은 당연히 모든 conjugacy class 위에서 $\tr(\id_{V_0})=\dim V_0=1$이며, $\rho_\sgn$의 representation은 $A_2$에서는 $-1$이고 나머지 둘 위에서는 $1$임을 안다. Standard representation에 대해서는 우선 permutation representation이 $A_0$ 위에서는 $3$, $\\{(1\;2),\,(1\;3),\,(2\;3)\\}$ 위에서는 $1$, $\\{(1\;2\;3),\,(1\;3\;2)\\}$ 위에서는 $0$이며 위의 decomposition
 
