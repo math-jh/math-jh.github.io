@@ -231,8 +231,22 @@ $$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\p
 
 $$\left(\sum\overline{\phi(g)}g\right)\cdot \delta_e=\sum_{g\in G}\overline{\phi(g)}g$$
 
-이고 
+이고 따라서 $\overline{\phi(g)}=0$이 모든 $g$에 대해 성립해야 한다. 
 
 ## 예시: $S_3$
 
-우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리한다. 우선 임의의 *abelian* group $G$에 대해서는 
+우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리한다. 우선 임의의 *abelian* group $G$에 대해서는 irreducible representation이 $1$차원 representation 뿐임이 자명하므로 우리의 이론을 테스트하기 위해서는 non-abelian group이 필요하다. 계산의 편의상 가장 작은 non-abelian group인 $S_3$을 생각하자. 명시적으로
+
+$$S_3=\{(\;),\,(1\;2),\,(1\;3),\,(2\;3),\,(1\;2\;3),\,(1\;3\;2)\}$$
+
+이다. 우선 다음의 두 representation
+
+$$\rho_0: S_3 \rightarrow \Aut(\mathbb{C})\qquad \sigma\mapsto \id_\mathbb{C}$$
+
+그리고 
+
+$$\rho_\sgn: S_3 \rightarrow \Aut(\mathbb{C})\qquad \sigma\mapsto \sgn(\sigma)\id_\mathbb{C}$$
+
+이 $\sigma$의 두 irreducible representation이 되는 것은 자명하다. 한편 $S_3$은 $\mathbb{C}^3$ 위에 permutation을 통해
+
+$$$$
