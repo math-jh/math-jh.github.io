@@ -27,7 +27,16 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 Lie group의 경우 이러한 표현론적 관점은 더 도움이 되는데, Lie group은 $\GL(n;\mathbb{R})$이나 $\Diff(M)$과 같이, 본질적으로 다른 대상 위에 작용하는 것이기 때문이다. 
 
-다만 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)에서처럼 
+다만 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)에서처럼 $G$의 representation theory를 정의하면 
+
+
+
+
+
+
+
+
+
 
 넣어야 할것 finite grp rep 에서 Lie grp rep으로
 각각의 \rho(g)들에 해당하는 simultaneous eigenvector
