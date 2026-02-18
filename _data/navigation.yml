@@ -489,6 +489,20 @@ Riemannian_geometry-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
+representation_theory-ko:
+  - title: <a href="/ko/representation_theory/" class="sidebar_title">표현론</a>
+    children:
+      - title: "유한군의 표현론"
+        url: ko/math/representation_theory/representations_of_finite_groups
+      - title: "표현의 지표"
+        url: ko/math/representation_theory/character_theory
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
 ring_theory-ko:
   - title: <a href="/ko/ring_theory/" class="sidebar_title">환론</a>
     children:
