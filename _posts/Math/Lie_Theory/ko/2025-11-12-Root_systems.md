@@ -39,7 +39,9 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 </div>
 
-비슷하게 [\[표현론\] §유한군의 표현론, §§표현론의 기본 개념들](/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들) https://100.105.12.35:4000/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들
+비슷하게 [\[표현론\] §유한군의 표현론, §§표현론의 기본 개념들](/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들)에 있는 모든 정의를 Lie group에 대해서도 할 수 있다. 
+
+이 글에서 중요한 역할을 했던 것은 group $G$가 유한군이라는 사실이었다. 가령 $G$의 모든 원소에 대해 평균을 내는 
 
 
 
