@@ -47,11 +47,19 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 $$(g\cdot f)(x)=f(g^{-1}x)$$
 
-을 통해 $G$의 $L^2(G)$ 위에서의 action을 정의할 수 있으며, 이는 Haar measure의 translation invariance에 의해 unitary representation이 된다. 그럼 다음이 성립한다.
+을 통해 $G$의 $L^2(G)$ 위에서의 action을 정의할 수 있으며, 이는 Haar measure의 translation invariance에 의해 unitary representation이 된다. 한편 우리가 character를 정의할 때, $\rho(g)$의 trace를 사용했는데, 이는 *matrix coefficient*
+
+$$L\circ \rho$$
+
+으로 일반화한다. 여기서 $\rho:G\rightarrow \Aut(V)$는 representation이고 $L:\Aut(V)\rightarrow \mathbb{C}$는 linear functional이다. 그럼 다음이 성립한다. 
+
 
 <div class="proposition" markdown="1">
 
-<ins id="thm1">**정리 1 (Peter-Weyl)**</ins> 
+<ins id="thm1">**정리 1 (Peter-Weyl)**</ins> 다음이 성립한다. 
+
+1. $G$의 matrix coefficient들은 $G$ 위에서 정의된 continuous complex function들의 공간 $C(G)$에서 dense하다. 
+2. Compact group $G$의 Hilbert space $H$로의 unitary representation $\rho:G\rightarrow \Aut(H)$가 주어진다면, $H$는 $G$의 finite-dimensional irreducible unitary representation들의 orthogonal direct sum으로 쓸 수 있다. 
 
 </div>
 
