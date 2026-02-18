@@ -39,7 +39,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 </div>
 
-
+비슷하게 https://100.105.12.35:4000/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들
 
 
 
