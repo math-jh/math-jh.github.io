@@ -43,24 +43,15 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 이 글에서 중요한 역할을 했던 것은 group $G$가 유한군이라는 사실이었다. 가령 $G$의 모든 원소에 대해 평균을 내는 아이디어는 이러한 사실을 바탕으로 했다. 이를 Lie group으로 일반화하기 위해서는 $G$에 어떠한 종류의 유한성을 강제해야 한다. 
 
-우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 물론 이를 위해서는 $\delta_x$ 함수를 잘 정의하고, 함수공간을 적당한 공간으로 일반화하는 작업을 거쳐야 하지만 이러한 작업은 우리의 현재 목적이 아니므로 생략하기로 혼다. 중요한 것은 
+우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 물론 이를 위해서는 $\delta_x$ 함수를 잘 정의하고, 함수공간을 적당한 공간으로 일반화하는 작업을 거쳐야 하지만 이러한 작업은 우리의 현재 목적이 아니므로 생략하기로 혼다. 중요한 것은 리 군의 표현론 또한 유한군의 표현론과 같은 방법론을 통해 접근할 수 있다는 것이다. 
 
+선형대수학에서 아주 강력한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 유한군이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 
 
-넣어야 할것 finite grp rep 에서 Lie grp rep으로
-각각의 \rho(g)들에 해당하는 simultaneous eigenvector
-
-
-
+반대로 Lie group으로 일반화를 하며 얻어지는 좋은 점도 있는데, Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다는 것이다. [§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19) 이는 단순히 각각의 $g\in G$에 대하여, 
 
 
 
-
-
-## 몰루
-
-우리는 앞선 글에서 Lie group과 Lie algebra를 탐구하는 도구로서 이들의 representation을 도입했다. 가령 Lie group $G$의 representation $G\times V \rightarrow V$가 주어진다면, 이는 $G\rightarrow\Aut(V)$가 주어진 것과 같으므로 matrix Lie group들과 그 subgroup들을 살펴보아 원래의 Lie group에 대한 정보를 알 수 있을 것이었다. 
-
-한편 우리의 기본적인 철학은, 이를 정당화하기에는 약간의 설명이 추가로 필요하지만, $G$-representation $G\times V \rightarrow V$는 결국 선형대수로 취급할 수 있다는 것이고 앞선 글에서 우리는 선형대수에서 기초적인 개념들, 가령 [§리 군의 표현, ⁋정의 10](/ko/math/Lie_theory/representations#def10)과 같은 것들을 이 analogy에 넣는 작업을 하였다. 
+## 나중
 
 ## Adjoint representation
 
