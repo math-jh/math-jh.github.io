@@ -63,11 +63,16 @@ $$\ad(X)Y=[X,Y]$$
 
 </div>
 
+이 글의 목표는 simple Lie algebra를 모두 분류하고 따라서 semisimple Lie algebra를 모두 분류하는 것이다. 
+
+우선 우리는 임의의 
+
 
 
 ## 나중
 
 
+Proo
 
 ## 원환면의 작용
 
