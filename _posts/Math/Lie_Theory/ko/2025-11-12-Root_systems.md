@@ -109,7 +109,9 @@ Killing form이 symmetric이고, bilnear인 것은 정의에 의해 자명하다
 
 $$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v_\alpha\in V$ for all $i$}$$
 
-와 같은 형태이지만, 현재 우리 상황에서는 $\mathfrak{h}$가 벡터공간이므로 linear functional $\mathfrak{\alpha}: \mathfrak{h}\rightarrow \mathbb{C}$를 택하여 
+와 같은 형태이지만, 현재 우리 상황에서는 $\mathfrak{h}$가 벡터공간이므로 linear functional $\mathfrak{\alpha}: \mathfrak{h}\rightarrow \mathbb{C}$를 택하여 $\alpha(H)$가 각각의 $H$의 고유값 역할을 해주도록 하는 것이 낫다. 따라서 다음과 같이 정의한다. 
+
+
 
 ## 나중
 
