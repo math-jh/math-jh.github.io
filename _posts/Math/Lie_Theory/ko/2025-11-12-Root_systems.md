@@ -255,7 +255,11 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
 에 대하여, 다음이 성립한다.
 
-1. 
+1. 임의의 $\alpha,\beta\in \Phi$에 대하여 $[\mathfrak{g}_\alpha,\mathfrak{g}_\beta]\subseteq \mathfrak{g}_{\alpha+\beta}$가 성립하며, 등식은 $\alpha+\beta\neq 0$일 때 성립한다. 
+2. 임의의 $\alpha\in\Phi$에 대하여, $[\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]\oplus \mathfrak{g}_{-\alpha}\oplus \mathfrak{g}_\alpha\cong \sl_2$이 성립한다. 
+3. 임의의 $\alpha\in\Phi$에 대하여, $\dim \mathfrak{g}_\alpha=1$이다.
+4. 임의의 $\alpha\in\Phi$에 대하여, $2_\alpha\not\in\Phi$이다. 
+5. $\mathfrak{g}$ 위에 정의된 Killing form을 $\mathfrak{h}$로 제한한 것은 non-degenerate이다. 또한, $\alpha+\beta\neq 0$이라면 $\mathfrak{g}_\alpha$와 $\mathfrak{g}_\beta$가 orthogonal이다. 
 
 </div>
 
