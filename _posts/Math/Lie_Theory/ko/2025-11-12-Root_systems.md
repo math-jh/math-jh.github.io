@@ -59,9 +59,19 @@ $$\ad(X)Y=[X,Y]$$
 
 을 통해 계산해줄 수 있다. 
 
-임의의 
+표현론의 결과들을 사용하는 데에 중요한 것은 임의의 finite-dimensional representation은 항상 unitary라는 것이었다. 이 결과를 증명할 때 사용하는 논리는 $V$ 위에 $G$-invariant inner product를 택할 수 있다는 것인데, 엄밀히 말하자면 우리는 orthogonal complement에 관심이 있으므로 non-degenerate symmetric form만 있어도 충분하다. 그런데 Lie algebra 위에는 자연스러운 bilinear form이 하나 존재한다. 
 
+<div class="definition" markdown="1">
 
+<ins id="def1">**정의 1**</ins> Lie algebra $\mathfrak{g}$ 위에 다음의 식
+
+$$(X,Y)=\tr(\ad(X)\ad(Y))$$
+
+으로 정의된 symmetric bilinear form을 *Killing form</div>*이라 부른다. 
+
+</div>
+
+Killing form이 symmetric이고, bilnear인 것은 정의에 의해 자명하다. 
 
 <div class="definition" markdown="1">
 
