@@ -47,17 +47,26 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 선형대수학에서 아주 강력한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 유한군이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 
 
-반대로 Lie group으로 일반화를 하며 얻어지는 좋은 점도 있는데, Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다는 것이다. [§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19) 이는 단순히 각각의 $g\in G$에 대하여, 
+반대로 Lie group으로 일반화를 하며 얻어지는 좋은 점도 있는데, Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다는 것이다. [§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19) 이는 각각의 $g\in G$가 정의하는 conjugation $h\mapsto ghg^{-1}$의 $h=e$에서의 미분이며, 만일 $G$와 $\Aut(\mathfrak{g})$를 모두 Lie group으로 보아 이를 미분한다면 우리는 $\mathfrak{g}$의 representation
+
+$$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
+
+을 얻을 수 있었다. 이 때 $\ad$는 명시적으로 
+
+$$\ad(X)Y=[X,Y]$$
+
+을 통해 계산해줄 수 있었다. 이제 우리는 다음을 정의한다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def1">**정의 1**</ins> Lie algebra $\mathfrak{g}$이 *simple<sub>단순</sub>*이라는 것은 $\mathfrak{g}$가 non-abelian Lie algebra이고 $\mathfrak{g}$의 ideal이 $0$과 자기자신 뿐인 것이다. Simple Lie algebra들의 direct sum으로 쓸 수 있는 Lie algebra를 *semisimple*이라 부른다. 
+
+</div>
 
 
 
 ## 나중
 
-## Adjoint representation
-
-우리는 [§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19)에서 Lie group $G$의 adjoint representation $G\rightarrow \Aut(\mathfrak{g})$을 정의했다. 이를 통해 우리는 임의의 Lie group을 (basis의 선택을 거친다면) matrix Lie group으로 생각할 수 있다. 우리가 다루는 많은 경우 $G$는 유한차원이고, 따라서 그 tangent space인 $\mathfrak{g}$ 또한 유한차원일 것이므로 Lie group을 살펴보는 것은, 조금 과장해서 말하자면, 선형대수학을 하는 것과 다를 바가 없다. 
-
-한편 누군가가 선형대수학에서 가장 불만족스러운 부분을 (굳이) 꼽으라고 한다면, 그 중 하나는 임의의 두 행렬들이 교환법칙을 만족하지 않는다는 것이다. 이는 필연적인 것이지만, 만일 어떠한 벡터공간 $V$가 두 subspace들의 direct sum $V_1\oplus V_2$로 표현되고, 두 행렬 $A_1$, $A_2$가 각각 $V_1$에서 $V_1$, $V_2$에서 $V_2$로의 linear operator에 대응되는 행렬이라면 이들 행렬이 commute한다는 것을 안다. 이 상황은 
 
 
 ## 원환면의 작용
