@@ -51,7 +51,7 @@ Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rig
 
 $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
-을 얻을 수 있었다. 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $\mathfrak{g}$를 reresentation space $\mathfrak{g}$를 이용하여 표현한다 생각할 수 있고, 이 때 $\ad$는 명시적으로 
+을 얻을 수 있으며 [§리 군, ⁋정리 15](/ko/math/Lie_theory/Lie_groups#thm15)을 생각하면 본질적으로 $\Ad$가 알고있는 정보는 여기에 다 담겨있다고 생각해도 된다. . 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $\mathfrak{g}$를 reresentation space $\mathfrak{g}$를 이용하여 표현한다 생각할 수 있고, 이 때 $\ad$는 명시적으로 
 
 $$\ad(X)Y=[X,Y]$$
 
@@ -111,7 +111,29 @@ $$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v
 
 와 같은 형태이지만, 현재 우리 상황에서는 $\mathfrak{h}$가 벡터공간이므로 linear functional $\mathfrak{\alpha}: \mathfrak{h}\rightarrow \mathbb{C}$를 택하여 $\alpha(H)$가 각각의 $H$의 고유값 역할을 해주도록 하는 것이 낫다. 따라서 다음과 같이 정의한다. 
 
+<div class="definition" markdown="1">
 
+<ins id="def6">**정의 6**</ins> Semisimple Lie algebra $\mathfrak{g}$와 $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$에 대하여, 
+
+$$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\neq 0\right\}$$
+
+의 원소들을 $\mathfrak{g}$의 *root*라 부른다. 이 때 
+
+$$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
+
+이다. ([§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19))
+
+</div>
+
+정의에 의하여 $\mathfrak{h}$는 자기 자신 위에는 $0$으로 작용한다. 즉 $\mathfrak{h}$는 $\mathfrak{g}$를 simultaneous eigenspace로 분해했을 때 eigenvalue $0$에 해당하는 부분이며 이로부터 우리는 다음의 decomposition
+
+$$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi}\mathfrak{g}_\alpha$$
+
+을 얻는다. 
+
+## 원환면의 작용
+
+우리는 
 
 ## 나중
 
