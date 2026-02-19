@@ -103,7 +103,7 @@ Killing form이 symmetric이고, bilnear인 것은 정의에 의해 자명하다
 
 </div>
 
-두 diagonalizable operator $A,B$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $\mathfrak{h}$의 모든 원소들은 simultaneously diagonalizable이다. 이제 
+두 diagonalizable operator $A,B$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $\mathfrak{h}$의 모든 원소들은 simultaneously diagonalizable이며, 이들은 $\mathfrak{g}$ 위에서 
 
 
 ## 나중
