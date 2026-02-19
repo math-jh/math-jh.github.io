@@ -133,7 +133,21 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi}\mathfrak{g}_\alpha$$
 
 ## 원환면의 작용
 
-우리는 
+우리는 남은 글에서, 위에서 정의한 root $\Phi$들이 갖는 성질을 이용하여 simple Lie algebra의 classification을 진행할 것이다. 그 전에 위의 decomposition이 기하학적으로는 어떠한 꼴인지 살펴보는 것이 도움이 된다. 
+
+우리는 임의의 torus $T$에 대하여, $T$는 abelian이고 따라서 $T$의 임의의 irreducible representation $V$는 $1$차원이라는 것을 안다. 바꾸어 말하자면, 임의의 representation $T\rightarrow\Aut(V)$가 주어졌다 하면, 이를 irreducible subrepresentation으로 분해하여 다음의 식
+
+$$V=\bigoplus_{i}V_i$$
+
+을 얻고, 각각의 $V_i$는 $1$차원이다. 이 때 각각의 $V_i$ 위에서는 $T$의 action이 훨씬 명시적인데, 이는 $V_i$가 $1$차원인 것으로부터 $\Aut(V_i)\cong \mathbb{C}^\times$이므로, torus action은 continuous homomorphism $\chi_{\lambda_i}:T \rightarrow \Aut(V_i)\cong \mathbb{C}^\times$로 주어지기 때문이다. 뿐만 아니라 이것이 irreducible이므로 $\lvert\lambda\rvert=1$이고 따라서 각각의 $V_i$ 위에서 torus action은 
+
+$$t\cdot v=\chi_{\lambda_i}(t)v,\qquad \chi_{\lambda_i}(t)\in S^1\subset\mathbb{C}^\times$$
+
+으로 주어진다. 한편 우리는 다음의 식
+
+$$\chi_{\lambda_i}(\exp(X))=e^{2\pi i \lambda_i(X)}\qquad\text{for all $X\in \mathfrak{t}$}\tag{1}$$
+
+을 통해 $T$의 character $\chi_{\lambda_i}$와 $\mathfrak{t}$ 위에 정의된 linear functional $\lambda_i$ 사이의 일대일 대응이 있는 것을 안다. 
 
 ## 나중
 
