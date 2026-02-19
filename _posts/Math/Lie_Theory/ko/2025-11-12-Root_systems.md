@@ -99,7 +99,7 @@ Killing form이 symmetric이고, bilnear인 것은 정의에 의해 자명하다
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Semisimple Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$의 *Cartan subalgebra<sub>카르탕 부분대수</sub>*
+<ins id="def5">**정의 5**</ins> Semisimple Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$의 *Cartan subalgebra<sub>카르탕 부분대수</sub>*는 
 
 </div>
 
