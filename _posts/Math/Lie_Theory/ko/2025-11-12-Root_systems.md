@@ -133,66 +133,28 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi}\mathfrak{g}_\alpha$$
 
 ## 원환면의 작용
 
-우리는 남은 글에서, 위에서 정의한 root $\Phi$들이 갖는 성질을 이용하여 simple Lie algebra의 classification을 진행할 것이다. 그 전에 위의 decomposition이 기하학적으로는 어떠한 꼴인지 살펴보는 것이 도움이 된다. 
+우리는 남은 글에서, 위에서 정의한 root $\Phi$들이 갖는 성질을 이용하여 simple Lie algebra의 classification을 진행할 것이다. 그 전에 위의 decomposition이 기하학적으로는 어떠한 꼴인지 살펴보는 것이 이해에 도움이 된다. 
 
 우리는 임의의 torus $T$에 대하여, $T$는 abelian이고 따라서 $T$의 임의의 irreducible representation $V$는 $1$차원이라는 것을 안다. 바꾸어 말하자면, 임의의 representation $T\rightarrow\Aut(V)$가 주어졌다 하면, 이를 irreducible subrepresentation으로 분해하여 다음의 식
 
 $$V=\bigoplus_{i}V_i$$
 
-을 얻고, 각각의 $V_i$는 $1$차원이다. 이 때 각각의 $V_i$ 위에서는 $T$의 action이 훨씬 명시적인데, 이는 $V_i$가 $1$차원인 것으로부터 $\Aut(V_i)\cong \mathbb{C}^\times$이므로, torus action은 continuous homomorphism $\chi_{\lambda_i}:T \rightarrow \Aut(V_i)\cong \mathbb{C}^\times$로 주어지기 때문이다. 뿐만 아니라 이것이 irreducible이므로 $\lvert\lambda\rvert=1$이고 따라서 각각의 $V_i$ 위에서 torus action은 
+을 얻고, 각각의 $V_i$는 $1$차원이다. 이 때 각각의 $V_i$ 위에서는 $T$의 action이 훨씬 명시적인데, 이는 $V_i$가 $1$차원인 것으로부터 $\Aut(V_i)\cong \mathbb{C}^\times$이므로, torus action은 continuous homomorphism $\rchi_{\lambda_i}:T \rightarrow \Aut(V_i)\cong \mathbb{C}^\times$로 주어지기 때문이다. 뿐만 아니라 이것이 irreducible이므로 $\lvert\lambda\rvert=1$이고 따라서 각각의 $V_i$ 위에서 torus action은 
 
-$$t\cdot v=\chi_{\lambda_i}(t)v,\qquad \chi_{\lambda_i}(t)\in S^1\subset\mathbb{C}^\times$$
-
-으로 주어진다. 한편 우리는 다음의 식
-
-$$\chi_{\lambda_i}(\exp(X))=e^{2\pi i \lambda_i(X)}\qquad\text{for all $X\in \mathfrak{t}$}\tag{1}$$
-
-을 통해 $T$의 character $\chi_{\lambda_i}$와 $\mathfrak{t}$ 위에 정의된 linear functional $\lambda_i$ 사이의 일대일 대응이 있는 것을 안다. 
-
-## 나중
-
-
-Proo
-
-## 원환면의 작용
-
-
-많은 경우 $\mathfrak{g}$이 *complex* vector space인 것이 편하므로, 필요한 경우에는 $\mathfrak{g}$의 complexification을 $\mathfrak{g}$로 쓰기도 한다. ([정의 3](#def3))
-
-이렇게 
-
-한편 simply connected, compact Lie group $G$는 항상 torus를 포함한다. 이를 살펴보기 위해 임의의 $g\in G$를 택한 후 이로부터 생성되는 $G$의 subgroup $\langle g\rangle$을 생각하자. 그럼 이 subgroup의 $G$에서의 closure는 
-
-
-
-
-이는 가령, 고정된 방향 $X\in \mathfrak{g}$으로의 exponential map이 정의하는 곡선을 생각하고 $G$가 compact라는 사실을 이용하면 확인할 수 있다. 우리는 우선 다음을 정의한다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Compact connected Lie group $G$에 대하여, $G$의 subgroup $T$가 *maximal torus*라는 것은 $T$가 torus이고, $T\subsetneq T' \subset G$를 만족하는 torus $T'$가 존재하지 않는 것이다.
-
-</div>
-
-한편 우리는 임의의 torus $T$에 대하여, $T$는 abelian이고 따라서 $T$의 임의의 irreducible representation $V$는 $1$차원이라는 것을 안다. 바꾸어 말하자면, 임의의 representation $T\rightarrow\Aut(V)$가 주어졌다 하면, 이를 irreducible subrepresentation으로 분해하여 다음의 식
-
-$$V=\bigoplus_{i}V_i$$
-
-을 얻고, 각각의 $V_i$는 $1$차원이다. 이 때 각각의 $V_i$ 위에서는 $T$의 action이 훨씬 명시적인데, 이는 $V_i$가 $1$차원인 것으로부터 $\Aut(V_i)\cong \mathbb{C}^\times$이므로, torus action은 continuous homomorphism $\chi_{\lambda_i}:T \rightarrow \Aut(V_i)\cong \mathbb{C}^\times$로 주어지기 때문이다. 뿐만 아니라 이것이 irreducible이므로 $\lvert\lambda\rvert=1$이고 따라서 각각의 $V_i$ 위에서 torus action은 
-
-$$t\cdot v=\chi_{\lambda_i}(t)v,\qquad \chi_{\lambda_i}(t)\in S^1\subset\mathbb{C}^\times$$
+$$t\cdot v=\rchi_{\lambda_i}(t)v,\qquad \rchi_{\lambda_i}(t)\in S^1\subset\mathbb{C}^\times$$
 
 으로 주어진다. 한편 우리는 다음의 식
 
-$$\chi_{\lambda_i}(\exp(X))=e^{2\pi i \lambda_i(X)}\qquad\text{for all $X\in \mathfrak{t}$}\tag{1}$$
+$$\rchi_{\lambda_i}(\exp(X))=e^{2\pi i \lambda_i(X)}\qquad\text{for all $X\in \mathfrak{t}$}\tag{1}$$
 
-을 통해 $T$의 character $\chi_{\lambda_i}$와 $\mathfrak{t}$ 위에 정의된 linear functional $\lambda_i$ 사이의 일대일 대응이 있는 것을 안다. 
+을 통해 $T$의 character $\rchi_{\lambda_i}$와 $\mathfrak{t}$ 위에 정의된 linear functional $\lambda_i$ 사이의 일대일 대응이 있는 것을 안다. 
 
-직관적으로 $t\mapsto e^{2\pi i\lambda_i(X)}$를 각속도 $\lambda_i(X)$를 갖는 각운동이라 생각할 수 있고, 이러한 관점을 도입하면 우리는 각각의 $X\in \mathfrak{t}$가 주어졌을 때, 이 방향으로의 각속도 $\lambda_i(X)$가 얼마인지를 통해 이 torus action을 설명할 수 있다는 것을 안다. 이 때 각각의 $\lambda_i$들을 우리는 *weight*라 부른다. 그럼 우리는 각각의 weight $\lambda_i$마다 적당한 $V_i$가 존재하여, 이 위에서는 torus action이 $t\cdot v=\chi_{\lambda_i}(t)v$로 작동하는 것을 안다. 이러한 $V_i$를 *weight space*라 부른다. 
+
+직관적으로 $t\mapsto e^{2\pi i\lambda_i(X)}$를 각속도 $\lambda_i(X)$를 갖는 각운동이라 생각할 수 있고, 이러한 관점을 도입하면 우리는 각각의 $X\in \mathfrak{t}$가 주어졌을 때, 이 방향으로의 각속도 $\lambda_i(X)$가 얼마인지를 통해 이 torus action을 설명할 수 있다는 것을 안다. 이 때 각각의 $\lambda_i$들을 우리는 *weight*라 부른다. 그럼 우리는 각각의 weight $\lambda_i$마다 적당한 $V_i$가 존재하여, 이 위에서는 torus action이 $t\cdot v=\rchi_{\lambda_i}(t)v$로 작동하는 것을 안다. 이러한 $V_i$를 *weight space*라 부른다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> 특별한 예시로, 1차원 torus
+<ins id="ex7">**예시 7**</ins> 특별한 예시로, 1차원 torus
 
 $$S^1\cong T \cong \mathbb{R}/\mathbb{Z}$$
 
@@ -214,7 +176,7 @@ $$\begin{pmatrix}e^{4\pi i t}&0\\0&e^{-2\pi i t}\end{pmatrix}$$
 
 이 action의 weight space는 $\span(e_1), \span(e_2)$임이 자명하며, 가령 $\span(e_1)$에 해당하는 weight는 다음의 식
 
-$$\chi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $X\in \mathfrak{t}$}$$
+$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $X\in \mathfrak{t}$}$$
 
 을 만족하는 linear functional $\lambda_1:\mathfrak{t}\rightarrow \mathbb{C}$으로 주어진다. 이는 당연히 $1\in \mathbb{R}$을 $2$로 보내는 $\lambda_1(t)=2t$에 의해 정의되며 따라서 이 weight space에 해당하는 weight는 (약간의 abuse of notation을 통해) $2$라 할 수 있다. 이 때 $\lambda$가 위의 식을 만족하기 위해서는, $e^{2\pi i}=1$이므로, 반드시 $\lambda(1)\in \mathbb{\mathbb{Z}}$여야 한다. 
 
@@ -238,9 +200,9 @@ $$e^{2\pi i t}\cdot(z_1, z_2)=(e^{4\pi i t}z_1, e^{4\pi i t} z_2)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible character $\chi_\lambda: T \rightarrow S^1$와 그에 해당하는 linear functional $\lambda:\mathfrak{t}\rightarrow\mathbb{C}$에 대하여, $\lambda$가 $V$의 *weight*이라는 것은 다음 집합
+<ins id="def8">**정의 8**</ins> Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible character $\rchi_\lambda: T \rightarrow S^1$와 그에 해당하는 linear functional $\lambda:\mathfrak{t}\rightarrow\mathbb{C}$에 대하여, $\lambda$가 $V$의 *weight*이라는 것은 다음 집합
 
-$$V_\lambda=\left\{v\in V\mid t\cdot v=\chi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
+$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
 이 nontrivial인 것이다. 이 때, $V_\lambda$를 $\lambda$의 *weight space*라 하며, decomposition
 
@@ -249,6 +211,19 @@ $$V=\bigoplus_\lambda V_\lambda$$
 을 $V$의 *weight decomposition*이라 부른다. 
 
 </div>
+
+이제 adjoint representation $\Ad: G\rightarrow \Aut(\mathfrak{g})$를 통해 $\mathfrak{g}$를 $G$-module로 보고, $G$의 maximal torus $T$로 이를 제한하면 정확히 $T$에 해당하는 $G$의 Lie subalgebra가 Cartan subalgebra $\mathfrak{h}$의 역할을 하고 
+
+
+## 나중
+
+
+Proo
+
+## 원환면의 작용
+
+
+
 
 특히 이를 위의 상황에 적용하면, 우리는 임의의 simply connected compact Lie group $G$와 $G$의 한 maximal torus $T$에 대하여, adjoint representation $\Ad: G\rightarrow \Aut(\mathfrak{g})$를 $T$로 제한하여 $\mathfrak{g}$를 $T$-module로 볼 수 있다. 그럼 이를 통해 $T$의 representation $\Ad\vert_T: T \rightarrow \Aut(\mathfrak{g})$를 얻고, 따라서 $\mathfrak{g}$의 weight decomposition을 얻게 될 것이다. 
 
