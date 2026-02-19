@@ -62,13 +62,13 @@ $$L\circ \rho$$
 2. Compact group $G$의 Hilbert space $H$로의 unitary representation $\rho:G\rightarrow \Aut(H)$가 주어진다면, $H$는 $G$의 finite-dimensional irreducible unitary representation들의 orthogonal direct sum으로 쓸 수 있다. 
 3. 특별히 위의 결과를 $H=L^2(G)$에 적용하면, 다음의 decomposition
     
-    $$L^2(G)=\widehat{\bigoplus_{\pi\in\mathrm{Irr}(G)}}E_\pi^{\oplus \dim E_\pi}$$
+    $$L^2(G)=\mathop{\widehat{\bigoplus}}_{\pi\in\mathrm{Irr}(G)}E_\pi^{\oplus \dim E_\pi}$$
 
     이 성립한다. 
 
 </div>
 
-우리는 이러한 결과를 사용하지는 않을 것이므로 별도의 증명은 없이 넘어가지만, 어쨌든 표현론의 도구들이 Lie group들을 살펴보는 데에 큰 도움이 된다는 것은 확인할만하다. 
+우리는 이러한 결과를 사용하지는 않을 것이므로 별도의 증명은 없이 넘어가지만, 어쨌든 표현론의 도구들이 Lie group들을 살펴보는 데에 큰 도움이 된다는 것은 확인할 만하다. 
 
 
 
