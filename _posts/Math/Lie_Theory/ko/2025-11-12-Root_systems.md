@@ -45,17 +45,19 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 물론 이를 위해서는 $\delta_x$ 함수를 잘 정의하고, 함수공간을 적당한 공간으로 일반화하는 작업을 거쳐야 하지만 이러한 작업은 우리의 현재 목적이 아니므로 생략하기로 혼다. 중요한 것은 리 군의 표현론 또한 유한군의 표현론과 같은 방법론을 통해 접근할 수 있다는 것이다. 
 
+## Adjoint representation
+
 선형대수학에서 아주 강력한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 유한군이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 
 
 반대로 Lie group으로 일반화를 하며 얻어지는 좋은 점도 있는데, Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다는 것이다. [§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19) 이는 각각의 $g\in G$가 정의하는 conjugation $h\mapsto ghg^{-1}$의 $h=e$에서의 미분이며, 만일 $G$와 $\Aut(\mathfrak{g})$를 모두 Lie group으로 보아 이를 미분한다면 우리는 $\mathfrak{g}$의 representation
 
 $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
-을 얻을 수 있었다. 이 때 $\ad$는 명시적으로 
+을 얻을 수 있었다. 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $\mathfrak{g}$를 reresentation space $\mathfrak{g}$를 이용하여 표현한다 생각할 수 있고, 이 때 $\ad$는 명시적으로 
 
 $$\ad(X)Y=[X,Y]$$
 
-을 통해 계산해줄 수 있었다. 이제 우리는 다음을 정의한다. 
+을 통해 계산해줄 수 있다. 
 
 <div class="definition" markdown="1">
 
