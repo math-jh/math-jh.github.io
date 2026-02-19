@@ -43,33 +43,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 이 글에서 중요한 역할을 했던 것은 group $G$가 유한군이라는 사실이었다. 가령 $G$의 모든 원소에 대해 평균을 내는 아이디어는 이러한 사실을 바탕으로 했다. 이를 Lie group으로 일반화하기 위해서는 $G$에 어떠한 종류의 유한성을 강제해야 한다. 
 
-우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 이제 이 Haar measure에 대한 $L^2$ space $L^2(G)$를 생각하면 우리는 다음의 식
-
-$$(g\cdot f)(x)=f(g^{-1}x)$$
-
-을 통해 $G$의 $L^2(G)$ 위에서의 action을 정의할 수 있으며, 이는 Haar measure의 translation invariance에 의해 unitary representation이 된다. 한편 우리가 character를 정의할 때, $\rho(g)$의 trace를 사용했는데, 이는 *matrix coefficient*
-
-$$L\circ \rho$$
-
-으로 일반화한다. 여기서 $\rho:G\rightarrow \Aut(V)$는 representation이고 $L:\Aut(V)\rightarrow \mathbb{C}$는 linear functional이다. 그럼 다음이 성립한다. 
-
-
-<div class="proposition" markdown="1">
-
-<ins id="thm1">**정리 1 (Peter-Weyl)**</ins> 다음이 성립한다. 
-
-1. $G$의 matrix coefficient들은 $G$ 위에서 정의된 continuous complex function들의 공간 $C(G)$에서 dense하다. 
-2. Compact group $G$의 Hilbert space $H$로의 unitary representation $\rho:G\rightarrow \Aut(H)$가 주어진다면, $H$는 $G$의 finite-dimensional irreducible unitary representation들의 orthogonal direct sum으로 쓸 수 있다. 
-3. 특별히 위의 결과를 $H=L^2(G)$에 적용하면, 다음의 decomposition
-    
-    $$L^2(G)=\widehat{\bigoplus_{\pi\in\mathrm{Irr}(G)}}E_\pi^{\oplus \dim E_\pi}$$
-
-    이 성립한다. 
-
-</div>
-
-우리는 이러한 결과를 사용하지는 않을 것이므로 별도의 증명은 없이 넘어가지만, 어쨌든 표현론의 도구들이 Lie group들을 살펴보는 데에 큰 도움이 된다는 것은 확인할 만하다. 
-
+우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 물론 이를 위해서는 $\delta_x$ 함수를 잘 정의하고, 함수공간을 적당한 공간으로 일반화하는 작업을 거쳐야 하지만 이러한 작업은 우리의 현재 목적이 아니므로 생략하기로 혼다. 중요한 것은 
 
 
 넣어야 할것 finite grp rep 에서 Lie grp rep으로
