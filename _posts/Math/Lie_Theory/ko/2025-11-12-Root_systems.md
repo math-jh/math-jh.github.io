@@ -99,11 +99,11 @@ Killing form이 symmetric이고, bilnear인 것은 정의에 의해 자명하다
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Semisimple Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{h}$가 $\mathfrak{g}$의 *Cartan subalgebra<sub>카르탕 부분대수</sub>*라는 것은 $\mathfrak{h}$가 abelian이며, $\ad(H)$가 모든 $H\in \mathfrak{h}$에 대하여 diagonalizable인 것이다. 
+<ins id="def5">**정의 5**</ins> Semisimple Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$의 *Cartan subalgebra<sub>카르탕 부분대수</sub>*는 $\ad(H)$가 모든 $H\in \mathfrak{h}$에 대하여 diagonalizable이도록 하는 abelian subalgebra $\mathfrak{h}$ 중 maximal인 것이다. 
 
 </div>
 
-두 diagonalizable operator $A,B$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $\mathfrak{h}$의 모든 원소들은 
+두 diagonalizable operator $A,B$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $\mathfrak{h}$의 모든 원소들은 simultaneously diagonalizable이다. 이제 
 
 
 ## 나중
