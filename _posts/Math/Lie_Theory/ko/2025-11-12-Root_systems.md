@@ -103,8 +103,13 @@ Killing form이 symmetric이고, bilnear인 것은 정의에 의해 자명하다
 
 </div>
 
-두 diagonalizable operator $A,B$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $\mathfrak{h}$의 모든 원소들은 simultaneously diagonalizable이며, 이들은 $\mathfrak{g}$ 위에서 
+두 diagonalizable operator $A,B$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $\mathfrak{h}$의 모든 원소들은 simultaneously diagonalizable이다. 
 
+이제 simultaneously diagonalizable operator들의 family $\\{H\in \mathfrak{h}\\}$를 사용하여 $\mathfrak{g}$를 분해하자. 만일 simultaneously diagonalizable operator들의 <em_ko>유한한</em_ko> family $A\_1,\ldots, A\_n$이 주어졌다면, simultaneous eigenspace로 공간을 분해하는 것은 
+
+$$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v_\alpha\in V$ for all $i$}$$
+
+와 같은 형태이지만, 현재 우리 상황에서는 $\mathfrak{h}$가 벡터공간이므로 linear functional $\mathfrak{\alpha}: \mathfrak{h}\rightarrow \mathbb{C}$를 택하여 
 
 ## 나중
 
