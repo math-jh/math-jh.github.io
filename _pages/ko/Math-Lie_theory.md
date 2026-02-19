@@ -1,7 +1,7 @@
 ---
 title: "리 군론"
 layout: archive_custom
-permalink: /ko/Lie_theory/
+permalink: /ko/lie_theory/
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
