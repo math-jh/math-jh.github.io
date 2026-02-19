@@ -212,60 +212,15 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 </div>
 
-이제 adjoint representation $\Ad: G\rightarrow \Aut(\mathfrak{g})$를 통해 $\mathfrak{g}$를 $G$-module로 보고, $G$의 maximal torus $T$로 이를 제한하면 정확히 $T$에 해당하는 $G$의 Lie subalgebra가 Cartan subalgebra $\mathfrak{h}$의 역할을 하고 
+이제 adjoint representation $\Ad: G\rightarrow \Aut(\mathfrak{g})$를 통해 $\mathfrak{g}$를 $G$-module로 보고, $G$의 maximal torus $T$로 이를 제한하면 정확히 $T$에 해당하는 $G$의 Lie subalgebra가 Cartan subalgebra $\mathfrak{h}$의 역할을 하고, 따라서 이 경우에 weight decomposition이 곧 위에서 살펴본 root space decomposition이 된다는 것을 안다. 
 
+## 근계
 
-## 나중
-
-
-Proo
-
-## 원환면의 작용
-
-
-
-
-특히 이를 위의 상황에 적용하면, 우리는 임의의 simply connected compact Lie group $G$와 $G$의 한 maximal torus $T$에 대하여, adjoint representation $\Ad: G\rightarrow \Aut(\mathfrak{g})$를 $T$로 제한하여 $\mathfrak{g}$를 $T$-module로 볼 수 있다. 그럼 이를 통해 $T$의 representation $\Ad\vert_T: T \rightarrow \Aut(\mathfrak{g})$를 얻고, 따라서 $\mathfrak{g}$의 weight decomposition을 얻게 될 것이다. 
-
-한편 우리는 adjoint action $\Ad$의 명시적인 정의로부터, $T$가 trivial하게 act하는 $\mathfrak{g}$의 subspace를 정확히 알고 있다. 즉 $T$의 Lie algebra $\mathfrak{t}$를 생각하면, $T$가 abelian이라는 사실로부터 $\mathfrak{t}$ 위에서는 이 action이 identity가 되는 것을 안다. 이 때 identity에 해당하는 linear functional은 zero map이므로, 우리는 다음의 decomposition 
-
-$$\mathfrak{g}=\mathfrak{g}_0\oplus\bigoplus_{\alpha\neq 0}\mathfrak{g}_\alpha\tag{2}$$
-
-를 얻는다. 
-
-이제 우리는 앞선 논의를 Lie algebra의 언어로 바꾸어 쓸 것이다. 그 전에 우리의 관심을 다소 제한시킬 필요가 있다. 우선 임의의 Lie algebra $\mathfrak{g}$가 *semisimple*이라는 것은 $\mathfrak{g}$가 simple Lie algebra들의 direct sum이라는 것이며, 여기서 simple Lie algebra는 그 ideal이 $0$과 자기자신 뿐인 non-abelian Lie algebra를 의미한다. 만일 $\mathfrak{g}$가 semisimple Lie algebra라면, 다음의 식
-
-$$( X,Y)=\tr(\ad_X\ad_Y)$$
-
-으로 정의한 $(-,-): \mathfrak{g}\times\mathfrak{g}\rightarrow \mathbb{K}$이 non-degenerate이며 그 역도 성립한다는 것을 보일 수 있다. 그럼 우리는 이 "내적"으로부터 weight들의 기하학에 대해 살펴볼 수 있게 된다. 
-
-따라서 $\mathfrak{g}$가 semisimple Lie algebra라 하자. 그럼 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 *Cartan subalgebra*라는 것은 $\mathfrak{h}$가 maximal abelian Lie algebra이며, 각각의 $H\in \mathfrak{h}$에 대하여 $\ad_H$가 diagonalizable인 것이다. 이는 semisimple Lie algebra를 가지는 compact Lie group $G$로 한정한다면, Lie correspondance에 의하여 정확히 $G$의 maximal torus의 Lie algebra에 해당하는 것이다. 
-
-이를 바탕으로 위의 decomposition (2)를 살펴보면 $\mathfrak{g}\_0$은 정확히 Cartan subalgebra $\mathfrak{h}$에 해당하는 부분이 되며 $\mathfrak{g}\_\alpha$들 위에서는 torus $T$가 act하므로 그 미분 $\ad$를 통해 $\mathfrak{h}$가 act한다. 이제 다음을 정의하자. 
+이제 우리는 [정의 6](#def6)에서 $\Phi$의 원소들을 *root*라고 불렀던 이유를 설명한다. 이는 다음의 더 일반적인 정의에서 오는 것이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Semisimple Lie algebra $\mathfrak{g}$와 $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$에 대하여, 
-
-$$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\neq 0\right\}$$
-
-의 원소들을 $\mathfrak{g}$의 *root*라 부른다. 이 때 
-
-$$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
-
-이다. ([§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19))
-
-</div>
-
-즉, semisimple Lie group $G$와 $G$의 maximal torus $T$, 그리고 $T$의 Lie algebra $\mathfrak{t}$를 생각하면, $T$의 adjoint action의 weight decomposition은 다음의 root space decomposition 
-
-$$\mathfrak{g}=\mathfrak{t}\oplus \bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha$$
-
-을 준다. 우리가 이들을 weight 대신 별도로 root라 부르는 이유는 위에서 언급한 것과 같이 $\mathfrak{g}$ 위에 잘 정의된 내적을 통해 이들이 *root system*을 이루기 때문이다. 
-
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> 유한차원 벡터공간 $E$와 그 위에 정의된 inner product $( -,-)$을 고정하자. $E$의 non-zero vector들의 유한한 집합 $\Phi$가 *root system*이라는 것은 다음의 조건들이 만족되는 것이다. 
+<ins id="def9">**정의 9**</ins> 유한차원 벡터공간 $E$와 그 위에 정의된 inner product $( -,-)$을 고정하자. $E$의 non-zero vector들의 유한한 집합 $\Phi$가 *root system*이라는 것은 다음의 조건들이 만족되는 것이다. 
 
 1. $\Phi$의 원소들이 $E$를 span한다. 
 2. 만일 $\alpha\in \Phi$이고 $c\in \mathbb{R}$이라면 $c\alpha\in \Phi$이기 위해서는 $c=\pm 1$이어야 한다. 
@@ -282,16 +237,20 @@ $$\mathfrak{g}=\mathfrak{t}\oplus \bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha
 
 </div>
 
-
-Semisimple Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하자. 그럼 Killing form $(-,-): \mathfrak{h}\times \mathfrak{h}\rightarrow \mathbb{K}$으로부터 canonical isomorphism 
+이제 semisimple Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하자. 그럼 Killing form $(-,-): \mathfrak{h}\times \mathfrak{h}\rightarrow \mathbb{K}$으로부터 canonical isomorphism 
 
 $$\mathfrak{h}\rightarrow\mathfrak{h}^\ast: v\mapsto (-,v)$$
 
-이 존재하며 이를 통해 $\mathfrak{h}^\ast$를 Euclidean space로 볼 수 있다. 명시적으로, 만일 $\alpha,\beta\in \mathfrak{h}^\ast$이고 이에 대응되는 $\mathfrak{h}$의 원소들이 $v_\alpha,v_\beta$라 한다면 
+이 존재한다.  이를 통해 $\mathfrak{h}^\ast$를 Euclidean space로 볼 수 있다. 명시적으로, 만일 $\alpha,\beta\in \mathfrak{h}^\ast$이고 이에 대응되는 $\mathfrak{h}$의 원소들이 $v_\alpha,v_\beta$라 한다면 
 
 $$(\alpha,\beta)=(v_\alpha,v_\beta)=\beta(v_\alpha)$$
 
-로 주어진다. 그럼 이제 다음이 성립한다. 
+로 주어진다.
+
+## 나중
+
+
+S 그럼 이제 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
