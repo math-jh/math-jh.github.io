@@ -241,11 +241,23 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 $$\mathfrak{h}\rightarrow\mathfrak{h}^\ast: v\mapsto (-,v)$$
 
-이 존재한다.  이를 통해 $\mathfrak{h}^\ast$를 Euclidean space로 볼 수 있다. 명시적으로, 만일 $\alpha,\beta\in \mathfrak{h}^\ast$이고 이에 대응되는 $\mathfrak{h}$의 원소들이 $v_\alpha,v_\beta$라 한다면 
+이 존재한다.  이를 통해 $\mathfrak{h}^\ast$에 Killing form을 옮겨주자. 명시적으로, 만일 $\alpha,\beta\in \mathfrak{h}^\ast$이고 이에 대응되는 $\mathfrak{h}$의 원소들이 $v_\alpha,v_\beta$라 한다면 
 
 $$(\alpha,\beta)=(v_\alpha,v_\beta)=\beta(v_\alpha)$$
 
-로 주어진다.
+로 주어진다. 그럼 다음이 성립한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm10">**정리 10**</ins> Root space decomposition
+
+$$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
+
+에 대하여, 다음이 성립한다.
+
+1. 
+
+</div>
 
 ## 나중
 
