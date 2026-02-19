@@ -59,6 +59,10 @@ $$\ad(X)Y=[X,Y]$$
 
 을 통해 계산해줄 수 있다. 
 
+임의의 
+
+
+
 <div class="definition" markdown="1">
 
 <ins id="def1">**정의 1**</ins> Lie algebra $\mathfrak{g}$이 *simple<sub>단순</sub>*이라는 것은 $\mathfrak{g}$가 non-abelian Lie algebra이고 $\mathfrak{g}$의 ideal이 $0$과 자기자신 뿐인 것이다. Simple Lie algebra들의 direct sum으로 쓸 수 있는 Lie algebra를 *semisimple*이라 부른다. 
