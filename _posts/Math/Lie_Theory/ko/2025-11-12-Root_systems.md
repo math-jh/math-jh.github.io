@@ -241,7 +241,19 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 $$\span_\mathbb{R}(\Phi)=\left\{\sum_{\alpha\in\Phi}a_\alpha\alpha\mid a_\alpha\in\mathbb{R}\right\}$$
 
-을 생각하면, 이는 자연스럽게 $\mathbb{R}$-벡터공간이 된다. 이제 
+을 생각하면, 이는 자연스럽게 $\mathbb{R}$-벡터공간이 된다. 한편 $\mathfrak{h}$ 위에 정의된 Killing form $(-,-)$이 non-degenerate이므로 다음의 isomorphism
+
+$$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto (H, -)$$
+
+이 존재한다. 따라서 각각의 root $\alpha\in\Phi\subset\mathfrak{h}^\ast$에 identify되는 $v_\alpha\in\mathfrak{h}$들이 존재한다. 명시적으로 이는 다음의 식
+
+$$\alpha(H)=(v_\alpha, H)\qquad\text{for all $H\in\mathfrak{h}$}$$
+
+을 만족하는 유일한 $\mathfrak{h}$의 원소이다. 이제 
+
+$$H_\alpha=\frac{2}{(v_\alpha,v_\alpha)}v_\alpha$$
+
+라 하자. 
 
 
 
