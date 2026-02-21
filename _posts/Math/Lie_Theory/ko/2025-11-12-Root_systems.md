@@ -129,7 +129,24 @@ $$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for al
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi}\mathfrak{g}_\alpha$$
 
-을 얻는다. 
+을 얻는다. 이들이 다음 명제를 만족하는 것은 자명하다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7**</ins> Seimisimple Lie algebra $\mathfrak{g}$, Cartan subalgebra $\mathfrak{h}$와 그 root decomposition 
+
+$$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
+
+을 생각하자. 그럼 다음이 성립한다.
+
+1. 임의의 $\alpha,\beta\in \Phi$에 대하여 $[\mathfrak{g}\_\alpha,\mathfrak{g}\_\beta]\subseteq \mathfrak{g}\_{\alpha+\beta}$가 성립하며, 등식은 $\alpha+\beta\neq 0$일 때 성립한다. 
+2. 임의의 $\alpha\in\Phi$에 대하여, $[\mathfrak{g}\_\alpha,\mathfrak{g}_{-\alpha}]\oplus \mathfrak{g}\_{-\alpha}\oplus \mathfrak{g}\_\alpha\cong \sl\_2$이 성립한다. 
+3. 임의의 $\alpha\in\Phi$에 대하여, $\dim \mathfrak{g}\_\alpha=1$이다.
+4. 임의의 $\alpha\in\Phi$에 대하여, $\mathfrak{g}_{2\alpha}\not\in\Phi$이다. 
+5. $\mathfrak{g}$ 위에 정의된 Killing form을 $\mathfrak{h}$로 제한한 것은 non-degenerate이다. 또한, $\alpha+\beta\neq 0$이라면 $\mathfrak{g}\_\alpha$와 $\mathfrak{g}\_\beta$가 orthogonal이다. 
+
+
+</div>
 
 ## 원환면의 작용
 
@@ -215,6 +232,8 @@ $$V=\bigoplus_\lambda V_\lambda$$
 이제 adjoint representation $\Ad: G\rightarrow \Aut(\mathfrak{g})$를 통해 $\mathfrak{g}$를 $G$-module로 보고, $G$의 maximal torus $T$로 이를 제한하면 정확히 $T$에 해당하는 $G$의 Lie subalgebra가 Cartan subalgebra $\mathfrak{h}$의 역할을 하고, 따라서 이 경우에 weight decomposition이 곧 위에서 살펴본 root space decomposition이 된다는 것을 안다. 
 
 ## 예시
+
+
 
 
 
