@@ -264,6 +264,8 @@ $$[H,E]=2E,\quad [H,F]=-2F,\quad [E,F]=H$$
 
 을 통해 얻어진다. 
 
+우리는 임의의 $\sl(2;\mathbb{C})$-representation이 irreducible representation들의 direct sum으로 나타난다는 것을 보인다. 이는 만일 
+
 ## 근계
 
 이제 우리는 [정의 6](#def6)에서 $\Phi$의 원소들을 *root*라고 불렀던 이유를 설명한다. 이는 다음의 더 일반적인 정의에서 오는 것이다. 
