@@ -237,7 +237,22 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 </div>
 
-이제 semisimple Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하자. 그럼 Killing form $(-,-): \mathfrak{h}\times \mathfrak{h}\rightarrow \mathbb{K}$으로부터 canonical isomorphism 
+이제 semisimple Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하고, root들의 집합 $\Phi\subset\mathfrak{h}^\ast$를 생각하자. $\Phi$의 real span
+
+$$\span_\mathbb{R}(\Phi)=\left\{\sum_{\alpha\in\Phi}a_\alpha\alpha\mid a_\alpha\in\mathbb{R}\right\}$$
+
+을 생각하면, 
+
+
+
+
+
+
+
+
+
+
+자. 그럼 Killing form $(-,-): \mathfrak{h}\times \mathfrak{h}\rightarrow \mathbb{K}$으로부터 canonical isomorphism 
 
 $$\mathfrak{h}\rightarrow\mathfrak{h}^\ast: v\mapsto (-,v)$$
 
@@ -245,7 +260,12 @@ $$\mathfrak{h}\rightarrow\mathfrak{h}^\ast: v\mapsto (-,v)$$
 
 $$(\alpha,\beta)=(v_\alpha,v_\beta)=\beta(v_\alpha)$$
 
-로 주어진다. 그럼 다음이 성립한다. 
+로 주어진다.
+
+
+
+
+
 
 <div class="proposition" markdown="1">
 
