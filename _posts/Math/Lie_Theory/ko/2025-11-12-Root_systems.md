@@ -148,21 +148,24 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 을 생각하고, $K(-,-)$이 $\mathfrak{g}$ 위의 Killing form이라 하자. 다음이 성립한다.
 
 1. 임의의 $\alpha,\beta\in \Phi$에 대하여 $[\mathfrak{g}\_\alpha,\mathfrak{g}\_\beta]\subseteq \mathfrak{g}\_{\alpha+\beta}$가 성립한다. 
-2. 만일 $\alpha+\beta\neq 0$이라면 $\mathfrak{g}_\alpha$와 $\mathfrak{g}_\beta$는 $K$에 대해 orthogonal이다. 
-3. 
+2. 만일 $\alpha+\beta\neq 0$이라면 $\mathfrak{g}\_\alpha$와 $\mathfrak{g}\_\beta$는 $K$에 대해 orthogonal이다. 
+3. Killing form을 $\mathfrak{g}\_\alpha\otimes \mathfrak{g}\_{-\alpha}$로 제한하면 nondegenerate pairing이 된다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. 임의의 $X\in \mathfrak{g}_\alpha, Y\in \mathfrak{g}_\beta$, $H\in \mathfrak{h}$에 대하여, 
+1. 임의의 $X\in \mathfrak{g}\_\alpha, Y\in \mathfrak{g}\_\beta$, $H\in \mathfrak{h}$에 대하여, 
     
     $$[H,[X,Y]]=[[H,X],Y]+[X,[H,Y]]=[\alpha(H)X,Y]+[X,\beta(H)Y]=(\alpha+\beta)(H)[X,Y]$$
 
     이 성립한다. 
-2. 임의의 $X\in \mathfrak{g}_\alpha, Y\in \mathfrak{g}_\beta$, $H\in \mathfrak{h}$에 대하여, $K$의 $\ad$-invariance로부터
+2. 임의의 $X\in \mathfrak{g}\_\alpha, Y\in \mathfrak{g}\_\beta$, $H\in \mathfrak{h}$에 대하여, $K$의 $\ad$-invariance로부터
     
-    $$K([H,X],Y)=K(H,[X,Y])$$
+    $$0=K([H,X],Y)+K(X,[H,Y])=K(\alpha(H),X)+K(X,\beta(H)Y)=(\alpha+\beta)(H)K(X,Y)$$
+
+    을 얻는다. 만일 $\alpha+\beta\neq 0$이라면 이 식이 항상 성립하기 위해서는 $K(X,Y)=0$이 항상 성립해야 한다.
+3. Killing form은 $\mathfrak{g}$에서는 non-degenerate이므로, 임의의 $X\in \mathfrak{g}\_\alpha$가 주어졌을 때마다 $K(X,Z)\neq 0$이도록 하는 $Z\in \mathfrak{g}$가 존재한다. 보여야 할 것은 $Z\in \mathfrak{g}\_{-\alpha}$이도록 할 수 있다는 것이다. 
 
 </details>
 
