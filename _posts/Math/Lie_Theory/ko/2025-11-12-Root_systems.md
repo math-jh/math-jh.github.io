@@ -165,10 +165,9 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
     $$0=K([H,X],Y)+K(X,[H,Y])=K(\alpha(H),X)+K(X,\beta(H)Y)=(\alpha+\beta)(H)K(X,Y)$$
 
     을 얻는다. 만일 $\alpha+\beta\neq 0$이라면 이 식이 항상 성립하기 위해서는 $K(X,Y)=0$이 항상 성립해야 한다.
-3. Killing form은 $\mathfrak{g}$에서는 non-degenerate이므로, 임의의 $X\in \mathfrak{g}\_\alpha$가 주어졌을 때마다 $K(X,Z)\neq 0$이도록 하는 $Z\in \mathfrak{g}$가 존재한다. 보여야 할 것은 $Z\in \mathfrak{g}\_{-\alpha}$이도록 할 수 있다는 것이다. 
+3. Killing form은 $\mathfrak{g}$에서는 non-degenerate이므로, 임의의 $X\in \mathfrak{g}\_\alpha$가 주어졌을 때마다 $K(X,Z)\neq 0$이도록 하는 $Z\in \mathfrak{g}$가 존재한다. 보여야 할 것은 $Z\in \mathfrak{g}\_{-\alpha}$이도록 할 수 있다는 것이다. 이는 $Z$를 root decompose한 후 둘째 결과에 의해 $-\alpha$가 아닌 나머지 부분에 해당하는 성분들은 어차피 $X$와 pairing해봤자 $0$이 되기 때문에 자명하다.
 
 </details>
-
 
 ## 원환면의 작용
 
@@ -193,7 +192,7 @@ $$\rchi_{\lambda_i}(\exp(X))=e^{2\pi i \lambda_i(X)}\qquad\text{for all $X\in \m
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> 특별한 예시로, 1차원 torus
+<ins id="ex8">**예시 8**</ins> 특별한 예시로, 1차원 torus
 
 $$S^1\cong T \cong \mathbb{R}/\mathbb{Z}$$
 
@@ -239,7 +238,7 @@ $$e^{2\pi i t}\cdot(z_1, z_2)=(e^{4\pi i t}z_1, e^{4\pi i t} z_2)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible character $\rchi_\lambda: T \rightarrow S^1$와 그에 해당하는 linear functional $\lambda:\mathfrak{t}\rightarrow\mathbb{C}$에 대하여, $\lambda$가 $V$의 *weight*이라는 것은 다음 집합
+<ins id="def9">**정의 9**</ins> Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible character $\rchi_\lambda: T \rightarrow S^1$와 그에 해당하는 linear functional $\lambda:\mathfrak{t}\rightarrow\mathbb{C}$에 대하여, $\lambda$가 $V$의 *weight*이라는 것은 다음 집합
 
 $$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
@@ -253,11 +252,17 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 이제 adjoint representation $\Ad: G\rightarrow \Aut(\mathfrak{g})$를 통해 $\mathfrak{g}$를 $G$-module로 보고, $G$의 maximal torus $T$로 이를 제한하면 정확히 $T$에 해당하는 $G$의 Lie subalgebra가 Cartan subalgebra $\mathfrak{h}$의 역할을 하고, 따라서 이 경우에 weight decomposition이 곧 위에서 살펴본 root space decomposition이 된다는 것을 안다. 
 
-## 예시
+## 예시: $\sl(2;\mathbb{C})$
 
+우리는 [§리 군, ⁋명제 12](/ko/math/Lie_theory/Lie_groups#prop12)를 통해 $\sl(n;\mathbb{C})$는 $n\times n$ *traceless* 행렬들의 모임임을 안다. 따라서 $\sl(2;\mathbb{C})$는 다음의 세 원소를 basis로 갖는다. 
 
+$$H=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad E=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad F=\begin{pmatrix}0&0\\1&0\end{pmatrix}$$
 
+따라서 $\sl(2;\mathbb{C})$의 곱셈구조는 다음의 commutation relation들
 
+$$[H,E]=2E,\quad [H,F]=-2F,\quad [E,F]=H$$
+
+을 통해 얻어진다. 
 
 ## 근계
 
