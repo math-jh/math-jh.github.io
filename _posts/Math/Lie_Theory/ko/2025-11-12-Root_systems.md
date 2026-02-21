@@ -237,11 +237,11 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 </div>
 
-이제 semisimple Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하고, root들의 집합 $\Phi\subset\mathfrak{h}^\ast$를 생각하자. $\Phi$의 real span
+이제 semisimple complex Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하고, root들의 집합 $\Phi\subset\mathfrak{h}^\ast$를 생각하자. $\Phi$의 real span
 
 $$\span_\mathbb{R}(\Phi)=\left\{\sum_{\alpha\in\Phi}a_\alpha\alpha\mid a_\alpha\in\mathbb{R}\right\}$$
 
-을 생각하면, 
+을 생각하면, 이는 자연스럽게 $\mathbb{R}$-벡터공간이 된다. 이제 
 
 
 
