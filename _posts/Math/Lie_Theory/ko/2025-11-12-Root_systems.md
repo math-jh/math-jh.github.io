@@ -214,6 +214,10 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 이제 adjoint representation $\Ad: G\rightarrow \Aut(\mathfrak{g})$를 통해 $\mathfrak{g}$를 $G$-module로 보고, $G$의 maximal torus $T$로 이를 제한하면 정확히 $T$에 해당하는 $G$의 Lie subalgebra가 Cartan subalgebra $\mathfrak{h}$의 역할을 하고, 따라서 이 경우에 weight decomposition이 곧 위에서 살펴본 root space decomposition이 된다는 것을 안다. 
 
+## 예시
+
+
+
 ## 근계
 
 이제 우리는 [정의 6](#def6)에서 $\Phi$의 원소들을 *root*라고 불렀던 이유를 설명한다. 이는 다음의 더 일반적인 정의에서 오는 것이다. 
@@ -241,19 +245,23 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 $$\span_\mathbb{R}(\Phi)=\left\{\sum_{\alpha\in\Phi}a_\alpha\alpha\mid a_\alpha\in\mathbb{R}\right\}$$
 
-을 생각하면, 이는 자연스럽게 $\mathbb{R}$-벡터공간이 된다. 한편 $\mathfrak{h}$ 위에 정의된 Killing form $(-,-)$이 non-degenerate이므로 다음의 isomorphism
+을 생각하면, 이는 자연스럽게 $\mathbb{R}$-벡터공간이 된다. 한편 $\mathfrak{h}$ 위에 정의된 Killing form $K(-,-)$이 non-degenerate이므로 다음의 isomorphism
 
-$$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto (H, -)$$
+$$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
 이 존재한다. 따라서 각각의 root $\alpha\in\Phi\subset\mathfrak{h}^\ast$에 identify되는 $v_\alpha\in\mathfrak{h}$들이 존재한다. 명시적으로 이는 다음의 식
 
-$$\alpha(H)=(v_\alpha, H)\qquad\text{for all $H\in\mathfrak{h}$}$$
+$$\alpha(H)=K(v_\alpha, H)\qquad\text{for all $H\in\mathfrak{h}$}$$
 
 을 만족하는 유일한 $\mathfrak{h}$의 원소이다. 이제 
 
-$$H_\alpha=\frac{2}{(v_\alpha,v_\alpha)}v_\alpha$$
+$$H_\alpha=\frac{2}{K(v_\alpha,v_\alpha)}v_\alpha$$
 
-라 하자. 
+라 하고, 이를 사용하여 $\mathfrak{h}^\ast$ 위에 bilinear form
+
+$$(\alpha, \beta)=K(H_\alplha,H_\beta)$$
+
+로 정의하자. 
 
 
 
