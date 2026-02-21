@@ -51,7 +51,7 @@ Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rig
 
 $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
-을 얻을 수 있으며 [§리 군, ⁋정리 15](/ko/math/Lie_theory/Lie_groups#thm15)을 생각하면 본질적으로 $\Ad$가 알고있는 정보는 여기에 다 담겨있다고 생각해도 된다. . 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $\mathfrak{g}$를 reresentation space $\mathfrak{g}$를 이용하여 표현한다 생각할 수 있고, 이 때 $\ad$는 명시적으로 
+을 얻을 수 있으며 [§리 군, ⁋정리 15](/ko/math/Lie_theory/Lie_groups#thm15)을 생각하면 본질적으로 $\Ad$가 알고있는 정보는 여기에 다 담겨있다고 생각해도 된다. 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $\mathfrak{g}$를 reresentation space $\mathfrak{g}$를 이용하여 표현한다 생각할 수 있고, 이 때 $\ad$는 명시적으로 
 
 $$\ad(X)Y=[X,Y]$$
 
@@ -63,13 +63,21 @@ $$\ad(X)Y=[X,Y]$$
 
 <ins id="def2">**정의 2**</ins> Lie algebra $\mathfrak{g}$ 위에 다음의 식
 
-$$(X,Y)=\tr(\ad(X)\ad(Y))$$
+$$K(X,Y)=\tr(\ad(X)\ad(Y))$$
 
 으로 정의된 symmetric bilinear form을 *Killing form*이라 부른다. 
 
 </div>
 
-Killing form이 symmetric이고, $\mathbb{C}$-bilnear인 것은 정의에 의해 자명하다. 심지어 이 Killing form은 별도의 조작을 거치지 않아도 이미 $\mathfrak{g}$-action에 대해 invariang하기도 하다. 남아있는 것은 이것이 non-degenerate인 조건이다. 
+Killing form이 symmetric이고, $\mathbb{C}$-bilnear인 것은 정의에 의해 자명하다. 심지어 이 Killing form은 별도의 조작을 거치지 않아도 이미 $G$에 의한 adjoint action에 대해 invariant하기도 하다. 즉 다음 식
+
+$$K(\Ad_g(X_, \Ad_g(Y))=K(X,Y)$$
+
+이 성립하며, 이를 $g=e$에서 $Z$ 방향으로 미분하면 다음의 $\ad$-invariance
+
+$$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+K(X,[Z,Y])$$
+
+을 얻는다. 남아있는 것은 이것이 non-degenerate인 조건이다. 
 
 <div class="definition" markdown="1">
 
@@ -152,7 +160,9 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
     $$[H,[X,Y]]=[[H,X],Y]+[X,[H,Y]]=[\alpha(H)X,Y]+[X,\beta(H)Y]=(\alpha+\beta)(H)[X,Y]$$
 
     이 성립한다. 
-ㅆ. 
+2. 임의의 $X\in \mathfrak{g}_\alpha, Y\in \mathfrak{g}_\beta$, $H\in \mathfrak{h}$에 대하여, $K$의 $\ad$-invariance로부터
+    
+    $$K([H,X],Y)=K(H,[X,Y])$$
 
 </details>
 
