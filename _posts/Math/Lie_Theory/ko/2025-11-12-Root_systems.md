@@ -140,8 +140,8 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 을 생각하고, $K(-,-)$이 $\mathfrak{g}$ 위의 Killing form이라 하자. 다음이 성립한다.
 
 1. 임의의 $\alpha,\beta\in \Phi$에 대하여 $[\mathfrak{g}\_\alpha,\mathfrak{g}\_\beta]\subseteq \mathfrak{g}\_{\alpha+\beta}$가 성립한다. 
-2. 만일 $\alpha+\beta\neq 0$이라면, 
-
+2. 만일 $\alpha+\beta\neq 0$이라면 $\mathfrak{g}_\alpha$와 $\mathfrak{g}_\beta$는 $K$에 대해 orthogonal이다. 
+3. 
 
 </div>
 <details class="proof" markdown="1">
