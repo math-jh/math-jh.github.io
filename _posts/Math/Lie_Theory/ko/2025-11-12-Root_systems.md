@@ -69,7 +69,7 @@ $$(X,Y)=\tr(\ad(X)\ad(Y))$$
 
 </div>
 
-Killing form이 symmetric이고, bilnear인 것은 정의에 의해 자명하다. 심지어 이 Killing form은 별도의 조작을 거치지 않아도 이미 $\mathfrak{g}$-action에 대해 invariang하기도 하다. 남아있는 것은 이것이 non-degenerate인 조건이다. 
+Killing form이 symmetric이고, $\mathbb{C}$-bilnear인 것은 정의에 의해 자명하다. 심지어 이 Killing form은 별도의 조작을 거치지 않아도 이미 $\mathfrak{g}$-action에 대해 invariang하기도 하다. 남아있는 것은 이것이 non-degenerate인 조건이다. 
 
 <div class="definition" markdown="1">
 
@@ -262,6 +262,18 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 5. $\mathfrak{g}$ 위에 정의된 Killing form을 $\mathfrak{h}$로 제한한 것은 non-degenerate이다. 또한, $\alpha+\beta\neq 0$이라면 $\mathfrak{g}\_\alpha$와 $\mathfrak{g}\_\beta$가 orthogonal이다. 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 나중
 
