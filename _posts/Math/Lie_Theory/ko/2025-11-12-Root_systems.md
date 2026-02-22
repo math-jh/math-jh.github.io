@@ -71,7 +71,7 @@ $$K(X,Y)=\tr(\ad(X)\ad(Y))$$
 
 Killing form이 symmetric이고, $\mathbb{C}$-bilnear인 것은 정의에 의해 자명하다. 심지어 이 Killing form은 별도의 조작을 거치지 않아도 이미 $G$에 의한 adjoint action에 대해 invariant하기도 하다. 즉 다음 식
 
-$$K(\Ad_g(X_, \Ad_g(Y))=K(X,Y)$$
+$$K(\Ad_g(X), \Ad_g(Y))=K(X,Y)$$
 
 이 성립하며, 이를 $g=e$에서 $Z$ 방향으로 미분하면 다음의 $\ad$-invariance
 
@@ -359,64 +359,13 @@ $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
 $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
-으로 작용하고, $\mathfrak{h}$는 abelian이므로 이 위에는 $0$으로 작용한다. 즉 $\mathfrak{g}$의 root decomposition을 생각하면 $H$는 $\mathfrak{g}$ 위의 모든 원소에 대하여 $0$으로 작용하고, 이로부터 $H$는 $\mathfrak{g}$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 4](#prop4)에 의하여 
+으로 작용하고, $\mathfrak{h}$는 abelian이므로 이 위에는 $0$으로 작용한다. 즉 $\mathfrak{g}$의 root decomposition을 생각하면 $H$는 $\mathfrak{g}$ 위의 모든 원소에 대하여 $0$으로 작용하고, 이로부터 $H$는 $\mathfrak{g}$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 4](#prop4)에 의하여 $\mathfrak{g}$는 nonzero abelian ideal을 가질 수 없고, 특히 $Z(\mathfrak{g})=0$이 성립해야 하므로 $H=0$이어야 한다. 
 
-고, root들의 집합 $\Phi\subset\mathfrak{h}^\ast$를 생각하자. 
+이로부터 $\Phi$는 $\mathfrak{h}^\ast$을 span하는 것을 안다. 그러나 $\mathfrak{h}^\ast$는 complex vector space이고, 이 위에 정의된 Killing form 또한 positive definite라는 보장이 없으므로 inner product가 아니다. 이를 해소하기 위해 우리는 $\Phi$의 *real span*을 생각한다. 나중에 사용하기 위해 $\Phi$의 $\mathbb{Q}$-span과 함께 다음 공간들
 
+$$V_\mathbb{Q}=\span_\mathbb{Q}(\Phi),\qquad V=\span_\mathbb{R}(\Phi)=V_\mathbb{Q}\otimes_\mathbb{Q}\mathbb{R}$$
 
-그럼 $\Phi$는 $\mathfrak{h}^\ast$를 span한다. 만일 결론에 반하여 $\Phi$
-
-
-
-
-$\Phi$의 real span
-
-$$\span_\mathbb{R}(\Phi)=\left\{\sum_{\alpha\in\Phi}a_\alpha\alpha\mid a_\alpha\in\mathbb{R}\right\}$$
-
-을 생각하면, 이는 자연스럽게 $\mathbb{R}$-벡터공간이 된다. 한편  따라서 각각의 root $\alpha\in\Phi\subset\mathfrak{h}^\ast$에 identify되는 $v_\alpha\in\mathfrak{h}$들이 존재한다. 명시적으로 이는 다음의 식
-
-$$\alpha(H)=K(v_\alpha, H)\qquad\text{for all $H\in\mathfrak{h}$}$$
-
-을 만족하는 유일한 $\mathfrak{h}$의 원소이다. 이제 
-
-$$H_\alpha=\frac{2}{K(v_\alpha,v_\alpha)}v_\alpha$$
-
-라 하고, 이를 사용하여 $\mathfrak{h}^\ast$ 위에 bilinear form
-
-$$(\alpha, \beta)=K(H_\alpha,H_\beta)$$
-
-로 정의하자. 
-
-
-
-또, $\mathbb{Q}$-벡터공간 $V_\mathbb{Q}=\span_\mathbb{Q}(\Phi)$와 $\mathbb{R}$-벡터공간 $V=V_\mathbb{Q}\otimes_\mathbb{Q}\mathbb{R}$들, 그리고 "coroot들"로 생성되는 공간
-
-$$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{H_\alpha\mid\alpha\in\Phi\}\subset \mathfrak{h}$$
-
-을 생각한다. 우리의 주장은 $V$ 위에서 위의 식으로 정의한 $(-,-)$이 positive definite이고, 따라서 $V$가 Euclidean vector space가 된다는 것이다. 이를 위해 우선 임의의 root $\alpha,\beta\in\Phi$에 대하여 다음 식
-
-$$K(H_\alpha,H_\beta)=\tr(\ad H_\alpha\ad H_\beta)=\sum_{\gamma\in\Phi}\gamma(H_\alpha)\gamma(H_\beta)$$
-
-을 사용하여 Kiilling form을 계산하자. 그럼 이들을 ;ㄷ
-
-
-
-
-
-
-
-
-
-
-자. 그럼 Killing form $(-,-): \mathfrak{h}\times \mathfrak{h}\rightarrow \mathbb{K}$으로부터 canonical isomorphism 
-
-$$\mathfrak{h}\rightarrow\mathfrak{h}^\ast: v\mapsto (-,v)$$
-
-이 존재한다.  이를 통해 $\mathfrak{h}^\ast$에 Killing form을 옮겨주자. 명시적으로, 만일 $\alpha,\beta\in \mathfrak{h}^\ast$이고 이에 대응되는 $\mathfrak{h}$의 원소들이 $v_\alpha,v_\beta$라 한다면 
-
-$$(\alpha,\beta)=(v_\alpha,v_\beta)=\beta(v_\alpha)$$
-
-로 주어진다.
+을 생각하자. 
 
 
 
