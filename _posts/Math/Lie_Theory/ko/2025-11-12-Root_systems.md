@@ -452,7 +452,17 @@ $$V=\mathbb{C}h_\alpha\oplus\bigoplus_{k\in \mathbb{Z}\setminus\{0\}}\mathfrak{g
 
 </div>
 
-앞서 우리는 $\mathfrak{h}$이 $H_\alpha$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $h_\alpha$들도 $\mathfrak{h}$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $h_\alpha$들로 생성되는 *real* vector space를 생각할 것이며, 
+앞서 우리는 $\mathfrak{h}$이 $H_\alpha$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $h_\alpha$들도 $\mathfrak{h}$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $h_\alpha$들로 생성되는 *real* vector space
+
+$$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{h_\alpha\mid \alpha\in\Phi\}$$
+
+을 생각할 것이다. 그럼 이 위에서 두 basis $h_\alpha,h_\beta$에 대하여
+
+$$K(h_\alpha,h_\beta)=\tr_\mathfrak{g}(\ad h_\alpha\ad h_\beta)=\sum_{\gamma\in\Phi}\gamma(h_\alpha)\gamma(h_\beta)$$
+
+가 성립한다. 그런데 위의 보조정리에 의해 $\mathfrak{g}$를 $\sl_2$-representation으로 본다면, $\ad h_\alpha$에 대하여 root space $\mathfrak{g}_\gamma$는 
+
+$$\gamma(h_\alpha)=\frac{2}{K(\alpha,\alpha)}\beta(H_\alpha)=\frac{2}{K(\alpha,\alpha)}K(\alpha,\beta)=\frac{2(\alpha,\beta)}{(\alpha,\alpha)}$$
 
 
 나중에 사용하기 위해 $\Phi$의 $\mathbb{Q}$-span과 함께 다음 공간들
