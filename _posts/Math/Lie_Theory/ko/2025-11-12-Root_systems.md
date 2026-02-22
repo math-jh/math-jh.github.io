@@ -14,7 +14,6 @@ sidebar:
 date: 2025-11-12
 last_modified_at: 2025-11-12
 weight: 2
-read_time: true
 
 ---
 
