@@ -446,7 +446,7 @@ $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alp
 
 $$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $x\in \mathfrak{g}_\beta$}$$
 
-이므로 $\mathfrak{g}_\beta$는 이 action에 대한 weight $\beta(h_\alpha)$의 weight space이다. 그런데 앞서 살펴봤듯 $\sl_2$-representation의 weight은 항상 정수이므로, 이 값 $\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$은 반드시 정수여야 함을 안다. 
+이므로 $\mathfrak{g}\_\beta$는 이 action에 대한 weight $\beta(h\_\alpha)$의 weight space이다. 그런데 앞서 살펴봤듯 $\sl\_2$-representation의 weight은 항상 정수이므로, 이 값 $\beta(h\_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$은 반드시 정수여야 함을 안다. 또 $\sl_2$ representation의 임의의 weight subspace는 $1$차원이므로 각각의 $\mathfrak{g}_\beta$들도 $1$차원이다. 
 
 한편, 앞서 우리는 $\mathfrak{h}$이 $H_\alpha$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $h_\alpha$들도 $\mathfrak{h}$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $h_\alpha$들로 생성되는 *real* vector space
 
@@ -458,16 +458,9 @@ $$K(h_\alpha,h_\beta)=\tr_\mathfrak{g}(\ad h_\alpha\ad h_\beta)=\sum_{\gamma\in\
 
 가 성립한다. 우리는 앞서 이들 $\gamma(h_\alpha),\gamma(h_\beta)$들이 정수임을 증명하였으며 따라서 $K(h_\alpha,h_\beta)$도 그러하다. 즉, $\mathfrak{h}_\mathbb{R}$로 제한했을 때 $K$는 real-valued이며, 이제 임의의 $h\in \mathfrak{h}_\mathbb{R}$에 대하여
 
-$$K(h,h)=\tr(\ad_h\ad_h)\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
+$$K(h,h)=\tr(\ad_h\ad_h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
 
-을 주므로 우리는 $K$가 
-
-
-나중에 사용하기 위해 $\Phi$의 $\mathbb{Q}$-span과 함께 다음 공간들
-
-$$V_\mathbb{Q}=\span_\mathbb{Q}(\Phi),\qquad V=\span_\mathbb{R}(\Phi)=V_\mathbb{Q}\otimes_\mathbb{Q}\mathbb{R}$$
-
-을 생각하자. 각각의 
+을 주므로 우리는 $K$가 $\mathfrak{h}_\mathbb{R}$ 위에서 positive definite인 것을 안다. 특히 이를 다시 $\mathfrak{h}^\ast$로 옮겨주면 $\mathfrak{h}^\ast$에서 $\Phi$의 real span이 Euclidean space를 이룬다는 것을 확인할 수 있고, 이를 보이는 과정에서 우리는 이들 root들이 [정의 12](#def12)의 네 번째 조건을 만족하는 것도 보였다. 
 
 
 
