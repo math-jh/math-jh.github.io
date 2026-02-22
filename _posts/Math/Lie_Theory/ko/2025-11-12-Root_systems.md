@@ -361,11 +361,42 @@ $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
 으로 작용하고, $\mathfrak{h}$는 abelian이므로 이 위에는 $0$으로 작용한다. 즉 $\mathfrak{g}$의 root decomposition을 생각하면 $H$는 $\mathfrak{g}$ 위의 모든 원소에 대하여 $0$으로 작용하고, 이로부터 $H$는 $\mathfrak{g}$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 4](#prop4)에 의하여 $\mathfrak{g}$는 nonzero abelian ideal을 가질 수 없고, 특히 $Z(\mathfrak{g})=0$이 성립해야 하므로 $H=0$이어야 한다. 
 
-이로부터 $\Phi$는 $\mathfrak{h}^\ast$을 span하는 것을 안다. 그러나 $\mathfrak{h}^\ast$는 complex vector space이고, 이 위에 정의된 Killing form 또한 positive definite라는 보장이 없으므로 inner product가 아니다. 이를 해소하기 위해 우리는 $\Phi$의 *real span*을 생각한다. 나중에 사용하기 위해 $\Phi$의 $\mathbb{Q}$-span과 함께 다음 공간들
+이로부터 $\Phi$는 $\mathfrak{h}^\ast$을 span하는 것을 안다. 그러나 $\mathfrak{h}^\ast$는 complex vector space이고, 이 위에 정의된 Killing form 또한 positive definite라는 보장이 없으므로 inner product가 아니다. 이를 해소하기 위해 우리는 $\Phi$의 *real span*을 생각한다. 
+
+각각의 root들 $\alpha\in\Phi$에 대하여, Killing form의 non-degeneracy로부터 다음의 식
+
+$$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $X\in \mathfrak{h}$}$$
+
+을 만족하는 $H_\alpha\in \mathfrak{h}$이 존재한다. 우리의 첫 번째 관찰은 다음의 보조정리이다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="lem13">**보조정리 13**</ins> 임의의 $E\in \mathfrak{g}_\alpha$와 $F\in \mathfrak{g}_{-\alpha}$에 대하여, $[E,F]=K(E,F)H_\alpha$이 성립한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$K$의 $\ad$-invariance에 의하여
+
+$$K([E,F],H)=K(F,[H,E])$$
+
+이 모든 $H\in \mathfrak{h}$에 대해 성립한다. 한편 $E\in \mathfrak{g}_\alpha$이므로
+
+$$[H,E]=\alpha(H)E=K(H_\alpha,H)E$$
+
+이고 이를 위의 식에 대입하면 원하는 결과를 얻는다. 
+
+</details>
+
+
+
+
+나중에 사용하기 위해 $\Phi$의 $\mathbb{Q}$-span과 함께 다음 공간들
 
 $$V_\mathbb{Q}=\span_\mathbb{Q}(\Phi),\qquad V=\span_\mathbb{R}(\Phi)=V_\mathbb{Q}\otimes_\mathbb{Q}\mathbb{R}$$
 
-을 생각하자. 
+을 생각하자. 각각의 
 
 
 
