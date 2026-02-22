@@ -402,7 +402,7 @@ $$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $X\in \mathfrak{h}$}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem14">**보조정리 14**</ins> 임의의 $E\in \mathfrak{g}_\alpha$와 $F\in \mathfrak{g}_{-\alpha}$에 대하여, $[E,F]=K(E,F)H_\alpha$이 성립한다.
+<ins id="lem14">**보조정리 14**</ins> 임의의 $E\in \mathfrak{g}\_\alpha$와 $F\in \mathfrak{g}\_{-\alpha}$에 대하여, $[E,F]=K(E,F)H\_\alpha$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -424,7 +424,7 @@ $$K([E,F],H)=K(F,[H,E])=K(F, K(H_\alpha,H)E)=K(H_\alpha,H)K(F,E)=K(K(F,E)H_\alph
 
 </details>
 
-한편 우리는 [보조정리 13](#lem13)으로부터 $E\in \mathfrak{g}_\alpha$, $F\in \mathfrak{g}_{-\alpha}$를 택하여 $K(E,F)\neq 0$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
+한편 우리는 [보조정리 13](#lem13)으로부터 $E\in \mathfrak{g}\_\alpha$, $F\in \mathfrak{g}\_{-\alpha}$를 택하여 $K(E,F)\neq 0$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
 
 $$[E,F]=K(E,F)H_\alpha,\quad [H_\alpha,E]=\alpha(H_\alpha)E=K(\alpha,\alpha)E,\quad [H_\alpha,F]=-\alpha(H_\alpha)F=-K(\alpha,\alpha)F$$
 
@@ -436,11 +436,14 @@ $$h_\alpha=\frac{2}{K(\alpha,\alpha)}H_\alpha$$
 
 $$(e_\alpha,f_\alpha)(\alpha,\alpha)=2$$
 
-을 만족하는 $e_\alpha\in \mathfrak{g}_\alpha$, $f_\alpha\in \mathfrak{g}_{-\alpha}$을 택할 수 있으며 이들은 다음 commutation relation
+을 만족하는 $e\_\alpha\in \mathfrak{g}\_\alpha$, $f\_\alpha\in \mathfrak{g}\_{-\alpha}$을 택할 수 있으며 이들은 다음 commutation relation
 
 $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alpha,f_\alpha]=-2f_\alpha$$
 
-을 만족한다. 즉 이들은 $\mathfrak{g}$ 안에서 $\sl_2$의 irreducible representation을 정의하며, 이들이 weight를 어떻게 변화시키는지를 추적해보면 다음의 보조정리를 얻는다. 
+을 만족한다. 즉 이들은 $\mathfrak{g}$ 안에서 $\sl_2$과 isomorphic한 
+
+
+ irreducible representation을 정의하며, 이들이 weight를 어떻게 변화시키는지를 추적해보면 다음의 보조정리를 얻는다. 
 
 <div class="proposition" markdown="1">
 
