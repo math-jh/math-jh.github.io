@@ -312,10 +312,15 @@ $$E\cdot v_j=(\mu-j+1)v_{j-1}$$
 
 한편 $V$가 유한차원이므로, $v_{m+1}=0$을 만족하는 가장 작은 정수 $m$이 존재한다. 그럼 이러한 $m$에 대하여, 
 
-$$0=E\cdot v_{m+1}=$$
+$$0=E\cdot v_{m+1}=(\mu-m)v_m$$
 
+과 $m$의 최소성으로부터 $\mu=m$이어야 한다는 것을 안다. 즉 highest weight는 반드시 양의 정수이다. 
 
+각각의 $m\geq 0$에 대하여, $\sl_2$의 representation $V(m)$을 $m+1$개의 vector들 $v_0,\ldots, v_m$과, [명제 10](#prop10)의 action 
 
+$$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{j-1}$$
+
+을 주어 정의하자. 정의에 의해 $v_{m+1}=0$이다. 그럼 $V(m)$은 irrducible인 것을 보일 수 있으며, 이는 weight $m, m-2,\ldots, -m+2,-m$을 갖는다. 
 
 
 
