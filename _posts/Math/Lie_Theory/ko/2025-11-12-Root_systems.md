@@ -436,9 +436,23 @@ $$h_\alpha=\frac{2}{K(\alpha,\alpha)}H_\alpha$$
 
 $$(e_\alpha,f_\alpha)(\alpha,\alpha)=2$$
 
-을 만족하는 $e_\alpha\in \mathfrak{g}_\alpha$, $f_\alpha\in \mathfrak{g}_{-\alpha}$을 택할 수 있으며 이들은 
+을 만족하는 $e_\alpha\in \mathfrak{g}_\alpha$, $f_\alpha\in \mathfrak{g}_{-\alpha}$을 택할 수 있으며 이들은 다음 commutation relation
 
+$$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alpha,f_\alpha]=-2f_\alpha$$
 
+을 만족한다. 즉 이들은 $\mathfrak{g}$ 안에서 $\sl_2$의 irreducible representation을 정의하며, 이들이 weight를 어떻게 변화시키는지를 추적해보면 다음의 보조정리를 얻는다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="lem15">**보조정리 15**</ins> 임의의 root $\alpha$에 대하여, 다음의 subspace
+
+$$V=\mathbb{C}h_\alpha\oplus\bigoplus_{k\in \mathbb{Z}\setminus\{0\}}\mathfrak{g}_{k\alpha}$$
+
+는 irreducible $\sl_2$-representation이다. 
+
+</div>
+
+앞서 우리는 $\mathfrak{h}$이 $H_\alpha$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $h_\alpha$들도 $\mathfrak{h}$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $h_\alpha$들로 생성되는 *real* vector space를 생각할 것이며, 
 
 
 나중에 사용하기 위해 $\Phi$의 $\mathbb{Q}$-span과 함께 다음 공간들
