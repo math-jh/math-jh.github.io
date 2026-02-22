@@ -371,7 +371,15 @@ $$H_\alpha=\frac{2}{K(v_\alpha,v_\alpha)}v_\alpha$$
 
 $$(\alpha, \beta)=K(H_\alplha,H_\beta)$$
 
-로 정의하자. 또, "coroot들"로 생성되는 $\mathbb{Q}$-벡터공간 $V_\mathbb{Q}=\span_\mathbb{Q}(\Phi)$와 $\mathbb{R}$-벡터공간 $V=V_\mathbb{Q}\otimes_\mathbb{Q}\mathbb{R}$을 생각하자. 우리의 주장은 $V$가 
+로 정의하자. 또, $\mathbb{Q}$-벡터공간 $V_\mathbb{Q}=\span_\mathbb{Q}(\Phi)$와 $\mathbb{R}$-벡터공간 $V=V_\mathbb{Q}\otimes_\mathbb{Q}\mathbb{R}$들, 그리고 "coroot들"로 생성되는 공간
+
+$$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{H_\alpha\mid\alpha\in\Phi\}\subset \mathfrak{h}$$
+
+을 생각한다. 우리의 주장은 $V$ 위에서 위의 식으로 정의한 $(-,-)$이 positive definite이고, 따라서 $V$가 Euclidean vector space가 된다는 것이다. 이를 위해 우선 임의의 root $\alpha,\beta\in\Phi$에 대하여 다음 식
+
+$$K(H_\alpha,H_\beta)=\tr(\ad H_\alpha\ad H_\beta)=\sum_{\gamma\in\Phi}\gamma(H_\alpha)\gamma(H_\beta)$$
+
+을 사용하여 Kiilling form을 계산하자. 그럼 이들
 
 
 
