@@ -368,9 +368,11 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. 임의의 $X\_\alpha\in \mathfrak{g}\_\alpha,X\_\beta\in \mathfrak{g}\_\beta$ 그리고 임의의 $H\in \mathfrak{h}$에 대하여, $K$의 $\ad$-invariance로부터 다음의 식
-    
-    $$0=K([H,X],Y)+K(X, [H,Y])=$$
+처음 주장은 자명하므로 둘째 주장을 보이면 충분하다. 임의의 $X\_\alpha\in \mathfrak{g}\_\alpha,X\_\beta\in \mathfrak{g}\_\beta$ 그리고 임의의 $H\in \mathfrak{h}$에 대하여, $K$의 $\ad$-invariance로부터 다음의 식
+
+$$0=K([H,X_\alpha],X_\beta)+K(X_\alpha, [H,X_\beta])=K(\alpha(H)X_\alpha, X_\beta)+K(X_\alpha,\beta(H)X_\beta)=(\alpha+\beta)(H)K(X_\alpha,X_\beta)$$
+
+을 얻는다. 따라서 $\alpha+\beta\neq 0$이라면 $\mathfrak{g}\_\alpha$와 $\mathfrak{g}_\beta$는 $K$에 대해 orthogonal이다. 
 
 </details>
 
