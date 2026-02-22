@@ -351,15 +351,26 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 </div>
 
-이제 semisimple complex Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하고, root들의 집합 $\Phi\subset\mathfrak{h}^\ast$를 생각하자. $\Phi$의 real span
-
-$$\span_\mathbb{R}(\Phi)=\left\{\sum_{\alpha\in\Phi}a_\alpha\alpha\mid a_\alpha\in\mathbb{R}\right\}$$
-
-을 생각하면, 이는 자연스럽게 $\mathbb{R}$-벡터공간이 된다. 한편 $\mathfrak{h}$ 위에 정의된 Killing form $K(-,-)$이 non-degenerate이므로 다음의 isomorphism
+이제 semisimple complex Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하자. 그럼 $\mathfrak{g}$가 semisimple이므로 Killing form이 non-degenerate이고, 이를 $\mathfrak{h}$로 제한한 것도 마찬가지이므로 이로부터 유도되는 다음의 isomorphism
 
 $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
-이 존재한다. 따라서 각각의 root $\alpha\in\Phi\subset\mathfrak{h}^\ast$에 identify되는 $v_\alpha\in\mathfrak{h}$들이 존재한다. 명시적으로 이는 다음의 식
+이 존재한다. 그럼 $\Phi\subseteq \mathfrak{h}^\ast$는 $\mathfrak{h}^\ast$의 spanning set이다. 만일 $\Phi$의 원소들의 일차결합으로 나타나지 않는 $\mathfrak{h}^\ast$의 원소가 있다면, 
+
+
+고, root들의 집합 $\Phi\subset\mathfrak{h}^\ast$를 생각하자. 
+
+
+그럼 $\Phi$는 $\mathfrak{h}^\ast$를 span한다. 만일 결론에 반하여 $\Phi$
+
+
+
+
+$\Phi$의 real span
+
+$$\span_\mathbb{R}(\Phi)=\left\{\sum_{\alpha\in\Phi}a_\alpha\alpha\mid a_\alpha\in\mathbb{R}\right\}$$
+
+을 생각하면, 이는 자연스럽게 $\mathbb{R}$-벡터공간이 된다. 한편  따라서 각각의 root $\alpha\in\Phi\subset\mathfrak{h}^\ast$에 identify되는 $v_\alpha\in\mathfrak{h}$들이 존재한다. 명시적으로 이는 다음의 식
 
 $$\alpha(H)=K(v_\alpha, H)\qquad\text{for all $H\in\mathfrak{h}$}$$
 
