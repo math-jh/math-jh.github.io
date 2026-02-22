@@ -266,6 +266,26 @@ $$[H,E]=2E,\quad [H,F]=-2F,\quad [E,F]=H$$
 
 우리는 임의의 $\sl(2;\mathbb{C})$-representation이 irreducible representation들의 direct sum으로 나타난다는 것을 보인다. 이는 compact Lie group에 대해서는 자명한 결과이지만 $\SL(w,\mathbb{C})$와 같은 non-compact group에 대해서는 Haar measure의 존재성이 보장되지 않고 따라서 적분을 통해 내적을 평균내는 등의 아이디어를 사용할 수 없다는 것을 기억하자. 
 
+이제 각각의 $\lambda\in \mathbb{C}$에 대하여 weight space
+
+$$V_\lambda=\{v\in V\mid Hv=\lambda v\}$$
+
+으로 정의하자. 그럼 앞서 살펴본 commutation relation에 의하여 
+
+$$E\cdot V_\lambda\subset V_{\lambda+2},\qquad F\cdot V_\lambsa\subset V_{\lambda-2}$$
+
+이 성립한다. 
+
+
+
+
+
+
+
+
+
+
+
 ## 근계
 
 이제 우리는 [정의 6](#def6)에서 $\Phi$의 원소들을 *root*라고 불렀던 이유를 설명한다. 이는 다음의 더 일반적인 정의에서 오는 것이다. 
