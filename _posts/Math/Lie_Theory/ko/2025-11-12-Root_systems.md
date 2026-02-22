@@ -326,22 +326,17 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 </div>
 
-어렵지 않게 $V(m)$은 irrducible인 것을 보일 수 있다. 이제 임의의 $\sl_2$-representation $V$에 대하여, 우리는 $V$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 10](#prop10)을 적용하고, 남아있는 highest weight vector가 있다면 
-
-
-으며, 이는 weight $m, m-2,\ldots, -m+2,-m$을 갖는다.
-
-
+어렵지 않게 $V(m)$은 irrducible인 것을 보일 수 있다. 이제 임의의 $\sl_2$-representation $V$에 대하여, 우리는 $V$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 10](#prop10)을 적용하고, 남아있는 highest weight vector가 있다면 다시 이를 반복하는 식으로 $V$를 irreducible $\sl_2$-representation으로 분해할 수 있다. 
 
 ## 근계
 
-이제 우리는 [정의 6](#def6)에서 $\Phi$의 원소들을 *root*라고 불렀던 이유를 설명한다. 이는 다음의 더 일반적인 정의에서 오는 것이다. 
+위의 $\sl_2$-representation의 예시는 앞으로 해나갈 이야기에 큰 역할을 한다. 우선 다음을 정의하자. 
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> 유한차원 벡터공간 $E$와 그 위에 정의된 inner product $( -,-)$을 고정하자. $E$의 non-zero vector들의 유한한 집합 $\Phi$가 *root system*이라는 것은 다음의 조건들이 만족되는 것이다. 
+<ins id="def12">**정의 12**</ins> 유한차원 벡터공간 $V$와 그 위에 정의된 inner product $( -,-)$을 고정하자. $V$의 non-zero vector들의 유한한 집합 $\Phi$가 *root system*이라는 것은 다음의 조건들이 만족되는 것이다. 
 
-1. $\Phi$의 원소들이 $E$를 span한다. 
+1. $\Phi$의 원소들이 $V$를 span한다. 
 2. 만일 $\alpha\in \Phi$이고 $c\in \mathbb{R}$이라면 $c\alpha\in \Phi$이기 위해서는 $c=\pm 1$이어야 한다. 
 3. 각각의 root $\alpha\in\Phi$에 대하여, $\Phi$는 $\alpha$에 수직인 초평면에 대한 대칭이동 $s_\alpha$에 대해 닫혀있다. 즉, 임의의 $\alpha,\beta\in \Phi$에 대하여
     
@@ -376,7 +371,7 @@ $$H_\alpha=\frac{2}{K(v_\alpha,v_\alpha)}v_\alpha$$
 
 $$(\alpha, \beta)=K(H_\alplha,H_\beta)$$
 
-로 정의하자. 
+로 정의하자. 또, "coroot들"로 생성되는 $\mathbb{Q}$-벡터공간 $V_\mathbb{Q}=\span_\mathbb{Q}(\Phi)$와 $\mathbb{R}$-벡터공간 $V=V_\mathbb{Q}\otimes_\mathbb{Q}\mathbb{R}$을 생각하자. 우리의 주장은 $V$가 
 
 
 
