@@ -379,7 +379,7 @@ $$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{H_\alpha\mid\alpha\in\Phi\}\subset \
 
 $$K(H_\alpha,H_\beta)=\tr(\ad H_\alpha\ad H_\beta)=\sum_{\gamma\in\Phi}\gamma(H_\alpha)\gamma(H_\beta)$$
 
-을 사용하여 Kiilling form을 계산하자. 그럼 이들
+을 사용하여 Kiilling form을 계산하자. 그럼 이들을 
 
 
 
