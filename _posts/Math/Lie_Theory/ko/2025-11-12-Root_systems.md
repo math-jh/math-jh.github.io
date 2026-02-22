@@ -264,7 +264,7 @@ $$[H,E]=2E,\quad [H,F]=-2F,\quad [E,F]=H$$
 
 을 통해 얻어진다. 
 
-우리는 임의의 $\sl(2;\mathbb{C})$-representation이 irreducible representation들의 direct sum으로 나타난다는 것을 보인다. 이는 만일 
+우리는 임의의 $\sl(2;\mathbb{C})$-representation이 irreducible representation들의 direct sum으로 나타난다는 것을 보인다. 이는 compact Lie group에 대해서는 자명한 결과이지만 $\SL(w,\mathbb{C})$와 같은 non-compact group에 대해서는 Haar measure의 존재성이 보장되지 않고 따라서 적분을 통해 내적을 평균내는 등의 아이디어를 사용할 수 없다는 것을 기억하자. 
 
 ## 근계
 
