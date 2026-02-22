@@ -368,7 +368,7 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. 
+1. 임의의 $X\_\alpha\in \mathfrak{g}\_\alpha,X\_\beta\in \mathfrak{g}\_\beta$ 그리고 임의의 $H\in \mathfrak{h}$에 대하여, $K$의 $\ad$-invariance로부터 다음의 
 
 </details>
 
