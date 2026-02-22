@@ -14,6 +14,7 @@ sidebar:
 date: 2025-11-12
 last_modified_at: 2025-11-12
 weight: 2
+read_time: true
 
 ---
 
@@ -468,90 +469,25 @@ $$s_\alpha(\beta)=\beta-\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}\alpha$$
 
 가 다시 root가 된다는 것을 보여야 하는데, 이는 $\ad f_\alpha$를 $\lvert \beta(h_\alpha)\rvert$번 작용하면 $\mathfrak{g}\_\beta$와 $\mathfrak{g}\_{s_\alpha(\beta)}$ 사이의 isomorphism이 얻어지기 때문에 자명하다. 
 
-둘째 조건의 경우, 
+둘째 조건의 경우, 만일 $\beta=c\alpha$라 한다면
 
+$$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\beta,\beta)}=\frac{2}{c}$$
 
-
-
-
-
-<div class="proposition" markdown="1">
-
-<ins id="thm10">**정리 10**</ins> Root space decomposition
-
-$$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
-
-에 대하여, 다음이 성립한다.
-
-1. 임의의 $\alpha,\beta\in \Phi$에 대하여 $[\mathfrak{g}\_\alpha,\mathfrak{g}\_\beta]\subseteq \mathfrak{g}\_{\alpha+\beta}$가 성립하며, 등식은 $\alpha+\beta\neq 0$일 때 성립한다. 
-2. 임의의 $\alpha\in\Phi$에 대하여, $[\mathfrak{g}\_\alpha,\mathfrak{g}_{-\alpha}]\oplus \mathfrak{g}\_{-\alpha}\oplus \mathfrak{g}\_\alpha\cong \sl\_2$이 성립한다. 
-3. 임의의 $\alpha\in\Phi$에 대하여, $\dim \mathfrak{g}\_\alpha=1$이다.
-4. 임의의 $\alpha\in\Phi$에 대하여, $\mathfrak{g}_{2\alpha}\not\in\Phi$이다. 
-5. $\mathfrak{g}$ 위에 정의된 Killing form을 $\mathfrak{h}$로 제한한 것은 non-degenerate이다. 또한, $\alpha+\beta\neq 0$이라면 $\mathfrak{g}\_\alpha$와 $\mathfrak{g}\_\beta$가 orthogonal이다. 
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 나중
-
-
-S 그럼 이제 다음이 성립한다. 
+가 모두 정수이기 위해서는 $c$는 $\pm 1$, $\pm 2$, $\pm 1/2$ 중 하나여야 하고, 다시 이를 $\sl_2$-representation theory로 옮긴 후 integrality를 적용하면 원하는 결과를 얻는다. 즉 우리는 다음을 증명하였다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> [정의 4](#def4)에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$의 root system이다. 
+<ins id="prop15">**명제 15**</ins> [정의 4](#def4)에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$의 root system이다. 
 
 </div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
 
-
-
-</details>
-
-## 근계의 성질들
-
-기본적으로 우리가 관심을 갖는 대상은 [정의 4](#def4)에서 정의한, semisimple Lie algebra $\mathfrak{g}$와 그 Cartan subalgebra $\mathfrak{h}$가 정의하는 root system $\Phi$이다. 이를 살펴보기 위해 우리는 
-
-Inner product space $V$의 root system $\Phi$를 고정하자. 그럼 우리는 임의의 root $\alpha\in \Phi$에 대한 reflection 
-
-$$s_\alpha(v)=v-2\frac{(v,\alpha)}{(\alpha,\alpha)}\alpha=v-\langle v,\alpha\rangle \alpha$$
-
-을 생각할  수 있다. 이는 벡터 $\alpha$가 정의하는 초평면에 대한 대칭이동이다. 이러한 대칭이동들로 생성되는 $\Omat(V)$의 subgroup을 우리는 root system $\Phi$의 *Weyl group*이라 부르기로 하였다. 
-
-
-
-
-본질적으로 이는 기하학적 대상이므로 우리는 이를 살펴보아 기하학적 직관을 얻을 수 있다. 가령 우리는 임의의 root system에 대한 Weyl group이 유한하다는 것을 보일 수 있다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8**</ins> 임의의 root system $\Phi$에 대하여 그 Weyl group은 유한하다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-[정의 5](#def5)의 셋째 조건에 의하여 $W(\Phi)$의 원소들은 유한집합 $\Phi$ 위에 act한다. 한편 이 action $W\rightarrow S_\Phi$는 faithful action이다. 만일 어떠한 $w\in W$가 $\id_{\Phi}$로 옮겨진다면, [정의 5](#def5)의 첫째 조건에 의하여 $w\in W$는 $E$의 원소 전체를 고정하는 reflection이고 따라서 $w$는 $W$의 identity이다. 
-
-</details>
+## 예시들
 
 이제 다음의 예시들을 살펴보자. 
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9**</ins> 우선 standard Euclidean space $\mathbb{R}^{n+1}$을 생각하고, $\mathbb{R}^{n+1}$의 subspace
+<ins id="ex16">**예시 16**</ins> 우선 standard Euclidean space $\mathbb{R}^{n+1}$을 생각하고, $\mathbb{R}^{n+1}$의 subspace
 
 $$V_n=\left\{(x_1,\ldots, x_{n+1}\mid x_1+\cdots+x_{n+1}=0\right\}$$
 
@@ -571,7 +507,7 @@ $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathb
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> 이번에는 standard Euclidean space $\mathbb{R}^n$을 생각하자. 이번에는 다음 집합
+<ins id="ex17">**예시 17**</ins> 이번에는 standard Euclidean space $\mathbb{R}^n$을 생각하자. 이번에는 다음 집합
 
 $$\Phi(D_n)=\left\{\pm e_i\pm e_j\mid 1\leq i \neq j\leq n\right\}$$
 
@@ -587,13 +523,6 @@ $$(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$$
 
 </div>
 
-한편, 우리는 $\mathbb{R}^n$의 부분집합
-
-$$\Phi=\{e_1,\ldots, e_n\}$$
-
-이 root system이 되는지를 생각할 수 있으며, 어렵지 않게 이들이 실제로 $\mathbb{R}^n$의 root system을 이룬다는 것을 확인할 수 있다. 동시에 이 과정에서 우리는 
-
-
 위의 예시들에서 살펴볼 수 있듯이 root system을 묘사하기 위해 모든 root들이 필요한 것은 아니다. 가령 $\Phi(A_n)$의 경우, 
 
 $$e_i-e_k=(e_i-e_j)+(e_j-e_k)$$
@@ -602,7 +531,7 @@ $$e_i-e_k=(e_i-e_j)+(e_j-e_k)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Simple root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
+<ins id="def18">**정의 18**</ins> Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Simple root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
 
 </div>
 
@@ -616,7 +545,7 @@ $$\langle\alpha_i,\alpha_j\rangle=2\frac{(\alpha_i,\alpha_j)}{(\alpha_j,\alpha_j
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> 위와 같은 세팅에서, 다음의 행렬
+<ins id="def19">**정의 19**</ins> 위와 같은 세팅에서, 다음의 행렬
 
 $$A=(a_{ij})_{1\leq i,j\leq l},\qquad a_{ij}=\langle \alpha_i,\alpha_j\rangle$$
 
@@ -645,83 +574,3 @@ $$\langle\alpha,\beta\rangle\langle\beta,\alpha\rangle=3$$
 $$\langle \alpha,\beta\rangle =2\frac{(\alpha,\beta)}{(\beta,\beta)}=\frac{2\lvert\alpha\rvert\lvert\beta\rvert\cos\theta}{\lvert\beta\rvert^2}=\frac{\pm \sqrt{3}\lvert\alpha\rvert}{\lvert\beta\rvert}$$
 
 의 값이 $\pm 1$ 혹은 $\pm 3$이라는 것으로부터 우리는 $\alpha$와 $\beta$의 길이비가 $\sqrt{3}$이어야 함을 안다. 비슷하게 두 root $\alpha,\beta$가 이루는 각이 $45$도 혹은 $135$도라면, 이들 두 root의 길이비는 $\sqrt{2}$여야 하고 $60$도 혹은 $120$도의 경우에는 길이비가 $1$이어야 함을 안다.
-
-한편 
-
-
-
-
-
-
-
-## 바일 군
-
-지금까지의 핵심적인 내용을 요약하면 다음과 같다. 
-
-> Compact, connected semisimple Lie group $G$에 대하여, 그 maximal torus $T$를 고정하고 adjoint representation $\Ad:G \rightarrow \Aut(\mathfrak{g})$를 $T$로 제한하여 얻어진 weight decomposition을 생각하자. 그럼 weight들은 $\mathfrak{t}^\ast$의 원소이며, 이 위에 정의된 Killing form $(-,-)$에 대하여, nonzero weight들은 root system을 이룬다.
-
-이제 우리가 남은 글에서 설명할 것은 만일 maximal torus $T$를 다른 maximal torus $T'$로 바꾼다면, 이 root decomposition은 어떻게 바뀔지에 대한 것이다. 큰 흐름은 다음과 같다. 
-
-1. 고정된 root system $\Phi$에 대하여, $\Phi$는 [정의 5](#def5)의 세 번째 조건으로부터 $s_\alpha$들에 대해 닫혀있다. 이러한 원소들로 이루어진 reflection group을 *Weyl group* $W(\Phi)$이라 부른다. 
-2. 한편, 임의의 Lie group 위에 정의된 maximal torus $T$에 대하여, $G$의 adjoint action 중 $T$를 보존하는 것들의 모임을 $W(G,T)=N_G(T)/T$으로 적는다. 
-
-우리의 핵심적인 주장은, 위의 상황에서 만들어지는 root system을 $\Phi(G,T)$라 할 경우, $W(\Phi(G,T))\cong W(G,T)$가 성립한다는 것이다. 물론 만일 다른 maximal torus $T'$를 택한다면, 마찬가지로 $W(\Phi(G, T'))\cong W(G, T')$를 얻을 것이다. 그럼 우리의 두 번째 주장은 canonical하게 $W(\Phi(G,T))\cong W(\Phi(G, T'))$ 그리고 $W(G,T)\cong W(G, T')$이며 이 canonical isomorphism 하에서 두 isomorphism $W(\Phi(G,T))\cong W(G,T)$와 $W(\Phi(G, T'))\cong W(G, T')$는 같은 것이라는 것이다. 이에 대한 증명을 모두 하려면 글이 과하게 길어지므로 이 대응들 각각에 대한 설명만 하기로 한다. 
-
-위의 흐름에서 $W(\Phi)$는 그 정의가 자명하므로, 이를 자세히 살펴보는 것은 다음 절로 미루고 $W(G,T)$를 우선 정의하자. 
-
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> Compact connected Lie group $G$와, $G$의 maximal torus $T$, 그리고 그 normalizer
-
-$$N=N(T)=\{g\in G\mid gTg^{-1}=T\}$$
-
-에 대하여, $W(G,T)=N/T$를 $G$의 *Weyl group*이라 부른다. 
-
-</div>
-
-정의에 의해 Weyl group은 $T$의 선택에 의존하지만, 다음이 성립한다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="thm7">**정리 7 (Cartan)**</ins> 임의의 compact connected Lie group $G$의 두 maximal torus $T,T'$는 항상 conjugate이며, 임의의 $G$의 원소는 어떤 maximal torus에 포함되어 있다. 
-
-</div>
-
-바꾸어 말하자면, 임의의 $G$의 element는, 고정된 maximal torus $T$에 대하여, 적당한 $t\in T$의 conjugate으로 쓸 수 있다.
-
-이제 $W(G,T)$가 root system $\Phi(G,T)$ 위에 어떻게 작용하는지를 살펴봐야 한다. 이는 다음의 식
-
-$$((nT)\cdot \alpha)(H)=\alpha(\Ad(n^{-1})(H))\qquad\text{for all $H\in \mathfrak{t}$}$$
-
-으로 주어진다. 이는 더 자세하게 쓰면 다음과 같다. 임의의 root $\alpha:\mathfrak{t}\rightarrow \mathbb{C}$를 생각하자. 이 root에 해당하는 weight space는
-
-$$g_{\alpha}=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
-
-이다. 이제 임의의 $X\_\alpha\in \mathfrak{g}\_\alpha$와 $n\in N_G(T)$에 대하여, $n$은 $nTn^{-1}=T$를 만족하므로 이를 미분하면 $n$에 의한 adjoint action은 Cartan subalgebra $\mathfrak{t}$ 또한 보존한다. 이제 식
-
-$$\alpha(H)X=[H,X]\text{for all $H\in \mathfrak{t}$}$$
-
-의 양변에 $n$에 의한 conjugation을 취하면, 
-
-$$\alpha(H)(nXn^{-1})=[nHn^{-1}, nXn^{-1}]\text{for all $H\in \mathfrak{t}$}$$
-
-을 얻는다. 한편 $nHn^{-1}\in \mathfrak{t}$이고, 이것이 $\mathfrak{t}$와 $n\mathfrak{t}n^{-1}$ 사이의 bijection을 정의하므로 이는 다음의 식
-
-$$[H, nXn^{-1}]=\alpha(H)\cdot (nXn^{-1})\text{for all $H\in \mathfrak{t}$}$$
-
-으로 쓸 수 있다. 즉, 요약하자면 $\mathfrak{t}$에서 $\mathfrak{t}$로의 conjugation map $c(n): X\mapsto nXn^{-1}$을 생각하면, 식 $w(\alpha)=\alpha\circ c(n^{-1})$으로 정의된 $w(\alpha)$ 또한 root이며 이 때 root space 또한 conjugation action을 통해 옮겨지게 된다. 
-
-이제 이 대응이 $W(G,T)\cong W(\Phi(G,T))$를 준다는 것이 앞서 언급한 핵심적인 주장이 된다. 
-
-한편 [정리 7](#thm7)에 의하여, 우리는 임의의 maximal torus $T, T'$가 주어진다면 $T'=gTg^{-1}$을 만족하는 $g\in G$가 존재하게, 이로부터 만들어지는 Weyl group $W(G, T')$ 또한 
-
-$$W(G, T')=N_G(T')/T'=(gN_G(T)g^{-1})/(gTg^{-1})\cong W(G,T)$$
-
-임을 안다. 이 때 명시적인 isomorphism $W(G,T)\rightarrow W(G, T')$는 당연히 $nT\mapsto gng^{-1}T'$으로 주어진다. 우리의 두 번째 주장은, 이렇게 얻어지는 다음의 diagram
-
-![Weyl_isomorphism](/assets/images/Math/Lie_Theory/Root_systems-1.png){:style="width:16em" class="invert" .align-center}
-
-이 commutative diagram이라는 것이다. 
-
-
-
