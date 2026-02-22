@@ -440,20 +440,27 @@ $$(e_\alpha,f_\alpha)(\alpha,\alpha)=2$$
 
 $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alpha,f_\alpha]=-2f_\alpha$$
 
-을 만족한다. 즉 이들은 $\mathfrak{g}$ 안에서 $\sl_2$과 isomorphic한 
+을 만족한다. 즉 이들은 $\mathfrak{g}$ 안에서 $\sl_2$과 isomorphic한 subalgebra를 준다. 이를 $\sl_{2,\alpha}$라 하자. 그럼 adjoint action을 통해 $\mathfrak{g}$를 $\sl_{2,\alpha}$-representation으로 볼 수 있다. 
+
+특히 $h_\alpha$가 $\mathfrak{g}$의 원소들에 어떻게 작용하는지를 살펴보자. 이를 위해서는 $\mathfrak{g}$의 root space $\mathfrak{g}_\beta$에 $h_\alpha$의 adjoint action이 어떻게 작용하는지를 보면 충분하고, 이는 다음의 식
+
+$$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $x\in \mathfrak{g}_\beta$}$$
+
+으로 주어진다. 즉, $\mathfrak{g}_\beta$는 이 action에 대한 weight $\beta(h_\alpha)$의 weight space이며
 
 
- irreducible representation을 정의하며, 이들이 weight를 어떻게 변화시키는지를 추적해보면 다음의 보조정리를 얻는다. 
 
-<div class="proposition" markdown="1">
 
-<ins id="lem15">**보조정리 15**</ins> 임의의 root $\alpha$에 대하여, 다음의 subspace
 
-$$V=\mathbb{C}h_\alpha\oplus\bigoplus_{k\in \mathbb{Z}\setminus\{0\}}\mathfrak{g}_{k\alpha}$$
 
-는 irreducible $\sl_2$-representation이다. 
 
-</div>
+
+
+
+
+
+
+
 
 앞서 우리는 $\mathfrak{h}$이 $H_\alpha$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $h_\alpha$들도 $\mathfrak{h}$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $h_\alpha$들로 생성되는 *real* vector space
 
