@@ -369,9 +369,13 @@ $$H_\alpha=\frac{2}{K(v_\alpha,v_\alpha)}v_\alpha$$
 
 라 하고, 이를 사용하여 $\mathfrak{h}^\ast$ 위에 bilinear form
 
-$$(\alpha, \beta)=K(H_\alplha,H_\beta)$$
+$$(\alpha, \beta)=K(H_\alpha,H_\beta)$$
 
-로 정의하자. 또, $\mathbb{Q}$-벡터공간 $V_\mathbb{Q}=\span_\mathbb{Q}(\Phi)$와 $\mathbb{R}$-벡터공간 $V=V_\mathbb{Q}\otimes_\mathbb{Q}\mathbb{R}$들, 그리고 "coroot들"로 생성되는 공간
+로 정의하자. 
+
+
+
+또, $\mathbb{Q}$-벡터공간 $V_\mathbb{Q}=\span_\mathbb{Q}(\Phi)$와 $\mathbb{R}$-벡터공간 $V=V_\mathbb{Q}\otimes_\mathbb{Q}\mathbb{R}$들, 그리고 "coroot들"로 생성되는 공간
 
 $$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{H_\alpha\mid\alpha\in\Phi\}\subset \mathfrak{h}$$
 
@@ -379,7 +383,7 @@ $$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{H_\alpha\mid\alpha\in\Phi\}\subset \
 
 $$K(H_\alpha,H_\beta)=\tr(\ad H_\alpha\ad H_\beta)=\sum_{\gamma\in\Phi}\gamma(H_\alpha)\gamma(H_\beta)$$
 
-을 사용하여 Kiilling form을 계산하자. 그럼 이들을 
+을 사용하여 Kiilling form을 계산하자. 그럼 이들을 ;ㄷ
 
 
 
