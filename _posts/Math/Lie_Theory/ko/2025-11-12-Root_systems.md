@@ -382,11 +382,11 @@ $$0=K([H,X_\alpha],X_\beta)+K(X_\alpha, [H,X_\beta])=K(\alpha(H)X_\alpha, X_\bet
 
 </details>
 
-이제 $\mathfrak{g}$가 semisimple이므로 Killing form이 non-degenerate이고, 이를 $\mathfrak{h}$로 제한한 것도 마찬가지이므로 이로부터 유도되는 다음의 isomorphism
+이제 $\mathfrak{g}$ 위에 정의된 Killing form이 $\mathfrak{h}$위에서도 non-degenerate이므로 이로부터 유도되는 다음의 isomorphism
 
 $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
-이 존재한다. 그럼 $\Phi\subseteq \mathfrak{h}^\ast$는 $\mathfrak{h}^\ast$의 spanning set이다. 만일 $\Phi$의 원소들의 일차결합으로 나타나지 않는 $\mathfrak{h}^\ast$의 원소가 있다면, 이에 해당하는 $\mathfrak{h}$의 원소는 모든 $\alpha\in H$에 대하여 $\alpha(H)$를 만족하여야 한다. 이제 임의의 root space $\mathfrak{g}_\alpha$에 대하여, $H$는
+이 존재한다. 그럼 $\Phi\subseteq \mathfrak{h}^\ast$는 $\mathfrak{h}^\ast$의 spanning set이다. $\Phi$의 원소들의 일차결합으로 나타나지 않는 $\mathfrak{h}^\ast$의 원소가 있다 하면, 이에 해당하는 $\mathfrak{h}$의 원소는 모든 $\alpha\in H$에 대하여 $\alpha(H)$를 만족하여야 한다. 이제 임의의 root space $\mathfrak{g}_\alpha$에 대하여, $H$는
 
 $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
@@ -400,11 +400,9 @@ $$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $X\in \mathfrak{h}$}$$
 
 을 만족하는 $H_\alpha\in \mathfrak{h}$이 존재한다. 우리의 첫 번째 관찰은 다음의 보조정리이다. 
 
-
-
 <div class="proposition" markdown="1">
 
-<ins id="lem13">**보조정리 13**</ins> 임의의 $E\in \mathfrak{g}_\alpha$와 $F\in \mathfrak{g}_{-\alpha}$에 대하여, $[E,F]=K(E,F)H_\alpha$이 성립한다.
+<ins id="lem14">**보조정리 14**</ins> 임의의 $E\in \mathfrak{g}_\alpha$와 $F\in \mathfrak{g}_{-\alpha}$에 대하여, $[E,F]=K(E,F)H_\alpha$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -426,7 +424,19 @@ $$K([E,F],H)=K(F,[H,E])=K(F, K(H_\alpha,H)E)=K(H_\alpha,H)K(F,E)=K(K(F,E)H_\alph
 
 </details>
 
+한편 우리는 [보조정리 13](#lem13)으로부터 $E\in \mathfrak{g}_\alpha$, $F\in \mathfrak{g}_{-\alpha}$를 택하여 $K(E,F)\neq 0$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
 
+$$[E,F]=K(E,F)H_\alpha,\quad [H_\alpha,E]=\alpha(H_\alpha)E=K(\alpha,\alpha)E,\quad [H_\alpha,F]=-\alpha(H_\alpha)F=-K(\alpha,\alpha)F$$
+
+를 만족한다는 것을 안다. 이는 위에서 살펴본 $\sl_2$-representation의 commutation relation과 유사한 꼴이며, 실제로 어렵지 않게 $(\alpha,\alpha)\neq 0$임을 보일 수 있다. 따라서
+
+$$h_\alpha=\frac{2}{K(\alpha,\alpha)}H_\alpha$$
+
+으로 정의하고, 비슷하게 $E$와 $F$ 대신 적절한 scaling을 통해
+
+$$(e_\alpha,f_\alpha)(\alpha,\alpha)=2$$
+
+을 만족하는 $e_\alpha\in \mathfrak{g}_\alpha$, $f_\alpha\in \mathfrak{g}_{-\alpha}$을 택할 수 있으며 이들은 
 
 
 
