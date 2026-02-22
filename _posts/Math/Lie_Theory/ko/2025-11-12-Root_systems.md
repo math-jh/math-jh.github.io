@@ -355,8 +355,11 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
-이 존재한다. 그럼 $\Phi\subseteq \mathfrak{h}^\ast$는 $\mathfrak{h}^\ast$의 spanning set이다. 만일 $\Phi$의 원소들의 일차결합으로 나타나지 않는 $\mathfrak{h}^\ast$의 원소가 있다면, 
+이 존재한다. 그럼 $\Phi\subseteq \mathfrak{h}^\ast$는 $\mathfrak{h}^\ast$의 spanning set이다. 만일 $\Phi$의 원소들의 일차결합으로 나타나지 않는 $\mathfrak{h}^\ast$의 원소가 있다면, 이에 해당하는 $\mathfrak{h}$의 원소는 모든 $\alpha\in H$에 대하여 $\alpha(H)$를 만족하여야 한다. 이제 임의의 root space $\mathfrak{g}_\alpha$에 대하여, $H$는
 
+$$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
+
+으로 작용하고, $\mathfrak{h}$는 abelian이므로 이 위에는 $0$으로 작용한다. 즉 $\mathfrak{g}$의 root decomposition을 생각하면 $H$는 $\mathfrak{g}$ 위의 모든 원소에 대하여 $0$으로 작용하고, 이로부터 $H$는 $\mathfrak{g}$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 4](#prop4)에 의하여 
 
 고, root들의 집합 $\Phi\subset\mathfrak{h}^\ast$를 생각하자. 
 
