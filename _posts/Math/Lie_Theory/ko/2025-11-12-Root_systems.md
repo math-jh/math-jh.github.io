@@ -298,7 +298,7 @@ $$H\cdot v_j=(\mu-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(\mu-j+1
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-처음 두 식은 자명하므로, $E$에 대한 식만 보이면 충분하다. 
+처음 두 식은 자명하므로, $E$에 대한 식만 보이면 충분하다. 귀납법으로 진행한다. 
 
 </details>
 
