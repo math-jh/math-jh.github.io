@@ -266,19 +266,29 @@ $$[H,E]=2E,\quad [H,F]=-2F,\quad [E,F]=H$$
 
 우리는 임의의 $\sl(2;\mathbb{C})$-representation이 irreducible representation들의 direct sum으로 나타난다는 것을 보인다. 이는 compact Lie group에 대해서는 자명한 결과이지만 $\SL(w,\mathbb{C})$와 같은 non-compact group에 대해서는 Haar measure의 존재성이 보장되지 않고 따라서 적분을 통해 내적을 평균내는 등의 아이디어를 사용할 수 없다는 것을 기억하자. 
 
-이제 각각의 $\lambda\in \mathbb{C}$에 대하여 weight space
+임의의 finite-dimensional $\sl_2$-representation $V$가 주어졌다 하고, 각각의 $\lambda\in \mathbb{C}$에 대하여 weight space
 
-$$V_\lambda=\{v\in V\mid Hv=\lambda v\}$$
+$$V_\lambda=\{v\in V\mid H\cdot v=\lambda v\}$$
 
 으로 정의하자. 그럼 앞서 살펴본 commutation relation에 의하여 
 
 $$E\cdot V_\lambda\subset V_{\lambda+2},\qquad F\cdot V_\lambsa\subset V_{\lambda-2}$$
 
-이 성립한다. 
+이 성립한다. 우리는 이러한 이유로 $E,F$를 각각 *raising operator*, *lowering operator*라 부르기도 한다. 한편 $V$는 유한차원이므로 weight decomposition
 
+$$V=\bigoplus_{\lambda} V_\lambda$$
 
+를 생각하면, $V_\mu\neq 0$이지만 $V_{\mu+2}=0$이 성립하는 $\mu$가 존재한다. 그럼 이러한 $\mu$에 대하여 우리는 다음의 두 식
 
+$$H\cdot v=\mu v,\qquad E\cdot v=0$$
 
+이 성립하는 것을 안다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10**</ins> 
+
+</div>
 
 
 
