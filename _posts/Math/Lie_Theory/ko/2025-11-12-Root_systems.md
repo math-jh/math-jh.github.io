@@ -442,27 +442,13 @@ $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alp
 
 을 만족한다. 즉 이들은 $\mathfrak{g}$ 안에서 $\sl_2$과 isomorphic한 subalgebra를 준다. 이를 $\sl_{2,\alpha}$라 하자. 그럼 adjoint action을 통해 $\mathfrak{g}$를 $\sl_{2,\alpha}$-representation으로 볼 수 있다. 
 
-특히 $h_\alpha$가 $\mathfrak{g}$의 원소들에 어떻게 작용하는지를 살펴보자. 이를 위해서는 $\mathfrak{g}$의 root space $\mathfrak{g}_\beta$에 $h_\alpha$의 adjoint action이 어떻게 작용하는지를 보면 충분하고, 이는 다음의 식
+특히 $h_\alpha$가 $\mathfrak{g}$의 원소들에 어떻게 작용하는지를 살펴보자. 우선 \mathfrak{g}$의 root space $\mathfrak{g}_\beta$에 $h_\alpha$의 adjoint action이 어떻게 작용하는지를 보면
 
 $$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $x\in \mathfrak{g}_\beta$}$$
 
-으로 주어진다. 즉, $\mathfrak{g}_\beta$는 이 action에 대한 weight $\beta(h_\alpha)$의 weight space이며
+이므로 $\mathfrak{g}_\beta$는 이 action에 대한 weight $\beta(h_\alpha)$의 weight space이다. 그런데 앞서 살펴봤듯 $\sl_2$-representation의 weight은 항상 정수이므로, 이 값 $\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$은 반드시 정수여야 함을 안다. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-앞서 우리는 $\mathfrak{h}$이 $H_\alpha$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $h_\alpha$들도 $\mathfrak{h}$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $h_\alpha$들로 생성되는 *real* vector space
+한편, 앞서 우리는 $\mathfrak{h}$이 $H_\alpha$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $h_\alpha$들도 $\mathfrak{h}$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $h_\alpha$들로 생성되는 *real* vector space
 
 $$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{h_\alpha\mid \alpha\in\Phi\}$$
 
@@ -470,9 +456,11 @@ $$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{h_\alpha\mid \alpha\in\Phi\}$$
 
 $$K(h_\alpha,h_\beta)=\tr_\mathfrak{g}(\ad h_\alpha\ad h_\beta)=\sum_{\gamma\in\Phi}\gamma(h_\alpha)\gamma(h_\beta)$$
 
-가 성립한다. 그런데 위의 보조정리에 의해 $\mathfrak{g}$를 $\sl_2$-representation으로 본다면, $\ad h_\alpha$에 대하여 root space $\mathfrak{g}_\gamma$는 
+가 성립한다. 우리는 앞서 이들 $\gamma(h_\alpha),\gamma(h_\beta)$들이 정수임을 증명하였으며 따라서 $K(h_\alpha,h_\beta)$도 그러하다. 즉, $\mathfrak{h}_\mathbb{R}$로 제한했을 때 $K$는 real-valued이며, 이제 임의의 $h\in \mathfrak{h}_\mathbb{R}$에 대하여
 
-$$\gamma(h_\alpha)=\frac{2}{K(\alpha,\alpha)}\beta(H_\alpha)=\frac{2}{K(\alpha,\alpha)}K(\alpha,\beta)=\frac{2(\alpha,\beta)}{(\alpha,\alpha)}$$
+$$K(h,h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
+
+을 주므로 우리는 $K$가 
 
 
 나중에 사용하기 위해 $\Phi$의 $\mathbb{Q}$-span과 함께 다음 공간들
