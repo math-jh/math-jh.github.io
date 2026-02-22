@@ -316,11 +316,20 @@ $$0=E\cdot v_{m+1}=(\mu-m)v_m$$
 
 과 $m$의 최소성으로부터 $\mu=m$이어야 한다는 것을 안다. 즉 highest weight는 반드시 양의 정수이다. 
 
-각각의 $m\geq 0$에 대하여, $\sl_2$의 representation $V(m)$을 $m+1$개의 vector들 $v_0,\ldots, v_m$과, [명제 10](#prop10)의 action 
+<div class="definition" markdown="1">
+
+<ins id="def11">**정의 11**</ins> 고정된 정수 $m\geq 0$에 대하여, $\sl_2$의 representation $V(m)$을 $m+1$개의 vector들 $v_0,\ldots, v_m$과, [명제 10](#prop10)의 action 
 
 $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{j-1}$$
 
-을 주어 정의하자. 정의에 의해 $v_{m+1}=0$이다. 그럼 $V(m)$은 irrducible인 것을 보일 수 있으며, 이는 weight $m, m-2,\ldots, -m+2,-m$을 갖는다. 
+을 주어 정의한다. $v_{-1}=v_{m+1}=0$이다. 
+
+</div>
+
+어렵지 않게 $V(m)$은 irrducible인 것을 보일 수 있다. 이제 임의의 $\sl_2$-representation $V$에 대하여, 우리는 $V$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 10](#prop10)을 적용하고, 남아있는 highest weight vector가 있다면 
+
+
+으며, 이는 weight $m, m-2,\ldots, -m+2,-m$을 갖는다.
 
 
 
