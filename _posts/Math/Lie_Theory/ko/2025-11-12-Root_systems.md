@@ -351,7 +351,30 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 </div>
 
-이제 semisimple complex Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하자. 그럼 $\mathfrak{g}$가 semisimple이므로 Killing form이 non-degenerate이고, 이를 $\mathfrak{h}$로 제한한 것도 마찬가지이므로 이로부터 유도되는 다음의 isomorphism
+이제 semisimple complex Lie algebra $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$를 고정하자. 그럼 우선 다음이 성립한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="lem13">**보조정리 13**</ins> Semisimple Lie algebra $\mathfrak{g}$, Cartan subalgebra $\mathfrak{h}$, 그리고 root decomposition
+
+$$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha$$
+
+에 대하여 다음이 성립한다. 
+
+1. 임의의 $\alpha,\beta\in \Phi$에 대하여 $[\mathfrak{g}\_\alpha,\mathfrak{g}\_\beta]\subseteq \mathfrak{g}\_{\alpha+\beta}$가 성립한다.
+2. $\mathfrak{g}$ 위에 정의된 Killing form을 $\mathfrak{h}$로 제한한 것은 non-degenerate이다. 또한, $\alpha+\beta\neq 0$이라면 $\mathfrak{g}\_\alpha$와 $\mathfrak{g}\_\beta$가 orthogonal이다. 
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+1. 
+
+</details>
+
+
+
+그럼 $\mathfrak{g}$가 semisimple이므로 Killing form이 non-degenerate이고, 이를 $\mathfrak{h}$로 제한한 것도 마찬가지이므로 이로부터 유도되는 다음의 isomorphism
 
 $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
@@ -363,18 +386,7 @@ $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
 이로부터 $\Phi$는 $\mathfrak{h}^\ast$을 span하는 것을 안다. 그러나 $\mathfrak{h}^\ast$는 complex vector space이고, 이 위에 정의된 Killing form 또한 positive definite라는 보장이 없으므로 inner product가 아니다. 이를 해소하기 위해 우리는 $\Phi$의 dual element들의 real span을 생각하고 여기로 Killing form을 제한했을 때 positive-definite가 된다는 것을 보인다. 이를 위해서는 root decomposition에 대한 조금 더 자세한 분석이 필요하다. 
 
-<div class="proposition" markdown="1">
 
-<ins id="lem13">**보조정리 13**</ins> Semisimple Lie algebra $\mathfrak{g}$, Cartan subalgebra $\mathfrak{h}$, 그리고 root decomposition
-
-$$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha$$
-
-에 대하여 다음이 성립한다. 
-
-1. 임의의 $\alpha,\beta\in \Phi$에 대하여 $[\mathfrak{g}\_\alpha,\mathfrak{g}\_\beta]\subseteq \mathfrak{g}\_{\alpha+\beta}$가 성립한다.
-2. 임의의 
-
-</div>
 
 각각의 root들 $\alpha\in\Phi$에 대하여, Killing form의 non-degeneracy로부터 다음의 식
 
