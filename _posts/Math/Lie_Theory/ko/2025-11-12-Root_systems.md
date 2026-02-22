@@ -286,9 +286,21 @@ $$H\cdot v=\mu v,\qquad E\cdot v=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> 
+<ins id="prop10">**명제 10**</ins> 임의의 highest weight $v_0\in V_\mu$에 대하여, 
+
+$$v_j=\frac{1}{j!}F^j v_0$$
+
+으로 정의하면 다음이 성립한다.
+
+$$H\cdot v_j=(\mu-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(\mu-j+1)v_{j-1}.$$
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+처음 두 식은 자명하므로, $E$에 대한 식만 보이면 충분하다. 
+
+</details>
 
 
 
