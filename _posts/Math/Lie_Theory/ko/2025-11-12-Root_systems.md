@@ -272,13 +272,13 @@ $$V_\lambda=\{v\in V\mid H\cdot v=\lambda v\}$$
 
 으로 정의하자. 그럼 앞서 살펴본 commutation relation에 의하여 
 
-$$E\cdot V_\lambda\subset V_{\lambda+2},\qquad F\cdot V_\lambsa\subset V_{\lambda-2}$$
+$$E\cdot V_\lambda\subset V_{\lambda+2},\qquad F\cdot V_\lambda\subset V_{\lambda-2}$$
 
 이 성립한다. 우리는 이러한 이유로 $E,F$를 각각 *raising operator*, *lowering operator*라 부르기도 한다. 한편 $V$는 유한차원이므로 weight decomposition
 
 $$V=\bigoplus_{\lambda} V_\lambda$$
 
-를 생각하면, $V_\mu\neq 0$이지만 $V_{\mu+2}=0$이 성립하는 $\mu$가 존재한다. 그럼 이러한 $\mu$에 대하여 우리는 다음의 두 식
+를 생각하면, $V_\mu\neq 0$이지만 $V_{\mu+2}=0$이 성립하는 $\mu$가 존재한다. 이러한 $\mu$를 *heighest weight*이라 부르고, $V_\mu$의 원소를 *highest weight vector*라 부른다. 그럼 highest weight vector $v$에 대하여 우리는 다음의 두 식
 
 $$H\cdot v=\mu v,\qquad E\cdot v=0$$
 
