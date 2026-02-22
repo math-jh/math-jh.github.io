@@ -298,7 +298,15 @@ $$H\cdot v_j=(\mu-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(\mu-j+1
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-처음 두 식은 자명하므로, $E$에 대한 식만 보이면 충분하다. 귀납법으로 진행한다. 
+처음 두 식은 자명하므로, $E$에 대한 식만 보이면 충분하다. 귀납법으로 진행한다. $j=0$인 경우는 자명하며, 만일 주어진 식이 $j$에 대해 성립한다면
+
+$$E\cdot v_{j+1}=\frac{1}{j+1}EF\cdot v_j=\frac{1}{j+1}(FE+H)\cdot v_j$$
+
+이고, 귀납적 가정에 의해
+
+$$E\cdot v_j=(\mu-j+1)v_{j-1}$$
+
+이고 $H$에 대한 식으로부터 $H\cdot v_j=(\mu-2j)v_j$이므로 이들을 대입하면 원하는 결과를 얻는다. 
 
 </details>
 
