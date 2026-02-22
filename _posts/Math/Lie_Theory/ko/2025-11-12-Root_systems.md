@@ -458,7 +458,7 @@ $$K(h_\alpha,h_\beta)=\tr_\mathfrak{g}(\ad h_\alpha\ad h_\beta)=\sum_{\gamma\in\
 
 가 성립한다. 우리는 앞서 이들 $\gamma(h_\alpha),\gamma(h_\beta)$들이 정수임을 증명하였으며 따라서 $K(h_\alpha,h_\beta)$도 그러하다. 즉, $\mathfrak{h}_\mathbb{R}$로 제한했을 때 $K$는 real-valued이며, 이제 임의의 $h\in \mathfrak{h}_\mathbb{R}$에 대하여
 
-$$K(h,h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
+$$K(h,h)=\tr(\ad_h\ad_h)\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
 
 을 주므로 우리는 $K$가 
 
