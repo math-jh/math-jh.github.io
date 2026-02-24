@@ -168,16 +168,4 @@ $$N=\{g\in G\mid gTg^{-1}=T\}$$
 
 </div>
 
-$T$의 normalizer $N(T)$는 $T$ 위에 conjugation action
-
-$$N\times T \rightarrow T;\qquad (n,t)\mapsto ntn^{-1}$$
-
-을 통해 act한다. 이를 통해 우리는 연속함수 $N\rightarrow \Aut(T)$을 얻는다. 그런데 $T\cong \mathbb{R}^k/\mathbb{Z}^k$라 하면 $\Aut(T)$는 $\GL(k;\mathbb{Z})$로 볼 수 있으며, $\Aut(T)$가 discrete이므로 $N_0$은 반드시 $T$ 위에 trivial하게 작용해야 한다. 
-
-
-
-그런데 이 action 하에서, $T\subset N$는 $T$ 위에 trivial하게 작용하므로 이 action은 Weyl group의 action
-
-$$W\times T\rightarrow T;\qquad (nT,t)\mapsto ntn^{-1}$$
-
-을 정의한다. jd
+그럼 Weyl group이 반드시 유한하다는 것을 보일 수 있다. 이는 지금 당장도 보일 수 있지만, 나중에 더 간결한 방식으로 보이기로 한다. 
