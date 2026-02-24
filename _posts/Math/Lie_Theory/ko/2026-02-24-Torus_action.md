@@ -57,8 +57,10 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것이다. 이를 위해서는 $\rho(T)$의 각각의 원소들이 diagonalizable인 것을 보이면 충분하다. 
 
-이를 위해 임의의 finite-dimensional representation $G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 것을 생각하자. 이 representation의 irreducible decomposition을 생각하면, 우리는 $T$의 임의의 
+이를 위해 임의의 finite-dimensional representation $G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 것을 생각하자. 그런데 
 
+
+이 representation의 irreducible decomposition을 생각하면, 우리는 $T$가 abelian이고 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 
 
 
 ## 
