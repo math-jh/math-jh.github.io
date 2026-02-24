@@ -137,3 +137,15 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 </div>
 
+## Weyl group
+
+Maximal torus의 중요성은 다음 정리에서도 나타난다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm5">**정리 5**</ins> Compact connected Lie group $G$에 대해 다음이 성립한다.
+
+1. $G$의 임의의 두 maximal torus는 conjugate이다.
+2. $G$의 임의의 원소는 어떠한 maximal torus에 포함되어 있다. 
+
+</div>
