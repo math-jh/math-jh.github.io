@@ -57,7 +57,9 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것이다. 이를 위해서는 $\rho(T)$의 각각의 원소들이 diagonalizable인 것을 보이면 충분하다. 
 
-이를 위해 임의의 finite-dimensional representation $G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 것을 생각하자. 우리는 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $T$의 임의의 representation은 1차원이라는 것을 안다. 
+이를 위해 임의의 finite-dimensional representation $G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 것을 생각하자. 우리는 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $T$의 임의의 representation은 1차원이라는 것을 안다. 즉, $T$의 
+
+
 
 ## 
 
