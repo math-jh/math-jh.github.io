@@ -168,3 +168,38 @@ $$N(T)=\{g\in G\mid gTg^{-1}=T\}$$
 
 </div>
 
+바꾸어 말하자면, 임의의 $G$의 element는, 고정된 maximal torus $T$에 대하여, 적당한 $t\in T$의 conjugate으로 쓸 수 있다.
+
+이제 $W(G,T)$가 root system $\Phi(G,T)$ 위에 어떻게 작용하는지를 살펴봐야 한다. 이는 다음의 식
+
+$$((nT)\cdot \alpha)(H)=\alpha(\Ad(n^{-1})(H))\qquad\text{for all $H\in \mathfrak{t}$}$$
+
+으로 주어진다. 이는 더 자세하게 쓰면 다음과 같다. 임의의 root $\alpha:\mathfrak{t}\rightarrow \mathbb{C}$를 생각하자. 이 root에 해당하는 weight space는
+
+$$g_{\alpha}=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
+
+이다. 이제 임의의 $X\_\alpha\in \mathfrak{g}\_\alpha$와 $n\in N_G(T)$에 대하여, $n$은 $nTn^{-1}=T$를 만족하므로 이를 미분하면 $n$에 의한 adjoint action은 Cartan subalgebra $\mathfrak{t}$ 또한 보존한다. 이제 식
+
+$$\alpha(H)X=[H,X]\text{for all $H\in \mathfrak{t}$}$$
+
+의 양변에 $n$에 의한 conjugation을 취하면, 
+
+$$\alpha(H)(nXn^{-1})=[nHn^{-1}, nXn^{-1}]\text{for all $H\in \mathfrak{t}$}$$
+
+을 얻는다. 한편 $nHn^{-1}\in \mathfrak{t}$이고, 이것이 $\mathfrak{t}$와 $n\mathfrak{t}n^{-1}$ 사이의 bijection을 정의하므로 이는 다음의 식
+
+$$[H, nXn^{-1}]=\alpha(H)\cdot (nXn^{-1})\text{for all $H\in \mathfrak{t}$}$$
+
+으로 쓸 수 있다. 즉, 요약하자면 $\mathfrak{t}$에서 $\mathfrak{t}$로의 conjugation map $c(n): X\mapsto nXn^{-1}$을 생각하면, 식 $w(\alpha)=\alpha\circ c(n^{-1})$으로 정의된 $w(\alpha)$ 또한 root이며 이 때 root space 또한 conjugation action을 통해 옮겨지게 된다. 
+
+이제 이 대응이 $W(G,T)\cong W(\Phi(G,T))$를 준다는 것이 앞서 언급한 핵심적인 주장이 된다. 
+
+한편 [정리 7](#thm7)에 의하여, 우리는 임의의 maximal torus $T, T'$가 주어진다면 $T'=gTg^{-1}$을 만족하는 $g\in G$가 존재하게, 이로부터 만들어지는 Weyl group $W(G, T')$ 또한 
+
+$$W(G, T')=N_G(T')/T'=(gN_G(T)g^{-1})/(gTg^{-1})\cong W(G,T)$$
+
+임을 안다. 이 때 명시적인 isomorphism $W(G,T)\rightarrow W(G, T')$는 당연히 $nT\mapsto gng^{-1}T'$으로 주어진다. 우리의 두 번째 주장은, 이렇게 얻어지는 다음의 diagram
+
+![Weyl_isomorphism](/assets/images/Math/Lie_Theory/Root_systems-1.png){:style="width:16em" class="invert" .align-center}
+
+이 commutative diagram이라는 것이다. 
