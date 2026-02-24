@@ -461,7 +461,7 @@ $$\langle\alpha_i,\alpha_j\rangle=2\frac{(\alpha_i,\alpha_j)}{(\alpha_j,\alpha_j
 
 <div class="definition" markdown="1">
 
-<ins id="def19">**정의 19**</ins> 위와 같은 세팅에서, 다음의 행렬
+<ins id="def17">**정의 17**</ins> 위와 같은 세팅에서, 다음의 행렬
 
 $$A=(a_{ij})_{1\leq i,j\leq l},\qquad a_{ij}=\langle \alpha_i,\alpha_j\rangle$$
 
