@@ -172,8 +172,12 @@ $T$의 normalizer $N(T)$는 $T$ 위에 conjugation action
 
 $$N\times T \rightarrow T;\qquad (n,t)\mapsto ntn^{-1}$$
 
-을 통해 act한다. 그런데 이 action 하에서, $T\subset N$는 $T$ 위에 trivial하게 작용하므로 이 action은 Weyl group의 action
+을 통해 act한다. 이를 통해 우리는 연속함수 $N\rightarrow \Aut(T)$을 얻는다. 그런데 $T$에서 $T$로의 automorphism은 
+
+
+
+그런데 이 action 하에서, $T\subset N$는 $T$ 위에 trivial하게 작용하므로 이 action은 Weyl group의 action
 
 $$W\times T\rightarrow T;\qquad (nT,t)\mapsto ntn^{-1}$$
 
-을 정의한다. 
+을 정의한다. jd
