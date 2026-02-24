@@ -53,4 +53,4 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 </div>
 
-Lie group의 적당한 원소에 의해 생성되는 
+Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으로의 exponential map이 그리는 one-parameter subgroup의 closure가 torus가 된다. 따라서 maximal torus의 존재성은 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의해 자명하다. 그럼 임의의 representation $\rho:G \rightarrow \Aut(V)$와 $t\in T$에 대하여, $\rho(t)$들은 $\Aut(V)$에서 commute한다. 
