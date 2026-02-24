@@ -69,16 +69,70 @@ $$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
 
 로 주어진다. 그런데 이제 $V_i$ 위에서 $T$가 상수배들로 작용한다면, $V_i$의 임의의 부분공간은 $T$-invariant일 것이며 따라서 $V_i$가 irreducible이기 위해서는 반드시 $\dim V_i=1$이어야만 한다. 
 
-이제 $\dim V_i=1$이므로 $\Aut(V_i)\cong \mathbb{C}^\times$이고, 우리는 위의 $\lambda_i: T\rightarrow \mathbb{C}^\times$가 정확하게 $\rho$의 character에 해당하고, 따라서 irreducible decomposition이 직접적으로 character $\lambda_i$에 의해 parametrize되는 것으로 생각할 수 있다. 
+이제 $\dim V_i=1$이므로 $\Aut(V_i)\cong \mathbb{C}^\times$이고, 우리는 위의 $\lambda_i: T\rightarrow \mathbb{C}^\times$가 정확하게 $\rho$의 character에 해당하고, 따라서 irreducible decomposition이 직접적으로 character $\lambda_i$에 의해 parametrize되는 것으로 생각할 수 있다. 즉 다음의 식
 
-그럼 이제 각각의 
+$$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{t\cdot v=\lambda(t)v\text{ for all $t\in T$}\}$$
 
+을 통해 irreducible decomposition이 주어진 것으로 생각하자. 그럼 각각의 $t\in T$에 대하여, $\rho(t)$는 바로 이 decomposition에 의하여 대각화되고, 각각의 eigenspace $V_\lambda$에 해당하는 고유값은 $\lambda(t)$이다. 이와 다른 $t$의 선택은 위의 decomposition은 그대로 두고, 각각의 eigenspace $V_\lambda$에 해당하는 고유값만 바뀌는 것이다. 
 
+직관적으로 $t\mapsto e^{2\pi i\lambda_i(X)}$를 각속도 $\lambda_i(X)$를 갖는 각운동이라 생각할 수 있고, 이러한 관점을 도입하면 우리는 각각의 $X\in \mathfrak{t}$가 주어졌을 때, 이 방향으로의 각속도 $\lambda_i(X)$가 얼마인지를 통해 이 torus action을 설명할 수 있다는 것을 안다. 이 때 각각의 $\lambda_i$들을 우리는 *weight*라 부른다. 그럼 우리는 각각의 weight $\lambda_i$마다 적당한 $V_i$가 존재하여, 이 위에서는 torus action이 $t\cdot v=\rchi_{\lambda_i}(t)v$로 작동하는 것을 안다. 이러한 $V_i$를 *weight space*라 부른다. 
 
-## 
+<div class="example" markdown="1">
 
+<ins id="ex8">**예시 8**</ins> 특별한 예시로, 1차원 torus
 
+$$S^1\cong T \cong \mathbb{R}/\mathbb{Z}$$
 
+을 생각하면, $S^1$은 다음의 집합
 
+$$S^1=\left\{e^{2\pi i t}\mid t\in \mathbb{R}/\mathbb{Z}\right\}$$
 
-그럼 임의의 representation $\rho:G \rightarrow \Aut(V)$와 $t\in T$에 대하여, $\rho(t)$들은 $\Aut(V)$에서 commute한다. 뿐만 아니라, 임의의 
+으로 생각할 수 있다. 이제 이 집합이 2차원 벡터공간 $\mathbb{C}^2$ 위에 다음의 식
+
+$$e^{2\pi i t}\cdot (z_1,z_2)=(e^{4\pi i t}z_1, e^{-2\pi i t}z_2)$$
+
+으로 act한다고 하자. 이 action은 작위적으로 보이지만, 위에서 살펴본 것과 같이 임의의 torus $T$와 임의의 representation $V$가 주어졌다면 $V$의 irreducible decomposition을 생각하고 각각의 irreducible component의 basis $e_i$들을 택하면 모든 torus action은 (적당한 basis의 선택에 의해) 이러한 꼴로 나타나는 것을 안다. 
+
+이를 행렬로 나타내면, 위의 action은 $\GL(2;\mathbb{C})$의 원소(들의 family)
+
+$$\begin{pmatrix}e^{4\pi i t}&0\\0&e^{-2\pi i t}\end{pmatrix}$$
+
+로 나타낼 수 있다. 이 때 이 행렬의 trace $e^{4\pi i t}+e^{-2\pi i t}$가 바로 이 representation의 character이다. 
+
+이 action의 weight space는 $\span(e_1), \span(e_2)$임이 자명하며, 가령 $\span(e_1)$에 해당하는 weight는 다음의 식
+
+$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $X\in \mathfrak{t}$}$$
+
+을 만족하는 linear functional $\lambda_1:\mathfrak{t}\rightarrow \mathbb{C}$으로 주어진다. 이는 당연히 $1\in \mathbb{R}$을 $2$로 보내는 $\lambda_1(t)=2t$에 의해 정의되며 따라서 이 weight space에 해당하는 weight는 (약간의 abuse of notation을 통해) $2$라 할 수 있다. 이 때 $\lambda$가 위의 식을 만족하기 위해서는, $e^{2\pi i}=1$이므로, 반드시 $\lambda(1)\in \mathbb{\mathbb{Z}}$여야 한다. 
+
+더 일반적으로 만일 $r$차원 torus의 action이 주어졌다면 $\mathfrak{t}$는 $\mathbb{R}^r$일 것이며, 이 때 torus $T$를
+
+$$T^r=\left\{(e^{2\pi i t_1}, \ldots e^{2\pi i t_r})\mid t_i\in \mathbb{R}/\mathbb{Z}\right\}$$
+
+으로 쓴다면 그 Lie algebra $\mathfrak{t}\cong \mathbb{R}^r$ 중 weight가 될 수 있는 것은 $\mathbb{Z}^r$에 속하는 원소이며 따라서 weight $\lambda$는 다음의 $r$-tuple
+
+$$\lambda=(n_1, \ldots, n_r)$$
+
+로 주어질 것이다. 명시적으로 이 weight는 임의의 $X=(x_1,\ldots, x_r)\in \mathfrak{t}$가 주어졌을 때 $n_1x_1+\cdots+n_rx_r$을 내놓는 linear functional이다.  
+
+</div>
+
+선형대수학에서의 eigenspace decomposition에서와 마찬가지로, 각각의 weight에 대한 중복도가 $1$일 필요는 없다. 가령 다음의 torus action
+
+$$e^{2\pi i t}\cdot(z_1, z_2)=(e^{4\pi i t}z_1, e^{4\pi i t} z_2)$$
+
+를 생각하면 이번에는 2차원 공간 $\mathbb{C}^2$ 위에서 $T$가 weight $2$를 갖는 것처럼 행동하기 때문이다. 이와 같이 서로 같은 weight $\lambda$들을 갖는 성분들을 한데 모아 이를 $V_\lambda$라 하면, 우리는 *weight space decomposition* $V=\bigoplus V_\lambda$를 얻는다. 지금까지의 논의를 엄밀하게 정의로 적으면 다음과 같다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible character $\rchi_\lambda: T \rightarrow S^1$와 그에 해당하는 linear functional $\lambda:\mathfrak{t}\rightarrow\mathbb{C}$에 대하여, $\lambda$가 $V$의 *weight*이라는 것은 다음 집합
+
+$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
+
+이 nontrivial인 것이다. 이 때, $V_\lambda$를 $\lambda$의 *weight space*라 하며, decomposition
+
+$$V=\bigoplus_\lambda V_\lambda$$
+
+을 $V$의 *weight decomposition*이라 부른다. 
+
+</div>
