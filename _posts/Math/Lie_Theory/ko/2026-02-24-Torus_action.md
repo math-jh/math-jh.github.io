@@ -45,11 +45,17 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 한편, 유한차원 representation $G\rightarrow\Aut(V)$가 주어졌다 할 때, 가장 좋은 점은 이들의 image $\rho(g)$들을 (basis의 선택을 통해) 행렬로 생각할 수 있다는 것이다. 따라서 이를 통해 우리는 행렬과 선형사상에 대한 우리의 도구들을 사용하여 이를 탐구할 수 있다. 
 
-선형대수에서 가장 중요한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 유한군이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 그런데 [\[선형대수학\] §고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)에 의하여, 우리는 이것이 이들 원소들의 commutativity와 
+선형대수에서 가장 중요한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 유한군이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 그런데 [\[선형대수학\] §고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)은 두 diagonalizable matrix가 simultaneously diagonalizable일 필요충분조건은 이들이 commute하는 것임을 알고 있으므로, 다음 정의를 내리는 것이 합당하다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def2">**정의 2**</ins> Compact, connected Lie group $G$에 대하여, $G$의 subgroup $T$가 *maximal torus*라는 것은 $T$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
+
+</div>
 
 ## Weight decomposition
 
-특히 우리는 
+이를 위해서는 
 
 
 
@@ -57,10 +63,6 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 
 
-<div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> Compact, connected Lie group $G$에 대하여, $G$의 subgroup $T$가 *maximal torus*라는 것은 $T$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
-
-</div>
 
 Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으로의 exponential map이 그리는 one-parameter subgroup의 closure가 torus가 된다. 따라서 maximal torus의 존재성은 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의해 자명하다. 그럼 임의의 representation $\rho:G \rightarrow \Aut(V)$와 $t\in T$에 대하여, $\rho(t)$들은 $\Aut(V)$에서 commute한다. 뿐만 아니라, 임의의 
