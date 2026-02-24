@@ -137,7 +137,7 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 </div>
 
-## Weyl group
+## 바일 군
 
 Maximal torus의 중요성은 다음 정리에서도 나타난다. 
 
@@ -168,4 +168,9 @@ $$N=\{g\in G\mid gTg^{-1}=T\}$$
 
 </div>
 
-그럼 Weyl group이 반드시 유한하다는 것을 보일 수 있다. 이는 지금 당장도 보일 수 있지만, 나중에 더 간결한 방식으로 보이기로 한다. 뿐만 아니라, 
+그럼 Weyl group이 반드시 유한하다는 것을 보일 수 있다. 이는 지금 당장도 보일 수 있지만, 나중에 더 간결한 방식으로 보이기로 한다. 뿐만 아니라, 임의의 maximal torus $T$는 Weyl group을 통해 다를 maximal torus와 conjugate이므로 우리는 $G$를 
+
+$$G=\coprod_{w\in W}wT$$
+
+으로 분해할 수 있다. 
+
