@@ -13,7 +13,8 @@ sidebar:
 
 date: 2026-02-24
 last_modified_at: 2026-02-24
-weight: 
+weight: 2
 
 ---
 
+우리는 다음 두 글에서 리 군 위에 작용하는 원환면에 대해 살펴본다. 
