@@ -155,3 +155,16 @@ Maximal torus의 중요성은 다음 정리에서도 나타난다.
 $$G=\bigcup_{g\in G}gTg^{-1}$$
 
 을 얻는다. 이를 *Cartan decomposition*이라 부른다. 
+
+물론 이 decomposition이 완전한 것은 아니다. 가령 이는 disjoint union이 아니므로 어떤 의미에서는 완전한 decomposition이라 보기 힘들다. 이를 더 잘 쓰기 위해 다음을 정의하자. 
+
+<div class="definition" markdown="1">
+
+<ins id="def6">**정의 6**</ins> Compact, connected Lie group $G$와 maximal torus $T$, 그리고 $T$의 normalizer
+
+$$N(T)=\{g\in G\mid gTg^{-1}=T\}$$
+
+에 대하여, group $W=N(T)/T$를 $G$의 *Weyl group<sub>바일 군</sub>*으로 정의한다. 
+
+</div>
+
