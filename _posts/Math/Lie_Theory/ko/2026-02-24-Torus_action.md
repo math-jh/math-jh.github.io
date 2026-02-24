@@ -162,9 +162,9 @@ $$G=\bigcup_{g\in G}gTg^{-1}$$
 
 <ins id="def6">**정의 6**</ins> Compact, connected Lie group $G$와 maximal torus $T$, 그리고 $T$의 normalizer
 
-$$N(T)=\{g\in G\mid gTg^{-1}=T\}$$
+$$N=\{g\in G\mid gTg^{-1}=T\}$$
 
-에 대하여, group $W=N(T)/T$를 $G$의 *Weyl group<sub>바일 군</sub>*으로 정의한다. 
+에 대하여, group $W=N/T$를 $G$의 *Weyl group<sub>바일 군</sub>*으로 정의한다. 
 
 </div>
 
@@ -172,3 +172,8 @@ $T$의 normalizer $N(T)$는 $T$ 위에 conjugation action
 
 $$N\times T \rightarrow T;\qquad (n,t)\mapsto ntn^{-1}$$
 
+을 통해 act한다. 그런데 이 action 하에서, $T\subset N$는 $T$ 위에 trivial하게 작용하므로 이 action은 Weyl group의 action
+
+$$W\times T\rightarrow T;\qquad (nT,t)\mapsto ntn^{-1}$$
+
+을 정의한다. 
