@@ -59,9 +59,17 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 보다 자세하게 이들을 하나하나 써 보면, 우선 $\rho\vert_T$가 unitary representation이라는 사실로부터 우리는 다음의 irreducible decomposition
 
-$$V=\bigoplus_\lambda V_\lambda$$
+$$V=\bigoplus_i V_i$$
 
-을 생각할 수 있다. 여기에서 각각의 $V_\lambda$는 irreducible $T$-representation들이다. 한편, $T$가 abelian이므로 임의의 $t\in T$에 대하여, $\rho(t)$은 $T$-action과 모두 commute하고, 따라서 $\rho(t)$는 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 
+을 생각할 수 있다. 여기에서 각각의 $V_\lambda$는 irreducible $T$-representation들이다. 한편, $T$가 abelian이므로 임의의 $t\in T$에 대하여, $\rho(t)$은 $T$-action과 모두 commute하고, 따라서 각각의 $V_i$로 제한하였을 때 $\rho(t)$는 $T$-automorphism이다. 이제 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)의 두 번째 결과에 의하여 $\rho(t)$는 상수배
+
+$$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
+
+로 주어진다. 그런데 이제 $V_i$ 위에서 $T$가 상수배들로 작용한다면, $V_i$의 임의의 부분공간은 $T$-invariant일 것이며 따라서 $V_i$가 irreducible이기 위해서는 반드시 $\dim V_i=1$이어야만 한다. 
+
+이제 $\dim V_i=1$이므로 $\Aut(V_i)\cong \mathbb{C}^\times$이고, 우리는 위의 $\lambda_i: T\rightarrow \mathbb{C}^\times$가 정확하게 
+
+배를 곱하는 상수배로 작용한다. 
 
 우리는 하여 $T$의 임의의 representation은 1차원이라는 것을 안다. 즉, $T$의 원소들이 
 
