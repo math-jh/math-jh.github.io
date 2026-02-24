@@ -49,6 +49,8 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 임의의 
+<ins id="def2">**정의 2**</ins> Compact, connected Lie group $G$에 대하여, $G$의 subgroup $T$가 *maximal torus*라는 것은 $T$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
 
 </div>
+
+Lie group의 적당한 원소에 의해 생성되는 
