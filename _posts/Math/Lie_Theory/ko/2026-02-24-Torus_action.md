@@ -55,7 +55,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 ## Weight decomposition
 
-이를 위해서는 
+우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것을 증명할 것이다. 
 
 
 
