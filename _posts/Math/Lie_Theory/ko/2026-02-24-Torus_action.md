@@ -79,7 +79,7 @@ $$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{t\cdot v=\lambda(t)v\text{ fo
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> 특별한 예시로, 1차원 torus
+<ins id="ex3">**예시 3**</ins> 특별한 예시로, 1차원 torus
 
 $$S^1\cong T \cong \mathbb{R}/\mathbb{Z}$$
 
@@ -125,7 +125,7 @@ $$e^{2\pi i t}\cdot(z_1, z_2)=(e^{4\pi i t}z_1, e^{4\pi i t} z_2)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible character $\rchi_\lambda: T \rightarrow S^1$와 그에 해당하는 linear functional $\lambda:\mathfrak{t}\rightarrow\mathbb{C}$에 대하여, $\lambda$가 $V$의 *weight*이라는 것은 다음 집합
+<ins id="def4">**정의 4**</ins> Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible character $\rchi_\lambda: T \rightarrow S^1$와 그에 해당하는 linear functional $\lambda:\mathfrak{t}\rightarrow\mathbb{C}$에 대하여, $\lambda$가 $V$의 *weight*이라는 것은 다음 집합
 
 $$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
@@ -136,3 +136,4 @@ $$V=\bigoplus_\lambda V_\lambda$$
 을 $V$의 *weight decomposition*이라 부른다. 
 
 </div>
+
