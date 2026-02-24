@@ -55,7 +55,13 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 ## Weight decomposition
 
-우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것이다. 이를 위해서는 $\rho(T)$의 각각의 원소들이 diagonalizable인 것을 보이면 충분하다. 이를 위해 임의의 finite-dimensional representation $G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 것을 생각하자. 가장 먼저 확인할 수 있는 것은 $T$가 compact Lie group이라는 사실이다. 
+우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것이다. 이를 위해서는 $\rho(T)$의 각각의 원소들이 diagonalizable인 것을 보이면 충분하다. 이를 위해 임의의 finite-dimensional representation $\rho:G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 representation $\rho\vert_T$을 생각하자. 가장 먼저 확인할 수 있는 것은 $T$가 compact Lie group이라는 사실이다. 따라서 [\[표현론\] §유한군의 표현론, ⁋명제 6](/ko/math/representation_theory/representations_of_finite_groups#prop6)과 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)이 모두 성립한다. 
+
+보다 자세하게 이들을 하나하나 써 보면, 우선 $\rho\vert_T$가 unitary representation이라는 사실로부터 우리는 다음의 irreducible decomposition
+
+$$V=\bigoplus_\lambda V_\lambda$$
+
+을 생각할 수 있다. 여기에서 각각의 $V_\lambda$는 irreducible representation들이다. 
 
 우리는 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $T$의 임의의 representation은 1차원이라는 것을 안다. 즉, $T$의 원소들이 
 
