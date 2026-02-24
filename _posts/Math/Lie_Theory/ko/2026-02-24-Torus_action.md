@@ -61,9 +61,9 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 $$V=\bigoplus_\lambda V_\lambda$$
 
-을 생각할 수 있다. 여기에서 각각의 $V_\lambda$는 irreducible representation들이다. 
+을 생각할 수 있다. 여기에서 각각의 $V_\lambda$는 irreducible $T$-representation들이다. 한편, $T$가 abelian이므로 임의의 $t\in T$에 대하여, $\rho(t)$은 $T$-action과 모두 commute하고, 따라서 $\rho(t)$는 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 
 
-우리는 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $T$의 임의의 representation은 1차원이라는 것을 안다. 즉, $T$의 원소들이 
+우리는 하여 $T$의 임의의 representation은 1차원이라는 것을 안다. 즉, $T$의 원소들이 
 
 
 
