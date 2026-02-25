@@ -185,7 +185,9 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 으로 작용한다. 그런데 $\Aut(T)$는 torus $T=\mathbb{R}^k/\mathbb{Z}^k$의 lattice가 어디로 옮겨지는지에 의해 결정되고, 이는 $\GL(k,\mathbb{Z})$에 $\Ad(n)$을 통해 담겨있다. 즉 이 action은 $N$에서 $\GL(k;\mathbb{Z})$로의 연속함수로 생각할 수 있다. 그런데 $\GL(k;\mathbb{Z})$는 discrete이므로 $N$의 identity component $N_0$을 생각하면 $N_0$은 모두 항등행렬로 옮겨져야 한다. 즉, $N_0$은 $T$ 위에 자명하게 작용한다. 
 
-이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$에 대하여, $\alpha(\mathbb{R})\cdot T=T$가 성립해야 하고, 이로부터 $\alpha(\mathbb{R})\subset T$여야 함을 안다. 그런데 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6)에 의하여 이들은 $N_0$에서 항등원의 어떠한 열린근방을 덮으며, 따라서 $N_0$을 생성한다. 
+이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$에 대하여, $\alpha(\mathbb{R})\cdot T=T$가 성립해야 하고, 이로부터 $\alpha(\mathbb{R})\subset T$여야 함을 안다. 그런데 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6)에 의하여 이들은 $N_0$에서 항등원의 어떠한 열린근방을 덮으며, 따라서 $N_0$을 생성한다. 즉 $N_0=T$이다.
+
+따라서 $N/T$는 정확하게 $N$의 connected component의 개수이며, $N$은 compact Lie group $G$의 closed subspace로서 마찬가지로 compact이므로 이것이 무한할 수 없다.
 
 </details>
 
