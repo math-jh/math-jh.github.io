@@ -137,9 +137,16 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 </div>
 
-## 바일 군
+## 극대 원환면
+
+
 
 Maximal torus의 중요성은 다음 정리에서도 나타난다. 
+
+
+
+
+
 
 <div class="proposition" markdown="1">
 
