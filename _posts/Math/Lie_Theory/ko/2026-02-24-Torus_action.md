@@ -149,6 +149,12 @@ Maximal torus의 중요성은 다음 정리에서도 나타난다.
 2. $G$의 임의의 원소는 어떠한 maximal torus에 포함되어 있다. 
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+
+
+</details>
 
 따라서 우리는 임의의 compact connected Lie group $G$와 maximal torus $T$에 대하여, 다음의 decomposition
 
