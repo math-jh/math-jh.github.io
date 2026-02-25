@@ -191,6 +191,18 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 </details>
 
+이제 우리의 주장은 다음과 같다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="lem7">**보조정리 7**</ins> Compact, connected Lie group $G$, maximal torus $T$와 함수
+
+$$q:G/T\times T\rightarrow G;\qquad (gT, t)\mapstol gtg^{-1}$$
+
+에 대하여, $q$의 mapping degree는 $\lvert W\rvert$이다. 
+
+</div>
+
 
 
 
