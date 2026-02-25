@@ -59,7 +59,11 @@ Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으�
 
 $$T^2\cong \mathbb{R}^2/\mathbb{Z}^2$$
 
-을 생각하면, quotient를 취하기 전 $(1,\sqrt{2})$ 방향으로의 one-parameter subgroup은 $T^2$ 전체를 조밀하게 덮을 것이며, 
+을 생각하면, quotient를 취하기 전 $(1,\sqrt{2})$ 방향으로의 one-parameter subgroup은 $T^2$ 전체를 조밀하게 덮고, 이 image의 closure가 바로 $T^2$ 전체가 된다. 이렇게
+
+$$T=\overline{\langle t\rangle}$$
+
+을 만족하는 $t\in T$를 $T$의 *generator*라 부른다. 
 
 ## Weight decomposition
 
