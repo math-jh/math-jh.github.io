@@ -139,7 +139,21 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 ## 극대 원환면
 
-우리는 이 섹션에서 
+우리는 이 섹션에서 compact connected Lie group $G$의 임의의 원소는 항상 어떠한 maximal torus에 포함되어 있고, 또 모든 maximal torus는 서로 conjugate이라는 것을 보인다. 
+
+이를 위해 우리는 compact connected Lie group $G$와 그 maximal torus $T$에 대하여, 다음의 map
+
+$$q: G/T\times T\rightarrow G; \qquad (g,t)\mapsto gtg^{-1}$$
+
+을 생각한다. 만일 $s\in T$라면,
+
+$$(gs)t(gs)^{-1}=gsts^{-1}g^{-1}=gtg^{-1}$$
+
+이므로 이 함수는 잘 정의된다. 우리 주장은 이 함수가 surjective라는 것이다. 그럼 특히 임의의 다른 torus $T'$와 그 generator $t'$에 대하여 $gtg^{-1}=t'$을 만족하는 $t\in T$를 찾을 수 있을 것이고, $T$와 $T'$의 maximality를 각각 사용하면 위에서 언급한 모든 주장이 증명될 것이다. 
+
+이를 위해 우리는 $q$의 적당한 regular value가 존재하여 그 preimage가 
+
+
 
 Maximal torus의 중요성은 다음 정리에서도 나타난다. 
 
