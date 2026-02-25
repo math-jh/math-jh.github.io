@@ -152,7 +152,19 @@ Maximal torus의 중요성은 다음 정리에서도 나타난다.
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+임의의 $g\in G$에 대하여, 그 centralizer
 
+$$C_G(g)=\{h\in G\mid gh=hg\}$$
+
+를 생각하자. 그럼 이는 compact Lie group $G$의 closed subgroup으로서 compact이다. 따라서 $C_G(g)$의 identity component $C_G(g)_0$을 생각하면 이는 compact connected component이다. 우리는 [정의 2](#def2) 직후에 임의의 compact connected Lie group의 maximal torus가 존재한다는 것을 보였으므로, $C_G(g)_0$의 maximal torus $T_g$가 존재한다. 뿐만 아니라, $T_g\subset C_G(g)$이므로 $g$는 $T_g$의 임의의 원소와 commute하고, 이로부터 $g\in C_G(T_g)$임을 안다. 
+
+이제 torus $T_g$의 Lie algebra $\mathfrak{t}_g$를 생각하자. 그럼 $\mathfrak{t}_g$는 abelian Lie algebra이고, 이를 $\mathfrak{g}$의 subalgebra로 본다면 $\mathfrak{t}_g$를 포함하는 $\mathfrak{g}$의 *maximal* abelian Lie subalgebra $\mathfrak{h}$가 존재한다. 또 [§리 군, ⁋정리 15](/ko/math/Lie_theory/Lie_groups#thm15)을 사용하여 이를 $G$로 올려주면 $\mathfrak{h}$에 해당하는 $G$의 torus $T$가 존재하며 $T_g$를 포함한다는 것을 안다. 이제
+
+$$g\in C_G(T_g)\subset C_G(T)$$
+
+이다. 그런데 임의의 $x,y\in Z_G(T)$와 임의의 $t\in T$에 대하여 $x=txt^{-1}$이고 $y=tyt^{-1}$이므로
+
+$$yxy^{-1}=y(txt^{-1})y^{-1}=(yty^{-1})(yxy^{-1})(yt^{-1}y^{-1})$$
 
 </details>
 
