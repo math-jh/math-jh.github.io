@@ -59,7 +59,7 @@ Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으�
 
 $$T^2\cong \mathbb{R}^2/\mathbb{Z}^2$$
 
-을 생각하면, quotient를 취하기 전 $(1,\sqrt{2})$ 방향으로의 one-parameter subgroup은 $T^2$ 전체를 
+을 생각하면, quotient를 취하기 전 $(1,\sqrt{2})$ 방향으로의 one-parameter subgroup은 $T^2$ 전체를 조밀하게 덮을 것이며, 
 
 ## Weight decomposition
 
