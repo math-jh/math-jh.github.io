@@ -154,7 +154,7 @@ Maximal torus의 중요성은 다음 정리에서도 나타난다.
 
 임의의 $g\in G$에 대하여, 그 centralizer
 
-$$C_G(g)=\{h\in G\mid gh=hg\}$$
+$$C_G(g)=\{h\in G\mid gh=hg\text{ for all $g\in G$}\}$$
 
 를 생각하자. 그럼 이는 compact Lie group $G$의 closed subgroup으로서 compact이다. 따라서 $C_G(g)$의 identity component $C_G(g)_0$을 생각하면 이는 compact connected component이다. 우리는 [정의 2](#def2) 직후에 임의의 compact connected Lie group의 maximal torus가 존재한다는 것을 보였으므로, $C_G(g)_0$의 maximal torus $T_g$가 존재한다. 뿐만 아니라, $T_g\subset C_G(g)$이므로 $g$는 $T_g$의 임의의 원소와 commute하고, 이로부터 $g\in C_G(T_g)$임을 안다. 
 
@@ -162,9 +162,9 @@ $$C_G(g)=\{h\in G\mid gh=hg\}$$
 
 $$g\in C_G(T_g)\subset C_G(T)$$
 
-이다. 그런데 임의의 $x,y\in Z_G(T)$와 임의의 $t\in T$에 대하여 $x=txt^{-1}$이고 $y=tyt^{-1}$이므로
+이며 정의에 의해 $T\subseteq C_G(T)$이다. 
 
-$$yxy^{-1}=y(txt^{-1})y^{-1}=(yty^{-1})(yxy^{-1})(yt^{-1}y^{-1})$$
+$$xy=txt^{-1}$$
 
 </details>
 
