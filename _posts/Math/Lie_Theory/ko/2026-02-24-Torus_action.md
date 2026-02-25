@@ -139,7 +139,7 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 ## 극대 원환면
 
-
+우리는 이 섹션에서 
 
 Maximal torus의 중요성은 다음 정리에서도 나타난다. 
 
