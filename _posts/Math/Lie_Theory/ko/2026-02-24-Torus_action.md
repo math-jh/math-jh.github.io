@@ -169,8 +169,25 @@ $$N=\{g\in G\mid gTg^{-1}=T\}$$
 
 </div>
 
+그럼 다음이 성립한다.
 
+<div class="proposition" markdown="1">
 
+<ins id="prop6">**명제 6**</ins> Weyl group $W=N/T$는 항상 유한하다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+정의에 의해 $N$은 $T$ 위에 conjugation action
+
+$$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
+
+으로 작용한다. 그런데 $\Aut(T)$는 torus $T=\mathbb{R}^k/\mathbb{Z}^k$의 lattice가 어디로 옮겨지는지에 의해 결정되고, 이는 $\GL(k,\mathbb{Z})$에 $\Ad(n)$을 통해 담겨있다. 즉 이 action은 $N$에서 $\GL(k;\mathbb{Z})$로의 연속함수로 생각할 수 있다. 그런데 $\GL(k;\mathbb{Z})$는 discrete이므로 $N$의 identity component $N_0$을 생각하면 $N_0$은 모두 항등행렬로 옮겨져야 한다. 즉, $N_0$은 $T$ 위에 자명하게 작용한다. 
+
+이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$에 대하여, $\alpha(\mathbb{R})\cdot T=T$가 성립해야 하고 
+
+</details>
 
 
 
