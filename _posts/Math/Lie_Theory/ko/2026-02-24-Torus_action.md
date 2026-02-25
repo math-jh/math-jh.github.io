@@ -169,8 +169,6 @@ $$N=\{g\in G\mid gTg^{-1}=T\}$$
 
 </div>
 
-임의의 group $G$와 abelian subgroup $T$에 대하여, $T$의 $G$에서의 centralizer $Z_G(T)$는 항상 abelian이다. 이는 만일 
-
 그럼 다음이 성립한다.
 
 <div class="proposition" markdown="1">
