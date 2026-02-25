@@ -55,6 +55,12 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으로의 exponential map이 그리는 one-parameter subgroup의 closure가 torus가 된다. 따라서 maximal torus의 존재성은 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의해 자명하다. 
 
+주의할 것은, 위에서 생각하는 one-parameter group $\exp(tX)$가 1차원 torus를 만들 것이라는 착각을 하기 쉬운데 이것이 항상 그렇지는 않다는 것이다. 가령 2차원 torus
+
+$$T^2\cong \mathbb{R}^2/\mathbb{Z}^2$$
+
+을 생각하면, quotient를 취하기 전 $(1,\sqrt{2})$ 방향으로의 one-parameter subgroup은 $T^2$ 전체를 
+
 ## Weight decomposition
 
 우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것이다. 이를 위해서는 $\rho(T)$의 각각의 원소들이 diagonalizable인 것을 보이면 충분하다. 이를 위해 임의의 finite-dimensional representation $\rho:G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 representation $\rho\vert_T$을 생각하자. 가장 먼저 확인할 수 있는 것은 $T$가 compact Lie group이라는 사실이다. 따라서 [\[표현론\] §유한군의 표현론, ⁋명제 6](/ko/math/representation_theory/representations_of_finite_groups#prop6)과 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)이 모두 성립한다. 
@@ -141,21 +147,25 @@ $$V=\bigoplus_\lambda V_\lambda$$
 
 우리는 이 섹션에서 compact connected Lie group $G$의 임의의 원소는 항상 어떠한 maximal torus에 포함되어 있고, 또 모든 maximal torus는 서로 conjugate이라는 것을 보인다. 
 
-이를 위해 우리는 compact connected Lie group $G$와 그 maximal torus $T$에 대하여, 다음의 map
+우리의 주장은 compact connected Lie group $G$와 그 maximal torus $T$에 대하여, 다음의 map
 
 $$q: G/T\times T\rightarrow G; \qquad (g,t)\mapsto gtg^{-1}$$
 
-을 생각한다. 만일 $s\in T$라면,
+이 surjective라는 것이다. 그럼 특히 임의의 다른 torus $T'$와 그 generator $t'$에 대하여 $gtg^{-1}=t'$을 만족하는 $t\in T$를 찾을 수 있을 것이고, $T$와 $T'$의 maximality를 각각 사용하면 위에서 언급한 두 주장이 증명될 것이다. 
 
-$$(gs)t(gs)^{-1}=gsts^{-1}g^{-1}=gtg^{-1}$$
+우리는 이 map이 surjective라는 것 뿐만 아니라, 명시적인 mappuing degree까지 구해줄 수 있다. 이를 위해 다음을 정의하자. 
 
-이므로 이 함수는 잘 정의된다. 우리 주장은 이 함수가 surjective라는 것이다. 그럼 특히 임의의 다른 torus $T'$와 그 generator $t'$에 대하여 $gtg^{-1}=t'$을 만족하는 $t\in T$를 찾을 수 있을 것이고, $T$와 $T'$의 maximality를 각각 사용하면 위에서 언급한 모든 주장이 증명될 것이다. 
+<div class="definition" markdown="1">
 
-이를 위해 우리는 $q$의 적당한 regular value가 존재하여 그 preimage가 
+<ins id="def5">**정의 5**</ins> Compact, connected Lie group $G$와 maximal torus $T$, 그리고 $T$의 normalizer
+
+$$N=\{g\in G\mid gTg^{-1}=T\}$$
+
+에 대하여, group $W=N/T$를 $G$의 *Weyl group<sub>바일 군</sub>*으로 정의한다. 
+
+</div>
 
 
-
-Maximal torus의 중요성은 다음 정리에서도 나타난다. 
 
 
 
@@ -197,15 +207,7 @@ $$G=\bigcup_{g\in G}gTg^{-1}$$
 
 물론 이 decomposition이 완전한 것은 아니다. 가령 이는 disjoint union이 아니므로 어떤 의미에서는 완전한 decomposition이라 보기 힘들다. 이를 더 잘 쓰기 위해 다음을 정의하자. 
 
-<div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Compact, connected Lie group $G$와 maximal torus $T$, 그리고 $T$의 normalizer
-
-$$N=\{g\in G\mid gTg^{-1}=T\}$$
-
-에 대하여, group $W=N/T$를 $G$의 *Weyl group<sub>바일 군</sub>*으로 정의한다. 
-
-</div>
 
 정의에 의해 Weyl group은 $T$의 선택에 의존하지만 우리는 곧 maximal torus들이 서로 conjugate임을 보일 것이므로 서로 다른 $T$의 선택 또한 isomorphic한 Weyl group을 준다. 한편 torus $T$의 generator $t$를 생각하고 다음의 연속함수
 
