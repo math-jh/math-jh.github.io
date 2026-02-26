@@ -259,11 +259,11 @@ $$q(gT, s)=gsg^{-1}$$
 
 $$d q_{(xT, x^{-1}tx)}=\Ad_x\circ d q_{(eT, t)}\circ (\text{left translation})$$
 
-이다. 특히 $\Ad_x\vert_\mathfrak{f}$와 $\Ad_x|_\mathfrak{t}$는 모두 determinant가 $1$인 linear map이며 (전자는 orthogonal map이므로, 후자는 $x\in N$이므로 $\Ad_x$가 $\mathfrak{t}$를 보존하므로), 따라서 $d q_{(xT, x^{-1}tx)}$의 determinant는 $d q_{(eT,t)}$의 determinant와 같다.
+이다. 특히 $\Ad_x\vert_\mathfrak{f}$와 $\Ad_x\vert_\mathfrak{t}$는 모두 determinant가 $1$인 linear map이며 (전자는 orthogonal map이므로, 후자는 $x\in N$이므로 $\Ad_x$가 $\mathfrak{t}$를 보존하므로), 따라서 $d q_{(xT, x^{-1}tx)}$의 determinant는 $d q_{(eT,t)}$의 determinant와 같다.
 
 한편 $\det(\Ad_t^{-1}\vert_\mathfrak{f}-I)$는 $w\cdot t$에 대해서도 동일하다. 실제로
 
-$$\Ad_{wt^{-1}w^{-1}}\vert_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}|_\mathfrak{f}-I)\circ\Ad_w^{-1}$$
+$$\Ad_{wt^{-1}w^{-1}}\vert_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}\vert_\mathfrak{f}-I)\circ\Ad_w^{-1}$$
 
 이므로, 이 두 operator는 similar하고 따라서 같은 determinant를 갖는다.
 
@@ -271,100 +271,19 @@ $$\Ad_{wt^{-1}w^{-1}}\vert_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}|_\mathfrak{f}-I)
 
 </details>
 
-
-
-
+위에서 언급한 것과 같이, 이 보조정리로부터 이 섹션의 핵심적인 내용이 바로 따라나온다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm5">**정리 5**</ins> Compact connected Lie group $G$에 대해 다음이 성립한다.
+<ins id="thm8">**정리 8**</ins> Compact connected Lie group $G$에 대해 다음이 성립한다.
 
 1. $G$의 임의의 원소는 어떠한 maximal torus에 포함되어 있다. 
 2. $G$의 두 maximal torus는 항상 conjugate이다. 
 
 </div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-임의의 $g\in G$에 대하여, 그 centralizer
-
-$$C_G(g)=\{h\in G\mid gh=hg\text{ for all $g\in G$}\}$$
-
-를 생각하자. 그럼 이는 compact Lie group $G$의 closed subgroup으로서 compact이다. 따라서 $C_G(g)$의 identity component $C_G(g)_0$을 생각하면 이는 compact connected component이다. 우리는 [정의 2](#def2) 직후에 임의의 compact connected Lie group의 maximal torus가 존재한다는 것을 보였으므로, $C_G(g)_0$의 maximal torus $T_g$가 존재한다. 뿐만 아니라, $T_g\subset C_G(g)$이므로 $g$는 $T_g$의 임의의 원소와 commute하고, 이로부터 $g\in C_G(T_g)$임을 안다. 
-
-이제 torus $T_g$의 Lie algebra $\mathfrak{t}_g$를 생각하자. 그럼 $\mathfrak{t}_g$는 abelian Lie algebra이고, 이를 $\mathfrak{g}$의 subalgebra로 본다면 $\mathfrak{t}_g$를 포함하는 $\mathfrak{g}$의 *maximal* abelian Lie subalgebra $\mathfrak{h}$가 존재한다. 또 [§리 군, ⁋정리 15](/ko/math/Lie_theory/Lie_groups#thm15)을 사용하여 이를 $G$로 올려주면 $\mathfrak{h}$에 해당하는 $G$의 torus $T$가 존재하며 $T_g$를 포함한다는 것을 안다. 이제
-
-$$g\in C_G(T_g)\subset C_G(T)$$
-
-이며 정의에 의해 $T\subseteq C_G(T)$이다. 
-
-$$xy=txt^{-1}$$
-
-</details>
 
 따라서 우리는 임의의 compact connected Lie group $G$와 maximal torus $T$에 대하여, 다음의 decomposition
 
 $$G=\bigcup_{g\in G}gTg^{-1}$$
 
 을 얻는다. 이를 *Cartan decomposition*이라 부른다. 
-
-물론 이 decomposition이 완전한 것은 아니다. 가령 이는 disjoint union이 아니므로 어떤 의미에서는 완전한 decomposition이라 보기 힘들다. 이를 더 잘 쓰기 위해 다음을 정의하자. 
-
-
-
-정의에 의해 Weyl group은 $T$의 선택에 의존하지만 우리는 곧 maximal torus들이 서로 conjugate임을 보일 것이므로 서로 다른 $T$의 선택 또한 isomorphic한 Weyl group을 준다. 한편 torus $T$의 generator $t$를 생각하고 다음의 연속함수
-
-$$G\rightarrow G;\qquad g\mapsto gtg^{-1}$$
-
-를 생각하면, $N$은 정확하게 이 map에 대한 $T$의 preimage이며 따라서 compact이다. 한편, 그 정의에 의해 $N$은 torus $T$ 위에 다음의 action
-
-$$N\times T \rightarrow T;\qquad (n,t)\mapsto ntn^{-1}$$
-
-을 준다. 그런데 $T$는 abelian이므로, 이 action은 결과적으로 다음의 Weyl group action 
-
-$$W\times T \rightarrow T; \qquad (nT, t)\mapsto ntn^{-1}$$
-
-을 주게 된다. 한편 torus의 automorphism은 각 lattice point가 어디로 가는지에 의해 결정되므로, 이를 고려하면 $N$의 action은 다음의 homomorphism
-
-$$N\rightarrow\Aut(T)\cong \GL(k;\mathbb{Z})$$
-
-을 주게 된다. 이제 $N$의 identity component $N_0$을 생각하자. 그럼 $\GL(k;\mathbb{Z})$은 
-discrete group이므로 $N_0$는 통째로 $\id\in \GL(k;\mathbb{Z})$로 옮겨져야 한다. 즉 $N_0$은 $T$ 위에 trivial action을 정의한다. 그럼 임의의 one-parameter subgroup $\gamma: \mathbb{R}\rightarrow N_0$에 대하여, $T$의 maximality로부터 $\gamma(\mathbb{R})T=T$이므로 특히 $\gamma(\mathbb{R})\subset T$이다. 이제 $N_0$의 원점에서의 Lie algebra들의 exponential map들 (즉 one-parameter subgroup들)은 $N_0$를 생성하므로 반드시 $T=N_0$이어야 한다. 즉, $W=N/N_0$이다. 그런데 $N$이 compact이므로 $W$도 compact이고, 따라서 $W$는 유한집합이다. 
-
-Compact connected Lie group $G$에 대하여, 임의의 abelian Lie subgroup은 torus인 것을 알고 있다. 이에 우리는 대략적으로 maximal torus를 $G$의 maximal abelian subgroup과 같은 것으로 생각하지만, 이 둘이 정확히 같은 것은 아니다. 더 구체적으로 임의의 maximal torus는 maximal abelian subgroup이지만, 모든 maximal abelian subgroup이 torus인 것은 아니다. 그 대신, Weyl group action $W\times T \rightarrow T$를 생각하면 $T$가 abelian이므로 이 action은 *effective* action이 된다. 만일 어떠한 $gT\in W$가 모든 $t\in T$에 대하여 
-
-$$t=(gT)\cdot t=gtg^{-1}$$
-
-을 만족한다면, $g\in Z(T)$여야 하고 $T$의 maximality에 의하여 $Z(T)=T$이기 때문이다. 다음 보조정리는 orbit space $T/W$를 구체적으로 묘사한다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="lem7">**보조정리 7**</ins> Maximal torus의 두 원소가 $G$에서 conjugate인 것과 이들이 Weyl group action의 같은 orbit에 속하는 것이 동치이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-Maximal torus $T$를 고정하고, $T$의 두 원소 $x,y$가 서로 conjugate이라 하자. 즉 적당한 $g\in G$에 대하여 $gxg^{-1}=y$이다. 이제 $T$와 $gTg^{-1}$을 비교하면 이들은 $y$의 centralizer $Z(y)$의 maximal torus이다. 따라서 $T=h(gTg^{-1})h^{-1}$이도록 하는 $h\in Z(y)$가 존재하며, 이로부터 $(hg)x(hg)^{-1}-hyh^{-1}=y$이므로 $(hgT)\cdot x=y$이다. 
-
-</details>
-
-이제 임의의 $G$의 임의의 원소는 적당한 maximal torus에 포함되어 있고, 임의의 maximal torus는 다른 maximal torus와 conjugate이므로, 임의의 $x\in G$는 항상 고정된 maximal torus $T$와 적당한 $g\in G$에 대하여 $x=gtg^{-1}$으로 쓸 수 있다. 바꾸어 말하자면, $G$의 임의의 conjugacy class $[x]\in\Conj(G)$가 주어질 때마다 여기에 속한 $t\in T$를 대응시켜줄 수 있다. 이 대응을 사용하여, 임의의 conjugacy class $[x]$를 받아 $tW\in T/W$를 대응시키는 함수를 생각하자. 
-
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8**</ins> 위의 함수는 잘 정의되며, $T/W$와 $\Conj(G)$ 사이의 일대일대응을 정의한다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-이 함수가 잘 정의된다는 것은 위의 명제에 의하여 자명하다. 이제 이 함수가 단사임을 보이자. 즉 두 class $[x_1]$, $[x_2]$가 같은 $W$-orbit $t_1W=t_2W$으로 옮겨진다 하자. 즉 $t_1, t_2$는 $G$에서 conjugate하며, 이들 각각은 $x_1, x_2$와 conjugate이므로 원래의 class $[x_1], [x_2]$도 서로 같아야 한다. 이 함수가 전사라는 것은 그냥 임의의 $t\in T$에 대하여 $t$의 conjugacy class가 $tW$으로 옯겨지므로 자명하다. 
-
-</details>
-
-조금 더 fancy한 언어를 사용하면 이는 다음과 같다. Lie group $G$ 위에 conjugate action을 생각하고 이를 통해 quotient topology를 주어 $G$의 conjugacy class들의 공간 $\Conj(G)$를 생각하자. 그럼 $G$ 위의 class function은 단순히 $\Conj(G)$ 위에서의 연속함수이다. 이제 이를 $T$로 제한하면 다음의 isomorphism
-
-$$C^0(\Conj(G))\cong C^0(T)^W$$
-
-이 주어지게 된다. 
