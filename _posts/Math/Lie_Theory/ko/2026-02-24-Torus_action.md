@@ -221,9 +221,9 @@ $$q^{-1}(t)=\{(gT, (gT)\cdot t)\mid gT\in W\}$$
 
 $$\mathfrak{g}=\mathfrak{t}\oplus\mathfrak{f}$$
 
-으로 분해하자. 이제 $G/T\times T$의 원점 근처에서의 tangent space를 생각하면, $T$의 tangent space는 $\mathfrak{t}$이고 $G/T$의 tangent space는 $\mathfrak{f}$로 주어진다. 따라서 $G/T\times T$의 tangent space는 $\mathfrak{t}\oplus\mathfrak{f}\cong\mathfrak{g}$이다.
+으로 분해하면, 원점 근처에서 $T$의 tangent space는 $\mathfrak{t}$이고 $G/T$의 tangent space는 $\mathfrak{f}$로 주어진다. 따라서 $G/T\times T$의 tangent space는 $\mathfrak{t}\oplus\mathfrak{f}\cong\mathfrak{g}$이다.
 
-한편 임의의 $X\in\mathfrak{t}$와 $Y\in\mathfrak{f}$에 대하여, $q$의 differential은 다음과 같이 계산된다. 방향 $X$에 대하여, 즉 $T$ 방향으로의 변화를 생각하면
+한편 임의의 $X\in\mathfrak{t}$와 $Y\in\mathfrak{f}$에 대하여, $q$의 $(eT,t)$에서의 differential은 다음과 같이 계산된다. 방향 $X$에 대하여, 즉 $T$ 방향으로의 변화를 생각하면
 
 $$d q_{(eT,t)}(X,0)=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}q(eT, t\exp(\epsilon X))=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}t\exp(\epsilon X)=X$$
 
@@ -245,13 +245,13 @@ $$d q_{(eT,t)}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}|_\mathfrak{f}-I \end{pmat
 
 이다. 여기서 첫 번째 block은 $\mathfrak{t}$ 방향, 두 번째 block은 $\mathfrak{f}$ 방향에 해당한다.
 
-**3단계: Regularity 확인.** 이제 $\Ad_t^{-1}|_\mathfrak{f}-I$가 가역임을 보이자. 만약 $(\Ad_t^{-1}-I)Y=0$인 $Y\in\mathfrak{f}$가 존재한다면, $\Ad_t(Y)=Y$이다. 그럼 임의의 정수 $m$에 대하여 $\Ad_{t^m}(Y)=Y$이고, $t$가 generator라는 가정으로부터 모든 $s\in T$에 대하여 $\Ad_s(Y)=Y$이다. 이제 임의의 $H\in\mathfrak{t}$에 대하여,
+이제 $\Ad_t^{-1}\vert_\mathfrak{f}-I$가 가역이며, 모든 preimage에서 sign이 맞아떨어짐을 보인다. 만약 $(\Ad_t^{-1}-I)Y=0$인 $Y\in\mathfrak{f}$가 존재한다면, $\Ad_t(Y)=Y$이다. 그럼 임의의 정수 $m$에 대하여 $\Ad_{t^m}(Y)=Y$이고, $t$가 generator라는 가정으로부터 모든 $s\in T$에 대하여 $\Ad_s(Y)=Y$이다. 이제 임의의 $H\in\mathfrak{t}$에 대하여,
 
-$$[H,Y]=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
+$$[H,Y]=\left.\frac{d}{d\epsilon}\right\vert_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
 
-이므로 $Y$는 $\mathfrak{t}$의 모든 원소와 commute한다. 그런데 $\mathfrak{t}$는 maximal abelian subalgebra이므로 $Y\in\mathfrak{t}$이고, 따라서 $Y\in\mathfrak{f}\cap\mathfrak{t}=\{0\}$이다. 즉 $\Ad_t^{-1}|_\mathfrak{f}-I$는 가역이다.
+이므로 $Y$는 $\mathfrak{t}$의 모든 원소와 commute한다. 그런데 $\mathfrak{t}$는 maximal abelian subalgebra이므로 $Y\in\mathfrak{t}$이고, 따라서 $Y\in\mathfrak{f}\cap\mathfrak{t}=\{0\}$이다. 즉 $\Ad_t^{-1}\vert_\mathfrak{f}-I$는 가역이다.
 
-**4단계: Sign의 일치.** 마지막으로, $q^{-1}(t)$의 모든 점에서 $dq$의 determinant가 같은 부호를 갖는지 확인하자. 임의의 $w\in W$를 택하고 이를 $x\in N$이 represent한다 하자. 그럼 $q(xT,x^{-1}tx)=t$이므로 $(xT, x^{-1}tx)\in q^{-1}(t)$이다. 이 점에서의 differential을 계산하기 위해, $q$의 정의로부터
+마지막으로, $q^{-1}(t)$의 모든 점에서 $dq$의 determinant가 같은 부호를 갖는지 확인하자. 임의의 $w\in W$를 택하고 이를 $x\in N$이 represent한다 하자. 그럼 $q(xT,x^{-1}tx)=t$이므로 $(xT, x^{-1}tx)\in q^{-1}(t)$이다. 이 점에서의 differential을 계산하기 위해, $q$의 정의로부터
 
 $$q(gT, s)=gsg^{-1}$$
 
@@ -259,15 +259,15 @@ $$q(gT, s)=gsg^{-1}$$
 
 $$d q_{(xT, x^{-1}tx)}=\Ad_x\circ d q_{(eT, t)}\circ (\text{left translation})$$
 
-이다. 특히 $\Ad_x|_\mathfrak{f}$와 $\Ad_x|_\mathfrak{t}$는 모두 determinant가 $1$인 linear map이며 (전자는 orthogonal map이므로, 후자는 $x\in N$이므로 $\Ad_x$가 $\mathfrak{t}$를 보존하므로), 따라서 $d q_{(xT, x^{-1}tx)}$의 determinant는 $d q_{(eT,t)}$의 determinant와 같다.
+이다. 특히 $\Ad_x\vert_\mathfrak{f}$와 $\Ad_x|_\mathfrak{t}$는 모두 determinant가 $1$인 linear map이며 (전자는 orthogonal map이므로, 후자는 $x\in N$이므로 $\Ad_x$가 $\mathfrak{t}$를 보존하므로), 따라서 $d q_{(xT, x^{-1}tx)}$의 determinant는 $d q_{(eT,t)}$의 determinant와 같다.
 
-한편 $\det(\Ad_t^{-1}|_\mathfrak{f}-I)$는 $w\cdot t$에 대해서도 동일하다. 실제로
+한편 $\det(\Ad_t^{-1}\vert_\mathfrak{f}-I)$는 $w\cdot t$에 대해서도 동일하다. 실제로
 
-$$\Ad_{wt^{-1}w^{-1}}|_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}|_\mathfrak{f}-I)\circ\Ad_w^{-1}$$
+$$\Ad_{wt^{-1}w^{-1}}\vert_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}|_\mathfrak{f}-I)\circ\Ad_w^{-1}$$
 
 이므로, 이 두 operator는 similar하고 따라서 같은 determinant를 갖는다.
 
-**결론.** 이상에서 $t$는 $q$의 regular value이고, $q^{-1}(t)$의 원소 개수는 $\lvert W\rvert$이며, 모든 preimage 점에서 $dq$의 determinant는 같은 부호를 갖는다는 것을 확인하였다. 따라서 적절한 orientation 선택 하에서 $\deg q=\lvert W\rvert$이다.
+이상에서 $t$는 $q$의 regular value이고, $q^{-1}(t)$의 원소 개수는 $\lvert W\rvert$이며, 모든 preimage 점에서 $dq$의 determinant는 같은 부호를 갖는다는 것을 확인하였다. 따라서 적절한 orientation 선택 하에서 $\deg q=\lvert W\rvert$이다.
 
 </details>
 
