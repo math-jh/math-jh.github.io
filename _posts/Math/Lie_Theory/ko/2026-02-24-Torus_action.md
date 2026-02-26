@@ -308,11 +308,11 @@ $$q(w\cdot(gT,t))=q(gw^{-1}T, wtw^{-1})=gw^{-1}(wtw^{-1})wg^{-1}=gtg^{-1}=q(gT,t
 
 $$(G/T\times T)/W\rightarrow G$$
 
-을 유도한다. 이 map이 bijection임은 [보조정리 7](#lem7)에서 $q$가 $\lvert W\rvert$-to-1 covering이라는 사실로부터 따라나온다. 
+을 유도한다. [보조정리 7](#lem7)은 이 함수가 bijection임을 증명한다.
 
 한편, $G$의 conjugacy class들의 공간을 $\Conj(G)$라 하자. 그럼 각 conjugacy class 
 
-$$[g]=\{hgh^{-1}:h\in G\}$$
+$$[g]=\{hgh^{-1}\mid h\in G\}$$
 
 는 $T$와 $W$를 통해 다음과 같이 기술된다.
 
@@ -342,21 +342,13 @@ $T$의 두 원소 $x,y$가 서로 conjugate이라 하자. 즉 적당한 $g\in G$
 
 ## Conjugation action의 분해
 
-이제 $G$가 자기 자신에게 conjugation으로 작용하는 것을 좀 더 자세히 살펴보자. 각 $g'\in G$에 대하여, conjugation by $g'$은
+이제 $G$가 자기 자신에게 conjugation으로 작용하는 것을 좀 더 자세히 살펴보자. 즉, 각 $g'\in G$에 대하여, conjugation action을
 
-$$c_{g'}:G\rightarrow G;\qquad g\mapsto g'gg'^{-1}$$
+$$c_{g'}:G\rightarrow G;\qquad g\mapsto g'g(g')^{-1}$$
 
-으로 정의된다. 우리는 이 action이 $(G/T\times T)/W$의 parametrization 하에서 어떻게 표현되는지 보고자 한다.
+으로 정의한 후 이 action이 $(G/T\times T)/W$의 parametrization 하에서 어떻게 표현되는지 보고자 한다.
 
-이를 위해 먼저 $G/T\times T$ 위에서의 action을 계산하자. 임의의 $(gT, t)\in G/T\times T$와 $g'\in G$에 대하여,
-
-$$g'\cdot(gT,t)=(g'T,g')\cdot(gT,t)=(g'T,g')\cdot(gT,t)$$
-
-을 생각해야 하는데, 여기서 $g'T$는 $G/T$의 원소가 아니므로 적절히 수정이 필요하다. 대신, $g'\cdot q(gT,t)=q(g'T,g'\cdot t)$를 생각하면, $q(gT,t)=gtg^{-1}$이므로
-
-$$g'\cdot(gT,t)=(g'T,g')\cdot(gT,t)=(g'T,g')\cdot(gT,t)$$
-
-대신 다음과 같이 직접 계산하자. 우선 $g'=hth'h^{-1}$으로 쓰면 (Cartan decomposition에 의해 가능), 여기서 $t'\in T$이고 $h\in G$이다. 그럼
+임의의 $(gT, t)\in G/T\times T$와 $g'\in G$에 대하여, 우리는 Cartan decomposition에 의하여 적당한 $h\in G$에 대하여 $g'=ht'h^{-1}$으로 쓸 수 있다는 것을 안다.  (Cartan decomposition에 의해 가능), 여기서 $t'\in T$이고 $h\in G$이다. 그럼
 
 $$g'(gtg^{-1})g'^{-1}=h(t'(hgtg^{-1}h^{-1})t'^{-1})h^{-1}$$
 
