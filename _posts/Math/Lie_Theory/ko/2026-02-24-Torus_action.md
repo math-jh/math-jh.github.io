@@ -207,21 +207,21 @@ $$q:G/T\times T\rightarrow G;\qquad (gT, s)\mapsto gsg^{-1}$$
 
 Mapping degree를 계산하기 위해서는 regular value 하나를 선택한 후 그 preimage를 모두 찾고, 각각의 preimage에서의 differential의 sign을 계산하면 된다. 
 
-이를 위해 먼저 $T$의 generator $t$를 하나 택하고 그 preimage $q^{-1}(t)$를 생각하자. 임의의 $(gT,s)\in G/T\times T$에 대하여, $q(gT,s)=t$라는 것은 $gsg^{-1}=t$라는 것이다. 그럼 $s=g^{-1}tg$이고, $t$가 $T$의 generator라는 가정으로부터 $\overline{\langle t\rangle}=T$이다. 이제 conjugation by $g^{-1}$이 위상동형사상이라는 것으로부터
+이를 위해 먼저 $T$의 generator $t$를 하나 택하고 그 preimage $q^{-1}(t)$를 생각하자. 임의의 $(gT,s)\in G/T\times T$에 대하여, $q(gT,s)=t$라는 것은 $gsg^{-1}=t$라는 것이다. 한편 $g^{-1}tg=s\in T$이고, 
 
 $$\overline{\langle s\rangle}=g^{-1}\overline{\langle t\rangle}g=g^{-1}Tg$$
 
-를 얻는다. 한편 $s\in T$이므로 $\overline{\langle s\rangle}\subseteq T$이고, 따라서 $g^{-1}Tg\subseteq T$이다. 그런데 $g^{-1}Tg$는 $T$와 isomorphic한 torus이므로 $\dim(g^{-1}Tg)=\dim T$이고, compact connected Lie group의 임의의 torus는 connected component가 하나뿐이다. 따라서 $g^{-1}Tg=T$이며, 결국 $g\in N=N_G(T)$이다. 또한 $s=g^{-1}tg=(gT)\cdot t$이므로,
+인데, $s\in T$이므로 $g^{-1}Tg\subseteq T$이다. 그런데 conjugation을 취하는 것은 homeomorphism이므로 $g^{-1}Tg$는 $T$와 isomorphic한 torus이고, 이로부터 $g^{-1}Tg=T$이며 $g\in N=N_G(T)$인 것을 안다. 또한 $s=g^{-1}tg=(gT)\cdot t$이므로,
 
 $$q^{-1}(t)=\{(gT, (gT)\cdot t)\mid gT\in W\}$$
 
 이다. 여기서 $W$가 $N/T$로 정의된 Weyl group이며, 우리는 $q^{-1}(t)$가 $W$와 일대일 대응됨을 안다.
 
-**2단계: Differential 계산.** 이제 $q$의 differential을 계산하자. 이를 위해 $G/T\times T$와 $G$의 tangent space를 모두 $\mathfrak{g}$와 동일시하자. 구체적으로, Lie algebra $\mathfrak{g}$를 $\mathfrak{t}$와 그 직교여공간 $\mathfrak{f}=\mathfrak{t}^\perp$의 직합
+따라서 남은 것은 이들이 모두 같은 sign을 가져서 mapping degree가 정확히 $\lvert W\rvert$로 나온다는 것을 보이는 것이다. 이를 위해 $G/T\times T$와 $G$의 tangent space를 모두 $\mathfrak{g}$와 동일시한다. 구체적으로, Lie algebra $\mathfrak{g}$를 $\mathfrak{t}$와 그 orthogonal complement $\mathfrak{f}=\mathfrak{t}^\perp$의 direct sum
 
 $$\mathfrak{g}=\mathfrak{t}\oplus\mathfrak{f}$$
 
-으로 분해하자. 여기서 직교성은 $G$ 위의 $\Ad$-invariant inner product로부터 유도된 것이다. 이제 $G/T\times T$의 원점 근처에서의 tangent space를 생각하면, $T$의 tangent space는 $\mathfrak{t}$이고 $G/T$의 tangent space는 $\mathfrak{f}$로 주어진다. 따라서 $G/T\times T$의 tangent space는 $\mathfrak{t}\oplus\mathfrak{f}\cong\mathfrak{g}$이다.
+으로 분해하자. 이제 $G/T\times T$의 원점 근처에서의 tangent space를 생각하면, $T$의 tangent space는 $\mathfrak{t}$이고 $G/T$의 tangent space는 $\mathfrak{f}$로 주어진다. 따라서 $G/T\times T$의 tangent space는 $\mathfrak{t}\oplus\mathfrak{f}\cong\mathfrak{g}$이다.
 
 한편 임의의 $X\in\mathfrak{t}$와 $Y\in\mathfrak{f}$에 대하여, $q$의 differential은 다음과 같이 계산된다. 방향 $X$에 대하여, 즉 $T$ 방향으로의 변화를 생각하면
 
