@@ -197,11 +197,75 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 <ins id="lem7">**보조정리 7**</ins> Compact, connected Lie group $G$, maximal torus $T$와 함수
 
-$$q:G/T\times T\rightarrow G;\qquad (gT, t)\mapstol gtg^{-1}$$
+$$q:G/T\times T\rightarrow G;\qquad (gT, t)\mapsto gtg^{-1}$$
 
 에 대하여, $q$의 mapping degree는 $\lvert W\rvert$이다. 
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Mapping degree를 계산하기 위해서는 regular value 하나를 선택한 후 그 preimage를 모두 찾고, 각각의 preimage에서의 differential의 sign을 계산하면 된다. 
+
+이를 위해 먼저 $T$의 generator $t$를 하나 택하고 그 preimage $q^{-1}(t)$를 생각하자. 임의의 $(gT,s)\in G/T\times T$에 대하여, $q(gT,s)=t$라는 것은 $gsg^{-1}=t$라는 것이다. 그럼 $g^{-1}tg=s\in T$이므로, $g^{-1}Tg\supseteq \langle s\rangle$이고 $s$에 의해 생성되는 subgroup의 closure가 $T$라는 가정으로부터 $g^{-1}Tg\supseteq T$임을 안다. $T$가 maximal torus이므로 $g^{-1}Tg=T$이고, 따라서 $g\in N=N_G(T)$이다. 또한 $s=g^{-1}tg=(gT)\cdot t$이므로, 결국
+
+$$q^{-1}(t)=\{(gT, (gT)\cdot t)\mid gT\in W\}$$
+
+이다. 여기서 $W$가 $N/T$로 정의된 Weyl group이며, 우리는 $q^{-1}(t)$가 $W$와 일대일 대응됨을 안다.
+
+**2단계: Differential 계산.** 이제 $q$의 differential을 계산하자. 이를 위해 $G/T\times T$와 $G$의 tangent space를 모두 $\mathfrak{g}$와 동일시하자. 구체적으로, Lie algebra $\mathfrak{g}$를 $\mathfrak{t}$와 그 직교여공간 $\mathfrak{f}=\mathfrak{t}^\perp$의 직합
+
+$$\mathfrak{g}=\mathfrak{t}\oplus\mathfrak{f}$$
+
+으로 분해하자. 여기서 직교성은 $G$ 위의 $\Ad$-invariant inner product로부터 유도된 것이다. 이제 $G/T\times T$의 원점 근처에서의 tangent space를 생각하면, $T$의 tangent space는 $\mathfrak{t}$이고 $G/T$의 tangent space는 $\mathfrak{f}$로 주어진다. 따라서 $G/T\times T$의 tangent space는 $\mathfrak{t}\oplus\mathfrak{f}\cong\mathfrak{g}$이다.
+
+한편 임의의 $X\in\mathfrak{t}$와 $Y\in\mathfrak{f}$에 대하여, $q$의 differential은 다음과 같이 계산된다. 방향 $X$에 대하여, 즉 $T$ 방향으로의 변화를 생각하면
+
+$$d q_{(eT,t)}(X,0)=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}q(eT, t\exp(\epsilon X))=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}t\exp(\epsilon X)=X$$
+
+이다. 여기서 $T$가 abelian이므로 $t$와 $\exp(\epsilon X)$가 commute함을 사용하였다. 다음으로 방향 $Y$에 대하여, 즉 $G/T$ 방향으로의 변화를 생각하면
+
+$$d q_{(eT,t)}(0,Y)=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}q(\exp(\epsilon Y)T, t)=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)$$
+
+이다. 이제 $t=\exp(H)$ ($H\in\mathfrak{t}$)로 쓰면,
+
+$$\exp(\epsilon Y)t\exp(-\epsilon Y)=\exp(\epsilon Y)\exp(H)\exp(-\epsilon Y)=\exp(\Ad_{\exp(\epsilon Y)}(H))=\exp(e^{\epsilon\ad_Y}H)$$
+
+이고, 따라서
+
+$$\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
+
+이다. 여기서 $\mathfrak{t}$가 abelian이므로 $[Y,H]\in\mathfrak{f}$이고, $\exp(H)=t$이므로 이는 $t\cdot(\Ad_t^{-1}(Y)-Y)$로 쓸 수 있다. 정리하면, 적절한 identification 하에서
+
+$$d q_{(eT,t)}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}|_\mathfrak{f}-I \end{pmatrix}$$
+
+이다. 여기서 첫 번째 block은 $\mathfrak{t}$ 방향, 두 번째 block은 $\mathfrak{f}$ 방향에 해당한다.
+
+**3단계: Regularity 확인.** 이제 $\Ad_t^{-1}|_\mathfrak{f}-I$가 가역임을 보이자. 만약 $(\Ad_t^{-1}-I)Y=0$인 $Y\in\mathfrak{f}$가 존재한다면, $\Ad_t(Y)=Y$이다. 그럼 임의의 정수 $m$에 대하여 $\Ad_{t^m}(Y)=Y$이고, $t$가 generator라는 가정으로부터 모든 $s\in T$에 대하여 $\Ad_s(Y)=Y$이다. 이제 임의의 $H\in\mathfrak{t}$에 대하여,
+
+$$[H,Y]=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
+
+이므로 $Y$는 $\mathfrak{t}$의 모든 원소와 commute한다. 그런데 $\mathfrak{t}$는 maximal abelian subalgebra이므로 $Y\in\mathfrak{t}$이고, 따라서 $Y\in\mathfrak{f}\cap\mathfrak{t}=\{0\}$이다. 즉 $\Ad_t^{-1}|_\mathfrak{f}-I$는 가역이다.
+
+**4단계: Sign의 일치.** 마지막으로, $q^{-1}(t)$의 모든 점에서 $dq$의 determinant가 같은 부호를 갖는지 확인하자. 임의의 $w\in W$를 택하고 이를 $x\in N$이 represent한다 하자. 그럼 $q(xT,x^{-1}tx)=t$이므로 $(xT, x^{-1}tx)\in q^{-1}(t)$이다. 이 점에서의 differential을 계산하기 위해, $q$의 정의로부터
+
+$$q(gT, s)=gsg^{-1}$$
+
+이므로, left translation by $x$와 conjugation by $x$를 고려하면
+
+$$d q_{(xT, x^{-1}tx)}=\Ad_x\circ d q_{(eT, t)}\circ (\text{left translation})$$
+
+이다. 특히 $\Ad_x|_\mathfrak{f}$와 $\Ad_x|_\mathfrak{t}$는 모두 determinant가 $1$인 linear map이며 (전자는 orthogonal map이므로, 후자는 $x\in N$이므로 $\Ad_x$가 $\mathfrak{t}$를 보존하므로), 따라서 $d q_{(xT, x^{-1}tx)}$의 determinant는 $d q_{(eT,t)}$의 determinant와 같다.
+
+한편 $\det(\Ad_t^{-1}|_\mathfrak{f}-I)$는 $w\cdot t$에 대해서도 동일하다. 실제로
+
+$$\Ad_{wt^{-1}w^{-1}}|_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}|_\mathfrak{f}-I)\circ\Ad_w^{-1}$$
+
+이므로, 이 두 operator는 similar하고 따라서 같은 determinant를 갖는다.
+
+**결론.** 이상에서 $t$는 $q$의 regular value이고, $q^{-1}(t)$의 원소 개수는 $\lvert W\rvert$이며, 모든 preimage 점에서 $dq$의 determinant는 같은 부호를 갖는다는 것을 확인하였다. 따라서 적절한 orientation 선택 하에서 $\deg q=\lvert W\rvert$이다.
+
+</details>
 
 
 
