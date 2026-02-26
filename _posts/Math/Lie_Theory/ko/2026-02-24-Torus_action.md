@@ -342,42 +342,86 @@ $T$의 두 원소 $x,y$가 서로 conjugate이라 하자. 즉 적당한 $g\in G$
 
 ## Conjugation action의 분해
 
-이제 $G$가 자기 자신에게 conjugation으로 작용하는 것을 좀 더 자세히 살펴보자. 즉, 각 $g'\in G$에 대하여, conjugation action을
+이제 $G$가 자기 자신에게 conjugation으로 작용하는 것을 살펴보자. 각 $g'\in G$에 대하여, conjugation map
 
-$$c_{g'}:G\rightarrow G;\qquad g\mapsto g'g(g')^{-1}$$
+$$c_{g'}:G\rightarrow G;\qquad g\mapsto g'gg'^{-1}$$
 
-으로 정의한 후 이 action이 $(G/T\times T)/W$의 parametrization 하에서 어떻게 표현되는지 보고자 한다.
+을 정의하자. 우리의 목표는 이 action이 $(G/T\times T)/W$의 parametrization 하에서 어떻게 표현되는지 이해하는 것이다.
 
-임의의 $(gT, t)\in G/T\times T$와 $g'\in G$에 대하여, 우리는 Cartan decomposition에 의하여 적당한 $h\in G$에 대하여 $g'=ht'h^{-1}$으로 쓸 수 있다는 것을 안다.  (Cartan decomposition에 의해 가능), 여기서 $t'\in T$이고 $h\in G$이다. 그럼
+먼저 다음을 관찰하자. 임의의 $(gT, t)\in G/T\times T$와 $g'\in G$에 대하여,
 
-$$g'(gtg^{-1})g'^{-1}=h(t'(hgtg^{-1}h^{-1})t'^{-1})h^{-1}$$
+$$c_{g'}(gtg^{-1})=g'(gtg^{-1})g'^{-1}=(g'g)t(g'g)^{-1}=q(g'gT, t)$$
 
-이다. 여기서 $hgtg^{-1}h^{-1}\in hTh^{-1}$이므로, $t'$와의 곱은 단순히 torus 내에서의 곱셈이다.
+이다. 즉, conjugation by $g'$은 $(gT, t)$를 $(g'gT, t)$로 보낸다. 이로부터 $G$는 $G/T\times T$ 위에 다음과 같이 작용한다는 것을 안다.
 
-더 간단하게는, $G$의 각 원소 $g$를 그 conjugacy class $[g]\in T/W$와, 그 class 내에서의 "위치"로 분해하여 생각할 수 있다. Conjugation action은 conjugacy class를 보존하므로, $T/W$ 위에서는 자명하게 작용하고, class 내부에서의 이동만을 야기한다.
+$$g'\cdot(gT,t)=(g'gT,t)$$
 
-특히 중요한 두 가지 경우를 살펴보자.
+이 action이 $W$-action과 commute함을 확인하자. 임의의 $w\in W$에 대하여,
 
-**경우 1: $g'\in T$인 경우.** $T$가 abelian이므로, 임의의 $t\in T$에 대하여 $g'tg'^{-1}=t$이다. 즉, $T$의 원소에 의한 conjugation은 $T$ 위에서 자명하게 작용한다. 더 일반적으로, 임의의 $g\in G$에 대하여 $g'\in T$이면
+$$g'\cdot(w\cdot(gT,t))=g'\cdot(gw^{-1}T,wtw^{-1})=(g'gw^{-1}T,wtw^{-1})$$
 
-$$g'(gtg^{-1})g'^{-1}=g'(gtg^{-1}g'^{-1})=g\cdot((g^{-1}g'g)tg^{-1})$$
+이고,
 
-이 되는데, $g^{-1}g'g\in g^{-1}Tg$는 또 다른 torus의 원소이다. 따라서 $T$에 의한 conjugation은 결과적으로 $G/T$ 성분을 변경하게 된다.
+$$w\cdot(g'\cdot(gT,t))=w\cdot(g'gT,t)=(g'gw^{-1}T,wtw^{-1})$$
 
-**경우 2: $g'\in N_G(T)$인 경우.** 이 경우 $g'=n$이라 쓰면 $n\cdot t=ntn^{-1}$은 $T$ 위에서 Weyl group action을 유도한다. 즉, $nT\in W$로서 $t$를 $ntn^{-1}$로 보낸다. 한편 $G/T$ 성분에 대해서는, $ngT=n\cdot(gT)$로서 left translation을 유도한다.
+이므로 두 action은 commute한다. 따라서 $G$는 quotient $(G/T\times T)/W$ 위에도 잘 정의된 action을 유도한다.
 
-이 두 관찰을 종합하면, 일반적인 $g'\in G$에 의한 conjugation은 다음과 같이 분해된다.
+이 observation으로부터 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> 임의의 $g'\in G$에 대하여, conjugation $c_{g'}$은 다음 두 성분으로 분해된다.
+<ins id="prop11">**명제 11**</ins> Identification $(G/T\times T)/W\cong G$ 하에서, conjugation action은 다음과 같이 표현된다.
 
-1. **Weyl group 성분:** $g'T$가 $G/T$의 어느 위치에 있는지에 따라, 적절한 Weyl group element $w\in W$가 결정되고, 이는 $T$ 위에서 $t\mapsto wtw^{-1}$으로 작용한다.
-2. **Torus 내에서의 translation:** $g'$이 속한 maximal torus와 $T$ 사이의 관계에 따라, torus 내에서의 translation $t\mapsto t't$ (적당한 $t'\in T$)가 발생한다.
+$$g'\cdot[(gT,t)]=[(g'gT,t)]$$
+
+즉, $G/T$ 성분에는 left multiplication으로 작용하고, $T$ 성분은 보존한다.
 
 </div>
 
-이 분해는 $g'$을 Cartan decomposition을 통해 $g'=ht'h^{-1}$으로 표현할 때 더 명확해진다. 이 때 $h$는 $G/T$ 성분을, $t'$은 torus 내에서의 translation을 담당한다.
+이 결과는 conjugacy class의 관점에서 다음과 같이 해석된다. 각 conjugacy class는 $T/W$의 원소, 즉 하나의 $W$-orbit $\{wtw^{-1}:w\in W\}$에 해당한다. Conjugation action은 conjugacy class를 보존하므로, $T/W$ 위에서는 자명하게 작용한다. 대신 각 conjugacy class 내부에서의 "위치"를 나타내는 $G/T$ 성분만을 변화시킨다.
+
+### Weyl group을 통한 세부 분석
+
+$G/T$ 위에서의 $G$-action을 더 자세히 이해하기 위해, $G/T$를 Weyl group과 연결해보자. $G/T$의 각 원소 $gT$는 maximal torus $gTg^{-1}$에 대응된다. 한편, $N_G(T)$의 coset $gN_G(T)$ 또한 $gTg^{-1}$에 대응되므로, 다음의 대응을 얻는다.
+
+$$G/T\longleftrightarrow G/N_G(T)\times W$$
+
+더 정확히 말하면, 각 $gT\in G/T$는 유일한 $gN_G(T)\in G/N_G(T)$와 $w\in W$의 쌍으로 분해된다. 이 분해 하에서 $G$의 left multiplication action을 살펴보자.
+
+$g'\in G$를 $g'=ht'h{-1}$ ($h\in G$, $t'\in T$)으로 표현하자. 이는 Cartan decomposition에 의해 항상 가능하다. 그럼 $g'T=hT$이고, 임의의 $gT\in G/T$에 대하여
+
+$$g'T\cdot gT=g'TgT=hTgT$$
+
+이다. 이제 $gT$를 $G/N_G(T)$ 성분과 $W$ 성분으로 분해하면, left multiplication by $g'T$는 다음과 같이 작용한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop12">**명제 12**</ins> $g'=ht'h{-1}\in G$에 대하여, conjugation $c_{g'}$은 다음 두 성분으로 분해된다.
+
+1. **$G/N_G(T)$ 성분:** $gN_G(T)\mapsto hgN_G(T)$로 이동시킨다.
+2. **$W$ 성분:** $W$의 원소를 permute한다. 구체적으로, $gT\in G/T$에 해당하는 $w\in W$를 $w'=w(g',g)$로 보낸다.
+
+</div>
+
+이 분해는 특히 $g'\in N_G(T)$인 경우 더 명확해진다.
+
+<div class="example" markdown="1">
+
+<ins id="ex13">**예시 13**</ins> $g'=n\in N_G(T)$인 경우를 생각하자. 그럼 $g'=n=nT\cdot e\in N_G(T)$이고, $g'T=nT=eT\cdot nT$이다. 즉 $G/N_G(T)$ 성분에서의 이동은 없다. 대신 $W$ 성분에서는 $w\mapsto (nT)\cdot w$로 작용한다. 이는 $W$ 위에서의 left action이며, 특히 $nT\in W$에 의한 left multiplication이다.
+
+한편, 만약 $g'=t'\in T$인 경우, $g'T=eT$이므로 $G/N_G(T)$ 성분과 $W$ 성분 모두에서 이동이 없다. 이 경우 conjugation은 $G/T$ 위에서 자명하게 작용하며, $T$ 위에서도 자명하게 작용한다 ($T$가 abelian이므로).
+
+</div>
+
+### Torus 내에서의 이동
+
+지금까지의 논의는 $T$ 성분이 보존된다고 하였으나, 이는 $W$-orbit 수준에서의 진술이다. 실제 $T$의 개별 원소에 대한 conjugation을 생각하면, $W$-action에 의해 $t$가 $wtw^{-1}$으로 바뀔 수 있다.
+
+구체적으로, $G/T\times T$의 관점에서 보면 $g'\cdot(gT,t)=(g'gT,t)$이지만, quotient $(G/T\times T)/W$에서는 $(gT,t)$와 $(gTw^{-1},wtw^{-1})$이 같은 원소로 식별된다. 따라서 $G$-action은 다음과 같이 이해할 수 있다.
+
+$$g'\cdot[gT,t]=[g'gT,t]=[g'T\cdot gT,t]$$
+
+여기서 $g'T$를 $G/N_G(T)\times W$로 분해하면, 그에 따라 $t$가 $W$-action에 의해 변화될 수 있다. 
 
 ---
 
