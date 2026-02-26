@@ -290,11 +290,11 @@ $$G=\bigcup_{g\in G}gTg^{-1}$$
 
 ## Weyl group parametrization
 
-Cartan decomposition은 $G$의 각 원소가 어떠한 maximal torus에 속한다는 것을 말해주지만, 이 decomposition을 더 명시적으로 기술할 수 있다. 핵심은 보조정리 7에서 정의한 map
+Cartan decomposition은 $G$의 각 원소가 어떠한 maximal torus에 속한다는 것을 말해주지만, 이 decomposition을 더 명시적으로 기술할 수 있다. 핵심은 [보조정리 7](#lem7)에서 정의한 map
 
 $$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
 
-이 $\lvert W\rvert$대 1 covering이라는 사실이다. 이로부터 $G$의 각 원소는 $\lvert W\rvert$개의 preimage를 가지며, 이들 간의 관계를 Weyl group이 정확히 기술해준다.
+이 $\lvert W\rvert$-to-1 covering이라는 사실이다. 이로부터 $G$의 각 원소는 $\lvert W\rvert$개의 preimage를 가지며, 이들 간의 관계를 Weyl group이 정확히 기술해준다.
 
 구체적으로, $G/T\times T$ 위에 다음의 $W$-action을 정의하자.
 
@@ -304,13 +304,17 @@ $$w\cdot(gT, t)=(gw^{-1}T, wtw^{-1})$$
 
 $$q(w\cdot(gT,t))=q(gw^{-1}T, wtw^{-1})=gw^{-1}(wtw^{-1})wg^{-1}=gtg^{-1}=q(gT,t)$$
 
-이므로 $q$는 이 action에 대해 invariant이고, 따라서 quotient
+이므로 $q$는 $W$-invariant이고, 따라서 orbit space $(G/T\times T)/W$에서 $G$로의 함수
 
 $$(G/T\times T)/W\rightarrow G$$
 
-을 유도한다. 이 map이 bijection임은 [보조정리 7](#lem7)에서 $q$가 $\lvert W\rvert$대 1 covering이라는 사실로부터 따라나온다. 
+을 유도한다. 이 map이 bijection임은 [보조정리 7](#lem7)에서 $q$가 $\lvert W\rvert$-to-1 covering이라는 사실로부터 따라나온다. 
 
-한편, $G$의 conjugacy class들의 공간을 $\Conj(G)$라 하자. 그럼 각 conjugacy class $[g]=\{hgh^{-1}:h\in G\}$는 $T$와 $W$를 통해 다음과 같이 기술된다.
+한편, $G$의 conjugacy class들의 공간을 $\Conj(G)$라 하자. 그럼 각 conjugacy class 
+
+$$[g]=\{hgh^{-1}:h\in G\}$$
+
+는 $T$와 $W$를 통해 다음과 같이 기술된다.
 
 <div class="proposition" markdown="1">
 
