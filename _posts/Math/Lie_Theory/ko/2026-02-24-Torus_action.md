@@ -225,11 +225,11 @@ $$\mathfrak{g}=\mathfrak{t}\oplus\mathfrak{f}$$
 
 한편 임의의 $X\in\mathfrak{t}$와 $Y\in\mathfrak{f}$에 대하여, $q$의 $(eT,t)$에서의 differential은 다음과 같이 계산된다. 방향 $X$에 대하여, 즉 $T$ 방향으로의 변화를 생각하면
 
-$$d q_{(eT,t)}(X,0)=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}q(eT, t\exp(\epsilon X))=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}t\exp(\epsilon X)=X$$
+$$d q_{(eT,t)}(X,0)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}q(eT, t\exp(\epsilon X))=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}t\exp(\epsilon X)=X$$
 
 이다. 여기서 $T$가 abelian이므로 $t$와 $\exp(\epsilon X)$가 commute함을 사용하였다. 다음으로 방향 $Y$에 대하여, 즉 $G/T$ 방향으로의 변화를 생각하면
 
-$$d q_{(eT,t)}(0,Y)=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}q(\exp(\epsilon Y)T, t)=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)$$
+$$d q_{(eT,t)}(0,Y)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}q(\exp(\epsilon Y)T, t)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)$$
 
 이다. 이제 $t=\exp(H)$ ($H\in\mathfrak{t}$)로 쓰면,
 
@@ -237,17 +237,17 @@ $$\exp(\epsilon Y)t\exp(-\epsilon Y)=\exp(\epsilon Y)\exp(H)\exp(-\epsilon Y)=\e
 
 이고, 따라서
 
-$$\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\left.\frac{d}{d\epsilon}\right|_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
+$$\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
 
 이다. 여기서 $\mathfrak{t}$가 abelian이므로 $[Y,H]\in\mathfrak{f}$이고, $\exp(H)=t$이므로 이는 $t\cdot(\Ad_t^{-1}(Y)-Y)$로 쓸 수 있다. 정리하면, 적절한 identification 하에서
 
-$$d q_{(eT,t)}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}|_\mathfrak{f}-I \end{pmatrix}$$
+$$d q_{(eT,t)}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}\vert_\mathfrak{f}-I \end{pmatrix}$$
 
 이다. 여기서 첫 번째 block은 $\mathfrak{t}$ 방향, 두 번째 block은 $\mathfrak{f}$ 방향에 해당한다.
 
 이제 $\Ad_t^{-1}\vert_\mathfrak{f}-I$가 가역이며, 모든 preimage에서 sign이 맞아떨어짐을 보인다. 만약 $(\Ad_t^{-1}-I)Y=0$인 $Y\in\mathfrak{f}$가 존재한다면, $\Ad_t(Y)=Y$이다. 그럼 임의의 정수 $m$에 대하여 $\Ad_{t^m}(Y)=Y$이고, $t$가 generator라는 가정으로부터 모든 $s\in T$에 대하여 $\Ad_s(Y)=Y$이다. 이제 임의의 $H\in\mathfrak{t}$에 대하여,
 
-$$[H,Y]=\left.\frac{d}{d\epsilon}\right\vert_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
+$$[H,Y]=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
 
 이므로 $Y$는 $\mathfrak{t}$의 모든 원소와 commute한다. 그런데 $\mathfrak{t}$는 maximal abelian subalgebra이므로 $Y\in\mathfrak{t}$이고, 따라서 $Y\in\mathfrak{f}\cap\mathfrak{t}=\{0\}$이다. 즉 $\Ad_t^{-1}\vert_\mathfrak{f}-I$는 가역이다.
 
@@ -286,4 +286,105 @@ $$\Ad_{wt^{-1}w^{-1}}\vert_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}\vert_\mathfrak{f
 
 $$G=\bigcup_{g\in G}gTg^{-1}$$
 
-을 얻는다. 이를 *Cartan decomposition*이라 부른다. 
+을 얻는다. 이를 *Cartan decomposition*이라 부른다.
+
+## Weyl group parametrization
+
+Cartan decomposition은 $G$의 각 원소가 어떠한 maximal torus에 속한다는 것을 말해주지만, 이 decomposition을 더 명시적으로 기술할 수 있다. 핵심은 보조정리 7에서 정의한 map
+
+$$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
+
+이 $\lvert W\rvert$대 1 covering이라는 사실이다. 이로부터 $G$의 각 원소는 $\lvert W\rvert$개의 preimage를 가지며, 이들 간의 관계를 Weyl group이 정확히 기술해준다.
+
+구체적으로, $G/T\times T$ 위에 다음의 $W$-action을 정의하자.
+
+$$w\cdot(gT, t)=(gw^{-1}T, wtw^{-1})$$
+
+그럼 
+
+$$q(w\cdot(gT,t))=q(gw^{-1}T, wtw^{-1})=gw^{-1}(wtw^{-1})wg^{-1}=gtg^{-1}=q(gT,t)$$
+
+이므로 $q$는 이 action에 대해 invariant이고, 따라서 quotient
+
+$$(G/T\times T)/W\rightarrow G$$
+
+을 유도한다. 이 map이 bijection임은 [보조정리 7](#lem7)에서 $q$가 $\lvert W\rvert$대 1 covering이라는 사실로부터 따라나온다. 
+
+한편, $G$의 conjugacy class들의 공간을 $\Conj(G)$라 하자. 그럼 각 conjugacy class $[g]=\{hgh^{-1}:h\in G\}$는 $T$와 $W$를 통해 다음과 같이 기술된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9**</ins> Maximal torus $T$의 두 원소가 $G$에서 conjugate인 것과 이들이 Weyl group action의 같은 orbit에 속하는 것이 동치이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$T$의 두 원소 $x,y$가 서로 conjugate이라 하자. 즉 적당한 $g\in G$에 대하여 $gxg^{-1}=y$이다. 이제 $T$와 $gTg^{-1}$을 비교하면 이들은 $y$의 centralizer $Z_G(y)$의 maximal torus이다. 따라서 $T=h(gTg^{-1})h^{-1}$이도록 하는 $h\in Z_G(y)$가 존재하며, 이로부터 $(hg)x(hg)^{-1}=y$이고 $hg\in N_G(T)$이다. 즉 $y=(hgT)\cdot x$이므로 $x$와 $y$는 같은 $W$-orbit에 속한다.
+
+역으로, $x,y$가 같은 $W$-orbit에 속한다면 자명히 $G$에서 conjugate이다.
+
+</details>
+
+이로부터 각 conjugacy class $[g]$에 대하여, $[g]\cap T$는 정확하게 하나의 $W$-orbit임을 안다. 따라서 우리는 다음의 일대일대응을 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10**</ins> $T/W$와 $\Conj(G)$ 사이에는 자연스러운 일대일대응이 존재한다.
+
+</div>
+
+이 일대일대응 하에서, $G$ 위의 conjugation action은 $T/W$ 위에서 자명하게 작용한다. 즉, $G$의 각 원소는 자신이 속한 conjugacy class를 보존한다.
+
+## Conjugation action의 분해
+
+이제 $G$가 자기 자신에게 conjugation으로 작용하는 것을 좀 더 자세히 살펴보자. 각 $g'\in G$에 대하여, conjugation by $g'$은
+
+$$c_{g'}:G\rightarrow G;\qquad g\mapsto g'gg'^{-1}$$
+
+으로 정의된다. 우리는 이 action이 $(G/T\times T)/W$의 parametrization 하에서 어떻게 표현되는지 보고자 한다.
+
+이를 위해 먼저 $G/T\times T$ 위에서의 action을 계산하자. 임의의 $(gT, t)\in G/T\times T$와 $g'\in G$에 대하여,
+
+$$g'\cdot(gT,t)=(g'T,g')\cdot(gT,t)=(g'T,g')\cdot(gT,t)$$
+
+을 생각해야 하는데, 여기서 $g'T$는 $G/T$의 원소가 아니므로 적절히 수정이 필요하다. 대신, $g'\cdot q(gT,t)=q(g'T,g'\cdot t)$를 생각하면, $q(gT,t)=gtg^{-1}$이므로
+
+$$g'\cdot(gT,t)=(g'T,g')\cdot(gT,t)=(g'T,g')\cdot(gT,t)$$
+
+대신 다음과 같이 직접 계산하자. 우선 $g'=hth'h^{-1}$으로 쓰면 (Cartan decomposition에 의해 가능), 여기서 $t'\in T$이고 $h\in G$이다. 그럼
+
+$$g'(gtg^{-1})g'^{-1}=h(t'(hgtg^{-1}h^{-1})t'^{-1})h^{-1}$$
+
+이다. 여기서 $hgtg^{-1}h^{-1}\in hTh^{-1}$이므로, $t'$와의 곱은 단순히 torus 내에서의 곱셈이다.
+
+더 간단하게는, $G$의 각 원소 $g$를 그 conjugacy class $[g]\in T/W$와, 그 class 내에서의 "위치"로 분해하여 생각할 수 있다. Conjugation action은 conjugacy class를 보존하므로, $T/W$ 위에서는 자명하게 작용하고, class 내부에서의 이동만을 야기한다.
+
+특히 중요한 두 가지 경우를 살펴보자.
+
+**경우 1: $g'\in T$인 경우.** $T$가 abelian이므로, 임의의 $t\in T$에 대하여 $g'tg'^{-1}=t$이다. 즉, $T$의 원소에 의한 conjugation은 $T$ 위에서 자명하게 작용한다. 더 일반적으로, 임의의 $g\in G$에 대하여 $g'\in T$이면
+
+$$g'(gtg^{-1})g'^{-1}=g'(gtg^{-1}g'^{-1})=g\cdot((g^{-1}g'g)tg^{-1})$$
+
+이 되는데, $g^{-1}g'g\in g^{-1}Tg$는 또 다른 torus의 원소이다. 따라서 $T$에 의한 conjugation은 결과적으로 $G/T$ 성분을 변경하게 된다.
+
+**경우 2: $g'\in N_G(T)$인 경우.** 이 경우 $g'=n$이라 쓰면 $n\cdot t=ntn^{-1}$은 $T$ 위에서 Weyl group action을 유도한다. 즉, $nT\in W$로서 $t$를 $ntn^{-1}$로 보낸다. 한편 $G/T$ 성분에 대해서는, $ngT=n\cdot(gT)$로서 left translation을 유도한다.
+
+이 두 관찰을 종합하면, 일반적인 $g'\in G$에 의한 conjugation은 다음과 같이 분해된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11**</ins> 임의의 $g'\in G$에 대하여, conjugation $c_{g'}$은 다음 두 성분으로 분해된다.
+
+1. **Weyl group 성분:** $g'T$가 $G/T$의 어느 위치에 있는지에 따라, 적절한 Weyl group element $w\in W$가 결정되고, 이는 $T$ 위에서 $t\mapsto wtw^{-1}$으로 작용한다.
+2. **Torus 내에서의 translation:** $g'$이 속한 maximal torus와 $T$ 사이의 관계에 따라, torus 내에서의 translation $t\mapsto t't$ (적당한 $t'\in T$)가 발생한다.
+
+</div>
+
+이 분해는 $g'$을 Cartan decomposition을 통해 $g'=ht'h^{-1}$으로 표현할 때 더 명확해진다. 이 때 $h$는 $G/T$ 성분을, $t'$은 torus 내에서의 translation을 담당한다.
+
+---
+
+**참고문헌**
+
+**[Bro]** Armand Borel, *Linear Algebraic Groups*, Graduate texts in mathematics, Springer, 1991.
