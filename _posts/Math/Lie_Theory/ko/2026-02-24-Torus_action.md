@@ -197,7 +197,7 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 <ins id="lem7">**보조정리 7**</ins> Compact, connected Lie group $G$, maximal torus $T$와 함수
 
-$$q:G/T\times T\rightarrow G;\qquad (gT, t)\mapsto gtg^{-1}$$
+$$q:G/T\times T\rightarrow G;\qquad (gT, s)\mapsto gsg^{-1}$$
 
 에 대하여, $q$의 mapping degree는 $\lvert W\rvert$이다. 
 
@@ -207,7 +207,11 @@ $$q:G/T\times T\rightarrow G;\qquad (gT, t)\mapsto gtg^{-1}$$
 
 Mapping degree를 계산하기 위해서는 regular value 하나를 선택한 후 그 preimage를 모두 찾고, 각각의 preimage에서의 differential의 sign을 계산하면 된다. 
 
-이를 위해 먼저 $T$의 generator $t$를 하나 택하고 그 preimage $q^{-1}(t)$를 생각하자. 임의의 $(gT,s)\in G/T\times T$에 대하여, $q(gT,s)=t$라는 것은 $gsg^{-1}=t$라는 것이다. 그럼 $g^{-1}tg=s\in T$이므로, $g^{-1}Tg\supseteq \langle s\rangle$이고 $s$에 의해 생성되는 subgroup의 closure가 $T$라는 가정으로부터 $g^{-1}Tg\supseteq T$임을 안다. $T$가 maximal torus이므로 $g^{-1}Tg=T$이고, 따라서 $g\in N=N_G(T)$이다. 또한 $s=g^{-1}tg=(gT)\cdot t$이므로, 결국
+이를 위해 먼저 $T$의 generator $t$를 하나 택하고 그 preimage $q^{-1}(t)$를 생각하자. 임의의 $(gT,s)\in G/T\times T$에 대하여, $q(gT,s)=t$라는 것은 $gsg^{-1}=t$라는 것이다. 그럼 $s=g^{-1}tg$이고, $t$가 $T$의 generator라는 가정으로부터 $\overline{\langle t\rangle}=T$이다. 이제 conjugation by $g^{-1}$이 위상동형사상이라는 것으로부터
+
+$$\overline{\langle s\rangle}=g^{-1}\overline{\langle t\rangle}g=g^{-1}Tg$$
+
+를 얻는다. 한편 $s\in T$이므로 $\overline{\langle s\rangle}\subseteq T$이고, 따라서 $g^{-1}Tg\subseteq T$이다. 그런데 $g^{-1}Tg$는 $T$와 isomorphic한 torus이므로 $\dim(g^{-1}Tg)=\dim T$이고, compact connected Lie group의 임의의 torus는 connected component가 하나뿐이다. 따라서 $g^{-1}Tg=T$이며, 결국 $g\in N=N_G(T)$이다. 또한 $s=g^{-1}tg=(gT)\cdot t$이므로,
 
 $$q^{-1}(t)=\{(gT, (gT)\cdot t)\mid gT\in W\}$$
 
