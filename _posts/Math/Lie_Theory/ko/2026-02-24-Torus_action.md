@@ -378,7 +378,7 @@ $$\pi: G/T\rightarrow G/N;\qquad gT\mapsto gN$$
 
 $$\pi^{-1}(gN)=\{hT\mid h\in gN\}\cong N/T=W$$
 
-
+이다. 
 
  $G/T$를 Weyl group과 연결해보자. $G/T$의 각 원소 $gT$는 maximal torus $gTg^{-1}$에 대응된다. 한편, $N_G(T)$의 coset $gN_G(T)$ 또한 $gTg^{-1}$에 대응되므로, 다음의 대응을 얻는다.
 
