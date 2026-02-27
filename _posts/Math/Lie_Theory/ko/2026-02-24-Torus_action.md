@@ -342,41 +342,33 @@ $T$의 두 원소 $x,y$가 서로 conjugate이라 하자. 즉 적당한 $g\in G$
 
 ## Conjugation action의 분해
 
-이제 $G$가 자기 자신에게 conjugation으로 작용하는 것을 살펴보자. 각 $g'\in G$에 대하여, conjugation map
+이제 $G$가 자기 자신에게 conjugation으로 작용하는 상황을 살펴보자. 이를 위해 각 $g'\in G$에 대하여, conjugation map
 
-$$c_{g'}:G\rightarrow G;\qquad g\mapsto g'gg'^{-1}$$
+$$c_{h}:G\rightarrow G;\qquad g\mapsto hgh^{-1}$$
 
-을 정의하자. 우리의 목표는 이 action이 $(G/T\times T)/W$의 parametrization 하에서 어떻게 표현되는지 이해하는 것이다.
+을 정의한다. 우리의 목표는 이를 $(G/T\times T)/W$로 옮긴 후 이것이 어떻게 작용하는지를 구체적으로 살펴보는 것이다.
 
-먼저 다음을 관찰하자. 임의의 $(gT, t)\in G/T\times T$와 $g'\in G$에 대하여,
+먼저 다음을 관찰하자. 임의의 $(gT, t)\in G/T\times T$와 $h\in G$에 대하여,
 
-$$c_{g'}(gtg^{-1})=g'(gtg^{-1})g'^{-1}=(g'g)t(g'g)^{-1}=q(g'gT, t)$$
+$$c_{h}(gtg^{-1})=h(gtg^{-1})h^{-1}=(hg)t(hg)^{-1}=q(hgT, t)$$
 
-이다. 즉, conjugation by $g'$은 $(gT, t)$를 $(g'gT, t)$로 보낸다. 이로부터 $G$는 $G/T\times T$ 위에 다음과 같이 작용한다는 것을 안다.
+이 성립한다. 즉, $(G/T\times T)/W\cong G$를 통해 $c_h$를 $G/T\times T$로 옮겨왔을 때 $c_h$는  $(gT, t)$를 $(hgT, t)$로 보내므로, $G/T\times T$ 위에 다음의 $G$-action이 정의된 것으로 생각할 수 있다.
 
-$$g'\cdot(gT,t)=(g'gT,t)$$
+$$h\cdot(gT,t)=(hgT,t)$$
 
-이 action이 $W$-action과 commute함을 확인하자. 임의의 $w\in W$에 대하여,
-
-$$g'\cdot(w\cdot(gT,t))=g'\cdot(gw^{-1}T,wtw^{-1})=(g'gw^{-1}T,wtw^{-1})$$
-
-이고,
-
-$$w\cdot(g'\cdot(gT,t))=w\cdot(g'gT,t)=(g'gw^{-1}T,wtw^{-1})$$
-
-이므로 두 action은 commute한다. 따라서 $G$는 quotient $(G/T\times T)/W$ 위에도 잘 정의된 action을 유도한다.
-
-이 observation으로부터 다음을 얻는다.
+이제 이 action이 $W$-action과 commute하는 것은 자명하며, 따라서 $G$는 quotient $(G/T\times T)/W$ 위에도 잘 정의된 action을 유도한다. 이 observation으로부터 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
 <ins id="prop11">**명제 11**</ins> Identification $(G/T\times T)/W\cong G$ 하에서, conjugation action은 다음과 같이 표현된다.
 
-$$g'\cdot[(gT,t)]=[(g'gT,t)]$$
+$$h\cdot[(gT,t)]=[(hgT,t)]$$
 
 즉, $G/T$ 성분에는 left multiplication으로 작용하고, $T$ 성분은 보존한다.
 
 </div>
+
+한편, 우리는 [명제 10](#prop10)에 의하여 $T/W$와 $\Conj(G)$ 사이에 일대일대응이 존재함을 안다. 
 
 이 결과는 conjugacy class의 관점에서 다음과 같이 해석된다. 각 conjugacy class는 $T/W$의 원소, 즉 하나의 $W$-orbit $\{wtw^{-1}:w\in W\}$에 해당한다. Conjugation action은 conjugacy class를 보존하므로, $T/W$ 위에서는 자명하게 작용한다. 대신 각 conjugacy class 내부에서의 "위치"를 나타내는 $G/T$ 성분만을 변화시킨다.
 
