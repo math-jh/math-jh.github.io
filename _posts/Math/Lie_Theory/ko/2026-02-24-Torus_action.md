@@ -380,41 +380,74 @@ $$\pi^{-1}(gN)=\{hT\mid h\in gN\}\cong N/T=W$$
 
 이며, 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $W$인 principal $W$-bundle이다. 이를 염두에 두고 앞선 action을 다시 살펴보자.
 
+$G$가 $G/T$ 위에 left multiplication으로 작용하므로, 임의의 $g'\in G$에 대하여 map
 
-$g'\in G$를 $g'=ht'h{-1}$ ($h\in G$, $t'\in T$)으로 표현하자. 이는 Cartan decomposition에 의해 항상 가능하다. 그럼 $g'T=hT$이고, 임의의 $gT\in G/T$에 대하여
+$$L_{g'}:G/T\rightarrow G/T;\qquad gT\mapsto g'gT$$
 
-$$g'T\cdot gT=g'TgT=hTgT$$
+을 정의할 수 있다. 우리의 목표는 이 action을 covering $\pi:G/T\rightarrow G/N$을 통해 분해하는 것이다.
 
-이다. 이제 $gT$를 $G/N_G(T)$ 성분과 $W$ 성분으로 분해하면, left multiplication by $g'T$는 다음과 같이 작용한다.
+우선 $G/N$ 위에서 $G$의 action을 생각하자. 임의의 $g'\in G$에 대하여
+
+$$g'\cdot(gN)=(g'gN)$$
+
+으로 정의하면 이 action은 transitive하다. 이제 covering map $\pi$가 $G$-equivariant인 것은 자명하다. 즉 $\pi(L_{g'}(gT))=g'\cdot\pi(gT)$이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> $g'=ht'h{-1}\in G$에 대하여, conjugation $c_{g'}$은 다음 두 성분으로 분해된다.
+<ins id="prop12">**명제 12**</ins> $G/T$ 위의 left multiplication $L_{g'}$는 다음과 같이 분해된다.
 
-1. **$G/N_G(T)$ 성분:** $gN_G(T)\mapsto hgN_G(T)$로 이동시킨다.
-2. **$W$ 성분:** $W$의 원소를 permute한다. 구체적으로, $gT\in G/T$에 해당하는 $w\in W$를 $w'=w(g',g)$로 보낸다.
-
-</div>
-
-이 분해는 특히 $g'\in N_G(T)$인 경우 더 명확해진다.
-
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13**</ins> $g'=n\in N_G(T)$인 경우를 생각하자. 그럼 $g'=n=nT\cdot e\in N_G(T)$이고, $g'T=nT=eT\cdot nT$이다. 즉 $G/N_G(T)$ 성분에서의 이동은 없다. 대신 $W$ 성분에서는 $w\mapsto (nT)\cdot w$로 작용한다. 이는 $W$ 위에서의 left action이며, 특히 $nT\in W$에 의한 left multiplication이다.
-
-한편, 만약 $g'=t'\in T$인 경우, $g'T=eT$이므로 $G/N_G(T)$ 성분과 $W$ 성분 모두에서 이동이 없다. 이 경우 conjugation은 $G/T$ 위에서 자명하게 작용하며, $T$ 위에서도 자명하게 작용한다 ($T$가 abelian이므로).
+1. **$G/N$ 성분:** $gN\mapsto g'gN$으로 이동시킨다.
+2. **$W$ 성분:** 각 fiber $\pi^{-1}(gN)\cong W$ 위에서 $W$의 원소에 의한 left translation을 유도한다.
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-### Torus 내에서의 이동
+$\pi$가 $G$-equivariant이므로 첫 번째 주장은 자명하다. 두 번째 주장을 보기 위해, 임의의 $gN\in G/N$과 $w\in W$를 택하고 $w$를 represent하는 $x\in N$을 고르자. 그럼 $gT\in\pi^{-1}(gN)$에 대하여 $gxT$는 같은 fiber에서 $w$만큼 이동한 점이다. 이제
 
-지금까지의 논의는 $T$ 성분이 보존된다고 하였으나, 이는 $W$-orbit 수준에서의 진술이다. 실제 $T$의 개별 원소에 대한 conjugation을 생각하면, $W$-action에 의해 $t$가 $wtw^{-1}$으로 바뀔 수 있다.
+$$L_{g'}(gxT)=g'gxT=(g'g)xT$$
 
-구체적으로, $G/T\times T$의 관점에서 보면 $g'\cdot(gT,t)=(g'gT,t)$이지만, quotient $(G/T\times T)/W$에서는 $(gT,t)$와 $(gTw^{-1},wtw^{-1})$이 같은 원소로 식별된다. 따라서 $G$-action은 다음과 같이 이해할 수 있다.
+인데, $g'g=g''n$ ($g''\in G$, $n\in N$)으로 쓰면
 
-$$g'\cdot[gT,t]=[g'gT,t]=[g'T\cdot gT,t]$$
+$$L_{g'}(gxT)=g''nxT=g''(nT\cdot x)T$$
 
-여기서 $g'T$를 $G/N_G(T)\times W$로 분해하면, 그에 따라 $t$가 $W$-action에 의해 변화될 수 있다. 
+이다. 여기서 $nT\in W$이고 $x$도 $W$의 원소를 represent하므로, fiber $\pi^{-1}(g'gN)$에서의 이동은 $W$ 위에서의 left multiplication $w\mapsto(nT)\cdot w$에 해당한다.
+
+</details>
+
+이 분해는 특히 $g'\in N_G(T)$인 경우 단순해진다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop13">**명제 13**</ins> $n\in N_G(T)$에 대하여, $L_n$은 $G/N$ 성분에서 자명하게 작용하고, $W$ 성분에서는 $nT\in W$에 의한 left multiplication으로 작용한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$n\in N_G(T)$이면 $nN=eN$이므로 $G/N$ 성분에서 자명하다. 한편 임의의 $gT\in G/T$에 대하여
+
+$$L_n(gT)=ngT=(ngn^{-1})nT$$
+
+인데, $ngn^{-1}\in G$이고 $nT$는 $W$의 원소를 represent한다. Covering $\pi$의 관점에서 보면 $ngn^{-1}N=gN$이므로 fiber 내에서의 이동은 정확히 $nT$에 의한 left multiplication이다.
+
+</details>
+
+따라서 $T$의 원소에 의한 left multiplication은 $G/T$ 위에서 자명하게 작용한다. 실제로 $t\in T$이면 $tN=eN$이고 $tT=eT$이므로 두 성분 모두에서 이동이 없다.
+
+### Conjugation과 $W$-action의 교호작용
+
+[명제 11](#prop11)에서 conjugation action이 $T$ 성분을 보존한다고 하였으나, 이는 $W$-orbit 수준에서의 진술이다. 실제 $T$의 개별 원소에 대한 conjugation을 생각하면 $W$-action에 의해 $t$가 $wtw^{-1}$으로 바뀔 수 있다.
+
+구체적으로 $(G/T\times T)/W$의 관점에서 보자. [명제 11](#prop11)에 의하여 $G$-action은
+
+$$g'\cdot[(gT,t)]=[(g'gT,t)]$$
+
+으로 주어진다. 그런데 quotient에서 $(gT,t)$와 $(gTw^{-1},wtw^{-1})$은 같은 원소로 식별되므로, $g'T$의 $W$ 성분에 따라 $t$가 변화할 수 있다. 특히 $g'=n\in N_G(T)$인 경우 [명제 13](#prop13)에 의하여 $G/N$ 성분은 그대로이고 $W$ 성분만 $nT$만큼 이동하므로,
+
+$$n\cdot[(gT,t)]=[(gn^{-1}T,ntn^{-1})]$$
+
+을 얻는다. 즉 $T$ 성분은 $W$-action에 의해 $t\mapsto ntn^{-1}$로 변화한다. 
 
 ---
 
