@@ -376,13 +376,18 @@ $$\pi: G/T\rightarrow G/N;\qquad gT\mapsto gN$$
 
 을 생각하자. 그럼 각각의 coset $gN\in G/N$에 대하여, 그 fiber는
 
-$$\pi^{-1}(gN)=\{hT\mid h\in gN\}\cong N/T=W$$
+$$\pi^{-1}(gN)=\{hT\mid h\in gN\}=\{gxT\mid x\in N\}$$
 
-이며, 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $W$인 principal $W$-bundle이다. 이를 염두에 두고 앞선 action을 다시 살펴보자. 우선 우리는 [명제 11](#prop11)에서 $G$의 conjugation action을 $G/T$ 위에서의 $G$에 의한 left multiplication으로 바꾸었다. 이제 이와 마찬가지로 $G/N$ 위에 정의된 left multiplication
+이며, $g$가 고정되어 있으므로 이 fiber는 본질적으로 $\\{xT\mid x\in N\\}$, 즉 $N/T$와 같다. 더 나아가 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이라는 것을 확인할 수 있다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $W$인 principal $W$-bundle이다. 이를 염두에 두고 앞선 action을 다시 살펴보자. 
+
+우선 우리는 [명제 11](#prop11)에서 $G$의 conjugation action을 $G/T$ 위에서의 $G$에 의한 left multiplication으로 바꾸었다. 이제 이와 마찬가지로 $G/N$ 위에 정의된 left multiplication
 
 $$h\cdot(gN)=(hgN)$$
 
-으로 정의하면 covering map $\pi$가 $G$-equivariant가 된다. 
+으로 정의하면 covering map $\pi$가 $G$-equivariant가 된다는 것을 안다. 한편 left translation map이 각 fiber 위에서는 어떻게 작용하는지를 보면, 
+
+
+
 
 이제 각 fiber $\pi^{-1}(gN)$을 자세히 살펴보자. Coset $gN\in G/N$이 주어졌을 때, 그 fiber는
 
