@@ -368,13 +368,9 @@ $$h\cdot[(gT,t)]=[(hgT,t)]$$
 
 </div>
 
-한편, 우리는 [명제 10](#prop10)에 의하여 $T/W$와 $\Conj(G)$ 사이에 일대일대응이 존재함을 안다. 
+한편, 우리는 [명제 10](#prop10)에 의하여 $T/W$와 $\Conj(G)$ 사이에 일대일대응이 존재함을 안다. $c_h$는, 정의에 의해, $G$의 conjugacy class를 변화시키지 않으며 이것이 위의 명제에서 $T$ 방향의 변화가 없는 것으로 반영된 것을 확인할 수 있다. 그 대신 conjugation action은 정확하게 $G/T$ 위에 작용하는 것으로 생각할 수 있다.
 
-이 결과는 conjugacy class의 관점에서 다음과 같이 해석된다. 각 conjugacy class는 $T/W$의 원소, 즉 하나의 $W$-orbit $\{wtw^{-1}:w\in W\}$에 해당한다. Conjugation action은 conjugacy class를 보존하므로, $T/W$ 위에서는 자명하게 작용한다. 대신 각 conjugacy class 내부에서의 "위치"를 나타내는 $G/T$ 성분만을 변화시킨다.
-
-### Weyl group을 통한 세부 분석
-
-$G/T$ 위에서의 $G$-action을 더 자세히 이해하기 위해, $G/T$를 Weyl group과 연결해보자. $G/T$의 각 원소 $gT$는 maximal torus $gTg^{-1}$에 대응된다. 한편, $N_G(T)$의 coset $gN_G(T)$ 또한 $gTg^{-1}$에 대응되므로, 다음의 대응을 얻는다.
+이제 $G/T$ 위에서의 $G$-action을 더 자세히 이해하기 위해 $G/T$를 Weyl group과 연결해보자. $G/T$의 각 원소 $gT$는 maximal torus $gTg^{-1}$에 대응된다. 한편, $N_G(T)$의 coset $gN_G(T)$ 또한 $gTg^{-1}$에 대응되므로, 다음의 대응을 얻는다.
 
 $$G/T\longleftrightarrow G/N_G(T)\times W$$
 
