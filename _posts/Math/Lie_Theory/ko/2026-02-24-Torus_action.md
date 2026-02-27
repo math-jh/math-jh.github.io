@@ -390,28 +390,28 @@ $$\pi^{-1}(gN)=\{gxT\mid x\in N\}$$
 
 이다. 각각의 $xT\in N/T=W$에 대하여 $gxT\mapsto xT$로 대응시키면 fiber와 $W$ 사이의 일대일대응을 얻는다. 즉, $gN$ fiber 내에서 $gT$를 "기준점"으로 삼으면 다른 점들의 상대적 위치가 $W$로 parametrize된다.
 
-이 관찰을 바탕으로 $L_{g'}$이 각 fiber 내에서 어떻게 작용하는지 살펴보자. 임의의 $gT\in G/T$와 $x\in N$에 대하여,
+이 관찰을 바탕으로 $L_{g'}$이 각 fiber 내에서 어떻게 작용하는지 살펴보자. 핵심은 $g'g\in G$를 다음과 같이 분해하는 것이다.
 
-$$L_{g'}(gxT)=g'gxT$$
+$$g'g = hn \qquad (h\in G,\ n\in N)$$
 
-이다. 이제 $g'gxT$가 속한 fiber $\pi^{-1}(g'gN)$에서의 상대적 위치를 계산하자. $g'gN$의 기준점은 $g'gT$이므로, $g'gxT$를 $g'gT$에 대한 상대적 위치로 표현해야 한다. 이를 위해
+여기서 $h$는 $hN = g'gN$을 만족하도록 선택한다. 그러면 자동으로 $n = h^{-1}g'g \in N$이 된다. 이 분해에서 $n$이 $N$의 원소임이 보장되는 것이 중요하다.
 
-$$g'gxT = (g'g)(g^{-1}g'^{-1})(g'g)xT = (g'g) \cdot (g^{-1}g'^{-1}g'gxT)$$
+이제 임의의 $gT\in G/T$와 $x\in N$에 대하여,
 
-로 쓰는 대신, 더 간단히 $g'g = hn$ ($h\in G$, $n\in N$)인 분해를 생각하자. 그럼
+$$L_{g'}(gxT)=g'gxT=hnxT$$
 
-$$g'gxT = hnxT = h(nx)T$$
+이다. $hN = g'gN$이므로 이 점은 fiber $\pi^{-1}(g'gN)$에 속한다. 이 fiber에서 기준점은 $g'gT = h \cdot (h^{-1}g'g)T = hnT$인데... 잠깐, $n \in N$이므로 $hnT = hT$다. 따라서 기준점은 $hT$이고 (fiber 관점에서), $hnxT$의 상대적 위치는
 
-인데, $hN = g'gN$이고 $nxT$는 $W$의 원소이다. 따라서 fiber $\pi^{-1}(g'gN)$에서 $g'gxT$의 상대적 위치는 $nxT = (nT)(xT)\in W$이다.
+$$(hT)^{-1} \cdot hnxT = nxT = (nT)(xT)$$
 
-한편 원래 점 $gxT$는 fiber $\pi^{-1}(gN)$에서 상대적 위치 $xT\in W$에 있었다. 따라서 $L_{g'}$에 의해 상대적 위치가 $xT\mapsto (nT)(xT)$로 변화하며, 이는 $W$ 위에서 $nT\in W$에 의한 left multiplication이다.
+이다. 원래 점 $gxT$는 상대적 위치 $xT\in W$에 있었으므로, fiber 내에서의 이동은 $xT \mapsto (nT)(xT)$, 즉 $nT\in W$에 의한 left multiplication이다.
 
 <div class="proposition" markdown="1">
 
 <ins id="prop12">**명제 12**</ins> $G/T$ 위의 left multiplication $L_{g'}$는 다음과 같이 분해된다.
 
 1. **$G/N$ 성분:** $gN\mapsto g'gN$으로 이동시킨다.
-2. **$W$ 성분:** $g'g = hn$ ($h\in G$, $n\in N$)으로 분해할 때, 각 fiber $\pi^{-1}(gN)$에서 $\pi^{-1}(g'gN)$으로의 이동은 $W$ 위에서 $nT$에 의한 left translation $w\mapsto (nT)w$를 유도한다.
+2. **$W$ 성분:** $g'g = hn$ ($h\in G$, $n\in N$, $hN=g'gN$)으로 분해할 때, 각 fiber 내에서의 이동은 $W$ 위에서 $nT$에 의한 left translation $w\mapsto (nT)w$를 유도한다.
 
 </div>
 
