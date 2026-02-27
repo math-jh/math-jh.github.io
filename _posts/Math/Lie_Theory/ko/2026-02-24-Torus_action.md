@@ -378,42 +378,42 @@ $$\pi: G/T\rightarrow G/N;\qquad gT\mapsto gN$$
 
 $$\pi^{-1}(gN)=\{hT\mid h\in gN\}\cong N/T=W$$
 
-이며, 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $W$인 principal $W$-bundle이다. 이를 염두에 두고 앞선 action을 다시 살펴보자.
+이며, 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $W$인 principal $W$-bundle이다. 이를 염두에 두고 앞선 action을 다시 살펴보자. 우선 우리는 [명제 11](#prop11)에서 $G$의 conjugation action을 $G/T$ 위에서의 $G$에 의한 left multiplication으로 바꾸었다. 이제 이와 마찬가지로 $G/N$ 위에 정의된 left multiplication
 
-$G$가 $G/T$ 위에 left multiplication으로 작용하므로, 임의의 $g'\in G$에 대하여 map
+$$h\cdot(gN)=(hgN)$$
 
-$$L_{g'}:G/T\rightarrow G/T;\qquad gT\mapsto g'gT$$
+으로 정의하면 covering map $\pi$가 $G$-equivariant가 된다. 
 
-을 정의할 수 있다. 우리의 목표는 이 action을 covering $\pi:G/T\rightarrow G/N$을 통해 분해하는 것이다.
+이제 각 fiber $\pi^{-1}(gN)$을 자세히 살펴보자. Coset $gN\in G/N$이 주어졌을 때, 그 fiber는
 
-우선 $G/N$ 위에서 $G$의 action을 생각하자. 임의의 $g'\in G$에 대하여
+$$\pi^{-1}(gN)=\{gxT\mid x\in N\}$$
 
-$$g'\cdot(gN)=(g'gN)$$
+이다. 각각의 $xT\in N/T=W$에 대하여 $gxT\mapsto xT$로 대응시키면 fiber와 $W$ 사이의 일대일대응을 얻는다. 즉, $gN$ fiber 내에서 $gT$를 "기준점"으로 삼으면 다른 점들의 상대적 위치가 $W$로 parametrize된다.
 
-으로 정의하면 이 action은 transitive하다. 이제 covering map $\pi$가 $G$-equivariant인 것은 자명하다. 즉 $\pi(L_{g'}(gT))=g'\cdot\pi(gT)$이다.
+이 관찰을 바탕으로 $L_{g'}$이 각 fiber 내에서 어떻게 작용하는지 살펴보자. 임의의 $gT\in G/T$와 $x\in N$에 대하여,
+
+$$L_{g'}(gxT)=g'gxT$$
+
+이다. 이제 $g'gxT$가 속한 fiber $\pi^{-1}(g'gN)$에서의 상대적 위치를 계산하자. $g'gN$의 기준점은 $g'gT$이므로, $g'gxT$를 $g'gT$에 대한 상대적 위치로 표현해야 한다. 이를 위해
+
+$$g'gxT = (g'g)(g^{-1}g'^{-1})(g'g)xT = (g'g) \cdot (g^{-1}g'^{-1}g'gxT)$$
+
+로 쓰는 대신, 더 간단히 $g'g = hn$ ($h\in G$, $n\in N$)인 분해를 생각하자. 그럼
+
+$$g'gxT = hnxT = h(nx)T$$
+
+인데, $hN = g'gN$이고 $nxT$는 $W$의 원소이다. 따라서 fiber $\pi^{-1}(g'gN)$에서 $g'gxT$의 상대적 위치는 $nxT = (nT)(xT)\in W$이다.
+
+한편 원래 점 $gxT$는 fiber $\pi^{-1}(gN)$에서 상대적 위치 $xT\in W$에 있었다. 따라서 $L_{g'}$에 의해 상대적 위치가 $xT\mapsto (nT)(xT)$로 변화하며, 이는 $W$ 위에서 $nT\in W$에 의한 left multiplication이다.
 
 <div class="proposition" markdown="1">
 
 <ins id="prop12">**명제 12**</ins> $G/T$ 위의 left multiplication $L_{g'}$는 다음과 같이 분해된다.
 
 1. **$G/N$ 성분:** $gN\mapsto g'gN$으로 이동시킨다.
-2. **$W$ 성분:** 각 fiber $\pi^{-1}(gN)\cong W$ 위에서 $W$의 원소에 의한 left translation을 유도한다.
+2. **$W$ 성분:** $g'g = hn$ ($h\in G$, $n\in N$)으로 분해할 때, 각 fiber $\pi^{-1}(gN)$에서 $\pi^{-1}(g'gN)$으로의 이동은 $W$ 위에서 $nT$에 의한 left translation $w\mapsto (nT)w$를 유도한다.
 
 </div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$\pi$가 $G$-equivariant이므로 첫 번째 주장은 자명하다. 두 번째 주장을 보기 위해, 임의의 $gN\in G/N$과 $w\in W$를 택하고 $w$를 represent하는 $x\in N$을 고르자. 그럼 $gT\in\pi^{-1}(gN)$에 대하여 $gxT$는 같은 fiber에서 $w$만큼 이동한 점이다. 이제
-
-$$L_{g'}(gxT)=g'gxT=(g'g)xT$$
-
-인데, $g'g=g''n$ ($g''\in G$, $n\in N$)으로 쓰면
-
-$$L_{g'}(gxT)=g''nxT=g''(nT\cdot x)T$$
-
-이다. 여기서 $nT\in W$이고 $x$도 $W$의 원소를 represent하므로, fiber $\pi^{-1}(g'gN)$에서의 이동은 $W$ 위에서의 left multiplication $w\mapsto(nT)\cdot w$에 해당한다.
-
-</details>
 
 이 분해는 특히 $g'\in N_G(T)$인 경우 단순해진다.
 
