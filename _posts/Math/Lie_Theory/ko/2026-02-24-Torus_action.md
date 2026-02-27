@@ -378,51 +378,126 @@ $$\pi: G/T\rightarrow G/N;\qquad gT\mapsto gN$$
 
 $$\pi^{-1}(gN)=\{hT\mid h\in gN\}\cong N/T=W$$
 
-이며, 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 뿐만 아니라 
-
- $G/T$를 Weyl group과 연결해보자. $G/T$의 각 원소 $gT$는 maximal torus $gTg^{-1}$에 대응된다. 한편, $N_G(T)$의 coset $gN_G(T)$ 또한 $gTg^{-1}$에 대응되므로, 다음의 대응을 얻는다.
-
-$$G/T\longleftrightarrow G/N_G(T)\times W$$
-
-더 정확히 말하면, 각 $gT\in G/T$는 유일한 $gN_G(T)\in G/N_G(T)$와 $w\in W$의 쌍으로 분해된다. 이 분해 하에서 $G$의 left multiplication action을 살펴보자.
-
-$g'\in G$를 $g'=ht'h{-1}$ ($h\in G$, $t'\in T$)으로 표현하자. 이는 Cartan decomposition에 의해 항상 가능하다. 그럼 $g'T=hT$이고, 임의의 $gT\in G/T$에 대하여
-
-$$g'T\cdot gT=g'TgT=hTgT$$
-
-이다. 이제 $gT$를 $G/N_G(T)$ 성분과 $W$ 성분으로 분해하면, left multiplication by $g'T$는 다음과 같이 작용한다.
+이며, 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $W$인 principal $W$-bundle이다. 이를 염두에 두고 앞선 action을 다시 살펴보자.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> $g'=ht'h{-1}\in G$에 대하여, conjugation $c_{g'}$은 다음 두 성분으로 분해된다.
+<ins id="prop12">**명제 12**</ins> $G/N$ 위에 정의된 $G$-action
 
-1. **$G/N_G(T)$ 성분:** $gN_G(T)\mapsto hgN_G(T)$로 이동시킨다.
-2. **$W$ 성분:** $W$의 원소를 permute한다. 구체적으로, $gT\in G/T$에 해당하는 $w\in W$를 $w'=w(g',g)$로 보낸다.
+$$h\cdot(gN)=(hgN)$$
+
+은 transitive이다. 따라서 $G/N$은 $G$의 homogeneous space로서 $N$의 stabilizer를 갖는다.
 
 </div>
 
-이 분해는 특히 $g'\in N_G(T)$인 경우 더 명확해진다.
+이제 $G/T\times T$ 위의 $G$-action과 $W$-action 사이의 관계를 정리하면 다음과 같다. 우선 $G$-action은 $T$ 성분을 보존하므로, 각각의 $t\in T$에 대하여 $G/T$ 위에 정의된 $G$-action을 생각할 수 있다. 한편 $W$-action은 $G/T$ 성분과 $T$ 성분 모두에 작용한다. 그런데 $G$-action과 $W$-action은 서로 commute하므로, 우리는 다음의 두 단계로 나누어 생각할 수 있다.
+
+먼저 $G/T$ 위에서 $G$-action의 orbit을 살펴보자. $G$는 $G/T$ 위에 transitive하게 작용하므로, 임의의 $gT\in G/T$의 orbit은 $G/T$ 전체이다. 따라서 $G$-action에 대한 orbit space $(G/T)/G$는 singleton이다. 이는 [명제 11](#prop11)에서 $G$-action이 $T$ 성분을 보존한다는 사실과 합쳐져서, conjugation action의 orbit이 정확하게 $T$의 원소들로 parametrize된다는 것을 의미한다.
+
+더 정확히, [명제 10](#prop10)의 일대일대응 $T/W\leftrightarrow\Conj(G)$를 통해 각 conjugacy class $[g]$에 대하여 $[g]\cap T$가 하나의 $W$-orbit임을 이미 확인하였다. 이제 $G$-action이 $T$ 성분을 보존한다는 사실로부터, 각 $t\in T$에 대하여 그 orbit
+
+$$G\cdot[(eT,t)]=\{[(gT,t)]\mid g\in G\}$$
+
+은 $t$에 의해 완전히 결정됨을 안다. 즉, $t$와 $t'$가 서로 다른 $W$-orbit에 속한다면 $[(eT,t)]$와 $[(eT,t')]$은 서로 다른 $G$-orbit에 속한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop13">**명제 13**</ins> $(G/T\times T)/W$ 위의 $G$-action에 대한 orbit space는 $T/W$와 일대일대응한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[명제 11](#prop11)에 의하여 $G$-action은 $T$ 성분을 보존하므로, 각 $t\in T$에 대하여 $t$를 포함하는 orbit은
+
+$$G\cdot[(eT,t)]=\{[(gT,t)]\mid g\in G\}$$
+
+으로 주어진다. 이제 $[(gT,t)]=[(eT,t')]$인 것은 적당한 $w\in W$가 존재하여 $(gT,t)=w\cdot(eT,t')=(w^{-1}T,wt'w^{-1})$인 것과 동치이다. 이로부터 $t=wt'w^{-1}$, 즉 $t$와 $t'$가 같은 $W$-orbit에 속하는 것을 안다. 따라서 orbit space는 $T/W$와 일대일대응한다.
+
+</details>
+
+## Adjoint representation과의 관계
+
+지금까지의 논의를 통해 우리는 compact connected Lie group $G$의 구조가 maximal torus $T$와 Weyl group $W$에 의해 본질적으로 결정된다는 것을 확인하였다. 이 절에서는 이러한 관찰이 $G$의 adjoint representation과 어떻게 연결되는지 살펴본다.
+
+<div class="definition" markdown="1">
+
+<ins id="def14">**정의 14**</ins> Lie group $G$의 *adjoint representation<sub>수반 표현</sub>*은 다음의 Lie group homomorphism
+
+$$\Ad:G\rightarrow\Aut(\mathfrak{g});\qquad \Ad(g)=d(c_g)_e$$
+
+으로 정의된다. 여기서 $c_g:G\to G$는 $g$에 의한 conjugation이다.
+
+</div>
+
+$\Ad$는 $G$의 Lie algebra $\mathfrak{g}$ 위에 작용하는 $G$의 representation이다. 이제 maximal torus $T$로 제한한 $\Ad\vert_T$를 생각하면, weight decomposition에 의하여
+
+$$\mathfrak{g}=\bigoplus_\lambda\mathfrak{g}_\lambda$$
+
+를 얻는다. 여기서 $\lambda$는 $T$의 character들이며, $\mathfrak{g}_\lambda$는 해당 weight space이다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop15">**명제 15**</ins> $\mathfrak{g}$의 weight decomposition에서 weight $0$에 해당하는 weight space $\mathfrak{g}_0$는 $\mathfrak{t}$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+정의에 의하여
+
+$$\mathfrak{g}_0=\{X\in\mathfrak{g}\mid \Ad(t)X=X\text{ for all $t\in T$}\}$$
+
+이다. 즉 $\mathfrak{g}_0$는 $T$의 Lie algebra $\mathfrak{t}$의 centralizer이다. 그런데 $\mathfrak{t}$는 maximal abelian subalgebra이므로, $\mathfrak{t}$의 centralizer는 $\mathfrak{t}$ 자신이다.
+
+</details>
+
+이제 $0$이 아닌 weight들을 *roots*라 부르고, 그 모임을 $\Phi$로 표기한다. 각각의 root $\alpha\in\Phi$에 대하여 대응하는 weight space $\mathfrak{g}_\alpha$를 *root space*라 부른다. 이로부터
+
+$$\mathfrak{g}=\mathfrak{t}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
+
+를 얻으며, 이를 $\mathfrak{g}$의 *root space decomposition*이라 한다.
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> $g'=n\in N_G(T)$인 경우를 생각하자. 그럼 $g'=n=nT\cdot e\in N_G(T)$이고, $g'T=nT=eT\cdot nT$이다. 즉 $G/N_G(T)$ 성분에서의 이동은 없다. 대신 $W$ 성분에서는 $w\mapsto (nT)\cdot w$로 작용한다. 이는 $W$ 위에서의 left action이며, 특히 $nT\in W$에 의한 left multiplication이다.
+<ins id="ex16">**예시 16**</ins> $G=\mathrm{SU}(2)$를 생각하자. 이 경우 maximal torus는
 
-한편, 만약 $g'=t'\in T$인 경우, $g'T=eT$이므로 $G/N_G(T)$ 성분과 $W$ 성분 모두에서 이동이 없다. 이 경우 conjugation은 $G/T$ 위에서 자명하게 작용하며, $T$ 위에서도 자명하게 작용한다 ($T$가 abelian이므로).
+$$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\mid \theta\in\mathbb{R}\right\}$$
+
+으로 주어진다. Lie algebra $\mathfrak{su}(2)$는 trace가 $0$인 skew-Hermitian 행렬들의 공간으로, 기저
+
+$$H=\begin{pmatrix}i&0\\0&-i\end{pmatrix},\quad E=\begin{pmatrix}0&1\\-1&0\end{pmatrix},\quad F=\begin{pmatrix}0&i\\i&0\end{pmatrix}$$
+
+을 갖는다. 이제 $\Ad(t)$의 작용을 계산하면, $t=\mathrm{diag}(e^{i\theta},e^{-i\theta})$에 대하여
+
+$$\Ad(t)H=H,\quad \Ad(t)E=\cos(2\theta)E+\sin(2\theta)F,\quad \Ad(t)F=-\sin(2\theta)E+\cos(2\theta)F$$
+
+이다. 이를 복소화하여 $\mathfrak{sl}(2,\mathbb{C})=\mathfrak{su}(2)\otimes\mathbb{C}$를 생각하면, 새로운 기저
+
+$$X=E+iF,\quad Y=-E+iF$$
+
+에 대하여
+
+$$\Ad(t)X=e^{2i\theta}X,\quad \Ad(t)Y=e^{-2i\theta}Y$$
+
+를 얻는다. 따라서 weight는 $0$, $2$, $-2$이며, 이 중 $0$이 아닌 것들이 roots이다. Weyl group은 $W\cong\mathbb{Z}/2\mathbb{Z}$로, $H\mapsto -H$를 유도하는 작용을 한다.
 
 </div>
 
-### Torus 내에서의 이동
+Weyl group $W$는 root system $\Phi$ 위에 자연스럽게 작용한다. 구체적으로, 각각의 $w\in W$와 $\alpha\in\Phi$에 대하여 $w\cdot\alpha\in\Phi$가 성립한다. 이는 $W$가 $N(T)/T$로 정의되므로, 각 $w\in W$가 $T$의 automorphism을 유도하고 이것이 다시 $\mathfrak{t}$의 linear functional들인 weights에 작용하기 때문이다.
 
-지금까지의 논의는 $T$ 성분이 보존된다고 하였으나, 이는 $W$-orbit 수준에서의 진술이다. 실제 $T$의 개별 원소에 대한 conjugation을 생각하면, $W$-action에 의해 $t$가 $wtw^{-1}$으로 바뀔 수 있다.
+<div class="proposition" markdown="1">
 
-구체적으로, $G/T\times T$의 관점에서 보면 $g'\cdot(gT,t)=(g'gT,t)$이지만, quotient $(G/T\times T)/W$에서는 $(gT,t)$와 $(gTw^{-1},wtw^{-1})$이 같은 원소로 식별된다. 따라서 $G$-action은 다음과 같이 이해할 수 있다.
+<ins id="prop17">**명제 17**</ins> Root system $\Phi\subset\mathfrak{t}^*$는 $W$-invariant이다. 또한 $W$는 $\Phi$ 위에 충실하게 작용한다.
 
-$$g'\cdot[gT,t]=[g'gT,t]=[g'T\cdot gT,t]$$
+</div>
 
-여기서 $g'T$를 $G/N_G(T)\times W$로 분해하면, 그에 따라 $t$가 $W$-action에 의해 변화될 수 있다. 
+이러한 root system과 Weyl group의 구조는 compact Lie group의 분류에서 핵심적인 역할을 한다. 특히 root system의 구조로부터 Lie algebra $\mathfrak{g}$의 구조가 복원되며, 이를 통해 compact connected Lie group의 동형류가 결정된다.
 
 ---
 
 **참고문헌**
 
 **[Bro]** Armand Borel, *Linear Algebraic Groups*, Graduate texts in mathematics, Springer, 1991.
+
+**[BtD]** Theodor Bröcker, Tammo tom Dieck, *Representations of Compact Lie Groups*, Graduate texts in mathematics, Springer, 1985.
