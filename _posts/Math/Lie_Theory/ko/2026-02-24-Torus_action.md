@@ -370,7 +370,17 @@ $$h\cdot[(gT,t)]=[(hgT,t)]$$
 
 한편, 우리는 [명제 10](#prop10)에 의하여 $T/W$와 $\Conj(G)$ 사이에 일대일대응이 존재함을 안다. $c_h$는, 정의에 의해, $G$의 conjugacy class를 변화시키지 않으며 이것이 위의 명제에서 $T$ 방향의 변화가 없는 것으로 반영된 것을 확인할 수 있다. 그 대신 conjugation action은 정확하게 $G/T$ 위에 작용하는 것으로 생각할 수 있다.
 
-이제 $G/T$ 위에서의 $G$-action을 더 자세히 이해하기 위해 $G/T$를 Weyl group과 연결해보자. $G/T$의 각 원소 $gT$는 maximal torus $gTg^{-1}$에 대응된다. 한편, $N_G(T)$의 coset $gN_G(T)$ 또한 $gTg^{-1}$에 대응되므로, 다음의 대응을 얻는다.
+이제 $G/T$ 위에서의 $G$-action을 더 자세히 이해하기 위해, 우리는 이 공간을 Weyl group을 이용히여 다시 쓸 것이다. 우선 $N=N(T)$에 대하여, 다음의 projection map
+
+$$\pi: G/T\rightarrow G/N;\qquad gT\mapsto gN$$
+
+을 생각하자. 그럼 각각의 coset $gN\in G/N$에 대하여, 그 fiber는
+
+$$\pi^{-1}(gN)=\{hT\mid h\in gN\}\cong N/T=W$$
+
+
+
+ $G/T$를 Weyl group과 연결해보자. $G/T$의 각 원소 $gT$는 maximal torus $gTg^{-1}$에 대응된다. 한편, $N_G(T)$의 coset $gN_G(T)$ 또한 $gTg^{-1}$에 대응되므로, 다음의 대응을 얻는다.
 
 $$G/T\longleftrightarrow G/N_G(T)\times W$$
 
