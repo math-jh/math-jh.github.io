@@ -414,7 +414,7 @@ $$g=\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix
 
 라 적으면
 
-$$\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\begin{pmatrix}\end{pmatrix}$$
+$$\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\begin{pmatrix}\overline{\alpha}&-\beta\\\overline{\beta}&\alpha\end{pmatrix}=\begin{pmatrix}\alpha e^{i\theta}&-\overline{\beta}e^{-i\theta}\\\beta e^{i\theta}&\overline{\alpha}e^{-i\theta}\end{pmatrix}\begin{pmatrix}\overline{\alpha}&-\beta\\\overline{\beta}&\alpha\end{pmatrix}=\begin{pmatrix}\lvert\alpha\rvert^2e^{i\theta}-\lvert\beta\rvert^2e^{-i\theta}&-\alpha\beta e^{i\theta}-\overline{\alpah}\overline{\beta}e^{-i\theta}\end{pmatrix}$$
 
 한편 $g=\begin{pmatrix}a&b\\-b^*&a^*\end{pmatrix}$ ($|a|^2+|b|^2=1$)로 쓰면, 계산을 통해 $g$가 $T$를 보존하는 것은 $ab=0$인 것과 동치임을 알 수 있다. 즉, $b=0$이면 $g\in T$이고, $a=0$이면 $g=\begin{pmatrix}0&b\\-b^*&0\end{pmatrix}=\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}b^*&0\\0&-b\end{pmatrix}\in\begin{pmatrix}0&1\\-1&0\end{pmatrix}T$이다.
 
