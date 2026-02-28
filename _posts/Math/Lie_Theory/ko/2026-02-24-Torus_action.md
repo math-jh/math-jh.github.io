@@ -430,35 +430,17 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 
 이므로 torus $S^1$ 위에서의 reflection $\theta\mapsto -\theta$에 해당한다.
 
-이제 $\SU(2)$의 $\mathbb{C}^2$ 위에서의 자명한 representation을 생각하면, $\Aut(\mathbb{C}^2)=\GL(2;\mathbb{C})$이며 따라서 representation $\rho:\SU(2)\rightarrow \GL(2;\mathbb{C})$는 inclusion이다. 이를 torus $T$로 제한한 것도 마찬가지이며, 이로부터 $T$의 weight는 각각 $e^{i\theta}, e^{-i\theta}$, 그리고 이에 해당되는 weight space는 $\mathbb{C}e_1$, $\mathbb{C}e_2$이며 
+이제 $\SU(2)$의 $\mathbb{C}^2$ 위에서의 자명한 representation을 생각하면, $\Aut(\mathbb{C}^2)=\GL(2;\mathbb{C})$이며 따라서 representation $\rho:\SU(2)\rightarrow \GL(2;\mathbb{C})$는 inclusion이다. 이를 torus $T$로 제한한 것도 마찬가지이며, 이로부터 $T$의 weight는 각각 $\theta, -\theta$, 그리고 이에 해당되는 weight space는 $\mathbb{C}e_1$, $\mathbb{C}e_2$이며 weight decomposition은 $\mathbb{C}e_1\oplus \mathbb{C}e_2$임을 안다. 이 위에서 Weyl group은 weight를 서로 바꿔주는 것으로 작용함을 확인할 수 있다.
 
-### Weight decomposition
+## Weyl chamber
 
-$SU(2)$의 기본적인 representation을 생각하자. 자연스러운 representation $\rho:SU(2)\rightarrow\GL(2,\mathbb{C})$에서 각 $g\in SU(2)$는 $2\times 2$ 행렬로 작용한다. 이를 $T$로 제한하면
-
-$$\rho\vert_T\left(\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\right)=\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}$$
-
-이므로, weight decomposition은 자명하게 $V=\mathbb{C}e_1\oplus\mathbb{C}e_2$로 주어진다. 여기서 weight들은 $\lambda_1(\theta)=\theta$, $\lambda_2(\theta)=-\theta$이다.
-
-더 흥미로운 예시로, symmetric power $S^n(\mathbb{C}^2)$를 생각하자. 이는 $(n+1)$차원 representation으로, basis가 $e_1^n, e_1^{n-1}e_2, \ldots, e_2^n$으로 주어진다. $T$의 작용은
-
-$$\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\cdot e_1^{n-k}e_2^k = e^{i(n-2k)\theta}e_1^{n-k}e_2^k$$
-
-이다. 따라서 weight들은 $n, n-2, n-4, \ldots, -n$이며, 각 weight의 multiplicity는 1이다.
-
-### Weyl group action on weights
-
-Weyl group $W=\mathbb{Z}_2$가 weight들 위에 작용한다. Weight $\lambda(\theta)=n\theta$에 대하여, $w\cdot\lambda(\theta)=\lambda(-\theta)=-n\theta$이다. 즉, weight $n$은 $-n$으로 보내진다.
-
-$S^n(\mathbb{C}^2)$의 경우, weight들이 $n, n-2, \ldots, -n$으로 대칭적으로 배열되어 있음을 알 수 있다. 이는 Weyl group이 weight set을 보존한다는 일반적인 사실의 구체적인 예시이다.
-
-## Regular 원소와 Singular 원소
+마지막으로 우리는 다음 글에서 다룰 root system의 motivation을 맛볼 수 있는 
 
 Maximal torus $T$의 원소를 그 "genericity"에 따라 분류할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="defXX">**정의 XX**</ins> Maximal torus $T$의 원소 $t$가 *regular*라는 것은 $wtw^{-1}=t$를 만족하는 $w\in W$가 오직 $w=e$뿐인 것이다. 반대로, $wtw^{-1}=t$인 $w\neq e$가 존재하면 $t$를 *singular*라 한다.
+<ins id="def12">**정의 12**</ins> Maximal torus $T$의 원소 $t$가 *regular*라는 것은 $wtw^{-1}=t$를 만족하는 $w\in W$가 오직 $w=e$뿐인 것이다. 반대로, $wtw^{-1}=t$인 $w\neq e$가 존재하면 $t$를 *singular*라 한다.
 
 </div>
 
@@ -466,7 +448,7 @@ Maximal torus $T$의 원소를 그 "genericity"에 따라 분류할 수 있다.
 
 <div class="example" markdown="1">
 
-<ins id="exXX">**예시 XX**</ins> $SU(2)$의 경우, $T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$이고 $W=\mathbb{Z}_2$가 $\theta\mapsto -\theta$로 작용한다. 따라서:
+<ins id="ex13">**예시 13**</ins> $\SU(2)$의 경우, $T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$이고 $W=\mathbb{Z}_2$가 $\theta\mapsto -\theta$로 작용한다. 따라서:
 
 - **Regular:** $\theta \neq 0, \pi$인 원소들. 이들은 reflection의 fixed point가 아니다.
 - **Singular:** $\theta=0$ (항등원)과 $\theta=\pi$ ($\text{diag}(-1,-1)$). 이들은 reflection에 의해 고정된다.
@@ -479,7 +461,7 @@ Torus $T\cong S^1$에서 singular 원소는 정확히 두 점이며, regular 원
 
 <div class="proposition" markdown="1">
 
-<ins id="propXX">**명제 XX**</ins> Compact connected Lie group $G$의 maximal torus $T$에 대하여:
+<ins id="prop14">**명제 14**</ins> Compact connected Lie group $G$의 maximal torus $T$에 대하여:
 
 1. Regular 원소들은 $T$에서 dense open subset을 이룬다.
 2. Singular 원소들은 $T$에서 codimension $\geq 1$인 closed subset을 이룬다.
@@ -494,8 +476,6 @@ Torus $T\cong S^1$에서 singular 원소는 정확히 두 점이며, regular 원
 (3): 각 $w\neq e$에 대한 fixed point set이 $T$의 closed subgroup이고, $W$가 유한이므로 유한 개의 subgroup들의 합집합이다.
 
 </details>
-
-### Geometric interpretation
 
 Singular 원소들이 $T$에서 형성하는 집합은 torus를 여러 조각으로 나눈다. $SU(2)$의 경우, singular 원소 두 점이 $S^1$을 두 개의 arc로 나눈다. 각 arc에서 Weyl group은 자유롭게 작용하며, 두 arc는 Weyl group action에 의해 서로 대응된다.
 
