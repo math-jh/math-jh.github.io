@@ -384,7 +384,7 @@ $$\pi^{-1}(gN)=\{hT\mid h\in gN\}=\{gxT\mid x\in N\}$$
 
 지금까지의 논의를 compact connected Lie group
 
-$$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}$$
+$$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}=\left\{\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\middle\mid\end{pmatrix}\right\}$$
 
 에서 확인해보자. 우선 $\SU(2)$의 maximal torus를 구해야 한다. 우리의 주장은 다음 집합
 
@@ -400,43 +400,19 @@ $$\begin{pmatrix}i&0\\0&-i\end{pmatrix}$$
 
 와 commute해야 하고, 이를 계산하면
 
-$$\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}i&0\\0&-i\end{pmatrix}$$
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}i&0\\0&-i\end{pmatrix}=\begin{pmatrix}ai&-bi\\ci&-di\end{pmatrix},\qquad \begin{pmatrix}i&0\\0&-i\end{pmatrix}\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}ai&bi\\-ci&-di\end{pmatrix}$$
 
-<div class="proposition" markdown="1">
+이므로 이로부터 $b=c=0$이어야 함을 안다. 이로부터 $A\subset T$임을 안다. 
 
-<ins id="prop12">**명제 12**</ins> 다음 subgroup
+이제 Weyl group을 계산하기 위해 $T$의 normalizer $N=N_{\SU(2)}(T)$이 다음의 식
 
-$$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\mid \theta\in\mathbb{R}/2\pi\mathbb{Z}\right\}$$
+$$N=T\cup \begin{pmatrix}0&1\\-1&0\end{pmatrix}T$$
 
-은 $\SU(2)$의 maximal torus이다.
+으로 주어진다는 것을 보이자. 임의의 $g\in SU(2)$에 대하여, $gTg^{-1}=T$이려면 $g$가 $T$를 보존해야 한다. $T$의 원소들은 eigenvalue가 $\{e^{i\theta}, e^{-i\theta}\}$인 diagonalizable matrix들이다. $gTg^{-1}=T$이면 각 $t\in T$에 대하여 $gtg^{-1}$도 diagonal이어야 한다.
 
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
 
-$T$는 diagonal matrix들의 모임이므로 abelian이고, $S^1$과 동형이므로 torus이다. Maximality를 보이기 위해, $T$를 포함하는 abelian subgroup $A$가 있다 하자. 임의의 가 $T$의 모든 원소와 commute하여야 하므로, 특히 $\begin{pmatrix}i&0\\0&-i\end{pmatrix}$와 commute해야 한다. 이로부터 $b=c=0$임을 알 수 있고, 따라서 $A\subset T$이다.
-
-</details>
-
-이제 Weyl group을 계산하자. $T$의 normalizer를 찾아야 한다.
-
-<div class="proposition" markdown="1">
-
-<ins id="propXX">**명제 XX**</ins> $N_{SU(2)}(T)$는 다음 집합
-
-$$N_{SU(2)}(T)=T\cup \begin{pmatrix}0&1\\-1&0\end{pmatrix}T$$
-
-이며, 따라서 $W\cong\mathbb{Z}_2$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-임의의 $g\in SU(2)$에 대하여, $gTg^{-1}=T$이려면 $g$가 $T$를 보존해야 한다. $T$의 원소들은 eigenvalue가 $\{e^{i\theta}, e^{-i\theta}\}$인 diagonalizable matrix들이다. $gTg^{-1}=T$이면 각 $t\in T$에 대하여 $gtg^{-1}$도 diagonal이어야 한다.
 
 한편 $g=\begin{pmatrix}a&b\\-b^*&a^*\end{pmatrix}$ ($|a|^2+|b|^2=1$)로 쓰면, 계산을 통해 $g$가 $T$를 보존하는 것은 $ab=0$인 것과 동치임을 알 수 있다. 즉, $b=0$이면 $g\in T$이고, $a=0$이면 $g=\begin{pmatrix}0&b\\-b^*&0\end{pmatrix}=\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}b^*&0\\0&-b\end{pmatrix}\in\begin{pmatrix}0&1\\-1&0\end{pmatrix}T$이다.
-
-</details>
 
 Weyl group $W\cong\mathbb{Z}_2$의 nontrivial element는 $\begin{pmatrix}0&1\\-1&0\end{pmatrix}$에 해당한다. 이 원소의 $T$ 위에서의 action을 계산하면
 
