@@ -434,9 +434,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 
 ## Weyl chamber
 
-마지막으로 우리는 다음 글에서 다룰 root system의 motivation을 맛볼 수 있는 정의를 살펴본다. [보조정리 7](#prop7)에서, 우리가 $T$의 generator $t$에서의 $q$에 대한 preimage를 계산하고 그 개수가 $\lvert W\rvert$개임을 확인하였다. 이제 $T$위에 $W$가 작용한다는 것을 알게되었으므로 이 조건을 
-
-Maximal torus $T$의 원소를 그 "genericity"에 따라 분류할 수 있다.
+마지막으로 우리는 다음 글에서 다룰 root system의 motivation을 맛볼 수 있는 정의를 살펴본다. [보조정리 7](#prop7)에서, 우리가 $T$의 generator $t$에서의 $q$에 대한 preimage를 계산하고 그 개수가 $\lvert W\rvert$개임을 확인하였다. 이제 $T$위에 $W$가 작용한다는 것을 알게되었으므로 이 조건을 다음과 같이 쓸 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -444,11 +442,11 @@ Maximal torus $T$의 원소를 그 "genericity"에 따라 분류할 수 있다.
 
 </div>
 
-즉, regular 원소는 Weyl group action의 stabilizer가 자명한 원소이고, singular 원소는 비자명한 stabilizer를 갖는 원소이다.
+즉, regular element는 Weyl group action의 stabilizer가 자명한 원소이고, singular element는 비자명한 stabilizer를 갖는 원소이다. 일반적으로 $q$의 mapping degree를 계산하기 위해서는 $q$의 regular value에서의 값을 계산해야 하는데, orbit-stabilizer theorem을 생각하면 preimage가 이와 같이 $\lvert W\rvert$개의 image를 가지기 위해서는 반드시 stabilizer가 trivial해야한다는 것을 안다. 이로부터 이러한 원소를 regular element라 부르는 것이 자연스럽다.
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> $\SU(2)$의 경우, $T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$이고 $W=\mathbb{Z}_2$가 $\theta\mapsto -\theta$로 작용한다. 따라서:
+<ins id="ex13">**예시 13**</ins> $\SU(2)$의 경우, $T=\\{\text{diag}(e^{i\theta}, e^{-i\theta})\\}$이고 $W=\mathbb{Z}_2$가 $\theta\mapsto -\theta$로 작용한다. 따라서:
 
 - **Regular:** $\theta \neq 0, \pi$인 원소들. 이들은 reflection의 fixed point가 아니다.
 - **Singular:** $\theta=0$ (항등원)과 $\theta=\pi$ ($\text{diag}(-1,-1)$). 이들은 reflection에 의해 고정된다.
@@ -477,9 +475,9 @@ Torus $T\cong S^1$에서 singular 원소는 정확히 두 점이며, regular 원
 
 </details>
 
-Singular 원소들이 $T$에서 형성하는 집합은 torus를 여러 조각으로 나눈다. $SU(2)$의 경우, singular 원소 두 점이 $S^1$을 두 개의 arc로 나눈다. 각 arc에서 Weyl group은 자유롭게 작용하며, 두 arc는 Weyl group action에 의해 서로 대응된다.
+Singular 원소들이 $T$에서 형성하는 집합은 torus를 여러 조각으로 나눈다. 가령 $\SU(2)$의 경우, singular 원소 두 점이 $S^1$을 두 개의 반원으로 나눈다. 각 반원에서 Weyl group은 free action을 정의하며, Weyl group action은 이들을 서로 대응시켜주는 역할을 한다.
 
-이 관점에서 보면, $T$의 regular 원소들의 quotient $T_{\text{reg}}/W$는 연결된 공간이며, 이를 *Weyl chamber*의 개념과 연결할 수 있다. $SU(2)$의 경우 $T_{\text{reg}}/W \cong (0,\pi)$는 1차원 interval이고, 이것이 바로 1차원 Weyl chamber에 해당한다.
+이 관점에서 보면, $T$의 regular 원소들의 quotient $T_{\text{reg}}/W$는 연결된 공간이며, 이를 *Weyl chamber*의 개념과 연결할 수 있다. $\SU(2)$의 경우 $T_{\text{reg}}/W \cong (0,\pi)$는 1차원 interval이고, 이것이 바로 1차원 Weyl chamber에 해당한다.
 
 더 일반적인 Lie group에서는 singular 원소들이 torus를 여러 chamber들로 나누고, 각 chamber는 Weyl group action의 fundamental domain 역할을 한다. 이것이 다음 글에서 다룰 root system과 Weyl chamber의 기하적 토대가 된다.
 
