@@ -388,9 +388,19 @@ $$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}$$
 
 에서 확인해보자. 우선 $\SU(2)$의 maximal torus를 구해야 한다. 우리의 주장은 다음 집합
 
-$$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\,\middle\vert \,\theta\in\mathbb{R}/2\pi\mathbb{Z}\right\}$$
+$$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\,\middle\vert \;\theta\in\mathbb{R}/2\pi\mathbb{Z}\right\}$$
 
-이 $\SU(2)$의 (한) maximal torus라는 것이다. 우선 $T$가 abelian이고, 
+이 $\SU(2)$의 (한) maximal torus라는 것이다. $T$가 $1$차원 torus인 것은 자명하므로, maximalilty만 보이면 충분하다. 이를 위해 $T$를 포함하는 $\SU(2)$의 abelian subgroup $A$가 주어졌다 하면, 임의의 원소
+
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}\in A$$
+
+가 $T$의 모든 원소와 commute해야 하므로 특히 
+
+$$\begin{pmatrix}i&0\\0&-i\end{pmatrix}$$
+
+와 commute해야 하고, 이를 계산하면
+
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}i&0\\0&-i\end{pmatrix}$$
 
 <div class="proposition" markdown="1">
 
@@ -404,7 +414,7 @@ $$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\mid \theta\
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$T$는 diagonal matrix들의 모임이므로 abelian이고, $S^1$과 동형이므로 torus이다. Maximality를 보이기 위해, $T$를 포함하는 abelian subgroup $A$가 있다 하자. 임의의 $\begin{pmatrix}a&b\\c&d\end{pmatrix}\in A$가 $T$의 모든 원소와 commute하여야 하므로, 특히 $\begin{pmatrix}i&0\\0&-i\end{pmatrix}$와 commute해야 한다. 이로부터 $b=c=0$임을 알 수 있고, 따라서 $A\subset T$이다.
+$T$는 diagonal matrix들의 모임이므로 abelian이고, $S^1$과 동형이므로 torus이다. Maximality를 보이기 위해, $T$를 포함하는 abelian subgroup $A$가 있다 하자. 임의의 가 $T$의 모든 원소와 commute하여야 하므로, 특히 $\begin{pmatrix}i&0\\0&-i\end{pmatrix}$와 commute해야 한다. 이로부터 $b=c=0$임을 알 수 있고, 따라서 $A\subset T$이다.
 
 </details>
 
