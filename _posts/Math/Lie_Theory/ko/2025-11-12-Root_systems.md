@@ -329,7 +329,7 @@ $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alp
 
 을 만족한다. 즉 이들은 $\mathfrak{g}$ 안에서 $\sl_2$과 isomorphic한 subalgebra를 준다. 이를 $\sl_{2,\alpha}$라 하자. 그럼 adjoint action을 통해 $\mathfrak{g}$를 $\sl_{2,\alpha}$-representation으로 볼 수 있다. 
 
-특히 $h_\alpha$가 $\mathfrak{g}$의 원소들에 어떻게 작용하는지를 살펴보자. 우선 \mathfrak{g}$의 root space $\mathfrak{g}_\beta$에 $h_\alpha$의 adjoint action이 어떻게 작용하는지를 보면
+특히 $h\_\alpha$가 $\mathfrak{g}$의 원소들에 어떻게 작용하는지를 살펴보자. 우선 $\mathfrak{g}$의 root space $\mathfrak{g}\_\beta$에 $h\_\alpha$의 adjoint action이 어떻게 작용하는지를 보면
 
 $$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $x\in \mathfrak{g}_\beta$}$$
 
@@ -343,7 +343,7 @@ $$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{h_\alpha\mid \alpha\in\Phi\}$$
 
 $$K(h_\alpha,h_\beta)=\tr_\mathfrak{g}(\ad h_\alpha\ad h_\beta)=\sum_{\gamma\in\Phi}\gamma(h_\alpha)\gamma(h_\beta)$$
 
-가 성립한다. 우리는 앞서 이들 $\gamma(h_\alpha),\gamma(h_\beta)$들이 정수임을 증명하였으며 따라서 $K(h_\alpha,h_\beta)$도 그러하다. 즉, $\mathfrak{h}_\mathbb{R}$로 제한했을 때 $K$는 real-valued이며, 이제 임의의 $h\in \mathfrak{h}_\mathbb{R}$에 대하여
+가 성립한다. 우리는 앞서 이들 $\gamma(h_\alpha),\gamma(h_\beta)$들이 정수임을 증명하였으며 따라서 $K(h_\alpha,h_\beta)$도 그러하다. 즉, $\mathfrak{h}\_\mathbb{R}$로 제한했을 때 $K$는 real-valued이며, 이제 임의의 $h\in \mathfrak{h}\_\mathbb{R}$에 대하여
 
 $$K(h,h)=\tr(\ad_h\ad_h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
 
@@ -385,7 +385,7 @@ $$\Phi(A_n)=\left\{e_i-e_j\mid 1\leq i\neq j\leq n+1\right\}$$
 
 $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathbf{e}_{ij}=(x_1,\ldots, x_{n+1})-(x_i-x_j)\mathbf{e}_{ij}$$
 
-이고 이는 $\mathbf{x}$의 $i$번째와 $j$번째의 성분을 바꾼 것으로 주어진다. 따라서 이로부터 [정의 5](#def5)의 셋째 조건이 성립하는 것을 알고 넷째 조건은 자명하다. 또, 위의 계산으로부터 $W(\Phi(A_n))$은 $\Phi(A_n)$의 각각의 성분을 교환하는 것으로 주어지는 것을 안다. 즉 $W(\Phi(A_n))\cong S_{n+1}$이다. 
+이고 이는 $\mathbf{x}$의 $i$번째와 $j$번째의 성분을 바꾼 것으로 주어진다. 따라서 이로부터 [정의 5](#def5)의 셋째 조건이 성립하는 것을 알고 넷째 조건은 자명하다. 
 
 </div>
 
@@ -401,11 +401,7 @@ $$\Phi(D_n)=\left\{\pm e_i\pm e_j\mid 1\leq i \neq j\leq n\right\}$$
 
 $$s_{ij}^+(\mathbf{x})=\mathbf{x}-\langle\mathbf{x}, \mathbf{e}_{ij}^+\rangle\mathbf{e}_{ij}^+=(x_1,\ldots, x_n)-(x_i+x_j)\mathbf{e}_{ij}$$
 
-을 생각하면, $s_{ij}^+$는 주어진 벡터의 $i$번째 성분과 $j$번째 성분을 바꾼 후 부호까지 반대로 바꾸어주는 것이다. 즉 Weyl group은 semidirect product
-
-$$(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$$
-
-이 된다. 
+을 생각하면, $s_{ij}^+$는 주어진 벡터의 $i$번째 성분과 $j$번째 성분을 바꾼 후 부호까지 반대로 바꾸어주는 것이다. 
 
 </div>
 
@@ -425,7 +421,7 @@ $$e_i-e_k=(e_i-e_j)+(e_j-e_k)$$
 
 $$\langle\alpha_i,\alpha_j\rangle=2\frac{(\alpha_i,\alpha_j)}{(\alpha_j,\alpha_j)}$$
 
-들이 어떻게 정의되었는지만 안다면, 임의의 root $\alpha_j$에 대한 reflection $s_j$가 다른 root $\alpha_i$을 어떻게 옮기는지를 알 수 있고 따라서 이들이 Weyl group에 대한 정보를 모두 갖고 있다. 
+들이 어떻게 정의되었는지만 안다면, 임의의 root $\alpha_j$에 대한 reflection $s_j$가 다른 root $\alpha_i$을 어떻게 옮기는지를 알 수 있다. 
 
 이제 root system $\Phi$와 simple root들의 모임 $\Delta=\left\\{\alpha_1,\ldots, \alpha_l\right\\}$이 고정되었다고 하자. 그럼 *Cartan matrix*는 다음과 같이 정의된다. 
 
@@ -457,21 +453,41 @@ $$\langle\alpha,\beta\rangle\langle\beta,\alpha\rangle=3$$
 
 으로부터 $\langle\alpha,\beta\rangle$은 $\pm 1$이거나 $\pm 3$이어야 한다. 이제 다음 식
 
-$$\langle \alpha,\beta\rangle =2\frac{(\alpha,\beta)}{(\beta,\beta)}=\frac{2\lvert\alpha\rvert\lvert\beta\rvert\cos\theta}{\lvert\beta\rvert^2}=\frac{\pm \sqrt{3}\lvert\alpha\rvert}{\lvert\beta\rvert}$$
+$$\langle \alpha,\beta\rangle =2\frac{(\alpha,\beta)}{\lvert\beta\rvert^2}=\frac{2\lvert\alpha\rvert\lvert\beta\rvert\cos\theta}{\lvert\beta\rvert^2}=\frac{\pm \sqrt{3}\lvert\alpha\rvert}{\lvert\beta\rvert}$$
 
 의 값이 $\pm 1$ 혹은 $\pm 3$이라는 것으로부터 우리는 $\alpha$와 $\beta$의 길이비가 $\sqrt{3}$이어야 함을 안다. 비슷하게 두 root $\alpha,\beta$가 이루는 각이 $45$도 혹은 $135$도라면, 이들 두 root의 길이비는 $\sqrt{2}$여야 하고 $60$도 혹은 $120$도의 경우에는 길이비가 $1$이어야 함을 안다.
 
+## Weyl group
+
+Root system $\Phi$의 각 root $\alpha$에 대하여 reflection $s_\alpha$는 $\Phi$의 automorphism을 정의한다. 이들 reflection들로 생성되는 군을 생각하자.
+
+<div class="definition" markdown="1">
+
+<ins id="def17">**정의 17**</ins> Root system $\Phi$의 *Weyl group*은 reflection들 $s_\alpha$ ($\alpha\in\Phi$)로 생성되는 $\Aut(\Phi)$의 부분군이다.
+
+$$W(\Phi)=\langle s_\alpha\mid \alpha\in\Phi\rangle$$
+
+</div>
+
+Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space의 orthogonal group의 부분군이고, $\Phi$가 유한집합이므로 $W$ 역시 유한하다. 또한 [명제 12](#prop12)에서 확인한 것과 같이 reflection $s_\alpha$가 $\alpha$에 수직인 초평면에 대한 대칭이동이므로, $W$는 Coxeter group의 구조를 갖는다.
+
+<div class="example" markdown="1">
+
+<ins id="ex18">**예시 18**</ins> [예시 13](#ex13)에서 살펴본 $\Phi(A_n)$의 경우, reflection $s_{ij}$는 $i$번째와 $j$번째 좌표를 교환하는 transposition에 해당한다. 따라서 $W(\Phi(A_n))\cong S_{n+1}$이다. [예시 14](#ex14)의 $\Phi(D_n)$의 경우, reflection들은 좌표의 교환과 부호 변화를 모두 포함하므로 $W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$이다.
+
+</div>
+
 ## Lie group과의 연결
 
-지금까지 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 포착하는 Weyl group을 reflection들 $s_\alpha$로 생성되는 유한군으로 정의하였다. 한편 [\[원환면의 작용\] §극대 원환면](/ko/math/lie_theory/torus_action#극대-원환면)에서 우리는 compact Lie group $G$의 Weyl group을 $W=N(T)/T$로 정의하였다. 이 절에서는 두 정의가 자연스럽게 일치함을 보인다.
+지금까지 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 포착하는 Weyl group을 reflection들 $s_\alpha$로 생성되는 유한군으로 정의하였다. 한편 [§원환면의 작용, §§극대 원환면](/ko/math/lie_theory/torus_action#극대-원환면)에서 우리는 compact Lie group $G$의 Weyl group을 $W=N(T)/T$로 정의하였다. 이 절에서는 두 정의가 자연스럽게 일치함을 보인다.
 
 우선 $\mathfrak{g}$가 compact connected Lie group $G$의 Lie algebra라고 하자. $\mathfrak{g}$가 semisimple인 것은 $G$의 universal cover가 $\mathbb{R}^n$을 factor로 갖지 않는 것과 동치이다. 이 경우 $G$의 maximal torus $T$의 Lie algebra $\mathfrak{t}$가 $\mathfrak{g}$의 Cartan subalgebra가 된다.
 
-이제 $N(T)$가 $\mathfrak{t}^*$ 위에 작용하는 방식을 살펴보자. 임의의 $n\in N(T)$에 대하여, adjoint representation $\Ad(n)$은 $\mathfrak{g}$ 위의 automorphism이고 $nTn^{-1}=T$이므로 $\mathfrak{t}$를 보존한다. 따라서 $\Ad(n)|_\mathfrak{t}$는 $\mathfrak{t}$의 automorphism이고, 이를 dual로 옮기면 $\mathfrak{t}^*$ 위의 linear action을 얻는다.
+이제 $N(T)$가 $\mathfrak{t}^\ast$ 위에 작용하는 방식을 살펴보자. 임의의 $n\in N(T)$에 대하여, adjoint representation $\Ad(n)$은 $\mathfrak{g}$ 위의 automorphism이고 $nTn^{-1}=T$이므로 $\mathfrak{t}$를 보존한다. 따라서 $\Ad(n)\vert_\mathfrak{t}$는 $\mathfrak{t}$의 automorphism이고, 이를 dual로 옮기면 $\mathfrak{t}^\ast$ 위의 linear action을 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop17">**명제 17**</ins> $N(T)$의 $\mathfrak{t}^*$ 위의 action은 root system $\Phi$를 보존한다.
+<ins id="prop19">**명제 19**</ins> $N(T)$의 $\mathfrak{t}^\ast$ 위의 action은 root system $\Phi$를 보존한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -493,11 +509,11 @@ $$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
 
 </details>
 
-따라서 우리는 $W=N(T)/T$가 $\mathfrak{t}^*$ 위에, 특히 root system $\Phi$ 위에 잘 정의된 action을 갖는다는 것을 안다. 이제 핵심적인 결과는 다음과 같다.
+따라서 우리는 $W=N(T)/T$가 $\mathfrak{t}^\ast$ 위에, 특히 root system $\Phi$ 위에 잘 정의된 action을 갖는다는 것을 안다. 이제 핵심적인 결과는 다음과 같다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop18">**명제 18**</ins> 각각의 root $\alpha\in\Phi$에 대하여, $\Ad(n_\alpha)|_\mathfrak{t}=s_\alpha$를 만족하는 $n_\alpha\in N(T)$가 존재한다. 따라서 Lie group에서 정의한 Weyl group $W=N(T)/T$와 root system의 Weyl group은 isomorphic하다.
+<ins id="prop20">**명제 20**</ins> 각각의 root $\alpha\in\Phi$에 대하여, $\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$를 만족하는 $n_\alpha\in N(T)$가 존재한다. 따라서 Lie group에서 정의한 Weyl group $W=N(T)/T$와 root system의 Weyl group은 isomorphic하다.
 
 </div>
 <details class="proof" markdown="1">
@@ -509,7 +525,7 @@ $G_\alpha$는 $T$와 교차하여 1차원 torus $T_\alpha=T\cap G_\alpha$를 형
 
 $$n_\alpha=\exp(e_\alpha)\exp(-f_\alpha)\exp(e_\alpha)$$
 
-를 생각하자. $\SU(2)$에서의 계산에 의하면 이는 $\begin{pmatrix}0&1\\-1&0\end{pmatrix}$에 해당하며, 이 원소는 $T_\alpha$의 원소를 $t\mapsto t^{-1}$로 보낸다. 따라서 $\Ad(n_\alpha)$는 $h_\alpha$를 $-h_\alpha$로 보내고, $\ker\alpha$를 보존한다. 즉 $\Ad(n_\alpha)|_\mathfrak{t}=s_\alpha$이다.
+를 생각하자. $\SU(2)$에서의 계산에 의하면 이는 $\begin{pmatrix}0&1\\-1&0\end{pmatrix}$에 해당하며, 이 원소는 $T_\alpha$의 원소를 $t\mapsto t^{-1}$로 보낸다. 따라서 $\Ad(n_\alpha)$는 $h_\alpha$를 $-h_\alpha$로 보내고, $\ker\alpha$를 보존한다. 즉 $\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$이다.
 
 마지막으로 $n_\alpha\in N(T)$임을 확인하자. $\Ad(n_\alpha)$가 $\mathfrak{t}$를 보존하므로 $n_\alpha Tn_\alpha^{-1}$과 $T$는 같은 Lie algebra를 갖고, 둘 다 connected이므로 $n_\alpha Tn_\alpha^{-1}=T$이다.
 
