@@ -434,7 +434,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 
 ## Weyl chamber
 
-마지막으로 우리는 다음 글에서 다룰 root system의 motivation을 맛볼 수 있는 
+마지막으로 우리는 다음 글에서 다룰 root system의 motivation을 맛볼 수 있는 정의를 살펴본다. [보조정리 7](#prop7)에서, 우리가 $T$의 generator $t$에서의 $q$에 대한 preimage를 계산하고 그 개수가 $\lvert W\rvert$개임을 확인하였다. 이제 $T$위에 $W$가 작용한다는 것을 알게되었으므로 이 조건을 
 
 Maximal torus $T$의 원소를 그 "genericity"에 따라 분류할 수 있다.
 
