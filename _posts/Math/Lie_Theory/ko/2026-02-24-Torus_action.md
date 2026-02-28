@@ -183,7 +183,7 @@ $$N=\{g\in G\mid gTg^{-1}=T\}$$
 
 $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
-으로 작용한다. 그런데 $\Aut(T)$는 torus $T=\mathbb{R}^k/\mathbb{Z}^k$의 lattice가 어디로 옮겨지는지에 의해 결정되고, 이는 $\GL(k,\mathbb{Z})$에 $\Ad(n)$을 통해 담겨있다. 즉 이 action은 $N$에서 $\GL(k;\mathbb{Z})$로의 연속함수로 생각할 수 있다. 그런데 $\GL(k;\mathbb{Z})$는 discrete이므로 $N$의 identity component $N_0$을 생각하면 $N_0$은 모두 항등행렬로 옮겨져야 한다. 즉, $N_0$은 $T$ 위에 자명하게 작용한다. 
+으로 작용한다. 그런데 $\Aut(T)$는 torus $T=\mathbb{R}^k/\mathbb{Z}^k$의 lattice가 어디로 옮겨지는지에 의해 결정되고, 이는 $\GL(k;\mathbb{Z})$에 $\Ad(n)$을 통해 담겨있다. 즉 이 action은 $N$에서 $\GL(k;\mathbb{Z})$로의 연속함수로 생각할 수 있다. 그런데 $\GL(k;\mathbb{Z})$는 discrete이므로 $N$의 identity component $N_0$을 생각하면 $N_0$은 모두 항등행렬로 옮겨져야 한다. 즉, $N_0$은 $T$ 위에 자명하게 작용한다. 
 
 이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$에 대하여, $\alpha(\mathbb{R})\cdot T=T$가 성립해야 하고, 이로부터 $\alpha(\mathbb{R})\subset T$여야 함을 안다. 그런데 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6)에 의하여 이들은 $N_0$에서 항등원의 어떠한 열린근방을 덮으며, 따라서 $N_0$을 생성한다. 즉 $N_0=T$이다.
 
@@ -380,13 +380,17 @@ $$\pi^{-1}(gN)=\{hT\mid h\in gN\}=\{gxT\mid x\in N\}$$
 
 이며, $g$가 고정되어 있으므로 이 fiber는 본질적으로 $\\{xT\mid x\in N\\}$, 즉 $N/T$와 같다. 더 나아가 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이라는 것을 확인할 수 있다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $W$인 principal $W$-bundle이다. 
 
-## 예시: $SU(2)$
+## 예시: $\SU(2)$
 
-지금까지의 논의를 구체적인 예시에서 확인해보자. Special unitary group
+지금까지의 논의를 compact connected Lie group
 
-$$SU(2)=\{A\in\GL(2,\mathbb{C})\mid A^\dagger A=I,\ \det A=1\}$$
+$$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}$$
 
-은 compact connected Lie group이다. 이 group의 maximal torus를 찾아보자.
+에서 확인해보자. 우선 $\SU(2)$의 maximal torus를 구해야 한다. 우리의 주장은 다음 집합
+
+$$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\,\middle\vert \,\theta\in\mathbb{R}/2\pi\mathbb{Z}\right\}$$
+
+이 $\SU(2)$의 (한) maximal torus라는 것이다. 우선 $T$가 abelian이고, 
 
 <div class="proposition" markdown="1">
 
@@ -394,7 +398,7 @@ $$SU(2)=\{A\in\GL(2,\mathbb{C})\mid A^\dagger A=I,\ \det A=1\}$$
 
 $$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\mid \theta\in\mathbb{R}/2\pi\mathbb{Z}\right\}$$
 
-은 $SU(2)$의 maximal torus이다.
+은 $\SU(2)$의 maximal torus이다.
 
 </div>
 <details class="proof" markdown="1">
