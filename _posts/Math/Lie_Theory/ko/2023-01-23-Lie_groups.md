@@ -4,7 +4,7 @@ title: "리 군"
 excerpt: "Lie group의 정의와 성질"
 
 categories: [Math / Lie Theory]
-permalink: /ko/math/Lie_theory/Lie_groups
+permalink: /ko/math/lie_theory/Lie_groups
 header:
     overlay_image: /assets/images/Math/Lie_theory/Lie_groups.png
     overlay_filter: 0.5

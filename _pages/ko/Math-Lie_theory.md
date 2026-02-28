@@ -1,5 +1,5 @@
 ---
-title: "리 군론"
+title: "리 이론"
 layout: archive_custom
 permalink: /ko/lie_theory/
 ---
