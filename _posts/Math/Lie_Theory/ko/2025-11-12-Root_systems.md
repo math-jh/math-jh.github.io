@@ -460,3 +460,59 @@ $$\langle\alpha,\beta\rangle\langle\beta,\alpha\rangle=3$$
 $$\langle \alpha,\beta\rangle =2\frac{(\alpha,\beta)}{(\beta,\beta)}=\frac{2\lvert\alpha\rvert\lvert\beta\rvert\cos\theta}{\lvert\beta\rvert^2}=\frac{\pm \sqrt{3}\lvert\alpha\rvert}{\lvert\beta\rvert}$$
 
 의 값이 $\pm 1$ 혹은 $\pm 3$이라는 것으로부터 우리는 $\alpha$와 $\beta$의 길이비가 $\sqrt{3}$이어야 함을 안다. 비슷하게 두 root $\alpha,\beta$가 이루는 각이 $45$도 혹은 $135$도라면, 이들 두 root의 길이비는 $\sqrt{2}$여야 하고 $60$도 혹은 $120$도의 경우에는 길이비가 $1$이어야 함을 안다.
+
+## Lie group과의 연결
+
+지금까지 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 포착하는 Weyl group을 reflection들 $s_\alpha$로 생성되는 유한군으로 정의하였다. 한편 [\[원환면의 작용\] §극대 원환면](/ko/math/lie_theory/torus_action#극대-원환면)에서 우리는 compact Lie group $G$의 Weyl group을 $W=N(T)/T$로 정의하였다. 이 절에서는 두 정의가 자연스럽게 일치함을 보인다.
+
+우선 $\mathfrak{g}$가 compact connected Lie group $G$의 Lie algebra라고 하자. $\mathfrak{g}$가 semisimple인 것은 $G$의 universal cover가 $\mathbb{R}^n$을 factor로 갖지 않는 것과 동치이다. 이 경우 $G$의 maximal torus $T$의 Lie algebra $\mathfrak{t}$가 $\mathfrak{g}$의 Cartan subalgebra가 된다.
+
+이제 $N(T)$가 $\mathfrak{t}^*$ 위에 작용하는 방식을 살펴보자. 임의의 $n\in N(T)$에 대하여, adjoint representation $\Ad(n)$은 $\mathfrak{g}$ 위의 automorphism이고 $nTn^{-1}=T$이므로 $\mathfrak{t}$를 보존한다. 따라서 $\Ad(n)|_\mathfrak{t}$는 $\mathfrak{t}$의 automorphism이고, 이를 dual로 옮기면 $\mathfrak{t}^*$ 위의 linear action을 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop17">**명제 17**</ins> $N(T)$의 $\mathfrak{t}^*$ 위의 action은 root system $\Phi$를 보존한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+임의의 $n\in N(T)$와 $\alpha\in\Phi$에 대하여, $\Ad(n)$이 $\mathfrak{g}_\alpha$를 $\mathfrak{g}_{n\cdot\alpha}$로 보낸다는 것을 보이면 충분하다. 임의의 $X\in\mathfrak{g}_\alpha$와 $H\in\mathfrak{t}$에 대하여,
+
+$$[H,\Ad(n)X]=\Ad(n)[\Ad(n)^{-1}H,X]$$
+
+인데, $\Ad(n)^{-1}H\in\mathfrak{t}$이고 $X\in\mathfrak{g}_\alpha$이므로
+
+$$[\Ad(n)^{-1}H,X]=\alpha(\Ad(n)^{-1}H)X=(n^{-1}\cdot\alpha)(H)\cdot X$$
+
+이다. 따라서
+
+$$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
+
+이고, 이는 $\Ad(n)X\in\mathfrak{g}_{n^{-1}\cdot\alpha}$임을 의미한다. 즉 $\Ad(n)$은 $\mathfrak{g}_\alpha$를 $\mathfrak{g}_{n^{-1}\cdot\alpha}$로 보내고, 이로부터 $n\cdot\alpha\in\Phi$임을 안다.
+
+</details>
+
+따라서 우리는 $W=N(T)/T$가 $\mathfrak{t}^*$ 위에, 특히 root system $\Phi$ 위에 잘 정의된 action을 갖는다는 것을 안다. 이제 핵심적인 결과는 다음과 같다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop18">**명제 18**</ins> 각각의 root $\alpha\in\Phi$에 대하여, $\Ad(n_\alpha)|_\mathfrak{t}=s_\alpha$를 만족하는 $n_\alpha\in N(T)$가 존재한다. 따라서 Lie group에서 정의한 Weyl group $W=N(T)/T$와 root system의 Weyl group은 isomorphic하다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+임의의 root $\alpha\in\Phi$에 대하여, 앞서 살펴본 것과 같이 $\mathfrak{sl}_{2,\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$는 $\mathfrak{sl}(2,\mathbb{C})$와 isomorphic한 $\mathfrak{g}$의 subalgebra이다. 이에 대응하는 $G$의 Lie subgroup $G_\alpha$는 $\SU(2)$ 혹은 $\SO(3)$와 locally isomorphic하다.
+
+$G_\alpha$는 $T$와 교차하여 1차원 torus $T_\alpha=T\cap G_\alpha$를 형성한다. 이제 $N(T)$의 원소 중 $\Ad$ action이 $\mathfrak{t}$ 위에서 reflection $s_\alpha$를 유도하는 것을 찾아야 한다. 이를 위해 다음 원소
+
+$$n_\alpha=\exp(e_\alpha)\exp(-f_\alpha)\exp(e_\alpha)$$
+
+를 생각하자. $\SU(2)$에서의 계산에 의하면 이는 $\begin{pmatrix}0&1\\-1&0\end{pmatrix}$에 해당하며, 이 원소는 $T_\alpha$의 원소를 $t\mapsto t^{-1}$로 보낸다. 따라서 $\Ad(n_\alpha)$는 $h_\alpha$를 $-h_\alpha$로 보내고, $\ker\alpha$를 보존한다. 즉 $\Ad(n_\alpha)|_\mathfrak{t}=s_\alpha$이다.
+
+마지막으로 $n_\alpha\in N(T)$임을 확인하자. $\Ad(n_\alpha)$가 $\mathfrak{t}$를 보존하므로 $n_\alpha Tn_\alpha^{-1}$과 $T$는 같은 Lie algebra를 갖고, 둘 다 connected이므로 $n_\alpha Tn_\alpha^{-1}=T$이다.
+
+</details>
+
+이로부터 우리는 두 관점에서의 Weyl group이 본질적으로 같은 대상임을 안다. Lie group 관점에서 $W=N(T)/T$는 maximal torus의 conjugation action을 포착하고, Lie algebra 관점에서의 $W$는 root system의 대칭성을 포착한다. 두 정의의 일치는 compact Lie group의 구조가 그 Lie algebra의 root system에 의해 완전히 결정된다는 사실의 구체적인 표현이다.
