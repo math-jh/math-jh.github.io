@@ -416,13 +416,19 @@ $$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}$$
 
 $$g \begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}g^{-1} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} e^{i\theta} & 0 \\ 0 & e^{-i\theta} \end{pmatrix} \begin{pmatrix} \overline{a} & \overline{c} \\ \overline{b} & \overline{d} \end{pmatrix} = \begin{pmatrix} \lvert\alpha\rvert^2 e^{i\theta} + \lvert b\rvert^2 e^{-i\theta} & a\overline{c}e^{i\theta} + b\overline{d}e^{-i\theta} \\ c\overline{a}e^{i\theta} + d\overline{b}e^{-i\theta} & \lvert c\rvert^2 e^{i\theta} + \lvert d\rvert^2 e^{-i\theta} \end{pmatrix}$$
 
-한편 $g=\begin{pmatrix}a&b\\-b^*&a^*\end{pmatrix}$ ($|a|^2+|b|^2=1$)로 쓰면, 계산을 통해 $g$가 $T$를 보존하는 것은 $ab=0$인 것과 동치임을 알 수 있다. 즉, $b=0$이면 $g\in T$이고, $a=0$이면 $g=\begin{pmatrix}0&b\\-b^*&0\end{pmatrix}=\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}b^*&0\\0&-b\end{pmatrix}\in\begin{pmatrix}0&1\\-1&0\end{pmatrix}T$이다.
+이므로 이것이 $T$에 속하기 위해서는 모든 $\theta$에 대해
 
-Weyl group $W\cong\mathbb{Z}_2$의 nontrivial element는 $\begin{pmatrix}0&1\\-1&0\end{pmatrix}$에 해당한다. 이 원소의 $T$ 위에서의 action을 계산하면
+$$a\overline{c}e^{i\theta}+b\overline{d}e^{-i\theta}=0$$
+
+이 성립해야 하므로, $a\overline{c}=0$이고 $b\overline{d}=0$이어야 한다. 만일 $a\neq 0$이라면, $\overline{c}=0$이므로 $c=0$이어야 하고, $ad-bc=1$로부터 $d=\overline{a}$이고 따라서 $b\overline{d}=0$으로부터 $b=0$이어야 한다. 즉 이 경우 $g\in T$이다. 만일 $a=0$이라면, $\lvert a\rvert^2+\lvert b\rvert^2=1$이므로 $\lvert b\rvert=1$이고, $ad-bc=1$로부터 $c=\overline{b}$여야 하고 비슷하게 $d=0$이어야 함을 안다. 이로부터 $g$가
+
+$$\begin{pmatrix}0&e^{i\alpha}\\ -e^{-i\alpha}&0\end{pmatrix}$$
+
+꼴이어야 하므로, 이로부터 $N$이 위의 식으로 주어지는 것을 확인할 수 있다. 뿐만 아니라, Weyl group $W\cong\mathbb{Z}_2$의 nontrivial element는 $\begin{pmatrix}0&1\\-1&0\end{pmatrix}$에 해당하며 이 원소의 $T$에서의 action은
 
 $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\begin{pmatrix}0&-1\\1&0\end{pmatrix}=\begin{pmatrix}e^{-i\theta}&0\\0&e^{i\theta}\end{pmatrix}$$
 
-이다. 즉, Weyl group action은 $\theta\mapsto -\theta$로, torus $S^1$ 위에서의 reflection에 해당한다.
+이므로 torus $S^1$ 위에서의 reflection $\theta\mapsto -\theta$에 해당한다.
 
 ### Weight decomposition
 
