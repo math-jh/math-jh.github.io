@@ -384,7 +384,7 @@ $$\pi^{-1}(gN)=\{hT\mid h\in gN\}=\{gxT\mid x\in N\}$$
 
 지금까지의 논의를 compact connected Lie group
 
-$$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}=\left\{\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\middle\mid\end{pmatrix}\right\}$$
+$$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}=\left\{\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix}\,\middle\vert\;\alpha,\beta\in \mathbb{C},\lvert\alpha\rvert^2+\lvert\beta\rvert^2=1\right\}$$
 
 에서 확인해보자. 우선 $\SU(2)$의 maximal torus를 구해야 한다. 우리의 주장은 다음 집합
 
@@ -408,9 +408,13 @@ $$\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}i&0\\0&-i\end{pmatrix}=\beg
 
 $$N=T\cup \begin{pmatrix}0&1\\-1&0\end{pmatrix}T$$
 
-으로 주어진다는 것을 보이자. 임의의 $g\in SU(2)$에 대하여, $gTg^{-1}=T$이려면 $g$가 $T$를 보존해야 한다. $T$의 원소들은 eigenvalue가 $\{e^{i\theta}, e^{-i\theta}\}$인 diagonalizable matrix들이다. $gTg^{-1}=T$이면 각 $t\in T$에 대하여 $gtg^{-1}$도 diagonal이어야 한다.
+으로 주어진다는 것을 보이자. 우선 임의의 $g\in \SU(2)$에 대하여,
 
+$$g=\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix},\qquad \lvert\alpha\rvert^2+\lvert\beta\rvert^2=1$$
 
+라 적으면
+
+$$\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\begin{pmatrix}\end{pmatrix}$$
 
 한편 $g=\begin{pmatrix}a&b\\-b^*&a^*\end{pmatrix}$ ($|a|^2+|b|^2=1$)로 쓰면, 계산을 통해 $g$가 $T$를 보존하는 것은 $ab=0$인 것과 동치임을 알 수 있다. 즉, $b=0$이면 $g\in T$이고, $a=0$이면 $g=\begin{pmatrix}0&b\\-b^*&0\end{pmatrix}=\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}b^*&0\\0&-b\end{pmatrix}\in\begin{pmatrix}0&1\\-1&0\end{pmatrix}T$이다.
 
