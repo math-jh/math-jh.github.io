@@ -17,37 +17,9 @@ weight: 3
 
 ---
 
-## 리 군의 표현론
-
-임의의 유한군 $G$가 주어졌을 때 이를 잘 살펴보는 방법 중 하나는 그 유한차원 representation 
-
-$$\rho:G\rightarrow \Aut(V)$$
-
-을 보는 것이다. $V$의 basis를 선택하고 나면 $\rho$에 의한 $G$의 image를 다루는 것은 선형대수에 불과하므로 우리는 $G$의 구조를 훨씬 쉽게 알아낼 수 있다. 
-
-Lie group의 경우 이러한 표현론적 관점은 더 도움이 되는데, Lie group은 $\GL(n;\mathbb{R})$이나 $\Diff(M)$과 같이, 본질적으로 다른 대상 위에 작용하는 것이기 때문이다. 
-
-다만 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)에서처럼 $G$의 representation theory를 정의하면 Lie group $G$ 위에 있는 smooth structure는 놓치게 되므로, 다음과 같이 정의해주어야 한다.
-
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Lie group $G$에 대하여, $G$의 *representation<sub>표현</sub>*은 유한차원 벡터공간 $V$와, smooth map
-
-$$\rho:G\rightarrow \Aut(V)$$
-
-이 주어진 것이다. 
-
-</div>
-
-만일 $G$를 discrete topology와 자명한 smooth structure가 주어진 Lie group으로 본다면 이 정의는 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)의 일반화라 생각할 수도 있다. 비슷하게 [\[표현론\] §유한군의 표현론, §§표현론의 기본 개념들](/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들)에 있는 모든 정의를 Lie group에 대해서도 할 수 있다. 
-
-이 글에서 중요한 역할을 했던 것은 group $G$가 유한군이라는 사실이었다. 가령 $G$의 모든 원소에 대해 평균을 내는 아이디어는 이러한 사실을 바탕으로 했다. 이를 Lie group으로 일반화하기 위해서는 $G$에 어떠한 종류의 유한성을 강제해야 한다. 
-
-우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 물론 이를 위해서는 $\delta_x$ 함수를 잘 정의하고, 함수공간을 적당한 공간으로 일반화하는 작업을 거쳐야 하지만 이러한 작업은 우리의 현재 목적이 아니므로 생략하기로 혼다. 중요한 것은 리 군의 표현론 또한 유한군의 표현론과 같은 방법론을 통해 접근할 수 있다는 것이다. 
-
 ## Adjoint representation
 
-Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다. [§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19) 이는 각각의 $g\in G$가 정의하는 conjugation $h\mapsto ghg^{-1}$의 $h=e$에서의 미분이며, 만일 $G$와 $\Aut(\mathfrak{g})$를 모두 Lie group으로 보아 이를 미분한다면 우리는 $\mathfrak{g}$의 representation
+Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다. ([§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19)) 이는 각각의 $g\in G$가 정의하는 conjugation $h\mapsto ghg^{-1}$의 $h=e$에서의 미분이며, 만일 $G$와 $\Aut(\mathfrak{g})$를 모두 Lie group으로 보아 이를 미분한다면 우리는 $\mathfrak{g}$의 representation
 
 $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
@@ -61,7 +33,7 @@ $$\ad(X)Y=[X,Y]$$
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> Lie algebra $\mathfrak{g}$ 위에 다음의 식
+<ins id="def1">**정의 1**</ins> Lie algebra $\mathfrak{g}$ 위에 다음의 식
 
 $$K(X,Y)=\tr(\ad(X)\ad(Y))$$
 
@@ -81,7 +53,7 @@ $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Lie algebra $\mathfrak{g}$이 *simple<sub>단순</sub>*이라는 것은 $\mathfrak{g}$가 non-abelian Lie algebra이고 $\mathfrak{g}$의 ideal이 $0$과 자기자신 뿐인 것이다. Simple Lie algebra들의 direct sum으로 쓸 수 있는 Lie algebra를 *semisimple*이라 부른다. 
+<ins id="def2">**정의 2**</ins> Lie algebra $\mathfrak{g}$이 *simple<sub>단순</sub>*이라는 것은 $\mathfrak{g}$가 non-abelian Lie algebra이고 $\mathfrak{g}$의 ideal이 $0$과 자기자신 뿐인 것이다. Simple Lie algebra들의 direct sum으로 쓸 수 있는 Lie algebra를 *semisimple*이라 부른다. 
 
 </div>
 
@@ -89,7 +61,7 @@ $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> 유한차원 Lie algebra $\mathfrak{g}$에 대하여, 다음이 모두 동치이다. 
+<ins id="prop3">**명제 3**</ins> 유한차원 Lie algebra $\mathfrak{g}$에 대하여, 다음이 모두 동치이다. 
 
 1. $\mathfrak{g}$가 semisimple이다.
 2. Killing form이 non-degenerate이다.
@@ -103,17 +75,15 @@ $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+
 
 ## 카르탕 부분대수
 
-선형대수학에서 아주 강력한 도구 중 하나는 대각화이다. 
+선형대수학에서 아주 강력한 도구 중 하나는 대각화였으며, 우리는 Lie group에서는 이를 weight decomposition을 통해 담아냈다. ([§원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4)) 이에 대응되는 Lie algebra의 개념은 다음과 같다.
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Semisimple Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$의 *Cartan subalgebra<sub>카르탕 부분대수</sub>*는 $\ad(H)$가 모든 $H\in \mathfrak{h}$에 대하여 diagonalizable이도록 하는 abelian subalgebra $\mathfrak{h}$ 중 maximal인 것이다. 
+<ins id="def4">**정의 4**</ins> Semisimple Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$의 *Cartan subalgebra<sub>카르탕 부분대수</sub>*는 $\ad(H)$가 모든 $H\in \mathfrak{h}$에 대하여 diagonalizable이도록 하는 abelian subalgebra $\mathfrak{h}$ 중 maximal인 것이다. 
 
 </div>
 
-두 diagonalizable operator $A,B$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $\mathfrak{h}$의 모든 원소들은 simultaneously diagonalizable이다. 
-
-이제 simultaneously diagonalizable operator들의 family $\\{H\in \mathfrak{h}\\}$를 사용하여 $\mathfrak{g}$를 분해하자. 만일 simultaneously diagonalizable operator들의 <em_ko>유한한</em_ko> family $A\_1,\ldots, A\_n$이 주어졌다면, simultaneous eigenspace로 공간을 분해하는 것은 
+두 diagonalizable operator $A,B$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $\mathfrak{h}$의 모든 원소들은 simultaneously diagonalizable이다. 이제 simultaneously diagonalizable operator들의 family $\\{H\in \mathfrak{h}\\}$를 사용하여 $\mathfrak{g}$를 분해하자. 만일 simultaneously diagonalizable operator들의 <em_ko>유한한</em_ko> family $A\_1,\ldots, A\_n$이 주어졌다면, simultaneous eigenspace로 공간을 분해하는 것은 
 
 $$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v_\alpha\in V$ for all $i$}$$
 
