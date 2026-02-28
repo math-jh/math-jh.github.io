@@ -410,11 +410,11 @@ $$N=T\cup \begin{pmatrix}0&1\\-1&0\end{pmatrix}T$$
 
 으로 주어진다는 것을 보이자. 우선 임의의 $g\in \SU(2)$에 대하여,
 
-$$g=\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix},\qquad \lvert\alpha\rvert^2+\lvert\beta\rvert^2=1$$
+$$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}$$
 
 라 적으면
 
-$$\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\begin{pmatrix}\overline{\alpha}&-\beta\\\overline{\beta}&\alpha\end{pmatrix}=\begin{pmatrix}\alpha e^{i\theta}&-\overline{\beta}e^{-i\theta}\\\beta e^{i\theta}&\overline{\alpha}e^{-i\theta}\end{pmatrix}\begin{pmatrix}\overline{\alpha}&-\beta\\\overline{\beta}&\alpha\end{pmatrix}=\begin{pmatrix}\lvert\alpha\rvert^2e^{i\theta}-\lvert\beta\rvert^2e^{-i\theta}&-\alpha\beta e^{i\theta}-\overline{\alpha}\overline{\beta}e^{-i\theta}\\\overline{\alpha}\beta e^{i\theta}+\overline{\alpha}\overline{\beta}e^{-i\theta}&-\lvert\beta\rvert^2e^{i\theta}+\lvert\alpha\rvert^2 e^{-i\theta} \end{pmatrix}$$
+$$g \begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}g^{-1} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} e^{i\theta} & 0 \\ 0 & e^{-i\theta} \end{pmatrix} \begin{pmatrix} \overline{a} & \overline{c} \\ \overline{b} & \overline{d} \end{pmatrix} = \begin{pmatrix} \lvert\alpha\rvert^2 e^{i\theta} + \lvert b\rvert^2 e^{-i\theta} & a\overline{c}e^{i\theta} + b\overline{d}e^{-i\theta} \\ c\overline{a}e^{i\theta} + d\overline{b}e^{-i\theta} & \lvert c\rvert^2 e^{i\theta} + \lvert d\rvert^2 e^{-i\theta} \end{pmatrix}$$
 
 한편 $g=\begin{pmatrix}a&b\\-b^*&a^*\end{pmatrix}$ ($|a|^2+|b|^2=1$)로 쓰면, 계산을 통해 $g$가 $T$를 보존하는 것은 $ab=0$인 것과 동치임을 알 수 있다. 즉, $b=0$이면 $g\in T$이고, $a=0$이면 $g=\begin{pmatrix}0&b\\-b^*&0\end{pmatrix}=\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}b^*&0\\0&-b\end{pmatrix}\in\begin{pmatrix}0&1\\-1&0\end{pmatrix}T$이다.
 
