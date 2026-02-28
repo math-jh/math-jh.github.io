@@ -430,6 +430,8 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 
 이므로 torus $S^1$ 위에서의 reflection $\theta\mapsto -\theta$에 해당한다.
 
+이제 $\SU(2)$의 $\mathbb{C}^2$ 위에서의 자명한 representation을 생각하면, $\Aut(\mathbb{C}^2)=\GL(2;\mathbb{C})$이며 따라서 representation $\rho:\SU(2)\rightarrow \GL(2;\mathbb{C})$는 inclusion이다. 이를 torus $T$로 제한한 것도 마찬가지이며, 이로부터 $T$의 weight는 각각 $e^{i\theta}, e^{-i\theta}$, 그리고 이에 해당되는 weight space는 $\mathbb{C}e_1$, $\mathbb{C}e_2$이며 
+
 ### Weight decomposition
 
 $SU(2)$의 기본적인 representation을 생각하자. 자연스러운 representation $\rho:SU(2)\rightarrow\GL(2,\mathbb{C})$에서 각 $g\in SU(2)$는 $2\times 2$ 행렬로 작용한다. 이를 $T$로 제한하면
