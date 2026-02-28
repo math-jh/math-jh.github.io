@@ -91,7 +91,7 @@ $$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Semisimple Lie algebra $\mathfrak{g}$와 $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$에 대하여, 
+<ins id="def5">**정의 5**</ins> Semisimple Lie algebra $\mathfrak{g}$와 $\mathfrak{g}$의 Cartan subalgebra $\mathfrak{h}$에 대하여, 
 
 $$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\neq 0\right\}$$
 
@@ -111,7 +111,7 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi}\mathfrak{g}_\alpha$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Seimisimple Lie algebra $\mathfrak{g}$, Cartan subalgebra $\mathfrak{h}$와 그 root decomposition 
+<ins id="prop6">**명제 6**</ins> Seimisimple Lie algebra $\mathfrak{g}$, Cartan subalgebra $\mathfrak{h}$와 그 root decomposition 
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
@@ -173,7 +173,7 @@ $$H\cdot v=\mu v,\qquad E\cdot v=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 임의의 highest weight $v_0\in V_\mu$에 대하여, 
+<ins id="prop7">**명제 7**</ins> 임의의 highest weight $v_0\in V_\mu$에 대하여, 
 
 $$v_j=\frac{1}{j!}F^j v_0$$
 
@@ -205,7 +205,7 @@ $$0=E\cdot v_{m+1}=(\mu-m)v_m$$
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> 고정된 정수 $m\geq 0$에 대하여, $\sl_2$의 representation $V(m)$을 $m+1$개의 vector들 $v_0,\ldots, v_m$과, [명제 10](#prop10)의 action 
+<ins id="def8">**정의 8**</ins> 고정된 정수 $m\geq 0$에 대하여, $\sl_2$의 representation $V(m)$을 $m+1$개의 vector들 $v_0,\ldots, v_m$과, [명제 7](#prop7)의 action 
 
 $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{j-1}$$
 
@@ -213,7 +213,7 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 </div>
 
-어렵지 않게 $V(m)$은 irrducible인 것을 보일 수 있다. 이제 임의의 $\sl_2$-representation $V$에 대하여, 우리는 $V$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 8](#prop8)을 적용하고, 남아있는 highest weight vector가 있다면 다시 이를 반복하는 식으로 $V$를 irreducible $\sl_2$-representation으로 분해할 수 있다. 
+어렵지 않게 $V(m)$은 irrducible인 것을 보일 수 있다. 이제 임의의 $\sl_2$-representation $V$에 대하여, 우리는 $V$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 7](#prop7)을 적용하고, 남아있는 highest weight vector가 있다면 다시 이를 반복하는 식으로 $V$를 irreducible $\sl_2$-representation으로 분해할 수 있다. 
 
 ## 근계
 
@@ -221,7 +221,7 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> 유한차원 벡터공간 $V$와 그 위에 정의된 inner product $( -,-)$을 고정하자. $V$의 non-zero vector들의 유한한 집합 $\Phi$가 *root system*이라는 것은 다음의 조건들이 만족되는 것이다. 
+<ins id="def9">**정의 9**</ins> 유한차원 벡터공간 $V$와 그 위에 정의된 inner product $( -,-)$을 고정하자. $V$의 non-zero vector들의 유한한 집합 $\Phi$가 *root system*이라는 것은 다음의 조건들이 만족되는 것이다. 
 
 1. $\Phi$의 원소들이 $V$를 span한다. 
 2. 만일 $\alpha\in \Phi$이고 $c\in \mathbb{R}$이라면 $c\alpha\in \Phi$이기 위해서는 $c=\pm 1$이어야 한다. 
@@ -242,7 +242,7 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 <div class="proposition" markdown="1">
 
-<ins id="lem11">**보조정리 11**</ins> Semisimple Lie algebra $\mathfrak{g}$, Cartan subalgebra $\mathfrak{h}$, 그리고 root decomposition
+<ins id="lem10">**보조정리 10**</ins> Semisimple Lie algebra $\mathfrak{g}$, Cartan subalgebra $\mathfrak{h}$, 그리고 root decomposition
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha$$
 
@@ -289,7 +289,7 @@ $$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $X\in \mathfrak{h}$}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem12">**보조정리 12**</ins> 임의의 $E\in \mathfrak{g}\_\alpha$와 $F\in \mathfrak{g}\_{-\alpha}$에 대하여, $[E,F]=K(E,F)H\_\alpha$이 성립한다.
+<ins id="lem11">**보조정리 11**</ins> 임의의 $E\in \mathfrak{g}\_\alpha$와 $F\in \mathfrak{g}\_{-\alpha}$에 대하여, $[E,F]=K(E,F)H\_\alpha$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -311,7 +311,7 @@ $$K([E,F],H)=K(F,[H,E])=K(F, K(H_\alpha,H)E)=K(H_\alpha,H)K(F,E)=K(K(F,E)H_\alph
 
 </details>
 
-한편 우리는 [보조정리 11](#lem11)으로부터 $E\in \mathfrak{g}\_\alpha$, $F\in \mathfrak{g}\_{-\alpha}$를 택하여 $K(E,F)\neq 0$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
+한편 우리는 [보조정리 10](#lem10)으로부터 $E\in \mathfrak{g}\_\alpha$, $F\in \mathfrak{g}\_{-\alpha}$를 택하여 $K(E,F)\neq 0$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
 
 $$[E,F]=K(E,F)H_\alpha,\quad [H_\alpha,E]=\alpha(H_\alpha)E=K(\alpha,\alpha)E,\quad [H_\alpha,F]=-\alpha(H_\alpha)F=-K(\alpha,\alpha)F$$
 
@@ -347,7 +347,7 @@ $$K(h_\alpha,h_\beta)=\tr_\mathfrak{g}(\ad h_\alpha\ad h_\beta)=\sum_{\gamma\in\
 
 $$K(h,h)=\tr(\ad_h\ad_h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
 
-을 주므로 우리는 $K$가 $\mathfrak{h}_\mathbb{R}$ 위에서 positive definite인 것을 안다. 특히 이를 다시 $\mathfrak{h}^\ast$로 옮겨주면 $\mathfrak{h}^\ast$에서 $\Phi$의 real span이 Euclidean space를 이룬다는 것을 확인할 수 있고, 이를 보이는 과정에서 우리는 이들 root들이 [정의 10](#def10)의 네 번째 조건을 만족하는 것도 보였다. 이제 우리가 보여야 할 것은 나머지 조건들이다. 
+을 주므로 우리는 $K$가 $\mathfrak{h}_\mathbb{R}$ 위에서 positive definite인 것을 안다. 특히 이를 다시 $\mathfrak{h}^\ast$로 옮겨주면 $\mathfrak{h}^\ast$에서 $\Phi$의 real span이 Euclidean space를 이룬다는 것을 확인할 수 있고, 이를 보이는 과정에서 우리는 이들 root들이 [정의 9](#def9)의 네 번째 조건을 만족하는 것도 보였다. 이제 우리가 보여야 할 것은 나머지 조건들이다. 
 
 우선 reflection operator를 적용한
 
@@ -363,7 +363,7 @@ $$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> [정의 4](#def4)에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$의 root system이다. 
+<ins id="prop12">**명제 12**</ins> [정의 4](#def4)에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$의 root system이다. 
 
 </div>
 
@@ -373,7 +373,7 @@ $$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> 우선 standard Euclidean space $\mathbb{R}^{n+1}$을 생각하고, $\mathbb{R}^{n+1}$의 subspace
+<ins id="ex13">**예시 13**</ins> 우선 standard Euclidean space $\mathbb{R}^{n+1}$을 생각하고, $\mathbb{R}^{n+1}$의 subspace
 
 $$V_n=\left\{(x_1,\ldots, x_{n+1}\mid x_1+\cdots+x_{n+1}=0\right\}$$
 
@@ -393,7 +393,7 @@ $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathb
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> 이번에는 standard Euclidean space $\mathbb{R}^n$을 생각하자. 이번에는 다음 집합
+<ins id="ex14">**예시 14**</ins> 이번에는 standard Euclidean space $\mathbb{R}^n$을 생각하자. 이번에는 다음 집합
 
 $$\Phi(D_n)=\left\{\pm e_i\pm e_j\mid 1\leq i \neq j\leq n\right\}$$
 
@@ -417,7 +417,7 @@ $$e_i-e_k=(e_i-e_j)+(e_j-e_k)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def16">**정의 16**</ins> Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Simple root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
+<ins id="def15">**정의 15**</ins> Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Simple root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
 
 </div>
 
@@ -431,7 +431,7 @@ $$\langle\alpha_i,\alpha_j\rangle=2\frac{(\alpha_i,\alpha_j)}{(\alpha_j,\alpha_j
 
 <div class="definition" markdown="1">
 
-<ins id="def17">**정의 17**</ins> 위와 같은 세팅에서, 다음의 행렬
+<ins id="def16">**정의 16**</ins> 위와 같은 세팅에서, 다음의 행렬
 
 $$A=(a_{ij})_{1\leq i,j\leq l},\qquad a_{ij}=\langle \alpha_i,\alpha_j\rangle$$
 
