@@ -322,16 +322,14 @@ homological_algebra-ko:
         url: ko/misc/index_ko
 
 Lie_theory-ko:
-  - title: <a href="/ko/Lie_theory/" class="sidebar_title">리 이론</a>
+  - title: <a href="/ko/lie_theory/" class="sidebar_title">리 이론</a>
     children:
       - title: "리 군"
-        url: ko/math/Lie_theory/Lie_groups
-      - title: "리 군의 표현"
-        url: ko/math/Lie_theory/representations
+        url: ko/math/lie_theory/Lie_groups
+      - title: "원환면의 작용"
+        url: ko/math/lie_theory/torus_action
       - title: "근계"
-        url: ko/math/Lie_theory/root_systems
-      - title: "근계: G-모듈과 선형대수 관점"
-        url: ko/math/Lie_theory/root_systems_linear_algebra_perspective
+        url: ko/math/lie_theory/root_systems
   - title: 
     children:
       - title: "블로그 소개"

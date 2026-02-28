@@ -4,7 +4,7 @@ title: "근계"
 excerpt: ""
 
 categories: [Math / Lie Theory]
-permalink: /ko/math/Lie_theory/root_systems
+permalink: /ko/math/lie_theory/root_systems
 header:
     overlay_image: /assets/images/Math/Lie_Theory/Root_systems.png
     overlay_filter: 0.5
@@ -19,11 +19,11 @@ weight: 3
 
 ## Adjoint representation
 
-Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다. ([§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19)) 이는 각각의 $g\in G$가 정의하는 conjugation $h\mapsto ghg^{-1}$의 $h=e$에서의 미분이며, 만일 $G$와 $\Aut(\mathfrak{g})$를 모두 Lie group으로 보아 이를 미분한다면 우리는 $\mathfrak{g}$의 representation
+Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19)) 이는 각각의 $g\in G$가 정의하는 conjugation $h\mapsto ghg^{-1}$의 $h=e$에서의 미분이며, 만일 $G$와 $\Aut(\mathfrak{g})$를 모두 Lie group으로 보아 이를 미분한다면 우리는 $\mathfrak{g}$의 representation
 
 $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
-을 얻을 수 있으며 [§리 군, ⁋정리 15](/ko/math/Lie_theory/Lie_groups#thm15)을 생각하면 본질적으로 $\Ad$가 알고있는 정보는 여기에 다 담겨있다고 생각해도 된다. 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $\mathfrak{g}$를 reresentation space $\mathfrak{g}$를 이용하여 표현한다 생각할 수 있고, 이 때 $\ad$는 명시적으로 
+을 얻을 수 있으며 [§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15)을 생각하면 본질적으로 $\Ad$가 알고있는 정보는 여기에 다 담겨있다고 생각해도 된다. 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $\mathfrak{g}$를 reresentation space $\mathfrak{g}$를 이용하여 표현한다 생각할 수 있고, 이 때 $\ad$는 명시적으로 
 
 $$\ad(X)Y=[X,Y]$$
 
@@ -99,7 +99,7 @@ $$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\
 
 $$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
 
-이다. ([§리 군, ⁋정의 19](/ko/math/Lie_theory/Lie_groups#def19))
+이다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19))
 
 </div>
 
@@ -141,7 +141,7 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
 ## 예시: $\sl(2;\mathbb{C})$
 
-우리는 [§리 군, ⁋명제 12](/ko/math/Lie_theory/Lie_groups#prop12)를 통해 $\sl(n;\mathbb{C})$는 $n\times n$ *traceless* 행렬들의 모임임을 안다. 따라서 $\sl(2;\mathbb{C})$는 다음의 세 원소를 basis로 갖는다. 
+우리는 [§리 군, ⁋명제 12](/ko/math/lie_theory/Lie_groups#prop12)를 통해 $\sl(n;\mathbb{C})$는 $n\times n$ *traceless* 행렬들의 모임임을 안다. 따라서 $\sl(2;\mathbb{C})$는 다음의 세 원소를 basis로 갖는다. 
 
 $$H=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad E=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad F=\begin{pmatrix}0&0\\1&0\end{pmatrix}$$
 
@@ -493,7 +493,7 @@ Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $n\in N(T)$와 $\alpha\in\Phi$에 대하여, $\Ad(n)$이 $\mathfrak{g}_\alpha$를 $\mathfrak{g}_{n\cdot\alpha}$로 보낸다는 것을 보이면 충분하다. 임의의 $X\in\mathfrak{g}_\alpha$와 $H\in\mathfrak{t}$에 대하여,
+임의의 $n\in N(T)$와 $\alpha\in\Phi$에 대하여, $\Ad(n)$이 $\mathfrak{g}\_\alpha$를 $\mathfrak{g}\_{n\cdot\alpha}$로 보낸다는 것을 보이면 충분하다. 임의의 $X\in\mathfrak{g}\_\alpha$와 $H\in\mathfrak{t}$에 대하여,
 
 $$[H,\Ad(n)X]=\Ad(n)[\Ad(n)^{-1}H,X]$$
 
@@ -505,7 +505,7 @@ $$[\Ad(n)^{-1}H,X]=\alpha(\Ad(n)^{-1}H)X=(n^{-1}\cdot\alpha)(H)\cdot X$$
 
 $$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
 
-이고, 이는 $\Ad(n)X\in\mathfrak{g}_{n^{-1}\cdot\alpha}$임을 의미한다. 즉 $\Ad(n)$은 $\mathfrak{g}_\alpha$를 $\mathfrak{g}_{n^{-1}\cdot\alpha}$로 보내고, 이로부터 $n\cdot\alpha\in\Phi$임을 안다.
+이고, 이는 $\Ad(n)X\in\mathfrak{g}\_{n^{-1}\cdot\alpha}$임을 의미한다. 즉 $\Ad(n)$은 $\mathfrak{g}\_\alpha$를 $\mathfrak{g}\_{n^{-1}\cdot\alpha}$로 보내고, 이로부터 $n\cdot\alpha\in\Phi$임을 안다.
 
 </details>
 
@@ -519,13 +519,17 @@ $$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 root $\alpha\in\Phi$에 대하여, 앞서 살펴본 것과 같이 $\mathfrak{sl}_{2,\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$는 $\mathfrak{sl}(2,\mathbb{C})$와 isomorphic한 $\mathfrak{g}$의 subalgebra이다. 이에 대응하는 $G$의 Lie subgroup $G_\alpha$는 $\SU(2)$ 혹은 $\SO(3)$와 locally isomorphic하다.
+임의의 root $\alpha\in\Phi$에 대하여, 앞서 살펴본 것과 같이 $\sl\_{2;\alpha}=\langle e\_\alpha, f\_\alpha, h\_\alpha\rangle$는 $\sl(2;\mathbb{C})$와 isomorphic한 $\mathfrak{g}$의 subalgebra이다. 이에 대응하는 $G$의 Lie subgroup $G\_\alpha$는 $\SU(2)$ 혹은 $\SO(3)$와 locally isomorphic하다.
 
-$G_\alpha$는 $T$와 교차하여 1차원 torus $T_\alpha=T\cap G_\alpha$를 형성한다. 이제 $N(T)$의 원소 중 $\Ad$ action이 $\mathfrak{t}$ 위에서 reflection $s_\alpha$를 유도하는 것을 찾아야 한다. 이를 위해 다음 원소
+$G_\alpha$는 $T$와 교집합을 취했을 때 1차원 torus $T_\alpha=T\cap G_\alpha$를 이룬다. 이제 $N(T)$의 원소 중 $\Ad$-action이 $\mathfrak{t}$ 위에서 reflection $s_\alpha$를 유도하는 것을 찾아야 한다. 이를 위해 다음 원소
 
 $$n_\alpha=\exp(e_\alpha)\exp(-f_\alpha)\exp(e_\alpha)$$
 
-를 생각하자. $\SU(2)$에서의 계산에 의하면 이는 $\begin{pmatrix}0&1\\-1&0\end{pmatrix}$에 해당하며, 이 원소는 $T_\alpha$의 원소를 $t\mapsto t^{-1}$로 보낸다. 따라서 $\Ad(n_\alpha)$는 $h_\alpha$를 $-h_\alpha$로 보내고, $\ker\alpha$를 보존한다. 즉 $\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$이다.
+를 생각하자. $\SU(2)$에서의 계산에 의하면 이는 
+
+$$\begin{pmatrix}0&1\\-1&0\end{pmatrix}$$
+
+에 해당하며, 이 원소는 $T_\alpha$의 원소를 $t\mapsto t^{-1}$로 보낸다. 따라서 $\Ad(n_\alpha)$는 $h_\alpha$를 $-h_\alpha$로 보내고, $\ker\alpha$를 보존한다. 즉 $\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$이다.
 
 마지막으로 $n_\alpha\in N(T)$임을 확인하자. $\Ad(n_\alpha)$가 $\mathfrak{t}$를 보존하므로 $n_\alpha Tn_\alpha^{-1}$과 $T$는 같은 Lie algebra를 갖고, 둘 다 connected이므로 $n_\alpha Tn_\alpha^{-1}=T$이다.
 
