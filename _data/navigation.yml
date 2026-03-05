@@ -4,8 +4,8 @@ main:
   #   url: /about/
   - title: "Category 🇰🇷"
     url: ko/categories/
-  # - title: "Category 🇺🇸"
-    # url: en/categories/
+  - title: "Category 🇺🇸"
+    url: en/categories/
 
 ########## 본문 사이드바 ##########
 
