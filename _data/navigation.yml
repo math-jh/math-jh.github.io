@@ -590,7 +590,7 @@ set_theory-en:
         url: en/math/set_theory/binary_relation
   - title: 
     children:
-      - title: "블로그 소개"
+      - title: "About"
         url: en/about
 
 symplectic_geometry-ko:
