@@ -54,7 +54,7 @@ $$M = \operatorname{Hom}(N, \mathbb{Z})$$
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 콘 $\sigma$의 **면(face)** $\tau$는 어떤 $u \in \sigma^\vee$에 대해
+<ins id="def3">**정의 3**</ins> 콘 $\sigma$의 **면(face)** $\tau$는 어떤 $u \in M_{\mathbb{R}}$에 대해
 
 $$\tau = \sigma \cap u^{\perp} = \{ v \in \sigma \mid \langle u, v \rangle = 0 \}$$
 
@@ -120,7 +120,13 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3 (이차 원뿔)**</ins> $N = \mathbb{Z}^2$에서 $\sigma$가 $e_2$와 $2e_1 - e_2$로 생성되는 경우를 생각하자. $\sigma^\vee \cap M$의 생성원은 $e_1^\ast$, $e_1^\ast + e_2^\ast$, $e_1^\ast + 2e_2^\ast$이므로
+<ins id="ex3">**예시 3 (이차 원뿔)**</ins> $N = \mathbb{Z}^2$에서 $\sigma$가 $e_2$와 $2e_1 - e_2$로 생성되는 경우를 생각하자.
+
+쌍대 콘 $\sigma^\vee$를 구하기 위해, $u = ae_1^\ast + be_2^\ast \in M_{\mathbb{R}}$이 $\sigma^\vee$에 속할 조건을 생각하자. $\langle u, e_2 \rangle = b \ge 0$이고 $\langle u, 2e_1 - e_2 \rangle = 2a - b \ge 0$이어야 한다. 따라서 $b \ge 0$이고 $2a \ge b$이다.
+
+$\sigma^\vee$의 극소 생성원은 $e_1^\ast$와 $2e_1^\ast + e_2^\ast$이다. Gordan의 보조정리에 의해 $S_\sigma = \sigma^\vee \cap M$의 생성원은 $e_1^\ast$, $e_1^\ast + e_2^\ast$, $e_1^\ast + 2e_2^\ast$이다.
+
+따라서
 
 $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_1^\ast + e_2^\ast}, \chi^{e_1^\ast + 2e_2^\ast}] = \mathbb{C}[X, XY, XY^2]$$
 
@@ -166,7 +172,7 @@ $$U_\tau = \{ x \in U_\sigma \mid \chi^u(x) \neq 0 \}$$
 
 <ins id="prop3">**명제 3**</ins> 아핀 토릭 다양체 $U_\sigma$에 대해 다음이 성립한다:
 
-1. $U_\sigma$는 **정규(normal)** 다양체이다.
+1. $U_\sigma$는 **정규(normal)** 다양체이다. (증명은 Gordan의 보조정리를 사용한다.)
 2. $U_\sigma$는 **기약(irreducible)**이다.
 3. $U_\sigma$의 차원은 $n$이다 (여기서 $N \cong \mathbb{Z}^n$).
 
