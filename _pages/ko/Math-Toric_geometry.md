@@ -6,7 +6,7 @@ permalink: /ko/toric_geometry/
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
 {% if lang_prefix contains "en" or lang_prefix contains "ko" %}
-  {% assign lang = lang_prefix | remove_first: "/" %}
+  {% assign lang = lang_prefix | append: "/" %}
 {% endif %}
 
 {% assign posts = site.categories['Math / Toric Geometry'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
