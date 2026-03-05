@@ -13,9 +13,9 @@ sidebar:
 
 ## About this site
 
-I am a graduate student majoring in mathematics, and this blog is a site where I organize what I have studied. At least at the time of writing this post, since I am not yet a senior scholar, the content is mostly written in Korean by referencing well-known references in each field, with some modifications. In particular, the fields I have written about while studying (rather than after completing my studies) are even more so.
+I am a graduate student in mathematics, and this blog is a site where I organize what I have studied. At least at the time of writing this post, since I am not yet a senior scholar, the content is mostly written by referencing well-known references in each field, with some modifications. In particular, the fields I have written about while studying (rather than after completing my studies) are even more so.
 
-This blog's prototype was a 600-page $\TeX$ document I wrote using Overleaf in my barracks while serving in the military. I'm writing posts by translating it into Korean and making appropriate modifications.
+This blog's prototype was a 600-page $\TeX$ document I wrote using Overleaf in my barracks while serving in Korean military. 
 
 ![](/assets/images/Pages/About/notice.png){:width="250px" .align-center}
 
