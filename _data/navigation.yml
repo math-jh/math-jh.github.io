@@ -579,6 +579,20 @@ set_theory-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
+set_theory-en:
+  - title: <a href="/en/set_theory/" class="sidebar_title">Set Theory</a>
+    children:
+      - title: "ZFC Axioms"
+        url: en/math/set_theory/zfc_axioms
+      - title: "Ordered Pairs"
+        url: en/math/set_theory/ordered_pair
+      - title: "Binary Relations"
+        url: en/math/set_theory/binary_relation
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: en/about
+
 symplectic_geometry-ko:
   - title: <a href="/ko/symplectic_geometry/" class="sidebar_title">사교기하학</a>
     children:
