@@ -19,13 +19,7 @@ weight: 1
 
 ## Toric geometry
 
-Toric geometry는 말 그대로 toric variety라 불리는 특별할 대수다양체를 연구하는 분야이다. 일반적인 대수다양체에 비해 toric variety가 가지는 장점은 
-
-토릭 다양체의 동기
-
-토릭 기하학(toric geometry)은 대수적 다양체의 특별한 클래스인 **토릭 다양체(toric varieties)**를 연구하는 분야이다. 토릭 다양체는 대수적 기하학과 볼록 기하학(convex geometry) 사이의 놀라운 연결을 제공하며, 많은 대수기하학적 문제를 조합론적인 문제로 바꾸어 해결할 수 있게 한다.
-
-우리는 먼저 가장 간단한 형태인 **아핀 토릭 다양체(affine toric varieties)**부터 시작한다.
+Toric geometry는 말 그대로 toric variety라 불리는 특별할 대수다양체를 연구하는 분야이다. 일반적인 대수다양체에 비해 toric variety가 가지는 장점은 이것이 본질적으로 조합론적인 정보로 만들어지므로 더 손에 잡히는 계산을 수행하기 용이하다는 것이다. 우리는 이 글에서 먼저 가장 간단한 toric variety, 즉 affine toric variety를 살펴본다. 
 
 ## 격자와 콘
 
