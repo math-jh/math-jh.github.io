@@ -25,17 +25,54 @@ weight: 1
 
 ## 아핀 토릭 다양체의 정의
 
-### 콘과 세미그룹
+### 격자와 콘
+
+토릭 기하학에서 기본이 되는 것은 **격자(lattice)**입니다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $\mathbb{R}^n$의 부분집합 $\sigma$가 다음 조건을 만족할 때 **유리 다면체 콘(rational polyhedral cone)**이라 한다:
+<ins id="def1">**정의 1**</ins> **격자(lattice)** $N$은 $\mathbb{Z}^n$과 동형인 아벨 군이다. 즉, $N \cong \mathbb{Z}^n$이다. 
 
-1. $\sigma$는 $\mathbb{Q}$-선형 결합에 대해 닫혀 있다: $u, v \in \sigma$, $\lambda, \mu \in \mathbb{Q}_{\ge 0}$이면 $\lambda u + \mu v \in \sigma$
-2. $\sigma$는 유한 개의 벡터 $v_1, \ldots, v_s \in \mathbb{Z}^n$의 음이 아닌 조합으로 생성된다:
-   $$\sigma = \mathbb{Q}_{\ge 0} v_1 + \cdots + \mathbb{Q}_{\ge 0} v_s$$
+**쌍대 격자(dual lattice)** $M$은 $N$에서 $\mathbb{Z}$로의 준동형사상들의 그룹이다:
+
+$$M = \operatorname{Hom}(N, \mathbb{Z})$$
+
+$M$과 $N$ 사이의 **쌍대 페어링(dual pairing)** $\langle \cdot, \cdot \rangle: M \times N \to \mathbb{Z}$는 자연스럽게 정의된다.
 
 </div>
+
+우리는 종종 $N_{\mathbb{R}} = N \otimes_{\mathbb{Z}} \mathbb{R}$과 $M_{\mathbb{R}} = M \otimes_{\mathbb{Z}} \mathbb{R}$을 생각할 것이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def2">**정의 2**</ins> $N_{\mathbb{R}}$의 부분집합 $\sigma$가 다음 조건을 만족할 때 **강한 정초 유리 다면체 콘(strongly convex rational polyhedral cone)**이라 한다:
+
+1. $\sigma$는 원점을 꼭짓점으로 하는 콘이다: $\lambda v \in \sigma$ for all $v \in \sigma$, $\lambda \ge 0$
+2. $\sigma$는 유한 개의 벡터 $v_1, \ldots, v_s \in N$의 음이 아닌 실수 조합으로 생성된다:
+   $$\sigma = \mathbb{R}_{\ge 0} v_1 + \cdots + \mathbb{R}_{\ge 0} v_s$$
+3. $\sigma$는 **강한 정초(strongly convex)**이다: $\sigma \cap (-\sigma) = \{0\}$
+
+</div>
+
+조건 3은 콘이 원점을 통과하는 직선을 포함하지 않는다는 것을 의미한다.
+
+### 콘의 면
+
+<div class="definition" markdown="1">
+
+<ins id="def3">**정의 3**</ins> 콘 $\sigma$의 **면(face)** $\tau$는 다음과 같이 얻어진다:
+
+$$\tau = \sigma \cap u^{\perp} = \{ v \in \sigma \mid \langle u, v \rangle = 0 \}$$
+
+여기서 $u \in \sigma^\vee$이다. $\tau$가 $\sigma$의 면일 때 $\tau \prec \sigma$라고 쓴다.
+
+</div>
+
+### 세미그룹과 쌍대 콘
+
+콘 $\sigma$가 주어지면, 우리는 이에 대응하는 **쌍대 콘(dual cone)**을 정의할 수 있다:
+
+$$\sigma^\vee = \{ u \in M_{\mathbb{R}} \mid \langle u, v \rangle \ge 0 \text{ for all } v \in \sigma \}$$
 
 콘 $\sigma$가 주어지면, 우리는 이에 대응하는 **쌍대 콘(dual cone)**을 정의할 수 있다:
 
@@ -43,15 +80,15 @@ $$\sigma^\vee = \{ u \in \mathbb{R}^n \mid \langle u, v \rangle \ge 0 \text{ for
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 콘 $\sigma$에 대해, **세미그룹(semigroup)** $S_\sigma$를 다음과 같이 정의한다:
+<ins id="def4">**정의 4**</ins> 콘 $\sigma$에 대해, **세미그룹(semigroup)** $S_\sigma$를 다음과 같이 정의한다:
 
-$$S_\sigma = \sigma^\vee \cap \mathbb{Z}^n$$
+$$S_\sigma = \sigma^\vee \cap M$$
 
 이 세미그룹의 **세미그룹 대수(semigroup algebra)**는 다음과 같다:
 
-$$\mathbb{C}[S_\sigma] = \mathbb{C}[x^u \mid u \in S_\sigma]$$
+$$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^u \mid u \in S_\sigma]$$
 
-여기서 $x^u = x_1^{u_1} \cdots x_n^{u_n}$이다.
+여기서 $\chi^u$는 문자(character)로, $M$의 원소 $u$에 대응되는 단항식이다.
 
 </div>
 
@@ -59,7 +96,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[x^u \mid u \in S_\sigma]$$
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 유리 다면체 콘 $\sigma \subseteq \mathbb{R}^n$에 대해, **아핀 토릭 다양체(affine toric variety)** $U_\sigma$를 다음과 같이 정의한다:
+<ins id="def5">**정의 5**</ins> 강한 정초 유리 다면체 콘 $\sigma \subseteq N_{\mathbb{R}}$에 대해, **아핀 토릭 다양체(affine toric variety)** $U_\sigma$를 다음과 같이 정의한다:
 
 $$U_\sigma = \operatorname{Spec}(\mathbb{C}[S_\sigma])$$
 
@@ -67,39 +104,41 @@ $$U_\sigma = \operatorname{Spec}(\mathbb{C}[S_\sigma])$$
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> $\sigma = \{0\}$인 경우, $\sigma^\vee = \mathbb{R}^n$이므로 $S_\sigma = \mathbb{Z}^n$이다. 따라서:
+<ins id="ex1">**예시 1**</ins> $\sigma = \{0\}$인 경우, $\sigma^\vee = M_{\mathbb{R}}$이므로 $S_\sigma = M$이다. 따라서:
 
-$$\mathbb{C}[S_\sigma] = \mathbb{C}[x_1^{\pm 1}, \ldots, x_n^{\pm 1}] = \mathbb{C}[x_1, \ldots, x_n, x_1^{-1}, \ldots, x_n^{-1}]$$
+$$\mathbb{C}[S_\sigma] = \mathbb{C}[M] = \mathbb{C}[\chi^{\pm e_1^\ast}, \ldots, \chi^{\pm e_n^\ast}]$$
 
-이것은 **대수적 토러스(algebraic torus)** $(\mathbb{C}^\ast)^n$의 좌표환에 해당한다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex2">**예시 2**</ins> $\sigma = \mathbb{Q}_{\ge 0} \cdot e_1 \subseteq \mathbb{R}^2$인 경우 (여기서 $e_1 = (1, 0)$):
-
-$$\sigma^\vee = \{(u_1, u_2) \in \mathbb{R}^2 \mid u_1 \ge 0\}$$
-
-따라서 $S_\sigma = \{(u_1, u_2) \in \mathbb{Z}^2 \mid u_1 \ge 0\}$이고:
-
-$$\mathbb{C}[S_\sigma] = \mathbb{C}[x_1, x_2, x_2^{-1}]$$
-
-이것은 $\mathbb{C} \times \mathbb{C}^\ast$의 좌표환에 해당한다.
+이것은 **대수적 토러스(algebraic torus)** $T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast \cong (\mathbb{C}^\ast)^n$의 좌표환에 해당한다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $\sigma = \mathbb{Q}_{\ge 0} e_1 + \mathbb{Q}_{\ge 0} e_2 \subseteq \mathbb{R}^2$인 경우:
+<ins id="ex2">**예시 2**</ins> $N = \mathbb{Z}^2$에서 $\sigma$가 $e_1$과 $e_2$로 생성되는 경우:
 
-$$\sigma^\vee = \mathbb{Q}_{\ge 0} e_1 + \mathbb{Q}_{\ge 0} e_2$$
+$$\sigma^\vee = \mathbb{R}_{\ge 0} e_1^\ast + \mathbb{R}_{\ge 0} e_2^\ast$$
 
 따라서 $S_\sigma = \mathbb{Z}_{\ge 0}^2$이고:
 
-$$\mathbb{C}[S_\sigma] = \mathbb{C}[x_1, x_2]$$
+$$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{C}[X, Y]$$
 
 이것은 **아핀 평면(affine plane)** $\mathbb{C}^2$의 좌표환에 해당한다.
+
+</div>
+
+<div class="example" markdown="1">
+
+<ins id="ex3">**예시 3 (이차 원뿔)**</ins> $N = \mathbb{Z}^2$에서 $\sigma$가 $e_2$와 $2e_1 - e_2$로 생성되는 경우를 생각하자.
+
+$$\sigma^\vee \cap M$$의 생성원은 $e_1^\ast$, $e_1^\ast + e_2^\ast$, $e_1^\ast + 2e_2^\ast$이다. 따라서:
+
+$$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_1^\ast + e_2^\ast}, \chi^{e_1^\ast + 2e_2^\ast}] = \mathbb{C}[X, XY, XY^2]$$
+
+이것을 $U = X$, $V = XY$, $W = XY^2$로 두면, $V^2 = UW$이므로:
+
+$$\mathbb{C}[S_\sigma] \cong \mathbb{C}[U, V, W] / (V^2 - UW)$$
+
+따라서 $U_\sigma$는 **이차 원뿔(quadric cone)**이다. 이것은 $\mathbb{C}^2$에서 원점에서의 blow-up와 관련이 있다.
 
 </div>
 
@@ -109,31 +148,43 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[x_1, x_2]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 아핀 토릭 다양체 $U_\sigma$ 위에 대수적 토러스 $T = (\mathbb{C}^\ast)^n$이 다음과 같이 작용한다:
+<ins id="prop1">**명제 1**</ins> 아핀 토릭 다양체 $U_\sigma$ 위에 대수적 토러스 $T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast$가 다음과 같이 작용한다:
 
-$$t \cdot (x^u)_{u \in S_\sigma} = (t^u x^u)_{u \in S_\sigma}$$
+$$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$
 
-여기서 $t = (t_1, \ldots, t_n) \in T$이고 $t^u = t_1^{u_1} \cdots t_n^{u_n}$이다.
+여기서 $t \in T_N$이고 $\chi^u(t)$는 문자 $\chi^u$의 $t$에서의 값이다.
 
 </div>
 
-이 작용은 $U_\sigma$ 안에 **열린 조밀한(dense open)** 토러스 궤도(orbit)를 가진다. 이 궤도는 정확히 토러스 $T$ 자체이다.
+이 작용은 $U_\sigma$ 안에 **열린 조밀한(dense open)** 토러스 궤도(orbit)를 가진다. 이 궤도는 정확히 토러스 $T_N$ 자체이다.
+
+## 면과 열린 부분집합
+
+<div class="proposition" markdown="1">
+
+<ins id="prop2">**명제 2**</ins> $\tau$가 $\sigma$의 면일 때, $U_\tau$는 $U_\sigma$의 **주 열린 부분집합(principal open subset)**이다. 구체적으로, $u \in S_\sigma$를 $\tau = \sigma \cap u^{\perp}$를 만족하는 것으로 선택하면:
+
+$$U_\tau = \{ x \in U_\sigma \mid \chi^u(x) \neq 0 \}$$
+
+</div>
+
+이 명제는 작은 콘이 더 작은 열린 집합에 대응된다는 것을 보여준다. 이것이 바로 $N$에서의 기하학이 $M$에서의 기하학보다 선호되는 이유이다.
 
 ## 기본 성질
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 아핀 토릭 다양체 $U_\sigma$에 대해 다음이 성립한다:
+<ins id="prop3">**명제 3**</ins> 아핀 토릭 다양체 $U_\sigma$에 대해 다음이 성립한다:
 
 1. $U_\sigma$는 **정규(normal)** 다양체이다.
 2. $U_\sigma$는 **기약(irreducible)**이다.
-3. $U_\sigma$의 차원은 $\sigma$가 포함된 $\mathbb{Q}$-선형 부분공간의 여차원과 같다.
+3. $U_\sigma$의 차원은 $n$이다 (여기서 $N \cong \mathbb{Z}^n$).
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 콘 $\sigma$가 **강한 정초(strongly convex)**일 때 (즉, $\sigma \cap (-\sigma) = \{0\}$), $U_\sigma$는 차원 $n$의 아핀 토릭 다양체이다.
+<ins id="prop4">**명제 4**</ins> 모든 아핀 토릭 다양체 $U_\sigma$는 토러스 $T_N$을 열린 조밀한 부분집합으로 포함한다.
 
 </div>
 
