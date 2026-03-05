@@ -1,6 +1,6 @@
 ---
-title: "아핀 토릭 다양체"
-excerpt: "토릭 기하학의 시작점, 아핀 토릭 다양체의 정의와 기본 성질"
+title: "Affine toric varieties"
+excerpt: "Toric geometry"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/affine_toric_varieties
@@ -17,7 +17,11 @@ last_modified_at: 2026-03-05
 weight: 1
 ---
 
-## 토릭 다양체의 동기
+## Toric geometry
+
+Toric geometry는 말 그대로 toric variety라 불리는 특별할 대수다양체를 연구하는 분야이다. 일반적인 대수다양체에 비해 toric variety가 가지는 장점은 
+
+토릭 다양체의 동기
 
 토릭 기하학(toric geometry)은 대수적 다양체의 특별한 클래스인 **토릭 다양체(toric varieties)**를 연구하는 분야이다. 토릭 다양체는 대수적 기하학과 볼록 기하학(convex geometry) 사이의 놀라운 연결을 제공하며, 많은 대수기하학적 문제를 조합론적인 문제로 바꾸어 해결할 수 있게 한다.
 
