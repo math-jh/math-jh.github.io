@@ -14,22 +14,28 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
   {% if site.multilingual %}
     window.addEventListener('DOMContentLoaded', function(){
-      var origin = window.location.origin;
-      var newpathname = "";
       var pathname = window.location.pathname.split('/');
+      
+      // ko나 en이 아니면 종료
       if(!(pathname[1] == "en" || pathname[1] == "ko")){
         document.getElementById('lang_container').style.display="none";
-      } else if (pathname[1] == "en") {
-        document.querySelector("#lang").checked=true;
-        var newlang="/ko/"
-      } else if (pathname[1] == "ko") {
-        document.querySelector("#lang").checked=false;
-        var newlang="/en/"
+        return;
       }
-      for (i = 2; i < pathname.length; i++) {
+      
+      var newpathname = "";
+      if (pathname[1] == "en") {
+        document.querySelector("#lang").checked=true;
+        var newlang="/ko/";
+      } else {
+        document.querySelector("#lang").checked=false;
+        var newlang="/en/";
+      }
+      
+      for (var i = 2; i < pathname.length; i++) {
         newpathname += "/";
         newpathname += pathname[i];
       }
+      
       var newurl = newlang + newpathname;
       var http = new XMLHttpRequest();
       http.open('HEAD', newurl, false);
