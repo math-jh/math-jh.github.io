@@ -19,13 +19,13 @@ weight: 1
 
 It is no exaggeration to say that set theory as the foundation of mathematics began with Cantor in the 19th century. Cantor's naive set theory can be summarized by the following philosophy:
 
-> For any property $P$, there exists a set $Y=\{x\mid P(x)\}$ consisting of all elements satisfying $P$.
+> For any property $P$, there exists a set $Y=\\{x\mid P(x)\\}$ consisting of all elements satisfying $P$.
 
 However, mathematicians discovered that this approach leads to various contradictions.
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**Example 1 (Russell's Paradox)**</ins> Define $\mathcal{S}$ to be the collection of all $x$ such that $x\not\in x$. Then $\mathcal{S}$ is either an element of itself or not.
+<ins id="ex1">**Example 1 (Russell's Paradox)**</ins> Consider the collection $\mathcal{S}$of all $x$ such that $x\not\in x$. Then $\mathcal{S}$ is either an element of itself or not.
 
 - Suppose $\mathcal{S}$ is an element of itself. Then $\mathcal{S}$ must satisfy the defining property ($x\not\in x$), so $\mathcal{S}\not\in\mathcal{S}$. This contradicts the assumption that $\mathcal{S}\in\mathcal{S}$, so $\mathcal{S}$ cannot be an element of itself.
 - Therefore, $\mathcal{S}\not\in\mathcal{S}$. But this is also a contradiction. Since $\mathcal{S}$ is the collection of all elements satisfying $x\not\in x$, and $\mathcal{S}$ satisfies this, it must belong to $\mathcal{S}$.
@@ -174,8 +174,8 @@ The ZFC axiom system includes several other axioms beyond these, but we will int
 ---
 **References**
 
-**[HJJ]** K. Hrbacek, T.J. Jeck, and T. Jech. *Introduction to Set Theory*. Lecture Notes in Pure and Applied Mathematics. M. Dekker, 1978.
-**[Bou]** N. Bourbaki. *Elements of the History of Mathematics*. Springer, 2013
+**[HJJ]** K. Hrbacek, T.J. Jeck, and T. Jech. *Introduction to Set Theory*. Lecture Notes in Pure and Applied Mathematics. M. Dekker, 1978.  
+**[Bou]** N. Bourbaki. *Elements of the History of Mathematics*. Springer, 2013  
 Wikipedia, [Naive set theory](https://en.wikipedia.org/wiki/Naive_set_theory), [Set-theoretic definition of natural numbers](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers).
 
 ---
