@@ -21,10 +21,10 @@
         document.getElementById('lang_container').style.display="none";
       } else if (pathname[1] == "en") {
         document.querySelector("#lang").checked=true;
-        var newlang="/ko"
+        var newlang="/ko/"
       } else if (pathname[1] == "ko") {
         document.querySelector("#lang").checked=false;
-        var newlang="/en"
+        var newlang="/en/"
       }
       for (i = 2; i < pathname.length; i++) {
         newpathname += "/";
