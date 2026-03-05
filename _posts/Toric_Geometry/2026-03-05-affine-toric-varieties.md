@@ -19,29 +19,25 @@ weight: 1
 
 ## 토릭 다양체의 동기
 
-토릭 기하학(toric geometry)은 대수적 다양체의 특별한 클래스인 **토릭 다양체(toric varieties)**를 연구하는 분야입니다. 토릭 다양체는 대수적 기하학과 볼록 기하학(convex geometry) 사이의 놀라운 연결을 제공하며, 많은 대수기하학적 문제를 조합론적인 문제로 바꾸어 해결할 수 있게 합니다.
+토릭 기하학(toric geometry)은 대수적 다양체의 특별한 클래스인 **토릭 다양체(toric varieties)**를 연구하는 분야이다. 토릭 다양체는 대수적 기하학과 볼록 기하학(convex geometry) 사이의 놀라운 연결을 제공하며, 많은 대수기하학적 문제를 조합론적인 문제로 바꾸어 해결할 수 있게 한다.
 
-우리는 먼저 가장 간단한 형태인 **아핀 토릭 다양체(affine toric varieties)**부터 시작합니다.
+우리는 먼저 가장 간단한 형태인 **아핀 토릭 다양체(affine toric varieties)**부터 시작한다.
 
-## 아핀 토릭 다양체의 정의
+## 격자와 콘
 
-### 격자와 콘
-
-토릭 기하학에서 기본이 되는 것은 **격자(lattice)**입니다.
+토릭 기하학에서 기본이 되는 것은 **격자(lattice)**이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> **격자(lattice)** $N$은 $\mathbb{Z}^n$과 동형인 아벨 군이다. 즉, $N \cong \mathbb{Z}^n$이다. 
-
-**쌍대 격자(dual lattice)** $M$은 $N$에서 $\mathbb{Z}$로의 준동형사상들의 그룹이다:
+<ins id="def1">**정의 1**</ins> **격자(lattice)** $N$은 $\mathbb{Z}^n$과 동형인 아벨 군이다. **쌍대 격자(dual lattice)** $M$은 $N$에서 $\mathbb{Z}$로의 준동형사상들의 그룹
 
 $$M = \operatorname{Hom}(N, \mathbb{Z})$$
 
-$M$과 $N$ 사이의 **쌍대 페어링(dual pairing)** $\langle \cdot, \cdot \rangle: M \times N \to \mathbb{Z}$는 자연스럽게 정의된다.
+이다. $M$과 $N$ 사이의 **쌍대 페어링(dual pairing)** $\langle \cdot, \cdot \rangle: M \times N \to \mathbb{Z}$는 자연스럽게 정의된다.
 
 </div>
 
-우리는 종종 $N_{\mathbb{R}} = N \otimes_{\mathbb{Z}} \mathbb{R}$과 $M_{\mathbb{R}} = M \otimes_{\mathbb{Z}} \mathbb{R}$을 생각할 것이다.
+우리는 $N_{\mathbb{R}} = N \otimes_{\mathbb{Z}} \mathbb{R}$과 $M_{\mathbb{R}} = M \otimes_{\mathbb{Z}} \mathbb{R}$을 자주 사용할 것이다.
 
 <div class="definition" markdown="1">
 
@@ -56,89 +52,83 @@ $M$과 $N$ 사이의 **쌍대 페어링(dual pairing)** $\langle \cdot, \cdot \r
 
 조건 3은 콘이 원점을 통과하는 직선을 포함하지 않는다는 것을 의미한다.
 
-### 콘의 면
-
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 콘 $\sigma$의 **면(face)** $\tau$는 다음과 같이 얻어진다:
+<ins id="def3">**정의 3**</ins> 콘 $\sigma$의 **면(face)** $\tau$는 어떤 $u \in \sigma^\vee$에 대해
 
 $$\tau = \sigma \cap u^{\perp} = \{ v \in \sigma \mid \langle u, v \rangle = 0 \}$$
 
-여기서 $u \in \sigma^\vee$이다. $\tau$가 $\sigma$의 면일 때 $\tau \prec \sigma$라고 쓴다.
+로 얻어진다. $\tau$가 $\sigma$의 면일 때 $\tau \prec \sigma$라고 쓴다.
 
 </div>
 
-### 세미그룹과 쌍대 콘
+## 아핀 토릭 다양체
 
-콘 $\sigma$가 주어지면, 우리는 이에 대응하는 **쌍대 콘(dual cone)**을 정의할 수 있다:
+콘 $\sigma$가 주어지면, 우리는 이에 대응하는 **쌍대 콘(dual cone)**
 
 $$\sigma^\vee = \{ u \in M_{\mathbb{R}} \mid \langle u, v \rangle \ge 0 \text{ for all } v \in \sigma \}$$
 
-콘 $\sigma$가 주어지면, 우리는 이에 대응하는 **쌍대 콘(dual cone)**을 정의할 수 있다:
-
-$$\sigma^\vee = \{ u \in \mathbb{R}^n \mid \langle u, v \rangle \ge 0 \text{ for all } v \in \sigma \}$$
+을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 콘 $\sigma$에 대해, **세미그룹(semigroup)** $S_\sigma$를 다음과 같이 정의한다:
+<ins id="def4">**정의 4**</ins> 콘 $\sigma$에 대해, **세미그룹(semigroup)**
 
 $$S_\sigma = \sigma^\vee \cap M$$
 
-이 세미그룹의 **세미그룹 대수(semigroup algebra)**는 다음과 같다:
+을 정의한다. 이 세미그룹의 **세미그룹 대수(semigroup algebra)**는
 
 $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^u \mid u \in S_\sigma]$$
 
-여기서 $\chi^u$는 문자(character)로, $M$의 원소 $u$에 대응되는 단항식이다.
+이다. 여기서 $\chi^u$는 문자(character)로, $M$의 원소 $u$에 대응되는 단항식이다.
 
 </div>
-
-### 아핀 토릭 다양체
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 강한 정초 유리 다면체 콘 $\sigma \subseteq N_{\mathbb{R}}$에 대해, **아핀 토릭 다양체(affine toric variety)** $U_\sigma$를 다음과 같이 정의한다:
+<ins id="def5">**정의 5**</ins> 강한 정초 유리 다면체 콘 $\sigma \subseteq N_{\mathbb{R}}$에 대해, **아핀 토릭 다양체(affine toric variety)** $U_\sigma$를
 
 $$U_\sigma = \operatorname{Spec}(\mathbb{C}[S_\sigma])$$
 
+로 정의한다.
+
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> $\sigma = \{0\}$인 경우, $\sigma^\vee = M_{\mathbb{R}}$이므로 $S_\sigma = M$이다. 따라서:
+<ins id="ex1">**예시 1**</ins> $\sigma = \{0\}$인 경우, $\sigma^\vee = M_{\mathbb{R}}$이므로 $S_\sigma = M$이다. 따라서
 
 $$\mathbb{C}[S_\sigma] = \mathbb{C}[M] = \mathbb{C}[\chi^{\pm e_1^\ast}, \ldots, \chi^{\pm e_n^\ast}]$$
 
-이것은 **대수적 토러스(algebraic torus)** $T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast \cong (\mathbb{C}^\ast)^n$의 좌표환에 해당한다.
+이며, 이것은 **대수적 토러스(algebraic torus)** $T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast \cong (\mathbb{C}^\ast)^n$의 좌표환에 해당한다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> $N = \mathbb{Z}^2$에서 $\sigma$가 $e_1$과 $e_2$로 생성되는 경우:
+<ins id="ex2">**예시 2**</ins> $N = \mathbb{Z}^2$에서 $\sigma$가 $e_1$과 $e_2$로 생성되는 경우를 생각하자. 그러면
 
 $$\sigma^\vee = \mathbb{R}_{\ge 0} e_1^\ast + \mathbb{R}_{\ge 0} e_2^\ast$$
 
-따라서 $S_\sigma = \mathbb{Z}_{\ge 0}^2$이고:
+이므로 $S_\sigma = \mathbb{Z}_{\ge 0}^2$이고,
 
 $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{C}[X, Y]$$
 
-이것은 **아핀 평면(affine plane)** $\mathbb{C}^2$의 좌표환에 해당한다.
+이다. 따라서 $U_\sigma = \mathbb{C}^2$이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3 (이차 원뿔)**</ins> $N = \mathbb{Z}^2$에서 $\sigma$가 $e_2$와 $2e_1 - e_2$로 생성되는 경우를 생각하자.
-
-$$\sigma^\vee \cap M$$의 생성원은 $e_1^\ast$, $e_1^\ast + e_2^\ast$, $e_1^\ast + 2e_2^\ast$이다. 따라서:
+<ins id="ex3">**예시 3 (이차 원뿔)**</ins> $N = \mathbb{Z}^2$에서 $\sigma$가 $e_2$와 $2e_1 - e_2$로 생성되는 경우를 생각하자. $\sigma^\vee \cap M$의 생성원은 $e_1^\ast$, $e_1^\ast + e_2^\ast$, $e_1^\ast + 2e_2^\ast$이므로
 
 $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_1^\ast + e_2^\ast}, \chi^{e_1^\ast + 2e_2^\ast}] = \mathbb{C}[X, XY, XY^2]$$
 
-이것을 $U = X$, $V = XY$, $W = XY^2$로 두면, $V^2 = UW$이므로:
+이다. 이것을 $U = X$, $V = XY$, $W = XY^2$로 두면 $V^2 = UW$이므로,
 
 $$\mathbb{C}[S_\sigma] \cong \mathbb{C}[U, V, W] / (V^2 - UW)$$
 
-따라서 $U_\sigma$는 **이차 원뿔(quadric cone)**이다. 이것은 $\mathbb{C}^2$에서 원점에서의 blow-up와 관련이 있다.
+이다. 따라서 $U_\sigma$는 **이차 원뿔(quadric cone)**이다.
 
 </div>
 
@@ -158,13 +148,13 @@ $$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$
 
 이 작용은 $U_\sigma$ 안에 **열린 조밀한(dense open)** 토러스 궤도(orbit)를 가진다. 이 궤도는 정확히 토러스 $T_N$ 자체이다.
 
-## 면과 열린 부분집합
-
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> $\tau$가 $\sigma$의 면일 때, $U_\tau$는 $U_\sigma$의 **주 열린 부분집합(principal open subset)**이다. 구체적으로, $u \in S_\sigma$를 $\tau = \sigma \cap u^{\perp}$를 만족하는 것으로 선택하면:
+<ins id="prop2">**명제 2**</ins> $\tau$가 $\sigma$의 면일 때, $U_\tau$는 $U_\sigma$의 **주 열린 부분집합(principal open subset)**이다. 구체적으로, $u \in S_\sigma$를 $\tau = \sigma \cap u^{\perp}$를 만족하는 것으로 선택하면
 
 $$U_\tau = \{ x \in U_\sigma \mid \chi^u(x) \neq 0 \}$$
+
+이다.
 
 </div>
 
@@ -190,13 +180,7 @@ $$U_\tau = \{ x \in U_\sigma \mid \chi^u(x) \neq 0 \}$$
 
 ---
 
-## 다음 단계
-
-아핀 토릭 다양체는 토릭 기하학의 가장 기초적인 구성 요소입니다. 다음 글에서는 여러 개의 콘을 조합하여 더 일반적인 **토릭 다양체(toric varieties)**를 구성하는 방법을 살펴볼 것입니다. 이를 위해 **팬(fan)**의 개념이 필요합니다.
-
----
-
 **참고문헌**
 
-**[Fulton]** William Fulton, *Introduction to Toric Varieties*, Annals of Mathematics Studies, Princeton University Press, 1993.  
+**[Ful]** William Fulton, *Introduction to Toric Varieties*, Annals of Mathematics Studies, Princeton University Press, 1993.  
 **[CLS]** David Cox, John Little, Hal Schenck, *Toric Varieties*, Graduate Studies in Mathematics, American Mathematical Society, 2011.  
