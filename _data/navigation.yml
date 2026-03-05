@@ -595,6 +595,18 @@ symplectic_geometry-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
+toric_geometry-ko:
+  - title: <a href="/ko/toric_geometry/" class="sidebar_title">토릭 기하학</a>
+    children:
+      - title: "아핀 토릭 다양체"
+        url: ko/math/toric_geometry/affine_toric_varieties
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
 topology-ko:
   - title: <a href="/ko/topology/" class="sidebar_title">위상수학</a>
     children:
@@ -692,6 +704,8 @@ category-ko:
       #   url: ko/complex_manifold/
       - title: "대수기하학"
         url: ko/algebraic_geometry/
+      - title: "토릭 기하학"
+        url: ko/toric_geometry/
       - title: "사교기하학"
         url: ko/symplectic_geometry/
   - title: "Misc"
