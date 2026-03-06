@@ -1,11 +1,11 @@
 ########## 마스트헤드 ##########
 main:
-  # - title: "About"
-  #   url: /about/
-  - title: "Category 🇰🇷"
+  - title: "카테고리 🇰🇷"
     url: ko/categories/
+    lang: ko
   - title: "Category 🇺🇸"
     url: en/categories/
+    lang: en
 
 ########## 본문 사이드바 ##########
 

@@ -37,10 +37,19 @@
           {% endif %}
         </div>
         <ul class="visible-links">
+          {%- assign current_lang = page.url | slice: 1, 2 -%}
           {%- for link in site.data.navigation.main -%}
-            <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-            </li>
+            {%- if link.lang -%}
+              {%- if current_lang == link.lang -%}
+                <li class="masthead__menu-item">
+                  <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                </li>
+              {%- endif -%}
+            {%- else -%}
+              <li class="masthead__menu-item">
+                <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              </li>
+            {%- endif -%}
           {%- endfor -%}
         </ul>
         {% if site.search == true %}
