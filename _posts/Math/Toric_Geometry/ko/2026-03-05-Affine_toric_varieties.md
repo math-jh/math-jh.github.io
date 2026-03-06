@@ -133,15 +133,38 @@ $$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
 
 을 생각하자. 
 
+Torus $$T_N$$의 원소 $$t$$와 $$M$$의 원소 $$u$$에 대하여, $$\chi^u(t)$$를 다음과 같이 정의하자. $$N \cong \mathbb{Z}^n$$이므로 $$T_N \cong (\mathbb{C}^\ast)^n$$이고, $$M \cong \mathbb{Z}^n$$이다. 이 때 $$t = (t_1, \ldots, t_n) \in (\mathbb{C}^\ast)^n$$이고 $$u = (a_1, \ldots, a_n) \in \mathbb{Z}^n$$이라 하면
+
+$$\chi^u(t) = t_1^{a_1} \cdots t_n^{a_n} \in \mathbb{C}^\ast$$
+
+이다. 즉, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 torus의 *character<sub>문자</sub>*이다. 이제 $$T_N$$이 $$\mathbb{C}[S_\sigma]$$ 위에 다음과 같이 작용한다:
+
+$$t \cdot f(p) = f(t^{-1} \cdot p)$$
+
+여기서 $$t^{-1} \cdot p$$는 $$T_N$$이 $$U_\sigma$$ 위에 작용하는 것을 의미한다. 이 작용을 basis $$\{\chi^u \mid u \in S_\sigma\}$$에 대해 살펴보면 다음을 얻는다.
+
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 아핀 토릭 다양체 $$U_\sigma$$ 위에 대수적 토러스 $$T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast$$가 다음과 같이 작용한다:
+<ins id="prop1">**명제 1**</ins> 아핀 토릭 다양체 $$U_\sigma$$ 위에 대수적 토러스 $$T_N$$이 다음과 같이 작용한다:
 
 $$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$
 
-여기서 $$t \in T_N$$이고 $$\chi^u(t)$$는 문자 $$\chi^u$$의 $$t$$에서의 값이다.
+여기서 $$t \in T_N$$이고 $$\chi^u(t)$$는 위에서 정의한 문자이다.
 
 </div>
+
+이 작용은 Lie theory에서의 torus action과 같은 방식으로 이해할 수 있다. [\[\] §원환면의 작용, §§Weight decomposition]에서 살펴본 것처럼, torus action은 coordinate ring 위에 weight decomposition을 유도한다. 사실 우리는 이미 $$\mathbb{C}[S_\sigma]$$를
+
+$$\mathbb{C}[S_\sigma] = \bigoplus_{u \in S_\sigma} \mathbb{C} \cdot \chi^u$$
+
+으로 분해하였으며, 명제 1의 작용 하에서 각각의 $$\chi^u$$는 정확히
+
+$$t \cdot \chi^u = \chi^u(t) \chi^u$$
+
+을 만족하므로, $$\chi^u$$는 weight $$u$$를 갖는 eigenvector이다. 즉, **$$M$$-grading이 정확히 torus action에 대한 weight decomposition**이다. 이 관점에서 보면:
+
+- **Weight lattice**: $$S_\sigma \subseteq M$$
+- **Weight space**: $$V_u = \mathbb{C} \cdot \chi^u$$ (모든 $$u \in S_\sigma$$에 대해 1차원)
 
 이 작용은 $$U_\sigma$$ 안에 **열린 조밀한(dense open)** 토러스 궤도(orbit)를 가진다. 이 궤도는 정확히 토러스 $$T_N$$ 자체이다.
 
@@ -156,6 +179,8 @@ $$U_\tau = \{ x \in U_\sigma \mid \chi^u(x) \neq 0 \}$$
 </div>
 
 이 명제는 작은 콘이 더 작은 열린 집합에 대응된다는 것을 보여준다. 이것이 바로 $$N$$에서의 기하학이 $$M$$에서의 기하학보다 선호되는 이유이다.
+
+한편, 위의 open embedding $$U_\tau \hookrightarrow U_\sigma$$는 $$T_N$$-equivariant이다. 즉, $$T_N$$이 $$U_\tau$$와 $$U_\sigma$$ 위에 각각 작용할 때, 이 작용들은 inclusion과 compatible하다. 이것이 의미하는 것은, 여러 affine toric variety들을 face 관계를 통해 glue할 때, 이 glue가 torus action을 보존한다는 것이다. 결과적으로 일반적인 toric variety는 자연스러운 torus action을 가지며, 이것이 toric variety의 핵심적인 성질이 된다.
 
 ## 기본 성질
 
