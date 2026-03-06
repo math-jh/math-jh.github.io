@@ -45,10 +45,10 @@
           </button>
           <ul class="settings-menu" id="settings-menu">
             {% if site.dark_theme %}
-            <li class="settings-item">
+            <li class="settings-item" onclick="toggleDarkTheme()">
               <span style="color:#bbb">다크모드</span>
-              <label class="switch" for="toggle_dark_theme" style="display:inline; margin:0">
-                <input type="checkbox" id="toggle_dark_theme" onclick="darkmode(), scrollbar()"/>
+              <label class="switch" for="toggle_dark_theme" style="display:inline; margin:0; pointer-events:none">
+                <input type="checkbox" id="toggle_dark_theme" style="pointer-events:none"/>
                 <span class="material-icons md-16 unchecked" style="color:#ffbb9a">&#xE518;</span>
                 <span class="material-icons md-16 checked" style="color:#ffeabc">&#xE51C;</span>
               </label>
