@@ -41,7 +41,7 @@
         {% endif %}
         <div class="settings-dropdown" style="{% unless site.dark_theme or site.multilingual %} display: none; {% endunless %}">
           <button class="settings-toggle" onclick="toggleSettings(event)" aria-label="Settings">
-            <i class="material-icons md-24" style="vertical-align:-.2em;">settings</i>
+            <i class="material-icons md-24" style="vertical-align:-.2em;">tune</i>
             <i class="material-icons md-18 dropdown-arrow" style="vertical-align:-.1em;">arrow_drop_down</i>
           </button>
           <ul class="settings-menu" id="settings-menu">
@@ -72,9 +72,55 @@
             </script>
             {% endif %}
             {% if site.multilingual %}
-            <li class="settings-item" onclick="lang_select(); toggleSettings(event);">
+            <li class="settings-item" id="lang-switcher" onclick="lang_select(); toggleSettings(event);">
               <span style="color:#bbb" id="lang-label">한글</span>
             </li>
+            <script>
+            // 모든 페이지 URL 수집
+            var allPages = [
+              {%- for page in site.pages -%}"{{ page.url | relative_url }}",{%- endfor -%}
+              {%- for post in site.posts -%}"{{ post.url | relative_url }}",{%- endfor -%}
+            ];
+            
+            // 현재 페이지의 다른 언어 버전이 있는지 확인
+            function checkLanguageAvailability() {
+              var pathname = window.location.pathname;
+              var langItem = document.getElementById('lang-switcher');
+              
+              if (!langItem) return;
+              
+              // 홈페이지나 언어 접두사가 없는 경우
+              if (!pathname.startsWith('/ko/') && !pathname.startsWith('/en/')) {
+                langItem.style.display = 'flex';
+                return;
+              }
+              
+              var otherLang, otherPath;
+              if (pathname.startsWith('/ko/')) {
+                otherPath = '/en/' + pathname.substring(4);
+              } else {
+                otherPath = '/ko/' + pathname.substring(4);
+              }
+              
+              // 다른 언어 버전이 있는지 확인
+              var hasOtherLang = allPages.some(function(url) {
+                return url === otherPath || url === otherPath.replace(/\/$/, '') || 
+                       url === otherPath + '/' || url.replace(/\/$/, '') === otherPath.replace(/\/$/, '');
+              });
+              
+              if (!hasOtherLang) {
+                langItem.style.display = 'none';
+              } else {
+                langItem.style.display = 'flex';
+              }
+            }
+            
+            // 페이지 로드 시 실행
+            document.addEventListener('DOMContentLoaded', function() {
+              checkLanguageAvailability();
+              updateLangLabel();
+            });
+            </script>
             {% endif %}
           </ul>
         </div>
