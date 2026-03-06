@@ -175,7 +175,7 @@ $$(\sigma\cdot g)(\x)=\prod_{a\in S}(\x-\sigma(a))=\prod_{a\in S}(\x-a)$$
 
 거꾸로 셋째 조건을 가정하고 첫째 조건을 보이자. $$x\in\mathbb{L}$$이 $$\mathbb{K}$$에 속하지 않는다면 $$x$$를 다른 원소로 보내는 $$\sigma\in\Gamma$$가 존재함을 보여야 한다. $$x$$의 minimal polynomial을 $$f$$라 하면, $$x\not\in\mathbb{K}$$인 것으로부터 $$f$$는 2차 이상이고, 가정에 의해 
 
-$$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$$S$$ the set of comjugates of $$x$$ in $$\overline{\mathbb{K}}$$}$$
+$$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$S$ the set of comjugates of $$x$$ in $$\overline{\mathbb{K}}$$}$$
 
 로 쪼갤 수 있으며 한편 $$\mathbb{L}/\mathbb{K}$$는 quasi-Galois이므로 $$x$$를 자신과 다른 $$a\in S$$로 보내는 $$\overline{\mathbb{K}}$$의 $$\mathbb{K}$$-automorphism $$u$$가 존재하며 이는 [명제 5](#prop5)에 의해 $$\mathbb{L}$$의 $$\mathbb{K}$$-automorphism이다. 이로부터 원하는 결과를 얻는다.
 

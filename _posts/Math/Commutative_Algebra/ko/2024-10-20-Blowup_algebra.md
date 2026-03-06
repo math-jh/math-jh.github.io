@@ -189,7 +189,7 @@ $$\mathcal{J}:\qquad M=M_0\supseteq M_1\supseteq\cdots$$
 
 이 주어진 $$A$$-module $$M$$과 associated graded module $$\gr_\mathcal{J}M$$이 주어졌다 하자. 그럼 임의의 $$x\in M$$에 대하여, $$x$$의 *initial form* $$\initial(x)$$를 다음의 식
 
-$$\initial(x)=x+M_{k+1}\quad\text{in $$M_k/M_{k+1}$$,}\qquad\text{where $$k$$ is the greatest integer satisfying $$x\in M_k$$}$$
+$$\initial(x)=x+M_{k+1}\quad\text{in $M_k/M_{k+1}$,}\qquad\text{where $k$ is the greatest integer satisfying $$x\in M_k$$}$$
 
 으로 정의한다. 
 

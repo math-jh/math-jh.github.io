@@ -36,7 +36,7 @@ weight: 4
 
 우선 첫째 조건을 가정하여, 임의의 loop $$f:S^1 \rightarrow X$$에 대하여 적당한 homotopy $$(f_t)$$가 존재하여 $$f_1=f$$이고 $$f_0$$은 고정된 점 $$x_0$$으로의 constant map이도록 할 수 있다. 그럼 다음 식
 
-$$\widetilde{f}(\mathrm{x})=\begin{cases}f_{\lvert\mathrm{x}\rvert}(\mathrm{x}/\lvert\mathrm{x}\rvert)&\text{if $$\lvert\mathrm{x}\rvert\neq 0$$}\\ x_0&\text{if $$\lvert\mathrm{x}\rvert=0$$}\end{cases}$$
+$$\widetilde{f}(\mathrm{x})=\begin{cases}f_{\lvert\mathrm{x}\rvert}(\mathrm{x}/\lvert\mathrm{x}\rvert)&\text{if $\lvert\mathrm{x}\rvert\neq 0$}\\ x_0&\text{if $\lvert\mathrm{x}\rvert=0$}\end{cases}$$
 
 이 셋째 조건에서 요구하는 연속함수라는 것을 알 수 있다. 거꾸로 셋째 조건을 가정하면, 임의의 loop $$f$$가 주어졌을 때 $$f_t(\mathrm{x})=\widetilde{f}(t\mathrm{x})$$로 둔 것이 $$f_1=f$$에서 constant map으로의 homotopy가 된다. 
 
@@ -210,11 +210,11 @@ $$\sk(\Fun(\Pi_1(X),\Set))\simeq\Fun(\sk(\Pi_1(X)), \Set)$$
 
 그런데 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)와 그 증명을 생각하면, 임의의 $$G$$-set $$E$$가 주어졌을 때 우리는 $$E$$를 $$G$$의 orbit들로 분해할 수 있고, 그럼 이들 각각의 orbit들로 제한했을 때의 $$G$$-action은 transitive하며 이들은 $$G$$의 적당한 normal subgroup $$N$$에 대하여, canonical $$G$$-action이 주어진 $$G/N$$과 isomorphic하다. 따라서 transitive group action만 생각하기로 한다면, monodromy functor의 정의에 의해 이는 target에서는 *connected* cover들만 생각하는 것이 된다. 즉 다음의 equivalence
 
-$$\left\{\text{isomorphism classes of covering spaces of $$B$$}\right\}\simeq \left\{\text{transitive $$\pi_1(B,x)$$-sets}\right\}$$
+$$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \left\{\text{transitive $\pi_1(B,x)$-sets}\right\}$$
 
 가 존재하며, 다시 transitive $$\pi_1(B,x)$$-set들을 isomorphism에 대해 분류한 skeleton category를 생각하면 최종적으로 다음의 equivalence
 
-$$\left\{\text{isomorphism classes of covering spaces of $$B$$}\right\}\simeq \left\{\text{conjugacy classes of subgroups of $$\pi_1(B,x)$$}\right\}$$
+$$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \left\{\text{conjugacy classes of subgroups of $\pi_1(B,x)$}\right\}$$
 
 를 얻는다. 이제 이들 각각의 category를 살펴보면, 이들은 그저 partially ordered set에 불과하며 ([\[범주론\] §범주, ⁋예시 3](/ko/math/category_theory/categories#ex3)) 이 equivalence는 poset 사이의 isomorphism임을 안다. 즉 다음의 결과를 얻는다. 
 
@@ -226,7 +226,7 @@ $$\left\{\text{isomorphism classes of covering spaces of $$B$$}\right\}\simeq \l
 
 명시적으로, covering space $$p:E \rightarrow B$$가 주어지면 $$\pi_1(p):\pi_1(E)\rightarrow \pi_1(B)$$를 통해 subgroup이 정의되며, 이 때 두 transitive $$G$$-set $$X\cong G/H$$와 $$Y\cong G/K$$가 isomorphic한 것은 $$H$$와 $$K$$가 서로 conjugate인 것과 동치이므로 위의 결과를 얻는다. 한편 만일 $$\pi_1(B,x)$$의 subgroup들의 conjugacy class들 대신 명시적인 subgroup들 그 자체를 생각한다면 이는 isomorphic한 covering space 중 하나를 택하는 것이 되고, 이는 정확히 $$B$$의 base point 하나를 고정한 다음, *pointed* covering map $$p:(E, y)\rightarrow (B,x)$$를 생각하여 이들 isomorphism class들의 원소를 따로따로 보는 것과 같다. 즉 다음의 Galois correspondance
 
-$$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $$B$$}\right\}\simeq \left\{\text{subgroups of $$\pi_1(B,x)$$}\right\}$$
+$$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $$B$$}\right\}\simeq \left\{\text{subgroups of $\pi_1(B,x)$}\right\}$$
 
 이 존재한다. 이를 조금 더 익숙한 형태로 만들면, 우리는 임의의 $$H\leq \pi_1(B,x)$$에 대하여 이에 대응되는 covering space $$E_H$$를 만들 수 있고 그럼 $$E_H$$의 automorphism group $$\Aut(E_H/B)$$에 대하여
 

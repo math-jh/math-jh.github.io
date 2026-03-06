@@ -167,7 +167,7 @@ $$A^{\oplus n} \rightarrow M \rightarrow 0$$
 
 이 존재한다는 것이고, 이 때 $$A^{\oplus n}$$의 basis의 image $$x_1,\ldots, x_n$$가 $$M$$을 generate하게 된다. 그러나 일반적으로 $$M$$을
 
-$$M=\langle x_1,\ldots, x_n\mid \text{relations on $$x_i$$}\rangle$$
+$$M=\langle x_1,\ldots, x_n\mid \text{relations on $x_i$}\rangle$$
 
 으로 적었을 때, $$x_i$$들에 대한 relation은 무한히 많을 수 있다. 이들 relation은 surjection $$A^{\oplus n} \rightarrow M$$의 kernel에 의해 결정되므로, 다음을 정의한다.
 

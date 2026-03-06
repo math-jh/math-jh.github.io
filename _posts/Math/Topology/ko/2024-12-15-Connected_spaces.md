@@ -111,7 +111,7 @@ $$A=(A\cap f^{-1}(V_1))\cup (A\cap f^{-1}(V_2)),\qquad f^{-1}(V_1)\cap f^{-1}(V_
 
 따라서 각각의 $$X_i$$들이 connected라 하고, 결론에 반하여 $$X=\prod X_i$$가 connected가 아니라 하자. $$X=U\cup V$$이고 $$U\cap V=\emptyset$$, $$U,V\neq\emptyset$$이라 하면 
 
-$$f(x)=\begin{cases}1&\text{if $$x\in U$$}\\0&\text{if $$x\in V$$}\end{cases}$$
+$$f(x)=\begin{cases}1&\text{if $x\in U$}\\0&\text{if $x\in V$}\end{cases}$$
 
 으로 정의한 함수 $$f:X \rightarrow \{0,1\}$$은 연속이다. (여기서 $$\{0,1\}$$은 discrete topology가 주어진 공간이다.) 
 
@@ -141,7 +141,7 @@ $$X=\bigcup_{i\in I} U_i$$
 
 <ins id="prop8">**명제 8**</ins> 위상공간 $$X$$ 위에 동치관계 $$\sim$$을
 
-$$x\sim y\iff \text{$$x$$ and $$y$$ lies in the same component}$$
+$$x\sim y\iff \text{$x$ and $$y$$ lies in the same component}$$
 
 로 정의하자. 그럼 $$X/{\sim}$$은 totally disconnected이다.
 

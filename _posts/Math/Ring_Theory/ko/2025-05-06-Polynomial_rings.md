@@ -29,7 +29,7 @@ weight: 3
 
 다항식들을 본격적으로 다루기 전에, 이들을 다루기 위한 도구들을 먼저 정의하자. 우선 $$A$$ 위에서 정의된 *다항식*들은 polynomial ring $$P=A[\x_i]_{i\in I}$$의 원소들을 의미한다. 이 때, $$\mathbb{N}^{(I)}$$를 $$I$$에서 $$\mathbb{N}$$으로 가는 finitely supported function들의 모임
 
-$$\mathbb{N}^{(I)}=\{\nu:I \rightarrow \mathbb{N}\mid\text{$$f(i)=0$$ for all but finitely many $$i\in I$$}\}$$
+$$\mathbb{N}^{(I)}=\{\nu:I \rightarrow \mathbb{N}\mid\text{$f(i)=0$ for all but finitely many $$i\in I$$}\}$$
 
 으로 정의하자. 그럼 임의의 $$\nu\in \mathbb{N}^{(I)}$$에 대하여, 
 
@@ -41,7 +41,7 @@ $$a\x^\nu$$
 
 꼴의 원소들을 *단항식*이라 부른다. 그럼 임의의 다항식 $$u$$는 단항식들의 유한합
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$$\alpha_\nu=0$$ for all but finitely many $$\nu$$}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $$\nu$$}$$
 
 으로 나타낼 수 있다. 
 
@@ -59,7 +59,7 @@ $$P=\bigoplus_{n\in \mathbb{N}}\bigoplus_{\lvert\nu\rvert=n}(A[\x_i]_{i\in I})_\
 
 <ins id="def1">**정의 1**</ins> Polynomial ring $$P=A[\x]_{i\in I}$$의 임의의 원소 
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$$\alpha_\nu=0$$ for all but finitely many $$\nu$$}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $$\nu$$}$$
 
 가 주어졌다 하자. 그럼 $$u_n\neq 0$$을 만족하는 가장 큰 $$n$$을 $$u$$의 *degree*라 부르고 $$\deg(u)$$와 같이 표기한다. 정의에 의하여 상수항만을 가지는 다항식의 차수는 $$0$$이지만, 특별히 $$P$$의 덧셈에 대한 항등원 $$0$$에 대하여는 $$\deg(0)=-\infty$$로 정의한다.  
 
@@ -82,7 +82,7 @@ $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$$\alpha_\nu=0$$
 
 이 명제의 둘째 조건이 등식이 아닌 이유는 $$A$$에 있다. 이를 더 자세하게 살펴보기 위해 하나의 변수로만 이루어진 polynomial ring $$A[\x]$$를 생각하자. 그럼 $$A[\x]$$의 임의의 다항식은 
 
-$$u(\x)=\sum_{i=0}^n a_i\x^i\qquad\text{($$a_n\neq 0$$)}$$
+$$u(\x)=\sum_{i=0}^n a_i\x^i\qquad\text{($a_n\neq 0$)}$$
 
 의 꼴로 적을 수 있으며, 이 때 $$a_n\x^n$$을 다항식 $$p$$의 *leading term*, 그 계수 $$a_n$$을 다항식 $$p$$의 *leading coefficient*라 부른다. 만일 $$p$$의 leading coefficient가 $$1$$이라면 $$p$$를 *monic polynomial*이라 부른다. 
 
@@ -171,7 +171,7 @@ $$u=qv+r,\qquad \deg r < n$$
 
 을 만족하는 $$q,r$$을 유일하게 결정할 수 있다. 뿐만 아니라, 이 경우 polynomial ring $$\mathbb{K}[\x]$$는 [보조정리 3](#lem3)에 의하여 integral domain이고, 따라서 $$N:\mathbb{K}[\x] \rightarrow \mathbb{Z}^{\geq0}$$를 
 
-$$N: u\mapsto \deg(u)\qquad \text{단, $$N(0)=0$$}$$
+$$N: u\mapsto \deg(u)\qquad \text{단, $N(0)=0$}$$
 
 으로 주면 $$\mathbb{K}[\x]$$가 Euclidean domain임을 안다. 
 
@@ -274,7 +274,7 @@ $$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=i.a_i\x^{i-1}\
 
 로 정하기로 한다. 여기서 $$i.a_i$$는 
 
-$$i.a_i=\underbrace{a_i+\cdots+a_i}_\text{\scriptsize$$i$$ times}$$
+$$i.a_i=\underbrace{a_i+\cdots+a_i}_\text{\scriptsize$i$ times}$$
 
 으로 정의되는 $$A$$의 원소이다. 남은 논의에서 우리가 유일하게 사용할 성질은 라이프니츠 법칙
 
@@ -478,13 +478,13 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
 
 멱급수환은 다항식환의 또 다른 변형으로, 우리는 이제 단항식들의 무한합
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$$\alpha_\nu$$ need not satisfy finiteness condition}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu$ need not satisfy finiteness condition}$$
 
 들의 모임이다. 이를 $$A[[\x_i]]_{i\in I}$$으로 적고, *ring of formal power series*라 부른다. 
 
 Formal power series들은 단항식의 <em-ko>무한한</em-ko> 합이라는 사실만 제외하면 다항식과 유사한 개념들을 정의할 수 있다. 가령 우리는 formal power series $$u$$의 degree $$p$$ 성분 $$u_p$$를 정의할 수 있다. 그러나 $$u$$의 (total) degree의 경우, 다항식이 아닌 한 원소들의 degree는 $$+\infty$$일 것이기 때문에 굳이 $$A[[\x_i]]_{i\in I}$$에서 이를 사용할 이유가 없다. 대신 임의의 formal power series $$u$$에 대하여, $$u$$의 *order* $$\omega(u)$$를 $$u_p\neq 0$$이도록 하는 가장 <em-ko>작은</em-ko> $$p$$로 정한다. 마찬가지로 $$\omega(0)=\infty$$라 놓으면 다음의 식
 
-$$\omega(u+v)\geq \inf(\omega(u),\omega(v)),\quad\text{equality if $$\omega(u)\neq\omega(v))$$}$$
+$$\omega(u+v)\geq \inf(\omega(u),\omega(v)),\quad\text{equality if $\omega(u)\neq\omega(v))$}$$
 
 그리고 다음의 식
 

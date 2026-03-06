@@ -25,7 +25,7 @@ Index set $$I$$가 commutative monoid일 경우, 우리는 ablian group들의 fa
 
 <ins id="def1">**정의 1**</ins> Commutative monoid $$I$$와 $$I$$-indexed family of abelian groups $$(A_i)_{i\in I}$$가 주어졌다 하자. 만일 $$\bigoplus_{i\in I} A_i$$ 위에 정의된 곱셈구조가 이를 ring으로 만들고, 추가적으로 다음 조건
 
-$$A_i A_j\subseteq A_{i+j}\qquad\text{for all $$i,j\in I$$}$$
+$$A_i A_j\subseteq A_{i+j}\qquad\text{for all $i,j\in I$}$$
 
 을 만족한다면 $$A$$를 $$I$$로 index가 주어진 *graded ring<sub>등급환</sub>*이라 부른다. $$A_i$$에 속한 원소를 *homogeneous element<sub>동차원소</sub>*라 부른다.
 
@@ -109,15 +109,15 @@ $$\alpha_n\x^n +\cdots+\alpha_1\x+\alpha_0\quad \mapsto\quad \alpha_n+\cdots+\al
 
 $$A$$의 원소로서, $$\mathfrak{a}$$의 모든 원소들은 homogeneous element들의 합으로 유일하게 나타난다. 따라서 처음 두 조건이 동치인 것은 자명하며, 1번 조건이 3번 조건을 함의하는 것 또한 자명하다. 이제 세 번째 조건을 가정하고 두 번째 조건을 증명한다. $$\mathfrak{a}$$가 homogeneous element들 $$(x_j)_{j\in J}$$로 생성된다 가정하자. 그럼 임의의 $$x\in \mathfrak{a}$$가 다음의 식
 
-$$x=\sum_{j\in J} \alpha_j x_j,\qquad\text{$$(\alpha_j)_{j\in J}$$ finitely supported}$$
+$$x=\sum_{j\in J} \alpha_j x_j,\qquad\text{$(\alpha_j)_{j\in J}$ finitely supported}$$
 
 으로 나타난다. 이제 $$\alpha_j$$들 각각은 다시 $$A$$의 원소로서 homogeneous element들의 합
 
-$$\alpha_j=\sum_{k\in K_j} \alpha_{jk},\qquad \text{$$(\alpha_{jk})_{k\in K_j}$$ finitely supported}$$
+$$\alpha_j=\sum_{k\in K_j} \alpha_{jk},\qquad \text{$(\alpha_{jk})_{k\in K_j}$ finitely supported}$$
 
 으로 나타난다. 따라서
 
-$$x=\sum_{j\in J}\sum_{k\in K_j}\alpha_{jk}x_j,\qquad \text{$$(\alpha_{jk})_{j\in J,k\in K_j}$$ finitely supported}$$
+$$x=\sum_{j\in J}\sum_{k\in K_j}\alpha_{jk}x_j,\qquad \text{$(\alpha_{jk})_{j\in J,k\in K_j}$ finitely supported}$$
 
 이고, $$\alpha_{jk}x_j$$들은 모두 각각 homogeneous element들이며 모두 $$\mathfrak{a}$$에 속한다. 이로부터 2번 조건을 보일 수 있다.
 

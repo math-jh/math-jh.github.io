@@ -25,13 +25,13 @@ weight: 4
 
 우선 우리는 기존에 위상수학에서 정의하던 projective space를 간단히 살펴본다. 위상공간 $$\mathbb{P}^n$$을 만들기 위해 우리는 위상공간 $$\mathbb{R}^{n+1}\setminus \{0\}$$을 생각했다. 그럼 이 위에 다음의 동치관계
 
-$$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$$x_i=\lambda y_i$$ for some $$\lambda\neq 0$$, for all $$i$$}$$
+$$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$x_i=\lambda y_i$ for some $$\lambda\neq 0$$, for all $$i$$}$$
 
 를 정의하면 projective space $$\mathbb{P}^n$$은 quotient space $$(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$$으로 정의되는 위상공간이며, $$(x_0,\ldots, x_n)$$을 포함하는 동치류를 표기의 편의를 위해 $$[x_0:x_1:\cdots:x_n]$$으로 표기한다. 
 
 이 때, canonical projection $$\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$$를 생각하자. 그럼 $$\mathbb{P}^n$$의 한 점 $$[x_0:x_1:\cdots:x_n]$$의 fiber는 그 정의에 의하여
 
-$$\{(y_0,\ldots, y_n)\mid\text{$$x_i=\lambda y_i$$ for some $$\lambda\neq 0$$, for all $$i$$}\}$$
+$$\{(y_0,\ldots, y_n)\mid\text{$x_i=\lambda y_i$ for some $$\lambda\neq 0$$, for all $$i$$}\}$$
 
 즉 원점과 $$(x_0,\ldots, x_n)$$을 지나는 직선 위의 점들 중, 원점을 제외한 점들의 집합으로 주어진다. 이 때문에 $$\mathbb{P}^n$$은 종종 $$\mathbb{R}^{n+1}$$에서의 직선들의 공간으로 생각되기도 한다.
 
@@ -55,7 +55,7 @@ $$U_i=\{[x_0:\cdots:x_n]\in \mathbb{P}^n\mid x_i\neq 0\}$$
 
 명시적으로 위의 identification $$U_i\cong P_i$$는 다음의 식
 
-$$[x_0:\cdots:x_n]\text{ in $$U_i\subseteq \mathbb{P}^n$$}\leftrightarrow\left(\frac{x_0}{x_i},\ldots, \frac{x_{i-1}}{x_i},1,\frac{x_{i+1}}{x_i},\ldots, \frac{x_n}{x_i}\right)\text{ in $$P_i\subseteq \mathbb{R}^{n+1}$$}$$
+$$[x_0:\cdots:x_n]\text{ in $U_i\subseteq \mathbb{P}^n$}\leftrightarrow\left(\frac{x_0}{x_i},\ldots, \frac{x_{i-1}}{x_i},1,\frac{x_{i+1}}{x_i},\ldots, \frac{x_n}{x_i}\right)\text{ in $P_i\subseteq \mathbb{R}^{n+1}$}$$
 
 으로 표현된다. 한편, [§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10)의 과정은 이 과정을 거꾸로 진행하는 것이다. 즉, $$n+1$$개의 $$n$$차원 평면 $$P_0,\ldots, P_n$$들이 먼저 주어져 있다 하고 이들을 cocycle condition을 만족하는 isomorphism들을 통해서 옮겨주는 것이다. 그럼 cocycle condition이 어떻게 쓰여져야 하는지는 정확히 위의 identification에 의해 $$\mathbb{P}^n$$의 한 점이 서로 다른 $$P_i$$와 $$P_j$$에서 어떻게 쓰여지는지를 살펴보아 얻어진다. 이를 살펴보자. 우선 $$P_i$$와 $$P_j$$의 임의의 점은 다음의 꼴
 
@@ -71,7 +71,7 @@ $$[x_{0/j}:\ldots: x_{(j-1)/j}: 1: x_{(j+1)/j}: \ldots: x_{n/j}]$$
 
 과 같기 위해서는 다음의 식
 
-$$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $$k\neq i,j$$},\qquad\text{and}\qquad x_{i/j}=1/x_{j/i}$$
+$$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad x_{i/j}=1/x_{j/i}$$
 
 이 성립해야 한다. 마찬가지로 $$P_j$$의 점을 $$P_i$$의 점에 맞추면 $$x_{k/j}/x_{i/j}=x_{k/i}$$와 같은 식도 얻어질 것이지만, 이는 $$x_{i/j}=1/x_{j/i}$$에 의해 새로운 식은 아니다. 
 
@@ -81,7 +81,7 @@ $$P_i=\Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
 
 를 생각하자. 그럼 $$P_i$$의 open subscheme들 $$P_{ij}=D(\x_{j/i})=(A^i)_{\x_{j/i}}$$과, 다음의 ring homomorphism
 
-$$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/\x_{i/j}\quad\text{for all $$k\neq i,j$$},\qquad\text{and}\qquad \x_{j/i}\mapsto 1/\x_{i/j}$$
+$$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/\x_{i/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad \x_{j/i}\mapsto 1/\x_{i/j}$$
 
 을 통해 정의되는 isomorphism $$\varphi_{ij}:P_{ij} \rightarrow P_{ji}$$들이 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 cocycle condition을 만족하는 것이 거의 자명하며 따라서 유일한 scheme $$\mathbb{P}^n$$이 정의되고, 이 때 $$\mathbb{P}^n$$의 원소들을 $$[x_0:\ldots:x_n]$$의 형태로 쓴다면 $$U_i$$는 정확히 $$x_i\neq 0$$인 조건을 만족하는 집합이다. 
 
@@ -127,7 +127,7 @@ $$A_+=\bigoplus_{i=1}^\infty A_i=A_1\oplus A_2\oplus\cdots$$
 
 <ins id="def1">**정의 1**</ins> Graded ring $$A_\bullet$$에 대하여, $$\Proj A_\bullet$$은 다음의 집합
 
-$$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$$\mathfrak{p}$$ is homogeneous and $$A_+\not\subset \mathfrak{p}$$}\}$$
+$$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogeneous and $$A_+\not\subset \mathfrak{p}$$}\}$$
 
 으로 정의된다.
 
@@ -167,7 +167,7 @@ $$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet\mid \mathfrak{a}\subseteq \
 
 1. $$\mathfrak{a}$$ 혹은 $$\mathfrak{b}$$를 포함하는 homogeneous prime ideal $$\mathfrak{p}$$는 그보다 작은 homogeneous ideal $$\mathfrak{ab}$$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $$\mathfrak{p}\supset \mathfrak{ab}$$라 가정하자. 만일 $$\mathfrak{p}\not\supseteq \mathfrak{b}$$라 하면, $$b\not\in \mathfrak{p}$$인 $$\mathfrak{b}$$의 원소 $$b$$를 찾을 수 있다. 그럼 $$\mathfrak{b}$$가 homogeneous이므로, 이를 homogeneous element들의 합으로 분해하여
     
-    $$b=b_1+\cdots b_n,\qquad \text{$$b_i\in \mathfrak{b}$$ homogeneous}$$
+    $$b=b_1+\cdots b_n,\qquad \text{$b_i\in \mathfrak{b}$ homogeneous}$$
 
     으로 쓸 수 있다. 한편, 임의의 homogeneous element $$a\in \mathfrak{a}$$에 대하여, $$ab\in \mathfrak{ab}\subseteq \mathfrak{p}$$이다. 한편 $$\mathfrak{ab}\subseteq \mathfrak{p}$$의 원소
 

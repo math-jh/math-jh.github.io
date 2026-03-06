@@ -150,7 +150,7 @@ $$x_ix_jx_i^{-1}x_j^{-1}=x_i\bigl(x_jx_i^{-1}x_j^{-1}\bigr)=\bigl(x_ix_jx_i^{-1}
 
 $$G$$가 $$H_i$$들의 internal weak direct product임을 보이기 위해서는 이렇게 유도된 $$\iota$$가 isomorphism인 것을 보여야 한다. 우선 1번 조건에 의해, 임의의 $$a\in G$$는 $$\bigcup H_i$$들의 *finite*한 operation들을 통해 얻어진다. 또 $$H_i$$들이 서로 commute하므로, $$a$$를 
 
-$$a=\prod_{i\in I} h_i=\prod_{i\in I}\iota_i(h_i),\qquad\text{$$\supp(h_i)$$ finite and $$h_i\in H_i$$}$$
+$$a=\prod_{i\in I} h_i=\prod_{i\in I}\iota_i(h_i),\qquad\text{$\supp(h_i)$ finite and $$h_i\in H_i$$}$$
 
 로 적을 수 있다. $$h=\prod_{i\in I} \iota_i(h_i)\in\prod^w H_i$$라 하면, 
 

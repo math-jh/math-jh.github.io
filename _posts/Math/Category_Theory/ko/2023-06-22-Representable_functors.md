@@ -56,7 +56,7 @@ $$\id_\Set(A)=A\rightarrow\Hom_\Set(\ast,A)$$
 
 <ins id="thm3">**정리 3 (Yoneda)**</ins> 임의의 functor $$F:\mathcal{A}\rightarrow\Set$$과, 임의의 $$A\in\obj(\mathcal{A})$$에 대하여, 집합 사이의 bijection
 
-$$\Phi:\{\text{natural transformations from $$\Hom_\mathcal{A}(A,-)$$ to $$F$$}\}\rightarrow F(A);\qquad \alpha\mapsto \alpha_A(\id_A)$$
+$$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(A,-)$ to $$F$$}\}\rightarrow F(A);\qquad \alpha\mapsto \alpha_A(\id_A)$$
 
 가 존재한다. 
 
@@ -88,7 +88,7 @@ $$\Psi(x)_X(f)=F(f)(x)$$
 
 <ins id="thm4">**정리 4 (Yoneda)**</ins> 임의의 contravariant functor $$F:\mathcal{A}\rightarrow\Set$$과, 임의의 $$A\in\obj(\mathcal{A})$$에 대하여, 집합 사이의 bijection
 
-$$\Phi:\{\text{natural transformations from $$\Hom_\mathcal{A}(-,A)$$ to $$F$$}\}\rightarrow F(A);\qquad \alpha\mapsto \alpha_A(\id_A)$$
+$$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(-,A)$ to $$F$$}\}\rightarrow F(A);\qquad \alpha\mapsto \alpha_A(\id_A)$$
 
 가 존재한다. 
 
@@ -112,7 +112,7 @@ $$\Phi:\{\text{natural transformations from $$\Hom_\mathcal{A}(-,A)$$ to $$F$$}\
 
 <ins id="ex6">**예시 6**</ins> 두 $$k$$-벡터공간 $$V,W$$를 고정하고, category $$\Vect_k$$에서 $$\Set$$으로의 functor $$\operatorname{Bilin}(V,W;-)$$을
 
-$$\operatorname{Bilin}(V,W;U)=\{\text{bilinear maps from $$V\times W$$ to $$U$$}\}$$
+$$\operatorname{Bilin}(V,W;U)=\{\text{bilinear maps from $V\times W$ to $$U$$}\}$$
 
 으로 정의하자. 그럼 이 functor가 representable하다는 사실이 잘 알려져 있다. 즉 적당한 $$k$$-벡터공간 $$V\otimes W$$가 존재하여, 다음 natural isomorphism
 
@@ -157,7 +157,7 @@ $$F$$가 representable하다면 $$F\cong\Hom_\mathcal{A}(A,-)$$이도록 하는 
 
 이제 $$\int F$$가 initial object $$(A,x)$$를 갖는다 하고 이로부터 natural isomorphism $$\Hom_\mathcal{A}(A,-)\Rightarrow F$$를 만들어야 한다. 우선 [정리 3](#thm3)로부터, 우리는 bijection
 
-$$\Phi:\{\text{natural transformations from $$\Hom_\mathcal{A}(A,-)$$ to $$F$$}\}\rightarrow F(A)$$
+$$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(A,-)$ to $$F$$}\}\rightarrow F(A)$$
 
 이 존재함을 알고 있으며, 이것이 bijection임을 증명하기 위해서 우리는 $$x\in F(A)$$마다 정의되는 natural transformation $$\Psi(x):\Hom_\mathcal{A}(A,-)\Rightarrow F$$를 다음 식
 

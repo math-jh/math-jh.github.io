@@ -71,7 +71,7 @@ $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
 <ins id="cor3">**따름정리 3**</ins> Symmetric non-degenerate bilinear form $$\langle -,-\rangle$$이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 임의의 $$f\in V^\ast$$가 주어질 때마다, 적당한 $$w\in V$$가 유일하게 존재하여 
 
-$$f(v)=\langle v,w\rangle\qquad\text{for all $$v\in V$$}$$
+$$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 
 이 성립한다.
 
@@ -123,7 +123,7 @@ $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(
 
 한편, 이렇게 정의한 $$L':W\rightarrow V$$는 다음 식
 
-$$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $$v\in V$$ and $$w\in W$$}\tag{1}$$
+$$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and $$w\in W$$}\tag{1}$$
 
 을 만족하는 것을 알 수 있다. 이는
 
@@ -162,7 +162,7 @@ $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
 <ins id="def6">**정의 6**</ins> Field $$\mathbb{K}$$가 다음의 조건
 
-$$\underbrace{1+1+\cdots+1}_\text{$$p$$ times}=0$$
+$$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
 
 을 만족한다면 $$\mathbb{K}$$의 *characteristic<sub>표수</sub>*이 $$p$$라고 하고 이를 $$\ch \mathbb{K}=p$$로 표기한다. 만일 위의 식을 만족하는 자연수 $$p$$가 존재하지 않는다면 $$\mathbb{K}$$는 characteristic 0을 갖는 것으로 생각한다.
 

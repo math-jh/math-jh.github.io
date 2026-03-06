@@ -138,11 +138,11 @@ $$(xx')MM'=(xM)(x'M)\subseteq MM',\qquad (x+x')MM'\subseteq xMM'+M(x'M')\subsete
 
 이제 우리는 아주 유용한 보조정리를 증명한다. 우선 ring $$A$$의 임의의 ideal $$\mathfrak{a}$$에 대하여, $$\mathfrak{a}$$의 *nilradical<sub>영근기</sub>* $$\sqrt{(0)}$$은 다음 식
 
-$$\sqrt{(0)}=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ prime} \mathfrak{p}$$
+$$\sqrt{(0)}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime} \mathfrak{p}$$
 
 으로 주어지는 것을 기억하자. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra//ko/math/commutative_algebra/properties_of_localization#cor8)) 비슷한 식으로 $$A$$의 *Jacobson radical<sub>제이콥슨 근기</sub>*를 다음 식
 
-$$J(A)=\bigcap_\text{\scriptsize$$\mathfrak{m}$$ maximal} \mathfrak{m}$$
+$$J(A)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
 으로 정의한다.
 

@@ -29,15 +29,15 @@ weight: 118
 
 우리는 임의의 주어진 벡터 $$y$$를 $$\im A$$로 사영한 후, 이 벡터 $$y'=\proj_{\im(A)}y$$에 대해 방정식 $$Ax=y'$$를 풀 것이다. 그런데 앞선 글에서 우리는 $$y-y'\in (\im A)^\perp$$임을 알고 있으므로
 
-$$\langle y-y', v\rangle=0\qquad\text{for all $$v\in \im A$$}$$
+$$\langle y-y', v\rangle=0\qquad\text{for all $v\in \im A$}$$
 
 임을 안다. 따라서 다음의 식
 
-$$\langle y-y', Au\rangle=0\qquad\text{for all $$u\in \mathbb{R}^n$$}$$
+$$\langle y-y', Au\rangle=0\qquad\text{for all $u\in \mathbb{R}^n$}$$
 
 을 얻는다. 이제 $$A$$를 왼쪽으로 넘겨주면
 
-$$\langle A^t(y-y'), u\rangle=0\qquad\text{for all $$u\in\mathbb{R}^n$$}$$
+$$\langle A^t(y-y'), u\rangle=0\qquad\text{for all $u\in\mathbb{R}^n$}$$
 
 이고, $$\langle-,-\rangle$$이 non-degenerate인 것으로부터 $$A^t(y-y')=0$$임을 안다. 이제 $$y'=Ax$$이므로, 우리는 방정식
 

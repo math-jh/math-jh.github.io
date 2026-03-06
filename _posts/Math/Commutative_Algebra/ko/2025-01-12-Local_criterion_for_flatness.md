@@ -133,7 +133,7 @@ $$\cdots \rightarrow F_2/aF_2 \rightarrow F_1/aF_1 \rightarrow F_0/aF_0 \rightar
 
 를 생각하자. 그럼 이 complex의 호몰로지는
 
-$$\Tor_i^A(A/(a), M)=\begin{cases} M/aM&\text{if $$i=0$$}\\ 0&\text{otherwise}\end{cases}$$
+$$\Tor_i^A(A/(a), M)=\begin{cases} M/aM&\text{if $i=0$}\\ 0&\text{otherwise}\end{cases}$$
 
 로 주어지므로, 이는 $$M/aM$$의 free resolution이 된다. 따라서 $$\Tor_i^{A/(a)}(N, M/aM)$$을 예산하기 위해서 (2)를 사용하면 다음의 isomorphism
 

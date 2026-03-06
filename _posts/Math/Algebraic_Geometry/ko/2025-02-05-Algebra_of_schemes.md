@@ -72,7 +72,7 @@ $$\mathscr{O}_X(U)\hookrightarrow\prod_{x\in U} \mathscr{O}_{X,x}$$
 
 $$\Spec A$$가 irreducible인 것은 이 공간의 임의의 두 basis $$D(f),D(g)\neq\emptyset$$에 대하여 $$D(fg)\neq\emptyset$$인 것과 동치이다. 그런데 다음 동치관계
 
-$$D(f)\neq\emptyset\iff f\not\in \mathfrak{p}\text{ for some $$\mathfrak{p}$$}\iff f\not\in \mathfrak{N}(A)$$
+$$D(f)\neq\emptyset\iff f\not\in \mathfrak{p}\text{ for some $\mathfrak{p}$}\iff f\not\in \mathfrak{N}(A)$$
 
 로부터, ([\[대수적 구조\] §분수체, ⁋명제 14](/ko/math/algebraic_structures/field_of_fractions#prop14)) 명제 $$D(f),D(g)\neq\emptyset\implies D(fg)\not\in\emptyset$$은 다음 명제
 
@@ -226,7 +226,7 @@ Integral scheme과 비슷하게 다음을 정의할 수 있다.
 
 우선 임의의 $$g\in A$$와 prime ideal $$\mathfrak{q}\in \Spec A$$에 대하여
 
-$$\mathfrak{q}\in \supp(g)\iff g_\mathfrak{q}\neq 0\text{ in $$A_\mathfrak{q}$$}\iff \ann(g_\mathfrak{q})\neq A_\mathfrak{q}$$
+$$\mathfrak{q}\in \supp(g)\iff g_\mathfrak{q}\neq 0\text{ in $A_\mathfrak{q}$}\iff \ann(g_\mathfrak{q})\neq A_\mathfrak{q}$$
 
 이 성립한다. 그런데 [\[가환대수학\] §국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여
 
@@ -268,11 +268,11 @@ $$X= Z(\x_2^2,\x_1\x_2)=Z(\x_2^2)\cap Z(\x_1\x_2)=\{(0,0)\}$$
 
 이제 우리는 스킴 위에서 정의된 유리함수를 정의한다. 우선 [\[가환대수학\] §동반소아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/associated_primes#cor4)의 둘쨰 결과에 의하여 다음의 함수
 
-$$A \rightarrow \prod_\text{\scriptsize $$\mathfrak{p}$$ associated prime} A_\mathfrak{p}$$
+$$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\mathfrak{p}$$
 
 는 injective인 것을 안다. 따라서 locally noetherian scheme $$X$$의 임의의 열린집합 $$U$$에 대하여 다음의 함수
 
-$$\Gamma(U, \mathscr{O}_X) \rightarrow \prod_\text{\scriptsize $$x$$ associated in $$U$$} \mathscr{O}_{X,x}\tag{$$\ast$$}$$
+$$\Gamma(U, \mathscr{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $$U$$} \mathscr{O}_{X,x}\tag{$$\ast$$}$$
 
 가 injective이다. 
 

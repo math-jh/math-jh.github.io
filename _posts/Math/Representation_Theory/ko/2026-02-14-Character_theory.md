@@ -99,7 +99,7 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g)
 
 앞선 글에서 살펴봤듯, 임의의 representation $$U$$에 대하여, 다음의 fixed point들의 subspace
 
-$$U^G=\{u\in U\mid g\cdot u=u\text{ for all $$g\in G$$}\}$$
+$$U^G=\{u\in U\mid g\cdot u=u\text{ for all $g\in G$}\}$$
 
 가 존재하며, 이 때
 
@@ -127,7 +127,7 @@ $$\dim U^G=\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\ri
 
 더 일반적으로, 우리는 [§유한군의 표현론, ⁋정의 3](/ko/math/representation_theory/representations_of_finite_groups#def3)에서 임의의 $$G$$-representation $$V,W$$에 대하여, 이들의 (underlying $$\mathbb{C}$$-벡터공간으로서의) $$\Hom$$-set $$\Hom_\mathbb{C}(V,W)$$에 $$G$$-action
 
-$$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $$v\in V$$}$$
+$$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
 
 을 정의하였다. 그럼 다음의 식
 
@@ -147,7 +147,7 @@ $$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_V(g)}\rch
 
 으로 쓸 수 있다. 한편, 마지막으로 $$V,W$$가 irreducible representation들이라 가정하면 $$\Hom_G(V,W)$$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $$V\cong W$$라면 $$1$$차원, 그렇지 않다면 $$0$$차원이므로
 
-$$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $$V\cong W$$,}\\0&\text{otherwise}\end{cases}$$
+$$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
 이고 이로부터 다음의 식
 
@@ -169,7 +169,7 @@ $$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in X}\delta_g(x)x\rig
 
 이제 $$\mathbb{C}[G]$$를 분해하기 위해 regular representation의 character theory를 생각한다. 위와 같이 $$\mathbb{C}[G]$$를 $$g\in G$$들(정확히는 $$\delta_g$$들)을 basis로 갖는 벡터공간으로 보고, 이를 통해 regular representation $$\rho_\reg$$가 주는 각각의 linear operator $$\rho_\reg(g)$$를 행렬로 나타내어 그 trace를 생각하면
 
-$$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $$g=e$$}\\0&\text{otherwise}\end{cases}\tag{2}$$
+$$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{otherwise}\end{cases}\tag{2}$$
 
 이다. 이제 만일 $$V_i$$가 $$\mathbb{C}[G]$$의 irreducible subrepresentation이라면,
 
@@ -306,7 +306,7 @@ $$\rchi_0=(1,1,1),\qquad \rchi_\sgn=(1,-1,1),\qquad \rchi_\std=(2,0,-1)$$
 
 우리는 regular representation의 character의 계산으로부터
 
-$$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $$g=e$$}\\0&\text{otherwise}\end{cases}$$
+$$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
 
 임을 안다. (식 (2)) 이는 반드시 위의 세 character들의 $$\mathbb{Z}^{\geq 0}$$-linear combination이어야 할 것이며 실제로 
 

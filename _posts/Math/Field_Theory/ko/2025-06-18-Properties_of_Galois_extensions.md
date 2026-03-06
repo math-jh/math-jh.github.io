@@ -29,7 +29,7 @@ $$U_{x,y}=\left\{\sigma\mid\sigma(x)=y \right\}$$
 
 로 쓸 수 있는 집합들의 모임임을 알고 있으므로, $$\Gal(\mathbb{L}/\mathbb{K})$$에 subspace topology를 부여하면 임의의 $$\sigma\in\Gal(\mathbb{L}/\mathbb{K})$$에 대하여 다음과 같은 형태
 
-$$U_{x_1,\ldots,x_n}=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \text{$$\tau(x_i)=\sigma(x_i)$$ for all $$i$$}\right\}$$
+$$U_{x_1,\ldots,x_n}=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \text{$\tau(x_i)=\sigma(x_i)$ for all $$i$$}\right\}$$
 
 의 집합들의 모임이 $$\sigma$$에서의 local base임을 안다. ([\[위상수학\] §위상공간의 기저, ⁋정의 4](/ko/math/topology/topological_bases#def4)) 
 
@@ -151,7 +151,7 @@ $$i\leq j \iff \mathbb{L}_i\subset \mathbb{L}_j$$
 
 를 주고, 이러한 partial order 하에서 다음의 restriction map들
 
-$$\rho_{ij}:\Gal(\mathbb{L}_j/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_i/\mathbb{K})\qquad \text{whenever $$i\leq j$$}$$
+$$\rho_{ij}:\Gal(\mathbb{L}_j/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_i/\mathbb{K})\qquad \text{whenever $i\leq j$}$$
 
 을 정의할 수 있다. 그럼 이들은 contunuous homomorphism이며, 따라서 이들의 inverse limit
 

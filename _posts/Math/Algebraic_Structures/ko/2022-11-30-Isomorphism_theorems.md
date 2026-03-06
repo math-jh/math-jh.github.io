@@ -148,7 +148,7 @@ $$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 
 우선 coequalizer의 universal property를 생각하면, $$q:H\rightarrow\CoEq(f,g)$$는 $$q\circ f=q\circ g$$를 만족하는 것들 중 initial인 것이다. 만일 우리가 $$\Set$$에서 이러한 상황을 마주쳤다면 $$H$$ 위에 equivalence relation $$\sim$$을
 
-$$f(x)\sim g(x)\qquad\text{for all $$x\in G$$}$$
+$$f(x)\sim g(x)\qquad\text{for all $x\in G$}$$
 
 에 의해 생성되는 relation으로 준 후, projection $$H\rightarrow H/{\sim}$$을 생각하면 이것이 coequalizer가 될 것이나 $$\Grp$$에서는 위에서 정의한 $$\sim$$이 $$H$$의 group operation과 compatible한지를 알 수 없다. 즉 다음 subset
 

@@ -20,7 +20,7 @@ weight: 201
 
 임의의 group $$H$$와 ring $$A$$가 주어졌을 때, 우리는 group ring $$AH$$를 정의하였다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 이제 $$AH$$-module $$M$$을 고정하고, $$M^H$$를 다음의 집합
 
-$$M^H=\left\{x\in M\mid \text{$$hx=x$$ for all $$h\in H$$}\right\}$$
+$$M^H=\left\{x\in M\mid \text{$hx=x$ for all $$h\in H$$}\right\}$$
 
 으로 정의하자. 여기서 $$hx$$는 당연히, $$h\mapsto \delta_h$$를 통해 $$h$$를 $$AH$$의 원소로 본 후, $$AH$$-module 구조를 이용하여 정의된 것이다. 그럼 $$M^H$$는 $$M$$의 $$A$$-submodule이지만, group $$H$$가 commutative가 아니라면 일반적으로 $$AH$$-submodule이 되지는 않는다. 또, 만일 $$H$$의 subgroup $$G$$가  주어졌다면 $$M^H\leq M^G$$임이 자명하다. 
 
@@ -78,7 +78,7 @@ $$\sigma(x_1\otimes x_2\otimes \cdots \otimes x_n)=x_{\sigma^{-1}(1)}\otimes \cd
 
 <ins id="def3">**정의 3**</ins> 위와 같은 상황에서, 
 
-$$\sigma z=z\qquad\text{for all $$\sigma\in S_n$$}$$
+$$\sigma z=z\qquad\text{for all $\sigma\in S_n$}$$
 
 을 만족하는 $$z\in \T^nM$$들을 $$n$$th *symmetric tensor<sub>대칭텐서</sub>*라 부르고, 이들의 모임 $$\Sym^n(M)$$을 $$n$$-th *symmetric power*라 부른다. 이들의 (graded) direct sum을
 
@@ -163,7 +163,7 @@ $$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=(x_
 
 을 얻을 것이며 특히 $$n=3$$인 경우에는 이로부터 $$\Sym(M)$$의 associativity가 보여진다. Commutativity의 경우, $$\sigma$$를 $$p_1+p_2$$개의 원소 중, 앞의 $$p_1$$개의 원소와 뒤의 $$p_2$$개의 원소를 다음의 꼴
 
-$$\underbrace{p_2+1,\cdots p_2+p_1}_\text{\scriptsize$$p_1$$ elements},\qquad \underbrace{1,\ldots, p_2}_\text{\scriptsize$$p_2$$ elements}$$
+$$\underbrace{p_2+1,\cdots p_2+p_1}_\text{\scriptsize$p_1$ elements},\qquad \underbrace{1,\ldots, p_2}_\text{\scriptsize$p_2$ elements}$$
 
 로 배열하는 $$\sigma\in S_{p_1+p_2}$$를 사용하여 [명제 2](#prop2)의 첫째 결과를 사용하면 된다. Unit은 당연하게 $$1\in \Sym^0(M)$$이다.
 
@@ -171,7 +171,7 @@ $$\underbrace{p_2+1,\cdots p_2+p_1}_\text{\scriptsize$$p_1$$ elements},\qquad \u
 
 임의의 $$x\in M$$과 $$k\in \mathbb{N}$$에 대하여, 
 
-$$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $$k$$ times}$$
+$$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$$
 
 으로 정의하자. 그럼 위의 명제를 사용하여 계산하면 다음의 따름정리를 얻는다.
 
