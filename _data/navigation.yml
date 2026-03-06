@@ -3,7 +3,7 @@ main:
   - title: "카테고리"
     url: ko/categories/
     lang: ko
-  - title: "Category"
+  - title: "Categories"
     url: en/categories/
     lang: en
 
@@ -636,7 +636,7 @@ set_theory-en:
         url: en/math/set_theory/limits
   - title: 
     children:
-      - title: "블로그 소개"
+      - title: "About This Site"
         url: en/about
 
 symplectic_geometry-ko:
