@@ -1,0 +1,36 @@
+---
+layout: archive
+---
+
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+  {% assign lang_full = lang_prefix | append: "/" %}
+{% endif %}
+
+{{ content }}
+
+<ul class="taxonomy__index">
+{% for ordered_cat in site.categories-ko_order %}
+  {% assign posts=site.categories[ordered_cat] | where_exp: "post", "post.permalink contains lang_full" %}
+  <li>
+    <a href="#{{ ordered_cat | slugify }}">
+      <strong>{{ ordered_cat }}</strong> <span class="taxonomy__count">{{ posts.size }}</span>
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+{% assign entries_layout = page.entries_layout | default: 'list'%}
+{% for ordered_cat in site.categories-ko_order %}
+  {% assign posts=site.categories[ordered_cat] | where_exp: "post", "post.permalink contains lang_full"  | sort: 'weight' | reverse %}
+   <section id="{{ ordered_cat | slugify }}" class="taxonomy__section">
+     <h2 class="archive__subtitle">{{ ordered_cat }}</h2>
+     <div class="entries-{{ entries_layout }}">
+       {% for post in posts reversed %}
+         {% include archive-single.html type=entries_layout %}
+       {% endfor %}
+     </div>
+     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[lang].back_to_top | default: 'Back to Top' }} &uarr;</a>
+   </section>
+{% endfor %}
