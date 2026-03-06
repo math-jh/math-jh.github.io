@@ -1,6 +1,6 @@
 ---
 title: "카테고리별 글 목록"
-layout: categories
+layout: categories-ko
 permalink: /ko/categories/
 author_profile: true
 sidebar: 

@@ -1,6 +1,6 @@
 ---
 title: "Categories"
-layout: categories
+layout: categories-en
 permalink: /en/categories/
 author_profile: true
 sidebar: 

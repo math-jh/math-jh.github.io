@@ -11,7 +11,7 @@ layout: archive
 {{ content }}
 
 <ul class="taxonomy__index">
-{% for ordered_cat in site.categories_order %}
+{% for ordered_cat in site.categories-en_order %}
   {% assign posts=site.categories[ordered_cat] | where_exp: "post", "post.permalink contains lang_full" %}
   <li>
     <a href="#{{ ordered_cat | slugify }}">
@@ -22,7 +22,7 @@ layout: archive
 </ul>
 
 {% assign entries_layout = page.entries_layout | default: 'list'%}
-{% for ordered_cat in site.categories_order %}
+{% for ordered_cat in site.categories-en_order %}
   {% assign posts=site.categories[ordered_cat] | where_exp: "post", "post.permalink contains lang_full"  | sort: 'weight' | reverse %}
    <section id="{{ ordered_cat | slugify }}" class="taxonomy__section">
      <h2 class="archive__subtitle">{{ ordered_cat }}</h2>
