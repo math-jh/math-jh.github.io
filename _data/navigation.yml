@@ -588,9 +588,55 @@ set_theory-en:
         url: en/math/set_theory/ordered_pair
       - title: "Binary Relations"
         url: en/math/set_theory/binary_relation
+      - title: "Operations on Binary Relations"
+        url: en/math/set_theory/operation_of_binary_relations
+      - title: "Functions"
+        url: /en/math/set_theory/functions
+      - title: "Operations on Functions"
+        url: en/math/set_theory/operation_of_functions
+      - title: "Retractions and Sections"
+        url: en/math/set_theory/retraction_and_section
+      - title: "Unions and Intersections"
+        url: en/math/set_theory/union_and_intersection
+      - title: "Sum of Sets"
+        url: en/math/set_theory/sum_of_sets
+      - title: "Products of Sets"
+        url: en/math/set_theory/product_of_sets
+      - title: "Properties of Products"
+        url: en/math/set_theory/property_of_products
+      - title: "Equivalence Relations"
+        url: en/math/set_theory/equivalence_relations
+      - title: "Examples of Equivalence Relations"
+        url: en/math/set_theory/examples_of_equivalence
+      - title: "Order Relations"
+        url: en/math/set_theory/order_relations
+      - title: "Monotone Functions"
+        url: en/math/set_theory/monotone_functions
+      - title: "Elements in Ordered Sets"
+        url: en/math/set_theory/elements_in_ordered_set
+      - title: "Directed Sets"
+        url: en/math/set_theory/directed_set
+      - title: "Filters, Ideals, and Galois Connections"
+        url: en/math/set_theory/filter_and_ideal
+      - title: "Ordinals and Well-Ordered Sets"
+        url: en/math/set_theory/ordinals
+      - title: "Properties of Well-Ordered Sets"
+        url: en/math/set_theory/well_ordering
+      - title: "Axiom of Choice"
+        url: en/math/set_theory/axiom_of_choice
+      - title: "Order Relations Between Ordinals"
+        url: en/math/set_theory/order_relations_between_ordinals
+      - title: "Cardinals"
+        url: en/math/set_theory/cardinals
+      - title: "Operations on Cardinals"
+        url: en/math/set_theory/operation_of_cardinals
+      - title: "Natural Numbers and Infinite Sets"
+        url: en/math/set_theory/natural_numbers
+      - title: "Limits"
+        url: en/math/set_theory/limits
   - title: 
     children:
-      - title: "About"
+      - title: "블로그 소개"
         url: en/about
 
 symplectic_geometry-ko:

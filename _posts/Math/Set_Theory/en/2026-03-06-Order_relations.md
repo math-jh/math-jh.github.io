@@ -9,7 +9,7 @@ header:
     overlay_image: /assets/images/Math/Set_Theory/Order_relations.png
     overlay_filter: 0.5
 sidebar: 
-    nav: "set_theory-ko"
+    nav: "set_theory-en"
 
 date: 2021-08-22
 last_modified_at: 2022-11-27
