@@ -23,7 +23,7 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $G$의 representation $\rho:G\rightarrow\Aut(V)$에 대응하는 *character<sub>지표</sub>* $\rchi_\rho:G\rightarrow\mathbb{C}$를
+<ins id="def1">**정의 1**</ins> $$G$$의 representation $$\rho:G\rightarrow\Aut(V)$$에 대응하는 *character<sub>지표</sub>* $$\rchi_\rho:G\rightarrow\mathbb{C}$$를
 
 $$\rchi_\rho(g)=\tr(\rho(g))$$
 
@@ -31,7 +31,7 @@ $$\rchi_\rho(g)=\tr(\rho(g))$$
 
 </div>
 
-즉, 각각의 $g\in G$를 받아서 이것이 정의하는 linear map $\rho(g):V\rightarrow V$의 trace를 내 주는 것이 이 함수가 하는 일이다. 앞으로 살펴보겠지만, 이 함수는 $G$의 representation을 설명하는데 큰 역할을 한다. 가령, 당장 볼 수 있는 것은 이 함수가 $V$의 차원을 담고 있는 것이다. 
+즉, 각각의 $$g\in G$$를 받아서 이것이 정의하는 linear map $$\rho(g):V\rightarrow V$$의 trace를 내 주는 것이 이 함수가 하는 일이다. 앞으로 살펴보겠지만, 이 함수는 $$G$$의 representation을 설명하는데 큰 역할을 한다. 가령, 당장 볼 수 있는 것은 이 함수가 $$V$$의 차원을 담고 있는 것이다. 
 
 $$\rchi_\rho(e)=\tr(\rho(e))=\tr(\id_V)=\dim V.$$
 
@@ -39,15 +39,15 @@ $$\rchi_\rho(e)=\tr(\rho(e))=\tr(\id_V)=\dim V.$$
 
 $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 
-이 주어졌을 때 이들의 direct sum $L_V\oplus L_W: V\oplus W\rightarrow V\oplus W$, 이들의 tensor product $L_V\otimes L_W: V\otimes W \rightarrow V\otimes W$ 등이 어떻게 정의되는지 알고 있고, 이들의 trace가 어떻게 되는지 또한 (가령 행렬로 두고 계산하면) 알고 있다. 이로부터 다음의 명제를 얻는다. 
+이 주어졌을 때 이들의 direct sum $$L_V\oplus L_W: V\oplus W\rightarrow V\oplus W$$, 이들의 tensor product $$L_V\otimes L_W: V\otimes W \rightarrow V\otimes W$$ 등이 어떻게 정의되는지 알고 있고, 이들의 trace가 어떻게 되는지 또한 (가령 행렬로 두고 계산하면) 알고 있다. 이로부터 다음의 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> Representation $V, W$에 대해 다음이 성립한다. 
+<ins id="prop2">**명제 2**</ins> Representation $$V, W$$에 대해 다음이 성립한다. 
 
-1. $\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$
-2. $\rchi_{V\otimes W}=\rchi_V\rchi_W$
-3. $\rchi_{V^\ast}=\overline{\rchi}_V$
+1. $$\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$$
+2. $$\rchi_{V\otimes W}=\rchi_V\rchi_W$$
+3. $$\rchi_{V^\ast}=\overline{\rchi}_V$$
 
 </div>
 
@@ -65,19 +65,19 @@ $$\rchi_V=a_1\rchi_{V_1}+\cdots+a_r\rchi_{V_r}$$
 
 $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g)$$
 
-가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5)), 우리는 이로부터 $\rchi_\rho$가 $G$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
+가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5)), 우리는 이로부터 $$\rchi_\rho$$가 $$G$$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 함수 $\rchi:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $\rchi(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. $G$ 위에 정의된 모든 class function들의 모임을 $\mathbb{C}_\class(G)$으로 적는다. 
+<ins id="def3">**정의 3**</ins> 함수 $$\rchi:G\rightarrow\mathbb{C}$$가 *class function<sub>유함수</sub>*이라는 것은 $$\rchi(hgh^{-1})=f(g)$$가 모든 $$g,h\in G$$에 대해 성립하는 것이다. $$G$$ 위에 정의된 모든 class function들의 모임을 $$\mathbb{C}_\class(G)$$으로 적는다. 
 
 </div>
 
-정의에 의해 class function들은 각 conjugacy class들 위에서의 함수값에 의해 결정되며, 따라서 벡터공간으로서 $\mathbb{C}\_\class(G)$는 $G$의 conjugacy class의 개수만큼의 차원을 갖는다. 한편 앞선 글에서 우리가 중요하게 생각했던 아이디어는 어떠한 값이 주어졌을 때, 이를 $G$ 전체에 대하여 평균내주어 $G$-invariant한 값을 얻어낼 수 있다는 것이었는데, 이를 이용하면 $\mathbb{C}\_\class(G)$ 위에 다음과 같은 정의를 해줄 수 있다. 
+정의에 의해 class function들은 각 conjugacy class들 위에서의 함수값에 의해 결정되며, 따라서 벡터공간으로서 $$\mathbb{C}\_\class(G)$$는 $$G$$의 conjugacy class의 개수만큼의 차원을 갖는다. 한편 앞선 글에서 우리가 중요하게 생각했던 아이디어는 어떠한 값이 주어졌을 때, 이를 $$G$$ 전체에 대하여 평균내주어 $$G$$-invariant한 값을 얻어낼 수 있다는 것이었는데, 이를 이용하면 $$\mathbb{C}\_\class(G)$$ 위에 다음과 같은 정의를 해줄 수 있다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 임의의 class function들 $\rchi_1,\rchi_2: G\rightarrow \mathbb{C}$에 대하여, 
+<ins id="def4">**정의 4**</ins> 임의의 class function들 $$\rchi_1,\rchi_2: G\rightarrow \mathbb{C}$$에 대하여, 
 
 $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g)\overline{\rchi_2(g)}$$
 
@@ -85,11 +85,11 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g
 
 </div>
 
-이는 단순히 target space $\mathbb{C}$에 정의된 standard Hermitian product를 $\mathbb{C}\_\class(G)$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $\rho$의 character $\rchi_\rho$에 대해서는, 임의의 $g\in G$에 대하여
+이는 단순히 target space $$\mathbb{C}$$에 정의된 standard Hermitian product를 $$\mathbb{C}\_\class(G)$$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $$\rho$$의 character $$\rchi_\rho$$에 대해서는, 임의의 $$g\in G$$에 대하여
 
 $$\rchi_\rho(g^{-1})=\tr(\rho(g^{-1}))=\tr(\rho(g)^{-1})=\tr(\rho(g)^\dagger)=\overline{\tr(\rho(g))}=\overline{\rchi_\rho(g)}$$
 
-이 성립하므로, 두 character $\rchi_1,\rchi_2$에 대해서는 다음 식
+이 성립하므로, 두 character $$\rchi_1,\rchi_2$$에 대해서는 다음 식
 
 $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g)\overline{\rchi_2(g)}=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g^{-1})\overline{\rchi_2(g^{-1})}=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_1(g)}\rchi_2(g)=\langle \rchi_2,\rchi_1\rangle$$
 
@@ -97,47 +97,47 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g)
 
 ## 지표의 직교성
 
-앞선 글에서 살펴봤듯, 임의의 representation $U$에 대하여, 다음의 fixed point들의 subspace
+앞선 글에서 살펴봤듯, 임의의 representation $$U$$에 대하여, 다음의 fixed point들의 subspace
 
-$$U^G=\{u\in U\mid g\cdot u=u\text{ for all $g\in G$}\}$$
+$$U^G=\{u\in U\mid g\cdot u=u\text{ for all $$g\in G$$}\}$$
 
 가 존재하며, 이 때
 
 $$p:U\rightarrow U^G;\qquad u\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot u$$
 
-이 $U$에서 $U$로의 $G$-invariant projection을 정의하고, 그 image는 $U^G$이다. 그 정의에 의하여, $U^G$ 위에 정의된 subrepresentation은 정확히 trivial representation
+이 $$U$$에서 $$U$$로의 $$G$$-invariant projection을 정의하고, 그 image는 $$U^G$$이다. 그 정의에 의하여, $$U^G$$ 위에 정의된 subrepresentation은 정확히 trivial representation
 
 $$G\rightarrow \Aut(U^G);\quad g\mapsto \id_{U_G}$$
 
-이므로, 우리는 이로부터 representation $U$를 trivial representation $U^G$와 그렇지 않은 부분 $W$로 분해하여
+이므로, 우리는 이로부터 representation $$U$$를 trivial representation $$U^G$$와 그렇지 않은 부분 $$W$$로 분해하여
 
 $$U=U^G\oplus W$$
 
 를 얻을 수 있다.
 
-뿐만 아니라, 우리는 $U^G$의 차원 또한 계산할 수 있다. 위의 decomposition에서 $U^G$와 $W$의 적절한 basis를 사용하여 이를 block matrix
+뿐만 아니라, 우리는 $$U^G$$의 차원 또한 계산할 수 있다. 위의 decomposition에서 $$U^G$$와 $$W$$의 적절한 basis를 사용하여 이를 block matrix
 
 $$\begin{pmatrix}\id_{U^G}&0\\0&0\end{pmatrix}$$
 
-의 꼴로 나타낼 수 있으므로 $\varphi: U\rightarrow U$의 trace는 $\dim U^G$와 같다. 이제 정의에 의하여,
+의 꼴로 나타낼 수 있으므로 $$\varphi: U\rightarrow U$$의 trace는 $$\dim U^G$$와 같다. 이제 정의에 의하여,
 
 $$\dim U^G=\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi(g)\tag{1}$$
 
 이다. 
 
-더 일반적으로, 우리는 [§유한군의 표현론, ⁋정의 3](/ko/math/representation_theory/representations_of_finite_groups#def3)에서 임의의 $G$-representation $V,W$에 대하여, 이들의 (underlying $\mathbb{C}$-벡터공간으로서의) $\Hom$-set $\Hom_\mathbb{C}(V,W)$에 $G$-action
+더 일반적으로, 우리는 [§유한군의 표현론, ⁋정의 3](/ko/math/representation_theory/representations_of_finite_groups#def3)에서 임의의 $$G$$-representation $$V,W$$에 대하여, 이들의 (underlying $$\mathbb{C}$$-벡터공간으로서의) $$\Hom$$-set $$\Hom_\mathbb{C}(V,W)$$에 $$G$$-action
 
-$$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
+$$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $$v\in V$$}$$
 
 을 정의하였다. 그럼 다음의 식
 
 $$\Hom_\mathbb{C}(V,W)^G=\Hom_G(V,W)$$
 
-이 성립하며, 따라서 식 (1)을 $U=\Hom(V,W)$와 그에 대응되는 trace map $\varphi$에 적용하면
+이 성립하며, 따라서 식 (1)을 $$U=\Hom(V,W)$$와 그에 대응되는 trace map $$\varphi$$에 적용하면
 
 $$\dim \Hom_G(V,W)=\tr(\varphi)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\Hom(V,W)}(g)$$
 
-임을 안다. 한편 $\Hom_G(V,W)=V^\ast\otimes W$임을 활용하면 우변의 character는 다음의 식
+임을 안다. 한편 $$\Hom_G(V,W)=V^\ast\otimes W$$임을 활용하면 우변의 character는 다음의 식
 
 $$\rchi_{\Hom_G(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
 
@@ -145,33 +145,33 @@ $$\rchi_{\Hom_G(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
 
 $$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_V(g)}\rchi_W(g)=\langle \rchi_W, \rchi_V\rangle$$
 
-으로 쓸 수 있다. 한편, 마지막으로 $V,W$가 irreducible representation들이라 가정하면 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
+으로 쓸 수 있다. 한편, 마지막으로 $$V,W$$가 irreducible representation들이라 가정하면 $$\Hom_G(V,W)$$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $$V\cong W$$라면 $$1$$차원, 그렇지 않다면 $$0$$차원이므로
 
-$$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
+$$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $$V\cong W$$,}\\0&\text{otherwise}\end{cases}$$
 
 이고 이로부터 다음의 식
 
 $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
-을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 irreducible character들은 orthonormal set이다. 우리는 $\mathbb{C}\_\class(G)$가 $G$의 conjugacy class들의 개수만큼의 차원을 가지고 있는 것을 알고 있으므로, 이로부터 irreducible representation들은 $G$의 conjugacy class의 개수보다 많을 수 없다는 것을 안다. 뿐만 아니라, 이 inner product를 사용하면 우리는 임의의 representation $V$의 character $\rchi\_V$와, 고정된 irreducible representation $V_i$의 character $\rchi_{V_i}$을 내적하여 $V$ 안에서 $V_i$의 multiplicity를 계산할 수 있다. 
+을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 irreducible character들은 orthonormal set이다. 우리는 $$\mathbb{C}\_\class(G)$$가 $$G$$의 conjugacy class들의 개수만큼의 차원을 가지고 있는 것을 알고 있으므로, 이로부터 irreducible representation들은 $$G$$의 conjugacy class의 개수보다 많을 수 없다는 것을 안다. 뿐만 아니라, 이 inner product를 사용하면 우리는 임의의 representation $$V$$의 character $$\rchi\_V$$와, 고정된 irreducible representation $$V_i$$의 character $$\rchi_{V_i}$$을 내적하여 $$V$$ 안에서 $$V_i$$의 multiplicity를 계산할 수 있다. 
 
 ## Regular representation
 
-이 섹션에서 우리는 지난 글에서 고려했던 Artin-Wedderburn decomposition ([§유한군의 표현론, 식 (1)](/ko/math/representation_theory/representations_of_finite_groups#cor7))을 character를 이용해 얻어낸다. 이를 위해, 우선 $\mathbb{C}[G]$는 자기자신 위에 정의된 left $\mathbb{C}[G]$-module이고 따라서 categorical equivalence
+이 섹션에서 우리는 지난 글에서 고려했던 Artin-Wedderburn decomposition ([§유한군의 표현론, 식 (1)](/ko/math/representation_theory/representations_of_finite_groups#cor7))을 character를 이용해 얻어낸다. 이를 위해, 우선 $$\mathbb{C}[G]$$는 자기자신 위에 정의된 left $$\mathbb{C}[G]$$-module이고 따라서 categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-로부터 $G$의 representation이기도 하다는 것을 관찰하자. 이는 단순히 $\mathbb{C}[G]$ 위에 정의된 module 구조, 즉 $\mathbb{C}[G]$의 ring으로서의 곱셈 구조를 $G$로 제한하여 얻어지는 것으로, 명시적으로 임의의 $g\in G$의 $\mathbb{C}[G]$에서의 image $\delta_g=\sum_{x\in X}\delta_g(x)x$를 사용하면
+로부터 $$G$$의 representation이기도 하다는 것을 관찰하자. 이는 단순히 $$\mathbb{C}[G]$$ 위에 정의된 module 구조, 즉 $$\mathbb{C}[G]$$의 ring으로서의 곱셈 구조를 $$G$$로 제한하여 얻어지는 것으로, 명시적으로 임의의 $$g\in G$$의 $$\mathbb{C}[G]$$에서의 image $$\delta_g=\sum_{x\in X}\delta_g(x)x$$를 사용하면
 
 $$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in X}\delta_g(x)x\right)\left(\sum_{y\in G}\phi(y)y\right)=\sum_{z\in G}\left(\sum_{x\in G}\delta_g(x)\phi(x^{-1}z)\right)z=\sum_{z\in G}\phi(g^{-1}z)z=\sum_{z\in G}\phi(z)(gz)$$
 
 으로 쓸 수 있고, 이러한 representation을 *regular representation*이라 부른다.
 
-이제 $\mathbb{C}[G]$를 분해하기 위해 regular representation의 character theory를 생각한다. 위와 같이 $\mathbb{C}[G]$를 $g\in G$들(정확히는 $\delta_g$들)을 basis로 갖는 벡터공간으로 보고, 이를 통해 regular representation $\rho_\reg$가 주는 각각의 linear operator $\rho_\reg(g)$를 행렬로 나타내어 그 trace를 생각하면
+이제 $$\mathbb{C}[G]$$를 분해하기 위해 regular representation의 character theory를 생각한다. 위와 같이 $$\mathbb{C}[G]$$를 $$g\in G$$들(정확히는 $$\delta_g$$들)을 basis로 갖는 벡터공간으로 보고, 이를 통해 regular representation $$\rho_\reg$$가 주는 각각의 linear operator $$\rho_\reg(g)$$를 행렬로 나타내어 그 trace를 생각하면
 
-$$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{otherwise}\end{cases}\tag{2}$$
+$$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $$g=e$$}\\0&\text{otherwise}\end{cases}\tag{2}$$
 
-이다. 이제 만일 $V_i$가 $\mathbb{C}[G]$의 irreducible subrepresentation이라면,
+이다. 이제 만일 $$V_i$$가 $$\mathbb{C}[G]$$의 irreducible subrepresentation이라면,
 
 $$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\mathbb{C}[G]}(g)\rchi_{V_i}(g)=\frac{1}{\lvert G\rvert} \rchi_{\mathbb{C}[G]}(e)\rchi_{V_i}(e)=\dim V_i$$
 
@@ -179,7 +179,7 @@ $$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
 
-을 얻는다. 뿐만 아니라 $\mathbb{C}[G]$는 자기 자신 위에 곱셈으로 작용하고, 이 작용 하에서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8) $V_i$는 $V_i$로만 간다는 것을 생각하면 각각의 $V_i^{\dim V_i}$이 정확하게 matrix algebra $\Mat_{d_i}(\mathbb{C})$라는 것을 알고,  Artin-Wedderburn theorem의 유일성으로부터 이것이 곧
+을 얻는다. 뿐만 아니라 $$\mathbb{C}[G]$$는 자기 자신 위에 곱셈으로 작용하고, 이 작용 하에서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8) $$V_i$$는 $$V_i$$로만 간다는 것을 생각하면 각각의 $$V_i^{\dim V_i}$$이 정확하게 matrix algebra $$\Mat_{d_i}(\mathbb{C})$$라는 것을 알고,  Artin-Wedderburn theorem의 유일성으로부터 이것이 곧
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
@@ -187,21 +187,21 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 ## Projection formula
 
-앞서 우리는 $\mathbb{C}\_\class(G)$ 안에서 irreducible representation들의 character가 orthonormal set을 이룬다는 것을 보았다. 이제 우리는 이들이 $\mathbb{C}\_\class(G)$의 orthonormal basis가 된다는 것을 보인다. 
+앞서 우리는 $$\mathbb{C}\_\class(G)$$ 안에서 irreducible representation들의 character가 orthonormal set을 이룬다는 것을 보았다. 이제 우리는 이들이 $$\mathbb{C}\_\class(G)$$의 orthonormal basis가 된다는 것을 보인다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> 임의의 함수 $\phi:G\rightarrow \mathbb{C}$와 임의의 representation $\rho:G\rightarrow\Aut(V)$이 주어졌다 하자. 
+<ins id="lem5">**보조정리 5**</ins> 임의의 함수 $$\phi:G\rightarrow \mathbb{C}$$와 임의의 representation $$\rho:G\rightarrow\Aut(V)$$이 주어졌다 하자. 
 
 $$\rho_\phi=\sum_{g\in G} \phi(g)\rho(g): V\rightarrow V$$
 
-으로 정의하면, $\rho_\phi$가 $G$-map인 것과 $\phi$가 class function인 것이 동치이다. 
+으로 정의하면, $$\rho_\phi$$가 $$G$$-map인 것과 $$\phi$$가 class function인 것이 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\rho_\phi$가 $G$-map이기 위해서는 임의의 $h\in G$와 임의의 $v\in V$에 대하여 다음 식
+$$\rho_\phi$$가 $$G$$-map이기 위해서는 임의의 $$h\in G$$와 임의의 $$v\in V$$에 대하여 다음 식
 
 $$\rho_\phi(h\cdot v)=h\cdot\rho_\phi(v)$$
 
@@ -209,7 +209,7 @@ $$\rho_\phi(h\cdot v)=h\cdot\rho_\phi(v)$$
 
 $$\rho_\phi(h\cdot v)=\sum_{g\in G}\phi(g)\rho(g)(h\cdot v)$$
 
-이며, 이 합을 $hgh^{-1}$에 대하여 취해도 같은 합이므로
+이며, 이 합을 $$hgh^{-1}$$에 대하여 취해도 같은 합이므로
 
 $$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(h\cdot v)=\sum_{g\in G}\phi(hgh^{-1})\rho(h)\rho(g)(v)=\rho(h)\left(\sum_{g\in G}\phi(hgh^{-1})\rho(g)v\right)$$
 
@@ -217,25 +217,25 @@ $$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(h\cdot v)=\sum_{g\in G
 
 $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g)(v))$$
 
-와 같기 위해서는 정확히 $\phi(g)=\phi(hgh^{-1})$, 곧 $\phi$가 class function이어야 한다. 
+와 같기 위해서는 정확히 $$\phi(g)=\phi(hgh^{-1})$$, 곧 $$\phi$$가 class function이어야 한다. 
 
 </details>
 
-이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $\phi$에 대하여, $\langle \rchi_V,\phi\rangle=0$이 모든 irreducible character $\rchi_V$에 대해 성립한다면 $\phi=0$이라는 것을 보여야 한다. 
+이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $$\phi$$에 대하여, $$\langle \rchi_V,\phi\rangle=0$$이 모든 irreducible character $$\rchi_V$$에 대해 성립한다면 $$\phi=0$$이라는 것을 보여야 한다. 
 
-이를 위해 위의 보조정리를 class function $\phi$와 irreducible representation $\rho:G\rightarrow\Aut(V)$에 사용하자. $\phi$가 class function이므로 $\overline{\phi}$도 그러하고, 따라서 $\rho_{\overline{\phi}}$는 $G$-map이며 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $\rho_{\overline{\phi}}$는 $\lambda\id_V$의 꼴이다. 이제 여기에 trace를 취하면
+이를 위해 위의 보조정리를 class function $$\phi$$와 irreducible representation $$\rho:G\rightarrow\Aut(V)$$에 사용하자. $$\phi$$가 class function이므로 $$\overline{\phi}$$도 그러하고, 따라서 $$\rho_{\overline{\phi}}$$는 $$G$$-map이며 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $$\rho_{\overline{\phi}}$$는 $$\lambda\id_V$$의 꼴이다. 이제 여기에 trace를 취하면
 
 $$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\phi(g)}\rho(g)\right)=\sum_{g\in G}\overline{\phi(g)}\rchi_V(g)=\lvert G\rvert\langle \rchi_V,\phi\rangle=0$$
 
-임을 안다. 이제 임의의 representation은 irreducible decomposition을 가지므로, $\sum \overline{\phi(g)}g$는 임의의 representation 위에서 $0$으로 작용해야 하는 것을 알고, 특히 regular representation $\mathbb{C}[G]$에서도 그러해야 한다. 그런데 regular representation에서 이 원소를 $\delta_e$에 작용시키면 그 값은
+임을 안다. 이제 임의의 representation은 irreducible decomposition을 가지므로, $$\sum \overline{\phi(g)}g$$는 임의의 representation 위에서 $$0$$으로 작용해야 하는 것을 알고, 특히 regular representation $$\mathbb{C}[G]$$에서도 그러해야 한다. 그런데 regular representation에서 이 원소를 $$\delta_e$$에 작용시키면 그 값은
 
 $$\left(\sum\overline{\phi(g)}g\right)\cdot \delta_e=\sum_{g\in G}\overline{\phi(g)}g$$
 
-이고 따라서 $\overline{\phi(g)}=0$이 모든 $g$에 대해 성립해야 한다. 
+이고 따라서 $$\overline{\phi(g)}=0$$이 모든 $$g$$에 대해 성립해야 한다. 
 
-## 예시: $S_3$
+## 예시: $$S_3$$
 
-우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리한다. 우선 임의의 *abelian* group $G$에 대해서는 irreducible representation이 $1$차원 representation 뿐임이 자명하므로 우리의 이론을 테스트하기 위해서는 non-abelian group이 필요하다. 계산의 편의상 가장 작은 non-abelian group인 $S_3$을 생각하자. 명시적으로
+우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리한다. 우선 임의의 *abelian* group $$G$$에 대해서는 irreducible representation이 $$1$$차원 representation 뿐임이 자명하므로 우리의 이론을 테스트하기 위해서는 non-abelian group이 필요하다. 계산의 편의상 가장 작은 non-abelian group인 $$S_3$$을 생각하자. 명시적으로
 
 $$S_3=\{(\;),\,(1\;2),\,(1\;3),\,(2\;3),\,(1\;2\;3),\,(1\;3\;2)\}$$
 
@@ -247,58 +247,58 @@ $$\rho_0: S_3 \rightarrow \Aut(\mathbb{C})\qquad \sigma\mapsto \id_\mathbb{C}$$
 
 $$\rho_\sgn: S_3 \rightarrow \Aut(\mathbb{C})\qquad \sigma\mapsto \sgn(\sigma)\id_\mathbb{C}$$
 
-이 $\sigma$의 두 irreducible representation이 되는 것은 자명하다. 한편 $S_3$은 $\mathbb{C}^3$ 위에 permutation을 통해
+이 $$\sigma$$의 두 irreducible representation이 되는 것은 자명하다. 한편 $$S_3$$은 $$\mathbb{C}^3$$ 위에 permutation을 통해
 
 $$\sigma\cdot(x_1,x_2,x_3)=(x_{\sigma(1)},x_{\sigma(2)},x_{\sigma(3)})$$
 
-으로 작용한다. 그런데 이 action은 $(1,1,1)$이 span하는 직선을 따라서는 trivial action이며, 이 직선에 직교하는 subspace
+으로 작용한다. 그런데 이 action은 $$(1,1,1)$$이 span하는 직선을 따라서는 trivial action이며, 이 직선에 직교하는 subspace
 
 $$V_\std=\{(x_1,x_2,x_3)\mid x_1+x_2+x_3=0\}$$
 
-위에서 모든 작용이 이루어지는 것으로 볼 수 있으며 이 subrepresentation이 irreducible인 것도 확인할 수 있다. 이를 $S_3$의 *standard representation*이라 부른다. 
+위에서 모든 작용이 이루어지는 것으로 볼 수 있으며 이 subrepresentation이 irreducible인 것도 확인할 수 있다. 이를 $$S_3$$의 *standard representation*이라 부른다. 
 
-이들 세 representation은 각각 $1,1,2$차원이고,
+이들 세 representation은 각각 $$1,1,2$$차원이고,
 
 $$\lvert S_3\rvert=6=1^2+1^2+2^2$$
 
-이므로 irreducible decomposition의 차원이 맞는 것을 확인할 수 있다. 조금 더 나아가기 위해 이들 세 irreducible representation의 character들을 계산하자. 이를 위해 $S_3$의 conjugacy class
+이므로 irreducible decomposition의 차원이 맞는 것을 확인할 수 있다. 조금 더 나아가기 위해 이들 세 irreducible representation의 character들을 계산하자. 이를 위해 $$S_3$$의 conjugacy class
 
 $$A_1=\{(\;)\},\qquad A_2=\{(1\;2),\,(1\;3),\,(2\;3)\},\qquad A_3=\{(1\;2\;3),\,(1\;3\;2)\}$$
 
-을 생각하자. 표기의 편의를 위해, character $\rchi$가 $A_1,A_2,A_3$ 위에서 값 $a_1,a_2,a_3$을 갖는다면 이를 벡터 $(a_1,a_2,a_3)$ 형태로 쓰기로 하자. 
+을 생각하자. 표기의 편의를 위해, character $$\rchi$$가 $$A_1,A_2,A_3$$ 위에서 값 $$a_1,a_2,a_3$$을 갖는다면 이를 벡터 $$(a_1,a_2,a_3)$$ 형태로 쓰기로 하자. 
 
-- $\rho_0$은 $S_3$의 모든 원소를 $\id_\mathbb{C}\in \Aut(\mathbb{C})$으로 보내고, 이 $1\times 1$ 행렬의 trace는 $1$이므로 $\rchi_0$은 $(1,1,1)$이다. 
-- $\rho_\sgn$은 $S_3$의 odd permutation들 (즉 $A_2$의 원소들)만 $-\id_\mathbb{C}\in\Aut(\mathbb{C})$으로 보내고, 나머지 원소들은 $\id_\mathbb{C}\in \Aut(\mathbb{C})$으로 보내므로 $\rchi_\sgn$은 $(1,-1,1)$이다. 
+- $$\rho_0$$은 $$S_3$$의 모든 원소를 $$\id_\mathbb{C}\in \Aut(\mathbb{C})$$으로 보내고, 이 $$1\times 1$$ 행렬의 trace는 $$1$$이므로 $$\rchi_0$$은 $$(1,1,1)$$이다. 
+- $$\rho_\sgn$$은 $$S_3$$의 odd permutation들 (즉 $$A_2$$의 원소들)만 $$-\id_\mathbb{C}\in\Aut(\mathbb{C})$$으로 보내고, 나머지 원소들은 $$\id_\mathbb{C}\in \Aut(\mathbb{C})$$으로 보내므로 $$\rchi_\sgn$$은 $$(1,-1,1)$$이다. 
 
-Standard representation $\rho_\std$의 character $\rchi_\std$를 계산하는 데에는 두 가지 방법이 있으며 이 방법을 모두 소개하기로 한다.
+Standard representation $$\rho_\std$$의 character $$\rchi_\std$$를 계산하는 데에는 두 가지 방법이 있으며 이 방법을 모두 소개하기로 한다.
 
-우선 이를 직접 계산하기 위해 $V_\std$의 basis
+우선 이를 직접 계산하기 위해 $$V_\std$$의 basis
 
 $$\{e_1=(1,0,-1), e_2=(0,1,-1)\}$$
 
-을 택하자. 그럼 $(\;)$는 이 basis를 건드리지 않으므로 당연히 $\rchi_\std$는 $A_1$ 위에서 값 $2$를 갖는다. $A_2$ 위에서는, 가령, $(1\;2)$를 작용하면 이는 basis를 서로 바꿔주므로 다음 행렬
+을 택하자. 그럼 $$(\;)$$는 이 basis를 건드리지 않으므로 당연히 $$\rchi_\std$$는 $$A_1$$ 위에서 값 $$2$$를 갖는다. $$A_2$$ 위에서는, 가령, $$(1\;2)$$를 작용하면 이는 basis를 서로 바꿔주므로 다음 행렬
 
 $$\rho_\std((1\;2))\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
-에 대응되며 그 trace는 $0$이다. 참고로 만일 $(1\;3)$이 이 basis 위에 작용한다면, $e_1$은 $-e_1$으로, $e_2$는 $(-1,1,0)=-e_1+e_2$로 옮겨지므로 다음 행렬
+에 대응되며 그 trace는 $$0$$이다. 참고로 만일 $$(1\;3)$$이 이 basis 위에 작용한다면, $$e_1$$은 $$-e_1$$으로, $$e_2$$는 $$(-1,1,0)=-e_1+e_2$$로 옮겨지므로 다음 행렬
 
 $$\rho_\std((1\;3))=\begin{pmatrix}-1&-1\\0&1\end{pmatrix}$$
 
-에 대응되며 이 행렬의 trace 또한 $0$이므로 character function이 class function이라는 것을 계산으로 확인할 수 있다. $A_3$의 경우 $e_1$을 $(-1,1,0)=-e_1+e_2$, $e_2$을 $(-1,0,1)=-e_1$으로 옮기므로 
+에 대응되며 이 행렬의 trace 또한 $$0$$이므로 character function이 class function이라는 것을 계산으로 확인할 수 있다. $$A_3$$의 경우 $$e_1$$을 $$(-1,1,0)=-e_1+e_2$$, $$e_2$$을 $$(-1,0,1)=-e_1$$으로 옮기므로 
 
 $$\rho_\std((1\;2\;3))=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}$$
 
-이 되어 $\rchi_\std$는 $(2,0,-1)$임을 안다. 
+이 되어 $$\rchi_\std$$는 $$(2,0,-1)$$임을 안다. 
 
 더 편리한 계산방법은 decomposition
 
 $$V_\perm=V_0\oplus V_\std$$
 
-을 이용하는 것이다. 우리는 이미 $V_0$의 character가 $(1,1,1)$임을 알고 있다. 이제 $V_\perm$의 action을 생각해보면,
+을 이용하는 것이다. 우리는 이미 $$V_0$$의 character가 $$(1,1,1)$$임을 알고 있다. 이제 $$V_\perm$$의 action을 생각해보면,
 
 $$\rho_\perm((\;))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2))=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2\;3))=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}$$
 
-이므로 $\rchi_\perm$은 $(3,1,0)$임을 알고 이제 [명제 2](#prop2)로부터 $\rchi_\perm=\rchi_0+\rchi_\std$이므로 $\rchi_\std$이 $(2,0,-1)$임을 알 수 있다. 이렇게 구한 세 개의 character들 
+이므로 $$\rchi_\perm$$은 $$(3,1,0)$$임을 알고 이제 [명제 2](#prop2)로부터 $$\rchi_\perm=\rchi_0+\rchi_\std$$이므로 $$\rchi_\std$$이 $$(2,0,-1)$$임을 알 수 있다. 이렇게 구한 세 개의 character들 
 
 $$\rchi_0=(1,1,1),\qquad \rchi_\sgn=(1,-1,1),\qquad \rchi_\std=(2,0,-1)$$
 
@@ -306,9 +306,9 @@ $$\rchi_0=(1,1,1),\qquad \rchi_\sgn=(1,-1,1),\qquad \rchi_\std=(2,0,-1)$$
 
 우리는 regular representation의 character의 계산으로부터
 
-$$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
+$$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $$g=e$$}\\0&\text{otherwise}\end{cases}$$
 
-임을 안다. (식 (2)) 이는 반드시 위의 세 character들의 $\mathbb{Z}^{\geq 0}$-linear combination이어야 할 것이며 실제로 
+임을 안다. (식 (2)) 이는 반드시 위의 세 character들의 $$\mathbb{Z}^{\geq 0}$$-linear combination이어야 할 것이며 실제로 
 
 $$\rchi_{\mathbb{C}[S_3]}=\rchi_0+\rchi_\sgn+2\rchi_\std$$
 
