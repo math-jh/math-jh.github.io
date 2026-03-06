@@ -378,7 +378,7 @@ $$\pi: G/T\rightarrow G/N;\qquad gT\mapsto gN$$
 
 $$\pi^{-1}(gN)=\{hT\mid h\in gN\}=\{gxT\mid x\in N\}$$
 
-이며, $$g$$가 고정되어 있으므로 이 fiber는 본질적으로 $$\\{xT\mid x\in N\\}$$, 즉 $$N/T$$와 같다. 더 나아가 위상적으로 $$\pi$$는 정확하게 $$\lvert W\rvert$$-fold covering map이라는 것을 확인할 수 있다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $$W$$인 principal $$W$$-bundle이다. 
+이며, $$g$$가 고정되어 있으므로 이 fiber는 본질적으로 $$\{xT\mid x\in N\}$$, 즉 $$N/T$$와 같다. 더 나아가 위상적으로 $$\pi$$는 정확하게 $$\lvert W\rvert$$-fold covering map이라는 것을 확인할 수 있다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $$W$$인 principal $$W$$-bundle이다. 
 
 ## 예시: $$\SU(2)$$
 
@@ -446,7 +446,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> $$\SU(2)$$의 경우, $$T=\\{\text{diag}(e^{i\theta}, e^{-i\theta})\\}$$이고 $$W=\mathbb{Z}_2$$가 $$\theta\mapsto -\theta$$로 작용한다. 따라서:
+<ins id="ex13">**예시 13**</ins> $$\SU(2)$$의 경우, $$T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$$이고 $$W=\mathbb{Z}_2$$가 $$\theta\mapsto -\theta$$로 작용한다. 따라서:
 
 - **Regular:** $$\theta \neq 0, \pi$$인 원소들. 이들은 reflection의 fixed point가 아니다.
 - **Singular:** $$\theta=0$$ (항등원)과 $$\theta=\pi$$ ($$\text{diag}(-1,-1)$$). 이들은 reflection에 의해 고정된다.

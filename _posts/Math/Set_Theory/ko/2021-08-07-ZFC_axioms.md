@@ -20,7 +20,7 @@ weight: 1
 
 우리가 배우는 수학의 기초로서의 집합론은 19세기 칸토어로부터 시작했다고 해도 과언이 아니다. 칸토어의 소박한 집합론은 다음과 같은 철학으로 요약할 수 있다. 
 
-> 임의의 성질 $$P$$에 대하여, $$P$$를 만족하는 모든 원소들의 집합 $$Y=\\{x\mid P(x)\\}$$가 존재한다.
+> 임의의 성질 $$P$$에 대하여, $$P$$를 만족하는 모든 원소들의 집합 $$Y=\{x\mid P(x)\}$$가 존재한다.
 
 그러나 수학자들은 이러한 접근이 다양한 모순을 이끌어낸다는 것을 알게 된다. 
 
@@ -89,7 +89,7 @@ Comprehension schema가 정의하는 집합 $$B$$는 유일하다. 만일 $$B'$$
 
 $$x\in B'\iff ((x\in A)\wedge P(x))\iff x\in B$$
 
-이고 따라서 $$B=B'$$이기 때문이다. 이러한 집합을 $$\\{x\in A\mid P(x)\\}$$와 같이 적으면 적절할 것이다.
+이고 따라서 $$B=B'$$이기 때문이다. 이러한 집합을 $$\{x\in A\mid P(x)\}$$와 같이 적으면 적절할 것이다.
 
 <div class="example" markdown="1">
 
@@ -97,7 +97,7 @@ $$x\in B'\iff ((x\in A)\wedge P(x))\iff x\in B$$
 
 > $$P$$가 $$x$$에 대한 명제라 하자. 그럼 <phrase>$$x\in B$$인 것</phrase>과 <phrase>$$P(x)$$인 것</phrase>이 동치이도록 하는 집합 $$B$$가 존재한다.
 
-이제 새로 도입한 comprehension schema에 따르면, [예시 1](#ex1)과는 달리 $$\mathcal{S}=\\{x\mid x\not\in x\\}$$를 바로 정의할 수는 없고, 이미 존재하는 집합 $$A$$에 대해 
+이제 새로 도입한 comprehension schema에 따르면, [예시 1](#ex1)과는 달리 $$\mathcal{S}=\{x\mid x\not\in x\}$$를 바로 정의할 수는 없고, 이미 존재하는 집합 $$A$$에 대해 
 
 $$B=\{x\in A\mid x\not\in x\}$$
 
@@ -148,11 +148,11 @@ $$\{x\in A\mid Q(x)\}$$
 
 </div>
 
-역시 이 집합은 extensionality에 의해 유일하며, 이를 $$\\{A,B\\}$$로 표기한다. 이제 $$A=B=\emptyset$$으로 두면, 
+역시 이 집합은 extensionality에 의해 유일하며, 이를 $$\{A,B\}$$로 표기한다. 이제 $$A=B=\emptyset$$으로 두면, 
 
 $$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\wedge(x=\emptyset)\iff x\in \{\emptyset,\emptyset\}$$
 
-로부터 $$\\{\emptyset, \emptyset\\}=\\{\emptyset\\}$$임을 안다. 또 $$\emptyset\not\in \emptyset$$이므로 $$\emptyset\neq\\{\emptyset\\}$$이다. 
+로부터 $$\{\emptyset, \emptyset\}=\{\emptyset\}$$임을 안다. 또 $$\emptyset\not\in \emptyset$$이므로 $$\emptyset\neq\{\emptyset\}$$이다. 
 
 <div class="misc" markdown="1">
 
@@ -160,7 +160,7 @@ $$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\wedge(x=\emptyset)\iff x\
 
 </div>
 
-예를 들어, 만일 $$\mathcal{S}=\\{A,B\\}$$였다면 $$U$$는 <phrase>$$x\in A$$이거나 $$x\in B$$인 원소들의 집합</phrase>, 즉 $$A\cup B$$가 된다는 것을 확인할 수 있다. 이를 표기상 $$\bigcup\mathcal{S}$$와 같이 쓰기도 한다.
+예를 들어, 만일 $$\mathcal{S}=\{A,B\}$$였다면 $$U$$는 <phrase>$$x\in A$$이거나 $$x\in B$$인 원소들의 집합</phrase>, 즉 $$A\cup B$$가 된다는 것을 확인할 수 있다. 이를 표기상 $$\bigcup\mathcal{S}$$와 같이 쓰기도 한다.
 
 <div class="misc" markdown="1">
 

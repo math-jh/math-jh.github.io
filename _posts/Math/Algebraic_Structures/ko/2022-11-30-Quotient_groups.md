@@ -23,7 +23,7 @@ weight: 5
 
 한편 [\[집합론\] §동치관계, ⁋명제 7](/ko/math/set_theory/equivalence_relations#prop7)을 통해 우리는 다음 두 가지가 같다는 것을 안다.
 
-집합 $$G$$에 동치관계 $$R$$을 주는 것 $$\iff$$ 집합 $$G$$의 분할 $$(G\_i)\_{i\in I}$$을 택하는 것
+집합 $$G$$에 동치관계 $$R$$을 주는 것 $$\iff$$ 집합 $$G$$의 분할 $$(G_i)_{i\in I}$$을 택하는 것
 {: .text-center}
 
 따라서, 동치관계 $$R$$이 $$G$$의 연산과 compatible할 것을 요구하는 것이 오른쪽에서는 어떠한 것을 의미하는지를 생각해볼 수 있다. 
@@ -88,7 +88,7 @@ $$a\sim e\implies gag^{-1}\sim geg^{-1}=e$$
 
 이제 group $$G$$와, 임의의 subgroup $$H$$를 생각하자. $$H$$가 normal이 아니더라도 위의 논의에서 얻어낸 $$\sim_{\tiny r}$$과 $$\sim_{\tiny l}$$은 어쨌든 동치관계이므로, <em_ko>몫집합</em_ko> $$G/{\sim_{\tiny r}}$$과 $$G/{\sim_{\tiny l}}$$이 어떻게 생겼는지를 살펴볼 수 있다. 
 
-우선 $$G/{\sim_{\tiny r}}$$의 원소를 생각해보자. 임의의 $$a\in G$$와 그 equivalence class $$[a]\_{\tiny r}$$에 대하여,
+우선 $$G/{\sim_{\tiny r}}$$의 원소를 생각해보자. 임의의 $$a\in G$$와 그 equivalence class $$[a]_{\tiny r}$$에 대하여,
 
 $$x\in [a]_{\tiny r}\iff x\sim_{\tiny r} a\iff xa^{-1}\in H$$
 
@@ -96,7 +96,7 @@ $$x\in [a]_{\tiny r}\iff x\sim_{\tiny r} a\iff xa^{-1}\in H$$
 
 $$Ha:=\{ha\mid h\in H\}$$
 
-으로 정의하면 $$[a]\_{\tiny r}=Ha$$가 성립한다. 비슷하게, $$G/{\sim_{\tiny l}}$$에 대하여는 $$[a]\_{\tiny l}=aH$$가 성립한다. 물론 $$G$$의 연산이 덧셈으로 적혀있었다면 이들은 각각 $$H+a$$와 $$a+H$$로 적는 것이 관례이다.
+으로 정의하면 $$[a]_{\tiny r}=Ha$$가 성립한다. 비슷하게, $$G/{\sim_{\tiny l}}$$에 대하여는 $$[a]_{\tiny l}=aH$$가 성립한다. 물론 $$G$$의 연산이 덧셈으로 적혀있었다면 이들은 각각 $$H+a$$와 $$a+H$$로 적는 것이 관례이다.
 
 <div class="definition" markdown="1">
 

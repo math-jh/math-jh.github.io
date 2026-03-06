@@ -23,21 +23,21 @@ weight: 25
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$(\mathfrak{a}\_i)\_{i\in I}$$가 cardinal들의 family라 하자. 집합 $$\mathfrak{a}\_i$$들의 곱 (resp. 합)의 cardinal을 이들의 *cardinal product*(resp. *cardinal sum*)이라 부르고 $$\prod\_{i\in I}\mathfrak{a}\_i$$ (resp. $$\sum\_{i\in I}\mathfrak{a}_i$$)로 적는다.
+<ins id="def1">**정의 1**</ins> $$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family라 하자. 집합 $$\mathfrak{a}_i$$들의 곱 (resp. 합)의 cardinal을 이들의 *cardinal product*(resp. *cardinal sum*)이라 부르고 $$\prod_{i\in I}\mathfrak{a}_i$$ (resp. $$\sum_{i\in I}\mathfrak{a}_i$$)로 적는다.
 
 </div>
 
 우리가 처음 집합의 합을 정의할 때, 굳이 분리합집합이라는 직관적인 이름을 놔두고 합이라는 용어를 쓴 이유가 여기에 있다.
 
-우선, 위 정의들은 잘 정의되어있다. 만일 $$A_i$$와 $$\mathfrak{a}\_i$$가 equipotent하다면, $$\prod\_{i\in I} A_i$$와 $$\prod\_{i\in I}\mathfrak{a}\_i$$ 사이에도 bijection이 존재하기 때문이다. 이 연산들을 가지고 있다면 합과 곱의 성질들이 다음과 같이 cardinal간의 연산의 성질로 바뀌게 된다.
+우선, 위 정의들은 잘 정의되어있다. 만일 $$A_i$$와 $$\mathfrak{a}_i$$가 equipotent하다면, $$\prod_{i\in I} A_i$$와 $$\prod_{i\in I}\mathfrak{a}_i$$ 사이에도 bijection이 존재하기 때문이다. 이 연산들을 가지고 있다면 합과 곱의 성질들이 다음과 같이 cardinal간의 연산의 성질로 바뀌게 된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> $$(\mathfrak{a}\_i)\_{i\in I}$$가 cardinal들의 family이고, $$f$$가 $$K$$에서 $$I$$로의 bijection이라 하자. 그럼 
+<ins id="prop2">**명제 2**</ins> $$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family이고, $$f$$가 $$K$$에서 $$I$$로의 bijection이라 하자. 그럼 
 
 $$\sum_{k\in K}\mathfrak{a}_{f(k)}=\sum_{i\in I}\mathfrak{a}_i,\quad \prod_{k\in K}\mathfrak{a}_{f(k)}=\prod_{i\in I}\mathfrak{a}_i$$ 
 
-이다. 또, 만일 $$(J_l)\_{l\in L}$$가 $$I$$의 partition이라면 
+이다. 또, 만일 $$(J_l)_{l\in L}$$가 $$I$$의 partition이라면 
 
 $$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad \prod_{i\in I}\mathfrak{a}_{i}=\prod_{l\in L}\prod_{i\in J_l}\mathfrak{a}_i$$
 
@@ -53,7 +53,7 @@ $$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> $$(\mathfrak{a}\_i)\_{i\in I}$$가 cardinal들의 family이고, $$J$$ (resp. $$K$$)가 $$I$$의 부분집합 중 다음의 식 $$\mathfrak{a}\_i=\mathbf{0}$$ for all $$i\not\in J$$ (resp. $$\mathfrak{a}\_i=\mathbf{1}$$ for all $$i\not\in K$$)을 만족하는 부분집합이라 하자. 그럼 
+<ins id="prop3">**명제 3**</ins> $$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family이고, $$J$$ (resp. $$K$$)가 $$I$$의 부분집합 중 다음의 식 $$\mathfrak{a}_i=\mathbf{0}$$ for all $$i\not\in J$$ (resp. $$\mathfrak{a}_i=\mathbf{1}$$ for all $$i\not\in K$$)을 만족하는 부분집합이라 하자. 그럼 
 
 $$\sum_{i\in I}\mathfrak{a}_i=\sum_{i\in J}\mathfrak{a}_i,\quad \prod_{i\in I}\mathfrak{a}_i=\prod_{i\in K}\mathfrak{a}_i$$
 
@@ -71,7 +71,7 @@ $$\sum_{i\in I}\mathfrak{a}_i=\sum_{i\in J}\mathfrak{a}_i,\quad \prod_{i\in I}\m
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> Cardinal들의 double-index가 주어진 family $$((\mathfrak{a}\_{j,k})\_{j\in J_k})\_{k\in K}$$에 대하여, $$I=\prod\_{k\in K}J_k$$라 하면 
+<ins id="prop4">**명제 4**</ins> Cardinal들의 double-index가 주어진 family $$((\mathfrak{a}_{j,k})_{j\in J_k})_{k\in K}$$에 대하여, $$I=\prod_{k\in K}J_k$$라 하면 
 
 $$\prod_{k\in K}\left(\sum_{j\in J_k}\mathfrak{a}_{j,k}\right)=\sum_{f\in I}\left(\prod_{k\in K}\mathfrak{a}_{k, f(k)}\right)$$
 
@@ -84,7 +84,7 @@ $$\prod_{k\in K}\left(\sum_{j\in J_k}\mathfrak{a}_{j,k}\right)=\sum_{f\in I}\lef
 - 집합의 합과 곱의 결합법칙에 의하여, $$\mathfrak{a}+(\mathfrak{b}+\mathfrak{c})=(\mathfrak{a}+\mathfrak{b})+\mathfrak{c}$$이고 $$\mathfrak{a}(\mathfrak{b}\mathfrak{c})=(\mathfrak{a}\mathfrak{b})\mathfrak{c}$$
 - 마지막으로, 분배법칙을 유한한 경우에 다시 쓰면 $$\mathfrak{a}(\mathfrak{b}+\mathfrak{c})=\mathfrak{a}\mathfrak{c}+\mathfrak{a}\mathfrak{b}$$.
 
-등의 결과를 얻는다. 한편, 임의의 집합은 singleton들의 합으로 쓰여질 수 있으므로 (즉 $$B=\bigcup\_{x\in B}\\{x\\}$$가 항상 성립하므로) $$I$$가 cardinal $$\mathfrak{b}$$를 갖는 집합이라면
+등의 결과를 얻는다. 한편, 임의의 집합은 singleton들의 합으로 쓰여질 수 있으므로 (즉 $$B=\bigcup_{x\in B}\{x\}$$가 항상 성립하므로) $$I$$가 cardinal $$\mathfrak{b}$$를 갖는 집합이라면
 
 $$\mathfrak{b}=\sum_{i\in I} \mathfrak{c}_i,\qquad \mathfrak{c}_i=1\text{ for all $$i\in I$$}$$
 
@@ -96,7 +96,7 @@ $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> $$(\mathfrak{a}\_i)\_{i\in I}$$가 cardinal들의 family라 하자. 그럼 $$\prod\_{i\in I}\mathfrak{a}\_i\neq \mathbf{0}$$인 것은 모든 $$i\in I$$에 대하여 $$\mathfrak{a}_i\neq \mathbf{0}$$인 것과 동치이다.
+<ins id="prop5">**명제 5**</ins> $$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family라 하자. 그럼 $$\prod_{i\in I}\mathfrak{a}_i\neq \mathbf{0}$$인 것은 모든 $$i\in I$$에 대하여 $$\mathfrak{a}_i\neq \mathbf{0}$$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -134,7 +134,7 @@ $$f(x)=\begin{cases}a&\text{if }x=b\\ x&\text{otherwise}\end{cases}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> $$\mathfrak{a}$$와 $$\mathfrak{b}$$가 cardinal이고 $$I$$가 $$\card I=\mathfrak{b}$$를 만족하는 집합이라 하자. 만일 모든 $$i\in I$$에 대하여 $$\mathfrak{a}\_i=\mathfrak{a}$$라면 $$\mathfrak{a}^\mathfrak{b}=\prod_{i\in I}\mathfrak{a}_i$$이다.
+<ins id="prop8">**명제 8**</ins> $$\mathfrak{a}$$와 $$\mathfrak{b}$$가 cardinal이고 $$I$$가 $$\card I=\mathfrak{b}$$를 만족하는 집합이라 하자. 만일 모든 $$i\in I$$에 대하여 $$\mathfrak{a}_i=\mathfrak{a}$$라면 $$\mathfrak{a}^\mathfrak{b}=\prod_{i\in I}\mathfrak{a}_i$$이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -154,7 +154,7 @@ Cardinal $$\mathbf{0}$$과 $$\mathbf{1}$$에 대한 성질들, 예컨대 $$\math
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathbf{2}=\\{\alpha, \beta\\}$$가 cardinal이라 하자. 임의의 $$X\in\mathcal{P}(A)$$에 대하여, 만약 $$x\in X$$라면 $$x\mapsto\alpha$$이고, 그렇지 않을 때에는 $$x\mapsto\beta$$인 함수 $$f_X:A\rightarrow \mathbf{2}$$가 존재한다. 반대로 임의의 함수 $$f:A\rightarrow \mathbf{2}$$에 대하여, $$f^{-1}(\alpha)$$가 $$\mathcal{P}(A)$$의 원소를 하나 지정한다.
+$$\mathbf{2}=\{\alpha, \beta\}$$가 cardinal이라 하자. 임의의 $$X\in\mathcal{P}(A)$$에 대하여, 만약 $$x\in X$$라면 $$x\mapsto\alpha$$이고, 그렇지 않을 때에는 $$x\mapsto\beta$$인 함수 $$f_X:A\rightarrow \mathbf{2}$$가 존재한다. 반대로 임의의 함수 $$f:A\rightarrow \mathbf{2}$$에 대하여, $$f^{-1}(\alpha)$$가 $$\mathcal{P}(A)$$의 원소를 하나 지정한다.
 
 </details>
 
@@ -168,7 +168,7 @@ $$\mathbf{2}=\\{\alpha, \beta\\}$$가 cardinal이라 하자. 임의의 $$X\in\ma
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$x\mapsto \\{x\\}$$가 $$\mathfrak{a}$$에서 멱집합으로의 단사함수이이므로, $$\mathfrak{a}\leq \mathbf{2}^\mathfrak{a}$$임은 자명하다. 따라서 $$\mathfrak{a}\neq\mathbf{2}^\mathfrak{a}$$임만 보이자. 즉, 임의의 함수 $$f:\mathfrak{a}\rightarrow\mathcal{P}(\mathfrak{a})$$에 대하여, $$\mathfrak{a}$$의 image 밖에 항상 어떤 원소가 존재한다는 걸 보이면 된다.
+$$x\mapsto \{x\}$$가 $$\mathfrak{a}$$에서 멱집합으로의 단사함수이이므로, $$\mathfrak{a}\leq \mathbf{2}^\mathfrak{a}$$임은 자명하다. 따라서 $$\mathfrak{a}\neq\mathbf{2}^\mathfrak{a}$$임만 보이자. 즉, 임의의 함수 $$f:\mathfrak{a}\rightarrow\mathcal{P}(\mathfrak{a})$$에 대하여, $$\mathfrak{a}$$의 image 밖에 항상 어떤 원소가 존재한다는 걸 보이면 된다.
 
 $$X$$가 $$x\not\in f(x)$$를 만족하는 모든 $$x\in\mathfrak{a}$$들의 집합이라 하자. 만일 $$x\in X$$라면, $$x\not\in f(x)$$이고 따라서 $$f(x)\neq X$$이며, 반대로 $$x\not\in X$$라면 $$x\in f(x)$$이므로 다시 $$f(x)\neq X$$이다. 따라서 $$X\not\in f(\mathfrak{a})$$이므로 증명이 완료되었다. 
 

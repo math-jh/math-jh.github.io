@@ -150,7 +150,7 @@ $$s(y)=(e_N, y)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor8">**따름정리 8**</ins> Group $$G$$와 $$G$$의 normal subgroup $$N$$, $$G$$의 subgroup $$H$$가 주어졌다 하자. 만일 $$N\cap H=\\{e_G\\}$$이고 $$NH=G$$가 성립한다면, 다음의 식
+<ins id="cor8">**따름정리 8**</ins> Group $$G$$와 $$G$$의 normal subgroup $$N$$, $$G$$의 subgroup $$H$$가 주어졌다 하자. 만일 $$N\cap H=\{e_G\}$$이고 $$NH=G$$가 성립한다면, 다음의 식
 
 $$N\rtimes_\rho H \rightarrow G;\qquad (x,y)\mapsto xy$$
 

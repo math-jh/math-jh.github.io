@@ -29,23 +29,23 @@ weight: 7
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$\Set$$에서 product의 universal property을 만족하는 곱집합 $$\prod\_{i\in I} G\_i$$는 이미 [\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#def1)에서 정의했다. 표기상의 편의를 위해 $$\prod_{i\in I}G_i$$의 원소 $$f:I\rightarrow \bigcup G_i$$를 순서쌍 $$(a\_i)\_{i\in I}$$으로 표기하기로 한다.
+우선 $$\Set$$에서 product의 universal property을 만족하는 곱집합 $$\prod_{i\in I} G_i$$는 이미 [\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#def1)에서 정의했다. 표기상의 편의를 위해 $$\prod_{i\in I}G_i$$의 원소 $$f:I\rightarrow \bigcup G_i$$를 순서쌍 $$(a_i)_{i\in I}$$으로 표기하기로 한다.
 
-이제 집합 $$\prod_{i\in I}G_i$$의 임의의 두 원소 $$x=(x\_i)\_{i\in I},y=(y\_i)\_{i\in I}$$에 대하여, 
+이제 집합 $$\prod_{i\in I}G_i$$의 임의의 두 원소 $$x=(x_i)_{i\in I},y=(y_i)_{i\in I}$$에 대하여, 
 
 $$xy=(x_i)_{i\in I}(y_i)_{i\in I}=(x_iy_i)_{i\in I}$$
 
-으로 정의하자. 그럼 $$\prod\_{i\in I}G\_i$$는 이 연산에 대해 group의 구조를 가지며, 항등원은 $$(e\_i)\_{i\in I}$$이고 $$x=(x\_i)_{i\in I}$$의 역원은 $$(x\_i^{-1})\_{i\in I}$$인 것을 알 수 있다. 또, 임의의 $$j\in I$$에 대하여
+으로 정의하자. 그럼 $$\prod_{i\in I}G_i$$는 이 연산에 대해 group의 구조를 가지며, 항등원은 $$(e_i)_{i\in I}$$이고 $$x=(x_i)_{i\in I}$$의 역원은 $$(x_i^{-1})_{i\in I}$$인 것을 알 수 있다. 또, 임의의 $$j\in I$$에 대하여
 
 $$\pr_j(xy)=\pr_j(x_iy_i)_{i\in I}=x_jy_j=\pr_j(x)\pr_j(y)$$
 
 이므로 $$\pr_j$$가 group homomorphism이다. 
 
-이제 이렇게 정의한 $$(G=\prod\_{i\in I}G\_i,(\pr\_i)\_{i\in I})$$가 universal property를 만족하는 것을 증명하자. 이를 위해서는 곱집합의 universal property로 얻어지는 함수 $$f:H\rightarrow G$$가 group homomorphism이라는 것만 보이면 충분하다. 이제 임의의 $$x,y\in H$$와 임의의 $$i\in I$$에 대하여, 
+이제 이렇게 정의한 $$(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$$가 universal property를 만족하는 것을 증명하자. 이를 위해서는 곱집합의 universal property로 얻어지는 함수 $$f:H\rightarrow G$$가 group homomorphism이라는 것만 보이면 충분하다. 이제 임의의 $$x,y\in H$$와 임의의 $$i\in I$$에 대하여, 
 
 $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\in I}=f(x)f(y)$$
 
-이므로 $$f$$는 group homomorphism이 되고 따라서 위의 $$(G=\prod\_{i\in I}G\_i,(\pr\_i)\_{i\in I})$$가 universal property를 만족한다. 
+이므로 $$f$$는 group homomorphism이 되고 따라서 위의 $$(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$$가 universal property를 만족한다. 
 
 </details>
 
@@ -91,7 +91,7 @@ $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor4">**따름정리 4**</ins> Group들의 family $$(G\_i)\_{i\in I}$$가 주어졌다 하자. 각각의 $$i\in I$$에 대하여 $$H_i$$들이 $$G_i$$의 normal subgroup이라면, $$\prod H_i$$도 $$\prod G_i$$의 normal subgroup이고 그 quotient group은 $$\prod (G_i/H_i)$$와 같다.
+<ins id="cor4">**따름정리 4**</ins> Group들의 family $$(G_i)_{i\in I}$$가 주어졌다 하자. 각각의 $$i\in I$$에 대하여 $$H_i$$들이 $$G_i$$의 normal subgroup이라면, $$\prod H_i$$도 $$\prod G_i$$의 normal subgroup이고 그 quotient group은 $$\prod (G_i/H_i)$$와 같다.
 
 </div>
 <details class="proof" markdown="1">
@@ -113,7 +113,7 @@ $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{i\in I}H_i\biggr)\cong\pro
 
 <div class="proposition" markdown="1">
 
-<ins id="cor5">**따름정리 5**</ins> Group들의 family $$(G\_i)\_{i\in I}$$가 주어졌다 하자. 만일 각각의 $$i\in I$$에 대하여 $$H_i\leq G_i$$라면, $$\prod H_i$$는 $$\prod G_i$$의 subgroup이다.
+<ins id="cor5">**따름정리 5**</ins> Group들의 family $$(G_i)_{i\in I}$$가 주어졌다 하자. 만일 각각의 $$i\in I$$에 대하여 $$H_i\leq G_i$$라면, $$\prod H_i$$는 $$\prod G_i$$의 subgroup이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -127,7 +127,7 @@ Inclusion homomorphism들 $$\iota_i:H_i\hookrightarrow G_i$$에 [따름정리 3]
 
 위의 따름정리들은 다음의 상황에서 특히 유용하다. 
 
-$$(G\_i)\_{i\in I}$$가 group들의 family라 하고, $$I$$의 부분집합 $$J$$를 생각하자. 그럼 product $$\prod_{j\in J}G_j$$가 잘 정의된다. 한편, 다음의 식
+$$(G_i)_{i\in I}$$가 group들의 family라 하고, $$I$$의 부분집합 $$J$$를 생각하자. 그럼 product $$\prod_{j\in J}G_j$$가 잘 정의된다. 한편, 다음의 식
 
 $$G_i'=\begin{cases} G_i&i\in J\\ \{e\}&i\not\in J\end{cases}$$
 
@@ -135,7 +135,7 @@ $$G_i'=\begin{cases} G_i&i\in J\\ \{e\}&i\not\in J\end{cases}$$
 
 $$f_i=\begin{cases} \id_{G_i}&i\in J\\ \iota_i&i\not\in J\end{cases}$$
 
-을 생각하자. 그럼 어렵지 않게 $$\prod_{i\in I}G\_i'\cong\prod_{j\in J}G_j$$임을 보일 수 있으며, 따라서 [따름정리 4](#cor4)에 의하여 다음의 식
+을 생각하자. 그럼 어렵지 않게 $$\prod_{i\in I}G_i'\cong\prod_{j\in J}G_j$$임을 보일 수 있으며, 따라서 [따름정리 4](#cor4)에 의하여 다음의 식
 
 $$\biggl(\prod_{i\in I}G_i\biggr)\bigg/\biggl(\prod_{j\in J}G_j\biggr)\cong\prod_{i\in I\setminus J} G_i$$
 

@@ -19,7 +19,7 @@ weight: 11
 
 ## 행렬식
 
-앞선 글에서 우리는 임의의 free $$A$$-module $$M$$에 대하여, $$M$$이 basis $$(e\_i)\_{i\in I}$$를 갖는다면 다음의 식
+앞선 글에서 우리는 임의의 free $$A$$-module $$M$$에 대하여, $$M$$이 basis $$(e_i)_{i\in I}$$를 갖는다면 다음의 식
 
 $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \quad J=\{j_1,\ldots, j_k\}$$
 
@@ -29,7 +29,7 @@ $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Free $$A$$-module $$M$$이 basis $$(e\_i)\_{i\in I}$$를 갖는다 하자. 그럼 임의의 $$u:M \rightarrow M$$에 대하여, 위의 논의에서 얻어지는 $$\alpha\in A$$를 $$u$$의 *행렬식<sub>determinant</sub>*이라 부르고 $$\det u$$로 적는다.
+<ins id="def1">**정의 1**</ins> Free $$A$$-module $$M$$이 basis $$(e_i)_{i\in I}$$를 갖는다 하자. 그럼 임의의 $$u:M \rightarrow M$$에 대하여, 위의 논의에서 얻어지는 $$\alpha\in A$$를 $$u$$의 *행렬식<sub>determinant</sub>*이라 부르고 $$\det u$$로 적는다.
 
 </div>
 
@@ -78,7 +78,7 @@ $$x_1\wedge \cdots\wedge x_n=\alpha e_1\wedge\cdots\wedge e_n$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem4">**보조정리 4**</ins> Free $$A$$-module $$M$$의 basis $$(e\_i)\_{i\in I}$$가 주어졌다 하고, $$I$$의 total ordering을 하나 고정하자. 또, 임의의 자연수 $$p$$에 대하여, $$\bigwedge^p(M)$$의 basis
+<ins id="lem4">**보조정리 4**</ins> Free $$A$$-module $$M$$의 basis $$(e_i)_{i\in I}$$가 주어졌다 하고, $$I$$의 total ordering을 하나 고정하자. 또, 임의의 자연수 $$p$$에 대하여, $$\bigwedge^p(M)$$의 basis
 
 $$(e_J=e_{j_1}\wedge\cdots\wedge e_{j_p})_{\lvert J\rvert=p}$$
 
@@ -86,7 +86,7 @@ $$(e_J=e_{j_1}\wedge\cdots\wedge e_{j_p})_{\lvert J\rvert=p}$$
 
 $$x_j=\sum_{i\in I} \xi_{ij}e_i$$
 
-의 꼴로 쓴 후 행렬 $$X=(\xi\_{ij})\_{(i,j)\in I\times p}\in\Mat\_{I\times p}(A)$$를 정의하자. 그럼 다음의 식
+의 꼴로 쓴 후 행렬 $$X=(\xi_{ij})_{(i,j)\in I\times p}\in\Mat_{I\times p}(A)$$를 정의하자. 그럼 다음의 식
 
 $$x_1\wedge x_2\wedge\cdots\wedge x_p=\sum_{\lvert J\rvert=p}\det X_{I,J}e_J$$
 
@@ -96,13 +96,13 @@ $$x_1\wedge x_2\wedge\cdots\wedge x_p=\sum_{\lvert J\rvert=p}\det X_{I,J}e_J$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 두 free $$A$$-moduile $$M,N$$과 이들의 유한한 basis $$(e\_i)\_{1\leq i\leq m}$$, $$(f\_j)\_{1\leq j\leq n}$$가 각각 주어졌다 하자. 이제 $$\min(m,n)$$보다 작은 자연수 $$p$$에 대하여, $$\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$$을 basis $$(e\_I)\_{\lvert I\rvert=p}$$, $$(f\_J)\_{\lvert J\rvert=p}$$에 대하여 행렬로 표현한 것은 $$(\det(X\_{J,I}))$$로 주어진다.
+<ins id="prop5">**명제 5**</ins> 두 free $$A$$-moduile $$M,N$$과 이들의 유한한 basis $$(e_i)_{1\leq i\leq m}$$, $$(f_j)_{1\leq j\leq n}$$가 각각 주어졌다 하자. 이제 $$\min(m,n)$$보다 작은 자연수 $$p$$에 대하여, $$\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$$을 basis $$(e_I)_{\lvert I\rvert=p}$$, $$(f_J)_{\lvert J\rvert=p}$$에 대하여 행렬로 표현한 것은 $$(\det(X_{J,I}))$$로 주어진다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-주어진 상황에서 $$I$$의 원소들을 $$i\_1<\cdots i\_p$$로 크기 순으로 나열하자. 그럼 $$\bigwedge^p(u)$$의 정의에 의하여
+주어진 상황에서 $$I$$의 원소들을 $$i_1<\cdots i_p$$로 크기 순으로 나열하자. 그럼 $$\bigwedge^p(u)$$의 정의에 의하여
 
 $${\bigwedge}^p(u)=u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})$$
 
@@ -112,7 +112,7 @@ $${\bigwedge}^p(u)=u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor6">**따름정리 6**</ins> Free $$A$$-module $$M$$이 유한한 basis $$(e\_i)\_{1\leq i\leq n}$$을 갖는다 하자. 그럼 임의의 $$u\in\End_\rMod{A}(M)$$과 $$\alpha,\beta\in A$$에 대하여 다음 식
+<ins id="cor6">**따름정리 6**</ins> Free $$A$$-module $$M$$이 유한한 basis $$(e_i)_{1\leq i\leq n}$$을 갖는다 하자. 그럼 임의의 $$u\in\End_\rMod{A}(M)$$과 $$\alpha,\beta\in A$$에 대하여 다음 식
 
 $$\det(\alpha\cdot\id_M+\beta u)=\sum_{k\geq 0}\tr\left({\bigwedge}^k(u)\right)\alpha^{n-k}\beta^k$$
 
@@ -126,13 +126,13 @@ $$\det(\alpha\cdot\id_M+\beta u)=\sum_{k\geq 0}\tr\left({\bigwedge}^k(u)\right)\
 
 $$(\alpha e_1+\beta u(e_1))\wedge\cdots\wedge(\alpha e_n+\beta u(e_n))$$
 
-를 $$e_1\wedge\cdots\wedge e_n$$의 배수로 되돌려 놓으며 생긴다. 위의 식을 전부 전개하면, 이는 $$0\leq p\leq n$$을 만족하는 정수 $$p$$, $$\lvert P\rvert=p$$를 만족하는 $$\\{1,\ldots, n\\}$$의 부분집합 $$P$$, 그리고 다음의 식
+를 $$e_1\wedge\cdots\wedge e_n$$의 배수로 되돌려 놓으며 생긴다. 위의 식을 전부 전개하면, 이는 $$0\leq p\leq n$$을 만족하는 정수 $$p$$, $$\lvert P\rvert=p$$를 만족하는 $$\{1,\ldots, n\}$$의 부분집합 $$P$$, 그리고 다음의 식
 
 $$x_i=\begin{cases}u(e_i)&\text{if $$i\in P$$}\\e_i&\text{otherwise}\end{cases}$$
 
 으로 정의된 $$x_i$$들로 정의한 $$\bigwedge^n(M)$$의 원소 $$x_P=x_1\wedge\cdots\wedge x_n$$에 대하여 $$\alpha^{n-p}\beta^p x_P$$들을 다 더한 것과 같다. 
 
-위의 꼴의 $$x_P$$를 단순화하기 위해, $$\\{1,\ldots, n\\}\setminus P=Q$$라 하고, $$P,Q$$의 원소들을 각각 크기별로 배열하여
+위의 꼴의 $$x_P$$를 단순화하기 위해, $$\{1,\ldots, n\}\setminus P=Q$$라 하고, $$P,Q$$의 원소들을 각각 크기별로 배열하여
 
 $$P=\{i_1< i_2<\cdots< i_p\},\qquad Q=\{j_1< j_2<\cdots < j_{n-p}\}$$
 
@@ -240,7 +240,7 @@ $$\sum_k (\x-\iota_!u)\circ\left(\sum_{j=0}^{k-1} \x^j (\iota_!u)^{k-j-1}\right)
 
 $$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^j(\iota_!u)\right)\x^{n-k}$$
 
-을 얻는다. 한편 $$u$$의 행렬표현 $$[u]\_\mathcal{B}^\mathcal{B}$$는, $$M[\x]$$의 $$A[\x]$$-basis $$\mathcal{B}'=(1\otimes e_i)\_{1\leq i\leq n}$$에 대한 $$\iota\_!u$$의 행렬표현 $$[\iota\_!u]\_{\mathcal{B}'}^{\mathcal{B}''}$$와 같으므로 위의 식은
+을 얻는다. 한편 $$u$$의 행렬표현 $$[u]_\mathcal{B}^\mathcal{B}$$는, $$M[\x]$$의 $$A[\x]$$-basis $$\mathcal{B}'=(1\otimes e_i)_{1\leq i\leq n}$$에 대한 $$\iota_!u$$의 행렬표현 $$[\iota_!u]_{\mathcal{B}'}^{\mathcal{B}''}$$와 같으므로 위의 식은
 
 $$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^j(u)\right)\x^{n-k}$$
 

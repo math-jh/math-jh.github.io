@@ -113,9 +113,9 @@ $$A=(A\cap f^{-1}(V_1))\cup (A\cap f^{-1}(V_2)),\qquad f^{-1}(V_1)\cap f^{-1}(V_
 
 $$f(x)=\begin{cases}1&\text{if $$x\in U$$}\\0&\text{if $$x\in V$$}\end{cases}$$
 
-으로 정의한 함수 $$f:X \rightarrow \\{0,1\\}$$은 연속이다. (여기서 $$\\{0,1\\}$$은 discrete topology가 주어진 공간이다.) 
+으로 정의한 함수 $$f:X \rightarrow \{0,1\}$$은 연속이다. (여기서 $$\{0,1\}$$은 discrete topology가 주어진 공간이다.) 
 
-이제 원소 $$a=(a_i)\in X$$를 고정하고, $$\iota_i: X_i \rightarrow X$$를 $$i$$번째 성분만 $$x$$이고, 나머지 성분은 $$a$$로부터 받아오는 함수로 정하자. 그럼 $$f\circ\iota_i$$는 $$X_i$$에서 $$\\{0,1\\}$$로의 연속함수이며, $$X_i$$가 connected라는 가정으로부터 $$f_i$$는 상수함수여야 하는 것을 안다. 따라서 귀납법에 의하여, 유한 개를 제외한 성분이 모두 $$a$$와 같은 $$X$$의 점 $$x$$들은 $$f(x)=f(a)$$를 만족해야 한다는 것을 안다. 이러한 점들은 $$X$$의 dense subset이므로, $$f$$는 $$X$$ 전체에서 상수함수여야 하고 이는 모순이다. 
+이제 원소 $$a=(a_i)\in X$$를 고정하고, $$\iota_i: X_i \rightarrow X$$를 $$i$$번째 성분만 $$x$$이고, 나머지 성분은 $$a$$로부터 받아오는 함수로 정하자. 그럼 $$f\circ\iota_i$$는 $$X_i$$에서 $$\{0,1\}$$로의 연속함수이며, $$X_i$$가 connected라는 가정으로부터 $$f_i$$는 상수함수여야 하는 것을 안다. 따라서 귀납법에 의하여, 유한 개를 제외한 성분이 모두 $$a$$와 같은 $$X$$의 점 $$x$$들은 $$f(x)=f(a)$$를 만족해야 한다는 것을 안다. 이러한 점들은 $$X$$의 dense subset이므로, $$f$$는 $$X$$ 전체에서 상수함수여야 하고 이는 모순이다. 
 
 </details>
 
@@ -125,7 +125,7 @@ $$f(x)=\begin{cases}1&\text{if $$x\in U$$}\\0&\text{if $$x\in V$$}\end{cases}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> $$X$$의 점 $$x\in X$$를 포함하는 *connected component<sub>연결성분</sub>*는 $$x$$를 포함하는 $$X$$의 connected subset 중 가장 큰 것이다. 만일 $$X$$의 임의의 점 $$x$$를 포함하는 connected componenet가 항상 $$\\{x\\}$$ 자기자신이라면 $$X$$를 *totally disconnected*라 부른다.
+<ins id="def7">**정의 7**</ins> $$X$$의 점 $$x\in X$$를 포함하는 *connected component<sub>연결성분</sub>*는 $$x$$를 포함하는 $$X$$의 connected subset 중 가장 큰 것이다. 만일 $$X$$의 임의의 점 $$x$$를 포함하는 connected componenet가 항상 $$\{x\}$$ 자기자신이라면 $$X$$를 *totally disconnected*라 부른다.
 
 </div>
 

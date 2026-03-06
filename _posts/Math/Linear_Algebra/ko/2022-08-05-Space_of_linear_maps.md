@@ -60,7 +60,7 @@ $$\{\text{functions from $$\mathcal{B}$$ to $$W$$}\}\longleftrightarrow\{\text{l
 
 즉 $$V$$에서 $$W$$로의 linear map은 $$L$$이 basis $$\mathcal{B}$$ 위에서 어떻게 행동하는지에 의해 완벽하게 결정되며, 만일 $$V$$가 유한차원이었다면 이는 linear map $$L$$이 오직 <em_ko>유한 개</em_ko>의 원소에서의 함수값에 의해서만 결정된다는 의미가 된다.
 
-특별히 공역 $$W$$ 또한 유한차원 $$\mathbb{K}$$-벡터공간이라 가정하고, $$V$$의 기저 $$\mathcal{B}=\\{x\_1,\ldots, x\_n\\}$$, 그리고 $$W$$의 기저 $$\mathcal{C}=\\{y_1,\ldots,y_m\\}$$를 고정하자. 그럼 앞선 논증에 의해 $$V$$에서 $$W$$로의 linear map $$L$$은 $$W$$의 $$n$$개의 벡터들
+특별히 공역 $$W$$ 또한 유한차원 $$\mathbb{K}$$-벡터공간이라 가정하고, $$V$$의 기저 $$\mathcal{B}=\{x_1,\ldots, x_n\}$$, 그리고 $$W$$의 기저 $$\mathcal{C}=\{y_1,\ldots,y_m\}$$를 고정하자. 그럼 앞선 논증에 의해 $$V$$에서 $$W$$로의 linear map $$L$$은 $$W$$의 $$n$$개의 벡터들
 
 $$L(x_1),L(x_2)\ldots, L(x_n)$$
 
@@ -103,9 +103,9 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
     
     $$r(v)=\begin{cases}x_i&\text{if $$v=L(x_i)$$}\\0&\text{otherwise}\end{cases}$$
 
-    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $$R$$이라 하자. 그럼 $$V$$의 basis $$\\{x_1,\ldots,x_n\\}$$의 임의의 원소 $$x_i$$에 대하여 $$(R\circ L)(x_i)=x_i$$이고, 따라서 정리 1의 유일성 부분에 의하여 $$R\circ L=\id_V$$가 성립한다.
+    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $$R$$이라 하자. 그럼 $$V$$의 basis $$\{x_1,\ldots,x_n\}$$의 임의의 원소 $$x_i$$에 대하여 $$(R\circ L)(x_i)=x_i$$이고, 따라서 정리 1의 유일성 부분에 의하여 $$R\circ L=\id_V$$가 성립한다.
 
-2. $$L$$이 전사함수라 하고, $$V$$의 basis $$x_1,\ldots,x_n$$을 택하자. 그럼 $$L(x_1),\ldots, L(x_n)$$은 $$W$$를 span하므로 이 벡터들 중 일부를 택하여 $$W$$의 basis $$\mathcal{B}$$를 찾을 수 있다. 일반성을 잃지 않고 $$\mathcal{B}=\\{L(x_1),\ldots, L(x_m)\\}$$ ($$m\leq n$$)이라 하자. 함수 $$s:\mathcal{B}\rightarrow V$$를 다음의 식
+2. $$L$$이 전사함수라 하고, $$V$$의 basis $$x_1,\ldots,x_n$$을 택하자. 그럼 $$L(x_1),\ldots, L(x_n)$$은 $$W$$를 span하므로 이 벡터들 중 일부를 택하여 $$W$$의 basis $$\mathcal{B}$$를 찾을 수 있다. 일반성을 잃지 않고 $$\mathcal{B}=\{L(x_1),\ldots, L(x_m)\}$$ ($$m\leq n$$)이라 하자. 함수 $$s:\mathcal{B}\rightarrow V$$를 다음의 식
     
     $$s(v)=x_k\qquad v=L(x_k)$$
 
@@ -160,7 +160,7 @@ $$\begin{aligned}
 
 벡터공간 $$\Hom(V,W)$$에서 영벡터에 해당하는 원소는 모든 원소를 0으로 보내는 함수 $$0$$이다. ([§선형사상, ⁋예시 10](/ko/math/linear_algebra/linear_map#ex10)) 이 함수를 지칭할 때는 편의상 영함수라 지칭하자.
 
-두 공간 $$V,W$$가 모두 유한차원이고, $$\mathcal{B}=\\{x_1,\ldots, x_n\\}$$, $$\mathcal{C}=\\{y_1,\ldots, y_m\\}$$이 $$V,W$$ 각각의 basis라 하자. $$\mathcal{B}$$에서 $$W$$로의 $$mn$$개의 함수들
+두 공간 $$V,W$$가 모두 유한차원이고, $$\mathcal{B}=\{x_1,\ldots, x_n\}$$, $$\mathcal{C}=\{y_1,\ldots, y_m\}$$이 $$V,W$$ 각각의 basis라 하자. $$\mathcal{B}$$에서 $$W$$로의 $$mn$$개의 함수들
 
 $$f_i^j(x)=\begin{cases}y_j&\text{if $$x=x_i$$}\\0&\text{otherwise}\end{cases}$$
 
@@ -168,7 +168,7 @@ $$f_i^j(x)=\begin{cases}y_j&\text{if $$x=x_i$$}\\0&\text{otherwise}\end{cases}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 두 유한차원 $$\mathbb{K}$$-벡터공간 $$V,W$$가 각각 basis $$\\{x_1,\ldots,x_n\\}$$, $$\\{y_1,\ldots,y_m\\}$$을 갖는다 하자. 그럼 $$\Hom(V,W)$$는 $$mn$$차원 벡터공간이며, 이 때 위의 $$mn$$개의 linear map들 $$B_i^j$$가 $$\Hom(V,W)$$의 basis가 된다.
+<ins id="prop5">**명제 5**</ins> 두 유한차원 $$\mathbb{K}$$-벡터공간 $$V,W$$가 각각 basis $$\{x_1,\ldots,x_n\}$$, $$\{y_1,\ldots,y_m\}$$을 갖는다 하자. 그럼 $$\Hom(V,W)$$는 $$mn$$차원 벡터공간이며, 이 때 위의 $$mn$$개의 linear map들 $$B_i^j$$가 $$\Hom(V,W)$$의 basis가 된다.
 
 </div>
 <details class="proof" markdown="1">

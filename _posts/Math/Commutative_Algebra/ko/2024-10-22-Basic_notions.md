@@ -103,7 +103,7 @@ $$\langle x_1\rangle\subsetneq \langle x_2\rangle\subsetneq\cdots$$
 
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
-이 주어졌다 하고 $$M'=\bigcup M_k$$라 하면 $$M'$$은 finitely generated이므로 $$M'=\langle x_1,\ldots, x_n\rangle$$이라 하자. 그럼 이제 각각의 $$i$$에 대하여, $$k\_i$$를 $$x\_i\in N\_{k\_i}$$가 성립하도록 잡을 수 있고 이제 이러한 $$k_i$$들 중 가장 큰 것은 반드시 $$M'$$과 같게 된다.
+이 주어졌다 하고 $$M'=\bigcup M_k$$라 하면 $$M'$$은 finitely generated이므로 $$M'=\langle x_1,\ldots, x_n\rangle$$이라 하자. 그럼 이제 각각의 $$i$$에 대하여, $$k_i$$를 $$x_i\in N_{k_i}$$가 성립하도록 잡을 수 있고 이제 이러한 $$k_i$$들 중 가장 큰 것은 반드시 $$M'$$과 같게 된다.
 
 이제 1번 조건과 3번 조건이 동치임을 보인다. 우선 1번 조건이 만족된다면 이는 $$M$$의 임의의 submodule들의 모임이 주어질 때마다 ACC에 의하여 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 전제조건이 만족되므로 3번이 성립하는 것이 자명하다. 거꾸로 3번 조건을 만족할 경우, $$M$$의 submodule들의 ascending chain
 

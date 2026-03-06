@@ -116,7 +116,7 @@ $$\langle u(x),\xi\rangle=\langle x, u^\ast\xi\rangle$$
 
 ## 쌍대기저
 
-$$A$$-module $$M$$이 basis $$(x\_i)\_{i\in I}$$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/multilinear_algebra/basis_of_free_modules#def1)) 즉 다음의 isomorphism
+$$A$$-module $$M$$이 basis $$(x_i)_{i\in I}$$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/multilinear_algebra/basis_of_free_modules#def1)) 즉 다음의 isomorphism
 
 $$\varepsilon: A^{\oplus I} \rightarrow M$$
 
@@ -132,8 +132,8 @@ $$\langle e_i, e_j^\ast\rangle=\delta_{ij}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> 임의의 free module $$M$$과 basis $$(e\_i)\_{i\in I}$$를 고정하자. 그럼 위에서 정의한 $$M^\ast$$의 원소들의 family $$(e\_i^\ast)\_{i\in I}$$를 $$(e\_i)\_{i\in I}$$에 대응되는 *coordinate form<sub>좌표 형식</sub>*이라 부른다.  
-만일 $$M$$이 finitely generated free module라면 이들 family $$(e_i^\ast)\_{i\in I}$$는 $$M^\ast$$의 basis이며, 이를 $$(e\_i)$$의 *dual basis<sub>쌍대기저</sub>*라 부른다.
+<ins id="def6">**정의 6**</ins> 임의의 free module $$M$$과 basis $$(e_i)_{i\in I}$$를 고정하자. 그럼 위에서 정의한 $$M^\ast$$의 원소들의 family $$(e_i^\ast)_{i\in I}$$를 $$(e_i)_{i\in I}$$에 대응되는 *coordinate form<sub>좌표 형식</sub>*이라 부른다.  
+만일 $$M$$이 finitely generated free module라면 이들 family $$(e_i^\ast)_{i\in I}$$는 $$M^\ast$$의 basis이며, 이를 $$(e_i)$$의 *dual basis<sub>쌍대기저</sub>*라 부른다.
 
 </div>
 

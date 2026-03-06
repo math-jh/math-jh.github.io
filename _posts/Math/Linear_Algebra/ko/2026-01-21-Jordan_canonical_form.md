@@ -139,7 +139,7 @@ $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 
 $$\ker (A-\lambda I)\cap \im (A-\lambda I)=\{0\}$$
 
-이므로 반드시 $$V=\ker (A-\lambda I)\oplus \im(A-\lambda I)$$ 꼴로 나타낼 수 있다는 것을 보았다. 그럼 $$\im (A-\lambda I)$$가 $$A$$-invariant가 되어 $$A$$를 이 위의 linear operator로 볼 수 있고 그 때 ([§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 의해 $$E_\lambda(A)\cap E_\mu(A)=\\{0\\}$$이므로) 고유값--고유벡터가 맞아떨어지므로 이를 귀납적으로 반복하여 고유공간분해를 얻는 것이 증명의 요지였다. 
+이므로 반드시 $$V=\ker (A-\lambda I)\oplus \im(A-\lambda I)$$ 꼴로 나타낼 수 있다는 것을 보았다. 그럼 $$\im (A-\lambda I)$$가 $$A$$-invariant가 되어 $$A$$를 이 위의 linear operator로 볼 수 있고 그 때 ([§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 의해 $$E_\lambda(A)\cap E_\mu(A)=\{0\}$$이므로) 고유값--고유벡터가 맞아떨어지므로 이를 귀납적으로 반복하여 고유공간분해를 얻는 것이 증명의 요지였다. 
 
 이제 위의 관점에서 [정의 3](#def3)을 어떻게 활용할지를 생각해보면, 우리는 임의의 linear operator $$L$$과
 
@@ -157,7 +157,7 @@ $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A:V\rightarrow V$$와 $$A$$의 서로 다른 두 eigenvalue $$\lambda, \mu$$에 대하여, $$G_\lambda(A)\cap G_\mu(A)=\\{0\\}$$이 성립한다. 
+<ins id="lem5">**보조정리 5**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A:V\rightarrow V$$와 $$A$$의 서로 다른 두 eigenvalue $$\lambda, \mu$$에 대하여, $$G_\lambda(A)\cap G_\mu(A)=\{0\}$$이 성립한다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -187,7 +187,7 @@ $$0=(L-\lambda_jI)^{p_j}w=(L-\lambda_jI)w'$$
 
 $$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w_\lambda w'$$
 
-으로부터 $$w'$$ 또한 $$\lambda_i$$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $$i\neq j$$일 때 $$G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\\{0\\}$$임을 안다. 
+으로부터 $$w'$$ 또한 $$\lambda_i$$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $$i\neq j$$일 때 $$G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$$임을 안다. 
 
 </details>
 

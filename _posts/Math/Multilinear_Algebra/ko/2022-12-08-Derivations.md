@@ -23,7 +23,7 @@ weight: 120
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Abelian group $$(\Delta, +, 0)$$에 대하여, 함수 $$\varepsilon : \Delta \times \Delta \to \\{ \pm 1 \\}$$가 다음의 세 조건을 만족한다 하자. 
+<ins id="def1">**정의 1**</ins> Abelian group $$(\Delta, +, 0)$$에 대하여, 함수 $$\varepsilon : \Delta \times \Delta \to \{ \pm 1 \}$$가 다음의 세 조건을 만족한다 하자. 
 
 - $$\varepsilon(\alpha + \alpha', \beta) = \varepsilon(\alpha, \beta)\varepsilon(\alpha', \beta)$$  
 - $$\varepsilon(\alpha, \beta + \beta') = \varepsilon(\alpha, \beta)\varepsilon(\alpha, \beta')$$  
@@ -55,7 +55,7 @@ $$E \otimes_A E' \to E'', \qquad F \otimes_A E' \to F'', \qquad E \otimes_A F' \
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 위의 상황에 더해 commutation factor $$\varepsilon: \Delta \times \Delta \to \\{ \pm 1 \\}$$이 주어졌다 하자. 그럼 $$(E, E', E'')$$에서 $$(F, F', F'')$$로 가는 degree $$\delta$$의 *$$(A, \varepsilon)$$-derivation<sub>$$(A,\varepsilon)$$-미분</sub>* 혹은 간단히 *$$\varepsilon$$-derivation*은 다음의 조건 
+<ins id="def2">**정의 2**</ins> 위의 상황에 더해 commutation factor $$\varepsilon: \Delta \times \Delta \to \{ \pm 1 \}$$이 주어졌다 하자. 그럼 $$(E, E', E'')$$에서 $$(F, F', F'')$$로 가는 degree $$\delta$$의 *$$(A, \varepsilon)$$-derivation<sub>$$(A,\varepsilon)$$-미분</sub>* 혹은 간단히 *$$\varepsilon$$-derivation*은 다음의 조건 
 
 $$d''(xx') = (dx)x' + \varepsilon(\delta, \deg(x))x(d'x')$$
 

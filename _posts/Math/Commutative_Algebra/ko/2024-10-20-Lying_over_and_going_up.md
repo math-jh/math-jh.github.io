@@ -92,7 +92,7 @@ $$a_nb^n+\cdots+a_1b+a_0=0,\qquad a_i\in \Frac(A)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-결론에 반하여 $$\mathfrak{q}\_1\subseteq \mathfrak{q}\_2$$라 가정하고 $$A\cap \mathfrak{q}\_1=A\cap \mathfrak{q}\_2=\mathfrak{p}$$라 하자. 그럼 $$A$$에서는 $$\mathfrak{p}$$로, $$B$$에서는 $$\mathfrak{q}\_1$$으로 quotient를 취하여, 주어진 상황을 integral domain $$B$$와 $$\mathfrak{q}\_1=0$$, 그리고 $$\mathfrak{q}\_2\cap A=0$$이 성립하도록 바꿔줄 수 있다. 그런데 $$B$$의 원소들에 대해 성립하는 integral equation들은 $$\mathfrak{p}$$로 quotient를 취하여도 그대로 integral equation이 되며, 특히 $$\Frac(B)$$가 $$\Frac(A)$$의 algebraic extension이 된다. 따라서 [보조정리 2](#lem2)에 의하여 원하는 결과를 얻는다. 
+결론에 반하여 $$\mathfrak{q}_1\subseteq \mathfrak{q}_2$$라 가정하고 $$A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$$라 하자. 그럼 $$A$$에서는 $$\mathfrak{p}$$로, $$B$$에서는 $$\mathfrak{q}_1$$으로 quotient를 취하여, 주어진 상황을 integral domain $$B$$와 $$\mathfrak{q}_1=0$$, 그리고 $$\mathfrak{q}_2\cap A=0$$이 성립하도록 바꿔줄 수 있다. 그런데 $$B$$의 원소들에 대해 성립하는 integral equation들은 $$\mathfrak{p}$$로 quotient를 취하여도 그대로 integral equation이 되며, 특히 $$\Frac(B)$$가 $$\Frac(A)$$의 algebraic extension이 된다. 따라서 [보조정리 2](#lem2)에 의하여 원하는 결과를 얻는다. 
 
 </details>
 

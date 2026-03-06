@@ -92,7 +92,7 @@ $$\mu(\eta(1)\otimes m)=\mu((\eta\otimes\id_M)(1\otimes m))=\lambda_M(1\otimes m
 
 $$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
 
-으로 주어진다. 여기에서 $$\epsilon_G$$는 $$G$$에서 terminal object $$\\{e\\}$$로 가는 유일한 morphism이고 $$\eta$$는 monoid object로서의 $$G$$의 unit이다. 뿐만 아니라, cartesian monoidal category에서는 monoidal product가 categorical product이므로, 다음 diagram
+으로 주어진다. 여기에서 $$\epsilon_G$$는 $$G$$에서 terminal object $$\{e\}$$로 가는 유일한 morphism이고 $$\eta$$는 monoid object로서의 $$G$$의 unit이다. 뿐만 아니라, cartesian monoidal category에서는 monoidal product가 categorical product이므로, 다음 diagram
 
 ![inverse_morphism](/assets/images/Math/Category_Theory/Monoid_objects-4.png){:style="width:12.6em" class="invert" .align-center}
 

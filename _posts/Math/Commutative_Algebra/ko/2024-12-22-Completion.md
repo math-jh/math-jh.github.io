@@ -27,7 +27,7 @@ $$\mathcal{J}:\qquad G=H_0\supseteq H_1\supseteq\cdots$$
 
 $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i\,\middle\vert\,\text{$$\rho_{ji}(g_j)=g_i$$ for all $$j>i$$}\right\}$$
 
-그리고 canonical morphism들 $$\rho_i:\widehat{G}\_{\mathcal{J}} \rightarrow G/ H_i$$들이 주어지며, 이 때 $$\rho_{ji}\circ\rho_j=\rho_i$$가 모든 $$j>i$$에 대해 성립한다. 표기의 편의를 위해 $$\mathcal{J}$$가 문맥에 따라 명확할 경우 이를 간단히 $$\widehat{G}$$로 쓰기도 한다.
+그리고 canonical morphism들 $$\rho_i:\widehat{G}_{\mathcal{J}} \rightarrow G/ H_i$$들이 주어지며, 이 때 $$\rho_{ji}\circ\rho_j=\rho_i$$가 모든 $$j>i$$에 대해 성립한다. 표기의 편의를 위해 $$\mathcal{J}$$가 문맥에 따라 명확할 경우 이를 간단히 $$\widehat{G}$$로 쓰기도 한다.
 
 그럼 이들은 [\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5)에서 살펴본 것과 같이 범주론적인 극한으로 생각할 수 있으며, 따라서 다음의 universal property 또한 만족한다.
 
@@ -131,7 +131,7 @@ $$m,n>N \implies x_m-y_n\in U$$
 
 $$\widehat{U}=\{[(x_n)]\in \widehat{G}:\text{for any $$(y_n)\in [(x_n)]$$, $$y_n\in U$$ for all but finitely many $$n$$}\}$$
 
-으로 정의하자. 그럼 약간의 계산을 통해, $$\widehat{H}\_i$$들을 coninitial subset으로 갖는 $$\widehat{G}$$의 집합들의 모임 $$\mathcal{N}(0)$$이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 확인할 수 있고, 따라서 $$\widehat{G}$$에 위상구조를 정의할 수 있다. 정의에 의해 $$\widehat{G}$$ 또한 first countable이며, $$x\in G$$를 받아 상수수열 $$(x_i=x)$$를 내놓는 함수 $$G \rightarrow \widehat{G}$$가 연속임을 알 수 있다. 뿐만 아니라, 이 함수는 앞선 절에서 정의한 $$G \rightarrow \widehat{G}$$와 완전히 같은 것이다. 
+으로 정의하자. 그럼 약간의 계산을 통해, $$\widehat{H}_i$$들을 coninitial subset으로 갖는 $$\widehat{G}$$의 집합들의 모임 $$\mathcal{N}(0)$$이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 확인할 수 있고, 따라서 $$\widehat{G}$$에 위상구조를 정의할 수 있다. 정의에 의해 $$\widehat{G}$$ 또한 first countable이며, $$x\in G$$를 받아 상수수열 $$(x_i=x)$$를 내놓는 함수 $$G \rightarrow \widehat{G}$$가 연속임을 알 수 있다. 뿐만 아니라, 이 함수는 앞선 절에서 정의한 $$G \rightarrow \widehat{G}$$와 완전히 같은 것이다. 
 
 ## 완비화의 기본적인 성질들
 

@@ -55,7 +55,7 @@ $$E_{ij}E_{jk}=\delta_{jh}E_{ik}$$
 
 </div>
 
-Free $$A$$-module $$M$$의 basis $$\mathcal{B}=(e\_i)\_{i\in I}$$를 고정하고, $$\lvert I\rvert=n$$이라 하자. 그럼 임의의 $$u\in \End_{\lMod{A}}(M)$$에 대하여, $$\[u\]\_{\mathcal{B}}^\mathcal{B}\in\Mat\_n(A)$$이며, 만일 $$u$$가 isomorphism이라면 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#lem4)에 의하여 $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$$이다. 그럼 [§쌍대공간, ⁋명제 5](/ko/math/multilinear_algebra/dual_spaces#prop5)와 [§행렬과 선형사상, ⁋명제 5](/ko/math/multilinear_algebra/matrices_and_linear_maps#prop5)에 의하여 다음 식
+Free $$A$$-module $$M$$의 basis $$\mathcal{B}=(e_i)_{i\in I}$$를 고정하고, $$\lvert I\rvert=n$$이라 하자. 그럼 임의의 $$u\in \End_{\lMod{A}}(M)$$에 대하여, $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$이며, 만일 $$u$$가 isomorphism이라면 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#lem4)에 의하여 $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$$이다. 그럼 [§쌍대공간, ⁋명제 5](/ko/math/multilinear_algebra/dual_spaces#prop5)와 [§행렬과 선형사상, ⁋명제 5](/ko/math/multilinear_algebra/matrices_and_linear_maps#prop5)에 의하여 다음 식
 
 $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\mathcal{B}^\ast}^{\mathcal{B}^\ast}\bigr)^{-1}$$
 
@@ -65,7 +65,7 @@ $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\ma
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> 임의의 $$A$$-module $$M$$과 $$M$$의 유한한 basis $$\mathcal{B}=(e\_i)\_{i\in I}$$가 주어졌다 하자. 그럼 다음 식
+<ins id="prop4">**명제 4**</ins> 임의의 $$A$$-module $$M$$과 $$M$$의 유한한 basis $$\mathcal{B}=(e_i)_{i\in I}$$가 주어졌다 하자. 그럼 다음 식
 
 $$e_i'=\sum_{j=1}^n a_{ji}e_i,\qquad 1\leq i\leq n$$
 
@@ -79,7 +79,7 @@ $$e_i'=\sum_{j=1}^n a_{ji}e_i,\qquad 1\leq i\leq n$$
 
 $$u:e_i\mapsto e_i'=\sum_{j=1}^n a_{ji}e_i$$
 
-으로 정의되는 linear map $$u\in\End_{\lMod{A}}(M)$$의 $$\mathcal{B}$$에 대한 행렬표현 $$\[u\]\_{\mathcal{B}}^\mathcal{B}\in\Mat\_n(A)$$이다. 이제 이 행렬이 역행렬을 갖는 것은 $$u$$가 isomorphism인 것과 동치이고, 이는 $$(u(e_i))_{i\in I}$$가 $$M$$의 basis가 되는 것과 동치이다. 
+으로 정의되는 linear map $$u\in\End_{\lMod{A}}(M)$$의 $$\mathcal{B}$$에 대한 행렬표현 $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$이다. 이제 이 행렬이 역행렬을 갖는 것은 $$u$$가 isomorphism인 것과 동치이고, 이는 $$(u(e_i))_{i\in I}$$가 $$M$$의 basis가 되는 것과 동치이다. 
 
 </details>
 
@@ -97,7 +97,7 @@ $$([\id_M]^{\mathcal{B}'}_\mathcal{B})=(\langle \id_M(e_i'), e_j^\ast\rangle)_{(
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 두 $$A$$-module $$M,N$$과, 이들의 유한한 basis $$\mathcal{B}=(e\_i)\_{i\in I}$$, $$\mathcal{C}=(f\_j)\_{j\in J}$$가 각각 주어졌다 하자. $$M$$, $$N$$의 또 다른 basis $$\mathcal{B}'=(e\_i')\_{i\in I}$$, $$\mathcal{C}'=(f\_j')\_{j\in J}$$에 대하여, 다음의 식
+<ins id="prop5">**명제 5**</ins> 두 $$A$$-module $$M,N$$과, 이들의 유한한 basis $$\mathcal{B}=(e_i)_{i\in I}$$, $$\mathcal{C}=(f_j)_{j\in J}$$가 각각 주어졌다 하자. $$M$$, $$N$$의 또 다른 basis $$\mathcal{B}'=(e_i')_{i\in I}$$, $$\mathcal{C}'=(f_j')_{j\in J}$$에 대하여, 다음의 식
 
 $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathcal{B}_\mathcal{C}[\id_M]^{\mathcal{B}'}_{\mathcal{B}}$$
 

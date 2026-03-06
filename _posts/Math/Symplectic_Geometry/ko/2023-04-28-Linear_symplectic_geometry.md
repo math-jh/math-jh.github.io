@@ -61,7 +61,7 @@ $$\{u\in V\mid \omega(u,v)=0\text{ for all $$v\in V$$}\}$$
 - 모든 $$i,j$$에 대하여, $$\omega(e_i,e_j)=\omega(f_i,f_j)=0$$이 성립한다.
 - 모든 $$i,j$$에 대하여, $$\omega(e_i,f_j)=\delta_{ij}$$이 성립한다.
 
-을 만족하는 벡터 $$e_1,\ldots, e_k, f_1,\ldots, f_k\in W$$가 주어졌다 하고, $$\span\\{e_1,\ldots, e_k,f_1,\ldots, f_k\\}\leq W$$에 속하지 않는 임의의 벡터 $$e_{k+1}$$를 하나 택하자. 만일 임의의 $$i=1,\ldots, k$$에 대하여
+을 만족하는 벡터 $$e_1,\ldots, e_k, f_1,\ldots, f_k\in W$$가 주어졌다 하고, $$\span\{e_1,\ldots, e_k,f_1,\ldots, f_k\}\leq W$$에 속하지 않는 임의의 벡터 $$e_{k+1}$$를 하나 택하자. 만일 임의의 $$i=1,\ldots, k$$에 대하여
 
 $$\omega(e_{k+1}, e_i)=\lambda_i,\qquad\omega(e_{k+1},f_i)=\eta_i$$
 
@@ -89,7 +89,7 @@ $$\omega(f_{k+1},e_i)=\omega(f_{k+1},f_i)=0\qquad\text{for all $$i=1,\ldots, k$$
 
 </details>
 
-위의 보조정리에서 부분공간 $$U=\span\\{u_1,\ldots, u_k\\}$$은 $$\omega$$가 항등적으로 영인 공간이며, 따라서 이 부분공간의 complement $$W$$에서 $$\omega$$는 symplectic form이 된다. 거꾸로 임의의 벡터공간에 symplectic form이 주어졌다면, $$\omega$$가 non-degenerate인 것으로부터 $$U=0$$이어야 하므로 임의의 symplectic vector space는 반드시 짝수차원이어야 한다. 이 때, 위의 보조정리에서 얻어지는 basis
+위의 보조정리에서 부분공간 $$U=\span\{u_1,\ldots, u_k\}$$은 $$\omega$$가 항등적으로 영인 공간이며, 따라서 이 부분공간의 complement $$W$$에서 $$\omega$$는 symplectic form이 된다. 거꾸로 임의의 벡터공간에 symplectic form이 주어졌다면, $$\omega$$가 non-degenerate인 것으로부터 $$U=0$$이어야 하므로 임의의 symplectic vector space는 반드시 짝수차원이어야 한다. 이 때, 위의 보조정리에서 얻어지는 basis
 
 $$e_1,\ldots, e_n, f_1,\ldots, f_n$$
 
@@ -105,7 +105,7 @@ $$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $$w\in W$$}\}$$
 
 1. 만일 $$W\subseteq W^\omega$$이 성립한다면, $$W$$를 *isotropic subspace*라 부른다.
 2. 만일 $$W^\omega\subseteq W$$이 성립한다면, $$W$$를 *coisotropic subspace*라 부른다.
-3. 만일 $$W\cap W^\omega=\\{0\\}$$이 성립한다면, $$W$$를 *symplectic subspace*라 부른다.
+3. 만일 $$W\cap W^\omega=\{0\}$$이 성립한다면, $$W$$를 *symplectic subspace*라 부른다.
 4. 만일 $$W=W^\omega$$이 성립한다면, $$W$$를 *Lagrangian subspace*라 부른다.
 
 </div>

@@ -37,7 +37,7 @@ $${<}(1)=\{2,3,\ldots\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 공집합이 아닌 집합 $$A$$에 대하여, 이항관계 $$f=(F,A,B)$$가 *함수<sub>function</sub>*라는 것은 $$A=\pr_1F$$이고 각각의 $$x\in A$$에 대하여 $$F(\\{x\\})$$가 한원소집합[^1]인 것이다.
+<ins id="def1">**정의 1**</ins> 공집합이 아닌 집합 $$A$$에 대하여, 이항관계 $$f=(F,A,B)$$가 *함수<sub>function</sub>*라는 것은 $$A=\pr_1F$$이고 각각의 $$x\in A$$에 대하여 $$F(\{x\})$$가 한원소집합[^1]인 것이다.
 
 </div>
 
@@ -45,7 +45,7 @@ $${<}(1)=\{2,3,\ldots\}$$
 
 > 모든 $$x\in A$$에 대하여, <em_ko>유일한</em_ko> $$y\in B$$가 존재하여 $$(x,y)\in F$$ 
 
-인 것이다. 이 때의 $$y$$를 $$f$$의 $$x$$에서의 *함숫값*이라 부르고, 이 때 집합 $$F(\\{x\\})$$의 유일한 원소를 $$f(x)$$로 표기한다. 또, 집합 $$A=\pr_1F$$를 $$f$$의 *정의역<sub>domain</sub>*이라 부른다.
+인 것이다. 이 때의 $$y$$를 $$f$$의 $$x$$에서의 *함숫값*이라 부르고, 이 때 집합 $$F(\{x\})$$의 유일한 원소를 $$f(x)$$로 표기한다. 또, 집합 $$A=\pr_1F$$를 $$f$$의 *정의역<sub>domain</sub>*이라 부른다.
 
 위의 표기를 따라, 이항관계 $$F$$에 대한 집합 $$X\subseteq A$$의 image는 $$F(X)$$ 대신 $$f(X)$$로, 집합 $$Y\subseteq B$$의 preimage도 $$F^{-1}(Y)$$ 대신 $$f^{-1}(Y)$$로 적는다. ([§이항관계, ⁋정의 5](/ko/math/set_theory/binary_relation#def5)와 [§이항관계들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_binary_relations#def1)) 또, triple $$f=(F,A,B)$$는 간단히 $$f:A\rightarrow B$$과 같이 적는다.
 
@@ -55,7 +55,7 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 
 는 "좌표평면" $$A\times B$$ 위에 그려진 <em_ko>함수의 그래프</em_ko>로 생각할 수도 있으며, 더 일반적으로 이항관계 $$R$$ 또한 <em_ko>이항관계의 그래프</em_ko>로 생각할 수도 있다. 함수 $$f$$가 *상수함수<sub>constant</sub>*라는 것은 모든 $$x,x'\in \pr_1 F$$에 대하여 $$f(x)=f(x')$$인 것이다.
 
-특수한 경우에는 함숫값을 나타내기 위해 $$f_x$$ 등과 같은 표현도 사용한다. 이러한 표기법을 사용할 때에는 특별히 $$f$$의 정의역을 *index set<sub>첨수집합</sub>*이라 부르고, 이 때 $$F$$를 *family*라 부른다. $$f=(F,I,A)$$를 family로 생각할 때에는 $$F$$를 나타낼 때 $$(f\_i)\_{i\in I}$$와 같이 표기한다.
+특수한 경우에는 함숫값을 나타내기 위해 $$f_x$$ 등과 같은 표현도 사용한다. 이러한 표기법을 사용할 때에는 특별히 $$f$$의 정의역을 *index set<sub>첨수집합</sub>*이라 부르고, 이 때 $$F$$를 *family*라 부른다. $$f=(F,I,A)$$를 family로 생각할 때에는 $$F$$를 나타낼 때 $$(f_i)_{i\in I}$$와 같이 표기한다.
 
 만일 $$f$$가 어떠한 집합 $$A$$에서 $$A$$로의 함수라면, $$x\in A$$가 $$f$$에 의해 *고정된다*는 것은 $$f(x)=x$$인 것이다. 
 
@@ -111,7 +111,7 @@ $${\id_A}=g\circ h\circ f,\quad {\id_B}=f\circ g\circ h,\quad {\id_C}=h\circ f\c
 
 </div>
 
-두 함수 $$f$$와 $$f'$$가 주어졌고, $$S=\pr\_1 F\cap\pr\_1 F'$$가 공집합이 아니라 하자. $$S$$에서 두 함수가 compatible하다면 $$\pr\_1F\cup\pr\_1F'$$를 정의역으로 갖는 새로운 함수 $$g$$를 다음의 식
+두 함수 $$f$$와 $$f'$$가 주어졌고, $$S=\pr_1 F\cap\pr_1 F'$$가 공집합이 아니라 하자. $$S$$에서 두 함수가 compatible하다면 $$\pr_1F\cup\pr_1F'$$를 정의역으로 갖는 새로운 함수 $$g$$를 다음의 식
 
 $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\cap\pr_1F'\\ f'(x)&x\in\pr_1F'\setminus\pr_1F\end{cases}$$
 
@@ -131,7 +131,7 @@ $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\ca
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 위와 같이 정의된 함수 $$g$$를 $$f$$의 $$A$$ 위로의 *restriction<sub>제한</sub>*이라 부르며, 이를 $$f\|\_{X}$$와 같이 적는다.
+<ins id="def5">**정의 5**</ins> 위와 같이 정의된 함수 $$g$$를 $$f$$의 $$A$$ 위로의 *restriction<sub>제한</sub>*이라 부르며, 이를 $$f\vert_{X}$$와 같이 적는다.
 
 </div>
 

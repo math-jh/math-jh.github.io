@@ -22,7 +22,7 @@ weight: 3
 
 우리는 [\[대수적 구조\] §가환군, ⁋정의 3](/ko/math/algebraic_structures/abelian_groups#def3)에서, 임의의 group $$G$$와 $$G$$의 두 subgroup $$H,H'$$에 대하여 이들의 commutator들로 이루어진 subgroup $$[H,H']$$를 정의하였다. 해당 글에서는 $$H=H'=G$$인 경우만 생각하였으나, 이번 글에서는 이를 일반화할 것이므로 우선 commutator에 대한 성질을 더 자세히 살펴보자. 
 
-우선 $$[h,h']^{-1}=[h',h]$$인 것으로부터 $$[H,H']=[H',H]$$이 항상 성립한다. 만일 $$[H,H']=\\{e\\}$$라면, 모든 $$h,h'$$에 대하여 $$hh'=h'h$$이므로 $$C_G(H)\subseteq H'$$이고 $$C_G(H')\subseteq H$$이며 이들 두 조건 중 하나가 성립하면 $$[H,H']=\\{e\\}$$가 성립하는 것 또한 자명하다. 비슷하게, 만일 $$[H,H']\subseteq H$$라 하면 임의의 $$h,h'$$에 대하여
+우선 $$[h,h']^{-1}=[h',h]$$인 것으로부터 $$[H,H']=[H',H]$$이 항상 성립한다. 만일 $$[H,H']=\{e\}$$라면, 모든 $$h,h'$$에 대하여 $$hh'=h'h$$이므로 $$C_G(H)\subseteq H'$$이고 $$C_G(H')\subseteq H$$이며 이들 두 조건 중 하나가 성립하면 $$[H,H']=\{e\}$$가 성립하는 것 또한 자명하다. 비슷하게, 만일 $$[H,H']\subseteq H$$라 하면 임의의 $$h,h'$$에 대하여
 
 $$h^{-1}h'^{-1}hh'\in H\implies h'^{-1}hh'^{-1}\in H$$
 
@@ -158,7 +158,7 @@ $$[C_m(G), C_1(G)]\subseteq C_{m+1}(G),\qquad [C_1(G), C_n(G)]\subseteq C_{n+1}(
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Group $$G$$가 *nilpotent group<sub>멱영군</sub>*이라는 것은 적당한 자연수 $$n$$이 존재하여 $$C_{n+1}(G)=\\{e\\}$$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $$n$$을 $$G$$의 *nilpotency class*라 부른다. 
+<ins id="def6">**정의 6**</ins> Group $$G$$가 *nilpotent group<sub>멱영군</sub>*이라는 것은 적당한 자연수 $$n$$이 존재하여 $$C_{n+1}(G)=\{e\}$$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $$n$$을 $$G$$의 *nilpotency class*라 부른다. 
 
 </div>
 
@@ -182,11 +182,11 @@ $$[C_m(G), C_1(G)]\subseteq C_{m+1}(G),\qquad [C_1(G), C_n(G)]\subseteq C_{n+1}(
 
 우선 첫째 조건을 가정하면, $$G_k=C_k(G)$$가 둘째 조건을 만족하며, 거꾸로 둘째 조건이 성립한다면 귀납적으로 $$C_k(G)\subset G_k$$가 항상 성립하는 것을 보일 수 있다. 
 
-나머지 동치의 경우, 첫째 조건을 가정하면 셋째 조건이 성립하는 것은 $$A=C_n(G)$$로 두면 된다. 셋째 조건을 가정하고 첫째 조건이 성립하는 것을 보이는 것은 canonical morphism $$G \rightarrow G/A$$를 통해 $$C_n(G)$$를 보내면 그 image는 [명제 4](#prop4)에 의하여 $$C_n(G/A)$$와 같고, 가정에 의해 이것이 $$\\{e\\}$$이므로 $$C_n(G)\subset A$$이고 따라서 $$C_{n+1}(G)=\\{e\\}$$임을 확인하면 된다. 
+나머지 동치의 경우, 첫째 조건을 가정하면 셋째 조건이 성립하는 것은 $$A=C_n(G)$$로 두면 된다. 셋째 조건을 가정하고 첫째 조건이 성립하는 것을 보이는 것은 canonical morphism $$G \rightarrow G/A$$를 통해 $$C_n(G)$$를 보내면 그 image는 [명제 4](#prop4)에 의하여 $$C_n(G/A)$$와 같고, 가정에 의해 이것이 $$\{e\}$$이므로 $$C_n(G)\subset A$$이고 따라서 $$C_{n+1}(G)=\{e\}$$임을 확인하면 된다. 
 
 </details>
 
-따라서, 직관적으로 nilpotent group of nilpotency class $$\leq n$$은 trivial group $$\\{e\\}$$로부터 $$n$$개의 central extension들을 통해 얻어지는 것으로 생각할 수 있다. 
+따라서, 직관적으로 nilpotent group of nilpotency class $$\leq n$$은 trivial group $$\{e\}$$로부터 $$n$$개의 central extension들을 통해 얻어지는 것으로 생각할 수 있다. 
 
 <div class="proposition" markdown="1">
 
@@ -231,7 +231,7 @@ $$D_0(G)=G,\qquad D_{n+1}(G)=[D_n(G),D_n(G)]$$
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> Group $$G$$가 *solvable<sub>가해</sub>*이라는 것은 적당한 자연수 $$n$$이 존재하여 $$D_{n+1}(G)=\\{e\\}$$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $$n$$을 $$G$$의 *solvability class*라 부른다.
+<ins id="def11">**정의 11**</ins> Group $$G$$가 *solvable<sub>가해</sub>*이라는 것은 적당한 자연수 $$n$$이 존재하여 $$D_{n+1}(G)=\{e\}$$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $$n$$을 $$G$$의 *solvability class*라 부른다.
 
 </div>
 
@@ -255,7 +255,7 @@ $$D_n(G)\subseteq C_{2^n}(G)$$
 
 </div>
 
-따라서, 직관적으로 solvable group of solvability class $$\leq n$$은 trivial group $$\\{e\\}$$를 $$n$$개의 abelian group들로 extend하여 얻어지는 것으로 생각할 수 있다. 
+따라서, 직관적으로 solvable group of solvability class $$\leq n$$은 trivial group $$\{e\}$$를 $$n$$개의 abelian group들로 extend하여 얻어지는 것으로 생각할 수 있다. 
 
 ## 합성열과 조르단-횔더 정리
 

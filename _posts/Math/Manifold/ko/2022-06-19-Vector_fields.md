@@ -36,7 +36,7 @@ weight: 11
 <ins id="prop2">**명제 2**</ins> Manifold $$M$$ 위에서 정의된 벡터장 $$X$$를 생각하자. 다음이 모두 동치이다.
 
 1. $$X$$가 $$C^\infty$$이다.
-2. 임의의 coordinate system $$(U,\varphi)$$, $$\varphi=(x^i)\_{i=1}^m$$에 대하여, 다음의 식
+2. 임의의 coordinate system $$(U,\varphi)$$, $$\varphi=(x^i)_{i=1}^m$$에 대하여, 다음의 식
     
     $$(X|_U)_p=\sum_{i=1}^m a^i(p)\frac{\partial}{\partial x^i}\bigg|_p$$
 
@@ -47,7 +47,7 @@ weight: 11
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$X$$가 $$C^\infty$$라면 $$X\|\_U$$가 $$C^\infty$$인 것은 자명하다. 한편, $$TM$$에서 정의된 함수로서 $$dx^i$$들은 coordinate system $$\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$$의 성분함수들이므로 마찬가지로 $$C^\infty$$이고, 따라서 이들의 합성
+우선 $$X$$가 $$C^\infty$$라면 $$X\|_U$$가 $$C^\infty$$인 것은 자명하다. 한편, $$TM$$에서 정의된 함수로서 $$dx^i$$들은 coordinate system $$\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$$의 성분함수들이므로 마찬가지로 $$C^\infty$$이고, 따라서 이들의 합성
 
 $$a^i(p)=dx^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg|_p\right)=dx^i|_p\circ(X|_U)_p$$
 
@@ -105,7 +105,7 @@ $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{dx}\bigg\vert_p$$
 
 ![Hairy_ball](/assets/images/Math/Manifold/Vector_fields-1.png){:style="width:200px" class="invert" .align-center}
 
-$$2$$-manifold $$M=S^2$$ 위에 정의된 두 vector field $$X_1,X_2$$가 $$\mathfrak{X}(M)$$을 $$C^\infty(M)$$-module로서 생성한다고 가정하자. 그럼 hairy ball theorem으로부터 $$X_1(p)=0$$인 점 $$p\in S^2$$가 존재한다. 그럼 $$T_pM$$은 $$\\{0,X_2(p)\\}$$로 생성되어야 하는데, 이는 $$T_pM$$이 2차원이라는 것에 모순이다. 따라서 $$\mathfrak{X}(M)$$을 두 벡터장 $$\\{X_1,X_2\\}$$으로 생성할 수는 없다. 
+$$2$$-manifold $$M=S^2$$ 위에 정의된 두 vector field $$X_1,X_2$$가 $$\mathfrak{X}(M)$$을 $$C^\infty(M)$$-module로서 생성한다고 가정하자. 그럼 hairy ball theorem으로부터 $$X_1(p)=0$$인 점 $$p\in S^2$$가 존재한다. 그럼 $$T_pM$$은 $$\{0,X_2(p)\}$$로 생성되어야 하는데, 이는 $$T_pM$$이 2차원이라는 것에 모순이다. 따라서 $$\mathfrak{X}(M)$$을 두 벡터장 $$\{X_1,X_2\}$$으로 생성할 수는 없다. 
 
 반면 충분히 작은 열린집합 $$U$$에 대하여, $$U$$ 위에서 정의된 벡터장들의 모임 $$\mathfrak{X}(U)$$은 $$m$$개의 벡터장으로 생성되는 $$C^\infty(U)$$-module로 생각할 수 있다. Tangent bundle $$\pi: TM\rightarrow M$$에 대하여 열린집합 $$U$$를 충분히 작게 잡으면 diffeomorphism $$h:U\times\mathbb{R}^m\rightarrow\pi^{-1}(U)$$을 찾을 수 있으므로, 벡터장 $$X_1,\ldots, X_m$$을
 
@@ -149,10 +149,10 @@ $$(p,a_1X_1(p)+\cdots+a_mX_m(p))\mapsto (p,a_1e_1+\cdots+a_me_m)$$
 2. $$\phi_p$$는 $$X$$의 integral flow이다.
 3. 만일 $$\mu:(c,d)\rightarrow M$$이 위의 두 조건을 만족하는 $$C^\infty$$ 함수라면 $$(c,d)\subseteq \bigl(a(p),b(p)\bigr)$$이고, $$\mu$$는 $$\phi_p$$를 $$(c,d)$$로 제한한 것과 동일한 함수이다.
 4. 각각의 $$p\in M$$마다 적당한 열린근방 $$V$$와 양수 $$\epsilon$$이 존재하여, $$(t,p)\mapsto \phi^{t}(p):=\phi_p(t)$$가 잘 정의되며, 이 함수는 $$(-\epsilon,\epsilon)\times V$$에서 $$M$$으로의 $$C^\infty$$ 함수이다.
-5. 임의의 $$t$$에 대해 $$\mathcal{D}_t=\left\\{p\in M\mid t\in\bigl(a(p),b(p)\bigr)\right\\}$$가 열린집합이다.
-6. $$\bigcup\_{t>0}\mathcal{D}_t=M$$.
-7. $$\phi^{t}:\mathcal{D}\_t\rightarrow\mathcal{D}\_{-t}$$는 diffeomorphism이고, 그 역함수는 $$\phi^{-t}$$이다.
-8. $$\phi^s\circ \phi^t$$의 정의역은 $$\mathcal{D}\_{s+t}$$에 포함되며, 특히 $$s$$와 $$t$$가 같은 부호일 경우 이 함수의 정의역은 정확히 $$\mathcal{D}\_{s+t}$$와 동일하다. 또, 이 정의역 상에서 $$\phi^s\circ \phi^t=\phi^{t+s}$$이다.
+5. 임의의 $$t$$에 대해 $$\mathcal{D}_t=\left\{p\in M\mid t\in\bigl(a(p),b(p)\bigr)\right\}$$가 열린집합이다.
+6. $$\bigcup_{t>0}\mathcal{D}_t=M$$.
+7. $$\phi^{t}:\mathcal{D}_t\rightarrow\mathcal{D}_{-t}$$는 diffeomorphism이고, 그 역함수는 $$\phi^{-t}$$이다.
+8. $$\phi^s\circ \phi^t$$의 정의역은 $$\mathcal{D}_{s+t}$$에 포함되며, 특히 $$s$$와 $$t$$가 같은 부호일 경우 이 함수의 정의역은 정확히 $$\mathcal{D}_{s+t}$$와 동일하다. 또, 이 정의역 상에서 $$\phi^s\circ \phi^t=\phi^{t+s}$$이다.
 
 </div>
 
@@ -172,7 +172,7 @@ $$\mathcal{D}_t=\left\{p\in M\mid t\in\bigl(a(p),b(p)\bigr)\right\}$$
 
 이제 기술적인 결과인 4번과 5번을 제외하면 그 다음으로 나오는 결과는 6번의 결과인데, 이는 사실 integral flow의 존재성을 다른 방식으로 서술한 것에 불과하다. 7번의 결과는 integral flow들이 서로 섞이지 않는다는 것을 보여준다. 
 
-8번의 결과 또한 약간 기술적인 측면이 있는데, 만일 $$s$$와 $$t$$가 다른 부호였다면, 가령 $$s=-2$$이고 $$t=1$$이었다면 $$\phi^s\circ\phi^t$$의 정의역은 단순히 $$\mathcal{D}\_{-1}$$가 아니라, $$\mathcal{D}\_{-1}$$의 원소들 중 $$\phi_p$$를 따라 1초만큼 진행하는 것도 가능한 점들만으로 이루어진 집합이다.
+8번의 결과 또한 약간 기술적인 측면이 있는데, 만일 $$s$$와 $$t$$가 다른 부호였다면, 가령 $$s=-2$$이고 $$t=1$$이었다면 $$\phi^s\circ\phi^t$$의 정의역은 단순히 $$\mathcal{D}_{-1}$$가 아니라, $$\mathcal{D}_{-1}$$의 원소들 중 $$\phi_p$$를 따라 1초만큼 진행하는 것도 가능한 점들만으로 이루어진 집합이다.
 
 
 <div class="definition" markdown="1">

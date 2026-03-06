@@ -64,16 +64,16 @@ $$xa \mathfrak{b}\subseteq x \mathfrak{a}\subseteq \mathfrak{a}$$
     $$x=x_{d_1}+\cdots+x_{d_l},\quad d_1 < \cdots < d_l\tag{$$\ast$$}$$
     
     으로 나타냈을 때, $$x_i$$들 각각이 $$\sqrt{\mathfrak{a}}$$에 속한다는 것을 보여야 한다. 우선 $$x\in \mathfrak{a}$$인 것으로부터, 적당한 $$k$$가 존재하여 $$x^k\in \mathfrak{a}$$이다. 한편, 일반성을 잃지 않고 위의 표현 ($$\ast$$)에서 $$x_l$$이 가장 큰 차수를 갖는다고 하면, $$x^k$$를 homogeneous element들의 합으로 나타냈을 때, $$x_l^k$$가 차수 $$k\deg x_l$$에 있는 유일한 원소이다. 이제 $$x^k\in \mathfrak{a}$$이고 $$\mathfrak{a}$$가 homogeneous ideal인 것으로부터 $$x_l^k\in \mathfrak{a}$$, 즉 $$x_l\in \sqrt{\mathfrak{a}}$$인 것을 안다. 이후에는 $$x-x_l\in\sqrt{\mathfrak{a}}$$이므로 같은 논증을 반복하면 된다.
-2. $$x\in (\mathfrak{a}:\mathfrak{b})$$라 하자. 위와 마찬가지로 $$x$$를 homogeneous ideal들의 합 ($$\ast$$)으로 나타냈을 때, $$x\_i$$들 각각이 $$(\mathfrak{a}:\mathfrak{b})$$에 속함을 보여야 한다. 이제 $$\mathfrak{b}$$를 생성하는 임의의 homogeneous element $$b$$가 주어졌다 하자. 그럼 $$x_ib$$는 원소 $$xb\in \mathfrak{a}$$의 $$\deg x_i+\deg b$$에 해당하는 homogeneous element이며, $$\mathfrak{a}$$가 homogeneous ideal이므로 $$x_ib\in \mathfrak{a}$$이다. 
+2. $$x\in (\mathfrak{a}:\mathfrak{b})$$라 하자. 위와 마찬가지로 $$x$$를 homogeneous ideal들의 합 ($$\ast$$)으로 나타냈을 때, $$x_i$$들 각각이 $$(\mathfrak{a}:\mathfrak{b})$$에 속함을 보여야 한다. 이제 $$\mathfrak{b}$$를 생성하는 임의의 homogeneous element $$b$$가 주어졌다 하자. 그럼 $$x_ib$$는 원소 $$xb\in \mathfrak{a}$$의 $$\deg x_i+\deg b$$에 해당하는 homogeneous element이며, $$\mathfrak{a}$$가 homogeneous ideal이므로 $$x_ib\in \mathfrak{a}$$이다. 
 3. 마지막으로 주어진 조건을 가정한 후, 임의의 두 원소 $$x,y\in A$$를 homogeneous element들의 합
     
     $$x=x_{d_1}+\cdots+x_{d_m},\quad y=y_{e_1}+\cdots+y_{e_n},\qquad d_1<\cdots< d_m,\quad e_1<\cdots< e_n$$
 
-    으로 표현하자. 결론에 반하여 $$xy\in \mathfrak{a}$$이지만 $$x\not\in \mathfrak{a}$$, $$y\not\in \mathfrak{a}$$라 가정하자. 그럼 가정에 의하여 어떤 $$x\_{d\_i}$$들 중 적어도 하나는 $$x\_{d\_i}\not\in \mathfrak{a}$$를 만족해야 한다. 그러한 $$i$$들 중 가장 큰 것을 $$k$$라 하고, 비슷하게 $$y\_{e\_l}$$을 정의하자. 이제 $$A$$의 원소 $$xy$$의 degree $$d\_k+e\_l$$에 해당하는 homogeneous component를 보자. 이 원소는 
+    으로 표현하자. 결론에 반하여 $$xy\in \mathfrak{a}$$이지만 $$x\not\in \mathfrak{a}$$, $$y\not\in \mathfrak{a}$$라 가정하자. 그럼 가정에 의하여 어떤 $$x_{d_i}$$들 중 적어도 하나는 $$x_{d_i}\not\in \mathfrak{a}$$를 만족해야 한다. 그러한 $$i$$들 중 가장 큰 것을 $$k$$라 하고, 비슷하게 $$y_{e_l}$$을 정의하자. 이제 $$A$$의 원소 $$xy$$의 degree $$d_k+e_l$$에 해당하는 homogeneous component를 보자. 이 원소는 
 
     $$(xy)_{d_k+e_l}=\sum_{d_i+e_j=d_k+e_l}x_{d_i}y_{e_j}$$
 
-    의 꼴로 쓰여질 수 있으며, 이 때 위의 식의 우변에서 $$x\_{d\_k}y\_{e\_l}$$ 이외의 모든 항은 $$d\_i>d\_k$$ 혹은 $$e\_j>e\_l$$을 반드시 만족해야 한다. $$d\_k$$와 $$e\_l$$의 정의에 의하여, 이러한 항들은 모두 $$\mathfrak{a}$$의 원소이다. 그런데 $$xy\in \mathfrak{a}$$이고 $$\mathfrak{a}$$는 homogeneous ideal이므로, $$(xy)_{d_k+e_l}$$ 또한 $$\mathfrak{a}$$의 원소이고 이로부터 모순을 얻는다. 
+    의 꼴로 쓰여질 수 있으며, 이 때 위의 식의 우변에서 $$x_{d_k}y_{e_l}$$ 이외의 모든 항은 $$d_i>d_k$$ 혹은 $$e_j>e_l$$을 반드시 만족해야 한다. $$d_k$$와 $$e_l$$의 정의에 의하여, 이러한 항들은 모두 $$\mathfrak{a}$$의 원소이다. 그런데 $$xy\in \mathfrak{a}$$이고 $$\mathfrak{a}$$는 homogeneous ideal이므로, $$(xy)_{d_k+e_l}$$ 또한 $$\mathfrak{a}$$의 원소이고 이로부터 모순을 얻는다. 
 
 </details>
 
@@ -89,7 +89,7 @@ $$xa \mathfrak{b}\subseteq x \mathfrak{a}\subseteq \mathfrak{a}$$
 
 우리는 inclusion $$(S^{-1}A)_0 \rightarrow S^{-1}A$$를 통해 $$S^{-1}A$$을 $$(S^{-1}A)_0$$-module로 생각할 수 있다. 그럼 $$S^{-1}A$$의 degree $$0$$ 부분 $$(S^{-1}A)_0$$은 곱셈에 대하여 닫혀있으므로 $$(S^{-1}A)_0$$은 $$(S^{-1}A)_0$$-algebra이다. 일반적으로 $$S^{-1}M$$은 곱셈이 정의되지는 않지만, 마찬가지로 $$S^{-1}M$$의 degree $$0$$ 부분 $$(S^{-1}M)_0$$을 생각하면 이는 $$(S^{-1}A)_0$$-module 구조를 갖는다.
 
-특별히 중요한 예시 중 하나는 degree $$1$$의 homogeneous element $$f\in A_1$$에 대하여 $$S=\\{1,f,f^2,\cdots\\}$$인 경우인데, 이 경우는 $$(S^{-1}A)_0$$으로부터 $$S^{-1}A$$를 복원해낼 수 있다.
+특별히 중요한 예시 중 하나는 degree $$1$$의 homogeneous element $$f\in A_1$$에 대하여 $$S=\{1,f,f^2,\cdots\}$$인 경우인데, 이 경우는 $$(S^{-1}A)_0$$으로부터 $$S^{-1}A$$를 복원해낼 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -107,7 +107,7 @@ $$(S^{-1}A)_0[T_1, T_2]/(T_1T_2-1)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-함수 $$\\{T_1,T_2\\} \rightarrow S^{-1}A$$를 $$T_1\mapsto f, T_2\mapsto f^{-1}$$으로 정의하면 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의하여 $$(S^{-1}A)_0$$-algebra homomorphism
+함수 $$\{T_1,T_2\} \rightarrow S^{-1}A$$를 $$T_1\mapsto f, T_2\mapsto f^{-1}$$으로 정의하면 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의하여 $$(S^{-1}A)_0$$-algebra homomorphism
 
 $$(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$$
 
@@ -135,7 +135,7 @@ $$\begin{aligned}\sum_{i,j\geq 0} a_{i,j} T_1^iT_2^j&=\sum_{j\geq 0} a_{j,j}T_1^
 
 $$\left(\sum_{j\geq 1} a_{j,j}(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 1}a_{j+d,j}T_1^d(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 1}a_{j,j+d}T_2^d(T_1^jT_2^j-1)\right)$$
 
-이 된다. 이 때 각각의 $$T_1^jT_2^j-1$$는 $$(T_1T_2-1)$$에 포함되므로 위의 식의 kernel은 <em_ko>정확히</em_ko> $$(S^{-1}A)\_0[T\_1,T\_2]$$의 ideal $$(T_1T_2-1)$$에 해당한다. 한편 이 homomorphism은 정의에 의해 surjective이므로 원하는 결과를 얻는다. 
+이 된다. 이 때 각각의 $$T_1^jT_2^j-1$$는 $$(T_1T_2-1)$$에 포함되므로 위의 식의 kernel은 <em_ko>정확히</em_ko> $$(S^{-1}A)_0[T_1,T_2]$$의 ideal $$(T_1T_2-1)$$에 해당한다. 한편 이 homomorphism은 정의에 의해 surjective이므로 원하는 결과를 얻는다. 
 
 </details>
 
@@ -143,11 +143,11 @@ $$\left(\sum_{j\geq 1} a_{j,j}(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 앞서 정의한 $$(S^{-1}A)\_0$$와 $$(S^{-1}M)\_0$$을 각각 $$A$$와 $$M$$의 *homogeneous localization<sub>동차국소화</sub>*이라 부르고, $$A\_{(S)}$$와 $$M\_{(S)}$$와 같이 표현한다.
+<ins id="def5">**정의 5**</ins> 앞서 정의한 $$(S^{-1}A)_0$$와 $$(S^{-1}M)_0$$을 각각 $$A$$와 $$M$$의 *homogeneous localization<sub>동차국소화</sub>*이라 부르고, $$A_{(S)}$$와 $$M_{(S)}$$와 같이 표현한다.
 
 </div>
 
-일반적인 localization과 마찬가지로, homogeneous element $$f\in A$$에 대하여, $$S=\\{1,f,f^2,\cdots\\}$$으로 얻어지는 $$M$$의 homogeneous localization을 $$M\_{(f)}$$으로 적기로 하고, homogeneous prime ideal $$\mathfrak{p}\subseteq A$$에 대하여, $$S=A\setminus \mathfrak{p}$$으로 얻어지는 $$M$$의 homogeneous localization을 $$M_{(\mathfrak{p})}$$으로 적기로 한다. 
+일반적인 localization과 마찬가지로, homogeneous element $$f\in A$$에 대하여, $$S=\{1,f,f^2,\cdots\}$$으로 얻어지는 $$M$$의 homogeneous localization을 $$M_{(f)}$$으로 적기로 하고, homogeneous prime ideal $$\mathfrak{p}\subseteq A$$에 대하여, $$S=A\setminus \mathfrak{p}$$으로 얻어지는 $$M$$의 homogeneous localization을 $$M_{(\mathfrak{p})}$$으로 적기로 한다. 
 
 남은 글에서, 임의의 graded $$A$$-module $$M$$에 대하여 
 
@@ -195,7 +195,7 @@ $$\frac{a}{s}=\frac{af^d}{s}\frac{1}{f^d}$$
 
 </details>
 
-특별히 homogeneous prime ideal $$\mathfrak{p}$$을 하나 고정하고, $$A\_1\not\subset \mathfrak{p}$$라 가정하자. $$S$$를 $$\mathfrak{p}$$에 속하지 않는 homogeneous element들로 이루어진 multiplicative subset이라 하면, 적어도 하나의 nonzero $$f\in A\_1$$이 존재하여 $$f\in S$$이므로, 위의 명제에 의해
+특별히 homogeneous prime ideal $$\mathfrak{p}$$을 하나 고정하고, $$A_1\not\subset \mathfrak{p}$$라 가정하자. $$S$$를 $$\mathfrak{p}$$에 속하지 않는 homogeneous element들로 이루어진 multiplicative subset이라 하면, 적어도 하나의 nonzero $$f\in A_1$$이 존재하여 $$f\in S$$이므로, 위의 명제에 의해
 
 $$S^{-1}A\cong A_{(\mathfrak{p})}[T,T^{-1}]$$
 

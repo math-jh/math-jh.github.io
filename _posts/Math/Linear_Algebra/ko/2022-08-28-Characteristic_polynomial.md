@@ -33,7 +33,7 @@ weight: 15
 
 $$\det(\x I-A)=\sum_{\tau\in S_n}\sgn(\tau)(\x I-A)_{\tau(1),1}\cdots(\x I-A)_{\tau(n),n}\tag{1}$$
 
-으로부터, $$A$$의 특성다항식의 차수는 많아봐야 $$n$$차라는 것을 알 수 있다. 우변에서 더해지는 다항식은 $$n$$개 항들의 곱인데, 이 때 각 $$(\x I-A)\_{\tau(k),k}$$는 $$\tau(k)=k$$일 때에만 $$x$$에 대한 일차식이고, 그렇지 않으면 상수이기 때문이다. 이로부터 만일 특성다항식이 실제로 $$n$$차식이라면, 차수 $$n$$의 항은 <em_ko>반드시</em_ko> 모든 $$k$$에 대해 $$\tau(k)=k$$를 만족하는 $$\tau$$, 즉 $$\tau=\id\_{S\_n}$$일 때에만 나타난다는 것을 안다. 이 때, 해당하는 항은
+으로부터, $$A$$의 특성다항식의 차수는 많아봐야 $$n$$차라는 것을 알 수 있다. 우변에서 더해지는 다항식은 $$n$$개 항들의 곱인데, 이 때 각 $$(\x I-A)_{\tau(k),k}$$는 $$\tau(k)=k$$일 때에만 $$x$$에 대한 일차식이고, 그렇지 않으면 상수이기 때문이다. 이로부터 만일 특성다항식이 실제로 $$n$$차식이라면, 차수 $$n$$의 항은 <em_ko>반드시</em_ko> 모든 $$k$$에 대해 $$\tau(k)=k$$를 만족하는 $$\tau$$, 즉 $$\tau=\id_{S_n}$$일 때에만 나타난다는 것을 안다. 이 때, 해당하는 항은
 
 $$(\x I-A)_{1,1}\cdots(\x I-A)_{n,n}=(\x-A_{11})\cdots(\x-A_{nn})\tag{2}$$
 
@@ -81,7 +81,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-즉, $$V$$의 basis $$\mathcal{B}$$ 대신 $$\mathcal{C}$$를 택하여도 $$L$$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋정의 2](/ko/math/linear_algebra/change_of_basis#def2) 이후의 식으로부터 두 행렬표현 $$[L]\_\mathcal{B}^\mathcal{B}$$와 $$[L]\_\mathcal{C}^\mathcal{C}$$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
+즉, $$V$$의 basis $$\mathcal{B}$$ 대신 $$\mathcal{C}$$를 택하여도 $$L$$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋정의 2](/ko/math/linear_algebra/change_of_basis#def2) 이후의 식으로부터 두 행렬표현 $$[L]_\mathcal{B}^\mathcal{B}$$와 $$[L]_\mathcal{C}^\mathcal{C}$$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
 
 </details>
 
@@ -99,7 +99,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 
 </details>
 
-특히 임의의 linear map $$L:V\rightarrow V$$가 주어졌을 때, 다음 글에서 다룰 행렬의 대각화를 통해 $$[L]\_\mathcal{B}^\mathcal{B}$$를 분해하면 $$V$$를 $$L$$의 고유공간으로 분해할 수 있다.
+특히 임의의 linear map $$L:V\rightarrow V$$가 주어졌을 때, 다음 글에서 다룰 행렬의 대각화를 통해 $$[L]_\mathcal{B}^\mathcal{B}$$를 분해하면 $$V$$를 $$L$$의 고유공간으로 분해할 수 있다.
 
 ## 대수적 중복도
 
@@ -149,11 +149,11 @@ $$(\lambda I-A)v=0$$
 
 </div>
 
-행렬 $$A$$에 대하여, $$\lambda$$에 해당하는 고유벡터들을 모두 모아 그 집합을 $$E_\lambda$$라 하자. 그럼 $$E_\lambda$$가 벡터공간을 이룬다는 것을 쉽게 확인할 수 있다. 이를 $$\lambda$$에 해당하는 *고유공간<sub>eigenspace</sub>*이라 부른다. $$E_\lambda$$는 항상 영이 아닌 벡터를 적어도 하나 포함하므로, $$\dim E\_\lambda$$는 항상 $$0$$보다 크다. 
+행렬 $$A$$에 대하여, $$\lambda$$에 해당하는 고유벡터들을 모두 모아 그 집합을 $$E_\lambda$$라 하자. 그럼 $$E_\lambda$$가 벡터공간을 이룬다는 것을 쉽게 확인할 수 있다. 이를 $$\lambda$$에 해당하는 *고유공간<sub>eigenspace</sub>*이라 부른다. $$E_\lambda$$는 항상 영이 아닌 벡터를 적어도 하나 포함하므로, $$\dim E_\lambda$$는 항상 $$0$$보다 크다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> $$n\times n$$ 행렬 $$A$$와 고윳값 $$\lambda$$에 대하여, $$E\_\lambda$$의 차원 $$\dim E\_\lambda$$를 $$\lambda$$의 *기하적 중복도<sub>geometric multiplicity</sub>*라 부른다. 
+<ins id="def10">**정의 10**</ins> $$n\times n$$ 행렬 $$A$$와 고윳값 $$\lambda$$에 대하여, $$E_\lambda$$의 차원 $$\dim E_\lambda$$를 $$\lambda$$의 *기하적 중복도<sub>geometric multiplicity</sub>*라 부른다. 
 
 </div>
 

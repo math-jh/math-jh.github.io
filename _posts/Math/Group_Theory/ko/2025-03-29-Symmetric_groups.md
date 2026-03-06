@@ -25,7 +25,7 @@ weight: 1
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 집합 $$[n]=\\{1,\ldots, n\\}$$에 대하여, $$[n]$$의 $$\Set$$에서의 automorphism group $$\Aut([n])$$을 *symmetric group<sub>대칭군</sub>*이라 부르고 $$S_n$$으로 적는다.  
+<ins id="def1">**정의 1**</ins> 집합 $$[n]=\{1,\ldots, n\}$$에 대하여, $$[n]$$의 $$\Set$$에서의 automorphism group $$\Aut([n])$$을 *symmetric group<sub>대칭군</sub>*이라 부르고 $$S_n$$으로 적는다.  
 
 </div>
 
@@ -93,7 +93,7 @@ $$\sigma_k(i)=\begin{cases}\sigma(x)&\text{if $$x\in C_k$$}\\x&\text{otherwise}\
 
 </details>
 
-이러한 방식으로 임의의 permutation을 disjoint cycle들의 곱으로 나타낸다면 그 장점 중 하나는 permutation $$\sigma$$의 order가 쉽게 보인다는 것이다. 즉, $$\sigma=\sigma\_1\cdots\sigma\_r$$이라 한다면 $$\sigma$$의 order는 $$\sigma\_1,\ldots, \sigma\_r$$들의 order의 최소공배수와 같으며, cycle들 $$\sigma_1,\ldots, \sigma\_r$$의 order는, 당연히 이들 각각의 길이와 같다. 
+이러한 방식으로 임의의 permutation을 disjoint cycle들의 곱으로 나타낸다면 그 장점 중 하나는 permutation $$\sigma$$의 order가 쉽게 보인다는 것이다. 즉, $$\sigma=\sigma_1\cdots\sigma_r$$이라 한다면 $$\sigma$$의 order는 $$\sigma_1,\ldots, \sigma_r$$들의 order의 최소공배수와 같으며, cycle들 $$\sigma_1,\ldots, \sigma_r$$의 order는, 당연히 이들 각각의 길이와 같다. 
 
 한편, 길이 $$2$$의 cycle을 *transposition*이라 부르자. 이는 단지 이 cycle에 등장하는 두 숫자만 서로 바꿔주는 함수이다. 그럼 위의 명제에 의해 다음이 성립한다.
 
@@ -243,7 +243,7 @@ $$\prod_{1\leq i< j\leq n}(x_{\tau(i)}-x_{\tau(j)})=(-1)^k\Delta$$
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> Group $$G$$가 *simple*이라는 것은 $$G$$가 $$\\{e\\}$$와 자기 자신을 제외한 normal subgroup을 갖지 않는 것이다.
+<ins id="def12">**정의 12**</ins> Group $$G$$가 *simple*이라는 것은 $$G$$가 $$\{e\}$$와 자기 자신을 제외한 normal subgroup을 갖지 않는 것이다.
 
 </div>
 

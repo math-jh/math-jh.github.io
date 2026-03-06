@@ -83,7 +83,7 @@ $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+
 
 </div>
 
-두 diagonalizable operator $$A,B$$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $$\mathfrak{h}$$의 모든 원소들은 simultaneously diagonalizable이다. 이제 simultaneously diagonalizable operator들의 family $$\\{H\in \mathfrak{h}\\}$$를 사용하여 $$\mathfrak{g}$$를 분해하자. 만일 simultaneously diagonalizable operator들의 <em_ko>유한한</em_ko> family $$A\_1,\ldots, A\_n$$이 주어졌다면, simultaneous eigenspace로 공간을 분해하는 것은 
+두 diagonalizable operator $$A,B$$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $$\mathfrak{h}$$의 모든 원소들은 simultaneously diagonalizable이다. 이제 simultaneously diagonalizable operator들의 family $$\{H\in \mathfrak{h}\}$$를 사용하여 $$\mathfrak{g}$$를 분해하자. 만일 simultaneously diagonalizable operator들의 <em_ko>유한한</em_ko> family $$A_1,\ldots, A_n$$이 주어졌다면, simultaneous eigenspace로 공간을 분해하는 것은 
 
 $$V=\bigoplus V_\alpha,\qquad \text{$$A_i v_\alpha=\lambda_i v_\alpha$$ for all $$v_\alpha\in V$$ for all $$i$$}$$
 
@@ -117,25 +117,25 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
 을 생각하고, $$K(-,-)$$이 $$\mathfrak{g}$$ 위의 Killing form이라 하자. 다음이 성립한다.
 
-1. 임의의 $$\alpha,\beta\in \Phi$$에 대하여 $$[\mathfrak{g}\_\alpha,\mathfrak{g}\_\beta]\subseteq \mathfrak{g}\_{\alpha+\beta}$$가 성립한다. 
-2. 만일 $$\alpha+\beta\neq 0$$이라면 $$\mathfrak{g}\_\alpha$$와 $$\mathfrak{g}\_\beta$$는 $$K$$에 대해 orthogonal이다. 
-3. Killing form을 $$\mathfrak{g}\_\alpha\otimes \mathfrak{g}\_{-\alpha}$$로 제한하면 nondegenerate pairing이 된다.
+1. 임의의 $$\alpha,\beta\in \Phi$$에 대하여 $$[\mathfrak{g}_\alpha,\mathfrak{g}_\beta]\subseteq \mathfrak{g}_{\alpha+\beta}$$가 성립한다. 
+2. 만일 $$\alpha+\beta\neq 0$$이라면 $$\mathfrak{g}_\alpha$$와 $$\mathfrak{g}_\beta$$는 $$K$$에 대해 orthogonal이다. 
+3. Killing form을 $$\mathfrak{g}_\alpha\otimes \mathfrak{g}_{-\alpha}$$로 제한하면 nondegenerate pairing이 된다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. 임의의 $$X\in \mathfrak{g}\_\alpha, Y\in \mathfrak{g}\_\beta$$, $$H\in \mathfrak{h}$$에 대하여, 
+1. 임의의 $$X\in \mathfrak{g}_\alpha, Y\in \mathfrak{g}_\beta$$, $$H\in \mathfrak{h}$$에 대하여, 
     
     $$[H,[X,Y]]=[[H,X],Y]+[X,[H,Y]]=[\alpha(H)X,Y]+[X,\beta(H)Y]=(\alpha+\beta)(H)[X,Y]$$
 
     이 성립한다. 
-2. 임의의 $$X\in \mathfrak{g}\_\alpha, Y\in \mathfrak{g}\_\beta$$, $$H\in \mathfrak{h}$$에 대하여, $$K$$의 $$\ad$$-invariance로부터
+2. 임의의 $$X\in \mathfrak{g}_\alpha, Y\in \mathfrak{g}_\beta$$, $$H\in \mathfrak{h}$$에 대하여, $$K$$의 $$\ad$$-invariance로부터
     
     $$0=K([H,X],Y)+K(X,[H,Y])=K(\alpha(H),X)+K(X,\beta(H)Y)=(\alpha+\beta)(H)K(X,Y)$$
 
     을 얻는다. 만일 $$\alpha+\beta\neq 0$$이라면 이 식이 항상 성립하기 위해서는 $$K(X,Y)=0$$이 항상 성립해야 한다.
-3. Killing form은 $$\mathfrak{g}$$에서는 non-degenerate이므로, 임의의 $$X\in \mathfrak{g}\_\alpha$$가 주어졌을 때마다 $$K(X,Z)\neq 0$$이도록 하는 $$Z\in \mathfrak{g}$$가 존재한다. 보여야 할 것은 $$Z\in \mathfrak{g}\_{-\alpha}$$이도록 할 수 있다는 것이다. 이는 $$Z$$를 root decompose한 후 둘째 결과에 의해 $$-\alpha$$가 아닌 나머지 부분에 해당하는 성분들은 어차피 $$X$$와 pairing해봤자 $$0$$이 되기 때문에 자명하다.
+3. Killing form은 $$\mathfrak{g}$$에서는 non-degenerate이므로, 임의의 $$X\in \mathfrak{g}_\alpha$$가 주어졌을 때마다 $$K(X,Z)\neq 0$$이도록 하는 $$Z\in \mathfrak{g}$$가 존재한다. 보여야 할 것은 $$Z\in \mathfrak{g}_{-\alpha}$$이도록 할 수 있다는 것이다. 이는 $$Z$$를 root decompose한 후 둘째 결과에 의해 $$-\alpha$$가 아닌 나머지 부분에 해당하는 성분들은 어차피 $$X$$와 pairing해봤자 $$0$$이 되기 때문에 자명하다.
 
 </details>
 
@@ -248,20 +248,20 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha$
 
 에 대하여 다음이 성립한다. 
 
-1. 임의의 $$\alpha,\beta\in \Phi$$에 대하여 $$[\mathfrak{g}\_\alpha,\mathfrak{g}\_\beta]\subseteq \mathfrak{g}\_{\alpha+\beta}$$가 성립한다.
-2. 만일 $$\alpha+\beta\neq 0$$이라면 $$\mathfrak{g}\_\alpha$$와 $$\mathfrak{g}\_\beta$$가 orthogonal이다. 
+1. 임의의 $$\alpha,\beta\in \Phi$$에 대하여 $$[\mathfrak{g}_\alpha,\mathfrak{g}_\beta]\subseteq \mathfrak{g}_{\alpha+\beta}$$가 성립한다.
+2. 만일 $$\alpha+\beta\neq 0$$이라면 $$\mathfrak{g}_\alpha$$와 $$\mathfrak{g}_\beta$$가 orthogonal이다. 
 3. $$\mathfrak{g}$$ 위에 정의된 Killing form을 $$\mathfrak{h}$$로 제한한 것은 non-degenerate이다. 
-4. $$\mathfrak{g}$$ 위에 정의된 Killing form은 $$\mathfrak{g}\_\alpha\times \mathfrak{g}\_{-\alpha} \rightarrow \mathbb{C}$$로 제한했을 때 non-degenerate이다. 
+4. $$\mathfrak{g}$$ 위에 정의된 Killing form은 $$\mathfrak{g}_\alpha\times \mathfrak{g}_{-\alpha} \rightarrow \mathbb{C}$$로 제한했을 때 non-degenerate이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-처음 주장은 자명하다. 둘째 주장의 경우, 임의의 $$X\_\alpha\in \mathfrak{g}\_\alpha,X\_\beta\in \mathfrak{g}\_\beta$$ 그리고 임의의 $$H\in \mathfrak{h}$$에 대하여, $$K$$의 $$\ad$$-invariance로부터 다음의 식
+처음 주장은 자명하다. 둘째 주장의 경우, 임의의 $$X_\alpha\in \mathfrak{g}_\alpha,X_\beta\in \mathfrak{g}_\beta$$ 그리고 임의의 $$H\in \mathfrak{h}$$에 대하여, $$K$$의 $$\ad$$-invariance로부터 다음의 식
 
 $$0=K([H,X_\alpha],X_\beta)+K(X_\alpha, [H,X_\beta])=K(\alpha(H)X_\alpha, X_\beta)+K(X_\alpha,\beta(H)X_\beta)=(\alpha+\beta)(H)K(X_\alpha,X_\beta)$$
 
-을 얻는다. 따라서 $$\alpha+\beta\neq 0$$이라면 $$\mathfrak{g}\_\alpha$$와 $$\mathfrak{g}_\beta$$는 $$K$$에 대해 orthogonal이다. 
+을 얻는다. 따라서 $$\alpha+\beta\neq 0$$이라면 $$\mathfrak{g}_\alpha$$와 $$\mathfrak{g}_\beta$$는 $$K$$에 대해 orthogonal이다. 
 
 이제 셋째 주장을 보이기 위해 임의의 $$H\in \mathfrak{h}$$에 대하여 $$X\in \mathfrak{g}$$가 존재하여 $$K(H,X)\neq 0$$이도록 할 수 있다는 것을 기억하자. 새롭게 보여야 할 것은 $$X$$를 $$\mathfrak{h}$$에서 뽑을 수 있다는 것이다. 이를 위해 $$X$$를 root decomposition $$\sum X_\alpha$$의 꼴로 쓰면, 우리는 위의 결과에 의하여 $$K(H,-)$$를 취했을 때 $$X_0\in \mathfrak{h}$$를 제외한 모든 $$X_\alpha$$가 $$0$$을 준다는 것을 안다. 따라서 $$K(H,H_0)\neq 0$$이다. 
 
@@ -289,7 +289,7 @@ $$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $$X\in \mathfrak{h}$$}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem11">**보조정리 11**</ins> 임의의 $$E\in \mathfrak{g}\_\alpha$$와 $$F\in \mathfrak{g}\_{-\alpha}$$에 대하여, $$[E,F]=K(E,F)H\_\alpha$$이 성립한다.
+<ins id="lem11">**보조정리 11**</ins> 임의의 $$E\in \mathfrak{g}_\alpha$$와 $$F\in \mathfrak{g}_{-\alpha}$$에 대하여, $$[E,F]=K(E,F)H_\alpha$$이 성립한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -311,7 +311,7 @@ $$K([E,F],H)=K(F,[H,E])=K(F, K(H_\alpha,H)E)=K(H_\alpha,H)K(F,E)=K(K(F,E)H_\alph
 
 </details>
 
-한편 우리는 [보조정리 10](#lem10)으로부터 $$E\in \mathfrak{g}\_\alpha$$, $$F\in \mathfrak{g}\_{-\alpha}$$를 택하여 $$K(E,F)\neq 0$$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
+한편 우리는 [보조정리 10](#lem10)으로부터 $$E\in \mathfrak{g}_\alpha$$, $$F\in \mathfrak{g}_{-\alpha}$$를 택하여 $$K(E,F)\neq 0$$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
 
 $$[E,F]=K(E,F)H_\alpha,\quad [H_\alpha,E]=\alpha(H_\alpha)E=K(\alpha,\alpha)E,\quad [H_\alpha,F]=-\alpha(H_\alpha)F=-K(\alpha,\alpha)F$$
 
@@ -323,17 +323,17 @@ $$h_\alpha=\frac{2}{K(\alpha,\alpha)}H_\alpha$$
 
 $$(e_\alpha,f_\alpha)(\alpha,\alpha)=2$$
 
-을 만족하는 $$e\_\alpha\in \mathfrak{g}\_\alpha$$, $$f\_\alpha\in \mathfrak{g}\_{-\alpha}$$을 택할 수 있으며 이들은 다음 commutation relation
+을 만족하는 $$e_\alpha\in \mathfrak{g}_\alpha$$, $$f_\alpha\in \mathfrak{g}_{-\alpha}$$을 택할 수 있으며 이들은 다음 commutation relation
 
 $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alpha,f_\alpha]=-2f_\alpha$$
 
 을 만족한다. 즉 이들은 $$\mathfrak{g}$$ 안에서 $$\sl_2$$과 isomorphic한 subalgebra를 준다. 이를 $$\sl_{2,\alpha}$$라 하자. 그럼 adjoint action을 통해 $$\mathfrak{g}$$를 $$\sl_{2,\alpha}$$-representation으로 볼 수 있다. 
 
-특히 $$h\_\alpha$$가 $$\mathfrak{g}$$의 원소들에 어떻게 작용하는지를 살펴보자. 우선 $$\mathfrak{g}$$의 root space $$\mathfrak{g}\_\beta$$에 $$h\_\alpha$$의 adjoint action이 어떻게 작용하는지를 보면
+특히 $$h_\alpha$$가 $$\mathfrak{g}$$의 원소들에 어떻게 작용하는지를 살펴보자. 우선 $$\mathfrak{g}$$의 root space $$\mathfrak{g}_\beta$$에 $$h_\alpha$$의 adjoint action이 어떻게 작용하는지를 보면
 
 $$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $$x\in \mathfrak{g}_\beta$$}$$
 
-이므로 $$\mathfrak{g}\_\beta$$는 이 action에 대한 weight $$\beta(h\_\alpha)$$의 weight space이다. 그런데 앞서 살펴봤듯 $$\sl\_2$$-representation의 weight은 항상 정수이므로, 이 값 $$\beta(h\_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$$은 반드시 정수여야 함을 안다. 또 $$\sl_2$$ representation의 임의의 weight subspace는 $$1$$차원이므로 각각의 $$\mathfrak{g}_\beta$$들도 $$1$$차원이다. 
+이므로 $$\mathfrak{g}_\beta$$는 이 action에 대한 weight $$\beta(h_\alpha)$$의 weight space이다. 그런데 앞서 살펴봤듯 $$\sl_2$$-representation의 weight은 항상 정수이므로, 이 값 $$\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$$은 반드시 정수여야 함을 안다. 또 $$\sl_2$$ representation의 임의의 weight subspace는 $$1$$차원이므로 각각의 $$\mathfrak{g}_\beta$$들도 $$1$$차원이다. 
 
 한편, 앞서 우리는 $$\mathfrak{h}$$이 $$H_\alpha$$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $$h_\alpha$$들도 $$\mathfrak{h}$$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $$h_\alpha$$들로 생성되는 *real* vector space
 
@@ -343,7 +343,7 @@ $$\mathfrak{h}_\mathbb{R}=\span_\mathbb{R}\{h_\alpha\mid \alpha\in\Phi\}$$
 
 $$K(h_\alpha,h_\beta)=\tr_\mathfrak{g}(\ad h_\alpha\ad h_\beta)=\sum_{\gamma\in\Phi}\gamma(h_\alpha)\gamma(h_\beta)$$
 
-가 성립한다. 우리는 앞서 이들 $$\gamma(h_\alpha),\gamma(h_\beta)$$들이 정수임을 증명하였으며 따라서 $$K(h_\alpha,h_\beta)$$도 그러하다. 즉, $$\mathfrak{h}\_\mathbb{R}$$로 제한했을 때 $$K$$는 real-valued이며, 이제 임의의 $$h\in \mathfrak{h}\_\mathbb{R}$$에 대하여
+가 성립한다. 우리는 앞서 이들 $$\gamma(h_\alpha),\gamma(h_\beta)$$들이 정수임을 증명하였으며 따라서 $$K(h_\alpha,h_\beta)$$도 그러하다. 즉, $$\mathfrak{h}_\mathbb{R}$$로 제한했을 때 $$K$$는 real-valued이며, 이제 임의의 $$h\in \mathfrak{h}_\mathbb{R}$$에 대하여
 
 $$K(h,h)=\tr(\ad_h\ad_h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
 
@@ -353,7 +353,7 @@ $$K(h,h)=\tr(\ad_h\ad_h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
 
 $$s_\alpha(\beta)=\beta-\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}\alpha$$
 
-가 다시 root가 된다는 것을 보여야 하는데, 이는 $$\ad f_\alpha$$를 $$\lvert \beta(h_\alpha)\rvert$$번 작용하면 $$\mathfrak{g}\_\beta$$와 $$\mathfrak{g}\_{s_\alpha(\beta)}$$ 사이의 isomorphism이 얻어지기 때문에 자명하다. 
+가 다시 root가 된다는 것을 보여야 하는데, 이는 $$\ad f_\alpha$$를 $$\lvert \beta(h_\alpha)\rvert$$번 작용하면 $$\mathfrak{g}_\beta$$와 $$\mathfrak{g}_{s_\alpha(\beta)}$$ 사이의 isomorphism이 얻어지기 때문에 자명하다. 
 
 둘째 조건의 경우, 만일 $$\beta=c\alpha$$라 한다면
 
@@ -423,7 +423,7 @@ $$\langle\alpha_i,\alpha_j\rangle=2\frac{(\alpha_i,\alpha_j)}{(\alpha_j,\alpha_j
 
 들이 어떻게 정의되었는지만 안다면, 임의의 root $$\alpha_j$$에 대한 reflection $$s_j$$가 다른 root $$\alpha_i$$을 어떻게 옮기는지를 알 수 있다. 
 
-이제 root system $$\Phi$$와 simple root들의 모임 $$\Delta=\left\\{\alpha_1,\ldots, \alpha_l\right\\}$$이 고정되었다고 하자. 그럼 *Cartan matrix*는 다음과 같이 정의된다. 
+이제 root system $$\Phi$$와 simple root들의 모임 $$\Delta=\left\{\alpha_1,\ldots, \alpha_l\right\}$$이 고정되었다고 하자. 그럼 *Cartan matrix*는 다음과 같이 정의된다. 
 
 <div class="definition" markdown="1">
 
@@ -493,7 +493,7 @@ Weyl group은 유한군이다. 실제로 $$W$$는 $$\Phi$$가 속한 Euclidean s
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $$n\in N(T)$$와 $$\alpha\in\Phi$$에 대하여, $$\Ad(n)$$이 $$\mathfrak{g}\_\alpha$$를 $$\mathfrak{g}\_{n\cdot\alpha}$$로 보낸다는 것을 보이면 충분하다. 임의의 $$X\in\mathfrak{g}\_\alpha$$와 $$H\in\mathfrak{t}$$에 대하여,
+임의의 $$n\in N(T)$$와 $$\alpha\in\Phi$$에 대하여, $$\Ad(n)$$이 $$\mathfrak{g}_\alpha$$를 $$\mathfrak{g}_{n\cdot\alpha}$$로 보낸다는 것을 보이면 충분하다. 임의의 $$X\in\mathfrak{g}_\alpha$$와 $$H\in\mathfrak{t}$$에 대하여,
 
 $$[H,\Ad(n)X]=\Ad(n)[\Ad(n)^{-1}H,X]$$
 
@@ -505,7 +505,7 @@ $$[\Ad(n)^{-1}H,X]=\alpha(\Ad(n)^{-1}H)X=(n^{-1}\cdot\alpha)(H)\cdot X$$
 
 $$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
 
-이고, 이는 $$\Ad(n)X\in\mathfrak{g}\_{n^{-1}\cdot\alpha}$$임을 의미한다. 즉 $$\Ad(n)$$은 $$\mathfrak{g}\_\alpha$$를 $$\mathfrak{g}\_{n^{-1}\cdot\alpha}$$로 보내고, 이로부터 $$n\cdot\alpha\in\Phi$$임을 안다.
+이고, 이는 $$\Ad(n)X\in\mathfrak{g}_{n^{-1}\cdot\alpha}$$임을 의미한다. 즉 $$\Ad(n)$$은 $$\mathfrak{g}_\alpha$$를 $$\mathfrak{g}_{n^{-1}\cdot\alpha}$$로 보내고, 이로부터 $$n\cdot\alpha\in\Phi$$임을 안다.
 
 </details>
 
@@ -519,7 +519,7 @@ $$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 root $$\alpha\in\Phi$$에 대하여, 앞서 살펴본 것과 같이 $$\sl\_{2;\alpha}=\langle e\_\alpha, f\_\alpha, h\_\alpha\rangle$$는 $$\sl(2;\mathbb{C})$$와 isomorphic한 $$\mathfrak{g}$$의 subalgebra이다. 이에 대응하는 $$G$$의 Lie subgroup $$G\_\alpha$$는 $$\SU(2)$$ 혹은 $$\SO(3)$$와 locally isomorphic하다.
+임의의 root $$\alpha\in\Phi$$에 대하여, 앞서 살펴본 것과 같이 $$\sl_{2;\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$$는 $$\sl(2;\mathbb{C})$$와 isomorphic한 $$\mathfrak{g}$$의 subalgebra이다. 이에 대응하는 $$G$$의 Lie subgroup $$G_\alpha$$는 $$\SU(2)$$ 혹은 $$\SO(3)$$와 locally isomorphic하다.
 
 $$G_\alpha$$는 $$T$$와 교집합을 취했을 때 1차원 torus $$T_\alpha=T\cap G_\alpha$$를 이룬다. 이제 $$N(T)$$의 원소 중 $$\Ad$$-action이 $$\mathfrak{t}$$ 위에서 reflection $$s_\alpha$$를 유도하는 것을 찾아야 한다. 이를 위해 다음 원소
 

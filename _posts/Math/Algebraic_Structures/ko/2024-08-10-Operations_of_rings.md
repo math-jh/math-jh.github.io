@@ -21,7 +21,7 @@ weight: 103
 
 ## 환들의 곱
 
-환들의 곱의 경우는 어렵지 않게 정의할 수 있다. Ring들의 family $$(A\_i)\_{i\in I}$$가 주어졌다 하자. 그럼 abelian group의 product $$\prod\_{i\in I}A\_i$$가 잘 정의된다. 한편 $$A\_i$$ 위에 곱셈구조를 주는 $$\mu\_i: A\_i\otimes A\_i \rightarrow A\_i$$는 bilinear map $$A\_i\times A\_i \rightarrow A\_i$$와 같고, 이를 통해 집합들 사이의 함수
+환들의 곱의 경우는 어렵지 않게 정의할 수 있다. Ring들의 family $$(A_i)_{i\in I}$$가 주어졌다 하자. 그럼 abelian group의 product $$\prod_{i\in I}A_i$$가 잘 정의된다. 한편 $$A_i$$ 위에 곱셈구조를 주는 $$\mu_i: A_i\otimes A_i \rightarrow A_i$$는 bilinear map $$A_i\times A_i \rightarrow A_i$$와 같고, 이를 통해 집합들 사이의 함수
 
 $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \prod_{i\in I} (A_i\times A_i) \overset{\prod \mu_i}{\longrightarrow} \prod_{i\in I}A_i$$
 
@@ -29,13 +29,13 @@ $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \pr
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 위와 같이 정의된 함수는 abelian group $$\left(\prod A\_i\right)\times\left(\prod A\_i\right)$$에서 $$\prod A\_i$$로의 bilinear map이며, 따라서 abelian group homomorphism $$\left(\prod A_i\right)\otimes\left(\prod A_i\right) \rightarrow \prod A\_i$$를 유도한다. 
+<ins id="prop1">**명제 1**</ins> 위와 같이 정의된 함수는 abelian group $$\left(\prod A_i\right)\times\left(\prod A_i\right)$$에서 $$\prod A_i$$로의 bilinear map이며, 따라서 abelian group homomorphism $$\left(\prod A_i\right)\otimes\left(\prod A_i\right) \rightarrow \prod A_i$$를 유도한다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-위의 함수를 직접 원소로 나타내면, $$\prod A\_i$$의 원소들은 순서쌍 $$(\alpha\_i)\_{i\in I}$$의 꼴이며, 두 원소 $$(\alpha\_i)\_{i\in I}, (\beta\_i)\_{i\in I}\in \prod A\_i$$에 대해 이들 둘을 위 함수에 넣은 결과는
+위의 함수를 직접 원소로 나타내면, $$\prod A_i$$의 원소들은 순서쌍 $$(\alpha_i)_{i\in I}$$의 꼴이며, 두 원소 $$(\alpha_i)_{i\in I}, (\beta_i)_{i\in I}\in \prod A_i$$에 대해 이들 둘을 위 함수에 넣은 결과는
 
 $$(\alpha_i)_{i\in I}(\beta_i)_{i\in I}=(\alpha_i\beta_i)_{i\in I}$$
 
@@ -65,7 +65,7 @@ $$\phi(\alpha\beta)=\phi(\alpha)\phi(\beta)=\psi(\alpha)\psi(\beta)=\psi(\alpha\
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 임의의 ring들의 family $$(A\_i)\_{i\in I}$$에 대하여, 이들의 coproduct가 존재한다. 
+<ins id="prop3">**명제 3**</ins> 임의의 ring들의 family $$(A_i)_{i\in I}$$에 대하여, 이들의 coproduct가 존재한다. 
 
 </div>
 

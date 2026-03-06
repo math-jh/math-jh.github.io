@@ -203,7 +203,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ prime containing
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-한쪽 방향은 자명하며, 반대로 만일 $$a\not\in \sqrt{\mathfrak{a}}$$라면 $$S=\\{a^k\mid k\geq 1\\}$$로 두고 [§국소화, ⁋명제 10](/ko/math/commutative_algebra/localization#prop10)를 적용하면 된다.
+한쪽 방향은 자명하며, 반대로 만일 $$a\not\in \sqrt{\mathfrak{a}}$$라면 $$S=\{a^k\mid k\geq 1\}$$로 두고 [§국소화, ⁋명제 10](/ko/math/commutative_algebra/localization#prop10)를 적용하면 된다.
 
 </details>
 

@@ -31,13 +31,13 @@ Compact space의 임의의 product는 다시 compact space가 된다. 만일 이
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$X$$가 compact라 가정하고, 임의의 ultrafilter $$\mathcal{F}$$가 주어졌다 하자. 결론에 반하여 $$\mathcal{F}$$의 limit point가 존재하지 않는다 하자. 즉, 어떠한 $$x\in X$$에 대해서도 열린근방 $$U_x$$가 존재하여 $$U_x\not\in \mathcal{F}$$이도록 할 수 있다. 그럼 $$X$$의 compactness에 의하여 $$X$$의 유한한 subcover $$U_{x\_1},\ldots, U_{x\_n}$$이 존재한다. 
+우선 $$X$$가 compact라 가정하고, 임의의 ultrafilter $$\mathcal{F}$$가 주어졌다 하자. 결론에 반하여 $$\mathcal{F}$$의 limit point가 존재하지 않는다 하자. 즉, 어떠한 $$x\in X$$에 대해서도 열린근방 $$U_x$$가 존재하여 $$U_x\not\in \mathcal{F}$$이도록 할 수 있다. 그럼 $$X$$의 compactness에 의하여 $$X$$의 유한한 subcover $$U_{x_1},\ldots, U_{x_n}$$이 존재한다. 
 
 한편 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋명제 5](/ko/math/set_theory/filter_and_ideal#prop5)에 의하여 $$\mathcal{F}$$는 prime이다. 즉, 임의의 부분집합 $$A\subseteq X$$에 대하여, $$A\in \mathcal{F}$$ 혹은 $$X\setminus A\in \mathcal{F}$$ 중 정확히 하나가 성립한다. 그럼 이제 임의의 $$A\in \mathcal{F}$$에 대하여,
 
 $$A=A\cap X=(A\cap U_{x_1})\cup \cdots\cup (A\cap U_{x_n})\in \mathcal{F}$$
 
-이며, 가정에 의하여 $$U_{x\_i}\not\in \mathcal{F}$$이므로 각각의 $$A\cap U_{x\_i}$$들도 $$\mathcal{F}$$에 속하지 않으며 $$\mathcal{F}$$가 maximal이므로 $$X\setminus (A\cap U\_{x_i})\in \mathcal{F}$$여야 한다. 그럼 이들의 유한한 교집합
+이며, 가정에 의하여 $$U_{x_i}\not\in \mathcal{F}$$이므로 각각의 $$A\cap U_{x_i}$$들도 $$\mathcal{F}$$에 속하지 않으며 $$\mathcal{F}$$가 maximal이므로 $$X\setminus (A\cap U_{x_i})\in \mathcal{F}$$여야 한다. 그럼 이들의 유한한 교집합
 
 $$X\setminus A=(X\setminus (A\cap U_{x_1}))\cap\cdots\cap (X\setminus (A\cap U_{x_n}))$$
 
@@ -51,15 +51,15 @@ $$X\setminus A=(X\setminus (A\cap U_{x_1}))\cap\cdots\cap (X\setminus (A\cap U_{
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**정리 2 (Tychonoff)**</ins> Compact space들 $$(X\_i)\_{i\in I}$$의 product $$X=\prod_{i\in I} X\_i$$는 compact이다. 거꾸로, 만일 product space $$X$$가 compact라면, 각각의 $$X\_i$$들이 모두 compact이다.
+<ins id="thm2">**정리 2 (Tychonoff)**</ins> Compact space들 $$(X_i)_{i\in I}$$의 product $$X=\prod_{i\in I} X_i$$는 compact이다. 거꾸로, 만일 product space $$X$$가 compact라면, 각각의 $$X_i$$들이 모두 compact이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-만일 $$X$$가 compact라면, 각각의 $$X\_i$$들이 모두 compact라는 것은 $$\pr\_i$$의 연속성과 [§옹골공간, ⁋명제 8](/ko/math/topology/compact_spaces#prop8)에 의해 자명하다.
+만일 $$X$$가 compact라면, 각각의 $$X_i$$들이 모두 compact라는 것은 $$\pr_i$$의 연속성과 [§옹골공간, ⁋명제 8](/ko/math/topology/compact_spaces#prop8)에 의해 자명하다.
 
-반대 방향은 $$X$$ 위에 정의된 임의의 ultrafilter $$\mathcal{F}$$에 대하여, $$\pr\_i(\mathcal{F})$$가 $$X\_i$$의 ultrafilter base를 정의한다는 것을 확인한 후, $$X\_i$$가 compact라는 가정과 [보조정리 1](#lem1)로부터 이 ultrafilter의 limit point $$x\_i$$를 얻고, $$x=(x\_i)\_{i\in I}$$가 $$\mathcal{F}$$의 limit point임을 보일 수 있으므로 다시 [보조정리 1](#lem1)에 의해 증명이 완료된다. 
+반대 방향은 $$X$$ 위에 정의된 임의의 ultrafilter $$\mathcal{F}$$에 대하여, $$\pr_i(\mathcal{F})$$가 $$X_i$$의 ultrafilter base를 정의한다는 것을 확인한 후, $$X_i$$가 compact라는 가정과 [보조정리 1](#lem1)로부터 이 ultrafilter의 limit point $$x_i$$를 얻고, $$x=(x_i)_{i\in I}$$가 $$\mathcal{F}$$의 limit point임을 보일 수 있으므로 다시 [보조정리 1](#lem1)에 의해 증명이 완료된다. 
 
 </details>
 
@@ -77,7 +77,7 @@ $$X\setminus A=(X\setminus (A\cap U_{x_1}))\cap\cdots\cap (X\setminus (A\cap U_{
 
 <div class="proposition" markdown="1">
 
-<ins id="thm4">**정리 4 (Alexandroff)**</ins> Locally compact Hausdorff space $$X$$가 주어졌다 하자. 그럼 compact Hausdorff space $$X'$$와 한 점 $$\ast_{X'}\in X'$$, 그리고 homeomorphism $$f: X \rightarrow X'\setminus\\{\ast_{X'}\\}$$가 존재한다. 뿐만 아니라, 만일 이 조건을 만족하는 또 다른 데이터 $$g: X \rightarrow X''\setminus\\{\ast_{X''}\\}$$가 주어졌다 하면, 유일한 homeomorphism $$h: X' \rightarrow X''$$가 존재하여 $$g=h\circ f$$이도록 할 수 있다. 
+<ins id="thm4">**정리 4 (Alexandroff)**</ins> Locally compact Hausdorff space $$X$$가 주어졌다 하자. 그럼 compact Hausdorff space $$X'$$와 한 점 $$\ast_{X'}\in X'$$, 그리고 homeomorphism $$f: X \rightarrow X'\setminus\{\ast_{X'}\}$$가 존재한다. 뿐만 아니라, 만일 이 조건을 만족하는 또 다른 데이터 $$g: X \rightarrow X''\setminus\{\ast_{X''}\}$$가 주어졌다 하면, 유일한 homeomorphism $$h: X' \rightarrow X''$$가 존재하여 $$g=h\circ f$$이도록 할 수 있다. 
 
 </div>
 
@@ -86,11 +86,11 @@ $$X\setminus A=(X\setminus (A\cap U_{x_1}))\cap\cdots\cap (X\setminus (A\cap U_{
 <details class="proof--alone" markdown="1">
 <summary>정리 4의 증명</summary>
 
-우선 유일성을 보이자. $$h$$는 당연히 $$X'\setminus\\{\ast\_{X'}\\}$$에서는 $$f(x)$$를 $$g(x)$$로 보내고, $$\ast\_{X'}$$는 $$\ast_{X''}$$로 보내도록 정의하는 것이 자연스러울 것이다. 그럼 $$h$$는 연속이다. 이를 증명하기 위해 $$X''$$의 임의의 열린집합 $$V$$가 주어졌다 하자. 만일 $$V$$가 $$\ast_{X''}$$를 포함하지 않는다면, 정의에 의하여
+우선 유일성을 보이자. $$h$$는 당연히 $$X'\setminus\{\ast_{X'}\}$$에서는 $$f(x)$$를 $$g(x)$$로 보내고, $$\ast_{X'}$$는 $$\ast_{X''}$$로 보내도록 정의하는 것이 자연스러울 것이다. 그럼 $$h$$는 연속이다. 이를 증명하기 위해 $$X''$$의 임의의 열린집합 $$V$$가 주어졌다 하자. 만일 $$V$$가 $$\ast_{X''}$$를 포함하지 않는다면, 정의에 의하여
 
 $$h^{-1}(V)=f(g^{-1}(V))$$
 
-이며 $$f$$가 homeomorphism이므로 $$h^{-1}(V)$$는 $$X'\setminus\\{\ast\_{X'}\\}$$안에서 열린집합이다. 한편 $$X'\setminus\\{\ast\_{X'}\\}$$는 $$X'$$가 Hausdorff space라는 가정으로부터 열린집합이므로 [§부분공간, ⁋보조정리 2](/ko/math/topology/subspaces#lem2)에 의하여 $$h^{-1}(V)$$는 $$X'$$의 열린집합이다. 
+이며 $$f$$가 homeomorphism이므로 $$h^{-1}(V)$$는 $$X'\setminus\{\ast_{X'}\}$$안에서 열린집합이다. 한편 $$X'\setminus\{\ast_{X'}\}$$는 $$X'$$가 Hausdorff space라는 가정으로부터 열린집합이므로 [§부분공간, ⁋보조정리 2](/ko/math/topology/subspaces#lem2)에 의하여 $$h^{-1}(V)$$는 $$X'$$의 열린집합이다. 
 
 만일 $$V$$가 $$\ast_{X'}$$를 포함한다면, $$X''\setminus V$$는 $$X''$$의 닫힌집합이므로 compact인 부분집합이고, 따라서 $$f(X)$$의 compact인 부분집합이기도 하다. 이제 $$g$$가 homeomorphism인 것으로부터 $$g^{-1}(X''\setminus V)$$는 $$X$$의 compact subspace이고, 따라서 다음 집합
 
@@ -98,13 +98,13 @@ $$h^{-1}(X''\setminus V)=f(g^{-1}(X''\setminus V))$$
 
 은 $$X'$$의 compact subspace이므로 닫힌집합이다. ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5)) 따라서 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 세 번째 조건으로부터 $$h$$가 연속임을 안다.
 
-위의 증명으로부터, 만일 주어진 조건을 만족하는 위상공간 $$X'=X\cup \\{\ast_{X'}\\}$$가 존재한다면, $$X'$$의 열린집합은 다음의 두 종류
+위의 증명으로부터, 만일 주어진 조건을 만족하는 위상공간 $$X'=X\cup \{\ast_{X'}\}$$가 존재한다면, $$X'$$의 열린집합은 다음의 두 종류
 
 $$f(U)\quad\text{for $$U$$ open in $$X$$},\qquad X'\setminus f(C)\quad\text{for $$C$$ compact in $$X$$}$$
 
 의 꼴이어야 한다는 것을 안다. 그럼 실제로 이것이 [§열린집합, ⁋정의 1](/ko/math/topology/open_sets#def1)의 조건을 만족하는 것을 쉽게 보일 수 있다. 남은 것은 이렇게 주어진 위상구조가 compact Hausdorff임을 보이는 것 뿐이다. 
 
-우선 $$X'$$가 compact라는 것을 보이자. $$X'$$의 임의의 open covering $$(U_i)\_{i\in I}$$이 주어진다면, 이 family에는 $$\ast_{X'}$$를 포함하는 열린집합 $$U_j$$이 존재해야 하며, 위에서 정의한 위상구조에 의하여 이는 $$X$$의 compact subset $$C$$에 대해 $$U_j=X'\setminus C$$로 적을 수 있다. 한편, $$X$$의 열린집합들의 모임 $$(f^{-1}(U_i))\_{i\neq j}$$를 생각하자. 그럼 $$(U\_i)\_{i\neq j}$$들이 $$f(C)$$를 덮어야 하므로 $$(f^{-1}(U_i))\_{i\neq j}$$는 $$C$$의 open covering이고, $$C$$가 compact라는 가정으로부터 finite subcover를 택하여 이로부터 $$X'$$의 open covering $$(U_i)\_{i\in I}$$의 finite subcover를 얻을 수 있다.
+우선 $$X'$$가 compact라는 것을 보이자. $$X'$$의 임의의 open covering $$(U_i)_{i\in I}$$이 주어진다면, 이 family에는 $$\ast_{X'}$$를 포함하는 열린집합 $$U_j$$이 존재해야 하며, 위에서 정의한 위상구조에 의하여 이는 $$X$$의 compact subset $$C$$에 대해 $$U_j=X'\setminus C$$로 적을 수 있다. 한편, $$X$$의 열린집합들의 모임 $$(f^{-1}(U_i))_{i\neq j}$$를 생각하자. 그럼 $$(U_i)_{i\neq j}$$들이 $$f(C)$$를 덮어야 하므로 $$(f^{-1}(U_i))_{i\neq j}$$는 $$C$$의 open covering이고, $$C$$가 compact라는 가정으로부터 finite subcover를 택하여 이로부터 $$X'$$의 open covering $$(U_i)_{i\in I}$$의 finite subcover를 얻을 수 있다.
 
 이제 $$X'$$가 Hausdorff임을 보이기 위해 $$X'$$의 임의의 두 점 $$x,y\in X'$$가 주어졌다 하자. 이들 둘이 모두 $$f(X)$$에 속한다면 증명할 것이 없으므로, $$y=\ast_{X'}$$라 가정할 수 있다. 그럼 $$x$$를 포함하는 $$X$$의 compact neighborhood $$C$$와 $$C$$에 속하는 $$x$$의 열린근방 $$U$$가 존재하므로, $$f(U)$$와 $$X'\setminus f(C)$$가 $$x,y$$를 분리하는 열린집합이 된다.
 
@@ -112,7 +112,7 @@ $$f(U)\quad\text{for $$U$$ open in $$X$$},\qquad X'\setminus f(C)\quad\text{for 
 
 ## 위상다양체
 
-이번에는 옹골성에서 요구하는 유한성을 다소 약화시켜보자. 가령 위상공간 $$X$$의 임의의 open covering이 *locally* finite open subcover를 갖는 상황을 생각할 수 있다. ([§집합의 내부, 폐포, 경계, ⁋정의 3](/ko/math/topology/other_concepts#def3)) 그런데 약간의 말장난을 통해 이 조건은 사실 $$X$$의 compactness와 동치임을 보일 수 있으므로 이것만으로는 새로운 정의가 나오지 않는다. 이제 우리는 위상공간 두 open cover $$(U\_i)\_{i\in I}$$와 $$(V\_j)\_{j\in J}$$에 대하여, 임의의 $$V\_j$$를 온전히 포함하는 $$U\_i$$가 항상 존재한다면 $$(V\_j)\_{j\in J}$$가 $$(U\_i)\_{i\in I}$$의 *(open) refinement*라 부르기로 한다. 
+이번에는 옹골성에서 요구하는 유한성을 다소 약화시켜보자. 가령 위상공간 $$X$$의 임의의 open covering이 *locally* finite open subcover를 갖는 상황을 생각할 수 있다. ([§집합의 내부, 폐포, 경계, ⁋정의 3](/ko/math/topology/other_concepts#def3)) 그런데 약간의 말장난을 통해 이 조건은 사실 $$X$$의 compactness와 동치임을 보일 수 있으므로 이것만으로는 새로운 정의가 나오지 않는다. 이제 우리는 위상공간 두 open cover $$(U_i)_{i\in I}$$와 $$(V_j)_{j\in J}$$에 대하여, 임의의 $$V_j$$를 온전히 포함하는 $$U_i$$가 항상 존재한다면 $$(V_j)_{j\in J}$$가 $$(U_i)_{i\in I}$$의 *(open) refinement*라 부르기로 한다. 
 
 <div class="definition" markdown="1">
 
@@ -135,7 +135,7 @@ $$\Phi=\{\phi:X \rightarrow [0,1]\mid \text{$$\phi$$ continuous}\}$$
 1. 임의의 $$x\in X$$에 대하여, 적당한 열린근방 $$U$$가 존재하여 $$\phi\vert_U\neq 0$$을 만족하는 $$\phi\in \Phi$$가 오직 유한 개 뿐이도록 할 수 있다.
 2. 임의의 $$x\in X$$에 대하여, $$\sum_{\phi\in \Phi} \phi(x)=1$$이 성립한다.
 
-이 성립하는 것이다. 특별히 $$X$$의 open covering $$(U\_i)\_{i\in I}$$에 대하여, $$\supp \phi_i\subseteq U_i$$를 만족하는 partition of unity $$\Phi=(\phi\_i)\_{i\in I}$$를 *partition of unity subordinate to $$(U_i)$$*라 부른다. 
+이 성립하는 것이다. 특별히 $$X$$의 open covering $$(U_i)_{i\in I}$$에 대하여, $$\supp \phi_i\subseteq U_i$$를 만족하는 partition of unity $$\Phi=(\phi_i)_{i\in I}$$를 *partition of unity subordinate to $$(U_i)$$*라 부른다. 
 
 </div>
 

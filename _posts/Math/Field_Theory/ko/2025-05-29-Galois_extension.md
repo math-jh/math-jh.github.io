@@ -102,7 +102,7 @@ $$\mathbb{K}(x)\cong \mathbb{K}[\x]/(f)\cong \mathbb{K}(y)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 셋째 조건과 넷째 조건의 동치는 [명제 1](#prop1)로부터 나온다. 한편 quasi-Galois extension은 그 원소들의 minimal polynomial들의 splitting field로 볼 수 있으므로 마지막 조건은 첫째 조건에 의해 유도된다. 한편 마지막 조건이 성립한다면 [명제 1](#prop1)과 같은 논리로 $$\overline{\mathbb{K}}$$의 임의의 $$\mathbb{K}$$-automorphism은 $$f\_i$$의 근을 $$f\_i$$로 보내므로 $$\mathbb{L}$$을 $$\mathbb{L}$$로 보낸다. 따라서 셋째 조건이 성립한다. 또 셋째 조건은 정의에 의해 둘째 조건을 함의하는 것이 자명하다. 따라서 
+우선 셋째 조건과 넷째 조건의 동치는 [명제 1](#prop1)로부터 나온다. 한편 quasi-Galois extension은 그 원소들의 minimal polynomial들의 splitting field로 볼 수 있으므로 마지막 조건은 첫째 조건에 의해 유도된다. 한편 마지막 조건이 성립한다면 [명제 1](#prop1)과 같은 논리로 $$\overline{\mathbb{K}}$$의 임의의 $$\mathbb{K}$$-automorphism은 $$f_i$$의 근을 $$f_i$$로 보내므로 $$\mathbb{L}$$을 $$\mathbb{L}$$로 보낸다. 따라서 셋째 조건이 성립한다. 또 셋째 조건은 정의에 의해 둘째 조건을 함의하는 것이 자명하다. 따라서 
 
 $$(1)\implies (5)\implies (3)\iff (4)\implies (2)$$
 
@@ -140,7 +140,7 @@ pf
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $$\mathbb{K}$$의 algebraic closure $$\overline{\mathbb{K}}$$ 안에서의 quasi-Galois extension들 $$\mathbb{L}\_i$$이 주어졌다 하자. 그럼 $$\bigcap \mathbb{L}\_i$$와 $$\mathbb{K}(\bigcup \mathbb{L}\_i)$$도 모두 quasi-Galois이다. 
+<ins id="prop7">**명제 7**</ins> $$\mathbb{K}$$의 algebraic closure $$\overline{\mathbb{K}}$$ 안에서의 quasi-Galois extension들 $$\mathbb{L}_i$$이 주어졌다 하자. 그럼 $$\bigcap \mathbb{L}_i$$와 $$\mathbb{K}(\bigcup \mathbb{L}_i)$$도 모두 quasi-Galois이다. 
 
 </div>
 
@@ -193,7 +193,7 @@ $$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$$S$$ the set of comjugates of $$x$$ 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> $$\mathbb{K}$$의 algebraic closure $$\overline{\mathbb{K}}$$ 안에서의 Galois extension들 $$\mathbb{L}\_i$$이 주어졌다 하자. 그럼 $$\bigcap \mathbb{L}\_i$$와 $$\mathbb{K}(\bigcup \mathbb{L}\_i)$$도 모두 Galois이다. 
+<ins id="prop10">**명제 10**</ins> $$\mathbb{K}$$의 algebraic closure $$\overline{\mathbb{K}}$$ 안에서의 Galois extension들 $$\mathbb{L}_i$$이 주어졌다 하자. 그럼 $$\bigcap \mathbb{L}_i$$와 $$\mathbb{K}(\bigcup \mathbb{L}_i)$$도 모두 Galois이다. 
  
 </div>
 

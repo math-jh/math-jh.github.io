@@ -57,7 +57,7 @@ $$\tilde{\varphi}(v)=\bigl(x^1(\pi(v)), \ldots, x^m(\pi(v)), dx^1(v),\ldots, dx^
 
 으로 정의하자. 그럼 $$\tilde{\varphi}$$는 $$\pi^{-1}(U)$$에서 $$\mathbb{R}^{2m}$$의 열린집합 $$\varphi(U)\times\mathbb{R}^m$$으로의 bijection이다. 
 
-이들은 $$C^\infty$$-compatible이다. 또 다른 coordinate system $$(V,\psi)$$, $$\psi=(y^j)\_{j=1}^m$$가 주어졌다 하고, $$\tilde{\psi}$$를 위와 같이 정의하자. 그럼 $$\pi^{-1}(U)\cap\pi^{-1}(V)=\pi^{-1}(U\cap V)$$ 위에서
+이들은 $$C^\infty$$-compatible이다. 또 다른 coordinate system $$(V,\psi)$$, $$\psi=(y^j)_{j=1}^m$$가 주어졌다 하고, $$\tilde{\psi}$$를 위와 같이 정의하자. 그럼 $$\pi^{-1}(U)\cap\pi^{-1}(V)=\pi^{-1}(U\cap V)$$ 위에서
 
 $$\begin{aligned}(\tilde{\psi}\circ\tilde{\varphi}^{-1})(p^1, \ldots, p^m, v^1, \ldots, v^m)&=\tilde{\psi}\left(\varphi^{-1}(p), \sum v^i\frac{\partial}{\partial x^i}\bigg|_{\varphi^{-1}(p)}\right)\end{aligned}$$
 
@@ -107,16 +107,16 @@ Tangent bundle $$TM$$이 중요한 것은 manifold 위에 정의된 대다수의
 
 </div>
 
-이제 morphism들이 isomorphism으로 구성된 유한차원 $$\mathbb{R}$$-벡터공간들의 category $$\mathbf{FVect}_\text{iso}$$를 생각하자. 그럼 $$\mathbf{FVect}\_\text{iso}\times\mathbf{FVect}\_\text{iso}$$는 
+이제 morphism들이 isomorphism으로 구성된 유한차원 $$\mathbb{R}$$-벡터공간들의 category $$\mathbf{FVect}_\text{iso}$$를 생각하자. 그럼 $$\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$$는 
 
 - 유한차원 벡터공간들의 pair $$(V,W)$$들이 object,
 - 유한차원 벡터공간들 사이의 isomorphism들의 pair $$(V,W)\overset{(f,g)}{\longrightarrow}(V',W')$$가 morphism
 
-인 category이다. 따라서 $$\mathbf{FVect}\_\text{iso}\times\mathbf{FVect}\_\text{iso}$$에서 $$\mathbf{FVect}\_\text{iso}$$로의 functor $$F$$는 $$(V,W)$$를 받아 $$\mathbb{R}$$-벡터공간 $$F(V,W)$$를, $$(f,g)$$를 받아 isomorphism $$F(f,g)$$를 내놓아야 한다.
+인 category이다. 따라서 $$\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$$에서 $$\mathbf{FVect}_\text{iso}$$로의 functor $$F$$는 $$(V,W)$$를 받아 $$\mathbb{R}$$-벡터공간 $$F(V,W)$$를, $$(f,g)$$를 받아 isomorphism $$F(f,g)$$를 내놓아야 한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Functor $$F:\mathbf{FVect}\_\text{iso}\times\mathbf{FVect}\_\text{iso}\rightarrow \mathbf{FVect}\_\text{iso}$$이 *smooth functor<sub>매끄러운 함자</sub>*라는 것은 $$F(f,g)$$가 $$f,g$$에 대해 smooth하게 의존하는 것이다.
+<ins id="def4">**정의 4**</ins> Functor $$F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$이 *smooth functor<sub>매끄러운 함자</sub>*라는 것은 $$F(f,g)$$가 $$f,g$$에 대해 smooth하게 의존하는 것이다.
 
 </div>
 
@@ -132,11 +132,11 @@ $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarro
 
 ![Hom_functor](/assets/images/Math/Manifold/Tangent_and_cotangent_bundles-2.png){:style="width:7em" class="invert" .align-center}
 
-을 commute하도록 한다. 이를 식으로 쓰면 $$\Hom(f,g)(u)=g\circ u\circ f^{-1}$$이라 할 수 있다. $$\Hom(f,g)$$가 $$g$$에 smooth하게 의존한다는 것을 쉽게 확인할 수 있다. 대응 $$g\mapsto \Hom(f,g)$$를 생각하자. 그럼 $$\Hom(W,W')$$의 basis $$w\_i^j$$에 대하여,
+을 commute하도록 한다. 이를 식으로 쓰면 $$\Hom(f,g)(u)=g\circ u\circ f^{-1}$$이라 할 수 있다. $$\Hom(f,g)$$가 $$g$$에 smooth하게 의존한다는 것을 쉽게 확인할 수 있다. 대응 $$g\mapsto \Hom(f,g)$$를 생각하자. 그럼 $$\Hom(W,W')$$의 basis $$w_i^j$$에 대하여,
 
 $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 
-가 모든 $$u$$에 대해 성립하므로 이 대응의 $$w\_i^j$$-방향미분은 $$u\mapsto w\_i^j\circ u\circ f^{-1}$$가 되어 연속이다. 뿐만 아니라 이 논증은 $$g$$ 자리에 어떠한 linear map를 집어넣어도 성립하므로, 이로부터 $$g\mapsto\Hom(f,g)$$의 임의의 고차 방향미분이 항상 연속이라는 것을 안다. 즉, $$g\mapsto\Hom(f,g)$$는 $$C^\infty$$이다. 이 대응이 $$f$$에도 smooth하게 의존한다는 것은 $$g$$보다는 번거롭지만, $$f$$가 isomorphism이라는 것으로부터 $$t$$를 충분히 작게 택하여 $$f+tw_i^j$$가 invertible하도록 할 수 있고, 이후 위의 논증을 반복하면 된다.
+가 모든 $$u$$에 대해 성립하므로 이 대응의 $$w_i^j$$-방향미분은 $$u\mapsto w_i^j\circ u\circ f^{-1}$$가 되어 연속이다. 뿐만 아니라 이 논증은 $$g$$ 자리에 어떠한 linear map를 집어넣어도 성립하므로, 이로부터 $$g\mapsto\Hom(f,g)$$의 임의의 고차 방향미분이 항상 연속이라는 것을 안다. 즉, $$g\mapsto\Hom(f,g)$$는 $$C^\infty$$이다. 이 대응이 $$f$$에도 smooth하게 의존한다는 것은 $$g$$보다는 번거롭지만, $$f$$가 isomorphism이라는 것으로부터 $$t$$를 충분히 작게 택하여 $$f+tw_i^j$$가 invertible하도록 할 수 있고, 이후 위의 논증을 반복하면 된다.
 
 다음은 모두 smooth functor의 예시들이다.
 
@@ -153,7 +153,7 @@ $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6**</ins> 임의의 smooth functor $$F:(\mathbf{FVect}\_\text{iso})^n\rightarrow \mathbf{FVect}\_\text{iso}$$, 그리고 공통된 base space $$B$$를 갖는 $$n$$개의 vector bundle들 $$E_i\rightarrow B$$들이 주어졌다 하자. 그럼 각각의 $$b\in B$$에서의 fiber가
+<ins id="thm6">**정리 6**</ins> 임의의 smooth functor $$F:(\mathbf{FVect}_\text{iso})^n\rightarrow \mathbf{FVect}_\text{iso}$$, 그리고 공통된 base space $$B$$를 갖는 $$n$$개의 vector bundle들 $$E_i\rightarrow B$$들이 주어졌다 하자. 그럼 각각의 $$b\in B$$에서의 fiber가
 
 $$E_b=F((E_1)_b,\ldots,(E_n)_b)$$
 

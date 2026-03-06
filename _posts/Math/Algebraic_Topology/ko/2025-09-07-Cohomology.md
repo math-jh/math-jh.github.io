@@ -360,7 +360,7 @@ $$0 \rightarrow \Tor_1^A(H(C), H(D))_\bullet\rightarrow (B(C)\otimes H(D))_\bull
 
 $$(B(C)\otimes H(D))_\bullet\cong H_\bullet(B(C)\otimes D)\qquad (Z(C)\otimes H(D))_\bullet \cong H_\bullet(Z(C)\otimes D)$$
 
-임을 안다. 이 때 $$(B(C)\otimes H(D))\_\bullet \rightarrow (Z(C)\otimes H(D))\_\bullet$$은 inclusion $$B\_\bullet(C)\rightarrow Z\_\bullet(C)$$으로부터 얻어지는 것이며, 위의 identification을 거쳤을 때 $$\delta_\bullet$$과 같은 함수인 것을 안다. 따라서 
+임을 안다. 이 때 $$(B(C)\otimes H(D))_\bullet \rightarrow (Z(C)\otimes H(D))_\bullet$$은 inclusion $$B_\bullet(C)\rightarrow Z_\bullet(C)$$으로부터 얻어지는 것이며, 위의 identification을 거쳤을 때 $$\delta_\bullet$$과 같은 함수인 것을 안다. 따라서 
 
 $$\coker \delta_k\cong (H(C)\otimes H(D))_k,\qquad \ker \delta_{k-1}\cong \Tor_1^A(H(C),H(D))_{k-1}$$
 
@@ -378,7 +378,7 @@ $$0 \rightarrow Z_\bullet(C)\rightarrow C_\bullet \rightarrow B_{\bullet-1}(C) \
 
 <div class="proposition" markdown="1">
 
-<ins id="thm9">**정리 9 (Eilenberg-Zilber)**</ins> 두 위상공간 $$X,Y$$와 이들로부터 얻어지는 chain complex $$C_\bullet(X),C_\bullet(Y)$$, 그리고 $$C_\bullet(X\times Y)$$에 대하여, 두 chain complex $$(C(X)\otimes C(Y))\_\bullet$$과 $$C\_\bullet(X\times Y)$$ 사이의 chain homotopy equivalence가 존재하며, 따라서 
+<ins id="thm9">**정리 9 (Eilenberg-Zilber)**</ins> 두 위상공간 $$X,Y$$와 이들로부터 얻어지는 chain complex $$C_\bullet(X),C_\bullet(Y)$$, 그리고 $$C_\bullet(X\times Y)$$에 대하여, 두 chain complex $$(C(X)\otimes C(Y))_\bullet$$과 $$C_\bullet(X\times Y)$$ 사이의 chain homotopy equivalence가 존재하며, 따라서 
 
 $$H_\bullet(C(X\times Y))\cong H_\bullet(C(X)\otimes C(Y))$$
 
@@ -398,7 +398,7 @@ $$\sum_p (\pi_X\circ \sigma\vert_{[v_0,\ldots,v_p]})\otimes (\pi_Y\circ \sigma\v
 
 으로 보내어 얻어진다. 이는 만일 $$X=Y$$였다면, $$C(X)\rightarrow C(X)\otimes C(X)$$를 통해 $$C(X)$$를 (differential graded counital coassociative) coalgebra로 만드는 함수가 될 것이며 이러한 이유로 다음 글에서 다시 등장하게 된다.
 
-Eilenberg-Zilber map $$\EZ:(C(X)\otimes C(Y))\_\bullet \rightarrow C\_\bullet(X\times Y)$$는 simple tensor들에 대하여 다음의 식
+Eilenberg-Zilber map $$\EZ:(C(X)\otimes C(Y))_\bullet \rightarrow C_\bullet(X\times Y)$$는 simple tensor들에 대하여 다음의 식
 
 $$\EZ(\sigma\otimes\tau)=\sum_{\substack{\alpha_1<\cdots <\alpha_p\\\beta_1<\cdots <\beta_q}}\sgn(\alpha_1,\ldots,\alpha_p,\beta_1,\ldots,\beta_q)(\sigma\circ s_{\alpha_p}\cdots s_{\alpha_1})\times(\tau\circ s_{\beta_q}\cdots s_{\beta_1})$$
 

@@ -23,7 +23,7 @@ weight: 8
 
 <div class="proposition" markdown="1">
 
-<ins id="thm1">**정리 1**</ins> Ring $$A$$와 ideal $$\mathfrak{a}\subseteq A$$를 고정하고, $$M$$이 $$n$$개의 원소들 $$e\_1,\ldots,e\_n$$으로 생성되는 $$A$$-module이라 하자. 그럼 임의의 $$u\in\End_\rMod{A}(M)$$에 대하여, 만일 $$u(M)\subseteq \mathfrak{a}M$$이 성립한다면 다음의 monic polynomial
+<ins id="thm1">**정리 1**</ins> Ring $$A$$와 ideal $$\mathfrak{a}\subseteq A$$를 고정하고, $$M$$이 $$n$$개의 원소들 $$e_1,\ldots,e_n$$으로 생성되는 $$A$$-module이라 하자. 그럼 임의의 $$u\in\End_\rMod{A}(M)$$에 대하여, 만일 $$u(M)\subseteq \mathfrak{a}M$$이 성립한다면 다음의 monic polynomial
 
 $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
@@ -98,7 +98,7 @@ $$(\phi[\x](p))(\x)=\phi(a_n)\x^n+\cdots+\phi(a_0)\in E[\x]$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-한쪽 방향은 위에서 보였다. 이제 역으로 $$E$$가 유한히 많은 integral element들에 의해 생성된다면, $$E$$가 $$A$$-module로서도 유한하게 생성된다는 것을 보여야 한다. 이를 위해 $$E$$의 ($$A$$-algebra로서의) generator들의 개수에 대한 induction을 사용하자. 만일 $$E$$가 $$A$$-algebra로서 $$n$$개의 integral element $$x_1,\ldots, x_n$$들로 생성된다 하면, 이들 중 $$n-1$$개의 원소들 $$x_1,\ldots, x_{n-1}$$로 생성되는 $$E$$의 $$A$$-subalgebra $$E'$$를 생각할 수 있고 이는 귀납적 가정에 의하여 $$A$$-module로서 유한하게 생성된다. $$E'$$의 ($$A$$-module로서의) generator들을 $$\\{s_i\\}$$라 하자. 그럼 $$x_n$$은 $$A$$에 대해 integral이므로 $$E'$$에 대해서도 integral이고, 따라서 $$E'$$-module로서 $$E$$는 유한하게 생성되어야 한다. 이 원소들을 $$\\{t_j\\}$$라 하면, $$\\{s_i t_j\\}$$가 $$E$$를 $$A$$-module로서 유한하게 생성하는 것을 알 수 있다. 
+한쪽 방향은 위에서 보였다. 이제 역으로 $$E$$가 유한히 많은 integral element들에 의해 생성된다면, $$E$$가 $$A$$-module로서도 유한하게 생성된다는 것을 보여야 한다. 이를 위해 $$E$$의 ($$A$$-algebra로서의) generator들의 개수에 대한 induction을 사용하자. 만일 $$E$$가 $$A$$-algebra로서 $$n$$개의 integral element $$x_1,\ldots, x_n$$들로 생성된다 하면, 이들 중 $$n-1$$개의 원소들 $$x_1,\ldots, x_{n-1}$$로 생성되는 $$E$$의 $$A$$-subalgebra $$E'$$를 생각할 수 있고 이는 귀납적 가정에 의하여 $$A$$-module로서 유한하게 생성된다. $$E'$$의 ($$A$$-module로서의) generator들을 $$\{s_i\}$$라 하자. 그럼 $$x_n$$은 $$A$$에 대해 integral이므로 $$E'$$에 대해서도 integral이고, 따라서 $$E'$$-module로서 $$E$$는 유한하게 생성되어야 한다. 이 원소들을 $$\{t_j\}$$라 하면, $$\{s_i t_j\}$$가 $$E$$를 $$A$$-module로서 유한하게 생성하는 것을 알 수 있다. 
 
 </details>
 
@@ -183,7 +183,7 @@ $$(1+p_1+\cdots_p_n)M=0$$
 
 1번 겷과의 경우 [보조정리 7](#lem7)으로부터 얻어지는 $$a\in \mathfrak{a}$$가 가정에 의하여 모든 maximal ideal에 속한다는 사실을 안다. 바꾸어 말하면 $$1-a$$는 어떠한 maximal ideal에도 속할 수 없으므로 $$1-a$$는 unit이다. 따라서 원하는 결과를 얻는다.
 
-2번 결과의 경우, $$N=M/\sum\_i Ax\_i$$라 하자. 그럼 $$N/IN=0$$임을 보일 수 있고 1번 결과로부터 $$N=0$$임을 안다.
+2번 결과의 경우, $$N=M/\sum_i Ax_i$$라 하자. 그럼 $$N/IN=0$$임을 보일 수 있고 1번 결과로부터 $$N=0$$임을 안다.
 
 </details>
 
@@ -245,25 +245,25 @@ $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> Semilocal ring $$A$$와 finitely presented $$A$$-module $$M,N$$에 대하여, 만일 $$M\_\mathfrak{m}\cong N\_\mathfrak{m}$$이 모든 maximal ideal $$\mathfrak{m}$$에 대해 성립한다면 $$M\cong N$$이 성립한다. 
+<ins id="prop13">**명제 13**</ins> Semilocal ring $$A$$와 finitely presented $$A$$-module $$M,N$$에 대하여, 만일 $$M_\mathfrak{m}\cong N_\mathfrak{m}$$이 모든 maximal ideal $$\mathfrak{m}$$에 대해 성립한다면 $$M\cong N$$이 성립한다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$A$$의 maximal ideal들 $$\mathfrak{m}\_1,\ldots, \mathfrak{m}\_n$$이 주어졌다 하고, 각각의 $$k$$에 대하여 $$u_k: M\_{\mathfrak{p}\_k}\rightarrow N\_{\mathfrak{p}\_k}$$가 주어졌다 하자. 그럼 $$A_\mathfrak{p}$$는 flat $$A$$-module이고, 가정에 의해 $$M$$이 finitely presented이므로 다음의 isomorphism
+우선 $$A$$의 maximal ideal들 $$\mathfrak{m}_1,\ldots, \mathfrak{m}_n$$이 주어졌다 하고, 각각의 $$k$$에 대하여 $$u_k: M_{\mathfrak{p}_k}\rightarrow N_{\mathfrak{p}_k}$$가 주어졌다 하자. 그럼 $$A_\mathfrak{p}$$는 flat $$A$$-module이고, 가정에 의해 $$M$$이 finitely presented이므로 다음의 isomorphism
 
 $$\Hom_{A_{\mathfrak{m}_k}}( M_{\mathfrak{m}_k}, N_{\mathfrak{m}_k}) \rightarrow \Hom_A(M,N)_{\mathfrak{m}_k}$$
 
 이 존재한다. ([§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5)) 이 isomorphism에 의한 $$u_k$$의 image는 $$\Hom_A(M,N)$$의 원소에 $$A\setminus \mathfrak{m}_k$$의 원소를 분모에 넣어준 것이므로, 필요하다면 $$u_k$$에 이 분모를 곱해주어 $$v_k$$를 $$\Hom_A(M,N)$$의 원소로 취급할 수 있다. 
 
-한편, $$\mathfrak{m}\_k$$는 prime이므로, 만일 $$\bigcap\_{l\neq k} \mathfrak{m}\_l\subseteq \mathfrak{m}\_k$$라면 어떠한 $$l$$에 대해 $$\mathfrak{m}\_l\subseteq \mathfrak{m}\_k$$가 되어야 하므로 모순이다. 즉, 다음의 식
+한편, $$\mathfrak{m}_k$$는 prime이므로, 만일 $$\bigcap_{l\neq k} \mathfrak{m}_l\subseteq \mathfrak{m}_k$$라면 어떠한 $$l$$에 대해 $$\mathfrak{m}_l\subseteq \mathfrak{m}_k$$가 되어야 하므로 모순이다. 즉, 다음의 식
 
 $$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
 
-이 성립하고 그럼 이로부터 $$a_k\in \bigcap_{l\neq k}\mathfrak{m}\_l$$이지만 $$a_k\not\in \mathfrak{m}\_k$$인 $$a_k$$가 존재한다. 이렇게 만들어진 $$a_k$$들에 대하여, $$v=\sum_{k=1}^n a_kv_k$$으로 정의하면, 이것이 우리가 원하는 isomorphism이 되며 그 증명을 위해서는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의해 각각의 maximal ideal들 $$\mathfrak{m}\_k$$에서의 localization을 보면 된다. 
+이 성립하고 그럼 이로부터 $$a_k\in \bigcap_{l\neq k}\mathfrak{m}_l$$이지만 $$a_k\not\in \mathfrak{m}_k$$인 $$a_k$$가 존재한다. 이렇게 만들어진 $$a_k$$들에 대하여, $$v=\sum_{k=1}^n a_kv_k$$으로 정의하면, 이것이 우리가 원하는 isomorphism이 되며 그 증명을 위해서는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의해 각각의 maximal ideal들 $$\mathfrak{m}_k$$에서의 localization을 보면 된다. 
 
-더 일반적으로 우리는 임의의 local ring $$(B, \mathfrak{n})$$과 finitely generated $$B$$-module 사이의 map들 $$s,t:K \rightarrow L$$에 대하여, 만일 $$s$$가 isomorphism이고 $$t(K)\subseteq \mathfrak{n}L$$이라면 $$s+t$$도 isomorphism인 것을 보인다. 그럼 이 결과를 local ring $$(A\_{\mathfrak{m}\_k}, \mathfrak{m}\_kA\_{\mathfrak{m}\_k})$$, 그리고 $$M\_{\mathfrak{m}\_k}$$에서 $$N\_{\mathfrak{m}\_k}$$로의 함수들 $$s=a_k v_k$$와 $$t=\sum_{l\neq k} a_lv_l$$에 적용하면 증명이 완료될 것이다. 
+더 일반적으로 우리는 임의의 local ring $$(B, \mathfrak{n})$$과 finitely generated $$B$$-module 사이의 map들 $$s,t:K \rightarrow L$$에 대하여, 만일 $$s$$가 isomorphism이고 $$t(K)\subseteq \mathfrak{n}L$$이라면 $$s+t$$도 isomorphism인 것을 보인다. 그럼 이 결과를 local ring $$(A_{\mathfrak{m}_k}, \mathfrak{m}_kA_{\mathfrak{m}_k})$$, 그리고 $$M_{\mathfrak{m}_k}$$에서 $$N_{\mathfrak{m}_k}$$로의 함수들 $$s=a_k v_k$$와 $$t=\sum_{l\neq k} a_lv_l$$에 적용하면 증명이 완료될 것이다. 
 
 이 주장을 증명하자. 우선 $$t$$는 $$K$$에서 $$L/\mathfrak{n}L$$로의 zero map으로 볼 수 있고, $$s$$는 $$K$$에서 $$L/\mathfrak{n}L$$로의 epimorphism으로 볼 수 있므로 $$s+t$$ 또한 $$K$$에서 $$L/\mathfrak{n}L$$로의 epimorphism으로 볼 수 있다. 그럼 [보조정리 8](#lem8)에 의해 $$K$$에서 $$L$$로의 morphism $$s+t$$도 epimorphism이다. 이제 isomorphism $$s$$의 inverse $$s^{-1}$$을 취하여 surjective endomorphism $$s^{-1}(s+t): K \rightarrow K$$를 생각하자. 그럼 [정리 1](#thm1)에 의하여 $$s^{-1}(s+t)$$는 isomorphism이기도 하고, 따라서 $$s+t$$는 monomorphism이므로 원하는 결과를 얻는다. 
 
@@ -292,8 +292,8 @@ $$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
 
 <ins id="prop15">**명제 15**</ins> Ring homomorphism $$\phi:A \rightarrow E$$가 주어졌다 하자. $$(a_1, \ldots, a_n)=A$$라면, 다음이 성립한다. 
 
-1. 만일 각각의 $$A\_{a\_i} \rightarrow E\_{a\_i}$$가 integral이라면, $$A \rightarrow E$$도 그러하다. 
-2. 만일 각각의 $$A\_{a\_i} \rightarrow E\_{a\_i}$$가 finite이라면, $$A \rightarrow E$$도 그러하다. 
+1. 만일 각각의 $$A_{a_i} \rightarrow E_{a_i}$$가 integral이라면, $$A \rightarrow E$$도 그러하다. 
+2. 만일 각각의 $$A_{a_i} \rightarrow E_{a_i}$$가 finite이라면, $$A \rightarrow E$$도 그러하다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -301,7 +301,7 @@ $$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
 
 위와 마찬가지로, 두 주장의 증명이 유사하므로 첫 번쨰 주장만 증명한다. 임의의 $$x\in E$$에 대하여, $$A[\x]$$의 원소들 중 $$p(x)=0$$을 만족하는 다항식들의 ideal을 $$\mathfrak{A}$$라 하자. 그럼 이 다항식들의 leading coefficient들을 모은 $$A$$의 부분집합 $$\mathfrak{a}$$가 $$A$$의 ideal이 되는 것을 확인할 수 있다. 
 
-한편, 각각의 $$A_{a_i} \rightarrow E_{a_i}$$가 integral이라는 가정으로부터, $$x$$의 $$E\_{a\_i}$$에서의 image는 $$A\_{a\_i}$$에 대해 integral이고, 따라서 이 원소의 integral equation을 쓴 후, 분모에 있는 $$a_i$$의 거듭제곱들을 모두 곱해주면 우리는 임의의 $$i$$가 주어질 때마다, 적절한 $$n_i$$가 존재하여 $$a_i^{n_i}\in \mathfrak{a}$$가 성립함을 안다. 한편 식
+한편, 각각의 $$A_{a_i} \rightarrow E_{a_i}$$가 integral이라는 가정으로부터, $$x$$의 $$E_{a_i}$$에서의 image는 $$A_{a_i}$$에 대해 integral이고, 따라서 이 원소의 integral equation을 쓴 후, 분모에 있는 $$a_i$$의 거듭제곱들을 모두 곱해주면 우리는 임의의 $$i$$가 주어질 때마다, 적절한 $$n_i$$가 존재하여 $$a_i^{n_i}\in \mathfrak{a}$$가 성립함을 안다. 한편 식
 
 $$1=\sum_{i=1}^n \alpha_i a_i$$
 

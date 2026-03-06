@@ -27,13 +27,13 @@ weight: 14
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 집합 $$\\{1,\ldots, n\\}$$에서 자기 자신으로의 모든 전단사함수들의 모임을 *symmetric group<sub>대칭군</sub>*이라 부르고, $$S_n$$으로 표기한다. $$S_n$$의 원소들을 *permutation<sub>치환</sub>*이라 부른다.
+<ins id="def1">**정의 1**</ins> 집합 $$\{1,\ldots, n\}$$에서 자기 자신으로의 모든 전단사함수들의 모임을 *symmetric group<sub>대칭군</sub>*이라 부르고, $$S_n$$으로 표기한다. $$S_n$$의 원소들을 *permutation<sub>치환</sub>*이라 부른다.
 
 </div>
 
 $$S_n$$의 원소들은 함수의 합성에 대하여 group을 이루며, 이 때의 항등원은 $$\id$$이며 함수 $$\tau\in S_n$$의 역원은 역함수 $$\tau^{-1}$$이다.
 
-$$S_n$$의 원소들 중, $$\id$$ 다음으로 간단한 것은 $$\\{1,\ldots, n\\}$$의 원소들 중 두 개를 골라 이 둘의 위치를 바꾸는 함수이다. 예를 들어 $$i,j\in \\{1,\ldots, n\\}$$에 대하여 다음의 식
+$$S_n$$의 원소들 중, $$\id$$ 다음으로 간단한 것은 $$\{1,\ldots, n\}$$의 원소들 중 두 개를 골라 이 둘의 위치를 바꾸는 함수이다. 예를 들어 $$i,j\in \{1,\ldots, n\}$$에 대하여 다음의 식
 
 $$\tau(k)=\begin{cases}i&\text{if $$k=j$$,}\\j&\text{if $$k=i$$,}\\k&\text{otherwise.}\end{cases}$$
 
@@ -43,7 +43,7 @@ $$S_n$$의 모든 원소들은 항상 transposition들의 유한한 합성으로
 
 $$\tau=\upsilon_1\circ\upsilon_2\circ\cdots\circ\upsilon_n=\upsilon_1'\circ\upsilon_2'\circ\cdots\circ\upsilon_m'.$$
 
-일반적으로 $$m$$과 $$n$$이 같을 필요는 없으나, $$m,n$$이 홀수인지 짝수인지의 여부는 항상 동일하다. 만일 이 숫자가 짝수일 경우, $$\tau$$를 *even permutation<sub>짝치환</sub>*이라 부르고, 홀수라면 *odd permutation<sub>홀치환</sub>*이라 부른다. 그럼 함수 $$\sgn:S_n\rightarrow\\{-1,1\\}$$을 다음의 식
+일반적으로 $$m$$과 $$n$$이 같을 필요는 없으나, $$m,n$$이 홀수인지 짝수인지의 여부는 항상 동일하다. 만일 이 숫자가 짝수일 경우, $$\tau$$를 *even permutation<sub>짝치환</sub>*이라 부르고, 홀수라면 *odd permutation<sub>홀치환</sub>*이라 부른다. 그럼 함수 $$\sgn:S_n\rightarrow\{-1,1\}$$을 다음의 식
 
 $$\sgn(\tau)=\begin{cases}1&\text{if $$\tau$$ is even}\\-1&\text{if $$\tau$$ is odd}\end{cases}$$
 
@@ -190,9 +190,9 @@ $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 행렬 $$A\in\Mat\_n(\mathbb{K})$$이 *상삼각행렬<sub>upper triangular matrix</sub>*이라는 것은 $$i>j$$일 때마다 $$A_{ij}=0$$인 것이다. 비슷하게, $$i < j$$일 때마다 $$A\_{ij}=0$$이라면 $$A$$를 *하삼각행렬<sub>lower triangular matrix</sub>*이라 부르고, 상삼각행렬과 하삼각행렬을 합쳐 간단히 *삼각행렬<sub>triangular matrix</sub>*이라 부른다.
+<ins id="def8">**정의 8**</ins> 행렬 $$A\in\Mat_n(\mathbb{K})$$이 *상삼각행렬<sub>upper triangular matrix</sub>*이라는 것은 $$i>j$$일 때마다 $$A_{ij}=0$$인 것이다. 비슷하게, $$i < j$$일 때마다 $$A_{ij}=0$$이라면 $$A$$를 *하삼각행렬<sub>lower triangular matrix</sub>*이라 부르고, 상삼각행렬과 하삼각행렬을 합쳐 간단히 *삼각행렬<sub>triangular matrix</sub>*이라 부른다.
 
-한편, 행렬 $$A$$의 성분들 $$A\_{ii}$$를 $$A$$의 *대각성분*이라 하고, 만일 $$i\neq j$$일 때마다 $$A\_{ij}=0$$이라면 $$A$$를 *대각행렬<sub>diagonal matrix</sub>*이라 부른다. 
+한편, 행렬 $$A$$의 성분들 $$A_{ii}$$를 $$A$$의 *대각성분*이라 하고, 만일 $$i\neq j$$일 때마다 $$A_{ij}=0$$이라면 $$A$$를 *대각행렬<sub>diagonal matrix</sub>*이라 부른다. 
 
 </div>
 
@@ -223,11 +223,11 @@ $$A'=E_kE_{k-1}\cdots E_1 A$$
 
 $$\det(A')=\det(E_k)\det(E_{k-1})\cdots\det(E_1)\det(A)$$
 
-가 된다. 따라서 기본행렬들 $$E\_{i,j}$$, $$E'\_{i,r}$$, $$E''\_{i,j,r}$$의 행렬식을 살펴보자. 우선 $$E\_{i,j}$$와 $$E'\_{i,r}$$의 경우, 행렬식의 정의로부터 
+가 된다. 따라서 기본행렬들 $$E_{i,j}$$, $$E'_{i,r}$$, $$E''_{i,j,r}$$의 행렬식을 살펴보자. 우선 $$E_{i,j}$$와 $$E'_{i,r}$$의 경우, 행렬식의 정의로부터 
 
 $$\det E_{i,j}=-1,\quad \det E'_{i,r}=r$$
 
-이라는 것을 쉽게 알 수 있다. 또, $$E''\_{i,j,r}$$은 반드시 삼각행렬이고, 대각성분의 곱이 1이므로 $$\det E''\_{i,j,r}=1$$이 성립한다. 
+이라는 것을 쉽게 알 수 있다. 또, $$E''_{i,j,r}$$은 반드시 삼각행렬이고, 대각성분의 곱이 1이므로 $$\det E''_{i,j,r}=1$$이 성립한다. 
 
 ## Block matrix의 행렬식
 
@@ -259,7 +259,7 @@ $$\tau(k+1)=k+1,\ldots,\tau(k+l)=k+1$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor11">**따름정리 11**</ins> $$A\in\Mat\_k(\mathbb{K}),B\in\Mat\_l(\mathbb{K}), C\in\Mat\_{l\times k}(\mathbb{K})$$에 대하여, 다음의 블록행렬
+<ins id="cor11">**따름정리 11**</ins> $$A\in\Mat_k(\mathbb{K}),B\in\Mat_l(\mathbb{K}), C\in\Mat_{l\times k}(\mathbb{K})$$에 대하여, 다음의 블록행렬
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 

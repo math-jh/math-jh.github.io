@@ -33,7 +33,7 @@ $$((C\otimes D)^\vee)^\bullet=\Hom_A((C\otimes D)_\bullet,A)$$
 
 $$\times:(C^\vee\otimes D^\vee)^\bullet\rightarrow ((C\otimes D)^\vee)^\bullet$$
 
-을 정의한다. 이를 위해서는 좌변의 simple tensor $$\phi\otimes \psi$$를 받아 $$(C\otimes D)\_\bullet$$에서 $$A$$의 함수를 하나 대응시켜주면 되고, 이는 다시 $$(C\otimes D)\_\bullet$$의 simple tensor에서의 값으로 정의된다. 만일 $$\phi\in (C^\vee)^p,\psi\in (D^\vee)^q$$라면, 우리는 정확히 $$C_p\otimes D_q$$에 속하는 simple tensor $$\alpha\otimes \beta$$에 대해서만
+을 정의한다. 이를 위해서는 좌변의 simple tensor $$\phi\otimes \psi$$를 받아 $$(C\otimes D)_\bullet$$에서 $$A$$의 함수를 하나 대응시켜주면 되고, 이는 다시 $$(C\otimes D)_\bullet$$의 simple tensor에서의 값으로 정의된다. 만일 $$\phi\in (C^\vee)^p,\psi\in (D^\vee)^q$$라면, 우리는 정확히 $$C_p\otimes D_q$$에 속하는 simple tensor $$\alpha\otimes \beta$$에 대해서만
 
 $$(\phi\times\psi):(C\otimes D)_\bullet \rightarrow A;\qquad (\alpha\otimes \beta)\mapsto (-1)^{\deg(\alpha)\deg(\beta)}\phi(\alpha)\psi(\beta)$$
 

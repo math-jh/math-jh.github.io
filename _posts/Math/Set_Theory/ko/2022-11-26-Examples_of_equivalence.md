@@ -47,7 +47,7 @@ weight: 13
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> $$(R,A,A)$$가 동치관계라 하자. 그럼 단항관계 $$P$$가 $$R$$과 *compatible*하다는 것은 $$P(x)\wedge (x\sim\_{\tiny R}y)\implies P(y)$$인 것이다.
+<ins id="def3">**정의 3**</ins> $$(R,A,A)$$가 동치관계라 하자. 그럼 단항관계 $$P$$가 $$R$$과 *compatible*하다는 것은 $$P(x)\wedge (x\sim_{\tiny R}y)\implies P(y)$$인 것이다.
 
 </div>
 
@@ -76,7 +76,7 @@ weight: 13
 
 그리고 이건 정확히 compatible한 단항관계의 정의다. 
 
-반대 방향은 자명하다. 만일 $$t\in A/R$$에 대하여 $$a\in t$$가 존재하여 $$P(a)$$라 하자. 그럼 모든 $$x\in t$$에 대하여 $$a\sim\_{\tiny R}x$$이므로 $$P(x)$$이다.
+반대 방향은 자명하다. 만일 $$t\in A/R$$에 대하여 $$a\in t$$가 존재하여 $$P(a)$$라 하자. 그럼 모든 $$x\in t$$에 대하여 $$a\sim_{\tiny R}x$$이므로 $$P(x)$$이다.
 
 </details>
 
@@ -92,22 +92,22 @@ weight: 13
 
 <cap>주어진 몫집합 (위쪽) 에서의 saturated subset (왼쪽)과 saturated가 아닌 부분집합 (오른쪽)</cap>
 
-위의 정의에 따르면, 어떤 집합 $$X$$가 $$R$$-saturated이기 위해서는 <phrase>$$x\in X$$라면 $$R(x)\subseteq X$$</phrase>가 반드시 성립해야 한다. 따라서 $$R$$-saturated인 부분집합 $$X$$는 어떠한 부분집합 $$B\subseteq A$$에 대하여 $$\bigcup\_{x\in B}R(x)$$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
+위의 정의에 따르면, 어떤 집합 $$X$$가 $$R$$-saturated이기 위해서는 <phrase>$$x\in X$$라면 $$R(x)\subseteq X$$</phrase>가 반드시 성립해야 한다. 따라서 $$R$$-saturated인 부분집합 $$X$$는 어떠한 부분집합 $$B\subseteq A$$에 대하여 $$\bigcup_{x\in B}R(x)$$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
 
-1. 만일 $$(A\_i)\_{i\in I}$$가 $$R$$-saturated인 부분집합들의 family라면, $$\bigcup\_{i\in I} A_i$$와 $$\bigcap\_{i\in I} A_i$$도 마찬가지다.
+1. 만일 $$(A_i)_{i\in I}$$가 $$R$$-saturated인 부분집합들의 family라면, $$\bigcup_{i\in I} A_i$$와 $$\bigcap_{i\in I} A_i$$도 마찬가지다.
 2. $$X\subseteq A$$가 $$R$$-saturated라면 $$A\setminus X$$도 그러하다..
 
 이번에는 canonical projection $$p:A\rightarrow A/R$$와 $$X\subseteq A$$를 생각하자. [§이항관계의 연산, ⁋명제 7](/ko/math/set_theory/operation_of_binary_relations#prop7)에 의하여 
 
 $$p^{-1}(p(X))\supseteq X$$
 
-를 얻는다. 일반적으로 반대방향 포함관계는 성립하지 않지만, 만일 $$X$$가 $$R$$-saturated라면 반대쪽 포함관계도 성립한다. 각각의 $$x\in X$$에 대하여, $$p^{-1}(\left\\{p(x)\right\\})\subseteq X$$이므로
+를 얻는다. 일반적으로 반대방향 포함관계는 성립하지 않지만, 만일 $$X$$가 $$R$$-saturated라면 반대쪽 포함관계도 성립한다. 각각의 $$x\in X$$에 대하여, $$p^{-1}(\left\{p(x)\right\})\subseteq X$$이므로
 
 $$p^{-1}(p(X))=\bigcup_{x\in X}p^{-1}(\left\{p(x)\right\})\subseteq X$$
 
 가 성립하기 때문이다.
 
-한편, $$X$$가 $$R$$-saturated가 아니더라도 집합 $$p^{-1}(p(X))$$는 $$R$$-saturated가 된다. 이를 보기 위해 $$x\in p^{-1}(p(X))$$를 임의로 택하고, $$x\sim\_{\tiny R} x'$$를 만족하는 임의의 $$x'$$가 주어졌다 하자. 그럼 
+한편, $$X$$가 $$R$$-saturated가 아니더라도 집합 $$p^{-1}(p(X))$$는 $$R$$-saturated가 된다. 이를 보기 위해 $$x\in p^{-1}(p(X))$$를 임의로 택하고, $$x\sim_{\tiny R} x'$$를 만족하는 임의의 $$x'$$가 주어졌다 하자. 그럼 
 
 $$x\sim_{\tiny R} x'\iff p(x)=p(x')$$
 
@@ -147,7 +147,7 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 
 $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
-를 얻는다. 만일 어떠한 $$t, t'\in A/R$$에 대해 $$h(t)=h(t')$$라면, $$x\in t$$, $$x'\in t'$$에 대하여 $$f(x)=f(x')$$이므로 $$x\sim\_{\tiny R}x'$$이고, 따라서 $$t=t'$$가 되어 $$h$$는 단사함수이다. 그런데 $$h$$의 공역은 $$f$$의 치역으로 제한된 상태이므로, $$h$$는 전사함수이기도 하다. 따라서 $$h$$는 전단사이며, 위의 식을 $$f$$의 *canonical decomposition*이라 부른다.
+를 얻는다. 만일 어떠한 $$t, t'\in A/R$$에 대해 $$h(t)=h(t')$$라면, $$x\in t$$, $$x'\in t'$$에 대하여 $$f(x)=f(x')$$이므로 $$x\sim_{\tiny R}x'$$이고, 따라서 $$t=t'$$가 되어 $$h$$는 단사함수이다. 그런데 $$h$$의 공역은 $$f$$의 치역으로 제한된 상태이므로, $$h$$는 전사함수이기도 하다. 따라서 $$h$$는 전단사이며, 위의 식을 $$f$$의 *canonical decomposition*이라 부른다.
 
 추가로 공역 $$B$$에 동치관계 $$S$$가 주어졌다고 하자. 그럼 우선 다음의 diagram을 얻는다.
 
@@ -169,7 +169,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 집합 $$A$$ 위에 정의된 두 동치관계 $$R,S$$에 대해, $$S$$가 $$R$$보다 *finer<sub>세밀하다</sub>*하다는 것은 $$x\sim\_{\tiny S}y\implies x\sim\_{\tiny R}y$$가 항상 성립하는 것이다.
+<ins id="def8">**정의 8**</ins> 집합 $$A$$ 위에 정의된 두 동치관계 $$R,S$$에 대해, $$S$$가 $$R$$보다 *finer<sub>세밀하다</sub>*하다는 것은 $$x\sim_{\tiny S}y\implies x\sim_{\tiny R}y$$가 항상 성립하는 것이다.
 
 </div>
 
@@ -187,13 +187,13 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 마지막으로 두 동치관계 $$(R,A,A)$$, $$(R',A',A'$$이 주어졌다고 하고, 관계 $$(S, A\times A', A\times A')$$를
 
-> $$u\sim\_{\tiny S}v$$인 것은 어떠한 $$x$$, $$x'$$, $$y$$, $$y'$$가 존재하여 $$u=(x,x')$$, $$v=(y,y')$$이고 $$x\sim\_{\tiny R}y$$, $$x'\sim\_{\tiny R'}y'$$인 것이다
+> $$u\sim_{\tiny S}v$$인 것은 어떠한 $$x$$, $$x'$$, $$y$$, $$y'$$가 존재하여 $$u=(x,x')$$, $$v=(y,y')$$이고 $$x\sim_{\tiny R}y$$, $$x'\sim_{\tiny R'}y'$$인 것이다
 
 로 정의하자. $$u=(x,x'),v=(y,y'),w=(z,z')$$이 $$A\times A'$$의 원소들이라 하면,
 
-- $$u\sim\_{\tiny S}u$$가 항상 성립하는 것은 자명하다. $$x\sim\_{\tiny R}x$$이고 $$x'\sim\_{\tiny R'}x'$$이기 때문이다.
-- $$u\sim\_{\tiny S}v$$라면 <phrase>$$x\sim_{\tiny R}y$$이고 $$x'\sim_{\tiny R'}y'$$</phrase>이므로 <phrase>$$y\sim_{\tiny R}x$$이고 $$y'\sim_{\tiny R'}x'$$</phrase>이고, 따라서 $$v\sim\_{\tiny S}u$$이다.
-- $$u\sim\_{\tiny S}v$$이고 $$v\sim\_{\tiny S}$$라 하자. 그럼 <phrase>$$x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$$</phrase>가 각각 성립한다. 이제 $$x\sim\_{\tiny R}y$$와 $$y\sim\_{\tiny R}z$$로부터 $$x\sim\_{\tiny R}z$$이고, $$x'\sim\_{\tiny R'}y'$$와 $$y'\sim\_{\tiny R'}z'$$로부터 $$x'\sim\_{\tiny R'}z'$$이다. 즉 $$u\sim\_{\tiny S}w$$가 성립한다.
+- $$u\sim_{\tiny S}u$$가 항상 성립하는 것은 자명하다. $$x\sim_{\tiny R}x$$이고 $$x'\sim_{\tiny R'}x'$$이기 때문이다.
+- $$u\sim_{\tiny S}v$$라면 <phrase>$$x\sim_{\tiny R}y$$이고 $$x'\sim_{\tiny R'}y'$$</phrase>이므로 <phrase>$$y\sim_{\tiny R}x$$이고 $$y'\sim_{\tiny R'}x'$$</phrase>이고, 따라서 $$v\sim_{\tiny S}u$$이다.
+- $$u\sim_{\tiny S}v$$이고 $$v\sim_{\tiny S}$$라 하자. 그럼 <phrase>$$x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$$</phrase>가 각각 성립한다. 이제 $$x\sim_{\tiny R}y$$와 $$y\sim_{\tiny R}z$$로부터 $$x\sim_{\tiny R}z$$이고, $$x'\sim_{\tiny R'}y'$$와 $$y'\sim_{\tiny R'}z'$$로부터 $$x'\sim_{\tiny R'}z'$$이다. 즉 $$u\sim_{\tiny S}w$$가 성립한다.
 
 따라서 $$S$$는 동치관계가 된다. 이 동치관계를 $$R$$과 $$R'$$의 *곱<sub>product</sub>*이라 부르고 $$R\times R'$$로 적는다.
 

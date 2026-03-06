@@ -51,7 +51,7 @@ $$a = qb + r \qquad\text{with $$r = 0$$ or $$N(r) < N(b)$$}$$
 
 $$\mathfrak{a}$$가 zero ideal이라면 증명할 것이 없으므로, $$\mathfrak{a}\neq 0$$이라 가정하자. 
 
-$$\mathfrak{a}\setminus \\{0\\}$$의 $$N$$에 의한 ㅑmage를 보면, $$\mathbb{Z}^{\geq 0}$$은 well-ordered set이므로 norm이 최소인 $$\mathfrak{a}$$의 nonzero element $$a$$를 택할 수 있다. 
+$$\mathfrak{a}\setminus \{0\}$$의 $$N$$에 의한 ㅑmage를 보면, $$\mathbb{Z}^{\geq 0}$$은 well-ordered set이므로 norm이 최소인 $$\mathfrak{a}$$의 nonzero element $$a$$를 택할 수 있다. 
 
 $$(a)\subseteq \mathfrak{a}$$인 것은 자명하므로, $$(a)=\mathfrak{a}$$임을 보이기 위해서는 반대방향 포함관계만 보이면 충분하다. $$\mathfrak{a}$$의 임의의 원소 $$x$$에 대하여 division algorithm을 적용하면
 
@@ -364,7 +364,7 @@ $$d = p_1^{\min(e_1, f_1)} p_2^{\min(e_2, f_2)} \cdots p_n^{\min(e_n, f_n)}$$
 
 $$c = q_1^{g_1} \cdots q_m^{g_m}$$
 
-그런데 $$c \mid a, b$$이므로 각 $$q_j$$는 $$a$$ 또는 $$b$$의 어떤 prime factor와 associate해야 한다. 즉, $$\\{q_1, \dots, q_m\} \subseteq \{p_1, \dots, p_n\\}$$이다.
+그런데 $$c \mid a, b$$이므로 각 $$q_j$$는 $$a$$ 또는 $$b$$의 어떤 prime factor와 associate해야 한다. 즉, $$\{q_1, \dots, q_m\} \subseteq \{p_1, \dots, p_n\}$$이다.
 
 또한 각 지수 $$g_j$$는 $$a$$와 $$b$$에서 $$q_j$$의 지수 이상일 수 없으므로, $$g_j \leq \min(e_j, f_j)$$이다.  따라서 $$c \mid d$$이고, $$d$$는 $$a$$, $$b$$의 greatest common divisor이다.
 

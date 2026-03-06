@@ -95,7 +95,7 @@ $$U_\mathbb{M}(\id_\mathbb{L})=\Gal(\mathbb{L}/\mathbb{M})$$
 
 인 것을 안다. 이 때 우측의 inclusion은 단순히 $$\mathbb{M}$$-automorphism을 $$\mathbb{K}$$-automorphism으로 보아 얻어지는 것이며, 뿐만 아니라 $$\Gal(\mathbb{L}/\mathbb{M})$$에 정의된 위상구조가 정확히 $$U_\mathbb{M}(\id_\mathbb{L})$$과 같다는 것을 안다. 
 
-이제 finite degree *Galois* extension들의 모임 $$\Lambda'$$를 생각하면 [§갈루아 확장, ⁋명제 11](/ko/math/field_theory/galois_extension#prop11)에 의해 이것이 $$\Lambda$$의 cofinal subset임을 안다. 즉 $$(U\_\mathbb{M}(\id\_\mathbb{L}))\_{\mathbb{M}\in\Lambda}$$도 $$\id_\mathbb{L}$$의 local base이다. 그럼 임의의 $$\mathbb{M}\in \Lambda'$$에 대하여 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13)에서 살펴보았던 restriction homomorphism $$\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$$을 생각하면, $$\mathbb{M}$$의 임의의 finite degree subextension은 $$\mathbb{L}$$의 finite degree extension이기도 하므로 이 restriction homomorphism은 위에서 정의한 위상구조에 대하여 연속이다. 이와 같은 상황에서 $$\rho$$는 $$\Gal(\mathbb{L}/\mathbb{K})$$에서 finite discrete space $$\Gal(\mathbb{M}/\mathbb{K})$$로의 연속함수이므로 ([예시 1](#ex1)), $$\ker\rho$$는 $$\Gal(\mathbb{L}/\mathbb{K})$$의 closed subgroup이다. 그런데 정의에 의해 
+이제 finite degree *Galois* extension들의 모임 $$\Lambda'$$를 생각하면 [§갈루아 확장, ⁋명제 11](/ko/math/field_theory/galois_extension#prop11)에 의해 이것이 $$\Lambda$$의 cofinal subset임을 안다. 즉 $$(U_\mathbb{M}(\id_\mathbb{L}))_{\mathbb{M}\in\Lambda}$$도 $$\id_\mathbb{L}$$의 local base이다. 그럼 임의의 $$\mathbb{M}\in \Lambda'$$에 대하여 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13)에서 살펴보았던 restriction homomorphism $$\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$$을 생각하면, $$\mathbb{M}$$의 임의의 finite degree subextension은 $$\mathbb{L}$$의 finite degree extension이기도 하므로 이 restriction homomorphism은 위에서 정의한 위상구조에 대하여 연속이다. 이와 같은 상황에서 $$\rho$$는 $$\Gal(\mathbb{L}/\mathbb{K})$$에서 finite discrete space $$\Gal(\mathbb{M}/\mathbb{K})$$로의 연속함수이므로 ([예시 1](#ex1)), $$\ker\rho$$는 $$\Gal(\mathbb{L}/\mathbb{K})$$의 closed subgroup이다. 그런데 정의에 의해 
 
 $$\sigma\in\ker\rho\iff \sigma\vert_\mathbb{M}=\id\vert_\mathbb{M}\iff\sigma\in U_\mathbb{M}(\id_\mathbb{L})$$
 
@@ -117,7 +117,7 @@ $$\{\id_\mathbb{L}\}=\bigcap_{\mathbb{M}\in \Lambda'}U_\mathbb{M}(\id_\mathbb{L}
 
 </details>
 
-따라서, 이 명제의 결과에 의해 $$\id_\mathbb{L}$$을 포함하는 connected component는 $$\left\\{\id_\mathbb{L}\right\\}$$이며, 이로부터 $$\Gal(\mathbb{L}/\mathbb{K})$$이 totally disconnected space임을 안다. ([\[위상수학\] §연결공간, ⁋정의 7](/ko/math/topology/connected_spaces#def7)) 뿐만 아니라 다음이 성립한다.
+따라서, 이 명제의 결과에 의해 $$\id_\mathbb{L}$$을 포함하는 connected component는 $$\left\{\id_\mathbb{L}\right\}$$이며, 이로부터 $$\Gal(\mathbb{L}/\mathbb{K})$$이 totally disconnected space임을 안다. ([\[위상수학\] §연결공간, ⁋정의 7](/ko/math/topology/connected_spaces#def7)) 뿐만 아니라 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -145,7 +145,7 @@ $$f(x+y)=u(x+y)\neq u(x)+u(y)=f(x)+f(y)$$
 
 </details>
 
-한편 $$\mathbb{L}/\mathbb{K}$$이 Galois extension이라 하고, 이 extension의 Galois subextension $$\mathbb{L}\_i/\mathbb{K}$$들이 $$\mathbb{L}=\bigcup\_{i\in I}\mathbb{L}\_i$$를 만족한다 하자. 그럼 우리는 이 위에 partial order
+한편 $$\mathbb{L}/\mathbb{K}$$이 Galois extension이라 하고, 이 extension의 Galois subextension $$\mathbb{L}_i/\mathbb{K}$$들이 $$\mathbb{L}=\bigcup_{i\in I}\mathbb{L}_i$$를 만족한다 하자. 그럼 우리는 이 위에 partial order
 
 $$i\leq j \iff \mathbb{L}_i\subset \mathbb{L}_j$$
 
@@ -163,7 +163,7 @@ $$\varprojlim_{i\in I}\Gal(\mathbb{L}_i/\mathbb{K})$$
 
 $$\lambda_i:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$$
 
-을 생각하면, 이들은 $$\lambda\_i=\rho\_{ij}\circ\lambda\_j$$를 만족하므로 이들이 유도하는 continuous homomorphism $$\lambda:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\varprojlim\Gal(\mathbb{L}_i/\mathbb{K})$$이 존재한다. 
+을 생각하면, 이들은 $$\lambda_i=\rho_{ij}\circ\lambda_j$$를 만족하므로 이들이 유도하는 continuous homomorphism $$\lambda:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\varprojlim\Gal(\mathbb{L}_i/\mathbb{K})$$이 존재한다. 
 
 <div class="proposition" markdown="1">
 
@@ -173,7 +173,7 @@ $$\lambda_i:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 3](#prop3)에 의하여 $$\Gal(\mathbb{L}\_i/\mathbb{K})$$이 Hausdorff이며, Hausdorff space의 곱과 부분공간은 다시 Hausdorff이므로 이들의 inverse limit $$\varprojlim \Gal9\mathbb{L}\_i/\mathbb{K})$$ 또한 Hausdorff이다. 한편 [명제 4](#prop4)에서 $$\Gal(\mathbb{L}/\mathbb{K})$$이 compact이므로, [\[위상수학\] §옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9)에 의하여 주장은 $$\lambda$$가 전단사임만 보이면 충분하미, 이는 $$\mathbb{L}= \bigcup \mathbb{L}_i$$로부터 거의 자명하다.
+[명제 3](#prop3)에 의하여 $$\Gal(\mathbb{L}_i/\mathbb{K})$$이 Hausdorff이며, Hausdorff space의 곱과 부분공간은 다시 Hausdorff이므로 이들의 inverse limit $$\varprojlim \Gal9\mathbb{L}_i/\mathbb{K})$$ 또한 Hausdorff이다. 한편 [명제 4](#prop4)에서 $$\Gal(\mathbb{L}/\mathbb{K})$$이 compact이므로, [\[위상수학\] §옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9)에 의하여 주장은 $$\lambda$$가 전단사임만 보이면 충분하미, 이는 $$\mathbb{L}= \bigcup \mathbb{L}_i$$로부터 거의 자명하다.
 
 </details>
 

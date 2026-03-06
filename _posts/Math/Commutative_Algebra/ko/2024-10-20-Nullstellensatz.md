@@ -31,7 +31,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ prime containing
 
 </div>
 
-따라서, 위의 관찰은 한마디로 임의의 prime ideal은 radical이라는 것이다. 이 관찰에 대한 증명은 다소 자명한 부분이 있는데, 만일 우리가 $$\mathfrak{p}$$를 포함하는 prime ideal들의 교집합 대신, [§정수적 확장, §§나카야마 보조정리](/ko/math/commutative_algebra/integral_extension#나카야마-보조정리)에서와 비슷한 방식으로 $$\mathfrak{p}$$를 포함하는 *maximal* ideal들의 교집합을 생각했다면 이 관찰이 그리 자명하지 않았을 것이며, 실제로 이것이 성립하지도 않는다. 예컨대 $$\mathbb{Z}\_{(2)}$$와 같이 maximal ideal이 아닌 prime ideal을 포함하는 임의의 local ring이 모두 반례가 될 것이다. 
+따라서, 위의 관찰은 한마디로 임의의 prime ideal은 radical이라는 것이다. 이 관찰에 대한 증명은 다소 자명한 부분이 있는데, 만일 우리가 $$\mathfrak{p}$$를 포함하는 prime ideal들의 교집합 대신, [§정수적 확장, §§나카야마 보조정리](/ko/math/commutative_algebra/integral_extension#나카야마-보조정리)에서와 비슷한 방식으로 $$\mathfrak{p}$$를 포함하는 *maximal* ideal들의 교집합을 생각했다면 이 관찰이 그리 자명하지 않았을 것이며, 실제로 이것이 성립하지도 않는다. 예컨대 $$\mathbb{Z}_{(2)}$$와 같이 maximal ideal이 아닌 prime ideal을 포함하는 임의의 local ring이 모두 반례가 될 것이다. 
 
 <div class="definition" markdown="1">
 

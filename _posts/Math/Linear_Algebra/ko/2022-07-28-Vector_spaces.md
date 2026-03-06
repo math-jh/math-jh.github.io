@@ -30,15 +30,15 @@ weight: 2
 <ins id="def1">**정의 1**</ins> $$\mathbb{K}$$가 field이고, $$V$$가 abelian group이라 하자. $$V$$가 *$$\mathbb{K}$$에 대한 벡터공간<sub>vector space over $$\mathbb{K}$$</sub>*, 혹은 간단히 *$$\mathbb{K}$$-벡터공간<sub>$$\mathbb{K}$$-vector space</sub>*이라는 것은 여기에 추가적인 연산 (*스칼라곱*) $$\cdot:\mathbb{K}\times V\rightarrow V$$가 존재하여 
 
 1. 임의의 $$\alpha,\beta\in\mathbb{K}$$와 임의의 $$u\in V$$에 대하여 $$\alpha\cdot(\beta\cdot u)=(\alpha\beta)\cdot u$$가 성립한다.
-2. 임의의 $$\alpha\in\mathbb{K}$$와 임의의 $$u,v\in V$$에 대하여 $$\alpha\cdot(u+\_{\tiny V}v)=(\alpha\cdot u)+\_{\tiny V}(\alpha\cdot v)$$가 성립한다.
-3. 임의의 $$\alpha,\beta\in\mathbb{K}$$와 임의의 $$u\in V$$에 대하여 $$(\alpha+\_{\tiny \mathbb{K}}\beta)\cdot u=(\alpha\cdot u)+\_{\tiny V}(\beta\cdot u)$$가 성립한다.  
+2. 임의의 $$\alpha\in\mathbb{K}$$와 임의의 $$u,v\in V$$에 대하여 $$\alpha\cdot(u+_{\tiny V}v)=(\alpha\cdot u)+_{\tiny V}(\alpha\cdot v)$$가 성립한다.
+3. 임의의 $$\alpha,\beta\in\mathbb{K}$$와 임의의 $$u\in V$$에 대하여 $$(\alpha+_{\tiny \mathbb{K}}\beta)\cdot u=(\alpha\cdot u)+_{\tiny V}(\beta\cdot u)$$가 성립한다.  
 4. 곱셈에 대한 $$\mathbb{K}$$의 항등원 $$1\in\mathbb{K}$$에 대하여, $$1\cdot u=u$$가 임의의 $$u\in V$$에 대하여 성립한다.
 
 가 모두 만족되는 것이다. 이 때 $$V$$의 원소들을 *벡터<sub>vector</sub>*들이라 부른다.
 
 </div>
 
-위의 정의와 같이, 앞으로는 혼동을 피하기 위해 field $$\mathbb{K}$$의 원소는 모두 $$\alpha,\beta,\ldots$$으로 적고, $$\mathbb{K}$$-벡터공간의 원소들은 $$u,v,\ldots$$로 적기로 한다. 위의 정의에서는 $$+\_{\tiny V}$$와 $$+\_{\tiny \mathbb{K}}$$를 구별하여 적었는데, 방금 만든 표기법처럼 이들을 구분하면 $$+$$ 주위에 있는 원소가 $$\mathbb{K}$$의 원소인지, $$V$$의 원소인지가 명확하게 구별되므로 이들을 모두 $$+$$로만 적어도 혼동의 여지가 없다.  
+위의 정의와 같이, 앞으로는 혼동을 피하기 위해 field $$\mathbb{K}$$의 원소는 모두 $$\alpha,\beta,\ldots$$으로 적고, $$\mathbb{K}$$-벡터공간의 원소들은 $$u,v,\ldots$$로 적기로 한다. 위의 정의에서는 $$+_{\tiny V}$$와 $$+_{\tiny \mathbb{K}}$$를 구별하여 적었는데, 방금 만든 표기법처럼 이들을 구분하면 $$+$$ 주위에 있는 원소가 $$\mathbb{K}$$의 원소인지, $$V$$의 원소인지가 명확하게 구별되므로 이들을 모두 $$+$$로만 적어도 혼동의 여지가 없다.  
 
 스칼라곱도 마찬가지로 $$\alpha\cdot u$$와 같은 표기 대신 $$\alpha u$$와 같이 적기로 한다. 이 경우 유일한 걱정은 $$\alpha\beta u$$라고 쓸 때 이것이 $$(\alpha\beta)u$$인지, $$\alpha(\beta u)$$인지 헷갈릴 수 있다는 것인데, 위 정의의 첫 번째 조건에 의해 어떤 것을 선택하더라도 그 값은 동일하므로 이는 걱정할 필요가 없다.  
 
@@ -75,7 +75,7 @@ $$v=1v=(\alpha^{-1}\alpha)v=\alpha^{-1}(\alpha v)=\alpha^{-1}0=0$$
 
 </details>
 
-위의 명제의 1번에 등장하는 $$0$$과 2번의 우변에 등장하는 $$0$$은 모두 $$V$$의 원소이고, 2번의 좌변에 등장하는 $$0$$은 $$\mathbb{K}$$의 원소이다. 엄밀히 적기 위해서는 이들 또한 $$0\_{\tiny V}$$와 $$0\_{\tiny \mathbb{K}}$$ 등으로 구별해주어야 하나 문맥상 이들은 명확하게 구별할 수 있으므로 모두 $$0$$으로만 적는다.
+위의 명제의 1번에 등장하는 $$0$$과 2번의 우변에 등장하는 $$0$$은 모두 $$V$$의 원소이고, 2번의 좌변에 등장하는 $$0$$은 $$\mathbb{K}$$의 원소이다. 엄밀히 적기 위해서는 이들 또한 $$0_{\tiny V}$$와 $$0_{\tiny \mathbb{K}}$$ 등으로 구별해주어야 하나 문맥상 이들은 명확하게 구별할 수 있으므로 모두 $$0$$으로만 적는다.
 
 <div class="proposition" markdown="1">
 
@@ -99,7 +99,7 @@ $$(-1)v+v=(-1)v+1v=((-1)+1)v=0v=0$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> 가장 간단한 벡터공간의 예시는 $$\\{0\\}$$이다. 이 집합에 더하기 구조를 줄 수 있는 방법은 하나 뿐이고 (즉 $$0+0=0$$), 이 구조 하에서 이 집합은 abelian group의 구조를 갖는다. 뿐만 아니라, 어떤 field $$\mathbb{K}$$를 가져오더라도 이 집합에 스칼라곱을 정의할 수 있는 방법 또한 하나 뿐이며 (즉 $$\alpha 0=0$$), 이렇게 정의된 스칼라곱은 $$\\{0\\}$$를 $$\mathbb{K}$$-벡터공간으로 만든다. 이를 *trivial space*이라 부른다.
+<ins id="ex4">**예시 4**</ins> 가장 간단한 벡터공간의 예시는 $$\{0\}$$이다. 이 집합에 더하기 구조를 줄 수 있는 방법은 하나 뿐이고 (즉 $$0+0=0$$), 이 구조 하에서 이 집합은 abelian group의 구조를 갖는다. 뿐만 아니라, 어떤 field $$\mathbb{K}$$를 가져오더라도 이 집합에 스칼라곱을 정의할 수 있는 방법 또한 하나 뿐이며 (즉 $$\alpha 0=0$$), 이렇게 정의된 스칼라곱은 $$\{0\}$$를 $$\mathbb{K}$$-벡터공간으로 만든다. 이를 *trivial space*이라 부른다.
 
 조금 덜 자명한 예시는 field 그 자체다. 임의의 field $$\mathbb{K}$$에 대하여, $$\mathbb{K}$$는 $$\mathbb{K}$$-벡터공간이다. $$\mathbb{K}$$는 field이므로, 덧셈에 대해 abelian group이 된다는 것은 자명하다. 여기에 스칼라곱 구조만 주면 충분한데, 이는 그냥 $$\mathbb{K}$$에서의 곱하기 $$\mathbb{K}\times \mathbb{K}\rightarrow \mathbb{K}$$로 주면 된다. 이렇게 정의하면 스칼라곱이 [정의 1](#def1)의 조건들을 모두 만족한다는 것을 확인할 수 있고, 따라서 $$\mathbb{K}$$는 그 자체로 $$\mathbb{K}$$-벡터공간이다. 
 
@@ -121,9 +121,9 @@ $$\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix}+\begin{pmatrix}b_1\\b_2\\\vd
 
 </div>
 
-유클리드 공간은 우리가 특히 많이 다룰 대상이다. 위의 예시에서 우리는 순서쌍 $$(a\_1, a\_2, \ldots, a\_n)$$이라는 표기법 대신 열로 이루어진 표기법을 사용하고 있으며, 이는 선형대수학의 기본정리와 밀접한 연관이 있다.
+유클리드 공간은 우리가 특히 많이 다룰 대상이다. 위의 예시에서 우리는 순서쌍 $$(a_1, a_2, \ldots, a_n)$$이라는 표기법 대신 열로 이루어진 표기법을 사용하고 있으며, 이는 선형대수학의 기본정리와 밀접한 연관이 있다.
 
- 하지만 아무리 그럴듯한 이유가 있더라도, 이 표기법을 $$\begin{pmatrix}a\_1\\\a\_2\\\\\vdots\\\a\_n\end{pmatrix}$$ 과 같이 본문에서 고집하는 것도 어리석은 일이다. 따라서 본문 중에서는 $$(a\_1\;a\_2\;\cdots\;a\_n)^t$$와 같은 표기법 혹은, 고등학교 때의 표기법을 따라 $$(a\_1,a\_2,\ldots, a\_n)$$와 같이 쓰기로 한다.
+ 하지만 아무리 그럴듯한 이유가 있더라도, 이 표기법을 $$\begin{pmatrix}a_1\\\a_2\\\\\vdots\\\a_n\end{pmatrix}$$ 과 같이 본문에서 고집하는 것도 어리석은 일이다. 따라서 본문 중에서는 $$(a_1\;a_2\;\cdots\;a_n)^t$$와 같은 표기법 혹은, 고등학교 때의 표기법을 따라 $$(a_1,a_2,\ldots, a_n)$$와 같이 쓰기로 한다.
 
 위에서 살펴본 두 개의 벡터공간들은 상당히 구체적인 예시에 속한다. 다음 예시와 같이, 일반적으로 벡터공간은 좌표평면 혹은 좌표공간처럼 시각적으로 표현되지 않는 경우도 있다.
 

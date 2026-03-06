@@ -21,17 +21,17 @@ weight: 9
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Manifold $$M$$과 coordinate system $$(U,\varphi)$$가 주어졌다 하자. 이 때 $$\varphi=(x^i)\_{i=1}^m$$이고, $$0\leq k\leq m$$라 하고, $$p\in \varphi(U)$$에 대해 다음의 집합
+<ins id="def1">**정의 1**</ins> Manifold $$M$$과 coordinate system $$(U,\varphi)$$가 주어졌다 하자. 이 때 $$\varphi=(x^i)_{i=1}^m$$이고, $$0\leq k\leq m$$라 하고, $$p\in \varphi(U)$$에 대해 다음의 집합
 
 $$S=\{q\in U\mid x^i(q)=r^i(p), k+1\leq i\leq m\}$$
 
-에 subspace topology와 coordinate system $$(S, (x^j\|\_S)_{j=1}^k)$$이 부여된 manifold를 $$(U,\varphi)$$의 *slice*라 부른다.
+에 subspace topology와 coordinate system $$(S, (x^j\vert_S)_{j=1}^k)$$이 부여된 manifold를 $$(U,\varphi)$$의 *slice*라 부른다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**보조정리 2**</ins> 두 manifold 사이의 immersion $$F:M\rightarrow N$$이 주어졌다 하자. 그럼 임의의 $$p\in M$$이 주어질 때마다, $$F(p)$$를 포함하는 coordinate system $$(V,\varphi)$$와 $$p$$의 적당한 열린근방 $$U$$가 존재하여 $$F\|\_U$$가 injective이고, $$F(U)$$가 $$(V,\varphi)$$의 slice이도록 할 수 있다.
+<ins id="lem2">**보조정리 2**</ins> 두 manifold 사이의 immersion $$F:M\rightarrow N$$이 주어졌다 하자. 그럼 임의의 $$p\in M$$이 주어질 때마다, $$F(p)$$를 포함하는 coordinate system $$(V,\varphi)$$와 $$p$$의 적당한 열린근방 $$U$$가 존재하여 $$F\vert_U$$가 injective이고, $$F(U)$$가 $$(V,\varphi)$$의 slice이도록 할 수 있다.
 
 </div>
 <details class="proof" markdown="1">
@@ -57,7 +57,7 @@ $$S=\{q\in U\mid x^i(q)=r^i(p), k+1\leq i\leq m\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm3">**정리 3 (음함수 정리)**</ins> $$U\subset\mathbb{R}^{m-n}\times\mathbb{R}^n$$이 열린집합이라 하고, 구별을 위해 $$\mathbb{R}^{m-n}$$의 좌표들을 $$r^1,\ldots, r^{m-n}$$, 그리고 $$\mathbb{R}^n$$의 좌표들을 $$s^1,\ldots, s^n$$이라 하자. 또, $$f:U\rightarrow\mathbb{R}^n$$이 $$C^\infty$$이고, 어떤 점 $$(x\_0, y\_0)\in U$$에 대하여 $$f(x\_0,y\_0)$$이라 하자. 만일 점 $$(x_0,y_0)$$에서 Jacobian matrix
+<ins id="thm3">**정리 3 (음함수 정리)**</ins> $$U\subset\mathbb{R}^{m-n}\times\mathbb{R}^n$$이 열린집합이라 하고, 구별을 위해 $$\mathbb{R}^{m-n}$$의 좌표들을 $$r^1,\ldots, r^{m-n}$$, 그리고 $$\mathbb{R}^n$$의 좌표들을 $$s^1,\ldots, s^n$$이라 하자. 또, $$f:U\rightarrow\mathbb{R}^n$$이 $$C^\infty$$이고, 어떤 점 $$(x_0, y_0)\in U$$에 대하여 $$f(x_0,y_0)$$이라 하자. 만일 점 $$(x_0,y_0)$$에서 Jacobian matrix
 
 $$\begin{pmatrix}\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\partial f^1/\partial r^{m-n}&\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^n\\\partial f^2/\partial r^1&\partial f^2/\partial r^2&\cdots&\partial f^2/\partial r^{m-n}&\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^n\\ \vdots&\vdots&\ddots&\vdots&\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial r^1&\partial f^n/\partial r^2&\cdots&\partial f^n/\partial r^{m-n}&\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^n\end{pmatrix}$$
 

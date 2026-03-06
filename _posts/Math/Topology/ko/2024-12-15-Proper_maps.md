@@ -27,7 +27,7 @@ weight: 17
 
 </div>
 
-$$Z=\\{\ast\\}$$로 두면 임의의 universally closed map은 closed map인 것을 보일 수 있지만, 그 역은 성립하지 않는다. 하지만 다음이 성립한다.
+$$Z=\{\ast\}$$로 두면 임의의 universally closed map은 closed map인 것을 보일 수 있지만, 그 역은 성립하지 않는다. 하지만 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -52,7 +52,7 @@ $$Z=\\{\ast\\}$$로 두면 임의의 universally closed map은 closed map인 것
 <ins id="prop3">**명제 3**</ins> 연속함수 $$f:X \rightarrow Y$$가 주어졌다 하자. 그럼 다음이 성립한다.
 
 1. 만일 $$f$$가 universally closed라면, $$Y$$의 임의의 부분집합 $$A$$에 대하여, $$f\vert_{f^{-1}(A)}: f^{-1}(A) \rightarrow A$$도 universally closed이다.
-2. $$Y$$의 covering $$(A\_i)\_{i\in I}$$가 (1) locally finite closed covering이거나, (2) $$(\interior A\_i)\_{i\in I}$$가 $$Y$$의 open covering이 된다고 하자. 만일 각각의 $$f\vert_{f^{-1}(A_i)}$$가 universally closed라면, $$f$$ 또한 그러하다. 
+2. $$Y$$의 covering $$(A_i)_{i\in I}$$가 (1) locally finite closed covering이거나, (2) $$(\interior A_i)_{i\in I}$$가 $$Y$$의 open covering이 된다고 하자. 만일 각각의 $$f\vert_{f^{-1}(A_i)}$$가 universally closed라면, $$f$$ 또한 그러하다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -64,7 +64,7 @@ $$(f\vert_{f^{-1}(A)})\times \id_Z=(f\times\id_Z)\vert_{f^{-1}(A\times Z)}$$
 
 가 성립한다. 이제 $$f$$가 universally closed라는 가정으로부터 $$f\times\id_Z$$는 closed이고, 따라서 $$(f\times\id_Z)\vert_{f^{-1}(A\times Z)}$$ 또한 closed이다. 
 
-이제 두 번째 결과를 보이자. 주어진 조건을 만족하는 $$(A\_i)$$가 주어졌다 하면, $$(A\_i\times Z)$$ 또한 동일한 조건을 만족한다. 이제 만일 $$f\vert\_{f^{-1}(A\_i)}$$들이 universally closed라면 다음의 함수들
+이제 두 번째 결과를 보이자. 주어진 조건을 만족하는 $$(A_i)$$가 주어졌다 하면, $$(A_i\times Z)$$ 또한 동일한 조건을 만족한다. 이제 만일 $$f\vert_{f^{-1}(A_i)}$$들이 universally closed라면 다음의 함수들
 
 $$(f\times\id_Z)\vert_{f^{-1}(A_i\times Z)}$$
 
@@ -109,17 +109,17 @@ $$((g\circ f)\times\id_Y)\circ\Gamma_f=\Gamma_g\circ f$$
 
 아직까지는 이 정의가 옹골성과 관련되어 있는 부분이 보이지 않는데, 이 절에서는 이들 사이의 관계를 살펴본다. 그 전에 [§옹골성, ⁋보조정리 1](/ko/math/topology/compactness#lem1)을 사용하기 위해 filter에 대한 이야기를 조금 해야한다. 
 
-임의의 위상공간 $$X$$와 그 위의 임의의 filter $$\mathcal{F}$$가 주어졌다 하자. $$X$$에 한 점을 추가하여 만든 집합 $$X'=X\cup \\{\ast_X\\}$$을 생각하고, 이 위의 filter
+임의의 위상공간 $$X$$와 그 위의 임의의 filter $$\mathcal{F}$$가 주어졌다 하자. $$X$$에 한 점을 추가하여 만든 집합 $$X'=X\cup \{\ast_X\}$$을 생각하고, 이 위의 filter
 
 $$\mathcal{F}'=\{F\cup\{\ast_X\}: F\in \mathcal{F}\}$$
 
-를 생각하자. 이제 $$\ast_X$$를 제외한 임의의 $$x\in X'$$에 대하여는 $$\mathcal{N}(x)=\uparrow\\{x\\}$$으로 정의하고, $$\mathcal{N}(\ast_X)=\mathcal{F}'$$로 정의하면 이는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 네 가지 조건을 모두 만족하며 따라서 $$X'$$ 위에서의 위상구조가 정의된다. 이 위상공간 $$X'$$에서, $$\ast_X$$는 $$X$$의 closure에 포함되며, $$\mathcal{F}=\mathcal{F}'\vert_X=\mathcal{N}(\ast_X)\vert_X$$임이 자명하다. 
+를 생각하자. 이제 $$\ast_X$$를 제외한 임의의 $$x\in X'$$에 대하여는 $$\mathcal{N}(x)=\uparrow\{x\}$$으로 정의하고, $$\mathcal{N}(\ast_X)=\mathcal{F}'$$로 정의하면 이는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 네 가지 조건을 모두 만족하며 따라서 $$X'$$ 위에서의 위상구조가 정의된다. 이 위상공간 $$X'$$에서, $$\ast_X$$는 $$X$$의 closure에 포함되며, $$\mathcal{F}=\mathcal{F}'\vert_X=\mathcal{N}(\ast_X)\vert_X$$임이 자명하다. 
 
 그럼 다음 보조정리를 보일 수 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> 위상공간 $$X$$에 대하여, $$f: X \rightarrow \\{\ast\\}$$이 universally closed라 하자. 그럼 $$X$$는 compact이다.
+<ins id="lem5">**보조정리 5**</ins> 위상공간 $$X$$에 대하여, $$f: X \rightarrow \{\ast\}$$이 universally closed라 하자. 그럼 $$X$$는 compact이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -129,7 +129,7 @@ $$\mathcal{F}'=\{F\cup\{\ast_X\}: F\in \mathcal{F}\}$$
 
 $$\Delta=\{(x,x)\mid x\in X\}$$
 
-으로 정의하자. 그럼 $$\Delta$$의 closure $$\cl\Delta$$를 생각할 수 있으며, 이 때 $$f$$가 universally closed라는 가정으로부터 $$\cl\Delta$$의 $$f\times\id_{X'}:X\times X'\rightarrow \\{\ast\\}\times X'\cong X'$$에 의한 image가 닫힌집합임을 안다. 이제 이 image는 $$x$$를 포함하므로, $$\ast_X$$가 closure에 포함된다는 가정으로부터 적당한 $$x\in X$$가 존재하여 $$(x,\ast_X)\in \cl\Delta$$임을 안다. 그럼 $$x$$가 $$\mathcal{F}$$의 cluster point이고, 따라서 $$\mathcal{F}$$를 포함하는 ultrafilter를 생각하면 $$x$$는 그 filter의 limit point임을 안다. 
+으로 정의하자. 그럼 $$\Delta$$의 closure $$\cl\Delta$$를 생각할 수 있으며, 이 때 $$f$$가 universally closed라는 가정으로부터 $$\cl\Delta$$의 $$f\times\id_{X'}:X\times X'\rightarrow \{\ast\}\times X'\cong X'$$에 의한 image가 닫힌집합임을 안다. 이제 이 image는 $$x$$를 포함하므로, $$\ast_X$$가 closure에 포함된다는 가정으로부터 적당한 $$x\in X$$가 존재하여 $$(x,\ast_X)\in \cl\Delta$$임을 안다. 그럼 $$x$$가 $$\mathcal{F}$$의 cluster point이고, 따라서 $$\mathcal{F}$$를 포함하는 ultrafilter를 생각하면 $$x$$는 그 filter의 limit point임을 안다. 
 
 </details>
 
@@ -150,7 +150,7 @@ $$\Delta=\{(x,x)\mid x\in X\}$$
 
 </details>
 
-따라서, compact space의 정의를 $$f:X \rightarrow \\{\ast\\}$$가 universally closed이라는 것으로 했어도 되었을 것이다. 특히 다음이 성립한다. 
+따라서, compact space의 정의를 $$f:X \rightarrow \{\ast\}$$가 universally closed이라는 것으로 했어도 되었을 것이다. 특히 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
@@ -160,7 +160,7 @@ $$\Delta=\{(x,x)\mid x\in X\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$f$$가 universally closed이므로 $$f\vert_{f^{-1}(C)}$$는 universally closed이다. 한편 $$C \rightarrow\\{\ast\\}$$는 $$C$$가 compact라는 가정으로부터 universally closed이고, 따라서 합성 $$f^{-1}(C) \rightarrow C \rightarrow \\{\ast\\}$$는 universally closed이므로 $$f^{-1}(C)$$도 compact이다. 
+$$f$$가 universally closed이므로 $$f\vert_{f^{-1}(C)}$$는 universally closed이다. 한편 $$C \rightarrow\{\ast\}$$는 $$C$$가 compact라는 가정으로부터 universally closed이고, 따라서 합성 $$f^{-1}(C) \rightarrow C \rightarrow \{\ast\}$$는 universally closed이므로 $$f^{-1}(C)$$도 compact이다. 
 
 </details>
 
@@ -186,7 +186,7 @@ $$f$$가 universally closed이므로 $$f\vert_{f^{-1}(C)}$$는 universally close
 
 <div class="proposition" markdown="1">
 
-<ins id="cor9">**따름정리 9**</ins> 두 locally compact Hausdorff space $$X_1,X_2$$가 주어졌다 하고, 이들의 one-point compactification $$\overline{X}_i=X\cup \\{\ast_i\\}$$가 주어졌다 하자. 그럼 $$f:X_1: X_2$$가 universally closed인 것은 다음 식
+<ins id="cor9">**따름정리 9**</ins> 두 locally compact Hausdorff space $$X_1,X_2$$가 주어졌다 하고, 이들의 one-point compactification $$\overline{X}_i=X\cup \{\ast_i\}$$가 주어졌다 하자. 그럼 $$f:X_1: X_2$$가 universally closed인 것은 다음 식
 
 $$\overline{f}(x)=\begin{cases}\ast_2&\text{if $$x=\ast_1$$}\\f(x)&\text{otherwise}\end{cases}$$
 

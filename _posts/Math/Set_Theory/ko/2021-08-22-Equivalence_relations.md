@@ -55,7 +55,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 <summary>증명</summary>
 
 우선 $$R$$이 동치관계라 가정하자.  
-- 모든 $$x\in A$$에 대하여 $$(x,x)\in R$$이므로 $$\pr\_1R=A$$가 성립한다.  
+- 모든 $$x\in A$$에 대하여 $$(x,x)\in R$$이므로 $$\pr_1R=A$$가 성립한다.  
 - 또, $$R$$은 symmetric이므로 $$x\sim_\tiny{R} y\iff y\sim_\tiny{R}x$$가 성립하고 따라서
     
     $$(x,y)\in R\iff (y,x)\in R\iff (x,y)\in R^{-1}\tag{1}$$
@@ -97,7 +97,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem6">**보조정리 6**</ins> 동치관계 $$(R,A,A)$$에 대하여 $$p:A\rightarrow A/R$$을 $$x\mapsto [x]\_R$$로 정의하자. 그럼 $$p$$는 함수이며, $$x\sim\_{\tiny R} y$$와 $$p(x)=p(y)$$는 서로 동치이다.
+<ins id="lem6">**보조정리 6**</ins> 동치관계 $$(R,A,A)$$에 대하여 $$p:A\rightarrow A/R$$을 $$x\mapsto [x]_R$$로 정의하자. 그럼 $$p$$는 함수이며, $$x\sim_{\tiny R} y$$와 $$p(x)=p(y)$$는 서로 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -105,23 +105,23 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 우선 위의 식으로 정의된 $$p$$가 실제로 함수가 된다는 것은 어렵지 않게 보일 수 있다. 여기에서는 동치관계만 보인다.
 
-우선 $$x\sim\_{\tiny R} y$$이라 가정하자. 그럼 $$y\in [x]\_R=R(x)$$로부터 $$\\{y\\}\subseteq R(x)$$이고, 따라서 [§이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#prop6)과 [명제 3](#prop3)에 의하여
+우선 $$x\sim_{\tiny R} y$$이라 가정하자. 그럼 $$y\in [x]_R=R(x)$$로부터 $$\{y\}\subseteq R(x)$$이고, 따라서 [§이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#prop6)과 [명제 3](#prop3)에 의하여
 
 $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
 가 성립한다. $$R$$은 동치관계이므로 $$x$$와 $$y$$의 역할을 바꿀 수 있고 따라서 $$R(x)=R(y)$$가 성립한다.
 
-반대로 만일 $$[x]\_R=[y]\_R$$이라면, $$x\in [x]\_R=[y]\_R$$로부터 $$y\sim\_{\tiny R} x$$를 얻고 따라서 보조정리가 성립한다.
+반대로 만일 $$[x]_R=[y]_R$$이라면, $$x\in [x]_R=[y]_R$$로부터 $$y\sim_{\tiny R} x$$를 얻고 따라서 보조정리가 성립한다.
 
 </details>
 
-위의 함수 $$p$$를 canonical projection이라 부른다. 그럼 $$A$$의 부분집합 $$[x]\_R\subseteq A$$는 몫집합의 원소 $$[x]\_R\in A/R$$의 함수 $$p$$에 대한 preimage이므로 equivalence class들은 서로소임을 안다. 즉 동치관계 $$(R,A,A)$$는 $$A$$의 분할을 유도한다.
+위의 함수 $$p$$를 canonical projection이라 부른다. 그럼 $$A$$의 부분집합 $$[x]_R\subseteq A$$는 몫집합의 원소 $$[x]_R\in A/R$$의 함수 $$p$$에 대한 preimage이므로 equivalence class들은 서로소임을 안다. 즉 동치관계 $$(R,A,A)$$는 $$A$$의 분할을 유도한다.
 
 다음 명제는 그 역 또한 성립한다는 것을 보여준다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $$(A_i)\_{i\in I}$$가 $$A$$의 분할이라 하자. 그럼 
+<ins id="prop7">**명제 7**</ins> $$(A_i)_{i\in I}$$가 $$A$$의 분할이라 하자. 그럼 
 
 > 어떤 $$i$$가 존재하여 $$x,y\in A_i$$이다
 

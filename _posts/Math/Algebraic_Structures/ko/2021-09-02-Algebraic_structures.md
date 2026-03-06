@@ -155,7 +155,7 @@ $$w\star'z=f(x)\star'f(y)=f(x\star y)$$
 
 </div>
 
-그럼 마그마 $$(A,\star)$$와 부분마그마들의 family $$(S\_i)\_{i\in I}$$에 대하여, 교집합 $$S=\bigcap S\_i$$ 또한 부분마그마가 되는 것은 자명하다. 임의의 $$a,b\in S$$를 택하면, 모든 $$i$$에 대해 $$a,b\in S\_i$$인 것으로부터 $$a\star b\in S\_i$$인 것을 얻고, 따라서 $$a\star b\in S$$이기 때문이다.
+그럼 마그마 $$(A,\star)$$와 부분마그마들의 family $$(S_i)_{i\in I}$$에 대하여, 교집합 $$S=\bigcap S_i$$ 또한 부분마그마가 되는 것은 자명하다. 임의의 $$a,b\in S$$를 택하면, 모든 $$i$$에 대해 $$a,b\in S_i$$인 것으로부터 $$a\star b\in S_i$$인 것을 얻고, 따라서 $$a\star b\in S$$이기 때문이다.
 
 ## 몫구조
 
