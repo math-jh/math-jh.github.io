@@ -17,4 +17,4 @@ weight: 302
 
 ---
 
-$A$-algebra들의 family $(E\_i)\_{i\in I}$가 주어졌다 하자. 그럼 이들의 product $\prod E_i$에 $A$-algebra 구조가 잘 정의된다. 비슷한 방식으로 이들의 direct sum $\bigoplus E_i$에도 $A$-algebra 구조가 잘 정의된다. 
+$$A$$-algebra들의 family $$(E\_i)\_{i\in I}$$가 주어졌다 하자. 그럼 이들의 product $$\prod E_i$$에 $$A$$-algebra 구조가 잘 정의된다. 비슷한 방식으로 이들의 direct sum $$\bigoplus E_i$$에도 $$A$$-algebra 구조가 잘 정의된다. 
