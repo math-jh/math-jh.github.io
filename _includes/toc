@@ -1,11 +1,7 @@
-{% comment %}DEBUG: page.url = {{ page.url }}{% endcomment %}
-{% assign lang_prefix = page.url | slice: 1, 2 %}
-{% if lang_prefix == 'ko' %}
-  {% assign lang = 'ko' %}
-{% elsif lang_prefix == 'en' %}
-  {% assign lang = 'en' %}
-{% else %}
-  {% assign lang = 'ko' %}
+{% assign lang = site.locale %}
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
 {% endif %}
 
 <aside class="sidebar__right">
