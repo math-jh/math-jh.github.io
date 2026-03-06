@@ -64,7 +64,7 @@ we obtain $$(A\times B)^{-1}\subseteq B\times A$$. Conversely, if $$(y,x)\in B\t
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> Let $$R\_1$$ and $$R\_2$$ be binary relations. The *composition* $$R\_2\circ R\_1$$ of these two binary relations is the set of ordered pairs $$(x,z)$$ for which there exists $$y$$ with $$(x,y)\in R\_1$$ and $$(y,z)\in R\_2$$.
+<ins id="def3">**Definition 3**</ins> Let $$R_1$$ and $$R_2$$ be binary relations. The *composition* $$R_2\circ R_1$$ of these two binary relations is the set of ordered pairs $$(x,z)$$ for which there exists $$y$$ with $$(x,y)\in R_1$$ and $$(y,z)\in R_2$$.
 
 </div>
 
@@ -72,13 +72,13 @@ One may naturally ask how the composition of binary relations relates to the inv
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> Let $$R\_1$$, $$R\_2$$ be binary relations. Then the inverse of $$R\_2\circ R\_1$$ is $$R\_2^{-1}\circ R\_1^{-1}$$.
+<ins id="prop4">**Proposition 4**</ins> Let $$R_1$$, $$R_2$$ be binary relations. Then the inverse of $$R_2\circ R_1$$ is $$R_2^{-1}\circ R_1^{-1}$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-$$(z,x)\in (R\_2\circ R\_1)^{-1}$$ is equivalent to $$(x,z)\in R\_2\circ R\_1$$. This in turn is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R_1$$ and $$(y,z)\in R_2$$</phrase>. Any $$y$$ satisfying this condition also satisfies <phrase>$$(y,x)\in R_1^{-1}$$ and $$(z,y)\in R_2^{-1}$$</phrase>, so by the definition of composition, $$(z,x)\in R\_2^{-1}\circ R\_1^{-1}$$. The converse direction is established similarly.
+$$(z,x)\in (R_2\circ R_1)^{-1}$$ is equivalent to $$(x,z)\in R_2\circ R_1$$. This in turn is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R_1$$ and $$(y,z)\in R_2$$</phrase>. Any $$y$$ satisfying this condition also satisfies <phrase>$$(y,x)\in R_1^{-1}$$ and $$(z,y)\in R_2^{-1}$$</phrase>, so by the definition of composition, $$(z,x)\in R_2^{-1}\circ R_1^{-1}$$. The converse direction is established similarly.
 
 </details>
 
@@ -86,7 +86,7 @@ Furthermore, the composition of binary relations is associative.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> The composition of binary relations is associative. That is, for binary relations $$R\_1,R\_2,R\_3$$,
+<ins id="prop5">**Proposition 5**</ins> The composition of binary relations is associative. That is, for binary relations $$R_1,R_2,R_3$$,
 
 $$(R_3\circ R_2)\circ R_1=R_3\circ(R_2\circ R_1)$$
 
@@ -96,19 +96,19 @@ holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-It suffices to show that for any $$(x,w)$$, membership in $$(R\_3\circ R\_2)\circ R\_1$$ is equivalent to membership in $$R\_3\circ(R\_2\circ R\_1)$$.
+It suffices to show that for any $$(x,w)$$, membership in $$(R_3\circ R_2)\circ R_1$$ is equivalent to membership in $$R_3\circ(R_2\circ R_1)$$.
 
-Now $$(x,w)\in (R\_3\circ R\_2)\circ R\_1$$ is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R_1$$ and $$(y,w)\in R_3\circ R_2$$</phrase>. The latter condition is in turn equivalent to <phrase>there exists some $$z$$ such that $$(y,z)\in R_2$$ and $$(z,w)\in R_3$$</phrase>, so this condition is equivalent to <phrase>$$(x,z)\in R_2\circ R_1$$ and $$(z,w)\in R_3$$</phrase>. Hence this is equivalent to <phrase>$$(x,w)\in R_3\circ(R_2\circ R_1)$$</phrase>.
+Now $$(x,w)\in (R_3\circ R_2)\circ R_1$$ is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R_1$$ and $$(y,w)\in R_3\circ R_2$$</phrase>. The latter condition is in turn equivalent to <phrase>there exists some $$z$$ such that $$(y,z)\in R_2$$ and $$(z,w)\in R_3$$</phrase>, so this condition is equivalent to <phrase>$$(x,z)\in R_2\circ R_1$$ and $$(z,w)\in R_3$$</phrase>. Hence this is equivalent to <phrase>$$(x,w)\in R_3\circ(R_2\circ R_1)$$</phrase>.
 
 </details>
 
-Thus the common result $$(R\_3\circ R\_2)\circ R\_1=R\_3\circ(R\_2\circ R\_1)$$ may be written unambiguously as $$R\_3\circ R\_2\circ R\_1$$ without parentheses.
+Thus the common result $$(R_3\circ R_2)\circ R_1=R_3\circ(R_2\circ R_1)$$ may be written unambiguously as $$R_3\circ R_2\circ R_1$$ without parentheses.
 
 The remaining propositions concern how the image of a set transforms under the inverse and composition of binary relations defined above.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> Let $$R\_1$$, $$R\_2$$ be binary relations and let $$A$$ be a set. Then
+<ins id="prop6">**Proposition 6**</ins> Let $$R_1$$, $$R_2$$ be binary relations and let $$A$$ be a set. Then
 
 $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 
@@ -120,7 +120,7 @@ holds.
 
 We proceed as in the previous proposition.
 
-For any $$z$$, $$z\in (R\_2\circ R\_1)(A)$$ is equivalent to <phrase>there exists some $$x\in X$$ such that $$(x,z)\in R_2\circ R_1$$</phrase>. This in turn is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R_1$$ and $$(y,z)\in R_2$$</phrase>. Since $$y\in R\_1(A)$$, we have $$z\in R\_2(R\_1(A))$$. Reversing this argument yields the converse.
+For any $$z$$, $$z\in (R_2\circ R_1)(A)$$ is equivalent to <phrase>there exists some $$x\in X$$ such that $$(x,z)\in R_2\circ R_1$$</phrase>. This in turn is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R_1$$ and $$(y,z)\in R_2$$</phrase>. Since $$y\in R_1(A)$$, we have $$z\in R_2(R_1(A))$$. Reversing this argument yields the converse.
 
 </details>
 
@@ -139,13 +139,13 @@ hold.
 
 Before proceeding with the proof, note that since the two equations above must hold for *all* $$R$$, they must also hold when $$R^{-1}$$ is substituted for $$R$$. Thus once 1 is established, 2 follows immediately from [Proposition 2](#prop2).
 
-Now let $$x\in X\cap\pr\_1R$$. From $$x\in\pr\_1R$$, there exists some $$y$$ such that $$(x,y)\in R$$, and since $$x\in X$$, this $$y$$ satisfies $$y\in R(X)$$. Now since $$(y,x)\in R^{-1}$$, we have $$x\in R^{-1}(R(X))$$.
+Now let $$x\in X\cap\pr_1R$$. From $$x\in\pr_1R$$, there exists some $$y$$ such that $$(x,y)\in R$$, and since $$x\in X$$, this $$y$$ satisfies $$y\in R(X)$$. Now since $$(y,x)\in R^{-1}$$, we have $$x\in R^{-1}(R(X))$$.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**Proposition 8**</ins> Let $$R\_1$$, $$R\_2$$ be binary relations. Then the following equations hold:
+<ins id="prop8">**Proposition 8**</ins> Let $$R_1$$, $$R_2$$ be binary relations. Then the following equations hold:
 
 $$ \pr_1(R_2\circ R_1)=R_1^{-1}(\pr_1R_2),\quad \pr_2(R_2\circ R_1)=R_2(\pr_2R_1).$$
 
@@ -182,7 +182,7 @@ By definition, $$\pr_1\Delta_A=\pr_2\Delta_A=A$$, so we may regard this as the b
 
 $$\left(\Delta_A,A,A\right).$$
 
-In the next post, we shall see that this relation is a function, called the *identity function* on the set $$A$$. For a binary relation $$R\_1$$ having $$A$$ as source, or a binary relation $$R\_2$$ having $$A$$ as target, the equations
+In the next post, we shall see that this relation is a function, called the *identity function* on the set $$A$$. For a binary relation $$R_1$$ having $$A$$ as source, or a binary relation $$R_2$$ having $$A$$ as target, the equations
 
 $$R_1\circ\Delta_A=R_1,\qquad \Delta_A\circ R_2=R_2$$
 

@@ -73,7 +73,7 @@ $$f_\bullet(-):F_\bullet(-) \rightarrow G_\bullet(-)$$
 
 </div>
 
-즉, 호몰로지 레벨에서 정의된 $$f(X)\_0: H\_0(F(X))\rightarrow H\_0(G(X))$$에서부터 시작하여, chain map $$f\_\bullet(X):F\_\bullet(X)\rightarrow G\_\bullet(X)$$를 만들어야 한다. 이를 위해 우선 $$f_\bullet(X)$$의 $$0$$번째 성분 $$f_0(X)$$를 정의하자. 이는, $$F_0(X)$$이 free이므로, 각각의 $$u:M\rightarrow X$$이 어디로 옮겨지는지를 정의하는 것과 같다. 한편 다음의 commutative diagram
+즉, 호몰로지 레벨에서 정의된 $$f(X)_0: H_0(F(X))\rightarrow H_0(G(X))$$에서부터 시작하여, chain map $$f_\bullet(X):F_\bullet(X)\rightarrow G_\bullet(X)$$를 만들어야 한다. 이를 위해 우선 $$f_\bullet(X)$$의 $$0$$번째 성분 $$f_0(X)$$를 정의하자. 이는, $$F_0(X)$$이 free이므로, 각각의 $$u:M\rightarrow X$$이 어디로 옮겨지는지를 정의하는 것과 같다. 한편 다음의 commutative diagram
 
 ![lifting](/assets/images/Math/Algebraic_Topology/Acyclic_models_theorem-1.png){:style="width:14em" class="invert" .align-center}
 

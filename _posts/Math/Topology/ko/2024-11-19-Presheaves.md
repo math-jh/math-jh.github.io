@@ -87,7 +87,7 @@ Category $$\Open(X)$$를 ordered set $$(\mathcal{T}, \subseteq)$$를 category로
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5 (Skyscraper sheaf)**</ins> 고정된 위상공간 $$X$$와 한 점 $$i_x:\\{x\\}\hookrightarrow X$$가 주어졌다 하고, 대상 $$A\in \mathcal{A}$$를 고정하자. 그럼 다음의 식
+<ins id="ex5">**예시 5 (Skyscraper sheaf)**</ins> 고정된 위상공간 $$X$$와 한 점 $$i_x:\{x\}\hookrightarrow X$$가 주어졌다 하고, 대상 $$A\in \mathcal{A}$$를 고정하자. 그럼 다음의 식
 
 $$(i_x)_\ast A(U)=\begin{cases}A&\text{if $$x\in U$$,}\\T&\text{if $$x\not\in U$$,}\end{cases}\qquad \text{$$T$$ a terminal object in $$\mathcal{A}$$}$$
 
@@ -105,7 +105,7 @@ $$(i_x)_\ast A(U)=\begin{cases}A&\text{if $$x\in U$$,}\\T&\text{if $$x\not\in U$
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> $$X$$ 위에 정의된 presheaf $$\mathscr{F}$$가 주어졌을 때, 임의의 열린집합 $$U$$에 대하여 $$\mathscr{F}\vert\_U$$를 다음 식
+<ins id="ex7">**예시 7**</ins> $$X$$ 위에 정의된 presheaf $$\mathscr{F}$$가 주어졌을 때, 임의의 열린집합 $$U$$에 대하여 $$\mathscr{F}\vert_U$$를 다음 식
 
 $$\mathscr{F}\vert_U(V)=\mathscr{F}(V)\quad\text{for all open $$V\subseteq U$$}$$
 
@@ -191,7 +191,7 @@ $$\mathscr{Hom}(\mathscr{F},\mathscr{G})(U)=\Hom_{\PSh(U)}(\mathscr{F}\vert_U, \
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13 (Product)**</ins> 위상공간 $$X$$ 위에 정의된 presheaf들의 family $$(\mathscr{F}\_i:\Open(X) \rightarrow \Set)\_{i\in I}$$에 대하여, 이들의 product $$\prod_{i\in I} \mathscr{F}_i$$를 
+<ins id="ex13">**예시 13 (Product)**</ins> 위상공간 $$X$$ 위에 정의된 presheaf들의 family $$(\mathscr{F}_i:\Open(X) \rightarrow \Set)_{i\in I}$$에 대하여, 이들의 product $$\prod_{i\in I} \mathscr{F}_i$$를 
 
 $$\left(\prod_{i\in I} \mathscr{F}_i\right)(U)=\prod_{i\in I} \mathscr{F}_i(U)$$
 

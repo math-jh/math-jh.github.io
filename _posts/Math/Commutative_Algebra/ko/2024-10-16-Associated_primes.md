@@ -49,11 +49,11 @@ $$\mathfrak{b}=\bigcup_{i=1}^n (\mathfrak{b}\cap \mathfrak{a}_i)$$
 
 나머지 경우는 $$n$$에 대한 귀납법으로 증명한다. $$n=1$$일 경우는 증명할 것이 없다. 
 
-큰 $$n$$에 대해서는, 만일 $$\mathfrak{a}\_1,\ldots, \mathfrak{a}\_n$$ 가운데 하나를 빼도 조건의 포함관계가 성립한다면 이는 귀납적 가정으로 해결 가능하므로 그렇지 않은 경우만 고려하면 충분하다. 즉, $$x\_i\not\in \bigcup\_{j\neq i}\mathfrak{a}\_j$$를 만족하는 $$x\_i\in \mathfrak{b}$$가 항상 존재한다고 가정해도 충분하며, $$x\_i$$의 조건에 의하여 반드시 $$x\_i\in \mathfrak{a}\_i$$이다. 
+큰 $$n$$에 대해서는, 만일 $$\mathfrak{a}_1,\ldots, \mathfrak{a}_n$$ 가운데 하나를 빼도 조건의 포함관계가 성립한다면 이는 귀납적 가정으로 해결 가능하므로 그렇지 않은 경우만 고려하면 충분하다. 즉, $$x_i\not\in \bigcup_{j\neq i}\mathfrak{a}_j$$를 만족하는 $$x_i\in \mathfrak{b}$$가 항상 존재한다고 가정해도 충분하며, $$x_i$$의 조건에 의하여 반드시 $$x_i\in \mathfrak{a}_i$$이다. 
 
 이제 $$n=2$$인 경우, $$\mathfrak{b}$$의 원소 $$x_1+x_2$$를 생각하자. 만일 $$x_1+x_2\in \mathfrak{a}_1$$이라면, $$x_2=(x_1+x_2)-x_1\in \mathfrak{a}_1$$이므로 모순이고, 비슷하게 $$x_1+x_2$$는 $$\mathfrak{a}_2$$의 원소일 수도 없다. 이는 $$\mathfrak{b}\subseteq \mathfrak{a}_1\cup \mathfrak{a}_2$$라는 가정에 모순이다. 
 
-$$n>3$$인 경우도 비슷한 아이디어를 사용한다. 주어진 조건으로부터 $$\mathfrak{a}\_1,\ldots \mathfrak{a}\_n$$ 중 적어도 하나는 prime ideal이므로, 일반성을 잃지 않고 $$\mathfrak{a}\_1$$이 prime ideal이라 가정할 수 있다. 그럼 원소 $$x_1+x_2x_3\cdots x_n$$을 생각하고, $$\mathfrak{a}_1$$이 prime ideal이라는 가정을 잘 사용하면 모순을 얻는다. 
+$$n>3$$인 경우도 비슷한 아이디어를 사용한다. 주어진 조건으로부터 $$\mathfrak{a}_1,\ldots \mathfrak{a}_n$$ 중 적어도 하나는 prime ideal이므로, 일반성을 잃지 않고 $$\mathfrak{a}_1$$이 prime ideal이라 가정할 수 있다. 그럼 원소 $$x_1+x_2x_3\cdots x_n$$을 생각하고, $$\mathfrak{a}_1$$이 prime ideal이라는 가정을 잘 사용하면 모순을 얻는다. 
 
 Graded ring의 경우는 $$x_i$$를 $$x_2x_3\cdots$$과 같은 degree를 갖도록 여러번 곱해서 차수만 맞춰주면 된다. 
 
@@ -165,7 +165,7 @@ $$0 \rightarrow M_{n-1} \rightarrow M_n \rightarrow M_n/M_{n-1} \rightarrow 0$$
 
 를 생각하면 $$\Ass M_n \subseteq \Ass M_{n-1}\cup \Ass M_n/M_{n-1}=\Ass M_{n-1}\cup \Ass A/\mathfrak{p}_n$$이다. 
 
-한편, 임의의 prime ideal $$\mathfrak{p}$$에 대하여 $$\Ass(A/\mathfrak{p})=\\{\mathfrak{p}\\}$$임을 다음과 같이 보일 수 있다. $$\mathfrak{q}\in \Ass(A/\mathfrak{p})$$라 하고, $$\mathfrak{q}=\ann(x+\mathfrak{p})$$로 적자. 그럼 우선 $$\mathfrak{p}\subseteq \mathfrak{q}$$임이 자명하다. 이는 임의의 $$p\in \mathfrak{p}$$에 대하여, 
+한편, 임의의 prime ideal $$\mathfrak{p}$$에 대하여 $$\Ass(A/\mathfrak{p})=\{\mathfrak{p}\}$$임을 다음과 같이 보일 수 있다. $$\mathfrak{q}\in \Ass(A/\mathfrak{p})$$라 하고, $$\mathfrak{q}=\ann(x+\mathfrak{p})$$로 적자. 그럼 우선 $$\mathfrak{p}\subseteq \mathfrak{q}$$임이 자명하다. 이는 임의의 $$p\in \mathfrak{p}$$에 대하여, 
 
 $$p(x+\mathfrak{p})=px+\mathfrak{p}=0+\mathfrak{p}$$
 
@@ -197,15 +197,15 @@ $$\Ass M \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2}\cup \{\m
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$M=A$$로 두면 $$\ann(A)=\\{0\\}$$이다. 따라서, $$A$$의 minimal prime ideal $$\mathfrak{p}_1,\ldots, \mathfrak{p}_k$$들은 모두 $$\Ass M$$에 포함되며, 이들의 합집합은 $$A$$의 zero-divisor로 이루어져 있다. 
+우선 $$M=A$$로 두면 $$\ann(A)=\{0\}$$이다. 따라서, $$A$$의 minimal prime ideal $$\mathfrak{p}_1,\ldots, \mathfrak{p}_k$$들은 모두 $$\Ass M$$에 포함되며, 이들의 합집합은 $$A$$의 zero-divisor로 이루어져 있다. 
 
 또, 만일 $$A$$가 reduced ring이라면, 이들의 합집합이 정확히 $$A$$의 모든 zerodivisor들의 모임과 같다. 이를 확인하기 위해 우선 $$A$$가 reduced라는 가정으로부터,
 
 $$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ a prime}\mathfrak{p}\supseteq \bigcap_{i=1}^k \mathfrak{p}_i$$
 
-임을 관찰하자. 그럼 임의의 zerodivisor $$a\neq 0$$과, $$ab=0$$이도록 하는 $$b\neq 0$$에 대하여, $$b\not\in \mathfrak{p}\_i$$이도록 하는 $$\mathfrak{p}\_i$$가 존재해야만 하고, 이 때 $$ab=0\in \mathfrak{p}\_i$$이므로 $$a\in \mathfrak{p}\_i$$여야만 한다.
+임을 관찰하자. 그럼 임의의 zerodivisor $$a\neq 0$$과, $$ab=0$$이도록 하는 $$b\neq 0$$에 대하여, $$b\not\in \mathfrak{p}_i$$이도록 하는 $$\mathfrak{p}_i$$가 존재해야만 하고, 이 때 $$ab=0\in \mathfrak{p}_i$$이므로 $$a\in \mathfrak{p}_i$$여야만 한다.
 
-따라서, $$A$$의 total ring of fractions $$K$$는 $$S=A\setminus(\mathfrak{p}\_1\cup\cdots\cup \mathfrak{p}\_k)$$에 대하여 $$K=S^{-1}A$$이고, 이 ring의 prime ideal은 정확히 $$\mathfrak{p}\_i$$들의 image이며 $$K$$는 $$S^{-1}A/\mathfrak{p}\_iS^{-1}A$$들의 product임을 보일 수 있다.
+따라서, $$A$$의 total ring of fractions $$K$$는 $$S=A\setminus(\mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k)$$에 대하여 $$K=S^{-1}A$$이고, 이 ring의 prime ideal은 정확히 $$\mathfrak{p}_i$$들의 image이며 $$K$$는 $$S^{-1}A/\mathfrak{p}_iS^{-1}A$$들의 product임을 보일 수 있다.
 
 </details>
 

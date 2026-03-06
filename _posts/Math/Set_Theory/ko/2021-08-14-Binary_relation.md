@@ -75,11 +75,11 @@ $$A=\left\{x\mid\left(x\in\bigcup\left(\bigcup R\right)\right)\wedge P(x)\right\
 
 [§순서쌍, ⁋정의 7](/ko/math/set_theory/ordered_pair#def7)과 마찬가지로 이들을 각각 첫 번째와 두 번째 *projection*이라 부르고, $$\pr_1R$$과 $$\pr_2R$$로 쓴다.
 
-간혹 이항관계의 첫 번째 성분과 두 번째 성분이 어느 집합에 속하는지를 명확하게 해야 할 때가 있다. 이를 위해 주어진 두 집합 $$A,B$$와 $$\pr\_1R\subseteq A$$, $$\pr\_2R\subseteq B$$를 만족하는 이항관계 $$R$$을 triple $$(R,A,B)$$와 같이 생각하기도 한다. 이 경우, $$A$$를 $$R$$의 *source*, $$B$$를 $$R$$의 *target*이라 부르며, 이런 상황에서는 같은 집합 $$R$$에 대해서도 $$(R,A,B)$$와 $$(R,A',B')$$를 다른 것으로 생각한다. 
+간혹 이항관계의 첫 번째 성분과 두 번째 성분이 어느 집합에 속하는지를 명확하게 해야 할 때가 있다. 이를 위해 주어진 두 집합 $$A,B$$와 $$\pr_1R\subseteq A$$, $$\pr_2R\subseteq B$$를 만족하는 이항관계 $$R$$을 triple $$(R,A,B)$$와 같이 생각하기도 한다. 이 경우, $$A$$를 $$R$$의 *source*, $$B$$를 $$R$$의 *target*이라 부르며, 이런 상황에서는 같은 집합 $$R$$에 대해서도 $$(R,A,B)$$와 $$(R,A',B')$$를 다른 것으로 생각한다. 
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 위의 조건 $$\pr\_1R\subseteq A$$, $$\pr\_2R\subseteq B$$를 만족하는 이항관계 $$R$$이 주어졌다 하자. [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#prop9)에 의하여,
+<ins id="rmk1">**참고**</ins> 위의 조건 $$\pr_1R\subseteq A$$, $$\pr_2R\subseteq B$$를 만족하는 이항관계 $$R$$이 주어졌다 하자. [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#prop9)에 의하여,
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
@@ -99,7 +99,7 @@ $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
 $$R(A')=\bigcup_{x\in A'} \{y\in B\mid(x,y)\in R\}$$
 
-이다. 엄밀히 이야기하자면 우변의 집합 $$\\{y\in B\mid(x,y)\in R\\}$$은 이항관계 $$R$$의 target $$B$$가 주어지지 않았다면
+이다. 엄밀히 이야기하자면 우변의 집합 $$\{y\in B\mid(x,y)\in R\}$$은 이항관계 $$R$$의 target $$B$$가 주어지지 않았다면
 
 $$\{y\mid(x,y)\in R\}$$
 
@@ -126,11 +126,11 @@ $$R(A)=\pr_2\{z\in R\mid\text{$$\pr_1z\in A$$}\}\subset\pr_2R$$
 
 이고, 따라서 $$R(A)\subset\pr_2R$$가 성립한다. 특히 $$A=\emptyset$$이라면 $$R(A)=\emptyset$$이며, 더 일반적으로 만일 $$A\cap\pr_1R=\emptyset$$이라면 $$R(A)=\emptyset$$이다. 
 
-만일 어떤 $$x$$에 대해 $$A=\\{x\\}$$라면 $$R(A)$$를 마치 $$x$$에서의 $$R$$의 함숫값처럼 생각할 수 있다. 
+만일 어떤 $$x$$에 대해 $$A=\{x\}$$라면 $$R(A)$$를 마치 $$x$$에서의 $$R$$의 함숫값처럼 생각할 수 있다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 이항관계 $$R$$에 대하여, 집합 $$R(\\{x\\})$$를 $$x$$에서의 $$R$$의 *section<sub>단면</sub>*이라 부른다.
+<ins id="def7">**정의 7**</ins> 이항관계 $$R$$에 대하여, 집합 $$R(\{x\})$$를 $$x$$에서의 $$R$$의 *section<sub>단면</sub>*이라 부른다.
 
 </div>
 

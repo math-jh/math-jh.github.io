@@ -176,7 +176,7 @@ $$GFGF(x)=GF(x)$$
 
 정의에 의하여, $$x,y$$가 긱긱 $$GF$$와 $$FG$$에 대해 closed라는 것은 각각 $$GF(x)=x$$, 그리고 $$FG(y)=y$$가 성립한다는 것이다. 우리는 [명제 7](#prop7)로부터 $$F$$와 $$G$$의 image에 속한 원소들은 모두 closed라는 것을 안다. 거꾸로 임의의 원소 $$x$$가 $$GF$$에 대해 closed라면 $$GF(x)=x$$로부터 $$x$$가 $$G$$의 image에 속한다는 것을 알고, 비슷하게 $$FG$$에 대한 명제 또한 증명할 수 있다.
 
-우리는 이 과정을 통해 ordered set $$A,B$$ 사이의 Galois connection에 대해, closed subset들의 모임 $$A'\subseteq A$$, $$B'\subseteq B$$를 만들 수 있으며, $$F$$와 $$G$$를 이 모임에 제한한 것이 잘 정의된다. 뿐만 아니라 이들 $$F\|\_{A'}$$와 $$G\|\_{B'}$$는 일대일 대응이며, *anti-isomorphism*이 된다. 이들을 특별히 *Galois correspondence<sub>갈루아 대응</sub>*라 부른다.
+우리는 이 과정을 통해 ordered set $$A,B$$ 사이의 Galois connection에 대해, closed subset들의 모임 $$A'\subseteq A$$, $$B'\subseteq B$$를 만들 수 있으며, $$F$$와 $$G$$를 이 모임에 제한한 것이 잘 정의된다. 뿐만 아니라 이들 $$F\vert_{A'}$$와 $$G\vert_{B'}$$는 일대일 대응이며, *anti-isomorphism*이 된다. 이들을 특별히 *Galois correspondence<sub>갈루아 대응</sub>*라 부른다.
 
 
 ---

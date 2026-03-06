@@ -31,7 +31,7 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 ![natural_transformation](/assets/images/Math/Category_Theory/Natural_transformations-1.png){:style="width:11em" class="invert" .align-center}
 
-을 commute하도록 한다면, $$\alpha=(\alpha\_A)\_{A\in\obj(\mathcal{A})}$$를 *natural transformation<sub>자연변환</sub>*이라 부르고 이를 $$\alpha:F\Rightarrow G$$와 같이 표기한다.
+을 commute하도록 한다면, $$\alpha=(\alpha_A)_{A\in\obj(\mathcal{A})}$$를 *natural transformation<sub>자연변환</sub>*이라 부르고 이를 $$\alpha:F\Rightarrow G$$와 같이 표기한다.
 
 만일 각각의 $$\alpha_A$$들이 모두 isomorphism이라면 이를 *natural isomorphism<sub>자연동형변환</sub>*이라 부르고, 두 functor $$F,G$$가 *naturally equivalent<sub>자연변환에 대해 동등</sub>*하다고 한다. 이를 $$F\simeq G$$로 표기한다.
 

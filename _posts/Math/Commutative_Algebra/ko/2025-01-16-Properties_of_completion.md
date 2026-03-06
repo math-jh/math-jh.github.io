@@ -50,7 +50,7 @@ $$\mathcal{J}:\qquad A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq \mathfrak
 
 $$\mathcal{J}': \qquad A=\mathfrak{a}_0'\supseteq \mathfrak{a}_1'\supseteq \mathfrak{a}_2'\supseteq\cdots$$
 
-가 주어졌다 하자. 만일 각각의 $$\mathfrak{a}\_i$$마다 적당한 $$\mathfrak{a}\_j'$$가 존재하여 $$\mathfrak{a}\_j'\subseteq \mathfrak{a}\_i$$이고, 각각의 $$\mathfrak{a}\_i'$$마다 적당한 $$\mathfrak{a}\_j$$가 존재하여 $$\mathfrak{a}\_j\subseteq \mathfrak{a}\_i'$$라면 $$\widehat{A}\_\mathcal{J}\cong \widehat{A}\_{\mathcal{J}'}$$가 성립한다.
+가 주어졌다 하자. 만일 각각의 $$\mathfrak{a}_i$$마다 적당한 $$\mathfrak{a}_j'$$가 존재하여 $$\mathfrak{a}_j'\subseteq \mathfrak{a}_i$$이고, 각각의 $$\mathfrak{a}_i'$$마다 적당한 $$\mathfrak{a}_j$$가 존재하여 $$\mathfrak{a}_j\subseteq \mathfrak{a}_i'$$라면 $$\widehat{A}_\mathcal{J}\cong \widehat{A}_{\mathcal{J}'}$$가 성립한다.
 
 </div>
 
@@ -117,8 +117,8 @@ $$F \rightarrow G \rightarrow M \rightarrow 0$$
 ## 헨젤의 보조정리
 
 Complete ring의 대표적인 예시는 [§완비화, ⁋예시 4]()에서 살펴본 ring of formal power series $$A[[\x_i]]
-\_{i\in I}$$이다. 한편 우리는 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 ring of power series $$A[\x_i]
-\_{i\in I}$$가 free functor $$\Set \rightarrow \cAlg{A}$$의 역할을 하는 것을 살펴보았는데, 비슷한 종류의 universal property가 $$A[[\x_i]]_{i\in I}$$에 대해서도 성립한다. 
+_{i\in I}$$이다. 한편 우리는 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 ring of power series $$A[\x_i]
+_{i\in I}$$가 free functor $$\Set \rightarrow \cAlg{A}$$의 역할을 하는 것을 살펴보았는데, 비슷한 종류의 universal property가 $$A[[\x_i]]_{i\in I}$$에 대해서도 성립한다. 
 
 <div class="proposition" markdown="1">
 

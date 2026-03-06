@@ -100,13 +100,13 @@ $$A\cong \mathfrak{a}\oplus\mathfrak{m}\cong \mathbb{K}\times A/\mathfrak{a}$$
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}\otimes_\mathbb{Q}\mathbb{Q}(\sqrt{2})\overset{\Omega_0(u)}{\longrightarrow}\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}\longrightarrow 0$$
 
-로부터 $$\Omega\_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}$$는 원소 $$d(\sqrt{2})$$로 생성되는 $$\mathbb{Q}(\sqrt{2})$$-module임을 안다. 그런데 다음의 계산
+로부터 $$\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}$$는 원소 $$d(\sqrt{2})$$로 생성되는 $$\mathbb{Q}(\sqrt{2})$$-module임을 안다. 그런데 다음의 계산
 
 $$0=d(2)=d((\sqrt{2})^2)=2\sqrt{2}d(\sqrt{2})$$
 
 와 $$2\sqrt{2}$$가 $$\mathbb{Q}(\sqrt{2})$$에서 invertible이라는 사실로부터 $$d(\sqrt{2})=0$$이어야 하고 따라서 $$\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}=0$$이어야 함을 안다. 
 
-반면 [§제곱근확대체, ⁋예시 9](/ko/math/field_theory/radical_extensions#ex9)에서 살펴본 $$\mathbb{K}=\mathbb{F}\_p(t)$$의 algebraic extension $$\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $$\Omega\_{\mathbb{K}(t^{1/p})/\mathbb{K}}$$는 $$d(t^{1/p})$$로 생성되는 $$\mathbb{K}(t^{1/p})$$-module이지만, 다음의 계산
+반면 [§제곱근확대체, ⁋예시 9](/ko/math/field_theory/radical_extensions#ex9)에서 살펴본 $$\mathbb{K}=\mathbb{F}_p(t)$$의 algebraic extension $$\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $$\Omega_{\mathbb{K}(t^{1/p})/\mathbb{K}}$$는 $$d(t^{1/p})$$로 생성되는 $$\mathbb{K}(t^{1/p})$$-module이지만, 다음의 계산
 
 $$0=d(t)=d((t^{1/p})^p)=p(t^{1/p})^{p-1}d(t^{1/p})$$
 

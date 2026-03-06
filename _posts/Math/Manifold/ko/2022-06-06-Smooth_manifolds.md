@@ -45,7 +45,7 @@ $$\frac{\partial^2 f}{\partial x^2},\quad\frac{\partial^2 f}{\partial x\partial 
 
 $$\psi\circ\varphi^{-1}:\varphi(U\cap V)\rightarrow\psi(U\cap V),\qquad\varphi\circ\psi^{-1}:\psi(U\cap V)\rightarrow\varphi(U\cap V)$$
 
-가 모두 $$C^k$$인 것이다. $$C^k$$-compatible한 chart들의 모임 $$\mathcal{A}=\\{(U\_\lambda, \varphi\_\lambda)\\}\_{\lambda\in\Lambda}$$이 $$M=\bigcup U_\lambda$$을 만족한다면 $$\mathcal{A}$$를 *$$C^k$$-atlas*라 부른다. 
+가 모두 $$C^k$$인 것이다. $$C^k$$-compatible한 chart들의 모임 $$\mathcal{A}=\{(U_\lambda, \varphi_\lambda)\}_{\lambda\in\Lambda}$$이 $$M=\bigcup U_\lambda$$을 만족한다면 $$\mathcal{A}$$를 *$$C^k$$-atlas*라 부른다. 
 
 $$M$$ 위에 정의된 $$C^k$$-atlas 중, 포함관계에 대해 maximal인 atlas를 *$$C^k$$-differentiable structure<sub>$$k$$급 미분구조</sub>*라 부르고, 이 때 $$M$$을 *$$C^k$$-differentiable manifold<sub>$$k$$급 미분다양체</sub>*라 부른다. 특별히 $$k=\infty$$인 경우 이 구조를 *smooth differentiable manifold<sub>매끄러운 미분다양체</sub>* 혹은 더 간단히 *differentiable manifold<sub>미분다양체</sub>*라 부른다.
 

@@ -19,7 +19,7 @@ weight: 1
 
 It would be no exaggeration to say that set theory, as the foundation of mathematics, originated with Cantor in the 19th century. Cantor's naive set theory rests on the following principle:
 
-> For any property $$P$$, there exists a set $$Y=\\{x\mid P(x)\\}$$ consisting of all elements satisfying $$P$$.
+> For any property $$P$$, there exists a set $$Y=\{x\mid P(x)\}$$ consisting of all elements satisfying $$P$$.
 
 However, mathematicians soon discovered that this approach leads to various contradictions.
 
@@ -88,7 +88,7 @@ The set $$B$$ defined by the comprehension schema is unique. If $$B'$$ is anothe
 
 $$x\in B'\iff ((x\in A)\wedge P(x))\iff x\in B$$
 
-and thus $$B=B'$$. We denote this set by $$\\{x\in A\mid P(x)\\}$$.
+and thus $$B=B'$$. We denote this set by $$\{x\in A\mid P(x)\}$$.
 
 <div class="example" markdown="1">
 
@@ -96,7 +96,7 @@ and thus $$B=B'$$. We denote this set by $$\\{x\in A\mid P(x)\\}$$.
 
 > Let $$P$$ be a proposition about $$x$$. Then there exists a set $$B$$ such that $$x\in B$$ is equivalent to $$P(x)$$.
 
-Under the comprehension schema introduced above, unlike in [Example 1](#ex1), we cannot directly define $$\mathcal{S}=\\{x\mid x\not\in x\\}$$; we can only define
+Under the comprehension schema introduced above, unlike in [Example 1](#ex1), we cannot directly define $$\mathcal{S}=\{x\mid x\not\in x\}$$; we can only define
 
 $$B=\{x\in A\mid x\not\in x\}$$
 
@@ -151,7 +151,7 @@ Again, this set is unique by extensionality and is denoted $$\{A,B\}$$. Now taki
 
 $$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\wedge(x=\emptyset)\iff x\in \{\emptyset,\emptyset\}$$
 
-we obtain $$\\{\emptyset, \emptyset\\}=\\{\emptyset\\}$$. Also, since $$\emptyset\not\in \emptyset$$, we have $$\emptyset\neq\\{\emptyset\\}$$.
+we obtain $$\{\emptyset, \emptyset\}=\{\emptyset\}$$. Also, since $$\emptyset\not\in \emptyset$$, we have $$\emptyset\neq\{\emptyset\}$$.
 
 <div class="misc" markdown="1">
 
@@ -159,7 +159,7 @@ we obtain $$\\{\emptyset, \emptyset\\}=\\{\emptyset\\}$$. Also, since $$\emptyse
 
 </div>
 
-For example, if $$\mathcal{S}=\\{A,B\\}$$, then $$U$$ is the set of elements satisfying ($$x\in A$$ or $$x\in B$$), i.e., $$A\cup B$$. This is sometimes written as $$\bigcup\mathcal{S}$$.
+For example, if $$\mathcal{S}=\{A,B\}$$, then $$U$$ is the set of elements satisfying ($$x\in A$$ or $$x\in B$$), i.e., $$A\cup B$$. This is sometimes written as $$\bigcup\mathcal{S}$$.
 
 <div class="misc" markdown="1">
 

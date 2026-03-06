@@ -29,23 +29,23 @@ weight: 18
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$(A, \mathfrak{m})$$의 차원에 대한 귀납법으로 증명한다. $$d=0$$인 경우는 $$A$$가 field이므로 증명할 것이 없다. $$\dim A=d$$인 경우까지 주어진 주장이 성립한다 가정하고 $$\dim A=d+1$$인 경우를 보이자. 그럼 특히 $$\mathfrak{m}\neq 0$$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)로부터 $$\mathfrak{m}\neq \mathfrak{m}^2$$임을 안다. 한편, [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)로부터 $$A$$의 minimal prime ideal들은 유한하다는 것을 안다. 이들을 $$\mathfrak{p}\_1,\ldots, \mathfrak{p}\_k$$라 하자. 만일
+$$(A, \mathfrak{m})$$의 차원에 대한 귀납법으로 증명한다. $$d=0$$인 경우는 $$A$$가 field이므로 증명할 것이 없다. $$\dim A=d$$인 경우까지 주어진 주장이 성립한다 가정하고 $$\dim A=d+1$$인 경우를 보이자. 그럼 특히 $$\mathfrak{m}\neq 0$$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)로부터 $$\mathfrak{m}\neq \mathfrak{m}^2$$임을 안다. 한편, [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)로부터 $$A$$의 minimal prime ideal들은 유한하다는 것을 안다. 이들을 $$\mathfrak{p}_1,\ldots, \mathfrak{p}_k$$라 하자. 만일
 
 $$\mathfrak{m}\subseteq \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$$
 
-라면 [§동반소아이디얼, ⁋보조정리 2](/ko/math/commutative_algebra/associated_primes#lem2)과 위의 계산 $$\mathfrak{m}\neq \mathfrak{m}^2$$에 의해 $$\mathfrak{m}=\mathfrak{p}\_i$$여야 하고, 이는
+라면 [§동반소아이디얼, ⁋보조정리 2](/ko/math/commutative_algebra/associated_primes#lem2)과 위의 계산 $$\mathfrak{m}\neq \mathfrak{m}^2$$에 의해 $$\mathfrak{m}=\mathfrak{p}_i$$여야 하고, 이는
 
 $$d+1=\dim A=\codim \mathfrak{m}=\codim \mathfrak{p}_i=0$$
 
-이 되어 모순이므로 우리는 반드시 적당한 $$a\in \mathfrak{m}$$이 존재하여 $$a\not\in \mathfrak{m}^2\cup \mathfrak{p}\_1\cup\cdots\cup \mathfrak{p}\_k$$여야 함을 안다. 
+이 되어 모순이므로 우리는 반드시 적당한 $$a\in \mathfrak{m}$$이 존재하여 $$a\not\in \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$$여야 함을 안다. 
 
-이제 $$A'=A/(a)$$라 하고, $$A'$$의 maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$를 생각하자. 그럼 $$a$$의 선택에 의하여, $$A'$$의 prime ideal들 중에는 $$\mathfrak{p}\_i$$에 대응되는 것이 없으므로 반드시 $$\dim A'<\dim A$$가 성립하며, 이를 [§매개계, ⁋따름정리 6](/ko/math/commutative_algebra/system_of_parameters#cor6)과 종합하면 $$\dim A'=d-1$$인 것을 안다. 따라서 다음 식
+이제 $$A'=A/(a)$$라 하고, $$A'$$의 maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$를 생각하자. 그럼 $$a$$의 선택에 의하여, $$A'$$의 prime ideal들 중에는 $$\mathfrak{p}_i$$에 대응되는 것이 없으므로 반드시 $$\dim A'<\dim A$$가 성립하며, 이를 [§매개계, ⁋따름정리 6](/ko/math/commutative_algebra/system_of_parameters#cor6)과 종합하면 $$\dim A'=d-1$$인 것을 안다. 따라서 다음 식
 
 $$\mathfrak{m}'/(\mathfrak{m}')^2=\mathfrak{m}/(\mathfrak{m}^2+(a))$$
 
-과 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)로부터 $$\mathfrak{m}'$$이 $$(d-1)$$개의 원소로 생성되는 것을 알고, 따라서 귀납적 가정에 의해 $$A'$$는 integral domain이다. 즉, $$(a)$$는 prime ideal이며, 따라서 어떤 $$i$$에 대해 $$\mathfrak{p}\_i\subsetneq (a)$$가 성립한다. 
+과 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)로부터 $$\mathfrak{m}'$$이 $$(d-1)$$개의 원소로 생성되는 것을 알고, 따라서 귀납적 가정에 의해 $$A'$$는 integral domain이다. 즉, $$(a)$$는 prime ideal이며, 따라서 어떤 $$i$$에 대해 $$\mathfrak{p}_i\subsetneq (a)$$가 성립한다. 
 
-이제 임의의 $$x\in \mathfrak{p}\_i$$에 대하여, $$x=\alpha a$$이도록 하는 $$\alpha\in A$$를 택하자. 그럼 $$a\not\in \mathfrak{p}\_i$$이므로 $$\alpha\in \mathfrak{p}\_i$$이고, 따라서 $$\mathfrak{p}\_i=a \mathfrak{p}\_i$$이며 이로부터 $$\mathfrak{p}\_i=\mathfrak{m}\mathfrak{p}\_i$$이다. 다시 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)를 적용하면 $$\mathfrak{p}\_i=0$$이므로 $$A$$는 integral domain이다. 
+이제 임의의 $$x\in \mathfrak{p}_i$$에 대하여, $$x=\alpha a$$이도록 하는 $$\alpha\in A$$를 택하자. 그럼 $$a\not\in \mathfrak{p}_i$$이므로 $$\alpha\in \mathfrak{p}_i$$이고, 따라서 $$\mathfrak{p}_i=a \mathfrak{p}_i$$이며 이로부터 $$\mathfrak{p}_i=\mathfrak{m}\mathfrak{p}_i$$이다. 다시 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)를 적용하면 $$\mathfrak{p}_i=0$$이므로 $$A$$는 integral domain이다. 
 
 </details>
 
@@ -145,7 +145,7 @@ $$am^k+bm^l=(am^{k-\min(k,l)}+bm^{l-\min(k,l)})m^{\min(k,l)}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Reduced noetherian ring $$A$$와 $$A$$의 total ring of fractions $$K$$가 주어졌다 하자. 그럼 원소 $$x\in K$$가 $$A$$에 속하는 것은 임의의 prime ideal $$\mathfrak{p}$$ associated to a non-zerodivisor에 대하여 $$x$$의 $$K_\mathfrak{p}$$에서의 image가 $$A\_\mathfrak{p}$$에 속하는 것과 동치이다. 
+<ins id="prop7">**명제 7**</ins> Reduced noetherian ring $$A$$와 $$A$$의 total ring of fractions $$K$$가 주어졌다 하자. 그럼 원소 $$x\in K$$가 $$A$$에 속하는 것은 임의의 prime ideal $$\mathfrak{p}$$ associated to a non-zerodivisor에 대하여 $$x$$의 $$K_\mathfrak{p}$$에서의 image가 $$A_\mathfrak{p}$$에 속하는 것과 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -159,7 +159,7 @@ $$\frac{a}{u}\in A\iff a\in (u)\iff a=0\mod{(u)}\iff \epsilon_\mathfrak{p}(a)= 0
 
 $$\epsilon_\mathfrak{p}(a)\in(u)A_\mathfrak{p}$$
 
-이다. 한편, $$A$$가 reduced이므로 $$K$$는 field들의 유한한 direct product이고 ([§동반소아이디얼, ⁋따름정리 8](/ko/math/commutative_algebra/associated_primes#cor8)), localization은 유한한 direct product와 commute하므로 $$A\_\mathfrak{p}$$의 total ring of fractions와 $$K_\mathfrak{p}$$를 identify할 수 있다. 이 identification을 통해 위의 포함관계를 다시 살펴보면 원하는 결과를 얻는다. 
+이다. 한편, $$A$$가 reduced이므로 $$K$$는 field들의 유한한 direct product이고 ([§동반소아이디얼, ⁋따름정리 8](/ko/math/commutative_algebra/associated_primes#cor8)), localization은 유한한 direct product와 commute하므로 $$A_\mathfrak{p}$$의 total ring of fractions와 $$K_\mathfrak{p}$$를 identify할 수 있다. 이 identification을 통해 위의 포함관계를 다시 살펴보면 원하는 결과를 얻는다. 
 
 </details>
 
@@ -169,7 +169,7 @@ $$\epsilon_\mathfrak{p}(a)\in(u)A_\mathfrak{p}$$
 
 <ins id="thm8">**정리 8**</ins> Noetherian integral domain $$A$$가 normal domain인 것은 다음 조건과 동치이다. 
 
-($$\ast$$) 임의의 prime ideal $$\mathfrak{p}$$ associated to a principal ideal에 대하여, $$\mathfrak{p}A\_\mathfrak{p}$$는 $$A\_\mathfrak{p}$$의 principal ideal이다. 
+($$\ast$$) 임의의 prime ideal $$\mathfrak{p}$$ associated to a principal ideal에 대하여, $$\mathfrak{p}A_\mathfrak{p}$$는 $$A_\mathfrak{p}$$의 principal ideal이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -179,13 +179,13 @@ $$\epsilon_\mathfrak{p}(a)\in(u)A_\mathfrak{p}$$
 
 $$A=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ associated to a principal ideal}A_\mathfrak{p}$$
 
-을 보이면 충분하며, 여기서 $$A\_\mathfrak{p}$$는 $$A$$의 quotient field $$K$$의 부분집합으로 본 것이다. 이제 보이고자 하는 주장은 [명제 7](#prop7)에서 더 일반적인 경우에 다루었다. 
+을 보이면 충분하며, 여기서 $$A_\mathfrak{p}$$는 $$A$$의 quotient field $$K$$의 부분집합으로 본 것이다. 이제 보이고자 하는 주장은 [명제 7](#prop7)에서 더 일반적인 경우에 다루었다. 
 
 거꾸로 $$A$$가 normal domain이라 하고, $$\mathfrak{p}$$가 principal ideal $$\mathfrak{a}=(a)$$의 associated prime이라 하자. 즉
 
 $$\mathfrak{p}=\ann(b+\mathfrak{a})$$
 
-이며, 우리는 $$\mathfrak{p}A\_\mathfrak{p}$$가 $$A\_\mathfrak{p}$$의 principal ideal인 것을 보여야 한다. 이는 어차피 localization에 대한 것이므로, $$(A,\mathfrak{p})$$가 local ring이었다고 가정해도 상관 없으며, 이 때 $$K$$를 $$A$$의 field of fraction이라 하고, $$\mathfrak{p}$$의 inverse
+이며, 우리는 $$\mathfrak{p}A_\mathfrak{p}$$가 $$A_\mathfrak{p}$$의 principal ideal인 것을 보여야 한다. 이는 어차피 localization에 대한 것이므로, $$(A,\mathfrak{p})$$가 local ring이었다고 가정해도 상관 없으며, 이 때 $$K$$를 $$A$$의 field of fraction이라 하고, $$\mathfrak{p}$$의 inverse
 
 $$\mathfrak{p}^{-1}=\{x\in K\mid x \mathfrak{p}\subseteq A\}$$
 
@@ -223,17 +223,17 @@ $$\mathfrak{p}^{-1}=\{x\in K\mid x \mathfrak{p}\subseteq A\}$$
 
 $$A=A_1\times\cdots A_n$$
 
-이고, 이 ring의 임의의 prime ideal은 prime ideal $$\mathfrak{p}\_k\subseteq A_k$$에 대해
+이고, 이 ring의 임의의 prime ideal은 prime ideal $$\mathfrak{p}_k\subseteq A_k$$에 대해
 
 $$A_1\times\cdots\times A_{k-1}\times \mathfrak{p}_k\times A_{k+1}\times\cdots\times A_n$$
 
-의 꼴로 나타나며, $$0$$의 associated prime ideal은 위의 꼴에서 $$\mathfrak{p}\_k$$를 $$0$$의 ($$A_k$$에서의) associated prime으로 두면 된다. 마찬가지로 $$A$$의 non-zerodivisor 
+의 꼴로 나타나며, $$0$$의 associated prime ideal은 위의 꼴에서 $$\mathfrak{p}_k$$를 $$0$$의 ($$A_k$$에서의) associated prime으로 두면 된다. 마찬가지로 $$A$$의 non-zerodivisor 
 
 $$a=(a_1,\ldots, a_n),\qquad\text{$$a_i$$ a non-zerodivisor of $$A_i$$}$$
 
-의 associated prime은 $$\mathfrak{p}\_k$$를 $$a_k$$의 associated prime으로 둔 것과 같다. 
+의 associated prime은 $$\mathfrak{p}_k$$를 $$a_k$$의 associated prime으로 둔 것과 같다. 
 
-이제 주장을 증명하자. 우선 각각의 $$A_i$$가 normal이라면 (S2)조건은 [정리 8](#thm8)의 결과로 얻어지고, (R1) 조건은 $$A$$의 codimension $$c$$짜리 prime ideal $$\mathfrak{p}$$에서의 localization을 위에서의 $$\mathfrak{p}$$의 묘사를 통해 $$A_k$$에서의 codimension $$c$$ prime $$\mathfrak{p}\_k$$에서의 localization으로 볼 수 있기 때문에 성립한다.
+이제 주장을 증명하자. 우선 각각의 $$A_i$$가 normal이라면 (S2)조건은 [정리 8](#thm8)의 결과로 얻어지고, (R1) 조건은 $$A$$의 codimension $$c$$짜리 prime ideal $$\mathfrak{p}$$에서의 localization을 위에서의 $$\mathfrak{p}$$의 묘사를 통해 $$A_k$$에서의 codimension $$c$$ prime $$\mathfrak{p}_k$$에서의 localization으로 볼 수 있기 때문에 성립한다.
 
 거꾸로 R1S2 조건이 성립한다 하자. 그럼 우선 $$R$$은 reduced ring이다. 이는 만일
 

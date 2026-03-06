@@ -27,9 +27,9 @@ It is then natural to define the product of a general family as follows.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let $$(A_i)\_{i\in I}$$ be a family of sets. The *product* of this family is the collection $$P$$ of all functions from $$I$$ to $$\bigcup A_i$$ satisfying $$x_i=f(i)\in A_i$$.
+<ins id="def1">**Definition 1**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets. The *product* of this family is the collection $$P$$ of all functions from $$I$$ to $$\bigcup A_i$$ satisfying $$x_i=f(i)\in A_i$$.
 
-As with the notation for families of sets, elements of $$P$$ are written as $$(x_i)\_{i\in I}$$; each $$x_i$$ is called the *$$i$$-th component*. The function sending $$F\in P$$ to $$F(i)$$ is called the *$$i$$-th projection* and is denoted by $$\pr\_i$$.
+As with the notation for families of sets, elements of $$P$$ are written as $$(x_i)_{i\in I}$$; each $$x_i$$ is called the *$$i$$-th component*. The function sending $$F\in P$$ to $$F(i)$$ is called the *$$i$$-th projection* and is denoted by $$\pr_i$$.
 
 </div>
 
@@ -77,13 +77,13 @@ Earlier we saw that the sum of sets satisfies a universal property. Similarly, t
 
 <div class="proposition" markdown="1">
 
-<ins id="thm3">**Theorem 3**</ins> Let $$P$$ be the product of a family of sets $$(A_i)$$, with projection functions $$\pr\_i:P\rightarrow A_i$$. Given another set $$B$$ and functions $$f_i:B\rightarrow A_i$$, there exists a unique function $$f:B\rightarrow P$$ satisfying $$f_i=\pr\_i\circ f$$.
+<ins id="thm3">**Theorem 3**</ins> Let $$P$$ be the product of a family of sets $$(A_i)$$, with projection functions $$\pr_i:P\rightarrow A_i$$. Given another set $$B$$ and functions $$f_i:B\rightarrow A_i$$, there exists a unique function $$f:B\rightarrow P$$ satisfying $$f_i=\pr_i\circ f$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Suppose functions $$f$$ and $$f'$$ are given, both satisfying the condition $$f\_i=\pr\_i\circ f$$. We must show that $$f(y)=f'(y)$$ for every $$y\in B$$. Since $$f(y)$$ and $$f'(y)$$ are elements of $$A$$ and hence functions (ordered pairs), they are determined by the values they assign to each $$i$$ (the $$i$$-th coordinates). Thus it suffices to show that $$\pr\_i(f(y))=\pr\_i(f'(y))$$ for any given $$y\in B$$ and $$i\in I$$. But
+Suppose functions $$f$$ and $$f'$$ are given, both satisfying the condition $$f_i=\pr_i\circ f$$. We must show that $$f(y)=f'(y)$$ for every $$y\in B$$. Since $$f(y)$$ and $$f'(y)$$ are elements of $$A$$ and hence functions (ordered pairs), they are determined by the values they assign to each $$i$$ (the $$i$$-th coordinates). Thus it suffices to show that $$\pr_i(f(y))=\pr_i(f'(y))$$ for any given $$y\in B$$ and $$i\in I$$. But
 
 $$\pr_i(f(y))=f_i(y)=\pr_i(f'(y))$$
 
@@ -97,11 +97,11 @@ and then verify that the correspondence $$y\mapsto f(y)$$ is indeed a function.
 
 </details>
 
-Since at least one $$(P, \pr\_i)$$ satisfying the conditions of [Theorem 3](#thm3) exists ([Definition 1](#def1)), we may take this as the definition of the product set. That is, the product of $$(A\_i)\_{i\in I}$$ can be characterized as a set $$\prod\_{i\in I} A\_i$$ together with functions $$\pr\_i:\prod\_{i\in I}A\_i\rightarrow A_i$$ satisfying the following universal property.
+Since at least one $$(P, \pr_i)$$ satisfying the conditions of [Theorem 3](#thm3) exists ([Definition 1](#def1)), we may take this as the definition of the product set. That is, the product of $$(A_i)_{i\in I}$$ can be characterized as a set $$\prod_{i\in I} A_i$$ together with functions $$\pr_i:\prod_{i\in I}A_i\rightarrow A_i$$ satisfying the following universal property.
 
 ![universal_property_of_product](/assets/images/Math/Set_Theory/Product_of_sets-2.png){:style="width:13em" class="invert" .align-center}
 
-By the same reasoning as in [§Sum of Sets, ⁋Corollary 9](/en/math/set_theory/sum_of_sets#cor9), one can verify that the object and projections $$\pr\_i$$ satisfying this universal property are unique up to bijection.
+By the same reasoning as in [§Sum of Sets, ⁋Corollary 9](/en/math/set_theory/sum_of_sets#cor9), one can verify that the object and projections $$\pr_i$$ satisfying this universal property are unique up to bijection.
 
 <div class="proposition" markdown="1">
 
@@ -144,7 +144,7 @@ Immediately after defining the union, we observed that replacing the index set v
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> Let $$(A_i)\_{i\in I}$$ be a family of sets and let $$u:K\rightarrow I$$ be a bijection. For any $$f:I\rightarrow \prod_{i\in I}A\_i$$, the function $$f\mapsto f\circ u$$ sending $$f$$ to $$f\circ u: K\rightarrow \prod\_{i\in I} A\_i$$ is a bijection.
+<ins id="prop5">**Proposition 5**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets and let $$u:K\rightarrow I$$ be a bijection. For any $$f:I\rightarrow \prod_{i\in I}A_i$$, the function $$f\mapsto f\circ u$$ sending $$f$$ to $$f\circ u: K\rightarrow \prod_{i\in I} A_i$$ is a bijection.
 
 </div>
 
@@ -154,7 +154,7 @@ Consider the diagram
 
 ![induced_bijection](/assets/images/Math/Set_Theory/Product_of_sets-3.png){:style="width:13em"  class="invert" .align-center}
 
-Here $$v$$ is the bijection sending $$(x_i)\_{i\in I}$$ to $$(x\_{u(k)})\_{k\in K}$$. By [Proposition 2](#prop2) above, $$F\mapsto F\circ U$$ is a bijection.
+Here $$v$$ is the bijection sending $$(x_i)_{i\in I}$$ to $$(x_{u(k)})_{k\in K}$$. By [Proposition 2](#prop2) above, $$F\mapsto F\circ U$$ is a bijection.
 </details>
 
 

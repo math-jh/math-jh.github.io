@@ -27,7 +27,7 @@ weight: 7
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$M$$의 submodule $$N$$이 *primary submodule<sub>으뜸부분가군</sub>*인 것은 $$\Ass(M/N)$$이 하나의 prime ideal로만 구성된 것이다. 이 때, $$\Ass(M/N)=\\{\mathfrak{p}\\}$$라면 $$N$$을 $$\mathfrak{p}$$-primary submodule이라 부른다. 만일 $$\Ass(M)$$이 하나의 prime ideal로만 이루어져 있다면 $$M$$을 *coprimary submodule<sub>쌍대으뜸부분가군</sub>*이라 부른다. 
+<ins id="def1">**정의 1**</ins> $$M$$의 submodule $$N$$이 *primary submodule<sub>으뜸부분가군</sub>*인 것은 $$\Ass(M/N)$$이 하나의 prime ideal로만 구성된 것이다. 이 때, $$\Ass(M/N)=\{\mathfrak{p}\}$$라면 $$N$$을 $$\mathfrak{p}$$-primary submodule이라 부른다. 만일 $$\Ass(M)$$이 하나의 prime ideal로만 이루어져 있다면 $$M$$을 *coprimary submodule<sub>쌍대으뜸부분가군</sub>*이라 부른다. 
 
 </div>
 
@@ -61,12 +61,12 @@ weight: 7
 
 <div class="proposition" markdown="1">
 
-<ins id="thm3">**정리 3 (Primary decomposition)**</ins> $$M$$의 임의의 submodule $$M'$$은 primary submodule들의 교집합이다. 즉, prime ideal들 $$\mathfrak{p}\_1,\ldots, \mathfrak{p}\_n$$과 $$\mathfrak{p}\_k$$-primary submodule들 $$M\_k$$에 대하여, $$M'=\bigcap_{k=1}^n M_k$$으로 적을 수 있다. 이를 *primary decomposition<sub>으뜸분해</sub>*이라 부르며, 그럼 다음이 성립한다. 
+<ins id="thm3">**정리 3 (Primary decomposition)**</ins> $$M$$의 임의의 submodule $$M'$$은 primary submodule들의 교집합이다. 즉, prime ideal들 $$\mathfrak{p}_1,\ldots, \mathfrak{p}_n$$과 $$\mathfrak{p}_k$$-primary submodule들 $$M_k$$에 대하여, $$M'=\bigcap_{k=1}^n M_k$$으로 적을 수 있다. 이를 *primary decomposition<sub>으뜸분해</sub>*이라 부르며, 그럼 다음이 성립한다. 
 
 1. $$M/M'$$의 associated prime은 $$\mathfrak{p}_k$$들 중 하나이다.
 2. 만일 $$M'$$을 표현할 때, $$M_k$$들 중 불필요한 것이 없다면 $$\mathfrak{p}_i$$들은 정확히 $$M/M'$$의 associated prime이다.
 3. 만일 $$M'$$을 표현하는 방식 중 더 적은 $$M_k$$들을 이용하는 방식이 없다면, $$M/M'$$의 associated prime들은 정확히 index 하나 당 하나의 $$\mathfrak{p}_k$$가 된다. 만일 여기에 더해 $$\mathfrak{p}_i$$가 $$M/M'$$의 annihilator ideal을 포함하는 prime ideal 중 minimal한 것이라면 $$M_i$$는 $$M'$$의 $$\mathfrak{p}_i$$-primary component가 된다. 
-4. 주어진 minimal primary decomposition에 대하여, $$A$$의 임의의 multiplicative subset $$S$$에 대해, $$\mathfrak{p}\_1,\ldots, \mathfrak{p}\_m$$들이 $$S$$와 만나지 않는 prim ideal들이라 하자. 그럼
+4. 주어진 minimal primary decomposition에 대하여, $$A$$의 임의의 multiplicative subset $$S$$에 대해, $$\mathfrak{p}_1,\ldots, \mathfrak{p}_m$$들이 $$S$$와 만나지 않는 prim ideal들이라 하자. 그럼
     
     $$S^{-1}M'=\bigcap_{i=1}^m S^{-1}M_i$$
 
@@ -139,13 +139,13 @@ $$\bigcap_{k\neq j} M_k=\left(\bigcap_{k\neq j} M_k\right)\bigg/\left(M_k\cap \b
 
 가 되어 $$\bigcap_{k\neq j} M_k$$는 $$\mathfrak{p}_j$$-coprimary이다. 이로부터 원하는 결과를 얻는다.
 
-이제 세 번째 결과를 보이자. 일반적으로 $$\mathfrak{p}$$-primary submodule들의 교집합 또한 $$\mathfrak{p}$$-primary이므로, 주어진 조건을 만족하기 위해서는 $$\mathfrak{p}_k$$들이 모두 다른 prime ideal들이어야 한다. 이제 $$\mathfrak{p}\_k$$들이 annihilator ideal을 포함하는 것 중 minimal한 것이라 가정하고, $$\Ass(M/M\_k)=\\{\mathfrak{p}\_k\\}$$임을 보이자. 이를 위해서는 $$0$$이 아닌 임의의 $$x+M_k\in M/M_k$$에 대하여 $$\ann(x)=\mathfrak{p}\_k$$가 성립해야 하는 것을 보여야 하므로, [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 이는 $$\varepsilon: M \rightarrow M\_{\mathfrak{p}\_k}$$의 kernel이 $$M_k$$임을 보이면 충분하다. 
+이제 세 번째 결과를 보이자. 일반적으로 $$\mathfrak{p}$$-primary submodule들의 교집합 또한 $$\mathfrak{p}$$-primary이므로, 주어진 조건을 만족하기 위해서는 $$\mathfrak{p}_k$$들이 모두 다른 prime ideal들이어야 한다. 이제 $$\mathfrak{p}_k$$들이 annihilator ideal을 포함하는 것 중 minimal한 것이라 가정하고, $$\Ass(M/M_k)=\{\mathfrak{p}_k\}$$임을 보이자. 이를 위해서는 $$0$$이 아닌 임의의 $$x+M_k\in M/M_k$$에 대하여 $$\ann(x)=\mathfrak{p}_k$$가 성립해야 하는 것을 보여야 하므로, [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 이는 $$\varepsilon: M \rightarrow M_{\mathfrak{p}_k}$$의 kernel이 $$M_k$$임을 보이면 충분하다. 
 
 이제 다음의 commutative diagram
 
 ![injective](/assets/images/Math/Commutative_Algebra/Primary_decomposition-1.png){:style="width:12em" class="invert" .align-center}
 
-을 생각하자. 그럼 $$M \rightarrow M/M_k$$의 kernel이 $$M_k$$이므로, 원하는 주장을 보이기 위해서는 $$M\_{\mathfrak{p}\_k}\rightarrow (M/M_k)\_{\mathfrak{p}\_k}$$ 그리고 $$M/M_k \rightarrow (M/M_k)\_{\mathfrak{p}\_k}$$가 모두 injective임을 보이면 충분하다. 우선 $$M/M_k \rightarrow (M/M_k)\_{\mathfrak{p}\_k}$$이 injective인 것은 $$M_k$$가 $$\mathfrak{p}_k$$-primary라는 것으로부터 자명하다. 그럼 맨 처음 살펴본 것과 같이 
+을 생각하자. 그럼 $$M \rightarrow M/M_k$$의 kernel이 $$M_k$$이므로, 원하는 주장을 보이기 위해서는 $$M_{\mathfrak{p}_k}\rightarrow (M/M_k)_{\mathfrak{p}_k}$$ 그리고 $$M/M_k \rightarrow (M/M_k)_{\mathfrak{p}_k}$$가 모두 injective임을 보이면 충분하다. 우선 $$M/M_k \rightarrow (M/M_k)_{\mathfrak{p}_k}$$이 injective인 것은 $$M_k$$가 $$\mathfrak{p}_k$$-primary라는 것으로부터 자명하다. 그럼 맨 처음 살펴본 것과 같이 
 
 $$M \rightarrow \bigoplus_{k=1}^n M/M_k$$
 
@@ -153,7 +153,7 @@ $$M \rightarrow \bigoplus_{k=1}^n M/M_k$$
 
 $$M_{\mathfrak{p}_k} \rightarrow \left(\bigoplus_{k=1}^n M/M_k\right)_{\mathfrak{p}_k} $$
 
-또한 injective이다. 한편, 각각의 $$j\neq k$$에 대하여 $$M/M_j$$는 $$\mathfrak{p}_j$$-coprimary이고, minimality로부터 $$\mathfrak{p}_j$$는 $$\mathfrak{p}_i$$에 속하지 않아야 하므로 $$(M/M_j)\_{\mathfrak{p}_k}=0$$이 성립하게 되고, 이렇게 얻어지는 함수가 정확히 $$M\_{\mathfrak{p}\_k}\rightarrow (M/M_k)\_{\mathfrak{p}\_k}$$이므로 원하는 결과를 얻는다.
+또한 injective이다. 한편, 각각의 $$j\neq k$$에 대하여 $$M/M_j$$는 $$\mathfrak{p}_j$$-coprimary이고, minimality로부터 $$\mathfrak{p}_j$$는 $$\mathfrak{p}_i$$에 속하지 않아야 하므로 $$(M/M_j)_{\mathfrak{p}_k}=0$$이 성립하게 되고, 이렇게 얻어지는 함수가 정확히 $$M_{\mathfrak{p}_k}\rightarrow (M/M_k)_{\mathfrak{p}_k}$$이므로 원하는 결과를 얻는다.
 
 마지막 주장은 거의 자명하다.
 

@@ -113,7 +113,7 @@ $$H_k(X/A, [A])\cong H_k(X/A, U/A)$$
 
 $$(X\setminus A, U\setminus A)\hookrightarrow (X,U)$$
 
-에 의해 유도되는 $$H_k(X\setminus A, U\setminus A)\rightarrow H_k(X,U)$$는 isomorphism이며, 마찬가지로 포함관계 $$\\{[A]\\}\subseteq U/A\subseteq X/A$$에 [정리 2](#thm2)을 적용하면 다음의 map
+에 의해 유도되는 $$H_k(X\setminus A, U\setminus A)\rightarrow H_k(X,U)$$는 isomorphism이며, 마찬가지로 포함관계 $$\{[A]\}\subseteq U/A\subseteq X/A$$에 [정리 2](#thm2)을 적용하면 다음의 map
 
 $$H_k((X/A)\setminus [A], (U/A)\setminus [A])$$
 

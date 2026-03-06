@@ -83,10 +83,10 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 동일한 topological manifold $$M$$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $$\mathcal{A}\_1$$, $$\mathcal{A}\_2$$를 각각 single chart들 $$(\mathbb{R},\id\_\mathbb{R})$$, $$(\mathbb{R}, x\mapsto x^{3})$$을 통해 정의하자. 그럼 $$\mathcal{A}_1$$과 $$\mathcal{A}\_2$$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifold/smooth_manifolds#ex4))  
-편의상 $$(M,\mathcal{A}\_1)$$을 $$M\_1$$, $$(M,\mathcal{A}\_2)$$를 $$M\_2$$로 이름붙이고, $$\varphi=\id\_\mathbb{R}$$, 그리고 $$\psi=(x\mapsto x^3)$$이라 하자. 
+<ins id="rmk1">**참고**</ins> 동일한 topological manifold $$M$$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $$\mathcal{A}_1$$, $$\mathcal{A}_2$$를 각각 single chart들 $$(\mathbb{R},\id_\mathbb{R})$$, $$(\mathbb{R}, x\mapsto x^{3})$$을 통해 정의하자. 그럼 $$\mathcal{A}_1$$과 $$\mathcal{A}_2$$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifold/smooth_manifolds#ex4))  
+편의상 $$(M,\mathcal{A}_1)$$을 $$M_1$$, $$(M,\mathcal{A}_2)$$를 $$M_2$$로 이름붙이고, $$\varphi=\id_\mathbb{R}$$, 그리고 $$\psi=(x\mapsto x^3)$$이라 하자. 
 
-이들 두 manifold $$M_1, M_2$$는 서로 diffeomorphic하다. $$M\_1$$에서 $$M\_2$$로의 함수 $$F$$를 $$x\mapsto x^{1/3}$$으로 정의하자. 그럼 자명하게 $$F^{-1}$$은 $$y\mapsto y^3$$으로 정의된다. 정의에 의해 $$F$$는 $$C^\infty$$이다. 임의의 점 $$p\in M_1$$에 대하여, $$M_1$$과 $$M_2$$ 각각에 정의된 두 coordinate system $$(\mathbb{R},\varphi)$$와 $$(\mathbb{R},\psi)$$을 잡으면 $$p\in\mathbb{R}$$,  $$F(\mathbb{R})\subset\mathbb{R}$$을 만족하는 것은 자명하고, 또 이들이
+이들 두 manifold $$M_1, M_2$$는 서로 diffeomorphic하다. $$M_1$$에서 $$M_2$$로의 함수 $$F$$를 $$x\mapsto x^{1/3}$$으로 정의하자. 그럼 자명하게 $$F^{-1}$$은 $$y\mapsto y^3$$으로 정의된다. 정의에 의해 $$F$$는 $$C^\infty$$이다. 임의의 점 $$p\in M_1$$에 대하여, $$M_1$$과 $$M_2$$ 각각에 정의된 두 coordinate system $$(\mathbb{R},\varphi)$$와 $$(\mathbb{R},\psi)$$을 잡으면 $$p\in\mathbb{R}$$,  $$F(\mathbb{R})\subset\mathbb{R}$$을 만족하는 것은 자명하고, 또 이들이
 
 $$(\psi\circ F\circ \varphi^{-1})(t)=t$$
 
@@ -107,7 +107,7 @@ Manifold는 기본적으로 미분을 할 수 있는 공간이며, 때문에 man
 
 $$g\mapsto g\circ F$$
 
-으로 정의된 함수 $$F^\ast:\mathcal{C}\_{N,F(p)}^\infty\rightarrow \mathcal{C}\_{M,p}^\infty$$을 유도한다. 뿐만 아니라, 임의의 $$f,g,\in \mathcal{C}\_{N,F(p)}^\infty$$ 그리고 실수 $$\alpha\in\mathbb{R}$$에 대하여
+으로 정의된 함수 $$F^\ast:\mathcal{C}_{N,F(p)}^\infty\rightarrow \mathcal{C}_{M,p}^\infty$$을 유도한다. 뿐만 아니라, 임의의 $$f,g,\in \mathcal{C}_{N,F(p)}^\infty$$ 그리고 실수 $$\alpha\in\mathbb{R}$$에 대하여
 
 $$F^\ast(f+g)=(f+g)\circ F=f\circ F+g\circ F=F^\ast(f)+F^\ast(g),\quad F^\ast(\alpha f)=(\alpha f)\circ F=\alpha(f\circ F)=\alpha F^\ast(f)$$
 
@@ -123,7 +123,7 @@ $$(F^\ast)^\ast(L)=L\circ F^\ast$$
 
 으로 정의되는 함수이다. 이제 이 정의를 $$T_pM$$으로 제한하면 원하는 정의를 얻는다.
 
-그 전에 위의 논의를 벡터공간의 원소들의 입장에서 다시 정리하자면, $$(F^\ast)^\ast\|\_{T_pM}$$는 임의의 $$v\in T_pM$$을 $$v\circ F^\ast\in (\mathcal{C}^\infty_{N,F(p)})^\ast$$으로 보낸다. 한편 $$v\circ F^\ast$$는 $$(\mathcal{C}^\infty_{N,F(p)})^\ast$$의 원소이므로 임의의 $$g\in \mathcal{C}^\infty_{N,F(p)}$$에 어떻게 작용하는지를 통해 정의되는데, 이는
+그 전에 위의 논의를 벡터공간의 원소들의 입장에서 다시 정리하자면, $$(F^\ast)^\ast\vert_{T_pM}$$는 임의의 $$v\in T_pM$$을 $$v\circ F^\ast\in (\mathcal{C}^\infty_{N,F(p)})^\ast$$으로 보낸다. 한편 $$v\circ F^\ast$$는 $$(\mathcal{C}^\infty_{N,F(p)})^\ast$$의 원소이므로 임의의 $$g\in \mathcal{C}^\infty_{N,F(p)}$$에 어떻게 작용하는지를 통해 정의되는데, 이는
 
 $$(v\circ F^\ast)(g)=v(F^\ast(g))=v(g\circ F)$$
 
@@ -145,7 +145,7 @@ $$(dF_p(v))g=v(g\circ F)$$
 
 </div>
 
-정의로부터 몇 가지 결과는 자명하다. 우선 $$\id\_M:M\rightarrow M$$에 대하여 $$d(\id\_M)\_p$$는 항상 $$T\_pM$$에서 $$T\_pM$$으로의 identity인 $$\id\_{T\_pM}$$이 된다. 이는 [정의 7](#def7)의 식으로부터 명백하다. 또, 세 manifold $$M,N,P$$에 대하여 $$F:M\rightarrow N$$, $$G:N\rightarrow P$$가 $$C^\infty$$라면, 다음의 식
+정의로부터 몇 가지 결과는 자명하다. 우선 $$\id_M:M\rightarrow M$$에 대하여 $$d(\id_M)_p$$는 항상 $$T_pM$$에서 $$T_pM$$으로의 identity인 $$\id_{T_pM}$$이 된다. 이는 [정의 7](#def7)의 식으로부터 명백하다. 또, 세 manifold $$M,N,P$$에 대하여 $$F:M\rightarrow N$$, $$G:N\rightarrow P$$가 $$C^\infty$$라면, 다음의 식
 
 $$d(G\circ F)_p=(dG_{F(p)})\circ (dF_p)$$ 
 
@@ -183,7 +183,7 @@ $$\frac{\partial}{\partial x^i}\bigg|_pf=\frac{\partial}{\partial r^i}\bigg|_p (
 
 이를 좀 더 선형대수학적인 관점에서 보자면, $$\mathcal{B}$$를 $$\mathbb{R}^m$$의 standard basis, $$\mathcal{C}$$를 $$\partial/\partial x^i$$들로 이루어진 $$T_pM$$의 basis라 하면 $$(T_{\varphi(p)}\mathbb{R}^n, \mathcal{B})$$에서 $$(T_pM, \mathcal{C})$$로의 linear map $$d\varphi^{-1}_{\varphi(p)}$$의 행렬표현이 정확히 항등행렬이 된다고 할 수 있다.
 
-더 일반적으로, $$M,N$$이 각각 $$m,n$$차원의 manifold이고 $$F:M\rightarrow N$$이 임의의 $$C^\infty$$ 함수라 하자. 그럼 고정된 $$p\in M$$에 대하여, $$p$$를 포함하는 coordinate system $$(U,\varphi)$$, 그리고 $$F(U)$$를 포함하는 coordinate system $$(V,\psi)$$가 존재하여 $$\psi\circ F\circ\varphi^{-1}$$이 $$C^\infty$$이다. 이제 $$\varphi=(x^i)\_{i=1}^{m}$$, $$\psi=(y^j)\_{j=1}^n$$이라 하자. 그럼 마찬가지로 tangent space $$T_pM$$, $$T_{F(p)}N$$의 basis는 각각
+더 일반적으로, $$M,N$$이 각각 $$m,n$$차원의 manifold이고 $$F:M\rightarrow N$$이 임의의 $$C^\infty$$ 함수라 하자. 그럼 고정된 $$p\in M$$에 대하여, $$p$$를 포함하는 coordinate system $$(U,\varphi)$$, 그리고 $$F(U)$$를 포함하는 coordinate system $$(V,\psi)$$가 존재하여 $$\psi\circ F\circ\varphi^{-1}$$이 $$C^\infty$$이다. 이제 $$\varphi=(x^i)_{i=1}^{m}$$, $$\psi=(y^j)_{j=1}^n$$이라 하자. 그럼 마찬가지로 tangent space $$T_pM$$, $$T_{F(p)}N$$의 basis는 각각
 
 $$\frac{\partial}{\partial x^1}\bigg|_p,\cdots,\frac{\partial}{\partial x^m}\bigg|_p,\quad\text{and}\quad\frac{\partial}{\partial y^1}\bigg|_{F(p)},\cdots\frac{\partial}{\partial y^n}\bigg|_{F(p)}$$
 

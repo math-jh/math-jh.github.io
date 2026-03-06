@@ -19,11 +19,11 @@ weight: 106
 
 ## 등급환
 
-Index set $$I$$가 commutative monoid일 경우, 우리는 ablian group들의 family $$(A\_i)\_{i\in I}$$들의 direct sum $$\bigoplus\_{i\in I} A\_i$$를 *graded abelian group*이라 부르기로 하였다. 당시에는 $$A\_i$$ 위에 어떠한 조건도 없었기 때문에 이는 별로 흥미로운 정의가 아니었으나, 이제는 $$A\_i$$ 위에 곱셈구조가 더해져 있으므로 이 정의가 더 의미를 갖게 된다. 
+Index set $$I$$가 commutative monoid일 경우, 우리는 ablian group들의 family $$(A_i)_{i\in I}$$들의 direct sum $$\bigoplus_{i\in I} A_i$$를 *graded abelian group*이라 부르기로 하였다. 당시에는 $$A_i$$ 위에 어떠한 조건도 없었기 때문에 이는 별로 흥미로운 정의가 아니었으나, 이제는 $$A_i$$ 위에 곱셈구조가 더해져 있으므로 이 정의가 더 의미를 갖게 된다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Commutative monoid $$I$$와 $$I$$-indexed family of abelian groups $$(A\_i)\_{i\in I}$$가 주어졌다 하자. 만일 $$\bigoplus\_{i\in I} A\_i$$ 위에 정의된 곱셈구조가 이를 ring으로 만들고, 추가적으로 다음 조건
+<ins id="def1">**정의 1**</ins> Commutative monoid $$I$$와 $$I$$-indexed family of abelian groups $$(A_i)_{i\in I}$$가 주어졌다 하자. 만일 $$\bigoplus_{i\in I} A_i$$ 위에 정의된 곱셈구조가 이를 ring으로 만들고, 추가적으로 다음 조건
 
 $$A_i A_j\subseteq A_{i+j}\qquad\text{for all $$i,j\in I$$}$$
 
@@ -35,13 +35,13 @@ $$A_i A_j\subseteq A_{i+j}\qquad\text{for all $$i,j\in I$$}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 만일 $$I$$의 임의의 원소가 cancellable이고 $$\bigoplus\_{i\in I} A\_i$$가 graded ring이라 하자. 그럼 $$A_0$$은 $$A$$의 subring이다. 
+<ins id="prop2">**명제 2**</ins> 만일 $$I$$의 임의의 원소가 cancellable이고 $$\bigoplus_{i\in I} A_i$$가 graded ring이라 하자. 그럼 $$A_0$$은 $$A$$의 subring이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$A_0A_0\subseteq A_0$$으로부터 $$A_0$$이 곱셈에 대해 닫혀있음은 자명하다. 따라서 $$A=\bigoplus A\_i$$의 곱셈에 대한 항등원 $$1$$이 $$A_0$$에 속함을 보이면 충분하다. $$1=\sum\_{i\in I} \epsilon_i$$라 하자. 그럼 임의의 $$\alpha\in A\_j$$에 대하여, 
+$$A_0A_0\subseteq A_0$$으로부터 $$A_0$$이 곱셈에 대해 닫혀있음은 자명하다. 따라서 $$A=\bigoplus A_i$$의 곱셈에 대한 항등원 $$1$$이 $$A_0$$에 속함을 보이면 충분하다. $$1=\sum_{i\in I} \epsilon_i$$라 하자. 그럼 임의의 $$\alpha\in A_j$$에 대하여, 
 
 $$\alpha=1\alpha=\sum_{i\in I} \epsilon_i\alpha\in A_j$$
 
@@ -97,7 +97,7 @@ $$\alpha_n\x^n +\cdots+\alpha_1\x+\alpha_0\quad \mapsto\quad \alpha_n+\cdots+\al
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> $$I$$-graded ring $$A=\bigoplus\_{i\in I} A\_i$$와 $$A$$의 ideal $$\mathfrak{a}$$에 대하여 다음이 모두 동치이다. 
+<ins id="prop6">**명제 6**</ins> $$I$$-graded ring $$A=\bigoplus_{i\in I} A_i$$와 $$A$$의 ideal $$\mathfrak{a}$$에 대하여 다음이 모두 동치이다. 
 
 1. $$\mathfrak{a}$$는 $$\mathfrak{a}\cap A_i$$들의 합이다.
 2. $$\mathfrak{a}$$의 임의의 원소를 homogeneous element로 분해하면, 각각의 원소들도 모두 $$\mathfrak{a}$$에 속한다. 

@@ -99,11 +99,11 @@ $$\coker(d_n^A)\rightarrow\coker(d_n^B)\rightarrow\coker(d_n^C)\rightarrow 0$$
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 두 chain complex $$C_\bullet$$, $$D_\bullet$$이 주어졌다 하자. 그럼 $$C_\bullet$$과 $$D_\bullet$$이 *isomorphic*하다는 것은 임의의 두 chain map $$f:C_\bullet\rightarrow D_\bullet$$, $$g:D_\bullet\rightarrow C_\bullet$$이 존재하여 $$fg=\id\_D$$이고 $$gf=\id\_C$$인 것이다. 이 때, $$f,g$$를 두 chain complex 사이의 *isomorphism*이라 부른다.
+<ins id="def3">**정의 3**</ins> 두 chain complex $$C_\bullet$$, $$D_\bullet$$이 주어졌다 하자. 그럼 $$C_\bullet$$과 $$D_\bullet$$이 *isomorphic*하다는 것은 임의의 두 chain map $$f:C_\bullet\rightarrow D_\bullet$$, $$g:D_\bullet\rightarrow C_\bullet$$이 존재하여 $$fg=\id_D$$이고 $$gf=\id_C$$인 것이다. 이 때, $$f,g$$를 두 chain complex 사이의 *isomorphism*이라 부른다.
 
 </div>
 
-이는 곧, 각각의 $$f_n$$들이 모두 isomorphism인 chain map $$(f\_n)\_{n\in\mathbb{Z}}$$이 존재한다는 것과 동치이다.
+이는 곧, 각각의 $$f_n$$들이 모두 isomorphism인 chain map $$(f_n)_{n\in\mathbb{Z}}$$이 존재한다는 것과 동치이다.
 
 한편 호몰로지 대수학에서 우리가 사용할 수 있는 도구는 호몰로지 뿐이므로, 다음과 같이 동형사상의 개념을 약화시킬 수 있다.
 
@@ -159,7 +159,7 @@ $$f_n(a)-g_n(a)=d_{n+1}^D)(h_n(a))\in\im(d_{n+1}^D)$$
 
 </details>
 
-만일 어떤 chain map $$f:C\rightarrow D$$에 대하여, 적당한 chain map $$g:D\rightarrow C$$가 존재하여 $$gf$$가 $$\id\_C$$와 homotopic하고, $$fg$$가 $$\id\_D$$와 homotopic하다면 $$f$$를 *chain homotopy equivalence*라 부른다. 
+만일 어떤 chain map $$f:C\rightarrow D$$에 대하여, 적당한 chain map $$g:D\rightarrow C$$가 존재하여 $$gf$$가 $$\id_C$$와 homotopic하고, $$fg$$가 $$\id_D$$와 homotopic하다면 $$f$$를 *chain homotopy equivalence*라 부른다. 
 
 ## Homotopy category
 
@@ -171,9 +171,9 @@ $$f_n(a)-g_n(a)=d_{n+1}^D)(h_n(a))\in\im(d_{n+1}^D)$$
 
 </div>
 
-이를 통해 $$\Hom\_{\mathbf{Ch}(\mathcal{C})}(C\_\bullet,D\_\bullet)$$ 위에 동치관계를 정의할 수 있다. 이 동치관계에 의해 생긴 quotient set을 $$\Hom\_{\mathbf{K}(\mathcal{C})}(C\_\bullet,D\_\bullet)$$으로 정의하자. 
+이를 통해 $$\Hom_{\mathbf{Ch}(\mathcal{C})}(C_\bullet,D_\bullet)$$ 위에 동치관계를 정의할 수 있다. 이 동치관계에 의해 생긴 quotient set을 $$\Hom_{\mathbf{K}(\mathcal{C})}(C_\bullet,D_\bullet)$$으로 정의하자. 
 
-$$\mathbf{K}(\mathcal{C})$$는 $$\mathbf{Ch}(\mathcal{C})$$와 동일한 object를 갖고, 이들 사이의 morphism들의 집합은 위와 같이 정의된 $$\Hom\_{\mathbf{K}(\mathcal{C})}$$와 같고, 이 집합이 abelian group의 구조를 갖는다는 것을 확인할 수 있다. 
+$$\mathbf{K}(\mathcal{C})$$는 $$\mathbf{Ch}(\mathcal{C})$$와 동일한 object를 갖고, 이들 사이의 morphism들의 집합은 위와 같이 정의된 $$\Hom_{\mathbf{K}(\mathcal{C})}$$와 같고, 이 집합이 abelian group의 구조를 갖는다는 것을 확인할 수 있다. 
 
 두 homotopic chain map $$f,g:C\rightarrow D$$가 주어졌다 하자. 임의의 $$u:B\rightarrow C$$, $$v:D\rightarrow E$$에 대하여 두 map $$vfu$$와 $$vgu$$를 생각하자. 다음 diagram
 

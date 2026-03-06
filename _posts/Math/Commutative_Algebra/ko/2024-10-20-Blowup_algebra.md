@@ -58,7 +58,7 @@ $$\tilde{a}'\tilde{b}'=\tilde{a}\tilde{b}+y\tilde{a}+x\tilde{b}+xy$$
 
 $$M=M_0\supseteq M_1\supseteq\cdots$$
 
-이 *$$\mathfrak{a}$$-filtration<sub>$$I$$-여과</sub>*라는 것은 모든 $$k$$에 대하여 $$\mathfrak{a}M_k\subseteq M_{k+1}$$이 성립하는 것이다. 추가로 만일 어떠한 $$n$$이 존재하여 $$k>n$$일 때마다 $$\mathfrak{a}M\_k=M\_{k+1}$$이 성립하도록 할 수 있으면 이 filtration이 *$$\mathfrak{a}$$-stable<sub>$$I$$-안정적 여과</sub>*이라 한다. 
+이 *$$\mathfrak{a}$$-filtration<sub>$$I$$-여과</sub>*라는 것은 모든 $$k$$에 대하여 $$\mathfrak{a}M_k\subseteq M_{k+1}$$이 성립하는 것이다. 추가로 만일 어떠한 $$n$$이 존재하여 $$k>n$$일 때마다 $$\mathfrak{a}M_k=M_{k+1}$$이 성립하도록 할 수 있으면 이 filtration이 *$$\mathfrak{a}$$-stable<sub>$$I$$-안정적 여과</sub>*이라 한다. 
 
 이제 임의의 $$\mathfrak{a}$$-filtration 
 

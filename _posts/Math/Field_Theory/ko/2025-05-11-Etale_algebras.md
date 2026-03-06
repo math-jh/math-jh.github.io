@@ -50,7 +50,7 @@ $$[A_{(\mathbb{L})}:\mathbb{L}]=\dim_\mathbb{L}A_{(\mathbb{L})}=\dim_\mathbb{L} 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-즉, $$\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$$의 임의의 유한한 부분집합 $$\\{u_1,\ldots, u_n\\}$$이 반드시 linearly independent임을 보이면 충분하다. $$n$$에 대한 귀납법을 사용한다. $$n=0$$인 경우는 자명하므로, $$n \geq 1$$이라고 하자.
+즉, $$\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$$의 임의의 유한한 부분집합 $$\{u_1,\ldots, u_n\}$$이 반드시 linearly independent임을 보이면 충분하다. $$n$$에 대한 귀납법을 사용한다. $$n=0$$인 경우는 자명하므로, $$n \geq 1$$이라고 하자.
 
 $$\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$$의 원소들 $$u_1,\ldots, u_n$$에 대하여, $$\mathbb{L}$$의 원소들 $$\alpha_1,\ldots,\alpha_n$$이 다음의 식
 
@@ -88,7 +88,7 @@ $$\lvert\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})\rvert\leq \dim_\mathbb{L}\Hom_\ma
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Monoid algebra $$A=L\Gamma$$를 생각하고, canonical basis $$(e\_\gamma)\_{\gamma\in\Gamma}$$를 생각하자. 
+Monoid algebra $$A=L\Gamma$$를 생각하고, canonical basis $$(e_\gamma)_{\gamma\in\Gamma}$$를 생각하자. 
 
 그럼 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras)의 일반화를 통해 $$X$$와 $$\Hom_\mathbb{L}(A,\mathbb{L})$$ 사이의 bijection이 존재하므로 주장은 [정리 1](#thm1)로부터 바로 따라나온다. 
 
@@ -128,7 +128,7 @@ $$\bigl((u_1(x),\cdots, u_n(x)), (\alpha_1,\ldots, \alpha_n)\bigr) \mapsto \sum_
 
 이제 다항식 $$g \in \mathbb{L}[\y_1,\ldots, \y_n}$$을 다음의 식
 
-$$g(\y_1, \ldots, \_n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y'_j \right)$$
+$$g(\y_1, \ldots, _n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y'_j \right)$$
 
 으로 정의하자. 여기에 임의의 원소들 $$y_i\in \mathbb{K}$$들을 대입하고, $$x=\sum_{i=1}^n a_iy_i$$라 하면 
 
@@ -192,7 +192,7 @@ $$\lvert \Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})\rvert \leq [A:\mathbb{K}]$$
 
 우리는 이미 $$\dim_\mathbb{L}\Hom_\mathbb{K}(A,\mathbb{L})=\dim_\mathbb{K}A$$임을 알고 있으며, [정리 1](#thm1)에 의해 $$\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$$는 $$\Hom_\mathbb{K}(A,\mathbb{L})$$의 free subset임을 안다. 따라서, 주장의 부등식이 성립하는 것이 자명하며, 등호는 오직 $$\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$$가 $$\Hom_\mathbb{K}(A,\mathbb{L})$$의 basis일 때 성립한다. 
 
-한편 $$\mathbb{L}$$-vector space isomorphism $$\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$$는 부분집합 $$\Hom_\Alg{\mathbb{K}}(A, \mathbb{L})$$을 algebra homomorphism $$A_{(\mathbb{L})} \rightarrow \mathbb{L}$$들의 집합 $$\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})$$으로 보낸다. 이제 [명제 6](#prop6)의 셋째 동치조건에 의하여 이 집합 $$\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})이 $$(A\_{(\mathbb{L})})^\ast$$를 생성하는 것이 $$A$$가 $$\mathbb{L}$$에 의해 diagonalize되는 것과 동치이므로 원하는 결과를 얻는다.
+한편 $$\mathbb{L}$$-vector space isomorphism $$\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$$는 부분집합 $$\Hom_\Alg{\mathbb{K}}(A, \mathbb{L})$$을 algebra homomorphism $$A_{(\mathbb{L})} \rightarrow \mathbb{L}$$들의 집합 $$\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})$$으로 보낸다. 이제 [명제 6](#prop6)의 셋째 동치조건에 의하여 이 집합 $$\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})이 $$(A_{(\mathbb{L})})^\ast$$를 생성하는 것이 $$A$$가 $$\mathbb{L}$$에 의해 diagonalize되는 것과 동치이므로 원하는 결과를 얻는다.
 
 </details>
 
@@ -230,9 +230,9 @@ $$\mathbb{K}^n$$이 오직 유한개의 subalgebra와 ideal만을 가지며, 이
 
 $$\mathbb{K}^n$$의 canonical basis를 $$(e_1, \dots, e_n)$$이라 하고, $$\mathbb{K}^n$$의 subalgebra $$A$$에 대하여 projection map들 $$\mathbb{K}^n \rightarrow \mathbb{K}$$를 $$A$$로 restrict한 것들을 $$v_1,\ldots, v_n$$이라 하자. 그럼 이들의 kernel의 교집합은 $$0$$이므로, $$v_i$$들은 ($$\mathbb{K}$$-벡터공간으로서) $$A^\ast$$를 생성하며 따라서 $$A$$는 diagonalizable이다. 
 
-따라서 $$A$$의 임의의 subalgebra 또한 diagonalizable이므로, 우리는 $$A$$의 임의의 subalgebra가 주어질 때마다 [명제 6](#prop6)의 둘째 조건을 만족하는 basis를 찾을 수 있어야만 한다. 그런데 $$\mathbb{K}^n$$의 idempotent들은 정확히 $$\\{1,\ldots, n\\}$$의 부분집합 $$I$$에 대하여 $$e_I=\sum_{i\in I} e_i$$의 꼴로 나타나는 것들 뿐이고, 이들은 $$e_Ie_J=e_{I\cap J}$$를 만족한다. 즉, 둘째 조건을 만족하는 idempotent들의 쌍은 많아봐야 $$\\{1,\ldots, n\\}$$의 partition의 개수만큼이고 따라서 $$A$$의 임의의 subalgebra는 유한히 많다. 
+따라서 $$A$$의 임의의 subalgebra 또한 diagonalizable이므로, 우리는 $$A$$의 임의의 subalgebra가 주어질 때마다 [명제 6](#prop6)의 둘째 조건을 만족하는 basis를 찾을 수 있어야만 한다. 그런데 $$\mathbb{K}^n$$의 idempotent들은 정확히 $$\{1,\ldots, n\}$$의 부분집합 $$I$$에 대하여 $$e_I=\sum_{i\in I} e_i$$의 꼴로 나타나는 것들 뿐이고, 이들은 $$e_Ie_J=e_{I\cap J}$$를 만족한다. 즉, 둘째 조건을 만족하는 idempotent들의 쌍은 많아봐야 $$\{1,\ldots, n\}$$의 partition의 개수만큼이고 따라서 $$A$$의 임의의 subalgebra는 유한히 많다. 
 
-비슷하게, $$\mathfrak{a}_I$$를 $$(e_i)\_{i\in I}$$들을 basis로 갖는 $$\mathbb{K}$$의 부분공간이라 하면 ideal의 유한성을 보일 수 있으며 $$\mathbb{K}^n/\mathfrak{a}_I$$의 diagonalizability 또한 [명제 6](#prop6)으로 보일 수 있다.
+비슷하게, $$\mathfrak{a}_I$$를 $$(e_i)_{i\in I}$$들을 basis로 갖는 $$\mathbb{K}$$의 부분공간이라 하면 ideal의 유한성을 보일 수 있으며 $$\mathbb{K}^n/\mathfrak{a}_I$$의 diagonalizability 또한 [명제 6](#prop6)으로 보일 수 있다.
 
 </details>
 

@@ -35,11 +35,11 @@ Preorder relation $$(R,A,A)$$을 생각하고, 임의의 부분집합 $$A'\subse
 
 </details>
 
-직관적으로 생각하여 이 관계는 $$\leq\_R$$을 $$A'$$로 제한한 것과 같다. 약간의 표기법의 남용을 통해 이 관계 또한 $$\leq\_R$$로 적는다.
+직관적으로 생각하여 이 관계는 $$\leq_R$$을 $$A'$$로 제한한 것과 같다. 약간의 표기법의 남용을 통해 이 관계 또한 $$\leq_R$$로 적는다.
 
 ## 원순서관계의 곱
 
-임의의 index set $$I$$에 대하여, preorder relation들 $$(R\_i,A\_i,A\_i)$$이 주어졌다 하자. 그럼 곱집합 $$\prod\_{i\in I} A_i$$의 임의의 두 원소 $$x=(x_i)\_{i\in I}$$와 $$y=(y_i)_{i\in I}$$에 대하여 다음과 같은 관계
+임의의 index set $$I$$에 대하여, preorder relation들 $$(R_i,A_i,A_i)$$이 주어졌다 하자. 그럼 곱집합 $$\prod_{i\in I} A_i$$의 임의의 두 원소 $$x=(x_i)_{i\in I}$$와 $$y=(y_i)_{i\in I}$$에 대하여 다음과 같은 관계
 
 $$x\leq y\iff \forall i((i\in I)\implies(x_i\leq_{\tiny R_i} y_i))$$
 
@@ -53,13 +53,13 @@ $$x\leq y\iff \forall i((i\in I)\implies(x_i\leq_{\tiny R_i} y_i))$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $$(x\_i)\in \prod A\_i$$에 대하여, $$x\_i\leq_{\tiny R_i} x\_i$$가 모든 $$i\in I$$에 대해 성립하므로 $$(x\_i)\leq (x\_i)$$이다.
+임의의 $$(x_i)\in \prod A_i$$에 대하여, $$x_i\leq_{\tiny R_i} x_i$$가 모든 $$i\in I$$에 대해 성립하므로 $$(x_i)\leq (x_i)$$이다.
 
-이제 $$(x\_i)\leq (y\_i)$$이고 $$(y\_i)\leq (z\_i)$$라 하자. 그럼 모든 $$i\in I$$에 대하여,
+이제 $$(x_i)\leq (y_i)$$이고 $$(y_i)\leq (z_i)$$라 하자. 그럼 모든 $$i\in I$$에 대하여,
 
 $$x_i\leq y_i\leq z_i\implies x_i\leq z_i$$
 
-가 성립하므로 $$(x\_i)\leq (z\_i)$$이다.
+가 성립하므로 $$(x_i)\leq (z_i)$$이다.
 
 </details>
 
@@ -77,11 +77,11 @@ $$x_i\leq y_i\leq z_i\implies x_i\leq z_i$$
 
 $$f< g\iff\forall x\bigl((x\in A)\implies (f(x)<_{\tiny R}g(x))\bigr)$$
 
-로 정의되는 관계와는 <em_ko>다르다</em_ko>. $$f&lt;g$$는 <em_ko>하나의</em_ko> $$y\in A$$에 대해서만 $$f(y)<\_{\tiny R} g(y)$$이고. 나머지 모든 $$x\in A$$에 대해서는 $$f(x)\leq\_{\tiny R} g(x)$$여도 성립한다.
+로 정의되는 관계와는 <em_ko>다르다</em_ko>. $$f&lt;g$$는 <em_ko>하나의</em_ko> $$y\in A$$에 대해서만 $$f(y)<_{\tiny R} g(y)$$이고. 나머지 모든 $$x\in A$$에 대해서는 $$f(x)\leq_{\tiny R} g(x)$$여도 성립한다.
 
 ## 단조함수
 
-<ins id="def4">**정의 4**</ins> Preorder $$R,R'$$가 주어진 집합 $$A$$와 $$A'$$를 생각하자. 함수 $$f:A\rightarrow A'$$가 *증가함수<sub>increasing function</sub>*이라는 것은 $$x\leq\_{\tiny R} y\implies f(x)\leq\_{\tiny R'} f(y)$$가 항상 성립하는 것이다. 만약 $$x\leq\_{\tiny R}y\implies f(y)\leq\_{\tiny R'} f(x)$$가 항상 성립한다면, 이 함수는 *감소함수<sub>decreasing function</sub>*라 불린다. 증가함수와 감소함수를 통틀어 *단조함수<sub>monotone function</sub>*라 부른다.
+<ins id="def4">**정의 4**</ins> Preorder $$R,R'$$가 주어진 집합 $$A$$와 $$A'$$를 생각하자. 함수 $$f:A\rightarrow A'$$가 *증가함수<sub>increasing function</sub>*이라는 것은 $$x\leq_{\tiny R} y\implies f(x)\leq_{\tiny R'} f(y)$$가 항상 성립하는 것이다. 만약 $$x\leq_{\tiny R}y\implies f(y)\leq_{\tiny R'} f(x)$$가 항상 성립한다면, 이 함수는 *감소함수<sub>decreasing function</sub>*라 불린다. 증가함수와 감소함수를 통틀어 *단조함수<sub>monotone function</sub>*라 부른다.
 {: .definition}
 
 <ins id="rmk1">**참고**</ins> 임의의 상수함수는 증가함수인 동시에 감소함수이다. 그러나 이 역이 성립하는 것은 아니다. $$A$$가 하나 이상의 원소를 갖는 집합이라 하고. 이 위에 정의된 order relation $$=$$를 생각하자. 그럼 $$A$$에서 $$A$$로의 항등함수는 증가함수인 동시에 감소함수지만 상수함수는 아니다.
@@ -89,7 +89,7 @@ $$f< g\iff\forall x\bigl((x\in A)\implies (f(x)<_{\tiny R}g(x))\bigr)$$
 
 그리고, $$\leq$$를 $$&lt;$$로 바꾸면 다음 정의를 얻는다.
 
-<ins id="def5">**정의 5**</ins> Strict order $$S,S'$$가 주어진 집합 $$A$$와 $$A'$$를 생각하자. 함수 $$f:A\rightarrow A'$$가 *순증가함수<sub>strictly increasing function</sub>*라는 것은 $$x <\_{\tiny S} y\implies f(x) <\_{\tiny S'} f(y)$$가 항상 참인 것이고, *순감소함수<sub>strictly decreasing function</sub>*라는 것은 $$x <\_{\tiny S} y\implies f(y)<\_{\tiny S'}f(x)$$가 항상 성립하는 것이다. 순증가함수, 순감소함수들을 통틀어 *순단조함수<sub>strictly monotone function</sub>*라 한다.
+<ins id="def5">**정의 5**</ins> Strict order $$S,S'$$가 주어진 집합 $$A$$와 $$A'$$를 생각하자. 함수 $$f:A\rightarrow A'$$가 *순증가함수<sub>strictly increasing function</sub>*라는 것은 $$x <_{\tiny S} y\implies f(x) <_{\tiny S'} f(y)$$가 항상 참인 것이고, *순감소함수<sub>strictly decreasing function</sub>*라는 것은 $$x <_{\tiny S} y\implies f(y)<_{\tiny S'}f(x)$$가 항상 성립하는 것이다. 순증가함수, 순감소함수들을 통틀어 *순단조함수<sub>strictly monotone function</sub>*라 한다.
 {: .definition}
 
 <div class="remark" markdown="1">

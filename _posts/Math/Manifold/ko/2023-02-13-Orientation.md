@@ -49,7 +49,7 @@ $$\bigwedge\nolimits^n(L):\bigwedge\nolimits^n(V)\rightarrow\bigwedge\nolimits^n
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$M$$이 $$m$$차원의 connected manifold라 하자. 이 때, $$M$$이 *orientable*이라는 것은 $$\bigwedge\nolimits^m(M)\setminus\\{0\\}$$이 두 개의 component를 갖는 것이고, 이 때 두 component중 하나를 택하는 것을 $$M$$의 *orientation*이라 부른다. 
+<ins id="def1">**정의 1**</ins> $$M$$이 $$m$$차원의 connected manifold라 하자. 이 때, $$M$$이 *orientable*이라는 것은 $$\bigwedge\nolimits^m(M)\setminus\{0\}$$이 두 개의 component를 갖는 것이고, 이 때 두 component중 하나를 택하는 것을 $$M$$의 *orientation*이라 부른다. 
 
 </div>
 

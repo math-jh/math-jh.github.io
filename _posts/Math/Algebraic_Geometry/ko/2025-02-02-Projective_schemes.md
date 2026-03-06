@@ -23,13 +23,13 @@ weight: 4
 
 [§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10)을 그대로 일반화하면 scheme으로서 $$\mathbb{P}^n$$을 정의하는 것 자체는 어렵지 않다. 하지만 이를 일반화하여 projective scheme을 정의하기 위해서는 $$\mathbb{P}^n$$을 직관적으로 이해하는 것이 도움이 되므로, 이를 조금 더 찬찬히 뜯어보자.
 
-우선 우리는 기존에 위상수학에서 정의하던 projective space를 간단히 살펴본다. 위상공간 $$\mathbb{P}^n$$을 만들기 위해 우리는 위상공간 $$\mathbb{R}^{n+1}\setminus \\{0\\}$$을 생각했다. 그럼 이 위에 다음의 동치관계
+우선 우리는 기존에 위상수학에서 정의하던 projective space를 간단히 살펴본다. 위상공간 $$\mathbb{P}^n$$을 만들기 위해 우리는 위상공간 $$\mathbb{R}^{n+1}\setminus \{0\}$$을 생각했다. 그럼 이 위에 다음의 동치관계
 
 $$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$$x_i=\lambda y_i$$ for some $$\lambda\neq 0$$, for all $$i$$}$$
 
-를 정의하면 projective space $$\mathbb{P}^n$$은 quotient space $$(\mathbb{R}^{n+1}\setminus \\{0\\})/{\sim}$$으로 정의되는 위상공간이며, $$(x_0,\ldots, x_n)$$을 포함하는 동치류를 표기의 편의를 위해 $$[x_0:x_1:\cdots:x_n]$$으로 표기한다. 
+를 정의하면 projective space $$\mathbb{P}^n$$은 quotient space $$(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$$으로 정의되는 위상공간이며, $$(x_0,\ldots, x_n)$$을 포함하는 동치류를 표기의 편의를 위해 $$[x_0:x_1:\cdots:x_n]$$으로 표기한다. 
 
-이 때, canonical projection $$\pi:\mathbb{R}^{n+1}\setminus\\{0\\}\rightarrow \mathbb{P}^n$$를 생각하자. 그럼 $$\mathbb{P}^n$$의 한 점 $$[x_0:x_1:\cdots:x_n]$$의 fiber는 그 정의에 의하여
+이 때, canonical projection $$\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$$를 생각하자. 그럼 $$\mathbb{P}^n$$의 한 점 $$[x_0:x_1:\cdots:x_n]$$의 fiber는 그 정의에 의하여
 
 $$\{(y_0,\ldots, y_n)\mid\text{$$x_i=\lambda y_i$$ for some $$\lambda\neq 0$$, for all $$i$$}\}$$
 
@@ -79,7 +79,7 @@ $$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $$k\neq i,j$$},\qquad\text{and}\qqua
 
 $$P_i=\Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
 
-를 생각하자. 그럼 $$P_i$$의 open subscheme들 $$P\_{ij}=D(\x\_{j/i})=(A^i)\_{\x\_{j/i}}$$과, 다음의 ring homomorphism
+를 생각하자. 그럼 $$P_i$$의 open subscheme들 $$P_{ij}=D(\x_{j/i})=(A^i)_{\x_{j/i}}$$과, 다음의 ring homomorphism
 
 $$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/\x_{i/j}\quad\text{for all $$k\neq i,j$$},\qquad\text{and}\qquad \x_{j/i}\mapsto 1/\x_{i/j}$$
 
@@ -87,7 +87,7 @@ $$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/
 
 ## 사영스킴
 
-현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $$U_i$$들이 $$\mathbb{P}^n$$의 open subscheme인 것은 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 결과이기는 하지만, 그 정의 자체로도 함수 $$\x_i$$가 $$0$$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $$\x_i$$가 $$\mathbb{P}^n$$ 위의 함수가 아니라는 데에 있다. 심지어 $$n=1$$인 경우만 보아도 우리는 $$\mathscr{O}\_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $$\mathbb{R}^{n+1}\setminus \\{0\\}$$의 한 점 $$(x_0,\ldots, x_n)$$을 받아 $$x_i$$를 내놓는 함수 $$\x_i: \mathbb{R}^{n+1}\setminus\\{0\\} \rightarrow \mathbb{R}$$은 $$\sim$$과 compatible하지 않고 따라서 $$\mathbb{P}^n$$ 위의 함수를 정의하지 않는다. 또 다른 예시로 $$\mathbb{R}^2\setminus\\{0\\}$$ 위에서 정의된 함수 $$f: \mathbb{R}^2\setminus\\{0\\} \rightarrow \mathbb{R}$$가 다음의 식
+현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $$U_i$$들이 $$\mathbb{P}^n$$의 open subscheme인 것은 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 결과이기는 하지만, 그 정의 자체로도 함수 $$\x_i$$가 $$0$$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $$\x_i$$가 $$\mathbb{P}^n$$ 위의 함수가 아니라는 데에 있다. 심지어 $$n=1$$인 경우만 보아도 우리는 $$\mathscr{O}_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $$\mathbb{R}^{n+1}\setminus \{0\}$$의 한 점 $$(x_0,\ldots, x_n)$$을 받아 $$x_i$$를 내놓는 함수 $$\x_i: \mathbb{R}^{n+1}\setminus\{0\} \rightarrow \mathbb{R}$$은 $$\sim$$과 compatible하지 않고 따라서 $$\mathbb{P}^n$$ 위의 함수를 정의하지 않는다. 또 다른 예시로 $$\mathbb{R}^2\setminus\{0\}$$ 위에서 정의된 함수 $$f: \mathbb{R}^2\setminus\{0\} \rightarrow \mathbb{R}$$가 다음의 식
 
 $$f(x_0,x_1)=x_0^2-x_1$$
 
@@ -154,13 +154,13 @@ $$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet\mid \mathfrak{a}\subseteq \
 <ins id="lem3">**보조정리 3**</ins> Graded ring $$A_\bullet$$에 대하여 다음이 성립한다.
 
 1. 임의의 homogeneous ideal $$\mathfrak{a},\mathfrak{b}$$에 대하여, $$Z_+(\mathfrak{a}\mathfrak{b})=Z_+(\mathfrak{a})\cup Z_+(\mathfrak{b})$$이다. 
-2. 임의의 homogeneous ideal들의 family $$\\{\mathfrak{a}\_i\\}$$에 대하여, $$Z_+(\sum \mathfrak{a}\_i)=\bigcap Z_+(\mathfrak{a}\_i)$$이 성립한다. 
+2. 임의의 homogeneous ideal들의 family $$\{\mathfrak{a}_i\}$$에 대하여, $$Z_+(\sum \mathfrak{a}_i)=\bigcap Z_+(\mathfrak{a}_i)$$이 성립한다. 
 3. 임의의 homogeneous ideal $$\mathfrak{a}$$에 대하여, $$Z_+(\sqrt{\mathfrak{a}})=Z_+(\mathfrak{a})$$이다. 
 4. 임의의 homogeneous ideal $$\mathfrak{a}$$에 대하여, $$Z_+(\mathfrak{a})=Z_+(\mathfrak{a}\cap A_+)$$이다. 
 
 </div>
 
-물론 위의 보조정리에서 등장하는 $$\mathfrak{a}\mathfrak{b}$$나 $$\sqrt{\mathfrak{a}}$$, $$\sum \mathfrak{a}\_i$$들은 homogeneous임이 자명하다. 그럼 첫째 결과부터 셋째 결과까지는 이미 스펙트럼에서 관찰한 결과들이며, 오직 넷째 결과만이 새롭다. 
+물론 위의 보조정리에서 등장하는 $$\mathfrak{a}\mathfrak{b}$$나 $$\sqrt{\mathfrak{a}}$$, $$\sum \mathfrak{a}_i$$들은 homogeneous임이 자명하다. 그럼 첫째 결과부터 셋째 결과까지는 이미 스펙트럼에서 관찰한 결과들이며, 오직 넷째 결과만이 새롭다. 
 
 <details class="proof--alone" markdown="1">
 <summary>보조정리 3의 증명</summary>
@@ -257,7 +257,7 @@ $$xy\in \mathfrak{p}\iff \frac{x^{\deg f}}{f^{\deg x}}\frac{y^{\deg f}}{f^{\deg 
 
 </details>
 
-그럼 이제 $$\Proj A\_\bullet$$에 scheme 구조를 주는 방법은 자명하다. 다음 보조정리의 증명은 [보조정리 8](#lem8)과 거의 유사하다. 
+그럼 이제 $$\Proj A_\bullet$$에 scheme 구조를 주는 방법은 자명하다. 다음 보조정리의 증명은 [보조정리 8](#lem8)과 거의 유사하다. 
 
 <div class="proposition" markdown="1">
 
@@ -281,7 +281,7 @@ $$D(f^{\deg g}/g^{\deg f})\cong \Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$
 
 </div>
 
-특히 $$\Proj A_\bullet$$은 locally ringed space이므로, 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 대하여 stalk $$\mathscr{O}\_{\Proj A\_\bullet,\mathfrak{p}}$$은 local ring이다. 그런데 어차피 $$\mathfrak{p}$$는 적당한 affine open neighborhood에 넣을 수 있으므로, 본질적으로 [§아핀스킴, ⁋보조정리 8](/ko/math/algebraic_geometry/affine_schemes#lem8)과 동일한 과정으로 다음을 보일 수 있다. 
+특히 $$\Proj A_\bullet$$은 locally ringed space이므로, 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 대하여 stalk $$\mathscr{O}_{\Proj A_\bullet,\mathfrak{p}}$$은 local ring이다. 그런데 어차피 $$\mathfrak{p}$$는 적당한 affine open neighborhood에 넣을 수 있으므로, 본질적으로 [§아핀스킴, ⁋보조정리 8](/ko/math/algebraic_geometry/affine_schemes#lem8)과 동일한 과정으로 다음을 보일 수 있다. 
 
 <div class="proposition" markdown="1">
 
@@ -293,7 +293,7 @@ $$\mathscr{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 
 </div>
 
-다소 주의할 것은 $$\Proj$$는 $$\Spec$$과 다르게, $$\bgr\_{\mathbb{N}\_{\geq 0}}\cRing^\op$$에서 $$\LRS$$로의 functor를 정의하지 않는다는 것이다. 이는 graded ring homomorphism $$\phi_\bullet:A_\bullet \rightarrow B_\bullet$$과 $$B$$의 임의의 homogeneous ideal $$\mathfrak{q}$$가 $$B_+$$를 포함하지 않더라도 그 inverse image $$\phi^{-1}(\mathfrak{q})$$는 $$A_+$$를 포함할 수도 있기 때문이다. 
+다소 주의할 것은 $$\Proj$$는 $$\Spec$$과 다르게, $$\bgr_{\mathbb{N}_{\geq 0}}\cRing^\op$$에서 $$\LRS$$로의 functor를 정의하지 않는다는 것이다. 이는 graded ring homomorphism $$\phi_\bullet:A_\bullet \rightarrow B_\bullet$$과 $$B$$의 임의의 homogeneous ideal $$\mathfrak{q}$$가 $$B_+$$를 포함하지 않더라도 그 inverse image $$\phi^{-1}(\mathfrak{q})$$는 $$A_+$$를 포함할 수도 있기 때문이다. 
 
 이제 마지막으로 우리는 맨 처음 motivation을 위해 살펴본 projective space를 대수기하의 언어로 (거의) 완전하게 옮겨본다.
 
