@@ -25,7 +25,7 @@ weight: 13
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 집합 $$A$$와 이를 정의역으로 갖는 함수 $$f$$가 주어졌다 하자. 그럼 $$x$$, $$y$$ 사이의 관계 <phrase>$$x$$, $$y\in A$$이고 $$f(x)=f(y)$$</phrase>는 $$A$$ 위에서의 동치관계다.
+<ins id="prop1">**명제 1**</ins> 집합 $$A$$와 이를 정의역으로 갖는 함수 $$f$$가 주어졌다 하자. 그럼 $$x$$, $$y$$ 사이의 관계 <phrase>$x,y\in A$이고 $f(x)=f(y)$</phrase>는 $$A$$ 위에서의 동치관계다.
 </div>
 
 <details class="proof" markdown="1">
@@ -63,7 +63,7 @@ weight: 13
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> $$R$$이 집합 $$A$$ 위에서의 동치관계이고, $$P$$가 $$R$$과 compatible한 단항관계라 하자. 그럼 <phrase>$$t\in A/R$$이고 어떤 $$x\in t$$가 존재하여 $$P(x)$$인 것</phrase>과 <phrase>$$t\in A/R$$이고 모든 $$x\in t$$에 대하여 $$P(x)$$인 것</phrase>이 서로 동치이다.
+<ins id="prop4">**명제 4**</ins> $$R$$이 집합 $$A$$ 위에서의 동치관계이고, $$P$$가 $$R$$과 compatible한 단항관계라 하자. 그럼 <phrase>$t\in A/R$이고 어떤 x\in t$가 존재하여 $P(x)$인 것</phrase>과 <phrase>$t\in A/R$이고 모든 $x\in t$에 대하여 $P(x)$인 것</phrase>이 서로 동치이다.
 
 </div>
 
@@ -92,7 +92,7 @@ weight: 13
 
 <cap>주어진 몫집합 (위쪽) 에서의 saturated subset (왼쪽)과 saturated가 아닌 부분집합 (오른쪽)</cap>
 
-위의 정의에 따르면, 어떤 집합 $$X$$가 $$R$$-saturated이기 위해서는 <phrase>$$x\in X$$라면 $$R(x)\subseteq X$$</phrase>가 반드시 성립해야 한다. 따라서 $$R$$-saturated인 부분집합 $$X$$는 어떠한 부분집합 $$B\subseteq A$$에 대하여 $$\bigcup_{x\in B}R(x)$$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
+위의 정의에 따르면, 어떤 집합 $$X$$가 $$R$$-saturated이기 위해서는 <phrase>$x\in X$라면 $R(x)\subseteq X$</phrase>가 반드시 성립해야 한다. 따라서 $$R$$-saturated인 부분집합 $$X$$는 어떠한 부분집합 $$B\subseteq A$$에 대하여 $$\bigcup_{x\in B}R(x)$$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
 
 1. 만일 $$(A_i)_{i\in I}$$가 $$R$$-saturated인 부분집합들의 family라면, $$\bigcup_{i\in I} A_i$$와 $$\bigcap_{i\in I} A_i$$도 마찬가지다.
 2. $$X\subseteq A$$가 $$R$$-saturated라면 $$A\setminus X$$도 그러하다..
@@ -192,8 +192,8 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 로 정의하자. $$u=(x,x'),v=(y,y'),w=(z,z')$$이 $$A\times A'$$의 원소들이라 하면,
 
 - $$u\sim_{\tiny S}u$$가 항상 성립하는 것은 자명하다. $$x\sim_{\tiny R}x$$이고 $$x'\sim_{\tiny R'}x'$$이기 때문이다.
-- $$u\sim_{\tiny S}v$$라면 <phrase>$$x\sim_{\tiny R}y$$이고 $$x'\sim_{\tiny R'}y'$$</phrase>이므로 <phrase>$$y\sim_{\tiny R}x$$이고 $$y'\sim_{\tiny R'}x'$$</phrase>이고, 따라서 $$v\sim_{\tiny S}u$$이다.
-- $$u\sim_{\tiny S}v$$이고 $$v\sim_{\tiny S}$$라 하자. 그럼 <phrase>$$x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$$</phrase>가 각각 성립한다. 이제 $$x\sim_{\tiny R}y$$와 $$y\sim_{\tiny R}z$$로부터 $$x\sim_{\tiny R}z$$이고, $$x'\sim_{\tiny R'}y'$$와 $$y'\sim_{\tiny R'}z'$$로부터 $$x'\sim_{\tiny R'}z'$$이다. 즉 $$u\sim_{\tiny S}w$$가 성립한다.
+- $$u\sim_{\tiny S}v$$라면 <phrase>$x\sim_{\tiny R}y$이고 $x'\sim_{\tiny R'}y'$</phrase>이므로 <phrase>$y\sim_{\tiny R}x$이고 $y'\sim_{\tiny R'}x'$</phrase>이고, 따라서 $v\sim_{\tiny S}u$이다.
+- $$u\sim_{\tiny S}v$$이고 $$v\sim_{\tiny S}$$라 하자. 그럼 <phrase>$x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$</phrase>가 각각 성립한다. 이제 $$x\sim_{\tiny R}y$$와 $$y\sim_{\tiny R}z$$로부터 $$x\sim_{\tiny R}z$$이고, $$x'\sim_{\tiny R'}y'$$와 $$y'\sim_{\tiny R'}z'$$로부터 $$x'\sim_{\tiny R'}z'$$이다. 즉 $$u\sim_{\tiny S}w$$가 성립한다.
 
 따라서 $$S$$는 동치관계가 된다. 이 동치관계를 $$R$$과 $$R'$$의 *곱<sub>product</sub>*이라 부르고 $$R\times R'$$로 적는다.
 
