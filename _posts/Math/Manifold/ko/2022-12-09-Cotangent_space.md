@@ -35,11 +35,11 @@ $$\mathcal{C}^\infty_p\supset\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 임의의 $$v\in T_pM$$가 주어졌다 하자. 이를 부분집합 $$\mathfrak{m}_p$$으로 restrict하면 $$v\|_{\mathfrak{m}_p}\in\Hom_\mathbb{R}(\mathfrak{m}_p,\mathbb{R})$$이 성립한다. 이제 $$v\|_{\mathfrak{m}_p}$$이 linear map $$\mathfrak{m}_p/\mathfrak{m}_p^2\rightarrow\mathbb{R}$$을 잘 정의한다는 것을 보이려면 $$\mathfrak{m}_p^2\subset\ker (v\|_{\mathfrak{m}_p})$$임을 보여야 한다. 적당한 index set $$I$$에 대하여, $$\mathfrak{m}_p$$가 $$\mathbf{f}_i$$들에 의해 생성되는 ideal이라 하자. 그럼 $$\mathfrak{m}_p^2$$은 $$\mathbf{f}_i\mathbf{f}_j$$들에 의하여 생성되는 ideal이다. 그런데
+우선 임의의 $$v\in T_pM$$가 주어졌다 하자. 이를 부분집합 $$\mathfrak{m}_p$$으로 restrict하면 $$v\vert_{\mathfrak{m}_p}\in\Hom_\mathbb{R}(\mathfrak{m}_p,\mathbb{R})$$이 성립한다. 이제 $$v\vert_{\mathfrak{m}_p}$$이 linear map $$\mathfrak{m}_p/\mathfrak{m}_p^2\rightarrow\mathbb{R}$$을 잘 정의한다는 것을 보이려면 $$\mathfrak{m}_p^2\subset\ker (v\vert_{\mathfrak{m}_p})$$임을 보여야 한다. 적당한 index set $$I$$에 대하여, $$\mathfrak{m}_p$$가 $$\mathbf{f}_i$$들에 의해 생성되는 ideal이라 하자. 그럼 $$\mathfrak{m}_p^2$$은 $$\mathbf{f}_i\mathbf{f}_j$$들에 의하여 생성되는 ideal이다. 그런데
 
 $$v(\mathbf{f}_i\mathbf{f}_j)=\mathbf{f}_i(p)v(\mathbf{f}_j)+\mathbf{f}_j(p)v(\mathbf{f}_i)=0$$
 
-이므로, $$v$$는 $$\mathfrak{m}_p^2$$의 임의의 generator를 항상 0으로 보내고, $$\mathfrak{m}_p^2\subset\ker(v\|_{\mathfrak{m}_p})$$이며, 따라서 임의의 $$v\in T_pM$$마다 적당한 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$의 원소를 대응시킬 수 있다. 이 대응이 $$\mathbb{R}$$-linear map이라는 것은 자명하다.
+이므로, $$v$$는 $$\mathfrak{m}_p^2$$의 임의의 generator를 항상 0으로 보내고, $$\mathfrak{m}_p^2\subset\ker(v\vert_{\mathfrak{m}_p})$$이며, 따라서 임의의 $$v\in T_pM$$마다 적당한 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$의 원소를 대응시킬 수 있다. 이 대응이 $$\mathbb{R}$$-linear map이라는 것은 자명하다.
 
 반대로 임의의 $$L\in(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$$이 주어졌다 하고, 이를 이용해 tangent vector $$v_L$$을 하나 만들자. Tangent vector는 $$C_p^\infty$$에서 $$\mathbb{R}$$로의 linear map으로서, $$v_L$$을 만든다는 것은 임의의 $$\mathbf{f}\in \mathcal{C}^\infty_p$$에 대하여 $$v_L(\mathbf{f})$$의 값을 정해주는 것과 같다. $$\mathbf{f(p)}$$를 함숫값 $$f(p)$$를 갖는 상수함수라 하면, $$\mathbf{f}-\mathbf{f(p)}$$는 $$\mathfrak{m}_p$$의 원소이고, 따라서 
 
@@ -130,7 +130,7 @@ $$\left(\frac{\partial}{\partial x^i}\bigg|_p\right)f=\frac{\partial(f\circ \var
 
 </div>
 
-물론 모든 tangent vector들은 방향미분들로 생각할 수 있지만, 이들 벡터들 $$\partial/\partial x^i$$들의 특별한 점은 이들이 <em_ko>정확히</em_ko> coordinate system이 정의해주는 좌표축과 평행한 방향의 미분들이라는 것이다. 
+물론 모든 tangent vector들은 방향미분들로 생각할 수 있지만, 이들 벡터들 $$\partial/\partial x^i$$들의 특별한 점은 이들이 <em-ko>정확히</em-ko> coordinate system이 정의해주는 좌표축과 평행한 방향의 미분들이라는 것이다. 
 
 이 $$m$$개의 tangent vector들은 앞서 말했듯 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$의 basis의 dual이므로, 이들이 basis를 이루는 것은 자명하다. 그러면, 임의의 $$v\in T_pM$$에 대해, $$v$$를 $$\partial/\partial x^i$$들의 linear combination으로 나타내는 방법 또한 유일하게 존재해야 할 것이다. 이는 다음의 식
 

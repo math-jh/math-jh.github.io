@@ -196,7 +196,7 @@ $$A \rightarrow A/\mathscr{I}_{Z_1/X}(A),\qquad A \rightarrow A/\mathscr{I}_{Z_2
 
 에 대응되며, 위의 조건을 만족하는 $$\varphi$$가 존재하는 것은 ring homomorphism $$A \rightarrow A/ \mathscr{I}_{Z_1/X}(A)$$이 $$A \rightarrow A/ \mathscr{I}_{Z_2/X}(A)$$로 factor through해야 하는 것과 같은 것이며 이것이 다시 $$\mathscr{I}_{Z_2/X}(A)\subseteq \mathscr{I}_{Z_1/X}(A)$$와 동치이기 때문이다. 
 
-Scheme $$X$$의 두 closed subscheme $$Z_1,Z_2$$에 대하여, closed embedding $$\varphi:Z_1 \rightarrow Z_2$$가 존재한다면 $$Z_1$$이 $$Z_2$$보다 <em_ko>작은</em_ko> closed subscheme인 것으로 생각하자. 
+Scheme $$X$$의 두 closed subscheme $$Z_1,Z_2$$에 대하여, closed embedding $$\varphi:Z_1 \rightarrow Z_2$$가 존재한다면 $$Z_1$$이 $$Z_2$$보다 <em-ko>작은</em-ko> closed subscheme인 것으로 생각하자. 
 
 <div class="definition" markdown="1">
 

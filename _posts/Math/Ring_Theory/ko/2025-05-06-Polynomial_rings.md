@@ -482,7 +482,7 @@ $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$$\alpha_\nu$$ n
 
 들의 모임이다. 이를 $$A[[\x_i]]_{i\in I}$$으로 적고, *ring of formal power series*라 부른다. 
 
-Formal power series들은 단항식의 <em_ko>무한한</em_ko> 합이라는 사실만 제외하면 다항식과 유사한 개념들을 정의할 수 있다. 가령 우리는 formal power series $$u$$의 degree $$p$$ 성분 $$u_p$$를 정의할 수 있다. 그러나 $$u$$의 (total) degree의 경우, 다항식이 아닌 한 원소들의 degree는 $$+\infty$$일 것이기 때문에 굳이 $$A[[\x_i]]_{i\in I}$$에서 이를 사용할 이유가 없다. 대신 임의의 formal power series $$u$$에 대하여, $$u$$의 *order* $$\omega(u)$$를 $$u_p\neq 0$$이도록 하는 가장 <em_ko>작은</em_ko> $$p$$로 정한다. 마찬가지로 $$\omega(0)=\infty$$라 놓으면 다음의 식
+Formal power series들은 단항식의 <em-ko>무한한</em-ko> 합이라는 사실만 제외하면 다항식과 유사한 개념들을 정의할 수 있다. 가령 우리는 formal power series $$u$$의 degree $$p$$ 성분 $$u_p$$를 정의할 수 있다. 그러나 $$u$$의 (total) degree의 경우, 다항식이 아닌 한 원소들의 degree는 $$+\infty$$일 것이기 때문에 굳이 $$A[[\x_i]]_{i\in I}$$에서 이를 사용할 이유가 없다. 대신 임의의 formal power series $$u$$에 대하여, $$u$$의 *order* $$\omega(u)$$를 $$u_p\neq 0$$이도록 하는 가장 <em-ko>작은</em-ko> $$p$$로 정한다. 마찬가지로 $$\omega(0)=\infty$$라 놓으면 다음의 식
 
 $$\omega(u+v)\geq \inf(\omega(u),\omega(v)),\quad\text{equality if $$\omega(u)\neq\omega(v))$$}$$
 

@@ -303,7 +303,7 @@ $$\mathscr{O}_{X,x}= \varinjlim_{V\ni x} \mathscr{O}_X(U)\cong \varinjlim_{U\sup
 
 $$\text{$$X$$ is $$P$$}\iff \text{$$\mathscr{O}_{X,x}$$ satisfies $$Q$$}$$
 
-로 주어졌을 때, 임의의 affine open subset $$U$$에 대하여 $$\mathscr{O}_X(U)$$가 $$Q$$를 만족한다는 것이 <em_ko>아니라</em_ko>, 임의의 affine open subset $$U$$와 원소 $$x\in U$$에 대하여 $$\mathscr{O}_{U,x}$$가 성질 $$Q$$를 만족하고 따라서 affine open subscheme $$U$$가 성질 $$P$$를 만족한다는 것이다. 
+로 주어졌을 때, 임의의 affine open subset $$U$$에 대하여 $$\mathscr{O}_X(U)$$가 $$Q$$를 만족한다는 것이 <em-ko>아니라</em-ko>, 임의의 affine open subset $$U$$와 원소 $$x\in U$$에 대하여 $$\mathscr{O}_{U,x}$$가 성질 $$Q$$를 만족하고 따라서 affine open subscheme $$U$$가 성질 $$P$$를 만족한다는 것이다. 
 
 가령 다음의 affine scheme
 

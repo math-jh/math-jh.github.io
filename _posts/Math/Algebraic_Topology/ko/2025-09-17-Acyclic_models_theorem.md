@@ -46,7 +46,7 @@ weight: 7
 
 예를 들어, standard $$n$$-simplex들 $$\Delta^n$$들의 모임 $$\mathcal{M}$$을 model들로 갖는 category with models $$(\Top, \mathcal{M})$$을 생각하자. 그럼 각각의 $$X\in \Top$$마다 singular $$n$$-simplex들의 chain complex $$C_\bullet(X)$$을 대응시키는 functor $$C_\bullet:\Top \rightarrow \Ab$$는 acyclic on $$\mathcal{M}$$인 동시에 free on $$\mathcal{M}$$이다.
 
-- $$C_\bullet$$이 acyclic on $$\mathcal{M}$$이라는 것은 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 결과이다. 여기에서 functor $$F_\bullet$$이 $$\mathcal{M}$$ 위에서 acyclic하다는 조건은 $$F_\bullet(X)$$의 $$0$$번째 호몰로지가 $$0$$일 것을 <em_ko>요구하지는 않는다</em_ko>는 것에 주의하자. 
+- $$C_\bullet$$이 acyclic on $$\mathcal{M}$$이라는 것은 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 결과이다. 여기에서 functor $$F_\bullet$$이 $$\mathcal{M}$$ 위에서 acyclic하다는 조건은 $$F_\bullet(X)$$의 $$0$$번째 호몰로지가 $$0$$일 것을 <em-ko>요구하지는 않는다</em-ko>는 것에 주의하자. 
 - $$C_\bullet$$이 free on $$\mathcal{M}$$이라는 것은 정확히 각각의 $$C_n(X)$$들이 $$\Delta^n \rightarrow X$$로 생성되는 free abelian group이므로, 즉 $$C_n(X)=\mathbb{Z}\Hom_\Top(\Delta^n,X)$$이므로 자명하다. 
 
 

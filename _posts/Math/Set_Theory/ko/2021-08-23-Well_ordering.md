@@ -61,11 +61,11 @@ $$\emptyset$$은 vacuous하게 ordinal이고, 모든 자연수들도 ordinal이 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선, $$S(\alpha)=\alpha\cup\{\alpha\}$$의 모든 원소는 $$S(\alpha)$$의 부분집합이다. 집합 $$\alpha$$에 들어있던 원소들은 $$\alpha$$를 포함하는 집합인 $$S(\alpha)$$에도 들어있을 것이고, 우리가 새로 추가한 <em_ko>원소</em_ko> $$\alpha$$는 정의에 의해 $$S(\alpha)$$의 부분집합이기도 하다.   
+우선, $$S(\alpha)=\alpha\cup\{\alpha\}$$의 모든 원소는 $$S(\alpha)$$의 부분집합이다. 집합 $$\alpha$$에 들어있던 원소들은 $$\alpha$$를 포함하는 집합인 $$S(\alpha)$$에도 들어있을 것이고, 우리가 새로 추가한 <em-ko>원소</em-ko> $$\alpha$$는 정의에 의해 $$S(\alpha)$$의 부분집합이기도 하다.   
 
 </details>
 
-다음 명제는 이렇게 successor funcion $$S$$를 도입하는 것보다 더더욱 일반적인 방법으로 <em_ko>더 큰</em_ko> ordinal을 만드는 방법을 보여준다. 
+다음 명제는 이렇게 successor funcion $$S$$를 도입하는 것보다 더더욱 일반적인 방법으로 <em-ko>더 큰</em-ko> ordinal을 만드는 방법을 보여준다. 
 
 <div class="proposition" markdown="1">
 

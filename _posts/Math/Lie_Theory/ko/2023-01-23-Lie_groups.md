@@ -55,7 +55,7 @@ $$S^1=\left\{z\in \mathbb{C}\mid \lvert z\rvert=1\right\}$$
 
 $$T^n=(S^1)^n$$
 
-는 Lie group이다. 예를 들어, $$T^2$$는 항등원 역할을 할 한 점과 그 점을 지나는 적도방향 대원, 이와 수직인 방향의 대원을 <em_ko>축</em_ko>으로 갖는 벡터공간처럼 행동하며, 이는 다음의 isomorphism
+는 Lie group이다. 예를 들어, $$T^2$$는 항등원 역할을 할 한 점과 그 점을 지나는 적도방향 대원, 이와 수직인 방향의 대원을 <em-ko>축</em-ko>으로 갖는 벡터공간처럼 행동하며, 이는 다음의 isomorphism
 
 $$\mathbb{R}/\mathbb{Z}\rightarrow S^1;\quad t\mapsto e^{2\pi i t}$$
 
@@ -127,7 +127,7 @@ $$d(L_g)\circ X=X\circ L_g$$
 
 $$\left(d(L_g)\right)(X_p)=X_{gp}$$
 
-이 항상 성립하는 것이다. 위의 식으로부터, $$G$$ 위에 정의된 left invariant인 벡터장 $$X$$를 명시하기 위해서는 <em_ko>오직 하나의 점</em_ko> $$p\in G$$에서의 값 $$X_p$$만 알면 충분하다는 것을 알 수 있으며, 당연하게도 가장 평범한 $$p$$의 선택은 $$G$$의 항등원 $$e$$이다. 또, 각 점에서의 $$X$$의 값이 이러한 방식으로 정의되었기 때문에, $$X$$가 left-invariant라는 사실이 $$X$$의 smoothness를 줄 것이라는 것도 추측할 수 있다. 
+이 항상 성립하는 것이다. 위의 식으로부터, $$G$$ 위에 정의된 left invariant인 벡터장 $$X$$를 명시하기 위해서는 <em-ko>오직 하나의 점</em-ko> $$p\in G$$에서의 값 $$X_p$$만 알면 충분하다는 것을 알 수 있으며, 당연하게도 가장 평범한 $$p$$의 선택은 $$G$$의 항등원 $$e$$이다. 또, 각 점에서의 $$X$$의 값이 이러한 방식으로 정의되었기 때문에, $$X$$가 left-invariant라는 사실이 $$X$$의 smoothness를 줄 것이라는 것도 추측할 수 있다. 
 
 바꿔말하면, $$G$$ 위에서 정의된 left-invariant vector field는 정확하게 $$G$$의 identity에서의 tangent space $$T_eG$$와 같은 것이다. 한편 [\[미분다양체\] §리 미분, ⁋정의 5](/ko/math/manifold/Lie_derivative#def5)에서 우리는 $$\mathfrak{X}(G)$$를 $$C^\infty(G)$$-algebra가 되도록 하는 연산 $$[-,-]$$를 정의했는데, 그렇다면 left-invariant vector field들의 모임이 이 연산에 대한 subalgebra가 되는지 또한 우리의 의문 중 하나이다. 우선 $$[-,-]$$를 일반화하는 다음의 정의부터 생각하자. 
 
@@ -226,7 +226,7 @@ $$\frac{d}{dt}\exp(tX)=X\exp(tX)=\exp(tX)X$$
 
 $$\exp(A)\exp(B)=\exp(A+B)$$
 
-은 성립하지 <em_ko>않는다</em_ko>. 그러나 만일 두 행렬 $$A,B$$가 commute한다면 이 식은 성립하고, 특히 다음의 계산
+은 성립하지 <em-ko>않는다</em-ko>. 그러나 만일 두 행렬 $$A,B$$가 commute한다면 이 식은 성립하고, 특히 다음의 계산
 
 $$\exp(tX)\exp(-tX)=\exp(tX-tX)=\exp(O)=I$$
 

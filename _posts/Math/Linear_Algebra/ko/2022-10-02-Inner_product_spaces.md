@@ -41,7 +41,7 @@ $$\langle v,v\rangle=\sum_{i=1}^n v_i^2\geq 0$$
 
 이고 등호는 오직 $$v=0$$일 때만 성립한다.
 
-한편, $$\mathbb{R}$$-벡터공간 위에 내적이 정의된다면, 가장 좋은 것 중 하나는 벡터의 <em_ko>크기</em_ko>가 잘 정의된다는 것이다.
+한편, $$\mathbb{R}$$-벡터공간 위에 내적이 정의된다면, 가장 좋은 것 중 하나는 벡터의 <em-ko>크기</em-ko>가 잘 정의된다는 것이다.
 
 <div class="definition" markdown="1">
 

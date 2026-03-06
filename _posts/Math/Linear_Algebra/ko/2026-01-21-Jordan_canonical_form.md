@@ -25,7 +25,7 @@ weight: 17
 
 $$E_\lambda(A)=\ker(A-\lambda I)$$
 
-이 <em_ko>너무 작은</em_ko> 것이다. 다음 보조정리는 이를 해결할만한 실마리를 준다. 
+이 <em-ko>너무 작은</em-ko> 것이다. 다음 보조정리는 이를 해결할만한 실마리를 준다. 
 
 <div class="proposition" markdown="1">
 
@@ -43,7 +43,7 @@ $$0=\ker L^0\subsetneq \ker L^1\subsetneq \ker L^2\subsetneq \cdots \subsetneq \
 
 $$L^{i+1}v=L(L^iv)=L(0)=0$$
 
-이므로 $$\ker L^i\subseteq \ker L^{i+1}$$인 것이 당연하다. 한편 $$V$$가 유한차원이므로 이 filtration은 언젠가는 증가하기를 멈춰야 한다. 우리가 보여야 할 것은 만일 $$\ker L^k=\ker L^{k+1}$$이라면, 이 이후의 항들은 <em_ko>모두</em_ko> $$\ker L^k$$와 같다는 것이다. 이를 위해, $$k$$가 $$\ker L^k=\ker L^{k+1}$$을 만족하는 정수 중 가장 작은 것이라 하자. 그럼 그 정의에 의하여 $$\ker L^k=\ker L^{k+1}$$이며, 우리는 이를 base step으로 삼아 귀납적으로 $$\ker L^k=\ker L^{k+j}$$가 모든 $$j$$에 대해 성립하는 것을 보일 수 있다. 즉, $$\ker L^k=\ker L^{k+j}$$가 성립함을 가정하고 $$\ker L^k=\ker L^{k+j+1}$$임을 보이자. 이를 위해서는 $$\ker L^{k+j+1}\subseteq \ker L^k$$임을 보이면 충분하다. 이제 임의의 $$v\in \ker L^{k+j+1}$$에 대하여, 우리는 $$Lv\in \ker L^{k+j}=\ker L^k$$임을 알고 있으므로 다음의 계산
+이므로 $$\ker L^i\subseteq \ker L^{i+1}$$인 것이 당연하다. 한편 $$V$$가 유한차원이므로 이 filtration은 언젠가는 증가하기를 멈춰야 한다. 우리가 보여야 할 것은 만일 $$\ker L^k=\ker L^{k+1}$$이라면, 이 이후의 항들은 <em-ko>모두</em-ko> $$\ker L^k$$와 같다는 것이다. 이를 위해, $$k$$가 $$\ker L^k=\ker L^{k+1}$$을 만족하는 정수 중 가장 작은 것이라 하자. 그럼 그 정의에 의하여 $$\ker L^k=\ker L^{k+1}$$이며, 우리는 이를 base step으로 삼아 귀납적으로 $$\ker L^k=\ker L^{k+j}$$가 모든 $$j$$에 대해 성립하는 것을 보일 수 있다. 즉, $$\ker L^k=\ker L^{k+j}$$가 성립함을 가정하고 $$\ker L^k=\ker L^{k+j+1}$$임을 보이자. 이를 위해서는 $$\ker L^{k+j+1}\subseteq \ker L^k$$임을 보이면 충분하다. 이제 임의의 $$v\in \ker L^{k+j+1}$$에 대하여, 우리는 $$Lv\in \ker L^{k+j}=\ker L^k$$임을 알고 있으므로 다음의 계산
 
 $$L^{k+1}v=L^k(Lv)=0\implies v\in \ker L^{k+1}$$
 

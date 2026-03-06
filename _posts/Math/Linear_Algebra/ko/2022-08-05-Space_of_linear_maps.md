@@ -23,7 +23,7 @@ weight: 10
 
 <div class="proposition" markdown="1">
 
-<ins id="thm1">**정리 1 (Extension by linearity)**</ins> 임의의 $$\mathbb{K}$$-벡터공간 $$V$$와 basis $$\mathcal{B}$$가 주어졌다 하자. 또 다른 $$\mathbb{K}$$-벡터공간 $$W$$에 대하여, <em_ko>함수</em_ko> $$g:\mathcal{B}\rightarrow W$$가 주어질 때마다, $$g=G\circ\iota$$이도록 하는 유일한 <em_ko>linear map</em_ko> $$G:V\rightarrow W$$가 존재한다.
+<ins id="thm1">**정리 1 (Extension by linearity)**</ins> 임의의 $$\mathbb{K}$$-벡터공간 $$V$$와 basis $$\mathcal{B}$$가 주어졌다 하자. 또 다른 $$\mathbb{K}$$-벡터공간 $$W$$에 대하여, <em-ko>함수</em-ko> $$g:\mathcal{B}\rightarrow W$$가 주어질 때마다, $$g=G\circ\iota$$이도록 하는 유일한 <em-ko>linear map</em-ko> $$G:V\rightarrow W$$가 존재한다.
 
 </div>
 
@@ -58,7 +58,7 @@ $$G(v)=\sum_{x\in\mathcal{B}} v_xg(x)$$
 
 $$\{\text{functions from $$\mathcal{B}$$ to $$W$$}\}\longleftrightarrow\{\text{linear maps from $$V$$ to $$W$$}\}$$
 
-즉 $$V$$에서 $$W$$로의 linear map은 $$L$$이 basis $$\mathcal{B}$$ 위에서 어떻게 행동하는지에 의해 완벽하게 결정되며, 만일 $$V$$가 유한차원이었다면 이는 linear map $$L$$이 오직 <em_ko>유한 개</em_ko>의 원소에서의 함수값에 의해서만 결정된다는 의미가 된다.
+즉 $$V$$에서 $$W$$로의 linear map은 $$L$$이 basis $$\mathcal{B}$$ 위에서 어떻게 행동하는지에 의해 완벽하게 결정되며, 만일 $$V$$가 유한차원이었다면 이는 linear map $$L$$이 오직 <em-ko>유한 개</em-ko>의 원소에서의 함수값에 의해서만 결정된다는 의미가 된다.
 
 특별히 공역 $$W$$ 또한 유한차원 $$\mathbb{K}$$-벡터공간이라 가정하고, $$V$$의 기저 $$\mathcal{B}=\{x_1,\ldots, x_n\}$$, 그리고 $$W$$의 기저 $$\mathcal{C}=\{y_1,\ldots,y_m\}$$를 고정하자. 그럼 앞선 논증에 의해 $$V$$에서 $$W$$로의 linear map $$L$$은 $$W$$의 $$n$$개의 벡터들
 
@@ -164,7 +164,7 @@ $$\begin{aligned}
 
 $$f_i^j(x)=\begin{cases}y_j&\text{if $$x=x_i$$}\\0&\text{otherwise}\end{cases}$$
 
-을 생각하자. 즉 $$f_i^j$$는 <em_ko>오직</em_ko> $$x_i$$ 하나만을 $$y_j$$로 보내고, 나머지는 모두 0으로 보내는 함수이다. 그럼 [정리 1](#thm1)에 의하여 $$f_i^j=B_i^j\circ\iota$$이도록 하는 linear map $$B_i^j$$가 유일하게 존재한다. 
+을 생각하자. 즉 $$f_i^j$$는 <em-ko>오직</em-ko> $$x_i$$ 하나만을 $$y_j$$로 보내고, 나머지는 모두 0으로 보내는 함수이다. 그럼 [정리 1](#thm1)에 의하여 $$f_i^j=B_i^j\circ\iota$$이도록 하는 linear map $$B_i^j$$가 유일하게 존재한다. 
 
 <div class="proposition" markdown="1">
 

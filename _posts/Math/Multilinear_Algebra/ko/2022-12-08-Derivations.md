@@ -74,7 +74,7 @@ $$d''(xx') = (dx)x' + \varepsilon(\delta, \deg(x))x(d'x')$$
 
     $$d(xy)=(dx)y+\varepsilon(\delta, \deg(x))x(dy)$$
 
-    을 만족하는 <em_ko>단일한</em_ko> $$d:E \rightarrow F$$를 $$E$$에서 $$F$$로의 $$\varepsilon$$-derivation이라 부른다. 
+    을 만족하는 <em-ko>단일한</em-ko> $$d:E \rightarrow F$$를 $$E$$에서 $$F$$로의 $$\varepsilon$$-derivation이라 부른다. 
 
 두 번째 경우를 motivation 삼아 우리는 표기의 편의상 $$d, d', d''$$를 모두 같은 문자 $$d$$로 통일하여 쓰기도 하며, 그럼 [정의 2](#def2)의 식은
 

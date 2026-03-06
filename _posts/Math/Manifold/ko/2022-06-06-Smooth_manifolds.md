@@ -112,7 +112,7 @@ $$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{
 
 </div>
 
-다만, [예시 4](#ex4)의 두 atlas는 서로 <em_ko>같은</em_ko> 미분구조를 주지는 않더라도, 서로 *diffeomorphic*한 미분구조를 준다. 
+다만, [예시 4](#ex4)의 두 atlas는 서로 <em-ko>같은</em-ko> 미분구조를 주지는 않더라도, 서로 *diffeomorphic*한 미분구조를 준다. 
 
 ## Smooth partition of unity
 

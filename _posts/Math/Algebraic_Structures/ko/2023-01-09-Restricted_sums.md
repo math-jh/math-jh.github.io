@@ -23,7 +23,7 @@ weight: 8
 
 그러나 [§군의 직접곱, ⁋보조정리 1](/ko/math/algebraic_structures/direct_products#lem1)과 같이 $$\Set$$에서의 coproduct $$\coprod G_i$$ 위에 group 구조를 주는 방법을 자명하게 찾는 것은 힘들어 보인다. ([\[집합론\], §집합의 합, ⁋명제 5](/ko/math/set_theory/sum_of_sets#prop5))
 
-이 글에서 우리는 우선 abelian group이 coproduct를 갖는 category임을 보인다. 다음 글에서는 이번 글과는 다른 방식을 통해 <em_ko>임의의</em_ko> group들에 대하여도 coproduct의 universal property를 만족하는 group이 존재함을 보인다.
+이 글에서 우리는 우선 abelian group이 coproduct를 갖는 category임을 보인다. 다음 글에서는 이번 글과는 다른 방식을 통해 <em-ko>임의의</em-ko> group들에 대하여도 coproduct의 universal property를 만족하는 group이 존재함을 보인다.
 
 ## Restricted sum
 
