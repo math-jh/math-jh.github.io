@@ -17,11 +17,11 @@ weight: 2
 
 ---
 
-[\[대수적 구조\]](/ko/algebraic_structures/)에서 우리는 임의의 ring $A$ 위에 정의된 $A$-module을 정의하고, 이에 대한 기본적인 성질들을 살펴보았다. 이제 우리는 (left) $A$-module들에 대한 성질을 더 살펴본다.
+[\[대수적 구조\]](/ko/algebraic_structures/)에서 우리는 임의의 ring $$A$$ 위에 정의된 $$A$$-module을 정의하고, 이에 대한 기본적인 성질들을 살펴보았다. 이제 우리는 (left) $$A$$-module들에 대한 성질을 더 살펴본다.
 
 ## 핵과 여핵
 
-임의의 $A$-linear map $u:M \rightarrow N$에 대하여, $u$가 injective인 것은 $\ker u=0$인 것과 동치이고, $u$가 surjective인 것은 $\coker u=0$인 것과 동치이다. 한편, category $\lMod{A}$는 bicomplete category이며, 이 때 $A$-module들의 family의 product는 direct product로, coproduct는 direct sum으로 주어졌다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 다음 식
+임의의 $$A$$-linear map $$u:M \rightarrow N$$에 대하여, $$u$$가 injective인 것은 $$\ker u=0$$인 것과 동치이고, $$u$$가 surjective인 것은 $$\coker u=0$$인 것과 동치이다. 한편, category $$\lMod{A}$$는 bicomplete category이며, 이 때 $$A$$-module들의 family의 product는 direct product로, coproduct는 direct sum으로 주어졌다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 다음 식
 
 $$\ker \prod u_i=\prod \ker u_i,\qquad \coker \bigoplus u_i=\bigoplus \coker u_i $$
 
@@ -31,11 +31,11 @@ $$\ker \bigoplus u_i=\bigoplus \ker u_i,\qquad \coker \prod u_i=\prod \coker u_i
 
 또한 얻게 된다. 
 
-비슷한 맥락에서 $\Hom$ functor와 $\otimes$ functor에 대한 성질을 다시 살펴볼 수 있으며, 여기에서 $\Hom$과 $\otimes$의 adjoint를 사용하게 된다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)과 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9))
+비슷한 맥락에서 $$\Hom$$ functor와 $$\otimes$$ functor에 대한 성질을 다시 살펴볼 수 있으며, 여기에서 $$\Hom$$과 $$\otimes$$의 adjoint를 사용하게 된다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)과 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9))
 
 ## 직접곱과 직합
 
-위의 adjunction을 사용하는 법을 살펴보기 위해 가장 기초적인 예시를 생각한다. 우선 $\Hom$과 $\bigoplus$, $\prod$의 관계를 살펴보자. 이를 위해 left $A$-module $M,N$과 left $A$-module들의 family $(M\_i)\_{i\in I}$, $(N\_j)\_{j\in J}$를 고정한다. 그럼 $\Hom$은 right adjoint이므로 limit을 보존한다. ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 abelian group들 사이의 isomorphism
+위의 adjunction을 사용하는 법을 살펴보기 위해 가장 기초적인 예시를 생각한다. 우선 $$\Hom$$과 $$\bigoplus$$, $$\prod$$의 관계를 살펴보자. 이를 위해 left $$A$$-module $$M,N$$과 left $$A$$-module들의 family $$(M\_i)\_{i\in I}$$, $$(N\_j)\_{j\in J}$$를 고정한다. 그럼 $$\Hom$$은 right adjoint이므로 limit을 보존한다. ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 abelian group들 사이의 isomorphism
 
 $$\Hom_{\lMod{A}}\left(M, \prod_{j\in J} N_j \right)\cong\prod_{j\in J} \Hom_{\lMod{A}}(M, N_j),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M_i, N)$$
 
@@ -45,7 +45,7 @@ $$\Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, \prod_{j\in J} N_j\right)\cong\pr
 
 을 얻는다. 
 
-비슷하게 $\otimes$와 $\bigoplus$의 관계를 살펴보자. 이번에는 right $A$-module $M$, right $A$-module들의 family $(M\_i)\_{i\in I}$, left $A$-module $N$, left $A$-module들의 family $(N\_j)\_{j\in J}$를 생각한다. 그럼 $\otimes$는 colimit을 보존하므로 abelian group isomorphism
+비슷하게 $$\otimes$$와 $$\bigoplus$$의 관계를 살펴보자. 이번에는 right $$A$$-module $$M$$, right $$A$$-module들의 family $$(M\_i)\_{i\in I}$$, left $$A$$-module $$N$$, left $$A$$-module들의 family $$(N\_j)\_{j\in J}$$를 생각한다. 그럼 $$\otimes$$는 colimit을 보존하므로 abelian group isomorphism
 
 $$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes_AN_j),\qquad \left(\bigoplus_{i\in I} M_i\right)\otimes_A N\cong \bigoplus_{i\in I} M_i\otimes_AN)$$
 
@@ -53,15 +53,15 @@ $$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes
 
 $$\left(\bigoplus_{i\in I} M_i\right)\otimes_A\left(\bigoplus_{j\in J} N_j\right)\cong\bigoplus_{(i,j)\in I\times J}M_i\otimes_AN_j$$
 
-을 얻는다. 만일 $A$가 commutative ring이었다면, [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6) 대신 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9)을 사용하여 위의 isomorphism들이 $A$-module들 사이의 isomorphism이 되도록 할 수 있다.
+을 얻는다. 만일 $$A$$가 commutative ring이었다면, [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6) 대신 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9)을 사용하여 위의 isomorphism들이 $$A$$-module들 사이의 isomorphism이 되도록 할 수 있다.
 
 ## 사영가군과 단사가군
 
-이번에는 임의의 $A$-linear map $u:M \rightarrow M'$와 $A$-module $N$이 주어졌다 하자. 그럼 다음의 abelian group homomorphism
+이번에는 임의의 $$A$$-linear map $$u:M \rightarrow M'$$와 $$A$$-module $$N$$이 주어졌다 하자. 그럼 다음의 abelian group homomorphism
 
 $$\Hom_{\lMod{A}}(u,N):\Hom_{\lMod{A}}(M', N) \rightarrow \Hom_{\lMod{A}}(M,N)$$
 
-에 대하여, 그런데 $\Hom$은 right adjoint이므로
+에 대하여, 그런데 $$\Hom$$은 right adjoint이므로
 
 $$\ker(\Hom_{\lMod{A}}(u,N))\cong\Hom_{\lMod{A}}(\coker u, N)\tag{2}$$
 
@@ -77,20 +77,20 @@ $$\ker(\Hom_{\lMod{A}}(N, u))\cong\Hom_{\lMod{A}}(N, \ker u)\tag{3}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> $A$-linear map $u:M \rightarrow M'$이 주어졌다 하자.
+<ins id="prop1">**명제 1**</ins> $$A$$-linear map $$u:M \rightarrow M'$$이 주어졌다 하자.
 
-1. $u$가 injective인 것은 임의의 $A$-module $N$에 대하여 $\Hom(N, u)$가 injective인 것과 동치이다.
-2. $u$가 surjective인 것은 임의의 $A$-module $N$에 대하여 $\Hom(u, N)$이 injective인 것과 동치이다.
+1. $$u$$가 injective인 것은 임의의 $$A$$-module $$N$$에 대하여 $$\Hom(N, u)$$가 injective인 것과 동치이다.
+2. $$u$$가 surjective인 것은 임의의 $$A$$-module $$N$$에 대하여 $$\Hom(u, N)$$이 injective인 것과 동치이다.
 
 </div>
 
-그러나 일반적으로, $u$가 surjective이더라도 $\Hom(u, N)$이 surjective는 아닐 수도 있고, $u$가 injective이더라도 $\Hom(N, u)$가 surjective는 아닐 수도 있다. 
+그러나 일반적으로, $$u$$가 surjective이더라도 $$\Hom(u, N)$$이 surjective는 아닐 수도 있고, $$u$$가 injective이더라도 $$\Hom(N, u)$$가 surjective는 아닐 수도 있다. 
 
-한편 $\lMod{A}$는 abelian category이므로, 식 (2)의 isomorphism은 본질적으로 다음의 short exact sequence
+한편 $$\lMod{A}$$는 abelian category이므로, 식 (2)의 isomorphism은 본질적으로 다음의 short exact sequence
 
 $$M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
-가 주어졌을 때, 여기에 (contravariant) additive functor $\Hom_{\lMod{A}}(-, N):\lMod{A} \rightarrow\lMod{\mathbb{Z}}$를 취해 얻어지는 다음의 sequence
+가 주어졌을 때, 여기에 (contravariant) additive functor $$\Hom_{\lMod{A}}(-, N):\lMod{A} \rightarrow\lMod{\mathbb{Z}}$$를 취해 얻어지는 다음의 sequence
 
 $$0 \rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N)\rightarrow\Hom_\lMod{A}(M_1,A)$$
 
@@ -98,7 +98,7 @@ $$0 \rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N)\rightarr
 
 $$0 \rightarrow M_1 \rightarrow M_2 \rightarrow M_3$$
 
-가 주어졌을 때, 여기에 additive functor $\Hom_\lMod{A}(N,-):\lMod{A} \rightarrow \lMod{\mathbb{Z}}$를 취하여 얻어지는 다음의 sequence
+가 주어졌을 때, 여기에 additive functor $$\Hom_\lMod{A}(N,-):\lMod{A} \rightarrow \lMod{\mathbb{Z}}$$를 취하여 얻어지는 다음의 sequence
 
 $$0 \rightarrow \Hom_\lMod{A}(N, M_1)\rightarrow\Hom_\lMod{A}(N, M_2) \rightarrow\Hom_\lMod{A}(N, M_3)$$
 
@@ -106,18 +106,18 @@ $$0 \rightarrow \Hom_\lMod{A}(N, M_1)\rightarrow\Hom_\lMod{A}(N, M_2) \rightarro
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 임의의 $N\in\lMod{A}$에 대하여, $\Hom_\lMod{A}(-,N)$과 $\Hom_\lMod{A}(N,-)$은 left exact functor이다.
+<ins id="prop2">**명제 2**</ins> 임의의 $$N\in\lMod{A}$$에 대하여, $$\Hom_\lMod{A}(-,N)$$과 $$\Hom_\lMod{A}(N,-)$$은 left exact functor이다.
 
 </div>
 
-그러나 일반적으로 $\Hom_\lMod{A}(-,N)$과 $\Hom_{\lMod{A}}(N,-)$이 right exact가 될 필요는 없다. 이러한 조건을 만족하는 $A$-module들을 다음과 같이 정의한다.
+그러나 일반적으로 $$\Hom_\lMod{A}(-,N)$$과 $$\Hom_{\lMod{A}}(N,-)$$이 right exact가 될 필요는 없다. 이러한 조건을 만족하는 $$A$$-module들을 다음과 같이 정의한다.
 
 <div class="definition" markdown="1">
 
 <ins id="def3">**정의 3**</ins> 다음을 정의한다.
 
-1. 만일 $\Hom(-, I)$가 right exact라면 $I$를 *injective module<sub>단사가군</sub>*이라 부른다. 
-2. 만일 $\Hom(P, -)$가 right exact라면 $P$를 *projective module<sub>사영가군</sub>*이라 부른다. 
+1. 만일 $$\Hom(-, I)$$가 right exact라면 $$I$$를 *injective module<sub>단사가군</sub>*이라 부른다. 
+2. 만일 $$\Hom(P, -)$$가 right exact라면 $$P$$를 *projective module<sub>사영가군</sub>*이라 부른다. 
 
 </div>
 
@@ -125,39 +125,39 @@ $$0 \rightarrow \Hom_\lMod{A}(N, M_1)\rightarrow\Hom_\lMod{A}(N, M_2) \rightarro
 
 $$\Hom(A, u):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
 
-이 isomorphism이라는 사실로부터 $A$ 자기 자신은 projective임을 알고, 따라서 임의의 free module은 projective module이다. 
+이 isomorphism이라는 사실로부터 $$A$$ 자기 자신은 projective임을 알고, 따라서 임의의 free module은 projective module이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> Left $A$-module가 projective인 것과 $P$가 free $A$-module의 direct summand인 것이 동치이다.
+<ins id="prop4">**명제 4**</ins> Left $$A$$-module가 projective인 것과 $$P$$가 free $$A$$-module의 direct summand인 것이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2)에 의하여 적당한 free $A$-module $F$와 surjection $p:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수
+임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $$P$$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2)에 의하여 적당한 free $$A$$-module $$F$$와 surjection $$p:F \rightarrow P$$를 택할 수 있다. 한편 $$P$$가 projective라는 것은 다음의 함수
 
 $$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
 
-가 surjective라는 것이므로, 적당한 $i\in \Hom_{\lMod{A}}(P,F)$가 존재하여 
+가 surjective라는 것이므로, 적당한 $$i\in \Hom_{\lMod{A}}(P,F)$$가 존재하여 
 
 $$\id_P=\Hom_{\lMod{A}}(P,p)(i)=p\circ i$$
 
-이도록 할 수 있다. 이 식으로부터 $i$는 injective이므로 $P$와 $\im i$를 같은 것으로 볼 수 있고, 그럼 $F\cong\ker p\oplus\im i$인 것을 확인할 수 있다.
+이도록 할 수 있다. 이 식으로부터 $$i$$는 injective이므로 $$P$$와 $$\im i$$를 같은 것으로 볼 수 있고, 그럼 $$F\cong\ker p\oplus\im i$$인 것을 확인할 수 있다.
 
 </details>
 
 ## 평탄가군
 
-이번에는 right $A$-module $M$과 left $A$-module들 사이의 $A$-linear map $v:N \rightarrow N'$이 주어졌다 하자. 그럼 다음의 abelian group homomorphism
+이번에는 right $$A$$-module $$M$$과 left $$A$$-module들 사이의 $$A$$-linear map $$v:N \rightarrow N'$$이 주어졌다 하자. 그럼 다음의 abelian group homomorphism
 
 $$M\otimes_A v:M\otimes_AN \rightarrow M\otimes_AN'$$
 
-이 존재한다. 그럼 $\otimes$는 left adjoint이므로 colimit을 보존하고, 따라서 다음 abelian group들 사이의 isomorphism
+이 존재한다. 그럼 $$\otimes$$는 left adjoint이므로 colimit을 보존하고, 따라서 다음 abelian group들 사이의 isomorphism
 
 $$\coker(M\otimes_Av)\cong M\otimes_A(\coker v)$$
 
-이 존재한다. 비슷하게 right $A$-module들 사이의 $A$-linear map $u:M \rightarrow M'$과 고정된 left $A$-module $N$에 대하여 다음의 isomorphism
+이 존재한다. 비슷하게 right $$A$$-module들 사이의 $$A$$-linear map $$u:M \rightarrow M'$$과 고정된 left $$A$$-module $$N$$에 대하여 다음의 isomorphism
 
 $$\coker(u\otimes_AN)\cong (\coker u)\otimes_A N$$
 
@@ -167,24 +167,24 @@ $$\coker(u\otimes_AN)\cong (\coker u)\otimes_A N$$
 
 <ins id="prop5">**명제 5**</ins> 다음이 성립한다.
 
-1. Right $A$-module들 사이의 linear map $u:M \rightarrow M'$이 surjective인 것은 임의의 left $A$-module $N$에 대하여, $u\otimes_A N$이 surjective인 것과 동치이다.
-2. Left $A$-module들 사이의 linear map $v:N \rightarrow N'$이 surjective인 것은 임의의 right $A$-module $M$에 대하여, $M\otimes_A v$이 surjective인 것과 동치이다.
+1. Right $$A$$-module들 사이의 linear map $$u:M \rightarrow M'$$이 surjective인 것은 임의의 left $$A$$-module $$N$$에 대하여, $$u\otimes_A N$$이 surjective인 것과 동치이다.
+2. Left $$A$$-module들 사이의 linear map $$v:N \rightarrow N'$$이 surjective인 것은 임의의 right $$A$$-module $$M$$에 대하여, $$M\otimes_A v$$이 surjective인 것과 동치이다.
 
 </div>
 
-그럼 앞서 했던 것과 마찬가지로, 위의 성질은 right $A$-module들의 exact sequence
+그럼 앞서 했던 것과 마찬가지로, 위의 성질은 right $$A$$-module들의 exact sequence
 
 $$M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
-가 주어졌을 때, 임의의 left $A$-module $N$에 대해
+가 주어졌을 때, 임의의 left $$A$$-module $$N$$에 대해
 
 $$M_1\otimes_AN \rightarrow M_2\otimes_AN \rightarrow M_3\otimes_AN \rightarrow 0$$
 
-도 exact라는 것으로 쓸 수 있다. 마찬가지로 left $A$-module들의 exact sequence
+도 exact라는 것으로 쓸 수 있다. 마찬가지로 left $$A$$-module들의 exact sequence
 
 $$N_1 \rightarrow N_2 \rightarrow N_3 \rightarrow 0$$
 
-가 주어졌을 때, 임의의 right $A$-module $M$에 대하여
+가 주어졌을 때, 임의의 right $$A$$-module $$M$$에 대하여
 
 $$M\otimes_AN_1 \rightarrow M\otimes_AN_2 \rightarrow M\otimes_AN_3 \rightarrow 0$$
 
@@ -192,7 +192,7 @@ $$M\otimes_AN_1 \rightarrow M\otimes_AN_2 \rightarrow M\otimes_AN_3 \rightarrow 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> 임의의 $M\in\rMod{A}$, $N\in \lMod{A}$에 대하여, $-\otimes_AN$과 $M\otimes_A-$는 각각 right exact functor이다.
+<ins id="prop6">**명제 6**</ins> 임의의 $$M\in\rMod{A}$$, $$N\in \lMod{A}$$에 대하여, $$-\otimes_AN$$과 $$M\otimes_A-$$는 각각 right exact functor이다.
 
 </div>
 
@@ -201,7 +201,7 @@ $$M\otimes_AN_1 \rightarrow M\otimes_AN_2 \rightarrow M\otimes_AN_3 \rightarrow 
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Left $A$-module $N$이 *flat module<sub>평탄가군</sub>*이라는 것은 임의의 right $A$-module들 사이의 injective $A$-linear map $u:M \rightarrow M'$에 대하여, $u\otimes_A N$이 injective인 것이다. 비슷하게 flat right $A$-module을 정의할 수 있다. 
+<ins id="def7">**정의 7**</ins> Left $$A$$-module $$N$$이 *flat module<sub>평탄가군</sub>*이라는 것은 임의의 right $$A$$-module들 사이의 injective $$A$$-linear map $$u:M \rightarrow M'$$에 대하여, $$u\otimes_A N$$이 injective인 것이다. 비슷하게 flat right $$A$$-module을 정의할 수 있다. 
 
 </div>
 

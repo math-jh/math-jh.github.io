@@ -21,8 +21,8 @@ weight: 3
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Manifold $M$ 위에 정의된 *symplectic form<sub>사교형식</sub>* $\omega$는 $d\omega=0$이고 모든 $p\in M$에 대하여 $\omega_p:T_pM\times T_pM\rightarrow \mathbb{R}$이 linear symplectic form이도록 하는 differential $2$-form을 뜻한다. 이 때 $(M,\omega)$를 *symplectic manifold<sub>사교다양체</sub>*라 부른다. 
+<ins id="def1">**정의 1**</ins> Manifold $$M$$ 위에 정의된 *symplectic form<sub>사교형식</sub>* $$\omega$$는 $$d\omega=0$$이고 모든 $$p\in M$$에 대하여 $$\omega_p:T_pM\times T_pM\rightarrow \mathbb{R}$$이 linear symplectic form이도록 하는 differential $$2$$-form을 뜻한다. 이 때 $$(M,\omega)$$를 *symplectic manifold<sub>사교다양체</sub>*라 부른다. 
 
 </div>
 
-Symplectic manifold $(M,\omega)$에 대하여, 벡터공간 $T_pM$에는 linear symplectic form $\omega_p$가 주어져 있으므로 $\dim T_pM$은 짝수이고, 따라서 $M$ 또한 짝수차원이어야 한다. 
+Symplectic manifold $$(M,\omega)$$에 대하여, 벡터공간 $$T_pM$$에는 linear symplectic form $$\omega_p$$가 주어져 있으므로 $$\dim T_pM$$은 짝수이고, 따라서 $$M$$ 또한 짝수차원이어야 한다. 

@@ -79,7 +79,7 @@ weight: 9
 
 마지막으로 일정 시간동안 마우스의 움직임이 없으면 맨 위로 버튼을 자동으로 숨기기 위해 다음의 Javascipt 파일을 `assets/js/custom` 아래에 추가했다. 이 코드는 stack overflow의 [질문글](https://stackoverflow.com/questions/41021611/how-to-show-divs-when-the-mouse-moves-anywhere-on-screen-not-just-the-element-i)에서 가져왔다.
 ```javascript
-$(function(){
+$$(function(){
   // When page loads, wait 3 seconds and hide all elements with .top_button class:
   setTimeout(toggle, 3000);
 });
@@ -92,14 +92,14 @@ var timer = null;
 // here because a flicker effect can happen which would leave
 // the elements showing instead of being hidden.
 function toggle(){
-  $('.top_button').toggleClass('hide');
+  $$('.top_button').toggleClass('hide');
 }
 
-$(window).on('mousemove', function(){
+$$(window).on('mousemove', function(){
   // When anywhere on page is moused over bring back .top_button
   // elements for 3 seconds. Removing "hide" simply restores
   // the original CSS & layout
-  $('.top_button').removeClass('hide');
+  $$('.top_button').removeClass('hide');
   
   // Kill any previous timers
   clearTimeout(timer);
