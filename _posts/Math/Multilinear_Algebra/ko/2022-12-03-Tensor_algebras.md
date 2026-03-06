@@ -79,7 +79,7 @@ $$M=\bigoplus_{i\in I} Ae_i$$
 
 <ins id="prop3">**명제 3**</ins> 위와 같은 상황에서, $$\T(M)$$은 다음의 꼴
 
-$$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n},\qquad\text{$$s$$ a finite sequence $$(i_1,i_2,\ldots,i_n)$$ in $$I$$}$$
+$$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n},\qquad\text{$s$ a finite sequence $$(i_1,i_2,\ldots,i_n)$$ in $$I$$}$$
 
 들의 원소 $$e_s$$를 basis로 갖는다.
 
@@ -165,7 +165,7 @@ $$x\otimes y\equiv y\otimes x\pmod{\mathfrak{I}}$$
 
 <ins id="prop6">**명제 6**</ins> 임의의 $$A$$-algebra $$E$$와 $$A$$-linear map $$u:M \rightarrow E$$가 다음 조건
 
-$$u(x)u(y)=u(y)u(x)\qquad\text{for all $$x,y\in M$$}$$
+$$u(x)u(y)=u(y)u(x)\qquad\text{for all $x,y\in M$}$$
 
 주어졌다 하자. 그럼 유일한 $$A$$-algebra homomorphism $$g: \S(M) \rightarrow E$$가 존재하여 $$f=g \circ\iota$$이도록 할 수 있다. 
 
@@ -237,7 +237,7 @@ $$\bigwedge(M)$$에서의 원소들의 곱셈은 $$\wedge$$로 적는 것이 관
 
 <ins id="prop11">**명제 11**</ins> 임의의 $$A$$-algebra $$E$$와 $$A$$-linear map $$u:M \rightarrow E$$가 다음 조건
 
-$$u(x)^2=0\qquad\text{for all $$x\in M$$}$$
+$$u(x)^2=0\qquad\text{for all $x\in M$}$$
 
 주어졌다 하자. 그럼 유일한 $$A$$-algebra homomorphism $$g: \bigwedge(M) \rightarrow E$$가 존재하여 $$f=g \circ\iota$$이도록 할 수 있다. 
 

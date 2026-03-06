@@ -122,7 +122,7 @@ $$\Delta_X=\{(x,x)\mid x\in X\}$$
 
 더 일반적으로 $$X$$가 Hausdorff space인 것과, 임의의 index set $$I$$에 대하여 $$X^I=\prod_{i\in I}X$$에서의 diagonal
 
-$$\Delta_X=\{(x_i)_{i\in I}:\text{$$x_i=x$$ for all $$i$$, where $$x\in X$$}\}$$
+$$\Delta_X=\{(x_i)_{i\in I}:\text{$x_i=x$ for all $$i$$, where $$x\in X$$}\}$$
 
 이 닫힌집합인 것이 서로 동치라는 것을 동일한 논증으로 보일 수 있다. [보조정리 5](#lem5)로부터 다음이 성립한다.
 

@@ -79,7 +79,7 @@ $$S_n$$의 원소들의 합성은 함수의 합성이고, 일반적으로 함수
 
 집합 $$[n]$$ 위의 equivalence realtion $$\sim$$을
 
-$$i\sim j\iff \sigma^m(i)=j\text{ for some $$m$$}$$
+$$i\sim j\iff \sigma^m(i)=j\text{ for some $m$}$$
 
 으로 정의하고, 그 quotient set을
 
@@ -87,7 +87,7 @@ $$[n]/{\sim}=\{C_1, \ldots, C_r\}$$
 
 이라 하자. 이제 각각의 $$1\leq k\leq r$$에 대하여 다음의 식
 
-$$\sigma_k(i)=\begin{cases}\sigma(x)&\text{if $$x\in C_k$$}\\x&\text{otherwise}\end{cases}$$
+$$\sigma_k(i)=\begin{cases}\sigma(x)&\text{if $x\in C_k$}\\x&\text{otherwise}\end{cases}$$
 
 으로 정의하면 이들은 disjoint cycle이며 그 곱이 $$\sigma$$가 된다. 
 
@@ -215,13 +215,13 @@ $$\sigma(\Delta)=\prod_{1\leq i< j\leq n}(x_{\sigma(i)}-x_{\sigma(j)})$$
 
 이다. 그럼 각각의 pair $$(i,j)$$에 대하여, term $$(x_{\sigma(i)}-x_{\sigma(j)})$$는 $$\sigma(i)$$와 $$\sigma(j)$$의 대소관계에 따라 
 
-$$(x_{\sigma(i)}-x_{\sigma(j)})=\begin{cases}(x_{\sigma(i)}-x_{\sigma(j)})&\text{if $$\sigma(i)<\sigma(j)$$}\\-(x_{\sigma(j)}-x_{\sigma(i)})&\text{if $$\sigma(i)>\sigma(j)$$}\end{cases}\tag{1}$$
+$$(x_{\sigma(i)}-x_{\sigma(j)})=\begin{cases}(x_{\sigma(i)}-x_{\sigma(j)})&\text{if $\sigma(i)<\sigma(j)$}\\-(x_{\sigma(j)}-x_{\sigma(i)})&\text{if $\sigma(i)>\sigma(j)$}\end{cases}\tag{1}$$
 
 으로 바꾸어 쓸 수 있다. 또, $$\sigma$$는 bijection이므로, 이렇게 모든 term을 바꾸어 써 주면 $$\sigma(\Delta)$$는 부호만 제외하면 $$\Delta$$와 정확하게 같은 polynomial이 됨을 알 수 있다. 따라서 $$\sgn(\sigma)=\sigma(\Delta)/\Delta$$로 정의하면, $$\sgn(\sigma)$$는 정확하게 [정의 9](#def9)의 sense에서 정의된 $$\sigma$$의 parity가 된다.   
 
 정의로부터, $$\sigma$$가 transposition이라면 $$\sgn(\sigma)=-1$$인 것은 자명하다. 따라서 만일 $$\sgn$$이 multiplicative하다는 것만 보인다면, 
 
-$$\text{$$\sigma$$ odd}\iff\text{$$\sgn(\sigma)=-1$$}\iff\text{$$\sigma$$ is a product of odd number of permutation}$$ 
+$$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of permutation}$$ 
 
 이 되므로 원하는 결과를 얻을 것이다. 두 permutation $$\sigma$$, $$\tau$$가 주어졌다 하자. $$\sgn(\sigma\tau)$$의 값을 계산해야 한다. $$\tau$$가 $$k$$개의 inversion을 갖는다 가정하자. 즉, $$\sgn(\tau)=(-1)^k$$이고, 이 $$k$$개의 $$-1$$들은 모두 식 (1)에서 나오는 factor들이다. 이제 $$\sgn(\sigma\tau)$$의 값을 계산하기 위해서는 우선
 

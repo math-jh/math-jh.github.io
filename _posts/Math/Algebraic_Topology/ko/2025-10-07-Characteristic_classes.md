@@ -249,11 +249,11 @@ $$F_0\subset F_1\subset\cdots\subset F_n$$
 
 이제 이를 바탕으로 다음의 부분집합
 
-$$\Omega_\lambda^\circ(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$$\dim(V\cap F_{n-k+i-\lambda_i})= i$$ for all $$1\leq i\leq k$$}\right\}$$
+$$\Omega_\lambda^\circ(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})= i$ for all $$1\leq i\leq k$$}\right\}$$
 
 을 생각하면, 이들은 각각 그 closure
 
-$$\Omega_\lambda(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$$\dim(V\cap F_{n-k+i-\lambda_i})\geq i$$ for all $$1\leq i\leq k$$}\right\}$$
+$$\Omega_\lambda(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})\geq i$ for all $$1\leq i\leq k$$}\right\}$$
 
 안에서 open submanifold이며, 이들 $$\Omega_\lambda(F_\bullet)$$들은 inclusion 
 
@@ -293,7 +293,7 @@ $$G_\bullet:\quad \langle e_1+e_4\rangle\subset\langle e_1+e_4,e_2+e_3\rangle\su
 
 이제 우리는 $$\Gr_k(\mathbb{R}^\infty)$$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $$\Gr_k(\mathbb{R}^n)$$ 위의 tautoogical bundle을 먼저 정의한다. [예시 3](#ex3)과 같은 방식으로, $$\Gr_k(\mathbb{R}^{n+k})$$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
 
-$$E(\gamma^k_n)=\left\{([V], x)\in \Gr_k(\mathbb{R}^{n+k})\mid \text{$$V$$ a $$k$$-dimensional subspace of $$\mathbb{R}^{n+k}$$ and $$x\in V$$}\right\}$$
+$$E(\gamma^k_n)=\left\{([V], x)\in \Gr_k(\mathbb{R}^{n+k})\mid \text{$V$ a $$k$$-dimensional subspace of $$\mathbb{R}^{n+k}$$ and $$x\in V$$}\right\}$$
 
 이 존재하며 이를 $$\Gr_k(\mathbb{R}^{n+k})$$의 *tautological bundle*이라 부른다. 
 
@@ -325,7 +325,7 @@ $$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(2,0,\cdots,0),\qquad \lambda_k=(k,0
 
 을 생각하자. 그럼 이들은 위의 논증에 의하여 $$\Gr_k(\mathbb{R}^\infty)$$의 homology class들이 되어 다음의 함수
 
-$$w_i: H_\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$$w_i(\Omega_{\lambda_i}(F_\bullet))=1$$ and is $$0$$ otherwise}$$
+$$w_i: H_\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$w_i(\Omega_{\lambda_i}(F_\bullet))=1$ and is $$0$$ otherwise}$$
 
 들이 $$i$$번째 cohomology class $$H^i(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$$에 있으며, 따라서 우리는 
 

@@ -74,7 +74,7 @@ $$M=M_0\supsetneq M_1\supsetneq \cdots$$
 
 이를 위해 우선 $$M\cong R/\mathfrak{m}$$이라면 임의의 maximal ideal $$\mathfrak{m}'$$에 대하여
 
-$$M_{\mathfrak{m}'}=\begin{cases}M&\text{if $$\mathfrak{m}=\mathfrak{m}'$$,}\\0&\text{otherwise.}\end{cases}$$
+$$M_{\mathfrak{m}'}=\begin{cases}M&\text{if $\mathfrak{m}=\mathfrak{m}'$,}\\0&\text{otherwise.}\end{cases}$$
 
 이다. 이로부터 $$M$$의 composition series
 
@@ -86,7 +86,7 @@ $$M_\mathfrak{m}=(M_0)_\mathfrak{m}\supsetneq (M_1)_\mathfrak{m}\supsetneq \cdot
 
 을 얻는다. 그런데 localization functor가 exact functor인 것과 ([§국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 방금 전의 계산을 종합하면, 
 
-$$(M_k)_\mathfrak{m}/(M_{k+1})_\mathfrak{m}\cong (M_k/M_{k+1})_\mathfrak{m}=\begin{cases}M_k/M_{k+1}&\text{if $$M_k/M_{k+1}\cong A/\mathfrak{m}$$,}\\0&\text{otherwise}\end{cases}$$
+$$(M_k)_\mathfrak{m}/(M_{k+1})_\mathfrak{m}\cong (M_k/M_{k+1})_\mathfrak{m}=\begin{cases}M_k/M_{k+1}&\text{if $M_k/M_{k+1}\cong A/\mathfrak{m}$,}\\0&\text{otherwise}\end{cases}$$
 
 이 성립한다. 이로부터 두 번째 결과를 얻으며, 세 번째 결과는 위의 계산과 유사하게 증명할 수 있다.
 

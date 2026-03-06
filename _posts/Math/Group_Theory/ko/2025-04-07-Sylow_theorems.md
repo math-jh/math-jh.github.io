@@ -33,7 +33,7 @@ weight: 4
 
 <ins id="lem2">**보조정리 2**</ins> $$p$$-group $$G$$가 유한집합 $$E$$ 위에 act한다 하고, 이 action의 fixed point들의 모임
 
-$$E^G=\{x\in E\mid g\cdot x=x\text{ for all $$g\in G$$}\}$$
+$$E^G=\{x\in E\mid g\cdot x=x\text{ for all $g\in G$}\}$$
 
 을 생각하자. 그럼
 

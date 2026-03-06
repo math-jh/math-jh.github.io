@@ -19,7 +19,7 @@ weight: 4
 
 우리는 임의의 graded ring, 더 일반적으로는 임의의 graded module을 localize하는 방법을 살펴본다. 이번 글에서는 별다른 말이 없다면 모든 graded ring은 $$\mathbb{N}_{\geq 0}$$-graded인 것으로 생각하고, $$A=\bigoplus A_i$$, $$M=\bigoplus M_i$$를 고정하기로 한다. 그럼 임의의 $$n$$에 대하여,
 
-$$M(n)_k=M_{n+k}\qquad\text{for all $$k$$}$$
+$$M(n)_k=M_{n+k}\qquad\text{for all $k$}$$
 
 으로 정의된 $$M(n)$$은 자연스럽게 graded $$A$$-module 구조를 갖는다.
 
@@ -117,15 +117,15 @@ $$\sum_{i,j\geq 0} a_{i,j}T_1^i T_2^j\mapsto \sum_{i,j\geq 0} a_{i,j}f^{i-j}=\su
 
 으로 주어지며, 이 때 ideal $$(T_1T_2-1)$$이 위의 homomorphism의 kernel에 포함되는 것이 자명하다. 한편, $$\deg a_{i,j}=0$$이므로 위의 homomorphism의 kernel은 다음 식
 
-$$\sum_{j\geq \max(-d,0)} a_{j+d,j}=0\qquad\text{for all $$d\in\mathbb{Z}$$}$$
+$$\sum_{j\geq \max(-d,0)} a_{j+d,j}=0\qquad\text{for all $d\in\mathbb{Z}$}$$
 
 을 만족하는 다항식들의 모임이다. 표기의 편의를 위하여 위의 합을 $$d$$의 부호에 따라 다음의 세 조건
 
-$$\sum_{j\geq 0} a_{j,j}=0,\quad \sum_{j\geq 0} a_{j+d,j}=0,\quad \sum_{j\geq 0} a_{j,j+d}=0\qquad \text{for all $$d>0$$}$$
+$$\sum_{j\geq 0} a_{j,j}=0,\quad \sum_{j\geq 0} a_{j+d,j}=0,\quad \sum_{j\geq 0} a_{j,j+d}=0\qquad \text{for all $d>0$}$$
 
 으로 바꾸어 쓸 수 있으며, 그럼 각각의 경우
 
-$$a_{0,0}=-\sum_{j\geq 1} a_{j,j},\quad a_{d,0}=-\sum_{j\geq 1} a_{j+d,j},\quad a_{0,d}=-\sum_{j\geq 1} a_{j,j+d}\qquad \text{for all $$d>0$$}$$
+$$a_{0,0}=-\sum_{j\geq 1} a_{j,j},\quad a_{d,0}=-\sum_{j\geq 1} a_{j+d,j},\quad a_{0,d}=-\sum_{j\geq 1} a_{j,j+d}\qquad \text{for all $d>0$}$$
 
 를 얻는다. 이제 이를 다항식
 

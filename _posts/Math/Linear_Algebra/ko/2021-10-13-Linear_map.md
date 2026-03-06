@@ -114,7 +114,7 @@ $$\ker L=\{v\in V\mid L(v)=0\}$$
 
 으로 정의되는 집합이다. 또, $$L$$의 *image<sub>상</sub>* $$\im L$$는 다음의 식
 
-$$\im L=\{w\in W\mid L(v)=w\text{ for some $$v\in V$$}\}$$
+$$\im L=\{w\in W\mid L(v)=w\text{ for some $v\in V$}\}$$
 
 으로 정의되는 집합이다.
 
@@ -173,7 +173,7 @@ $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 
 만약 $$L$$이 단사라면 $$L(v)=0$$을 만족하는 $$v$$는 유일해야 하고, [명제 2](#prop2)에 의해 $$0$$은 이 식을 만족하므로 $$\ker L=\{0\}$$이어야 한다. 따라서 첫째 주장 중에서도 다음의 명제
 
-> $$\ker L=\{0\}\implies\text{$$L$$ injective}$$
+> $$\ker L=\{0\}\implies\text{$L$ injective}$$
 
 만 보이면 충분하다. $$L(v_1)=L(v_2)$$인 $$v_1,v_2\in V$$가 주어졌다 가정하자. 그럼 다시 [명제 3](#prop3)에 의하여,
 
@@ -226,7 +226,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
 <ins id="ex10">**예시 10**</ins> 임의의 $$\mathbb{K}$$-벡터공간 $$V$$와 $$W$$에 대하여, 다음의 식
 
-$$L(v)=0\text{ for all $$v\in V$$}$$
+$$L(v)=0\text{ for all $v\in V$}$$
 
 으로 정의된 $$L:V\rightarrow W$$는 linear다. 이 경우, $$\im L=\{0\}$$이고 $$\ker L=V$$이다.
 
@@ -238,7 +238,7 @@ $$L(v)=0\text{ for all $$v\in V$$}$$
 
 <ins id="ex11">**예시 11**</ins> 임의의 $$\mathbb{K}$$-벡터공간 $$V$$와, $$W\leq V$$가 주어졌다 하자. 다음의 식
 
-$$\iota(w)=w\text{ for all $$w\in W$$}$$
+$$\iota(w)=w\text{ for all $w\in W$}$$
 
 으로 정의된 $$\iota:W\rightarrow V$$는 linear map이다. 이번에는 $$\im\iota=W$$이고, $$\ker \iota=\{0\}$$이다. 즉, $$L$$은 단사함수이다.
 

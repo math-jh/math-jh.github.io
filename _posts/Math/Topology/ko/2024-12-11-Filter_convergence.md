@@ -103,7 +103,7 @@ $$x$$의 임의의 열린근방 $$U$$를 택하자. 그럼 $$x$$로 수렴하는
 
 따라서, 위상공간 $$X$$와 부분집합 $$A$$에 대하여, $$A$$의 *sequential closure* $$\scl(A)$$를 
 
-$$\scl(A)=\{x\in X\mid \text{there exists a sequence in $$A$$ that converges to $$x$$}\}$$
+$$\scl(A)=\{x\in X\mid \text{there exists a sequence in $A$ that converges to $$x$$}\}$$
 
 으로 정의하면 $$\scl(A)\subseteq \cl(A)$$가 성립하는 것이 당연하다. 
 
@@ -111,7 +111,7 @@ $$\scl(A)=\{x\in X\mid \text{there exists a sequence in $$A$$ that converges to 
 
 <ins id="ex8">**예시 8**</ins> 일반적인 위상구조가 주어진 $$\mathbb{R}$$의 uncountable product $$\mathbb{R}^J$$를 생각하자. 집합 $$A$$를
 
-$$A=\{(x_j)\in \mathbb{R}^J: x_j=1\text{ for all but finitely many $$j$$}\}$$
+$$A=\{(x_j)\in \mathbb{R}^J: x_j=1\text{ for all but finitely many $j$}\}$$
 
 으로 정의하자. 그럼 $$\mathbb{R}^J$$의 원점은 $$A$$의 closure에 속한다. 이는 원점을 포함하는 $$\mathbb{R}^J$$의 base는 유한한 index를 제외하고는 모두 $$\mathbb{R}$$이며, 이 유한한 index들의 성분은 $$0$$으로 정의하고, 나머지 index의 성분은 $$1$$인 점이 이 base와 $$A$$의 교집합에 들어있기 때문이다. 그러나 $$A$$의 임의의 점열은 원점으로 수렴하지 않는다. 이는 $$A$$의 임의의 점열이 주어졌을 때, $$J$$가 uncountable임을 이용하면 이 점열의 모든 항의 $$j$$번째 성분이 $$1$$이도록 하는 $$j\in J$$가 존재한다는 것을 보일 수 있고, 그럼 $$j$$번째 성분이 $$(-1,1)$$이고 나머지 성분은 $$\mathbb{R}$$인 원점의 열린근방이 이 점열의 원소를 하나도 포함하지 않기 때문이다.
 

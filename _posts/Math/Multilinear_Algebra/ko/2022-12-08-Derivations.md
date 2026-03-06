@@ -293,7 +293,7 @@ $$v' d(u) - v^{-1} u\, d(v) = v' d(u') - v'^{-1} u'\, d(v')$$
 
 다음 명제에서, 표기의 편의를 위해 임의의 degree $$\delta$$ $$\varepsilon$$-derivation $$d:A \rightarrow E$$에 대하여 
 
-$$Z_\varepsilon=\{a\in A\mid \text{$$xa_d=\varepsilon(\deg(a),\deg(x))a_dx$$ for all homogeneous component $$a_d$$ of $$a$$ and for all homogeneous $$x\in E$$.}\}$$
+$$Z_\varepsilon=\{a\in A\mid \text{$xa_d=\varepsilon(\deg(a),\deg(x))a_dx$ for all homogeneous component $$a_d$$ of $$a$$ and for all homogeneous $$x\in E$$.}\}$$
 
 으로 정의하자. 
 
