@@ -17,8 +17,6 @@ last_modified_at: 2026-03-05
 weight: 1
 ---
 
-## Toric geometry
-
 Toric geometry는 말 그대로 toric variety라 불리는 특별한 대수다양체를 연구하는 분야이다. 일반적인 대수다양체에 비해 toric variety가 가지는 장점은 이것이 본질적으로 조합론적인 정보로 만들어지므로 더 손에 잡히는 계산을 수행하기 용이하다는 것이다. 우리는 이 글에서 먼저 가장 간단한 toric variety, 즉 affine toric variety를 살펴본다. 
 
 ## 격자와 뿔
@@ -129,7 +127,11 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 ## 토러스 작용
 
-위에서 정의한 $$\Spec(\mathbb{C}[S_\sigma])$$가 affine *toric* variety라 불리는 이유는 이 위에 자연스러운 torus action이 존재하기 때문이다. 
+위에서 정의한 $$\Spec(\mathbb{C}[S_\sigma])$$가 affine *toric* variety라 불리는 이유는 이 위에 자연스러운 torus action이 존재하기 때문이다. 이를 위해 다음의 algebraic torus
+
+$$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
+
+을 생각하자. 
 
 <div class="proposition" markdown="1">
 
