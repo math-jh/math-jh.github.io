@@ -1,9 +1,9 @@
 ########## 마스트헤드 ##########
 main:
-  - title: "카테고리 🇰🇷"
+  - title: "카테고리"
     url: ko/categories/
     lang: ko
-  - title: "Category 🇺🇸"
+  - title: "Category"
     url: en/categories/
     lang: en
 
