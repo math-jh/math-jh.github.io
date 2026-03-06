@@ -60,7 +60,7 @@ $$\cl(A)\subset\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**정리 2**</ins> [정의 1](#def1)의 조건을 모두 만족하는 함수 $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$가 주어졌다 하자. $$\mathcal{C}$$를 <phrase>$$\cl(C)=C$$를 만족하는 모든 $$C$$들의 모임</phrase>으로 정의하면, $$\mathcal{C}$$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다.
+<ins id="thm2">**정리 2**</ins> [정의 1](#def1)의 조건을 모두 만족하는 함수 $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$가 주어졌다 하자. $$\mathcal{C}$$를 <phrase>$\cl(C)=C$를 만족하는 모든 $C$들의 모임</phrase>으로 정의하면, $$\mathcal{C}$$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다.
 
 </div>
 
@@ -105,7 +105,7 @@ Ordered set $$(\mathcal{P}(X),\subseteq)$$를 생각하면, 위 정의는 [\[집
 
 <div class="misc" markdown="1">
 
-**Neighborhood axiom.** 임의의 $$z\in X$$와, 각각의 원소가 $$z$$를 포함하는 $$X$$의 filter $$\mathcal{N}(z)$$가 주어졌다 하자. 그럼 임의의 $$S\in\mathcal{N}(z)$$마다 적당한 $$S'\in\mathcal{N}(z)$$가 존재하여, <phrase>임의의 $$x\in S'$$마다 $$S\in\mathcal{N}(x)$$</phrase>가 성립하도록 할 수 있다.
+**Neighborhood axiom.** 임의의 $$z\in X$$와, 각각의 원소가 $$z$$를 포함하는 $$X$$의 filter $$\mathcal{N}(z)$$가 주어졌다 하자. 그럼 임의의 $$S\in\mathcal{N}(z)$$마다 적당한 $$S'\in\mathcal{N}(z)$$가 존재하여, <phrase>임의의 $x\in S'$마다 $S\in\mathcal{N}(x)$</phrase>가 성립하도록 할 수 있다.
 
 </div>
 

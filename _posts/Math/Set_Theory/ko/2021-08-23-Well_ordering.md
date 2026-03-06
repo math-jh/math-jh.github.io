@@ -77,7 +77,7 @@ $$\emptyset$$은 vacuous하게 ordinal이고, 모든 자연수들도 ordinal이 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> Ordered set들의 family $$(A_i)_{i\in I})$$가 포함관계에 대하여 right directed이고, $$A_i\subseteq A_j$$일 때마다 <phrase>$$A_j$$의 order relation을 $$A_i$$로 제한한 관계</phrase>가 $$A_i$$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $$A=\bigcup_{i\in I} A_i$$ 위의 order relation이 유일하게 존재한다.
+<ins id="lem5">**보조정리 5**</ins> Ordered set들의 family $$(A_i)_{i\in I})$$가 포함관계에 대하여 right directed이고, $$A_i\subseteq A_j$$일 때마다 <phrase>$A_j$의 order relation을 $A_i$로 제한한 관계</phrase>가 $$A_i$$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $$A=\bigcup_{i\in I} A_i$$ 위의 order relation이 유일하게 존재한다.
 
 </div>
 <details class="proof" markdown="1">
