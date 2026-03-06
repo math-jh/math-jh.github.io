@@ -94,8 +94,8 @@ dark_skin                 : "custom-dark"
 ```javascript
     function darkmode(){
 
-    var defaultTheme = [...document.styleSheets].find(style => /(main.css)$/.test(style.href))
-    var darkTheme = [...document.styleSheets].find(style => /(main_dark.css)$/.test(style.href))
+    var defaultTheme = [...document.styleSheets].find(style => /(main.css)$$/.test(style.href))
+    var darkTheme = [...document.styleSheets].find(style => /(main_dark.css)$$/.test(style.href))
 
     if (darkTheme) {
         const darkModeCookie = document.cookie
@@ -113,7 +113,7 @@ dark_skin                 : "custom-dark"
                 darkTheme.disabled = true
                 defaultTheme.disabled = false
             }
-            document.cookie = `MDARK=${darkTheme.disabled ? 'N' : 'Y'}; path=/;`
+            document.cookie = `MDARK=$${darkTheme.disabled ? 'N' : 'Y'}; path=/;`
         }
 
         let toggleThemeBtn = document.getElementById("toggle_dark_theme")
@@ -124,7 +124,7 @@ dark_skin                 : "custom-dark"
         let changeTheme = () => {
             darkTheme.disabled = !darkTheme.disabled
             defaultTheme.disabled = !darkTheme.disabled
-            document.cookie = `MDARK=${darkTheme.disabled ? 'N' : 'Y'}; path=/;`
+            document.cookie = `MDARK=$${darkTheme.disabled ? 'N' : 'Y'}; path=/;`
         }
 
         toggleThemeBtn.addEventListener('click', changeTheme)
@@ -161,8 +161,8 @@ img.invert {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     font-size: 0.8em;
-    background: $code-background-color;
-    border-radius: $border-radius;
+    background: $$code-background-color;
+    border-radius: $$border-radius;
 
     &::before,
     &::after {
@@ -177,9 +177,9 @@ img.invert {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     font-size: 0.8em;
-    background: mix($background-color, $text-color, 90%);
-    border-radius: $border-radius;
-    color: $text-color;
+    background: mix($$background-color, $$text-color, 90%);
+    border-radius: $$border-radius;
+    color: $$text-color;
 
     &::before,
     &::after {

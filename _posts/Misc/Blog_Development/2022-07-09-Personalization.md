@@ -42,11 +42,11 @@ a {
   }
 
   &:visited {
-    color: $link-color-visited;
+    color: $$link-color-visited;
   }
 
   &:hover {
-    color: $link-color-hover;
+    color: $$link-color-hover;
     outline: 0;
   }
 }
@@ -63,11 +63,11 @@ a {
   }
 
   &:visited {
-    color: $link-color-visited;
+    color: $$link-color-visited;
   }
 
   &:hover {
-    color: $link-color-hover;
+    color: $$link-color-hover;
     outline: 0;
   }
 }
@@ -89,9 +89,9 @@ Minimal-mistakes 테마를 처음 보고 가장 마음에 들지 않았던 것�
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow: 200px !default;
-$right-sidebar-width: 300px !default;
-$right-sidebar-width-wide: 400px !default;
+$$right-sidebar-width-narrow: 200px !default;
+$$right-sidebar-width: 300px !default;
+$$right-sidebar-width-wide: 400px !default;
 ```
 
 부분을
@@ -101,9 +101,9 @@ $right-sidebar-width-wide: 400px !default;
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow: 150px !default;
-$right-sidebar-width: 200px !default;
-$right-sidebar-width-wide: 250px !default;
+$$right-sidebar-width-narrow: 150px !default;
+$$right-sidebar-width: 200px !default;
+$$right-sidebar-width-wide: 250px !default;
 ```
 
 으로 수정해주면 된다. 그럼 위의 그림과 같던 본문의 너비가 
