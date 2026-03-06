@@ -25,15 +25,15 @@ weight: 1
 <ins id="def1">**정의 1**</ins> *Category<sub>범주</sub>* $$\mathcal{A}$$는 다음과 같은 데이터로 이루어진다.
 
 - *대상<sub>object</sub>*들의 모임 $$\obj(\mathcal{A})$$,
-- *정의역<sub>domain</sub>* $$A_1\in\obj(\mathcal{A})$$에서 *공역<sub>codomain</sub>* $$A_2\in\obj(\mathcal{A})$$로의 *morphism<sub>사상</sub>*들의 모임 $$\Hom\_\mathcal{A}(A_1,A_2)$$,
-- 두 morphism $$f\in\Hom\_\mathcal{A}(A_1,A_2)$$, $$g\in\Hom\_\mathcal{A}(A_2,A_3)$$의 *합성<sub>composition</sub>* 
+- *정의역<sub>domain</sub>* $$A_1\in\obj(\mathcal{A})$$에서 *공역<sub>codomain</sub>* $$A_2\in\obj(\mathcal{A})$$로의 *morphism<sub>사상</sub>*들의 모임 $$\Hom_\mathcal{A}(A_1,A_2)$$,
+- 두 morphism $$f\in\Hom_\mathcal{A}(A_1,A_2)$$, $$g\in\Hom_\mathcal{A}(A_2,A_3)$$의 *합성<sub>composition</sub>* 
 
   $$\circ:\Hom_\mathcal{A}(A_1,A_2)\times\Hom_\mathcal{A}(A_2,A_3)\rightarrow\Hom_\mathcal{A}(A_1,A_3);\qquad (f,g)\mapsto g\circ f$$
 
 추가적으로, 이들은 다음의 조건을 만족한다.
 
 - Morphism들의 합성은 결합법칙을 만족한다. 즉, $$(f\circ g)\circ h=f\circ(g\circ h)$$가 성립한다.
-- 각각의 $$A\in\obj(\mathcal{A})$$마다 $$\id_A\in\Hom\_\mathcal{A}(A,A)$$가 존재하여, 모든 $$f\in\Hom\_\mathcal{A}(A,A_1)$$ 그리고 모든 $$g\in\Hom\_\mathcal{A}(A_2,A)$$에 대하여
+- 각각의 $$A\in\obj(\mathcal{A})$$마다 $$\id_A\in\Hom_\mathcal{A}(A,A)$$가 존재하여, 모든 $$f\in\Hom_\mathcal{A}(A,A_1)$$ 그리고 모든 $$g\in\Hom_\mathcal{A}(A_2,A)$$에 대하여
   
   $$f\circ{\id_A}=f,\qquad {\id_A}\circ g=g$$
 
@@ -219,10 +219,10 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 
 - $$\mathcal{A}$$의 *slice category over $$A$$<sub>$$A$$ 위에서의 조각 범주</sub>* $$A_{/\mathcal{A}}$$는 다음과 같은 데이터로 주어진다.
   - $$\mathcal{A}_{/A}$$의 object들은 $$\mathcal{A}$$의 morphism들 $$f:A_1\rightarrow A$$이다.
-  - 임의의 $$(A\_1\overset{f\_1}{\longrightarrow}A)\in\obj(\mathcal{A}\_{/A})$$와 $$(A\_2\overset{f\_2}{\longrightarrow}A)\in\obj(\mathcal{A}\_{/A})$$에 대하여, $$f_1$$에서 $$f_2$$로의 morphism은 $$f_1=g\circ f_2$$가 성립하도록 하는 $$g:A_1\rightarrow A_2$$이다.
+  - 임의의 $$(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$$와 $$(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$$에 대하여, $$f_1$$에서 $$f_2$$로의 morphism은 $$f_1=g\circ f_2$$가 성립하도록 하는 $$g:A_1\rightarrow A_2$$이다.
 - $$\mathcal{A}$$의 *slice category under $$A$$<sub>$$A$$ 위에서의 쌍대 조각 범주</sub>* $${}_{A/}\mathcal{A}$$는 다음과 같은 데이터로 주어진다.
   - $${}_{A/}\mathcal{A}$$의 object들은 $$\mathcal{A}$$의 morphism들 $$f:A\rightarrow A_1$$이다.
-  - 임의의 $$(A\overset{f\_1}{\longrightarrow}A\_1)\in\obj({}\_{A/}\mathcal{A})$$와 $$(A\overset{f\_2}{\longrightarrow}A\_2)\in\obj({}\_{A/}\mathcal{A})$$에 대하여, $$f_1$$에서 $$f_2$$로의 morphism은 $$f_2=g\circ f_1$$가 성립하도록 하는 $$g:A_1\rightarrow A_2$$이다.
+  - 임의의 $$(A\overset{f_1}{\longrightarrow}A_1)\in\obj({}_{A/}\mathcal{A})$$와 $$(A\overset{f_2}{\longrightarrow}A_2)\in\obj({}_{A/}\mathcal{A})$$에 대하여, $$f_1$$에서 $$f_2$$로의 morphism은 $$f_2=g\circ f_1$$가 성립하도록 하는 $$g:A_1\rightarrow A_2$$이다.
 
 </div>
 

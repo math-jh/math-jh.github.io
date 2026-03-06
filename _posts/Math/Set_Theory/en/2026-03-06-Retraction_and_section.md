@@ -24,19 +24,19 @@ The end of the previous post enables us to give new characterizations of injecti
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**Proposition 1**</ins> Consider a function $$f:A\rightarrow B$$. If there exists $$r:B\rightarrow A$$ such that $$r\circ f=\id\_A$$, then $$f$$ is injective. If there exists $$s:B\rightarrow A$$ such that $$f\circ s=\id\_B$$, then $$f$$ is surjective.
+<ins id="prop1">**Proposition 1**</ins> Consider a function $$f:A\rightarrow B$$. If there exists $$r:B\rightarrow A$$ such that $$r\circ f=\id_A$$, then $$f$$ is injective. If there exists $$s:B\rightarrow A$$ such that $$f\circ s=\id_B$$, then $$f$$ is surjective.
 
-Conversely, if $$f$$ is surjective, then there exists $$s:B\rightarrow A$$ such that $$f\circ s=\id\_B$$, and if $$f$$ is injective, then there exists $$r:B\rightarrow A$$ such that $$r\circ f=\id\_A$$.
+Conversely, if $$f$$ is surjective, then there exists $$s:B\rightarrow A$$ such that $$f\circ s=\id_B$$, and if $$f$$ is injective, then there exists $$r:B\rightarrow A$$ such that $$r\circ f=\id_A$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The second part was already proved in the previous post, so we need only establish the first part. Suppose $$r\circ f=\id\_A$$. If $$f(x)=f(y)$$, then
+The second part was already proved in the previous post, so we need only establish the first part. Suppose $$r\circ f=\id_A$$. If $$f(x)=f(y)$$, then
 
 $$x=\id_{A}(x)=(r\circ f)(x)=r\circ(f(x))=r\circ(f(y))=(r\circ f)(y)=\id_{A}(y)=y$$
 
-so $$f$$ is injective. Similarly, if $$f\circ s=\id\_{B}$$, then for any $$y\in B$$,
+so $$f$$ is injective. Similarly, if $$f\circ s=\id_{B}$$, then for any $$y\in B$$,
 
 $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
@@ -56,9 +56,9 @@ commute. Such $$r$$ and $$s$$ have names.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> Let $$f$$ be an injective function from $$A$$ to $$B$$. A function $$r:B\rightarrow A$$ satisfying $$r\circ f=\id\_A$$ is called a *retraction* of $$f$$.
+<ins id="def2">**Definition 2**</ins> Let $$f$$ be an injective function from $$A$$ to $$B$$. A function $$r:B\rightarrow A$$ satisfying $$r\circ f=\id_A$$ is called a *retraction* of $$f$$.
 
-If $$f$$ is a surjective function from $$A$$ to $$B$$, a function $$s:B\rightarrow A$$ satisfying $$f\circ s=\id\_B$$ is called a *section* of $$f$$.
+If $$f$$ is a surjective function from $$A$$ to $$B$$, a function $$s:B\rightarrow A$$ satisfying $$f\circ s=\id_B$$ is called a *section* of $$f$$.
 
 </div>
 
@@ -95,8 +95,8 @@ so the above inclusions become equalities. The following proposition is straight
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-1. Suppose $$f''(a\_1)=f''(a\_2)$$. Then $$f'(f(a\_1))=f'(f(a\_2))$$, and since $$f'$$ and $$f$$ are injective in succession, we obtain $$a_1=a_2$$. Hence $$f''$$ is injective.
-    Now let $$r$$ and $$r'$$ be retractions of $$f$$ and $$f'$$ respectively, i.e., $$r\circ f=\id\_A$$ and $$r'\circ f'=\id\_B$$. Then for any $$a\in A$$,
+1. Suppose $$f''(a_1)=f''(a_2)$$. Then $$f'(f(a_1))=f'(f(a_2))$$, and since $$f'$$ and $$f$$ are injective in succession, we obtain $$a_1=a_2$$. Hence $$f''$$ is injective.
+    Now let $$r$$ and $$r'$$ be retractions of $$f$$ and $$f'$$ respectively, i.e., $$r\circ f=\id_A$$ and $$r'\circ f'=\id_B$$. Then for any $$a\in A$$,
 
       $$((r\circ r')\circ(f'\circ f))(a)=(r\circ\id_{B}\circ f)(a)=(r\circ f)(a)=\id_{A}(a)=a$$
 
@@ -108,7 +108,7 @@ so the above inclusions become equalities. The following proposition is straight
 
     so $$s\circ s'$$ is a section of $$f''$$.
 
-3. Let $$a_1$$, $$a_2\in A$$ and suppose $$f(a_1)=f(a_2)$$. Then $$f''(a_1)=f'(f(a_1))=f'(f(a_2))=f''(a_2)$$, and since $$f''$$ is injective, $$a\_1=a\_2$$. Hence $$f$$ is injective. For any $$a\in A$$,
+3. Let $$a_1$$, $$a_2\in A$$ and suppose $$f(a_1)=f(a_2)$$. Then $$f''(a_1)=f'(f(a_1))=f'(f(a_2))=f''(a_2)$$, and since $$f''$$ is injective, $$a_1=a_2$$. Hence $$f$$ is injective. For any $$a\in A$$,
 
      $$((r''\circ f')\circ f)(a)=(r''\circ f'')(a)=\id_A(a)=a $$
 
@@ -172,7 +172,7 @@ commute.
 
     $$h(y)=(\id_A\circ h)(y)=((r\circ g)\circ h)(y)=(r \circ f)(y)$$
 
-    has the same value regardless of the choice of retraction $$r$$. Since $$r\circ g=r'\circ g=\id_A$$, for any $$g(x)\in g(A)$$ we have $$r(g(x))=x=r'(g(x))$$. That is, $$r\|_{g(A)}=r'\|_{g(A)}$$. By the second of the equivalent conditions, $$r$$ and $$r'$$ must agree on $$f(y)\in f(C)\subseteq g(A)$$. Hence $$h$$, if it exists, is unique.
+    has the same value regardless of the choice of retraction $$r$$. Since $$r\circ g=r'\circ g=\id_A$$, for any $$g(x)\in g(A)$$ we have $$r(g(x))=x=r'(g(x))$$. That is, $$r\vert_{g(A)}=r'\vert_{g(A)}$$. By the second of the equivalent conditions, $$r$$ and $$r'$$ must agree on $$f(y)\in f(C)\subseteq g(A)$$. Hence $$h$$, if it exists, is unique.
     
     Now we prove the converse. Define $$h=r\circ f$$ as suggested by the uniqueness proof. If $$f(C)\subseteq g(A)$$, then for any $$x\in C$$,
 

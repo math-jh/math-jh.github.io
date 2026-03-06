@@ -32,7 +32,7 @@ $$s_2\vert_{Z(s_1)}=\iota^\sharp(X)(s_2)\in(\iota_1)_\ast \mathscr{O}_{Z(s_1)}(X
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Closed embedding $$\iota: Z \hookrightarrow X$$가 *locally principal*이라는 것은 $$X$$의 적당한 open cover $$\\{U\_i\\}$$가 존재하여, $$\iota$$의 공역을 각각의 $$U_i$$로 제한하여 얻어지는 closed embedding들
+<ins id="def1">**정의 1**</ins> Closed embedding $$\iota: Z \hookrightarrow X$$가 *locally principal*이라는 것은 $$X$$의 적당한 open cover $$\{U_i\}$$가 존재하여, $$\iota$$의 공역을 각각의 $$U_i$$로 제한하여 얻어지는 closed embedding들
 
 $$\iota\vert^{U_i}: \iota^{-1}(U_i) \rightarrow U_i$$
 
@@ -40,11 +40,11 @@ $$\iota\vert^{U_i}: \iota^{-1}(U_i) \rightarrow U_i$$
 
 </div>
 
-그럼 만일 $$\iota: Z\hookrightarrow X$$가 locally principal이라면, 정의의 $$U_i$$들 각각을 affine open set들로 덮고 $$s_i$$들을 이들로 제한시키면 $$\\{U_i\\}$$들이 affine open covering이라 가정하여도 된다. 
+그럼 만일 $$\iota: Z\hookrightarrow X$$가 locally principal이라면, 정의의 $$U_i$$들 각각을 affine open set들로 덮고 $$s_i$$들을 이들로 제한시키면 $$\{U_i\}$$들이 affine open covering이라 가정하여도 된다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> Closed embedding $$\iota: Z \hookrightarrow X$$가 *effective Cartier divisor*라는 것은 $$X$$의 affine open cover $$\\{U_i=\Spec A_i\\}$$가 존재하여, 각각의 closed embedding들
+<ins id="def2">**정의 2**</ins> Closed embedding $$\iota: Z \hookrightarrow X$$가 *effective Cartier divisor*라는 것은 $$X$$의 affine open cover $$\{U_i=\Spec A_i\}$$가 존재하여, 각각의 closed embedding들
 
 $$\iota\vert^{U_i}:\iota^{-1}(U_i) \rightarrow U_i$$
 

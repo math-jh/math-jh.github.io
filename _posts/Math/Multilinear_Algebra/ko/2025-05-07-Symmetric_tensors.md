@@ -185,11 +185,11 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $$k$$ times
     $$\gamma_p(x_1+\cdots+x_n)=\sum_{p_1+\cdots+p_n=p}\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)$$
 
     이 성립한다. 
-3. 임의의 $$x_1,\ldots, x_n\in M$$에 대하여, $$p=p_1+\cdots+p_n$$이라 하자. 그럼 $$\\{1,\ldots, p\\}=P_1\cup\cdots\cup P_n$$이도록 하는 집합 $$\\{1,\ldots, p\\}$$의 분할들의 순서쌍들의 집합
+3. 임의의 $$x_1,\ldots, x_n\in M$$에 대하여, $$p=p_1+\cdots+p_n$$이라 하자. 그럼 $$\{1,\ldots, p\}=P_1\cup\cdots\cup P_n$$이도록 하는 집합 $$\{1,\ldots, p\}$$의 분할들의 순서쌍들의 집합
 
     $$\mathscr{P}=\left\{(P_1,\ldots, P_n)\bigg| \bigcup_{k=1}^n P_k=\{1,\ldots, p\}, P_i\cap P_j=\emptyset\right\}$$
 
-    과, 각각의 $$P\in\mathscr{P}$$마다 정의된 $$i\in P_{\phi(i)}$$이도록 하는 함수 $$\phi:\\{1,\ldots, p\\} \rightarrow \\{1,\ldots, n\\}$$에 대하여,
+    과, 각각의 $$P\in\mathscr{P}$$마다 정의된 $$i\in P_{\phi(i)}$$이도록 하는 함수 $$\phi:\{1,\ldots, p\} \rightarrow \{1,\ldots, n\}$$에 대하여,
 
     $$\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)=\sum_{P\in \mathscr{P}}x_{\phi(1)}\otimes \cdots x_{\phi(p)}$$
 
@@ -199,7 +199,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $$k$$ times
     $$\gamma_p(x)\gamma_q(x)=\frac{(p+q)!}{p!q!}\gamma_{p+q}(x)$$
 
     이 성립한다.
-5. 임의의 $$x_1,\ldots, x_n\in M$$이 주어졌다 하고, 임의의 부분집합 $$H\subseteq \\{1,\ldots, n\\}$$에 대하여 $$x_H+\sum_{i\in H}x_i$$라 하자. 그럼 다음의 식
+5. 임의의 $$x_1,\ldots, x_n\in M$$이 주어졌다 하고, 임의의 부분집합 $$H\subseteq \{1,\ldots, n\}$$에 대하여 $$x_H+\sum_{i\in H}x_i$$라 하자. 그럼 다음의 식
     
     $$(-1)^nx_1x_2\cdots x_n=\sum_{H\subset\{1,\ldots, n\}}(-1)^{\lvert H\rvert}\gamma_n(x_H)$$
 
@@ -213,14 +213,14 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $$k$$ times
 
 <ins id="lem6">**보조정리 6**</ins> Finite group $$H$$와 left $$AH$$-module $$N$$에 대하여, $$N$$의 $$H$$-invariant $$A$$-basis $$B$$가 주어졌다 하고, 이 action에 대한 quotient set $$\Omega=B/H$$를 생각하자. 그럼 다음이 성립한다. 
 
-1. 각각의 $$\omega\in \Omega$$마다 $$y_\omega=\sum_{b\in\omega}b$$라 정의하면, $$(y\_\omega)\_{\omega\in \Omega}$$는 $$N^H$$의 $$A$$-basis이다. 
-2. $$N^H$$의 $$N$$에서의 supplementary submodule의 basis는 각각의 $$\omega\in\Omega$$에서 원소 하나씩을 뺀 집합 $$\omega'=\omega\setminus \\{z_\omega\\}$$들의 합집합 $$B'=\bigcup_{\omega\in\Omega} \omega'$$로 이루어진다. 
+1. 각각의 $$\omega\in \Omega$$마다 $$y_\omega=\sum_{b\in\omega}b$$라 정의하면, $$(y_\omega)_{\omega\in \Omega}$$는 $$N^H$$의 $$A$$-basis이다. 
+2. $$N^H$$의 $$N$$에서의 supplementary submodule의 basis는 각각의 $$\omega\in\Omega$$에서 원소 하나씩을 뺀 집합 $$\omega'=\omega\setminus \{z_\omega\}$$들의 합집합 $$B'=\bigcup_{\omega\in\Omega} \omega'$$로 이루어진다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$y\_\omega$$들과 $$B'$$의 원소들을 모두 모으면, 이는 단지 $$\omega$$의 한 원소 $$z\_\omega$$를 $$y\_\omega$$로 교체한 것에 불과하므로, 간단한 선형대수에 의해 이것이 $$N$$의 $$A$$-basis임을 안다. 즉, 주어진 decomposition을 따라
+우선 $$y_\omega$$들과 $$B'$$의 원소들을 모두 모으면, 이는 단지 $$\omega$$의 한 원소 $$z_\omega$$를 $$y_\omega$$로 교체한 것에 불과하므로, 간단한 선형대수에 의해 이것이 $$N$$의 $$A$$-basis임을 안다. 즉, 주어진 decomposition을 따라
 
 $$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab$$
 
@@ -319,12 +319,12 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 1. 식 $$u(x)=v(x,\ldots, x)$$를 만족하는 $$n$$-linear map $$v: M^n \rightarrow N$$이 존재한다. 
 2. 식 $$u(x)=w(\gamma_n(x))$$를 만족하는 linear map $$w: \Sym(M) \rightarrow N$$이 존재한다. 
-3. $$M$$의 basis $$(e\_i)\_{i\in I}$$, $$(\mathbb{N}^{(I)})_n$$-indexed family $$(y\_\nu)$$가 존재하여 
+3. $$M$$의 basis $$(e_i)_{i\in I}$$, $$(\mathbb{N}^{(I)})_n$$-indexed family $$(y_\nu)$$가 존재하여 
     
     $$u\left(\sum_{i\in I}\lambda_i e_i\right)=\sum_{\nu\in\mathbb{N}^{(I)})_n}\lambda^\nu y_\nu$$
 
     이도록 할 수 있다. 
-4. $$M$$의 basis $$(e\_i)\_{i\in I}$$마다 3번 조건의 식을 만족하는 family $$(y_\nu)$$를 찾을 수 있다.
+4. $$M$$의 basis $$(e_i)_{i\in I}$$마다 3번 조건의 식을 만족하는 family $$(y_\nu)$$를 찾을 수 있다.
 
 </div>
 
@@ -332,7 +332,7 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> $$A$$-module $$N$$에 대하여, free $$A$$-module $$A^{(I)}$$이 주어졌다 하고 다항식 $$u\in N[\x\_i]\_{i\in I}$$를 하나 고정하자. 그럼 다음의 식
+<ins id="ex10">**예시 10**</ins> $$A$$-module $$N$$에 대하여, free $$A$$-module $$A^{(I)}$$이 주어졌다 하고 다항식 $$u\in N[\x_i]_{i\in I}$$를 하나 고정하자. 그럼 다음의 식
 
 $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 

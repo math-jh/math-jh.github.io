@@ -62,7 +62,7 @@ weight: 12
 <ins id="prop3">**명제 3**</ins> 두 위상공간 사이의 함수 $$f:X \rightarrow Y$$가 주어졌다 하자. 그럼 다음이 성립한다.
 
 1. 만일 $$f$$가 open (resp. closed)라면, $$Y$$의 임의의 부분집합 $$A$$에 대하여 $$f\vert_{f^{-1}(A)}: f^{-1}(A) \rightarrow A$$도 open (resp. closed)이다.
-2. $$Y$$의 covering $$(A\_i)\_{i\in I}$$가 (1) locally finite closed covering이거나, (2) $$(\interior A\_i)\_{i\in I}$$가 $$Y$$의 open covering이 된다고 하자. 만일 각각의 $$f\vert_{f^{-1}(A_i)}$$가 open (resp. closed)라면, $$f$$ 또한 그러하다. 
+2. $$Y$$의 covering $$(A_i)_{i\in I}$$가 (1) locally finite closed covering이거나, (2) $$(\interior A_i)_{i\in I}$$가 $$Y$$의 open covering이 된다고 하자. 만일 각각의 $$f\vert_{f^{-1}(A_i)}$$가 open (resp. closed)라면, $$f$$ 또한 그러하다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -74,11 +74,11 @@ $$f\vert_{f^{-1}(A)}(U)=f(U)\cap A$$
 
 이고, 가정에 의하여 $$f(U)$$가 열린집합 (resp. 닫힌집합)이므로 원하는 결과를 얻는다.
 
-두 번째 결과도 비슷하게 증명할 수 있는데, $$X$$에서의 열린집합 (resp. 닫힌집합) $$U$$가 주어졌다 하고, $$U\_i$$를 다음 식
+두 번째 결과도 비슷하게 증명할 수 있는데, $$X$$에서의 열린집합 (resp. 닫힌집합) $$U$$가 주어졌다 하고, $$U_i$$를 다음 식
 
 $$U_i=U\cap f^{-1}(A_i)$$
 
-으로 정의하자. 그럼 $$f\vert\_{f^{-1}(A\_i)}(U_i)=f(U)\cap A\_i$$이 성립하고, 따라서 가정에 의하여 $$f(U)\cap A_i$$가 모든 $$i$$에 대해 열린집합 (resp. 닫힌집합)이다. 따라서 만일 $$U$$가 열린집합이라면 $$f(U)$$는 열린집합들의 합집합이므로 열린집합이고, $$U$$가 닫힌집합이면 [§집합의 내부, 폐포, 경계, ⁋명제 4](/ko/math/topology/other_concepts#prop4)에 의하여 닫힌집합이 된다. 
+으로 정의하자. 그럼 $$f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$$이 성립하고, 따라서 가정에 의하여 $$f(U)\cap A_i$$가 모든 $$i$$에 대해 열린집합 (resp. 닫힌집합)이다. 따라서 만일 $$U$$가 열린집합이라면 $$f(U)$$는 열린집합들의 합집합이므로 열린집합이고, $$U$$가 닫힌집합이면 [§집합의 내부, 폐포, 경계, ⁋명제 4](/ko/math/topology/other_concepts#prop4)에 의하여 닫힌집합이 된다. 
 
 </details>
 

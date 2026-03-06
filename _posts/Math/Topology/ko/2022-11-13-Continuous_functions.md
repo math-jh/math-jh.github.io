@@ -89,13 +89,13 @@ $$\cl(f^{-1}(C))\subseteq f^{-1}(f(\cl(f^{-1}(C)))\subseteq f^{-1}(C)$$
 
 [명제 3](#prop3)에 의하여, 두 연속함수 $$f:X\rightarrow Y$$, $$g:Y\rightarrow Z$$가 주어진다면 $$g\circ f$$ 또한 연속이라는 것을 안다. 
 
-두 위상공간 $$(X,\mathcal{T}\_X), (Y,\mathcal{T}\_Y)$$ 사이의 연속함수 $$f:X\rightarrow Y$$가 주어졌다 하자. 그럼 임의의 $$V\in\mathcal{T}\_Y$$에 대하여 $$f^{-1}(V)\in\mathcal{T}\_X$$가 성립하므로, 다음의 식
+두 위상공간 $$(X,\mathcal{T}_X), (Y,\mathcal{T}_Y)$$ 사이의 연속함수 $$f:X\rightarrow Y$$가 주어졌다 하자. 그럼 임의의 $$V\in\mathcal{T}_Y$$에 대하여 $$f^{-1}(V)\in\mathcal{T}_X$$가 성립하므로, 다음의 식
 
 $$f^\mathcal{T}(V):=f^{-1}(V),\qquad V\in\mathcal{T}_Y$$
 
 이 함수 $$f^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$를 잘 정의한다.
 
-이제 $$f$$가 전단사함수라 가정하고 $$\mathcal{T}\_Y$$의 서로 다른 두 원소 $$V\_1,V\_2$$를 생각하자. 일반성을 잃지 않고 $$y\in V\_1\setminus V\_2$$라 하면 
+이제 $$f$$가 전단사함수라 가정하고 $$\mathcal{T}_Y$$의 서로 다른 두 원소 $$V_1,V_2$$를 생각하자. 일반성을 잃지 않고 $$y\in V_1\setminus V_2$$라 하면 
 
 $$f^{-1}(y)\in f^\mathcal{T}(V_1)\setminus f^\mathcal{T}(V_2)$$
 

@@ -35,7 +35,7 @@ $$\ker \bigoplus u_i=\bigoplus \ker u_i,\qquad \coker \prod u_i=\prod \coker u_i
 
 ## 직접곱과 직합
 
-위의 adjunction을 사용하는 법을 살펴보기 위해 가장 기초적인 예시를 생각한다. 우선 $$\Hom$$과 $$\bigoplus$$, $$\prod$$의 관계를 살펴보자. 이를 위해 left $$A$$-module $$M,N$$과 left $$A$$-module들의 family $$(M\_i)\_{i\in I}$$, $$(N\_j)\_{j\in J}$$를 고정한다. 그럼 $$\Hom$$은 right adjoint이므로 limit을 보존한다. ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 abelian group들 사이의 isomorphism
+위의 adjunction을 사용하는 법을 살펴보기 위해 가장 기초적인 예시를 생각한다. 우선 $$\Hom$$과 $$\bigoplus$$, $$\prod$$의 관계를 살펴보자. 이를 위해 left $$A$$-module $$M,N$$과 left $$A$$-module들의 family $$(M_i)_{i\in I}$$, $$(N_j)_{j\in J}$$를 고정한다. 그럼 $$\Hom$$은 right adjoint이므로 limit을 보존한다. ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 abelian group들 사이의 isomorphism
 
 $$\Hom_{\lMod{A}}\left(M, \prod_{j\in J} N_j \right)\cong\prod_{j\in J} \Hom_{\lMod{A}}(M, N_j),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M_i, N)$$
 
@@ -45,7 +45,7 @@ $$\Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, \prod_{j\in J} N_j\right)\cong\pr
 
 을 얻는다. 
 
-비슷하게 $$\otimes$$와 $$\bigoplus$$의 관계를 살펴보자. 이번에는 right $$A$$-module $$M$$, right $$A$$-module들의 family $$(M\_i)\_{i\in I}$$, left $$A$$-module $$N$$, left $$A$$-module들의 family $$(N\_j)\_{j\in J}$$를 생각한다. 그럼 $$\otimes$$는 colimit을 보존하므로 abelian group isomorphism
+비슷하게 $$\otimes$$와 $$\bigoplus$$의 관계를 살펴보자. 이번에는 right $$A$$-module $$M$$, right $$A$$-module들의 family $$(M_i)_{i\in I}$$, left $$A$$-module $$N$$, left $$A$$-module들의 family $$(N_j)_{j\in J}$$를 생각한다. 그럼 $$\otimes$$는 colimit을 보존하므로 abelian group isomorphism
 
 $$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes_AN_j),\qquad \left(\bigoplus_{i\in I} M_i\right)\otimes_A N\cong \bigoplus_{i\in I} M_i\otimes_AN)$$
 

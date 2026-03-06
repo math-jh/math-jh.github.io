@@ -234,7 +234,7 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 
 이 성립한다. 이를 $$E_H$$의 *Deck transformation group*이라 부른다. 더 일반적으로 (fiber $$p^{-1}(x)$$의 서로 다른 원소를 택하여 얻어지는) covering space들의 automorphism은 $$\pi_1(B,x)$$의 subgroup들에 inner automorphism을 취하는 것에 대응되며, 우리는 이를 *Deck transformation*이라 부른다.
 
-한편 $$\pi_1(B,x)$$의 subgroup(들의 conjugacy class들)의 poset에는 minimal한 원소 $$\left\\{e\right\\}$$가 존재한다. 그럼 위의 Galois correspondance에 의해 여기에 대응되는 *universal cover* $$\widetilde{B}$$가 존재한다. 이 covering space의 Deck transformation group은 $$\pi_1(B,x)$$와 isomorphic하며, 
+한편 $$\pi_1(B,x)$$의 subgroup(들의 conjugacy class들)의 poset에는 minimal한 원소 $$\left\{e\right\}$$가 존재한다. 그럼 위의 Galois correspondance에 의해 여기에 대응되는 *universal cover* $$\widetilde{B}$$가 존재한다. 이 covering space의 Deck transformation group은 $$\pi_1(B,x)$$와 isomorphic하며, 
 
 ## 자이페르트-반 캄펜 정리
 

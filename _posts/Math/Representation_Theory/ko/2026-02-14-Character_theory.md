@@ -73,7 +73,7 @@ $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g
 
 </div>
 
-정의에 의해 class function들은 각 conjugacy class들 위에서의 함수값에 의해 결정되며, 따라서 벡터공간으로서 $$\mathbb{C}\_\class(G)$$는 $$G$$의 conjugacy class의 개수만큼의 차원을 갖는다. 한편 앞선 글에서 우리가 중요하게 생각했던 아이디어는 어떠한 값이 주어졌을 때, 이를 $$G$$ 전체에 대하여 평균내주어 $$G$$-invariant한 값을 얻어낼 수 있다는 것이었는데, 이를 이용하면 $$\mathbb{C}\_\class(G)$$ 위에 다음과 같은 정의를 해줄 수 있다. 
+정의에 의해 class function들은 각 conjugacy class들 위에서의 함수값에 의해 결정되며, 따라서 벡터공간으로서 $$\mathbb{C}_\class(G)$$는 $$G$$의 conjugacy class의 개수만큼의 차원을 갖는다. 한편 앞선 글에서 우리가 중요하게 생각했던 아이디어는 어떠한 값이 주어졌을 때, 이를 $$G$$ 전체에 대하여 평균내주어 $$G$$-invariant한 값을 얻어낼 수 있다는 것이었는데, 이를 이용하면 $$\mathbb{C}_\class(G)$$ 위에 다음과 같은 정의를 해줄 수 있다. 
 
 <div class="definition" markdown="1">
 
@@ -85,7 +85,7 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g
 
 </div>
 
-이는 단순히 target space $$\mathbb{C}$$에 정의된 standard Hermitian product를 $$\mathbb{C}\_\class(G)$$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $$\rho$$의 character $$\rchi_\rho$$에 대해서는, 임의의 $$g\in G$$에 대하여
+이는 단순히 target space $$\mathbb{C}$$에 정의된 standard Hermitian product를 $$\mathbb{C}_\class(G)$$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $$\rho$$의 character $$\rchi_\rho$$에 대해서는, 임의의 $$g\in G$$에 대하여
 
 $$\rchi_\rho(g^{-1})=\tr(\rho(g^{-1}))=\tr(\rho(g)^{-1})=\tr(\rho(g)^\dagger)=\overline{\tr(\rho(g))}=\overline{\rchi_\rho(g)}$$
 
@@ -153,7 +153,7 @@ $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $$V\cong 
 
 $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
-을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 irreducible character들은 orthonormal set이다. 우리는 $$\mathbb{C}\_\class(G)$$가 $$G$$의 conjugacy class들의 개수만큼의 차원을 가지고 있는 것을 알고 있으므로, 이로부터 irreducible representation들은 $$G$$의 conjugacy class의 개수보다 많을 수 없다는 것을 안다. 뿐만 아니라, 이 inner product를 사용하면 우리는 임의의 representation $$V$$의 character $$\rchi\_V$$와, 고정된 irreducible representation $$V_i$$의 character $$\rchi_{V_i}$$을 내적하여 $$V$$ 안에서 $$V_i$$의 multiplicity를 계산할 수 있다. 
+을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 irreducible character들은 orthonormal set이다. 우리는 $$\mathbb{C}_\class(G)$$가 $$G$$의 conjugacy class들의 개수만큼의 차원을 가지고 있는 것을 알고 있으므로, 이로부터 irreducible representation들은 $$G$$의 conjugacy class의 개수보다 많을 수 없다는 것을 안다. 뿐만 아니라, 이 inner product를 사용하면 우리는 임의의 representation $$V$$의 character $$\rchi_V$$와, 고정된 irreducible representation $$V_i$$의 character $$\rchi_{V_i}$$을 내적하여 $$V$$ 안에서 $$V_i$$의 multiplicity를 계산할 수 있다. 
 
 ## Regular representation
 
@@ -187,7 +187,7 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 ## Projection formula
 
-앞서 우리는 $$\mathbb{C}\_\class(G)$$ 안에서 irreducible representation들의 character가 orthonormal set을 이룬다는 것을 보았다. 이제 우리는 이들이 $$\mathbb{C}\_\class(G)$$의 orthonormal basis가 된다는 것을 보인다. 
+앞서 우리는 $$\mathbb{C}_\class(G)$$ 안에서 irreducible representation들의 character가 orthonormal set을 이룬다는 것을 보았다. 이제 우리는 이들이 $$\mathbb{C}_\class(G)$$의 orthonormal basis가 된다는 것을 보인다. 
 
 <div class="proposition" markdown="1">
 

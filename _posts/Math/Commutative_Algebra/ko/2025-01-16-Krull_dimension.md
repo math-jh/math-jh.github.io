@@ -101,7 +101,7 @@ $$\mathfrak{p}^{(n)}=\{a\in A\mid\text{$$ba\in \mathfrak{p}^n$$ for some $$b\in 
 
 </div>
 
-정의에 의해 $$\mathfrak{p}^{(n)}$$은 localization $$A \rightarrow A\_\mathfrak{p}$$을 통해 ideal $$(\mathfrak{p}A\_\mathfrak{p})^n$$을 $$A$$로 옮겨온 것이다. 그럼 $$\mathfrak{p}$$ 바깥에 있는 원소들은 modulo $$\mathfrak{p}^({n})$$으로 non-zerodivisor가 되며, $$\mathfrak{p}^{(n)}A\_\mathfrak{p}=(\mathfrak{p}A\_\mathfrak{p})^n$$임이 자명하다. 또, symbolic power들의 descending chain
+정의에 의해 $$\mathfrak{p}^{(n)}$$은 localization $$A \rightarrow A_\mathfrak{p}$$을 통해 ideal $$(\mathfrak{p}A_\mathfrak{p})^n$$을 $$A$$로 옮겨온 것이다. 그럼 $$\mathfrak{p}$$ 바깥에 있는 원소들은 modulo $$\mathfrak{p}^({n})$$으로 non-zerodivisor가 되며, $$\mathfrak{p}^{(n)}A_\mathfrak{p}=(\mathfrak{p}A_\mathfrak{p})^n$$임이 자명하다. 또, symbolic power들의 descending chain
 
 $$A=\mathfrak{p}^{(0)}\supseteq \mathfrak{p}=\mathfrak{p}^{(1)}\supseteq \mathfrak{p}^{(2)}\supseteq \mathfrak{p}^{(3)}\supseteq\cdots$$
 
@@ -120,7 +120,7 @@ $$A=\mathfrak{p}^{(0)}\supseteq \mathfrak{p}=\mathfrak{p}^{(1)}\supseteq \mathfr
 
 임의의 prime ideal $$\mathfrak{q}\subsetneq \mathfrak{p}$$에 대하여 $$\codim \mathfrak{q}=0$$임을 보이면 충분하며, 이는 다시 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $$\dim A_\mathfrak{q}=0$$임을 보이면 된다. 
 
-이제 $$A\_\mathfrak{p}$$에서 $$\mathfrak{p}A\_\mathfrak{p}$$는 유일한 maximal ideal이므로, $$\mathfrak{p}$$는 ideal들 $$\mathfrak{q}A\_\mathfrak{p}$$, $$(\mathfrak{q}A\_\mathfrak{p})^{(n)}$$, $$\mathfrak{a}A_\mathfrak{p}$$가 이 maximal ideal에 포함된다. 특히 우리는 다음의 두 chain
+이제 $$A_\mathfrak{p}$$에서 $$\mathfrak{p}A_\mathfrak{p}$$는 유일한 maximal ideal이므로, $$\mathfrak{p}$$는 ideal들 $$\mathfrak{q}A_\mathfrak{p}$$, $$(\mathfrak{q}A_\mathfrak{p})^{(n)}$$, $$\mathfrak{a}A_\mathfrak{p}$$가 이 maximal ideal에 포함된다. 특히 우리는 다음의 두 chain
 
 $$\mathfrak{a}A_\mathfrak{p}\subseteq (\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p},\qquad \mathfrak{q}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$$
 
@@ -128,27 +128,27 @@ $$\mathfrak{a}A_\mathfrak{p}\subseteq (\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfr
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(1)}+\mathfrak{a}A_\mathfrak{p}\supseteq (\mathfrak{q}A_\mathfrak{p})^{(2)}+\mathfrak{a}A_\mathfrak{p}\supseteq\cdots $$
 
-이 멈춰야 한다는 것을 안다. 따라서 $$(\mathfrak{q}A\_\mathfrak{p})^{(n)}+\mathfrak{a}A\_\mathfrak{p}= (\mathfrak{q}A\_\mathfrak{p})^{(n+1)}+\mathfrak{a}A\_\mathfrak{p}$$라 하자. 그럼 
+이 멈춰야 한다는 것을 안다. 따라서 $$(\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfrak{a}A_\mathfrak{p}= (\mathfrak{q}A_\mathfrak{p})^{(n+1)}+\mathfrak{a}A_\mathfrak{p}$$라 하자. 그럼 
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(n)}\subseteq (\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfrak{a}A_\mathfrak{p}= (\mathfrak{q}A_\mathfrak{p})^{(n+1)}+\mathfrak{a}A_\mathfrak{p}$$
 
-이므로, 임의의 $$f\in (\mathfrak{q}A\_\mathfrak{p})^{(n)}$$는 다음의 꼴
+이므로, 임의의 $$f\in (\mathfrak{q}A_\mathfrak{p})^{(n)}$$는 다음의 꼴
 
 $$f=\alpha a+g,\qquad g\in (\mathfrak{q}A_\mathfrak{p})^{(n+1)}=(\mathfrak{q}A_\mathfrak{p})^{(n)}$$
 
-로 적을 수 있고 이로부터 $$\alpha a\in (\mathfrak{q}A\_\mathfrak{p})^{(n)}$$이어야 한다. 그런데 이 표현에서 $$\mathfrak{p}$$는 $$\mathfrak{a}$$를 포함하는 prime들 중 minimal한 것이므로, $$a\not\in \mathfrak{q}$$이고 따라서 $$\alpha\in (\mathfrak{q}A\_\mathfrak{p})^{(n)}$$이어야 한다. 즉, 다음의 식
+로 적을 수 있고 이로부터 $$\alpha a\in (\mathfrak{q}A_\mathfrak{p})^{(n)}$$이어야 한다. 그런데 이 표현에서 $$\mathfrak{p}$$는 $$\mathfrak{a}$$를 포함하는 prime들 중 minimal한 것이므로, $$a\not\in \mathfrak{q}$$이고 따라서 $$\alpha\in (\mathfrak{q}A_\mathfrak{p})^{(n)}$$이어야 한다. 즉, 다음의 식
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(n)}=\mathfrak{a}(\mathfrak{q}A_\mathfrak{p})^{(n)}+(\mathfrak{q}A_\mathfrak{p})^{(n+1)}$$
 
-이 성립한다. 이제 이들을 $$A\_\mathfrak{p}/(\mathfrak{q}A\_\mathfrak{p})^{(n+1)}$$로 보내면 
+이 성립한다. 이제 이들을 $$A_\mathfrak{p}/(\mathfrak{q}A_\mathfrak{p})^{(n+1)}$$로 보내면 
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(n)}=\mathfrak{a}(\mathfrak{q}A_\mathfrak{p})^{(n)}\pmod{\mathfrak{q}^{(n+1)}}$$
 
-이고, $$a\in \mathfrak{p}A\_\mathfrak{p}=J(A\_\mathfrak{p})$$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 $$(\mathfrak{q}A\_\mathfrak{p})^{(n)}=0\pmod{(\mathfrak{q}A\_\mathfrak{p})^{(n+1)}}$$이다. 즉, $$(\mathfrak{q}A\_\mathfrak{p})^{(n)}=(\mathfrak{q}A\_\mathfrak{p})^{(n+1)}$$이다. 이제 이 식을 $$\mathfrak{q}$$에서 localize하면
+이고, $$a\in \mathfrak{p}A_\mathfrak{p}=J(A_\mathfrak{p})$$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 $$(\mathfrak{q}A_\mathfrak{p})^{(n)}=0\pmod{(\mathfrak{q}A_\mathfrak{p})^{(n+1)}}$$이다. 즉, $$(\mathfrak{q}A_\mathfrak{p})^{(n)}=(\mathfrak{q}A_\mathfrak{p})^{(n+1)}$$이다. 이제 이 식을 $$\mathfrak{q}$$에서 localize하면
 
 $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 
-이고, $$\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$$이므로 $$(\mathfrak{q}A_\mathfrak{q})^{n}=0$$이다. 이제 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)의 둘째 조건과 셋째 조건의 동치로부터 $$A\_\mathfrak{q}=A\_\mathfrak{q}/(0)$$가 artinian이고, 따라서 [따름정리 3](#cor3)으로부터 $$\dim A\_\mathfrak{q}=0$$임을 안다. 
+이고, $$\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$$이므로 $$(\mathfrak{q}A_\mathfrak{q})^{n}=0$$이다. 이제 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)의 둘째 조건과 셋째 조건의 동치로부터 $$A_\mathfrak{q}=A_\mathfrak{q}/(0)$$가 artinian이고, 따라서 [따름정리 3](#cor3)으로부터 $$\dim A_\mathfrak{q}=0$$임을 안다. 
 
 </details> 
 

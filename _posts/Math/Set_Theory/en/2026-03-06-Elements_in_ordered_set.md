@@ -65,7 +65,7 @@ Sometimes we need to consider a new element greater than all elements of an orde
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-It suffices to add the elements of $$\bigcup\_{x\in A}\left\{(x, +\infty)\right\}$$ to the existing order relation.
+It suffices to add the elements of $$\bigcup_{x\in A}\left\{(x, +\infty)\right\}$$ to the existing order relation.
 
 </details>
 
@@ -122,7 +122,7 @@ Now we examine the relationship between set operations and bounds.
 Let $$x\in X'$$ be arbitrary. Since $$X'\subseteq X$$, $$x\in X$$. On the other hand, $$x\leq \sup X$$ holds for any $$x\in X$$, and thus $$\sup X$$ is an upper bound of $$X'$$. By definition, $$\sup X'\leq \sup X$$.
 </details>
 
-<ins id="prop9">**Proposition 9**</ins> For an ordered set $$A$$, consider families $$(x_i)\_{i\in I}$$, $$(y_i)\_{i\in I}$$ satisfying $$x_i\leq y_i$$ for all $$i\in I$$. If they all have suprema in $$A$$, then $$\sup_{i\in I} x_i\leq \sup_{i\in I} y_i$$.
+<ins id="prop9">**Proposition 9**</ins> For an ordered set $$A$$, consider families $$(x_i)_{i\in I}$$, $$(y_i)_{i\in I}$$ satisfying $$x_i\leq y_i$$ for all $$i\in I$$. If they all have suprema in $$A$$, then $$\sup_{i\in I} x_i\leq \sup_{i\in I} y_i$$.
 {: .proposition}
 
 <details class="proof" markdown="1">
@@ -131,24 +131,24 @@ Let $$x\in X'$$ be arbitrary. Since $$X'\subseteq X$$, $$x\in X$$. On the other 
 For any $$i\in I$$, $$x_i\leq y_i$$ and $$y_i\leq \sup y_i$$, so $$x_i\leq \sup y_i$$ for all $$i$$. By the minimality of $$\sup x_i$$, we have $$\sup x_i\leq\sup y_i$$.
 </details>
 
-<ins id="prop10">**Proposition 10**</ins>  For an ordered set $$A$$, an index set $$I$$, and a covering $$(J_k)_{i\in I}$$ of $$I$$, suppose $$(x_i)\_{i\in J_k}$$ has a supremum in $$A$$. Then $$\sup\_{i\in I} x_i$$ exists if and only if $$\sup\_{k\in K}(\sup\_{j\in J_k}x_j)$$ exists, and the two values are equal.
+<ins id="prop10">**Proposition 10**</ins>  For an ordered set $$A$$, an index set $$I$$, and a covering $$(J_k)_{i\in I}$$ of $$I$$, suppose $$(x_i)_{i\in J_k}$$ has a supremum in $$A$$. Then $$\sup_{i\in I} x_i$$ exists if and only if $$\sup_{k\in K}(\sup_{j\in J_k}x_j)$$ exists, and the two values are equal.
 {: .proposition}
 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Write $$b_k=\sup\_{i\in J_k} x_i$$. First suppose $$(x_i)\_{i\in I}$$ has a supremum, call it $$a$$. Then $$a\leq b_k$$ holds for all $$k$$. Also, if $$c\geq b_k$$ holds for all $$k$$, then for any $$x_i$$, if $$i\in J\_{k'}$$, then $$b\_{k'}\geq x_i$$, and thus $$c\geq x_i$$ for all $$i$$. By minimality of $$a$$, we must have $$c\geq a$$, so $$a$$ is the supremum and $$\sup\_{i\in I}x_i=\sup\_{k\in K}(\sup\_{i\in J_k} x_j)$$.
+Write $$b_k=\sup_{i\in J_k} x_i$$. First suppose $$(x_i)_{i\in I}$$ has a supremum, call it $$a$$. Then $$a\leq b_k$$ holds for all $$k$$. Also, if $$c\geq b_k$$ holds for all $$k$$, then for any $$x_i$$, if $$i\in J_{k'}$$, then $$b_{k'}\geq x_i$$, and thus $$c\geq x_i$$ for all $$i$$. By minimality of $$a$$, we must have $$c\geq a$$, so $$a$$ is the supremum and $$\sup_{i\in I}x_i=\sup_{k\in K}(\sup_{i\in J_k} x_j)$$.
 
-Conversely, if $$(b_k)\_{k\in K}$$ has a supremum $$a'$$, the proof can be completed in the same way.
+Conversely, if $$(b_k)_{k\in K}$$ has a supremum $$a'$$, the proof can be completed in the same way.
 
 </details>
 
-<ins id="prop11">**Proposition 11**</ins>  For the product $$A=\prod A_i$$ of ordered sets $$(A_i)\_{i\in I}$$ and a subset $$X$$ of $$A$$, let $$X_i=\pr\_i X$$. Then $$\sup_AX$$ exists if and only if $$\sup\_{A_i}X_i$$ exists for each $$i$$, and $$\sup_AX=(\sup\_{A_i}X_i)$$.
+<ins id="prop11">**Proposition 11**</ins>  For the product $$A=\prod A_i$$ of ordered sets $$(A_i)_{i\in I}$$ and a subset $$X$$ of $$A$$, let $$X_i=\pr_i X$$. Then $$\sup_AX$$ exists if and only if $$\sup_{A_i}X_i$$ exists for each $$i$$, and $$\sup_AX=(\sup_{A_i}X_i)$$.
 {: .proposition}
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First suppose $$\sup\_{A_i} X_i$$ exists for each $$i$$. It is clear that $$(\sup\_{A_i} X_i)\_{i\in I}$$ is an upper bound of $$X$$. If $$(c_i)$$ were another upper bound of $$X$$, then each $$c_i$$ would be an upper bound of $$X_i$$, so by minimality of $$\sup\_{A_i}X_i$$, we have $$c_i\geq\sup X_i$$, and thus $$(c_i)\geq(\sup X_i)\_{i\in I}$$.
+First suppose $$\sup_{A_i} X_i$$ exists for each $$i$$. It is clear that $$(\sup_{A_i} X_i)_{i\in I}$$ is an upper bound of $$X$$. If $$(c_i)$$ were another upper bound of $$X$$, then each $$c_i$$ would be an upper bound of $$X_i$$, so by minimality of $$\sup_{A_i}X_i$$, we have $$c_i\geq\sup X_i$$, and thus $$(c_i)\geq(\sup X_i)_{i\in I}$$.
 
 Conversely, suppose $$\sup X=(a_i)$$ exists. For all $$i$$, $$a_i$$ is an upper bound of $$X_i$$. For if $$x_i\in X_i$$, then there exists $$x\in X$$ with $$x_i$$ as its $$i$$th component such that $$x\leq (a_i)$$. Now for any other upper bound $$a_i'$$, define a new element $$(c_i)$$ by replacing the $$i$$th component of $$(a_i)$$ with $$a_i'$$. Then $$c\geq a$$, so $$a_i'\geq a_i$$.
 
@@ -159,8 +159,8 @@ Conversely, suppose $$\sup X=(a_i)$$ exists. For all $$i$$, $$a_i$$ is an upper 
 <ins id="rmk4">**Remark**</ins>  For an ordered set $$A$$ and $$X'\subseteq X\subseteq A$$, only one of $$\sup_AX'$$ and $$\sup_XX'$$ may exist, or both may exist but with different values. For example, compare $$X'=\{x\in\mathbb{Q}\mid x < \sqrt{2}\}$$ in each of the following sets:
 
 1. As a subset of $$X_1=\mathbb{Q}$$, the supremum of this set does not exist, but it does exist in $$A=\mathbb{R}$$. Thus even if $$\sup_AX'$$ exists, $$\sup_{X_1}X'$$ may not exist.
-2. Consider the set $$X_2=X'\cup \left\{2\right\}$$. Then $$X'\subseteq X_2\subseteq X_1$$ and $$\sup\_{X_2}X'=2$$, but $$\sup_{X_1}A$$ does not exist.
-3. Finally, for $$X'\subseteq X_2\subseteq A$$, both $$\sup\_{X_2}X'$$ and $$\sup\_AX'$$ exist but have different values.
+2. Consider the set $$X_2=X'\cup \left\{2\right\}$$. Then $$X'\subseteq X_2\subseteq X_1$$ and $$\sup_{X_2}X'=2$$, but $$\sup_{X_1}A$$ does not exist.
+3. Finally, for $$X'\subseteq X_2\subseteq A$$, both $$\sup_{X_2}X'$$ and $$\sup_AX'$$ exist but have different values.
 
 </div>
 

@@ -52,22 +52,22 @@ weight: 21
 
 $$\mathcal{M}$$을 다음의 조건을 만족하는 관계들 $$R\subseteq A\times A$$의 모임이라 하자.
 
-1. $$G$$는 $$R=\pr\_1R$$에서의 well-ordering이다.
+1. $$G$$는 $$R=\pr_1R$$에서의 well-ordering이다.
 2. 각각의 $$x\in U$$에 대하여, $$S_x\in\mathcal{S}$$이고 $$p(S_x)=x$$이다.
 
-우리는 $$\mathcal{M}$$의 원소 $$G$$마다 정의된 $$U=\pr\_1G$$가 [§정렬집합의 성질들, ⁋명제 4](/ko/math/set_theory/well_ordering#prop4)의 조건을 만족함을 보일 것이다. 이를 위해 임의의 $$U$$, $$U'$$에 대하여 $$U$$가 $$U'$$의 segment이거나 그 반대라는 것을 보이자.
+우리는 $$\mathcal{M}$$의 원소 $$G$$마다 정의된 $$U=\pr_1G$$가 [§정렬집합의 성질들, ⁋명제 4](/ko/math/set_theory/well_ordering#prop4)의 조건을 만족함을 보일 것이다. 이를 위해 임의의 $$U$$, $$U'$$에 대하여 $$U$$가 $$U'$$의 segment이거나 그 반대라는 것을 보이자.
 
 $$G$$, $$G'\in \mathcal{M}$$가 임의로 주어졌고 $$U$$, $$U'$$가 그 정의역이라 하자. 이 때, (1) $$x$$를 끝점으로 갖는 segment가 $$U$$와 $$U'$$에서 동일한 집합을 나타내고, (2) 그 segment 위에서의 order가 $$G$$와 동일하도록 하는, $$x\in U\cap U'$$들을 모아 그 집합을 $$V$$라 하자. 만일 $$x\in V$$이고 $$y\in U$$가 $$y\leq x$$를 만족한다면, $$U$$와 $$U'$$ 모두에서 $$y\in S_x$$이다. 또, $$U$$에서 $$y$$보다 작은 원소는 $$U'$$에서도 $$y$$보다 작다. 따라서 $$y\in V$$이고, $$V$$는 $$U$$의 segment이다.
 
-이제 $$U$$와 $$U'$$가 원하는 조건을 만족하기 위해서는, $$U=V$$이거나 반대로 $$U'=V$$임만 보이면 충분하다. $$V\neq U$$이고 $$V\neq U'$$라 가정하자. 그럼 $$U\setminus V$$와 $$U'\setminus V$$의 least element $$x$$와 $$x'$$에 대하여, $$V=S_x=S\_{x'}$$가 $$U$$와 $$U'$$ 각각에서 성립한다. 그런데 두 번째 조건에 의하여 $$V\in\mathcal{S}$$이므로 $$x=p(S_x)=p(V)=p(S\_{x'})=x'$$이고, 따라서 $$x\in V$$이다.
+이제 $$U$$와 $$U'$$가 원하는 조건을 만족하기 위해서는, $$U=V$$이거나 반대로 $$U'=V$$임만 보이면 충분하다. $$V\neq U$$이고 $$V\neq U'$$라 가정하자. 그럼 $$U\setminus V$$와 $$U'\setminus V$$의 least element $$x$$와 $$x'$$에 대하여, $$V=S_x=S_{x'}$$가 $$U$$와 $$U'$$ 각각에서 성립한다. 그런데 두 번째 조건에 의하여 $$V\in\mathcal{S}$$이므로 $$x=p(S_x)=p(V)=p(S_{x'})=x'$$이고, 따라서 $$x\in V$$이다.
 
-이제 [§정렬집합의 성질들, ⁋명제 4](/ko/math/set_theory/well_ordering#prop4)를 활용하여 well-ordered set $$M=\bigcup\_{G\in\mathcal{M}}\pr\_1G$$를 얻는다. 자명하게 $$M\in\mathcal{M}$$이므로 $$M$$은 명제의 성질 1을 만족한다. 만일 $$M\in\mathcal{S}$$라면 $$\mathcal{S}$$의 조건에서 $$p(M)\not\in M$$이 된다. 이제 $$M$$에 greatest element $$a=p(M)$$를 추가하면, 우리는 또 다른 well-ordered set $$M'=M\cup\\{a\\}$$ ($$S_a=M$$)를 얻는다. $$S_a=M\in\mathcal{S}$$이고 $$p(S_a)=a$$이므로, $$M'$$은 $$\mathcal{M}$$의 원소가 되어 $$M$$의 최대성에 모순이다. 따라서 명제의 성질 2도 성립한다.
+이제 [§정렬집합의 성질들, ⁋명제 4](/ko/math/set_theory/well_ordering#prop4)를 활용하여 well-ordered set $$M=\bigcup_{G\in\mathcal{M}}\pr_1G$$를 얻는다. 자명하게 $$M\in\mathcal{M}$$이므로 $$M$$은 명제의 성질 1을 만족한다. 만일 $$M\in\mathcal{S}$$라면 $$\mathcal{S}$$의 조건에서 $$p(M)\not\in M$$이 된다. 이제 $$M$$에 greatest element $$a=p(M)$$를 추가하면, 우리는 또 다른 well-ordered set $$M'=M\cup\{a\}$$ ($$S_a=M$$)를 얻는다. $$S_a=M\in\mathcal{S}$$이고 $$p(S_a)=a$$이므로, $$M'$$은 $$\mathcal{M}$$의 원소가 되어 $$M$$의 최대성에 모순이다. 따라서 명제의 성질 2도 성립한다.
 </details>
 
 <details class="proof--alone" markdown="1">
 <summary>정리 1의 증명</summary>
 
-$$\mathcal{S}=\mathcal{P}(A)\setminus\\{A\\}$$라 하자. 또, 함수 $$p:\mathcal{S}\rightarrow A$$의 값 $$P(X)$$를 $$A\setminus X$$의 어떤 원소로 정의하자. (즉, $$P$$는 choice function이다.) 그럼 $$P(X)\not\in X$$이다. 이제 앞선 보조정리에 의해 어떤 well-ordered subset $$M\subseteq A$$가 존재하여 위 보조정리의 1과 2를 만족한다. 특히, $$M\not\in\mathcal{S}$$인데, 이를 만족할 수 있는 유일한 $$M$$은 $$A$$ 뿐이다.
+$$\mathcal{S}=\mathcal{P}(A)\setminus\{A\}$$라 하자. 또, 함수 $$p:\mathcal{S}\rightarrow A$$의 값 $$P(X)$$를 $$A\setminus X$$의 어떤 원소로 정의하자. (즉, $$P$$는 choice function이다.) 그럼 $$P(X)\not\in X$$이다. 이제 앞선 보조정리에 의해 어떤 well-ordered subset $$M\subseteq A$$가 존재하여 위 보조정리의 1과 2를 만족한다. 특히, $$M\not\in\mathcal{S}$$인데, 이를 만족할 수 있는 유일한 $$M$$은 $$A$$ 뿐이다.
 </details>
 
 이제 가장 범용적으로 쓰이는 선택공리의 동치인 Zorn's lemma를 소개할 차례다. 우선 다음을 정의하자.
@@ -95,11 +95,11 @@ Inductive set은 저자에 따라 전혀 다른 개념을 뜻하기도 하므로
 
 완결성을 위해 간단하게 세 가지 명제, 그러니까 선택공리, Zermelo's theorem, Zorn's lemma가 동치임을 보이자. 우리는 Zermelo's theorem과 Zorn's lemma를 보일 때 선택공리를 썼으므로, 이제 Zermelo's theorem과 Zorn's lemma 각각을 이용해서 choice function을 만들어내면 된다. 
 
-우선 Zermelo's theorem을 가정한다면 모든 집합은 well-ordered될 수 있으므로, 어떠한 $$S\in\mathcal{P}(A)\setminus \\{\emptyset\\}$$에 대해서도 least element가 존재한다. 이제 $$p(S)$$를 $$S$$의 least element로 정의하면 $$p$$가 원하는 choice function이다.
+우선 Zermelo's theorem을 가정한다면 모든 집합은 well-ordered될 수 있으므로, 어떠한 $$S\in\mathcal{P}(A)\setminus \{\emptyset\}$$에 대해서도 least element가 존재한다. 이제 $$p(S)$$를 $$S$$의 least element로 정의하면 $$p$$가 원하는 choice function이다.
 
-이제 Zorn's lemma를 가정하고, 집합 $$A$$의 choice function을 만들자. 우선 $$A$$의 어떤 부분집합 $$X$$ 위에 정의된 choice function들을 모아 이를 $$\mathcal{F}$$라 하자. 최소한 $$X=\\{a\\}$$ 위에서는 choice function이 존재하므로 $$\mathcal{F}$$는 공집합이 아니다. 이제 $$\mathcal{C}$$의 각 원소들은 집합이므로, $$\subseteq$$에 의해 순서가 주어진다. 
+이제 Zorn's lemma를 가정하고, 집합 $$A$$의 choice function을 만들자. 우선 $$A$$의 어떤 부분집합 $$X$$ 위에 정의된 choice function들을 모아 이를 $$\mathcal{F}$$라 하자. 최소한 $$X=\{a\}$$ 위에서는 choice function이 존재하므로 $$\mathcal{F}$$는 공집합이 아니다. 이제 $$\mathcal{C}$$의 각 원소들은 집합이므로, $$\subseteq$$에 의해 순서가 주어진다. 
 
-이제 $$\mathcal{F}$$의 totally ordered subset $$\mathcal{C}$$가 주어졌다 하자. 그럼 $$\bigcup\_{X\in\mathcal{C}} F_X$$는 정의역 $$\mathcal{P}(\bigcup\_{X\in\mathcal{C}} X)$$를 갖는 함수이므로, 이 함수들의 모임의 upper bound가 된다. 따라서 Zorn's lemma에 의해 어떤 maximal element가 존재한다. 이를 $$F$$라 하고 $$\mathcal{P}(B)$$를 정의역이라 하자. 만일 $$x\in A\setminus B$$라면, $$B$$에 $$x$$를 추가하고 $$\tilde{f}$$를
+이제 $$\mathcal{F}$$의 totally ordered subset $$\mathcal{C}$$가 주어졌다 하자. 그럼 $$\bigcup_{X\in\mathcal{C}} F_X$$는 정의역 $$\mathcal{P}(\bigcup_{X\in\mathcal{C}} X)$$를 갖는 함수이므로, 이 함수들의 모임의 upper bound가 된다. 따라서 Zorn's lemma에 의해 어떤 maximal element가 존재한다. 이를 $$F$$라 하고 $$\mathcal{P}(B)$$를 정의역이라 하자. 만일 $$x\in A\setminus B$$라면, $$B$$에 $$x$$를 추가하고 $$\tilde{f}$$를
 
 $$\tilde{f}(X)=\begin{cases}f(X)&\text{if }x\not\in X\\ x&\text{if }x\in X\end{cases}$$
 

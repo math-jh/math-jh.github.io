@@ -21,11 +21,11 @@ weight: 7
 
 이제 우리는 행렬과 linear map 사이의 관계를 살펴본다. 이는 [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)의 일반화라 생각할 수 있다. 편의를 위해 
 
-Free $$A$$-module $$M$$이 주어졌다 하고, $$M$$의 basis $$\mathcal{B}=(e\_i)\_{i\in I}$$를 고정하자. 그럼 임의의 $$x\in M$$은 
+Free $$A$$-module $$M$$이 주어졌다 하고, $$M$$의 basis $$\mathcal{B}=(e_i)_{i\in I}$$를 고정하자. 그럼 임의의 $$x\in M$$은 
 
 $$x=\sum_{i\in I} x_i e_i,\qquad x_i\in A$$
 
-으로 쓸 수 있으며, 이렇게 일차결합으로 나타냈을 때 $$e_i$$들의 계수에 해당하는 $$x_i$$들로 이루어진 열벡터 $$(x\_{i0})\_{(i,0)\in I\times\\{0\\}}$$를 $$x$$의 *$$\mathcal{B}$$에 대한 좌표표현*이라 부르고 $$[x]_\mathcal{B}$$로 적는다. 한편 coordinate form을 사용하면 $$x_i$$를 복잡한 설명 없이 식 
+으로 쓸 수 있으며, 이렇게 일차결합으로 나타냈을 때 $$e_i$$들의 계수에 해당하는 $$x_i$$들로 이루어진 열벡터 $$(x_{i0})_{(i,0)\in I\times\{0\}}$$를 $$x$$의 *$$\mathcal{B}$$에 대한 좌표표현*이라 부르고 $$[x]_\mathcal{B}$$로 적는다. 한편 coordinate form을 사용하면 $$x_i$$를 복잡한 설명 없이 식 
 
 $$x_i=\langle x,e_i^\ast\rangle\tag{1}$$
 
@@ -33,7 +33,7 @@ $$x_i=\langle x,e_i^\ast\rangle\tag{1}$$
 
 ## 선형사상의 행렬표현
 
-남은 글에서 우리는 두 free $$A$$-module $$M,N$$이 주어졌다 하고, 이들의 basis $$\mathcal{B}=(e\_i)\_{i\in I}$$, $$\mathcal{C}=(f\_j)\_{j\in J}$$를 고정한다.
+남은 글에서 우리는 두 free $$A$$-module $$M,N$$이 주어졌다 하고, 이들의 basis $$\mathcal{B}=(e_i)_{i\in I}$$, $$\mathcal{C}=(f_j)_{j\in J}$$를 고정한다.
 
 <div class="definition" markdown="1">
 
@@ -49,13 +49,13 @@ $$[u]_\mathcal{C}^\mathcal{B}=(f_j^\ast(u(e_i)))_{(j,i)\in J\times I}=(\langle u
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> Linear map $$u:M \rightarrow N$$의 행렬표현 $$[u]\_\mathcal{C}^\mathcal{B}$$의 $$i$$번째 열은 $$u(e\_i)$$의 $$\mathcal{C}$$에 대한 좌표표현 $$[u(e\_i)]\_\mathcal{C}$$와 같다.
+<ins id="prop2">**명제 2**</ins> Linear map $$u:M \rightarrow N$$의 행렬표현 $$[u]_\mathcal{C}^\mathcal{B}$$의 $$i$$번째 열은 $$u(e_i)$$의 $$\mathcal{C}$$에 대한 좌표표현 $$[u(e_i)]_\mathcal{C}$$와 같다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-정의에 의하여 $$[u]\_\mathcal{C}^\mathcal{B}$$의 $$i$$번째 열은 다음 식
+정의에 의하여 $$[u]_\mathcal{C}^\mathcal{B}$$의 $$i$$번째 열은 다음 식
 
 $$(f_j^\ast(u(e_i)))_{j\in J}=(\langle u(e_i), f_j^\ast\rangle)_{j\in J}$$
 
@@ -71,7 +71,7 @@ $$[u+v]_\mathcal{C}^\mathcal{B}=[u]_\mathcal{C}^\mathcal{B}+[v]_\mathcal{C}^\mat
 
 $$[\alpha u]_\mathcal{C}^\mathcal{B}=\alpha[u]_\mathcal{C}^\mathcal{B}$$
 
-로 주어지는 것을 알 수 있다. 요약하자면 $$u\mapsto [u]\_\mathcal{C}^\mathcal{B}$$는 $$\Hom\_{\lMod{A}}(M,N)$$에서 $$\Mat\_{J\times I}(A)$$로의 $$Z(A)$$-module homomorphism이다. 이 $$Z(A)$$-linear map은 injective인데, 이는 $$u=0$$인 것과 모든 $$i\in I$$에 대하여 $$u(e_i)=0$$인 것이 서로 동치이기 때문이다. 한편, 만일 $$J$$가 유한집합이라면 $$\Mat_{J\times I}(A)$$의 임의의 원소 $$(x_{ji})$$에 대하여, $$u\in\Hom_\lMod{A}$$를 다음 식
+로 주어지는 것을 알 수 있다. 요약하자면 $$u\mapsto [u]_\mathcal{C}^\mathcal{B}$$는 $$\Hom_{\lMod{A}}(M,N)$$에서 $$\Mat_{J\times I}(A)$$로의 $$Z(A)$$-module homomorphism이다. 이 $$Z(A)$$-linear map은 injective인데, 이는 $$u=0$$인 것과 모든 $$i\in I$$에 대하여 $$u(e_i)=0$$인 것이 서로 동치이기 때문이다. 한편, 만일 $$J$$가 유한집합이라면 $$\Mat_{J\times I}(A)$$의 임의의 원소 $$(x_{ji})$$에 대하여, $$u\in\Hom_\lMod{A}$$를 다음 식
 
 $$u(e_i)=\sum_{j\in J} \langle u(e_i),f_j^\ast\rangle f_j$$
 
@@ -109,7 +109,7 @@ $$\langle u(x),f_j^\ast\rangle=\left\langle u\left(\sum_{i\in I} x_i e_i\right),
 
 <div class="proposition" markdown="1">
 
-<ins id="cor4">**따름정리 4**</ins> 세 $$A$$-module $$M,N,L$$이 주어졌다 하고, 유한한 basis $$\mathcal{B}=(e\_i)\_{i\in I},\mathcal{C}=(f\_j)\_{j\in J},\mathcal{D}=(g\_k)\_{k\in K}$$를 고정하자. 그럼 임의의 linear map $$u:M \rightarrow N$$, $$v:N \rightarrow L$$에 대하여, 다음 식
+<ins id="cor4">**따름정리 4**</ins> 세 $$A$$-module $$M,N,L$$이 주어졌다 하고, 유한한 basis $$\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$$를 고정하자. 그럼 임의의 linear map $$u:M \rightarrow N$$, $$v:N \rightarrow L$$에 대하여, 다음 식
 
 $$[v \circ u]_\mathcal{D}^\mathcal{B}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}$$
 
@@ -157,7 +157,7 @@ $$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\l
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$
 
-으로 정의하자. 그럼 임의의 $$u\in\End_\rMod{A}(M)$$에 대하여, basis $$\mathcal{B}=(e\_i)\_{1\leq i\leq n}$$를 고정하고 $$[u]\_\mathcal{B}^\mathcal{B}$$를 생각하면
+으로 정의하자. 그럼 임의의 $$u\in\End_\rMod{A}(M)$$에 대하여, basis $$\mathcal{B}=(e_i)_{1\leq i\leq n}$$를 고정하고 $$[u]_\mathcal{B}^\mathcal{B}$$를 생각하면
 
 $$\tr([u]_\mathcal{B}^\mathcal{B})=\sum_{i=1}^n ([u]_\mathcal{B}^\mathcal{B})_{ii}=\sum_{i=1}^n\langle u(e_i), e_i^\ast\rangle$$
 
@@ -199,7 +199,7 @@ $$H=\bigoplus_{(j,i)\in J\times I}\Hom_{\lMod{A}}(M_i,N_j)$$
 
 위에 정의된 $$J\times I$$ 행렬로 생각할 수 있다.
 
-이러한 일반화를 하여도 위에서 살펴본 모든 명제들이 그대로 성립함을 확인할 수 있다. 특히 행렬의 곱이 주목할 만한데, $$I,J$$가 모두 유한하고, 여기에 더해 각각의 $$M_i$$와 $$N_j$$들이 유한한 basis $$\mathcal{B}\_i$$, $$\mathcal{C}\_j$$들을 갖는다 하자. 그럼 이들의 basis를 모두 모아둔 것들이 각각 $$M$$과 $$N$$의 basis $$\mathcal{B},\mathcal{C}$$를 이룬다. 그럼 이 basis에 대해 linear map $$u:M \rightarrow N$$을 행렬로 나타낸 것은, 위의 $$[u]\_J^I$$에서 각각의 성분 $$u_{ji}$$들을 basis $$\mathcal{B}\_i$$, $$\mathcal{C}\_j$$에 대해 행렬로 나타낸 것을 대입한 행렬과 같음을 확인할 수 있으며, 이것이 행렬의 곱에 대해 유의미하게 행동한다. 즉, 또 다른 direct sum $$L=\bigoplus\_{k\in K} L\_k$$와, basis $$\mathcal{D}=\bigcup \mathcal{D}\_k$$에 대하여 $$v:N \rightarrow L$$을 마찬가지 방식으로 써 보면, $$v\circ u$$의 basis $$\mathcal{B}, \mathcal{D}$$에 대한 행렬표현은 다음의 행렬
+이러한 일반화를 하여도 위에서 살펴본 모든 명제들이 그대로 성립함을 확인할 수 있다. 특히 행렬의 곱이 주목할 만한데, $$I,J$$가 모두 유한하고, 여기에 더해 각각의 $$M_i$$와 $$N_j$$들이 유한한 basis $$\mathcal{B}_i$$, $$\mathcal{C}_j$$들을 갖는다 하자. 그럼 이들의 basis를 모두 모아둔 것들이 각각 $$M$$과 $$N$$의 basis $$\mathcal{B},\mathcal{C}$$를 이룬다. 그럼 이 basis에 대해 linear map $$u:M \rightarrow N$$을 행렬로 나타낸 것은, 위의 $$[u]_J^I$$에서 각각의 성분 $$u_{ji}$$들을 basis $$\mathcal{B}_i$$, $$\mathcal{C}_j$$에 대해 행렬로 나타낸 것을 대입한 행렬과 같음을 확인할 수 있으며, 이것이 행렬의 곱에 대해 유의미하게 행동한다. 즉, 또 다른 direct sum $$L=\bigoplus_{k\in K} L_k$$와, basis $$\mathcal{D}=\bigcup \mathcal{D}_k$$에 대하여 $$v:N \rightarrow L$$을 마찬가지 방식으로 써 보면, $$v\circ u$$의 basis $$\mathcal{B}, \mathcal{D}$$에 대한 행렬표현은 다음의 행렬
 
 $$\sum_{j\in J}[v_{kj}]_{\mathcal{D}_k}^{\mathcal{C}_j}[u_{ji}]_{\mathcal{C}_j}^{\mathcal{B}_i}$$
 

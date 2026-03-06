@@ -31,7 +31,7 @@ weight: 1
 
 <div class="proposition" markdown="1">
 
-<ins id="lem1">**보조정리 1**</ins> $$A$$-module $$M$$의 submodule들의 family $$(N_i)\_{i\in I}$$에 대하여, 교집합 $$\bigcap_{i\in I} N\_i$$는 $$M$$의 submodule이다.
+<ins id="lem1">**보조정리 1**</ins> $$A$$-module $$M$$의 submodule들의 family $$(N_i)_{i\in I}$$에 대하여, 교집합 $$\bigcap_{i\in I} N_i$$는 $$M$$의 submodule이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -63,7 +63,7 @@ weight: 1
 
 </details>
 
-특별히 $$A$$-module $$M$$의 submodule들의 family $$(N\_i)\_{i\in I}$$가 주어졌다 하자. 그럼 $$M$$의 부분집합 $$\bigcup N_i$$로 생성된 $$M$$의 submodule $$\left\langle \bigcup N_i\right\rangle$$을 $$\sum N_i$$로 표기한다. 이제 각각의 $$i$$에 대하여, $$N_i$$는 $$M$$의 submodule이므로 inclusion들 $$N_i \hookrightarrow M$$이 존재한다. 이로부터 다음의 canonical morphism
+특별히 $$A$$-module $$M$$의 submodule들의 family $$(N_i)_{i\in I}$$가 주어졌다 하자. 그럼 $$M$$의 부분집합 $$\bigcup N_i$$로 생성된 $$M$$의 submodule $$\left\langle \bigcup N_i\right\rangle$$을 $$\sum N_i$$로 표기한다. 이제 각각의 $$i$$에 대하여, $$N_i$$는 $$M$$의 submodule이므로 inclusion들 $$N_i \hookrightarrow M$$이 존재한다. 이로부터 다음의 canonical morphism
 
 $$\bigoplus_{i\in I} N_i \rightarrow M$$
 
@@ -81,7 +81,7 @@ $$\bigoplus_{i\in I} N_i \rightarrow M \rightarrow M\bigg/\sum_{i\in I} N_i \rig
 
 가 존재한다.
 
-이번에는 $$A$$-module $$M$$의 submodule들의 family $$(N\_i)\_{i\in I}$$가 주어졌다 하고, canonical surjection들 $$M \twoheadrightarrow M/N_i$$가 주어졌다 하자. 그럼 이들로부터 다음의 canonical morphism 
+이번에는 $$A$$-module $$M$$의 submodule들의 family $$(N_i)_{i\in I}$$가 주어졌다 하고, canonical surjection들 $$M \twoheadrightarrow M/N_i$$가 주어졌다 하자. 그럼 이들로부터 다음의 canonical morphism 
 
 $$M \rightarrow \prod_{i\in I} M/N_i$$
 
@@ -101,7 +101,7 @@ $$0 \rightarrow \bigcap_{i\in I} N_i \rightarrow M \rightarrow\prod_{i\in I} M/N
 
 ## 가군의 직합과 합
 
-주어진 $$A$$-module $$M$$과 $$M$$의 submodule들의 family $$(N\_i)\_{i\in I}$$에 대하여, 만일 canonical morphism $$\bigoplus N_i \rightarrow M$$이 isomorphism이라면, $$M$$을 $$N_i$$들의 direct sum이라 부른다. 이를 위해서는 우선 $$(\ast)$$로부터 $$M=\sum N_i$$여야 함을 안다. 즉 $$M$$의 모든 원소들이 $$N_i$$의 원소들의 일차결합으로 표현되어야 한다. 한편, canonical morphism $$\bigoplus N_i \rightarrow M$$이 injective라는 것은 이렇게 일차결합을 적는 방법이 유일하다는 것과 동치임을 확인할 수 있다. 더 일반적으로 다음이 성립한다.
+주어진 $$A$$-module $$M$$과 $$M$$의 submodule들의 family $$(N_i)_{i\in I}$$에 대하여, 만일 canonical morphism $$\bigoplus N_i \rightarrow M$$이 isomorphism이라면, $$M$$을 $$N_i$$들의 direct sum이라 부른다. 이를 위해서는 우선 $$(\ast)$$로부터 $$M=\sum N_i$$여야 함을 안다. 즉 $$M$$의 모든 원소들이 $$N_i$$의 원소들의 일차결합으로 표현되어야 한다. 한편, canonical morphism $$\bigoplus N_i \rightarrow M$$이 injective라는 것은 이렇게 일차결합을 적는 방법이 유일하다는 것과 동치임을 확인할 수 있다. 더 일반적으로 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 

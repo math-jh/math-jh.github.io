@@ -21,19 +21,19 @@ weight: 9
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A family $$(A\_i)\_{i\in I}$$ is a *covering* of a set $$A$$ if $$A=\bigcup\_{i\in I} A\_i$$. Given two coverings $$(A\_i)\_{i\in I}$$ and $$(A'\_j)\_{j\in J}$$ of $$A$$, the covering $$(A'_j)\_{j\in J}$$ is *finer* than $$(A_i)\_{i\in I}$$ if for every $$j\in J$$, there exists $$i\in I$$ such that $$A'\_j\subseteq A\_i$$.
+<ins id="def1">**Definition 1**</ins> A family $$(A_i)_{i\in I}$$ is a *covering* of a set $$A$$ if $$A=\bigcup_{i\in I} A_i$$. Given two coverings $$(A_i)_{i\in I}$$ and $$(A'_j)_{j\in J}$$ of $$A$$, the covering $$(A'_j)_{j\in J}$$ is *finer* than $$(A_i)_{i\in I}$$ if for every $$j\in J$$, there exists $$i\in I$$ such that $$A'_j\subseteq A_i$$.
 
 </div>
 
-Let $$(A\_i)\_{i\in I}$$ be a covering of a set $$A$$. For any function $$f:B \rightarrow A$$, the family $$(f^{-1}(A\_i))\_{i\in I}$$ of subsets of $$B$$ is a covering of $$B$$. This is called the *preimage* of $$(A\_i)$$ under $$f$$. For any function $$g:A\rightarrow C$$, the family $$(g(A\_i))\_{i\in I}$$ of subsets of $$C$$ need not be a covering of $$C$$, but if $$g$$ is surjective, then these sets cover $$C$$. This is called the *image* of $$(A\_i)$$ under the surjection $$g$$.
+Let $$(A_i)_{i\in I}$$ be a covering of a set $$A$$. For any function $$f:B \rightarrow A$$, the family $$(f^{-1}(A_i))_{i\in I}$$ of subsets of $$B$$ is a covering of $$B$$. This is called the *preimage* of $$(A_i)$$ under $$f$$. For any function $$g:A\rightarrow C$$, the family $$(g(A_i))_{i\in I}$$ of subsets of $$C$$ need not be a covering of $$C$$, but if $$g$$ is surjective, then these sets cover $$C$$. This is called the *image* of $$(A_i)$$ under the surjection $$g$$.
 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**Proposition 2**</ins>  Let $$A$$ be a set with covering $$(A_i)\_{i\in I}$$, and let $$B$$ be any set.
+<ins id="prop2">**Proposition 2**</ins>  Let $$A$$ be a set with covering $$(A_i)_{i\in I}$$, and let $$B$$ be any set.
 
-1. Suppose functions $$f,g:A\rightarrow B$$ satisfy $$f\|_{A\_i}=g\|_{A\_i}$$ for every $$i\in I$$. Then $$f=g$$.
-2. Let $$(f\_i:A\_i\rightarrow B)\_{i\in I}$$ be a family of functions satisfying the condition
+1. Suppose functions $$f,g:A\rightarrow B$$ satisfy $$f\vert_{A_i}=g\vert_{A_i}$$ for every $$i\in I$$. Then $$f=g$$.
+2. Let $$(f_i:A_i\rightarrow B)_{i\in I}$$ be a family of functions satisfying the condition
     
     $$f_i|_{A_i\cap A_j}=f_j|_{A_i\cap A_j}$$
 
@@ -44,15 +44,15 @@ Let $$(A\_i)\_{i\in I}$$ be a covering of a set $$A$$. For any function $$f:B \r
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-For the first claim, let $$x\in A$$ be given. Since $$(A_i)\_{i\in I}$$ covers $$A$$, there exists $$i\in I$$ with $$x\in A_i$$. Then
+For the first claim, let $$x\in A$$ be given. Since $$(A_i)_{i\in I}$$ covers $$A$$, there exists $$i\in I$$ with $$x\in A_i$$. Then
 
 $$f(x)=(f|_{A_i})(x)=(g|_{A_i})(x)=g(x)$$
 
 which establishes the first claim.
 
-For the second claim, using the given functions $$f\_i=(F\_i,A\_i,B)$$, form $$F=\bigcup F\_i$$ and consider the triple $$f=(F,A,B)$$. Clearly $$\pr\_1F=A$$, so to show that $$f$$ is a function, it suffices to prove that for any $$x\in A$$, there is a unique $$y$$ such that $$(x,y)\in F$$.
+For the second claim, using the given functions $$f_i=(F_i,A_i,B)$$, form $$F=\bigcup F_i$$ and consider the triple $$f=(F,A,B)$$. Clearly $$\pr_1F=A$$, so to show that $$f$$ is a function, it suffices to prove that for any $$x\in A$$, there is a unique $$y$$ such that $$(x,y)\in F$$.
 
-Let $$y,y'\in B$$ satisfy $$(x,y)\in F$$ and $$(x,y')\in F$$. Then there exist $$i$$ and $$j$$ such that $$(x,y)\in F\_i$$ and $$(x,y')\in F\_j$$. Now
+Let $$y,y'\in B$$ satisfy $$(x,y)\in F$$ and $$(x,y')\in F$$. Then there exist $$i$$ and $$j$$ such that $$(x,y)\in F_i$$ and $$(x,y')\in F_j$$. Now
 
 $$y=(f_i)(x)=(f_i|_{A_i\cap A_j})(x)=(f_j|_{A_i\cap A_j})(x)=(f_j)(x)=y'$$
 
@@ -60,11 +60,11 @@ so the second claim is also established.
 
 </details>
 
-By the first claim, the function $$f$$ satisfying the condition in part 2 is necessarily unique. Moreover, if $$A\_i\cap A\_j=\emptyset$$ for all $$i,j$$, then the hypothesis of part 2 is automatically satisfied. We make the following definition.
+By the first claim, the function $$f$$ satisfying the condition in part 2 is necessarily unique. Moreover, if $$A_i\cap A_j=\emptyset$$ for all $$i,j$$, then the hypothesis of part 2 is automatically satisfied. We make the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> Sets $$A$$ and $$B$$ are *disjoint* if $$A\cap B=\emptyset$$. More generally, a family $$(A_i)\_{i\in I}$$ is *pairwise disjoint* if for any $$i, j\in I$$ with $$i\neq j$$, we have $$A_i\cap A_j=\emptyset$$.
+<ins id="def3">**Definition 3**</ins> Sets $$A$$ and $$B$$ are *disjoint* if $$A\cap B=\emptyset$$. More generally, a family $$(A_i)_{i\in I}$$ is *pairwise disjoint* if for any $$i, j\in I$$ with $$i\neq j$$, we have $$A_i\cap A_j=\emptyset$$.
 
 </div>
 
@@ -80,22 +80,22 @@ In general, the empty set plays no role among the members of such a family, so w
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> Let $$(A_i)\_{i\in I}$$ be a family of sets. Then there exists a set $$S$$ such that:
+<ins id="prop5">**Proposition 5**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets. Then there exists a set $$S$$ such that:
 
-- $$S$$ is the union of a pairwise disjoint family $$(S\_i)\_{i\in I}$$, and
+- $$S$$ is the union of a pairwise disjoint family $$(S_i)_{i\in I}$$, and
 - for every $$i\in I$$, there exists a bijection from $$A_i$$ to $$S_i$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let $$S_i$$ be <phrase>the set of all $$(x, i)$$ satisfying $$x\in A_i$$</phrase>. Then $$(S_i)\_{i\in I}$$ is pairwise disjoint. For each $$i$$, the map $$x\mapsto (x,i)$$ is a bijection from $$A_i$$ to $$S_i$$. Hence $$S=\bigcup\_{i\in I} S_i$$ satisfies the required conditions.
+Let $$S_i$$ be <phrase>the set of all $$(x, i)$$ satisfying $$x\in A_i$$</phrase>. Then $$(S_i)_{i\in I}$$ is pairwise disjoint. For each $$i$$, the map $$x\mapsto (x,i)$$ is a bijection from $$A_i$$ to $$S_i$$. Hence $$S=\bigcup_{i\in I} S_i$$ satisfies the required conditions.
 
 </details>
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> A set $$S$$ satisfying the conditions above is called the *sum* of the family $$(A_i)\_{i\in I}$$ and is denoted by $$\sum\_{i\in I} A_i$$.
+<ins id="def6">**Definition 6**</ins> A set $$S$$ satisfying the conditions above is called the *sum* of the family $$(A_i)_{i\in I}$$ and is denoted by $$\sum_{i\in I} A_i$$.
 
 </div>
 
@@ -103,13 +103,13 @@ This set is often called the *disjoint union* and denoted by $$\bigsqcup_{i\in I
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 7**</ins> Let $$(A_i)\_{i\in I}$$ be a pairwise disjoint family. If $$A$$ denotes their union and $$S$$ their sum, then there exists a bijection between $$A$$ and $$S$$.
+<ins id="prop7">**Proposition 7**</ins> Let $$(A_i)_{i\in I}$$ be a pairwise disjoint family. If $$A$$ denotes their union and $$S$$ their sum, then there exists a bijection between $$A$$ and $$S$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-If $$f_i:A_i\rightarrow S_i$$ are the bijections satisfying the condition of [Proposition 5](#prop5), then by [Proposition 2](#prop2), the family $$(f_i)\_{i\in I}$$ extends to a bijection from $$\bigcup\_{i\in I} A_i=A$$.
+If $$f_i:A_i\rightarrow S_i$$ are the bijections satisfying the condition of [Proposition 5](#prop5), then by [Proposition 2](#prop2), the family $$(f_i)_{i\in I}$$ extends to a bijection from $$\bigcup_{i\in I} A_i=A$$.
 
 </details>
 
@@ -170,9 +170,9 @@ Suppose two sums $$S$$ and $$S'$$ are given, with injections $$\iota_i$$ and $$\
 
 $$\iota_i'=\phi'\circ\iota_i=\phi'\circ(\phi\circ\iota_i')=(\phi'\circ\phi)\circ\iota_i'$$
 
-Now apply the universal property of $$S'$$ to the functions $$\iota_i':A_i\rightarrow S'$$. There exists a unique function $$\psi:S'\rightarrow S'$$ such that $$\iota_i'=\psi\circ\iota_i'$$. This is of course satisfied by $$\psi=\id\_{S'}$$, so by uniqueness, any such $$\psi$$ equals $$\id\_{S'}$$. Hence $$\phi'\circ\phi=\id\_{S'}$$, and since $$\id\_{S'}$$ is a bijection, $$\phi'$$ is surjective and $$\phi$$ is injective. ([§Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3))
+Now apply the universal property of $$S'$$ to the functions $$\iota_i':A_i\rightarrow S'$$. There exists a unique function $$\psi:S'\rightarrow S'$$ such that $$\iota_i'=\psi\circ\iota_i'$$. This is of course satisfied by $$\psi=\id_{S'}$$, so by uniqueness, any such $$\psi$$ equals $$\id_{S'}$$. Hence $$\phi'\circ\phi=\id_{S'}$$, and since $$\id_{S'}$$ is a bijection, $$\phi'$$ is surjective and $$\phi$$ is injective. ([§Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3))
 
-Similarly, we can show that $$\phi\circ\phi'=\id\_S$$, from which it follows that $$\phi$$ is surjective and $$\phi'$$ is injective. Thus each is a bijection, and there exists a bijection between $$S$$ and $$S'$$.
+Similarly, we can show that $$\phi\circ\phi'=\id_S$$, from which it follows that $$\phi$$ is surjective and $$\phi'$$ is injective. Thus each is a bijection, and there exists a bijection between $$S$$ and $$S'$$.
 
 </details>
 

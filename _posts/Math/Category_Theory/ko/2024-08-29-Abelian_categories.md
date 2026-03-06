@@ -33,19 +33,19 @@ $$(g_1+g_2)\circ f=g_1\circ f+g_2\circ f,\qquad h\circ(g_1+g_2)=h\circ g_1+h\cir
 
 </div>
 
-두 additive category $$\mathcal{A},\mathcal{B}$$ 사이의 functor $$F:\mathcal{A}\rightarrow\mathcal{B}$$가 *additive functor<sub>덧셈함자</sub>*라는 것은 $$F$$가 abelian group $$\Hom\_\mathcal{A}(A,B)$$에서 $$\Hom\_\mathcal{B}(F(A),F(B))$$ 사이의 group homomorphism을 유도하는 것이다.
+두 additive category $$\mathcal{A},\mathcal{B}$$ 사이의 functor $$F:\mathcal{A}\rightarrow\mathcal{B}$$가 *additive functor<sub>덧셈함자</sub>*라는 것은 $$F$$가 abelian group $$\Hom_\mathcal{A}(A,B)$$에서 $$\Hom_\mathcal{B}(F(A),F(B))$$ 사이의 group homomorphism을 유도하는 것이다.
 
-Additive category에서는 임의의 $$A,B\in\obj(\mathcal{A})$$에 대하여, *zero map<sub>영사상</sub>* $$0\_{AB}:A\rightarrow B$$가 $$A\rightarrow 0\rightarrow B$$로 정의된다. 이렇게 정의한 zero map은 물론 abelian group $$\Hom\_\mathcal{A}(A,B)$$의 덧셈에 대한 항등원이 된다.
+Additive category에서는 임의의 $$A,B\in\obj(\mathcal{A})$$에 대하여, *zero map<sub>영사상</sub>* $$0_{AB}:A\rightarrow B$$가 $$A\rightarrow 0\rightarrow B$$로 정의된다. 이렇게 정의한 zero map은 물론 abelian group $$\Hom_\mathcal{A}(A,B)$$의 덧셈에 대한 항등원이 된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 임의의 additive category $$\mathcal{A}$$와 두 대상 $$A,B\in\obj(\mathcal{A})$$에 대하여, 위에서 정의한 zero map $$0_{AB}$$는 $$\Hom\_\mathcal{A}(A,B)$$의 덧셈에 대한 항등원이다.
+<ins id="prop2">**명제 2**</ins> 임의의 additive category $$\mathcal{A}$$와 두 대상 $$A,B\in\obj(\mathcal{A})$$에 대하여, 위에서 정의한 zero map $$0_{AB}$$는 $$\Hom_\mathcal{A}(A,B)$$의 덧셈에 대한 항등원이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Zero object $$0$$에서 $$B$$로의 morphism $$0\_{0B}$$가 유일하게 존재한다. 따라서 $$0\_{0B}+0\_{0B}=0\_{0B}$$가 성립한다. 이제 주어진 명제는 다음의 식
+Zero object $$0$$에서 $$B$$로의 morphism $$0_{0B}$$가 유일하게 존재한다. 따라서 $$0_{0B}+0_{0B}=0_{0B}$$가 성립한다. 이제 주어진 명제는 다음의 식
 
 $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=0_{0B}\circ 0_{A0}=0_{AB}$$
 
@@ -97,8 +97,8 @@ $$\coim(f)=\coker(\ker(f))$$
 
 <ins id="def4">**정의 4**</ins> Additive category $$\mathcal{A}$$에서 정의된 다음의 데이터를 생각하자.
 
-- 대상들의 모임 $$(A\_n)\_{n\in \mathbb{Z}}$$,
-- morphism들의 모임 $$(d_n:A_n \rightarrow A\_{n-1})_{n\in \mathbb{Z}}$$
+- 대상들의 모임 $$(A_n)_{n\in \mathbb{Z}}$$,
+- morphism들의 모임 $$(d_n:A_n \rightarrow A_{n-1})_{n\in \mathbb{Z}}$$
 
 만일 이들 데이터가 조건 $$d_n\circ d_{n-1}=0$$을 만족한다면, 이를 *chain complex<sub>사슬복합체</sub>*라 부르고 $$A_\bullet$$으로 적는다. 
 

@@ -75,7 +75,7 @@ N_{M/A}(\alpha) = \prod_{i=1}^r N_{P_i/A}(\alpha),\qquad
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$P\_i$$의 $$A$$-basis를 $$\mathcal{B}\_i'$$라 하자. 이들을 lift하면 $$M\_{i-1}$$의 supplementary $$A$$-submodule $$\mathcal{B}\_i$$의 basis로 확장할 수 있고, 그 합집합 $$\mathcal{B} = \bigcup \mathcal{B}\_i$$는 $$M$$의 $$A$$-basis가 된다. 이제 각 $$\alpha \in E$$에 대해, endomorphism $$\alpha\_{P\_i}$$의 $$\mathcal{B}\_i$$에 대한 행렬을 $$X\_{ii}$$라 하면, $$\alpha\_M$$의 전체 행렬
+$$P_i$$의 $$A$$-basis를 $$\mathcal{B}_i'$$라 하자. 이들을 lift하면 $$M_{i-1}$$의 supplementary $$A$$-submodule $$\mathcal{B}_i$$의 basis로 확장할 수 있고, 그 합집합 $$\mathcal{B} = \bigcup \mathcal{B}_i$$는 $$M$$의 $$A$$-basis가 된다. 이제 각 $$\alpha \in E$$에 대해, endomorphism $$\alpha_{P_i}$$의 $$\mathcal{B}_i$$에 대한 행렬을 $$X_{ii}$$라 하면, $$\alpha_M$$의 전체 행렬
 
 $$e_M \sim
 \begin{pmatrix}
@@ -85,7 +85,7 @@ X_{rr} & * & \cdots & * \\
 0 & \cdots & 0 & X_{11}
 \end{pmatrix}$$
 
-은 block upper-triangular 형태를 가지며 각 대각블록이 $$X\_{ii}$$가 된다. 이제 trace는 대각합, determinant는 대각곱, characteristic polynomial은 대각 항들의 곱으로 주어지므로 명제가 성립한다.
+은 block upper-triangular 형태를 가지며 각 대각블록이 $$X_{ii}$$가 된다. 이제 trace는 대각합, determinant는 대각곱, characteristic polynomial은 대각 항들의 곱으로 주어지므로 명제가 성립한다.
 
 </details>
 

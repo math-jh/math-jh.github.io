@@ -23,7 +23,7 @@ weight: 8
 
 <ins id="def1">**정의 1**</ins> Scheme morphism의 성질 $$P$$가 *local on target*이라는 것은 다음 두 조건이 성립하는 것이다. 
 1. 만일 scheme morphism $$\varphi:X \rightarrow Y$$가 $$P$$를 만족할 경우, $$Y$$의 임의의 open subscheme $$V$$에 대하여 scheme morphism $$\varphi\vert_{\varphi^{-1}(V)}: \varphi^{-1}(V) \rightarrow V$$ 또한 $$P$$를 만족한다. 
-2. 만일 scheme morphism $$\varphi:X \rightarrow Y$$에 대하여, $$Y$$의 open covering $$\\{V_j\\}$$가 존재하여 $$\varphi\vert_{\varphi^{-1}(V_j)}: \varphi^{-1}(V_j) \rightarrow V_j$$가 모두 $$P$$를 만족한다면 $$\varphi$$ 또한 그러하다. 
+2. 만일 scheme morphism $$\varphi:X \rightarrow Y$$에 대하여, $$Y$$의 open covering $$\{V_j\}$$가 존재하여 $$\varphi\vert_{\varphi^{-1}(V_j)}: \varphi^{-1}(V_j) \rightarrow V_j$$가 모두 $$P$$를 만족한다면 $$\varphi$$ 또한 그러하다. 
 
 </div>
 
@@ -31,7 +31,7 @@ Scheme은 affine scheme으로부터 만들어진다. Scheme morphism의 성질 $
 
 $$\Hom_\Sch(X, \Spec B)\cong \Hom_\cRing(B, \Gamma(X, \mathscr{O}_X))$$
 
-를 통해 우리는 scheme morphism $$X \rightarrow \Spec B$$의 성질을 ring homomorphism $$B \rightarrow \Gamma(X, \mathscr{O}\_X)$$의 성질을 통해 정의할 수 있다. 
+를 통해 우리는 scheme morphism $$X \rightarrow \Spec B$$의 성질을 ring homomorphism $$B \rightarrow \Gamma(X, \mathscr{O}_X)$$의 성질을 통해 정의할 수 있다. 
 
 ## 준옹골사상과 준분리사상
 
@@ -51,7 +51,7 @@ $$\Hom_\Sch(X, \Spec B)\cong \Hom_\cRing(B, \Gamma(X, \mathscr{O}_X))$$
 
 임의의 affine scheme은 quasi-compact이므로 ([§스펙트럼, ⁋보조정리 12](/ko/math/algebraic_geometry/spectrums#lem12)) 주어진 조건이 [정의 2](#def2)의 조건을 함의하는 것은 당연하다.
 
-거꾸로 quasi-compact morphism $$\varphi: X \rightarrow Y$$가 주어졌다 하자. 이제 $$Y$$의 임의의 quasi-compact open subset $$V$$가 주어졌다 하면, $$V$$를 덮는 유한히 많은 affine open subset들의 covering $$\\{V\_j\\}$$가 존재하며 이들의 preimage $$\varphi^{-1}(V\_j)$$는 모두 quasi-compact이다. 이제 
+거꾸로 quasi-compact morphism $$\varphi: X \rightarrow Y$$가 주어졌다 하자. 이제 $$Y$$의 임의의 quasi-compact open subset $$V$$가 주어졌다 하면, $$V$$를 덮는 유한히 많은 affine open subset들의 covering $$\{V_j\}$$가 존재하며 이들의 preimage $$\varphi^{-1}(V_j)$$는 모두 quasi-compact이다. 이제 
 
 $$\varphi^{-1}(V)=\varphi^{-1}\left(\bigcup_{j\in J} V_j\right)=\bigcup_{j\in J}\varphi^{-1}(V_j)$$
 
@@ -93,7 +93,7 @@ $$\varphi^{-1}(V)=\varphi^{-1}\left(\bigcup_{j\in J} V_j\right)=\bigcup_{j\in J}
 
 Locally noetherian scheme $$X$$의 임의의 두 affine open subset $$V_1=\Spec B_1, V_2=\Spec B_2$$가 주어졌다 하고 $$V_1\cap V_2$$가 quasi-compact임을 보여야 한다. 
 
-우선 $$X$$가 locally noetherian이므로, $$X$$를 noetherian ring들의 스펙트럼 $$\Spec A\_i$$로 덮을 수 있다. 이제 각각의 $$i$$에 대하여, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/algebraic_geometry/topology_of_schemes#lem11)에 의하여 $$U_i\cap V_1$$을 noetherian ring들의 스펙트럼 $$\Spec (A_i)_g$$들로 덮을 수 있다. 이들을 모두 모으면 $$V_1$$을 noetherian ring들의 스펙트럼들로 덮을 수 있으며, [§스펙트럼, ⁋보조정리 12](/ko/math/algebraic_geometry/spectrums#lem12)에 의해 $$V_1=\Spec B_1$$은 유한히 많은 noetherian ring들의 스펙트럼으로 덮인다. 따라서 [§스킴의 위상구조, ⁋보조정리 13](/ko/math/algebraic_geometry/topology_of_schemes#lem13)에 의해 $$B_1$$은 noetherian ring이고 따라서 $$V_1=\Spec B_1$$은 noetherian이다. 다시  [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 noetherian인 위상공간의 임의의 부분공간은 quasi-compact이므로, 특히 $$V_1\cap V_2$$ 또한 quasi-compact이다. 
+우선 $$X$$가 locally noetherian이므로, $$X$$를 noetherian ring들의 스펙트럼 $$\Spec A_i$$로 덮을 수 있다. 이제 각각의 $$i$$에 대하여, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/algebraic_geometry/topology_of_schemes#lem11)에 의하여 $$U_i\cap V_1$$을 noetherian ring들의 스펙트럼 $$\Spec (A_i)_g$$들로 덮을 수 있다. 이들을 모두 모으면 $$V_1$$을 noetherian ring들의 스펙트럼들로 덮을 수 있으며, [§스펙트럼, ⁋보조정리 12](/ko/math/algebraic_geometry/spectrums#lem12)에 의해 $$V_1=\Spec B_1$$은 유한히 많은 noetherian ring들의 스펙트럼으로 덮인다. 따라서 [§스킴의 위상구조, ⁋보조정리 13](/ko/math/algebraic_geometry/topology_of_schemes#lem13)에 의해 $$B_1$$은 noetherian ring이고 따라서 $$V_1=\Spec B_1$$은 noetherian이다. 다시  [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 noetherian인 위상공간의 임의의 부분공간은 quasi-compact이므로, 특히 $$V_1\cap V_2$$ 또한 quasi-compact이다. 
 
 </details>
 
@@ -103,14 +103,14 @@ Locally noetherian scheme $$X$$의 임의의 두 affine open subset $$V_1=\Spec 
 
 <ins id="prop7">**명제 7**</ins> Scheme morphism $$\varphi: X \rightarrow Y$$에 대하여 다음이 성립한다.
 
-1. 만일 $$Y$$의 affine open covering $$\\{V\_j\\}$$가 존재하여 각각의 $$\varphi^{-1}(V_j)$$가 quasi-compact라면, $$\varphi$$는 quasi-compact이다. 
-2. 만일 $$Y$$의 affine open covering $$\\{V\_j\\}$$가 존재하여 각각의 $$\varphi^{-1}(V_j)$$가 quasi-separated라면, $$\varphi$$는 quasi-separated이다. 
+1. 만일 $$Y$$의 affine open covering $$\{V_j\}$$가 존재하여 각각의 $$\varphi^{-1}(V_j)$$가 quasi-compact라면, $$\varphi$$는 quasi-compact이다. 
+2. 만일 $$Y$$의 affine open covering $$\{V_j\}$$가 존재하여 각각의 $$\varphi^{-1}(V_j)$$가 quasi-separated라면, $$\varphi$$는 quasi-separated이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $$Y$$의 임의의 affine open subset $$V$$가 주어졌다 하자. 그럼 [§스킴의 위상구조, ⁋보조정리 11](/ko/math/algebraic_geometry/topology_of_schemes#lem11)에 의하여 $$V$$와 $$V_j$$ 각각에서 principal open set이 되는 열린집합들로 $$V\cap V\_j$$를 덮을 수 있고, 이를 모든 $$j$$에 대해 고려한 후 $$V$$의 quasi-compactness를 사용하면 이러한 것들 중 유한히 많은 것만 택할 수 있다. 이를 $$V=\bigcup W_l$$이라 하자.   
+1. $$Y$$의 임의의 affine open subset $$V$$가 주어졌다 하자. 그럼 [§스킴의 위상구조, ⁋보조정리 11](/ko/math/algebraic_geometry/topology_of_schemes#lem11)에 의하여 $$V$$와 $$V_j$$ 각각에서 principal open set이 되는 열린집합들로 $$V\cap V_j$$를 덮을 수 있고, 이를 모든 $$j$$에 대해 고려한 후 $$V$$의 quasi-compactness를 사용하면 이러한 것들 중 유한히 많은 것만 택할 수 있다. 이를 $$V=\bigcup W_l$$이라 하자.   
     한편 각각의 $$j$$에 대하여, $$\varphi^{-1}(V_j)$$는 quasi-compact이므로, 이를 유한히 많은 affine open subset들 $$U_{jk}$$들로 덮을 수 있고, 이제 $$\varphi^{-1}(W_l)\cap U_{jk}$$는 [§스펙트럼, ⁋명제 8](/ko/math/algebraic_geometry/spectrums#prop8)에 의해 $$U_{jk}$$의 principal open set이므로 $$\varphi^{-1}(W_l)$$ 각각을 affine open set들의 유한한 합집합으로 표현할 수 있고, 따라서 $$\varphi^{-1}(V)$$도 affine open set들의 유한한 합집합으로 표현할 수 있다. 이제 quasi-compact space의 유한한 합집합은 quasi-compact이므로 원하는 결과를 얻는다.
 2. 이 또한 첫째 결과와 마찬가지 방식으로, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/algebraic_geometry/topology_of_schemes#lem11)를 사용하여 임의의 affine open subset $$V=\Spec B$$를 그 preimage가 quasi-separated인 principal open subset들로 덮은 후 증명을 하면 된다. 
 
@@ -142,7 +142,7 @@ $$(\varphi\vert_U)^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> Scheme morphism $$\varphi:X \rightarrow Y$$에 대하여, 만일 $$Y$$의 affine open covering $$\\{V\_j\\}$$가 존재하여 각각의 $$\varphi^{-1}(V_j)$$가 affine라면, $$\varphi$$는 affine이다. 
+<ins id="prop9">**명제 9**</ins> Scheme morphism $$\varphi:X \rightarrow Y$$에 대하여, 만일 $$Y$$의 affine open covering $$\{V_j\}$$가 존재하여 각각의 $$\varphi^{-1}(V_j)$$가 affine라면, $$\varphi$$는 affine이다. 
 
 </div>
 
@@ -216,7 +216,7 @@ $$(\varphi\vert_{U})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \maths
 
 우선 algebraically closed field $$\mathbb{K}$$에 대하여, ring map $$\iota:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]$$를 생각하면 $$\mathbb{K}[\x,\y]$$는 $$\mathbb{K}[\x]$$-algebra로서 하나의 원소 $$\y$$에 의해 생성되므로 finite type ring homomorphism이지만, $$\mathbb{K}[\x]$$-module로서는 유한하게 생성되지 않으므로 finite ring homomorphism은 아니다. 
 
-이제 이에 대응되는 scheme morphism $$\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$$를 생각하자. 이는 임의의 prime ideal $$\mathfrak{p}\subset \mathbb{K}[\x,\y]$$를 받아 $$\mathbb{K}[\x]$$의 prime ideal $$\mathfrak{p}\cap \mathbb{K}[\x]$$를 내놓는 함수이다. 이는 기하적으로는 affine plane $$\mathbb{A}^2\_\mathbb{K}$$의 점 $$(x,y)$$를 affine line $$\mathbb{A}^1\_\mathbb{K}$$의 점 $$x$$에 대응시키는 함수이다. 
+이제 이에 대응되는 scheme morphism $$\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$$를 생각하자. 이는 임의의 prime ideal $$\mathfrak{p}\subset \mathbb{K}[\x,\y]$$를 받아 $$\mathbb{K}[\x]$$의 prime ideal $$\mathfrak{p}\cap \mathbb{K}[\x]$$를 내놓는 함수이다. 이는 기하적으로는 affine plane $$\mathbb{A}^2_\mathbb{K}$$의 점 $$(x,y)$$를 affine line $$\mathbb{A}^1_\mathbb{K}$$의 점 $$x$$에 대응시키는 함수이다. 
 
 ![finite_type_morphism](/assets/images/Math/Algebraic_Geometry/Properties_of_scheme_morphisms-1.png){:style="width:25em" class="invert" .align-center}
 
@@ -234,7 +234,7 @@ $$\Spec\phi: \Spec \frac{\mathbb{K}[\x,\y]}{(\x-\y^2)}\rightarrow \Spec \mathbb{
 
 ![finite_morphism](/assets/images/Math/Algebraic_Geometry/Properties_of_scheme_morphisms-2.png){:style="width:25em" class="invert" .align-center}
 
-이 두 예시의 기하학적인 차이는 꽤나 명확하다. 첫 번째 예시의 경우, target의 한 점에서의 fiber가 무한집합인 반면 두 번째 예시의 경우 한 점에서의 fiber가 유한집합이다. 대수적으로 이는 target $$\mathbb{A}\_\mathbb{K}^1$$의 임의의 점 $$\mathfrak{p}=(\x-a)$$를 가져왔을 때, 임의의 $$\mathfrak{q}\_b=(\x-a, \y-b)\in \mathbb{A}\_\mathbb{K}^2$$는 $$(\Spec\iota)(\mathfrak{q}\_b)=\mathfrak{p}$$를 만족하는 반면, 두 번째 예시에서는 오직 두 개의 점 $$\mathfrak{q}\_+=(\x-a, \y-\sqrt{a})$$와 $$\mathfrak{q}\_-=(\x-a, \y+\sqrt{a})$$만이 $$(\Spec\phi)(\mathfrak{q}\_\pm)=\mathfrak{p}$$를 만족하는 것으로 확인할 수 있다. 
+이 두 예시의 기하학적인 차이는 꽤나 명확하다. 첫 번째 예시의 경우, target의 한 점에서의 fiber가 무한집합인 반면 두 번째 예시의 경우 한 점에서의 fiber가 유한집합이다. 대수적으로 이는 target $$\mathbb{A}_\mathbb{K}^1$$의 임의의 점 $$\mathfrak{p}=(\x-a)$$를 가져왔을 때, 임의의 $$\mathfrak{q}_b=(\x-a, \y-b)\in \mathbb{A}_\mathbb{K}^2$$는 $$(\Spec\iota)(\mathfrak{q}_b)=\mathfrak{p}$$를 만족하는 반면, 두 번째 예시에서는 오직 두 개의 점 $$\mathfrak{q}_+=(\x-a, \y-\sqrt{a})$$와 $$\mathfrak{q}_-=(\x-a, \y+\sqrt{a})$$만이 $$(\Spec\phi)(\mathfrak{q}_\pm)=\mathfrak{p}$$를 만족하는 것으로 확인할 수 있다. 
 
 이와 같이, finite type morphism은 기하적으로는 fiber가 유한차원인 것과 관련이 있고, finite morphism은 fiber가 유한집합인 것과 관련이 있다. 
 

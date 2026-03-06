@@ -43,12 +43,12 @@ $$(\Spec\pi)^\sharp: \mathscr{O}_{\Spec A} \rightarrow (\Spec\pi)_\ast \mathscr{
 
 $$\iota^{-1} \mathscr{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})_\ast \mathscr{O}_{\Spec A/\mathfrak{a}}$$
 
-를 만들 수 있지만, 우리는 $$Z(\mathfrak{a})$$에 scheme structure를 정의하지도 않았고, 따라서 $$\iota^{-1}\mathscr{O}\_{\Spec A}$$와 $$\mathscr{O}\_{Z(\mathfrak{a})}$$ 사이의 관계를 모를 뿐더러, 이것이 isomorphism이 된다는 보장도 없다. 실제로 이는 isomorphism이 되지 않을 가능성이 훨씬 큰데, $$\iota^{-1}\mathscr{O}\_{\Spec A}$$는 $$\Spec A$$의 structure sheaf에서 닫힌집합 $$Z(\mathfrak{a})$$에 대한 위상적인 데이터만을 사용하여 정의된 것이지만, $$(\Spec\pi)\_\ast\mathscr{O}\_{\Spec A/\mathfrak{a}}$$는 ring $$A/\mathfrak{a}$$에 대한 대수적인 정보도 가지고 있기 때문이다. 
+를 만들 수 있지만, 우리는 $$Z(\mathfrak{a})$$에 scheme structure를 정의하지도 않았고, 따라서 $$\iota^{-1}\mathscr{O}_{\Spec A}$$와 $$\mathscr{O}_{Z(\mathfrak{a})}$$ 사이의 관계를 모를 뿐더러, 이것이 isomorphism이 된다는 보장도 없다. 실제로 이는 isomorphism이 되지 않을 가능성이 훨씬 큰데, $$\iota^{-1}\mathscr{O}_{\Spec A}$$는 $$\Spec A$$의 structure sheaf에서 닫힌집합 $$Z(\mathfrak{a})$$에 대한 위상적인 데이터만을 사용하여 정의된 것이지만, $$(\Spec\pi)_\ast\mathscr{O}_{\Spec A/\mathfrak{a}}$$는 ring $$A/\mathfrak{a}$$에 대한 대수적인 정보도 가지고 있기 때문이다. 
 
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> 예를 들어 field $$\mathbb{K}$$를 고정하고, affine $$1$$-line $$\mathbb{A}\_\mathbb{K}^1=\Spec \mathbb{K}[\x]$$을 생각하자. 그럼 다음의 canonical surjection
+<ins id="ex1">**예시 1**</ins> 예를 들어 field $$\mathbb{K}$$를 고정하고, affine $$1$$-line $$\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$$을 생각하자. 그럼 다음의 canonical surjection
 
 $$\pi_1:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x)\cong \mathbb{K},\qquad \pi_2:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x^2)$$
 
@@ -64,7 +64,7 @@ $$\Spec\pi_1:\Spec \mathbb{K}[\x]/(\x) \rightarrow \Spec \mathbb{K}[\x],\qquad \
 
 </div>
 
-당연히 우리가 바라는 structure sheaf는 대수적인 정보를 포함하는 $$(\Spec\pi)\_\ast \mathscr{O}\_{\Spec A/\mathfrak{a}}$$의 형태이며, 이것이 $$\iota^{-1}\mathscr{O}\_{\Spec A}$$와 어떠한 관계가 있는지는 이 글의 말미에서 살펴보게 된다.
+당연히 우리가 바라는 structure sheaf는 대수적인 정보를 포함하는 $$(\Spec\pi)_\ast \mathscr{O}_{\Spec A/\mathfrak{a}}$$의 형태이며, 이것이 $$\iota^{-1}\mathscr{O}_{\Spec A}$$와 어떠한 관계가 있는지는 이 글의 말미에서 살펴보게 된다.
 
 ## 닫힌 부분스킴
 
@@ -72,17 +72,17 @@ $$\Spec\pi_1:\Spec \mathbb{K}[\x]/(\x) \rightarrow \Spec \mathbb{K}[\x],\qquad \
 
 $$(\Spec \pi, (\Spec\pi)^\sharp): \Spec A/\mathfrak{a} \rightarrow\Spec A$$
 
-이다. 이 때 $$\Spec\pi$$는 $$\Spec A$$의 닫힌집합과 $$\Spec A/\mathfrak{a}$$ 사이의 homeomorphism을 주는 injective continuous map이고, $$\Spec\pi^\sharp: \mathscr{O}\_{\Spec A} \rightarrow (\Spec\pi)\_\ast \mathscr{O}\_{\Spec A/\mathfrak{a}}$$는 [§아핀스킴, ⁋명제 9](/ko/math/algebraic_geometry/affine_schemes#prop9)에서 얻어진다.
+이다. 이 때 $$\Spec\pi$$는 $$\Spec A$$의 닫힌집합과 $$\Spec A/\mathfrak{a}$$ 사이의 homeomorphism을 주는 injective continuous map이고, $$\Spec\pi^\sharp: \mathscr{O}_{\Spec A} \rightarrow (\Spec\pi)_\ast \mathscr{O}_{\Spec A/\mathfrak{a}}$$는 [§아핀스킴, ⁋명제 9](/ko/math/algebraic_geometry/affine_schemes#prop9)에서 얻어진다.
 
 한편, ring homomorphism $$\pi: A \rightarrow A/\mathfrak{a}$$에서 가장 중요한 성질은 $$\pi$$가 surjective라는 것이며, 실제로 임의의 surjective ring homomorphism $$\phi: A \rightarrow B$$가 주어지면 first isomorphism theorem에 의하여
 
 $$B=\im\phi\cong A/\ker\phi$$
 
-이므로 이 성질이 $$\pi$$를 정확하게 characterize한다. 한편 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 생각하면, $$\pi$$의 surjectivity는 임의의 prime ideal $$\mathfrak{p}$$에서의 localization $$\pi\_\mathfrak{p}: A\_\mathfrak{p} \rightarrow (A/\mathfrak{a})\_{\mathfrak{p}}$$이 surjective인지를 살펴보아 확인할 수 있으며 이는 기하적으로는 affine scheme $$\Spec A$$에서의 임의의 점 $$\mathfrak{p}$$에서의 stalk을 살펴보는 것과 같고, 따라서 [\[위상수학\] §층, ⁋명제 14](/ko/math/topology/sheaves#prop14)에 의해 $$(\Spec\pi)^\sharp$$이 surjective인 것과 같다. 
+이므로 이 성질이 $$\pi$$를 정확하게 characterize한다. 한편 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 생각하면, $$\pi$$의 surjectivity는 임의의 prime ideal $$\mathfrak{p}$$에서의 localization $$\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$$이 surjective인지를 살펴보아 확인할 수 있으며 이는 기하적으로는 affine scheme $$\Spec A$$에서의 임의의 점 $$\mathfrak{p}$$에서의 stalk을 살펴보는 것과 같고, 따라서 [\[위상수학\] §층, ⁋명제 14](/ko/math/topology/sheaves#prop14)에 의해 $$(\Spec\pi)^\sharp$$이 surjective인 것과 같다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> Scheme morphism $$\iota: Z \rightarrow X$$가 *closed embedding<sub>닫힌 몰입</sub>*이라는 것은 $$\iota$$가 연속함수로서 $$Z$$와 $$X$$의 닫힌집합 사이의 homeomorphism이고, sheaf morphism $$\iota^\sharp: \mathscr{O}\_X \rightarrow \iota_\ast \mathscr{O}\_Z$$가 surjective인 것이다.
+<ins id="def2">**정의 2**</ins> Scheme morphism $$\iota: Z \rightarrow X$$가 *closed embedding<sub>닫힌 몰입</sub>*이라는 것은 $$\iota$$가 연속함수로서 $$Z$$와 $$X$$의 닫힌집합 사이의 homeomorphism이고, sheaf morphism $$\iota^\sharp: \mathscr{O}_X \rightarrow \iota_\ast \mathscr{O}_Z$$가 surjective인 것이다.
 
 </div>
 
@@ -121,7 +121,7 @@ $$B=\im\phi\cong A/\ker\phi$$
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 임의의 scheme $$Z$$에 대하여, $$\mathscr{O}\_Z$$의 subsheaf $$\mathscr{I}$$를 $$Z$$의 *ideal sheaf*라 부른다. 특별히 closed embedding $$\iota: Z \rightarrow X$$에 대하여, $$\mathscr{O}\_X$$의 subsheaf $$\ker\iota^\sharp$$를 $$\iota$$에 의해 정의되는 ideal sheaf라 부르고, 이를 $$\mathscr{I}_{Z/X}$$로 표기한다. 
+<ins id="def5">**정의 5**</ins> 임의의 scheme $$Z$$에 대하여, $$\mathscr{O}_Z$$의 subsheaf $$\mathscr{I}$$를 $$Z$$의 *ideal sheaf*라 부른다. 특별히 closed embedding $$\iota: Z \rightarrow X$$에 대하여, $$\mathscr{O}_X$$의 subsheaf $$\ker\iota^\sharp$$를 $$\iota$$에 의해 정의되는 ideal sheaf라 부르고, 이를 $$\mathscr{I}_{Z/X}$$로 표기한다. 
 
 </div>
 
@@ -145,14 +145,14 @@ $$0 \rightarrow \mathscr{I}_{Z/X}(U) \rightarrow \mathscr{O}_X(U)\cong A \righta
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$X$$를 affine open subset들 $$\\{\Spec A\_i\\}$$들로 덮자. 그럼 우리가 보여야 할 것은 임의의 $$i,j$$에 대하여, $$\Spec A_i$$에서 ideal $$\mathscr{I}(A_i)$$에 의해 정의되는 closed subscheme과 $$\Spec A_j$$에서 ideal $$\mathscr{I}(A_j)$$에 의해 정의되는 closed subscheme이 $$\Spec A_i$$와 $$\Spec A_j$$의 교집합에서 같은 closed subscheme을 정의한다는 것이다. 
+우선 $$X$$를 affine open subset들 $$\{\Spec A_i\}$$들로 덮자. 그럼 우리가 보여야 할 것은 임의의 $$i,j$$에 대하여, $$\Spec A_i$$에서 ideal $$\mathscr{I}(A_i)$$에 의해 정의되는 closed subscheme과 $$\Spec A_j$$에서 ideal $$\mathscr{I}(A_j)$$에 의해 정의되는 closed subscheme이 $$\Spec A_i$$와 $$\Spec A_j$$의 교집합에서 같은 closed subscheme을 정의한다는 것이다. 
 
 
 우선 [§스킴의 위상구조, ⁋보조정리 11](/ko/math/algebraic_geometry/topology_of_schemes)로부터 우리는 $$\Spec A_i$$와 $$\Spec A_j$$의 교집합을 principal open subset들 
 
 $$\Spec (A_i)_{f_i}\cong\Spec (A_j)_{f_j}$$
 
-들로 덮을 수 있다. 이제 $$\Spec A_i$$에서 $$\mathscr{I}(A_i)$$가 정의하는 closed subscheme을 $$D(f\_i)\cong\Spec (A\_i)\_{f\_i}$$로 제한하면 $$\mathscr{I}(A\_i)\_{f\_i}$$이고, 주어진 가정에 의해 이는 $$\mathscr{I}((A\_i)\_{f\_i})$$와 isomorphic하며 이것은 $$\mathscr{I}((A\_j)\_{f\_j})$$와 같은 것이므로 이들을 붙여 closed subscheme $$Z$$를 만들 수 있다. 
+들로 덮을 수 있다. 이제 $$\Spec A_i$$에서 $$\mathscr{I}(A_i)$$가 정의하는 closed subscheme을 $$D(f_i)\cong\Spec (A_i)_{f_i}$$로 제한하면 $$\mathscr{I}(A_i)_{f_i}$$이고, 주어진 가정에 의해 이는 $$\mathscr{I}((A_i)_{f_i})$$와 isomorphic하며 이것은 $$\mathscr{I}((A_j)_{f_j})$$와 같은 것이므로 이들을 붙여 closed subscheme $$Z$$를 만들 수 있다. 
 
 </details>
 
@@ -160,7 +160,7 @@ $$\Spec (A_i)_{f_i}\cong\Spec (A_j)_{f_j}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Scheme $$X$$와 $$X$$의 global section $$s\in \Gamma(X, \mathscr{O}\_X)$$에 대하여, 위와 같이 정의된 scheme $$Z(s)$$를 $$s$$의 *vanishing scheme*이라 부른다.
+<ins id="def7">**정의 7**</ins> Scheme $$X$$와 $$X$$의 global section $$s\in \Gamma(X, \mathscr{O}_X)$$에 대하여, 위와 같이 정의된 scheme $$Z(s)$$를 $$s$$의 *vanishing scheme*이라 부른다.
 
 </div>
 
@@ -186,7 +186,7 @@ $$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem9">**보조정리 9**</ins> 두 closed embedding $$\iota_1: Z_1 \rightarrow X$$, $$\iota_2: Z_2 \rightarrow X$$가 주어졌다 하자. 그럼 적당한 scheme morphism $$\varphi: Z_1 \rightarrow Z_2$$가 존재하여 $$\iota_1=\iota_2\circ\varphi$$를 만족하는 것은 $$\mathscr{I}\_{Z\_2/X}\subseteq \mathscr{I}\_{Z\_1/X}$$인 것과 동치이다. 이 경우 $$\varphi$$는 closed embedding이 된다. 
+<ins id="lem9">**보조정리 9**</ins> 두 closed embedding $$\iota_1: Z_1 \rightarrow X$$, $$\iota_2: Z_2 \rightarrow X$$가 주어졌다 하자. 그럼 적당한 scheme morphism $$\varphi: Z_1 \rightarrow Z_2$$가 존재하여 $$\iota_1=\iota_2\circ\varphi$$를 만족하는 것은 $$\mathscr{I}_{Z_2/X}\subseteq \mathscr{I}_{Z_1/X}$$인 것과 동치이다. 이 경우 $$\varphi$$는 closed embedding이 된다. 
 
 </div>
 
@@ -194,7 +194,7 @@ $$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$
 
 $$A \rightarrow A/\mathscr{I}_{Z_1/X}(A),\qquad A \rightarrow A/\mathscr{I}_{Z_2/X}(A)$$
 
-에 대응되며, 위의 조건을 만족하는 $$\varphi$$가 존재하는 것은 ring homomorphism $$A \rightarrow A/ \mathscr{I}\_{Z\_1/X}(A)$$이 $$A \rightarrow A/ \mathscr{I}\_{Z\_2/X}(A)$$로 factor through해야 하는 것과 같은 것이며 이것이 다시 $$\mathscr{I}\_{Z\_2/X}(A)\subseteq \mathscr{I}\_{Z\_1/X}(A)$$와 동치이기 때문이다. 
+에 대응되며, 위의 조건을 만족하는 $$\varphi$$가 존재하는 것은 ring homomorphism $$A \rightarrow A/ \mathscr{I}_{Z_1/X}(A)$$이 $$A \rightarrow A/ \mathscr{I}_{Z_2/X}(A)$$로 factor through해야 하는 것과 같은 것이며 이것이 다시 $$\mathscr{I}_{Z_2/X}(A)\subseteq \mathscr{I}_{Z_1/X}(A)$$와 동치이기 때문이다. 
 
 Scheme $$X$$의 두 closed subscheme $$Z_1,Z_2$$에 대하여, closed embedding $$\varphi:Z_1 \rightarrow Z_2$$가 존재한다면 $$Z_1$$이 $$Z_2$$보다 <em_ko>작은</em_ko> closed subscheme인 것으로 생각하자. 
 
@@ -208,7 +208,7 @@ $$\mathscr{I}_{Z/Y} \rightarrow \mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{
 
 </div>
 
-만일 위의 식에서 $$Y$$가 affine scheme $$\Spec B$$라면, $$Y$$의 closed subscheme은 $$B$$의 ideal $$\mathfrak{b}$$에 의해 완전하게 결정된다. 따라서 이 경우, $$Y$$의 scheme-theoretic image는 $$\mathscr{O}\_Y \rightarrow \varphi\_\ast \mathscr{O}\_X$$의 kernel이 정의하는 $$Y$$의 closed subscheme이 될 것이다. 더 특수한 경우로 만일 $$X$$도 affine scheme이라면, $$\mathscr{O}\_Y \rightarrow \varphi\_\ast \mathscr{O}\_X$$는 ring homomorphism $$\phi$$로부터 나오는 것이므로 명시적인 계산을 해 줄 수 있다.
+만일 위의 식에서 $$Y$$가 affine scheme $$\Spec B$$라면, $$Y$$의 closed subscheme은 $$B$$의 ideal $$\mathfrak{b}$$에 의해 완전하게 결정된다. 따라서 이 경우, $$Y$$의 scheme-theoretic image는 $$\mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$의 kernel이 정의하는 $$Y$$의 closed subscheme이 될 것이다. 더 특수한 경우로 만일 $$X$$도 affine scheme이라면, $$\mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$는 ring homomorphism $$\phi$$로부터 나오는 것이므로 명시적인 계산을 해 줄 수 있다.
 
 <div class="example" markdown="1">
 
@@ -224,7 +224,7 @@ $$(\Spec\phi)(\epsilon)=\phi^{-1}(\epsilon)=\left(\frac{\x_1}{b_1}-\frac{a_1}{b_
 
 </div>
 
-위의 예시에서 $$X$$가 affine scheme이라고 가정하기는 하였지만, $$\varphi^\sharp:\mathscr{O}\_Y \rightarrow \varphi\_\ast \mathscr{O}\_X$$는 어차피 scheme morphism $$\varphi$$가 포함하고 있는 정보이므로 여기에는 새로울 것이 없다. 차이는 $$Y$$를 일반적인 scheme으로 일반화할 때 나오게 되는데, $$Y$$의 임의의 affine open subset $$V=\Spec B$$가 주어질 때마다 ideal
+위의 예시에서 $$X$$가 affine scheme이라고 가정하기는 하였지만, $$\varphi^\sharp:\mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$는 어차피 scheme morphism $$\varphi$$가 포함하고 있는 정보이므로 여기에는 새로울 것이 없다. 차이는 $$Y$$를 일반적인 scheme으로 일반화할 때 나오게 되는데, $$Y$$의 임의의 affine open subset $$V=\Spec B$$가 주어질 때마다 ideal
 
 $$\mathscr{I}(V):=\ker(\varphi^\sharp(V))\subset B$$
 
@@ -248,13 +248,13 @@ $$X=\coprod_{k\geq 0} \Spec \mathbb{K}[\epsilon]/(\epsilon^k)$$
 
 으로 정의하고 $$Y=\Spec \mathbb{K}[\x]$$이라 하자. 이제 $$X$$의 각각의 component마다 $$\x\mapsto \epsilon$$을 통해 scheme morphism $$X \rightarrow Y$$를 정의할 수 있다. 그럼 [예시 11](#ex11)으로부터 우리는 $$X \rightarrow Y$$의 (연속함수로서의) image는 한 점 $$0\in \mathbb{A}^1$$인 것을 안다. 
 
-그러나 scheme morphism $$\varphi:X \rightarrow Y$$의 scheme-theoretic image는 $$0$$이 아니다. 이를 위해 structure sheaf들 사이의 morphism $$\varphi^\sharp:\mathscr{O}\_Y \rightarrow \varphi\_\ast \mathscr{O}\_X$$를 관찰하자. 그럼 $$\mathcal{O}\_Y$$의 원소 $$f$$가 $$\varphi^\sharp(f)=0$$을 만족하기 위해서는 임의의 $$k$$에 대하여 $$f$$의 $$k$$차 근사식이 $$0$$이 되어야 하므로, 반드시 $$f=0$$이어야 한다. 즉, $$\mathscr{I}\_{Z/Y}$$는 $$0$$이 되어야 하고 이로부터 $$\varphi$$의 scheme-theoretic image는 자기 자신임을 안다.
+그러나 scheme morphism $$\varphi:X \rightarrow Y$$의 scheme-theoretic image는 $$0$$이 아니다. 이를 위해 structure sheaf들 사이의 morphism $$\varphi^\sharp:\mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$를 관찰하자. 그럼 $$\mathcal{O}_Y$$의 원소 $$f$$가 $$\varphi^\sharp(f)=0$$을 만족하기 위해서는 임의의 $$k$$에 대하여 $$f$$의 $$k$$차 근사식이 $$0$$이 되어야 하므로, 반드시 $$f=0$$이어야 한다. 즉, $$\mathscr{I}_{Z/Y}$$는 $$0$$이 되어야 하고 이로부터 $$\varphi$$의 scheme-theoretic image는 자기 자신임을 안다.
 
 </div>
 
 ## 닫힌집합 위에 정의된 기약스킴구조
 
-이 글의 서두에서 우리는 affine scheme $$\Spec A$$의 임의의 닫힌집합 $$Z(\mathfrak{a})$$ 위에 두 개의 structure sheaf $$(\Spec\pi)\_\ast \mathscr{O}\_{\Spec A/\mathfrak{a}}$$ 그리고 $$\iota^{-1} \mathscr{O}\_{\Spec A}$$를 정의할 수 있었다. 이 중 $$(\Spec\pi)\_\ast \mathscr{O}\_{\Spec A/ \mathfrak{a}}$$를 우리는 $$Z(\mathfrak{a})$$ 위에 정의된 올바른 스킴 구조로 생각하기로 하였다. 이제 우리는 $$\iota^{-1} \mathscr{O}\_{\Spec A}$$에 대해 살펴본다.
+이 글의 서두에서 우리는 affine scheme $$\Spec A$$의 임의의 닫힌집합 $$Z(\mathfrak{a})$$ 위에 두 개의 structure sheaf $$(\Spec\pi)_\ast \mathscr{O}_{\Spec A/\mathfrak{a}}$$ 그리고 $$\iota^{-1} \mathscr{O}_{\Spec A}$$를 정의할 수 있었다. 이 중 $$(\Spec\pi)_\ast \mathscr{O}_{\Spec A/ \mathfrak{a}}$$를 우리는 $$Z(\mathfrak{a})$$ 위에 정의된 올바른 스킴 구조로 생각하기로 하였다. 이제 우리는 $$\iota^{-1} \mathscr{O}_{\Spec A}$$에 대해 살펴본다.
 
 더 일반적으로 임의의 scheme $$Y$$와 $$Y$$의 닫힌집합 $$X$$를 생각하자. 그럼 $$Y$$의 임의의 열린집합 $$\Spec B$$에 대하여, $$\Spec B$$의 닫힌집합 $$X\cap \Spec B$$는 [§스펙트럼, ⁋정리 15](/ko/math/algebraic_geometry/spectrums#thm15)에 의하여 
 $$B$$의 radical ideal $$\mathfrak{b}$$에 대해 $$Z(\mathfrak{b})$$의 꼴로 쓸 수 있다. 뿐만 아니라, $$\mathfrak{b}$$는 정의에 의하여 $$X\cap \Spec B= Z(\mathfrak{b}')$$이도록 하는 $$B$$의 ideal들 중 가장 큰 것이므로 [보조정리 9](#lem9)에 의하여 $$X\cap \Spec B$$에 줄 수 있는 closed subscheme 구조 중 가장 작은 것이다.

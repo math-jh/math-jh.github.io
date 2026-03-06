@@ -21,7 +21,7 @@ weight: 115
 
 ## 쌍대기저
 
-$$V$$가 유한차원 $$\mathbb{K}$$-벡터공간이라 하자. [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 $$W=\mathbb{K}$$로 두면 $$V^\ast=\Hom(V,\mathbb{K})$$은 $$V$$와 같은 차원을 갖는다는 것을 안다. 특히, 만일 $$\mathcal{B}=\\{x_1,\ldots, x_n\\}$$이 $$V$$의 basis라면 $$x_i$$만을 1로, 나머지 $$x_j$$들은 0으로 보내는 linear map $$\xi^i$$들의 모임
+$$V$$가 유한차원 $$\mathbb{K}$$-벡터공간이라 하자. [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 $$W=\mathbb{K}$$로 두면 $$V^\ast=\Hom(V,\mathbb{K})$$은 $$V$$와 같은 차원을 갖는다는 것을 안다. 특히, 만일 $$\mathcal{B}=\{x_1,\ldots, x_n\}$$이 $$V$$의 basis라면 $$x_i$$만을 1로, 나머지 $$x_j$$들은 0으로 보내는 linear map $$\xi^i$$들의 모임
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\}$$
 
@@ -155,7 +155,7 @@ $$(Lv, f)=(v,L^\ast f)\qquad\text{for all $$v\in V$$ and $$f\in W^\ast$$}\tag{1}
 
 을 통해 정의되었다 할 수 있다. 물론 좌변의 $$(-,-)$$은 $$W$$의 canonical pairing이고, 우변의 $$(-,-)$$은 $$V$$의 canonical pairing이다. 
 
-특별히 $$V,W$$가 모두 유한차원 $$\mathbb{K}$$-벡터공간이라 하자. $$V$$의 basis를 $$\mathcal{B}=\\{x_1,\ldots, x_n\\}$$, $$W$$의 basis를 $$\mathcal{C}=\\{y_1,\ldots, y_m\\}$$이라 하고 이들의 dual basis를 각각 
+특별히 $$V,W$$가 모두 유한차원 $$\mathbb{K}$$-벡터공간이라 하자. $$V$$의 basis를 $$\mathcal{B}=\{x_1,\ldots, x_n\}$$, $$W$$의 basis를 $$\mathcal{C}=\{y_1,\ldots, y_m\}$$이라 하고 이들의 dual basis를 각각 
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots,\xi^n\},\qquad\mathcal{C}^\ast=\{\upsilon^1,\ldots,\upsilon^m\}$$
 
@@ -261,7 +261,7 @@ $$\upsilon\in L(U)^\perp\iff (L(u),\upsilon)=0\text{ for all $$u\in U$$}\iff (u,
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 8](#prop8)에서 $$U=V$$로 두면 된다. Canonical pairing $$(-,-)$$의 non-degenerate 조건으로부터 $$U^\perp=\\{0\\}$$이 되어 원하는 결과를 얻는다.
+[명제 8](#prop8)에서 $$U=V$$로 두면 된다. Canonical pairing $$(-,-)$$의 non-degenerate 조건으로부터 $$U^\perp=\{0\}$$이 되어 원하는 결과를 얻는다.
 
 </details>
 

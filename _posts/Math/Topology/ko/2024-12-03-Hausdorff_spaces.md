@@ -23,7 +23,7 @@ weight: 13
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 위상공간 $$X$$에 대하여, 함수 $$\mathbb{N} \rightarrow X$$를 $$X$$의 점들로 이루어진 *점열<sub>sequence</sub>*이라 부르고, 이를 $$(x\_n)\_{n\geq 1}$$과 같이 나타낸다. 점열 $$(x\_n)\_{n\geq 1}$$이 $$x\in X$$로 *수렴<sub>converge</sub>*한다는 것은 $$x$$의 임의의 근방 $$U$$가 주어질 때마다, 적당한 $$N\in \mathbb{N}$$이 존재하여 다음 명제 
+<ins id="def1">**정의 1**</ins> 위상공간 $$X$$에 대하여, 함수 $$\mathbb{N} \rightarrow X$$를 $$X$$의 점들로 이루어진 *점열<sub>sequence</sub>*이라 부르고, 이를 $$(x_n)_{n\geq 1}$$과 같이 나타낸다. 점열 $$(x_n)_{n\geq 1}$$이 $$x\in X$$로 *수렴<sub>converge</sub>*한다는 것은 $$x$$의 임의의 근방 $$U$$가 주어질 때마다, 적당한 $$N\in \mathbb{N}$$이 존재하여 다음 명제 
 
 $$n\geq N\implies x_n\in U$$
 
@@ -31,7 +31,7 @@ $$n\geq N\implies x_n\in U$$
 
 </div>
 
-이는 미적분학 등에서 이미 다루었던 수열의 수렴의 $$\epsilon$$-$$N$$ 정의에서, $$x$$에 가까운 점을 나타내기 위해 $$\epsilon$$-ball 대신 열린집합 $$U$$를 사용한 것만이 다르다. 만일 점열 $$(x\_n)$$가 $$x$$에 수렴한다면 이를 $$\lim_{n \rightarrow\infty}x_n$$과 같이 적고 싶은 것이 당연하겠지만, 다음 예시에서 이 표기가 잘 정의되지조차 않는다는 것을 알 수 있다. 
+이는 미적분학 등에서 이미 다루었던 수열의 수렴의 $$\epsilon$$-$$N$$ 정의에서, $$x$$에 가까운 점을 나타내기 위해 $$\epsilon$$-ball 대신 열린집합 $$U$$를 사용한 것만이 다르다. 만일 점열 $$(x_n)$$가 $$x$$에 수렴한다면 이를 $$\lim_{n \rightarrow\infty}x_n$$과 같이 적고 싶은 것이 당연하겠지만, 다음 예시에서 이 표기가 잘 정의되지조차 않는다는 것을 알 수 있다. 
 
 <div class="example" markdown="1">
 
@@ -48,8 +48,8 @@ $$n\geq N\implies x_n\in U$$
 - 위상공간 $$X$$의 두 부분집합 $$A,B$$가 *분리가능<sub>separated</sub>*이라는 것은 $$x,y$$ 각각이 서로를 포함하지 않는 근방을 갖는 것이다.
 - 위상공간 $$X$$의 두 부분집합 $$A,B$$가 *근방으로 분리가능<sub>separated by neighborhoods</sub>*이라는 것은 이들이 서로소인 근방을 갖는 것이다.
 - 위상공간 $$X$$의 두 부분집합 $$A,B$$가 *닫힌근방으로 분리가능<sub>separated by closed neighborhoods</sub>*이라는 것은 이들이 서로소인 닫힌근방을 갖는 것이다.
-- 위상공간 $$X$$의 두 부분집합 $$A,B$$가 *연속함수로 분리가능<sub>separated by continuous functions</sub>*이라는 것은 적당한 연속함수 $$f:X \rightarrow \mathbb{R}$$이 존재하여 $$A\subseteq f^{-1}(\\{0\\})$$이고 $$B\subseteq f^{-1}(\\{1\\})$$인 것이다. 
-- 위상공간 $$X$$의 두 부분집합 $$A,B$$가 *연속함수로 정확히 분리가능<sub>precisely separated by continuous functions</sub>*이라는 것은 적당한 연속함수 $$f:X \rightarrow \mathbb{R}$$이 존재하여 $$A= f^{-1}(\\{0\\})$$이고 $$B= f^{-1}(\\{1\\})$$인 것이다. 
+- 위상공간 $$X$$의 두 부분집합 $$A,B$$가 *연속함수로 분리가능<sub>separated by continuous functions</sub>*이라는 것은 적당한 연속함수 $$f:X \rightarrow \mathbb{R}$$이 존재하여 $$A\subseteq f^{-1}(\{0\})$$이고 $$B\subseteq f^{-1}(\{1\})$$인 것이다. 
+- 위상공간 $$X$$의 두 부분집합 $$A,B$$가 *연속함수로 정확히 분리가능<sub>precisely separated by continuous functions</sub>*이라는 것은 적당한 연속함수 $$f:X \rightarrow \mathbb{R}$$이 존재하여 $$A= f^{-1}(\{0\})$$이고 $$B= f^{-1}(\{1\})$$인 것이다. 
 
 위의 조건들은 강한 순서대로 나열되어 있다. 즉, 연속함수로 정확히 분리가능한 두 부분집합은 연속함수로 분리가능하고, 연속함수로 분리가능한 두 부분집합은 닫힌근방으로 분리가능하며, 닫힌근방으로 분리가능한 두 부분집합은 근방으로 분리가능하고, 근방으로 분리가능한 두 부분집합은 분리가능하고, 분리가능한 두 점은 위상적으로 구별가능하며 모든 위상적으로 구별가능한 점들은 서로 다르다.
 
@@ -178,7 +178,7 @@ $$(x,y)\mapsto f(x),\quad (x,y)\mapsto y$$
 
 거꾸로 $$X$$가 Hausdorff라면, 임의로 택한 $$X_j$$의 원소들 $$x_j$$에 대하여, 
 
-$$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\\{x_j\}&\text{otherwise}\end{cases}$$
+$$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\{x_j\}&\text{otherwise}\end{cases}$$
 
 으로 정의된 $$\prod A_j$$는 $$X_i$$와 위상동형인 $$X$$의 부분집합이다. 
 

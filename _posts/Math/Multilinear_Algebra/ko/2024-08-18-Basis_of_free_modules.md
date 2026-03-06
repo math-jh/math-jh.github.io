@@ -25,21 +25,21 @@ $$F(X)=\bigoplus_{x\in X} A$$
 
 ## 기저
 
-이제 임의의 $$A$$-module $$M$$이 주어졌다 하고, $$M$$의 원소들의 family $$(x\_i)\_{i\in I}$$들이 주어졌다 하자. 함수 $$e:I \rightarrow M$$을 $$e(i)=x_i$$로 정의한다면 adjunction $$F\dashv U$$에 의하여 유일한 $$A$$-linear map $$\varepsilon:F(I) \rightarrow M$$이 존재한다. 만일 $$(x\_i)\_{i\in I}$$가 $$M$$의 generating set이었다면, $$\varepsilon$$이 surjective여야 하고, 그 역 또한 성립한다. 이와 비슷한 맥락에서 다음을 정의한다.
+이제 임의의 $$A$$-module $$M$$이 주어졌다 하고, $$M$$의 원소들의 family $$(x_i)_{i\in I}$$들이 주어졌다 하자. 함수 $$e:I \rightarrow M$$을 $$e(i)=x_i$$로 정의한다면 adjunction $$F\dashv U$$에 의하여 유일한 $$A$$-linear map $$\varepsilon:F(I) \rightarrow M$$이 존재한다. 만일 $$(x_i)_{i\in I}$$가 $$M$$의 generating set이었다면, $$\varepsilon$$이 surjective여야 하고, 그 역 또한 성립한다. 이와 비슷한 맥락에서 다음을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 $$A$$-module $$M$$과, $$M$$의 원소들의 family $$(x\_i)\_{i\in I}$$가 주어졌다 하자. 위에서 정의한 $$A$$-linear map $$\varepsilon:F(I) \rightarrow M$$에 대하여, 다음을 정의한다.
+<ins id="def1">**정의 1**</ins> 임의의 $$A$$-module $$M$$과, $$M$$의 원소들의 family $$(x_i)_{i\in I}$$가 주어졌다 하자. 위에서 정의한 $$A$$-linear map $$\varepsilon:F(I) \rightarrow M$$에 대하여, 다음을 정의한다.
 
-1. Family $$(x\_i)\_{i\in I}$$가 *free family<sub>자유족</sub>*라는 것은 $$\varepsilon$$이 injective인 것이다.
-2. Family $$(x\_i)\_{i\in I}$$가 $$M$$을 *generate<sub>생성</sub>*하는 것은 $$\varepsilon$$이 surjective인 것이다.
-3. Family $$(x\_i)\_{i\in I}$$가 $$M$$의 *basis<sub>기저</sub>*라는 것은 $$\varepsilon$$이 bijective인 것이다.
+1. Family $$(x_i)_{i\in I}$$가 *free family<sub>자유족</sub>*라는 것은 $$\varepsilon$$이 injective인 것이다.
+2. Family $$(x_i)_{i\in I}$$가 $$M$$을 *generate<sub>생성</sub>*하는 것은 $$\varepsilon$$이 surjective인 것이다.
+3. Family $$(x_i)_{i\in I}$$가 $$M$$의 *basis<sub>기저</sub>*라는 것은 $$\varepsilon$$이 bijective인 것이다.
 
 Free family가 아닌 family를 *related family*라 부른다.
 
 </div>
 
-Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $$A$$가 field이고, $$M$$이 $$A$$ 위에 정의된 벡터공간이었다면 $$M$$의 원소들의 family $$(x\_i)\_{i\in I}$$가 free family라는 것은 $$x\_i$$들이 일차독립인 것과 동치이다. ([\[선형대수학\] §벡터공간의 기저, ⁋정의 5](/ko/math/linear_algebra/basis#def5)) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*이라 부른다. 
+Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $$A$$가 field이고, $$M$$이 $$A$$ 위에 정의된 벡터공간이었다면 $$M$$의 원소들의 family $$(x_i)_{i\in I}$$가 free family라는 것은 $$x_i$$들이 일차독립인 것과 동치이다. ([\[선형대수학\] §벡터공간의 기저, ⁋정의 5](/ko/math/linear_algebra/basis#def5)) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*이라 부른다. 
 
 한편, 임의의 $$A$$-module $$M$$은 항상 생성집합을 갖는다. 이는 적어도 $$M$$의 원소들을 전부 모아두면 이것이 $$M$$을 생성하기 때문이다.  이로부터 다음을 얻는다.
 
@@ -81,10 +81,10 @@ $$M$$이 finitely generated $$A$$-module인 것은 이러한 family를 유한하
 
 </details>
 
-[정의 3](#def3)의 상황에서, $$M$$의 임의의 원소는 적당한 $$\alpha\in A$$에 대하여 $$\alpha x$$의 꼴로 쓸 수 있다. 따라서 이러한 경우 $$M$$을 $$Ax$$와 같이 표기하기도 한다. 이 표기를 이용하면, 임의의 $$A$$-module $$M$$과 그 원소들의 family $$(x_i)\_{i\in I}$$에 대하여,
+[정의 3](#def3)의 상황에서, $$M$$의 임의의 원소는 적당한 $$\alpha\in A$$에 대하여 $$\alpha x$$의 꼴로 쓸 수 있다. 따라서 이러한 경우 $$M$$을 $$Ax$$와 같이 표기하기도 한다. 이 표기를 이용하면, 임의의 $$A$$-module $$M$$과 그 원소들의 family $$(x_i)_{i\in I}$$에 대하여,
 
-- $$(x\_i)\_{i\in I}$$가 $$M$$의 generating family인 것은 $$M=\sum_{i\in I}Ax_i$$인 것과 동치이다.
-- $$(x\_i)\_{i\in I}$$가 $$M$$의 basis인 것은 위의 sum $$\sum_{i\in I}Ax_i$$가 direct sum이고, 각각의 $$x_i$$가 모두 free element인 것과 동치이다.
+- $$(x_i)_{i\in I}$$가 $$M$$의 generating family인 것은 $$M=\sum_{i\in I}Ax_i$$인 것과 동치이다.
+- $$(x_i)_{i\in I}$$가 $$M$$의 basis인 것은 위의 sum $$\sum_{i\in I}Ax_i$$가 direct sum이고, 각각의 $$x_i$$가 모두 free element인 것과 동치이다.
 
 이를 통해 [명제 4](#prop4)을 각각의 $$N_i$$가 monogeneous이고 free element인 경우로 한정하면, 임의의 free $$A$$-module $$M$$가 무한한 basis를 갖는다면 $$A$$의 모든 basis는 같은 cardinality를 갖는다는 것을 안다. 그러나 유한한 basis를 갖는 경우 이것이 항상 성립하는 것은 아니다.
 
@@ -126,9 +126,9 @@ $$\phi^\ast M\cong\phi^\ast\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{
 
 </div>
 
-편의상 $$M$$의 basis $$(x\_i)\_{i\in I}$$가 주어졌을 때, 이를 통해 얻어지는 free module $$F(I)$$를 $$A^{\oplus I}$$와 같이 나타내고, 특별히 $$I$$가 유한집합이면 $$A^m$$과 같이 나타내기도 한다. 이 표기법들은 $$A$$가 IBN property를 갖는다는 보장이 없을 때 사용할 경우 표기법 상의 문제가 있지만, 약간의 표기법의 남용을 통해 이를 눈감기로 한다. 
+편의상 $$M$$의 basis $$(x_i)_{i\in I}$$가 주어졌을 때, 이를 통해 얻어지는 free module $$F(I)$$를 $$A^{\oplus I}$$와 같이 나타내고, 특별히 $$I$$가 유한집합이면 $$A^m$$과 같이 나타내기도 한다. 이 표기법들은 $$A$$가 IBN property를 갖는다는 보장이 없을 때 사용할 경우 표기법 상의 문제가 있지만, 약간의 표기법의 남용을 통해 이를 눈감기로 한다. 
 
-Basis의 중요한 성질 중 하나는 basis의 원소에서의 함수값들이 linear map을 완전히 결정짓는다는 것이다. 이를 확인하기 위해 free $$A$$-module $$M$$을 하나 고정하고, $$(x\_i)\_{i\in I}$$가 $$M$$의 basis라 하자. 즉 집합들 사이의 함수 $$e_i: i\mapsto x\_i$$가 $$A$$-module isomorphism $$\varepsilon:F(I)\cong M$$을 유도한다. 한편 또 다른 $$A$$-module $$N$$이 주어졌다 하고, $$N$$의 원소들의 family $$(y\_i)\_{i\in I}$$가 주어졌다 하면 함수들 $$e_i': i\mapsto y\_i$$가 $$\varepsilon': F(I) \rightarrow N$$을 유도한다. 그럼 $$u(x\_i)=y\_i$$를 만족하는 유일환 $$A$$-linear map $$u:M \rightarrow N$$이 존재하며, 명시적으로 이는 $$u=\varepsilon'\circ\varepsilon^{-1}$$으로 쓸 수 있다. 
+Basis의 중요한 성질 중 하나는 basis의 원소에서의 함수값들이 linear map을 완전히 결정짓는다는 것이다. 이를 확인하기 위해 free $$A$$-module $$M$$을 하나 고정하고, $$(x_i)_{i\in I}$$가 $$M$$의 basis라 하자. 즉 집합들 사이의 함수 $$e_i: i\mapsto x_i$$가 $$A$$-module isomorphism $$\varepsilon:F(I)\cong M$$을 유도한다. 한편 또 다른 $$A$$-module $$N$$이 주어졌다 하고, $$N$$의 원소들의 family $$(y_i)_{i\in I}$$가 주어졌다 하면 함수들 $$e_i': i\mapsto y_i$$가 $$\varepsilon': F(I) \rightarrow N$$을 유도한다. 그럼 $$u(x_i)=y_i$$를 만족하는 유일환 $$A$$-linear map $$u:M \rightarrow N$$이 존재하며, 명시적으로 이는 $$u=\varepsilon'\circ\varepsilon^{-1}$$으로 쓸 수 있다. 
 
 ## 대수의 기저
 
@@ -144,19 +144,19 @@ Basis의 중요한 성질 중 하나는 basis의 원소에서의 함수값들이
 
 주의해야 할 점은, $$E$$의 basis는 $$E$$를 $$A$$-module로서 생성할 때는 최소이지만, $$A$$-algebra로서 생성하기 위해서는 더 작은 집합만이 필요할 수도 있다는 것이다. 가령 polynomial algebra $$A[\x]$$를 $$A$$-module로서 생성하기 위해서는 원소들 $$1,\x,\x^2,\cdots$$이 필요하지만, 이를 $$A$$-algebra로서 생성하기 위해서는 $$1$$과 $$\x$$만 있으면 충분하다. 
 
-어쨌든 $$E$$의 basis $$(e\_i)\_{i\in I}$$는 여전히 $$E$$에 대한 모든 정보를 담고 있는데, 특히 $$E$$에 정의된 곱셈에 대한 정보를 basis들을 이용해 서술할 수 있다. 임의의 $$i,j\in I$$에 대하여, $$e\_ie\_j$$ 또한 $$E$$의 원소이므로 다음의 합
+어쨌든 $$E$$의 basis $$(e_i)_{i\in I}$$는 여전히 $$E$$에 대한 모든 정보를 담고 있는데, 특히 $$E$$에 정의된 곱셈에 대한 정보를 basis들을 이용해 서술할 수 있다. 임의의 $$i,j\in I$$에 대하여, $$e_ie_j$$ 또한 $$E$$의 원소이므로 다음의 합
 
 $$e_ie_j=\sum_{k\in I} \gamma_{ij}^k e_k$$
 
-으로 나타낼 수 있다. 여기에서 $$(\gamma\_{ij}^k)\_{i,j,k\in I}$$는 $$i,j$$가 고정될 때마다 $$\gamma_{ij}^k\neq 0$$인 $$k$$가 오직 유한 개 뿐이다. 
+으로 나타낼 수 있다. 여기에서 $$(\gamma_{ij}^k)_{i,j,k\in I}$$는 $$i,j$$가 고정될 때마다 $$\gamma_{ij}^k\neq 0$$인 $$k$$가 오직 유한 개 뿐이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> 위에서 정의한 family $$(\gamma_{ij}^k)\_{i,j,k\in I}$$를 $$E$$의 *structure constant<sub>구조상수</sub>*라 부른다. 
+<ins id="def9">**정의 9**</ins> 위에서 정의한 family $$(\gamma_{ij}^k)_{i,j,k\in I}$$를 $$E$$의 *structure constant<sub>구조상수</sub>*라 부른다. 
 
 </div>
 
-그럼 임의의 $$x,y\in E$$에 대하여, 이들을 basis $$(e\_i)$$를 사용하여
+그럼 임의의 $$x,y\in E$$에 대하여, 이들을 basis $$(e_i)$$를 사용하여
 
 $$x=\sum_{i\in I} x_i e_i,\qquad y=\sum_{j\in I} y_j e_j$$
 

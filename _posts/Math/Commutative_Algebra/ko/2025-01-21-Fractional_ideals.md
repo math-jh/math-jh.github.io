@@ -29,7 +29,7 @@ weight: 19
 
 </div>
 
-Prime ideal $$\mathfrak{p}$$와 $$\mathfrak{p}$$를 포함하는 maximal ideal $$\mathfrak{m}$$에 대하여, 만일 $$A\_\mathfrak{m}\cong M\_\mathfrak{m}$$라면 $$A\_\mathfrak{p}\cong M\_\mathfrak{p}$$일 것이므로 위의 조건은 임의의 maximal idlal에 대해서만 확인해봐도 충분하다. 
+Prime ideal $$\mathfrak{p}$$와 $$\mathfrak{p}$$를 포함하는 maximal ideal $$\mathfrak{m}$$에 대하여, 만일 $$A_\mathfrak{m}\cong M_\mathfrak{m}$$라면 $$A_\mathfrak{p}\cong M_\mathfrak{p}$$일 것이므로 위의 조건은 임의의 maximal idlal에 대해서만 확인해봐도 충분하다. 
 
 이제 $$M^\ast=\Hom_A(M,A)$$으로 정의하면, $$A$$가 commutative라는 사실로부터 $$\Hom_A(M, A)$$도 $$A$$-module임을 알고, 더 나아가 trace map $$M^\ast\otimes M \rightarrow A$$ 또한 존재한다. ([\[다중선형대수학\] §Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6))
 
@@ -73,30 +73,30 @@ $$X^{-1}=(A:_KX)=\{y\in K\mid yX\subseteq A\}$$
 <summary>증명</summary>
 
 1. 우선 한쪽 방향은 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의해 자명하다.  
-    거꾸로 trace map $$\tr:M^\ast\otimes_A M \rightarrow A$$가 isomorphism이라 하고, $$M\_\mathfrak{p}\cong A\_\mathfrak{p}$$임을 보여야 한다. 이 때, $$\tr$$이 isomorphism이므로
+    거꾸로 trace map $$\tr:M^\ast\otimes_A M \rightarrow A$$가 isomorphism이라 하고, $$M_\mathfrak{p}\cong A_\mathfrak{p}$$임을 보여야 한다. 이 때, $$\tr$$이 isomorphism이므로
     
     $$\tr\left(\sum_{i=1}^n\xi_i\otimes x_i\right)=1$$
 
-    이도록 하는 $$M^\ast\otimes M$$의 원소가 존재하며, 우리는 $$M\_\mathfrak{p}$$가 $$a_i$$로 생성된다는 것을 보인다. 그럼 $$M$$은 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의해 이들 $$x_1,\ldots, x_n$$들로 생성되어야 한다. 
+    이도록 하는 $$M^\ast\otimes M$$의 원소가 존재하며, 우리는 $$M_\mathfrak{p}$$가 $$a_i$$로 생성된다는 것을 보인다. 그럼 $$M$$은 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의해 이들 $$x_1,\ldots, x_n$$들로 생성되어야 한다. 
 
     다시 이 명제를 통해, 우리는 주어진 가정으로부터 임의의 prime ideal $$\mathfrak{p}$$에 대해 $$\tr_\mathfrak{p}$$가 isomorphism이 다음의 isomorphism
     
     $$\tr_\mathfrak{p}: (M^\ast\otimes_AM)_\mathfrak{p}\cong M^\ast_\mathfrak{p}\otimes_{A_\mathfrak{p}}M_\mathfrak{p} \rightarrow A_\mathfrak{p}$$
     
-    을 얻는다. 비슷하게 $$\xi_i:M \rightarrow A$$를 localize하여 $$(\xi\_i)\_\mathfrak{p}: M\_\mathfrak{p}\rightarrow A\_\mathfrak{p}$$를 정의할 수 있으며, 이들이 원하는 isomorphism이 될 것이다.  
-    한편 고정된 $$\mathfrak{p}$$에 대하여, $$1\not\in \mathfrak{p}$$이므로 위에서 택한 $$\xi_i\otimes x_i$$ 중 어느 하나는 $$\tr(\xi_i\otimes x_i)=\xi_i(x_i)\not\in \mathfrak{p}$$를 만족해야 한다. 그럼 $$A\_\mathfrak{p}$$에서 이 원소의 역원 $$\xi_i(x_i)^{-1}$$이 존재하며, 이를 편의상 $$a_i$$라 쓰기로 하면 다음 식
+    을 얻는다. 비슷하게 $$\xi_i:M \rightarrow A$$를 localize하여 $$(\xi_i)_\mathfrak{p}: M_\mathfrak{p}\rightarrow A_\mathfrak{p}$$를 정의할 수 있으며, 이들이 원하는 isomorphism이 될 것이다.  
+    한편 고정된 $$\mathfrak{p}$$에 대하여, $$1\not\in \mathfrak{p}$$이므로 위에서 택한 $$\xi_i\otimes x_i$$ 중 어느 하나는 $$\tr(\xi_i\otimes x_i)=\xi_i(x_i)\not\in \mathfrak{p}$$를 만족해야 한다. 그럼 $$A_\mathfrak{p}$$에서 이 원소의 역원 $$\xi_i(x_i)^{-1}$$이 존재하며, 이를 편의상 $$a_i$$라 쓰기로 하면 다음 식
 
     $$(\xi_i)_\mathfrak{p}(a_i x_i)=1$$
 
-    을 통해 $$(\xi_i)\_{\mathfrak{p}}: M\_\mathfrak{p} \rightarrow A\_\mathfrak{p}$$가 $$a_i x_i$$를 $$A\_\mathfrak{p}$$로 옮기는 것을 안다. 이제 $$A\_\mathfrak{p} \rightarrow M\_\mathfrak{p}$$를 $$1\mapsto a_ix_i$$로 정의하면, 이는 $$(\xi_i)\_\mathfrak{p}$$의 section이며 따라서 다음의 short exact sequence
+    을 통해 $$(\xi_i)_{\mathfrak{p}}: M_\mathfrak{p} \rightarrow A_\mathfrak{p}$$가 $$a_i x_i$$를 $$A_\mathfrak{p}$$로 옮기는 것을 안다. 이제 $$A_\mathfrak{p} \rightarrow M_\mathfrak{p}$$를 $$1\mapsto a_ix_i$$로 정의하면, 이는 $$(\xi_i)_\mathfrak{p}$$의 section이며 따라서 다음의 short exact sequence
 
     $$0 \longrightarrow \ker (\xi_i)_\mathfrak{p}\longrightarrow M_\mathfrak{p}\overset{(\xi_i)_\mathfrak{p}}{\longrightarrow}A_\mathfrak{p}\longrightarrow 0$$
 
-    가 split한다. 이로부터 $$M_\mathfrak{p}\cong A\_\mathfrak{p}x_i\oplus\ker(\xi\_i)\_\mathfrak{p}$$인 것을 안다. 비슷하게 $$M\_\mathfrak{p}\hookrightarrow M^{\ast\ast}\_\mathfrak{p}$$를 통해 $$x_i$$를 $$M^\ast\_\mathfrak{p} \rightarrow A\_\mathfrak{p}$$로 보면 $$M\_\mathfrak{p}^\ast\cong A\_\mathfrak{p}\xi_i\oplus \ker(x_i)$$를 얻으며, 이제
+    가 split한다. 이로부터 $$M_\mathfrak{p}\cong A_\mathfrak{p}x_i\oplus\ker(\xi_i)_\mathfrak{p}$$인 것을 안다. 비슷하게 $$M_\mathfrak{p}\hookrightarrow M^{\ast\ast}_\mathfrak{p}$$를 통해 $$x_i$$를 $$M^\ast_\mathfrak{p} \rightarrow A_\mathfrak{p}$$로 보면 $$M_\mathfrak{p}^\ast\cong A_\mathfrak{p}\xi_i\oplus \ker(x_i)$$를 얻으며, 이제
 
     $$M^\ast_\mathfrak{p}\otimes M_\mathfrak{p}\cong (A_\mathfrak{p}\xi_i\otimes A_\mathfrak{p}x_i)\oplus ( A_\mathfrak{p}\xi_i\otimes\ker (\xi_i)_\mathfrak{p})\oplus(\ker(x_i)_\mathfrak{p}\otimes A_\mathfrak{p}x_i)\oplus (\ker(x_i)_\mathfrak{p}\otimes \ker(\xi_i)_\mathfrak{p})$$
 
-    이다. 그런데 우변의 첫 번째 항이 정확히 $$A\_\mathfrak{p}$$의 원소를 전부 복원해내므로, $$\tr_\mathfrak{p}$$로 옮겼을 때 나머지 항들은 $$0$$으로 가야만 하고, 특히 둘째 항이 $$0$$으로 가는 것으로부터 $$(\ker\xi_i)\_\mathfrak{p}=\ker(\xi_i)_\mathfrak{p}=0$$임을 안다. 즉, $$\xi\_i$$는 위의 주장대로 $$M\_\mathfrak{p}$$에서 $$A\_\mathfrak{p}$$로의 isomorphism이고, 이를 통해 $$M\_\mathfrak{p}$$를 $$x_i$$로 생성되는 free $$A\_\mathfrak{p}$$-moule로 생각할 수 있다. 
+    이다. 그런데 우변의 첫 번째 항이 정확히 $$A_\mathfrak{p}$$의 원소를 전부 복원해내므로, $$\tr_\mathfrak{p}$$로 옮겼을 때 나머지 항들은 $$0$$으로 가야만 하고, 특히 둘째 항이 $$0$$으로 가는 것으로부터 $$(\ker\xi_i)_\mathfrak{p}=\ker(\xi_i)_\mathfrak{p}=0$$임을 안다. 즉, $$\xi_i$$는 위의 주장대로 $$M_\mathfrak{p}$$에서 $$A_\mathfrak{p}$$로의 isomorphism이고, 이를 통해 $$M_\mathfrak{p}$$를 $$x_i$$로 생성되는 free $$A_\mathfrak{p}$$-moule로 생각할 수 있다. 
 2. 이제 $$M$$이 invertible module이라 하자. 이를 $$A$$의 fractional ideal과 비교하기 위해서는 우선 $$M$$을 $$K$$에 넣어주어야 한다. 그런데 우선 $$A$$의 total ring of fractions $$K$$의 maximal ideal들은 정확히 $$A$$의 maximal한 associated prime ideal들에 대응됨을 확인할 수 있고, $$\Ass A$$는 유한하므로 $$K$$는 semilocal ring이 된다. 따라서 [§정수적 확장, ⁋명제 13](/ko/math/commutative_algebra/integral_extension#prop13)과 다음 isomorphism들
     
     $$M\otimes K_{\mathfrak{m}K}=M_\mathfrak{m}\cong A_\mathfrak{m}\cong K_{\mathfrak{m}K}$$
@@ -106,7 +106,7 @@ $$X^{-1}=(A:_KX)=\{y\in K\mid yX\subseteq A\}$$
     $$\epsilon_\mathfrak{m}: M_\mathfrak{m}\cong A_\mathfrak{m} \rightarrow K\otimes_{A_\mathfrak{m}} A_\mathfrak{m}=S^{-1}A_\mathfrak{m}$$
 
     을 얻고, 이 때 $$S$$의 원소들 (즉 $$A$$의 non-zerodivisor들)이 $$A_\mathfrak{m}$$의 non-zerodivisor이기 때문에 얻어진다.  
-    이제 fractional ideal $$\mathfrak{A}$$가 주어졌다 하고, $$\mathfrak{A}\cap A$$가 zerodivisor로만 이루어졌다 하자. 그럼 $$\mathfrak{a}$$가 (finitely generated) fractional ideal이라는 것으로부터, 공통분모 $$a$$를 찾아 $$a \mathfrak{A}\subseteq A$$를 $$A$$의 ideal이 되도록 할 수 있으며, 이제 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)을 적용하면 $$a\mathfrak{A}$$는 오로지 non-zerodivisor로만 이루어진 $$A$$의 ideal이므로, 이는 associated prime ideal들의 합집합에 속하고 다시 여기에 [§동반소아이디얼, ⁋보조정리 2](/ko/math/commutative_algebra/associated_primes#lem2)를 적용하면 $$a\mathfrak{A}$$가 실제로 어떤 $$b\in A$$를 annihilate하는 것을 안다. 즉, $$ab$$는 $$\mathfrak{A}$$를 annihilate하고 따라서 $$\ann(ab)$$를 포함하는 prime ideal $$\mathfrak{p}$$에서 localize를 하면 $$M\_\mathfrak{p}\not\cong A\_\mathfrak{p}$$임을 안다. 
+    이제 fractional ideal $$\mathfrak{A}$$가 주어졌다 하고, $$\mathfrak{A}\cap A$$가 zerodivisor로만 이루어졌다 하자. 그럼 $$\mathfrak{a}$$가 (finitely generated) fractional ideal이라는 것으로부터, 공통분모 $$a$$를 찾아 $$a \mathfrak{A}\subseteq A$$를 $$A$$의 ideal이 되도록 할 수 있으며, 이제 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)을 적용하면 $$a\mathfrak{A}$$는 오로지 non-zerodivisor로만 이루어진 $$A$$의 ideal이므로, 이는 associated prime ideal들의 합집합에 속하고 다시 여기에 [§동반소아이디얼, ⁋보조정리 2](/ko/math/commutative_algebra/associated_primes#lem2)를 적용하면 $$a\mathfrak{A}$$가 실제로 어떤 $$b\in A$$를 annihilate하는 것을 안다. 즉, $$ab$$는 $$\mathfrak{A}$$를 annihilate하고 따라서 $$\ann(ab)$$를 포함하는 prime ideal $$\mathfrak{p}$$에서 localize를 하면 $$M_\mathfrak{p}\not\cong A_\mathfrak{p}$$임을 안다. 
 3. 두 invertible module $$M,N$$이 주어졌다 하자. 그럼 둘째 결과에 의해 이들을 $$K$$ 안에 들어있는 fractional ideal로 생각할 수 있으며, 주장에서 주어진 map 또한 이렇게 정의된 것이다. 그럼 어차피 주어진 morphism들이 isomorphism이라는 것은 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)을 통해 보일 것이므로, 처음부터 $$A$$가 local임을 가정해도 되고, 그럼 둘째 결과에서의 논증과 invertible module의 정의에 의해 $$M,N$$은 모두 $$A$$와 isomorphic하다. 이제 $$M,N$$을 생성하는 $$K$$의 non-zerodivisor를 각각 $$s,t$$라 하면, 첫 번째 morphism은 원래부터 epimorphism이고, 추가로 $$M\otimes_A N$$을 $$A\cong As\otimes_AAt$$로 본다면 $$M\otimes N \rightarrow MN$$은 $$1\otimes1$$을 $$st$$로 보내는 것으로 이해할 수 있으므로 $$st$$가 non-zerodivisor라는 것으로부터 이것이 monomorphism이기도 하다는 것을 안다.
   두 번째 morphism의 경우, 우선 우리는 두 번째 결과에 의하여 적당한 non-zerodivisor $$a\in A\cap M$$을 택할 수 있다. 그럼 $$0$$이 아닌 임의의 $$t\in M^{-1}N$$에 대해 $$ta\neq 0$$이므로 $$u_t$$는 zero morphism이 아니고, 따라서 주장의 morphism은 monomorphism이다. 이것이 epimorphism이라는 것은 임의의 $$u\in \Hom_A(M,N)$$에 대하여, $$u(x)=y$$라 하면 $$u=u_{y/x}$$가 되어 성립한다. 특히 $$N=A$$로 두면 마지막 주장을 얻는다.
 4. 우선 $$M$$이 invertible이라면 3번 결과에 의해 $$M^{-1}\otimes M \rightarrow M^{-1}M$$과 trace map $$M^\ast\otimes M \rightarrow A$$를 같은 것으로 볼 수 있다. 거꾸로 $$K$$의 임의의 $$A$$-submodule $$M$$이 $$M^{-1}M=A$$를 만족한다면, 위와 마찬가지로 localization을 통해 $$(A,\mathfrak{m})$$이 local ring이라 가정하고 $$M\cong A$$임을 보여도 된다. 그런데 조건 $$M^{-1}M=A$$에 의하여, 적당한 $$y\in M^{-1}$$에 대해 $$yM\not\subseteq \mathfrak{m}$$이도록 할 수 있고 그럼 $$\mathfrak{m}$$의 maximality에 의하여 $$yM=A$$여야 하고, 이로부터 $$M$$과 $$A$$ 사이의 isomorphism $$y-$$를 얻는다. 

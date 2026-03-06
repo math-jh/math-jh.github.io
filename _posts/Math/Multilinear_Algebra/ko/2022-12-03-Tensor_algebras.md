@@ -69,7 +69,7 @@ $$T\left(\bigoplus_{i\in I} M_i\right)\cong \coprod_{i\in I} \T(M_i)$$
 
 로부터, 우변의 graded algebra들의 coproduct를 풀어쓴 것에 불과하다.[^1]
 
-특별히 임의의 free $$A$$-module $$M$$에 대하여, $$M$$의 basis를 $$\mathcal{B}=(e\_i)\_{i\in I}$$라 하자. 그럼 
+특별히 임의의 free $$A$$-module $$M$$에 대하여, $$M$$의 basis를 $$\mathcal{B}=(e_i)_{i\in I}$$라 하자. 그럼 
 
 $$M=\bigoplus_{i\in I} Ae_i$$
 
@@ -125,7 +125,7 @@ $$\iota_{\phi_!M}: \phi_!M \rightarrow \T_B(\phi_!M)$$
 
 ![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_algebras-2.png){:style="width:11em" class="invert" .align-center}
 
-을 commute하도록 하는 $$A$$-algebra homomorphism $$T\_A(M)\rightarrow \phi^\ast T\_{B}(\phi_!M)$$이 유일하게 존재한다. 이제 다음의 adjoint
+을 commute하도록 하는 $$A$$-algebra homomorphism $$T_A(M)\rightarrow \phi^\ast T_{B}(\phi_!M)$$이 유일하게 존재한다. 이제 다음의 adjoint
 
 $$\Hom_{\Alg{A}}(\T_A(M), \phi^\ast \T_B(\phi_!M))\cong \Hom_\Alg{B}(\phi_! \T_A(M), \T_B(\phi_!M))$$
 
@@ -269,7 +269,7 @@ $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1\wedge x_2\wedge\cdots\wedge x_n)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> Free $$A$$-module $$M$$과 그 basis $$(e\_i)\_{i\in I}$$에 대하여, $$I$$의 total ordering을 하나 고정하자. 임의의 유한한 부분집합 $$J\subseteq I$$에 대하여
+<ins id="prop13">**명제 13**</ins> Free $$A$$-module $$M$$과 그 basis $$(e_i)_{i\in I}$$에 대하여, $$I$$의 total ordering을 하나 고정하자. 임의의 유한한 부분집합 $$J\subseteq I$$에 대하여
 
 $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \quad J=\{j_1,\ldots, j_k\}$$
 

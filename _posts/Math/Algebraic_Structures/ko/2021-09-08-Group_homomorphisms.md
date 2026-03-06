@@ -80,21 +80,21 @@ $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
 ## 준동형사상의 kernel과 image
 
-Group $$\\{e\\}$$는 category $$\Grp$$의 zero object이다. 따라서 임의의 group $$G,H$$에 대하여 zero map $$e:G \rightarrow H$$가 합성 $$G\rightarrow\\{e\\}\rightarrow H$$로 정의된다. 
+Group $$\{e\}$$는 category $$\Grp$$의 zero object이다. 따라서 임의의 group $$G,H$$에 대하여 zero map $$e:G \rightarrow H$$가 합성 $$G\rightarrow\{e\}\rightarrow H$$로 정의된다. 
 
 한편, group homomorphism $$f$$가 단사함수라는 것은 다음과 같이 표현할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> Homomorphism $$f:G\rightarrow G'$$가 단사함수인 것은 $$f^{-1}(e')=\\{e\\}$$인 것과 동치이다.
+<ins id="prop3">**명제 3**</ins> Homomorphism $$f:G\rightarrow G'$$가 단사함수인 것은 $$f^{-1}(e')=\{e\}$$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$f$$가 단사함수라면 $$f^{-1}(e')=\\{e\\}$$여야 하는 것은 자명하다.
+$$f$$가 단사함수라면 $$f^{-1}(e')=\{e\}$$여야 하는 것은 자명하다.
 
-거꾸로 $$f^{-1}(e')=\\{e\\}$$가 성립한다 가정하자. $$f(x)=f(y)$$를 만족하는 $$x,y\in G$$가 주어졌다 하면,
+거꾸로 $$f^{-1}(e')=\{e\}$$가 성립한다 가정하자. $$f(x)=f(y)$$를 만족하는 $$x,y\in G$$가 주어졌다 하면,
 
 $$e'=f(x)f(y)^{-1}=f(xy^{-1})$$
 

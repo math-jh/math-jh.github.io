@@ -131,7 +131,7 @@ $$D_v|_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 $$(D_v|_x)f=\lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
-을 사용하면 된다. 대응 $$v\mapsto D\_v\|\_x$$에 의하여, $$v+w$$는
+을 사용하면 된다. 대응 $$v\mapsto D_v\vert_x$$에 의하여, $$v+w$$는
 
 $$\begin{aligned}(D_{v+w}|_x)f&=\lim_{t\rightarrow 0}\frac{f(x+t(v+w))-f(x)}{t}\\
 &=\lim_{t\rightarrow 0}\left(\frac{f((x+tw)+tv)-f(x+tw)}{t}+\frac{f(x+tv)-f(x)}{t}\right)\\
@@ -142,7 +142,7 @@ $$\begin{aligned}(D_{v+w}|_x)f&=\lim_{t\rightarrow 0}\frac{f(x+t(v+w))-f(x)}{t}\
 
 $$(D_{\alpha v}|_x)f=\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{t}=\alpha\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{\alpha t}=\alpha(D_v|_x)f$$
 
-으로부터 얻어진다. 따라서 $$v\mapsto D\_v\|\_x$$는 linear이다. 
+으로부터 얻어진다. 따라서 $$v\mapsto D_v\vert_x$$는 linear이다. 
 
 이 대응이 injective라는 것은 함수 $$f$$에 $$x^1,\ldots, x^m$$들을 대입해보면 되며, 두 벡터공간이 같은 차원을 가지므로 이 대응은 반드시 isomorphism이 되어야 한다. 이상에서 isomorphism $$V\cong T_xV$$를 얻었다. 
 
@@ -202,11 +202,11 @@ $$T_pM\overset{df_p}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longright
 
 한편, $$T_p^\ast M$$은 벡터공간 $$T_pM$$의 dual space이고, $$T_pM$$은 유한차원 $$\mathbb{R}$$-벡터공간이므로 $$T_pM$$의 basis들이 $$T_p^\ast M$$의 *dual basis*를 정의한다. 
 
-$$(U,\varphi)$$가 점 $$p$$를 포함하는 coordinate system이라 하고, $$\varphi=(x^i)\_{i=1}^m$$이라 하자. 그럼 다음의 $$m$$개의 tangent vector들
+$$(U,\varphi)$$가 점 $$p$$를 포함하는 coordinate system이라 하고, $$\varphi=(x^i)_{i=1}^m$$이라 하자. 그럼 다음의 $$m$$개의 tangent vector들
 
 $$\frac{\partial}{\partial x^1}\bigg|_p,\cdots\frac{\partial}{\partial x^m}\bigg|_p$$
 
-이 $$T_pM$$의 basis가 된다. 이들의 dual basis를 잠시동안 $$\xi^i \|\_p $$라 표기하자. 즉 $$\xi^i \|\_p $$는 $$T_pM$$에서 $$\mathbb{R}$$로의 linear map이며, 다음의 식
+이 $$T_pM$$의 basis가 된다. 이들의 dual basis를 잠시동안 $$\xi^i \vert_p $$라 표기하자. 즉 $$\xi^i \vert_p $$는 $$T_pM$$에서 $$\mathbb{R}$$로의 linear map이며, 다음의 식
 
 $$(\xi^i |_p)\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\delta_{ij}\tag{1}$$
 
@@ -214,7 +214,7 @@ $$(\xi^i |_p)\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\delta_{ij}\tag{
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> 위와 같은 상황에서, $$\xi^i\|\_p=dx^i\|\_p$$이다. 즉, $$(U,\varphi)$$에 의하여 생기는 $$T_pM$$의 dual basis $$(\xi^i \|\_p)$$들은 사실 coordinate function들 $$x^i$$의 점 $$p$$에서의 differential과 같다.
+<ins id="prop7">**명제 7**</ins> 위와 같은 상황에서, $$\xi^i\vert_p=dx^i\vert_p$$이다. 즉, $$(U,\varphi)$$에 의하여 생기는 $$T_pM$$의 dual basis $$(\xi^i \vert_p)$$들은 사실 coordinate function들 $$x^i$$의 점 $$p$$에서의 differential과 같다.
 
 </div>
 <details class="proof" markdown="1">
@@ -228,7 +228,7 @@ $$dx^i|_p\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\frac{\partial}{\par
 
 </details>
 
-위 증명은 우리가 tangent space를 처음 도입할 때 증명했던 [§여접공간, ⁋보조정리 1](/ko/math/manifold/cotangent_space#lem1)을 떠올리면 좀 더 그럴듯하다. 즉 첫째 등식에서 둘째 식으로 넘어가는 것은 differential $$dx^i\|\_p$$의 정의이기도 하지만, 동시에 
+위 증명은 우리가 tangent space를 처음 도입할 때 증명했던 [§여접공간, ⁋보조정리 1](/ko/math/manifold/cotangent_space#lem1)을 떠올리면 좀 더 그럴듯하다. 즉 첫째 등식에서 둘째 식으로 넘어가는 것은 differential $$dx^i\vert_p$$의 정의이기도 하지만, 동시에 
 
 $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_p/\mathfrak{m}^2_p$$
 

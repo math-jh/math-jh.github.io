@@ -52,16 +52,16 @@ This theorem means that regardless of whether a set $$A$$ is an ordered set with
 
 Let $$\mathcal{M}$$ be the collection of relations $$R\subseteq A\times A$$ satisfying the following conditions:
 
-1. $$G$$ is a well-ordering on $$R=\pr\_1R$$.
+1. $$G$$ is a well-ordering on $$R=\pr_1R$$.
 2. For each $$x\in U$$, $$S_x\in\mathcal{S}$$ and $$p(S_x)=x$$.
 
-We will show that $$U=\pr\_1G$$ defined for each element $$G$$ of $$\mathcal{M}$$ satisfies the conditions of [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4). To do this, we show that for any $$U$$ and $$U'$$, either $$U$$ is a segment of $$U'$$ or vice versa.
+We will show that $$U=\pr_1G$$ defined for each element $$G$$ of $$\mathcal{M}$$ satisfies the conditions of [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4). To do this, we show that for any $$U$$ and $$U'$$, either $$U$$ is a segment of $$U'$$ or vice versa.
 
 Let $$G$$, $$G'\in \mathcal{M}$$ be arbitrary and let $$U$$, $$U'$$ be their domains. Let $$V$$ be the set of all $$x\in U\cap U'$$ such that (1) the segment with endpoint $$x$$ represents the same set in $$U$$ and $$U'$$, and (2) the order on that segment is the same as in $$G$$. If $$x\in V$$ and $$y\in U$$ satisfies $$y\leq x$$, then $$y\in S_x$$ in both $$U$$ and $$U'$$. Also, elements smaller than $$y$$ in $$U$$ are also smaller than $$y$$ in $$U'$$. Thus $$y\in V$$, and $$V$$ is a segment of $$U$$.
 
-Now to show that $$U$$ and $$U'$$ satisfy the desired condition, it suffices to show that either $$U=V$$ or $$U'=V$$. Assume $$V\neq U$$ and $$V\neq U'$$. Then for the least elements $$x$$ and $$x'$$ of $$U\setminus V$$ and $$U'\setminus V$$, respectively, $$V=S_x=S\_{x'}$$ holds in both $$U$$ and $$U'$$. But by the second condition, $$V\in\mathcal{S}$$, so $$x=p(S_x)=p(V)=p(S\_{x'})=x'$$, and thus $$x\in V$$.
+Now to show that $$U$$ and $$U'$$ satisfy the desired condition, it suffices to show that either $$U=V$$ or $$U'=V$$. Assume $$V\neq U$$ and $$V\neq U'$$. Then for the least elements $$x$$ and $$x'$$ of $$U\setminus V$$ and $$U'\setminus V$$, respectively, $$V=S_x=S_{x'}$$ holds in both $$U$$ and $$U'$$. But by the second condition, $$V\in\mathcal{S}$$, so $$x=p(S_x)=p(V)=p(S_{x'})=x'$$, and thus $$x\in V$$.
 
-Now using [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4), we obtain a well-ordered set $$M=\bigcup\_{G\in\mathcal{M}}\pr\_1G$$. Clearly $$M\in\mathcal{M}$$, so $$M$$ satisfies property 1 of the proposition. If $$M\in\mathcal{S}$$, then by the condition on $$\mathcal{S}$$, $$p(M)\not\in M$$. Now adding $$a=p(M)$$ as a greatest element to $$M$$, we obtain another well-ordered set $$M'=M\cup\{a\}$$ ($$S_a=M$$). Since $$S_a=M\in\mathcal{S}$$ and $$p(S_a)=a$$, $$M'$$ becomes an element of $$\mathcal{M}$$, contradicting the maximality of $$M$$. Thus property 2 also holds.
+Now using [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4), we obtain a well-ordered set $$M=\bigcup_{G\in\mathcal{M}}\pr_1G$$. Clearly $$M\in\mathcal{M}$$, so $$M$$ satisfies property 1 of the proposition. If $$M\in\mathcal{S}$$, then by the condition on $$\mathcal{S}$$, $$p(M)\not\in M$$. Now adding $$a=p(M)$$ as a greatest element to $$M$$, we obtain another well-ordered set $$M'=M\cup\{a\}$$ ($$S_a=M$$). Since $$S_a=M\in\mathcal{S}$$ and $$p(S_a)=a$$, $$M'$$ becomes an element of $$\mathcal{M}$$, contradicting the maximality of $$M$$. Thus property 2 also holds.
 </details>
 
 <details class="proof--alone" markdown="1">
@@ -99,7 +99,7 @@ First, assuming Zermelo's theorem, every set can be well-ordered, so every $$S\i
 
 Now assume Zorn's lemma and construct a choice function for a set $$A$$. First, let $$\mathcal{F}$$ be the collection of choice functions defined on some subset $$X$$ of $$A$$. At least for $$X=\{a\}$$, a choice function exists, so $$\mathcal{F}$$ is non-empty. Now each element of $$\mathcal{C}$$ is a set, so they are ordered by $$\subseteq$$.
 
-Now let $$\mathcal{C}$$ be a totally ordered subset of $$\mathcal{F}$$. Then $$\bigcup\_{X\in\mathcal{C}} F_X$$ is a function with domain $$\mathcal{P}(\bigcup\_{X\in\mathcal{C}} X)$$, so it becomes an upper bound of this collection of functions. Thus by Zorn's lemma, there exists a maximal element. Call it $$F$$ and let $$\mathcal{P}(B)$$ be its domain. If $$x\in A\setminus B$$, then adding $$x$$ to $$B$$ and defining $$\tilde{f}$$ by
+Now let $$\mathcal{C}$$ be a totally ordered subset of $$\mathcal{F}$$. Then $$\bigcup_{X\in\mathcal{C}} F_X$$ is a function with domain $$\mathcal{P}(\bigcup_{X\in\mathcal{C}} X)$$, so it becomes an upper bound of this collection of functions. Thus by Zorn's lemma, there exists a maximal element. Call it $$F$$ and let $$\mathcal{P}(B)$$ be its domain. If $$x\in A\setminus B$$, then adding $$x$$ to $$B$$ and defining $$\tilde{f}$$ by
 
 $$\tilde{f}(X)=\begin{cases}f(X)&\text{if }x\not\in X\\ x&\text{if }x\in X\end{cases}$$
 

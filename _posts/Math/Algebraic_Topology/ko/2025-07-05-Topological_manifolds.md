@@ -95,7 +95,7 @@ $$\mathcal{B}=\left\{B_1\times B_2\mid B_i\in \mathcal{B}_i\right\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$X/R$$이 locally Euclidean이므로 $$X/R$$을 Euclidean neighborhood들 $$(U\_i)\_{i\in I}$$로 덮을 수 있으며 이들의 premimage들의 모임 $$(\pi^{-1}(U\_i))\_{i\in I}$$들이 $$X$$를 덮는다. 이제 임의의 second-countable space는 Lindelöf이므로 ([##ref##](countability)) 적당한 countable subset $$J\subset I$$이 존재하여 $$(\pi^{-1}(U\_i)\_{i\in J}$$가 $$X$$의 countable open cover이며, 따라서 이들에 해당하는 $$(U\_i)\_{i\in J}$$들이 $$X/R$$의 countable cover가 된다. 그런데 이들 각각은 Euclidean neighborhood이므로 다시 countable base를 가지며, 이러한 것들이 countable하게 있으므로 이들을 모두 모은 것이 $$X/R$$의 countable base가 된다.
+$$X/R$$이 locally Euclidean이므로 $$X/R$$을 Euclidean neighborhood들 $$(U_i)_{i\in I}$$로 덮을 수 있으며 이들의 premimage들의 모임 $$(\pi^{-1}(U_i))_{i\in I}$$들이 $$X$$를 덮는다. 이제 임의의 second-countable space는 Lindelöf이므로 ([##ref##](countability)) 적당한 countable subset $$J\subset I$$이 존재하여 $$(\pi^{-1}(U_i)_{i\in J}$$가 $$X$$의 countable open cover이며, 따라서 이들에 해당하는 $$(U_i)_{i\in J}$$들이 $$X/R$$의 countable cover가 된다. 그런데 이들 각각은 Euclidean neighborhood이므로 다시 countable base를 가지며, 이러한 것들이 countable하게 있으므로 이들을 모두 모은 것이 $$X/R$$의 countable base가 된다.
 
 </details>
 

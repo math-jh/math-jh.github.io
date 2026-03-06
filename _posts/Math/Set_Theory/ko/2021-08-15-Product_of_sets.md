@@ -19,17 +19,17 @@ weight: 10
 
 ## 집합의 곱
 
-순서쌍을 가장 자연스럽게 일반화하는 것은 함수이다. 예컨대 $$n$$-tuple은 $$I=\\{1,2,\cdots, n\\}$$을 정의역으로 갖는, $$i$$를 넣으면 $$i$$번째 성분을 돌려주는 함수로 생각할 수 있다.
+순서쌍을 가장 자연스럽게 일반화하는 것은 함수이다. 예컨대 $$n$$-tuple은 $$I=\{1,2,\cdots, n\}$$을 정의역으로 갖는, $$i$$를 넣으면 $$i$$번째 성분을 돌려주는 함수로 생각할 수 있다.
 
-예컨대 집합 $$A_1$$, $$A_2$$에 대하여 $$A_1\times A_2$$은 순서쌍들 $$(x_1,x_2)$$의 모임이다. 위와 같이 순서쌍을 함수로 보자면, $$A_1\times A_2$$는 정의역 $$\\{1,2\\}$$를 갖는 <em_ko>함수들의 모임</em_ko>으로, 이 함수 $$f$$들은 $$f(1)=x_1\in A_1$$, $$f(2)=x_2\in A_2$$를 만족한다. 
+예컨대 집합 $$A_1$$, $$A_2$$에 대하여 $$A_1\times A_2$$은 순서쌍들 $$(x_1,x_2)$$의 모임이다. 위와 같이 순서쌍을 함수로 보자면, $$A_1\times A_2$$는 정의역 $$\{1,2\}$$를 갖는 <em_ko>함수들의 모임</em_ko>으로, 이 함수 $$f$$들은 $$f(1)=x_1\in A_1$$, $$f(2)=x_2\in A_2$$를 만족한다. 
 
 그럼 일반적인 family의 곱은 다음과 같이 정의하는 것이 자연스럽다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$(A_i)\_{i\in I}$$가 집합들의 family라 하자. 그럼 $$I$$에서 $$\bigcup A_i$$로의 모든 함수들 중, $$x_i=f(i)\in A_i$$를 만족하는 것들의 모임 $$P$$를 이 family의 *곱<sub>product</sub>*이라 부른다.
+<ins id="def1">**정의 1**</ins> $$(A_i)_{i\in I}$$가 집합들의 family라 하자. 그럼 $$I$$에서 $$\bigcup A_i$$로의 모든 함수들 중, $$x_i=f(i)\in A_i$$를 만족하는 것들의 모임 $$P$$를 이 family의 *곱<sub>product</sub>*이라 부른다.
 
-집합들의 family를 표기할 때와 마찬가지로, $$P$$의 원소들을 $$(x_i)\_{i\in I}$$로 적으며, 각각의 $$x_i$$를 *$$i$$번째 성분*이라 부르며, $$F\in P$$를 $$F(i)$$로 대응시키는 함수를 *$$i$$번째 성분함수*라 부르고 $$\pr\_i$$로 적는다.
+집합들의 family를 표기할 때와 마찬가지로, $$P$$의 원소들을 $$(x_i)_{i\in I}$$로 적으며, 각각의 $$x_i$$를 *$$i$$번째 성분*이라 부르며, $$F\in P$$를 $$F(i)$$로 대응시키는 함수를 *$$i$$번째 성분함수*라 부르고 $$\pr_i$$로 적는다.
 
 </div>
 
@@ -77,13 +77,13 @@ $$f'=\id_{B'}\circ f'\circ\id_{A'}=(v\circ s')\circ f'\circ(r'\circ u)=v\circ(s'
 
 <div class="proposition" markdown="1">
 
-<ins id="thm3">**정리 3**</ins> 집합들의 family $$(A_i)$$들의 곱 $$P$$와, 성분함수들 $$\pr\_i:P\rightarrow A_i$$가 주어졌다 하자. 다른 집합 $$B$$와, 함수들 $$f_i:B\rightarrow A_i$$가 주어졌다고 하면, 식 $$f_i=\pr\_i\circ f$$를 만족하도록 하는 유일한 함수 $$f:B\rightarrow P$$가 존재한다.
+<ins id="thm3">**정리 3**</ins> 집합들의 family $$(A_i)$$들의 곱 $$P$$와, 성분함수들 $$\pr_i:P\rightarrow A_i$$가 주어졌다 하자. 다른 집합 $$B$$와, 함수들 $$f_i:B\rightarrow A_i$$가 주어졌다고 하면, 식 $$f_i=\pr_i\circ f$$를 만족하도록 하는 유일한 함수 $$f:B\rightarrow P$$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 주어진 조건 $$f\_i=\pr\_i\circ f$$를 만족하는 함수 $$f,f'$$가 주어졌다 하자. 우리는 임의의 $$y\in B$$에 대해 $$f(y)=f'(y)$$임을 보여야 한다. 그런데 $$f(y)$$와 $$f'(y)$$는 어차피 $$A$$의 원소이므로 함수(순서쌍)이고, 따라서 $$i$$가 대응되는 값($$i$$번째 좌표)들에 의해 결정된다. 따라서 임의의 $$y\in B$$와 $$i\in I$$가 주어졌다고 할 때, $$\pr\_i(f(y))=\pr\_i(f'(y))$$라는 것을 보이면 충분하다. 그런데
+우선 주어진 조건 $$f_i=\pr_i\circ f$$를 만족하는 함수 $$f,f'$$가 주어졌다 하자. 우리는 임의의 $$y\in B$$에 대해 $$f(y)=f'(y)$$임을 보여야 한다. 그런데 $$f(y)$$와 $$f'(y)$$는 어차피 $$A$$의 원소이므로 함수(순서쌍)이고, 따라서 $$i$$가 대응되는 값($$i$$번째 좌표)들에 의해 결정된다. 따라서 임의의 $$y\in B$$와 $$i\in I$$가 주어졌다고 할 때, $$\pr_i(f(y))=\pr_i(f'(y))$$라는 것을 보이면 충분하다. 그런데
 
 $$\pr_i(f(y))=f_i(y)=\pr_i(f'(y))$$  
 
@@ -97,11 +97,11 @@ $$\pr_i(f(y))=f_i(y)=\pr_i(f'(y))$$
 
 </details>
 
-이제 [정리 3](#thm3)의 조건을 만족하는 $$(P, \pr\_i)$$가 적어도 하나는 존재하므로 ([정의 1](#def1)), 이를 곱집합의 정의로 삼아도 된다. 즉,  $$(A\_i)\_{i\in I}$$들의 곱은 다음의 universal property를 만족하는 집합 $$\prod\_{i\in I} A\_i$$와 함수들 $$\pr\_i:\prod\_{i\in I}A\_i\rightarrow A_i$$이라 할 수 있다.
+이제 [정리 3](#thm3)의 조건을 만족하는 $$(P, \pr_i)$$가 적어도 하나는 존재하므로 ([정의 1](#def1)), 이를 곱집합의 정의로 삼아도 된다. 즉,  $$(A_i)_{i\in I}$$들의 곱은 다음의 universal property를 만족하는 집합 $$\prod_{i\in I} A_i$$와 함수들 $$\pr_i:\prod_{i\in I}A_i\rightarrow A_i$$이라 할 수 있다.
 
 ![universal_property_of_product](/assets/images/Math/Set_Theory/Product_of_sets-2.png){:style="width:13em" class="invert" .align-center}
 
-[§집합의 합, ⁋따름정리 9](/ko/math/set_theory/sum_of_sets#cor9)와 정확하게 같은 논리를 펼치면 이 universal property를 만족하는 대상 및 $$\pr\_i$$들 또한 전단사함수에 대해 유일함을 확인할 수 있다. 
+[§집합의 합, ⁋따름정리 9](/ko/math/set_theory/sum_of_sets#cor9)와 정확하게 같은 논리를 펼치면 이 universal property를 만족하는 대상 및 $$\pr_i$$들 또한 전단사함수에 대해 유일함을 확인할 수 있다. 
 
 <div class="proposition" markdown="1">
 
@@ -144,7 +144,7 @@ $$\begin{aligned}
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> $$(A_i)\_{i\in I}$$가 집합들의 family이고 $$u:K\rightarrow I$$가 전단사라 하자. 임의의 $$f:I\rightarrow \prod_{i\in I}A\_i$$에 대해, 이를 $$f\circ u: K\rightarrow \prod\_{i\in I} A\_i$$로 보내는 함수 $$f\mapsto f\circ u$$는 전단사함수이다.
+<ins id="prop5">**명제 5**</ins> $$(A_i)_{i\in I}$$가 집합들의 family이고 $$u:K\rightarrow I$$가 전단사라 하자. 임의의 $$f:I\rightarrow \prod_{i\in I}A_i$$에 대해, 이를 $$f\circ u: K\rightarrow \prod_{i\in I} A_i$$로 보내는 함수 $$f\mapsto f\circ u$$는 전단사함수이다.
 
 </div>
 
@@ -154,7 +154,7 @@ $$\begin{aligned}
 
 ![induced_bijection](/assets/images/Math/Set_Theory/Product_of_sets-3.png){:style="width:13em"  class="invert" .align-center}
 
-여기서 $$v$$는 $$(x_i)\_{i\in I}$$를 $$(x\_{u(k)})\_{k\in K}$$로 대응시키는 전단사함수이다. 그럼 위의 [명제 2](#prop2)에 의하여 $$F\mapsto F\circ U$$는 전단사다.
+여기서 $$v$$는 $$(x_i)_{i\in I}$$를 $$(x_{u(k)})_{k\in K}$$로 대응시키는 전단사함수이다. 그럼 위의 [명제 2](#prop2)에 의하여 $$F\mapsto F\circ U$$는 전단사다.
 </details>
 
 

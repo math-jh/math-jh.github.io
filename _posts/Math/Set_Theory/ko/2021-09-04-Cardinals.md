@@ -79,7 +79,7 @@ weight: 24
 
 </div>
 
-공집합은 유일하므로, $$\card\emptyset$$은 정확히 $$\emptyset$$이다. Cardinal을 다룰 때는 이 집합을 $$\mathbf{0}$$으로 적는다. 원소 하나짜리 집합들, 예컨대 $$\\{a\\}$$와 $$\\{b\\}$$들은 모두 서로 equipotent하다. $$\\{(a,b)\\}$$가 $$\\{a\\}$$에서 $$\\{b\\}$$로의 전단사함수이기 때문이다. 이를 $$\mathbf{1}$$로 적자. 아직 이들이 자연수가 되는 것은 아니지만, 우리는 곧 cardinal들에 연산들을 주어 자연수처럼 볼 것이다.
+공집합은 유일하므로, $$\card\emptyset$$은 정확히 $$\emptyset$$이다. Cardinal을 다룰 때는 이 집합을 $$\mathbf{0}$$으로 적는다. 원소 하나짜리 집합들, 예컨대 $$\{a\}$$와 $$\{b\}$$들은 모두 서로 equipotent하다. $$\{(a,b)\}$$가 $$\{a\}$$에서 $$\{b\}$$로의 전단사함수이기 때문이다. 이를 $$\mathbf{1}$$로 적자. 아직 이들이 자연수가 되는 것은 아니지만, 우리는 곧 cardinal들에 연산들을 주어 자연수처럼 볼 것이다.
 
 연산을 정의하기 전에 carinal 간의 대소관계부터 정의하자.
 
@@ -106,7 +106,7 @@ weight: 24
 두 cardinal $$\mathfrak{a}$$와 $$\mathfrak{b}$$에 대해 $$\mathfrak{a}\leq\mathfrak{b}$$이고 $$\mathfrak{b}\leq\mathfrak{a}$$라 가정하자.  
 
 만일 $$\mathfrak{a}$$에서 $$\mathfrak{b}$$의 부분집합으로의 전단사함수를 $$i$$라 하면 $$i(\mathfrak{a})\subset\mathfrak{b}$$이고 $$\mathfrak{a}$$와 $$i(\mathfrak{a})$$은 equipotent하다. 따라서 $$i(\mathfrak{a})$$와 $$\mathfrak{b}$$ 사이의 전단사함수가 존재함을 보이면 충분하다.  
-$$\mathfrak{b}\leq\mathfrak{a}$$이므로, $$\mathfrak{b}$$에서 $$\mathfrak{a}$$의 부분집합으로의 전단사함수가 존재하고, 이는 $$\mathfrak{b}$$에서 $$\mathfrak{a}$$로의 단사함수로 볼 수 있다. 힌퍈. $$\mathfrak{a}$$는 $$i(\mathfrak{a})$$와 equipotent하므로, 이 둘 사이의 전단사함수를 앞선 단사함수와 합성하면 $$\mathfrak{b}$$에서 $$i(\mathfrak{a})$$로의 단사함수를 얻는다. 이를 $$f$$라 하자. 이제 $$C_0=\mathfrak{b}\setminus i(\mathfrak{a})$$라 하고, 귀납적으로 $$C\_{n+1}=f(C_n)$$으로 정의하고 $$C=\bigcup C_n$$이라 하자. 우리는 $$h:\mathfrak{b}\rightarrow i(\mathfrak{a})$$를 다음의 식 
+$$\mathfrak{b}\leq\mathfrak{a}$$이므로, $$\mathfrak{b}$$에서 $$\mathfrak{a}$$의 부분집합으로의 전단사함수가 존재하고, 이는 $$\mathfrak{b}$$에서 $$\mathfrak{a}$$로의 단사함수로 볼 수 있다. 힌퍈. $$\mathfrak{a}$$는 $$i(\mathfrak{a})$$와 equipotent하므로, 이 둘 사이의 전단사함수를 앞선 단사함수와 합성하면 $$\mathfrak{b}$$에서 $$i(\mathfrak{a})$$로의 단사함수를 얻는다. 이를 $$f$$라 하자. 이제 $$C_0=\mathfrak{b}\setminus i(\mathfrak{a})$$라 하고, 귀납적으로 $$C_{n+1}=f(C_n)$$으로 정의하고 $$C=\bigcup C_n$$이라 하자. 우리는 $$h:\mathfrak{b}\rightarrow i(\mathfrak{a})$$를 다음의 식 
 
 $$h(x)=\begin{cases} f(x)&x\in C\\ x&x\not\in C\end{cases}$$
 
@@ -115,9 +115,9 @@ $$h(x)=\begin{cases} f(x)&x\in C\\ x&x\not\in C\end{cases}$$
 우선 $$h$$는 $$\mathfrak{b}$$에서 $$i(\mathfrak{a})$$로의 함수다. $$h$$가 잘 정의됨은 자명하고, 이 함수의 target이 $$i(\mathfrak{a})$$임만 보이면 된다. 만일 $$x\in C$$라면 $$h(x)=f(x)\in i(\mathfrak{a})$$이므로 자명하고, $$x\not\in C$$라 하면 $$x\not\in C_0$$이므로 $$x\not\in\mathfrak{b}\setminus i(\mathfrak{a})$$이다. 따라서 이 경우에도 $$x\in i(\mathfrak{a})$$이다.
 
 또, $$h$$는 단사함수다. 만일 $$h(x)=h(y)$$라 한다면, $$x,y\in C$$인 경우는 $$f(x)=f(y)$$가 되고, 그럼 $$f$$가 단사이므로 $$x=y$$이다. 그리고 $$x,y\not\in C$$인 경우는 자명하게 $$x=y$$가 된다.  
-자명하지 않은 경우는 하나가 $$C$$의 원소이고 다른 하나는 $$C$$의 원소가 아닐 때이다. $$x\in C$$라 하고 $$y\not\in C$$라 하자. 그럼 어떤 $$n$$에 대하여 $$x\in C_n$$이고, 특히 $$h(x)=f(x)\in C\_{n+1}\subseteq C$$이므로 $$h(x)\in C$$이다. 한편 $$h(y)=y$$인데, 가정에 의해 $$y\not\in C$$이므로 $$h(x)=h(y)$$라는 가정에 모순이다. 따라서 $$x=y$$가 항상 성립하고 $$h$$는 단사함수이다.
+자명하지 않은 경우는 하나가 $$C$$의 원소이고 다른 하나는 $$C$$의 원소가 아닐 때이다. $$x\in C$$라 하고 $$y\not\in C$$라 하자. 그럼 어떤 $$n$$에 대하여 $$x\in C_n$$이고, 특히 $$h(x)=f(x)\in C_{n+1}\subseteq C$$이므로 $$h(x)\in C$$이다. 한편 $$h(y)=y$$인데, 가정에 의해 $$y\not\in C$$이므로 $$h(x)=h(y)$$라는 가정에 모순이다. 따라서 $$x=y$$가 항상 성립하고 $$h$$는 단사함수이다.
 
-마지막으로 $$h$$가 전사함수임을 보이자. 임의의 $$y\in i(\mathfrak{a})$$에 대하여, $$y\in C$$이거나 $$y\not\in C$$이다. 만일 $$y\not\in C$$라면 $$h$$의 정의에 의해 $$h(y)=y$$이다. 만일 $$y\in C$$라면, 어떤 $$n\geq 1$$에 대하여 $$y\in C\_{n}$$이다. ($$y\in C_0=\mathfrak{b}\setminus i(\mathfrak{a})$$는 불가능하므로) 따라서 $$y\in f(C\_{n-1})$$이 되어 $$y=f(x)$$인 $$x\in C\_{n-1}$$이 존재한다. 이 $$x$$는 $$C$$의 원소이기도 하므로, $$h(x)=f(x)=y$$이고, 따라서 $$h$$는 전사함수다.
+마지막으로 $$h$$가 전사함수임을 보이자. 임의의 $$y\in i(\mathfrak{a})$$에 대하여, $$y\in C$$이거나 $$y\not\in C$$이다. 만일 $$y\not\in C$$라면 $$h$$의 정의에 의해 $$h(y)=y$$이다. 만일 $$y\in C$$라면, 어떤 $$n\geq 1$$에 대하여 $$y\in C_{n}$$이다. ($$y\in C_0=\mathfrak{b}\setminus i(\mathfrak{a})$$는 불가능하므로) 따라서 $$y\in f(C_{n-1})$$이 되어 $$y=f(x)$$인 $$x\in C_{n-1}$$이 존재한다. 이 $$x$$는 $$C$$의 원소이기도 하므로, $$h(x)=f(x)=y$$이고, 따라서 $$h$$는 전사함수다.
 
 </details>
 

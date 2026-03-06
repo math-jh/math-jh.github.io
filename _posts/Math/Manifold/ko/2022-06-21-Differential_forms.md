@@ -43,7 +43,7 @@ $$\omega=\alpha^1\otimes\cdots\otimes \alpha^r\otimes u_{r+1}\otimes\cdots\otime
 
 $$(\omega,u)=\alpha^1(u_1)\alpha^2(u_2)\cdots \alpha^{r+s}(u_{r+s})$$
 
-으로 정의하자. 그럼 $$(-,-)$$은 non-degenerate pairing이므로 $$\mathcal{T}^{r,s}(T\_p^\ast M)\cong\mathcal{T}^{r,s}(T\_pM)^\ast$$이 성립한다. ([\[선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#cor5))
+으로 정의하자. 그럼 $$(-,-)$$은 non-degenerate pairing이므로 $$\mathcal{T}^{r,s}(T_p^\ast M)\cong\mathcal{T}^{r,s}(T_pM)^\ast$$이 성립한다. ([\[선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#cor5))
 
 이와 유사하게, 두 원소
 
@@ -53,7 +53,7 @@ $$\omega=\alpha^1\wedge\cdots\wedge \alpha^k\in \bigwedge\nolimits^k(T_p^\ast M)
 
 $$(\omega, u)=\det\bigl(\alpha^i(u_j)\bigr)$$
 
-으로 주면 $$\bigwedge\nolimits^k(T_pM)^\ast\cong\bigwedge\nolimits^k(T_p^\ast M)$$임을 확인할 수 있다. 한편 벡터공간들의 유한한 family $$(V\_i)\_{1\leq i\leq n}$$에 대하여
+으로 주면 $$\bigwedge\nolimits^k(T_pM)^\ast\cong\bigwedge\nolimits^k(T_p^\ast M)$$임을 확인할 수 있다. 한편 벡터공간들의 유한한 family $$(V_i)_{1\leq i\leq n}$$에 대하여
 
 $$\bigoplus_{i=1}^n V_i^\ast\cong \left(\bigoplus_{i=1}^n V_i\right)^\ast$$
 

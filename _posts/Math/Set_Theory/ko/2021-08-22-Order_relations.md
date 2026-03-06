@@ -35,14 +35,14 @@ weight: 14
 
 </div>
 
-이 경우, 우리는 $$A$$가 <em_ko>$$R$$에 의해 순서가 부여되었다</em_ko>고 하고, 종종 $$A$$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $$x\mathrel{R}y$$를 $$x\leq\_{\tiny R}y$$로 적는다. 
+이 경우, 우리는 $$A$$가 <em_ko>$$R$$에 의해 순서가 부여되었다</em_ko>고 하고, 종종 $$A$$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $$x\mathrel{R}y$$를 $$x\leq_{\tiny R}y$$로 적는다. 
 
 <ins id="ex3">**예시 3**</ins> 이항관계 <phrase>$$x=y$$</phrase>는 order relation이다. 관계 <phrase>$$x\subseteq y$$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2)와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3))
 {: .example}
 
 Ordered set은 $$ \leq $$라는 관계가 추가적으로 정의된 집합이므로, 이들 사이의 함수를 생각할 때는 $$ \leq $$ 또한 보존하는 함수를 주로 생각하게 된다. 특별히 다음을 정의한다.
 
-<ins id="def4">**정의 4**</ins> 만일 두 order relation $$(R, A, A)$$과 $$(R', A',A')$$에 대해 어떠한 전단사함수 $$f$$가 존재하여 $$x\leq\_{\tiny R}y$$와 $$f(x)\leq\_{\tiny R'}f(y)$$가 동치라면 $$f$$를 *order isomorphism*이라 부른다. 
+<ins id="def4">**정의 4**</ins> 만일 두 order relation $$(R, A, A)$$과 $$(R', A',A')$$에 대해 어떠한 전단사함수 $$f$$가 존재하여 $$x\leq_{\tiny R}y$$와 $$f(x)\leq_{\tiny R'}f(y)$$가 동치라면 $$f$$를 *order isomorphism*이라 부른다. 
 {: .definition}
 
 앞으로 ordered set들 사이에서 isomorphism이라 하면 항상 order isomorphism을 뜻하는 것으로 이해한다. 
@@ -81,9 +81,9 @@ $$x\preceq y\iff f(x)\leq f(y)$$
 <ins id="def7">**정의 7**</ins> Reflexive하고 transitive한 관계 $$R$$을 *preorder relation<sub>원순서관계</sub>*라 부른다.
 {: .definition}
 
-$$R$$이 preorder relation이라면 이를 $$\preceq\_{\tiny R}$$과 같이 적기도 하지만, 많은 경우 preorder는 order relation과 비슷한 성질을 공유하기 때문에 order relation과 동일한 기호 $$\leq\_{\tiny R}$$를 사용하기도 한다. 우리도 특별한 경우가 아닌 한 $$\leq\_{\tiny R}$$를 사용한다.
+$$R$$이 preorder relation이라면 이를 $$\preceq_{\tiny R}$$과 같이 적기도 하지만, 많은 경우 preorder는 order relation과 비슷한 성질을 공유하기 때문에 order relation과 동일한 기호 $$\leq_{\tiny R}$$를 사용하기도 한다. 우리도 특별한 경우가 아닌 한 $$\leq_{\tiny R}$$를 사용한다.
 
-Preorder relation의 성질을 알기 위해 우리는 order relation의 성질이지만 preorder의 성질은 아닌 antisymmetry를 좀 더 살펴봐야 한다. 만일 관계 $$R$$이 order relation이었다면, antisymmetry는 $$(x\leq\_{\tiny R}y)\wedge(y\leq\_{\tiny R}x)\implies x=y$$를 뜻한다. Preorder에 대해서는 이것이 성립하지 않는다는 것을 살펴보았지만, 이 경우는 다음 명제에 의해 <em_ko>일반화된 등호</em_ko>, 즉 동치관계가 똑같은 성질을 준다. 
+Preorder relation의 성질을 알기 위해 우리는 order relation의 성질이지만 preorder의 성질은 아닌 antisymmetry를 좀 더 살펴봐야 한다. 만일 관계 $$R$$이 order relation이었다면, antisymmetry는 $$(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\implies x=y$$를 뜻한다. Preorder에 대해서는 이것이 성립하지 않는다는 것을 살펴보았지만, 이 경우는 다음 명제에 의해 <em_ko>일반화된 등호</em_ko>, 즉 동치관계가 똑같은 성질을 준다. 
 
 <div class="proposition" markdown="1">
 
@@ -145,7 +145,7 @@ $$\begin{aligned}
    &\iff ((x<_{\tiny S}y)\wedge(y<_{\tiny S}x))\vee(x=y)
 \end{aligned}$$
 
-이다. Asymmetry에 의하여 $$(x<\_{\tiny S}y)\wedge(y<\_{\tiny S}x)$$는 불가능하므로, $$(x\mathrel{R}y)\wedge(y\mathrel{R}x)$$가 성립한다면 반드시 $$x=y$$가 성립한다. 마지막으로 transitivity을 보이기 위해 $$x\mathrel{R}y$$이고 $$y\mathrel{R}z$$라 하자. 그럼
+이다. Asymmetry에 의하여 $$(x<_{\tiny S}y)\wedge(y<_{\tiny S}x)$$는 불가능하므로, $$(x\mathrel{R}y)\wedge(y\mathrel{R}x)$$가 성립한다면 반드시 $$x=y$$가 성립한다. 마지막으로 transitivity을 보이기 위해 $$x\mathrel{R}y$$이고 $$y\mathrel{R}z$$라 하자. 그럼
 
 $$\begin{aligned}
   (x\mathrel{R}y)\wedge(y\mathrel{R}z)&\iff ((x<_{\tiny S}y)\vee(x=y))\wedge((y<_{\tiny S}z)\vee(y=z))\\
@@ -159,9 +159,9 @@ $$\begin{aligned}
 이므로 $$R$$은 transitive하다. 따라서 $$R$$은 order relation이 된다.
 </details>
 
-앞으로 order relation $$R$$에 의해 얻어지는 strict order를 $$<_{\tiny R}$$, 그리고 strict order $$S$$에 의해 얻어지는 order relation을 $$\leq\_{\tiny S}$$으로 적기로 한다.
+앞으로 order relation $$R$$에 의해 얻어지는 strict order를 $$<_{\tiny R}$$, 그리고 strict order $$S$$에 의해 얻어지는 order relation을 $$\leq_{\tiny S}$$으로 적기로 한다.
 
-<ins id="rmk1">**참고**</ins> 일반적으로 $$x\not\leq y$$라 하여 $$x>y$$인 것은 아니다. $$S=\left\\{a,b\right\\}$$라 하고, $$\mathcal{P}(S)$$ 위에 정의된 relation $$\leq$$를 부분집합들 간의 포함관계로 정의하자. 그럼 이는 자명하게 order relation이 된다. 이 때, $$\left\\{a\right\\}\not\leq \left\\{b\right\\}$$이지만 $$\left\\{a\right\\}>\left\\{b\right\\}$$ 또한 성립하지 않는다.
+<ins id="rmk1">**참고**</ins> 일반적으로 $$x\not\leq y$$라 하여 $$x>y$$인 것은 아니다. $$S=\left\{a,b\right\}$$라 하고, $$\mathcal{P}(S)$$ 위에 정의된 relation $$\leq$$를 부분집합들 간의 포함관계로 정의하자. 그럼 이는 자명하게 order relation이 된다. 이 때, $$\left\{a\right\}\not\leq \left\{b\right\}$$이지만 $$\left\{a\right\}>\left\{b\right\}$$ 또한 성립하지 않는다.
 {: .remark}
 
 

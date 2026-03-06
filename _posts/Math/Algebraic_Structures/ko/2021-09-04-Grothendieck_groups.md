@@ -63,7 +63,7 @@ $$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta=\id_
 
 ![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_groups-4.png){:style="width:8.8em"  class="invert" .align-center}
 
-비슷하게 $$\id\_{K(S)}=\bar{\eta}_S\circ \bar{\eta}_S'$$가 성립한다는 것도 보일 수 있고, 따라서 $$K(S)\cong H$$가 성립한다.
+비슷하게 $$\id_{K(S)}=\bar{\eta}_S\circ \bar{\eta}_S'$$가 성립한다는 것도 보일 수 있고, 따라서 $$K(S)\cong H$$가 성립한다.
 </details>
 
 한편, $$S$$가 이미 abelian group이었다면, $$K(S)$$는 다른 원소를 추가할 필요 없이 $$S$$ 그 자체가 나와야 한다.
@@ -219,7 +219,7 @@ $$\begin{aligned}\bar{f}\left([(a_1,b_1)]+[(a_2, b_2)]\right)&=\bar{f}\left([(a_
 
 ## Monoid of fractions
 
-위의 논의에서 우리는 $$S$$의 모든 원소들의 역원을 추가하여 $$K(S)$$를 얻었다. 한편 [정의 6](#def6)을 살펴보면 우리가 실제로 하는 것은 $$\mathbb{N}$$의 부분집합 $$\mathbb{N}\setminus\\{0\\}$$의 원소들의 역원만 추가하는 것이다. 이 또한 위의 논의들을 약간 수정하면 얻어질 수 있는데, 증명은 생략하고 과정들만 살펴보자.
+위의 논의에서 우리는 $$S$$의 모든 원소들의 역원을 추가하여 $$K(S)$$를 얻었다. 한편 [정의 6](#def6)을 살펴보면 우리가 실제로 하는 것은 $$\mathbb{N}$$의 부분집합 $$\mathbb{N}\setminus\{0\}$$의 원소들의 역원만 추가하는 것이다. 이 또한 위의 논의들을 약간 수정하면 얻어질 수 있는데, 증명은 생략하고 과정들만 살펴보자.
 
 Commutative monoid $$E$$와 $$E$$의 부분집합 $$S$$, 그리고 $$S$$에 의해 생성되는 $$E$$의 submonoid $$S'$$를 생각하자. 또 $$E$$의 연산은 곱셈으로 적힌 것으로 생각한다. $$E\times S'$$ 위에 다음 관계
 

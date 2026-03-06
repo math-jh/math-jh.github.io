@@ -67,7 +67,7 @@ The following proposition shows an even more general method of creating <em_ko>l
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> Let $$(A_i)\_{i\in I}$$ be a family of well-ordered sets such that for any $$i,j\in I$$, one of $$A_i$$ and $$A_j$$ is a segment of the other. Then there exists a unique order relation on the set $$A=\bigcup\_{i\in I}A_i$$. This is a well-ordering, and segments of $$A_i$$ become segments of $$A$$, and every segment of $$A$$ other than $$A$$ itself becomes a segment of some $$A_i$$.
+<ins id="prop4">**Proposition 4**</ins> Let $$(A_i)_{i\in I}$$ be a family of well-ordered sets such that for any $$i,j\in I$$, one of $$A_i$$ and $$A_j$$ is a segment of the other. Then there exists a unique order relation on the set $$A=\bigcup_{i\in I}A_i$$. This is a well-ordering, and segments of $$A_i$$ become segments of $$A$$, and every segment of $$A$$ other than $$A$$ itself becomes a segment of some $$A_i$$.
 
 </div>
 
@@ -75,15 +75,15 @@ Rather than directly proving the existence and uniqueness of the desired order r
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**Lemma 5**</ins> Let $$(A\_i)\_{i\in I})$$ be a family of ordered sets that is right directed with respect to inclusion, and suppose that whenever $$A_i\subseteq A_j$$, <phrase>the restriction of the order relation on $$A_j$$ to $$A_i$$</phrase> coincides with the order relation given on $$A_i$$. Then there exists a unique order relation on $$A=\bigcup\_{i\in I} A\_i$$ that extends each of the order relations.
+<ins id="lem5">**Lemma 5**</ins> Let $$(A_i)_{i\in I})$$ be a family of ordered sets that is right directed with respect to inclusion, and suppose that whenever $$A_i\subseteq A_j$$, <phrase>the restriction of the order relation on $$A_j$$ to $$A_i$$</phrase> coincides with the order relation given on $$A_i$$. Then there exists a unique order relation on $$A=\bigcup_{i\in I} A_i$$ that extends each of the order relations.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-For each $$A\_i$$, let $$R\_i$$ be the order relation. If an ordering $$R$$ on $$A$$ extending each order relation exists, then $$R\_i\subseteq R$$. Conversely, if $$(x,y)\in R$$, then there exist $$A_i$$ and $$A_j$$ containing $$x$$ and $$y$$, so there exists some $$A_k$$ containing both $$x$$ and $$y$$. Since $$(x,y)\in R\_k$$, we have $$(x,y)\in\bigcup\_{i\in I}R\_i$$. Thus if such a relation exists, it is unique and must be $$\bigcup\_{i\in I}R\_i$$.
+For each $$A_i$$, let $$R_i$$ be the order relation. If an ordering $$R$$ on $$A$$ extending each order relation exists, then $$R_i\subseteq R$$. Conversely, if $$(x,y)\in R$$, then there exist $$A_i$$ and $$A_j$$ containing $$x$$ and $$y$$, so there exists some $$A_k$$ containing both $$x$$ and $$y$$. Since $$(x,y)\in R_k$$, we have $$(x,y)\in\bigcup_{i\in I}R_i$$. Thus if such a relation exists, it is unique and must be $$\bigcup_{i\in I}R_i$$.
 
-Therefore, we only need to show that $$R=\bigcup\_{\alpha\in A}R\_\alpha$$ actually satisfies these conditions. First, by definition, it is clear that $$R$$ extends all $$R\_i$$, so let us show that $$R$$ is an order relation. For any $$x\in A$$, if $$x\in X\_i$$, then $$(x,x)\in R\_i\subseteq R$$, so $$(x,x)\in R$$. Similarly, if $$(x,y)\in R$$, then there exists some $$X\_k$$ containing both $$x$$ and $$y$$, and by the conditions on the order relations in this set, $$(y,x)\in R\_k\subseteq R$$. To show transitivity, assume $$(x,y)\in R$$ and $$(y,z)\in R$$, find a set $$X\_l$$ containing $$x$$, $$y$$, and $$z$$, and conclude $$(x,z)\in R\_l$$.
+Therefore, we only need to show that $$R=\bigcup_{\alpha\in A}R_\alpha$$ actually satisfies these conditions. First, by definition, it is clear that $$R$$ extends all $$R_i$$, so let us show that $$R$$ is an order relation. For any $$x\in A$$, if $$x\in X_i$$, then $$(x,x)\in R_i\subseteq R$$, so $$(x,x)\in R$$. Similarly, if $$(x,y)\in R$$, then there exists some $$X_k$$ containing both $$x$$ and $$y$$, and by the conditions on the order relations in this set, $$(y,x)\in R_k\subseteq R$$. To show transitivity, assume $$(x,y)\in R$$ and $$(y,z)\in R$$, find a set $$X_l$$ containing $$x$$, $$y$$, and $$z$$, and conclude $$(x,z)\in R_l$$.
 
 </details>
 
@@ -130,7 +130,7 @@ Then every segment of $$A$$ belongs to $$\mathcal{S}$$.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Assume the conclusion is false and derive a contradiction. Since $$\mathcal{S}\subseteq A^\ast$$, there exists a least element $$S$$ of $$A^\ast\setminus\mathcal{S}$$. If $$S$$ has no greatest element, then $$S=\bigcup\_{x\in S}S_x$$, and by minimality, each $$S_x$$ is an element of $$\mathcal{S}$$, so by condition 1, $$S\in\mathcal{S}$$. If $$S$$ has a greatest element $$a$$, then $$S=S_a\cup\{a\}$$, and again by minimality, $$S_a\in\mathcal{S}$$. Now by condition (ii), $$S=S_a\cup\{a\}\in\mathcal{S}$$ must hold. This is a contradiction, so the least element of $$A^\ast\setminus\mathcal{S}$$ does not exist, and thus $$\mathcal{S}=A^\ast$$.
+Assume the conclusion is false and derive a contradiction. Since $$\mathcal{S}\subseteq A^\ast$$, there exists a least element $$S$$ of $$A^\ast\setminus\mathcal{S}$$. If $$S$$ has no greatest element, then $$S=\bigcup_{x\in S}S_x$$, and by minimality, each $$S_x$$ is an element of $$\mathcal{S}$$, so by condition 1, $$S\in\mathcal{S}$$. If $$S$$ has a greatest element $$a$$, then $$S=S_a\cup\{a\}$$, and again by minimality, $$S_a\in\mathcal{S}$$. Now by condition (ii), $$S=S_a\cup\{a\}\in\mathcal{S}$$ must hold. This is a contradiction, so the least element of $$A^\ast\setminus\mathcal{S}$$ does not exist, and thus $$\mathcal{S}=A^\ast$$.
 </details>
 
 Here, $$A$$ can be some large ordinal (whether a limit ordinal or a successor ordinal), and thus the existence of limit ordinals that was an obstacle when generalizing induction is resolved through this lemma. What makes this possible is condition 1. For example, $$\omega$$ can be created as an infinite union of $$1,2,\ldots$$.

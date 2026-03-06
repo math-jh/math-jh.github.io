@@ -53,7 +53,7 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 
 representing a function $$f=(F,A,B)$$ may also be regarded as the *graph of the function* drawn on the "coordinate plane" $$A\times B$$. More generally, a binary relation $$R$$ may likewise be regarded as the *graph of the binary relation*. A function $$f$$ is a *constant function* if $$f(x)=f(x')$$ for all $$x,x'\in \pr_1 F$$.
 
-In certain contexts, expressions such as $$f_x$$ are used to denote function values. Under this notation, the domain of $$f$$ is called the *index set*, and $$F$$ is called a *family*. When $$f=(F,I,A)$$ is regarded as a family, $$F$$ is denoted by $$(f\_i)\_{i\in I}$$.
+In certain contexts, expressions such as $$f_x$$ are used to denote function values. Under this notation, the domain of $$f$$ is called the *index set*, and $$F$$ is called a *family*. When $$f=(F,I,A)$$ is regarded as a family, $$F$$ is denoted by $$(f_i)_{i\in I}$$.
 
 If $$f$$ is a function from a set $$A$$ to itself, then $$x\in A$$ is *fixed* by $$f$$ if $$f(x)=x$$.
 
@@ -109,7 +109,7 @@ commuting means that $$g\circ f=\id_A$$ and $$f\circ g=\id_B$$.
 
 </div>
 
-Let $$f$$ and $$f'$$ be two functions, and suppose $$S=\pr\_1 F\cap\pr\_1 F'$$ is non-empty. If the two functions are compatible on $$S$$, then a new function $$g$$ with domain $$\pr\_1F\cup\pr\_1F'$$ can be defined by
+Let $$f$$ and $$f'$$ be two functions, and suppose $$S=\pr_1 F\cap\pr_1 F'$$ is non-empty. If the two functions are compatible on $$S$$, then a new function $$g$$ with domain $$\pr_1F\cup\pr_1F'$$ can be defined by
 
 $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\cap\pr_1F'\\ f'(x)&x\in\pr_1F'\setminus\pr_1F\end{cases}$$
 
@@ -129,7 +129,7 @@ then $$R$$, the collection of all $$(x,y)$$ satisfying this condition, is a func
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> The function $$g$$ defined above is called the *restriction* of $$f$$ to $$X$$, and is denoted by $$f\|_{X}$$.
+<ins id="def5">**Definition 5**</ins> The function $$g$$ defined above is called the *restriction* of $$f$$ to $$X$$, and is denoted by $$f\vert_{X}$$.
 
 </div>
 

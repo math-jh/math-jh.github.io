@@ -63,7 +63,7 @@ $$G=G_1\supset G_2\supset\cdots G_{n+1}=\{e\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$G$$의 크기에 대한 귀납법으로 증명한다. 우선 $$G=\\{e\\}$$인 경우는 증명할 것이 없다. 이제 $$\lvert G\rvert=p^r$$보다 작은 모든 $$p$$-group에서 주어진 주장이 성립한다 하고, $$\lvert G\rvert=p^r$$인 경우를 증명하자. 앞선 논증으로부터 $$C(G)\neq\\{e\\}$$이므로, 적당한 $$x\in C(G)$$가 존재하여 그 order가 $$p^s$$ ($$1\leq s\leq r$$)이도록 할 수 있다. 
+$$G$$의 크기에 대한 귀납법으로 증명한다. 우선 $$G=\{e\}$$인 경우는 증명할 것이 없다. 이제 $$\lvert G\rvert=p^r$$보다 작은 모든 $$p$$-group에서 주어진 주장이 성립한다 하고, $$\lvert G\rvert=p^r$$인 경우를 증명하자. 앞선 논증으로부터 $$C(G)\neq\{e\}$$이므로, 적당한 $$x\in C(G)$$가 존재하여 그 order가 $$p^s$$ ($$1\leq s\leq r$$)이도록 할 수 있다. 
 
 이제 원소 $$x^{p^{s-1}}$$로 생성되는 $$C(G)$$의 subgroup $$H$$를 생각하면, $$G'=G/H$$는 그 크기가 $$p^{r-1}$$인 $$p$$-group이므로 귀납적 가정에 의하여 주어진 조건을 만족하는 subgroup들의 series가 존재하며, 이제 이를 canonical projection $$p: G \rightarrow G'$$의 inverse image로 보낸 것이 원하는 조건을 만족한다. 
 
@@ -153,7 +153,7 @@ $$\lvert E\rvert = \binom{n}{p^r}\not\equiv 0\pmod{p}$$
 
 $$L_g:G \rightarrow G;\qquad x\mapsto gx$$
 
-을 생각하고 [보조정리 6](#lem6)의 증명과 같은 방식으로 이 action을 $$E$$ 위에서 정의된 action으로 보자. 그럼 $$\lvert E\rvert\not\equiv 0\pmod{p}$$라는 가정으로부터, $$p$$의 배수가 아닌 orbit $$O$$가 존재한다. 이제 $$O$$의 한 원소를 $$X$$라 하고, $$X$$의 stabilizer를 $$\Stab(\\{X\\})=\Stab(X)$$라 하자. 그럼 $$\Stab(X)$$는 $$G$$의 subgroup이며 ([\[대수적 구조\] §군의 작용, ⁋따름정리 8](/ko/math/algebraic_structures/group_actions#cor8)) 이것이 우리가 원하는 subgroup이 된다. 
+을 생각하고 [보조정리 6](#lem6)의 증명과 같은 방식으로 이 action을 $$E$$ 위에서 정의된 action으로 보자. 그럼 $$\lvert E\rvert\not\equiv 0\pmod{p}$$라는 가정으로부터, $$p$$의 배수가 아닌 orbit $$O$$가 존재한다. 이제 $$O$$의 한 원소를 $$X$$라 하고, $$X$$의 stabilizer를 $$\Stab(\{X\})=\Stab(X)$$라 하자. 그럼 $$\Stab(X)$$는 $$G$$의 subgroup이며 ([\[대수적 구조\] §군의 작용, ⁋따름정리 8](/ko/math/algebraic_structures/group_actions#cor8)) 이것이 우리가 원하는 subgroup이 된다. 
 
 이를 보이기 위해 우선 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)로부터
 
@@ -298,7 +298,7 @@ $$\lvert G\rvert = 15 = 3\times 5$$
 
 마찬가지로 이 두 조건을 만족하는 $$n_5$$ 또한 $$1$$ 뿐이므로 Sylow 5-subgroup도 유일하게 존재하며 normal subgroup이다. 이를 $$P_5$$라 적자. 
 
-이제 $$P_3\cap P_5$$는 $$P_3$$과 $$P_5$$의 subgroup이므로, 그 크기가 $$1$$이어야 하고 따라서 $$P_3\cap P_5=\\{e\\}$$이다. 이제 $$G$$의 subgroup $$P_3P_5$$를 생각하면, [\[대수적 구조\] §군 동형사상, ⁋정리 5](/ko/math/algebraic_structures/isomorphism_theorems#thm5)로부터
+이제 $$P_3\cap P_5$$는 $$P_3$$과 $$P_5$$의 subgroup이므로, 그 크기가 $$1$$이어야 하고 따라서 $$P_3\cap P_5=\{e\}$$이다. 이제 $$G$$의 subgroup $$P_3P_5$$를 생각하면, [\[대수적 구조\] §군 동형사상, ⁋정리 5](/ko/math/algebraic_structures/isomorphism_theorems#thm5)로부터
 
 $$\frac{P_3P_5}{P_3}\cong P_5/\{e\}\implies \lvert P_3P_5\rvert=\lvert P_3\rvert\lvert P_5\rvert=15=\lvert G\rvert$$
 

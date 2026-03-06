@@ -162,7 +162,7 @@ $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 
 <ins id="prop8">**명제 8**</ins> 두 $$\mathbb{K}$$-벡터공간 $$V,W$$와 linear map $$L:V\rightarrow W$$에 대하여, 
 
-1. $$L$$이 단사인 것은 $$\ker L=\\{0\\}$$인 것과 동치이고,
+1. $$L$$이 단사인 것은 $$\ker L=\{0\}$$인 것과 동치이고,
 2. $$L$$이 전사인 것은 $$\im L=W$$인 것과 동치이다.
 
 </div>
@@ -171,15 +171,15 @@ $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 
 둘째 주장은 동어반복이다.
 
-만약 $$L$$이 단사라면 $$L(v)=0$$을 만족하는 $$v$$는 유일해야 하고, [명제 2](#prop2)에 의해 $$0$$은 이 식을 만족하므로 $$\ker L=\\{0\\}$$이어야 한다. 따라서 첫째 주장 중에서도 다음의 명제
+만약 $$L$$이 단사라면 $$L(v)=0$$을 만족하는 $$v$$는 유일해야 하고, [명제 2](#prop2)에 의해 $$0$$은 이 식을 만족하므로 $$\ker L=\{0\}$$이어야 한다. 따라서 첫째 주장 중에서도 다음의 명제
 
-> $$\ker L=\\{0\\}\implies\text{$$L$$ injective}$$
+> $$\ker L=\{0\}\implies\text{$$L$$ injective}$$
 
 만 보이면 충분하다. $$L(v_1)=L(v_2)$$인 $$v_1,v_2\in V$$가 주어졌다 가정하자. 그럼 다시 [명제 3](#prop3)에 의하여,
 
 $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
-이므로 $$v_1-v_2\in\ker L$$이다. $$\ker L=\\{0\\}$$이므로, $$v_1-v_2=0$$이고 따라서 $$L$$은 단사가 된다.
+이므로 $$v_1-v_2\in\ker L$$이다. $$\ker L=\{0\}$$이므로, $$v_1-v_2=0$$이고 따라서 $$L$$은 단사가 된다.
 
 </details>
 
@@ -228,7 +228,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
 $$L(v)=0\text{ for all $$v\in V$$}$$
 
-으로 정의된 $$L:V\rightarrow W$$는 linear다. 이 경우, $$\im L=\\{0\\}$$이고 $$\ker L=V$$이다.
+으로 정의된 $$L:V\rightarrow W$$는 linear다. 이 경우, $$\im L=\{0\}$$이고 $$\ker L=V$$이다.
 
 </div>
 
@@ -240,7 +240,7 @@ $$L(v)=0\text{ for all $$v\in V$$}$$
 
 $$\iota(w)=w\text{ for all $$w\in W$$}$$
 
-으로 정의된 $$\iota:W\rightarrow V$$는 linear map이다. 이번에는 $$\im\iota=W$$이고, $$\ker \iota=\\{0\\}$$이다. 즉, $$L$$은 단사함수이다.
+으로 정의된 $$\iota:W\rightarrow V$$는 linear map이다. 이번에는 $$\im\iota=W$$이고, $$\ker \iota=\{0\}$$이다. 즉, $$L$$은 단사함수이다.
 
 </div>
 
@@ -280,7 +280,7 @@ $$D\left(\sum_{i=0}^\infty a_i\x^i\right)=\sum_{i=1}^\infty ia_i\x^{i-1}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> 임의의 $$n$$차원 $$\mathbb{K}$$-벡터공간 $$V$$가 주어졌다 하고, $$\mathcal{B}=\\{x_1,\ldots, x_n\\}$$이 $$V$$의 basis라 하자. 즉 임의의 $$v\in V$$에 대하여, 
+<ins id="ex14">**예시 14**</ins> 임의의 $$n$$차원 $$\mathbb{K}$$-벡터공간 $$V$$가 주어졌다 하고, $$\mathcal{B}=\{x_1,\ldots, x_n\}$$이 $$V$$의 basis라 하자. 즉 임의의 $$v\in V$$에 대하여, 
 
 $$v=\sum_{i=1}^n v_i x_i$$
 
@@ -304,7 +304,7 @@ $$L(v)+L(w)=(v_1+w_1,v_2+w_2,\ldots,v_n+w_n)=L(v+w)$$
 
 가 성립한다.
 
-$$\ker L$$은 $$\mathcal{B}$$가 일차독립이므로 $$\\{0\\}$$이 된다. 한편, 임의의 $$(\alpha_1,\ldots,\alpha_n)\in\mathbb{K}^n$$에 대하여 다음의 일차결합
+$$\ker L$$은 $$\mathcal{B}$$가 일차독립이므로 $$\{0\}$$이 된다. 한편, 임의의 $$(\alpha_1,\ldots,\alpha_n)\in\mathbb{K}^n$$에 대하여 다음의 일차결합
 
 $$\sum_{i=1}^n\alpha_i x_i$$
 

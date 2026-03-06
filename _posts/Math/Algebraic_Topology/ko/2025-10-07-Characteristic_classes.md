@@ -19,7 +19,7 @@ weight: 10
 
 이전 글에서 중요한 역할을 했던 $$p:\Spe(\or_M^A)\rightarrow M$$은 covering space로, 이들은 다음과 같은 성질을 가지고 있었다. 
 
-1. 임의의 $$x\in M$$에 대하여, $$p^{-1}(x)\cong \\{x\\}\times A^\times$$이다. 
+1. 임의의 $$x\in M$$에 대하여, $$p^{-1}(x)\cong \{x\}\times A^\times$$이다. 
 2. 뿐만 아니라, 임의의 $$x\in M$$에 대하여, 적당한 열린집합 $$U$$가 존재하여 $$p^{-1}(U)\cong U\times A^\times$$이다.
 
 이제 우리는 이를 더 일반화하여 $$p^{-1}(x)$$ 위에 (discrete set이 아닌) 추가적인 구조가 있는 경우를 살펴본다. 가장 일반적인 정의는 다음과 같다. 
@@ -116,7 +116,7 @@ $$\Delta: B\rightarrow B\times B$$
 
 Sheaf cohomology는 sheaf의 global section의 존재에 대한 obstruction을 cohomology가 담고 있다는 것을 보여줬다. 지금 살펴볼 체흐 코호몰로지도 그 결과는 비슷하지만, 이에 대한 답을 local section들을 이어붙여 global section을 만드는 과정에서 살펴본다는 점에서 차이가 있다. 어쨌든, manifold를 포함하는 좋은 경우에 체흐 코호몰로지는 sheaf cohomology와 같은 결과를 주고, 따라서 constant sheaf의 체흐 코호몰로지는 우리가 원래 알던 cohomology를 복원한다.
 
-위상공간 $$X$$와 그 위에 정의된 sheaf $$\mathscr{F}$$, 그리고 $$X$$의 open cover $$\mathcal{U}=\\{U_i\\}\_{i\in I}$$를 생각하자. 각각의 $$p\geq 0$$에 대하여, *Čech $$p$$-cochain*들의 group은 다음의 식
+위상공간 $$X$$와 그 위에 정의된 sheaf $$\mathscr{F}$$, 그리고 $$X$$의 open cover $$\mathcal{U}=\{U_i\}_{i\in I}$$를 생각하자. 각각의 $$p\geq 0$$에 대하여, *Čech $$p$$-cochain*들의 group은 다음의 식
 
 $$\check{C}^p(\mathcal{U},\mathscr{F})=\prod_{i_0,\ldots,i_p}\mathscr{F}(U_{i_0}\cap \cdots\cap U_{i_p})$$
 
