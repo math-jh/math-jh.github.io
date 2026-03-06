@@ -13,8 +13,8 @@ header:
 sidebar: 
     nav: "set_theory-en"
 
-date: 2022-11-22
-last_modified_at: 2022-11-22
+date: 2026-03-06
+last_modified_at: 2026-03-06
 
 weight: 4
 
