@@ -55,6 +55,19 @@ function updateLangLabel() {
     }
 }
 
+// Update theme label
+function updateThemeLabel() {
+    var pathname = window.location.pathname.split('/');
+    var label = document.getElementById('theme-label');
+    if (label) {
+        if (pathname[1] === 'ko') {
+            label.textContent = '\uD14C\uB9C8';  // 테마
+        } else if (pathname[1] === 'en') {
+            label.textContent = 'Theme';
+        }
+    }
+}
+
 // 페이지 로드 시 body에 data-lang 추가
 function setPageLang() {
     var pathname = window.location.pathname.split('/');
@@ -64,6 +77,7 @@ function setPageLang() {
         document.body.setAttribute('data-lang', 'en');
     }
     updateLangLabel();
+    updateThemeLabel();
 }
 
 // 페이지 로드 시 실행
