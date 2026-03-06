@@ -27,7 +27,7 @@ weight: 2
 
 </div>
 
-The following two propositions are two properties of $\subset$.
+The following two propositions establish properties of $\subseteq$.
 
 <div class="proposition" markdown="1">
 
@@ -53,11 +53,11 @@ First, the premise means that for any $x$, the two propositions $x\in A\implies 
 
 </details>
 
-From the above two propositions, we understand that $\subseteq$ becomes an order relation among sets. ([§Definition of Order Relations, ⁋Definition 1](/en/math/set_theory/order_relations#def1))
+From these two propositions, we see that $\subseteq$ constitutes an order relation among sets. ([§Definition of Order Relations, ⁋Definition 1](/en/math/set_theory/order_relations#def1))
 
 ## Ordered Pairs
 
-Almost the only tool we will use in set theory is the binary relation, and the language used to express it is the ordered pair. For example, the binary relation $\subseteq$ examined above can be thought of as the "set"
+The binary relation is among the few tools we will use in set theory, and ordered pairs provide the language for expressing it. For example, the binary relation $\subseteq$ examined above can be viewed as the "set"
 
 $$\subseteq=\{(A,B),(B,C),\cdots\}$$
 
@@ -67,7 +67,7 @@ $$F=\{(x_1,f(x_1)), (x_2,f(x_2)),\cdots\}$$
 
 and the *equivalence relation*, which we have not yet defined, can also be represented as a set of ordered pairs in this way.
 
-However, among the sets we have defined, there is no tool that can serve the role of ordered pairs that we learned in middle and high school. For example, since $\\{A,B\\}=\\{B,A\\}$, we cannot distinguish the order of $A$ and $B$ simply by using the axiom of pair once.
+However, among the sets we have defined thus far, there is nothing that can serve the role of ordered pairs as we encountered in middle and high school. For example, since $\\{A,B\\}=\\{B,A\\}$, we cannot distinguish the order of $A$ and $B$ simply by using the axiom of pair once.
 
 <div class="definition" markdown="1">
 
@@ -75,7 +75,7 @@ However, among the sets we have defined, there is no tool that can serve the rol
 
 </div>
 
-For the above definition to have meaning, we must first prove the following lemma.[^2]
+For this definition to be meaningful, we must first establish the following lemma.[^2]
 
 <div class="proposition" markdown="1">
 
@@ -91,7 +91,7 @@ For uniqueness, $\\{x\\}=\\{x,x\\}$ and $\\{x,y\\}$ are first uniquely determine
 
 </details>
 
-We have confirmed that the ordered pair $(x,y)$ is well-defined, but we need to verify whether the ordered pair defined this way satisfies $(x,y)\neq (y,x)$ for general $x,y$.
+We have confirmed that the ordered pair $(x,y)$ is well-defined; however, we must still verify whether an ordered pair defined in this way satisfies $(x,y)\neq (y,x)$ for general $x,y$.
 
 <div class="proposition" markdown="1">
 
@@ -107,7 +107,7 @@ Now, conversely, assume $(x,y)=(x',y')$. By definition,
 
 $$\big\{\{x\},\{x,y\}\big\}=\big\{\{x'\},\{x',y'\}\big\}$$
 
-holds. Since exactly one of $x=y$ and $x\neq y$ must hold, let us approach by dividing into two cases.
+holds. Since exactly one of $x=y$ or $x\neq y$ must hold, we proceed by considering two cases.
 
 - If $x=y$, the left side of the above equation becomes
 
@@ -115,7 +115,7 @@ holds. Since exactly one of $x=y$ and $x\neq y$ must hold, let us approach by di
 
     so $\big\\{\\{x\\}\big\\}=\big\\{\\{x'\\},\\{x',y'\\}\big\\}$. Therefore, $\\{x\\}=\\{x'\\}=\\{x',y'\\}$, so $x=x'=y'$, and thus $x=x'=y=y'$. That is, since $x=x'$ and $y=y'$, the proof is complete for this case.
 
-- The remaining case is $x\neq y$. In this case, since $\\{x,y\\}\neq\\{x'\\}$, for the two ordered pairs to be equal, we must have $\\{x\\}=\\{x'\\}$ and $\\{x,y\\}=\\{x',y'\\}$. Then from $\\{x\\}=\\{x'\\}$, we must have $x=x'$, and from this and $\\{x,y\\}=\\{x',y'\\}$, we must have $y=y'$. Thus, the proof is complete for this case as well.
+- The other case is $x\neq y$. In this case, since $\\{x,y\\}\neq\\{x'\\}$, for the two ordered pairs to be equal, we must have $\\{x\\}=\\{x'\\}$ and $\\{x,y\\}=\\{x',y'\\}$. From $\\{x\\}=\\{x'\\}$ we obtain $x=x'$, and together with $\\{x,y\\}=\\{x',y'\\}$ this yields $y=y'$. Thus, the proof is complete for this case as well.
 
 </details>
 
@@ -131,11 +131,11 @@ then we obtain the subset
 
 $$\left\{s\in\bigcup z\mid P(s)\right\}$$
 
-of the preceding set $\bigcup z$. This set is the singleton $\\{x\\}$. If we define a property $Q$ similarly, we obtain the singleton $\\{y\\}$.
+of the preceding set $\bigcup z$. This set is the singleton $\\{x\\}$. Defining a property $Q$ similarly yields the singleton $\\{y\\}$.
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> For the two sets $\\{x\\}$, $\\{y\\}$ obtained by the above process, the unique element $x$ of $\\{x\\}$ is called the *first component* of $z=(x,y)$, and the unique element $y$ of $\\{y\\}$ is called the *second component* of $z=(x,y)$. These are denoted respectively as
+<ins id="def7">**Definition 7**</ins> For the two sets $\\{x\\}$ and $\\{y\\}$ obtained through the above process, the unique element $x$ of $\\{x\\}$ is called the *first component* of $z=(x,y)$, and the unique element $y$ of $\\{y\\}$ is called the *second component* of $z=(x,y)$. These are denoted respectively as
 
 $$x=\pr_1 z,\qquad y=\pr_2 z$$
 
@@ -155,7 +155,7 @@ Also, similar to [Definition 7](#def7), the sets $A$ and $B$ are called the firs
 
 </div>
 
-To determine the conditions under which two product sets $A\times B$ and $A'\times B'$ become equal, we only need to determine when one product set is *contained* in another.
+To determine the conditions under which two product sets $A\times B$ and $A'\times B'$ are equal, it suffices to determine when one product set is *contained* in another.
 
 <div class="proposition" markdown="1">
 
@@ -165,15 +165,15 @@ To determine the conditions under which two product sets $A\times B$ and $A'\tim
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, assume $A'\times B'\subseteq A\times B$. We need to show $A'\subseteq A$, so let any $a'\in A'$ be given and show that $a'\in A$.
-Since $B'$ is not empty, there exists some element $b'\in B'$. Therefore $(a',b')\in A'\times B'$, and since $A'\times B'\subseteq A\times B$, we have $(a',b')\in A\times B$ and $a'\in A$. Similarly, we can show $B'\subseteq B$.
+First, assume $A'\times B'\subseteq A\times B$. We need to show $A'\subseteq A$; let any $a'\in A'$ be given, and we will show that $a'\in A$.
+Since $B'$ is not empty, there exists some element $b'\in B'$. Therefore $(a',b')\in A'\times B'$, and since $A'\times B'\subseteq A\times B$, we have $(a',b')\in A\times B$ and $a'\in A$. The argument for $B'\subseteq B$ is analogous.
 
-Conversely, assume $A'\subseteq A$ and $B'\subseteq B$. We need to show that when any $z'\in A'\times B'$ is given, $z'\in A\times B$.
-Let $z'=(a',b')$. That is, $a'\in A'$ and $b'\in B'$, but by assumption, $a'$ and $b'$ are also elements of $A$ and $B$, so $(a,b)\in A\times B$.
+Conversely, assume $A'\subseteq A$ and $B'\subseteq B$. We need to show that given any $z'\in A'\times B'$, we have $z'\in A\times B$.
+Let $z'=(a',b')$, so $a'\in A'$ and $b'\in B'$. By assumption, $a'$ and $b'$ are also elements of $A$ and $B$, hence $(a',b')\in A\times B$.
 
 </details>
 
-When one of $A,B$ is empty, the following proposition can be applied.
+When one of $A$ or $B$ is empty, the following proposition applies.
 
 <div class="proposition" markdown="1">
 
@@ -185,7 +185,7 @@ When one of $A,B$ is empty, the following proposition can be applied.
 
 First, assume $A\times B=\emptyset$. If both $A$ and $B$ are non-empty, we can pick some $a\in A$ and $b\in B$, so $(a,b)\in A\times B$, which is a contradiction.
 
-Conversely, assume $A$ or $B$ is empty. Again, by contradiction, if $A\times B$ is non-empty, there exists some element $(a,b)\in A\times B$. Therefore $a\in A$ and $b\in B$, which contradicts the assumption that $A$ or $B$ is empty. The proof is complete.
+Conversely, assume $A$ or $B$ is empty. Again, by contradiction: if $A\times B$ is non-empty, there exists some element $(a,b)\in A\times B$. Hence $a\in A$ and $b\in B$, which contradicts the assumption that $A$ or $B$ is empty. This completes the proof.
 
 </details>
 
