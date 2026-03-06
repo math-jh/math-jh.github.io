@@ -19,25 +19,27 @@ weight: 1
 
 ## Toric geometry
 
-Toric geometry는 말 그대로 toric variety라 불리는 특별할 대수다양체를 연구하는 분야이다. 일반적인 대수다양체에 비해 toric variety가 가지는 장점은 이것이 본질적으로 조합론적인 정보로 만들어지므로 더 손에 잡히는 계산을 수행하기 용이하다는 것이다. 우리는 이 글에서 먼저 가장 간단한 toric variety, 즉 affine toric variety를 살펴본다. 
+Toric geometry는 말 그대로 toric variety라 불리는 특별한 대수다양체를 연구하는 분야이다. 일반적인 대수다양체에 비해 toric variety가 가지는 장점은 이것이 본질적으로 조합론적인 정보로 만들어지므로 더 손에 잡히는 계산을 수행하기 용이하다는 것이다. 우리는 이 글에서 먼저 가장 간단한 toric variety, 즉 affine toric variety를 살펴본다. 
 
 ## 격자와 콘
 
-직관적으로, toric variety는 $$\mathbb{A}^k_\mathbb{C}$$들을 이어붙여 $$\mathbb{P}^k_\mathbb{C}$$를 얻어내는 과정을 일반화하여 얻어진다고 할 수 있다. 이제는 이들을 이어붙이는 방법들을 
-
-토릭 기하학에서 기본이 되는 것은 **격자(lattice)**이다.
+직관적으로, toric variety는 $$\mathbb{A}^k_\mathbb{C}$$들을 이어붙여 $$\mathbb{P}^k_\mathbb{C}$$를 얻어내는 과정을 일반화하여 얻어진다고 할 수 있다. 이제는 이들을 이어붙이는 방법들을 *lattice들* 안에 기록해두게 된다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> **격자(lattice)** $$N$$은 $$\mathbb{Z}^n$$과 동형인 아벨 군이다. **쌍대 격자(dual lattice)** $$M$$은 $$N$$에서 $$\mathbb{Z}$$로의 준동형사상들의 그룹
+<ins id="def1">**정의 1**</ins> $$\mathbb{Z}^n$$과 isomorphic한 abelian group $$N$$을 *lattice<sub>격자</sub>*라 부른다. Lattice $$N$$의 *dual lattice<sub>쌍대 격자</sub>*는 다음의 식
 
-$$M = \operatorname{Hom}(N, \mathbb{Z})$$
+$$M = \Hom(N, \mathbb{Z})$$
 
-이다. $$M$$과 $$N$$ 사이의 **쌍대 페어링(dual pairing)** $$\langle \cdot, \cdot \rangle: M \times N \to \mathbb{Z}$$는 자연스럽게 정의된다.
+으로 주어진다. 그럼 이 때 Kronecker pairing $$M\times N \to \mathbb{Z}$$를 *dual pairing<sub>쌍대 페어링</sub>*이라 부른다. 
 
 </div>
 
-우리는 $$N_{\mathbb{R}} = N \otimes_{\mathbb{Z}} \mathbb{R}$$과 $$M_{\mathbb{R}} = M \otimes_{\mathbb{Z}} \mathbb{R}$$을 자주 사용할 것이다.
+논의의 편의를 위해 다음 두 표기
+
+$$N_{\mathbb{R}} = N \otimes_{\mathbb{Z}} \mathbb{R},\qquad M_{\mathbb{R}} = M \otimes_{\mathbb{Z}} \mathbb{R}$$
+
+을 도입하자. .
 
 <div class="definition" markdown="1">
 
