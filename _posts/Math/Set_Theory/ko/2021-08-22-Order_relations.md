@@ -35,7 +35,7 @@ weight: 14
 
 </div>
 
-이 경우, 우리는 $$A$$가 <em_ko>$$R$$에 의해 순서가 부여되었다</em_ko>고 하고, 종종 $$A$$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $$x\mathrel{R}y$$를 $$x\leq_{\tiny R}y$$로 적는다. 
+이 경우, 우리는 $$A$$가 <em-ko>$$R$$에 의해 순서가 부여되었다</em-ko>고 하고, 종종 $$A$$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $$x\mathrel{R}y$$를 $$x\leq_{\tiny R}y$$로 적는다. 
 
 <ins id="ex3">**예시 3**</ins> 이항관계 <phrase>$$x=y$$</phrase>는 order relation이다. 관계 <phrase>$$x\subseteq y$$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2)와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3))
 {: .example}
@@ -83,7 +83,7 @@ $$x\preceq y\iff f(x)\leq f(y)$$
 
 $$R$$이 preorder relation이라면 이를 $$\preceq_{\tiny R}$$과 같이 적기도 하지만, 많은 경우 preorder는 order relation과 비슷한 성질을 공유하기 때문에 order relation과 동일한 기호 $$\leq_{\tiny R}$$를 사용하기도 한다. 우리도 특별한 경우가 아닌 한 $$\leq_{\tiny R}$$를 사용한다.
 
-Preorder relation의 성질을 알기 위해 우리는 order relation의 성질이지만 preorder의 성질은 아닌 antisymmetry를 좀 더 살펴봐야 한다. 만일 관계 $$R$$이 order relation이었다면, antisymmetry는 $$(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\implies x=y$$를 뜻한다. Preorder에 대해서는 이것이 성립하지 않는다는 것을 살펴보았지만, 이 경우는 다음 명제에 의해 <em_ko>일반화된 등호</em_ko>, 즉 동치관계가 똑같은 성질을 준다. 
+Preorder relation의 성질을 알기 위해 우리는 order relation의 성질이지만 preorder의 성질은 아닌 antisymmetry를 좀 더 살펴봐야 한다. 만일 관계 $$R$$이 order relation이었다면, antisymmetry는 $$(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\implies x=y$$를 뜻한다. Preorder에 대해서는 이것이 성립하지 않는다는 것을 살펴보았지만, 이 경우는 다음 명제에 의해 <em-ko>일반화된 등호</em-ko>, 즉 동치관계가 똑같은 성질을 준다. 
 
 <div class="proposition" markdown="1">
 

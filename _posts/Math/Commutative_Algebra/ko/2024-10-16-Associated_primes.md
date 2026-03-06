@@ -23,7 +23,7 @@ weight: 6
 
 <ins id="def1">**정의 1**</ins> Ring $$A$$와 $$A$$-module $$M$$에 대하여, $$A$$의 prime ideal $$\mathfrak{p}$$가 $$M$$의 *associated prime ideal<sub>동반소아이디얼</sub>*이라는 것은 어떠한 $$x\in M$$에 대해 $$\mathfrak{p}=\ann(x)$$인 것이다. Associated prime들의 모임을 $$\Ass M$$으로 적는다. 
 
-단, 특별히 $$M=\mathfrak{a}$$가 $$A$$의 ideal일 때에는, 관례상 $$\mathfrak{a}$$의 associated prime ideal은 $$\Ass \mathfrak{a}$$가 <em_ko>아니라</em_ko>, $$\Ass A/\mathfrak{a}$$를 의미한다.  
+단, 특별히 $$M=\mathfrak{a}$$가 $$A$$의 ideal일 때에는, 관례상 $$\mathfrak{a}$$의 associated prime ideal은 $$\Ass \mathfrak{a}$$가 <em-ko>아니라</em-ko>, $$\Ass A/\mathfrak{a}$$를 의미한다.  
 
 </div>
 

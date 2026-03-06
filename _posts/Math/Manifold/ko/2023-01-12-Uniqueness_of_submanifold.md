@@ -68,7 +68,7 @@ $$F_0=\bar{\Phi}^{-1}\circ F$$
 
 둘째 주장은 정의이므로 첫 번째 주장만 보이면 충분하다. 
 
-$$F_0$$가 연속이라 가정하고, $$F_0$$이 $$C^\infty$$이기도 하다는 것을 보이자. 즉 임의의 $$x\in N$$에 대하여, $$x$$를 중심으로 하는 coordinate system $$(U,\varphi)$$가 존재하여 $$F_0$$을 $$U$$로 제한한 것이 $$C^\infty$$임을 보여야 한다. 그런데 $$F_0$$가 연속인 전단사함수임을 가정하였으므로, 이를 보이기 위해서는 임의의 $$y\in P$$를 포함하는 coordinate system $$(V,\psi)$$가 존재하여, $$\psi\circ F_0$$을 <em_ko>열린집합</em_ko> $$F_0^{-1}(V)$$로 제한한 것이 $$C^\infty$$임을 보이면 충분하다. 
+$$F_0$$가 연속이라 가정하고, $$F_0$$이 $$C^\infty$$이기도 하다는 것을 보이자. 즉 임의의 $$x\in N$$에 대하여, $$x$$를 중심으로 하는 coordinate system $$(U,\varphi)$$가 존재하여 $$F_0$$을 $$U$$로 제한한 것이 $$C^\infty$$임을 보여야 한다. 그런데 $$F_0$$가 연속인 전단사함수임을 가정하였으므로, 이를 보이기 위해서는 임의의 $$y\in P$$를 포함하는 coordinate system $$(V,\psi)$$가 존재하여, $$\psi\circ F_0$$을 <em-ko>열린집합</em-ko> $$F_0^{-1}(V)$$로 제한한 것이 $$C^\infty$$임을 보이면 충분하다. 
 
 이제 $$y\in P$$가 임의로 주어졌다 하고, $$\Phi(y)$$를 포함하는 $$M$$의 coordinate system $$(W,z^1,\ldots, z^m)$$를 택하자. 그럼 [§부분다양체와 역함수 정리, ⁋따름정리 10](/ko/math/manifold/submanifolds#cor10)으로부터 집합 $$\{z^k\circ\Phi\mid 1\leq k\leq m\}$$의 부분집합을 적당한 열린근방 $$V$$로 제한한 것이 점 $$y\in P$$의 coordinate system을 이룬다는 것을 안다. 
 
@@ -102,11 +102,11 @@ $$\iota=\Phi\circ\bar{\Phi}^{-1}$$
 
 ## 부분다양체의 유일성
 
-위의 절에서 정의한 $$(A,\iota)$$는 equivalence class $$[(N,\Phi)]$$마다 <em_ko>유일하게</em_ko> 결정된다. 우선 [정의 3](#def3)에서의 $$\theta$$는 diffeomorphism이므로 특히 전단사함수이고, 따라서 
+위의 절에서 정의한 $$(A,\iota)$$는 equivalence class $$[(N,\Phi)]$$마다 <em-ko>유일하게</em-ko> 결정된다. 우선 [정의 3](#def3)에서의 $$\theta$$는 diffeomorphism이므로 특히 전단사함수이고, 따라서 
 
 $$\Phi_2(N_2)=\Phi_1(\theta(N_2))=\Phi_1(N_1)$$
 
-이 성립하므로 $$A$$는 유일하게 결정된다. 한편 이렇게 결정되는 $$M$$의 부분집합 $$A$$와 inclusion $$\iota:A\hookrightarrow M$$이 $$[(N,\Phi)]$$에 속하기 위해서는 $$\iota=\Phi\circ\theta$$를 만족하는 diffeomorphism $$\theta$$가 존재해야 하는데, 양 변의 왼쪽에 $$\bar{\Phi}^{-1}$$을 취해주면 $$\theta=\bar{\Phi}^{-1}$$이므로 $$A$$의 manifold 구조는 <em_ko>반드시</em_ko> 위에서 정의한 것과 동일한 방식으로 정의되어야 한다.
+이 성립하므로 $$A$$는 유일하게 결정된다. 한편 이렇게 결정되는 $$M$$의 부분집합 $$A$$와 inclusion $$\iota:A\hookrightarrow M$$이 $$[(N,\Phi)]$$에 속하기 위해서는 $$\iota=\Phi\circ\theta$$를 만족하는 diffeomorphism $$\theta$$가 존재해야 하는데, 양 변의 왼쪽에 $$\bar{\Phi}^{-1}$$을 취해주면 $$\theta=\bar{\Phi}^{-1}$$이므로 $$A$$의 manifold 구조는 <em-ko>반드시</em-ko> 위에서 정의한 것과 동일한 방식으로 정의되어야 한다.
 
 반면 manifold $$M$$의 임의의 부분집합 $$\iota:A\hookrightarrow M$$에 대하여, $$(A,\iota)$$를 submanifold로 만드는 $$A$$의 manifold 구조가 유일하게 존재하는 것은 아니다. 가령 [예시 2](#ex2)와 같이 $$M$$의 두 submanifold $$(N_1,\Phi_1),(N_2,\Phi_2)$$가 서로 diffeomorphic하지 않지만 $$\Phi_1(N_1)=\Phi_2(N_2)$$를 만족한다면, $$[(N_1,\Phi_1)]$$과 $$[(N_2,\Phi_2)]$$에서 위의 과정을 통해 얻어지는 $$(A,\iota)$$ 위의 두 manifold 구조는 서로 달라야 한다. 
 

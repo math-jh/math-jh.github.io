@@ -112,7 +112,7 @@ $$\mathcal{E}_0:F \rightarrow F\oplus G \rightarrow G$$
 
 $$G\cong (G/N)\oplus N$$
 
-이 항상 성립하지는 <em_ko>않기</em_ko> 떄문이다. 그러나 그 역이 항상 성립하는 것은 아니다. 
+이 항상 성립하지는 <em-ko>않기</em-ko> 떄문이다. 그러나 그 역이 항상 성립하는 것은 아니다. 
 
 <div class="definition" markdown="1">
 

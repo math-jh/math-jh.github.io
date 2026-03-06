@@ -63,7 +63,7 @@ $$(x_i),(y_i)\in\prod A_i$$라 하자. 그럼 각각의 $$i$$에 대하여, $$x_
 
 </div>
 
-Lattice $$A$$의 임의의 <em_ko>유한한</em_ko> 부분집합은 supremum과 infimum을 갖는다. 만일 $$A$$의 <em_ko>모든</em_ko> 부분집합이 supremum과 infumum을 갖는다면, $$A$$를 *complete lattice*라 부른다.
+Lattice $$A$$의 임의의 <em-ko>유한한</em-ko> 부분집합은 supremum과 infimum을 갖는다. 만일 $$A$$의 <em-ko>모든</em-ko> 부분집합이 supremum과 infumum을 갖는다면, $$A$$를 *complete lattice*라 부른다.
 
 ## Totally ordered set
 

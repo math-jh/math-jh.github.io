@@ -79,13 +79,13 @@ $$\frac{x}{s}=\frac{tx}{ts}=\frac{0}{ts}=0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem3">**보조정리 3**</ins> $$A$$-module $$M$$과, $$A$$의 maximal ideal $$\mathfrak{m}$$에서의 localization $$\epsilon_\mathfrak{m}:M \rightarrow M_\mathfrak{m}$$을 생각하자. 그럼 $$M$$의 원소 $$x$$가 $$0$$인 것은, <em_ko>모든</em_ko> $$A$$의 maximal ideal $$\mathfrak{m}$$에 대하여 위에서 정의한 $$\epsilon_\mathfrak{m}$$이 $$\epsilon_\mathfrak{m}(x)=0$$을 만족하는 것이 동치이다. 
+<ins id="lem3">**보조정리 3**</ins> $$A$$-module $$M$$과, $$A$$의 maximal ideal $$\mathfrak{m}$$에서의 localization $$\epsilon_\mathfrak{m}:M \rightarrow M_\mathfrak{m}$$을 생각하자. 그럼 $$M$$의 원소 $$x$$가 $$0$$인 것은, <em-ko>모든</em-ko> $$A$$의 maximal ideal $$\mathfrak{m}$$에 대하여 위에서 정의한 $$\epsilon_\mathfrak{m}$$이 $$\epsilon_\mathfrak{m}(x)=0$$을 만족하는 것이 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-한쪽 방향은 자명하므로 반대쪽만 보이면 충분하다. 고정된 maximal ideal $$\mathfrak{m}$$에 대하여 $$\epsilon_\mathfrak{m}(x)=0$$이 성립한다 하자. 이는 $$\ann(x)$$가 $$\mathfrak{m}$$에 포함되지 않는 것과 동치이다. 그럼 주어진 조건에 의하여, $$\ann(x)$$는 <em_ko>모든</em_ko> $$A$$의 maximal ideal에 포함되지 않는 ideal이고, 이러한 ideal은 오직 $$A$$ 자기 자신 뿐이다. 즉 $$\ann(x)=A$$이고 이로써 증명이 완료된다.
+한쪽 방향은 자명하므로 반대쪽만 보이면 충분하다. 고정된 maximal ideal $$\mathfrak{m}$$에 대하여 $$\epsilon_\mathfrak{m}(x)=0$$이 성립한다 하자. 이는 $$\ann(x)$$가 $$\mathfrak{m}$$에 포함되지 않는 것과 동치이다. 그럼 주어진 조건에 의하여, $$\ann(x)$$는 <em-ko>모든</em-ko> $$A$$의 maximal ideal에 포함되지 않는 ideal이고, 이러한 ideal은 오직 $$A$$ 자기 자신 뿐이다. 즉 $$\ann(x)=A$$이고 이로써 증명이 완료된다.
 
 </details>
 

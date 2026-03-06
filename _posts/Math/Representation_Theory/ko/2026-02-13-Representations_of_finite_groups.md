@@ -59,7 +59,7 @@ $$L(g\cdot v)=g\cdot L(v)\qquad\text{for all $$g\in G$$ and $$v\in V$$}$$
 
 </div>
 
-이와 마찬가지 관점에서 우리는 임의의 representation $$V,W$$에 대하여, 이들의 벡터공간에서의 연산을 이용하여 $$V\oplus W$$, $$V\otimes W$$ 등을 정의할 수 있다. 다음 정의에서 다소 주의할 것은, 위의 [정의 2](#def2)와는 다르게 $$V\otimes W$$ 등에서는 <em_ko>자연스러운</em_ko> $$G$$-action이 존재하지 않을 수도 있다는 것으로, 우리는 이 때문에 각 벡터공간 위에 $$G$$-action을 명시적으로 정의해준다. 
+이와 마찬가지 관점에서 우리는 임의의 representation $$V,W$$에 대하여, 이들의 벡터공간에서의 연산을 이용하여 $$V\oplus W$$, $$V\otimes W$$ 등을 정의할 수 있다. 다음 정의에서 다소 주의할 것은, 위의 [정의 2](#def2)와는 다르게 $$V\otimes W$$ 등에서는 <em-ko>자연스러운</em-ko> $$G$$-action이 존재하지 않을 수도 있다는 것으로, 우리는 이 때문에 각 벡터공간 위에 $$G$$-action을 명시적으로 정의해준다. 
 
 <div class="definition" markdown="1">
 
@@ -157,7 +157,7 @@ $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
 $$\langle v,w\rangle=\langle \rho(g) v,\rho(g) w\rangle=\langle \rho(g)^\dagger \rho(g)v,w\rangle$$
 
-이 <em_ko>모든</em_ko> $$v,w\in V$$에 대해 성립하기 때문이다.
+이 <em-ko>모든</em-ko> $$v,w\in V$$에 대해 성립하기 때문이다.
 
 한편, 유한차원 $$G$$-module $$V$$는 $$G$$-invariant inner product를 갖는다. 이는 위에서 언급한 아이디어를 활용하여 증명할 수 있다. 
 

@@ -33,7 +33,7 @@ $$V$$가 무한차원이라 하더라도 basis $$\mathcal{B}$$에 대하여, 위
 
 $$V$$가 유한차원일 경우 $$V$$와 $$V^\ast$$가 같은 차원을 가지며, 따라서 $$V^\ast$$의 dual space인 $$V^{\ast\ast}$$ 또한 $$V^\ast$$와 같은 차원을 갖는 $$\mathbb{K}$$-벡터공간이 된다. 이를 $$V$$의 *double dual<sub>이중쌍대공간</sub>*이라 부른다.
 
-$$V$$와 $$V^\ast$$가 isomorphic하다는 것을 보이기 위해서는 특정한 basis를 택해야 했다. 반면, $$V$$에서 $$V^{\ast\ast}$$로의 <em_ko>basis의 선택에 의존하지 않는</em_ko> 단사인 linear map을 만들 수 있다. $$V$$와 $$V^{\ast\ast}$$의 차원이 같으므로, 이 단사인 linear map은 반드시 isomorphism이 되어야 한다.
+$$V$$와 $$V^\ast$$가 isomorphic하다는 것을 보이기 위해서는 특정한 basis를 택해야 했다. 반면, $$V$$에서 $$V^{\ast\ast}$$로의 <em-ko>basis의 선택에 의존하지 않는</em-ko> 단사인 linear map을 만들 수 있다. $$V$$와 $$V^{\ast\ast}$$의 차원이 같으므로, 이 단사인 linear map은 반드시 isomorphism이 되어야 한다.
 
 <div class="definition" markdown="1">
 
@@ -119,7 +119,7 @@ $$w\mapsto (-,w)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor5">**따름정리 5**</ins> Non-degenerate pairing $$(-,-):V\times W\rightarrow \mathbb{K}$$가 주어진 두 <em_ko>유한차원</em_ko> $$\mathbb{K}$$-벡터공간 $$V,W$$는 isomorphic하다.
+<ins id="cor5">**따름정리 5**</ins> Non-degenerate pairing $$(-,-):V\times W\rightarrow \mathbb{K}$$가 주어진 두 <em-ko>유한차원</em-ko> $$\mathbb{K}$$-벡터공간 $$V,W$$는 isomorphic하다.
 
 </div>
 <details class="proof" markdown="1">

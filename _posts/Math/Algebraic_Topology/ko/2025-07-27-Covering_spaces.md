@@ -153,7 +153,7 @@ Transport map은 bijective이다. 이는 우선, 임의의 $$y_1\in p^{-1}(x_1)$
 
 $$M:\Cov(B) \rightarrow \Fun(\Pi_1(B),\Set)$$
 
-를 정의하는 것을 알 수 있으며, 이번 글의 핵심 결과는 이것이 두 category 사이의 equivalence라는 것이다. 이를 보이기 위해서는 우선 위의 대응의 functoriality부터 시작하여, 보여야 할 것이 많지만 결과적으로 가장 핵심적인 내용은 임의의 functor $$\Pi_1(B)\rightarrow \Set$$이 주어졌을 때 이로부터 covering space $$E \rightarrow B$$를 만드는 것이다. 이를 위해 임의의 functor $$F:\Pi_1(B) \rightarrow \Set$$이 주어졌다 하면, 위의 monodromy functor를 거꾸로 따라가보면 $$p:E\rightarrow B$$를 <em_ko>집합 사이의 함수로서</em_ko> 어떻게 만들어야 하는지는 자명하다. 각각의 $$x\in \Pi_1(B)$$에 대하여, $$F(x)$$는 $$x$$에서의 $$p$$의 fiber에 해당할 것이므로 projection
+를 정의하는 것을 알 수 있으며, 이번 글의 핵심 결과는 이것이 두 category 사이의 equivalence라는 것이다. 이를 보이기 위해서는 우선 위의 대응의 functoriality부터 시작하여, 보여야 할 것이 많지만 결과적으로 가장 핵심적인 내용은 임의의 functor $$\Pi_1(B)\rightarrow \Set$$이 주어졌을 때 이로부터 covering space $$E \rightarrow B$$를 만드는 것이다. 이를 위해 임의의 functor $$F:\Pi_1(B) \rightarrow \Set$$이 주어졌다 하면, 위의 monodromy functor를 거꾸로 따라가보면 $$p:E\rightarrow B$$를 <em-ko>집합 사이의 함수로서</em-ko> 어떻게 만들어야 하는지는 자명하다. 각각의 $$x\in \Pi_1(B)$$에 대하여, $$F(x)$$는 $$x$$에서의 $$p$$의 fiber에 해당할 것이므로 projection
 
 $$p:E=\coprod_{x\in B}F(x) \rightarrow B$$
 
