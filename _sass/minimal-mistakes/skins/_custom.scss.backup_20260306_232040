@@ -49,16 +49,4 @@ $lang-list-color: #d7e3f9 !default;
   color: inherit;
 }
 
-/* Masthead language filtering */
-.masthead__menu-item[data-lang] {
-  display: none;
-}
-
-body[data-lang="ko"] .masthead__menu-item[data-lang="ko"] {
-  display: inline-block;
-}
-
-body[data-lang="en"] .masthead__menu-item[data-lang="en"] {
-  display: inline-block;
-}
 

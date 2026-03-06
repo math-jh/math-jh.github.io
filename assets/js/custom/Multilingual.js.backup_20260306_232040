@@ -24,16 +24,3 @@ function lang_select() {
     }
     window.location.href = newlang + newpathname;
 }
-
-// 페이지 로드 시 body에 data-lang 추가
-function setPageLang() {
-    var pathname = window.location.pathname.split('/');
-    if (pathname[1] === "ko") {
-        document.body.setAttribute('data-lang', 'ko');
-    } else if (pathname[1] === "en") {
-        document.body.setAttribute('data-lang', 'en');
-    }
-}
-
-// 페이지 로드 시 실행
-document.addEventListener('DOMContentLoaded', setPageLang);
