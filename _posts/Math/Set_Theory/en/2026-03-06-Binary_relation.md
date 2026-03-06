@@ -1,6 +1,6 @@
 ---
 
-title: "Binary Relation"
+title: "Binary Relations"
 excerpt: "Definition of Binary Relation"
 
 categories: [Math / Set Theory]
@@ -22,7 +22,7 @@ weight: 3
 
 ## Binary Relation
 
-We begin with the definition. The following definition is nothing particularly special; it simply names the *set of ordered pairs* that arose in the course of explaining why ordered pairs need to be introduced in [§Ordered Pair](/en/math/set_theory/ordered_pair#ordered-pair).
+We begin with the definition. The following definition is nothing particularly special; it simply names the *set of ordered pairs* that arose in the course of explaining why ordered pairs need to be introduced in [§Ordered Pairs](/en/math/set_theory/ordered_pair#ordered-pair).
 
 <div class="definition" markdown="1">
 
@@ -73,13 +73,13 @@ yields set $B$.
 
 </details>
 
-As in [§Ordered Pair, ⁋Definition 7](/en/math/set_theory/ordered_pair#def7), these are called the first and second *projections* respectively, and are denoted by $\pr_1R$ and $\pr_2R$.
+As in [§Ordered Pairs, ⁋Definition 7](/en/math/set_theory/ordered_pair#def7), these are called the first and second *projections* respectively, and are denoted by $\pr_1R$ and $\pr_2R$.
 
 At times it becomes necessary to specify which sets the first and second components of a binary relation belong to. For this purpose, given two sets $A,B$ and a binary relation $R$ satisfying $\pr\_1R\subseteq A$ and $\pr\_2R\subseteq B$, we may regard it as a triple $(R,A,B)$. In this case, $A$ is called the *source* of $R$, and $B$ is called the *target* of $R$. Under such circumstances, even for the same set $R$, the triples $(R,A,B)$ and $(R,A',B')$ are regarded as distinct.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> Let $R$ be a binary relation satisfying the conditions $\pr\_1R\subseteq A$ and $\pr\_2R\subseteq B$. By [§Ordered Pair, ⁋Proposition 9](/en/math/set_theory/ordered_pair#prop9),
+<ins id="rmk1">**Remark**</ins> Let $R$ be a binary relation satisfying the conditions $\pr\_1R\subseteq A$ and $\pr\_2R\subseteq B$. By [§Ordered Pairs, ⁋Proposition 9](/en/math/set_theory/ordered_pair#prop9),
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
