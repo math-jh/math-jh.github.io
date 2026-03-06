@@ -21,7 +21,7 @@ weight: 1
 
 Toric geometry는 말 그대로 toric variety라 불리는 특별한 대수다양체를 연구하는 분야이다. 일반적인 대수다양체에 비해 toric variety가 가지는 장점은 이것이 본질적으로 조합론적인 정보로 만들어지므로 더 손에 잡히는 계산을 수행하기 용이하다는 것이다. 우리는 이 글에서 먼저 가장 간단한 toric variety, 즉 affine toric variety를 살펴본다. 
 
-## 격자와 콘
+## 격자와 뿔
 
 직관적으로, toric variety는 $$\mathbb{A}^k_\mathbb{C}$$들을 이어붙여 $$\mathbb{P}^k_\mathbb{C}$$를 얻어내는 과정을 일반화하여 얻어진다고 할 수 있다. 이제는 이들을 이어붙이는 방법들을 *lattice들* 안에 기록해두게 된다.
 
@@ -63,29 +63,31 @@ $$\tau = \sigma \cap u^{\perp} = \{ v \in \sigma \mid \langle u, v \rangle = 0 \
 
 </div>
 
-우리가 정의할 toric variety는 우선, 각각의 cone을 
+우리가 정의할 toric variety는 우선, 각각의 cone을 affine chart처럼 가지고, 이들 cone이 face에서 어떻게 만나는지를 통해 gluing data가 결정되는 것이다. 이를 엄밀히 쓰기 위해 이번 글에서 우리는 affine toric variety에 대해 살펴본다.
 
 ## 아핀 토릭 다양체
 
-콘 $$\sigma$$가 주어지면, 우리는 이에 대응하는 **쌍대 콘(dual cone)**
+Cone $$\sigma$$가 주어졌다 하고, 그 *dual cone<sub>쌍대뿔</sub>*
 
 $$\sigma^\vee = \{ u \in M_{\mathbb{R}} \mid \langle u, v \rangle \ge 0 \text{ for all } v \in \sigma \}$$
 
-을 정의할 수 있다.
+을 생각하자.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 콘 $$\sigma$$에 대해, **세미그룹(semigroup)**
+<ins id="def4">**정의 4**</ins> Cone $$\sigma$$에 대하여, 다음의 semigroup
 
-$$S_\sigma = \sigma^\vee \cap M$$
+$$S_\sigma = \sigma^\vee \cap M=\{u\in M\mid \langle u,v\rangle \geq 0\text{ for all $v\in\sigma$}\}$$
 
-을 정의한다. 이 세미그룹의 **세미그룹 대수(semigroup algebra)**는
+을 정의하고, 이를 통해 semigroup algebra
 
-$$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^u \mid u \in S_\sigma]$$
+$$\mathbb{C}[S_\sigma] = \mathbb{C}[\,{\rchi}^u \mid u \in S_\sigma]$$
 
-이다. 여기서 $$\chi^u$$는 문자(character)로, $$M$$의 원소 $$u$$에 대응되는 단항식이다.
+을 정의한다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 여기서 $$\rchi^u$$는 $$M$$의 원소 $$u$$에 대응되는 단항식이다.
 
 </div>
+
+
 
 <div class="definition" markdown="1">
 
