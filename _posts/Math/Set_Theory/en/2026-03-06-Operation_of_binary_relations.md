@@ -78,7 +78,7 @@ One may naturally ask how the composition of binary relations relates to the inv
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-$$(z,x)\in (R_2\circ R_1)^{-1}$$ is equivalent to $$(x,z)\in R_2\circ R_1$$. This in turn is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R_1$$ and $$(y,z)\in R_2$$</phrase>. Any $$y$$ satisfying this condition also satisfies <phrase>$$(y,x)\in R_1^{-1}$$ and $$(z,y)\in R_2^{-1}$$</phrase>, so by the definition of composition, $$(z,x)\in R_2^{-1}\circ R_1^{-1}$$. The converse direction is established similarly.
+$$(z,x)\in (R_2\circ R_1)^{-1}$$ is equivalent to $$(x,z)\in R_2\circ R_1$$. This in turn is equivalent to <phrase>there exists some $y$ such that $(x,y)\in R_1$ and $(y,z)\in R_2$</phrase>. Any $y$ satisfying this condition also satisfies <phrase>$(y,x)\in R_1^{-1}$ and $(z,y)\in R_2^{-1}$</phrase>, so by the definition of composition, $$(z,x)\in R_2^{-1}\circ R_1^{-1}$$. The converse direction is established similarly.
 
 </details>
 
@@ -98,7 +98,7 @@ holds.
 
 It suffices to show that for any $$(x,w)$$, membership in $$(R_3\circ R_2)\circ R_1$$ is equivalent to membership in $$R_3\circ(R_2\circ R_1)$$.
 
-Now $$(x,w)\in (R_3\circ R_2)\circ R_1$$ is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R_1$$ and $$(y,w)\in R_3\circ R_2$$</phrase>. The latter condition is in turn equivalent to <phrase>there exists some $$z$$ such that $$(y,z)\in R_2$$ and $$(z,w)\in R_3$$</phrase>, so this condition is equivalent to <phrase>$$(x,z)\in R_2\circ R_1$$ and $$(z,w)\in R_3$$</phrase>. Hence this is equivalent to <phrase>$$(x,w)\in R_3\circ(R_2\circ R_1)$$</phrase>.
+Now $$(x,w)\in (R_3\circ R_2)\circ R_1$$ is equivalent to <phrase>there exists some $y$ such that $(x,y)\in R_1$ and $(y,w)\in R_3\circ R_2$</phrase>. The latter condition is in turn equivalent to <phrase>there exists some $z$ such that $(y,z)\in R_2$ and $(z,w)\in R_3$</phrase>, so this condition is equivalent to <phrase>$(x,z)\in R_2\circ R_1$ and $(z,w)\in R_3$</phrase>. Hence this is equivalent to <phrase>$(x,w)\in R_3\circ(R_2\circ R_1)$</phrase>.
 
 </details>
 
@@ -120,7 +120,7 @@ holds.
 
 We proceed as in the previous proposition.
 
-For any $$z$$, $$z\in (R_2\circ R_1)(A)$$ is equivalent to <phrase>there exists some $$x\in X$$ such that $$(x,z)\in R_2\circ R_1$$</phrase>. This in turn is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R_1$$ and $$(y,z)\in R_2$$</phrase>. Since $$y\in R_1(A)$$, we have $$z\in R_2(R_1(A))$$. Reversing this argument yields the converse.
+For any $$z$$, $$z\in (R_2\circ R_1)(A)$$ is equivalent to <phrase>there exists some $x\in X$ such that $(x,z)\in R_2\circ R_1$</phrase>. This in turn is equivalent to <phrase>there exists some $y$ such that $(x,y)\in R_1$ and $(y,z)\in R_2$</phrase>. Since $$y\in R_1(A)$$, we have $$z\in R_2(R_1(A))$$. Reversing this argument yields the converse.
 
 </details>
 

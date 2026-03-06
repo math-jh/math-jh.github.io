@@ -274,8 +274,8 @@ $$Z(I(Z(S)))=Z(S),\qquad I(Z(I(T)))=I(T)$$
 
 <ins id="prop14">**명제 14**</ins> Closure operator $$IZ: \mathcal{P}(A) \rightarrow \mathcal{P}(A)$$, $$ZI: \mathcal{P}(\Spec A) \rightarrow \mathcal{P}(\Spec A)$$에 대하여, 다음이 성립한다.
 
-1. $$IZ(S)=\sqrt{(S)}$$
-2. $$ZI(T)=\cl(T)$$
+1. $IZ(S)=\sqrt{(S)}$
+2. $ZI(T)=\cl(T)$
 
 </div>
 <details class="proof" markdown="1">

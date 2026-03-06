@@ -122,7 +122,7 @@ $$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5 ($$C^\infty$$ Urysohn lemma)**</ins> 실수 $$a'&lt;a&lt;b&lt;b'$$가 주어졌다 하자. 그럼 $$[a,b]$$ 위에서는 $$1$$이고, $$(a',b')$$ 바깥에서는 $$0$$인 $$C^\infty$$ 함수 $$\psi:\mathbb{R}\rightarrow[0,1]$$이 존재한다.
+<ins id="lem5">**보조정리 5 ($$C^\infty$$ Urysohn lemma)**</ins> 실수 $$a'<a<b<b'$$가 주어졌다 하자. 그럼 $$[a,b]$$ 위에서는 $$1$$이고, $$(a',b')$$ 바깥에서는 $$0$$인 $$C^\infty$$ 함수 $$\psi:\mathbb{R}\rightarrow[0,1]$$이 존재한다.
 
 </div>
 

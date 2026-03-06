@@ -122,7 +122,7 @@ $$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6 (The third isomorphism theorem)**</ins> $$H$$, $$K$$가 group $$G$$의 normal subgroup이고, $$K&lt;H$$라 하자. 그럼 $$H/K$$는 $$G/K$$의 normal subgroup이며 $$(G/K)/(H/K)\cong G/H$$가 성립한다.  
+<ins id="thm6">**정리 6 (The third isomorphism theorem)**</ins> $$H$$, $$K$$가 group $$G$$의 normal subgroup이고, $$K<H$$라 하자. 그럼 $$H/K$$는 $$G/K$$의 normal subgroup이며 $$(G/K)/(H/K)\cong G/H$$가 성립한다.  
 
 </div>
 <details class="proof" markdown="1">

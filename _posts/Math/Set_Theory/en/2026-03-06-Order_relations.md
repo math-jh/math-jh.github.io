@@ -37,7 +37,7 @@ An order relation is then defined as follows.
 
 In this case, we say that $$A$$ is *ordered by $$R$$*, and often call $$A$$ an *ordered set*. Also, similar to equivalence relations, we write $$x\mathrel{R}y$$ as $$x\leq_{\tiny R}y$$.
 
-<ins id="ex3">**Example 3**</ins> The binary relation <phrase>$$x=y$$</phrase> is an order relation. The relation <phrase>$$x\subseteq y$$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2) and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3))
+<ins id="ex3">**Example 3**</ins> The binary relation <phrase>$x=y$</phrase> is an order relation. The relation <phrase>$x\subseteq y$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2) and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3))
 {: .example}
 
 Since an ordered set is a set with an additionally defined relation $$\leq$$, when considering functions between them, we are primarily interested in functions that preserve $$\leq$$. In particular, we define the following.
@@ -87,7 +87,7 @@ To understand the properties of preorder relations, we need to examine antisymme
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**Proposition 8**</ins> Let $$R$$ be a preorder relation. Then the relation <phrase>$$x\leq_{\tiny R}y$$ and $$y\leq_{\tiny R}x$$</phrase> is an equivalence relation.
+<ins id="prop8">**Proposition 8**</ins> Let $$R$$ be a preorder relation. Then the relation <phrase>$x\leq_{\tiny R}y$ and $y\leq_{\tiny R}x$</phrase> is an equivalence relation.
 
 </div>
 <details class="proof" markdown="1">
@@ -111,7 +111,7 @@ so $$S$$ is transitive, and thus $$S$$ is an equivalence relation.
 
 ## Strict Order
 
-For a given order relation $$\leq$$, let $$<$$ be the relation defined by <phrase>$$x\leq y$$ and $$x\neq y$$</phrase>. In this case, since $$<$$ does not satisfy antisymmetry, it cannot be an order relation, and since it is not reflexive, it cannot be a preorder either. Instead, we define the following.
+For a given order relation $$\leq$$, let $$<$$ be the relation defined by <phrase>$x\leq y$ and $x\neq y$</phrase>. In this case, since $$<$$ does not satisfy antisymmetry, it cannot be an order relation, and since it is not reflexive, it cannot be a preorder either. Instead, we define the following.
 
 <ins id="def9">**Definition 9**</ins> A relation $$R$$ is *asymmetric* if $$x\mathrel{R}y$$ implies $$y\not \mathrel{R}x$$. An asymmetric, transitive relation is called a *strict order*.
 {: .definition}
@@ -120,15 +120,15 @@ To denote a strict order, we use $$<_{\tiny S}$$. Then the following holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**Proposition 10**</ins> Let $$R$$ be an order relation. Then the new relation <phrase>$$x\leq_{\tiny R}y$$ and $$x\neq y$$</phrase> is a strict order.
+<ins id="prop10">**Proposition 10**</ins> Let $$R$$ be an order relation. Then the new relation <phrase>$x\leq_{\tiny R}y$ and $x\neq y$</phrase> is a strict order.
 
-Conversely, let $$S$$ be a strict order. Then the new relation <phrase>$$x<_{\tiny S}y$$ or $$x=y$$</phrase> is an order relation.
+Conversely, let $$S$$ be a strict order. Then the new relation <phrase>$x<_{\tiny S}y$ or $x=y$</phrase> is an order relation.
 </div>
 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, let $$R$$ be an order relation and define a new relation $$S$$ by <phrase>$$x\leq_{\tiny R}y$$ and $$x\neq y$$</phrase>. To show asymmetry, we need to prove that $$x\mathrel{S}y$$ and $$y\mathrel{S}x$$ cannot both hold. Expanding $$(x\mathrel{S}y)\wedge(y\mathrel{S}x)$$ gives:
+First, let $$R$$ be an order relation and define a new relation $$S$$ by <phrase>$x\leq_{\tiny R}y$ and $x\neq y$</phrase>. To show asymmetry, we need to prove that $$x\mathrel{S}y$$ and $$y\mathrel{S}x$$ cannot both hold. Expanding $$(x\mathrel{S}y)\wedge(y\mathrel{S}x)$$ gives:
   
 $$((x\leq_{\tiny R}y)\wedge(x\neq y))\wedge((y\leq_{\tiny R}x)\wedge(y\neq x))$$
 
@@ -138,7 +138,7 @@ $$((x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x))\wedge(x\neq y)$$
 
 By antisymmetry of $$R$$, this is $$(x=y)\wedge(x\neq y)$$, which is always false, so $$x\mathrel{S} y$$ implies $$y\not\mathrel{S}x$$.
 
-Conversely, let $$S$$ be a strict order and define a new relation $$R$$ by <phrase>$$x<_{\tiny S}y$$ or $$x=y$$</phrase>. First, since $$x=x$$, the latter condition gives $$x\mathrel{R}x$$. To show antisymmetry, assume $$x\mathrel{R}y$$ and $$y\mathrel{R}x$$ hold. Then
+Conversely, let $$S$$ be a strict order and define a new relation $$R$$ by <phrase>$x<_{\tiny S}y$ or $x=y$</phrase>. First, since $$x=x$$, the latter condition gives $$x\mathrel{R}x$$. To show antisymmetry, assume $$x\mathrel{R}y$$ and $$y\mathrel{R}x$$ hold. Then
 
 $$\begin{aligned}  
 (x\mathrel{R}y)\wedge(y\mathrel{R}x)&\iff((x<_{\tiny S}y)\vee(x=y))\wedge((y<_{\tiny S}x)\vee(y=x))\\

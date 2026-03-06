@@ -119,7 +119,7 @@ $$d\varphi_{p_0}\left(dr^i|_{\varphi(p_0)}\right)=\left(dr^i|_{\varphi(p_0)}\rig
 
 <div class="proposition" markdown="1">
 
-<ins id="cor7">**따름정리 7**</ins> $$m$$차원 manifold $$M$$과 $$p_0\in M$$, 정수 $$0&lt;k&lt;m$$에 대하여, $$\mathcal{C}_{M,p_0}^\infty$$의 원소들 $$y^1,\ldots, y^k$$가 $$p_0$$에서 independent한 함수들이라 하자. 그럼 적당한 함수 $$x^{k+1},\ldots, x^{m}$$들이 존재하여 $$(y^1,\ldots, y^k, x^{k+1}, \ldots, x^m)$$들이 $$p_0$$ 근방에서 coordinate system을 정의한다.
+<ins id="cor7">**따름정리 7**</ins> $$m$$차원 manifold $$M$$과 $$p_0\in M$$, 정수 $$0<k<m$$에 대하여, $$\mathcal{C}_{M,p_0}^\infty$$의 원소들 $$y^1,\ldots, y^k$$가 $$p_0$$에서 independent한 함수들이라 하자. 그럼 적당한 함수 $$x^{k+1},\ldots, x^{m}$$들이 존재하여 $$(y^1,\ldots, y^k, x^{k+1}, \ldots, x^m)$$들이 $$p_0$$ 근방에서 coordinate system을 정의한다.
 
 </div>
 <details class="proof" markdown="1">

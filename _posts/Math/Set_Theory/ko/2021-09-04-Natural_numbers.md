@@ -64,7 +64,7 @@ $$\mathfrak{a}\geq\mathfrak{b}$$인 것은, cardinal $$\mathfrak{a}$$와 $$\math
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> $$n$$이 자연수라 하자. 그럼 $$\mathfrak{a}\leq n$$을 만족하는 모든 cardinal $$\mathfrak{a}$$도 자연수이다. 만일 $$n\neq 0$$이라면, 유일한 자연수 $$m$$이 존재하여 $$n=m+1$$이다. 이 때, $$a$$에 관한 unary relation $$a&lt;n$$은 $$a\leq m$$과 동치이다.
+<ins id="prop4">**명제 4**</ins> $$n$$이 자연수라 하자. 그럼 $$\mathfrak{a}\leq n$$을 만족하는 모든 cardinal $$\mathfrak{a}$$도 자연수이다. 만일 $$n\neq 0$$이라면, 유일한 자연수 $$m$$이 존재하여 $$n=m+1$$이다. 이 때, $$a$$에 관한 unary relation $$a<n$$은 $$a\leq m$$과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -76,9 +76,9 @@ $$(\mathfrak{a}+1)+\mathfrak{b}=(\mathfrak{a}+\mathfrak{b})+1=n+1\neq n$$
 
 이므로 $$(\mathfrak{a}+1)+\mathfrak{b}\neq\mathfrak{a}+\mathfrak{b}$$이다. 따라서 $$\mathfrak{a}+1\neq\mathfrak{a}$$이므로 $$\mathfrak{a}$$는 자연수다.
 
-만일 $$n\neq 0$$이라면 $$n\geq 1$$이므로, 앞선 보조정리에 의해 $$n=m+1$$인 cardinal $$m$$이 존재하며, 앞선 논리에 의해 $$m$$도 자연수이다. 따라서  $$a&lt;n$$이 $$a\leq m$$과 동치임만 보이면 된다.
+만일 $$n\neq 0$$이라면 $$n\geq 1$$이므로, 앞선 보조정리에 의해 $$n=m+1$$인 cardinal $$m$$이 존재하며, 앞선 논리에 의해 $$m$$도 자연수이다. 따라서  $$a<n$$이 $$a\leq m$$과 동치임만 보이면 된다.
 
-우선 $$a&lt;n$$이라면, 유일한 자연수 $$b$$가 존재하여 $$n=a+b$$이다. $$b\neq 0$$이므로, 어떠한 $$c$$에 대해 $$b=c+1$$이다. 그럼
+우선 $$a<n$$이라면, 유일한 자연수 $$b$$가 존재하여 $$n=a+b$$이다. $$b\neq 0$$이므로, 어떠한 $$c$$에 대해 $$b=c+1$$이다. 그럼
 
 $$m+1=n=a+b=a+(c+1)=(a+c)+1$$
 
@@ -86,13 +86,13 @@ $$m+1=n=a+b=a+(c+1)=(a+c)+1$$
 
 $$a\leq m+1=n$$
 
-이고, $$a=n=m+1>m$$은 모순이므로 $$a\neq n$$이다. 따라서 $$a&lt;n$$이다.
+이고, $$a=n=m+1>m$$은 모순이므로 $$a\neq n$$이다. 따라서 $$a<n$$이다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> $$a$$와 $$b$$가 자연수라 하자. $$a&lt;b$$는 어떤 자연수 $$c>0$$가 존재하여 $$b=a+c$$인 것과 동치이다.
+<ins id="prop5">**명제 5**</ins> $$a$$와 $$b$$가 자연수라 하자. $$a<b$$는 어떤 자연수 $$c>0$$가 존재하여 $$b=a+c$$인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -163,11 +163,11 @@ $$\begin{aligned}
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-만일 그러한 쌍이 존재한다면 $$Q$$는 $$a&lt;b(q+1)$$를 만족하는 가장 작은 자연수여야 한다. 그렇지 않으면
+만일 그러한 쌍이 존재한다면 $$Q$$는 $$a<b(q+1)$$를 만족하는 가장 작은 자연수여야 한다. 그렇지 않으면
 
 $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
-이 되기 때문이다. 존재성을 보이기 위해, $$a&lt;a+1&lt;b(a+1)$$라 하자. 그럼 $$a&lt;bp$$를 만족하는 $$p$$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $$m$$이 존재하므로 $$m=q+1$$라 하면 $$Q$$가 주어진 조건을 만족한다.
+이 되기 때문이다. 존재성을 보이기 위해, $$a<a+1<b(a+1)$$라 하자. 그럼 $$a<bp$$를 만족하는 $$p$$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $$m$$이 존재하므로 $$m=q+1$$라 하면 $$Q$$가 주어진 조건을 만족한다.
 
 </details>
 
@@ -232,11 +232,11 @@ $$A$$가 cardinal $$\mathfrak{a}$$를 갖는 집합이라 하자. 그럼 첫 번
 
 $$B$$를 포함하는 $$A$$의 부분집합 $$X$$와, 그 위에서 정의된 $$f$$의 extension $$\psi:X\rightarrow X\times X$$에 대해 $$\mathfrak{M}$$이 이러한 쌍 $$(X,\psi)$$들의 모임이라 하자. 그럼 $$\mathfrak{M}$$의 임의의 chain에 대하여 가장 큰 정의역을 갖는 쌍이 maximal element가 되므로, $$\mathfrak{M}$$은 inductive한 집합이고, 따라서 Zorn's lemma에 의해 $$\mathfrak{M}$$의 maximal element $$(F, \tilde{f})$$가 존재한다.
 
-이제 $$\card F=\mathfrak{a}$$임을 보이면 충분하다. 만일 $$\card F=\mathfrak{b}&lt;\mathfrak{a}$$라면, bijection $$\tilde{f}$$에 의해 $$\mathfrak{b}=\mathfrak{b}^2$$이므로 
+이제 $$\card F=\mathfrak{a}$$임을 보이면 충분하다. 만일 $$\card F=\mathfrak{b}<\mathfrak{a}$$라면, bijection $$\tilde{f}$$에 의해 $$\mathfrak{b}=\mathfrak{b}^2$$이므로 
 
 $$\mathfrak{b}\leq 2\mathfrak{b}\leq 3\mathfrak{b}\leq \mathfrak{b}^2=\mathfrak{b}$$
 
-에서 $$\mathfrak{b}=2\mathfrak{b}=3\mathfrak{b}$$이다. 그럼 $$\mathfrak{b}&lt;\mathfrak{a}$$에서 $$\card(A\setminus F)>\mathfrak{b}$$이다. 그렇지 않다면
+에서 $$\mathfrak{b}=2\mathfrak{b}=3\mathfrak{b}$$이다. 그럼 $$\mathfrak{b}<\mathfrak{a}$$에서 $$\card(A\setminus F)>\mathfrak{b}$$이다. 그렇지 않다면
 
 $$\mathfrak{a}=\card A=\card(F\cup(A\setminus F))\leq\card F+\card(A\setminus F)\leq\mathfrak{b}+\mathfrak{b}=2\mathfrak{b}=\mathfrak{b}$$
 

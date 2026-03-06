@@ -75,7 +75,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 
 <div class="proposition" markdown="1">
 
-<ins id="cor4">**따름정리 4**</ins> 임의의 linear map $$L:V\rightarrow V$$에 대하여, $$L$$의 특성다항식을 <phrase>행렬 $$[L]_\mathcal{B}^\mathcal{B}$$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
+<ins id="cor4">**따름정리 4**</ins> 임의의 linear map $$L:V\rightarrow V$$에 대하여, $$L$$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
 
 </div>
 <details class="proof" markdown="1">
