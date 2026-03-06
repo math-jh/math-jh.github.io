@@ -25,7 +25,7 @@ $$\mathcal{J}:\qquad G=H_0\supseteq H_1\supseteq\cdots$$
 
 가 주어졌다 하면, $$G/ H_{i+1} \rightarrow G/H_{i}$$들이 잘 정의되며, 더 일반적으로 이들의 적절한 합성을 통해 $$j>i$$일 때마다 $$\rho_{ji}:G/H_j \rightarrow G/H_i$$가 정의된다. 이들 데이터를 통해 inverse limit
 
-$$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i\,\middle\vert\,\text{$$\rho_{ji}(g_j)=g_i$$ for all $$j>i$$}\right\}$$
+$$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i\,\middle\vert\,\text{$\rho_{ji}(g_j)=g_i$ for all $$j>i$$}\right\}$$
 
 그리고 canonical morphism들 $$\rho_i:\widehat{G}_{\mathcal{J}} \rightarrow G/ H_i$$들이 주어지며, 이 때 $$\rho_{ji}\circ\rho_j=\rho_i$$가 모든 $$j>i$$에 대해 성립한다. 표기의 편의를 위해 $$\mathcal{J}$$가 문맥에 따라 명확할 경우 이를 간단히 $$\widehat{G}$$로 쓰기도 한다.
 
@@ -61,7 +61,7 @@ $$A\supseteq\mathfrak{a}\supseteq \mathfrak{a}^2\cdots$$
 
 우선 natural map $$\rho:A \rightarrow \widehat{A}$$는 canonical morphism들 $$\pr_i: A \rightarrow A/\mathfrak{a}_i$$들에 universal property를 적용하여 얻어지는 것이다. 그럼 정의에 의하여
 
-$$x\in\ker\rho\iff\rho(x)=0\iff \rho_i(\rho(x))=0\text{ for all $$i$$}\iff \pr_i(x)=0\text{ for all $$i$$}\iff x\in \mathfrak{a}_i\text{ for all $$i$$}$$
+$$x\in\ker\rho\iff\rho(x)=0\iff \rho_i(\rho(x))=0\text{ for all $i$}\iff \pr_i(x)=0\text{ for all $i$}\iff x\in \mathfrak{a}_i\text{ for all $i$}$$
 
 이므로 $$\rho$$가 injective인 것과 $$\bigcap \mathfrak{a}_i=0$$인 것이 동치이다. 
 
@@ -93,7 +93,7 @@ $$G=H_0\supseteq H_1\supseteq\cdots$$
 
 가 주어졌다 하자. 그럼 
 
-$$\mathcal{N}(0)=\{U\subseteq G\mid\text{$$G_n\subseteq U$$ for some $$n$$}\}$$
+$$\mathcal{N}(0)=\{U\subseteq G\mid\text{$G_n\subseteq U$ for some $$n$$}\}$$
 
 으로 정의하면 이것이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 안다. 이제 임의의 $$g\in G$$와 $$U\in \mathcal{N}(0)$$에 대하여, $$g+U\in \mathcal{N}(g)$$이도록 하면 이것이 $$G$$ 위에 위상구조를 준다. 
 
@@ -129,7 +129,7 @@ $$m,n>N \implies x_m-y_n\in U$$
 
 이제 $$0\in G$$의 열린근방 $$U$$에 대하여, 
 
-$$\widehat{U}=\{[(x_n)]\in \widehat{G}:\text{for any $$(y_n)\in [(x_n)]$$, $$y_n\in U$$ for all but finitely many $$n$$}\}$$
+$$\widehat{U}=\{[(x_n)]\in \widehat{G}:\text{for any $(y_n)\in [(x_n)]$, $$y_n\in U$$ for all but finitely many $$n$$}\}$$
 
 으로 정의하자. 그럼 약간의 계산을 통해, $$\widehat{H}_i$$들을 coninitial subset으로 갖는 $$\widehat{G}$$의 집합들의 모임 $$\mathcal{N}(0)$$이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 확인할 수 있고, 따라서 $$\widehat{G}$$에 위상구조를 정의할 수 있다. 정의에 의해 $$\widehat{G}$$ 또한 first countable이며, $$x\in G$$를 받아 상수수열 $$(x_i=x)$$를 내놓는 함수 $$G \rightarrow \widehat{G}$$가 연속임을 알 수 있다. 뿐만 아니라, 이 함수는 앞선 절에서 정의한 $$G \rightarrow \widehat{G}$$와 완전히 같은 것이다. 
 

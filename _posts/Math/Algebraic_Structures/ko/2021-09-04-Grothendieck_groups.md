@@ -98,7 +98,7 @@ $$(a_1+a_2)-(b_1+b_2)=(a_1-b_1)+(a_2-b_2)$$
 
 물론, 일반적으로 $$a$$와 $$b$$가 다르더라도 $$a-b$$의 값은 충분히 차이가 날 수 있기 때문에, 우리는 $$S\times S$$ 위에 동치관계 $$R$$을 다음과 같이 정의한다.
 
-$$(a_1, b_1)\equiv (a_2, b_2)\pmod{R}\iff a_1+b_2+c=a_2+b_1+c\text{ for some $$c\in S$$}$$
+$$(a_1, b_1)\equiv (a_2, b_2)\pmod{R}\iff a_1+b_2+c=a_2+b_1+c\text{ for some $c\in S$}$$
 
 우선 이 관계가 동치관계임을 보여야 한다.
 
@@ -223,7 +223,7 @@ $$\begin{aligned}\bar{f}\left([(a_1,b_1)]+[(a_2, b_2)]\right)&=\bar{f}\left([(a_
 
 Commutative monoid $$E$$와 $$E$$의 부분집합 $$S$$, 그리고 $$S$$에 의해 생성되는 $$E$$의 submonoid $$S'$$를 생각하자. 또 $$E$$의 연산은 곱셈으로 적힌 것으로 생각한다. $$E\times S'$$ 위에 다음 관계
 
-$$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $$s\in S'$$}$$
+$$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $s\in S'$}$$
 
 를 정의하면, 이 관계는 $$E\times S'$$ 위의 연산과 compatible한 동치관계이고 따라서 $$(E\times S')/R$$이 monoid가 된다.
 

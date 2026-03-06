@@ -120,11 +120,11 @@ $$S(f)^{-1}A\cong S_f^{-1}A$$
 
 이제 다음의 동치관계
 
-$$D(f)\subseteq D(g)\iff f^n\in (g)\text{ for some $$n\geq 1$$}\iff f^n=ag\text{ for some $$n\geq 1$$ and $$a\in A$$}\tag{$$\ast$$}$$
+$$D(f)\subseteq D(g)\iff f^n\in (g)\text{ for some $n\geq 1$}\iff f^n=ag\text{ for some $n\geq 1$ and $$a\in A$$}\tag{$$\ast$$}$$
 
 를 관찰하자. 그럼 $$D(f)\subseteq D(g)$$를 만족하는 임의의 $$g$$에 대하여, 우리는 $$f^n=ag$$를 만족하는 적당한 $$n\geq 1$$과 $$a\in A$$를 찾을 수 있으므로, 
 
-$$\frac{g}{1}\frac{a}{f^n}=1\qquad\text{in $$S_f^{-1}A$$}$$
+$$\frac{g}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
 
 로부터 $$g$$는 $$S_f^{-1}A$$의 unit임을 안다. 따라서 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)로부터 다음의 commutative diagram
 
@@ -176,7 +176,7 @@ $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$
 
 $$\rho_{ji}$$들이 restriction map의 조건([\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#ㅇef2))을 만족하는 것은 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 universal property로부터 자명하다. 여기에서 $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$는, [보조정리 5](#lem5)에 의하여, 단순히 $$S(f_j)^{-1}(A)$$의 원소를 다음의 꼴
 
-$$g/h,\qquad\text{where $$h\in S(f_j)$$}\tag{$$\ast$$}$$
+$$g/h,\qquad\text{where $h\in S(f_j)$}\tag{$$\ast$$}$$
 
 로 나타냈을 때, 다음 식
 
@@ -204,7 +204,7 @@ $$s=1s=\left(\sum_{i=1}^n a_i f_i^{m_i}\right)s=\sum_{i=1}^n a_i (f_i^{m_i}s)=0$
 
 이제 둘째 조건을 보이기 위해, 각각의 $$i$$마다 $$S(f_i)^{-1}A$$의 원소 $$s_i=a_i/f_i^{m_i}$$가 존재하여, 각각의 $$i,j$$마다
 
-$$\frac{a_i}{f_i^{m_i}}=\frac{a_j}{f_j^{m_j}}\quad\text{ in $$D(f_i)\cap D(f_j)=D(f_if_j)$$}$$
+$$\frac{a_i}{f_i^{m_i}}=\frac{a_j}{f_j^{m_j}}\quad\text{ in $D(f_i)\cap D(f_j)=D(f_if_j)$}$$
 
 이도록 할 수 있다. 그런데 $$D(f_i)=D(f_i^{m_i})$$이고 $$D(f_j)=D(f_j^{m_j})$$이므로
 
@@ -264,7 +264,7 @@ $$s\vert_{D(f_\alpha)}=s'\vert_{D(f_\alpha)}=s_\alpha$$
 
 <ins id="lem8">**보조정리 8**</ins> $$(\Spec A,\mathscr{O}_{\Spec A})$$와 임의의 점 $$\mathfrak{p}\in \Spec A$$에 대하여, isomorphism
 
-$$A_\mathfrak{p}\cong \mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scriptsize $$U\ni\mathfrak{p}$$ open} \mathscr{O}_{\Spec A}(U)$$
+$$A_\mathfrak{p}\cong \mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scriptsize $U\ni\mathfrak{p}$ open} \mathscr{O}_{\Spec A}(U)$$
 
 이 존재한다. 뿐만 아니라, $$\mathfrak{p}\in D(f)$$를 만족하는 임의의 $$f\in A$$에 대하여, 다음의 diagram
 

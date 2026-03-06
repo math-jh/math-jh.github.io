@@ -71,7 +71,7 @@ $$p\mapsto \omega_p\in\bigwedge\nolimits^\ast(T_pM)$$
 
 으로 적는다. 두 differential form들의 wedge product $$\omega\wedge\eta$$를 다음의 식
 
-$$(\omega\wedge\eta)_p=\omega_p\wedge\eta_p\qquad\text{for all $$p\in M$$}$$
+$$(\omega\wedge\eta)_p=\omega_p\wedge\eta_p\qquad\text{for all $p\in M$}$$
 
 으로 정의하면 $$\Omega^\ast(M)$$은 $$\mathbb{N}$$-graded $$\mathbb{R}$$-algebra
 

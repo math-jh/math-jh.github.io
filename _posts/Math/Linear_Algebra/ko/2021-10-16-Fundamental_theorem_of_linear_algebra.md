@@ -57,7 +57,7 @@ $$L_A(x)=Ax$$
 
 $$\mathbb{K}^n$$에서 $$\mathbb{K}^m$$으로의 임의의 linear map $$L$$이 주어졌다 하자. 어렵지 않게 $$L=L_{[L]^{\mathcal{E}_n}_{\mathcal{E}_m}}$$임을 확인할 수 있다. 따라서 다음의 대응이 존재한다.
 
-$$\{\text{linear maps from $$\mathbb{K}^n$$ to $$\mathbb{K}^m$$}\}\longleftrightarrow\Mat_{m\times n}(\mathbb{K})$$
+$$\{\text{linear maps from $\mathbb{K}^n$ to $$\mathbb{K}^m$$}\}\longleftrightarrow\Mat_{m\times n}(\mathbb{K})$$
   
 더 정확하게 말하자면 $$L\mapsto [L]^{\mathcal{E}_n}_{\mathcal{E}_m}$$, 그리고 $$A\mapsto L_A$$ ([예시 1](#ex1)의 정의)이 서로의 역함수가 되는 전단사함수가 된다. 
 

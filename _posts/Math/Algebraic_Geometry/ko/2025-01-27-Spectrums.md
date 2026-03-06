@@ -91,7 +91,7 @@ $$Z(S_1)=\{\mathfrak{p}\in\Spec A\mid S_1\subseteq \mathfrak{p}\}\supseteq \{\ma
 
 역시 마찬가지로 포함관계 $$\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$$로부터 $$Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$$임은 자명하다. 거꾸로 임의의 $$\mathfrak{p}\in Z(\mathfrak{a})$$에 대하여, [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)를 사용하면
 
-$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$$\mathfrak{q}$$ a prime containing $$\mathfrak{a}$$}\mathfrak{q}\subseteq \mathfrak{p}$$
+$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{q}$ a prime containing $$\mathfrak{a}$$}\mathfrak{q}\subseteq \mathfrak{p}$$
 
 이므로 $$\mathfrak{p}\in Z(\sqrt{\mathfrak{a}})$$임을 안다. 
 
@@ -187,7 +187,7 @@ $$\mathfrak{a}\subseteq \phi^{-1}(\phi(\mathfrak{a}))\subseteq\phi^{-1}(\mathfra
 
 이제 임의의 $$f\in A$$에 대하여, $$S_f=\{1,f,f^2,\ldots\}$$라 하고 $$A_f=S_f^{-1}A$$로 정의하자. 그럼 [명제 9](#prop9)에 의하여 $$\Spec A_f$$의 $$\Spec \epsilon$$에 의한 $$\Spec A$$에서의 image는 열린집합이다. 그럼 이 열린집합이 정확히 $$D(f)$$와 집합으로서 같은 것은
 
-$$\mathfrak{p}\not\in Z(f)\iff (f)\not\subseteq \mathfrak{p} \iff f\not\in \mathfrak{p}\iff f^k\not\in \mathfrak{p}\text{ for all $$k\geq 0$$}\iff S_f\cap \mathfrak{p}=\emptyset$$
+$$\mathfrak{p}\not\in Z(f)\iff (f)\not\subseteq \mathfrak{p} \iff f\not\in \mathfrak{p}\iff f^k\not\in \mathfrak{p}\text{ for all $k\geq 0$}\iff S_f\cap \mathfrak{p}=\emptyset$$
 
 와 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의해 자명하다. 뿐만 아니라, $$D(f)$$가 $$\Spec A_f$$와 같은 위상구조를 갖는다는 것 또한 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)의 대응관계가 포함관계를 보존한다는 것으로부터 얻어진다. 
 
@@ -246,7 +246,7 @@ $$Z\left(\sum_{j\in J} (f_j)\right)=\emptyset$$
 
 <ins id="def13">**정의 13**</ins> 임의의 부분집합 $$T\subseteq \Spec A$$에 대하여, 
 
-$$I(T)=\{f\in A\mid\text{$$f\in \mathfrak{p}$$ for all $$\mathfrak{p}\in T$$}\}=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ a prime in $$T$$} \mathfrak{p}$$
+$$I(T)=\{f\in A\mid\text{$f\in \mathfrak{p}$ for all $$\mathfrak{p}\in T$$}\}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime in $$T$$} \mathfrak{p}$$
 
 으로 정의한다.
 
@@ -260,7 +260,7 @@ $$Z: \mathcal{P}(A) \rightarrow \mathcal{P}(\Spec A);\quad S\mapsto Z(S),\qquad 
 
 을 정의했다. 그럼 임의의 $$S\in \mathcal{P}(A)$$와 임의의 $$T\in \mathcal{P}(\Spec A)$$에 대하여,
 
-$$T\subseteq Z(S)\iff\text{$$\mathfrak{p}\in Z(S)$$ for all $$\mathfrak{p}\in T$$}\iff\text{$$f\in \mathfrak{p}$$ for all $$f\in S$$ and all $$\mathfrak{p}\in T$$}\iff S\subseteq I(T)$$
+$$T\subseteq Z(S)\iff\text{$\mathfrak{p}\in Z(S)$ for all $$\mathfrak{p}\in T$$}\iff\text{$f\in \mathfrak{p}$ for all $$f\in S$$ and all $$\mathfrak{p}\in T$$}\iff S\subseteq I(T)$$
 
 이므로, $$(Z, I)$$는 $$\mathcal{P}(A)$$와 $$\mathcal{P}(\Spec A)$$ 사이의 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서, 다음의 두 식
 
@@ -283,15 +283,15 @@ $$Z(I(Z(S)))=Z(S),\qquad I(Z(I(T)))=I(T)$$
 
 1. 이는 다음의 식
     
-    $$I(Z(S))=I(Z((S)))=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ a prime in $$Z((S))$$} \mathfrak{p}=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ a prime containing $$(S)$$} \mathfrak{p}=\sqrt{(S)}$$
+    $$I(Z(S))=I(Z((S)))=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime in $$Z((S))$$} \mathfrak{p}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime containing $$(S)$$} \mathfrak{p}=\sqrt{(S)}$$
 
     으로부터 자명하다.
 2. 이는 다음의 식
     
     $$\cl(T)
-    =\bigcap_\text{\scriptsize $$Z(S)\supseteq T$$} Z(S)
-    =\bigcap_\text{\scriptsize $$S\subseteq I(T)$$} Z(S)
-    =Z\left(\sum_\text{\scriptsize $$S\subseteq I(T)$$}(S)\right)
+    =\bigcap_\text{\scriptsize $Z(S)\supseteq T$} Z(S)
+    =\bigcap_\text{\scriptsize $S\subseteq I(T)$} Z(S)
+    =Z\left(\sum_\text{\scriptsize $S\subseteq I(T)$}(S)\right)
     =Z(I(T))$$
 
     으로부터 자명하다.
@@ -368,13 +368,13 @@ $$\mathbb{A}_{\mathbb{K},\text{classical}}^n \rightarrow \mathbb{K};\qquad (x_1,
 
 을 통해 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$에서 $$\mathbb{K}$$로의 함수로 취급할 수 있다. 그럼 [정의 3](#def3)과 비슷하게 $$A$$의 임의의 집합 $$S$$에 대하여 
 
-$$Z(S)=\{(x_1,\ldots, x_n)\mid \text{$$f(x_1,\ldots, x_n)=0$$ for all $$f\in S$$}\}$$
+$$Z(S)=\{(x_1,\ldots, x_n)\mid \text{$f(x_1,\ldots, x_n)=0$ for all $$f\in S$$}\}$$
 
 으로 정의하면 $$Z(S)$$는 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$ 위에 정의된 함수들의 모임 $$S$$의 공통근들으로 생각할 수 있으며, [보조정리 6](#lem6)과 비슷한 계산을 통해 $$Z(S)$$들을 닫힌집합으로 갖는 위상구조를 $$\mSpec A$$ 위에 정의할 수 있다. 
 
 한편, [정의 12](#def12)와 마찬가지로 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$의 부분집합 $$T$$에 대하여
 
-$$I(T)=\{f\in A\mid \text{$$f(x_1,\ldots, x_n)=0$$ for all $$x\in T$$}\}$$
+$$I(T)=\{f\in A\mid \text{$f(x_1,\ldots, x_n)=0$ for all $$x\in T$$}\}$$
 
 라 하면, [정리 14](#thm14)에서 그러하듯이 $$I$$와 $$Z$$가 antitone Galois connection을 정의하는 것을 안다. $$\mSpec A$$에서의 [명제 13](#prop13)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋명제 4](/ko/math/commutative_algebra/nullstellensatz#prop4)로부터 $$\mathbb{K}[\x_1,\ldots, \x_n]$$이 Jacobson이기 때문에 얻어진다. 
 

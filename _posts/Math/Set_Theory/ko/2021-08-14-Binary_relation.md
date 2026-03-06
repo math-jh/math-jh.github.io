@@ -36,7 +36,7 @@ weight: 3
 
 <ins id="ex2">**예시 2**</ins> 집합들 사이에서 $$=$$가 이항관계라면, 이를 나타내는 집합
 
-$$E=\{(A,A)\mid\text{$$A$$ any set}\}$$
+$$E=\{(A,A)\mid\text{$A$ any set}\}$$
 
 이 존재한다. 즉, $$E$$는 전체집합 두 개의 곱이어야 한다.
 
@@ -122,7 +122,7 @@ $$y\in R(X)$$라 하자. 그럼 어떤 $$x\in X$$가 존재하여 $$(x,y)\in R(X
 
 위의 명제에 의하여 임의의 $$A$$에 대해 
 
-$$R(A)=\pr_2\{z\in R\mid\text{$$\pr_1z\in A$$}\}\subset\pr_2R$$
+$$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subset\pr_2R$$
 
 이고, 따라서 $$R(A)\subset\pr_2R$$가 성립한다. 특히 $$A=\emptyset$$이라면 $$R(A)=\emptyset$$이며, 더 일반적으로 만일 $$A\cap\pr_1R=\emptyset$$이라면 $$R(A)=\emptyset$$이다. 
 

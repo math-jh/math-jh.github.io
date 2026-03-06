@@ -277,7 +277,7 @@ $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 
 그럼 다음의 식
 
-$$H_c^p(M;A)\cong \varinjlim_{\text{\scriptsize$$K$$ compact}}H^p(M,M\setminus K;A)$$
+$$H_c^p(M;A)\cong \varinjlim_{\text{\scriptsize$K$ compact}}H^p(M,M\setminus K;A)$$
 
 이 성립하는 것이 직관적으로도 자명하며 증명도 명확하다. 각각의 compact set $$K$$에 대하여, 
 
@@ -285,7 +285,7 @@ $$H^p(M,M\setminus K;A)\rightarrow H_c^p(M;A)$$
 
 가 canonical하게 존재하며, 이것이 우변의 directed system과 호환되어 homomorphism
 
-$$\varinjlim_{\text{\scriptsize$$K$$ compact}}H^p(M,M\setminus K;A)\rightarrow H_c^p(M;A)$$
+$$\varinjlim_{\text{\scriptsize$K$ compact}}H^p(M,M\setminus K;A)\rightarrow H_c^p(M;A)$$
 
 이 잘 정의되기 때문이다. 이것이 isomorphism인 것은 직접 보이면 된다. 특히 임의의 compact manifold $$M$$에 대하여 $$H_c^p(M,A)\cong H^p(M;A)$$이 성립하며, 따라서 원하는 결과는 다음의 보조정리에서 따라나온다.
 

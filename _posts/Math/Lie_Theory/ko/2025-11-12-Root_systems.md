@@ -85,7 +85,7 @@ $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+
 
 두 diagonalizable operator $$A,B$$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $$\mathfrak{h}$$의 모든 원소들은 simultaneously diagonalizable이다. 이제 simultaneously diagonalizable operator들의 family $$\{H\in \mathfrak{h}\}$$를 사용하여 $$\mathfrak{g}$$를 분해하자. 만일 simultaneously diagonalizable operator들의 <em-ko>유한한</em-ko> family $$A_1,\ldots, A_n$$이 주어졌다면, simultaneous eigenspace로 공간을 분해하는 것은 
 
-$$V=\bigoplus V_\alpha,\qquad \text{$$A_i v_\alpha=\lambda_i v_\alpha$$ for all $$v_\alpha\in V$$ for all $$i$$}$$
+$$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $$v_\alpha\in V$$ for all $$i$$}$$
 
 와 같은 형태이지만, 현재 우리 상황에서는 $$\mathfrak{h}$$가 벡터공간이므로 linear functional $$\mathfrak{\alpha}: \mathfrak{h}\rightarrow \mathbb{C}$$를 택하여 $$\alpha(H)$$가 각각의 $$H$$의 고유값 역할을 해주도록 하는 것이 낫다. 따라서 다음과 같이 정의한다. 
 
@@ -97,7 +97,7 @@ $$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\
 
 의 원소들을 $$\mathfrak{g}$$의 *root*라 부른다. 이 때 
 
-$$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $$H\in \mathfrak{h}$$}\right\}$$
+$$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
 
 이다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19))
 
@@ -275,7 +275,7 @@ $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
 이 존재한다. 그럼 $$\Phi\subseteq \mathfrak{h}^\ast$$는 $$\mathfrak{h}^\ast$$의 spanning set이다. $$\Phi$$의 원소들의 일차결합으로 나타나지 않는 $$\mathfrak{h}^\ast$$의 원소가 있다 하면, 이에 해당하는 $$\mathfrak{h}$$의 원소는 모든 $$\alpha\in H$$에 대하여 $$\alpha(H)$$를 만족하여야 한다. 이제 임의의 root space $$\mathfrak{g}_\alpha$$에 대하여, $$H$$는
 
-$$[H,X]=\alpha(H)X=0\qquad\text{for all $$X\in \mathfrak{g}_\alpha$$}$$
+$$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
 으로 작용하고, $$\mathfrak{h}$$는 abelian이므로 이 위에는 $$0$$으로 작용한다. 즉 $$\mathfrak{g}$$의 root decomposition을 생각하면 $$H$$는 $$\mathfrak{g}$$ 위의 모든 원소에 대하여 $$0$$으로 작용하고, 이로부터 $$H$$는 $$\mathfrak{g}$$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 4](#prop4)에 의하여 $$\mathfrak{g}$$는 nonzero abelian ideal을 가질 수 없고, 특히 $$Z(\mathfrak{g})=0$$이 성립해야 하므로 $$H=0$$이어야 한다. 
 
@@ -283,7 +283,7 @@ $$[H,X]=\alpha(H)X=0\qquad\text{for all $$X\in \mathfrak{g}_\alpha$$}$$
 
 각각의 root들 $$\alpha\in\Phi$$에 대하여, Killing form의 non-degeneracy로부터 다음의 식
 
-$$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $$X\in \mathfrak{h}$$}$$
+$$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $X\in \mathfrak{h}$}$$
 
 을 만족하는 $$H_\alpha\in \mathfrak{h}$$이 존재한다. 우리의 첫 번째 관찰은 다음의 보조정리이다. 
 
@@ -331,7 +331,7 @@ $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alp
 
 특히 $$h_\alpha$$가 $$\mathfrak{g}$$의 원소들에 어떻게 작용하는지를 살펴보자. 우선 $$\mathfrak{g}$$의 root space $$\mathfrak{g}_\beta$$에 $$h_\alpha$$의 adjoint action이 어떻게 작용하는지를 보면
 
-$$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $$x\in \mathfrak{g}_\beta$$}$$
+$$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $x\in \mathfrak{g}_\beta$}$$
 
 이므로 $$\mathfrak{g}_\beta$$는 이 action에 대한 weight $$\beta(h_\alpha)$$의 weight space이다. 그런데 앞서 살펴봤듯 $$\sl_2$$-representation의 weight은 항상 정수이므로, 이 값 $$\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$$은 반드시 정수여야 함을 안다. 또 $$\sl_2$$ representation의 임의의 weight subspace는 $$1$$차원이므로 각각의 $$\mathfrak{g}_\beta$$들도 $$1$$차원이다. 
 

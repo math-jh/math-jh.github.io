@@ -41,7 +41,7 @@ $$\mathcal{D}(x)=\span\{(X_1)_x,\ldots, (X_k)_x\}$$
 
 벡터장 $$X$$는 위에서 살펴본 것과 같이 다음의 식 $$p\mapsto\span(X_p)\subseteq T_pM$$을 통해 1차원 distribution을 정의한다. 그럼 submanifold $$S$$는 다음의 식
 
-$$T_xS=\mathcal{D}(x)\qquad\text{for all $$x$$}$$
+$$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
 을 만족하도록 결정된다. 따라서 다음과 같이 정의한다.
 
@@ -49,7 +49,7 @@ $$T_xS=\mathcal{D}(x)\qquad\text{for all $$x$$}$$
 
 <ins id="def2">**정의 2**</ins> $$M$$ 위에 정의된 $$k$$차원 distribution $$\mathcal{D}$$에 대하여, 다음의 식
 
-$$T_xS=\mathcal{D}(x)\qquad\text{for all $$x$$}$$
+$$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
 을 만족하는 manifold $$S$$를 $$\mathcal{D}$$의 *integral manifold*라 부른다.
 
@@ -131,7 +131,7 @@ $$(-\epsilon,\epsilon)\times V\rightarrow M;\qquad(t,q)\mapsto X_t(q)$$
 
 가 잘 정의된 $$C^\infty$$라고 가정할 수 있다. ([§벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6)) 뿐만 아니라, $$\epsilon>0$$을 다음 포함관계
 
-$$(-\epsilon,\epsilon)\times W\subseteq V,\qquad \text{$$W$$ is an open neighborhood of the origin in $$\mathbb{R}^{d-1}$$}$$
+$$(-\epsilon,\epsilon)\times W\subseteq V,\qquad \text{$W$ is an open neighborhood of the origin in $$\mathbb{R}^{d-1}$$}$$
 
 가 성립할만큼 작게 잡으면 다음의 함수
 

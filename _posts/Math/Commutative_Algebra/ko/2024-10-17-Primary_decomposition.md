@@ -98,7 +98,7 @@ weight: 7
 
 이로부터 우리는 $$M$$의 임의의 submodule $$M'$$에 대하여, $$M'$$의 *irreducible decomposition<sub>기약분해</sub>*
 
-$$M'=\bigcap_{k=1}^n M_k,\qquad \text{$$M_k$$ irreducible}$$
+$$M'=\bigcap_{k=1}^n M_k,\qquad \text{$M_k$ irreducible}$$
 
 이 항상 존재한다는 것을 안다.
 

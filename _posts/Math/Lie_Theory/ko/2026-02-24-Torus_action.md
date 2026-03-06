@@ -81,7 +81,7 @@ $$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
 
 이제 $$\dim V_i=1$$이므로 $$\Aut(V_i)\cong \mathbb{C}^\times$$이고, 우리는 위의 $$\lambda_i: T\rightarrow \mathbb{C}^\times$$가 정확하게 $$\rho$$의 character에 해당하고, 따라서 irreducible decomposition이 직접적으로 character $$\lambda_i$$에 의해 parametrize되는 것으로 생각할 수 있다. 즉 다음의 식
 
-$$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{t\cdot v=\lambda(t)v\text{ for all $$t\in T$$}\}$$
+$$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{t\cdot v=\lambda(t)v\text{ for all $t\in T$}\}$$
 
 을 통해 irreducible decomposition이 주어진 것으로 생각하자. 그럼 각각의 $$t\in T$$에 대하여, $$\rho(t)$$는 바로 이 decomposition에 의하여 대각화되고, 각각의 eigenspace $$V_\lambda$$에 해당하는 고유값은 $$\lambda(t)$$이다. 이와 다른 $$t$$의 선택은 위의 decomposition은 그대로 두고, 각각의 eigenspace $$V_\lambda$$에 해당하는 고유값만 바뀌는 것이다. 
 
@@ -111,7 +111,7 @@ $$\begin{pmatrix}e^{4\pi i t}&0\\0&e^{-2\pi i t}\end{pmatrix}$$
 
 이 action의 weight space는 $$\span(e_1), \span(e_2)$$임이 자명하며, 가령 $$\span(e_1)$$에 해당하는 weight는 다음의 식
 
-$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $$X\in \mathfrak{t}$$}$$
+$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $X\in \mathfrak{t}$}$$
 
 을 만족하는 linear functional $$\lambda_1:\mathfrak{t}\rightarrow \mathbb{C}$$으로 주어진다. 이는 당연히 $$1\in \mathbb{R}$$을 $$2$$로 보내는 $$\lambda_1(t)=2t$$에 의해 정의되며 따라서 이 weight space에 해당하는 weight는 (약간의 abuse of notation을 통해) $$2$$라 할 수 있다. 이 때 $$\lambda$$가 위의 식을 만족하기 위해서는, $$e^{2\pi i}=1$$이므로, 반드시 $$\lambda(1)\in \mathbb{\mathbb{Z}}$$여야 한다. 
 
@@ -137,7 +137,7 @@ $$e^{2\pi i t}\cdot(z_1, z_2)=(e^{4\pi i t}z_1, e^{4\pi i t} z_2)$$
 
 <ins id="def4">**정의 4**</ins> Torus $$T$$와 complex $$T$$-module $$V$$가 주어졌다 하자. Irreducible character $$\rchi_\lambda: T \rightarrow S^1$$와 그에 해당하는 linear functional $$\lambda:\mathfrak{t}\rightarrow\mathbb{C}$$에 대하여, $$\lambda$$가 $$V$$의 *weight*이라는 것은 다음 집합
 
-$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $$t\in T$$}\right\}$$
+$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
 이 nontrivial인 것이다. 이 때, $$V_\lambda$$를 $$\lambda$$의 *weight space*라 하며, decomposition
 

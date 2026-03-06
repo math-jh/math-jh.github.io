@@ -86,7 +86,7 @@ $$\prod_{k\in K}\left(\sum_{j\in J_k}\mathfrak{a}_{j,k}\right)=\sum_{f\in I}\lef
 
 등의 결과를 얻는다. 한편, 임의의 집합은 singleton들의 합으로 쓰여질 수 있으므로 (즉 $$B=\bigcup_{x\in B}\{x\}$$가 항상 성립하므로) $$I$$가 cardinal $$\mathfrak{b}$$를 갖는 집합이라면
 
-$$\mathfrak{b}=\sum_{i\in I} \mathfrak{c}_i,\qquad \mathfrak{c}_i=1\text{ for all $$i\in I$$}$$
+$$\mathfrak{b}=\sum_{i\in I} \mathfrak{c}_i,\qquad \mathfrak{c}_i=1\text{ for all $i\in I$}$$
 
 을 얻고, 양 변에 $$\mathfrak{a}$$를 곱하여 앞선 [명제 4](#prop4)를 적용하면
 

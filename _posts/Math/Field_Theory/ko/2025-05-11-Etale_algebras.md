@@ -304,7 +304,7 @@ $$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$$
     은 $$\mathbb{K}'$$-algebra homomorphism $$u$$의 집합과 $$\mathbb{K}$$-algebra homomorphism $$\bar{u}$$의 집합 사이의 bijection을 정의한다. 그러므로 등식이 성립한다.
 3. 마찬가지로 $$\mathbb{L}$$을 $$\mathbb{K}'$$의 algebraic closure라고 하자. 두 집합 $$\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}', \mathbb{L})$$, $$\Hom_\Alg{\mathbb{K}}(A', \mathbb{L})$$을 생각하자. 이제 각각의 $$u\in\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}', \mathbb{L})$$마다 다음의 집합
     
-    $$\Hom_\Alg{\mathbb{K}}(A', \mathbb{L})_u=\left\{v\in \Hom_{\Alg{\mathbb{K}}}(A', \mathbb{L})\mid\text{$$v(x.1)=u(x)$$ for all $$x\in \mathbb{K}'$$}\right\}$$
+    $$\Hom_\Alg{\mathbb{K}}(A', \mathbb{L})_u=\left\{v\in \Hom_{\Alg{\mathbb{K}}}(A', \mathbb{L})\mid\text{$v(x.1)=u(x)$ for all $$x\in \mathbb{K}'$$}\right\}$$
 
     을 생각하면 이들은 다음의 partition 
 

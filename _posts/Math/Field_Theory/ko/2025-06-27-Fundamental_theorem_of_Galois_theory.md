@@ -23,11 +23,11 @@ weight: 10
 
 <ins id="thm1">**정리 1**</ins> Field $$\mathbb{K}$$의 Galois extension $$\mathbb{L}/\mathbb{K}$$와 그 Galois group $$\Gamma=\Gal(\mathbb{L}/\mathbb{K})$$을 생각하자. $$\mathscr{K}$$를 $$\mathbb{L}$$의 subextension들의 모임이라 하고, $$\mathscr{G}$$를 $$\Gamma$$의 closed subgroup들의 모임이라 하면 $$\mathscr{K}$$와 $$\mathscr{G}$$ 사이의 두 함수
 
-$$k:\mathscr{G}\rightarrow\mathscr{K};\qquad G\mapsto k(G)\text{ the field of invariants of $$G$$}$$
+$$k:\mathscr{G}\rightarrow\mathscr{K};\qquad G\mapsto k(G)\text{ the field of invariants of $G$}$$
 
 그리고 
 
-$$g:\mathscr{K}\rightarrow\mathscr{G};\qquad \mathbb{M}\mapsto g(\mathbb{M})\text{ the group of $$\mathbb{M}$$-automorphisms of $$L$$}$$
+$$g:\mathscr{K}\rightarrow\mathscr{G};\qquad \mathbb{M}\mapsto g(\mathbb{M})\text{ the group of $\mathbb{M}$-automorphisms of $$L$$}$$
 
 을 생각하면 이들은 서로의 inverse이다. 
 

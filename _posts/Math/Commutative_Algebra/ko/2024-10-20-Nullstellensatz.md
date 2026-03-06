@@ -21,7 +21,7 @@ weight: 10
 
 우리는 ring $$A$$와 임의의 ideal $$\mathfrak{a}$$에 대하여, 다음 식
 
-$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ prime containing $$\mathfrak{a}$$} \mathfrak{p}$$
+$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $$\mathfrak{a}$$} \mathfrak{p}$$
 
 이 성립하는 것을 살펴보았다. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)) 특히, 만일 $$\mathfrak{a}$$가 prime ideal이라면 $$\mathfrak{p}=\sqrt{\mathfrak{p}}$$가 성립해야 하는 것이 당연하다. 더 일반적으로 다음을 정의한다.
 
@@ -54,7 +54,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ prime containing
 
 우선 $$A$$가 Jacobson이라 가정하자. 그럼 그 quotient $$A/ \mathfrak{p}$$가 Jacobson이 되는 것도 정의에 의해 자명하다. 한편 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)에 의해 $$A/\mathfrak{p}$$는 integral domain이고, integral domain에서 $$(0)$$은 prime ideal이므로 $$(0)$$을 maximal ideal들의 교집합으로 나타낼 수 있다. 그런데 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $$(A/\mathfrak{p})[a^{-1}]$$의 prime ideal과, $$A/\mathfrak{p}$$의 prime ideal 중 $$a$$를 포함하지 않는 것 사이의 일대일대응이 존재하며, 가정에 의해 $$(A/\mathfrak{p})[a^{-1}]$$의 prime ideal은 $$0$$뿐이므로, $$A/\mathfrak{p}$$의 prime ideal 중 $$a$$를 포함하지 않는 prime ideal 또한 $$0$$ 뿐이다. 즉, $$A/\mathfrak{p}$$의 임의의 nonzero prime ideal에는 항상 $$a$$가 들어가야 한다. 그런데 만일 이러한 prime ideal이 존재한다면, $$A/\mathfrak{p}$$는 integral domain이므로 
 
-$$(0)=\sqrt{(0)}=\bigcap_\text{\scriptsize$$\mathfrak{p}$$ a prime} \mathfrak{p}$$
+$$(0)=\sqrt{(0)}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime} \mathfrak{p}$$
 
 이고, 따라서 $$a=0$$이 되어 모순이다. 
 
@@ -134,11 +134,11 @@ $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 
 조금 더 전통적인 버전의 영점정리 또한 이로부터 얻어진다. 이를 서술하기 위해, $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 ideal $$\mathfrak{a}$$을 받아 $$\mathbb{K}^n$$의 부분집합 $$Z(\mathfrak{a})$$를 내놓는 함수
 
-$$Z(\mathfrak{a})=\{(a_1,\ldots, a_n)\in \mathbb{K}^n: \text{$$f(a_1,\ldots, a_n)=0$$ for all $$f\in \mathfrak{a}$$}\}$$
+$$Z(\mathfrak{a})=\{(a_1,\ldots, a_n)\in \mathbb{K}^n: \text{$f(a_1,\ldots, a_n)=0$ for all $$f\in \mathfrak{a}$$}\}$$
 
 그리고 $$\mathbb{K}^n$$의 부분집합 $$S$$를 받아 $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 부분집합
 
-$$I(S)=\{f\in \mathbb{K}[\x_1,\ldots, \x_n]:\text{$$f(a_1,\ldots, a_n)=0$$ for all $$(a_1,\ldots, a_n)\in S$$}\}$$
+$$I(S)=\{f\in \mathbb{K}[\x_1,\ldots, \x_n]:\text{$f(a_1,\ldots, a_n)=0$ for all $$(a_1,\ldots, a_n)\in S$$}\}$$
 
 을 내놓는 함수 $$I$$를 생각하자. 
 

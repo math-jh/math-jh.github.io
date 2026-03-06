@@ -111,7 +111,7 @@ $$(-1)v+v=(-1)v+1v=((-1)+1)v=0v=0$$
 
 <ins id="ex5">**예시 5**</ins> 이번에는 field $$\mathbb{K}$$가 주어졌다고 하자. 그럼 *유클리드 $$n$$차원 공간*은 다음의 $$n$$-순서쌍
 
-$$\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix},\qquad a_i\in\mathbb{K}\text{ for all $$i$$}$$
+$$\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix},\qquad a_i\in\mathbb{K}\text{ for all $i$}$$
 
 들로 이루어진 $$\mathbb{K}$$-벡터공간이다. 이들 사이의 덧셈과 스칼라곱은 각각
 

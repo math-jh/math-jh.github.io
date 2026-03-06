@@ -288,7 +288,7 @@ $$\det(\exp tX)=\exp(\tr(tX))=\exp(t\cdot\tr X)$$
 
     을 만족하는 $$d^3$$개의 상수들 $$c_{ij}^k$$이 존재한다. 이들은 다음 두 조건
 
-    $$c_{ij}^k+c_{ji}^k=0,\qquad\sum_r (c_{ij}^rc_{rk}^s+c_{jk}^rc_{ri}^s+c_{ki}^rc_{rj}^s)=0\quad\text{for all $$s$$}$$
+    $$c_{ij}^k+c_{ji}^k=0,\qquad\sum_r (c_{ij}^rc_{rk}^s+c_{jk}^rc_{ri}^s+c_{ki}^rc_{rj}^s)=0\quad\text{for all $s$}$$
 
     을 만족하며, 따라서 다음의 식
 

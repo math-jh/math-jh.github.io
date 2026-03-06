@@ -148,7 +148,7 @@ $$\sum_i \xi_i\otimes_A x_i\tag{1}$$
 
 으로 쓸 수 있으며, 이 원소가 [따름정리 4](#cor4)에 의해 $$u$$에 대응된다는 것은 다음의 식
 
-$$u(x)=\sum_i\langle x,\xi_i\rangle x_i\qquad\text{for all $$x\in M$$}\tag{2}$$
+$$u(x)=\sum_i\langle x,\xi_i\rangle x_i\qquad\text{for all $x\in M$}\tag{2}$$
 
 이 성립하는 것이다. 그럼 trace map의 정의에 의하여
 
