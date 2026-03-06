@@ -34,7 +34,7 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> 주어진 집합 $$A$$ 위에서 관계 <phrase>$$x=y$$</phrase>는 $$A$$ 위에서의 동치관계가 되며, 이 때 $$R$$은 집합 $$\Delta_A$$와 같다. 한편, 관계 <phrase>$$x\in A$$이고 $$y\in A$$</phrase>또한 $$A$$ 위에서의 동치관계가 된다는 것을 쉽게 확인할 수 있다. 이 관계를 나타내는 집합은 정확하게 $$A\times A$$와 같다.
+<ins id="ex2">**예시 2**</ins> 주어진 집합 $$A$$ 위에서 관계 <phrase>$x=y$</phrase>는 $$A$$ 위에서의 동치관계가 되며, 이 때 $$R$$은 집합 $$\Delta_A$$와 같다. 한편, 관계 <phrase>$x\in A$이고 $y\in A$</phrase>또한 $$A$$ 위에서의 동치관계가 된다는 것을 쉽게 확인할 수 있다. 이 관계를 나타내는 집합은 정확하게 $$A\times A$$와 같다.
 
 집합 $$A$$ 위에 주어진 임의의 동치관계 $$R$$을 생각하자. $$R$$은 reflexive하므로 $$\Delta_A\subseteq R$$이며, 포함관계 $$R\subseteq A\times A$$가 성립하는 것은 자명하다. 따라서 위에서 든 두 가지의 예시 중 첫 번째는 $$A$$ 위에서 정의할 수 있는 동치관계 중 가장 작은 것이고, 두 번째는 가장 큰 것이다.
 
@@ -89,7 +89,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 집합 $$A$$ 위에서 <phrase>$$x=y$$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $$x$$의 equivalence class는 집합 $$\{x\}$$이다. 한편 동일한 예시에서 <phrase>$$x\in A$$이고 $$y\in A$$</phrase> 또한 동치관계였는데, 이 경우 $$x$$의 equivalence class는 $$A$$ 전체가 된다. 
+<ins id="ex5">**예시 5**</ins> 집합 $$A$$ 위에서 <phrase>$x=y$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $$x$$의 equivalence class는 집합 $$\{x\}$$이다. 한편 동일한 예시에서 <phrase>$x\in A$이고 $y\in A$</phrase> 또한 동치관계였는데, 이 경우 $$x$$의 equivalence class는 $$A$$ 전체가 된다. 
 
 우리는 앞선 [예시 2](#ex2)에서 $$\Delta_A$$가 가장 <em-ko>작고</em-ko>, $$A\times A$$가 가장 <em-ko>크다</em-ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $$\Delta_A$$가 가장 *finer*한 동치관계이고, $$A\times A$$는 가장 *coarser*한 동치관계라고 하는 것이 일반적이다. ([§집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#def1))
 
