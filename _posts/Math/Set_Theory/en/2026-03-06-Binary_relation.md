@@ -1,6 +1,6 @@
 ---
 
-title: "Binary Relations"
+title: "Binary Relation"
 excerpt: "Definition of Binary Relation"
 
 categories: [Math / Set Theory]
@@ -13,8 +13,8 @@ header:
 sidebar: 
     nav: "set_theory-en"
 
-date: 2026-03-06
-last_modified_at: 2026-03-06
+date: 2021-08-14
+last_modified_at: 2022-11-22
 
 weight: 3
 
@@ -22,7 +22,7 @@ weight: 3
 
 ## Binary Relation
 
-Let us begin with the definition. The following definition is nothing particularly special; it simply gives a name to the *set of ordered pairs* that appeared while explaining why ordered pairs need to be introduced in [§Ordered Pair](/en/math/set_theory/ordered_pair#ordered-pair).
+We begin with the definition. The following definition is nothing particularly special; it simply names the *set of ordered pairs* that arose in the course of explaining why ordered pairs need to be introduced in [§Ordered Pair](/en/math/set_theory/ordered_pair#ordered-pair).
 
 <div class="definition" markdown="1">
 
@@ -30,19 +30,19 @@ Let us begin with the definition. The following definition is nothing particular
 
 </div>
 
-Therefore, the equality ($=$) defined between sets can no longer be considered a binary relation.
+Consequently, the equality ($=$) defined between sets cannot be regarded as a binary relation.
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**Example 2**</ins> If $=$ between sets were a binary relation, then the set representing it
+<ins id="ex2">**Example 2**</ins> If $=$ between sets were a binary relation, then the set
 
 $$E=\{(A,A)\mid\text{$A$ any set}\}$$
 
-would exist. That is, $E$ would have to be the product of two universal sets.
+representing it would exist. That is, $E$ would have to be the product of two universal sets.
 
 </div>
 
-If the product of two universal sets exists, then by the following proposition, a universal set must also exist, which contradicts [§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4). Therefore, $=$ defined between all sets cannot be a binary relation.
+If the product of two universal sets exists, then by the proposition below, a universal set must also exist, contradicting [§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4). Hence $=$ defined between all sets cannot be a binary relation.
 
 <div class="proposition" markdown="1">
 
@@ -57,33 +57,33 @@ If the product of two universal sets exists, then by the following proposition, 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let $R$ be a binary relation and consider $\bigcup(\bigcup R)$. Through calculation, we can see that $(x,y)\in R\implies x,y\in\bigcup(\bigcup R))$. Define $P$ as
+Let $R$ be a binary relation and consider $\bigcup(\bigcup R)$. A calculation shows that $(x,y)\in R\implies x,y\in\bigcup(\bigcup R))$. Define $P$ as
 
 > $P(t)$: There exists some $s$ such that $(s,t)\in R$.
 
-Then we obtain the following set
+We then obtain the set
 
 $$A=\left\{x\mid\left(x\in\bigcup\left(\bigcup R\right)\right)\wedge P(x)\right\}$$
 
-Thus the first claim holds. Similarly, by defining property $Q$ as
+Thus the first claim is established. Similarly, defining property $Q$ as
 
 > $Q(s)$: There exists some $t$ such that $(s,t)\in R$.
 
-we obtain set $B$.
+yields set $B$.
 
 </details>
 
-As in [§Ordered Pair, ⁋Definition 7](/en/math/set_theory/ordered_pair#def7), these are called the first and second *projections* respectively, and are written as $\pr_1R$ and $\pr_2R$.
+As in [§Ordered Pair, ⁋Definition 7](/en/math/set_theory/ordered_pair#def7), these are called the first and second *projections* respectively, and are denoted by $\pr_1R$ and $\pr_2R$.
 
-Sometimes it is necessary to clarify which sets the first and second components of a binary relation belong to. For this purpose, given two sets $A,B$ and a binary relation $R$ satisfying $\pr\_1R\subseteq A$ and $\pr\_2R\subseteq B$, we sometimes think of it as a triple $(R,A,B)$. In this case, $A$ is called the *source* of $R$, and $B$ is called the *target* of $R$. In such situations, even for the same set $R$, $(R,A,B)$ and $(R,A',B')$ are considered different.
+At times it becomes necessary to specify which sets the first and second components of a binary relation belong to. For this purpose, given two sets $A,B$ and a binary relation $R$ satisfying $\pr\_1R\subseteq A$ and $\pr\_2R\subseteq B$, we may regard it as a triple $(R,A,B)$. In this case, $A$ is called the *source* of $R$, and $B$ is called the *target* of $R$. Under such circumstances, even for the same set $R$, the triples $(R,A,B)$ and $(R,A',B')$ are regarded as distinct.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> Let $R$ be a binary relation satisfying the above conditions $\pr\_1R\subseteq A$ and $\pr\_2R\subseteq B$. By [§Ordered Pair, ⁋Proposition 9](/en/math/set_theory/ordered_pair#prop9),
+<ins id="rmk1">**Remark**</ins> Let $R$ be a binary relation satisfying the conditions $\pr\_1R\subseteq A$ and $\pr\_2R\subseteq B$. By [§Ordered Pair, ⁋Proposition 9](/en/math/set_theory/ordered_pair#prop9),
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
-Therefore, the Cartesian product $A\times B$ can be said to be the largest among all binary relations having $A$ as source and $B$ as target.
+Hence the Cartesian product $A\times B$ may be described as the largest among all binary relations having $A$ as source and $B$ as target.
 
 </div>
 
@@ -91,42 +91,42 @@ Therefore, the Cartesian product $A\times B$ can be said to be the largest among
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> Consider a binary relation $(R,A,B)$ and a subset $A'\subseteq A$. Then the *image* of $A'$ under $R$, denoted by $R(A')$, is defined as the set of all elements related to elements of $A'$ by $R$.
+<ins id="def5">**Definition 5**</ins> Let $(R,A,B)$ be a binary relation and let $A'\subseteq A$. The *image* of $A'$ under $R$, denoted by $R(A')$, is the set of all elements related to elements of $A'$ by $R$.
 
 </div>
 
-Expressing the above definition as a formula:
+Expressed as a formula, the above definition reads:
 
 $$R(A')=\bigcup_{x\in A'} \{y\in B\mid(x,y)\in R\}$$
 
-Strictly speaking, the set on the right-hand side $\{y\in B\mid(x,y)\in R\}$ would take the form
+Strictly speaking, without the target $B$ of the binary relation $R$ being specified, the set on the right-hand side $\{y\in B\mid(x,y)\in R\}$ would take the form
 
 $$\{y\mid(x,y)\in R\}$$
 
-if the target $B$ of binary relation $R$ is not given. Unlike the set above whose existence is guaranteed by the comprehension schema, this set may not exist.
+Unlike the set above, whose existence is guaranteed by the comprehension schema, this set may fail to exist.
 
-Such issues must always be kept in mind when studying set theory. However, since our goal is not to study set theory per se, but rather to prove propositions that will be useful elsewhere, we will pass over such minor notational issues without much thought.
+Such issues must always be borne in mind when studying set theory. However, since our aim is not to study set theory for its own sake, but rather to prove propositions useful elsewhere, we shall pass over such minor notational matters without further comment.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> Let $R$ be a binary relation, and consider any set $A$ and its subset $X$. Then $R(X)\subseteq R(A)$ holds.
+<ins id="prop6">**Proposition 6**</ins> Let $R$ be a binary relation, and let $A$ be any set with subset $X$. Then $R(X)\subseteq R(A)$.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let $y\in R(X)$. Then there exists some $x\in X$ such that $(x,y)\in R(X)$. Now since $X\subseteq A$, we have $x\in A$, and thus $y\in R(A)$.
+Let $y\in R(X)$. Then there exists some $x\in X$ such that $(x,y)\in R(X)$. Since $X\subseteq A$, we have $x\in A$, and hence $y\in R(A)$.
 
 </details>
 
-By the above proposition, for any $A$,
+By the proposition above, for any $A$,
 
 $$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subset\pr_2R$$
 
-and therefore $R(A)\subset\pr_2R$ holds. In particular, if $A=\emptyset$, then $R(A)=\emptyset$. More generally, if $A\cap\pr_1R=\emptyset$, then $R(A)=\emptyset$.
+and therefore $R(A)\subset\pr_2R$. In particular, if $A=\emptyset$, then $R(A)=\emptyset$. More generally, if $A\cap\pr_1R=\emptyset$, then $R(A)=\emptyset$.
 
-If $A=\{x\}$ for some $x$, then $R(A)$ can be thought of as the value of $R$ at $x$, similar to a function value.
+If $A=\{x\}$ for some $x$, then $R(A)$ may be regarded as the value of $R$ at $x$, analogous to a function value.
 
 <div class="definition" markdown="1">
 
@@ -134,7 +134,7 @@ If $A=\{x\}$ for some $x$, then $R(A)$ can be thought of as the value of $R$ at 
 
 </div>
 
-This set is sometimes written as $R(x)$, treating it like the value of $R$ at $x$. This *function value* is not unique, and therefore $R(x)$ may have multiple elements.
+This set is sometimes denoted by $R(x)$, treating it as the value of $R$ at $x$. This *function value* need not be unique, and consequently $R(x)$ may contain multiple elements.
 
 ---
 **References**
@@ -144,4 +144,4 @@ This set is sometimes written as $R(x)$, treating it like the value of $R$ at $x
 
 ---
 
-[^1]: In **[Bou]**, such a set is called a *graph*, and a distinction is made between binary relations that have graphs and those that do not. Since this is not a common definition, we follow **[HJJ]** and use the above definition as is. In this case, the definition of the word "relation" becomes somewhat ambiguous, but we will not define it separately.
+[^1]: In **[Bou]**, such a set is called a *graph*, and a distinction is drawn between binary relations that have graphs and those that do not. Since this is not a common convention, we follow **[HJJ]** and adopt the definition above. In this case, the meaning of the word "relation" becomes somewhat ambiguous, but we shall not define it separately.
