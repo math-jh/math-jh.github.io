@@ -157,7 +157,7 @@ $$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 </div>
 
-두 곱집합 $$A\times B$$와 $$A'\times B'$$가 동일해질 조건을 알기 위해서는 하나의 곱집합이 다른 곱집합에 언제 <em_ko>포함되는지</em_ko>만 확실하게 결정해주면 된다. 
+두 곱집합 $$A\times B$$와 $$A'\times B'$$가 동일해질 조건을 알기 위해서는 하나의 곱집합이 다른 곱집합에 언제 <em-ko>포함되는지</em-ko>만 확실하게 결정해주면 된다. 
 
 <div class="proposition" markdown="1">
 

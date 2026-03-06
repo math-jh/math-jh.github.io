@@ -41,7 +41,7 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 ## 동등한 카테고리들
 
-카테고리 사이에서 자주 사용하는 <em_ko>동등하다</em_ko>는 개념은 $$\Cat$$에서의 isomorphism으로 주어지지 않는다. 이는 category들 사이의 isomorphism은 너무 강한 조건이어서, 충분히 비슷해보이는 두 카테고리도 다른 것으로 취급되기 때문이다. 
+카테고리 사이에서 자주 사용하는 <em-ko>동등하다</em-ko>는 개념은 $$\Cat$$에서의 isomorphism으로 주어지지 않는다. 이는 category들 사이의 isomorphism은 너무 강한 조건이어서, 충분히 비슷해보이는 두 카테고리도 다른 것으로 취급되기 때문이다. 
 
 <div class="definition" markdown="1">
 
@@ -49,7 +49,7 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 </div>
 
-이렇게 정의한 카테고리들 사이의 equivalence라는 개념이 어떤 의미에서 충분히 좋은 <em_ko>같다</em_ko>는 개념을 주는지 살펴보자. 이를 위해서는 우선 다음을 정의해야 한다.
+이렇게 정의한 카테고리들 사이의 equivalence라는 개념이 어떤 의미에서 충분히 좋은 <em-ko>같다</em-ko>는 개념을 주는지 살펴보자. 이를 위해서는 우선 다음을 정의해야 한다.
 
 <div class="definition" markdown="1">
 

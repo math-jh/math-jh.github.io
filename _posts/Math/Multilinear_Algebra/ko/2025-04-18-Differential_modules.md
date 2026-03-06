@@ -276,7 +276,7 @@ $$\Omega_{\S(M)/A}\cong M\otimes_A\S(M)$$
 
 이 성립함을 알고, 뿐만 아니라 이 isomorphism을 $$\omega:M\otimes_A\S(M)\rightarrow\Omega_{\S(M)/A}$$이라 적는다면 임의의 $$x\in M$$에 대하여 $$\omega(x\otimes1)=d_{\S(M)/A}(x)=dx$$임을 안다. 
 
-특히, 만일 $$M$$이 free $$A$$-module of finite rank $$n$$이라면, $$\S(M)$$은 polynomial algebra $$A[\x_1,\ldots, \x_n]$$과 identify할 수 있으며 이 identification 하에서 $$d\x_i$$들은 <em_ko>정말로</em_ko> $$\x_i$$의 $$d=d_{\S(M)/A}$$에 의한 image이며, 다항식 $$p\in A[\x_1,\ldots, \x_n]$$의 $$d$$에 의한 image를 $$\Omega_{\S(M)/A}$$의 basis $$d\x_i$$들의 linear combination으로 나타낸다면 그 앞에 붙는 계수들이 정확히 $$p$$의 $$i$$번째 편미분 $$\partial p/\partial \x_i$$이 된다. 
+특히, 만일 $$M$$이 free $$A$$-module of finite rank $$n$$이라면, $$\S(M)$$은 polynomial algebra $$A[\x_1,\ldots, \x_n]$$과 identify할 수 있으며 이 identification 하에서 $$d\x_i$$들은 <em-ko>정말로</em-ko> $$\x_i$$의 $$d=d_{\S(M)/A}$$에 의한 image이며, 다항식 $$p\in A[\x_1,\ldots, \x_n]$$의 $$d$$에 의한 image를 $$\Omega_{\S(M)/A}$$의 basis $$d\x_i$$들의 linear combination으로 나타낸다면 그 앞에 붙는 계수들이 정확히 $$p$$의 $$i$$번째 편미분 $$\partial p/\partial \x_i$$이 된다. 
 
 </div>
 

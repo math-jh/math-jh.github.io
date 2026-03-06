@@ -115,7 +115,7 @@ $$\pr_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{\pr_k}{\longri
 
 ![partial_product_pf_3](/assets/images/Math/Set_Theory/Property_of_products-3.png){:style="width:8em" class="invert" .align-center}
 
-곱집합의 universal property는 위의 diagram을 commute하게 하는 <em_ko>유일한</em_ko> 함수 $$\prod_{i\in I}A_i\rightarrow \prod_{i\in I}A_i$$가 존재한다는 것을 의미하는데, 당연하게 $$\prod_{i\in I}A_i$$에서 자기자신으로의 항등함수 또한 위의 diagram을 commute하게 하고 따라서 유일성에 의해 이 함수는 $$\phi\circ\psi$$와 같아야 한다. 
+곱집합의 universal property는 위의 diagram을 commute하게 하는 <em-ko>유일한</em-ko> 함수 $$\prod_{i\in I}A_i\rightarrow \prod_{i\in I}A_i$$가 존재한다는 것을 의미하는데, 당연하게 $$\prod_{i\in I}A_i$$에서 자기자신으로의 항등함수 또한 위의 diagram을 commute하게 하고 따라서 유일성에 의해 이 함수는 $$\phi\circ\psi$$와 같아야 한다. 
 
 이제
 

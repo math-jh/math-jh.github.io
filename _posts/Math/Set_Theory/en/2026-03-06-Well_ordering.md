@@ -59,11 +59,11 @@ More generally, the following holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, every element of $$S(\alpha)=\alpha\cup\{\alpha\}$$ is a subset of $$S(\alpha)$$. Elements in the set $$\alpha$$ will be in $$S(\alpha)$$, which contains $$\alpha$$, and the <em_ko>element</em_ko> $$\alpha$$ that we newly added is, by definition, also a subset of $$S(\alpha)$$.
+First, every element of $$S(\alpha)=\alpha\cup\{\alpha\}$$ is a subset of $$S(\alpha)$$. Elements in the set $$\alpha$$ will be in $$S(\alpha)$$, which contains $$\alpha$$, and the <em-ko>element</em-ko> $$\alpha$$ that we newly added is, by definition, also a subset of $$S(\alpha)$$.
 
 </details>
 
-The following proposition shows an even more general method of creating <em_ko>larger</em_ko> ordinals than simply introducing the successor function $$S$$.
+The following proposition shows an even more general method of creating <em-ko>larger</em-ko> ordinals than simply introducing the successor function $$S$$.
 
 <div class="proposition" markdown="1">
 
