@@ -41,7 +41,8 @@
         {% endif %}
         <div class="settings-dropdown" style="{% unless site.dark_theme or site.multilingual %} display: none; {% endunless %}">
           <button class="settings-toggle" onclick="toggleSettings(event)" aria-label="Settings">
-            <i class="material-icons md-24" style="vertical-align:-.2em; color:#fff">settings</i>
+            <i class="material-icons md-24" style="vertical-align:-.2em;">settings</i>
+            <i class="material-icons md-18 dropdown-arrow" style="vertical-align:-.1em;">arrow_drop_down</i>
           </button>
           <ul class="settings-menu" id="settings-menu">
             {% if site.dark_theme %}
@@ -53,6 +54,22 @@
                 <span class="material-icons md-16 checked" style="color:#ffeabc">&#xE51C;</span>
               </label>
             </li>
+            <script>
+            function toggleDarkTheme() {
+                var defaultTheme = [...document.styleSheets].find(style => /(main.css)$/.test(style.href))
+                var darkTheme = [...document.styleSheets].find(style => /(main_dark.css)$/.test(style.href))
+                if (darkTheme) {
+                    darkTheme.disabled = !darkTheme.disabled
+                    defaultTheme.disabled = !defaultTheme.disabled
+                    document.cookie = `MDARK=${darkTheme.disabled ? 'N' : 'Y'}; path=/;`
+                    var toggleThemeBtn = document.getElementById("toggle_dark_theme")
+                    if (toggleThemeBtn) {
+                        toggleThemeBtn.checked = defaultTheme.disabled
+                    }
+                    scrollbar()
+                }
+            }
+            </script>
             {% endif %}
             {% if site.multilingual %}
             <li class="settings-item" onclick="lang_select(); toggleSettings(event);">

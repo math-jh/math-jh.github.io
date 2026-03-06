@@ -74,11 +74,24 @@ body[data-lang="en"] .masthead__menu-item[data-lang="en"] {
   cursor: pointer;
   padding: 0;
   color: #fff;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .settings-toggle:hover {
-  opacity: 0.8;
+  color: #a9874a;
+}
+
+.settings-toggle .dropdown-arrow {
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.settings-menu.show ~ .settings-toggle .dropdown-arrow,
+.settings-dropdown:hover .dropdown-arrow {
+  /* arrow stays in place */
 }
 
 .settings-menu {
