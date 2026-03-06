@@ -124,9 +124,9 @@ so the above inclusions become equalities. The following proposition is straight
 
 <ins id="prop4">**Proposition 4**</ins>
 
-1. Let $$A,B,C$$ be sets, and let $$g:A\rightarrow B$$ be a surjection and $$f:A\rightarrow C$$ a function. Then <phrase>there exists $$h:B\rightarrow C$$ with $$f=h\circ g$$</phrase> if and only if <phrase>$$(g(x)=g(y))\implies(f(x)=f(y))$$</phrase>.
+1. Let $$A,B,C$$ be sets, and let $$g:A\rightarrow B$$ be a surjection and $$f:A\rightarrow C$$ a function. Then <phrase>there exists $h:B\rightarrow C$ with $f=h\circ g$</phrase> if and only if <phrase>$(g(x)=g(y))\implies(f(x)=f(y))$</phrase>.
    If these equivalent conditions hold, then $$h$$ satisfying $$f=h\circ g$$ is uniquely determined by $$f$$; moreover, if $$s$$ is a section of $$g$$, then $$h=f\circ s$$.
-2. Let $$A,B,C$$ be sets, and let $$g:A\rightarrow B$$ be an injection and $$f:C\rightarrow B$$ a function. Then <phrase>there exists a function $$h:C\rightarrow A$$ such that $$f=g\circ h$$</phrase> if and only if <phrase>$$f(C)\subseteq g(A)$$</phrase>.
+2. Let $$A,B,C$$ be sets, and let $$g:A\rightarrow B$$ be an injection and $$f:C\rightarrow B$$ a function. Then <phrase>there exists a function $h:C\rightarrow A$$such that $f=g\circ h$</phrase> if and only if <phrase>$f(C)\subseteq g(A)$</phrase>.
    If these equivalent conditions hold, then $$h$$ is uniquely determined by $$f$$; moreover, if $$r$$ is a retraction of $$g$$, then $$h=r\circ f$$.
 </div>
 

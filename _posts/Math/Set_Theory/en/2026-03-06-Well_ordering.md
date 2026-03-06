@@ -75,7 +75,7 @@ Rather than directly proving the existence and uniqueness of the desired order r
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**Lemma 5**</ins> Let $$(A_i)_{i\in I})$$ be a family of ordered sets that is right directed with respect to inclusion, and suppose that whenever $$A_i\subseteq A_j$$, <phrase>the restriction of the order relation on $$A_j$$ to $$A_i$$</phrase> coincides with the order relation given on $$A_i$$. Then there exists a unique order relation on $$A=\bigcup_{i\in I} A_i$$ that extends each of the order relations.
+<ins id="lem5">**Lemma 5**</ins> Let $$(A_i)_{i\in I})$$ be a family of ordered sets that is right directed with respect to inclusion, and suppose that whenever $$A_i\subseteq A_j$$, <phrase>the restriction of the order relation on $A_j$ to $A_i$</phrase> coincides with the order relation given on $$A_i$$. Then there exists a unique order relation on $$A=\bigcup_{i\in I} A_i$$ that extends each of the order relations.
 
 </div>
 <details class="proof" markdown="1">
