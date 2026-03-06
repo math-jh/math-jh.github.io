@@ -267,7 +267,7 @@ $$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
 
 </div>
 
-즉 행렬 $$A,B$$가 닮은 행렬이라는 것은, 고정된 벡터공간 $$V$$에 대해 $$A$$를 <em-ko>basis $$\mathcal{B}$$에 대한 선형변환 $$L:V\rightarrow V$$의 행렬표현</em-ko>이라 생각했을 때, 적당한 basis $$\mathcal{C}$$가 존재하여 $$B$$를 <em-ko>basis $$\mathcal{C}$$에 대한 $$L$$의 행렬표현</em-ko>이라 생각할 수 있는 것이다. 그럼 이 때 
+즉 행렬 $$A,B$$가 닮은 행렬이라는 것은, 고정된 벡터공간 $$V$$에 대해 $$A$$를 <em-ko>basis $\mathcal{B}$에 대한 선형변환 $L:V\rightarrow V$의 행렬표현</em-ko>이라 생각했을 때, 적당한 basis $$\mathcal{C}$$가 존재하여 $$B$$를 <em-ko>basis $\mathcal{C}$에 대한 $L$의 행렬표현</em-ko>이라 생각할 수 있는 것이다. 그럼 이 때 
 
 $$A=[L]_{\mathcal{B}}^\mathcal{B}=[\id_V]^\mathcal{B}_\mathcal{C}[L]^\mathcal{C}_\mathcal{C}[\id_V]^\mathcal{C}_\mathcal{B}=PBP^{-1}$$
 

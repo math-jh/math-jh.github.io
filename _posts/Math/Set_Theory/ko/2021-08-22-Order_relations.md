@@ -35,7 +35,7 @@ weight: 14
 
 </div>
 
-이 경우, 우리는 $$A$$가 <em-ko>$$R$$에 의해 순서가 부여되었다</em-ko>고 하고, 종종 $$A$$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $$x\mathrel{R}y$$를 $$x\leq_{\tiny R}y$$로 적는다. 
+이 경우, 우리는 $$A$$가 <em-ko>$R$에 의해 순서가 부여되었다</em-ko>고 하고, 종종 $$A$$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $$x\mathrel{R}y$$를 $$x\leq_{\tiny R}y$$로 적는다. 
 
 <ins id="ex3">**예시 3**</ins> 이항관계 <phrase>$x=y$</phrase>는 order relation이다. 관계 <phrase>$x\subseteq y$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2)와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3))
 {: .example}
