@@ -20,6 +20,22 @@
             {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
           </a>
         {% endif %}
+        <div style="margin-left: 10px; border: 2px solid #555; border-radius:10px; background-color:#222; {% unless site.dark_theme or site.multilingual %} display: none; {% endunless %}">
+          {% if site.dark_theme %}
+            <label class="switch" for="toggle_dark_theme" style="color:#bbb; font-size:1em; display:inline; margin-left:5px; margin-right:5px">
+                <input type="checkbox" id="toggle_dark_theme" onclick="scrollbar()"/>
+                <span class="material-icons md-16 unchecked" style="color:#ffbb9a">&#xE518;</span>
+                <span class="material-icons md-16 checked" style="color:#ffeabc">&#xE51C;</span>
+            </label>
+          {% endif %}
+          {% if site.multilingual %}
+            <label class="switch" for="lang" style="color:#bbb; font-size:1em; display:inline; margin-right:5px; padding-left:3px; margin-left:{% if site.dark_theme %}-5px{% else %}5px{% endif %}; {% if site.dark_theme %}border-left: 2px solid #555{% endif %}" id="lang_container">
+                <input type="checkbox" id="lang" onclick="lang_select()"/>
+                <span class="checked" style="color:#a9874a">en</span>
+                <span class="unchecked" style="color:#a9874a">ko</span>
+            </label>
+          {% endif %}
+        </div>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             {%- if link.lang -%}
@@ -39,28 +55,6 @@
           <i class="material-icons md-24" style="vertical-align:-.2em;">&#xE8B6;</i>
         </button>
         {% endif %}
-        <div class="settings-dropdown" style="{% unless site.dark_theme or site.multilingual %} display: none; {% endunless %}">
-          <button class="settings-toggle" onclick="toggleSettings(event)" aria-label="Settings">
-            <i class="material-icons md-24" style="vertical-align:-.2em; color:#fff">settings</i>
-          </button>
-          <ul class="settings-menu" id="settings-menu">
-            {% if site.dark_theme %}
-            <li class="settings-item">
-              <span style="color:#bbb">다크모드</span>
-              <label class="switch" for="toggle_dark_theme" style="display:inline; margin:0">
-                <input type="checkbox" id="toggle_dark_theme" onclick="darkmode(), scrollbar()"/>
-                <span class="material-icons md-16 unchecked" style="color:#ffbb9a">&#xE518;</span>
-                <span class="material-icons md-16 checked" style="color:#ffeabc">&#xE51C;</span>
-              </label>
-            </li>
-            {% endif %}
-            {% if site.multilingual %}
-            <li class="settings-item" onclick="lang_select(); toggleSettings(event);">
-              <span style="color:#bbb" id="lang-label">한글</span>
-            </li>
-            {% endif %}
-          </ul>
-        </div>
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
           <div class="navicon"></div>
