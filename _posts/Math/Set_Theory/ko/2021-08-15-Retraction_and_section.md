@@ -122,9 +122,9 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 
 <ins id="prop4">**명제 4**</ins>
 
-1. $$A,B,C$$가 집합이라 하고, 전사함수 $$g:A\rightarrow B$$와 함수 $$f:A\rightarrow C$$를 생각하자. 그럼 <phrase>$$f=h\circ g$$를 만족하는 $$h:B\rightarrow C$$가 존재하는 것</phrase>은 <phrase>$$(g(x)=g(y))\implies(f(x)=f(y))$$가 성립하는 것</phrase>과 동치이다.  
+1. $$A,B,C$$가 집합이라 하고, 전사함수 $$g:A\rightarrow B$$와 함수 $$f:A\rightarrow C$$를 생각하자. 그럼 <phrase>$f=h\circ g$를 만족하는 $h:B\rightarrow C$가 존재하는 것</phrase>은 <phrase>$(g(x)=g(y))\implies(f(x)=f(y))$가 성립하는 것</phrase>과 동치이다.  
    만약 이 조건들이 만족되면, $$f=h\circ g$$를 만족하는 $$h$$는 $$h$$는 $$f$$에 의해 유일하게 결정되며, 만일 $$s$$가 $$g$$의 section이라면 $$h=f\circ s$$이다. 
-2. $$A,B,C$$가 집합이고, 단사함수 $$g:A\rightarrow B$$와 함수 $$f:C\rightarrow B$$를 생각하자. 그럼 <phrase>어떤 함수 $$h:C\rightarrow A$$가 존재하여 $$f=g\circ h$$인 것</phrase>은 <phrase>$$f(C)\subseteq g(A)$$인 것</phrase>과 동치이다.  
+2. $$A,B,C$$가 집합이고, 단사함수 $$g:A\rightarrow B$$와 함수 $$f:C\rightarrow B$$를 생각하자. 그럼 <phrase>어떤 함수 $h:C\rightarrow A$가 존재하여 $f=g\circ h$인 것</phrase>은 <phrase>$f(C)\subseteq g(A)$인 것</phrase>과 동치이다.  
    만약 이 조건들이 만족되면 $$h$$는 $$f$$에 의해 유일하게 결정되며, 만일 $$r$$이 $$g$$의 retraction이라면 $$h=r\circ f$$이다.
 </div>
 
