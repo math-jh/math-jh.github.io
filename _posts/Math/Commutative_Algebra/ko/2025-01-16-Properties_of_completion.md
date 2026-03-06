@@ -77,7 +77,7 @@ $$0 \rightarrow \varprojlim A/\mathfrak{a}^i A \rightarrow \varprojlim B/\mathfr
 $$\varprojlim C/\mathfrak{a}^i C$$의 원소 $$(c_i+\mathfrak{a}^i C)$$가 주어졌다 하고, 다음 두 조건
 
 - $$b_i\mapsto c_i\pmod{\mathfrak{a}^i C}$$,
-- $$b_i\equiv b_j\pmod{\mathfrak{a}^iB}$$ for $$i&lt;j$$
+- $$b_i\equiv b_j\pmod{\mathfrak{a}^iB}$$ for $$i<j$$
 
 을 만족하는 $$(b_i+\mathfrak{a}^iB)$$를 찾자. 그럼 고정된 $$i$$에 대해 첫째 조건만 만족하는 $$b_i$$를 찾을 수 있다는 것과, 두 번째 조건은 $$j=i+1$$인 경우만 보이면 된다는 것이 자명하다. 따라서 귀납적으로 이 두 조건들을 만족하는 $$b_1,\ldots, b_k$$를 찾았다 하고 $$b_{k+1}$$을 찾자. 우선 $$b_{k+1}'\mapsto c_{k+1}\pmod{\mathfrak{a}^{k+1} C}$$를 만족하는 $$b_{k+1}'$$을 택하자. 그럼 $$b_{k+1}'$$과 $$b_k$$는 $$C/\mathfrak{a}^k C$$에서는 같은 원소로 옮겨지므로, 다음의 exact sequence
 

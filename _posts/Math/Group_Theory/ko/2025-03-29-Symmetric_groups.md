@@ -140,7 +140,7 @@ $$\sigma(1)$$은 우선 $$\sigma^{-1}$$을 통해 $$1$$로 옮겨진다. 그 후
 
 </details>
 
-[보조정리 7](#lem7)에 $$\sigma=(1\;2\;\cdots\;n)$$, $$(1\;2\;\cdots\;n)^2$$, $$\ldots$$를 대입하다보면, 우리는 $$(2\;3)$$, $$(3\;4)$$, $$\ldots$$를 얻는다. 한편, 임의의 $$(a\;b)$$에 대하여, 일반성을 잃지 않고 $$a&lt;b$$라 한다면
+[보조정리 7](#lem7)에 $$\sigma=(1\;2\;\cdots\;n)$$, $$(1\;2\;\cdots\;n)^2$$, $$\ldots$$를 대입하다보면, 우리는 $$(2\;3)$$, $$(3\;4)$$, $$\ldots$$를 얻는다. 한편, 임의의 $$(a\;b)$$에 대하여, 일반성을 잃지 않고 $$a<b$$라 한다면
 
 $$\begin{aligned}
     (a\;b)&=(a\;a+1)(a+1\;b)(a\;a+1)\\
@@ -187,7 +187,7 @@ $$T(gh)(x)=L_{gh}(x)=(gh)x=g(h(x))=(T_g\circ T_h)(x)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> $$S_n$$의 각 원소 $$\sigma$$에 대하여, $$i&lt;j$$이지만 $$\sigma(i)>\sigma(j)$$인 pair $$(i,j)$$들을 *inversion*이라 부른다. 만약 inversion의 갯수가 홀수개라면, $$\sigma$$를 *odd permutation*이라 부르고, inversion의 갯수가 짝수개라면 $$\sigma$$를 *even permutation*이라 부른다. 
+<ins id="def9">**정의 9**</ins> $$S_n$$의 각 원소 $$\sigma$$에 대하여, $$i<j$$이지만 $$\sigma(i)>\sigma(j)$$인 pair $$(i,j)$$들을 *inversion*이라 부른다. 만약 inversion의 갯수가 홀수개라면, $$\sigma$$를 *odd permutation*이라 부르고, inversion의 갯수가 짝수개라면 $$\sigma$$를 *even permutation*이라 부른다. 
 
 </div>
 
@@ -209,7 +209,7 @@ $$n$$개의 variable $$x_1,\ldots, x_n$$에 대하여, *Vandermonde polynomial* 
 
 $$\Delta=\prod_{1\leq i< j\leq n}(x_i-x_j)$$
 
-로 정의하자. $$\Delta$$는 $$i&lt; j$$를 만족하는 모든 pair $$(i,j)$$에 해당하는 term $$(x_i-x_j)$$들의 곱으로만 이루어진 polynomial이라는 것을 쉽게 관찰할 수 있다. 이제 $$\Delta$$에 precomposition을 적용해 $$\sigma(\Delta)$$를 만들자. 즉
+로 정의하자. $$\Delta$$는 $$i< j$$를 만족하는 모든 pair $$(i,j)$$에 해당하는 term $$(x_i-x_j)$$들의 곱으로만 이루어진 polynomial이라는 것을 쉽게 관찰할 수 있다. 이제 $$\Delta$$에 precomposition을 적용해 $$\sigma(\Delta)$$를 만들자. 즉
 
 $$\sigma(\Delta)=\prod_{1\leq i< j\leq n}(x_{\sigma(i)}-x_{\sigma(j)})$$
 

@@ -34,7 +34,7 @@ Hereafter, when $$R$$ is an equivalence relation, we will use $$x\sim_{\tiny R}y
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**Example 2**</ins> On a given set $$A$$, the relation <phrase>$$x=y$$</phrase> is an equivalence relation on $$A$$, and in this case $$R$$ is the same as the set $$\Delta_A$$. On the other hand, the relation <phrase>$$x\in A$$ and $$y\in A$$</phrase> can easily be verified to also be an equivalence relation on $$A$$. The set representing this relation is exactly $$A\times A$$.
+<ins id="ex2">**Example 2**</ins> On a given set $$A$$, the relation <phrase>$x=y$</phrase> is an equivalence relation on $$A$$, and in this case $$R$$ is the same as the set $$\Delta_A$$. On the other hand, the relation <phrase>$x\in A$ and $y\in A$</phrase> can easily be verified to also be an equivalence relation on $$A$$. The set representing this relation is exactly $$A\times A$$.
 
 Consider any equivalence relation $$R$$ on a set $$A$$. Since $$R$$ is reflexive, $$\Delta_A\subseteq R$$, and the inclusion $$R\subseteq A\times A$$ is clear. Thus the first of the two examples above is the smallest equivalence relation that can be defined on $$A$$, and the second is the largest.
 
@@ -87,7 +87,7 @@ By definition, $$R(x)$$ is the collection of elements that are considered equiva
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**Example 5**</ins> We have already seen that <phrase>$$x=y$$</phrase> on a set $$A$$ is an equivalence relation. In this relation, the equivalence class of $$x$$ is the set $$\{x\}$$. On the other hand, in the same example, <phrase>$$x\in A$$ and $$y\in A$$</phrase> was also an equivalence relation, in which case the equivalence class of $$x$$ is the entire set $$A$$.
+<ins id="ex5">**Example 5**</ins> We have already seen that <phrase>$x=y$</phrase> on a set $$A$$ is an equivalence relation. In this relation, the equivalence class of $$x$$ is the set $$\{x\}$$. On the other hand, in the same example, <phrase>$x\in A$ and $y\in A$</phrase> was also an equivalence relation, in which case the equivalence class of $$x$$ is the entire set $$A$$.
 
 In [Example 2](#ex2), we said $$\Delta_A$$ is the *smallest* and $$A\times A$$ is the *largest*, but rather than comparing set inclusions, it is more common to say that $$\Delta_A$$ is the *finest* equivalence relation and $$A\times A$$ is the *coarsest* equivalence relation, following this perspective. ([§Sum of Sets, ⁋Definition 1](/en/math/set_theory/sum_of_sets#def1))
 
