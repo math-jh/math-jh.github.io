@@ -29,7 +29,7 @@ In [§ZFC Axioms](/en/math/set_theory/zfc_axioms), we accepted as an axiom that 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets. The *union* of this family is the set consisting of <phrase>all $$x$$ that belong to at least one $$A_i$$</phrase>, denoted by $$\bigcup_{i\in I}A_i$$.
+<ins id="def1">**Definition 1**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets. The *union* of this family is the set consisting of <phrase>all $x$ that belong to at least one $A_i$</phrase>, denoted by $$\bigcup_{i\in I}A_i$$.
 
 </div>
 
@@ -41,7 +41,7 @@ Thus if $$I=\emptyset$$, then $$\bigcup_{i\in I} A_i=\emptyset$$. It is not diff
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets with $$I$$ non-empty. The *intersection* of this family is the set of <phrase>all $$x$$ that belong to every $$A_i$$</phrase>, denoted by $$\bigcap_{i\in I}A_i$$.
+<ins id="def2">**Definition 2**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets with $$I$$ non-empty. The *intersection* of this family is the set of <phrase>all $x$ that belong to every $A_i$</phrase>, denoted by $$\bigcap_{i\in I}A_i$$.
 
 </div>
 
@@ -53,7 +53,7 @@ If $$I=\emptyset$$, then $$i\in I$$ becomes false, making the entire statement t
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> Let $$(A_i)_{i\in I}$$ be a family of subsets of a set $$A$$. The *intersection* of this family is the set of <phrase>all $$x$$ in $$A$$ that also belong to every $$A_i$$</phrase>, denoted by $$\bigcap_{i\in I}A_i$$.
+<ins id="def3">**Definition 3**</ins> Let $$(A_i)_{i\in I}$$ be a family of subsets of a set $$A$$. The *intersection* of this family is the set of <phrase>all $x$ in $A$ that also belong to every $A_i$</phrase>, denoted by $$\bigcap_{i\in I}A_i$$.
 
 </div>
 

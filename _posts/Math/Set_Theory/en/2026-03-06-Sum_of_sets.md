@@ -89,7 +89,7 @@ In general, the empty set plays no role among the members of such a family, so w
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let $$S_i$$ be <phrase>the set of all $$(x, i)$$ satisfying $$x\in A_i$$</phrase>. Then $$(S_i)_{i\in I}$$ is pairwise disjoint. For each $$i$$, the map $$x\mapsto (x,i)$$ is a bijection from $$A_i$$ to $$S_i$$. Hence $$S=\bigcup_{i\in I} S_i$$ satisfies the required conditions.
+Let $$S_i$$ be <phrase>the set of all $(x, i)$ satisfying $x\in A_i$</phrase>. Then $$(S_i)_{i\in I}$$ is pairwise disjoint. For each $$i$$, the map $$x\mapsto (x,i)$$ is a bijection from $$A_i$$ to $$S_i$$. Hence $$S=\bigcup_{i\in I} S_i$$ satisfies the required conditions.
 
 </details>
 

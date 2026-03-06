@@ -89,7 +89,7 @@ $$y=(f_i)(x)=(f_i|_{A_i\cap A_j})(x)=(f_j|_{A_i\cap A_j})(x)=(f_j)(x)=y'$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$S_i$$를 <phrase>$$x\in A_i$$를 만족하는 $$(x, i)$$들로 이루어진 집합</phrase>이라 하자. 그럼 $$(S_i)_{i\in I}$$는 쌍마다 서로소이다. 또, 각각의 $$i$$에 대하여 $$x\mapsto (x,i)$$는 $$A_i$$에서 $$S_i$$로의 전단사함수가 된다. 따라서 $$S=\bigcup_{i\in I} S_i$$가 주어진 조건을 만족한다.
+$$S_i$$를 <phrase>$x\in A_i$를 만족하는 $(x, i)들로 이루어진 집합</phrase>이라 하자. 그럼 $$(S_i)_{i\in I}$$는 쌍마다 서로소이다. 또, 각각의 $$i$$에 대하여 $$x\mapsto (x,i)$$는 $$A_i$$에서 $$S_i$$로의 전단사함수가 된다. 따라서 $$S=\bigcup_{i\in I} S_i$$가 주어진 조건을 만족한다.
 
 </details>
 

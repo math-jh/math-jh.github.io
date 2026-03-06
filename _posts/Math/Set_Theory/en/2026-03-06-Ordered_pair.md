@@ -95,7 +95,7 @@ We have confirmed that the ordered pair $$(x,y)$$ is well-defined; however, we m
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> For two ordered pairs $$(x,y)$$ and $$(x',y')$$, <phrase>$$(x,y)=(x',y')$$</phrase> and <phrase>$$x=x'$$ and $$y=y'$$</phrase> are equivalent.
+<ins id="prop6">**Proposition 6**</ins> For two ordered pairs $$(x,y)$$ and $$(x',y')$$, <phrase>$(x,y)=(x',y')$</phrase> and <phrase>$x=x'$ and $y=y'$</phrase> are equivalent.
 
 </div>
 <details class="proof" markdown="1">
@@ -159,7 +159,7 @@ To determine the conditions under which two product sets $$A\times B$$ and $$A'\
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**Proposition 9**</ins> For two non-empty sets $$A'$$ and $$B'$$, <phrase>$$A'\times B'\subseteq A\times B$$</phrase> and <phrase>$$A'\subseteq A$$ and $$B'\subseteq B$$</phrase> are equivalent.
+<ins id="prop9">**Proposition 9**</ins> For two non-empty sets $$A'$$ and $$B'$$, <phrase>$A'\times B'\subseteq A\times B$</phrase> and <phrase>$A'\subseteq A$ and $B'\subseteq B$</phrase> are equivalent.
 
 </div>
 <details class="proof" markdown="1">
@@ -177,7 +177,7 @@ When one of $$A$$ or $$B$$ is empty, the following proposition applies.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**Proposition 10**</ins> For two sets $$A$$ and $$B$$, <phrase>$$A\times B=\emptyset$$</phrase> and <phrase>$$A=\emptyset$$ or $$B=\emptyset$$</phrase> are equivalent.
+<ins id="prop10">**Proposition 10**</ins> For two sets $$A$$ and $$B$$, <phrase>$A\times B=\emptyset$</phrase> and <phrase>$A=\emptyset$$ or $$B=\emptyset$</phrase> are equivalent.
 
 </div>
 <details class="proof" markdown="1">

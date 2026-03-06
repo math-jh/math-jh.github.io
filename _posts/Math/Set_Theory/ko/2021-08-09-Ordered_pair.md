@@ -95,7 +95,7 @@ $$F=\{(x_1,f(x_1)), (x_2,f(x_2)),\cdots\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> 두 순서쌍 $$(x,y)$$, $$(x',y')$$에 대하여, <phrase>$$(x,y)=(x',y')$$인 것</phrase>과 <phrase>$$x=x'$$이고 $$y=y'$$인 것</phrase>이 서로 동치이다.
+<ins id="prop6">**명제 6**</ins> 두 순서쌍 $$(x,y)$$, $$(x',y')$$에 대하여, <phrase>$(x,y)=(x',y')$인 것</phrase>과 <phrase>$x=x'$이고 $y=y'$인 것</phrase>이 서로 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -161,7 +161,7 @@ $$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 공집합이 아닌 두 집합 $$A'$$, $$B'$$에 대하여, <phrase>$$A'\times B'\subseteq A\times B$$인 것</phrase>과 <phrase>$$A'\subseteq A$$이고 $$B'\subseteq B$$인 것</phrase>이 동치이다.
+<ins id="prop9">**명제 9**</ins> 공집합이 아닌 두 집합 $$A'$$, $$B'$$에 대하여, <phrase>$A'\times B'\subseteq A\times B$인 것</phrase>과 <phrase>$A'\subseteq A$이고 $B'\subseteq B$인 것</phrase>이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -179,7 +179,7 @@ $$A,B$$ 둘 중 하나가 공집합일 때는 다음 명제를 적용할 수 있
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> 두 집합 $$A$$, $$B$$에 대하여, <phrase>$$A\times B=\emptyset$$인 것</phrase>과 <phrase>$$A=\emptyset$$이거나 $$B=\emptyset$$인 것</phrase>이 동치이다.
+<ins id="prop10">**명제 10**</ins> 두 집합 $$A$$, $$B$$에 대하여, <phrase>$A\times B=\emptyset$인 것</phrase>과 <phrase>$A=\emptyset$$이거나 $$B=\emptyset$인 것</phrase>이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
