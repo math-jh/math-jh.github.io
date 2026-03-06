@@ -4,7 +4,7 @@ title: "Properties of Well-Ordered Sets"
 excerpt: "Rigorous definition of ordinals and properties of well-ordered sets"
 
 categories: [Math / Set Theory]
-permalink: math/set_theory/well_ordering
+permalink: /en/math/set_theory/well_ordering
 header:
     overlay_image: /assets/images/Math/Set_Theory/Well_ordering.png
     overlay_filter: 0.5
@@ -29,11 +29,11 @@ In the previous post, we briefly introduced ordinals and postponed their definit
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-We use [§Directed Sets, ⁋Proposition 6](math/set_theory/directed_set#prop16). Let us show that $$S$$ is strictly increasing and $$s(A)=A^\ast\setminus\{A\}$$.
+We use [§Directed Sets, ⁋Proposition 6](/en/math/set_theory/directed_set#prop16). Let us show that $$S$$ is strictly increasing and $$s(A)=A^\ast\setminus\{A\}$$.
 
-It is clear that $$s$$ is an increasing function. For if $$x\leq y$$ and $$a\in S_x$$, then $$a < x\leq y$$, so $$a\in S_y$$. Moreover, this inclusion is strict: if $$x < y$$, then $$x\not< x$$ and $$x < y$$, so $$x\not\in S_x$$ but $$x\in S_y$$. Thus the function $$s$$ is an isomorphism between $$A$$ and its image. Therefore by [§Ordinals and Well-Ordered Sets, ⁋Proposition 5](math/set_theory/ordinals#prop5), $$s(A)=A^\ast\setminus\{A\}$$.
+It is clear that $$s$$ is an increasing function. For if $$x\leq y$$ and $$a\in S_x$$, then $$a < x\leq y$$, so $$a\in S_y$$. Moreover, this inclusion is strict: if $$x < y$$, then $$x\not< x$$ and $$x < y$$, so $$x\not\in S_x$$ but $$x\in S_y$$. Thus the function $$s$$ is an isomorphism between $$A$$ and its image. Therefore by [§Ordinals and Well-Ordered Sets, ⁋Proposition 5](/en/math/set_theory/ordinals#prop5), $$s(A)=A^\ast\setminus\{A\}$$.
 
-Finally, let us show that $$A^\ast$$ is well-ordered. Since $$s(A)$$ is well-ordered, adding the greatest element $$A$$ to $$s(A)=A^\ast\setminus\{A\}$$ ([§Elements in Ordered Sets, ⁋Proposition 4](math/set_theory/elements_in_ordered_set#prop4)) yields $$A^\ast$$, and the resulting set is again well-ordered.
+Finally, let us show that $$A^\ast$$ is well-ordered. Since $$s(A)$$ is well-ordered, adding the greatest element $$A$$ to $$s(A)=A^\ast\setminus\{A\}$$ ([§Elements in Ordered Sets, ⁋Proposition 4](/en/math/set_theory/elements_in_ordered_set#prop4)) yields $$A^\ast$$, and the resulting set is again well-ordered.
 
 </details>
 
