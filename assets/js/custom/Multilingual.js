@@ -50,7 +50,7 @@ function updateLangLabel() {
         if (pathname[1] === 'ko') {
             label.textContent = 'English';
         } else if (pathname[1] === 'en') {
-            label.textContent = '한글';
+            label.textContent = '\uD55C\uAE00';  // 한글
         }
     }
 }
