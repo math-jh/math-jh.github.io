@@ -87,11 +87,15 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\,{\rchi}^u \mid u \in S_\sigma]$$
 
 </div>
 
-이를 풀어쓰면 다음과 같다. 우선 우리는 그 정의에 의하여 $$S_\sigma$$가 덧셈 $$+$$에 대한 semigroup이 되는 것을 안다. 이 semigroup에 대한 semigroup algebra를 생각하는 것은, 함수들 $$S_\sigma\rightarrow \mathbb{C}$$의 모임에 convolution product를 주는 것과 같고, 이 때 semigroup $$S_\sigma$$가 finitely genedrated이므로 이 semigroup algebra는 $$S_\sigma$$의 특정한 원소를 보내는 
+이를 풀어쓰면 다음과 같다. 우선 우리는 그 정의에 의하여 $$S_\sigma$$가 덧셈 $$+$$에 대한 semigroup이 되는 것을 안다. 이 semigroup에 대한 semigroup algebra를 생각하는 것은, 함수들 $$S_\sigma\rightarrow \mathbb{C}$$의 모임에 convolution product를 주는 것과 같고, 이 때 semigroup $$S_\sigma$$가 finitely genedrated이므로 이 semigroup algebra는 $$S_\sigma$$의 특정한 원소를 보내는 delta function들로 주어진다. $$u\in S_\sigma$$를 $$1$$로 보내는 함수를 $$\rchi^u$$로 적으면, $$\mathbb{C}[S_\sigma]$$는 $$u\in S_\sigma$$들에 대하여 $$\rchi^u$$들을 basis로 하여 생성되는 $$\mathbb{C}$$-algebra이며, 이 때 basis의 원소들의 곱은
+
+$$\rchi^u\ast\rchi^{u'}=\rchi^{u+u'}$$
+
+으로 주어지게 된다. 그럼 이 $$\mathbb{C}$$-algebra가 affine toric variety의 polynomial ring이 된다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 강한 정초 유리 다면체 콘 $$\sigma \subseteq N_{\mathbb{R}}$$에 대해, **아핀 토릭 다양체(affine toric variety)** $$U_\sigma$$를
+<ins id="def5">**정의 5**</ins> Strongly convex rational polyhedral cone $$\sigma \subseteq N_{\mathbb{R}}$$에 대해, 이것이 정의하는 *affine toric variety<sub>아핀 토릭 다양체</sub>* $$U_\sigma$$를
 
 $$U_\sigma = \operatorname{Spec}(\mathbb{C}[S_\sigma])$$
 
@@ -101,17 +105,17 @@ $$U_\sigma = \operatorname{Spec}(\mathbb{C}[S_\sigma])$$
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> $$\sigma = \{0\}$$인 경우, $$\sigma^\vee = M_{\mathbb{R}}$$이므로 $$S_\sigma = M$$이다. 따라서
+<ins id="ex6">**예시 6**</ins> $$\sigma = \{0\}$$인 경우, $$\sigma^\vee = M_{\mathbb{R}}$$이므로 $$S_\sigma = M$$이다. 따라서
 
-$$\mathbb{C}[S_\sigma] = \mathbb{C}[M] = \mathbb{C}[\chi^{\pm e_1^\ast}, \ldots, \chi^{\pm e_n^\ast}]$$
+$$\mathbb{C}[S_\sigma] = \mathbb{C}[M] = \mathbb{C}[\rchi^{\pm e_1^\ast}, \ldots, \rchi^{\pm e_n^\ast}]$$
 
-이며, 이것은 **대수적 토러스(algebraic torus)** $$T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast \cong (\mathbb{C}^\ast)^n$$의 좌표환에 해당한다.
+이며, 이것은 algebraic torus $$T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast \cong (\mathbb{C}^\ast)^n$$의 coordinate ring에 해당한다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> $$N = \mathbb{Z}^2$$에서 $$\sigma$$가 $$e_1$$과 $$e_2$$로 생성되는 경우를 생각하자. 그러면
+<ins id="ex7">**예시 7**</ins> $$N = \mathbb{Z}^2$$에서 $$\sigma$$가 $$e_1$$과 $$e_2$$로 생성되는 경우를 생각하자. 그러면
 
 $$\sigma^\vee = \mathbb{R}_{\ge 0} e_1^\ast + \mathbb{R}_{\ge 0} e_2^\ast$$
 
@@ -123,29 +127,9 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 </div>
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3 (이차 원뿔)**</ins> $$N = \mathbb{Z}^2$$에서 $$\sigma$$가 $$e_2$$와 $$2e_1 - e_2$$로 생성되는 경우를 생각하자.
-
-쌍대 콘 $$\sigma^\vee$$를 구하기 위해, $$u = ae_1^\ast + be_2^\ast \in M_{\mathbb{R}}$$이 $$\sigma^\vee$$에 속할 조건을 생각하자. $$\langle u, e_2 \rangle = b \ge 0$$이고 $$\langle u, 2e_1 - e_2 \rangle = 2a - b \ge 0$$이어야 한다. 따라서 $$b \ge 0$$이고 $$2a \ge b$$이다.
-
-$$\sigma^\vee$$의 극소 생성원은 $$e_1^\ast$$와 $$2e_1^\ast + e_2^\ast$$이다. Gordan의 보조정리에 의해 $$S_\sigma = \sigma^\vee \cap M$$의 생성원은 $$e_1^\ast$$, $$e_1^\ast + e_2^\ast$$, $$e_1^\ast + 2e_2^\ast$$이다.
-
-따라서
-
-$$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_1^\ast + e_2^\ast}, \chi^{e_1^\ast + 2e_2^\ast}] = \mathbb{C}[X, XY, XY^2]$$
-
-이다. 이것을 $$U = X$$, $$V = XY$$, $$W = XY^2$$로 두면 $$V^2 = UW$$이므로,
-
-$$\mathbb{C}[S_\sigma] \cong \mathbb{C}[U, V, W] / (V^2 - UW)$$
-
-이다. 따라서 $$U_\sigma$$는 **이차 원뿔(quadric cone)**이다.
-
-</div>
-
 ## 토러스 작용
 
-아핀 토릭 다양체의 중요한 성질 중 하나는 대수적 토러스의 자연스러운 작용이다.
+위에서 정의한 $$\Spec(\mathbb{C}[S_\sigma])$$가 affine *toric* variety라 불리는 이유는 이 위에 자연스러운 torus action이 존재하기 때문이다. 
 
 <div class="proposition" markdown="1">
 
