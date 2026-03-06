@@ -25,36 +25,6 @@ function lang_select() {
     window.location.href = newlang + newpathname;
 }
 
-// Settings dropdown toggle
-function toggleSettings(event) {
-    event.stopPropagation();
-    var menu = document.getElementById('settings-menu');
-    if (menu) {
-        menu.classList.toggle('show');
-    }
-}
-
-// Close dropdown when clicking outside
-document.addEventListener('click', function(e) {
-    var menu = document.getElementById('settings-menu');
-    if (menu && !e.target.closest('.settings-dropdown')) {
-        menu.classList.remove('show');
-    }
-});
-
-// Update language label
-function updateLangLabel() {
-    var pathname = window.location.pathname.split('/');
-    var label = document.getElementById('lang-label');
-    if (label) {
-        if (pathname[1] === 'ko') {
-            label.textContent = 'English';
-        } else if (pathname[1] === 'en') {
-            label.textContent = '한글';
-        }
-    }
-}
-
 // 페이지 로드 시 body에 data-lang 추가
 function setPageLang() {
     var pathname = window.location.pathname.split('/');
@@ -63,7 +33,6 @@ function setPageLang() {
     } else if (pathname[1] === "en") {
         document.body.setAttribute('data-lang', 'en');
     }
-    updateLangLabel();
 }
 
 // 페이지 로드 시 실행
