@@ -52,7 +52,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 
 </details>
 
-다음 명제는 [\[집합론\] §기수, ⁋정의 1](/ko/math/set_theory/cardinals#def1) 이후에 간략하게 언급한 것과 동일한 집합론적 문제가 있다. 즉, <phrase>모든 $$\mathbb{K}$$-벡터공간들의 모임</phrase>이 실제로 집합이 되는지가 불확실하지만 이는 더 이상 부연설명 없이 넘어가기로 한다.
+다음 명제는 [\[집합론\] §기수, ⁋정의 1](/ko/math/set_theory/cardinals#def1) 이후에 간략하게 언급한 것과 동일한 집합론적 문제가 있다. 즉, <phrase>모든 $\mathbb{K}$-벡터공간들의 모임</phrase>이 실제로 집합이 되는지가 불확실하지만 이는 더 이상 부연설명 없이 넘어가기로 한다.
 
 <div class="proposition" markdown="1">
 

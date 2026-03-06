@@ -49,8 +49,8 @@ If the product of two universal sets exists, then by the proposition below, a un
 <ins id="prop3">**Proposition 3**</ins> Let $$R$$ be a binary relation. Then there exist unique sets $$A$$ and $$B$$ such that:
 
 <ul>
-<li> <phrase>$$x\in A$$</phrase> is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R$$</phrase>, and</li>
-<li> <phrase>$$y\in B$$</phrase> is equivalent to <phrase>there exists some $$x$$ such that $$(x,y)\in R$$</phrase>.</li>
+<li> <phrase>$x\in A$</phrase> is equivalent to <phrase>there exists some $y$ such that $(x,y)\in R$</phrase>, and</li>
+<li> <phrase>$y\in B$</phrase> is equivalent to <phrase>there exists some $x$ such that $(x,y)\in R$</phrase>.</li>
 </ul>
 
 </div>
