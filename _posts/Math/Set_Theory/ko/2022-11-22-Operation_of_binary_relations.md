@@ -82,7 +82,7 @@ $$\pr_1(A\times B)^{-1}=\pr_2(A\times B)=B,\qquad \pr_2(A\times B)^{-1}=\pr_1(A\
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$(z,x)\in (R_2\circ R_1)^{-1}$$인 것은 $$(x,z)\in R_2\circ R_1$$인 것과 동치이다. 그리고 이는 다시 <phrase>어떠한 $$y$$가 존재하여 $$(x,y)\in R_1$$이고 $$(y,z)\in R_2$$인 것</phrase>과 동치이다. 이 조건을 만족하는 $$y$$는 <phrase>$$(y,x)\in R_1^{-1}$$이고 $$(z,y)\in R_2^{-1}$$</phrase> 또한 만족하므로, 합성의 정의에 의해 $$(z,x)\in R_2^{-1}\circ R_1^{-1}$$이 성립한다. 반대방향도 동일하게 보일 수 있다.
+$$(z,x)\in (R_2\circ R_1)^{-1}$$인 것은 $$(x,z)\in R_2\circ R_1$$인 것과 동치이다. 그리고 이는 다시 <phrase>어떠한 $y$가 존재하여 $(x,y)\in R_1$이고 $(y,z)\in R_2$인 것</phrase>과 동치이다. 이 조건을 만족하는 $$y$$는 <phrase>$(y,x)\in R_1^{-1}$이고 $(z,y)\in R_2^{-1}$</phrase> 또한 만족하므로, 합성의 정의에 의해 $$(z,x)\in R_2^{-1}\circ R_1^{-1}$$이 성립한다. 반대방향도 동일하게 보일 수 있다.
 
 </details>
 
@@ -102,7 +102,7 @@ $$(R_3\circ R_2)\circ R_1=R_3\circ(R_2\circ R_1)$$
 
 임의의 $$(x,w)$$가 $$(R_3\circ R_2)\circ R_1$$의 원소인 것과 $$R_3\circ(R_2\circ R_1)$$의 원소임이 동치임을 보이면 충분하다.  
 
-우선 $$(x,w)\in (R_3\circ R_2)\circ R_1$$은 <phrase>어떠한 $$y$$가 존재하여 $$(x,y)\in R_1$$이고 $$(y,w)\in R_3\circ R_2$$</phrase>와 동치이다. 그런데 뒤의 조건은 다시 <phrase>어떠한 $$z$$가 존재하여 $$(y,z)\in R_2$$이고 $$(z,w)\in R_3$$</phrase>과 동치이므로, 이 조건은 <phrase>$$(x,z)\in R_2\circ R_1$$이고 $$(z,w)\in R_3$$</phrase>과 동치이다. 따라서 이는 <phrase>$$(x,w)\in R_3\circ(R_2\circ R_1)$$</phrase>과 동치이다.
+우선 $$(x,w)\in (R_3\circ R_2)\circ R_1$$은 <phrase>어떠한 $y$가 존재하여 $(x,y)\in R_1$이고 $(y,w)\in R_3\circ R_2$</phrase>와 동치이다. 그런데 뒤의 조건은 다시 <phrase>어떠한 $z$가 존재하여 $(y,z)\in R_2$이고 $(z,w)\in R_3$</phrase>과 동치이므로, 이 조건은 <phrase>$(x,z)\in R_2\circ R_1$이고 $(z,w)\in R_3$</phrase>과 동치이다. 따라서 이는 <phrase>$(x,w)\in R_3\circ(R_2\circ R_1)$</phrase>과 동치이다.
 
 </details>
 
@@ -124,7 +124,7 @@ $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 
 앞선 명제와 같이 진행한다. 
 
-어떠한 $$z$$에 대하여 $$z\in (R_2\circ R_1)(A)$$인 것은 <phrase>어떠한 $$x\in X$$가 존재하여 $$(x,z)\in R_2\circ R_1$$인 것</phrase>과 동치이다. 그런데 이는 다시 <phrase>어떠한 $$y$$가 존재하여 $$(x,y)\in R_1$$이고 $$(y,z)\in R_2$$인 것</phrase>과 동치이다. $$y\in R_1(A)$$이므로, $$z\in R_2(R_1(A))$$이다. 이 논리를 거꾸로 뒤집으면 반대방향의 증명이 된다.
+어떠한 $$z$$에 대하여 $$z\in (R_2\circ R_1)(A)$$인 것은 <phrase>어떠한 $x\in X$가 존재하여 $(x,z)\in R_2\circ R_1$인 것</phrase>과 동치이다. 그런데 이는 다시 <phrase>어떠한 $y$가 존재하여 $(x,y)\in R_1$이고 $(y,z)\in R_2$인 것</phrase>과 동치이다. $$y\in R_1(A)$$이므로, $$z\in R_2(R_1(A))$$이다. 이 논리를 거꾸로 뒤집으면 반대방향의 증명이 된다.
 
 </details>
 
