@@ -96,7 +96,7 @@ function lang_select() {
     window.location.href = newlang + newpathname;
 }
 ````
-어차피 나는 영어와 한글만 왔다갔다 할 것이므로 그냥 하드코딩을 해서 한글 페이지와 영어 페이지로의 링크가 생성되도록 하였다. 만약 <em_ko>정말로</em_ko> 다국어 사이트를 만든다면, `_config.yml`에서 지원할 다국어의 목록을 입력한 후, 이 목록을 이용해서 liquid로 for 문을 걸어서 순서대로 언어를 바꾸도록 할 수 있을 것 같다. 
+어차피 나는 영어와 한글만 왔다갔다 할 것이므로 그냥 하드코딩을 해서 한글 페이지와 영어 페이지로의 링크가 생성되도록 하였다. 만약 <em-ko>정말로</em-ko> 다국어 사이트를 만든다면, `_config.yml`에서 지원할 다국어의 목록을 입력한 후, 이 목록을 이용해서 liquid로 for 문을 걸어서 순서대로 언어를 바꾸도록 할 수 있을 것 같다. 
 
 역시 마찬가지로, masthead에서 사이트 이름을 클릭했을 시 언어선택 페이지인 `math-jh.github.io/`가 아닌 각각의 홈 화면 `math-jh.github.io/ko/`와 `math-jh.github.io/en/`이 나오도록 하는 것도 자바스크립트가 필요하다.
 ```javascript

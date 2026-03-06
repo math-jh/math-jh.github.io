@@ -348,7 +348,7 @@ $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 
 $$u(x)=v(x,\ldots, x)$$
 
-을 만족하는 <em_ko>유일한</em_ko> symmetric $$n$$-linear map $$v:M^n \rightarrow N$$이 존재한다. 뿐만 아니라, 임의의 $$x_1,\ldots, x_n\in M$$에 대하여, 명시적으로
+을 만족하는 <em-ko>유일한</em-ko> symmetric $$n$$-linear map $$v:M^n \rightarrow N$$이 존재한다. 뿐만 아니라, 임의의 $$x_1,\ldots, x_n\in M$$에 대하여, 명시적으로
 
 $$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H\rvert}u\left(\sum_{i\in I} x_i\right)$$
 

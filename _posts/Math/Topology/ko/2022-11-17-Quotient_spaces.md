@@ -107,7 +107,7 @@ $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset
 
 이는 두 번째 혹은 세 번째 조건이 정확히 $$\bar{f}^{-1}$$ 또한 연속이라는 의미이기 때문에 자명하다.
 
-한편, 위와 동일한 상황에서 $$f$$의 <em_ko>연속인</em_ko> section $$s:Y\rightarrow X$$가 존재한다 하자. 그럼 $$f$$는 전사함수이므로 $$i=\id_Y$$이다. 이제 $$\bar{f}$$와 $$p\circ s$$는 모두 연속이며,
+한편, 위와 동일한 상황에서 $$f$$의 <em-ko>연속인</em-ko> section $$s:Y\rightarrow X$$가 존재한다 하자. 그럼 $$f$$는 전사함수이므로 $$i=\id_Y$$이다. 이제 $$\bar{f}$$와 $$p\circ s$$는 모두 연속이며,
 
 $$\bar{f}\circ(p\circ s)=f\circ s=\id_Y$$
 

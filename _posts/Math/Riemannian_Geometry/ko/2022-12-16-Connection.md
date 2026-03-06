@@ -19,7 +19,7 @@ weight: 2
 
 ## 접속과 공변미분
 
-Lie derivative를 이용하면 벡터장이나 differential form을 미분할 수 있지만, 이 개념을 임의의 vector bundle $$\pi:E\rightarrow M$$의 section $$\Gamma(E)$$로 확장하는 것은 불가능하다. Tangent bundle $$TM$$ 위에서는 integral flow $$\phi$$ 위의 두 점 $$p,q$$가 주어졌을 때, 두 tangent space $$T_pM$$과 $$T_qM$$을 잇는 자연스러운 isomorphism $$d\phi^{-t}$$가 존재했지만, 임의의 vector bundle $$E$$의 두 fiber $$E_p$$와 $$E_q$$ 사이에는 이러한 함수가 존재하지 않기 때문이다. 따라서 우리는 이들 fiber들을 <em_ko>이어주는</em_ko> *connection*이라는 것을 추가로 정의한다. 
+Lie derivative를 이용하면 벡터장이나 differential form을 미분할 수 있지만, 이 개념을 임의의 vector bundle $$\pi:E\rightarrow M$$의 section $$\Gamma(E)$$로 확장하는 것은 불가능하다. Tangent bundle $$TM$$ 위에서는 integral flow $$\phi$$ 위의 두 점 $$p,q$$가 주어졌을 때, 두 tangent space $$T_pM$$과 $$T_qM$$을 잇는 자연스러운 isomorphism $$d\phi^{-t}$$가 존재했지만, 임의의 vector bundle $$E$$의 두 fiber $$E_p$$와 $$E_q$$ 사이에는 이러한 함수가 존재하지 않기 때문이다. 따라서 우리는 이들 fiber들을 <em-ko>이어주는</em-ko> *connection*이라는 것을 추가로 정의한다. 
 
 <div class="definition" markdown="1">
 

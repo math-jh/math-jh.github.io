@@ -21,13 +21,13 @@ weight: 4
 
 ## 닫힌집합
 
-[§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)에 의하여, 집합 $$X$$ 위에 <em_ko>어떠한 집합이 닫힌 집합인지</em_ko>를 알려주는 집합들의 모임 $$\mathcal{C}$$를 정의하는 것으로 $$X$$에 위상구조를 줄 수 있다. 이는 원래의 정의와 거의 다르지 않지만, 특히 대수기하학에서 Zariski topology를 정의할 때 유용하게 사용할 수 있다.
+[§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)에 의하여, 집합 $$X$$ 위에 <em-ko>어떠한 집합이 닫힌 집합인지</em-ko>를 알려주는 집합들의 모임 $$\mathcal{C}$$를 정의하는 것으로 $$X$$에 위상구조를 줄 수 있다. 이는 원래의 정의와 거의 다르지 않지만, 특히 대수기하학에서 Zariski topology를 정의할 때 유용하게 사용할 수 있다.
 
 ## Closure axiom
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1 (Kuratowski closure axiom)**</ins> 임의의 <em_ko>집합</em_ko> $$X$$에 대하여, 함수 $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$가 다음의 조건들을 모두 만족한다 하자.
+<ins id="def1">**정의 1 (Kuratowski closure axiom)**</ins> 임의의 <em-ko>집합</em-ko> $$X$$에 대하여, 함수 $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$가 다음의 조건들을 모두 만족한다 하자.
 
 - $$A\subset\cl(A)$$
 - $$\cl(\cl(A))=\cl(A)$$

@@ -86,7 +86,7 @@ $$a\sim e\implies gag^{-1}\sim geg^{-1}=e$$
 
 ## 잉여류
 
-이제 group $$G$$와, 임의의 subgroup $$H$$를 생각하자. $$H$$가 normal이 아니더라도 위의 논의에서 얻어낸 $$\sim_{\tiny r}$$과 $$\sim_{\tiny l}$$은 어쨌든 동치관계이므로, <em_ko>몫집합</em_ko> $$G/{\sim_{\tiny r}}$$과 $$G/{\sim_{\tiny l}}$$이 어떻게 생겼는지를 살펴볼 수 있다. 
+이제 group $$G$$와, 임의의 subgroup $$H$$를 생각하자. $$H$$가 normal이 아니더라도 위의 논의에서 얻어낸 $$\sim_{\tiny r}$$과 $$\sim_{\tiny l}$$은 어쨌든 동치관계이므로, <em-ko>몫집합</em-ko> $$G/{\sim_{\tiny r}}$$과 $$G/{\sim_{\tiny l}}$$이 어떻게 생겼는지를 살펴볼 수 있다. 
 
 우선 $$G/{\sim_{\tiny r}}$$의 원소를 생각해보자. 임의의 $$a\in G$$와 그 equivalence class $$[a]_{\tiny r}$$에 대하여,
 
@@ -130,7 +130,7 @@ $$Ha\mapsto a^{-1}H$$
 
 </div>
 
-이 명제는 $$G$$ 혹은 $$H$$가 무한집합일 때에도 성립하지만, 특별히 이들이 유한일 경우, <phrase>Group $$G$$의 임의의 subgroup $$H$$에 대하여, $$\lvert H\rvert$$는 $$\lvert G\rvert$$의 약수</phrase>라는 결과를 얻는다.
+이 명제는 $$G$$ 혹은 $$H$$가 무한집합일 때에도 성립하지만, 특별히 이들이 유한일 경우, <phrase>Group $G$의 임의의 subgroup $H에 대하여, $\lvert H\rvert$는 \lvert G\rvert의 약수</phrase>라는 결과를 얻는다.
 
 
 

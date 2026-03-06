@@ -71,7 +71,7 @@ Frobenius endomorphism $$\Frob_p:\mathbb{K}\rightarrow \mathbb{K}$$의 image를 
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Field extension $$\mathbb{L}/\mathbb{K}$$가 *$$p$$-radical*이라는 것은 $$\mathbb{L}$$의 임의의 원소가 $$p$$-radical인 것이다. 만일 $$\mathbb{L}$$의 <em_ko>모든</em_ko> 원소 $$x$$에 대하여 $$x^{p^e}\in \mathbb{K}$$가 성립하도록 하는 정수 $$e$$가 존재한다면, 이러한 성질을 만족하는 $$e$$들 중 가장 작은 것을 $$\mathbb{L}$$의 *height*라 부른다. 
+<ins id="def4">**정의 4**</ins> Field extension $$\mathbb{L}/\mathbb{K}$$가 *$$p$$-radical*이라는 것은 $$\mathbb{L}$$의 임의의 원소가 $$p$$-radical인 것이다. 만일 $$\mathbb{L}$$의 <em-ko>모든</em-ko> 원소 $$x$$에 대하여 $$x^{p^e}\in \mathbb{K}$$가 성립하도록 하는 정수 $$e$$가 존재한다면, 이러한 성질을 만족하는 $$e$$들 중 가장 작은 것을 $$\mathbb{L}$$의 *height*라 부른다. 
 
 </div>
 

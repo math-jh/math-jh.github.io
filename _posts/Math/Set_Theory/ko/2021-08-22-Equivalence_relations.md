@@ -91,7 +91,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 <ins id="ex5">**예시 5**</ins> 집합 $$A$$ 위에서 <phrase>$$x=y$$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $$x$$의 equivalence class는 집합 $$\{x\}$$이다. 한편 동일한 예시에서 <phrase>$$x\in A$$이고 $$y\in A$$</phrase> 또한 동치관계였는데, 이 경우 $$x$$의 equivalence class는 $$A$$ 전체가 된다. 
 
-우리는 앞선 [예시 2](#ex2)에서 $$\Delta_A$$가 가장 <em_ko>작고</em_ko>, $$A\times A$$가 가장 <em_ko>크다</em_ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $$\Delta_A$$가 가장 *finer*한 동치관계이고, $$A\times A$$는 가장 *coarser*한 동치관계라고 하는 것이 일반적이다. ([§집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#def1))
+우리는 앞선 [예시 2](#ex2)에서 $$\Delta_A$$가 가장 <em-ko>작고</em-ko>, $$A\times A$$가 가장 <em-ko>크다</em-ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $$\Delta_A$$가 가장 *finer*한 동치관계이고, $$A\times A$$는 가장 *coarser*한 동치관계라고 하는 것이 일반적이다. ([§집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#def1))
 
 </div>
 

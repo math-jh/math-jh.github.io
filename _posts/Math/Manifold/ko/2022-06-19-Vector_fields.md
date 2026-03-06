@@ -47,7 +47,7 @@ weight: 11
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$X$$가 $$C^\infty$$라면 $$X\|_U$$가 $$C^\infty$$인 것은 자명하다. 한편, $$TM$$에서 정의된 함수로서 $$dx^i$$들은 coordinate system $$\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$$의 성분함수들이므로 마찬가지로 $$C^\infty$$이고, 따라서 이들의 합성
+우선 $$X$$가 $$C^\infty$$라면 $$X\vert_U$$가 $$C^\infty$$인 것은 자명하다. 한편, $$TM$$에서 정의된 함수로서 $$dx^i$$들은 coordinate system $$\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$$의 성분함수들이므로 마찬가지로 $$C^\infty$$이고, 따라서 이들의 합성
 
 $$a^i(p)=dx^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg|_p\right)=dx^i|_p\circ(X|_U)_p$$
 

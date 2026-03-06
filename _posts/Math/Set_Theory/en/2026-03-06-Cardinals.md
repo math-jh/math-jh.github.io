@@ -69,7 +69,7 @@ Then
 2. If there exists a bijection $$f:A\rightarrow B$$ between sets $$A,B$$, then its inverse $$f^{-1}:B\rightarrow A$$ is a bijection from $$B$$ to $$A$$.
 3. The composition of two bijections is also a bijection.
 
-From the above, the only condition from the definition of an equivalence relation that is not satisfied is that the above relation is reflexive <em_ko>on a particular set $$U$$</em_ko>, and thus if we can resolve the problem that a universal set does not exist, we can think of this relation as an equivalence relation defined on a universal set.
+From the above, the only condition from the definition of an equivalence relation that is not satisfied is that the above relation is reflexive <em-ko>on a particular set $$U$$</em-ko>, and thus if we can resolve the problem that a universal set does not exist, we can think of this relation as an equivalence relation defined on a universal set.
 
 Although this is not a rigorous solution, we will proceed under the assumption that this problem has been resolved. (See: [Wikipedia, Class](https://en.wikipedia.org/wiki/Class_(set_theory)))
 

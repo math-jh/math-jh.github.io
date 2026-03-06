@@ -281,7 +281,7 @@ $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&E\end{pmatrix}\begi
 
 $$\det\begin{pmatrix}A_{11}&A_{12}&\cdots&A_{1n}\\O&A_{22}&\cdots&A_{2n}\\\vdots&\vdots&\ddots&\vdots\\O&O&\cdots&A_{nn}\end{pmatrix}=\det A_{11}\det A_{22}\cdots\det A_{nn}$$
 
-이 성립한다. 다만 블록행렬로 표현하였을 때 삼각행렬이 되지 않는 경우에는 비슷한 결과가 성립하지 <em_ko>않는다</em_ko>. 예컨대 다음 블록행렬
+이 성립한다. 다만 블록행렬로 표현하였을 때 삼각행렬이 되지 않는 경우에는 비슷한 결과가 성립하지 <em-ko>않는다</em-ko>. 예컨대 다음 블록행렬
 
 $$\begin{pmatrix}A&B\\C&D\end{pmatrix}$$
 

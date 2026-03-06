@@ -135,7 +135,7 @@ $$\begin{aligned}\sum_{i,j\geq 0} a_{i,j} T_1^iT_2^j&=\sum_{j\geq 0} a_{j,j}T_1^
 
 $$\left(\sum_{j\geq 1} a_{j,j}(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 1}a_{j+d,j}T_1^d(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 1}a_{j,j+d}T_2^d(T_1^jT_2^j-1)\right)$$
 
-이 된다. 이 때 각각의 $$T_1^jT_2^j-1$$는 $$(T_1T_2-1)$$에 포함되므로 위의 식의 kernel은 <em_ko>정확히</em_ko> $$(S^{-1}A)_0[T_1,T_2]$$의 ideal $$(T_1T_2-1)$$에 해당한다. 한편 이 homomorphism은 정의에 의해 surjective이므로 원하는 결과를 얻는다. 
+이 된다. 이 때 각각의 $$T_1^jT_2^j-1$$는 $$(T_1T_2-1)$$에 포함되므로 위의 식의 kernel은 <em-ko>정확히</em-ko> $$(S^{-1}A)_0[T_1,T_2]$$의 ideal $$(T_1T_2-1)$$에 해당한다. 한편 이 homomorphism은 정의에 의해 surjective이므로 원하는 결과를 얻는다. 
 
 </details>
 

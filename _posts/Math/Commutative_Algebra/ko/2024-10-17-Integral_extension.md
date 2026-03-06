@@ -82,7 +82,7 @@ $$(\phi[\x](p))(\x)=\phi(a_n)\x^n+\cdots+\phi(a_0)\in E[\x]$$
 2. $$E$$의 원소 $$x$$가 $$\phi$$에 대해 *integral<sub>정수적</sub>*이라는 것은 적당한 monic polynomial $$p\in A[\x]$$가 존재하여 $$(\phi\[\x\](p))(x)=0$$인 것이다. $$E$$의 모든 원소가 $$\phi$$에 대해 integral이라면, $$\phi$$를 *integral homomorphism<sub>정수적 준동형사상</sub>*이라 부른다. 만일 extension $$\phi$$가 integral homomorphism이라면, $$E$$를 $$A$$의 *integral extension<sub>정수적 확장</sub>*이라 부른다. 
 3. $$E$$의 원소 중, $$\phi$$에 대해 integral인 원소를 모두 모은 것을 *$$E$$에서의 $$A$$의 integral closure<sub>정수적 폐포</sub>* 혹은 *$$E$$ 안에서의 $$A$$의 normalization<sub>정규화</sub>*라 부른다. 만일 $$A$$가 integral domain이라면, $$\Frac(A)$$ 안에서의 $$A$$의 integral closure를 별다른 수식어 없이 *$$A$$의 normalization*이라 부른다. Integral domain $$A$$가 *normal domain<sub>정규정역</sub>*인 것은 $$A$$의 normalization이 자기 자신인 것이다. 
 4. $$A$$-module $$\phi^\ast E$$가 finitely generated $$A$$-module이라면, $$\phi: A \rightarrow E$$를 *finite homomorphism<sub>유한 준동형사상</sub>*이라 부른다. 
-5. $$A$$-module $$\phi^\ast E$$가 <em_ko>$$A$$-algebra로서</em_ko> finitely generated라면, $$\phi: A \rightarrow E$$를 *finite type homomorphism<sub>유한형 준동형사상</sub>*이라 부른다. 
+5. $$A$$-module $$\phi^\ast E$$가 <em-ko>$$A$$-algebra로서</em-ko> finitely generated라면, $$\phi: A \rightarrow E$$를 *finite type homomorphism<sub>유한형 준동형사상</sub>*이라 부른다. 
 
 </div>
 

@@ -21,7 +21,7 @@ weight: 11
 
 지난 글에서 각각 $$n$$차원, $$m$$차원인 두 $$\mathbb{K}$$-벡터공간 $$V,W$$에 대하여 $$\Hom(V,W)$$는 $$mn$$차원 $$\mathbb{K}$$-벡터공간이 된다는 것을 살펴보았다. 또 $$m\times n$$ 행렬들의 공간 $$\Mat_{m\times n}(\mathbb{K})$$ 또한 $$mn$$차원의 $$\mathbb{K}$$-벡터공간이다. 그럼 [§동형사상, ⁋따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#cor4)로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
 
-이번 글에서 증명할 선형대수학의 기본정리[^1]는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em_ko>자연스러운</em_ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 
+이번 글에서 증명할 선형대수학의 기본정리[^1]는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em-ko>자연스러운</em-ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 
 
 ## 기본정리: 유클리드 공간
 
@@ -267,7 +267,7 @@ $$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
 
 </div>
 
-즉 행렬 $$A,B$$가 닮은 행렬이라는 것은, 고정된 벡터공간 $$V$$에 대해 $$A$$를 <em_ko>basis $$\mathcal{B}$$에 대한 선형변환 $$L:V\rightarrow V$$의 행렬표현</em_ko>이라 생각했을 때, 적당한 basis $$\mathcal{C}$$가 존재하여 $$B$$를 <em_ko>basis $$\mathcal{C}$$에 대한 $$L$$의 행렬표현</em_ko>이라 생각할 수 있는 것이다. 그럼 이 때 
+즉 행렬 $$A,B$$가 닮은 행렬이라는 것은, 고정된 벡터공간 $$V$$에 대해 $$A$$를 <em-ko>basis $$\mathcal{B}$$에 대한 선형변환 $$L:V\rightarrow V$$의 행렬표현</em-ko>이라 생각했을 때, 적당한 basis $$\mathcal{C}$$가 존재하여 $$B$$를 <em-ko>basis $$\mathcal{C}$$에 대한 $$L$$의 행렬표현</em-ko>이라 생각할 수 있는 것이다. 그럼 이 때 
 
 $$A=[L]_{\mathcal{B}}^\mathcal{B}=[\id_V]^\mathcal{B}_\mathcal{C}[L]^\mathcal{C}_\mathcal{C}[\id_V]^\mathcal{C}_\mathcal{B}=PBP^{-1}$$
 

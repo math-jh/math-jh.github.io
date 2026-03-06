@@ -213,7 +213,7 @@ $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 
 $$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}: y^2+z^2=1-x_0^2\}$$
 
-이다. 이를 기하학적으로 표현하면, 각각의 $$x_0\in \mathbb{R}_x$$마다 원 $$y^2+z^2=1-x_0^2$$가 대응된 상황으로 볼 수 있으며, 따라서 $$\pi$$를 <em_ko>$$x$$축으로 parametrize된 원들의 family</em_ko>로 생각할 수 있다. 
+이다. 이를 기하학적으로 표현하면, 각각의 $$x_0\in \mathbb{R}_x$$마다 원 $$y^2+z^2=1-x_0^2$$가 대응된 상황으로 볼 수 있으며, 따라서 $$\pi$$를 <em-ko>$$x$$축으로 parametrize된 원들의 family</em-ko>로 생각할 수 있다. 
 
 </div>
 

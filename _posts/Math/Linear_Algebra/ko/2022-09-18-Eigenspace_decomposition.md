@@ -47,7 +47,7 @@ $$Av=\sum_{\lambda\in\sigma(A)}\lambda v_\lambda$$
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 임의의 $$\mathbb{K}$$-벡터공간 $$V$$가 그 부분공간 $$(W_i)_{i\in I}$$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $$v\in V$$가 주어질 때마다 적당한 $$(v_i)_{i\in I}$$가 <em_ko>유일하게</em_ko> 존재하여 
+<ins id="def1">**정의 1**</ins> 임의의 $$\mathbb{K}$$-벡터공간 $$V$$가 그 부분공간 $$(W_i)_{i\in I}$$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $$v\in V$$가 주어질 때마다 적당한 $$(v_i)_{i\in I}$$가 <em-ko>유일하게</em-ko> 존재하여 
 
 $$v=\sum_{i\in I} v_i$$
 
@@ -178,7 +178,7 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
 의 특성다항식은 $$(\mathbf{x}-1)^3=0$$이지만, 고윳값 $$1$$에 해당하는 고유벡터는 오직 $$(1,0,0)$$ 뿐임을 알 수 있다. 이를 이전 글에서 도입한 언어로 바꾸어 쓰자면, 고윳값 $$1$$의 대수적 중복도는 $$3$$이고, 기하적 중복도는 $$1$$이라 할 수 있다. 
 
-다음 명제는 <em_ko>항상</em_ko> 행렬의 고윳값의 기하적 중복도는 대수적 중복도를 넘을 수 없음을 보여준다. 
+다음 명제는 <em-ko>항상</em-ko> 행렬의 고윳값의 기하적 중복도는 대수적 중복도를 넘을 수 없음을 보여준다. 
 
 <div class="proposition" markdown="1">
 
@@ -383,7 +383,7 @@ $$A\vert_{W_\lambda(A)}: W_\lambda(A) \rightarrow W_\lambda(A)$$
 
 $$\ker (A_{W_\lambda(A)}-\mu I)_\ker (A_{W_\lambda(A)}-\mu I)^2$$
 
-도 비슷한 이유로 $$W_\lambda(A)$$ 위에서 성립하는 것을 안다. 즉, 우리는 이 과정을 귀납적으로 반복할 수 있다. 한편 우리는 $$\mathbb{K}$$가 algebraically closed임을 가정하고 있으므로 임의의 linear operator $$W \rightarrow W$$는, $$W$$가 $$0$$차원이 아닌 한, 항상 고유값을 가진다는 것을 알고 이로부터 이 귀납법이 <em_ko>정확히</em_ko> $$A$$의 eigenspace decomposition을 준다는 것을 안다. 
+도 비슷한 이유로 $$W_\lambda(A)$$ 위에서 성립하는 것을 안다. 즉, 우리는 이 과정을 귀납적으로 반복할 수 있다. 한편 우리는 $$\mathbb{K}$$가 algebraically closed임을 가정하고 있으므로 임의의 linear operator $$W \rightarrow W$$는, $$W$$가 $$0$$차원이 아닌 한, 항상 고유값을 가진다는 것을 알고 이로부터 이 귀납법이 <em-ko>정확히</em-ko> $$A$$의 eigenspace decomposition을 준다는 것을 안다. 
 
 </details>
 

@@ -44,13 +44,13 @@ weight: 2
 
 이제 $$\mathscr{O}_{\Spec A}$$를 정의해야 한다. 이는 이 글의 서두에서 언급한 것과 같이, $$\Spec A$$ 위에 정의된 대수적인 함수들의 sheaf이며, 우리는 [§스펙트럼, §§고전적인 대수기하학](/ko/math/algebraic_geometry/spectrums#고전적인-대수기하학)에서 $$A=\mathbb{K}[\x_1,\ldots, \x_n]$$일 경우 이들은 적당한 근방을 잡아 유리함수의 꼴로 나타낼 수 있는 함수임을 살펴보았다. 이 과정에서 중요한 역할을 한 것은 $$A$$의 원소, 즉 다항식을 $$\mathbb{A}_\mathbb{K}^n=\mSpec A$$ 위에서의 함수로 취급할 수 있다는 것이었는데, 일반적인 경우에는 $$A$$의 원소는 다항식도 아니고, 또 $$\Spec A$$의 점들을 $$A$$의 원소에 대입할 수도 없다. 
 
-따라서 이 논의를 일반화하기 위해 다음과 같이 생각하자. 우선 $$A$$의 원소는 앞선 예시와 마찬가지로 함수 $$f$$로 생각한다. 그럼 이 때 $$f$$의 점 $$\mathfrak{p}\in\Spec A$$에서의 <em_ko>함숫값</em_ko>은 canonical projection $$\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$$에 의한 $$f$$의 image이다. 그럼 특히 $$f$$가 점 $$\mathfrak{p}$$에서 $$0$$이 된다는 것은
+따라서 이 논의를 일반화하기 위해 다음과 같이 생각하자. 우선 $$A$$의 원소는 앞선 예시와 마찬가지로 함수 $$f$$로 생각한다. 그럼 이 때 $$f$$의 점 $$\mathfrak{p}\in\Spec A$$에서의 <em-ko>함숫값</em-ko>은 canonical projection $$\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$$에 의한 $$f$$의 image이다. 그럼 특히 $$f$$가 점 $$\mathfrak{p}$$에서 $$0$$이 된다는 것은
 
 $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
 이다. 즉 $$Z(f)$$는 $$f=0$$인 점들의 모임으로 이해할 수 있으며, 그 여집합인 principal open set $$D(f)$$는 $$f\neq 0$$인 점들의 모임으로 이해할 수 있다. 
 
-이러한 관점에서 우리는 $$\Spec A$$의 <em_ko>대수적인 함수들</em_ko>이 무엇인지 묘사할 수 있다. [§스펙트럼, §§고전적인 대수기하학](/ko/math/algebraic_geometry/spectrums#고전적인-대수기하학)과 마찬가지로, 이들은 각각의 열린집합이 주어질 때마다, 해당 열린집합에서 $$0$$이 되지 않는 함수들을 분모로 가질 수 있는 유리함수의 꼴로 나타날 수 있는 함수들이라 정의하면 된다. 
+이러한 관점에서 우리는 $$\Spec A$$의 <em-ko>대수적인 함수들</em-ko>이 무엇인지 묘사할 수 있다. [§스펙트럼, §§고전적인 대수기하학](/ko/math/algebraic_geometry/spectrums#고전적인-대수기하학)과 마찬가지로, 이들은 각각의 열린집합이 주어질 때마다, 해당 열린집합에서 $$0$$이 되지 않는 함수들을 분모로 가질 수 있는 유리함수의 꼴로 나타날 수 있는 함수들이라 정의하면 된다. 
 
 이제 principal open set $$D(f)$$가 주어졌다 하자. 그럼 정의에 의해, $$D(f)$$ 위의 대수적인 함수를 유리함수 $$g/h$$의 형태로 나타냈을 때, 그 분모에 들어갈 수 있는 함수 $$h$$들은 $$D(f)\subseteq D(h)$$를 만족해야 한다. 
 
@@ -384,7 +384,7 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 ![commuting_square](/assets/images/Math/Algebraic_Geometry/Affine_schemes-10.png){:style="width:11em" class="invert" .align-center}
 
-을 제외한 모든 면들은 commuting square임을 알고 있다. 따라서 위의 diagram에서 $$A \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$는 어떤 함수를 타고 가도 동일하게 결정되며, 이 함수에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)를 적용하면 $$A_{\varphi(\mathfrak{q})} \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$가 유일하게 결정된다. 이로부터 위의 diagram의 <em_ko>모든</em_ko> 면들이 commuting square인 것을 안다. 즉, $$\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$$도 local homomorphism이고, 따라서 $$\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$임을 안다. 이제 structure sheaf에서 $$\phi$$가 $$\varphi^\sharp$$과 같다는 것은 restriction map만 생각하면 충분하므로, 이상에서 원하는 주장이 증명된다. 
+을 제외한 모든 면들은 commuting square임을 알고 있다. 따라서 위의 diagram에서 $$A \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$는 어떤 함수를 타고 가도 동일하게 결정되며, 이 함수에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)를 적용하면 $$A_{\varphi(\mathfrak{q})} \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$가 유일하게 결정된다. 이로부터 위의 diagram의 <em-ko>모든</em-ko> 면들이 commuting square인 것을 안다. 즉, $$\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$$도 local homomorphism이고, 따라서 $$\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$임을 안다. 이제 structure sheaf에서 $$\phi$$가 $$\varphi^\sharp$$과 같다는 것은 restriction map만 생각하면 충분하므로, 이상에서 원하는 주장이 증명된다. 
 
 </details>
 
