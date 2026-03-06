@@ -39,30 +39,31 @@ $$M = \Hom(N, \mathbb{Z})$$
 
 $$N_{\mathbb{R}} = N \otimes_{\mathbb{Z}} \mathbb{R},\qquad M_{\mathbb{R}} = M \otimes_{\mathbb{Z}} \mathbb{R}$$
 
-을 도입하자. .
+을 도입하자. 이제 다음을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> $$N_{\mathbb{R}}$$의 부분집합 $$\sigma$$가 다음 조건을 만족할 때 **강한 정초 유리 다면체 콘(strongly convex rational polyhedral cone)**이라 한다:
+<ins id="def2">**정의 2**</ins> $$N_{\mathbb{R}}$$의 부분집합 $$\sigma$$가 다음 조건을 만족할 때, 이를 *strongly convex rational polyhedral cone<sub>강하게 볼록한 유리 다각형뿔</sub>*이라 한다:
 
-1. $$\sigma$$는 원점을 꼭짓점으로 하는 콘이다: $$\lambda v \in \sigma$$ for all $$v \in \sigma$$, $$\lambda \ge 0$$
-2. $$\sigma$$는 유한 개의 벡터 $$v_1, \ldots, v_s \in N$$의 음이 아닌 실수 조합으로 생성된다:
-   $$\sigma = \mathbb{R}_{\ge 0} v_1 + \cdots + \mathbb{R}_{\ge 0} v_s$$
-3. $$\sigma$$는 **강한 정초(strongly convex)**이다: $$\sigma \cap (-\sigma) = \{0\}$$
+1. $$\sigma$$는 원점을 꼭짓점으로 하는 cone이다: $$\lambda v \in \sigma$$ for all $$v \in \sigma$$, $$\lambda \ge 0$$
+2. $$\sigma$$는 유한 개의 벡터 $$v_1, \ldots, v_s \in N$$의 $$\mathbb{R}_{\ge 0}$$-linear combination으로 생성된다. 즉 $$\sigma = \mathbb{R}_{\ge 0} v_1 + \cdots + \mathbb{R}_{\ge 0} v_s$$이라 할 수 있다.
+3. $$\sigma$$는 *strongly convex*이다. 즉 $$\sigma \cap (-\sigma) = \{0\}$$이 성립한다.
 
 </div>
 
-조건 3은 콘이 원점을 통과하는 직선을 포함하지 않는다는 것을 의미한다.
+여기서 세 번째 조건은 $$\sigma$$가 원점을 지나는 직선을 포함하지 않는다는 것을 의미한다. 한편 각각의 cone $$\sigma$$에 대하여, 다음을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 콘 $$\sigma$$의 **면(face)** $$\tau$$는 어떤 $$u \in M_{\mathbb{R}}$$에 대해
+<ins id="def3">**정의 3**</ins> Cone $$\sigma$$의 **face<sub>면</sub>** $$\tau$$는 어떤 $$u \in M_{\mathbb{R}}$$에 대해
 
 $$\tau = \sigma \cap u^{\perp} = \{ v \in \sigma \mid \langle u, v \rangle = 0 \}$$
 
-로 얻어진다. $$\tau$$가 $$\sigma$$의 면일 때 $$\tau \prec \sigma$$라고 쓴다.
+로 얻어진다. $$\tau$$가 $$\sigma$$의 face일 때, 이를 $$\tau \prec \sigma$$라고 쓴다.
 
 </div>
+
+우리가 정의할 toric variety는 우선, 각각의 cone을 
 
 ## 아핀 토릭 다양체
 
