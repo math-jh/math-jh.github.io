@@ -35,7 +35,7 @@ weight: 15
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-결론에 반하여 limit point compact가 아닌 compact space $$X$$를 가정하자. 그럼 limit point를 갖지 않는 무한집합 $$A$$가 존재하며, 따라서 [§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8) 이후의 논증에 의하여 $$\cl(A)\setminus A=\emptyset$$이어야 한다. 즉 $$A$$는 닫힌집합이어야 하고, 따라서 compact이다. 한편 각각의 $$a\in A$$ 또한 $$A$$의 limit point가 아니므로, $$a$$의 적당한 열린근방 $$U_a$$가 존재하여 $$A\cap U_a=\\{a\\}$$이도록 할 수 있다. 그럼 $$(U\_a)\_{a\in A}$$는 finite subcover를 갖지 않는 $$A$$의 open covering이므로 모순이다.
+결론에 반하여 limit point compact가 아닌 compact space $$X$$를 가정하자. 그럼 limit point를 갖지 않는 무한집합 $$A$$가 존재하며, 따라서 [§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8) 이후의 논증에 의하여 $$\cl(A)\setminus A=\emptyset$$이어야 한다. 즉 $$A$$는 닫힌집합이어야 하고, 따라서 compact이다. 한편 각각의 $$a\in A$$ 또한 $$A$$의 limit point가 아니므로, $$a$$의 적당한 열린근방 $$U_a$$가 존재하여 $$A\cap U_a=\{a\}$$이도록 할 수 있다. 그럼 $$(U_a)_{a\in A}$$는 finite subcover를 갖지 않는 $$A$$의 open covering이므로 모순이다.
 
 </details>
 
@@ -63,13 +63,13 @@ weight: 15
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$X$$가 sequentially compact space라 하고, limit point를 갖지 않는 무한집합 $$A$$가 존재한다고 가정하자. 그럼 $$A$$의 적당한 countable subset $$A'$$를 택하여 이를 점열 $$(x\_n)\_{n\geq k}$$로 만들 수 있다. 그럼 $$X$$는 sequentially compact이므로 수렴하는 부분점열을 가지며, 이 점열이 $$x$$로 수렴한다 하면 $$x$$가 $$A'$$의 limit point가 되고 따라서 $$A$$의 limit point가 되는 것을 확인할 수 있다. 
+$$X$$가 sequentially compact space라 하고, limit point를 갖지 않는 무한집합 $$A$$가 존재한다고 가정하자. 그럼 $$A$$의 적당한 countable subset $$A'$$를 택하여 이를 점열 $$(x_n)_{n\geq k}$$로 만들 수 있다. 그럼 $$X$$는 sequentially compact이므로 수렴하는 부분점열을 가지며, 이 점열이 $$x$$로 수렴한다 하면 $$x$$가 $$A'$$의 limit point가 되고 따라서 $$A$$의 limit point가 되는 것을 확인할 수 있다. 
 
 </details>
 
 ## 점열의 수렴
 
-한편, [명제 5](#prop5)의 역 또한 성립하지 않는다. 이는 다소 의외라고 느껴질 수 있는데, limit point compact인 공간의 임의의 점열 $$(x\_n)$$이 주어졌을 때, 집합 $$A=\\{x_n\mid n\geq 1\\}$$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point를 갖기 때문이다. 문제는 집합 $$A$$의 limit point로 수렴하는 부분점열이 존재하지 않을수도 있다는 것에 있다. 
+한편, [명제 5](#prop5)의 역 또한 성립하지 않는다. 이는 다소 의외라고 느껴질 수 있는데, limit point compact인 공간의 임의의 점열 $$(x_n)$$이 주어졌을 때, 집합 $$A=\{x_n\mid n\geq 1\}$$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point를 갖기 때문이다. 문제는 집합 $$A$$의 limit point로 수렴하는 부분점열이 존재하지 않을수도 있다는 것에 있다. 
 
 <div class="example" markdown="1">
 
@@ -79,11 +79,11 @@ $$\mathcal{B}=\{(a,\infty)\mid a\in \mathbb{R}\}$$
 
 을 생각하면 이 모임은 [§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_bases#cor6)의 조건을 만족하고 따라서 $$\mathbb{R}$$ 위에 위상구조를 준다.
 
-이렇게 정의된 위상공간 $$\mathbb{R}$$의 점열 $$(x\_n)\_{n\geq 1}$$을 다음의 식
+이렇게 정의된 위상공간 $$\mathbb{R}$$의 점열 $$(x_n)_{n\geq 1}$$을 다음의 식
 
 $$x_n=-n$$
 
-으로 정의하자. 그럼 $$(x_n)$$은 수렴하는 부분점열을 갖지 않는다. 반면 $$A=\\{x_n\mid n\geq 1\\}$$는 limit point를 갖는데, 가령 $$-2$$는 $$A$$의 limit point이다. 이는 $$-2$$를 포함하는 임의의 열린집합은 반드시 $$-1\in A$$ 또한 포함해야 하기 때문이다.
+으로 정의하자. 그럼 $$(x_n)$$은 수렴하는 부분점열을 갖지 않는다. 반면 $$A=\{x_n\mid n\geq 1\}$$는 limit point를 갖는데, 가령 $$-2$$는 $$A$$의 limit point이다. 이는 $$-2$$를 포함하는 임의의 열린집합은 반드시 $$-1\in A$$ 또한 포함해야 하기 때문이다.
 
 </div>
 
@@ -158,11 +158,11 @@ $$X$$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-앞서 언급한 것과 같이 임의의 점열 $$(x\_n)$$이 주어졌을 때, 집합 $$A=\\{x_n\mid n\geq 1\\}$$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point $$x$$를 갖는다. 만일 $$x=x_n$$가 무한히 많은 $$n$$에 대해 성립한다면 또 다시 자명한 이유로 $$x$$에 수렴하는 부분점열을 잡을 수 있으므로, $$x_n=x$$를 만족하는 $$n$$아 오직 유한 개밖에 없다고 가정할 수 있고 이는 점열의 수렴에 영향을 주지 않으므로 일반성을 잃지 않고 $$x_n\neq x$$가 모든 $$n$$에 대해 성립한다고 가정할 수 있다. 
+앞서 언급한 것과 같이 임의의 점열 $$(x_n)$$이 주어졌을 때, 집합 $$A=\{x_n\mid n\geq 1\}$$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point $$x$$를 갖는다. 만일 $$x=x_n$$가 무한히 많은 $$n$$에 대해 성립한다면 또 다시 자명한 이유로 $$x$$에 수렴하는 부분점열을 잡을 수 있으므로, $$x_n=x$$를 만족하는 $$n$$아 오직 유한 개밖에 없다고 가정할 수 있고 이는 점열의 수렴에 영향을 주지 않으므로 일반성을 잃지 않고 $$x_n\neq x$$가 모든 $$n$$에 대해 성립한다고 가정할 수 있다. 
 
 한편 $$X$$는 first countable이므로, $$x$$의 countable local base $$\mathcal{B}(x)$$를 생각할 수 있다. $$\mathcal{B}(x)$$의 원소를 $$B_1,B_2,\ldots$$와 같이 적는다면, $$B_n$$을 $$B_1\cap\cdots\cap B_n$$으로 바꾸어 $$B_{n+1}\subseteq B_n$$이 모든 $$n$$에 대해 성립하도록 할 수 있다. 
 
-이제 $$B_1$$은 $$x$$를 포함하는 열린집합이고 $$x$$는 $$A$$의 limit point이므로, 적당한 $$n_1$$이 존재하여 $$x\_{n\_1}\in B_1$$이도록 할 수 있다. 이제 $$X$$가 $$T_1$$이므로 $$x$$를 포함하지만 $$x_1,\ldots,x\_{n\_1}$$을 포함하지 않는 열린집합 $$U\_2$$가 존재한다. 그럼 $$U\_2\cap B\_2$$는 다시 $$x$$를 포함하는 열린집합이고 $$x$$는 $$A$$의 limit point이므로, 적당한 $$n_2$$가 존재하여 $$x\_{n\_2}\in U_2\cap B_2$$이도록 할 수 있다. 이 과정을 반복하여 $$x$$로 수렴하는 $$A$$의 부분점열을 잡을 수 있다.
+이제 $$B_1$$은 $$x$$를 포함하는 열린집합이고 $$x$$는 $$A$$의 limit point이므로, 적당한 $$n_1$$이 존재하여 $$x_{n_1}\in B_1$$이도록 할 수 있다. 이제 $$X$$가 $$T_1$$이므로 $$x$$를 포함하지만 $$x_1,\ldots,x_{n_1}$$을 포함하지 않는 열린집합 $$U_2$$가 존재한다. 그럼 $$U_2\cap B_2$$는 다시 $$x$$를 포함하는 열린집합이고 $$x$$는 $$A$$의 limit point이므로, 적당한 $$n_2$$가 존재하여 $$x_{n_2}\in U_2\cap B_2$$이도록 할 수 있다. 이 과정을 반복하여 $$x$$로 수렴하는 $$A$$의 부분점열을 잡을 수 있다.
 
 </details>
 
@@ -194,7 +194,7 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**명제 14**</ins> 위상공간 $$X$$의 점열 $$(x\_n)\_{n\geq 1}$$에 대하여, $$(x\_n)\_{n\geq 1}$$이 $$x\in X$$로 수렴하는 것과 $$\mathbb{N}$$ 위에 정의된 Fréchet filter $$\mathcal{F}$$의 $$n\mapsto x\_n$$에 의한 image로 생성되는 filter가 $$x$$로 수렴하는 것이 동치이다. ([§위상공간의 다른 정의들, ⁋예시 4](/ko/math/topology/equivalent_formulations_of_topology#ex4))
+<ins id="prop14">**명제 14**</ins> 위상공간 $$X$$의 점열 $$(x_n)_{n\geq 1}$$에 대하여, $$(x_n)_{n\geq 1}$$이 $$x\in X$$로 수렴하는 것과 $$\mathbb{N}$$ 위에 정의된 Fréchet filter $$\mathcal{F}$$의 $$n\mapsto x_n$$에 의한 image로 생성되는 filter가 $$x$$로 수렴하는 것이 동치이다. ([§위상공간의 다른 정의들, ⁋예시 4](/ko/math/topology/equivalent_formulations_of_topology#ex4))
 
 </div>
 

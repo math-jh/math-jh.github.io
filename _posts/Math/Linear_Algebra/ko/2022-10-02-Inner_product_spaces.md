@@ -130,7 +130,7 @@ $$\lVert u+v\rVert^2+\lVert u-v\rVert^2=2\lVert u\rVert^2+2\lVert v\rVert^2$$
 
 $$\lVert v\rVert_1=\sum_{i=1}^n \lvert v_i\rvert$$
 
-을 통해 $$\lVert-\rVert\_1:\mathbb{R}^n\rightarrow\mathbb{R}$$을 정의하자. 그럼 $$\lVert-\rVert\_1$$가 norm의 조건을 모두 만족한다. 만일 적당한 내적 $$\langle-,-\rangle\_1$$이 존재하여, $$\lVert -\rVert\_1$$이 
+을 통해 $$\lVert-\rVert_1:\mathbb{R}^n\rightarrow\mathbb{R}$$을 정의하자. 그럼 $$\lVert-\rVert_1$$가 norm의 조건을 모두 만족한다. 만일 적당한 내적 $$\langle-,-\rangle_1$$이 존재하여, $$\lVert -\rVert_1$$이 
 
 $$\lVert v\rVert_1=\sqrt{\langle v,v\rangle_1}$$
 
@@ -138,7 +138,7 @@ $$\lVert v\rVert_1=\sqrt{\langle v,v\rangle_1}$$
 
 $$\lVert u+v\rVert_1^2+\lVert u-v\rVert_1^2=2\lVert u\rVert^2_1+2\lVert v\rVert^2_1$$
 
-이 성립하여야 한다. 그런데 $$u=(1,0,\ldots, 0)$$, 그리고 $$v=(0,1,\ldots, 0)$$을 대입하면 평행사변형 법칙이 만족되지 않는 것을 알 수 있다. 따라서 $$\lVert -\rVert\_1$$은 내적으로부터 유도되지 않는다.
+이 성립하여야 한다. 그런데 $$u=(1,0,\ldots, 0)$$, 그리고 $$v=(0,1,\ldots, 0)$$을 대입하면 평행사변형 법칙이 만족되지 않는 것을 알 수 있다. 따라서 $$\lVert -\rVert_1$$은 내적으로부터 유도되지 않는다.
 
 </div>
 
@@ -152,7 +152,7 @@ $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\rig
 
 우리는 $$\ch\mathbb{R}=0$$임을 알고 있으므로, [§쌍선형형식, ⁋명제 6](/ko/math/linear_algebra/bilinear_form#prop6)으로부터 임의의 $$\mathbb{R}$$-내적공간 $$V$$에는 orthogonal basis가 존재한다는 것을 안다. 
 
-임의의 $$\mathbb{R}$$-내적공간 $$V$$가 주어졌다 하고, $$V$$에 basis $$\mathcal{B}=\\{x_1,\ldots, x_n\\}$$이 주어졌다 하자. 우선
+임의의 $$\mathbb{R}$$-내적공간 $$V$$가 주어졌다 하고, $$V$$에 basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$이 주어졌다 하자. 우선
 
 $$\hat{x}_1:=x_1$$
 
@@ -160,7 +160,7 @@ $$\hat{x}_1:=x_1$$
 
 $$\hat{x}_k:=x_k-\sum_{i=1}^{k-1}\frac{\langle x_i,x_k\rangle}{\langle x_i,x_i\rangle}x_i$$
 
-으로 정의하면, 이 과정 끝에 얻어지는 집합 $$\\{\hat{x}_1,\ldots, \hat{x}_n\\}$$이 orthogonal basis가 된다는 것을 확인할 수 있다. 이렇게 임의의 basis로부터 orthogonal basis를 얻어내는 방법을 *Gram-Schmidt 과정*이라 부른다. 때때로 우리는 이렇게 얻어진 basis의 각 원소들의 크기가 1이기를 바랄 때도 있는데, 이를 위해서는 각 벡터를 자기 자신의 크기로 나누어주면 된다. 이러한 성질을 만족하는 basis를 *orthonormal basis*라 부른다. 만일 $$\mathcal{B}=\\{x_1, \ldots, x_n\\}$$이 orthonormal basis라면, 임의의 $$v\in V$$에 대하여
+으로 정의하면, 이 과정 끝에 얻어지는 집합 $$\{\hat{x}_1,\ldots, \hat{x}_n\}$$이 orthogonal basis가 된다는 것을 확인할 수 있다. 이렇게 임의의 basis로부터 orthogonal basis를 얻어내는 방법을 *Gram-Schmidt 과정*이라 부른다. 때때로 우리는 이렇게 얻어진 basis의 각 원소들의 크기가 1이기를 바랄 때도 있는데, 이를 위해서는 각 벡터를 자기 자신의 크기로 나누어주면 된다. 이러한 성질을 만족하는 basis를 *orthonormal basis*라 부른다. 만일 $$\mathcal{B}=\{x_1, \ldots, x_n\}$$이 orthonormal basis라면, 임의의 $$v\in V$$에 대하여
 
 $$v=v_1x_1+\cdots+v_nx_n$$
 
@@ -194,7 +194,7 @@ $$A^tA=AA^t=I$$
 
 Rank-nullity 정리로부터 $$A^tA=I$$가 성립한다면 반드시 $$AA^t=I$$ 또한 성립한다는 것을 안다. 따라서 $$\langle-,-\rangle$$을 보존하는 임의의 linear map의 행렬표현은 orthogonal matrix가 된다.
 
-$$V$$에 주어진 두 orthonormal basis $$\mathcal{B}=\\{x_1,\ldots, x_n\\}$$, $$\mathcal{C}=\\{x'\_1,\ldots, x'\_n\\}$$를 생각하자. 그럼 행렬 $$[\id]_\mathcal{C}^\mathcal{B}$$의 $$i$$번째 열은 $$x_i$$의 $$\mathcal{C}$$에 대한 행렬표현과 같다. 이제
+$$V$$에 주어진 두 orthonormal basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$, $$\mathcal{C}=\{x'_1,\ldots, x'_n\}$$를 생각하자. 그럼 행렬 $$[\id]_\mathcal{C}^\mathcal{B}$$의 $$i$$번째 열은 $$x_i$$의 $$\mathcal{C}$$에 대한 행렬표현과 같다. 이제
 
 $$x_i=\langle x_i, x'_1\rangle x'_1+\cdots+\langle x_i, x'_n\rangle x'_n$$
 
@@ -210,7 +210,7 @@ $$[\id]_\mathcal{B}^\mathcal{C}=\begin{pmatrix}\langle x'_1,x_1\rangle&\langle x
 
 ## Projection theorem
 
-이제 $$V$$가 $$\mathbb{R}$$-내적공간이라 하고, 그 부분공간 $$U\subseteq V$$가 주어졌다 하자. 만일 $$U\neq \\{0\\}$$이라면 $$u\neq 0$$을 만족하는 임의의 $$u\in U$$마다 $$\langle u,u\rangle>0$$이 성립하므로, 특히 $$V$$의 내적 $$\langle -,-\rangle$$을 $$U$$로 제한한 것이 non-degenerate이고 따라서 $$U$$ 위에 bilinear form을 정의한다. 이렇게 정의된 bilinear form이 내적의 성질을 갖는 것은 거의 자명하므로, $$\mathbb{R}$$-내적공간의 임의의 부분공간은 항상 자연스러운 $$\mathbb{R}$$-내적공간 구조를 갖는다. 따라서 $$U$$의 orthonormal basis $$\mathcal{B}=\\{x_1,\ldots, x_k\\}$$가 존재한다. 뿐만 아니라, $$\mathcal{B}$$를 포함하는 $$V$$의 basis를 하나 택한 후, Gram-Schmidt 과정을 $$x_1,\ldots, x_k$$들부터 반복하면 $$\mathcal{B}$$를 포함하는 $$V$$의 orthonormal basis가 존재한다는 것도 확인할 수 있다.
+이제 $$V$$가 $$\mathbb{R}$$-내적공간이라 하고, 그 부분공간 $$U\subseteq V$$가 주어졌다 하자. 만일 $$U\neq \{0\}$$이라면 $$u\neq 0$$을 만족하는 임의의 $$u\in U$$마다 $$\langle u,u\rangle>0$$이 성립하므로, 특히 $$V$$의 내적 $$\langle -,-\rangle$$을 $$U$$로 제한한 것이 non-degenerate이고 따라서 $$U$$ 위에 bilinear form을 정의한다. 이렇게 정의된 bilinear form이 내적의 성질을 갖는 것은 거의 자명하므로, $$\mathbb{R}$$-내적공간의 임의의 부분공간은 항상 자연스러운 $$\mathbb{R}$$-내적공간 구조를 갖는다. 따라서 $$U$$의 orthonormal basis $$\mathcal{B}=\{x_1,\ldots, x_k\}$$가 존재한다. 뿐만 아니라, $$\mathcal{B}$$를 포함하는 $$V$$의 basis를 하나 택한 후, Gram-Schmidt 과정을 $$x_1,\ldots, x_k$$들부터 반복하면 $$\mathcal{B}$$를 포함하는 $$V$$의 orthonormal basis가 존재한다는 것도 확인할 수 있다.
 
 이제 임의의 $$v\in V$$에 대하여, $$v$$의 $$U$$로의 *projection<sub>사영</sub>* $$\proj_U v$$를 다음의 식
 
@@ -220,7 +220,7 @@ $$\proj_U v=\sum_{i=1}^k \langle v, x_i\rangle x_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem8">**보조정리 8**</ins> 위와 같은 상황에서, 만일 $$\mathcal{B}=\\{x_1,\ldots, x_k\\},\mathcal{B}'=\\{x_1',\ldots, x_k'\\}$$가 $$U$$의 두 orthonormal basis라 하면, 임의의 $$v\in V$$에 대하여
+<ins id="lem8">**보조정리 8**</ins> 위와 같은 상황에서, 만일 $$\mathcal{B}=\{x_1,\ldots, x_k\},\mathcal{B}'=\{x_1',\ldots, x_k'\}$$가 $$U$$의 두 orthonormal basis라 하면, 임의의 $$v\in V$$에 대하여
 
 $$\sum_{i=1}^k \langle v, x_i\rangle x_i=\sum_{i=1}^k\langle v, x'_i\rangle x_i'$$
 
@@ -270,7 +270,7 @@ $$(1-\lambda)v=u-\lambda u'\in U$$
 
 가 성립한다. 이로부터 $$\lambda=1$$이거나 $$v\in U$$이다. 만일 $$\lambda=1$$이라면 $$v-u=v-u'$$로부터 $$u=u'$$이고, $$v\in U$$라면 $$\lVert v-w\rVert$$를 최소로 만드는 $$w$$는 $$w=v$$ 뿐이므로 이 경우에도 마찬가지로 $$u=u'$$이다. 따라서 이 식을 최소로 만드는 벡터는 유일하다. 
 
-이제 실제로 $$\proj_Uv$$가 실제로 $$\lVert v-w\rVert$$를 최소로 만드는 벡터임을 보여야 한다. $$U$$의 basis $$\\{x\_1,\ldots, x\_k\\}$$를 하나 택하고, 이를 포함하는 $$V$$의 orthonormal basis를 $$\\{x\_1,\ldots, x\_n\\}$$이라 하자. 그럼 $$v=\sum\_{i=1}^n v\_i x\_i$$, $$w=\sum\_{i=1}^k w\_i x\_i$$로부터
+이제 실제로 $$\proj_Uv$$가 실제로 $$\lVert v-w\rVert$$를 최소로 만드는 벡터임을 보여야 한다. $$U$$의 basis $$\{x_1,\ldots, x_k\}$$를 하나 택하고, 이를 포함하는 $$V$$의 orthonormal basis를 $$\{x_1,\ldots, x_n\}$$이라 하자. 그럼 $$v=\sum_{i=1}^n v_i x_i$$, $$w=\sum_{i=1}^k w_i x_i$$로부터
 
 $$\lVert v-w\rVert=\left\lVert\sum_{i=1}^k(v_i-w_i)x_i+\sum_{i=k+1}^n v_ix_i\right\rVert=\sum_{i=1}^k (v_i-w_i)^2+\sum_{i=k+1}^n v_i^2\geq \sum_{i=k+1}^n v_i^2$$
 

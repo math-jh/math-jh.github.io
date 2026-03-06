@@ -67,11 +67,11 @@ $$F=\{(x_1,f(x_1)), (x_2,f(x_2)),\cdots\}$$
 
 and the *equivalence relation*, which we have not yet defined, can also be represented as a set of ordered pairs in this way.
 
-However, among the sets we have defined thus far, there is nothing that can serve the role of ordered pairs as we encountered in middle and high school. For example, since $$\\{A,B\\}=\\{B,A\\}$$, we cannot distinguish the order of $$A$$ and $$B$$ simply by using the axiom of pair once.
+However, among the sets we have defined thus far, there is nothing that can serve the role of ordered pairs as we encountered in middle and high school. For example, since $$\{A,B\}=\{B,A\}$$, we cannot distinguish the order of $$A$$ and $$B$$ simply by using the axiom of pair once.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> An *ordered pair* $$(x,y)$$ is defined as the set $$\big\\{\\{x\\}, \\{x,y\\}\big\\}$$.
+<ins id="def4">**Definition 4**</ins> An *ordered pair* $$(x,y)$$ is defined as the set $$\big\{\{x\}, \{x,y\}\big\}$$.
 
 </div>
 
@@ -85,9 +85,9 @@ For this definition to be meaningful, we must first establish the following lemm
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The sets $$\\{x\\}=\\{x,x\\}$$ and $$\\{x,y\\}$$ each exist by the axiom of pair, and therefore the set $$\big\\{\\{x\\}, \\{x,y\\}\big\\}$$ also exists by the axiom of pair.
+The sets $$\{x\}=\{x,x\}$$ and $$\{x,y\}$$ each exist by the axiom of pair, and therefore the set $$\big\{\{x\}, \{x,y\}\big\}$$ also exists by the axiom of pair.
 
-For uniqueness, $$\\{x\\}=\\{x,x\\}$$ and $$\\{x,y\\}$$ are first uniquely determined, and by applying the axiom of pair to these again, we can verify that the set $$(x,y)$$ obtained is also uniquely determined by using extensionality twice.
+For uniqueness, $$\{x\}=\{x,x\}$$ and $$\{x,y\}$$ are first uniquely determined, and by applying the axiom of pair to these again, we can verify that the set $$(x,y)$$ obtained is also uniquely determined by using extensionality twice.
 
 </details>
 
@@ -101,7 +101,7 @@ We have confirmed that the ordered pair $$(x,y)$$ is well-defined; however, we m
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-If $$x=x'$$ and $$y=y'$$, then $$(x,y)=(x', y')$$ is obvious. This is because $$\\{x\\}=\\{x'\\}$$ and $$\\{x,y\\}=\\{x', y'\\}$$.
+If $$x=x'$$ and $$y=y'$$, then $$(x,y)=(x', y')$$ is obvious. This is because $$\{x\}=\{x'\}$$ and $$\{x,y\}=\{x', y'\}$$.
 
 Now, conversely, assume $$(x,y)=(x',y')$$. By definition,
 
@@ -113,9 +113,9 @@ holds. Since exactly one of $$x=y$$ or $$x\neq y$$ must hold, we proceed by cons
 
     $$\big\{\{x\},\{x,x\}\big\}=\big\{\{x\},\{x\}\big\}=\big\{\{x\}\big\}$$
 
-    so $$\big\\{\\{x\\}\big\\}=\big\\{\\{x'\\},\\{x',y'\\}\big\\}$$. Therefore, $$\\{x\\}=\\{x'\\}=\\{x',y'\\}$$, so $$x=x'=y'$$, and thus $$x=x'=y=y'$$. That is, since $$x=x'$$ and $$y=y'$$, the proof is complete for this case.
+    so $$\big\{\{x\}\big\}=\big\{\{x'\},\{x',y'\}\big\}$$. Therefore, $$\{x\}=\{x'\}=\{x',y'\}$$, so $$x=x'=y'$$, and thus $$x=x'=y=y'$$. That is, since $$x=x'$$ and $$y=y'$$, the proof is complete for this case.
 
-- The other case is $$x\neq y$$. In this case, since $$\\{x,y\\}\neq\\{x'\\}$$, for the two ordered pairs to be equal, we must have $$\\{x\\}=\\{x'\\}$$ and $$\\{x,y\\}=\\{x',y'\\}$$. From $$\\{x\\}=\\{x'\\}$$ we obtain $$x=x'$$, and together with $$\\{x,y\\}=\\{x',y'\\}$$ this yields $$y=y'$$. Thus, the proof is complete for this case as well.
+- The other case is $$x\neq y$$. In this case, since $$\{x,y\}\neq\{x'\}$$, for the two ordered pairs to be equal, we must have $$\{x\}=\{x'\}$$ and $$\{x,y\}=\{x',y'\}$$. From $$\{x\}=\{x'\}$$ we obtain $$x=x'$$, and together with $$\{x,y\}=\{x',y'\}$$ this yields $$y=y'$$. Thus, the proof is complete for this case as well.
 
 </details>
 
@@ -131,11 +131,11 @@ then we obtain the subset
 
 $$\left\{s\in\bigcup z\mid P(s)\right\}$$
 
-of the preceding set $$\bigcup z$$. This set is the singleton $$\\{x\\}$$. Defining a property $$Q$$ similarly yields the singleton $$\\{y\\}$$.
+of the preceding set $$\bigcup z$$. This set is the singleton $$\{x\}$$. Defining a property $$Q$$ similarly yields the singleton $$\{y\}$$.
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> For the two sets $$\\{x\\}$$ and $$\\{y\\}$$ obtained through the above process, the unique element $$x$$ of $$\\{x\\}$$ is called the *first component* of $$z=(x,y)$$, and the unique element $$y$$ of $$\\{y\\}$$ is called the *second component* of $$z=(x,y)$$. These are denoted respectively as
+<ins id="def7">**Definition 7**</ins> For the two sets $$\{x\}$$ and $$\{y\}$$ obtained through the above process, the unique element $$x$$ of $$\{x\}$$ is called the *first component* of $$z=(x,y)$$, and the unique element $$y$$ of $$\{y\}$$ is called the *second component* of $$z=(x,y)$$. These are denoted respectively as
 
 $$x=\pr_1 z,\qquad y=\pr_2 z$$
 

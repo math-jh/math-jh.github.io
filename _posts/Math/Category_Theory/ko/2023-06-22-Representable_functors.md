@@ -66,7 +66,7 @@ $$\Phi:\{\text{natural transformations from $$\Hom_\mathcal{A}(A,-)$$ to $$F$$}\
 
 우선 위의 함수가 어떻게 작동하는지를 잠깐 살펴보면, $$\Hom_\mathcal{A}(A,-)$$에서 $$F$$로의 natural transformation은 임의의 대상 $$X$$에 대하여, 두 집합 $$\Hom_\mathcal{A}(A,X)$$에서 $$F(X)$$로의 함수 $$\alpha_X$$로 주어진다. 특별히 $$X=A$$인 경우, 함수 $$\alpha_A$$는 $$\Hom_\mathcal{A}(A,A)$$에서 $$F(A)$$로의 함수로 주어지며, $$\id_A\in\Hom_\mathcal{A}(A,A)$$이므로 $$\alpha_A(\id_A)\in F(A)$$이다.
 
-이 함수가 bijection임을 보이기 위해서는 역함수를 만들면 충분하다. 즉, 임의의 원소 $$x\in F(A)$$로부터 natural transformation $$\Psi(x)$$를 만들어내야 하고, 이 때 $$\Psi(x)$$는 다시 $$\mathcal{A}$$의 임의의 대상 $$X$$에 대하여 함수 $$\Psi(x)\_X:\Hom\_\mathcal{A}(A,X)\rightarrow F(X)$$로 주어진다. 그런데 $$\Psi(x)$$가 natural transformation이라면, 다음의 diagram이 commute해야 한다.
+이 함수가 bijection임을 보이기 위해서는 역함수를 만들면 충분하다. 즉, 임의의 원소 $$x\in F(A)$$로부터 natural transformation $$\Psi(x)$$를 만들어내야 하고, 이 때 $$\Psi(x)$$는 다시 $$\mathcal{A}$$의 임의의 대상 $$X$$에 대하여 함수 $$\Psi(x)_X:\Hom_\mathcal{A}(A,X)\rightarrow F(X)$$로 주어진다. 그런데 $$\Psi(x)$$가 natural transformation이라면, 다음의 diagram이 commute해야 한다.
 
 ![naturality](/assets/images/Math/Category_Theory/Representable_functors-1.png){:style="width:15em" class="invert" .align-center}
 
@@ -132,14 +132,14 @@ $$\Hom_{\Vect_k}(V\otimes W,-)\cong\operatorname{Bilin}(V,W;-)$$
 <ins id="def7">**정의 7**</ins> Functor $$F: \mathcal{A}\rightarrow \Set$$의 *category of elements*는 다음의 데이터로 이루어진 카테고리 $$\int F$$이다.
 
 - $$\int F$$의 대상들은 $$A\in \mathcal{A}$$와 $$x\in F(A)$$로 이루어진 pair $$(A,x)$$이다.
-- $$\int F$$의 morphism $$(A\_1,x\_1) \rightarrow (A\_2, x\_2)$$는 $$F(f)(x_1)=x_2$$를 만족하는 $$\mathcal{A}$$의 morphism $$f$$이다. 
+- $$\int F$$의 morphism $$(A_1,x_1) \rightarrow (A_2, x_2)$$는 $$F(f)(x_1)=x_2$$를 만족하는 $$\mathcal{A}$$의 morphism $$f$$이다. 
 
 </div>
 
 예컨대, $$\Hom_{\mathcal{A}}(A,-):\mathcal{A}\rightarrow\Set$$의 category of elements는 다음의 데이터로 구성된다.
 
 - $$\int \Hom_\mathcal{A}(A,-)$$의 대상들은 $$X\in \mathcal{A}$$와 $$\pi\in \Hom_\mathcal{A}(A,X)$$로 이루어진 pair $$(X,\pi)$$이다.
-- $$\int \Hom_\mathcal{A}(A,-)$$의 morphism $$f:(X\_1,\pi\_1)\rightarrow(X\_2,\pi\_2)$$은 $$\pi_2=\Hom_\mathcal{A}(A,f)(\pi_1)=f\circ\pi_1$$을 만족하는 $$\mathcal{A}$$의 morphism이다.
+- $$\int \Hom_\mathcal{A}(A,-)$$의 morphism $$f:(X_1,\pi_1)\rightarrow(X_2,\pi_2)$$은 $$\pi_2=\Hom_\mathcal{A}(A,f)(\pi_1)=f\circ\pi_1$$을 만족하는 $$\mathcal{A}$$의 morphism이다.
 
 즉, $$\int\Hom_\mathcal{A}(A,-)$$는 under category $${}_{A/}\mathcal{A}$$이다. 
 
@@ -163,7 +163,7 @@ $$\Phi:\{\text{natural transformations from $$\Hom_\mathcal{A}(A,-)$$ to $$F$$}\
 
 $$\Psi(x)_X(f)=F(f)(x)$$
 
-으로 정의했었다. 한편 $$\int F$$에서, $$(A,x)$$가 initial이라는 뜻은 임의의 $$(X,y)\in\int F$$를 가져올 때마다 $$\mathcal{A}$$에서의 morphism $$f:A \rightarrow X$$가 유일하게 존재하여 $$F(f)(x)=y\in F(X)$$인 것이다. 그런데 위의 식에 따라 $$F(f)(x)=\Psi(x)\_X(f)$$이고, $$X$$를 고정하면 $$y$$는 $$F(X)$$에서 임의로 택해올 수 있으므로 이를 다시 말하면 임의의 $$y\in F(X)$$가 주어질 때마다, $$y=\Psi(x)\_X(f)$$를 만족하는 $$f\in\Hom\_\mathcal{A}(A,X)$$를 반드시 유일하게 찾아올 수 있다는 뜻이다. 즉, $$\Psi(x)\_X$$가 isomorphism이고 $$X$$ 역시 임의로 택할 수 있으므로 $$\Psi(x)$$가 $$\Hom_\mathcal{A}(A,-)$$에서 $$F$$로의 natural isomorphism을 정의한다. 
+으로 정의했었다. 한편 $$\int F$$에서, $$(A,x)$$가 initial이라는 뜻은 임의의 $$(X,y)\in\int F$$를 가져올 때마다 $$\mathcal{A}$$에서의 morphism $$f:A \rightarrow X$$가 유일하게 존재하여 $$F(f)(x)=y\in F(X)$$인 것이다. 그런데 위의 식에 따라 $$F(f)(x)=\Psi(x)_X(f)$$이고, $$X$$를 고정하면 $$y$$는 $$F(X)$$에서 임의로 택해올 수 있으므로 이를 다시 말하면 임의의 $$y\in F(X)$$가 주어질 때마다, $$y=\Psi(x)_X(f)$$를 만족하는 $$f\in\Hom_\mathcal{A}(A,X)$$를 반드시 유일하게 찾아올 수 있다는 뜻이다. 즉, $$\Psi(x)_X$$가 isomorphism이고 $$X$$ 역시 임의로 택할 수 있으므로 $$\Psi(x)$$가 $$\Hom_\mathcal{A}(A,-)$$에서 $$F$$로의 natural isomorphism을 정의한다. 
 
 </details>
 

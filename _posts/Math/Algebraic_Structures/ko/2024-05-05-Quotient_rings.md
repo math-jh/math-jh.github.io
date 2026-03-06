@@ -44,7 +44,7 @@ $$(\alpha+x)(\alpha'+x')=\alpha\alpha'+x\alpha'+\alpha x'+xx'$$
 <ins id="prop2">**명제 2**</ins> Ring $$A$$와 two-sided ideal $$\mathfrak{a}$$에 대하여 다음이 성립한다.
 
 1. $$\alpha\mapsto \alpha+\mathfrak{a}$$로 정의된 함수 $$\pi:A\rightarrow A/\mathfrak{a}$$는 ring homomorphism이다.
-2. Ring homomorphism $$\phi:A \rightarrow B$$에 대하여, 만일 $$\phi(\mathfrak{a})=\\{0\\}$$이라면 $$A/\mathfrak{a}$$에서 $$B$$로 가는 유일한 $$\bar{\phi}$$가 존재하여 $$\phi=\bar{\phi}\circ\pi$$가 성립한다.
+2. Ring homomorphism $$\phi:A \rightarrow B$$에 대하여, 만일 $$\phi(\mathfrak{a})=\{0\}$$이라면 $$A/\mathfrak{a}$$에서 $$B$$로 가는 유일한 $$\bar{\phi}$$가 존재하여 $$\phi=\bar{\phi}\circ\pi$$가 성립한다.
 
 </div>
 <details class="proof" markdown="1">

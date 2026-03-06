@@ -17,7 +17,7 @@ weight: 7
 
 ---
 
-정의에 의해 $$\Sch$$는 $$\LRS$$의 full subcategory이다. ([§스킴, ⁋정의 1](/ko/math/algebraic_geometry/schemes#def1)) 즉 두 scheme $$X,Y$$가 주어졌을 떄, $$X$$에서 $$Y$$로의 scheme morphism은 연속함수 $$\varphi: X \rightarrow Y$$와 structure sheaf 사이의 morphism $$\varphi^\sharp: \mathscr{O}\_Y \rightarrow \varphi_\ast \mathscr{O}\_X$$으로 주어지며, 이 때 $$\varphi^\sharp$$는 각각의 stalk으로 제한하였을 때 local homomorphism이 되어야 한다. ([§아핀스킴, ⁋정의 2](/ko/math/algebraic_geometry/affine_schemes#def2)) 
+정의에 의해 $$\Sch$$는 $$\LRS$$의 full subcategory이다. ([§스킴, ⁋정의 1](/ko/math/algebraic_geometry/schemes#def1)) 즉 두 scheme $$X,Y$$가 주어졌을 떄, $$X$$에서 $$Y$$로의 scheme morphism은 연속함수 $$\varphi: X \rightarrow Y$$와 structure sheaf 사이의 morphism $$\varphi^\sharp: \mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$으로 주어지며, 이 때 $$\varphi^\sharp$$는 각각의 stalk으로 제한하였을 때 local homomorphism이 되어야 한다. ([§아핀스킴, ⁋정의 2](/ko/math/algebraic_geometry/affine_schemes#def2)) 
 
 위와 같이 scheme morphism $$f:X \rightarrow Y$$은 기본적으로 이미 우리가 정의했던 대상이다. 다음 글에서 우리는 scheme morphism의 성질들에 대해 살펴볼 것인데, 그 전에 우리는 scheme morphism을 이해하는 네 가지 방법을 제시한다. 
 
@@ -29,7 +29,7 @@ weight: 7
 
 <ins id="prop1">**명제 1**</ins> Scheme morphism $$\varphi: X \rightarrow Y$$가 주어졌다 하자. 그럼 $$X$$의 affine open subset $$U\cong\Spec A$$와 $$Y$$의 affine open subset $$V\cong\Spec B$$가 $$\varphi(U)\subseteq V$$를 만족한다면, $$\varphi\vert_U: U \rightarrow V$$는 affine scheme들 사이의 morphism이다. 
 
-거꾸로 $$X,Y$$의 두 affine open covering $$\\{U_i\\}$$와 $$\\{V_j\\}$$가 주어졌다 하고, affine scheme들 사이의 morphism $$\varphi_{ij}: U_i \rightarrow V_j$$가 주어졌다 하자. 만일 이들이 각각의 교집합 위에서 gluing condition을 만족하여 잘 정의된다면 $$\varphi_{ij}$$들은 scheme morphism $$\varphi: X \rightarrow Y$$를 만든다. 
+거꾸로 $$X,Y$$의 두 affine open covering $$\{U_i\}$$와 $$\{V_j\}$$가 주어졌다 하고, affine scheme들 사이의 morphism $$\varphi_{ij}: U_i \rightarrow V_j$$가 주어졌다 하자. 만일 이들이 각각의 교집합 위에서 gluing condition을 만족하여 잘 정의된다면 $$\varphi_{ij}$$들은 scheme morphism $$\varphi: X \rightarrow Y$$를 만든다. 
 
 </div>
 
@@ -55,7 +55,7 @@ $$\mathbb{A}^{n+1}_\mathbb{K}=\Spec \mathbb{K}[\x_0,\ldots, \x_n]$$
 
 $$\mathbb{A}^{n+1}_\mathbb{K}\setminus \{0\}=\bigcup_{i=0}^n D(\x_i)$$
 
-이고, $$D(\x\_i)\cong \Spec \mathbb{K}[\x\_0,\ldots, \x\_n]\_{\x\_i}$$이다. 이제 각각의 $$i$$에 대하여, $$\varphi\_i: D(\x\_i) \rightarrow D\_+(\x\_i)$$는 affine scheme들 사이의 morphism이므로 ring homomorphism과 동일하다. 그럼 다음 식
+이고, $$D(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{\x_i}$$이다. 이제 각각의 $$i$$에 대하여, $$\varphi_i: D(\x_i) \rightarrow D_+(\x_i)$$는 affine scheme들 사이의 morphism이므로 ring homomorphism과 동일하다. 그럼 다음 식
 
 $$\phi_i:\mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{K}[\x_0,\ldots, \x_n]_{\x_i};\qquad \x_{k/i}\mapsto  \frac{\x_k}{\x_i}$$
 
@@ -113,7 +113,7 @@ $$\Hom_\Sch(X, \Spec A)=\Hom_\LRS(X, \Spec A)\cong \Hom_\cRing(A, \Gamma(X, \mat
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> Ring $$A$$와 $$A$$-scheme $$X$$를 생각하고, $$X$$ 위에 정의된 함수들 $$f_0,\ldots, f_n\in \Gamma(X, \mathscr{O}\_X)$$이 주어졌다 하고, $$X$$의 affine open covering $$X=\bigcup U_j$$를 생각하자. 그럼
+<ins id="ex5">**예시 5**</ins> Ring $$A$$와 $$A$$-scheme $$X$$를 생각하고, $$X$$ 위에 정의된 함수들 $$f_0,\ldots, f_n\in \Gamma(X, \mathscr{O}_X)$$이 주어졌다 하고, $$X$$의 affine open covering $$X=\bigcup U_j$$를 생각하자. 그럼
 
 $$U_{ij}:=D(f_i)\cap U_j=D(f_i\vert_{U_j})\subseteq U_j$$
 

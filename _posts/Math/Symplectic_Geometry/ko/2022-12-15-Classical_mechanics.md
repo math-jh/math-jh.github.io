@@ -63,7 +63,7 @@ weight: 1
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> Phase space 상의 경로 $$z(t)=(x(t),y(t))$$ ($$t_0\leq t\leq t_1$$)가 위치조건 $$x(t\_0)=x\_0$$, $$x(t\_1)=x\_1$$을 만족하는 경로들 가운데 $$\mathcal{A}\_H$$의 극값인 것은 $$z$$가 다음의 *Hamilton's equation*
+<ins id="prop1">**명제 1**</ins> Phase space 상의 경로 $$z(t)=(x(t),y(t))$$ ($$t_0\leq t\leq t_1$$)가 위치조건 $$x(t_0)=x_0$$, $$x(t_1)=x_1$$을 만족하는 경로들 가운데 $$\mathcal{A}_H$$의 극값인 것은 $$z$$가 다음의 *Hamilton's equation*
 
 $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\partial x}$$
 
@@ -73,7 +73,7 @@ $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\pa
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이를 증명하기 위해, 위치조건 $$x_s(t\_0)=x\_0$$, $$x_s(t\_1)=x\_1$$을 만족하는 경로들의 1-parameter family $$(z\_s)=(x_s,y_s)$$가 주어졌다 하고, $$z_0=z$$라 하자. 그럼
+이를 증명하기 위해, 위치조건 $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$을 만족하는 경로들의 1-parameter family $$(z_s)=(x_s,y_s)$$가 주어졌다 하고, $$z_0=z$$라 하자. 그럼
 
 $$\begin{aligned}\frac{\partial}{\partial s}\bigg|_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg|_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg|_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s|_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}|_0\bigr\rangle-\bigl\langle\partial_sx_s|_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s|_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
 
@@ -81,11 +81,11 @@ $$\begin{aligned}\frac{\partial}{\partial s}\bigg|_{s=0}\mathcal{A}_H(z_s)&=\fra
 
 $$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s|_0\rangle\mathop{dt}=\bigl[\langle y,\partial_sx_s|_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s|_0\rangle\mathop{dt}$$
 
-을 생각하면, 우변의 첫째 항은 위치조건 $$x_s(t\_0)=x\_0$$, $$x_s(t\_1)=x\_1$$으로부터 $$0$$이 된다. 이를 앞선 식에 대입한 후 정리하면,
+을 생각하면, 우변의 첫째 항은 위치조건 $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$으로부터 $$0$$이 된다. 이를 앞선 식에 대입한 후 정리하면,
 
 $$\frac{\partial}{\partial s}\bigg|_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s|_0,\dot{x}-\partial_yH_t\rangle\mathop{dt}-\int_{t_0}^{t_1}\langle\partial_sx_s|_0,\dot{y}+\partial_xH_t\rangle\mathop{dt}$$
 
-이고, $$\partial_sx_s\|_0$$과 $$\partial_sy_s\|_0$$은 임의로 변할 수 있으므로 $$z$$가 $$\mathcal{A}_H$$의 극값이 되는 것은 두 식
+이고, $$\partial_sx_s\vert_0$$과 $$\partial_sy_s\vert_0$$은 임의로 변할 수 있으므로 $$z$$가 $$\mathcal{A}_H$$의 극값이 되는 것은 두 식
 
 $$\dot{x}-\partial_yH_t=0,\qquad\dot{y}+\partial_xH_t=0$$
 
@@ -93,7 +93,7 @@ $$\dot{x}-\partial_yH_t=0,\qquad\dot{y}+\partial_xH_t=0$$
 
 </details>
 
-벡터공간 $$\mathbb{R}^{2n}$$에서 정의된 (linear) complex structure[^1] $$J_0\in\End(\mathbb{R}^{2n})$$을 생각하자. Basis $$\\{x_1,\ldots, x_n,y_1,\ldots, y_n\\}$$에 대하여 이 linear map은 다음의 행렬
+벡터공간 $$\mathbb{R}^{2n}$$에서 정의된 (linear) complex structure[^1] $$J_0\in\End(\mathbb{R}^{2n})$$을 생각하자. Basis $$\{x_1,\ldots, x_n,y_1,\ldots, y_n\}$$에 대하여 이 linear map은 다음의 행렬
 
 $$J_0=\begin{pmatrix}0&-I\\I&0\end{pmatrix}$$
 

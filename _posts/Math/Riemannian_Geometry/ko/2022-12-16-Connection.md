@@ -96,7 +96,7 @@ $$\nabla_X\left(\sum_{j=1}^n Y^jE_j\right)=\sum_{j=1}^n \nabla_X(Y^jE_j)=\sum_{j
 
 $$\nabla_{E_i}E_j=\Gamma_{ij}^k E_k$$
 
-을 만족하는 $$n^3$$개의 $$C^\infty$$-함수들 $$\Gamma\_{ij}^k$$가 존재한다. 그럼 위의 식 (1)은
+을 만족하는 $$n^3$$개의 $$C^\infty$$-함수들 $$\Gamma_{ij}^k$$가 존재한다. 그럼 위의 식 (1)은
 
 $$\nabla_XY=\sum_{k=1}^n\left(\sum_{i,j=1}^nX(Y^k)+X^iY^j\Gamma_{ij}^k\right)E_k$$
 

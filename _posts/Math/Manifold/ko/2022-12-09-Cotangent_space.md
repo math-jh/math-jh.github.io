@@ -35,11 +35,11 @@ $$\mathcal{C}^\infty_p\supset\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 임의의 $$v\in T\_pM$$가 주어졌다 하자. 이를 부분집합 $$\mathfrak{m}\_p$$으로 restrict하면 $$v\|\_{\mathfrak{m}\_p}\in\Hom_\mathbb{R}(\mathfrak{m}_p,\mathbb{R})$$이 성립한다. 이제 $$v\|\_{\mathfrak{m}_p}$$이 linear map $$\mathfrak{m}_p/\mathfrak{m}_p^2\rightarrow\mathbb{R}$$을 잘 정의한다는 것을 보이려면 $$\mathfrak{m}_p^2\subset\ker (v\|\_{\mathfrak{m}_p})$$임을 보여야 한다. 적당한 index set $$I$$에 대하여, $$\mathfrak{m}_p$$가 $$\mathbf{f}_i$$들에 의해 생성되는 ideal이라 하자. 그럼 $$\mathfrak{m}_p^2$$은 $$\mathbf{f}_i\mathbf{f}_j$$들에 의하여 생성되는 ideal이다. 그런데
+우선 임의의 $$v\in T_pM$$가 주어졌다 하자. 이를 부분집합 $$\mathfrak{m}_p$$으로 restrict하면 $$v\|_{\mathfrak{m}_p}\in\Hom_\mathbb{R}(\mathfrak{m}_p,\mathbb{R})$$이 성립한다. 이제 $$v\|_{\mathfrak{m}_p}$$이 linear map $$\mathfrak{m}_p/\mathfrak{m}_p^2\rightarrow\mathbb{R}$$을 잘 정의한다는 것을 보이려면 $$\mathfrak{m}_p^2\subset\ker (v\|_{\mathfrak{m}_p})$$임을 보여야 한다. 적당한 index set $$I$$에 대하여, $$\mathfrak{m}_p$$가 $$\mathbf{f}_i$$들에 의해 생성되는 ideal이라 하자. 그럼 $$\mathfrak{m}_p^2$$은 $$\mathbf{f}_i\mathbf{f}_j$$들에 의하여 생성되는 ideal이다. 그런데
 
 $$v(\mathbf{f}_i\mathbf{f}_j)=\mathbf{f}_i(p)v(\mathbf{f}_j)+\mathbf{f}_j(p)v(\mathbf{f}_i)=0$$
 
-이므로, $$v$$는 $$\mathfrak{m}_p^2$$의 임의의 generator를 항상 0으로 보내고, $$\mathfrak{m}_p^2\subset\ker(v\|\_{\mathfrak{m}_p})$$이며, 따라서 임의의 $$v\in T_pM$$마다 적당한 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$의 원소를 대응시킬 수 있다. 이 대응이 $$\mathbb{R}$$-linear map이라는 것은 자명하다.
+이므로, $$v$$는 $$\mathfrak{m}_p^2$$의 임의의 generator를 항상 0으로 보내고, $$\mathfrak{m}_p^2\subset\ker(v\|_{\mathfrak{m}_p})$$이며, 따라서 임의의 $$v\in T_pM$$마다 적당한 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$의 원소를 대응시킬 수 있다. 이 대응이 $$\mathbb{R}$$-linear map이라는 것은 자명하다.
 
 반대로 임의의 $$L\in(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$$이 주어졌다 하고, 이를 이용해 tangent vector $$v_L$$을 하나 만들자. Tangent vector는 $$C_p^\infty$$에서 $$\mathbb{R}$$로의 linear map으로서, $$v_L$$을 만든다는 것은 임의의 $$\mathbf{f}\in \mathcal{C}^\infty_p$$에 대하여 $$v_L(\mathbf{f})$$의 값을 정해주는 것과 같다. $$\mathbf{f(p)}$$를 함숫값 $$f(p)$$를 갖는 상수함수라 하면, $$\mathbf{f}-\mathbf{f(p)}$$는 $$\mathfrak{m}_p$$의 원소이고, 따라서 
 
@@ -80,7 +80,7 @@ $$\begin{aligned}g(x)&=g(x_0)+\sum_{i=1}^m\frac{\partial g}{\partial r^i}\bigg|_
 
 을 사용한다. 
 
-$$(U,\varphi)$$가 $$p$$을 중심으로 하는 coordinate system이고, $$\varphi=(x^i)\_{i=1}^m$$라 하자. 또, $$\mathbf{f}\in\mathfrak{m}_p$$가 임의로 주어졌다 하자. 
+$$(U,\varphi)$$가 $$p$$을 중심으로 하는 coordinate system이고, $$\varphi=(x^i)_{i=1}^m$$라 하자. 또, $$\mathbf{f}\in\mathfrak{m}_p$$가 임의로 주어졌다 하자. 
 
 위의 식은 유클리드 공간에서 성립하는 식이므로, $$g=f\circ\varphi^{-1}$$로 두고, $$g$$의 정의역이 $$\varphi(U)$$인 것으로 생각하자. 원점을 중심으로 한 테일러 근사로부터, 임의의 $$x\in\varphi(U)$$에 대하여 다음의 식
 

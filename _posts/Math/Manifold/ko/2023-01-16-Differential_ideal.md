@@ -53,7 +53,7 @@ $$\mathcal{I}(\mathcal{D})=\{\omega\in\Omega^\ast(M)\mid\text{$$\omega$$ annihil
 
 첫째 주장은 정의로부터 자명하다. 
 
-둘째 주장을 보이기 위해, $$p\in M$$이라 하자. 그럼 $$p$$ 근방에서 $$\mathcal{D}$$를 생성하는 independent한 벡터장들 $$X_{m-k+1},\ldots, X_m$$이 존재한다. 이제 이 집합에 벡터장들 $$X_1,\ldots, X_{m-k}$$를 추가하여 $$\\{X_1,\ldots, X_m\\}$$이 $$p$$의 근방 $$U$$에서 tangent space들의 local basis가 된다고 하자. 그럼 이들의 dual을 취하여 $$1$$-form들 $$\omega_1,\ldots, \omega_m$$을 얻을 수 있으며, 이 때
+둘째 주장을 보이기 위해, $$p\in M$$이라 하자. 그럼 $$p$$ 근방에서 $$\mathcal{D}$$를 생성하는 independent한 벡터장들 $$X_{m-k+1},\ldots, X_m$$이 존재한다. 이제 이 집합에 벡터장들 $$X_1,\ldots, X_{m-k}$$를 추가하여 $$\{X_1,\ldots, X_m\}$$이 $$p$$의 근방 $$U$$에서 tangent space들의 local basis가 된다고 하자. 그럼 이들의 dual을 취하여 $$1$$-form들 $$\omega_1,\ldots, \omega_m$$을 얻을 수 있으며, 이 때
 
 $$\omega_i(X_j)=\delta_{ij}$$
 
@@ -101,7 +101,7 @@ $$\Omega^\ast(M)$$는 differential graded algebra이므로, ideal들 또한 diff
 
 <div class="proposition" markdown="1">
 
-<ins id="thm7">**정리 7**</ins> 두 manifold $$M^m,N^n$$이 주어졌다 하고, $$\pi_1:N\times M\rightarrow N$$과 $$\pi_2:N\times M\rightarrow M$$이 각각 canonical projection이라 하자. 또, $$M$$에서 정의된 1-form들의 모임이 basis $$\\{\omega_1,\ldots,\omega_m\\}$$을 갖는다 가정하자. 
+<ins id="thm7">**정리 7**</ins> 두 manifold $$M^m,N^n$$이 주어졌다 하고, $$\pi_1:N\times M\rightarrow N$$과 $$\pi_2:N\times M\rightarrow M$$이 각각 canonical projection이라 하자. 또, $$M$$에서 정의된 1-form들의 모임이 basis $$\{\omega_1,\ldots,\omega_m\}$$을 갖는다 가정하자. 
 
 1. 임의의 $$f:N\rightarrow M$$에 대하여, $$\graph(f)$$는 다음의 집합
 

@@ -121,7 +121,7 @@ $$\varphi^{-1}(U)$$가 fiber product의 universal property를 만족한다.
 
 </details>
 
-이 보조정리에서 $$X$$가 affine scheme이라는 가정은 오직 $$X\times_ZY_i$$가 존재한다는 것을 보이기 위해서만 사용되었다. 따라서, 임의의 두 scheme $$X,Y$$와 affine scheme $$Z$$, 그리고 scheme morphism $$X \rightarrow Z$$와 $$Y \rightarrow Z$$가 주어졌다 하면 우리는 $$Y$$의 affine open cover $$\\{Y_i\\}$$를 택한 후, $$X\times_ZY_i$$가 [보조정리 5](#lem5)에 의해 존재하는 것을 알고 따라서 이들을 붙여서 $$X\times_ZY$$를 만들 수 있다. 즉 다음이 성립한다.
+이 보조정리에서 $$X$$가 affine scheme이라는 가정은 오직 $$X\times_ZY_i$$가 존재한다는 것을 보이기 위해서만 사용되었다. 따라서, 임의의 두 scheme $$X,Y$$와 affine scheme $$Z$$, 그리고 scheme morphism $$X \rightarrow Z$$와 $$Y \rightarrow Z$$가 주어졌다 하면 우리는 $$Y$$의 affine open cover $$\{Y_i\}$$를 택한 후, $$X\times_ZY_i$$가 [보조정리 5](#lem5)에 의해 존재하는 것을 알고 따라서 이들을 붙여서 $$X\times_ZY$$를 만들 수 있다. 즉 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -137,7 +137,7 @@ $$\varphi^{-1}(U)$$가 fiber product의 universal property를 만족한다.
 
 </div>
 
-이제 위의 보조정리를 이용하여 우리는 임의의 $$X,Y,Z$$와 scheme morphism $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y: Y \rightarrow Z$$에 대하여 $$Z$$를 affine open cover $$\\{Z_i\\}$$들로 덮으면 $$\varphi_X\vert^{Z_i}:\varphi_X^{-1}(Z_i) \rightarrow Z_i$$와 $$\varphi_Y\vert^{Z_i}:\varphi_Y^{-1}(Z_i) \rightarrow Z_i$$에 대해서는 fiber product $$X_i\times_{Z_i}Y_i$$가 존재하는 것을 안다. 이제 교집합 $$Z_{ij}=Z_i\cap Z_j$$은 $$Z_i$$의 열린집합이므로 [보조정리 7](#lem7)에 의하여 $$\varphi_X\vert^{Z_{ij}}$$와 $$\varphi_Y\vert^{Z_{ij}}$$의 fiber product들도 존재하며 이는 $$X\_i\times\_{Z\_i}Y\_i$$와 $$X\_j\times\_{Z\_j}Y\_j$$의 open subscheme이다. 따라서 [보조정리 5](#lem5)의 증명과 마찬가지로, 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 조건을 만족한다는 것을 보이면 다음 정리를 얻는다.
+이제 위의 보조정리를 이용하여 우리는 임의의 $$X,Y,Z$$와 scheme morphism $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y: Y \rightarrow Z$$에 대하여 $$Z$$를 affine open cover $$\{Z_i\}$$들로 덮으면 $$\varphi_X\vert^{Z_i}:\varphi_X^{-1}(Z_i) \rightarrow Z_i$$와 $$\varphi_Y\vert^{Z_i}:\varphi_Y^{-1}(Z_i) \rightarrow Z_i$$에 대해서는 fiber product $$X_i\times_{Z_i}Y_i$$가 존재하는 것을 안다. 이제 교집합 $$Z_{ij}=Z_i\cap Z_j$$은 $$Z_i$$의 열린집합이므로 [보조정리 7](#lem7)에 의하여 $$\varphi_X\vert^{Z_{ij}}$$와 $$\varphi_Y\vert^{Z_{ij}}$$의 fiber product들도 존재하며 이는 $$X_i\times_{Z_i}Y_i$$와 $$X_j\times_{Z_j}Y_j$$의 open subscheme이다. 따라서 [보조정리 5](#lem5)의 증명과 마찬가지로, 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/algebraic_geometry/schemes#lem9)의 조건을 만족한다는 것을 보이면 다음 정리를 얻는다.
 
 <div class="proposition" markdown="1">
 
@@ -233,7 +233,7 @@ $$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\y)}\otimes_{\mathbb{K}[\x,\y]}\frac{\mat
 
 </div>
 
-이 관점에서 우리는 scheme morphism $$\varphi:X \rightarrow Y$$의 $$y_0\in Y$$에서의 fiber $$\varphi^{-1}(y_0)$$을 어떻게 정의해야 하는지도 알 수 있다. $$y_0$$가 closed point이든 아니든, 이를 $$\iota:\\{y_0\\}\hookrightarrow Y$$로 본 후, $$\iota$$와 $$\varphi$$의 fiber product를 취하면 된다. 이를 위해서는 $$\iota$$를 scheme morphism으로서 기술해야 한다. 
+이 관점에서 우리는 scheme morphism $$\varphi:X \rightarrow Y$$의 $$y_0\in Y$$에서의 fiber $$\varphi^{-1}(y_0)$$을 어떻게 정의해야 하는지도 알 수 있다. $$y_0$$가 closed point이든 아니든, 이를 $$\iota:\{y_0\}\hookrightarrow Y$$로 본 후, $$\iota$$와 $$\varphi$$의 fiber product를 취하면 된다. 이를 위해서는 $$\iota$$를 scheme morphism으로서 기술해야 한다. 
 
 이를 위해 $$y$$에서의 residue field $$\kappa(y)$$를 생각하자. 그럼 $$\Spec\kappa(y)$$는 항상 한점집합이다. 뿐만 아니라, $$y$$를 포함하는 $$Y$$의 affine open subset $$V=\Spec B$$를 생각하고, $$y$$가 prime ideal $$\mathfrak{q}_y$$에 대응된다 하면 canonical morphism
 

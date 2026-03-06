@@ -107,7 +107,7 @@ $$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$Y$$가 generic point $$y$$를 가지므로, 정의에 의해 $$\codim_XY$$와 $$\codim_X\\{y\\}$$가 같다. 이제 $$y$$를 포함하는 임의의 affine open subset $$U\cong\Spec A$$를 택하고, 이 isomorphism에 의해 $$y\in U$$가 $$\mathfrak{p}_y\in \Spec A$$에 대응된다 하자. 그럼  [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)로부터 우리는 $$U$$와 만나는 $$X$$의 irreducible closed subset들과 $$U$$의 irreducible closed subset들 사이의 일대일 대응이 존재한다는 것을 안다. 즉, $$\codim_X\\{y\\}=\codim_U \mathfrak{p}_y$$이다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/algebraic_geometry/spectrums#prop16)으로부터 원하는 결과를 얻는다. 
+$$Y$$가 generic point $$y$$를 가지므로, 정의에 의해 $$\codim_XY$$와 $$\codim_X\{y\}$$가 같다. 이제 $$y$$를 포함하는 임의의 affine open subset $$U\cong\Spec A$$를 택하고, 이 isomorphism에 의해 $$y\in U$$가 $$\mathfrak{p}_y\in \Spec A$$에 대응된다 하자. 그럼  [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)로부터 우리는 $$U$$와 만나는 $$X$$의 irreducible closed subset들과 $$U$$의 irreducible closed subset들 사이의 일대일 대응이 존재한다는 것을 안다. 즉, $$\codim_X\{y\}=\codim_U \mathfrak{p}_y$$이다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/algebraic_geometry/spectrums#prop16)으로부터 원하는 결과를 얻는다. 
 
 </details>
 

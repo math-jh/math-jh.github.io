@@ -53,7 +53,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 <summary>Proof</summary>
 
 First, assume $$R$$ is an equivalence relation.
-- Since $$(x,x)\in R$$ for all $$x\in A$$, $$\pr\_1R=A$$ holds.
+- Since $$(x,x)\in R$$ for all $$x\in A$$, $$\pr_1R=A$$ holds.
 - Also, since $$R$$ is symmetric, $$x\sim_\tiny{R} y\iff y\sim_\tiny{R}x$$ holds, and thus from
     
     $$(x,y)\in R\iff (y,x)\in R\iff (x,y)\in R^{-1}\tag{1}$$
@@ -95,7 +95,7 @@ In [Example 2](#ex2), we said $$\Delta_A$$ is the *smallest* and $$A\times A$$ i
 
 <div class="proposition" markdown="1">
 
-<ins id="lem6">**Lemma 6**</ins> For an equivalence relation $$(R,A,A)$$, define $$p:A\rightarrow A/R$$ by $$x\mapsto [x]\_R$$. Then $$p$$ is a function, and $$x\sim\_{\tiny R} y$$ is equivalent to $$p(x)=p(y)$$.
+<ins id="lem6">**Lemma 6**</ins> For an equivalence relation $$(R,A,A)$$, define $$p:A\rightarrow A/R$$ by $$x\mapsto [x]_R$$. Then $$p$$ is a function, and $$x\sim_{\tiny R} y$$ is equivalent to $$p(x)=p(y)$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -103,23 +103,23 @@ In [Example 2](#ex2), we said $$\Delta_A$$ is the *smallest* and $$A\times A$$ i
 
 It is not difficult to show that $$p$$ as defined above is indeed a function. Here we only prove the equivalence.
 
-First, assume $$x\sim\_{\tiny R} y$$. From $$y\in [x]\_R=R(x)$$, we have $$\{y\}\subseteq R(x)$$, and thus by [§Operations on Binary Relations, ⁋Proposition 6](/en/math/set_theory/operation_of_binary_relations#prop6) and [Proposition 3](#prop3),
+First, assume $$x\sim_{\tiny R} y$$. From $$y\in [x]_R=R(x)$$, we have $$\{y\}\subseteq R(x)$$, and thus by [§Operations on Binary Relations, ⁋Proposition 6](/en/math/set_theory/operation_of_binary_relations#prop6) and [Proposition 3](#prop3),
 
 $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
 holds. Since $$R$$ is an equivalence relation, we can swap the roles of $$x$$ and $$y$$, and thus $$R(x)=R(y)$$ holds.
 
-Conversely, if $$[x]\_R=[y]\_R$$, then from $$x\in [x]\_R=[y]\_R$$, we obtain $$y\sim\_{\tiny R} x$$, and thus the lemma holds.
+Conversely, if $$[x]_R=[y]_R$$, then from $$x\in [x]_R=[y]_R$$, we obtain $$y\sim_{\tiny R} x$$, and thus the lemma holds.
 
 </details>
 
-The function $$p$$ above is called the canonical projection. Since the subset $$[x]\_R\subseteq A$$ is the preimage under $$p$$ of the element $$[x]\_R\in A/R$$, we see that equivalence classes are pairwise disjoint. In other words, an equivalence relation $$(R,A,A)$$ induces a partition of $$A$$.
+The function $$p$$ above is called the canonical projection. Since the subset $$[x]_R\subseteq A$$ is the preimage under $$p$$ of the element $$[x]_R\in A/R$$, we see that equivalence classes are pairwise disjoint. In other words, an equivalence relation $$(R,A,A)$$ induces a partition of $$A$$.
 
 The following proposition shows that the converse also holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 7**</ins> Let $$(A_i)\_{i\in I}$$ be a partition of $$A$$. Then the relation
+<ins id="prop7">**Proposition 7**</ins> Let $$(A_i)_{i\in I}$$ be a partition of $$A$$. Then the relation
 
 > there exists some $$i$$ such that $$x,y\in A_i$$
 

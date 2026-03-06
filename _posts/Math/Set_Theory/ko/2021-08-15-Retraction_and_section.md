@@ -24,18 +24,18 @@ weight: 7
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 함수 $$f:A\rightarrow B$$를 생각하자. 만일 어떠한 $$r:B\rightarrow A$$가 존재하여 $$r\circ f=\id\_A$$라면 $$f$$는 단사함수다. 또 어떠한 $$s:B\rightarrow A$$가 존재하여 $$f\circ s=\id\_B$$라면 $$f$$는 전사함수다.  
+<ins id="prop1">**명제 1**</ins> 함수 $$f:A\rightarrow B$$를 생각하자. 만일 어떠한 $$r:B\rightarrow A$$가 존재하여 $$r\circ f=\id_A$$라면 $$f$$는 단사함수다. 또 어떠한 $$s:B\rightarrow A$$가 존재하여 $$f\circ s=\id_B$$라면 $$f$$는 전사함수다.  
 
-반대로, 만일 $$f$$가 전사함수라면 어떤 $$s:B\rightarrow A$$가 존재하여 $$f\circ s=\id\_B$$이고, 만일 $$f$$가 단사함수라면 어떤 $$r:B\rightarrow A$$가 존재하여 $$r\circ f=\id\_A$$이다.
+반대로, 만일 $$f$$가 전사함수라면 어떤 $$s:B\rightarrow A$$가 존재하여 $$f\circ s=\id_B$$이고, 만일 $$f$$가 단사함수라면 어떤 $$r:B\rightarrow A$$가 존재하여 $$r\circ f=\id_A$$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
-두 번째 부분은 이미 이전 글에서 보였다. 따라서 처음 부분만 보이면 된다. 우선 $$r\circ f=\id\_A$$라 하자. 만일 $$f(x)=f(y)$$라면 
+두 번째 부분은 이미 이전 글에서 보였다. 따라서 처음 부분만 보이면 된다. 우선 $$r\circ f=\id_A$$라 하자. 만일 $$f(x)=f(y)$$라면 
 
 $$x=\id_{A}(x)=(r\circ f)(x)=r\circ(f(x))=r\circ(f(y))=(r\circ f)(y)=\id_{A}(y)=y$$ 
 
-이므로 $$f$$는 단사함수이다. 이와 비슷하게, 만일 $$f\circ s=\id\_{B}$$라면 임의의 $$y\in B$$에 대하여
+이므로 $$f$$는 단사함수이다. 이와 비슷하게, 만일 $$f\circ s=\id_{B}$$라면 임의의 $$y\in B$$에 대하여
 
 $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$ 
 
@@ -55,8 +55,8 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> $$f$$가 $$A$$에서 $$B$$로의 단사함수라 하자. 그럼 $$r\circ f=\id\_A$$를 만족하는 함수 $$r:B\rightarrow A$$를 $$f$$의 *retraction<sub>수축</sub>*이라 한다.  
-만일 $$f$$가 $$A$$에서 $$B$$로의 전사함수라면, $$f\circ s=\id\_B$$를 만족하는 함수 $$s:B\rightarrow A$$를 $$f$$의 *section<sub>단면</sub>*이라 부른다.
+<ins id="def2">**정의 2**</ins> $$f$$가 $$A$$에서 $$B$$로의 단사함수라 하자. 그럼 $$r\circ f=\id_A$$를 만족하는 함수 $$r:B\rightarrow A$$를 $$f$$의 *retraction<sub>수축</sub>*이라 한다.  
+만일 $$f$$가 $$A$$에서 $$B$$로의 전사함수라면, $$f\circ s=\id_B$$를 만족하는 함수 $$s:B\rightarrow A$$를 $$f$$의 *section<sub>단면</sub>*이라 부른다.
 
 </div>
 
@@ -93,8 +93,8 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. 우선 $$f''(a\_1)=f''(a\_2)$$라 하자. 그럼 $$f'(f(a\_1))=f'(f(a\_2))$$이므로, $$f'$$와 $$f$$가 단사라는 사실을 순서대로 써 주면 $$a_1=a_2$$를 얻는다. 즉 $$f''$$은 단사함수이다.  
-    이제 $$r$$, $$r'$$을 각각 $$f$$, $$f'$$의 retraction이라 하자. 즉 $$r\circ f=\id\_A$$이고 $$r'\circ f'=\id\_B$$이다. 그럼 임의의 $$a\in A$$에 대하여, 
+1. 우선 $$f''(a_1)=f''(a_2)$$라 하자. 그럼 $$f'(f(a_1))=f'(f(a_2))$$이므로, $$f'$$와 $$f$$가 단사라는 사실을 순서대로 써 주면 $$a_1=a_2$$를 얻는다. 즉 $$f''$$은 단사함수이다.  
+    이제 $$r$$, $$r'$$을 각각 $$f$$, $$f'$$의 retraction이라 하자. 즉 $$r\circ f=\id_A$$이고 $$r'\circ f'=\id_B$$이다. 그럼 임의의 $$a\in A$$에 대하여, 
 
       $$((r\circ r')\circ(f'\circ f))(a)=(r\circ\id_{B}\circ f)(a)=(r\circ f)(a)=\id_{A}(a)=a$$  
     
@@ -106,7 +106,7 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
     
     이므로 $$s\circ s'$$는 $$f''$$의 section이다.
 
-3. 어떠한 $$a_1$$, $$a_2\in A$$에 대하여 $$f(a_1)=f(a_2)$$라 하자. 그럼 $$f''(a_1)=f'(f(a_1))=f'(f(a_2))=f''(a_2)$$이고, $$f''$$가 단사함수이므로 $$a\_1=a\_2$$이다. 따라서 $$f$$도 단사함수다. 이제 임의의 $$a\in A$$에 대하여,   
+3. 어떠한 $$a_1$$, $$a_2\in A$$에 대하여 $$f(a_1)=f(a_2)$$라 하자. 그럼 $$f''(a_1)=f'(f(a_1))=f'(f(a_2))=f''(a_2)$$이고, $$f''$$가 단사함수이므로 $$a_1=a_2$$이다. 따라서 $$f$$도 단사함수다. 이제 임의의 $$a\in A$$에 대하여,   
 
      $$((r''\circ f')\circ f)(a)=(r''\circ f'')(a)=\id_A(a)=a $$ 
 
@@ -171,7 +171,7 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 
     $$h(y)=(\id_A\circ h)(y)=((r\circ g)\circ h)(y)=(r \circ f)(y)$$  
 
-    의 우변이 retraction $$r$$의 선택에 관계없이 동일한 값을 가짐을 보이면 된다. 그런데 $$r\circ g=r'\circ g=\id_A$$이므로, 임의의 $$g(x)\in g(A)$$에 대하여 $$r(g(x))=x=r'(g(x))$$이다. 즉, $$r\|\_{g(A)}=r'\|\_{g(A)}$$이다. 이제 동치인 조건 중 나중의 조건에 의하여 $$r$$과 $$r'$$은 $$f(y)\in f(C)\subseteq g(A)$$ 위에서 같은 값을 가져야 한다. 따라서 $$h$$는 존재한다면 유일하다.  
+    의 우변이 retraction $$r$$의 선택에 관계없이 동일한 값을 가짐을 보이면 된다. 그런데 $$r\circ g=r'\circ g=\id_A$$이므로, 임의의 $$g(x)\in g(A)$$에 대하여 $$r(g(x))=x=r'(g(x))$$이다. 즉, $$r\vert_{g(A)}=r'\vert_{g(A)}$$이다. 이제 동치인 조건 중 나중의 조건에 의하여 $$r$$과 $$r'$$은 $$f(y)\in f(C)\subseteq g(A)$$ 위에서 같은 값을 가져야 한다. 따라서 $$h$$는 존재한다면 유일하다.  
 
     이제 반대방향을 보여야 한다. 유일성 증명에서 힌트를 얻어 $$h=r\circ f$$로 정의하자. 만일 $$f(C)\subseteq g(A)$$라면, 임의의 $$x\in C$$에 대하여   
 
