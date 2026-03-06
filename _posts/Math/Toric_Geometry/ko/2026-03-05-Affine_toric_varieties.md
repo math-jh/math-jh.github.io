@@ -87,7 +87,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\,{\rchi}^u \mid u \in S_\sigma]$$
 
 </div>
 
-
+이를 풀어쓰면 다음과 같다. 우선 우리는 그 정의에 의하여 $$S_\sigma$$가 덧셈 $$+$$에 대한 semigroup이 되는 것을 안다. 이 semigroup에 대한 semigroup algebra를 생각하는 것은, 함수들 $$S_\sigma\rightarrow \mathbb{C}$$의 모임에 convolution product를 주는 것과 같고, 이 때 semigroup $$S_\sigma$$가 finitely genedrated이므로 이 semigroup algebra는 $$S_\sigma$$의 특정한 원소를 보내는 
 
 <div class="definition" markdown="1">
 
