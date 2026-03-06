@@ -276,7 +276,29 @@ category_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-categories_order:
+categories-ko_order:
+  - Math / Linear Algebra
+  - Math / Set Theory
+  - Math / Category Theory
+  - Math / Algebraic Structures
+  - Math / Group Theory
+  - Math / Ring Theory
+  - Math / Multilinear Algebra
+  - Math / Field Theory
+  - Math / Homological Algebra
+  - Math / Commutative Algebra
+  - Math / Representation Theory
+  - Math / Topology
+  - Math / Algebraic Topology
+  - Math / Manifold
+  - Math / Lie Theory
+  - Math / Riemannian Geometry
+  - Math / Algebraic Geometry
+  - Math / Symplectic Geometry
+  - Misc / Blog Development
+  - Misc / Peripherals
+
+categories-en_order:
   - Math / Linear Algebra
   - Math / Set Theory
   - Math / Category Theory
