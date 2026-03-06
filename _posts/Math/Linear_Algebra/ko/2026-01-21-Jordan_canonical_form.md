@@ -95,7 +95,7 @@ $$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$$
 
 <ins id="def3">**정의 3**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A$$와 $$A$$의 한 eigenvalue $$\lambda$$에 대하여, $$A$$의 $$\lambda$$에 대한 *generalized eigenspace*를 다음의 식
 
-$$G_\lambda(A)=\left\{v\in V\mid (A-\lambda I)^kv=0\text{ for some $$k\geq 0$$}\right\}$$
+$$G_\lambda(A)=\left\{v\in V\mid (A-\lambda I)^kv=0\text{ for some $k\geq 0$}\right\}$$
 
 으로 정의한다. 
 

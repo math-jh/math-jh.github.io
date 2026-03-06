@@ -172,7 +172,7 @@ $$H_k(X)\times H^k(X;A)\rightarrow A$$
 
 예를 들어 de Rham cohomology를 보기 위해 differential $$k$$-form들로 이루어진 $$\mathbb{R}$$-벡터공간들
 
-$$\Omega^k(\mathbb{R}^n)=\{\text{$$k$$-forms on $$\mathbb{R}^n$$}\}$$
+$$\Omega^k(\mathbb{R}^n)=\{\text{$k$-forms on $$\mathbb{R}^n$$}\}$$
 
 를 생각하자. 여기서 coboundary map $$\Omega^k(\mathbb{R}^n)\rightarrow \Omega^{k+1}(\mathbb{R}^n)$$은 exterior derivative로 주어지며, differential $$k$$-form은 $$k$$차원 부분집합이 주어졌을 때, 적분을 통해 이에 대응하는 숫자를 내놓는다. 또, closed $$k$$-form들은 이 coboundary의 kernel로, exact $$k$$-form들은 이 coboundary의 image로 주어진다.
 

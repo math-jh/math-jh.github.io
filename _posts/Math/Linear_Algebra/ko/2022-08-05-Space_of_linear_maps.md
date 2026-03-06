@@ -56,7 +56,7 @@ $$G(v)=\sum_{x\in\mathcal{B}} v_xg(x)$$
 
 반대로 임의의 linear map $$G:V\rightarrow W$$가 주어진다면 이를 $$\mathcal{B}$$로 제한하여 함수 $$g=G\circ\iota$$를 정의할 수 있으며, 위 정리의 유일성 파트에 의하여 이 등식을 만족하는 linear map은 오직 $$G$$ 뿐이다. 따라서 다음 두 집합 사이의 전단사함수가 존재한다.
 
-$$\{\text{functions from $$\mathcal{B}$$ to $$W$$}\}\longleftrightarrow\{\text{linear maps from $$V$$ to $$W$$}\}$$
+$$\{\text{functions from $\mathcal{B}$ to $$W$$}\}\longleftrightarrow\{\text{linear maps from $V$ to $$W$$}\}$$
 
 즉 $$V$$에서 $$W$$로의 linear map은 $$L$$이 basis $$\mathcal{B}$$ 위에서 어떻게 행동하는지에 의해 완벽하게 결정되며, 만일 $$V$$가 유한차원이었다면 이는 linear map $$L$$이 오직 <em-ko>유한 개</em-ko>의 원소에서의 함수값에 의해서만 결정된다는 의미가 된다.
 
@@ -101,7 +101,7 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 
 1. 우선 $$L$$이 단사함수라 하고, $$V$$의 basis $$x_1,\ldots,x_n$$을 택하자. 그럼 $$L(x_1),\ldots, L(x_n)$$은 일차독립이고, 따라서 이들을 포함하는 $$W$$의 basis $$\mathcal{B}$$를 찾을 수 있다. 이제 함수 $$r:\mathcal{B}\rightarrow V$$를 다음의 식
     
-    $$r(v)=\begin{cases}x_i&\text{if $$v=L(x_i)$$}\\0&\text{otherwise}\end{cases}$$
+    $$r(v)=\begin{cases}x_i&\text{if $v=L(x_i)$}\\0&\text{otherwise}\end{cases}$$
 
     으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $$R$$이라 하자. 그럼 $$V$$의 basis $$\{x_1,\ldots,x_n\}$$의 임의의 원소 $$x_i$$에 대하여 $$(R\circ L)(x_i)=x_i$$이고, 따라서 정리 1의 유일성 부분에 의하여 $$R\circ L=\id_V$$가 성립한다.
 
@@ -162,7 +162,7 @@ $$\begin{aligned}
 
 두 공간 $$V,W$$가 모두 유한차원이고, $$\mathcal{B}=\{x_1,\ldots, x_n\}$$, $$\mathcal{C}=\{y_1,\ldots, y_m\}$$이 $$V,W$$ 각각의 basis라 하자. $$\mathcal{B}$$에서 $$W$$로의 $$mn$$개의 함수들
 
-$$f_i^j(x)=\begin{cases}y_j&\text{if $$x=x_i$$}\\0&\text{otherwise}\end{cases}$$
+$$f_i^j(x)=\begin{cases}y_j&\text{if $x=x_i$}\\0&\text{otherwise}\end{cases}$$
 
 을 생각하자. 즉 $$f_i^j$$는 <em-ko>오직</em-ko> $$x_i$$ 하나만을 $$y_j$$로 보내고, 나머지는 모두 0으로 보내는 함수이다. 그럼 [정리 1](#thm1)에 의하여 $$f_i^j=B_i^j\circ\iota$$이도록 하는 linear map $$B_i^j$$가 유일하게 존재한다. 
 

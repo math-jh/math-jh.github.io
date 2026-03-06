@@ -36,7 +36,7 @@ Consequently, the equality ($$=$$) defined between sets cannot be regarded as a 
 
 <ins id="ex2">**Example 2**</ins> If $$=$$ between sets were a binary relation, then the set
 
-$$E=\{(A,A)\mid\text{$$A$$ any set}\}$$
+$$E=\{(A,A)\mid\text{$A$ any set}\}$$
 
 representing it would exist. That is, $$E$$ would have to be the product of two universal sets.
 
@@ -122,7 +122,7 @@ Let $$y\in R(X)$$. Then there exists some $$x\in X$$ such that $$(x,y)\in R(X)$$
 
 By the proposition above, for any $$A$$,
 
-$$R(A)=\pr_2\{z\in R\mid\text{$$\pr_1z\in A$$}\}\subset\pr_2R$$
+$$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subset\pr_2R$$
 
 and therefore $$R(A)\subset\pr_2R$$. In particular, if $$A=\emptyset$$, then $$R(A)=\emptyset$$. More generally, if $$A\cap\pr_1R=\emptyset$$, then $$R(A)=\emptyset$$.
 

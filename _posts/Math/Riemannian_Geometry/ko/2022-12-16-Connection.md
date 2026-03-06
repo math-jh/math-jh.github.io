@@ -158,7 +158,7 @@ $$\nabla_X(F\otimes G)=(\nabla_X F)\otimes G+F\otimes(\nabla_XG),\qquad\nabla_X(
 
 임의의 $$(r,s)$$-tensor $$F$$는 다음의 linear map
 
-$$\underbrace{\Omega^1(M)\times\cdots\times \Omega^1(M)}_\text{\small $$r$$ times}\times\underbrace{\mathfrak{X}(M)\times\cdots\times \mathfrak{X}(M)}_\text{\small $$s$$ times}\rightarrow C^\infty(M)$$
+$$\underbrace{\Omega^1(M)\times\cdots\times \Omega^1(M)}_\text{\small $r$ times}\times\underbrace{\mathfrak{X}(M)\times\cdots\times \mathfrak{X}(M)}_\text{\small $s$ times}\rightarrow C^\infty(M)$$
 
 과 동일하게 취급할 수 있으므로, $$\nabla_XF$$는 $$\omega^1,\ldots,\omega^r\in\Omega^1(M)$$, $$Y_1,\ldots, Y_s\in\mathfrak{X}(M)$$에서의 함수값으로 유일하게 결정된다. 가령, simple tensor $$F=X_1\otimes\cdots\otimes X_r\otimes\alpha^1\otimes\cdots\otimes\alpha^s\in\mathcal{T}^{r,s}(M)$$에 대해 라이프니츠 법칙을 적용하면
 

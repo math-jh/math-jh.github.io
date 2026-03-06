@@ -35,7 +35,7 @@ $$A=(A_1\;A_2\;\cdots\;A_n)\cong (A_1, A_2, \cdots, A_n)\cong \bigl((A_{11}, A_{
 
 <ins id="def1">**정의 1**</ins> $$\mathbb{K}$$-벡터공간 $$V,W$$에 대하여, 다음의 함수
 
-$$f:\underbrace{V\times\cdots\times V}_\text{ {\footnotesize $$n$$} times}\rightarrow W$$
+$$f:\underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
 가 *multilinear map<sub>다중선형사상</sub>*이라는 것은 $$f$$가 각각의 성분에 대해 linear인 것이다.
 
@@ -47,7 +47,7 @@ $$f:\underbrace{V\times\cdots\times V}_\text{ {\footnotesize $$n$$} times}\right
 
 <ins id="def2">**정의 2**</ins> 두 $$\mathbb{K}$$-벡터공간 $$V,W$$와 multilinear map 
 
-$$f: \underbrace{V\times\cdots\times V}_\text{ {\footnotesize $$n$$} times}\rightarrow W$$
+$$f: \underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
 이 주어졌다 하자. 만일 임의의 $$v_1,\ldots, v_n$$와 임의의 $$i\neq j$$에 대해 항상 다음의 식
 

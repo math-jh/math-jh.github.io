@@ -151,7 +151,7 @@ $$L^\ast(f)=f\circ L$$
 
 혹은, 위에서 정의한 canonical pairing에 따르면 $$L^\ast$$는 다음의 식
 
-$$(Lv, f)=(v,L^\ast f)\qquad\text{for all $$v\in V$$ and $$f\in W^\ast$$}\tag{1}$$
+$$(Lv, f)=(v,L^\ast f)\qquad\text{for all $v\in V$ and $$f\in W^\ast$$}\tag{1}$$
 
 을 통해 정의되었다 할 수 있다. 물론 좌변의 $$(-,-)$$은 $$W$$의 canonical pairing이고, 우변의 $$(-,-)$$은 $$V$$의 canonical pairing이다. 
 
@@ -247,7 +247,7 @@ $$L(U)^\perp=(L^\ast)^{-1}(U^\perp)$$
 
 Dual map $$L^\ast$$를 canonical pairing을 통해 정의한 식 (1)을 사용하면, 임의의 $$\upsilon\in W^\ast$$에 대하여
 
-$$\upsilon\in L(U)^\perp\iff (L(u),\upsilon)=0\text{ for all $$u\in U$$}\iff (u, L^\ast(\upsilon))\text{ for all $$u\in U$$}\iff L^\ast(\upsilon)\in U^\perp$$
+$$\upsilon\in L(U)^\perp\iff (L(u),\upsilon)=0\text{ for all $u\in U$}\iff (u, L^\ast(\upsilon))\text{ for all $u\in U$}\iff L^\ast(\upsilon)\in U^\perp$$
 
 이 성립한다. 
 
@@ -281,7 +281,7 @@ $$\bigl(L^\ast(U)\bigr)^\perp=L^{-1}(U^\perp)$$
 
 이 또한 식 (1)을 사용하면, 임의의 $$x\in V$$에 대하여
 
-$$x\in \bigl(L^\ast(U)\bigr)^\perp\iff (x, L^\ast(\upsilon))=0\text{ for all $$\upsilon\in U$$}\iff (L(x),\upsilon)=0\text{ for all $$\upsilon\in U$$}\iff L(x)\in U^\perp$$
+$$x\in \bigl(L^\ast(U)\bigr)^\perp\iff (x, L^\ast(\upsilon))=0\text{ for all $\upsilon\in U$}\iff (L(x),\upsilon)=0\text{ for all $\upsilon\in U$}\iff L(x)\in U^\perp$$
 
 이므로 자명하다.
 

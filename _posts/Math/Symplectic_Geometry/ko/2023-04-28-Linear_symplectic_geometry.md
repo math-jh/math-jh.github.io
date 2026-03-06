@@ -50,7 +50,7 @@ weight: 2
 
 우선 다음 집합
 
-$$\{u\in V\mid \omega(u,v)=0\text{ for all $$v\in V$$}\}$$
+$$\{u\in V\mid \omega(u,v)=0\text{ for all $v\in V$}\}$$
 
 이 $$V$$의 부분공간이 된다는 것을 쉽게 확인할 수 있다. 따라서 이 부분공간의 basis를 택하면 $$u_1,\ldots, u_k$$를 얻는다. 이제 $$V=U\oplus W$$라 하자. 그럼 $$W$$의 basis $$e_1,\ldots, e_n,f_1,\ldots, f_n$$을 다음과 같이 찾을 수 있다. 
 
@@ -71,7 +71,7 @@ $$e_{k+1}-\sum_{i=1}^k(\lambda_i f_i+\eta_i e_i)$$
 
 을 생각하여 $$e_{k+1}$$가 다음 조건들
 
-$$\omega(e_{k+1},e_i)=\omega(e_{k+1},f_i)=0\qquad\text{for all $$i=1,\ldots, k$$}$$
+$$\omega(e_{k+1},e_i)=\omega(e_{k+1},f_i)=0\qquad\text{for all $i=1,\ldots, k$}$$
 
 을 만족하는 벡터였다고 가정할 수 있다. 한편 $$W$$에서 $$\omega$$는 non-degenerate이므로 $$\omega(e_{k+1},f_{k+1})\neq 0$$을 만족하는 벡터 $$f_{k+1}\in W$$가 존재한다. 마찬가지로 $$f_{k+1}$$가 
 
@@ -83,7 +83,7 @@ $$f_{k+1}-\sum_{i=1}^k(\lambda_i' f_i+\eta_i' e_i)$$
 
 을 생각하여 $$f_{k+1}$$가 다음 조건들
 
-$$\omega(f_{k+1},e_i)=\omega(f_{k+1},f_i)=0\qquad\text{for all $$i=1,\ldots, k$$}$$
+$$\omega(f_{k+1},e_i)=\omega(f_{k+1},f_i)=0\qquad\text{for all $i=1,\ldots, k$}$$
 
 을 만족한다고 할 수 있고, 이후 적절한 상수배를 통해 $$\omega(e_{k+1},f_{k+1})=1$$이라 가정할 수 있다. 
 
@@ -99,7 +99,7 @@ $$e_1,\ldots, e_n, f_1,\ldots, f_n$$
 
 <ins id="def3">**정의 3**</ins> $$(V,\omega)$$가 symplectic vector space라 하고, $$W\leq V$$가 임의의 부분공간이라 하자. 그럼 $$W$$의 *symplectic complement*는
 
-$$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $$w\in W$$}\}$$
+$$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $w\in W$}\}$$
 
 으로 정의된 공간이다. 
 
@@ -127,11 +127,11 @@ $$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $$w\in W$$}\}$$
     
     $$W$$의 annihilator를 $$W^\perp\subseteq V^\ast$$라 하자. ([\[선형대수학\], §쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)) 임의의 $$u\in W^\omega$$에 대하여
     
-    $$\omega(u,w)=0\qquad\text{for all $$w\in W$$}$$
+    $$\omega(u,w)=0\qquad\text{for all $w\in W$}$$
     
     가 성립하고, 따라서 $$\omega(u,-)$$는 항상 $$W^\perp$$에 속한다. 거꾸로 임의의 $$\varphi\in V^\ast$$가 주어질 때마다 유일한 $$u\in V$$가 존재하여 $$\varphi=\omega(u,-)$$이라 할 수 있는데, 만일 $$\varphi\in W^\perp$$였다면 
     
-    $$0=\varphi(w)=\omega(u,w)\qquad\text{for all $$w\in W$$}$$
+    $$0=\varphi(w)=\omega(u,w)\qquad\text{for all $w\in W$}$$
     
     이 성립하므로 $$u\in W^\omega$$이다. 즉, 위의 isomorphism을 통해 우리는 두 공간 $$W^\perp$$와 $$W^\omega$$가 isomorphic하다는. 것을 안다. 이제 1번의 첫 등식은
 
@@ -175,7 +175,7 @@ $$\omega(w_1+u_1,w_2+u_2)=\omega(w_1,w_2)+\omega(w_1,u_2)+\omega(u_1,w_2)+\omega
 
 가 성립하며, $$w_1,w_2,u_1,u_2$$는 모두 $$W$$의 원소이고 $$u_1,u_2$$는 $$W^\omega$$의 원소이므로 우변의 뒤쪽 세 항이 모두 0이 된다. 따라서 $$\overline{\omega}$$는 잘 정의된다. $$\overline{\omega}$$가 skew-symmetric인 것은 정의에 의해 자명하므로, $$\overline{\omega}$$가 non-degenerate인 것만 보이면 충분하다. 만일 $$[w]\in W$$가 모든 $$[w']\in W$$에 대해 $$\overline{\omega}([w],[w'])=0$$을 만족한다면,
 
-$$0=\overline{\omega}([w],[w'])=\omega(w,w')\qquad\text{for all $$w'\in W$$}$$
+$$0=\overline{\omega}([w],[w'])=\omega(w,w')\qquad\text{for all $w'\in W$}$$
 
 이므로 정의에 의해 $$w\in W^\omega$$이고 따라서 $$[w]=0$$이다. 즉 $$\overline{\omega}$$는 non-degenerate이다.
 

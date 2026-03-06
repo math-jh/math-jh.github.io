@@ -123,7 +123,7 @@ $$\alpha\cdot(x_i)_{i\in I}=(\alpha\cdot x_i)_{i\in I}$$
 
 을 통해 $$M$$의 action을 정의한 것이 다시 $$M$$-set이 된다. 이와 비슷하게 $$M$$-set $$E$$의 부분집합 $$F$$가 다음의 식
 
-$$x\in F\implies \alpha\cdot x\text{ for all $$\alpha\in F$$}$$
+$$x\in F\implies \alpha\cdot x\text{ for all $\alpha\in F$}$$
 
 을 만족한다면 $$F$$를 $$M$$-subset이라 부른다. 또, $$M$$-set 위에 정의된 동치관계 $$\sim$$이 $$M$$의 action과 compatible하다면, 즉
 
@@ -266,7 +266,7 @@ $$G/\ker\rho\cong\Inn(G)$$
 
 정의에 의하여,
 
-$$g\in\ker\rho\iff\rho_g=\id_G\iff gxg^{-1}=x\quad\text{for all $$x\in G$$}$$
+$$g\in\ker\rho\iff\rho_g=\id_G\iff gxg^{-1}=x\quad\text{for all $x\in G$}$$
 
 이므로, $$G$$가 inner automorphism으로 자기 자신 위에 작용하는 상황에서의 fixer $$\Fix(G)$$가 정확히 $$C(G)$$이다. 더 일반적으로, 임의의 부분집합 $$A\subseteq G$$에 대하여 $$A$$의 fixer $$\Fix(A)$$를 $$A$$의 *centralizer* $$C_G(A)$$로 정의한다. 이와 비슷하게 $$A$$의 *normalizer* $$N_G(A)$$를 $$\Stab(A)$$로 정의한다. 
 

@@ -128,7 +128,7 @@ $$(\alpha e_1+\beta u(e_1))\wedge\cdots\wedge(\alpha e_n+\beta u(e_n))$$
 
 를 $$e_1\wedge\cdots\wedge e_n$$의 배수로 되돌려 놓으며 생긴다. 위의 식을 전부 전개하면, 이는 $$0\leq p\leq n$$을 만족하는 정수 $$p$$, $$\lvert P\rvert=p$$를 만족하는 $$\{1,\ldots, n\}$$의 부분집합 $$P$$, 그리고 다음의 식
 
-$$x_i=\begin{cases}u(e_i)&\text{if $$i\in P$$}\\e_i&\text{otherwise}\end{cases}$$
+$$x_i=\begin{cases}u(e_i)&\text{if $i\in P$}\\e_i&\text{otherwise}\end{cases}$$
 
 으로 정의된 $$x_i$$들로 정의한 $$\bigwedge^n(M)$$의 원소 $$x_P=x_1\wedge\cdots\wedge x_n$$에 대하여 $$\alpha^{n-p}\beta^p x_P$$들을 다 더한 것과 같다. 
 
@@ -170,7 +170,7 @@ Polynomial algebra $$A[\x]$$와 canonical inclusion $$\iota: A \hookrightarrow A
 
 임의의 $$u\in\End_\rMod{A}(M)$$에 대하여, 다음 표기법
 
-$$u^k=\underbrace{u\circ\cdots\circ u}_\text{$$k$$ times}$$
+$$u^k=\underbrace{u\circ\cdots\circ u}_\text{$k$ times}$$
 
 을 도입하자. 그럼 임의의 $$p\in A[\x]$$에 대해서 $$p(u)$$를 $$\End_\rMod{A}(M)$$의 원소로 생각할 수 있으며, 이 경우 임의의 $$p,q\in A[\x]$$에 대하여
 

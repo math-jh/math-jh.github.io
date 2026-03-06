@@ -93,7 +93,7 @@ $$\alpha_1v_1+\cdots+\alpha_nv_n$$
 
 더 일반적으로, 무한히 많은 $$V$$의 원소들 $$(v_i)_{i\in I}$$이 주어졌을 때, 이들의 일차결합은
 
-$$\sum_{i\in I}\alpha_iv_i\qquad\text{$$\alpha_i=0$$ for all but finitely many $$i$$}$$
+$$\sum_{i\in I}\alpha_iv_i\qquad\text{$\alpha_i=0$ for all but finitely many $$i$$}$$
 
 으로 정의된다. 예를 들어, [§벡터공간, ⁋예시 4](/ko/math/linear_algebra/vector_spaces#ex4)와 같이 $$\mathbb{R}$$을 $$\mathbb{Q}$$-벡터공간으로 본다면, $$0.111\ldots$$는 다음 벡터들
 
@@ -117,11 +117,11 @@ $$q(\x)=\beta_m\x^m+\beta_{m-1}\x^{m-1}+\cdots+\beta_1\x+\beta_0$$
 
 가 주어졌다 하자. 그럼 이들의 합은 만약 $$m>n$$이라면,  
 
-$$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^m c_i\x^i,\qquad c_i=\begin{cases}a_i+b_i&\text{if $$0\leq i\leq n$$}\\ b_i&\text{if $$n < i\leq m$$}\end{cases}$$
+$$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^m c_i\x^i,\qquad c_i=\begin{cases}a_i+b_i&\text{if $0\leq i\leq n$}\\ b_i&\text{if $n < i\leq m$}\end{cases}$$
 
 그리고 반대의 경우
 
-$$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^m c_i'\x^i,\qquad c_i'=\begin{cases}a_i+\beta_i&\text{if $$0\leq i\leq m$$}\\ a_i&\text{if $$m < i\leq n$$}\end{cases}.$$
+$$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^m c_i'\x^i,\qquad c_i'=\begin{cases}a_i+\beta_i&\text{if $0\leq i\leq m$}\\ a_i&\text{if $m < i\leq n$}\end{cases}.$$
 
 으로 정의되며, 임의의 스칼라 $$\gamma\in\mathbb{K}$$에 대하여
 
@@ -129,7 +129,7 @@ $$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha
 
 으로 정의된다. 어렵지 않게 이들 정의가 $$\mathbb{K}[\x]$$에 $$\mathbb{K}$$-벡터공간 구조를 부여한다는 것을 확인할 수 있다.
 
-이제 $$n$$차 이하의 차수를 갖는 다항식들의 집합 $$\mathbb{K}[\x]_\text{degree\scriptsize$$\leq n$$}$$는 $$\mathbb{K}[\x]$$의 부분공간이라는 것을 확인할 수 있다. 반면, <em-ko>정확히</em-ko> 차수 $$n$$을 갖는 다항식들의 집합은 $$0$$을 포함하지 않으므로 부분공간은 되지 않지만, $$0$$만 넣어주면 부분공간이 된다. 
+이제 $$n$$차 이하의 차수를 갖는 다항식들의 집합 $$\mathbb{K}[\x]_\text{degree\scriptsize$\leq n$}$$는 $$\mathbb{K}[\x]$$의 부분공간이라는 것을 확인할 수 있다. 반면, <em-ko>정확히</em-ko> 차수 $$n$$을 갖는 다항식들의 집합은 $$0$$을 포함하지 않으므로 부분공간은 되지 않지만, $$0$$만 넣어주면 부분공간이 된다. 
 
 </div>
 

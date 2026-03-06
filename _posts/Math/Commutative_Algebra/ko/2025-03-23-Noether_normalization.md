@@ -33,7 +33,7 @@ $$\mathfrak{a}_1\subset \mathfrak{a}_2\subset\cdots\subset \mathfrak{a}_m$$
 
 이 주어졌다 하자. 그럼 $$A$$의 적당한 subring $$B\cong \mathbb{K}[\x_1,\ldots, \x_d]$$가 존재하여, $$A$$가 $$B$$-module로서 finitely generated이고 다음 식
 
-$$\mathfrak{a}_i\cap B=(\x_{d_i+1},\ldots, \x_d)\qquad\text{for $$i=1,\ldots, m$$}$$
+$$\mathfrak{a}_i\cap B=(\x_{d_i+1},\ldots, \x_d)\qquad\text{for $i=1,\ldots, m$}$$
 
 이 성립하도록 할 수 있다. 
 
