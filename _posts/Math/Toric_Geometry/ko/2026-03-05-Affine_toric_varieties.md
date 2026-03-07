@@ -210,6 +210,22 @@ $$e^{i\theta} \cdot (z, x_3) = (e^{i\theta}z, x_3)$$
 
 사실 $$S^2 \cong \mathbb{P}^1$$이며, $$\mathbb{P}^1$$은 가장 기본적인 (projective) toric variety이다. 이 예시에서 볼 수 있듯이, torus action은 다양체를 궤도들로 나누고, 각 궤도의 차원은 그 점에서의 torus action의 "자유도"에 의해 결정된다.
 
+이제 위에서 정의한 canonical한 torus action이 이 예시에서 어떻게 작동하는지 확인해보자. $$\mathbb{P}^1$$의 경우 $$N = \mathbb{Z}$$이고 $$M = \Hom(\mathbb{Z}, \mathbb{Z}) \cong \mathbb{Z}$$이다. 따라서 $$T_N = \mathbb{Z} \otimes_{\mathbb{Z}} \mathbb{C}^\ast \cong \mathbb{C}^\ast$$이며, $$S^1 \subset \mathbb{C}^\ast$$가 그 안에 포함된다.
+
+$$\mathbb{P}^1$$의 한 affine patch $$U_1 = \{[1:w] \mid w \in \mathbb{C}\}$$를 생각하면, 그 coordinate ring은 $$\mathbb{C}[w]$$이다. 단항식 $$w^n$$에 대해, $$t \in \mathbb{C}^\ast$$가 다음과 같이 작용한다:
+
+$$t \cdot w^n = \chi^n(t) \cdot w^n$$
+
+여기서 canonical 정의에 따라 $$\chi^n(t)$$를 계산해보자. $$t = 1 \otimes c \in T_N = \mathbb{Z} \otimes_{\mathbb{Z}} \mathbb{C}^\ast$$ (즉 $$c = t$$)이고 $$n \in M = \mathbb{Z}$$이므로
+
+$$\chi^n(t) = c^{n(1)} = t^n$$
+
+이다. 따라서 $$t \cdot w^n = t^n \cdot w^n$$이고, 특히 $$S^1 \subset \mathbb{C}^\ast$$의 원소 $$e^{i\theta}$$에 대해서는
+
+$$e^{i\theta} \cdot w^n = e^{i\theta n} \cdot w^n$$
+
+이다. 이것이 정확히 $$\mathbb{C}[w] = \bigoplus_{n \geq 0} \mathbb{C} \cdot w^n$$에서의 weight decomposition이며, 각 $$w^n$$은 weight $$n \in M$$을 갖는 eigenvector이다.
+
 </div>
 
 ## 기본 성질
