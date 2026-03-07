@@ -131,27 +131,32 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 $$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
 
-을 생각하자. 이는 단순히 두 abelian group의 텐서곱이기는 하지만, $$\mathbb{C}^\ast$$의 연산이 곱셈이므로 다소 헷갈릴 수 있어 표기들 정리하고 넘어가기로 한다. 우선 집합으로서 $T_N$은 $n\in N$, $c\in \mathbb{C}^\ast$에 대하여 $n\otimes c$의 꼴을 갖는 원소들의 유한합이며, 그 연산은 덧셈이다. 이 때 bilinearity의 경우 다음의 두 식
+을 생각하자. 이는 단순히 두 abelian group의 텐서곱이기는 하지만, $$\mathbb{C}^\ast$$의 연산이 곱셈이므로 다소 헷갈릴 수 있어 표기들 정리하고 넘어가기로 한다. 우선 집합으로서 $T_N$은 $v\in N$, $z\in \mathbb{C}^\ast$에 대하여 $v\otimes z$의 꼴을 갖는 원소들의 유한합이며, 그 연산은 덧셈이다. 이 때 bilinearity의 경우 다음의 식들
 
-$$(n_1+n_2)\otimes c=n_1\otimes c+n_2\otimes c,\qquad n\otimes(c_1c_2)=n\otimes c_1+n\otimes c_2$$
+$$(v_1+v_2)\otimes z=v_1\otimes z+v_2\otimes z,\qquad v\otimes(z_1z_2)=v\otimes z_1+v\otimes z_2,\qquad k\cdot(v\otimes z)=(kv)\otimes z=v\otimes z^k$$
 
-을 의미하게 된다. 
+을 의미하게 된다. 이제 $$N$$의 basis $$e_1,\ldots, e_n$$을 도입하면 $$T_N$$의 임의의 원소는 
+
+$$t=e_1\otimes z_1+\cdots + e_n\otimes z_n:=(z_1,\ldots, z_n),\qquad\text{$z_i\in \mathbb{C}^\ast$}$$
+
+의 꼴로 나타낼 수 있으며, 그럼 이 표기 하에서 두 원소 $$t=(z_1,\ldots, z_n)$$, $$t'=(z_1',\ldots, z_n')$$의 덧셈은
+
+$$t\cdot t'=e_1\otimes z_1+\cdots+e_n\otimes z_n+e_1\otimes z_1'+\cdots e_n\otimes z_n'=e_1\otimes(z_1z_1')+\cdots e_n\otimes(z_nz_n')=(z_1z_1,\ldots, z_nz_n')\tag{$\ast$}$$
+
+으로 주어진다. 이제 임의의 $$m\in M$$과 $$t=v\otimes z\in T_N$에 대하여, 다음의 식
+
+$$\rchi^m(t)=z^{m(v)}$$
+
+으로 정의하고, $$\rchi^m(t+t')=\rchi^m(t)\rchi^m(t')$$로 정의하면 이것이 $$T_N$$에서 $$\mathbb{C}^\ast$$로의 group homomorphism, 즉 character를 정의하게 된다. 
+
+논의의 편의를 위해, 위에서와 같이 $N$의 basis $e_1,\ldots, e_n$을 택하자. 그럼 우리는 식 ($$\ast$$)을 통해 $T_N$을 *multiplicative* group $$(\mathbb{C}^\ast)^n$$으로 생각할 수 있다. 이 basis의 선택이 주는 $$M=\Hom(N,\mathbb{Z})$$에서의 dual basis $$e_1^\ast,\ldots, e_n^\ast$$를 생각하면, $$m\in M$$은 다음의 식
+
+$$m=m_1e_1^\ast+\cdots m_ne_n^\ast$$
+
+과 같이 쓸 수 있고, 
 
 
-
-이는 $n\times c$ 꼴의 원소들의 일차결합으로 이루어진 집합이며, 이 위에서의 연산은 
-
-$$(n\otimes c)+(n'\otimes c')=(n+n')\otimes (cc')$$
-
-으로 주어진다. 만일 $$N$$을 basis $$e_1,\ldots, e_n$$의 선택을 통해 $$\mathbb{Z}^n$$와 identify한다면 $$T_N=(\mathbb{C}^\ast)^n$$라 할 수 있고 그 원소는 항상 다음의 꼴
-
-$$t=e_1\otimes t_1+\cdots + e_n\otimes t_n:=(t_1,\ldots, t_n),\qquad\text{$t_i\in \mathbb{C}^\ast$}$$
-
-로 나타낼 수 있으며, 그럼 이 표기 하에서 두 원소 $$t=(t_1,\ldots, t_n)$$, $$t'=(t_1',\ldots, t_n')$$의 곱은
-
-$$t\cdot t'=(t_1t_1',\ldots, t_nt_n')$$
-
-으로 주어진다. 한편 정의에 의해 $M=\Hom(N,\mathbb{Z})$이며, dual basis $$e_1^\ast,\ldots, e_n^\ast$$를 사용하면 $M$의 임의의 원소는 $$(a_1,\ldots, a_n)$$으로 나타낼 수 있다. 이제 우리는 다음 식
+한편 정의에 의해 $M=\Hom(N,\mathbb{Z})$이며, dual basis $$e_1^\ast,dots, e_n^\ast$$를 사용하면 $M$의 임의의 원소는 $$(a_1,\ldots, a_n)$$으로 나타낼 수 있다. 이제 우리는 다음 식
 
 $$a(t)=t_1^{a_1}\cdots t_n^{a_n}$$
 
