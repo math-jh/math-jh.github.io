@@ -120,7 +120,7 @@ $$S(f)^{-1}A\cong S_f^{-1}A$$
 
 이제 다음의 동치관계
 
-$$D(f)\subseteq D(g)\iff f^n\in (g)\text{ for some $n\geq 1$}\iff f^n=ag\text{ for some $n\geq 1$ and a\in A}\tag{$\ast$}$$
+$$D(f)\subseteq D(g)\iff f^n\in (g)\text{ for some $n\geq 1$}\iff f^n=ag\text{ for some $n\geq 1$ and $a\in A$}\tag{$\ast$}$$
 
 를 관찰하자. 그럼 $$D(f)\subseteq D(g)$$를 만족하는 임의의 $$g$$에 대하여, 우리는 $$f^n=ag$$를 만족하는 적당한 $$n\geq 1$$과 $$a\in A$$를 찾을 수 있으므로, 
 

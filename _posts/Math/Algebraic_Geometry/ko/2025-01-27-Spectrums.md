@@ -368,13 +368,13 @@ $$\mathbb{A}_{\mathbb{K},\text{classical}}^n \rightarrow \mathbb{K};\qquad (x_1,
 
 을 통해 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$에서 $$\mathbb{K}$$로의 함수로 취급할 수 있다. 그럼 [정의 3](#def3)과 비슷하게 $$A$$의 임의의 집합 $$S$$에 대하여 
 
-$$Z(S)=\{(x_1,\ldots, x_n)\mid \text{$f(x_1,\ldots, x_n)=0$ for all $$f\in S$$}\}$$
+$$Z(S)=\{(x_1,\ldots, x_n)\mid \text{$f(x_1,\ldots, x_n)=0$ for all $f\in S$}\}$$
 
 으로 정의하면 $$Z(S)$$는 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$ 위에 정의된 함수들의 모임 $$S$$의 공통근들으로 생각할 수 있으며, [보조정리 6](#lem6)과 비슷한 계산을 통해 $$Z(S)$$들을 닫힌집합으로 갖는 위상구조를 $$\mSpec A$$ 위에 정의할 수 있다. 
 
 한편, [정의 12](#def12)와 마찬가지로 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$의 부분집합 $$T$$에 대하여
 
-$$I(T)=\{f\in A\mid \text{$f(x_1,\ldots, x_n)=0$ for all $$x\in T$$}\}$$
+$$I(T)=\{f\in A\mid \text{$f(x_1,\ldots, x_n)=0$ for all $x\in T$}\}$$
 
 라 하면, [정리 14](#thm14)에서 그러하듯이 $$I$$와 $$Z$$가 antitone Galois connection을 정의하는 것을 안다. $$\mSpec A$$에서의 [명제 13](#prop13)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋명제 4](/ko/math/commutative_algebra/nullstellensatz#prop4)로부터 $$\mathbb{K}[\x_1,\ldots, \x_n]$$이 Jacobson이기 때문에 얻어진다. 
 
