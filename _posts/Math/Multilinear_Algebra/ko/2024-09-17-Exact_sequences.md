@@ -77,7 +77,7 @@ $$\bigoplus_{i\in I} N_i \rightarrow M$$
 
 즉 다음의 exact sequence
 
-$$\bigoplus_{i\in I} N_i \rightarrow M \rightarrow M\bigg/\sum_{i\in I} N_i \rightarrow 0\tag{$$\ast$$}$$
+$$\bigoplus_{i\in I} N_i \rightarrow M \rightarrow M\bigg/\sum_{i\in I} N_i \rightarrow 0\tag{$\ast$}$$
 
 가 존재한다.
 

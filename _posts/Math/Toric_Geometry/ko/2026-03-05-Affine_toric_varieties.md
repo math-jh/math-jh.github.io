@@ -53,7 +53,7 @@ $$N_{\mathbb{R}} = N \otimes_{\mathbb{Z}} \mathbb{R},\qquad M_{\mathbb{R}} = M \
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Cone $$\sigma$$의 **face<sub>면</sub>** $$\tau$$는 어떤 $$u \in M_{\mathbb{R}}$$에 대해
+<ins id="def3">**정의 3**</ins> Cone $$\sigma$$의 *face<sub>면</sub>* $$\tau$$는 어떤 $$u \in M_{\mathbb{R}}$$에 대해
 
 $$\tau = \sigma \cap u^{\perp} = \{ v \in \sigma \mid \langle u, v \rangle = 0 \}$$
 
@@ -131,11 +131,25 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 $$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
 
-을 생각하자. 만일 $$N$$을 basis의 선택을 통해 $$\mathbb{Z}^n$$와 identify한다면, $$T_N=(\mathbb{C}^\ast)^n$$라 할 수 있으며, $T_N$의 임의의 원소는 항상 다음의 꼴
+을 생각하자. 
+
+
+
+정의에 의하여 $$N$$은 free $$\mathbb{Z}$$-module이며, 만일 $$N$$을 basis $$e_1,\ldots, e_n$$의 선택을 통해 $$\mathbb{Z}^n$$와 identify한다면 $$T_N=(\mathbb{C}^\ast)^n$$라 할 수 있고 그 원소는 항상 다음의 꼴
 
 $$t=(t_1,\ldots, t_n),\qquad\text{$t_i\in \mathbb{C}^\ast}$$
 
-로 나타낼 수 있다. 
+로 나타낼 수 있으며, 
+
+. 그럼 이 표기 하에서 두 원소 $$t=(t_1,\ldots, t_n)$$, $$t'=(t_1',\ldots, t_n')$$의 곱은
+
+$$t\cdot t'=(t_1t_1',\ldots, t_nt_n')$$
+
+으로 주어진다. 한편 정의에 의해 $M=\Hom(N,\mathbb{Z})$이며, dual basis $$e_1^\ast,\ldots, e_n^\ast$$를 사용하면 $M$의 임의의 원소는 $$(a_1,\ldots, a_n)$$으로 나타낼 수 있다. 이제 우리는 다음 식
+
+$$a(t)=t_1^{a_1}\cdots t_n^{a_n}$$
+
+
 
  우선 우리는 각각의 $$u\in M=\Hom(N,\mathbb{Z})$$에 대하여, 다음의 식
 

@@ -31,7 +31,7 @@ $$\mathcal{S}=\{\pr_i^{-1}(U_i)\mid U_i\text{ open in }X_i\}$$
 
 을 subbase로 하여 생성된 공간이다. 이 때, $$\mathcal{S}$$에 의하여 생성되는 base $$\mathcal{B}$$는 
 
-$$\prod_{i\in I} U_i,\qquad \text{$U_i$ open in $$X_i$$, $$U_i=X_i$$ for all but finitely many $$i$$}$$
+$$\prod_{i\in I} U_i,\qquad \text{$U_i$ open in $X_i$, $U_i=X_i$ for all but finitely many $i$}$$
 
 들의 모임이다. 
 

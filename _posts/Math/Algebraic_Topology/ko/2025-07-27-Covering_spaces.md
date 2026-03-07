@@ -85,7 +85,7 @@ $$\Pi_1(f):\Pi_1(E) \rightarrow \Pi_1(B)$$
 
 을 정의한다. 특히 임의의 $$y_0, y_1\in E$$에 대하여, 다음의 homomorphism
 
-$$\Hom_{\Pi_1(E))}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$$\ast$$}$$
+$$\Hom_{\Pi_1(E))}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$\ast$}$$
 
 이 잘 정의된다. 만일 $$B$$가 path-connected이고 $$p(y_0)=p(y_1)$$라면, 이는 fundamental group $$\pi_1(B)$$로의 (groupoid) homomorphism이 될 것이다. 만일 $$E$$가 $$B$$의 fundamental group (혹은 groupoid)에 대한 정보를 모두 가지고 있다면 적어도 이 homomorphism이 surjective여야 한다. 
 
