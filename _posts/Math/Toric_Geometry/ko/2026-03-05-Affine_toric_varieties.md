@@ -169,10 +169,18 @@ $$\mathbb{C}[S_\sigma] = \bigoplus_{u \in S_\sigma} \mathbb{C} \cdot \chi^u$$
 
 $$t \cdot \chi^u = \chi^u(t) \chi^u$$
 
-을 만족하므로, $$\chi^u$$는 weight $$u$$를 갖는 eigenvector이다. 즉, **$$M$$-grading이 정확히 torus action에 대한 weight decomposition**이다. 이 관점에서 보면:
+을 만족하므로, $$\chi^u$$는 weight $$u$$를 갖는 eigenvector이다. 즉, **$$M$$-grading이 정확히 torus action에 대한 weight decomposition**이다.
 
-- **Weight lattice**: $$S_\sigma \subseteq M$$
-- **Weight space**: $$V_u = \mathbb{C} \cdot \chi^u$$ (모든 $$u \in S_\sigma$$에 대해 1차원)
+여기서 $$\chi^u$$라는 기호가 두 가지 의미로 쓰이고 있음에 주의하자. 첫째, $$\chi^u \in \mathbb{C}[S_\sigma]$$는 coordinate ring의 basis 원소이다. 둘째, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 character 함수이다. 이 두 가지가 같은 기호를 쓰는 이유는 $$\chi^u \in \mathbb{C}[S_\sigma]$$가 weight $$u$$를 갖는 eigenvector이며, 그 eigenvalue가 정확히 character $$\chi^u(t)$$이기 때문이다. 정리하면:
+
+| 개념 | Toric variety에서의 실체 |
+|------|------------------------|
+| **Weight** | $$u \in S_\sigma \subseteq M$$ (lattice 원소) |
+| **Character** | $$\chi^u: T_N \to \mathbb{C}^\ast$$, $$t \mapsto \chi^u(t)$$ |
+| **Eigenvector** | $$\chi^u \in \mathbb{C}[S_\sigma]$$, $$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$ |
+| **Weight space** | $$V_u = \mathbb{C} \cdot \chi^u$$ (1차원) |
+
+Toric variety의 특별한 성질은 weight $$u$$, character $$\chi^u$$, eigenvector $$\chi^u$$가 모두 같은 $$u$$에 의해 parametrize된다는 것이다.
 
 이 작용은 $$U_\sigma$$ 안에 **열린 조밀한(dense open)** 토러스 궤도(orbit)를 가진다. 이 궤도는 정확히 토러스 $$T_N$$ 자체이다.
 
