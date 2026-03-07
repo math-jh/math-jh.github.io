@@ -131,17 +131,15 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 $$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
 
-을 생각하자. 
+을 생각하자. 이는 $n\times c$ 꼴의 원소들의 일차결합으로 이루어진 집합이며, 이 위에서의 연산은 
 
+$$(n\otimes c)(n'\otimes c')=(n+n')\otimes (cc')$$
 
+으로 주어진다. 만일 $$N$$을 basis $$e_1,\ldots, e_n$$의 선택을 통해 $$\mathbb{Z}^n$$와 identify한다면 $$T_N=(\mathbb{C}^\ast)^n$$라 할 수 있고 그 원소는 항상 다음의 꼴
 
-정의에 의하여 $$N$$은 free $$\mathbb{Z}$$-module이며, 만일 $$N$$을 basis $$e_1,\ldots, e_n$$의 선택을 통해 $$\mathbb{Z}^n$$와 identify한다면 $$T_N=(\mathbb{C}^\ast)^n$$라 할 수 있고 그 원소는 항상 다음의 꼴
+$$t=e_1\otimes t_1+\cdots + e_n\otimes t_n:=(t_1,\ldots, t_n),\qquad\text{$t_i\in \mathbb{C}^\ast$}$$
 
-$$t=(t_1,\ldots, t_n),\qquad\text{$t_i\in \mathbb{C}^\ast}$$
-
-로 나타낼 수 있으며, 
-
-. 그럼 이 표기 하에서 두 원소 $$t=(t_1,\ldots, t_n)$$, $$t'=(t_1',\ldots, t_n')$$의 곱은
+로 나타낼 수 있으며, 그럼 이 표기 하에서 두 원소 $$t=(t_1,\ldots, t_n)$$, $$t'=(t_1',\ldots, t_n')$$의 곱은
 
 $$t\cdot t'=(t_1t_1',\ldots, t_nt_n')$$
 
