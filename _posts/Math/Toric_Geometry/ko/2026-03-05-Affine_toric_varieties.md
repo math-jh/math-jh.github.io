@@ -131,7 +131,11 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 $$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
 
-을 생각하자. 이는 단순히 두 abelian group의 텐서곱이기는 하지만, $$\mathbb{C}^\ast$$의 연산이 곱셈이므로 다소 헷갈릴 수 있어 표기들 정리하고 넘어가기로 한다. 
+을 생각하자. 이는 단순히 두 abelian group의 텐서곱이기는 하지만, $$\mathbb{C}^\ast$$의 연산이 곱셈이므로 다소 헷갈릴 수 있어 표기들 정리하고 넘어가기로 한다. 우선 집합으로서 $T_N$은 $n\in N$, $c\in \mathbb{C}^\ast$에 대하여 $n\otimes c$의 꼴을 갖는 원소들의 유한합이며, 그 연산은 덧셈이다. 이 때 bilinearity의 경우 다음의 두 식
+
+$$(n_1+n_2)\otimes c=n_1\otimes c+n_2\otimes c,\qquad n\otimes(c_1c_2)=n\otimes c_1+n\otimes c_2$$
+
+을 의미하게 된다. 
 
 
 
