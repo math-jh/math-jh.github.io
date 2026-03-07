@@ -160,47 +160,64 @@ $$\rchi^m(t)=z_1^{m_1}\cdots z_n^{m_n}$$
 으로 적을 수 있다. 
 
 
-### 여기부터 검토 안함
+우리는 $\Spec(\mathbb{C}[S_\sigma])$ 위에 torus action을 정의하기 위해, 이미 친숙한 $\mathbb{P}^N$의 예시를 살펴본다. Projective space $\mathbb{P}^N$ 위에는 $\mathbb{C}^\ast$-action이 다음의 식
+
+$$\lambda\cdot [x_0:\cdots:x_N]=[\lambda x_0:\cdots:\lambda x_N]$$
+
+으로 주어지며, 이 action은 homogeneous coordinate ring $\mathbb{C}[x_0,\ldots, x_N]$ 위에 dual action을 유도한다. 이 dual action 하에서, homogeneous degree $d$를 갖는 monomial $x_0^{a_0}\cdots x_N^{a_N}$은 다음의 식
+
+$$\lambda\cdot (x_0^{a_0}\cdots x_N^{a_N})=\lambda^d(x_0^{a_0}\cdots x_N^{a_N})$$
+
+을 만족하므로 weight $d$를 갖는 eigenvector가 된다. 즉, polynomial ring의 $\mathbb{Z}$-grading이 정확히 $\mathbb{C}^\ast$-action에 대한 weight decomposition이다.
+
+이제 affine toric variety의 경우를 살펴보자. Coordinate ring $\mathbb{C}[S_\sigma]$는 이미 $M$-grading을 갖는다. 즉, 다음의 direct sum decomposition
+
+$$\mathbb{C}[S_\sigma]=\bigoplus_{u\in S_\sigma}\mathbb{C}\cdot\rchi^u$$
+
+이 존재한다. 따라서 $\mathbb{P}^N$의 예시와 유사하게, torus $T_N$이 각각의 monomial $\rchi^u$에 다음의 식
+
+$$t\cdot\rchi^u=\rchi^u(t)\rchi^u$$
+
+으로 작용한다면, $\rchi^u$는 weight $u$를 갖는 eigenvector가 된다. 이제 이를 통해 다음을 정의한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 아핀 토릭 다양체 $$U_\sigma$$ 위에 대수적 토러스 $$T_N$$이 다음과 같이 작용한다:
+<ins id="prop1">**명제 1**</ins> 대수적 토러스 $T_N$이 아핀 토릭 다양체 $U_\sigma=\Spec(\mathbb{C}[S_\sigma])$ 위에 다음과 같이 작용한다. 우선 coordinate ring $\mathbb{C}[S_\sigma]$ 위에 다음의 식
 
-$$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$
+$$\rho:\mathbb{C}[S_\sigma]\rightarrow\mathbb{C}[S_\sigma]\otimes_\mathbb{C}\mathbb{C}[M],\qquad \rchi^u\mapsto\rchi^u\otimes\rchi^u$$
 
-여기서 $$t \in T_N$$이고 $$\chi^u(t)$$는 위에서 정의한 문자이다.
+으로 정의되는 $\mathbb{C}$-algebra homomorphism을 생각하자. 그럼 이는 $U_\sigma$ 위의 $T_N$-action을 정의하며, 각각의 $t\in T_N$에 대하여 $t$가 $\rchi^u$에 작용하는 방식은 다음의 식
+
+$$t\cdot\rchi^u=\rchi^u(t)\rchi^u$$
+
+으로 주어진다.
 
 </div>
 
-이 작용은 Lie theory에서의 torus action과 같은 방식으로 이해할 수 있다. [\[\] §원환면의 작용, §§Weight decomposition]에서 살펴본 것처럼, torus action은 coordinate ring 위에 weight decomposition을 유도한다. 사실 우리는 이미 $$\mathbb{C}[S_\sigma]$$를
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-$$\mathbb{C}[S_\sigma] = \bigoplus_{u \in S_\sigma} \mathbb{C} \cdot \chi^u$$
+우선 $\rho$가 algebra homomorphism인 것은 다음의 식
 
-으로 분해하였으며, 명제 1의 작용 하에서 각각의 $$\chi^u$$는 정확히
+$$\rho(\rchi^u\cdot\rchi^{u'})=\rho(\rchi^{u+u'})=\rchi^{u+u'}\otimes\rchi^{u+u'}=\rchi^u\rchi^{u'}\otimes\rchi^u\rchi^{u'}=(\rchi^u\otimes\rchi^u)(\rchi^{u'}\otimes\rchi^{u'})=\rho(\rchi^u)\rho(\rchi^{u'})$$
 
-$$t \cdot \chi^u = \chi^u(t) \chi^u$$
+으로 자명하다. 이제 $T_N$의 coordinate ring이 $\mathbb{C}[M]$이므로, $\rho$는 comodule structure를 정의하고, 이로부터 $T_N$이 $U_\sigma$ 위에 작용한다.
 
-을 만족하므로, $$\chi^u$$는 weight $$u$$를 갖는 eigenvector이다. 즉, **$$M$$-grading이 정확히 torus action에 대한 weight decomposition**이다.
+한편, 각각의 $t\in T_N$을 생각하면, evaluation map $\ev_t:\mathbb{C}[M]\rightarrow\mathbb{C}$이 존재한다. 그럼 $t$가 $\rchi^u$에 작용하는 결과는 다음의 합성사상
 
-여기서 $$\chi^u$$라는 기호가 **두 가지 다른 의미**로 쓰이고 있음에 주의하자:
+$$\mathbb{C}[S_\sigma]\xrightarrow{\rho}\mathbb{C}[S_\sigma]\otimes\mathbb{C}[M]\xrightarrow{\id\otimes\ev_t}\mathbb{C}[S_\sigma]\otimes\mathbb{C}\cong\mathbb{C}[S_\sigma]$$
 
-1. **$$\chi^u \in \mathbb{C}[S_\sigma]$$**: Coordinate ring의 basis 원소 (각 weight space $$V_u = \mathbb{C} \cdot \chi^u$$의 generator)
-2. **$$\chi^u: T_N \to \mathbb{C}^\ast$$**: Character 함수, $$t \mapsto \chi^u(t)$$
+에 의해 주어진다. 이 합성사상을 $\rchi^u$에 적용하면
 
-이 두 가지가 같은 기호를 쓰는 이유는, $$\chi^u \in \mathbb{C}[S_\sigma]$$가 weight $$u$$를 갖는 eigenvector이며, 그 eigenvalue가 **정확히 character $$\chi^u(t)$$**이기 때문입니다.
+$$(\id\otimes\ev_t)(\rchi^u\otimes\rchi^u)=\rchi^u\otimes\rchi^u(t)=\rchi^u(t)\rchi^u$$
 
-정리하면 다음과 같습니다:
+을 얻는다.
 
-| 개념 | Toric variety에서의 실체 |
-|------|------------------------|
-| **Weight** | $$u \in S_\sigma \subseteq M$$ (lattice 원소) |
-| **Character** | $$\chi^u: T_N \to \mathbb{C}^\ast$$, $$t \mapsto \chi^u(t)$$ |
-| **Eigenvector** | $$\chi^u \in \mathbb{C}[S_\sigma]$$, $$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$ |
-| **Weight space** | $$V_u = \mathbb{C} \cdot \chi^u$$ (1차원) |
+</details>
 
-**Toric variety의 특별한 성질**: weight $$u$$, character $$\chi^u$$, eigenvector $$\chi^u$$가 **모두 같은 $$u$$**에 의해 parametrize됩니다.
+이제 우리는 $\rchi^u$라는 기호가 두 가지 다른 의미로 쓰이고 있음을 확인해야 한다. 우선 coordinate ring $\mathbb{C}[S_\sigma]$의 원소로서 $\rchi^u$는 weight $u$를 갖는 eigenvector이며, character로서의 $\rchi^u$는 $T_N$에서 $\mathbb{C}^\ast$로의 group homomorphism이다. 이 두 대상이 같은 기호로 적히는 이유는, $\rchi^u\in\mathbb{C}[S_\sigma]$가 $T_N$-action 하에서 eigenvalue $\rchi^u(t)$를 갖기 때문이다. 즉, $u\in M$이 주어지면 eigenvector $\rchi^u\in\mathbb{C}[S_\sigma]$, character $\rchi^u:T_N\rightarrow\mathbb{C}^\ast$, 그리고 weight $u\in M$이 모두 대응된다. 이것이 toric variety의 핵심적인 성질이다.
 
-이 작용은 $$U_\sigma$$ 안에 **열린 조밀한(dense open)** 토러스 궤도(orbit)를 가진다. 이 궤도는 정확히 토러스 $$T_N$$ 자체이며, coordinate ring의 weight decomposition에 의해 모든 point는 weight space $$V_u = \mathbb{C} \cdot \chi^u$$ 위에 있습니다.
+이 작용은 $U_\sigma$ 안에 열린 조밀한 torus orbit을 가지며, 이 orbit은 정확히 torus $T_N$ 자체이다.
 
 <div class="proposition" markdown="1">
 
