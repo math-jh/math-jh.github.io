@@ -139,11 +139,7 @@ $$\chi^u(t) = c^{u(n)} \in \mathbb{C}^\ast$$
 
 로 정의한다. **이 정의는 basis의 선택에 의존하지 않으며**, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 torus의 *character<sub>문자</sub>*가 된다.
 
-계산의 편의를 위해 $$N$$의 basis $$e_1, \ldots, e_n$$을 선택하자. 그럼 $$N \cong \mathbb{Z}^n$$이므로 $$T_N \cong (\mathbb{C}^\ast)^n$$이고, $$M \cong \mathbb{Z}^n$$이다. 이 때 $$t = (t_1, \ldots, t_n) \in (\mathbb{C}^\ast)^n$$이고 $$u = (a_1, \ldots, a_n) \in \mathbb{Z}^n$$으로 쓸 수 있으며, 이 경우
-
-$$\chi^u(t) = t_1^{a_1} \cdots t_n^{a_n}$$
-
-으로 표현된다.
+계산의 편의를 위해 $$N$$의 basis $$e_1, \ldots, e_n$$을 선택하고, $$u = (a_1, \ldots, a_n) \in \mathbb{Z}^n \cong M$$, $$t = (t_1, \ldots, t_n) \in (\mathbb{C}^\ast)^n \cong T_N$$으로 쓰자. 그럼 $$\chi^u(t) = t_1^{a_1} \cdots t_n^{a_n}$$으로 표현된다.
 
 이제 $$\mathbb{C}[S_\sigma] = \bigoplus_{u \in S_\sigma} \mathbb{C} \cdot \chi^u$$가 $$M$$-graded algebra라는 점을 이용하여, 이 위에 torus action을 정의하자. $$T_N$$이 $$\mathbb{C}[S_\sigma]$$의 각 graded component에 작용하여
 
