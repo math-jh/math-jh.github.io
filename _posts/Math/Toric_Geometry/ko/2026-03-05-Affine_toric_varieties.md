@@ -160,23 +160,21 @@ $$\rchi^m(t)=z_1^{m_1}\cdots z_n^{m_n}$$
 으로 적을 수 있다. 
 
 
-Coordinate ring $\mathbb{C}[S_\sigma]$는 이미 $M$-grading을 갖는다. 즉, 다음의 direct sum decomposition
+이제 우리는 $U_\sigma$ 위에 torus action을 정의한다. 우선 torus $T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$의 coordinate ring을 생각하자. $T_N$의 원소는 $M$의 원소들로 parametrize되는 character들을 가지며, 이 character들의 ring이 $\mathbb{C}[M]=\mathbb{C}[\rchi^m\mid m\in M]$이다. 따라서 $T_N\cong\Spec(\mathbb{C}[M])$이다.
 
-$$\mathbb{C}[S_\sigma]=\bigoplus_{u\in S_\sigma}\mathbb{C}\cdot\rchi^u$$
-
-이 존재한다. Torus $T_N$의 coordinate ring은 $\mathbb{C}[M]$이므로, 우리는 다음의 $\mathbb{C}$-algebra homomorphism
+한편 $\Spec$은 contravariant functor이므로, $U_\sigma=\Spec(\mathbb{C}[S_\sigma])$ 위에 $T_N$이 작용하는 것은 coordinate ring $\mathbb{C}[S_\sigma]$ 위에 comodule structure를 주는 것과 같다. 즉, 다음의 $\mathbb{C}$-algebra homomorphism
 
 $$\rho:\mathbb{C}[S_\sigma]\rightarrow\mathbb{C}[S_\sigma]\otimes_\mathbb{C}\mathbb{C}[M],\qquad \rchi^u\mapsto\rchi^u\otimes\rchi^u$$
 
-을 생각할 수 있다. 이는 $T_N$이 $U_\sigma$ 위에 작용하는 방식을 기술하며, 각각의 $t\in T_N$에 대하여 $t$가 $\rchi^u$에 작용하는 결과는 다음의 식
+을 정의하면 이것이 $U_\sigma$ 위에 $T_N$-action을 정의한다. 각각의 $t\in T_N$에 대하여, $t$가 $\rchi^u\in\mathbb{C}[S_\sigma]$에 작용하는 결과는 다음의 식
 
 $$t\cdot\rchi^u=\rchi^u(t)\rchi^u$$
 
-으로 주어진다. 따라서 $\rchi^u$는 weight $u$를 갖는 eigenvector이며, $M$-grading이 정확히 torus action에 대한 weight decomposition이 된다.
+으로 주어진다. 따라서 $\rchi^u$는 weight $u$를 갖는 eigenvector이며, $\mathbb{C}[S_\sigma]$의 $M$-grading이 정확히 torus action에 대한 weight decomposition이 된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 대수적 토러스 $T_N$이 아핀 토릭 다양체 $U_\sigma=\Spec(\mathbb{C}[S_\sigma])$ 위에 다음과 같이 작용한다. 우선 coordinate ring $\mathbb{C}[S_\sigma]$ 위에 다음의 식
+<ins id="prop8">**명제 8**</ins> 대수적 토러스 $T_N$이 아핀 토릭 다양체 $U_\sigma=\Spec(\mathbb{C}[S_\sigma])$ 위에 다음과 같이 작용한다. 우선 coordinate ring $\mathbb{C}[S_\sigma]$ 위에 다음의 식
 
 $$\rho:\mathbb{C}[S_\sigma]\rightarrow\mathbb{C}[S_\sigma]\otimes_\mathbb{C}\mathbb{C}[M],\qquad \rchi^u\mapsto\rchi^u\otimes\rchi^u$$
 
@@ -215,7 +213,7 @@ $$(\id\otimes\ev_t)(\rchi^u\otimes\rchi^u)=\rchi^u\otimes\rchi^u(t)=\rchi^u(t)\r
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> $$\tau$$가 $$\sigma$$의 면일 때, $$U_\tau$$는 $$U_\sigma$$의 **주 열린 부분집합(principal open subset)**이다. 구체적으로, $$u \in S_\sigma$$를 $$\tau = \sigma \cap u^{\perp}$$를 만족하는 것으로 선택하면
+<ins id="prop9">**명제 9**</ins> $$\tau$$가 $$\sigma$$의 면일 때, $$U_\tau$$는 $$U_\sigma$$의 **주 열린 부분집합(principal open subset)**이다. 구체적으로, $$u \in S_\sigma$$를 $$\tau = \sigma \cap u^{\perp}$$를 만족하는 것으로 선택하면
 
 $$U_\tau = \{ x \in U_\sigma \mid \chi^u(x) \neq 0 \}$$
 
@@ -229,7 +227,7 @@ $$U_\tau = \{ x \in U_\sigma \mid \chi^u(x) \neq 0 \}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8 (구면의 회전)**</ins> Torus action을 직관적으로 이해하기 위해, 2차원 구면 $$S^2$$이 자전축 중심으로 회전하는 상황을 생각하자.
+<ins id="ex10">**예시 10 (구면의 회전)**</ins> Torus action을 직관적으로 이해하기 위해, 2차원 구면 $$S^2$$이 자전축 중심으로 회전하는 상황을 생각하자.
 
 $$S^2$$을 $$\mathbb{C} \times \mathbb{R}$$의 부분집합
 
@@ -271,7 +269,7 @@ $$e^{i\theta} \cdot w^n = e^{i\theta n} \cdot w^n$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 아핀 토릭 다양체 $$U_\sigma$$에 대해 다음이 성립한다:
+<ins id="prop11">**명제 11**</ins> 아핀 토릭 다양체 $$U_\sigma$$에 대해 다음이 성립한다:
 
 1. $$U_\sigma$$는 **정규(normal)** 다양체이다. (증명은 Gordan의 보조정리를 사용한다.)
 2. $$U_\sigma$$는 **기약(irreducible)**이다.
@@ -281,7 +279,7 @@ $$e^{i\theta} \cdot w^n = e^{i\theta n} \cdot w^n$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> 모든 아핀 토릭 다양체 $$U_\sigma$$는 토러스 $$T_N$$을 열린 조밀한 부분집합으로 포함한다.
+<ins id="prop12">**명제 12**</ins> 모든 아핀 토릭 다양체 $$U_\sigma$$는 토러스 $$T_N$$을 열린 조밀한 부분집합으로 포함한다.
 
 </div>
 
