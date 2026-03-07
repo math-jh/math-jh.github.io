@@ -133,11 +133,17 @@ $$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
 
 을 생각하자. 
 
-Torus $$T_N$$의 원소 $$t$$와 $$M$$의 원소 $$u$$에 대하여, $$\chi^u(t)$$를 다음과 같이 정의하자. $$N \cong \mathbb{Z}^n$$이므로 $$T_N \cong (\mathbb{C}^\ast)^n$$이고, $$M \cong \mathbb{Z}^n$$이다. 이 때 $$t = (t_1, \ldots, t_n) \in (\mathbb{C}^\ast)^n$$이고 $$u = (a_1, \ldots, a_n) \in \mathbb{Z}^n$$이라 하면
+Torus $$T_N$$의 원소 $$t$$와 $$M$$의 원소 $$u$$에 대하여, $$\chi^u(t)$$를 다음과 같이 정의하자. 우선 $$t = n \otimes c \in N \otimes_{\mathbb{Z}} \mathbb{C}^\ast = T_N$$이고 $$u \in M = \Hom(N, \mathbb{Z})$$일 때,
 
-$$\chi^u(t) = t_1^{a_1} \cdots t_n^{a_n} \in \mathbb{C}^\ast$$
+$$\chi^u(t) = c^{u(n)} \in \mathbb{C}^\ast$$
 
-이다. 즉, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 torus의 *character<sub>문자</sub>*이다. 이제 $$T_N$$이 $$\mathbb{C}[S_\sigma]$$ 위에 다음과 같이 작용한다:
+로 정의한다. 이 정의는 basis의 선택에 의존하지 않으며, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 torus의 *character<sub>문자</sub>*가 된다.
+
+계산의 편의를 위해 $$N$$의 basis $$e_1, \ldots, e_n$$을 선택하자. 그럼 $$N \cong \mathbb{Z}^n$$이므로 $$T_N \cong (\mathbb{C}^\ast)^n$$이고, $$M \cong \mathbb{Z}^n$$이다. 이 때 $$t = (t_1, \ldots, t_n) \in (\mathbb{C}^\ast)^n$$이고 $$u = (a_1, \ldots, a_n) \in \mathbb{Z}^n$$으로 쓸 수 있으며, 이 경우
+
+$$\chi^u(t) = t_1^{a_1} \cdots t_n^{a_n}$$
+
+으로 표현된다. 이제 $$T_N$$이 $$\mathbb{C}[S_\sigma]$$ 위에 다음과 같이 작용한다:
 
 $$t \cdot f(p) = f(t^{-1} \cdot p)$$
 
@@ -180,7 +186,31 @@ $$U_\tau = \{ x \in U_\sigma \mid \chi^u(x) \neq 0 \}$$
 
 이 명제는 작은 콘이 더 작은 열린 집합에 대응된다는 것을 보여준다. 이것이 바로 $$N$$에서의 기하학이 $$M$$에서의 기하학보다 선호되는 이유이다.
 
-한편, 위의 open embedding $$U_\tau \hookrightarrow U_\sigma$$는 $$T_N$$-equivariant이다. 즉, $$T_N$$이 $$U_\tau$$와 $$U_\sigma$$ 위에 각각 작용할 때, 이 작용들은 inclusion과 compatible하다. 이것이 의미하는 것은, 여러 affine toric variety들을 face 관계를 통해 glue할 때, 이 glue가 torus action을 보존한다는 것이다. 결과적으로 일반적인 toric variety는 자연스러운 torus action을 가지며, 이것이 toric variety의 핵심적인 성질이 된다.
+한편, 위의 open embedding $$U_\tau \hookrightarrow U_\sigma$$는 $$T_N$$-equivariant이다. 즉, $$T_N$$이 $$U_\tau$$와 $$U_\sigma$$ 위에 각각 작용할 때, 이 작용들은 inclusion과 compatible하다. 이것이 의미하는 것은, 여러 affine toric variety들을 face 관계를 통해 glue할 때, 이 glue가 torus action을 보존한다다는 것이다. 결과적으로 일반적인 toric variety는 자연스러운 torus action을 가지며, 이것이 toric variety의 핵심적인 성질이 된다.
+
+<div class="example" markdown="1">
+
+<ins id="ex8">**예시 8 (구면의 회전)**</ins> Torus action을 직관적으로 이해하기 위해, 2차원 구면 $$S^2$$이 자전축 중심으로 회전하는 상황을 생각하자.
+
+$$S^2$$을 $$\mathbb{C} \times \mathbb{R}$$의 부분집합
+
+$$S^2 = \{(z, x_3) \in \mathbb{C} \times \mathbb{R} \mid |z|^2 + x_3^2 = 1\}$$
+
+으로 생각하자. 1차원 torus $$S^1 = \{e^{i\theta} \mid \theta \in \mathbb{R}/2\pi\mathbb{Z}\}$$가 다음과 같이 작용한다:
+
+$$e^{i\theta} \cdot (z, x_3) = (e^{i\theta}z, x_3)$$
+
+이 작용 하에서:
+
+- **궤도(Orbits)**: 같은 위도에 있는 모든 점들이 하나의 궤도를 이룬다. 예를 들어 적도 $$\{(z, 0) \mid |z| = 1\}$$은 하나의 원 모양 궤도이고, 북위 45° 선도 마찬가지로 하나의 궤도이다.
+  
+- **고정점(Fixed points)**: 북극 $$(0, 1)$$과 남극 $$(0, -1)$$은 회전해도 그 자리에 남는다. 이들은 0차원 궤도이다.
+
+- **Orbit space**: $$S^2 / S^1 \cong [-1, 1]$$로, 각 위도 $$x_3 \in [-1, 1]$$이 하나의 궤도를 대표한다. 이것이 **moment polytope**의 가장 간단한 예시이다.
+
+사실 $$S^2 \cong \mathbb{P}^1$$이며, $$\mathbb{P}^1$$은 가장 기본적인 (projective) toric variety이다. 이 예시에서 볼 수 있듯이, torus action은 다양체를 궤도들로 나누고, 각 궤도의 차원은 그 점에서의 torus action의 "자유도"에 의해 결정된다.
+
+</div>
 
 ## 기본 성질
 
