@@ -137,7 +137,7 @@ Torus $$T_N$$의 원소 $$t$$와 $$M$$의 원소 $$u$$에 대하여, $$\chi^u(t)
 
 $$\chi^u(t) = c^{u(n)} \in \mathbb{C}^\ast$$
 
-로 정의한다. 이 정의는 basis의 선택에 의존하지 않으며, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 torus의 *character<sub>문자</sub>*가 된다.
+로 정의한다. **이 정의는 basis의 선택에 의존하지 않으며**, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 torus의 *character<sub>문자</sub>*가 된다.
 
 계산의 편의를 위해 $$N$$의 basis $$e_1, \ldots, e_n$$을 선택하자. 그럼 $$N \cong \mathbb{Z}^n$$이므로 $$T_N \cong (\mathbb{C}^\ast)^n$$이고, $$M \cong \mathbb{Z}^n$$이다. 이 때 $$t = (t_1, \ldots, t_n) \in (\mathbb{C}^\ast)^n$$이고 $$u = (a_1, \ldots, a_n) \in \mathbb{Z}^n$$으로 쓸 수 있으며, 이 경우
 
@@ -171,7 +171,14 @@ $$t \cdot \chi^u = \chi^u(t) \chi^u$$
 
 을 만족하므로, $$\chi^u$$는 weight $$u$$를 갖는 eigenvector이다. 즉, **$$M$$-grading이 정확히 torus action에 대한 weight decomposition**이다.
 
-여기서 $$\chi^u$$라는 기호가 두 가지 의미로 쓰이고 있음에 주의하자. 첫째, $$\chi^u \in \mathbb{C}[S_\sigma]$$는 coordinate ring의 basis 원소이다. 둘째, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 character 함수이다. 이 두 가지가 같은 기호를 쓰는 이유는 $$\chi^u \in \mathbb{C}[S_\sigma]$$가 weight $$u$$를 갖는 eigenvector이며, 그 eigenvalue가 정확히 character $$\chi^u(t)$$이기 때문이다. 정리하면:
+여기서 $$\chi^u$$라는 기호가 **두 가지 다른 의미**로 쓰이고 있음에 주의하자:
+
+1. **$$\chi^u \in \mathbb{C}[S_\sigma]$$**: Coordinate ring의 basis 원소 (각 weight space $$V_u = \mathbb{C} \cdot \chi^u$$의 generator)
+2. **$$\chi^u: T_N \to \mathbb{C}^\ast$$**: Character 함수, $$t \mapsto \chi^u(t)$$
+
+이 두 가지가 같은 기호를 쓰는 이유는, $$\chi^u \in \mathbb{C}[S_\sigma]$$가 weight $$u$$를 갖는 eigenvector이며, 그 eigenvalue가 **정확히 character $$\chi^u(t)$$**이기 때문입니다.
+
+정리하면 다음과 같습니다:
 
 | 개념 | Toric variety에서의 실체 |
 |------|------------------------|
@@ -180,9 +187,9 @@ $$t \cdot \chi^u = \chi^u(t) \chi^u$$
 | **Eigenvector** | $$\chi^u \in \mathbb{C}[S_\sigma]$$, $$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$ |
 | **Weight space** | $$V_u = \mathbb{C} \cdot \chi^u$$ (1차원) |
 
-Toric variety의 특별한 성질은 weight $$u$$, character $$\chi^u$$, eigenvector $$\chi^u$$가 모두 같은 $$u$$에 의해 parametrize된다는 것이다.
+**Toric variety의 특별한 성질**: weight $$u$$, character $$\chi^u$$, eigenvector $$\chi^u$$가 **모두 같은 $$u$$**에 의해 parametrize됩니다.
 
-이 작용은 $$U_\sigma$$ 안에 **열린 조밀한(dense open)** 토러스 궤도(orbit)를 가진다. 이 궤도는 정확히 토러스 $$T_N$$ 자체이다.
+이 작용은 $$U_\sigma$$ 안에 **열린 조밀한(dense open)** 토러스 궤도(orbit)를 가진다. 이 궤도는 정확히 토러스 $$T_N$$ 자체이며, coordinate ring의 weight decomposition에 의해 모든 point는 weight space $$V_u = \mathbb{C} \cdot \chi^u$$ 위에 있습니다.
 
 <div class="proposition" markdown="1">
 
