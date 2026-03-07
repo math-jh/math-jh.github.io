@@ -141,9 +141,9 @@ $$t=e_1\otimes z_1+\cdots + e_n\otimes z_n:=(z_1,\ldots, z_n),\qquad\text{$z_i\i
 
 의 꼴로 나타낼 수 있으며, 그럼 이 표기 하에서 두 원소 $$t=(z_1,\ldots, z_n)$$, $$t'=(z_1',\ldots, z_n')$$의 덧셈은
 
-$$t\cdot t'=e_1\otimes z_1+\cdots+e_n\otimes z_n+e_1\otimes z_1'+\cdots e_n\otimes z_n'=e_1\otimes(z_1z_1')+\cdots e_n\otimes(z_nz_n')=(z_1z_1,\ldots, z_nz_n')\tag{$\ast$}$$
+$$t+ t'=e_1\otimes z_1+\cdots+e_n\otimes z_n+e_1\otimes z_1'+\cdots e_n\otimes z_n'=e_1\otimes(z_1z_1')+\cdots e_n\otimes(z_nz_n')=(z_1z_1,\ldots, z_nz_n')\tag{$\ast$}$$
 
-으로 주어진다. 이제 임의의 $$m\in M$$과 $$t=v\otimes z\in T_N$에 대하여, 다음의 식
+으로 주어진다. 이제 임의의 $$m\in M$$과 $$t=v\otimes z\in T_N$$에 대하여, 다음의 식
 
 $$\rchi^m(t)=z^{m(v)}$$
 
@@ -153,38 +153,14 @@ $$\rchi^m(t)=z^{m(v)}$$
 
 $$m=m_1e_1^\ast+\cdots m_ne_n^\ast$$
 
-과 같이 쓸 수 있고, 
+과 같이 쓸 수 있고, 그럼 $$\rchi^m$$은 다음의 식
+
+$$\rchi^m(t)=z_1^{m_1}\cdots z_n^{m_n}$$
+
+으로 적을 수 있다. 
 
 
-한편 정의에 의해 $M=\Hom(N,\mathbb{Z})$이며, dual basis $$e_1^\ast,dots, e_n^\ast$$를 사용하면 $M$의 임의의 원소는 $$(a_1,\ldots, a_n)$$으로 나타낼 수 있다. 이제 우리는 다음 식
-
-$$a(t)=t_1^{a_1}\cdots t_n^{a_n}$$
-
-
-
- 우선 우리는 각각의 $$u\in M=\Hom(N,\mathbb{Z})$$에 대하여, 다음의 식
-
-$$n\otimes c\mapsto c^{u(n)}$$
-
-을 통해 $T_N$에서 $\mathbb{C}^\ast$로의 
-
-우선 basis-free하게 $$\chi^u(t)$$를 정의한다. $$u \in M = \Hom(N, \mathbb{Z})$$이고 $$t \in T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast$$라고 하자. $$t = n \otimes c$$ (여기서 $$n \in N$$, $$c \in \mathbb{C}^\ast$$)로 표현할 수 있는데, 이 때
-
-$$\chi^u(t) = c^{u(n)} \in \mathbb{C}^\ast$$
-
-로 정의한다. 여기서 $$u(n) \in \mathbb{Z}$$이고 $$c \in \mathbb{C}^\ast$$이므로 $$c^{u(n)}$$는 $$\mathbb{C}^\ast$$의 원소다. **이 정의는 basis 선택과 무관하게 canonical**하다.
-
-계산의 편의를 위해 basis를 선택해서 좌표로 표현하자. $$N \cong \mathbb{Z}^n$$이므로 $$T_N \cong (\mathbb{C}^\ast)^n$$이고, $$M \cong \mathbb{Z}^n$$이다. 이 때 $$t = (t_1, \ldots, t_n) \in (\mathbb{C}^\ast)^n$$이고 $$u = (a_1, \ldots, a_n) \in \mathbb{Z}^n$$이라 하면
-
-$$\chi^u(t) = t_1^{a_1} \cdots t_n^{a_n} \in \mathbb{C}^\ast$$
-
-이다. 즉, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 torus의 *character<sub>문자</sub>*이다.
-
-이제 $$T_N$$이 $$\mathbb{C}[S_\sigma]$$ 위에 다음과 같이 작용한다:
-
-$$t \cdot f(p) = f(t^{-1} \cdot p)$$
-
-여기서 $$t^{-1} \cdot p$$는 $$T_N$$이 $$U_\sigma$$ 위에 작용하는 것을 의미한다. 이 작용을 basis $$\{\chi^u \mid u \in S_\sigma\}$$에 대해 살펴보면 다음을 얻는다.
+### 여기부터 검토 안함
 
 <div class="proposition" markdown="1">
 
