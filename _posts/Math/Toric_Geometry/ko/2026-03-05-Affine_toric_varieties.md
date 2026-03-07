@@ -131,25 +131,29 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 $$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
 
-을 생각하자. 
+을 생각하자.
 
-Torus $$T_N$$의 원소 $$t$$와 $$M$$의 원소 $$u$$에 대하여, $$\chi^u(t)$$를 다음과 같이 정의하자. 우선 $$t = n \otimes c \in N \otimes_{\mathbb{Z}} \mathbb{C}^\ast = T_N$$이고 $$u \in M = \Hom(N, \mathbb{Z})$$일 때,
+우선 basis-free하게 $$\chi^u(t)$$를 정의한다. $$u \in M = \Hom(N, \mathbb{Z})$$이고 $$t \in T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast$$라고 하자. $$t = n \otimes c$$ (여기서 $$n \in N$$, $$c \in \mathbb{C}^\ast$$)로 표현할 수 있는데, 이 때
 
 $$\chi^u(t) = c^{u(n)} \in \mathbb{C}^\ast$$
 
-로 정의한다. **이 정의는 basis의 선택에 의존하지 않으며**, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 torus의 *character<sub>문자</sub>*가 된다.
+로 정의한다. 여기서 $$u(n) \in \mathbb{Z}$$이고 $$c \in \mathbb{C}^\ast$$이므로 $$c^{u(n)}$$는 $$\mathbb{C}^\ast$$의 원소다. **이 정의는 basis 선택과 무관하게 canonical**하다.
 
-계산의 편의를 위해 $$N$$의 basis $$e_1, \ldots, e_n$$을 선택하고, $$u = (a_1, \ldots, a_n) \in \mathbb{Z}^n \cong M$$, $$t = (t_1, \ldots, t_n) \in (\mathbb{C}^\ast)^n \cong T_N$$으로 쓰자. 그럼 $$\chi^u(t) = t_1^{a_1} \cdots t_n^{a_n}$$으로 표현된다.
+계산의 편의를 위해 basis를 선택해서 좌표로 표현하자. $$N \cong \mathbb{Z}^n$$이므로 $$T_N \cong (\mathbb{C}^\ast)^n$$이고, $$M \cong \mathbb{Z}^n$$이다. 이 때 $$t = (t_1, \ldots, t_n) \in (\mathbb{C}^\ast)^n$$이고 $$u = (a_1, \ldots, a_n) \in \mathbb{Z}^n$$이라 하면
 
-이제 $$\mathbb{C}[S_\sigma] = \bigoplus_{u \in S_\sigma} \mathbb{C} \cdot \chi^u$$가 $$M$$-graded algebra라는 점을 이용하여, 이 위에 torus action을 정의하자. $$T_N$$이 $$\mathbb{C}[S_\sigma]$$의 각 graded component에 작용하여
+$$\chi^u(t) = t_1^{a_1} \cdots t_n^{a_n} \in \mathbb{C}^\ast$$
 
-$$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$
+이다. 즉, $$\chi^u: T_N \to \mathbb{C}^\ast$$는 torus의 *character<sub>문자</sub>*이다.
 
-를 만족하도록 정의한다. 이 action은 $$\mathbb{C}$$-algebra automorphism을 유도하므로, $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$ 위의 torus action에 해당한다. 구체적으로, 이 action에 의해 $$t \in T_N$$이 $$\mathbb{C}[S_\sigma]$$의 automorphism $$\phi_t: \mathbb{C}[S_\sigma] \to \mathbb{C}[S_\sigma]$$를 결정하고, 이것이 $$U_\sigma$$의 automorphism으로 내려온다. 요약하면:
+이제 $$T_N$$이 $$\mathbb{C}[S_\sigma]$$ 위에 다음과 같이 작용한다:
+
+$$t \cdot f(p) = f(t^{-1} \cdot p)$$
+
+여기서 $$t^{-1} \cdot p$$는 $$T_N$$이 $$U_\sigma$$ 위에 작용하는 것을 의미한다. 이 작용을 basis $$\{\chi^u \mid u \in S_\sigma\}$$에 대해 살펴보면 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> $$\mathbb{C}[S_\sigma]$$의 $$M$$-grading으로부터 유도되는 torus action은 $$U_\sigma$$ 위에 다음과 같이 작용한다:
+<ins id="prop1">**명제 1**</ins> 아핀 토릭 다양체 $$U_\sigma$$ 위에 대수적 토러스 $$T_N$$이 다음과 같이 작용한다:
 
 $$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$
 
