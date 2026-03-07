@@ -134,7 +134,7 @@ $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
 우선 $$X$$가 noetherian scheme이므로 적당한 noetherian ring들 $$A_1,\ldots, A_r$$이 존재하여 $$X=\bigcup \Spec A_i$$라 할 수 있다. 또, $$X$$는 위상공간으로서 noetherian이고, 따라서 [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop13)에 의하여 $$X$$는 유한히 많은 irreducible component를 갖는다. 이제
 
-$$X=\bigcup_{j=1}^s X_j\tag{$$\ast$$}$$
+$$X=\bigcup_{j=1}^s X_j\tag{$\ast$}$$
 
 가 $$X$$를 irreducible component들로 분해한 것이라 하면, 고정된 $$i$$에 대하여 다음 집합들
 
@@ -272,7 +272,7 @@ $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\math
 
 는 injective인 것을 안다. 따라서 locally noetherian scheme $$X$$의 임의의 열린집합 $$U$$에 대하여 다음의 함수
 
-$$\Gamma(U, \mathscr{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $$U$$} \mathscr{O}_{X,x}\tag{$$\ast$$}$$
+$$\Gamma(U, \mathscr{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathscr{O}_{X,x}\tag{$\ast$}$$
 
 가 injective이다. 
 

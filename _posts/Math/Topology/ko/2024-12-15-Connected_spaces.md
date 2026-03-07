@@ -141,7 +141,7 @@ $$X=\bigcup_{i\in I} U_i$$
 
 <ins id="prop8">**명제 8**</ins> 위상공간 $$X$$ 위에 동치관계 $$\sim$$을
 
-$$x\sim y\iff \text{$x$ and $$y$$ lies in the same component}$$
+$$x\sim y\iff \text{$x$ and $y$ lies in the same component}$$
 
 로 정의하자. 그럼 $$X/{\sim}$$은 totally disconnected이다.
 

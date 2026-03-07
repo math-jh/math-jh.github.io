@@ -100,7 +100,7 @@ $$h^{-1}(X''\setminus V)=f(g^{-1}(X''\setminus V))$$
 
 위의 증명으로부터, 만일 주어진 조건을 만족하는 위상공간 $$X'=X\cup \{\ast_{X'}\}$$가 존재한다면, $$X'$$의 열린집합은 다음의 두 종류
 
-$$f(U)\quad\text{for $U$ open in $$X$$},\qquad X'\setminus f(C)\quad\text{for $C$ compact in $$X$$}$$
+$$f(U)\quad\text{for $U$ open in $X$},\qquad X'\setminus f(C)\quad\text{for $C$ compact in $X$}$$
 
 의 꼴이어야 한다는 것을 안다. 그럼 실제로 이것이 [§열린집합, ⁋정의 1](/ko/math/topology/open_sets#def1)의 조건을 만족하는 것을 쉽게 보일 수 있다. 남은 것은 이렇게 주어진 위상구조가 compact Hausdorff임을 보이는 것 뿐이다. 
 

@@ -93,7 +93,7 @@ $$\alpha_1v_1+\cdots+\alpha_nv_n$$
 
 더 일반적으로, 무한히 많은 $$V$$의 원소들 $$(v_i)_{i\in I}$$이 주어졌을 때, 이들의 일차결합은
 
-$$\sum_{i\in I}\alpha_iv_i\qquad\text{$\alpha_i=0$ for all but finitely many $$i$$}$$
+$$\sum_{i\in I}\alpha_iv_i\qquad\text{$\alpha_i=0$ for all but finitely many $i$}$$
 
 으로 정의된다. 예를 들어, [§벡터공간, ⁋예시 4](/ko/math/linear_algebra/vector_spaces#ex4)와 같이 $$\mathbb{R}$$을 $$\mathbb{Q}$$-벡터공간으로 본다면, $$0.111\ldots$$는 다음 벡터들
 

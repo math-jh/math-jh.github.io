@@ -112,7 +112,7 @@ $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(-,A)$ to $$F$$}\}\
 
 <ins id="ex6">**예시 6**</ins> 두 $$k$$-벡터공간 $$V,W$$를 고정하고, category $$\Vect_k$$에서 $$\Set$$으로의 functor $$\operatorname{Bilin}(V,W;-)$$을
 
-$$\operatorname{Bilin}(V,W;U)=\{\text{bilinear maps from $V\times W$ to $$U$$}\}$$
+$$\operatorname{Bilin}(V,W;U)=\{\text{bilinear maps from $V\times W$ to $U$}\}$$
 
 으로 정의하자. 그럼 이 functor가 representable하다는 사실이 잘 알려져 있다. 즉 적당한 $$k$$-벡터공간 $$V\otimes W$$가 존재하여, 다음 natural isomorphism
 

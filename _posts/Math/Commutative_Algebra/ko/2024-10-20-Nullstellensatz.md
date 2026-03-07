@@ -134,11 +134,11 @@ $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 
 조금 더 전통적인 버전의 영점정리 또한 이로부터 얻어진다. 이를 서술하기 위해, $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 ideal $$\mathfrak{a}$$을 받아 $$\mathbb{K}^n$$의 부분집합 $$Z(\mathfrak{a})$$를 내놓는 함수
 
-$$Z(\mathfrak{a})=\{(a_1,\ldots, a_n)\in \mathbb{K}^n: \text{$f(a_1,\ldots, a_n)=0$ for all $$f\in \mathfrak{a}$$}\}$$
+$$Z(\mathfrak{a})=\{(a_1,\ldots, a_n)\in \mathbb{K}^n: \text{$f(a_1,\ldots, a_n)=0$ for all $f\in \mathfrak{a}$}\}$$
 
 그리고 $$\mathbb{K}^n$$의 부분집합 $$S$$를 받아 $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 부분집합
 
-$$I(S)=\{f\in \mathbb{K}[\x_1,\ldots, \x_n]:\text{$f(a_1,\ldots, a_n)=0$ for all $$(a_1,\ldots, a_n)\in S$$}\}$$
+$$I(S)=\{f\in \mathbb{K}[\x_1,\ldots, \x_n]:\text{$f(a_1,\ldots, a_n)=0$ for all $(a_1,\ldots, a_n)\in S$}\}$$
 
 을 내놓는 함수 $$I$$를 생각하자. 
 

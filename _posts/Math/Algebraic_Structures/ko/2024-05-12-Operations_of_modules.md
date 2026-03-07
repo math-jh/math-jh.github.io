@@ -106,7 +106,7 @@ $$f(x\alpha, y)=f(x,\alpha y)$$
 
 고정된 $$M\in\obj(\rMod{A}),N\in\obj(\lMod{A})$$에 대하여, 집합 $$\Balan_A(M,N;L)$$를 다음 식
 
-$$\Balan_A(M,N;L)=\{\text{$A$-balanced maps from $$M\times N$$ to $$L$$}\}$$
+$$\Balan_A(M,N;L)=\{\text{$A$-balanced maps from $M\times N$ to $L$}\}$$
 
 으로 정의하자. 그럼 다음 정리가 성립한다.
 
@@ -190,7 +190,7 @@ $$\alpha f(x,y)=f(\alpha x,y)=f(x,\alpha y)$$
 
 집합 $$\Bilin_A(M,N;L)$$을 다음 식
 
-$$\Bilin_A(M,N;L)=\{\text{$A$-bilinear maps from $$M\times N$$ to $$L$$}\}$$
+$$\Bilin_A(M,N;L)=\{\text{$A$-bilinear maps from $M\times N$ to $L$}\}$$
 
 으로 정의하자.
 

@@ -89,7 +89,7 @@ Category $$\Open(X)$$를 ordered set $$(\mathcal{T}, \subseteq)$$를 category로
 
 <ins id="ex5">**예시 5 (Skyscraper sheaf)**</ins> 고정된 위상공간 $$X$$와 한 점 $$i_x:\{x\}\hookrightarrow X$$가 주어졌다 하고, 대상 $$A\in \mathcal{A}$$를 고정하자. 그럼 다음의 식
 
-$$(i_x)_\ast A(U)=\begin{cases}A&\text{if $x\in U$,}\\T&\text{if $x\not\in U$,}\end{cases}\qquad \text{$T$ a terminal object in $$\mathcal{A}$$}$$
+$$(i_x)_\ast A(U)=\begin{cases}A&\text{if $x\in U$,}\\T&\text{if $x\not\in U$,}\end{cases}\qquad \text{$T$ a terminal object in $\mathcal{A}$}$$
 
 으로 주고, restriction map은 $$\id_A$$ 혹은, terminal object $$T$$를 이용해 주면 이는 presheaf를 정의한다. 이를 *skyscraper sheaf*라 부른다.
 
@@ -143,7 +143,7 @@ $$\mathscr{F}_x=\{(s,U)\mid x\in U\in\mathscr{T},s\in\mathscr{F}(U)\}/\mathnorma
 
 이고, 여기서 동치관계 $$\sim$$은 
 
-$$(s,U)\sim(t,V)\iff\text{$\exists$ open neighborhood $$W\subseteq U\cap V$$ of $$x$$ satisfying $$\rho_{UW}(s)=\rho_{VW}(t)$$}$$
+$$(s,U)\sim(t,V)\iff\text{$\exists$ open neighborhood $W\subseteq U\cap V$ of $x$ satisfying $\rho_{UW}(s)=\rho_{VW}(t)$}$$
 
 을 통해 정의된다. 즉 직관적으로 $$\mathscr{F}_x$$의 원소 $$(s,U)$$들은 $$x$$에서의 함숫값 $$s(x)$$와, $$x$$ 근방에서 $$s$$의 국소적인 정보[^1]를 추가로 갖고 있는 대상이라 생각할 수 있다. 편의상 임의의 $$s\in \mathscr{F}(U)$$에 대하여, $$s$$의 $$\mathscr{F}(U) \rightarrow \mathscr{F}_x$$에 의한 image를 $$s_x$$로 적는다. 
 

@@ -123,7 +123,7 @@ $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(
 
 한편, 이렇게 정의한 $$L':W\rightarrow V$$는 다음 식
 
-$$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and $$w\in W$$}\tag{1}$$
+$$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and $w\in W$}\tag{1}$$
 
 을 만족하는 것을 알 수 있다. 이는
 
