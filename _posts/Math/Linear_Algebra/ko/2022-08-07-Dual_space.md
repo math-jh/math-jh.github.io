@@ -151,7 +151,7 @@ $$L^\ast(f)=f\circ L$$
 
 혹은, 위에서 정의한 canonical pairing에 따르면 $$L^\ast$$는 다음의 식
 
-$$(Lv, f)=(v,L^\ast f)\qquad\text{for all $v\in V$ and $$f\in W^\ast$$}\tag{1}$$
+$$(Lv, f)=(v,L^\ast f)\qquad\text{for all $v\in V$ and $f\in W^\ast$}\tag{1}$$
 
 을 통해 정의되었다 할 수 있다. 물론 좌변의 $$(-,-)$$은 $$W$$의 canonical pairing이고, 우변의 $$(-,-)$$은 $$V$$의 canonical pairing이다. 
 

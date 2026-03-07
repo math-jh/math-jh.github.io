@@ -229,7 +229,7 @@ $$A_1\times\cdots\times A_{k-1}\times \mathfrak{p}_k\times A_{k+1}\times\cdots\t
 
 의 꼴로 나타나며, $$0$$의 associated prime ideal은 위의 꼴에서 $$\mathfrak{p}_k$$를 $$0$$의 ($$A_k$$에서의) associated prime으로 두면 된다. 마찬가지로 $$A$$의 non-zerodivisor 
 
-$$a=(a_1,\ldots, a_n),\qquad\text{$a_i$ a non-zerodivisor of $$A_i$$}$$
+$$a=(a_1,\ldots, a_n),\qquad\text{$a_i$ a non-zerodivisor of $A_i$}$$
 
 의 associated prime은 $$\mathfrak{p}_k$$를 $$a_k$$의 associated prime으로 둔 것과 같다. 
 

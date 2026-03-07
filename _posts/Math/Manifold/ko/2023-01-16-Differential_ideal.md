@@ -35,7 +35,7 @@ $$\omega_p(v_1,\ldots, v_l)=0,\qquad v_i\in\mathcal{D}(p)$$
 
 이 때, $$\mathcal{D}$$를 annihilate하는 differential form들의 모임을
 
-$$\mathcal{I}(\mathcal{D})=\{\omega\in\Omega^\ast(M)\mid\text{$\omega$ annihilates $$\mathcal{D}$$}\}$$
+$$\mathcal{I}(\mathcal{D})=\{\omega\in\Omega^\ast(M)\mid\text{$\omega$ annihilates $\mathcal{D}$}\}$$
 
 으로 정의한다. 
 

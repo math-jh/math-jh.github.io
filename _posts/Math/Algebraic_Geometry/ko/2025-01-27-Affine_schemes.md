@@ -176,7 +176,7 @@ $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$
 
 $$\rho_{ji}$$들이 restriction map의 조건([\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#ㅇef2))을 만족하는 것은 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 universal property로부터 자명하다. 여기에서 $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$는, [보조정리 5](#lem5)에 의하여, 단순히 $$S(f_j)^{-1}(A)$$의 원소를 다음의 꼴
 
-$$g/h,\qquad\text{where $h\in S(f_j)$}\tag{$$\ast$$}$$
+$$g/h,\qquad\text{where $h\in S(f_j)$}\tag{$\ast$}$$
 
 로 나타냈을 때, 다음 식
 
@@ -286,7 +286,7 @@ $$\mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathscr{
 
 을 얻고, 따라서 주어진 isomorphism을 보이는 것은 단순히 다음의 대수적인 isomorphism
 
-$$A_\mathfrak{p}\cong \varinjlim_{\mathfrak{p}\not\ni f} A_f\tag{$$\ast\ast$$}$$
+$$A_\mathfrak{p}\cong \varinjlim_{\mathfrak{p}\not\ni f} A_f\tag{$\ast\ast$}$$
 
 을 보이는 것과 같고, 이는 localization의 universal property ([\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6))와 direct limit의 universal property를 각각 사용하면 된다. 주장의 diagram은 isomorphism ($$\ast\ast$$)을 통해 위의 diagram에서 $$\varinjlim A_f$$를 $$A_\mathfrak{p}$$로 바꾸어주면 된다. 
 

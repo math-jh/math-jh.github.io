@@ -29,7 +29,7 @@ weight: 3
 
 다항식들을 본격적으로 다루기 전에, 이들을 다루기 위한 도구들을 먼저 정의하자. 우선 $$A$$ 위에서 정의된 *다항식*들은 polynomial ring $$P=A[\x_i]_{i\in I}$$의 원소들을 의미한다. 이 때, $$\mathbb{N}^{(I)}$$를 $$I$$에서 $$\mathbb{N}$$으로 가는 finitely supported function들의 모임
 
-$$\mathbb{N}^{(I)}=\{\nu:I \rightarrow \mathbb{N}\mid\text{$f(i)=0$ for all but finitely many $$i\in I$$}\}$$
+$$\mathbb{N}^{(I)}=\{\nu:I \rightarrow \mathbb{N}\mid\text{$f(i)=0$ for all but finitely many $i\in I$}\}$$
 
 으로 정의하자. 그럼 임의의 $$\nu\in \mathbb{N}^{(I)}$$에 대하여, 
 
@@ -41,7 +41,7 @@ $$a\x^\nu$$
 
 꼴의 원소들을 *단항식*이라 부른다. 그럼 임의의 다항식 $$u$$는 단항식들의 유한합
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $$\nu$$}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $\nu$}$$
 
 으로 나타낼 수 있다. 
 
@@ -59,7 +59,7 @@ $$P=\bigoplus_{n\in \mathbb{N}}\bigoplus_{\lvert\nu\rvert=n}(A[\x_i]_{i\in I})_\
 
 <ins id="def1">**정의 1**</ins> Polynomial ring $$P=A[\x]_{i\in I}$$의 임의의 원소 
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $$\nu$$}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $\nu$}$$
 
 가 주어졌다 하자. 그럼 $$u_n\neq 0$$을 만족하는 가장 큰 $$n$$을 $$u$$의 *degree*라 부르고 $$\deg(u)$$와 같이 표기한다. 정의에 의하여 상수항만을 가지는 다항식의 차수는 $$0$$이지만, 특별히 $$P$$의 덧셈에 대한 항등원 $$0$$에 대하여는 $$\deg(0)=-\infty$$로 정의한다.  
 
@@ -270,7 +270,7 @@ $$u=b_1 u_1 + \cdots + b_n u_n$$
 
 한편, 중근을 찾아내는 방법 중 유용한 것은 주어진 다항식을 미분하는 것이다. 우리는 대수적으로 미분이 무엇인지를 정의할 수 있으나 ([\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations)) 이 카테고리에서는 이러한 논의 없이 정의로서 $$D: A[\x] \rightarrow A[\x]$$를 다음의 식
 
-$$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=i.a_i\x^{i-1}\right)\tag{$$\ast$$}$$
+$$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=i.a_i\x^{i-1}\right)\tag{$\ast$}$$
 
 로 정하기로 한다. 여기서 $$i.a_i$$는 
 
