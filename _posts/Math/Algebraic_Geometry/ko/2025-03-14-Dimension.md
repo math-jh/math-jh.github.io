@@ -149,7 +149,7 @@ $$f(y_1,\ldots, y_m)=0$$
 
 을 만족하는 $$\mathbb{K}$$-계수 $$m$$변수 다항식 
 
-$$f(\x_1,\ldots, \x_m)=\sum \alpha_{d_1d_2\cdots d_m}\x_1^{d_1}\cdots\x_m^{d_m}\in \mathbb{K}[\x_1,\ldots, \x_m]\tag{$$\ast$$}$$
+$$f(\x_1,\ldots, \x_m)=\sum \alpha_{d_1d_2\cdots d_m}\x_1^{d_1}\cdots\x_m^{d_m}\in \mathbb{K}[\x_1,\ldots, \x_m]\tag{$\ast$}$$
 
 이 존재한다. 이제 정수 $$r_1,\ldots, r_{m-1}$$에 대하여 다음의 식
 
@@ -157,7 +157,7 @@ $$z_1=y_1-y_m^{r_1},\quad z_2=y_2-y_m^{r_2},\quad\ldots\quad,\quad z_{m-1}=y_{m-
 
 으로 원소들 $$z_1,\ldots, z_{m-1}$$을 정의하자. 그럼 정의에 의해 
 
-$$f(z_1+y_m^{r_1},\ldots, z_{m-1}+y_m^{r_{m-1}}, y_m)=0\tag{$$\ast\ast$$}$$
+$$f(z_1+y_m^{r_1},\ldots, z_{m-1}+y_m^{r_{m-1}}, y_m)=0\tag{$\ast\ast$}$$
 
 이 성립한다. 이제 식 ($$\ast$$)에서 $$f$$를 이루는 각각의 monomial $$\alpha_{d_1d_2\cdots d_m}\x_1^{d_1}\cdots\x_m^{d_m}$$에 
 

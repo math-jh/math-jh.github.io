@@ -83,7 +83,7 @@ Frobenius endomorphism $$\Frob_p:\mathbb{K}\rightarrow \mathbb{K}$$의 image를 
 
 <ins id="prop5">**명제 5**</ins> Field extension $$\mathbb{L}/\mathbb{K}$$를 고정하고, 각각의 $$n\geq 0$$마다 
 
-$$\mathbb{L}_n=\{x\in \mathbb{L}\mid\text{$x$ is $$p$$-radical of height $$\leq n$$}\}$$
+$$\mathbb{L}_n=\{x\in \mathbb{L}\mid\text{$x$ is $p$-radical of height $\leq n$}\}$$
 
 으로 정의하자. 그럼 increasing sequence $$\mathbb{L}_n$$들의 union $$\mathbb{L}_\infty$$는 $$\mathbb{K}$$를 포함하는 $$\mathbb{L}$$의 $$p$$-radical subextension 중 가장 큰 것이다. 
 

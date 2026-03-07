@@ -38,7 +38,7 @@ weight: 10
 
 약간의 표기법의 남용을 통해 $$\iota_i(G_i)$$와 $$G_i$$를 같은 것으로 보면, $$\bigoplus G_i$$의 임의의 원소는 다음 식
 
-$$x=\sum_{i\in I} x_i,\qquad\text{$x_i\in G_i$, $$x_i=0$$ for all but finitely many $$i$$}$$
+$$x=\sum_{i\in I} x_i,\qquad\text{$x_i\in G_i$, $x_i=0$ for all but finitely many $i$}$$
 
 으로 쓸 수 있다. 이러한 상황에서 $$x_i\neq 0$$을 만족하는 $$I$$의 부분집합을 $$x$$의 *support<sub>지지집합</sub>*라 부르고 $$\supp(x)$$로 적고, 위의 조건이 성립하면 family $$(x_i)$$가 *finitely supported*라 부른다.
 
@@ -188,7 +188,7 @@ $$f(x,y_1+y_2)=f(x,y_1)+f(x,y_2),\qquad f(x_1+x_2,y)=f(x_1,y)+f(x_2,y)$$
 
 이제 고정된 $$G,H\in\obj(\Ab)$$에 대하여, 집합 $$\Bilin(G,H;A)$$을 다음 식
 
-$$\Bilin(G,H;A)=\{\text{bilinear maps from $G\times H$ to $$A$$}\}$$
+$$\Bilin(G,H;A)=\{\text{bilinear maps from $G\times H$ to $A$}\}$$
 
 으로 정의하자. 위의 논증에 의해 [예시 10](#ex10)의 첫 번째 식의 좌변을 $$\Bilin(G,H;A)$$로 바꾼다면 isomorphism
 

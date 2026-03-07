@@ -293,7 +293,7 @@ $$G_\bullet:\quad \langle e_1+e_4\rangle\subset\langle e_1+e_4,e_2+e_3\rangle\su
 
 이제 우리는 $$\Gr_k(\mathbb{R}^\infty)$$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $$\Gr_k(\mathbb{R}^n)$$ 위의 tautoogical bundle을 먼저 정의한다. [예시 3](#ex3)과 같은 방식으로, $$\Gr_k(\mathbb{R}^{n+k})$$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
 
-$$E(\gamma^k_n)=\left\{([V], x)\in \Gr_k(\mathbb{R}^{n+k})\mid \text{$V$ a $$k$$-dimensional subspace of $$\mathbb{R}^{n+k}$$ and $$x\in V$$}\right\}$$
+$$E(\gamma^k_n)=\left\{([V], x)\in \Gr_k(\mathbb{R}^{n+k})\mid \text{$V$ a $k$-dimensional subspace of $\mathbb{R}^{n+k}$ and $$x\in V$$}\right\}$$
 
 이 존재하며 이를 $$\Gr_k(\mathbb{R}^{n+k})$$의 *tautological bundle*이라 부른다. 
 

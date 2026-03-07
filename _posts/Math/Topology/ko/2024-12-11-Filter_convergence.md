@@ -103,7 +103,7 @@ $$x$$의 임의의 열린근방 $$U$$를 택하자. 그럼 $$x$$로 수렴하는
 
 따라서, 위상공간 $$X$$와 부분집합 $$A$$에 대하여, $$A$$의 *sequential closure* $$\scl(A)$$를 
 
-$$\scl(A)=\{x\in X\mid \text{there exists a sequence in $A$ that converges to $$x$$}\}$$
+$$\scl(A)=\{x\in X\mid \text{there exists a sequence in $A$ that converges to $x$}\}$$
 
 으로 정의하면 $$\scl(A)\subseteq \cl(A)$$가 성립하는 것이 당연하다. 
 

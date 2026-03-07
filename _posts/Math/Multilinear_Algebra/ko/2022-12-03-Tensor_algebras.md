@@ -79,7 +79,7 @@ $$M=\bigoplus_{i\in I} Ae_i$$
 
 <ins id="prop3">**명제 3**</ins> 위와 같은 상황에서, $$\T(M)$$은 다음의 꼴
 
-$$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n},\qquad\text{$s$ a finite sequence $$(i_1,i_2,\ldots,i_n)$$ in $$I$$}$$
+$$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n},\qquad\text{$s$ a finite sequence $(i_1,i_2,\ldots,i_n)$ in $I$}$$
 
 들의 원소 $$e_s$$를 basis로 갖는다.
 

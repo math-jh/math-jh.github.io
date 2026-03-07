@@ -20,7 +20,7 @@ weight: 201
 
 임의의 group $$H$$와 ring $$A$$가 주어졌을 때, 우리는 group ring $$AH$$를 정의하였다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 이제 $$AH$$-module $$M$$을 고정하고, $$M^H$$를 다음의 집합
 
-$$M^H=\left\{x\in M\mid \text{$hx=x$ for all $$h\in H$$}\right\}$$
+$$M^H=\left\{x\in M\mid \text{$hx=x$ for all $h\in H$}\right\}$$
 
 으로 정의하자. 여기서 $$hx$$는 당연히, $$h\mapsto \delta_h$$를 통해 $$h$$를 $$AH$$의 원소로 본 후, $$AH$$-module 구조를 이용하여 정의된 것이다. 그럼 $$M^H$$는 $$M$$의 $$A$$-submodule이지만, group $$H$$가 commutative가 아니라면 일반적으로 $$AH$$-submodule이 되지는 않는다. 또, 만일 $$H$$의 subgroup $$G$$가  주어졌다면 $$M^H\leq M^G$$임이 자명하다. 
 

@@ -61,7 +61,7 @@ $$xa \mathfrak{b}\subseteq x \mathfrak{a}\subseteq \mathfrak{a}$$
 
 1. 우선 $$\sqrt{\mathfrak{a}}$$가 homogeneous ideal인 것을 보이자. 즉 임의의 $$x\in \sqrt{\mathfrak{a}}$$에 대하여, $$x$$를 homogeneous ideal들의 합
     
-    $$x=x_{d_1}+\cdots+x_{d_l},\quad d_1 < \cdots < d_l\tag{$$\ast$$}$$
+    $$x=x_{d_1}+\cdots+x_{d_l},\quad d_1 < \cdots < d_l\tag{$\ast$}$$
     
     으로 나타냈을 때, $$x_i$$들 각각이 $$\sqrt{\mathfrak{a}}$$에 속한다는 것을 보여야 한다. 우선 $$x\in \mathfrak{a}$$인 것으로부터, 적당한 $$k$$가 존재하여 $$x^k\in \mathfrak{a}$$이다. 한편, 일반성을 잃지 않고 위의 표현 ($$\ast$$)에서 $$x_l$$이 가장 큰 차수를 갖는다고 하면, $$x^k$$를 homogeneous element들의 합으로 나타냈을 때, $$x_l^k$$가 차수 $$k\deg x_l$$에 있는 유일한 원소이다. 이제 $$x^k\in \mathfrak{a}$$이고 $$\mathfrak{a}$$가 homogeneous ideal인 것으로부터 $$x_l^k\in \mathfrak{a}$$, 즉 $$x_l\in \sqrt{\mathfrak{a}}$$인 것을 안다. 이후에는 $$x-x_l\in\sqrt{\mathfrak{a}}$$이므로 같은 논증을 반복하면 된다.
 2. $$x\in (\mathfrak{a}:\mathfrak{b})$$라 하자. 위와 마찬가지로 $$x$$를 homogeneous ideal들의 합 ($$\ast$$)으로 나타냈을 때, $$x_i$$들 각각이 $$(\mathfrak{a}:\mathfrak{b})$$에 속함을 보여야 한다. 이제 $$\mathfrak{b}$$를 생성하는 임의의 homogeneous element $$b$$가 주어졌다 하자. 그럼 $$x_ib$$는 원소 $$xb\in \mathfrak{a}$$의 $$\deg x_i+\deg b$$에 해당하는 homogeneous element이며, $$\mathfrak{a}$$가 homogeneous ideal이므로 $$x_ib\in \mathfrak{a}$$이다. 

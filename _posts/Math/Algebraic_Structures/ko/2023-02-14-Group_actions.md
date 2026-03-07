@@ -286,7 +286,7 @@ $$G\cdot x=\{g\cdot x\mid g\in G\}$$
 
 그럼 $$E$$ 위에 정의된 다음의 relation
 
-$$x\sim y\iff G\cdot x=G\cdot y\tag{$$\ast$$}$$
+$$x\sim y\iff G\cdot x=G\cdot y\tag{$\ast$}$$
 
 은 equivalence relation이므로 quotient set $$E/{\sim}$$이 정의되며, 이는 orbit들로 이루어진 집합이다. 
 
@@ -308,7 +308,7 @@ $$\lvert G\cdot x\rvert=[G:\Stab(x)]$$
 
 따라서, 만일 $$G$$가 finite이라면 [§몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups)에 의하여 다음의 식
 
-$$\lvert G\cdot x\rvert=\frac{\lvert G\rvert}{\lvert\Stab(x)\rvert}\tag{$$\ast\ast$$}$$
+$$\lvert G\cdot x\rvert=\frac{\lvert G\rvert}{\lvert\Stab(x)\rvert}\tag{$\ast\ast$}$$
 
 을 얻는다. 
 

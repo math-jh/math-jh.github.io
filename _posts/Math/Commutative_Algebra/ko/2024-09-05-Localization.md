@@ -67,7 +67,7 @@ weight: 2
 
 1. 집합으로서 $$S^{-1}M$$은 $$M\times S$$ 위에 다음과 같은 equivalence relation
     
-    $$(x,s)\sim (x',s')\iff \text{there exists $t\in S$ such that $$t(s'x-sx')=0$$}$$
+    $$(x,s)\sim (x',s')\iff \text{there exists $t\in S$ such that $t(s'x-sx')=0$}$$
   
     을 정의하여 얻어지는 quotient set이다. 이 때 $$(x,s)$$의 representative를 $$x/s$$로 표기한다.
 2. $$S^{-1}M$$의 $$A$$-module 구조는 다음과 같이 정의된다.
@@ -166,7 +166,7 @@ $$\overline{f}\left(\frac{a}{s}\right)=\overline{f}\left(\frac{a}{1}\frac{1}{s}\
 1. 임의의 ideal $$\mathfrak{b}\subset S^{-1}A$$에 대하여, $$\mathfrak{b}=\mathfrak{b}^{ce}$$이 성립한다.
 2. 임의의 ideal $$\mathfrak{a}\subset A$$에 대하여, 
   
-    $$\mathfrak{a}^{ec}=\{a\in A\mid\text{there exists $s\in S$ satisfying $$sa\in \mathfrak{a}$$}\}$$
+    $$\mathfrak{a}^{ec}=\{a\in A\mid\text{there exists $s\in S$ satisfying $sa\in \mathfrak{a}$}\}$$
   
     이 성립한다. 특히 $$\mathfrak{a}^e=S^{-1}A$$인 것과 $$\mathfrak{a}\cap S\neq\emptyset$$인 것이 동치이다.
 
@@ -179,7 +179,7 @@ $$\overline{f}\left(\frac{a}{s}\right)=\overline{f}\left(\frac{a}{1}\frac{1}{s}\
 1. 우선 $$\mathfrak{b}^{ce}\subseteq \mathfrak{b}$$는 일반적으로 항상 성립한다. 반대 방향을 보이기 위해 $$a/s\in \mathfrak{b}$$라 하자. 그럼 $$s(a/s)=a/1$$이 $$\mathfrak{b}$$에 속해야 하므로, $$a\in \mathfrak{b}^c$$가 성립한다. 따라서 $$a/1\in \mathfrak{b}^{ce}$$이고 이로부터 $$a/s=(1/s)(a/1)\in \mathfrak{b}^{ce}$$임을 안다. 
 2. 주어진 식의 우변을 편의상 $$\mathfrak{a}'$$라 적자. 그럼 우선 임의의 $$a'\in \mathfrak{a}'$$에 대하여, $$sa'\in \mathfrak{a}$$이도록 하는 $$s$$가 존재한다. 이제 $$a'/1=sa'/s\in \mathfrak{a}^e$$인 것으로부터 $$a'\in \mathfrak{a}^{ec}$$인 것을 안다. 반대로 임의의 $$a\in \mathfrak{a}^{ec}$$에 대하여, $$a/1=a'/s$$를 만족하는 $$a\in \mathfrak{a}$$와 $$s\in S$$를 찾을 수 있다. 그럼 적당한 $$t\in S$$가 존재하여 $$tsa=ta'\in \mathfrak{a}$$가 되며, 이제 $$ts\in S$$이므로 정의에 의해 $$a\in \mathfrak{a}'$$이 성립한다. 또 
   
-  $$\mathfrak{a}^e=S^{-1}A\iff 1/1\in \mathfrak{a}^e\iff 1\in \mathfrak{a}^{ec}\iff \text{there exists $s\in S$ s.t. $$s1\in \mathfrak{a}$$}\iff \mathfrak{a}\cap S\neq \emptyset$$
+  $$\mathfrak{a}^e=S^{-1}A\iff 1/1\in \mathfrak{a}^e\iff 1\in \mathfrak{a}^{ec}\iff \text{there exists $s\in S$ s.t. $s1\in \mathfrak{a}$}\iff \mathfrak{a}\cap S\neq \emptyset$$
 
   이다.
 
