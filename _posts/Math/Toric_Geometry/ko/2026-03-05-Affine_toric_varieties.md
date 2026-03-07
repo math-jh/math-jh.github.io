@@ -143,15 +143,17 @@ $$\chi^u(t) = c^{u(n)} \in \mathbb{C}^\ast$$
 
 $$\chi^u(t) = t_1^{a_1} \cdots t_n^{a_n}$$
 
-으로 표현된다. 이제 $$T_N$$이 $$\mathbb{C}[S_\sigma]$$ 위에 다음과 같이 작용한다:
+으로 표현된다.
 
-$$t \cdot f(p) = f(t^{-1} \cdot p)$$
+이제 $$\mathbb{C}[S_\sigma] = \bigoplus_{u \in S_\sigma} \mathbb{C} \cdot \chi^u$$가 $$M$$-graded algebra라는 점을 이용하여, 이 위에 torus action을 정의하자. $$T_N$$이 $$\mathbb{C}[S_\sigma]$$의 각 graded component에 작용하여
 
-여기서 $$t^{-1} \cdot p$$는 $$T_N$$이 $$U_\sigma$$ 위에 작용하는 것을 의미한다. 이 작용을 basis $$\{\chi^u \mid u \in S_\sigma\}$$에 대해 살펴보면 다음을 얻는다.
+$$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$
+
+를 만족하도록 정의한다. 이 action은 $$\mathbb{C}$$-algebra automorphism을 유도하므로, $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$ 위의 torus action에 해당한다. 구체적으로, 이 action에 의해 $$t \in T_N$$이 $$\mathbb{C}[S_\sigma]$$의 automorphism $$\phi_t: \mathbb{C}[S_\sigma] \to \mathbb{C}[S_\sigma]$$를 결정하고, 이것이 $$U_\sigma$$의 automorphism으로 내려온다. 요약하면:
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 아핀 토릭 다양체 $$U_\sigma$$ 위에 대수적 토러스 $$T_N$$이 다음과 같이 작용한다:
+<ins id="prop1">**명제 1**</ins> $$\mathbb{C}[S_\sigma]$$의 $$M$$-grading으로부터 유도되는 torus action은 $$U_\sigma$$ 위에 다음과 같이 작용한다:
 
 $$t \cdot \chi^u = \chi^u(t) \cdot \chi^u$$
 
