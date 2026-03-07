@@ -160,25 +160,19 @@ $$\rchi^m(t)=z_1^{m_1}\cdots z_n^{m_n}$$
 으로 적을 수 있다. 
 
 
-우리는 $\Spec(\mathbb{C}[S_\sigma])$ 위에 torus action을 정의하기 위해, 이미 친숙한 $\mathbb{P}^N$의 예시를 살펴본다. Projective space $\mathbb{P}^N$ 위에는 $\mathbb{C}^\ast$-action이 다음의 식
-
-$$\lambda\cdot [x_0:\cdots:x_N]=[\lambda x_0:\cdots:\lambda x_N]$$
-
-으로 주어지며, 이 action은 homogeneous coordinate ring $\mathbb{C}[x_0,\ldots, x_N]$ 위에 dual action을 유도한다. 이 dual action 하에서, homogeneous degree $d$를 갖는 monomial $x_0^{a_0}\cdots x_N^{a_N}$은 다음의 식
-
-$$\lambda\cdot (x_0^{a_0}\cdots x_N^{a_N})=\lambda^d(x_0^{a_0}\cdots x_N^{a_N})$$
-
-을 만족하므로 weight $d$를 갖는 eigenvector가 된다. 즉, polynomial ring의 $\mathbb{Z}$-grading이 정확히 $\mathbb{C}^\ast$-action에 대한 weight decomposition이다.
-
-이제 affine toric variety의 경우를 살펴보자. Coordinate ring $\mathbb{C}[S_\sigma]$는 이미 $M$-grading을 갖는다. 즉, 다음의 direct sum decomposition
+Coordinate ring $\mathbb{C}[S_\sigma]$는 이미 $M$-grading을 갖는다. 즉, 다음의 direct sum decomposition
 
 $$\mathbb{C}[S_\sigma]=\bigoplus_{u\in S_\sigma}\mathbb{C}\cdot\rchi^u$$
 
-이 존재한다. 따라서 $\mathbb{P}^N$의 예시와 유사하게, torus $T_N$이 각각의 monomial $\rchi^u$에 다음의 식
+이 존재한다. Torus $T_N$의 coordinate ring은 $\mathbb{C}[M]$이므로, 우리는 다음의 $\mathbb{C}$-algebra homomorphism
+
+$$\rho:\mathbb{C}[S_\sigma]\rightarrow\mathbb{C}[S_\sigma]\otimes_\mathbb{C}\mathbb{C}[M],\qquad \rchi^u\mapsto\rchi^u\otimes\rchi^u$$
+
+을 생각할 수 있다. 이는 $T_N$이 $U_\sigma$ 위에 작용하는 방식을 기술하며, 각각의 $t\in T_N$에 대하여 $t$가 $\rchi^u$에 작용하는 결과는 다음의 식
 
 $$t\cdot\rchi^u=\rchi^u(t)\rchi^u$$
 
-으로 작용한다면, $\rchi^u$는 weight $u$를 갖는 eigenvector가 된다. 이제 이를 통해 다음을 정의한다.
+으로 주어진다. 따라서 $\rchi^u$는 weight $u$를 갖는 eigenvector이며, $M$-grading이 정확히 torus action에 대한 weight decomposition이 된다.
 
 <div class="proposition" markdown="1">
 
