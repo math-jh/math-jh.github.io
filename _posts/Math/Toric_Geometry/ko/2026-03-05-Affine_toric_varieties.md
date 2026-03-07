@@ -131,7 +131,17 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 $$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
 
-을 생각하자.
+을 생각하자. 만일 $$N$$을 basis의 선택을 통해 $$\mathbb{Z}^n$$와 identify한다면, $$T_N=(\mathbb{C}^\ast)^n$$라 할 수 있으며, $T_N$의 임의의 원소는 항상 다음의 꼴
+
+$$t=(t_1,\ldots, t_n),\qquad\text{$t_i\in \mathbb{C}^\ast}$$
+
+로 나타낼 수 있다. 
+
+ 우선 우리는 각각의 $$u\in M=\Hom(N,\mathbb{Z})$$에 대하여, 다음의 식
+
+$$n\otimes c\mapsto c^{u(n)}$$
+
+을 통해 $T_N$에서 $\mathbb{C}^\ast$로의 
 
 우선 basis-free하게 $$\chi^u(t)$$를 정의한다. $$u \in M = \Hom(N, \mathbb{Z})$$이고 $$t \in T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast$$라고 하자. $$t = n \otimes c$$ (여기서 $$n \in N$$, $$c \in \mathbb{C}^\ast$$)로 표현할 수 있는데, 이 때
 
