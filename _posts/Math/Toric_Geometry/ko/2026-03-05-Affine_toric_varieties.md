@@ -131,9 +131,13 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 $$T_N=N\otimes_\mathbb{Z}\mathbb{C}^\ast$$
 
-을 생각하자. 이는 $n\times c$ 꼴의 원소들의 일차결합으로 이루어진 집합이며, 이 위에서의 연산은 
+을 생각하자. 이는 단순히 두 abelian group의 텐서곱이기는 하지만, $$\mathbb{C}^\ast$$의 연산이 곱셈이므로 다소 헷갈릴 수 있어 표기들 정리하고 넘어가기로 한다. 
 
-$$(n\otimes c)(n'\otimes c')=(n+n')\otimes (cc')$$
+
+
+이는 $n\times c$ 꼴의 원소들의 일차결합으로 이루어진 집합이며, 이 위에서의 연산은 
+
+$$(n\otimes c)+(n'\otimes c')=(n+n')\otimes (cc')$$
 
 으로 주어진다. 만일 $$N$$을 basis $$e_1,\ldots, e_n$$의 선택을 통해 $$\mathbb{Z}^n$$와 identify한다면 $$T_N=(\mathbb{C}^\ast)^n$$라 할 수 있고 그 원소는 항상 다음의 꼴
 
