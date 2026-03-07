@@ -25,13 +25,13 @@ weight: 4
 
 우선 우리는 기존에 위상수학에서 정의하던 projective space를 간단히 살펴본다. 위상공간 $$\mathbb{P}^n$$을 만들기 위해 우리는 위상공간 $$\mathbb{R}^{n+1}\setminus \{0\}$$을 생각했다. 그럼 이 위에 다음의 동치관계
 
-$$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$x_i=\lambda y_i$ for some $$\lambda\neq 0$$, for all $$i$$}$$
+$$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}$$
 
 를 정의하면 projective space $$\mathbb{P}^n$$은 quotient space $$(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$$으로 정의되는 위상공간이며, $$(x_0,\ldots, x_n)$$을 포함하는 동치류를 표기의 편의를 위해 $$[x_0:x_1:\cdots:x_n]$$으로 표기한다. 
 
 이 때, canonical projection $$\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$$를 생각하자. 그럼 $$\mathbb{P}^n$$의 한 점 $$[x_0:x_1:\cdots:x_n]$$의 fiber는 그 정의에 의하여
 
-$$\{(y_0,\ldots, y_n)\mid\text{$x_i=\lambda y_i$ for some $$\lambda\neq 0$$, for all $$i$$}\}$$
+$$\{(y_0,\ldots, y_n)\mid\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}\}$$
 
 즉 원점과 $$(x_0,\ldots, x_n)$$을 지나는 직선 위의 점들 중, 원점을 제외한 점들의 집합으로 주어진다. 이 때문에 $$\mathbb{P}^n$$은 종종 $$\mathbb{R}^{n+1}$$에서의 직선들의 공간으로 생각되기도 한다.
 
