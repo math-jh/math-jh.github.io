@@ -229,7 +229,7 @@ $$n\times n$$ 행렬 $$A$$가 주어졌다 하고, $$A$$의 특성다항식을 $
 
 ## 행렬의 대각화
 
-우리는 앞서 임의의 $$n\times n$$ 행렬 $$A$$가 주어졌을 때, $$A$$의 고윳값과 고유공간을 통해 $$\mathbb{R}^n$$을 분해하는 방법을 살펴보았고, [명제 6](#prop6)으로부터 이러한 분해가 언제 가능한지 또한 알게 되었다. 이를 증명하기 위해 사용했던 [명제 5](#prop5)의 증명을 다시 한 번 살펴보자. 우리는 $$E_\lambda$$의 basis $$x_1,\ldots, x_k$$에 $$n-k$$개의 임의의 벡터를 추가한 후, 이를 통해 행렬 $$X=(x_1\mid\cdots\midx_n)$$을 정의한 후 계산을 통해
+우리는 앞서 임의의 $$n\times n$$ 행렬 $$A$$가 주어졌을 때, $$A$$의 고윳값과 고유공간을 통해 $$\mathbb{R}^n$$을 분해하는 방법을 살펴보았고, [명제 6](#prop6)으로부터 이러한 분해가 언제 가능한지 또한 알게 되었다. 이를 증명하기 위해 사용했던 [명제 5](#prop5)의 증명을 다시 한 번 살펴보자. 우리는 $$E_\lambda$$의 basis $$x_1,\ldots, x_k$$에 $$n-k$$개의 임의의 벡터를 추가한 후, 이를 통해 행렬 $$X=(x_1\mid\cdots\mid x_n)$$을 정의한 후 계산을 통해
 
 $$XAX^{-1}=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
 
@@ -241,7 +241,7 @@ $$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> [명제 6](#prop6)의 조건을 모두 만족하는 $$n\times n$$ 행렬 $$A$$를 생각하고, 고유공간들의 basis로 이루어진 $$\mathbb{R}^n$$의 basis를 잡아 이를 $$x_1,\ldots, x_n$$이라 하자. $$Ax_i=\lambda_ix_i$$라 하고, $$X=(x_1\mid\cdots\midx_n)$$이라 하면, 대각행렬
+<ins id="prop7">**명제 7**</ins> [명제 6](#prop6)의 조건을 모두 만족하는 $$n\times n$$ 행렬 $$A$$를 생각하고, 고유공간들의 basis로 이루어진 $$\mathbb{R}^n$$의 basis를 잡아 이를 $$x_1,\ldots, x_n$$이라 하자. $$Ax_i=\lambda_ix_i$$라 하고, $$X=(x_1\mid\cdots\mid x_n)$$이라 하면, 대각행렬
 
 $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\lambda_n\end{pmatrix}$$
 
@@ -381,7 +381,7 @@ $$A\vert_{W_\lambda(A)}: W_\lambda(A) \rightarrow W_\lambda(A)$$
 
 가 잘 정의된다. 그럼 [명제 4](#prop4)로부터, 만일 $$w\in W_\lambda(A)$$가 고유값 $$\mu$$를 갖는 $$A\vert_{W_\lambda(A)}$$의 고유벡터라면 $$w$$를 $$V$$의 원소로 본 것 또한 $$A$$의 (eigenvalue $$\mu$$에 해당하는) 고유벡터이며 거꾸로 $$A$$의 고유값 $$\mu\neq \lambda$$과 그에 해당하는 고유벡터가 주어진다면 이는 $$A\vert_{W_\lambda(A)}$$의 고유값--고유벡터 쌍으로 볼 수 있다는 것도 안다. 또, $$A\vert_{W_\lambda(A)}$$의 임의의 고유값 $$\mu$$에 대하여, 
 
-$$\ker (A_{W_\lambda(A)}-\mu I)_\ker (A_{W_\lambda(A)}-\mu I)^2$$
+$$\ker (A_{W_\lambda(A)}-\mu I)=\ker (A_{W_\lambda(A)}-\mu I)^2$$
 
 도 비슷한 이유로 $$W_\lambda(A)$$ 위에서 성립하는 것을 안다. 즉, 우리는 이 과정을 귀납적으로 반복할 수 있다. 한편 우리는 $$\mathbb{K}$$가 algebraically closed임을 가정하고 있으므로 임의의 linear operator $$W \rightarrow W$$는, $$W$$가 $$0$$차원이 아닌 한, 항상 고유값을 가진다는 것을 알고 이로부터 이 귀납법이 <em-ko>정확히</em-ko> $$A$$의 eigenspace decomposition을 준다는 것을 안다. 
 
