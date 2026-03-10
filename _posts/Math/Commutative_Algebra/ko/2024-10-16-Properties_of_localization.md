@@ -195,7 +195,7 @@ $$\sqrt{\mathfrak{a}}=\{a\mid a^k\in \mathfrak{a}\text{ for some $k\in \mathbb{N
 
 으로 정의하자. 그럼
 
-$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $$\mathfrak{a}$$} \mathfrak{p}$$
+$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $\mathfrak{a}$} \mathfrak{p}$$
 
 이 성립한다.
 
