@@ -278,11 +278,7 @@ $$X /\!/ G = \Spec(A^G)$$
 
 $$t \cdot [x:y] = [tx:y]$$
 
-로 작용한다고 하자. Homogeneous coordinate ring $$\mathbb{C}[x,y]$$에서 $$t \cdot x = tx$$, $$t \cdot y = y$$이므로, 각 차수 $$d$$의 성분 $$\mathbb{C}_d[x,y]$$에서 monomial $$x^a y^{d-a}$$는
-
-$$t \cdot x^a y^{d-a} = t^a x^a y^{d-a}$$
-
-로 작용받는다. 즉, 각 monomial이 서로 다른 weight를 갖는다. 따라서 $$\mathbb{C}_d[x,y]$$의 $$G$$-invariant subspace는 $$\mathbb{C} \cdot y^d$$뿐이다. 이 경우 다행히 $$A_d^G$$가 well-defined이지만, 일반적인 action에서는 $$A_d^G$$를 정의하는 것조차 어려울 수 있다. 구체적으로, $$G$$가 $$\mathbb{P}^n$$ 위에 linear하게 작용하지 않으면 homogeneous coordinate $$x_0, \ldots, x_n$$이 $$G$$에 의해 섞이므로, 각 차수 $$d$$ 성분 $$A_d$$가 $$G$$-invariant subspace를 갖지 않을 수 있다.
+로 작용한다고 하자. Homogeneous coordinate ring $$\mathbb{C}[x,y]$$에서 $$t$$가 $$x$$에 대해서는 $$t$$-배, $$y$$에 대해서는 1-배로 작용한다고 가정하면, 각 차수 $$d$$의 성분 $$\mathbb{C}_d[x,y]$$에서 monomial $$x^a y^{d-a}$$는 $$t$$에 의해 $$t^a$$-배로 작용한다. 이는 각 monomial이 서로 다른 weight를 갖는다는 것을 의미한다.\n\n이 경우 $$\mathbb{C}_d[x,y]$$ 전체를 보존하는 $$G$$-invariant subspace는 $$y^d$$뿐이며, $$A_d^G = \mathbb{C} \cdot y^d$$로 well-defined하다. 그러나 일반적인 projective variety의 action에서는 action이 $$\mathbb{P}^n$$ 전체로 잘 확장되지 않을 때, grading과 action이 서로 compatible하지 않게 되어 $$A_d^G$$가 잘 정의되지 않는다.
 
 <div class="definition" markdown="1">
 
@@ -293,9 +289,9 @@ $$t \cdot x^a y^{d-a} = t^a x^a y^{d-a}$$
 
 </div>
 
-Linearization은 이 문제를 해결한다. Linear action은 homogeneous coordinate ring의 각 차수 $$d$$ 성분 $$A_d$$를 보존하므로, $$A_d$$ 위에 $$G$$가 잘 작용하고 따라서 $$A_d^G$$를 취할 수 있다. 위의 예시에서 action은 이미 linear이며, $$A_d^G = \mathbb{C} \cdot y^d$$이고,
+Linearization은 이 문제를 해결한다. Linear action은 homogeneous coordinate ring의 각 차수 $$d$$ 성분 $$A_d$$를 보존하므로, $$A_d$$ 위에 $$G$$가 잘 작용하고 따라서 $$A_d^G$$를 취할 수 있다. 위의 예시에서 action은 이미 linear이며, $$A_d^G = \mathbb{C} \cdot y^d$$이고
 
-$$\mathbb{P}^1 /\!/ \mathbb{C}^\ast = \Proj\left(\bigoplus_{d \ge 0} \mathbb{C} \cdot y^d\right) \cong \mathrm{pt}$$
+$$\mathbb{P}^1 /\!/ \mathbb{C}^\ast = \Proj\left(\bigoplus_{d \ge 0} \mathbb{C} \cdot y^d\right) = \{[1]\} \cong \mathrm{pt}$$
 
 로 quotient를 구성할 수 있다.
 
