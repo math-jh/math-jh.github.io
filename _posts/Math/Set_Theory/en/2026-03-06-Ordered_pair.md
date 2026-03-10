@@ -177,7 +177,7 @@ When one of $$A$$ or $$B$$ is empty, the following proposition applies.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**Proposition 10**</ins> For two sets $$A$$ and $$B$$, <phrase>$A\times B=\emptyset$</phrase> and <phrase>$A=\emptyset$$ or $$B=\emptyset$</phrase> are equivalent.
+<ins id="prop10">**Proposition 10**</ins> For two sets $$A$$ and $$B$$, <phrase>$A\times B=\emptyset$</phrase> and <phrase>$A=\emptyset$ or $B=\emptyset$</phrase> are equivalent.
 
 </div>
 <details class="proof" markdown="1">

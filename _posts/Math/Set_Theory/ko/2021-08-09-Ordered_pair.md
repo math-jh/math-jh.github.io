@@ -179,7 +179,7 @@ $$A,B$$ 둘 중 하나가 공집합일 때는 다음 명제를 적용할 수 있
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> 두 집합 $$A$$, $$B$$에 대하여, <phrase>$A\times B=\emptyset$인 것</phrase>과 <phrase>$A=\emptyset$$이거나 $$B=\emptyset$인 것</phrase>이 동치이다.
+<ins id="prop10">**명제 10**</ins> 두 집합 $$A$$, $$B$$에 대하여, <phrase>$A\times B=\emptyset$인 것</phrase>과 <phrase>$A=\emptyset$이거나 $B=\emptyset$인 것</phrase>이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
