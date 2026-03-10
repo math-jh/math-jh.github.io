@@ -19,9 +19,11 @@ This blog's title comes from something one of my seniors once told me. Roughly, 
 
 ## Operating an English Site
 
-When I started this blog, AI didn't appear and I had to choose whether to write posts in Korean or English. In Korea, we often use English textbooks to study mathematics, and I chose to write posts in Korean so that it can be a process of understanding in my own word rather than copying. 
+As a graduate student, operating a multi-lingual site is almost impossible and I had to choose whether to write posts in Korean or in English. In Korea, we often use English textbooks to study mathematics, and I chose to write posts in Korean so that it can be a process of understanding in my own word rather than merely copying materials. 
 
-As of 2026, the development of AI has progressed rapidly, and translating existing Korean posts into English --- even in the field of mathematics --- is no longer a difficult task. Therefore, within the limits of my AI's rate limit -- I think it's gonna be one or two a week -- I started translating existing Korean documents back into English. Of course, I also review the translated results, but the task is not a priority for me so there might be misleading translations. Please let me know if you find one.
+This was the story when I started this blog, but now we are witnessing the rapid development of AI tools. Translating existing Korean posts into English --- even in the field of mathematics --- is no longer a difficult task. Therefore, within the limits of my AI's rate limit, I started translating existing Korean documents back into English. 
+
+Disclaimer: I also review the translated results, but the translating task is not a priority for me so there might be misleading translations. Please let me know if you find one.
 
 ## References
 
