@@ -160,7 +160,7 @@ $$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\wedge(x=\emptyset)\iff x\
 
 </div>
 
-예를 들어, 만일 $$\mathcal{S}=\{A,B\}$$였다면 $$U$$는 <phrase>$$x\in A$$이거나 $$x\in B$$인 원소들의 집합</phrase>, 즉 $$A\cup B$$가 된다는 것을 확인할 수 있다. 이를 표기상 $$\bigcup\mathcal{S}$$와 같이 쓰기도 한다.
+예를 들어, 만일 $$\mathcal{S}=\{A,B\}$$였다면 $$U$$는 <phrase>$x\in A$이거나 $x\in B$인 원소들의 집합</phrase>, 즉 $$A\cup B$$가 된다는 것을 확인할 수 있다. 이를 표기상 $$\bigcup\mathcal{S}$$와 같이 쓰기도 한다.
 
 <div class="misc" markdown="1">
 
