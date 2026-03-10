@@ -237,23 +237,23 @@ $$A^G = \{a \in A \mid \rho(a) = a \otimes 1\}$$
 
 </div>
 
-Invariant ring의 원소들은 group action에 의해 변하지 않는 "대칭성"을 포착한다. 기하적으로 $$A^G$$의 원소들은 모든 orbit 위에서 상수함수이며, 따라서 $$\Spec(A^G)$$는 orbit space $$X/G$$의 "좋은" 근사로 생각할 수 있다.
+Invariant ring의 원소들은 group action에 의해 변하지 않는 대칭성을 포착한다. Coordinate ring $$A$$의 원소를 $$\Spec A$$ 위의 함수로 본다면, 기하적으로 $$A^G$$의 원소들은 각각의 orbit 위에서 상수함수가 된다. 따라서 이들을 가지고 만든 공간 $$\Spec(A^G)$$는 orbit space $$X/G$$의 좋은 근사로 생각할 수 있게 된다. 그러나 문제는 $$A^G$$가 대수적으로 잘 행동하지 않을 수도 있다는 것이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def15">**정의 15**</ins> Affine algebraic group $$G$$가 *reductive*라는 것은 $$G$$의 모든 유한차원 representation이 completely reducible인 것이다. 즉, 임의의 representation $$V$$가 irreducible representation들의 직합으로 분해될 때이다.
+<ins id="def15">**정의 15**</ins> Affine algebraic group $$G$$가 *reductive*라는 것은 $$G$$의 모든 유한차원 representation이 completely reducible인 것이다. 즉, 임의의 representation $$V$$가 irreducible representation들의 direct sum으로 분해되는 것이다.
 
 </div>
 
-Reductive group의 핵심적인 성질은 Hilbert의 기저정리와 Nagata의 정리를 통해 invariant ring $$A^G$$가 항상 finitely generated라는 것이다. 따라서 $$\Spec(A^G)$$가 well-defined affine variety가 된다.
+만일 $$G$$가 reductive group이라면 Hilbert basis theorem과 Nagata theorem을 통해 invariant ring $$A^G$$가 항상 finitely generated라는 것을 보일 수 있으며, 따라서 $$\Spec(A^G)$$가 well-defined affine variety가 된다.
 
 <div class="example" markdown="1">
 
-<ins id="ex16">**예시 16**</ins> Reductive group의 중요한 예시들:
+<ins id="ex16">**예시 16**</ins> 우리가 다루는 대부분의 algebraic group들은 reductive group이다. 
 
-1. **Torus**: $$(\mathbb{C}^\ast)^n$$은 reductive이다.
-2. **일반선형군**: $$\GL(n, \mathbb{C})$$는 reductive이다.
-3. **특수선형군**: $$\SL(n, \mathbb{C})$$는 reductive이다.
+1. *Algebraic torus*: $$(\mathbb{C}^\ast)^n$$은 reductive이다.
+2. *General linear group*: $$\GL(n, \mathbb{C})$$는 reductive이다.
+3. *Special linear group*: $$\SL(n, \mathbb{C})$$는 reductive이다.
 4. **직교군, 유니타리군**: $$\operatorname{O}(n)$$, $$\operatorname{U}(n)$$ 등도 reductive이다.
 
 반면, 가환군 $$\mathbb{G}_a = \mathbb{C}$$는 reductive가 아니다.
@@ -272,7 +272,9 @@ $$X /\!/ G = \Spec(A^G)$$
 
 </div>
 
-Projective variety의 경우, 상황이 더 복잡하다. $$G$$가 projective variety $$X \subseteq \mathbb{P}^n$$ 위에 action할 때, 이 action을 $$\mathbb{P}^n$$ 전체로 확장하기 위해서는 *linearization*이 필요하다.
+GIT quotient $$X /\!/ G$$는 기하적으로 orbit space $$X/G$$의 "좋은" 근사이다. 모든 $$G$$-invariant function이 $$X /\!/ G$$로부터 pullback되며, 이는 universal property를 통해 정확히 기술된다.
+
+Projective variety의 경우 상황이 더 복잡하다. Projective variety $$X \subseteq \mathbb{P}^n$$의 coordinate ring은 graded ring이고, group action이 grading을 보존한다는 보장이 없다. 또한 $$\Spec$$ 대신 $$\Proj$$를 사용해야 하므로, affine case와 동일한 접근이 불가능하다.
 
 <div class="definition" markdown="1">
 
@@ -282,6 +284,8 @@ Projective variety의 경우, 상황이 더 복잡하다. $$G$$가 projective va
 2. $$\mathbb{P}^n$$ 위의 $$G$$-action이 linear (즉, $$\GL(n+1, \mathbb{C})$$로 lift됨)
 
 </div>
+
+Linearization은 projective case의 어려움을 해결한다. Linear action은 homogeneous coordinate ring의 grading을 보존하므로, 각 차수 $$d$$의 성분 $$A_d$$ 위에 $$G$$가 잘 작용한다. 따라서 $$A_d^G$$를 취할 수 있고, 이를 통해 $$\Proj$$ construction을 사용할 수 있다.
 
 Linearization이 주어지면, 우리는 *stable*과 *semistable* point들을 정의할 수 있다.
 
@@ -323,4 +327,3 @@ GIT quotient의 중요한 성질은 다음과 같다:
 **[Hum]** J. E. Humphreys, *Linear Algebraic Groups*, Springer, 1975.  
 **[Mil]** J. S. Milne, *Algebraic Groups*, Cambridge University Press, 2017.  
 **[MFK]** D. Mumford, J. Fogarty, F. Kirwan, *Geometric Invariant Theory*, Springer, 1994.
-                                                                                                                                                                                                                                                                                                                                                     
