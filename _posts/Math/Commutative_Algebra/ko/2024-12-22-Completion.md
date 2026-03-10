@@ -25,7 +25,7 @@ $$\mathcal{J}:\qquad G=H_0\supseteq H_1\supseteq\cdots$$
 
 가 주어졌다 하면, $$G/ H_{i+1} \rightarrow G/H_{i}$$들이 잘 정의되며, 더 일반적으로 이들의 적절한 합성을 통해 $$j>i$$일 때마다 $$\rho_{ji}:G/H_j \rightarrow G/H_i$$가 정의된다. 이들 데이터를 통해 inverse limit
 
-$$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i\,\middle\vert\,\text{$\rho_{ji}(g_j)=g_i$ for all $$j>i$$}\right\}$$
+$$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i\,\middle\vert\,\text{$\rho_{ji}(g_j)=g_i$ for all $j>i$}\right\}$$
 
 그리고 canonical morphism들 $$\rho_i:\widehat{G}_{\mathcal{J}} \rightarrow G/ H_i$$들이 주어지며, 이 때 $$\rho_{ji}\circ\rho_j=\rho_i$$가 모든 $$j>i$$에 대해 성립한다. 표기의 편의를 위해 $$\mathcal{J}$$가 문맥에 따라 명확할 경우 이를 간단히 $$\widehat{G}$$로 쓰기도 한다.
 

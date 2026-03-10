@@ -21,7 +21,7 @@ weight: 10
 
 우리는 ring $$A$$와 임의의 ideal $$\mathfrak{a}$$에 대하여, 다음 식
 
-$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $$\mathfrak{a}$$} \mathfrak{p}$$
+$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $\mathfrak{a}$} \mathfrak{p}$$
 
 이 성립하는 것을 살펴보았다. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)) 특히, 만일 $$\mathfrak{a}$$가 prime ideal이라면 $$\mathfrak{p}=\sqrt{\mathfrak{p}}$$가 성립해야 하는 것이 당연하다. 더 일반적으로 다음을 정의한다.
 

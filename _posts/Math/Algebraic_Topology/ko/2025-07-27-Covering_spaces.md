@@ -226,7 +226,7 @@ $$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \lef
 
 명시적으로, covering space $$p:E \rightarrow B$$가 주어지면 $$\pi_1(p):\pi_1(E)\rightarrow \pi_1(B)$$를 통해 subgroup이 정의되며, 이 때 두 transitive $$G$$-set $$X\cong G/H$$와 $$Y\cong G/K$$가 isomorphic한 것은 $$H$$와 $$K$$가 서로 conjugate인 것과 동치이므로 위의 결과를 얻는다. 한편 만일 $$\pi_1(B,x)$$의 subgroup들의 conjugacy class들 대신 명시적인 subgroup들 그 자체를 생각한다면 이는 isomorphic한 covering space 중 하나를 택하는 것이 되고, 이는 정확히 $$B$$의 base point 하나를 고정한 다음, *pointed* covering map $$p:(E, y)\rightarrow (B,x)$$를 생각하여 이들 isomorphism class들의 원소를 따로따로 보는 것과 같다. 즉 다음의 Galois correspondance
 
-$$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $$B$$}\right\}\simeq \left\{\text{subgroups of $\pi_1(B,x)$}\right\}$$
+$$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $B$}\right\}\simeq \left\{\text{subgroups of $\pi_1(B,x)$}\right\}$$
 
 이 존재한다. 이를 조금 더 익숙한 형태로 만들면, 우리는 임의의 $$H\leq \pi_1(B,x)$$에 대하여 이에 대응되는 covering space $$E_H$$를 만들 수 있고 그럼 $$E_H$$의 automorphism group $$\Aut(E_H/B)$$에 대하여
 

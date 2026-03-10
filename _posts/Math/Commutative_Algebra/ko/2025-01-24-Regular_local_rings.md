@@ -93,7 +93,7 @@ $$d=\dim A=\dim \im(\phi)=\dim \kappa[[\x_1,\ldots,\x_d]]/\ker\phi\leq \dim \kap
 
 <ins id="prop5">**명제 5**</ins> 1차원의 regular local ring $$(A, \mathfrak{m})$$이 주어졌다 하고, $$m$$이 $$A$$의 regular parameter라 하자. 그럼 $$\Frac(A)$$의 임의의 원소 $$x$$는 
 
-$$x=a m^k\qquad \text{$k\in \mathbb{Z}$, $$a$$ a unit of $$A$$}$$
+$$x=a m^k\qquad \text{$k\in \mathbb{Z}$, $a$ a unit of $A$}$$
 
 의 꼴로 유일하게 적을 수 있다. 
 
@@ -153,7 +153,7 @@ $$am^k+bm^l=(am^{k-\min(k,l)}+bm^{l-\min(k,l)})m^{\min(k,l)}$$
 
 정의에 의해 $$K$$의 원소는 임의의 $$a\in A$$와 non-zerodivisor $$u\in A$$에 대하여 $$a/u$$의 꼴이다. 이제
 
-$$\frac{a}{u}\in A\iff a\in (u)\iff a=0\mod{(u)}\iff \epsilon_\mathfrak{p}(a)= 0\text{ in $(A/(u))_\mathfrak{p}=A_\mathfrak{p}/(u)A_\mathfrak{p}$ for all $$\mathfrak{p}$$ associated prime of $$A/(u)$$}$$
+$$\frac{a}{u}\in A\iff a\in (u)\iff a=0\mod{(u)}\iff \epsilon_\mathfrak{p}(a)= 0\text{ in $(A/(u))_\mathfrak{p}=A_\mathfrak{p}/(u)A_\mathfrak{p}$ for all $\mathfrak{p}$ associated prime of $A/(u)$}$$
 
 가 성립한다. 여기서 $$\epsilon_\mathfrak{p}: A \rightarrow A_\mathfrak{p}$$는 canonical morphism이고, 마지막 동치는 [§동반소아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/associated_primes#cor4)에 의한 것이다. 그럼 임의의 prime ideal $$\mathfrak{p}$$ associated to a non-zerodivisor에 대하여, 
 
@@ -237,7 +237,7 @@ $$a=(a_1,\ldots, a_n),\qquad\text{$a_i$ a non-zerodivisor of $A_i$}$$
 
 거꾸로 R1S2 조건이 성립한다 하자. 그럼 우선 $$R$$은 reduced ring이다. 이는 만일
 
-$$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $$\mathfrak{p}_i$$-primary ideal}$$
+$$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 
 가 $$0$$의 minimal primary decomposition이라면 여기에 등장하는 $$\mathfrak{p}_i$$들은 모두 S2 조건에 의해 codimension $$0$$ ideal들이고, R1 조건에 의해 여기에서의 localization이 field임을 안다. 따라서 [명제 7](#prop7)을 적용할 수 있고, 여기에 [§조르단-횔더 정리, ⁋정리 5](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm5)를 적용해주면 원하는 결과를 얻는다. 
 

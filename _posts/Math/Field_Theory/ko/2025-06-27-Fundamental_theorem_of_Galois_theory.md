@@ -27,7 +27,7 @@ $$k:\mathscr{G}\rightarrow\mathscr{K};\qquad G\mapsto k(G)\text{ the field of in
 
 그리고 
 
-$$g:\mathscr{K}\rightarrow\mathscr{G};\qquad \mathbb{M}\mapsto g(\mathbb{M})\text{ the group of $\mathbb{M}$-automorphisms of $$L$$}$$
+$$g:\mathscr{K}\rightarrow\mathscr{G};\qquad \mathbb{M}\mapsto g(\mathbb{M})\text{ the group of $\mathbb{M}$-automorphisms of $L$}$$
 
 을 생각하면 이들은 서로의 inverse이다. 
 

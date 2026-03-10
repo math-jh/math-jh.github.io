@@ -131,7 +131,7 @@ $$a'\in\ann(ax)\iff a'ax=0\iff a'a\in \mathfrak{p}\iff a'\in \mathfrak{p}$$
 
 <ins id="lem6">**보조정리 6**</ins> Noetherian ring $$A$$ 위에 정의된 finitely generated module $$M$$에 대하여, 다음 조건을 만족하는 filtration
 
-$$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_{k+1}/M_k\cong A/\mathfrak{p}_k$ for some prime $$\mathfrak{p}_k$$, for all $$k$$}$$
+$$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_{k+1}/M_k\cong A/\mathfrak{p}_k$ for some prime $\mathfrak{p}_k$, for all $k$}$$
 
 을 찾을 수 있다.
 
