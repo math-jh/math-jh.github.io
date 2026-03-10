@@ -127,7 +127,7 @@ $$A_+=\bigoplus_{i=1}^\infty A_i=A_1\oplus A_2\oplus\cdots$$
 
 <ins id="def1">**정의 1**</ins> Graded ring $$A_\bullet$$에 대하여, $$\Proj A_\bullet$$은 다음의 집합
 
-$$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogeneous and $$A_+\not\subset \mathfrak{p}$$}\}$$
+$$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogeneous and $A_+\not\subset \mathfrak{p}$}\}$$
 
 으로 정의된다.
 
