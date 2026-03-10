@@ -1,5 +1,5 @@
 ---
-title: "대수적 군과 그 작용"
+title: "대수적 군"
 excerpt: "Algebraic group, action, representation, weight decomposition, 그리고 GIT quotient"
 
 categories: [Math / Algebraic Geometry]
@@ -19,30 +19,32 @@ weight: 1000
 
 ## 대수적 군
 
-대수기하학에서 *group*의 개념은 단순히 집합 위에 정의된 연산 구조가 아니라, 대수다양체로서의 기하학적 구조와 군으로서의 대수적 구조가 조화를 이루는 대상이다. 이번 글에서 우리는 Algebraic group의 정의와 기본 성질을 살펴보고, 대수다양체 위로의 action을 정의한 후, torus action과 quotient variety의 구성을 다룬다.
+우리는 수학적 대상이 다른 대상에 작용하는 많은 예시들을 알고 있다. 대수적으로 가장 중요한 예시는 벡터공간 위에 작용하는 군일 것이며, 기하적으로는 Lie group action이 있다. 대수기하학은 대수적인 대상들에 기하학적인 의미를 부여하므로, 대수적 군의 작용은 이들 두 관점을 잘 통합하는 형태로 나타난다. 
+
+우선 다음 정의는 자명하다. 
 
 <div class="definition" markdown="1">
 
 <ins id="def1">**정의 1**</ins> *Algebraic group<sub>대수적 군</sub>* $$G$$는 다음 조건들을 만족하는 대수다양체이다:
 
 1. $$G$$는 group 구조를 갖는다.
-2. 곱셈사상 $$m: G \times G \to G$$와 역원사상 $$i: G \to G$$가 모두 morphism of varieties이다.
+2. Multiplication $$m: G \times G \to G$$와 inverse $$i: G \to G$$가 모두 morphism of varieties이다.
 
 </div>
 
-즉, Algebraic group은 대수다양체인 동시에 군이며, 두 구조가 morphism이라는 기하학적 조건을 통해 서로 호환된다.
+Lie group에서와 마찬가지로, 가장 중요한 예시들은 보통 matrix group들이다. 
 
 <div class="example" markdown="1">
 
 <ins id="ex2">**예시 2**</ins> 가장 기본적인 예시들은 다음과 같다:
 
-1. **일반선형군**: $$\GL(n, \mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$$는 $$\mathbb{C}^{n^2}$$의 열린부분대수다양체로서 Algebraic group의 구조를 갖는다.
-2. **특수선형군**: $$\SL(n, \mathbb{C}) = \{A \in \GL(n, \mathbb{C}) \mid \det A = 1\}$$는 $$\GL(n, \mathbb{C})$$의 닫힌 부분군으로서 Algebraic group이다.
-3. **가환군**: $$\mathbb{G}_a = \mathbb{C}$$ (덧셈)과 $$\mathbb{G}_m = \mathbb{C}^\ast$$ (곱셈)은 모두 1차원 Algebraic group이다.
+1. *General linear group* $$\GL(n, \mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$$는 $$\mathbb{C}^{n^2}$$의 open subvariety로서 algebraic group의 구조를 갖는다.
+2. *Special linear group* $$\SL(n, \mathbb{C}) = \{A \in \GL(n, \mathbb{C}) \mid \det A = 1\}$$는 $$\GL(n, \mathbb{C})$$의 closed subvariety로서 algebraic group이다.
+3. 두 abelian group $$\mathbb{G}_a = \mathbb{C}$$ (덧셈)과 $$\mathbb{G}_m = \mathbb{C}^\ast$$ (곱셈)은 모두 1차원 algebraic group이다.
 
 </div>
 
-Algebraic group 중에서 특히 중요한 역할을 하는 것은 *affine algebraic group*이다.
+Algebraic group 중에서 특히 중요한 역할을 하는 것은 당연히 *affine algebraic group*이다.
 
 <div class="definition" markdown="1">
 
@@ -50,15 +52,13 @@ Algebraic group 중에서 특히 중요한 역할을 하는 것은 *affine algeb
 
 </div>
 
-Affine algebraic group의 중요성은 모든 affine algebraic group이 어떤 $$\GL(n, \mathbb{C})$$의 닫힌 부분군으로 실현된다는 사실로부터 온다. 이는 affine variety가 coordinate ring을 통해 완전히 결정된다는 사실과 밀접하게 연관된다.
-
 ## 대수적 군의 작용
 
-이제 Algebraic group이 대수다양체 위에 action하는 방식을 정의한다.
+이제 algebraic group이 대수다양체 위에 작용하는 방식을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Algebraic group $$G$$의 대수다양체 $$X$$ 위로의 *action<sub>작용</sub>*이란 morphism
+<ins id="def4">**정의 4**</ins> Algebraic group $$G$$의 algebraic variety $$X$$ 위로의 *action<sub>작용</sub>*이란 morphism
 
 $$\alpha: G \times X \to X$$
 
@@ -256,34 +256,60 @@ $$A^G = \{f \in A \mid g \cdot f = f \text{ for all } g \in G\}$$
 
 Reductive group의 중요성은 Hilbert의 기저정리와 Nagata의 정리를 통해 invariant ring $$\mathbb{C}[X]^G$$가 항상 finitely generated이라는 사실로부터 온다.
 
-
 Geometric Invariant Theory (GIT)는 reductive group action에 대한 quotient를 구성하는 체계적인 방법을 제공한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def19">**정의 19**</ins> Reductive group $$G$$가 affine variety $$X = \Spec(A)$$ 위에 action할 때, *GIT quotient* $$X /\\!/ G$$는
+<ins id="def17">**정의 17**</ins> Reductive group $$G$$가 affine variety $$X = \Spec(A)$$ 위에 action할 때, *GIT quotient* $$X /\!/ G$$는
 
-$$X /\\!/ G = \Spec(A^G)$$
+$$X /\!/ G = \Spec(A^G)$$
 
-으로 정의된다. 여기서 $$A^G = \{f \in A \mid g \cdot f = f \text{ for all } g \in G\}$$는 $$G$$-invariant function들의 subalgebra이다.
+으로 정의된다.
+
+</div>
+
+Projective variety의 경우, 상황이 더 복잡하다. $$G$$가 projective variety $$X \subseteq \mathbb{P}^n$$ 위에 action할 때, 이 action을 $$\mathbb{P}^n$$ 전체로 확장하기 위해서는 *linearization*이 필요하다.
+
+<div class="definition" markdown="1">
+
+<ins id="def18">**정의 18**</ins> Reductive group $$G$$의 projective variety $$X$$ 위로의 action에 대한 *linearization*이란, 다음을 만족하는 $$G$$의 $$\mathbb{P}^n$$ 위로의 action의 extension이다:
+
+1. $$X \subseteq \mathbb{P}^n$$은 $$G$$-invariant
+2. $$\mathbb{P}^n$$ 위의 $$G$$-action이 linear (즉, $$\GL(n+1, \mathbb{C})$$로 lift됨)
+
+</div>
+
+Linearization이 주어지면, 우리는 *stable*과 *semistable* point들을 정의할 수 있다.
+
+<div class="definition" markdown="1">
+
+<ins id="def19">**정의 19**</ins> Linearization이 주어진 $$G$$-action on $$X \subseteq \mathbb{P}^n$$에 대하여:
+
+- 점 $$x \in X$$가 *semistable*이라는 것은 $$\overline{G \cdot x} \cap X^{\mathrm{null}} = \emptyset$$인 것이다. 여기서 $$X^{\mathrm{null}}$$은 invariant homogeneous polynomial들에 의해 정의되는 *null cone*이다.
+- 점 $$x \in X$$가 *stable*이라는 것은 다음 조건들을 만족하는 것이다:
+  1. $$x$$는 semistable
+  2. $$G_x$$는 유한군
+  3. Orbit $$G \cdot x$$가 닫힌 집합
+
+Semistable point들의 집합을 $$X^{\mathrm{ss}}$$, stable point들의 집합을 $$X^{\mathrm{s}}$$로 표기한다.
+
+</div>
+
+<div class="definition" markdown="1">
+
+<ins id="def20">**정의 20**</ins> Linearization이 주어진 $$G$$-action on projective variety $$X$$에 대한 *GIT quotient*는
+
+$$X /\!/ G = \Proj\left(\bigoplus_{d \ge 0} A_d^G\right)$$
+
+으로 정의된다. 여기서 $$A_d$$는 $$X$$의 homogeneous coordinate ring의 $$d$$차 성분이다.
 
 </div>
 
 GIT quotient의 중요한 성질은 다음과 같다:
 
-1. **잘 정의됨**: Reductive group의 경우 $$A^G$$가 항상 finitely generated이므로 $$\Spec(A^G)$$는 affine variety이다.
-2. **Universal property**: 임의의 $$G$$-invariant morphism $$X \to Y$$는 유일한 $$X /\\!/ G \to Y$$를 통해 factor한다.
-3. **Geometric interpretation**: $$X /\\!/ G$$는 "semistable" point들의 quotient로 해석될 수 있다.
-
-<div class="example" markdown="1">
-
-<ins id="ex20">**예시 20**</ins> Projective space의 GIT 구성:
-
-$$\mathbb{P}^n$$을 affine space $$\mathbb{C}^{n+1} \setminus \{0\}$$ 위의 $$\mathbb{C}^\ast$$-action에 대한 GIT quotient로 구성할 수 있다. 이 경우, invariant ring $$\mathbb{C}[x_0, \ldots, x_n]^{\\mathbb{C}^\\ast}$$은 homogeneous coordinate ring으로부터 얻어지며, quotient는 projective space $$\mathbb{P}^n$$이다.
-
-</div>
-
-GIT의 더 일반적인 형태에서는 *linearization*을 선택하고, 이에 따라 *stable* 및 *semistable* point들을 정의하여 quotient를 구성한다. 이를 통해 projective variety의 quotient도 다룰 수 있다.
+1. **잘 정의됨**: Reductive group의 경우 $$A^G$$가 항상 finitely generated이므로 quotient가 존재한다.
+2. **Universal property**: 임의의 $$G$$-invariant morphism $$X^{\mathrm{ss}} \to Y$$는 유일한 $$X /\!/ G \to Y$$를 통해 factor한다.
+3. **Geometric interpretation**: $$X /\!/ G$$는 semistable point들의 orbit space의 "good" compactification이다. Stable point들의 경우, $$X^{\mathrm{s}} / G \hookrightarrow X /\!/ G$$는 open immersion이다.
 
 ---
 
