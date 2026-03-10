@@ -272,9 +272,17 @@ $$X /\!/ G = \Spec(A^G)$$
 
 </div>
 
-위에서 살펴본 것과 같이 GIT quotient $$X /\!/ G$$는 기하적으로 orbit space $$X/G$$의 좋은 근사이며, 정확히 이는 다음과 같은 의미이다. 모든 $$G$$-invariant function이 $$X /\!/ G$$로부터 pullback되며, 이는 universal property를 통해 정확히 기술된다.
+위에서 살펴본 것과 같이 GIT quotient $$X /\!/ G$$는 기하적으로 orbit space $$X/G$$의 좋은 근사이며, 이는 GIT quotient가 quotient가 만족해야 할 universal property를 만족한다는 뜻이다. 
 
-지금까지의 논의는 affine variety에 대한 것이며, projective variety의 경우 상황이 더 복잡하다. Projective variety $$X \subseteq \mathbb{P}^n$$의 coordinate ring은 graded ring이고, group action이 grading을 보존한다는 보장이 없기 때문이다. 또한 $$\Spec$$ 대신 $$\Proj$$를 사용해야 하므로, affine case와 동일한 접근이 불가능하다.
+지금까지의 논의는 affine variety에 대한 것이며, projective variety의 경우 상황이 더 복잡하다. 예를 들어 $$\mathbb{C}^\ast$$가 $$\mathbb{P}^1 = \{[x:y]\}$$ 위에
+
+$$t \cdot [x:y] = [tx:y]$$
+
+로 작용한다고 하자. Homogeneous coordinate ring $$\mathbb{C}[x,y]$$에서 $$t \cdot x = tx$$, $$t \cdot y = y$$이므로, 각 차수 $$d$$의 성분 $$\mathbb{C}_d[x,y]$$에서 monomial $$x^a y^{d-a}$$는
+
+$$t \cdot x^a y^{d-a} = t^a x^a y^{d-a}$$
+
+로 작용받는다. 즉, 각 monomial이 서로 다른 weight를 갖는다. 따라서 $$\mathbb{C}_d[x,y]$$의 $$G$$-invariant subspace는 $$\mathbb{C} \cdot y^d$$뿐이다. 이 경우 다행히 $$A_d^G$$가 well-defined이지만, 일반적인 action에서는 $$A_d^G$$를 정의하는 것조차 어려울 수 있다. 문제는 projective variety $$X$$ 위의 action이 $$X \subseteq \mathbb{P}^n$$의 embedding과 compatible하지 않으면, grading과 action이 서로 독립적으로 작용한다는 점이다.
 
 <div class="definition" markdown="1">
 
@@ -285,7 +293,11 @@ $$X /\!/ G = \Spec(A^G)$$
 
 </div>
 
-Linearization은 projective case의 어려움을 해결한다. Linear action은 homogeneous coordinate ring의 grading을 보존하므로, 각 차수 $$d$$의 성분 $$A_d$$ 위에 $$G$$가 잘 작용한다. 따라서 $$A_d^G$$를 취할 수 있고, 이를 통해 $$\Proj$$ construction을 사용할 수 있다.
+Linearization은 이 문제를 해결한다. Linear action은 homogeneous coordinate ring의 각 차수 $$d$$ 성분 $$A_d$$를 보존하므로, $$A_d$$ 위에 $$G$$가 잘 작용하고 따라서 $$A_d^G$$를 취할 수 있다. 위의 예시에서 action은 이미 linear이며, $$A_d^G = \mathbb{C} \cdot y^d$$이고,
+
+$$\mathbb{P}^1 /\!/ \mathbb{C}^\ast = \Proj\left(\bigoplus_{d \ge 0} \mathbb{C} \cdot y^d\right) \cong \mathrm{pt}$$
+
+로 quotient를 구성할 수 있다.
 
 Linearization이 주어지면, 우리는 *stable*과 *semistable* point들을 정의할 수 있다.
 
@@ -322,4 +334,4 @@ $$X /\!/ G = \Proj\left(\bigoplus_{d \ge 0} A_d^G\right)$$
 **[Spr]** T. A. Springer, *Linear Algebraic Groups*, Birkhäuser, 1998.  
 **[Hum]** J. E. Humphreys, *Linear Algebraic Groups*, Springer, 1975.  
 **[Mil]** J. S. Milne, *Algebraic Groups*, Cambridge University Press, 2017.  
-**[MFK]** D. Mumford, J. Fogarty, F. Kirwan, *Geometric Invariant Theory*, Springer, 1994.
+**[MFK]** D. Mumford, J. Fogarty, F. Kirwan, *Geometric Invariant Theory*, Springer, 1994.                                                                                                                                                                                                                 
