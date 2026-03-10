@@ -135,11 +135,7 @@ $$\mathbb{C}[S_\sigma] = \bigoplus_{u \in S_\sigma} \mathbb{C} \cdot \rchi^u,$$
 
 여기서 각 $$\rchi^u$$는 weight $$u$$를 갖는 eigenvector이다. 즉, $$\mathbb{C}^\ast$$가 $$\mathbb{C}[S_\sigma]$$에 scaling을 하면, 각 $$\rchi^u$$는 eigenvalue $$\chi^u(t) \in \mathbb{C}^\ast$$를 갖는다. 이 $$M$$-grading이 정확히 torus action에 대한 weight decomposition을 나타낸다.
 
----
-
-### $$T_N$$의 character
-
-대수적 토러스 $$T_N$$을 다음과 같이 정의한다:
+한편 $$T_N$$을 다음과 같이 정의한다:
 
 $$T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast.$$
 

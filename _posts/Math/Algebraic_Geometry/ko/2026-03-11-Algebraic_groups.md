@@ -3,7 +3,7 @@ title: "대수적 군과 그 작용"
 excerpt: "대수적 군, 작용, weight decomposition, 그리고 표현 이론"
 
 categories: [Math / Algebraic Geometry]
-permalink: /ko/math/algebraic_geometry/algebraic_groups_and_actions
+permalink: /ko/math/algebraic_geometry/algebraic_groups
 sidebar: 
     nav: "algebraic_geometry-ko"
 
@@ -13,7 +13,7 @@ header:
 
 date: 2026-03-11
 last_modified_at: 2026-03-11
-weight: 100
+weight: 1000
 
 ---
 
