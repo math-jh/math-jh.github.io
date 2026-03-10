@@ -736,7 +736,7 @@ category-ko:
         url: ko/algebraic_structures/
       - title: "군론"
         url: ko/group_theory/
-      - title: "/환론"
+      - title: "환론"
         url: ko/ring_theory/
       - title: "다중선형대수학"
         url: ko/multilinear_algebra/
@@ -769,13 +769,15 @@ category-ko:
       # - title: "복소다양체"
       #   url: ko/complex_manifold/
       - title: "리 이론"
-        url: ko/Lie_theory/
+        url: ko/lie_theory/
+      - title: "리만기하학"
+        url: ko/riemannian_geometry/
       - title: "대수기하학"
         url: ko/algebraic_geometry/
-      - title: "토릭 기하학"
-        url: ko/toric_geometry/
       - title: "사교기하학"
         url: ko/symplectic_geometry/
+      - title: "토릭기하학"
+        url: ko/toric_geometry/
   - title: "Misc"
     children:
       - title: "블로그 개발"
@@ -804,14 +806,20 @@ category-en:
     children:
       - title: "Algebraic Structures"
         url: en/algebraic_structures/
+      - title: "Group Theory"
+        url: en/group_theory/
+      - title: "Ring Theory"
+        url: en/ring_theory/
       - title: "Multilinear Algebra"
         url: en/multilinear_algebra/
-      # - title: "갈루아 이론"
-      #   url: ko/Galois_theory/
-      - title: "호몰로지 대수학"
-        url: ko/homological_algebra/
-      - title: "가환대수학"
-        url: ko/commutative_algebra/
+      - title: "Field Theory"
+        url: en/field_theory/
+      - title: "Homological Algebra"
+        url: en/homological_algebra/
+      - title: "Commutative Algebra"
+        url: en/commutative_algebra/
+      - title: "Representation Theory"
+        url: en/representation_theory/
   # - title: "Analysis"
   #   children:
       # - title: "해석학"
@@ -824,27 +832,25 @@ category-en:
       #   url: ko/functional_analysis/
   - title: "Topology and geometry"
     children:
-      - title: "위상수학"
-        url: ko/topology/
-      - title: "대수적 위상수학"
-        url: ko/algebraic_topology/
-      - title: "미분다양체"
-        url: ko/manifold/
+      - title: "Point-Set Topology"
+        url: en/topology/
+      - title: "Algebraic Topology"
+        url: en/algebraic_topology/
+      - title: "Manifolds"
+        url: en/manifold/
       # - title: "복소다양체"
       #   url: ko/complex_manifold/
-      - title: "대수기하학"
-        url: ko/algebraic_geometry/
-      - title: "토릭 기하학"
-        url: ko/toric_geometry/
-      - title: "사교기하학"
-        url: ko/symplectic_geometry/
-  - title: "Misc"
-    children:
-      - title: "블로그 개발"
-        url: ko/blog_development/
+      - title: "Lie Theory"
+        url: en/lie_theory/
+      - title: "Riemannian Geometry"
+        url: en/riemannian_geometry/
+      - title: "Algebraic Geometry"
+        url: en/algebraic_geometry/
+      - title: "Symplectic Geometry"
+        url: en/symplectic_geometry/
+      - title: "Toric Geometry"
+        url: en/toric_geometry/
   - title: 
     children:
-      - title: "블로그 소개"
-        url: ko/about
-      - title: "찾아보기"
-        url: ko/misc/index_ko
+      - title: "About This Site"
+        url: en/about
