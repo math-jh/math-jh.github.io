@@ -313,11 +313,7 @@ $$X /\!/ G = \Proj\left(\bigoplus_{d \ge 0} A_d^G\right)$$
 
 </div>
 
-앞서 살펴본 affine case에서와 마찬가지로, projective variety의 GIT quotient 또한 충분히 좋은 근사이다. 이는 다음과 같은 뜻이다. 
-
-1. **잘 정의됨**: Reductive group의 경우 $$A^G$$가 항상 finitely generated이므로 quotient가 존재한다.
-2. **Universal property**: 임의의 $$G$$-invariant morphism $$X^{\mathrm{ss}} \to Y$$는 유일한 $$X /\!/ G \to Y$$를 통해 factor한다.
-3. **Geometric interpretation**: $$X /\!/ G$$는 semistable point들의 orbit space의 "good" compactification이다. Stable point들의 경우, $$X^{\mathrm{s}} / G \hookrightarrow X /\!/ G$$는 open immersion이다.
+앞서 살펴본 affine case에서와 마찬가지로, projective variety의 GIT quotient 또한 충분히 좋은 근사이다. 뿐만 아니라, $$X/\!/G$$는 이 경우 semistable point들의 orbit space들의 compactification으로 생각할 수 있다. 
 
 ---
 
