@@ -127,55 +127,51 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\chi^{e_1^\ast}, \chi^{e_2^\ast}] = \mathbb{
 
 ## 토러스 작용
 
-위에서 정의한 $$\Spec(\mathbb{C}[S_\sigma])$$가 affine *toric* variety라 불리는 이유는 이 위에 자연스러운 torus action이 존재하기 때문이다.
+우리는 $$\Spec(\mathbb{C}[S_\sigma])$$ 위에 torus action을 정의하기 위해, 이미 친숙한 $$\mathbb{P}^N$$의 예시를 살펴본다. $$\mathbb{P}^N = \operatorname{Proj}(\mathbb{C}[X_0, \ldots, X_N])$$의 경우, $$\mathbb{C}^\ast$$가 scaling action을 하면 polynomial ring $$\mathbb{C}[X_0, \ldots, X_N]$$이 degree-by-degree로 분해된다. 각 homogeneous component $$\mathbb{C}[X_0, \ldots, X_N]_d$$는 $$\mathbb{C}^\ast$$-module로서 eigenspace를 형성한다.
 
-우리는 $$\Spec(\mathbb{C}[S_\sigma])$$ 위에 torus action을 정의하기 위해, 이미 친숙한 $$\mathbb{P}^N$$의 예시를 살펴본다. $$\mathbb{P}^N = \operatorname{Proj}(\mathbb{C}[X_0, \ldots, X_N])$$의 경우, $$\mathbb{C}^\ast$$가 scaling action을 하면 polynomial ring $$\mathbb{C}[X_0, \ldots, X_N]$$이 degree-by-degree로 분해된다:
-
-$$\mathbb{C}[X_0, \ldots, X_N] = \bigoplus_{d=0}^N \mathbb{C}[X_0, \ldots, X_N]_d,$$
-
-여기서 $$\mathbb{C}[X_0, \ldots, X_N]_d$$는 homogeneous polynomials of degree $$d$$의 부분공간이다. 각 homogeneous component는 $$\mathbb{C}^\ast$$-module로서 eigenspace를 형성한다.
-
-이와 비슷하게, $$\mathbb{C}[S_\sigma]$$ 위에서도 M-grading이 weight decomposition을 제공한다. $$M$$-grading에 의해:
+이와 비슷하게, $$\mathbb{C}[S_\sigma]$$ 위에서도 $$M$$-grading이 weight decomposition을 제공한다. $$M$$-grading에 의해
 
 $$\mathbb{C}[S_\sigma] = \bigoplus_{u \in S_\sigma} \mathbb{C} \cdot \rchi^u,$$
 
-여기서 $$\rchi^u$$는 weight $$u$$를 갖는 eigenvector이다. 즉, $$\mathbb{C}^\ast$$가 $$\mathbb{C}[S_\sigma]$$에 scaling을 하면, 각 $$\rchi^u$$는 eigenvalue $$\rchi^u(t) \in \mathbb{C}^\ast$$를 갖는다. 이 M-grading이 정확히 torus action에 대한 weight decomposition을 나타낸다.
+여기서 각 $$\rchi^u$$는 weight $$u$$를 갖는 eigenvector이다. 즉, $$\mathbb{C}^\ast$$가 $$\mathbb{C}[S_\sigma]$$에 scaling을 하면, 각 $$\rchi^u$$는 eigenvalue $$\chi^u(t) \in \mathbb{C}^\ast$$를 갖는다. 이 $$M$$-grading이 정확히 torus action에 대한 weight decomposition을 나타낸다.
 
 ---
 
 ### $$T_N$$의 character
 
-다음의 algebraic torus를 정의한다:
+대수적 토러스 $$T_N$$을 다음과 같이 정의한다:
 
 $$T_N = N \otimes_{\mathbb{Z}} \mathbb{C}^\ast.$$
 
-이는 두 abelian group의 텐서곱이지만, $$\mathbb{C}^\ast$$의 연산이 곱셈이므로 다소 헷갈릴 수 있다. 우선 집합으로서 $$T_N$$은 $$v \in N$$, $$z \in \mathbb{C}^\ast$$에 대하여 $$v \otimes z$$의 꼴을 갖는 원소들의 유한합이며, 덧셈으로 구성된 abelian group이다. 이 때 bilinearity에 의해 다음의 식들이 성립한다:
+이는 두 abelian group의 tensor product이지만, $$\mathbb{C}^\ast$$의 연산이 곱셈이므로 다소 헷갈릴 수 있다. 우선 집합으로서 $$T_N$$은 $$v \in N$$, $$z \in \mathbb{C}^\ast$$에 대하여 $$v \otimes z$$의 형태를 갖는 원소들의 유한합이며, 덧셈으로 구성된 abelian group이다. 이 때 bilinearity에 의해 다음의 관계들이 성립한다:
 
-$$(v_1 + v_2) \otimes z = v_1 \otimes z + v_2 \otimes z,$$
-$$v \otimes (z_1 z_2) = v \otimes z_1 + v \otimes z_2,$$
-$$(k v) \otimes z = v \otimes z^k \quad (k \in \mathbb{Z}).$$
+- $$(v_1 + v_2) \otimes z = v_1 \otimes z + v_2 \otimes z$$
+- $$v \otimes (z_1 z_2) = v \otimes z_1 + v \otimes z_2$$
+- $$(k v) \otimes z = v \otimes z^k \quad (k \in \mathbb{Z})$$
 
 $$N$$의 basis $$e_1, \ldots, e_n$$을 도입하면, $$T_N$$의 임의의 원소는 다음과 같이 쓸 수 있다:
 
-$$t = e_1 \otimes z_1 + \cdots + e_n \otimes z_n := (z_1, \ldots, z_n), \quad z_i \in \mathbb{C}^\ast.$$
+$$t = e_1 \otimes z_1 + \cdots + e_n \otimes z_n = (z_1, \ldots, z_n), \qquad z_i \in \mathbb{C}^\ast.$$
 
 이 표기 하에서 두 원소의 덧셈은
 
-$$t + t' = e_1 \otimes (z_1 z_1') + \cdots + e_n \otimes (z_n z_n') = (z_1 z_1', \ldots, z_n z_n') \tag{$\ast$}$$
+$$t + t' = e_1 \otimes (z_1 z_1') + \cdots + e_n \otimes (z_n z_n') = (z_1 z_1', \ldots, z_n z_n')$$
 
 으로 주어지므로, $$T_N$$은 multiplicative group $$(\mathbb{C}^\ast)^n$$으로 자연스럽게 해석된다.
 
-이제 $$m \in M = \Hom(N, \mathbb{Z})$$과 $$t = v \otimes z \in T_N$$에 대하여, 다음의 식으로 character $$\chi^m : T_N \to \mathbb{C}^\ast$$를 정의한다:
+한편, $$M = \Hom(N, \mathbb{Z})$$의 원소 $$m$$에 대해 다음의 group homomorphism $$\chi^m : T_N \to \mathbb{C}^\ast$$를 정의할 수 있다:
 
-$$\chi^m(t) := z^{m(v)}.$$
+$$\chi^m(t) := z^{m(v)}, \qquad t = v \otimes z \in T_N, \; m(v) \in \mathbb{Z}.$$
 
-$$\chi^m$$이 group homomorphism임은 다음과 같이 확인한다:
+$$\chi^m$$이 group homomorphism임을 확인하면 다음과 같다. $$t = v \otimes z$$, $$t' = v' \otimes z'$$라고 하자. 그럼
 
 $$\chi^m(t + t') = \chi^m\bigl((v + v') \otimes (z z')\bigr) = (z z')^{m(v + v')} = z^{m(v)} (z')^{m(v')} = \chi^m(t) \chi^m(t').$$
 
-논의의 편의를 위해 $$N$$의 basis $$e_1, \ldots, e_n$$과 dual basis $$e_1^\ast, \ldots, e_n^\ast \in M$$을 도입하면, $$m \in M$$은 $$m = m_1 e_1^\ast + \cdots + m_n e_n^\ast$$로 쓸 수 있고, 이에 따라:
+따라서 $$\chi^m$$은 group homomorphism이다. $$N$$의 basis $$e_1, \ldots, e_n$$과 dual basis $$e_1^\ast, \ldots, e_n^\ast \in M$$을 도입하면, $$m \in M$$은 $$m = m_1 e_1^\ast + \cdots + m_n e_n^\ast$$로 쓸 수 있고, 이에 따라
 
 $$\chi^m(t) = z_1^{m_1} \cdots z_n^{m_n}.$$
+
+즉, character group $$\Hom(T_N, \mathbb{C}^\ast)$$는 쌍대 격자 $$M$$과 isomorphic하다.
 
 ---
 
@@ -183,40 +179,42 @@ $$\chi^m(t) = z_1^{m_1} \cdots z_n^{m_n}.$$
 
 우리는 이제 $$U_\sigma = \operatorname{Spec}(\mathbb{C}[S_\sigma])$$ 위에 $$T_N$$-action을 정의한다. $$\Spec$$은 contravariant functor이므로, $$U_\sigma$$ 위에 $$T_N$$이 작용하는 것은 coordinate ring $$\mathbb{C}[S_\sigma]$$ 위에 comodule structure를 주는 것과 같다.
 
-구체적으로, 다음의 $$\mathbb{C}$$-algebra homomorphism을 정의한다:
+구체적으로, 다음의 $$\mathbb{C}$$-algebra homomorphism $$\rho$$를 정의한다:
 
 $$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
 
-여기서 $$\mathbb{C}[M] = \mathbb{C}[\chi^m \mid m \in M]$$은 $$T_N$$의 coordinate ring이며, $$\rchi^u \in \mathbb{C}[S_\sigma]$$는 weight $$u$$를 갖는 eigenvector이다. 이 $$\rho$$가 well-defined한 algebra homomorphism임은 bilinearity에 의해 자명하다.
+여기서 $$\mathbb{C}[M] = \mathbb{C}[\chi^m \mid m \in M]$$은 $$T_N$$의 coordinate ring이며, $$\rchi^u \in \mathbb{C}[S_\sigma]$$는 weight $$u$$를 갖는 eigenvector이다. $$\rho$$가 well-defined한 algebra homomorphism임은 bilinearity에 의해 자명하다.
 
-이 comodule structure로부터 $$U_\sigma$$ 위의 torus action을 얻는다. 각각의 $$t \in T_N$$에 대하여 evaluation map $$\operatorname{ev}_t : \mathbb{C}[M] \to \mathbb{C}$$, $$\chi^m \mapsto \chi^m(t)$$을 고려하면, $$t$$가 $$\mathbb{C}[S_\sigma]$$에 작용하는 방식은 다음의 합성사상으로 주어진다:
+이 comodule structure로부터 $$U_\sigma$$ 위의 torus action을 얻는다. 각각의 $$t \in T_N$$에 대하여 evaluation map $$\operatorname{ev}_t : \mathbb{C}[M] \to \mathbb{C}$$, $$\chi^m \mapsto \chi^m(t)$$를 고려하면, $$t$$가 $$\mathbb{C}[S_\sigma]$$에 작용하는 방식은 다음의 합성사상에 의해 주어진다:
 
 $$\mathbb{C}[S_\sigma] \xrightarrow{\rho} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M] \xrightarrow{\operatorname{id} \otimes \operatorname{ev}_t} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C} \cong \mathbb{C}[S_\sigma].$$
 
-이 합성사상을 $$\rchi^u$$에 적용하면:
+이 합성사상을 $$\rchi^u$$에 적용하면,
 
 $$(\operatorname{id} \otimes \operatorname{ev}_t)(\rchi^u \otimes \rchi^u) = \rchi^u \otimes \chi^u(t) = \chi^u(t) \rchi^u.$$
 
-따라서 $$t$$가 $$\rchi^u \in \mathbb{C}[S_\sigma]$$에 작용하는 결과는 $$\chi^u(t) \rchi^u$$이다. $$\rchi^u$$는 weight $$u$$를 갖는 eigenvector이며, $$\mathbb{C}[S_\sigma]$$의 $$M$$-grading이 정확히 이 weight decomposition을 나타낸다.
+따라서 $$t$$가 $$\rchi^u \in \mathbb{C}[S_\sigma]$$에 작용하는 결과는 $$\chi^u(t) \rchi^u$$이다.
+
+---
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 대수적 토러스 $$T_N$$이 아핀 토릭 다양체 $$U_\sigma = \operatorname{Spec}(\mathbb{C}[S_\sigma])$$ 위에 다음과 같이 작용한다. 우선 coordinate ring $$\mathbb{C}[S_\sigma]$$ 위에 다음의 식
+<ins id="prop8">**명제 8**</ins> 대수적 토러스 $$T_N$$이 아핀 토릭 다양체 $$U_\sigma = \operatorname{Spec}(\mathbb{C}[S_\sigma])$$ 위에 작용한다. 우선 coordinate ring $$\mathbb{C}[S_\sigma]$$ 위에 다음의 $$\mathbb{C}$$-algebra homomorphism $$\rho$$를 정의한다:
 
-$$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u$$
+$$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
 
-으로 정의되는 $$\mathbb{C}$$-algebra homomorphism을 생각하자. 그럼 이는 $$U_\sigma$$ 위의 $$T_N$$-action을 정의하며, 각각의 $$t \in T_N$$에 대하여 $$t$$가 $$\rchi^u \in \mathbb{C}[S_\sigma]$$에 작용하는 결과는 다음의 식
+그럼 이 $$\rho$$가 $$U_\sigma$$ 위의 $$T_N$$-action을 정의하며, 각각의 $$t \in T_N$$에 대하여 $$t$$가 $$\rchi^u \in \mathbb{C}[S_\sigma]$$에 작용하는 결과는 다음과 같다:
 
-$$t \cdot \rchi^u = \chi^u(t) \rchi^u$$
+$$t \cdot \rchi^u = \chi^u(t) \rchi^u.$$
 
-으로 주어진다. 여기서 $$\chi^u(t) \in \mathbb{C}^\ast$$는 character $$\chi^u : T_N \to \mathbb{C}^\ast$$의 값이며, $$\rchi^u(t)$$와 동일하다.
+여기서 $$\chi^u : T_N \to \mathbb{C}^\ast$$는 $$u \in M$$에 대응되는 character이며, $$\chi^u(t) \in \mathbb{C}^\ast$$는 그 값이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$\rho$$가 algebra homomorphism임은 다음의 식으로 확인한다:
+우선 $$\rho$$가 algebra homomorphism임을 확인한다. $$\rchi^u, \rchi^{u'} \in \mathbb{C}[S_\sigma]$$라고 하면,
 
 $$\rho(\rchi^u \cdot \rchi^{u'}) = \rho(\rchi^{u+u'}) = \rchi^{u+u'} \otimes \rchi^{u+u'} = \rchi^u \rchi^{u'} \otimes \rchi^u \rchi^{u'} = (\rchi^u \otimes \rchi^u)(\rchi^{u'} \otimes \rchi^{u'}) = \rho(\rchi^u) \rho(\rchi^{u'}).$$
 
@@ -226,7 +224,7 @@ $$\rho(\rchi^u \cdot \rchi^{u'}) = \rho(\rchi^{u+u'}) = \rchi^{u+u'} \otimes \rc
 
 $$\mathbb{C}[S_\sigma] \xrightarrow{\rho} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M] \xrightarrow{\operatorname{id} \otimes \operatorname{ev}_t} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C} \cong \mathbb{C}[S_\sigma].$$
 
-이 합성사상을 $$\rchi^u$$에 적용하면:
+이 합성사상을 $$\rchi^u$$에 적용하면,
 
 $$(\operatorname{id} \otimes \operatorname{ev}_t)(\rchi^u \otimes \rchi^u) = \rchi^u \otimes \chi^u(t) = \chi^u(t) \rchi^u.$$
 
@@ -234,9 +232,9 @@ $$(\operatorname{id} \otimes \operatorname{ev}_t)(\rchi^u \otimes \rchi^u) = \rc
 
 </details>
 
-이제 우리는 $\rchi^u$라는 기호가 두 가지 다른 의미로 쓰이고 있음을 확인해야 한다. 우선 coordinate ring $\mathbb{C}[S_\sigma]$의 원소로서 $\rchi^u$는 weight $u$를 갖는 eigenvector이며, character로서의 $\rchi^u$는 $T_N$에서 $\mathbb{C}^\ast$로의 group homomorphism이다. 이 두 대상이 같은 기호로 적히는 이유는, $\rchi^u\in\mathbb{C}[S_\sigma]$가 $T_N$-action 하에서 eigenvalue $\rchi^u(t)$를 갖기 때문이다. 즉, $u\in M$이 주어지면 eigenvector $\rchi^u\in\mathbb{C}[S_\sigma]$, character $\rchi^u:T_N\rightarrow\mathbb{C}^\ast$, 그리고 weight $u\in M$이 모두 대응된다. 이것이 toric variety의 핵심적인 성질이다.
+이제 우리는 $$\rchi^u$$라는 기호가 두 가지 다른 의미로 쓰이고 있음을 확인해야 한다. 우선 coordinate ring $$\mathbb{C}[S_\sigma]$$의 원소로서 $$\rchi^u$$는 weight $$u$$를 갖는 eigenvector이며, character로서의 $$\chi^u$$는 $$T_N$$에서 $$\mathbb{C}^\ast$$로의 group homomorphism이다. 이 두 대상이 같은 기호로 적히는 이유는, $$\rchi^u \in \mathbb{C}[S_\sigma]$$가 $$T_N$$-action 하에서 eigenvalue $$\chi^u(t)$$를 갖기 때문이다. 즉, $$u \in M$$이 주어지면 eigenvector $$\rchi^u \in \mathbb{C}[S_\sigma]$$, character $$\chi^u : T_N \to \mathbb{C}^\ast$$, 그리고 weight $$u \in M$$이 모두 대응된다.
 
-이 작용은 $U_\sigma$ 안에 열린 조밀한 torus orbit을 가지며, 이 orbit은 정확히 torus $T_N$ 자체이다.
+이 작용은 $$U_\sigma$$ 안에 열린 조밀한 torus orbit을 가지며, 이 orbit은 정확히 torus $$T_N$$ 자체이다.
 
 <div class="proposition" markdown="1">
 
