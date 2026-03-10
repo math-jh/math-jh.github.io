@@ -83,7 +83,7 @@ By definition, $$R(x)$$ is the collection of elements that are considered equiva
 
 ![Quotient_set](/assets/images/Math/Set_Theory/Equivalence_relations-1.png){:style="width:600px" class="invert" .align-center}
 
-<cap>Set $$A$$ (left), equivalence relation $$R$$ defined on it (center), and quotient set $$A/R$$ (right). Each element of $$A/R$$ is an equivalence class $$[x]_R$$ from the middle figure.</cap>
+<cap>Set $A$ (left), equivalence relation $R$ defined on it (center), and quotient set $A/R$ (right). Each element of $A/R$ is an equivalence class $[x]_R$ from the middle figure.</cap>
 
 <div class="example" markdown="1">
 

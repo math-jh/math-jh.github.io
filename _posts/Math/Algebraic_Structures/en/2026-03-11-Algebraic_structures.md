@@ -17,7 +17,7 @@ weight: 1
 
 ---
 
-In the [Algebraic Structures](/en/algebraic_structures) category, we define groups and rings and explore their fundamental properties. These structures are obtained by adding binary operation structures to sets: groups arise from adding a single operation, while rings arise from adding two operations. By additionally equipping rings with actions, we obtain modules and algebras. Topics such as Galois theory and tensor algebra are treated in separate categories.
+In the [Algebraic Structures](/en/algebraic_structures) category, we define various algebraic objects and explore their fundamental properties. These structures are obtained by adding binary operation structures to sets: groups arise from adding a single operation, while rings arise from adding two operations. By additionally equipping rings with actions, we obtain modules and algebras. Topics such as Galois theory and tensor algebra are treated in separate categories.
 
 ## Binary Operations
 
@@ -182,11 +182,11 @@ holds for all $$a$$, we say that $$R$$ is *right compatible* with $$\star$$. An 
 
 Of course, in the above equations, $$\equiv$$ always refers to the relation $$R$$.
 
-If $$R$$ is an equivalence relation, we have already seen in set theory that the *quotient set* $$A/R$$ is well-defined. ([[\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4)) The most natural attempt to define an operation $$\tiny\char\"2606$$ on the set $$A/R$$ is
+If $$R$$ is an equivalence relation, we have already seen in set theory that the *quotient set* $$A/R$$ is well-defined. ([[\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4)) The most natural attempt to define an operation $$\tiny\char"2606$$ on the set $$A/R$$ is
 
 $$[x]\mathbin{\tiny\char"2606}[y]=[x\star y]$$
 
-However, for this equation to be meaningful, the value of $$[x]\mathbin{\tiny\char\"2606}[y]$$ must be well-defined even if we choose a representative $$x'$$ instead of $$x$$ for the equivalence class $$[x]$$. That is, the equation
+However, for this equation to be meaningful, the value of $$[x]\mathbin{\tiny\char"2606}[y]$$ must be well-defined even if we choose a representative $$x'$$ instead of $$x$$ for the equivalence class $$[x]$$. That is, the equation
 
 $$[x\star y]=[x]\mathbin{\tiny\char"2606}[y]=[x'\star y]$$
 
@@ -194,7 +194,7 @@ must hold. This equation can be rewritten as
 
 $$x'\star y\equiv x\star y\mod R$$
 
-which, according to the previous definition, means precisely that $$R$$ must be *right* compatible with the operation. Similarly, since the value of the operation $$\mathbin{\tiny\char\"2606}$$ must not change with the choice of representative for $$[y]$$, $$R$$ must be *left* compatible with the operation.
+which, according to the previous definition, means precisely that $$R$$ must be *right* compatible with the operation. Similarly, since the value of the operation $$\mathbin{\tiny\char"2606}$$ must not change with the choice of representative for $$[y]$$, $$R$$ must be *left* compatible with the operation.
 
 Summarizing this, we obtain the following definition.
 
