@@ -88,7 +88,7 @@ $$\rho: B \to B \otimes_\mathbb{C} A$$
 
 ## 대수적 군의 표현
 
-이제 우리는 algebraic group의 표현 이론을 소개한다.
+Lie group과 마찬가지로, algebraic group도 표현론을 통해 더 잘 이해할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -100,7 +100,7 @@ $$\rho: G \to \GL(V)$$
 
 </div>
 
-표현 이론의 핵심 도구 중 하나는 *character*이다.
+그럼 다음 정의 또한 Lie group에서와 동일한 것이다. 
 
 <div class="definition" markdown="1">
 
@@ -112,33 +112,30 @@ $$\chi_\rho(g) = \tr(\rho(g))$$
 
 </div>
 
-Character theory에 대한 자세한 내용은 [\[표현론\] §표현의 지표](/ko/math/representation_theory/character_theory)를 참조하라. 특히 character의 직교성, irreducible representation의 분류, 그리고 character table의 구성 등은 표현론의 핵심 주제이다.
-
-
-Affine algebraic group $$G = \Spec(A)$$의 표현 $$\rho: G \to \GL(V)$$는 앞서 정의한 comodule structure와 일대일 대응한다.
+뿐만 아니라, 다음 명제에서 볼 수 있듯 algebraic group의 representation 또한 대수적인 본질과 기하적인 본질을 동시에 가지고 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> Affine algebraic group $$G = \Spec(A)$$의 표현 $$\rho: G \to \GL(V)$$는 $$V$$ 위의 comodule structure $$V \to V \otimes_\mathbb{C} A$$와 일대일 대응한다.
+<ins id="prop8">**명제 8**</ins> Affine algebraic group $$G = \Spec(A)$$의 representation $$\rho: G \to \GL(V)$$는 $$V$$ 위의 comodule structure $$V \to V \otimes_\mathbb{C} A$$와 일대일 대응한다.
 
 </div>
 
 <details class="proof" markdown="1">
-<summary>증명 스케치</summary>
+<summary>증명</summary>
 
-표현 $$\rho: G \to \GL(V)$$가 주어지면, 이는 $$G \times V \to V$$를 유도하고, $$\Spec$$의 contravariance에 의해 $$V^\ast \to V^\ast \otimes A$$를 얻는다. 반대로 comodule structure $$V \to V \otimes A$$가 주어지면, 각 $$g \in G$$에 대해 evaluation map $$\operatorname{ev}_g: A \to \mathbb{C}$$을 통해 $$V \to V \otimes \mathbb{C} \cong V$$를 얻고, 이가 표현을 정의한다.
+Representation $$\rho: G \to \GL(V)$$가 주어지면, 이는 $$G \times V \to V$$를 유도하고, $$\Spec$$의 contravariance에 의해 $$V^\ast \to V^\ast \otimes A$$를 얻는다. 
+
+반대로 comodule structure $$V \to V \otimes A$$가 주어지면, 각 $$g \in G$$에 대해 evaluation map $$\operatorname{ev}_g: A \to \mathbb{C}$$을 통해 $$V \to V \otimes \mathbb{C} \cong V$$를 얻고, 이것이 representation을 정의한다.
 
 </details>
 
-이 대응은 대수적 관점(comodule)과 기하학적 관점(group action) 사이의 bridge를 제공한다.
+## Algebraic torus와 weight decomposition
 
-## 대수적 토러스와 Weight Decomposition
-
-Algebraic torus는 중요한 대수적 군의 한 종류이다.
+Algebraic group 중 가장 많이 접하게 되는 대상 중 하나는 torus $$T$$이다. $$1$$차원 torus는 우리가 이미 살펴보았다. ([예시 2](#ex2))
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> *Algebraic torus<sub>대수적 토러스</sub>*는 $$\mathbb{G}_m = \mathbb{C}^\ast$$의 유한개 직적분과 동형인 algebraic group이다. 즉,
+<ins id="def9">**정의 9**</ins> *Algebraic torus<sub>대수적 토러스</sub>*는 $$\mathbb{G}_m = \mathbb{C}^\ast$$의 finite direct sum과 isomorphic한 algebraic group이다. 즉,
 
 $$T \cong (\mathbb{C}^\ast)^n$$
 
@@ -146,37 +143,39 @@ $$T \cong (\mathbb{C}^\ast)^n$$
 
 </div>
 
-
-정의 7에서 character는 표현에서 정의되었지만, 정의 10에서는 torus에서 정의된다. 이 두 가지는 서로 다른 개념이다. 구체적으로:
-
-1. **Torus의 character**: $$T \to \mathbb{C}^\ast$$는 group homomorphism이다. Torus의 character들은 coordinate ring $$\mathbb{C}[M]$$의 원소들과 일대일 대응한다.
-
-2. **표현의 character**: $$G \to \mathbb{C}$$는 group에서 실수로의 함수이다. 이는 irreducible representation의 분류에 사용된다.
-
-3. **비교**: Torus의 character는 group homomorphism이지만, 표현의 character는 group에서 실수로 가는 함수이다. 특히 torus의 character는 coordinate ring의 원소이며, 표현의 character는 trace 함수이다.
-
+우리는 Lie group에서, torus가 1차원 representation들로 분해되며 이들 각각에 대한 정보는 character에 담겨있는 것을 살펴보았다. 마찬가지의 일을 여기에서도 진행하자. 
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> Torus $$T = (\mathbb{C}^\ast)^n$$의 *character* $$\chi: T \to \mathbb{C}^\ast$$는 다음과 같이 정의된다. 각 coordinate $$t_i \in \mathbb{C}^\ast$$에 대해
+<ins id="def10">**정의 10**</ins> Torus $$T = (\mathbb{C}^\ast)^n$$의 *character* $$\rchi: T \to \mathbb{C}^\ast$$는 다음과 같이 정의된다. 각 coordinate $$t_i \in \mathbb{C}^\ast$$에 대해
 
-$$\chi(t_1, \ldots, t_n) = t_1^{a_1} \cdots t_n^{a_n}$$
+$$\rchi(t_1, \ldots, t_n) = t_1^{a_1} \cdots t_n^{a_n}$$
 
-로서, $$a_i \in \mathbb{Z}$$이고 $$a = (a_1, \ldots, a_n) \in \mathbb{Z}^n$$이다. 이는 group homomorphism임을 보일 수 있다.
+로서, $$a_i \in \mathbb{Z}$$이고 $$a = (a_1, \ldots, a_n) \in \mathbb{Z}^n$$이다. 
 
 </div>
+
+이는 group homomorphism임을 보일 수 있다.
 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Torus $$T = (\mathbb{C}^\ast)^n$$의 coordinate ring은 $$\mathbb{C}[x_1^\ast, x_1, \ldots, x_n^\ast, x_n]$$이며, coordinate ring은 $$\mathbb{C}[M]$$과 isomorphic하다.
+<ins id="prop11">**명제 11**</ins> Torus $$T = (\mathbb{C}^\ast)^n$$의 coordinate ring은 character들의 polynomial ring $$\mathbb{C}[\rchi_1, \rchi_1^{-1}, \ldots, \rchi_n, \rchi_n^{-1}]$$과 isomorphic하다. 여기서 $$\rchi_i(t_1, \ldots, t_n) = t_i$$는 $$i$$번째 coordinate에 대한 character이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Torus $$T = (\mathbb{C}^\ast)^n$$의 coordinate ring은 $$\mathbb{C}[x_1^\ast, x_1, \ldots, x_n^\ast, x_n] / (x_1 x_1^\ast - 1, \ldots, x_n x_n^\ast - 1)$$으로 주어진다. 각 coordinate $$t_i$$에 대해 $$\chi_i(t) = t_i$$를 character로 정의하면, 이들 character들의 polynomial ring이 바로 $$\mathbb{C}[M]$$이며, coordinate ring과 일치한다.
+Torus $$T = (\mathbb{C}^\ast)^n$$은 $$n$$개의 $$\mathbb{C}^\ast$$의 직적분이므로, 그 coordinate ring은 각 $$\mathbb{C}^\ast$$의 coordinate ring들의 tensor product이다. $$\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$$의 coordinate ring은 $$\mathbb{C}[x, x^{-1}]$$ (Laurent polynomial ring)이다.
+
+따라서 $$T$$의 coordinate ring은
+
+$$\mathbb{C}[x_1, x_1^{-1}] \otimes \cdots \otimes \mathbb{C}[x_n, x_n^{-1}] \cong \mathbb{C}[x_1, x_1^{-1}, \ldots, x_n, x_n^{-1}]$$
+
+이다. 각 $$x_i$$는 $$i$$번째 coordinate function $$\rchi_i: T \to \mathbb{C}^\ast$$에 해당하며, $$\rchi_i(t_1, \ldots, t_n) = t_i$$로 정의된다. 이는 torus의 character이고, 그 inverse $$\rchi_i^{-1}$$도 마찬가지로 character이다.
+
+따라서 $$T$$의 coordinate ring은 모든 character들로 생성되는 polynomial ring과 일치한다.
 
 </details>
 
