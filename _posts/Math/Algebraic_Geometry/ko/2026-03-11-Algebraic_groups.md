@@ -251,16 +251,16 @@ Invariant ring의 원소들은 group action에 의해 변하지 않는 대칭성
 
 <ins id="ex16">**예시 16**</ins> 우리가 다루는 대부분의 algebraic group들은 reductive group이다. 
 
-1. *Algebraic torus*: $$(\mathbb{C}^\ast)^n$$은 reductive이다.
-2. *General linear group*: $$\GL(n, \mathbb{C})$$는 reductive이다.
-3. *Special linear group*: $$\SL(n, \mathbb{C})$$는 reductive이다.
-4. **직교군, 유니타리군**: $$\operatorname{O}(n)$$, $$\operatorname{U}(n)$$ 등도 reductive이다.
+1. *Algebraic torus* $$(\mathbb{C}^\ast)^n$$은 reductive이다.
+2. *General linear group* $$\GL(n, \mathbb{C})$$는 reductive이다.
+3. *Special linear group* $$\SL(n, \mathbb{C})$$는 reductive이다.
+4. *Orthogonal group, Unitary group* $$\operatorname{O}(n)$$, $$\operatorname{U}(n)$$ 등도 reductive이다.
 
-반면, 가환군 $$\mathbb{G}_a = \mathbb{C}$$는 reductive가 아니다.
+반면, $$\mathbb{G}_a = \mathbb{C}$$는 reductive가 아니다.
 
 </div>
 
-Geometric Invariant Theory (GIT)는 reductive group action에 대한 quotient를 구성하는 체계적인 방법을 제공한다.
+[정의 15](#def15) 이후에 언급한 $$A^G$$의 finite generation에 대한 내용은 보통 Geometric Invariant Theory (GIT)에서 다루던 것으로, 이를 통해 우리는 reductive group action에 대한 quotient를 정의할 수 있다. 
 
 <div class="definition" markdown="1">
 
@@ -272,9 +272,9 @@ $$X /\!/ G = \Spec(A^G)$$
 
 </div>
 
-GIT quotient $$X /\!/ G$$는 기하적으로 orbit space $$X/G$$의 "좋은" 근사이다. 모든 $$G$$-invariant function이 $$X /\!/ G$$로부터 pullback되며, 이는 universal property를 통해 정확히 기술된다.
+위에서 살펴본 것과 같이 GIT quotient $$X /\!/ G$$는 기하적으로 orbit space $$X/G$$의 좋은 근사이며, 정확히 이는 다음과 같은 의미이다. 모든 $$G$$-invariant function이 $$X /\!/ G$$로부터 pullback되며, 이는 universal property를 통해 정확히 기술된다.
 
-Projective variety의 경우 상황이 더 복잡하다. Projective variety $$X \subseteq \mathbb{P}^n$$의 coordinate ring은 graded ring이고, group action이 grading을 보존한다는 보장이 없다. 또한 $$\Spec$$ 대신 $$\Proj$$를 사용해야 하므로, affine case와 동일한 접근이 불가능하다.
+지금까지의 논의는 affine variety에 대한 것이며, projective variety의 경우 상황이 더 복잡하다. Projective variety $$X \subseteq \mathbb{P}^n$$의 coordinate ring은 graded ring이고, group action이 grading을 보존한다는 보장이 없기 때문이다. 또한 $$\Spec$$ 대신 $$\Proj$$를 사용해야 하므로, affine case와 동일한 접근이 불가능하다.
 
 <div class="definition" markdown="1">
 
@@ -313,7 +313,7 @@ $$X /\!/ G = \Proj\left(\bigoplus_{d \ge 0} A_d^G\right)$$
 
 </div>
 
-GIT quotient의 중요한 성질은 다음과 같다:
+앞서 살펴본 affine case에서와 마찬가지로, projective variety의 GIT quotient 또한 충분히 좋은 근사이다. 이는 다음과 같은 뜻이다. 
 
 1. **잘 정의됨**: Reductive group의 경우 $$A^G$$가 항상 finitely generated이므로 quotient가 존재한다.
 2. **Universal property**: 임의의 $$G$$-invariant morphism $$X^{\mathrm{ss}} \to Y$$는 유일한 $$X /\!/ G \to Y$$를 통해 factor한다.
