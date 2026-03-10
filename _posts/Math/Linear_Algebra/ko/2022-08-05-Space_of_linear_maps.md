@@ -56,7 +56,7 @@ $$G(v)=\sum_{x\in\mathcal{B}} v_xg(x)$$
 
 반대로 임의의 linear map $$G:V\rightarrow W$$가 주어진다면 이를 $$\mathcal{B}$$로 제한하여 함수 $$g=G\circ\iota$$를 정의할 수 있으며, 위 정리의 유일성 파트에 의하여 이 등식을 만족하는 linear map은 오직 $$G$$ 뿐이다. 따라서 다음 두 집합 사이의 전단사함수가 존재한다.
 
-$$\{\text{functions from $\mathcal{B}$ to $$W$$}\}\longleftrightarrow\{\text{linear maps from $V$ to $W$}\}$$
+$$\{\text{functions from $\mathcal{B}$ to $W$}\}\longleftrightarrow\{\text{linear maps from $V$ to $W$}\}$$
 
 즉 $$V$$에서 $$W$$로의 linear map은 $$L$$이 basis $$\mathcal{B}$$ 위에서 어떻게 행동하는지에 의해 완벽하게 결정되며, 만일 $$V$$가 유한차원이었다면 이는 linear map $$L$$이 오직 <em-ko>유한 개</em-ko>의 원소에서의 함수값에 의해서만 결정된다는 의미가 된다.
 

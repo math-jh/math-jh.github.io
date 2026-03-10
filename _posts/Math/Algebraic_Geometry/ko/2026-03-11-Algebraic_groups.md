@@ -282,7 +282,7 @@ $$t \cdot [x:y] = [tx:y]$$
 
 $$t \cdot x^a y^{d-a} = t^a x^a y^{d-a}$$
 
-로 작용받는다. 즉, 각 monomial이 서로 다른 weight를 갖는다. 따라서 $$\mathbb{C}_d[x,y]$$의 $$G$$-invariant subspace는 $$\mathbb{C} \cdot y^d$$뿐이다. 이 경우 다행히 $$A_d^G$$가 well-defined이지만, 일반적인 action에서는 $$A_d^G$$를 정의하는 것조차 어려울 수 있다. 문제는 projective variety $$X$$ 위의 action이 $$X \subseteq \mathbb{P}^n$$의 embedding과 compatible하지 않으면, grading과 action이 서로 독립적으로 작용한다는 점이다.
+로 작용받는다. 즉, 각 monomial이 서로 다른 weight를 갖는다. 따라서 $$\mathbb{C}_d[x,y]$$의 $$G$$-invariant subspace는 $$\mathbb{C} \cdot y^d$$뿐이다. 이 경우 다행히 $$A_d^G$$가 well-defined이지만, 일반적인 action에서는 $$A_d^G$$를 정의하는 것조차 어려울 수 있다. 구체적으로, $$G$$가 $$\mathbb{P}^n$$ 위에 linear하게 작용하지 않으면 homogeneous coordinate $$x_0, \ldots, x_n$$이 $$G$$에 의해 섞이므로, 각 차수 $$d$$ 성분 $$A_d$$가 $$G$$-invariant subspace를 갖지 않을 수 있다.
 
 <div class="definition" markdown="1">
 
