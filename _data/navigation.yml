@@ -734,8 +734,78 @@ category-ko:
     children:
       - title: "대수적 구조"
         url: ko/algebraic_structures/
+      - title: "군론"
+        url: ko/group_theory/
+      - title: "/환론"
+        url: ko/ring_theory/
       - title: "다중선형대수학"
         url: ko/multilinear_algebra/
+      - title: "체론"
+        url: ko/field_theory/
+      - title: "호몰로지 대수학"
+        url: ko/homological_algebra/
+      - title: "가환대수학"
+        url: ko/commutative_algebra/
+      - title: "표현론"
+        url: ko/representation_theory/
+  # - title: "Analysis"
+  #   children:
+      # - title: "해석학"
+      #   url: ko/analysis/
+      # - title: "복소해석학"
+      #   url: ko/complex_analysis/
+      # - title: "측도론"
+      #   url: ko/measure_theory/
+      # - title: "함수해석학"
+      #   url: ko/functional_analysis/
+  - title: "Topology and geometry"
+    children:
+      - title: "위상수학"
+        url: ko/topology/
+      - title: "대수적 위상수학"
+        url: ko/algebraic_topology/
+      - title: "미분다양체"
+        url: ko/manifold/
+      # - title: "복소다양체"
+      #   url: ko/complex_manifold/
+      - title: "리 이론"
+        url: ko/Lie_theory/
+      - title: "대수기하학"
+        url: ko/algebraic_geometry/
+      - title: "토릭 기하학"
+        url: ko/toric_geometry/
+      - title: "사교기하학"
+        url: ko/symplectic_geometry/
+  - title: "Misc"
+    children:
+      - title: "블로그 개발"
+        url: ko/blog_development/
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
+category-en:
+  - title: "Basics"
+    children:
+      # - title: "미적분학"
+      #   url: en/calculus/
+      - title: "Linear Algebra"
+        url: en/linear_algebra/
+  - title: "Foundation"
+    children:
+      - title: "Set Theory"
+        url: en/set_theory/
+      - title: "Category Theory"
+        url: en/category_theory/
+  - title: "Algebra"
+    children:
+      - title: "Algebraic Structures"
+        url: en/algebraic_structures/
+      - title: "Multilinear Algebra"
+        url: en/multilinear_algebra/
       # - title: "갈루아 이론"
       #   url: ko/Galois_theory/
       - title: "호몰로지 대수학"

@@ -295,6 +295,7 @@ categories-ko_order:
   - Math / Riemannian Geometry
   - Math / Algebraic Geometry
   - Math / Symplectic Geometry
+  - Math / Toric Geometry
   - Misc / Blog Development
   - Misc / Peripherals
 
@@ -302,7 +303,7 @@ categories-en_order:
 #  - Math / Linear Algebra
   - Math / Set Theory
 #  - Math / Category Theory
-#  - Math / Algebraic Structures
+  - Math / Algebraic Structures
 #  - Math / Group Theory
 #  - Math / Ring Theory
 #  - Math / Multilinear Algebra
@@ -317,6 +318,7 @@ categories-en_order:
 #  - Math / Riemannian Geometry
 #  - Math / Algebraic Geometry
 #  - Math / Symplectic Geometry
+#  - Math / Toric Geometry
 #  - Misc / Blog Development
 #  - Misc / Peripherals
 
