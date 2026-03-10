@@ -186,13 +186,13 @@ Torus $$T$$가 affine variety $$X = \Spec(A)$$ 위에 action하는 경우, coord
 
 <ins id="prop12">**명제 12**</ins> Torus $$T$$가 affine variety $$X = \Spec(A)$$ 위에 action하면, coordinate ring $$A$$는 weight space들로 분해된다:
 
-$$A = \bigoplus_{\lambda \in \Lambda} A_\lambda$$
+$$A = \bigoplus_{\rchi \in X^\ast(T)} A_\rchi$$
 
-여기서 $$\Lambda \subseteq M$$은 weight들의 집합이고, 각 $$A_\lambda$$는
+여기서 $$X^\ast(T)$$는 torus의 character group이고, 각 weight space $$A_\rchi$$는
 
-$$A_\lambda = \{f \in A \mid t \cdot f = \chi_\lambda(t) f \text{ for all } t \in T\}$$
+$$A_\rchi = \{f \in A \mid t \cdot f = \rchi(t) f \text{ for all } t \in T\}$$
 
-으로 정의된다. 이 decomposition은 coordinate ring의 $$M$$-grading을 의미한다.
+으로 정의된다.
 
 </div>
 
