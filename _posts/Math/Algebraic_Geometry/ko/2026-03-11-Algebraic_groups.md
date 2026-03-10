@@ -1,6 +1,6 @@
 ---
 title: "대수적 군"
-excerpt: "algebraic group, action, representation, weight decomposition, 그리고 GIT quotient"
+excerpt: "Algebraic group action"
 
 categories: [Math / Algebraic Geometry]
 permalink: /ko/math/algebraic_geometry/algebraic_groups
@@ -155,32 +155,30 @@ $$\rchi(t_1, \ldots, t_n) = t_1^{a_1} \cdots t_n^{a_n}$$
 
 </div>
 
-이는 group homomorphism임을 보일 수 있다.
-
+어렵지 않게 이는 group homomorphism임을 보일 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Torus $$T = (\mathbb{C}^\ast)^n$$의 coordinate ring은 character들의 polynomial ring $$\mathbb{C}[\rchi_1, \rchi_1^{-1}, \ldots, \rchi_n, \rchi_n^{-1}]$$과 isomorphic하다. 여기서 $$\rchi_i(t_1, \ldots, t_n) = t_i$$는 $$i$$번째 coordinate에 대한 character이다.
+<ins id="prop11">**명제 11**</ins> Torus $$T = (\mathbb{C}^\ast)^n$$의 coordinate ring은 character들의 polynomial ring $$\mathbb{C}[\rchi_1^{\pm 1}, \ldots, \rchi_n^{\pm 1}]$$과 isomorphic하다. 여기서 $$\rchi_i(t_1, \ldots, t_n) = t_i$$는 $$i$$번째 coordinate에 대한 character이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Torus $$T = (\mathbb{C}^\ast)^n$$은 $$n$$개의 $$\mathbb{C}^\ast$$의 직적분이므로, 그 coordinate ring은 각 $$\mathbb{C}^\ast$$의 coordinate ring들의 tensor product이다. $$\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$$의 coordinate ring은 $$\mathbb{C}[x, x^{-1}]$$ (Laurent polynomial ring)이다.
+Torus $$T = (\mathbb{C}^\ast)^n$$은 $$n$$개의 $$\mathbb{C}^\ast$$의 direct product이므로, 그 coordinate ring은 각 $$\mathbb{C}^\ast$$의 coordinate ring들의 tensor product이다. 이 때 $$\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$$의 coordinate ring은 $$\mathbb{C}[x, x^{-1}]$$임을 안다. ([§스킴, ⁋예시 10](/ko/math/algebraic_geometry/schemes#ex10))
 
 따라서 $$T$$의 coordinate ring은
 
 $$\mathbb{C}[x_1, x_1^{-1}] \otimes \cdots \otimes \mathbb{C}[x_n, x_n^{-1}] \cong \mathbb{C}[x_1, x_1^{-1}, \ldots, x_n, x_n^{-1}]$$
 
-이다. 각 $$x_i$$는 $$i$$번째 coordinate function $$\rchi_i: T \to \mathbb{C}^\ast$$에 해당하며, $$\rchi_i(t_1, \ldots, t_n) = t_i$$로 정의된다. 이는 torus의 character이고, 그 inverse $$\rchi_i^{-1}$$도 마찬가지로 character이다.
+이다. 각 $$x_i$$는 $$i$$번째 coordinate function $$\rchi_i: T \to \mathbb{C}^\ast$$에 해당하며, $$\rchi_i(t_1, \ldots, t_n) = t_i$$로 정의된다. 이는 정확히 torus의 character이고, 그 inverse $$\rchi_i^{-1}$$도 마찬가지로 character이다.
 
 따라서 $$T$$의 coordinate ring은 모든 character들로 생성되는 polynomial ring과 일치한다.
 
 </details>
 
-
-Torus $$T$$가 affine variety $$X = \Spec(A)$$ 위에 action하는 경우, coordinate ring $$A$$는 weight space들로 분해된다.
+Torus $$T$$가 affine variety $$X = \Spec(A)$$ 위에 작용하는 경우, coordinate ring $$A$$는 weight space들로 분해된다.
 
 <div class="proposition" markdown="1">
 
@@ -205,7 +203,7 @@ Torus action $$T \times X \to X$$가 주어지면, coordinate ring $$A$$ 위에 
 
 ## Quotient Varieties
 
-Action이 주어진 algebraic variety에서 우리는 종종 *quotient variety*를 구성하고자 한다. 그러나 이는 일반적으로 어려운 문제이며, 모든 action에 대해 quotient variety가 존재하는 것은 아니다.
+Action이 주어진 algebraic variety에서 우리는 종종 *quotient variety*를 구성하고자 한다. 그러나 이러한 대상이 잘 정의되는 것은 주로 대수적인 세팅에서 뿐이며, 
 
 <div class="definition" markdown="1">
 
@@ -315,3 +313,4 @@ GIT quotient의 중요한 성질은 다음과 같다:
 **[Hum]** J. E. Humphreys, *Linear Algebraic Groups*, Springer, 1975.  
 **[Mil]** J. S. Milne, *Algebraic Groups*, Cambridge University Press, 2017.  
 **[MFK]** D. Mumford, J. Fogarty, F. Kirwan, *Geometric Invariant Theory*, Springer, 1994.
+                                                                                                                                                                                                                                                                                                                                                     
