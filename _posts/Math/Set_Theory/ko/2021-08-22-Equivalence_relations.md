@@ -85,7 +85,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 ![Quotient_set](/assets/images/Math/Set_Theory/Equivalence_relations-1.png){:style="width:600px" class="invert" .align-center}
 
-<cap>집합 $$A$$ (왼쪽), 그 위에 정의된 동치관계 $$R$$ (가운데), 몫집합 $$A/R$$ (오른쪽). $$A/R$$의 각 원소는 중간 그림의 equivalence class $$[x]_R$$이다.</cap>
+<cap>집합 $A$ (왼쪽), 그 위에 정의된 동치관계 $R$ (가운데), 몫집합 $A/R$ (오른쪽). $A/R$의 각 원소는 중간 그림의 equivalence class $[x]_R$이다.</cap>
 
 <div class="example" markdown="1">
 
