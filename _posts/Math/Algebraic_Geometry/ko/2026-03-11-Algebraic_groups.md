@@ -1,6 +1,6 @@
 ---
 title: "대수적 군"
-excerpt: "Algebraic group, action, representation, weight decomposition, 그리고 GIT quotient"
+excerpt: "algebraic group, action, representation, weight decomposition, 그리고 GIT quotient"
 
 categories: [Math / Algebraic Geometry]
 permalink: /ko/math/algebraic_geometry/algebraic_groups
@@ -19,13 +19,13 @@ weight: 1000
 
 ## 대수적 군
 
-우리는 수학적 대상이 다른 대상에 작용하는 많은 예시들을 알고 있다. 대수적으로 가장 중요한 예시는 벡터공간 위에 작용하는 군일 것이며, 기하적으로는 Lie group action이 있다. 대수기하학은 대수적인 대상들에 기하학적인 의미를 부여하므로, 대수적 군의 작용은 이들 두 관점을 잘 통합하는 형태로 나타난다. 
+우리는 수학적 대상이 다른 대상에 작용하는 많은 예시들을 알고 있다. 대수적으로 가장 중요한 예시는 벡터공간 위에 작용하는 군일 것이며, 기하적으로는 Lie group action이 있다. 대수기하학은 대수적인 대상들에 기하학적인 의미를 부여하므로, 대수적 군의 작용은 이들 두 관점을 잘 통합하는 형태로 나타난다. 이번 글에서 우리는 편의상 $$\mathbb{k}=\mathbb{C}$$로 통일한다. 
 
 우선 다음 정의는 자명하다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> *Algebraic group<sub>대수적 군</sub>* $$G$$는 다음 조건들을 만족하는 대수다양체이다:
+<ins id="def1">**정의 1**</ins> *Algebraic group<sub>대수적 군</sub>* $$G$$는 다음 조건들을 만족하는 algebraic variety이다:
 
 1. $$G$$는 group 구조를 갖는다.
 2. Multiplication $$m: G \times G \to G$$와 inverse $$i: G \to G$$가 모두 morphism of varieties이다.
@@ -38,7 +38,7 @@ Lie group에서와 마찬가지로, 가장 중요한 예시들은 보통 matrix 
 
 <ins id="ex2">**예시 2**</ins> 가장 기본적인 예시들은 다음과 같다:
 
-1. *General linear group* $$\GL(n, \mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$$는 $$\mathbb{C}^{n^2}$$의 open subvariety로서 algebraic group의 구조를 갖는다.
+1. *General linear group* $$\GL(n, \mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$$는 $$\mathbb{C}^{n\times n}$$의 open subvariety로서 algebraic group의 구조를 갖는다.
 2. *Special linear group* $$\SL(n, \mathbb{C}) = \{A \in \GL(n, \mathbb{C}) \mid \det A = 1\}$$는 $$\GL(n, \mathbb{C})$$의 closed subvariety로서 algebraic group이다.
 3. 두 abelian group $$\mathbb{G}_a = \mathbb{C}$$ (덧셈)과 $$\mathbb{G}_m = \mathbb{C}^\ast$$ (곱셈)은 모두 1차원 algebraic group이다.
 
@@ -48,13 +48,13 @@ Algebraic group 중에서 특히 중요한 역할을 하는 것은 당연히 *af
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Algebraic group $$G$$가 *affine algebraic group*라는 것은 $$G$$가 affine variety인 것이다. 이를 *linear algebraic group*이라고도 부른다.
+<ins id="def3">**정의 3**</ins> Algebraic group $$G$$가 *affine algebraic group*라는 것은 $$G$$가 affine variety인 것이다. 
 
 </div>
 
 ## 대수적 군의 작용
 
-이제 algebraic group이 대수다양체 위에 작용하는 방식을 정의한다.
+이제 algebraic group이 algebraic variety 위에 작용하는 방식을 정의한다.
 
 <div class="definition" markdown="1">
 
@@ -69,8 +69,7 @@ $$\alpha: G \times X \to X$$
 
 </div>
 
-
-Affine algebraic group $$G = \Spec(A)$$가 affine variety $$X = \Spec(B)$$ 위에 action하는 경우를 생각하자. $$\Spec$$이 contravariant functor이므로, action $$G \times X \to X$$는 coordinate ring 위의 구조로 번역된다. 구체적으로, 이는 다음의 data를 제공한다:
+원칙적으로 algebraic group action은 affine algebraic group이 affine variety 위에 작용하는 방식만 살펴본 후 이들을 잘 붙이는 것이다. 이 경우를 더 잘 살펴보기 위해 affine algebraic group $$G = \Spec(A)$$가 affine variety $$X = \Spec(B)$$ 위에 작용하는 경우를 생각하자. $$\Spec$$이 contravariant functor이므로, action $$G \times X \to X$$는 coordinate ring 위의 구조로 번역된다. 구체적으로, 이는 다음의 데이터를 제공한다.
 
 <div class="definition" markdown="1">
 
@@ -87,11 +86,9 @@ $$\rho: B \to B \otimes_\mathbb{C} A$$
 
 여기서 $$\Delta: A \to A \otimes A$$는 $$G$$의 곱셈으로부터 유도되는 comultiplication이고, $$\epsilon: A \to \mathbb{C}$$는 항등원으로부터 유도되는 counit이다.
 
-이 comodule structure의 중요성은 대수적 구조(algebra homomorphism)와 기하학적 구조(group action) 사이의 대응을 확립해준다는 점에 있다.
-
 ## 대수적 군의 표현
 
-이제 우리는 Algebraic group의 표현 이론을 소개한다.
+이제 우리는 algebraic group의 표현 이론을 소개한다.
 
 <div class="definition" markdown="1">
 
@@ -141,11 +138,11 @@ Algebraic torus는 중요한 대수적 군의 한 종류이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> *Algebraic torus<sub>대수적 토러스</sub>*는 $$\mathbb{G}_m = \mathbb{C}^\ast$$의 유한개 직적분과 동형인 Algebraic group이다. 즉,
+<ins id="def9">**정의 9**</ins> *Algebraic torus<sub>대수적 토러스</sub>*는 $$\mathbb{G}_m = \mathbb{C}^\ast$$의 유한개 직적분과 동형인 algebraic group이다. 즉,
 
 $$T \cong (\mathbb{C}^\ast)^n$$
 
-을 만족하는 $$n \ge 1$$이 존재하는 Algebraic group이다.
+을 만족하는 $$n \ge 1$$이 존재하는 algebraic group이다.
 
 </div>
 
