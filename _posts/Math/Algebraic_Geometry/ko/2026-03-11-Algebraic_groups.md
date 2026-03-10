@@ -40,17 +40,19 @@ weight: 1000
 
 1. *Genearl linear group*: $$\GL(n, \mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$$는 $$\mathbb{C}^{n^2}$$의 open subvariety로서 대수적 군의 구조를 갖는다.
 2. *Special linear group*: $$\SL(n, \mathbb{C}) = \{A \in \GL(n, \mathbb{C}) \mid \det A = 1\}$$는 $$\GL(n, \mathbb{C})$$의 닫힌 부분군으로서 대수적 군이다.
-3. *Algebraic torus*: $$\mathbb{C}$$ 위에 곱셈을 준$$\mathbb{G}_m = \mathbb{C}^\ast$$ (곱셈)은 모두 1차원 대수적 군이다.
+3. *Algebraic torus of dimension 1*: $$\mathbb{C}$$ 위에 곱셈을 준$$\mathbb{G}_m = \mathbb{C}^\ast$$ (곱셈)은 모두 1차원 대수적 군이다.
 
 </div>
 
-대수적 군 중에서 특히 중요한 역할을 하는 것은 *affine algebraic group*이다.
+Algebraic group 중에서 특히 중요한 역할을 하는 것은 *affine algebraic group*이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 대수적 군 $$G$$가 *affine algebraic group*라는 것은 $$G$$가 affine variety인 것이다. 이를 *linear algebraic group*이라고도 부른다.
+<ins id="def3">**정의 3**</ins> Algebraic group $$G$$가 *affine algebraic group*라는 것은 $$G$$가 affine variety인 것이다. 
 
 </div>
+
+그럼 우리는 일반적인 group action의 정의를 모방하여 affine algebraic group의 action을 정의할 수 있을 것이다. 
 
 Affine algebraic group의 중요성은 모든 affine algebraic group이 어떤 $$\GL(n, \mathbb{C})$$의 닫힌 부분군으로 실현된다는 사실로부터 온다. 이는 affine variety가 좌표환을 통해 완전히 결정된다는 사실과 밀접하게 연관된다.
 
