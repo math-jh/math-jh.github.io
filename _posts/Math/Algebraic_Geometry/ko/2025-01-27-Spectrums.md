@@ -91,7 +91,7 @@ $$Z(S_1)=\{\mathfrak{p}\in\Spec A\mid S_1\subseteq \mathfrak{p}\}\supseteq \{\ma
 
 역시 마찬가지로 포함관계 $$\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$$로부터 $$Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$$임은 자명하다. 거꾸로 임의의 $$\mathfrak{p}\in Z(\mathfrak{a})$$에 대하여, [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)를 사용하면
 
-$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{q}$ a prime containing $$\mathfrak{a}$$}\mathfrak{q}\subseteq \mathfrak{p}$$
+$$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{q}$ a prime containing $\mathfrak{a}$}\mathfrak{q}\subseteq \mathfrak{p}$$
 
 이므로 $$\mathfrak{p}\in Z(\sqrt{\mathfrak{a}})$$임을 안다. 
 
@@ -246,7 +246,7 @@ $$Z\left(\sum_{j\in J} (f_j)\right)=\emptyset$$
 
 <ins id="def13">**정의 13**</ins> 임의의 부분집합 $$T\subseteq \Spec A$$에 대하여, 
 
-$$I(T)=\{f\in A\mid\text{$f\in \mathfrak{p}$ for all $$\mathfrak{p}\in T$$}\}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime in $$T$$} \mathfrak{p}$$
+$$I(T)=\{f\in A\mid\text{$f\in \mathfrak{p}$ for all $\mathfrak{p}\in T$}\}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime in $T$} \mathfrak{p}$$
 
 으로 정의한다.
 
@@ -260,7 +260,7 @@ $$Z: \mathcal{P}(A) \rightarrow \mathcal{P}(\Spec A);\quad S\mapsto Z(S),\qquad 
 
 을 정의했다. 그럼 임의의 $$S\in \mathcal{P}(A)$$와 임의의 $$T\in \mathcal{P}(\Spec A)$$에 대하여,
 
-$$T\subseteq Z(S)\iff\text{$\mathfrak{p}\in Z(S)$ for all $$\mathfrak{p}\in T$$}\iff\text{$f\in \mathfrak{p}$ for all $$f\in S$$ and all $$\mathfrak{p}\in T$$}\iff S\subseteq I(T)$$
+$$T\subseteq Z(S)\iff\text{$\mathfrak{p}\in Z(S)$ for all $\mathfrak{p}\in T$}\iff\text{$f\in \mathfrak{p}$ for all $f\in S$ and all $\mathfrak{p}\in T$}\iff S\subseteq I(T)$$
 
 이므로, $$(Z, I)$$는 $$\mathcal{P}(A)$$와 $$\mathcal{P}(\Spec A)$$ 사이의 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서, 다음의 두 식
 
@@ -283,7 +283,7 @@ $$Z(I(Z(S)))=Z(S),\qquad I(Z(I(T)))=I(T)$$
 
 1. 이는 다음의 식
     
-    $$I(Z(S))=I(Z((S)))=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime in $$Z((S))$$} \mathfrak{p}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime containing $$(S)$$} \mathfrak{p}=\sqrt{(S)}$$
+    $$I(Z(S))=I(Z((S)))=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime in $Z((S))$} \mathfrak{p}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime containing $(S)$} \mathfrak{p}=\sqrt{(S)}$$
 
     으로부터 자명하다.
 2. 이는 다음의 식
