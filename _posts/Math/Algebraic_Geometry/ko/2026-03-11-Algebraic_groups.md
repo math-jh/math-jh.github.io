@@ -19,30 +19,28 @@ weight: 1000
 
 ## 대수적 군
 
-우리는 이미 특정한 대상이 다른 대상 위에 작용하는 많은 예시들을 알고 있다. 대수적으로는 group이 벡터공간 위에 작용하는 것이 대표적인 예시 중 하나일 것이고, 기하적으로는 Lie group의 action이 예시 중 하나일 것이다. 
+우리는 이미 특정한 대상이 다른 대상 위에 작용하는 많은 예시들을 알고 있다. 대수적으로는 group이 벡터공간 위에 작용하는 것이 대표적인 예시 중 하나일 것이고, 기하적으로는 Lie group의 action이 예시 중 하나일 것이다. 대수기하학은 대수적인 대상에 기하학적인 해석을 부여해주므로, 이들 두 관점이 하나의 언어로 합쳐지는 것을 관찰할 수 있다.
 
-대수기하학은 대수적인 대상에 기하학적인 해석을 부여해주므로, 이들이 모두 
-
-대수기하학에서 *group*의 개념은 단순히 집합 위에 정의된 연산 구조가 아니라, 대수다양체로서의 기하학적 구조와 군으로서의 대수적 구조가 조화를 이루는 대상이다. 이번 글에서 우리는 대수적 군의 정의와 기본 성질을 살펴보고, 대수다양체 위로의 작용을 정의한 후, torus action과 representation theory로의 연결고리를 확립한다.
+다음 정의는 [\[리 이론\] §리 군, ⁋정의 1](/ko/math/lie_theory/Lie_groups#def1)을 생각하면 꽤나 자연스럽다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> *대수적 군<sub>algebraic group</sub>* $$G$$는 다음 조건들을 만족하는 대수다양체이다:
+<ins id="def1">**정의 1**</ins> *Algebraic group<sub>대수적 군</sub>* $$G$$는 다음 조건들을 만족하는 대수다양체이다.
 
 1. $$G$$는 group 구조를 갖는다.
-2. 곱셈사상 $$m: G \times G \to G$$와 역원사상 $$i: G \to G$$가 모두 morphism of varieties이다.
+2. Multiplication $$m: G \times G \to G$$와 역원사상 $$i: G \to G$$가 모두 morphism of varieties이다.
 
 </div>
 
-즉, 대수적 군은 대수다양체인 동시에 군이며, 두 구조가 morphism이라는 기하학적 조건을 통해 서로 호환된다. 
+즉, algebraic group은 algebraic variety인 동시에 group이며, group을 정의하는 두 연산이 morphism of variety인 것이다. 
 
 <div class="example" markdown="1">
 
 <ins id="ex2">**예시 2**</ins> 가장 기본적인 예시들은 다음과 같다:
 
-1. **일반선형군**: $$\GL(n, \mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$$는 $$\mathbb{C}^{n^2}$$의 열린부분다양체로서 대수적 군의 구조를 갖는다.
-2. **특수선형군**: $$\SL(n, \mathbb{C}) = \{A \in \GL(n, \mathbb{C}) \mid \det A = 1\}$$는 $$\GL(n, \mathbb{C})$$의 닫힌 부분군으로서 대수적 군이다.
-3. **가환군**: $$\mathbb{G}_a = \mathbb{C}$$ (덧셈)과 $$\mathbb{G}_m = \mathbb{C}^\ast$$ (곱셈)은 모두 1차원 대수적 군이다.
+1. *Genearl linear group*: $$\GL(n, \mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$$는 $$\mathbb{C}^{n^2}$$의 open subvariety로서 대수적 군의 구조를 갖는다.
+2. *Special linear group*: $$\SL(n, \mathbb{C}) = \{A \in \GL(n, \mathbb{C}) \mid \det A = 1\}$$는 $$\GL(n, \mathbb{C})$$의 닫힌 부분군으로서 대수적 군이다.
+3. *Algebraic torus*: $$\mathbb{C}$$ 위에 곱셈을 준$$\mathbb{G}_m = \mathbb{C}^\ast$$ (곱셈)은 모두 1차원 대수적 군이다.
 
 </div>
 
