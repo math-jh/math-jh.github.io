@@ -86,31 +86,13 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 
 </details>
 
-특히 위의 명제는 affine variety들의 모임을 닫힌집합으로 갖는 위상이 존재함을 보여준다. ([\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2))
+특히 위의 명제는 affine variety들의 모임을 닫힌집합으로 갖는 위상이 존재함을 보여준다. ([\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)) 우리는 이러한 위상을 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다. 예를 들어 $$\mathbb{A}^1$$에서 Zariski topology는 vofinite topology와 같다는 것을 확인할 수 있으며, 특히 이는 하우스도르프가 아니다.
+
+## 갈루아 대응
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> $$\mathbb{A}^n$$의 *Zariski 위상<sub>Zariski topology</sub>*은 아핀다양체들을 닫힌집합으로 갖는 위상이다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6**</ins> $$\mathbb{A}^1$$에서 Zariski 위상은 *여유한 위상<sub>cofinite topology</sub>*이다. 닫힌집합들은 $$\mathbb{A}^1$$ 자신과 유한집합들뿐이다.
-
-</div>
-
-<div class="remark" markdown="1">
-
-**참고 7** Zariski 위상은 하우스도르프가 아니다. 예를 들어 $$\mathbb{A}^1$$에서 서로 다른 두 점 $$a \neq b$$를 분리하는 열린집합이 존재하지 않는다.
-
-</div>
-
-## 다양체의 이데알
-
-<div class="definition" markdown="1">
-
-<ins id="def8">**정의 8**</ins> 부분집합 $$X \subseteq \mathbb{A}^n$$의 *ideal<sub>이데알</sub>* $$I(X)$$를
+<ins id="def5">**정의 5**</ins> 부분집합 $$X \subseteq \mathbb{A}^n$$에 대하여, $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 부분집합 $$I(X)$$를
 
 $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a \in X\}$$
 
@@ -120,67 +102,71 @@ $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 다음이 성립한다.
+<ins id="prop6">**명제 6**</ins> $$\mathbb{A}^n$$의 부분집합들 $$X,Y$$와 위에서 정의한 $$I,V$$에 대하여 다음이 성립한다. 
 
-1. $$I(X)$$는 $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 ideal이다.
-2. $$X \subseteq Y \implies I(Y) \subseteq I(X)$$
-3. $$I(\emptyset) = \mathbb{K}[\x_1, \ldots, \x_n]$$
-4. $$I(\mathbb{A}^n) = (0)$$ ($$\mathbb{K}$$가 무한체일 때)
-5. $$X \subseteq V(I(X))$$
-6. $$I \subseteq I(V(I))$$
+1. $$X \subseteq Y$$라면 $$\implies I(Y) \subseteq I(X)$$이다.
+2. $$I(\emptyset) = \mathbb{K}[\x_1, \ldots, \x_n]$$이다.
+3. $$\mathbb{K}$$가 무한하다면 $$I(\mathbb{A}^n) = (0)$$이다.
+4. 임의의 부분집합 $$X \subseteq \mathbb{A}^n$$에 대하여 $$X \subseteq V(I(X))$$가 성립한다.
+5. 임의의 ideal $$I \subseteq \mathbb{K}[\x_1, \ldots, \x_n]$$에 대하여 $$I \subseteq I(V(I))$$가 성립한다.
 
 </div>
+
+따라서 $$V$$와 $$I$$는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)에서 본 갈루아 대응(Galois connection)을 정의한다.
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $$I(X)$$가 ideal임은 정의로부터 자명하다. $$f, g \in I(X)$$이고 $$h \in \mathbb{K}[\x_1, \ldots, \x_n]$$이면, 모든 $$a \in X$$에 대해 $$f(a) = g(a) = 0$$이므로 $$(f+g)(a) = 0$$이고 $$(hf)(a) = h(a)f(a) = 0$$이다.
-2. $$X \subseteq Y$$이고 $$f \in I(Y)$$라면, 모든 $$a \in Y$$에 대해 $$f(a) = 0$$이다. 특히 모든 $$a \in X$$에 대해 $$f(a) = 0$$이므로 $$f \in I(X)$$이다.
-3. 공집합의 조건을 만족하는 함수는 모든 다항식이다.
-4. $$\mathbb{K}$$가 무한체이면, 모든 점에서 0인 다항식은 영다항식뿐이다.
-5. $$a \in X$$이고 $$f \in I(X)$$라면 $$f(a) = 0$$이다. 즉 $$a \in V(I(X))$$이다.
-6. $$f \in I$$이고 $$a \in V(I)$$라면 $$f(a) = 0$$이다. 즉 $$f \in I(V(I))$$이다.
+1. $$X \subseteq Y$$이고 $$f \in I(Y)$$라면, 모든 $$a \in Y$$에 대해 $$f(a) = 0$$이다. 특히 모든 $$a \in X$$에 대해 $$f(a) = 0$$이므로 $$f \in I(X)$$이다.
+2. 공집합의 조건을 만족하는 함수는 모든 다항식이다.
+3. $$\mathbb{K}$$가 무한체이면, 모든 점에서 0인 다항식은 영다항식뿐이다.
+4. $$a \in X$$이고 $$f \in I(X)$$라면 $$f(a) = 0$$이다. 즉 $$a \in V(I(X))$$이다.
+5. $$f \in I$$이고 $$a \in V(I)$$라면 $$f(a) = 0$$이다. 즉 $$f \in I(V(I))$$이다.
 
 </details>
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins>
+<ins id="ex7">**예시 7**</ins> [예시 3](#ex3)에서 살펴본 아핀다양체들에 대하여:
 
-1. $$I(\{(a_1, \ldots, a_n)\}) = (\x_1 - a_1, \ldots, \x_n - a_n)$$이다. 한쪽 방향은 자명하고, 역방향은 다항식을 $$\x_i - a_i$$들로 나누어 생각하면 된다.
-2. 일반적으로 $$I(V(f)) = \sqrt{(f)}$$이다. 이는 [정리 12](#thm12)의 특수한 경우이다.
-3. Twisted cubic $$C$$에 대해 $$I(C) = (\y - \x^2, \z - \x^3)$$이다.
+1. 단위원 $$V(\x^2+\y^2-1)$$의 경우, $$I(V(\x^2+\y^2-1)) = (\x^2+\y^2-1)$$이다.
+2. 일반적으로 초곡면 $$V(f)$$에 대하여 $$I(V(f)) = \sqrt{(f)}$$이다. 이는 [정리 9](#thm9)의 특수한 경우이다.
+3. Twisted cubic $$C = V(\y-\x^2, \z-\x^3)$$에 대해 $$I(C) = (\y - \x^2, \z - \x^3)$$이다.
 
 </div>
 
 ## Hilbert 영점 정리
 
-<div class="theorem" markdown="1">
+[명제 6](#prop6)의 5번에서 우리는 $$I \subseteq I(V(I))$$를 보였다. 그러나 이 포함관계가 일반적으로 등식이 되지는 않는다. 예를 들어, $$I = (f^2)$$라면 $$V(I) = V(f)$$이므로 $$I(V(I)) = I(V(f)) \supseteq (f) \supsetneq (f^2)$$이다. 이를 이해하기 위해서는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 8](/ko/math/set_theory/filter_and_ideal#def8)에서 정의한 *radical ideal*의 개념이 필요하다.
 
-<ins id="thm11">**정리 11**</ins> (Hilbert Nullstellensatz) $$\mathbb{K}$$가 대수적으로 닫힌 체이고 $$I \subseteq \mathbb{K}[\x_1, \ldots, \x_n]$$이 ideal이라 하자. 그럼
+<div class="proposition" markdown="1">
 
-$$I(V(I)) = \sqrt{I} = \{f \mid f^m \in I \text{ for some } m \ge 1\}$$
+<ins id="thm9">**정리 9**</ins> (Hilbert Nullstellensatz) $$\mathbb{K}$$가 대수적으로 닫힌 체이고 $$I \subseteq \mathbb{K}[\x_1, \ldots, \x_n]$$이 ideal이라 하자. 그럼
 
-이다.
+$$I(V(I)) = \sqrt{I}$$
+
+이다. 여기서 $$\sqrt{I}$$는 $$I$$의 radical이다.
 
 </div>
 
-이 정리에 의해 아핀다양체의 ideal은 항상 *radical ideal*이다.
+이 정리의 증명은 [\[가환대수학\] §영점정리, ⁋명제 6](/ko/math/commutative_algebra/nullstellensatz#prop6)에서 다루었다.
 
-<div class="corollary" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="cor12">**따름정리 12**</ins> 다음이 성립한다.
+<ins id="cor10">**따름정리 10**</ins> 다음이 성립한다.
 
 1. $$V(I) = \emptyset \iff I = (1)$$
 2. $$V(I) = V(J) \iff \sqrt{I} = \sqrt{J}$$
 
 </div>
 
-## 좌표환
+따라서 아핀다양체의 ideal은 항상 radical ideal이다.
+
+## Coordinate Ring
 
 <div class="definition" markdown="1">
 
-<ins id="def13">**정의 13**</ins> 아핀다양체 $$X = V(I) \subseteq \mathbb{A}^n$$의 *좌표환<sub>coordinate ring</sub>* $$\mathbb{K}[X]$$를
+<ins id="def11">**정의 11**</ins> 아핀다양체 $$X = V(I) \subseteq \mathbb{A}^n$$의 *coordinate ring<sub>좌표환</sub>* $$\mathbb{K}[X]$$를
 
 $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / I(X)$$
 
@@ -188,52 +174,33 @@ $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / I(X)$$
 
 </div>
 
-<div class="proposition" markdown="1">
-
-<ins id="prop14">**명제 14**</ins> 좌표환 $$\mathbb{K}[X]$$의 원소들은 $$X$$ 위에서 정의된 "다항식 함수"들이다. 즉, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$$f, g \in \mathbb{K}[\x_1, \ldots, \x_n]$$가 $$\mathbb{K}[X]$$에서 같은 원소를 나타낸다면, $$f - g \in I(X)$$이다. 즉, 모든 $$a \in X$$에 대해 $$(f-g)(a) = 0$$이고, 따라서 $$f(a) = g(a)$$이다. 그러므로 $$\bar{f}$$는 $$X$$ 위에서 well-defined 함수를 정의한다.
-
-</details>
+Coordinate ring $$\mathbb{K}[X]$$의 원소들은 $$X$$ 위에서 정의된 "다항식 함수"들이다. 구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 well-defined인 이유는 $$f, g \in \mathbb{K}[\x_1, \ldots, \x_n]$$가 $$\mathbb{K}[X]$$에서 같은 원소를 나타낸다면 $$f - g \in I(X)$$이고, 따라서 $$f - g$$는 $$X$$ 위에서 identically zero이기 때문이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins>
+<ins id="ex12">**예시 12**</ins> [예시 3](#ex3)에서 살펴본 아핀다양체들의 coordinate ring을 계산해보자.
 
-1. $$\mathbb{K}[\mathbb{A}^n] = \mathbb{K}[\x_1, \ldots, \x_n]$$이다.
-2. $$\mathbb{K}[V(\x)] = \mathbb{K}[\x, \y]/(\x) \cong \mathbb{K}[\y]$$이다.
-3. Twisted cubic $$C$$의 좌표환은 $$\mathbb{K}[C] = \mathbb{K}[\x, \y, \z]/(\y-\x^2, \z-\x^3) \cong \mathbb{K}[t]$$이다.
+1. 단위원 $$X = V(\x^2+\y^2-1)$$의 coordinate ring은 $$\mathbb{K}[X] = \mathbb{K}[\x, \y]/(\x^2+\y^2-1)$$이다.
+2. 초곡면 $$V(f)$$의 coordinate ring은 $$\mathbb{K}[V(f)] = \mathbb{K}[\x_1, \ldots, \x_n]/(f)$$이다.
+3. Twisted cubic $$C$$의 coordinate ring은 $$\mathbb{K}[C] = \mathbb{K}[\x, \y, \z]/(\y-\x^2, \z-\x^3) \cong \mathbb{K}[t]$$이다.
 
 </div>
 
-## 정칙함수
+## Regular Function
 
 <div class="definition" markdown="1">
 
-<ins id="def16">**정의 16**</ins> 아핀다양체 $$X$$ 위의 *regular function<sub>정칙함수</sub>*란 좌표환 $$\mathbb{K}[X]$$의 원소를 말한다.
+<ins id="def13">**정의 13**</ins> 아핀다양체 $$X$$ 위의 *regular function*이란 coordinate ring $$\mathbb{K}[X]$$의 원소를 의미한다.
 
 </div>
 
-<div class="example" markdown="1">
-
-<ins id="ex17">**예시 17**</ins> 단위원 $$X = V(\x^2 + \y^2 - 1)$$ 위에서:
-
-- $$f(\x, \y) = \x + \y$$는 regular function이다.
-- $$g(\x, \y) = \dfrac{\x}{1+\y}$$는 $$\y \ne -1$$인 점에서만 정의된다. 이는 rational function이지만 $$X$$ 전체에서 정의되지 않으므로 regular function이 아니다.
-- $$\mathbb{K}[X] = \mathbb{K}[\x, \y]/(\x^2 + \y^2 - 1)$$이다.
-
-</div>
+Coordinate ring의 정의에서 $$\mathbb{K}[\x_1, \ldots, \x_n]$$을 $$I(X)$$로 나누는 이유는 $$I(X)$$의 원소들이 $$X$$ 위에서 identically zero이기 때문이다. 즉, $$X$$ 위에서 함수로서 생각할 때 $$I(X)$$의 원소들은 모두 0과 같으므로, 이들을 동일시해야 $$X$$ 위에서의 함수를 잘 정의할 수 있다.
 
 ## 아핀다양체 사이의 사상
 
 <div class="definition" markdown="1">
 
-<ins id="def18">**정의 18**</ins> 아핀다양체 $$X \subseteq \mathbb{A}^n$$과 $$Y \subseteq \mathbb{A}^m$$ 사이의 *morphism<sub>사상</sub>* (또는 *regular map*)이란 함수 $$\varphi: X \to Y$$로서, 다항식 $$f_1, \ldots, f_m \in \mathbb{K}[\x_1, \ldots, \x_n]$$들이 존재하여
+<ins id="def14">**정의 14**</ins> 아핀다양체 $$X \subseteq \mathbb{A}^n$$과 $$Y \subseteq \mathbb{A}^m$$ 사이의 *morphism<sub>사상</sub>* (또는 *regular map*)이란 함수 $$\varphi: X \to Y$$로서, 다항식 $$f_1, \ldots, f_m \in \mathbb{K}[\x_1, \ldots, \x_n]$$들이 존재하여
 
 $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 
@@ -243,17 +210,17 @@ $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 
 <div class="example" markdown="1">
 
-<ins id="ex19">**예시 19**</ins>
+<ins id="ex15">**예시 15**</ins>
 
 1. **매개화**: $$\mathbb{A}^1 \to \mathbb{A}^3$$, $$t \mapsto (t, t^2, t^3)$$은 twisted cubic으로의 morphism이다.
-2. **투영**: $$\mathbb{A}^3 \to \mathbb{A}^2$$, $$(x, y, z) \mapsto (x, y)$$는 morphism이다.
+2. **투영**: $$\mathbb{A}^3 \to \mathbb{A}^2$$, $$(\x, \y, \z) \mapsto (\x, \y)$$는 morphism이다.
 3. **항등사상**: $$\operatorname{id}: X \to X$$는 morphism이다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop20">**명제 20**</ins> Morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 구체적으로, $$\bar{g} \in \mathbb{K}[Y]$$에 대하여
+<ins id="prop16">**명제 16**</ins> Morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 구체적으로, $$\bar{g} \in \mathbb{K}[Y]$$에 대하여
 
 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$
 
@@ -278,17 +245,17 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 <div class="definition" markdown="1">
 
-<ins id="def21">**정의 21**</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
+<ins id="def17">**정의 17**</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex22">**예시 22**</ins>
+<ins id="ex18">**예시 18**</ins>
 
 1. **Twisted cubic과 $$\mathbb{A}^1$$**: $$\varphi: \mathbb{A}^1 \to C$$, $$t \mapsto (t, t^2, t^3)$$은 isomorphism이다.
-   - 역함수: $$(x, y, z) \mapsto x$$
-   - 좌표환: $$\mathbb{K}[C] \cong \mathbb{K}[t]$$
+   - 역함수: $$(\x, \y, \z) \mapsto \x$$
+   - Coordinate ring: $$\mathbb{K}[C] \cong \mathbb{K}[t]$$
 
 2. **포물선과 $$\mathbb{A}^1$$**: $$\varphi: \mathbb{A}^1 \to V(\y - \x^2)$$, $$t \mapsto (t, t^2)$$는 isomorphism이다.
 
@@ -296,7 +263,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop23">**명제 23**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
+<ins id="prop19">**명제 19**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
 
 </div>
 
