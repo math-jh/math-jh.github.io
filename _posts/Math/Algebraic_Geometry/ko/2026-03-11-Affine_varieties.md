@@ -86,7 +86,9 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 
 특히 위의 명제는 affine variety들의 모임을 닫힌집합으로 갖는 위상이 존재함을 보여준다. ([\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)) 우리는 이러한 위상을 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다. 예를 들어 $$\mathbb{A}^1$$에서 Zariski topology는 vofinite topology와 같다는 것을 확인할 수 있으며, 특히 이는 하우스도르프가 아니다.
 
-## 갈루아 대응
+## 영점정리
+
+위의 $$V$$는 대수적인 대상들 (다항식들)을 기하적인 대상으로 보내준다. 거꾸로 우리는 기하적인 대상을 받아 대수적인 대상들을 대응시켜줄 수도 있다. 
 
 <div class="definition" markdown="1">
 
@@ -120,20 +122,7 @@ $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a
 
 </details>
 
-
-따라서 $$V$$와 $$I$$는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)에서 본 갈루아 대응(Galois connection)을 정의한다.
-
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7**</ins> [예시 3](#ex3)에서 살펴본 아핀다양체들에 대하여:
-
-1. 단위원 $$V(\x^2+\y^2-1)$$의 경우, $$I(V(\x^2+\y^2-1)) = (\x^2+\y^2-1)$$이다.
-2. 일반적으로 초곡면 $$V(f)$$에 대하여 $$I(V(f)) = \sqrt{(f)}$$이다. 이는 [정리 9](#thm9)의 특수한 경우이다.
-3. Twisted cubic $$C = V(\y-\x^2, \z-\x^3)$$에 대해 $$I(C) = (\y - \x^2, \z - \x^3)$$이다.
-
-</div>
-
-## Hilbert 영점 정리
+즉, $$V$$와 $$I$$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6))
 
 [명제 6](#prop6)의 4, 5번에서 우리는 $$X \subseteq V(I(X))$$와 $$I \subseteq I(V(I))$$를 보였다. 따라서 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 8](/ko/math/set_theory/filter_and_ideal#def8)에 의하여, 두 연산
 
