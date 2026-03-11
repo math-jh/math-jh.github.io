@@ -59,6 +59,8 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 
 </div>
 
+
+
 <div class="example" markdown="1">
 
 <ins id="ex4">**예시 4**</ins> **Twisted cubic**: 세 다항식
@@ -73,7 +75,9 @@ $$t \mapsto (t, t^2, t^3)$$
 
 </div>
 
-## Zariski 위상
+## 자리스키 위상
+
+[예시 3](#ex3)에서 우리는 
 
 <div class="proposition" markdown="1">
 
