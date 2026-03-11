@@ -243,9 +243,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n]/I(X)$$
 
-의 각 원소 $$\bar{\x}_i$$에 대하여, $$\psi^\ast(\bar{\x}_i) \in \mathbb{K}[Y]$$를 생각할 수 있다. 이를 $$\bar{g}_i$$라 적으면, $$\theta: Y \to \mathbb{A}^n$$을 $$\theta(y) = (g_1(y), \ldots, g_n(y))$$으로 정의할 수 있다. $$\psi^\ast$$가 well-defined이므로 $$\theta(Y) \subseteq X$$이고, 따라서 $$\theta: Y \to X$$는 morphism이다. 또한 $$\theta^\ast = \psi^\ast$$임이 자명하다.
-
-이제 $$\theta \circ \varphi = \operatorname{id}_X$$임을 보이자. Functioriality에 의해 $$(\theta \circ \varphi)^\ast = \varphi^\ast \circ \theta^\ast = \varphi^\ast \circ \psi^\ast = \operatorname{id}_{\mathbb{K}[X]} = \operatorname{id}_X^\ast$$이다. 두 morphism이 같은 pullback을 유도하면 같으므로 (각 좌표함수를 비교하면 된다), $$\theta \circ \varphi = \operatorname{id}_X$$이다. 마찬가지로 $$\varphi \circ \theta = \operatorname{id}_Y$$이므로, $$\varphi$$는 isomorphism이다.
+의 각 원소 $$\bar{\x}_i$$에 대하여, $$\psi^\ast(\bar{\x}_i) \in \mathbb{K}[Y]$$를 생각할 수 있다. 이를 $$\bar{g}_i$$라 적고, 이들의 어떠한 representative들 $$g_i$$들을 생각하자. 그럼 $$\theta: Y \to \mathbb{A}^n$$을 $$\theta(y) = (g_1(y), \ldots, g_n(y))$$으로 정의할 수 있으며, $$\mathbb{K}[Y]$$의 정의에 의해 이는 representative $$g_i$$의 선택에 의존하지 않는다. 이제 $$\psi^\ast$$가 well-defined이므로 $$\theta(Y) \subseteq X$$이고, 따라서 $$\theta: Y \to X$$는 morphism이다. 나머지 부분은 단순 계산이다.
 
 </details>
 
