@@ -60,9 +60,7 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 
 </div>
 
-## 자리스키 위상
-
-[예시 3](#ex3)에서 우리는 친숙한 기하학적 대상들이 모두 집합으로서는 affine variety로 쓰여질 수 있음을 보았다. 그러나 이를 기하학적 대상이라 생각하기 위해서는 그 위에 위상구조가 존재해야 한다. 우리의 유일한 도구는 다항식이므로, 이를 사용하여 위상구조를 정의할 것이다.
+위의 예시에서 우리는 친숙한 기하학적 대상들이 모두 집합으로서는 affine variety로 쓰여질 수 있음을 보았다. 그러나 이를 기하학적 대상이라 생각하기 위해서는 그 위에 위상구조가 존재해야 한다. 우리의 유일한 도구는 다항식이므로, 이를 사용하여 위상구조를 정의할 것이다.
 
 <div class="proposition" markdown="1">
 
@@ -102,18 +100,15 @@ $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> $$\mathbb{A}^n$$의 부분집합들 $$X,Y$$와 위에서 정의한 $$I,V$$에 대하여 다음이 성립한다. 
+<ins id="prop6">**명제 6**</ins> $$\mathbb{A}^n$$의 부분집합들 $$X,Y$$, $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 임의의 부분집합 $$I$$에 대하여 다음이 성립한다. 
 
-1. $$X \subseteq Y$$라면 $$\implies I(Y) \subseteq I(X)$$이다.
+1. $$X \subseteq Y$$라면 $$I(Y) \subseteq I(X)$$이다.
 2. $$I(\emptyset) = \mathbb{K}[\x_1, \ldots, \x_n]$$이다.
 3. $$\mathbb{K}$$가 무한하다면 $$I(\mathbb{A}^n) = (0)$$이다.
-4. 임의의 부분집합 $$X \subseteq \mathbb{A}^n$$에 대하여 $$X \subseteq V(I(X))$$가 성립한다.
-5. 임의의 ideal $$I \subseteq \mathbb{K}[\x_1, \ldots, \x_n]$$에 대하여 $$I \subseteq I(V(I))$$가 성립한다.
+4. $$X \subseteq V(I(X))$$가 항상 성립한다.
+5. $$I \subseteq I(V(I))$$가 항상 성립한다.
 
 </div>
-
-따라서 $$V$$와 $$I$$는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)에서 본 갈루아 대응(Galois connection)을 정의한다.
-
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
@@ -124,6 +119,9 @@ $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a
 5. $$f \in I$$이고 $$a \in V(I)$$라면 $$f(a) = 0$$이다. 즉 $$f \in I(V(I))$$이다.
 
 </details>
+
+
+따라서 $$V$$와 $$I$$는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)에서 본 갈루아 대응(Galois connection)을 정의한다.
 
 <div class="example" markdown="1">
 
@@ -137,7 +135,14 @@ $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a
 
 ## Hilbert 영점 정리
 
-[명제 6](#prop6)의 5번에서 우리는 $$I \subseteq I(V(I))$$를 보였다. 그러나 이 포함관계가 일반적으로 등식이 되지는 않는다. 예를 들어, $$I = (f^2)$$라면 $$V(I) = V(f)$$이므로 $$I(V(I)) = I(V(f)) \supseteq (f) \supsetneq (f^2)$$이다. 이를 이해하기 위해서는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 8](/ko/math/set_theory/filter_and_ideal#def8)에서 정의한 *radical ideal*의 개념이 필요하다.
+[명제 6](#prop6)의 4, 5번에서 우리는 $$X \subseteq V(I(X))$$와 $$I \subseteq I(V(I))$$를 보였다. 따라서 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 8](/ko/math/set_theory/filter_and_ideal#def8)에 의하여, 두 연산
+
+$$VI: \text{ideals of }\mathbb{K}[\x_1,\ldots,\x_n] \to \text{ideals of }\mathbb{K}[\x_1,\ldots,\x_n]$$
+$$IV: \text{subsets of }\mathbb{A}^n \to \text{subsets of }\mathbb{A}^n$$
+
+은 모두 *closure operator*이다. 전자를 *Zariski closure*라 부르고, 후자가 주어진 ideal의 *radical*이다.
+
+물론 일반적으로 $$I \subsetneq I(V(I))$$가 성립할 수 있다. 예를 들어, $$I = (f^2)$$라면 $$V(I) = V(f)$$이므로 $$I(V(I)) = I(V(f)) \supseteq (f) \supsetneq (f^2)$$이다. 이를 이해하기 위해서는 [\[가환대수학\] §영점정리, ⁋정의 1](/ko/math/commutative_algebra/nullstellensatz#def1)에서 정의한 *radical ideal*의 개념이 필요하다.
 
 <div class="proposition" markdown="1">
 
