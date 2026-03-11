@@ -17,11 +17,19 @@ weight: 1
 
 ---
 
-## 시작하며
+대수기하학은 다항식으로 정의되는 기하적 대상들을 연구하는 학문이다. 수식으로는, 벡터공간 $$\mathbb{K}^n$$이 주어졌을 때, 다음의 식
 
-대수기하학은 다항식으로 정의되는 기하적 대상들을 연구하는 학문이다. 가장 기본적인 예는 유클리드 공간 $\mathbb{R}^n$에서 다항식 $f \in \mathbb{R}[x_1, \ldots, x_n]$의 영점집합
+$$V(f)= \{(a_1, \ldots, a_n) \in \mathbb{R}^n \mid f(a_1, \ldots, a_n) = 0\},\qquad f\in \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-$$V(f) = \{(a_1, \ldots, a_n) \in \mathbb{R}^n \mid f(a_1, \ldots, a_n) = 0\}$$
+으로 주어지는 집합들을 연구하는 것이 기본적인 목적이라 할 수 있다. 
+
+
+
+
+
+가장 기본적인 예는 유클리드 공간 $\mathbb{R}^n$에서 다항식 $f \in \mathbb{R}[x_1, \ldots, x_n]$의 zero set
+
+$$V(f) =$$
 
 이다. 예를 들어 $f = x^2 + y^2 - 1 \in \mathbb{R}[x,y]$의 영점집합은 단위원이다.
 
