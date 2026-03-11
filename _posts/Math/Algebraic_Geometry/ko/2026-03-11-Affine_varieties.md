@@ -17,25 +17,25 @@ weight: 1
 
 ---
 
-우리의 목표는 다항식으로 정의되는 기하적 대상들을 연구하는 것이다. 구체적으로, 체 $$\mathbb{K}$$와 자연수 $$n$$이 주어졌을 때, 우리는 다음의 식
+대수기하학에서 우리의 목표는 다항식으로 정의되는 기하적 대상들을 연구하는 것이다. 구체적으로, field $$\mathbb{K}$$와 자연수 $$n$$이 주어졌을 때, 우리는 다음의 식
 
 $$V(f)= \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f(a_1, \ldots, a_n) = 0\},\qquad f\in \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-으로 주어지는 집합들을 연구할 것이다. 일반적으로 $$\mathbb{K}=\mathbb{C}$$로 두지만, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다.
+으로 주어지는 집합들에 관심이 있다. 일반적으로 $$\mathbb{K}=\mathbb{C}$$로 두지만, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 혼동을 방지하기 위하여 다항식 $$f$$의 변수는 정자 $$\x$$와 같은 식으로 표기할 것이다. 
 
 ## 아핀다양체의 정의
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 체 $$\mathbb{K}$$ 위에 정의된 *affine $n$-space<sub>$n$차원 아핀공간</sub>* $$\mathbb{A}^n_\mathbb{K}$$는 $$n$$차원 벡터공간 $$\mathbb{K}^n$$을 의미한다.
+<ins id="def1">**정의 1**</ins> Field $$\mathbb{K}$$ 위에 정의된 *affine $n$-space<sub>$n$차원 아핀공간</sub>* $$\mathbb{A}^n_\mathbb{K}$$는 $$n$$차원 벡터공간 $$\mathbb{K}^n$$을 의미한다.
 
 </div>
 
-체 $$\mathbb{K}$$를 생략해도 될 때는 $$\mathbb{A}^n$$과 같이 적는다. 우리는 affine space
+맥락상 $$\mathbb{K}$$를 생략해도 될 때는 $$\mathbb{A}^n$$과 같이 적는다. 우리는 affine space
 
 $$\mathbb{A}^n=\{(a_1,\ldots, a_n)\mid a_i\in \mathbb{K}\}$$
 
-의 원소를 *점<sub>point</sub>*이라 부르고, 각각의 좌표 $$a_i$$를 *$i$번째 좌표*라 부른다. 우리가 살펴볼 기하적인 대상들은 다항식 $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$의 zero set $$V(f)$$로 나타나는 대상들이다.
+의 원소를 *점<sub>point</sub>*이라 부르고, 각각의 좌표 $$a_i$$를 *$i$번째 좌표*라 부른다. 위에서 언급했듯, 우리가 살펴볼 기하적인 대상들은 다항식 $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$의 zero set $$V(f)$$로 나타나는 대상들이다.
 
 <div class="definition" markdown="1">
 
@@ -47,7 +47,7 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 
 </div>
 
-즉, 아핀다양체는 여러 다항식들 $$f_1,\ldots, f_k$$의 공통 zero set이다.
+즉, 아핀다양체는 여러 다항식들 $$f_1,\ldots, f_k$$의 common zero들의 모임이다.
 
 <div class="example" markdown="1">
 
@@ -56,7 +56,7 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 1. $$\mathbb{A}^2$$ 안에서 정의된 affine variety $$V(\x^2+\y^2-1)$$을 생각하자. 정의에 의해, 이 집합은 식 $$\x^2+\y^2-1=0$$을 만족하는 $$\mathbb{A}^2$$의 점들의 모임이므로, 단위원을 나타낸다.
 2. 일반적으로, 임의의 affine space $$\mathbb{A}^n$$와 임의의 다항식 $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$에 대하여, $$V(f)$$는 *초곡면<sub>hypersurface</sub>*을 정의한다.
 3. 또 다른 중요한 예시로, $$\mathbb{A}^3$$ 위에 정의된 *twisted cubic*이 있다. 이는 $$\mathbb{A}^3$$ 위에 정의된 두 다항식 $$\y-\x^2$$, $$\z-\x^3$$으로 정의되는 곡선으로, 매개화 $$(t,t^2,t^3)$$을 통해 $$\mathbb{A}^1$$과 일대일로 대응된다.
-4. Affine space $$\mathbb{A}^n$$ 자기자신과 공집합은 affine variety이다. 이는 $$V(0)=\mathbb{A}^n$$, $$V(1)=\emptyset$$으로부터 자명하다.
+4. Affine space $$\mathbb{A}^n$$ 자기자신과 공집합은 affine variety이다. 이는 $$V(0)=\mathbb{A}^n$$, $$V(1)=\emptyset$$으로부터 자명하다. 이는 [명제 4](#prop4)에서 Zariski topology를 정의할 때 중요하게 사용된다. 
 
 </div>
 
@@ -68,19 +68,18 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 
 <ins id="prop4">**명제 4**</ins> 다음이 성립한다.
 
-1. $$V(0) = \mathbb{A}^n$$
-2. $$V(1) = \emptyset$$
-3. $$I \subseteq J \implies V(J) \subseteq V(I)$$
-4. $$\displaystyle\bigcap_{\alpha} V(I_\alpha) = V\left(\sum_\alpha I_\alpha\right)$$
-5. $$V(I) \cup V(J) = V(I \cap J) = V(IJ)$$
+1. $$V(0) = \mathbb{A}^n$$,
+2. $$V(1) = \emptyset$$,
+3. $$I \subseteq J \implies V(J) \subseteq V(I)$$,
+4. $$\displaystyle\bigcap_{\alpha} V(I_\alpha) = V\left(\sum_\alpha I_\alpha\right)$$,
+5. $$V(I) \cup V(J) = V(I \cap J) = V(IJ)$$.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $$V(0) = \mathbb{A}^n$$: 영다항식은 모든 점에서 0이므로 자명하다.
-2. $$V(1) = \emptyset$$: 상수다항식 1은 모든 점에서 1이므로 자명하다.
+처음 두 명제는 [예시 3](#ex3)에서 이미 살펴보았다. 
 3. $$I \subseteq J \implies V(J) \subseteq V(I)$$: 만약 $$p \in V(J)$$라면, 모든 $$f \in J$$에 대해 $$f(p) = 0$$이다. $$I \subseteq J$$이므로 모든 $$g \in I$$에 대해서도 $$g(p) = 0$$이다. 즉 $$p \in V(I)$$이다.
 4. $$\bigcap_\alpha V(I_\alpha) = V(\sum_\alpha I_\alpha)$$: 점 $$p$$가 모든 $$V(I_\alpha)$$에 속한다는 것은 모든 $$\alpha$$와 모든 $$f \in I_\alpha$$에 대해 $$f(p) = 0$$이라는 것이다. 이는 $$\sum_\alpha I_\alpha$$의 모든 원소가 $$p$$에서 0이라는 것과 동치이다.
 5. $$V(I) \cup V(J) = V(I \cap J) = V(IJ)$$: 먼저 $$V(I) \cup V(J) \subseteq V(I \cap J)$$를 보이자. $$p \in V(I) \cup V(J)$$라면 $$p \in V(I)$$이거나 $$p \in V(J)$$이다. 어느 경우이든 $$I \cap J$$의 모든 원소는 $$p$$에서 0이므로 $$p \in V(I \cap J)$$이다. 역으로, $$p \in V(I \cap J)$$라 하자. 만약 $$p \notin V(I)$$라면 어떤 $$f \in I$$가 존재하여 $$f(p) \neq 0$$이다. 그런데 $$IJ \subseteq I \cap J$$이므로 $$p \in V(I \cap J) \subseteq V(IJ)$$이고, 따라서 모든 $$g \in J$$에 대해 $$(fg)(p) = f(p)g(p) = 0$$이다. $$f(p) \neq 0$$이므로 $$g(p) = 0$$이고, 즉 $$p \in V(J)$$이다.
