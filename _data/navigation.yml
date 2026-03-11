@@ -122,36 +122,30 @@ algebraic_structures-en:
         url: en/math/algebraic_structures/free_products
       - title: "Abelian Groups"
         url: en/math/algebraic_structures/abelian_groups
-      - title: "군의 작용"
-        url: ko/math/algebraic_structures/group_actions
-      - title: "환의 정의"
-        url: ko/math/algebraic_structures/rings
-      - title: "몫환, 환 동형사상"
-        url: ko/math/algebraic_structures/quotient_rings
-      - title: "환의 곱, 쌍대곱, 텐서곱"
-        url: ko/math/algebraic_structures/operations_of_rings
-      - title: "분수체"
-        url: ko/math/algebraic_structures/field_of_fractions
-      - title: "등급환"
-        url: ko/math/algebraic_structures/graded_rings
-      - title: "가군"
-        url: ko/math/algebraic_structures/modules
-      - title: "가군의 직접곱과 직합, 텐서곱"
-        url: ko/math/algebraic_structures/operations_of_modules
-      - title: "스칼라의 변환"
-        url: ko/math/algebraic_structures/change_of_base_ring
-      - title: "등급가군"
-        url: ko/math/algebraic_structures/graded_modules
-      - title: "대수"
-        url: ko/math/algebraic_structures/algebras
-      - title: "대수의 직접곱, 직합, 텐서곱"
-        url: ko/math/algebraic_structures/operations_of_algebras
+      - title: "Group Actions"
+        url: en/math/algebraic_structures/group_actions
+      - title: "Definition of Rings"
+        url: en/math/algebraic_structures/rings
+      - title: "Quotient Rings and Ring homomorphisms"
+        url: en/math/algebraic_structures/quotient_rings
+      - title: "Products, Coproducts, and Tensor Products of rings"
+        url: en/math/algebraic_structures/operations_of_rings
+      - title: "Field of Fractions"
+        url: en/math/algebraic_structures/field_of_fractions
+      - title: "Graded Rings"
+        url: en/math/algebraic_structures/graded_rings
+      - title: "Modules"
+        url: en/math/algebraic_structures/modules
+      - title: "Direct Products, Direct Sums, and Tensor Products of Modules"
+        url: en/math/algebraic_structures/operations_of_modules
+      - title: "Change of Base Ring"
+        url: en/math/algebraic_structures/change_of_base_ring
+      - title: "Graded Modules"
+        url: en/math/algebraic_structures/graded_modules
   - title: 
     children:
-      - title: "블로그 소개"
-        url: ko/about
-      - title: "찾아보기"
-        url: ko/misc/index_ko
+      - title: "About This Site"
+        url: en/about
 
 algebraic_topology-ko:
   - title: <a href="/ko/algebraic_topology/" class="sidebar_title">대수적 위상수학</a>
