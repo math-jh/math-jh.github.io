@@ -237,7 +237,15 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\varphi^\ast$$가 isomorphism이라 하고 $$\varphi$$가 isomorphism임을 보이면 충분하다. 우선 $$\varphi$$는 전단사함수이다. 만약 $$\varphi(a) = \varphi(b)$$라면, 모든 $$\bar{g} \in \mathbb{K}[Y]$$에 대해 $$g(\varphi(a)) = g(\varphi(b))$$이고, 이는 $$\varphi^\ast$$가 injective임과 모순된다. 또한 $$\varphi^\ast$$가 surjective이므로, $$\varphi$$의 역을 정의할 수 있다.
+반대방향만 보이면 충분하다. $$\varphi^\ast$$가 isomorphism이라 하자. 그럼 $$\psi^\ast = (\varphi^\ast)^{-1}: \mathbb{K}[X] \to \mathbb{K}[Y]$$가 존재한다.
+
+이제 $$\psi^\ast$$로부터 morphism $$\theta: Y \to X$$를 정의하자. 
+
+$$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n]/I(X)$$
+
+의 각 원소 $$\bar{\x}_i$$에 대하여, $$\psi^\ast(\bar{\x}_i) \in \mathbb{K}[Y]$$를 생각할 수 있다. 이를 $$\bar{g}_i$$라 적으면, $$\theta: Y \to \mathbb{A}^n$$을 $$\theta(y) = (g_1(y), \ldots, g_n(y))$$으로 정의할 수 있다. $$\psi^\ast$$가 well-defined이므로 $$\theta(Y) \subseteq X$$이고, 따라서 $$\theta: Y \to X$$는 morphism이다. 또한 $$\theta^\ast = \psi^\ast$$임이 자명하다.
+
+이제 $$\theta \circ \varphi = \operatorname{id}_X$$임을 보이자. Functioriality에 의해 $$(\theta \circ \varphi)^\ast = \varphi^\ast \circ \theta^\ast = \varphi^\ast \circ \psi^\ast = \operatorname{id}_{\mathbb{K}[X]} = \operatorname{id}_X^\ast$$이다. 두 morphism이 같은 pullback을 유도하면 같으므로 (각 좌표함수를 비교하면 된다), $$\theta \circ \varphi = \operatorname{id}_X$$이다. 마찬가지로 $$\varphi \circ \theta = \operatorname{id}_Y$$이므로, $$\varphi$$는 isomorphism이다.
 
 </details>
 
