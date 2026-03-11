@@ -99,6 +99,60 @@ algebraic_structures-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
+algebraic_structures-en:
+  - title: <a href="/en/algebraic_structures/" class="sidebar_title">Algebraic Structures</a>
+    children:
+      - title: "Algebraic Structures"
+        url: en/math/algebraic_structures/algebraic_structures
+      - title: "Semigroups, Monoids, Groups"
+        url: en/math/algebraic_structures/groups
+      - title: "Grothendieck Groups"
+        url: en/math/algebraic_structures/Grothendieck_groups
+      - title: "Group Homomorphisms"
+        url: en/math/algebraic_structures/group_homomorphisms
+      - title: "Quotient Groups"
+        url: en/math/algebraic_structures/quotient_groups
+      - title: "Isomorphism Theorems"
+        url: en/math/algebraic_structures/isomorphism_theorems
+      - title: "Direct Products of Groups"
+        url: en/math/algebraic_structures/direct_products
+      - title: "Restricted Sums"
+        url: en/math/algebraic_structures/restricted_sums
+      - title: "Free Products"
+        url: en/math/algebraic_structures/free_products
+      - title: "Abelian Groups"
+        url: en/math/algebraic_structures/abelian_groups
+      - title: "군의 작용"
+        url: ko/math/algebraic_structures/group_actions
+      - title: "환의 정의"
+        url: ko/math/algebraic_structures/rings
+      - title: "몫환, 환 동형사상"
+        url: ko/math/algebraic_structures/quotient_rings
+      - title: "환의 곱, 쌍대곱, 텐서곱"
+        url: ko/math/algebraic_structures/operations_of_rings
+      - title: "분수체"
+        url: ko/math/algebraic_structures/field_of_fractions
+      - title: "등급환"
+        url: ko/math/algebraic_structures/graded_rings
+      - title: "가군"
+        url: ko/math/algebraic_structures/modules
+      - title: "가군의 직접곱과 직합, 텐서곱"
+        url: ko/math/algebraic_structures/operations_of_modules
+      - title: "스칼라의 변환"
+        url: ko/math/algebraic_structures/change_of_base_ring
+      - title: "등급가군"
+        url: ko/math/algebraic_structures/graded_modules
+      - title: "대수"
+        url: ko/math/algebraic_structures/algebras
+      - title: "대수의 직접곱, 직합, 텐서곱"
+        url: ko/math/algebraic_structures/operations_of_algebras
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
 algebraic_topology-ko:
   - title: <a href="/ko/algebraic_topology/" class="sidebar_title">대수적 위상수학</a>
     children:
