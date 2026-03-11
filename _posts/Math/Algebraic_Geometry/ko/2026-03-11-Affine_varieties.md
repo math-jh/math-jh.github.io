@@ -230,7 +230,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop16">**명제 16**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
+<ins id="prop14">**명제 14**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
 
 </div>
 
@@ -252,5 +252,4 @@ $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n]/I(X)$$
 **참고문헌**
 
 **[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
-**[Ful]** W. Fulton, *Algebraic Curves*, 2008. (Available online)
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
