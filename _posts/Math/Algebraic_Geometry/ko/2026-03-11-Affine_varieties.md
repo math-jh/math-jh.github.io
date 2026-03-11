@@ -55,33 +55,18 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 
 1. 가령, 우리는 $$\mathbb{A}^2$$ 안에서 정의된 affine variety $$V(\x^2+\y^2-1)$$를 생각할 수 있다. 정의에 의해, 이 집합은 식 $$\x^2+\y^2-1=0$$을 만족하는 $$\mathbb{A}^2$$들의 모임이므로, 이는 단위원을 나타낸다. 
 2. 일반적으로, 임의의 affine space $$\mathbb{A}^n$$와 임의의 다항식 $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$에 대하여, $$V(f)$$는 초곡면을 정의할 것이다. 
-3. 곧 살펴볼 [명제 5](#prop5)에서 중요하게 사용될 성질로, affine space $$\mathbb{A}^n$$ 자기자신과 공집합은 affine variety이다. 이는 다음의 두 식 $$V(0)=\mathbb{A}^n$$, $$V(1)=\emptyset$$으로부터 자명하다. 
-
-</div>
-
-
-
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> **Twisted cubic**: 세 다항식
-
-$$y - x^2, \quad z - x^3$$
-
-에 의해 정의되는 아핀다양체 $C = V(y - x^2, z - x^3) \subset \mathbb{A}^3$을 *twisted cubic*이라 부른다. 이는 매개화
-
-$$t \mapsto (t, t^2, t^3)$$
-
-을 통해 $\mathbb{A}^1$과 일대일 대응된다.
+3. 또 다른 중요한 예시 중 하나로, $$\mathbb{A}^3$$ 위에 정의된 *twisted cubic*이 있다. 이는 $$\mathbb{A}^3$$ 위에 정의된 두 다항식 $$\y-\x^2$$, $$\z-\x^3$$으로 정의되는 곡선으로, 매개화 $$(t,t^2,t^3)$$을 통해 $$\mathbb{A}^1$$과 일대일로 대응된다.
+4. 곧 살펴볼 [명제 4](#prop4)에서 중요하게 사용될 성질로, affine space $$\mathbb{A}^n$$ 자기자신과 공집합은 affine variety이다. 이는 다음의 두 식 $$V(0)=\mathbb{A}^n$$, $$V(1)=\emptyset$$으로부터 자명하다. 
 
 </div>
 
 ## 자리스키 위상
 
-[예시 3](#ex3)에서 우리는 
+[예시 3](#ex3)에서 우리는 친숙한 기하학적 대상들이 모두 집합으로서는 affine variety로 쓰여질 수 있음을 보았다. 그러나 이를 기하학적 대상이라 생각하기 위해서는 그 위에 위상구조가 존재해야 할 것이다. 우리의 유일한 도구는 다항식이므로, 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 다음이 성립한다:
+<ins id="prop4">**명제 4**</ins> 다음이 성립한다:
 
 1. $V(0) = \mathbb{A}^n$
 2. $V(1) = \emptyset$
