@@ -47,7 +47,7 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 
 </div>
 
-즉, 아핀다양체는 여러 다항식들 $$f_1,\ldots, f_k$$의 common zero들의 모임이다.
+즉, 아핀다양체는 여러 다항식들 $$f_1,\ldots, f_k$$의 common zero들의 모임이다. 더 일반적으로, $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 부분집합 $$I$$에 대하여 $$V(I)$$를 위의 정의와 비슷하게 정의할 수 있다. 
 
 <div class="example" markdown="1">
 
@@ -75,18 +75,18 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 5. $$V(I) \cup V(J) = V(I \cap J) = V(IJ)$$.
 
 </div>
-
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-처음 두 명제는 [예시 3](#ex3)에서 이미 살펴보았다. 
-3. $$I \subseteq J \implies V(J) \subseteq V(I)$$: 만약 $$p \in V(J)$$라면, 모든 $$f \in J$$에 대해 $$f(p) = 0$$이다. $$I \subseteq J$$이므로 모든 $$g \in I$$에 대해서도 $$g(p) = 0$$이다. 즉 $$p \in V(I)$$이다.
-4. $$\bigcap_\alpha V(I_\alpha) = V(\sum_\alpha I_\alpha)$$: 점 $$p$$가 모든 $$V(I_\alpha)$$에 속한다는 것은 모든 $$\alpha$$와 모든 $$f \in I_\alpha$$에 대해 $$f(p) = 0$$이라는 것이다. 이는 $$\sum_\alpha I_\alpha$$의 모든 원소가 $$p$$에서 0이라는 것과 동치이다.
-5. $$V(I) \cup V(J) = V(I \cap J) = V(IJ)$$: 먼저 $$V(I) \cup V(J) \subseteq V(I \cap J)$$를 보이자. $$p \in V(I) \cup V(J)$$라면 $$p \in V(I)$$이거나 $$p \in V(J)$$이다. 어느 경우이든 $$I \cap J$$의 모든 원소는 $$p$$에서 0이므로 $$p \in V(I \cap J)$$이다. 역으로, $$p \in V(I \cap J)$$라 하자. 만약 $$p \notin V(I)$$라면 어떤 $$f \in I$$가 존재하여 $$f(p) \neq 0$$이다. 그런데 $$IJ \subseteq I \cap J$$이므로 $$p \in V(I \cap J) \subseteq V(IJ)$$이고, 따라서 모든 $$g \in J$$에 대해 $$(fg)(p) = f(p)g(p) = 0$$이다. $$f(p) \neq 0$$이므로 $$g(p) = 0$$이고, 즉 $$p \in V(J)$$이다.
+처음 두 명제는 [예시 3](#ex3)에서 이미 살펴보았다. 세 번째 결과를 증명하기 위해 $$p\in V(J)$$라 하자. 그럼 모든 $$f \in J$$에 대해 $$f(p) = 0$$이고, $$I \subseteq J$$이므로 특히 모든 $$g \in I$$에 대해서도 $$g(p) = 0$$이다. 즉 $$p \in V(I)$$이다.
+
+네 번째 결과의 경우, 점 $$p$$가 모든 $$V(I_\alpha)$$에 속한다는 것은 모든 $$\alpha$$와 모든 $$f \in I_\alpha$$에 대해 $$f(p) = 0$$이라는 것이다. 이는 $$\sum_\alpha I_\alpha$$의 모든 원소가 $$p$$에서 0이라는 것과 동치이다.
+
+마지막 주장을 보이기 위해 우선 $$V(I) \cup V(J) \subseteq V(I \cap J)$$를 보이자. $$p \in V(I) \cup V(J)$$라면 $$p \in V(I)$$이거나 $$p \in V(J)$$이다. 어느 경우이든 $$I \cap J$$의 모든 원소는 $$p$$에서 0이므로 $$p \in V(I \cap J)$$이다. 거꾸로 $$p \in V(I \cap J)$$라 하자. 만약 $$p \notin V(I)$$라면 어떤 $$f \in I$$가 존재하여 $$f(p) \neq 0$$이다. 그런데 $$IJ \subseteq I \cap J$$이므로 $$p \in V(I \cap J) \subseteq V(IJ)$$이고, 따라서 모든 $$g \in J$$에 대해 $$(fg)(p) = f(p)g(p) = 0$$이다. $$f(p) \neq 0$$이므로 $$g(p) = 0$$이고, 즉 $$p \in V(J)$$이다.
 
 </details>
 
-따라서 아핀다양체들을 닫힌집합으로 갖는 위상을 정의할 수 있다.
+특히 위의 명제는 affine variety들의 모임을 닫힌집합으로 갖는 위상이 존재함을 보여준다. ([\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2))
 
 <div class="definition" markdown="1">
 
