@@ -146,12 +146,10 @@ $$I(V(I)) = \sqrt{I}$$
 
 <ins id="cor8">**따름정리 8**</ins> 다음이 성립한다.
 
-1. $$V(I) = \emptyset \iff I = (1)$$,
-2. $$V(I) = V(J) \iff \sqrt{I} = \sqrt{J}$$.
+1. $$V(I) = \emptyset$$인 것과 $$I = (1)$$인 것이 동치이다.
+2. $$V(I) = V(J)$$인 것과 $$\sqrt{I} = \sqrt{J}$$인 것이 동치이다. 
 
 </div>
-
-따라서 아핀다양체의 ideal은 항상 radical ideal이다.
 
 ## Coordinate Ring
 
@@ -165,7 +163,7 @@ $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / I(X)$$
 
 </div>
 
-Coordinate ring $$\mathbb{K}[X]$$의 원소들은 $$X$$ 위에서 정의된 "다항식 함수"들이다. 구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 well-defined인 이유는 $$f, g \in \mathbb{K}[\x_1, \ldots, \x_n]$$가 $$\mathbb{K}[X]$$에서 같은 원소를 나타낸다면 $$f - g \in I(X)$$이고, 따라서 $$f - g$$는 $$X$$ 위에서 identically zero이기 때문이다.
+Coordinate ring $$\mathbb{K}[X]$$의 원소들은 $$X$$ 위에서 정의된 함수들로 생각할 수 있다.  구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 well-defined인 이유는 $$f, g \in \mathbb{K}[\x_1, \ldots, \x_n]$$가 $$\mathbb{K}[X]$$에서 같은 원소를 나타낸다면 $$f - g \in I(X)$$이고, 따라서 $$f - g$$는 $$X$$ 위에서 identically zero이기 때문이다.
 
 <div class="example" markdown="1">
 
