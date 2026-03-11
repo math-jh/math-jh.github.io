@@ -21,29 +21,21 @@ weight: 1
 
 $$V(f)= \{(a_1, \ldots, a_n) \in \mathbb{R}^n \mid f(a_1, \ldots, a_n) = 0\},\qquad f\in \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-으로 주어지는 집합들을 연구하는 것이 기본적인 목적이라 할 수 있다. 
-
-
-
-
-
-가장 기본적인 예는 유클리드 공간 $\mathbb{R}^n$에서 다항식 $f \in \mathbb{R}[x_1, \ldots, x_n]$의 zero set
-
-$$V(f) =$$
-
-이다. 예를 들어 $f = x^2 + y^2 - 1 \in \mathbb{R}[x,y]$의 영점집합은 단위원이다.
-
-대수기하학에서는 이러한 대상들을 체 $\mathbb{k}$ 위에서 연구한다. 편의상 $\mathbb{k} = \mathbb{C}$로 두지만, 대부분의 내용은 임의의 대수적으로 닫힌 체에 대해 성립한다.
+으로 주어지는 집합들을 연구하는 것이 기본적인 목적이라 할 수 있다. 일반적으로 $$\mathbb{K}=\mathbb{C}$$로 두지만, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 다항식의 변수를 표현할 때는 위와 같이 정자 $$\x$$들을 사용하는 것을 원칙으로 한다. 
 
 ## 아핀다양체의 정의
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 체 $\mathbb{k}$와 $n \ge 1$에 대하여, *$n$차원 아핀공간<sub>affine $n$-space</sub>* $\mathbb{A}^n_{\mathbb{k}}$은 집합으로서 $\mathbb{k}^n$과 같다. 혼동의 여지가 없을 때는 $\mathbb{A}^n$으로 적는다.
+<ins id="def1">**정의 1**</ins> Field $$\mathbb{K}$$ 위에 정의된 *affine $n$-space<sub>$n$차원 아핀공간</sub>* $$\mathbb{A}^n_\mathbb{K}$$는 $$n$$차원 벡터공간 $$\mathbb{K}^n$$을 의미한다. 
 
 </div>
 
-$\mathbb{A}^n$의 원소를 *점<sub>point</sub>*이라 부르고, 각각의 좌표 $a_i$를 $i$번째 좌표라 부른다.
+Field $$\mathbb{K}$$를 생략해도 될 때는 $$\mathbb{A}^n$$과 같이 적는다. 우리는 affine space 
+
+$$\mathbb{A}^n=\{(a_1,\ldots, a_n)\mid a_i\in \mathbb{K}\}$$
+
+
 
 <div class="definition" markdown="1">
 
@@ -62,7 +54,7 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 <ins id="ex3">**예시 3**</ins> 기본적인 예시들:
 
 1. **단위원**: $V(x^2 + y^2 - 1) \subset \mathbb{A}^2$
-2. **포물선**: $V(y - x^2) \subset \mathbb{A}^2$
+2. **포물선**: $V(y - x^2) \subset \mathbb{A}^2
 3. **직선**: $V(ax + by + c) \subset \mathbb{A}^2$
 4. **초곡면<sub>hypersurface</sub>**: 하나의 다항식 $f$에 의해 정의되는 $V(f) \subset \mathbb{A}^n$
 5. **아핀공간 자신**: $V(0) = \mathbb{A}^n$
