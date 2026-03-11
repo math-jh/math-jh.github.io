@@ -55,7 +55,7 @@ $$V(f_1, \ldots, f_k) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid f_1(a) = \cdo
 
 1. 가령, 우리는 $$\mathbb{A}^2$$ 안에서 정의된 affine variety $$V(\x^2+\y^2-1)$$를 생각할 수 있다. 정의에 의해, 이 집합은 식 $$\x^2+\y^2-1=0$$을 만족하는 $$\mathbb{A}^2$$들의 모임이므로, 이는 단위원을 나타낸다. 
 2. 일반적으로, 임의의 affine space $$\mathbb{A}^n$$와 임의의 다항식 $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$에 대하여, $$V(f)$$는 초곡면을 정의할 것이다. 
-3. 곧 살펴볼 [명제 5](#prop5)에서 중요하게 사용될 성질로, affine space $$\mathbb{A}^n$$ 자기자신과 공집합은 affine variety이다. 이는 다음의 두 식 $$V(0)=\mathbb{A}^n$$, $$V(1)=\emptyset$$이기 때문이다. 
+3. 곧 살펴볼 [명제 5](#prop5)에서 중요하게 사용될 성질로, affine space $$\mathbb{A}^n$$ 자기자신과 공집합은 affine variety이다. 이는 다음의 두 식 $$V(0)=\mathbb{A}^n$$, $$V(1)=\emptyset$$으로부터 자명하다. 
 
 </div>
 
