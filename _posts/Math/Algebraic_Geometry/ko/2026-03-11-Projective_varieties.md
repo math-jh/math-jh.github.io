@@ -17,10 +17,6 @@ weight: 2
 
 ---
 
-[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 우리는 affine space $$\mathbb{A}^n$$과 그 위의 다항식으로 정의되는 부분집합들을 살펴보았다. 그러나 affine space에는 몇 가지 불편한 점이 있다. 가장 큰 문제 중 하나는 일종의 compactness로, 예를 들어 $$\mathbb{A}^2$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 이를 해결하기 위해, 위상공간에서 우리는 $$\mathbb{A}^n$$의 one-point compactification을 생각할 수 있을 것이다. 
-
-
-
 ## 사영공간의 정의
 
 <div class="definition" markdown="1">
@@ -113,14 +109,6 @@ $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 Standard open cover $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$을 생각하자. 각 $$U_i \cong \mathbb{A}^n$$은 Zariski 위상에서 quasi-compact이다. 유한개의 quasi-compact 열린집합들의 합집합은 quasi-compact이므로 $$\mathbb{P}^n$$은 quasi-compact이다.
 
 </details>
-
-그런데 잠깐, 우리는 affine space가 compact하지 않기 때문에 projective space를 도입한다고 했는데, 위의 명제에 따르면 $$\mathbb{A}^n$$은 이미 quasi-compact가 아닌가? 물론 맞는 말이다. Zariski topology에서 $$\mathbb{A}^n$$은 quasi-compact이며, 이는 Zariski 위상이 매우 coarse하기 때문이다 (닫힌집합이 너무 적어서 compact가 되어버린다).
-
-진정한 문제는 compactness가 아니라 **properness** (또는 **completeness**)에 있다. Affine space에서는:
-- 평행한 두 직선이 만나지 않는다
-- 닫힌 곡선들이 "무한히 확장"되어 닫힌 곡선으로 남지 않는다
-
-Projective space는 이 문제를 해결한다. Projective space는 **proper**하며, 이는 모든 morphism $$f: X \to Y$$에 대해 닫힌집합의 image가 닫힌집합이라는 것을 의미한다. 예를 들어 $$\mathbb{P}^2$$에서는 임의의 두 직선이 (평행한 경우 무한원점에서) 반드시 만난다. 이로 인해 닫힌 곡선들이 projective space에서도 닫힌 곡선으로 남고, Bézout의 정리와 같은 강력한 결과들을 얻을 수 있다.
 
 ## Homogeneous Ideal과 Projective Nullstellensatz
 
@@ -264,4 +252,4 @@ $$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$
 
 **[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
-**[Ful]** W. Fulton, *Algebraic Curves*, 2008. (Available online)
+**[Ful]** W. Fulton, *Algebraic Curves*, 2008. (A
