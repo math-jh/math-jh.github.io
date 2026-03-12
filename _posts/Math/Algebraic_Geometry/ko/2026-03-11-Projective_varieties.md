@@ -77,7 +77,7 @@ $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 
 </div>
 
-위에서 설명했듯, 각각의 $$F_i$$들이 homogeneous이므로 이것이 잘 정의되는 것을 확인할 수 있다. 
+위에서 설명했듯, 각각의 $$F_i$$들이 homogeneous이므로 이것이 잘 정의되는 것을 확인할 수 있다.
 
 <div class="example" markdown="1">
 
@@ -89,7 +89,7 @@ $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 
 </div>
 
-아핀 경우와 마찬가지로, 사영다양체들을 닫힌집합으로 갖는 위상을 *Zariski topology*라 부른다. 특히 다음이 성립한다.
+Affine case와 마찬가지로 우리는 위상구조를 정의하기 위해 Zariski topology를 사용한다. 이를 위해서는 다음 명제가 필요하다. 
 
 <div class="proposition" markdown="1">
 
