@@ -24,16 +24,7 @@ weight: 4
 준사영다양체의 morphism은 국소적으로 다항식으로 표현되는 함수이다.
 
 <div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 준사영다양체 $$X$$ 위의 점 $$p$$에서의 *regular function<sub>정칙함수</sub>*란 $$p$$의 어떤 열린근방 $$U$$에서 정의된 함수 $$f: U \to \mathbb{K}$$로서, $$f$$가 $$U$$에서 다항식으로 표현되는 것을 말한다.
-
-</div>
-
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 준사영다양체 $$X$$ 위의 *regular function*이란 모든 점에서 regular function인 함수 $$f: X \to \mathbb{K}$$를 말한다. $$X$$ 위의 모든 regular function들의 집합을 $$\mathcal{O}(X)$$ 또는 $$\mathcal{O}_X(X)$$로 표기한다.
-
-</div>
+<ins id="def1">**정의 1**</ins> 준사영다양체 $$X$$ 위의 점 $$p$$에서 함수 $$f$$가 *regular<sub>정칙</sub>*라는 것은 $$p$$의 어떤 열린근방 $$U$$에서 $$f$$가 다항식으로 표현되는 것을 말한다. 함수 $$f: X 	o \mathbb{K}$$가 *regular function<sub>정칙함수</sub>*이라는 것은 모든 점 $$p \in X$$에서 regular인 것이다. $$X$$ 위의 모든 regular function들의 집합을 $$\mathcal{O}(X)$$ 또는 $$\mathcal{O}_X(X)$$로 표기한다.
 
 이 정의는 미분다양체(manifold)에서의 smooth function 정의와 비슷하다. 미분다양체에서 각 점 $$p$$의 열린근방이 $$\mathbb{R}^n$$과 동형인 chart $$\varphi: U \to \mathbb{R}^n$$을 갖고, 함수 $$f: M \to \mathbb{R}$$가 smooth인 것은 $$f \circ \varphi^{-1}: \mathbb{R}^n \to \mathbb{R}$$이 smooth함으로 정의된다. Quasi-projective variety의 경우, [§준사영다양체](/ko/math/algebraic_geometry/quasi_projective_varieties)에서 논의했듯 각 점 $$p$$가 어떤 affine chart $$U_i \cong \mathbb{A}^n$$에 속하고, 함수 $$f$$가 regular인 것은 이 affine chart에서 다항식으로 표현됨으로 정의된다.
 
