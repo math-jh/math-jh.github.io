@@ -17,7 +17,7 @@ weight: 2
 
 ---
 
-[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 우리는 affine space $$\mathbb{A}^n$$과 그 위의 다항식으로 정의되는 부분집합들을 살펴보았다. 그러나 affine space에는 몇 가지 불편한 점이 있다. 가장 큰 문제 중 하나는 일종의 compactness로, 예를 들어 $$\mathbb{A}^1$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 이는 기하학적으로 자연스럽지 않다.
+[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 우리는 affine space $$\mathbb{A}^n$$과 그 위의 다항식으로 정의되는 부분집합들을 살펴보았다. 그러나 affine space에는 몇 가지 불편한 점이 있다. 가장 큰 문제 중 하나는 일종의 compactness로, 예를 들어 $$\mathbb{A}^2$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 
 
 Projective space $$\mathbb{P}^n$$은 이러한 문제를 해결한다. Projective space는 affine space에 "무한원점들"을 추가하여, 임의의 두 직선이 (평행한 경우 무한원점에서) 만나도록 만든 것이다.
 
@@ -41,7 +41,11 @@ $$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$x_i = \lambda y_i$ for 
 
 ## Homogeneous Polynomial과 Projective Variety
 
-Projective space $$\mathbb{P}^n$$에 위상구조를 주고 싶다. Affine space의 경우처럼 다항식의 zero set을 닫힌집합으로 정의하려 하는데, 여기서 주의할 점이 있다. 임의의 다항식 $$F \in \mathbb{K}[x_0, \ldots, x_n]$$에 대해 조건 $$F([x_0 : \cdots : x_n]) = 0$$은 well-defined가 아니다. 왜냐하면 $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이지만, $$F(x_0, \ldots, x_n)$$과 $$F(\lambda x_0, \ldots, \lambda x_n)$$이 다를 수 있기 때문이다.
+이제 우리는 affine case에서와 마찬가지로 $$\mathbb{P}^n$$에 위상구조를 주어야 한다. Projective space에서도 마찬가지로 우리는 다항식들의 zero set으로 닫힌집합을 정의할 것인데, 주의할 점은 $$\mathbb{P}^n$$은 quotient set으로 정의되었으므로 다항식이 잘 정의되지 않는다는 것이다. 즉 임의의 $$F \in \mathbb{K}[x_0, \ldots, x_n]$$에 대하여, $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이지만 일반적으로
+
+$$F(x_0, \ldots, x_n)\neq F(\lambda x_0, \ldots, \lambda x_n)$$
+
+이다. 
 
 그러나 *homogeneous polynomial*을 사용하면 이 문제가 해결된다. Homogeneous polynomial $$F$$ of degree $$d$$에 대해서는
 
