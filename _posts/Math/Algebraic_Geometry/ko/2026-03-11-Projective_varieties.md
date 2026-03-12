@@ -21,7 +21,7 @@ weight: 2
 
 
 
-그러나 아핀공간에는 몇 가지 불편한 점이 있다. 가장 큰 문제는 "무한히 확장"되어 있어 닫힌 곡선과 같은 기하적 대상을 다루기에 적합하지 않다는 것이다. 예를 들어, $$\mathbb{A}^1$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 이는 기하학적으로 자연스럽지 않다.
+그러나 아핀공간에는 몇 가지 불편한 점이 있다. 가장 큰 문제는 "무한히 확장"되어 있어 닫힌 곡선과 같은 기하적 대상을 다루기에 적합하지 않다는 것이다. 예를 들어, $$\mathbb{A}^1$$에서 두 직선 $$\y = a\x$$와 $$\y = b\x$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 이는 기하학적으로 자연스럽지 않다.
 
 사영공간 $$\mathbb{P}^n$$은 이러한 문제를 해결한다. 사영공간은 아핀공간에 "무한원점들"을 추가하여, 임의의 두 직선이 (평행한 경우 무한원점에서) 만나도록 만든 것이다.
 
@@ -35,13 +35,13 @@ $$$\mathbb{P}^n = (\mathbb{K}^{n+1} \setminus \{0\}) / \sim$$$
 
 이며, 여기서 동치관계 $$\sim$$은
 
-$$$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$$x_i = \lambda y_i$$ for some $$\lambda \in \mathbb{K}^\ast$$, for all $$i$$}$$$
+$$$(\x_0, \ldots, \x_n) \sim (\y_0, \ldots, \y_n) \iff \text{$$\x_i = \lambda \y_i$$ for some $$\lambda \in \mathbb{K}^\ast$$, for all $$i$$}$$$
 
 으로 주어진다. 혼동의 여지가 없을 때는 $$\mathbb{P}^n$$으로 적는다.
 
 </div>
 
-동치류 $$[(x_0, \ldots, x_n)]$$은 보통 $$[x_0 : \cdots : x_n]$$으로 표기하며, 이를 *homogeneous coordinates<sub>동차좌표</sub>*라 부른다. $$x_0, \ldots, x_n$$을 *좌표*라 하고, 이들 중 적어도 하나는 $$0$$이 아니어야 한다. Homogeneous coordinates의 핵심은 좌표들이 *비율*만을 결정한다는 것이다. 즉, $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$ for $$\lambda \in \mathbb{K}^\ast$$이다.
+동치류 $$[(\x_0, \ldots, \x_n)]$$은 보통 $$[\x_0 : \cdots : \x_n]$$으로 표기하며, 이를 *homogeneous coordinates<sub>동차좌표</sub>*라 부른다. $$\x_0, \ldots, \x_n$$을 *좌표*라 하고, 이들 중 적어도 하나는 $$0$$이 아니어야 한다. Homogeneous coordinates의 핵심은 좌표들이 *비율*만을 결정한다는 것이다. 즉, $$[\x_0 : \cdots : \x_n] = [\lambda \x_0 : \cdots : \lambda \x_n]$$ for $$\lambda \in \mathbb{K}^\ast$$이다.
 
 <div class="example" markdown="1">
 
@@ -61,7 +61,7 @@ $$$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$$x_i = \lambda y_i$$ f
 
 <ins id="def3">**정의 3**</ins> $$i = 0, 1, \ldots, n$$에 대하여, *$$i$$번째 standard open set* $$U_i$$를
 
-$$$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}$$$
+$$$U_i = \{[\x_0 : \cdots : \x_n] \in \mathbb{P}^n \mid \x_i \ne 0\}$$$
 
 으로 정의한다.
 
@@ -78,7 +78,7 @@ $$$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}$$$
 
 $$U_0$$의 경우, map $$\varphi_0: U_0 \to \mathbb{A}^n$$을
 
-$$$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$$
+$$$\varphi_0([\x_0 : \x_1 : \cdots : \x_n]) = \left(\frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right)$$$
 
 으로 정의하자. 역함수 $$\psi_0: \mathbb{A}^n \to U_0$$는
 
@@ -88,7 +88,7 @@ $$$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$$
 
 </details>
 
-즉, 우리는 $$U_i$$를 "좌표 $$x_i$$가 무한대가 아닌 점들"로 생각할 수 있다. $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$이고, 각 $$U_i \cong \mathbb{A}^n$$이다. 특히 $$\mathbb{P}^n \setminus U_i = V(x_i)$$는 "무한원점들"로 이루어진 *hyperplane at infinity*이다.
+즉, 우리는 $$U_i$$를 "좌표 $$\x_i$$가 무한대가 아닌 점들"로 생각할 수 있다. $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$이고, 각 $$U_i \cong \mathbb{A}^n$$이다. 특히 $$\mathbb{P}^n \setminus U_i = V(\x_i)$$는 "무한원점들"로 이루어진 *hyperplane at infinity*이다.
 
 ## Homogeneous Polynomial과 사영다양체
 
@@ -96,25 +96,25 @@ $$$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$$
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 다항식 $$F \in \mathbb{K}[\x_0, \ldots, \x_n]$$이 *homogeneous of degree $$d$$*라는 것은 모든 $$\lambda \in \mathbb{K}$$에 대해
+<ins id="def5">**정의 5**</ins> 다항식 $$F \in \mathbb{K}[\\x_0, \ldots, \\x_n]$$이 *homogeneous of degree $$d$$*라는 것은 모든 $$\lambda \in \mathbb{K}$$에 대해
 
-$$$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n)$$$
+$$$F(\lambda \\x_0, \ldots, \lambda \\x_n) = \lambda^d F(\\x_0, \ldots, \\x_n)$$$
 
 을 만족하는 것이다.
 
 </div>
 
-Homogeneous polynomial $$F$$에 대해 $$F([x_0 : \cdots : x_n])$$은 잘 정의되지 않는다. 그러나 조건 $$F(x_0, \ldots, x_n) = 0$$은 well-defined이다. 왜냐하면
+Homogeneous polynomial $$F$$에 대해 $$F([\x_0 : \cdots : \x_n])$$은 잘 정의되지 않는다. 그러나 조건 $$F(\x_0, \ldots, \x_n) = 0$$은 well-defined이다. 왜냐하면
 
-$$$F(\lambda x_0, \ldots, \lambda x_n) = \lambda^d F(x_0, \ldots, x_n) = 0 \iff F(x_0, \ldots, x_n) = 0$$$
+$$$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n) = 0 \iff F(\x_0, \ldots, \x_n) = 0$$$
 
 이기 때문이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Homogeneous polynomials $$F_1, \ldots, F_k \in \mathbb{K}[\x_0, \ldots, \x_n]$$에 대하여, *projective variety<sub>사영다양체</sub>* $$V(F_1, \ldots, F_k)$$를
+<ins id="def6">**정의 6**</ins> Homogeneous polynomials $$F_1, \ldots, F_k \in \mathbb{K}[\\x_0, \ldots, \\x_n]$$에 대하여, *projective variety<sub>사영다양체</sub>* $$V(F_1, \ldots, F_k)$$를
 
-$$$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \cdots = F_k(x) = 0\}$$$
+$$$V(F_1, \ldots, F_k) = \{[\x_0 : \cdots : \x_n] \in \mathbb{P}^n \mid F_1(x) = \cdots = F_k(x) = 0\}$$$
 
 으로 정의한다.
 
@@ -124,9 +124,9 @@ $$$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \
 
 <ins id="ex7">**예시 7**</ins> $$\mathbb{P}^2$$에서의 기본적인 사영다양체들:
 
-1. **사영직선**: $$V(a_0 \x_0 + a_1 \x_1 + a_2 \x_2)$$
-2. **원뿔곡선<sub>conic</sub>**: $$V(\x_0^2 + \x_1^2 - \x_2^2)$$
-3. **세 직선의 합집합**: $$V(\x_0 \x_1 \x_2)$$
+1. **사영직선**: $$V(a_0 \\x_0 + a_1 \\x_1 + a_2 \\x_2)$$
+2. **원뿔곡선<sub>conic</sub>**: $$V(\\x_0^2 + \\x_1^2 - \\x_2^2)$$
+3. **세 직선의 합집합**: $$V(\\x_0 \\x_1 \\x_2)$$
 
 </div>
 
@@ -136,7 +136,7 @@ $$$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \
 
 $$$[\x : \y] \mapsto [\x^2 : \x\y : \y^2]$$$
 
-으로 정의하면, 그 image는 $$V(\x_0 \x_2 - \x_1^2)$$이다. 이는 conic이다.
+으로 정의하면, 그 image는 $$V(\\x_0 \\x_2 - \\x_1^2)$$이다. 이는 conic이다.
 
 </div>
 
@@ -176,7 +176,7 @@ Standard open cover $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$을 생각하자.
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> Ideal $$I \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$$이 *homogeneous*라는 것은 $$I$$가 homogeneous polynomials들로 생성되는 것이다.
+<ins id="def11">**정의 11**</ins> Ideal $$I \subseteq \mathbb{K}[\\x_0, \ldots, \\x_n]$$이 *homogeneous*라는 것은 $$I$$가 homogeneous polynomials들로 생성되는 것이다.
 
 </div>
 
@@ -184,7 +184,7 @@ Standard open cover $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$을 생각하자.
 
 <ins id="def12">**정의 12**</ins> 부분집합 $$X \subseteq \mathbb{P}^n$$의 *homogeneous ideal* $$I(X)$$를
 
-$$$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}$$$
+$$$I(X) = \{F \in \mathbb{K}[\\x_0, \ldots, \\x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}$$$
 
 으로 정의한다.
 
@@ -192,14 +192,14 @@ $$$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous an
 
 <div class="theorem" markdown="1">
 
-<ins id="thm13">**정리 13**</ins> (Projective Nullstellensatz) $$\mathbb{K}$$가 대수적으로 닫힌 체이고 $$I \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$$이 homogeneous ideal이라 하자. 그럼
+<ins id="thm13">**정리 13**</ins> (Projective Nullstellensatz) $$\mathbb{K}$$가 대수적으로 닫힌 체이고 $$I \subseteq \mathbb{K}[\\x_0, \ldots, \\x_n]$$이 homogeneous ideal이라 하자. 그럼
 
-1. $$V(I) = \emptyset \iff I \supseteq (\x_0, \ldots, \x_n)$$
+1. $$V(I) = \emptyset \iff I \supseteq (\\x_0, \ldots, \\x_n)$$
 2. $$I(V(I)) = \sqrt{I}$$ (if $$V(I) \ne \emptyset$$)
 
 </div>
 
-아핀 경우와의 차이점은 $$V(I) = \emptyset$$이 $$I = (1)$$을 의미하지 않고, $$I$$가 *irrelevant ideal* $$(\x_0, \ldots, \x_n)$$을 포함하는 것을 의미한다는 점이다. 이는 $$(\x_0, \ldots, \x_n)$$이 $$\mathbb{K}^{n+1}$$의 원점에 해당하는데, 사영공간의 정의에서 원점은 제외되었기 때문이다.
+아핀 경우와의 차이점은 $$V(I) = \emptyset$$이 $$I = (1)$$을 의미하지 않고, $$I$$가 *irrelevant ideal* $$(\\x_0, \ldots, \\x_n)$$을 포함하는 것을 의미한다는 점이다. 이는 $$(\\x_0, \ldots, \\x_n)$$이 $$\mathbb{K}^{n+1}$$의 원점에 해당하는데, 사영공간의 정의에서 원점은 제외되었기 때문이다.
 
 ## 사영다양체와 아핀다양체의 관계
 
@@ -214,19 +214,19 @@ $$$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous an
 
 $$U_0$$의 경우, $$X = V(F_1, \ldots, F_k)$$이고 각 $$F_j$$가 homogeneous of degree $$d_j$$라 하자. 그럼 $$X \cap U_0$$는 $$\mathbb{A}^n$$에서
 
-$$$F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = 0, \quad j = 1, \ldots, k$$$
+$$$F_j\left(1, \frac{\\x_1}{\\x_0}, \ldots, \frac{\\x_n}{\\x_0}\right) = 0, \quad j = 1, \ldots, k$$$
 
-을 만족하는 점들이다. 양변에 $$\x_0^{d_j}$$를 곱하면
+을 만족하는 점들이다. 양변에 $$\\x_0^{d_j}$$를 곱하면
 
-$$$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F_j(\x_0, \x_1, \ldots, \x_n) = 0$$$
+$$$\\x_0^{d_j} F_j\left(1, \frac{\\x_1}{\\x_0}, \ldots, \frac{\\x_n}{\\x_0}\right) = F_j(\\x_0, \\x_1, \ldots, \\x_n) = 0$$$
 
-이다. 이제 $$f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$$라 두면, $$X \cap U_0 = V(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이다.
+이다. 이제 $$f_j(\\x_1, \ldots, \\x_n) = F_j(1, \\x_1, \ldots, \\x_n)$$라 두면, $$X \cap U_0 = V(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이다.
 
 </details>
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> $$\mathbb{P}^2$$에서 원 $$X = V(\x_0^2 + \x_1^2 - \x_2^2)$$를 생각하자. 그럼
+<ins id="ex15">**예시 15**</ins> $$\mathbb{P}^2$$에서 원 $$X = V(\\x_0^2 + \\x_1^2 - \\x_2^2)$$를 생각하자. 그럼
 
 - $$X \cap U_2 = V(\x^2 + \y^2 - 1) \subset \mathbb{A}^2$$ (단위원)
 - $$X \cap U_0 = V(1 + \y^2 - \z^2) \subset \mathbb{A}^2$$ (쌍곡선)
@@ -251,7 +251,7 @@ $$$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$$
 
 <ins id="ex17">**예시 17**</ins>
 
-1. **항등사상**: $$\mathbb{P}^n \to \mathbb{P}^n$$, $$[\x_0 : \cdots : \x_n] \mapsto [\x_0 : \cdots : \x_n]$$
+1. **항등사상**: $$\mathbb{P}^n \to \mathbb{P}^n$$, $$[\\x_0 : \cdots : \\x_n] \mapsto [\\x_0 : \cdots : \\x_n]$$
 2. **Veronese embedding**: $$\mathbb{P}^1 \to \mathbb{P}^2$$, $$[\x : \y] \mapsto [\x^2 : \x\y : \y^2]$$
 3. **Segre embedding**: $$\mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$$, $$([\x : \y], [\u : \v]) \mapsto [\x\u : \x\v : \y\u : \y\v]$$
 
@@ -271,7 +271,7 @@ $$$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$$
 
 이는 세 개의 quadratic polynomials
 
-$$$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$$
+$$$\\x_0 \\x_2 - \\x_1^2, \quad \\x_0 \\x_3 - \\x_1 \\x_2, \quad \\x_1 \\x_3 - \\x_2^2$$$
 
 의 공통 영점이다. 이 사영다양체는 $$\mathbb{P}^1$$과 isomorphic하다.
 
