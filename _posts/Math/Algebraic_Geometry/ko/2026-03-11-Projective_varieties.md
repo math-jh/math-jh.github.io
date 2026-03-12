@@ -174,21 +174,21 @@ $$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x
 
 $$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$
 
-이다. 이들이 서로 inverse인 것은 정의로부터 자명하다. 이제 $$\varphi_0$$와 $$\psi_0$$가 연속임을 보이자.
+이다. 이들이 서로 inverse인 것은 정의로부터 자명하다. 이제 $$\varphi_0$$와 $$\psi_0$$가 모두 연속임을 보여야 한다.
 
-$$\psi_0$$가 연속임을 보이기 위해, $$\mathbb{A}^n$$의 닫힌집합 $$V(f)$$를 생각하자. 그럼
+**$$\varphi_0$$의 연속성**: $$\mathbb{A}^n$$의 닫힌집합 $$V(f)$$를 생각하자. 그럼
 
-$$\psi_0^{-1}(V(f)) = \{[1 : a_1 : \cdots : a_n] \mid f(a_1, \ldots, a_n) = 0\}$$
+$$\varphi_0^{-1}(V(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \mid f\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) = 0\right\}$$
 
-이다. $$U_0$$의 subspace topology에서 이는 $$V(f(\x_1/\x_0, \ldots, \x_n/\x_0)) \cap U_0$$와 같다. $$f(\x_1/\x_0, \ldots, \x_n/\x_0)$$를 clear하면 homogeneous polynomial을 얻으므로 이는 $$U_0$$에서 닫힌집합이다.
+이다. $$f$$가 degree $$d$$인 다항식이라면, $$x_0^d f(x_1/x_0, \ldots, x_n/x_0)$$는 homogeneous polynomial $$F$$가 되어 $$\varphi_0^{-1}(V(f)) = V(F) \cap U_0$$이다. 이는 $$U_0$$의 subspace topology에서 닫힌집합이다.
 
-$$\varphi_0$$가 연속임을 보이기 위해, $$U_0$$의 닫힌집합 $$V(F) \cap U_0$$를 생각하자. 여기서 $$F$$는 homogeneous polynomial이다. 그럼 $$\varphi_0^{-1}(V(F) \cap U_0)$$는 $$\mathbb{A}^n$$에서
+**$$\psi_0$$의 연속성**: $$U_0$$의 닫힌집합 $$V(F) \cap U_0$$를 생각하자. 여기서 $$F$$는 homogeneous polynomial of degree $$d$$이다. 그럼
 
-$$F\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = 0$$
+$$\psi_0^{-1}(V(F) \cap U_0) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid F(1, a_1, \ldots, a_n) = 0\}$$
 
-을 만족하는 점들이다. 이는 $$\mathbb{A}^n$$에서 다항식의 영점이므로 닫힌집합이다.
+이다. $$F(1, \x_1, \ldots, \x_n)$$은 $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 다항식이므로 $$\psi_0^{-1}(V(F) \cap U_0)$$는 $$\mathbb{A}^n$$에서 닫힌집합이다.
 
-따라서 $$\varphi_0$$는 homeomorphism이다. 일반적인 $$U_i$$도 비슷하게 보인다.
+따라서 $$\varphi_0$$와 $$\psi_0$$가 서로 inverse이고 모두 연속이므로 $$\varphi_0$$는 homeomorphism이다. 일반적인 $$U_i$$도 비슷하게 보인다.
 
 </details>
 
