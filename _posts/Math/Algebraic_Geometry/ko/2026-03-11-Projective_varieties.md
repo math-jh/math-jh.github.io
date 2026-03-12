@@ -31,7 +31,7 @@ $$\mathbb{P}^n = (\mathbb{K}^{n+1} \setminus \{0\}) / \sim$$
 
 이며, 여기서 동치관계 $$\sim$$은
 
-$$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$$x_i = \lambda y_i$$ for some $$\lambda \in \mathbb{K}^\ast$$, for all $$i$$}$$
+$$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$x_i = \lambda y_i$ for some $\lambda \in \mathbb{K}^\ast$, for all $i$}$$
 
 으로 주어진다. 혼동의 여지가 없을 때는 $$\mathbb{P}^n$$으로 적는다.
 
