@@ -17,11 +17,9 @@ weight: 2
 
 ---
 
-[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 우리는 affine space $$\mathbb{A}^n$$과 그 위의 다항식으로 정의되는 부분집합들을 살펴보았다. 그러나 affine space에는 몇 가지 불편한 점이 있다. 가장 큰 문제 중 하나는 일종의 compactness로, 예를 들어 $$\mathbb{A}^2$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 
+[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 우리는 affine space $$\mathbb{A}^n$$과 그 위의 다항식으로 정의되는 부분집합들을 살펴보았다. 그러나 affine space에는 몇 가지 불편한 점이 있다. 가장 큰 문제 중 하나는 일종의 compactness로, 예를 들어 $$\mathbb{A}^2$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 이를 해결하기 위해 우리는 $$\mathbb{A}^n$$의 one-point compactification을 생각할 수 있을 것이며, 이를 대수기하학의 언어로 구현하는 것이 이번 글의 목적이다. 
 
-Projective space $$\mathbb{P}^n$$은 이러한 문제를 해결한다. Projective space는 affine space에 "무한원점들"을 추가하여, 임의의 두 직선이 (평행한 경우 무한원점에서) 만나도록 만든 것이다.
-
-## Projective Space의 정의
+## 사영공간의 정의
 
 <div class="definition" markdown="1">
 
@@ -39,15 +37,15 @@ $$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$x_i = \lambda y_i$ for 
 
 동치류 $$[(x_0, \ldots, x_n)]$$은 보통 $$[x_0 : \cdots : x_n]$$으로 표기하며, 이를 *homogeneous coordinates<sub>동차좌표</sub>*라 부른다. $$x_0, \ldots, x_n$$을 *좌표*라 하고, 이들 중 적어도 하나는 $$0$$이 아니어야 한다. Homogeneous coordinates의 핵심은 좌표들이 *비율*만을 결정한다는 것이다. 즉, $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$ for $$\lambda \in \mathbb{K}^\ast$$이다.
 
-## Homogeneous Polynomial과 Projective Variety
+## 동차다항식과 사영공간
 
 이제 우리는 affine case에서와 마찬가지로 $$\mathbb{P}^n$$에 위상구조를 주어야 한다. Projective space에서도 마찬가지로 우리는 다항식들의 zero set으로 닫힌집합을 정의할 것인데, 주의할 점은 $$\mathbb{P}^n$$은 quotient set으로 정의되었으므로 다항식이 잘 정의되지 않는다는 것이다. 즉 임의의 $$F \in \mathbb{K}[x_0, \ldots, x_n]$$에 대하여, $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이지만 일반적으로
 
 $$F(x_0, \ldots, x_n)\neq F(\lambda x_0, \ldots, \lambda x_n)$$
 
-이다. 
+이며, 이 evaluation이 임의의 representative에 대해 잘 정의되도록 하는 유일한 다항식은 상수 다항식 뿐이다. 
 
-그러나 *homogeneous polynomial*을 사용하면 이 문제가 해결된다. Homogeneous polynomial $$F$$ of degree $$d$$에 대해서는
+그러나 만일 다항식이 정의하는 zero set에만 관심을 둔다면 이 문제가 해결된다. Homogeneous polynomial $$F$$ of degree $$d$$에 대해서는
 
 $$F(\lambda x_0, \ldots, \lambda x_n) = \lambda^d F(x_0, \ldots, x_n)$$
 
@@ -59,7 +57,7 @@ $$F(\lambda x_0, \ldots, \lambda x_n) = 0 \iff F(x_0, \ldots, x_n) = 0$$
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 다항식 $$F \in \mathbb{K}[\x_0, \ldots, \x_n]$$이 *homogeneous of degree $$d$$*라는 것은 모든 $$\lambda \in \mathbb{K}$$에 대해
+<ins id="def2">**정의 2**</ins> 다항식 $$F \in \mathbb{K}[\x_0, \ldots, \x_n]$$이 *homogeneous of degree $$d$$<sub>$d$차 동차다항식</sub>*라는 것은 모든 $$\lambda \in \mathbb{K}$$에 대해
 
 $$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n)$$
 
