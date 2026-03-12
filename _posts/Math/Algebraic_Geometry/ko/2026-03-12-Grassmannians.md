@@ -197,7 +197,7 @@ Schubert variety의 정의는 복잡해 보이지만, 기하학적 의미는 명
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Standard flag $$V_i = \text{span}(e_1, \ldots, e_i)$$를 사용하자. $$\Omega_\lambda$$는 $$G(k, n)$$의 닫힌집합이며, 그 codimension은 $$k(n-k) - |\lambda|$$이다. 이는 $$\Omega_\lambda$$가 $$|\lambda|$$개의 독립적인 조건에 의해 정의됨을 의미한다. 구체적으로, 각 $$\lambda_i$$는 $$\lambda_i$$개의 조건을 추가한다.
+Standard flag $$V_i = \text{span}(e_1, \ldots, e_i)$$를 사용하자. $$\Omega_\lambda$$는 $$G(k, n)$$의 닫힌집합이며, 그 codimension은 $$k(n-k) - \lvert\lambda\rvert$$이다. 이는 $$\Omega_\lambda$$가 $$\lvert\lambda\rvert$$개의 독립적인 조건에 의해 정의됨을 의미한다. 구체적으로, 각 $$\lambda_i$$는 $$\lambda_i$$개의 조건을 추가한다.
 
 </details>
 
