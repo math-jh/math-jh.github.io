@@ -35,7 +35,7 @@ $$$T_p X = \{v \in \mathbb{K}^n \mid (df_i)_p(v) = 0 \text{ for all } i\}$$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> $$T_p X$$는 $$\mathbb{K}$$-벡터공간이며, 그 차원은 $$n - \text{rank}(J_p)$$이다. 여기서 $$J_p$$는 Jacobian matrix $$\left(\frac{\partial f_i}{\partial x_j}(p)\right)$$이다.
+<ins id="prop2">**명제 2**</ins> $$T_p X$$는 $$\mathbb{K}$$-벡터공간이며, 그 차원은 $$n - \text{rank}(J_p)$$이다. 여기서 $$J_p$$는 Jacobian matrix $$\left(\frac{\partial f_i}{\partial \x_j}(p)\right)$$이다.
 
 </div>
 
@@ -89,16 +89,16 @@ $$X$$의 generic point에서 $$\dim T_p X = \dim X$$이다. 다른 점에서는 
 <ins id="ex6">**예시 6**</ins>
 
 1. $$\mathbb{A}^n$$의 모든 점은 smooth point이다. ($$T_p \mathbb{A}^n = \mathbb{K}^n$$)
-2. $$V(y - x^2)$$의 모든 점은 smooth point이다.
-3. $$V(y^2 - x^3)$$의 원점은 singular point이다. ($$T_0 X = \mathbb{K}^2$$, but $$\dim X = 1$$)
+2. $$V(\y - \x^2)$$의 모든 점은 smooth point이다.
+3. $$V(\y^2 - \x^3)$$의 원점은 singular point이다. ($$T_0 X = \mathbb{K}^2$$, but $$\dim X = 1$$)
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> **Cusp**: $$X = V(y^2 - x^3) \subset \mathbb{A}^2$$의 원점에서
+<ins id="ex7">**예시 7**</ins> **Cusp**: $$X = V(\y^2 - \x^3) \subset \mathbb{A}^2$$의 원점에서
 
-$$$J_0 = \begin{pmatrix} -3x^2 & 2y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 0 \end{pmatrix}$$$
+$$$J_0 = \begin{pmatrix} -3\x^2 & 2\y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 0 \end{pmatrix}$$$
 
 이므로 $$\dim T_0 X = 2 - 0 = 2 > 1 = \dim X$$이다. 따라서 원점은 singular point이다.
 
@@ -106,9 +106,9 @@ $$$J_0 = \begin{pmatrix} -3x^2 & 2y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> **Node**: $$X = V(y^2 - x^2(x+1)) \subset \mathbb{A}^2$$의 원점에서
+<ins id="ex8">**예시 8**</ins> **Node**: $$X = V(\y^2 - \x^2(\x+1)) \subset \mathbb{A}^2$$의 원점에서
 
-$$$J_0 = \begin{pmatrix} -2x - 3x^2 & 2y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 0 \end{pmatrix}$$$
+$$$J_0 = \begin{pmatrix} -2\x - 3\x^2 & 2\y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 0 \end{pmatrix}$$$
 
 이므로 원점은 singular point이다. 이 점에서 곡선은 두 갈래로 갈라진다.
 
@@ -150,8 +150,8 @@ $$\dim T_p X = n - \text{rank}(J_p)$$이고, $$p$$가 smooth point라는 것은 
 <ins id="ex12">**예시 12**</ins>
 
 1. $$\mathbb{A}^n$$과 $$\mathbb{P}^n$$은 smooth하다.
-2. $$V(y - x^2)$$는 smooth하다.
-3. $$V(y^2 - x^3)$$은 singular이다. (원점이 singular point)
+2. $$V(\y - \x^2)$$는 smooth하다.
+3. $$V(\y^2 - \x^3)$$은 singular이다. (원점이 singular point)
 4. Smooth projective curve는 모든 점에서 매끄러운 사영곡선이다.
 
 </div>
@@ -168,7 +168,7 @@ Singular point에서는 tangent space가 너무 크다. 대신 *tangent cone*을
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> $$X = V(y^2 - x^3)$$의 원점에서, tangent cone은 $$V(y^2)$$이다. 이는 $$y = 0$$ 직선 (두 번)이며, cusp의 방향을 보여준다.
+<ins id="ex14">**예시 14**</ins> $$X = V(\y^2 - \x^3)$$의 원점에서, tangent cone은 $$V(\y^2)$$이다. 이는 $$\y = 0$$ 직선 (두 번)이며, cusp의 방향을 보여준다.
 
 </div>
 
