@@ -133,7 +133,7 @@ $$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and
 
 </div>
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
 <ins id="thm9">**정리 9**</ins> (Projective Nullstellensatz) Field $$\mathbb{K}$$가 대수적으로 닫힌 체이고 $$I \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$$이 homogeneous ideal이라 하자. 그럼
 
