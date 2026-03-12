@@ -65,7 +65,7 @@ $$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n)$$
 
 </div>
 
-정의를 복잡하게 해 두긴 했지만, 이는 본질적으로 다항식을 단항식들의 합으로 나타냈을 때, 모든 단항식이 $$d$$차라는 것이다. 
+정의를 복잡하게 해 두긴 했지만, 이는 본질적으로 다항식을 단항식들의 합으로 나타냈을 때, 모든 단항식이 $$d$$차라는 것이다. 그럼 다음을 정의할 수 있다. 
 
 <div class="definition" markdown="1">
 
@@ -76,6 +76,8 @@ $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 으로 정의한다.
 
 </div>
+
+위에서 설명했듯, 각각의 $$F_i$$들이 homogeneous이므로 이것이 잘 정의되는 것을 확인할 수 있다. 
 
 <div class="example" markdown="1">
 
