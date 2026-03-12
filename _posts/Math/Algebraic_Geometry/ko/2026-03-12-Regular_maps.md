@@ -41,7 +41,7 @@ weight: 4
 
 1. 아핀다양체 $$X$$에서 $$\mathcal{O}(X) = \mathbb{K}[X]$$이다.
 2. $$\mathbb{P}^n$$에서 $$\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$$이다. (상수함수만 존재)
-3. $$\mathbb{A}^2 \setminus \{(0,0)\}$$에서 $$\mathcal{O}(X) = \mathbb{K}[\x, \y]$$이다.
+3. $$\mathbb{A}^2 \setminus \{(0,0)\}$$에서 $$\mathcal{O}(X) = \mathbb{K}[x, y]$$이다.
 
 </div>
 
@@ -97,9 +97,9 @@ $$\varphi: X \to Y$$, $$\psi: Y \to Z$$가 regular map이라 하자. $$f \in \ma
 
 <ins id="ex8">**예시 8**</ins>
 
-1. $$\mathbb{A}^1 \to V(\y - \x^2) \subset \mathbb{A}^2$$, $$t \mapsto (t, t^2)$$는 isomorphism이다.
-2. $$\mathbb{P}^1 \to V(\x_0 \x_2 - \x_1^2) \subset \mathbb{P}^2$$, $$[\x : \y] \mapsto [\x^2 : \x\y : \y^2]$$는 isomorphism이다.
-3. $$\mathbb{A}^1 \setminus \{0\} \to V(\x\y - 1) \subset \mathbb{A}^2$$, $$t \mapsto (t, 1/t)$$는 isomorphism이다.
+1. $$\mathbb{A}^1 \to V(y - x^2) \subset \mathbb{A}^2$$, $$t \mapsto (t, t^2)$$는 isomorphism이다.
+2. $$\mathbb{P}^1 \to V(x_0 x_2 - x_1^2) \subset \mathbb{P}^2$$, $$[x : y] \mapsto [x^2 : xy : y^2]$$는 isomorphism이다.
+3. $$\mathbb{A}^1 \setminus \{0\} \to V(xy - 1) \subset \mathbb{A}^2$$, $$t \mapsto (t, 1/t)$$는 isomorphism이다.
 
 </div>
 
@@ -135,7 +135,7 @@ Regular function의 정의에 의해 자명하다.
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> **Projection**: $$\mathbb{A}^2 \to \mathbb{A}^1$$, $$(\x, \y) \mapsto \x$$는 regular map이다.
+<ins id="ex11">**예시 11**</ins> **Projection**: $$\mathbb{A}^2 \to \mathbb{A}^1$$, $$(x, y) \mapsto x$$는 regular map이다.
 
 </div>
 
@@ -147,7 +147,7 @@ Regular function의 정의에 의해 자명하다.
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> **Veronese embedding**: $$\mathbb{P}^n \to \mathbb{P}^N$$, $$[\x_0 : \cdots : \x_n] \mapsto [\cdots : \x_i \x_j : \cdots]$$ (모든 단항식 $$\x_i \x_j$$)은 regular map이다. 여기서 $$N = \binom{n+2}{2} - 1$$이다.
+<ins id="ex13">**예시 13**</ins> **Veronese embedding**: $$\mathbb{P}^n \to \mathbb{P}^N$$, $$[x_0 : \cdots : x_n] \mapsto [\cdots : x_i x_j : \cdots]$$ (모든 단항식 $$x_i x_j$$)은 regular map이다. 여기서 $$N = \binom{n+2}{2} - 1$$이다.
 
 </div>
 
