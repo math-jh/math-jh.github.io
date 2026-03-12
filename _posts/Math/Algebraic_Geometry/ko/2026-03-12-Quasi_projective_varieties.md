@@ -89,8 +89,8 @@ $$$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$$
 
 <ins id="ex6">**예시 6**</ins>
 
-1. $$\mathbb{A}^2 \setminus \{(0,0)\} \to \mathbb{P}^1$$, $$(x, y) \mapsto [x : y]$$는 morphism이다.
-2. $$\mathbb{P}^1 \setminus \{[0 : 1]\} \to \mathbb{A}^1$$, $$[x : y] \mapsto x/y$$는 morphism이다.
+1. $$\mathbb{A}^2 \setminus \{(0,0)\} \to \mathbb{P}^1$$, $$(\x, \y) \mapsto [\x : \y]$$는 morphism이다.
+2. $$\mathbb{P}^1 \setminus \{[0 : 1]\} \to \mathbb{A}^1$$, $$[\x : \y] \mapsto \x/\y$$는 morphism이다.
 
 </div>
 
