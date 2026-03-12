@@ -25,12 +25,13 @@ weight: 4
 
 <div class="definition" markdown="1">
 <ins id="def1">**정의 1**</ins> 준사영다양체 $$X$$ 위의 점 $$p$$에서 함수 $$f$$가 *regular<sub>정칙</sub>*라는 것은 $$p$$의 어떤 열린근방 $$U$$에서 $$f$$가 다항식으로 표현되는 것을 말한다. 함수 $$f: X 	o \mathbb{K}$$가 *regular function<sub>정칙함수</sub>*이라는 것은 모든 점 $$p \in X$$에서 regular인 것이다. $$X$$ 위의 모든 regular function들의 집합을 $$\mathcal{O}(X)$$ 또는 $$\mathcal{O}_X(X)$$로 표기한다.
+</div>
 
 이 정의는 미분다양체(manifold)에서의 smooth function 정의와 비슷하다. 미분다양체에서 각 점 $$p$$의 열린근방이 $$\mathbb{R}^n$$과 동형인 chart $$\varphi: U \to \mathbb{R}^n$$을 갖고, 함수 $$f: M \to \mathbb{R}$$가 smooth인 것은 $$f \circ \varphi^{-1}: \mathbb{R}^n \to \mathbb{R}$$이 smooth함으로 정의된다. Quasi-projective variety의 경우, [§준사영다양체](/ko/math/algebraic_geometry/quasi_projective_varieties)에서 논의했듯 각 점 $$p$$가 어떤 affine chart $$U_i \cong \mathbb{A}^n$$에 속하고, 함수 $$f$$가 regular인 것은 이 affine chart에서 다항식으로 표현됨으로 정의된다.
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins>
+<ins id="ex2">**예시 2**</ins>
 
 1. 아핀다양체 $$X$$에서 $$\mathcal{O}(X) = \mathbb{K}[X]$$이다.
 2. $$\mathbb{P}^n$$에서 $$\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$$이다. (상수함수만 존재)
@@ -40,7 +41,7 @@ weight: 4
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 준사영다양체 $$X, Y$$ 사이의 *regular map<sub>정칙사상</sub>* (또는 *morphism*) $$\varphi: X \to Y$$는 다음 조건을 만족하는 함수이다:
+<ins id="def2">**정의 2**</ins> 준사영다양체 $$X, Y$$ 사이의 *regular map<sub>정칙사상</sub>* (또는 *morphism*) $$\varphi: X \to Y$$는 다음 조건을 만족하는 함수이다:
 
 $$Y$$의 임의의 열린부분집합 $$V$$와 regular function $$f \in \mathcal{O}(V)$$에 대해, $$f \circ \varphi: \varphi^{-1}(V) \to \mathbb{K}$$는 regular function이다.
 
@@ -50,7 +51,7 @@ $$Y$$의 임의의 열린부분집합 $$V$$와 regular function $$f \in \mathcal
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 아핀다양체와 사영다양체의 경우, 위 정의는 이전의 morphism 정의와 일치한다.
+<ins id="prop3">**명제 3**</ins> 아핀다양체와 사영다양체의 경우, 위 정의는 이전의 morphism 정의와 일치한다.
 
 </div>
 
@@ -67,7 +68,7 @@ $$Y$$의 임의의 열린부분집합 $$V$$와 regular function $$f \in \mathcal
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Regular map의 합성은 regular map이다. 항등사상은 regular map이다.
+<ins id="prop4">**명제 4**</ins> Regular map의 합성은 regular map이다. 항등사상은 regular map이다.
 
 </div>
 
@@ -82,13 +83,13 @@ $$\varphi: X \to Y$$, $$\psi: Y \to Z$$가 regular map이라 하자. $$f \in \ma
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Regular map $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 regular map인 것이다.
+<ins id="def3">**정의 3**</ins> Regular map $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 regular map인 것이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins>
+<ins id="ex4">**예시 4**</ins>
 
 1. $$\mathbb{A}^1 \to V(y - x^2) \subset \mathbb{A}^2$$, $$t \mapsto (t, t^2)$$는 isomorphism이다.
 2. $$\mathbb{P}^1 \to V(x_0 x_2 - x_1^2) \subset \mathbb{P}^2$$, $$[x : y] \mapsto [x^2 : xy : y^2]$$는 isomorphism이다.
@@ -100,7 +101,7 @@ $$\varphi: X \to Y$$, $$\psi: Y \to Z$$가 regular map이라 하자. $$f \in \ma
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> Regular map $$\varphi: X \to Y$$는 연속함수이다. (Zariski 위상에서)
+<ins id="prop5">**명제 5**</ins> Regular map $$\varphi: X \to Y$$는 연속함수이다. (Zariski 위상에서)
 
 </div>
 
@@ -113,7 +114,7 @@ $$Z \subseteq Y$$가 닫힌집합이라면, $$Z = V(f_1, \ldots, f_k)$$ for some
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> 닫힌집합으로의 regular map의 제한은 regular map이다. 열린집합으로의 regular map의 제한도 regular Map이다.
+<ins id="prop6">**명제 6**</ins> 닫힌집합으로의 regular map의 제한은 regular map이다. 열린집합으로의 regular map의 제한도 regular Map이다.
 
 </div>
 
@@ -128,19 +129,19 @@ Regular function의 정의에 의해 자명하다.
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> **Projection**: $$\mathbb{A}^2 \to \mathbb{A}^1$$, $$(x, y) \mapsto x$$는 regular map이다.
+<ins id="ex7">**예시 7**</ins> **Projection**: $$\mathbb{A}^2 \to \mathbb{A}^1$$, $$(x, y) \mapsto x$$는 regular map이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> **Inclusion**: $$\mathbb{A}^1 \hookrightarrow \mathbb{P}^1$$, $$t \mapsto [t : 1]$$는 regular map이다.
+<ins id="ex8">**예시 8**</ins> **Inclusion**: $$\mathbb{A}^1 \hookrightarrow \mathbb{P}^1$$, $$t \mapsto [t : 1]$$는 regular map이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> **Veronese embedding**: $$\mathbb{P}^n \to \mathbb{P}^N$$, $$[x_0 : \cdots : x_n] \mapsto [\cdots : x_i x_j : \cdots]$$ (모든 단항식 $$x_i x_j$$)은 regular map이다. 여기서 $$N = \binom{n+2}{2} - 1$$이다.
+<ins id="ex9">**예시 9**</ins> **Veronese embedding**: $$\mathbb{P}^n \to \mathbb{P}^N$$, $$[x_0 : \cdots : x_n] \mapsto [\cdots : x_i x_j : \cdots]$$ (모든 단항식 $$x_i x_j$$)은 regular map이다. 여기서 $$N = \binom{n+2}{2} - 1$$이다.
 
 </div>
 
