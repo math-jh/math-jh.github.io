@@ -25,7 +25,7 @@ weight: 7
 
 <ins id="def1">**정의 1**</ins> 아핀다양체 $$X = V(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$의 점 $$p$$에서의 *tangent space<sub>접공간</sub>* $$T_p X$$를
 
-$$$T_p X = \{v \in \mathbb{K}^n \mid (df_i)_p(v) = 0 \text{ for all } i\}$$$
+$$T_p X = \{v \in \mathbb{K}^n \mid (df_i)_p(v) = 0 \text{ for all } i\}$$
 
 으로 정의한다. 여기서 $$(df_i)_p$$는 $$f_i$$의 $$p$$에서의 differential이다.
 
@@ -98,7 +98,7 @@ $$X$$의 generic point에서 $$\dim T_p X = \dim X$$이다. 다른 점에서는 
 
 <ins id="ex7">**예시 7**</ins> **Cusp**: $$X = V(y^2 - x^3) \subset \mathbb{A}^2$$의 원점에서
 
-$$$J_0 = \begin{pmatrix} -3x^2 & 2y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 0 \end{pmatrix}$$$
+$$J_0 = \begin{pmatrix} -3x^2 & 2y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 0 \end{pmatrix}$$
 
 이므로 $$\dim T_0 X = 2 - 0 = 2 > 1 = \dim X$$이다. 따라서 원점은 singular point이다.
 
@@ -108,7 +108,7 @@ $$$J_0 = \begin{pmatrix} -3x^2 & 2y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 
 
 <ins id="ex8">**예시 8**</ins> **Node**: $$X = V(y^2 - x^2(x+1)) \subset \mathbb{A}^2$$의 원점에서
 
-$$$J_0 = \begin{pmatrix} -2x - 3x^2 & 2y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 0 \end{pmatrix}$$$
+$$J_0 = \begin{pmatrix} -2x - 3x^2 & 2y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 0 & 0 \end{pmatrix}$$
 
 이므로 원점은 singular point이다. 이 점에서 곡선은 두 갈래로 갈라진다.
 

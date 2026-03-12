@@ -77,7 +77,7 @@ $$X$$의 닫힌집합들이 $$X \cap Z$$의 꼴이므로:
 
 $$p$$의 적당한 열린근방 $$U \subseteq X$$와 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
 
-$$$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$$
+$$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
 이고, 모든 $$p \in U$$에 대해 $$F_i(p)$$들이 동시에 $$0$$이 아니다.
 
