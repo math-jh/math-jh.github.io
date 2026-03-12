@@ -35,6 +35,8 @@ weight: 4
 
 </div>
 
+이 정의는 미분다양체(manifold)에서의 smooth function 정의와 비슷하다. 미분다양체에서 각 점 $$p$$의 열린근방이 $$\mathbb{R}^n$$과 동형인 chart $$\varphi: U \to \mathbb{R}^n$$을 갖고, 함수 $$f: M \to \mathbb{R}$$가 smooth인 것은 $$f \circ \varphi^{-1}: \mathbb{R}^n \to \mathbb{R}$$이 smooth함으로 정의된다. Quasi-projective variety의 경우, [§준사영다양체](/ko/math/algebraic_geometry/quasi_projective_varieties)에서 논의했듯 각 점 $$p$$가 어떤 affine chart $$U_i \cong \mathbb{A}^n$$에 속하고, 함수 $$f$$가 regular인 것은 이 affine chart에서 다항식으로 표현됨으로 정의된다.
+
 <div class="example" markdown="1">
 
 <ins id="ex3">**예시 3**</ins>
