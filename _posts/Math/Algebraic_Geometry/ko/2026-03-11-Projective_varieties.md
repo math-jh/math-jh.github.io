@@ -77,23 +77,11 @@ $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 
 </div>
 
-위에서 설명했듯, 각각의 $$F_i$$들이 homogeneous이므로 이것이 잘 정의되는 것을 확인할 수 있다.
-
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> $$\mathbb{P}^2$$에서의 기본적인 사영다양체들:
-
-1. **사영직선**: $$V(a_0 \x_0 + a_1 \x_1 + a_2 \x_2)$$
-2. **원뿔곡선<sub>conic</sub>**: $$V(\x_0^2 + \x_1^2 - \x_2^2)$$
-3. **세 직선의 합집합**: $$V(\x_0 \x_1 \x_2)$$
-
-</div>
-
-Affine case와 마찬가지로 우리는 위상구조를 정의하기 위해 Zariski topology를 사용한다. 이를 위해서는 다음 명제가 필요하다. 
+위에서 설명했듯, 각각의 $$F_i$$들이 homogeneous이므로 이것이 잘 정의되는 것을 확인할 수 있다. 그럼 affine case와 마찬가지로 우리는 위상구조를 정의하기 위해 Zariski topology를 사용한다. 이를 위해서는 다음 명제가 필요하다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 다음이 성립한다.
+<ins id="prop4">**명제 4**</ins> 다음이 성립한다.
 
 1. $$V(0) = \mathbb{P}^n$$, $$V(1) = \emptyset$$
 2. $$\bigcap_\alpha V(F_\alpha) = V((F_\alpha)_\alpha)$$
