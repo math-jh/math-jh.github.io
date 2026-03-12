@@ -118,9 +118,9 @@ $$\tilde{X} = \tilde{X}_0 \supsetneq \tilde{X}_1 \supsetneq \cdots \supsetneq \t
 
 </details>
 
-<div class="corollary" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="cor7">**따름정리 7**</ins> $$\dim \mathbb{P}^n = n$$이다.
+<ins id="prop7">**명제 7**</ins> $$\dim \mathbb{P}^n = n$$이다.
 
 </div>
 
