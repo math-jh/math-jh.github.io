@@ -43,7 +43,7 @@ $$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$x_i = \lambda y_i$ for 
 
 $$F(x_0, \ldots, x_n)\neq F(\lambda x_0, \ldots, \lambda x_n)$$
 
-이며, 이 evaluation이 임의의 representative에 대해 잘 정의되도록 하는 유일한 다항식은 상수 다항식 뿐이다. 
+이며, 이 evaluation이 임의의 representative에 대해 잘 정의되도록 하는 유일한 다항식은 상수다항식 뿐이다. 
 
 그러나 만일 다항식이 정의하는 zero set에만 관심을 둔다면 이 문제가 해결된다. Homogeneous polynomial $$F$$ of degree $$d$$에 대해서는
 
@@ -53,7 +53,7 @@ $$F(\lambda x_0, \ldots, \lambda x_n) = \lambda^d F(x_0, \ldots, x_n)$$
 
 $$F(\lambda x_0, \ldots, \lambda x_n) = 0 \iff F(x_0, \ldots, x_n) = 0$$
 
-이다. 따라서 homogeneous polynomial의 zero set은 projective space에서 well-defined하다.
+이다. 따라서 homogeneous polynomial의 zero set은 projective space에서 잘 정의된다. 
 
 <div class="definition" markdown="1">
 
@@ -64,6 +64,8 @@ $$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n)$$
 을 만족하는 것이다.
 
 </div>
+
+정의를 복잡하게 해 두긴 했지만, 이는 본질적으로 다항식을 단항식들의 합으로 나타냈을 때, 모든 단항식이 $$d$$차라는 것이다. 
 
 <div class="definition" markdown="1">
 
