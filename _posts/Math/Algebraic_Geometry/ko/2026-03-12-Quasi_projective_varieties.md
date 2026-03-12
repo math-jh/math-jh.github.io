@@ -137,6 +137,19 @@ $$X$$가 사영다양체 $$Y$$의 열린부분집합이라 하자.
 
 </details>
 
+## 왜 Quasi-projective variety인가?
+
+Quasi-projective variety라는 범주가 자연스러운 이유는 **국소적으로 affine variety처럼 다룰 수 있기 때문**이다. [§사영다양체, 명제 11](/ko/math/algebraic_geometry/projective_varieties#prop11)에서 보았듯, 사영다양체 $$Y$$의 각 점은 standard affine open set $$U_i \cong \mathbb{A}^n$$ 중 하나에 속한다. 따라서 quasi-projective variety $$X = Y \setminus Z$$의 각 점 $$p$$에 대해서도 $$p \in X \cap U_i$$인 $$i$$가 존재하고, $$X \cap U_i$$는 affine variety의 열린부분집합이다.
+
+이는 미분다양체(manifold)에서 각 점의 열린근방이 $$\mathbb{R}^n$$과 동형인 chart를 갖는 것과 비슷하다. Quasi-projective variety의 morphism 정의에서 "각 점 $$p$$의 열린근방 $$U$$"를 잡는 것은 바로 이 chart를 선택하는 것에 해당한다.
+
+즉, quasi-projective variety 범주는:
+- 아핀다양체를 포함하고
+- 사영다양체를 포함하면서
+- 동시에 **국소적으로는 항상 affine setting에서 작업할 수 있는**
+
+가장 자연스러운 범주이다. 다음 절 [§정칙사상](/ko/math/algebraic_geometry/regular_maps)에서 우리는 이 점을 더 자세히 탐구할 것이다.
+
 ---
 
 **참고문헌**
