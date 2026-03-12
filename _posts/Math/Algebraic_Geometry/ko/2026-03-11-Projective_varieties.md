@@ -17,7 +17,9 @@ weight: 2
 
 ---
 
-[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 우리는 affine space $$\mathbb{A}^n$$과 그 위의 다항식으로 정의되는 부분집합들을 살펴보았다. 그러나 affine space에는 몇 가지 불편한 점이 있다. 가장 큰 문제 중 하나는 일종의 compactness로, 예를 들어 $$\mathbb{A}^2$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 이를 해결하기 위해 우리는 $$\mathbb{A}^n$$의 one-point compactification을 생각할 수 있을 것이며, 이를 대수기하학의 언어로 구현하는 것이 이번 글의 목적이다. 
+[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 우리는 affine space $$\mathbb{A}^n$$과 그 위의 다항식으로 정의되는 부분집합들을 살펴보았다. 그러나 affine space에는 몇 가지 불편한 점이 있다. 가장 큰 문제 중 하나는 일종의 compactness로, 예를 들어 $$\mathbb{A}^2$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 이를 해결하기 위해, 위상공간에서 우리는 $$\mathbb{A}^n$$의 one-point compactification을 생각할 수 있을 것이다. 
+
+
 
 ## 사영공간의 정의
 
