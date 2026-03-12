@@ -17,7 +17,7 @@ weight: 2
 
 ---
 
-[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 우리는 affine space $$\mathbb{A}^n$$과 그 위의 다항식으로 정의되는 부분집합들을 살펴보았다. 그러나 affine space에는 몇 가지 불편한 점이 있다. 가장 큰 문제는 "무한히 확장"되어 있어 닫힌 곡선과 같은 기하적 대상을 다루기에 적합하지 않다는 것이다. 예를 들어, $$\mathbb{A}^1$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 이는 기하학적으로 자연스럽지 않다.
+[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 우리는 affine space $$\mathbb{A}^n$$과 그 위의 다항식으로 정의되는 부분집합들을 살펴보았다. 그러나 affine space에는 몇 가지 불편한 점이 있다. 가장 큰 문제 중 하나는 일종의 compactness로, 예를 들어 $$\mathbb{A}^1$$에서 두 직선 $$y = ax$$와 $$y = bx$$ ($$a \ne b$$)는 항상 원점에서 만나지만, 평행한 두 직선은 만나지 않는다. 이는 기하학적으로 자연스럽지 않다.
 
 Projective space $$\mathbb{P}^n$$은 이러한 문제를 해결한다. Projective space는 affine space에 "무한원점들"을 추가하여, 임의의 두 직선이 (평행한 경우 무한원점에서) 만나도록 만든 것이다.
 
