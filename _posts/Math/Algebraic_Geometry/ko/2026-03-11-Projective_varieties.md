@@ -112,6 +112,14 @@ Standard open cover $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$을 생각하자.
 
 </details>
 
+그런데 잠깐, 우리는 affine space가 compact하지 않기 때문에 projective space를 도입한다고 했는데, 위의 명제에 따르면 $$\mathbb{A}^n$$은 이미 quasi-compact가 아닌가? 물론 맞는 말이다. Zariski topology에서 $$\mathbb{A}^n$$은 quasi-compact이며, 이는 Zariski 위상이 매우 coarse하기 때문이다 (닫힌집합이 너무 적어서 compact가 되어버린다).
+
+진정한 문제는 compactness가 아니라 **기하학적 성질**에 있다. Affine space에서는:
+- 평행한 두 직선이 만나지 않는다
+- 닫힌 곡선들이 "무한히 확장"되어 닫힌 곡선으로 남지 않는다
+
+Projective space는 이 문제를 해결한다. 예를 들어 $$\mathbb{P}^2$$에서는 임의의 두 직선이 (평행한 경우 무한원점에서) 반드시 만난다. 이는 projective space가 affine space의 **대수적인 one-point compactification** 역할을 한다는 것을 의미한다. 즉, 우리는 단순히 위상적인 compactification이 아니라, 다항식의 언어로 표현되는 *대수적인* compactification을 원하는 것이다. 이로 인해 닫힌 곡선들이 projective space에서도 닫힌 곡선으로 남고, Bezout의 정리와 같은 강력한 결과들을 얻을 수 있다.
+
 ## Homogeneous Ideal과 Projective Nullstellensatz
 
 <div class="definition" markdown="1">
