@@ -37,7 +37,7 @@ weight: 4
 
 1. 아핀다양체 $$X$$에서 $$\mathcal{O}(X) = \mathbb{K}[X]$$이다. 이는 [§아핀다양체, ⁋정의 7](/ko/math/algebraic_geometry/affine_varieties#def7)에서 coordinate ring의 원소들을 regular function이라 불렀던 것과 일치한다.
 2. $$\mathbb{P}^n$$에서 $$\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$$이다. 즉, 상수함수만 존재한다. 이는 homogeneous coordinates $$[x_0 : \cdots : x_n]$$에서 비상수 다항식은 좌표의 scaling에 대해 잘 정의되지 않기 때문이다. 가령 $$x_0/x_1$$은 $$U_1 = \{x_1 \ne 0\}$$에서 정의되지만, $$\mathbb{P}^n$$ 전체에서는 정의되지 않는다.
-3. $$\mathbb{A}^2 \setminus \{(0,0)\}$$에서 $$\mathcal{O}(X) = \mathbb{K}[x, y]$$이다. 직관적으로, 원점을 제거해도 다항식은 여전히 잘 정의된다. 더 일반적으로, 기약 아핀다양체에서 여집합의 여차원이 2 이상이면 regular function은 변하지 않는다.
+3. $$\mathbb{A}^2 \setminus \{(0,0)\}$$에서 $$\mathcal{O}(X) = \mathbb{K}[\x, \y]$$이다. 직관적으로, 원점을 제거해도 다항식은 여전히 잘 정의된다. 더 일반적으로, 기약 아핀다양체에서 여집합의 여차원이 2 이상이면 regular function은 변하지 않는다.
 
 </div>
 
