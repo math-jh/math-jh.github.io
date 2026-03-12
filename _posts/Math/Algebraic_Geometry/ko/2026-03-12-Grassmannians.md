@@ -78,9 +78,9 @@ $$w_1 \wedge \cdots \wedge w_k = \det(a_{ij}) v_1 \wedge \cdots \wedge v_k$$
 
 $$\dim \bigwedge^k \mathbb{K}^n = \binom{n}{k}$$이므로 $$\mathbb{P}(\bigwedge^k \mathbb{K}^n) \cong \mathbb{P}^{\binom{n}{k}-1}$$이다. 따라서 Plücker embedding은 $$G(k, n)$$을 $$\mathbb{P}^{\binom{n}{k}-1}$$의 부분집합으로 실현한다.
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm5">**정리 5**</ins> Plücker embedding의 image는 $$\mathbb{P}^{\binom{n}{k}-1}$$의 사영다양체이다. 즉, $$G(k, n)$$은 사영다양체이다.
+<ins id="prop5">**명제 5**</ins> Plücker embedding의 image는 $$\mathbb{P}^{\binom{n}{k}-1}$$의 사영다양체이다. 즉, $$G(k, n)$$은 사영다양체이다.
 
 </div>
 
@@ -190,7 +190,7 @@ Schubert variety의 정의는 복잡해 보이지만, 기하학적 의미는 명
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> $$\dim \Omega_\lambda = |\lambda| = \lambda_1 + \cdots + \lambda_k$$이다.
+<ins id="prop12">**명제 12**</ins> $$\dim \Omega_\lambda = \lvert\lambda\rvert = \lambda_1 + \cdots + \lambda_k$$이다.
 
 </div>
 
