@@ -35,10 +35,10 @@ weight: 3
 
 <ins id="ex2">**예시 2**</ins>
 
-1. **아핀다양체**: 각 $$U_i \cong \mathbb{A}^n$$은 $$\mathbb{P}^n$$의 열린부분집합이므로 Quasi-projective variety이다. 따라서 모든 아핀다양체는 Quasi-projective variety이다.
-2. **사영다양체**: 모든 사영다양체는 자기자신의 열린부분집합이므로 Quasi-projective variety이다.
-3. **$$\mathbb{A}^2 \setminus \{(0,0)\}$$**: 원점을 제거한 아핀평면은 Quasi-projective variety이다.
-4. **$$\mathbb{P}^2 \setminus L$$**: 직선 $$L$$을 제거한 사영평면은 Quasi-projective variety이다.
+1. **아핀다양체**: 각 $$U_i \cong \mathbb{A}^n$$은 $$\mathbb{P}^n$$의 열린부분집합이므로 quasi-projective variety이다. 따라서 모든 아핀다양체는 quasi-projective variety이다.
+2. **사영다양체**: 모든 사영다양체는 자기자신의 열린부분집합이므로 quasi-projective variety이다.
+3. **$$\mathbb{A}^2 \setminus \{(0,0)\}$$**: 원점을 제거한 아핀평면은 quasi-projective variety이다.
+4. **$$\mathbb{P}^2 \setminus L$$**: 직선 $$L$$을 제거한 사영평면은 quasi-projective variety이다.
 
 </div>
 
@@ -113,8 +113,8 @@ $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
 $$X$$가 사영다양체 $$Y$$의 열린부분집합이라 하자.
 
-- $$X$$의 열린부분집합 $$U$$는 $$Y$$의 열린부분집합이므로 Quasi-projective variety이다.
-- $$X$$의 닫힌부분집합 $$Z = X \cap W$$ ($$W$$는 사영다양체)는 $$Y \cap W$$의 열린부분집합이므로 Quasi-projective variety이다.
+- $$X$$의 열린부분집합 $$U$$는 $$Y$$의 열린부분집합이므로 quasi-projective variety이다.
+- $$X$$의 닫힌부분집합 $$Z = X \cap W$$ ($$W$$는 사영다양체)는 $$Y \cap W$$의 열린부분집합이므로 quasi-projective variety이다.
 
 </details>
 
@@ -124,8 +124,8 @@ $$X$$가 사영다양체 $$Y$$의 열린부분집합이라 하자.
 
 <ins id="prop9">**명제 9**</ins> 다음이 성립한다.
 
-1. 모든 아핀다양체는 Quasi-projective variety이다.
-2. 모든 사영다양체는 Quasi-projective variety이다.
+1. 모든 아핀다양체는 quasi-projective variety이다.
+2. 모든 사영다양체는 quasi-projective variety이다.
 3. 사영다양체이면서 아핀다양체인 것은 유한집합뿐이다.
 
 </div>
