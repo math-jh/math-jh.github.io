@@ -83,24 +83,19 @@ $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 
 <ins id="prop4">**명제 4**</ins> 다음이 성립한다.
 
-1. $$V(0) = \mathbb{P}^n$$, $$V(1) = \emptyset$$
-2. $$\bigcap_\alpha V(F_\alpha) = V((F_\alpha)_\alpha)$$
-3. $$V(F) \cup V(G) = V(FG)$$
+1. $$V(0) = \mathbb{P}^n$$, $$V(1) = \emptyset$$,
+2. $$\bigcap_\alpha V(F_\alpha) = V(\sum F_\alpha)$$,
+3. $$V(F) \cup V(G) = V(FG)$$.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $$V(0) = \mathbb{P}^n$$: $$0$$은 모든 점에서 0이므로, 모든 $$[x_0 : \cdots : x_n] \in \mathbb{P}^n$$이 조건을 만족한다.
-   
-   $$V(1) = \emptyset$$: $$1$$은 모든 점에서 $$1 \ne 0$$이므로, 이를 만족하는 점은 없다.
-
-2. $$\bigcap_\alpha V(F_\alpha) = V((F_\alpha)_\alpha)$$: 점 $$[x_0 : \cdots : x_n]$$이 모든 $$V(F_\alpha)$$에 속한다는 것은 모든 $$F_\alpha(x) = 0$$이라는 것이다. 이는 ideal $$(F_\alpha)_\alpha$$의 모든 원소가 $$x$$에서 0이라는 것과 동치이다.
-
-3. $$V(F) \cup V(G) = V(FG)$$: 점 $$[x_0 : \cdots : x_n]$$이 $$V(F) \cup V(G)$$에 속한다는 것은 $$F(x) = 0$$ 또는 $$G(x) = 0$$이라는 것이다. Field에서 이는 $$F(x)G(x) = 0$$과 동치이다.
-
 이 증명은 affine case와 완전히 동일하다. 유일한 차이점은 여기서 다루는 다항식들이 모두 homogeneous라는 점이지만, 증명 논리 자체는 동일하다.
+
+첫 번째 주장은 자명하다. 두 번째 주장의 경우, 점 $$[x_0 : \cdots : x_n]$$이 모든 $$V(F_\alpha)$$에 속한다는 것은 모든 $$F_\alpha(x) = 0$$이라는 것이다. 이는 ideal $$(F_\alpha)_\alpha$$의 모든 원소가 $$x$$에서 0이라는 것과 동치이다. 마지막으로 점 $$[x_0 : \cdots : x_n]$$이 $$V(F) \cup V(G)$$에 속한다는 것은 $$F(x) = 0$$ 또는 $$G(x) = 0$$이라는 것이다. Field에서 이는 $$F(x)G(x) = 0$$과 동치이다.
+
 
 </details>
 
