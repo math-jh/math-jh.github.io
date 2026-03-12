@@ -45,7 +45,7 @@ $$G(k, n)$$을 사영공간에 embedding할 수 있다.
 
 <ins id="def3">**정의 3**</ins> *Plücker embedding* $$\iota: G(k, n) \to \mathbb{P}(\bigwedge^k \mathbb{K}^n)$$을 다음과 같이 정의한다. $$k$$차원 부분공간 $$W = \text{span}(v_1, \ldots, v_k)$$에 대해
 
-$$$\iota(W) = [v_1 \wedge v_2 \wedge \cdots \wedge v_k]$$$
+$$\iota(W) = [v_1 \wedge v_2 \wedge \cdots \wedge v_k]$$
 
 </div>
 
@@ -93,7 +93,7 @@ $$G(k, n)$$을 정의하는 방정식들을 *Plücker relations*라 부른다.
 
 <ins id="prop7">**명제 7**</ins> $$v \in \bigwedge^k \mathbb{K}^n$$이 decomposable (즉, $$v = v_1 \wedge \cdots \wedge v_k$$)일 필요충분조건는 모든 $$w \in \bigwedge^{k-1} \mathbb{K}^n$$에 대해
 
-$$$(v \wedge w) \wedge (v \wedge w) = 0$$$
+$$(v \wedge w) \wedge (v \wedge w) = 0$$
 
 인 것이다.
 
@@ -105,7 +105,7 @@ $$$(v \wedge w) \wedge (v \wedge w) = 0$$$
 
 <ins id="ex8">**예시 8**</ins> $$G(2, 4)$$의 경우, Plücker coordinates를 $$p_{ij} = x_i \wedge x_j$$라 하면 ($$1 \le i < j \le 4$$), 유일한 Plücker relation은
 
-$$$p_{12} p_{34} - p_{13} p_{24} + p_{14} p_{23} = 0$$$
+$$p_{12} p_{34} - p_{13} p_{24} + p_{14} p_{23} = 0$$
 
 이다. 따라서 $$G(2, 4) \subset \mathbb{P}^5$$는 하나의 quadratic hypersurface이다.
 
@@ -119,7 +119,7 @@ $$G(k, n)$$은 $$\binom{n}{k}$$개의 아핀공간으로 덮을 수 있다.
 
 <ins id="def9">**정의 9**</ins> 각 $$k$$개의 index들 $$I = \{i_1 < \cdots < i_k\}$$에 대해 open set $$U_I$$를
 
-$$$U_I = \{W \in G(k, n) \mid \text{projection } W \to \text{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$$$
+$$U_I = \{W \in G(k, n) \mid \text{projection } W \to \text{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$$
 
 으로 정의한다.
 
@@ -146,7 +146,7 @@ $$G(k, n)$$의 중요한 닫힌부분다양체들로 *Schubert varieties*가 있
 
 <ins id="def11">**정의 11**</ins> Flag $$0 = V_0 \subset V_1 \subset \cdots \subset V_n = \mathbb{K}^n$$과 partition $$\lambda = (\lambda_1 \ge \cdots \ge \lambda_k \ge 0)$$에 대해 *Schubert variety* $$\Omega_\lambda$$를
 
-$$$\Omega_\lambda = \{W \in G(k, n) \mid \dim(W \cap V_{n-k+i-\lambda_i}) \ge i \text{ for all } i\}$$$
+$$\Omega_\lambda = \{W \in G(k, n) \mid \dim(W \cap V_{n-k+i-\lambda_i}) \ge i \text{ for all } i\}$$
 
 으로 정의한다.
 
