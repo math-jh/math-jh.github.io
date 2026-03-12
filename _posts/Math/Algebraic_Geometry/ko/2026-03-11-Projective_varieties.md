@@ -99,7 +99,7 @@ $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> $$\mathbb{P}^n$$은 Zariski 위상에서 quasi-compact이다.
+<ins id="prop5">**명제 5**</ins> $$\mathbb{P}^n$$은 Zariski 위상에서 compact이다.
 
 </div>
 
@@ -109,6 +109,8 @@ $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 Standard open cover $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$을 생각하자. 각 $$U_i \cong \mathbb{A}^n$$은 Zariski 위상에서 quasi-compact이다. 유한개의 quasi-compact 열린집합들의 합집합은 quasi-compact이므로 $$\mathbb{P}^n$$은 quasi-compact이다.
 
 </details>
+
+그러나 대수기하학에서 compactness 그 자체는 큰 의미가 없다. 가령 affine space 또한 quasi-compact임을 보일 수 있다. (때문에 우리는 이를 quasi-compact라 부른다.)
 
 ## Homogeneous Ideal과 Projective Nullstellensatz
 
@@ -172,7 +174,21 @@ $$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x
 
 $$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$
 
-이다. 이들이 서로 inverse이고, $$\varphi_0$$와 $$\psi_0$$ 모두 연속함수임은 자명하다. 일반적인 $$U_i$$도 비슷하게 보인다.
+이다. 이들이 서로 inverse인 것은 정의로부터 자명하다. 이제 $$\varphi_0$$와 $$\psi_0$$가 연속임을 보이자.
+
+$$\psi_0$$가 연속임을 보이기 위해, $$\mathbb{A}^n$$의 닫힌집합 $$V(f)$$를 생각하자. 그럼
+
+$$\psi_0^{-1}(V(f)) = \{[1 : a_1 : \cdots : a_n] \mid f(a_1, \ldots, a_n) = 0\}$$
+
+이다. $$U_0$$의 subspace topology에서 이는 $$V(f(\x_1/\x_0, \ldots, \x_n/\x_0)) \cap U_0$$와 같다. $$f(\x_1/\x_0, \ldots, \x_n/\x_0)$$를 clear하면 homogeneous polynomial을 얻으므로 이는 $$U_0$$에서 닫힌집합이다.
+
+$$\varphi_0$$가 연속임을 보이기 위해, $$U_0$$의 닫힌집합 $$V(F) \cap U_0$$를 생각하자. 여기서 $$F$$는 homogeneous polynomial이다. 그럼 $$\varphi_0^{-1}(V(F) \cap U_0)$$는 $$\mathbb{A}^n$$에서
+
+$$F\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = 0$$
+
+을 만족하는 점들이다. 이는 $$\mathbb{A}^n$$에서 다항식의 영점이므로 닫힌집합이다.
+
+따라서 $$\varphi_0$$는 homeomorphism이다. 일반적인 $$U_i$$도 비슷하게 보인다.
 
 </details>
 
