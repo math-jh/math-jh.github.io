@@ -148,9 +148,9 @@ $$J_0 = \begin{pmatrix} -2x - 3x^2 & 2y \end{pmatrix}_{(0,0)} = \begin{pmatrix} 
 
 Jacobian criterion은 smooth point를 효율적으로 판별하는 방법이다.
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm9">**정리 9**</ins> (Jacobian Criterion) $$X = V(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이 기약 다양체이고 $$p \in X$$라 하자. 그럼 $$p$$가 smooth point일 필요충분조건은 Jacobian matrix $$J_p$$의 rank가 $$n - \dim X$$인 것이다.
+<ins id="prop9">**명제 9**</ins> (Jacobian Criterion) $$X = V(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이 기약 다양체이고 $$p \in X$$라 하자. 그럼 $$p$$가 smooth point일 필요충분조건은 Jacobian matrix $$J_p$$의 rank가 $$n - \dim X$$인 것이다.
 
 </div>
 
@@ -177,9 +177,9 @@ Jacobian criterion을 적용하려면 $$X$$의 차원을 미리 알아야 한다
 
 기약 다양체는 "대부분의 점에서" 매끄럽다. 이는 대수기하학의 기본 정리 중 하나이다.
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm10">**정리 10**</ins> 기역 다양체 $$X$$의 smooth points들의 집합 $$X_{\text{sm}}$$은 $$X$$의 dense open subset이다. 특히, $$X_{\text{sm}} \ne \emptyset$$이다.
+<ins id="prop10">**명제 10**</ins> 기역 다양체 $$X$$의 smooth points들의 집합 $$X_{\text{sm}}$$은 $$X$$의 dense open subset이다. 특히, $$X_{\text{sm}} \ne \emptyset$$이다.
 
 </div>
 
