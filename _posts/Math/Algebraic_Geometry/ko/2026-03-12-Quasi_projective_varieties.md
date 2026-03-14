@@ -21,51 +21,42 @@ weight: 3
 
 ## Quasi-projective variety의 정의
 
-사영다양체의 열린부분집합은 자연스러운 기하적 대상이다. 예를 들어, $$\mathbb{P}^2$$에서 직선을 제거한 여집합은 사영다양체가 아니지만, 여전히 다항식으로 정의되는 대상이다.
+Projective space의 열린부분집합은 자연스러운 기하적 대상이다. 예를 들어, $$\mathbb{P}^2$$에서 직선 $$\x_0=0$$을 제거한 여집합은 projective variety가 아니지만, 여전히 다항식으로 정의되는 대상이며, 심지어 affine variety이기도 하다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">\ast\ast정의 1\ast\ast</ins> 사영다양체 $$Y \subseteq \mathbb{P}^n$$의 열린부분집합 $$X \subseteq Y$$를 *quasi-projective variety*라 부른다.
+<ins id="def1">**정의 1**</ins> Projective variety $$Y \subseteq \mathbb{P}^n$$의 열린부분집합 $$X \subseteq Y$$를 *quasi-projective variety<sub>준사영다양체</sub>*라 부른다.
 
 </div>
 
-즉, Quasi-projective variety는 사영다양체 $$Y$$와 그 속의 닫힌집합 $$Z$$에 대해 $$X = Y \setminus Z$$의 꼴로 쓰여지는 집합이다.
+즉, quasi-projective variety는 projective variety $$Y$$와 그 속의 닫힌집합 $$Z$$에 대해 $$X = Y \setminus Z$$의 꼴로 쓰여지는 집합이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex2">\ast\ast예시 2\ast\ast</ins>
-
-1. \ast\ast아핀다양체\ast\ast: 각 $$U_i \cong \mathbb{A}^n$$은 $$\mathbb{P}^n$$의 열린부분집합이므로 quasi-projective variety이다. 따라서 모든 아핀다양체는 quasi-projective variety이다.
-2. \ast\ast사영다양체\ast\ast: 모든 사영다양체는 자기자신의 열린부분집합이므로 quasi-projective variety이다.
-3. \ast\ast$$\mathbb{A}^2 \setminus \{(0,0)\}$$\ast\ast: 원점을 제거한 아핀평면은 quasi-projective variety이다.
-4. \ast\ast$$\mathbb{P}^2 \setminus L$$\ast\ast: 직선 $$L$$을 제거한 사영평면은 quasi-projective variety이다.
+<ins id="ex2">**예시 2**</ins> 위에서 살펴봤듯, 각 $$U_i \cong \mathbb{A}^n$$은 $$\mathbb{P}^n$$의 열린부분집합이므로 quasi-projective variety이다. 따라서 모든 affine variety는 quasi-projective variety이다. 또 임의의 projective variety는 당연히 quasi-projective variety이다. 
 
 </div>
 
 ## Zariski 위상
 
-Quasi-projective variety $$X \subseteq Y \subseteq \mathbb{P}^n$$에 자연스러운 위상을 정의할 수 있다.
+Quasi-projective variety $$X \subseteq Y \subseteq \mathbb{P}^n$$에는 $$Y$$로부터 물려받는 subspace topology가 존재한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def3">\ast\ast정의 3\ast\ast</ins> Quasi-projective variety $$X$$의 *Zariski 위상*은 사영다양체 $$Y$$의 위상을 $$X$$로 제한한 것이다. 즉, $$X$$의 닫힌집합들은 $$X \cap Z$$의 꼴이다. 여기서 $$Z \subseteq \mathbb{P}^n$$은 사영다양체이다.
+<ins id="def3">**정의 3**</ins> Quasi-projective variety $$X$$의 *Zariski topology*은 projective variety $$Y$$의 위상을 $$X$$로 제한한 것이다. 즉, $$X$$의 닫힌집합들은 projective variety $$Z\subset Y\subset\mathbb{P}^n$$에 대하여 $$X \cap Z$$의 꼴이다. 
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">\ast\ast명제 4\ast\ast</ins> Zariski 위상은 실제로 위상이다.
+<ins id="prop4">**명제 4**</ins> Zariski topology는 실제로 위상이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$X$$의 닫힌집합들이 $$X \cap Z$$의 꼴이므로:
-
-1. $$\emptyset = X \cap \emptyset$$이고 $$X = X \cap \mathbb{P}^n$$이므로 $$\emptyset$$과 $$X$$는 닫힌집합이다.
-2. $$\bigcap_\alpha (X \cap Z_\alpha) = X \cap (\bigcap_\alpha Z_\alpha)$$이고 $$\bigcap_\alpha Z_\alpha$$는 사영다양체이므로 닫힌집합들의 교집합은 닫힌집합이다.
-3. $$(X \cap Z_1) \cup (X \cap Z_2) = X \cap (Z_1 \cup Z_2)$$이고 $$Z_1 \cup Z_2$$는 사영다양체이므로 유한개의 닫힌집합들의 합집합은 닫힌집합이다.
+[§사영다양체, ⁋명제 4](/ko/math/algebraic_geometry/projective_varieties#prop4)로부터 자명하다. 
 
 </details>
 
@@ -73,7 +64,7 @@ $$X$$의 닫힌집합들이 $$X \cap Z$$의 꼴이므로:
 
 <div class="definition" markdown="1">
 
-<ins id="def5">\ast\ast정의 5\ast\ast</ins> Quasi-projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>* $$\varphi: X \to Y$$는 각 점 $$p \in X$$에 대해 다음을 만족하는 함수이다:
+<ins id="def5">**정의 5**</ins> Quasi-projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>* $$\varphi: X \to Y$$는 각 점 $$p \in X$$에 대해 다음을 만족하는 함수이다:
 
 $$p$$의 적당한 열린근방 $$U \subseteq X$$와 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
 
@@ -83,20 +74,23 @@ $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
 </div>
 
-이 정의는 국소적으로 사영다양체의 morphism과 같은 꼴이라는 것을 의미한다. 특히, 아핀다양체와 사영다양체의 morphism 정의와 일치한다.
+이 정의는 국소적으로 projective variety의 morphism과 같은 꼴이라는 것을 의미한다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex6">\ast\ast예시 6\ast\ast</ins>
+<ins id="ex6">**예시 6**</ins> Projective variety와 affine variety들을 엮어주는 함수들이 새로운 것들이다. 가령 quotient map
 
-1. $$\mathbb{A}^2 \setminus \{(0,0)\} \to \mathbb{P}^1$$, $$(x, y) \mapsto [x : y]$$는 morphism이다.
-2. $$\mathbb{P}^1 \setminus \{[0 : 1]\} \to \mathbb{A}^1$$, $$[x : y] \mapsto x/y$$는 morphism이다.
+$$\mathbb{A}^{n+1}\setminus\{(0,\ldots, 0)\}\rightarrow \mathbb{P}^n;\qquad (x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$
+
+은 quasi-projective variety들 사이의 morphism이다. 
 
 </div>
 
+또, 다음 정의도 자명하다. 
+
 <div class="definition" markdown="1">
 
-<ins id="def7">\ast\ast정의 7\ast\ast</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
+<ins id="def7">**정의 7**</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
 
 </div>
 
@@ -104,7 +98,7 @@ $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">\ast\ast명제 8\ast\ast</ins> Quasi-projective variety $$X$$의 열린부분집합과 닫힌부분집합은 모두 quasi-projective variety이다.
+<ins id="prop8">**명제 8**</ins> Quasi-projective variety $$X$$의 열린부분집합과 닫힌부분집합은 모두 quasi-projective variety이다.
 
 </div>
 
@@ -118,41 +112,22 @@ $$X$$가 사영다양체 $$Y$$의 열린부분집합이라 하자.
 
 </details>
 
-## 아핀다양체와 사영다양체의 포함관계
-
-<div class="proposition" markdown="1">
-
-<ins id="prop9">\ast\ast명제 9\ast\ast</ins> 다음이 성립한다.
-
-1. 모든 아핀다양체는 quasi-projective variety이다.
-2. 모든 사영다양체는 quasi-projective variety이다.
-3. 사영다양체이면서 아핀다양체인 것은 유한집합뿐이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-1.과 2.는 이미 보였다. 3.을 보이자. $$X$$가 사영다양체이면서 아핀다양체라면, $$X \subseteq \mathbb{P}^n$$이면서 $$X \cong Y \subseteq \mathbb{A}^m$$이다. 사영다양체는 compact이고 아핀다양체의 compact 부분집합은 유한집합뿐이므로 $$X$$는 유한집합이다.
-
-</details>
-
 ## 왜 Quasi-projective variety인가?
 
-Quasi-projective variety라는 범주가 자연스러운 이유는 \ast\ast국소적으로 affine variety처럼 다룰 수 있기 때문\ast\ast이다. [§사영다양체, 명제 11](/ko/math/algebraic_geometry/projective_varieties#prop11)에서 보았듯, 사영다양체 $$Y$$의 각 점은 standard affine open set $$U_i \cong \mathbb{A}^n$$ 중 하나에 속한다. 따라서 quasi-projective variety $$X = Y \setminus Z$$의 각 점 $$p$$에 대해서도 $$p \in X \cap U_i$$인 $$i$$가 존재하고, $$X \cap U_i$$는 affine variety의 열린부분집합이다.
+Quasi-projective variety라는 범주가 자연스러운 이유는 **국소적으로 affine variety처럼 다룰 수 있기 때문**이다. [§사영다양체, 명제 11](/ko/math/algebraic_geometry/projective_varieties#prop11)에서 보았듯, 사영다양체 $$Y$$의 각 점은 standard affine open set $$U_i \cong \mathbb{A}^n$$ 중 하나에 속한다. 따라서 quasi-projective variety $$X = Y \setminus Z$$의 각 점 $$p$$에 대해서도 $$p \in X \cap U_i$$인 $$i$$가 존재하고, $$X \cap U_i$$는 affine variety의 열린부분집합이다.
 
 이는 미분다양체(manifold)에서 각 점의 열린근방이 $$\mathbb{R}^n$$과 동형인 chart를 갖는 것과 비슷하다. Quasi-projective variety의 morphism 정의에서 "각 점 $$p$$의 열린근방 $$U$$"를 잡는 것은 바로 이 chart를 선택하는 것에 해당한다.
 
 즉, quasi-projective variety 범주는:
 - 아핀다양체를 포함하고
 - 사영다양체를 포함하면서
-- 동시에 \ast\ast국소적으로는 항상 affine setting에서 작업할 수 있는\ast\ast
+- 동시에 **국소적으로는 항상 affine setting에서 작업할 수 있는**
 
 가장 자연스러운 범주이다. 다음 절 [§정칙사상](/ko/math/algebraic_geometry/regular_maps)에서 우리는 이 점을 더 자세히 탐구할 것이다.
 
 ---
 
-\ast\ast참고문헌\ast\ast
+**참고문헌**
 
-\ast\ast[Har]\ast\ast J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
-\ast\ast[Sha]\ast\ast I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
+**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
