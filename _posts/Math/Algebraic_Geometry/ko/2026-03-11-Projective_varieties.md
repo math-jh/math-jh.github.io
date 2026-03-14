@@ -192,7 +192,7 @@ $$\psi_0^{-1}(V(F) \cap U_0) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid F(1, a
 
 </details>
 
-즉, 직관적으로 우리는 $$U_i$$를 좌표 $$x_i$$가 무한대가 아닌 점들로 생각할 수 있다. 또, $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$이고, 위의 명제에 의해 각 $$U_i \cong \mathbb{A}^n$$이다. 위의 명제의 증명 과정에서 우리는 암묵적으로 다음 명제를 사용하였다. 
+즉, 직관적으로 우리는 $$U_i$$를 좌표 $$x_i$$가 무한대가 아닌 점들로 생각할 수 있다. 또, $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$이고, 위의 명제에 의해 각 $$U_i \cong \mathbb{A}^n$$이다. 위의 명제의 증명 과정에서 핵심적인 것은 다음의 명제이다. 
 
 <div class="proposition" markdown="1">
 
@@ -215,11 +215,9 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 </details>
 
-이는 $$X$$를 분석하기 위해서는 각각의 affine chart 위에서 생각하면 된다는 것을 보여준다. 
-
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> 위의 예시를 기하적으로 해석하기 위해 $$\mathbb{K}=\mathbb{R}$$이라 하고, $$\mathbb{P}^2$$에서 conic $$X = V(\x_0^2 + \x_1^2 - \x_2^2)$$를 생각하자. 
+<ins id="ex12">**예시 12**</ins> 위의 명제를 기하적으로 해석하기 위해 $$\mathbb{K}=\mathbb{R}$$이라 하고, $$\mathbb{P}^2$$에서 conic $$X = V(\x_0^2 + \x_1^2 - \x_2^2)$$를 생각하자. 
 
 이 conic은 $$\mathbb{A}^3$$ 안의 원뿔 $$\x_0^2 + \x_1^2 = \x_2^2$$을 homogeneous coordinates로 표현한 것이다. 그럼 standard open set들에서 $$X$$가 어떻게 보이는지는 [명제 11](#prop11)에서 알 수 있다. 즉 $$U_i$$에서 $$X$$가 어떻게 생겼는지를 보기 위해서는 그냥 $$\x_i$$ 자리에 $$1$$을 넣고, 남은 $$n$$개의 변수가 $$\mathbb{A}^n$$의 좌표인 것으로 생각하면 된다. 그럼 특히 다음의 결과를 얻는다. 
 
@@ -234,43 +232,55 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 이제 이 관점에서, $$U_i$$에서의 $$X$$를 보는 것은 $$\mathbb{P}^2$$에서 무한대 직선 $$\x_i=0$$을 빼는 것에 해당한다. 만일 $$U_2$$에서 $$X$$를 본다면, 위에서 살펴보았듯 $$X$$는 무한대 직선 $$\x_2=0$$과 만나지 않으므로 이 직선을 빼도 온전한 원으로 남는다. 그러나 가령 무한대 직선 $$\x_1=0$$을 뺀다면, $$X$$는 $$\x_1$$과 두 점에서 만나고 있고, 따라서 원 $$X$$에서 이 두 점을 뺀 후 펼치게 되면 쌍곡선이 나오게 되는 것으로 이해할 수 있다. 
 
+![sketch](/assets/images/Math/Algebraic_Geometry/Projective_varieties-1.png){:style="width:50em" class="invert" .align-center}
+
 </div>
 
 ## 사영다양체 사이의 사상
 
+마지막으로 우리는 projective variety들의 morphism을 정의한다. Projective variety는 결국 homogeneous polynomial로 정의되므로, 다음과 같이 정의하는 것이 자연스럽다. 
+
 <div class="definition" markdown="1">
 
-<ins id="def13">**정의 13**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>* $$\varphi: X \to Y$$는 각 점 $$p \in X$$에 대해 다음을 만족하는 함수이다:
-
-적당한 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
+<ins id="def13">**정의 13**</ins> $$\varphi: X \to Y$$가 projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $$p$$마다 적당한 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
 
 $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
-이고, 모든 $$p \in X$$에 대해 $$F_i(p)$$들이 동시에 $$0$$이 아니다.
+이고, 모든 $$p \in X$$에 대해 $$F_i(p)$$들이 동시에 $$0$$이 아닌 것이다.
+
+</div>
+
+다음 예시들은 대표적인 morphism들이다. 
+
+<div class="example" markdown="1">
+
+<ins id="ex14">**예시 14**</ins> 우선 $$\mathbb{P}^1$$에서 $$\mathbb{P}^2$$로의 *Veronese embedding* (of degree 2)을
+
+$$[x:y]\mapsto [x^2: xy:y^2]$$
+
+으로 정의하면, 이는 projective space들 사이의 morphism이 된다. 또 다른 예시로, $$\mathbb{P}^1\times \mathbb{P}^1$$에서 $$\mathbb{P}^3$$의 *Segre embedding*은 다음 식
+
+$$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$$
+
+으로 주어지는 morphism이다. 
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins>
-
-1. **항등사상**: $$\mathbb{P}^n \to \mathbb{P}^n$$, $$[\x_0 : \cdots : \x_n] \mapsto [\x_0 : \cdots : \x_n]$$
-2. **Veronese embedding**: $$\mathbb{P}^1 \to \mathbb{P}^2$$, $$[\x : \y] \mapsto [\x^2 : \x\y : \y^2]$$
-3. **Segre embedding**: $$\mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$$, $$([\x : \y], [\u : \v]) \mapsto [\x\u : \x\v : \y\u : \y\v]$$
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex15">**예시 15**</ins> **Twisted cubic in $$\mathbb{P}^3$$**: 
+<ins id="ex15">**예시 15**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
 
 $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
-이는 세 개의 quadratic polynomials
+는 세 개의 quadratic polynomials
 
 $$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$
 
-의 공통 영점이다. 이 사영다양체는 $$\mathbb{P}^1$$과 isomorphic하다.
+의 공통 영점이며, $$\mathbb{P}^1$$과 isomorphic하다. 실은, 이는 [예시 14](#ex14)에서 살펴본 Veronese embedding of degree 3으로, 
+
+$$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
+
+이 $$\mathbb{P}^1$$에서 $$C$$로의 isomorphism이 된다. 
 
 </div>
 
