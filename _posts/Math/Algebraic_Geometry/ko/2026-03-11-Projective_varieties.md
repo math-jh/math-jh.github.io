@@ -134,12 +134,12 @@ $$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and
 
 <ins id="thm8">**정리 8**</ins> (Projective Nullstellensatz) Field $$\mathbb{K}$$가 대수적으로 닫힌 체이고 $$I \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$$이 homogeneous ideal이라 하자. 그럼
 
-1. $$V(I) = \emptyset \iff I \supseteq (\x_0, \ldots, \x_n)$$
-2. $$I(V(I)) = \sqrt{I}$$ (if $$V(I) \ne \emptyset$$)
+1. $$V(I) = \emptyset \iff I \supseteq (\x_0, \ldots, \x_n)$$,
+2. $$I(V(I)) = \sqrt{I}$$ (if $$V(I) \ne \emptyset$$).
 
 </div>
 
-아핀 경우와의 차이점은 $$V(I) = \emptyset$$이 $$I = (1)$$을 의미하지 않고, $$I$$가 *irrelevant ideal* $$(\x_0, \ldots, \x_n)$$을 포함하는 것을 의미한다는 점이다. 이는 $$(\x_0, \ldots, \x_n)$$이 $$\mathbb{K}^{n+1}$$의 원점에 해당하는데, projective space의 정의에서 원점은 제외되었기 때문이다.
+Affine case와의 차이점은 $$V(I) = \emptyset$$이 $$I = (1)$$을 의미하지 않고, $$I$$가 *irrelevant ideal* $$(\x_0, \ldots, \x_n)$$을 포함하는 것을 의미한다는 점이다. 이는 $$(\x_0, \ldots, \x_n)$$이 $$\mathbb{K}^{n+1}$$의 원점에 해당하는데, projective space의 정의에서 원점은 제외되었기 때문이다.
 
 ## Standard Affine Cover
 
@@ -166,7 +166,7 @@ $$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$U_0$$의 경우, map $$\varphi_0: U_0 \to \mathbb{A}^n$$을
+표기의 편의를 위해 $$i=0$$인 경우를 증명한다. $$U_0$$의 경우, map $$\varphi_0: U_0 \to \mathbb{A}^n$$을
 
 $$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$
 
@@ -176,23 +176,23 @@ $$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$
 
 이다. 이들이 서로 inverse인 것은 정의로부터 자명하다. 이제 $$\varphi_0$$와 $$\psi_0$$가 모두 연속임을 보여야 한다.
 
-**$$\varphi_0$$의 연속성**: $$\mathbb{A}^n$$의 닫힌집합 $$V(f)$$를 생각하자. 그럼
+우선 $$\varphi_0$$의 연속성을 보이기 위해 $$\mathbb{A}^n$$의 닫힌집합 $$V(f)$$를 생각하자. 그럼
 
 $$\varphi_0^{-1}(V(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \mid f\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) = 0\right\}$$
 
 이다. $$f$$가 degree $$d$$인 다항식이라면, $$x_0^d f(x_1/x_0, \ldots, x_n/x_0)$$는 homogeneous polynomial $$F$$가 되어 $$\varphi_0^{-1}(V(f)) = V(F) \cap U_0$$이다. 이는 $$U_0$$의 subspace topology에서 닫힌집합이다.
 
-**$$\psi_0$$의 연속성**: $$U_0$$의 닫힌집합 $$V(F) \cap U_0$$를 생각하자. 여기서 $$F$$는 homogeneous polynomial of degree $$d$$이다. 그럼
+이제 그 역함수 $$\psi_0$$의 연속성을 보이자. $$U_0$$의 닫힌집합 $$V(F) \cap U_0$$를 생각하자. 여기서 $$F$$는 homogeneous polynomial of degree $$d$$이다. 그럼
 
 $$\psi_0^{-1}(V(F) \cap U_0) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid F(1, a_1, \ldots, a_n) = 0\}$$
 
 이다. $$F(1, \x_1, \ldots, \x_n)$$은 $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 다항식이므로 $$\psi_0^{-1}(V(F) \cap U_0)$$는 $$\mathbb{A}^n$$에서 닫힌집합이다.
 
-따라서 $$\varphi_0$$와 $$\psi_0$$가 서로 inverse이고 모두 연속이므로 $$\varphi_0$$는 homeomorphism이다. 일반적인 $$U_i$$도 비슷하게 보인다.
+따라서 $$\varphi_0$$와 $$\psi_0$$가 서로 inverse이고 모두 연속이므로 $$\varphi_0$$는 homeomorphism이다.
 
 </details>
 
-즉, 우리는 $$U_i$$를 "좌표 $$x_i$$가 무한대가 아닌 점들"로 생각할 수 있다. $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$이고, 각 $$U_i \cong \mathbb{A}^n$$이다. 특히 $$\mathbb{P}^n \setminus U_i = V(x_i)$$는 "무한원점들"로 이루어진 *hyperplane at infinity*이다.
+즉, 직관적으로 우리는 $$U_i$$를 좌표 $$x_i$$가 무한대가 아닌 점들로 생각할 수 있다. 또, $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$이고, 위의 명제에 의해 각 $$U_i \cong \mathbb{A}^n$$이다. 
 
 <div class="proposition" markdown="1">
 
@@ -214,6 +214,8 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 이다. 이제 $$f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$$라 두면, $$X \cap U_0 = V(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이다.
 
 </details>
+
+이는 $$X$$를 분석하기 위해서는 각각의 affine chart 위에서 생각하면 된다는 것을 보여준다. 
 
 <div class="example" markdown="1">
 
