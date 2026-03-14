@@ -25,7 +25,7 @@ weight: 6
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 위상공간 $$X$$의 *dimension<sub>차원</sub>* $$\dim X$$는 다음과 같이 정의된다:
+<ins id="def1">\ast\ast정의 1\ast\ast</ins> 위상공간 $$X$$의 *dimension<sub>차원</sub>* $$\dim X$$는 다음과 같이 정의된다:
 
 - $$\dim \emptyset = -1$$
 - $$\dim X \ge n$$인 것은 닫힌집합들의 strictly decreasing chain $$X = X_0 \supsetneq X_1 \supsetneq \cdots \supsetneq X_n \neq \emptyset$$이 존재하는 것이다.
@@ -37,7 +37,7 @@ weight: 6
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> $$\mathbb{A}^1$$에서 닫힌집합들은 $$\mathbb{A}^1$$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이며, 이는 길이 2 (= 차원 1)이다. 여기서 길이는 닫힌집합의 개수에서 1을 뺀 것이다.
+<ins id="ex2">\ast\ast예시 2\ast\ast</ins> $$\mathbb{A}^1$$에서 닫힌집합들은 $$\mathbb{A}^1$$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이며, 이는 길이 2 (= 차원 1)이다. 여기서 길이는 닫힌집합의 개수에서 1을 뺀 것이다.
 
 </div>
 
@@ -49,7 +49,7 @@ weight: 6
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 기약 아핀다양체 $$X$$의 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다.
+<ins id="prop3">\ast\ast명제 3\ast\ast</ins> 기약 아핀다양체 $$X$$의 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다.
 
 </div>
 
@@ -70,7 +70,7 @@ $$(0) = I(X_0) \subsetneq I(X_1) \subsetneq \cdots \subsetneq I(X_n)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> $$\dim \mathbb{A}^n = n$$이다.
+<ins id="prop4">\ast\ast명제 4\ast\ast</ins> $$\dim \mathbb{A}^n = n$$이다.
 
 </div>
 
@@ -91,7 +91,7 @@ $$(0) \subsetneq (\x_1) \subsetneq (\x_1, \x_2) \subsetneq \cdots \subsetneq (\x
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 사영다양체 $$X \subseteq \mathbb{P}^n$$의 *cone* $$\tilde{X} \subseteq \mathbb{A}^{n+1}$$를 다음과 같이 정의한다:
+<ins id="def5">\ast\ast정의 5\ast\ast</ins> 사영다양체 $$X \subseteq \mathbb{P}^n$$의 *cone* $$\tilde{X} \subseteq \mathbb{A}^{n+1}$$를 다음과 같이 정의한다:
 
 $$\tilde{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \mid [x_0 : \cdots : x_n] \in X\} \cup \{(0, \ldots, 0)\}$$
 
@@ -101,7 +101,7 @@ $$\tilde{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \mid [x_0 : \cdots : x_n
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> 사영다양체 $$X \subseteq \mathbb{P}^n$$의 차원은 그 cone $$\tilde{X}$$의 차원에서 $$1$$을 뺀 것과 같다.
+<ins id="prop6">\ast\ast명제 6\ast\ast</ins> 사영다양체 $$X \subseteq \mathbb{P}^n$$의 차원은 그 cone $$\tilde{X}$$의 차원에서 $$1$$을 뺀 것과 같다.
 
 </div>
 
@@ -120,7 +120,7 @@ $$\tilde{X} = \tilde{X}_0 \supsetneq \tilde{X}_1 \supsetneq \cdots \supsetneq \t
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $$\dim \mathbb{P}^n = n$$이다.
+<ins id="prop7">\ast\ast명제 7\ast\ast</ins> $$\dim \mathbb{P}^n = n$$이다.
 
 </div>
 
@@ -137,7 +137,7 @@ Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 기약 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, 기약 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
+<ins id="prop8">\ast\ast명제 8\ast\ast</ins> 기약 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, 기약 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
 
 </div>
 
@@ -160,7 +160,7 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 기약 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
+<ins id="prop9">\ast\ast명제 9\ast\ast</ins> 기약 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
 
 </div>
 
@@ -175,7 +175,7 @@ $$\mathbb{K}(X) = \text{Frac}(\mathbb{K}[X])$$이고, finitely generated $$\math
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> 함수체를 통한 차원 계산의 예시들이다.
+<ins id="ex10">\ast\ast예시 10\ast\ast</ins> 함수체를 통한 차원 계산의 예시들이다.
 
 1. $$\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(x_1, \ldots, x_n)$$이고, $$x_1, \ldots, x_n$$은 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{A}^n = n$$이다.
 2. $$\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(x)$$이고, $$x$$는 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim V(\y - \x^2) = 1$$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
@@ -189,7 +189,7 @@ $$\mathbb{K}(X) = \text{Frac}(\mathbb{K}[X])$$이고, finitely generated $$\math
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> 기약 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
+<ins id="prop11">\ast\ast명제 11\ast\ast</ins> 기약 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
 
 </div>
 
@@ -202,7 +202,7 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> 기약 다양체 $$X$$와 regular map $$\varphi: X \to Y$$에 대해 다음이 성립한다.
+<ins id="prop12">\ast\ast명제 12\ast\ast</ins> 기약 다양체 $$X$$와 regular map $$\varphi: X \to Y$$에 대해 다음이 성립한다.
 
 1. $$\dim \varphi(X) \le \dim X$$
 2. 만약 $$\varphi$$가 dominant이면 $$\dim Y \le \dim X$$
@@ -223,13 +223,13 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다.
+<ins id="ex13">\ast\ast예시 13\ast\ast</ins> \ast\astLinear subspace\ast\ast: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> **Intersection**: 기약 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
+<ins id="ex14">\ast\ast예시 14\ast\ast</ins> \ast\astIntersection\ast\ast: 기약 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
 
 $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 
@@ -239,8 +239,8 @@ $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 
 ---
 
-**참고문헌**
+\ast\ast참고문헌\ast\ast
 
-**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
-**[AM]** M. F. Atiyah and I. G. Macdonald, *Introduction to Commutative Algebra*, Addison-Wesley, 1969.
+\ast\ast[Har]\ast\ast J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
+\ast\ast[Sha]\ast\ast I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
+\ast\ast[AM]\ast\ast M. F. Atiyah and I. G. Macdonald, *Introduction to Commutative Algebra*, Addison-Wesley, 1969.
