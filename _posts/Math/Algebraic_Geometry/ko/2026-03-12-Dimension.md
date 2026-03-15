@@ -12,16 +12,18 @@ header:
     overlay_filter: 0.5
 
 date: 2026-03-12
-last_modified_at: 2026-03-13
+last_modified_at: 2026-03-15
 weight: 6
 
 ---
 
 기하학에서 차원은 가장 기본적인 불변량 중 하나이다. 곡선은 1차원, 곡면은 2차원, 입체는 3차원이라는 직관은 우리가 다루는 기하학적 대상의 "크기"를 나타낸다. 대수기하학에서도 차원은 마찬가지로 중요하며, 다행히도 이를 정의하는 여러 가지 동등한 방법이 존재한다. 이 절에서 우리는 대수다양체의 차원을 위상적, 대수적, 그리고 함수체적 관점에서 정의하고, 이들이 모두 일치함을 보일 것이다.
 
+차원의 개념은 단순해 보이지만, 대수기하학에서는 여러 가지로 정의될 수 있다. 위상적으로는 닫힌집합들의 chain으로, 대수적으로는 coordinate ring의 Krull dimension으로, 함수체적으로는 transcendence degree로 정의된다. 이들이 모두 일치한다는 것은 대수기하학의 아름다운 통일성을 보여준다.
+
 ## 위상적 차원
 
-가장 직관적인 차원의 정의는 위상적인 것이다. 닫힌집합들의 chain의 길이를 통해 차원을 측정한다.
+가장 직관적인 차원의 정의는 위상적인 것이다. 닫힌집합들의 chain의 길이를 통해 차원을 측정한다. 이는 위상공간의 "복잡도"를 닫힌집합들의 포함 관계를 통해 측정하는 방법이다.
 
 <div class="definition" markdown="1">
 
@@ -33,23 +35,23 @@ weight: 6
 
 </div>
 
-즉, 차원은 닫힌집합들을 통해 얼마나 "깊이" 들어갈 수 있는지를 측정한다. 예를 들어 $$\mathbb{A}^1$$에서는 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이라는 chain이 존재하므로 $$\dim \mathbb{A}^1 \ge 1$$이고, 더 긴 chain은 존재하지 않으므로 $$\dim \mathbb{A}^1 = 1$$이다.
+즉, 차원은 닫힌집합들을 통해 얼마나 "깊이" 들어갈 수 있는지를 측정한다. 예를 들어 $$\mathbb{A}^1$$에서는 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이라는 chain이 존재하므로 $$\dim \mathbb{A}^1 \ge 1$$이고, 더 긴 chain은 존재하지 않으므로 $$\dim \mathbb{A}^1 = 1$$이다. 이 정의에서 핵심은 각 단계에서 "진정으로 작아지는" 닫힌집합들의 sequence를 찾는 것이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> $$\mathbb{A}^1$$에서 닫힌집합들은 $$\mathbb{A}^1$$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이며, 이는 길이 2 (= 차원 1)이다. 여기서 길이는 닫힌집합의 개수에서 1을 뺀 것이다.
+<ins id="ex2">**예시 2**</ins> $$\mathbb{A}^1$$에서 닫힌집합들은 $$\mathbb{A}^1$$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이며, 이는 길이 2 (= 차원 1)이다. 여기서 길이는 닫힌집합의 개수에서 1을 뺀 것이다. 이는 $$\mathbb{A}^1$$이 "가장 간단한" 1차원 다양체임을 보여준다.
 
 </div>
 
-이 정의의 장점은 순수하게 위상적이라는 것이다. 즉, 다양체의 대수적 구조에 의존하지 않는다. 그러나 이것이 실제로 계산하기 쉽지 않다는 단점이 있다. 다행히도 대수다양체의 경우, 차원을 대수적으로 계산할 수 있는 방법들이 있다.
+이 정의의 장점은 순수하게 위상적이라는 것이다. 즉, 다양체의 대수적 구조에 의존하지 않는다. 그러나 이것이 실제로 계산하기 쉽지 않다는 단점이 있다. 다행히도 대수다양체의 경우, 차원을 대수적으로 계산할 수 있는 방법들이 있다. 이는 위상적 정의와 대수적 정의가 일치한다는 것을 의미하며, 대수기하학의 깊은 사실 중 하나이다.
 
 ## Coordinate Ring을 통한 차원
 
-기약 아핀다양체 $$X$$의 경우, 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다. 이는 닫힌집합들의 chain이 prime ideal들의 chain에 대응된다는 것을 이용한다.
+기역 아핀다양체 $$X$$의 경우, 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다. 이는 닫힌집합들의 chain이 prime ideal들의 chain에 대응된다는 것을 이용한다. 이 대응은 Nullstellensatz에서 $$V$$와 $$I$$ 사이의 Galois connection을 통해 이루어진다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 기약 아핀다양체 $$X$$의 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다.
+<ins id="prop3">**명제 3**</ins> 기역 아핀다양체 $$X$$의 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다.
 
 </div>
 
@@ -66,7 +68,7 @@ $$(0) = I(X_0) \subsetneq I(X_1) \subsetneq \cdots \subsetneq I(X_n)$$
 
 </details>
 
-이 명제는 차원을 계산하는 구체적인 방법을 제공한다. 예를 들어 $$\mathbb{K}[x_1, \ldots, x_n]$$의 Krull dimension이 $$n$$이라는 사실로부터 $$\dim \mathbb{A}^n = n$$을 얻는다.
+이 명제는 차원을 계산하는 구체적인 방법을 제공한다. 예를 들어 $$\mathbb{K}[x_1, \ldots, x_n]$$의 Krull dimension이 $$n$$이라는 사실로부터 $$\dim \mathbb{A}^n = n$$을 얻는다. 이는 대수적 도구 (coordinate ring)를 사용하여 기하적 대상 (다양체)의 성질 (차원)을 계산할 수 있음을 보여준다.
 
 <div class="proposition" markdown="1">
 
@@ -85,9 +87,11 @@ $$(0) \subsetneq (\x_1) \subsetneq (\x_1, \x_2) \subsetneq \cdots \subsetneq (\x
 
 </details>
 
+이 결과는 직관적으로 타당하다. $$\mathbb{A}^n$$은 $$n$$개의 독립적인 좌표를 가지며, 각 좌표가 하나의 "자유도"를 제공한다. 따라서 $$n$$개의 좌표는 $$n$$차원을 정의한다.
+
 ## 사영다양체의 차원
 
-사영다양체의 차원은 그 cone의 차원을 통해 정의된다. 여기서 cone이란 사영다양체를 affine space로 "역projection"한 것이다.
+사영다양체의 차원은 그 cone의 차원을 통해 정의된다. 여기서 cone이란 사영다양체를 affine space로 "역projection"한 것이다. 이는 projective space와 affine space 사이의 기하적 관계를 이용한다.
 
 <div class="definition" markdown="1">
 
@@ -97,7 +101,7 @@ $$\tilde{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \mid [x_0 : \cdots : x_n
 
 </div>
 
-즉, $$\tilde{X}$$는 $$X$$의 각 점 $$[x_0 : \cdots : x_n]$$에 대응하는 모든 homogeneous representatives들의 합집합에 원점을 추가한 것이다. $$\tilde{X}$$는 원점을 지나는 cone이며, $$X = (\tilde{X} \setminus \{0\})/\mathbb{K}^\ast$$로 복원된다.
+즉, $$\tilde{X}$$는 $$X$$의 각 점 $$[x_0 : \cdots : x_n]$$에 대응하는 모든 homogeneous representatives들의 합집합에 원점을 추가한 것이다. $$\tilde{X}$$는 원점을 지나는 cone이며, $$X = (\tilde{X} \setminus \{0\})/\mathbb{K}^\ast$$로 복원된다. 이 대응은 projective variety를 affine variety로 "lift"하는 방법을 제공한다.
 
 <div class="proposition" markdown="1">
 
@@ -118,6 +122,8 @@ $$\tilde{X} = \tilde{X}_0 \supsetneq \tilde{X}_1 \supsetneq \cdots \supsetneq \t
 
 </details>
 
+이 명제는 projective variety의 차원을 affine variety의 차원으로 계산할 수 있게 해준다. Cone의 차원에서 1을 빼는 것은 projective space가 "homogeneous coordinates"를 사용하므로 하나의 자유도가 줄어들기 때문이다.
+
 <div class="proposition" markdown="1">
 
 <ins id="prop7">**명제 7**</ins> $$\dim \mathbb{P}^n = n$$이다.
@@ -133,11 +139,11 @@ $$\mathbb{P}^n$$의 cone은 $$\mathbb{A}^{n+1}$$이고 $$\dim \mathbb{A}^{n+1} =
 
 ## 초곡면의 차원
 
-Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산된다.
+Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산된다. 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 기약 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, 기약 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
+<ins id="prop8">**명제 8**</ins> 기역 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, 기역 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
 
 </div>
 
@@ -146,50 +152,50 @@ Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다.
 
 $$V(f)$$의 coordinate ring은 $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$이다. $$f$$가 기역 다항식이므로 $$(f)$$는 prime ideal이고, 그 height는 1이다 (principal prime ideal). 따라서
 
-$$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \text{ht}(f) = n - 1$$
+$$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \operatorname{ht}(f) = n - 1$$
 
 이다. 자세한 내용은 [\[가환대수학\] §Krull 차원, ⁋명제 6](/ko/math/commutative_algebra/krull_dimension#prop6)을 참조하라.
 
 </details>
 
-이 명제는 직관적으로 타당하다. $$\mathbb{A}^n$$에서 하나의 방정식 $$f = 0$$을 추가하면 "자유도가 하나 줄어들어" 차원이 1만큼 감소한다. 예를 들어 $$\mathbb{A}^3$$에서 평면 $$V(x)$$는 2차원이고, 곡선 $$V(x, y)$$는 1차원이다.
+이 명제는 직관적으로 타당하다. $$\mathbb{A}^n$$에서 하나의 방정식 $$f = 0$$을 추가하면 "자유도가 하나 줄어들어" 차원이 1만큼 감소한다. 예를 들어 $$\mathbb{A}^3$$에서 평면 $$V(x)$$는 2차원이고, 곡선 $$V(x, y)$$는 1차원이다. 이는 "codimension 1" hypersurface가 "일반적인" hypersurface임을 보여준다.
 
 ## 함수체를 통한 차원
 
-차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 이는 대수기하학에서 매우 자연스러운 관점이다.
+차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 이는 대수기하학에서 매우 자연스러운 관점이다. 함수체는 다양체 위의 "모든 rational function"들의 집합이며, 이것이 얼마나 "자유로운지"를 측정하는 것이 차원이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 기약 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
+<ins id="prop9">**명제 9**</ins> 기역 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathbb{K}(X) = \text{Frac}(\mathbb{K}[X])$$이고, finitely generated $$\mathbb{K}$$-algebra의 Krull dimension은 그 fraction field의 transcendence degree와 같다. 구체적으로, $$\mathbb{K}[X] = \mathbb{K}[y_1, \ldots, y_m]/I$$로 쓰면, $$\mathbb{K}(X)$$는 $$\mathbb{K}$$ 위에서 $$\dim X$$개의 대수적 독립원을 갖는다. 이들 $$x_1, \ldots, x_{\dim X}$$을 찾으면 $$\mathbb{K}(X)$$는 $$\mathbb{K}(x_1, \ldots, x_{\dim X})$$의 유한확대가 된다.
+$$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$이고, finitely generated $$\mathbb{K}$$-algebra의 Krull dimension은 그 fraction field의 transcendence degree와 같다. 구체적으로, $$\mathbb{K}[X] = \mathbb{K}[y_1, \ldots, y_m]/I$$로 쓰면, $$\mathbb{K}(X)$$는 $$\mathbb{K}$$ 위에서 $$\dim X$$개의 대수적 독립원을 갖는다. 이들 $$x_1, \ldots, x_{\dim X}$$을 찾으면 $$\mathbb{K}(X)$$는 $$\mathbb{K}(x_1, \ldots, x_{\dim X})$$의 유한확대가 된다.
 
 </details>
 
-이 정의의 장점은 birational invariant라는 것이다. 즉, birationally equivalent한 두 다양체는 같은 차원을 갖는다. 이는 [§유리사상](/ko/math/algebraic_geometry/rational_maps)에서 논의한 것처럼 함수체가 birational equivalence를 판별하는 핵심 도구이기 때문이다.
+이 정의의 장점은 birational invariant라는 것이다. 즉, birationally equivalent한 두 다양체는 같은 차원을 갖는다. 이는 [§유리사상](/ko/math/algebraic_geometry/rational_maps)에서 논의한 것처럼 함수체가 birational equivalence를 판별하는 핵심 도구이기 때문이다. Transcendence degree는 함수체의 "자유도"를 측정하며, 이것이 바로 차원이다.
 
 <div class="example" markdown="1">
 
 <ins id="ex10">**예시 10**</ins> 함수체를 통한 차원 계산의 예시들이다.
 
-1. $$\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(x_1, \ldots, x_n)$$이고, $$x_1, \ldots, x_n$$은 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{A}^n = n$$이다.
+1. $$\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(x_1, \ldots, x_n)$$이고, $$x_1, \ldots, x_n$$은 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{A}^n = n$$이다. 이는 $$\mathbb{A}^n$$이 $$n$$개의 "자유로운" 좌표를 가짐을 보여준다.
 2. $$\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(x)$$이고, $$x$$는 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim V(\y - \x^2) = 1$$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
-3. $$\mathbb{K}(\mathbb{P}^n) = \mathbb{K}(x_1/x_0, \ldots, x_n/x_0)$$이고, $$x_1/x_0, \ldots, x_n/x_0$$는 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{P}^n = n$$이다.
+3. $$\mathbb{K}(\mathbb{P}^n) = \mathbb{K}(x_1/x_0, \ldots, x_n/x_0)$$이고, $$x_1/x_0, \ldots, x_n/x_0$$는 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{P}^n = n$$이다. 이는 projective space가 affine space와 birationally equivalent함을 반영한다.
 
 </div>
 
 ## 차원의 기본 성질
 
-차원의 가장 기본적인 성질은 진부분집합의 차원이 더 작다는 것이다.
+차원의 가장 기본적인 성질은 진부분집합의 차원이 더 작다는 것이다. 이는 "더 작은" 다양체가 "더 낮은" 차원을 갖는다는 직관을 formalize한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> 기약 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
+<ins id="prop11">**명제 11**</ins> 기역 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
 
 </div>
 
@@ -200,9 +206,11 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 </details>
 
+이 명제는 기역 다양체의 진부분집합이 항상 더 낮은 차원을 갖는다는 것을 보여준다. 이는 "부분집합 = 더 작은 = 더 낮은 차원"이라는 직관과 일치한다.
+
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> 기약 다양체 $$X$$와 regular map $$\varphi: X \to Y$$에 대해 다음이 성립한다.
+<ins id="prop12">**명제 12**</ins> 기역 다양체 $$X$$와 regular map $$\varphi: X \to Y$$에 대해 다음이 성립한다.
 
 1. $$\dim \varphi(X) \le \dim X$$
 2. 만약 $$\varphi$$가 dominant이면 $$\dim Y \le \dim X$$
@@ -221,19 +229,21 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 </details>
 
+이 명제는 regular map이 차원을 "줄이거나 유지"할 수 있지만 "증가"시킬 수 없음을 보여준다. Dominant map은 차원을 유지하거나 줄일 수 있고, finite map은 차원을 정확히 유지한다.
+
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다.
+<ins id="ex13">**예시 13**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 linear subspace가 "가장 간단한" $$k$$차원 다양체임을 보여준다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> **Intersection**: 기약 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
+<ins id="ex14">**예시 14**</ins> **Intersection**: 기역 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
 
 $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 
-이다. 이를 *dimension inequality*라 부른다. 등호가 성립하는 경우 (즉, $$X$$와 $$Y$$가 "일반적인 위치"에 있는 경우)를 *proper intersection*이라 부른다.
+이다. 이를 *dimension inequality*라 부른다. 등호가 성립하는 경우 (즉, $$X$$와 $$Y$$가 "일반적인 위치"에 있는 경우)를 *proper intersection*이라 부른다. 예를 들어 $$\mathbb{A}^3$$에서 두 평면의 교차는 직선이고, $$2 + 2 - 3 = 1$$이므로 proper intersection이다. 이는 intersection theory의 기본적인 결과이다.
 
 </div>
 
