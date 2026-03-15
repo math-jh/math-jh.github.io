@@ -94,8 +94,9 @@ $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 
 첫 번째 주장은 자명하다. 두 번째 주장의 경우, 점 $$[x_0 : \cdots : x_n]$$이 모든 $$V(F_\alpha)$$에 속한다는 것은 모든 $$F_\alpha(x) = 0$$이라는 것이다. 이는 ideal $$(F_\alpha)_\alpha$$의 모든 원소가 $$x$$에서 0이라는 것과 동치이다. 마지막으로 점 $$[x_0 : \cdots : x_n]$$이 $$V(F) \cup V(G)$$에 속한다는 것은 $$F(x) = 0$$ 또는 $$G(x) = 0$$이라는 것이다. Field에서 이는 $$F(x)G(x) = 0$$과 동치이다.
 
-
 </details>
+
+Affine case에서와 마찬가지로, 이는 projective space $$\mathbb{P}^n$$ 위에 projective subvariety들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 
 
 <div class="proposition" markdown="1">
 

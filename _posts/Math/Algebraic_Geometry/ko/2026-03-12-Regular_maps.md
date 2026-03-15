@@ -17,11 +17,17 @@ weight: 4
 
 ---
 
-[§준사영다양체](/ko/math/algebraic_geometry/quasi_projective_varieties)에서 우리는 affine variety와 projective variety를 모두 포함하는 quasi-projective variety의 개념을 정의했으며, 이에 대한 motivation 중 하나는 이들 quasi-projective variety들 사이의 morphism을 미분다양체 스타일로 affine-local하게 살펴볼 수 있다는 것이었다. 이번 글에서 우리는 regular function과 regular map을 정의하고, 이들이 기존 정의 [§아핀다양체, ⁋정의 9](/ko/math/algebraic_geometry/affine_varieties#def9) 및 [§사영다양체, ⁋정의 13](/ko/math/algebraic_geometry/projective_varieties#def13)와 맞아떨어짐을 보인다. 
+[§준사영다양체](/ko/math/algebraic_geometry/quasi_projective_varieties)에서 우리는 affine variety와 projective variety를 모두 포함하는 quasi-projective variety의 개념을 정의했으며, 이에 대한 motivation 중 하나는 이들 quasi-projective variety들 사이의 morphism을 미분다양체 스타일로 affine-local하게 살펴볼 수 있다는 것이었다. 이번 글에서 우리는 regular function과 regular map을 정의하고, 이들이 기존 정의 [§아핀다양체, ⁋정의 10](/ko/math/algebraic_geometry/affine_varieties#def10) 및 [§사영다양체, ⁋정의 13](/ko/math/algebraic_geometry/projective_varieties#def13)와 맞아떨어짐을 보인다. 
 
 ## 정칙함수
 
-[\[준사영다양체\]](/ko/math/algebraic_geometry/quasi_projective_varieties)에서 우리는 quasi-projective variety가 open affine cover를 갖는다는 것을 보았다. Projective variety $$X \subseteq \mathbb{P}^n$$의 경우, [\[사영다양체\] ⁋명제 10, 11](/ko/math/algebraic_geometry/projective_varieties#prop10)에서 standard open cover $$X = \bigcup_{i=0}^n (X \cap U_i)$$를 갖고, 각 $$X \cap U_i$$가 affine variety임을 보였다. 일반적인 quasi-projective variety는 projective variety의 열린부분집합이므로, 이로부터 open affine cover를 얻는다. 이를 이용하여 quasi-projective variety 위의 함수를 국소적으로 정의할 수 있다. 이는 미분다양체에서 smooth function을 국소적으로 정의하는 것과 같은 발상이다.
+[\[준사영다양체\]](/ko/math/algebraic_geometry/quasi_projective_varieties)에서 우리는 quasi-projective variety가 open affine cover를 갖는다는 것을 보았다. 이를 엄밀하게 보이자. 
+
+Projective variety $$Y \subseteq \mathbb{P}^n$$가 주어졌다 하자. [\[사영다양체\] ⁋명제 10, 11](/ko/math/algebraic_geometry/projective_varieties#prop10)에 의하여 $$Y = \bigcup_{i=0}^n (Y \cap U_i)$$이고, 각 $$Y \cap U_i$$는 affine variety이다. 이제 quasi-projective variety $$X \subseteq Y$$의 각 점 $$p$$가 affine open neighborhood를 갖음을 보이자.
+
+$$p \in X$$라 하면, $$p \in Y \cap U_i$$인 $$i$$가 존재한다. $$Y \cap U_i$$는 affine variety이고, $$X \cap U_i$$는 그 안에서 열린부분집합이다. Affine variety에서 열린부분집합은 principal open set들의 합집합으로 쓰이므로, $$p \in D(f) \subseteq X \cap U_i$$인 principal open set $$D(f)$$가 존재한다. Principal open set $$D(f)$$는 affine variety이므로 ([\[아핀다양체\] ⁋명제 6](/ko/math/algebraic_geometry/affine_varieties#prop6)), $$p$$의 affine open neighborhood를 얻는다. 따라서 모든 quasi-projective variety는 open affine cover를 갖는다.
+
+이를 이용하여 quasi-projective variety 위의 함수를 국소적으로 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -37,7 +43,7 @@ Projective variety의 경우를 더 자세히 살펴보자. Affine chart $$U_0 =
 
 <ins id="ex2">**예시 2**</ins> Regular function의 예시들을 살펴보자.
 
-1. Affine variety $$X$$에서 $$\mathcal{O}(X) = \mathbb{K}[X]$$이다. 이는 [\[아핀다양체\] ⁋정의 7](/ko/math/algebraic_geometry/affine_varieties#def7)에서 coordinate ring의 원소들을 regular function이라 부른 것과 일치한다. Coordinate ring의 원소 $$f$$는 $$X$$ 자체가 affine cover이므로 정의 1의 조건을 만족한다.
+1. Affine variety $$X$$에서 $$\mathcal{O}(X) = \mathbb{K}[X]$$이다. 이는 [\[아핀다양체\] ⁋정의 8](/ko/math/algebraic_geometry/affine_varieties#def8)에서 coordinate ring의 원소들을 regular function이라 부른 것과 일치한다. Coordinate ring의 원소 $$f$$는 $$X$$ 자체가 affine cover이므로 정의 1의 조건을 만족한다.
 2. $$\mathbb{P}^n$$에서 $$\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$$이다. Standard open cover $$U_i = \{x_i \ne 0\}$$를 생각하자. $$U_0$$에서의 regular function은 $$\mathbb{K}[\x_1/\x_0, \ldots, \x_n/\x_0]$$의 원소이고, $$U_1$$에서의 regular function은 $$\mathbb{K}[\x_0/\x_1, \x_2/\x_1, \ldots, \x_n/\x_1]$$의 원소이다. 이들의 교집합 $$\mathcal{O}(\mathbb{P}^n) = \mathbb{K}[\x_0/\x_1] \cap \mathbb{K}[\x_1/\x_0] = \mathbb{K}$$이다. 이는 projective space에서 상수함수만이 전역적으로 정의됨을 보여준다.
 3. $$\mathbb{A}^2 \setminus \{(0,0)\}$$에서 $$\mathcal{O}(X) = \mathbb{K}[\x, \y]$$이다. 이는 [명제 3](#prop3)에서 일반적으로 증명할 것이다. 직관적으로, 여차원 2 이상의 닫힌집합을 제거하면 regular function이 변하지 않는다.
 
@@ -45,7 +51,7 @@ Projective variety의 경우를 더 자세히 살펴보자. Affine chart $$U_0 =
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> (Arapura Lemma 3.2.1) Affine variety $$X$$에서, 함수 $$f: X \to \mathbb{K}$$가 정의 1의 의미에서 regular인 것은 [\[아핀다양체\] ⁋정의 7](/ko/math/algebraic_geometry/affine_varieties#def7)의 의미에서 regular (즉, $$\mathbb{K}[X]$$의 원소)인 것과 동치이다.
+<ins id="prop3">**명제 3**</ins> (Arapura Lemma 3.2.1) Affine variety $$X$$에서, 함수 $$f: X \to \mathbb{K}$$가 정의 1의 의미에서 regular인 것은 [\[아핀다양체\] ⁋정의 8](/ko/math/algebraic_geometry/affine_varieties#def8)의 의미에서 regular (즉, $$\mathbb{K}[X]$$의 원소)인 것과 동치이다.
 
 </div>
 
@@ -87,7 +93,7 @@ $$Y$$의 임의의 열린부분집합 $$V$$와 regular function $$f \in \mathcal
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-**affine variety의 경우**: [§아핀다양체, ⁋명제 10](/ko/math/algebraic_geometry/affine_varieties#prop10)에서 morphism $$\varphi: X \to Y$$가 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도함을 보였다. 이는 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$로 정의되므로, $$\varphi$$가 regular function을 pullback한다는 것과 같다. 즉, coordinate ring의 원소 $$\bar{g}$$가 regular function $$g$$일 때, $$\varphi^\ast(\bar{g})$$는 $$g \circ \varphi$$가 된다. 따라서 affine variety의 morphism은 정의 3의 regular map과 일치한다.
+**affine variety의 경우**: [§아핀다양체, ⁋명제 11](/ko/math/algebraic_geometry/affine_varieties#prop11)에서 morphism $$\varphi: X \to Y$$가 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도함을 보였다. 이는 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$로 정의되므로, $$\varphi$$가 regular function을 pullback한다는 것과 같다. 즉, coordinate ring의 원소 $$\bar{g}$$가 regular function $$g$$일 때, $$\varphi^\ast(\bar{g})$$는 $$g \circ \varphi$$가 된다. 따라서 affine variety의 morphism은 정의 3의 regular map과 일치한다.
 
 **사영다양체의 경우**: [§사영다양체, ⁋정의 13](/ko/math/algebraic_geometry/projective_varieties#def13)에서 morphism을 homogeneous polynomials로 표현되는 함수로 정의했다. 구체적으로, $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$ where $$F_i$$ are homogeneous of the same degree. Regular function $$f$$ on $$V \subseteq Y$$는 국소적으로 다항식의 비율로 표현되므로, $$f \circ \varphi$$ 또한 다항식의 비율로 표현된다. 따라서 $$f \circ \varphi$$는 regular function이다. 이는 projective variety의 morphism이 regular map 조건을 만족함을 보여준다.
 
