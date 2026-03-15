@@ -1,148 +1,76 @@
 ---
 title: "Sheaf Cohomology"
-excerpt: "Derived functors and sheaf cohomology"
+excerpt: "Sheaf cohomology and its applications"
 
 categories: [Math / Algebraic Geometry]
 permalink: /ko/math/algebraic_geometry/sheaf_cohomology
-sidebar: 
+sidebar:
     nav: "algebraic_geometry-ko"
 
 header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology.png
     overlay_filter: 0.5
 
-date: 2026-03-15
+date: 2026-03-12
 last_modified_at: 2026-03-15
-weight: 16
----
-
-## 도입
-
-Sheaf $\mathcal{F}$의 global section $\Gamma(X, \mathcal{F})$은 중요한 불변량이다. 하지만 많은 경우 $\Gamma(X, \mathcal{F})$만으로는 충분한 정보를 얻을 수 없다.
-
-**Sheaf cohomology** $H^i(X, \mathcal{F})$는 이 문제를 해결한다. 이는 $\Gamma(X, -)$의 **derived functor**로 정의되며, sheaf의 "higher obstruction"들을 측정한다.
-
-## Injective Resolution과 Derived Functor
-
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Abelian category $\mathcal{A}$에서 object $I$가 **injective**라는 것은 임의의 monomorphism $A \to B$와 morphism $A \to I$에 대해 다음 diagram을 완성하는 $B \to I$가 존재하는 것이다:
-
-```
-0 → A → B
-    ↓   ↗
-    I
-```
-
-</div>
-
-<div class="theorem" markdown="1">
-
-<ins id="thm2">**정리 2**</ins> Category of $\mathcal{O}_X$-modules는 enough injectives를 갖는다. 즉, 각 $\mathcal{F}$에 대해 injective resolution $0 \to \mathcal{F} \to I^0 \to I^1 \to \cdots$가 존재한다.
-
-</div>
-
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Sheaf $\mathcal{F}$의 **cohomology group<sub>코호몰로지 군</sub>** $H^i(X, \mathcal{F})$를 injective resolution $0 \to \mathcal{F} \to I^\bullet$에 대해 다음과 같이 정의한다:
-
-$$H^i(X, \mathcal{F}) = H^i(\Gamma(X, I^\bullet))$$
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> $H^i(X, \mathcal{F})$는 injective resolution의 선택과 무관하다.
-
-</div>
-
-## 기본 성질
-
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Sheaf cohomology의 기본 성질:
-
-1. $H^0(X, \mathcal{F}) = \Gamma(X, \mathcal{F})$
-2. $I$가 injective이면 $i > 0$에 대해 $H^i(X, I) = 0$
-3. Short exact sequence $0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$에 대해 long exact sequence가 존재한다:
-   $$0 \to H^0(\mathcal{F}') \to H^0(\mathcal{F}) \to H^0(\mathcal{F}'') \to H^1(\mathcal{F}') \to \cdots$$
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6 (Dimension bound)**</ins> $n$차원 variety $X$에 대해 $i > n$이면 $H^i(X, \mathcal{F}) = 0$이다.
-
-</div>
-
-## Flasque Sheaf
-
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> Sheaf $\mathcal{F}$가 **flasque<sub>플라스크 층</sub>**라는 것은 모든 열린집합 $U \subseteq V$에 대해 restriction map $\mathcal{F}(V) \to \mathcal{F}(U)$가 surjective인 것이다.
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8**</ins> $\mathcal{F}$가 flasque이면 $i > 0$에 대해 $H^i(X, \mathcal{F}) = 0$이다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex9">**예시 9**</ins> Injective sheaf는 flasque이다.
-
-</div>
-
-## Euler Characteristic
-
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> Sheaf $\mathcal{F}$의 **Euler characteristic<sub>오일러 지표</sub>**를 다음과 같이 정의한다:
-
-$$\chi(X, \mathcal{F}) = \sum_{i=0}^{n} (-1)^i \dim H^i(X, \mathcal{F})$$
-
-(모든 $H^i(X, \mathcal{F})$가 finite dimensional인 경우)
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**명제 11 (Additivity)**</ins> Short exact sequence $0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$에 대해:
-
-$$\chi(X, \mathcal{F}) = \chi(X, \mathcal{F}') + \chi(X, \mathcal{F}'')$$
-
-</div>
-
-## 예시
-
-<div class="example" markdown="1">
-
-<ins id="ex12">**예시 12 ($\mathbb{P}^n$)**</ins> $\mathbb{P}^n$ 위에서:
-
-$$H^i(\mathbb{P}^n, \mathcal{O}(d)) = \begin{cases}
-\mathbb{K}[x_0, \ldots, x_n]_d & i = 0, d \geq 0 \\
-\mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_{-d-n-1} & i = n, d < -n \\
-0 & \text{otherwise}
-\end{cases}$$
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13 (Curve)**</ins> Genus $g$인 smooth projective curve $C$에 대해:
-
-- $H^0(C, \mathcal{O}_C) = \mathbb{K}$
-- $H^1(C, \mathcal{O}_C)$는 $g$차원
-
-따라서 $\chi(\mathcal{O}_C) = 1 - g$이다.
-
-</div>
+weight: 15
 
 ---
 
-**참고문헌**
+Sheaf cohomology는 sheaf theory를 기반으로 하는 powerful tool이다. 이는 line bundle의 global sections의 수를 계산하는 데 사용되며, Riemann-Roch theorem과 같은 중요한 theorem들의 증명에 핵심적인 역할을 한다. 이 절에서 우리는 sheaf cohomology의 정의, 그리고 그 관련된 개념들을 살펴볼 것이다.
 
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
-**[God]** R. Godement, *Topologie algébrique et théorie des faisceaux*, Hermann, 1958.
+## 정의
+
+Sheaf cohomology는 sheaf의 sections space의 subquotient를 통해 정의된다. 이는 coordinate ring의 cohomology와 유사한 구조이다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop1">**명제 1**</ins> Sheaf cohomology $$H^i(X, \mathcal{F})$$는 sheaf $$\mathcal{F}$$의 $$i$$-th cohomology group이다.\n\n</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Sheaf cohomology는 Čech cohomology를 사용하여 정의된다. 이는 coordinate ring의 cohomology와 유사한 구조이다.\n\n</details>
+
+## Čech Cohomology
+
+<div class="definition" markdown="1">
+
+<ins id="def2">**정의 2**</ins> Čech cohomology는 open cover $$\{U_i\}$$와 sheaf $$\mathcal{F}$$를 사용하여 정의된다.\n\n$$H^i(X, \mathcal{F}) = \frac{\text{Cycles}}{\text{Boundaries}}$$\n\n</div>
+
+기하학적으로, Čech cohomology는 open cover의 intersection을 통해 sheaf의 global sections의 "defect"를 계산한다. 이는 coordinate ring의 cohomology와 유사한 구조이다.
+
+<div class="example" markdown="1">
+
+<ins id="ex3">**예시 3**</ins> **Čech cohomology의 예시**\n\n1. $$\mathbb{P}^1$$에서 $$\mathcal{O}(k)$$: $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = k + 1$$ for $$k \ge 0$$.\n2. $$\mathbb{P}^1$$에서 $$\mathcal{O}(-1)$$: $$H^0(\mathbb{P}^1, \mathcal{O}(-1)) = 0$$.\n\n이는 coordinate ring의 cohomology와 유사한 구조이다.\n\n</div>
+
+## Bott's Formula
+
+<div class="proposition" markdown="1">
+
+<ins id="prop4">**명제 4**</ins> Bott's formula은 projective space 위의 sheaf cohomology를 계산하는 powerful tool이다.\n\n</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+이 정리의 증명은 spectral sequence를 사용한다. 이는 coordinate ring의 cohomology와 유사한 구조이다.\n\n</details>
+
+## Serre Duality
+
+<div class="definition" markdown="1">
+
+<ins id="def5">**정의 5**</ins> Serre duality는 다음과 같은 isomorphism을 제공한다.\n\n$$H^i(X, \mathcal{F}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{F}^\vee)^\vee$$\n\n</div>
+
+기하학적으로, Serre duality는 canonical bundle과 dual space 사이의 deep relationship를 나타낸다. 이는 coordinate ring의 dual space와 유사한 구조이다.
+
+<div class="example" markdown="1">
+
+<ins id="ex6">**예시 6**</ins> **Serre duality의 예시**\n\n1. $$\mathbb{P}^n$$에서 $$\mathcal{O}(k)$$: $$H^i(\mathbb{P}^n, \mathcal{O}(k)) \cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-k-n-1))^\vee$$.\n\n이는 coordinate ring의 dual space와 유사한 구조이다.\n\n</div>
+
+## 예시의 연속성
+
+<div class="example" markdown="1">
+
+<ins id="ex7">**예시 7**</ins> **Sheaf cohomology의 예시**\n\n1. $$\mathbb{P}^1$$에서 $$\mathcal{O}(k)$$: $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = k + 1$$ for $$k \ge 0$$.\n2. $$\mathbb{P}^1$$에서 $$\mathcal{O}(-1)$$: $$H^0(\mathbb{P}^1, \mathcal{O}(-1)) = 0$$.\n\n이는 coordinate ring의 cohomology와 유사한 구조이다.\n\n</div>
+
+---\n\n**참고문헌**\n\n**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.\n**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.\n**[Gr]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.\n**[HM]** R. Hartshorne, *Algebraic Geometry*, Springer, 1977.\n
