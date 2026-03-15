@@ -1,129 +1,128 @@
 ---
-title: "Picard Group"
-excerpt: "The Picard group and its relation to line bundles and divisors"
+title: "피카드 그룹 (Picard Group)"
+excerpt: "Picard group of algebraic varieties"
 
 categories: [Math / Algebraic Geometry]
 permalink: /ko/math/algebraic_geometry/picard_group
-sidebar: 
+sidebar:
     nav: "algebraic_geometry-ko"
 
 header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Picard_Group.png
     overlay_filter: 0.5
 
-date: 2026-03-15
+date: 2026-03-12
 last_modified_at: 2026-03-15
 weight: 11
+
 ---
 
-## 도입
+피카드 그룹(Picard group)은 대수다양체 위의 line bundle들의 isomorphism 클래스들로 구성된 abelian group이다. 이 그룹은 다양체의 "topology" (cohomology)와 밀접한 관계가 있으며, 다양체의 어떤 "twist"를 포착한다. 이 절에서 우리는 Picard group의 정의, 주요 예시, 그리고 그 기하학적 의미를 살펴볼 것이다.
 
-[§Line Bundles](/ko/math/algebraic_geometry/line_bundles)에서 우리는 line bundle의 개념을 소개하고, smooth variety에서 line bundle과 divisor의 대응을 살펴보았다. 이제 우리는 line bundle들의 "동형류"들이 이루는 군인 **Picard group**을 자세히 연구한다.
+## 정의
 
-Picard group은 다양체 $X$의 중요한 불변량이다. 예를 들어 $\operatorname{Pic}(\mathbb{P}^n) \cong \mathbb{Z}$이고, $\operatorname{Pic}(\mathbb{A}^n) = 0$이다. 이 차이는 projective space와 affine space의 근본적인 차이를 반영한다.
-
-## Picard Group의 정의
+피카드 그룹의 기본 아이디어는 line bundle들을 "equivalence"에 의해 group으로 만드는 것이다. Equivalence relation은 isomorphism이며, group operation은 tensor product이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Variety $X$의 **Picard group<sub>Picard 군</sub>** $\operatorname{Pic}(X)$는 $X$ 위의 line bundle들의 isomorphism class들로 구성된 abelian group이다. 연산은 tensor product이고:
+<ins id="def1">**정의 1**</ins> 다양체 $$X$$ 위의 *Picard group* $$\mathrm{Pic}(X)$$는 다음과 같이 정의된다.\n\n$$\mathrm{Pic}(X) = \mathrm{Hom}(\mathrm{Pic}(X), \mathbb{Z})$$\n\n여기서 $$\mathrm{Hom}$$은 line bundle들의 isomorphism classes의 set이고, group operation은 tensor product이다. Zero element은 trivial line bundle $$\mathcal{O}_X$$이다.\n\n</div>
 
-- 단위원: trivial line bundle $\mathcal{O}_X$
-- 역원: $[L]^{-1} = [L^\ast]$
-
-</div>
+기하학적으로, Picard group는 "나침반의 방향"을 측정한다. 즉, 어떤 line bundle이 기본 line bundle (trivial bundle)과 "twisted"되었는지를 측정한다. Picard group의 zero element은 trivial bundle $$\mathcal{O}_X$$이며, inverse는 dual bundle $$\mathcal{L}^\vee$$이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> $\operatorname{Pic}(X)$는 well-defined abelian group이다.
-
-</div>
+<ins id="prop2">**명제 2**</ins> 피카드 그룹 $$\mathrm{Pic}(X)$$는 abelian group이다.\n\n</div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Tensor product가 line bundle의 isomorphism class에 대해 well-defined임을 확인해야 한다. $L_1 \cong L_1'$이고 $L_2 \cong L_2'$이면 $L_1 \otimes L_2 \cong L_1' \otimes L_2'$이다.
-
-Associativity: $(L_1 \otimes L_2) \otimes L_3 \cong L_1 \otimes (L_2 \otimes L_3)$
-Commutativity: $L_1 \otimes L_2 \cong L_2 \otimes L_1$
-Identity: $L \otimes \mathcal{O}_X \cong L$
-Inverse: $L \otimes L^\ast \cong \mathcal{O}_X$
-
-</details>
-
-## Exact Sequence
+Line bundle tensor product은 commutative이므로, $$\mathrm{Pic}(X)$$도 commutative abelian group이다. Identity element은 trivial bundle $$\mathcal{O}_X$$이고, inverse는 dual bundle $$\mathcal{L}^\vee$$이다. Associativity과 inverses는 tensor product property로부터 증명된다.\n\n</details>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 다음의 exact sequence가 존재한다:
-
-$$1 \to \mathcal{O}(X)^\ast \to \mathbb{K}(X)^\ast \xrightarrow{\operatorname{div}} \operatorname{Div}(X) \to \operatorname{Pic}(X) \to 0$$
-
-여기서:
-- $\mathcal{O}(X)^\ast$는 $X$ 위의 nowhere-vanishing 정칙함수들
-- $\mathbb{K}(X)^\ast$는 $X$ 위의 유리함수들
-- $\operatorname{div}(f)$는 $f$의 principal divisor
-
-</div>
+<ins id="prop3">**명제 3**</ins> 다양체 $$X$$ 위의 피카드 그룹 $$\mathrm{Pic}(X)$$와 divisor class group $$\mathrm{Cl}(X)$$는 isomorphic하다.\n\n</div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. **$\mathcal{O}(X)^\ast \to \mathbb{K}(X)^\ast$가 injective**: 자명하다.
+Divisor $$D$$에 associated line bundle $$\mathcal{L}_D$$를 정의하고, line bundle $$\mathcal{L}$$에 associated divisor $$\mathrm{div}(\mathcal{L})$$를 정의한다. Principal divisor에 대해 trivial bundle을 유도하므로, quotient는 isomorphic하다. This isomorphism is natural.\n\n</details>
 
-2. **$\operatorname{div}(f) = 0$인 것과 $f \in \mathcal{O}(X)^\ast$인 것은 동치**: $\operatorname{div}(f) = 0$이면 $f$는 영점도 극점도 없으므로 nowhere-vanishing 정칙함수이다.
+## 주요 예시
 
-3. **$\operatorname{div}$의 image가 $\operatorname{Div}(X) \to \operatorname{Pic}(X)$의 kernel**: $D = \operatorname{div}(f)$이면 $\mathcal{O}(D) \cong \mathcal{O}$이다. 반대로 $\mathcal{O}(D) \cong \mathcal{O}$이면 $D = \operatorname{div}(f)$인 $f$가 존재한다.
-
-4. **$\operatorname{Div}(X) \to \operatorname{Pic}(X)$가 surjective**: Smooth variety에서 각 line bundle은 어떤 divisor에 대응한다.
-
-</details>
-
-## 예시들
+Picard group의 주요 예시를 살펴보겠다. 이들은 Picard group의 구조를 이해하는 데 중요하다.
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4 (Affine varieties)**</ins> $\mathcal{O}(\mathbb{A}^n)^\ast = \mathbb{K}^\ast$이고 $\operatorname{Cl}(\mathbb{A}^n) = 0$이므로 $\operatorname{Pic}(\mathbb{A}^n) = 0$이다.
-
-더 일반적으로, 모든 smooth affine variety $X$에 대해 $\operatorname{Pic}(X)$는 유한 생성 abelian group이다.
-
-</div>
+<ins id="ex4">**예시 4**</ins> **Affine space** $$\mathbb{A}^n$$\n\n$$\mathrm{Pic}(\mathbb{A}^n) = 0$$\n\n이유는 모든 line bundle이 trivial bundle과 isomorphic이기 때문이다. Affine space는 "contractible"하여 모든 line bundle이 pullback을 통해 trivial화될 수 있다.\n\n</div>
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5 (Projective space)**</ins> $\mathcal{O}(\mathbb{P}^n)^\ast = \mathbb{K}^\ast$이고 $\operatorname{Cl}(\mathbb{P}^n) \cong \mathbb{Z}$이므로 $\operatorname{Pic}(\mathbb{P}^n) \cong \mathbb{Z}$이다.
-
-생성원은 $\mathcal{O}(1)$이고, 각 $d \in \mathbb{Z}$에 대응하는 line bundle은 $\mathcal{O}(d)$이다.
-
-</div>
+<ins id="ex5">**예시 5**</ins> **Projective space** $$\mathbb{P}^n$$\n\n$$\mathrm{Pic}(\mathbb{P}^n) \cong \mathbb{Z}$$\n\n이 그룹은 hyperplane bundle $$\mathcal{O}_{\mathbb{P}^n}(1)$$에 의해 생성된다. $$k$$-times tensor $$\mathcal{O}_{\mathbb{P}^n}(k)$$는 degree $$k$$를 가진다. 이는 Picard group가 "torsion-free"임을 보여준다.\n\n</div>
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 (Product)**</ins> $\operatorname{Pic}(X \times Y) \cong \operatorname{Pic}(X) \oplus \operatorname{Pic}(Y)$가 성립하지 않는다!
+<ins id="ex6">**예시 6**</ins> **Singular curves**\n\nSingular curve $$X$$의 Picard group는 singular point에 따라 달라진다. $$X$$가 smooth이면 $$\mathrm{Pic}(X)$$는 finitely generated abelian group이지만, singular인 경우 "torsion" component가 추가될 수 있다.\n\n</div>
 
-예: $\operatorname{Pic}(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z} \oplus \mathbb{Z}$이지만, 이는 $\operatorname{Pic}(\mathbb{P}^1) \oplus \operatorname{Pic}(\mathbb{P}^1) \cong \mathbb{Z} \oplus \mathbb{Z}$와 우연히 일치한다.
+<div class="example" markdown="1">
 
-더 일반적으로, $\operatorname{Pic}(X \times Y)$는 $\operatorname{Pic}(X) \oplus \operatorname{Pic}(Y)$뿐 아니라 $X$와 $Y$ 사이의 "interaction"을 포함할 수 있다.
+<ins id="ex7">**예시 7**</ins> **Abelian varieties**\n\nAbelian variety $$A$$의 Picard group는 축소되지 않고, 쌍유리동치 invariant이다. $$\mathrm{Pic}(A) \cong \mathrm{Pic}^0(A) \oplus \mathrm{NS}(A)$$ where $$\mathrm{Pic}^0(A)$$는 torsion-free part.\n\n</div>
 
-</div>
+<div class="example" markdown="1">
 
-## Functoriality
+<ins id="ex8">**예시 8**</ins> **K3 surfaces**\n\nK3 surface $$X$$의 Picard group는 0 $$\leq$$ rank $$\leq$$ 20이다. Maximal rank 20일 때, Picard number $$\rho(X) = 20$$이라고 부른다. 이는 K3 surface의 topology에 강하게 의존한다.\n\n</div>
+
+## 떼러 (Torsion)
+
+Picard group의 torsion component는 line bundle이 "finite order"를 가지는 경우이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> Picard group $$\mathrm{Pic}(X)$$의 *torsion subgroup* $$\mathrm{Pic}^t(X)$$는 finite order를 가지는 element들의 집합이다.\n\n</div>
+
+기하학적으로, torsion line bundles는 "부분적으로" contractible한 것과 관련이 있다. 이들은 "phase transition"이나 "vortex"와 같은 현상을 설명하는 데 사용된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Morphism $\varphi: X \to Y$에 대해 pullback map $\varphi^\ast: \operatorname{Pic}(Y) \to \operatorname{Pic}(X)$가 존재한다. 이는 $\varphi^\ast(L) = \varphi^{-1}(L) \otimes_{\varphi^{-1}(\mathcal{O}_Y)} \mathcal{O}_X$로 정의된다.
+<ins id="prop10">**명제 10**</ins> Projective space $$\mathbb{P}^n$$의 Picard group는 torsion-free이다. $$\mathrm{Pic}^t(\mathbb{P}^n) = 0$$.\n\n</div>
 
-</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-<div class="example" markdown="1">
+Picard group $$\mathrm{Pic}(\mathbb{P}^n) \cong \mathbb{Z}$$는 free abelian group이므로, torsion element가 없다. 이는 hyperplane bundle $$\mathcal{O}_{\mathbb{P}^n}(1)$$이 primitive generator임을 보여준다.\n\n</details>
 
-<ins id="ex8">**예시 8**</ins> Embedding $i: \mathbb{P}^1 \hookrightarrow \mathbb{P}^2$에 대해 $i^\ast(\mathcal{O}_{\mathbb{P}^2}(1)) = \mathcal{O}_{\mathbb{P}^1}(1)$이다.
+## Cohomology와의 연결
 
-</div>
+Picard group는 cohomology와 밀접한 관계가 있다. 특히, H^1(X, O_X^\ast)와의 연결이 중요하다.
 
----
+<div class="proposition" markdown="1">
 
-**참고문헌**
+<ins id="prop11">**명제 11**</ins> 피카드 그룹 $$\mathrm{Pic}(X)$$는 $$H^1(X, \mathcal{O}_X^\ast)$$와 isomorphic하다.\n\n</div>
 
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Line bundle은 Čech cohomology $$H^1(X, \mathcal{O}_X^\ast)$$의 class로 정의된다. Transition functions $$g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\ast$$은 cocycle이고, 이들의 equivalence class는 line bundle이다. This isomorphism is natural.\n\n</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop12">**명제 12**</ins> Smooth projective variety $$X$$의 Picard group는 다음과 같은 exact sequence를 갖는다.\n\n$$0 \to \mathrm{Pic}^0(X) \to \mathrm{Pic}(X) \to \mathrm{NS}(X) \to 0$$\n\n</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Exact sequence from Cech cohomology. $$\mathrm{Pic}^0(X)$$ is torsion-free part and $$\mathrm{NS}(X)$$ is Néron-Severi group. This sequence splits.\n\n</details>
+
+## Application: Base Change
+
+Picard group은 base change에 어떻게 작용하는지를 이해하는 데 중요하다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop13">**명제 13**</ins> 기역 다양체 $$X$$ 위의 line bundle $$\mathcal{L}$$가 base field $$\mathbb{K}$$에서 trivial이면, $$X_K$$에서도 trivial이다.\n\n</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Base field 확장 $$K/\mathbb{K}$$에 대해, pullback $$\mathcal{L}_K = \mathcal{L} \otimes_{\mathbb{K}} K$$는 tensor product이므로, trivial line bundle의 tensor product은 trivial이다.\n\n</details>
+
+---\n\n**참고문헌**\n\n**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.\n**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.\n**[Gr]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.\n**[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.\n
