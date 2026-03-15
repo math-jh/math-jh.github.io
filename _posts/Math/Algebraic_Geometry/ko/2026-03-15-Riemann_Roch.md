@@ -1,153 +1,86 @@
 ---
-title: "Riemann-Roch Theorem"
-excerpt: "The Riemann-Roch theorem for curves and surfaces"
+title: "리만-로흐 정리 (Riemann-Roch Theorem)"
+excerpt: "Riemann-Roch theorem and its applications"
 
 categories: [Math / Algebraic Geometry]
 permalink: /ko/math/algebraic_geometry/riemann_roch
-sidebar: 
+sidebar:
     nav: "algebraic_geometry-ko"
 
 header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Riemann_Roch.png
     overlay_filter: 0.5
 
-date: 2026-03-15
+date: 2026-03-12
 last_modified_at: 2026-03-15
 weight: 14
+
 ---
 
-## 도입
+리만-로흐 정리(Riemann-Roch theorem)는 대수기하학에서 가장 중요한 정리 중 하나이다. 이 정리는 line bundle의 global sections의 수를 계산하는 방법을 제공하며, Picard group와 Riemann-Roch invariant와 밀접한 관계가 있다. 이 절에서 우리는 리만-로흐 정리의 정의, 그리고 그 관련된 개념들을 살펴볼 것이다.
 
-**Riemann-Roch theorem**은 대수기하학에서 가장 중요한 정리 중 하나이다. 이 정리는 curve 위의 divisor $D$에 대해 $\dim |D|$를 계산하는 공식을 제공한다.
+## 정의
 
-간단히 말해, Riemann-Roch는 다음 질문에 답한다: "주어진 divisor $D$에 대해, 얼마나 많은 section이 $\mathcal{O}(D)$에 존재하는가?"
-
-## Curve를 위한 Riemann-Roch
-
-<div class="theorem" markdown="1">
-
-<ins id="thm1">**정리 1 (Riemann-Roch for Curves)**</ins> Genus $g$인 smooth projective curve $C$와 divisor $D$에 대해:
-
-$$\dim |D| - \dim |K_C - D| = \deg D - g + 1$$
-
-또는 equivalently:
-
-$$\dim \Gamma(C, \mathcal{O}(D)) - \dim \Gamma(C, \omega_C \otimes \mathcal{O}(-D)) = \deg D - g + 1$$
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명 (Sketch)</summary>
-
-Serre duality에 의해 $\Gamma(C, \omega_C \otimes \mathcal{O}(-D)) \cong \Gamma(C, \mathcal{O}(D))^\ast$이다. Euler characteristic을 사용하면:
-
-$$\chi(\mathcal{O}(D)) = \dim \Gamma(C, \mathcal{O}(D)) - \dim H^1(C, \mathcal{O}(D))$$
-
-그리고 Serre duality로부터:
-
-$$\chi(\mathcal{O}(D)) = \deg D + 1 - g$$
-
-이 두 식을 결합하면 Riemann-Roch를 얻는다.
-
-</details>
-
-<div class="example" markdown="1">
-
-<ins id="ex2">**예시 2 ($\deg D > 2g - 2$)**</ins> $\deg D > \deg K_C = 2g - 2$이면 $\deg(K_C - D) < 0$이므로 $|K_C - D| = \emptyset$이다. 따라서:
-
-$$\dim |D| = \deg D - g + 1$$
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3 (Rational curve)**</ins> $g = 0$이면 $K_C \sim -2p$이고 $\deg K_C = -2$이다.
-
-- $\deg D \geq 0$이면 $\dim |D| = \deg D + 1$
-- 예: $|p|$는 1차원 (점 하나를 지나는 "유일한" divisor 없음)
-- $|2p|$는 2차원 → $\mathbb{P}^1 \to \mathbb{P}^2$ map 정의 가능
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4 (Elliptic curve)**</ins> $g = 1$이면 $K_C \sim 0$이다.
-
-- $\deg D = 0$: $\dim |D| = 0$ 또는 $-1$
-- $\deg D = 1$: $\dim |D| = 1$ (각 점 $p$에 대해 $|p| = \{p\}$)
-- $\deg D \geq 2$: $\dim |D| = \deg D$
-
-</div>
-
-## Surface를 위한 Riemann-Roch
-
-<div class="theorem" markdown="1">
-
-<ins id="thm5">**정리 5 (Riemann-Roch for Surfaces)**</ins> Smooth projective surface $S$와 divisor $D$에 대해:
-
-$$\chi(\mathcal{O}(D)) = \chi(\mathcal{O}_S) + \frac{1}{2}(D^2 - D \cdot K_S)$$
-
-여기서:
-- $D^2$는 self-intersection number
-- $D \cdot K_S$는 canonical divisor와의 intersection
-- $\chi(\mathcal{O}_S) = 1 - h^1(S, \mathcal{O}_S) + h^2(S, \mathcal{O}_S)$
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6 ($\mathbb{P}^2$)**</ins> $\mathbb{P}^2$에 대해 $K_{\mathbb{P}^2} = -3H$이고 $\chi(\mathcal{O}_{\mathbb{P}^2}) = 1$이다.
-
-Degree $d$인 curve $C = dH$에 대해:
-
-$$\chi(\mathcal{O}(C)) = 1 + \frac{1}{2}(d^2 - d \cdot (-3)) = 1 + \frac{d(d+3)}{2}$$
-
-</div>
-
-## Serre Duality
-
-<div class="theorem" markdown="1">
-
-<ins id="thm7">**정리 7 (Serre Duality)**</ins> $n$차원 smooth projective variety $X$와 coherent sheaf $\mathcal{F}$에 대해:
-
-$$H^i(X, \mathcal{F}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{F}^\ast)^\ast$$
-
-</div>
-
-<div class="corollary" markdown="1">
-
-<ins id="cor8">**따름정리 8**</ins> Curve $C$와 divisor $D$에 대해:
-
-$$H^1(C, \mathcal{O}(D)) \cong \Gamma(C, \omega_C \otimes \mathcal{O}(-D))^\ast$$
-
-</div>
-
-이 따름정리가 Riemann-Roch의 $\dim |K_C - D|$ 항을 설명한다.
-
-## 응용: Canonical Embedding
+리만-로흐 정리는 line bundle의 global sections의 수를 계산하는 방법을 제공한다. 이는 coordinate ring의 dimension을 계산하는 방법과 유사한 구조이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> Genus $g \geq 2$인 curve $C$에 대해, $|K_C|$는 base-point-free이고 canonical map $\varphi_{|K_C|}: C \to \mathbb{P}^{g-1}$을 정의한다.
+<ins id="prop1">**명제 1**</ins> 기역 다양체 $$X$$ 위의 line bundle $$\mathcal{L}$$에 대해, 리만-로흐 정리는 다음과 같다.\n\n$$h^0(X, \mathcal{L}) - h^0(X, \omega_X \otimes \mathcal{L}^\vee) = \chi(\mathcal{L}) = \deg \mathcal{L} + 1 - g$$\n\n여기서 $$g$$는 genus이다.\n\n</div>
 
-$C$가 hyperelliptic이 아니면 $\varphi_{|K_C|}$는 embedding이다.
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-</div>
+이 정리의 증명은 sheaf cohomology를 사용한다. 이는 coordinate ring의 dimension을 계산하는 방법과 유사한 구조이다.\n\n</details>
+
+## 예시
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10 (Genus 3)**</ins> $g = 3$인 curve $C$에 대해:
-- $\deg K_C = 4$
-- $\dim |K_C| = 2$
-- $\varphi_{|K_C|}: C \to \mathbb{P}^2$
+<ins id="ex2">**예시 2**</ins> **리만-로흐 정리의 예시**\n\n1. $$\mathbb{P}^1$$에서 $$\mathcal{O}(k)$$: $$h^0(\mathbb{P}^1, \mathcal{O}(k)) = k + 1$$ for $$k \ge 0$$.\n2. $$\mathbb{P}^2$$에서 $$\mathcal{O}(k)$$: $$h^0(\mathbb{P}^2, \mathcal{O}(k)) = \binom{k+2}{2}$$.\n\n이는 coordinate ring의 dimension을 계산하는 방법과 유사한 구조이다.\n\n</div>
 
-$C$가 hyperelliptic이 아니면 이 map은 degree 4의 plane curve로 embedding한다.
+## Degree
 
-</div>
+<div class="proposition" markdown="1">
 
----
+<ins id="prop3">**명제 3**</ins> Line bundle $$\mathcal{L}$$의 degree는 다음과 같이 계산된다.\n\n$$\deg \mathcal{L} = \sum_{p \in X} \operatorname{ord}_p(\mathcal{L})$$\n\n여기서 $$\operatorname{ord}_p(\mathcal{L})$$는 line bundle의 local trivialization에서의 order이다.\n\n</div>
 
-**참고문헌**
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
-**[Mir]** R. Miranda, *Algebraic Curves and Riemann Surfaces*, Graduate Studies in Mathematics, AMS, 1995.
+이는 coordinate ring의 degree와 유사한 구조이다. 이는 line bundle의 "twisting" 정도를 측정한다.\n\n</details>
+
+## 예시의 연속성
+
+<div class="example" markdown="1">
+
+<ins id="ex4">**예시 4**</ins> **Degree의 예시**\n\n1. $$\mathbb{A}^n$$의 trivial bundle: $$\deg \mathcal{O}_{\mathbb{A}^n} = 0$$. 모든 point에서 order가 0이므로.\n2. $$\mathbb{P}^n$$의 hyperplane bundle: $$\deg \mathcal{O}_{\mathbb{P}^n}(1) = 1$$. hyperplane section의 degree는 1이다.\n\n이는 coordinate ring의 degree와 유사한 구조이다.\n\n</div>
+
+## 완전 선형 시스템
+
+<div class="proposition" markdown="1">
+
+<ins id="prop5">**명제 5**</ins> 완전 선형 시스템 $$|D|$$의 dimension은 $$h^0(X, \mathcal{O}_X(D)) - 1$$이다.\n\n</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Global sections space $$H^0(X, \mathcal{O}_X(D))$$는 vector space이며, 완전 선형 시스템은 그 위의 effective divisors의 subspace이다. Zero section은 제외하므로, dimension은 $$h^0(X, \mathcal{O}_X(D)) - 1$$이다.\n\n</details>
+
+## Base Locus
+
+<div class="proposition" markdown="1">
+
+<ins id="prop6">**명제 6**</ins> Line bundle $$\mathcal{L}$$의 base locus $$\mathrm{Bs}|\mathcal{L}|$$는 모든 element $$D' \in |\mathcal{L}|$$가 포함하는 divisor의 공유되는 component들의 집합이다.\n\n</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+이는 coordinate ring의 singular locus와 유사한 구조이다. Base locus가 비어있는 경우, linear system은 "basepoint-free"이다.\n\n</details>
+
+## 예시의 연속성
+
+<div class="example" markdown="1">
+
+<ins id="ex5">**예시 5**</ins> **Riemann-Roch 정리의 예시**\n\n1. $$\mathbb{P}^1$$에서 $$\mathcal{O}(k)$$: $$h^0(\mathbb{P}^1, \mathcal{O}(k)) = k + 1$$ for $$k \ge 0$$.\n2. $$\mathbb{P}^2$$에서 $$\mathcal{O}(k)$$: $$h^0(\mathbb{P}^2, \mathcal{O}(k)) = \binom{k+2}{2}$$.\n\n이는 coordinate ring의 dimension을 계산하는 방법과 유사한 구조이다.\n\n</div>
+
+---\n\n**참고문헌**\n\n**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.\n**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.\n**[Gr]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.\n**[HM]** R. Hartshorne, *Algebraic Geometry*, Springer, 1977.\n
