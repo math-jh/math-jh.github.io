@@ -29,7 +29,7 @@ Projective space의 열린부분집합은 자연스러운 기하적 대상이다
 
 </div>
 
-즉, quasi-projective variety는 projective variety $$Y$$와 그 속의 닫힌집합 $$Z$$에 대해 $$X = Y \setminus Z$$의 꼴로 쓰여지는 집합이다.
+이에 대한 우리의 직관은 다음과 같다. 우리는 variety들 사이의 morphism을 다룰 때 미분다양체 등에서 하였듯 한 점 주변의 (affine) 열린근방을 찾아 계산을 수행할 것이다. 이제 임의의 projective variety $Y$의 임의의 점은 standard affine open set $$U_i \cong \mathbb{A}^n$$ 중 하나에 속하며, 따라서 임의의 quasi-projective variety의 점 $p\in X=Y\setminus Z$에 대하여도 $p\in X\cap U_i$이도록 하는 affine open set $U_i$를 택할 수 있고 이것이 affine variety의 open subvariety가 될 것이다. 
 
 <div class="example" markdown="1">
 
@@ -37,7 +37,7 @@ Projective space의 열린부분집합은 자연스러운 기하적 대상이다
 
 </div>
 
-## Zariski 위상
+## 자리스키 위상
 
 Quasi-projective variety $$X \subseteq Y \subseteq \mathbb{P}^n$$에는 $$Y$$로부터 물려받는 subspace topology가 존재한다. 
 
@@ -105,25 +105,13 @@ $$\mathbb{A}^{n+1}\setminus\{(0,\ldots, 0)\}\rightarrow \mathbb{P}^n;\qquad (x_0
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$X$$가 사영다양체 $$Y$$의 열린부분집합이라 하자.
+$$X$$가 projective variety $$Y$$의 열린부분집합이라 하자.
 
 - $$X$$의 열린부분집합 $$U$$는 $$Y$$의 열린부분집합이므로 quasi-projective variety이다.
-- $$X$$의 닫힌부분집합 $$Z = X \cap W$$ ($$W$$는 사영다양체)는 $$Y \cap W$$의 열린부분집합이므로 quasi-projective variety이다.
+- $$X$$의 닫힌부분집합 $$Z = X \cap W$$ ($$W$$는 projective)는 $$Y \cap W$$의 열린부분집합이므로 quasi-projective variety이다.
 
 </details>
 
-## 왜 Quasi-projective variety인가?
-
-Quasi-projective variety라는 범주가 자연스러운 이유는 **국소적으로 affine variety처럼 다룰 수 있기 때문**이다. [§사영다양체, 명제 11](/ko/math/algebraic_geometry/projective_varieties#prop11)에서 보았듯, 사영다양체 $$Y$$의 각 점은 standard affine open set $$U_i \cong \mathbb{A}^n$$ 중 하나에 속한다. 따라서 quasi-projective variety $$X = Y \setminus Z$$의 각 점 $$p$$에 대해서도 $$p \in X \cap U_i$$인 $$i$$가 존재하고, $$X \cap U_i$$는 affine variety의 열린부분집합이다.
-
-이는 미분다양체(manifold)에서 각 점의 열린근방이 $$\mathbb{R}^n$$과 동형인 chart를 갖는 것과 비슷하다. Quasi-projective variety의 morphism 정의에서 "각 점 $$p$$의 열린근방 $$U$$"를 잡는 것은 바로 이 chart를 선택하는 것에 해당한다.
-
-즉, quasi-projective variety 범주는:
-- 아핀다양체를 포함하고
-- 사영다양체를 포함하면서
-- 동시에 **국소적으로는 항상 affine setting에서 작업할 수 있는**
-
-가장 자연스러운 범주이다. 다음 절 [§정칙사상](/ko/math/algebraic_geometry/regular_maps)에서 우리는 이 점을 더 자세히 탐구할 것이다.
 
 ---
 
