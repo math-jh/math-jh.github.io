@@ -269,7 +269,7 @@ $$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
+<ins id="ex16">**예시 16**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
 
 $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
@@ -277,7 +277,7 @@ $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
 $$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$
 
-의 공통 영점이며, $$\mathbb{P}^1$$과 isomorphic하다. 실은, 이는 [예시 15](#ex15)에서 살펴본 Veronese embedding of degree 3으로, 
+의 공통 영점이며, $$\mathbb{P}^1$$과 isomorphic하다. 실은, 위의 예시 15에서 살펴본 Veronese embedding의 개념을 $$d=3$$으로 확장하면, 
 
 $$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
 
