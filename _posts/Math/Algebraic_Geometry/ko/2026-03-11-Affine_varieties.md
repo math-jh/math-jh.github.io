@@ -248,7 +248,7 @@ $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
 이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $$V(\mathfrak{a})$$가 algebraic variety이기 위해서는 $$\sqrt{\mathfrak{a}}$$가 prime ideal이어야 함을 알 수 있다. 
 
-## Coordinate Ring
+## 좌표환과 정칙성
 
 우리는 양방향의 대응 $$Z$$, $$I$$가 담고 있는 철학을 더 확장시킬 수 있다. 구체적으로, $$\mathbb{A}^n$$의 기하학은 그 정의에 의해 $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 원소들이 담고 있다. 역으로, $$\mathbb{A}^n$$의 임의의 점 $$x=(x_1,\ldots, x_n)$$를 받아 $i$번째 좌표를 내놓는 함수를 $$\x_i: x\mapsto x_i$$으로 생각할 수 있으며, 이러한 관점에서 $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 모든 원소들을 $$\mathbb{A}^n$$ 위에 정의된 (다항식) 함수로 볼 수 있다. 
 
@@ -264,7 +264,7 @@ $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / I(X)=\mathbb{K}[\x_1, \ldots,
 
 </div>
 
-Coordinate ring $$\mathbb{K}[X]$$의 원소들은 위에서 살펴본 것과 비슷하게 $$X$$ 위에서 정의된 함수들로 생각할 수 있다. 구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 잘 정의되기 위해서는 $$\bar{f}$$의 representative에 상관없이 $$X$$의 모든 점에서 그 함숫값이 같아야 하는데, 어차피 $$\bar{f}$$에서 다른 representative를 택하는 것은 $$I(X)$$의 원소를 택하는 것이고 이들 함수들은 $$X$$ 위에서 identically zero이기 때문이다. 
+Coordinate ring $$\mathbb{K}[X]$$의 원소들은 위에서 살펴본 것과 비슷하게 $$X$$ 위에서 정의된 함수들로 생각할 수 있다. 구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 잘 정의되기 위해서는 $$\bar{f}$$의 representative에 상관없이 $$X$$의 모든 점에서 그 함숫값이 같아야 하는데, 어차피 $$\bar{f}$$에서 다른 representative를 택하는 것은 $$I(X)$$의 원소를 택하는 것이고 이들 함수들은 $$X$$ 위에서 identically zero이기 때문이다. 또 앞서 살펴봤듯 $$X$$가 affine variety라면 $$I(X)$$는 prime ideal이므로 $$\mathbb{K}[X]$$는 integral domain이 된다는 것도 기억할 만하다.
 
 <div class="example" markdown="1">
 
@@ -274,19 +274,27 @@ Coordinate ring $$\mathbb{K}[X]$$의 원소들은 위에서 살펴본 것과 비
 
 </div>
 
-한편, 앞서 살펴봤듯 $$X$$가 affine variety라면 $$I(X)$$는 prime ideal이므로 $$\mathbb{K}[X]$$는 integral domain이 된다. 
+한편, 우리는 앞서 affine variety의 정의가 실은 (closed) embedding $$X\subseteq \mathbb{A}^n$$에 의존한다는 것을 지적하였는데, 그로 인한 문제가 여기에서도 발생한다. 해당 부분에서 사용한 $$\mathbb{A}^1$$의 principal open set $$X=D(\x)$$의 예시를 살펴보면, 이 affine variety의 올바른 coordinate ring은 $$\mathbb{A}^1$$의 부분집합으로서 계산하는 것이 아닌, $$\mathbb{A}^2$$의 부분집합 $$Z(\x\y-1)$$으로서 계산하여야 하고 그럼
+
+$$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
+
+가 된다. 이를 염두에 두면 다음의 정의 또한 이해할 수 있다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def13">**정의 13**</ins> 임의의 affine variety $$V\subseteq \mathbb{A}^k$$와 그 위에서 정의된 함수 $$f:V\rightarrow \mathbb{K}$$에 대하여, $$f$$가 점 $$p\in V$$에서 *regular*라는 것은 $$p$$의 적당한 열린근방 $$U$$와 두 다항식 $$g,h$$가 존재하여, $$U$$ 위에서 $$f=g/h$$이 성립하는 것이다. 여기서 $$h$$는 $$U$$ 위에서 $$0$$이 되지 않는 함수이다. 
+
+</div>
+
+그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. 이 두 정의가 동치인 것은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 
 
 ## 아핀다양체 사이의 사상
 
 이제 우리는 affine variety들 사이의 morphism을 정의한다. Affine variety들은 다항식으로 정의되는 기하학적 대상들이므로, 이들 사이의 함수 또한 다항식으로 나타나는 것들이어야 함이 타당하다.
 
-
-
-D(x), K[x.1/x], D(f)는 A^1에서는 affine variety 아님, A^2로 올려야 affine, embedding에 의존하지 않도록 정의하는게 목표, 
-
 <div class="definition" markdown="1">
 
-<ins id="def13">**정의 13**</ins> 두 affine variety들 $$X \subseteq \mathbb{A}^n$$과 $$Y \subseteq \mathbb{A}^m$$ 사이의 함수 $$\varphi:X \rightarrow Y$$가 이들 사이의 *morphism<sub>사상</sub>* (또는 *regular map<sub>정칙사상</sub>*)이라는 것은 적절한 다항식 $$f_1, \ldots, f_m \in \mathbb{K}[\x_1, \ldots, \x_n]$$들이 존재하여
+<ins id="def14">**정의 14**</ins> 두 affine variety들 $$X \subseteq \mathbb{A}^n$$과 $$Y \subseteq \mathbb{A}^m$$ 사이의 함수 $$\varphi:X \rightarrow Y$$가 이들 사이의 *morphism<sub>사상</sub>* (또는 *regular map<sub>정칙사상</sub>*)이라는 것은 적절한 다항식 $$f_1, \ldots, f_m \in \mathbb{K}[\x_1, \ldots, \x_n]$$들이 존재하여
 
 $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 
@@ -300,7 +308,7 @@ $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> Morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 구체적으로, $$\bar{g} \in \mathbb{K}[Y]$$에 대하여
+<ins id="prop15">**명제 15**</ins> Morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 구체적으로, $$\bar{g} \in \mathbb{K}[Y]$$에 대하여
 
 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$
 
@@ -326,7 +334,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**정의 14**</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
+<ins id="def16">**정의 16**</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
 
 </div>
 
@@ -336,7 +344,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
+<ins id="prop17">**명제 17**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
 
 </div>
 <details class="proof" markdown="1">
