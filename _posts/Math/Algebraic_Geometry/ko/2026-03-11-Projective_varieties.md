@@ -216,9 +216,18 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 </details>
 
+<div class="definition" markdown="1">
+
+<ins id="def12">**정의 12**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 affine chart $$X \cap U_i$$에서 *regular function*은 affine variety $$X \cap U_i$$의 coordinate ring $$\mathbb{K}[X \cap U_i]$$의 원소이다.
+
+</div>
+
+
+그럼 [명제 11](#prop11)의 dehomogenization에 의해, $$X \cap U_i$$에서의 regular function은 $$F(1, \x_1, \ldots, \x_n)$$의 형태로 표현되며, 여기서 $$F$$는 homogeneous polynomial이다. 더 일반적으로, 같은 차수의 homogeneous polynomials $$F, G$$에 대해 $$F/G$$는 $$G$$가 $$X \cap U_i$$에서 vanish하지 않을 때 regular function이 된다.
+
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> 위의 명제를 기하적으로 해석하기 위해 $$\mathbb{K}=\mathbb{R}$$이라 하고, $$\mathbb{P}^2$$에서 conic $$X = V(\x_0^2 + \x_1^2 - \x_2^2)$$를 생각하자. 
+<ins id="ex13">**예시 13**</ins> 위의 명제를 기기적으로 해석하기 위해 $$\mathbb{K}=\mathbb{R}$$이라 하고, $$\mathbb{P}^2$$에서 conic $$X = V(\x_0^2 + \x_1^2 - \x_2^2)$$를 생각하자. 
 
 이 conic은 $$\mathbb{A}^3$$ 안의 원뿔 $$\x_0^2 + \x_1^2 = \x_2^2$$을 homogeneous coordinates로 표현한 것이다. 그럼 standard open set들에서 $$X$$가 어떻게 보이는지는 [명제 11](#prop11)에서 알 수 있다. 즉 $$U_i$$에서 $$X$$가 어떻게 생겼는지를 보기 위해서는 그냥 $$\x_i$$ 자리에 $$1$$을 넣고, 남은 $$n$$개의 변수가 $$\mathbb{A}^n$$의 좌표인 것으로 생각하면 된다. 그럼 특히 다음의 결과를 얻는다. 
 
@@ -243,7 +252,7 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 <div class="definition" markdown="1">
 
-<ins id="def13">**정의 13**</ins> $$\varphi: X \to Y$$가 projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $$p$$마다 적당한 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
+<ins id="def14">**정의 14**</ins> $$\varphi: X \to Y$$가 projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $$p$$마다 적당한 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
 
 $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
@@ -255,7 +264,7 @@ $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> 우선 $$\mathbb{P}^1$$에서 $$\mathbb{P}^2$$로의 *Veronese embedding* (of degree 2)을
+<ins id="ex15">**예시 15**</ins> 우선 $$\mathbb{P}^1$$에서 $$\mathbb{P}^2$$로의 *Veronese embedding* (of degree 2)을
 
 $$[x:y]\mapsto [x^2: xy:y^2]$$
 
@@ -269,7 +278,7 @@ $$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
+<ins id="ex16">**예시 16**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
 
 $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 

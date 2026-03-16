@@ -21,29 +21,37 @@ weight: 4
 
 ## 정칙함수
 
-[\[준사영다양체\]](/ko/math/algebraic_geometry/quasi_projective_varieties)에서 우리는 quasi-projective variety가 open affine cover를 갖는다는 것을 보았다. 이를 엄밀하게 보이자. 
+[§준사영다양체](/ko/math/algebraic_geometry/quasi_projective_varieties)에서 우리는 quasi-projective variety가 open affine cover를 갖는다는 사실을 언급했는데, 이를 엄밀하게 보이며 시작하자.
 
-Projective variety $$Y \subseteq \mathbb{P}^n$$가 주어졌다 하자. [\[사영다양체\] ⁋명제 10, 11](/ko/math/algebraic_geometry/projective_varieties#prop10)에 의하여 $$Y = \bigcup_{i=0}^n (Y \cap U_i)$$이고, 각 $$Y \cap U_i$$는 affine variety이다. 이제 quasi-projective variety $$X \subseteq Y$$의 각 점 $$p$$가 affine open neighborhood를 갖음을 보이자.
+Projective variety $$Y \subseteq \mathbb{P}^n$$와 그 안의 quasi-projective variety $$X \subseteq Y$$가 주어졌다 하자. Standard affine open set $$U_i = \{x_i \ne 0\} \subseteq \mathbb{P}^n$$를 생각하자. Dehomogenization $$\x_j / \x_i$$를 통해 $$U_i \cong \mathbb{A}^n$$이고, $$Y \cap U_i$$는 $$\mathbb{A}^n$$ 안의 affine variety와 isomorphic하다. 따라서
 
-$$p \in X$$라 하면, $$p \in Y \cap U_i$$인 $$i$$가 존재한다. $$Y \cap U_i$$는 affine variety이고, $$X \cap U_i$$는 그 안에서 열린부분집합이다. Affine variety에서 열린부분집합은 principal open set들의 합집합으로 쓰이므로, $$p \in D(f) \subseteq X \cap U_i$$인 principal open set $$D(f)$$가 존재한다. Principal open set $$D(f)$$는 affine variety이므로 ([\[아핀다양체\] ⁋명제 6](/ko/math/algebraic_geometry/affine_varieties#prop6)), $$p$$의 affine open neighborhood를 얻는다. 따라서 모든 quasi-projective variety는 open affine cover를 갖는다.
+$$Y = \bigcup_{i=0}^n (Y \cap U_i)$$
 
-이를 이용하여 quasi-projective variety 위의 함수를 국소적으로 정의할 수 있다.
+으로 적으면 각 $$Y \cap U_i$$는 affine variety이다. 따라서
+
+$$X = \bigcup_{i=0}^n (X \cap U_i)$$
+
+에서, 각 $$X \cap U_i$$는 affine variety $$Y \cap U_i$$의 열린부분집합이다. 이제 [§아핀다양체, ⁋명제 6](/ko/math/algebraic_geometry/affine_varieties#prop76)에 의하여 affine variety의 임의의 열린집합은 principal open set들의 합집합으로 표현되며, [§아핀다양체, ⁋명제 7](/ko/math/algebraic_geometry/affine_varieties#prop7)에 의하여 이들은 각각 affine이므로 $$X$$는 open affine cover를 갖는다.
+
+그럼 $$X$$의 한 점 $$p$$에서 함수 $$f:X\rightarrow \mathbb{K}$$가 regular라는 것은 $$p$$가 affine-local하게 regular map인 것이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> quasi-projective variety $$X$$ 위의 함수 $$f: X \to \mathbb{K}$$가 *regular<sub>정칙</sub>*라는 것은 $$X$$의 open affine cover $$\{U_i\}$$가 존재하여, 각 $$i$$에 대해 restriction $$f\vert_{U_i} \in \mathcal{O}(U_i)$$인 것이다. $$X$$ 위의 모든 regular function들의 집합을 $$\mathcal{O}(X)$$ 또는 $$\mathcal{O}_X(X)$$로 표기한다.
+<ins id="def1">**정의 1**</ins> Quasi-projective variety $$X$$ 위의 함수 $$f: X \rightarrow \mathbb{K}$$가 *regular<sub>정칙</sub>*라는 것은 $$X$$의 open affine cover $$\{U_i\}$$가 존재하여, 각 $$i$$에 대해 restriction 
+
+$$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
+
+가 regular인 것이다. $$X$$ 위의 모든 regular function들의 sheaf를 $$\mathscr{O}_X$$ 혹은 더 간단히 $$\mathscr{O}$$로 표기한다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1))
 
 </div>
 
-이 정의는 미분다양체에서의 smooth function 정의와 비슷하다. 미분다양체에서 각 점 $$p$$의 열린근방이 $$\mathbb{R}^n$$과 동형인 chart $$\varphi: U \to \mathbb{R}^n$$을 갖고, 함수 $$f: M \to \mathbb{R}$$가 smooth인 것은 $$f \circ \varphi^{-1}: \mathbb{R}^n \to \mathbb{R}$$이 smooth함으로 정의된다. Quasi-projective variety의 경우, 각 점 $$p$$가 어떤 affine chart $$U_i$$에 속하고, 함수 $$f$$가 regular인 것은 이 affine chart에서 coordinate ring $$\mathcal{O}(U_i)$$의 원소로 표현됨으로 정의된다. 
-
-Projective variety의 경우를 더 자세히 살펴보자. Affine chart $$U_0 = \{x_0 \ne 0\}$$에서 homogeneous polynomial $$F$$ of degree $$d$$는 dehomogenization $$F(1, \x_1, \ldots, \x_n)$$을 통해 $$\mathbb{A}^n$$ 위의 다항식이 된다. 마찬가지로, 같은 차수의 homogeneous polynomial들의 비율 $$F/G$$는 $$F(1, \x_1, \ldots, \x_n) / G(1, \x_1, \ldots, \x_n)$$으로 표현된다 (단, $$G$$는 $$U_0$$에서 vanish하지 않음). 이는 [\[사영다양체\] ⁋명제 11](/ko/math/algebraic_geometry/projective_varieties#prop11)의 dehomogenization 과정이다.
+이 정의가 affine case에서의 정의와 맞아떨어지는 것은 자명하지만, projective case에 대해서는 약간의 분석이 필요하다.  Affine chart $$U_0 = \{x_0 \ne 0\}$$에서 homogeneous polynomial $$F$$ of degree $$d$$는 dehomogenization $$F(1, \x_1, \ldots, \x_n)$$을 통해 $$\mathbb{A}^n$$ 위의 다항식이 된다. 마찬가지로, 같은 차수의 homogeneous polynomial들의 비율 $$F/G$$는 $$F(1, \x_1, \ldots, \x_n) / G(1, \x_1, \ldots, \x_n)$$으로 표현된다 (단, $$G$$는 $$U_0$$에서 vanish하지 않음). 이는 [§사영다양체, ⁋명제 11](/ko/math/algebraic_geometry/projective_varieties#prop11)의 dehomogenization 과정이다.
 
 <div class="example" markdown="1">
 
 <ins id="ex2">**예시 2**</ins> Regular function의 예시들을 살펴보자.
 
-1. Affine variety $$X$$에서 $$\mathcal{O}(X) = \mathbb{K}[X]$$이다. 이는 [\[아핀다양체\] ⁋정의 8](/ko/math/algebraic_geometry/affine_varieties#def8)에서 coordinate ring의 원소들을 regular function이라 부른 것과 일치한다. Coordinate ring의 원소 $$f$$는 $$X$$ 자체가 affine cover이므로 정의 1의 조건을 만족한다.
+1. Affine variety $$X$$에서 $$\mathcal{O}(X) = \mathbb{K}[X]$$이다. 이는 [§아핀다양체, ⁋정의 8](/ko/math/algebraic_geometry/affine_varieties#def8)에서 coordinate ring의 원소들을 regular function이라 부른 것과 일치한다. Coordinate ring의 원소 $$f$$는 $$X$$ 자체가 affine cover이므로 정의 1의 조건을 만족한다.
 2. $$\mathbb{P}^n$$에서 $$\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$$이다. Standard open cover $$U_i = \{x_i \ne 0\}$$를 생각하자. $$U_0$$에서의 regular function은 $$\mathbb{K}[\x_1/\x_0, \ldots, \x_n/\x_0]$$의 원소이고, $$U_1$$에서의 regular function은 $$\mathbb{K}[\x_0/\x_1, \x_2/\x_1, \ldots, \x_n/\x_1]$$의 원소이다. 이들의 교집합 $$\mathcal{O}(\mathbb{P}^n) = \mathbb{K}[\x_0/\x_1] \cap \mathbb{K}[\x_1/\x_0] = \mathbb{K}$$이다. 이는 projective space에서 상수함수만이 전역적으로 정의됨을 보여준다.
 3. $$\mathbb{A}^2 \setminus \{(0,0)\}$$에서 $$\mathcal{O}(X) = \mathbb{K}[\x, \y]$$이다. 이는 [명제 3](#prop3)에서 일반적으로 증명할 것이다. 직관적으로, 여차원 2 이상의 닫힌집합을 제거하면 regular function이 변하지 않는다.
 
@@ -51,22 +59,26 @@ Projective variety의 경우를 더 자세히 살펴보자. Affine chart $$U_0 =
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> (Arapura Lemma 3.2.1) Affine variety $$X$$에서, 함수 $$f: X \to \mathbb{K}$$가 정의 1의 의미에서 regular인 것은 [\[아핀다양체\] ⁋정의 8](/ko/math/algebraic_geometry/affine_varieties#def8)의 의미에서 regular (즉, $$\mathbb{K}[X]$$의 원소)인 것과 동치이다.
+<ins id="prop3">**명제 3**</ins> Affine variety $$X$$에서, 함수 $$f: X \to \mathbb{K}$$가 정의 1의 의미에서 regular인 것은 [§아핀다양체, ⁋정의 8](/ko/math/algebraic_geometry/affine_varieties#def8)의 의미에서 regular (즉, $$\mathbb{K}[X]$$의 원소)인 것과 동치이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$f \in \mathbb{K}[X]$$이면 자명하게 정의 1의 조건을 만족한다 ($$X$$ 자체가 affine cover). 
+$$f \in \mathbb{K}[X]$$이면 자명하게 [정의 1](#def1)의 조건을 만족한다 ($$X$$ 자체가 affine cover). 
 
-반대로 $$f$$가 정의 1의 의미에서 regular라 하자. Open affine cover $$\{U_i\}$$가 존재하여 각 $$f\vert_{U_i} \in \mathcal{O}(U_i)$$이다. $$X$$가 Noetherian이므로 유한개의 $$U_1, \ldots, U_r$$만으로 $$X$$를 덮을 수 있다. 각 $$U_i$$는 principal open set $$D(g_i) = \{g_i \ne 0\}$$의 형태이고, $$f\vert_{U_i} = h_i / g_i^{n_i}$$ for some $$h_i \in \mathbb{K}[X]$$. $$n_i = 1$$이라 가정하자 (필요하면 $$g_i$$를 $$g_i^{n_i}$$로 대체).
+반대로 $$f$$가 [정의 1](#def1)의 의미에서 regular라 하자. 즉 open affine cover $$\{U_i\}$$가 존재하여 각 $$f\vert_{U_i} \in \mathcal{O}(U_i)$$이다. $$X$$가 compact이므로 유한개의 $$U_1, \ldots, U_r$$만으로 $$X$$를 덮을 수 있다. 각 $$U_i$$는 principal open set $$D(g_i) = \{g_i \ne 0\}$$의 형태이고, 따라서 
 
-$$\bigcup_i D(g_i) = X$$이므로, ideal $$(g_1, \ldots, g_r) = \mathbb{K}[X]$$이다. 따라서 $$a_1 g_1 + \cdots + a_r g_r = 1$$ for some $$a_i \in \mathbb{K}[X]$$이다. 그럼
+$$f\vert_{U_i} = h_i / g_i^{n_i}$$
+
+의 형태로 쓸 수 있다. 어차피 $$D(g_i)=D(g_i^{n_i})$$이므로, 편의상 $$f\vert_{U_i}=h_i/g_i$$라 하자. 
+
+이제 $$\bigcup_i D(g_i) = X$$이므로, ideal $$(g_1, \ldots, g_r) = \mathbb{K}[X]$$이다. 따라서 $$a_1 g_1 + \cdots + a_r g_r = 1$$ for some $$a_i \in \mathbb{K}[X]$$이다. 그럼
 
 $$f = \sum_{i=1}^r a_i g_i f = \sum_{i=1}^r a_i g_i \cdot \frac{h_i}{g_i} = \sum_{i=1}^r a_i h_i \in \mathbb{K}[X]$$
 
-이다.
+이므로 증명이 완료된다.
 
 </details>
 
