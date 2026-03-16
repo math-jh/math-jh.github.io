@@ -264,7 +264,7 @@ Coordinate ring $$\mathbb{K}[X]$$의 원소들은 위에서 살펴본 것과 비
 
 ## 아핀다양체 사이의 사상
 
-이제 우리는 affine variety들 사이의 morphism을 정의한다. Affine variety들은 다항식으로 정의되는 기하학적 대상들이므로, 이들 사이의 함수 또한 다항식으로 나타나는 것들이어야 함이 타당하다.
+이제 우리는 affine variety들 사이의 morphism을 정의한다. Affine variety들은 다항식으로 정의되는 기하학적 대상들이므로, 이들 사이의 함수 또한 다항식으로 나타나는 것들이어야 함이 타당하다. 그러나 여기에는 미묘한 부분이 있는데, D(x), K[x.1/x], D(f)는 A^1에서는 affine variety 아님, A^2로 올려야 affine, embedding에 의존하지 않도록 정의하는게 목표, 
 
 <div class="definition" markdown="1">
 
@@ -278,42 +278,11 @@ $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 
 예를 들어, 우리는 [예시 3](#ex3)에서 twisted cubic이 $$t\mapsto (t,t^2,t^3)$$을 통해 $$\mathbb{A}^1$$과 대응됨을 보였는데, 위의 정의는 이것이 affine variety들 사이의 morphism이라는 것을 보여준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop13">**명제 13**</ins> Affine variety $$X$$와 다항식 $$g \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대하여, principal open set $$D(g) \cap X$$에서의 regular function들은
-
-$$\mathbb{K}[X][1/\bar{g}] = \mathbb{K}[X, 1/\bar{g}]$$
-
-의 원소들이다. 즉, $$D(g) \cap X$$에서의 regular function은 $$f/g^k$$ ($$f \in \mathbb{K}[X]$$, $$k \ge 0$$) 꼴로 표현된다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-[명제 7](#prop7)에서 $$D(g) \cap X$$가 affine variety임을 보였다. 구체적으로 $$D(g) \cap X \cong V(\mathfrak{a} + (1 - g\y)) \subseteq \mathbb{A}^{n+1}$$이다. 이 affine variety의 coordinate ring을 계산하면
-
-$$\mathbb{K}[\x_1, \ldots, \x_n, \y] / (I(X) + (1 - g\y)) \cong \mathbb{K}[X][\y]/(1 - \bar{g}\y) \cong \mathbb{K}[X][1/\bar{g}]$$
-
-이다. 여기서 마지막 동형은 $$\y \mapsto 1/\bar{g}$$로 주어진다.
-
-</details>
-
-<div class="misc" markdown="1">
-
-<ins id="rmk14">**착각 14**</ins> 이 명제는 regular map을 국소적으로 다항식의 비율로 표현할 수 있음을 시사한다. 구체적으로, 함수 $$\varphi: X \to Y$$가 *각 점 $$p \in X$$마다* 적당한 열린근방 $$U \ni p$$와 다항식들 $$f_1, \ldots, f_m, g$$가 존재하여
-
-$$\varphi(x) = \left(\frac{f_1(x)}{g(x)}, \ldots, \frac{f_m(x)}{g(x)}\right), \quad x \in U$$
-
-으로 표현된다면, 이는 [정의 13](#def13)의 의미에서 regular map이다. 역으로, [정의 13](#def13)의 의미에서의 regular map은 항상 이러한 꼴로 국소 표현된다.
-
-</div>
-
 직관적으로 $$\mathbb{K}[X]$$들은 $$X$$ 위에 정의된 함수이므로, 만일 morphism $$X\rightarrow Y$$가 주어졌다면 이 morphism과의 합성을 통해 $$Y$$의 regular function들을 $$X$$로 옮겨올 수 있을 것이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> Morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 구체적으로, $$\bar{g} \in \mathbb{K}[Y]$$에 대하여
+<ins id="prop13">**명제 13**</ins> Morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 구체적으로, $$\bar{g} \in \mathbb{K}[Y]$$에 대하여
 
 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$
 
@@ -339,7 +308,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 <div class="definition" markdown="1">
 
-<ins id="def15">**정의 15**</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
+<ins id="def14">**정의 14**</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
 
 </div>
 
@@ -349,7 +318,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop16">**명제 16**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
+<ins id="prop15">**명제 15**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
 
 </div>
 <details class="proof" markdown="1">
