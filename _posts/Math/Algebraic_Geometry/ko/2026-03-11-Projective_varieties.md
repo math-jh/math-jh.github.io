@@ -67,11 +67,11 @@ $$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Homogeneous polynomials $$F_1, \ldots, F_k \in \mathbb{K}[\x_0, \ldots, \x_n]$$에 대하여, *projective variety<sub>사영다양체</sub>* $$V(F_1, \ldots, F_k)$$를
+<ins id="def3">**정의 3**</ins> Homogeneous polynomials $$F_1, \ldots, F_k \in \mathbb{K}[\x_0, \ldots, \x_n]$$에 대하여, *projective algebraic set<sub>사영 대수적 집합</sub>* $$V(F_1, \ldots, F_k)$$를
 
 $$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \cdots = F_k(x) = 0\}$$
 
-으로 정의한다.
+으로 정의한다. Projective algebraic set들 가운데 그보다 더 작은 projective algebraic set들의 합집합으로 나타나지 않는 것들을 *projective variety<sub>사영다양체</sub>*라 부른다.
 
 </div>
 
@@ -216,17 +216,9 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 </details>
 
-<div class="definition" markdown="1">
-
-<ins id="def12">**정의 12**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$ 위의 *regular function*은 $$X$$의 affine chart $$X \cap U_i$$에서 affine variety $$X \cap U_i$$의 coordinate ring $$\mathbb{K}[X \cap U_i]$$의 원소인 것이다. $$X$$ 위의 모든 regular function들의 sheaf를 $$\mathscr{O}_X$$라 하자.
-
-</div>
-
-Projective variety는 quasi-projective variety이므로, 이 정의는 [§준사영다양체, ⁋정의 1](/ko/math/algebraic_geometry/quasi_projective_varieties#def1)의 quasi-projective variety의 regular function 정의와 일치한다. [명제 11](#prop11)의 dehomogenization에 의해, $$X \cap U_i$$에서의 regular function은 $$F(1, \x_1, \ldots, \x_n)$$의 형태로 표현되며, 여기서 $$F$$는 homogeneous polynomial이다. 더 일반적으로, 같은 차수의 homogeneous polynomials $$F, G$$에 대해 $$F/G$$는 $$G$$가 $$X \cap U_i$$에서 vanish하지 않을 때 regular function이 된다.
-
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> 위의 명제를 기기적으로 해석하기 위해 $$\mathbb{K}=\mathbb{R}$$이라 하고, $$\mathbb{P}^2$$에서 conic $$X = V(\x_0^2 + \x_1^2 - \x_2^2)$$를 생각하자. 
+<ins id="ex12">**예시 12**</ins> 위의 명제를 기기적으로 해석하기 위해 $$\mathbb{K}=\mathbb{R}$$이라 하고, $$\mathbb{P}^2$$에서 conic $$X = V(\x_0^2 + \x_1^2 - \x_2^2)$$를 생각하자. 
 
 이 conic은 $$\mathbb{A}^3$$ 안의 원뿔 $$\x_0^2 + \x_1^2 = \x_2^2$$을 homogeneous coordinates로 표현한 것이다. 그럼 standard open set들에서 $$X$$가 어떻게 보이는지는 [명제 11](#prop11)에서 알 수 있다. 즉 $$U_i$$에서 $$X$$가 어떻게 생겼는지를 보기 위해서는 그냥 $$\x_i$$ 자리에 $$1$$을 넣고, 남은 $$n$$개의 변수가 $$\mathbb{A}^n$$의 좌표인 것으로 생각하면 된다. 그럼 특히 다음의 결과를 얻는다. 
 
@@ -277,7 +269,7 @@ $$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex16">**예시 16**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
+<ins id="ex15">**예시 15**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
 
 $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
@@ -285,7 +277,7 @@ $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
 $$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$
 
-의 공통 영점이며, $$\mathbb{P}^1$$과 isomorphic하다. 실은, 이는 [예시 14](#ex14)에서 살펴본 Veronese embedding of degree 3으로, 
+의 공통 영점이며, $$\mathbb{P}^1$$과 isomorphic하다. 실은, 이는 [예시 15](#ex15)에서 살펴본 Veronese embedding of degree 3으로, 
 
 $$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
 
