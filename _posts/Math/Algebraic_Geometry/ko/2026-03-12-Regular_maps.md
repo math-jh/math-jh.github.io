@@ -45,8 +45,6 @@ $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 
 </div>
 
-이 정의가 affine case에서의 정의와 맞아떨어지는 것은 자명하지만, projective case에 대해서는 약간의 분석이 필요하다.  Affine chart $$U_0 = \{x_0 \ne 0\}$$에서 homogeneous polynomial $$F$$ of degree $$d$$는 dehomogenization $$F(1, \x_1, \ldots, \x_n)$$을 통해 $$\mathbb{A}^n$$ 위의 다항식이 된다. 마찬가지로, 같은 차수의 homogeneous polynomial들의 비율 $$F/G$$는 $$F(1, \x_1, \ldots, \x_n) / G(1, \x_1, \ldots, \x_n)$$으로 표현된다 (단, $$G$$는 $$U_0$$에서 vanish하지 않음). 이는 [§사영다양체, ⁋명제 11](/ko/math/algebraic_geometry/projective_varieties#prop11)의 dehomogenization 과정이다.
-
 <div class="example" markdown="1">
 
 <ins id="ex2">**예시 2**</ins> Regular function의 예시들을 살펴보자.
@@ -59,7 +57,7 @@ $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> Affine variety $$X$$에서, 함수 $$f: X \to \mathbb{K}$$가 정의 1의 의미에서 regular인 것은 [§아핀다양체, ⁋정의 8](/ko/math/algebraic_geometry/affine_varieties#def8)의 의미에서 regular (즉, $$\mathbb{K}[X]$$의 원소)인 것과 동치이다.
+<ins id="prop3">**명제 3**</ins> Affine variety $$X$$에서, 함수 $$f: X \to \mathbb{K}$$가 regular인 것은 [§아핀다양체, ⁋정의 8](/ko/math/algebraic_geometry/affine_varieties#def8)의 의미에서 regular (즉, $$\mathbb{K}[X]$$의 원소)인 것과 동치이다.
 
 </div>
 
@@ -82,32 +80,34 @@ $$f = \sum_{i=1}^r a_i g_i f = \sum_{i=1}^r a_i g_i \cdot \frac{h_i}{g_i} = \sum
 
 </details>
 
+Projective case에 대해서는 [§사영다양체, ⁋정의 12](/ko/math/algebraic_geometry/projective_varieties#def12)를 참조하라.
+
 ## 정칙사상의 정의
 
-Regular function을 정의했으니, 이제 quasi-projective variety 사이의 사상을 정의할 수 있다. 여기서 핵심 아이디어는 사상이 regular function을 "보존"해야 한다는 점이다. 즉, 사상의 pullback이 regular function을 얻어야 한다는 것이다. 이는 category theory에서 functor의 의미와 비슷하다. 사상은 다양체를 하나에서 다른 곳으로 보내지만, 동시에 coordinate ring을 다른 ring으로 보내는 것이므로, natural하게 regular function들을 pullback한다고 생각할 수 있다.
+Regular function을 정의했으니, 이제 quasi-projective variety 사이의 사상을 정의할 수 있다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> quasi-projective variety $$X, Y$$ 사이의 *regular map<sub>정칙사상</sub>* (또는 *morphism*) $$\varphi: X \to Y$$는 다음 조건을 만족하는 함수이다:
-
-$$Y$$의 임의의 열린부분집합 $$V$$와 regular function $$f \in \mathcal{O}(V)$$에 대해, $$f \circ \varphi: \varphi^{-1}(V) \to \mathbb{K}$$는 regular function이다.
+<ins id="def4">**정의 4**</ins> 함수 $$\varphi: X \to Y$$가 quasi-projective variety $$X, Y$$ 사이의 *regular map<sub>정칙사상</sub>* (또는 *morphism*)이라는 것은 $$Y$$의 임의의 열린부분집합 $$V$$와 regular function $$f \in \mathcal{O}(V)$$에 대해, $$f \circ \varphi: \varphi^{-1}(V) \to \mathbb{K}$$가 regular function인 것이다.
 
 </div>
 
-즉, regular map은 regular function을 pullback하는 함수이다. 이 정의는 추상적이지만, 다음 명제에서 보듯 아핀 및 사영 경우의 구체적인 정의와 일치한다. 이 정의는 또한 coordinate ring homomorphism과 호환되므로, functoriality가 자연스럽게 보장된다. 이는 아주 중요한 정의이므로, 다양한 관점에서 이해해야 한다. 한편으로, 이 정의는 "다항식 사상"을 formalize한 것이고, 다른 한편으로는 coordinate ring의 homomorphism과 대응한다.
+즉, regular map은 regular function을 regular function으로 pullback하는 함수이다. 이 정의는 추상적이지만, 다음 명제에서 보듯 아핀 및 사영 경우의 구체적인 정의와 일치한다. 이 정의는 또한 coordinate ring homomorphism과 호환되므로, functoriality가 자연스럽게 보장된다. 
+
+이 정의는 물론 affine variety와 projective variety에서 정의한 것과 맞아떨어진다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> affine variety와 사영다양체의 경우, 위 정의는 이전의 morphism 정의와 일치한다.
+<ins id="prop5">**명제 5**</ins> Affine variety와 projective variety의 경우, 위 정의는 [§아핀다양체, ⁋명제 11](/ko/math/algebraic_geometry/affine_varieties#prop11), [§사영다양체, ⁋정의 13](/ko/math/algebraic_geometry/projective_varieties#def13)와 동치이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-**affine variety의 경우**: [§아핀다양체, ⁋명제 11](/ko/math/algebraic_geometry/affine_varieties#prop11)에서 morphism $$\varphi: X \to Y$$가 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도함을 보였다. 이는 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$로 정의되므로, $$\varphi$$가 regular function을 pullback한다는 것과 같다. 즉, coordinate ring의 원소 $$\bar{g}$$가 regular function $$g$$일 때, $$\varphi^\ast(\bar{g})$$는 $$g \circ \varphi$$가 된다. 따라서 affine variety의 morphism은 정의 3의 regular map과 일치한다.
+**affine variety의 경우**: 에서 morphism $$\varphi: X \to Y$$가 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도함을 보였다. 이는 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$로 정의되므로, $$\varphi$$가 regular function을 pullback한다는 것과 같다. 즉, coordinate ring의 원소 $$\bar{g}$$가 regular function $$g$$일 때, $$\varphi^\ast(\bar{g})$$는 $$g \circ \varphi$$가 된다. 따라서 affine variety의 morphism은 정의 3의 regular map과 일치한다.
 
-**사영다양체의 경우**: [§사영다양체, ⁋정의 13](/ko/math/algebraic_geometry/projective_varieties#def13)에서 morphism을 homogeneous polynomials로 표현되는 함수로 정의했다. 구체적으로, $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$ where $$F_i$$ are homogeneous of the same degree. Regular function $$f$$ on $$V \subseteq Y$$는 국소적으로 다항식의 비율로 표현되므로, $$f \circ \varphi$$ 또한 다항식의 비율로 표현된다. 따라서 $$f \circ \varphi$$는 regular function이다. 이는 projective variety의 morphism이 regular map 조건을 만족함을 보여준다.
+**사영다양체의 경우**: 에서 morphism을 homogeneous polynomials로 표현되는 함수로 정의했다. 구체적으로, $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$ where $$F_i$$ are homogeneous of the same degree. Regular function $$f$$ on $$V \subseteq Y$$는 국소적으로 다항식의 비율로 표현되므로, $$f \circ \varphi$$ 또한 다항식의 비율로 표현된다. 따라서 $$f \circ \varphi$$는 regular function이다. 이는 projective variety의 morphism이 regular map 조건을 만족함을 보여준다.
 
 </details>
 

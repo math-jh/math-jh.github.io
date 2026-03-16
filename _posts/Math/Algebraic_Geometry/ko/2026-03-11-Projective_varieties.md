@@ -218,12 +218,11 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 affine chart $$X \cap U_i$$에서 *regular function*은 affine variety $$X \cap U_i$$의 coordinate ring $$\mathbb{K}[X \cap U_i]$$의 원소이다.
+<ins id="def12">**정의 12**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$ 위의 *regular function*은 $$X$$의 affine chart $$X \cap U_i$$에서 affine variety $$X \cap U_i$$의 coordinate ring $$\mathbb{K}[X \cap U_i]$$의 원소인 것이다. $$X$$ 위의 모든 regular function들의 sheaf를 $$\mathscr{O}_X$$라 하자.
 
 </div>
 
-
-그럼 [명제 11](#prop11)의 dehomogenization에 의해, $$X \cap U_i$$에서의 regular function은 $$F(1, \x_1, \ldots, \x_n)$$의 형태로 표현되며, 여기서 $$F$$는 homogeneous polynomial이다. 더 일반적으로, 같은 차수의 homogeneous polynomials $$F, G$$에 대해 $$F/G$$는 $$G$$가 $$X \cap U_i$$에서 vanish하지 않을 때 regular function이 된다.
+Projective variety는 quasi-projective variety이므로, 이 정의는 [§준사영다양체, ⁋정의 1](/ko/math/algebraic_geometry/quasi_projective_varieties#def1)의 quasi-projective variety의 regular function 정의와 일치한다. [명제 11](#prop11)의 dehomogenization에 의해, $$X \cap U_i$$에서의 regular function은 $$F(1, \x_1, \ldots, \x_n)$$의 형태로 표현되며, 여기서 $$F$$는 homogeneous polynomial이다. 더 일반적으로, 같은 차수의 homogeneous polynomials $$F, G$$에 대해 $$F/G$$는 $$G$$가 $$X \cap U_i$$에서 vanish하지 않을 때 regular function이 된다.
 
 <div class="example" markdown="1">
 
