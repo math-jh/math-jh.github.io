@@ -39,11 +39,11 @@ Equivalence class $$[(x_0, \ldots, x_n)]$$은 보통 $$[x_0 : \cdots : x_n]$$으
 
 ## 동차다항식과 사영공간
 
-이제 우리는 affine case에서와 마찬가지로 $$\mathbb{P}^n$$에 위상구조를 주어야 한다. Projective space에서도 마찬가지로 우리는 다항식들의 zero set으로 닫힌집합을 정의할 것인데, 주의할 점은 $$\mathbb{P}^n$$은 quotient set으로 정의되었으므로 일반적으로는 다항식이 잘 정의되지 않는다는 것이다. 즉 임의의 $$F \in \mathbb{K}[x_0, \ldots, x_n]$$에 대하여, $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이지만 일반적으로
+이제 우리는 affine case에서와 마찬가지로 $$\mathbb{P}^n$$에 위상구조를 주어야 한다. Projective space에서도 마찬가지로 우리는 다항식들의 zero set으로 닫힌집합을 정의할 것인데, 주의할 점은 $$\mathbb{P}^n$$은 quotient set으로 정의되었으므로 일반적으로는 다항식이 $$\mathbb{P}^N$$ 위에 정의된 함수를 정의하지 않는다는 것이다. 즉 임의의 $$F \in \mathbb{K}[x_0, \ldots, x_n]$$에 대하여, $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이지만 일반적으로
 
 $$F(x_0, \ldots, x_n)\neq F(\lambda x_0, \ldots, \lambda x_n)$$
 
-이며, 이 evaluation이 임의의 representative에 대해 잘 정의되도록 하는 유일한 다항식은 상수다항식 뿐이다. 그러나 만일 다항식이 정의하는 zero set에만 관심을 둔다면 이 문제가 해결된다. Homogeneous polynomial $$F$$ of degree $$d$$에 대해서는
+이며, 이 계산이 $$\mathbb{P}^n$$의 모든 점에서 evaluation이 임의의 representative에 대해 잘 정의되도록 하는 유일한 다항식은 상수다항식 뿐이다. 그러나 만일 다항식이 정의하는 zero set에만 관심을 둔다면 이 문제가 해결된다. Homogeneous polynomial $$F$$ of degree $$d$$에 대해서는
 
 $$F(\lambda x_0, \ldots, \lambda x_n) = \lambda^d F(x_0, \ldots, x_n)$$
 
@@ -143,7 +143,7 @@ $$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}$$
 
 </div>
 
-각각의 $$U_i$$에 $$\mathbb{P}^n$$으로부터 오는 subspace topology를 주자.
+각각의 $$U_i$$에 $$\mathbb{P}^n$$으로부터 오는 subspace topology를 주자. 그럼 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -168,11 +168,15 @@ $$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$
 
 $$\varphi_0^{-1}(Z(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \mid f\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) = 0\right\}$$
 
-이다. $$f$$가 degree $$d$$인 다항식이라면, $$x_0^d f(x_1/x_0, \ldots, x_n/x_0)$$는 homogeneous polynomial $$F$$가 되어 $$\varphi_0^{-1}(Z(f)) = Z(F) \cap U_0$$이다. 이는 $$U_0$$의 subspace topology에서 닫힌집합이다.
+이다. 이제 만일 $$f$$가 degree $$d$$인 다항식이라면, 
+
+$$F(x_0,\ldots, \x_n)=\x_0^d f(\x_1/\x_0, \ldots, \x_n/\x_0)$$
+
+는 homogeneous polynomial이며 $$\varphi_0^{-1}(Z(f)) = Z(F) \cap U_0$$이다. 이는 $$U_0$$의 subspace topology에서 닫힌집합이다.
 
 이제 그 역함수 $$\psi_0$$의 연속성을 보이자. $$U_0$$의 닫힌집합 $$Z(F) \cap U_0$$를 생각하자. 여기서 $$F$$는 homogeneous polynomial of degree $$d$$이다. 그럼
 
-$$\psi_0^{-1}(Z(F) \cap U_0) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid F(1, a_1, \ldots, a_n) = 0\}$$
+$$\psi_0^{-1}(Z(F) \cap U_0) = \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid F(1, x_1, \ldots, x_n) = 0\}$$
 
 이다. $$F(1, \x_1, \ldots, \x_n)$$은 $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 다항식이므로 $$\psi_0^{-1}(Z(F) \cap U_0)$$는 $$\mathbb{A}^n$$에서 닫힌집합이다.
 
@@ -180,7 +184,7 @@ $$\psi_0^{-1}(Z(F) \cap U_0) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid F(1, a
 
 </details>
 
-즉, 직관적으로 우리는 $$U_i$$를 좌표 $$x_i$$가 무한대가 아닌 점들로 생각할 수 있다. 또, $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$이고, 위의 명제에 의해 각 $$U_i \cong \mathbb{A}^n$$이다. 위의 명제의 증명 과정에서 핵심적인 것은 다음의 명제이다. 
+즉, 직관적으로 우리는 $$U_i$$를 좌표 $$x_i$$가 무한대가 아닌 점들로 생각할 수 있다. 또, $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$이고, 위의 명제에 의해 각 $$U_i \cong \mathbb{A}^n$$이다. 위의 명제의 증명 과정에서 핵심적인 것은 다음의 명제였으므로, 이를 따로 분리해두자.
 
 <div class="proposition" markdown="1">
 
@@ -224,17 +228,51 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 </div>
 
+## Affine Cone
+
+Projective variety를 affine space 안의 기하학적 대상으로 이해하는 또 다른 방법은 *affine cone*을 생각하는 것이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def12">**정의 12**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 *affine cone<sub>아핀 원뿔</sub>* $$\hat{X} \subseteq \mathbb{A}^{n+1}$$을 다음과 같이 정의한다:
+
+$$\hat{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 : \cdots : x_n] \in X\} \cup \{0\}$$
+
+즉, $$\hat{X}$$는 $$X$$의 모든 점을 homogeneous coordinates로 표현했을 때 나타나는 $$\mathbb{A}^{n+1}$$의 점들과 원점을 합한 것이다.
+
+</div>
+
+<div class="example" markdown="1">
+
+<ins id="ex13">**예시 13**</ins> [예시 11](#ex11)의 conic $$X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$$의 affine cone $$\hat{X}$$는 $$\mathbb{A}^3$$에서의 원뿔 $$\x_0^2 + \x_1^2 = \x_2^2$$이다.
+
+</div>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop14">**명제 14**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 affine cone $$\hat{X}$$은 다음 성질들을 만족한다:
+
+1. **Homogeneity**: $$\hat{X}$$는 원점을 지나는 직선들로 구성된다. 즉, $$(x_0, \ldots, x_n) \in \hat{X}$$이고 $$\lambda \in \mathbb{K}$$이면 $$(\lambda x_0, \ldots, \lambda x_n) \in \hat{X}$$이다.
+
+2. **Algebraic structure**: $$X = Z(F_1, \ldots, F_k)$$이면 $$\hat{X} = V(F_1, \ldots, F_k) \subseteq \mathbb{A}^{n+1}$$이다. 여기서 $$F_i$$들을 $$\mathbb{A}^{n+1}$$의 다항식으로 본다.
+
+3. **Correspondence**: $$X \leftrightarrow \hat{X}$$ 대응은 projective variety와 "원점을 지나는 직선으로 이루어진" affine algebraic set 사이의 일대일 대응을 준다.
+
+</div>
+
+이 관점은 projective variety를 affine variety의 "무한대에서의 compactification"으로 이해하는 데 도움을 준다.
+
 ## 사영다양체 사이의 사상
 
 마지막으로 우리는 projective variety들의 morphism을 정의한다. Projective variety는 결국 homogeneous polynomial로 정의되므로, 다음과 같이 정의하는 것이 자연스럽다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> $$\varphi: X \to Y$$가 projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $$p$$마다 적당한 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
+<ins id="def15">**정의 15**</ins> 함수 $$\varphi: X \to Y$$가 projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $$x$$마다 적당한 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
 
-$$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
+$$\varphi(x) = [F_0(x) : \cdots : F_m(x)]$$
 
-이고, 모든 $$p \in X$$에 대해 $$F_i(p)$$들이 동시에 $$0$$이 아닌 것이다.
+이고, 모든 $$x \in X$$에 대해 $$F_i(x)$$들이 동시에 $$0$$이 아닌 것이다.
 
 </div>
 
@@ -242,7 +280,7 @@ $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> 우선 $$\mathbb{P}^1$$에서 $$\mathbb{P}^2$$로의 *Veronese embedding* (of degree 2)을
+<ins id="ex16">**예시 16**</ins> 우선 $$\mathbb{P}^1$$에서 $$\mathbb{P}^2$$로의 *Veronese embedding* (of degree 2)을
 
 $$[x:y]\mapsto [x^2: xy:y^2]$$
 
@@ -256,7 +294,7 @@ $$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
+<ins id="ex17">**예시 17**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
 
 $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
@@ -264,7 +302,7 @@ $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
 $$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$
 
-의 공통 영점이며, $$\mathbb{P}^1$$과 isomorphic하다. 실은, 위의 [예시 13](#ex13)에서 살펴본 Veronese embedding의 개념을 $$d=3$$으로 확장하면, 
+의 공통 영점이며, $$\mathbb{P}^1$$과 isomorphic하다. 실은, 위의 [예시 16](#ex16)에서 살펴본 Veronese embedding의 개념을 $$d=3$$으로 확장하면, 
 
 $$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
 
