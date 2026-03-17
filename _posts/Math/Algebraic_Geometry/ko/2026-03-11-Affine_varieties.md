@@ -53,7 +53,7 @@ $$Z(S)=Z((S))$$
 
 을 만족한다. 따라서 우리는 ideal $$\mathfrak{a}$$들이 정의하는 affine algebraic set들만 신경써도 된다.
 
-Affine variety를 "더 작은 affine algebraic set들의 합집합으로 나타나지 않는" 대상으로 정의하는 것은, 기하학적으로 하나의 "연결된" 대상을 다루기 위함이다. 이를테면 두 원 $$Z(\x)\cup Z(\x-1)\subseteq \mathbb{A}^1$$은 각각이 affine variety이지만, 그 합집합은 affine variety가 아니다. 대수적으로, 이러한 irreducibility 조건은 나중에 coordinate ring이 integral domain이 되도록 보장하는 핵심 조건이 된다.
+Affine variety를 "더 작은 affine algebraic set들의 합집합으로 나타나지 않는" 대상으로 정의하는 것은, 기하학적으로 하나의 "연결된" 대상을 다루기 위함이다. 이를테면 두 원 $$Z(\x)\cup Z(\x-1)\subseteq \mathbb{A}^1$$은 각각이 affine variety이지만, 그 합집합은 affine variety가 아니다. 이 irreducibility 조건은 단순한 기하학적 편의를 넘어, 이론의 대수적 구조에도 깊이 관여한다. 구체적으로, $$X$$가 irreducible일 때 $$I(X)$$가 [\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)의 prime ideal이 되고, 그 결과 coordinate ring $$\mathbb{K}[X]$$가 zero divisor가 없는 integral domain($$A$$가 integral domain이란 0이 아닌 $$a,b \in A$$에 대해 $$ab=0$$이면 $$a=0$$ 또는 $$b=0$$인 경우)이 된다. 이는 다항식 함수들의 대수를 다룰 때 0이 아닌 두 함수의 곱이 결코 0이 되지 않는다는 좋은 성질을 보장하며, 나중에 환론적 방법으로 기하학을 연구하는 데 필수적인 조건이 된다.
 
 <div class="example" markdown="1">
 
@@ -222,11 +222,11 @@ $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a
 
 </details>
 
-즉, $$Z$$와 $$I$$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서 두 operator의 합성 $$ZI$$와 $$IZ$$ 각각은 closure operator를 정의한다. $$ZI$$의 경우, 이 closure는 실제로 Zariski topology에서의 closure가 된다. 이는 만일 $$X \subseteq Y = Z(J)$$이면 $$I(Z(J)) \subseteq I(X)$$이고, [명제 9](#prop9)의 5번 조건에서 $$J \subseteq I(Z(J))$$이므로 $$ZI(X) \subseteq Z(J) = Y$$가 되어, $$ZI(X)$$가 $$X$$를 포함하는 Zariski closed set 중 가장 작은 것이 되기 때문이다. $$IZ$$의 경우에는 바로 보이지 않는데, 이를 위해서는 ideal의 radical 개념이 필요하다[^radical].
+즉, $$Z$$와 $$I$$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서 두 operator의 합성 $$ZI$$와 $$IZ$$ 각각은 closure operator를 정의한다. $$ZI$$의 경우, 이 closure는 실제로 Zariski topology에서의 closure가 된다. 이는 만일 $$X \subseteq Y = Z(J)$$이면 $$I(Z(J)) \subseteq I(X)$$이고, [명제 9](#prop9)의 5번 조건에서 $$J \subseteq I(Z(J))$$이므로 $$ZI(X) \subseteq Z(J) = Y$$가 되어, $$ZI(X)$$가 $$X$$를 포함하는 Zariski closed set 중 가장 작은 것이 되기 때문이다. $$IZ$$의 경우에는 바로 보이지 않는데, 이를 위해서는 ideal의 radical 개념이 필요하다. 여기서 radical이란 $$\sqrt{\mathfrak{a}} = \{f \mid f^r \in \mathfrak{a} \text{ for some } r \geq 1\}$$[^radical]을 의미한다.
 
 ---
 
-[^radical]: Ideal $$\mathfrak{a}$$의 *radical* $$\sqrt{\mathfrak{a}}$$는 $$\{f \in R \mid f^r \in \mathfrak{a} \text{ for some } r \geq 1\}$$로 정의된다.
+[^radical]: Ideal $$\mathfrak{a}$$의 *radical* $$\sqrt{\mathfrak{a}}$$은 $$f^r \in \mathfrak{a}$$를 만족하는 양의 정수 $$r \ge 1$$이 존재하는 원소 $$f$$들의 집합이다. 즉 $$\sqrt{\mathfrak{a}} = \{f \in R \mid f^r \in \mathfrak{a} \text{ for some } r \geq 1\}$$이다.
 
 <div class="proposition" markdown="1">
 
@@ -252,7 +252,7 @@ $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
 한편, $$\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$$가 임의의 ideal $$\mathfrak{a}$$에 대해 성립하므로 [명제 4](#prop4)의 셋째 조건으로부터 $$Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$$임을 안다. 그런데 정의에 의하여 임의의 $$f\in \sqrt{\mathfrak{a}}$$가 주어졌을 때, 적당한 $$r$$이 존재하여 $$f^r\in \mathfrak{a}$$이다. 따라서 $$x\in Z(\mathfrak{a})$$라면 $$Z(\sqrt{\mathfrak{a}})$$여야 하고 이로부터 $$Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$$임을 안다. 즉 ideal의 radical은 affine algebraic set을 ideal의 zero set으로 나타낼 때, 이 ideal을 얻어내는 표준적인 방법을 주는 것으로 생각할 수 있으며, 이들 사이의 차이를 구별하기 위해서는 *scheme*을 정의하면 된다. 
 
-이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $$Z(\mathfrak{a})$$가 algebraic variety이기 위해서는 $$\sqrt{\mathfrak{a}}$$가 [\[가환대수학\] §Basic_notions, ⁋def10](/ko/math/commutative_algebra/basic_notions#def10)인 prime ideal이어야 함을 알 수 있다.
+이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $$Z(\mathfrak{a})$$가 algebraic variety이기 위해서는 $$\sqrt{\mathfrak{a}}$$가 [\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)인 [prime ideal](/ko/math/commutative_algebra/basic_notions#def10)이어야 함을 알 수 있다.
 
 ## 좌표환과 정칙성
 
@@ -272,7 +272,9 @@ $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / I(X)=\mathbb{K}[\x_1, \ldots,
 
 Coordinate ring $$\mathbb{K}[X]$$는 affine variety $$X$$ 위에서 다항식 함수가 가질 수 있는 모든 대수적 정보를 담고 있다. 구체적으로, $$X$$가 어떤 다항식들의 영점으로 정의되었다면, $$\mathbb{K}[X]$$는 이러한 다항식 관계들을 factoring out한 나머지 다항식 함수들의 모임이다. 이 환을 도입하는 핵심적인 이유는, 기하학적 대상 $$X$$를 대수적으로 완전히 포착할 수 있다는 데 있다: $$X$$ 위의 모든 다항식 함수들의 대수적 관계가 $$\mathbb{K}[X]$$의 ring structure에 인코딩되어 있으며, 이는 나중에 affine variety들 사이의 morphism을 대수적으로 다루는 기반이 된다.
 
-Coordinate ring $$\mathbb{K}[X]$$의 원소들은 위에서 살펴본 것과 비슷하게 $$X$$ 위에서 정의된 함수들로 생각할 수 있다. 구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 잘 정의되기 위해서는 $$\bar{f}$$의 representative에 상관없이 $$X$$의 모든 점에서 그 함숫값이 같아야 하는데, 어차피 $$\bar{f}$$에서 다른 representative를 택하는 것은 $$I(X)$$의 원소를 택하는 것이고 이들 함수들은 $$X$$ 위에서 identically zero이기 때문이다. 또 앞서 살펴봤듯 $$X$$가 affine variety라면 $$I(X)$$는 [prime ideal](/ko/math/commutative_algebra/basic_notions#def10)이므로 $$\mathbb{K}[X]$$는 [integral domain](/ko/math/ring_theory/integral_domains)이 된다는 것도 기억할 만하다.
+기하학적으로, coordinate ring은 $$X$$ 위에서 "측정할 수 있는 것들"을 나타낸다. 예를 들어 단위원 $$Z(\x^2+\y^2-1)$$의 경우, $$\mathbb{K}[X]$$의 원소인 $$\x$$와 $$\y$$는 각각 점의 $$x$$-좌표와 $$y$$-좌표를 측정하는 함수이며, 이들의 대수적 관계 $$\x^2+\y^2=1$$이 $$\mathbb{K}[X]$$에서 $$\x^2+\y^2-1=0$$으로 반영된다. 따라서 coordinate ring은 기하학적 대상의 "함수 대수(function algebra)"로서, $$X$$의 기하학적 성질을 대수적으로 읽어내는 창구 역할을 한다.
+
+Coordinate ring $$\mathbb{K}[X]$$의 원소들은 위에서 살펴본 것과 비슷하게 $$X$$ 위에서 정의된 함수들로 생각할 수 있다. 구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 잘 정의되기 위해서는 $$\bar{f}$$의 representative에 상관없이 $$X$$의 모든 점에서 그 함숫값이 같아야 하는데, 어차피 $$\bar{f}$$에서 다른 representative를 택하는 것은 $$I(X)$$의 원소를 택하는 것이고 이들 함수들은 $$X$$ 위에서 identically zero이기 때문이다. 또 앞서 살펴봤듯 $$X$$가 affine variety라면 $$I(X)$$는 [\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)의 prime ideal이므로, $$\mathbb{K}[X]$$는 zero divisor가 없는 integral domain이 된다는 것도 기억할 만하다. ([\[환 이론\] §Integral Domains, ⁋정의 1](/ko/math/ring_theory/integral_domains))
 
 <div class="example" markdown="1">
 
@@ -336,7 +338,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 </details>
 
-즉, morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 이는 $$X\mapsto \mathbb{K}[X]$$가 affine variety들의 [\[범주론\] §Categories](/ko/math/category_theory/categories)에서 $$\Ring$$으로의 [contravariant functor](/ko/math/category_theory/functors#prop1)임을 의미한다.
+즉, morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 이는 $$X\mapsto \mathbb{K}[X]$$가 affine variety들의 [\[범주론\] §범주, ⁋정의 1](/ko/math/category_theory/categories#def1)에서 $$\Ring$$으로의 contravariant functor, 즉 화살표의 방향이 뒤집히는 functor임을 의미한다. ([\[범주론\] §함자, ⁋명제 1](/ko/math/category_theory/functors#prop1))
 
 한편 morphism의 개념을 정의했다면, 당연히 isomorphism의 개념이 존재한다.
 
@@ -348,13 +350,15 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 예를 들어, $$\mathbb{A}^1$$에서 twisted cubic $$C$$로의 morphism $$t\mapsto (t, t^2, t^3)$$은 isomorphism이다. 이는 $$(x,y,z)\mapsto x$$가 inverse를 정의하기 때문이다.
 
-위에서 살펴봤듯, $$X\mapsto \mathbb{K}[X]$$는 affine variety들의 [category](/ko/math/category_theory/categories)에서 $$\Ring$$으로의 [contravariant functor](/ko/math/category_theory/functors#prop1)를 정의하므로, isomorphic한 affine variety들은 isomorphic한 coordinate ring을 갖는 것이 자명하다. 다음 명제는 그 역도 성립함을 보여준다.
+위에서 살펴봤듯, $$X\mapsto \mathbb{K}[X]$$는 affine variety들의 [\[범주론\] §범주, ⁋정의 1](/ko/math/category_theory/categories#def1)에서 $$\Ring$$으로의 contravariant functor를 정의하므로, isomorphic한 affine variety들은 isomorphic한 coordinate ring을 갖는 것이 자명하다. 다음 명제는 그 역도 성립함을 보여준다.
 
 <div class="proposition" markdown="1">
 
 <ins id="prop17">**명제 17**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
 
 </div>
+명제 15에서 morphism $$\varphi: X \to Y$$가 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도함을 보았다. 직관적으로, $$\varphi^\ast$$는 $$Y$$ 위의 함수 $$g$$를 $$X$$ 위의 함수 $$g \circ \varphi$$로 대응시키는데, 이는 $$Y$$의 기하학적 정보를 $$X$$ 관점에서 "끌어당기는(pullback)" 연산이다. 따라서 $$\varphi^\ast$$가 isomorphism이라면, 양쪽 coordinate ring의 함수들이 서로 완벽하게 대응하므로, 기하학적으로도 $$X$$와 $$Y$$의 구조가 본질적으로 같을 것이라는 기대가 자연스럽다. 다음 증명은 이 직관을 엄밀하게 구현한다.
+
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
