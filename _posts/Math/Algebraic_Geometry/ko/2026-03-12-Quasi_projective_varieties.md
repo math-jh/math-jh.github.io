@@ -31,7 +31,7 @@ Projective space의 열린부분집합은 자연스러운 기하적 대상이다
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> Standard affine open set $$U_i = \{x_i \ne 0\}$$는 $$\mathbb{P}^n$$의 열린부분집합이므로 quasi-projective variety이다. [§사영다양체, ⁋명제 10](/ko/math/algebraic_geometry/projective_varieties#prop10)에서 $$U_i \cong \mathbb{A}^n$$이므로, 모든 affine variety는 quasi-projective variety이다. 또 임의의 projective variety는 당연히 quasi-projective variety이다. 
+<ins id="ex2">**예시 2**</ins> Standard affine open set $$U_i = \{x_i \ne 0\}$$는 $$\mathbb{P}^n$$의 열린부분집합이므로 quasi-projective variety이다. [§사영다양체, ⁋명제 9](/ko/math/algebraic_geometry/projective_varieties#prop9)에서 $$U_i \cong \mathbb{A}^n$$이므로, 모든 affine variety는 quasi-projective variety이다. 또 임의의 projective variety는 당연히 quasi-projective variety이다. 
 
 </div>
 
@@ -72,7 +72,7 @@ Quasi-projective variety $$X \subseteq Y \subseteq \mathbb{P}^n$$에는 $$Y$$로
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§사영다양체, ⁋명제 4](/ko/math/algebraic_geometry/projective_varieties#prop4)로부터 자명하다. 
+[§사영다양체, ⁋명제 5](/ko/math/algebraic_geometry/projective_varieties#prop5)로부터 자명하다. 
 
 </details>
 
@@ -98,7 +98,7 @@ $$X = \bigcup_{i=0}^n (X \cap U_i)$$
 
 $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 
-가 affine variety $$U_i$$의 coordinate ring $$\mathbb{K}[U_i]$$의 원소인 것이다. $$X$$ 위의 모든 regular function들의 sheaf를 $$\mathscr{O}_X$$ 혹은 더 간단히 $$\mathscr{O}$$로 표기한다. 이 정의는 [§아핀다양체, ⁋정의 10](/ko/math/algebraic_geometry/affine_varieties#def10)에서 affine case를 포괄하며, projective variety 또한 quasi-projective이므로 이 정의가 적용된다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1))
+가 affine variety $$U_i$$의 coordinate ring $$\mathbb{K}[U_i]$$의 원소인 것이다. $$X$$ 위의 모든 regular function들의 sheaf를 $$\mathscr{O}_X$$ 혹은 더 간단히 $$\mathscr{O}$$로 표기한다. 이 정의는 [§아핀다양체, ⁋정의 11](/ko/math/algebraic_geometry/affine_varieties#def11)에서 affine case를 포괄하며, projective variety 또한 quasi-projective이므로 이 정의가 적용된다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1))
 
 </div>
 
@@ -137,7 +137,7 @@ $$f = \sum_{i=1}^r a_i g_i f = \sum_{i=1}^r a_i g_i \cdot \frac{h_i}{g_i} = \sum
 
 </details>
 
-Projective case에 대해서는 약간의 분석이 필요하다. Affine chart $$U_0 = \{x_0 \ne 0\}$$에서 homogeneous polynomial $$F$$ of degree $$d$$는 dehomogenization $$F(1, \x_1, \ldots, \x_n)$$을 통해 $$\mathbb{A}^n$$ 위의 다항식이 된다. 마찬가지로, 같은 차수의 homogeneous polynomial들의 비율 $$F/G$$는 $$F(1, \x_1, \ldots, \x_n) / G(1, \x_1, \ldots, \x_n)$$으로 표현된다 (단, $$G$$는 $$U_0$$에서 vanish하지 않음). 이는 [§사영다양체, ⁋명제 11](/ko/math/algebraic_geometry/projective_varieties#prop11)의 dehomogenization 과정이다.
+Projective case에 대해서는 약간의 분석이 필요하다. Affine chart $$U_0 = \{x_0 \ne 0\}$$에서 homogeneous polynomial $$F$$ of degree $$d$$는 dehomogenization $$F(1, \x_1, \ldots, \x_n)$$을 통해 $$\mathbb{A}^n$$ 위의 다항식이 된다. 마찬가지로, 같은 차수의 homogeneous polynomial들의 비율 $$F/G$$는 $$F(1, \x_1, \ldots, \x_n) / G(1, \x_1, \ldots, \x_n)$$으로 표현된다 (단, $$G$$는 $$U_0$$에서 vanish하지 않음). 이는 [§사영다양체, ⁋명제 10](/ko/math/algebraic_geometry/projective_varieties#prop10)의 dehomogenization 과정이다.
 
 ## 정칙사상의 정의
 
@@ -172,14 +172,14 @@ $$\varphi(q) = [F_0(q) : \cdots : F_m(q)]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Affine variety와 projective variety의 경우, [정의 9](#def9)는 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_geometry/affine_varieties#def14), [§사영다양체, ⁋정의 13](/ko/math/algebraic_geometry/projective_varieties#def13)와 동치이다.
+<ins id="prop11">**명제 11**</ins> Affine variety와 projective variety의 경우, [정의 9](#def9)는 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_geometry/affine_varieties#def14), [§사영다양체, ⁋정의 12](/ko/math/algebraic_geometry/projective_varieties#def12)와 동치이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-**아핀다양체의 경우**: [§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)에서 morphism $$\varphi: X \to Y$$가 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도함을 보였다. 이는 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$로 정의되므로, $$\varphi$$가 regular function을 pullback한다는 것과 같다. 즉, coordinate ring의 원소 $$\bar{g}$$가 regular function $$g$$일 때, $$\varphi^\ast(\bar{g})$$는 $$g \circ \varphi$$가 된다. 따라서 affine variety의 morphism은 정의 9의 regular map과 일치한다.
+**아핀다양체의 경우**: [§아핀다양체, ⁋명제 15](/ko/math/algebraic_geometry/affine_varieties#prop15)에서 morphism $$\varphi: X \to Y$$가 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도함을 보였다. 이는 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$로 정의되므로, $$\varphi$$가 regular function을 pullback한다는 것과 같다. 즉, coordinate ring의 원소 $$\bar{g}$$가 regular function $$g$$일 때, $$\varphi^\ast(\bar{g})$$는 $$g \circ \varphi$$가 된다. 따라서 affine variety의 morphism은 정의 9의 regular map과 일치한다.
 
 **사영다양체의 경우**: [§사영다양체](/ko/math/algebraic_geometry/projective_varieties)에서 morphism을 homogeneous polynomials로 표현되는 함수로 정의했다. 구체적으로, $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$ where $$F_i$$ are homogeneous of the same degree. Regular function $$f$$ on $$V \subseteq Y$$는 국소적으로 다항식의 비율로 표현되므로, $$f \circ \varphi$$ 또한 다항식의 비율로 표현된다. 따라서 $$f \circ \varphi$$는 regular function이다. 이는 projective variety의 morphism이 regular map 조건을 만족함을 보여준다.
 

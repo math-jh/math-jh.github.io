@@ -8,7 +8,7 @@ sidebar:
     nav: "algebraic_geometry-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Projective_Varieties.png
+    overlay_image: /assets/images/Math/Algebraic_Geometry/Projective_Zarieties.png
     overlay_filter: 0.5
 
 date: 2026-03-11
@@ -18,6 +18,8 @@ weight: 2
 ---
 
 ## 사영공간의 정의
+
+이제 우리는 대수다양체의 다른 중요한 클래스인 사영다양체를 정의한다. 우선 다음부터 시작한다. 
 
 <div class="definition" markdown="1">
 
@@ -33,17 +35,15 @@ $$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$x_i = \lambda y_i$ for 
 
 </div>
 
-동치류 $$[(x_0, \ldots, x_n)]$$은 보통 $$[x_0 : \cdots : x_n]$$으로 표기하며, 이를 *homogeneous coordinates<sub>동차좌표</sub>*라 부른다. $$x_0, \ldots, x_n$$을 *좌표*라 하고, 이들 중 적어도 하나는 $$0$$이 아니어야 한다. Homogeneous coordinates의 핵심은 좌표들이 *비율*만을 결정한다는 것이다. 즉, $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$ for $$\lambda \in \mathbb{K}^\ast$$이다.
+Equivalence class $$[(x_0, \ldots, x_n)]$$은 보통 $$[x_0 : \cdots : x_n]$$으로 표기하며, 이를 *homogeneous coordinates<sub>동차좌표</sub>*라 부른다. $$x_0, \ldots, x_n$$을 *좌표*라 하고, 이들 중 적어도 하나는 $$0$$이 아니어야 한다. Homogeneous coordinates의 핵심은 좌표들이 *비율*만을 결정한다는 것이다. 즉, 모든 $$\lambda\in \mathbb{K}^\ast$$에 대하여 $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이 성립한다. 
 
 ## 동차다항식과 사영공간
 
-이제 우리는 affine case에서와 마찬가지로 $$\mathbb{P}^n$$에 위상구조를 주어야 한다. Projective space에서도 마찬가지로 우리는 다항식들의 zero set으로 닫힌집합을 정의할 것인데, 주의할 점은 $$\mathbb{P}^n$$은 quotient set으로 정의되었으므로 다항식이 잘 정의되지 않는다는 것이다. 즉 임의의 $$F \in \mathbb{K}[x_0, \ldots, x_n]$$에 대하여, $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이지만 일반적으로
+이제 우리는 affine case에서와 마찬가지로 $$\mathbb{P}^n$$에 위상구조를 주어야 한다. Projective space에서도 마찬가지로 우리는 다항식들의 zero set으로 닫힌집합을 정의할 것인데, 주의할 점은 $$\mathbb{P}^n$$은 quotient set으로 정의되었으므로 일반적으로는 다항식이 잘 정의되지 않는다는 것이다. 즉 임의의 $$F \in \mathbb{K}[x_0, \ldots, x_n]$$에 대하여, $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이지만 일반적으로
 
 $$F(x_0, \ldots, x_n)\neq F(\lambda x_0, \ldots, \lambda x_n)$$
 
-이며, 이 evaluation이 임의의 representative에 대해 잘 정의되도록 하는 유일한 다항식은 상수다항식 뿐이다. 
-
-그러나 만일 다항식이 정의하는 zero set에만 관심을 둔다면 이 문제가 해결된다. Homogeneous polynomial $$F$$ of degree $$d$$에 대해서는
+이며, 이 evaluation이 임의의 representative에 대해 잘 정의되도록 하는 유일한 다항식은 상수다항식 뿐이다. 그러나 만일 다항식이 정의하는 zero set에만 관심을 둔다면 이 문제가 해결된다. Homogeneous polynomial $$F$$ of degree $$d$$에 대해서는
 
 $$F(\lambda x_0, \ldots, \lambda x_n) = \lambda^d F(x_0, \ldots, x_n)$$
 
@@ -67,63 +67,50 @@ $$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Homogeneous polynomials $$F_1, \ldots, F_k \in \mathbb{K}[\x_0, \ldots, \x_n]$$에 대하여, *projective algebraic set<sub>사영 대수적 집합</sub>* $$V(F_1, \ldots, F_k)$$를
+<ins id="def3">**정의 3**</ins> Homogeneous polynomials $$F_1, \ldots, F_k \in \mathbb{K}[\x_0, \ldots, \x_n]$$에 대하여, *projective algebraic set<sub>사영 대수적 집합</sub>* $$Z(F_1, \ldots, F_k)$$를
 
-$$V(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \cdots = F_k(x) = 0\}$$
+$$Z(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \cdots = F_k(x) = 0\}$$
 
 으로 정의한다. Projective algebraic set들 가운데 그보다 더 작은 projective algebraic set들의 합집합으로 나타나지 않는 것들을 *projective variety<sub>사영다양체</sub>*라 부른다.
 
 </div>
 
-위에서 설명했듯, 각각의 $$F_i$$들이 homogeneous이므로 이것이 잘 정의되는 것을 확인할 수 있다. 그럼 affine case와 마찬가지로 우리는 위상구조를 정의하기 위해 Zariski topology를 사용한다. 이를 위해서는 다음 명제가 필요하다. 
+위에서 설명했듯, 각각의 $$F_i$$들이 homogeneous이므로 이것이 잘 정의되는 것을 확인할 수 있다. 
+
+한편 우리는 affine variety를 다룰 때, $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 임의의 부분집합 대신 ideal들만 살펴보면 되었던 것을 기억한다. Projective case에서도 이 철학은 유사하지만, 추가로 homogeneity 가정을 더하여 homogeneous ideal의 개념을 정의할 수 있다.
+
+<div class="definition" markdown="1">
+
+<ins id="def4">**정의 4**</ins> Ideal $$\mathfrak{a} \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$$이 *homogeneous*라는 것은 $$\mathfrak{a}$$가 homogeneous polynomial들로 생성되는 것이다.
+
+</div>
+
+Homogeneous ideal $$\mathfrak{a}$$에 대하여, 그 zero set $$Z(\mathfrak{a})$$를 $$\mathfrak{a}$$의 모든 homogeneous polynomial들이 vanish하는 점들로 정의하면, affine case와 마찬가지로 우리는 Zariski topology를 정의할 수 있다. 이를 위해서는 다음 명제가 필요하다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> 다음이 성립한다.
+<ins id="prop5">**명제 5**</ins> 다음이 성립한다.
 
-1. $$V(0) = \mathbb{P}^n$$, $$V(1) = \emptyset$$,
-2. $$\bigcap_\alpha V(F_\alpha) = V(\sum F_\alpha)$$,
-3. $$V(F) \cup V(G) = V(FG)$$.
+1. $$Z(0) = \mathbb{P}^n$$, $$Z(1) = \emptyset$$,
+2. $$\bigcap_iZ(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$$,
+3. $$Z(\mathfrak{a}) \cup Z(\mathfrak{b}) = Z(\mathfrak{a} \cap \mathfrak{b}) = Z(\mathfrak{a}\mathfrak{b})$$.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이 증명은 affine case와 완전히 동일하다. 유일한 차이점은 여기서 다루는 다항식들이 모두 homogeneous라는 점이지만, 증명 논리 자체는 동일하다.
-
-첫 번째 주장은 자명하다. 두 번째 주장의 경우, 점 $$[x_0 : \cdots : x_n]$$이 모든 $$V(F_\alpha)$$에 속한다는 것은 모든 $$F_\alpha(x) = 0$$이라는 것이다. 이는 ideal $$(F_\alpha)_\alpha$$의 모든 원소가 $$x$$에서 0이라는 것과 동치이다. 마지막으로 점 $$[x_0 : \cdots : x_n]$$이 $$V(F) \cup V(G)$$에 속한다는 것은 $$F(x) = 0$$ 또는 $$G(x) = 0$$이라는 것이다. Field에서 이는 $$F(x)G(x) = 0$$과 동치이다.
+Affine case와의 유일한 차이점은 여기서 다루는 다항식들이 모두 homogeneous라는 점이지만, 증명 논리 자체는 동일하므로 증명을 생략하기로 한다. 
 
 </details>
 
-Affine case에서와 마찬가지로, 이는 projective space $$\mathbb{P}^n$$ 위에 projective subvariety들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 
+Affine case에서와 마찬가지로, 이는 projective space $$\mathbb{P}^n$$ 위에 projective algebraic set들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 마찬가지로 이러한 topology를 *Zariski topology*라 부른다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> $$\mathbb{P}^n$$은 Zariski 위상에서 compact이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-Standard open cover $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$을 생각하자. 각 $$U_i \cong \mathbb{A}^n$$은 Zariski 위상에서 quasi-compact이다. 유한개의 quasi-compact 열린집합들의 합집합은 quasi-compact이므로 $$\mathbb{P}^n$$은 quasi-compact이다.
-
-</details>
-
-그러나 대수기하학에서 compactness 그 자체는 큰 의미가 없다. 가령 affine space 또한 quasi-compact임을 보일 수 있다. (때문에 우리는 이를 quasi-compact라 부른다.)
-
-## Homogeneous Ideal과 Projective Nullstellensatz
+## Projective Nullstellensatz
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Ideal $$I \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$$이 *homogeneous*라는 것은 $$I$$가 homogeneous polynomials들로 생성되는 것이다.
-
-</div>
-
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> 부분집합 $$X \subseteq \mathbb{P}^n$$의 *homogeneous ideal* $$I(X)$$를
+<ins id="def6">**정의 6**</ins> 부분집합 $$X \subseteq \mathbb{P}^n$$의 *homogeneous ideal* $$I(X)$$를
 
 $$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}$$
 
@@ -133,14 +120,14 @@ $$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8**</ins> (Projective Nullstellensatz) Field $$\mathbb{K}$$가 대수적으로 닫힌 체이고 $$I \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$$이 homogeneous ideal이라 하자. 그럼
+<ins id="thm7">**정리 7**</ins> (Projective Nullstellensatz) Field $$\mathbb{K}$$가 대수적으로 닫힌 체이고 $$\mathfrak{a} \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$$이 homogeneous ideal이라 하자. 그럼
 
-1. $$V(I) = \emptyset \iff I \supseteq (\x_0, \ldots, \x_n)$$,
-2. $$I(V(I)) = \sqrt{I}$$ (if $$V(I) \ne \emptyset$$).
+1. $$Z(\mathfrak{a}) = \emptyset \iff \mathfrak{a} \supseteq (\x_0, \ldots, \x_n)$$,
+2. $$I(Z(\mathfrak{a})) = \sqrt{\mathfrak{a}}$$ (if $$Z(\mathfrak{a}) \ne \emptyset$$).
 
 </div>
 
-Affine case와의 차이점은 $$V(I) = \emptyset$$이 $$I = (1)$$을 의미하지 않고, $$I$$가 *irrelevant ideal* $$(\x_0, \ldots, \x_n)$$을 포함하는 것을 의미한다는 점이다. 이는 $$(\x_0, \ldots, \x_n)$$이 $$\mathbb{K}^{n+1}$$의 원점에 해당하는데, projective space의 정의에서 원점은 제외되었기 때문이다.
+Affine case와의 차이점은 $$Z(\mathfrak{a}) = \emptyset$$이 $$\mathfrak{a} = (1)$$을 의미하지 않고, $$\mathfrak{a}$$가 *irrelevant ideal* $$(\x_0, \ldots, \x_n)$$을 포함하는 것을 의미한다는 점이다. 이는 $$(\x_0, \ldots, \x_n)$$이 $$\mathbb{K}^{n+1}$$의 원점에 해당하는데, projective space의 정의에서 원점은 제외되었기 때문이다.
 
 ## Standard Affine Cover
 
@@ -148,7 +135,7 @@ Projective space $$\mathbb{P}^n$$은 $$n+1$$개의 affine space들로 덮을 수
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> $$i = 0, 1, \ldots, n$$에 대하여, *$$i$$번째 standard open set* $$U_i$$를
+<ins id="def8">**정의 8**</ins> $$i = 0, 1, \ldots, n$$에 대하여, *$$i$$번째 standard open set* $$U_i$$를
 
 $$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}$$
 
@@ -160,7 +147,7 @@ $$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> 각각의 $$U_i$$는 (subspace topology 하에서) affine space $$\mathbb{A}^n$$과 homeomorphic하다.
+<ins id="prop9">**명제 9**</ins> 각각의 $$U_i$$는 (subspace topology 하에서) affine space $$\mathbb{A}^n$$과 homeomorphic하다.
 
 </div>
 
@@ -177,17 +164,17 @@ $$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$
 
 이다. 이들이 서로 inverse인 것은 정의로부터 자명하다. 이제 $$\varphi_0$$와 $$\psi_0$$가 모두 연속임을 보여야 한다.
 
-우선 $$\varphi_0$$의 연속성을 보이기 위해 $$\mathbb{A}^n$$의 닫힌집합 $$V(f)$$를 생각하자. 그럼
+우선 $$\varphi_0$$의 연속성을 보이기 위해 $$\mathbb{A}^n$$의 닫힌집합 $$Z(f)$$를 생각하자. 그럼
 
-$$\varphi_0^{-1}(V(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \mid f\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) = 0\right\}$$
+$$\varphi_0^{-1}(Z(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \mid f\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) = 0\right\}$$
 
-이다. $$f$$가 degree $$d$$인 다항식이라면, $$x_0^d f(x_1/x_0, \ldots, x_n/x_0)$$는 homogeneous polynomial $$F$$가 되어 $$\varphi_0^{-1}(V(f)) = V(F) \cap U_0$$이다. 이는 $$U_0$$의 subspace topology에서 닫힌집합이다.
+이다. $$f$$가 degree $$d$$인 다항식이라면, $$x_0^d f(x_1/x_0, \ldots, x_n/x_0)$$는 homogeneous polynomial $$F$$가 되어 $$\varphi_0^{-1}(Z(f)) = Z(F) \cap U_0$$이다. 이는 $$U_0$$의 subspace topology에서 닫힌집합이다.
 
-이제 그 역함수 $$\psi_0$$의 연속성을 보이자. $$U_0$$의 닫힌집합 $$V(F) \cap U_0$$를 생각하자. 여기서 $$F$$는 homogeneous polynomial of degree $$d$$이다. 그럼
+이제 그 역함수 $$\psi_0$$의 연속성을 보이자. $$U_0$$의 닫힌집합 $$Z(F) \cap U_0$$를 생각하자. 여기서 $$F$$는 homogeneous polynomial of degree $$d$$이다. 그럼
 
-$$\psi_0^{-1}(V(F) \cap U_0) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid F(1, a_1, \ldots, a_n) = 0\}$$
+$$\psi_0^{-1}(Z(F) \cap U_0) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid F(1, a_1, \ldots, a_n) = 0\}$$
 
-이다. $$F(1, \x_1, \ldots, \x_n)$$은 $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 다항식이므로 $$\psi_0^{-1}(V(F) \cap U_0)$$는 $$\mathbb{A}^n$$에서 닫힌집합이다.
+이다. $$F(1, \x_1, \ldots, \x_n)$$은 $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 다항식이므로 $$\psi_0^{-1}(Z(F) \cap U_0)$$는 $$\mathbb{A}^n$$에서 닫힌집합이다.
 
 따라서 $$\varphi_0$$와 $$\psi_0$$가 서로 inverse이고 모두 연속이므로 $$\varphi_0$$는 homeomorphism이다.
 
@@ -197,14 +184,14 @@ $$\psi_0^{-1}(V(F) \cap U_0) = \{(a_1, \ldots, a_n) \in \mathbb{A}^n \mid F(1, a
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$과 standard open set $$U_i$$에 대하여, $$X \cap U_i$$는 $$U_i \cong \mathbb{A}^n$$ 위의 affine variety이다.
+<ins id="prop10">**명제 10**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$과 standard open set $$U_i$$에 대하여, $$X \cap U_i$$는 $$U_i \cong \mathbb{A}^n$$ 위의 affine variety이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$U_0$$의 경우, $$X = V(F_1, \ldots, F_k)$$이고 각 $$F_j$$가 homogeneous of degree $$d_j$$라 하자. 그럼 $$X \cap U_0$$는 $$\mathbb{A}^n$$에서
+$$U_0$$의 경우, $$X = Z(F_1, \ldots, F_k)$$이고 각 $$F_j$$가 homogeneous of degree $$d_j$$라 하자. 그럼 $$X \cap U_0$$는 $$\mathbb{A}^n$$에서
 
 $$F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = 0, \quad j = 1, \ldots, k$$
 
@@ -212,15 +199,15 @@ $$F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = 0, \quad j =
 
 $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F_j(\x_0, \x_1, \ldots, \x_n) = 0$$
 
-이다. 이제 $$f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$$라 두면, $$X \cap U_0 = V(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이다.
+이다. 이제 $$f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$$라 두면, $$X \cap U_0 = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이다.
 
 </details>
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> 위의 명제를 기기적으로 해석하기 위해 $$\mathbb{K}=\mathbb{R}$$이라 하고, $$\mathbb{P}^2$$에서 conic $$X = V(\x_0^2 + \x_1^2 - \x_2^2)$$를 생각하자. 
+<ins id="ex11">**예시 11**</ins> 위의 명제를 기하적으로 해석하기 위해 $$\mathbb{K}=\mathbb{R}$$이라 하고, $$\mathbb{P}^2$$에서 conic $$X = Z(\x_0^2 + \x_1^2 - \x_2^2)$$를 생각하자. 
 
-이 conic은 $$\mathbb{A}^3$$ 안의 원뿔 $$\x_0^2 + \x_1^2 = \x_2^2$$을 homogeneous coordinates로 표현한 것이다. 그럼 standard open set들에서 $$X$$가 어떻게 보이는지는 [명제 11](#prop11)에서 알 수 있다. 즉 $$U_i$$에서 $$X$$가 어떻게 생겼는지를 보기 위해서는 그냥 $$\x_i$$ 자리에 $$1$$을 넣고, 남은 $$n$$개의 변수가 $$\mathbb{A}^n$$의 좌표인 것으로 생각하면 된다. 그럼 특히 다음의 결과를 얻는다. 
+이 conic은 $$\mathbb{A}^3$$ 안의 원뿔 $$\x_0^2 + \x_1^2 = \x_2^2$$을 homogeneous coordinates로 표현한 것이다. 그럼 standard open set들에서 $$X$$가 어떻게 보이는지는 [명제 10](#prop10)에서 알 수 있다. 즉 $$U_i$$에서 $$X$$가 어떻게 생겼는지를 보기 위해서는 그냥 $$\x_i$$ 자리에 $$1$$을 넣고, 남은 $$n$$개의 변수가 $$\mathbb{A}^n$$의 좌표인 것으로 생각하면 된다. 그럼 특히 다음의 결과를 얻는다. 
 
 1. $$U_0, U_1$$에서 $$X$$는 쌍곡선 $$1+\y^2-\z^2=0$$, $$\x^2+1-\z^2=0$$이다. 
 2. $$U_2$$에서 $$X$$는 원 $$\x^2+\y^2=1$$이다. 
@@ -243,7 +230,7 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**정의 14**</ins> $$\varphi: X \to Y$$가 projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $$p$$마다 적당한 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
+<ins id="def12">**정의 12**</ins> $$\varphi: X \to Y$$가 projective variety $$X \subseteq \mathbb{P}^n$$과 $$Y \subseteq \mathbb{P}^m$$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $$p$$마다 적당한 homogeneous polynomials $$F_0, \ldots, F_m$$ of the same degree가 존재하여
 
 $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
@@ -255,7 +242,7 @@ $$\varphi(p) = [F_0(p) : \cdots : F_m(p)]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> 우선 $$\mathbb{P}^1$$에서 $$\mathbb{P}^2$$로의 *Veronese embedding* (of degree 2)을
+<ins id="ex13">**예시 13**</ins> 우선 $$\mathbb{P}^1$$에서 $$\mathbb{P}^2$$로의 *Veronese embedding* (of degree 2)을
 
 $$[x:y]\mapsto [x^2: xy:y^2]$$
 
@@ -269,7 +256,7 @@ $$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex16">**예시 16**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
+<ins id="ex14">**예시 14**</ins> **Twisted cubic in $$\mathbb{P}^3$$**
 
 $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
@@ -277,7 +264,7 @@ $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
 $$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$
 
-의 공통 영점이며, $$\mathbb{P}^1$$과 isomorphic하다. 실은, 위의 예시 15에서 살펴본 Veronese embedding의 개념을 $$d=3$$으로 확장하면, 
+의 공통 영점이며, $$\mathbb{P}^1$$과 isomorphic하다. 실은, 위의 [예시 13](#ex13)에서 살펴본 Veronese embedding의 개념을 $$d=3$$으로 확장하면, 
 
 $$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
 
@@ -290,5 +277,5 @@ $$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
 **참고문헌**
 
 **[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Zarieties in Projective Space*, Springer, 2013.  
 **[Ful]** W. Fulton, *Algebraic Curves*, 2008. (A
