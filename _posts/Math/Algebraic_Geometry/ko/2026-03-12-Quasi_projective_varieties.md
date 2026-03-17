@@ -19,6 +19,8 @@ weight: 3
 
 [§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)와 [§사영다양체](/ko/math/algebraic_geometry/projective_varieties)에서 우리는 각각 아핀공간과 사영공간의 부분집합으로 정의되는 기하적 대상들을 살펴보았다. 그러나 대수기하학에서 가장 자연스러운 대상들은 이 둘을 모두 포함하는 더 큰 범주에 속한다. 이 절에서 우리는 *quasi-projective variety*를 정의하고, 이것이 아핀다양체와 사영다양체를 모두 포함함을 보인다.
 
+Quasi-projective variety는 대수기하학의 기본적인 연구 대상이다. 이 범주는 affine variety와 projective variety를 모두 포함할 뿐 아니라, 이들의 열린부분집합들도 모두 포함한다. 이는 다음과 같은 이유로 중요하다. 첫째, 많은 자연스러운 기하적 구성이 quasi-projective variety를 반환한다. 예를 들어, 두 다양체의 곱, 여집합, 일반적인 교집합 등은 모두 quasi-projective 범주 안에서 닫혀있다. 둘째, sheaf와 scheme 이론으로 나아가기 위해서는 quasi-projective setting에서의 이해가 필수적이다. 셋째, 연구 대상의 대부분이 quasi-projective이므로, 이 범주에서 작업하는 것이 가장 자연스럽다.
+
 ## Quasi-projective variety의 정의
 
 Projective space의 열린부분집합은 자연스러운 기하적 대상이다. 예를 들어, $$\mathbb{P}^2$$에서 직선 $$\x_0=0$$을 제거한 여집합은 projective variety가 아니지만, 여전히 다항식으로 정의되는 대상이며, 심지어 affine variety이기도 하다. 
@@ -48,8 +50,8 @@ Projective space의 열린부분집합은 자연스러운 기하적 대상이다
 
 $$X$$가 projective variety $$Y$$의 열린부분집합이라 하자.
 
-- $$X$$의 열린부분집합 $$U$$는 $$Y$$의 열린부분집합이므로 quasi-projective variety이다.
-- $$X$$의 닫힌부분집합 $$Z = X \cap W$$ ($$W$$는 projective)는 $$Y \cap W$$의 열린부분집합이므로 quasi-projective variety이다.
+- $$X$$의 열린부분집합 $$U$$는 $$Y$$의 열린부분집합이다. 열린집합의 열린집합은 열린집합이므로 $$U$$는 $$Y$$의 열린부분집합이고, 따라서 quasi-projective variety이다.
+- $$X$$의 닫힌부분집합 $$Z = X \cap W$$ (여기서 $$W \subseteq \mathbb{P}^n$$은 projective variety)를 생각하자. 그러면 $$Y \cap W$$는 $$\mathbb{P}^n$$의 닫힌집합들의 교집합이므로 projective variety이고, $$Z = X \cap W = X \cap (Y \cap W)$$는 이 projective variety $$Y \cap W$$의 열린부분집합이다. 따라서 $$Z$$는 quasi-projective variety이다.
 
 </details>
 
@@ -72,13 +74,27 @@ Quasi-projective variety $$X \subseteq Y \subseteq \mathbb{P}^n$$에는 $$Y$$로
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§사영다양체, ⁋명제 5](/ko/math/algebraic_geometry/projective_varieties#prop5)로부터 자명하다. 
+Zariski 위상이 위상의 공리를 만족함을 확인하자.
+
+- 공집합과 전체집합: $$X \cap \emptyset = \emptyset$$, $$X \cap Y = X$$이므로 둘 다 $$X$$의 닫힌집합이다.
+- 유한 교집합: $$X$$의 닫힌집합 $$Z_1, \ldots, Z_r$$이 $$Z_i = X \cap W_i$$ ($$W_i$$는 projective)로 표현된다면,
+
+$$Z_1 \cap \cdots \cap Z_r = X \cap (W_1 \cap \cdots \cap W_r)$$
+
+이고 $$W_1 \cap \cdots \cap W_r$$은 projective variety이므로 교집합도 닫힌집합이다.
+- 임의의 합집합: $$Z_\alpha = X \cap W_\alpha$$들이 $$X$$의 닫힌집합들이라면,
+
+$$\bigcup_\alpha Z_\alpha = X \cap \left(\bigcup_\alpha W_\alpha\right)$$
+
+이고 $$\bigcup_\alpha W_\alpha$$는 projective variety들의 합집합으로, Zariski 위상에서 닫힌집합이다.
+
+따라서 Zariski topology는 위상이다.
 
 </details>
 
 ## Open Affine Cover
 
-우리는 variety들 사이의 morphism을 다룰 때 미분다양체 등에서 하였듯 한 점 주변의 (affine) 열린근방을 찾아 계산을 수행할 것이다. 이를 위해 quasi-projective variety가 open affine cover를 갖는다는 것을 보이자.
+우리는 variety들 사이의 morphism을 다룰 때 미분다양체 등에서 하였듯 한 점 주변의 (affine) 열린근방을 찾아 계산을 수행할 것이다. 이를 위해 quasi-projective variety가 open affine cover를 갖는다는 것을 보이자. Open affine cover는 regular map의 국소적 성질을 분석하고, sheaf의 stalk을 정의하며, scheme으로의 일반화를 이해하는 데 필수적이다.
 
 Projective variety $$Y \subseteq \mathbb{P}^n$$와 그 안의 quasi-projective variety $$X \subseteq Y$$가 주어졌다 하자. Standard affine open set $$U_i = \{x_i \ne 0\} \subseteq \mathbb{P}^n$$를 생각하자. Dehomogenization $$\x_j / \x_i$$를 통해 $$U_i \cong \mathbb{A}^n$$이고, $$Y \cap U_i$$는 $$\mathbb{A}^n$$ 안의 affine variety와 isomorphic하다. 따라서
 
