@@ -137,15 +137,15 @@ $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$f \in \mathbb{K}[X]$$이면 자명하게 [정의 6](#def6)의 조건을 만족한다 ($$X$$ 자체가 affine cover). 
+$$f \in \mathbb{K}[X]$$이면 자명하게 [정의 6](#def6)의 조건을 만족한다 ($$X$$ 자체가 affine cover).
 
-반대로 $$f$$가 [정의 6](#def6)의 의미에서 regular라 하자. 즉 open affine cover $$\{U_i\}$$가 존재하여 각 $$f\vert_{U_i} \in \mathcal{O}(U_i)$$이다. $$X$$가 compact이므로 유한개의 $$U_1, \ldots, U_r$$만으로 $$X$$를 덮을 수 있다. 각 $$U_i$$는 principal open set $$D(g_i) = \{g_i \ne 0\}$$의 형태이고, 따라서 
+반대로 $$f$$가 [정의 6](#def6)의 의미에서 regular라 하자. 즉 open affine cover $$\{U_i\}$$가 존재하여 각 $$f\vert_{U_i} \in \mathcal{O}(U_i)$$이다. $$X$$가 Zariski 위상에서 quasi-compact이므로 (모든 affine variety는 Noetherian이고 따라서 quasi-compact), 유한개의 $$U_1, \ldots, U_r$$만으로 $$X$$를 덮을 수 있다. 각 $$U_i$$는 principal open set $$D(g_i) = \{g_i \ne 0\}$$의 형태이고, 따라서
 
 $$f\vert_{U_i} = h_i / g_i^{n_i}$$
 
-의 형태로 쓸 수 있다. 어차피 $$D(g_i)=D(g_i^{n_i})$$이므로, 편의상 $$f\vert_{U_i}=h_i/g_i$$라 하자. 
+의 형태로 쓸 수 있다. 어차피 $$D(g_i)=D(g_i^{n_i})$$이므로, 편의상 $$f\vert_{U_i}=h_i/g_i$$라 하자.
 
-이제 $$\bigcup_i D(g_i) = X$$이므로, ideal $$(g_1, \ldots, g_r) = \mathbb{K}[X]$$이다. 따라서 $$a_1 g_1 + \cdots + a_r g_r = 1$$ for some $$a_i \in \mathbb{K}[X]$$이다. 그럼
+이제 $$\bigcup_i D(g_i) = X$$이다. 이는 각 점 $$p \in X$$에 대해 어떤 $$g_i$$가 $$g_i(p) \ne 0$$임을 의미한다. 즉, ideal $$I = (g_1, \ldots, g_r) \subseteq \mathbb{K}[X]$$의 vanishing locus가 공집합이다. Hilbert Nullstellensatz에 의해 $$\sqrt{I} = \mathbb{K}[X]$$이고, 특히 $$1 \in I$$이다. 따라서 $$a_1 g_1 + \cdots + a_r g_r = 1$$을 만족하는 $$a_i \in \mathbb{K}[X]$$가 존재한다. 그럼
 
 $$f = \sum_{i=1}^r a_i g_i f = \sum_{i=1}^r a_i g_i \cdot \frac{h_i}{g_i} = \sum_{i=1}^r a_i h_i \in \mathbb{K}[X]$$
 
@@ -180,7 +180,7 @@ $$\varphi(q) = [F_0(q) : \cdots : F_m(q)]$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-생략. 핵심은 morphism이 국소적으로 homogeneous polynomials로 표현되므로, regular function (국소적으로 다항식의 비율)의 pullback도 다항식의 비율로 표현된다는 것이다.
+생략. 핵심은 morphism이 국소적으로 homogeneous polynomials로 표현되므로, regular function (국소적으로 다항식의 비율)의 pullback도 다항식의 비율로 표현된다는 것이다. 구체적으로, $$f = F/G$$가 같은 차수의 homogeneous polynomials의 비율로 표현된다면, $$f \circ \varphi$$는 $$F(\varphi(x))/G(\varphi(x))$$로 표현되며, 이는 다항식들의 pullback의 비율이므로 여전히 다항식의 비율이다.
 
 </details>
 
