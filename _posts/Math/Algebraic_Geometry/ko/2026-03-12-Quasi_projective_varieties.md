@@ -17,13 +17,11 @@ weight: 3
 
 ---
 
-[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)와 [§사영다양체](/ko/math/algebraic_geometry/projective_varieties)에서 우리는 각각 아핀공간과 사영공간의 부분집합으로 정의되는 기하적 대상들을 살펴보았다. 그러나 대수기하학에서 가장 자연스러운 대상들은 이 둘을 모두 포함하는 더 큰 범주에 속한다. 이 절에서 우리는 *quasi-projective variety*를 정의하고, 이것이 아핀다양체와 사영다양체를 모두 포함함을 보인다.
-
-Quasi-projective variety는 대수기하학의 기본적인 연구 대상이다. 이 범주는 affine variety와 projective variety를 모두 포함할 뿐 아니라, 이들의 열린부분집합들도 모두 포함한다. 이는 다음과 같은 이유로 중요하다. 첫째, 많은 자연스러운 기하적 구성이 quasi-projective variety를 반환한다. 예를 들어, 두 다양체의 곱, 여집합, 일반적인 교집합 등은 모두 quasi-projective 범주 안에서 닫혀있다. 둘째, sheaf와 scheme 이론으로 나아가기 위해서는 quasi-projective setting에서의 이해가 필수적이다. 셋째, 연구 대상의 대부분이 quasi-projective이므로, 이 범주에서 작업하는 것이 가장 자연스럽다.
+[§아핀다양체](/ko/math/algebraic_geometry/affine_varieties)와 [§사영다양체](/ko/math/algebraic_geometry/projective_varieties)에서 우리는 각각 아핀공간과 사영공간의 부분집합으로 정의되는 기하적 대상들을 살펴보았다. 그러나 대수기하학에서 가장 자연스러운 대상들은 이 둘을 모두 포함하는 더 큰 범주에 속한다. 이 절에서 우리는 *quasi-projective variety*를 정의하고, 이것이 affine variety와 projective variety를 모두 포함함을 보인다.
 
 ## Quasi-projective variety의 정의
 
-Projective space의 열린부분집합은 자연스러운 기하적 대상이다. 예를 들어, $$\mathbb{P}^2$$에서 직선 $$\x_0=0$$을 제거한 여집합은 projective variety가 아니지만, 여전히 다항식으로 정의되는 대상이며, 심지어 affine variety이기도 하다. 
+Projective space의 열린집합은 자연스러운 기하적 대상이다. 예를 들어, $$\mathbb{P}^2$$에서 직선 $$\x_0=0$$을 제거한 standard affine cover $$U_0$$은 projective variety가 아니지만, 여전히 다항식으로 정의되는 대상이며, 심지어 affine variety이기도 하다. 
 
 <div class="definition" markdown="1">
 
@@ -31,27 +29,34 @@ Projective space의 열린부분집합은 자연스러운 기하적 대상이다
 
 </div>
 
+물론 $$X$$는 $$Y$$의 위상구조를 물려받는다. 
+
 <div class="example" markdown="1">
 
 <ins id="ex2">**예시 2**</ins> Standard affine open set $$U_i = \{x_i \ne 0\}$$는 $$\mathbb{P}^n$$의 열린부분집합이므로 quasi-projective variety이다. [§사영다양체, ⁋명제 9](/ko/math/algebraic_geometry/projective_varieties#prop9)에서 $$U_i \cong \mathbb{A}^n$$이므로, 모든 affine variety는 quasi-projective variety이다. 또 임의의 projective variety는 당연히 quasi-projective variety이다. 
 
 </div>
 
-## 열린집합과 닫힌집합의 Quasi-projective variety 구조
+일반적으로, affine case에서와 projective case 모두에서 주어진 variety의 open subset은 affine variety 혹은 projective variety가 되지 않는 경우가 더 많았다. Quasi-projective variety는 이들보다 훨씬 넓은 범주로, 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> Quasi-projective variety $$X$$의 열린부분집합과 닫힌부분집합은 모두 quasi-projective variety이다.
+<ins id="prop3">**명제 3**</ins> Quasi-projective variety $$X$$의 열린집합은 quasi-projective variety이다. 또, $$X$$의 irreducible closed subset도 quasi-projective variety이다.
 
 </div>
+
+여기서 irreducible space는 더 작은 두 개의 열린집합의 합집합으로 나타낼 수 없는 공간을 의미한다. 
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$X$$가 projective variety $$Y$$의 열린부분집합이라 하자.
+$$X$$가 projective variety $$Y\subset \mathbb{P}^n$$의 열린집합이라 하자.
 
-- $$X$$의 열린부분집합 $$U$$는 $$Y$$의 열린부분집합이다. 열린집합의 열린집합은 열린집합이므로 $$U$$는 $$Y$$의 열린부분집합이고, 따라서 quasi-projective variety이다.
-- $$X$$의 닫힌부분집합 $$Z = X \cap W$$ (여기서 $$W \subseteq \mathbb{P}^n$$은 projective variety)를 생각하자. 그러면 $$Y \cap W$$는 $$\mathbb{P}^n$$의 닫힌집합들의 교집합이므로 projective variety이고, $$Z = X \cap W = X \cap (Y \cap W)$$는 이 projective variety $$Y \cap W$$의 열린부분집합이다. 따라서 $$Z$$는 quasi-projective variety이다.
+1. **열린집합의 경우**: $$X$$의 열린집합 $$U$$는 $$Y$$의 열린집합이므로, 정의에 의해 quasi-projective variety이다.
+
+2. **닫힌집합의 경우**: $$X$$의 닫힌집합 $$Z$$가 irreducible이라 하자. 그럼 적당한 $$\mathbb{P}^n$$의 닫힌집합 $$W$$가 존재하여 $$Z=X\cap W$$이다. 이때 $$Y \cap W$$는 $$\mathbb{P}^n$$의 닫힌집합이고, $$Z$$는 $$Y \cap W$$의 열린부분집합이다. 
+
+   $$Z$$가 irreducible이므로, $$Z$$를 포함하는 $$Y \cap W$$의 irreducible component $$W'$$가 존재한다. 그럼 $$Z$$는 projective variety $$W'$$의 열린부분집합이므로 quasi-projective variety이다.
 
 </details>
 
@@ -188,7 +193,7 @@ $$\varphi(q) = [F_0(q) : \cdots : F_m(q)]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Affine variety와 projective variety의 경우, [정의 9](#def9)는 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_geometry/affine_varieties#def14), [§사영다양체, ⁋정의 12](/ko/math/algebraic_geometry/projective_varieties#def12)와 동치이다.
+<ins id="prop11">**명제 11**</ins> Affine variety와 projective variety의 경우, [정의 9](#def9)는 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_geometry/affine_varieties#def14), [§사영다양체, ⁋정의 15](/ko/math/algebraic_geometry/projective_varieties#def15)와 동치이다.
 
 </div>
 

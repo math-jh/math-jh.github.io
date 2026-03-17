@@ -131,7 +131,7 @@ $$\varphi_{\mathcal{L}}(p) = [s_0(p) : \cdots : s_N(p)]$$
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> **$\mathcal{O}_{\mathbb{P}^n}(1)$은 very ample**: [\[사영다양체\] §예시 13](/ko/math/algebraic_geometry/projective_varieties#ex13)에서 보듯, 이는 identity embedding $\mathbb{P}^n \hookrightarrow \mathbb{P}^n$을 정의한다.
+<ins id="ex13">**예시 13**</ins> **$\mathcal{O}_{\mathbb{P}^n}(1)$은 very ample**: [\[사영다양체\] §예시 16](/ko/math/algebraic_geometry/projective_varieties#ex16)에서 보듯, 이는 identity embedding $\mathbb{P}^n \hookrightarrow \mathbb{P}^n$을 정의한다.
 
 </div>
 
