@@ -1,6 +1,6 @@
 ---
 title: "Linear Systems"
-excerpt: "Linear systems of divisors and their properties"
+excerpt: "Complete linear systems, base loci, and ampleness"
 
 categories: [Math / Algebraic Geometry]
 permalink: /ko/math/algebraic_geometry/linear_systems
@@ -17,54 +17,75 @@ weight: 12
 
 ---
 
-[\[Picard Group\]](/ko/math/algebraic_geometry/picard_group)에서 우리는 line bundle들의 isomorphism class들이 abelian group을 형성함을 보았다. 이제 우리는 하나의 line bundle $\mathcal{L}$의 global sections들이 어떤 기하학적 구조를 갖는지 살펴볼 것이다. 이는 *linear system*의 개념으로 이어진다.
+[§Divisors](/ko/math/algebraic_geometry/divisors)에서 우리는 divisor의 개념을, [§Line Bundles](/ko/math/algebraic_geometry/line_bundles)에서 line bundle과 global sections $$H^0(X, \mathcal{L})$$의 개념을, [§Picard Group](/ko/math/algebraic_geometry/picard_group)에서 $$\operatorname{Pic}(X) \cong \operatorname{Cl}(X)$$의 대응을 각각 다루었다. 이제 *linear system*을 정의한다. Linear system은 주어진 line bundle의 global section들이 이루는 family를 체계적으로 조직화하는 방법이다. 이를 통해 우리는 *동일한 line bundle class*에 속하는 effective divisor들의 모임을 projective space로 parameterize할 수 있으며, basepoint-free linear system은 다양체에서 사영공간으로의 사상을 자연스럽게 정의한다. 또한 very ample line bundle을 판별하는 실용적 기준을 제공하며, Riemann-Roch 정리의 주된 응용 대상이 된다.
 
-Linear system은 line bundle의 global sections들의 projective space이다. 예를 들어, $\mathbb{P}^n$에서 hyperplane bundle $\mathcal{O}_{\mathbb{P}^n}(1)$의 linear system은 $\mathbb{P}^n$의 모든 hyperplane들의 family이다. 이는 사영공간 $\mathbb{P}^{n-1}$과 자연스럽게 동형이며, 각 점 $[a_0 : \cdots : a_n] \in \mathbb{P}^{n-1}$은 hyperplane $V(a_0 \x_0 + \cdots + a_n \x_n)$에 대응된다.
-
-## Complete Linear System
+## Complete Linear System의 정의
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Divisor $D$의 *complete linear system* $\lvert D \rvert$는 $D$와 linearly equivalent한 모든 effective divisor들의 집합이다.
+<ins id="def1">**정의 1**</ins> 다양체 $$X$$ 위의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}$$의 *complete linear system*은 $$\mathcal{L}$$의 global section space $$H^0(X, \mathcal{L})$$의 projectivization이다.
 
-$$\lvert D \rvert = \{D' \ge 0 \mid D' \sim D\}$$
+$$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> Complete linear system $\lvert D \rvert$는 projective space $\mathbb{P}(H^0(X, \mathcal{O}_X(D)))$와 자연스럽게 동형이다.
+이는 유효한 점을 갖는 모든 nonzero section의 등가류들의 집합이다. $$\dim H^0(X, \mathcal{L}) = r + 1$$이면, $$\lvert \mathcal{L} \rvert$$는 차원 $$r$$의 projective space이다.
 
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-[\[Line Bundles\] §명제 18](/ko/math/algebraic_geometry/line_bundles#prop18)에서 $H^0(X, \mathcal{O}_X(D))$는 $D + \operatorname{div}(f) \ge 0$인 유리함수 $f$들의 공간과 동형임을 보였다. Nonzero section $s \in H^0(X, \mathcal{O}_X(D))$에 대해 $\operatorname{div}(s)$는 $\lvert D \rvert$의 원소이고, 두 section이 같은 divisor를 정의하는 것은 서로 scalar multiple인 것과 동치이다. 따라서 $\lvert D \rvert \cong \mathbb{P}(H^0(X, \mathcal{O}_X(D)))$이다.
-
-</details>
-
-이 동형에 의해 $\lvert D \rvert$는 자연스러운 projective space 구조를 갖는다. 그 dimension을 $\dim \lvert D \rvert = h^0(X, \mathcal{O}_X(D)) - 1$로 정의한다.
-
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> **$\mathbb{P}^n$의 hyperplane system**: $H = V(\x_0)$에 대해 $\lvert H \rvert$는 $\mathbb{P}^n$의 모든 hyperplane들의 family이다. [\[Line Bundles\] §예시 19](/ko/math/algebraic_geometry/line_bundles#ex19)에서 $H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(1))$이 차수 1의 동차다항식들의 공간과 동형임을 보였으므로, $\dim \lvert H \rvert = n$이다. 이는 $\mathbb{P}^n$이 $n$차원 projective space라는 사실과 일치한다.
-
-</div>
-
-## Linear System
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> *Linear system*은 complete linear system $\lvert D \rvert$의 nonempty linear subspace이다. 즉, $H^0(X, \mathcal{O}_X(D))$의 subspace $V$에 대해 $\mathbb{P}(V) \subseteq \lvert D \rvert$의 꼴이다.
+<ins id="def2">**정의 2**</ins> $$\mathcal{L}$$에 대한 *linear system*은 $$\lvert \mathcal{L} \rvert$$의 nonempty projective subspace이다. 즉, 부분벡터공간 $$V \subseteq H^0(X, \mathcal{L})$$에 대해 $$\mathbb{P}(V) \subseteq \lvert \mathcal{L} \rvert$$의 꼴이다.
 
 </div>
 
-Linear system은 종종 $V$의 dimension을 그대로 사용하여 *$r$-dimensional linear system*이라 부른다. 1차원 linear system을 *pencil*, 2차원을 *net*, 3차원을 *web*이라 부르기도 한다.
+Linear system의 차원은 $$\dim V - 1$$로 정의한다. $$V$$가 $$r+1$$차원이면, 이 linear system은 *$$r$$-dimensional*이라 불린다. 1차원 linear system을 *pencil*, 2차원을 *net*, 3차원을 *web*이라 부르기도 한다.
+
+<div class="misc" markdown="1">
+**기하학적 해석.** Complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$는 $$\mathcal{L}$$에 대응하는 divisor class 안의 모든 effective divisor들의 모임과 자연스럽게 대응된다. 구체적으로, nonzero section $$s \in H^0(X, \mathcal{L})$$는 $$\mathcal{L}$$의 zero divisor $$\operatorname{div}(s)$$를 정의하며, scalar multiple인 section들은 같은 effective divisor를 정의한다. 따라서 $$\lvert \mathcal{L} \rvert$$의 한 점은 $$\mathcal{L}$$ class의 한 effective divisor를 나타낸다.
+</div>
+
+## 사영공간에서의 Complete Linear System
+
+앞서 [§Line Bundles, ⁋예시 19](/ko/math/algebraic_geometry/line_bundles#ex19)에서 $$H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$$가 차수 $$d$$의 동차다항식들의 공간 $$\mathbb{K}[\x_0, \ldots, \x_n]_d$$와 동형임을 보았다. 따라서 [§Picard Group, ⁋예시 7](/ko/math/algebraic_geometry/picard_group#ex7)의 맥락에서, divisor $$dH$$에 대응하는 line bundle $$\mathcal{O}_{\mathbb{P}^n}(d)$$의 complete linear system은 다음과 같다.
+
+$$\lvert \mathcal{O}_{\mathbb{P}^n}(d) \rvert = \mathbb{P}(H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))) \cong \mathbb{P}(\mathbb{K}[\x_0, \ldots, \x_n]_d) \cong \mathbb{P}^{\binom{n+d}{d} - 1}$$
+
+이것은 "차수 $$d$$의 hypersurface들의 family"의 정확한 정의이다. [§사영다양체](/ko/math/algebraic_geometry/projective_varieties)에서 보았듯, $$\mathbb{P}^n$$의 Zariski topology는 homogeneous polynomial의 zero set으로 정의되며, $$\mathbb{K}[\x_0, \ldots, \x_n]_d$$는 차수 $$d$$의 homogeneous polynomial들의 $$\mathbb{K}$$-벡터공간이다. $$\mathbb{P}^n$$에서 차수 $$d$$의 hypersurface는 원소 $$F \in \mathbb{K}[\x_0, \ldots, \x_n]_d \setminus \{0\}$$의 zero set $$Z(F)$$로 나타내어진다.
+
+이제 우리는 다음 관찰을 한다. 스칼라 $$\lambda \in \mathbb{K}^\ast$$에 대해 $$Z(\lambda F) = Z(F)$$. 즉, nonzero scalar multiple들은 같은 hypersurface를 정의한다. 따라서 "차수 $$d$$의 hypersurface"들은 projective space $$\mathbb{P}(\mathbb{K}[\x_0, \ldots, \x_n]_d)$$의 한 점으로 나타내어진다. $$\dim \mathbb{K}[\x_0, \ldots, \x_n]_d = \binom{n+d}{d}$$이므로, 이 projective space의 차원은 $$\binom{n+d}{d} - 1$$이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> **$\mathbb{P}^2$의 conic pencil**: 두 conic $C_1 = V(F_1)$, $C_2 = V(F_2)$의 pencil은 $\{\lambda F_1 + \mu F_2 = 0\}_{[\lambda:\mu] \in \mathbb{P}^1}$이다. 이는 $\lvert 2H \rvert$의 1차원 subspace이다. Pencil의 각 원소는 차수 2의 curve이며, 이들은 모두 $C_1 \cap C_2$를 지난다.
+<ins id="ex3">**예시 3**</ins> **$$\mathbb{P}^2$$의 직선 family**: $$n = 2$$, $$d = 1$$인 경우, $$\mathbb{K}[\x_0, \x_1, \x_2]_1$$의 기저는 $$\{\x_0, \x_1, \x_2\}$$이다. 따라서 차수 1의 hypersurface (직선)들의 family는 $$\mathbb{P}^2$$와 동형이다. 한 점 $$[a_0 : a_1 : a_2] \in \mathbb{P}^2$$는 직선 $$Z(a_0 \x_0 + a_1 \x_1 + a_2 \x_2)$$에 대응된다.
+
+</div>
+
+## Linear System의 구체적 예시
+
+<div class="example" markdown="1">
+
+<ins id="ex4">**예시 4**</ins> **$$\mathbb{P}^2$$의 conic pencil**: 두 conic $$C_1 = Z(F_1)$$, $$C_2 = Z(F_2)$$의 *pencil*은
+
+$$\{Z(\lambda F_1 + \mu F_2)\}_{[\lambda:\mu] \in \mathbb{P}^1}$$
+
+이다. 이는 $$\lvert \mathcal{O}_{\mathbb{P}^2}(2) \rvert$$의 1차원 subspace이다. Pencil의 각 원소는 차수 2의 plane curve이며, 이들은 모두 $$C_1 \cap C_2$$를 지난다. $$\dim \mathbb{K}[\x_0, \x_1, \x_2]_2 = 6$$이므로 $$\lvert \mathcal{O}_{\mathbb{P}^2}(2) \rvert \cong \mathbb{P}^5$$이고, pencil은 이 $$\mathbb{P}^5$$의 1차원 부분공간이다.
+
+</div>
+
+## Closed Subvariety 위의 Linear System
+
+이제 closed subvariety $$X \subseteq \mathbb{P}^n$$ 위에서의 linear system을 정의한다. $$\mathbb{P}^n$$의 linear system $$\mathbb{P}(V)$$에 대해, 각 $$F \in V$$는 $$X$$와의 교차 $$X \cap Z(F)$$를 정의한다. 이것이 $$X$$ 위의 linear system의 기하학적 내용이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def5">**정의 5**</ins> Closed subvariety $$X \subseteq \mathbb{P}^n$$ 위에서, 부분벡터공간 $$V \subseteq \mathbb{K}[\x_0, \ldots, \x_n]_d$$가 정의하는 *linear system*은 $$\mathbb{P}(V)$$의 각 원소 $$[F]$$가 $$X$$ 위의 교차 $$X \cap Z(F)$$에 대응되는 family이다.
+
+</div>
+
+이때 $$X$$ 위에서 두 다항식 $$F, G$$가 같은 교차를 정의하는 것은 $$F \equiv G \pmod{I(X)}$$일 때, 즉 $$F - G$$가 $$X$$의 defining ideal $$I(X)$$에 속할 때이다. 따라서 $$X$$ 위에서의 실제 parameter space는 $$\mathbb{P}(V / (V \cap I(X)))$$이다.
+
+<div class="example" markdown="1">
+
+<ins id="ex6">**예시 6**</ins> **$$\mathbb{P}^1$$ 위의 점들의 family**: $$\mathbb{P}^1$$에서 차수 1의 hypersurface는 점 한 개이다. $$\mathbb{K}[\x_0, \x_1]_1$$의 기저는 $$\{\x_0, \x_1\}$$이고, $$\lvert \mathcal{O}_{\mathbb{P}^1}(1) \rvert \cong \mathbb{P}^1$$이다. 한 점 $$[a : b] \in \mathbb{P}^1$$은 $$\mathbb{P}^1$$의 점 $$Z(a \x_0 + b \x_1) = [b : -a]$$에 대응된다.
 
 </div>
 
@@ -72,87 +93,111 @@ Linear system은 종종 $V$의 dimension을 그대로 사용하여 *$r$-dimensio
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Linear system $L$의 *base locus* $\operatorname{Bs}(L)$는 $L$의 모든 원소가 공유하는 closed subset이다.
+<ins id="def7">**정의 7**</ins> Linear system $$L \subseteq \lvert \mathcal{L} \rvert$$의 *base locus* $$\operatorname{Bs}(L)$$는 $$L$$의 모든 원소가 공유하는 closed subset이다. 구체적으로, $$L = \mathbb{P}(V)$$에서 $$V \subseteq H^0(X, \mathcal{L})$$일 때,
 
-$$\operatorname{Bs}(L) = \bigcap_{D \in L} \operatorname{Supp}(D)$$
+$$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\operatorname{div}(s))$$
+
+여기서 $$\operatorname{div}(s)$$는 section $$s$$의 zero divisor이다. $$\mathbb{P}^n$$의 hypersurface 계산에서는 $$V \subseteq \mathbb{K}[\x_0, \ldots, \x_n]_d$$에 대해 $$\operatorname{Bs}(L) = \bigcap_{[F] \in L} Z(F)$$와 동일하다.
 
 </div>
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Linear system $L$이 *basepoint-free*라는 것은 $\operatorname{Bs}(L) = \emptyset$인 것이다.
+<ins id="def8">**정의 8**</ins> $$L$$이 *basepoint-free*라는 것은 $$\operatorname{Bs}(L) = \emptyset$$인 것이다. 즉, 임의의 점 $$p \in X$$에서 $$p$$를 지나지 않는 $$L$$의 원소가 항상 존재한다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> **$\mathbb{P}^n$의 hyperplane system**: $\lvert H \rvert$는 basepoint-free이다. 임의의 점 $p \in \mathbb{P}^n$에 대해 $p$를 지나지 않는 hyperplane이 존재하기 때문이다.
+<ins id="ex9">**예시 9**</ins> **$$\mathbb{P}^n$$의 hyperplane system**: $$\lvert \mathcal{O}_{\mathbb{P}^n}(1) \rvert = \mathbb{P}(\mathbb{K}[\x_0, \ldots, \x_n]_1)$$는 basepoint-free이다. 임의의 점 $$p = [p_0 : \cdots : p_n] \in \mathbb{P}^n$$에 대해, $$p$$를 지나지 않는 hyperplane $$Z(\x_i)$$ (단, $$p_i \ne 0$$인 $$i$$를 택함)이 존재하기 때문이다. 즉, $$p \notin \operatorname{Bs}(\lvert \mathcal{O}_{\mathbb{P}^n}(1) \rvert)$$이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9**</ins> **Pencil의 base locus**: [예시 5](#ex5)의 conic pencil의 base locus는 $C_1 \cap C_2$이다. Bézout's theorem에 의해 이는 최대 4개의 점으로 구성된다.
+<ins id="ex10">**예시 10**</ins> **Pencil의 base locus**: [예시 4](#ex4)의 conic pencil의 base locus는 $$C_1 \cap C_2$$이다. Bézout's theorem ([§Bézout 정리](/ko/math/algebraic_geometry/bezout_theorem))에 의해, $$\mathbb{P}^2$$에서 두 conic의 교차는 (중복도를 포함하여) 4개의 점으로 구성된다.
 
 </div>
 
-## Fixed Part와 Moving Part
+## Basepoint-Free Linear System이 정의하는 사상
+
+Basepoint-free linear system의 핵심 성질은, 이것이 다양체에서 사영공간으로의 사상을 자연스럽게 정의한다는 것이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> Complete linear system $\lvert D \rvert$가 base locus를 가지면, $D = F + M$으로 분해된다. 여기서 $F$는 *fixed part* (모든 $D' \in \lvert D \rvert$가 포함)이고, $\lvert M \rvert$는 basepoint-free이다.
+<ins id="prop11">**명제 11**</ins> Closed subvariety $$X \subseteq \mathbb{P}^n$$ 위의 basepoint-free linear system $$L = \mathbb{P}(V)$$에서, $$V$$의 기저 $$F_0, \ldots, F_r \in \mathbb{K}[\x_0, \ldots, \x_n]_d$$가 다음 조건을 만족한다고 하자:
+
+$$\bigcap_{i=0}^r Z(F_i) \cap X = \emptyset$$
+
+그러면 $$V$$는 $$X$$에서 사영공간으로의 정칙사상
+
+$$\varphi_L: X \to \mathbb{P}^r, \quad p \mapsto [F_0(p) : \cdots : F_r(p)]$$
+
+을 정의한다. 여기서 $$F_i(p)$$는 $$F_i$$의 $$p$$에서의 값을 나타낸다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Base locus $\operatorname{Bs}(\lvert D \rvert) = \bigcap_{D' \in \lvert D \rvert} \operatorname{Supp}(D')$를 생각하자. 이를 divisor $F$로 표현하면 (각 component에 최소 multiplicity를 부여), 모든 $D' \in \lvert D \rvert$는 $D' = F + M'$의 꼴이다. 그럼 $\lvert D \rvert = F + \lvert M \rvert$이고, $\lvert M \rvert$는 basepoint-free이다.
+우선 $$\varphi_L$$이 well-defined임을 보여야 한다. $$p \in X$$일 때, $$p \in \operatorname{Bs}(L) = \emptyset$$이므로 어떤 $$i$$에 대해 $$F_i(p) \ne 0$$이다. 따라서 $$[F_0(p) : \cdots : F_r(p)]$$는 $$\mathbb{P}^r$$의 정상적인 점이다.
+
+다음으로 $$\varphi_L$$이 정칙사상임을 보이자. $$X$$의 affine open cover $$U_\alpha = X \cap (\mathbb{P}^n \setminus Z(G_\alpha))$$를 생각하자. 각 $$U_\alpha$$에서 $$G_\alpha \ne 0$$이므로, $$F_i / G_\alpha^d$$는 $$U_\alpha$$에서 정의되는 regular function이다. $$\varphi_L$$의 $$j$$번째 좌표는 이 regular function들의 비율로 나타나므로, $$\varphi_L$$은 $$U_\alpha$$에서 정칙사상이다.
 
 </details>
 
-## Very Ample과 Ample Line Bundles
+<div class="example" markdown="1">
+
+<ins id="ex12">**예시 12**</ins> **Rational normal curve**: $$\mathbb{P}^1$$에서 $$d \ge 1$$일 때, $$\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$$의 complete linear system이 정의하는 사상은 *Veronese 사상* 또는 *rational normal curve*이라 불린다.
+
+$$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
+
+이 사상의 image는 $$\mathbb{P}^d$$에서 degree $$d$$의 *rational normal curve*이다. $$d = 2$$일 때는 $$\mathbb{P}^2$$의 conic (parabola의 projective closure), $$d = 3$$일 때는 $$\mathbb{P}^3$$의 twisted cubic이다.
+
+</div>
+
+## Very Ample과 Ample
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> Line bundle $\mathcal{L}$이 *very ample*이라는 것은 $\lvert \mathcal{L} \rvert$가 embedding $\varphi_{\mathcal{L}}: X \hookrightarrow \mathbb{P}^N$을 정의하는 것이다. 구체적으로, basis $s_0, \ldots, s_N \in H^0(X, \mathcal{L})$에 대해
-
-$$\varphi_{\mathcal{L}}(p) = [s_0(p) : \cdots : s_N(p)]$$
-
-으로 정의된 map이 embedding인 것이다.
+<ins id="def13">**정의 13**</ins> Line bundle $$\mathcal{L}$$ (또는 대응하는 linear system $$\lvert \mathcal{L} \rvert$$)이 *very ample*이라는 것은, complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$이 정의하는 사상 $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(H^0(X, \mathcal{L}))$$이 closed embedding인 것이다.
 
 </div>
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> Line bundle $\mathcal{L}$이 *ample*이라는 것은 어떤 $n > 0$에 대해 $\mathcal{L}^{\otimes n}$이 very ample인 것이다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13**</ins> **$\mathcal{O}_{\mathbb{P}^n}(1)$은 very ample**: [\[사영다양체\] §예시 16](/ko/math/algebraic_geometry/projective_varieties#ex16)에서 보듯, 이는 identity embedding $\mathbb{P}^n \hookrightarrow \mathbb{P}^n$을 정의한다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex14">**예시 14**</ins> **$\mathcal{O}_{\mathbb{P}^n}(d)$도 very ample**: $d > 0$이면, 이는 *Veronese embedding* $\mathbb{P}^n \hookrightarrow \mathbb{P}^N$을 정의한다. 여기서 $N = \binom{n+d}{d} - 1$이다.
+<ins id="def14">**정의 14**</ins> $$\mathcal{L}$$이 *ample*이라는 것은 어떤 $$m > 0$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample인 것이다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> Line bundle $\mathcal{L}$이 very ample이면 $\lvert \mathcal{L} \rvert$는 basepoint-free이다.
+<ins id="prop15">**명제 15**</ins> Very ample line bundle은 항상 basepoint-free이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$\varphi_{\mathcal{L}}$이 embedding이므로 모든 점에서 정의된다. 즉, 각 점 $p$에 대해 어떤 section $s_i$가 $s_i(p) \ne 0$이다. 따라서 basepoint가 없다.
+$$\varphi_{\mathcal{L}}: X \hookrightarrow \mathbb{P}^r$$이 embedding이면 모든 점에서 정의된다. $$\varphi_{\mathcal{L}}(p) = [s_0(p) : \cdots : s_r(p)]$$ (여기서 $$s_0, \ldots, s_r$$은 $$H^0(X, \mathcal{L})$$의 기저)이므로, 각 $$p \in X$$에 대해 어떤 $$i$$가 $$s_i(p) \ne 0$$이다. 따라서 $$\operatorname{Bs}(\lvert \mathcal{L} \rvert) = \emptyset$$이다.
 
 </details>
+
+<div class="example" markdown="1">
+
+<ins id="ex16">**예시 16**</ins> **$$\mathcal{O}_{\mathbb{P}^n}(1)$$은 very ample**: $$\lvert \mathcal{O}_{\mathbb{P}^n}(1) \rvert = \mathbb{P}(\mathbb{K}[\x_0, \ldots, \x_n]_1)$$는 identity embedding $$\mathbb{P}^n \hookrightarrow \mathbb{P}^n$$을 정의한다. $$F_i = \x_i$$로 놓으면 $$\varphi_L([x_0 : \cdots : x_n]) = [x_0 : \cdots : x_n]$$이다.
+
+</div>
+
+<div class="example" markdown="1">
+
+<ins id="ex17">**예시 17**</ins> **$$\mathcal{O}_{\mathbb{P}^n}(d)$$도 very ample**: $$d > 0$$이면 $$\lvert \mathcal{O}_{\mathbb{P}^n}(d) \rvert$$는 *Veronese embedding*
+
+$$\nu_d: \mathbb{P}^n \hookrightarrow \mathbb{P}^N, \quad [x_0 : \cdots : x_n] \mapsto [\text{모든 차수 } d \text{의 단일항식}]$$
+
+을 정의한다. 여기서 $$N = \binom{n+d}{d} - 1$$이다. 이 사상은 $$\mathbb{P}^n$$을 $$\mathbb{P}^N$$의 smooth degree $$d$$의 subvariety로 embedding한다.
+
+</div>
 
 ---
 

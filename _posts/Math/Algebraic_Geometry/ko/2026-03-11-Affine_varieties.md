@@ -12,7 +12,7 @@ header:
     overlay_filter: 0.5
 
 date: 2026-03-11
-last_modified_at: 2026-03-12
+last_modified_at: 2026-03-18
 weight: 1
 
 ---
@@ -21,7 +21,7 @@ weight: 1
 
 $$Z(f)= \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f(x_1, \ldots, x_n) = 0\},\qquad f\in \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-으로 주어지는 집합들에 관심이 있다. 이는 $$\mathbb{K}^n$$에서 다항식 $$f$$의 근들의 모임이다. 일반적으로 $$\mathbb{K}=\mathbb{C}$$로 두며, 이러한 가정에서 특히 좋은 것은 $$\mathbb{C}$$이 algebraically closed라는 사실이다. 그러나, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 혼동을 방지하기 위하여 다항식 $$f$$의 변수는 정자 $$\x$$와 같은 식으로 표기할 것이다.
+으로 주어지는 집합들에 관심이 있다. 이는 $$\mathbb{K}^n$$에서 다항식 $$f$$의 근들의 모임이다. 일반적으로 $$\mathbb{K}=\mathbb{C}$$로 두며, 이러한 가정에서 특히 좋은 것은 $$\mathbb{C}$$이 [algebraically closed](/ko/math/general/algebraically_closed_field)라는 사실이다. 그러나, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 혼동을 방지하기 위하여 다항식 $$f$$의 변수는 정자 $$\x$$와 같은 식으로 표기할 것이다.
 
 ## 아핀다양체의 정의
 
@@ -52,6 +52,8 @@ $$Z(f_1, \ldots, f_k) = \{x=(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f_1(x) = \c
 $$Z(S)=Z((S))$$
 
 을 만족한다. 따라서 우리는 ideal $$\mathfrak{a}$$들이 정의하는 affine algebraic set들만 신경써도 된다.
+
+Affine variety를 "더 작은 affine algebraic set들의 합집합으로 나타나지 않는" 대상으로 정의하는 것은, 기하학적으로 하나의 "연결된" 대상을 다루기 위함이다. 이를테면 두 원 $$Z(\x)\cup Z(\x-1)\subseteq \mathbb{A}^1$$은 각각이 affine variety이지만, 그 합집합은 affine variety가 아니다. 대수적으로, 이러한 irreducibility 조건은 나중에 coordinate ring이 integral domain이 되도록 보장하는 핵심 조건이 된다.
 
 <div class="example" markdown="1">
 
@@ -213,14 +215,18 @@ $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a
 <summary>증명</summary>
 
 1. $$X \subseteq Y$$이고 $$f \in I(Y)$$라면, 모든 $$a \in Y$$에 대해 $$f(a) = 0$$이다. 특히 모든 $$a \in X$$에 대해 $$f(a) = 0$$이므로 $$f \in I(X)$$이다.
-2. Zacuous truth.
+2. 자명하다.
 3. $$\mathbb{K}$$가 무한하다면, 모든 점에서 0인 다항식은 영다항식뿐이다.
 4. $$a \in X$$이고 $$f \in I(X)$$라면 $$f(a) = 0$$이다. 즉 $$a \in Z(I(X))$$이다.
 5. $$f \in I$$이고 $$a \in Z(I)$$라면 $$f(a) = 0$$이다. 즉 $$f \in I(Z(I))$$이다.
 
 </details>
 
-즉, $$Z$$와 $$I$$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서 두 operator의 합성 $$ZI$$와 $$IZ$$ 각각은 closure operator를 정의한다. $$ZI$$의 경우, 이 closure는 실제로 Zariski topology에서의 closure가 된다. 이는 만일 $$X \subseteq Y = Z(J)$$이면 $$I(Z(J)) \subseteq I(X)$$이고, [명제 9](#prop9)의 5번 조건에서 $$J \subseteq I(Z(J))$$이므로 $$ZI(X) \subseteq Z(J) = Y$$가 되어, $$ZI(X)$$가 $$X$$를 포함하는 Zariski closed set 중 가장 작은 것이 되기 때문이다. $$IZ$$의 경우에는 바로 보이지 않는데, 이를 위해서는 ideal의 radical 개념이 필요하다.
+즉, $$Z$$와 $$I$$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서 두 operator의 합성 $$ZI$$와 $$IZ$$ 각각은 closure operator를 정의한다. $$ZI$$의 경우, 이 closure는 실제로 Zariski topology에서의 closure가 된다. 이는 만일 $$X \subseteq Y = Z(J)$$이면 $$I(Z(J)) \subseteq I(X)$$이고, [명제 9](#prop9)의 5번 조건에서 $$J \subseteq I(Z(J))$$이므로 $$ZI(X) \subseteq Z(J) = Y$$가 되어, $$ZI(X)$$가 $$X$$를 포함하는 Zariski closed set 중 가장 작은 것이 되기 때문이다. $$IZ$$의 경우에는 바로 보이지 않는데, 이를 위해서는 ideal의 radical 개념이 필요하다[^radical].
+
+---
+
+[^radical]: Ideal $$\mathfrak{a}$$의 *radical* $$\sqrt{\mathfrak{a}}$$는 $$\{f \in R \mid f^r \in \mathfrak{a} \text{ for some } r \geq 1\}$$로 정의된다.
 
 <div class="proposition" markdown="1">
 
@@ -246,7 +252,7 @@ $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
 한편, $$\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$$가 임의의 ideal $$\mathfrak{a}$$에 대해 성립하므로 [명제 4](#prop4)의 셋째 조건으로부터 $$Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$$임을 안다. 그런데 정의에 의하여 임의의 $$f\in \sqrt{\mathfrak{a}}$$가 주어졌을 때, 적당한 $$r$$이 존재하여 $$f^r\in \mathfrak{a}$$이다. 따라서 $$x\in Z(\mathfrak{a})$$라면 $$Z(\sqrt{\mathfrak{a}})$$여야 하고 이로부터 $$Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$$임을 안다. 즉 ideal의 radical은 affine algebraic set을 ideal의 zero set으로 나타낼 때, 이 ideal을 얻어내는 표준적인 방법을 주는 것으로 생각할 수 있으며, 이들 사이의 차이를 구별하기 위해서는 *scheme*을 정의하면 된다. 
 
-이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $$V(\mathfrak{a})$$가 algebraic variety이기 위해서는 $$\sqrt{\mathfrak{a}}$$가 prime ideal이어야 함을 알 수 있다. 
+이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $$Z(\mathfrak{a})$$가 algebraic variety이기 위해서는 $$\sqrt{\mathfrak{a}}$$가 [\[가환대수학\] §Basic_notions, ⁋def10](/ko/math/commutative_algebra/basic_notions#def10)인 prime ideal이어야 함을 알 수 있다.
 
 ## 좌표환과 정칙성
 
@@ -264,7 +270,9 @@ $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / I(X)=\mathbb{K}[\x_1, \ldots,
 
 </div>
 
-Coordinate ring $$\mathbb{K}[X]$$의 원소들은 위에서 살펴본 것과 비슷하게 $$X$$ 위에서 정의된 함수들로 생각할 수 있다. 구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 잘 정의되기 위해서는 $$\bar{f}$$의 representative에 상관없이 $$X$$의 모든 점에서 그 함숫값이 같아야 하는데, 어차피 $$\bar{f}$$에서 다른 representative를 택하는 것은 $$I(X)$$의 원소를 택하는 것이고 이들 함수들은 $$X$$ 위에서 identically zero이기 때문이다. 또 앞서 살펴봤듯 $$X$$가 affine variety라면 $$I(X)$$는 prime ideal이므로 $$\mathbb{K}[X]$$는 integral domain이 된다는 것도 기억할 만하다.
+Coordinate ring $$\mathbb{K}[X]$$는 affine variety $$X$$ 위에서 다항식 함수가 가질 수 있는 모든 대수적 정보를 담고 있다. 구체적으로, $$X$$가 어떤 다항식들의 영점으로 정의되었다면, $$\mathbb{K}[X]$$는 이러한 다항식 관계들을 factoring out한 나머지 다항식 함수들의 모임이다. 이 환을 도입하는 핵심적인 이유는, 기하학적 대상 $$X$$를 대수적으로 완전히 포착할 수 있다는 데 있다: $$X$$ 위의 모든 다항식 함수들의 대수적 관계가 $$\mathbb{K}[X]$$의 ring structure에 인코딩되어 있으며, 이는 나중에 affine variety들 사이의 morphism을 대수적으로 다루는 기반이 된다.
+
+Coordinate ring $$\mathbb{K}[X]$$의 원소들은 위에서 살펴본 것과 비슷하게 $$X$$ 위에서 정의된 함수들로 생각할 수 있다. 구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 잘 정의되기 위해서는 $$\bar{f}$$의 representative에 상관없이 $$X$$의 모든 점에서 그 함숫값이 같아야 하는데, 어차피 $$\bar{f}$$에서 다른 representative를 택하는 것은 $$I(X)$$의 원소를 택하는 것이고 이들 함수들은 $$X$$ 위에서 identically zero이기 때문이다. 또 앞서 살펴봤듯 $$X$$가 affine variety라면 $$I(X)$$는 [prime ideal](/ko/math/commutative_algebra/basic_notions#def10)이므로 $$\mathbb{K}[X]$$는 [integral domain](/ko/math/ring_theory/integral_domains)이 된다는 것도 기억할 만하다.
 
 <div class="example" markdown="1">
 
@@ -286,7 +294,7 @@ $$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
 
 </div>
 
-그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. 이 두 정의가 동치인 것은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 
+그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. 이 두 정의—coordinate ring의 원소로서의 정의(정의 11)와 국소적 비다항식 표현으로서의 정의(정의 13)—가 동치인 것은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 직관적으로, 정의 11에서의 정의는 "전역적으로 하나의 다항식으로 표현할 수 있는가"를 묻는 것이고, 정의 13은 "국소적으로 다항식의 비로 표현할 수 있는가"를 묻는 것이다. 전자가 후자를 함의하는 것은 trivial($$g/1$$이면 충분하다)이며, 역방향은 $$h$$가 $$0$$이 아닌 principal open set $$D(h)$$에서의 정보를 이용하여 patching할 수 있음에서 비롯된다. 이러한 동치성은 affine variety가 Zariski topology에서 충분히 "강한" 구조를 갖고 있음을 반영한다.
 
 ## 아핀다양체 사이의 사상
 
@@ -304,7 +312,7 @@ $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 
 예를 들어, 우리는 [예시 3](#ex3)에서 twisted cubic이 $$t\mapsto (t,t^2,t^3)$$을 통해 $$\mathbb{A}^1$$과 대응됨을 보였는데, 위의 정의는 이것이 affine variety들 사이의 morphism이라는 것을 보여준다.
 
-직관적으로 $$\mathbb{K}[X]$$들은 $$X$$ 위에 정의된 함수이므로, 만일 morphism $$X\rightarrow Y$$가 주어졌다면 이 morphism과의 합성을 통해 $$Y$$의 regular function들을 $$X$$로 옮겨올 수 있을 것이다.
+직관적으로 $$\mathbb{K}[X]$$들은 $$X$$ 위에 정의된 함수이므로, 만일 morphism $$X\rightarrow Y$$가 주어졌다면 이 morphism과의 합성을 통해 $$Y$$의 regular function들을 $$X$$로 옮겨올 수 있을 것이다. 이는 기하학적 사상에서 대수적 사상으로 가는 한 방향이다. 더 중요한 것은 그 역방향, 즉 coordinate ring homomorphism $$\mathbb{K}[Y]\rightarrow \mathbb{K}[X]$$가 주어졌을 때 이를 기하학적 morphism $$X\rightarrow Y$$로 복원할 수 있다는 사실인데, 이는 나중에 affine variety들의 category와 환들의 category 사이의 동치를 세우는 데 핵심적인 역할을 한다.
 
 <div class="proposition" markdown="1">
 
@@ -328,7 +336,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 </details>
 
-즉, morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 이는 $$X\mapsto \mathbb{K}[X]$$가 affine variety들의 category에서 $$\Ring$$으로의 contravariant functor임을 의미한다.
+즉, morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 이는 $$X\mapsto \mathbb{K}[X]$$가 affine variety들의 [\[범주론\] §Categories](/ko/math/category_theory/categories)에서 $$\Ring$$으로의 [contravariant functor](/ko/math/category_theory/functors#prop1)임을 의미한다.
 
 한편 morphism의 개념을 정의했다면, 당연히 isomorphism의 개념이 존재한다.
 
@@ -340,7 +348,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 예를 들어, $$\mathbb{A}^1$$에서 twisted cubic $$C$$로의 morphism $$t\mapsto (t, t^2, t^3)$$은 isomorphism이다. 이는 $$(x,y,z)\mapsto x$$가 inverse를 정의하기 때문이다.
 
-위에서 살펴봤듯, $$X\mapsto \mathbb{K}[X]$$는 affine variety들의 category에서 $$\Ring$$으로의 contravariant functor를 정의하므로, isomorphic한 affine variety들은 isomorphic한 coordinate ring을 갖는 것이 자명하다. 다음 명제는 그 역도 성립함을 보여준다.
+위에서 살펴봤듯, $$X\mapsto \mathbb{K}[X]$$는 affine variety들의 [category](/ko/math/category_theory/categories)에서 $$\Ring$$으로의 [contravariant functor](/ko/math/category_theory/functors#prop1)를 정의하므로, isomorphic한 affine variety들은 isomorphic한 coordinate ring을 갖는 것이 자명하다. 다음 명제는 그 역도 성립함을 보여준다.
 
 <div class="proposition" markdown="1">
 
