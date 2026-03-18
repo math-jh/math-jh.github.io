@@ -53,7 +53,7 @@ $$Z(S)=Z((S))$$
 
 을 만족한다. 따라서 우리는 ideal $$\mathfrak{a}$$들이 정의하는 affine algebraic set들만 신경써도 된다.
 
-Affine variety를 "더 작은 affine algebraic set들의 합집합으로 나타나지 않는" 대상으로 정의하는 것은, 기하학적으로 하나의 "연결된" 대상을 다루기 위함이다. 이를테면 두 원 $$Z(\x)\cup Z(\x-1)\subseteq \mathbb{A}^1$$은 각각이 affine variety이지만, 그 합집합은 affine variety가 아니다. 이 irreducibility 조건은 단순한 기하학적 편의를 넘어, 이론의 대수적 구조에도 깊이 관여한다. 구체적으로, $$X$$가 irreducible일 때 $$I(X)$$가 [\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)의 prime ideal이 되고, 그 결과 coordinate ring $$\mathbb{K}[X]$$가 zero divisor가 없는 integral domain($$A$$가 integral domain이란 0이 아닌 $$a,b \in A$$에 대해 $$ab=0$$이면 $$a=0$$ 또는 $$b=0$$인 경우)이 된다. 이는 다항식 함수들의 대수를 다룰 때 0이 아닌 두 함수의 곱이 결코 0이 되지 않는다는 좋은 성질을 보장하며, 나중에 환론적 방법으로 기하학을 연구하는 데 필수적인 조건이 된다.
+Affine variety를 "더 작은 affine algebraic set들의 합집합으로 나타나지 않는" 대상으로 정의하는 것은, 기하학적으로 하나의 "연결된" 대상을 다루기 위함이다. 이를테면 두 원 $$Z(\x)\cup Z(\x-1)\subseteq \mathbb{A}^1$$은 각각이 affine variety이지만, 그 합집합은 affine variety가 아니다. 이러한 irreducibility 조건은 단순한 기하학적 편의를 넘어, 이론의 대수적 구조에도 깊이 관여한다. 구체적으로, $$X$$가 irreducible일 때 $$I(X)$$가 [\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)의 prime ideal이 되고, 그 결과 coordinate ring $$\mathbb{K}[X]$$가 zero divisor가 없는 integral domain($$A$$가 integral domain이란 0이 아닌 $$a,b \in A$$에 대해 $$ab=0$$이면 $$a=0$$ 또는 $$b=0$$인 경우)이 된다. 이는 다항식 함수들의 대수를 다룰 때 0이 아닌 두 함수의 곱이 결코 0이 되지 않는다는 좋은 성질을 보장하며, 나중에 환론적 방법으로 기하학을 연구하는 데 필수적인 조건이 된다. 다시 말해, irreducibility는 대수기하의 핵심 철학—기하학적 대상과 대수적 대상의 대응—을 구현하기 위해 필요한 조건이다: 기하학적으로 "더 이상 쪼갤 수 없는" 단위는 대수적으로 prime ideal과 integral domain으로 나타나며, 이 대응이 대수기하학의 기초를 이루는 것이다.
 
 <div class="example" markdown="1">
 
@@ -270,7 +270,9 @@ $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / I(X)=\mathbb{K}[\x_1, \ldots,
 
 </div>
 
-Coordinate ring $$\mathbb{K}[X]$$는 affine variety $$X$$ 위에서 다항식 함수가 가질 수 있는 모든 대수적 정보를 담고 있다. 구체적으로, $$X$$가 어떤 다항식들의 영점으로 정의되었다면, $$\mathbb{K}[X]$$는 이러한 다항식 관계들을 factoring out한 나머지 다항식 함수들의 모임이다. 이 환을 도입하는 핵심적인 이유는, 기하학적 대상 $$X$$를 대수적으로 완전히 포착할 수 있다는 데 있다: $$X$$ 위의 모든 다항식 함수들의 대수적 관계가 $$\mathbb{K}[X]$$의 ring structure에 인코딩되어 있으며, 이는 나중에 affine variety들 사이의 morphism을 대수적으로 다루는 기반이 된다.
+Coordinate ring을 정의하는 이유는, 대수기하의 핵심 철학을 구현하기 위함이다: **기하학적 대상 $$X$$와 대수적 대상 $$\mathbb{K}[X]$$의 대응**. 앞서 $$Z$$와 $$I$$ 사이의 Galois connection을 살펴보았듯, 기하학에서 대수학으로 가는 길과 그 역방향이 모두 존재한다. Coordinate ring $$\mathbb{K}[X]$$는 이러한 대응에서 "기하학적 대상 $$X$$의 대수적 아바타" 역할을 한다. $$X$$의 모든 기하학적 정보—점들, 다항식 함수들의 관계, 부분집합들의 포함 관계—가 $$\mathbb{K}[X]$$의 ring structure에 인코딩되며, 이는 나중에 affine variety들 사이의 morphism을 coordinate ring homomorphism으로 번역하는 기반이 된다. 이 관점은 이후 affine variety들의 category와 환들의 category 사이의 동치를 세우는 데 핵심적인 역할을 한다.
+
+Coordinate ring $$\mathbb{K}[X]$$는 affine variety $$X$$ 위에서 다항식 함수가 가질 수 있는 모든 대수적 정보를 담고 있다. 구체적으로, $$X$$가 어떤 다항식들의 영점으로 정의되었다면, $$\mathbb{K}[X]$$는 이러한 다항식 관계들을 factoring out한 나머지 다항식 함수들의 모임이다.
 
 기하학적으로, coordinate ring은 $$X$$ 위에서 "측정할 수 있는 것들"을 나타낸다. 예를 들어 단위원 $$Z(\x^2+\y^2-1)$$의 경우, $$\mathbb{K}[X]$$의 원소인 $$\x$$와 $$\y$$는 각각 점의 $$x$$-좌표와 $$y$$-좌표를 측정하는 함수이며, 이들의 대수적 관계 $$\x^2+\y^2=1$$이 $$\mathbb{K}[X]$$에서 $$\x^2+\y^2-1=0$$으로 반영된다. 따라서 coordinate ring은 기하학적 대상의 "함수 대수(function algebra)"로서, $$X$$의 기하학적 성질을 대수적으로 읽어내는 창구 역할을 한다.
 
