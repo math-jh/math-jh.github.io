@@ -17,9 +17,13 @@ weight: 6
 
 ---
 
-기하학에서 차원은 가장 기본적인 불변량 중 하나이다. 곡선은 1차원, 곡면은 2차원, 입체는 3차원이라는 직관은 우리가 다루는 기하학적 대상의 "크기"를 나타낸다. 대수기하학에서도 차원은 마찬가지로 중요하며, 다행히도 이를 정의하는 여러 가지 동등한 방법이 존재한다. 이 절에서 우리는 대수다양체의 차원을 위상적, 대수적, 그리고 함수체적 관점에서 정의하고, 이들이 모두 일치함을 보일 것이다.
+기하학에서 차원은 가장 기본적인 불변량 중 하나이다. 곡선은 1차원, 곡면은 2차원, 입체는 3차원이라는 직관은 우리가 다루는 기하학적 대상의 "크기"를 나타낸다. 대수기하학에서도 차원은 마찬가지로 중요하며, 다행히도 이를 정의하는 여러 가지 동등한 방법이 존재한다. 이 절에서 우리는 대수다양체의 차원을 세 가지 관점에서 정의하고, 이들이 모두 일치함을 보일 것이다.
 
-차원의 개념은 단순해 보이지만, 대수기하학에서는 여러 가지로 정의될 수 있다. 위상적으로는 닫힌집합들의 chain으로, 대수적으로는 coordinate ring의 Krull dimension으로, 함수체적으로는 transcendence degree로 정의된다. 이들이 모두 일치한다는 것은 대수기하학의 아름다운 통일성을 보여준다.
+1. **위상적 정의**: 닫힌집합들의 strictly decreasing chain의 최대 길이로 정의한다. 가장 직관적이지만, 실제로 다양체의 닫힌집합들을 나열하는 것은 쉽지 않아 계산이 어렵다.
+2. **대수적 정의 (Krull dimension)**: coordinate ring의 [prime ideal](/ko/math/commutative_algebra/prime_ideals)들의 strictly decreasing chain의 최대 길이로 정의한다. [§가환대수학, ⁋Krull 차원](/ko/math/commutative_algebra/krull_dimension)에서 다룬 이 정의는 대수적으로 정확하고 계산 가능하지만, 순수한 대수적 정의만으로는 기하학적 직관을 얻기 어렵다.
+3. **함수체적 정의 (transcendence degree)**: 함수체 $$\mathbb{K}(X)$$가 $$\mathbb{K}$$ 위에서 갖는 transcendence degree로 정의한다. 함수체의 관점에서 자연스럽지만, transcendence degree의 개념 자체가 다소 고급이다.
+
+이 세 가지 정의가 모두 일치한다는 것은 대수기하학의 아름다운 통일성을 보여준다.
 
 ## 위상적 차원
 
@@ -47,7 +51,7 @@ weight: 6
 
 ## Coordinate Ring을 통한 차원
 
-irreducible 아핀다양체 $$X$$의 경우, 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다. 여기서 ring $$R$$의 *Krull dimension*은 $$R$$의 prime ideal들의 strictly decreasing chain의 최대 길이이다. 닫힌집합들의 chain이 prime ideal들의 chain에 대응된다는 것을 이용한다. 이 대응은 Nullstellensatz에서 $$V$$와 $$I$$ 사이의 Galois connection을 통해 이루어진다.
+irreducible 아핀다양체 $$X$$의 경우, 차원은 coordinate ring $$\mathbb{K}[X]$$의 [Krull dimension](/ko/math/commutative_algebra/krull_dimension)과 같다. 닫힌집합들의 chain이 prime ideal들의 chain에 대응된다는 것을 이용한다. 이 대응은 Nullstellensatz에서 $$V$$와 $$I$$ 사이의 [Galois connection](/ko/math/set_theory/filter_and_ideal)을 통해 이루어진다.
 
 <div class="proposition" markdown="1">
 
@@ -91,7 +95,7 @@ $$(0) \subsetneq (\x_1) \subsetneq (\x_1, \x_2) \subsetneq \cdots \subsetneq (\x
 
 ## 사영다양체의 차원
 
-사영다양체의 차원은 그 cone의 차원을 통해 정의된다. 여기서 cone이란 사영다양체를 affine space로 "역projection"한 것이다. 이는 projective space와 affine space 사이의 기하적 관계를 이용한다.
+사영다양체의 차원은 그 cone의 차원을 통해 정의된다. 사영다양체 자체는 affine variety가 아니므로 coordinate ring을 정의할 수 없고, 따라서 Krull dimension을 직접 적용할 수 없다. 그러나 사영다양체를 affine space $$\mathbb{A}^{n+1}$$로 "역projection"한 cone은 affine variety이므로, Krull dimension과 같은 대수적 도구를 사용할 수 있다. 이를 통해 사영다양체의 차원을 affine variety의 차원으로 계산할 수 있게 된다.
 
 <div class="definition" markdown="1">
 
@@ -139,7 +143,7 @@ $$\mathbb{P}^n$$의 cone은 $$\mathbb{A}^{n+1}$$이고 $$\dim \mathbb{A}^{n+1} =
 
 ## 초곡면의 차원
 
-Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산된다. 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한다.
+Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산되는데, 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한 것이다 (아래 명제 8의 증명 참조).
 
 <div class="proposition" markdown="1">
 
@@ -150,7 +154,7 @@ Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다.
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$V(f)$$의 coordinate ring은 $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$이다. $$f$$가 irreducible 다항식이므로 $$(f)$$는 prime ideal이다. 이제 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 $$(f)$$의 *height*—즉, $$(0) \subsetneq \mathfrak{p}_1 \subsetneq \cdots \subsetneq \mathfrak{p}_k = (f)$$와 같은 prime ideal chain의 최대 길이—가 1임을 보이자. $$(0) \subsetneq (f)$$는 길이 1의 chain이므로 $$\operatorname{ht}(f) \ge 1$$이다. 반면, UFD인 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 height가 1인 prime ideal은 모두 principal prime ideal이므로, $$(f)$$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $$\operatorname{ht}(f) = 1$$이고,
+$$V(f)$$의 coordinate ring은 $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$이다. $$f$$가 irreducible 다항식이므로 $$(f)$$는 prime ideal이다. 이제 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 $$(f)$$의 *height*—prime ideal $$(f)$$의 height는 $$(f)$$를 포함하는 prime ideal들의 strictly decreasing chain의 최대 길이를 의미한다—가 1임을 보이자. $$(0) \subsetneq (f)$$는 길이 1의 chain이므로 $$\operatorname{ht}(f) \ge 1$$이다. 반면, [UFD](/ko/math/ring_theory/integral_domains)인 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 height가 1인 prime ideal은 모두 principal prime ideal이므로, $$(f)$$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $$\operatorname{ht}(f) = 1$$이고,
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \operatorname{ht}(f) = n - 1$$
 
@@ -158,11 +162,13 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 </details>
 
-이 명제는 직관적으로 타당하다. $$\mathbb{A}^n$$에서 하나의 방정식 $$f = 0$$을 추가하면 "자유도가 하나 줄어들어" 차원이 1만큼 감소한다. 예를 들어 $$\mathbb{A}^3$$에서 평면 $$V(x)$$는 2차원이고, 곡선 $$V(x, y)$$는 1차원이다. 이는 "codimension 1" hypersurface가 "일반적인" hypersurface임을 보여준다.
+이 명제는 위에서 설명한 "하나의 방정식 = 차원 1 감소" 직관을 formalize한 것이다. 예를 들어 $$\mathbb{A}^3$$에서 평면 $$V(\x)$$는 2차원이고, 곡선 $$V(\x, \y)$$는 1차원이다. 이는 "codimension 1" hypersurface가 "일반적인" hypersurface임을 보여준다.
 
 ## 함수체를 통한 차원
 
-차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 이는 대수기하학에서 매우 자연스러운 관점이다. 함수체는 다양체 위의 "모든 rational function"들의 집합이며, 이것이 얼마나 "자유로운지"를 측정하는 것이 차원이다. 먼저 *transcendence degree*를 정의하자: field 확대 $$L/K$$에서, $$L$$의 원소들 $$\{t_1, \ldots, t_r\}$$가 $$K$$ 위에서 *algebraically independent*라는 것은 $$K[\t_1, \ldots, \t_r] \to L$$이 injective인 것을 의미한다. $$L/K$$의 *transcendence degree*는 $$K$$ 위에서 algebraically independent인 원소들의 최대 개수이다.
+차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 함수체 $$\mathbb{K}(X)$$는 다양체의 generic point에서의 정보를 담고 있으며, [birational invariant](/ko/math/algebraic_geometry/rational_maps)이므로 분류에 유용하다. birationally equivalent한 두 다양체는 같은 함수체를 가지므로 같은 차원을 갖는다. 함수체가 얼마나 "자유로운지"를 측정하는 것이 바로 차원이다.
+
+먼저 *transcendence degree*를 정의하자: field 확대 $$L/K$$에서, $$L$$의 원소들 $$\{t_1, \ldots, t_r\}$$가 $$K$$ 위에서 *algebraically independent*라는 것은 $$t_1, \ldots, t_r$$에 대한 어떤 비영다항식 $$f \in K[\t_1, \ldots, \t_r]$$에 대해서도 $$f(t_1, \ldots, t_r) \ne 0$$인 것을 의미한다. $$L/K$$의 *transcendence degree*는 $$K$$ 위에서 algebraically independent인 원소들의 최대 개수이다.
 
 <div class="proposition" markdown="1">
 
@@ -173,11 +179,11 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$이고, finitely generated $$\mathbb{K}$$-algebra의 Krull dimension은 그 fraction field의 transcendence degree와 같다. 구체적으로, $$\mathbb{K}[X] = \mathbb{K}[y_1, \ldots, y_m]/I$$로 쓰면, $$\mathbb{K}(X)$$는 $$\mathbb{K}$$ 위에서 $$\dim X$$개의 algebraically independent 원소를 갖는다. 이들 $$t_1, \ldots, t_{\dim X}$$을 찾으면 $$\mathbb{K}(X)$$는 $$\mathbb{K}(t_1, \ldots, t_{\dim X})$$의 유한 확대가 된다. 이 사실의 증명은 **[Hart]** Chapter I, Theorem 1.8A를 참고하라.
+$$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$는 적분역 $$\mathbb{K}[X]$$의 분수체(fraction field)이고, finitely generated $$\mathbb{K}$$-algebra의 Krull dimension은 그 fraction field의 transcendence degree와 같다. 구체적으로, $$\mathbb{K}[X] = \mathbb{K}[y_1, \ldots, y_m]/I$$로 쓰면, $$\mathbb{K}(X)$$는 $$\mathbb{K}$$ 위에서 $$\dim X$$개의 algebraically independent 원소를 갖는다. 이들 $$t_1, \ldots, t_{\dim X}$$을 찾으면 $$\mathbb{K}(X)$$는 $$\mathbb{K}(t_1, \ldots, t_{\dim X})$$의 유한 확대가 된다. 이 사실의 증명은 **[Hart]** Chapter I, Theorem 1.8A를 참고하라.
 
 </details>
 
-이 정의의 장점은 birational invariant라는 것이다. 즉, birationally equivalent한 두 다양체는 같은 차원을 갖는다. 이는 [§유리사상](/ko/math/algebraic_geometry/rational_maps)에서 논의한 것처럼 함수체가 birational equivalence를 판별하는 핵심 도구이기 때문이다. Transcendence degree는 함수체의 "자유도"를 측정하며, 이것이 바로 차원이다.
+이 정의의 장점은 [birational](/ko/math/algebraic_geometry/rational_maps) invariant라는 것이다. 즉, birationally equivalent한 두 다양체는 같은 차원을 갖는다. 함수체가 birational equivalence를 판별하는 핵심 도구이기 때문이다. Transcendence degree는 함수체의 "자유도"를 측정하며, 이것이 바로 차원이다.
 
 <div class="example" markdown="1">
 
@@ -210,11 +216,11 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> Irreducible 다양체 $$X$$와 regular map $$\varphi: X \to Y$$에 대해 다음이 성립한다.
+<ins id="prop12">**명제 12**</ins> Irreducible 다양체 $$X$$와 [regular map](/ko/math/algebraic_geometry/affine_varieties) $$\varphi: X \to Y$$에 대해 다음이 성립한다.
 
 1. $$\dim \varphi(X) \le \dim X$$
-2. 만약 $$\varphi$$가 dominant이면 $$\dim Y \le \dim X$$
-3. 만약 $$\varphi$$가 finite이면 $$\dim \varphi(X) = \dim X$$
+2. 만약 $$\varphi$$가 [dominant](/ko/math/algebraic_geometry/rational_maps)이면 (즉, $$\overline{\varphi(X)} = Y$$), $$\dim Y \le \dim X$$
+3. 만약 $$\varphi$$가 finite이면 (즉, 모든 좌표함수의 pullback이 integral dependence를 만족하는 것), $$\dim \varphi(X) = \dim X$$
 
 </div>
 
