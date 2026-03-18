@@ -104,7 +104,7 @@ Affine case와의 유일한 차이점은 여기서 다루는 다항식들이 모
 
 </details>
 
-Affine case에서와 마찬가지로, 이는 projective space $$\mathbb{P}^n$$ 위에 projective algebraic set들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 마찬가지로 이러한 topology를 *Zariski topology*라 부른다. 
+Affine case에서와 마찬가지로, 이는 projective space $$\mathbb{P}^n$$ 위에 projective algebraic set들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 마찬가지로 이러한 topology를 *Zariski topology*라 부른다. ([[아핀다양체] §아핀다양체의 정의](/ko/math/algebraic_geometry/affine_varieties)에서 affine case의 Zariski topology를 먼저 살펴보았다.) 
 
 ## Projective Nullstellensatz
 
@@ -213,8 +213,8 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 이 conic은 $$\mathbb{A}^3$$ 안의 원뿔 $$\x_0^2 + \x_1^2 = \x_2^2$$을 homogeneous coordinates로 표현한 것이다. 그럼 standard open set들에서 $$X$$가 어떻게 보이는지는 [명제 10](#prop10)에서 알 수 있다. 즉 $$U_i$$에서 $$X$$가 어떻게 생겼는지를 보기 위해서는 그냥 $$\x_i$$ 자리에 $$1$$을 넣고, 남은 $$n$$개의 변수가 $$\mathbb{A}^n$$의 좌표인 것으로 생각하면 된다. 그럼 특히 다음의 결과를 얻는다. 
 
-1. $$U_0, U_1$$에서 $$X$$는 쌍곡선 $$1+\y^2-\z^2=0$$, $$\x^2+1-\z^2=0$$이다. 
-2. $$U_2$$에서 $$X$$는 원 $$\x^2+\y^2=1$$이다. 
+1. $$U_0, U_1$$에서 $$X$$는 쌍곡선 $$1+y^2-z^2=0$$, $$x^2+1-z^2=0$$이다.
+2. $$U_2$$에서 $$X$$는 원 $$x^2+y^2=1$$이다. 
 
 이는 $$\mathbb{A}^3$$에서 식 $$\x_0^2 + \x_1^2 = \x_2^2$$이 원뿔이고, 이를 평면 $$\x_0=1, \x_1=1, \x_2=1$$로 자른 흔적이 쌍곡선과 원이 되기 때문에 생기는 일이다. 
 
@@ -260,11 +260,17 @@ $$\hat{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 
 
 </div>
 
+Affine cone 관점이 중요한 이유는, 사영다양체의 연구를 아핀다양체의 언어로 환원할 수 있다는 데 있다. 아핀다양체는 Hilbert의 Nullstellensatz, 국소화, 정수 폐포 등 이미 잘 정비된 도구들을 사용할 수 있으므로, affine cone $$\hat{X}$$의 성질을 연구하면 이를 통해 $$X$$의 성질을 간접적으로 파악할 수 있다. 더 나아가, $$X$$의 동차좌표환 $$S(X) = \mathbb{K}[\x_0, \ldots, \x_n]/I(X)$$은 자연스럽게 graded ring의 구조를 가지며, 이 graded 구조의 각 graded piece가 $$X$$ 위의 선다발의 단면 공간과 대응되는 등, 사영다양체의 기하학적 성질을 대수적으로 기술하는 데 핵심적인 역할을 한다.
+
 이 관점은 projective variety를 affine variety의 "무한대에서의 compactification"으로 이해하는 데 도움을 준다.
 
 ## 사영다양체 사이의 사상
 
-마지막으로 우리는 projective variety들의 morphism을 정의한다. Projective variety는 결국 homogeneous polynomial로 정의되므로, 다음과 같이 정의하는 것이 자연스럽다. 
+마지막으로 우리는 projective variety들의 morphism을 정의한다. Projective variety는 결국 homogeneous polynomial로 정의되므로, 다음과 같이 정의하는 것이 자연스럽다. 여기서 핵심은 *well-definedness*이다. 사영공간의 점은 homogeneous coordinates로 표현되는데, 같은 점이라도 대표원을 다른 배수 $$\lambda$$로 선택할 수 있다. 즉 $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이므로, $$\varphi$$가 잘 정의되려면 어떤 대표원을 선택하든 같은 점으로 가야 한다. 만일 $$F_0, \ldots, F_m$$이 모두 같은 차수 $$d$$의 homogeneous polynomial이라면, $$F_i(\lambda x) = \lambda^d F_i(x)$$이므로
+
+$$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
+
+가 되어 well-definedness가 보장된다. 이것이 morphism을 같은 차수의 homogeneous polynomial들로 정의하는 이유이다.
 
 <div class="definition" markdown="1">
 
@@ -316,4 +322,4 @@ $$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
 
 **[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Zarieties in Projective Space*, Springer, 2013.  
-**[Ful]** W. Fulton, *Algebraic Curves*, 2008. (A
+**[Ful]** W. Fulton, *Algebraic Curves*, 2008.
