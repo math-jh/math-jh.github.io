@@ -230,11 +230,11 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 ## Affine Cone
 
-Projective variety를 affine space 안의 기하학적 대상으로 이해하는 또 다른 방법은 *affine cone*을 생각하는 것이다.
+앞선 예시는 projective space 위의 곡선을 각각의 affine open chart 안에서 보는 방법을 알려주지만, 여전히 다소 덜 직관적이라 생각할 수 있다. Projective variety를 affine space 안의 기하학적 대상으로 이해하는 또 다른 방법은 *affine cone*을 생각하는 것이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 *affine cone<sub>아핀 원뿔</sub>* $$\hat{X} \subseteq \mathbb{A}^{n+1}$$을 다음과 같이 정의한다:
+<ins id="def12">**정의 12**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 *affine cone<sub>아핀 뿔</sub>* $$\hat{X} \subseteq \mathbb{A}^{n+1}$$을 다음과 같이 정의한다:
 
 $$\hat{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 : \cdots : x_n] \in X\} \cup \{0\}$$
 
@@ -248,29 +248,25 @@ $$\hat{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 
 
 </div>
 
+그럼 다음이 성립하며, 그 증명들도 어렵지 않다.
+
 <div class="proposition" markdown="1">
 
 <ins id="prop14">**명제 14**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 affine cone $$\hat{X}$$은 다음 성질들을 만족한다:
 
-1. **Homogeneity**: $$\hat{X}$$는 원점을 지나는 직선들로 구성된다. 즉, $$(x_0, \ldots, x_n) \in \hat{X}$$이고 $$\lambda \in \mathbb{K}$$이면 $$(\lambda x_0, \ldots, \lambda x_n) \in \hat{X}$$이다.
+1. (Homogeneity) $$\hat{X}$$는 원점을 지나는 직선들로 구성된다. 즉, $$(x_0, \ldots, x_n) \in \hat{X}$$이고 $$\lambda \in \mathbb{K}$$이면 $$(\lambda x_0, \ldots, \lambda x_n) \in \hat{X}$$이다.
 
-2. **Algebraic structure**: $$X = Z(F_1, \ldots, F_k)$$이면 $$\hat{X} = V(F_1, \ldots, F_k) \subseteq \mathbb{A}^{n+1}$$이다. 여기서 $$F_i$$들을 $$\mathbb{A}^{n+1}$$의 다항식으로 본다.
+2. (Algebraic structure) $$X = Z(F_1, \ldots, F_k)$$이면 $$\hat{X} = V(F_1, \ldots, F_k) \subseteq \mathbb{A}^{n+1}$$이다. 여기서 $$F_i$$들을 $$\mathbb{A}^{n+1}$$의 다항식으로 본다.
 
-3. **Correspondence**: $$X \leftrightarrow \hat{X}$$ 대응은 projective variety와 "원점을 지나는 직선으로 이루어진" affine algebraic set 사이의 일대일 대응을 준다.
+3. (Correspondence) $$X \leftrightarrow \hat{X}$$ 대응은 projective variety와 원점을 지나는 직선으로 이루어진 affine algebraic set 사이의 일대일 대응을 준다.
 
 </div>
 
-Affine cone 관점이 중요한 이유는, 사영다양체의 연구를 아핀다양체의 언어로 환원할 수 있다는 데 있다. 아핀다양체는 Hilbert의 Nullstellensatz, 국소화, 정수 폐포 등 이미 잘 정비된 도구들을 사용할 수 있으므로, affine cone $$\hat{X}$$의 성질을 연구하면 이를 통해 $$X$$의 성질을 간접적으로 파악할 수 있다. 더 나아가, $$X$$의 동차좌표환 $$S(X) = \mathbb{K}[\x_0, \ldots, \x_n]/I(X)$$은 자연스럽게 graded ring의 구조를 가지며, 이 graded 구조의 각 graded piece가 $$X$$ 위의 선다발의 단면 공간과 대응되는 등, 사영다양체의 기하학적 성질을 대수적으로 기술하는 데 핵심적인 역할을 한다.
-
-이 관점은 projective variety를 affine variety의 "무한대에서의 compactification"으로 이해하는 데 도움을 준다.
+이 명제를 통해 우리는 affine cone $$\hat{X}$$의 성질을 연구하여 $$X$$의 성질을 간접적으로 파악할 수 있다. 
 
 ## 사영다양체 사이의 사상
 
-마지막으로 우리는 projective variety들의 morphism을 정의한다. Projective variety는 결국 homogeneous polynomial로 정의되므로, 다음과 같이 정의하는 것이 자연스럽다. 여기서 핵심은 *well-definedness*이다. 사영공간의 점은 homogeneous coordinates로 표현되는데, 같은 점이라도 대표원을 다른 배수 $$\lambda$$로 선택할 수 있다. 즉 $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$이므로, $$\varphi$$가 잘 정의되려면 어떤 대표원을 선택하든 같은 점으로 가야 한다. 만일 $$F_0, \ldots, F_m$$이 모두 같은 차수 $$d$$의 homogeneous polynomial이라면, $$F_i(\lambda x) = \lambda^d F_i(x)$$이므로
-
-$$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
-
-가 되어 well-definedness가 보장된다. 이것이 morphism을 같은 차수의 homogeneous polynomial들로 정의하는 이유이다.
+마지막으로 우리는 projective variety들의 morphism을 정의한다. 앞서 우리는 projective algebraic set을 정의할 때 다항식들의 zero set이 projective space의 집합을 잘 정의하지 않는 것을 확인하였는데, 비슷한 일이 morphism을 정의할 때도 일어나며 그 해결책은 이번에도 homogeneous polynomial이다. 
 
 <div class="definition" markdown="1">
 
@@ -282,7 +278,11 @@ $$\varphi(x) = [F_0(x) : \cdots : F_m(x)]$$
 
 </div>
 
-다음 예시들은 대표적인 morphism들이다. 
+만일 $$F_0, \ldots, F_m$$이 모두 같은 차수 $$d$$의 homogeneous polynomial이라면, $$F_i(\lambda x) = \lambda^d F_i(x)$$이므로
+
+$$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
+
+가 되어 well-definedness가 보장된다는 것을 확인할 수 있다. 다음 예시들은 대표적인 morphism들이다. 
 
 <div class="example" markdown="1">
 
