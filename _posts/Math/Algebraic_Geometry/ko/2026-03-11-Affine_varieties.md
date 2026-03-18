@@ -288,7 +288,7 @@ $$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
 
 <div class="definition" markdown="1">
 
-<ins id="def13">**정의 13**</ins> 임의의 affine variety $$V\subseteq \mathbb{A}^k$$와 그 위에서 정의된 함수 $$f:V\rightarrow \mathbb{K}$$에 대하여, $$f$$가 점 $$p\in V$$에서 *regular*라는 것은 $$p$$의 적당한 열린근방 $$U$$와 두 다항식 $$g,h$$가 존재하여, $$U$$ 위에서 $$f=g/h$$이 성립하는 것이다. 여기서 $$h$$는 $$U$$ 위에서 $$0$$이 되지 않는 함수이다. 
+<ins id="def13">**정의 13**</ins> 임의의 affine variety $$V\subseteq \mathbb{A}^k$$와 그 위에서 정의된 함수 $$f:V\rightarrow \mathbb{K}$$에 대하여, $$f$$가 점 $$p\in V$$에서 *regular*라는 것은 $$p$$의 적당한 열린근방 $$D(h)$$와 다항식 $$g$$가 존재하여, $$U$$ 위에서 $$f=g/h$$이 성립하는 것이다. 여기서 $$h$$는 $$U=D(h)$$ 위에서 $$0$$이 되지 않는 다항식이다. 
 
 </div>
 
