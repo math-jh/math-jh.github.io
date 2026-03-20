@@ -20,30 +20,18 @@ weight: 6
 기하학에서 차원은 가장 기본적인 불변량 중 하나이다. 곡선은 1차원, 곡면은 2차원, 입체는 3차원이라는 직관은 우리가 다루는 기하학적 대상의 "크기"를 나타낸다. 대수기하학에서도 차원은 마찬가지로 중요하며, 다행히도 이를 정의하는 여러 가지 동등한 방법이 존재한다. 이 절에서 우리는 대수다양체의 차원을 세 가지 관점에서 정의하고, 이들이 모두 일치함을 보일 것이다.
 
 1. **위상적 정의**: 닫힌집합들의 strictly decreasing chain의 최대 길이로 정의한다. 가장 직관적이지만, 실제로 다양체의 닫힌집합들을 나열하는 것은 쉽지 않아 계산이 어렵다.
-2. **대수적 정의 (Krull dimension)**: coordinate ring의 [prime ideal](/ko/math/commutative_algebra/prime_ideals)들의 strictly decreasing chain의 최대 길이로 정의한다. [§가환대수학, ⁋Krull 차원](/ko/math/commutative_algebra/krull_dimension)에서 다룬 이 정의는 대수적으로 정확하고 계산 가능하지만, 순수한 대수적 정의만으로는 기하학적 직관을 얻기 어렵다.
+2. **대수적 정의 (Krull dimension)**: coordinate ring의 Krull dimension으로 정의한다. ([§차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))
 3. **함수체적 정의 (transcendence degree)**: 함수체 $$\mathbb{K}(X)$$가 $$\mathbb{K}$$ 위에서 갖는 transcendence degree로 정의한다. 함수체의 관점에서 자연스럽지만, transcendence degree의 개념 자체가 다소 고급이다.
 
 이 세 가지 정의가 모두 일치한다는 것은 대수기하학의 아름다운 통일성을 보여준다.
 
 ## 위상적 차원
 
-가장 직관적인 차원의 정의는 위상적인 것이다. 닫힌집합들의 chain의 길이를 통해 차원을 측정한다. 이는 위상공간의 "복잡도"를 닫힌집합들의 포함 관계를 통해 측정하는 방법이다.
-
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 위상공간 $$X$$의 *dimension<sub>차원</sub>* $$\dim X$$는 다음과 같이 정의된다:
-
-- $$\dim \emptyset = -1$$
-- $$\dim X \ge n$$인 것은 닫힌집합들의 strictly decreasing chain $$X = X_0 \supsetneq X_1 \supsetneq \cdots \supsetneq X_n \neq \emptyset$$이 존재하는 것이다.
-- $$\dim X = n$$인 것은 $$\dim X \ge n$$이고 $$\dim X \ge n+1$$이 아닌 것이다.
-
-</div>
-
-즉, 차원은 닫힌집합들을 통해 얼마나 "깊이" 들어갈 수 있는지를 측정한다. 예를 들어 $$\mathbb{A}^1$$에서는 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이라는 chain이 존재하므로 $$\dim \mathbb{A}^1 \ge 1$$이고, 더 긴 chain은 존재하지 않으므로 $$\dim \mathbb{A}^1 = 1$$이다. 이 정의에서 핵심은 각 단계에서 "진정으로 작아지는" 닫힌집합들의 sequence를 찾는 것이다.
+위상적 차원은 이미 [§차원, ⁋정의 10](/ko/math/topology/dimension#def10)에서 정의한 바 있다. 간단히 말해, 위상공간 $$X$$의 차원은 닫힌집합들의 strictly decreasing chain의 최대 길이로 정의된다.
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> $$\mathbb{A}^1$$에서 닫힌집합들은 $$\mathbb{A}^1$$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이며, 이는 길이 2 (= 차원 1)이다. 여기서 길이는 닫힌집합의 개수에서 1을 뺀 것이다. 이는 $$\mathbb{A}^1$$이 "가장 간단한" 1차원 다양체임을 보여준다.
+<ins id="ex1">**예시 1**</ins> $$\mathbb{A}^1$$에서 닫힌집합들은 $$\mathbb{A}^1$$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이며, 이는 길이 2 (= 차원 1)이다. 여기서 길이는 닫힌집합의 개수에서 1을 뺀 것이다. 이는 $$\mathbb{A}^1$$이 "가장 간단한" 1차원 다양체임을 보여준다.
 
 </div>
 
@@ -51,11 +39,11 @@ weight: 6
 
 ## Coordinate Ring을 통한 차원
 
-irreducible 아핀다양체 $$X$$의 경우, 차원은 coordinate ring $$\mathbb{K}[X]$$의 [Krull dimension](/ko/math/commutative_algebra/krull_dimension)과 같다. 닫힌집합들의 chain이 prime ideal들의 chain에 대응된다는 것을 이용한다. 이 대응은 Nullstellensatz에서 $$V$$와 $$I$$ 사이의 [Galois connection](/ko/math/set_theory/filter_and_ideal)을 통해 이루어진다.
+irreducible 아핀다양체 $$X$$의 경우, 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension ([§차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))과 같다. 닫힌집합들의 chain이 prime ideal들의 chain에 대응된다는 것을 이용한다. 이 대응은 Nullstellensatz에서 $$V$$와 $$I$$ 사이의 Galois connection ([§필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6))을 통해 이루어진다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> Irreducible 아핀다양체 $$X$$의 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다.
+<ins id="prop2">**명제 2**</ins> Irreducible 아핀다양체 $$X$$의 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다.
 
 </div>
 
@@ -76,7 +64,7 @@ $$(0) = I(X_0) \subsetneq I(X_1) \subsetneq \cdots \subsetneq I(X_n)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> $$\dim \mathbb{A}^n = n$$이다.
+<ins id="prop3">**명제 3**</ins> $$\dim \mathbb{A}^n = n$$이다.
 
 </div>
 
@@ -95,21 +83,11 @@ $$(0) \subsetneq (\x_1) \subsetneq (\x_1, \x_2) \subsetneq \cdots \subsetneq (\x
 
 ## 사영다양체의 차원
 
-사영다양체의 차원은 그 cone의 차원을 통해 정의된다. 사영다양체 자체는 affine variety가 아니므로 coordinate ring을 정의할 수 없고, 따라서 Krull dimension을 직접 적용할 수 없다. 그러나 사영다양체를 affine space $$\mathbb{A}^{n+1}$$로 "역projection"한 cone은 affine variety이므로, Krull dimension과 같은 대수적 도구를 사용할 수 있다. 이를 통해 사영다양체의 차원을 affine variety의 차원으로 계산할 수 있게 된다.
-
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> 사영다양체 $$X \subseteq \mathbb{P}^n$$의 *cone* $$\tilde{X} \subseteq \mathbb{A}^{n+1}$$를 다음과 같이 정의한다:
-
-$$\tilde{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \mid [x_0 : \cdots : x_n] \in X\} \cup \{(0, \ldots, 0)\}$$
-
-</div>
-
-즉, $$\tilde{X}$$는 $$X$$의 각 점 $$[x_0 : \cdots : x_n]$$에 대응하는 모든 homogeneous representatives들의 합집합에 원점을 추가한 것이다. $$\tilde{X}$$는 원점을 지나는 cone이며, $$X = (\tilde{X} \setminus \{0\})/\mathbb{K}^\ast$$로 복원된다. 이 대응은 projective variety를 affine variety로 "lift"하는 방법을 제공한다.
+[§사영다양체, ⁋정의 12](/ko/math/algebraic_geometry/projective_varieties#def12)에서 정의한 *cone* $$\tilde{X}$$를 사용하여 사영다양체 $$X$$의 차원을 정의할 수 있다. 사영다양체 자체는 affine variety가 아니므로 coordinate ring을 정의할 수 없고, 따라서 Krull dimension을 직접 적용할 수 없다. 그러나 사영다양체를 affine space $$\mathbb{A}^{n+1}$$로 "역projection"한 cone은 affine variety이므로, Krull dimension과 같은 대수적 도구를 사용할 수 있다. 이를 통해 사영다양체의 차원을 affine variety의 차원으로 계산할 수 있게 된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> 사영다양체 $$X \subseteq \mathbb{P}^n$$의 차원은 그 cone $$\tilde{X}$$의 차원에서 $$1$$을 뺀 것과 같다.
+<ins id="prop4">**명제 4**</ins> 사영다양체 $$X \subseteq \mathbb{P}^n$$의 차원은 그 cone $$\tilde{X}$$의 차원에서 $$1$$을 뺀 것과 같다.
 
 </div>
 
@@ -130,7 +108,7 @@ $$\tilde{X} = \tilde{X}_0 \supsetneq \tilde{X}_1 \supsetneq \cdots \supsetneq \t
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $$\dim \mathbb{P}^n = n$$이다.
+<ins id="prop5">**명제 5**</ins> $$\dim \mathbb{P}^n = n$$이다.
 
 </div>
 
@@ -143,18 +121,18 @@ $$\mathbb{P}^n$$의 cone은 $$\mathbb{A}^{n+1}$$이고 $$\dim \mathbb{A}^{n+1} =
 
 ## 초곡면의 차원
 
-Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산되는데, 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한 것이다 (아래 명제 8의 증명 참조).
+Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산되는데, 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한 것이다 (아래 명제 6의 증명 참조).
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> Irreducible 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, irreducible 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
+<ins id="prop6">**명제 6**</ins> Irreducible 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, irreducible 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$V(f)$$의 coordinate ring은 $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$이다. $$f$$가 irreducible 다항식이므로 $$(f)$$는 prime ideal이다. 이제 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 $$(f)$$의 *height*—prime ideal $$(f)$$의 height는 $$(f)$$를 포함하는 prime ideal들의 strictly decreasing chain의 최대 길이를 의미한다—가 1임을 보이자. $$(0) \subsetneq (f)$$는 길이 1의 chain이므로 $$\operatorname{ht}(f) \ge 1$$이다. 반면, [UFD](/ko/math/ring_theory/integral_domains)인 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 height가 1인 prime ideal은 모두 principal prime ideal이므로, $$(f)$$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $$\operatorname{ht}(f) = 1$$이고,
+$$V(f)$$의 coordinate ring은 $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$이다. $$f$$가 irreducible 다항식이므로 $$(f)$$는 prime ideal이다. 이제 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 $$(f)$$의 *height*—prime ideal $$(f)$$의 height는 $$(f)$$를 포함하는 prime ideal들의 strictly decreasing chain의 최대 길이를 의미한다—가 1임을 보이자. $$(0) \subsetneq (f)$$는 길이 1의 chain이므로 $$\operatorname{ht}(f) \ge 1$$이다. 반면, UFD ([§정역, ⁋정의 16](/ko/math/ring_theory/integral_domains#def16))인 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 height가 1인 prime ideal은 모두 principal prime ideal이므로, $$(f)$$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $$\operatorname{ht}(f) = 1$$이고,
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \operatorname{ht}(f) = n - 1$$
 
@@ -166,13 +144,13 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 ## 함수체를 통한 차원
 
-차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 함수체 $$\mathbb{K}(X)$$는 다양체의 generic point에서의 정보를 담고 있으며, [birational invariant](/ko/math/algebraic_geometry/rational_maps)이므로 분류에 유용하다. birationally equivalent한 두 다양체는 같은 함수체를 가지므로 같은 차원을 갖는다. 함수체가 얼마나 "자유로운지"를 측정하는 것이 바로 차원이다.
+차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 함수체 $$\mathbb{K}(X)$$는 다양체의 generic point에서의 정보를 담고 있으며, birational ([§유리사상, ⁋정의 9](/ko/math/algebraic_geometry/rational_maps#def9)) invariant이므로 분류에 유용하다. birationally equivalent한 두 다양체는 같은 함수체를 가지므로 같은 차원을 갖는다. 함수체가 얼마나 "자유로운지"를 측정하는 것이 바로 차원이다.
 
 먼저 *transcendence degree*를 정의하자: field 확대 $$L/K$$에서, $$L$$의 원소들 $$\{t_1, \ldots, t_r\}$$가 $$K$$ 위에서 *algebraically independent*라는 것은 $$t_1, \ldots, t_r$$에 대한 어떤 비영다항식 $$f \in K[\t_1, \ldots, \t_r]$$에 대해서도 $$f(t_1, \ldots, t_r) \ne 0$$인 것을 의미한다. $$L/K$$의 *transcendence degree*는 $$K$$ 위에서 algebraically independent인 원소들의 최대 개수이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> Irreducible 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
+<ins id="prop7">**명제 7**</ins> Irreducible 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
 
 </div>
 
@@ -183,11 +161,11 @@ $$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$는 적분역 $$\mathbb{K}
 
 </details>
 
-이 정의의 장점은 [birational](/ko/math/algebraic_geometry/rational_maps) invariant라는 것이다. 즉, birationally equivalent한 두 다양체는 같은 차원을 갖는다. 함수체가 birational equivalence를 판별하는 핵심 도구이기 때문이다. Transcendence degree는 함수체의 "자유도"를 측정하며, 이것이 바로 차원이다.
+이 정의의 장점은 birational ([§유리사상, ⁋정의 9](/ko/math/algebraic_geometry/rational_maps#def9)) invariant라는 것이다. 즉, birationally equivalent한 두 다양체는 같은 차원을 갖는다. 함수체가 birational equivalence를 판별하는 핵심 도구이기 때문이다. Transcendence degree는 함수체의 "자유도"를 측정하며, 이것이 바로 차원이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> 함수체를 통한 차원 계산의 예시들이다.
+<ins id="ex8">**예시 8**</ins> 함수체를 통한 차원 계산의 예시들이다.
 
 1. $$\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(x_1, \ldots, x_n)$$이고, $$x_1, \ldots, x_n$$은 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{A}^n = n$$이다. 이는 $$\mathbb{A}^n$$이 $$n$$개의 "자유로운" 좌표를 가짐을 보여준다.
 2. $$\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(x)$$이고, $$x$$는 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim V(\y - \x^2) = 1$$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
@@ -201,7 +179,7 @@ $$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$는 적분역 $$\mathbb{K}
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Irreducible 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
+<ins id="prop9">**명제 9**</ins> Irreducible 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
 
 </div>
 
@@ -216,10 +194,10 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> Irreducible 다양체 $$X$$와 [regular map](/ko/math/algebraic_geometry/affine_varieties) $$\varphi: X \to Y$$에 대해 다음이 성립한다.
+<ins id="prop10">**명제 10**</ins> Irreducible 다양체 $$X$$와 regular map ([§준사영다양체, ⁋정의 7](/ko/math/algebraic_geometry/quasi_projective_varieties#def7)) $$\varphi: X \to Y$$에 대해 다음이 성립한다.
 
 1. $$\dim \varphi(X) \le \dim X$$
-2. 만약 $$\varphi$$가 [dominant](/ko/math/algebraic_geometry/rational_maps)이면 (즉, $$\overline{\varphi(X)} = Y$$), $$\dim Y \le \dim X$$
+2. 만약 $$\varphi$$가 dominant ([§유리사상, ⁋정의 8](/ko/math/algebraic_geometry/rational_maps#def8))이면 (즉, $$\overline{\varphi(X)} = Y$$), $$\dim Y \le \dim X$$
 3. 만약 $$\varphi$$가 finite이면 (즉, 모든 좌표함수의 pullback이 integral dependence를 만족하는 것), $$\dim \varphi(X) = \dim X$$
 
 </div>
@@ -239,13 +217,13 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 linear subspace가 "가장 간단한" $$k$$차원 다양체임을 보여준다.
+<ins id="ex11">**예시 11**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 linear subspace가 "가장 간단한" $$k$$차원 다양체임을 보여준다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14**</ins> **Intersection**: irreducible 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
+<ins id="ex12">**예시 12**</ins> **Intersection**: irreducible 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
 
 $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 
@@ -261,3 +239,6 @@ $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 **[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
 **[AM]** M. F. Atiyah and I. G. Macdonald, *Introduction to Commutative Algebra*, Addison-Wesley, 1969.
+ley, 1969.
+ley, 1969.
+ley, 1969.
