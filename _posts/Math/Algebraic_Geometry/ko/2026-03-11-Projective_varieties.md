@@ -234,17 +234,17 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 *affine cone<sub>아핀 뿔</sub>* $$\hat{X} \subseteq \mathbb{A}^{n+1}$$을 다음과 같이 정의한다:
+<ins id="def12">**정의 12**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 *affine cone<sub>아핀 뿔</sub>* $$C(X) \subseteq \mathbb{A}^{n+1}$$을 다음과 같이 정의한다:
 
-$$\hat{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 : \cdots : x_n] \in X\} \cup \{0\}$$
+$$C(X) = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 : \cdots : x_n] \in X\} \cup \{0\}$$
 
-즉, $$\hat{X}$$는 $$X$$의 모든 점을 homogeneous coordinates로 표현했을 때 나타나는 $$\mathbb{A}^{n+1}$$의 점들과 원점을 합한 것이다.
+즉, $$C(X)$$는 $$X$$의 모든 점을 homogeneous coordinates로 표현했을 때 나타나는 $$\mathbb{A}^{n+1}$$의 점들과 원점을 합한 것이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> [예시 11](#ex11)의 conic $$X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$$의 affine cone $$\hat{X}$$는 $$\mathbb{A}^3$$에서의 원뿔 $$\x_0^2 + \x_1^2 = \x_2^2$$이다.
+<ins id="ex13">**예시 13**</ins> [예시 11](#ex11)의 conic $$X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$$의 affine cone $$C(X)$$는 $$\mathbb{A}^3$$에서의 원뿔 $$\x_0^2 + \x_1^2 = \x_2^2$$이다.
 
 </div>
 
@@ -252,17 +252,17 @@ $$\hat{X} = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**명제 14**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 affine cone $$\hat{X}$$은 다음 성질들을 만족한다:
+<ins id="prop14">**명제 14**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 affine cone $$C(X)$$은 다음 성질들을 만족한다:
 
-1. (Homogeneity) $$\hat{X}$$는 원점을 지나는 직선들로 구성된다. 즉, $$(x_0, \ldots, x_n) \in \hat{X}$$이고 $$\lambda \in \mathbb{K}$$이면 $$(\lambda x_0, \ldots, \lambda x_n) \in \hat{X}$$이다.
+1. (Homogeneity) $$C(X)$$는 원점을 지나는 직선들로 구성된다. 즉, $$(x_0, \ldots, x_n) \in C(X)$$이고 $$\lambda \in \mathbb{K}$$이면 $$(\lambda x_0, \ldots, \lambda x_n) \in C(X)$$이다.
 
-2. (Algebraic structure) $$X = Z(F_1, \ldots, F_k)$$이면 $$\hat{X} = V(F_1, \ldots, F_k) \subseteq \mathbb{A}^{n+1}$$이다. 여기서 $$F_i$$들을 $$\mathbb{A}^{n+1}$$의 다항식으로 본다.
+2. (Algebraic structure) $$X = Z(F_1, \ldots, F_k)$$이면 $$C(X) = V(F_1, \ldots, F_k) \subseteq \mathbb{A}^{n+1}$$이다. 여기서 $$F_i$$들을 $$\mathbb{A}^{n+1}$$의 다항식으로 본다.
 
-3. (Correspondence) $$X \leftrightarrow \hat{X}$$ 대응은 projective variety와 원점을 지나는 직선으로 이루어진 affine algebraic set 사이의 일대일 대응을 준다.
+3. (Correspondence) $$X \leftrightarrow C(X)$$ 대응은 projective variety와 원점을 지나는 직선으로 이루어진 affine algebraic set 사이의 일대일 대응을 준다.
 
 </div>
 
-이 명제를 통해 우리는 affine cone $$\hat{X}$$의 성질을 연구하여 $$X$$의 성질을 간접적으로 파악할 수 있다. 
+이 명제를 통해 우리는 affine cone $$C(X)$$의 성질을 연구하여 $$X$$의 성질을 간접적으로 파악할 수 있다. 
 
 ## 사영다양체 사이의 사상
 
