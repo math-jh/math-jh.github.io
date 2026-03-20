@@ -99,21 +99,23 @@ $$x_1\x_0-x_0\x_1=0$$
 
 $$[x_0:x_1:x_2]\mapsto [x_0:x_1]$$
 
-은 이러한 projection을 통해 얻어진다. 비슷하게, 도입부에서 생각한 함수 
-
-$$\mathbb{A}^2\rightarrow \mathbb{P}^1; \qquad (x,y)\mapsto [x:y]$$
-
-는 $$(0,0)$$에서 점 $$(x,y)$$로의 projection으로 생각할 수 있다. 이러한 방식으로 얻어지는 projection map들은, projection을 시작하는 점을 어디로 보낼지가 정해지지 않으므로, 이 점을 제외한 나머지 모든 점에서 정의되는 rational map이 된다. 
+은 이러한 projection을 통해 얻어진다. 
 
 </div>
 
 ## 쌍유리동치
 
-Regular map의 isomorphism이 두 variety가 완전히 같은 구조를 갖는다는 것을 의미한다면, birational equivalence는 두 variety가 대체로 같은 구조를 갖는다는 것을 의미한다. 많은 기하학적 성질들은, isomorphic한 variety에서 보존되는 것 뿐만 아니라 birationally equivalent한 variety들 사이에서도 보존된다. 
+Regular map의 isomorphism이 두 variety가 완전히 같은 구조를 갖는다는 것을 의미한다면, birational equivalence는 두 variety가 대체로 같은 구조를 갖는다는 것을 의미한다. 많은 기하학적 성질들은, isomorphic한 variety에서 보존되는 것 뿐만 아니라 birationally equivalent한 variety들 사이에서도 보존된다.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> Rational map $$\varphi: X \dashrightarrow Y$$가 *birational map*이라는 것은 또다른 rational map $$\psi: Y \dashrightarrow X$$가 존재하여 $$\psi \circ \varphi = \operatorname{id}_X$$와 $$\varphi \circ \psi = \operatorname{id}_Y$$가 (정의되는 곳에서) 성립하는 것이다. 두 variety $$X, Y$$가 *birationally equivalent*라는 것은 둘 사이에 birational map이 존재하는 것이다.
+<ins id="def8">**정의 8**</ins> Rational map $$\varphi: X \dashrightarrow Y$$가 *dominant*라는 것은 $$\varphi$$의 image가 $$Y$$에서 dense한 것이다. 즉, $$\overline{\varphi(X)} = Y$$이 성립한다.
+
+</div>
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> Rational map $$\varphi: X \dashrightarrow Y$$가 *birational map*이라는 것은 또다른 rational map $$\psi: Y \dashrightarrow X$$가 존재하여 $$\psi \circ \varphi = \operatorname{id}_X$$와 $$\varphi \circ \psi = \operatorname{id}_Y$$가 (정의되는 곳에서) 성립하는 것이다. 두 variety $$X, Y$$가 *birationally equivalent*라는 것은 둘 사이에 birational map이 존재하는 것이다.
 
 </div>
 
@@ -121,7 +123,7 @@ Birationally equivalent한 두 variety들은 "대부분의 점에서" isomorphic
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 두 variety $$X, Y$$에 대하여 다음이 동치이다.
+<ins id="prop10">**명제 10**</ins> 두 variety $$X, Y$$에 대하여 다음이 동치이다.
 
 1. $$X$$와 $$Y$$는 birationally equivalent하다.
 2. $$\mathbb{K}(X) \cong \mathbb{K}(Y)$$이 성립한다.
@@ -133,103 +135,58 @@ Birationally equivalent한 두 variety들은 "대부분의 점에서" isomorphic
 
 우선 $$X, Y$$가 birationally equivalent하다고 하자. 그럼 birational map $$\varphi: X\dashrightarrow Y$$의 정의역 $$\dom(\varphi)$$를 생각하면 $$\varphi$$가 유도하는 function field의 homomorphism $$\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(\dom(\varphi))$$가 존재한다. 비슷한 방식으로 $$\varphi$$의 birational inverse $$\psi: Y\dashrightarrow X$$는 $$\psi^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(\dom(\psi))$$를 정의한다. 이제 [명제 3](#prop3)에 의해 $$\mathbb{K}(\dom(\varphi))=\mathbb{K}(X)$$, $$\mathbb{K}(\dom(\psi))=\mathbb{K}(Y)$$이므로 이를 사용하면 $$\mathbb{K}(X)\cong \mathbb{K}(Y)$$임을 안다.
 
-이제 두 function field $$\mathbb{K}(X)$$와 $$\mathbb{K}(Y)$$가 isomorphic하다고 가정하고 $$X$$, $$Y$$의 적당한 open set $$U$$, $$V$$를 잡는 방법을 살펴보자. 
+이제 field isomorphism $$\Phi: \mathbb{K}(X) \rightarrow \mathbb{K}(Y)$$가 주어졌다 하자. $$X$$의 임의의 affine open subset $$U \subseteq X$$에 대하여, coordinate ring $$\mathbb{K}[U]$$는 $$\mathbb{K}(X)$$의 finitely generated $$\mathbb{K}$$-subalgebra이다. 이제 이들의 generator들의 $$\phi$$에 대한 image들이 모두 regular이도록 하는 $$Y$$의 affine open subset $$V\subseteq Y$$를 잡고, 이를 통해 $$\Phi\vert_{\mathbb{K}[U]}:\mathbb{K}[U]\rightarrow \mathbb{K}[V]$$를 정의할 수 있다. 한편, 비슷한 방식으로 $$\Phi^{-1}$$을 이용해 $$\Phi^{-1}\vert_{\mathbb{K}[V]}:\mathbb{K}[V]\rightarrow \mathbb{K}[U']$$를 잡을 수 있고, 이 때 $$U'\subset U$$가 성립한다. 이제 $$\Phi$$가 isomorphism이라는 가정으로부터 $$\mathbb{K}[U]=\mathbb{K}[U']$$이고 $$\mathbb{K}[U]\cong \mathbb{K}[V]$$여야 한다.
 
-**(2) $$\Rightarrow$$ (3)**: Field isomorphism $$\Phi: \mathbb{K}(X) \xrightarrow{\sim} \mathbb{K}(Y)$$가 주어졌다 하자. $$X$$의 affine open subset $$U \subseteq X$$을 고르자. 그러면 $$U$$의 [coordinate ring](/ko/math/algebraic_geometry/affine_varieties#def11) $$\mathbb{K}[U]$$는 $$\mathbb{K}(X)$$의 부분환이다. $$\mathbb{K}[U]$$는 $$\mathbb{K}$$-대수로서 유한생성이므로, 생성원 $$f_1, \ldots, f_r \in \mathbb{K}[U]$$를 잡을 수 있다.
-
-각 $$\Phi(f_i) \in \mathbb{K}(Y)$$는 $$Y$$ 위의 rational function이다. $$Y$$의 적당한 affine open subset $$Y' \subseteq Y$$ 위에서 $$\Phi(f_i) = g_i/h_i$$로 표현하자 ($$g_i, h_i \in \mathbb{K}[Y']$$). $$h_i \ne 0$$인 점들의 집합 $$D(h_i) \subseteq Y'$$에서 $$\Phi(f_i)$$는 regular function으로 정의된다. 모든 $$i = 1, \ldots, r$$에 대해 $$h_i \ne 0$$인 점들의 집합
-
-$$V = \bigcap_{i=1}^{r} D(h_i) \subseteq Y'$$
-
-은 $$Y$$의 affine open subset이다. $$V$$ 위에서 모든 $$\Phi(f_i)$$가 regular하므로, $$\Phi$$는 ring homomorphism $$\mathbb{K}[U] \to \mathbb{K}[V]$$를 유도한다.
-
-이제 $$\Phi^{-1}: \mathbb{K}(Y) \to \mathbb{K}(X)$$에 같은 논리를 적용하자. $$\mathbb{K}[V]$$의 생성원 $$g_1, \ldots, g_s$$를 잡고, $$X$$의 affine open subset $$X' \subseteq X$$ 위에서 $$\Phi^{-1}(g_j) = f'_j/h'_j$$로 표현하자 ($$f'_j, h'_j \in \mathbb{K}[X']$$). 그러면
-
-$$U' = \bigcap_{j=1}^{s} D(h'_j) \cap U \subseteq U$$
-
-은 $$X$$의 affine open subset이다. $$U'$$ 위에서 모든 $$\Phi^{-1}(g_j)$$가 regular하므로, $$\Phi^{-1}$$는 ring homomorphism $$\mathbb{K}[V] \to \mathbb{K}[U']$$를 유도한다.
-
-이제 $$\Phi$$와 $$\Phi^{-1}$$가 서로 inverse라는 사실로부터 $$\mathbb{K}[U'] \cong \mathbb{K}[V]$$임을 보이자. $$f \in \mathbb{K}[U']$$에 대하여, $$\Phi^{-1}(\Phi(f)) = f$$이다. 여기서 $$\Phi(f) \in \mathbb{K}[V]$$이고 $$\Phi^{-1}$$는 이를 $$\mathbb{K}[U']$$의 원소로 보낸다. 마찬가지로 $$g \in \mathbb{K}[V]$$에 대하여 $$\Phi(\Phi^{-1}(g)) = g$$이다. 따라서 $$\Phi: \mathbb{K}[U'] \to \mathbb{K}[V]$$는 ring isomorphism이고, [아핀다양체의 좌표환이 다양체를 완전히 결정한다](/ko/math/algebraic_geometry/affine_varieties#prop9)는 사실로부터 $$U' \cong V$$를 얻는다.
-
-**(3) $$\Rightarrow$$ (1)**: $$U \subseteq X$$와 $$V \subseteq Y$$가 isomorphic하다 하자. Isomorphism $$\varphi: U \to V$$는 rational map $$X \dashrightarrow Y$$로 볼 수 있고, 그 inverse $$\varphi^{-1}: V \to U$$ 역시 rational map $$Y \dashrightarrow X$$이다. 따라서 $$\varphi$$는 birational map이다.
+마지막 조건이 첫째 조건을 함의하는 것은 [명제 3](#prop3)에 의해 자명하다. 
 
 </details>
 
-이 정리는 birational equivalence를 판별하는 세 가지 방법을 제공한다. 특히 (2)는 함수체를 계산함으로써 birational equivalence를 판별할 수 있음을 보여준다. 이는 매우 실용적인 방법이다. 예를 들어, 두 다양체의 함수체가 $$\mathbb{K}(t_1, t_2)$$로 같다면, 이들은 birationally equivalent하다.
+이 정리는 birational equivalence를 판별하기 위해서는 function field를 보면 충분하다는 것을 보여준다.
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> **Quadric surface와 $$\mathbb{P}^1 \times \mathbb{P}^1$$**: $$\mathbb{P}^1 \times \mathbb{P}^1$$과 $$V(\x\y - \z\w) \subset \mathbb{P}^3$$은 birationally equivalent하다. 둘 다 rational function field $$\mathbb{K}(t_1, t_2)$$를 갖기 때문이다. 사실 이 둘은 isomorphic하다. [사영다양체](/ko/math/algebraic_geometry/projective_varieties)에서 다루는 Segre embedding $$\mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$$, $$([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$$의 image가 정확히 $$V(\x\y - \z\w)$$이다. 이 예시는 birational equivalence가 isomorphism보다 약하지만, isomorphism을 포함함을 보여준다.
+<ins id="ex11">**예시 11**</ins> $$\mathbb{P}^1 \times \mathbb{P}^1$$과, $$\mathbb{P}^3$$에서의 quadric surface $$Q = V(\x\y - \z\w)$$의 function field를 계산해 보자.
+
+우선 $$\mathbb{P}^1 \times \mathbb{P}^1$$의 경우, [명제 3](#prop3)에 의해 각 factor의 product open set $$U_0 \times U_0$$에서 계산하면 충분하다. 첫 번째 factor $$\mathbb{P}^1$$의 function field는 [예시 4](#ex4)에서 보았듯 $$\mathbb{K}(\t_1)$$이고, 두 번째 factor도 마찬가지로 $$\mathbb{K}(\t_2)$$이다. 그럼 이를 통해 이들의 function field는 $$\mathbb{K}(\t_1,\t_2)$$로 주어짐을 안다.
+
+이제 quadric surface $$Q = V(\x\y - \z\w) \subset \mathbb{P}^3$$를 생각하자. 마찬가지로 [명제 3](#prop3)에 의해 affine patch $$\{\w \ne 0\}$$에서 계산하면 충분하다. 이 patch에서 $$\x' = \x/\w$$, $$\y' = \y/\w$$, $$\z' = \z/\w$$로 두면, 방정식 $$\x\y - \z\w = 0$$은 $$\x'\y' - \z' = 0$$이 된다. 따라서 $$\z' = \x'\y'$$이고, 이 patch의 coordinate ring은 $$\mathbb{K}[\x', \y', \z']/(\x'\y' - \z') \cong \mathbb{K}[\x', \y']$$이다. [명제 2](#prop2)에 의해 $$\mathbb{K}(Q) = \operatorname{Frac}(\mathbb{K}[\x', \y']) = \mathbb{K}(\x', \y') \cong \mathbb{K}(\t_1, \t_2)$$이다.
+
+따라서 $$\mathbb{K}(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{K}(Q) \cong \mathbb{K}(\t_1, \t_2)$$이므로, [명제 10](#prop10)에 의해 두 다양체는 birationally equivalent하다. 실은, [§사영다양체, ⁋예시 16](/ko/math/algebraic_geometry/projective_varieties#ex16)에서 다루는 Segre embedding $$\mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$$, $$([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$$의 image가 정확히 $$V(\x\y - \z\w)$$이다. 즉, 이 경우 birational equivalence는 실제로 isomorphism을 이룬다. 이 예시는 birational equivalence가 isomorphism보다 약하지만, isomorphism을 포함함을 보여준다.
 
 </div>
 
-## Blow-up과 유리사상
+## Blow-up
 
-Rational map은 "대부분의 점에서" 정의되지만, base points에서 정의되지 않는다는 한계가 있다. 이 한계를 해결하는 대표적인 도구가 *blow-up*이다. Blow-up은 base point가 있는 곳을 "폭발"시켜 새로운 다양체를 만들고, 이 과정에서 rational map을 regular map으로 바꿀 수 있게 한다. Blow-up은 birational map의 가장 기본적인 예시이자, birational geometry에서 가장 중요한 연산 중 하나이다. 이는 다양체의 특이점을 "해소"하거나 다양체의 구조를 단순화하는 데 사용되며, 국소적으로는 간단하지만 전역적으로는 매우 강력한 도구이다.
+Rational map은 base point들에서 정의되지 않는다는 한계가 있다. 이 한계를 해결하는 대표적인 도구가 *blow-up*이다. 이에 대한 motivation은 우리가 가장 처음 살펴본 함수 $$(x,y)\mapsto [x:y]$$이다. 이 함수는 $$\mathbb{A}^2$$의 점 $$(x,y)$$를 넣으면, 이 점과 원점 $$(0,0)\in \mathbb{A}^2$$를 잇는 직선의 기울기를 주는 함수로, 이것이 원점에서 정의되지 않는 이유는 직선을 정의하기 위해서는 서로 다른 두 점이 필요하기 때문이다. 이런 경우, 우리는 보통 원점 $$(0,0)$$을 고정해두고, 다른 점 $$(x,y)$$를 $$(0,0)$$을 향해 가도록 취해서 그 극한값을 계산하겠지만 이 경우 $$(0,0)$$으로 향하는 방향이 무한히 많으므로 극한이 잘 정의되지 않는다. 
+
+Blowup의 아이디어는 간단하다. $$(0,0)$$으로 향하는 방향을 모두 따로 기록하는 것이다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> **Blow-up of $$\mathbb{A}^2$$ at origin**: 
+<ins id="ex12">**예시 12**</ins> 다음의 variety
 
-$$\operatorname{Bl}_0 \mathbb{A}^2 = \{((x, y), [u : v]) \in \mathbb{A}^2 \times \mathbb{P}^1 \mid xv = yu\}$$
+$$\Bl_{(0,0)} \mathbb{A}^2 = \{((x, y), [u : v]) \in \mathbb{A}^2 \times \mathbb{P}^1 \mid xv = yu\}$$
 
-이 집합은 $$\mathbb{A}^2 \times \mathbb{P}^1$$의 닫힌부분다양체이다. 조건 $$xv = yu$$는 점 $$(x, y)$$와 직선 $$[u : v]$$이 "같은 방향"에 있음을 의미한다. 즉, 원점이 아닌 점 $$(x, y)$$에 대해서는 유일한 직선 $$[x : y]$$이 존재하고, 원점 $$(0, 0)$$에 대해서는 모든 직선 $$[u : v]$$가 가능하다.
+을 생각하자. 이 집합은 $$\mathbb{A}^2 \times \mathbb{P}^1$$의 closed subvariety이다. 조건 $$xv = yu$$는 점 $$(x, y)$$와 직선 $$[u : v]$$이 <em-ko>같은 방향</em-ko>에 있음을 의미한다. 즉, 
 
-Projection $$\pi: \operatorname{Bl}_0 \mathbb{A}^2 \to \mathbb{A}^2$$를 $$\pi((x, y), [u : v]) = (x, y)$$로 정의하자. 그럼:
+- $$\mathbb{A}^2$$의 원점이 아닌 점 $$(x,y)$$에 대해서는, 조건 $$xv=yu$$를 통해 $$\mathbb{P}^1$$의 점 $$[u:v]$$를 유일하게 결정할 수 있으며, 이를 통해 $$\Bl_{(0,0)}\mathbb{A}^2$$의 점이 유일하게 결정된다. 
+- $$\mathbb{A}^2$$의 원점 $$(0,0)$$에는 모든 $$\mathbb{P}^1$$의 점이 존재할 수 있다. 
 
-- $$\pi$$는 원점이 아닌 모든 점에서 isomorphism이다. 구체적으로, $$(x, y) \ne (0, 0)$$이면 $$\pi^{-1}(x, y) = \{((x, y), [x : y])\}$$이다.
-- 원점 위의 fiber는 $$\pi^{-1}(0, 0) = \{((0, 0), [u : v]) \mid [u : v] \in \mathbb{P}^1\} \cong \mathbb{P}^1$$이다. 이를 *exceptional divisor*라 부른다.
+![Blowup](/assets/images/Math/Algebraic_Geometry/Rational_maps-1.png){:style="width:32em" class="invert" .align-center}
+<cap markdown="1">[Har1] p.29. Fig. 3.</cap>
 
-따라서 $$\pi$$는 birational map이다. 기하학적으로, blow-up은 원점을 "폭발"시켜 원점을 지나는 모든 직선들의 공간 $$\mathbb{P}^1$$으로 대체한다. 이는 원점에서의 "특이성"을 $$\mathbb{P}^1$$이라는 매끄러운 다양체로 "펼쳐놓는" 과정이다.
+구체적으로, projection $$\pi_1: \operatorname{Bl}_{(0,0)} \mathbb{A}^2 \to \mathbb{A}^2$$를 $$\pi((x, y), [u : v]) = (x, y)$$로 정의하면, 원점이 아닌 모든 점의 preimage는 한 점이며, 원점의 preimage는 $$\mathbb{P}^1$$이다. 이를 *exceptional divisor*라 부른다.
 
-이제 [예시 7](#ex7)과 도입부에서 언급한 rational map $$\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$$, $$(x, y) \mapsto [x : y]$$를 생각하자. 이는 원점 $$(0, 0)$$에서 정의되지 않는다. 그러나 blow-up $$\operatorname{Bl}_0 \mathbb{A}^2$$ 위에서는 이 map을 *everywhere defined* regular map으로 확장할 수 있다. 구체적으로, map $$\tilde{\varphi}: \operatorname{Bl}_0 \mathbb{A}^2 \to \mathbb{P}^1$$을
+이로부터 원점을 제외한 평면의 나머지 부분에서는 두 variety $$\mathbb{A}^2$$와 $$\Bl_{(0,0)}\mathbb{A}^2$$가 isomorphic하므로 $$\pi$$는 birational map이다. 
 
-$$\tilde{\varphi}((x, y), [u : v]) = [u : v]$$
-
-로 정의하자. 이 map은 $$\operatorname{Bl}_0 \mathbb{A}^2$$의 모든 점에서 well-defined되고 regular하다:
-
-- 원점이 아닌 점 $$(x, y) \ne (0, 0)$$에서는 $$[u : v] = [x : y]$$이므로 $$\tilde{\varphi}((x, y), [x : y]) = [x : y]$$이다. 즉, 원래 rational map $$\varphi$$와 일치한다.
-- 원점 위의 exceptional divisor의 각 점 $$((0, 0), [u : v])$$에서는 $$\tilde{\varphi}$$가 $$[u : v]$$ 값을 갖는다. 이는 blow-up이 원점을 지나는 각 "방향" $$[u : v]$$를 별개의 점으로 구별해주었기 때문에 가능하다.
-
-이 관계를 diagram으로 정리하면 다음과 같다.
-
-$$
-\begin{array}{ccc}
-\operatorname{Bl}_0 \mathbb{A}^2 & \xrightarrow{\tilde{\varphi}} & \mathbb{P}^1 \\
-\pi \big\downarrow & & \\
-\mathbb{A}^2 & \dashrightarrow & \\
-& \varphi &
-\end{array}
-$$
-
-여기서:
-- $$\pi: \operatorname{Bl}_0 \mathbb{A}^2 \to \mathbb{A}^2$$는 blow-up의 projection으로, regular map이다.
-- $$\tilde{\varphi}: \operatorname{Bl}_0 \mathbb{A}^2 \to \mathbb{P}^1$$은 원래 rational map $$\varphi$$를 lift한 것으로, everywhere regular map이다.
-- $$\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$$은 원래 rational map으로, 원점에서 undefined이다.
-
-이 diagram에서 주의해야 할 점이 몇 가지 있다. 첫째, blow-up $$\operatorname{Bl}_0 \mathbb{A}^2$$은 $$\mathbb{A}^2$$의 "위"에 있는 공간이다. 따라서 화살표의 방향이 $$\operatorname{Bl}_0 \mathbb{A}^2$$에서 $$\mathbb{A}^2$$로 가는 것이며, 그 역은 아니다. 둘째, rational map $$\varphi$$가 $$\pi$$를 통해 $$\tilde{\varphi}$$로 "lift"된다는 것은, $$\varphi$$가 $$\operatorname{Bl}_0 \mathbb{A}^2$$ 위에서 $$\tilde{\varphi}$$로 확장된다는 의미이다. 셋째, $$\pi^{-1}$$이 원점에서 정의되지 않으므로 $$\varphi = \tilde{\varphi} \circ \pi^{-1}$$은 여전히 원점에서 undefined이다. 하지만 $$\operatorname{Bl}_0 \mathbb{A}^2$$ 위에서는 $$\tilde{\varphi}$$가 everywhere regular하다.
-
-Diagram이 commute하는 것은 $$\pi$$가 isomorphism인 원점 이외의 점에서이다. 구체적으로, $$(x, y) \ne (0, 0)$$에 대하여 $$\pi^{-1}(x, y) = ((x, y), [x : y])$$이고, 따라서
-
-$$\varphi(x, y) = [x : y] = \tilde{\varphi}((x, y), [x : y]) = \tilde{\varphi}(\pi^{-1}(x, y))$$
-
-가 성립한다. 즉, "$$\pi$$ away from origin"에서는 diagram이 commute한다.
-
-이것이 blow-up의 핵심 용도 중 하나이다: base point를 가진 rational map을 blow-up 상에서 regular map으로 *해소(resolve)*하는 것이다. 일반적으로, rational map $$X \dashrightarrow Y$$의 base points가 $$X$$의 부분다양체 $$Z$$를 이루는 경우, $$Z$$를 blow-up하여 얻은 다양체 $$\operatorname{Bl}_Z X$$ 위에서 rational map이 regular map으로 확장되는 경우가 많다. 이를 *resolution of indeterminacy*라 한다.
+이제 앞서 언급한 rational map $$\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$$, $$(x, y) \mapsto [x : y]$$를 생각하자. 이는 원점 $$(0, 0)$$에서 정의되지 않지만, 그러나 blow-up $$\operatorname{Bl}_{(0,0)} \mathbb{A}^2$$에서 보면 이는 그저 $$\mathbb{P}^1$$ factor로의 projection $$\pr_2$$에 불과하며 특히 이는 regular map이다. 이러한 방식으로 우리는 birational map이 정의되지 않는 base point를 해소해줄 수 있다. 
 
 </div>
-
-Blow-up의 중요성은 여러 관점에서 드러난다. 우선, 많은 특이점들은 적절한 blow-up을 통해 매끄러운 다양체로 바뀐다. 예를 들어, 평면 곡선의 node (곡선의 자기교차점, singular point의 일종)는 blow-up을 통해 두 개의 매끄러운 점으로 분리된다. 또한 임의의 birational map은 blow-up과 blow-down의 합성으로 분해될 수 있다는 것이 알려져 있는데[^1], 이를 통해 복잡한 birational 관계를 기본적인 blow-up 연산으로 분석할 수 있다. 마지막으로, 모든 다양체를 적절한 blow-down을 통해 "minimal model"으로 축소시키려는 minimal model program[^2]에서 blow-up은 핵심적인 역할을 한다.
-
----
-
-[^1]: *Weak factorization theorem* (Włodarczyk 2003): 임의의 birational map은 blow-up과 그 역인 blow-down의 유한 합성으로 분해할 수 있다는 정리. Birational geometry의 기본 정리 중 하나이다.
-[^2]: *Minimal model program* (Mori, Kawamata, Shokurov 등): 모든 대수다양체를 blow-down을 통해 더 "간단한" 모델로 축소시키는 프로그램. 3차원까지는 성공적으로 완성되었으며, 고차원에서는 여전히 활발히 연구 중이다.
 
 ---
 
 **참고문헌**
 
-**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
+**[Har1]** R. Hartshorne, *Algebraic Geometry*, Springer, 1977.  
+**[Har2]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
-.
