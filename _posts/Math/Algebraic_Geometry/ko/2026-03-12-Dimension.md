@@ -17,23 +17,19 @@ weight: 6
 
 ---
 
-기하학에서 차원은 가장 기본적인 불변량 중 하나이다. 곡선은 1차원, 곡면은 2차원, 입체는 3차원이라는 직관은 우리가 다루는 기하학적 대상의 "크기"를 나타낸다. 대수기하학에서도 차원은 마찬가지로 중요하며, 다행히도 이를 정의하는 여러 가지 동등한 방법이 존재한다. 이 절에서 우리는 대수다양체의 차원을 세 가지 관점에서 정의하고, 이들이 모두 일치함을 보일 것이다.
-
-1. **위상적 정의**: 닫힌집합들의 strictly decreasing chain의 최대 길이로 정의한다. 가장 직관적이지만, 실제로 다양체의 닫힌집합들을 나열하는 것은 쉽지 않아 계산이 어렵다.
-2. **대수적 정의 (Krull dimension)**: coordinate ring의 Krull dimension으로 정의한다. ([§차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))
-3. **함수체적 정의 (transcendence degree)**: 함수체 $$\mathbb{K}(X)$$가 $$\mathbb{K}$$ 위에서 갖는 transcendence degree로 정의한다. 함수체의 관점에서 자연스럽지만, transcendence degree의 개념 자체가 다소 고급이다.
-
-이 세 가지 정의가 모두 일치한다는 것은 대수기하학의 아름다운 통일성을 보여준다.
+기하학에서 차원은 가장 기본적인 불변량 중 하나이다. 대수기하학에서도 차원은 마찬가지로 중요하며, 이를 정의하는 여러 가지 동등한 방법이 존재한다. 이 글에서 우리는 variety의 차원을 정의하는 여러 방법을 살펴본다. 
 
 ## 위상적 차원
 
-위상적 차원은 이미 [§차원, ⁋정의 10](/ko/math/topology/dimension#def10)에서 정의한 바 있다. 간단히 말해, 위상공간 $$X$$의 차원은 닫힌집합들의 strictly decreasing chain의 최대 길이로 정의된다.
+Algebraic variety는 이미 위상공간이므로, [\[위상수학\] §차원, ⁋정의 10](/ko/math/topology/dimension#def10)을 사용하여 $$X$$의 차원을 irreducible closed subset들의 strictly descending chain의 length의 supremum으로 정의할 수 있다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**예시 1**</ins> $$\mathbb{A}^1$$에서 닫힌집합들은 $$\mathbb{A}^1$$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이며, 이는 길이 2 (= 차원 1)이다. 여기서 길이는 닫힌집합의 개수에서 1을 뺀 것이다. 이는 $$\mathbb{A}^1$$이 "가장 간단한" 1차원 다양체임을 보여준다.
+<ins id="ex1">**예시 1**</ins> $$\mathbb{A}^1$$에서 닫힌집합들은 $$\mathbb{A}^1$$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$이며, 이는 length $$2$$ chain이므로 $$\mathbb{A}^1$$은 이 정의에 따르면 $$1$$차원이 된다.
 
 </div>
+
+이 정의는 
 
 이 정의의 장점은 순수하게 위상적이라는 것이다. 즉, 다양체의 대수적 구조에 의존하지 않는다. 그러나 이것이 실제로 계산하기 쉽지 않다는 단점이 있다. 다행히도 대수다양체의 경우, 차원을 대수적으로 계산할 수 있는 방법들이 있다. 이는 위상적 정의와 대수적 정의가 일치한다는 것을 의미하며, 대수기하학의 깊은 사실 중 하나이다.
 
