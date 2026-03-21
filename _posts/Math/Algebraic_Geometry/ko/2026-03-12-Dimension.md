@@ -60,7 +60,7 @@ Algebraic variety는 이미 위상공간이므로, [§차원, ⁋정의 10](/ko/
 
 </details>
 
-이 결과는 우리의 기하학적 직관과도 잘 맞는다. $$\mathbb{A}^n$$은 $$n$$개의 독립적인 좌표 $$\x_1,\ldots, \x_n$$들을 가지며, 각 좌표가 하나의 차원을 주기 때문이다. 
+즉 임의의 
 
 ## Projective variety의 차원
 

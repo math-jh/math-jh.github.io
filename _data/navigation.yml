@@ -12,32 +12,52 @@ main:
 algebraic_geometry-ko:
   - title: <a href="/ko/algebraic_geometry/" class="sidebar_title">대수기하학</a>
     children:
-      - title: "스펙트럼"
-        url: ko/math/algebraic_geometry/spectrums
-      - title: "아핀스킴"
-        url: ko/math/algebraic_geometry/affine_schemes
-      - title: "스킴"
-        url: ko/math/algebraic_geometry/schemes
-      - title: "사영스킴"
-        url: ko/math/algebraic_geometry/projective_schemes
-      - title: "스킴의 위상구조"
-        url: ko/math/algebraic_geometry/topology_of_schemes
-      - title: "스킴의 대수구조"
-        url: ko/math/algebraic_geometry/algebra_of_schemes
-      - title: "스킴 사이의 사상"
-        url: ko/math/algebraic_geometry/morphism_of_schemes
-      - title: "스킴 사상의 성질들"
-        url: ko/math/algebraic_geometry/properties_of_scheme_morphisms
-      - title: "닫힌 부분스킴"
-        url: ko/math/algebraic_geometry/closed_subschemes
-      - title: "올곱"
-        url: ko/math/algebraic_geometry/fiber_products
+      - title: "아핀다양체"
+        url: ko/math/algebraic_geometry/affine_varieties
+      - title: "사영다양체"
+        url: ko/math/algebraic_geometry/projective_varieties
+      - title: "준사영다양체"
+        url: ko/math/algebraic_geometry/quasi_projective_varieties
+      - title: "유리사상"
+        url: ko/math/algebraic_geometry/rational_maps
       - title: "차원"
         url: ko/math/algebraic_geometry/dimension
-      - title: "완전교차"
-        url: ko/math/algebraic_geometry/complete_intersections
-      - title: "사영공간의 닫힌 부분스킴"
-        url: ko/math/algebraic_geometry/closed_subschemes_of_projective_spaces
+      - title: "접공간과 매끄러움"
+        url: ko/math/algebraic_geometry/tangent_spaces_and_smoothness
+      - title: "그라스만다양체"
+        url: ko/math/algebraic_geometry/grassmannians
+      - title: "Divisors"
+        url: ko/math/algebraic_geometry/divisors
+      - title: "Line Bundles"
+        url: ko/math/algebraic_geometry/line_bundles
+      - title: "Picard Group"
+        url: ko/math/algebraic_geometry/picard_group
+      - title: "Linear Systems"
+        url: ko/math/algebraic_geometry/linear_systems
+      - title: "Canonical Bundle"
+        url: ko/math/algebraic_geometry/canonical_bundle
+      - title: "리만-로흐 정리"
+        url: ko/math/algebraic_geometry/riemann_roch
+      - title: "Sheaves on Varieties"
+        url: ko/math/algebraic_geometry/sheaves_on_varieties
+      - title: "Sheaf Cohomology"
+        url: ko/math/algebraic_geometry/sheaf_cohomology
+      - title: "Čech Cohomology"
+        url: ko/math/algebraic_geometry/cech_cohomology
+      - title: "Cohomology of Line Bundles on P^n"
+        url: ko/math/algebraic_geometry/cohomology_of_line_bundles
+      - title: "Serre Duality"
+        url: ko/math/algebraic_geometry/serre_duality
+      - title: "Riemann-Roch for Surfaces"
+        url: ko/math/algebraic_geometry/riemann_roch_surfaces
+      - title: "Intersection Multiplicity"
+        url: ko/math/algebraic_geometry/intersection_multiplicity
+      - title: "Chow Groups"
+        url: ko/math/algebraic_geometry/chow_groups
+      - title: "Intersection Product"
+        url: ko/math/algebraic_geometry/intersection_product
+      - title: "Bézout's Theorem"
+        url: ko/math/algebraic_geometry/bezout_theorem
   - title: 
     children:
       - title: "블로그 소개"
