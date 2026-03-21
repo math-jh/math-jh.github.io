@@ -248,7 +248,7 @@ $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
 한편, $$\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$$가 임의의 ideal $$\mathfrak{a}$$에 대해 성립하므로 [명제 4](#prop4)의 셋째 조건으로부터 $$Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$$임을 안다. 그런데 정의에 의하여 임의의 $$f\in \sqrt{\mathfrak{a}}$$가 주어졌을 때, 적당한 $$r$$이 존재하여 $$f^r\in \mathfrak{a}$$이다. 따라서 $$x\in Z(\mathfrak{a})$$라면 $$Z(\sqrt{\mathfrak{a}})$$여야 하고 이로부터 $$Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$$임을 안다. 즉 ideal의 radical은 affine algebraic set을 ideal의 zero set으로 나타낼 때, 이 ideal을 얻어내는 표준적인 방법을 주는 것으로 생각할 수 있으며, 이들 사이의 차이를 구별하기 위해서는 *scheme*을 정의하면 된다. 
 
-이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $$Z(\mathfrak{a})$$가 algebraic variety이기 위해서는 $$\sqrt{\mathfrak{a}}$$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10))
+이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $$Z(\mathfrak{a})$$가 algebraic variety이기 위해서는 $$\sqrt{\mathfrak{a}}$$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)) 즉, $$\mathbb{A}^n$$의 irreducible closed algebraic set들과 $$\mathbb{K}[\x_1,\ldots, \x_n]$$ 사이의 Galois correspondence가 존재한다. 
 
 ## 좌표환과 정칙성
 
@@ -268,13 +268,41 @@ $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / I(X)=\mathbb{K}[\x_1, \ldots,
 
 Coordinate ring을 정의하는 이유는, 대수기하의 핵심 철학, 즉 기하학적 대상 $$X$$와 대수적 대상 $$\mathbb{K}[X]$$의 대응을 구현하기 위해서이다. $$X$$의 모든 기하학적 정보, 가령 점들, 다항식 함수들의 관계, 부분집합들의 포함 관계 등은 모두 $$\mathbb{K}[X]$$의 ring structure에 인코딩되며, 이는 나중에 affine variety들 사이의 morphism을 coordinate ring homomorphism으로 번역하는 기반이 된다. 
 
-Coordinate ring $$\mathbb{K}[X]$$는 affine variety $$X$$ 위에서 다항식 함수가 가질 수 있는 모든 대수적 정보를 담고 있다. 즉 $$X$$가 어떤 다항식들의 영점으로 정의되었다면, $$\mathbb{K}[X]$$는 이러한 다항식 관계들을 factor out한 나머지 다항식 함수들의 모임이다.
+$$X$$가 어떤 다항식들의 영점으로 정의되었다면, $$\mathbb{K}[X]$$는 이러한 다항식 관계들을 factor out한 나머지 다항식 함수들의 모임이다. 위에서 살펴본 $$X=\mathbb{A}^n$$ 경우와 마찬가지로, $$\mathbb{K}[X]$$의 원소들은 $$X$$ 위에 정의된 함수로 생각할 수 있다. 구체적으로, $$\mathbb{K}[X]$$의 한 원소 $$\overline{f}\in \mathbb{K}[X]$$에 대하여, 다음 함수
 
-Coordinate ring $$\mathbb{K}[X]$$의 원소들은 위에서 살펴본 것과 비슷하게 $$X$$ 위에서 정의된 함수들로 생각할 수 있다. 구체적으로, 각 $$\bar{f} \in \mathbb{K}[X]$$는 함수 $$X \to \mathbb{K}$$, $$a \mapsto f(a)$$로 생각할 수 있다. 이것이 잘 정의되기 위해서는 $$\bar{f}$$의 representative에 상관없이 $$X$$의 모든 점에서 그 함숫값이 같아야 하는데, 어차피 $$\bar{f}$$에서 다른 representative를 택하는 것은 $$I(X)$$의 원소를 택하는 것이고 이들 함수들은 $$X$$ 위에서 identically zero이기 때문이다. 또 앞서 살펴봤듯 $$X$$가 affine variety라면 $$I(X)$$는  prime ideal이므로, $$\mathbb{K}[X]$$는 zero divisor가 없는 integral domain이 된다는 것도 기억할 만하다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5))
+$$X\rightarrow \mathbb{K};\qquad x\mapsto f(x)$$
+
+는 잘 정의된 함수이다. 여기서 이 함수가 잘 정의되었다는 것은 $$\overline{f}$$의 representative의 선택에 관계없이 값 $$f(x)$$가 유일하다는 것이며 이는 정확하게 $$X$$가 $$I(X)$$의 zero set으로 정의되기 때문에 가능하다. 
+
+이제 우리는 앞서 논의한 $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 prime ideal들과 $$\mathbb{A}^n$$의 closed subvariety들 사이의 일대일 대응을 임의의 affine variety로 확장할 준비가 되었다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop12">**명제 12**</ins> Affine variety $$X \subseteq \mathbb{A}^n$$이 주어졌다 하자. 그럼 coordinate ring $$\mathbb{K}[X]$$의 prime ideal들과 $$X$$의 closed subvariety들 사이에는 다음과 같은 일대일대응이 존재한다.
+
+1. Prime ideal $$\mathfrak{p} \subset \mathbb{K}[X]$$에 대하여, $$\tilde{\mathfrak{p}}$$를 $$\mathfrak{p}$$의 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서의 preimage라 하면, $$Z(\tilde{\mathfrak{p}}) \subseteq X$$는 $$X$$의 closed subvariety이다.
+2. Closed subvariety $$Y \subseteq X$$에 대하여, $$I(Y)/I(X) \subset \mathbb{K}[X]$$는 prime ideal이다.
+
+이들 사이의 대응 $$\mathfrak{p} \mapsto Z(\tilde{\mathfrak{p}})$$와 $$Y \mapsto I(Y)/I(X)$$는 서로 역대응이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Prime ideal $\mathfrak{p} \subset \mathbb{K}[X]$이 주어졌을 때, $\tilde{\mathfrak{p}}$을 $\mathfrak{p}$의 $\mathbb{K}[\x_1, \ldots, \x_n]$에서의 preimage라 하자. 그럼 $\tilde{\mathfrak{p}}$은 $I(X)$를 포함하는 prime ideal이고, 따라서 $Z(\tilde{\mathfrak{p}})$는 $Z(I(X)) = X$의 닫힌집합이다. 또한 $\tilde{\mathfrak{p}}$이 prime ideal이므로 $Z(\tilde{\mathfrak{p}})$는 irreducible이고 ([명제 4](#prop4)의 다섯째 조건), 따라서 $Z(\tilde{\mathfrak{p}})$는 $X$의 closed subvariety이다.
+
+거꾸로 $Y \subseteq X$가 closed subvariety라 하자. 그럼 $Y = Z(\mathfrak{a}) \cap X$인 ideal $\mathfrak{a}$가 존재한다. $Y$가 irreducible이므로 $I(Y)/I(X)$는 $\mathbb{K}[X]$의 prime ideal이다.
+
+이제 이 두 대응이 서로 inverse임을 보이자. $\mathfrak{p} \mapsto Z(\tilde{\mathfrak{p}}) \mapsto I(Z(\tilde{\mathfrak{p}}))/I(X)$를 생각하자. Nullstellensatz에 의해 $I(Z(\tilde{\mathfrak{p}})) = \sqrt{\tilde{\mathfrak{p}}} = \tilde{\mathfrak{p}}$이다. $\tilde{\mathfrak{p}}$이 prime ideal이면 $\sqrt{\tilde{\mathfrak{p}}} = \tilde{\mathfrak{p}}$이므로 $I(Z(\tilde{\mathfrak{p}}))/I(X) = \tilde{\mathfrak{p}}/I(X) = \mathfrak{p}$이다.
+
+반대로 $Y \mapsto I(Y)/I(X) \mapsto Z(\widetilde{I(Y)/I(X)})$를 생각하자. $Y = Z(\mathfrak{a}) \cap X$이고 $I(Y) = \sqrt{\mathfrak{a}}$이므로, $\widetilde{I(Y)/I(X)} = \sqrt{\mathfrak{a}}$이다. 따라서 $Z(\widetilde{I(Y)/I(X)}) = Z(\mathfrak{a}) \supseteq Y$이다. $Y \subseteq X$이고 $X = Z(I(X))$이므로 $Z(\mathfrak{a}) \cap X = Y$이다.
+
+</details>
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> [예시 3](#ex3)에서 살펴본 affine variety들의 경우, ideal들 $$(\x^2+\y^2-1)$$ 그리고 $$(\y-\x^2,\z-\x^3)$$은 radical임을 보일 수 있다. 따라서 단위원 $$X = Z(\x^2+\y^2-1)$$의 coordinate ring은 $$\mathbb{K}[X] = \mathbb{K}[\x, \y]/(\x^2+\y^2-1)$$이고 twisted cubic $$C$$의 coordinate ring은 $$\mathbb{K}[C] = \mathbb{K}[\x, \y, \z]/(\y-\x^2, \z-\x^3) \cong \mathbb{K}[\x]$$이다.
+<ins id="ex13">**예시 13**</ins> [예시 3](#ex3)에서 살펴본 affine variety들의 경우, ideal들 $$(\x^2+\y^2-1)$$ 그리고 $$(\y-\x^2,\z-\x^3)$$은 radical임을 보일 수 있다. 따라서 단위원 $$X = Z(\x^2+\y^2-1)$$의 coordinate ring은 $$\mathbb{K}[X] = \mathbb{K}[\x, \y]/(\x^2+\y^2-1)$$이고 twisted cubic $$C$$의 coordinate ring은 $$\mathbb{K}[C] = \mathbb{K}[\x, \y, \z]/(\y-\x^2, \z-\x^3) \cong \mathbb{K}[\x]$$이다.
 
 그러나 일반적으로 초곡면 $$Z(f)$$의 coordinate ring은 $$\mathbb{K}[Z(f)] = \mathbb{K}[\x_1, \ldots, \x_n]/I(Z(f)) = \mathbb{K}[\x_1, \ldots, \x_n]/\sqrt{(f)}$$이므로, coordinate ring을 계산할 때는 주어진 ideal이 radical인지를 판단하여야 한다.
 
@@ -288,11 +316,11 @@ $$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
 
 <div class="definition" markdown="1">
 
-<ins id="def13">**정의 13**</ins> 임의의 affine variety $$V\subseteq \mathbb{A}^k$$와 그 위에서 정의된 함수 $$f:V\rightarrow \mathbb{K}$$에 대하여, $$f$$가 점 $$p\in V$$에서 *regular*라는 것은 $$p$$의 적당한 열린근방 $$D(h)$$와 다항식 $$g$$가 존재하여, $$U$$ 위에서 $$f=g/h$$이 성립하는 것이다. 여기서 $$h$$는 $$U=D(h)$$ 위에서 $$0$$이 되지 않는 다항식이다. 
+<ins id="def14">**정의 14**</ins> 임의의 affine variety $$V\subseteq \mathbb{A}^k$$와 그 위에서 정의된 함수 $$f:V\rightarrow \mathbb{K}$$에 대하여, $$f$$가 점 $$p\in V$$에서 *regular*라는 것은 $$p$$의 적당한 열린근방 $$D(h)$$와 다항식 $$g$$가 존재하여, $$U$$ 위에서 $$f=g/h$$이 성립하는 것이다. 여기서 $$h$$는 $$U=D(h)$$ 위에서 $$0$$이 되지 않는 다항식이다. 
 
 </div>
 
-그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. 이 두 정의 [정의 11](#def11)과 [정의 13](#def13)이 동치라는 것에 대한 증명은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 증명의 핵심은 [정의 13](#def13)에서 [정의 11](#def11)을 얻어내는 것인데, 이는 각각의 $$D(h)$$에서 $$g/h$$꼴로 나타나는 함수들을 잘 붙이는 것으로부터 얻어진다. 
+그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. 이 두 정의 [정의 11](#def11)과 [정의 14](#def14)이 동치라는 것에 대한 증명은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 증명의 핵심은 [정의 14](#def14)에서 [정의 11](#def11)을 얻어내는 것인데, 이는 각각의 $$D(h)$$에서 $$g/h$$꼴로 나타나는 함수들을 잘 붙이는 것으로부터 얻어진다. 
 
 ## 아핀다양체 사이의 사상
 
@@ -300,7 +328,7 @@ $$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**정의 14**</ins> 두 affine variety들 $$X \subseteq \mathbb{A}^n$$과 $$Y \subseteq \mathbb{A}^m$$ 사이의 함수 $$\varphi:X \rightarrow Y$$가 이들 사이의 *morphism<sub>사상</sub>* (또는 *regular map<sub>정칙사상</sub>*)이라는 것은 적절한 다항식 $$f_1, \ldots, f_m \in \mathbb{K}[\x_1, \ldots, \x_n]$$들이 존재하여
+<ins id="def15">**정의 15**</ins> 두 affine variety들 $$X \subseteq \mathbb{A}^n$$과 $$Y \subseteq \mathbb{A}^m$$ 사이의 함수 $$\varphi:X \rightarrow Y$$가 이들 사이의 *morphism<sub>사상</sub>* (또는 *regular map<sub>정칙사상</sub>*)이라는 것은 적절한 다항식 $$f_1, \ldots, f_m \in \mathbb{K}[\x_1, \ldots, \x_n]$$들이 존재하여
 
 $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 
@@ -314,7 +342,7 @@ $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> Morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 구체적으로, $$\bar{g} \in \mathbb{K}[Y]$$에 대하여
+<ins id="prop16">**명제 16**</ins> Morphism $$\varphi: X \to Y$$는 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도한다. 구체적으로, $$\bar{g} \in \mathbb{K}[Y]$$에 대하여
 
 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$
 
@@ -340,7 +368,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 <div class="definition" markdown="1">
 
-<ins id="def16">**정의 16**</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
+<ins id="def17">**정의 17**</ins> Morphism $$\varphi: X \to Y$$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $$\psi: Y \to X$$가 존재하여 $$\psi$$도 morphism인 것이다.
 
 </div>
 
@@ -350,11 +378,11 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop17">**명제 17**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
+<ins id="prop18">**명제 18**</ins> Morphism $$\varphi: X \to Y$$가 isomorphism일 필요충분조건은 $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$가 ring isomorphism인 것이다.
 
 </div>
 
-[명제 15](#def15)에서 우리는 morphism $$\varphi: X \to Y$$가 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도함을 보았다. 직관적으로, $$\varphi^\ast$$는 $$Y$$ 위의 함수 $$g$$를 $$X$$ 위의 함수 $$g \circ \varphi$$로 대응시키는데, 이는 $$Y$$의 기하학적 정보를 $$X$$로 pullback하는 연산이다. 따라서 $$\varphi^\ast$$가 isomorphism이라면, 양쪽 coordinate ring의 함수들이 서로 완벽하게 대응하므로, 기하학적으로도 $$X$$와 $$Y$$의 구조가 본질적으로 같을 것이라는 기대가 자연스럽다. 다음 증명은 이 직관을 엄밀하게 구현한다.
+[명제 16](#prop16)에서 우리는 morphism $$\varphi: X \to Y$$가 coordinate ring homomorphism $$\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$$를 유도함을 보았다. 직관적으로, $$\varphi^\ast$$는 $$Y$$ 위의 함수 $$g$$를 $$X$$ 위의 함수 $$g \circ \varphi$$로 대응시키는데, 이는 $$Y$$의 기하학적 정보를 $$X$$로 pullback하는 연산이다. 따라서 $$\varphi^\ast$$가 isomorphism이라면, 양쪽 coordinate ring의 함수들이 서로 완벽하게 대응하므로, 기하학적으로도 $$X$$와 $$Y$$의 구조가 본질적으로 같을 것이라는 기대가 자연스럽다. 다음 증명은 이 직관을 엄밀하게 구현한다.
 
 <details class="proof--alone" markdown="1">
 <summary>증명</summary>
