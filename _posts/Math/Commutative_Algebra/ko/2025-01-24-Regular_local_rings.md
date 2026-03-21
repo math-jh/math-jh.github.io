@@ -73,7 +73,7 @@ $$\mathfrak{m}'/(\mathfrak{m}')^2=\mathfrak{m}/(\mathfrak{m}^2+(a))$$
 
 <ins id="prop4">**명제 4**</ins> Regular local noetherian ring $$(A, \mathfrak{m})$$과 그 prime ideal $$\mathfrak{p}$$에 대하여,
 
-$$\dim A/\mathfrak{p} + \operatorname{ht}(\mathfrak{p}) = \dim A$$
+$$\dim A/\mathfrak{p} + \codim \mathfrak{p} = \dim A$$
 
 가 성립한다.
 
@@ -81,13 +81,13 @@ $$\dim A/\mathfrak{p} + \operatorname{ht}(\mathfrak{p}) = \dim A$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[\[가환대수학\] §차원, ⁋정리 5](/ko/math/commutative_algebra/Krull_dimension#thm5)에 의하여 일반적으로 $$\dim A/\mathfrak{p} + \operatorname{ht}(\mathfrak{p}) \le \dim A$$이다. 따라서 반대 부등식을 보이면 충분하다.
+[\[가환대수학\] §차원, ⁋정리 5](/ko/math/commutative_algebra/Krull_dimension#thm5)에 의하여 일반적으로 $$\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$$이다. 따라서 반대 부등식을 보이면 충분하다.
 
-$$d = \dim A$$이고 $$h = \operatorname{ht}(\mathfrak{p})$$라 하자. Regular local ring $$(A, \mathfrak{m})$$의 regular system of parameters $$x_1, \ldots, x_d$$를 택하자. [\[가환대수학\] §매개계, ⁋명제 9](/ko/math/commutative_algebra/system_of_parameters#prop9)에 의하여, 적당한 인덱스 $$1 \le i_1 < \cdots < i_h \le d$$에 대하여 $$\mathfrak{p}$$는 $$(x_{i_1}, \ldots, x_{i_h})$$를 포함하는 minimal prime ideal이다. [따름정리 3](#cor3)에 의해 $$x_{i_1}, \ldots, x_{i_h}$$은 $$A$$-sequence이므로, [\[가환대수학\] §매개계, ⁋따름정리 6](/ko/math/commutative_algebra/system_of_parameters#cor6)에 의하여 $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$이다.
+$$d = \dim A$$이고 $$h = \codim \mathfrak{p}$$라 하자. Regular local ring $$(A, \mathfrak{m})$$의 regular system of parameters $$x_1, \ldots, x_d$$를 택하자. [\[가환대수학\] §매개계, ⁋명제 9](/ko/math/commutative_algebra/system_of_parameters#prop9)에 의하여, 적당한 인덱스 $$1 \le i_1 < \cdots < i_h \le d$$에 대하여 $$\mathfrak{p}$$는 $$(x_{i_1}, \ldots, x_{i_h})$$를 포함하는 minimal prime ideal이다. [따름정리 3](#cor3)에 의해 $$x_{i_1}, \ldots, x_{i_h}$$은 $$A$$-sequence이므로, [§매개계, ⁋따름정리 6](/ko/math/commutative_algebra/system_of_parameters#cor6)에 의하여 $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$이다.
 
 한편 $$A/(x_{i_1}, \ldots, x_{i_h})$$에서 $$\overline{\mathfrak{p}} = \mathfrak{p}/(x_{i_1}, \ldots, x_{i_h})$$는 minimal prime ideal이고, [따름정리 1](#cor1)에 의해 $$A/(x_{i_1}, \ldots, x_{i_h})$$는 integral domain이므로 $$\overline{\mathfrak{p}} = 0$$이다. 즉, $$\mathfrak{p} = (x_{i_1}, \ldots, x_{i_h})$$이며 $$A/\mathfrak{p} = A/(x_{i_1}, \ldots, x_{i_h})$$이다. 따라서
 
-$$\dim A/\mathfrak{p} = \dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h = \dim A - \operatorname{ht}(\mathfrak{p})$$
+$$\dim A/\mathfrak{p} = \dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h = \dim A - \codim \mathfrak{p}$$
 
 이다.
 
