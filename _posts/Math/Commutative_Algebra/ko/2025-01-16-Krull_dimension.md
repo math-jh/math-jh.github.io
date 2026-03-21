@@ -224,13 +224,33 @@ $$x$$를 homogeneous decomposition $$x = \sum_{d} x_d$$로 쓰자. $$x_+ = \sum_
 
 </details>
 
-이 명제로부터 $$\mathfrak{m}$$으로 끝나는 prime ideal chain에서 모든 ideal이 homogeneous임을 안다. 따라서 graded ring에서 $$\mathfrak{m}$$을 포함하는 prime ideal들의 chain의 길이는 homogeneous prime ideal chain의 길이와 같다.
+명제 10으로부터 irrelevant ideal $$\mathfrak{m}$$을 포함하는 prime ideal은 homogeneous하다는 것을 알았다. 반대로 $$\mathfrak{m}$$을 포함하지 않는 homogeneous prime ideal들은 $$\operatorname{Proj} R$$의 점들에 해당한다. 이제 우리는 임의의 prime ideal chain이 homogeneous prime ideal chain으로 refine 가능하다는 것을 보일 것이다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11 (Graded prime ideal로 refinement)**</ins> Graded ring $$R$$의 임의의 prime ideal chain은 homogeneous prime ideal chain으로 refine할 수 있다. 즉, prime ideal chain $$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s$$에 대하여, homogeneous prime ideal chain $$\mathfrak{p}_0^* \supsetneq \mathfrak{p}_1^* \supsetneq \cdots \supsetneq \mathfrak{p}_s^*$$가 존재한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Prime ideal chain $$\mathfrak{p}_0 \supsetneq \mathfrak{p}_1 \supsetneq \cdots \supsetneq \mathfrak{p}_s$$을 생각하자. 각 $$\mathfrak{p}_i$$에 대하여 그 homogeneous element들로 생성된 ideal
+
+$$\mathfrak{p}_i^* = \langle f \in \mathfrak{p}_i : f \text{는 homogeneous} \rangle$$
+
+을 정의하자. 각 $$\mathfrak{p}_i^*$$는 homogeneous prime ideal이다. 또한 $$\mathfrak{p}_i \supsetneq \mathfrak{p}_{i+1}$$이면 $$\mathfrak{p}_i^* \supseteq \mathfrak{p}_{i+1}^*$$이다.
+
+이제 $$\mathfrak{p}_i^* \supseteq \mathfrak{p}_{i+1}^*$$가 strict inclusion임을 보이자. $$\mathfrak{p}_i \supsetneq \mathfrak{p}_{i+1}$$이므로 $$\mathfrak{p}_i \setminus \mathfrak{p}_{i+1}$$에 속하는 원소 $$f$$가 존재한다. $$f$$를 homogeneous component들의 합 $$f = f_{d_1} + \cdots + f_{d_k}$$로 쓰면, 각 $$f_{d_j}$$ 중 적어도 하나는 $$\mathfrak{p}_{i+1}$$에 속하지 않는다 (그렇지 않으면 $$f \in \mathfrak{p}_{i+1}$$). 따라서 이 $$f_{d_j} \in \mathfrak{p}_i^* \setminus \mathfrak{p}_{i+1}^*$$이다.
+
+결론적으로 $$\mathfrak{p}_0^* \supsetneq \mathfrak{p}_1^* \supsetneq \cdots \supsetneq \mathfrak{p}_s^*$$는 homogeneous prime ideal chain이다.
+
+</details>
 
 ## 정칙국소환
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> Noetherian local ring $$(A, \mathfrak{m})$$이 *regular local ring<sub>정칙국소환</sub>*이라는 것은 $$\mathfrak{m}$$이 정확히 $$d$$개의 원소로 생성될 수 있는 것이다.
+<ins id="def12">**정의 12**</ins> Noetherian local ring $$(A, \mathfrak{m})$$이 *regular local ring<sub>정칙국소환</sub>*이라는 것은 $$\mathfrak{m}$$이 정확히 $$d$$개의 원소로 생성될 수 있는 것이다.
 
 </div>
 
