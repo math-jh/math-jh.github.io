@@ -172,7 +172,11 @@ $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-주장과 같이 $$\mathfrak{p}$$가 codimension $$c$$라 하자. 우리는 ($$0$$개의 원소로 생성되는) zero ideal $$(0)$$으로부터 시작하여, 원소들 $$x_1,\ldots, x_r$$을 귀납적으로 택하여 원하는 ideal을 만들 것이다. 이제 $$0\leq r< c$$를 만족하는 $$r$$에 대하여, $$x_1,\ldots, x_r$$로 생성되는 ideal을 만들었다 하자.  그럼 우리는 ideal $$(x_1,\ldots, x_r)$$을 포함하는 prime ideal들 중 어느 것에도 속하지 않는 적당한 $$x_{r+1}\in \mathfrak{p}$$를 택해야 한다. 이제 이는 
+주장과 같이 $$\mathfrak{p}$$가 codimension $$c$$라 하자. 우리는 ($$0$$개의 원소로 생성되는) zero ideal $$(0)$$으로부터 시작하여, 원소들 $$x_1,\ldots, x_r$$을 귀납적으로 택하여 원하는 ideal을 만들 것이다. 이제 $$0\leq r< c$$를 만족하는 $$r$$에 대하여, $$x_1,\ldots, x_r$$로 생성되는 ideal을 만들었다 하자. 그럼 우리는 ideal $$(x_1,\ldots, x_r)$$을 포함하는 prime ideal들 중 어느 것에도 속하지 않는 적당한 $$x_{r+1}\in \mathfrak{p}$$를 택해야 한다.
+
+이제 $$(x_1,\ldots, x_r)$$을 포함하는 minimal prime ideal들이 $$\mathfrak{q}_1,\ldots, \mathfrak{q}_s$$라 하자. [정리 7](#thm7)에 의하여 각 $$\mathfrak{q}_i$$의 codimension은 $$\leq r$$이고, $$r< c$$이므로 이들의 codimension은 모두 $$< c$$이다. 따라서 $$\mathfrak{p}$$는 이들 중 어느 것과도 같을 수 없고, 특히 $$\mathfrak{p}\not\subseteq \bigcup_{i=1}^s \mathfrak{q}_i$$이다. 그러므로 우리는 $$x_{r+1}\in \mathfrak{p}\setminus \bigcup_{i=1}^s \mathfrak{q}_i$$를 택할 수 있다.
+
+이제 귀납적으로 $$\mathfrak{p}$$에 속하는 $$c$$개의 원소 $$x_1,\ldots, x_c$$를 얻는다. 그럼 ideal $$(x_1,\ldots, x_c)$$를 포함하는 minimal prime ideal $$\mathfrak{q}$$를 택하면, [정리 7](#thm7)에 의하여 $$\codim \mathfrak{q}\leq c$$이다. 한편 $$\mathfrak{q}\subseteq \mathfrak{p}$$이고 $$\codim \mathfrak{p}=c$$이므로, 반드시 $$\mathfrak{q}=\mathfrak{p}$$이어야 한다.
 
 </details>
 
@@ -190,9 +194,43 @@ $$\dim A/\mathfrak{p}A\leq\dim A-1$$
 
 특별히 noetherian local ring $$(A, \mathfrak{m})$$에 대하여는 $$\dim A=\codim \mathfrak{m}$$이 성립함을 살펴보았다. 따라서 $$\codim \mathfrak{m}=d$$이므로, [따름정리 8](#cor8)에 의해 $$\mathfrak{m}$$은 $$d$$개 이상의 원소로 생성되어야 한다. 
 
+## 등급환에서의 차원
+
+Graded ring $$R = \bigoplus_{d \ge 0} R_d$$에서 차원을 계산할 때 유용한 성질들을 살펴보자. 우선 다음 정리를 기억하자. ([§등급환의 국소화](/ko/math/commutative_algebra/localization_of_graded_rings))
+
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Noetherian local ring $$(A, \mathfrak{m})$$이 *regular local ring<sub>정칙국소환</sub>*이라는 것은 $$\mathfrak{m}$$이 정확히 $$d$$개의 원소로 생성될 수 있는 것이다. 
+<ins id="def9">**정의 9**</ins> Graded ring $$R$$의 ideal $$\mathfrak{a}$$가 *homogeneous<sub>동차</sub>*라는 것은 $$\mathfrak{a}$$가 homogeneous element들로 생성되는 것이다. Prime ideal $$\mathfrak{p}$$가 *homogeneous prime ideal*이라는 것은 $$\mathfrak{p}$$가 homogeneous ideal이면서 prime인 것이다.
+
+</div>
+
+Graded ring에서 핵심적인 관찰은 irrelevant ideal $$\mathfrak{m} = \bigoplus_{d > 0} R_d$$를 포함하는 prime ideal들이 항상 homogeneous라는 것이다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10**</ins> Graded ring $$R$$에서 irrelevant ideal $$\mathfrak{m} = \bigoplus_{d > 0} R_d$$를 포함하는 prime ideal $$\mathfrak{p}$$는 homogeneous이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\mathfrak{p}$$가 prime ideal이고 $$\mathfrak{m} \subseteq \mathfrak{p}$$라 하자. $$\mathfrak{p}$$의 *homogenization* 
+
+$$\mathfrak{p}^* = \{x \in \mathfrak{p} \mid x \text{ homogeneous}\}$$
+
+를 생각하자. 이것이 graded prime ideal이 되는 것은 정의에 의해 바로 보일 수 있다. 핵심은  $$\mathfrak{p} = \mathfrak{p}^*$$라는 것이다. 우선 $$\mathfrak{m} \subseteq \mathfrak{p}^* \subseteq \mathfrak{p}$$임은 자명하므로, $$x \in \mathfrak{p}$$를 가정하고 $$x\in \mathfrak{p}^\ast$$임을 보이자. 
+
+$$x$$를 homogeneous decomposition $$x = \sum_{d} x_d$$로 쓰자. $$x_+ = \sum_{d > 0} x_d \in \mathfrak{m} \subseteq \mathfrak{p}$$이므로, $$x_0 = x - x_+ \in \mathfrak{p}$$이다. 이제 $$x' = x - x_0 = x_+ \in \mathfrak{p}$$이고, 같은 방식으로 $$x_1 \in \mathfrak{p}$$임을 보일 수 있다. 귀납적으로 각 $$x_d \in \mathfrak{p}$$이고, 따라서 $$x \in \mathfrak{p}^*$$이다.
+
+</details>
+
+이 명제로부터 $$\mathfrak{m}$$으로 끝나는 prime ideal chain에서 모든 ideal이 homogeneous임을 안다. 따라서 graded ring에서 $$\mathfrak{m}$$을 포함하는 prime ideal들의 chain의 길이는 homogeneous prime ideal chain의 길이와 같다.
+
+## 정칙국소환
+
+<div class="definition" markdown="1">
+
+<ins id="def11">**정의 11**</ins> Noetherian local ring $$(A, \mathfrak{m})$$이 *regular local ring<sub>정칙국소환</sub>*이라는 것은 $$\mathfrak{m}$$이 정확히 $$d$$개의 원소로 생성될 수 있는 것이다.
 
 </div>
 

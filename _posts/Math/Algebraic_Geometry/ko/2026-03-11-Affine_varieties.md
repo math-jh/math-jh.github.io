@@ -287,18 +287,7 @@ $$X\rightarrow \mathbb{K};\qquad x\mapsto f(x)$$
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-Prime ideal $\mathfrak{p} \subset \mathbb{K}[X]$이 주어졌을 때, $\tilde{\mathfrak{p}}$을 $\mathfrak{p}$의 $\mathbb{K}[\x_1, \ldots, \x_n]$에서의 preimage라 하자. 그럼 $\tilde{\mathfrak{p}}$은 $I(X)$를 포함하는 prime ideal이고, 따라서 $Z(\tilde{\mathfrak{p}})$는 $Z(I(X)) = X$의 닫힌집합이다. 또한 $\tilde{\mathfrak{p}}$이 prime ideal이므로 $Z(\tilde{\mathfrak{p}})$는 irreducible이고 ([명제 4](#prop4)의 다섯째 조건), 따라서 $Z(\tilde{\mathfrak{p}})$는 $X$의 closed subvariety이다.
-
-거꾸로 $Y \subseteq X$가 closed subvariety라 하자. 그럼 $Y = Z(\mathfrak{a}) \cap X$인 ideal $\mathfrak{a}$가 존재한다. $Y$가 irreducible이므로 $I(Y)/I(X)$는 $\mathbb{K}[X]$의 prime ideal이다.
-
-이제 이 두 대응이 서로 inverse임을 보이자. $\mathfrak{p} \mapsto Z(\tilde{\mathfrak{p}}) \mapsto I(Z(\tilde{\mathfrak{p}}))/I(X)$를 생각하자. Nullstellensatz에 의해 $I(Z(\tilde{\mathfrak{p}})) = \sqrt{\tilde{\mathfrak{p}}} = \tilde{\mathfrak{p}}$이다. $\tilde{\mathfrak{p}}$이 prime ideal이면 $\sqrt{\tilde{\mathfrak{p}}} = \tilde{\mathfrak{p}}$이므로 $I(Z(\tilde{\mathfrak{p}}))/I(X) = \tilde{\mathfrak{p}}/I(X) = \mathfrak{p}$이다.
-
-반대로 $Y \mapsto I(Y)/I(X) \mapsto Z(\widetilde{I(Y)/I(X)})$를 생각하자. $Y = Z(\mathfrak{a}) \cap X$이고 $I(Y) = \sqrt{\mathfrak{a}}$이므로, $\widetilde{I(Y)/I(X)} = \sqrt{\mathfrak{a}}$이다. 따라서 $Z(\widetilde{I(Y)/I(X)}) = Z(\mathfrak{a}) \supseteq Y$이다. $Y \subseteq X$이고 $X = Z(I(X))$이므로 $Z(\mathfrak{a}) \cap X = Y$이다.
-
-</details>
+이에 대한 증명은 본질적으로 fourth isomorphism theorem으로부터 자명하다. 
 
 <div class="example" markdown="1">
 
