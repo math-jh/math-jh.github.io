@@ -12,7 +12,7 @@ header:
     overlay_filter: 0.5
 
 date: 2026-03-12
-last_modified_at: 2026-03-21
+last_modified_at: 2026-03-22
 weight: 6
 
 ---
@@ -44,12 +44,12 @@ Algebraic variety는 이미 위상공간이므로, [§차원, ⁋정의 10](/ko/
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§아핀다양체, ⁋정리 10](/ko/math/algebraic_geometry/affine_varieties#thm10)와 그 이후의 논증으로부터 affine variety의 irreducible closed subset과 $$\mathbb{K}[X]$$의 prime ideal 사이의 일대일대응이 존재함을 안다. 
+[§아핀다양체, ⁋명제 12](/ko/math/algebraic_geometry/affine_varieties#prop12)로부터 affine variety의 irreducible closed subset과 $$\mathbb{K}[X]$$의 prime ideal 사이의 일대일대응이 존재한다. 
 
 </details>
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> $$\dim \mathbb{A}^n = n$$이다.
+<ins id="cor3">**따름정리 3**</ins> $$\dim \mathbb{A}^n = n$$이다.
 
 </div>
 
@@ -60,44 +60,54 @@ Algebraic variety는 이미 위상공간이므로, [§차원, ⁋정의 10](/ko/
 
 </details>
 
-즉 임의의 
+한편, 우리는 임의의 prime ideal $$\mathfrak{p}\subset \mathbb{K}[\x_1,\ldots, \x_n]$$에 대하여 다음의 식
+
+$$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
+
+이 성립하는 것을 안다. ([\[가환대수학\] §정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4)) 여기서 codimension $$\mathfrak{p}$$는 [\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)에서 정의된 것으로, $$\mathfrak{p}$$에 포함되는 prime ideal들의 chain의 길이의 supremum이며, 기하적으로는 $$X=Z(\mathfrak{p})$$를 포함하는 $$\mathbb{A}^n$$의 closed subvariety들의 chain의 길이의 supremum이다. 기하적으로 우리는 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$$이 $$Z(\mathfrak{p})$$의 차원인 것을 알고 있으므로, 이를 통해 ($\ast$)에 기하적인 의미를 부여할 수 있다. 
 
 ## Projective variety의 차원
 
-문제는 projective variety로 넘어가면서부터 발생한다. $$\mathbb{P}^n$$의 global function은 오직 상수함수들 뿐이었음을 기억하자. 이러한 상황에서 projective variety의 차원을 정의하기 위해서는 affine chart를 잡으면 된다. 즉 $$X\subset \mathbb{P}^n$$이 주어졌을 때, $$\mathbb{P}^n$$의 affine open chart $$U_i$$를 택한 후, $$X_i=X\cap U_i$$의 affine variety로서의 차원을 생각하면 된다. 그러나 이 정의를 위해서는 임의의 열린집합의 차원이 원래 variety의 차원과 같다는 것을 보여야하므로 아직은 이를 정의로 택할 수 없다. 그 대신 우리는 $$X$$의 *affine cone* $$C(X)$$를 이용한다. 이를 위해서는 가환대수학의 언어가 약간 필요한데, prime ideal $$\mathfrak{p}\subset A$$에 대하여, $$\mathfrak{p}$$의 *codimension* ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2))은 $$\mathfrak{p}$$에 포함되는 prime ideal들의 chain의 길이의 supremum이며, 기하적으로 이는 $$\mathbb{p}$$가 정의하는 algebraic variety를 포함하는 다른 algebraic variety들의 chain의 길이의 supremum이다. 
+문제는 projective variety로 넘어가면서부터 발생한다. $$\mathbb{P}^n$$의 global function은 오직 상수함수들 뿐이었음을 기억하자. 이러한 상황에서 projective variety의 차원을 정의하기 위해서는 affine chart를 잡으면 된다. 즉 $$X\subset \mathbb{P}^n$$이 주어졌을 때, $$\mathbb{P}^n$$의 affine open chart $$U_i$$를 택한 후, $$X_i=X\cap U_i$$의 affine variety로서의 차원을 생각하면 된다. 그러나 이 정의를 위해서는 임의의 열린집합의 차원이 원래 variety의 차원과 같다는 것을 보여야하므로 아직은 이를 정의로 택할 수 없다. 그 대신 우리는 $$X$$의 *affine cone* $$C(X)$$를 이용한다.
+
+Projective variety $$X\subseteq \mathbb{P}^n$$에 대하여, affine cone $$C(X)\subseteq \mathbb{A}^{n+1}$$은 $$X$$를 정의하는 homogeneous ideal을 $$\mathbb{K}[\x_0,\ldots, \x_n]$$의 ideal로 봤을 때 이것이 정의하는 $$\mathbb{A}^{n+1}$$의 affine variety이다. 즉 $$X$$가 정의하는 homogeneous ideal $$I(X)$$에 대하여, ring $$S(X)$$를
+
+$$S(X)=\mathbb{K}[\x_0,\ldots, \x_n]/I(X)$$
+
+으로 정의하면 이것이 affine cone의 coordinate ring이 되는 것이다. Projective variety의 차원을 계산하기 위해 핵심적인 것은 다음의 결과이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$의 차원은 그 cone $$C(X)\subseteq \mathbb{A}^{n+1}$$의 차원에서 $$1$$을 뺀 것과 같다.
+<ins id="prop4">**명제 4**</ins> Projective variety $$X \subseteq \mathbb{P}^n$$에 대하여 $$\dim X = \dim S(X) - 1$$이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Codimension([§차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2))을 이용한 증명을 제시한다. Cone $$C(X) \subseteq \mathbb{A}^{n+1}$$을 생각하자. $$\mathbb{A}^{n+1}$$의 coordinate ring $$\mathbb{K}[x_0, \ldots, x_n]$$은 regular local ring이므로, [§정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4)에 의하여
+우선 $$X$$의 irreducible closed subset chain $$X = X_0 \supsetneq \cdots \supsetneq X_r \neq \emptyset$$를 생각하자. 각 $$X_i$$에 대응하는 graded prime ideal $$\mathfrak{p}_i = I(X_i)$$들은 $$S(X)$$에서의 chain이며, 이 때 우리는 원점에 해당하는 ideal $$\mathfrak{m}=(\x_0,\ldots, \x_n)$$을 끼워넣어
 
-$$\dim C(X) + \operatorname{codim} C(X) = \dim \mathbb{A}^{n+1} = n+1$$
+$$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_r \supsetneq \mathfrak{m}$$
 
-이다. 여기서 $$\operatorname{codim} C(X)$$는 $$C(X)$$를 정의하는 ideal의 height이다.
+을 만들 수 있다. 이로부터 $$\dim S(X) \ge \dim X+ 1$$여야 함을 안다. 이제 반대방향 부등식을 보여야한다. $$S(X)$$의 차원을 정의하는 prime ideal chain $$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s = \mathfrak{m}$$을 생각하자. (여기서 $$\mathfrak{m}$$은 irrelevant ideal)
 
-한편, homogeneous ideal의 성질에 의하여 $$\operatorname{codim} C(X) = \operatorname{codim} X$$이다. 이는 $$X \subseteq \mathbb{P}^n$$을 정의하는 homogeneous ideal $$I(X)$$와 $$C(X) \subseteq \mathbb{A}^{n+1}$$을 정의하는 (동일한) ideal $$I(C(X))$$가 같은 height를 가지기 때문이다.
+각 $$\mathfrak{p}_i = I(Y_i)$$로 대응되는 $$Y_i$$들을 생각하면
 
-마지막으로, affine case에서 $$\dim X + \operatorname{codim} X = n$$이 성립한다. 이는 [명제 3](#prop3)에서 $$\dim \mathbb{P}^n = n$$이고, $$X$$가 $$\mathbb{P}^n$$의 codimension $$\operatorname{codim} X$$인 부분다양체이기 때문이다.
+$$Y_0 \supsetneq \cdots \supsetneq Y_{s-1} \neq \emptyset$$
 
-따라서
-
-$$\dim C(X) = (n+1) - \operatorname{codim} C(X) = (n+1) - \operatorname{codim} X = (n+1) - (n - \dim X) = \dim X + 1$$
-
-이다. 즉 $$\dim X = \dim C(X) - 1$$이다.
+은 $$X$$의 chain이다. 따라서 $$\dim X \ge s - 1$$.
 
 </details>
 
-이 명제는 projective variety의 차원을 affine variety의 차원으로 계산할 수 있게 해준다. Cone의 차원에서 1을 빼는 것은 projective space가 "homogeneous coordinates"를 사용하므로 하나의 자유도가 줄어들기 때문이다.
+<div class="proposition" markdown="1">
+
+<ins id="cor5">**따름정리 5**</ins> $$\dim C(X) = \dim X + 1$$이다.
+
+</div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> $$\dim \mathbb{P}^n = n$$이다.
+<ins id="prop6">**명제 6**</ins> $$\dim \mathbb{P}^n = n$$이다.
 
 </div>
 
@@ -110,11 +120,11 @@ $$\mathbb{P}^n$$의 cone은 $$\mathbb{A}^{n+1}$$이고 $$\dim \mathbb{A}^{n+1} =
 
 ## 초곡면의 차원
 
-Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산되는데, 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한 것이다 (아래 명제 6의 증명 참조).
+Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산되는데, 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한 것이다 ([명제 7](#prop7)의 증명 참조).
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Irreducible 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, irreducible 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
+<ins id="prop7">**명제 7**</ins> Irreducible 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, irreducible 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
 
 </div>
 
@@ -139,7 +149,7 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Irreducible 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
+<ins id="prop8">**명제 8**</ins> Irreducible 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
 
 </div>
 
@@ -154,11 +164,11 @@ $$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$는 적분역 $$\mathbb{K}
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> 함수체를 통한 차원 계산의 예시들이다.
+<ins id="ex9">**예시 9**</ins> 함수체를 통한 차원 계산의 예시들이다.
 
 1. $$\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(x_1, \ldots, x_n)$$이고, $$x_1, \ldots, x_n$$은 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{A}^n = n$$이다. 이는 $$\mathbb{A}^n$$이 $$n$$개의 "자유로운" 좌표를 가짐을 보여준다.
 2. $$\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(x)$$이고, $$x$$는 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim V(\y - \x^2) = 1$$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
-3. $$\mathbb{K}(\mathbb{P}^n) = \mathbb{K}(x_1/x_0, \ldots, x_n/x_0)$$이고, $$x_1/x_0, \ldots, x_n/x_0$$는 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{P}^n = n$$이다. 이는 projective space가 affine space와 birationally equivalent함을 반영한다.
+3. $$\mathbb{K}(\mathbb{P}^n) = \mathbb{K}(\x_1/\x_0, \ldots, \x_n/\x_0)$$이고, $$\x_1/\x_0, \ldots, \x_n/\x_0$$는 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{P}^n = n$$이다. 이는 projective space가 affine space와 birationally equivalent함을 반영한다.
 
 </div>
 
@@ -168,7 +178,7 @@ $$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$는 적분역 $$\mathbb{K}
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> Irreducible 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
+<ins id="prop10">**명제 10**</ins> Irreducible 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
 
 </div>
 
@@ -183,7 +193,7 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> Irreducible 다양체 $$X$$와 regular map ([§준사영다양체, ⁋정의 7](/ko/math/algebraic_geometry/quasi_projective_varieties#def7)) $$\varphi: X \to Y$$에 대해 다음이 성립한다.
+<ins id="prop11">**명제 11**</ins> Irreducible 다양체 $$X$$와 regular map ([§준사영다양체, ⁋정의 7](/ko/math/algebraic_geometry/quasi_projective_varieties#def7)) $$\varphi: X \to Y$$에 대해 다음이 성립한다.
 
 1. $$\dim \varphi(X) \le \dim X$$
 2. 만약 $$\varphi$$가 dominant ([§유리사상, ⁋정의 8](/ko/math/algebraic_geometry/rational_maps#def8))이면 (즉, $$\overline{\varphi(X)} = Y$$), $$\dim Y \le \dim X$$
@@ -206,13 +216,13 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 linear subspace가 "가장 간단한" $$k$$차원 다양체임을 보여준다.
+<ins id="ex12">**예시 12**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 linear subspace가 "가장 간단한" $$k$$차원 다양체임을 보여준다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> **Intersection**: irreducible 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
+<ins id="ex13">**예시 13**</ins> **Intersection**: irreducible 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
 
 $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 
@@ -228,3 +238,5 @@ $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 **[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
 **[AM]** M. F. Atiyah and I. G. Macdonald, *Introduction to Commutative Algebra*, Addison-Wesley, 1969.
+.
+.
