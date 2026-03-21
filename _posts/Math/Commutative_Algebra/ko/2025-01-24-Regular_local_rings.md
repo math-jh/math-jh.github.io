@@ -71,7 +71,31 @@ $$\mathfrak{m}'/(\mathfrak{m}')^2=\mathfrak{m}/(\mathfrak{m}^2+(a))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> Complete regular local noethereian ring $$(A, \mathfrak{m})$$의 차원이 $$d$$이고, residue field $$\kappa=A/\mathfrak{m}$$라 하자. 만일 $$A$$가 어떠한 field를 포함한다면 $$A\cong \kappa[[\x_1,\ldots, \x_d]]$$이며, 이 isomorphism은 각각의 변수 $$\x_i$$들과 $$A$$의 regular system of parameters를 대응시킨다.
+<ins id="prop4">**명제 4**</ins> Regular local noetherian ring $$(A, \mathfrak{m})$$과 그 prime ideal $$\mathfrak{p}$$에 대하여,
+
+$$\dim A/\mathfrak{p} + \operatorname{ht}(\mathfrak{p}) = \dim A$$
+
+가 성립한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[\[가환대수학\] §차원, ⁋정리 5](/ko/math/commutative_algebra/Krull_dimension#thm5)에 의하여 일반적으로 $$\dim A/\mathfrak{p} + \operatorname{ht}(\mathfrak{p}) \le \dim A$$이다. 따라서 반대 부등식을 보이면 충분하다.
+
+$$d = \dim A$$이고 $$h = \operatorname{ht}(\mathfrak{p})$$라 하자. Regular local ring $$(A, \mathfrak{m})$$의 regular system of parameters $$x_1, \ldots, x_d$$를 택하자. [\[가환대수학\] §매개계, ⁋명제 9](/ko/math/commutative_algebra/system_of_parameters#prop9)에 의하여, 적당한 인덱스 $$1 \le i_1 < \cdots < i_h \le d$$에 대하여 $$\mathfrak{p}$$는 $$(x_{i_1}, \ldots, x_{i_h})$$를 포함하는 minimal prime ideal이다. [따름정리 3](#cor3)에 의해 $$x_{i_1}, \ldots, x_{i_h}$$은 $$A$$-sequence이므로, [\[가환대수학\] §매개계, ⁋따름정리 6](/ko/math/commutative_algebra/system_of_parameters#cor6)에 의하여 $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$이다.
+
+한편 $$A/(x_{i_1}, \ldots, x_{i_h})$$에서 $$\overline{\mathfrak{p}} = \mathfrak{p}/(x_{i_1}, \ldots, x_{i_h})$$는 minimal prime ideal이고, [따름정리 1](#cor1)에 의해 $$A/(x_{i_1}, \ldots, x_{i_h})$$는 integral domain이므로 $$\overline{\mathfrak{p}} = 0$$이다. 즉, $$\mathfrak{p} = (x_{i_1}, \ldots, x_{i_h})$$이며 $$A/\mathfrak{p} = A/(x_{i_1}, \ldots, x_{i_h})$$이다. 따라서
+
+$$\dim A/\mathfrak{p} = \dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h = \dim A - \operatorname{ht}(\mathfrak{p})$$
+
+이다.
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop5">**명제 5**</ins> Complete regular local noethereian ring $$(A, \mathfrak{m})$$의 차원이 $$d$$이고, residue field $$\kappa=A/\mathfrak{m}$$라 하자. 만일 $$A$$가 어떠한 field를 포함한다면 $$A\cong \kappa[[\x_1,\ldots, \x_d]]$$이며, 이 isomorphism은 각각의 변수 $$\x_i$$들과 $$A$$의 regular system of parameters를 대응시킨다.
 
 </div>
 <details class="proof" markdown="1">
@@ -87,11 +111,11 @@ $$d=\dim A=\dim \im(\phi)=\dim \kappa[[\x_1,\ldots,\x_d]]/\ker\phi\leq \dim \kap
 
 ## 이산값매김환
 
-이제 우리는 $$1$$차원의 regular local ring $$(A,\mathfrak{m})$$에 대해 살펴본다. 그럼 정의에 의해 $$\mathfrak{m}$$은 하나의 원소 $$m$$으로 생성되어야 하며, 우리는 이를 $$A$$의 *regular parameter* 혹은 *uniformizing parameter*라 부른다. 
+이제 우리는 $$1$$차원의 regular local ring $$(A,\mathfrak{m})$$에 대해 살펴본다. 그럼 정의에 의해 $$\mathfrak{m}$$은 하나의 원소 $$m$$으로 생성되어야 하며, 우리는 이를 $$A$$의 *regular parameter* 혹은 *uniformizing parameter*라 부른다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> 1차원의 regular local ring $$(A, \mathfrak{m})$$이 주어졌다 하고, $$m$$이 $$A$$의 regular parameter라 하자. 그럼 $$\Frac(A)$$의 임의의 원소 $$x$$는 
+<ins id="prop6">**명제 6**</ins> 1차원의 regular local ring $$(A, \mathfrak{m})$$이 주어졌다 하고, $$m$$이 $$A$$의 regular parameter라 하자. 그럼 $$\Frac(A)$$의 임의의 원소 $$x$$는 
 
 $$x=a m^k\qquad \text{$k\in \mathbb{Z}$, $a$ a unit of $A$}$$
 
@@ -137,7 +161,7 @@ $$S=\nu^{-1}\left(\{g\in G\mid g\geq 0\}\right)$$
 
 $$am^k+bm^l=(am^{k-\min(k,l)}+bm^{l-\min(k,l)})m^{\min(k,l)}$$
 
-에 의해 자명하다. 그럼 [명제 4](#prop4)에 의하여, 두 complete discrete valuation ring이 각각 field를 포함하고, isomorphic한 residue field를 갖는다면 이들은 서로 isomorphic하다는 것을 안다. 그러나 일반적으로 complete하지 않은 discrete valuation ring들 사이에는 이러한 종류의 classification이 존재하지 않는다.
+에 의해 자명하다. 그럼 [명제 5](#prop5)에 의하여, 두 complete discrete valuation ring이 각각 field를 포함하고, isomorphic한 residue field를 갖는다면 이들은 서로 isomorphic하다는 것을 안다. 그러나 일반적으로 complete하지 않은 discrete valuation ring들 사이에는 이러한 종류의 classification이 존재하지 않는다.
 
 ## 세르의 정규화 조건
 
