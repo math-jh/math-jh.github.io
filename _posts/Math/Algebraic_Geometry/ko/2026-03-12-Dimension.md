@@ -21,7 +21,7 @@ weight: 6
 
 ## 위상공간으로서의 차원
 
-Algebraic variety는 이미 위상공간이므로, [§차원, ⁋정의 10](/ko/math/topology/dimension#def10)을 사용하여 $$X$$의 차원을 irreducible closed subset들의 strictly descending chain의 length의 supremum으로 정의할 수 있다. 
+Algebraic variety는 이미 위상공간이므로, [\[위상수학\] §차원, ⁋정의 10](/ko/math/topology/dimension#def10)을 사용하여 $$X$$의 차원을 irreducible closed subset들의 strictly descending chain의 length의 supremum으로 정의할 수 있다. 
 
 <div class="example" markdown="1">
 
@@ -82,24 +82,7 @@ $$S(X)=\mathbb{K}[\x_0,\ldots, \x_n]/I(X)$$
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-우선 $$X$$의 irreducible closed subset chain $$X = X_0 \supsetneq \cdots \supsetneq X_r \neq \emptyset$$를 생각하자. 각 $$X_i$$에 대응하는 graded prime ideal $$\mathfrak{p}_i = I(X_i)$$들은 $$S(X)$$에서의 chain이며, 이 때 우리는 원점에 해당하는 ideal $$\mathfrak{m}=(\x_0,\ldots, \x_n)$$을 끼워넣어
-
-$$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_r \supsetneq \mathfrak{m}$$
-
-을 만들 수 있다. 이로부터 $$\dim S(X) \ge \dim X+ 1$$여야 함을 안다.
-
-이제 반대방향 부등식을 보여야한다. $$S(X)$$에서 $$\mathfrak{m}$$으로 끝나는 maximal chain $$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s = \mathfrak{m}$$을 생각하자. [\[가환대수학\] §차원, ⁋명제 10](/ko/math/commutative_algebra/Krull_dimension#prop10)에 의해 $$\mathfrak{m}$$을 포함하는 각 $$\mathfrak{p}_i$$는 homogeneous이므로, 각 $$\mathfrak{p}_i$$에 대응되는 projective subvariety $$Y_i$$를 얻을 수 있다.
-
-$$Y_0 \supsetneq \cdots \supsetneq Y_{s-1} \neq \emptyset$$
-
-은 $$X$$의 chain이다. 따라서 $$\dim X \ge \dim S(X) - 1$$이고 증명이 완료된다.
-
-</details>
-
-따라서 $$\dim C(X) = \dim X + 1$$이다. 특히 다음을 얻는다. 
+이는 graded ring에서의 계산을 통해 보일 수 있다. 특히 $$\dim C(X) = \dim X + 1$$이며, 이로부터 다음을 얻는다. 
 
 <div class="proposition" markdown="1">
 
@@ -116,22 +99,22 @@ $$\mathbb{P}^n$$의 cone은 $$\mathbb{A}^{n+1}$$이고 $$\dim \mathbb{A}^{n+1} =
 
 ## 초곡면의 차원
 
-Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산되는데, 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한 것이다 ([명제 6](#prop6)의 증명 참조).
+Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 직관적으로, 하나의 식을 추가하는 것은 하나의 제약조건을 주는 것과 같으므로 차원을 하나 줄이게 될 것이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Irreducible 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, irreducible 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
+<ins id="prop6">**명제 6**</ins> Irreducible polynomial $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, irreducible hypersurface $$Z(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$V(f)$$의 coordinate ring은 $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$이다. $$f$$가 irreducible 다항식이므로 $$(f)$$는 prime ideal이다. 이제 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 $$(f)$$의 *height*—prime ideal $$(f)$$의 height는 $$(f)$$를 포함하는 prime ideal들의 strictly decreasing chain의 최대 길이를 의미한다—가 1임을 보이자. $$(0) \subsetneq (f)$$는 길이 1의 chain이므로 $$\operatorname{ht}(f) \ge 1$$이다. 반면, UFD ([§정역, ⁋정의 16](/ko/math/ring_theory/integral_domains#def16))인 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 height가 1인 prime ideal은 모두 principal prime ideal이므로, $$(f)$$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $$\operatorname{ht}(f) = 1$$이고,
+$$Z(f)$$의 coordinate ring은 $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$이다. $$f$$가 irreducible 다항식이므로 $$(f)$$는 prime ideal이다. 이제 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 $$(f)$$의 codimension—prime ideal $$(f)$$의 codimension은 $$(f)$$를 포함하는 prime ideal들의 strictly decreasing chain의 최대 길이를 의미한다—가 1임을 보이자. $$(0) \subsetneq (f)$$는 길이 1의 chain이므로 $$\codim(f) \ge 1$$이다. 반면, UFD ([\[정역\] §정역, ⁋정의 16](/ko/math/ring_theory/integral_domains#def16))인 $$\mathbb{K}[\x_1, \ldots, \x_n]$$에서 codimension이 1인 prime ideal은 모두 principal prime ideal이므로, $$(f)$$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $$\codim(f) = 1$$이고,
 
-$$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \operatorname{ht}(f) = n - 1$$
+$$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \codim(f) = n - 1$$
 
-이다. 일반적으로 regular local ring $$R$$과 prime ideal $$\mathfrak{p}$$에 대하여 $$\dim R/\mathfrak{p} = \dim R - \operatorname{ht}(\mathfrak{p})$$가 성립한다. ([\[가환대수학\] §정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4))
+이다. 일반적으로 regular local ring $$R$$과 prime ideal $$\mathfrak{p}$$에 대하여 $$\dim R/\mathfrak{p} = \dim R - \codim(\mathfrak{p})$$가 성립한다. ([\[가환대수학\] §정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4))
 
 </details>
 
@@ -139,7 +122,7 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 ## 함수체를 통한 차원
 
-차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 함수체 $$\mathbb{K}(X)$$는 다양체의 generic point에서의 정보를 담고 있으며, birational ([§유리사상, ⁋정의 9](/ko/math/algebraic_geometry/rational_maps#def9)) invariant이므로 분류에 유용하다. birationally equivalent한 두 다양체는 같은 함수체를 가지므로 같은 차원을 갖는다. 함수체가 얼마나 "자유로운지"를 측정하는 것이 바로 차원이다.
+차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 함수체 $$\mathbb{K}(X)$$는 다양체의 generic point에서의 정보를 담고 있으며, birational ([\[대수기하학\] §유리사상, ⁋정의 9](/ko/math/algebraic_geometry/rational_maps#def9)) invariant이므로 분류에 유용하다. birationally equivalent한 두 다양체는 같은 함수체를 가지므로 같은 차원을 갖는다. 함수체가 얼마나 "자유로운지"를 측정하는 것이 바로 차원이다.
 
 먼저 *transcendence degree*를 정의하자: field 확대 $$L/K$$에서, $$L$$의 원소들 $$\{t_1, \ldots, t_r\}$$가 $$K$$ 위에서 *algebraically independent*라는 것은 $$t_1, \ldots, t_r$$에 대한 어떤 비영다항식 $$f \in K[\t_1, \ldots, \t_r]$$에 대해서도 $$f(t_1, \ldots, t_r) \ne 0$$인 것을 의미한다. $$L/K$$의 *transcendence degree*는 $$K$$ 위에서 algebraically independent인 원소들의 최대 개수이다.
 
@@ -156,7 +139,7 @@ $$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$는 적분역 $$\mathbb{K}
 
 </details>
 
-이 정의의 장점은 birational ([§유리사상, ⁋정의 9](/ko/math/algebraic_geometry/rational_maps#def9)) invariant라는 것이다. 즉, birationally equivalent한 두 다양체는 같은 차원을 갖는다. 함수체가 birational equivalence를 판별하는 핵심 도구이기 때문이다. Transcendence degree는 함수체의 "자유도"를 측정하며, 이것이 바로 차원이다.
+이 정의의 장점은 birational ([\[대수기하학\] §유리사상, ⁋정의 9](/ko/math/algebraic_geometry/rational_maps#def9)) invariant라는 것이다. 즉, birationally equivalent한 두 다양체는 같은 차원을 갖는다. 함수체가 birational equivalence를 판별하는 핵심 도구이기 때문이다. Transcendence degree는 함수체의 "자유도"를 측정하며, 이것이 바로 차원이다.
 
 <div class="example" markdown="1">
 
@@ -192,7 +175,7 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 <ins id="prop10">**명제 10**</ins> Irreducible 다양체 $$X$$와 regular map ([§준사영다양체, ⁋정의 7](/ko/math/algebraic_geometry/quasi_projective_varieties#def7)) $$\varphi: X \to Y$$에 대해 다음이 성립한다.
 
 1. $$\dim \varphi(X) \le \dim X$$
-2. 만약 $$\varphi$$가 dominant ([§유리사상, ⁋정의 8](/ko/math/algebraic_geometry/rational_maps#def8))이면 (즉, $$\overline{\varphi(X)} = Y$$), $$\dim Y \le \dim X$$
+2. 만약 $$\varphi$$가 dominant ([\[대수기하학\] §유리사상, ⁋정의 8](/ko/math/algebraic_geometry/rational_maps#def8))이면 (즉, $$\overline{\varphi(X)} = Y$$), $$\dim Y \le \dim X$$
 3. 만약 $$\varphi$$가 finite이면 (즉, 모든 좌표함수의 pullback이 integral dependence를 만족하는 것), $$\dim \varphi(X) = \dim X$$
 
 </div>
@@ -234,5 +217,3 @@ $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 **[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
 **[AM]** M. F. Atiyah and I. G. Macdonald, *Introduction to Commutative Algebra*, Addison-Wesley, 1969.
-.
-.
