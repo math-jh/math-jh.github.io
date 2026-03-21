@@ -37,7 +37,7 @@ Algebraic variety는 이미 위상공간이므로, [§차원, ⁋정의 10](/ko/
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> Affine variety $$X$$의 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다. ([§차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))
+<ins id="prop2">**명제 2**</ins> Affine variety $$X$$의 차원은 coordinate ring $$\mathbb{K}[X]$$의 Krull dimension과 같다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))
 
 </div>
 
@@ -56,7 +56,7 @@ Algebraic variety는 이미 위상공간이므로, [§차원, ⁋정의 10](/ko/
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§매개계, ⁋정리 10](/ko/math/commutative_algebra/system_of_parameters#cor10)
+[\[가환대수학\] §매개계, ⁋정리 10](/ko/math/commutative_algebra/system_of_parameters#cor10)
 
 </details>
 
@@ -89,25 +89,21 @@ $$S(X)=\mathbb{K}[\x_0,\ldots, \x_n]/I(X)$$
 
 $$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_r \supsetneq \mathfrak{m}$$
 
-을 만들 수 있다. 이로부터 $$\dim S(X) \ge \dim X+ 1$$여야 함을 안다. 이제 반대방향 부등식을 보여야한다. $$S(X)$$의 차원을 정의하는 prime ideal chain $$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s = \mathfrak{m}$$을 생각하자. (여기서 $$\mathfrak{m}$$은 irrelevant ideal)
+을 만들 수 있다. 이로부터 $$\dim S(X) \ge \dim X+ 1$$여야 함을 안다.
 
-각 $$\mathfrak{p}_i = I(Y_i)$$로 대응되는 $$Y_i$$들을 생각하면
+이제 반대방향 부등식을 보여야한다. $$S(X)$$에서 $$\mathfrak{m}$$으로 끝나는 maximal chain $$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s = \mathfrak{m}$$을 생각하자. [\[가환대수학\] §차원, ⁋명제 10](/ko/math/commutative_algebra/Krull_dimension#prop10)에 의해 $$\mathfrak{m}$$을 포함하는 각 $$\mathfrak{p}_i$$는 homogeneous이므로, 각 $$\mathfrak{p}_i$$에 대응되는 projective subvariety $$Y_i$$를 얻을 수 있다.
 
 $$Y_0 \supsetneq \cdots \supsetneq Y_{s-1} \neq \emptyset$$
 
-은 $$X$$의 chain이다. 따라서 $$\dim X \ge s - 1$$.
+은 $$X$$의 chain이다. 따라서 $$\dim X \ge \dim S(X) - 1$$이고 증명이 완료된다.
 
 </details>
 
-<div class="proposition" markdown="1">
-
-<ins id="cor5">**따름정리 5**</ins> $$\dim C(X) = \dim X + 1$$이다.
-
-</div>
+따라서 $$\dim C(X) = \dim X + 1$$이다. 특히 다음을 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> $$\dim \mathbb{P}^n = n$$이다.
+<ins id="prop5">**명제 5**</ins> $$\dim \mathbb{P}^n = n$$이다.
 
 </div>
 
@@ -120,11 +116,11 @@ $$\mathbb{P}^n$$의 cone은 $$\mathbb{A}^{n+1}$$이고 $$\dim \mathbb{A}^{n+1} =
 
 ## 초곡면의 차원
 
-Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산되는데, 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한 것이다 ([명제 7](#prop7)의 증명 참조).
+Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 이들의 차원은 쉽게 계산되는데, 이는 "하나의 방정식 = 하나의 제약 = 차원 1 감소"라는 직관을 formalize한 것이다 ([명제 6](#prop6)의 증명 참조).
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Irreducible 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, irreducible 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
+<ins id="prop6">**명제 6**</ins> Irreducible 다항식 $$f \in \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, irreducible 초곡면 $$V(f) \subset \mathbb{A}^n$$의 차원은 $$n - 1$$이다.
 
 </div>
 
@@ -135,7 +131,7 @@ $$V(f)$$의 coordinate ring은 $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$이다. $$f
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \operatorname{ht}(f) = n - 1$$
 
-이다. 일반적으로 regular local ring $$R$$과 prime ideal $$\mathfrak{p}$$에 대하여 $$\dim R/\mathfrak{p} = \dim R - \operatorname{ht}(\mathfrak{p})$$가 성립한다. ([§정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4))
+이다. 일반적으로 regular local ring $$R$$과 prime ideal $$\mathfrak{p}$$에 대하여 $$\dim R/\mathfrak{p} = \dim R - \operatorname{ht}(\mathfrak{p})$$가 성립한다. ([\[가환대수학\] §정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4))
 
 </details>
 
@@ -149,7 +145,7 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> Irreducible 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
+<ins id="prop7">**명제 7**</ins> Irreducible 다양체 $$X$$의 차원은 함수체 $$\mathbb{K}(X)$$의 $$\mathbb{K}$$ 위에서의 transcendence degree와 같다.
 
 </div>
 
@@ -164,7 +160,7 @@ $$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$는 적분역 $$\mathbb{K}
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9**</ins> 함수체를 통한 차원 계산의 예시들이다.
+<ins id="ex8">**예시 8**</ins> 함수체를 통한 차원 계산의 예시들이다.
 
 1. $$\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(x_1, \ldots, x_n)$$이고, $$x_1, \ldots, x_n$$은 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim \mathbb{A}^n = n$$이다. 이는 $$\mathbb{A}^n$$이 $$n$$개의 "자유로운" 좌표를 가짐을 보여준다.
 2. $$\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(x)$$이고, $$x$$는 $$\mathbb{K}$$ 위에서 대수적 독립이므로 $$\dim V(\y - \x^2) = 1$$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
@@ -178,7 +174,7 @@ $$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[X])$$는 적분역 $$\mathbb{K}
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> Irreducible 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
+<ins id="prop9">**명제 9**</ins> Irreducible 다양체 $$Y \subsetneq X$$에 대해 $$\dim Y < \dim X$$이다.
 
 </div>
 
@@ -193,7 +189,7 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Irreducible 다양체 $$X$$와 regular map ([§준사영다양체, ⁋정의 7](/ko/math/algebraic_geometry/quasi_projective_varieties#def7)) $$\varphi: X \to Y$$에 대해 다음이 성립한다.
+<ins id="prop10">**명제 10**</ins> Irreducible 다양체 $$X$$와 regular map ([§준사영다양체, ⁋정의 7](/ko/math/algebraic_geometry/quasi_projective_varieties#def7)) $$\varphi: X \to Y$$에 대해 다음이 성립한다.
 
 1. $$\dim \varphi(X) \le \dim X$$
 2. 만약 $$\varphi$$가 dominant ([§유리사상, ⁋정의 8](/ko/math/algebraic_geometry/rational_maps#def8))이면 (즉, $$\overline{\varphi(X)} = Y$$), $$\dim Y \le \dim X$$
@@ -216,13 +212,13 @@ $$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cd
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 linear subspace가 "가장 간단한" $$k$$차원 다양체임을 보여준다.
+<ins id="ex11">**예시 11**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 linear subspace가 "가장 간단한" $$k$$차원 다양체임을 보여준다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> **Intersection**: irreducible 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
+<ins id="ex12">**예시 12**</ins> **Intersection**: irreducible 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
 
 $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 
