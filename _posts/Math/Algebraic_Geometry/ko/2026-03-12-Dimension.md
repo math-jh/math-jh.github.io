@@ -130,7 +130,7 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> 함수체를 통한 차원 계산의 예시들이다.
+<ins id="ex8">**예시 8**</ins> 다음은 function field를 통한 차원 계산의 예시들이다.
 
 1. $$\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(x_1, \ldots, x_n)$$이고, $$x_1, \ldots, x_n$$은 $$\mathbb{K}$$ 위에서 algebraically independent이므로 $$\dim \mathbb{A}^n = n$$이다. 
 2. $$\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(x)$$이고, $$x$$는 $$\mathbb{K}$$ 위에서 algebraically independent이므로 $$\dim V(\y - \x^2) = 1$$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
@@ -144,25 +144,33 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> Irreducible 다양체 $$Y \subsetneq X$$가 **closed proper subvariety**이면 $$\dim Y < \dim X$$이다.
+<ins id="prop9">**명제 9**</ins> $$X$$의 closed subvariety $$Y \subsetneq X$$에 대하여 $$\dim Y < \dim X$$이 성립한다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$Y$$의 닫힌집합들의 최대 chain $$Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n \neq \emptyset$$을 생각하자. $$Y \subsetneq X$$이고 $$X$$는 irreducible이므로 $$Y$$는 $$X$$의 닫힌진부분집합이다. 따라서 $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$은 $$X$$의 닫힌집합 chain이고, 그 길이는 $$n+1$$이다. 즉 $$\dim X \ge n + 1 > n = \dim Y$$이다.
+$$Y$$의 닫힌집합들의 maximal chain 
+
+$$Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n \neq \emptyset$$
+
+을 생각하면
+
+$$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
+
+은 $$X$$의  길이는 $$n+1$$ chain이다.
 
 </details>
 
-이 명제는 irreducible 다양체의 진부분집합이 항상 더 낮은 차원을 갖는다는 것을 보여준다. 이는 "부분집합 = 더 작은 = 더 낮은 차원"이라는 직관과 일치한다.
+이는 [명제 6](#prop6)의 일반화라 생각할 수 있다. 이제 regular map과 차원의 관계에 대해 살펴보자. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> Irreducible 다양체 $$X$$와 regular map ([§준사영다양체, ⁋정의 7](/ko/math/algebraic_geometry/quasi_projective_varieties#def7)) $$\varphi: X \to Y$$에 대해 다음이 성립한다.
+<ins id="prop10">**명제 10**</ins> 두 variety $$X, Y$$와 regular map $$\varphi: X \to Y$$에 대해 다음이 성립한다.
 
-1. $$\dim \varphi(X) \le \dim X$$
-2. 만약 $$\varphi$$가 dominant ([\[대수기하학\] §유리사상, ⁋정의 8](/ko/math/algebraic_geometry/rational_maps#def8))이면 (즉, $$\overline{\varphi(X)} = Y$$), $$\dim Y \le \dim X$$
+1. $$\dim \varphi(X) \le \dim X$$가 성립한다.
+2. 만약 $$\varphi$$가 dominant라면 $$\dim Y \le \dim X$$이 성립한다.  ([\[대수기하학\] §유리사상, ⁋정의 8](/ko/math/algebraic_geometry/rational_maps#def8))
 3. 만약 $$\varphi$$가 finite이면 (즉, 모든 좌표함수의 pullback이 integral dependence를 만족하는 것), $$\dim \varphi(X) = \dim X$$
 
 </div>
