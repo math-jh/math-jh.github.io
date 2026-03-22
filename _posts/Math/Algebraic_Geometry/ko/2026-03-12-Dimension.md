@@ -13,7 +13,7 @@ header:
 
 date: 2026-03-12
 last_modified_at: 2026-03-22
-weight: 6
+weight: 5
 
 ---
 
@@ -170,37 +170,62 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 <ins id="prop10">**명제 10**</ins> 두 variety $$X, Y$$와 regular map $$\varphi: X \to Y$$에 대해 다음이 성립한다.
 
 1. $$\dim \varphi(X) \le \dim X$$가 성립한다.
-2. 만약 $$\varphi$$가 dominant라면 $$\dim Y \le \dim X$$이 성립한다.  ([\[대수기하학\] §유리사상, ⁋정의 8](/ko/math/algebraic_geometry/rational_maps#def8))
-3. 만약 $$\varphi$$가 finite이면 (즉, 모든 좌표함수의 pullback이 integral dependence를 만족하는 것), $$\dim \varphi(X) = \dim X$$
+2. 만약 $$\varphi$$가 dominant라면 $$\dim Y \le \dim X$$이 성립한다.  ([§유리사상, ⁋정의 8](/ko/math/algebraic_geometry/rational_maps#def8))
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. $$\varphi(X)$$의 닫힌집합들의 chain $$Z_0 \supsetneq Z_1 \supsetneq \cdots \supsetneq Z_n$$을 생각하자. 그럼 $$\varphi^{-1}(Z_0) \supsetneq \varphi^{-1}(Z_1) \supsetneq \cdots \supsetneq \varphi^{-1}(Z_n)$$은 $$X$$의 닫힌집합들의 chain이다. $$\varphi^{-1}(Z_i) \ne \varphi^{-1}(Z_{i+1})$$인 것은 $$\varphi$$가 $$\varphi(X)$$ 위로 전사이고, $$Z_i \supsetneq Z_{i+1}$$에서 원상이 달라지기 때문이다. 따라서 $$\dim X \ge n = \dim \varphi(X)$$이다.
+1. $$\varphi(X)$$의 닫힌집합들의 chain  
+    
+    $$Z_0 \supsetneq Z_1 \supsetneq \cdots \supsetneq Z_n$$
 
-2. $$\varphi$$가 dominant이면 $$\overline{\varphi(X)} = Y$$이다. 이제 $$\mathbb{K}(Y)$$가 $$\mathbb{K}(X)$$의 subfield로 embedding됨을 보이자. $$\varphi$$는 rational map으로서 pullback $$\varphi^\ast: \mathbb{K}(Y) \to \mathbb{K}(X)$$를 정의한다: $$\varphi^\ast(g) = g \circ \varphi$$. $$\varphi$$가 dominant이므로 $$\varphi^\ast$$는 injective이다. 따라서 $$\operatorname{tr.deg}_{\mathbb{K}} \mathbb{K}(Y) \le \operatorname{tr.deg}_{\mathbb{K}} \mathbb{K}(X)$$이고, transcendence degree에 의해 $$\dim Y \le \dim X$$이다.
+    에 대하여, 이들의 preimage
 
-3. $$\varphi$$가 finite이면, 모든 $$p \in \varphi(X)$$에 대하여 $$\varphi^{-1}(p)$$는 유한집합이다. $$\varphi$$는 주어진 point에서 유한 many-to-one 이므로, coordinate ring level에서 $$\mathbb{K}[X]$$는 $$\mathbb{K}[\varphi(X)]$$-module로서 유한 생성이다. 따라서 $$\mathbb{K}(X)$$는 $$\mathbb{K}(\varphi(X))$$의 유한 확대이고, transcendence degree가 같다. 즉, $$\dim \varphi(X) = \dim X$$이다.
+    $$\varphi^{-1}(Z_0) \supsetneq \varphi^{-1}(Z_1) \supsetneq \cdots \supsetneq \varphi^{-1}(Z_n)$$
+
+    은 $$X$$의 닫힌집합들의 chain이다. 
+2. $$\varphi$$가 dominant라면, pullback $$\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$$가 injective이고, 따라서 [명제 7](#prop7)로부터 원하는 결과를 얻는다. 
 
 </details>
 
-이 명제는 regular map이 차원을 "줄이거나 유지"할 수 있지만 "증가"시킬 수 없음을 보여준다. Dominant map은 차원을 유지하거나 줄일 수 있고, finite map은 차원을 정확히 유지한다.
+첫째 결과는 일반적으로 기하적인 함수가 차원을 높일 수 없다는 우리의 직관을 뒷받침한다. 둘째 결과는 대략적으로 $$\varphi$$가 (up to birational equivalence) surjective라면 target의 차원이 domain의 차원보다 높을 수 없다는 것을 보여준다.
+
+<div class="definition" markdown="1">
+
+<ins id="def11">**정의 11**</ins> Irreducible 다양체 $$X, Y$$ 사이의 regular map $$\varphi: X \to Y$$가 *finite*라는 것은, 모든 affine open $$U \subseteq Y$$에 대하여 $$\varphi^{-1}(U)$$가 affine이고, $$\mathbb{K}[\varphi^{-1}(U)]$$가 $$\mathbb{K}[U]$$ 위의 finitely generated module인 것을 의미한다.
+
+</div>
+
+Finite morphism은 finite fiber를 갖는다는 것을 보일 수 있다. 그럼 다음이 자명하다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop12">**명제 12**</ins> 두 variety들 $$X, Y$$와 finite map $$\varphi: X \to Y$$에 대해 $$\dim X = \dim Y$$이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\varphi$$가 finite이면, coordinate ring level에서 $$\mathbb{K}[X]$$는 $$\mathbb{K}[Y]$$-module로서 finitely generated이다. 따라서 $$\mathbb{K}(X)$$는 $$\mathbb{K}(Y)$$의 finite degree extension이고, transcendence degree가 같다. 즉, $$\dim X = \dim Y$$이다.
+
+</details>
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> **Linear subspace**: $$\mathbb{A}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 선형부분공간 $$L$$은 $$\dim L = k$$이다. 이는 linear subspace가 "가장 간단한" $$k$$차원 다양체임을 보여준다.
+<ins id="ex13">**예시 13**</ins> $$\mathbb{A}^n$$의 $$k$$차원 linear subspace $$L$$은 $$\dim L = k$$이다. 이는 $$L \cong \mathbb{A}^k$$이기 때문이다. 마찬가지로 $$\mathbb{P}^n$$의 $$k$$차원 linear subspace $$L$$은 $$\dim L = k$$이다. 
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> **Intersection**: irreducible 다양체 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
+<ins id="ex14">**예시 14**</ins> 두 variety들 $$X, Y \subseteq \mathbb{A}^n$$에 대해, 일반적으로
 
 $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 
-이다. 이를 *dimension inequality*라 부른다. 등호가 성립하는 경우 (즉, $$X$$와 $$Y$$가 "일반적인 위치"에 있는 경우)를 *proper intersection*이라 부른다. 예를 들어 $$\mathbb{A}^3$$에서 두 평면의 교차는 직선이고, $$2 + 2 - 3 = 1$$이므로 proper intersection이다. 이는 intersection theory의 기본적인 결과이다.
+이다. 이를 *dimension inequality*라 부른다. 이것이 부등식인 이유는 가령, $$X=Y$$와 같은 극단적인 상황에서는 원하는 식이 성립하지 않을 수 있기 때문이다. 등호가 성립하는 경우를 *proper intersection*이라 부른다. 
 
 </div>
 
