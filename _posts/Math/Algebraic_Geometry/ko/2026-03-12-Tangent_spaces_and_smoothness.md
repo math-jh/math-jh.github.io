@@ -51,7 +51,7 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 아핀다양체 $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$의 점 $$x = (x_1, \ldots, x_n)$$에서,
+<ins id="prop2">**명제 2**</ins> Affine variety $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$의 점 $$x = (x_1, \ldots, x_n)$$에서,
 
 $$T_x X \cong \{v \in \mathbb{K}^n \mid (df_i)_x(v) = 0 \text{ for all } i\}$$
 
