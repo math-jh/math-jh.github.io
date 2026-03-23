@@ -66,17 +66,17 @@ $$(df_i)_x(v) = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) v_j$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$X$$의 coordinate ring $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / (f_1, \ldots, f_k)$$를 생각하자. $$\mathfrak{m}_x = (\x_1 - x_1, \ldots, \x_n - x_n) / (f_1, \ldots, f_k)$$이므로,
+$$X$$의 coordinate ring $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / (f_1, \ldots, f_k)$$를 생각하자. $$\mathfrak{m}_x = (\x_1 - a_1, \x_2 - a_2, \ldots, \x_n - a_n) / (f_1, \ldots, f_k)$$이므로,
 
-$$\mathfrak{m}_x / \mathfrak{m}_x^2 \cong (\x_1 - x_1, \ldots, \x_n - x_n) / \left( (\x_1 - x_1, \ldots, \x_n - x_n)^2 + (f_1, \ldots, f_k) \right)$$
+$$\mathfrak{m}_x / \mathfrak{m}_x^2 \cong (\x_1 - a_1, \x_2 - a_2, \ldots, \x_n - a_n) / \left( (\x_1 - a_1, \x_2 - a_2, \ldots, \x_n - a_n)^2 + (f_1, \ldots, f_k) \right)$$
 
 이다. 각 $$f_i$$를 $$x$$에서 Taylor 전개하면
 
-$$f_i = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) (\x_j - x_j) + \text{higher order terms}$$
+$$f_i = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) (\x_j - a_j) + \text{higher order terms}$$
 
-이고, higher order terms는 $$(\x_1 - x_1, \ldots, \x_n - x_n)^2$$에 속한다. 따라서 $$\mathfrak{m}_x / \mathfrak{m}_x^2$$에서 $$f_i$$들의 linear part $$\sum_j \frac{\partial f_i}{\partial \x_j}(x) (\x_j - x_j)$$가 0이 된다.
+이고, higher order terms는 $$(\x_1 - a_1, \x_2 - a_2, \ldots, \x_n - a_n)^2$$에 속한다. 따라서 $$\mathfrak{m}_x / \mathfrak{m}_x^2$$에서 $$f_i$$들의 linear part $$\sum_j \frac{\partial f_i}{\partial \x_j}(x) (\x_j - a_j)$$가 0이 된다.
 
-한편, $$\mathfrak{m}_x / \mathfrak{m}_x^2$$는 $$\x_j - x_j$$들의 linear combination으로 생성되므로 $$\mathbb{K}^n$$의 quotient로 볼 수 있다. 이때 differential $$(df_i)_x$$의 kernel이 정확히 $$\mathfrak{m}_x / \mathfrak{m}_x^2$$에서 사라지는 방향들에 해당한다. Dual을 취하면
+한편, $$\mathfrak{m}_x / \mathfrak{m}_x^2$$는 $$\x_j - a_j$$들의 linear combination으로 생성되므로 $$\mathbb{K}^n$$의 quotient로 볼 수 있다. 이때 differential $$(df_i)_x$$의 kernel이 정확히 $$\mathfrak{m}_x / \mathfrak{m}_x^2$$에서 사라지는 방향들에 해당한다. Dual을 취하면
 
 $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \mid (df_i)_x(v) = 0 \text{ for all } i\}$$
 
