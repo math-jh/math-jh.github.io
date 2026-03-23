@@ -249,7 +249,7 @@ $$F_0\subset F_1\subset\cdots\subset F_n$$
 
 이제 이를 바탕으로 다음의 부분집합
 
-$$\Omega_\lambda^\circ(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})= i$ for all 1\leq i\leq k$}\right\}$$
+$$\Omega_\lambda^\circ(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})= i$ for all $1\leq i\leq k$}\right\}$$
 
 을 생각하면, 이들은 각각 그 closure
 
