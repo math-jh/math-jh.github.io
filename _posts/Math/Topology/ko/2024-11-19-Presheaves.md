@@ -54,6 +54,8 @@ Category $$\Open(X)$$를 ordered set $$(\mathcal{T}, \subseteq)$$를 category로
 
 </div>
 
+참고로, presheaf는 보편적으로 $$\mathcal{F}$$ 혹은 $$\mathscr{F}$$와 같이 표기하지만, 이 둘 가운데는 캘리그래피체인 $$\mathcal{F}$$가 조금 더 자연스럽다. 그러나 우리는 이미 이 글씨체를 위상구조를 나타내는데 사용하고 있으므로, 위상수학 카테고리 내에서는 흘림체를 사용하기로 한다. 
+
 이제 $$\mathscr{F}$$는 contravariant이므로, 열린집합 사이의 inclusion $$U\hookrightarrow V$$가 주어질 때마다 morphism $$\rho_{VU}: \mathscr{F}(V)\rightarrow \mathscr{F}(U)$$가 주어지며, $$\mathscr{F}$$는 합성을 보존하므로 $$U\hookrightarrow V\hookrightarrow W$$가 주어졌다면 $$\rho_{WU}=\rho_{VU}\circ\rho_{WV}$$가 성립해야 한다. 
 
 <div class="example" markdown="1">
