@@ -163,9 +163,9 @@ $$\operatorname{CH}_k(X) \to H_{2k}(X, \mathbb{Z})$$
 
 ## Chow Ring
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm16">**정리 16**</ins> Smooth variety $$X$$에 대해 Chow group $$\operatorname{CH}^\ast(X) = \bigoplus_k \operatorname{CH}^k(X)$$는 intersection product에 대해 **graded ring**을 이룬다.
+<ins id="prop16">**명제 16**</ins> Smooth variety $$X$$에 대해 Chow group $$\operatorname{CH}^\ast(X) = \bigoplus_k \operatorname{CH}^k(X)$$는 intersection product에 대해 **graded ring**을 이룬다.
 
 </div>
 
