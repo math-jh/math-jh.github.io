@@ -26,7 +26,7 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/tangent_spaces_and_smoothness
       - title: "그라스만다양체"
         url: ko/math/algebraic_geometry/grassmannians
-      - title: "Divisors"
+      - title: "인자"
         url: ko/math/algebraic_geometry/divisors
       - title: "Line Bundles"
         url: ko/math/algebraic_geometry/line_bundles

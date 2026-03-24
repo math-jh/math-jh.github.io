@@ -17,7 +17,7 @@ weight: 16
 
 ---
 
-[§Sheaves on Varieties](/ko/math/algebraic_geometry/sheaves_on_varieties)에서 우리는 variety 위의 sheaf 개념을 정의하였다. 이제 sheaf의 *cohomology*를 정의한다. Sheaf cohomology는 국소적 데이터(각 열린집합 위의 section)가 전역적으로 어떻게 결합되는지를 측정하는 도구이다. 이는 특히 [§Line Bundles](/ko/math/algebraic_geometry/line_bundles)에서 도입한 global section space $$H^0(X, \mathcal{L})$$의 고차 일반화이며, Riemann-Roch 정리와 Serre duality의 핵심적인 구성요소이다.
+([§Sheaves on Varieties](/ko/math/algebraic_geometry/sheaves_on_varieties))에서 우리는 variety 위의 sheaf 개념을 정의하였다. 이제 sheaf의 *cohomology*를 정의한다. Sheaf cohomology는 국소적 데이터(각 열린집합 위의 section)가 전역적으로 어떻게 결합되는지를 측정하는 도구이다. 이는 특히 ([§Line Bundles](/ko/math/algebraic_geometry/line_bundles))에서 도입한 global section space $$H^0(X, \mathcal{L})$$의 고차 일반화이며, Riemann-Roch 정리와 Serre duality의 핵심적인 구성요소이다.
 
 ## Derived Functor로서의 정의
 
@@ -107,7 +107,7 @@ $$0 \to H^0(X, \mathcal{F}') \to H^0(X, \mathcal{F}) \to H^0(X, \mathcal{F}'') \
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**** **$$\mathbb{P}^1$$에서의 line bundle cohomology**: [§Line Bundles, ⁋예시 19](/ko/math/algebraic_geometry/line_bundles#ex19)에서 $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = k + 1$$ ($$k \ge 0$$)임을 보았다. Sheaf cohomology의 관점에서, 이는 $$k \ge 0$$일 때:
+<ins id="ex6">**예시 6**** **$$\mathbb{P}^1$$에서의 line bundle cohomology**: ([§Line Bundles, ⁋예시 19](/ko/math/algebraic_geometry/line_bundles#ex19))에서 $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = k + 1$$ ($$k \ge 0$$)임을 보았다. Sheaf cohomology의 관점에서, 이는 $$k \ge 0$$일 때:
 
 $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = k + 1, \quad H^1(\mathbb{P}^1, \mathcal{O}(k)) = 0$$
 
@@ -121,7 +121,7 @@ $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = 0, \quad H^1(\mathbb{P}^1, \mathcal{O}(k))
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**** **$$\mathbb{P}^n$$의 cohomology (Bott 공식)**: [§Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles)에서 살펴본 Bott 공식에 따르면, $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}_{\mathbb{P}^n}(k)$$의 cohomology는 다음과 같다:
+<ins id="ex7">**예시 7**** **$$\mathbb{P}^n$$의 cohomology (Bott 공식)**: ([§Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles))에서 살펴본 Bott 공식에 따르면, $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}_{\mathbb{P}^n}(k)$$의 cohomology는 다음과 같다:
 
 - $$k \ge 0$$: $$H^0(\mathbb{P}^n, \mathcal{O}(k)) = \binom{n+k}{k}$$, 나머지 $$H^i = 0$$ ($$i > 0$$)
 - $$k \le -n-1$$: $$H^n(\mathbb{P}^n, \mathcal{O}(k)) = \binom{-k-1}{n}$$, 나머지 $$H^i = 0$$ ($$i < n$$)
@@ -131,7 +131,7 @@ $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = 0, \quad H^1(\mathbb{P}^1, \mathcal{O}(k))
 
 ## Serre Duality 미리보기
 
-Sheaf cohomology의 가장 중요한 응용 중 하나는 [§Canonical Bundle](/ko/math/algebraic_geometry/canonical_bundle)에서 도입한 canonical bundle $$\omega_X$$과 관련된 Serre duality이다. 이는 §Serre Duality에서 자세히 다루지만, 핵심 정리만 미리 서술하면 다음과 같다.
+Sheaf cohomology의 가장 중요한 응용 중 하나는 ([§Canonical Bundle](/ko/math/algebraic_geometry/canonical_bundle))에서 도입한 canonical bundle $$\omega_X$$과 관련된 Serre duality이다. 이는 §Serre Duality에서 자세히 다루지만, 핵심 정리만 미리 서술하면 다음과 같다.
 
 <div class="proposition" markdown="1">
 
@@ -146,7 +146,7 @@ $$H^i(X, \mathcal{F})^\ast \cong H^{n-i}(X, \omega_X \otimes \mathcal{F}^\vee)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-전체 증명은 §Serre Divalence에서 다룬다. 핵심 아이디어는 canonical sheaf가 dualizing object로 작용한다는 것이다.
+전체 증명은 §Serre Duality에서 다룬다. 핵심 아이디어는 canonical sheaf가 dualizing object로 작용한다는 것이다.
 
 </details>
 

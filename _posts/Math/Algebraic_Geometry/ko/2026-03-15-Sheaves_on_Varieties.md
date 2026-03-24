@@ -80,11 +80,28 @@ $$\mathcal{F}_x = \varinjlim_{U \ni x} \mathcal{F}(U)$$
 
 </div>
 
+<details class="proof" markdown="1">
+<summary>증명 (Sketch)</summary>
+
+Sheafification $$\mathcal{F}^+$$를 다음과 같이 구성한다. 각 열린집합 $$U$$에 대해:
+
+$$\mathcal{F}^+(U) = \{(s_x)_{x \in U} \in \prod_{x \in U} \mathcal{F}_x : \text{각 } x \in U \text{에 대해 } s_x = t_x \text{인 } t \in \mathcal{F}(V) \text{가 존재 (적당한 } V \ni x)\}$$
+
+즉, stalk의 원소들 중 국소적으로 presheaf의 section으로부터 오는 것들만 취한다. 이것이 sheaf 조건을 만족하고, presheaf로부터의 자연스러운 map $$\mathcal{F} \to \mathcal{F}^+$$가 존재함을 확인할 수 있다.
+
+</details>
+
 ## Locally Free Sheaf
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> $$\mathcal{O}_X$$-module $$\mathcal{E}$$가 **locally free<sub>국소 자유 층</sub>**라는 것은 각 점 $$x \in X$$에 대해 열린근방 $$U$$와 isomorphism $$\mathcal{E}|_U \cong \mathcal{O}_U^{\oplus r}$$가 존재하는 것이다.
+<ins id="def7">**정의 7 ($$\mathcal{O}_X$$-module)**</ins> Sheaf $$\mathcal{F}$$가 **$$\mathcal{O}_X$$-module**이라는 것은 각 열린집합 $$U$$에 대해 $$\mathcal{F}(U)$$가 $$\mathcal{O}_X(U)$$-module이고, restriction map이 $$\mathcal{O}_X$$-linear인 것이다.
+
+</div>
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> $$\mathcal{O}_X$$-module $$\mathcal{E}$$가 **locally free<sub>국소 자유 층</sub>**라는 것은 각 점 $$x \in X$$에 대해 열린근방 $$U$$와 isomorphism $$\mathcal{E}|_U \cong \mathcal{O}_U^{\oplus r}$$가 존재하는 것이다.
 
 Rank $$r$$의 locally free sheaf는 rank $$r$$의 vector bundle에 대응한다. Rank 1의 locally free sheaf는 line bundle (= invertible sheaf)이다.
 
@@ -92,13 +109,13 @@ Rank $$r$$의 locally free sheaf는 rank $$r$$의 vector bundle에 대응한다.
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8 (Tangent sheaf)**</ins> Smooth variety $$X$$의 **tangent sheaf<sub>접선층</sub>** $$\mathcal{T}_X$$는 vector field들의 sheaf이다. 이것은 rank $$n = \dim X$$의 locally free sheaf이다.
+<ins id="ex9">**예시 9 (Tangent sheaf)**</ins> Smooth variety $$X$$의 **tangent sheaf<sub>접선층</sub>** $$\mathcal{T}_X$$는 vector field들의 sheaf이다. 이것은 rank $$n = \dim X$$의 locally free sheaf이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9 (Cotangent sheaf)**</ins> $$\Omega_X^1 = \mathcal{T}_X^\vee$$는 cotangent sheaf이다. Rank $$n$$의 locally free sheaf이다.
+<ins id="ex10">**예시 10 (Cotangent sheaf)**</ins> $$\Omega_X^1 = \mathcal{T}_X^\vee$$는 cotangent sheaf이다. Rank $$n$$의 locally free sheaf이다.
 
 </div>
 
@@ -106,7 +123,7 @@ Rank $$r$$의 locally free sheaf는 rank $$r$$의 vector bundle에 대응한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> 두 $$\mathcal{O}_X$$-module $$\mathcal{F}, \mathcal{G}$$에 대해:
+<ins id="def11">**정의 11**</ins> 두 $$\mathcal{O}_X$$-module $$\mathcal{F}, \mathcal{G}$$에 대해:
 
 $$\mathscr{H}om_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})(U) = \operatorname{Hom}_{\mathcal{O}_U}(\mathcal{F}|_U, \mathcal{G}|_U)$$
 
@@ -116,9 +133,20 @@ $$\mathcal{F} \otimes_{\mathcal{O}_X} \mathcal{G}(U) = \mathcal{F}(U) \otimes_{\
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> $$\mathcal{E}$$가 locally free of rank $$r$$이면 $$\mathscr{H}om(\mathcal{E}, \mathcal{F}) \cong \mathcal{E}^\vee \otimes \mathcal{F}$$이다. 여기서 $$\mathcal{E}^\vee = \mathscr{H}om(\mathcal{E}, \mathcal{O}_X)$$는 dual이다.
+<ins id="prop12">**명제 12**</ins> $$\mathcal{E}$$가 locally free of rank $$r$$이면 $$\mathscr{H}om(\mathcal{E}, \mathcal{F}) \cong \mathcal{E}^\vee \otimes \mathcal{F}$$이다. 여기서 $$\mathcal{E}^\vee = \mathscr{H}om(\mathcal{E}, \mathcal{O}_X)$$는 dual이다.
 
 </div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+국소적으로 $$\mathcal{E}|_U \cong \mathcal{O}_U^{\oplus r}$$이므로:
+
+$$\mathscr{H}om(\mathcal{E}, \mathcal{F})|_U \cong \mathscr{H}om(\mathcal{O}_U^{\oplus r}, \mathcal{F}|_U) \cong \mathcal{F}|_U^{\oplus r} \cong (\mathcal{O}_U^{\oplus r})^\vee \otimes_{\mathcal{O}_U} \mathcal{F}|_U$$
+
+이 동형들이 restriction과 compatible하므로 전역적으로도 성립한다.
+
+</details>
 
 ---
 
