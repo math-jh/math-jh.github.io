@@ -99,7 +99,7 @@ $$Z=X\cap W=(Y\cap U)\cap W=(Y\cap W)\cap U$$
 
 $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 
-가 affine variety $$U_i$$의 coordinate ring $$\mathbb{K}[U_i]$$의 원소인 것이다. $$X$$ 위의 모든 regular function들의 sheaf를 $$\mathscr{O}_X$$ 혹은 더 간단히 $$\mathscr{O}$$로 표기한다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1))
+가 affine variety $$U_i$$의 coordinate ring $$\mathbb{K}[U_i]$$의 원소인 것이다. $$X$$ 위의 모든 regular function들의 sheaf를 $$\mathcal{O}_X$$ 혹은 더 간단히 $$\mathcal{O}$$로 표기한다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1))
 
 </div>
 
@@ -109,8 +109,8 @@ $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 
 <ins id="ex6">**예시 6**</ins> Regular function의 예시들을 살펴보자.
 
-1. Affine variety $$X$$에서 $$\mathscr{O}(X) = \mathbb{K}[X]$$이다. 
-2. $$\mathbb{P}^n$$에서 $$\mathscr{O}(\mathbb{P}^n) = \mathbb{K}$$이다. 이를 확인하기 위해 standard open cover $$U_i = \{x_i \ne 0\}$$를 생각하자. 특히 $$U_0$$에서의 regular function은 $$\mathbb{K}[\x_1/\x_0, \ldots, \x_n/\x_0]$$의 원소이고, $$U_1$$에서의 regular function은 $$\mathbb{K}[\x_0/\x_1, \x_2/\x_1, \ldots, \x_n/\x_1]$$의 원소이다. 따라서 만일 어떠한 함수 $$f$$가 $$\mathbb{P}^n$$ 전체에서 regular라면, 이 함수는 $$U_0$$에서는 $$\mathrm{s}_i=\x_i/\x_0$$들에 대한 다항식이고 $$U_1$$에서는 $$\mathrm{t}_i=\x_i/\x_1$$에 대한 다항식이다. 그런데 $$U_0\cap U_1$$에서, 우리는 이들 좌표함수들이 다음 식  
+1. Affine variety $$X$$에서 $$\mathcal{O}(X) = \mathbb{K}[X]$$이다. 
+2. $$\mathbb{P}^n$$에서 $$\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$$이다. 이를 확인하기 위해 standard open cover $$U_i = \{x_i \ne 0\}$$를 생각하자. 특히 $$U_0$$에서의 regular function은 $$\mathbb{K}[\x_1/\x_0, \ldots, \x_n/\x_0]$$의 원소이고, $$U_1$$에서의 regular function은 $$\mathbb{K}[\x_0/\x_1, \x_2/\x_1, \ldots, \x_n/\x_1]$$의 원소이다. 따라서 만일 어떠한 함수 $$f$$가 $$\mathbb{P}^n$$ 전체에서 regular라면, 이 함수는 $$U_0$$에서는 $$\mathrm{s}_i=\x_i/\x_0$$들에 대한 다항식이고 $$U_1$$에서는 $$\mathrm{t}_i=\x_i/\x_1$$에 대한 다항식이다. 그런데 $$U_0\cap U_1$$에서, 우리는 이들 좌표함수들이 다음 식  
     
     $$\mathrm{t}_0=\frac{1}{\mathrm{s}_1},\qquad \mathrm{t}_j=\frac{\mathrm{s}_j}{\mathrm{s}_1}$$
 
@@ -142,7 +142,7 @@ $$\varphi(q) = [F_0(q) : \cdots : F_m(q)]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 함수 $$\varphi: X \to Y$$가 morphism인 필요충분조건은 $$Y$$의 임의의 affine open set $$V$$와 regular function $$f \in \mathscr{O}_Y(V)$$에 대해, $$f \circ \varphi: \varphi^{-1}(V) \to \mathbb{K}$$가 regular function인 것이다.
+<ins id="prop8">**명제 8**</ins> 함수 $$\varphi: X \to Y$$가 morphism인 필요충분조건은 $$Y$$의 임의의 affine open set $$V$$와 regular function $$f \in \mathcal{O}_Y(V)$$에 대해, $$f \circ \varphi: \varphi^{-1}(V) \to \mathbb{K}$$가 regular function인 것이다.
 
 </div>
 
@@ -188,9 +188,9 @@ $$\varphi^{-1}(Z) \cap \varphi^{-1}(V_\alpha) = \{x \in \varphi^{-1}(V_\alpha) \
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\varphi: X \to Y$$, $$\psi: Y \to Z$$가 regular map이라 하자. $$W \subseteq Z$$가 열린집합이고 $$f \in \mathscr{O}(W)$$라면, $$\psi$$가 regular이므로 $$f \circ \psi \in \mathscr{O}(\psi^{-1}(W))$$이다. 이제 $$\varphi$$가 regular이므로 $$(f \circ \psi) \circ \varphi \in \mathscr{O}(\varphi^{-1}(\psi^{-1}(W)))$$이다. 즉,
+$$\varphi: X \to Y$$, $$\psi: Y \to Z$$가 regular map이라 하자. $$W \subseteq Z$$가 열린집합이고 $$f \in \mathcal{O}(W)$$라면, $$\psi$$가 regular이므로 $$f \circ \psi \in \mathcal{O}(\psi^{-1}(W))$$이다. 이제 $$\varphi$$가 regular이므로 $$(f \circ \psi) \circ \varphi \in \mathcal{O}(\varphi^{-1}(\psi^{-1}(W)))$$이다. 즉,
 
-$$f \circ (\psi \circ \varphi) \in \mathscr{O}((\psi \circ \varphi)^{-1}(W))$$
+$$f \circ (\psi \circ \varphi) \in \mathcal{O}((\psi \circ \varphi)^{-1}(W))$$
 
 이므로 $$\psi \circ \varphi$$는 regular map이다.
 

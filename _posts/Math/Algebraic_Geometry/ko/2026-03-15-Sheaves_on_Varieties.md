@@ -125,7 +125,7 @@ Rank $$r$$의 locally free sheaf는 rank $$r$$의 vector bundle에 대응한다.
 
 <ins id="def11">**정의 11**</ins> 두 $$\mathcal{O}_X$$-module $$\mathcal{F}, \mathcal{G}$$에 대해:
 
-$$\mathscr{H}om_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})(U) = \operatorname{Hom}_{\mathcal{O}_U}(\mathcal{F}|_U, \mathcal{G}|_U)$$
+$$\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})(U) = \operatorname{Hom}_{\mathcal{O}_U}(\mathcal{F}|_U, \mathcal{G}|_U)$$
 
 $$\mathcal{F} \otimes_{\mathcal{O}_X} \mathcal{G}(U) = \mathcal{F}(U) \otimes_{\mathcal{O}_X(U)} \mathcal{G}(U)$$
 
@@ -133,7 +133,7 @@ $$\mathcal{F} \otimes_{\mathcal{O}_X} \mathcal{G}(U) = \mathcal{F}(U) \otimes_{\
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> $$\mathcal{E}$$가 locally free of rank $$r$$이면 $$\mathscr{H}om(\mathcal{E}, \mathcal{F}) \cong \mathcal{E}^\vee \otimes \mathcal{F}$$이다. 여기서 $$\mathcal{E}^\vee = \mathscr{H}om(\mathcal{E}, \mathcal{O}_X)$$는 dual이다.
+<ins id="prop12">**명제 12**</ins> $$\mathcal{E}$$가 locally free of rank $$r$$이면 $$\mathcal{H}om(\mathcal{E}, \mathcal{F}) \cong \mathcal{E}^\vee \otimes \mathcal{F}$$이다. 여기서 $$\mathcal{E}^\vee = \mathcal{H}om(\mathcal{E}, \mathcal{O}_X)$$는 dual이다.
 
 </div>
 
@@ -142,7 +142,7 @@ $$\mathcal{F} \otimes_{\mathcal{O}_X} \mathcal{G}(U) = \mathcal{F}(U) \otimes_{\
 
 국소적으로 $$\mathcal{E}|_U \cong \mathcal{O}_U^{\oplus r}$$이므로:
 
-$$\mathscr{H}om(\mathcal{E}, \mathcal{F})|_U \cong \mathscr{H}om(\mathcal{O}_U^{\oplus r}, \mathcal{F}|_U) \cong \mathcal{F}|_U^{\oplus r} \cong (\mathcal{O}_U^{\oplus r})^\vee \otimes_{\mathcal{O}_U} \mathcal{F}|_U$$
+$$\mathcal{H}om(\mathcal{E}, \mathcal{F})|_U \cong \mathcal{H}om(\mathcal{O}_U^{\oplus r}, \mathcal{F}|_U) \cong \mathcal{F}|_U^{\oplus r} \cong (\mathcal{O}_U^{\oplus r})^\vee \otimes_{\mathcal{O}_U} \mathcal{F}|_U$$
 
 이 동형들이 restriction과 compatible하므로 전역적으로도 성립한다.
 
