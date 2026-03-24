@@ -16,7 +16,7 @@ last_modified_at: 2026-03-15
 weight: 14
 ---
 
-[\\[Canonical Bundle\\]](/ko/math/algebraic_geometry/canonical_bundle)에서 우리는 canonical divisor $$K_X$$와 그에 대응하는 line bundle $$\omega_X$$를 도입하였다. 이제 우리는 이 두 객체를 이용해 **Riemann–Roch 정리**를 서술한다. 이 정리는 divisor와 line bundle 사이의 차원을 연결해 주며, $$\dim H^0(X,\mathcal{L})$$를 계산하는 강력한 도구이다.
+([§Canonical Bundle](/ko/math/algebraic_geometry/canonical_bundle))에서 우리는 canonical divisor $$K_X$$와 그에 대응하는 line bundle $$\omega_X$$를 도입하였다. 이제 우리는 이 두 객체를 이용해 **Riemann–Roch 정리**를 서술한다. 이 정리는 divisor와 line bundle 사이의 차원을 연결해 주며, $$\dim H^0(X,\mathcal{L})$$를 계산하는 강력한 도구이다.
 
 Riemann–Roch 정리는 대수기하학에서 가장 중요하고 유명한 정리 중 하나이다. 이 정리는 divisor, line bundle, cohomology 등의 개념을 연결해 주며, 특히 curves와 surfaces에 대해 매우 강력한 결과를 제공한다.
 
@@ -43,7 +43,7 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g,$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우리는 Serre duality ([\\[Canonical Bundle\\]](/ko/math/algebraic_geometry/canonical_bundle#prop12))를 이용한다.
+우리는 Serre duality ([§Canonical Bundle, ⁋명제 12](/ko/math/algebraic_geometry/canonical_bundle#prop12))를 이용한다.
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee.$$
 
@@ -73,10 +73,12 @@ $$\ell(D) = \deg D + 1 \\quad (D \ge 0).$$
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> **Genus 2 curve**: $$g = 2$$, $$K_C \sim 2p$$ (p는 any point).
-Divisor $$D = d$$ (point $$p$$의 $$d$$번째 multiple)에 대해
-$$\ell(d) = d \\quad (d \ge 0),$$
-하지만 $$d \ge 3$$이면 $$\ell(d) = d-1$$ (because $$K_C - D = 2p - d \ge 0$$ when $$d \le 2$$).
+<ins id="ex5">**예시 5**</ins> **Genus 2 curve**: $$g = 2$$이면 $$\deg K_C = 2g - 2 = 2$$이다. Canonical divisor $$K_C$$는 두 점의 linear equivalence class이다.
+일반적인 점 $$p$$에 대해 $$D = d \cdot p$$라고 하자.
+- $$d = 0$$: $$\ell(0) = 1$$ (상수함수만)
+- $$d = 1$$: $$\ell(1) = 1$$ (Riemann-Roch: $$\ell(1) - \ell(K_C - 1) = 1 + 1 - 2 = 0$$)
+- $$d = 2$$: $$\ell(2) = 2$$일 수 있음 (만약 $$2p \sim K_C$$이면 $$\ell(K_C) = g = 2$$)
+- $$d \ge 3$$: $$\deg(K_C - D) = 2 - d < 0$$이므로 $$\ell(K_C - D) = 0$$, 따라서 $$\ell(d) = d - 1$$
 
 </div>
 
@@ -135,7 +137,7 @@ $$\chi(\mathcal{O}_{\\tilde{\mathbb{P}}^2}(dH - kE)) = \frac12 d(d-3) + \frac12 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> Smooth plane curve $$C \subset \mathbb{P}^2$$ of degree $$d$$에 대해, Adjunction formula ([\\[Canonical Bundle\\]](/ko/math/algebraic_geometry/canonical_bundle#prop10))와 Riemann–Roch for curves를 조합하면
+<ins id="prop10">**명제 10**</ins> Smooth plane curve $$C \subset \mathbb{P}^2$$ of degree $$d$$에 대해, Adjunction formula ([§Canonical Bundle, ⁋명제 10](/ko/math/algebraic_geometry/canonical_bundle#prop10))와 Riemann–Roch for curves를 조합하면
 $$g(C) = \frac{(d-1)(d-2)}{2}.$$
 
 </div>
@@ -173,9 +175,15 @@ $$c_1(S)^2 + c_2(S) = 12 \\, \chi(\mathcal{O}_S).$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Riemann–Roch for $$D=0$$:
-$$\chi(\mathcal{O}_S) = \frac{1}{2} K_S^2 + \chi(\mathcal{O}_S).$$
-Thus $$K_S^2 = 2 \\, \chi(\mathcal{O}_S) (\text{degree of }K_S)$$. Using $$c_1^2 = K_S^2$$ and $$c_2 = K_S^2 + 12 \\, \chi(\mathcal{O}_S)$$ gives the formula.
+Hirzebruch–Riemann–Roch theorem을 $$D = 0$$에 적용한다.
+
+$$\chi(\mathcal{O}_S) = \int_S \operatorname{td}(T_S).$$
+
+Todd class는 $$\operatorname{td}(T_S) = 1 + \frac{1}{2}c_1 + \frac{1}{12}(c_1^2 + c_2)$$이고, 여기서 $$c_1 = K_S$$, $$c_2$$는 top Chern class이다. 차수 2 항만 적분하면
+
+$$\chi(\mathcal{O}_S) = \frac{1}{12}(K_S^2 + c_2).$$
+
+따라서 $$K_S^2 + c_2 = 12 \cdot \chi(\mathcal{O}_S)$$이다.
 
 </details>
 
@@ -204,10 +212,9 @@ Riemann–Roch gives $$\ell(D) - \ell(K_C - D) = d + 1 - g$$. Since $$\ell(K_C -
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> **$$g=2$$**: $$K_C \sim 2p$$.
-For $$d \ge 2$$, any divisor $$D = d p$$ satisfies $$\ell(D) \ge d$$.
-For $$d = 2$$, $$\ell(D) = 2$$ (since $$K_C - D = 0$$).
-For $$d = 3$$, $$\ell(D) = 3$$ if $$D \ge 0$$, else $$0$$.
+<ins id="ex15">**예시 15**</ins> **$$g=2$$에서의 Brill-Noether**: $$K_C$$는 degree 2를 갖는다. 
+- $$d = 2$$, $$r = 1$$: $$d \ge r + g = 3$$이 아니므로 보장되지 않음. 하지만 $$D = K_C$$이면 $$\ell(D) = g = 2 \ge 1$$.
+- $$d = 3$$, $$r = 1$$: $$d \ge r + g = 3$$이므로 $$\ell(D) \ge 1$$이 보장됨. 실제로 $$\ell(3) = 2$$ (Riemann-Roch: $$\ell(3) - 0 = 3 + 1 - 2 = 2$$).
 
 </div>
 
@@ -216,5 +223,4 @@ For $$d = 3$$, $$\ell(D) = 3$$ if $$D \ge 0$$, else $$0$$.
 **참고문헌**
 
 **[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.$$
-$$
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
