@@ -22,9 +22,9 @@ Projective space $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 cohom
 
 ## Bott's Formula
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm1">**정리 1 (Bott's Formula)**</ins> $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 cohomology는 다음과 같다:
+<ins id="prop1">**명제 1 (Bott's Formula)**</ins> $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 cohomology는 다음과 같다:
 
 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) = \begin{cases}
 \mathbb{K}[x_0, \ldots, x_n]_d & q = 0, d \geq 0 \\
@@ -127,9 +127,9 @@ Coboundary map을 계산하면 Bott's formula를 얻는다.
 
 </div>
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm9">**정리 9 (Castelnuovo-Mumford Regularity)**</ins> $$\mathcal{F}$$가 $$m$$-regular이면:
+<ins id="prop9">**명제 9 (Castelnuovo-Mumford Regularity)**</ins> $$\mathcal{F}$$가 $$m$$-regular이면:
 1. $$\mathcal{F}(m)$$은 globally generated
 2. $$H^i(\mathbb{P}^n, \mathcal{F}(k)) = 0$$ for $$i > 0$$ and $$k \geq m - i$$
 

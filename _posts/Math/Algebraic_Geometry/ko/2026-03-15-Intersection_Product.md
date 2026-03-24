@@ -24,9 +24,9 @@ Intersection product는 variety의 geometry를 algebra적으로 연구하는 핵
 
 ## Basic Definition
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm1">**정리 1 (Intersection Product)**</ins> Smooth variety $$X$$ 위에서 codimension $$k$$, $$l$$의 두 cycle $$Z, W$$의 **intersection product** $$Z \cdot W \in \operatorname{CH}^{k+l}(X)$$를 정의할 수 있다. 이는 다음 성질을 만족한다:
+<ins id="prop1">**명제 1 (Intersection Product)**</ins> Smooth variety $$X$$ 위에서 codimension $$k$$, $$l$$의 두 cycle $$Z, W$$의 **intersection product** $$Z \cdot W \in \operatorname{CH}^{k+l}(X)$$를 정의할 수 있다. 이는 다음 성질을 만족한다:
 
 1. **Commutativity**: $$Z \cdot W = W \cdot Z$$
 2. **Associativity**: $$(Z_1 \cdot Z_2) \cdot Z_3 = Z_1 \cdot (Z_2 \cdot Z_3)$$
@@ -75,15 +75,15 @@ $$\operatorname{CH}^\ast(\mathbb{P}^2) = \mathbb{Z}[H] / (H^3)$$에서 $$[L_i] =
 
 ## Moving Lemma
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6 (Moving Lemma)**</ins> Quasi-projective variety $$X$$와 cycle $$Z \in \operatorname{CH}^k(X)$$에 대해, 임의의 cycle $$W \in \operatorname{CH}^l(X)$$에 대해 $$Z' \sim_{\text{rat}} Z$$이고 $$Z'$$과 $$W$$가 properly intersect하는 $$Z'$$가 존재한다.
+<ins id="prop6">**명제 6 (Moving Lemma)**</ins> Quasi-projective variety $$X$$와 cycle $$Z \in \operatorname{CH}^k(X)$$에 대해, 임의의 cycle $$W \in \operatorname{CH}^l(X)$$에 대해 $$Z' \sim_{\text{rat}} Z$$이고 $$Z'$$과 $$W$$가 properly intersect하는 $$Z'$$가 존재한다.
 
 </div>
 
-<div class="remark" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="rem7">**참고 7**</ins> Moving lemma에 의해 intersection product를 정의할 수 있다:
+<ins id="prop7">**명제 7**</ins> Moving lemma에 의해 intersection product를 정의할 수 있다:
 1. $$Z' \sim_{\text{rat}} Z$$이고 $$Z'$$이 $$W$$와 properly intersect하도록 선택
 2. $$Z \cdot W := Z' \cdot W$$ (proper intersection으로 계산)
 3. Well-defined임을 확인
@@ -92,9 +92,9 @@ $$\operatorname{CH}^\ast(\mathbb{P}^2) = \mathbb{Z}[H] / (H^3)$$에서 $$[L_i] =
 
 ## Deformation to Normal Cone
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8 (Deformation to Normal Cone)**</ins> Closed embedding $$i: Y \hookrightarrow X$$에 대해, $$Y$$의 $$X$$ 안에서의 normal bundle $$N_{Y/X}$$를 사용하여 intersection product를 정의할 수 있다.
+<ins id="prop8">**명제 8 (Deformation to Normal Cone)**</ins> Closed embedding $$i: Y \hookrightarrow X$$에 대해, $$Y$$의 $$X$$ 안에서의 normal bundle $$N_{Y/X}$$를 사용하여 intersection product를 정의할 수 있다.
 
 이 방법은 moving lemma 없이도 intersection product를 정의한다.
 

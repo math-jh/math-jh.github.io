@@ -85,9 +85,9 @@ $$i_p(V, W) = i_p(V_1, W) + i_p(V_2, W)$$
 
 </div>
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm7">**정리 7 (Bezout for Curves in $$\mathbb{P}^2$$)**</ins> $$\mathbb{P}^2$$에서 degree $$m$$, $$n$$의 두 curve $$C, D$$가 공통 성분을 갖지 않으면:
+<ins id="prop7">**명제 7 (Bezout for Curves in $$\mathbb{P}^2$$)**</ins> $$\mathbb{P}^2$$에서 degree $$m$$, $$n$$의 두 curve $$C, D$$가 공통 성분을 갖지 않으면:
 
 $$\sum_{p \in C \cap D} i_p(C, D) = mn$$
 
@@ -95,9 +95,9 @@ $$\sum_{p \in C \cap D} i_p(C, D) = mn$$
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> Circle $$C: x^2 + y^2 = 1$$과 line $$L: y = 1$$을 $$\mathbb{P}^2$$에서 생각하자.
+<ins id="ex8">**예시 8**</ins> Circle $$C: x^2 + y^2 = z^2$$과 line $$L: y = z$$을 $$\mathbb{P}^2$$에서 생각하자.
 
-$$C \cap L$$은 한 점 $$[1:0:1]$$에서 multiplicity 2로 만난다.
+$$C \cap L$$은 한 점 $$[0:1:1]$$에서 multiplicity 2로 만난다. (Substituting $$y = z$$ into $$x^2 + y^2 = z^2$$ gives $$x^2 = 0$$.)
 
 Check: $$\deg C = 2$$, $$\deg L = 1$$, $$2 \times 1 = 2$$. ✓
 

@@ -18,7 +18,7 @@ weight: 20
 
 ## 도입
 
-[§Riemann-Roch 정리](/ko/math/algebraic_geometry/riemann_roch)에서 우리는 curve를 위한 Riemann-Roch theorem을 살펴보았다. 이제 이를 **surface** (2차원 variety)로 일반화한다.
+이전 글 ([§Riemann-Roch](/ko/math/algebraic_geometry/riemann_roch))에서 우리는 curve를 위한 Riemann-Roch theorem을 살펴보았다. 이제 이를 **surface** (2차원 variety)로 일반화한다.
 
 Surface를 위한 Riemann-Roch는 intersection number를 포함하며, curve의 경우보다 더 복잡하지만 더 풍부한 정보를 제공한다.
 
@@ -54,9 +54,9 @@ $$C \cdot D = |C \cap D|$$
 
 ## Riemann-Roch Theorem
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm4">**정리 4 (Riemann-Roch for Surfaces)**</ins> Smooth projective surface $$S$$와 divisor $$D$$에 대해:
+<ins id="prop4">**명제 4 (Riemann-Roch for Surfaces)**</ins> Smooth projective surface $$S$$와 divisor $$D$$에 대해:
 
 $$\chi(\mathcal{O}(D)) = \chi(\mathcal{O}_S) + \frac{1}{2}(D^2 - D \cdot K_S)$$
 
@@ -131,9 +131,9 @@ $$\chi(\mathcal{O}(D)) = 2 + \frac{D^2}{2}$$
 
 ## Hodge Index Theorem
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm10">**정리 10 (Hodge Index)**</ins> Smooth projective surface $$S$$와 ample divisor $$H$$에 대해, $$D \cdot H = 0$$이고 $$D \not\sim 0$$이면 $$D^2 < 0$$이다.
+<ins id="prop10">**명제 10 (Hodge Index)**</ins> Smooth projective surface $$S$$와 ample divisor $$H$$에 대해, $$D \cdot H = 0$$이고 $$D \not\sim 0$$이면 $$D^2 < 0$$이다.
 
 </div>
 

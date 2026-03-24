@@ -78,6 +78,17 @@ $$\check{H}^1(\mathfrak{U}, \mathcal{F})$$는 $$s_{ij} \in \mathcal{F}(U_i \cap 
 
 </div>
 
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Refinement map $$\tau: J \to I$$가 주어지면, $$\tau$$를 사용하여 Čech complex 사이의 map을 정의할 수 있다:
+
+$$\rho_{\mathfrak{V}\mathfrak{U}}: C^p(\mathfrak{U}, \mathcal{F}) \to C^p(\mathfrak{V}, \mathcal{F}), \quad (\rho_{\mathfrak{V}\mathfrak{U}}\alpha)_{j_0 \cdots j_p} = \alpha_{\tau(j_0) \cdots \tau(j_p)}|_{V_{j_0 \cdots j_p}}$$
+
+이 map이 differential과 commute하므로 cohomology로 내려온다. 다른 refinement map의 선택은 cohomology에서 같은 map을 유도한다.
+
+</details>
+
 <div class="definition" markdown="1">
 
 <ins id="def7">**정의 7**</ins> **Čech cohomology of $$X$$**를 모든 open cover에 대한 direct limit로 정의한다:
@@ -88,23 +99,43 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathfrak{U}} \check{H}^p(\mathfrak{
 
 ## Čech와 Sheaf Cohomology의 비교
 
-<div class="theorem" markdown="1">
+<div class="definition" markdown="1">
 
-<ins id="thm8">**정리 8**</ins> Natural map $$\check{H}^p(X, \mathcal{F}) \to H^p(X, \mathcal{F})$$가 존재한다.
+<ins id="def8">**정의 8 (Acyclic)**</ins> Sheaf $$\mathcal{F}$$가 **acyclic**이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다. 예를 들어 flasque sheaf, injective sheaf, fine sheaf는 모두 acyclic이다.
 
 </div>
 
-<div class="theorem" markdown="1">
+<div class="proposition" markdown="1">
 
-<ins id="thm9">**정리 9 (Leray)**</ins> Open cover $$\mathfrak{U} = \{U_i\}$$에 대해 $$U_{i_0 \cdots i_p}$$에서 $$\mathcal{F}$$가 acyclic (즉 $$H^{>0}(U_{i_0 \cdots i_p}, \mathcal{F}) = 0$$)이면:
+<ins id="prop9">**명제 9**</ins> Natural map $$\check{H}^p(X, \mathcal{F}) \to H^p(X, \mathcal{F})$$가 존재한다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명 (Sketch)</summary>
+
+이 map은 Čech complex에서 injective resolution으로 가는 canonical map에서 유도된다. 구체적으로, $$\mathcal{F}$$의 injective resolution $$\mathcal{F} \to \mathcal{I}^\bullet$$을 선택하면, Čech complex $$C^\bullet(\mathfrak{U}, \mathcal{F})$$에서 double complex $$C^\bullet(\mathfrak{U}, \mathcal{I}^\bullet)$$를 구성할 수 있다. 이 double complex의 두 spectral sequence가 각각 Čech cohomology와 sheaf cohomology로 수렴하며, 이로부터 natural map이 존재함을 알 수 있다.
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10 (Leray)**</ins> Open cover $$\mathfrak{U} = \{U_i\}$$에 대해 $$U_{i_0 \cdots i_p}$$에서 $$\mathcal{F}$$가 acyclic (즉 $$H^{>0}(U_{i_0 \cdots i_p}, \mathcal{F}) = 0$$)이면:
 
 $$\check{H}^p(\mathfrak{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$$
 
 </div>
 
+<details class="proof" markdown="1">
+<summary>증명 (Sketch)</summary>
+
+Acyclic 조건 하에서 앞의 증명에서 언급한 double complex의 spectral sequence가 $$E_2$$ 페이지에서 degenerate한다. 이는 cover의 교집합에서 higher cohomology가 사라지기 때문이다. 따라서 Čech cohomology가 derived functor cohomology와 동형이다.
+
+</details>
+
 <div class="corollary" markdown="1">
 
-<ins id="cor10">**따름정리 10**</ins> Quasi-coherent sheaf $$\mathcal{F}$$ on scheme $$X$$와 affine open cover $$\mathfrak{U}$$에 대해:
+<ins id="cor11">**따름정리 11**</ins> Quasi-coherent sheaf $$\mathcal{F}$$ on scheme $$X$$와 affine open cover $$\mathfrak{U}$$에 대해:
 
 $$\check{H}^p(\mathfrak{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$$
 
@@ -116,7 +147,7 @@ $$\check{H}^p(\mathfrak{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$$
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11 ($$S^1$$)**</ins> Circle $$S^1$$을 두 개의 열린 호 $$U_1, U_2$$로 cover하자. $$U_1 \cap U_2$$는 두 개의 연결성분 $$V_1, V_2$$를 갖는다.
+<ins id="ex12">**예시 12 ($$S^1$$)**</ins> Circle $$S^1$$을 두 개의 열린 호 $$U_1, U_2$$로 cover하자. $$U_1 \cap U_2$$는 두 개의 연결성분 $$V_1, V_2$$를 갖는다.
 
 Constant sheaf $$\underline{\mathbb{Z}}$$에 대해:
 
@@ -131,7 +162,7 @@ Constant sheaf $$\underline{\mathbb{Z}}$$에 대해:
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> $$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \operatorname{Pic}(X)$$이다.
+<ins id="prop13">**명제 13**</ins> $$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \operatorname{Pic}(X)$$이다.
 
 </div>
 

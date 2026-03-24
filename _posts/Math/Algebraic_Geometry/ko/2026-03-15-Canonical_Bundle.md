@@ -17,7 +17,7 @@ weight: 13
 
 ---
 
-[\[Linear Systems\]](/ko/math/algebraic_geometry/linear_systems)에서 우리는 line bundle의 global sections들이 projective space를 형성함을 보았다. 이제 우리는 다양체의 가장 중요한 line bundle 중 하나인 *canonical bundle*을 소개한다. Canonical bundle은 다양체의 "자연스러운" line bundle로, differential form들의 bundle이다.
+([§Linear Systems](/ko/math/algebraic_geometry/linear_systems))에서 우리는 line bundle의 global sections들이 projective space를 형성함을 보았다. 이제 우리는 다양체의 가장 중요한 line bundle 중 하나인 *canonical bundle*을 소개한다. Canonical bundle은 다양체의 "자연스러운" line bundle로, differential form들의 bundle이다.
 
 Canonical bundle은 Serre duality, Riemann-Roch theorem 등 대수기하학의 가장 중요한 정리들에서 핵심적인 역할을 한다. 또한 canonical bundle은 다양체의 "orientation"과 밀접하게 관련되어 있으며, 다양체가 "얼마나 휘어있는지"를 측정하는 도구이다.
 

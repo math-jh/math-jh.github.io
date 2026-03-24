@@ -170,7 +170,7 @@ Tensor product는 commutative이고 associative이다. [명제 8](#prop8)에 의
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathbb{A}^n = \mathbb{V}(\emptyset) \subseteq \mathbb{A}^n$$의 coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$는 unique factorization domain이다. 이 경우 모든 line bundle은 trivial이다. 이는 [\[Divisors\] §예시 9](/ko/math/algebraic_geometry/divisors#ex9)에서 $$\operatorname{Cl}(\mathbb{A}^n) = 0$$임과 일치한다.
+$$\mathbb{A}^n = \mathbb{V}(\emptyset) \subseteq \mathbb{A}^n$$의 coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$는 unique factorization domain이다. 이 경우 모든 line bundle은 trivial이다. 이는 ([§Divisors, ⁋예시 9](/ko/math/algebraic_geometry/divisors#ex9))에서 $$\operatorname{Cl}(\mathbb{A}^n) = 0$$임과 일치한다.
 
 </details>
 
@@ -262,7 +262,7 @@ $$\mathcal{O}_X(D)$$의 section $$s$$는 각 $$U_i$$에서 $$s_i \in \mathcal{O}
 
 <div class="example" markdown="1">
 
-<ins id="ex19">**예시 19**</ins> **$$\mathbb{P}^n$$의 line bundle sections**: $$H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$$는 차수 $$d$$의 동차다항식들의 공간과 동형이다. 이는 [\[사영다양체\] §동차다항식과 사영공간](/ko/math/algebraic_geometry/projective_varieties#def2)에서 정의된 homogeneous coordinates $$\x_0, \ldots, \x_n$$에 의해 생성된다.
+<ins id="ex19">**예시 19**</ins> **$$\mathbb{P}^n$$의 line bundle sections**: $$H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$$는 차수 $$d$$의 동차다항식들의 공간과 동형이다. 이는 ([§사영다양체, ⁋정의 2](/ko/math/algebraic_geometry/projective_varieties#def2))에서 정의된 homogeneous coordinates $$\x_0, \ldots, \x_n$$에 의해 생성된다.
 
 </div>
 
