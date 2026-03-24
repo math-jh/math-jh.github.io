@@ -41,11 +41,11 @@ $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 
 $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast$$
 
-으로 정의한다. 여기서 $$\mathfrak{m}_x$$는 점 $$x$$에서의 local ring $$\mathscr{O}_{X,x}$$의 유일한 maximal ideal이다.
+으로 정의한다. 여기서 $$\mathfrak{m}_x$$는 점 $$x$$에서의 local ring $$\mathcal{O}_{X,x}$$의 유일한 maximal ideal이다.
 
 </div>
 
-결국 이 정의의 핵심은, quotient $$\mathfrak{m}_x / \mathfrak{m}_x^2$$는 $$x$$에서의 first-order infinitesimal data를 담고 있으므로 이를 *Zariski cotangent space* $$T_x^\ast X$$로 정의하겠다는 것이다. 그리고 dual인 $$T_x X$$는 이 data에 작용하는 linear functional들, 즉 방향미분연산자들의 공간이며, 이 정의는 $$T_xX=\Der_\mathbb{K}(\mathscr{O}_{X,x}, \mathbb{K})$$으로 정의하는 것과 맞아떨어진다.
+결국 이 정의의 핵심은, quotient $$\mathfrak{m}_x / \mathfrak{m}_x^2$$는 $$x$$에서의 first-order infinitesimal data를 담고 있으므로 이를 *Zariski cotangent space* $$T_x^\ast X$$로 정의하겠다는 것이다. 그리고 dual인 $$T_x X$$는 이 data에 작용하는 linear functional들, 즉 방향미분연산자들의 공간이며, 이 정의는 $$T_xX=\Der_\mathbb{K}(\mathcal{O}_{X,x}, \mathbb{K})$$으로 정의하는 것과 맞아떨어진다.
 
 우리는 해석학 스타일의 $$\epsilon$$-$$\delta$$ 꼴의 미분을 사용하지는 않으나, 본질적으로 variety들은 다항식으로 정의되며 이들의 미분은 형식적으로 $$\x^n$$을 미분하면 $$n\cdot \x^{n-1}$$이 나오는 것으로 생각할 수 있다. 특히 affine variety의 경우 이는 더 명확하게 써 줄 수 있다.
 
@@ -119,11 +119,11 @@ $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Affine case만 보인다. $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이 irreducible하고 $$\dim X = d$$라 하자. 점 $$x \in X$$에서의 local ring $$\mathscr{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$$를 생각하자. Localization은 차원을 보존하므로 $$\dim \mathscr{O}_{X,x} = \dim X = d$$이다. ([\[대수기하학\] §차원, ⁋명제 2](/ko/math/algebraic_geometry/dimension#prop2))
+Affine case만 보인다. $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이 irreducible하고 $$\dim X = d$$라 하자. 점 $$x \in X$$에서의 local ring $$\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$$를 생각하자. Localization은 차원을 보존하므로 $$\dim \mathcal{O}_{X,x} = \dim X = d$$이다. ([\[대수기하학\] §차원, ⁋명제 2](/ko/math/algebraic_geometry/dimension#prop2))
 
 일반적으로 Noetherian local ring $$(R, \mathfrak{m})$$에 대하여 $$\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$$이다. ([\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)) 따라서
 
-$$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \mathscr{O}_{X,x} = d = \dim X$$
+$$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \mathcal{O}_{X,x} = d = \dim X$$
 
 이다.
 
@@ -200,7 +200,7 @@ $$n - \operatorname{rank}(J_x) = \dim X$$
 
 </div>
 
-Affine case $$X = \operatorname{Spec} A$$에서, $$\eta$$는 $$A$$의 minimal prime ideal (즉, $$(0)$$ ideal)에 해당하며, local ring $$\mathscr{O}_{X,\eta}$$는 정확히 function field $$\mathbb{K}(X) = \operatorname{Frac}(A)$$이다. 기하학적으로, generic point는 $$X$$의 "가장 일반적인 점"으로, $$X$$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
+Affine case $$X = \operatorname{Spec} A$$에서, $$\eta$$는 $$A$$의 minimal prime ideal (즉, $$(0)$$ ideal)에 해당하며, local ring $$\mathcal{O}_{X,\eta}$$는 정확히 function field $$\mathbb{K}(X) = \operatorname{Frac}(A)$$이다. 기하학적으로, generic point는 $$X$$의 "가장 일반적인 점"으로, $$X$$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
 
 <div class="proposition" markdown="1">
 
@@ -217,9 +217,9 @@ $$X_\sm = \{x \in X \mid \operatorname{rank}(J_x) = n - d\}$$
 
 이다. 이제 이 집합이 dense open subset임을 보인다. 우선 $$X_\sm$$이 열린집합인 것은 상대적으로 자명하다.  Rank가 정확히 $$n-d$$라는 것은 두 조건의 동시 성립을 의미한다. 첫째, rank가 $$n-d$$ *이상*이라는 것은, 어떤 $$(n-d) \times (n-d)$$ 부분행렬의 행렬식이 0이 아닌 것과 동치이고, 이는 Zariski 위상에서 열린조건이다. 둘째, rank가 $$n-d$$ *이하*라는 것은, 모든 $$(n-d+1) \times (n-d+1)$$ 부분행렬의 행렬식이 0인 것과 동치이고, 이는 닫힌조건이다. 따라서 rank가 정확히 $$n-d$$인 점들의 집합은 $$X$$의 열린집합이다.
 
-$$X_\sm$$이 공집합을 아님을 보이는 것이 다소 기술적인데, 아이디어는 일반적인 점이 smooth point가 되어야 하므로, $$X$$의 generic point $$\eta$$를 생각하는 것이다. $$\eta$$에서의 localization을 생각하면, local ring $$\mathscr{O}_{X,\eta} = \mathbb{K}(X)$$는 field이므로 regular local ring이다. 그런데 [\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)에 의해
+$$X_\sm$$이 공집합을 아님을 보이는 것이 다소 기술적인데, 아이디어는 일반적인 점이 smooth point가 되어야 하므로, $$X$$의 generic point $$\eta$$를 생각하는 것이다. $$\eta$$에서의 localization을 생각하면, local ring $$\mathcal{O}_{X,\eta} = \mathbb{K}(X)$$는 field이므로 regular local ring이다. 그런데 [\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)에 의해
 
-$$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathscr{O}_{X,\eta} = d$$
+$$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d$$
 
 인데, [명제 4](#prop4)에 의해 반대 부등식도 성립하므로 $$\dim T_\eta X = d$$이다. 따라서 $$\eta \in X_\sm$$이다. 이제 임의의 공집합이 아닌 열린집합은 irreducibility에 의해 dense이다. 
 
