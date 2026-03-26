@@ -1,6 +1,6 @@
 ---
-title: "Cohomology of Line Bundles on P^n"
-excerpt: "Bott's formula and the cohomology of $$\mathcal{O}(d)$$ on projective space"
+title: "Cohomology of Line Bundles on projective spaces"
+excerpt: "Bott's formula and the cohomology of line bundles on projective space"
 
 categories: [Math / Algebraic Geometry]
 permalink: /ko/math/algebraic_geometry/cohomology_of_line_bundles
@@ -13,7 +13,8 @@ header:
 
 date: 2026-03-15
 last_modified_at: 2026-03-15
-weight: 18
+weight: 15
+published: false
 ---
 
 ## 도입

@@ -13,7 +13,8 @@ header:
 
 date: 2026-03-15
 last_modified_at: 2026-03-15
-weight: 14
+weight: 12
+published: false
 ---
 
 ([§Canonical Bundle](/ko/math/algebraic_geometry/canonical_bundle))에서 우리는 canonical divisor $$K_X$$와 그에 대응하는 line bundle $$\omega_X$$를 도입하였다. 이제 우리는 이 두 객체를 이용해 **Riemann–Roch 정리**를 서술한다. 이 정리는 divisor와 line bundle 사이의 차원을 연결해 주며, $$\dim H^0(X,\mathcal{L})$$를 계산하는 강력한 도구이다.
