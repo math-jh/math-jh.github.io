@@ -13,11 +13,12 @@ header:
 
 date: 2026-03-12
 last_modified_at: 2026-03-18
-weight: 16
+weight: 13
 
+published: false
 ---
 
-([§Sheaves on Varieties](/ko/math/algebraic_geometry/sheaves_on_varieties))에서 우리는 variety 위의 sheaf 개념을 정의하였다. 이제 sheaf의 *cohomology*를 정의한다. Sheaf cohomology는 국소적 데이터(각 열린집합 위의 section)가 전역적으로 어떻게 결합되는지를 측정하는 도구이다. 이는 특히 ([§Line Bundles](/ko/math/algebraic_geometry/line_bundles))에서 도입한 global section space $$H^0(X, \mathcal{L})$$의 고차 일반화이며, Riemann-Roch 정리와 Serre duality의 핵심적인 구성요소이다.
+([§층](/ko/math/topology/sheaves))에서 우리는 sheaf 개념을 정의하였다. 이제 sheaf의 *cohomology*를 정의한다. Sheaf cohomology는 국소적 데이터(각 열린집합 위의 section)가 전역적으로 어떻게 결합되는지를 측정하는 도구이다. 이는 특히 ([§Line Bundles](/ko/math/algebraic_geometry/line_bundles))에서 도입한 global section space $$H^0(X, \mathcal{L})$$의 고차 일반화이며, Riemann-Roch 정리와 Serre duality의 핵심적인 구성요소이다.
 
 ## Derived Functor로서의 정의
 

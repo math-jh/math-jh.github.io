@@ -13,8 +13,9 @@ header:
 
 date: 2026-03-15
 last_modified_at: 2026-03-15
-weight: 13
+weight: 11
 
+published: false
 ---
 
 ([§Linear Systems](/ko/math/algebraic_geometry/linear_systems))에서 우리는 line bundle의 global sections들이 projective space를 형성함을 보았다. 이제 우리는 다양체의 가장 중요한 line bundle 중 하나인 *canonical bundle*을 소개한다. Canonical bundle은 다양체의 "자연스러운" line bundle로, differential form들의 bundle이다.

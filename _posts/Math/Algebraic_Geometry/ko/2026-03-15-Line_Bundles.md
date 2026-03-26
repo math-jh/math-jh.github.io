@@ -307,39 +307,74 @@ $$s([x_0:x_1])=ax_0+bx_1$$
 
 </details>
 
-예를 들어, 임의의 principal divisor $$\divisor(f)$$에 대하여 transition function은 $$1$$이므로 trivial bundle이 된다. 우리의 핵심적인 대응은 다음의 대응이다. 
+예를 들어, 임의의 principal divisor $$\divisor(f)$$에 대하여 transition function은 $$1$$이므로 trivial bundle이 된다. 이제 line bundle과 Cartier divisor 사이의 관계를 정리한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop19">**명제 19**</ins> Smooth variety $$X$$에 대하여 $$\Pic(X) \cong \Cl(X)$$이다.
+<ins id="prop19">**명제 19**</ins> 임의의 variety $$X$$에 대하여 $$\Pic(X) \cong \CaCl(X)$$이다. 
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Cartier divisor $$D \mapsto \mathcal{O}_X(D)$$는 $$\CaDiv(X)$$에서 $$\Pic(X)$$로의 group homomorphism이다. 명제 18에서 본 것처럼, 임의의 principal divisor $$\divisor(f)$$는 transition function이 $$1$$이므로 trivial bundle에 대응된다. 따라서 이 사상은 $$\Cl(X) = \CaDiv(X)/\Prin(X)$$에서 $$\Pic(X)$$로의 잘 정의된 group homomorphism을 유도한다.
+우선 $$D \mapsto \mathcal{O}_X(D)$$가 $$\CaDiv(X)$$에서 $$\Pic(X)$$로의 group homomorphism임을 확인한다. Cartier divisor $$D = \{(U_i, f_i)\}$$에 대해 $$\mathcal{O}_X(D)$$의 transition function은 $$g_{ij} = f_i/f_j \in \mathcal{O}_X(U_i \cap U_j)^\times$$이므로 line bundle을 정의한다. Principal divisor $$\divisor(h)$$는 transition function이 $$1$$이므로 trivial bundle에 대응되고, 따라서 $$\CaCl(X) = \CaDiv(X)/\Prin(X)$$에서 $$\Pic(X)$$로의 well-defined group homomorphism을 유도한다.
 
-역으로, line bundle $$\mathcal{L}$$이 주어졌다고 하자. $$\mathcal{L}$$은 국소적으로 $$\mathcal{O}_X$$와 동형이므로, Zariski open dense 부분집합 $$U \subseteq X$$에서 $$\mathcal{L}\vert_U \cong \mathcal{O}_U$$를 얻는다. 이 동형 하에서 $$\mathcal{O}_U$$의 상수 section $$1$$의 원상을 $$s$$라 하자. $$s$$는 $$U$$ 위에서 nowhere vanishing이며, $$X$$의 나머지 부분에서는 극점과 영점을 가질 수 있다. 이로부터 Weil divisor $$\divisor(s) = \sum_P v_P(s)\,P$$를 정의할 수 있다. 여기서 $$v_P(s)$$는 $$s$$의 점 $$P$$에서의 order of vanishing, 즉 $$s$$가 $$P$$에서 0이 되는 차수(음이면 극점)이다.
+이것이 isomorphism임을 보이기 위해, 임의의 line bundle $$\mathcal{L}$$이 주어졌다고 하자. Trivializing open $$U \subseteq X$$에서 $$\mathcal{L}\vert_U \cong \mathcal{O}_U$$이므로, $$\mathcal{O}_U$$의 constant section $$1$$에 대응되는 $$s \in \mathcal{L}(U)$$를 잡을 수 있으며, 이 $$s$$는 nonzero rational section이다. 이제 $$\mathcal{L}$$의 trivializing cover $$\{U_i\}$$를 생각하자. 각 $$U_i$$에서 trivialization $$\psi_i\colon \mathcal{L}\vert_{U_i} \cong \mathcal{O}_{U_i}$$를 잡고, $$f_i := \psi_i(s\vert_{U_i \cap U}) \in \mathcal{O}_X(U_i \cap U) \subseteq \mathbb{K}(X)$$를 정의한다. 그러면 $$U_i \cap U_j \cap U$$ 위에서 $$f_i = g_{ij} f_j$$이고, $$X$$가 irreducible이므로 $$U_i \cap U_j \cap U$$는 $$U_i \cap U_j$$의 dense open subset이므로 이 관계는 $$U_i \cap U_j$$ 전체에서 성립한다. 즉 $$f_i/f_j = g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$$이므로 $$D = \{(U_i, f_i)\}$$는 Cartier divisor이고, $$\mathcal{O}_X(D)$$의 transition function이 $$\{g_{ij}\}$$이므로 $$\mathcal{O}_X(D) \cong \mathcal{L}$$이다.
 
-다른 rational section $$s' = fs$$ ($$f \in \mathbb{K}(X)^\ast$$)를 선택하면 $$\divisor(s') = \divisor(f) + \divisor(s)$$이므로, $$\divisor(s)$$와 $$\divisor(s')$$는 linearly equivalent하다. 즉, linear equivalence class $$[\divisor(s)] \in \Cl(X)$$는 $$s$$의 선택에 무관하다. 따라서 $$\mathcal{L} \mapsto [\divisor(s)]$$는 $$\Pic(X)$$에서 $$\Cl(X)$$로의 잘 정의된 inverse map을 이룬다.
+마지막으로 injectivity를 보인다. $$\mathcal{O}_X(D) \cong \mathcal{O}_X(D')$$이면 두 line bundle의 transition function이 같으므로 $$f_i/f_i' = f_j/f_j'$$ on $$U_i \cap U_j$$ (모든 $$i, j$$). 다시 $$U_i \cap U_j$$의 dense open subset에서 이 관계가 성립하므로 $$f_i/f_i'$$는 모든 $$i$$에 대해 동일한 rational function $$h \in \mathbb{K}(X)^\times$$이고, $$D - D' = \divisor(h)$$이므로 linearly equivalent하다.
 
 </details>
 
-마지막으로 다음을 증명한다. 
+만일 $$X$$가 smooth라면, $$\CaCl(X)\cong \Cl(X)$$임을 이미 알고 있다. 이들의 관계는 다음 commutative diagram에 담겨있다. 
+
+img
+
+## Pullback of Line Bundles
+
+Morphism $$\varphi: X \to Y$$가 주어졌을 때, $$Y$$ 위의 line bundle을 $$X$$ 위로 "당기는" 연산은 자연스럽게 정의된다. 예를 들어, $$Y$$ 위의 hypersurface를 $$\varphi$$에 의해 $$X$$ 위로 당기면, 이에 대응하는 line bundle도 함께 당겨져야 한다. 이 pullback 연산은 Picard group 사이의 group homomorphism을 유도하며, embedding의 경우 ambient space의 line bundle을 부분다양체로 제한하는 것으로 이해할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop20">**명제 20**</ins> ([§인자, ⁋정의 2](/ko/math/algebraic_geometry/divisors#def2))에서 정의한 *effective divisor* (모든 계수가 음이 아닌 divisor) $$D$$에 대하여, $$H^0(X, \mathcal{O}_X(D))$$는 $$D$$보다 크거나 같은 effective divisor들에 대응되는 rational function들의 공간과 자연스럽게 동형이다.
+<ins id="prop20">**명제 20**</ins> Morphism $$\varphi: X \to Y$$와 $$Y$$ 위의 line bundle $$\mathcal{L}$$에 대하여, *pullback* $$\varphi^\ast \mathcal{L}$$은 $$X$$ 위의 line bundle이다. 그 transition functions은 $$\{g_{ij} \circ \varphi\}$$이다. 여기서 $$\{g_{ij}\}$$는 $$\mathcal{L}$$의 transition functions이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathcal{O}_X(D)$$의 section $$s$$는 각 $$U_i$$에서 $$s_i \in \mathcal{O}_X(U_i)$$로 표현되고, $$U_i \cap U_j$$에서 $$s_i = (f_i/f_j) s_j$$를 만족한다. 이는 rational function $$f = s_i/f_i$$를 정의하며, $$\divisor(f) + D \ge 0$$을 만족한다. 역으로, 이러한 $$f$$로부터 section $$s$$를 재구성할 수 있다.
+Line bundle $$\mathcal{L}$$이 open cover $$\{U_i\}$$ 위에서 transition functions $$\{g_{ij}\}$$로 주어졌다고 하자. Pullback $$\varphi^\ast \mathcal{L}$$은 open cover $$\{\varphi^{-1}(U_i)\}$$ 위에서 transition functions $$\{g_{ij} \circ \varphi\}$$로 정의된다. $$\varphi^\ast \mathcal{L}$$이 $$X$$ 위의 line bundle임을 확인하려면, transition function들이 cocycle 조건을 만족하면 된다.
+
+Cocycle 조건 세 가지를 모두 확인한다.
+
+1. $$g_{ii} \circ \varphi = 1 \circ \varphi = 1$$ since $$g_{ii} = 1$$.
+2. $$(g_{ij} \circ \varphi)(g_{ji} \circ \varphi) = (g_{ij} g_{ji}) \circ \varphi = 1 \circ \varphi = 1$$ since $$g_{ij} g_{ji} = 1$$.
+3. $$(g_{ij} \circ \varphi)(g_{jk} \circ \varphi) = (g_{ij} g_{jk}) \circ \varphi = g_{ik} \circ \varphi$$ since $$g_{ij} g_{jk} = g_{ik}$$.
+
+따라서 $$\{g_{ij} \circ \varphi\}$$는 cocycle condition을 만족한다.
 
 </details>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop21">**명제 21**</ins> Pullback은 group homomorphism $$\varphi^\ast: \operatorname{Pic}(Y) \to \operatorname{Pic}(X)$$를 유도한다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast \mathcal{L} \otimes \varphi^\ast \mathcal{M}$$이고 $$\varphi^\ast \mathcal{O}_Y \cong \mathcal{O}_X$$이므로, pullback은 group homomorphism이다.
+
+이를 확인하기 위해 transition function 관점에서 살펴보자. $\mathcal{L} \otimes \mathcal{M}$의 transition function은 $g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}$이므로, $\varphi^*(\mathcal{L} \otimes \mathcal{M})$의 transition function은 $(g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}) \circ \varphi = (g_{ij}^{\mathcal{L}} \circ \varphi)(g_{ij}^{\mathcal{M}} \circ \varphi)$이다. 이는 각각 $\varphi^*\mathcal{L}$과 $\varphi^*\mathcal{M}$의 transition function이므로, $\varphi^*(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^*\mathcal{L} \otimes \varphi^*\mathcal{M}$을 얻는다. 또한 $\mathcal{O}_Y$의 transition function은 모두 $1$이므로 $\varphi^*\mathcal{O}_Y$의 transition function도 $1$, 즉 $\varphi^*\mathcal{O}_Y \cong \mathcal{O}_X$이다.
+
+</details>
+
+<div class="example" markdown="1">
+
+<ins id="ex22">**예시 22**</ins> **Embedding의 pullback**: Embedding $$i: C \hookrightarrow \mathbb{P}^n$$에 대해, $$i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$$은 curve $$C$$ 위의 line bundle이다. 이를 $$C$$ 위의 *hyperplane bundle*이라 부르며, $$\mathcal{O}_C(1)$$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $C = \mathbb{P}^1 \subset \mathbb{P}^n$일 때 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12)에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
+
+</div>
 
 ## Vector Bundle
 
@@ -347,60 +382,36 @@ $$\mathcal{O}_X(D)$$의 section $$s$$는 각 $$U_i$$에서 $$s_i \in \mathcal{O}
 
 <div class="definition" markdown="1">
 
-<ins id="def21">**정의 21**</ins> 다양체 $$X$$ 위의 *rank r vector bundle* $$\mathcal{E}$$는 다음과 같은 데이터로 구성된다.
+<ins id="def23">**정의 23**</ins> 다양체 $$X$$ 위의 *rank r vector bundle* $$\mathcal{E}$$는 다음과 같은 데이터로 구성된다.
 
-1. 전사 사상 $$\pi: \mathcal{E} \to X$$.
-2. $$X$$의 open cover $$\{U_i\}$$와 각 $$i$$에 대한 isomorphism $$\phi_i: \pi^{-1}(U_i) \to U_i \times \mathbb{A}^r$$ (local trivialization).
-3. 각 $$i, j$$에 대해 $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \to (U_i \cap U_j) \times \mathbb{A}^r$$이 $$(p, v) \mapsto (p, g_{ij}(p)v)$$의 꼴인 조건. 여기서 $$g_{ij} \in \operatorname{GL}_r(\mathcal{O}_X(U_i \cap U_j))$$는 *transition function*이라 부른다.
+1. Projection $$\pi: \mathcal{E} \to X$$.
+2. $$X$$의 open cover $$\{U_i\}$$와 각 $$i$$에 대한 *local trivialization* $$\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^r$$. 이들이 정의하는
+
+    $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \to (U_i \cap U_j) \times \mathbb{A}^r$$
+
+    는 적당한 *transition function* $$g_{ij} \in \operatorname{GL}_r(\mathcal{O}_X(U_i \cap U_j))$$에 대하여 $$(p, v) \mapsto (p, g_{ij}(p)v)$$의 꼴이다.
 
 </div>
 
 Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $$\mathbb{A}^1$$ 대신 $$\mathbb{A}^r$$이고, transition function이 $$\mathcal{O}_X(U_i \cap U_j)^\ast = \operatorname{GL}_1(\mathcal{O}_X(U_i \cap U_j))$$ 대신 $$\operatorname{GL}_r(\mathcal{O}_X(U_i \cap U_j))$$ 값을 갖는다는 점이다. 따라서 line bundle은 정확히 rank 1 vector bundle이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop22">**명제 22**</ins> Transition functions $$\{g_{ij}\}$$는 다음의 *cocycle condition*을 만족한다.
-
-1. $$g_{ii} = I_r$$ for all $$i$$.
-2. $$g_{ij} = g_{ji}^{-1}$$ for all $$i, j$$.
-3. $$g_{ij} g_{jk} = g_{ik}$$ on $$U_i \cap U_j \cap U_k$$ for all $$i, j, k$$.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-[명제 2](#prop2)의 증명과 동일하다. 다만 $$g_{ij}$$가 행렬값을 가지므로 곱셈의 순서에 주의해야 한다.
-
-</details>
+[명제 2](#prop2)와 같은 cocycle condition이 성립한다. 다만 transition function이 행렬값을 가지므로 곱셈의 순서에 주의해야 한다.
 
 <div class="example" markdown="1">
 
-<ins id="ex23">**예시 23**</ins> *Trivial vector bundle* $$\mathcal{O}_X^{\oplus r} = X \times \mathbb{A}^r$$은 모든 transition function이 $$g_{ij} = I_r$$인 rank $$r$$ vector bundle이다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex24">**예시 24**</ins> *Tangent bundle* $$\mathcal{T}_X$$는 다양체 $$X$$의 각 점 $$p$$에 그 점에서의 tangent space $$T_p X$$를 대응시키는 vector bundle이다. 만약 $$X$$가 $$n$$차원 smooth variety이면 $$\mathcal{T}_X$$는 rank $$n$$ vector bundle이다. Local coordinate $$\x_1, \ldots, \x_n$$에서 $$\mathcal{T}_X$$의 local frame은 $$\partial/\partial \x_1, \ldots, \partial/\partial \x_n$$으로 주어진다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex25">**예시 25**</ins> *Cotangent bundle* (또는 *canonical bundle*) $$\Omega_X^1 = \mathcal{T}_X^\vee$$는 tangent bundle의 dual이다. 각 점 $$p$$에서 fiber는 cotangent space $$T_p^\ast X$$이며, 이는 $$T_p X$$의 dual space이다. Rank $$n$$ 다양체에서 $$\Omega_X^1$$은 rank $$n$$ vector bundle이고, local coordinate에서 $$d\x_1, \ldots, d\x_n$$이 local frame을 이룬다. Top exterior power $$\omega_X = \bigwedge^n \Omega_X^1$$은 *canonical line bundle*이라 불리며, Serre duality 등에서 중요한 역할을 한다.
+<ins id="ex24">**예시 24**</ins> 세 가지 vector bundle의 예를 든다. *Trivial vector bundle* $$\mathcal{O}_X^{\oplus r} = X \times \mathbb{A}^r$$은 모든 transition function이 $$g_{ij} = I_r$$인 rank $$r$$ vector bundle이다. *Tangent bundle* $$\mathcal{T}_X$$는 각 점 $$p \in X$$에 tangent space $$T_p X$$를 fiber로 갖는 vector bundle이다. 만약 $$X$$가 $$n$$차원 smooth variety이면 rank $$n$$ vector bundle이고, local coordinate $$\x_1, \ldots, \x_n$$에서 $$\partial/\partial \x_1, \ldots, \partial/\partial \x_n$$이 local frame을 이룬다. *Cotangent bundle* $$\Omega_X^1 = \mathcal{T}_X^\vee$$는 tangent bundle의 dual이며, local coordinate에서 $$d\x_1, \ldots, d\x_n$$이 local frame을 이룬다. Top exterior power $$\omega_X = \bigwedge^n \Omega_X^1$$은 *canonical line bundle*이라 불리며, Serre duality 등에서 중요한 역할을 한다.
 
 </div>
 
 Vector bundle에 대해서도 line bundle과 유사한 연산을 정의할 수 있다. 두 vector bundle $$\mathcal{E}, \mathcal{F}$$의 tensor product $$\mathcal{E} \otimes \mathcal{F}$$는 fiberwise tensor product로 정의되며, 그 transition functions은 $$g_{ij}^{\mathcal{E}} \otimes g_{ij}^{\mathcal{F}}$$이다. Dual bundle $$\mathcal{E}^\vee$$의 transition functions은 $$\left(g_{ij}^{\mathcal{E}}\right)^{-t}$$ (inverse transpose)이다. 또한 direct sum $$\mathcal{E} \oplus \mathcal{F}$$는 fiberwise direct sum으로 정의되며, 이때 transition functions은 block diagonal 행렬 $$\begin{pmatrix} g_{ij}^{\mathcal{E}} & 0 \\ 0 & g_{ij}^{\mathcal{F}} \end{pmatrix}$$이 된다.
 
-## Tautological Bundle: Grassmannian으로의 일반화
+## Tautological Bundle on Grassmannian
 
-위에서 정의한 $$\mathbb{P}^n$$ 위의 tautological bundle $$\mathcal{O}_{\mathbb{P}^n}(-1)$$은 사영공간 $$\mathbb{P}^n = \Gr(1, n+1)$$이라는 사실을 통해 Grassmannian으로 자연스럽게 일반화된다. Grassmannian $$\Gr(k, n)$$은 $$n$$차원 벡터공간의 $$k$$차원 부분공간들의 공간이며, 이 일반화에서 tautological bundle은 rank $$k$$ vector bundle이 되며, 이와 쌍대를 이루는 *quotient bundle*도 자연스럽게 정의된다.
+위에서 정의한 $$\mathbb{P}^n$$ 위의 tautological bundle $$\mathcal{O}_{\mathbb{P}^n}(-1)$$은 Grassmannian으로 자연스럽게 일반화된다. Grassmannian $$\Gr(k, n)$$은 $$n$$차원 벡터공간의 $$k$$차원 부분공간들의 공간이며, 이 일반화에서 tautological bundle은 rank $$k$$ vector bundle이 되며, 이와 쌍대를 이루는 *quotient bundle*도 자연스럽게 정의된다.
 
 <div class="definition" markdown="1">
 
-<ins id="def26">**정의 26**</ins> Grassmannian $$\Gr(k, n)$$ 위에 다음 두 vector bundle을 정의한다.
+<ins id="def25">**정의 25**</ins> Grassmannian $$\Gr(k, n)$$ 위에 다음 두 vector bundle을 정의한다.
 
 1. *Tautological bundle* $$S$$: 각 점 $$[V] \in \Gr(k, n)$$ (여기서 $$V \subseteq \mathbb{A}^n$$는 $$k$$차원 부분공간)에 그 부분공간 $$V$$ 자체를 fiber로 대응시키는 rank $$k$$ vector bundle.
    $$S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$$
@@ -418,7 +429,7 @@ $$0 \to S \to \mathcal{O}_{\Gr(k,n)}^{\oplus n} \to Q \to 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop27">**명제 27**</ins> $$\Gr(1, n+1) = \mathbb{P}^n$$에서 tautological bundle $$S$$는 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$과 동형이다.
+<ins id="prop26">**명제 26**</ins> $$\Gr(1, n+1) = \mathbb{P}^n$$에서 tautological bundle $$S$$는 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$과 동형이다.
 
 </div>
 
@@ -431,13 +442,9 @@ $$\Gr(1, n+1)$$의 각 점은 $$\mathbb{A}^{n+1}$$의 1차원 부분공간, 즉 
 
 이 명제는 Grassmannian의 tautological bundle이 사영공간에서는 익숙한 $$\mathcal{O}(-1)$$으로 귀결됨을 보여준다. Quotient bundle $$Q$$의 경우, $$\Gr(1, n+1) = \mathbb{P}^n$$에서 rank $$n$$이며, 이는 tangent bundle $$\mathcal{T}_{\mathbb{P}^n}$$과 밀접한 관계가 있다. 실제로 $$\mathcal{T}_{\mathbb{P}^n} \cong \Hom(S, Q) \cong S^\vee \otimes Q$$가 성립한다.
 
-Grassmannian 위의 tautological bundle과 quotient bundle은 Schubert calculus, quantum cohomology 등 현대 대수기하학의 핵심 도구이며, 이들의 Chern class들은 Grassmannian의 cohomology ring을 생성한다. 이는 tautological bundle이 단순히 하나의 예시를 넘어, 대수기하학 전반에 걸쳐 근본적인 구조임을 시사한다.
-
 ---
 
 **참고문헌**
 
 **[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
-
-
