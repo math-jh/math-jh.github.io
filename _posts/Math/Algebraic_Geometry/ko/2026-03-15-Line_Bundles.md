@@ -38,6 +38,16 @@ Line bundle, 더 나아가 이 글의 뒷부분에서 정의할 vector bundle은
 
 </div>
 
+두 line bundle $\mathcal{L}, \mathcal{M} \to X$ 사이의 *morphism* $\varphi \colon \mathcal{L} \to \mathcal{M}$은 각 점 $p \in X$에서 fiber 사이의 $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \to \mathcal{M}_p$를 정의하며, 적당한 open cover $\{U_k\}$ 위에서 $\mathcal{O}_X(U_k)$-module homomorphism
+
+$$\varphi_k \colon \mathcal{O}_{U_k} \to \mathcal{O}_{U_k}$$
+
+으로 표현될 수 있고, 이들 사이에
+
+$$g^{\mathcal{M}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{L}}_{kl}$$
+
+이 성립한다. Line bundle의 fiber는 1차원이므로, 각 $\varphi_k$는 적당한 $h_k \in \mathcal{O}_X(U_k)$에 의한 곱셈 $s \mapsto h_k s$로 주어진다. $\varphi$가 각 fiber에서 bijective일 때, 이를 *isomorphism*이라 부르고 $\mathcal{L} \cong \mathcal{M}$으로 표기한다. Fiber가 1차원이므로 이는 각 점에서 nonzero scalar를 주는 것과 같으며, 즉 compatible하게 $h_k \in \mathcal{O}_X(U_k)^\ast$를 선택하는 것과 동치이다.
+
 그럼 다음 명제는 cocycle condition의 정의로부터 직접 확인된다.
 
 <div class="proposition" markdown="1">
@@ -52,7 +62,7 @@ Line bundle, 더 나아가 이 글의 뒷부분에서 정의할 vector bundle은
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> *Trivial line bundle* $$\mathcal{O}_X = X \times \mathbb{A}^1$$은 모든 transition function이 $$g_{ij} = 1$$인 line bundle이다. 이는 twist가 없는 가장 간단한 line bundle이다.
+<ins id="ex3">**예시 3**</ins> *Trivial line bundle* $$\mathcal{O}_X = X \times \mathbb{A}^1$$은 모든 transition function이 $$g_{ij} = 1$$인 line bundle이다. 이는 twist가 없는 가장 간단한 line bundle이다. 즉, 정의 1의 둘째 조건은 line bundle $\mathcal{L}$이 적당한 열린집합 $U \subseteq X$로 제한했을 때 trivial line bundle과 isomorphic한 것을 의미한다.
 
 </div>
 
@@ -177,10 +187,28 @@ $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> $$\mathbb{P}^n$$의 line bundle $$\mathcal{O}_{\mathbb{P}^n}(d)$$를 다음과 같이 정의한다. 우선 
+<ins id="ex12">**예시 12**</ins> $$\mathbb{P}^n$$의 line bundle $$\mathcal{O}_{\mathbb{P}^n}(d)$$를 다음과 같이 정의한다. 우선 각각의 standard open cover
+
+$$U_i = \{[\x_0 : \cdots : \x_n] \mid \x_i \ne 0\}$$
+
+가 이 bundle의 trivializing open set이다. 즉, 이들 위에서 $$\mathcal{O}_{\mathbb{P}^n}(d)$$는 trivial line bundle이다. 이제 이들 사이의 transition map은 각각의 $$U_i \cap U_j$$에서 $$\mathcal{O}_{U_j}\vert_{U_i \cap U_j} \to \mathcal{O}_{U_i}\vert_{U_i \cap U_j}$$를 다음의 식
+
+$$g_{ij}: f\mapsto (\x_i/\x_j)^df $$
+
+로 정의한다. 즉, 각 점 $$x \in U_i \cap U_j$$와 그 점에서의 fiber $$v \in \mathcal{O}_{\mathbb{P}^n}(d)_x\cong \mathbb{A}^1$$에 대하여, transition map은
+
+$$g_{ij}(x): v \mapsto (\x_i/\x_j)^d(x) \cdot v$$
+
+로 주어진다. 이러한 방식으로 우리는 group homomorphism 
+
+$$\mathbb{Z}\rightarrow \Pic(\mathbb{P}^n);\qquad d\mapsto [\mathcal{O}_{\mathbb{P}^n}(d)]$$
+
+을 정의할 수 있다. 
+
+우리의 주장은 이것이 isomorphism이라는 것이다. 우선 임의의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}\vert_{U_i}$$는 [예시 11](#ex11)에 의해 trivial line bundle이므로 
 
 
- standard open cover $$U_i = \{[\x_0 : \cdots : \x_n] \mid \x_i \ne 0\}$$ 위에서 각 $$U_i$$에 trivial line bundle을 주고, 교집합 $$U_i \cap U_j$$에서 transition function $$g_{ij} = (\x_i/\x_j)^d$$로 붙여 $$d \in \mathbb{Z}$$에 대해 line bundle $$\mathcal{O}_{\mathbb{P}^n}(d)$$를 정의하자. $$d \mapsto [\mathcal{O}_{\mathbb{P}^n}(d)]$$는 group homomorphism $$\mathbb{Z} \to \Pic(\mathbb{P}^n)$$를 정의하며, 이가 isomorphism임을 보인다. $$\mathcal{L}$$의 transition functions을 $$h_{ij}$$라 하면, $$U_i \cap U_j$$에서의 invertible regular function이 상수와 단항식의 곱이므로 $$h_{ij} = c_{ij}(\x_i/\x_j)^d$$ ($$c_{ij} \in \mathbb{K}^\ast$$) 꼴이다. $$c_{ij}$$로 정의되는 line bundle은 cocycle 조건에 의해 trivial하므로 $$\mathcal{L} \cong \mathcal{O}_{\mathbb{P}^n}(d)$$ (surjective). $$\mathcal{O}_{\mathbb{P}^n}(d) \cong \mathcal{O}_{\mathbb{P}^n}(d')$$이면 $$(\x_i/\x_j)^{d-d'} = \lambda_i/\lambda_j$$ ($$\lambda_i \in \mathbb{K}^\ast$$)이 되는데, $$d \ne d'$$이면 $$\x_i/\x_j$$가 비상수이므로 모순이다 (injective). 따라서 $$\Pic(\mathbb{P}^n) \cong \mathbb{Z}$$이며, 생성원은 $$\mathcal{O}_{\mathbb{P}^n}(1)$$이다.
+$$d \mapsto [\mathcal{O}_{\mathbb{P}^n}(d)]$$는 group homomorphism $$\mathbb{Z} \to \Pic(\mathbb{P}^n)$$를 정의하며, 이가 isomorphism임을 보인다. $$\mathcal{L}$$의 transition functions을 $$h_{ij}$$라 하면, $$U_i \cap U_j$$에서의 invertible regular function이 상수와 단항식의 곱이므로 $$h_{ij} = c_{ij}(\x_i/\x_j)^d$$ ($$c_{ij} \in \mathbb{K}^\ast$$) 꼴이다. $$c_{ij}$$로 정의되는 line bundle은 cocycle 조건에 의해 trivial하므로 $$\mathcal{L} \cong \mathcal{O}_{\mathbb{P}^n}(d)$$ (surjective). $$\mathcal{O}_{\mathbb{P}^n}(d) \cong \mathcal{O}_{\mathbb{P}^n}(d')$$이면 $$(\x_i/\x_j)^{d-d'} = \lambda_i/\lambda_j$$ ($$\lambda_i \in \mathbb{K}^\ast$$)이 되는데, $$d \ne d'$$이면 $$\x_i/\x_j$$가 비상수이므로 모순이다 (injective). 따라서 $$\Pic(\mathbb{P}^n) \cong \mathbb{Z}$$이며, 생성원은 $$\mathcal{O}_{\mathbb{P}^n}(1)$$이다.
 
 </div>
 
