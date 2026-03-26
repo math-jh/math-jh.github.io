@@ -13,7 +13,8 @@ header:
 
 date: 2026-03-15
 last_modified_at: 2026-03-15
-weight: 20
+weight: 17
+published: false
 ---
 
 ## 도입
