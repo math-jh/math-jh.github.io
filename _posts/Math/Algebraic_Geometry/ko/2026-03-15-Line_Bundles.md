@@ -248,7 +248,7 @@ Standard open cover $$U_i = \{x \mid x_i \ne 0\}$$ 위에서 $$\mathcal{O}_{\mat
 
 <div class="definition" markdown="1">
 
-<ins id="def15">**정의 15**</ins> Line bundle $$\mathcal{L}$$의 *global section*들은 $$H^0(X, \mathcal{L})$$로 표기하며, 이는 $$\mathcal{L}$$의 section sheaf의 전역 section들의 공간이다. 즉, $$H^0(X, \mathcal{L}) = \mathcal{O}_X(\mathcal{L})(X)$$는 각 점에 대해 $$\mathcal{L}$$의 fiber 내의 원소를 대응시키는 정칙 사상들의 집합이다.
+<ins id="def15">**정의 15**</ins> Line bundle $$\mathcal{L}$$의 *global section*들의 공간을 $$H^0(X, \mathcal{L})$$로 표기한다. 즉, $$H^0(X, \mathcal{L})$$는 각 점 $$x\in X$$마다 fiber $$\pi^{-1)(x)\subset \mathcal{L}$$ 내의 원소를 대응시키는 regular map들의 집합이다.
 
 </div>
 
