@@ -81,18 +81,33 @@ $$(\x-2)^2+\y^2=9,\qquad (\x+2)^2+\y^2=9$$
 
 한편 일반적인 degree 2 homogeneous polynomial은
 
-$$F = a_{00}\x_0^2 + a_{11}\x_1^2 + a_{22}\x_2^2 + a_{01}\x_0\x_1 + a_{02}\x_0\x_2 + a_{12}\x_1\x_2$$
+$$F(\x_0,\x_1,\x_2) = a_{00}\x_0^2 + a_{11}\x_1^2 + a_{22}\x_2^2 + a_{01}\x_0\x_1 + a_{02}\x_0\x_2 + a_{12}\x_1\x_2$$
 
-의 꼴이며, 이것이 정확히 $$H^0(X, \mathcal{O}(2))$$가 $$6$$차원 공간인 이유이다. 한편, 위에서 계산한 네 점짜리 집합 $$C_1\cap C_2$$를 지나야 한다는 조건을 추가한다면, 이들 네 점이 각각 하나씩의 제약조건을 걸이 필요한 parameter를 하나씩 지워주므로 이를 나타내기 위한 parameter는 2개임을 안다. 즉, 이들 conic의 모임은 $$H^0(X,\mathcal{O}(2))$$의 2차원 부분공간 $$V$$를 이룰 것이며, 이를 projectivize한 것이 $$[\lambda:\mu]$$로 나타나는 $$\mathbb{P}^1$$이 된다. 
+의 꼴이며, 이것이 정확히 $$H^0(X, \mathcal{O}(2))$$가 $$6$$차원 공간인 이유이다. 한편, 위에서 계산한 네 점짜리 집합 $$C_1\cap C_2$$를 지나야 한다는 조건을 추가한다면, 이들 네 점이 각각 하나씩의 제약조건을 걸이 필요한 parameter를 하나씩 지워주므로 이를 나타내기 위한 parameter는 2개임을 안다. 더 구체적으로, 다음 네 개의 조건
+
+$$0=F(0,\sqrt{5},1)=5a_{11}+a_{22}+\sqrt{5}a_{12}$$
+
+$$0=F(0,-\sqrt{5},1)=5a_{11}+a_{22}-\sqrt{5}a_{12}$$
+
+$$0=F(1,i,0)=a_{00}-a_{11}+ia_{01}$$
+
+$$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
+
+이 $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, $$a_{00}=a_{11}$$을 강제하므로 실질적인 변수는 $$a_{11}$$, $$a_{02}$$의 두 개이다. 즉, 이들 conic의 모임은 $$H^0(X,\mathcal{O}(2))$$의 2차원 부분공간 $$V$$를 이룰 것이며, 이를 projectivize한 것이 $$[\lambda:\mu]$$로 나타나는 $$\mathbb{P}^1$$이 된다. 
 
 img
 
 </div>
 
+물론 [정의 2](#def2)는 $$X$$가 projective space이든 quasi-projective variety이든 임의의 variety에 동일하게 적용된다. 그러나 우리가 위의 [예시 3](#ex3)을 이렇게 공들여 계산한 이유는, 임의의 quasi-projective variety $$X\subseteq \mathbb{P}^n$$에 대해서도 $$D$$가 어떠한 $$\mathcal{O}_{\mathbb{P}^n}(d)$$에서 온다면 homogeneous polynomial의 언어를 그대로 사용할 수 있기 때문이다. 즉 이 경우 restriction map
 
+$$H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \to H^0(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
 
-이상의 정의는 사영공간 $$\mathbb{P}^n$$ 위에서 전개하였지만, quasiprojective variety $$X \subseteq \mathbb{P}^n$$ 위에서도 linear system을 동일하게 정의할 수 있다. $$\mathbb{P}^n$$의 linear system $$\mathbb{P}(V)$$에서 각 $$F \in V$$는 $$X$$와의 교차 $$X \cap Z(F)$$를 정의하며, 이것이 $$X$$ 위의 linear system의 기하학적 내용이다. 다만 $$X$$ 위에서 두 다항식 $$F, G$$가 같은 교차를 정의하는 것은 $$F - G \in I(X)$$일 때이므로, $$X$$ 위에서의 실제 parameter space는 $$\mathbb{P}(V / (V \cap I(X)))$$가 된다.
+은 homogeneous polynomial $$F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$$를 $$X$$ 위의 section으로 보내며, 그 kernel은 $$I(X)$$의 차수 $$d$$인 homogeneous part $$I(X)_d$$이다. 따라서
 
+$$H^0(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d$$
+
+로서 $$\mathbb{P}^n$$에서와 본질적으로 동일한 계산이 가능하다. 특히 $$F - G \in I(X)$$일 때 같은 교차를 정의하므로, parameter space는 $$\mathbb{P}(V/(V \cap I(X)))$$가 된다.
 
 ## Base Locus
 
