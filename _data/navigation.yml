@@ -30,7 +30,7 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/divisors
       - title: "선다발과 벡터다발"
         url: ko/math/algebraic_geometry/line_bundles
-      - title: "Linear Systems"
+      - title: "선형계"
         url: ko/math/algebraic_geometry/linear_systems
       - title: "Canonical Bundle"
         url: ko/math/algebraic_geometry/canonical_bundle
