@@ -97,6 +97,12 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 img
 
+이 계산에서 parameter의 차원이 $$6\to 2$$로 감소하는 현상은, linear system이 정의하는 사상의 target 차원 감소와 직결된다. 만약 base locus $$C_1\cap C_2$$가 존재하지 않았다면 $$\lvert\mathcal{O}(2)\rvert\cong\mathbb{P}^5$$에서 온 사상이 되었을 것이지만, 네 점을 모두 지나야 한다는 제약이 parameter를 $$5$$에서 $$1$$로 깎아 $$\mathbb{P}^1$$-valued 사상이 된다. 즉, base locus에서 발생하는 parameter 손실이 그대로 사상의 차원 손실로 나타난다. 이 현상을 두 가지 관점에서 더 살펴보자.
+
+첫째, base locus가 이 네 교점으로 구성된다는 것은 Bézout 정리에서 비롯된다. 두 conic $$C_1, C_2$$는 각각 degree $$2$$이므로, [§Bézout 정리](/ko/math/algebraic_geometry/bezout_theorem)에 의해 중복도를 포함하여 $$\deg C_1 \cdot \deg C_2 = 4$$개의 점에서 만난다. 따라서 $$\varphi(q)=[0\!:\!0]$$이 되는 점 --- 모든 section이 동시에 zero가 되는 점 --- 은 정확히 이 네 교점뿐이며, 나머지 점에서는 사상이 문제없이 잘 정의된다. Base locus의 크기가 교점의 개수에 의해 결정된다는 것은, 차원 감소의 원인을 교차 이론의 언어로 정확히 파악할 수 있음을 보여준다.
+
+둘째, 이 현상은 [정의 1](#def1)에서 도입한 effective divisor의 관점에서도 자연스럽게 이해된다. Pencil $$\mathbb{P}(V)$$의 각 원소 $$Z(\lambda F_1 + \mu F_2)$$는 effective divisor이며, 이들이 모두 공통으로 포함하는 부분 --- 즉 base locus --- 가 parameter space의 차원을 낮춘다. 다시 말해, "$$\lvert 2H \rvert \cong \mathbb{P}^5$$에 속하는 effective divisor들 중 pencil을 고르면, 네 개의 공통 점이 $$\mathbb{P}^5 \to \mathbb{P}^1$$로 차원을 깎는다"는 것이 base locus의 본질이다. Effective divisor의 language를 사용하면, base locus를 "linear system 내 모든 effective divisor가 공유하는 공통 부분"으로 정의할 수 있으며, 이 공통 부분의 존재가 parameter를 제약하여 사상의 차원을 낮추는 메커니즘이 명확해진다.
+
 </div>
 
 물론 [정의 2](#def2)는 $$X$$가 projective space이든 quasi-projective variety이든 임의의 variety에 동일하게 적용된다. 그러나 우리가 위의 [예시 3](#ex3)을 이렇게 공들여 계산한 이유는, 임의의 quasi-projective variety $$X\subseteq \mathbb{P}^n$$에 대해서도 $$D$$가 어떠한 $$\mathcal{O}_{\mathbb{P}^n}(d)$$에서 온다면 homogeneous polynomial의 언어를 그대로 사용할 수 있기 때문이다. 즉 이 경우 restriction map
@@ -140,6 +146,10 @@ $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\
 <ins id="ex7">**예시 7**</ins> **Pencil의 base locus**: [예시 3](#ex3)의 conic pencil의 base locus는 $$C_1 \cap C_2$$이다. Bézout's theorem ([§Bézout 정리](/ko/math/algebraic_geometry/bezout_theorem))에 의해, $$\mathbb{P}^2$$에서 두 conic의 교차는 (중복도를 포함하여) 4개의 점으로 구성된다. [예시 3](#ex3)에서 본 것처럼, 두 원의 경우 아핀 부분에서 2개의 실수 교점을 보이지만, 무한원에서 2개의 복소수 교점을 추가로 가지므로 총 4개로 일치한다.
 
 </div>
+
+사실 base locus가 있는 linear system에 대해서도, base locus를 blow-up하면 사상을 정의할 수 있다. 이에 대해서는 [§Rational map](/ko/math/algebraic_geometry/rational_maps)에서 다룬다.
+
+따라서 base locus가 존재하면 linear system으로부터 사상을 얻을 수 없으므로, basepoint-free가 사상을 정의하기 위한 자연스러운 조건임을 알 수 있다. 실제로 이 조건이 충족되면 linear system은 variety에서 사영공간으로의 정칙사상을 부여한다.
 
 ## Basepoint-Free Linear System이 정의하는 사상
 
