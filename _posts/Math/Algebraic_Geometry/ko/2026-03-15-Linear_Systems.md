@@ -12,10 +12,8 @@ header:
     overlay_filter: 0.5
 
 date: 2026-03-15
-last_modified_at: 2026-03-15
+last_modified_at: 2026-03-29
 weight: 10
-
-published: false
 ---
 
 앞서 우리는 [§인자, ⁋정의 1](/ko/math/algebraic_geometry/divisors#def1)에서 variety $$X$$의 (Weil) divisor를 정의하였다. Zariski topology의 정의에 의하여, 이는 기본적으로 $$X$$ 위에 정의된 어떤 <em-ko>함수</em-ko>의 zero set에, 이 zero의 order를 더한 것으로 생각할 수 있으며, 이를 $$\mathbb{P}^n$$과 같은 경우에도 잘 정의하기 위해 우리는 <em-ko>함수</em-ko>를 <em-ko>적당한 line bundle의 section</em-ko>으로 일반화했다. 
@@ -127,14 +125,9 @@ $$\mathbb{P}^2\rightarrow \mathbb{P}^1;\qquad [\x_0,\x_1,\x_2]\mapsto [\x_0^2+\x
 
 이 된다. 이는 우선 $$\mathbb{P}^2$$에서 더 작은 공간 $$\mathbb{P}^1$$로 가는 함수이므로 어딘가 잘못되었다는 것을 알고 있고, 이는 두 함수 $$F_1,F_2$$가 동시에 $$0$$이 되는 부분이 존재하기 때문이다.
 
+위에서의 embedding $$\varphi_L$$은 실은 $$V$$의 basis의 선택에 의존하지만, $$\varphi_L$$이 갖는 여러 성질들은 그렇지 않다. 가령, 방금 전과 같이 basis들 모두가 vanish하는 $$X$$의 점들은 basis의 선택에 의존하지 않는다.
 
-
-이 대응 자체는 $$F_i$$들의 선택에 의존하지만, 이 대응의 여러 성질들은 $$F_i$$의 선택에 의존하지 않는다는 것을 곧 살펴보게 될 것이다.
-
-이 대응이 정의되기 위해서는 우선 모든 $$F_i$$에 대하여 $$F_i(x)=0$$이도록 하는 $$x$$가 존재하면 곤란할 것이다. 
-
-
-[예시 3](#ex3)의 conic pencil에서 우리는 $$H^0(\mathbb{P}^2, \mathcal{O}(2))$$의 차원이 $$6$$인 반면, $$C_1 \cap C_2$$의 네 점을 모두 지나야 한다는 조건이 parameter를 $$6$$개에서 $$2$$개로 줄여 $$\mathbb{P}^5 \to \mathbb{P}^1$$로 차원이 감소함을 보았다. 이처럼 linear system의 원소들이 모두 지나는 점들이 존재하면, 이 점들은 parameter space의 차원을 낮추는 제약으로 작용한다. 이런 공통점들의 집합을 *base locus*라 하며, base locus가 존재하면 linear system이 정의하는 사상에서 문제가 생긴다. 사실 linear system $$L = \mathbb{P}(V)$$는 variety에서 사영공간으로의 정칙사상을 자연스럽게 정의한다 --- 이에 대해서는 [명제 8](#prop8)에서 자세히 살펴볼 것이다. Base locus가 존재하면 이 사상을 정의할 수 없게 되는데, base locus의 모든 점에서 모든 section이 동시에 zero가 되어 사상의 값을 결정할 수 없기 때문이다.
+이를 엄밀하게 기술하기 위해, Weil divisor $$D = \sum n_i D_i$$의 *support*를 $$\operatorname{Supp}(D) = \bigcup_{n_i \neq 0} D_i$$로 정의한다. 즉, support는 divisor에서 계수가 $$0$$이 아닌 prime divisor들의 합집합이다. 이를 이용하면 다음이 잘 정의된다.
 
 <div class="definition" markdown="1">
 
@@ -142,9 +135,11 @@ $$\mathbb{P}^2\rightarrow \mathbb{P}^1;\qquad [\x_0,\x_1,\x_2]\mapsto [\x_0^2+\x
 
 $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\operatorname{div}(s))$$
 
-여기서 $$\operatorname{div}(s)$$는 section $$s$$의 zero divisor이다. $$\mathbb{P}^n$$의 hypersurface 계산에서는 $$V \subseteq \mathbb{K}[\x_0, \ldots, \x_n]_d$$에 대해 $$\operatorname{Bs}(L) = \bigcap_{[F] \in L} Z(F)$$와 동일하다.
+여기서 $$\operatorname{div}(s)$$는 section $$s$$의 zero divisor이다. 
 
 </div>
+
+특히 $$\mathbb{P}^n$$의 hypersurface 계산에서는 $$V \subseteq \mathbb{K}[\x_0, \ldots, \x_n]_d$$에 대해 $$\operatorname{Bs}(L) = \bigcap_{[F] \in L} Z(F)$$와 동일하다. 그럼 우리가 하고 싶었던 정의는 다음의 정의이다. 
 
 <div class="definition" markdown="1">
 
@@ -154,31 +149,25 @@ $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**</ins> **$$\mathbb{P}^n$$의 hyperplane system**: $$\lvert \mathcal{O}_{\mathbb{P}^n}(1) \rvert = \mathbb{P}(\mathbb{K}[\x_0, \ldots, \x_n]_1)$$는 basepoint-free이다. 임의의 점 $$p = [p_0 : \cdots : p_n] \in \mathbb{P}^n$$에 대해, $$p$$를 지나지 않는 hyperplane $$Z(\x_i)$$ (단, $$p_i \ne 0$$인 $$i$$를 택함)이 존재하기 때문이다. 즉, $$p \notin \operatorname{Bs}(\lvert \mathcal{O}_{\mathbb{P}^n}(1) \rvert)$$이다.
+<ins id="ex6">**예시 6**</ins> [예시 3](#ex3)에서 살펴본 $$\mathbb{P}^n$$의 두 예시를 살펴보자. 우선 처음의 complete linear system 
+
+$$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_1)$$
+
+을 생각하자. 벡터공간 $$\mathbb{K}[\x_0,\x_1,\x_2]_1$$의 basis를 $$\x_0,\x_1,\x_2$$로 택하면, $$\x_0,\x_1,\x_2$$가 동시에 $$0$$이 되는 $$\mathbb{P}^2$$의 점은 없으므로 이는 basepoint-free이다. 이 basis의 선택이 정의하는 $$\varphi_L$$은 그냥 identity이다.
+
+두 conic의 base locus의 경우, 위에서 살펴보았듯 base locus가 공집합이 아니다. 실제로, base locus는 [예시 3](#ex3)에서 이미 살펴본 $$C_1\cap C_2$$의 네 개의 교점이며, 기하적으로 pencil의 각 원소들은 정확히 $$C_1\cap C_2$$의 네 교점을 공유하므로 이것이 base locus의 정의와 맞아떨어지는 것을 안다.
 
 </div>
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7**</ins> **Pencil의 base locus**: [예시 3](#ex3)의 conic pencil의 base locus는 $$C_1 \cap C_2$$이다. Bézout's theorem ([§Bézout 정리](/ko/math/algebraic_geometry/bezout_theorem))에 의해, $$\mathbb{P}^2$$에서 두 conic의 교차는 (중복도를 포함하여) 4개의 점으로 구성된다. [예시 3](#ex3)에서 본 것처럼, 두 원의 경우 아핀 부분에서 2개의 실수 교점을 보이지만, 무한원에서 2개의 복소수 교점을 추가로 가지므로 총 4개로 일치한다.
-
-</div>
-
-사실 base locus가 있는 linear system에 대해서도, base locus를 blow-up하면 사상을 정의할 수 있다. 이에 대해서는 [§Rational map](/ko/math/algebraic_geometry/rational_maps)에서 다룬다.
-
-따라서 base locus가 존재하면 linear system으로부터 사상을 얻을 수 없으므로, basepoint-free가 사상을 정의하기 위한 자연스러운 조건임을 알 수 있다. 실제로 이 조건이 충족되면 linear system은 variety에서 사영공간으로의 정칙사상을 부여한다.
-
-## Basepoint-Free Linear System이 정의하는 사상
-
-Basepoint-free linear system의 핵심 성질은, 이것이 다양체에서 사영공간으로의 사상을 자연스럽게 정의한다는 것이다.
+위에서 살펴봤듯, basepoint-free linear system의 핵심 성질은 $$\varphi_L$$이 잘 정의된다는 것이다. 즉 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> Quasiprojective variety $$X \subseteq \mathbb{P}^n$$ 위의 basepoint-free linear system $$L = \mathbb{P}(V)$$에서, $$V$$의 기저 $$F_0, \ldots, F_r \in \mathbb{K}[\x_0, \ldots, \x_n]_d$$가 다음 조건을 만족한다고 하자:
+<ins id="prop7">**명제 7**</ins> Quasiprojective variety $$X \subseteq \mathbb{P}^n$$ 위의 basepoint-free linear system $$L = \mathbb{P}(V)$$에서, $$V$$의 기저 $$F_0, \ldots, F_r \in \mathbb{K}[\x_0, \ldots, \x_n]_d$$가 다음 조건을 만족한다고 하자.
 
 $$\bigcap_{i=0}^r Z(F_i) \cap X = \emptyset$$
 
-그러면 $$V$$는 $$X$$에서 사영공간으로의 정칙사상
+그러면 $$V$$는 $$X$$에서 projective space로의 regular map
 
 $$\varphi_L: X \to \mathbb{P}^r, \quad p \mapsto [F_0(p) : \cdots : F_r(p)]$$
 
@@ -186,79 +175,47 @@ $$\varphi_L: X \to \mathbb{P}^r, \quad p \mapsto [F_0(p) : \cdots : F_r(p)]$$
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-우선 $$\varphi_L$$이 well-defined임을 보여야 한다. $$p \in X$$일 때, $$p \in \operatorname{Bs}(L) = \emptyset$$이므로 어떤 $$i$$에 대해 $$F_i(p) \ne 0$$이다. 따라서 $$[F_0(p) : \cdots : F_r(p)]$$는 $$\mathbb{P}^r$$의 정상적인 점이다.
-
-다음으로 $$\varphi_L$$이 정칙사상임을 보이자. $$X$$의 affine open cover $$U_\alpha = X \cap (\mathbb{P}^n \setminus Z(\x_\alpha))$$를 생각하자. 여기서 $$\x_\alpha$$는 $$\mathbb{P}^n$$의 standard homogeneous coordinate이다. 각 $$U_\alpha$$에서 $$\x_\alpha \ne 0$$이므로, $$F_i / \x_\alpha^d$$는 $$U_\alpha$$에서 정의되는 regular function이다. $$\varphi_L$$의 $$j$$번째 좌표는 이 regular function들의 비율로 나타나므로, $$\varphi_L$$은 $$U_\alpha$$에서 정칙사상이다.
-
-</details>
+위에서와 다른 예시를 하나만 더 살펴보자.
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9**</ins> **Rational normal curve**: $$\mathbb{P}^1$$에서 $$d \ge 1$$일 때, $$\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$$의 complete linear system이 정의하는 사상은 *Veronese 사상* 또는 *rational normal curve*이라 불린다.
+<ins id="ex8">**예시 8**</ins> $$\mathbb{P}^1$$에서 $$d \ge 1$$일 때, $$\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$$의 complete linear system이 정의하는 map은
 
 $$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
 
-이 사상의 image는 $$\mathbb{P}^d$$에서 degree $$d$$의 *rational normal curve*이다. $$d = 2$$일 때는 $$\mathbb{P}^2$$의 conic, $$d = 3$$일 때는 $$\mathbb{P}^3$$의 twisted cubic이다.
+이다. 이는 [§사영다양체, ⁋예시 16](/ko/math/algebraic_geometry/projective_varieties#ex16)에서 살펴본 Veronese embedding을 complete linear system의 언어로 복원할 수 있다는 것을 보여준다. 
 
 </div>
 
-## Very Ample과 Ample
+## Ample line bundle
+
+비록 우리는 모든 variety가 quasi-projective임을 가정하고 있지만, 일반적으로 variety는 더 추상적으로 정의할 수 있다. 이러한 접근에는 장단점이 있는데, 좋은 점은 우리의 논의가 더 유연해진다는 것이고, 그로 인해 포기하게 되는 것은 variety를 embed하는 것이 더 이상 자명하지 않다는 것이다.
+
+가령 우리의 언어에서 $$\mathbb{P}^1\times \mathbb{P}^1$$이 (quasi-projective) variety라고 하려면 반드시 이를 어떤 projective space로 넣어주어야 한다. ([§사영다양체, ⁋예시 16](/ko/math/algebraic_geometry/projective_varieties#ex16)) 대신, variety의 정의에서 ambient projective space의 존재를 가정하지 않는다면 이를 굳이 보이지 않아도 $$\mathbb{P}^1\times \mathbb{P}^1$$은 자동으로 variety이지만, 일반적인 variety가 projective space로 embed되는지는 불분명하다는 것이다. 
+
+그러나 추상적인 variety에서도 line bundle과 linear system 등등을 모두 정의할 수 있다. 그럼 특히 [명제 7](#prop7)을 사용하면 projective space로의 적절한 함수를 정의할 수 있게 된다. 다음 정의의 중요성은 이러한 맥락에서 이해해야 한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> Line bundle $$\mathcal{L}$$ (또는 대응하는 linear system $$\lvert \mathcal{L} \rvert$$)이 *very ample*이라는 것은, complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$이 정의하는 사상 $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(H^0(X, \mathcal{L}))$$이 closed embedding인 것이다.
+<ins id="def9">**정의 9**</ins> Line bundle $$\mathcal{L}$$ (또는 대응하는 linear system $$\lvert \mathcal{L} \rvert$$)이 *very ample*이라는 것은, complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$이 정의하는 regular map $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(H^0(X, \mathcal{L}))$$이 closed embedding인 것이다.
 
 </div>
+
+이것이 잘 정의되려면 $$\varphi_L$$이 basis의 선택에 의존하지 않아야 하며, 실제로 그러하다는 것을 쉽게 확인할 수 있다. 
+
+Very ample의 정의에서 핵심은 사상이 단순한 morphism이 아니라 *closed* embedding이라는 점이다. 즉, 위에서 설명한 것과 같이 추상적인 variety의 세계에서도 이를 사용하여 projective variety를 정의하고, 심지어 very ample line bundle $$\mathcal{L}$$을 사용하면 $$X$$를 이 ambient projective space에서 명시적인 좌표로 표현할 수도 있게 된다. 
+
+우리는 $$\mathcal{O}_{\mathbb{P}^n}(1)$$은 very ample이지만, $$\mathcal{O}_{\mathbb{P}^n}(-1)$$은 그렇지 않다는 것을 안다. [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_geometry/line_bundles#ex12)에서 살펴보았듯, 이는 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$은 fiber가 base를 따라 이동할 때 꼬이는 방향이 section들이 zero section을 넘어가는 것을 허용하지 않아 global section이 존재하지 않기 때문이다. 반면 $$\mathcal{O}_{\mathbb{P}^n}(1)$$이 가지고 있는 꼬임은 이를 허용해주어 global section을 존재하게 해 준다. 
+
+이 예시는 너무 간단한 예시이기는 하지만, 만일 $$\mathbb{P}^n$$보다 복잡한 어떤 공간이 있고, 이 공간의 복잡성이 특정한 line bundle의 꼬임만으로는 (올바른 방향임에도) 해소가 안 된다면, 우리는 이것이 해소될 때까지 더욱 더 꼬임을 추가해줄 수 있을 것이다. 이러한 상상으로부터 다음을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> $$\mathcal{L}$$이 *ample*이라는 것은 어떤 $$m > 0$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample인 것이다.
+<ins id="def10">**정의 10**</ins> $$\mathcal{L}$$이 *ample*이라는 것은 어떤 $$m > 0$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample인 것이다.
 
 </div>
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**명제 12**</ins> Very ample line bundle은 항상 basepoint-free이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$$\varphi_{\mathcal{L}}: X \hookrightarrow \mathbb{P}^r$$이 embedding이면 모든 점에서 정의된다. $$\varphi_{\mathcal{L}}(p) = [s_0(p) : \cdots : s_r(p)]$$ (여기서 $$s_0, \ldots, s_r$$은 $$H^0(X, \mathcal{L})$$의 기저)이므로, 각 $$p \in X$$에 대해 어떤 $$i$$가 $$s_i(p) \ne 0$$이다. 따라서 $$\operatorname{Bs}(\lvert \mathcal{L} \rvert) = \emptyset$$이다.
-
-</details>
-
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13**</ins> **$$\mathcal{O}_{\mathbb{P}^n}(1)$$은 very ample**: $$\lvert \mathcal{O}_{\mathbb{P}^n}(1) \rvert = \mathbb{P}(\mathbb{K}[\x_0, \ldots, \x_n]_1)$$는 identity embedding $$\mathbb{P}^n \hookrightarrow \mathbb{P}^n$$을 정의한다. $$F_i = \x_i$$로 놓으면 $$\varphi_L([x_0 : \cdots : x_n]) = [x_0 : \cdots : x_n]$$이다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex14">**예시 14**</ins> **$$\mathcal{O}_{\mathbb{P}^n}(d)$$도 very ample**: $$d > 0$$이면 $$\lvert \mathcal{O}_{\mathbb{P}^n}(d) \rvert$$는 *Veronese embedding*
-
-$$\nu_d: \mathbb{P}^n \hookrightarrow \mathbb{P}^N, \quad [x_0 : \cdots : x_n] \mapsto [x_0^{a_0} \cdots x_n^{a_n} \text{ (모든 차수 } d \text{의 monomial, } \sum a_i = d)]$$
-
-을 정의한다. 여기서 $$N = \binom{n+d}{d} - 1$$이다. 이 사상은 $$\mathbb{P}^n$$을 $$\mathbb{P}^N$$의 smooth degree $$d$$의 subvariety로 embedding한다.
-
-</div>
-
-Very ample의 정의에서 핵심은 사상이 단순한 morphism이 아니라 **closed embedding**이라는 점이다. Closed embedding $$X \hookrightarrow \mathbb{P}^r$$이 주어지면, $$X$$는 $$\mathbb{P}^r$$ 위의 어떤 homogeneous ideal의 zero set으로 실현되며, 따라서 $$X$$의 모든 기하학적 정보가 사영공간 안에서 읽어낼 수 있게 된다. 실제로 projective variety의 본질적 정의는 "어떤 사영공간의 closed subvariety"인 것이며, [§사영다양체](/ko/math/algebraic_geometry/projective_varieties)에서 다루었듯 quasi-projective variety와의 구별도 여기에 있다. 이 관점에서, $$\mathcal{L}$$이 very ample이라는 것은 $$\mathcal{L}$$ 자체가 $$X$$를 사영공간에 넣는 "좌표"를 제공한다는 의미를 갖는다.
-
-Ample line bundle은 대수기하학에서 가장 중요한 개념 중 하나이다. 정의 11은 "충분히 큰 거듭제곱이 very ample"이라는 형태로만 ample을 규정하지만, 이 정의는 다음과 같은 깊은 결과들과 연결된다. 첫째, $$\mathcal{L}$$이 ample이면 충분히 큰 $$m$$에 대해 complete linear system $$\lvert \mathcal{L}^{\otimes m} \rvert$$가 basepoint-free이고 매우 자유로운 (sufficiently ample) section들을 제공하며, 이를 통해 $$X$$ 위의 임의의 coherent sheaf에 대해 Serre's vanishing theorem $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ (for $$m \gg 0$$, $$i > 0$$)이 성립한다. 둘째, $$\mathcal{L}$$이 ample이면 $$\lvert \mathcal{L}^{\otimes m} \rvert$$는 매우 다양한 effective divisor를 parameterize하며, $$X$$의 인자 이론에서 기본적인 역할을 수행한다. 셋째, projective variety의 분류론에서 ample (또는 그 일반화인 nef, big) line bundle의 존재 여부는 variety의 기하학적 성질을 결정하는 핵심 정보이다.
-
-Complex geometry와의 연결에서, **Kodaira embedding 정리**는 다음을 assertion한다. Compact complex manifold $$X$$ 위의 line bundle $$\mathcal{L}$$에 대해, $$\mathcal{L}$$이 positive curvature를 갖는 Hermitian metric을 인정하는 것 (complex-analytic positivity)은 $$\mathcal{L}$$이 ample인 것과 동치이다. 대수기하학적으로는, smooth projective variety $$X$$ 위의 line bundle $$\mathcal{L}$$이 ample인 것과 $$\mathcal{L}^{\otimes m}$$이 very ample인 것은 정의 11에 의해 동치이다. Kodaira embedding 정리의 본질은 이 대수적 조건이 해석적 조건 — positive curvature를 갖는 Hermitian metric의 존재 — 과 동치라는 점에 있다. 증명의 핵심 아이디어는, ample line bundle의 section들이 $$X$$를 사영공간에 embed하기에 충분하다는 점과, 이 embedding의 image가 사실 대수적 variety라는 것을 보이는 데 있다. (증명은 생략한다.)
-
-이 글 전체의 narrative를 정리하자. 우리는 divisor에서 출발하여, 이를 line bundle의 section으로 reinterpret하고, linear system의 개념을 통해 section들의 family를 parameterize하였다. Base locus의 관념은 linear system이 사영공간으로의 사상을 정의할 수 있는지의 여부를 결정하며, basepoint-free linear system은 자연스럽게 morphism $$\varphi_L$$를 부여한다. 이 morphism이 closed embedding이 되는 조건이 바로 very ample의 정의이고, 충분한 거듭제곱에서 이 조건을 만족하는 것이 ample의 정의이다. 따라서
-
-$$\text{Ample} \subseteq \text{Very ample} \subseteq \text{Basepoint-free}$$
-
-라는 포함 관계를 얻으며, 가장 강한 조건인 ample line bundle은 사영다양체의 구조를 사영공간 안에서 이해하는 데 필요한 핵심 도구이다. Projective variety는 정의상 어떤 사영공간의 closed subvariety이므로, 결국 모든 projective variety는 어떤 ample line bundle을 가지며, 그 ample line bundle을 통해 variety의 인자 이론, 기하학, 그리고 분류를 연구할 수 있다.
+이 정의의 유용성을 보려면 ample이지만 very ample은 아닌 line bundle을 갖는 공간을 생각해야겠지만, 아직은 그러한 공간을 소개하기에는 다소 이르다. 하지만 머지 않아 그러한 공간을 다루게 되면 ampleness가 본격적으로 그 쓸모를 증명하게 된다. 
 
 ---
 
