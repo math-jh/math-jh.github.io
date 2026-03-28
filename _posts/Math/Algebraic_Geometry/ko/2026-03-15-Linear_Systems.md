@@ -93,15 +93,9 @@ $$0=F(1,i,0)=a_{00}-a_{11}+ia_{01}$$
 
 $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
-이 $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, $$a_{00}=a_{11}$$을 강제하므로 실질적인 변수는 $$a_{11}$$, $$a_{02}$$의 두 개이다. 즉, 이들 conic의 모임은 $$H^0(X,\mathcal{O}(2))$$의 2차원 부분공간 $$V$$를 이룰 것이며, 이를 projectivize한 것이 $$[\lambda:\mu]$$로 나타나는 $$\mathbb{P}^1$$이 된다. 
+이 $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, $$a_{00}=a_{11}$$을 강제하므로 실질적인 변수는 $$a_{00}$$, $$a_{02}$$의 두 개이다. 즉, 이들 conic의 모임은 $$H^0(X,\mathcal{O}(2))$$의 2차원 부분공간 $$V$$를 이룰 것이며, 이를 projectivize한 것이 $$[\lambda:\mu]$$로 나타나는 $$\mathbb{P}^1$$이 된다. 
 
 img
-
-이 계산에서 parameter의 차원이 $$6\to 2$$로 감소하는 현상은, linear system이 정의하는 사상의 target 차원 감소와 직결된다. 만약 base locus $$C_1\cap C_2$$가 존재하지 않았다면 $$\lvert\mathcal{O}(2)\rvert\cong\mathbb{P}^5$$에서 온 사상이 되었을 것이지만, 네 점을 모두 지나야 한다는 제약이 parameter를 $$5$$에서 $$1$$로 깎아 $$\mathbb{P}^1$$-valued 사상이 된다. 즉, base locus에서 발생하는 parameter 손실이 그대로 사상의 차원 손실로 나타난다. 이 현상을 두 가지 관점에서 더 살펴보자.
-
-첫째, base locus가 이 네 교점으로 구성된다는 것은 Bézout 정리에서 비롯된다. 두 conic $$C_1, C_2$$는 각각 degree $$2$$이므로, [§Bézout 정리](/ko/math/algebraic_geometry/bezout_theorem)에 의해 중복도를 포함하여 $$\deg C_1 \cdot \deg C_2 = 4$$개의 점에서 만난다. 따라서 $$\varphi(q)=[0\!:\!0]$$이 되는 점 --- 모든 section이 동시에 zero가 되는 점 --- 은 정확히 이 네 교점뿐이며, 나머지 점에서는 사상이 문제없이 잘 정의된다. Base locus의 크기가 교점의 개수에 의해 결정된다는 것은, 차원 감소의 원인을 교차 이론의 언어로 정확히 파악할 수 있음을 보여준다.
-
-둘째, 이 현상은 [정의 1](#def1)에서 도입한 effective divisor의 관점에서도 자연스럽게 이해된다. Pencil $$\mathbb{P}(V)$$의 각 원소 $$Z(\lambda F_1 + \mu F_2)$$는 effective divisor이며, 이들이 모두 공통으로 포함하는 부분 --- 즉 base locus --- 가 parameter space의 차원을 낮춘다. 다시 말해, "$$\lvert 2H \rvert \cong \mathbb{P}^5$$에 속하는 effective divisor들 중 pencil을 고르면, 네 개의 공통 점이 $$\mathbb{P}^5 \to \mathbb{P}^1$$로 차원을 깎는다"는 것이 base locus의 본질이다. Effective divisor의 language를 사용하면, base locus를 "linear system 내 모든 effective divisor가 공유하는 공통 부분"으로 정의할 수 있으며, 이 공통 부분의 존재가 parameter를 제약하여 사상의 차원을 낮추는 메커니즘이 명확해진다.
 
 </div>
 
@@ -116,6 +110,29 @@ $$H^0(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X) \cong \mathbb{K}[\x_0, \ldots, \x
 로서 $$\mathbb{P}^n$$에서와 본질적으로 동일한 계산이 가능하다. 특히 $$F - G \in I(X)$$일 때 같은 교차를 정의하므로, parameter space는 $$\mathbb{P}(V/(V \cap I(X)))$$가 된다.
 
 ## Base Locus
+
+우리는 남은 글에서 $$X$$의 linear system $$L=\mathbb{P}(V)$$와 $$V$$의 basis $$F_0,\ldots, F_r$$이 주어졌을 때, 이를 사용하여 embedding
+
+$$\varphi_L:X\rightarrow \mathbb{P}^r;\qquad x\mapsto [F_0(x):\cdots:F_r(x)]$$
+
+을 정의한다. 
+
+물론 이것이 항상 가능한 것은 아니다. 가령 [예시 3](#ex3)에서, $$(a_{00},a_{02})=(1,0), (0,1)$$에 해당하는 다음의 두 basis
+
+$$F_1(\x_0,\x_1,\x_2)=\x_0^2+\x_1^2-5\x_2^2, \qquad F_2(\x_0,\x_1,\x_2)=\x_0\x_2$$
+
+를 택하면 이 "embedding"은
+
+$$\mathbb{P}^2\rightarrow \mathbb{P}^1;\qquad [\x_0,\x_1,\x_2]\mapsto [\x_0^2+\x_1^2-5\x_2^2:\x_0\x_2]$$
+
+이 된다. 이는 우선 $$\mathbb{P}^2$$에서 더 작은 공간 $$\mathbb{P}^1$$로 가는 함수이므로 어딘가 잘못되었다는 것을 알고 있고, 이는 두 함수 $$F_1,F_2$$가 동시에 $$0$$이 되는 부분이 존재하기 때문이다.
+
+
+
+이 대응 자체는 $$F_i$$들의 선택에 의존하지만, 이 대응의 여러 성질들은 $$F_i$$의 선택에 의존하지 않는다는 것을 곧 살펴보게 될 것이다.
+
+이 대응이 정의되기 위해서는 우선 모든 $$F_i$$에 대하여 $$F_i(x)=0$$이도록 하는 $$x$$가 존재하면 곤란할 것이다. 
+
 
 [예시 3](#ex3)의 conic pencil에서 우리는 $$H^0(\mathbb{P}^2, \mathcal{O}(2))$$의 차원이 $$6$$인 반면, $$C_1 \cap C_2$$의 네 점을 모두 지나야 한다는 조건이 parameter를 $$6$$개에서 $$2$$개로 줄여 $$\mathbb{P}^5 \to \mathbb{P}^1$$로 차원이 감소함을 보았다. 이처럼 linear system의 원소들이 모두 지나는 점들이 존재하면, 이 점들은 parameter space의 차원을 낮추는 제약으로 작용한다. 이런 공통점들의 집합을 *base locus*라 하며, base locus가 존재하면 linear system이 정의하는 사상에서 문제가 생긴다. 사실 linear system $$L = \mathbb{P}(V)$$는 variety에서 사영공간으로의 정칙사상을 자연스럽게 정의한다 --- 이에 대해서는 [명제 8](#prop8)에서 자세히 살펴볼 것이다. Base locus가 존재하면 이 사상을 정의할 수 없게 되는데, base locus의 모든 점에서 모든 section이 동시에 zero가 되어 사상의 값을 결정할 수 없기 때문이다.
 
