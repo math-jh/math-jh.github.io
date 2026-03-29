@@ -75,7 +75,7 @@ $$C_1: Z((\x_0-2\x_2)^2+\x_1^2-9\x_2^2),\qquad C_2: Z((\x_0+2\x_2)^2+\x_1^2-9\x_
 
 $$(\x-2)^2+\y^2=9,\qquad (\x+2)^2+\y^2=9$$
 
-의 방정식이다. 이들은 $$U_2$$ 위에서는 위의 두 식으로부터 계산되는 $$(x,y)=(0,\pm\sqrt{5})$$에서 만나며, $$U_2$$ 바깥 --- 즉 $$U_2$$의 <em_ko>무한대 직선</em_ko>[^1] --- 에서는 두 점 $$[1,i:0]$$, $$[1, -i:0]$$에서 만난다. 위의 pencil $$Z(\lambda F_1+\mu F_2)$$는, 그럼 이들 교집합 $$C_1\cap C_2$$을 지나는 conic들의 모임이다. 
+의 방정식이다. 이들은 $$U_2$$ 위에서는 위의 두 식으로부터 계산되는 $$(x,y)=(0,\pm\sqrt{5})$$에서 만나며, $$U_2$$ 바깥 --- 즉 $$U_2$$의 <em_ko>무한대 직선</em_ko>[^1] --- 에서는 두 점 $$[1:i:0]$$, $$[1: -i:0]$$에서 만난다. 위의 pencil $$Z(\lambda F_1+\mu F_2)$$는, 그럼 이들 교집합 $$C_1\cap C_2$$을 지나는 conic들의 모임이다. 
 
 한편 일반적인 degree 2 homogeneous polynomial은
 
@@ -93,7 +93,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 이 $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, $$a_{00}=a_{11}$$을 강제하므로 실질적인 변수는 $$a_{00}$$, $$a_{02}$$의 두 개이다. 즉, 이들 conic의 모임은 $$H^0(X,\mathcal{O}(2))$$의 2차원 부분공간 $$V$$를 이룰 것이며, 이를 projectivize한 것이 $$[\lambda:\mu]$$로 나타나는 $$\mathbb{P}^1$$이 된다. 
 
-img
+![pencil_of_circles](/assets/images/Math/Algebraic_Geometry/Linear_systems-1.png){:style="width:40em" class="invert" .align-center}
 
 </div>
 

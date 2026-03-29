@@ -18,54 +18,64 @@ weight: 11
 published: false
 ---
 
-[§선형계](/ko/math/algebraic_geometry/linear_systems)에서 우리는 line bundle의 complete linear system이 정의하는 morphism을 통해 variety를 projective space에 embedded할 수 있음을 보았고, very ample line bundle이 이 embedding을 closed embedding으로 만드는 조건임을 확인하였다. 또한 ample line bundle이 projective variety의 분류와 embedding 문제에서 핵심적인 역할을 함을 논하였다. 이제 우리는 모든 smooth variety가 "자연스럽게" 갖는 line bundle인 *canonical bundle*을 정의하고, 그 성질들을 살펴본다.
+[§선형계](/ko/math/algebraic_geometry/linear_systems)에서 우리는 line bundle의 (basepoint-free) complete linear system을 사용하여 projective space에 embed할 수 있다는 것을 살펴보았고, 만일 이것이 closed embedding을 정의한다면 이러한 line bundle을 *very ample*이라 부르기도 하였다. 
 
-Canonical bundle은 variety 위의 differential form들로 구성된 line bundle이다. 이는 Serre duality, Riemann-Roch theorem, adjunction formula 등 대수기하학의 가장 중요한 정리들에서 공통적으로 등장하며, variety의 기하학적 성질—곡률, 쌍대성, embedding 가능성 등—을 encoded하는 핵심적인 불변량이다. 또한, canonical bundle의 ampleness 여부에 따라 variety를 크게 세 부류로 나누는 birational geometry의 분류 체계에서도 중심적인 역할을 한다.
+이렇듯 line bundle이 우리의 기하학에 꽤나 중요한 영향을 미치고 있음에도 불구하고, 우리는 아직까지 임의의 variety 위에 일반적으로 line bundle을 정의하는 방법을 제대로 살펴보지 않았다. 만일 $$X$$가 *smooth* variety라면, 우리는 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_geometry/line_bundles#ex24)를 사용하여 이 위에 정의된 canonical bundle $$\omega_X$$를 생각할 수 있다. 
 
-## Cotangent Sheaf
+## Cotangent Bundle
 
-Canonical bundle을 정의하기 위해서는 먼저 variety 위의 cotangent sheaf를 도입해야 한다.
+Canonical bundle을 정의하기 위해서는 먼저 variety 위의 cotangent bundle을 도입해야 한다. 다음 정의는 이미 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_geometry/line_bundles#ex24)에서 살펴본 것이지만, 완결성을 위해 다시 소개한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Smooth variety $$X$$의 *cotangent sheaf* $$\Omega_X^1$$는 각 점 $$p \in X$$에서 Zariski cotangent space $$T_p^\ast X = \mathfrak{m}_p/\mathfrak{m}_p^2$$를 fiber로 갖는 sheaf이다. 여기서 $$\mathfrak{m}_p$$는 $$p$$에서의 maximal ideal이다.
+<ins id="def1">**정의 1**</ins> Smooth variety $$X$$의 *cotangent bundle* $$\Omega_X^1$$는 tangent bundle $$\mathcal{T}_X$$의 dual vector bundle이다. 
 
 </div>
 
-이 정의가 local construction으로부터 sheaf를 얻는 올바른 방법인 것을 확인하자.
+이 bundle을 sheaf로 보면 cotangent sheaf라 부를 수 있다. 이 정의가 대수적인 세팅과도 잘 맞아떨어짐을 확인하자.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> Affine variety $$X = \operatorname{Spec} A$$에서 $$\Omega_X^1$$는 Kähler differentials $$\Omega_{A/\mathbb{K}}^1$$ ([\[가환대수학\] §Differentials, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3))의 associated sheaf이다.
+<ins id="prop2">**명제 2**</ins> Affine variety $$X = \operatorname{Spec} A$$에서 $$\Omega_X^1$$는 Kähler differential module $$\Omega_{A/\mathbb{K}}^1$$로부터 온다. ([\[가환대수학\] §Differentials, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3))
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Kähler differentials $$\Omega_{A/\mathbb{K}}^1$$는 $$A$$-module로, 각 점 $$p \in X$$에서의 stalk은 $$(\Omega_{A/\mathbb{K}}^1)_p = \Omega_{A/\mathbb{K}}^1 \otimes_A \mathcal{O}_{X,p}$$이다. 이를 residue field $$\kappa(p) = \mathcal{O}_{X,p}/\mathfrak{m}_p$$로 tensor하면, Kähler differential의 기본 성질에 의해 $$(\Omega_{A/\mathbb{K}}^1)_p \otimes_{\mathcal{O}_{X,p}} \kappa(p) \cong \mathfrak{m}_p/\mathfrak{m}_p^2$$이 성립한다. 따라서 $$\Omega_X^1$$의 fiber가 cotangent space와 일치하므로, $$\Omega_X^1$$는 Kähler differentials의 sheafification으로 얻어짐을 알 수 있다.
+즉 Kähler differential module $$A \rightarrow \Omega_{A/\mathbb{K}}^1$$을 coordinate ring의 언어에서 variety의 언어로 바꾼 것이 vector bundle $$\Omega_X^1\rightarrow X$$임을 보여야 한다.
+
+직관적으로는 각 점의 fiber가 isomorphic함을 보이면 충분하다. 각 점 $$x\in X$$에서 Kähler differential module의 stalk은 다음의 식
+
+$$(\Omega_{A/\mathbb{K}}^1)_x = \Omega_{A/\mathbb{K}}^1 \otimes_A \mathcal{O}_{X,x}$$
+
+으로 주어진다. 이제 이를 residue field $$\kappa(x) = \mathcal{O}_{X,x}/\mathfrak{m}_x$$로 base change 해주면, [\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)를 $$A = \mathbb{K}$$, $$E = \mathcal{O}_{X,x}$$, $$K = \mathfrak{m}_x$$, $$E' = \kappa(x)$$에 적용하여 다음의 isomorphism
+
+$$\mathfrak{m}_x/\mathfrak{m}_x^2\cong (\Omega_{A/\mathbb{K}}^1)_x \otimes_{\mathcal{O}_{X,x}} \kappa(x)$$
+
+을 얻는다. 
+
+물론 이것이 bundle isomorphism을 정의한다는 것은 약간의 논증이 필요한데, 이를 위해서는 [\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)으로부터 임의의 derivation이 $$\Omega_{A/\mathbb{K}}^1$$-valued map으로 lift된다는 것을 사용하여 임의의 열린집합 $$U$$에서 두 bundle의 section space가 일치함을 보이면 된다. 
 
 </details>
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $$\mathbb{A}^n$$의 cotangent sheaf는 $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$이다. Coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 Kähler differentials은 free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n] \, d\x_i$$이므로, associated sheaf 역시 free sheaf of rank $$n$$이 된다.
+<ins id="ex3">**예시 3**</ins> $$\mathbb{A}^n$$의 cotangent bundle은 $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$이다. Coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 Kähler differentials은 free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n] \, d\x_i$$이므로, 이에 대응하는 vector bundle은 rank $$n$$ trivial bundle이 된다.
 
 </div>
-
-$$X$$가 smooth variety of dimension $$n$$이면, 각 점 $$p \in X$$ 근방에서 $$\Omega_X^1$$은 locally free sheaf of rank $$n$$이다. 즉, cotangent sheaf는 vector bundle of rank $$n$$을 정의한다.
 
 ## Canonical Bundle의 정의
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Smooth variety $$X$$ of dimension $$n$$의 *canonical sheaf* (또는 *canonical bundle*) $$\omega_X$$는 cotangent sheaf의 top exterior power이다.
+<ins id="def4">**정의 4**</ins> Smooth variety $$X$$ of dimension $$n$$의 *canonical bundle* $$\omega_X$$는 cotangent bundle의 top exterior power이다.
 
 $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 
 </div>
 
-$$\Omega_X^1$$이 locally free of rank $$n$$이므로, 그 top exterior power는 locally free of rank $$1$$, 즉 invertible sheaf이다. 따라서 $$\omega_X$$는 ([§선다발과 벡터다발, ⁋정의 3](/ko/math/algebraic_geometry/line_bundles#def3))의 의미에서 line bundle이다.
+$$\Omega_X^1$$이 rank $$n$$ vector bundle이므로, 그 top exterior power는 rank $$1$$, 즉 line bundle이다.
 
 Canonical bundle $$\omega_X$$의 global section $$s \in H^0(X, \omega_X)$$는 $$X$$ 위의 *regular $$n$$-form*이라 부른다. 국소적으로, $$X$$의 열린 부분집합 $$U$$ 위에서 $$\Omega_X^1$$은 $$\mathcal{O}_U^{\oplus n}$$과 동형인데, 각 $$n$$-form은 $$f \, d\x_1 \wedge \cdots \wedge d\x_n$$의 꼴로 표현되는 differential form이다. $$\mathbb{A}^n$$에서는 [예시 3](#ex3)에 의해 $$\omega_{\mathbb{A}^n} \cong \bigwedge^n \mathcal{O}_{\mathbb{A}^n}^{\oplus n} \cong \mathcal{O}_{\mathbb{A}^n}$$이며, $$d\x_1 \wedge \cdots \wedge d\x_n$$이 $$\omega_{\mathbb{A}^n}$$의 trivializing section이 된다.
 
@@ -79,7 +89,7 @@ Canonical divisor는 linear equivalence class만이 잘 정의된다. 즉, $$K_X
 
 ## 예시: $$\mathbb{P}^n$$의 Canonical Bundle
 
-$$\mathbb{P}^n$$의 canonical bundle을 계산하기 위해, 우리는 *Euler exact sequence*를 사용한다. 이는 $$\mathbb{P}^n$$ 위의 cotangent sheaf를 더 단순한 sheaf들의 exact sequence 속에 위치시키는 강력한 도구이다.
+$$\mathbb{P}^n$$의 canonical bundle을 계산하기 위해, 우리는 *Euler exact sequence*를 사용한다. 이는 $$\mathbb{P}^n$$ 위의 cotangent bundle을 더 단순한 line bundle들의 exact sequence 속에 위치시키는 강력한 도구이다.
 
 $$\mathbb{P}^n$$을 자연스러운 projection $$\pi \colon \mathbb{A}^{n+1} \setminus \{0\} \to \mathbb{P}^n$$의 quotient로 생각하자. 점 $$p = [x_0 : \cdots : x_n] \in \mathbb{P}^n$$에 대해, $$\pi^{-1}(p)$$는 $$\mathbb{A}^{n+1}$$에서의 line $$L_p$$이며, $$T_p \mathbb{P}^n$$는 $$T_{\tilde{p}} \mathbb{A}^{n+1} / T_{\tilde{p}} L_p$$와 동형인데, 이로부터 cotangent space $$T_p^* \mathbb{P}^n$$는 $$T_{\tilde{p}}^* L_p$$의 orthogonal complement로 이해할 수 있다. 이 관계를 sheaf 수준에서 정리하면 다음 exact sequence를 얻는다.
 
@@ -98,7 +108,7 @@ $$0 \to \Omega_{\mathbb{P}^n}^1 \to \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}
 
 $$\mathbb{P}^n = (\mathbb{A}^{n+1} \setminus \{0\})/\mathbb{G}_m$$라는 quotient 구조를 활용한다. $$\mathbb{A}^{n+1} \setminus \{0\}$$ 위에서 coordinate function $$\x_0, \ldots, \x_n$$과 1-form $$d\x_0, \ldots, d\x_n$$을 갖는다. $$\mathbb{G}_m$$은 $$\lambda \cdot (\x_0, \ldots, \x_n) = (\lambda \x_0, \ldots, \lambda \x_n)$$로 작용하며, $$\mathbb{G}_m$$-invariant differential form들은 $$\mathbb{P}^n$$ 위의 differential form으로 내려온다.
 
-**두 번째 화살표의 injectivity:** $$\Omega_{\mathbb{P}^n}^1$$은 locally free sheaf이므로, sheaf homomorphism이 stalk에서 injective이면 injective이다. 임의의 점 근방에서 $$d\x_i$$들은 $$\Omega_{\mathbb{A}^{n+1}}^1$$의 basis를 이루며, 이들 사이의 trivial relation만이 영벡터이다.
+**두 번째 화살표의 injectivity:** $$\Omega_{\mathbb{P}^n}^1$$은 vector bundle이므로, stalk에서 injective이면 injective이다. 임의의 점 근방에서 $$d\x_i$$들은 $$\Omega_{\mathbb{A}^{n+1}}^1$$의 basis를 이루며, 이들 사이의 trivial relation만이 영벡터이다.
 
 **세 번째 화살표의 surjectivity:** 임의의 점 $$p = [\x_0 : \cdots : \x_n]$$에서 적어도 하나의 $$\x_j(p) \neq 0$$이다. 열린 집합 $$U_j = \{\x_j \neq 0\}$$ 위에서 $$s_i = f \cdot (\x_i / \x_j)$$로 놓으면, 각 $$s_i$$는 $$\x_j$$로 나누어지므로 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$의 section이고, $$\sum_i \x_i s_i = f \sum_i \x_i^2 / \x_j = f \sum_i (\x_i/\x_j)^2$$가 된다. 더 간단히, $$s_i = 0$$ ($$i \neq j$$), $$s_j = f / \x_j$$로 놓으면 $$\sum_i \x_i s_i = f$$가 된다. $$f/\x_j \in \mathcal{O}_{\mathbb{P}^n}(-1)(U_j)$$이므로 임의의 $$f$$가 image에 들어간다.
 
@@ -184,13 +194,13 @@ $$\omega_D \cong \omega_X \otimes \mathcal{O}_X(D)|_D$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$D$$를 $$X$$의 smooth divisor라 하자. $$D$$의 ideal sheaf를 $$\mathcal{I}_D$$라 하면, $$\mathcal{I}_D$$는 rank 1의 locally free sheaf이며 $$\mathcal{O}_X(-D) \cong \mathcal{I}_D$$가 성립한다. Smooth divisor에 대한 *conormal exact sequence*
+$$D$$를 $$X$$의 smooth divisor라 하자. $$D$$의 ideal sheaf를 $$\mathcal{I}_D$$라 하면, $$\mathcal{I}_D$$는 rank 1 vector bundle이며 $$\mathcal{O}_X(-D) \cong \mathcal{I}_D$$가 성립한다. Smooth divisor에 대한 *conormal exact sequence*
 
 $$0 \to \mathcal{I}_D / \mathcal{I}_D^2 \to \Omega_X^1|_D \to \Omega_D^1 \to 0$$
 
 가 성립한다. 이 exact sequence에서 $$\mathcal{I}_D / \mathcal{I}_D^2 \cong \mathcal{O}_X(-D)|_D$$임을 확인하자. $$D$$가 smooth이므로, 각 점 $$p \in D$$ 근방에서 $$D$$는 단일 regular function $$f$$에 의해 잘려 나온다. 즉, $$\mathcal{I}_{D,p} = (f) \subset \mathcal{O}_{X,p}$$이다. 따라서 $$(\mathcal{I}_D / \mathcal{I}_D^2)_p \cong (f)/(f^2) \cong f \cdot \mathcal{O}_{D,p}$$로서 $$\mathcal{O}_{D,p}$$ 위의 free module of rank 1이다. 이는 전역적으로 $$\mathcal{I}_D / \mathcal{I}_D^2 \cong \mathcal{O}_X(-D)|_D$$임을 보여준다.
 
-이제 conormal exact sequence에서 top exterior power를 취한다. $$\Omega_X^1|_D$$는 locally free of rank $$\dim X = n$$이고, $$\mathcal{I}_D/\mathcal{I}_D^2$$와 $$\Omega_D^1$$은 각각 locally free of rank $$1$$과 $$\dim D = n-1$$이다. 따라서
+이제 conormal exact sequence에서 top exterior power를 취한다. $$\Omega_X^1|_D$$는 rank $$\dim X = n$$ vector bundle이고, $$\mathcal{I}_D/\mathcal{I}_D^2$$와 $$\Omega_D^1$$은 각각 rank $$1$$과 $$\dim D = n-1$$ vector bundle이다. 따라서
 
 $$\bigwedge\nolimits^{\!n} (\Omega_X^1|_D) \cong \bigwedge\nolimits^{\!1} (\mathcal{I}_D/\mathcal{I}_D^2) \otimes \bigwedge\nolimits^{\!n-1} \Omega_D^1$$
 
