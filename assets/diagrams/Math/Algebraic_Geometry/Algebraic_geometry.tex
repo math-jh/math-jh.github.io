@@ -6,23 +6,10 @@
 \usetikzlibrary{arrows.meta}
 \begin{document}
 
-\begin{tikzpicture}
-	\draw[thick, black, -{stealth}] (-8,0) -- (8,0);
-	\draw[thick, black, -{stealth}] (0,-6) -- (0,6);
-	\draw[ultra thick, red] (2,0) circle[radius=3];
-	\draw[ultra thick, red] (-2,0) circle[radius=3];
-	\begin{scope}
-		\clip (-7.5,-5.5) rectangle (7.5,5.5);
-		\draw[thick, red!40] (3,0) circle[radius=sqrt(14)];
-		\draw[thick, red!40] (4,0) circle[radius=sqrt(21)];
-		\draw[thick, red!40] (5,0) circle[radius=sqrt(30)];
-		\draw[thick, red!40] (-3,0) circle[radius=sqrt(14)];
-		\draw[thick, red!40] (-4,0) circle[radius=sqrt(21)];
-		\draw[thick, red!40] (-5,0) circle[radius=sqrt(30)];
-	\end{scope}
-	\fill[blue] (0,{sqrt(5)}) circle[radius=3pt];
-	\fill[blue] (0,{-sqrt(5)}) circle[radius=3pt];
-\end{tikzpicture}
+\begin{tikzcd}
+	\CaDiv(X)\rar\dar&\Div(X)\dar\\
+	\CaCl(X)\rar&\Cl(X)
+\end{tikzcd}
 
 \end{document}
 
@@ -548,5 +535,23 @@
     
 \end{tikzpicture}
 
+
+\begin{tikzpicture}
+	\draw[thick, black, -{stealth}] (-8,0) -- (8,0);
+	\draw[thick, black, -{stealth}] (0,-6) -- (0,6);
+	\draw[ultra thick, red] (2,0) circle[radius=3];
+	\draw[ultra thick, red] (-2,0) circle[radius=3];
+	\begin{scope}
+		\clip (-7.5,-5.5) rectangle (7.5,5.5);
+		\draw[thick, red!40] (3,0) circle[radius=sqrt(14)];
+		\draw[thick, red!40] (4,0) circle[radius=sqrt(21)];
+		\draw[thick, red!40] (5,0) circle[radius=sqrt(30)];
+		\draw[thick, red!40] (-3,0) circle[radius=sqrt(14)];
+		\draw[thick, red!40] (-4,0) circle[radius=sqrt(21)];
+		\draw[thick, red!40] (-5,0) circle[radius=sqrt(30)];
+	\end{scope}
+	\fill[blue] (0,{sqrt(5)}) circle[radius=3pt];
+	\fill[blue] (0,{-sqrt(5)}) circle[radius=3pt];
+\end{tikzpicture}
 
 \end{tikzpicture}
