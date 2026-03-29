@@ -366,13 +366,13 @@ Cocycle 조건 세 가지를 모두 확인한다.
 
 $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast \mathcal{L} \otimes \varphi^\ast \mathcal{M}$$이고 $$\varphi^\ast \mathcal{O}_Y \cong \mathcal{O}_X$$이므로, pullback은 group homomorphism이다.
 
-이를 확인하기 위해 transition function 관점에서 살펴보자. $\mathcal{L} \otimes \mathcal{M}$의 transition function은 $g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}$이므로, $\varphi^*(\mathcal{L} \otimes \mathcal{M})$의 transition function은 $(g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}) \circ \varphi = (g_{ij}^{\mathcal{L}} \circ \varphi)(g_{ij}^{\mathcal{M}} \circ \varphi)$이다. 이는 각각 $\varphi^*\mathcal{L}$과 $\varphi^*\mathcal{M}$의 transition function이므로, $\varphi^*(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^*\mathcal{L} \otimes \varphi^*\mathcal{M}$을 얻는다. 또한 $\mathcal{O}_Y$의 transition function은 모두 $1$이므로 $\varphi^*\mathcal{O}_Y$의 transition function도 $1$, 즉 $\varphi^*\mathcal{O}_Y \cong \mathcal{O}_X$이다.
+이를 확인하기 위해 transition function 관점에서 살펴보자. $$\mathcal{L} \otimes \mathcal{M}$$의 transition function은 $$g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}$$이므로, $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M})$$의 transition function은 $$(g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}) \circ \varphi = (g_{ij}^{\mathcal{L}} \circ \varphi)(g_{ij}^{\mathcal{M}} \circ \varphi)$$이다. 이는 각각 $$\varphi^\ast\mathcal{L}$과 $\varphi^\ast\mathcal{M}$$의 transition function이므로, $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast\mathcal{L} \otimes \varphi^\ast\mathcal{M}$$을 얻는다. 또한 $$\mathcal{O}_Y$$의 transition function은 모두 $$1$$이므로 $$\varphi^\ast\mathcal{O}_Y$$의 transition function도 $$1$$, 즉 $$\varphi^\ast\mathcal{O}_Y \cong \mathcal{O}_X$$이다.
 
 </details>
 
 <div class="example" markdown="1">
 
-<ins id="ex22">**예시 22**</ins> **Embedding의 pullback**: Embedding $$i: C \hookrightarrow \mathbb{P}^n$$에 대해, $$i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$$은 curve $$C$$ 위의 line bundle이다. 이를 $$C$$ 위의 *hyperplane bundle*이라 부르며, $$\mathcal{O}_C(1)$$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $C = \mathbb{P}^1 \subset \mathbb{P}^n$일 때 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12)에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
+<ins id="ex22">**예시 22**</ins> Embedding $$i: C \hookrightarrow \mathbb{P}^n$$에 대해, $$i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$$은 curve $$C$$ 위의 line bundle이다. 이를 $$C$$ 위의 *hyperplane bundle*이라 부르며, $$\mathcal{O}_C(1)$$로 표기한다. 일반적으로 $$\mathcal{O}_C(1)$$은 nontrivial인데, 예를 들어 $$C = \mathbb{P}^1 \subset \mathbb{P}^n$$일 때 $$\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$$은 [예시 12](#ex12)에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $$\mathbb{P}^n$$의 hypersurface 중 degree $$1$$인 것, 즉 hyperplane $$H$$에 대응하는 line bundle $$\mathcal{O}_{\mathbb{P}^n}(1)$$을 $$C$$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
 
 </div>
 
@@ -399,11 +399,15 @@ Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $$\mathbb{A}
 
 <div class="example" markdown="1">
 
-<ins id="ex24">**예시 24**</ins> 세 가지 vector bundle의 예를 든다. *Trivial vector bundle* $$\mathcal{O}_X^{\oplus r} = X \times \mathbb{A}^r$$은 모든 transition function이 $$g_{ij} = I_r$$인 rank $$r$$ vector bundle이다. *Tangent bundle* $$\mathcal{T}_X$$는 각 점 $$p \in X$$에 tangent space $$T_p X$$를 fiber로 갖는 vector bundle이다. 만약 $$X$$가 $$n$$차원 smooth variety이면 rank $$n$$ vector bundle이고, local coordinate $$\x_1, \ldots, \x_n$$에서 $$\partial/\partial \x_1, \ldots, \partial/\partial \x_n$$이 local frame을 이룬다. *Cotangent bundle* $$\Omega_X^1 = \mathcal{T}_X^\vee$$는 tangent bundle의 dual이며, local coordinate에서 $$d\x_1, \ldots, d\x_n$$이 local frame을 이룬다. Top exterior power $$\omega_X = \bigwedge^n \Omega_X^1$$은 *canonical line bundle*이라 불리며, Serre duality 등에서 중요한 역할을 한다.
+<ins id="ex24">**예시 24**</ins> 가장 단순한 예시는 line bundle $$\mathcal{O}_X$$로부터 오는 rank $$r$$ *trivial vector bundle* $$\mathcal{O}_X^{\oplus r}$$이다. 이는 line bundle $$\mathcal{O}_X$$를 $$r$$번 direct sum하여 얻어지는 것이다. 
+
+기하학적으로 중요한 대상들은 tangent bundle과 cotangent bundle이다. *Tangent bundle* $$\mathcal{T}_X$$는 각 점 $$p \in X$$에 tangent space $$T_p X$$를 fiber로 갖는 vector bundle로, 만약 $$X$$가 $$n$$차원 smooth variety이면 rank $$n$$ vector bundle이고, local coordinate $$\x_1, \ldots, \x_n$$에서 $$\partial/\partial \x_1, \ldots, \partial/\partial \x_n$$이 local frame을 이룬다. *Cotangent bundle* $$\Omega_X^1 = \mathcal{T}_X^\vee$$는 tangent bundle의 dual이며, local coordinate에서 $$d\x_1, \ldots, d\x_n$$이 local frame을 이룬다.
+
+직관적으로 $$\Omega_X^1$$은 $$X$$ 위에 정의된 differential $$1$$-form들의 bundle이므로, 이들을 $$r$$번 텐서하여 $$r$$-form들의 bundle을 얻을 수 있다. 이들 중 제일 흥미로운 것은 top exterior power $$\omega_X = \bigwedge^n \Omega_X^1$$으로, 이는 rank $$1$$ vector bundle, 즉 line bundle이며 미분기하학에서였다면 volume form들의 bundle이라 생각할 수 있었을 것이다. 우리는 이를 *canonical line bundle*이라 부른다. 
 
 </div>
 
-Vector bundle에 대해서도 line bundle과 유사한 연산을 정의할 수 있다. 두 vector bundle $$\mathcal{E}, \mathcal{F}$$의 tensor product $$\mathcal{E} \otimes \mathcal{F}$$는 fiberwise tensor product로 정의되며, 그 transition functions은 $$g_{ij}^{\mathcal{E}} \otimes g_{ij}^{\mathcal{F}}$$이다. Dual bundle $$\mathcal{E}^\vee$$의 transition functions은 $$\left(g_{ij}^{\mathcal{E}}\right)^{-t}$$ (inverse transpose)이다. 또한 direct sum $$\mathcal{E} \oplus \mathcal{F}$$는 fiberwise direct sum으로 정의되며, 이때 transition functions은 block diagonal 행렬 $$\begin{pmatrix} g_{ij}^{\mathcal{E}} & 0 \\ 0 & g_{ij}^{\mathcal{F}} \end{pmatrix}$$이 된다.
+위와 같이 vector bundle에 대해서도 line bundle과 유사한 연산을 정의할 수 있다. 두 vector bundle $$\mathcal{E}, \mathcal{F}$$의 tensor product $$\mathcal{E} \otimes \mathcal{F}$$는 fiberwise tensor product로 정의되며, 그 transition functions은 $$g_{ij}^{\mathcal{E}} \otimes g_{ij}^{\mathcal{F}}$$이다. Dual bundle $$\mathcal{E}^\vee$$의 transition functions은 $$\left(g_{ij}^{\mathcal{E}}\right)^{-t}$$ (inverse transpose)이다. 또한 direct sum $$\mathcal{E} \oplus \mathcal{F}$$는 fiberwise direct sum으로 정의되며, 이때 transition functions은 block diagonal matrix $$\begin{pmatrix} g_{ij}^{\mathcal{E}} & 0 \\ 0 & g_{ij}^{\mathcal{F}} \end{pmatrix}$$이 된다.
 
 ## Tautological Bundle on Grassmannian
 
@@ -429,7 +433,7 @@ $$0 \to S \to \mathcal{O}_{\Gr(k,n)}^{\oplus n} \to Q \to 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop26">**명제 26**</ins> $$\Gr(1, n+1) = \mathbb{P}^n$$에서 tautological bundle $$S$$는 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$과 동형이다.
+<ins id="prop26">**명제 26**</ins> $$\Gr(1, n+1) = \mathbb{P}^n$$에서 tautological bundle $$S$$는 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$과 isomorphic하다.
 
 </div>
 
