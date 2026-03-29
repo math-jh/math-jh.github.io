@@ -105,9 +105,11 @@ $$0 \rightarrow \Omega_{\mathbb{P}^n}^1 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-
 
 </div>
 
-구체적으로, 이는 다음의 exact sequence
+구체적으로, 우리는 우선 다음의 exact sequence
 
-$$0\rightarrow \mathcal{O}_{\mathbb{P}^n}\rightarrow \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus (n+1)}\rightarrow$$
+$$0\rightarrow \mathcal{O}_{\mathbb{P}^n}\rightarrow \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus (n+1)}\rightarrow 0$$
+
+를 생각한다. 여기서 $$\mathbb{O}_{\mathbb{P}^n}$$은 
 
 이제 determinant를 취하여 $$\mathbb{P}^n$$의 canonical bundle을 계산할 수 있다. Exact sequence에서 top exterior power를 취하면 다음 동형을 얻는다.
 
