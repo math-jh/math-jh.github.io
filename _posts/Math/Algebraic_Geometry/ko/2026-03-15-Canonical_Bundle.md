@@ -61,23 +61,28 @@ $$\mathfrak{m}_x/\mathfrak{m}_x^2\cong (\Omega_{A/\mathbb{K}}^1)_x \otimes_{\mat
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $$\mathbb{A}^n$$의 cotangent bundle은 $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$이다. Coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 Kähler differentials은 free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n] \, d\x_i$$이므로, 이에 대응하는 vector bundle은 rank $$n$$ trivial bundle이 된다.
+<ins id="ex3">**예시 3**</ins> $$\mathbb{A}^n$$의 cotangent bundle은 $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$이다. 대수적으로, 만일 $$\mathbb{A}^n$$의 coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$을 고정하면 이 $$\mathbb{K}$$-algebra의 Kähler differentials은 free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n] \, d\x_i$$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
+
 
 </div>
 
-## Canonical Bundle의 정의
+## Canonical Bundle
+
+한편 우리는 임의의 smooth variety $$X$$of dimension $$n$$과 그 위의 cotangent bundle $$\Omega_X^1$$에 대하여, $$\Omega_X^1$$의 각 fiber는 $$n$$차원이므로 이를 $$n$$번 exterior product한 것은 line bundle이 되는 것을 안다.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Smooth variety $$X$$ of dimension $$n$$의 *canonical bundle* $$\omega_X$$는 cotangent bundle의 top exterior power이다.
+<ins id="def4">**정의 4**</ins> Smooth variety $$X$$ of dimension $$n$$의 *canonical bundle* $$\omega_X$$를 cotangent bundle의 top exterior power
 
 $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 
+로 정의한다. 
+
 </div>
 
-$$\Omega_X^1$$이 rank $$n$$ vector bundle이므로, 그 top exterior power는 rank $$1$$, 즉 line bundle이다.
+우리는 canonical bundle $$\omega_X$$의 global section $$s\in H^0(X.\omega_X)$$을 $$X$$ 위의 *regular $$n$$-form*이라 부른다. 이들은 만일 $$\omega_X$$의 trivializing open set $$U$$를 잡고, 이를 [예시 3](#ex3)과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $$f$$에 대하여 $$f\,d\x_1 \wedge \cdots \wedge d\x_n$$의 꼴로 나타나는 $$n$$-form들이다. 
 
-Canonical bundle $$\omega_X$$의 global section $$s \in H^0(X, \omega_X)$$는 $$X$$ 위의 *regular $$n$$-form*이라 부른다. 국소적으로, $$X$$의 열린 부분집합 $$U$$ 위에서 $$\Omega_X^1$$은 $$\mathcal{O}_U^{\oplus n}$$과 동형인데, 각 $$n$$-form은 $$f \, d\x_1 \wedge \cdots \wedge d\x_n$$의 꼴로 표현되는 differential form이다. $$\mathbb{A}^n$$에서는 [예시 3](#ex3)에 의해 $$\omega_{\mathbb{A}^n} \cong \bigwedge^n \mathcal{O}_{\mathbb{A}^n}^{\oplus n} \cong \mathcal{O}_{\mathbb{A}^n}$$이며, $$d\x_1 \wedge \cdots \wedge d\x_n$$이 $$\omega_{\mathbb{A}^n}$$의 trivializing section이 된다.
+한편 우리는 [\[대수기하학\] §선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_geometry/line_bundles#prop19)의 line bundle과 divisor class의 대응으로부터 다음을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
