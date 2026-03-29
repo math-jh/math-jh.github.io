@@ -6,38 +6,12 @@
 \usetikzlibrary{arrows.meta}
 \begin{document}
 
-%% Cusp_curve (Tangent_spaces-2.png)
-\begin{tikzpicture}[
-    scale=1.5,
-    >=Stealth,
-    axis/.style={->,thick,black!60},
-    curve/.style={thick,blue!70!black,smooth}
-]
-    % Axes
-    \draw[axis] (-0.8,0) -- (3,0) node[right] {$\x$};
-    \draw[axis] (0,-2.2) -- (0,2.5) node[above] {$\y$};
-    
-    
-    % Cusp curve: y^2 = x^3, so y = ±x^(3/2)
-    % Domain: x >= 0
-    \draw[curve,domain=0:1.5,samples=100,variable=\x] 
-        plot ({\x},{\x^(1.5)});
-    \draw[curve,domain=0:1.5,samples=100,variable=\x] 
-        plot ({\x},{-\x^(1.5)});
-    
-    % Origin (singular point)
-    \fill[red] (0,0) circle (2pt);
-    \node[red,below right] at (0.1,-0.15) {$0$};
-    
-    % Tangent line at origin (dashed) - x-axis
-    \draw[dashed,orange!80!black,thick] (-0.5,0) -- (2.5,0) 
-        node[pos=0.9,below] {$\y=0$};
-    
-    % Label
-    \node at (1.8,1.8) {$X: \y^2 = \x^3$};
-    
+\begin{tikzpicture}
+	\draw[thick, black, -{stealth}] (-10,0) -- (10,0);
+	\draw[thick, black, -{stealth}] (0,-10) -- (0,10);
+	\draw[thick, red] (2,0) circle[radius=3];
+	\draw[thick, red] (-2,0) circle[radius=3];
 \end{tikzpicture}
-
 
 \end{document}
 
@@ -529,5 +503,39 @@
     
     % Label
     \node[blue] at (1.8,2.6) {$X: \y^2 = \x^2(\x+1)$};
+
+
+%% Cusp_curve (Tangent_spaces-2.png)
+\begin{tikzpicture}[
+    scale=1.5,
+    >=Stealth,
+    axis/.style={->,thick,black!60},
+    curve/.style={thick,blue!70!black,smooth}
+]
+    % Axes
+    \draw[axis] (-0.8,0) -- (3,0) node[right] {$\x$};
+    \draw[axis] (0,-2.2) -- (0,2.5) node[above] {$\y$};
     
+    
+    % Cusp curve: y^2 = x^3, so y = ±x^(3/2)
+    % Domain: x >= 0
+    \draw[curve,domain=0:1.5,samples=100,variable=\x] 
+        plot ({\x},{\x^(1.5)});
+    \draw[curve,domain=0:1.5,samples=100,variable=\x] 
+        plot ({\x},{-\x^(1.5)});
+    
+    % Origin (singular point)
+    \fill[red] (0,0) circle (2pt);
+    \node[red,below right] at (0.1,-0.15) {$0$};
+    
+    % Tangent line at origin (dashed) - x-axis
+    \draw[dashed,orange!80!black,thick] (-0.5,0) -- (2.5,0) 
+        node[pos=0.9,below] {$\y=0$};
+    
+    % Label
+    \node at (1.8,1.8) {$X: \y^2 = \x^3$};
+    
+\end{tikzpicture}
+
+
 \end{tikzpicture}

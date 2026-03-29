@@ -22,7 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const citation = `[\\[${category}\\] §${postTitle}, ⁋${type} ${number}](${pagePath}#${insID})`;
 
-            navigator.clipboard.writeText(citation);
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(citation);
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = citation;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+            }
 
             // Optional: quick feedback (flash the background)
             ins.style.transition = 'background 0.2s';
