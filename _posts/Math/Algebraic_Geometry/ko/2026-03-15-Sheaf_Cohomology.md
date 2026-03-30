@@ -12,7 +12,7 @@ header:
     overlay_filter: 0.5
 
 date: 2026-03-12
-last_modified_at: 2026-03-18
+last_modified_at: 2026-03-31
 weight: 13
 
 published: false
@@ -31,6 +31,8 @@ Sheaf cohomology는 sheaf의 global section functor의 derived functor로 정의
 $$H^i(X, \mathcal{F}) = R^i\Gamma(X, \mathcal{F})$$
 
 </div>
+
+Global section functor $$\Gamma(X, -)$$는 left exact이다: sheaf의 short exact sequence $$0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$$에서 $$\Gamma$$를 적용하면 section의 값을 점단위로 취하는 것과 같으므로, $$0 \to \Gamma(X, \mathcal{F}') \to \Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'')$$는 exact이다. 그러나 우변의 $$\Gamma(X, \mathcal{F}'') \to 0$$은 일반적으로 exact하지 않으므로, $$\Gamma$$는 right exact하지 않다. Right derived functor는 이 "전역화에서 손실되는 정보"를 측정한다.
 
 $$i = 0$$인 경우, $$H^0(X, \mathcal{F})$$는 $$\mathcal{F}$$의 global section space $$\Gamma(X, \mathcal{F})$$와 일치한다. $$i > 0$$인 경우, $$H^i$$는 "전역 section의 장애물"을 측정한다.
 
@@ -75,7 +77,7 @@ $$H^p(U_{i_0} \cap \cdots \cap U_{i_q}, \mathcal{F}) = 0 \quad \text{for all } p
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Leray 정리는 spectral sequence의 degeneration에 의해 증명된다. Cover $$\mathcal{U}$$에서 시작하는 Čech-de Rham spectral sequence가 $$E_2$$ 페이지에서 이미 degenerate하면, Čech cohomology가 derived functor cohomology와 동형임을 보일 수 있다.
+Leray 정리는 spectral sequence의 degeneration에 의해 증명된다. Cover $$\mathcal{U}$$에 대해 double complex $$C^p(\mathcal{U}, \mathcal{I}^q)$$ (여기서 $$\mathcal{I}^\bullet$$는 injective resolution)를 구성하여 얻는 Čech-to-derived functor spectral sequence의 $$E_2$$ 페이지는 $$E_2^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{H}^q(\mathcal{F}))$$이다. Acyclicity 조건에 의해 $$q > 0$$인 열이 모두 소멸하므로 $$E_2$$에서 이미 degenerate하고, $$\check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$$를 얻는다.
 
 </details>
 
@@ -100,7 +102,7 @@ $$0 \to H^0(X, \mathcal{F}') \to H^0(X, \mathcal{F}) \to H^0(X, \mathcal{F}'') \
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이 long exact sequence는 derived functor의 일반적 성질로부터 자동으로 얻어진다. Global section functor $$\Gamma$$는 left exact이며, 그 right derived functor들 사이에서 표준적인 long exact sequence가 존재한다.
+이 long exact sequence는 derived functor의 일반적 성질로부터 얻어진다. Global section functor $$\Gamma$$에 short exact sequence를 적용한 resolution $$0 \to \Gamma(\mathcal{I}') \to \Gamma(\mathcal{I}) \to \Gamma(\mathcal{I}'')$$에 snake lemma를 적용하면 connecting homomorphism $$\delta$$를 얻을 수 있다: $$\mathcal{F}''$$의 global section을 local section으로 잘라 $$\mathcal{F}$$에서 lift한 뒤, 교차점에서의 차이를 $$\mathcal{F}'$$의 cohomology class로 읽는 것이 $$\delta$$의 본질적인 구성이다.
 
 </details>
 
@@ -108,7 +110,7 @@ $$0 \to H^0(X, \mathcal{F}') \to H^0(X, \mathcal{F}) \to H^0(X, \mathcal{F}'') \
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6** **$$\mathbb{P}^1$$에서의 line bundle cohomology**: ([§Line Bundles, ⁋예시 19](/ko/math/algebraic_geometry/line_bundles#ex19))에서 $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = k + 1$$ ($$k \ge 0$$)임을 보았다. Sheaf cohomology의 관점에서, 이는 $$k \ge 0$$일 때:
+<ins id="ex6">**예시 6** **$$\mathbb{P}^1$$에서의 line bundle cohomology**: $$\mathbb{P}^1$$ 위의 line bundle $$\mathcal{O}(k)$$의 cohomology를 계산하면, $$k \ge 0$$일 때:
 
 $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = k + 1, \quad H^1(\mathbb{P}^1, \mathcal{O}(k)) = 0$$
 
@@ -122,7 +124,7 @@ $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = 0, \quad H^1(\mathbb{P}^1, \mathcal{O}(k))
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7** **$$\mathbb{P}^n$$의 cohomology (Bott 공식)**: ([§Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles))에서 살펴본 Bott 공식에 따르면, $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}_{\mathbb{P}^n}(k)$$의 cohomology는 다음과 같다:
+<ins id="ex7">**예시 7** **$$\mathbb{P}^n$$의 cohomology (Bott 공식)**: §Cohomology of Line Bundles에서 다룰 Bott 공식에 따르면, $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}_{\mathbb{P}^n}(k)$$의 cohomology는 다음과 같다:
 
 - $$k \ge 0$$: $$H^0(\mathbb{P}^n, \mathcal{O}(k)) = \binom{n+k}{k}$$, 나머지 $$H^i = 0$$ ($$i > 0$$)
 - $$k \le -n-1$$: $$H^n(\mathbb{P}^n, \mathcal{O}(k)) = \binom{-k-1}{n}$$, 나머지 $$H^i = 0$$ ($$i < n$$)
@@ -134,22 +136,13 @@ $$H^0(\mathbb{P}^1, \mathcal{O}(k)) = 0, \quad H^1(\mathbb{P}^1, \mathcal{O}(k))
 
 Sheaf cohomology의 가장 중요한 응용 중 하나는 ([§Canonical Bundle](/ko/math/algebraic_geometry/canonical_bundle))에서 도입한 canonical bundle $$\omega_X$$과 관련된 Serre duality이다. 이는 §Serre Duality에서 자세히 다루지만, 핵심 정리만 미리 서술하면 다음과 같다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8** (Serre Duality, 약한 형태) Smooth projective variety $$X$$ of dimension $$n$$과 임의의 coherent sheaf $$\mathcal{F}$$에 대하여, 자연스러운 동형
+<div class="misc" markdown="1">
+**미리보기 (Serre Duality).** Smooth projective variety $$X$$ of dimension $$n$$과 임의의 coherent sheaf $$\mathcal{F}$$에 대하여, 자연스러운 동형
 
 $$H^i(X, \mathcal{F})^\ast \cong H^{n-i}(X, \omega_X \otimes \mathcal{F}^\vee)$$
 
-이 존재한다. 특히 $$H^n(X, \omega_X) \cong \mathbb{K}$$이다.
-
+이 존재한다고 알려져 있다. 특히 $$H^n(X, \omega_X) \cong \mathbb{K}$$이다. 전체 증명과 응용은 §Serre Duality에서 다룬다.
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-전체 증명은 §Serre Duality에서 다룬다. 핵심 아이디어는 canonical sheaf가 dualizing object로 작용한다는 것이다.
-
-</details>
 
 ---
 
