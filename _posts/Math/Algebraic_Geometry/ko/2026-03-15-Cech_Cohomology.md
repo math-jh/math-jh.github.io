@@ -19,7 +19,7 @@ published: false
 
 ## 도입
 
-Sheaf cohomology는 derived functor로 정의되어 추상적이며 계산하기 어렵다. **Čech cohomology**는 open cover를 사용하여 더 구체적으로 cohomology를 계산하는 방법을 제공한다.
+Sheaf cohomology ([§Sheaf Cohomology, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1))는 derived functor로 정의되어 추상적이며 계산하기 어렵다. **Čech cohomology**는 open cover를 사용하여 더 구체적으로 cohomology를 계산하는 방법을 제공한다.
 
 중요한 점은 "좋은" 조건 하에서 Čech cohomology가 sheaf cohomology와 일치한다는 것이다.
 
@@ -102,9 +102,11 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathfrak{U}} \check{H}^p(\mathfrak{
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8 (Acyclic)**</ins> Sheaf $$\mathcal{F}$$가 **acyclic**이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다. 예를 들어 flasque sheaf, injective sheaf, fine sheaf는 모두 acyclic이다.
+<ins id="def8">**정의 8 (Acyclic)**</ins> Sheaf $$\mathcal{F}$$가 **acyclic**이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다. 예를 들어 flasque sheaf, injective sheaf는 모두 acyclic이다.
 
 </div>
+
+이제 Čech cohomology와 sheaf cohomology ([§Sheaf Cohomology, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1)) 사이의 관계를 살펴본다. 핵심 도구는 **double complex**와 **spectral sequence**이다. Double complex $$C^{\bullet,\bullet}$$는 두 방향으로 differential을 갖는 이중 graded complex이다. 이 complex에 filtration을 주면 spectral sequence라는 근사 수열을 얻을 수 있는데, 두 방향 각각에 대해 filtration을 주면 일반적으로 서로 다른 두 spectral sequence $$\{^{\prime}E_r^{p,q}\}, \{^{\prime\prime}E_r^{p,q}\}$$가 나오며, 둘 다 동일한 전체 cohomology로 수렴한다.
 
 <div class="proposition" markdown="1">
 
@@ -115,7 +117,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathfrak{U}} \check{H}^p(\mathfrak{
 <details class="proof" markdown="1">
 <summary>증명 (Sketch)</summary>
 
-이 map은 Čech complex에서 injective resolution으로 가는 canonical map에서 유도된다. 구체적으로, $$\mathcal{F}$$의 injective resolution $$\mathcal{F} \to \mathcal{I}^\bullet$$을 선택하면, Čech complex $$C^\bullet(\mathfrak{U}, \mathcal{F})$$에서 double complex $$C^\bullet(\mathfrak{U}, \mathcal{I}^\bullet)$$를 구성할 수 있다. 이 double complex의 두 spectral sequence가 각각 Čech cohomology와 sheaf cohomology로 수렴하며, 이로부터 natural map이 존재함을 알 수 있다.
+이 map은 Čech complex에서 injective resolution으로 가는 canonical map에서 유도된다. 구체적으로, $$\mathcal{F}$$의 injective resolution $$\mathcal{F} \to \mathcal{I}^\bullet$$을 선택하면, Čech complex $$C^\bullet(\mathfrak{U}, \mathcal{F})$$에서 double complex $$C^\bullet(\mathfrak{U}, \mathcal{I}^\bullet)$$를 구성할 수 있다. 이 double complex의 두 spectral sequence가 각각 Čech cohomology와 sheaf cohomology로 수렴하며, 이로부터 natural map이 존재함을 알 수 있다. 더 구체적으로, 한쪽 spectral sequence는 먼저 sheaf direction으로 cohomology를 취한 뒤 Čech direction으로 계산하므로 $$\check{H}^\bullet \Rightarrow H^\bullet(\mathrm{total})$$로, 다른 쪽은 반대로 먼저 Čech direction으로 계산하므로 $$H^\bullet(\mathcal{I}^\bullet) \Rightarrow H^\bullet(\mathrm{total})$$로 수렴한다. 두 spectral sequence가 같은 극한에 도달하므로 $$\check{H}^p \to H^p$$라는 natural map을 얻는다.
 
 </details>
 
@@ -130,7 +132,7 @@ $$\check{H}^p(\mathfrak{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$$
 <details class="proof" markdown="1">
 <summary>증명 (Sketch)</summary>
 
-Acyclic 조건 하에서 앞의 증명에서 언급한 double complex의 spectral sequence가 $$E_2$$ 페이지에서 degenerate한다. 이는 cover의 교집합에서 higher cohomology가 사라지기 때문이다. 따라서 Čech cohomology가 derived functor cohomology와 동형이다.
+Acyclic 조건 하에서 앞의 증명에서 언급한 double complex의 한쪽 spectral sequence — 먼저 sheaf cohomology $$H^q(U_{i_0 \cdots i_p}, \mathcal{F})$$를 취하는 쪽 — 는 $$E_1$$ 페이지에서 $$q > 0$$인 열이 모두 $$0$$이 되어 사라진다. 남는 것은 $$q = 0$$인 열뿐이므로 $$E_2$$ 페이지에서 이미 degenerate하여 $$\check{H}^p(\mathfrak{U}, \mathcal{F})$$에 수렴한다. 다른 쪽 spectral sequence도 sheaf cohomology $$H^p(X, \mathcal{F})$$로 수렴하므로, 둘이 일치한다.
 
 </details>
 
@@ -152,8 +154,8 @@ $$\check{H}^p(\mathfrak{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$$
 
 Constant sheaf $$\underline{\mathbb{Z}}$$에 대해:
 
-- $$\check{H}^0(\mathfrak{U}, \underline{\mathbb{Z}}) = \mathbb{Z}$$
-- $$\check{H}^1(\mathfrak{U}, \underline{\mathbb{Z}}) = \mathbb{Z}$$
+- $$\check{H}^0(\mathfrak{U}, \underline{\mathbb{Z}}) = \mathbb{Z}$$: 이것은 $$U_1, U_2$$에서 일치하는 상수함수의 값으로, $$\mathbb{Z}$$ 전체이다.
+- $$\check{H}^1(\mathfrak{U}, \underline{\mathbb{Z}}) = \mathbb{Z}$$: 1-cocycle은 각 연결성분 $$V_1, V_2$$에서 정수값을 갖으며, coboundary는 두 성분에서 같은 값을 빼는 것에 해당하므로, 두 성분의 값의 차이 $$n \in \mathbb{Z}$$가 cohomology class를 분류한다.
 
 이것은 $$H^1(S^1, \mathbb{Z}) \cong \mathbb{Z}$$와 일치한다.
 
@@ -170,7 +172,7 @@ Constant sheaf $$\underline{\mathbb{Z}}$$에 대해:
 <details class="proof" markdown="1">
 <summary>증명 (Sketch)</summary>
 
-Line bundle $$L$$은 open cover $$\{U_i\}$$ 위에서 transition function $$g_{ij} \in \mathcal{O}_X^\ast(U_i \cap U_j)$$로 표현된다. Cocycle condition:
+Line bundle $$L$$은 open cover $$\{U_i\}$$ 위에서 transition function $$g_{ij} \in \mathcal{O}_X^\ast(U_i \cap U_j)$$로 표현된다 ([§Line Bundles, ⁋명제 2](/ko/math/algebraic_geometry/line_bundles#prop2)). Cocycle condition:
 
 $$g_{ij} g_{jk} = g_{ik} \quad \text{on } U_i \cap U_j \cap U_k$$
 
