@@ -29,7 +29,7 @@ published: false
 이를 위해서는 임의의 affine variety $$X$$와 그 coordinate ring $$A$$, 그리고 $$A$$-module $$M$$이 주어졌을 때 $$M$$을 vector bundle로 정의하는 과정을 살펴보아야 한다. 일반적으로 $$M$$이 $$A$$-module이므로 이를 $$A\rightarrow M$$이 주어졌다 생각할 수 있으며, 우리의 기본적인 철학은 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop16)을 이용하여 coordinate *ring* 사이의 homomorphism을 variety들 사이의 반대방향 morphism으로 옮길 수 있으며 따라서 $$X$$ 위에 정의된 bundle을 얻어낼 수 있다는 것이다. 그러나 문제는 $$M$$은 ring이 아니라는 것이다. 즉 $$M$$ 위에는 곱셈이 정의되어있지 않다. 그러나 [대칭텐서, ⁋정의 3](/ko/math/multilinear_algebra/symmetric_tensors#def3)의 
 
 
-Cotangent bundle $$\Omega_X$$
+Cotangent bundle $$\Omega_X$$는
 
 이 bundle을 sheaf로 보면 cotangent sheaf라 부를 수 있다. 그러나 우리가 아직 quasi-coherent sheaf를 정의하지 않았으므로, 여기에서는 $A$-module로부터 bundle을 구성하는 기본적인 아이디어만 짚고 넘어간다.
 
