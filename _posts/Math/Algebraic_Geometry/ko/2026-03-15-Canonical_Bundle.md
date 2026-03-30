@@ -26,22 +26,37 @@ published: false
 
 위에서 언급한 것과 같이, $$\omega_X$$를 정의하기 위해서는 cotangent bundle $$\Omega_X^1$$로부터 시작한다. 이는 $$X$$ 위에 정의된 differential form들의 bundle인 것을 이미 살펴보았다. 이것이 대수적인 세팅에서의 미분과 맞아떨어짐을 보이자. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 
 
-이를 위해서는 임의의 affine variety $$X$$와 그 coordinate ring $$A$$, 그리고 $$A$$-module $$M$$이 주어졌을 때 $$M$$을 vector bundle로 정의하는 과정을 살펴보아야 한다. 일반적으로 $$M$$이 $$A$$-module이므로 이를 $$A\rightarrow M$$이 주어졌다 생각할 수 있으며, 우리의 기본적인 철학은 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop16)을 이용하여 coordinate *ring* 사이의 homomorphism을 variety들 사이의 반대방향 morphism으로 옮길 수 있으며 따라서 $$X$$ 위에 정의된 bundle을 얻어낼 수 있다는 것이다. 그러나 문제는 $$M$$은 ring이 아니라는 것이다. 즉 $$M$$ 위에는 곱셈이 정의되어있지 않다. 그러나 [대칭텐서, ⁋정의 3](/ko/math/multilinear_algebra/symmetric_tensors#def3)의 
+이를 위해서는 임의의 affine variety $$X$$와 그 coordinate ring $$A$$, 그리고 $$A$$-module $$M$$이 주어졌을 때 $$M$$을 $$X$$ 위의 vector bundle로 옮기는 과정을 살펴보아야 한다. 우리의 기본적인 철학은 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop16)을 이용하여 coordinate *ring* 사이의 homomorphism을 variety들 사이의 반대방향 morphism으로 옮길 수 있으며 따라서 $$X$$ 위에 정의된 bundle을 얻어낼 수 있다는 것이다. 그러나 문제는 $$M$$은 ring이 아니라는 것이다. 즉 $$M$$ 위에는 곱셈이 정의되어있지 않다. 그러나 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)에 따르면 우리는 $$M$$ 위에 (commutative) 곱셈을 강제로 정의해주는 symmetric algebra $$\S(M)$$을 생각할 수 있다. 
 
+그러나 이를 곧바로 정의하기에는 문제가 있다. 우리의 목적은 $$M$$을 $$X$$ 위에 정의된 vector bundle로 보려는 것임을 기억하자. 즉 대략적으로 $$X$$의 각 점 위에 $$M$$을 잘 달아주는 것이 우리의 목적인데, [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop16)에 따르면 $$M$$이 variety의 세상에서 (fiber로) 등장한다면, 이를 정의하는 coordinate ring은 이것의 좌표함수여야 한다. 즉, 우리는 $$M$$ 대신 $$M^\vee$$를 사용해야만 한다. 
 
-Cotangent bundle $$\Omega_X$$는
+따라서 우리는 $$\S_A(M^\vee)$$을 생각한다. 이는 $$A$$-algebra이며 따라서 coordinate ring 사이의 함수 $$A\rightarrow \S_A(M^\vee)$$을 얻고, 여기에 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop16)를 적용하면 어떠한 variety $$V(M)$$에서 $$X$$로 가는 morphism을 얻는다. 
 
-이 bundle을 sheaf로 보면 cotangent sheaf라 부를 수 있다. 그러나 우리가 아직 quasi-coherent sheaf를 정의하지 않았으므로, 여기에서는 $A$-module로부터 bundle을 구성하는 기본적인 아이디어만 짚고 넘어간다.
+이 morphism이 실제로 $$X$$ 위의 vector bundle 구조를 갖는지 확인하자. 각 점 $$p \in X$$에서 $$V(M) \to X$$의 fiber $$V(M)_p = \pi^{-1}(p)$$는 $$p$$에 대응하는 maximal ideal $$\mathfrak{m}_p$$가 $$\S_A(M^\vee)$$에 확장된 $$\mathfrak{m}_p \cdot \S_A(M^\vee)$$의 zero set으로 기술된다. 이 fiber의 coordinate ring은 $$\S_A(M^\vee) \otimes_A k(p) = \S_{k(p)}(M_p^\vee)$$이 되는데, $$M_p^\vee = M^\vee \otimes_A k(p)$$이므로 degree 1 homogeneous 부분이 $$M_p^\vee$$인 polynomial algebra이다. 따라서 fiber $$V(M)_p$$는 $$\S_{k(p)}^*(M_p^\vee)$$, 즉 $$(M_p^\vee)^\vee$$의 원소들로 parameterize되며, $$M$$이 유한생성 $$A$$-module이므로 $$(M_p^\vee)^\vee \cong M_p = M \otimes_A k(p)$$가 성립하여 각 fiber는 $$\mathbb{K}$$ 위의 vector space가 된다. 
 
-$A$-module $M$이 주어졌다고 하자. $M$에는 곱셈이 정의되어 있지 않으므로 이것을 그대로 coordinate ring으로 사용할 수는 없다. 그러나 에서 정의한 symmetric algebra $\operatorname{Sym}_A^*(M)$은 $M$을 자유롭게 생성하는 commutative $A$-algebra이므로, 이를 coordinate ring으로 삼아 variety를 정의할 수 있다.
+Locally triviality 역시 확인된다. 만일 $$M$$이 locally free of rank $$r$$이면, 각 점 $$p \in X$$ 근방에서 $$M\vert_U \cong A^{\oplus r}$$이 되므로 $$\S_A(M^\vee)\vert_U \cong \S_A((A^{\oplus r})^\vee) \cong A[y_1, \ldots, y_r]$$이고, 따라서 $$V(M)\vert_U \cong U \times \mathbb{A}^r$$이 성립한다. 즉 $$V(M) \to X$$는 $$X$$ 위의 vector bundle이다. 반면 $$M$$이 locally free가 아닌 경우에는 fiber의 차원이 점에 따라 달라지거나 fiber가 유한차원이 아닐 수 있으며, 이때 $$V(M) \to X$$는 vector bundle이 아닌 일반적인 morphism으로 남는다.
 
-이 variety를 $X$ 위로의 morphism $\pi\colon V \to X$로 본다. 각 점 $p \in X$에서의 fiber $V_p$는 $\operatorname{Sym}_{\kappa(p)}^*(M \otimes_A \kappa(p))$로 주어지는데, 이것은 polynomial ring이므로 affine space이다. 즉 $V$는 "각 점 $p$마다 $M \otimes_A \kappa(p)$를 fiber로 갖는 vector bundle"의 total space가 된다.
+### $$\widetilde{M}$$ construction
 
-이 vector bundle의 section을 생각하자. $\pi\colon V \to X$의 section $s\colon X \to V$는 각 점 $p$에서 fiber $V_p$ 안의 점을 하나 고르는 것이고, degree 1 부분 $M \otimes_A \kappa(p)$에서 고른다. 이를 global하게 표현하면, $M$의 generator들에 $\mathcal{O}_X(U)$의 계수를 곱한 것으로 나타나므로, 열린 부분집합 $U \subset X$에 대해 section space는
+위에서 $$\S_A(M^\vee)$$로부터 $$V(M) \to X$$라는 morphism을 얻었고, 이것이 $$X$$ 위의 vector bundle 구조를 가짐을 확인하였다. 이제 이 bundle을 section sheaf의 관점에서 기술하는 것이 $$\widetilde{M}$$ construction이다.
+
+$$A$$-module $$M$$로부터 $$X$$ 위의 sheaf $$\widetilde{M}$$을 다음과 같이 정의한다. 임의의 열린집합 $$U \subset X$$에 대하여
 
 $$\widetilde{M}(U) = M \otimes_A \mathcal{O}_X(U)$$
 
-가 된다. 이 construction을 $\widetilde{M}$라 표기한다.
+로 정의한다. 여기서 $$M \otimes_A \mathcal{O}_X(U)$$는 $$A$$-module $$M$$의 base ring을 $$A$$에서 $$\mathcal{O}_X(U)$$로 바꾸는 tensor product ([대수적 구조 §스칼라의 변환, ⁋정의 3](/ko/math/algebraic_structures/change_of_base_ring#def3))이며, $$\mathcal{O}_X(U)$$는 $$A$$-algebra이므로 이 tensor product는 자연스럽게 $$\mathcal{O}_X(U)$$-module이 된다. Restriction map은 $$\mathcal{O}_X$$의 restriction map에 의해 유도되는 natural map $$M \otimes_A \mathcal{O}_X(V) \to M \otimes_A \mathcal{O}_X(U)$$ ($$U \subset V$$)로 주어진다. 특히 $$X$$ 전체에 대해서는 $$\widetilde{M}(X) = M \otimes_A A \cong M$$이므로, $$M$$이 $$\widetilde{M}$$의 전역 section space로 복원된다.
+
+이 sheaf의 각 점 $$p \in X$$에서의 fiber를 생각하자. Residue field $$k(p)$$는 $$\mathbb{K}$$의 field extension이므로 $$A$$-algebra로 간주할 수 있고, fiber는
+
+$$(\widetilde{M})_p = \widetilde{M}(X) \otimes_A k(p) = M \otimes_A k(p)$$
+
+로 정의된다. 이것이 $$\mathbb{K}$$ 위의 vector space가 되는 이유는 다음과 같다. $$A$$은 $$\mathbb{K}$$-algebra이므로 $$M$$은 자연스럽게 $$\mathbb{K}$$-vector space 구조를 가지며, $$k(p)$$ 역시 $$\mathbb{K}$$의 extension field이므로 $$\mathbb{K}$$-vector space이다. 따라서 $$M \otimes_A k(p)$$는 $$\mathbb{K}$$ 위의 vector space가 된다. 만일 $$M$$이 locally free of rank $$r$$, 즉 임의의 maximal ideal $$\mathfrak{m} \subset A$$에 대하여 $$M_\mathfrak{m}$$이 free $$A_\mathfrak{m}$$-module of rank $$r$$이면, 모든 fiber $$M \otimes_A k(p)$$가 $$r$$차원 $$\mathbb{K}$$-vector space가 된다. 반면 $$M$$이 locally free가 아닌 경우에는 fiber의 차원이 점에 따라 달라지거나 fiber가 유한차원이 아닐 수 있으며, 이때 $$\widetilde{M}$$은 vector bundle이 아닌 quasi-coherent sheaf로 남는다.
+
+이제 $$V(M) \to X$$와 $$\widetilde{M}$$의 관계를 명확히 하자. 위에서 $$\S_A(M^\vee)$$로부터 얻은 $$V(M) \to X$$는 바로 $$\widetilde{M}$$에 해당하는 vector bundle의 total space와 그 projection이다. 각 점 $$p \in X$$ 위의 fiber $$V(M)_p$$는 $$M_p^\vee$$의 dual, 즉 $$\S_{k(p)}^*(M_p^\vee)$$로 parameterize되며, 이는 $$M_p$$의 원소들과 자연스럽게 대응된다. 따라서 $$V(M) \to X$$의 section은 각 점 $$p$$에서 fiber $$M_p = M \otimes_A k(p)$$의 원소를 연속적으로 (사실 algebraically) 선택하는 것이며, 이것이 바로 $$\widetilde{M}$$의 전역 section, 즉 $$M \otimes_A \mathcal{O}_X(U)$$의 원소에 해당한다. 즉 total space 관점($$V(M) \to X$$)과 section sheaf 관점($$\widetilde{M}$$)은 동일한 기하학적 대상을 서로 다른 언어로 기술한 것이다.
+
+### Canonical Bundle으로의 연결
+
+이제 이 construction을 cotangent bundle에 적용할 준비가 되었다. 명제 2의 증명에서 $$\Omega_{A/\mathbb{K}}$$로부터 bundle을 얻기 위해 $$\widetilde{M}$$ construction을 사용하였는데, 이 construction이 의미하는 바는 정확히 다음과 같다. $$\Omega_{A/\mathbb{K}}$$는 tangent bundle $$T_X$$의 section space와 natural하게 대응되는 $$A$$-module이므로, $$\widetilde{\Omega_{A/\mathbb{K}}}$$의 section space $$\Omega_{A/\mathbb{K}} \otimes_A \mathcal{O}_X(U)$$가 $$T_X$$의 section과 일치한다. Dual을 취하면 $$\Omega_X^1 \cong \widetilde{\Omega_{A/\mathbb{K}}}$$를 얻는다.
 
 ## Canonical Bundle
 
@@ -128,11 +143,18 @@ $$0 \rightarrow \Omega_{\mathbb{P}^n}^1 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-
 
 </div>
 
-구체적으로, 우리는 우선 다음의 exact sequence
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-$$0\rightarrow \mathcal{O}_{\mathbb{P}^n}\rightarrow \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus (n+1)}\rightarrow 0$$
+$$\mathbb{P}^n$$은 $$\mathbb{A}^{n+1}\setminus\{0\}$$을 $$\mathbb{K}^\ast$$로 quotient하여 얻어진다. $$\mathbb{A}^{n+1}$$의 coordinate ring $$\mathbb{K}[\x_0, \ldots, \x_n]$$을 생각하면, $$\mathbb{K}^\ast$$-action은 $$\lambda \cdot \x_i = \lambda \x_i$$로 주어진다. 이 action을 differential하면 $$\mathbb{A}^{n+1}\setminus\{0\}$$ 위에서 다음을 얻는다. $$\mathbb{K}^\ast$$의 원소 $$\lambda$$에 대해 $$t = \log\lambda$$라 두면, $$\lambda$$-action의 미분은 Euler vector field $$E = \sum_{i=0}^n \x_i \frac{\partial}{\partial \x_i}$$를 정의한다. 따라서 $$\mathbb{P}^n$$ 위의 tangent bundle $$T_{\mathbb{P}^n}$$는 $$T_{\mathbb{A}^{n+1}}\vert_{\mathbb{P}^n}$$에서 Euler vector field가 생성하는 1차원 부분을 quotient한 것이다.
 
-를 생각한다. 여기서 $$\mathbb{O}_{\mathbb{P}^n}$$은 
+이를 exact sequence로 쓰면, $$\mathbb{P}^n$$ 위에서 다음이 성립한다.
+
+$$0 \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus(n+1)} \rightarrow T_{\mathbb{P}^n} \rightarrow 0$$
+
+여기서 $$\mathcal{O}_{\mathbb{P}^n}(1)^{\oplus(n+1)}$$은 $$\mathbb{A}^{n+1}$$의 tangent bundle을 $$\mathbb{P}^n$$으로 pullback한 것이며, $$\mathcal{O}_{\mathbb{P}^n} \to \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus(n+1)}$$은 $$1 \mapsto (\x_0, \ldots, \x_n)$$에 의해 정의되는 injection으로, 이미지가 바로 Euler vector field에 해당한다. Dual을 취하면 명제의 exact sequence를 얻는다.
+
+</details>
 
 이제 determinant를 취하여 $$\mathbb{P}^n$$의 canonical bundle을 계산할 수 있다. Exact sequence에서 top exterior power를 취하면 다음 동형을 얻는다.
 
