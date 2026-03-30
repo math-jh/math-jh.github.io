@@ -20,7 +20,28 @@ published: false
 
 [§선형계](/ko/math/algebraic_geometry/linear_systems)에서 우리는 line bundle의 (basepoint-free) complete linear system을 사용하여 projective space에 embed할 수 있다는 것을 살펴보았고, 만일 이것이 closed embedding을 정의한다면 이러한 line bundle을 *very ample*이라 부르기도 하였다. 
 
-이렇듯 line bundle이 우리의 기하학에 꽤나 중요한 영향을 미치고 있음에도 불구하고, 우리는 아직까지 임의의 variety 위에 일반적으로 line bundle을 정의하는 방법을 제대로 살펴보지 않았다. 만일 $$X$$가 *smooth* variety라면, 우리는 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_geometry/line_bundles#ex24)를 사용하여 이 위에 정의된 canonical bundle $$\omega_X$$를 생각할 수 있다. 
+이렇듯 line bundle이 우리의 기하학에 꽤나 중요한 영향을 미치고 있음에도 불구하고, 우리는 아직까지 임의의 variety 위에 일반적으로 line bundle을 정의하는 방법을 제대로 살펴보지 않았다. 만일 $$X$$가 *smooth* variety라면, 우리는 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_geometry/line_bundles#ex24)를 사용하여 이 위에 정의된 cotangent bundle $$\Omega_X^1$$을 생각할 수 있으며 이것의 top exterior power를 생각하여 *canonical bundle* $$\omega_X$$를 생각할 수 있다. 이번 글에서 우리의 목표는 이 bundle $$\omega_X$$를 살펴보는 것이다. 
+
+## Quasi-coherent sheaf
+
+위에서 언급한 것과 같이, $$\omega_X$$를 정의하기 위해서는 cotangent bundle $$\Omega_X^1$$로부터 시작한다. 이는 $$X$$ 위에 정의된 differential form들의 bundle인 것을 이미 살펴보았다. 이것이 대수적인 세팅에서의 미분과 맞아떨어짐을 보이자. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 
+
+이를 위해서는 임의의 affine variety $$X$$와 그 coordinate ring $$A$$, 그리고 $$A$$-module $$M$$이 주어졌을 때 $$M$$을 vector bundle로 정의하는 과정을 살펴보아야 한다. 일반적으로 $$M$$이 $$A$$-module이므로 이를 $$A\rightarrow M$$이 주어졌다 생각할 수 있으며, 우리의 기본적인 철학은 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop16)을 이용하여 coordinate *ring* 사이의 homomorphism을 variety들 사이의 반대방향 morphism으로 옮길 수 있으며 따라서 $$X$$ 위에 정의된 bundle을 얻어낼 수 있다는 것이다. 그러나 문제는 $$M$$은 ring이 아니라는 것이다. 즉 $$M$$ 위에는 곱셈이 정의되어있지 않다. 그러나 [대칭텐서, ⁋정의 3](/ko/math/multilinear_algebra/symmetric_tensors#def3)의 
+
+
+Cotangent bundle $$\Omega_X$$
+
+이 bundle을 sheaf로 보면 cotangent sheaf라 부를 수 있다. 그러나 우리가 아직 quasi-coherent sheaf를 정의하지 않았으므로, 여기에서는 $A$-module로부터 bundle을 구성하는 기본적인 아이디어만 짚고 넘어간다.
+
+$A$-module $M$이 주어졌다고 하자. $M$에는 곱셈이 정의되어 있지 않으므로 이것을 그대로 coordinate ring으로 사용할 수는 없다. 그러나 에서 정의한 symmetric algebra $\operatorname{Sym}_A^*(M)$은 $M$을 자유롭게 생성하는 commutative $A$-algebra이므로, 이를 coordinate ring으로 삼아 variety를 정의할 수 있다.
+
+이 variety를 $X$ 위로의 morphism $\pi\colon V \to X$로 본다. 각 점 $p \in X$에서의 fiber $V_p$는 $\operatorname{Sym}_{\kappa(p)}^*(M \otimes_A \kappa(p))$로 주어지는데, 이것은 polynomial ring이므로 affine space이다. 즉 $V$는 "각 점 $p$마다 $M \otimes_A \kappa(p)$를 fiber로 갖는 vector bundle"의 total space가 된다.
+
+이 vector bundle의 section을 생각하자. $\pi\colon V \to X$의 section $s\colon X \to V$는 각 점 $p$에서 fiber $V_p$ 안의 점을 하나 고르는 것이고, degree 1 부분 $M \otimes_A \kappa(p)$에서 고른다. 이를 global하게 표현하면, $M$의 generator들에 $\mathcal{O}_X(U)$의 계수를 곱한 것으로 나타나므로, 열린 부분집합 $U \subset X$에 대해 section space는
+
+$$\widetilde{M}(U) = M \otimes_A \mathcal{O}_X(U)$$
+
+가 된다. 이 construction을 $\widetilde{M}$라 표기한다.
 
 ## Canonical Bundle
 
@@ -32,8 +53,6 @@ Canonical bundle을 정의하기 위해서는 먼저 variety 위의 cotangent bu
 
 </div>
 
-이 bundle을 sheaf로 보면 cotangent sheaf라 부를 수 있다. 이 정의가 대수적인 세팅과도 잘 맞아떨어짐을 확인하자.
-
 <div class="proposition" markdown="1">
 
 <ins id="prop2">**명제 2**</ins> Affine variety $$X$$와 $$X$$의 coordinate ring $$A$$에 대하여, $$\Omega_X^1$$는 Kähler differential module $$\Omega_{A/\mathbb{K}}$$로부터 온다. ([\[가환대수학\] §Differentials, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3))
@@ -43,17 +62,19 @@ Canonical bundle을 정의하기 위해서는 먼저 variety 위의 cotangent bu
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이를 엄밀하게 말하기 위해서는 Kähler differential module $$\Omega_{A/\mathbb{K}}$$이 정의하는 bundle이 무엇인지를 엄밀하게 정의해야 하나, 여기에서 우리는 기본적인 철학만 짚고 넘어간다. 우선 우리는 cotangent bundle $$\Omega_X^1$$의 section은 $$U$$ 위의 regular function 위에 작용하는 derivation들 $$D: \mathcal{O}_X(U)\rightarrow \mathcal{O}_X(U)$$임을 안다. 
+이를 엄밀하게 말하기 위해서는 Kähler differential module $\Omega_{A/\mathbb{K}}$이 정의하는 bundle이 무엇인지를 정의해야 하나, 여기에서 우리는 기본적인 철학만 짚고 넘어간다. 우선 우리는 tangent bundle $T_X$의 section은 $U$ 위의 derivation $D: \mathcal{O}_X(U) \to \mathcal{O}_X(U)$임을 안다. 
 
-한편, $$\Omega_{A/\mathbb{K}}$$은 그 정의에 의하여 다음의 natural isomorphism
+한편, $\Omega_{A/\mathbb{K}}$은 그 정의에 의하여 다음의 natural isomorphism
 
 $$\Der_\mathbb{K}(A, -)\cong\Hom_A(\Omega_{A/\mathbb{K}},-)$$
 
-을 만족하는 representing object이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 이를 풀어쓰자면, 임의의 $$K$$-derivation $$A\rightarrow M$$에 대해 $$A$$-module homomorphism $$\Omega_{A/\mathbb{K}}\rightarrow M$$이 대응되며 그 반대도 마찬가지이다. 
+을 만족하는 representing object이다. ([가환대수학 §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 이를 풀어쓰자면, 임의의 $\mathbb{K}$-derivation $A \to M$에 대해 $A$-module homomorphism $\Omega_{A/\mathbb{K}} \to M$이 대응되며 그 반대도 마찬가지이다. 
 
-이제 임의의 열린집합 $$U\subset X$$가 주어졌다 하고, 위에서 생각한 $$\Omega_X^1$$의 $$U$$ 위에서의 section space를 생각하자. 이들의 section은 derivation $$D:\mathcal{O}_X(U)\rightarrow \mathcal{O}_X(U)$$이며, 이 때 $$X$$ 위의 함수들을 $$U$$로 제한할 수 있으므로 이는 $$D\vert_A:A\rightarrow \mathcal{O}_X(U)$$를 정의하고, 이로부터 위의 universal property를 사용하여 $$\Omega_{A/\mathbb{K}}\rightarrow \mathcal{O}_X(U)$$을 얻을 수 있다. 
+이제 임의의 열린집합 $U \subset X$가 주어졌다 하고, $U$ 위에서의 derivation $D: \mathcal{O}_X(U) \to \mathcal{O}_X(U)$를 생각하자. $X$ 위의 함수들을 $U$로 제한할 수 있으므로 이는 $D\vert_A: A \to \mathcal{O}_X(U)$를 정의하고, 이로부터 위의 universal property를 사용하여 $\Omega_{A/\mathbb{K}} \to \mathcal{O}_X(U)$를 얻을 수 있다. 
 
-거꾸로 임의의 $$A$$-linear map $$\Omega_{A/\mathbb{K}}\rightarrow \mathcal{O}_X(U)$$가 주어진다면, 이를 universal derivation과 합성하여 $$A\rightarrow \mathcal{O}_X(U)$$를 얻을 수 있으며, extension of scalar를 통해 이를 $$\mathcal{O}_X(U)$$로 확장하면 derivation $$\mathcal{O}_X(U)\rightarrow \mathcal{O}_X(U)$$을 얻어낼 수 있다. ([\[대수적 구조\] §스칼라의 변환, ⁋정의 3](/ko/math/algebraic_structures/change_of_base_ring#def3))
+거꾸로 임의의 $A$-linear map $\Omega_{A/\mathbb{K}} \to \mathcal{O}_X(U)$가 주어진다면, 이를 universal derivation과 합성하여 $A \to \mathcal{O}_X(U)$를 얻을 수 있으며, extension of scalar를 통해 이를 $\mathcal{O}_X(U)$로 확장하면 derivation $\mathcal{O}_X(U) \to \mathcal{O}_X(U)$을 얻어낼 수 있다. ([대수적 구조 §스칼라의 변환, ⁋정의 3](/ko/math/algebraic_structures/change_of_base_ring#def3))
+
+따라서 "derivation의 공간"과 "$A$-linear map $\Omega_{A/\mathbb{K}} \to \mathcal{O}_X(U)$의 공간" 사이에 bijection이 존재한다. 앞서 설명한 $\widetilde{M}$ construction에 의해 $\widetilde{\Omega_{A/\mathbb{K}}}$의 section space는 $\Omega_{A/\mathbb{K}} \otimes_A \mathcal{O}_X(U)$이며, $\Hom_A(\Omega_{A/\mathbb{K}}, \mathcal{O}_X(U)) \cong \Omega_{A/\mathbb{K}} \otimes_A \mathcal{O}_X(U)$이므로, $T_X$의 section space와 $\widetilde{\Omega_{A/\mathbb{K}}}$의 section space가 일치한다. Dual을 취하면 cotangent bundle에 대하여 $\Omega_X^1 \cong \widetilde{\Omega_{A/\mathbb{K}}}$를 얻는다.
 
 </details>
 
@@ -93,7 +114,9 @@ $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 
 $$\mathbb{P}^n=(\mathbb{A}^{n+1}\setminus\{0\})/\mathbb{K}^\ast$$
 
-을 뜯어보면, $$\mathbb{K}^\ast$$-action은 원점을 중심으로 뻗어나가는 방향, 즉 Euler vector field가 정의하는 방향의 작용이며 따라서 $$\mathbb{P}^n$$의 tangent space는 $$\mathbb{A}^{n+1}$$에서 이 방향을 지워준 것과 같다. 수학적으로 엄밀하게 쓰자면, 임의의 점 $$x=[x_0:\cdots:x_n]\in \mathbb{P}^n$$에서의 tangent space $$T_x\mathbb{P}^n$$은, $$x$$가 정의하는 직선 $$L_x=\span(x_0,\ldots, x_n)\subseteq \mathbb{A}^{n+1}$$, 그리고 $$v\in L_x$$에 대하여 quotient $$T_v\mathbb{A}/T_v L_x$$와 같은 것으로 생각할 수 있다. 이를 bundle 레벨로 올리고 dual을 취하면 다음이 성립한다. 
+을 뜯어보면, $$\mathbb{K}^\ast$$-action은 원점을 중심으로 뻗어나가는 방향, 즉 Euler vector field가 정의하는 방향의 작용이며 따라서 $$\mathbb{P}^n$$의 tangent space는 $$\mathbb{A}^{n+1}$$에서 이 방향을 지워준 것과 같고, 이 방향을 quotient한 후 남은 부분이 $$\mathbb{P}^n$$의 tangent space가 된다.
+
+이제 이를 엄밀하게 써 보자. 
 
 <div class="proposition" markdown="1">
 
