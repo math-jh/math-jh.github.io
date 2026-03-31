@@ -32,10 +32,7 @@ published: false
 
 따라서 우리는 $$\S_A(M^\vee)$$을 생각한다. 이는 $$A$$-algebra이며 따라서 coordinate ring 사이의 함수 $$A\rightarrow \S_A(M^\vee)$$을 얻고, 여기에 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop16)를 적용하면 어떠한 variety $$V(M)$$에서 $$X$$로 가는 morphism을 얻는다. 
 
-이 morphism이 실제로 $$X$$ 위의 vector bundle 구조를 갖는지 확인하자. 우선 각점 $$x\in X$$에서의 fiber를 생각하면, coordinate ring $$A$$에서 
-
-
-각 점 $$p \in X$$에서 $$V(M) \to X$$의 fiber $$V(M)_p = \pi^{-1}(p)$$는 $$p$$에 대응하는 maximal ideal $$\mathfrak{m}_p$$가 $$\S_A(M^\vee)$$에 확장된 $$\mathfrak{m}_p \cdot \S_A(M^\vee)$$의 zero set으로 기술된다. 이 fiber의 coordinate ring은 $$\S_A(M^\vee) \otimes_A k(p) = \S_{k(p)}(M_p^\vee)$$이 되는데, $$M_p^\vee = M^\vee \otimes_A k(p)$$이므로 degree 1 homogeneous 부분이 $$M_p^\vee$$인 polynomial algebra이다. 따라서 fiber $$V(M)_p$$는 $$\S_{k(p)}^*(M_p^\vee)$$, 즉 $$(M_p^\vee)^\vee$$의 원소들로 parameterize되며, $$M$$이 유한생성 $$A$$-module이므로 $$(M_p^\vee)^\vee \cong M_p = M \otimes_A k(p)$$가 성립하여 각 fiber는 $$\mathbb{K}$$ 위의 vector space가 된다. 
+이 morphism이 실제로 $$X$$ 위의 vector bundle 구조를 갖는지 확인하자. 우선 각점 $$x\in X$$에서의 fiber를 생각하면, coordinate ring $$A$$에서 $$x$$는 적당한 maximal ideal $$I(x)=\mathfrak{m}_x$$에 포함되며, 따라서 $$V(M)$$에서 fiber는 $$\mathfrak{m}_x$$의 $$A\rightarrow \S_A(M^\vee)$$에 의해 생성되는 idesl $$\mathfrak{m}_p\S_A(M^\vee)$$가 된다. 이 fiber의 coordinate ring은 $$\S_A(M^\vee) \otimes_A k(p) = \S_{k(p)}(M_p^\vee)$$이 되는데, $$M_p^\vee = M^\vee \otimes_A k(p)$$이므로 degree 1 homogeneous 부분이 $$M_p^\vee$$인 polynomial algebra이다. 따라서 fiber $$V(M)_p$$는 $$\S_{k(p)}^*(M_p^\vee)$$, 즉 $$(M_p^\vee)^\vee$$의 원소들로 parameterize되며, $$M$$이 유한생성 $$A$$-module이므로 $$(M_p^\vee)^\vee \cong M_p = M \otimes_A k(p)$$가 성립하여 각 fiber는 $$\mathbb{K}$$ 위의 vector space가 된다. 
 
 Locally triviality 역시 확인된다. 만일 $$M$$이 locally free of rank $$r$$이면, 각 점 $$p \in X$$ 근방에서 $$M\vert_U \cong A^{\oplus r}$$이 되므로 $$\S_A(M^\vee)\vert_U \cong \S_A((A^{\oplus r})^\vee) \cong A[y_1, \ldots, y_r]$$이고, 따라서 $$V(M)\vert_U \cong U \times \mathbb{A}^r$$이 성립한다. 즉 $$V(M) \to X$$는 $$X$$ 위의 vector bundle이다. 반면 $$M$$이 locally free가 아닌 경우에는 fiber의 차원이 점에 따라 달라지거나 fiber가 유한차원이 아닐 수 있으며, 이때 $$V(M) \to X$$는 vector bundle이 아닌 일반적인 morphism으로 남는다.
 
