@@ -496,7 +496,7 @@ manifold-ko:
         url: ko/misc/index_ko
 
 multilinear_algebra-ko:
-  - title: <a href="/ko/multilinear_algebra/" class="sidebar_title">다중선형대수힉</a>
+  - title: <a href="/ko/multilinear_algebra/" class="sidebar_title">다중선형대수학</a>
     children:
       - title: "완전열"
         url: ko/math/multilinear_algebra/exact_sequences
