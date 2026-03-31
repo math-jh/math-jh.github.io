@@ -32,7 +32,43 @@ published: false
 
 따라서 우리는 $$\S_A(M^\vee)$$을 생각한다. 이는 $$A$$-algebra이며 따라서 coordinate ring 사이의 함수 $$A\rightarrow \S_A(M^\vee)$$을 얻고, 여기에 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop16)를 적용하면 어떠한 variety $$V(M)$$에서 $$X$$로 가는 morphism을 얻는다. 
 
-이 morphism이 실제로 $$X$$ 위의 vector bundle 구조를 갖는지 확인하자. 우선 각점 $$x\in X$$에서의 fiber를 생각하면, coordinate ring $$A$$에서 $$x$$는 적당한 maximal ideal $$I(x)=\mathfrak{m}_x$$에 포함되며, 따라서 $$V(M)$$에서 fiber는 $$\mathfrak{m}_x$$의 $$A\rightarrow \S_A(M^\vee)$$에 의해 생성되는 idesl $$\mathfrak{m}_p\S_A(M^\vee)$$가 된다. 이 fiber의 coordinate ring은 $$\S_A(M^\vee) \otimes_A k(p) = \S_{k(p)}(M_p^\vee)$$이 되는데, $$M_p^\vee = M^\vee \otimes_A k(p)$$이므로 degree 1 homogeneous 부분이 $$M_p^\vee$$인 polynomial algebra이다. 따라서 fiber $$V(M)_p$$는 $$\S_{k(p)}^*(M_p^\vee)$$, 즉 $$(M_p^\vee)^\vee$$의 원소들로 parameterize되며, $$M$$이 유한생성 $$A$$-module이므로 $$(M_p^\vee)^\vee \cong M_p = M \otimes_A k(p)$$가 성립하여 각 fiber는 $$\mathbb{K}$$ 위의 vector space가 된다. 
+이 morphism이 실제로 $$X$$ 위의 vector bundle 구조를 갖는지 확인하자. 우선 각점 $$x\in X$$에서의 fiber를 생각하면, coordinate ring $$A$$에서 $$x$$는 적당한 maximal ideal $$I(x)=\mathfrak{m}_x$$에 포함되며, 따라서 $$V(M)$$에서 fiber는 $$\mathfrak{m}_x$$의 $$A\rightarrow \S_A(M^\vee)$$에 의해 생성되는 ideal $$\mathfrak{m}_p\S_A(M^\vee)$$가 된다. 
+
+
+
+아, 질문의 핵심을 이해했습니다. 등식 자체가 아니라, $\S_A(M^\vee) \otimes_A k(p) = \S_{k(p)}(M_p^\vee)$가 왜 fiber의 coordinate ring인가가 궁금하신 거군요.
+
+이유
+$V(M) \to X$는 ring homomorphism $A \to \S_A(M^\vee)$에 의해 정의된 variety morphism입니다. 점 $p \in X$에 대응하는 maximal ideal $\mathfrak{m}_p \subset A$가 주어지면:
+
+$$\mathfrak{m}_p \cdot \S_A(M^\vee)$$
+
+은 $\S_A(M^\vee)$ 안의 ideal이 됩니다. 이 ideal에 해당하는 점 $q \in V(M)$이 바로 $p$ 위의 fiber 속의 점입니다.
+
+그런데 fiber $V(M)_p = \pi^{-1}(p)$의 coordinate ring은, scheme 관점에서:
+
+$$\S_A(M^\vee) \otimes_A \S_A(M^\vee)/\mathfrak{m}_p \cdot \S_A(M^\vee)$$
+
+가 아니라, 더 직접적으로 base ring을 $A$에서 residue field로 바꾼 것이 됩니다:
+
+$$\S_A(M^\vee) \otimes_A A/\mathfrak{m}_p = \S_A(M^\vee) \otimes_A k(p)$$
+
+왜 base change가 coordinate ring인가?
+이건 사실 아핀 다양체의 fiber 계산의 표준적인 방법입니다. $f: \operatorname{Spec} B \to \operatorname{Spec} A$가 있고 $p = \mathfrak{m}_p \in \operatorname{Spec} A$에 대해서, $f^{-1}(p)$로 가는 morphism이 $\operatorname{Spec}(B \otimes_A k(p)) \to \operatorname{Spec} k(p)$로 주어집니다. 여기서:
+
+$B \otimes_A k(p) = B / \mathfrak{m}_p B$가 아닙니다 (일반적으로 $\mathfrak{m}_p B \neq B \otimes_A \mathfrak{m}_p$)
+$B \otimes_A k(p) = B \otimes_A (A/\mathfrak{m}_p)$는 $B$에서 $A$-module 구조를 통해 $A$를 $k(p)$로 base change한 것
+다시 말해, $\operatorname{Spec}(B \otimes_A k(p))$는 "$A$-algebra $B$를 $p$에서 잘라낸 것"이 아니라, "$p$에서의 값으로 $B$를 다시 계산한 것"입니다. $A \to k(p)$가 $A$-module $B$를 $k(p)$ 위로 restriction하는 것이고, 그 결과로 얻은 $k(p)$-algebra가 바로 fiber를 정의하는 coordinate ring이 됩니다.
+
+요약
+$\S_A(M^\vee) \otimes_A k(p)$가 fiber의 coordinate ring인 이유는, 그게 $\operatorname{Spec}(\S_A(M^\vee)) \to \operatorname{Spec} A$의 scheme-theoretic fiber를 정의하는 표준적인 등식이기 때문입니다. 기하학적으로는 "$A$에서 $p$라는 점으로 평가했을 때 남는 것"이 coordinate ring이 되는 겁니다.
+
+
+
+
+
+
+이 fiber의 coordinate ring은 $$\S_A(M^\vee) \otimes_A k(p) = \S_{k(p)}(M_p^\vee)$$이 되는데, $$M_p^\vee = M^\vee \otimes_A k(p)$$이므로 degree 1 homogeneous 부분이 $$M_p^\vee$$인 polynomial algebra이다. 따라서 fiber $$V(M)_p$$는 $$\S_{k(p)}^*(M_p^\vee)$$, 즉 $$(M_p^\vee)^\vee$$의 원소들로 parameterize되며, $$M$$이 유한생성 $$A$$-module이므로 $$(M_p^\vee)^\vee \cong M_p = M \otimes_A k(p)$$가 성립하여 각 fiber는 $$\mathbb{K}$$ 위의 vector space가 된다. 
 
 Locally triviality 역시 확인된다. 만일 $$M$$이 locally free of rank $$r$$이면, 각 점 $$p \in X$$ 근방에서 $$M\vert_U \cong A^{\oplus r}$$이 되므로 $$\S_A(M^\vee)\vert_U \cong \S_A((A^{\oplus r})^\vee) \cong A[y_1, \ldots, y_r]$$이고, 따라서 $$V(M)\vert_U \cong U \times \mathbb{A}^r$$이 성립한다. 즉 $$V(M) \to X$$는 $$X$$ 위의 vector bundle이다. 반면 $$M$$이 locally free가 아닌 경우에는 fiber의 차원이 점에 따라 달라지거나 fiber가 유한차원이 아닐 수 있으며, 이때 $$V(M) \to X$$는 vector bundle이 아닌 일반적인 morphism으로 남는다.
 
