@@ -34,15 +34,15 @@ published: false
 
 이 morphism이 실제로 $$X$$ 위의 vector bundle 구조를 갖는지 확인하자. 점 $$x\in X$$는 coordinate ring $$A$$의 maximal ideal $$\mathfrak{m}_x$$에 해당하며, 따라서 $$V(M) \to X$$에서 $$x$$ 위의 set-theoretic fiber $$V(M)_x = \pi^{-1}(x)$$의 점들은 $$\mathfrak{m}_x\cdot \S_A(M^\vee)$$를 포함하는 $$\S_A(M^\vee)$$의 maximal ideal들이다. 
 
-Set-theoretic fiber의 점들은 maximal ideal로 기술되지만, fiber를 coordinate ring으로 온전히 잡으려면 fiber 위에서 정의된 함수들의 ring이 필요하다. $$\S_A(M^\vee)$$는 $$A$$ 위에서 정의된 polynomial ring인데, 점 $$x$$ 위의 fiber에서는 $$A$$의 원소들이 이미 $$x$$에서의 값으로 고정되어야 한다. 즉 "$$A$$의 값을 $$x$$에서 평가한" polynomial ring이 fiber의 coordinate ring이 되어야 한다. 예를 들어 $$A = \mathbb{K}[\t]$$, $$M = A$$라 하면 $$\S_A(M^\vee) = \mathbb{K}[\t][\y]$$이며, 점 $$x = (\t-a)$$에 대해 $$\t$$를 $$a$$로 치환하면 $$\mathbb{K}[\y]$$가 되어 $$\mathbb{A}^1$$의 coordinate ring을 얻는다. 이 "치환" 연산이 바로 $$A \to \kappa(x)$$에 의한 tensor product이며, 일반적으로 fiber의 coordinate ring은
+대수적으로 이 fiber를 정의하는 coordinate ring을 얻기 위해서는 tensor product 
 
 $$\S_A(M^\vee)\otimes_A\kappa(x)$$
 
-로 주어진다. 여기서 *residue field* $$\kappa(x)=A/\mathfrak{m}_x$$이며, symmetric algebra가 tensor product와 commute하는 것으로부터 다음의 식
+을 생각해야 한다. 여기서 *residue field* $$\kappa(x)=A/\mathfrak{m}_x$$이며, symmetric algebra가 tensor product와 commute하는 것으로부터 다음의 식
 
-$$\S_A(M^\vee)\otimes_A\kappa(x)=\S_{\kappa(x)} (M^\vee\otimes_A\kappa(x))=\S_{\kappa(x)}(M_x^\vee)$$
+$$\S_A(M^\vee)\otimes_A\kappa(x)=\S_{\kappa(x)} (M^\vee\otimes_A\kappa(x))=\S_{\kappa(p)}(M_x^\vee)$$
 
-을 얻는다. 여기서 $$M_x = M \otimes_A \kappa(x)$$이며, 이는 $$A$$-module $$M$$에서 $$A$$의 값을 $$x$$에서 평가하여 얻어지는 $$\kappa(x)$$-vector space이다. $$\S_{\kappa(x)}(M_x^\vee)$$는 degree 1 homogeneous 부분이 $$M_x^\vee$$인 polynomial ring이므로, fiber $$V(M)_x$$는 $$M_x^\vee$$의 dual 위의 점들로 parameterize된다. $$M_x^\vee$$의 dual을 다시 생각하면, 이 fiber의 각 점은 $$M_x = M \otimes_A \kappa(x)$$의 원소와 자연스럽게 대응된다. 만일 $$M$$이 유한생성 $$A$$-module이면 $$(M_x^\vee)^\vee \cong M_x$$가 성립하므로, 각 fiber $$V(M)_x$$는 $$\kappa(x)$$ 위의 vector space $$M_x$$로 식별된다. 이로써 $$V(M) \to X$$는 실제로 $$X$$ 위의 vector bundle 구조를 가짐을 확인하였다.
+을 얻는다. 여기서 $$M_p = M \otimes_A k(p)$$이며, 이는 $$A$$-module $$M$$에서 $$A$$의 값을 $$p$$에서 평가하여 얻어지는 $$k(p)$$-vector space이다. $$\S_{k(p)}(M_p^\vee)$$는 degree 1 homogeneous 부분이 $$M_p^\vee$$인 polynomial ring이므로, fiber $$V(M)_p$$는 $$M_p^\vee$$의 dual 위의 점들로 parameterize된다. $$M_p^\vee$$의 dual을 다시 생각하면, 이 fiber의 각 점은 $$M_p = M \otimes_A k(p)$$의 원소와 자연스럽게 대응된다. 만일 $$M$$이 유한생성 $$A$$-module이면 $$(M_p^\vee)^\vee \cong M_p$$가 성립하므로, 각 fiber $$V(M)_p$$는 $$k(p)$$ 위의 vector space $$M_p$$로 식별된다. 이로써 $$V(M) \to X$$는 실제로 $$X$$ 위의 vector bundle 구조를 가짐을 확인하였다.
 
 ### $$\widetilde{M}$$ construction
 
