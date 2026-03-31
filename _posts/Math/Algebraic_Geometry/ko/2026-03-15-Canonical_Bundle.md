@@ -34,7 +34,7 @@ published: false
 
 이 morphism이 실제로 $$X$$ 위의 vector bundle 구조를 갖는지 확인하자. 점 $$x\in X$$는 coordinate ring $$A$$의 maximal ideal $$\mathfrak{m}_x$$에 해당하며, 따라서 $$V(M) \to X$$에서 $$x$$ 위의 set-theoretic fiber $$V(M)_x = \pi^{-1}(x)$$의 점들은 $$\mathfrak{m}_x\cdot \S_A(M^\vee)$$를 포함하는 $$\S_A(M^\vee)$$의 maximal ideal들이다. 
 
-Set-theoretic fiber의 점들은 maximal ideal로 기술되지만, fiber를 coordinate ring으로 온전히 잡으려면 fiber 위에서 정의된 함수들의 ring이 필요하다. $$\S_A(M^\vee)$$는 $$A$$ 위에서 정의된 polynomial ring인데, 점 $$x$$ 위의 fiber에서는 $$A$$의 원소들이 이미 $$x$$에서의 값으로 고정되어야 한다. 즉 "$$A$$의 값을 $$x$$에서 평가한" polynomial ring이 fiber의 coordinate ring이 되어야 한다. 예를 들어 $$A = \mathbb{K}[t]$$, $$M = A$$라 하면 $$\S_A(M^\vee) = \mathbb{K}[t][y]$$이며, 점 $$x = (t-a)$$에 대해 $$t$$를 $$a$$로 치환하면 $$\mathbb{K}[y]$$가 되어 $$\mathbb{A}^1$$의 coordinate ring을 얻는다. 이 "치환" 연산이 바로 $$A \to \kappa(x)$$에 의한 tensor product이며, 일반적으로 fiber의 coordinate ring은
+Set-theoretic fiber의 점들은 maximal ideal로 기술되지만, fiber를 coordinate ring으로 온전히 잡으려면 fiber 위에서 정의된 함수들의 ring이 필요하다. $$\S_A(M^\vee)$$는 $$A$$ 위에서 정의된 polynomial ring인데, 점 $$x$$ 위의 fiber에서는 $$A$$의 원소들이 이미 $$x$$에서의 값으로 고정되어야 한다. 즉 "$$A$$의 값을 $$x$$에서 평가한" polynomial ring이 fiber의 coordinate ring이 되어야 한다. 예를 들어 $$A = \mathbb{K}[\t]$$, $$M = A$$라 하면 $$\S_A(M^\vee) = \mathbb{K}[\t][\y]$$이며, 점 $$x = (\t-a)$$에 대해 $$\t$$를 $$a$$로 치환하면 $$\mathbb{K}[\y]$$가 되어 $$\mathbb{A}^1$$의 coordinate ring을 얻는다. 이 "치환" 연산이 바로 $$A \to \kappa(x)$$에 의한 tensor product이며, 일반적으로 fiber의 coordinate ring은
 
 $$\S_A(M^\vee)\otimes_A\kappa(x)$$
 
