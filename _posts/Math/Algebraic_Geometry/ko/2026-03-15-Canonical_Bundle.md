@@ -38,11 +38,11 @@ published: false
 
 $$\S_A(M^\vee)\otimes_A\kappa(x)$$
 
-을 생각해야 한다. 여기서 *residue field* $$\kappa(x)=A/\mathfrak{m}_x$$이며, symmetric algebra가 tensor product와 commute하는 것으로부터 다음의 식
+을 생각해야 한다. 여기서 *residue field* $$\kappa(x)=A/\mathfrak{m}_x$$이며, 이는 직관적으로 함수 $$f \in A$$를 점 $$x$$에서 평가한 값 $$f(x)$$들이 사는 field이다. 실제로 $$f$$를 $$\mathfrak{m}_x$$로 나눈 $$f \bmod \mathfrak{m}_x$$는 함수 $$f$$가 점 $$x$$에서 취하는 값을 나타내며, $$A/\mathfrak{m}_x$$는 이러한 평가값들이 이루는 field를 추출한 것이다. Symmetric algebra가 tensor product와 commute하는 것으로부터 다음의 식
 
-$$\S_A(M^\vee)\otimes_A\kappa(x)=\S_{\kappa(x)} (M^\vee\otimes_A\kappa(x))=\S_{\kappa(p)}(M_x^\vee)$$
+$$\S_A(M^\vee)\otimes_A\kappa(x)=\S_{\kappa(x)} (M^\vee\otimes_A\kappa(x))=\S_{\kappa(x)}(M_x^\vee)$$
 
-을 얻는다. 여기서 $$M_p = M \otimes_A k(p)$$이며, 이는 $$A$$-module $$M$$에서 $$A$$의 값을 $$p$$에서 평가하여 얻어지는 $$k(p)$$-vector space이다. $$\S_{k(p)}(M_p^\vee)$$는 degree 1 homogeneous 부분이 $$M_p^\vee$$인 polynomial ring이므로, fiber $$V(M)_p$$는 $$M_p^\vee$$의 dual 위의 점들로 parameterize된다. $$M_p^\vee$$의 dual을 다시 생각하면, 이 fiber의 각 점은 $$M_p = M \otimes_A k(p)$$의 원소와 자연스럽게 대응된다. 만일 $$M$$이 유한생성 $$A$$-module이면 $$(M_p^\vee)^\vee \cong M_p$$가 성립하므로, 각 fiber $$V(M)_p$$는 $$k(p)$$ 위의 vector space $$M_p$$로 식별된다. 이로써 $$V(M) \to X$$는 실제로 $$X$$ 위의 vector bundle 구조를 가짐을 확인하였다.
+을 얻는다. 우변의 $$M_x = M \otimes_A \kappa(x)$$이며, 이는 $$A$$-module $$M$$에서 $$A$$의 원소를 $$\kappa(x)$$로 평가한 것이다. Tensor product에서 $$A$$-module 구조는 evaluation map $$A \to \kappa(x)$$에 의해 소모되고, 남는 스칼라 곱셈이 $$\kappa(x)$$의 원소에 의해 주어지므로 $$M_x$$는 자연스럽게 $$\kappa(x)$$ 위의 vector space가 된다. 또한 $$\kappa(x)$$는 $$\mathbb{K}$$의 field extension이므로 $$M_x$$는 $$\mathbb{K}$$ 위의 vector space 구조도 자연스럽게 가지며, vector bundle의 정의에 따라 우리는 fiber를 $$\mathbb{K}$$-vector space로 본다. $$\S_{\kappa(x)}(M_x^\vee)$$는 degree 1 homogeneous 부분이 $$M_x^\vee$$인 polynomial ring이므로, fiber $$V(M)_x$$는 $$M_x^\vee$$의 dual 위의 점들로 parameterize된다. $$M_x^\vee$$의 dual을 다시 생각하면, 이 fiber의 각 점은 $$M_x = M \otimes_A \kappa(x)$$의 원소와 자연스럽게 대응된다. 만일 $$M$$이 유한생성 $$A$$-module이면 $$(M_x^\vee)^\vee \cong M_x$$가 성립하므로, 각 fiber $$V(M)_x$$는 $$\kappa(x)$$ 위의 vector space $$M_x$$로 식별된다. 이로써 $$V(M) \to X$$는 실제로 $$X$$ 위의 vector bundle 구조를 가짐을 확인하였다.
 
 ### $$\widetilde{M}$$ construction
 
@@ -54,17 +54,17 @@ $$\widetilde{M}(U) = M \otimes_A \mathcal{O}_X(U)$$
 
 로 정의한다. 여기서 $$M \otimes_A \mathcal{O}_X(U)$$는 $$A$$-module $$M$$의 base ring을 $$A$$에서 $$\mathcal{O}_X(U)$$로 바꾸는 tensor product ([대수적 구조 §스칼라의 변환, ⁋정의 3](/ko/math/algebraic_structures/change_of_base_ring#def3))이며, $$\mathcal{O}_X(U)$$는 $$A$$-algebra이므로 이 tensor product는 자연스럽게 $$\mathcal{O}_X(U)$$-module이 된다. Restriction map은 $$\mathcal{O}_X$$의 restriction map에 의해 유도되는 natural map $$M \otimes_A \mathcal{O}_X(V) \to M \otimes_A \mathcal{O}_X(U)$$ ($$U \subset V$$)로 주어진다. 특히 $$X$$ 전체에 대해서는 $$\widetilde{M}(X) = M \otimes_A A \cong M$$이므로, $$M$$이 $$\widetilde{M}$$의 전역 section space로 복원된다.
 
-이 sheaf의 각 점 $$p \in X$$에서의 fiber를 생각하자. Residue field $$k(p)$$는 $$\mathbb{K}$$의 field extension이므로 $$A$$-algebra로 간주할 수 있고, fiber는
+이 sheaf의 각 점 $$x \in X$$에서의 fiber를 생각하자. Residue field $$\kappa(x)$$는 $$\mathbb{K}$$의 field extension이므로 $$A$$-algebra로 간주할 수 있고, fiber는
 
-$$(\widetilde{M})_p = \widetilde{M}(X) \otimes_A k(p) = M \otimes_A k(p)$$
+$$(\widetilde{M})_x = \widetilde{M}(X) \otimes_A \kappa(x) = M \otimes_A \kappa(x)$$
 
-로 정의된다. 이것이 $$\mathbb{K}$$ 위의 vector space가 되는 이유는 다음과 같다. $$A$$은 $$\mathbb{K}$$-algebra이므로 $$M$$은 자연스럽게 $$\mathbb{K}$$-vector space 구조를 가지며, $$k(p)$$ 역시 $$\mathbb{K}$$의 extension field이므로 $$\mathbb{K}$$-vector space이다. 따라서 $$M \otimes_A k(p)$$는 $$\mathbb{K}$$ 위의 vector space가 된다. 만일 $$M$$이 locally free of rank $$r$$, 즉 임의의 maximal ideal $$\mathfrak{m} \subset A$$에 대하여 $$M_\mathfrak{m}$$이 free $$A_\mathfrak{m}$$-module of rank $$r$$이면, 모든 fiber $$M \otimes_A k(p)$$가 $$r$$차원 $$\mathbb{K}$$-vector space가 된다. 반면 $$M$$이 locally free가 아닌 경우에는 fiber의 차원이 점에 따라 달라지거나 fiber가 유한차원이 아닐 수 있으며, 이때 $$\widetilde{M}$$은 vector bundle이 아닌 quasi-coherent sheaf로 남는다.
+로 정의된다. 위와 같은 이유로 $$M \otimes_A \kappa(x)$$는 $$\kappa(x)$$ 위의 vector space이며, 따라서 $$\mathbb{K}$$-vector space 구조도 자연스럽게 갖는다. 만일 $$M$$이 locally free of rank $$r$$, 즉 임의의 maximal ideal $$\mathfrak{m} \subset A$$에 대하여 $$M_\mathfrak{m}$$이 free $$A_\mathfrak{m}$$-module of rank $$r$$이면, 모든 fiber $$M \otimes_A \kappa(x)$$가 $$r$$차원 $$\mathbb{K}$$-vector space가 된다. 반면 $$M$$이 locally free가 아닌 경우에는 fiber의 차원이 점에 따라 달라지거나 fiber가 유한차원이 아닐 수 있으며, 이때 $$\widetilde{M}$$은 vector bundle이 아닌 quasi-coherent sheaf로 남는다.
 
-이제 $$V(M) \to X$$와 $$\widetilde{M}$$의 관계를 명확히 하자. 위에서 $$\S_A(M^\vee)$$로부터 얻은 $$V(M) \to X$$는 바로 $$\widetilde{M}$$에 해당하는 vector bundle의 total space와 그 projection이다. 각 점 $$p \in X$$ 위의 fiber $$V(M)_p$$는 $$M_p^\vee$$의 dual, 즉 $$\S_{k(p)}^*(M_p^\vee)$$로 parameterize되며, 이는 $$M_p$$의 원소들과 자연스럽게 대응된다. 따라서 $$V(M) \to X$$의 section은 각 점 $$p$$에서 fiber $$M_p = M \otimes_A k(p)$$의 원소를 연속적으로 (사실 algebraically) 선택하는 것이며, 이것이 바로 $$\widetilde{M}$$의 전역 section, 즉 $$M \otimes_A \mathcal{O}_X(U)$$의 원소에 해당한다. 즉 total space 관점($$V(M) \to X$$)과 section sheaf 관점($$\widetilde{M}$$)은 동일한 기하학적 대상을 서로 다른 언어로 기술한 것이다.
+이제 $$V(M) \to X$$와 $$\widetilde{M}$$의 관계를 명확히 하자. 위에서 $$\S_A(M^\vee)$$로부터 얻은 $$V(M) \to X$$는 바로 $$\widetilde{M}$$에 해당하는 vector bundle의 total space와 그 projection이다. 각 점 $$x \in X$$ 위의 fiber $$V(M)_x$$는 $$M_x^\vee$$의 dual, 즉 $$\S_{\kappa(x)}(M_x^\vee)$$로 parameterize되며, 이는 $$M_x$$의 원소들과 자연스럽게 대응된다. 따라서 $$V(M) \to X$$의 section은 각 점 $$x$$에서 fiber $$M_x = M \otimes_A \kappa(x)$$의 원소를 연속적으로 (사실 algebraically) 선택하는 것이며, 이것이 바로 $$\widetilde{M}$$의 전역 section, 즉 $$M \otimes_A \mathcal{O}_X(U)$$의 원소에 해당한다. 즉 total space 관점($$V(M) \to X$$)과 section sheaf 관점($$\widetilde{M}$$)은 동일한 기하학적 대상을 서로 다른 언어로 기술한 것이다.
 
 ### Canonical Bundle으로의 연결
 
-이제 이 construction을 cotangent bundle에 적용할 준비가 되었다. 명제 2의 증명에서 $$\Omega_{A/\mathbb{K}}$$로부터 bundle을 얻기 위해 $$\widetilde{M}$$ construction을 사용하였는데, 이 construction이 의미하는 바는 정확히 다음과 같다. $$\Omega_{A/\mathbb{K}}$$는 tangent bundle $$T_X$$의 section space와 natural하게 대응되는 $$A$$-module이므로, $$\widetilde{\Omega_{A/\mathbb{K}}}$$의 section space $$\Omega_{A/\mathbb{K}} \otimes_A \mathcal{O}_X(U)$$가 $$T_X$$의 section과 일치한다. Dual을 취하면 $$\Omega_X^1 \cong \widetilde{\Omega_{A/\mathbb{K}}}$$를 얻는다.
+이제 이 construction을 cotangent bundle에 적용할 준비가 되었다. 명제 2의 증명에서 살펴보았듯, $$T_X$$의 section space는 $$\Hom_A(\Omega_{A/\mathbb{K}}, \mathcal{O}_X(U)) \cong \Omega_{A/\mathbb{K}}^\vee \otimes_A \mathcal{O}_X(U) = \widetilde{\Omega_{A/\mathbb{K}}^\vee}(U)$$와 일치한다. 즉 $$T_X \cong \widetilde{\Omega_{A/\mathbb{K}}^\vee}$$이며, dual을 취하면 $$\Omega_X^1 \cong \widetilde{\Omega_{A/\mathbb{K}}}$$를 얻는다.
 
 ## Canonical Bundle
 
@@ -97,7 +97,7 @@ $$\Der_\mathbb{K}(A, -)\cong\Hom_A(\Omega_{A/\mathbb{K}},-)$$
 
 거꾸로 임의의 $A$-linear map $\Omega_{A/\mathbb{K}} \to \mathcal{O}_X(U)$가 주어진다면, 이를 universal derivation과 합성하여 $A \to \mathcal{O}_X(U)$를 얻을 수 있으며, extension of scalar를 통해 이를 $\mathcal{O}_X(U)$로 확장하면 derivation $\mathcal{O}_X(U) \to \mathcal{O}_X(U)$을 얻어낼 수 있다. ([대수적 구조 §스칼라의 변환, ⁋정의 3](/ko/math/algebraic_structures/change_of_base_ring#def3))
 
-따라서 "derivation의 공간"과 "$A$-linear map $\Omega_{A/\mathbb{K}} \to \mathcal{O}_X(U)$의 공간" 사이에 bijection이 존재한다. 앞서 설명한 $\widetilde{M}$ construction에 의해 $\widetilde{\Omega_{A/\mathbb{K}}}$의 section space는 $\Omega_{A/\mathbb{K}} \otimes_A \mathcal{O}_X(U)$이며, $\Hom_A(\Omega_{A/\mathbb{K}}, \mathcal{O}_X(U)) \cong \Omega_{A/\mathbb{K}} \otimes_A \mathcal{O}_X(U)$이므로, $T_X$의 section space와 $\widetilde{\Omega_{A/\mathbb{K}}}$의 section space가 일치한다. Dual을 취하면 cotangent bundle에 대하여 $\Omega_X^1 \cong \widetilde{\Omega_{A/\mathbb{K}}}$를 얻는다.
+따라서 "derivation의 공간"과 "$A$-linear map $\Omega_{A/\mathbb{K}} \to \mathcal{O}_X(U)$의 공간" 사이에 bijection이 존재한다. 즉 $T_X$의 section space는 $\Hom_A(\Omega_{A/\mathbb{K}}, \mathcal{O}_X(U))$와 일치한다. 한편, $X$가 smooth이므로 $\Omega_{A/\mathbb{K}}$는 유한생성 projective $A$-module이 되고 따라서 $\Hom_A(\Omega_{A/\mathbb{K}}, \mathcal{O}_X(U)) \cong \Omega_{A/\mathbb{K}}^\vee \otimes_A \mathcal{O}_X(U) = \widetilde{\Omega_{A/\mathbb{K}}^\vee}(U)$가 성립한다. 이로부터 $T_X \cong \widetilde{\Omega_{A/\mathbb{K}}^\vee}$를 얻고, dual을 취하면 cotangent bundle에 대하여 $\Omega_X^1 \cong \widetilde{\Omega_{A/\mathbb{K}}}$를 얻는다.
 
 </details>
 
@@ -107,7 +107,7 @@ $$\Der_\mathbb{K}(A, -)\cong\Hom_A(\Omega_{A/\mathbb{K}},-)$$
 
 </div>
 
-한편 우리는 임의의 smooth variety $$X$$of dimension $$n$$과 그 위의 cotangent bundle $$\Omega_X^1$$에 대하여, $$\Omega_X^1$$의 각 fiber는 $$n$$차원이므로 이를 $$n$$번 exterior product한 것은 line bundle이 되는 것을 안다.
+한편 우리는 임의의 smooth variety $$X$$ of dimension $$n$$과 그 위의 cotangent bundle $$\Omega_X^1$$에 대하여, $$\Omega_X^1$$의 각 fiber는 $$n$$차원이므로 이를 $$n$$번 exterior product한 것은 line bundle이 되는 것을 안다.
 
 <div class="definition" markdown="1">
 
@@ -246,7 +246,7 @@ $$D$$를 $$X$$의 smooth divisor라 하자. $$D$$의 ideal sheaf를 $$\mathcal{I
 
 $$0 \rightarrow \mathcal{I}_D / \mathcal{I}_D^2 \rightarrow \Omega_X^1\vert_D \rightarrow \Omega_D^1 \rightarrow 0$$
 
-가 성립한다. 이 exact sequence에서 $$\mathcal{I}_D / \mathcal{I}_D^2 \cong \mathcal{O}_X(-D)\vert_D$$임을 확인하자. $$D$$가 smooth이므로, 각 점 $$p \in D$$ 근방에서 $$D$$는 단일 regular function $$f$$에 의해 잘려 나온다. 즉, $$\mathcal{I}_{D,p} = (f) \subset \mathcal{O}_{X,p}$$이다. 따라서 $$(\mathcal{I}_D / \mathcal{I}_D^2)_p \cong (f)/(f^2) \cong f \cdot \mathcal{O}_{D,p}$$로서 $$\mathcal{O}_{D,p}$$ 위의 free module of rank 1이다. 이는 전역적으로 $$\mathcal{I}_D / \mathcal{I}_D^2 \cong \mathcal{O}_X(-D)\vert_D$$임을 보여준다.
+가 성립한다. 이 exact sequence에서 $$\mathcal{I}_D / \mathcal{I}_D^2 \cong \mathcal{O}_X(-D)\vert_D$$임을 확인하자. $$D$$가 smooth이므로, 각 점 $$x \in D$$ 근방에서 $$D$$는 단일 regular function $$f$$에 의해 잘려 나온다. 즉, $$\mathcal{I}_{D,x} = (f) \subset \mathcal{O}_{X,x}$$이다. 따라서 $$(\mathcal{I}_D / \mathcal{I}_D^2)_x \cong (f)/(f^2) \cong f \cdot \mathcal{O}_{D,x}$$로서 $$\mathcal{O}_{D,x}$$ 위의 free module of rank 1이다. 이는 전역적으로 $$\mathcal{I}_D / \mathcal{I}_D^2 \cong \mathcal{O}_X(-D)\vert_D$$임을 보여준다.
 
 이제 conormal exact sequence에서 top exterior power를 취한다. $$\Omega_X^1\vert_D$$는 rank $$\dim X = n$$ vector bundle이고, $$\mathcal{I}_D/\mathcal{I}_D^2$$와 $$\Omega_D^1$$은 각각 rank $$1$$과 $$\dim D = n-1$$ vector bundle이다. 따라서
 
