@@ -91,30 +91,33 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이 증명의 핵심은 Kähler differential의 universal property를 sheaf level로 올리는 것이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉 우리가 사용할 도구는 다음의 natural isomorphism
+이를 위해서는 기존에 정의한 tangent bundle과 cotangent bundle을 sheaf 언어로 바꿔쓰는 것이 편할 것이다. 우선 tangent sheaf $$\mathcal{T}_X$$를 정의하자. $$X$$의 열린집합 $$U$$에 대하여, $$\mathcal{T}_X(U)$$를 $$\mathcal{O}_X(U)$$ 위의 $$\mathbb{K}$$-derivation들의 모임 $$\Der_\mathbb{K}(\mathcal{O}_X(U),\mathcal{O}_X(U))$$이 정의하는 sheaf를 tangent sheaf라 부른다. 
 
-$$\Der_\mathbb{K}(A, -)\cong\Hom_A(\Omega_{A/\mathbb{K}},-)$$
+우리의 메인 도구는 Kähler differential의 universal property이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉, 임의의 $$A$$-module $$N$$에 대하여 natural isomorphism
 
-이다. 
+$$\Der_\mathbb{K}(A,\,N)\cong\Hom_A(\Omega_{A/\mathbb{K}},N)$$
 
-$$X$$가 affine이므로, $$X$$ 위의 임의의 quasi-coherent sheaf는 적당한 $$A$$-module $$N$$에 대하여 $$\mathcal{F}\cong \widetilde{N}$$이다. 그럼 $$\widetilde{(-)}$$이 categorical equivalence라는 것과 위의 natural isomorphism으로부터 다음의 결과
+을 사용하자. 그럼 $$\widetilde{(-)}$$이 categorical equivalence라는 사실과 위의 natural isomorphicm에 의하여 
 
-$$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}},\,\widetilde{N})\cong\Hom_A(\Omega_{A/\mathbb{K}},\,N)\cong\Der_\mathbb{K}(A,\,N)$$
+$$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}},\widetilde{N})\cong\Hom_A(\Omega_{A/\mathbb{K}},N)\cong\Der_\mathbb{K}(A,N)$$
 
-를 얻는다. 
+이 성립한다. 뿐만 아니라, derivation들의 sheaf를 생각하면 마지막 항 $$\Der_\mathbb{K}(A,N)$$은 다시 $$\Der_\mathbb{K}(\mathcal{O}_X, \widetilde{N})$$이므로 다음의 식
 
-한편, 이를 cotangent bundle과 연결지으려면 tangent bundle $$T_X$$부터 시작하면 된다. Tangent bundle은 그 정의에 의하여 derivation들의 (quasi-coherent) sheaf로 볼 수 있으며, 따라서 
+$$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}}, \widetilde{N})\cong \Der_\mathbb{K}(\mathcal{O}_X, \widetilde{N})$$
 
+이 성립한다. 특별히 $$N=A$$인 경우, 즉 $$\widetilde{N}=\mathcal{O}_X$$인 경우를 생각하면
 
-여기서 첫 번째 동형은 $$\widetilde{(-)}$$ functor가 $$A$$-module homomorphism과 $$\mathcal{O}_X$$-module sheaf homomorphism 사이의 bijection을 준다는 것으로부터, 두 번째 동형은 위의 universal property로부터 얻어진다. 한편 affine variety에서 derivation의 sheaf $$T_X$$는 quasi-coherent이며, 그 section들이 각 열린집합 $$U$$ 위의 derivation $$D:\mathcal{O}_X(U)\to\mathcal{O}_X(U)$$들로 주어지므로, $$\mathcal{F}=\widetilde{N}$$에 대한 derivation의 공간 $$\Der_\mathbb{K}(\mathcal{O}_X,\widetilde{N})$$은 $$\Der_\mathbb{K}(A,N)$$과 자연스럽게 일치한다. 따라서
+$$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}}, \mathcal{O}_X)\cong\Der_\mathbb{K}(\mathcal{O}_X, \mathcal{O}_X)\cong \mathcal{T}_X$$
 
-$$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}},\,\mathcal{F})\cong\Der_\mathbb{K}(\mathcal{O}_X,\,\mathcal{F})$$
+이 성립한다. 한편, $$\Omega_{A/\mathbb{K}}$$이 finitely generated projective $$A$$-module이라는 사실로부터 $$\widetilde{\Omega_{A/\mathbb{K}}^\vee}\cong \widetilde{\Omega_{A/\mathbb{K}}}^\vee$$임을 알고, 따라서
 
-이 모든 quasi-coherent sheaf $$\mathcal{F}$$에 대해 성립한다. 즉 $$\widetilde{\Omega_{A/\mathbb{K}}}$$는 derivation functor $$\Der_\mathbb{K}(\mathcal{O}_X,-)$$를 represent하는 quasi-coherent sheaf이다.
+$$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\vee}\cong \widetilde{\Der_\mathbb{K}(A,A)}\cong \mathcal{T}_X$$
 
-이제 tangent sheaf와의 관계를 확인하자. $$\mathcal{F}=\mathcal{O}_X$$를 대입하면 $$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}},\mathcal{O}_X)\cong\Der_\mathbb{K}(\mathcal{O}_X,\mathcal{O}_X)=T_X(X)$$이며, 이로부터 sheaf level에서 $$T_X\cong\mathcal{H}om_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}},\mathcal{O}_X)$$임을 안다. 한편 $$X$$가 smooth이므로 $$\Omega_{A/\mathbb{K}}$$은 유한생성 projective $$A$$-module이 되고, 따라서 $$\Hom_A(\Omega_{A/\mathbb{K}},A)\cong\Omega_{A/\mathbb{K}}^\vee$$가 성립한다. 이를 $$\widetilde{(-)}$$로 올리면 $$\mathcal{H}om_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}},\mathcal{O}_X)\cong\widetilde{\Omega_{A/\mathbb{K}}^\vee}$$를 얻는다. 즉 $$T_X\cong\widetilde{\Omega_{A/\mathbb{K}}^\vee}$$이며, dual을 취하면 cotangent bundle에 대하여 $$\Omega_X^1\cong\widetilde{\Omega_{A/\mathbb{K}}}$$를 얻는다.
+이므로 원하는 주장이 성립한다. 
 
 </details>
+
+이 결과는 cotangent bundle이 우리가 상상하는 것처럼 differential $$1$$-form들로 나타난다는 것을 보여준다. 
 
 <div class="example" markdown="1">
 
@@ -126,7 +129,7 @@ $$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}},\,\mathcal{F})\cong\Der
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Smooth variety $$X$$ of dimension $$n$$의 *canonical bundle* $$\omega_X$$를 cotangent bundle의 top exterior power
+<ins id="def5">**정의 5**</ins> Smooth variety $$X$$ of dimension $$n$$의 *canonical line bundle<sub>표준 선다발</sub>* $$\omega_X$$를 cotangent bundle의 top exterior power
 
 $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 
@@ -152,9 +155,11 @@ $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 
 $$\mathbb{P}^n=(\mathbb{A}^{n+1}\setminus\{0\})/\mathbb{K}^\ast$$
 
-을 뜯어보면, $$\mathbb{K}^\ast$$-action은 원점을 중심으로 뻗어나가는 방향, 즉 Euler vector field가 정의하는 방향의 작용이며 따라서 $$\mathbb{P}^n$$의 tangent space는 $$\mathbb{A}^{n+1}$$에서 이 방향을 지워준 것과 같고, 이 방향을 quotient한 후 남은 부분이 $$\mathbb{P}^n$$의 tangent space가 된다.
+을 뜯어보면, $$\mathbb{K}^\ast$$-action은 원점을 중심으로 뻗어나가는 방향, 즉 Euler vector field가 정의하는 방향의 작용이며 이는 $$\mathbb{P}^n$$ 입장에서는 그냥 trivial line bundle에 불과하다. 그럼 $$\mathbb{P}^n$$의 tangent space는 $$\mathbb{A}^{n+1}$$의 방향, 즉 1차식들을 이 trivial line bundle로 quotient한 후 남은 부분에 해당한다. 즉 tangent bundle에 해당하는 다음의 short exact sequence
 
-이제 이를 엄밀하게 써 보자. 
+$$0 \rightarrow \mathcal{O}_{\mathbb{P}^{n}}\rightarrow \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus (n+1)}\rightarrow T_{\mathbb{P}^n}\rightarrow 0$$
+
+가 존재하며 여기에 dual을 취하면 다음을 얻는다. 
 
 <div class="proposition" markdown="1">
 
@@ -166,20 +171,27 @@ $$0 \rightarrow \Omega_{\mathbb{P}^n}^1 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
+이제 $$\mathbb{P}^n$$의 canonical bundle을 계산하기 위해서는 이 exact sequence에 top exterior power를 취해야 한다. 더 일반적으로 다음의 exact sequence
 
-$$\mathbb{P}^n$$은 $$\mathbb{A}^{n+1}\setminus\{0\}$$을 $$\mathbb{K}^\ast$$로 quotient하여 얻어진다. $$\mathbb{A}^{n+1}$$의 coordinate ring $$\mathbb{K}[\x_0, \ldots, \x_n]$$을 생각하면, $$\mathbb{K}^\ast$$-action은 $$\lambda \cdot \x_i = \lambda \x_i$$로 주어진다. 이 action을 differential하면 $$\mathbb{A}^{n+1}\setminus\{0\}$$ 위에서 다음을 얻는다. $$\mathbb{K}^\ast$$의 원소 $$\lambda$$에 대해 $$t = \log\lambda$$라 두면, $$\lambda$$-action의 미분은 Euler vector field $$E = \sum_{i=0}^n \x_i \frac{\partial}{\partial \x_i}$$를 정의한다. 따라서 $$\mathbb{P}^n$$ 위의 tangent bundle $$T_{\mathbb{P}^n}$$는 $$T_{\mathbb{A}^{n+1}}\vert_{\mathbb{P}^n}$$에서 Euler vector field가 생성하는 1차원 부분을 quotient한 것이다.
+$$0\rightarrow E\rightarrow F\rightarrow L\rightarrow 0$$
 
-이를 exact sequence로 쓰면, $$\mathbb{P}^n$$ 위에서 다음이 성립한다.
+이 주어졌다 하자. 그럼 이 exact sequence에 $$\bigwedge\nolimits^{\!p-1}E$$를 tensor product하여 얻어지는 다음의 exact sequence
 
-$$0 \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus(n+1)} \rightarrow T_{\mathbb{P}^n} \rightarrow 0$$
+$$0 \rightarrow \bigwedge\nolimits^{\!p-1}E\otimes E\rightarrow \bigwedge\nolimits^{\!p-1}E\otimes F\rightarrow \bigwedge\nolimits^{\!p-1}E\otimes L\rightarrow 0$$
 
-여기서 $$\mathcal{O}_{\mathbb{P}^n}(1)^{\oplus(n+1)}$$은 $$\mathbb{A}^{n+1}$$의 tangent bundle을 $$\mathbb{P}^n$$으로 pullback한 것이며, $$\mathcal{O}_{\mathbb{P}^n} \to \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus(n+1)}$$은 $$1 \mapsto (\x_0, \ldots, \x_n)$$에 의해 정의되는 injection으로, 이미지가 바로 Euler vector field에 해당한다. Dual을 취하면 명제의 exact sequence를 얻는다.
+과, map $$\bigwedge\nolimits^{\!p}E\rightarrow\bigwedge\nolimits^{\!p}F$$이 정의하는 cokernel exact sequence
 
-</details>
+$$0 \rightarrow \bigwedge\nolimits^{\!p}E \rightarrow \bigwedge\nolimits^{\!p}F\rightarrow C\rightarrow 0$$
 
-이제 determinant를 취하여 $$\mathbb{P}^n$$의 canonical bundle을 계산할 수 있다. Exact sequence에서 top exterior power를 취하면 다음 동형을 얻는다.
+을 비교하면, 약간의 계산을 통해 $$\bigwedge\nolimits^{p-1}E\otimes L\cong C$$임을 보일 수 있다. 
+
+
+
+하면 다음의 exact sequence
+
+$$0 \rightarrow \bigwedge\nolimits^{\!n}\Omega_{\mathbb{P}^n}^1\rightarrow \bigwedge\nolimits^{\!n}\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}\rightarrow \bigwedge\nolimits^{\!(n-1)}\Omega_{\mathbb{P}^n}^1\otimes \mathcal{O}_{\mathbb{P}^n}\rightarrow 0$$
+
+를 얻는다. 그럼
 
 $$\det(\Omega_{\mathbb{P}^n}^1) \otimes \det(\mathcal{O}_{\mathbb{P}^n}) \cong \det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)})$$
 
