@@ -292,7 +292,23 @@ $$s([x_0:x_1])=ax_0+bx_1$$
 
 </div>
 
-즉, $$U_i$$들 위에서는 trivial bundle로 잡고, 이를 각각의 overlap에서 Cartier divisor가 담고 있는 정확히 그 정보를 이용하여 이어주는 것이다. 
+즉, $$U_i$$들 위에서는 trivial bundle로 잡고, 이를 각각의 overlap에서 Cartier divisor가 담고 있는 정확히 그 정보를 이용하여 이어주는 것이다. 만일 $$\mathcal{O}_X(D)$$를 sheaf로 본다면, 즉 위에서 정의한 line bundle의 sheaf of sections를 생각한다면 각각의 열린집합 $$U$$ 위에서 $$\mathcal{O}_X(D)(U)$$는 (sheaf로서) 다음 식
+
+$$\divisor(f)+D\geq 0$$
+
+을 만족하는 함수들의 sheaf이다. 즉 $$\mathcal{O}_X(D)$$는, 만일 $$D$$를 codimension $$1$$ subvariety of $$X$$로 본다면, $$D$$를 따라 최대 order $$1$$의 pole을 가질 수 있는 rational function들의 sheaf이다. 거꾸로 $$\mathcal{O}_X(-D)$$는 다음의 식
+
+$$\divisor(f)-D\geq 0$$
+
+으로 주어지며, 이는 정확히 $$D$$ 위에서 vanish하는 함수들의 sheaf이다. 즉
+
+$$\mathcal{O}_X(-D)(U)=\{f\in \mathcal{O}_X(U)\mid \text{$f$ vanishes on $D\cap U$}\}$$
+
+이며, 이로부터 다음의 short exact sequence
+
+$$0\rightarrow \mathcal{O}_X(-D)\rightarrow \mathcal{O}_X\rightarrow \mathcal{O}_D\rightarrow 0$$
+
+을 얻는다. 그럼 $$\mathcal{O}_X(-D)$$는 $$D$$를 정의하는 ideal들의 sheaf이며 이러한 이유로 이를 $$\mathcal{I}_D$$로 적고 *ideal sheaf*라 부른다.
 
 <div class="proposition" markdown="1">
 
