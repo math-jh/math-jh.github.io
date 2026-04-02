@@ -67,7 +67,11 @@ $$\operatorname{div}(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 두 $$k$$-순환 $$Z_1, Z_2$$가 **유리 동치<sub>rationally equivalent</sub>**라는 것은 $$Z_1 - Z_2 = \sum_j \operatorname{div}(f_j)$$를 만족하는 주순환들의 유한합이 존재하는 것이다. 이를 $$Z_1 \sim_{\text{rat}} Z_2$$로 표기한다.
+<ins id="def5">**정의 5**</ins> 두 $$k$$-순환 $$Z_1, Z_2$$가 **유리 동치<sub>rationally equivalent</sub>**라는 것은, $$X$$의 $$(k+1)$$차원 닫힌 기약 부분다양체 $$Y_j$$와 그 위의 유리함수 $$f_j \in \mathbb{K}(Y_j)^\ast$$들이 존재하여
+
+$$Z_1 - Z_2 = \sum_j \operatorname{div}(f_j)$$
+
+을 만족하는 것이다. 이를 $$Z_1 \sim_{\text{rat}} Z_2$$로 표기한다.
 
 </div>
 
@@ -75,7 +79,7 @@ $$\operatorname{div}(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
 
 <ins id="prop6">**명제 6**</ins> 유리 동치는 $$Z_k(X)$$ 위의 동치관계<sub>equivalence relation</sub>이다.
 
-*증명 sketch.* 반사성<sub>reflexivity</sub>과 대칭성<sub>symmetry</sub>은 자명하다. 추이성<sub>transitivity</sub>만 확인하자: $$Z_1 \sim_{\text{rat}} Z_2$$이고 $$Z_2 \sim_{\text{rat}} Z_3$$이라면, $$Z_1 - Z_2 = \sum_i \operatorname{div}(f_i)$$, $$Z_2 - Z_3 = \sum_j \operatorname{div}(g_j)$$이므로
+*증명 sketch.* **반사성<sub>reflexivity</sub>**: $$Z - Z = 0 = \operatorname{div}(1)$$이므로 $$Z \sim_{\text{rat}} Z$$이다. **대칭성<sub>symmetry</sub>**: $$Z_1 - Z_2 = \sum_j \operatorname{div}(f_j)$$이면 $$Z_2 - Z_1 = \sum_j \operatorname{div}(f_j^{-1}) = -\sum_j \operatorname{div}(f_j)$$이므로 $$Z_2 \sim_{\text{rat}} Z_1$$이다. **추이성<sub>transitivity</sub>**: $$Z_1 \sim_{\text{rat}} Z_2$$이고 $$Z_2 \sim_{\text{rat}} Z_3$$이라면, $$Z_1 - Z_2 = \sum_i \operatorname{div}(f_i)$$, $$Z_2 - Z_3 = \sum_j \operatorname{div}(g_j)$$이므로
 
 $$Z_1 - Z_3 = (Z_1 - Z_2) + (Z_2 - Z_3) = \sum_i \operatorname{div}(f_i) + \sum_j \operatorname{div}(g_j)$$
 
@@ -87,7 +91,7 @@ $$Z_1 - Z_3 = (Z_1 - Z_2) + (Z_2 - Z_3) = \sum_i \operatorname{div}(f_i) + \sum_
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> **Chow group<sub>Chow 군</sub>** $$\operatorname{CH}_k(X)$$를 $$k$$-cycle들을 rational equivalence로 나눈 group으로 정의한다:
+<ins id="def7">**정의 7**</ins> **Chow group<sub>Chow 군</sub>** $$\operatorname{CH}_k(X)$$를 $$k$$-순환<sub>$$k$$-cycle</sub>들을 유리 동치로 나눈 군으로 정의한다:
 
 $$\operatorname{CH}_k(X) = Z_k(X) / \sim_{\text{rat}}$$
 
@@ -111,7 +115,7 @@ $$k$$-차원 linear subspace $$\mathbb{P}^k \subset \mathbb{P}^n$$를 $$\ell_k$$
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10 (Affine space)**</ins> $$k < n$$에 대해 $$\operatorname{CH}_k(\mathbb{A}^n) = 0$$이고, $$\operatorname{CH}_n(\mathbb{A}^n) \cong \mathbb{Z}$$이며 그 생성원은 $$\mathbb{A}^n$$ 자체이다. 이는 $$\operatorname{Cl}(\mathbb{A}^n) = 0$$ ([§인자, ⁋예시 10](/ko/math/algebraic_geometry/divisors#ex10))와 같은 정신이다: $$\mathbb{A}^n$$에는 "대수적으로 움직일 수 있는 여지"가 충분하여, 임의의 $$k$$-차원 subvariety는 rational function을 이용한 family 안에서 다른 subvariety로 연속적으로 변형될 수 있다. 구체적으로, $$\mathbb{A}^1 \hookrightarrow \mathbb{A}^n$$을 통해 parameterize되는 subvariety들의 family를 생각하면 임의의 점들을 rational equivalence로 연결할 수 있다.
+<ins id="ex10">**예시 10 (Affine space)**</ins> $$k < n$$에 대해 $$\operatorname{CH}_k(\mathbb{A}^n) = 0$$이고, $$\operatorname{CH}_n(\mathbb{A}^n) \cong \mathbb{Z}$$이며 그 생성원은 $$\mathbb{A}^n$$ 자체이다. 이는 $$\operatorname{Cl}(\mathbb{A}^n) = 0$$ ([§인자, ⁋예시 10](/ko/math/algebraic_geometry/divisors#ex10))와 같은 정신이다: $$\mathbb{A}^n$$에는 "대수적으로 움직일 수 있는 여지"가 충분하여, 임의의 $$k$$-차원 기약 부분다양체 $$V$$에 대해, 곱공간 $$\mathbb{A}^1 \times V$$를 통해 family를 구성하면 $$V$$가 유리 동치로 $$0$$이 됨을 보일 수 있다.
 
 </div>
 
@@ -144,17 +148,21 @@ $$f_\ast[V] = \begin{cases}
 0 & \dim f(V) < \dim V
 \end{cases}$$
 
+*증명은 [Ful, §1.4]를 참조하라.*
+
 </div>
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**정의 14**</ins> Morphism $$f: X \to Y$$가 **flat<sub>평탄 사상</sub>**이라는 것은, 임의의 점 $$x \in X$$에 대해 국소환 $$\mathcal{O}_{X,x}$$가 $$\mathcal{O}_{Y,f(x)}$$-module로써 flat인 것이다. 즉, 임의의 $$\mathcal{O}_{Y,f(x)}$$-module들의 단사 사상 $$M \hookrightarrow N$$에 대해 $$M \otimes_{\mathcal{O}_{Y,f(x)}} \mathcal{O}_{X,x} \to N \otimes_{\mathcal{O}_{Y,f(x)}} \mathcal{O}_{X,x}$$도 단사 사상이다. Intuitively, fiber의 차원이 일정하고, parameter를 연속적으로 변화시킬 때 fiber의 구조가 "연속적으로 변한다"는 것을 의미한다.
+<ins id="def14">**정의 14**</ins> Morphism $$f: X \to Y$$가 **flat<sub>평탄 사상</sub>**이라는 것은, 임의의 점 $$x \in X$$에 대해 국소환 $$\mathcal{O}_{X,x}$$가 $$\mathcal{O}_{Y,f(x)}$$-module로써 flat인 것이다. 즉, 임의의 $$\mathcal{O}_{Y,f(x)}$$-module들의 단사 사상 $$M \hookrightarrow N$$에 대해 $$M \otimes_{\mathcal{O}_{Y,f(x)}} \mathcal{O}_{X,x} \to N \otimes_{\mathcal{O}_{Y,f(x)}} \mathcal{O}_{X,x}$$도 단사 사상이다. 직관적으로, fiber의 차원이 일정하고, parameter를 연속적으로 변화시킬 때 fiber의 구조가 "연속적으로 변한다"는 것을 의미한다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> Flat morphism $$f: X \to Y$$에 대해 pullback $$f^\ast: \operatorname{CH}^k(Y) \to \operatorname{CH}^k(X)$$가 존재한다.
+<ins id="prop15">**명제 15**</ins> Flat morphism $$f: X \to Y$$에 대해 pullback $$f^\ast: \operatorname{CH}^k(Y) \to \operatorname{CH}^k(X)$$가 존재한다. 구체적으로, subvariety $$V \subset Y$$에 대해 $$f^\ast[V] = [f^{-1}(V)]$$이다. Flatness에 의해 $$\operatorname{codim}_X(f^{-1}(V)) = \operatorname{codim}_Y(V)$$가 보장되므로 이 정의는 well-defined이다.
+
+*증명은 [Ful, §1.7]을 참조하라.*
 
 </div>
 
@@ -163,6 +171,8 @@ $$f_\ast[V] = \begin{cases}
 <ins id="ex16">**예시 16**</ins> Projection $$\pi: \mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^1$$에 대해:
 
 $$\pi_\ast[\mathbb{P}^1 \times \{p\}] = [p] \in \operatorname{CH}_0(\mathbb{P}^1) \cong \mathbb{Z}$$
+
+잔여체 확대 차수가 $$[\mathbb{K}(\mathbb{P}^1 \times \{p\}) : \mathbb{K}(\{p\})] = 1$$이므로 계수가 $$\deg = 1$$이다. 즉, fiber $$\mathbb{P}^1 \times \{p\}$$가 한 점 위로 일대일로 대응되므로 pushforward가 순환의 차원을 유지하면서 그대로 내려보낸다.
 
 </div>
 
@@ -174,21 +184,27 @@ $$\pi_\ast[\mathbb{P}^1 \times \{p\}] = [p] \in \operatorname{CH}_0(\mathbb{P}^1
 
 $$\operatorname{CH}^1(X) \cong \operatorname{Cl}(X) \cong \operatorname{Pic}(X)$$
 
-*증명 sketch.* $$\operatorname{CH}^1(X)$$는 codimension 1 cycle들의 rational equivalence에 의한 quotient이고, $$\operatorname{Cl}(X)$$는 Weil divisor들의 linear equivalence에 의한 quotient이다. 두 equivalence 모두 principal divisor $$\operatorname{div}(f)$$에 의해 정의되므로, cycle $$\sum n_i V_i$$에서 $$V_i$$의 codimension이 1일 때 두 equivalence는 일치한다. 따라서 $$\operatorname{CH}^1(X) \cong \operatorname{Cl}(X)$$. $$\operatorname{Cl}(X) \cong \operatorname{Pic}(X)$$는 ([§인자](/ko/math/algebraic_geometry/divisors))에서 이미 확인하였다. $$\square$$
+*증명 sketch.* $$\operatorname{CH}^1(X) = \operatorname{CH}_{n-1}(X)$$는 codimension 1 닫힌 기약 부분다양체(즉 Weil divisor의 성분)들의 유리 동치에 의한 몫군이다. $$X$$가 smooth이므로 모든 local ring이 regular이며, 정역의 regular local ring은 UFD이다 (Auslander–Buchsbaum 정리; [Har, Theorem II.6.2A] 참조). 따라서 $$X$$는 locally factorial이고, 이에 의해 Weil divisor와 Cartier divisor가 일치한다.
+
+$$\operatorname{Cl}(X)$$는 Weil divisor들의 linear equivalence에 의한 몫군이다. 두 동치 관계를 비교하자: rational equivalence는 임의의 $$(k+1)$$-차원 부분다양체 $$Y$$ 위의 유리함수 $$f \in \mathbb{K}(Y)^\ast$$의 주순환 $$\operatorname{div}(f)$$에 의해 생성되고, linear equivalence는 $$X$$ 자체 위의 유리함수 $$f \in \mathbb{K}(X)^\ast$$의 주인자 $$\operatorname{div}(f)$$에 의해서만 생성된다.
+
+하지만 codimension 1에서는 임의의 $$(n-1+1) = n$$-차원 닫힌 기약 부분다양체 $$Y \subset X$$가 $$X$$ 자체뿐이므로 ($$\dim X = n$$), rational equivalence와 linear equivalence는 동일한 동치 관계이다. 따라서 $$\operatorname{CH}^1(X) \cong \operatorname{Cl}(X)$$. $$\operatorname{Cl}(X) \cong \operatorname{Pic}(X)$$는 ([§인자](/ko/math/algebraic_geometry/divisors))에서 이미 확인하였다. $$\square$$
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop18">**명제 18**</ins> Complex variety $$X$$에 대해 **cycle class map**이 존재한다:
+<ins id="prop18">**명제 18**</ins> complex variety $$X$$에 대해 **cycle class map**이 존재한다:
 
 $$\operatorname{cl}: \operatorname{CH}_k(X) \to H^{\text{BM}}_{2k}(X, \mathbb{Z})$$
 
-여기서 $$H^{\text{BM}}_\ast$$는 Borel–Moore homology이다. $$X$$가 smooth projective variety이면 Poincaré duality에 의해 이는
+여기서 $$H^{\text{BM}}_\ast$$는 Borel–Moore homology이다. Borel-Moore homology는 일반적인 singular homology와 달리 비콤팩트 공간에서도 well-defined한 homology with closed support이다. 여기서 $$2k$$ 차원이 등장하는 것은 $$k$$-차원 대수적 순환이 복소위상에서 실수 차원 $$2k$$를 갖는 것을 반영한다. $$X$$가 smooth projective variety이면 Poincaré duality에 의해 이는
 
 $$\operatorname{cl}: \operatorname{CH}^k(X) \to H^{2k}(X, \mathbb{Z})$$
 
 으로 볼 수 있다. 이 map은 일반적으로 injective도 surjective도 아니다. Hodge 추측<sub>Hodge conjecture</sub>은 $$\operatorname{cl}$$의 상<sub>image</sub>을 $$\mathbb{Q}$$-coefficients로 기술하는 것과 관련된 유명한 미해결 문제이다.
+
+*증명은 [Ful, §19.1]을 참조하라.*
 
 </div>
 
@@ -197,6 +213,8 @@ $$\operatorname{cl}: \operatorname{CH}^k(X) \to H^{2k}(X, \mathbb{Z})$$
 <div class="proposition" markdown="1">
 
 <ins id="prop19">**명제 19**</ins> Smooth variety $$X$$에 대해 Chow group $$\operatorname{CH}^\ast(X) = \bigoplus_k \operatorname{CH}^k(X)$$는 intersection product에 대해 **graded ring**을 이룬다. Intersection product $$\operatorname{CH}^k(X) \times \operatorname{CH}^l(X) \to \operatorname{CH}^{k+l}(X)$$의 자세한 정의는 이 글에서 다루지 않는다.
+
+*증명은 [Ful, §8.1]을 참조하라.*
 
 </div>
 
