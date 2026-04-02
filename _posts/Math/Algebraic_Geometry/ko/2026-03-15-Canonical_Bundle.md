@@ -222,15 +222,13 @@ $$\bigwedge_{k \neq j} d \y_k^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \
 
 ## Adjunction Formula
 
-많은 경우, 우리는 $$\mathbb{P}^n$$으로부터 적당히 많은 다항식들을 통해 얻어지는 
-
-Adjunction formula는 smooth variety $$X$$의 smooth divisor $$D$$의 canonical bundle을 ambient variety $$X$$의 canonical bundle으로 표현하는 정리이다.
+많은 경우, 우리는 $$\mathbb{P}^n$$으로부터 적당히 많은 다항식들을 통해 얻어지는 variety들에 관심이 있다. 직관적으로 이는 smooth variety $$X$$의 smooth divisor $$D$$들을 계속하여 생각하여 얻아지는 것이다. 다음의 *adjunction formula*는 이러한 경우 $$X$$의 canonical line bundle로부터 $$D$$의 canonical line bundle을 계산하는 방법을 알려준다. 
 
 <div class="proposition" markdown="1">
 
 <ins id="prop10">**명제 10**</ins> (Adjunction Formula) Smooth variety $$X$$의 smooth divisor $$D$$에 대해
 
-$$\omega_D \cong \omega_X \otimes \mathcal{O}_X(D)\vert_D$$
+$$\omega_D \cong (\omega_X \otimes \mathcal{O}_X(D))\vert_D$$
 
 이다.
 
