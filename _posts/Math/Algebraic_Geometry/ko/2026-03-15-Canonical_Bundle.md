@@ -95,7 +95,7 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 우리의 메인 도구는 Kähler differential의 universal property이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉, 임의의 $$A$$-module $$N$$에 대하여 natural isomorphism
 
-$$\Der_\mathbb{K}(A,\,N)\cong\Hom_A(\Omega_{A/\mathbb{K}},N)$$
+$$\Der_\mathbb{K}(A,N)\cong\Hom_A(\Omega_{A/\mathbb{K}},N)$$
 
 을 사용하자. 그럼 $$\widetilde{(-)}$$이 categorical equivalence라는 사실과 위의 natural isomorphicm에 의하여 
 
@@ -121,7 +121,7 @@ $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> $$\mathbb{A}^n$$의 cotangent bundle은 $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$이다. 대수적으로, 만일 $$\mathbb{A}^n$$의 coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$을 고정하면 이 $$\mathbb{K}$$-algebra의 Kähler differentials은 free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n] \, d\x_i$$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
+<ins id="ex4">**예시 4**</ins> $$\mathbb{A}^n$$의 cotangent bundle은 $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$이다. 대수적으로, 만일 $$\mathbb{A}^n$$의 coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$을 고정하면 이 $$\mathbb{K}$$-algebra의 Kähler differentials은 free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  d\x_i$$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
 
 </div>
 
@@ -137,7 +137,7 @@ $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 
 </div>
 
-우리는 canonical bundle $$\omega_X$$의 global section $$s\in H^0(X, \omega_X)$$을 $$X$$ 위의 *regular $$n$$-form*이라 부른다. 이들은 만일 $$\omega_X$$의 trivializing open set $$U$$를 잡고, 이를 [예시 4](#ex4)과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $$f$$에 대하여 $$f\,d\x_1 \wedge \cdots \wedge d\x_n$$의 꼴로 나타나는 $$n$$-form들이다. 
+우리는 canonical bundle $$\omega_X$$의 global section $$s\in H^0(X, \omega_X)$$을 $$X$$ 위의 *regular $$n$$-form*이라 부른다. 이들은 만일 $$\omega_X$$의 trivializing open set $$U$$를 잡고, 이를 [예시 4](#ex4)과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $$f$$에 대하여 $$fd\x_1 \wedge \cdots \wedge d\x_n$$의 꼴로 나타나는 $$n$$-form들이다. 
 
 한편 우리는 line bundle과 divisor class의 대응으로부터 다음을 정의할 수 있다.
 
@@ -183,8 +183,13 @@ $$0 \rightarrow \bigwedge\nolimits^{\!p-1}E\otimes E\rightarrow \bigwedge\nolimi
 
 $$0 \rightarrow \bigwedge\nolimits^{\!p}E \rightarrow \bigwedge\nolimits^{\!p}F\rightarrow C\rightarrow 0$$
 
-을 비교하면, 약간의 계산을 통해 $$\bigwedge\nolimits^{p-1}E\otimes L\cong C$$임을 보일 수 있다. 
+을 비교하면, 약간의 계산을 통해 $$\bigwedge\nolimits^{p-1}E\otimes L\cong C$$임을 보일 수 있다. 이제 [명제 7](#prop7)의 exact sequence에 $$p=n+1$$로 주고 계산하면, 이 일반적인 결과로부터
 
+$$0\rightarrow\bigwedge\nolimits^{\!n+1}\Omega_{\mathbb{P}^n}^1\rightarrow \bigwedge\nolimits^{\!n+1}\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus (n+1)}\rightarrow \bigwedge\nolimits^{\!n}\Omega_{\mathbb{P}^n}^1\otimes \mathcal{O}_{\mathbb{P}^n}\rightarrow 0$$
+
+을 얻는다. Rank를 고려하면 $$\bigwedge\nolimits^{\!n+1}\Omega_{\mathbb{P}^n}^1=0$$이므로 이로부터 isomorphism
+
+$$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)})\cong \mathcal{}$$
 
 
 하면 다음의 exact sequence
@@ -193,66 +198,31 @@ $$0 \rightarrow \bigwedge\nolimits^{\!n}\Omega_{\mathbb{P}^n}^1\rightarrow \bigw
 
 를 얻는다. 그럼
 
-$$\det(\Omega_{\mathbb{P}^n}^1) \otimes \det(\mathcal{O}_{\mathbb{P}^n}) \cong \det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)})$$
+$$\det(\Omega_{\mathbb{P}^n}^1) \otimes \det(\mathcal{O}_{\mathbb{P}^n}) \cong \det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)})\cong \mathcal{O}_{\mathbb{P}^n}(-1)^{\otimes (n+1)}\cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$
 
-$$\det(\mathcal{O}_{\mathbb{P}^n}) \cong \mathcal{O}_{\mathbb{P}^n}$$이고 $$\det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) \cong \mathcal{O}_{\mathbb{P}^n}(-1)^{\otimes(n+1)} \cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$이므로,
-
-$$\omega_{\mathbb{P}^n} = \det(\Omega_{\mathbb{P}^n}^1) \cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$
-
-를 얻는다.
+임을 안다. 그럼 이 때 canonical divisor는 $$K_{\mathbb{P}^n}=-(n+1)H$$로 주어진다. 이 계산과 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16)부터 $$\omega_{\mathbb{P}^n}$$은 regular section을 갖지 않는다는 것을 안다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> $$\mathbb{P}^n$$의 canonical bundle은 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$이며, canonical divisor는 $$K_{\mathbb{P}^n} = -(n+1)H$$이다. 여기서 $$H$$는 hyperplane divisor이다. 특히 $$\omega_{\mathbb{P}^n}$$은 $$H^0(\mathbb{P}^n, \omega_{\mathbb{P}^n}) = 0$$이므로, $$\mathbb{P}^n$$ 위에는 nontrivial한 regular $$n$$-form이 존재하지 않는다.
+<ins id="ex8">**예시 8**</ins> 위의 계산을 $$n$$-form의 transition function 관점에서도 확인할 수 있다. $$\mathbb{P}^n$$의 standard open cover $$U_i = \{\x_i \neq 0\}$$ 위에서 affine coordinate을 $$\y_j^{(i)} = \x_j / \x_i$$ ($$j \neq i$$)로 놓으면, $$U_i$$ 위의 $$n$$-form 
 
-이를 transition function 관점에서도 확인할 수 있다. $$\mathbb{P}^n$$의 standard open cover $$U_i = \{\x_i \neq 0\}$$ 위에서 affine coordinate을 $$y_j^{(i)} = \x_j / \x_i$$ ($$j \neq i$$)로 놓으면, $$U_i$$ 위의 $$n$$-form $$d y_1^{(i)} \wedge \cdots \wedge \widehat{d y_i^{(i)}} \wedge \cdots \wedge d y_n^{(i)}$$ (즉, $$j \neq i$$인 모든 $$j$$에 대한 $$d y_j^{(i)}$$의 wedge)을 생각할 수 있다. $$U_i \cap U_j$$ 위에서 $$y_k^{(j)} = \x_k / \x_j = (\x_k / \x_i) / (\x_j / \x_i) = y_k^{(i)} / y_j^{(i)}$$이므로, $$k \neq i, j$$에 대해 $$d y_k^{(j)} = d(y_k^{(i)} / y_j^{(i)}) = (y_j^{(i)} \, d y_k^{(i)} - y_k^{(i)} \, d y_j^{(i)}) / (y_j^{(i)})^2$$이다. 따라서 $$U_j$$ 위의 $$n$$-form은 $$U_i \cap U_j$$에서
+$$d \y_1^{(i)} \wedge \cdots \wedge \widehat{d \y_i^{(i)}} \wedge \cdots \wedge d \y_n^{(i)}$$
 
-$$\bigwedge_{k \neq j} d y_k^{(j)} = (y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} d y_k^{(i)}$$
+을 생각할 수 있다. $$U_i \cap U_j$$ 위에서 $$\y_k^{(j)} = \x_k / \x_j = (\x_k / \x_i) / (\x_j / \x_i) = \y_k^{(i)} / \y_j^{(i)}$$이므로, $$k \neq i, j$$에 대해 
 
-로 변환된다. 여기서 $$(y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$$이므로, transition function이 $$g_{ij} = (\x_i / \x_j)^{-(n+1)}$$임을 확인할 수 있다. 이는 $$\mathcal{O}_{\mathbb{P}^n}(-n-1)$$의 transition function과 일치한다.
+$$d \y_k^{(j)} = d(\y_k^{(i)} / \y_j^{(i)}) = \frac{\y_j^{(i)} d \y_k^{(i)} - \y_k^{(i)}  d \y_j^{(i)}}{(\y_j^{(i)})^2}$$
 
-</div>
+이다. 따라서 $$U_j$$ 위의 $$n$$-form은 $$U_i \cap U_j$$에서
 
-$$\mathbb{A}^n$$에서는 $$\omega_{\mathbb{A}^n} \cong \mathcal{O}_{\mathbb{A}^n}$$이 trivial이었지만, projective space에서는 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$이 nontrivial하다. 이는 projective space가 "at infinity에서 닫혀 있기 때문에" 발생하는 위상적 현상이라 생각할 수 있다.
+$$\bigwedge_{k \neq j} d \y_k^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} d \y_k^{(i)}$$
 
-## Smooth Curve의 Canonical Bundle
-
-Smooth projective curve $$C$$의 경우, canonical bundle은 특히 구체적이고 풍부한 이론을 제공한다. 이 섹션에서는 $$C$$의 canonical bundle $$\omega_C = \Omega_C^1$$의 여러 가지 성질을 다룬다.
-
-### 기본 성질
-
-$$\omega_C$$의 global section $$s \in H^0(C, \omega_C)$$는 $$C$$ 위의 *regular 1-form*이다. $$C$$의 genus를 $$g$$라 할 때, Riemann-Roch theorem에 의해 $$h^0(C, \omega_C) = g$$이므로, regular 1-form의 공간은 $$g$$차원이다.
-
-Canonical divisor $$K_C$$의 degree를 알아보자. [예시 8](#ex8)에서 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$임을 보았고, 뒤에서 증명할 adjunction formula ([명제 10](#prop10))에 의해 $$\mathbb{P}^2$$ 안의 smooth plane curve $$C$$ of degree $$d$$에 대해 $$\omega_C \cong \mathcal{O}_C(d-3)$$이 된다. 따라서 $$\deg K_C = d(d-3)$$이고, plane curve의 genus가 $$g = (d-1)(d-2)/2$$이므로 $$\deg K_C = 2g - 2$$를 얻는다. 이 결과는 임의의 smooth projective curve에 대해 성립한다.
-
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> Smooth projective curve $$C$$의 genus가 $$g$$이면 $$\deg K_C = 2g - 2$$이다.
+로 변환된다. 여기서 $$(\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$$이므로, transition function이 $$g_{ij} = (\x_i / \x_j)^{-(n+1)}$$임을 확인할 수 있다. 이는 $$\mathcal{O}_{\mathbb{P}^n}(-n-1)$$의 transition function과 일치한다.
 
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-Riemann-Roch theorem에 의해, 임의의 divisor $$D$$에 대해 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$가 성립한다. $$D = 0$$을 대입하면 $$\ell(0) - \ell(K_C) = 1 - g$$이고, $$\ell(0) = 1$$, $$\ell(K_C) = h^0(C, \omega_C) = g$$이므로 자동으로 성립한다. $$D = K_C$$를 대입하면 $$\ell(K_C) - \ell(0) = \deg K_C + 1 - g$$, 즉 $$g - 1 = \deg K_C + 1 - g$$로부터 $$\deg K_C = 2g - 2$$를 얻는다.
-
-</details>
-
-### Genus에 따른 분류
-
-Canonical divisor의 degree는 curve의 genus에 따라 본질적으로 다른 거동을 보인다. $$g = 0$$, 즉 $$C \cong \mathbb{P}^1$$의 경우, $$\deg K_C = -2 < 0$$이므로 $$K_C$$는 ample이 아니다. 사실 $$K_{\mathbb{P}^1} = -2P$$이므로 $$K_C$$는 negative degree를 갖는다. $$g = 1$$, 즉 elliptic curve의 경우, $$\deg K_C = 0$$이며 실제로 $$K_C \sim 0$$이므로 $$\omega_C \cong \mathcal{O}_C$$가 trivial하다. 따라서 $$K_C$$ 역시 ample이 아니다. $$g \ge 2$$의 경우, $$\deg K_C = 2g - 2 > 0$$이다. Curve에서 $$\deg \mathcal{L} > 0$$인 line bundle $$\mathcal{L}$$은 항상 ample이다. Riemann-Roch theorem에 의해 $$\dim H^0(C, \mathcal{L}^{\otimes m}) = m \cdot \deg \mathcal{L} - g + 1$$ ($$m$$가 충분히 클 때)이며, 이는 충분히 큰 $$m$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample section들을 충분히 많이 가짐을 의미하므로 ([§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)), $$K_C$$는 ample이다.
-
-### Hyperelliptic Curve에서의 Canonical Bundle
-
-Genus $$g \ge 2$$인 hyperelliptic curve는 $$\mathbb{P}^1$$에 대한 degree 2 covering으로 정의된다. 구체적으로, $$C$$는 $$y^2 = f(\x)$$ ($$f$$는 서로 다른 근을 갖는 degree $$2g + 1$$ 또는 $$2g + 2$$ 다항식)에 의해 주어진 affine curve의 smooth completion이다.
-
-이러한 $$C$$에서 canonical bundle $$K_C$$의 complete linear system $$\lvert K_C\rvert$$가 정의하는 morphism $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$의 거동을 살펴보자. $$\deg K_C = 2g - 2$$이고 $$h^0(K_C) = g$$이므로, $$\varphi_{K_C}$$의 공역은 $$\mathbb{P}^{g-1}$$이다. 그러나 실제로 $$\varphi_{K_C}$$는 본래의 hyperelliptic double cover $$C \rightarrow \mathbb{P}^1$$로 분해되며, 2:1 covering map이 되므로 closed embedding이 아니다. 즉, $$\varphi_{K_C}$$의 image는 $$\mathbb{P}^{g-1}$$ 안의 $$\mathbb{P}^1$$로, Veronese embedding $$\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$$의 image에 들어간다. 이에 대한 증명은 [Har, IV.5.2]를 참조한다.
-
-따라서 $$K_C$$는 ample이지만 very ample이 아닌 line bundle의 구체적인 예시를 제공한다. 이는 [§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)에서 언급되었던 "ample but not very ample" 현상의 실현이다. Curve에서 $$\mathcal{L}$$이 very ample이기 위한 충분조건이 $$\deg \mathcal{L} \ge 2g + 1$$임이 알려져 있으며 ([Har, IV.3.2]), $$\deg K_C = 2g - 2 < 2g + 1$$이므로 이 조건을 만족하지 못함도 확인할 수 있다. 대신 $$K_C^{\otimes 2}$$의 degree는 $$4g - 4 \ge 2g + 1$$ (since $$g \ge 2$$)이므로, $$K_C^{\otimes 2}$$는 very ample이다. 이는 ample의 정의—어떤 거듭제곱이 very ample이면 ample—와 완벽하게 부합한다.
-
-이와 대조적으로, $$g \ge 3$$인 non-hyperelliptic curve에서는 canonical map $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$가 closed embedding이 되어, $$K_C$$ 자체가 very ample이다 ([Har, IV.5.4]).
 
 ## Adjunction Formula
+
+많은 경우, 우리는 $$\mathbb{P}^n$$으로부터 적당히 많은 다항식들을 통해 얻어지는 
 
 Adjunction formula는 smooth variety $$X$$의 smooth divisor $$D$$의 canonical bundle을 ambient variety $$X$$의 canonical bundle으로 표현하는 정리이다.
 
@@ -299,13 +269,46 @@ $$\omega_C \cong \omega_{\mathbb{P}^2}\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}
 
 </div>
 
-## Serre Duality
 
-Canonical bundle의 가장 중요한 응용 중 하나는 Serre duality이다. Smooth projective variety $$X$$ of dimension $$n$$에 대해, 임의의 coherent sheaf $$\mathcal{F}$$에 대하여
+## Smooth Curve의 Canonical Bundle
 
-$$H^i(X, \mathcal{F})^\ast \cong H^{n-i}(X, \omega_X \otimes \mathcal{F}^\vee)$$
+또 다른 중요한 예시는 smooth projective curve $$C$$이다. 이는 $$C$$
 
-가 성립한다. 특히 $$H^n(X, \omega_X) \cong \mathbb{K}$$이다. 이 정리에 대한 증명과 응용은 [§Sheaf Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology)에서 다룬다. Serre duality는 canonical bundle이 cohomology group 사이의 perfect pairing을 정의하는 dualizing object로서의 역할을 명확히 보여준다.
+Smooth projective curve $$C$$의 경우, canonical bundle은 특히 구체적이고 풍부한 이론을 제공한다. 이 섹션에서는 $$C$$의 canonical bundle $$\omega_C = \Omega_C^1$$의 여러 가지 성질을 다룬다.
+
+### 기본 성질
+
+$$\omega_C$$의 global section $$s \in H^0(C, \omega_C)$$는 $$C$$ 위의 *regular 1-form*이다. $$C$$의 genus를 $$g$$라 할 때, Riemann-Roch theorem에 의해 $$h^0(C, \omega_C) = g$$이므로, regular 1-form의 공간은 $$g$$차원이다.
+
+Canonical divisor $$K_C$$의 degree를 알아보자. [예시 8](#ex8)에서 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$임을 보았고, 뒤에서 증명할 adjunction formula ([명제 10](#prop10))에 의해 $$\mathbb{P}^2$$ 안의 smooth plane curve $$C$$ of degree $$d$$에 대해 $$\omega_C \cong \mathcal{O}_C(d-3)$$이 된다. 따라서 $$\deg K_C = d(d-3)$$이고, plane curve의 genus가 $$g = (d-1)(d-2)/2$$이므로 $$\deg K_C = 2g - 2$$를 얻는다. 이 결과는 임의의 smooth projective curve에 대해 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9**</ins> Smooth projective curve $$C$$의 genus가 $$g$$이면 $$\deg K_C = 2g - 2$$이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Riemann-Roch theorem에 의해, 임의의 divisor $$D$$에 대해 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$가 성립한다. $$D = 0$$을 대입하면 $$\ell(0) - \ell(K_C) = 1 - g$$이고, $$\ell(0) = 1$$, $$\ell(K_C) = h^0(C, \omega_C) = g$$이므로 자동으로 성립한다. $$D = K_C$$를 대입하면 $$\ell(K_C) - \ell(0) = \deg K_C + 1 - g$$, 즉 $$g - 1 = \deg K_C + 1 - g$$로부터 $$\deg K_C = 2g - 2$$를 얻는다.
+
+</details>
+
+### Genus에 따른 분류
+
+Canonical divisor의 degree는 curve의 genus에 따라 본질적으로 다른 거동을 보인다. $$g = 0$$, 즉 $$C \cong \mathbb{P}^1$$의 경우, $$\deg K_C = -2 < 0$$이므로 $$K_C$$는 ample이 아니다. 사실 $$K_{\mathbb{P}^1} = -2P$$이므로 $$K_C$$는 negative degree를 갖는다. $$g = 1$$, 즉 elliptic curve의 경우, $$\deg K_C = 0$$이며 실제로 $$K_C \sim 0$$이므로 $$\omega_C \cong \mathcal{O}_C$$가 trivial하다. 따라서 $$K_C$$ 역시 ample이 아니다. $$g \ge 2$$의 경우, $$\deg K_C = 2g - 2 > 0$$이다. Curve에서 $$\deg \mathcal{L} > 0$$인 line bundle $$\mathcal{L}$$은 항상 ample이다. Riemann-Roch theorem에 의해 $$\dim H^0(C, \mathcal{L}^{\otimes m}) = m \cdot \deg \mathcal{L} - g + 1$$ ($$m$$가 충분히 클 때)이며, 이는 충분히 큰 $$m$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample section들을 충분히 많이 가짐을 의미하므로 ([§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)), $$K_C$$는 ample이다.
+
+### Hyperelliptic Curve에서의 Canonical Bundle
+
+Genus $$g \ge 2$$인 hyperelliptic curve는 $$\mathbb{P}^1$$에 대한 degree 2 covering으로 정의된다. 구체적으로, $$C$$는 $$y^2 = f(\x)$$ ($$f$$는 서로 다른 근을 갖는 degree $$2g + 1$$ 또는 $$2g + 2$$ 다항식)에 의해 주어진 affine curve의 smooth completion이다.
+
+이러한 $$C$$에서 canonical bundle $$K_C$$의 complete linear system $$\lvert K_C\rvert$$가 정의하는 morphism $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$의 거동을 살펴보자. $$\deg K_C = 2g - 2$$이고 $$h^0(K_C) = g$$이므로, $$\varphi_{K_C}$$의 공역은 $$\mathbb{P}^{g-1}$$이다. 그러나 실제로 $$\varphi_{K_C}$$는 본래의 hyperelliptic double cover $$C \rightarrow \mathbb{P}^1$$로 분해되며, 2:1 covering map이 되므로 closed embedding이 아니다. 즉, $$\varphi_{K_C}$$의 image는 $$\mathbb{P}^{g-1}$$ 안의 $$\mathbb{P}^1$$로, Veronese embedding $$\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$$의 image에 들어간다. 이에 대한 증명은 [Har, IV.5.2]를 참조한다.
+
+따라서 $$K_C$$는 ample이지만 very ample이 아닌 line bundle의 구체적인 예시를 제공한다. 이는 [§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)에서 언급되었던 "ample but not very ample" 현상의 실현이다. Curve에서 $$\mathcal{L}$$이 very ample이기 위한 충분조건이 $$\deg \mathcal{L} \ge 2g + 1$$임이 알려져 있으며 ([Har, IV.3.2]), $$\deg K_C = 2g - 2 < 2g + 1$$이므로 이 조건을 만족하지 못함도 확인할 수 있다. 대신 $$K_C^{\otimes 2}$$의 degree는 $$4g - 4 \ge 2g + 1$$ (since $$g \ge 2$$)이므로, $$K_C^{\otimes 2}$$는 very ample이다. 이는 ample의 정의—어떤 거듭제곱이 very ample이면 ample—와 완벽하게 부합한다.
+
+이와 대조적으로, $$g \ge 3$$인 non-hyperelliptic curve에서는 canonical map $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$가 closed embedding이 되어, $$K_C$$ 자체가 very ample이다 ([Har, IV.5.4]).
+
 
 ---
 
