@@ -248,15 +248,17 @@ Standard open cover $$U_i = \{x \mid x_i \ne 0\}$$ 위에서 $$\mathcal{O}_{\mat
 
 <div class="definition" markdown="1">
 
-<ins id="def15">**정의 15**</ins> Line bundle $$\mathcal{L}$$의 *global section*들의 공간을 $$H^0(X, \mathcal{L})$$로 표기한다. 즉, $$H^0(X, \mathcal{L})$$는 각 점 $$x\in X$$마다 fiber $$\pi^{-1)(x)\subset \mathcal{L}$$ 내의 원소를 대응시키는 regular map들의 집합이다.
+<ins id="def15">**정의 15**</ins> Line bundle $$\mathcal{L}$$의 *global section*들의 공간을 $$\Gamma(X, \mathcal{L})$$로 표기한다. 즉, $$\Gamma(X, \mathcal{L})$$는 각 점 $$x\in X$$마다 fiber $$\pi^{-1}(x)\subset \mathcal{L}$$ 내의 원소를 대응시키는 regular map들의 집합이다.
 
 </div>
+
+Global section space의 또 다른 대중적인 표기법 중 하나는 $$H^0(X, \mathcal{L})$$이다. 이 표기법은 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1)에서 정당화될 것이나, 그 전까지는 $$\Gamam(X, \mathcal{L})$$을 사용하기로 한다. 
 
 <div class="example" markdown="1">
 
 <ins id="ex16">**예시 16**</ins> $$\mathcal{O}_{\mathbb{P}^n}(-1)$$의 global section은 $$0$$뿐이다. 즉,
 
-$$H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)) = 0$$
+$$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)) = 0$$
 
 이다. 이를 확인하기 위해 우리는 [명제 14](#prop14)에서 구한 transition function $$g_{ij} = \x_j/\x_i$$를 사용한다. Global section $$s$$는 각 $$U_i$$에서
 
@@ -266,11 +268,11 @@ $$s_i \in \mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$$
 
 </div>
 
-이 명제는 tautological bundle의 <em-ko>꼬임</em-ko>을 section의 관점에서 보여준다. 가령, $$H^0(\mathbb{P}^1, \mathcal{O}(-1))=0$$이라는 사실은 특히 모든 $$x\in \mathbb{P}^1$$마다 fiber의 1을 대응시키는 "상수함수" 또한 존재하지 않는다는 것을 의미한다. 이는, 위의 기하학적 관점에서 보면, $$\mathbb{P}^1$$을 한 바퀴를 돌아왔을 때 원래의 1이 아니라 (예를 들면) $$-1$$이 되어있기 때문이다.
+이 명제는 tautological bundle의 <em-ko>꼬임</em-ko>을 section의 관점에서 보여준다. 가령, $$\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$$이라는 사실은 특히 모든 $$x\in \mathbb{P}^1$$마다 fiber의 1을 대응시키는 "상수함수" 또한 존재하지 않는다는 것을 의미한다. 이는, 위의 기하학적 관점에서 보면, $$\mathbb{P}^1$$을 한 바퀴를 돌아왔을 때 원래의 1이 아니라 (예를 들면) $$-1$$이 되어있기 때문이다.
 
-한편 [예시 16](#ex16)의 계산은 임의의 $$d$$에 대해서도 확장할 수 있는데, 특히 임의의 $$d<0$$에 대하여 $$H^0(\mathbb{P}^1, \mathcal{O}(-1))=0$$인 것을 동일한 논리로 보일 수 있으며, $$d=0$$인 경우, 즉 $$\mathcal{O}_{\mathbb{P}^n}(0)=\mathcal{O}_{\mathbb{P}^n}$$의 경우에는 section들이 homogeneous polynomial of degree $$0$$, 즉 상수함수들이라는 것을 확인할 수 있으므로 [§준사영다양체, ⁋예시 6](/ko/math/algebraic_geometry/quasi_projective_varieties#ex6)의 계산이 다시 확인된다. 
+한편 [예시 16](#ex16)의 계산은 임의의 $$d$$에 대해서도 확장할 수 있는데, 특히 임의의 $$d<0$$에 대하여 $$\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$$인 것을 동일한 논리로 보일 수 있으며, $$d=0$$인 경우, 즉 $$\mathcal{O}_{\mathbb{P}^n}(0)=\mathcal{O}_{\mathbb{P}^n}$$의 경우에는 section들이 homogeneous polynomial of degree $$0$$, 즉 상수함수들이라는 것을 확인할 수 있으므로 [§준사영다양체, ⁋예시 6](/ko/math/algebraic_geometry/quasi_projective_varieties#ex6)의 계산이 다시 확인된다. 
 
-주의를 기울일 부분은 $$d>0$$인 경우이다. 이 경우 section들은 [예시 16](#ex16)과 정확히 동일한 계산에 의해 homogeneous polynomial of degree $$d$$들임을 확인할 수 있다. 특히 $$H^0(\mathbb{P}^n, \mathcal{O}(d))\neq 0$$이며, 이는 [예시 12](#ex12) 이후의 직관이 다소 과하게 단순화되었다는 것을 보여주는 계산이라 생각할 수 있다. 
+주의를 기울일 부분은 $$d>0$$인 경우이다. 이 경우 section들은 [예시 16](#ex16)과 정확히 동일한 계산에 의해 homogeneous polynomial of degree $$d$$들임을 확인할 수 있다. 특히 $$\Gamma(\mathbb{P}^n, \mathcal{O}(d))\neq 0$$이며, 이는 [예시 12](#ex12) 이후의 직관이 다소 과하게 단순화되었다는 것을 보여주는 계산이라 생각할 수 있다. 
 
 이 현상에 대한 더 정확한 설명은 다음과 같다. 편의상 $$\mathbb{P}^1$$에서의 예시를 보자. $$\mathcal{O}(-1)$$의 section들은 homogeneous of degree $$-1$$이므로, 특히 다음의 꼴
 
@@ -280,7 +282,7 @@ $$s([x_0:x_1])=\frac{a}{x_0}+\frac{b}{x_1}$$
 
 $$s([x_0:x_1])=ax_0+bx_1$$
 
-의 함수들이며 위와는 달리 $$a,b$$에 어떠한 제약도 없다. 직관적으로, $$\mathcal{O}(-1)$$의 section들은 분모로 인해 zero section을 넘을 수 없고, 따라서 모든 section이 "$$1$$이 $$-1$$에 붙는", 꼬임이 만들어내는 문제를 피해갈 수 없다. 이 꼬임은 $$\mathcal{O}(1)$$에서도 같은 문제를 만든다. 즉 "constant section" $$s([x_0:x_1])$$은 $$\mathcal{O}(1)$$에서도 마찬가지로 section이 아니다. 그러나 이번에는 $$\mathcal{O}(1)$$의 section들이 zero section을 넘어갈 수 있기 때문에 $$H^0(\mathbb{P}^1, \mathcal{O}(1))\neq 0$$이게 된다. 
+의 함수들이며 위와는 달리 $$a,b$$에 어떠한 제약도 없다. 직관적으로, $$\mathcal{O}(-1)$$의 section들은 분모로 인해 zero section을 넘을 수 없고, 따라서 모든 section이 "$$1$$이 $$-1$$에 붙는", 꼬임이 만들어내는 문제를 피해갈 수 없다. 이 꼬임은 $$\mathcal{O}(1)$$에서도 같은 문제를 만든다. 즉 "constant section" $$s([x_0:x_1])$$은 $$\mathcal{O}(1)$$에서도 마찬가지로 section이 아니다. 그러나 이번에는 $$\mathcal{O}(1)$$의 section들이 zero section을 넘어갈 수 있기 때문에 $$\Gamma(\mathbb{P}^1, \mathcal{O}(1))\neq 0$$이게 된다. 
 
 ## Divisor -- Line Bundle correspondence
 
