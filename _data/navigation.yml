@@ -36,8 +36,8 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/canonical_bundle
       - title: "층 코호몰로지"
         url: ko/math/algebraic_geometry/sheaf_cohomology
-      - title: "Cohomology of Line Bundles on P^n"
-        url: ko/math/algebraic_geometry/cohomology_of_line_bundles
+      - title: "사영공간의 코호몰로지"
+        url: ko/math/algebraic_geometry/cohomology_of_projective_spaces
       - title: "Serre Duality"
         url: ko/math/algebraic_geometry/serre_duality
       - title: "리만-로흐 정리"
