@@ -13,19 +13,19 @@ header:
 
 date: 2026-03-15
 last_modified_at: 2026-03-15
-weight: 12
+weight: 16
 published: false
 ---
 
-([§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_geometry/line_bundles#ex24))에서 우리는 variety $$X$$의 tangent bundle $$\mathcal{T}_X$$와 cotangent bundle $$\Omega_X^1$$을 정의하고, 이로부터 canonical line bundle $$\omega_X = \bigwedge^{\dim X} \Omega_X^1$$을 얻었다. 또 canonical line bundle $$\omega_X$$에 대응하는 divisor를 canonical divisor $$K_X$$라 부른다.
+[§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_geometry/line_bundles#ex24)에서 우리는 variety $$X$$의 tangent bundle $$\mathcal{T}_X$$와 cotangent bundle $$\Omega_X^1$$을 정의하였다. 특히 $$X$$가 smooth인 경우, $$\Omega_X^1$$의 top exterior power를 생각하면 canonical line bundle $$\omega_X = \bigwedge^{\dim X} \Omega_X^1$$을 얻을 수 있었으며, 이에 대응하는 divisor를 canonical divisor $$K_X$$라 정의하였다.
 
-이제 우리는 이 두 객체를 이용하여 **Riemann–Roch 정리**를 서술한다. [§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)에서 우리는 line bundle $$\mathcal{L}$$의 complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$을 정의하였고, 이것이 $$\mathcal{L}$$과 linearly equivalent한 effective divisor들의 모임이라는 것을 보았다. 그렇다면 가장 자연스러운 질문은 $$H^0(X, \mathcal{L})$$의 차원, 즉 $$\dim H^0(X, \mathcal{L})$$을 어떻게 계산하느냐이다. Riemann–Roch 정리는 바로 이 질문에 대한 답을 제공하며, 특히 곡선과 곡면에 대해 매우 구체적인 결과를 준다.
+한편 [§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)에서 우리는 line bundle $$\mathcal{L}$$의 complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$을 정의하였으며, 직관적으로 이는 line bundle $$\mathcal{L}$$과 linearly equivalent한 effective divisor들의 모임이다. 그렇다면 가장 자연스러운 질문 중 하나는 $$H^0(X, \mathcal{L})$$의 차원에 대한 것이다. Riemann–Roch theorem은 바로 이 질문에 대한 답을 제공하며, 특히 곡선과 곡면에 대해 매우 구체적인 결과를 준다.
 
 ## 곡선에서의 Riemann–Roch 정리
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Smooth projective curve $$C$$ 위의 divisor $$D$$에 대해 *Riemann–Roch 차원*을
+<ins id="def1">**정의 1**</ins> Smooth projective curve $$C$$ 위의 divisor $$D$$에 대해 *Riemann–Roch dimension*을
 
 $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
@@ -33,7 +33,7 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 </div>
 
-이 차원은 $$D$$의 complete linear system $$\lvert D \rvert$$의 dimension과 같다. ([§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)) 즉, $$\ell(D) - 1$$은 $$D$$와 linearly equivalent한 effective divisor들이 이루는 projective space의 dimension이다.
+즉, 위에서 언급한 $$D$$의 complete linear system $$\lvert D \rvert$$의 dimension을 Riemann-ROch dimension으로 정의한다. 
 
 <div class="proposition" markdown="1">
 
@@ -278,6 +278,46 @@ $$\rho(g, r, d) = g - (r+1)(g - d + r)$$
 - $$d = 0$$, $$r = 0$$: $$\rho = 2 - 1 \cdot 2 = 0$$이고, $$W^0_0 = \{0\}$$ (trivial divisor)로 유일한 점이다.
 
 </div>
+
+
+
+
+
+## Smooth Curve의 Canonical Bundle
+
+[예시 10](#ex10)에서 사용한 degree-genus formula는 다음 글에서 다룰 Riemann-Roch theorem의 특수한 경우이다. 으로, 이는 위의 계산을 단순한 degree 계산이 아니라 위상적 데이터를 포함하는 정보로 바꿔준다.
+
+$$C$$의 차원에 의하여 $$\omega_C=\Omega_C^1$$이며 $$s\in H^0(C, \omega_C)$$는 $$C$$ 위의 regular $$1$$-form이다. 그런데 Riemann-Roch theorem은 
+
+정의에 의하여, $$\omega_C$$의 global section $$s \in H^0(C, \omega_C)$$는 $$C$$ 위의 *regular 1-form*이다.  [명제 9](#prop9))에 의해 $$\mathbb{P}^2$$ 안의 smooth plane curve $$C$$ of degree $$d$$에 대해 $$\omega_C \cong \mathcal{O}_C(d-3)$$이 된다. 따라서 $$\deg K_C = d(d-3)$$이고, plane curve의 genus가 $$g = (d-1)(d-2)/2$$이므로 $$\deg K_C = 2g - 2$$를 얻는다. 이 결과는 임의의 smooth projective curve에 대해 성립한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11**</ins> Smooth projective curve $$C$$의 genus가 $$g$$이면 $$\deg K_C = 2g - 2$$이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Riemann-Roch theorem에 의해, 임의의 divisor $$D$$에 대해 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$가 성립한다. $$D = 0$$을 대입하면 $$\ell(0) - \ell(K_C) = 1 - g$$이고, $$\ell(0) = 1$$, $$\ell(K_C) = h^0(C, \omega_C) = g$$이므로 자동으로 성립한다. $$D = K_C$$를 대입하면 $$\ell(K_C) - \ell(0) = \deg K_C + 1 - g$$, 즉 $$g - 1 = \deg K_C + 1 - g$$로부터 $$\deg K_C = 2g - 2$$를 얻는다.
+
+</details>
+
+### Genus에 따른 분류
+
+Canonical divisor의 degree는 curve의 genus에 따라 본질적으로 다른 거동을 보인다. $$g = 0$$, 즉 $$C \cong \mathbb{P}^1$$의 경우, $$\deg K_C = -2 < 0$$이므로 $$K_C$$는 ample이 아니다. 사실 $$K_{\mathbb{P}^1} = -2P$$이므로 $$K_C$$는 negative degree를 갖는다. $$g = 1$$, 즉 *elliptic curve*의 경우를 살펴보기 전에, 이 용어를 정의하자. Genus 1인 smooth projective curve를 *elliptic curve<sub>타원곡선</sub>*라 부른다. (엄밀하게는 하나의 기준점이 선택된 genus 1 curve를 elliptic curve라 하지만, 여기서는 이 구분을 중요하게 다루지 않는다.) 이 경우 $$\deg K_C = 0$$이며 실제로 $$K_C \sim 0$$이므로 $$\omega_C \cong \mathcal{O}_C$$가 trivial하다. 따라서 $$K_C$$ 역시 ample이 아니다. $$g \ge 2$$의 경우, $$\deg K_C = 2g - 2 > 0$$이다. Curve에서 $$\deg \mathcal{L} > 0$$인 line bundle $$\mathcal{L}$$은 항상 ample이다. Riemann-Roch theorem에 의해 $$\dim H^0(C, \mathcal{L}^{\otimes m}) = m \cdot \deg \mathcal{L} - g + 1$$ ($$m$$가 충분히 클 때)이며, 이는 충분히 큰 $$m$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample section들을 충분히 많이 가짐을 의미하므로 ([§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)), $$K_C$$는 ample이다.
+
+### Hyperelliptic Curve에서의 Canonical Bundle
+
+Genus $$g \ge 2$$인 curve 중 $$\mathbb{P}^1$$로의 degree 2 covering이 존재하는 것을 *hyperelliptic curve<sub>초타원곡선</sub>*라 부른다. 구체적으로, $$C$$는 $$y^2 = f(\x)$$ ($$f$$는 서로 다른 근을 갖는 degree $$2g + 1$$ 또는 $$2g + 2$$ 다항식)에 의해 주어진 affine curve의 smooth completion으로 나타낼 수 있다. 주의할 점은, genus 0인 $$\mathbb{P}^1$$과 genus 1인 elliptic curve 역시 $$\mathbb{P}^1$$에 대한 degree 2 covering을 갖지만, 이들은 관례적으로 hyperelliptic curve에서 제외한다는 것이다.
+
+이러한 $$C$$에서 canonical bundle $$K_C$$의 complete linear system $$\lvert K_C\rvert$$가 정의하는 morphism $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$의 거동을 살펴보자. $$\deg K_C = 2g - 2$$이고 $$h^0(K_C) = g$$이므로, $$\varphi_{K_C}$$의 공역은 $$\mathbb{P}^{g-1}$$이다. 그러나 실제로 $$\varphi_{K_C}$$는 본래의 hyperelliptic double cover $$C \rightarrow \mathbb{P}^1$$로 분해되며, 2:1 covering map이 되므로 closed embedding이 아니다. 즉, $$\varphi_{K_C}$$의 image는 $$\mathbb{P}^{g-1}$$ 안의 $$\mathbb{P}^1$$로, Veronese embedding $$\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$$의 image에 들어간다. 이에 대한 증명은 [Har, IV.5.2]를 참조한다.
+
+따라서 $$K_C$$는 ample이지만 very ample이 아닌 line bundle의 구체적인 예시를 제공한다. 이는 [§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)에서 언급되었던 "ample but not very ample" 현상의 실현이다. Curve에서 $$\mathcal{L}$$이 very ample이기 위한 충분조건이 $$\deg \mathcal{L} \ge 2g + 1$$임이 알려져 있으며 ([Har, IV.3.2]), $$\deg K_C = 2g - 2 < 2g + 1$$이므로 이 조건을 만족하지 못함도 확인할 수 있다. 대신 $$K_C^{\otimes 2}$$의 degree는 $$4g - 4 \ge 2g + 1$$ (since $$g \ge 2$$)이므로, $$K_C^{\otimes 2}$$는 very ample이다. 이는 ample의 정의—어떤 거듭제곱이 very ample이면 ample—와 완벽하게 부합한다.
+
+이와 대조적으로, $$g \ge 3$$인 non-hyperelliptic curve에서는 canonical map $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$가 closed embedding이 되어, $$K_C$$ 자체가 very ample이다 ([Har, IV.5.4]).
+
 
 ---
 
