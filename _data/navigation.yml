@@ -34,16 +34,14 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/linear_systems
       - title: "표준선다발"
         url: ko/math/algebraic_geometry/canonical_bundle
-      - title: "리만-로흐 정리"
-        url: ko/math/algebraic_geometry/riemann_roch
-      - title: "Sheaf Cohomology"
+      - title: "층 코호몰로지"
         url: ko/math/algebraic_geometry/sheaf_cohomology
-      - title: "Čech Cohomology"
-        url: ko/math/algebraic_geometry/cech_cohomology
       - title: "Cohomology of Line Bundles on P^n"
         url: ko/math/algebraic_geometry/cohomology_of_line_bundles
       - title: "Serre Duality"
         url: ko/math/algebraic_geometry/serre_duality
+      - title: "리만-로흐 정리"
+        url: ko/math/algebraic_geometry/riemann_roch
       - title: "Riemann-Roch for Surfaces"
         url: ko/math/algebraic_geometry/riemann_roch_surfaces
       - title: "Intersection Multiplicity"
