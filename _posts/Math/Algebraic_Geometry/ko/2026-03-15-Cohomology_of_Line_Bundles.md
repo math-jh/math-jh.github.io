@@ -75,7 +75,9 @@ $$0 \to C^\bullet(\mathfrak{U}', \mathcal{O}(d))[-1] \to C^\bullet(\mathfrak{U},
 
 <ins id="rem2">**참고 2**</ins> 위 식에서 $$\mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_{-d-n-1}$$은 degree $$-d-n-1$$의 "negative degree" monomial들의 공간이다. 구체적으로:
 
-$$\mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_k = \operatorname{Span}\{x_0^{a_0} \cdots x_n^{a_n} : a_i < 0,\, \sum a_i = k\}$$
+$$\mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_k = \operatorname{Span}\{x_0^{a_0} \cdots x_n^{a_n} : a_i \leq -1,\, \textstyle\sum a_i = -k - n - 1\}$$
+
+이 정의는 명제 1의 증명에서 수행한 치환 $$b_i = -a_i - 1$$과 일치한다. 원소 $$x_0^{a_0} \cdots x_n^{a_n}$$은 $$a_i \leq -1$$이고 $$\sum a_i = d$$를 만족하는데, 치환 후 $$b_i \geq 0$$이고 $$\sum b_i = -d - n - 1$$이므로 첨자 $$k = -d - n - 1$$은 $$b_i$$들의 합을 나타낸다. 즉 $$\mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_k \cong \mathbb{K}[x_0, \ldots, x_n]_k$$이다.
 
 Bott's formula가 말하는 것을 직관적으로 요약하면 다음과 같다. 먼저 $$H^0$$는 global section의 공간이며, 이는 degree $$d$$의 homogeneous polynomial들이다. 한편 $$H^n$$은 top-degree cohomology로, 오직 $$d \leq -n-1$$일 때만 살아남는다. 이는 $$\mathcal{O}(d)$$가 충분히 negative한 twist일 때만 "top cohomology"에 기여하는 nontrivial class들이 존재한다는 것을 의미한다. 가장 주목할 만한 것은 중간 차수의 cohomology, 즉 $$0 < q < n$$에 대해서는 $$H^q$$가 항상 $$0$$이라는 사실이다. 이는 projective space의 line bundle이 매우 특별한 구조를 가지고 있음을 보여준다.
 
@@ -110,7 +112,7 @@ $$\chi(\mathbb{P}^n, \mathcal{O}(d)) = \binom{n+d}{n}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Bott's formula에 의해 cohomology는 세 가지 경우로 나뉜다. 첫째, $$d \geq 0$$인 경우 $$H^0$$만 non-zero이므로 $$\chi(\mathcal{O}(d)) = \dim H^0(\mathbb{P}^n, \mathcal{O}(d)) = \dim \mathbb{K}[x_0, \ldots, x_n]_d = \binom{n+d}{n}$$이다. 둘째, $$-n \leq d \leq -1$$인 경우 모든 cohomology가 사라지므로 $$\chi(\mathcal{O}(d)) = 0$$이고, 이항계수의 일반화에 의해 $$\binom{n+d}{n}$$ 역시 $$0 \leq d+n \leq n-1$$일 때 $$0$$이므로 일치한다. 셋째, $$d \leq -n-1$$인 경우 $$H^n$$만 non-zero이므로 $$\chi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_{-d-n-1}$$이다. 치환 $$a_i' = -a_i - 1$$을 적용하면 $$a_i \leq -1$$이므로 $$a_i' = -a_i - 1 \geq 0$$이 되고, $$\sum a_i' = \sum(-a_i - 1) = -\sum a_i - (n+1) = d + n + 1 - (n+1) = d$$로 변환된다. 따라서 $$\dim \mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_{-d-n-1}$$은 $$n+1$$개의 비음수 정수 $$(a_0', \ldots, a_n')$$ 중 합이 $$d$$인 것의 개수이므로 $$\binom{n+d}{n}$$이다. 결과적으로 $$\chi(\mathcal{O}(d)) = (-1)^n \binom{n+d}{n}$$이다. 한편 $$d \leq -n-1$$이면 $$n + d \leq -1$$이고, 일반화된 이항계수의 성질 $$(-1)^n \binom{n+d}{n} = \binom{n+d}{n}$$에 의해 (음수 위에서의 이항계수는 교대부호를 가지므로 $$(-1)^n$$과 정확히 상쇄됨) $$\chi(\mathcal{O}(d)) = \binom{n+d}{n}$$이 성립한다.
+Bott's formula에 의해 cohomology는 세 가지 경우로 나뉜다. 첫째, $$d \geq 0$$인 경우 $$H^0$$만 non-zero이므로 $$\chi(\mathcal{O}(d)) = \dim H^0(\mathbb{P}^n, \mathcal{O}(d)) = \dim \mathbb{K}[x_0, \ldots, x_n]_d = \binom{n+d}{n}$$이다. 둘째, $$-n \leq d \leq -1$$인 경우 모든 cohomology가 사라지므로 $$\chi(\mathcal{O}(d)) = 0$$이고, 이항계수의 일반화에 의해 $$\binom{n+d}{n}$$ 역시 $$0 \leq d+n \leq n-1$$일 때 $$0$$이므로 일치한다. 셋째, $$d \leq -n-1$$인 경우 $$H^n$$만 non-zero이므로 $$\chi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_{-d-n-1}$$이다. 치환 $$a_i' = -a_i - 1$$을 적용하면 $$a_i \leq -1$$이므로 $$a_i' = -a_i - 1 \geq 0$$이 되고, $$\sum a_i' = \sum(-a_i - 1) = -\sum a_i - (n+1) = -d - (n+1)$$로 변환된다. 따라서 $$\dim \mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_{-d-n-1}$$은 $$n+1$$개의 비음수 정수 $$(a_0', \ldots, a_n')$$ 중 합이 $$-d - n - 1$$인 것의 개수, 즉 $$\binom{-d-1}{n}$$이다. 결과적으로 $$\chi(\mathcal{O}(d)) = (-1)^n \binom{-d-1}{n}$$이다. 일반화된 이항계수의 항등식 $$(-1)^n\binom{-d-1}{n} = \binom{n+d}{n}$$에 의해 $$\chi(\mathcal{O}(d)) = \binom{n+d}{n}$$이 성립한다.
 
 </details>
 
