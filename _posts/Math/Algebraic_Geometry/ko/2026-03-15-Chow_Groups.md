@@ -29,7 +29,7 @@ Chow group은 다양체를 부분다양체들의 "형식합"으로 이해하게 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 다양체<sub>variety</sub> $$X$$의 **대수적 $$k$$-순환<sub>algebraic $$k$$-cycle</sub>**은 $$X$$의 $$k$$차원 닫힌 기약 부분다양체<sub>$$k$$-dimensional closed irreducible subvariety</sub>들의 형식합이다:
+<ins id="def1">**정의 1**</ins> 다양체<sub>variety</sub> $$X$$의 *대수적 $$k$$-순환<sub>algebraic $$k$$-cycle</sub>*은 $$X$$의 $$k$$차원 닫힌 기약 부분다양체<sub>$$k$$-dimensional closed irreducible subvariety</sub>들의 형식합이다:
 
 $$Z = \sum_{i} n_i V_i$$
 
@@ -41,7 +41,7 @@ $$k$$-순환들의 자유가환군<sub>free abelian group</sub>을 $$Z_k(X)$$로
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> **여차원 $$k$$ 순환<sub>codimension $$k$$ cycle</sub>**은 $$(n-k)$$-순환과 같다 (여기서 $$n = \dim X$$). 이를 $$Z^k(X) = Z_{n-k}(X)$$로 표기한다.
+<ins id="def2">**정의 2**</ins> *여차원 $$k$$ 순환<sub>codimension $$k$$ cycle</sub>*은 $$(n-k)$$-순환과 같다 (여기서 $$n = \dim X$$). 이를 $$Z^k(X) = Z_{n-k}(X)$$로 표기한다.
 
 </div>
 
@@ -57,7 +57,7 @@ $$k$$-순환들의 자유가환군<sub>free abelian group</sub>을 $$Z_k(X)$$로
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 다양체 $$X$$의 $$(k+1)$$차원 닫힌 기약 부분다양체 $$Y \subset X$$ 위의 유리함수 $$f \in \mathbb{K}(Y)^\ast$$에 대해 **주순환<sub>principal cycle</sub>** $$\operatorname{div}(f) \in Z_k(X)$$를 다음과 같이 정의한다:
+<ins id="def4">**정의 4**</ins> 다양체 $$X$$의 $$(k+1)$$차원 닫힌 기약 부분다양체 $$Y \subset X$$ 위의 유리함수 $$f \in \mathbb{K}(Y)^\ast$$에 대해 *주순환<sub>principal cycle</sub>* $$\operatorname{div}(f) \in Z_k(X)$$를 다음과 같이 정의한다:
 
 $$\operatorname{div}(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
 
@@ -67,7 +67,7 @@ $$\operatorname{div}(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 두 $$k$$-순환 $$Z_1, Z_2$$가 **유리 동치<sub>rationally equivalent</sub>**라는 것은, $$X$$의 $$(k+1)$$차원 닫힌 기약 부분다양체 $$Y_j$$와 그 위의 유리함수 $$f_j \in \mathbb{K}(Y_j)^\ast$$들이 존재하여
+<ins id="def5">**정의 5**</ins> 두 $$k$$-순환 $$Z_1, Z_2$$가 *유리 동치<sub>rationally equivalent</sub>*라는 것은, $$X$$의 $$(k+1)$$차원 닫힌 기약 부분다양체 $$Y_j$$와 그 위의 유리함수 $$f_j \in \mathbb{K}(Y_j)^\ast$$들이 존재하여
 
 $$Z_1 - Z_2 = \sum_j \operatorname{div}(f_j)$$
 
@@ -91,7 +91,7 @@ $$Z_1 - Z_3 = (Z_1 - Z_2) + (Z_2 - Z_3) = \sum_i \operatorname{div}(f_i) + \sum_
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> **Chow group<sub>Chow 군</sub>** $$\operatorname{CH}_k(X)$$를 $$k$$-순환<sub>$$k$$-cycle</sub>들을 유리 동치로 나눈 군으로 정의한다:
+<ins id="def7">**정의 7**</ins> *Chow group<sub>Chow 군</sub>* $$\operatorname{CH}_k(X)$$를 $$k$$-순환<sub>$$k$$-cycle</sub>들을 유리 동치로 나눈 군으로 정의한다:
 
 $$\operatorname{CH}_k(X) = Z_k(X) / \sim_{\text{rat}}$$
 
@@ -123,7 +123,7 @@ $$k$$-차원 linear subspace $$\mathbb{P}^k \subset \mathbb{P}^n$$를 $$\ell_k$$
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> Morphism $$f: X \to Y$$가 **proper<sub>고유 사상</sub>**라는 것은, $$f$$가 separated, finite type, 그리고 universally closed인 것이다. 여기서 **universally closed**란 임의의 base change $$Y' \to Y$$에 대해 유도된 사상 $$f_{Y'}: X \times_Y Y' \to Y'$$가 위상공간으로서 닫힌 사상<sub>closed map</sub>이라는 뜻이다. 기하적으로 proper morphism은 점들이 "무한대로 도피"하는 것을 허용하지 않는다: 닫힌집합의 상은 항상 닫힌집합이며, 이 성질은 base change 후에도 보존된다. Projective morphism은 항상 proper이다.
+<ins id="def11">**정의 11**</ins> Morphism $$f: X \to Y$$가 *proper<sub>고유 사상</sub>*라는 것은, $$f$$가 separated, finite type, 그리고 universally closed인 것이다. 여기서 *universally closed*란 임의의 base change $$Y' \to Y$$에 대해 유도된 사상 $$f_{Y'}: X \times_Y Y' \to Y'$$가 위상공간으로서 닫힌 사상<sub>closed map</sub>이라는 뜻이다. 기하적으로 proper morphism은 점들이 "무한대로 도피"하는 것을 허용하지 않는다: 닫힌집합의 상은 항상 닫힌집합이며, 이 성질은 base change 후에도 보존된다. Projective morphism은 항상 proper이다.
 
 </div>
 
@@ -154,7 +154,7 @@ $$f_\ast[V] = \begin{cases}
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**정의 14**</ins> Morphism $$f: X \to Y$$가 **flat<sub>평탄 사상</sub>**이라는 것은, 임의의 점 $$x \in X$$에 대해 국소환 $$\mathcal{O}_{X,x}$$가 $$\mathcal{O}_{Y,f(x)}$$-module로써 flat인 것이다. 즉, 임의의 $$\mathcal{O}_{Y,f(x)}$$-module들의 단사 사상 $$M \hookrightarrow N$$에 대해 $$M \otimes_{\mathcal{O}_{Y,f(x)}} \mathcal{O}_{X,x} \to N \otimes_{\mathcal{O}_{Y,f(x)}} \mathcal{O}_{X,x}$$도 단사 사상이다. 직관적으로, fiber의 차원이 일정하고, parameter를 연속적으로 변화시킬 때 fiber의 구조가 "연속적으로 변한다"는 것을 의미한다.
+<ins id="def14">**정의 14**</ins> Morphism $$f: X \to Y$$가 *flat<sub>평탄 사상</sub>*이라는 것은, 임의의 점 $$x \in X$$에 대해 국소환 $$\mathcal{O}_{X,x}$$가 $$\mathcal{O}_{Y,f(x)}$$-module로써 flat인 것이다. 즉, 임의의 $$\mathcal{O}_{Y,f(x)}$$-module들의 단사 사상 $$M \hookrightarrow N$$에 대해 $$M \otimes_{\mathcal{O}_{Y,f(x)}} \mathcal{O}_{X,x} \to N \otimes_{\mathcal{O}_{Y,f(x)}} \mathcal{O}_{X,x}$$도 단사 사상이다. 직관적으로, fiber의 차원이 일정하고, parameter를 연속적으로 변화시킬 때 fiber의 구조가 "연속적으로 변한다"는 것을 의미한다.
 
 </div>
 

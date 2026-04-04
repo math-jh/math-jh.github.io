@@ -33,7 +33,7 @@ Intersection product를 정의하기 위해서는 먼저 두 subvariety가 "잘"
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Smooth variety $$X$$ 위의 두 subvariety $$V, W \subset X$$가 **properly intersect<sub>적절히 교차</sub>**한다는 것은 모든 irreducible component $$Z$$ of $$V \cap W$$에 대해:
+<ins id="def1">**정의 1**</ins> Smooth variety $$X$$ 위의 두 subvariety $$V, W \subset X$$가 *properly intersect<sub>적절히 교차</sub>*한다는 것은 모든 irreducible component $$Z$$ of $$V \cap W$$에 대해:
 
 $$\operatorname{codim}(Z) = \operatorname{codim}(V) + \operatorname{codim}(W)$$
 
@@ -92,7 +92,7 @@ Intersection product를 정의하는 핵심 아이디어는 주어진 cycle $$Z 
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Intersection product에 의해 $$\operatorname{CH}^\ast(X) = \bigoplus_k \operatorname{CH}^k(X)$$는 **graded ring**이 된다. 이를 **Chow ring**이라 부른다.
+<ins id="def5">**정의 5**</ins> Intersection product에 의해 $$\operatorname{CH}^\ast(X) = \bigoplus_k \operatorname{CH}^k(X)$$는 *graded ring*이 된다. 이를 *Chow ring*이라 부른다.
 
 </div>
 

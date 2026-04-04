@@ -46,7 +46,7 @@ permalink: /ko/misc/index_ko
 | <unselected id="binary_operation">binary operation</unselected> | <selected> 이항연산 &#9745;</selected> | [\[대수적 구조\] §대수적 구조](/ko/math/algebraic_structures/algebraic_structures) |  | 
 | <unselected id="binary_relation">binary relation</unselected> | <selected>이항관계 &#9745;</selected> | [\[집합론\] §이항관계](/ko/math/set_theory/binary_relation) |  |
 | <unselected id="block_matrix">block matrix</unselected> | <selected>블록행렬 &#9745;</selected> | [\[선형대수학\] §행렬](/ko/math/linear_algebra/matrices) |  |
-| <selected id="Bott's_formula">Bott's formula &#9745;</selected> | <unselected>보트 공식</unselected> | [\[대수기하학\] §Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles) |  |
+| <selected id="Bott's_formula">Bott's formula &#9745;</selected> | <unselected>보트 공식</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_geometry/cohomology_of_projective_spaces) |  |
 | <selected id="boundary">boundary &#9745;</selected> | <unselected>경계</unselected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) <br/> [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology) |  |
 | <selected id="bounded">bounded &#9745;</selected> | <unselected>유계</unselected> | [\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)|  |
 | <selected id="bounded_above">bounded above &#9745;</selected> | <unselected>위로 유계</unselected> | [\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)|  |
@@ -111,7 +111,7 @@ permalink: /ko/misc/index_ko
 | 영문 용어 | 한글 용어 | 정의 | 참고 |
 | --- | --- | --- | --- |
 | <unselected id="de_Morgan's_law">de Morgan's law</unselected> | <selected> 드 모르간 법칙 &#9745;</selected> |[\[집합론\] §합집합과 교집합](/ko/math/set_theory/union_and_intersection)
-| <selected id="degree">degree &#9745;</selected> | <unselected>차수</unselected> | [\[대수기하학\] §Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles) | |
+| <selected id="degree">degree &#9745;</selected> | <unselected>차수</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_geometry/cohomology_of_projective_spaces) | |
 | <unselected id="decreasing">decreasing</unselected> | <selected>감소 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
 | <selected id="delta_functor">delta functor &#9745;</selected> | <unselected>델타 함자</unselected> | [\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors) |  |
 | <selected id="dense">dense &#9745;</selected> | <unselected>조밀</unselected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  | 
@@ -161,8 +161,8 @@ permalink: /ko/misc/index_ko
 | <unselected id="Euclidean_space">Euclidean space</unselected> | <selected> 유클리드 공간 &#9745;</selected> |[\[선형대수학\] §벡터공간](/ko/math/linear_algebra/vector_spaces) |  |
 | <selected id="evaluation_map">evaluation map &#9745;</selected> | <unselected>값매김사상</unselected> | [\[선형대수학\] §쌍대공간](/ko/math/linear_algebra/dual_space) |  |
 | <selected id="exact_sequence">exact sequence &#9745;</selected> | <unselected>완전열</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |
-| <selected id="evaluation_map">evaluation map &#9745;</selected> | <unselected>값매김사상</unselected> | [\[대수기하학\] §Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles) | |
-| <selected id="Euler_characteristic">Euler characteristic &#9745;</selected> | <unselected>오일러 지표</unselected> | [\[대수기하학\] §Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles) | |
+| <selected id="evaluation_map">evaluation map &#9745;</selected> | <unselected>값매김사상</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_geometry/cohomology_of_projective_spaces) | |
+| <selected id="Euler_characteristic">Euler characteristic &#9745;</selected> | <unselected>오일러 지표</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_geometry/cohomology_of_projective_spaces) | |
 | <selected id="extension">extension &#9745;</selected> | <unselected>확장</unselected> | [\[집합론\] §함수](/ko/math/set_theory/functions) |  |
 | <selected id="exterior">exterior &#9745;</selected> | <unselected>외부</unselected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  |
 | <selected id="exterior_algebra">exterior algebra &#9745;</selected> | <unselected>대칭대수</unselected> | [\[다중선형대수\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras) |  |
@@ -214,7 +214,7 @@ permalink: /ko/misc/index_ko
 | <selected id="homeomorphism">homeomorphism &#9745;</selected> | <unselected>위상동형사상</unselected> | [\[위상수학\] §연속함수](/ko/math/topology/continuous_functions) |  |
 | <selected id="homomorphism">homomorphism &#9745;</selected> | <unselected>준동형사상</unselected> | [\[대수적 구조\] §대수적 구조](/ko/math/algebraic_structures/algebraic_structures) |  | 
 | <selected id="homology">homology &#9745;</selected> | <unselected>호몰로지</unselected> | [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology) |  |
-| <selected id="hyperplane">hyperplane &#9745;</selected> | <unselected>초평면</unselected> | [\[대수기하학\] §Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles) | |
+| <selected id="hyperplane">hyperplane &#9745;</selected> | <unselected>초평면</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_geometry/cohomology_of_projective_spaces) | |
 
 ## I
 
@@ -269,7 +269,7 @@ permalink: /ko/misc/index_ko
 | 영문 용어 | 한글 용어 | 정의 | 참고 |
 | --- | --- | --- | --- |
 | <selected id="lattice">lattice &#9745;</selected> | <unselected>격자</unselected> | [\[집합론\] §유향집합](/ko/math/set_theory/directed_set)|  |
-| <selected id="Laurent_series">Laurent series &#9745;</selected> | <unselected>로랑 급수</unselected> | [\[대수기하학\] §Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles) | |
+| <selected id="Laurent_series">Laurent series &#9745;</selected> | <unselected>로랑 급수</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_geometry/cohomology_of_projective_spaces) | |
 | <selected id="least">least &#9745;</selected> | <unselected>최소</unselected> | [\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)|  |
 | <unselected id="least_squares_ _method">least squares method</unselected> | <selected> 최소제곱법 &#9745;</selected> | [\[선형대수학\] §최소제곱법](/ko/math/linear_algebra/least_squares_method) |  |
 | <selected id="Lie_bracket">Lie bracket &#9745;</selected> | <unselected>리 브라켓</unselected> | [\[미분다양체\] §리 미분](/ko/math/manifold/Lie_derivative) |  | 
@@ -387,7 +387,7 @@ permalink: /ko/misc/index_ko
 | <selected id="restriction">restriction &#9745;</selected> | <unselected>제한</unselected> | [\[집합론\] §함수](/ko/math/set_theory/functions) (함수)<br/> [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
 | <selected id="refinement">refinement &#9745;</selected> | <unselected>세분화</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology) |  |
 | <selected id="retraction">retraction &#9745;</selected> | <unselected>수축</unselected> | [\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section) | [Section](#section) |
-| <selected id="Regularity">Castelnuovo-Mumford regularity &#9745;</selected> | <unselected>정칙성</unselected> | [\[대수기하학\] §Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles) | |
+| <selected id="Regularity">Castelnuovo-Mumford regularity &#9745;</selected> | <unselected>정칙성</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_geometry/cohomology_of_projective_spaces) | |
 | <selected id="Riemannian_metric">Riemannian metric &#9745;</selected> | <unselected>리만 계량</unselected> | [\[미분기하학\] §리만 계량](/ko/math/differential_geometry/Riemannian_metric) |  | 
 | <selected id="ringed_space">ringed space &#9745;</selected> | <unselected>환 달린 공간</unselected> | [\[대수기하학\] §아핀 스킴](/ko/math/algebraic_geometry/affine_schemes) |  |
 | <unselected id="row_echelon_matrix">row échelon matrix</unselected> | <selected>행사다리꼴행렬 &#9745;</selected> | [\[선형대수학\] §가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination) |  |
