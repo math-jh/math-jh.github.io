@@ -25,7 +25,7 @@ published: false
 
 ## Bott's Formula
 
-Bott's formula를 증명하기 위해 우리는 Čech cohomology를 사용한다. 이는 Leray's theorem ([§Čech Cohomology, ⁋명제 10](/ko/math/algebraic_geometry/cech_cohomology#prop10))에 의해, standard affine cover를 사용하면 Čech cohomology가 sheaf cohomology와 일치하기 때문이다. 따라서 우리의 전략은 각각의 affine open set들과 그 교집합 위에서 $$\mathcal{O}(d)$$의 section들을 명시적으로 기술하고, coboundary map을 직접 계산하는 것이다.
+Bott's formula를 증명하기 위해 우리는 Čech cohomology를 사용한다. 이는 Leray's theorem ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12))에 의해, standard affine cover를 사용하면 Čech cohomology가 sheaf cohomology와 일치하기 때문이다. 따라서 우리의 전략은 각각의 affine open set들과 그 교집합 위에서 $$\mathcal{O}(d)$$의 section들을 명시적으로 기술하고, coboundary map을 직접 계산하는 것이다.
 
 <div class="proposition" markdown="1">
 
@@ -42,7 +42,7 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(d)) = \begin{cases}
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Standard affine cover $$\mathfrak{U} = \{U_0, \ldots, U_n\}$$, $$U_i = \{x_i \neq 0\}$$를 사용한다. 각 intersection $$U_{i_0 \cdots i_p}$$은 affine이고 $$\mathcal{O}(d)$$는 quasi-coherent이므로, Leray's theorem ([§Čech Cohomology, ⁋명제 10](/ko/math/algebraic_geometry/cech_cohomology#prop10))에 의해 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) \cong \check{H}^q(\mathfrak{U}, \mathcal{O}(d))$$이다.
+Standard affine cover $$\mathfrak{U} = \{U_0, \ldots, U_n\}$$, $$U_i = \{x_i \neq 0\}$$를 사용한다. 각 intersection $$U_{i_0 \cdots i_p}$$은 affine이고 $$\mathcal{O}(d)$$는 quasi-coherent이므로, Leray's theorem ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12))에 의해 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) \cong \check{H}^q(\mathfrak{U}, \mathcal{O}(d))$$이다.
 
 $$\mathcal{O}(d)(U_i)$$는 $$x_i^{-d}\mathbb{K}[x_0/x_i, \ldots, \hat{x_i}/x_i, \ldots, x_n/x_i]$$이므로, Čech cochain $$f \in C^p(\mathfrak{U}, \mathcal{O}(d))$$는 각 $$p+1$$-tuple $$(i_0, \ldots, i_p)$$에 대해 $$U_{i_0 \cdots i_p}$$ 위에서 regular한 섹션을 대응시키는 것이다. 교집합 $$U_{i_0 \cdots i_p}$$에서는 $$x_{i_0}, \ldots, x_{i_p}$$가 모두 non-zero이므로, 이 위에서의 섹션은 Laurent polynomial $$f_{i_0 \cdots i_p} = x_0^{a_0} \cdots x_n^{a_n}$$ (여기서 $$\sum a_j = d$$이고, $$j \notin \{i_0, \ldots, i_p\}$$인 $$a_j$$에 대해서는 $$a_j \geq 0$$이어야 한다)들로 생성된다.
 
@@ -137,7 +137,7 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(d)) \cong \check{H}^q(\mathfrak{U}, \mathcal{O}(
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-각 intersection $$U_{i_0 \cdots i_p} = U_{i_0} \cap \cdots \cap U_{i_p}$$는 affine이고, $$\mathcal{O}(d)$$는 quasi-coherent이므로 Leray's theorem ([§Čech Cohomology, ⁋명제 10](/ko/math/algebraic_geometry/cech_cohomology#prop10))에 의해 Čech cohomology가 sheaf cohomology와 일치한다.
+각 intersection $$U_{i_0 \cdots i_p} = U_{i_0} \cap \cdots \cap U_{i_p}$$는 affine이고, $$\mathcal{O}(d)$$는 quasi-coherent이므로 Leray's theorem ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12))에 의해 Čech cohomology가 sheaf cohomology와 일치한다.
 
 </details>
 
