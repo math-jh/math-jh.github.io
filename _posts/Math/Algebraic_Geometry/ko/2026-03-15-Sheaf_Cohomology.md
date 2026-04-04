@@ -35,7 +35,7 @@ $$\Gamma(X, -): \QCoh(X) \to \Vect_\mathbb{K}; \qquad \mathcal{F} \mapsto \mathc
 
 $$0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$$
 
-가 주어졌을 때, 이를 $$\Gamma(X,-)$$를 타고 옮긴 것 또한 short exact sequence가 둬ㅇ야 할 것이다. 그러나 이 functor는 left exact functor밖에 되지 않는다. 즉, 
+가 주어졌을 때, 이를 $$\Gamma(X,-)$$를 타고 옮긴 것 또한 short exact sequence가 되어야 할 것이다. 그러나 이 functor는 left exact functor밖에 되지 않는다. 즉, 
 
 $$0 \to \Gamma(X, \mathcal{F}') \to \Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'')$$
 
@@ -53,15 +53,11 @@ $$0 \to \Gamma(\mathbb{P}^n, \Omega^1_{\mathbb{P}^n}) \to \Gamma(\mathbb{P}^n, \
 
 를 얻는다. 그런데 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16)에서 살펴본 것처럼 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$의 global section은 0뿐이므로
 
-$$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0^{\oplus(n+1)} = 0$$
+$$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0$$
 
-이다. 반면 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}) = \mathbb{K}$$이다. 따라서 $$\Gamma$$를 적용한 결과는
+이지만, $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$$이므로 오른쪽 부분의 surjectivity가 성립할 수 없다. 
 
-$$\cdots \to 0 \to \mathbb{K}$$
-
-가 되어, surjection $$0 \to \mathbb{K}$$는 성립할 수 없다. 즉 $$\Gamma$$는 right exact하지 않으며, 원래 sequence에서 $$\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n}$$이 surjection이었음에도 global section을 취한 후에는 surjectivity가 깨진다.
-
-이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §Derived Functors](/ko/math/homological_algebra/derived_functors)). 구체적으로, $$\QCoh(X)$$에는 충분한 injective object가 존재하는 것을 보일 수 있으므로 임의의 quasi-coherent sheaf $$\mathcal{F}$$는 항상 injective resolution ([\[호몰로지 대수학\] §Resolutions](/ko/math/homological_algebra/resolutions))을 가지고, 이로부터 다음의 
+이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)). 구체적으로, $$\QCoh(X)$$에는 충분한 injective object가 존재하는 것을 보일 수 있으므로 임의의 quasi-coherent sheaf $$\mathcal{F}$$는 항상 injective resolution $$\mathcal{I}^\bullet$$을 가지고, 이로부터 다음의 
 
 $$0 \to \Gamma(X, \mathcal{I}^0) \to \Gamma(X, \mathcal{I}^1) \to \Gamma(X, \mathcal{I}^2) \to \cdots$$
 
