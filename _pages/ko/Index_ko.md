@@ -57,8 +57,8 @@ permalink: /ko/misc/index_ko
 
 | 영문 용어 | 한글 용어 | 정의 | 참고 |
 | --- | --- | --- | --- |
-| <selected id="Čech_complex">Čech complex &#9745;</selected> | <unselected>체흐 복합체</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/cech_cohomology) | |
-| <selected id="Čech_cohomology">Čech cohomology &#9745;</selected> | <unselected>체흐 코호몰로지</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/cech_cohomology) | |
+| <selected id="Čech_complex">Čech complex &#9745;</selected> | <unselected>체흐 복합체</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology) | |
+| <selected id="Čech_cohomology">Čech cohomology &#9745;</selected> | <unselected>체흐 코호몰로지</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology) | |
 | <selected id="canonical_decomposition">canonical decomposition &#9745;</selected> | <unselected>표준분해</unselected> | [\[집합론\] §동치관계의 예시들](/ko/math/set_theory/examples_of_equivalence) (함수) <br/>|  |
 | <selected id="canonical_injection">canonical injection &#9745;</selected> | <unselected>포함관계로부터 유도된 단사함수</unselected> | [\[집합론\] §함수들 사이의 연산](/ko/math/set_theory/operation_of_functions) | [Function](#function), [Injective](#injective) |
 | <selected id="canonical_projection">canonical projection &#9745;</selected> | <unselected>동치관계로부터 유도된 전사함수</unselected> | [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations) |  |
@@ -80,11 +80,11 @@ permalink: /ko/misc/index_ko
 | <selected id="coarser">coarser &#9745;</selected> | <unselected>더 엉성한</unselected> |[\[집합론\] §집합의 합](/ko/math/set_theory/sum_of_sets) (covering)<br/>[\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations) (동치관계)<br/>| [Finer](#finer) |
 | <selected id="cochain_complex">cochain complex &#9745;</selected> | <unselected>사슬복합체</unselected> |  |  |
 | <selected id="cohomology_group">cohomology group &#9745;</selected> | <unselected>코호몰로지 군</unselected> | [\[대수기하학\] §Sheaf Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology) | |
-| <selected id="cocycle">cocycle &#9745;</selected> | <unselected>쌍순환</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/cech_cohomology) | |
+| <selected id="cocycle">cocycle &#9745;</selected> | <unselected>쌍순환</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology) | |
 | <selected id="cofactor_expansion">cofactor expansion &#9745;</selected> | <unselected>여인자전개</unselected> | [\[선형대수학\] §행렬식의 존재성과 유일성](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant) |  |
 | <selected id="cokernel">cokernel &#9745;</selected> | <unselected>여핵</unselected> | [\[범주론\] §극한](/ko/math/category_theory/limits) |  |
 | <selected id="coherent_sheaf">coherent sheaf &#9745;</selected> | <unselected>연접층</unselected> | [\[대수기하학\] §Sheaf Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology) | |
-| <selected id="coboundary_map">coboundary map &#9745;</selected> | <unselected>여경계 사상</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/cech_cohomology) | |
+| <selected id="coboundary_map">coboundary map &#9745;</selected> | <unselected>여경계 사상</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology) | |
 | <selected id="coset">coset &#9745;</selected> | <unselected>잉여류</unselected> | [\[대수적 구조\] §몫군](/ko/math/algebraic_structures/quotient_groups) |  |
 | <selected id="cotangent_bundle">cotangent bundle &#9745;</selected> | <unselected>여접다발</unselected> | [\[미분다양체\] §접다발과 여접다발](/ko/math/manifold/tangent_and_cotangent_bundles) |
 | <selected id="cotangent_space">cotangent space &#9745;</selected> | <unselected>여접공간</unselected> | [\[미분다양체\] §여접공간](/ko/math/manifold/cotangent_space) |
@@ -385,7 +385,7 @@ permalink: /ko/misc/index_ko
 | <selected id="reflexive">reflexive &#9745;</selected> | <unselected>반사적</unselected> | [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations) | [Binary relation](#binary_relation) |
 | <unselected id="relation">relation</unselected> | <selected>관계 &#9745;</selected> | [\[집합론\] §이항관계](/ko/math/set_theory/binary_relation) |
 | <selected id="restriction">restriction &#9745;</selected> | <unselected>제한</unselected> | [\[집합론\] §함수](/ko/math/set_theory/functions) (함수)<br/> [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
-| <selected id="refinement">refinement &#9745;</selected> | <unselected>세분화</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/cech_cohomology) |  |
+| <selected id="refinement">refinement &#9745;</selected> | <unselected>세분화</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology) |  |
 | <selected id="retraction">retraction &#9745;</selected> | <unselected>수축</unselected> | [\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section) | [Section](#section) |
 | <selected id="Regularity">Castelnuovo-Mumford regularity &#9745;</selected> | <unselected>정칙성</unselected> | [\[대수기하학\] §Cohomology of Line Bundles](/ko/math/algebraic_geometry/cohomology_of_line_bundles) | |
 | <selected id="Riemannian_metric">Riemannian metric &#9745;</selected> | <unselected>리만 계량</unselected> | [\[미분기하학\] §리만 계량](/ko/math/differential_geometry/Riemannian_metric) |  | 
