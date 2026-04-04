@@ -13,9 +13,11 @@ header:
 
 date: 2026-03-15
 last_modified_at: 2026-04-02
-weight: 14
+weight: 13
 published: false
 ---
+
+이 글의 내용은 [§Sheaf Cohomology](/ko/math/algebraic_geometry/sheaf_cohomology)에 통합되었습니다.
 
 ## 도입
 
