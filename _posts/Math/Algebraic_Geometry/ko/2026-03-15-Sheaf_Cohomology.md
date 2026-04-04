@@ -20,31 +20,31 @@ weight: 12
 
 ## Derived Functor로서의 정의
 
-우리가 sheaf에서 실제로 관심 있는 정보는 global section이다. 그런데 global section만 볼 거면 애초에 sheaf가 필요 없다 — 임의의 presheaf도 global section을 갖는다. Sheaf가 진가를 발휘하는 순간은, global section functor $\Gamma$가 sheaf의 short exact sequence에 어떻게 반응하는지를 살펴볼 때이다.
+우리가 sheaf에서 실제로 관심 있는 정보는 global section이다. 그런데 global section만 볼 거면 애초에 sheaf가 필요 없다 — 임의의 presheaf도 global section을 갖는다. Sheaf가 진가를 발휘하는 순간은, global section functor $$\Gamma$$가 sheaf의 short exact sequence에 어떻게 반응하는지를 살펴볼 때이다.
 
-구체적으로, variety $X$ 위의 quasi-coherent sheaf들의 category $\QCoh(X)$에서 $\mathbb{K}$-vector space들의 category로의 global section functor
+구체적으로, variety $$X$$ 위의 quasi-coherent sheaf들의 category $$\QCoh(X)$$에서 $$\mathbb{K}$$-vector space들의 category로의 global section functor
 
-$$\Gamma(X, -): \QCoh(X) \to \mathrm{Vect}_\mathbb{K}, \qquad \mathcal{F} \mapsto \mathcal{F}(X)$$
+$$\Gamma(X, -): \QCoh(X) \to \Vect_\mathbb{K}, \qquad \mathcal{F} \mapsto \mathcal{F}(X)$$
 
-를 생각하자. ([§선다발과 벡터다발](/ko/math/algebraic_geometry/line_bundles))에서 다룬 line bundle map들의 kernel, cokernel 등을 통해 $\QCoh(X)$가 abelian category임을 이미 확인하였다. 이 functor는 *left exact*이다. 즉 sheaf의 short exact sequence $0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$에 $\Gamma$를 적용하면
+를 생각하자. ([§선다발과 벡터다발](/ko/math/algebraic_geometry/line_bundles))에서 다룬 line bundle map들의 kernel, cokernel 등을 통해 $$\QCoh(X)$$가 abelian category임을 이미 확인하였다. 이 functor는 *left exact*이다. 즉 sheaf의 short exact sequence $$0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$$에 $$\Gamma$$를 적용하면
 
 $$0 \to \Gamma(X, \mathcal{F}') \to \Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'')$$
 
-는 exact이다. 이것이 성립하는 이유는, 각각의 exactness 조건이 점 $x \in X$에서의 exactness로부터 국소적으로 확인되기 때문이다. 예를 들어 $\Gamma(X, \mathcal{F}') \to \Gamma(X, \mathcal{F})$이 injective인 것은 $\mathcal{F}' \to \mathcal{F}$이 각 점에서 injective이므로 global section에서도 injective인 것으로부터 자명하다.
+는 exact이다. 이것이 성립하는 이유는, 각각의 exactness 조건이 점 $$x \in X$$에서의 exactness로부터 국소적으로 확인되기 때문이다. 예를 들어 $$\Gamma(X, \mathcal{F}') \to \Gamma(X, \mathcal{F})$$이 injective인 것은 $$\mathcal{F}' \to \mathcal{F}$$이 각 점에서 injective이므로 global section에서도 injective인 것으로부터 자명하다.
 
-그러나 우변의 surjection $\Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'') \to 0$은 일반적으로 성립하지 않는다. ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 우리는 $\mathcal{O}_{\mathbb{P}^n}(-1)$의 global section이 $0$뿐임을 보았는데, 이는 surjection $\mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n}(1)$을 생각하면 $\Gamma$를 적용한 후 surjectivity가 깨지는 구체적인 예시가 된다. 즉 $\Gamma$는 right exact하지 않으며, 여기서 정보가 손실된다.
+그러나 우변의 surjection $$\Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'') \to 0$$은 일반적으로 성립하지 않는다. ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 우리는 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$의 global section이 $$0$$뿐임을 보았는데, 이는 surjection $$\mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n}(1)$$을 생각하면 $$\Gamma$$를 적용한 후 surjectivity가 깨지는 구체적인 예시가 된다. 즉 $$\Gamma$$는 right exact하지 않으며, 여기서 정보가 손실된다.
 
 이 손실을 정확히 측정하려면 어떻게 해야 할까? Homological algebra에서 우리는 left exact functor의 정보 손실을 측정하기 위해 *right derived functor*를 구성하였다 ([\[동대수학\] §Derived Functors](/ko/math/homological_algebra/derived_functors)). 이것이 바로 sheaf cohomology이다 — sheaf cohomology는 global section functor의 right derived functor이다.
 
-구체적으로, $\QCoh(X)$에는 충분한 injective object가 존재하므로 임의의 quasi-coherent sheaf $\mathcal{F}$는 항상 injective resolution ([\[동대수학\] §Resolutions](/ko/math/homological_algebra/resolutions))
+구체적으로, $$\QCoh(X)$$에는 충분한 injective object가 존재하므로 임의의 quasi-coherent sheaf $$\mathcal{F}$$는 항상 injective resolution ([\[동대수학\] §Resolutions](/ko/math/homological_algebra/resolutions))
 
 $$0 \to \mathcal{F} \to \mathcal{I}^0 \to \mathcal{I}^1 \to \mathcal{I}^2 \to \cdots$$
 
-을 갖는다. 여기서 각 $\mathcal{I}^i$는 injective quasi-coherent sheaf이다. 이제 $\Gamma$를 injective resolution에 적용하면 복합체
+을 갖는다. 여기서 각 $$\mathcal{I}^i$$는 injective quasi-coherent sheaf이다. 이제 $$\Gamma$$를 injective resolution에 적용하면 복합체
 
 $$0 \to \Gamma(X, \mathcal{I}^0) \to \Gamma(X, \mathcal{I}^1) \to \Gamma(X, \mathcal{I}^2) \to \cdots$$
 
-를 얻는다. $\Gamma$가 left exact이므로 $H^0(\Gamma(X, \mathcal{I}^\bullet)) = \ker(\Gamma(X, \mathcal{I}^0) \to \Gamma(X, \mathcal{I}^1))$은 원래의 $\Gamma(X, \mathcal{F})$와 동형이다. 일반적으로 이 복합체의 cohomology가 바로 sheaf cohomology를 정의한다.
+를 얻는다. $$\Gamma$$가 left exact이므로 $$H^0(\Gamma(X, \mathcal{I}^\bullet)) = \ker(\Gamma(X, \mathcal{I}^0) \to \Gamma(X, \mathcal{I}^1))$$은 원래의 $$\Gamma(X, \mathcal{F})$$와 동형이다. 일반적으로 이 복합체의 cohomology가 바로 sheaf cohomology를 정의한다.
 
 <div class="definition" markdown="1">
 
