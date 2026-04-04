@@ -137,7 +137,7 @@ $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 
 </div>
 
-우리는 canonical bundle $$\omega_X$$의 global section $$s\in H^0(X, \omega_X)$$을 $$X$$ 위의 *regular $$n$$-form*이라 부른다. 이들은 만일 $$\omega_X$$의 trivializing open set $$U$$를 잡고, 이를 [예시 4](#ex4)과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $$f$$에 대하여 $$fd\x_1 \wedge \cdots \wedge d\x_n$$의 꼴로 나타나는 $$n$$-form들이다. 
+우리는 canonical bundle $$\omega_X$$의 global section $$s\in \Gamma(X, \omega_X)$$을 $$X$$ 위의 *regular $$n$$-form*이라 부른다. 이들은 만일 $$\omega_X$$의 trivializing open set $$U$$를 잡고, 이를 [예시 4](#ex4)과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $$f$$에 대하여 $$fd\x_1 \wedge \cdots \wedge d\x_n$$의 꼴로 나타나는 $$n$$-form들이다. 
 
 한편 우리는 line bundle과 divisor class의 대응으로부터 다음을 정의할 수 있다.
 
