@@ -28,24 +28,24 @@ weight: 10
 
 </div>
 
-그렇다면 우리의 목적은 divisor $$D$$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $$D$$가 정의하는 line bundle $$\mathcal{L}=\mathcal{O}_X(D)$$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_geometry/line_bundles#def17)) 우리는 $$\mathcal{L}$$의 각각의 nonzero global section $$s\in H^0(X, \mathcal{L})$$는 pole이 없으므로 effective divisor $$\divisor(s)$$를 정의하며, 이는 원래의 $$D$$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $$D$$와 linearly equivalent하다. 즉 $$D$$와 linearly equivalent한 effective divisor를 찾기 위해선 $$\mathcal{O}_X(D)$$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $$\divisor(s)$$는 $$s$$ 자체가 아니라 $$s$$의 nonzero multiple에 의존한다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $$H^0(X, \mathcal{L})$$ 자체가 아니라 그 projectivization이다. 
+그렇다면 우리의 목적은 divisor $$D$$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $$D$$가 정의하는 line bundle $$\mathcal{L}=\mathcal{O}_X(D)$$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_geometry/line_bundles#def17)) 우리는 $$\mathcal{L}$$의 각각의 nonzero global section $$s\in \Gamma(X, \mathcal{L})$$는 pole이 없으므로 effective divisor $$\divisor(s)$$를 정의하며, 이는 원래의 $$D$$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $$D$$와 linearly equivalent하다. 즉 $$D$$와 linearly equivalent한 effective divisor를 찾기 위해선 $$\mathcal{O}_X(D)$$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $$\divisor(s)$$는 $$s$$ 자체가 아니라 $$s$$의 nonzero multiple에 의존한다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $$\Gamma(X, \mathcal{L})$$ 자체가 아니라 그 projectivization이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> Variety $$X$$ 위의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}$$의 *complete linear system*은 $$\mathcal{L}$$의 global section space $$H^0(X, \mathcal{L})$$의 projectivization
+<ins id="def2">**정의 2**</ins> Variety $$X$$ 위의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}$$의 *complete linear system*은 $$\mathcal{L}$$의 global section space $$\Gamma(X, \mathcal{L})$$의 projectivization
 
-$$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$
+$$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$
 
-이다. $$\mathcal{L}$$에 대한 *linear system*은 $$\lvert \mathcal{L} \rvert$$의 nonempty projective subspace이다. 즉, 부분벡터공간 $$V \subseteq H^0(X, \mathcal{L})$$에 대해 $$\mathbb{P}(V) \subseteq \lvert \mathcal{L} \rvert$$의 꼴이다.
+이다. $$\mathcal{L}$$에 대한 *linear system*은 $$\lvert \mathcal{L} \rvert$$의 nonempty projective subspace이다. 즉, 부분벡터공간 $$V \subseteq \Gamma(X, \mathcal{L})$$에 대해 $$\mathbb{P}(V) \subseteq \lvert \mathcal{L} \rvert$$의 꼴이다.
 
 </div>
 
 
 ## Projective space의 linear system
 
-앞서 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_geometry/line_bundles#ex12) 이후의 계산에 의해 $$H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$$가 차수 $$d$$의 동차다항식들의 공간 $$\mathbb{K}[\x_0, \ldots, \x_n]_d$$와 동형임을 보았다. 이 공간의 각 원소들은 $$\mathbb{P}^n$$의 degree $$d$$ hypersurface를 정의하므로, 우리는 $$\mathcal{O}_{\mathbb{P}^n}(d)$$의 complete linear system
+앞서 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_geometry/line_bundles#ex12) 이후의 계산에 의해 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$$가 차수 $$d$$의 동차다항식들의 공간 $$\mathbb{K}[\x_0, \ldots, \x_n]_d$$와 동형임을 보았다. 이 공간의 각 원소들은 $$\mathbb{P}^n$$의 degree $$d$$ hypersurface를 정의하므로, 우리는 $$\mathcal{O}_{\mathbb{P}^n}(d)$$의 complete linear system
 
-$$\lvert \mathcal{O}_{\mathbb{P}^n}(d)\rvert=\mathbb{P}(H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)))\cong \mathbb{P}(\mathbb{K}[\x_0,\ldots, \x_n]_d)\cong \mathbb{P}^{\binom{n+d}{d} - 1}$$
+$$\lvert \mathcal{O}_{\mathbb{P}^n}(d)\rvert=\mathbb{P}(\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)))\cong \mathbb{P}(\mathbb{K}[\x_0,\ldots, \x_n]_d)\cong \mathbb{P}^{\binom{n+d}{d} - 1}$$
 
 을 기하적으로 degree $$d$$ hypersurface in $$\mathbb{P}^n$$들의 family로 이해할 수 있다. 
 
@@ -81,7 +81,7 @@ $$(\x-2)^2+\y^2=9,\qquad (\x+2)^2+\y^2=9$$
 
 $$F(\x_0,\x_1,\x_2) = a_{00}\x_0^2 + a_{11}\x_1^2 + a_{22}\x_2^2 + a_{01}\x_0\x_1 + a_{02}\x_0\x_2 + a_{12}\x_1\x_2$$
 
-의 꼴이며, 이것이 정확히 $$H^0(X, \mathcal{O}(2))$$가 $$6$$차원 공간인 이유이다. 한편, 위에서 계산한 네 점짜리 집합 $$C_1\cap C_2$$를 지나야 한다는 조건을 추가한다면, 이들 네 점이 각각 하나씩의 제약조건을 걸이 필요한 parameter를 하나씩 지워주므로 이를 나타내기 위한 parameter는 2개임을 안다. 더 구체적으로, 다음 네 개의 조건
+의 꼴이며, 이것이 정확히 $$\Gamma(X, \mathcal{O}(2))$$가 $$6$$차원 공간인 이유이다. 한편, 위에서 계산한 네 점짜리 집합 $$C_1\cap C_2$$를 지나야 한다는 조건을 추가한다면, 이들 네 점이 각각 하나씩의 제약조건을 걸이 필요한 parameter를 하나씩 지워주므로 이를 나타내기 위한 parameter는 2개임을 안다. 더 구체적으로, 다음 네 개의 조건
 
 $$0=F(0,\sqrt{5},1)=5a_{11}+a_{22}+\sqrt{5}a_{12}$$
 
@@ -91,7 +91,7 @@ $$0=F(1,i,0)=a_{00}-a_{11}+ia_{01}$$
 
 $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
-이 $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, $$a_{00}=a_{11}$$을 강제하므로 실질적인 변수는 $$a_{00}$$, $$a_{02}$$의 두 개이다. 즉, 이들 conic의 모임은 $$H^0(X,\mathcal{O}(2))$$의 2차원 부분공간 $$V$$를 이룰 것이며, 이를 projectivize한 것이 $$[\lambda:\mu]$$로 나타나는 $$\mathbb{P}^1$$이 된다. 
+이 $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, $$a_{00}=a_{11}$$을 강제하므로 실질적인 변수는 $$a_{00}$$, $$a_{02}$$의 두 개이다. 즉, 이들 conic의 모임은 $$\Gamma(X,\mathcal{O}(2))$$의 2차원 부분공간 $$V$$를 이룰 것이며, 이를 projectivize한 것이 $$[\lambda:\mu]$$로 나타나는 $$\mathbb{P}^1$$이 된다. 
 
 ![pencil_of_circles](/assets/images/Math/Algebraic_Geometry/Linear_systems-1.png){:style="width:40em" class="invert" .align-center}
 
@@ -99,11 +99,11 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 물론 [정의 2](#def2)는 $$X$$가 projective space이든 quasi-projective variety이든 임의의 variety에 동일하게 적용된다. 그러나 우리가 위의 [예시 3](#ex3)을 이렇게 공들여 계산한 이유는, 임의의 quasi-projective variety $$X\subseteq \mathbb{P}^n$$에 대해서도 $$D$$가 어떠한 $$\mathcal{O}_{\mathbb{P}^n}(d)$$에서 온다면 homogeneous polynomial의 언어를 그대로 사용할 수 있기 때문이다. 즉 이 경우 restriction map
 
-$$H^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \to H^0(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
+$$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \to \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
 
 은 homogeneous polynomial $$F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$$를 $$X$$ 위의 section으로 보내며, 그 kernel은 $$I(X)$$의 차수 $$d$$인 homogeneous part $$I(X)_d$$이다. 따라서
 
-$$H^0(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d$$
+$$\Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d$$
 
 로서 $$\mathbb{P}^n$$에서와 본질적으로 동일한 계산이 가능하다. 특히 $$F - G \in I(X)$$일 때 같은 교차를 정의하므로, parameter space는 $$\mathbb{P}(V/(V \cap I(X)))$$가 된다.
 
@@ -131,7 +131,7 @@ $$\mathbb{P}^2\rightarrow \mathbb{P}^1;\qquad [\x_0,\x_1,\x_2]\mapsto [\x_0^2+\x
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Linear system $$L \subseteq \lvert \mathcal{L} \rvert$$의 *base locus* $$\operatorname{Bs}(L)$$는 $$L$$의 모든 원소가 공유하는 closed subset이다. 구체적으로, $$L = \mathbb{P}(V)$$에서 $$V \subseteq H^0(X, \mathcal{L})$$일 때,
+<ins id="def4">**정의 4**</ins> Linear system $$L \subseteq \lvert \mathcal{L} \rvert$$의 *base locus* $$\operatorname{Bs}(L)$$는 $$L$$의 모든 원소가 공유하는 closed subset이다. 구체적으로, $$L = \mathbb{P}(V)$$에서 $$V \subseteq \Gamma(X, \mathcal{L})$$일 때,
 
 $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\operatorname{div}(s))$$
 
@@ -197,7 +197,7 @@ $$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : 
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Line bundle $$\mathcal{L}$$ (또는 대응하는 linear system $$\lvert \mathcal{L} \rvert$$)이 *very ample*이라는 것은, complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$이 정의하는 regular map $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(H^0(X, \mathcal{L}))$$이 closed embedding인 것이다.
+<ins id="def9">**정의 9**</ins> Line bundle $$\mathcal{L}$$ (또는 대응하는 linear system $$\lvert \mathcal{L} \rvert$$)이 *very ample*이라는 것은, complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$이 정의하는 regular map $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$$이 closed embedding인 것이다.
 
 </div>
 
