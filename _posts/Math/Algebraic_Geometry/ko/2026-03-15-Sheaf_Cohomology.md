@@ -16,35 +16,56 @@ last_modified_at: 2026-04-04
 weight: 12
 ---
 
-([\[위상수학\] §층](/ko/math/topology/sheaves))에서 우리는 sheaf 개념을 정의하였으며, 우리가 지금까지의 논의에서는 line bundle을 주로 사용하였으나 이 또한 그 section sheaf를 생각하면 본질적으로는 sheaf로 생각할 수 있었다. 가령 [§선다발과 벡터다발](/ko/math/algebraic_geometry/line_bundles)에서 우리는 line bundle $$\mathcal{L}$$의 global section space $$H^0(X, \mathcal{L})$$을 정의하였다. 특히 [§선형계](/ko/math/algebraic_geometry/linear_systems)에서는 이 차원이 complete linear system의 dimension, 나아가 variety의 projective embedding을 결정하는 핵심적 역할을 한다는 것을 살펴보았다. 이 글에서는 sheaf의 *cohomology*를 정의하고, 이것이 sheaf로부터 새로운 불변량을 이끌어내는 역할을 한다는 것을 살펴본다.
+우리는 지금까지 기하적 직관을 위해 주로 line bundle의 언어를 사용하였으나, [§표준선다발, ⁋정의 1](/ko/math/algebraic_geometry/canonical_bundle#def1) 직후에 살펴보았듯 line bundle의 section sheaf를 생각하면 이는 근본적으로는 sheaf의 언어로 바꾸어 쓸 수 있다. 이번 글에서 우리는 sheaf cohomology의 개념을 정의한다. 
+
+
+가령 [§선다발과 벡터다발](/ko/math/algebraic_geometry/line_bundles)에서 우리는 line bundle $$\mathcal{L}$$의 global section space $$\Gamma(X, \mathcal{L})$$을 정의하였다. 특히 [는 이 차원이 complete linear system의 dimension, 나아가 variety의 projective embedding을 결정하는 핵심적 역할을 한다는 것을 살펴보았다. 
 
 ## Derived Functor로서의 정의
 
-우리가 sheaf에서 실제로 관심 있는 정보는 global section이다. 그런데 global section만 볼 거면 애초에 sheaf가 필요 없다 — 임의의 presheaf도 global section을 갖는다. Sheaf가 진가를 발휘하는 순간은, global section functor $$\Gamma$$가 sheaf의 short exact sequence에 어떻게 반응하는지를 살펴볼 때이다.
+Sheaf가 위상공간의 모든 정보들을 체계적으로 기술할 수 있는 도구임에 반해, 지금까지의 이야기에서 sheaf가 전면으로 등장한 것은 [§선형계](/ko/math/algebraic_geometry/linear_systems)에서 global section space $$\Gamma(X, \mathcal{L})$$이 complete linear system의 projective embedding을 결정한다는 것을 살펴볼 때 뿐이었다. 
 
-구체적으로, variety $$X$$ 위의 quasi-coherent sheaf들의 category $$\QCoh(X)$$에서 $$\mathbb{K}$$-vector space들의 category로의 global section functor
+그러나 global section만이 우리의 관심사라면, 굳이 sheaf를 생각할 필요 없이 global section functor만 생각했어도 될 것이다. 실제로 global section functor는 sheaf가 갖고 있는 정보를 모두 담고 있는 것이 아니다. 예를 들어 global section functor
 
-$$\Gamma(X, -): \QCoh(X) \to \Vect_\mathbb{K}, \qquad \mathcal{F} \mapsto \mathcal{F}(X)$$
+$$\Gamma(X, -): \QCoh(X) \to \Vect_\mathbb{K}; \qquad \mathcal{F} \mapsto \mathcal{F}(X)$$
 
-를 생각하자. ([§선다발과 벡터다발](/ko/math/algebraic_geometry/line_bundles))에서 다룬 line bundle map들의 kernel, cokernel 등을 통해 $$\QCoh(X)$$가 abelian category임을 이미 확인하였다. 이 functor는 *left exact*이다. 즉 sheaf의 short exact sequence $$0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$$에 $$\Gamma$$를 적용하면
+를 생각하자. 우리가 [§표준선다발, ⁋정의 1](/ko/math/algebraic_geometry/canonical_bundle#def1)에서 quasi-coherent sheaf를 정의할 때의 motivation은 vector bundle들의 category $$\Bun(X)$$가 abelian category가 아니므로, kernel과 cokernel을 추가하는 더 넓은 category를 생각하는 것이었고, 그러한 관점에서 $$\QCoh(X)$$가 abelian category가 된다는 것은 놀라운 일은 아니다. [^1]
+
+만일 $$\Gamma(X,-)$$가 어떠한 정보도 잃어버리지 않는다면, 이 functor는 exact functor여야 할 것이다. 즉, (quasi-coherent) sheaf들의 short exact sequence
+
+$$0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$$
+
+가 주어졌을 때, 이를 $$\Gamma(X,-)$$를 타고 옮긴 것 또한 short exact sequence가 둬ㅇ야 할 것이다. 그러나 이 functor는 left exact functor밖에 되지 않는다. 즉, 
 
 $$0 \to \Gamma(X, \mathcal{F}') \to \Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'')$$
 
-는 exact이다. 이것이 성립하는 이유는, 각각의 exactness 조건이 점 $$x \in X$$에서의 exactness로부터 국소적으로 확인되기 때문이다. 예를 들어 $$\Gamma(X, \mathcal{F}') \to \Gamma(X, \mathcal{F})$$이 injective인 것은 $$\mathcal{F}' \to \mathcal{F}$$이 각 점에서 injective이므로 global section에서도 injective인 것으로부터 자명하다.
+의 exactness는 보장되지만 surjection
 
-그러나 우변의 surjection $$\Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'') \to 0$$은 일반적으로 성립하지 않는다. ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 우리는 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$의 global section이 $$0$$뿐임을 보았는데, 이는 surjection $$\mathcal{O}_{\mathbb{P}^n}^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n}(1)$$을 생각하면 $$\Gamma$$를 적용한 후 surjectivity가 깨지는 구체적인 예시가 된다. 즉 $$\Gamma$$는 right exact하지 않으며, 여기서 정보가 손실된다.
+$$\Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'') \to 0$$
 
-이 손실을 정확히 측정하려면 어떻게 해야 할까? Homological algebra에서 우리는 left exact functor의 정보 손실을 측정하기 위해 *right derived functor*를 구성하였다 ([\[동대수학\] §Derived Functors](/ko/math/homological_algebra/derived_functors)). 이것이 바로 sheaf cohomology이다 — sheaf cohomology는 global section functor의 right derived functor이다.
+은 일반적으로 보장되지 않는다. 구체적인 예시를 위해 Euler sequence
 
-구체적으로, $$\QCoh(X)$$에는 충분한 injective object가 존재하므로 임의의 quasi-coherent sheaf $$\mathcal{F}$$는 항상 injective resolution ([\[동대수학\] §Resolutions](/ko/math/homological_algebra/resolutions))
+$$0 \to \Omega^1_{\mathbb{P}^n} \to \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n} \to 0$$
 
-$$0 \to \mathcal{F} \to \mathcal{I}^0 \to \mathcal{I}^1 \to \mathcal{I}^2 \to \cdots$$
+를 생각하자. ([§표준선다발, ⁋명제 7](/ko/math/algebraic_geometry/canonical_bundle#prop7)) 이 short exact sequence에 $$\Gamma(\mathbb{P}^n, -)$$를 적용하면
 
-을 갖는다. 여기서 각 $$\mathcal{I}^i$$는 injective quasi-coherent sheaf이다. 이제 $$\Gamma$$를 injective resolution에 적용하면 복합체
+$$0 \to \Gamma(\mathbb{P}^n, \Omega^1_{\mathbb{P}^n}) \to \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) \to \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})$$
+
+를 얻는다. 그런데 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16)에서 살펴본 것처럼 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$의 global section은 0뿐이므로
+
+$$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0^{\oplus(n+1)} = 0$$
+
+이다. 반면 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}) = \mathbb{K}$$이다. 따라서 $$\Gamma$$를 적용한 결과는
+
+$$\cdots \to 0 \to \mathbb{K}$$
+
+가 되어, surjection $$0 \to \mathbb{K}$$는 성립할 수 없다. 즉 $$\Gamma$$는 right exact하지 않으며, 원래 sequence에서 $$\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n}$$이 surjection이었음에도 global section을 취한 후에는 surjectivity가 깨진다.
+
+이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §Derived Functors](/ko/math/homological_algebra/derived_functors)). 구체적으로, $$\QCoh(X)$$에는 충분한 injective object가 존재하는 것을 보일 수 있으므로 임의의 quasi-coherent sheaf $$\mathcal{F}$$는 항상 injective resolution ([\[호몰로지 대수학\] §Resolutions](/ko/math/homological_algebra/resolutions))을 가지고, 이로부터 다음의 
 
 $$0 \to \Gamma(X, \mathcal{I}^0) \to \Gamma(X, \mathcal{I}^1) \to \Gamma(X, \mathcal{I}^2) \to \cdots$$
 
-를 얻는다. $$\Gamma$$가 left exact이므로 $$H^0(\Gamma(X, \mathcal{I}^\bullet)) = \ker(\Gamma(X, \mathcal{I}^0) \to \Gamma(X, \mathcal{I}^1))$$은 원래의 $$\Gamma(X, \mathcal{F})$$와 동형이다. 일반적으로 이 복합체의 cohomology가 바로 sheaf cohomology를 정의한다.
+를 통해 다음의 sheaf cohomology를 정의할 수 있다. 
 
 <div class="definition" markdown="1">
 
@@ -386,3 +407,7 @@ $$H^i(X, \mathcal{E})^\ast \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)$$
 **[Har]** R. Hartshorne, *Algebraic geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
 **[God]** R. Godement, *Topologie algébrique et théorie des faisceaux*, Hermann, 1958.
+
+---
+
+[^1]: 더 일반적으로, [[\[위상수학\] §층, §층들의 가환범주](/ko/math/topology/sheaves#층들의-가환범주)에서 살펴보았듯 임의의 위상공간 $$X$$ 위에 정의된 sheaf들의 category $$\Sh(X)$$는 abelian category를 이룬다.
