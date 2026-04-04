@@ -29,7 +29,7 @@ published: false
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Affine space $$\mathbb{A}^n$$의 점 $$p$$에서 두 variety $$V, W$$의 **intersection multiplicity<sub>교차 중복도</sub>** $$i_p(V, W)$$를 다음과 같이 정의한다:
+<ins id="def1">**정의 1**</ins> Affine space $$\mathbb{A}^n$$의 점 $$p$$에서 두 variety $$V, W$$의 *intersection multiplicity<sub>교차 중복도</sub>* $$i_p(V, W)$$를 다음과 같이 정의한다:
 
 $$i_p(V, W) = \dim_{\mathbb{K}} \mathcal{O}_{\mathbb{A}^n, p} / (I(V) + I(W))$$
 
@@ -61,7 +61,7 @@ Intersection multiplicity을 기하학적으로 의미있게 만들기 위해서
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> 두 variety $$V, W \subseteq \mathbb{A}^n$$이 점 $$p \in V \cap W$$에서 **transversely intersect<sub>횡단 교차</sub>**한다는 것은 tangent space의 합이 전체 공간을 채우는 것이다:
+<ins id="def4">**정의 4**</ins> 두 variety $$V, W \subseteq \mathbb{A}^n$$이 점 $$p \in V \cap W$$에서 *transversely intersect<sub>횡단 교차</sub>*한다는 것은 tangent space의 합이 전체 공간을 채우는 것이다:
 
 $$T_p V + T_p W = \mathbb{A}^n$$
 

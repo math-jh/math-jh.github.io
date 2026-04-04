@@ -74,7 +74,7 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(d)) \cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-d-n
 
 $$H^i(\mathbb{P}^n, \mathcal{O}(d)) \cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-d-n-1))^\ast$$
 
-을 얻는다. 오른쪽의 차원은 ([§Cohomology of Line Bundles on projective spaces, ⁋명제 1](/ko/math/algebraic_geometry/cohomology_of_line_bundles#prop1))의 Bott's formula로 계산할 수 있다. $$\square$$
+을 얻는다. 오른쪽의 차원은 ([§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#prop1))의 Bott's formula로 계산할 수 있다. $$\square$$
 
 </div>
 
@@ -112,7 +112,7 @@ $$R f_\ast \mathbf{R}\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G})
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> **Trace map** $$\operatorname{Tr} \colon H^n(X, \omega_X) \to \mathbb{K}$$는 Serre duality의 isomorphism을 실제로 구현하는 핵심 구조이다. 이는 $$H^n(X, \omega_X)$$에서 $$\mathbb{K}$$로의 isomorphism으로, Serre duality가 $$\mathcal{E} = \mathcal{O}_X$$인 경우 $$H^0(X, \omega_X) \cong H^n(X, \mathcal{O}_X)^\ast$$를 얻고, $$\mathcal{E} = \omega_X$$인 경우 $$H^n(X, \omega_X) \cong H^0(X, \mathcal{O}_X)^\ast \cong \mathbb{K}$$를 얻는 것과 양립하여야 한다. 즉 trace map은 $$H^n(X, \omega_X) \cong \mathbb{K}$$라는 사실을 구체적으로 실현하는 것이다.
+<ins id="def8">**정의 8**</ins> *Trace map* $$\operatorname{Tr} \colon H^n(X, \omega_X) \to \mathbb{K}$$는 Serre duality의 isomorphism을 실제로 구현하는 핵심 구조이다. 이는 $$H^n(X, \omega_X)$$에서 $$\mathbb{K}$$로의 isomorphism으로, Serre duality가 $$\mathcal{E} = \mathcal{O}_X$$인 경우 $$H^0(X, \omega_X) \cong H^n(X, \mathcal{O}_X)^\ast$$를 얻고, $$\mathcal{E} = \omega_X$$인 경우 $$H^n(X, \omega_X) \cong H^0(X, \mathcal{O}_X)^\ast \cong \mathbb{K}$$를 얻는 것과 양립하여야 한다. 즉 trace map은 $$H^n(X, \omega_X) \cong \mathbb{K}$$라는 사실을 구체적으로 실현하는 것이다.
 
 직관적으로 trace map은 미분기하학에서 적분에 해당하는 연산이다. $$n$$차원 variety $$X$$ 위에서 $$\omega_X$$는 differential form들의 bundle이므로 ([§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_geometry/line_bundles#ex24)), $$H^n(X, \omega_X)$$는 $$X$$ 전체에 걸쳐 "적분할 수 있는" top-degree form들의 공간이며, trace map은 이 적분을 기저필드 $$\mathbb{K}$$의 원소로 평가하는 것이다. 복소기하학에서 $$X$$가 compact complex manifold이면 trace map은 실제로 적분 $$\eta \mapsto \int_X \eta$$로 주어진다.
 
