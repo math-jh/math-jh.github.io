@@ -181,3 +181,17 @@ $$\cdots\overset{\partial}{\longrightarrow}L_iF(A')\longrightarrow L_iF(A)\longr
 <ins id="prop8">**명제 8**</ins> Enough projective를 갖는 abelian category $$\mathcal{A}$$와, 임의의 right exact functor $$F: \mathcal{A}\rightarrow \mathcal{B}$$를 생각하자. 그럼 derived functor들 $$L_nF$$는 universal $$\delta$$-functor들이다. 
 
 </div>
+
+위에서의 논의와 마찬가지로, 우리는 left exact functor에 대해서도 right derived functor를 정의할 수 있다. 그 정의는 [정의 4](#def4)의 "dual"이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> Left exact functor $$F:\mathcal{A}\rightarrow \mathcal{B}$$가 주어졌다 하고, $$\mathcal{A}$$가 enough injective를 갖난다 하자. 그럼 $$F$$의 *right derived functor<sub>오른쪽 유도함자</sub>*들 $$R^i F$$를 다음의 식
+
+$$(R^iF)(A)=H_i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of $A$}$$
+
+으로 정의한다.
+
+</div>
+
+그럼 이들이 universal cohomological $$\delta$$-functor들이라는 것도 알 수 있다. [정의 4](#def4)와 다르게 위첨자를 쓰는 이유는 이들이 말 그대로 *cohomological* $$\delta$$-functor들로서, 주로 cohomology에 관련된 것들을 다룰 때 나오기 때문이다.
