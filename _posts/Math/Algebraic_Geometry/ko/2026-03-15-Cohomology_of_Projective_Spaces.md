@@ -61,13 +61,13 @@ Coboundary map $$\delta(f_0, f_1) = f_1 - f_0$$에서 $$f_0 \in \mathbb{K}[t]$$,
 
 이 분해는 다음과 같은 짧은 완전열을 제공한다. 우선 $$p$$-cochain group을 $$C^p = C^p_0 \oplus C^p_1$$으로 분해하자. 여기서 $$C^p_0$$는 모든 index가 $$\{0, \ldots, n-1\}$$에 속하는 cochain들로 이루어진 부분군이고, $$C^p_1$$은 적어도 하나의 index가 $$n$$인 cochain들로 이루어진 부분군이다. Coboundary map $$\delta$$는 이 분해를 존중한다. 구체적으로, $$\delta = \delta_0 + \delta_1$$으로 분해할 수 있는데, $$\delta_0$$는 index $$n$$을 포함하지 않는 cochain들 사이의 map이고 (이는 $$\mathbb{P}^{n-1}$$의 Čech 복합체 $$C^\bullet(\mathfrak{U}', \mathcal{O}(d))$$의 differential과 일치한다), $$\delta_1$$은 index $$n$$을 포함하는 cochain들과 연관된 부분이다.
 
-$$C^p_1$$을 더 자세히 기술하면, 이는 index $$n$$이 반드시 포함된 $$(p+1)$$-tuple $$(i_0, \ldots, i_{p-1}, n)$$들에 대응되는 섹션들의 직합이다. 이때 $$p$$-tuple $$(i_0, \ldots, i_{p-1})$$는 $$\{0, \ldots, n\}$$의 원소들이므로, $$C^p_1$$은 사실 $$U_n$$의 standard affine cover $$\{U_0 \cap U_n, \ldots, U_{n-1} \cap U_n\}$$에 대한 Čech 복합체 $$C^{p-1}(\{U_i \cap U_n\}, \mathcal{O}(d)|_{U_n})$$에 해당한다. $$U_n \cong \mathbb{A}^n$$이므로, $$\mathcal{O}(d)|_{U_n}$$은 affine variety 위의 quasi-coherent sheaf이고 따라서 $$H^{>0}(U_n, \mathcal{O}(d)) = 0$$이다.
+$$C^p_1$$을 더 자세히 기술하면, 이는 index $$n$$이 반드시 포함된 $$(p+1)$$-tuple $$(i_0, \ldots, i_{p-1}, n)$$들에 대응되는 섹션들의 직합이다. 이때 $$p$$-tuple $$(i_0, \ldots, i_{p-1})$$는 $$\{0, \ldots, n\}$$의 원소들이므로, $$C^p_1$$은 사실 $$U_n$$의 standard affine cover $$\{U_0 \cap U_n, \ldots, U_{n-1} \cap U_n\}$$에 대한 Čech 복합체 $$C^{p-1}(\{U_i \cap U_n\}, \mathcal{O}(d)\vert_{U_n})$$에 해당한다. $$U_n \cong \mathbb{A}^n$$이므로, $$\mathcal{O}(d)\vert_{U_n}$$은 affine variety 위의 quasi-coherent sheaf이고 따라서 $$H^{>0}(U_n, \mathcal{O}(d)) = 0$$이다.
 
 이로부터 짧은 완전열
 
-$$0 \to C^\bullet(\mathfrak{U}', \mathcal{O}(d))[-1] \to C^\bullet(\mathfrak{U}, \mathcal{O}(d)) \to C^\bullet(\{U_i \cap U_n\}, \mathcal{O}(d)|_{U_n}) \to 0$$
+$$0 \to C^\bullet(\mathfrak{U}', \mathcal{O}(d))[-1] \to C^\bullet(\mathfrak{U}, \mathcal{O}(d)) \to C^\bullet(\{U_i \cap U_n\}, \mathcal{O}(d)\vert_{U_n}) \to 0$$
 
-을 얻는다. 여기서 첫 번째 map은 index $$n$$을 생략하는 inclusion이고, 두 번째 map은 index $$n$$이 포함된 항을 추출하는 surjection이며, $$[-1]$$은 차수를 1만큼 shift하는 것을 의미한다. 이 짧은 완전열에 해당하는 long exact sequence에서 $$C^\bullet(\{U_i \cap U_n\}, \mathcal{O}(d)|_{U_n})$$의 higher cohomology가 모두 사라지므로, $$0 < q < n$$에 대해 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) \cong H^q(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이다. $$q = 0$$의 경우 global section은 $$\mathbb{P}^n$$ 전체에서 regular인 degree $$d$$의 homogeneous polynomial들이므로 $$\mathbb{K}[x_0, \ldots, x_n]_d$$이다. $$q = n$$의 경우, $$\mathbb{P}^n$$의 Čech 복합체에서 $$n$$-cochain들은 모든 $$n+1$$개의 index를 포함하는 항 $$f_{0 1 \cdots n} \in \mathcal{O}(d)(U_{01\cdots n})$$이며, 이는 $$\mathbb{K}[x_0^{\pm 1}, \ldots, x_n^{\pm 1}]$$의 원소로 표현된다. $$H^n$$의 원소들은 coboundary image를 제외한 모든 $$a_i \leq -1$$이고 $$\sum a_i = d$$인 monomial $$x_0^{a_0} \cdots x_n^{a_n}$$들로 주어진다. 치환 $$b_i = -a_i - 1$$을 적용하면 $$b_i \geq 0$$이고 $$\sum b_i = -d - n - 1$$이 되어, $$H^n(\mathbb{P}^n, \mathcal{O}(d)) \cong \mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_{-d-n-1}$$을 얻는다.
+을 얻는다. 여기서 첫 번째 map은 index $$n$$을 생략하는 inclusion이고, 두 번째 map은 index $$n$$이 포함된 항을 추출하는 surjection이며, $$[-1]$$은 차수를 1만큼 shift하는 것을 의미한다. 이 짧은 완전열에 해당하는 long exact sequence에서 $$C^\bullet(\{U_i \cap U_n\}, \mathcal{O}(d)\vert_{U_n})$$의 higher cohomology가 모두 사라지므로, $$0 < q < n$$에 대해 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) \cong H^q(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이다. $$q = 0$$의 경우 global section은 $$\mathbb{P}^n$$ 전체에서 regular인 degree $$d$$의 homogeneous polynomial들이므로 $$\mathbb{K}[x_0, \ldots, x_n]_d$$이다. $$q = n$$의 경우, $$\mathbb{P}^n$$의 Čech 복합체에서 $$n$$-cochain들은 모든 $$n+1$$개의 index를 포함하는 항 $$f_{0 1 \cdots n} \in \mathcal{O}(d)(U_{01\cdots n})$$이며, 이는 $$\mathbb{K}[x_0^{\pm 1}, \ldots, x_n^{\pm 1}]$$의 원소로 표현된다. $$H^n$$의 원소들은 coboundary image를 제외한 모든 $$a_i \leq -1$$이고 $$\sum a_i = d$$인 monomial $$x_0^{a_0} \cdots x_n^{a_n}$$들로 주어진다. 치환 $$b_i = -a_i - 1$$을 적용하면 $$b_i \geq 0$$이고 $$\sum b_i = -d - n - 1$$이 되어, $$H^n(\mathbb{P}^n, \mathcal{O}(d)) \cong \mathbb{K}[x_0^{-1}, \ldots, x_n^{-1}]_{-d-n-1}$$을 얻는다.
 
 </details>
 
@@ -190,35 +190,35 @@ Mumford의 증명 전략은 $$\mathbb{P}^n$$의 차원 $$n$$에 대한 귀납법
 
 핵심은 hyperplane $$H \cong \mathbb{P}^{n-1}$$으로의 restriction을 이용하는 것이다. 일반적인 linear form $$s \in H^0(\mathbb{P}^n, \mathcal{O}(1))$$에 대해 다음 short exact sequence를 얻는다.
 
-$$0 \to \mathcal{F}(k-1) \xrightarrow{\cdot s} \mathcal{F}(k) \to \mathcal{F}(k)|_H \to 0$$
+$$0 \to \mathcal{F}(k-1) \xrightarrow{\cdot s} \mathcal{F}(k) \to \mathcal{F}(k)\vert_H \to 0$$
 
 이 sequence의 cohomology long exact sequence는 다음을 준다.
 
-$$\cdots \to H^i(\mathcal{F}(k-1)) \to H^i(\mathcal{F}(k)) \to H^i(\mathcal{F}(k)|_H) \to H^{i+1}(\mathcal{F}(k-1)) \to \cdots$$
+$$\cdots \to H^i(\mathcal{F}(k-1)) \to H^i(\mathcal{F}(k)) \to H^i(\mathcal{F}(k)\vert_H) \to H^{i+1}(\mathcal{F}(k-1)) \to \cdots$$
 
-**1단계: $$\mathcal{F}$$가 $$(m+1)$$-regular임.** $$\mathcal{F}$$가 $$m$$-regular이므로 $$H^i(\mathcal{F}(m-i)) = 0$$이 $$i > 0$$에 대해 성립한다. 우선 $$\mathcal{F}|_H$$가 $$(m+1)$$-regular임을 보이자. Short exact sequence에서 $$k = m - i + 1$$ ($$i \geq 1$$)을 대입하면
+**1단계: $$\mathcal{F}$$가 $$(m+1)$$-regular임.** $$\mathcal{F}$$가 $$m$$-regular이므로 $$H^i(\mathcal{F}(m-i)) = 0$$이 $$i > 0$$에 대해 성립한다. 우선 $$\mathcal{F}\vert_H$$가 $$(m+1)$$-regular임을 보이자. Short exact sequence에서 $$k = m - i + 1$$ ($$i \geq 1$$)을 대입하면
 
-$$0 \to \mathcal{F}(m-i) \to \mathcal{F}(m-i+1) \to \mathcal{F}(m-i+1)|_H \to 0$$
+$$0 \to \mathcal{F}(m-i) \to \mathcal{F}(m-i+1) \to \mathcal{F}(m-i+1)\vert_H \to 0$$
 
 이고, 이의 long exact sequence에서
 
-$$H^i(\mathcal{F}(m-i)) \to H^i(\mathcal{F}(m-i+1)) \to H^i(\mathcal{F}|_H(m-i+1)) \to H^{i+1}(\mathcal{F}(m-i))$$
+$$H^i(\mathcal{F}(m-i)) \to H^i(\mathcal{F}(m-i+1)) \to H^i(\mathcal{F}\vert_H(m-i+1)) \to H^{i+1}(\mathcal{F}(m-i))$$
 
-이다. $$\mathcal{F}$$의 $$m$$-regularity에 의해 $$H^i(\mathcal{F}(m-i)) = 0$$ ($$i > 0$$)이고 $$H^{i+1}(\mathcal{F}(m-i)) = 0$$ ($$i+1 > 1$$)이므로, $$H^i(\mathcal{F}|_H(m-i+1)) = 0$$을 $$0 < i \leq n-1$$에 대해 얻는다. 이것은 $$\mathcal{F}|_H$$가 $$(m+1)$$-regular임을 의미한다.
+이다. $$\mathcal{F}$$의 $$m$$-regularity에 의해 $$H^i(\mathcal{F}(m-i)) = 0$$ ($$i > 0$$)이고 $$H^{i+1}(\mathcal{F}(m-i)) = 0$$ ($$i+1 > 1$$)이므로, $$H^i(\mathcal{F}\vert_H(m-i+1)) = 0$$을 $$0 < i \leq n-1$$에 대해 얻는다. 이것은 $$\mathcal{F}\vert_H$$가 $$(m+1)$$-regular임을 의미한다.
 
-이제 귀납적 가정을 $$H \cong \mathbb{P}^{n-1}$$에 적용한다. $$\mathcal{F}|_H$$가 $$(m+1)$$-regular이므로, 명제의 결론이 $$\mathbb{P}^{n-1}$$에서 성립한다고 가정하면 $$H^i(\mathcal{F}|_H(m+1-i+j)) = 0$$이 $$j \geq 0$$, $$0 < i \leq n-1$$에 대해 성립한다. 특히 $$j = 0$$일 때 $$H^i(\mathcal{F}(m+1-i)|_H) = 0$$이다.
+이제 귀납적 가정을 $$H \cong \mathbb{P}^{n-1}$$에 적용한다. $$\mathcal{F}\vert_H$$가 $$(m+1)$$-regular이므로, 명제의 결론이 $$\mathbb{P}^{n-1}$$에서 성립한다고 가정하면 $$H^i(\mathcal{F}\vert_H(m+1-i+j)) = 0$$이 $$j \geq 0$$, $$0 < i \leq n-1$$에 대해 성립한다. 특히 $$j = 0$$일 때 $$H^i(\mathcal{F}(m+1-i)\vert_H) = 0$$이다.
 
 다시 short exact sequence에서 $$k = m + 1 - i$$를 대입하면
 
-$$H^i(\mathcal{F}(m+1-i)) \to H^i(\mathcal{F}(m+1-i)|_H) \to H^{i+1}(\mathcal{F}(m-i))$$
+$$H^i(\mathcal{F}(m+1-i)) \to H^i(\mathcal{F}(m+1-i)\vert_H) \to H^{i+1}(\mathcal{F}(m-i))$$
 
-인데, $$H^i(\mathcal{F}(m+1-i)|_H) = 0$$ (위에서 귀납적 가정으로 얻음)이고 $$H^{i+1}(\mathcal{F}(m-i)) = 0$$ ($$m$$-regularity)이므로 $$H^i(\mathcal{F}(m+1-i)) = 0$$이다. 즉 $$\mathcal{F}$$는 $$(m+1)$$-regular이다. 귀납적으로 $$\mathcal{F}$$는 임의의 $$m' \geq m$$에 대해 $$m'$$-regular이며, 이로부터 $$k \geq m - i$$일 때 $$H^i(\mathcal{F}(k)) = 0$$이 성립한다.
+인데, $$H^i(\mathcal{F}(m+1-i)\vert_H) = 0$$ (위에서 귀납적 가정으로 얻음)이고 $$H^{i+1}(\mathcal{F}(m-i)) = 0$$ ($$m$$-regularity)이므로 $$H^i(\mathcal{F}(m+1-i)) = 0$$이다. 즉 $$\mathcal{F}$$는 $$(m+1)$$-regular이다. 귀납적으로 $$\mathcal{F}$$는 임의의 $$m' \geq m$$에 대해 $$m'$$-regular이며, 이로부터 $$k \geq m - i$$일 때 $$H^i(\mathcal{F}(k)) = 0$$이 성립한다.
 
 **2단계: $$\mathcal{F}(m)$$은 globally generated.** Evaluation map $$\epsilon : H^0(\mathcal{F}(m)) \otimes \mathcal{O} \to \mathcal{F}(m)$$을 생각하자. 이 map이 surjective임을 보이기 위해, 임의의 점 $$p \in \mathbb{P}^n$$에서 fiber $$\mathcal{F}(m) \otimes \kappa(p)$$가 $$H^0(\mathcal{F}(m))$$의 상으로 생성됨을 보인다. $$p$$를 지나는 일반적인 hyperplane $$H$$를 택하고, 위의 short exact sequence에서 $$k = m$$을 대입하면
 
-$$0 \to \mathcal{F}(m-1) \to \mathcal{F}(m) \to \mathcal{F}(m)|_H \to 0$$
+$$0 \to \mathcal{F}(m-1) \to \mathcal{F}(m) \to \mathcal{F}(m)\vert_H \to 0$$
 
-이다. 여기서 $$H^1(\mathcal{F}(m-1)) = 0$$ ($$m$$-regularity에서 $$i = 1$$인 경우)이므로 $$H^0(\mathcal{F}(m)) \to H^0(\mathcal{F}(m)|_H)$$가 surjective이다. 귀납적 가정에 의해 $$\mathcal{F}(m)|_H$$는 $$H \cong \mathbb{P}^{n-1}$$ 위에서 globally generated이므로, $$\mathcal{F}(m)|_H$$의 fiber at $$p$$는 $$H^0(\mathcal{F}(m)|_H)$$의 상으로 생성된다. $$H^0(\mathcal{F}(m)) \to H^0(\mathcal{F}(m)|_H)$$가 surjective이므로, $$\mathcal{F}(m)$$의 global section들도 $$p$$에서의 fiber를 생성한다. 따라서 $$\mathcal{F}(m)$$은 globally generated이다.
+이다. 여기서 $$H^1(\mathcal{F}(m-1)) = 0$$ ($$m$$-regularity에서 $$i = 1$$인 경우)이므로 $$H^0(\mathcal{F}(m)) \to H^0(\mathcal{F}(m)\vert_H)$$가 surjective이다. 귀납적 가정에 의해 $$\mathcal{F}(m)\vert_H$$는 $$H \cong \mathbb{P}^{n-1}$$ 위에서 globally generated이므로, $$\mathcal{F}(m)\vert_H$$의 fiber at $$p$$는 $$H^0(\mathcal{F}(m)\vert_H)$$의 상으로 생성된다. $$H^0(\mathcal{F}(m)) \to H^0(\mathcal{F}(m)\vert_H)$$가 surjective이므로, $$\mathcal{F}(m)$$의 global section들도 $$p$$에서의 fiber를 생성한다. 따라서 $$\mathcal{F}(m)$$은 globally generated이다.
 
 </details>
 
