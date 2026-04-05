@@ -44,7 +44,7 @@ $$\x_i^d \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\
 
 인 것을 기억하자. ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_geometry/line_bundles#ex12)) 그럼 Čech cochain $$f \in \check{C}^p(\mathcal{U}, \mathcal{O}(d))$$은 각각의 $$(p+1)$$-tuple $$(i_0, \ldots, i_p)$$에 대해 열린집합 $$U_{i_0}\cap\cdots\cap U_{i_p}$$ 위에서 regular한 section을 대응시키는 것이다. 이 때, 교집합 $$U_{i_0}\cap\cdots\cap U_{i_p}$$ 위에서 section이 regular하기 위해서는 $$0$$이 되지 않는 좌표들, 즉 $$\x_{i_0}, \ldots, \x_{i_p}$$들만 분모로 허용되고, 나머지는 허용되지 않는 monomial들
 
-$$f_{i_0 \cdots i_p} = \x_0^{a_0} \cdots \x_n^{a_n},\qquad \sum_{j=0}^n a_j=d,\quad a_j\geq 0\text{ for $j\not\in \\{i_0, \ldots, i_p\\}$}$$
+$$f_{i_0 \cdots i_p} = \x_0^{a_0} \cdots \x_n^{a_n},\qquad \sum_{j=0}^n a_j=d,\quad a_j\geq 0\text{ for $j\not\in \{i_0, \ldots, i_p\}$}$$
 
 로 생성된다. 
 
@@ -62,9 +62,17 @@ $$0 \longrightarrow \check{C}^0\overset{\delta}{\longrightarrow}\check{C}^1\long
 
 $$\check{C}^0=\mathcal{O}(d)(U_0)\oplus \mathcal{O}(d)(U_1),\qquad \check{C}^1=\mathcal{O}(d)(U_0\cap U_1)$$
 
-이다. $$n = 1$$일 때 Čech 복합체는 $$0 \to \check{C}^0 \xrightarrow{\delta} \check{C}^1 \to 0$$이다. $$U_0$$에서 coordinate $$\t = \x_1/\x_0$$를 사용하면 $$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\t] \cong \mathbb{K}[\t]$$이고, $$U_1$$에서는 $$\t^{-1} = \x_0/\x_1$$이 coordinate이므로 $$\mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\t^{-1}] = \t^{-d} \cdot \x_0^d \cdot \mathbb{K}[\t^{-1}] \cong \t^d \mathbb{K}[\t^{-1}]$$이다. 교집합에서는 $$\mathcal{O}(d)(U_0 \cap U_1) \cong \mathbb{K}[\t, \t^{-1}]$$이다.
+이며, 각각의 section space는
 
-Coboundary map $$\delta(f_0, f_1) = f_1 - f_0$$에서 $$f_0 \in \mathbb{K}[\t]$$, $$f_1 \in \t^d \mathbb{K}[\t^{-1}]$$이다. $$d \geq 0$$이면 $$H^0 = \ker \delta = \mathbb{K}[\t] \cap \t^d\mathbb{K}[\t^{-1}] = \span\{1, \t, \ldots, \t^d\} \cong \mathbb{K}[\x_0, \x_1]_d$$이므로 차원은 $$d+1$$이고 $$H^1 = 0$$이다. $$d \leq -1$$이면 $$\ker \delta = 0$$이므로 $$H^0 = 0$$이고, $$H^1 = \coker \delta$$에서 $$\im \delta$$의 complement는 degree $$-d-1$$ 이상의 negative monomial $$\{\t^{-1}, \ldots, \t^{-d-1}\}$$이므로 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
+$$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\x_0/\x_1], \qquad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]$$
+
+이다. 우선 $$\check{C}^0$$에서의 cohomology를 계산하기 위해 $$\ker\delta$$를 분석하자. 정의에 의해 cochain $$(f_0, f_1) \in \check{C}^0$$이 $$\ker \delta$$에 속한다는 것은 $$f_0 = f_1$$이 $$\mathcal{O}(d)(U_0 \cap U_1)$$에서 성립한다는 뜻이다. 우선 $$U_0$$ 부분을 보면, 임의의 monomial이 $$\mathcal{O}(d)(U_0)$$에 속하기 위해서는 반드시 적당한 $$a\geq 0$$에 대하여 $$\x_0^{d-a}\x_1^a$$ 꼴임을 안다. 비슷하게 어떠한 monomial이 $$\mathcal{O}(d)(U_1)$$에 속하기 위해서는 적당한 $$b\geq 0$$에 대하여 $$\x_0^b\x_1^{d-b}$$의 꼴이어야 한다. 이제 특정 cocycle $$(f_0,f_1)$$이 $$\ker\delta$$에 속하기 위해서는 $$f_0=f_1$$이어야 하고, 
+
+이를 $$\x_0^a \x_1^b$$ monomial로 분석하자.
+
+$$\ker \delta$$: 앞서 본 바와 같이 $$f_0$$의 monomial은 $$\x_0^{d-a}\x_1^a$$ ($$a \geq 0$$), $$f_1$$의 monomial은 $$\x_0^b\x_1^{d-b}$$ ($$b \geq 0$$) 꼴이다. $$f_0 = f_1$$이면 $$d-a = b$$, 즉 $$a+b = d$$이므로 $$d \geq 0$$일 때 basis는 $$\{\x_0^d, \x_0^{d-1}\x_1, \ldots, \x_1^d\}$$이고 $$\dim H^0 = d+1$$이다. $$d \leq -1$$이면 $$a+b = d$$를 만족하는 $$a, b \geq 0$$가 존재하지 않으므로 $$\ker \delta = 0$$이고 $$H^0 = 0$$이다.
+
+$$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$, $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^{d-a}$$에 대해 $$a \geq 0$$이면 $$f_0$$에서, $$a \leq 0$$이면 $$f_1$$에서 얻을 수 있으므로 모든 monomial이 $$\im \delta$$에 속하고 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^{-1}\x_1^{d+1}, \ldots, \x_0^{-d-1}\x_1$$ ($$\x_0^a \x_1^{d-a}$$, $$a = -1, \ldots, -d-1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
 
 이제 $$n \geq 2$$에 대해 귀납법으로 일반적인 경우를 증명한다. $$\mathbb{P}^n$$을 hyperplane $$H = \mathbb{P}^{n-1} = \{x_n = 0\}$$과 열린집합 $$U_n = \{x_n \neq 0\} \cong \mathbb{A}^n$$의 합집합으로 분해한다. Standard affine cover $$\mathcal{U} = \{U_0, \ldots, U_n\}$$에 대한 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}, \mathcal{O}(d))$$를 index $$n$$을 포함하는 항과 포함하지 않는 항으로 분해할 수 있다. 구체적으로, $$p$$-cochain $$f_{i_0 \cdots i_p}$$에서 모든 index가 $$\{0, \ldots, n-1\}$$에 속하는 것들은 $$\mathbb{P}^{n-1}$$의 standard affine cover $$\mathcal{U}' = \{U_0, \ldots, U_{n-1}\}$$에 대한 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}', \mathcal{O}(d))$$의 원소들이며, 적어도 하나의 index가 $$n$$인 것들은 $$U_n$$ (혹은 $$U_n$$과 다른 $$U_i$$들의 교집합) 위에서의 section들이다.
 
@@ -152,11 +160,15 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(d)) \cong \check{H}^q(\mathcal{U}, \mathcal{O}(d
 
 명제 5에 의해 $$\mathbb{P}^1$$에서의 Čech cohomology가 sheaf cohomology와 일치하므로, 우리는 명시적으로 Čech 복합체를 전개하여 ([명제 1](#prop1))의 $$n = 1$$인 경우를 다시 한번 확인한다.
 
-$$\mathcal{U} = \{U_0, U_1\}$$에 대해 Čech 복합체는 $$0 \to \check{C}^0 \xrightarrow{\delta} \check{C}^1 \to 0$$이며, 여기서 $$\check{C}^0 = \mathcal{O}(d)(U_0) \oplus \mathcal{O}(d)(U_1)$$이고 $$\check{C}^1 = \mathcal{O}(d)(U_0 \cap U_1)$$이다. $$U_0 \cong \mathbb{A}^1$$에서 coordinate $$\t = \x_1/\x_0$$를 사용하면 $$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\t] \cong \mathbb{K}[\t]$$이고, $$U_1$$에서 $$\t^{-1} = \x_0/\x_1$$을 사용하면 $$\mathcal{O}(d)(U_1) = \t^d \mathbb{K}[\t^{-1}]$$이다. 교집합에서는 $$\mathcal{O}(d)(U_0 \cap U_1) \cong \mathbb{K}[\t, \t^{-1}]$$이다.
+$$\mathcal{U} = \{U_0, U_1\}$$에 대해 Čech 복합체는 $$0 \to \check{C}^0 \xrightarrow{\delta} \check{C}^1 \to 0$$이며, 여기서
 
-Coboundary map $$\delta : \check{C}^0 \to \check{C}^1$$은 $$(f_0, f_1) \mapsto f_1 - f_0$$로 주어진다. 따라서 $$\ker \delta = \{(f_0, f_1) \in \mathbb{K}[\t] \oplus \t^d\mathbb{K}[\t^{-1}] : f_0 = f_1\}$$이고, 이는 $$\mathbb{K}[\t] \cap \t^d\mathbb{K}[\t^{-1}]$$과 동형이다. $$d \geq 0$$일 때 $$\mathbb{K}[\t] \cap \t^d\mathbb{K}[\t^{-1}] = \span\{1, \t, \ldots, \t^d\}$$이므로 $$H^0 \cong \mathbb{K}[\x_0, \x_1]_d$$이고 $$\dim H^0 = d+1$$이다. $$d \leq -1$$일 때 $$\ker \delta = 0$$이므로 $$H^0 = 0$$이다.
+$$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\x_0/\x_1], \qquad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]$$
 
-$$H^1$$은 cokernel $$\mathbb{K}[\t, \t^{-1}] / \im\delta$$로 주어진다. $$d \geq 0$$이면 $$\im\delta$$는 $$\t^d\mathbb{K}[\t^{-1}]$$과 $$\mathbb{K}[\t]$$의 합이고, $$\mathbb{K}[\t, \t^{-1}] = \t^d\mathbb{K}[\t^{-1}] + \mathbb{K}[\t]$$이므로 cokernel은 $$0$$이다. $$d \leq -1$$이면 $$\im\delta = \t^d\mathbb{K}[\t^{-1}] - \mathbb{K}[\t]$$이고, $$\t^{-d-1}$$ 이상의 negative monomial들이 cokernel을 이룬다. $$\mathbb{K}[\t, \t^{-1}] = \t^d\mathbb{K}[\t^{-1}] + \mathbb{K}[\t] + \span\{\t^{-d-1}, \ldots, \t^{-1}\}$$이므로, $$H^1 \cong \span\{\t^{-d-1}, \ldots, \t^{-1}\}$$이고 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
+이다. Coboundary map $$\delta(f_0, f_1) = f_1 - f_0$$에서 일치 조건 $$f_0 = f_1$$을 monomial $$\x_0^a \x_1^b$$ 단위로 분석한다.
+
+$$\ker \delta$$: $$f_0$$의 monomial은 $$\x_0^{d-a}\x_1^a$$ ($$a \geq 0$$), $$f_1$$의 monomial은 $$\x_0^b\x_1^{d-b}$$ ($$b \geq 0$$) 꼴이다. $$f_0 = f_1$$이면 $$a+b = d$$이므로 $$d \geq 0$$일 때 $$\dim H^0 = d+1$$, $$d \leq -1$$일 때 $$\ker \delta = 0$$이고 $$H^0 = 0$$이다.
+
+$$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$ ($$\x_1$$ 지수 $$\geq 0$$), $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$ ($$\x_0$$ 지수 $$\geq 0$$)이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^b$$ ($$a+b=d$$)이 $$\im \delta$$에 속하므로 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^a \x_1^{d-a}$$ ($$a = -1, \ldots, -d-1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
 
 </div>
 
@@ -229,7 +241,7 @@ $$0 \to \mathcal{F}(m-1) \to \mathcal{F}(m) \to \mathcal{F}(m)\vert_H \to 0$$
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> Line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. $$d \geq 0$$이면 Bott's formula에 의해 $$H^i(\mathbb{P}^n, \mathcal{O}(d)) = 0$$이 $$i > 0$$에 대해 성립한다. 그런데 $$\mathcal{O}(d)$$의 $$m$$-regularity 조건은 $$H^i(\mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이지만 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1$$은 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이다. 문제는 $$d - i < -n$$, 즉 $$i > d + n$$인 경우인데, 이때 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$0$$-regular이다. 명제 9에 의해 $$\mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§Line Bundles, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 확인한 바와 일치한다.
+<ins id="ex10">**예시 10**</ins> Line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. $$d \geq 0$$이면 Bott's formula에 의해 $$H^i(\mathbb{P}^n, \mathcal{O}(d)) = 0$$이 $$i > 0$$에 대해 성립한다. 그런데 $$\mathcal{O}(d)$$의 $$m$$-regularity 조건은 $$H^i(\mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이지만 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1$$은 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이다. 문제는 $$d - i < -n$$, 즉 $$i > d + n$$인 경우인데, 이때 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$0$$-regular이다. 명제 9에 의해 $$\mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 확인한 바와 일치한다.
 
 </div>
 
