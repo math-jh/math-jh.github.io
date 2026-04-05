@@ -290,7 +290,7 @@ $$s([x_0:x_1])=\frac{a}{x_0}+\frac{b}{x_1}$$
 
 $$s([x_0:x_1])=ax_0+bx_1$$
 
-의 함수들이며 위와는 달리 $$a,b$$에 어떠한 제약도 없다. 직관적으로, $$\mathcal{O}(-1)$$의 section들은 분모로 인해 zero section을 넘을 수 없고, 따라서 모든 section이 "$$1$$이 $$-1$$에 붙는", 꼬임이 만들어내는 문제를 피해갈 수 없다. 이 꼬임은 $$\mathcal{O}(1)$$에서도 같은 문제를 만든다. 즉 "constant section" $$s([x_0:x_1])$$은 $$\mathcal{O}(1)$$에서도 마찬가지로 section이 아니다. 그러나 이번에는 $$\mathcal{O}(1)$$의 section들이 zero section을 넘어갈 수 있기 때문에 $$\Gamma(\mathbb{P}^1, \mathcal{O}(1))\neq 0$$이게 된다. 
+의 함수들이며 위와는 달리 $$a,b$$에 어떠한 제약도 없다. 직관적으로, $$\mathcal{O}(-1)$$의 section들은 분모로 인해 zero section을 넘을 수 없고, 따라서 모든 section이 "$$1$$이 $$-1$$에 붙는", 꼬임이 만들어내는 문제를 피해갈 수 없다. 이 꼬임은 $$\mathcal{O}(1)$$에서도 같은 문제를 만든다. 즉 "constant section" $$s([x_0:x_1])$$은 $$\mathcal{O}(1)$$에서도 마찬가지로 section이 아니다. 그러나 이번에는 $$\mathcal{O}(1)$$의 section들이 zero section을 넘어갈 수 있기 때문에 $$\Gamma(\mathbb{P}^1, \mathcal{O}(1))\neq 0$$이게 된다. 이는 transition function 혹은 trivialization의 관점에서 이해하자면, $$\mathcal{O}(d)$$는 degree $$d$$의 다항식 $$\x_i^d$$를 곱해주므로 degree $$d$$ 이하의 pole은 이 trivialization이 지워줄 수 있는 것으로 생각할 수도 있다. 
 
 ## Divisor -- Line Bundle correspondence
 
