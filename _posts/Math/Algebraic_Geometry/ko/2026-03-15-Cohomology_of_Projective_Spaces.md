@@ -42,9 +42,9 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(d)) = \begin{cases}
 
 $$\x_i^d \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$
 
-이므로, Čech cochain $$f \in \check{C}^p(\mathcal{U}, \mathcal{O}(d))$$은 각각의 $$(p+1)$$-tuple $$(i_0, \ldots, i_p)$$에 대해 열린집합 $$U_{i_0}\cap\cdots\cap U_{i_p}$$ 위에서 regular한 section을 대응시키는 것이다. 이 때, 교집합 $$U_{i_0}\cap\cdots\cap U_{i_p}$$ 위에서 section이 regular하기 위해서는 $$0$$이 되지 않는 좌표들, 즉 $$\x_{i_0}, \ldots, \x_{i_p}$$들만 분모로 허용되고, 나머지는 허용되지 않는 monomial들
+인 것을 기억하자. ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_geometry/line_bundles#ex12)) 그럼 Čech cochain $$f \in \check{C}^p(\mathcal{U}, \mathcal{O}(d))$$은 각각의 $$(p+1)$$-tuple $$(i_0, \ldots, i_p)$$에 대해 열린집합 $$U_{i_0}\cap\cdots\cap U_{i_p}$$ 위에서 regular한 section을 대응시키는 것이다. 이 때, 교집합 $$U_{i_0}\cap\cdots\cap U_{i_p}$$ 위에서 section이 regular하기 위해서는 $$0$$이 되지 않는 좌표들, 즉 $$\x_{i_0}, \ldots, \x_{i_p}$$들만 분모로 허용되고, 나머지는 허용되지 않는 monomial들
 
-$$f_{i_0 \cdots i_p} = \x_0^{a_0} \cdots \x_n^{a_n},\qquad \sum a_i=d,\quad a_j\geq 0\text{ for $j\not\in \\{i_0, \ldots, i_p\\}$}$$
+$$f_{i_0 \cdots i_p} = \x_0^{a_0} \cdots \x_n^{a_n},\qquad \sum_{j=0}^n a_j=d,\quad a_j\geq 0\text{ for $j\not\in \\{i_0, \ldots, i_p\\}$}$$
 
 로 생성된다. 
 
@@ -62,20 +62,11 @@ $$0 \longrightarrow \check{C}^0\overset{\delta}{\longrightarrow}\check{C}^1\long
 
 $$\check{C}^0=\mathcal{O}(d)(U_0)\oplus \mathcal{O}(d)(U_1),\qquad \check{C}^1=\mathcal{O}(d)(U_0\cap U_1)$$
 
-이다. 언제나와 같이, $$U_0$$에서 coordinate $$\t_0=\x_1/\x_0$$, $$U_1$$에서 coordinate $$\t_1=\x_0/\x_1$$을 사용하자. 그럼 앞선 계산으로부터
+이다. $$n = 1$$일 때 Čech 복합체는 $$0 \to \check{C}^0 \xrightarrow{\delta} \check{C}^1 \to 0$$이다. $$U_0$$에서 coordinate $$\t = \x_1/\x_0$$를 사용하면 $$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\t] \cong \mathbb{K}[\t]$$이고, $$U_1$$에서는 $$\t^{-1} = \x_0/\x_1$$이 coordinate이므로 $$\mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\t^{-1}] = \t^{-d} \cdot \x_0^d \cdot \mathbb{K}[\t^{-1}] \cong \t^d \mathbb{K}[\t^{-1}]$$이다. 교집합에서는 $$\mathcal{O}(d)(U_0 \cap U_1) \cong \mathbb{K}[\t, \t^{-1}]$$이다.
 
-$$\mathcal{O}(d)=\mathbb{K}[\t]$$
+Coboundary map $$\delta(f_0, f_1) = f_1 - f_0$$에서 $$f_0 \in \mathbb{K}[\t]$$, $$f_1 \in \t^d \mathbb{K}[\t^{-1}]$$이다. $$d \geq 0$$이면 $$H^0 = \ker \delta = \mathbb{K}[\t] \cap \t^d\mathbb{K}[\t^{-1}] = \span\{1, \t, \ldots, \t^d\} \cong \mathbb{K}[\x_0, \x_1]_d$$이므로 차원은 $$d+1$$이고 $$H^1 = 0$$이다. $$d \leq -1$$이면 $$\ker \delta = 0$$이므로 $$H^0 = 0$$이고, $$H^1 = \coker \delta$$에서 $$\im \delta$$의 complement는 degree $$-d-1$$ 이상의 negative monomial $$\{\t^{-1}, \ldots, \t^{-d-1}\}$$이므로 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
 
-**$$\mathbb{P}^1$$의 경우.** $$n = 1$$일 때 Čech 복합체는 $$0 \to \check{C}^0 \xrightarrow{\delta} \check{C}^1 \to 0$$이다. 여기서 $$\check{C}^0 = \mathcal{O}(d)(U_0) \oplus \mathcal{O}(d)(U_1)$$이고 $$\check{C}^1 = \mathcal{O}(d)(U_0 \cap U_1)$$이다. $$U_0$$에서 coordinate $$t = \x_1/\x_0$$, $$U_1$$에서 $$s = \x_0/\x_1 = t^{-1}$$를 사용하면
-
-$$\mathcal{O}(d)(U_0) = \mathbb{K}[t] \cdot 1, \quad \mathcal{O}(d)(U_1) = \mathbb{K}[s] \cdot s^{-d} = \mathbb{K}[s] \cdot t^d, \quad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[t, t^{-1}] \cdot 1$$
-
-Coboundary map $$\delta(f_0, f_1) = f_1 - f_0$$에서 $$f_0 \in \mathbb{K}[t]$$, $$f_1 \in t^d \mathbb{K}[t^{-1}]$$이다.
-
-- $$d \geq 0$$: $$H^0 = \ker \delta = \{f_0 = f_1\} = \mathbb{K}[t] \cap t^d\mathbb{K}[t^{-1}] = \mathbb{K}[\x_0, \x_1]_d$$이며 차원은 $$d+1$$이다. $$H^1 = 0$$.
-- $$d \leq -1$$: $$H^0 = \ker \delta = 0$$이고, $$H^1 = \coker \delta$$. $$\im \delta$$의 complement는 degree $$-d-1$$ 이상의 negative monomial $$\{t^{-1}, t^{-2}, \ldots, t^{-d-1}\}$$이므로, $$H^1$$의 차원은 $$-d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
-
-**일반 $$\mathbb{P}^n$$에 대한 귀납법.** 이제 $$n$$에 대한 귀납법으로 일반적인 경우를 증명한다. $$n = 1$$인 경우는 위에서 증명하였으므로, $$n \geq 2$$라 하자. $$\mathbb{P}^n$$을 hyperplane $$H = \mathbb{P}^{n-1} = \{x_n = 0\}$$과 열린집합 $$U_n = \{x_n \neq 0\} \cong \mathbb{A}^n$$의 합집합으로 분해한다. Standard affine cover $$\mathcal{U} = \{U_0, \ldots, U_n\}$$에 대한 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}, \mathcal{O}(d))$$를 index $$n$$을 포함하는 항과 포함하지 않는 항으로 분해할 수 있다. 구체적으로, $$p$$-cochain $$f_{i_0 \cdots i_p}$$에서 모든 index가 $$\{0, \ldots, n-1\}$$에 속하는 것들은 $$\mathbb{P}^{n-1}$$의 standard affine cover $$\mathcal{U}' = \{U_0, \ldots, U_{n-1}\}$$에 대한 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}', \mathcal{O}(d))$$의 원소들이며, 적어도 하나의 index가 $$n$$인 것들은 $$U_n$$ (혹은 $$U_n$$과 다른 $$U_i$$들의 교집합) 위에서의 section들이다.
+이제 $$n \geq 2$$에 대해 귀납법으로 일반적인 경우를 증명한다. $$\mathbb{P}^n$$을 hyperplane $$H = \mathbb{P}^{n-1} = \{x_n = 0\}$$과 열린집합 $$U_n = \{x_n \neq 0\} \cong \mathbb{A}^n$$의 합집합으로 분해한다. Standard affine cover $$\mathcal{U} = \{U_0, \ldots, U_n\}$$에 대한 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}, \mathcal{O}(d))$$를 index $$n$$을 포함하는 항과 포함하지 않는 항으로 분해할 수 있다. 구체적으로, $$p$$-cochain $$f_{i_0 \cdots i_p}$$에서 모든 index가 $$\{0, \ldots, n-1\}$$에 속하는 것들은 $$\mathbb{P}^{n-1}$$의 standard affine cover $$\mathcal{U}' = \{U_0, \ldots, U_{n-1}\}$$에 대한 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}', \mathcal{O}(d))$$의 원소들이며, 적어도 하나의 index가 $$n$$인 것들은 $$U_n$$ (혹은 $$U_n$$과 다른 $$U_i$$들의 교집합) 위에서의 section들이다.
 
 이 분해는 다음과 같은 짧은 완전열을 제공한다. 우선 $$p$$-cochain group을 $$\check{C}^p = \check{C}^p_0 \oplus \check{C}^p_1$$으로 분해하자. 여기서 $$\check{C}^p_0$$는 모든 index가 $$\{0, \ldots, n-1\}$$에 속하는 cochain들로 이루어진 부분군이고, $$\check{C}^p_1$$은 적어도 하나의 index가 $$n$$인 cochain들로 이루어진 부분군이다. Coboundary map $$\delta$$는 이 분해를 존중한다. 구체적으로, $$\delta = \delta_0 + \delta_1$$으로 분해할 수 있는데, $$\delta_0$$는 index $$n$$을 포함하지 않는 cochain들 사이의 map이고 (이는 $$\mathbb{P}^{n-1}$$의 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}', \mathcal{O}(d))$$의 differential과 일치한다), $$\delta_1$$은 index $$n$$을 포함하는 cochain들과 연관된 부분이다.
 
@@ -161,11 +152,11 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(d)) \cong \check{H}^q(\mathcal{U}, \mathcal{O}(d
 
 명제 5에 의해 $$\mathbb{P}^1$$에서의 Čech cohomology가 sheaf cohomology와 일치하므로, 우리는 명시적으로 Čech 복합체를 전개하여 ([명제 1](#prop1))의 $$n = 1$$인 경우를 다시 한번 확인한다.
 
-$$\mathcal{U} = \{U_0, U_1\}$$에 대해 Čech 복합체는 $$0 \to \check{C}^0 \xrightarrow{\delta} \check{C}^1 \to 0$$이며, 여기서 $$\check{C}^0 = \mathcal{O}(d)(U_0) \oplus \mathcal{O}(d)(U_1)$$이고 $$\check{C}^1 = \mathcal{O}(d)(U_0 \cap U_1)$$이다. $$U_0 \cong \mathbb{A}^1$$에서 coordinate $$t = \x_1/\x_0$$를 사용하면 $$\mathcal{O}(d)(U_0) = \mathbb{K}[t] \cdot 1$$이고, $$U_1$$에서 $$s = \x_0/\x_1 = t^{-1}$$를 사용하면 $$\mathcal{O}(d)(U_1) = \mathbb{K}[s] \cdot s^{-d} = t^d \mathbb{K}[t^{-1}]$$이다. 교집합에서는 $$\mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[t, t^{-1}] \cdot 1$$이다.
+$$\mathcal{U} = \{U_0, U_1\}$$에 대해 Čech 복합체는 $$0 \to \check{C}^0 \xrightarrow{\delta} \check{C}^1 \to 0$$이며, 여기서 $$\check{C}^0 = \mathcal{O}(d)(U_0) \oplus \mathcal{O}(d)(U_1)$$이고 $$\check{C}^1 = \mathcal{O}(d)(U_0 \cap U_1)$$이다. $$U_0 \cong \mathbb{A}^1$$에서 coordinate $$\t = \x_1/\x_0$$를 사용하면 $$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\t] \cong \mathbb{K}[\t]$$이고, $$U_1$$에서 $$\t^{-1} = \x_0/\x_1$$을 사용하면 $$\mathcal{O}(d)(U_1) = \t^d \mathbb{K}[\t^{-1}]$$이다. 교집합에서는 $$\mathcal{O}(d)(U_0 \cap U_1) \cong \mathbb{K}[\t, \t^{-1}]$$이다.
 
-Coboundary map $$\delta : \check{C}^0 \to \check{C}^1$$은 $$(f_0, f_1) \mapsto f_1 - f_0$$로 주어진다. 따라서 $$\ker \delta = \{(f_0, f_1) \in \mathbb{K}[t] \oplus t^d\mathbb{K}[t^{-1}] : f_0 = f_1\}$$이고, 이는 $$\mathbb{K}[t] \cap t^d\mathbb{K}[t^{-1}]$$과 동형이다. $$d \geq 0$$일 때 $$\mathbb{K}[t] \cap t^d\mathbb{K}[t^{-1}] = \span\{1, t, \ldots, t^d\}$$이므로 $$H^0 \cong \mathbb{K}[\x_0, \x_1]_d$$이고 $$\dim H^0 = d+1$$이다. $$d \leq -1$$일 때 $$\ker \delta = 0$$이므로 $$H^0 = 0$$이다.
+Coboundary map $$\delta : \check{C}^0 \to \check{C}^1$$은 $$(f_0, f_1) \mapsto f_1 - f_0$$로 주어진다. 따라서 $$\ker \delta = \{(f_0, f_1) \in \mathbb{K}[\t] \oplus \t^d\mathbb{K}[\t^{-1}] : f_0 = f_1\}$$이고, 이는 $$\mathbb{K}[\t] \cap \t^d\mathbb{K}[\t^{-1}]$$과 동형이다. $$d \geq 0$$일 때 $$\mathbb{K}[\t] \cap \t^d\mathbb{K}[\t^{-1}] = \span\{1, \t, \ldots, \t^d\}$$이므로 $$H^0 \cong \mathbb{K}[\x_0, \x_1]_d$$이고 $$\dim H^0 = d+1$$이다. $$d \leq -1$$일 때 $$\ker \delta = 0$$이므로 $$H^0 = 0$$이다.
 
-$$H^1$$은 cokernel $$\mathbb{K}[t, t^{-1}] / \im\delta$$로 주어진다. $$d \geq 0$$이면 $$\im\delta$$는 $$t^d\mathbb{K}[t^{-1}]$$과 $$\mathbb{K}[t]$$의 합이고, $$\mathbb{K}[t, t^{-1}] = t^d\mathbb{K}[t^{-1}] + \mathbb{K}[t]$$이므로 cokernel은 $$0$$이다. $$d \leq -1$$이면 $$\im\delta = t^d\mathbb{K}[t^{-1}] - \mathbb{K}[t]$$이고, $$t^{-d-1}$$ 이상의 negative monomial들이 cokernel을 이룬다. $$\mathbb{K}[t, t^{-1}] = t^d\mathbb{K}[t^{-1}] + \mathbb{K}[t] + \span\{t^{-d-1}, \ldots, t^{-1}\}$$이므로, $$H^1 \cong \span\{t^{-d-1}, \ldots, t^{-1}\}$$이고 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
+$$H^1$$은 cokernel $$\mathbb{K}[\t, \t^{-1}] / \im\delta$$로 주어진다. $$d \geq 0$$이면 $$\im\delta$$는 $$\t^d\mathbb{K}[\t^{-1}]$$과 $$\mathbb{K}[\t]$$의 합이고, $$\mathbb{K}[\t, \t^{-1}] = \t^d\mathbb{K}[\t^{-1}] + \mathbb{K}[\t]$$이므로 cokernel은 $$0$$이다. $$d \leq -1$$이면 $$\im\delta = \t^d\mathbb{K}[\t^{-1}] - \mathbb{K}[\t]$$이고, $$\t^{-d-1}$$ 이상의 negative monomial들이 cokernel을 이룬다. $$\mathbb{K}[\t, \t^{-1}] = \t^d\mathbb{K}[\t^{-1}] + \mathbb{K}[\t] + \span\{\t^{-d-1}, \ldots, \t^{-1}\}$$이므로, $$H^1 \cong \span\{\t^{-d-1}, \ldots, \t^{-1}\}$$이고 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
 
 </div>
 
