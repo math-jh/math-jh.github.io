@@ -252,7 +252,7 @@ Standard open cover $$U_i = \{x \mid x_i \ne 0\}$$ 위에서 $$\mathcal{O}_{\mat
 
 </div>
 
-Global section space의 또 다른 대중적인 표기법 중 하나는 $$H^0(X, \mathcal{L})$$이다. 이 표기법은 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1)에서 정당화될 것이나, 그 전까지는 $$\Gamam(X, \mathcal{L})$$을 사용하기로 한다. 
+Global section space의 또 다른 대중적인 표기법 중 하나는 $$H^0(X, \mathcal{L})$$이다. 이 표기법은 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1)에서 정당화될 것이나, 그 전까지는 $$\Gamma(X, \mathcal{L})$$을 사용하기로 한다. 
 
 <div class="example" markdown="1">
 
@@ -270,7 +270,7 @@ $$s_i \in \mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$$
 
 이 명제는 tautological bundle의 <em-ko>꼬임</em-ko>을 section의 관점에서 보여준다. 가령, $$\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$$이라는 사실은 특히 모든 $$x\in \mathbb{P}^1$$마다 fiber의 1을 대응시키는 "상수함수" 또한 존재하지 않는다는 것을 의미한다. 이는, 위의 기하학적 관점에서 보면, $$\mathbb{P}^1$$을 한 바퀴를 돌아왔을 때 원래의 1이 아니라 (예를 들면) $$-1$$이 되어있기 때문이다.
 
-한편 [예시 16](#ex16)의 계산은 임의의 $$d$$에 대해서도 확장할 수 있는데, 특히 임의의 $$d<0$$에 대하여 $$\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$$인 것을 동일한 논리로 보일 수 있으며, $$d=0$$인 경우, 즉 $$\mathcal{O}_{\mathbb{P}^n}(0)=\mathcal{O}_{\mathbb{P}^n}$$의 경우에는 section들이 homogeneous polynomial of degree $$0$$, 즉 상수함수들이라는 것을 확인할 수 있으므로 [§준사영다양체, ⁋예시 6](/ko/math/algebraic_geometry/quasi_projective_varieties#ex6)의 계산이 다시 확인된다. 
+한편 [예시 16](#ex16)의 계산은 임의의 $$d$$에 대해서도 확장할 수 있는데, 특히 임의의 $$d<0$$에 대하여 $$\Gamma(\mathbb{P}^1, \mathcal{O}(d))=0$$인 것을 동일한 논리로 보일 수 있으며, $$d=0$$인 경우, 즉 $$\mathcal{O}_{\mathbb{P}^n}(0)=\mathcal{O}_{\mathbb{P}^n}$$의 경우에는 section들이 homogeneous polynomial of degree $$0$$, 즉 상수함수들이라는 것을 확인할 수 있으므로 [§준사영다양체, ⁋예시 6](/ko/math/algebraic_geometry/quasi_projective_varieties#ex6)의 계산이 다시 확인된다. 
 
 주의를 기울일 부분은 $$d>0$$인 경우이다. 이 경우 section들은 [예시 16](#ex16)과 정확히 동일한 계산에 의해 homogeneous polynomial of degree $$d$$들임을 확인할 수 있다. 특히 $$\Gamma(\mathbb{P}^n, \mathcal{O}(d))\neq 0$$이며, 이는 [예시 12](#ex12) 이후의 직관이 다소 과하게 단순화되었다는 것을 보여주는 계산이라 생각할 수 있다. 
 
