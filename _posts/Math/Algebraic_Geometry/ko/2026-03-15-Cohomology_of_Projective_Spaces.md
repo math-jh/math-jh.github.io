@@ -64,13 +64,19 @@ $$\check{C}^0=\mathcal{O}(d)(U_0)\oplus \mathcal{O}(d)(U_1),\qquad \check{C}^1=\
 
 이며, 각각의 section space는
 
-$$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\x_0/\x_1], \qquad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]$$
+$$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\x_0/\x_1], \qquad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]_d$$
 
-이다. 우선 $$\check{C}^0$$에서의 cohomology를 계산하기 위해 $$\ker\delta$$를 분석하자. 정의에 의해 cochain $$(f_0, f_1) \in \check{C}^0$$이 $$\ker \delta$$에 속한다는 것은 $$f_0 = f_1$$이 $$\mathcal{O}(d)(U_0 \cap U_1)$$에서 성립한다는 뜻이다. 우선 $$U_0$$ 부분을 보면, 임의의 monomial이 $$\mathcal{O}(d)(U_0)$$에 속하기 위해서는 반드시 적당한 $$a\geq 0$$에 대하여 $$\x_0^{d-a}\x_1^a$$ 꼴임을 안다. 비슷하게 어떠한 monomial이 $$\mathcal{O}(d)(U_1)$$에 속하기 위해서는 적당한 $$b\geq 0$$에 대하여 $$\x_0^b\x_1^{d-b}$$의 꼴이어야 한다. 이제 특정 cocycle $$(f_0,f_1)$$이 $$\ker\delta$$에 속하기 위해서는 $$f_0=f_1$$이어야 하고, 
+이다. 우선 $$\check{C}^0$$에서의 cohomology를 계산하기 위해 $$\ker\delta$$를 분석하자. 정의에 의해 cochain $$(f_0, f_1) \in \check{C}^0$$이 $$\ker \delta$$에 속한다는 것은 $$f_0 = f_1$$이 $$\mathcal{O}(d)(U_0 \cap U_1)$$에서 성립한다는 뜻이다. 우선 $$U_0$$ 부분을 보면, 임의의 monomial이 $$\mathcal{O}(d)(U_0)$$에 속하기 위해서는 반드시 적당한 $$a\geq 0$$에 대하여 $$\x_0^{d-a}\x_1^a$$ 꼴임을 안다. 비슷하게 어떠한 monomial이 $$\mathcal{O}(d)(U_1)$$에 속하기 위해서는 적당한 $$b\geq 0$$에 대하여 $$\x_0^b\x_1^{d-b}$$의 꼴이어야 한다. 이제 특정 cocycle $$(f_0,f_1)$$이 $$\ker\delta$$에 속하기 위해서는 $$f_0=f_1$$이어야 하고, 따라서 $$a+b=d$$를 만족하는 monomial들만이 $$\ker\delta$$에 속할 수 있다. 즉, 다음의 monomial들
 
-이를 $$\x_0^a \x_1^b$$ monomial로 분석하자.
+$$\x_0^d, \quad\x_0^{d-1}\x_1,\quad\ldots, \quad\x_0\x_1^{d-1},\quad \x_1^d$$
 
-$$\ker \delta$$: 앞서 본 바와 같이 $$f_0$$의 monomial은 $$\x_0^{d-a}\x_1^a$$ ($$a \geq 0$$), $$f_1$$의 monomial은 $$\x_0^b\x_1^{d-b}$$ ($$b \geq 0$$) 꼴이다. $$f_0 = f_1$$이면 $$d-a = b$$, 즉 $$a+b = d$$이므로 $$d \geq 0$$일 때 basis는 $$\{\x_0^d, \x_0^{d-1}\x_1, \ldots, \x_1^d\}$$이고 $$\dim H^0 = d+1$$이다. $$d \leq -1$$이면 $$a+b = d$$를 만족하는 $$a, b \geq 0$$가 존재하지 않으므로 $$\ker \delta = 0$$이고 $$H^0 = 0$$이다.
+이 $$H^0$$의 basis이고 이것이 원하는 결과를 준다. 만일 $$d<0$$이라면 $$a,b\geq 0$$은 이 식을 만족시키지 못하므로 $$H^0$$은 $$0$$이 된다. 
+
+이제 $$H^1$$을 계산하자. 즉 $$\coker\delta$$를 계산해야 한다. 위의 계산으로부터, $$\delta$$의 image는 적당한 상수 $$a_i,b_j$$들에 대하여
+
+$$f_1-f_0=\sum_{i\geq 0}a_i \x_0^{d-i}\x_1^i-\sum_{j\geq 0}b_j\x_0^j\x_1^{d-j}$$
+
+임을 안다. 만일 $$d\geq 0$$이라면 이를 사용하여 임의의 $$\mathcal{O}(d)(U_0\cap U_1)$$의 원소들의 계수를 맞춰줄 수 있으므로 $$\coker\delta=0$$이다. 만일 $$d\leq -1$$이라면, 
 
 $$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$, $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^{d-a}$$에 대해 $$a \geq 0$$이면 $$f_0$$에서, $$a \leq 0$$이면 $$f_1$$에서 얻을 수 있으므로 모든 monomial이 $$\im \delta$$에 속하고 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^{-1}\x_1^{d+1}, \ldots, \x_0^{-d-1}\x_1$$ ($$\x_0^a \x_1^{d-a}$$, $$a = -1, \ldots, -d-1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
 
@@ -162,7 +168,7 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(d)) \cong \check{H}^q(\mathcal{U}, \mathcal{O}(d
 
 $$\mathcal{U} = \{U_0, U_1\}$$에 대해 Čech 복합체는 $$0 \to \check{C}^0 \xrightarrow{\delta} \check{C}^1 \to 0$$이며, 여기서
 
-$$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\x_0/\x_1], \qquad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]$$
+$$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\x_0/\x_1], \qquad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]_d$$
 
 이다. Coboundary map $$\delta(f_0, f_1) = f_1 - f_0$$에서 일치 조건 $$f_0 = f_1$$을 monomial $$\x_0^a \x_1^b$$ 단위로 분석한다.
 
