@@ -193,21 +193,29 @@ $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 
 $$U_i = \{[x_0 : \cdots : x_n] \mid x_i \ne 0\}$$
 
-가 이 bundle의 trivializing open set이다. 즉, 이들 위에서 $$\mathcal{O}_{\mathbb{P}^n}(d)$$는 trivial line bundle이다. 이제 이들 사이의 transition map은 각각의 $$U_i \cap U_j$$에서 $$\mathcal{O}_{U_j}\vert_{U_i \cap U_j} \to \mathcal{O}_{U_i}\vert_{U_i \cap U_j}$$를 다음의 식
+가 이 bundle의 trivializing open set이다. 이들 각각 위에서의 trivialization을 명시적으로
 
-$$g_{ij}: f\mapsto (x_i/x_j)^df $$
+$$\phi_i\colon \mathcal{O}(d)\vert_{U_i} \xrightarrow{\sim} \mathcal{O}_{U_i}, \qquad \phi_i(s) = s \cdot \x_i^{-d}$$
 
-로 정의한다. 즉, 각 점 $$x \in U_i \cap U_j$$와 그 점에서의 fiber $$v \in \mathcal{O}_{\mathbb{P}^n}(d)_x\cong \mathbb{A}^1$$에 대하여, transition map은
+으로 정의한다. 이로부터 section space는 다음의 꼴
 
-$$g_{ij}(x): v \mapsto (x_i/x_j)^d(x) \cdot v$$
+$$\mathcal{O}(d)(U_i) = \x_i^d \cdot \mathcal{O}(U_i) = \x_i^d\mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$
 
-로 주어진다. 이러한 방식으로 우리는 group homomorphism 
+임을 안다. 이제 $$U_i \cap U_j$$에서 두 trivialization을 비교하면 transition function을 도출할 수 있다. 즉, transition function $$\phi_i \circ \phi_j^{-1}\colon \mathcal{O}_{U_j}\vert_{U_i \cap U_j} \to \mathcal{O}_{U_i}\vert_{U_i \cap U_j}$$는
+
+$$\phi_i \circ \phi_j^{-1}(f) = (\x_i/\x_j)^d \cdot f$$
+
+이므로, $$g_{ij} = (\x_i/\x_j)^d$$를 얻는다. 더 구체적으로, 각 점 $$x \in U_i \cap U_j$$와 그 점에서의 fiber $$v \in \mathcal{O}_{\mathbb{P}^n}(d)_x \cong \mathbb{A}^1$$에 대하여,
+
+$$g_{ij}(x)\colon v \mapsto (\x_i/\x_j)^d(x) \cdot v$$
+
+로 주어진다. 이제 우리는 group homomorphism 
 
 $$\mathbb{Z}\rightarrow \Pic(\mathbb{P}^n);\qquad d\mapsto [\mathcal{O}_{\mathbb{P}^n}(d)]$$
 
 을 정의할 수 있다. 
 
-우리의 주장은 이것이 isomorphism이라는 것이다. 우선 임의의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}\vert_{U_i}$$는 [예시 11](#ex11)에 의해 trivial line bundle과 isomorphic하므로, 각각의 $$U_i\cap U_j$$의 transition function $$h_{ij}$$가 $$\mathcal{L}$$을 완전히 결정한다. 그런데 정의에 의해 $$U_i\cap U_j$$에서 $$h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$$이므로 $$h_{ij}$$는 반드시 $$c_{ij}(x_i/x_j)^d$$ 꼴이다. 이 때 transition function이 상수배인 line bundle은 trivial하므로 이로부터 위의 group homomorphism이 surjective인 것을 안다. 비슷하게, $$\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$$라 두고 transition function을 비교해보면, 
+우리의 주장은 이것이 isomorphism이라는 것이다. 우선 임의의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}\vert_{U_i}$$는 [예시 11](#ex11)에 의해 trivial line bundle과 isomorphic하므로, 각각의 $$U_i\cap U_j$$의 transition function $$h_{ij}$$가 $$\mathcal{L}$$을 완전히 결정한다. 그런데 정의에 의해 $$U_i\cap U_j$$에서 $$h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$$이므로 $$h_{ij}$$는 반드시 $$c_{ij}(\x_i/\x_j)^d$$ 꼴이다. 이 때 transition function이 상수배인 line bundle은 trivial하므로 이로부터 위의 group homomorphism이 surjective인 것을 안다. 비슷하게, $$\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$$라 두고 transition function을 비교해보면, 
 
 $$\mathcal{O}_{\mathbb{P}^n}(d-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(d')^\vee\cong \mathcal{O}_{\mathbb{P}^n}$$
 
@@ -260,11 +268,11 @@ Global section space의 또 다른 대중적인 표기법 중 하나는 $$H^0(X,
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)) = 0$$
 
-이다. 이를 확인하기 위해 우리는 [명제 14](#prop14)에서 구한 transition function $$g_{ij} = \x_j/\x_i$$를 사용한다. Global section $$s$$는 각 $$U_i$$에서
+이다. 이를 확인하기 위해 [예시 12](#ex12)에 의해 $$\mathcal{O}(-1)(U_i) = \x_i^{-1} \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$이고, trivialization은 $$\phi_i(s) = s \cdot \x_i$$로 주어진다. 따라서 trivialized section $$\phi_i(s) \in \mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$$이며, $$U_i \cap U_j$$에서 cocycle condition에 의해
 
-$$s_i \in \mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$$
+$$\phi_j(s) = (\x_j/\x_i)\, \phi_i(s)$$
 
-로 표현되고, $$U_i \cap U_j$$에서 $$s_j = (\x_i/\x_j)\, s_i$$를 만족해야 한다. $$\mathcal{O}(U_i) \to \mathcal{O}(U_i \cap U_j)$$가 embedding이므로, $$(\x_j/\x_i)\, s_i$$가 $$\mathcal{O}(U_j) = \mathbb{K}[\x_0/\x_j, \ldots, \x_n/\x_j]$$에 속해야 한다. 이는 $$s_i$$가 homogeneous degree $$-1$$ 항만 가져야 함을 의미하지만, $$\mathcal{O}(U_i)$$는 degree $$\geq 0$$ 항들만 포함하므로 $$s_i = 0$$이다. 
+를 만족해야 한다. 그런데 $$\phi_i(s) \in \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$에는 $$\x_i/\x_j$$ 항이 포함될 수 없으므로, $$(\x_j/\x_i)\, \phi_i(s)$$가 $$\mathcal{O}(U_j) = \mathbb{K}[\x_0/\x_j, \ldots, \widehat{\x_j/\x_j}, \ldots, \x_n/\x_j]$$에 속하려면 $$\phi_i(s) = 0$$이어야 한다. 따라서 $$s = 0$$이다. 
 
 </div>
 
