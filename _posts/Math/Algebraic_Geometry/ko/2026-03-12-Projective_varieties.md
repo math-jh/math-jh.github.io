@@ -11,7 +11,7 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Projective_Zarieties.png
     overlay_filter: 0.5
 
-date: 2026-03-11
+date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 2
 

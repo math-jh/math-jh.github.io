@@ -11,7 +11,7 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Line_Bundles.png
     overlay_filter: 0.5
 
-date: 2026-03-15
+date: 2026-03-25
 last_modified_at: 2026-03-25
 weight: 9
 
