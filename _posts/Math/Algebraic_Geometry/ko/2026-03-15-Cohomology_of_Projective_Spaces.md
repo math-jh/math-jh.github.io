@@ -74,53 +74,51 @@ $$\x_0^d, \quad\x_0^{d-1}\x_1,\quad\ldots, \quad\x_0\x_1^{d-1},\quad \x_1^d$$
 
 이제 $$H^1$$을 계산하자. 즉 $$\coker\delta$$를 계산해야 한다. 위의 계산으로부터, $$\delta$$의 image는 적당한 상수 $$a_i,b_j$$들에 대하여
 
-$$f_1-f_0=\sum_{i\geq 0}a_i \x_0^{d-i}\x_1^i-\sum_{j\geq 0}b_j\x_0^j\x_1^{d-j}$$
+$$f_1-f_0=\sum_{i\geq 0}a_i \x_0^{d-i}\x_1^i-\sum_{j\geq 0}b_j\x_0^j\x_1^{d-j}\tag{$\ast$}$$
 
-임을 안다. 만일 $$d\geq 0$$이라면 이를 사용하여 임의의 $$\mathcal{O}(d)(U_0\cap U_1)$$의 원소들의 계수를 맞춰줄 수 있으므로 $$\coker\delta=0$$이다. 만일 $$d\leq -1$$이라면, 
+임을 안다. 한편 $$\check{C}^1$$의 원소는 $$d$$차 monomial들
 
-$$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$, $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^{d-a}$$에 대해 $$a \geq 0$$이면 $$f_0$$에서, $$a \leq 0$$이면 $$f_1$$에서 얻을 수 있으므로 모든 monomial이 $$\im \delta$$에 속하고 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^a \x_1^{d-a}$$ ($$a = d+1, \ldots, -1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
+$$\x_0^{2d}\x_1^{-d},\quad,\x_0^{2d-1}\x_1^{-d+1}, \quad, \ldots,\quad \x_0^{-d+1}\x_1^{2d-1},\quad\x_0^{-d}\x_1^{2d}\tag{$\ast\ast$}$$
 
-이제 $$n \geq 2$$에 대해 이중 귀납법으로 일반적인 경우를 증명한다. 외부 귀납은 $$n$$에 대한 것으로, $$\mathbb{P}^{n-1}$$ 위에서 공식이 성립한다고 가정한다. $$\mathbb{P}^n$$의 초평면 $$H = \{\x_n = 0\} \cong \mathbb{P}^{n-1}$$에 대해 다음 짧은 완전열을 얻는다:
+로 생성된다. 만일 $$d\geq 0$$이라면, 이들 각각은 위의 ($$\ast$$)으로부터 명시적으로 얻어질 수 있다. 가령 $$\x_0^{2d}\x_1^{-d}$$는 $$f_1$$의 성분 중 $$j=2d$$항에서 얻을 수 있고, $$\x_0^{-d}\x_1^{2d}$$는 $$f_0$$의 성분 중에서 $$i=2d$$ 항으로부터 얻을 수 있다. 따라서 이 경우 $$\coker\delta=0$$이다. 그러나 만일 $$d<0$$이라면 $$\delta$$의 image로 나타낼 수 없는 monomial들이 생기는데, 이는 ($$\ast$$)를 이루는 각 항들을 분석해보면 적어도 하나의 지수가 $$0$$보다 크거나 같기 때문이다. 반면 ($$\ast\ast$$)에서는 두 지수가 모두 음수인 monomial들
 
-$$0 \to \mathcal{O}_{\mathbb{P}^n}(d-1) \xrightarrow{\cdot \x_n} \mathcal{O}_{\mathbb{P}^n}(d) \to \mathcal{O}_H(d) \to 0$$
+$$\x_0^{-1}\x_1^{d+1}, \quad \x_0^{-2}\x_1^{d+2},\quad,\ldots, \x_0^{d+1}\x_1^{-1}$$
 
-이 완전열의 cohomology long exact sequence를 $$\mathbb{P}^n$$ 위에서의 각 $$d$$에 대해 적용한다.
+이 생기며 이들이 $$\coker \delta$$를 생성한다. 주장의 표기법에 대해서는 증명이 끝난 후 별도로 설명하기로 한다.
 
-**1단계: 중간 차수 cohomology의 소거.** $$0 < q < n$$에 대해 long exact sequence의
 
-$$H^{q-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^q(\mathcal{O}(d-1)) \to H^q(\mathcal{O}(d)) \to H^q(\mathbb{P}^{n-1}, \mathcal{O}(d))$$
 
-에서 외부 귀납적 가정에 의해 $$H^q(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이고 마찬가지로 $$H^{q-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이다. 이는 $$q \leq n-1$$이므로 $$H^q, H^{q-1}$$ 모두 $$\mathbb{P}^{n-1}$$ 위에서 중간 차수 cohomology (각각 $$0 < q \leq n-1$$과 $$0 \leq q-1 \leq n-2$$)이거나 top cohomology이지만, $$\mathbb{P}^{n-1}$$에서 $$H^{n-1}$$가 non-zero인 것은 $$d \leq -n$$일 때뿐이고, $$H^{q-1}$$는 $$q-1 \leq n-2 < n-1$$이므로 항상 $$0$$이다. 또한 $$q = n-1$$일 때 $$H^q = H^{n-1}$$이 $$d \leq -n$$에서 non-zero일 수 있지만, 이 경우 $$H^{q-1} = H^{n-2} = 0$$이므로 $$H^{n-1}(\mathcal{O}(d-1)) \hookrightarrow H^{n-1}(\mathcal{O}(d))$$라는 단사만 얻고, $$d \geq 0$$에서 $$H^{n-1} = 0$$임을 알고 있으므로 내림차순 귀납에 의해 $$H^{n-1}(\mathcal{O}(d)) = 0$$을 모든 $$d$$에 대해 얻는다. $$q \leq n-2$$인 경우에는 동형사 $$H^q(\mathcal{O}(d-1)) \cong H^q(\mathcal{O}(d))$$이 성립하므로 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) = 0$$을 얻는다.
+이제 $$n \geq 2$$에 대해 귀납법으로 증명한다. $$\mathbb{P}^n$$의 hyperplane $$H = \{x_n = 0\} \cong \mathbb{P}^{n-1}$$과 general linear form $$s \in H^0(\mathbb{P}^n, \mathcal{O}(1))$$에 대해 다음 short exact sequence가 성립한다.
 
-**2단계: $$H^0$$의 계산.** Long exact sequence의 $$H^0$$ 부분
+$$0 \to \mathcal{O}(d-1) \xrightarrow{\cdot s} \mathcal{O}(d) \to \mathcal{O}(d)\vert_H \to 0$$
 
-$$0 \to H^0(\mathcal{O}(d-1)) \to H^0(\mathcal{O}(d)) \to H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^1(\mathcal{O}(d-1))$$
+이에 대한 cohomology long exact sequence는
 
-에서 1단계에 의해 $$H^1(\mathcal{O}(d-1)) = 0$$ ($$n \geq 2$$이므로 $$0 < 1 < n$$)이고, 따라서
+$$\cdots \to H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^i(\mathbb{P}^n, \mathcal{O}(d-1)) \to H^i(\mathbb{P}^n, \mathcal{O}(d)) \to H^i(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to \cdots$$
 
-$$0 \to H^0(\mathcal{O}(d-1)) \to H^0(\mathcal{O}(d)) \to H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to 0$$
+를 준다. 귀납법의 가정은 $$\mathbb{P}^{n-1}$$ 위에서 Bott's formula가 성립한다는 것이다.
 
-이 완전열이 된다. $$d \geq 0$$에 대해 $$d$$에 대한 오름차순 귀납법으로 $$H^0(\mathbb{P}^n, \mathcal{O}(d)) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d$$임을 보인다. $$d = 0$$이면 $$H^0(\mathcal{O}(0)) = \mathbb{K}$$이고 외부 귀납적 가정으로 $$H^0(\mathbb{P}^{n-1}, \mathcal{O}(0)) \cong \mathbb{K}$$이므로, 위 완전열에서 $$H^0(\mathcal{O}(-1)) = 0$$을 얻는다. $$d \geq 1$$에 대해 귀납적 가정 $$H^0(\mathcal{O}(d-1)) \cong \mathbb{K}[\x_0, \ldots, \x_n]_{d-1}$$를 사용하면, 외부 귀납적 가정 $$H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) \cong \mathbb{K}[\x_0, \ldots, \x_{n-1}]_d$$와 함께
+**중간 차수의 소거 ($$0 < i < n$$).** 귀납적 가정에 의해 $$H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) = H^i(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이므로 long exact sequence에서 $$H^i(\mathbb{P}^n, \mathcal{O}(d-1)) \cong H^i(\mathbb{P}^n, \mathcal{O}(d))$$를 얻는다. Serre vanishing에 의해 $$d \gg 0$$에서 $$H^i = 0$$이므로, 이 동형을 반복하여 $$d$$를 내림차순으로 줄여나가면 모든 $$d$$에 대해 $$H^i(\mathbb{P}^n, \mathcal{O}(d)) = 0$$임을 얻는다.
 
-$$H^0(\mathcal{O}(d)) \cong \mathbb{K}[\x_0, \ldots, \x_n]_{d-1} \oplus \mathbb{K}[\x_0, \ldots, \x_{n-1}]_d \cong \mathbb{K}[\x_0, \ldots, \x_n]_d$$
+**Top cohomology $$H^n$$.** Long exact sequence에서
 
-를 얻는다. $$d \leq -1$$에 대해서는 위 완전열에서 $$H^0(\mathcal{O}(d-1))$$이 $$H^0(\mathcal{O}(d))$$에 단사적으로 매장되고, 외부 귀납적 가정에 의해 $$H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$ ($$d < 0$$)이므로 $$H^0(\mathcal{O}(d)) \cong H^0(\mathcal{O}(d-1))$$이다. $$H^0(\mathcal{O}(-1)) = 0$$이므로, 내림차순 귀납에 의해 $$H^0 = 0$$을 모든 $$d \leq -1$$에 대해 얻는다.
+$$H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^n(\mathbb{P}^n, \mathcal{O}(d-1)) \to H^n(\mathbb{P}^n, \mathcal{O}(d)) \to 0$$
 
-**3단계: $$H^n$$의 계산.** 1단계에 의해 $$H^{n-1}(\mathcal{O}(d)) = 0$$이므로 long exact sequence에서
+이다. (마지막 화살표가 $$0$$인 것은 $$H^n(\mathbb{P}^{n-1}, \cdot) = 0$$이기 때문이다.)
 
-$$0 \to H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^n(\mathcal{O}(d-1)) \to H^n(\mathcal{O}(d)) \to 0$$
+$$d > -n$$의 경우: $$n \geq 2$$이므로 $$n-1$$은 중간 차수이고, 앞서 증명한 소거에 의해 $$H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이다. 따라서 $$H^n(\mathcal{O}(d-1)) \cong H^n(\mathcal{O}(d))$$이고, $$d \gg 0$$에서 $$H^n = 0$$이므로 내림차순 귀납으로 모든 $$d > -n-1$$에서 $$H^n = 0$$이다.
 
-을 얻는다. 외부 귀납적 가정에 의해 $$H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))$$는 $$d \leq -n$$일 때만 non-zero이고, 이때 $$\dim H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) = \binom{-d-1}{n-1}$$이다. $$d \geq -n+1$$이면 $$H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이므로 $$H^n(\mathcal{O}(d-1)) \cong H^n(\mathcal{O}(d))$$이고, 따라서 $$H^n(\mathcal{O}(d))$$는 $$d \geq -n+1$$에서 상수이다. $$d \geq 0$$에 대해서는 Čech complex에서 $$H^n = 0$$임을 확인할 수 있으므로 (모든 지수가 음수인 monomial은 $$d \geq 0$$일 때 존재하지 않음), 내림차순 귀납에 의해 $$H^n(\mathcal{O}(d)) = 0$$을 모든 $$d \geq -n$$에 대해 얻는다.
+$$d \leq -n-1$$의 경우: $$H^n$$을 Čech cohomology로 직접 계산한다. $$\mathbb{P}^n$$의 standard affine cover에 대한 Čech 복합체에서 $$n$$-cochain은 단일 항 $$f_{0 1 \cdots n} \in \mathcal{O}(d)(U_{01\cdots n})$$이며, 이는 $$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]_d$$의 원소이다. Coboundary image에 속하지 않는 monomial $$\x_0^{a_0} \cdots \x_n^{a_n}$$은 모든 지수가 $$a_i \leq -1$$이고 $$\sum a_i = d$$인 것들이다. 치환 $$b_i = -a_i - 1$$을 적용하면 $$b_i \geq 0$$이고 $$\sum b_i = -d - n - 1$$이 되어, $$H^n(\mathbb{P}^n, \mathcal{O}(d)) \cong \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$을 얻는다. 차원은 $$\binom{-d-1}{n}$$이며, hockey-stick 항등식에 의해
 
-$$d \leq -n-1$$에 대해서는 위 완전열에서
+$$\binom{-d-1}{n} = \sum_{k=d+1}^{-n} \binom{-k-1}{n-1}$$
 
-$$\dim H^n(\mathcal{O}(d-1)) = \dim H^n(\mathcal{O}(d)) + \binom{-d-1}{n-1}$$
+으로도 표현된다. 이는 $$d = -n-1$$에서 $$\binom{n}{n} = 1$$임을 확인하는 것으로 검산할 수 있다.
 
-이 성립한다. $$H^n(\mathcal{O}(-n)) = 0$$을 알고 있으므로, 내림차순 귀납에 의해
+**Global section $$H^0$$.** $$n \geq 2$$이므로 $$0 < 1 < n$$이고, 중간 차수 소거에 의해 $$H^1(\mathbb{P}^n, \mathcal{O}(d-1)) = 0$$이다. Long exact sequence에서
 
-$$\dim H^n(\mathcal{O}(d)) = \sum_{k=d}^{-n-1} \binom{-k-1}{n-1} = \binom{-d-1}{n}$$
+$$0 \to H^0(\mathbb{P}^n, \mathcal{O}(d-1)) \to H^0(\mathbb{P}^n, \mathcal{O}(d)) \to H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to 0$$
 
-을 얻는다. 마지막 등식은 이항계수의 합 공식 $$\sum_{j=0}^{m} \binom{r+j}{j} = \binom{r+m+1}{m}$$에 의해 성립한다. 실제로 $$H^n$$의 원소는 monomial로 직접 계산할 수도 있다. $$\mathbb{P}^n$$의 standard affine cover $$\mathcal{U} = \{U_0, \ldots, U_n\}$$에 대한 Čech 복합체에서 $$n$$-cochain은 항 $$f_{0 1 \cdots n} \in \mathcal{O}(d)(U_{0 1 \cdots n})$$이며, 이는 $$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]_d$$의 원소이다. 이 항은 coboundary map의 source가 아니므로 $$(n-1)$$-cochain의 coboundary에 속하지 않는 monomial들이 $$H^n$$을 이룬다. $$(n-1)$$-cochain $$g_{i_0 \cdots i_{n-1}}$$은 적어도 하나의 index가 빠져 있으므로, 그 coboundary image에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이다. 따라서 $$H^n$$은 모든 $$a_i \leq -1$$이고 $$\sum a_i = d$$인 monomial $$\x_0^{a_0} \cdots \x_n^{a_n}$$들로 생성된다. 치환 $$b_i = -a_i - 1$$을 적용하면 $$b_i \geq 0$$이고 $$\sum b_i = -d - n - 1$$이 되어, $$H^n(\mathbb{P}^n, \mathcal{O}(d)) \cong \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$을 얻는다.
+이 완전열이 된다. 귀납적 가정에 의해 $$H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) = \mathbb{K}[\x_0, \ldots, \x_{n-1}]_d$$이고, $$d \geq 0$$이면 $$\mathbb{K}[\x_0, \ldots, \x_n]_d \to \mathbb{K}[\x_0, \ldots, \x_{n-1}]_d$$의 surjection은 변수 $$\x_n$$을 $$0$$으로 대입하는 restriction이므로 kernel은 $$\x_n \cdot \mathbb{K}[\x_0, \ldots, \x_n]_{d-1}$$이다. 따라서 $$H^0(\mathbb{P}^n, \mathcal{O}(d)) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d$$이고, $$d < 0$$이면 내림차순 귀납으로 $$H^0 = 0$$임을 얻는다.
 
 </details>
 
@@ -204,7 +202,7 @@ $$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d
 
 $$\ker \delta$$: $$f_0$$의 monomial은 $$\x_0^{d-a}\x_1^a$$ ($$a \geq 0$$), $$f_1$$의 monomial은 $$\x_0^b\x_1^{d-b}$$ ($$b \geq 0$$) 꼴이다. $$f_0 = f_1$$이면 $$a+b = d$$이므로 $$d \geq 0$$일 때 $$\dim H^0 = d+1$$, $$d \leq -1$$일 때 $$\ker \delta = 0$$이고 $$H^0 = 0$$이다.
 
-$$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$ ($$\x_1$$ 지수 $$\geq 0$$), $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$ ($$\x_0$$ 지수 $$\geq 0$$)이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^b$$ ($$a+b=d$$)이 $$\im \delta$$에 속하므로 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^a \x_1^{d-a}$$ ($$a = d+1, \ldots, -1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
+$$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$ ($$\x_1$$ 지수 $$\geq 0$$), $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$ ($$\x_0$$ 지수 $$\geq 0$$)이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^b$$ ($$a+b=d$$)이 $$\im \delta$$에 속하므로 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^a \x_1^{d-a}$$ ($$a = -1, \ldots, -d-1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
 
 </div>
 
@@ -288,4 +286,4 @@ $$0 \to \mathcal{F}(m-1) \to \mathcal{F}(m) \to \mathcal{F}(m)\vert_H \to 0$$
 **[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.
 **[Bot]** R. Bott, *Homogeneous vector bundles*, Annals of Mathematics, 1957.
 **[Mum]** D. Mumford, *Lectures on Curves on an Algebraic Surface*, Annals of Mathematics Studies, Princeton, 1966.
-                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

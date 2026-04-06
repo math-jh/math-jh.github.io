@@ -11,7 +11,7 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Quasi_Projective_Varieties.png
     overlay_filter: 0.5
 
-date: 2026-03-12
+date: 2026-03-15
 last_modified_at: 2026-03-17
 weight: 3
 
