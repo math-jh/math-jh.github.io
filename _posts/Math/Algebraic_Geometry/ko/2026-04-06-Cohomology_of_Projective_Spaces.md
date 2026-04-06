@@ -11,17 +11,17 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Cohomology_of_Line_Bundles.png
     overlay_filter: 0.5
 
-date: 2026-03-15
-last_modified_at: 2026-03-15
+date: 2026-04-06
+last_modified_at: 2026-04-06
 weight: 14
 published: false
 ---
 
-우리는 일찍이 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16)에서 line bundle $$\mathcal{O}(d)$$를 정의하고, 그 global section $$H^0(\mathbb{P}^n, \mathcal{O}(d))$$이 degree $$d$$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 sheaf cohomology ([§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1))는 $$H^0$$뿐만 아니라 higher cohomology group들 $$H^1, H^2, \ldots$$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $$H^0$$ 뿐만 아니라 higher cohomology group들을 사용하여 $$\mathcal{O}(d)$$의 정보를 모두 알아낼 것이다. 
+우리는 일찍이 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16)에서 line bundle $$\mathcal{O}(d)$$를 정의하고, 그 global section $$H^0(\mathbb{P}^n, \mathcal{O}(d))$$이 degree $$d$$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 sheaf cohomology ([§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1))는 $$H^0$$뿐만 아니라 higher cohomology group들 $$H^1, H^2, \ldots$$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $$H^0$$ 뿐만 아니라 higher cohomology group들을 사용하여 $$\mathcal{O}(d)$$의 정보를 모두 알아낼 것이다.
 
 ## Bott's Formula
 
-$$\mathcal{O}(d)$$는 line bundle이므로 quasi-coherent sheaf이고, 따라서 sheaf cohomology를 계산하기 위해서는 Čech cohomology를 활용하여 standard affine cover $$\mathcal{U}=\{U_0,\ldots, U_n\}$$을 사용하면 충분하다. 다음은 그 계산의 결과이다. 
+$$\mathcal{O}(d)$$는 line bundle이므로 quasi-coherent sheaf이고, 따라서 sheaf cohomology를 계산하기 위해서는 Čech cohomology를 활용하여 standard affine cover $$\mathcal{U}=\{U_0,\ldots, U_n\}$$을 사용하면 충분하다. 다음은 그 계산의 결과이다.
 
 <div class="proposition" markdown="1">
 
@@ -46,19 +46,19 @@ $$\x_i^d \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\
 
 $$f_{i_0 \cdots i_p} = \x_0^{a_0} \cdots \x_n^{a_n},\qquad \sum_{j=0}^n a_j=d,\quad a_j\geq 0\text{ for $j\not\in \{i_0, \ldots, i_p\}$}$$
 
-로 생성된다. 
+로 생성된다.
 
-Coboundary map $$\delta : \check{C}^p \to \check{C}^{p+1}$$의 경우, 
+Coboundary map $$\delta : \check{C}^p \to \check{C}^{p+1}$$의 경우,
 
 $$(\delta f)_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k f_{i_0 \cdots \hat{i_k} \cdots i_{p+1}}$$
 
-로 주어진다. 각 $$(p+1)$$-tuple에서 하나의 index를 생략한 $$p$$-tuple에 대응하는 섹션들을 교대로 합하는 것이다. 
+로 주어진다. 각 $$(p+1)$$-tuple에서 하나의 index를 생략한 $$p$$-tuple에 대응하는 섹션들을 교대로 합하는 것이다.
 
 이제 이들 데이터를 이용하여 각각의 cohomology group들을 계산하자. $$\mathbb{P}^1$$의 경우부터 살펴보면, Čech complex는
 
 $$0 \longrightarrow \check{C}^0\overset{\delta}{\longrightarrow}\check{C}^1\longrightarrow 0$$
 
-로 주어진다. 여기서 
+로 주어진다. 여기서
 
 $$\check{C}^0=\mathcal{O}(d)(U_0)\oplus \mathcal{O}(d)(U_1),\qquad \check{C}^1=\mathcal{O}(d)(U_0\cap U_1)$$
 
@@ -66,13 +66,13 @@ $$\check{C}^0=\mathcal{O}(d)(U_0)\oplus \mathcal{O}(d)(U_1),\qquad \check{C}^1=\
 
 $$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\x_0/\x_1], \qquad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]_d$$
 
-이다. 우선 $$\check{C}^0$$에서의 cohomology를 계산하기 위해 $$\ker\delta$$를 분석하자. $$H^0(\mathbb{P}^n, \mathcal{O}(d))=\Gamma(\mathbb{P}^n, \mathcal{O}(d))$$이므로 이는 사실 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16)의 계산을 재확인하는 것에 불과하지만, 별도의 예시 대신 이 증명에서 Čech cohomology의 계산을 하는 것으로 하자. 
+이다. 우선 $$\check{C}^0$$에서의 cohomology를 계산하기 위해 $$\ker\delta$$를 분석하자. $$H^0(\mathbb{P}^n, \mathcal{O}(d))=\Gamma(\mathbb{P}^n, \mathcal{O}(d))$$이므로 이는 사실 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16)의 계산을 재확인하는 것에 불과하지만, 별도의 예시 대신 이 증명에서 Čech cohomology의 계산을 하는 것으로 하자.
 
 정의에 의해 cochain $$(f_0, f_1) \in \check{C}^0$$이 $$\ker \delta$$에 속한다는 것은 $$f_0 = f_1$$이 $$\mathcal{O}(d)(U_0 \cap U_1)$$에서 성립한다는 뜻이다. 우선 $$U_0$$ 부분을 보면, 임의의 monomial이 $$\mathcal{O}(d)(U_0)$$에 속하기 위해서는 반드시 적당한 $$a\geq 0$$에 대하여 $$\x_0^{d-a}\x_1^a$$ 꼴임을 안다. 비슷하게 어떠한 monomial이 $$\mathcal{O}(d)(U_1)$$에 속하기 위해서는 적당한 $$b\geq 0$$에 대하여 $$\x_0^b\x_1^{d-b}$$의 꼴이어야 한다. 이제 특정 cocycle $$(f_0,f_1)$$이 $$\ker\delta$$에 속하기 위해서는 $$f_0=f_1$$이어야 하고, 따라서 $$a+b=d$$를 만족하는 monomial들만이 $$\ker\delta$$에 속할 수 있다. 즉, 다음의 monomial들
 
 $$\x_0^d, \quad\x_0^{d-1}\x_1,\quad\ldots, \quad\x_0\x_1^{d-1},\quad \x_1^d$$
 
-이 $$H^0$$의 basis이고 이것이 원하는 결과를 준다. 만일 $$d<0$$이라면 $$a,b\geq 0$$은 이 식을 만족시키지 못하므로 $$H^0$$은 $$0$$이 된다. 
+이 $$H^0$$의 basis이고 이것이 원하는 결과를 준다. 만일 $$d<0$$이라면 $$a,b\geq 0$$은 이 식을 만족시키지 못하므로 $$H^0$$은 $$0$$이 된다.
 
 이제 $$H^1$$을 계산하자. 즉 $$\coker\delta$$를 계산해야 한다. 위의 계산으로부터, $$\delta$$의 image는 적당한 상수 $$a_i,b_j$$들에 대하여
 
@@ -96,7 +96,7 @@ $$0 \longrightarrow \mathcal{O}(d-1)\overset{\times \x_n}{\longrightarrow} \math
 
 $$\cdots \to H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^i(\mathbb{P}^n, \mathcal{O}(d-1)) \to H^i(\mathbb{P}^n, \mathcal{O}(d)) \to H^i(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to \cdots$$
 
-를 얻고 우리는 귀납적 과정에 의해 $$\mathbb{P}^{n-1}$$에서의 주장은 알고 있다. 그럼 특히 $$0<i< n$$에 대해서는 
+를 얻고 우리는 귀납적 과정에 의해 $$\mathbb{P}^{n-1}$$에서의 주장은 알고 있다. 그럼 특히 $$0<i< n$$에 대해서는
 
 $$H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))=H^i(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$$
 
@@ -108,17 +108,17 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(d))=H^i(\mathbb{P}^n, \mathcal{O})=0$$
 
 $$H^i(\mathbb{P}^n, \mathcal{O}(d))=0$$
 
-이 모든 $$0<i<n$$과 모든 $$d$$에 대해 성립함을 안다. 
+이 모든 $$0<i<n$$과 모든 $$d$$에 대해 성립함을 안다.
 
 이제 top cohomology 부분
 
 $$\cdots\rightarrow H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))\rightarrow H^n(\mathbb{P}^n, \mathcal{O}(d-1))\rightarrow H^n(\mathbb{P}^n, \mathcal{O}(d))\rightarrow H^n(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$$
 
-을 보자. 만일 $$d>-n$$이라면, 다시 귀납적 가정으로부터 $$H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$$이므로 위와 마찬가지 논증으로 $$H^n(\mathbb{P}^n, \mathcal{O}(d))$$가 모든 $$d>-n-1$$에 대해 성립하는 것을 보일 수 있다. $$d\leq -n-1$$인 경우, $$H^n$$은 Čech complex로부터 직접 계산해야 하는데, 이를 위해 $$\check{C}^n(\mathbb{P}^n, \mathcal{O}(d))$$를 직접 계산하면 $$n$$-cochain은
+을 보자. 만일 $$d\geq -n$$이라면, 다시 귀납적 가정으로부터 $$H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$$이므로 위와 마찬가지 논증으로 $$H^n(\mathbb{P}^n, \mathcal{O}(d))$$가 모든 $$d>-n-1$$에 대해 성립하는 것을 보일 수 있다. $$d\leq -n-1$$인 경우, $$H^n$$은 Čech complex로부터 직접 계산해야 하는데, 이를 위해 $$\check{C}^n(\mathbb{P}^n, \mathcal{O}(d))$$를 직접 계산하면 $$n$$-cochain은
 
 $$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]_d$$
 
-의 원소임을 알고, $$n-1$$-cochain의 image로 나타나지 않는 monomial들은 앞선 $$\mathbb{P}^1$$에서의 계산과 유사하게 <em-ko>모든</em-ko> 지수가 $$-1$$보다 작은 $$d$$차식이며 이로부터 원하는 결과를 얻는다. $$H^0$$의 경우는, 위에서는 직접 계산해보았지만, 이미 언급했듯 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16)의 재확인에 불과하므로 여기서는 굳이 반복하지 않기로 한다. 
+의 원소임을 알고, $$n-1$$-cochain의 image로 나타나지 않는 monomial들은 앞선 $$\mathbb{P}^1$$에서의 계산과 유사하게 <em-ko>모든</em-ko> 지수가 $$-1$$보다 작은 $$d$$차식이며 이로부터 원하는 결과를 얻는다. $$H^0$$의 경우는, 위에서는 직접 계산해보았지만, 이미 언급했듯 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16)의 재확인에 불과하므로 여기서는 굳이 반복하지 않기로 한다.
 
 </details>
 
@@ -126,9 +126,9 @@ $$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]_d$$
 
 $$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_k = \span\{\x_0^{a_0} \cdots \x_n^{a_n} : a_i \leq -1,\, \textstyle\sum a_i = -k - n - 1\}$$
 
-로 정의하며, 증명에서의 치환 $$b_i = -a_i - 1$$에 의해 $$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_k \cong \mathbb{K}[\x_0, \ldots, \x_n]_k$$임을 안다. $$\mathbb{P}^1$$의 경우 $$H^1(\mathbb{P}^1, \mathcal{O}(-3))$$에 대하여 이 정의는 basis $$\{\x_0^{-2}\x_1^{-1}, \x_0^{-1}\x_1^{-2}\}$$를 주고, 이는 증명에서 $$d = -3$$일 때 두 지수가 모두 음수인 monomial들로 $$\coker\delta$$가 생성됨을 보인 것과 일치한다.
+로 정의하며, 치환 $$b_i = -a_i - 1$$에 의해 $$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_k \cong \mathbb{K}[\x_0, \ldots, \x_n]_k$$임을 안다. $$\mathbb{P}^1$$의 경우 $$H^1(\mathbb{P}^1, \mathcal{O}(-3))$$에 대하여 이 정의는 basis $$\{\x_0^{-2}\x_1^{-1}, \x_0^{-1}\x_1^{-2}\}$$를 주고, 이는 증명에서 $$d = -3$$일 때 두 지수가 모두 음수인 monomial들로 $$\coker\delta$$가 생성됨을 보인 것과 일치한다.
 
-Bott's formula가 말하는 것을 직관적으로 요약하면 다음과 같다. 먼저 $$H^0$$는 global section의 공간이며, 이는 degree $$d$$의 homogeneous polynomial들이다. 한편 $$H^n$$은 top-degree cohomology로, 오직 $$d \leq -n-1$$일 때만 살아남는다. 이는 $$\mathcal{O}(d)$$가 충분히 negative한 twist일 때만 "top cohomology"에 기여하는 nontrivial class들이 존재한다는 것을 의미한다. 가장 주목할 만한 것은 중간 차수의 cohomology, 즉 $$0 < q < n$$에 대해서는 $$H^q$$가 항상 $$0$$이라는 사실이다. 이는 projective space의 line bundle이 매우 특별한 구조를 가지고 있음을 보여준다.
+Bott's formula가 말하는 것을 직관적으로 요약하면 다음과 같다. 먼저 $$H^0$$는 global section의 공간이며, 이는 degree $$d$$의 homogeneous polynomial들이며, 한편 $$H^n$$은 top-degree cohomology로, 오직 $$d \leq -n-1$$일 때만 살아남는다. 이는 $$\mathcal{O}(d)$$가 충분히 negative한 twist일 때만 "top cohomology"에 기여하는 nontrivial class들이 존재한다는 것을 의미한다. 가장 주목할 만한 것은 중간 차수의 cohomology, 즉 $$0 < q < n$$에 대해서는 $$H^q$$가 항상 $$0$$이라는 사실이다. 이는 projective space의 line bundle이 매우 특별한 구조를 가지고 있음을 보여준다.
 
 ## Euler Characteristic
 
@@ -149,7 +149,7 @@ $$\rchi(\mathbb{P}^n, \mathcal{O}(d)) = \binom{n+d}{n}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Bott's formula에 의해 cohomology는 세 가지 경우로 나뉜다. 첫째, $$d \geq 0$$인 경우 $$H^0$$만 non-zero이므로 $$\rchi(\mathcal{O}(d)) = \dim H^0(\mathbb{P}^n, \mathcal{O}(d)) = \dim \mathbb{K}[\x_0, \ldots, \x_n]_d = \binom{n+d}{n}$$이다. 둘째, $$-n \leq d \leq -1$$인 경우 모든 cohomology가 사라지므로 $$\rchi(\mathcal{O}(d)) = 0$$이고, 이항계수의 일반화에 의해 $$\binom{n+d}{n}$$ 역시 $$0 \leq d+n \leq n-1$$일 때 $$0$$이므로 일치한다. 셋째, $$d \leq -n-1$$인 경우 $$H^n$$만 non-zero이므로 $$\rchi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$이다. 치환 $$a_i' = -a_i - 1$$을 적용하면 $$a_i \leq -1$$이므로 $$a_i' = -a_i - 1 \geq 0$$이 되고, $$\sum a_i' = \sum(-a_i - 1) = -\sum a_i - (n+1) = -d - (n+1)$$로 변환된다. 따라서 $$\dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$은 $$n+1$$개의 비음수 정수 $$(a_0', \ldots, a_n')$$ 중 합이 $$-d - n - 1$$인 것의 개수, 즉 $$\binom{-d-1}{n}$$이다. 결과적으로 $$\rchi(\mathcal{O}(d)) = (-1)^n \binom{-d-1}{n}$$이다. 일반화된 이항계수의 항등식 $$(-1)^n\binom{-d-1}{n} = \binom{n+d}{n}$$에 의해 $$\rchi(\mathcal{O}(d)) = \binom{n+d}{n}$$이 성립한다.
+Bott's formula에 의해 cohomology는 세 가지 경우로 나뉜다. 첫째, $$d \geq 0$$인 경우 $$H^0$$만 non-zero이므로 $$\rchi(\mathcal{O}(d)) = \dim H^0(\mathbb{P}^n, \mathcal{O}(d)) = \dim \mathbb{K}[\x_0, \ldots, \x_n]_d = \binom{n+d}{n}$$이다. 둘째, $$-n \leq d \leq -1$$인 경우 모든 cohomology가 사라지므로 $$\rchi(\mathcal{O}(d)) = 0$$이고, 이항계수의 일반화에 의해 $$\binom{n+d}{n}$$ 역시 $$0 \leq d+n \leq n-1$$일 때 $$0$$이므로 일치한다. 셋째, $$d \leq -n-1$$인 경우 $$H^n$$만 non-zero이므로 $$\rchi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$이다. 치환 $$a_i' = -a_i - 1$$을 적용하면 $$a_i \leq -1$$이므로 $$a_i' = -a_i - 1 \geq 0$$이 되고, $$\sum a_i' = \sum(-a_i - 1) = -\sum a_i - (n+1) = -d - (n+1)$$로 변환된다. 따라서 $$\dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$은 치환 후 $$n+1$$개의 비음수 정수 $$(a_0', \ldots, a_n')$$ 중 합이 $$-d - n - 1$$인 것의 개수이므로, stars and bars에 의해 $$\binom{(-d-n-1)+n}{n} = \binom{-d-1}{n}$$이다. 결과적으로 $$\rchi(\mathcal{O}(d)) = (-1)^n \binom{-d-1}{n}$$이다. 일반화된 이항계수의 항등식 $$(-1)^n\binom{-d-1}{n} = \binom{n+d}{n}$$에 의해 $$\rchi(\mathcal{O}(d)) = \binom{n+d}{n}$$이 성립한다.
 
 </details>
 
@@ -228,7 +228,7 @@ $$0 \to \mathcal{F}(m-1) \to \mathcal{F}(m) \to \mathcal{F}(m)\vert_H \to 0$$
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> Line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. $$d \geq 0$$이면 Bott's formula에 의해 $$H^i(\mathbb{P}^n, \mathcal{O}(d)) = 0$$이 $$i > 0$$에 대해 성립한다. 그런데 $$\mathcal{O}(d)$$의 $$m$$-regularity 조건은 $$H^i(\mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이지만 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1$$은 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이다. 문제는 $$d - i < -n$$, 즉 $$i > d + n$$인 경우인데, 이때 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$0$$-regular이다. 명제 9에 의해 $$\mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 확인한 바와 일치한다.
+<ins id="ex7">**예시 7**</ins> Line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. $$d \geq 0$$이면 Bott's formula에 의해 $$H^i(\mathbb{P}^n, \mathcal{O}(d)) = 0$$이 $$i > 0$$에 대해 성립한다. 그런데 $$\mathcal{O}(d)$$의 $$m$$-regularity 조건은 $$H^i(\mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이지만 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1$$은 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이다. 문제는 $$d - i < -n$$, 즉 $$i > d + n$$인 경우인데, 이때 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$0$$-regular이다. 반면 $$d < 0$$인 경우, $$\mathcal{O}(d)$$는 $$(-d)$$-regular이다. 명제 6에 의해 $$\mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 확인한 바와 일치한다.
 
 </div>
 
