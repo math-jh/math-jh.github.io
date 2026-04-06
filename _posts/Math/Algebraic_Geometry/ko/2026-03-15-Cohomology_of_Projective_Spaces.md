@@ -78,19 +78,49 @@ $$f_1-f_0=\sum_{i\geq 0}a_i \x_0^{d-i}\x_1^i-\sum_{j\geq 0}b_j\x_0^j\x_1^{d-j}$$
 
 임을 안다. 만일 $$d\geq 0$$이라면 이를 사용하여 임의의 $$\mathcal{O}(d)(U_0\cap U_1)$$의 원소들의 계수를 맞춰줄 수 있으므로 $$\coker\delta=0$$이다. 만일 $$d\leq -1$$이라면, 
 
-$$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$, $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^{d-a}$$에 대해 $$a \geq 0$$이면 $$f_0$$에서, $$a \leq 0$$이면 $$f_1$$에서 얻을 수 있으므로 모든 monomial이 $$\im \delta$$에 속하고 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^{-1}\x_1^{d+1}, \ldots, \x_0^{-d-1}\x_1$$ ($$\x_0^a \x_1^{d-a}$$, $$a = -1, \ldots, -d-1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
+$$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$, $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^{d-a}$$에 대해 $$a \geq 0$$이면 $$f_0$$에서, $$a \leq 0$$이면 $$f_1$$에서 얻을 수 있으므로 모든 monomial이 $$\im \delta$$에 속하고 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^a \x_1^{d-a}$$ ($$a = d+1, \ldots, -1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
 
-이제 $$n \geq 2$$에 대해 귀납법으로 일반적인 경우를 증명한다. $$\mathbb{P}^n$$을 hyperplane $$H = \mathbb{P}^{n-1} = \{x_n = 0\}$$과 열린집합 $$U_n = \{x_n \neq 0\} \cong \mathbb{A}^n$$의 합집합으로 분해한다. Standard affine cover $$\mathcal{U} = \{U_0, \ldots, U_n\}$$에 대한 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}, \mathcal{O}(d))$$를 index $$n$$을 포함하는 항과 포함하지 않는 항으로 분해할 수 있다. 구체적으로, $$p$$-cochain $$f_{i_0 \cdots i_p}$$에서 모든 index가 $$\{0, \ldots, n-1\}$$에 속하는 것들은 $$\mathbb{P}^{n-1}$$의 standard affine cover $$\mathcal{U}' = \{U_0, \ldots, U_{n-1}\}$$에 대한 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}', \mathcal{O}(d))$$의 원소들이며, 적어도 하나의 index가 $$n$$인 것들은 $$U_n$$ (혹은 $$U_n$$과 다른 $$U_i$$들의 교집합) 위에서의 section들이다.
+이제 $$n \geq 2$$에 대해 이중 귀납법으로 일반적인 경우를 증명한다. 외부 귀납은 $$n$$에 대한 것으로, $$\mathbb{P}^{n-1}$$ 위에서 공식이 성립한다고 가정한다. $$\mathbb{P}^n$$의 초평면 $$H = \{\x_n = 0\} \cong \mathbb{P}^{n-1}$$에 대해 다음 짧은 완전열을 얻는다:
 
-이 분해는 다음과 같은 짧은 완전열을 제공한다. 우선 $$p$$-cochain group을 $$\check{C}^p = \check{C}^p_0 \oplus \check{C}^p_1$$으로 분해하자. 여기서 $$\check{C}^p_0$$는 모든 index가 $$\{0, \ldots, n-1\}$$에 속하는 cochain들로 이루어진 부분군이고, $$\check{C}^p_1$$은 적어도 하나의 index가 $$n$$인 cochain들로 이루어진 부분군이다. Coboundary map $$\delta$$는 이 분해를 존중한다. 구체적으로, $$\delta = \delta_0 + \delta_1$$으로 분해할 수 있는데, $$\delta_0$$는 index $$n$$을 포함하지 않는 cochain들 사이의 map이고 (이는 $$\mathbb{P}^{n-1}$$의 Čech 복합체 $$\check{C}^\bullet(\mathcal{U}', \mathcal{O}(d))$$의 differential과 일치한다), $$\delta_1$$은 index $$n$$을 포함하는 cochain들과 연관된 부분이다.
+$$0 \to \mathcal{O}_{\mathbb{P}^n}(d-1) \xrightarrow{\cdot \x_n} \mathcal{O}_{\mathbb{P}^n}(d) \to \mathcal{O}_H(d) \to 0$$
 
-$$\check{C}^p_1$$을 더 자세히 기술하면, 이는 index $$n$$이 반드시 포함된 $$(p+1)$$-tuple $$(i_0, \ldots, i_{p-1}, n)$$들에 대응되는 섹션들의 직합이다. 이때 $$p$$-tuple $$(i_0, \ldots, i_{p-1})$$는 $$\{0, \ldots, n\}$$의 원소들이므로, $$\check{C}^p_1$$은 사실 $$U_n$$의 standard affine cover $$\{U_0 \cap U_n, \ldots, U_{n-1} \cap U_n\}$$에 대한 Čech 복합체 $$\check{C}^{p-1}(\{U_i \cap U_n\}, \mathcal{O}(d)\vert_{U_n})$$에 해당한다. $$U_n \cong \mathbb{A}^n$$이므로, $$\mathcal{O}(d)\vert_{U_n}$$은 affine variety 위의 quasi-coherent sheaf이고 따라서 $$H^{>0}(U_n, \mathcal{O}(d)) = 0$$이다.
+이 완전열의 cohomology long exact sequence를 $$\mathbb{P}^n$$ 위에서의 각 $$d$$에 대해 적용한다.
 
-이로부터 짧은 완전열
+**1단계: 중간 차수 cohomology의 소거.** $$0 < q < n$$에 대해 long exact sequence의
 
-$$0 \to \check{C}^\bullet(\mathcal{U}', \mathcal{O}(d))[-1] \to \check{C}^\bullet(\mathcal{U}, \mathcal{O}(d)) \to \check{C}^\bullet(\{U_i \cap U_n\}, \mathcal{O}(d)\vert_{U_n}) \to 0$$
+$$H^{q-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^q(\mathcal{O}(d-1)) \to H^q(\mathcal{O}(d)) \to H^q(\mathbb{P}^{n-1}, \mathcal{O}(d))$$
 
-을 얻는다. 여기서 첫 번째 map은 index $$n$$을 생략하는 inclusion이고, 두 번째 map은 index $$n$$이 포함된 항을 추출하는 surjection이며, $$[-1]$$은 차수를 1만큼 shift하는 것을 의미한다. 이 짧은 완전열에 해당하는 long exact sequence에서 $$\check{C}^\bullet(\{U_i \cap U_n\}, \mathcal{O}(d)\vert_{U_n})$$의 higher cohomology가 모두 사라지므로, $$0 < q < n$$에 대해 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) \cong H^q(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이다. $$q = 0$$의 경우 global section은 $$\mathbb{P}^n$$ 전체에서 regular인 degree $$d$$의 homogeneous polynomial들이므로 $$\mathbb{K}[\x_0, \ldots, \x_n]_d$$이다. $$q = n$$의 경우, $$\mathbb{P}^n$$의 Čech 복합체에서 $$n$$-cochain들은 모든 $$n+1$$개의 index를 포함하는 항 $$f_{0 1 \cdots n} \in \mathcal{O}(d)(U_{01\cdots n})$$이며, 이는 $$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]$$의 원소로 표현된다. $$H^n$$의 원소들은 coboundary image를 제외한 모든 $$a_i \leq -1$$이고 $$\sum a_i = d$$인 monomial $$\x_0^{a_0} \cdots \x_n^{a_n}$$들로 주어진다. 치환 $$b_i = -a_i - 1$$을 적용하면 $$b_i \geq 0$$이고 $$\sum b_i = -d - n - 1$$이 되어, $$H^n(\mathbb{P}^n, \mathcal{O}(d)) \cong \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$을 얻는다.
+에서 외부 귀납적 가정에 의해 $$H^q(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이고 마찬가지로 $$H^{q-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이다. 이는 $$q \leq n-1$$이므로 $$H^q, H^{q-1}$$ 모두 $$\mathbb{P}^{n-1}$$ 위에서 중간 차수 cohomology (각각 $$0 < q \leq n-1$$과 $$0 \leq q-1 \leq n-2$$)이거나 top cohomology이지만, $$\mathbb{P}^{n-1}$$에서 $$H^{n-1}$$가 non-zero인 것은 $$d \leq -n$$일 때뿐이고, $$H^{q-1}$$는 $$q-1 \leq n-2 < n-1$$이므로 항상 $$0$$이다. 또한 $$q = n-1$$일 때 $$H^q = H^{n-1}$$이 $$d \leq -n$$에서 non-zero일 수 있지만, 이 경우 $$H^{q-1} = H^{n-2} = 0$$이므로 $$H^{n-1}(\mathcal{O}(d-1)) \hookrightarrow H^{n-1}(\mathcal{O}(d))$$라는 단사만 얻고, $$d \geq 0$$에서 $$H^{n-1} = 0$$임을 알고 있으므로 내림차순 귀납에 의해 $$H^{n-1}(\mathcal{O}(d)) = 0$$을 모든 $$d$$에 대해 얻는다. $$q \leq n-2$$인 경우에는 동형사 $$H^q(\mathcal{O}(d-1)) \cong H^q(\mathcal{O}(d))$$이 성립하므로 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) = 0$$을 얻는다.
+
+**2단계: $$H^0$$의 계산.** Long exact sequence의 $$H^0$$ 부분
+
+$$0 \to H^0(\mathcal{O}(d-1)) \to H^0(\mathcal{O}(d)) \to H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^1(\mathcal{O}(d-1))$$
+
+에서 1단계에 의해 $$H^1(\mathcal{O}(d-1)) = 0$$ ($$n \geq 2$$이므로 $$0 < 1 < n$$)이고, 따라서
+
+$$0 \to H^0(\mathcal{O}(d-1)) \to H^0(\mathcal{O}(d)) \to H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to 0$$
+
+이 완전열이 된다. $$d \geq 0$$에 대해 $$d$$에 대한 오름차순 귀납법으로 $$H^0(\mathbb{P}^n, \mathcal{O}(d)) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d$$임을 보인다. $$d = 0$$이면 $$H^0(\mathcal{O}(0)) = \mathbb{K}$$이고 외부 귀납적 가정으로 $$H^0(\mathbb{P}^{n-1}, \mathcal{O}(0)) \cong \mathbb{K}$$이므로, 위 완전열에서 $$H^0(\mathcal{O}(-1)) = 0$$을 얻는다. $$d \geq 1$$에 대해 귀납적 가정 $$H^0(\mathcal{O}(d-1)) \cong \mathbb{K}[\x_0, \ldots, \x_n]_{d-1}$$를 사용하면, 외부 귀납적 가정 $$H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) \cong \mathbb{K}[\x_0, \ldots, \x_{n-1}]_d$$와 함께
+
+$$H^0(\mathcal{O}(d)) \cong \mathbb{K}[\x_0, \ldots, \x_n]_{d-1} \oplus \mathbb{K}[\x_0, \ldots, \x_{n-1}]_d \cong \mathbb{K}[\x_0, \ldots, \x_n]_d$$
+
+를 얻는다. $$d \leq -1$$에 대해서는 위 완전열에서 $$H^0(\mathcal{O}(d-1))$$이 $$H^0(\mathcal{O}(d))$$에 단사적으로 매장되고, 외부 귀납적 가정에 의해 $$H^0(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$ ($$d < 0$$)이므로 $$H^0(\mathcal{O}(d)) \cong H^0(\mathcal{O}(d-1))$$이다. $$H^0(\mathcal{O}(-1)) = 0$$이므로, 내림차순 귀납에 의해 $$H^0 = 0$$을 모든 $$d \leq -1$$에 대해 얻는다.
+
+**3단계: $$H^n$$의 계산.** 1단계에 의해 $$H^{n-1}(\mathcal{O}(d)) = 0$$이므로 long exact sequence에서
+
+$$0 \to H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^n(\mathcal{O}(d-1)) \to H^n(\mathcal{O}(d)) \to 0$$
+
+을 얻는다. 외부 귀납적 가정에 의해 $$H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))$$는 $$d \leq -n$$일 때만 non-zero이고, 이때 $$\dim H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) = \binom{-d-1}{n-1}$$이다. $$d \geq -n+1$$이면 $$H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) = 0$$이므로 $$H^n(\mathcal{O}(d-1)) \cong H^n(\mathcal{O}(d))$$이고, 따라서 $$H^n(\mathcal{O}(d))$$는 $$d \geq -n+1$$에서 상수이다. $$d \geq 0$$에 대해서는 Čech complex에서 $$H^n = 0$$임을 확인할 수 있으므로 (모든 지수가 음수인 monomial은 $$d \geq 0$$일 때 존재하지 않음), 내림차순 귀납에 의해 $$H^n(\mathcal{O}(d)) = 0$$을 모든 $$d \geq -n$$에 대해 얻는다.
+
+$$d \leq -n-1$$에 대해서는 위 완전열에서
+
+$$\dim H^n(\mathcal{O}(d-1)) = \dim H^n(\mathcal{O}(d)) + \binom{-d-1}{n-1}$$
+
+이 성립한다. $$H^n(\mathcal{O}(-n)) = 0$$을 알고 있으므로, 내림차순 귀납에 의해
+
+$$\dim H^n(\mathcal{O}(d)) = \sum_{k=d}^{-n-1} \binom{-k-1}{n-1} = \binom{-d-1}{n}$$
+
+을 얻는다. 마지막 등식은 이항계수의 합 공식 $$\sum_{j=0}^{m} \binom{r+j}{j} = \binom{r+m+1}{m}$$에 의해 성립한다. 실제로 $$H^n$$의 원소는 monomial로 직접 계산할 수도 있다. $$\mathbb{P}^n$$의 standard affine cover $$\mathcal{U} = \{U_0, \ldots, U_n\}$$에 대한 Čech 복합체에서 $$n$$-cochain은 항 $$f_{0 1 \cdots n} \in \mathcal{O}(d)(U_{0 1 \cdots n})$$이며, 이는 $$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]_d$$의 원소이다. 이 항은 coboundary map의 source가 아니므로 $$(n-1)$$-cochain의 coboundary에 속하지 않는 monomial들이 $$H^n$$을 이룬다. $$(n-1)$$-cochain $$g_{i_0 \cdots i_{n-1}}$$은 적어도 하나의 index가 빠져 있으므로, 그 coboundary image에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이다. 따라서 $$H^n$$은 모든 $$a_i \leq -1$$이고 $$\sum a_i = d$$인 monomial $$\x_0^{a_0} \cdots \x_n^{a_n}$$들로 생성된다. 치환 $$b_i = -a_i - 1$$을 적용하면 $$b_i \geq 0$$이고 $$\sum b_i = -d - n - 1$$이 되어, $$H^n(\mathbb{P}^n, \mathcal{O}(d)) \cong \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$을 얻는다.
 
 </details>
 
@@ -174,7 +204,7 @@ $$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d
 
 $$\ker \delta$$: $$f_0$$의 monomial은 $$\x_0^{d-a}\x_1^a$$ ($$a \geq 0$$), $$f_1$$의 monomial은 $$\x_0^b\x_1^{d-b}$$ ($$b \geq 0$$) 꼴이다. $$f_0 = f_1$$이면 $$a+b = d$$이므로 $$d \geq 0$$일 때 $$\dim H^0 = d+1$$, $$d \leq -1$$일 때 $$\ker \delta = 0$$이고 $$H^0 = 0$$이다.
 
-$$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$ ($$\x_1$$ 지수 $$\geq 0$$), $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$ ($$\x_0$$ 지수 $$\geq 0$$)이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^b$$ ($$a+b=d$$)이 $$\im \delta$$에 속하므로 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^a \x_1^{d-a}$$ ($$a = -1, \ldots, -d-1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
+$$H^1 = \coker \delta$$: $$\im \delta = f_1 - f_0$$에서 $$f_0 = \sum_{i \geq 0} c_i \x_0^{d-i}\x_1^i$$ ($$\x_1$$ 지수 $$\geq 0$$), $$f_1 = \sum_{j \geq 0} d_j \x_0^j \x_1^{d-j}$$ ($$\x_0$$ 지수 $$\geq 0$$)이다. $$d \geq 0$$이면 임의의 monomial $$\x_0^a \x_1^b$$ ($$a+b=d$$)이 $$\im \delta$$에 속하므로 $$\coker \delta = 0$$이다. $$d \leq -1$$이면 $$\im \delta$$에 속하는 monomial은 적어도 하나의 지수가 $$\geq 0$$이고, cokernel은 두 지수 모두 음수인 monomial $$\x_0^a \x_1^{d-a}$$ ($$a = d+1, \ldots, -1$$)로 생성되어 $$\dim H^1 = -d-1$$이다. 이는 $$\mathbb{K}[\x_0^{-1}, \x_1^{-1}]_{-d-2}$$의 차원과 일치한다.
 
 </div>
 
