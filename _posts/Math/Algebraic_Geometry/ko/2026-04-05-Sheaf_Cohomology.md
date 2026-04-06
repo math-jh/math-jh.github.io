@@ -11,7 +11,7 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology.png
     overlay_filter: 0.5
 
-date: 2026-03-15
+date: 2026-04-05
 last_modified_at: 2026-04-05
 weight: 12
 

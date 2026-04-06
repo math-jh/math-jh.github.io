@@ -11,7 +11,7 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Affine_Zarieties.png
     overlay_filter: 0.5
 
-date: 2026-03-11
+date: 2026-03-12
 last_modified_at: 2026-03-18
 weight: 1
 
@@ -21,7 +21,7 @@ weight: 1
 
 $$Z(f)= \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f(x_1, \ldots, x_n) = 0\},\qquad f\in \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-으로 주어지는 집합들에 관심이 있다. 이는 $$\mathbb{K}^n$$에서 다항식 $$f$$의 근들의 모임이다. 일반적으로 $$\mathbb{K}=\mathbb{C}$$로 두며, 이러한 가정에서 특히 좋은 것은 $$\mathbb{C}$$이 [algebraically closed](/ko/math/general/algebraically_closed_field)라는 사실이다. 그러나, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 혼동을 방지하기 위하여 다항식 $$f$$의 변수는 정자 $$\x$$와 같은 식으로 표기할 것이다.
+으로 주어지는 집합들에 관심이 있다. 이는 $$\mathbb{K}^n$$에서 다항식 $$f$$의 근들의 모임이다. 일반적으로 $$\mathbb{K}=\mathbb{C}$$로 두며, 이러한 가정에서 특히 좋은 것은 $$\mathbb{C}$$이 algebraically closed라는 사실이다. 그러나, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 혼동을 방지하기 위하여 다항식 $$f$$의 변수는 정자 $$\x$$와 같은 식으로 표기할 것이다.
 
 ## 아핀다양체의 정의
 

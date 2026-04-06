@@ -11,7 +11,7 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Grassmannians.png
     overlay_filter: 0.5
 
-date: 2026-03-12
+date: 2026-03-24
 last_modified_at: 2026-03-24
 weight: 7
 

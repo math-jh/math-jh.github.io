@@ -11,7 +11,7 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Tangent_Spaces.png
     overlay_filter: 0.5
 
-date: 2026-03-12
+date: 2026-03-22
 last_modified_at: 2026-03-22
 weight: 6
 
