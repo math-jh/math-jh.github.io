@@ -12,14 +12,14 @@ header:
     overlay_filter: 0.5
 
 date: 2026-03-25
-last_modified_at: 2026-03-25
+last_modified_at: 2026-04-08
 weight: 9
 
 ---
 
 우리는 앞선 글에서 다양체 $X$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $\Cl(X)$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_geometry/divisors#ex11)), $$\mathbb{P}^n$$에서 일반적인 divisor $dH$는 $d \ge 0$일 때만 어떤 함수의 zero set으로 나온다.
 
-이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $\mathcal{L}$은 각 점 $p \in X$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $\mathcal{L}$의 section $s$는 자연스럽게 divisor $\divisor(s)$를 정의한다. 이 관점에서는 임의의 divisor $D$에 대해 $\mathcal{O}_X(D)$라는 line bundle을 만들 수 있고, 그 section들이 $D$보다 크거나 같은 divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
+이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $L$은 각 점 $p \in X$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $L$의 section $s$는 자연스럽게 divisor $\divisor(s)$를 정의한다. 이 관점에서는 임의의 divisor $D$에 대해 $\mathcal{O}_X(D)$라는 line bundle을 만들 수 있고, 그 section들이 $D$보다 크거나 같은 divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
 
 ## Line Bundle의 정의
 
@@ -27,9 +27,9 @@ Line bundle, 더 나아가 이 글의 뒷부분에서 정의할 vector bundle은
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Variety $$X$$ 위의 *line bundle* $$\mathcal{L}$$은 다음과 같은 데이터로 구성된다.
+<ins id="def1">**정의 1**</ins> Variety $$X$$ 위의 *line bundle* $$L$$은 다음과 같은 데이터로 구성된다.
 
-1. Projection $$\pi: \mathcal{L} \to X$$.
+1. Projection $$\pi: L \to X$$.
 2. $$X$$의 open cover $$\{U_i\}$$와 각 $$i$$에 대한 *local trivialization* $$\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^1$$. 이들이 정의하는
     
     $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^1 \to (U_i \cap U_j) \times \mathbb{A}^1$$
@@ -38,15 +38,15 @@ Line bundle, 더 나아가 이 글의 뒷부분에서 정의할 vector bundle은
 
 </div>
 
-두 line bundle $\mathcal{L}, \mathcal{M} \to X$ 사이의 *morphism* $\varphi \colon \mathcal{L} \to \mathcal{M}$은 각 점 $p \in X$에서 fiber 사이의 $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \to \mathcal{M}_p$를 정의하며, 적당한 open cover $\{U_k\}$ 위에서 $\mathcal{O}_X(U_k)$-module homomorphism
+두 line bundle $L, M \to X$ 사이의 *morphism* $\varphi \colon L \to M$은 각 점 $p \in X$에서 fiber 사이의 $\mathbb{K}$-linear map $\varphi_p \colon L_p \to M_p$를 정의하며, 적당한 open cover $\{U_k\}$ 위에서 $\mathcal{O}_X(U_k)$-module homomorphism
 
 $$\varphi_k \colon \mathcal{O}_{U_k} \to \mathcal{O}_{U_k}$$
 
 으로 표현될 수 있고, 이들 사이에
 
-$$g^{\mathcal{M}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{L}}_{kl}$$
+$$g^{M}_{kl} \circ \varphi_l = \varphi_k \circ g^{L}_{kl}$$
 
-이 성립한다. Line bundle의 fiber는 1차원이므로, 각 $\varphi_k$는 적당한 $h_k \in \mathcal{O}_X(U_k)$에 의한 곱셈 $s \mapsto h_k s$로 주어진다. $\varphi$가 각 fiber에서 bijective일 때, 이를 *isomorphism*이라 부르고 $\mathcal{L} \cong \mathcal{M}$으로 표기한다. Fiber가 1차원이므로 이는 각 점에서 nonzero scalar를 주는 것과 같으며, 즉 compatible하게 $h_k \in \mathcal{O}_X(U_k)^\ast$를 선택하는 것과 동치이다.
+이 성립한다. Line bundle의 fiber는 1차원이므로, 각 $\varphi_k$는 적당한 $h_k \in \mathcal{O}_X(U_k)$에 의한 곱셈 $s \mapsto h_k s$로 주어진다. $\varphi$가 각 fiber에서 bijective일 때, 이를 *isomorphism*이라 부르고 $L \cong M$으로 표기한다. Fiber가 1차원이므로 이는 각 점에서 nonzero scalar를 주는 것과 같으며, 즉 compatible하게 $h_k \in \mathcal{O}_X(U_k)^\ast$를 선택하는 것과 동치이다.
 
 그럼 다음 명제는 cocycle condition의 정의로부터 직접 확인된다.
 
@@ -62,19 +62,19 @@ $$g^{\mathcal{M}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{L}}_{kl}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> *Trivial line bundle* $$\mathcal{O}_X = X \times \mathbb{A}^1$$은 모든 transition function이 $$g_{ij} = 1$$인 line bundle이다. 이는 twist가 없는 가장 간단한 line bundle이다. 
+<ins id="ex3">**예시 3**</ins> *Trivial line bundle* $$X \times \mathbb{A}^1$$은 모든 transition function이 $$g_{ij} = 1$$인 line bundle이다. 이는 twist가 없는 가장 간단한 line bundle이다. 
 
 </div>
 
-따라서 [정의 1](#def1)의 둘째 조건은 line bundle $\mathcal{L}$이 적당한 열린집합 $U \subseteq X$로 제한했을 때 trivial line bundle과 isomorphic한 것을 의미한다.
+따라서 [정의 1](#def1)의 둘째 조건은 line bundle $L$이 적당한 열린집합 $U \subseteq X$로 제한했을 때 trivial line bundle과 isomorphic한 것을 의미한다.
 
-[명제 2](#prop2)는 흔한 gluing condition으로, 이 조건에 의해 line bundle은 일종의 sheaf로 생각할 수 있다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 구체적으로, 우리는 line bundle $$\mathcal{L}$$이 주어졌을 때, 이 line bundle의 section sheaf를
+[명제 2](#prop2)는 흔한 gluing condition으로, 이 조건에 의해 line bundle은 일종의 sheaf로 생각할 수 있다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 구체적으로, 우리는 line bundle $$L$$이 주어졌을 때, 이 line bundle의 section sheaf를
 
-$$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \to \mathcal{L} \mid \pi \circ s = \id_U\}$$
+$$U\mapsto \mathcal{L}(U)=\{s: U \to L \mid \pi \circ s = \id_U\}$$
 
-으로 정의한다. 즉 $$\mathcal{O}_X(\mathcal{L})$$은 surjection $$\pi$$의 section들의 sheaf이다. ([\[위상수학\] §층, ⁋예시 9](/ko/math/topology/sheaves#ex9))
+으로 정의한다. 즉 $$\mathcal{L}$$은 surjection $$\pi$$의 section들의 sheaf이다. ([\[위상수학\] §층, ⁋예시 9](/ko/math/topology/sheaves#ex9))
 
-그럼 Local trivialization $$\phi_i: \pi^{-1}(U_i) \to U_i \times \mathbb{A}^1$$에 의해 $$\mathcal{O}_X(\mathcal{L})\vert_{U_i} \cong \mathcal{O}_{U_i}$$이다. 이를 통해 우리는 $$U_i$$ 위에서는 국소적으로 이 section들을 일상적인 $$\mathbb{K}$$-valued 함수처럼 생각할 수 있다. 
+그럼 Local trivialization $$\phi_i: \pi^{-1}(U_i) \to U_i \times \mathbb{A}^1$$에 의해 $$\mathcal{L}\vert_{U_i} \cong \mathcal{O}_{U_i}$$이다. 이를 통해 우리는 $$U_i$$ 위에서는 국소적으로 이 section들을 일상적인 $$\mathbb{K}$$-valued 함수처럼 생각할 수 있다. 
 
 이는 다음을 의미한다. 
 
@@ -88,7 +88,7 @@ $$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \to \mathcal{L} \mid \pi \circ s
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> Line bundle $$\mathcal{L}$$의 section sheaf $$\mathcal{O}_X(\mathcal{L})$$은 invertible sheaf이다. 역으로, 모든 invertible sheaf는 유일한 line bundle로부터 온다.
+<ins id="prop5">**명제 5**</ins> Line bundle $$L$$의 section sheaf $$\mathcal{L}$$은 invertible sheaf이다. 역으로, 모든 invertible sheaf는 유일한 line bundle로부터 온다.
 
 </div>
 
@@ -99,7 +99,7 @@ Invertible sheaf $$\mathcal{F}$$에 대하여, local isomorphism $$\mathcal{F}\v
 
 </details>
 
-이 명제에 의해 우리는 line bundle과 invertible sheaf가 같은 개념인 것을 안다. 관습적으로 $$\mathcal{L}$$로 표기할 때는 line bundle으로 부르고, $$\mathcal{O}_X(\mathcal{L})$$로 표기할 때는 invertible sheaf라 불러서 그 맥락을 강조한다.
+이 명제에 의해 우리는 line bundle과 invertible sheaf가 같은 개념인 것을 안다. 우리는 혼란을 피하기 위해 line bundle은 $$L$$, 그에 해당하는 invertible sheaf는 $$\mathcal{L}$$로 표기할 것이나, 이들은 정말로 같은 것이기 때문에 표기상 애매한 것들이 있다. 특히, structure sheaf $$\mathcal{O}_X$$는 정확히 trivial line bundle의 sheaf of sections인데, 
 
 ## Line bundle의 연산
 
@@ -107,32 +107,32 @@ Invertible sheaf $$\mathcal{F}$$에 대하여, local isomorphism $$\mathcal{F}\v
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> 두 line bundle $$\mathcal{L}, \mathcal{M}$$의 tensor product $$\mathcal{L} \otimes \mathcal{M}$$도 line bundle이다. 그 transition functions은 $$\{g_{ij} h_{ij}\}$$이다. 여기서 $$\{g_{ij}\}, \{h_{ij}\}$$는 각각 $$\mathcal{L}, \mathcal{M}$$의 transition functions이다.
+<ins id="prop6">**명제 6**</ins> 두 line bundle $$L, M$$의 tensor product $$L \otimes M$$도 line bundle이다. 그 transition functions은 $$\{g_{ij} h_{ij}\}$$이다. 여기서 $$\{g_{ij}\}, \{h_{ij}\}$$는 각각 $$L, M$$의 transition functions이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Tensor product의 fiber는 $$\mathcal{L}_p \otimes_{\mathbb{K}} \mathcal{M}_p$$이고, 이는 두 1차원 벡터공간의 tensor product이므로 다시 1차원이다. Transition function은 $$\phi_j \circ \phi_i^{-1}$$과 $$\psi_j \circ \psi_i^{-1}$$의 곱이 되므로 $$g_{ij} h_{ij}$$이다.
+Tensor product의 fiber는 $$L_p \otimes_{\mathbb{K}} M_p$$이고, 이는 두 1차원 벡터공간의 tensor product이므로 다시 1차원이다. Transition function은 $$\phi_j \circ \phi_i^{-1}$$과 $$\psi_j \circ \psi_i^{-1}$$의 곱이 되므로 $$g_{ij} h_{ij}$$이다.
 
 </details>
 
-임의의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}$$의 dual bundle $$\mathcal{L}^\vee$$는 각 fiber가
+임의의 line bundle $$L$$에 대하여, $$L$$의 dual bundle $$L^\vee$$는 각 fiber가
 
-$$\mathcal{L}_x^\vee=\Hom_\mathbb{K}(\mathcal{L}_x, \mathbb{K})$$
+$$L_x^\vee=\Hom_\mathbb{K}(L_x, \mathbb{K})$$
 
-로 주어지는 bundle이다. 만일 [명제 5](#prop5)를 따라 line bundle들을 (invertible) sheaf로 생각한다면 $$\mathcal{L}^\vee$$는 sheaf Hom $$\sHom_{\mathcal{O}_X}(\mathcal{L}, \mathcal{O}_X)$$에 해당하는 line bundle이다. 
+로 주어지는 bundle이다. 만일 [명제 5](#prop5)를 따라 line bundle들을 (invertible) sheaf로 생각한다면 $$L^\vee$$는 sheaf Hom $$\sHom_{\mathcal{O}_X}(L, \mathcal{O}_X)$$에 해당하는 line bundle이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Line bundle $$\mathcal{L}$$의 *dual bundle* $$\mathcal{L}^\vee$$도 line bundle이며, 그 transition functions은 $$\{g_{ij}^{-1}\}$$이다.
+<ins id="prop7">**명제 7**</ins> Line bundle $$L$$의 *dual bundle* $$L^\vee$$도 line bundle이며, 그 transition functions은 $$\{g_{ij}^{-1}\}$$이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Dual bundle의 fiber는 $$\mathcal{L}_p^\vee = \Hom_{\mathbb{K}}(\mathcal{L}_p, \mathbb{K})$$이고, 이는 1차원 벡터공간의 dual이므로 다시 1차원이다. Transition function은 $$g_{ij}$$의 inverse이다.
+Dual bundle의 fiber는 $$L_p^\vee = \Hom_{\mathbb{K}}(L_p, \mathbb{K})$$이고, 이는 1차원 벡터공간의 dual이므로 다시 1차원이다. Transition function은 $$g_{ij}$$의 inverse이다.
 
 </details>
 
@@ -140,26 +140,26 @@ Dual bundle의 fiber는 $$\mathcal{L}_p^\vee = \Hom_{\mathbb{K}}(\mathcal{L}_p, 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 임의의 line bundle $$\mathcal{L}$$에 대해 $$\mathcal{L} \otimes \mathcal{L}^\vee \cong \mathcal{O}_X$$이다.
+<ins id="prop8">**명제 8**</ins> 임의의 line bundle $$L$$에 대해 $$L \otimes L^\vee \cong \mathcal{O}_X$$이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathcal{L} \otimes \mathcal{L}^\vee$$의 transition functions은 $$g_{ij} \cdot g_{ij}^{-1} = 1$$이므로 trivial bundle이다.
+$$L \otimes L^\vee$$의 transition functions은 $$g_{ij} \cdot g_{ij}^{-1} = 1$$이므로 trivial bundle이다.
 
 </details>
 
-언제나와 마찬가지로, line bundle 또한 충분히 작은 affine open set 위에서 살펴보아 그 구조를 이해할 수 있다. Line bundle $$\mathcal{L}$$을 생각하고, $$\mathcal{L}$$이 trivial이도록 하는 affine open subset $$U_i$$를 택하자. 그럼 projection map
+언제나와 마찬가지로, line bundle 또한 충분히 작은 affine open set 위에서 살펴보아 그 구조를 이해할 수 있다. Line bundle $$L$$을 생각하고, $$L$$이 trivial이도록 하는 affine open subset $$U_i$$를 택하자. 그럼 projection map
 
 $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 
-는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop19)로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $$\pi^{-1}(U_i)$$의 coordinate ring을 $$U_i$$의 coordinate ring을 계수로 갖는 module로 만들고, 차원을 고려해보면 그 rank는 1이다. $$U_i$$의 임의의 열린집합에서도 $$\mathcal{L}$$은 trivial하므로, 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1)) 그럼 이 때 line bundle들 위에서 정의되는 연산 $$\otimes$$와 $$\vee$$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3)의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5)을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
+는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_geometry/affine_varieties#prop19)로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $$\pi^{-1}(U_i)$$의 coordinate ring을 $$U_i$$의 coordinate ring을 계수로 갖는 module로 만들고, 차원을 고려해보면 그 rank는 1이다. $$U_i$$의 임의의 열린집합에서도 $$L$$은 trivial하므로, 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1)) 그럼 이 때 line bundle들 위에서 정의되는 연산 $$\otimes$$와 $$\vee$$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3)의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5)을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Variety $$X$$의 *Picard group* $$\Pic(X)$$는 $$X$$ 위의 line bundle들의 isomorphism class들의 집합에 tensor product를 연산으로 하여 얻어진 group이다. 항등원은 trivial bundle $$\mathcal{O}_X$$이고, $$\mathcal{L}$$의 inverse는 $$\mathcal{L}^\vee$$이다.
+<ins id="def9">**정의 9**</ins> Variety $$X$$의 *Picard group* $$\Pic(X)$$는 $$X$$ 위의 line bundle들의 isomorphism class들의 집합에 tensor product를 연산으로 하여 얻어진 group이다. 항등원은 trivial bundle $$\mathcal{O}_X$$이고, $$L$$의 inverse는 $$L^\vee$$이다.
 
 </div>
 
@@ -174,7 +174,7 @@ $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 6](#prop6)에 의해 tensor product은 line bundle들의 이항연산이며, [명제 8](#prop8)에 의해 $$\mathcal{O}_X$$가 항등원이고 $$\mathcal{L}^\vee$$가 $$\mathcal{L}$$의 역원이다. Tensor product의 교환법칙 $$\mathcal{L} \otimes \mathcal{M} \cong \mathcal{M} \otimes \mathcal{L}$$과 결합법칙 $$(\mathcal{L} \otimes \mathcal{M}) \otimes \mathcal{N} \cong \mathcal{L} \otimes (\mathcal{M} \otimes \mathcal{N})$$은 transition functions의 수준에서 $$g_{ij}h_{ij} = h_{ij}g_{ij}$$ 및 $$(g_{ij}h_{ij})k_{ij} = g_{ij}(h_{ij}k_{ij})$$로부터 직접 얻어진다.
+[명제 6](#prop6)에 의해 tensor product은 line bundle들의 이항연산이며, [명제 8](#prop8)에 의해 $$\mathcal{O}_X$$가 항등원이고 $$L^\vee$$가 $$L$$의 역원이다. Tensor product의 교환법칙 $$L \otimes M \cong M \otimes L$$과 결합법칙 $$(L \otimes M) \otimes \mathcal{N} \cong L \otimes (M \otimes \mathcal{N})$$은 transition functions의 수준에서 $$g_{ij}h_{ij} = h_{ij}g_{ij}$$ 및 $$(g_{ij}h_{ij})k_{ij} = g_{ij}(h_{ij}k_{ij})$$로부터 직접 얻어진다.
 
 </details>
 
@@ -215,7 +215,7 @@ $$\mathbb{Z}\rightarrow \Pic(\mathbb{P}^n);\qquad d\mapsto [\mathcal{O}_{\mathbb
 
 을 정의할 수 있다. 
 
-우리의 주장은 이것이 isomorphism이라는 것이다. 우선 임의의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}\vert_{U_i}$$는 [예시 11](#ex11)에 의해 trivial line bundle과 isomorphic하므로, 각각의 $$U_i\cap U_j$$의 transition function $$h_{ij}$$가 $$\mathcal{L}$$을 완전히 결정한다. 그런데 정의에 의해 $$U_i\cap U_j$$에서 $$h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$$이므로 $$h_{ij}$$는 반드시 $$c_{ij}(\x_i/\x_j)^d$$ 꼴이다. 이 때 transition function이 상수배인 line bundle은 trivial하므로 이로부터 위의 group homomorphism이 surjective인 것을 안다. 비슷하게, $$\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$$라 두고 transition function을 비교해보면, 
+우리의 주장은 이것이 isomorphism이라는 것이다. 우선 임의의 line bundle $$L$$에 대하여, $$L\vert_{U_i}$$는 [예시 11](#ex11)에 의해 trivial line bundle과 isomorphic하므로, 각각의 $$U_i\cap U_j$$의 transition function $$h_{ij}$$가 $$L$$을 완전히 결정한다. 그런데 정의에 의해 $$U_i\cap U_j$$에서 $$h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$$이므로 $$h_{ij}$$는 반드시 $$c_{ij}(\x_i/\x_j)^d$$ 꼴이다. 이 때 transition function이 상수배인 line bundle은 trivial하므로 이로부터 위의 group homomorphism이 surjective인 것을 안다. 비슷하게, $$\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$$라 두고 transition function을 비교해보면, 
 
 $$\mathcal{O}_{\mathbb{P}^n}(d-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(d')^\vee\cong \mathcal{O}_{\mathbb{P}^n}$$
 
@@ -252,15 +252,15 @@ Standard open cover $$U_i = \{x \mid x_i \ne 0\}$$ 위에서 $$\mathcal{O}_{\mat
 
 </details>
 
-특히 $$\mathbb{P}^1$$의 경우에서 $$\mathcal{O}(-1)$$을 살펴보면 위에서 직관적으로 설명한 <em-ko>꼬임</em-ko>의 의미가 훨씬 명확하다. $$\mathbb{A}^2\setminus \{0\}$$에서 $$\mathbb{P}^1$$을 만드는 과정은 우선, $$\mathbb{A}^2\setminus\{0\}$$을 radial projection을 통해 단위원으로 만든 후, 단위원의 antipodal point들을 identify하는 것으로 생각할 수 있는데, 이 과정에서 반대방향의 두 벡터가 identify되는 일, 즉 fiber가 꼬이는 일이 발생하기 때문이다. 이러한 꼬임을 보는 방법 중 하나는 line bundle $$\mathcal{L}$$의 section을 보는 것이다. 
+특히 $$\mathbb{P}^1$$의 경우에서 $$\mathcal{O}(-1)$$을 살펴보면 위에서 직관적으로 설명한 <em-ko>꼬임</em-ko>의 의미가 훨씬 명확하다. $$\mathbb{A}^2\setminus \{0\}$$에서 $$\mathbb{P}^1$$을 만드는 과정은 우선, $$\mathbb{A}^2\setminus\{0\}$$을 radial projection을 통해 단위원으로 만든 후, 단위원의 antipodal point들을 identify하는 것으로 생각할 수 있는데, 이 과정에서 반대방향의 두 벡터가 identify되는 일, 즉 fiber가 꼬이는 일이 발생하기 때문이다. 이러한 꼬임을 보는 방법 중 하나는 line bundle $$L$$의 section을 보는 것이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def15">**정의 15**</ins> Line bundle $$\mathcal{L}$$의 *global section*들의 공간을 $$\Gamma(X, \mathcal{L})$$로 표기한다. 즉, $$\Gamma(X, \mathcal{L})$$는 각 점 $$x\in X$$마다 fiber $$\pi^{-1}(x)\subset \mathcal{L}$$ 내의 원소를 대응시키는 regular map들의 집합이다.
+<ins id="def15">**정의 15**</ins> Line bundle $$L$$의 *global section*들의 공간을 $$\Gamma(X, L)$$로 표기한다. 즉, $$\Gamma(X, L)$$는 각 점 $$x\in X$$마다 fiber $$\pi^{-1}(x)\subset L$$ 내의 원소를 대응시키는 regular map들의 집합이다.
 
 </div>
 
-Global section space의 또 다른 대중적인 표기법 중 하나는 $$H^0(X, \mathcal{L})$$이다. 이 표기법은 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1)에서 정당화될 것이나, 그 전까지는 $$\Gamma(X, \mathcal{L})$$을 사용하기로 한다. 
+Global section space의 또 다른 대중적인 표기법 중 하나는 $$H^0(X, L)$$이다. 이 표기법은 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1)에서 정당화될 것이나, 그 전까지는 $$\Gamma(X, L)$$을 사용하기로 한다. 
 
 <div class="example" markdown="1">
 
@@ -346,7 +346,7 @@ $$0\rightarrow \mathcal{O}_X(-D)\rightarrow \mathcal{O}_X\rightarrow \mathcal{O}
 
 우선 $$D \mapsto \mathcal{O}_X(D)$$가 $$\CaDiv(X)$$에서 $$\Pic(X)$$로의 group homomorphism임을 확인한다. Cartier divisor $$D = \{(U_i, f_i)\}$$에 대해 $$\mathcal{O}_X(D)$$의 transition function은 $$g_{ij} = f_i/f_j \in \mathcal{O}_X(U_i \cap U_j)^\times$$이므로 line bundle을 정의한다. Principal divisor $$\divisor(h)$$는 transition function이 $$1$$이므로 trivial bundle에 대응되고, 따라서 $$\CaCl(X) = \CaDiv(X)/\Prin(X)$$에서 $$\Pic(X)$$로의 well-defined group homomorphism을 유도한다.
 
-이것이 isomorphism임을 보이기 위해, 임의의 line bundle $$\mathcal{L}$$이 주어졌다고 하자. Trivializing open $$U \subseteq X$$에서 $$\mathcal{L}\vert_U \cong \mathcal{O}_U$$이므로, $$\mathcal{O}_U$$의 constant section $$1$$에 대응되는 $$s \in \mathcal{L}(U)$$를 잡을 수 있으며, 이 $$s$$는 nonzero rational section이다. 이제 $$\mathcal{L}$$의 trivializing cover $$\{U_i\}$$를 생각하자. 각 $$U_i$$에서 trivialization $$\psi_i\colon \mathcal{L}\vert_{U_i} \cong \mathcal{O}_{U_i}$$를 잡고, $$f_i := \psi_i(s\vert_{U_i \cap U}) \in \mathcal{O}_X(U_i \cap U) \subseteq \mathbb{K}(X)$$를 정의한다. 그러면 $$U_i \cap U_j \cap U$$ 위에서 $$f_i = g_{ij} f_j$$이고, $$X$$가 irreducible이므로 $$U_i \cap U_j \cap U$$는 $$U_i \cap U_j$$의 dense open subset이므로 이 관계는 $$U_i \cap U_j$$ 전체에서 성립한다. 즉 $$f_i/f_j = g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$$이므로 $$D = \{(U_i, f_i)\}$$는 Cartier divisor이고, $$\mathcal{O}_X(D)$$의 transition function이 $$\{g_{ij}\}$$이므로 $$\mathcal{O}_X(D) \cong \mathcal{L}$$이다.
+이것이 isomorphism임을 보이기 위해, 임의의 line bundle $$L$$이 주어졌다고 하자. Trivializing open $$U \subseteq X$$에서 $$L\vert_U \cong \mathcal{O}_U$$이므로, $$\mathcal{O}_U$$의 constant section $$1$$에 대응되는 $$s \in L(U)$$를 잡을 수 있으며, 이 $$s$$는 nonzero rational section이다. 이제 $$L$$의 trivializing cover $$\{U_i\}$$를 생각하자. 각 $$U_i$$에서 trivialization $$\psi_i\colon L\vert_{U_i} \cong \mathcal{O}_{U_i}$$를 잡고, $$f_i := \psi_i(s\vert_{U_i \cap U}) \in \mathcal{O}_X(U_i \cap U) \subseteq \mathbb{K}(X)$$를 정의한다. 그러면 $$U_i \cap U_j \cap U$$ 위에서 $$f_i = g_{ij} f_j$$이고, $$X$$가 irreducible이므로 $$U_i \cap U_j \cap U$$는 $$U_i \cap U_j$$의 dense open subset이므로 이 관계는 $$U_i \cap U_j$$ 전체에서 성립한다. 즉 $$f_i/f_j = g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$$이므로 $$D = \{(U_i, f_i)\}$$는 Cartier divisor이고, $$\mathcal{O}_X(D)$$의 transition function이 $$\{g_{ij}\}$$이므로 $$\mathcal{O}_X(D) \cong L$$이다.
 
 마지막으로 injectivity를 보인다. $$\mathcal{O}_X(D) \cong \mathcal{O}_X(D')$$이면 두 line bundle의 transition function이 같으므로 $$f_i/f_i' = f_j/f_j'$$ on $$U_i \cap U_j$$ (모든 $$i, j$$). 다시 $$U_i \cap U_j$$의 dense open subset에서 이 관계가 성립하므로 $$f_i/f_i'$$는 모든 $$i$$에 대해 동일한 rational function $$h \in \mathbb{K}(X)^\times$$이고, $$D - D' = \divisor(h)$$이므로 linearly equivalent하다.
 
@@ -362,14 +362,14 @@ Morphism $$\varphi: X \to Y$$가 주어졌을 때, $$Y$$ 위의 line bundle을 $
 
 <div class="proposition" markdown="1">
 
-<ins id="prop20">**명제 20**</ins> Morphism $$\varphi: X \to Y$$와 $$Y$$ 위의 line bundle $$\mathcal{L}$$에 대하여, *pullback* $$\varphi^\ast \mathcal{L}$$은 $$X$$ 위의 line bundle이다. 그 transition functions은 $$\{g_{ij} \circ \varphi\}$$이다. 여기서 $$\{g_{ij}\}$$는 $$\mathcal{L}$$의 transition functions이다.
+<ins id="prop20">**명제 20**</ins> Morphism $$\varphi: X \to Y$$와 $$Y$$ 위의 line bundle $$L$$에 대하여, *pullback* $$\varphi^\ast L$$은 $$X$$ 위의 line bundle이다. 그 transition functions은 $$\{g_{ij} \circ \varphi\}$$이다. 여기서 $$\{g_{ij}\}$$는 $$L$$의 transition functions이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Line bundle $$\mathcal{L}$$이 open cover $$\{U_i\}$$ 위에서 transition functions $$\{g_{ij}\}$$로 주어졌다고 하자. Pullback $$\varphi^\ast \mathcal{L}$$은 open cover $$\{\varphi^{-1}(U_i)\}$$ 위에서 transition functions $$\{g_{ij} \circ \varphi\}$$로 정의된다. $$\varphi^\ast \mathcal{L}$$이 $$X$$ 위의 line bundle임을 확인하려면, transition function들이 cocycle 조건을 만족하면 된다.
+Line bundle $$L$$이 open cover $$\{U_i\}$$ 위에서 transition functions $$\{g_{ij}\}$$로 주어졌다고 하자. Pullback $$\varphi^\ast L$$은 open cover $$\{\varphi^{-1}(U_i)\}$$ 위에서 transition functions $$\{g_{ij} \circ \varphi\}$$로 정의된다. $$\varphi^\ast L$$이 $$X$$ 위의 line bundle임을 확인하려면, transition function들이 cocycle 조건을 만족하면 된다.
 
 Cocycle 조건 세 가지를 모두 확인한다.
 
@@ -390,9 +390,9 @@ Cocycle 조건 세 가지를 모두 확인한다.
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast \mathcal{L} \otimes \varphi^\ast \mathcal{M}$$이고 $$\varphi^\ast \mathcal{O}_Y \cong \mathcal{O}_X$$이므로, pullback은 group homomorphism이다.
+$$\varphi^\ast(L \otimes M) \cong \varphi^\ast L \otimes \varphi^\ast M$$이고 $$\varphi^\ast \mathcal{O}_Y \cong \mathcal{O}_X$$이므로, pullback은 group homomorphism이다.
 
-이를 확인하기 위해 transition function 관점에서 살펴보자. $$\mathcal{L} \otimes \mathcal{M}$$의 transition function은 $$g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}$$이므로, $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M})$$의 transition function은 $$(g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}) \circ \varphi = (g_{ij}^{\mathcal{L}} \circ \varphi)(g_{ij}^{\mathcal{M}} \circ \varphi)$$이다. 이는 각각 $$\varphi^\ast\mathcal{L}$과 $\varphi^\ast\mathcal{M}$$의 transition function이므로, $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast\mathcal{L} \otimes \varphi^\ast\mathcal{M}$$을 얻는다. 또한 $$\mathcal{O}_Y$$의 transition function은 모두 $$1$$이므로 $$\varphi^\ast\mathcal{O}_Y$$의 transition function도 $$1$$, 즉 $$\varphi^\ast\mathcal{O}_Y \cong \mathcal{O}_X$$이다.
+이를 확인하기 위해 transition function 관점에서 살펴보자. $$L \otimes M$$의 transition function은 $$g_{ij}^{L} g_{ij}^{M}$$이므로, $$\varphi^\ast(L \otimes M)$$의 transition function은 $$(g_{ij}^{L} g_{ij}^{M}) \circ \varphi = (g_{ij}^{L} \circ \varphi)(g_{ij}^{M} \circ \varphi)$$이다. 이는 각각 $$\varphi^\astL$과 $\varphi^\astM$$의 transition function이므로, $$\varphi^\ast(L \otimes M) \cong \varphi^\astL \otimes \varphi^\astM$$을 얻는다. 또한 $$\mathcal{O}_Y$$의 transition function은 모두 $$1$$이므로 $$\varphi^\ast\mathcal{O}_Y$$의 transition function도 $$1$$, 즉 $$\varphi^\ast\mathcal{O}_Y \cong \mathcal{O}_X$$이다.
 
 </details>
 

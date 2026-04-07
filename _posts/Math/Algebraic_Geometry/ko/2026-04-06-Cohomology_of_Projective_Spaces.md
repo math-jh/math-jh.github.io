@@ -192,7 +192,7 @@ Euler characteristic은 short exact sequence에 대해 가산적(additive)이라
 
 한편, cohomology는 근본적으로 gluing의 실패를 특정하는 것이고, 이는 gluing의 결과로 얻어지는 $$H^0$$과, 여기서의 실패를 보정해주는 higher cohomology $$H^n$$ 항들로 이루어진다. 그럼 [명제 1](#prop1)에 따르면, $$\mathbb{P}^n$$ 위에 어떠한 line bundle이 주어지더라도 충분히 큰 $$d\gg 0$$에 대하여 $$\mathcal{O}(d)$$와 "twist" 해주면 higher cohomology를 없애줄 수 있는 것을 안다. 
 
-우리는 이제 이 작업을 조금 더 일반적인 세팅에서 진행하자. 
+우리는 이제 이 작업을 조금 더 일반적인 세팅에서 진행하자. 즉 우리는 base space $$\mathbb{P}^n$$을 일반적인 variety로 확장하려 한다. 우리 세팅에서 모든 variety는 quasi-projective variety이므로 $$X\hookrightarrow \mathbb{P}^N$$으로부터 $$\mathcal{O}_{\mathbb{P}^N}(1)$$을 끌어와서 위의 과정을 반복할 수 있다. 만일 variety의 정의가 더 일반적인 것이라면, ample line bundle $$\mathcal{L}$$을 택한 후 
 
 지금까지 우리는 $$\mathcal{O}(d)$$라는 매우 특수한 sheaf의 cohomology를 계산하였다. 그러나 대수기하학에서 실제로 마주치는 sheaf는 임의의 coherent sheaf $$\mathcal{F}$$이며, 이의 cohomology를 모두 계산하는 것은 일반적으로 불가능하다. 다행히도 coherent sheaf의 cohomology를 다룰 때, “충분히 twist하면 high cohomology가 vanish한다”는 현상이 자주 나타난다. 이는 Serre vanishing theorem으로 정밀화된다: 임의의 coherent sheaf $$\mathcal{F}$$에 대해 충분히 큰 $$m$$에 대해 $$H^i(\mathbb{P}^n, \mathcal{F}(m)) = 0$$이 $$i > 0$$에 대해 성립한다. 예를 들어, Bott's formula에서 $$H^q(\mathbb{P}^n, \mathcal{O}(d))$$가 $$q > 0$$에서 vanish하는 $$d$$의 범위는 $$d \geq -n$$이다. Regularity는 이 현상을 정량화하여, 구체적으로 어느 정도 twist해야 higher cohomology가 사라지는지를 기록하는 개념이다.
 
