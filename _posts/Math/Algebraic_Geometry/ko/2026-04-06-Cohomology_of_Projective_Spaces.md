@@ -122,44 +122,76 @@ $$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]_d$$
 
 </details>
 
-위 식에서 $$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$은 degree $$-d-n-1$$의 "negative degree" monomial들의 공간이다. 구체적으로
+위 증명에서 우리는 각 변수 $$\x_0,\cdots, \x_n$$ 그리고 $$d\leq -n-1$$에 대하여, $$H^n(\mathbb{P}^n, \mathcal{O}(d))$$가 다음의 monomial들
 
-$$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_k = \span\{\x_0^{a_0} \cdots \x_n^{a_n} : a_i \leq -1,\, \textstyle\sum a_i = -k - n - 1\}$$
+$$\x_0^{a_0} \cdots \x_n^{a_n},\qquad  a_i \leq -1, \quad \sum a_i=d$$
 
-로 정의하며, 치환 $$b_i = -a_i - 1$$에 의해 $$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_k \cong \mathbb{K}[\x_0, \ldots, \x_n]_k$$임을 안다. $$\mathbb{P}^1$$의 경우 $$H^1(\mathbb{P}^1, \mathcal{O}(-3))$$에 대하여 이 정의는 basis $$\{\x_0^{-2}\x_1^{-1}, \x_0^{-1}\x_1^{-2}\}$$를 주고, 이는 증명에서 $$d = -3$$일 때 두 지수가 모두 음수인 monomial들로 $$\coker\delta$$가 생성됨을 보인 것과 일치한다.
+로 생성됨을 보았다. ($$d$$가 음수임에 유의하자.) 이는 각각의 $$\x_i^{-1}$$들을 새로운 변수 $$\y_i=\x_i^{-1}$$로 생각하였을 때, 다음 식
 
-Bott's formula가 말하는 것을 직관적으로 요약하면 다음과 같다. 먼저 $$H^0$$는 global section의 공간이며, 이는 degree $$d$$의 homogeneous polynomial들이며, 한편 $$H^n$$은 top-degree cohomology로, 오직 $$d \leq -n-1$$일 때만 살아남는다. 이는 $$\mathcal{O}(d)$$가 충분히 negative한 twist일 때만 "top cohomology"에 기여하는 nontrivial class들이 존재한다는 것을 의미한다. 가장 주목할 만한 것은 중간 차수의 cohomology, 즉 $$0 < q < n$$에 대해서는 $$H^q$$가 항상 $$0$$이라는 사실이다. 이는 projective space의 line bundle이 매우 특별한 구조를 가지고 있음을 보여준다.
+$$\y_0^{\lvert a_0\rvert},\cdots \y_n^{\lvert a_n\rvert}\qquad \lvert a_i\rvert\geq 1,\quad \sum \lvert a_i\rvert=\lvert d\rvert$$
 
-## Euler Characteristic
+들로 생성되는 공간이라 하여도 된다. 여기서 각각의 $$a_i$$와 $$d$$는 모두 음수이므로 $$\lvert a_i\rvert=-a_i$$, $$\lvert d\rvert=-d$$이다. 위의 공간은 거의 degree $$\lvert d\rvert$$ homogeneous polynomial들의 공간과 유사하지만, $$\lvert a_i\rvert$$들이 $$0$$이 될 수 없다는 차이점이 있다. 따라서 $$b_i=\lvert a_i\rvert-1$$으로 치환하면, 우리는 이 공간을 
 
-Bott's formula는 각 cohomology group의 차원을 개별적으로 계산하지만, 이들을 합산하여 얻는 Euler characteristic<sub>오일러 지표</sub>는 더 간단한 공식으로 표현된다. Euler characteristic은 alternating sum
+$$\y_0^{b_i}\cdots \y_n^{b_n},\qquad b_i\geq 0,\quad \sum b_i=\lvert d\rvert-(n+1)$$
 
-$$\rchi(\mathbb{P}^n, \mathcal{F}) = \sum_{i=0}^{n} (-1)^i \dim H^i(\mathbb{P}^n, \mathcal{F})$$
+들의 공간으로 생각할 수 있다. 즉, 이 공간은 degree $$-d-n-1$$ "negative degree" monomial들의 공간으로 생각할 수 있고, 이러한 이유로 이 공간을 
 
-으로 정의되며, 이는 short exact sequence에 대해 가산적(additive)이라는 중요한 성질을 갖는다. 즉, short exact sequence $$0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0$$에 대해 $$\rchi(\mathcal{G}) = \rchi(\mathcal{F}) + \rchi(\mathcal{H})$$가 성립한다. 따라서 Euler characteristic은 개별 cohomology group의 정보를 잃는 대신, 계산과 조작이 훨씬 용이한 불변량이 된다.
+$$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$
+
+으로 표기한다. 
+
+한편 나중을 위해 우리는 Euler characteristic을 정의한다.
+
+<div class="definition" markdown="1">
+
+<ins id="def2">**정의 2**</ins> Variety $$X$$와 그 위에 정의된 coherent sheaf $$\mathcal{F}$$에 대하여, $$\mathcal{F}$$의 *Euler characteristic<sub>오일러 지표</sub>*을 다음의 식
+
+$$\rchi(X, \mathcal{F}) = \sum_{i=0}^{n} (-1)^i \dim H^i(X, \mathcal{F})$$
+
+으로 정의한다. 
+
+</div>
+
+특별히 $$X=\mathbb{P}^n$$이고 $$\mathcal{F}=\mathcal{O}(d)$$인 경우, 어차피 어느 경우에서건 중간 cohomology들은 모두 죽고 양 끝의 cohomology만 고려하면 되므로 다음 따름정리를 쉽게 증명할 수 있다. 
 
 <div class="proposition" markdown="1">
 
 <ins id="cor2">**따름정리 2**</ins> $$\mathbb{P}^n$$ 위의 $$\mathcal{O}(d)$$의 Euler characteristic:
 
 $$\rchi(\mathbb{P}^n, \mathcal{O}(d)) = \binom{n+d}{n}$$
-
+ㅇ
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Bott's formula에 의해 cohomology는 세 가지 경우로 나뉜다. 첫째, $$d \geq 0$$인 경우 $$H^0$$만 non-zero이므로 $$\rchi(\mathcal{O}(d)) = \dim H^0(\mathbb{P}^n, \mathcal{O}(d)) = \dim \mathbb{K}[\x_0, \ldots, \x_n]_d = \binom{n+d}{n}$$이다. 둘째, $$-n \leq d \leq -1$$인 경우 모든 cohomology가 사라지므로 $$\rchi(\mathcal{O}(d)) = 0$$이고, 이항계수의 일반화에 의해 $$\binom{n+d}{n}$$ 역시 $$0 \leq d+n \leq n-1$$일 때 $$0$$이므로 일치한다. 셋째, $$d \leq -n-1$$인 경우 $$H^n$$만 non-zero이므로 $$\rchi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$이다. 치환 $$a_i' = -a_i - 1$$을 적용하면 $$a_i \leq -1$$이므로 $$a_i' = -a_i - 1 \geq 0$$이 되고, $$\sum a_i' = \sum(-a_i - 1) = -\sum a_i - (n+1) = -d - (n+1)$$로 변환된다. 따라서 $$\dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$은 치환 후 $$n+1$$개의 비음수 정수 $$(a_0', \ldots, a_n')$$ 중 합이 $$-d - n - 1$$인 것의 개수이므로, stars and bars에 의해 $$\binom{(-d-n-1)+n}{n} = \binom{-d-1}{n}$$이다. 결과적으로 $$\rchi(\mathcal{O}(d)) = (-1)^n \binom{-d-1}{n}$$이다. 일반화된 이항계수의 항등식 $$(-1)^n\binom{-d-1}{n} = \binom{n+d}{n}$$에 의해 $$\rchi(\mathcal{O}(d)) = \binom{n+d}{n}$$이 성립한다.
+Bott's formula에 의해 cohomology는 세 가지 경우로 나뉜다. 
+
+첫째, $$d \geq 0$$인 경우 $$H^0$$만 non-zero이므로 
+
+$$\rchi(\mathcal{O}(d)) = \dim H^0(\mathbb{P}^n, \mathcal{O}(d)) = \dim \mathbb{K}[\x_0, \ldots, \x_n]_d = \binom{n+d}{n}$$
+
+가 성립하는 것을 알 수 있다. 
+
+둘째로, 만일 $$-n \leq d \leq -1$$인 경우 모든 cohomology가 사라지므로 $$\rchi(\mathcal{O}(d)) = 0$$이고, 이런 경우 보통 $$\binom{n+d}{n}=0$$으로 정의하므로 convention과 잘 맞아떨어진다. 
+
+마지막으로 $$d \leq -n-1$$인 경우를 생각하자. 이 경우, $$H^n$$만 non-zero이므로 
+
+$$\rchi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$
+
+이다. [명제 1](#prop1) 직후의 설명에 의하면, 이 공간의 차원은 
+
+$$\binom{-d-1}{n}=(-1)^n\binom{n+d}{n}$$
+
+임을 안다. 여기서 $$\binom{n+d}{n}$$은 위의 경우와 마찬가지로 이항계수 표기에 대한 일반적인 convention을 따랐다.
 
 </details>
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> $$\mathbb{P}^2$$ 위의 $$\mathcal{O}(d)$$에 대해 $$\rchi(\mathcal{O}(d)) = \frac{(d+1)(d+2)}{2}$$이며, 구체적으로 $$\rchi(\mathcal{O}(0)) = 1$$, $$\rchi(\mathcal{O}(1)) = 3$$, $$\rchi(\mathcal{O}(2)) = 6$$이다. 예를 들어 $$\rchi(\mathcal{O}(1)) = 3$$은 다음과 같이 이해할 수 있다. $$\mathcal{O}(1)$$의 global section들은 $$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}[\x_0, \x_1, \x_2]_1$$이므로 basis $$\{\x_0, \x_1, \x_2\}$$를 갖고, 이는 $$\mathbb{P}^2$$에서 직선 $$V(a_0\x_0 + a_1\x_1 + a_2\x_2)$$를 정의하는 degree 1의 homogeneous polynomial들의 공간이다. 즉 "세 개의 independent한 section"은 coordinate $$\x_0, \x_1, \x_2$$ 각각에 대응하는 세 개의 독립적인 degree 1 다항식을 의미하며, 이들이 $$H^0$$의 basis를 이룬다는 뜻이다. 한편 $$\rchi(\mathcal{O}(2)) = 6$$은 degree 2 곡선(conic)을 정의하는 $$\{\x_0^2, \x_0\x_1, \x_0\x_2, \x_1^2, \x_1\x_2, \x_2^2\}$$의 6개의 parameter에 해당한다.
-
-</div>
+Euler characteristic은 short exact sequence에 대해 가산적(additive)이라는 중요한 성질을 갖는다. 즉, short exact sequence $$0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0$$에 대해 $$\rchi(\mathcal{G}) = \rchi(\mathcal{F}) + \rchi(\mathcal{H})$$가 성립한다. 따라서 Euler characteristic은 개별 cohomology group의 정보를 잃는 대신, 계산과 조작이 훨씬 용이한 불변량이 된다.
 
 ## Regularity
+
+우리가 실제로 임의의 coherent sheaf의 cohomology 계산을 할 때 중요한 도구는, 이전에도 살펴보았고, [명제 1](#prop1)의 증명에서도 살펴보았듯 long exact sequence이다. 즉 우리의 
 
 지금까지 우리는 $$\mathcal{O}(d)$$라는 매우 특수한 sheaf의 cohomology를 계산하였다. 그러나 대수기하학에서 실제로 마주치는 sheaf는 임의의 coherent sheaf $$\mathcal{F}$$이며, 이의 cohomology를 모두 계산하는 것은 일반적으로 불가능하다. 다행히도 coherent sheaf의 cohomology를 다룰 때, “충분히 twist하면 high cohomology가 vanish한다”는 현상이 자주 나타난다. 이는 Serre vanishing theorem으로 정밀화된다: 임의의 coherent sheaf $$\mathcal{F}$$에 대해 충분히 큰 $$m$$에 대해 $$H^i(\mathbb{P}^n, \mathcal{F}(m)) = 0$$이 $$i > 0$$에 대해 성립한다. 예를 들어, Bott's formula에서 $$H^q(\mathbb{P}^n, \mathcal{O}(d))$$가 $$q > 0$$에서 vanish하는 $$d$$의 범위는 $$d \geq -n$$이다. Regularity는 이 현상을 정량화하여, 구체적으로 어느 정도 twist해야 higher cohomology가 사라지는지를 기록하는 개념이다.
 
