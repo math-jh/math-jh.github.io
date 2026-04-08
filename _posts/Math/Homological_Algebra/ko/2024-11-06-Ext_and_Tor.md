@@ -173,3 +173,132 @@ $$
 $$q > 0$$인 성분만 모은 subcomplex $$B_\bullet$$에 대해 동일한 논의로 $$H_k(B_\bullet) = 0$$이 성립하며, quotient $$\mathrm{Tot}(K)_\bullet / B_\bullet$$은 $$q = 0$$인 행만으로 이루어진 $$\bigoplus_p P_p \otimes_A N = P_\bullet \otimes_A N$$와 동치이다. 여기서의 differential은 $$d_h$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서 $$H_n(\mathrm{Tot}(K)_\bullet) \cong H_n(P_\bullet \otimes_A N)$$을 얻는다. 두 방법에서 같은 total homology를 얻으므로 결과가 따른다.
 
 </details>
+
+## 예시
+
+앞서 정의한 Ext와 Tor 함자를 구체적으로 계산해본다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop5">**명제 5**</ins> $$n, m \in \Z$$에 대해, 다음이 성립한다.
+
+$$
+\Tor_1^\Z(\Z/n\Z, \Z/m\Z) \cong \Z/\gcd(n,m)\Z.
+$$
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\Z/n\Z$$의 projective resolution을 구성한다. 사상 $$\cdot n \colon \Z \to \Z$$의 image는 $$n\Z$$이므로
+
+$$0 \to \Z \xrightarrow{\cdot n} \Z \to \Z/n\Z \to 0$$
+
+은 exact하며, $$\Z$$는 projective $$\Z$$-module이므로 이것이 $$\Z/n\Z$$의 projective resolution이다.
+
+이 resolution에 $$- \otimes_\Z \Z/m\Z$$를 적용한 chain complex는
+
+$$\cdots \to 0 \to \Z \otimes_\Z \Z/m\Z \xrightarrow{\cdot n \otimes 1} \Z \otimes_\Z \Z/m\Z \to 0 \to \cdots$$
+
+이다. $$\Z \otimes_\Z \Z/m\Z \cong \Z/m\Z$$이므로
+
+$$0 \to \Z/m\Z \xrightarrow{\cdot n} \Z/m\Z \to 0$$
+
+이 되고, 여기서 $$\cdot n$$은 $$\Z/m\Z$$에서 원소 $$a \mapsto na$$로의 사상이다. 따라서
+
+$$\Tor_1^\Z(\Z/n\Z, \Z/m\Z) \cong \ker(\cdot n \colon \Z/m\Z \to \Z/m\Z) = \{a \in \Z/m\Z : na \equiv 0 \pmod{m}\}.$$
+
+이 kernel은 $$m \mid na$$를 만족하는 $$a \pmod{m}$$의 집합이며, 이는 $$\gcd(n,m) \Z \subset \Z$$에 의해 생성되는 $$\Z/m\Z$$의 subgroup $$\gcd(n,m)\Z/m\Z \cong \Z/(m/\gcd(n,m))\Z$$와 같다. 한편 kernel의 순서는 공식 $$\lvert\ker f\rvert \cdot \lvert\operatorname{im} f\rvert = \lvert\Z/m\Z\rvert = m$$에 의해 $$m / \lvert\operatorname{im}(\cdot n)\rvert = m / (m/\gcd(n,m)) = \gcd(n,m)$$이다. 그런데 $$\gcd(n,m)\Z/m\Z \cong \Z/(m/\gcd(n,m))\Z$$의 순서는 $$m/\gcd(n,m)$$이므로, 더 정확히는
+
+$$\ker(\cdot n \colon \Z/m\Z \to \Z/m\Z) \cong \Z/\gcd(n,m)\Z.$$
+
+마지막 동형은 다음과 같이 확인할 수 있다. $$d = \gcd(n,m)$$, $$n = d n'$$, $$m = d m'$$이라 하자. 그러면 $$n'a \equiv 0 \pmod{m'}$$이 되고, $$\gcd(n', m') = 1$$이므로 $$a \equiv 0 \pmod{m'}$$이다. 따라서 kernel은 $$m'\Z/m\Z \subset \Z/m\Z$$이며, 이는 $$\Z/m\Z$$에서 $$d$$배를 취하면 얻어지는 부분군이다. Chinese remainder theorem에 의해 직접 계산하면, 이 부분군은 순서 $$d$$를 가지며 $$\Z/d\Z$$와 동형인다.
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop6">**명제 6**</ins> 임의의 abelian group $$A$$와 $$n \in \Z$$에 대해, 다음이 성립한다.
+
+$$
+\Ext^1_\Z(\Z/n\Z, A) \cong A/nA.
+$$
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\Z/n\Z$$의 projective resolution
+
+$$0 \to \Z \xrightarrow{\cdot n} \Z \to \Z/n\Z \to 0$$
+
+에 $$\Hom_\Z(-, A)$$를 적용한 cochain complex는
+
+$$0 \to \Hom_\Z(\Z, A) \xrightarrow{\cdot n^\ast} \Hom_\Z(\Z, A) \to 0$$
+
+이다. $$\Hom_\Z(\Z, A) \cong A$$이며 (사상은 $$1 \mapsto a$$로 결정됨), 유도된 사상 $$\cdot n^\ast$$은 $$a \mapsto na$$이다. 따라서
+
+$$\Ext^1_\Z(\Z/n\Z, A) \cong \coker(\cdot n \colon A \to A) = A/nA.$$
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7**</ins> 체 $$\mathbb{K}$$와 다항식 환 $$A = \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, 다음이 성립한다.
+
+$$
+\Tor_i^A(\mathbb{K}, \mathbb{K}) \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).
+$$
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$A = \mathbb{K}[\x_1, \ldots, \x_n]$$ 위에서 $$\mathbb{K} = A/(\x_1, \ldots, \x_n)$$의 projective resolution로서 *Koszul complex*를 사용한다.
+
+Koszul complex $$K_\bullet = K(\x_1, \ldots, \x_n)$$는 다음과 같이 정의된다. 각 $$i = 0, 1, \ldots, n$$에 대해
+
+$$K_i = \bigwedge\nolimits^i A^n$$
+
+이며, 이는 $$A$$-module로서 자유 module이고, $$\e_{j_1} \wedge \cdots \wedge \e_{j_i}$$ ($$1 \leq j_1 < \cdots < j_i \leq n$$)들이 basis를 이룬다. $$K_i$$의 차원은 $$\binom{n}{i}$$이다. Differential $$d_i \colon K_i \to K_{i-1}$$은
+
+$$d(\e_{j_1} \wedge \cdots \wedge \e_{j_i}) = \sum_{k=1}^{i} (-1)^{k+1} \x_{j_k} \e_{j_1} \wedge \cdots \wedge \widehat{\e_{j_k}} \wedge \cdots \wedge \e_{j_i}$$
+
+로 주어진다. 이때 $$\widehat{\phantom{e}}$$는 해당 항이 생략됨을 나타낸다.
+
+$$K_\bullet$$이 $$\mathbb{K}$$의 projective resolution임을 확인한다. $$K_0 = A$$이고, $$K_\bullet \to \mathbb{K}$$로의 사상은 $$\epsilon \colon K_0 = A \to \mathbb{K}$$, $$a \mapsto \overline{a}$$ (각 $$\x_i$$를 $$0$$으로 보내는 몫사상)으로 주어진다. $$d_1 \colon K_1 = A^n \to K_0 = A$$는 $$(a_1, \ldots, a_n) \mapsto \sum a_i \x_i$$이므로 $$\operatorname{im} d_1 = (\x_1, \ldots, \x_n) = \ker \epsilon$$이다. 따라서 $$0 \to K_n \to \cdots \to K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} \mathbb{K} \to 0$$이 exact함을 보이면 된다.
+
+이 exactness는 $$n$$에 대한 귀납법으로 증명한다.
+
+* $$n = 0$$: $$K_\bullet$$는 $$A \xrightarrow{\epsilon} \mathbb{K} \to 0$$이므로 자명하게 exact하다.
+
+* 귀납 단계: $$n-1$$개의 변수에 대해 $$K(\x_1, \ldots, \x_{n-1})$$가 exact함을 가정한다. $$K(\x_1, \ldots, \x_n)$$를 filtering으로 분해한다. $$A' = \mathbb{K}[\x_1, \ldots, \x_{n-1}]$$ 위에서 Koszul complex $$K'\bullet = K(\x_1, \ldots, \x_{n-1})$$를 생각하자. 그러면
+
+$$K(\x_1, \ldots, \x_n)_i \cong K'_i \oplus K'_{i-1} \cdot \e_n$$
+
+이며, $$d_i$$는 다음 형태를 갖는다:
+
+$$d_i(\alpha + \beta \wedge \e_n) = d'_i(\alpha) + (-1)^i \x_n \alpha + d'_{i-1}(\beta) \wedge \e_n.$$
+
+이를 행렬로 나타내면
+
+$$d_i = \begin{pmatrix} d'_i & (-1)^i \x_n \\ 0 & d'_{i-1} \end{pmatrix}$$
+
+이 된다. 이 행렬 형태에서 $$\ker d_i$$와 $$\operatorname{im} d_{i+1}$$를 계산한다. 귀납 가정에 의해 $$K'\bullet$$은 exact하므로
+
+$$\ker d_i = \ker d'_i \oplus (\ker d'_{i-1} \cap \x_n^{-1}(\operatorname{im} d'_i + (-1)^{i+1} \ker d'_i)) \cdot \e_n$$
+
+가 되고, $$\x_n$$이 $$A$$에서 nonzerodivisor임을 사용하면 $$\ker d_i = \operatorname{im} d_{i+1}$$임을 얻는다. 구체적으로, $$(\alpha, \beta) \in \ker d_i$$라 하면 $$d'_{i-1}(\beta) = 0$$이고 $$d'_i(\alpha) = (-1)^{i+1} \x_n \beta$$이다. 귀납 가정에 의해 $$\beta \in \operatorname{im} d'_{i}$$, 즉 $$\beta = d'_i(\gamma)$$가 존재한다. 그러면 $$d'_i(\alpha + (-1)^{i+1} \x_n \gamma) = 0$$이므로, 다시 귀납 가정에 의해 $$\alpha + (-1)^{i+1} \x_n \gamma \in \operatorname{im} d'_{i+1}$$이다. 따라서 $$\ker d_i \subseteq \operatorname{im} d_{i+1}$$이고, 반대 포함은 자명하다. 따라서 $$K(\x_1, \ldots, \x_n)$$은 exact하다.
+
+이제 이 resolution에 $$- \otimes_A \mathbb{K}$$를 적용한다. 각 $$K_i$$는 자유 $$A$$-module이므로
+
+$$K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i A^n \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i (A^n \otimes_A \mathbb{K}) \cong \bigwedge\nolimits^i \mathbb{K}^n.$$
+
+한편, $$d_i \otimes 1 \colon K_i \otimes_A \mathbb{K} \to K_{i-1} \otimes_A \mathbb{K}$$는 $$\x_j$$를 $$0$$으로 보내므로 영사상이다. 따라서
+
+$$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).$$
+
+</details>
