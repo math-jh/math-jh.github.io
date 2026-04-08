@@ -96,7 +96,7 @@ $$0 \longrightarrow \mathcal{O}(d-1)\overset{\times \x_n}{\longrightarrow} \math
 
 $$\cdots \to H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^i(\mathbb{P}^n, \mathcal{O}(d-1)) \to H^i(\mathbb{P}^n, \mathcal{O}(d)) \to H^i(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to \cdots$$
 
-를 얻고 우리는 귀납적 과정에 의해 $$\mathbb{P}^{n-1}$$에서의 주장은 알고 있다. 그럼 특히 $$0<i< n$$에 대해서는
+를 얻고 우리는 귀납적 과정에 의해 $$\mathbb{P}^{n-1}$$에서의 주장은 알고 있다. 그럼 특히 $$0<i<n$$에 대해서는
 
 $$H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))=H^i(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$$
 
@@ -130,15 +130,15 @@ $$\x_0^{a_0} \cdots \x_n^{a_n},\qquad  a_i \leq -1, \quad \sum a_i=d$$
 
 $$\y_0^{\lvert a_0\rvert},\cdots \y_n^{\lvert a_n\rvert}\qquad \lvert a_i\rvert\geq 1,\quad \sum \lvert a_i\rvert=\lvert d\rvert$$
 
-들로 생성되는 공간이라 하여도 된다. 여기서 각각의 $$a_i$$와 $$d$$는 모두 음수이므로 $$\lvert a_i\rvert=-a_i$$, $$\lvert d\rvert=-d$$이다. 위의 공간은 거의 degree $$\lvert d\rvert$$ homogeneous polynomial들의 공간과 유사하지만, $$\lvert a_i\rvert$$들이 $$0$$이 될 수 없다는 차이점이 있다. 따라서 $$b_i=\lvert a_i\rvert-1$$으로 치환하면, 우리는 이 공간을 
+들로 생성되는 공간이라 하여도 된다. 여기서 각각의 $$a_i$$와 $$d$$는 모두 음수이므로 $$\lvert a_i\rvert=-a_i$$, $$\lvert d\rvert=-d$$이다. 위의 공간은 거의 degree $$\lvert d\rvert$$ homogeneous polynomial들의 공간과 유사하지만, $$\lvert a_i\rvert$$들이 $$0$$이 될 수 없다는 차이점이 있다. 따라서 $$b_i=\lvert a_i\rvert-1$$으로 치환하면, 우리는 이 공간을
 
 $$\y_0^{b_i}\cdots \y_n^{b_n},\qquad b_i\geq 0,\quad \sum b_i=\lvert d\rvert-(n+1)$$
 
-들의 공간으로 생각할 수 있다. 즉, 이 공간은 degree $$-d-n-1$$ "negative degree" monomial들의 공간으로 생각할 수 있고, 이러한 이유로 이 공간을 
+들의 공간으로 생각할 수 있다. 즉, 이 공간은 degree $$-d-n-1$$ "negative degree" monomial들의 공간으로 생각할 수 있고, 이러한 이유로 이 공간을
 
 $$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$
 
-으로 표기한다. 
+으로 표기한다.
 
 한편 나중을 위해 우리는 Euler characteristic을 정의한다.
 
@@ -148,37 +148,41 @@ $$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$
 
 $$\rchi(X, \mathcal{F}) = \sum_{i=0}^{n} (-1)^i \dim H^i(X, \mathcal{F})$$
 
-으로 정의한다. 
+으로 정의한다.
 
 </div>
 
-특별히 $$X=\mathbb{P}^n$$이고 $$\mathcal{F}=\mathcal{O}(d)$$인 경우, 어차피 어느 경우에서건 중간 cohomology들은 모두 죽고 양 끝의 cohomology만 고려하면 되므로 다음 따름정리를 쉽게 증명할 수 있다. 
+특별히 $$X=\mathbb{P}^n$$이고 $$\mathcal{F}=\mathcal{O}(d)$$인 경우, 어차피 어느 경우에서건 중간 cohomology들은 모두 죽고 양 끝의 cohomology만 고려하면 되므로 다음 따름정리를 쉽게 증명할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor2">**따름정리 2**</ins> $$\mathbb{P}^n$$ 위의 $$\mathcal{O}(d)$$의 Euler characteristic:
+<ins id="cor3">**따름정리 3**</ins> $$\mathbb{P}^n$$ 위의 $$\mathcal{O}(d)$$의 Euler characteristic은 다음의 식
 
 $$\rchi(\mathbb{P}^n, \mathcal{O}(d)) = \binom{n+d}{n}$$
+
+
+으로 주어진다.
+
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Bott's formula에 의해 cohomology는 세 가지 경우로 나뉜다. 
+[명제 1](#prop1)에 의해 cohomology는 세 가지 경우로 나뉜다.
 
-첫째, $$d \geq 0$$인 경우 $$H^0$$만 non-zero이므로 
+첫째, $$d \geq 0$$인 경우 $$H^0$$만 non-zero이므로
 
 $$\rchi(\mathcal{O}(d)) = \dim H^0(\mathbb{P}^n, \mathcal{O}(d)) = \dim \mathbb{K}[\x_0, \ldots, \x_n]_d = \binom{n+d}{n}$$
 
-가 성립하는 것을 알 수 있다. 
+가 성립하는 것을 알 수 있다.
 
-둘째로, 만일 $$-n \leq d \leq -1$$인 경우 모든 cohomology가 사라지므로 $$\rchi(\mathcal{O}(d)) = 0$$이고, 이런 경우 보통 $$\binom{n+d}{n}=0$$으로 정의하므로 convention과 잘 맞아떨어진다. 
+둘째로, 만일 $$-n \leq d \leq -1$$인 경우 모든 cohomology가 사라지므로 $$\rchi(\mathcal{O}(d)) = 0$$이고, 이런 경우 보통 $$\binom{n+d}{n}=0$$으로 정의하므로 convention과 잘 맞아떨어진다.
 
-마지막으로 $$d \leq -n-1$$인 경우를 생각하자. 이 경우, $$H^n$$만 non-zero이므로 
+마지막으로 $$d \leq -n-1$$인 경우를 생각하자. 이 경우, $$H^n$$만 non-zero이므로
 
 $$\rchi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$
 
-이다. [명제 1](#prop1) 직후의 설명에 의하면, 이 공간의 차원은 
+이다. [명제 1](#prop1) 직후의 설명에 의하면, 이 공간의 차원은
 
 $$\binom{-d-1}{n}=(-1)^n\binom{n+d}{n}$$
 
@@ -190,17 +194,33 @@ Euler characteristic은 short exact sequence에 대해 가산적(additive)이라
 
 ## Regularity
 
-한편, cohomology는 근본적으로 gluing의 실패를 특정하는 것이고, 이는 gluing의 결과로 얻어지는 $$H^0$$과, 여기서의 실패를 보정해주는 higher cohomology $$H^n$$ 항들로 이루어진다. 그럼 [명제 1](#prop1)에 따르면, $$\mathbb{P}^n$$ 위에 어떠한 line bundle이 주어지더라도 충분히 큰 $$d\gg 0$$에 대하여 $$\mathcal{O}(d)$$와 "twist" 해주면 higher cohomology를 없애줄 수 있는 것을 안다. 
+한편, cohomology는 근본적으로 gluing의 실패를 특정하는 것이고, 이는 gluing의 결과로 얻어지는 $$H^0$$과, 여기서의 실패를 보정해주는 higher cohomology $$H^n$$ 항들로 이루어진다. 그럼 [명제 1](#prop1)에 따르면, $$\mathbb{P}^n$$ 위에 어떠한 line bundle이 주어지더라도 충분히 큰 $$d\gg 0$$에 대하여 $$\mathcal{O}(d)$$와 "twist" 해주면 higher cohomology를 없애줄 수 있는 것을 안다.
 
-우리는 이제 이 작업을 조금 더 일반적인 세팅에서 진행하자. 즉 우리는 base space $$\mathbb{P}^n$$을 일반적인 variety로 확장하려 한다. 우리 세팅에서 모든 variety는 quasi-projective variety이므로 $$X\hookrightarrow \mathbb{P}^N$$으로부터 $$\mathcal{O}_{\mathbb{P}^N}(1)$$을 끌어와서 위의 과정을 반복할 수 있다. 만일 variety의 정의가 더 일반적인 것이라면, ample line bundle $$\mathcal{L}$$을 택한 후 
+우리는 이제 이 작업을 조금 더 일반적인 세팅에서 진행하자. 즉 우리는 base space $$\mathbb{P}^n$$을 일반적인 variety로 확장하려 한다. 우리 세팅에서 모든 variety는 quasi-projective variety이므로 $$X\hookrightarrow \mathbb{P}^N$$으로부터 $$\mathcal{O}_{\mathbb{P}^N}(1)$$을 끌어와서 위의 과정을 반복할 수 있다. 만일 variety의 정의가 더 일반적인 것이라면, ample line bundle $$\mathcal{L}$$을 택한 후 $$\mathcal{L}$$의 power $$\mathcal{L}^{\otimes d}$$을 사용하여 twist해주면 된다.
 
-지금까지 우리는 $$\mathcal{O}(d)$$라는 매우 특수한 sheaf의 cohomology를 계산하였다. 그러나 대수기하학에서 실제로 마주치는 sheaf는 임의의 coherent sheaf $$\mathcal{F}$$이며, 이의 cohomology를 모두 계산하는 것은 일반적으로 불가능하다. 다행히도 coherent sheaf의 cohomology를 다룰 때, “충분히 twist하면 high cohomology가 vanish한다”는 현상이 자주 나타난다. 이는 Serre vanishing theorem으로 정밀화된다: 임의의 coherent sheaf $$\mathcal{F}$$에 대해 충분히 큰 $$m$$에 대해 $$H^i(\mathbb{P}^n, \mathcal{F}(m)) = 0$$이 $$i > 0$$에 대해 성립한다. 예를 들어, Bott's formula에서 $$H^q(\mathbb{P}^n, \mathcal{O}(d))$$가 $$q > 0$$에서 vanish하는 $$d$$의 범위는 $$d \geq -n$$이다. Regularity는 이 현상을 정량화하여, 구체적으로 어느 정도 twist해야 higher cohomology가 사라지는지를 기록하는 개념이다.
-
-Coherent sheaf를 다룰 때 한 가지 근본적인 어려움은, line bundle의 경우와 달리 global section이 항상 존재한다는 보장이 없다는 점이다. 예를 들어 $$\mathcal{O}(d)$$는 $$d \geq 0$$일 때만 non-zero global section을 갖지만, 일반적인 coherent sheaf $$\mathcal{F}$$에 대해서는 $$H^0(X, \mathcal{F})$$의 차원을 섣불리 예측할 수 없다. 그럼에도 불구하고, 충분히 많은 global section이 존재하여 각 점의 stalk를 모두 생성할 수 있다면, line bundle에서 하던 것처럼 evaluation map을 통해 projective embedding이나 morphism의 구성 등 다양한 기하학적 작업을 수행할 수 있다. 이러한 상황은 선형계(linear system)가 basepoint-free일 때와 정확히 유사하다. Basepoint-free linear system이 점마다 그 점에서 vanish하지 않는 section을 제공하듯이, globally generated sheaf는 stalk의 각 원소를 global section들의 값으로 생성할 수 있다.
+직관적으로 higher cohomology는 낮은 degree cohomology에서의 실패로 인해 생기는 것이므로, 이 twisting은 높은 차수에서는 "덜" 필요하다. 이를 염두에 두면 다음의 정의가 자연스럽다.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Coherent sheaf $$\mathcal{F}$$가 *globally generated*라는 것은 evaluation map
+<ins id="def4">**정의 4**</ins> Projective variety $$X$$와 그 위의 ample line bundle $$\mathcal{L}$$이 고정되었다고 하자. 그럼 $$X$$ 위의 coherent sheaf $$\mathcal{F}$$가 *$$m$$-regular*라는 것은 모든 $$i>0$$에 대하여
+
+$$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m - i}) = 0$$
+
+이 성립하는 것이다.
+
+</div>
+
+일반적으로 coherent sheaf의 cohomology를 모두 계산하는 것은 거의 불가능하지만, 충분히 twist하면 higher cohomology가 vanish한다는 것이 우리의 기본적인 아이디어이다. Regularity는 여기에서 더 나아가, 구체적으로 얼마만큼의 twisting이 필요한지를 측정해주는 개념이다. 
+
+Coherent sheaf를 다룰 때 이러한 twisting이 유용해지는 핵심적인 이유 중 하나는, 충분히 twist하면 coherent sheaf가 *globally generated*가 되기 때문이다. 이 개념의 직관을 얻기 위해 우선 line bundle의 경우를 생각해보자. Line bundle $$\mathcal{L}$$이 [§선형계, ⁋정의 5](/ko/math/algebraic_geometry/linear_systems#def5)에서 정의된 바와 같이 *basepoint-free*라는 것은, 모든 점 $$p \in X$$에 대해 $$s(p) \neq 0$$인 global section $$s \in H^0(X, \mathcal{L})$$가 존재한다는 뜻이다. 즉 base locus가 비어있어, linear system $$\lvert \mathcal{L} \rvert$$가 각 점에서 반드시 nonzero 값을 제공한다. 이는 evaluation map
+
+$$H^0(X, \mathcal{L}) \otimes \mathcal{O}_X \to \mathcal{L}$$
+
+이 surjective인 것과 동치이다. *Globally generated*는 이 조건을 임의의 coherent sheaf로 일반화한 것이다: coherent sheaf $$\mathcal{F}$$가 globally generated라는 것은, 마찬가지로 위와 같은 형태의 evaluation map이 surjective가 되어 global section들로 각 점의 stalk를 모두 생성할 수 있다는 의미이다. 특히 line bundle의 경우에는 globally generated인 것과 basepoint-free인 것이 동치이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def5">**정의 5**</ins> Coherent sheaf $$\mathcal{F}$$가 *globally generated*라는 것은 evaluation map
 
 $$H^0(X, \mathcal{F}) \otimes \mathcal{O}_X \to \mathcal{F}$$
 
@@ -208,7 +228,7 @@ $$H^0(X, \mathcal{F}) \otimes \mathcal{O}_X \to \mathcal{F}$$
 
 </div>
 
-Regularity를 일반적으로 정의하기 위해서는, 우선 twist의 개념이 필요하다. $$\mathbb{P}^n$$에서는 $$\mathcal{O}(1)$$을 기본으로 사용하므로 $$\mathcal{F}(d) := \mathcal{F} \otimes \mathcal{O}(d)$$로 쓴다. 임의의 projective variety $$X$$ 위에서는 ample line bundle $$L$$을 택하고 $$\mathcal{F}(d) := \mathcal{F} \otimes L^{\otimes d}$$로 정의한다. Twist는 다음의 성질들을 만족한다. Tensor product의 결합법칙에 의해 $$\mathcal{F}(d)(e) = \mathcal{F}(d+e)$$가 성립한다. 또한, tensor product functor $$- \otimes L^{\otimes d}$$는 line bundle이므로 exact이고, 따라서 short exact sequence
+Regularity를 일반적으로 정의하기 위해서는, 우선 twist의 개념이 필요하다. $$\mathbb{P}^n$$에서는 $$\mathcal{O}(1)$$을 기본으로 사용하므로 $$\mathcal{F}(d) := \mathcal{F} \otimes \mathcal{O}(d)$$로 쓴다. 임의의 projective variety $$X$$ 위에서는 ample line bundle $$\mathcal{L}$$을 택하고 $$\mathcal{F}(d) := \mathcal{F} \otimes \mathcal{L}^{\otimes d}$$로 정의한다. Twist는 다음의 성질들을 만족한다. Tensor product의 결합법칙에 의해 $$\mathcal{F}(d)(e) = \mathcal{F}(d+e)$$가 성립한다. 또한, tensor product functor $$- \otimes \mathcal{L}^{\otimes d}$$는 line bundle이므로 exact이고, 따라서 short exact sequence
 
 $$0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0$$
 
@@ -218,22 +238,13 @@ $$0 \to \mathcal{F}(d) \to \mathcal{G}(d) \to \mathcal{H}(d) \to 0$$
 
 역시 short exact sequence가 된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> $$X$$를 projective variety, $$L$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. $$\mathcal{F}$$가 $$L$$에 대해 *$$m$$-regular*라는 것은 모든 $$i > 0$$에 대해
-
-$$H^i(X, \mathcal{F} \otimes L^{\otimes m - i}) = 0$$
-
-이 성립하는 것이다.
-
-</div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5 (Castelnuovo-Mumford Regularity)**</ins> $$X$$를 projective variety, $$L$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. $$\mathcal{F}$$가 $$L$$에 대해 $$m$$-regular이면 다음이 성립한다.
+<ins id="prop6">**명제 6 (Castelnuovo-Mumford Regularity)**</ins> $$X$$를 projective variety, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. $$\mathcal{F}$$가 $$\mathcal{L}$$에 대해 $$m$$-regular이면 다음이 성립한다.
 
-1. $$\mathcal{F} \otimes L^{\otimes m}$$은 globally generated이다.
-2. $$\mathcal{F} \otimes L^{\otimes p}$$는 모든 $$p \geq 0$$에 대해 $$L$$에 대해 $$(m+p)$$-regular이다.
+1. $$\mathcal{F} \otimes \mathcal{L}^{\otimes m}$$은 globally generated이다.
+2. $$\mathcal{F} \otimes \mathcal{L}^{\otimes p}$$는 모든 $$p \geq 0$$에 대해 $$\mathcal{L}$$에 대해 $$(m+p)$$-regular이다.
 
 </div>
 
@@ -242,67 +253,67 @@ $$H^i(X, \mathcal{F} \otimes L^{\otimes m - i}) = 0$$
 
 $$X$$의 차원에 대한 귀납법으로 증명한다. $$\dim X = 0$$인 경우 $$X$$는 한 점이고 coherent sheaf $$\mathcal{F}$$는 finite-dimensional vector space이므로 $$H^0$$ 이외의 cohomology는 자동으로 사라진다. 이제 $$\dim X \geq 1$$이라 가정하자.
 
-핵심은 $$L$$의 global section $$s \in H^0(X, L)$$으로 정의되는 effective divisor $$D$$에 대한 restriction exact sequence를 이용하는 것이다. 일반적인 $$s$$를 택하면 Bertini의 정리에 의해 $$D$$는 smooth이며, 다음 short exact sequence를 얻는다.
+핵심은 $$\mathcal{L}$$의 global section $$s \in H^0(X, \mathcal{L})$$으로 정의되는 effective divisor $$D$$에 대한 restriction exact sequence를 이용하는 것이다. 일반적인 $$s$$를 택하면 Bertini의 정리에 의해 $$D$$는 smooth이며, 다음 short exact sequence를 얻는다.
 
-$$0 \to \mathcal{F} \otimes L^{\otimes k-1} \xrightarrow{\cdot s} \mathcal{F} \otimes L^{\otimes k} \to \mathcal{F} \otimes L^{\otimes k}\vert_D \to 0$$
+$$0 \to \mathcal{F} \otimes \mathcal{L}^{\otimes k-1} \xrightarrow{\cdot s} \mathcal{F} \otimes \mathcal{L}^{\otimes k} \to \mathcal{F} \otimes \mathcal{L}^{\otimes k}\vert_D \to 0$$
 
 이 sequence의 cohomology long exact sequence는 다음을 준다.
 
-$$\cdots \to H^i(\mathcal{F} \otimes L^{\otimes k-1}) \to H^i(\mathcal{F} \otimes L^{\otimes k}) \to H^i(\mathcal{F} \otimes L^{\otimes k}\vert_D) \to H^{i+1}(\mathcal{F} \otimes L^{\otimes k-1}) \to \cdots$$
+$$\cdots \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes k-1}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes k}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes k}\vert_D) \to H^{i+1}(\mathcal{F} \otimes \mathcal{L}^{\otimes k-1}) \to \cdots$$
 
-$$\mathbb{P}^n$$의 특수 경우에는 $$L = \mathcal{O}(1)$$이고, $$s$$는 일반적인 linear form이며, $$D$$는 $$\mathbb{P}^{n-1}$$과 isomorphic한 hyperplane $$H$$가 된다.
+$$\mathbb{P}^n$$의 특수 경우에는 $$\mathcal{L} = \mathcal{O}(1)$$이고, $$s$$는 일반적인 linear form이며, $$D$$는 $$\mathbb{P}^{n-1}$$과 isomorphic한 hyperplane $$H$$가 된다.
 
-**1단계: $$\mathcal{F}\vert_D$$의 $$m$$-regularity.** $$\mathcal{F}$$가 $$L$$에 대해 $$m$$-regular이므로 $$H^i(\mathcal{F} \otimes L^{\otimes m-i}) = 0$$이 $$i > 0$$에 대해 성립한다. $$\mathcal{F}\vert_D$$가 $$L\vert_D$$에 대해 $$m$$-regular임을 보이자. Restriction sequence에서 $$k = m - i$$를 대입하면 ($$0 < i \leq n-1$$)
+**1단계: $$\mathcal{F}\vert_D$$의 $$m$$-regularity.** $$\mathcal{F}$$가 $$\mathcal{L}$$에 대해 $$m$$-regular이므로 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i}) = 0$$이 $$i > 0$$에 대해 성립한다. $$\mathcal{F}\vert_D$$가 $$\mathcal{L}\vert_D$$에 대해 $$m$$-regular임을 보이자. Restriction sequence에서 $$k = m - i$$를 대입하면 ($$0 < i \leq n-1$$)
 
-$$0 \to \mathcal{F} \otimes L^{\otimes m-i-1} \to \mathcal{F} \otimes L^{\otimes m-i} \to \mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m-i} \to 0$$
+$$0 \to \mathcal{F} \otimes \mathcal{L}^{\otimes m-i-1} \to \mathcal{F} \otimes \mathcal{L}^{\otimes m-i} \to \mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i} \to 0$$
 
 이고, 이의 long exact sequence에서
 
-$$H^i(\mathcal{F} \otimes L^{\otimes m-i}) \to H^i(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m-i}) \to H^{i+1}(\mathcal{F} \otimes L^{\otimes m-i-1})$$
+$$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i}) \to H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i}) \to H^{i+1}(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i-1})$$
 
-이다. $$m$$-regularity에 의해 $$H^i(\mathcal{F} \otimes L^{\otimes m-i}) = 0$$이고, $$H^{i+1}(\mathcal{F} \otimes L^{\otimes m-i-1}) = 0$$ ($$i+1 > 0$$)이므로
+이다. $$m$$-regularity에 의해 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i}) = 0$$이고, $$H^{i+1}(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i-1}) = 0$$ ($$i+1 > 0$$)이므로
 
-$$H^i(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m-i}) = 0$$
+$$H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i}) = 0$$
 
-을 $$0 < i \leq n-1$$에 대해 얻는다. 이것은 $$\mathcal{F}\vert_D$$가 $$L\vert_D$$에 대해 $$m$$-regular임을 의미한다.
+을 $$0 < i \leq n-1$$에 대해 얻는다. 이것은 $$\mathcal{F}\vert_D$$가 $$\mathcal{L}\vert_D$$에 대해 $$m$$-regular임을 의미한다.
 
-**2단계: $$\mathcal{F} \otimes L^{\otimes m}$$이 globally generated.** 귀납적 가정을 $$D$$에 적용한다. $$D$$는 projective variety이고 $$\dim D < \dim X$$이며, $$L\vert_D$$는 ample line bundle이다. $$\mathcal{F}\vert_D$$가 $$m$$-regular이므로 귀납적 가정에 의해 $$\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m}$$은 $$D$$ 위에서 globally generated이다.
+**2단계: $$\mathcal{F} \otimes \mathcal{L}^{\otimes m}$$이 globally generated.** 귀납적 가정을 $$D$$에 적용한다. $$D$$는 projective variety이고 $$\dim D < \dim X$$이며, $$\mathcal{L}\vert_D$$는 ample line bundle이다. $$\mathcal{F}\vert_D$$가 $$m$$-regular이므로 귀납적 가정에 의해 $$\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m}$$은 $$D$$ 위에서 globally generated이다.
 
-이제 $$\mathcal{F} \otimes L^{\otimes m}$$이 globally generated임을 보이자. 임의의 점 $$p \in X$$에서 fiber $$(\mathcal{F} \otimes L^{\otimes m})_p$$가 global section들의 상으로 생성됨을 확인하면 충분하다. $$p$$를 지나는 일반적인 divisor $$D$$를 택하고, restriction sequence에서 $$k = m$$을 대입하면
+이제 $$\mathcal{F} \otimes \mathcal{L}^{\otimes m}$$이 globally generated임을 보이자. 임의의 점 $$p \in X$$에서 fiber $$(\mathcal{F} \otimes \mathcal{L}^{\otimes m})_p$$가 global section들의 상으로 생성됨을 확인하면 충분하다. $$p$$를 지나는 일반적인 divisor $$D$$를 택하고, restriction sequence에서 $$k = m$$을 대입하면
 
-$$0 \to \mathcal{F} \otimes L^{\otimes m-1} \to \mathcal{F} \otimes L^{\otimes m} \to \mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m} \to 0$$
+$$0 \to \mathcal{F} \otimes \mathcal{L}^{\otimes m-1} \to \mathcal{F} \otimes \mathcal{L}^{\otimes m} \to \mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m} \to 0$$
 
-이다. $$m$$-regularity에서 $$i = 1$$인 경우에 $$H^1(\mathcal{F} \otimes L^{\otimes m-1}) = 0$$이므로
+이다. $$m$$-regularity에서 $$i = 1$$인 경우에 $$H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m-1}) = 0$$이므로
 
-$$H^0(\mathcal{F} \otimes L^{\otimes m}) \to H^0(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m})$$
+$$H^0(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) \to H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$$
 
-는 surjective이다. 귀납적 가정에 의해 $$\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m}$$은 $$D$$ 위에서 globally generated이므로, 이 fiber at $$p$$는 $$H^0(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m})$$의 상으로 생성된다. Restriction map이 surjective이므로 $$\mathcal{F} \otimes L^{\otimes m}$$의 global section들도 $$p$$에서의 fiber를 생성한다. 따라서 $$\mathcal{F} \otimes L^{\otimes m}$$은 globally generated이다.
+는 surjective이다. 귀납적 가정에 의해 $$\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m}$$은 $$D$$ 위에서 globally generated이므로, 이 fiber at $$p$$는 $$H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$$의 상으로 생성된다. Restriction map이 surjective이므로 $$\mathcal{F} \otimes \mathcal{L}^{\otimes m}$$의 global section들도 $$p$$에서의 fiber를 생성한다. 따라서 $$\mathcal{F} \otimes \mathcal{L}^{\otimes m}$$은 globally generated이다.
 
-**3단계: $$\mathcal{F} \otimes L^{\otimes p}$$가 $$(m+p)$$-regular.** $$\mathcal{F} \otimes L^{\otimes m}$$이 globally generated이므로, 적당한 $$r_0$$에 대하여 다음의 surjection이 존재한다.
+**3단계: $$\mathcal{F} \otimes \mathcal{L}^{\otimes p}$$가 $$(m+p)$$-regular.** $$\mathcal{F} \otimes \mathcal{L}^{\otimes m}$$이 globally generated이므로, 적당한 $$r_0$$에 대하여 다음의 surjection이 존재한다.
 
-$$\mathcal{O}_X^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes L^{\otimes m}$$
+$$\mathcal{O}_X^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m}$$
 
-이것에 $$L^{\otimes p}$$를 tensor하면
+이것에 $$\mathcal{L}^{\otimes p}$$를 tensor하면
 
-$$L^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes L^{\otimes m+p}$$
+$$\mathcal{L}^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m+p}$$
 
-을 얻는다. 따라서 임의의 $$i > 0$$과 $$p \geq 0$$에 대해 $$H^i(X, L^{\otimes p}) = 0$$이면 $$H^i(\mathcal{F} \otimes L^{\otimes m+p}) = 0$$이 성립한다. $$p = 0$$인 경우 $$H^i(\mathcal{F} \otimes L^{\otimes m}) = 0$$ ($$i > 0$$)은 $$\mathcal{F}$$의 $$m$$-regularity 정의 자체에 해당한다. $$p \geq 1$$인 경우, $$L$$이 ample이므로 Serre vanishing theorem에 의해 충분히 큰 $$p$$에 대해 $$H^i(L^{\otimes p}) = 0$$이지만, $$p$$가 작은 경우에는 이 인자가 vanish하지 않을 수 있다.
+을 얻는다. 따라서 임의의 $$i > 0$$과 $$p \geq 0$$에 대해 $$H^i(X, \mathcal{L}^{\otimes p}) = 0$$이면 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p}) = 0$$이 성립한다. $$p = 0$$인 경우 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)은 $$\mathcal{F}$$의 $$m$$-regularity 정의 자체에 해당한다. $$p \geq 1$$인 경우, $$\mathcal{L}$$이 ample이므로 Serre vanishing theorem에 의해 충분히 큰 $$p$$에 대해 $$H^i(\mathcal{L}^{\otimes p}) = 0$$이지만, $$p$$가 작은 경우에는 이 인자가 vanish하지 않을 수 있다.
 
-이 문제를 해결하기 위해 $$p$$에 대한 귀납법을 사용한다. $$p = 0$$일 때 $$\mathcal{F}(m)$$이 $$m$$-regular인 것은 정의이다. $$p \geq 1$$이라 가정하고, $$\mathcal{F}(m+p)$$가 $$(m+p)$$-regular임, 즉 $$H^i(\mathcal{F} \otimes L^{\otimes m+p-i}) = 0$$ ($$i > 0$$)을 보이자. $$i = 1$$인 경우, restriction sequence에서 $$k = m + p - 1$$을 대입하면
+이 문제를 해결하기 위해 $$p$$에 대한 귀납법을 사용한다. $$p = 0$$일 때 $$\mathcal{F}(m)$$이 $$m$$-regular인 것은 정의이다. $$p \geq 1$$이라 가정하고, $$\mathcal{F}(m+p)$$가 $$(m+p)$$-regular임, 즉 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$$ ($$i > 0$$)을 보이자. $$i = 1$$인 경우, restriction sequence에서 $$k = m + p - 1$$을 대입하면
 
-$$H^0(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m+p-1}) \to H^1(\mathcal{F} \otimes L^{\otimes m+p-2}) \to H^1(\mathcal{F} \otimes L^{\otimes m+p-1})$$
+$$H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) \to H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-2}) \to H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1})$$
 
-이다. 귀납적 가정 ($$p-1$$에 대한)에 의해 $$H^1(\mathcal{F} \otimes L^{\otimes m+p-2}) = 0$$이다. 또한, $$\mathcal{F}\vert_D$$가 $$m$$-regular이므로 (2단계) 차원에 대한 귀납적 가정에 의해 $$\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes p}$$이 $$(m+p)$$-regular이고, 따라서 $$H^1(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m+p-1}) = 0$$이다. 정확한 열에서 $$H^1(\mathcal{F} \otimes L^{\otimes m+p-1})$$은 $$H^1(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m+p-1})$$에 매장되므로 $$H^1(\mathcal{F} \otimes L^{\otimes m+p-1}) = 0$$을 얻는다. $$i \geq 2$$인 경우, 같은 restriction sequence에서
+이다. 귀납적 가정 ($$p-1$$에 대한)에 의해 $$H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-2}) = 0$$이다. 또한, $$\mathcal{F}\vert_D$$가 $$m$$-regular이므로 (2단계) 차원에 대한 귀납적 가정에 의해 $$\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes p}$$이 $$(m+p)$$-regular이고, 따라서 $$H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) = 0$$이다. 정확한 열에서 $$H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1})$$은 $$H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1})$$에 매장되므로 $$H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1}) = 0$$을 얻는다. $$i \geq 2$$인 경우, 같은 restriction sequence에서
 
-$$H^{i-1}(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m+p-i}) \to H^i(\mathcal{F} \otimes L^{\otimes m+p-i-1}) \to H^i(\mathcal{F} \otimes L^{\otimes m+p-i}) \to H^i(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m+p-i})$$
+$$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) \to H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i})$$
 
-이다. 귀납적 가정에 의해 $$H^i(\mathcal{F} \otimes L^{\otimes m+p-i-1}) = 0$$ ($$p' = p-1$$, $$j = i$$에 대한 가정)이고, $$\mathcal{F}\vert_D$$에 대한 귀납적 가정 (차원에 대한 귀납)에 의해 $$H^{i-1}(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m+p-i}) = 0$$과 $$H^i(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m+p-i}) = 0$$이 $$i-1 \geq 1$$, $$i \leq n-1$$에 대해 성립한다. 따라서 $$H^i(\mathcal{F} \otimes L^{\otimes m+p-i}) = 0$$을 얻는다.
+이다. 귀납적 가정에 의해 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) = 0$$ ($$p' = p-1$$, $$j = i$$에 대한 가정)이고, $$\mathcal{F}\vert_D$$에 대한 귀납적 가정 (차원에 대한 귀납)에 의해 $$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$$과 $$H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$$이 $$i-1 \geq 1$$, $$i \leq n-1$$에 대해 성립한다. 따라서 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$$을 얻는다.
 
 </details>
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**</ins> $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. 여기서 $$L = \mathcal{O}(1)$$이므로 twist는 $$\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$$이다. $$m$$-regularity 조건은 $$H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$d \geq 0$$이고 $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이고 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이고, $$d - i < -n$$, 즉 $$i > d + n$$인 경우에는 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$\mathcal{O}(1)$$에 대해 $$0$$-regular이다. 반면 $$d < 0$$인 경우, $$\mathcal{O}(d)$$는 $$(-d)$$-regular이다. [명제 5](#prop5)에 의해 $$\mathcal{O}(d) \otimes \mathcal{O}(1)^{\otimes 0} = \mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 확인한 바와 일치한다.
+<ins id="ex7">**예시 7**</ins> $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. 여기서 $$\mathcal{L} = \mathcal{O}(1)$$이므로 twist는 $$\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$$이다. $$m$$-regularity 조건은 $$H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$d \geq 0$$이고 $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이고 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이고, $$d - i < -n$$, 즉 $$i > d + n$$인 경우에는 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$\mathcal{L} = \mathcal{O}(1)$$에 대해 $$0$$-regular이다. 반면 $$d < 0$$인 경우, $$\mathcal{O}(d)$$는 $$(-d)$$-regular이다. [명제 6](#prop6)에 의해 $$\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 확인한 바와 일치한다.
 
 </div>
 
@@ -314,4 +325,3 @@ $$H^{i-1}(\mathcal{F}\vert_D \otimes (L\vert_D)^{\otimes m+p-i}) \to H^i(\mathca
 **[Bot]** R. Bott, *Homogeneous vector bundles*, Annals of Mathematics, 1957.
 **[Laz]** R. Lazarsfeld, *Positivity in Algebraic Geometry I*, Ergebnisse der Mathematik, Springer, 2004.
 **[Mum]** D. Mumford, *Lectures on Curves on an Algebraic Surface*, Annals of Mathematics Studies, Princeton, 1966.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
