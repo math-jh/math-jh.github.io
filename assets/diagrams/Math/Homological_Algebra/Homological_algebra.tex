@@ -1,9 +1,37 @@
-\documentclass[convert={density=1024}]{standalone}
+\documentclass[convert={imagemagick, density=1024}]{standalone}
 \usepackage{amsmath, amsthm, amsfonts}
 \usepackage{tikz-cd, kotex}
-\usepackage{../.preamble/quiver}
-\usepackage{../.preamble/Operators}
+\usepackage{../../.preamble/quiver}
+\usepackage{../../.preamble/Operators}
 \begin{document}
+
+%% Tor balancing double complex (Ext_and_Tor-1.png)
+\begin{tikzcd}[row sep=large, column sep=large]
+	& \vdots \dar & \vdots \dar & \vdots \dar &\\
+	\cdots \rar & {P_1\otimes_A P'_2} \dar \rar & {P_0\otimes_A P'_2} \rar \dar & {M\otimes_A P'_2} \dar \rar & 0\\
+	\cdots \rar & {P_1\otimes_A P'_1} \dar \rar & {P_0\otimes_A P'_1} \rar \dar & {M\otimes_A P'_1} \dar \rar & 0\\
+	\cdots \rar & {P_1\otimes_A P'_0} \dar \rar & {P_0\otimes_A P'_0} \rar \dar & {M\otimes_A P'_0} \rar \dar & 0\\
+	& \vdots & \vdots & \vdots &
+	\arrow["{d'}", from=2-2, to=2-3]
+	\arrow["{d'}", from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow["d_v"{description}, from=2-2, to=3-2]
+	\arrow["{d'}", from=3-2, to=3-3]
+	\arrow["{d'}", from=3-3, to=3-4]
+	\arrow[from=3-4, to=3-5]
+	\arrow["d_v"{description}, from=2-3, to=3-3]
+	\arrow["d_v"{description}, from=2-4, to=3-4]
+	\arrow["d_v"{description}, from=3-2, to=4-2]
+	\arrow["{d'}", from=4-2, to=4-3]
+	\arrow["{d'}", from=4-3, to=4-4]
+	\arrow[from=4-4, to=4-5]
+	\arrow["d_v"{description}, from=3-3, to=4-3]
+	\arrow["d_v"{description}, from=3-4, to=4-4]
+\end{tikzcd}
+
+
+
+\end{document}
 
 %% horseshoe-finish (Resolutions-11.png)
 \begin{tikzcd}
@@ -25,10 +53,6 @@
 	\arrow[from=4-4, to=4-5]
 	\arrow[from=4-4, to=5-4]
 \end{tikzcd}
-
-
-
-\end{document}
 
 %% Universal property of kernel (Exact_sequences-1.png)
 \begin{tikzcd}
@@ -439,4 +463,4 @@
 	\arrow[from=4-3, to=5-3]
 	\arrow[from=4-4, to=4-5]
 	\arrow[from=4-4, to=5-4]
-\end{tikzcd}
+\end{tikzcd}               

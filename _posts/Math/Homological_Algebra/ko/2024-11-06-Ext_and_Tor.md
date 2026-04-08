@@ -60,7 +60,7 @@ $$\Tor_i^A(M,N)=L_i(-\otimes_A N)(M)$$
 
 </div>
 
-$$\Tor$$를 계산하기 위해서는 $$N$$의 projective resolution을 사용해야 한다. 따라서, 앞선 문단에서의 계산과 마찬가지로 $$N$$이 projective $$A$$-module이었다면 $$0 \rightarrow N \rightarrow N \rightarrow 0$$이 $$N$$의 projective resolution이 되고, 이로부터 $$\Tor_1^A(M,N)=0$$이 모든 $$M$$에 대해 성립했을 것이다. 즉, 임의의 projective $$A$$-module은 flat $$A$$-module임을 다시 한 번 확인할 수 있다. 
+$$\Tor$$를 계산하기 위해서는 $$M$$의 projective resolution을 사용해야 한다. 따라서, 앞선 문단에서의 계산과 마찬가지로 $$M$$이 projective $$A$$-module이었다면 $$0 \rightarrow M \rightarrow M \rightarrow 0$$이 $$M$$의 projective resolution이 되고, 이로부터 $$\Tor_1^A(M,N)=0$$이 모든 $$N$$에 대해 성립했을 것이다. 즉, 임의의 projective $$A$$-module은 flat $$A$$-module임을 다시 한 번 확인할 수 있다. 
 
 ## Balancing
 
@@ -78,7 +78,10 @@ $$
 
 </div>
 
-**증명.** Double complex ([§사슬호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Double complex ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
 
 $$
 K^{p,q} = \Hom_\lMod{A}(P_{-q}, I^p)
@@ -121,8 +124,10 @@ $$
 두 방법에서 같은 $$H^n(\mathrm{Tot}(K)^\bullet)$$을 얻으므로
 
 $$
-H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N)). \quad \square
+H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N)).
 $$
+
+</details>
 
 <div class="proposition" markdown="1">
 
@@ -136,7 +141,10 @@ $$
 
 </div>
 
-**증명.** Double complex ([§사슬호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Double complex ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
 
 $$
 K_{p,q} = P_p \otimes_A P'_q
@@ -162,4 +170,6 @@ $$
 H_q(K_{p, \bullet}) = \begin{cases} P_p \otimes_A N & q = 0 \\ 0 & q > 0. \end{cases}
 $$
 
-$$q > 0$$인 성분만 모은 subcomplex $$B_\bullet$$에 대해 동일한 논의로 $$H_k(B_\bullet) = 0$$이 성립하며, quotient $$\mathrm{Tot}(K)_\bullet / B_\bullet$$은 $$q = 0$$인 행만으로 이루어진 $$\bigoplus_p P_p \otimes_A N = P_\bullet \otimes_A N$$와 동치이다. 여기서의 differential은 $$d_h$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서 $$H_n(\mathrm{Tot}(K)_\bullet) \cong H_n(P_\bullet \otimes_A N)$$을 얻는다. 두 방법에서 같은 total homology를 얻으므로 결과가 따른다. $$\square$$
+$$q > 0$$인 성분만 모은 subcomplex $$B_\bullet$$에 대해 동일한 논의로 $$H_k(B_\bullet) = 0$$이 성립하며, quotient $$\mathrm{Tot}(K)_\bullet / B_\bullet$$은 $$q = 0$$인 행만으로 이루어진 $$\bigoplus_p P_p \otimes_A N = P_\bullet \otimes_A N$$와 동치이다. 여기서의 differential은 $$d_h$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서 $$H_n(\mathrm{Tot}(K)_\bullet) \cong H_n(P_\bullet \otimes_A N)$$을 얻는다. 두 방법에서 같은 total homology를 얻으므로 결과가 따른다.
+
+</details>
