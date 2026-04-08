@@ -14,10 +14,9 @@ sidebar:
 date: 2026-04-08
 last_modified_at: 2026-04-08
 weight: 7
+published: false
 
 ---
-
-## 동기
 
 우리는 [§유도함자, ⁋정의 4](/ko/math/homological_algebra/derived_functors#def4)에서 exact하지 않은 functor $$F$$에 대해 projective resolution을 이용하여 left derived functor $$L_iF$$를 정의하였다. Right exact functor $$F$$를 다룰 때, 우리는 대상 $$A$$의 projective resolution $$P_\bullet$$을 선택하고 $$F(P_\bullet)$$의 homology를 취함으로써 손실된 정보를 보충하였다. 그러나 이 접근에는 본질적인 한계가 있다.
 
