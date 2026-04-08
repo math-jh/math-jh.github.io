@@ -40,7 +40,6 @@ $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$
 
 </div>
 
-
 ## Projective space의 linear system
 
 앞서 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_geometry/line_bundles#ex12) 이후의 계산에 의해 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$$가 차수 $$d$$의 동차다항식들의 공간 $$\mathbb{K}[\x_0, \ldots, \x_n]_d$$와 동형임을 보았다. 이 공간의 각 원소들은 $$\mathbb{P}^n$$의 degree $$d$$ hypersurface를 정의하므로, 우리는 $$\mathcal{O}_{\mathbb{P}^n}(d)$$의 complete linear system
