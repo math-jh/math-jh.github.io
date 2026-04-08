@@ -12,7 +12,7 @@ header:
     overlay_filter: 0.5
 
 date: 2026-04-06
-last_modified_at: 2026-04-06
+last_modified_at: 2026-04-08
 weight: 14
 published: false
 ---
@@ -192,17 +192,86 @@ $$\binom{-d-1}{n}=(-1)^n\binom{n+d}{n}$$
 
 Euler characteristic은 short exact sequence에 대해 가산적(additive)이라는 중요한 성질을 갖는다. 즉, short exact sequence $$0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0$$에 대해 $$\rchi(\mathcal{G}) = \rchi(\mathcal{F}) + \rchi(\mathcal{H})$$가 성립한다. 따라서 Euler characteristic은 개별 cohomology group의 정보를 잃는 대신, 계산과 조작이 훨씬 용이한 불변량이 된다.
 
+## Serre Vanishing
+
+[명제 1](#prop1)에 따르면, $$\mathbb{P}^n$$ 위에서는 충분히 큰 $$d$$에 대해 $$\mathcal{O}(d)$$의 higher cohomology가 모두 사라진다. $$\mathbb{P}^n$$ 위의 임의의 line bundle은 모두 어떠한 $$d$$에 대하여 $$\mathcal{O}(d)$$의 꼴이므로, 이는 $$\mathbb{P}^n$$의 임의의 line bundle $$\mathcal{L}$$에 대하여, 충분히 큰 $$d\gg 0$$에 대하여 $$\mathcal{O}(d)$$를 사용한 twisted line bundle
+
+$$\mathcal{L}\otimes \mathcal{O}(d)$$
+
+은 반드시 higher cohomology가 $$0$$이라는 것을 의미한다. 
+
+더 일반적으로 우리는 이를 임의의 projective variety와 그 위에 정의된 임의의 coherent sheaf로 확장할 수 있다. 이를 위해서는 우선 $$\mathcal{O}(1)$$의 역할을 할 것이 필요한데, 우리의 정의에서 projective variety $$X$$는 항상 embedding $$X\hookrightarrow\mathbb{P}^N$$으로 주어지므로 $$\mathbb{P}^N$$ 위의 $$\mathcal{O}(1)$$들을 끌어오면 된다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop4">**명제 4 (Serre Vanishing)**</ins> $$X$$를 projective variety, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. 그럼 충분히 큰 $$m$$에 대해
+
+$$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0 \quad (i > 0)$$
+
+이 성립한다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\mathcal{L}$$이 ample이므로, 충분히 큰 $$m_0$$에 대해 $$\mathcal{L}^{\otimes m_0}$$은 very ample이다. 즉, 적당한 embedding $$i \colon X \hookrightarrow \mathbb{P}^N$$이 존재하여 $$\mathcal{L}^{\otimes m_0} = i^*\mathcal{O}(1)$$이 성립한다. $$\mathbb{P}^N$$의 standard affine cover $$\{U_i\}$$를 $$X$$에 restrict하면 affine open cover $$\{X \cap U_i\}$$를 얻는다. Finite intersection $$U_{i_0} \cap \cdots \cap U_{i_p}$$은 affine이므로 $$(X \cap U_{i_0}) \cap \cdots \cap (X \cap U_{i_p}) = X \cap (U_{i_0} \cap \cdots \cap U_{i_p})$$도 affine이다. 따라서 두 Čech complex가 literally 같으므로
+
+$$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{F})$$
+
+이 성립한다. $$X$$와 $$\mathbb{P}^N$$은 separated scheme이므로 ([§층 코호몰로지, ⁋명제 10](/ko/math/algebraic_geometry/sheaf_cohomology#prop10)), quasi-coherent sheaf에 대해 Čech cohomology = sheaf cohomology:
+
+$$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{G}) = H^i(\mathbb{P}^N, i_*\mathcal{G})$$ 따라서 다음을 보이면 충분하다: $$\mathbb{P}^N$$ 위의 coherent sheaf $$\mathcal{G}$$에 대해, 충분히 큰 $$n$$에 대해 $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$$ ($$i > 0$$). 여기서 $$\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$$이다.
+
+**핵심 보조정리**. $$\mathcal{G}(n)$$이 충분히 큰 $$n$$에 대해 globally generated임을 보인다. (아래 [⁋정의 6](#def6) 참조.)
+
+$$S = \mathbb{K}[\x_0, \ldots, \x_N]$$로 하고, $$M = \bigoplus_{n \in \mathbb{Z}} \Gamma(\mathbb{P}^N, \mathcal{G}(n))$$을 연결 graded $$S$$-module이라 하자. 각 표준 affine 열린집합 $$D_+(\x_j)$$ 위에서, $$\Gamma(D_+(\x_j), \mathcal{G})$$는 degree-0 localisation $$M_{(\x_j)}$$이고, 이는 $$S_{(\x_j)}$$ 위의 finitely generated module이다. Generator들 $$\bar{m}_1, \ldots, \bar{m}_{r_j} \in M_{(\x_j)}$$을 택하자. 각 $$\bar{m}_k$$는 $$m_k / \x_j^{d_k}$$ 꼴로 쓸 수 있으며, 여기서 $$m_k \in M$$은 homogeneous element이다. $$d_0 = \max_j \max_k d_k$$로 하면, 각 generator에 $$\x_j^{d_0 - d_k}$$를 곱하여 homogeneous element $$m_k \cdot \x_j^{d_0 - d_k} \in M_{d_0}$$를 얻는다. 이는 $$\Gamma(\mathbb{P}^N, \mathcal{G}(d_0))$$의 원소이며, $$D_+(\x_j)$$ 위에서 $$\mathcal{G}$$의 stalk를 생성함을 알 수 있다. $$j$$에 대한 최대값을 취하면, $$\mathcal{G}(d_0)$$이 globally generated임을 얻는다.
+
+**Vanishing**. 이제 $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$$ ($$i > 0$$, $$n \gg 0$$)을 보인다.
+
+$$N = 0$$인 경우 $$\mathbb{P}^0$$은 한 점이므로 자명하다. $$N \geq 1$$이라 하자. 위의 보조정리에 의해 $$\mathcal{G}(n_0)$$은 globally generated ($$n_0 \gg 0$$)이므로, 적당한 surjection
+
+$$\mathcal{O}_{\mathbb{P}^N}^{\oplus r_0} \twoheadrightarrow \mathcal{G}(n_0)$$
+
+이 존재한다. Kernel $$\mathcal{K}_0$$는 coherent하다. Short exact sequence
+
+$$0 \to \mathcal{K}_0 \to \mathcal{O}^{\oplus r_0} \to \mathcal{G}(n_0) \to 0$$
+
+의 long exact sequence에서, [명제 1](#prop1)에 의해 $$H^j(\mathbb{P}^N, \mathcal{O}^{\oplus r_0}) = 0$$ ($$j > 0$$)이므로,
+
+$$H^j(\mathcal{G}(n_0)) \cong H^{j+1}(\mathcal{K}_0) \quad (j \geq 1)$$
+
+을 얻는다. 이제 $$\mathcal{K}_0$$에 대해 같은 과정을 반복한다. 즉, $$\mathcal{K}_0(n_1)$$이 globally generated인 $$n_1 \gg 0$$을 택하고, surjection
+
+$$\mathcal{O}^{\oplus r_1} \twoheadrightarrow \mathcal{K}_0(n_1)$$
+
+의 kernel $$\mathcal{K}_1$$에 대해
+
+$$0 \to \mathcal{K}_1 \to \mathcal{O}^{\oplus r_1} \to \mathcal{K}_0(n_1) \to 0$$
+
+의 long exact sequence에서
+
+$$H^{j+1}(\mathcal{K}_0(n_1)) \cong H^{j+2}(\mathcal{K}_1) \quad (j \geq 1)$$
+
+을 얻는다. 이 과정을 $$N$$회 반복하면
+
+$$H^j(\mathcal{G}(n_0)) \cong H^{j+N}(\mathcal{K}_{N-1})$$
+
+을 얻는다. $$\mathbb{P}^N$$의 cohomological dimension은 $$N$$이므로 $$H^{j+N} = 0$$ ($$j \geq 1$$, $$j + N \geq N+1 > N$$), 따라서 $$H^j(\mathcal{G}(n_0)) = 0$$이다.
+
+마지막으로, $$\mathcal{G}(n_0)$$이 globally generated이므로 $$\mathcal{G}(n) = \mathcal{G}(n_0) \otimes \mathcal{O}(n - n_0)$$ 역시 $$n \geq n_0$$에 대해 globally generated이고, 따라서 위와 동일한 resolution 인자를 $$\mathcal{G}(n)$$에 대해서도 구성할 수 있으므로 vanishing은 $$n \geq n_0$$인 모든 $$n$$에 대해 성립한다.
+
+</details>
+
 ## Regularity
 
-한편, cohomology는 근본적으로 gluing의 실패를 특정하는 것이고, 이는 gluing의 결과로 얻어지는 $$H^0$$과, 여기서의 실패를 보정해주는 higher cohomology $$H^n$$ 항들로 이루어진다. 그럼 [명제 1](#prop1)에 따르면, $$\mathbb{P}^n$$ 위에 어떠한 line bundle이 주어지더라도 충분히 큰 $$d\gg 0$$에 대하여 $$\mathcal{O}(d)$$와 "twist" 해주면 higher cohomology를 없애줄 수 있는 것을 안다.
-
-우리는 이제 이 작업을 조금 더 일반적인 세팅에서 진행하자. 즉 우리는 base space $$\mathbb{P}^n$$을 일반적인 variety로 확장하려 한다. 우리 세팅에서 모든 variety는 quasi-projective variety이므로 $$X\hookrightarrow \mathbb{P}^N$$으로부터 $$\mathcal{O}_{\mathbb{P}^N}(1)$$을 끌어와서 위의 과정을 반복할 수 있다. 만일 variety의 정의가 더 일반적인 것이라면, ample line bundle $$\mathcal{L}$$을 택한 후 $$\mathcal{L}$$의 power $$\mathcal{L}^{\otimes d}$$을 사용하여 twist해주면 된다.
+[명제 4](#prop4)는 higher cohomology가 충분히 큰 twisting 후 vanish한다는 qualitative한 결과를 주었다. Regularity는 이를 정량화하여, 구체적으로 얼마만큼의 twisting이 필요한지를 측정하는 개념이다.
 
 직관적으로 higher cohomology는 낮은 degree cohomology에서의 실패로 인해 생기는 것이므로, 이 twisting은 높은 차수에서는 "덜" 필요하다. 이를 염두에 두면 다음의 정의가 자연스럽다.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Projective variety $$X$$와 그 위의 ample line bundle $$\mathcal{L}$$이 고정되었다고 하자. 그럼 $$X$$ 위의 coherent sheaf $$\mathcal{F}$$가 *$$m$$-regular*라는 것은 모든 $$i>0$$에 대하여
+<ins id="def5">**정의 5**</ins> Projective variety $$X$$와 그 위의 ample line bundle $$\mathcal{L}$$이 고정되었다고 하자. 그럼 $$X$$ 위의 coherent sheaf $$\mathcal{F}$$가 *$$m$$-regular*라는 것은 모든 $$i>0$$에 대하여
 
 $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m - i}) = 0$$
 
@@ -216,11 +285,11 @@ Coherent sheaf를 다룰 때 이러한 twisting이 유용해지는 핵심적인 
 
 $$H^0(X, \mathcal{L}) \otimes \mathcal{O}_X \to \mathcal{L}$$
 
-이 surjective인 것과 동치이다. *Globally generated*는 이 조건을 임의의 coherent sheaf로 일반화한 것이다: coherent sheaf $$\mathcal{F}$$가 globally generated라는 것은, 마찬가지로 위와 같은 형태의 evaluation map이 surjective가 되어 global section들로 각 점의 stalk를 모두 생성할 수 있다는 의미이다. 특히 line bundle의 경우에는 globally generated인 것과 basepoint-free인 것이 동치이다.
+이 surjective인 것과 동치이다. *Globally generated*는 이 조건을 임의의 coherent sheaf로 일반화한 것이다: coherent sheaf $$\mathcal{F}$$가 globally generated라는 것은, 마찬가지로 위와 같은 형태의 evaluation map이 surjective가 되어 global section들로 각 점의 stalk를 모두 생성할 수 있다는 의미이다. 특히 line bundle의 경우에는 globally generated인 것과 basepoint-free인 것이 동치이다. 이 성질은 [명제 4](#prop4)의 증명에서도 핵심적인 역할을 하였다.
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Coherent sheaf $$\mathcal{F}$$가 *globally generated*라는 것은 evaluation map
+<ins id="def6">**정의 6**</ins> Coherent sheaf $$\mathcal{F}$$가 *globally generated*라는 것은 evaluation map
 
 $$H^0(X, \mathcal{F}) \otimes \mathcal{O}_X \to \mathcal{F}$$
 
@@ -241,7 +310,7 @@ $$0 \to \mathcal{F}(d) \to \mathcal{G}(d) \to \mathcal{H}(d) \to 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6 (Castelnuovo-Mumford Regularity)**</ins> $$X$$를 projective variety, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. $$\mathcal{F}$$가 $$\mathcal{L}$$에 대해 $$m$$-regular이면 다음이 성립한다.
+<ins id="prop7">**명제 7 (Castelnuovo-Mumford Regularity)**</ins> $$X$$를 projective variety, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. $$\mathcal{F}$$가 $$\mathcal{L}$$에 대해 $$m$$-regular이면 다음이 성립한다.
 
 1. $$\mathcal{F} \otimes \mathcal{L}^{\otimes m}$$은 globally generated이다.
 2. $$\mathcal{F} \otimes \mathcal{L}^{\otimes p}$$는 모든 $$p \geq 0$$에 대해 $$\mathcal{L}$$에 대해 $$(m+p)$$-regular이다.
@@ -297,7 +366,7 @@ $$\mathcal{O}_X^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^
 
 $$\mathcal{L}^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m+p}$$
 
-을 얻는다. 따라서 임의의 $$i > 0$$과 $$p \geq 0$$에 대해 $$H^i(X, \mathcal{L}^{\otimes p}) = 0$$이면 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p}) = 0$$이 성립한다. $$p = 0$$인 경우 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)은 $$\mathcal{F}$$의 $$m$$-regularity 정의 자체에 해당한다. $$p \geq 1$$인 경우, $$\mathcal{L}$$이 ample이므로 Serre vanishing theorem에 의해 충분히 큰 $$p$$에 대해 $$H^i(\mathcal{L}^{\otimes p}) = 0$$이지만, $$p$$가 작은 경우에는 이 인자가 vanish하지 않을 수 있다.
+을 얻는다. 따라서 임의의 $$i > 0$$과 $$p \geq 0$$에 대해 $$H^i(X, \mathcal{L}^{\otimes p}) = 0$$이면 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p}) = 0$$이 성립한다. $$p = 0$$인 경우 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)은 $$\mathcal{F}$$의 $$m$$-regularity 정의 자체에 해당한다. $$p \geq 1$$인 경우, $$\mathcal{L}$$이 ample이므로 [명제 4](#prop4)에 의해 충분히 큰 $$p$$에 대해 $$H^i(\mathcal{L}^{\otimes p}) = 0$$이지만, $$p$$가 작은 경우에는 이 인자가 vanish하지 않을 수 있다.
 
 이 문제를 해결하기 위해 $$p$$에 대한 귀납법을 사용한다. $$p = 0$$일 때 $$\mathcal{F}(m)$$이 $$m$$-regular인 것은 정의이다. $$p \geq 1$$이라 가정하고, $$\mathcal{F}(m+p)$$가 $$(m+p)$$-regular임, 즉 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$$ ($$i > 0$$)을 보이자. $$i = 1$$인 경우, restriction sequence에서 $$k = m + p - 1$$을 대입하면
 
@@ -313,7 +382,7 @@ $$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \to H
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. 여기서 $$\mathcal{L} = \mathcal{O}(1)$$이므로 twist는 $$\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$$이다. $$m$$-regularity 조건은 $$H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$d \geq 0$$이고 $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이고 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이고, $$d - i < -n$$, 즉 $$i > d + n$$인 경우에는 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$\mathcal{L} = \mathcal{O}(1)$$에 대해 $$0$$-regular이다. 반면 $$d < 0$$인 경우, $$\mathcal{O}(d)$$는 $$(-d)$$-regular이다. [명제 6](#prop6)에 의해 $$\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 확인한 바와 일치한다.
+<ins id="ex8">**예시 8**</ins> $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. 여기서 $$\mathcal{L} = \mathcal{O}(1)$$이므로 twist는 $$\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$$이다. $$m$$-regularity 조건은 $$H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$d \geq 0$$이고 $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이고 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이고, $$d - i < -n$$, 즉 $$i > d + n$$인 경우에는 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$\mathcal{L} = \mathcal{O}(1)$$에 대해 $$0$$-regular이다. 반면 $$d < 0$$인 경우, $$\mathcal{O}(d)$$는 $$(-d)$$-regular이다. [명제 7](#prop7)에 의해 $$\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_geometry/line_bundles#ex16))에서 확인한 바와 일치한다.
 
 </div>
 
