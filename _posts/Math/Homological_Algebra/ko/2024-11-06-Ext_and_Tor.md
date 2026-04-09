@@ -119,11 +119,19 @@ $$A^k=\bigoplus_{\substack{p>0\\p+q=k}}K^{p,q}$$
 
 $$F^pA^k\bigoplus_{\substack{j \geq p \\ j+q=k}} K^{j,q}$$
 
-을 생각하고, 이로부터 다음의 short exact sequence
+을 생각한다. 이는 complex $$A^\bullet$$의 degree $$k$$는 고정한채로 horizontal 성분이 $$p$$ 이상인 것만 뽑아오는 것으로, 다음의 short exact sequence
 
-$$0 \rightarrow F^{p+1}A^\bullet \rightarrow F^p A^\bullet \rightarrow K^{\bullet, k-p} \rightarrow 0$$
+$$0 \rightarrow F^{p+1} A^k \rightarrow F^{p}A^k\rightarrow K^{p, k-p}\rightarrow 0$$
 
-을 얻어낸다. 여기서 오른쪽의 $$K^{\bullet, q}$$는 $$p$$에 대해 $$p > 0$$인 성분만을 가진다. $$K^{\bullet,q}$$의 cohomology는 $$p > 0$$에서 모두 $$0$$이므로, $$F^0 A^\bullet = A^\bullet$$에 대해 귀납적으로 $$H^k(A^\bullet) = 0$$임이 따른다. 따라서 $$\mathrm{Tot}(K)^\bullet$$의 cocycle $$x$$는 항상 $$p > 0$$인 성분에서 coboundary이며, 오직 $$p = 0$$인 성분 $$x^{0,n} \in \Hom_\lMod{A}(P_n, N)$$만이 cohomology class를 결정한다.
+가 존재한다. 이제 이 short exact sequence에서, $$A^k$$들을 complex $$A^\bullet$$으로 승격시키면 다음의 short exact sequence
+
+$$0 \rightarrow F^{p+1}A^\bullet \rightarrow F^p A^\bullet\rightarrow K^{p, \bullet-p}\rightarrow 0$$
+
+를 얻는다. 
+
+Filtration의 정의에 의하여 포함사상 $$F^{p+1} \hookrightarrow F^p$$의 몫은 $$F^p/F^{p+1}$$이며, 각 degree $$k$$에서 이 몫의 $$k$$-번째 성분은 $$K^{p, k-p}$$이다. 즉, 고정된 $$q = k - p$$에 대하여 $$p$$만 변하는 조각이며, 몫 complex $$K^{p, \bullet - p}$$는 $$p > 0$$인 성분만 가진 $$K^{\bullet, q}$$의 subcomplex이다. $$K^{\bullet,q}$$의 cohomology는 $$p > 0$$에서 모두 $$0$$이므로, 이 몫 complex의 cohomology 역시 $$0$$이다.
+
+이제 $$p$$에 대한 내림차순 귀납법으로 $$H^k(F^p A^\bullet) = 0$$ (모든 $$k$$)을 증명한다. 충분히 큰 $$p_0$$에 대하여 $$F^{p_0} A^\bullet = 0$$이므로 $$H^k = 0$$은 자명하다. $$H^k(F^{p+1} A^\bullet) = 0$$ (모든 $$k$$)을 가정하면, 위의 short exact sequence에 대한 long exact sequence에서 몫 complex의 cohomology도 $$0$$이므로 $$H^k(F^p A^\bullet) = 0$$을 얻는다. 따라서 귀납에 의하여 $$p = 0$$에서 $$H^k(F^0 A^\bullet) = H^k(A^\bullet) = 0$$ (모든 $$k$$)이 성립한다. 따라서 $$\mathrm{Tot}(K)^\bullet$$의 cocycle $$x$$는 항상 $$p > 0$$인 성분에서 coboundary이며, 오직 $$p = 0$$인 성분 $$x^{0,n} \in \Hom_\lMod{A}(P_n, N)$$만이 cohomology class를 결정한다.
 
 Quotient complex $$\mathrm{Tot}(K)^\bullet / A^\bullet$$은 $$p = 0$$인 열만으로 이루어진 $$\bigoplus_q K^{0,q} = \bigoplus_q \Hom_\lMod{A}(P_q, N)$$와 동치이며, 여기서의 differential은 $$d_v$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서
 
