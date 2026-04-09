@@ -82,7 +82,7 @@ $$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_
 
 중 어느 것을 택하는지에 따라 $$\Tor^A_i(M,N)$$의 값이 달라져서는 안될 것이다. 
 
-[정의 1](#def1)에서 우리는 고정된 $$M$$에 대해 $$\Hom_\lMod{A}(M,-)$$를 derive하여 $$\Ext$$를 정의하였고, 이후 $$\Hom_\lMod{A}(-,N)$$를 derive하는 방식도 언급하였다. 이 두 정의가 실제로 일치한다는 사실, 그리고 [정의 2](#def2)에서 $$N$$의 projective resolution을 사용하여 $$\Tor$$를 정의하였으나 $$M$$의 projective resolution을 사용해도 동일한 결과를 얻는다는 사실을 확립한다. 핵심 도구는 double complex의 total complex에 대한 두 가지 분석 방법이다. 아래 명제 3과 명제 4는 각각 $$\Ext$$와 $$\Tor$$에 대한 balancing이지만, 증명의 본질은 같다: 두 argument 각각에 resolution을 취해 얻은 double complex에서 출발하여, total complex를 계산하면 두 방향의 정의가 동일한 cohomology를 준다는 것을 보이는 것이다.
+우리는 따라서 이들이 주는 cohomology를 비교해야 한다. 이를 위한 증명 전략은 $$(p,q)$$ 성분이 $$\Hom_{\lMod{A}}(P_q, I^p)$$인 (혹은 텐서의 경우, $$P_p\otimes P'_q$$인) double complex를 생각하는 것이다. ([호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def4))
 
 <div class="proposition" markdown="1">
 
@@ -99,13 +99,11 @@ $$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Double complex ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
+다음의 double complex
 
-$$
-K^{p,q} = \Hom_\lMod{A}(P_q, I^p)
-$$
+$$K^{p,q}=\Hom_\lMod{A}(P_q, I^p)$$
 
-을 정의한다. Horizontal differential은 $$d_h \colon K^{p,q} \to K^{p+1,q}$$이며 이는 $$I^\bullet$$의 differential에 의해 유도된 $$\Hom_\lMod{A}(P_q, I^p) \to \Hom_\lMod{A}(P_q, I^{p+1})$$이다. Vertical differential은 $$d_v \colon K^{p,q} \to K^{p,q-1}$$이며 이는 $$P_\bullet$$의 differential $$P_q \to P_{q-1}$$에 의해 유도된 $$\Hom_\lMod{A}(P_{q-1}, I^p) \to \Hom_\lMod{A}(P_q, I^p)$$ (방향에 주의)이다. Total complex $$\mathrm{Tot}(K)^n = \bigoplus_{p+q=n} K^{p,q}$$의 differential은 $$d = d_h + (-1)^p d_v$$로 주어진다.
+를 생각하자. Horizontal differential $$d_h:K^{p,q} \rightarrow K^{p+1,q}$$은 $$I^p\rightarrow I^{p+1}$$에 $$\Hom_\lMod{A}(P_q,-)$$를 취하여 얻고, 비슷하게 vertical differential $$d_v: K^{p,q}\rightarrow K^{p,q+q}$$은 $$P_{q+1}\rightarrow P_q$$에 $$\Hom_\lMod{A}(-,I_p)$$를 취하여 얻는다. Total complex $$\mathrm{Tot}(K)^n = \bigoplus_{p+q=n} K^{p,q}$$의 differential은 $$d = d_h + (-1)^p d_v$$로 주어진다.
 
 Total complex의 cohomology를 두 가지 방법으로 계산한다.
 
@@ -161,7 +159,7 @@ $$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Double complex ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
+Double complex ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def4))
 
 $$
 K_{p,q} = P_p \otimes_A P'_q
