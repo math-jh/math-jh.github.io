@@ -8,7 +8,7 @@ permalink: /ko/math/homological_algebra/ext_and_tor
 header:
     overlay_image: /assets/images/Math/Homological_Algebra/Ext_and_Tor.png
     overlay_filter: 0.5
-sidebar: 
+sidebar:
     nav: "homological_algebra-ko"
 
 date: 2024-11-06
@@ -39,10 +39,10 @@ $$0 \rightarrow M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
 에 $$\Hom_\lMod{A}(-,N)$$을 취하고, 그 derived functor를 생각하여 얻어지는 다음의 long exact sequence
 
-$$\begin{aligned}0 &\rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N) \rightarrow \Hom_\lMod{A}(M_1, N)\\ 
+$$\begin{aligned}0 &\rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N) \rightarrow \Hom_\lMod{A}(M_1, N)\\
 &\rightarrow\Ext_A^1(M_3,N) \rightarrow\Ext_A^1(M_2,N) \rightarrow\cdots\end{aligned}$$
 
-에서, $$\Ext_A^1(M_3,N)=0$$이 성립하므로 $$\Hom_\lMod{A}(-,N)$$이 exact라는 것을 알 수 있다. 
+에서, $$\Ext_A^1(M_3,N)=0$$이 성립하므로 $$\Hom_\lMod{A}(-,N)$$이 exact라는 것을 알 수 있다.
 
 한편, [정의 1](#def1) 대신 우리는 고정된 $$N$$에 대하여 $$\Hom_\lMod{A}(-,N):\lMod{A} \rightarrow \Ab$$를 생각한 후 이 left exact functor의 right derived functor로서 $$\Ext$$를 정의할 수도 있었을 것이다. 이 두 정의가 같다는 것은 아래 [명제 3](#prop3)에서 확인할 수 있다.
 
@@ -60,15 +60,15 @@ $$\Tor_i^A(M,N)=L_i(-\otimes_A N)(M)$$
 
 </div>
 
-$$\Tor$$를 계산하기 위해서는 $$M$$의 projective resolution을 사용해야 한다. 따라서, 앞선 문단에서의 계산과 마찬가지로 $$M$$이 projective $$A$$-module이었다면 $$0 \rightarrow M \rightarrow M \rightarrow 0$$이 $$M$$의 projective resolution이 되고, 이로부터 $$\Tor_1^A(M,N)=0$$이 모든 $$N$$에 대해 성립했을 것이다. 즉, 임의의 projective $$A$$-module은 flat $$A$$-module임을 다시 한 번 확인할 수 있다. 
+$$\Tor$$를 계산하기 위해서는 $$M$$의 projective resolution을 사용해야 한다. 따라서, 앞선 문단에서의 계산과 마찬가지로 $$M$$이 projective $$A$$-module이었다면 $$0 \rightarrow M \rightarrow M \rightarrow 0$$이 $$M$$의 projective resolution이 되고, 이로부터 $$\Tor_1^A(M,N)=0$$이 모든 $$N$$에 대해 성립했을 것이다. 즉, 임의의 projective $$A$$-module은 flat $$A$$-module임을 다시 한 번 확인할 수 있다.
 
 ## Balancing
 
-본질적으로 $$\Hom$$과 $$\otimes$$는 두 개의 대상을 받는 bifinctor이다. 따라서 두 input 중 어느 것을 injective resolution 혹은 projective resolution으로 대체하는지에 따라 다른 결과가 나올 수도 있을 것이며, 이는 그렇게 바람직한 일이 아닐 것이다. 예를 들어 $$\Ext_A^i(M,N)$$을 계산한다 하였을 때, $$M$$의 projective resolution $$P_\bullet\rightarrow M\rightarrow 0$$을 사용하여
+본질적으로 $$\Hom$$과 $$\otimes$$는 두 개의 대상을 받는 bifunctor이다. 따라서 두 input 중 어느 것을 injective resolution 혹은 projective resolution으로 대체하는지에 따라 다른 결과가 나올 수도 있을 것이며, 이는 그렇게 바람직한 일이 아닐 것이다. 예를 들어 $$\Ext_A^i(M,N)$$을 계산한다 하였을 때, $$M$$의 projective resolution $$P_\bullet\rightarrow M\rightarrow 0$$을 사용하여
 
 $$0\rightarrow \Hom_{\lMod{A}}(M, N)\rightarrow \Hom_{\lMod{A}}(P_0,N)\rightarrow \Hom_{\lMod{A}}(P_1, N)\rightarrow\cdots$$
 
-의 $$i$$번째 cohomology를 생각할 수도 있고, $$N$$의 injective resolution $$0\rightarrow N\rightarrow I^\bullet$$을 사용하여 
+의 $$i$$번째 cohomology를 생각할 수도 있고, $$N$$의 injective resolution $$0\rightarrow N\rightarrow I^\bullet$$을 사용하여
 
 $$0\rightarrow \Hom_{\lMod{A}}(M, N)\rightarrow \Hom_{\lMod{A}}(M, I^0)\rightarrow \Hom_{\lMod{A}}(M, I^1)\rightarrow\cdots$$
 
@@ -80,9 +80,9 @@ $$\cdots\rightarrow P_1\otimes_AN \rightarrow P_0\otimes_AN \rightarrow M\otimes
 
 $$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_A N\rightarrow0$$
 
-중 어느 것을 택하는지에 따라 $$\Tor^A_i(M,N)$$의 값이 달라져서는 안될 것이다. 
+중 어느 것을 택하는지에 따라 $$\Tor^A_i(M,N)$$의 값이 달라져서는 안될 것이다.
 
-우리는 따라서 이들이 주는 cohomology를 비교해야 한다. 이를 위한 증명 전략은 $$(p,q)$$ 성분이 $$\Hom_{\lMod{A}}(P_q, I^p)$$인 (혹은 텐서의 경우, $$P_p\otimes P'_q$$인) double complex를 생각하는 것이다. ([호몰로지, ⁋정의 4](/ko/math/homological_algebra/homology#def4))
+우리는 따라서 이들이 주는 cohomology를 비교해야 한다. 이를 위한 증명 전략은 $$(p,q)$$ 성분이 $$\Hom_{\lMod{A}}(P_q, I^p)$$인 (혹은 텐서의 경우, $$P_p\otimes P'_q$$인) double complex를 생각하는 것이다. ([§호몰로지, ⁋정의 4](/ko/math/homological_algebra/homology#def4))
 
 <div class="proposition" markdown="1">
 
@@ -101,61 +101,64 @@ $$H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))$$
 
 $$K^{p,q}=\Hom_\lMod{A}(P_q, I^p)$$
 
-를 생각하자. Horizontal differential $$d_h:K^{p,q} \rightarrow K^{p+1,q}$$은 $$I^p\rightarrow I^{p+1}$$에 $$\Hom_\lMod{A}(P_q,-)$$를 취하여 얻고, 비슷하게 vertical differential $$d_v: K^{p,q}\rightarrow K^{p,q+q}$$은 $$P_{q+1}\rightarrow P_q$$에 $$\Hom_\lMod{A}(-,I_p)$$를 취하여 얻는다. 이제 이 double complex의 total complex $$\Tot(K)^\bullet$$을 생각하자. ([호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 그럼 주어진 isomorphism은 $$\Tot(K)^\bullet$$의 $$n$$번째 cohomology를 다른 방법으로 계산한 것이다.
+를 생각하자. Horizontal differential $$d_h:K^{p,q} \rightarrow K^{p+1,q}$$은 $$I^p\rightarrow I^{p+1}$$에 $$\Hom_\lMod{A}(P_q,-)$$를 취하여 얻고, 비슷하게 vertical differential $$d_v: K^{p,q}\rightarrow K^{p,q+1}$$은 $$P_{q+1}\rightarrow P_q$$에 $$\Hom_\lMod{A}(-,I_p)$$를 취하여 얻는다. 이제 이 double complex의 total complex $$\Tot(K)^\bullet$$을 생각하자. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 그럼 주어진 isomorphism은 $$\Tot(K)^\bullet$$의 $$n$$번째 cohomology를 다른 방법으로 계산한 것이다.
 
-이를 확인하기 위해, 우선 cochain complex $$K^{\bullet, q}$$의 cohomology는 다음의 식
+이를 확인하기 위해, 우선 cochain complex의 row $$K^{\bullet, q}$$와 column $$K^{p,\bullet}$$의 cohomology는 다음의 식
 
-$$H^p(K^{\bullet, q}) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}$$
+$$H^q(K^{p, \bullet}) = \begin{cases} \Hom_A(M, I^p) & q = 0 \\ 0 & q > 0, \end{cases}\qquad H^p(K^{\bullet, q}) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}\tag{$\ast$}$$
 
-으로 계산된다는 것을 확인하자. 여기서 $$p>0$$인 경우 cohomology가 사라지는 것은 $$P_\bullet$$이 projective resolution이고, 따라서 각각의 $$P_q$$가 projective module이기 때문이다. 
+으로 계산된다는 것을 확인하자. 여기서 cohomology가 사라지는 것들은 projective module과 injective module의 정의에 따른 것이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3))
 
-우리의 주장은 total complex의 cohomology가 $$p=0$$ 성분만으로 결정된다는 것이다. 주의할 것은 이것이 위의 계산으로부터 바로 따르지는 않는다는 것이다. 이는 ([호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 직후에 수행한 계산과 마찬가지로 differential이 항들을 섞어놓기 때문이며, 따라서 이 주장을 증명하기 위해서는 더 세련된 방법이 필요하다. 
+[§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5) 직후에 수행한 계산과 마찬가지로, total complex의 cohomology를 계산하려면 differential들이 각 항을 섞어놓기 때문에 다소 주의해야 한다. 이를 위해 우리는 *filtration*을 사용한다. 
 
-우선 $$\Tot(K)^\bullet$$의 subcomplex
+우선 $$\Tot(K)^\bullet$$에 filtration
 
-$$A^k=\bigoplus_{\substack{p>0\\p+q=k}}K^{p,q}$$
+$$F^p \Tot(K)^k = \bigoplus_{\substack{i \geq p \\ i+q=k}} K^{i,q}$$
 
-을 생각하자. 즉 $$A^\bullet$$은 $$p>0$$ 성분들만 모은 subcomplex이며, 우리가 보일 것은 $$A^\bullet$$의 cohomology가 vanish한다는 사실이다. 위에서 언급했듯, 이는 $$p>0$$에서 $$H^p(K^{\bullet, q})=0$$이라는 계산으로부터 따라나오는 것이 <em-ko>아니며</em-ko> 이를 위해 우리는 *filtration*
+을 생각하자. 이는 total complex의 degree $$k$$에서 horizontal 성분이 $$p$$ 이상인 것만 뽑아오는 것이며, 정의에 의해 $$F^0\Tot(K)^\bullet=\Tot(K)^\bullet$$이고, $$p>k$$인 $$p$$에 대해서는 $$F^p\Tot(K)^k=0$$임이 자명하다. 
 
-$$F^pA^k\bigoplus_{\substack{j \geq p \\ j+q=k}} K^{j,q}$$
+이제 inclusion으로부터 induce되는 다음의 short exact sequence
 
-을 생각한다. 이는 complex $$A^\bullet$$의 degree $$k$$는 고정한채로 horizontal 성분이 $$p$$ 이상인 것만 뽑아오는 것으로, 다음의 short exact sequence
+$$0 \rightarrow F^{p+1} \Tot(K)^k \rightarrow F^{p} \Tot(K)^k \rightarrow K^{p, k-p} \rightarrow 0$$
 
-$$0 \rightarrow F^{p+1} A^k \rightarrow F^{p}A^k\rightarrow K^{p, k-p}\rightarrow 0$$
+가 존재하며, 이를 complex로 승격시키면
 
-가 존재한다. 이제 이 short exact sequence에서, $$A^k$$들을 complex $$A^\bullet$$으로 승격시키면 다음의 short exact sequence
+$$0 \rightarrow F^{p+1}\Tot(K)^\bullet \rightarrow F^p \Tot(K)^\bullet \rightarrow K^{p, \bullet-p} \rightarrow 0$$
 
-$$0 \rightarrow F^{p+1}A^\bullet \rightarrow F^p A^\bullet\rightarrow K^{p, \bullet-p}\rightarrow 0$$
+을 얻는다. 각 단계의 몫 $$F^p / F^{p+1} \cong K^{p, \bullet-p}$$의 cohomology는 행의 cohomology로 계산된다. 행 $$K^{p, \bullet} = \Hom_A(P_\bullet, I^p)$$의 cohomology는 $$P_\bullet \to M$$가 projective resolution이고 $$I^p$$가 injective이므로
 
-를 얻는다. 
+$$$$
 
-Filtration의 정의에 의하여 포함사상 $$F^{p+1} \hookrightarrow F^p$$의 몫은 $$F^p/F^{p+1}$$이며, 각 degree $$k$$에서 이 몫의 $$k$$-번째 성분은 $$K^{p, k-p}$$이다. 즉, 고정된 $$q = k - p$$에 대하여 $$p$$만 변하는 조각이며, 몫 complex $$K^{p, \bullet - p}$$는 $$p > 0$$인 성분만 가진 $$K^{\bullet, q}$$의 subcomplex이다. $$K^{\bullet,q}$$의 cohomology는 $$p > 0$$에서 모두 $$0$$이므로, 이 몫 complex의 cohomology 역시 $$0$$이다.
+이고 따라서 $$H^n(K^{p, \bullet-p}) = H^{n-p}(K^{p, \bullet})$$는 $$n = p$$일 때만 $$\Hom_A(M, I^p)$$이고 $$n \neq p$$이면 $$0$$이다.
 
-이제 $$p$$에 대한 내림차순 귀납법으로 $$H^k(F^p A^\bullet) = 0$$ (모든 $$k$$)을 증명한다. 충분히 큰 $$p_0$$에 대하여 $$F^{p_0} A^\bullet = 0$$이므로 $$H^k = 0$$은 자명하다. $$H^k(F^{p+1} A^\bullet) = 0$$ (모든 $$k$$)을 가정하면, 위의 short exact sequence에 대한 long exact sequence에서 몫 complex의 cohomology도 $$0$$이므로 $$H^k(F^p A^\bullet) = 0$$을 얻는다. 따라서 귀납에 의하여 $$p = 0$$에서 $$H^k(F^0 A^\bullet) = H^k(A^\bullet) = 0$$ (모든 $$k$$)이 성립한다. 따라서 $$\mathrm{Tot}(K)^\bullet$$의 cocycle $$x$$는 항상 $$p > 0$$인 성분에서 coboundary이며, 오직 $$p = 0$$인 성분 $$x^{0,n} \in \Hom_\lMod{A}(P_n, N)$$만이 cohomology class를 결정한다.
+고정된 $$n$$에 대하여 $$p$$에 대한 내림차순 귀납법으로 $$H^n(F^p)$$을 계산하자. $$p > n$$이면 $$F^p \Tot(K)^n = 0$$이므로 $$H^n(F^p) = 0$$이 base step이다. 이제 $$H^n(F^{p+1})$$이 알려져 있다고 가정하자. $$p \neq n, n-1$$인 단계에서는 몫의 cohomology $$H^n(K^{p, \bullet-p})$$와 $$H^{n-1}(K^{p, \bullet-p})$$이 모두 $$0$$이므로 long exact sequence로부터 $$H^n(F^p) \cong H^n(F^{p+1})$$을 얻는다.
 
-Quotient complex $$\mathrm{Tot}(K)^\bullet / A^\bullet$$은 $$p = 0$$인 열만으로 이루어진 $$\bigoplus_q K^{0,q} = \bigoplus_q \Hom_\lMod{A}(P_q, N)$$와 동치이며, 여기서의 differential은 $$d_v$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서
+$$p = n$$인 단계에서는 long exact sequence가
 
-$$
-H^n(\mathrm{Tot}(K)^\bullet) \cong H^n(\mathrm{Tot}(K)^\bullet / A^\bullet) = H^n(\Hom_\lMod{A}(P_\bullet, N)).
-$$
+$$\cdots \to 0 \to H^n(F^{n+1}) = 0 \to H^n(F^n) \to \Hom_A(M, I^n) \to H^{n+1}(F^{n+1}) \to \cdots$$
 
-**두 번째 방법 (행 단위 분석).** 각 행 $$K^{p, \bullet} = \Hom_\lMod{A}(P_\bullet, I^p)$$의 homology를 계산한다. $$I^p$$가 injective이므로 $$\Hom_\lMod{A}(-, I^p)$$은 exact이고, $$P_\bullet \to M$$이 resolution이므로
+가 되어 $$H^n(F^n)$$이 $$\Hom_A(M, I^n)$$의 부분모듈로 들어감을 알 수 있다. 여기서의 사상 $$\delta_n \colon \Hom_A(M, I^n) \to H^{n+1}(F^{n+1})$$은 $$I^n \to I^{n+1}$$에 $$\Hom_A(M, -)$$를 취한 사상, 즉 $$\Hom_A(M, I^\bullet)$$의 differential에 의해 유도됨을 확인할 수 있다. 따라서 $$H^n(F^n) = \ker(\Hom_A(M, I^n) \to \Hom_A(M, I^{n+1}))$$이다.
 
-$$
-H_q(K^{p, \bullet}) = \begin{cases} \Hom_\lMod{A}(M, I^p) & q = 0 \\ 0 & q > 0. \end{cases}
-$$
+$$p = n-1$$인 단계에서는
 
-즉, 각 행의 homology는 $$q = 0$$에서만 nonzero이다. $$q > 0$$인 성분만 모은 subcomplex $$B^\bullet$$에 대해, 위와 동일한 논의로 $$H^k(B^\bullet) = 0$$이 성립한다. Quotient $$\mathrm{Tot}(K)^\bullet / B^\bullet$$은 $$q = 0$$인 행만으로 이루어진 $$\bigoplus_p K^{p,0} = \bigoplus_p \Hom_\lMod{A}(M, I^p)$$와 동치이며, 여기서의 differential은 $$d_h$$, 즉 $$I^\bullet$$의 differential에 의해 유도된 사상이다. 따라서
+$$\cdots \to \Hom_A(M, I^{n-1}) \xrightarrow{\delta_{n-1}} H^n(F^n) \to H^n(F^{n-1}) \to 0 \to \cdots$$
 
-$$
-H^n(\mathrm{Tot}(K)^\bullet) \cong H^n(\mathrm{Tot}(K)^\bullet / B^\bullet) = H^n(\Hom_\lMod{A}(M, I^\bullet)).
-$$
+가 되고, $$\delta_{n-1}$$ 역시 $$\Hom_A(M, I^{n-1}) \to \Hom_A(M, I^n)$$에 의해 유도되므로
 
-두 방법에서 같은 $$H^n(\mathrm{Tot}(K)^\bullet)$$을 얻으므로
+$$H^n(F^{n-1}) = \frac{\ker(\Hom_A(M, I^n) \to \Hom_A(M, I^{n+1}))}{\im(\Hom_A(M, I^{n-1}) \to \Hom_A(M, I^n))}.$$
 
-$$
-H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N)).
-$$
+나머지 단계 $$p < n-1$$에서는 $$H^n(F^p) \cong H^n(F^{p+1})$$이므로 결국
+
+$$H^n(\Tot(K)^\bullet) = H^n(F^0) = H^n(F^1) = \cdots = H^n(F^{n-1}) = H^n(\Hom_A(M, I^\bullet)) = \operatorname{Ext}^n_A(M, N).$$
+
+**행 단위 분석 (두 번째 방법).** 비슷하게, $$q$$에 대한 filtration $$G^q \Tot(K)^k = \bigoplus_{\substack{j \geq q \\ p+j=k}} K^{p,j}$$을 생각하면, 각 몫 $$G^q/G^{q+1} \cong K^{\bullet-q, q}$$의 cohomology는 앞서 계산한 ($$\ast$$)에 의해 $$n = q$$일 때만 $$\Hom_A(P_n, N)$$이고 $$n \neq q$$이면 $$0$$이다. 동일한 귀납법으로 $$H^n(\Tot(K)^\bullet) = H^n(\Hom_A(P_\bullet, N))$$를 얻는다.
+
+두 방법에서 같은 $$\Tot(K)^\bullet$$의 cohomology를 계산하였으므로
+
+$$H^n(\Hom_A(M, I^\bullet)) \cong H^n(\Hom_A(P_\bullet, N)),$$
+
+즉 $$\operatorname{Ext}^n_A(M, N)$$의 두 정의가 일치한다.
+
 
 </details>
 <div class="proposition" markdown="1">
@@ -187,7 +190,7 @@ $$
 H_p(K_{\bullet, q}) = \begin{cases} M \otimes_A P'_q & p = 0 \\ 0 & p > 0. \end{cases}
 $$
 
-$$p > 0$$인 성분만 모은 subcomplex $$A_\bullet$$에 대해 $$H_k(A_\bullet) = 0$$이 성립하며, quotient $$\mathrm{Tot}(K)_\bullet / A_\bullet$$은 $$p = 0$$인 열만으로 이루어진 $$\bigoplus_q M \otimes_A P'_q = M \otimes_A P'_\bullet$$와 동치이다. 따라서
+$$p > 0$$인 성분만 모은 subcomplex $$A_\bullet$$에 대해 명제 3과 마찬가지로 filtration을 사용하면 $$H_k(A_\bullet) = 0$$임을 보일 수 있으며, quotient $$\mathrm{Tot}(K)_\bullet / A_\bullet$$은 $$p = 0$$인 열만으로 이루어진 $$\bigoplus_q M \otimes_A P'_q = M \otimes_A P'_\bullet$$와 동치이다. 따라서
 
 $$
 H_n(\mathrm{Tot}(K)_\bullet) \cong H_n(M \otimes_A P'_\bullet).
@@ -199,7 +202,7 @@ $$
 H_q(K_{p, \bullet}) = \begin{cases} P_p \otimes_A N & q = 0 \\ 0 & q > 0. \end{cases}
 $$
 
-$$q > 0$$인 성분만 모은 subcomplex $$B_\bullet$$에 대해 동일한 논의로 $$H_k(B_\bullet) = 0$$이 성립하며, quotient $$\mathrm{Tot}(K)_\bullet / B_\bullet$$은 $$q = 0$$인 행만으로 이루어진 $$\bigoplus_p P_p \otimes_A N = P_\bullet \otimes_A N$$와 동치이다. 여기서의 differential은 $$d_h$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서 $$H_n(\mathrm{Tot}(K)_\bullet) \cong H_n(P_\bullet \otimes_A N)$$을 얻는다. 두 방법에서 같은 total homology를 얻으므로 결과가 따른다.
+$$q > 0$$인 성분만 모은 subcomplex $$B_\bullet$$에 대해 마찬가지로 filtration을 사용하면 $$H_k(B_\bullet) = 0$$임을 보일 수 있으며, quotient $$\mathrm{Tot}(K)_\bullet / B_\bullet$$은 $$q = 0$$인 행만으로 이루어진 $$\bigoplus_p P_p \otimes_A N = P_\bullet \otimes_A N$$와 동치이다. 여기서의 differential은 $$d_h$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서 $$H_n(\mathrm{Tot}(K)_\bullet) \cong H_n(P_\bullet \otimes_A N)$$을 얻는다. 두 방법에서 같은 total homology를 얻으므로 결과가 따른다.
 
 </details>
 
