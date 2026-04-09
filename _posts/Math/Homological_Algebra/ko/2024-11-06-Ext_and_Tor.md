@@ -101,11 +101,11 @@ $$H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))$$
 
 $$K^{p,q}=\Hom_\lMod{A}(P_q, I^p)$$
 
-를 생각하자. Horizontal differential $$d_h:K^{p,q} \rightarrow K^{p+1,q}$$은 $$I^p\rightarrow I^{p+1}$$에 $$\Hom_\lMod{A}(P_q,-)$$를 취하여 얻고, 비슷하게 vertical differential $$d_v: K^{p,q}\rightarrow K^{p,q+1}$$은 $$P_{q+1}\rightarrow P_q$$에 $$\Hom_\lMod{A}(-,I_p)$$를 취하여 얻는다. 이제 이 double complex의 total complex $$\Tot(K)^\bullet$$을 생각하자. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 그럼 주어진 isomorphism은 $$\Tot(K)^\bullet$$의 $$n$$번째 cohomology를 다른 방법으로 계산한 것이다.
+를 생각하자. Horizontal differential $$d_h:K^{p,q} \rightarrow K^{p+1,q}$$은 $$I^p\rightarrow I^{p+1}$$에 $$\Hom_\lMod{A}(P_q,-)$$를 취하여 얻고, 비슷하게 vertical differential $$d_v: K^{p,q}\rightarrow K^{p,q+1}$$은 $$P_{q+1}\rightarrow P_q$$에 $$\Hom_\lMod{A}(-,I^p)$$를 취하여 얻는다. 이제 이 double complex의 total complex $$\Tot(K)^\bullet$$을 생각하자. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 그럼 주어진 isomorphism은 $$\Tot(K)^\bullet$$의 $$n$$번째 cohomology를 다른 방법으로 계산한 것이다.
 
 이를 확인하기 위해, 우선 cochain complex의 row $$K^{\bullet, q}$$와 column $$K^{p,\bullet}$$의 cohomology는 다음의 식
 
-$$H^q(K^{p, \bullet}) = \begin{cases} \Hom_A(M, I^p) & q = 0 \\ 0 & q > 0, \end{cases}\qquad H^p(K^{\bullet, q}) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}\tag{$\ast$}$$
+$$H^q(K^{p, \bullet}) = \begin{cases} \Hom_\lMod{A}(M, I^p) & q = 0 \\ 0 & q > 0, \end{cases}\qquad H^p(K^{\bullet, q}) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}\tag{$\ast$}$$
 
 으로 계산된다는 것을 확인하자. 여기서 cohomology가 사라지는 것들은 projective module과 injective module의 정의에 따른 것이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3))
 
@@ -125,86 +125,59 @@ $$0 \rightarrow F^{p+1} \Tot(K)^k \rightarrow F^{p} \Tot(K)^k \rightarrow K^{p, 
 
 $$0 \rightarrow F^{p+1}\Tot(K)^\bullet \rightarrow F^p \Tot(K)^\bullet \rightarrow K^{p, \bullet-p} \rightarrow 0$$
 
-을 얻는다. 각 단계의 몫 $$F^p / F^{p+1} \cong K^{p, \bullet-p}$$의 cohomology는 행의 cohomology로 계산된다. 행 $$K^{p, \bullet} = \Hom_A(P_\bullet, I^p)$$의 cohomology는 $$P_\bullet \to M$$가 projective resolution이고 $$I^p$$가 injective이므로
+을 얻는다. 즉, 중요한 것은 $$\Tot(K)^\bullet$$의 cohomology는 계산하기 까다롭지만, filtration을 걸면 이를 column의 cohomology 계산과 연관지을 수 있고 따라서 위의 계산 ($$\ast$$)을 활용할 수 있다는 것이다. 
 
-$$$$
+이제 고정된 $$n$$에 대하여 $$H^n(F^p\Tot(K)^\bullet)$$들을 계산하고, 이로부터 $$H^n(F^0\Tot(K)^\bullet)=H^n(\Tot(K)^\bullet)$$을 구해내자. 위의 short exact sequence로부터 다음의 cohomology long exact sequence
 
-이고 따라서 $$H^n(K^{p, \bullet-p}) = H^{n-p}(K^{p, \bullet})$$는 $$n = p$$일 때만 $$\Hom_A(M, I^p)$$이고 $$n \neq p$$이면 $$0$$이다.
+$$\cdots\rightarrow H^{n-1}(K^{p, \bullet-p})\rightarrow H^n(F^{p+1}\Tot(K)^\bullet)\rightarrow H^n(F^p\Tot(K)^\bullet)\rightarrow H^n(K^{p, \bullet-p})\rightarrow \cdots$$
 
-고정된 $$n$$에 대하여 $$p$$에 대한 내림차순 귀납법으로 $$H^n(F^p)$$을 계산하자. $$p > n$$이면 $$F^p \Tot(K)^n = 0$$이므로 $$H^n(F^p) = 0$$이 base step이다. 이제 $$H^n(F^{p+1})$$이 알려져 있다고 가정하자. $$p \neq n, n-1$$인 단계에서는 몫의 cohomology $$H^n(K^{p, \bullet-p})$$와 $$H^{n-1}(K^{p, \bullet-p})$$이 모두 $$0$$이므로 long exact sequence로부터 $$H^n(F^p) \cong H^n(F^{p+1})$$을 얻는다.
+을 생각하면, ($$\ast$$)로부터 $$H^{n-1}(K^{p,\bullet-p})$$와 $$H^n(K^{p,\bullet-p})$$이 nontrivial한 부분, 즉 $$p=n,n-1$$인 경우를 제외한 모든 부분에서는 
 
-$$p = n$$인 단계에서는 long exact sequence가
+$$H^n(F^p\Tot(K)^\bullet)\cong H^n(F^{p+1}\Tot(K)^\bullet)\tag{$\ast\ast$}$$
 
-$$\cdots \to 0 \to H^n(F^{n+1}) = 0 \to H^n(F^n) \to \Hom_A(M, I^n) \to H^{n+1}(F^{n+1}) \to \cdots$$
+이 성립하는 것을 안다. 이제 $$p=n$$인 경우를 생각하면, long exact sequence는
 
-가 되어 $$H^n(F^n)$$이 $$\Hom_A(M, I^n)$$의 부분모듈로 들어감을 알 수 있다. 여기서의 사상 $$\delta_n \colon \Hom_A(M, I^n) \to H^{n+1}(F^{n+1})$$은 $$I^n \to I^{n+1}$$에 $$\Hom_A(M, -)$$를 취한 사상, 즉 $$\Hom_A(M, I^\bullet)$$의 differential에 의해 유도됨을 확인할 수 있다. 따라서 $$H^n(F^n) = \ker(\Hom_A(M, I^n) \to \Hom_A(M, I^{n+1}))$$이다.
+$$0=H^n(F^{n+1}\Tot(K)^\bullet)\rightarrow H^n(F^n\Tot(K)^\bullet)\rightarrow \Hom_\lMod{A}(M, I^n)\rightarrow H^{n+1}(F^{n+1}\Tot(K)^\bullet)\rightarrow \cdots$$
 
-$$p = n-1$$인 단계에서는
+이며 이를 통해 $$H^n(F^n\Tot(K)^\bullet)$$은 connecting homomorphism
 
-$$\cdots \to \Hom_A(M, I^{n-1}) \xrightarrow{\delta_{n-1}} H^n(F^n) \to H^n(F^{n-1}) \to 0 \to \cdots$$
+$$\delta_n:\Hom_\lMod{A}(M, I^n)\rightarrow H^{n+1}(F^{n+1}\Tot(K)^\bullet)$$
 
-가 되고, $$\delta_{n-1}$$ 역시 $$\Hom_A(M, I^{n-1}) \to \Hom_A(M, I^n)$$에 의해 유도되므로
+의 kernel임을 안다. 마찬가지 논리로 $$H^{n+1}(F^{n+1}\Tot(K)^\bullet)$$은 $$\Hom_\lMod{A}(M, I^{n+1})$$로 들어갈 것이며, 실제로 계산을 해 보면 $$\delta_n$$이 정확히 $$\Hom_\lMod{A}(M, I^n)\rightarrow \Hom_\lMod{A}(M, I^{n+1})$$로부터 오는 것을 안다. 즉,
 
-$$H^n(F^{n-1}) = \frac{\ker(\Hom_A(M, I^n) \to \Hom_A(M, I^{n+1}))}{\im(\Hom_A(M, I^{n-1}) \to \Hom_A(M, I^n))}.$$
+$$H^n(F^n\Tot(K)^\bullet)=\ker\left(\Hom_\lMod{A}(M, I^n)\rightarrow \Hom_\lMod{A}(M, I^{n+1})\right)$$
 
-나머지 단계 $$p < n-1$$에서는 $$H^n(F^p) \cong H^n(F^{p+1})$$이므로 결국
+이다. 이제 이를 바탕으로 $$p=n-1$$인 경우의 cohomology long exact sequence를 분석하면
 
-$$H^n(\Tot(K)^\bullet) = H^n(F^0) = H^n(F^1) = \cdots = H^n(F^{n-1}) = H^n(\Hom_A(M, I^\bullet)) = \operatorname{Ext}^n_A(M, N).$$
+$$\cdots \longrightarrow \Hom_\lMod{A}(M, I^{n-1}) \overset{\delta_{n-1}}{\longrightarrow} H^n(F^n\Tot(K)^\bullet) \longrightarrow H^n(F^{n-1}\Tot(K)^\bullet) \longrightarrow 0$$
 
-**행 단위 분석 (두 번째 방법).** 비슷하게, $$q$$에 대한 filtration $$G^q \Tot(K)^k = \bigoplus_{\substack{j \geq q \\ p+j=k}} K^{p,j}$$을 생각하면, 각 몫 $$G^q/G^{q+1} \cong K^{\bullet-q, q}$$의 cohomology는 앞서 계산한 ($$\ast$$)에 의해 $$n = q$$일 때만 $$\Hom_A(P_n, N)$$이고 $$n \neq q$$이면 $$0$$이다. 동일한 귀납법으로 $$H^n(\Tot(K)^\bullet) = H^n(\Hom_A(P_\bullet, N))$$를 얻는다.
+에서, $$H^n(F^{n-1}\Tot(K)^\bullet)$$은 connecting homomorphism $$\delta_{n-1}$$의 cokernel이라는 것을 안다. 이 때, $$H^n(F^n\Tot(K)^\bullet)$$은 이미 $$p=n$$인 경우에 구했으며, connecting homomorphism $$\delta_{n-1}$$은 다시 $$\Hom_\lMod{A}(M, I^{n-1})\rightarrow \Hom_\lMod{A}(M, I^{n})$$으로부터 오는 것이므로
 
-두 방법에서 같은 $$\Tot(K)^\bullet$$의 cohomology를 계산하였으므로
+$$H^n(F^{n-1}\Tot(K)^\bullet)=\frac{\ker(\Hom_\lMod{A}(M, I^n) \to \Hom_\lMod{A}(M, I^{n+1}))}{\im(\Hom_\lMod{A}(M, I^{n-1}) \to \Hom_\lMod{A}(M, I^n))}$$
 
-$$H^n(\Hom_A(M, I^\bullet)) \cong H^n(\Hom_A(P_\bullet, N)),$$
+을 얻는다. 이제 $$p<n-1$$에 대해서는 isomorphism ($$\ast\ast$$)을 사용하여 모든 경우가 $$p=n-1$$과 isomorphic함을 알 수 있고 특히
 
-즉 $$\operatorname{Ext}^n_A(M, N)$$의 두 정의가 일치한다.
+$$H^n(\Tot(K)^\bullet) = H^n(F^0\Tot(K)^\bullet) = H^n(F^1\Tot(K)^\bullet) = \cdots = H^n(F^{n-1}\Tot(K)^\bullet) = H^n(\Hom_\lMod{A}(M, I^\bullet))$$
 
+이다. 이제 비슷한 방식으로, $$\Tot(K)^\bullet$$에 다음의 filtration
+
+$$G^q \Tot(K)^k = \bigoplus_{\substack{j \geq q \\ p+j=k}} K^{p,j}$$
+
+을 걸고 계산하면 $$H^n(\Tot(K)^\bullet) = H^n(\Hom_\lMod{A}(P_\bullet, N))$$를 얻고, 이로부터 원하는 결과를 얻는다.
 
 </details>
+
+비슷한 방식으로 $$\Tor$$에 대해서도 balancing을 증명할 수 있다. 증명 구조는 동일하며, 차이는 projective module들이 flat module이므로 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7)) 이를 사용하여 계산을 처리해주면 된다는 것이다. 자세한 증명은 생략하기로 한다.
+
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> $$M \in \lMod{A}$$, $$N \in \rMod{A}$$에 대해, 다음이 성립한다.
+<ins id="prop4">**명제 4**</ins> 두 $$A$$-module $$M \in \lMod{A}$$, $$N \in \lMod{A}$$, 그리고 이들의 projective resolution $$P_\bullet\rightarrow M\rightarrow 0$$, $$P_\bullet'\rightarrow N\rightarrow 0$$에 대하여
 
-$$
-H_n(P_\bullet \otimes_A N) \cong H_n(M \otimes_A P'_\bullet)
-$$
+$$H_n(P_\bullet \otimes_A N) \cong H_n(M \otimes_A P'_\bullet)$$
 
-여기서 $$P_\bullet \to M$$은 $$M$$의 projective resolution이고, $$P'_\bullet \to N$$은 $$N$$의 projective resolution이다.
+이 성립한다. 
 
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-Double complex ([§호몰로지, ⁋정의 4](/ko/math/homological_algebra/homology#def4))
-
-$$
-K_{p,q} = P_p \otimes_A P'_q
-$$
-
-을 정의한다. Horizontal differential은 $$d_h \colon K_{p,q} \to K_{p-1,q}$$이며 $$P_\bullet$$의 differential에 의해 유도되고, vertical differential은 $$d_v \colon K_{p,q} \to K_{p,q-1}$$이며 $$P'_\bullet$$의 differential에 의해 유도된다. Total complex는 $$\mathrm{Tot}(K)_n = \bigoplus_{p+q=n} K_{p,q}$$이고 differential은 $$d = d_h + (-1)^p d_v$$이다.
-
-**첫 번째 방법 (열 단위 분석).** 각 열 $$K_{\bullet, q} = P_\bullet \otimes_A P'_q$$의 homology를 계산한다. $$P'_q$$가 projective이므로 flat이고, 따라서 $$P_\bullet \otimes_A P'_q$$의 homology는
-
-$$
-H_p(K_{\bullet, q}) = \begin{cases} M \otimes_A P'_q & p = 0 \\ 0 & p > 0. \end{cases}
-$$
-
-$$p > 0$$인 성분만 모은 subcomplex $$A_\bullet$$에 대해 명제 3과 마찬가지로 filtration을 사용하면 $$H_k(A_\bullet) = 0$$임을 보일 수 있으며, quotient $$\mathrm{Tot}(K)_\bullet / A_\bullet$$은 $$p = 0$$인 열만으로 이루어진 $$\bigoplus_q M \otimes_A P'_q = M \otimes_A P'_\bullet$$와 동치이다. 따라서
-
-$$
-H_n(\mathrm{Tot}(K)_\bullet) \cong H_n(M \otimes_A P'_\bullet).
-$$
-
-**두 번째 방법 (행 단위 분석).** 각 행 $$K_{p, \bullet} = P_p \otimes_A P'_\bullet$$의 homology를 계산한다. $$P_p$$가 projective이므로 flat이고, $$P'_\bullet \to N$$이 resolution이므로
-
-$$
-H_q(K_{p, \bullet}) = \begin{cases} P_p \otimes_A N & q = 0 \\ 0 & q > 0. \end{cases}
-$$
-
-$$q > 0$$인 성분만 모은 subcomplex $$B_\bullet$$에 대해 마찬가지로 filtration을 사용하면 $$H_k(B_\bullet) = 0$$임을 보일 수 있으며, quotient $$\mathrm{Tot}(K)_\bullet / B_\bullet$$은 $$q = 0$$인 행만으로 이루어진 $$\bigoplus_p P_p \otimes_A N = P_\bullet \otimes_A N$$와 동치이다. 여기서의 differential은 $$d_h$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서 $$H_n(\mathrm{Tot}(K)_\bullet) \cong H_n(P_\bullet \otimes_A N)$$을 얻는다. 두 방법에서 같은 total homology를 얻으므로 결과가 따른다.
-
-</details>
 
 ## 예시
 
@@ -241,13 +214,13 @@ $$0 \to \Z/m\Z \xrightarrow{\cdot n} \Z/m\Z \to 0$$
 
 $$\Tor_1^\Z(\Z/n\Z, \Z/m\Z) \cong \ker(\cdot n \colon \Z/m\Z \to \Z/m\Z) = \{a \in \Z/m\Z : na \equiv 0 \pmod{m}\}.$$
 
-이 kernel은 $$m \mid na$$를 만족하는 $$a \pmod{m}$$의 집합이며, 이는 $$\gcd(n,m) \Z \subset \Z$$에 의해 생성되는 $$\Z/m\Z$$의 subgroup $$\gcd(n,m)\Z/m\Z \cong \Z/(m/\gcd(n,m))\Z$$와 같다. 한편 kernel의 순서는 공식 $$\lvert\ker f\rvert \cdot \lvert\operatorname{im} f\rvert = \lvert\Z/m\Z\rvert = m$$에 의해 $$m / \lvert\operatorname{im}(\cdot n)\rvert = m / (m/\gcd(n,m)) = \gcd(n,m)$$이다. 그런데 $$\gcd(n,m)\Z/m\Z \cong \Z/(m/\gcd(n,m))\Z$$의 순서는 $$m/\gcd(n,m)$$이므로, 더 정확히는
+이 kernel은 $$m \mid na$$를 만족하는 $$a \pmod{m}$$의 집합이다. $$d = \gcd(n,m)$$, $$n = dn'$$, $$m = dm'$$이라 하자. 그러면 $$m' \mid n'a$$이고, $$\gcd(n', m') = 1$$이므로 $$m' \mid a$$이다. 따라서 kernel은 $$m'\Z/m\Z \subset \Z/m\Z$$, 즉 $$\Z/m\Z$$에서 $$d$$배를 취하면 얻어지는 부분군이다. Chinese remainder theorem에 의해 이 부분군은 순서 $$d$$를 가지며 $$\Z/d\Z$$와 동형이므로
 
 $$\ker(\cdot n \colon \Z/m\Z \to \Z/m\Z) \cong \Z/\gcd(n,m)\Z.$$
 
-마지막 동형은 다음과 같이 확인할 수 있다. $$d = \gcd(n,m)$$, $$n = d n'$$, $$m = d m'$$이라 하자. 그러면 $$n'a \equiv 0 \pmod{m'}$$이 되고, $$\gcd(n', m') = 1$$이므로 $$a \equiv 0 \pmod{m'}$$이다. 따라서 kernel은 $$m'\Z/m\Z \subset \Z/m\Z$$이며, 이는 $$\Z/m\Z$$에서 $$d$$배를 취하면 얻어지는 부분군이다. Chinese remainder theorem에 의해 직접 계산하면, 이 부분군은 순서 $$d$$를 가지며 $$\Z/d\Z$$와 동형인다.
-
 </details>
+
+$$\Tor$$라는 이름은 *torsion*에서 유래한다. 명제 5의 결과는 이를 잘 보여준다: $$\Tor_1^\Z(\Z/n\Z, \Z/m\Z)$$가 nontrivial한 것은 정확히 $$\gcd(n,m) > 1$$, 즉 $$\Z/m\Z$$의 원소 중 $$n$$-torsion을 갖는 것이 존재할 때이며, 그 크기 $$\gcd(n,m)$$는 이 torsion의 "양"을 측정한다.
 
 <div class="proposition" markdown="1">
 
@@ -276,22 +249,11 @@ $$\Ext^1_\Z(\Z/n\Z, A) \cong \coker(\cdot n \colon A \to A) = A/nA.$$
 
 </details>
 
-<div class="proposition" markdown="1">
+$$\Ext$$라는 이름은 *extension*에서 유래한다. 일반적으로 $$\Ext^1(M,N)$$는 $$0 \to N \to E \to M \to 0$$ 형태의 short exact sequence, 즉 $$N$$에 의한 $$M$$의 extension들의 동치류 집합과 자연스럽게 대응된다. 이 대응을 Yoneda의 construction이라 부른다. 명제 6의 결과는 이 관점에서 $$A$$를 coefficient로 하는 $$\Z/n\Z$$-extension이 $$A/nA$$에 의해 분류됨을 보여준다. ([Ext functor - Wikipedia](https://en.wikipedia.org/wiki/Ext_functor))
 
-<ins id="prop7">**명제 7**</ins> 체 $$\mathbb{K}$$와 다항식 환 $$A = \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, 다음이 성립한다.
+<div class="definition" markdown="1">
 
-$$
-\Tor_i^A(\mathbb{K}, \mathbb{K}) \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).
-$$
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$$A = \mathbb{K}[\x_1, \ldots, \x_n]$$ 위에서 $$\mathbb{K} = A/(\x_1, \ldots, \x_n)$$의 projective resolution로서 *Koszul complex*를 사용한다.
-
-Koszul complex $$K_\bullet = K(\x_1, \ldots, \x_n)$$는 다음과 같이 정의된다. 각 $$i = 0, 1, \ldots, n$$에 대해
+<ins id="def7">**정의 7**</ins> 가환환 $$A$$와 원소 $$\x_1, \ldots, \x_n \in A$$에 대해, *Koszul complex* $$K_\bullet = K(\x_1, \ldots, \x_n)$$를 다음과 같이 정의한다. 각 $$i = 0, 1, \ldots, n$$에 대해
 
 $$K_i = \bigwedge\nolimits^i A^n$$
 
@@ -301,36 +263,32 @@ $$d(e_{j_1} \wedge \cdots \wedge e_{j_i}) = \sum_{k=1}^{i} (-1)^{k+1} \x_{j_k} e
 
 로 주어진다. 이때 $$\widehat{\phantom{e}}$$는 해당 항이 생략됨을 나타낸다.
 
-$$K_\bullet$$이 $$\mathbb{K}$$의 projective resolution임을 확인한다. $$K_0 = A$$이고, $$K_\bullet \to \mathbb{K}$$로의 사상은 $$\epsilon \colon K_0 = A \to \mathbb{K}$$, $$a \mapsto \overline{a}$$ (각 $$\x_i$$를 $$0$$으로 보내는 몫사상)으로 주어진다. $$d_1 \colon K_1 = A^n \to K_0 = A$$는 $$(a_1, \ldots, a_n) \mapsto \sum a_i \x_i$$이므로 $$\operatorname{im} d_1 = (\x_1, \ldots, \x_n) = \ker \epsilon$$이다. 따라서 $$0 \to K_n \to \cdots \to K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} \mathbb{K} \to 0$$이 exact함을 보이면 된다.
+</div>
 
-이 exactness는 $$n$$에 대한 귀납법으로 증명한다.
+Koszul complex $$K(\x_1, \ldots, \x_n)$$는 $$\mathbb{K} = A/(\x_1, \ldots, \x_n)$$의 projective resolution이 된다. $$K_0 = A$$이고, $$d_1 \colon K_1 = A^n \to K_0 = A$$는 $$(a_1, \ldots, a_n) \mapsto \sum a_i \x_i$$이므로 *augmentation map* $$\epsilon \colon A \to \mathbb{K}$$에 대해 $$\im d_1 = (\x_1, \ldots, \x_n) = \ker \epsilon$$이다. 따라서 $$0 \to K_n \to \cdots \to K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} \mathbb{K} \to 0$$이 exact함을 보이면 된다.
 
-* $$n = 0$$: $$K_\bullet$$는 $$A \xrightarrow{\epsilon} \mathbb{K} \to 0$$이므로 자명하게 exact하다.
-
-* 귀납 단계: $$n-1$$개의 변수에 대해 $$K(\x_1, \ldots, \x_{n-1})$$가 exact함을 가정한다. $$K(\x_1, \ldots, \x_n)$$를 filtering으로 분해한다. $$A' = \mathbb{K}[\x_1, \ldots, \x_{n-1}]$$ 위에서 Koszul complex $$K'\bullet = K(\x_1, \ldots, \x_{n-1})$$를 생각하자. 그러면
+이 exactness는 $$n$$에 대한 귀납법으로 증명한다. $$n = 0$$인 경우 자명하다. 이제 $$n-1$$개의 변수에 대해 $$K(\x_1, \ldots, \x_{n-1})$$가 exact함을 가정하고, $$A' = \mathbb{K}[\x_1, \ldots, \x_{n-1}]$$ 위에서 $$K'\bullet = K(\x_1, \ldots, \x_{n-1})$$를 생각하자. 그러면
 
 $$K(\x_1, \ldots, \x_n)_i \cong K'_i \oplus K'_{i-1} \cdot e_n$$
 
-이며, $$d_i$$는 다음 형태를 갖는다:
-
-$$d_i(\alpha + \beta \wedge e_n) = d'_i(\alpha) + (-1)^i \x_n \alpha + d'_{i-1}(\beta) \wedge e_n.$$
-
-이를 행렬로 나타내면
+이며, $$d_i$$는 행렬
 
 $$d_i = \begin{pmatrix} d'_i & (-1)^i \x_n \\ 0 & d'_{i-1} \end{pmatrix}$$
 
-이 된다. 이 행렬 형태에서 $$\ker d_i$$와 $$\operatorname{im} d_{i+1}$$를 계산한다. 귀납 가정에 의해 $$K'\bullet$$은 exact하므로
+의 형태를 갖는다. $$(\alpha, \beta) \in \ker d_i$$라 하면 $$d'_{i-1}(\beta) = 0$$이므로 귀납 가정에 의해 $$\beta = d'_i(\gamma)$$가 존재한다. 또한 $$d'_i(\alpha) = (-1)^{i+1} \x_n \beta$$이므로 $$d'_i(\alpha + (-1)^{i+1} \x_n \gamma) = 0$$이고, 다시 귀납 가정에 의해 $$\alpha + (-1)^{i+1} \x_n \gamma \in \im d'_{i+1}$$이다. 따라서 $$\ker d_i \subseteq \im d_{i+1}$$이고, 반대 포함은 자명하다.
 
-$$\ker d_i = \ker d'_i \oplus (\ker d'_{i-1} \cap \x_n^{-1}(\operatorname{im} d'_i + (-1)^{i+1} \ker d'_i)) \cdot e_n$$
-
-가 되고, $$\x_n$$이 $$A$$에서 nonzerodivisor임을 사용하면 $$\ker d_i = \operatorname{im} d_{i+1}$$임을 얻는다. 구체적으로, $$(\alpha, \beta) \in \ker d_i$$라 하면 $$d'_{i-1}(\beta) = 0$$이고 $$d'_i(\alpha) = (-1)^{i+1} \x_n \beta$$이다. 귀납 가정에 의해 $$\beta \in \operatorname{im} d'_{i}$$, 즉 $$\beta = d'_i(\gamma)$$가 존재한다. 그러면 $$d'_i(\alpha + (-1)^{i+1} \x_n \gamma) = 0$$이므로, 다시 귀납 가정에 의해 $$\alpha + (-1)^{i+1} \x_n \gamma \in \operatorname{im} d'_{i+1}$$이다. 따라서 $$\ker d_i \subseteq \operatorname{im} d_{i+1}$$이고, 반대 포함은 자명하다. 따라서 $$K(\x_1, \ldots, \x_n)$$은 exact하다.
-
-이제 이 resolution에 $$- \otimes_A \mathbb{K}$$를 적용한다. 각 $$K_i$$는 자유 $$A$$-module이므로
-
-$$K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i A^n \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i (A^n \otimes_A \mathbb{K}) \cong \bigwedge\nolimits^i \mathbb{K}^n.$$
-
-한편, $$d_i \otimes 1 \colon K_i \otimes_A \mathbb{K} \to K_{i-1} \otimes_A \mathbb{K}$$는 $$\x_j$$를 $$0$$으로 보내므로 영사상이다. 따라서
+이제 이 resolution에 $$- \otimes_A \mathbb{K}$$를 적용하자. 각 $$K_i$$는 자유 $$A$$-module이므로 $$K_i \otimes_A \mathbb{K} \cong \bigwedge^i \mathbb{K}^n$$이며, $$d_i \otimes 1$$은 $$\x_j$$를 $$0$$으로 보내므로 영사상이다. 따라서
 
 $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).$$
 
-</details>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+따라서 다음을 얻는다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop8">**명제 8**</ins> 체 $$\mathbb{K}$$와 다항식 환 $$A = \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, 다음이 성립한다.
+
+$$
+\Tor_i^A(\mathbb{K}, \mathbb{K}) \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).
+$$
+
+</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
