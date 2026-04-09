@@ -82,17 +82,15 @@ $$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_
 
 중 어느 것을 택하는지에 따라 $$\Tor^A_i(M,N)$$의 값이 달라져서는 안될 것이다. 
 
-우리는 따라서 이들이 주는 cohomology를 비교해야 한다. 이를 위한 증명 전략은 $$(p,q)$$ 성분이 $$\Hom_{\lMod{A}}(P_q, I^p)$$인 (혹은 텐서의 경우, $$P_p\otimes P'_q$$인) double complex를 생각하는 것이다. ([호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def4))
+우리는 따라서 이들이 주는 cohomology를 비교해야 한다. 이를 위한 증명 전략은 $$(p,q)$$ 성분이 $$\Hom_{\lMod{A}}(P_q, I^p)$$인 (혹은 텐서의 경우, $$P_p\otimes P'_q$$인) double complex를 생각하는 것이다. ([호몰로지, ⁋정의 4](/ko/math/homological_algebra/homology#def4))
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> $$M \in \lMod{A}$$, $$N \in \lMod{A}$$에 대해, 다음이 성립한다.
+<ins id="prop3">**명제 3**</ins> 두 $$A$$-module $$M \in \lMod{A}$$, $$N \in \lMod{A}$$, 그리고 이들의 projective resolution $$P_\bullet\rightarrow M\rightarrow 0$$과 injective resolution $$0\rightarrow N\rightarrow I^\bullet$$에 대하여, 다음의 isomorphism
 
-$$
-H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))
-$$
+$$H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))$$
 
-여기서 $$P_\bullet \to M$$은 $$M$$의 projective resolution이고, $$N \to I^\bullet$$은 $$N$$의 injective resolution이다.
+이 성립한다. 여기서 $$P_\bullet \to M$$은 $$M$$의 projective resolution이고, $$N \to I^\bullet$$은 $$N$$의 injective resolution이다.
 
 </div>
 
@@ -103,21 +101,29 @@ $$
 
 $$K^{p,q}=\Hom_\lMod{A}(P_q, I^p)$$
 
-를 생각하자. Horizontal differential $$d_h:K^{p,q} \rightarrow K^{p+1,q}$$은 $$I^p\rightarrow I^{p+1}$$에 $$\Hom_\lMod{A}(P_q,-)$$를 취하여 얻고, 비슷하게 vertical differential $$d_v: K^{p,q}\rightarrow K^{p,q+q}$$은 $$P_{q+1}\rightarrow P_q$$에 $$\Hom_\lMod{A}(-,I_p)$$를 취하여 얻는다. Total complex $$\mathrm{Tot}(K)^n = \bigoplus_{p+q=n} K^{p,q}$$의 differential은 $$d = d_h + (-1)^p d_v$$로 주어진다.
+를 생각하자. Horizontal differential $$d_h:K^{p,q} \rightarrow K^{p+1,q}$$은 $$I^p\rightarrow I^{p+1}$$에 $$\Hom_\lMod{A}(P_q,-)$$를 취하여 얻고, 비슷하게 vertical differential $$d_v: K^{p,q}\rightarrow K^{p,q+q}$$은 $$P_{q+1}\rightarrow P_q$$에 $$\Hom_\lMod{A}(-,I_p)$$를 취하여 얻는다. 이제 이 double complex의 total complex $$\Tot(K)^\bullet$$을 생각하자. ([호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 그럼 주어진 isomorphism은 $$\Tot(K)^\bullet$$의 $$n$$번째 cohomology를 다른 방법으로 계산한 것이다.
 
-Total complex의 cohomology를 두 가지 방법으로 계산한다.
+이를 확인하기 위해, 우선 cochain complex $$K^{\bullet, q}$$의 cohomology는 다음의 식
 
-**첫 번째 방법 (열 단위 분석).** $$P_q$$가 projective이므로, cochain complex $$K^{\bullet, q} = \Hom_\lMod{A}(P_q, I^\bullet)$$의 cohomology는
+$$H^p(K^{\bullet, q}) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}$$
 
-$$
-H^p(K^{\bullet, q}) = \Ext_A^p(P_q, N) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}
-$$
+으로 계산된다는 것을 확인하자. 여기서 $$p>0$$인 경우 cohomology가 사라지는 것은 $$P_\bullet$$이 projective resolution이고, 따라서 각각의 $$P_q$$가 projective module이기 때문이다. 
 
-즉, 각 열의 cohomology는 $$p = 0$$에서만 nonzero이다. $$\mathrm{Tot}(K)^\bullet$$에서 $$p > 0$$인 성분만 모은 subcomplex $$A^\bullet$$을 정의하자. 즉 $$A^k = \bigoplus_{p > 0, \, p+q=k} K^{p,q}$$이다. Filtration $$F^p A^k = \bigoplus_{j \geq p, \, j+q=k} K^{j,q}$$을 주자. 그러면 exact sequence
+우리의 주장은 total complex의 cohomology가 $$p=0$$ 성분만으로 결정된다는 것이다. 주의할 것은 이것이 위의 계산으로부터 바로 따르지는 않는다는 것이다. 이는 ([호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 직후에 수행한 계산과 마찬가지로 differential이 항들을 섞어놓기 때문이며, 따라서 이 주장을 증명하기 위해서는 더 세련된 방법이 필요하다. 
 
-$$0 \to F^{p+1} A^\bullet \to F^p A^\bullet \to K^{\bullet, k-p} \to 0$$
+우선 $$\Tot(K)^\bullet$$의 subcomplex
 
-이 얻어지며, 여기서 오른쪽의 $$K^{\bullet, q}$$는 $$p$$에 대해 $$p > 0$$인 성분만을 가진다. $$K^{\bullet,q}$$의 cohomology는 $$p > 0$$에서 모두 $$0$$이므로, $$F^0 A^\bullet = A^\bullet$$에 대해 귀납적으로 $$H^k(A^\bullet) = 0$$임이 따른다. 따라서 $$\mathrm{Tot}(K)^\bullet$$의 cocycle $$x$$는 항상 $$p > 0$$인 성분에서 coboundary이며, 오직 $$p = 0$$인 성분 $$x^{0,n} \in \Hom_\lMod{A}(P_n, N)$$만이 cohomology class를 결정한다.
+$$A^k=\bigoplus_{\substack{p>0\\p+q=k}}K^{p,q}$$
+
+을 생각하자. 즉 $$A^\bullet$$은 $$p>0$$ 성분들만 모은 subcomplex이며, 우리가 보일 것은 $$A^\bullet$$의 cohomology가 vanish한다는 사실이다. 위에서 언급했듯, 이는 $$p>0$$에서 $$H^p(K^{\bullet, q})=0$$이라는 계산으로부터 따라나오는 것이 <em-ko>아니며</em-ko> 이를 위해 우리는 *filtration*
+
+$$F^pA^k\bigoplus_{\substack{j \geq p \\ j+q=k}} K^{j,q}$$
+
+을 생각하고, 이로부터 다음의 short exact sequence
+
+$$0 \rightarrow F^{p+1}A^\bullet \rightarrow F^p A^\bullet \rightarrow K^{\bullet, k-p} \rightarrow 0$$
+
+을 얻어낸다. 여기서 오른쪽의 $$K^{\bullet, q}$$는 $$p$$에 대해 $$p > 0$$인 성분만을 가진다. $$K^{\bullet,q}$$의 cohomology는 $$p > 0$$에서 모두 $$0$$이므로, $$F^0 A^\bullet = A^\bullet$$에 대해 귀납적으로 $$H^k(A^\bullet) = 0$$임이 따른다. 따라서 $$\mathrm{Tot}(K)^\bullet$$의 cocycle $$x$$는 항상 $$p > 0$$인 성분에서 coboundary이며, 오직 $$p = 0$$인 성분 $$x^{0,n} \in \Hom_\lMod{A}(P_n, N)$$만이 cohomology class를 결정한다.
 
 Quotient complex $$\mathrm{Tot}(K)^\bullet / A^\bullet$$은 $$p = 0$$인 열만으로 이루어진 $$\bigoplus_q K^{0,q} = \bigoplus_q \Hom_\lMod{A}(P_q, N)$$와 동치이며, 여기서의 differential은 $$d_v$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서
 
@@ -159,7 +165,7 @@ $$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Double complex ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def4))
+Double complex ([§호몰로지, ⁋정의 4](/ko/math/homological_algebra/homology#def4))
 
 $$
 K_{p,q} = P_p \otimes_A P'_q
@@ -316,4 +322,4 @@ $$K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i A^n \otimes_A \mathbb{K} \
 
 $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).$$
 
-</details>
+</details>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
