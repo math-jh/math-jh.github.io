@@ -12,7 +12,7 @@ sidebar:
     nav: "homological_algebra-ko"
 
 date: 2024-11-06
-last_modified_at: 2024-11-06
+last_modified_at: 2026-04-09
 weight: 6
 
 ---
@@ -44,7 +44,7 @@ $$\begin{aligned}0 &\rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(
 
 에서, $$\Ext_A^1(M_3,N)=0$$이 성립하므로 $$\Hom_\lMod{A}(-,N)$$이 exact라는 것을 알 수 있다. 
 
-한편, [정의 1](#def1) 대신 우리는 고정된 $$N$$에 대하여 $$\Hom_\lMod{A}(-,N):\lMod{A} \rightarrow \Ab$$를 생각한 후 이 left exact functor의 right derived functor로서 $$\Ext$$를 정의할 수도 있었을 것이다. 이 두 정의가 같다는 것은 아래 명제 3에서 확인할 수 있다.
+한편, [정의 1](#def1) 대신 우리는 고정된 $$N$$에 대하여 $$\Hom_\lMod{A}(-,N):\lMod{A} \rightarrow \Ab$$를 생각한 후 이 left exact functor의 right derived functor로서 $$\Ext$$를 정의할 수도 있었을 것이다. 이 두 정의가 같다는 것은 아래 [명제 3](#prop3)에서 확인할 수 있다.
 
 ## Tor 함자의 정의
 
@@ -63,6 +63,24 @@ $$\Tor_i^A(M,N)=L_i(-\otimes_A N)(M)$$
 $$\Tor$$를 계산하기 위해서는 $$M$$의 projective resolution을 사용해야 한다. 따라서, 앞선 문단에서의 계산과 마찬가지로 $$M$$이 projective $$A$$-module이었다면 $$0 \rightarrow M \rightarrow M \rightarrow 0$$이 $$M$$의 projective resolution이 되고, 이로부터 $$\Tor_1^A(M,N)=0$$이 모든 $$N$$에 대해 성립했을 것이다. 즉, 임의의 projective $$A$$-module은 flat $$A$$-module임을 다시 한 번 확인할 수 있다. 
 
 ## Balancing
+
+본질적으로 $$\Hom$$과 $$\otimes$$는 두 개의 대상을 받는 bifinctor이다. 따라서 두 input 중 어느 것을 injective resolution 혹은 projective resolution으로 대체하는지에 따라 다른 결과가 나올 수도 있을 것이며, 이는 그렇게 바람직한 일이 아닐 것이다. 예를 들어 $$\Ext_A^i(M,N)$$을 계산한다 하였을 때, $$M$$의 projective resolution $$P_\bullet\rightarrow M\rightarrow 0$$을 사용하여
+
+$$0\rightarrow \Hom_{\lMod{A}}(M, N)\rightarrow \Hom_{\lMod{A}}(P_0,N)\rightarrow \Hom_{\lMod{A}}(P_1, N)\rightarrow\cdots$$
+
+의 $$i$$번째 cohomology를 생각할 수도 있고, $$N$$의 injective resolution $$0\rightarrow N\rightarrow I^\bullet$$을 사용하여 
+
+$$0\rightarrow \Hom_{\lMod{A}}(M, N)\rightarrow \Hom_{\lMod{A}}(M, I^0)\rightarrow \Hom_{\lMod{A}}(M, I^1)\rightarrow\cdots$$
+
+을 생각할 수도 있을 것인데, 이들 두 결과가 같아야 비로소 $$\Ext$$를 "잘" 정의했다고 할 수 있을 것이다. 마찬가지로 $$\Tor$$도 다음의 두 chain complex
+
+$$\cdots\rightarrow P_1\otimes_AN \rightarrow P_0\otimes_AN \rightarrow M\otimes_AN\rightarrow0$$
+
+와
+
+$$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_A N\rightarrow0$$
+
+중 어느 것을 택하는지에 따라 $$\Tor^A_i(M,N)$$의 값이 달라져서는 안될 것이다. 
 
 [정의 1](#def1)에서 우리는 고정된 $$M$$에 대해 $$\Hom_\lMod{A}(M,-)$$를 derive하여 $$\Ext$$를 정의하였고, 이후 $$\Hom_\lMod{A}(-,N)$$를 derive하는 방식도 언급하였다. 이 두 정의가 실제로 일치한다는 사실, 그리고 [정의 2](#def2)에서 $$N$$의 projective resolution을 사용하여 $$\Tor$$를 정의하였으나 $$M$$의 projective resolution을 사용해도 동일한 결과를 얻는다는 사실을 확립한다. 핵심 도구는 double complex의 total complex에 대한 두 가지 분석 방법이다. 아래 명제 3과 명제 4는 각각 $$\Ext$$와 $$\Tor$$에 대한 balancing이지만, 증명의 본질은 같다: 두 argument 각각에 resolution을 취해 얻은 double complex에서 출발하여, total complex를 계산하면 두 방향의 정의가 동일한 cohomology를 준다는 것을 보이는 것이다.
 
@@ -84,26 +102,26 @@ $$
 Double complex ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
 
 $$
-K^{p,q} = \Hom_\lMod{A}(P_{-q}, I^p)
+K^{p,q} = \Hom_\lMod{A}(P_q, I^p)
 $$
 
-을 정의한다. 여기서 $$P_\bullet$$은 degree $$-q$$에 $$P_q$$를 갖는 chain complex로 생각하고, $$I^\bullet$$은 cochain complex이므로 $$K^{p,q}$$는 first quadrant double complex가 된다. Horizontal differential은 $$d_h \colon K^{p,q} \to K^{p+1,q}$$이며 이는 $$I^\bullet$$의 differential에 의해 유도된 $$\Hom_\lMod{A}(P_{-q}, I^p) \to \Hom_\lMod{A}(P_{-q}, I^{p+1})$$이다. Vertical differential은 $$d_v \colon K^{p,q} \to K^{p,q+1}$$이며 이는 $$P_\bullet$$의 differential $$P_{-q} \to P_{-(q+1)}$$에 의해 유도된 $$\Hom_\lMod{A}(P_{-(q+1)}, I^p) \to \Hom_\lMod{A}(P_{-q}, I^p)$$ (방향에 주의)이다. Total complex $$\mathrm{Tot}(K)^n = \bigoplus_{p+q=n} K^{p,q}$$의 differential은 $$d = d_h + (-1)^p d_v$$로 주어진다.
+을 정의한다. Horizontal differential은 $$d_h \colon K^{p,q} \to K^{p+1,q}$$이며 이는 $$I^\bullet$$의 differential에 의해 유도된 $$\Hom_\lMod{A}(P_q, I^p) \to \Hom_\lMod{A}(P_q, I^{p+1})$$이다. Vertical differential은 $$d_v \colon K^{p,q} \to K^{p,q-1}$$이며 이는 $$P_\bullet$$의 differential $$P_q \to P_{q-1}$$에 의해 유도된 $$\Hom_\lMod{A}(P_{q-1}, I^p) \to \Hom_\lMod{A}(P_q, I^p)$$ (방향에 주의)이다. Total complex $$\mathrm{Tot}(K)^n = \bigoplus_{p+q=n} K^{p,q}$$의 differential은 $$d = d_h + (-1)^p d_v$$로 주어진다.
 
 Total complex의 cohomology를 두 가지 방법으로 계산한다.
 
-**첫 번째 방법 (열 단위 분석).** $$P_{-q}$$가 projective이므로, cochain complex $$K^{\bullet, q} = \Hom_\lMod{A}(P_{-q}, I^\bullet)$$의 cohomology는
+**첫 번째 방법 (열 단위 분석).** $$P_q$$가 projective이므로, cochain complex $$K^{\bullet, q} = \Hom_\lMod{A}(P_q, I^\bullet)$$의 cohomology는
 
 $$
-H^p(K^{\bullet, q}) = \Ext_A^p(P_{-q}, N) = \begin{cases} \Hom_\lMod{A}(P_{-q}, N) & p = 0 \\ 0 & p > 0. \end{cases}
+H^p(K^{\bullet, q}) = \Ext_A^p(P_q, N) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}
 $$
 
 즉, 각 열의 cohomology는 $$p = 0$$에서만 nonzero이다. $$\mathrm{Tot}(K)^\bullet$$에서 $$p > 0$$인 성분만 모은 subcomplex $$A^\bullet$$을 정의하자. 즉 $$A^k = \bigoplus_{p > 0, \, p+q=k} K^{p,q}$$이다. Filtration $$F^p A^k = \bigoplus_{j \geq p, \, j+q=k} K^{j,q}$$을 주자. 그러면 exact sequence
 
 $$0 \to F^{p+1} A^\bullet \to F^p A^\bullet \to K^{\bullet, k-p} \to 0$$
 
-이 얻어지며, 여기서 오른쪽의 $$K^{\bullet, q}$$는 $$p$$에 대해 $$p > 0$$인 성분만을 가진다. $$K^{\bullet,q}$$의 cohomology는 $$p > 0$$에서 모두 $$0$$이므로, $$F^0 A^\bullet = A^\bullet$$에 대해 귀납적으로 $$H^k(A^\bullet) = 0$$임이 따른다. 따라서 $$\mathrm{Tot}(K)^\bullet$$의 cocycle $$x$$는 항상 $$p > 0$$인 성분에서 coboundary이며, 오직 $$p = 0$$인 성분 $$x^{0,n} \in \Hom_\lMod{A}(P_{-n}, N)$$만이 cohomology class를 결정한다.
+이 얻어지며, 여기서 오른쪽의 $$K^{\bullet, q}$$는 $$p$$에 대해 $$p > 0$$인 성분만을 가진다. $$K^{\bullet,q}$$의 cohomology는 $$p > 0$$에서 모두 $$0$$이므로, $$F^0 A^\bullet = A^\bullet$$에 대해 귀납적으로 $$H^k(A^\bullet) = 0$$임이 따른다. 따라서 $$\mathrm{Tot}(K)^\bullet$$의 cocycle $$x$$는 항상 $$p > 0$$인 성분에서 coboundary이며, 오직 $$p = 0$$인 성분 $$x^{0,n} \in \Hom_\lMod{A}(P_n, N)$$만이 cohomology class를 결정한다.
 
-Quotient complex $$\mathrm{Tot}(K)^\bullet / A^\bullet$$은 $$p = 0$$인 열만으로 이루어진 $$\bigoplus_q K^{0,q} = \bigoplus_q \Hom_\lMod{A}(P_{-q}, N)$$와 동치이며, 여기서의 differential은 $$d_v$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서
+Quotient complex $$\mathrm{Tot}(K)^\bullet / A^\bullet$$은 $$p = 0$$인 열만으로 이루어진 $$\bigoplus_q K^{0,q} = \bigoplus_q \Hom_\lMod{A}(P_q, N)$$와 동치이며, 여기서의 differential은 $$d_v$$, 즉 $$P_\bullet$$의 differential에 의해 유도된 사상이다. 따라서
 
 $$
 H^n(\mathrm{Tot}(K)^\bullet) \cong H^n(\mathrm{Tot}(K)^\bullet / A^\bullet) = H^n(\Hom_\lMod{A}(P_\bullet, N)).
@@ -112,7 +130,7 @@ $$
 **두 번째 방법 (행 단위 분석).** 각 행 $$K^{p, \bullet} = \Hom_\lMod{A}(P_\bullet, I^p)$$의 homology를 계산한다. $$I^p$$가 injective이므로 $$\Hom_\lMod{A}(-, I^p)$$은 exact이고, $$P_\bullet \to M$$이 resolution이므로
 
 $$
-H^{-q}(K^{p, \bullet}) = \begin{cases} \Hom_\lMod{A}(M, I^p) & q = 0 \\ 0 & q > 0. \end{cases}
+H_q(K^{p, \bullet}) = \begin{cases} \Hom_\lMod{A}(M, I^p) & q = 0 \\ 0 & q > 0. \end{cases}
 $$
 
 즉, 각 행의 homology는 $$q = 0$$에서만 nonzero이다. $$q > 0$$인 성분만 모은 subcomplex $$B^\bullet$$에 대해, 위와 동일한 논의로 $$H^k(B^\bullet) = 0$$이 성립한다. Quotient $$\mathrm{Tot}(K)^\bullet / B^\bullet$$은 $$q = 0$$인 행만으로 이루어진 $$\bigoplus_p K^{p,0} = \bigoplus_p \Hom_\lMod{A}(M, I^p)$$와 동치이며, 여기서의 differential은 $$d_h$$, 즉 $$I^\bullet$$의 differential에 의해 유도된 사상이다. 따라서
