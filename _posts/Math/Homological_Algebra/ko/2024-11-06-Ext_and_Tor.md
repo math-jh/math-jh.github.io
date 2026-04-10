@@ -155,7 +155,7 @@ $$\cdots \longrightarrow \Hom_\lMod{A}(M, I^{n-1}) \overset{\delta_{n-1}}{\longr
 
 $$H^n(F^{n-1}\Tot(K)^\bullet)=\frac{\ker(\Hom_\lMod{A}(M, I^n) \to \Hom_\lMod{A}(M, I^{n+1}))}{\im(\Hom_\lMod{A}(M, I^{n-1}) \to \Hom_\lMod{A}(M, I^n))}$$
 
-을 얻는다. 이제 $$p<n-1$$에 대해서는 isomorphism ($$\ast\ast$$)을 사용하여 모든 경우가 $$p=n-1$$과 isomorphic함을 알 수 있고 특히
+을 얻는다. 이제 $$p< n-1$$에 대해서는 isomorphism ($$\ast\ast$$)을 사용하여 모든 경우가 $$p=n-1$$과 isomorphic함을 알 수 있고 특히
 
 $$H^n(\Tot(K)^\bullet) = H^n(F^0\Tot(K)^\bullet) = H^n(F^1\Tot(K)^\bullet) = \cdots = H^n(F^{n-1}\Tot(K)^\bullet) = H^n(\Hom_\lMod{A}(M, I^\bullet))$$
 
@@ -181,89 +181,100 @@ $$H_n(P_\bullet \otimes_A N) \cong H_n(M \otimes_A P'_\bullet)$$
 
 ## 예시
 
-앞서 정의한 Ext와 Tor 함자를 구체적으로 계산한다.
+마지막으로 Ext와 Tor의 계산을 조금 더 구체적으로 살펴보자. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> $$n, m \in \Z$$에 대해, 다음이 성립한다.
+<ins id="prop5">**명제 5**</ins> 두 정수 $$n, m \in \mathbb{Z}$$에 대해, 다음이 성립한다.
 
-$$
-\Tor_1^\Z(\Z/n\Z, \Z/m\Z) \cong \Z/\gcd(n,m)\Z.
-$$
+$$\Tor_i^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/m\mathbb{Z}) \cong \begin{cases} \mathbb{Z}/(n,m)\mathbb{Z} & i = 0, 1\\ 0 & i \geq 2. \end{cases}$$ 
+
+여기서 $$(m,n)$$은 $$m$$과 $$n$$의 최대공약수이다. 
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\Z/n\Z$$의 projective resolution을 구성한다. 사상 $$\cdot n \colon \Z \to \Z$$의 image는 $$n\Z$$이므로
+$$i=0$$인 경우는 표준적인 계산이므로, 다음의 식
 
-$$0 \to \Z \xrightarrow{\cdot n} \Z \to \Z/n\Z \to 0$$
+$$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
 
-은 exact하고, $$\Z$$는 projective $$\Z$$-module이므로 이것이 $$\Z/n\Z$$의 projective resolution이다.
+이 $$\mathbb{Z}/n\mathbb{Z}$$의 projective resolution $$P_\bullet\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$을 구성하는 것을 확인하자. 여기서 첫 번째 함수는 $$\mathbb{Z}$$의 원소를 $$n$$배하여 보내는 함수이다. 이제 $$\Tor$$를 계산하기 위해서는 여기에 $$-\otimes_\mathbb{Z}\mathbb{Z}/m\mathbb{Z}$$를 적용하면 된다. $$\mathbb{Z}\otimes_\mathbb{Z}\mathbb{Z}/m\mathbb{Z}=\mathbb{Z}/m\mathbb{Z}$$이므로, tensor를 취한 후의 projective resolution은
 
-이 resolution에 $$- \otimes_\Z \Z/m\Z$$를 적용하면 $$\Z \otimes_\Z \Z/m\Z \cong \Z/m\Z$$이므로, 다음 chain complex를 얻는다.
+$$0\rightarrow \mathbb{Z}/m\mathbb{Z}\rightarrow \mathbb{Z}/m\mathbb{Z}\rightarrow 0$$
 
-$$0 \to \Z/m\Z \xrightarrow{\cdot n} \Z/m\Z \to 0$$
+이고, 따라서 첫 번째 homology는
 
-여기서 $$\cdot n$$은 $$a \mapsto na$$로의 사상이며, 따라서
+$$H_1(P_\bullet)=\ker(\cdot n)= \{a \in \mathbb{Z}/m\mathbb{Z} \mid na \equiv 0 \pmod{m}\}=\mathbb{Z}/(m,n)\mathbb{Z}$$
 
-$$\Tor_1^\Z(\Z/n\Z, \Z/m\Z) \cong \ker(\cdot n \colon \Z/m\Z \to \Z/m\Z) = \{a \in \Z/m\Z : na \equiv 0 \pmod{m}\}.$$
-
-이 kernel은 $$m \mid na$$를 만족하는 $$a \pmod{m}$$의 집합이다. $$d = \gcd(n,m)$$, $$n = dn'$$, $$m = dm'$$이라 하면 $$m' \mid n'a$$이고, $$\gcd(n', m') = 1$$이므로 $$m' \mid a$$이다. 즉 kernel은 $$m'\Z/m\Z \subset \Z/m\Z$$로, $$\Z/m\Z$$에서 $$d$$배를 취하여 얻어지는 순서 $$d$$의 부분군이다. 따라서
-
-$$\ker(\cdot n \colon \Z/m\Z \to \Z/m\Z) \cong \Z/\gcd(n,m)\Z.$$
+이므로 원하는 결과를 얻는다. 
 
 </details>
 
-$$\Tor$$라는 이름은 *torsion*에서 유래한다. 명제 5에서 $$\Tor_1^\Z(\Z/n\Z, \Z/m\Z)$$가 nontrivial한 것은 정확히 $$\gcd(n,m) > 1$$, 즉 $$\Z/m\Z$$에 $$n$$-torsion 원소가 존재할 때이며, 그 크기 $$\gcd(n,m)$$가 torsion의 "양"을 측정한다.
+이 명제는 $$\Tor$$라는 명칭의 기원을 보여주는데,  $$\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/m\mathbb{Z})$$가 nontrivial한 것은 정확히 $$(n,m) > 1$$, 즉 $$\mathbb{Z}/m\mathbb{Z}$$에 $$n$$-torsion 원소가 존재할 때이며, 이 때 최대공약수 $$(n,m)$$이 torsion의 양을 측정하는 것으로 생각할 수 있다.
+
+비슷한 방식으로 $$\Ext$$에 대한 것도 살펴볼 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> 임의의 abelian group $$A$$와 $$n \in \Z$$에 대해, 다음이 성립한다.
+<ins id="prop6">**명제 6**</ins> 임의의 abelian group $$A$$와 $$n \in \mathbb{Z}$$에 대해, 다음이 성립한다.
 
-$$
-\Ext^1_\Z(\Z/n\Z, A) \cong A/nA.
-$$
+$$\Ext^i_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \begin{cases} A[n] & i = 0, \\ A/nA & i = 1, \\ 0 & i \geq 2. \end{cases}$$
+
+여기서 $$A[n] = \{a \in A \mid na = 0\}$$는 $$n$$-torsion subgroup이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\Z/n\Z$$의 projective resolution
+[명제 5](#prop5)에서와 마찬가지의 projective resolution 
 
-$$0 \to \Z \xrightarrow{\cdot n} \Z \to \Z/n\Z \to 0$$
+$$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
 
-에 $$\Hom_\Z(-, A)$$를 적용하면 $$\Hom_\Z(\Z, A) \cong A$$ ($$1 \mapsto a$$로 결정됨)이므로, 다음 cochain complex를 얻는다.
+을 생각하고 $$\Hom_\mathbb{Z}(-,A)$$를 취하자. 그럼 $$\Hom_\mathbb{Z}(\mathbb{Z},A)$$는 $$1$$의 image에 의해 결정되므로, $$\Hom_\mathbb{Z}(\mathbb{Z}, A)\cong A$$이고 이로부터 다음의 complex
 
 $$0 \to A \xrightarrow{\cdot n} A \to 0$$
 
-유도된 사상은 $$a \mapsto na$$이며, 따라서
+를 얻는다. 이 때, 첫 번째 함수는 $$a \mapsto na$$이며, 따라서 첫 번째 호몰로지는
 
-$$\Ext^1_\Z(\Z/n\Z, A) \cong \coker(\cdot n \colon A \to A) = A/nA.$$
+$$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
+
+이다. $$\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)=A[n]$$인 것은 단순 계산이다.
 
 </details>
 
-$$\Ext$$라는 이름은 *extension*에서 유래한다. 일반적으로 $$\Ext^1(M,N)$$는 $$0 \to N \to E \to M \to 0$$ 형태의 short exact sequence, 즉 $$N$$에 의한 $$M$$의 extension의 동치류 집합과 자연스럽게 대응된다 (Yoneda의 construction). 명제 6은 이 관점에서 $$A$$를 coefficient로 하는 $$\Z/n\Z$$-extension이 $$A/nA$$에 의해 분류됨을 보여준다. ([Ext functor - Wikipedia](https://en.wikipedia.org/wiki/Ext_functor))
+더 일반적으로, $$\Ext^1(M,N)$$는 $$0 \to N \to E \to M \to 0$$ 형태의 short exact sequence, 즉 $$N$$에 의한 $$M$$의 extension의 equivalence class와 연결되며, 이는 Yoneda Ext를 통해 확인할 수 있다. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) [명제 5](#prop5)보다는 덜 직관적이지만, [명제 6](#prop6) 또한 이러한 의미에서 $$\Ext$$라는 명칭의 기원을 보여준다 할 수 있다. 
+
+마지막으로 우리는 다음을 정의한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 가환환 $$A$$와 원소 $$\x_1, \ldots, \x_n \in A$$에 대해, *Koszul complex* $$K_\bullet = K(\x_1, \ldots, \x_n)$$를 다음과 같이 정의한다. 각 $$i = 0, 1, \ldots, n$$에 대해
+<ins id="def7">**정의 7**</ins> Commutative ring $$A$$와 rank $$n$$ free $$A$$-module $$F$$, 그리고 $$A$$-linear map $$\varphi : F \to A$$가 주어졌다 하자. 그럼 *Koszul complex* $$K(\varphi)_\bullet$$은 exterior algebra $$K=\bigwedge F$$에 다음과 같이 chain complex 구조를 부여한 것이다. 
 
-$$K_i = \bigwedge\nolimits^i A^n$$
+1. 각각의 $$i$$에 대하여, $$K_i = \bigwedge\nolimits^i F$$이다.
+2. 각각의 $$i$$에 대하여, $$d_i: K_i \to K_{i-1}$$는 degree $$-1$$의 graded derivation으로, 식 $$d(f) = \varphi(f)$$와 Leibniz rule
+    
+    $$d(\xi \wedge \eta) = d(\xi) \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge d(\eta)$$
 
-이며, 이는 $$A$$-module로서 자유 module이고, $$e_{j_1} \wedge \cdots \wedge e_{j_i}$$ ($$1 \leq j_1 < \cdots < j_i \leq n$$)들이 basis를 이룬다. $$K_i$$의 차원은 $$\binom{n}{i}$$이다. Differential $$d_i \colon K_i \to K_{i-1}$$은
-
-$$d(e_{j_1} \wedge \cdots \wedge e_{j_i}) = \sum_{k=1}^{i} (-1)^{k+1} \x_{j_k} e_{j_1} \wedge \cdots \wedge \widehat{e_{j_k}} \wedge \cdots \wedge e_{j_i}$$
-
-로 주어진다. 이때 $$\widehat{\phantom{e}}$$는 해당 항이 생략됨을 나타낸다.
+    에 의해 유일하게 결정된다.
 
 </div>
 
-Koszul complex $$K(\x_1, \ldots, \x_n)$$가 $$\mathbb{K} = A/(\x_1, \ldots, \x_n)$$의 projective resolution이 됨을 보인다. $$K_0 = A$$이고, $$d_1 \colon K_1 = A^n \to K_0 = A$$는 $$(a_1, \ldots, a_n) \mapsto \sum a_i \x_i$$이므로 *augmentation map* $$\epsilon \colon A \to \mathbb{K}$$에 대해 $$\im d_1 = (\x_1, \ldots, \x_n) = \ker \epsilon$$이다. 따라서 $$0 \to K_n \to \cdots \to K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} \mathbb{K} \to 0$$이 exact함을 보이면 된다.
+Augmentation map $$\epsilon: K_0=A\to A/\im\varphi$$를 canonical projection으로 정의하면, $$K(\varphi)_\bullet$$을 $$A/\im\varphi$$의 resolution으로 생각할 수 있다. 편의상 $$F$$의 basis $$e_1, \ldots, e_n$$을 고정하고 $$\x_i = \varphi(e_i)$$라 하면 $$\im\varphi = (\x_1, \ldots, \x_n)$$이므로, 이를 $$K_\bullet(\x_1, \ldots, \x_n)$$이라고도 쓴다.
 
-이는 $$n$$에 대한 귀납법으로 증명한다. $$n = 0$$은 자명하다. $$n-1$$개의 변수에 대해 $$K(\x_1, \ldots, \x_{n-1})$$가 exact함을 가정하자. $$A' = \mathbb{K}[\x_1, \ldots, \x_{n-1}]$$ 위에서 $$K'\bullet = K(\x_1, \ldots, \x_{n-1})$$를 생각하면
+만일 $$\x_1, \ldots, \x_n$$이 $$A$$에서 regular sequence라면, Koszul complex는 $$A/(\x_1, \ldots, \x_n)$$의 *free resolution*이 된다. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2)) 즉
+
+$$0 \to K_n \to \cdots \to K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} A/(\x_1, \ldots, \x_n) \to 0$$
+
+이 exact하다. 
+
+이를 보이기 위해 $$n$$에 대한 귀납법을 사용한다. $$n = 0$$인 경우는 자명하므로, $$n-1$$개의 원소에 대해 $$K(\x_1, \ldots, \x_{n-1})$$가 exact함을 가정하자.
+
+$$\x_n$$이 regular sequence의 마지막 원소이므로, $$\x_n$$은 $$A/(\x_1, \ldots, \x_{n-1})$$ 위에서 non-zerodivisor이다. 따라서 $$\bar{\x}_i$$를 $$\x_i$$의 $$A/(\x_n)$$에서의 image라 하면, $$\bar{\x}_1, \ldots, \bar{\x}_{n-1}$$은 $$A/(\x_n)$$ 위에서 regular sequence가 되고, 귀납적 가정에 의해 $$K'_\bullet = K(\bar{\x}_1, \ldots, \bar{\x}_{n-1})$$는 $$A/(\x_1, \ldots, \x_n)$$의 free resolution이다.
+
+이제 $$K(\x_1, \ldots, \x_n)_i$$를 관찰하면, 정의에 의해
 
 $$K(\x_1, \ldots, \x_n)_i \cong K'_i \oplus K'_{i-1} \cdot e_n$$
 
@@ -273,7 +284,7 @@ $$d_i = \begin{pmatrix} d'_i & (-1)^i \x_n \\ 0 & d'_{i-1} \end{pmatrix}$$
 
 의 형태를 갖는다. $$(\alpha, \beta) \in \ker d_i$$라 하면 $$d'_{i-1}(\beta) = 0$$이므로 귀납 가정에 의해 $$\beta = d'_i(\gamma)$$인 $$\gamma$$가 존재한다. 또한 $$d'_i(\alpha) = (-1)^{i+1} \x_n \beta$$이므로 $$d'_i(\alpha + (-1)^{i+1} \x_n \gamma) = 0$$이고, 다시 귀납 가정에 의해 $$\alpha + (-1)^{i+1} \x_n \gamma \in \im d'_{i+1}$$이다. 따라서 $$\ker d_i \subseteq \im d_{i+1}$$이고, 반대 포함은 자명하다.
 
-이 resolution에 $$- \otimes_A \mathbb{K}$$를 적용하자. 각 $$K_i$$는 자유 $$A$$-module이므로 $$K_i \otimes_A \mathbb{K} \cong \bigwedge^i \mathbb{K}^n$$이며, $$d_i \otimes 1$$은 모든 $$\x_j$$를 $$0$$으로 보내므로 영사상이다. 따라서
+특히 체 $$\mathbb{K}$$ 위의 다항식 환 $$A = \mathbb{K}[\x_1, \ldots, \x_n]$$에서 $$\x_1, \ldots, \x_n$$은 regular sequence이므로, Koszul complex는 $$\mathbb{K}$$의 free resolution이 된다. 이 resolution에 $$- \otimes_A \mathbb{K}$$를 적용하자. 각 $$K_i$$는 자유 $$A$$-module이므로 $$K_i \otimes_A \mathbb{K} \cong \bigwedge^i \mathbb{K}^n$$이며, $$d_i \otimes 1$$은 모든 $$\x_j$$를 $$0$$으로 보내므로 영사상이다. 따라서
 
 $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).$$
 
@@ -285,4 +296,4 @@ $$
 \Tor_i^A(\mathbb{K}, \mathbb{K}) \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).
 $$
 
-</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+</div>
