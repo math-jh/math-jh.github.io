@@ -21,7 +21,7 @@ published: false
 
 ## Filtered Complex
 
-우선 다음을 정의하자.
+
 
 <div class="definition" markdown="1">
 
@@ -33,23 +33,30 @@ $$\cdots \supset F^{p-1}A^\bullet \supset F^pA^\bullet \supset F^{p+1}A^\bullet 
 
 </div>
 
-Filtration은 complex를 점진적으로 세밀하게 쪼개는 구조를 제공한다. $$p$$가 증가함에 따라 $$F^p A^\bullet$$은 점점 더 작아지며, 각 단계에서 새로운 정보가 추가된다. 각 $$p$$에 대해 *associated graded*
+예를 들어 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명에서 우리는 total complex $$A^\bullet=\Tot(K)^\bullet$$의 horizontal/vertical degree를 이용하여 filtration을 정의했었다. 위의 [정의 1](#def1)은 이보다 아주 일반화된 버전이라 생각할 수 있지만, 어쨌든 complex를 더 세밀하게 쪼갠다는 철학 자체는 동일하다. 즉, $$p$$가 증가함에 따라 $$F^p A^\bullet$$은 점점 더 작아지며, 각 단계에서 새로운 정보가 추가된다. 또 우리는 위의 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명에서 귀납법을 적용하기 위해 $$F^(p+1)A^\bullet/F^pA^\bullet$$을 생각하여 이를 원래의 double complex $$K^{p, \bullet-p}$$로 생각하였는데, 일반적인 경우에도 이 정보는 <em-ko>정확히</em-ko> $$p$$번째 filtration을 담는다는 점에서 중요하다. 이렇게 얻어진 cochain complex
 
 $$\mathrm{Gr}^p A^\bullet = F^p A^\bullet / F^{p+1} A^\bullet$$
 
-를 정의할 수 있다. $$\mathrm{Gr}^p A^\bullet$$은 $$F^p$$에서 "순수하게 $$p$$번째 단계에 해당하는" 부분을 추출한 것으로 이해할 수 있다. $$A^\bullet$$의 미분 $$d$$는 $$F^p A^\bullet$$을 $$F^p A^\bullet$$ 안으로 보내므로, quotient에서 미분
+를 $$F$$에 대한 *associated graded complex*라 부른다. 이 때 이 complex의 differential은 물론 원래의 cochain complex $$A^\bullet$$에서의 differential로부터 오는 것이다. 
 
-$$\bar{d}^p \colon \mathrm{Gr}^p A^i \to \mathrm{Gr}^p A^{i+1}$$
-
-가 유도된다. 이 미분은 $$F^{p+1} A^\bullet$$로 보내는 성분을 무시한 것이며, $$\bar{d}^p \circ \bar{d}^p = 0$$이 성립하므로 $$\mathrm{Gr}^p A^\bullet$$은 자체적으로 cochain complex를 이룬다.
+이제 다음을 정의한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> *Spectral sequence*는 각 $$r \geq 1$$에 대해 abelian group $$E_r^{p,q}$$와, bidegree $$(r, 1-r)$$를 갖는 사상
+<ins id="def2">**정의 2**</ins> *Spectral sequence<sub>스펙트럼 열</sub>*는 다음과 같은 데이터의 모임이다. 
 
-$$d_r \colon E_r^{p,q} \to E_r^{p+r, q-r+1}$$
+1. 각각의 $$r \geq 1$$과 각각의 $$(p, q)$$에 대해 정의된 abelian group $$E_r^{p,q}$$
+2. Bidegree $$(r, 1-r)$$의 differential $$d_r \colon E_r^{p,q} \to E_r^{p+r, q-r+1}$$
 
-로 이루어진다. 각 $$r$$에 대해 $$(E_r^{p,q}, d_r)$$을 *$$r$$번째 page*라고 부른다. 여기서 $$d_r \circ d_r = 0$$이며, 다음 단계는 $$E_{r+1}^{p,q} = H^{p+q}(E_r^{p-r,q+r-1} \overset{d_r}{\to} E_r^{p,q} \overset{d_r}{\to} E_r^{p+r,q-r+1})$$로 정의된다. Filtered complex $$(A^\bullet, F)$$로부터 유도된 spectral sequence가 cohomology $$H^\bullet(A^\bullet)$$에 *수렴한다*는 것은, 각 $$(p,q)$$에 대해 충분히 큰 $$r$$에 대해 $$E_r^{p,q}$$가 안정화되어 $$E_\infty^{p,q}$$에 도달하며, 이것이 $$H^{p+q}(A^\bullet)$$의 filtration에 의한 associated graded와 일치하는 것을 의미한다.
+이 때, 각 $$r$$에 대해 $$(E_r^{p,q}, d_r)$$을 *$$r$$번째 page*라고 부른다. 각 page는 다음의 식
+
+$$E_{r+1}^{p,q} = H^{p+q}(E_r^{p-r,q+r-1} \overset{d_r}{\to} E_r^{p,q} \overset{d_r}{\to} E_r^{p+r,q-r+1})$$
+
+으로 연결된다.
+
+즉, $$E_{r+1}$$은 $$E_r$$에서 $$d_r$$에 대한 cohomology를 취하여 얻어진다.
+
+Filtered complex $$(A^\bullet, F)$$로부터 유도된 spectral sequence가 cohomology $$H^\bullet(A^\bullet)$$에 *수렴한다*는 것은, 각 $$(p,q)$$에 대해 충분히 큰 $$r$$에 대해 $$E_r^{p,q}$$가 안정화되어 $$E_\infty^{p,q}$$에 도달하며, 이것이 $$H^{p+q}(A^\bullet)$$의 filtration에 의한 associated graded와 일치하는 것을 의미한다.
 
 </div>
 
@@ -91,7 +98,7 @@ $$F^p_{\mathrm{col}} \mathrm{Tot}(K)^n = \bigoplus_{j \geq p, \, i+j=n} K^{i,j}$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-행 filtration $$F_{\mathrm{row}}$$에 대해, associated graded는
+행 filtration $$F_{\mathrm{row}}$$에 대해, associated graded $$\mathrm{Gr}^p$$는
 
 $$\mathrm{Gr}^p_{\mathrm{row}} \mathrm{Tot}(K)^n = F^p_{\mathrm{row}} \mathrm{Tot}(K)^n / F^{p+1}_{\mathrm{row}} \mathrm{Tot}(K)^n \cong K^{p,n-p}$$
 
@@ -121,7 +128,7 @@ $$F^p H^n = \operatorname{im}\bigl(H^n(F^p A^\bullet) \to H^n(A^\bullet)\bigr)$$
 
 이 filtration은 $$F^p A^\bullet$$에 포함된 cocycle들이 유도하는 cohomology class들로 이루어진다. $$p$$가 증가하면 $$F^p A^\bullet$$이 작아지므로 $$F^p H^n$$도 작아진다.
 
-이제 spectral sequence의 각 page를 구성한다. $$E_0$$ page는 associated graded로부터 직접 얻어진다.
+이제 spectral sequence의 각 page를 구성한다. $$E_0$$ page는 filtration에 의한 associated graded로부터 직접 얻어진다.
 
 $$E_0^{p,q} = \mathrm{Gr}^p A^{p+q} = F^p A^{p+q} / F^{p+1} A^{p+q}$$
 
