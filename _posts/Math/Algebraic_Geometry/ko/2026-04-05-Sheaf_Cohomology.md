@@ -224,6 +224,103 @@ $$d(s_1, s_2) = s_2\vert_{U_1 \cap U_2} - s_1\vert_{U_1 \cap U_2} = (s_2 - s_1, 
 
 </div>
 
+## Spectral Sequence
+
+Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 통한 cohomology의 계산이다 ([\[호몰로지 대수학\] §스펙트럴 열](/ko/math/homological_algebra/spectral_sequences)). 이 섹션에서는 sheaf cohomology와 자연스럽게 연결되는 세 가지 spectral sequence를 소개한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop13">**명제 13** (Leray Spectral Sequence)</ins> 연속 사상 $$f \colon X \to Y$$와 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$에 대하여, Leray spectral sequence
+
+$$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
+
+이 존재한다. 여기서 $$R^q f_* \mathcal{F}$$는 direct image functor $$f_*$$의 $$q$$번째 right derived functor이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명 개요</summary>
+
+$$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡자. 이때 double complex $$C^{p,q} = \Gamma(Y, f_* \mathcal{I}^q)^{(p)}$$를 생각한다. 여기서 $$(-)^{(p)}$$는 $$\Gamma(Y, -)$$의 $$p$$번째 derived functor를 의미한다. 이 double complex의 두 가지 filtration으로부터 얻어지는 두 spectral sequence가 같은 abutment $$H^{p+q}(X, \mathcal{F})$$를 가짐을 보이면 된다.
+
+</details>
+
+기하적 직관으로 이 spectral sequence는 다음을 말한다. $$X$$ 위의 cohomology를 계산하려면, $$Y$$ 위에서의 cohomology를 먼저 계산하고, 각 점의 "fiber 위에서의 cohomology"를 high sheaf $$R^q f_* \mathcal{F}$$로 기억한 뒤, 이들을 $$Y$$ 위에서 합성하면 된다는 것이다. 즉, $$f$$가 fiber bundle과 같은 좋은 구조를 가질 때, $$X$$의 cohomology는 $$Y$$의 cohomology와 fiber의 cohomology의 합성으로 분해된다.
+
+Leray spectral sequence의 가장 낮은 차원에서는 다음의 exact sequence를 얻을 수 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop14">**명제 14** (Five-Term Exact Sequence)</ins> 연속 사상 $$f \colon X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, Leray spectral sequence로부터 다음의 exact sequence를 얻는다.
+
+$$0 \to H^1(Y, f_* \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_* \mathcal{F}) \overset{d_2}{\to} H^2(Y, f_* \mathcal{F}) \to H^2(X, \mathcal{F})$$
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Leray spectral sequence $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$의 $$E_2$$ page에서 $$p+q \leq 2$$인 항목들을 고려하자. $$E_2^{0,0} = H^0(Y, f_* \mathcal{F}) = H^0(X, \mathcal{F})$$에서 $$E_\infty^{0,0} = H^0(X, \mathcal{F})$$로의 degeneration은 자명하다.
+
+$$p+q = 1$$인 항목: $$E_2^{1,0}$$와 $$E_2^{0,1}$$만이 존재한다. $$E_\infty$$ page에서 $$H^1(X, \mathcal{F})$$의 filtration
+
+$$0 \subseteq F^1 H^1 \subseteq F^0 H^1 = H^1$$
+
+을 생각하면, $$E_\infty^{1,0} = F^1 H^1$$이고 $$E_\infty^{0,1} = H^1 / F^1 H^1$$이다. 차수 이유로 $$E_2^{p,q}$$에서 $$p+q=1$$인 항에 도달하는 유일한 가능한 differential은 없으므로 $$E_2^{1,0} = E_\infty^{1,0}$$이고 $$E_2^{0,1} = E_\infty^{0,1}$$이다. 따라서
+
+$$0 \to E_2^{1,0} \to H^1(X, \mathcal{F}) \to E_2^{0,1} \to 0$$
+
+이 exact하다.
+
+$$p+q = 2$$인 항목: $$E_2^{2,0}$$, $$E_2^{1,1}$$, $$E_2^{0,2}$$가 존재하며, $$d_2 \colon E_2^{0,1} \to E_2^{2,0}$$가 유일한 비자명한 differential이다. $$E_3$$ page에서
+
+$$E_3^{0,2} = \ker(d_2 \colon E_2^{0,2} \to E_2^{2,1}), \qquad E_3^{2,0} = \operatorname{coker}(d_2 \colon E_2^{0,1} \to E_2^{2,0})$$
+
+이며, $$H^2(X, \mathcal{F})$$의 filtration
+
+$$0 \subseteq F^2 H^2 \subseteq F^1 H^2 \subseteq F^0 H^2 = H^2$$
+
+에 대하여 $$E_\infty^{2,0} = F^2 H^2$$, $$E_\infty^{1,1} = F^1 H^2 / F^2 H^2$$, $$E_\infty^{0,2} = H^2 / F^1 H^2$$이다. 다시 차수 이유로 $$E_3^{p,q} = E_\infty^{p,q}$$이므로
+
+$$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2 \colon E_2^{0,1} \to E_2^{2,0})$$
+
+이다.
+
+이제 exact sequence를 구성한다. $$E_2^{0,1} = E_\infty^{0,1}$$이므로, $$H^1(X, \mathcal{F}) \to E_2^{0,1}$$의 map은 surjective이다. 이 map의 kernel은 정확히 $$E_2^{1,0}$$이며, 따라서
+
+$$0 \to E_2^{1,0} \to H^1(X, \mathcal{F}) \to E_2^{0,1}$$
+
+이 exact하다. 다음으로, $$d_2 \colon E_2^{0,1} \to E_2^{2,0}$$의 image에 의해 $$E_2^{2,0} \to E_3^{2,0} = E_\infty^{2,0} = F^2 H^2 \hookrightarrow H^2(X, \mathcal{F})$$의 kernel은 정확히 $$\operatorname{im}(d_2)$$이다. 따라서
+
+$$E_2^{0,1} \overset{d_2}{\to} E_2^{2,0} \to H^2(X, \mathcal{F})$$
+
+이 exact하다. 이를 합치면 원하는 five-term exact sequence를 얻는다.
+
+</details>
+
+이 exact sequence는 $$d_2$$-differential의 존재가 cohomology의 계산에 어떤 제약을 주는지를 보여주며, $$f$$가 good morphism일 때 (예를 들어 $$R^1 f_* \mathcal{F} = 0$$인 경우) $$H^i(X, \mathcal{F}) \cong H^i(Y, f_* \mathcal{F})$$라는 직관을 부분적으로 정당화한다.
+
+세 번째로, Čech cohomology와 derived functor cohomology의 관계를 spectral sequence로 기술할 수 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop15">**명제 15** (Čech-to-Derived Functor Spectral Sequence)</ins> 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$와 open cover $$\mathcal{U}$$에 대하여, spectral sequence
+
+$$E_2^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) \Rightarrow H^{p+q}(X, \mathcal{F})$$
+
+이 존재한다. 여기서 $$\mathcal{H}^q(\mathcal{F})$$는 presheaf $$U \mapsto H^q(U, \mathcal{F})$$의 sheafification이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명 개요</summary>
+
+$$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡고, double complex $$C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{I}^q)$$를 구성한다. 여기서 첫 번째 direction (first spectral sequence)에서는 $$\check{C}^p(\mathcal{U}, -)$$에 대한 cohomology를 먼저 계산하고, 두 번째 direction (second spectral sequence)에서는 $$\Gamma(X, -)$$에 대한 cohomology를 먼저 계산한다. 두 spectral sequence가 같은 total cohomology $$H^{p+q}(X, \mathcal{F})$$에 수렴함을 이용한다.
+
+</details>
+
+이 spectral sequence는 [정리 9](#thm9)를 더 넓은 맥락에서 이해할 수 있게 해준다. 만일 $$\mathcal{U}$$의 모든 유한 교집합에서 $$\mathcal{F}$$가 acyclic이면 $$\mathcal{H}^q(\mathcal{F}) = 0$$이 모든 $$q > 0$$에 대해 성립하므로, $$E_2$$ page에서 $$q > 0$$인 항목이 모두 소멸하여 $$E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$$를 얻는다. 즉, Čech-to-derived functor spectral sequence는 [정리 9](#thm9)를 포함하는 더 일반적인 결과이다.
+
 ## Line Bundle의 Classification
 
 앞서 우리는 line bundle이 transition function $$g_{ij} \in \mathcal{O}_X^\ast(U_i \cap U_j)$$들로 결정된다는 것을 보았다 ([§선다발과 벡터다발, ⁋명제 2](/ko/math/algebraic_geometry/line_bundles#prop2)). Transition function들은 cocycle condition $$g_{ij}g_{jk} = g_{ik}$$을 만족하는데, 이는 multiplicative notation으로 쓴 Čech 1-cocycle condition에 정확히 해당한다. 또한 line bundle의 isomorphism은 각 $$U_i$$ 위에서의 함수 $$h_i \in \mathcal{O}_X^\ast(U_i)$$에 의해 $$g_{ij} \mapsto h_i g_{ij} h_j^{-1}$$로 transition function이 변하는 것이므로, 이 역시 Čech 1-coboundary에 의한 동치관계와 일치한다. 즉, line bundle의 isomorphism class는 $$\check{H}^1(X, \mathcal{O}_X^\ast)$$의 원소와 자연스럽게 대응된다.
@@ -232,7 +329,7 @@ $$d(s_1, s_2) = s_2\vert_{U_1 \cap U_2} - s_1\vert_{U_1 \cap U_2} = (s_2 - s_1, 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> $$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$$이다.
+<ins id="prop16">**명제 16**</ins> $$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$$이다.
 
 </div>
 
