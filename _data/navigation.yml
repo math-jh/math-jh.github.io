@@ -376,6 +376,10 @@ homological_algebra-ko:
         url: ko/math/homological_algebra/derived_functors
       - title: "Ext와 Tor"
         url: ko/math/homological_algebra/ext_and_tor
+      - title: "스펙트럴 열"
+        url: ko/math/homological_algebra/spectral_sequences
+      - title: "유도카테고리"
+        url: ko/math/homological_algebra/derived_categories
   - title: 
     children:
       - title: "블로그 소개"
