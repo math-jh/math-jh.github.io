@@ -282,18 +282,16 @@ $$K(\x_1, \ldots, \x_n)_i \cong K'_i \oplus K'_{i-1} \cdot e_n$$
 
 $$d_i = \begin{pmatrix} d'_i & (-1)^i \x_n \\ 0 & d'_{i-1} \end{pmatrix}$$
 
-의 형태를 갖는다. $$(\alpha, \beta) \in \ker d_i$$라 하면 $$d'_{i-1}(\beta) = 0$$이므로 귀납 가정에 의해 $$\beta = d'_i(\gamma)$$인 $$\gamma$$가 존재한다. 또한 $$d'_i(\alpha) = (-1)^{i+1} \x_n \beta$$이므로 $$d'_i(\alpha + (-1)^{i+1} \x_n \gamma) = 0$$이고, 다시 귀납 가정에 의해 $$\alpha + (-1)^{i+1} \x_n \gamma \in \im d'_{i+1}$$이다. 따라서 $$\ker d_i \subseteq \im d_{i+1}$$이고, 반대 포함은 자명하다.
+의 형태를 갖는다. $$(\alpha, \beta) \in \ker d_i$$라 하면 $$d'_{i-1}(\beta) = 0$$이므로, 귀납적 가정에 의해 $$\beta = d'_i(\gamma)$$인 $$\gamma$$가 존재한다. 또한 $$d'_i(\alpha) = (-1)^{i+1} \x_n \beta$$이므로 $$d'_i(\alpha + (-1)^{i+1} \x_n \gamma) = 0$$이고, 다시 귀납적 가정에 의해 $$\alpha + (-1)^{i+1} \x_n \gamma \in \im d'_{i+1}$$이다. 따라서 $$\ker d_i \subseteq \im d_{i+1}$$이고, 반대방향 포함관계는 자명하다.
 
-특히 체 $$\mathbb{K}$$ 위의 다항식 환 $$A = \mathbb{K}[\x_1, \ldots, \x_n]$$에서 $$\x_1, \ldots, \x_n$$은 regular sequence이므로, Koszul complex는 $$\mathbb{K}$$의 free resolution이 된다. 이 resolution에 $$- \otimes_A \mathbb{K}$$를 적용하자. 각 $$K_i$$는 자유 $$A$$-module이므로 $$K_i \otimes_A \mathbb{K} \cong \bigwedge^i \mathbb{K}^n$$이며, $$d_i \otimes 1$$은 모든 $$\x_j$$를 $$0$$으로 보내므로 영사상이다. 따라서
+이는 특히 field $$\mathbb{K}$$ 위의 polynomial algebra $$A=\mathbb{K}[\x_1,\ldots, \x_n]$$과 regular sequence $$(\x_1,\ldots, \x_n)$$의 경우에 잘 적용된다. 이 때 $$F=\bigoplus_1^nAe_i$$이고 augmentation map은 $$e_i\mapsto \x_i$$로 주어진다. 위의 논의에 의해 Koszul complex는 $$\mathbb{K}$$의 free resolution이 되며, 각각의 $$K_i$$는 free $$A$$-module이므로 $$-\otimes_A\mathbb{K}$$를 적용하면 다음의 complex
+
+$$0 \to \bigwedge\nolimits^n \mathbb{K}^n \to \cdots \to \bigwedge\nolimits^1 \mathbb{K}^n \to \bigwedge\nolimits^0 \mathbb{K}^n \to 0$$
+
+을 얻으며, 이는 $$A/(\x_1,\ldots, \x_n)\cong \mathbb{K}$$의 resolution이다. 한편 $$d_i$$는 $$\varphi$$로부터 유도된 것이므로, $$-\otimes_A \mathbb{K}$$를 적용하면 모든 $$\x_j$$-계수가 $$0$$으로 가므로 $$d_i \otimes 1 = 0$$이다. 따라서
 
 $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).$$
 
-<div class="proposition" markdown="1">
+을 얻는다.
 
-<ins id="prop8">**명제 8**</ins> 체 $$\mathbb{K}$$와 다항식 환 $$A = \mathbb{K}[\x_1, \ldots, \x_n]$$에 대해, 다음이 성립한다.
-
-$$
-\Tor_i^A(\mathbb{K}, \mathbb{K}) \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).
-$$
-
-</div>
+이 계산은 나중에 다항식 환 $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 global dimension이 $$n$$임을 보여주는 데 사용된다. ([##ref##](global-dimension/호몰로지?가환대수?))
