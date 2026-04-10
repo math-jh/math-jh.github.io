@@ -181,7 +181,7 @@ $$H_n(P_\bullet \otimes_A N) \cong H_n(M \otimes_A P'_\bullet)$$
 
 ## 예시
 
-앞서 정의한 Ext와 Tor 함자를 구체적으로 계산해본다.
+앞서 정의한 Ext와 Tor 함자를 구체적으로 계산한다.
 
 <div class="proposition" markdown="1">
 
@@ -200,27 +200,23 @@ $$\Z/n\Z$$의 projective resolution을 구성한다. 사상 $$\cdot n \colon \Z 
 
 $$0 \to \Z \xrightarrow{\cdot n} \Z \to \Z/n\Z \to 0$$
 
-은 exact하며, $$\Z$$는 projective $$\Z$$-module이므로 이것이 $$\Z/n\Z$$의 projective resolution이다.
+은 exact하고, $$\Z$$는 projective $$\Z$$-module이므로 이것이 $$\Z/n\Z$$의 projective resolution이다.
 
-이 resolution에 $$- \otimes_\Z \Z/m\Z$$를 적용한 chain complex는
-
-$$\cdots \to 0 \to \Z \otimes_\Z \Z/m\Z \xrightarrow{\cdot n \otimes 1} \Z \otimes_\Z \Z/m\Z \to 0 \to \cdots$$
-
-이다. $$\Z \otimes_\Z \Z/m\Z \cong \Z/m\Z$$이므로
+이 resolution에 $$- \otimes_\Z \Z/m\Z$$를 적용하면 $$\Z \otimes_\Z \Z/m\Z \cong \Z/m\Z$$이므로, 다음 chain complex를 얻는다.
 
 $$0 \to \Z/m\Z \xrightarrow{\cdot n} \Z/m\Z \to 0$$
 
-이 되고, 여기서 $$\cdot n$$은 $$\Z/m\Z$$에서 원소 $$a \mapsto na$$로의 사상이다. 따라서
+여기서 $$\cdot n$$은 $$a \mapsto na$$로의 사상이며, 따라서
 
 $$\Tor_1^\Z(\Z/n\Z, \Z/m\Z) \cong \ker(\cdot n \colon \Z/m\Z \to \Z/m\Z) = \{a \in \Z/m\Z : na \equiv 0 \pmod{m}\}.$$
 
-이 kernel은 $$m \mid na$$를 만족하는 $$a \pmod{m}$$의 집합이다. $$d = \gcd(n,m)$$, $$n = dn'$$, $$m = dm'$$이라 하자. 그러면 $$m' \mid n'a$$이고, $$\gcd(n', m') = 1$$이므로 $$m' \mid a$$이다. 따라서 kernel은 $$m'\Z/m\Z \subset \Z/m\Z$$, 즉 $$\Z/m\Z$$에서 $$d$$배를 취하면 얻어지는 부분군이다. Chinese remainder theorem에 의해 이 부분군은 순서 $$d$$를 가지며 $$\Z/d\Z$$와 동형이므로
+이 kernel은 $$m \mid na$$를 만족하는 $$a \pmod{m}$$의 집합이다. $$d = \gcd(n,m)$$, $$n = dn'$$, $$m = dm'$$이라 하면 $$m' \mid n'a$$이고, $$\gcd(n', m') = 1$$이므로 $$m' \mid a$$이다. 즉 kernel은 $$m'\Z/m\Z \subset \Z/m\Z$$로, $$\Z/m\Z$$에서 $$d$$배를 취하여 얻어지는 순서 $$d$$의 부분군이다. 따라서
 
 $$\ker(\cdot n \colon \Z/m\Z \to \Z/m\Z) \cong \Z/\gcd(n,m)\Z.$$
 
 </details>
 
-$$\Tor$$라는 이름은 *torsion*에서 유래한다. 명제 5의 결과는 이를 잘 보여준다: $$\Tor_1^\Z(\Z/n\Z, \Z/m\Z)$$가 nontrivial한 것은 정확히 $$\gcd(n,m) > 1$$, 즉 $$\Z/m\Z$$의 원소 중 $$n$$-torsion을 갖는 것이 존재할 때이며, 그 크기 $$\gcd(n,m)$$는 이 torsion의 "양"을 측정한다.
+$$\Tor$$라는 이름은 *torsion*에서 유래한다. 명제 5에서 $$\Tor_1^\Z(\Z/n\Z, \Z/m\Z)$$가 nontrivial한 것은 정확히 $$\gcd(n,m) > 1$$, 즉 $$\Z/m\Z$$에 $$n$$-torsion 원소가 존재할 때이며, 그 크기 $$\gcd(n,m)$$가 torsion의 "양"을 측정한다.
 
 <div class="proposition" markdown="1">
 
@@ -239,17 +235,17 @@ $$\Z/n\Z$$의 projective resolution
 
 $$0 \to \Z \xrightarrow{\cdot n} \Z \to \Z/n\Z \to 0$$
 
-에 $$\Hom_\Z(-, A)$$를 적용한 cochain complex는
+에 $$\Hom_\Z(-, A)$$를 적용하면 $$\Hom_\Z(\Z, A) \cong A$$ ($$1 \mapsto a$$로 결정됨)이므로, 다음 cochain complex를 얻는다.
 
-$$0 \to \Hom_\Z(\Z, A) \xrightarrow{\cdot n^\ast} \Hom_\Z(\Z, A) \to 0$$
+$$0 \to A \xrightarrow{\cdot n} A \to 0$$
 
-이다. $$\Hom_\Z(\Z, A) \cong A$$이며 (사상은 $$1 \mapsto a$$로 결정됨), 유도된 사상 $$\cdot n^\ast$$은 $$a \mapsto na$$이다. 따라서
+유도된 사상은 $$a \mapsto na$$이며, 따라서
 
 $$\Ext^1_\Z(\Z/n\Z, A) \cong \coker(\cdot n \colon A \to A) = A/nA.$$
 
 </details>
 
-$$\Ext$$라는 이름은 *extension*에서 유래한다. 일반적으로 $$\Ext^1(M,N)$$는 $$0 \to N \to E \to M \to 0$$ 형태의 short exact sequence, 즉 $$N$$에 의한 $$M$$의 extension들의 동치류 집합과 자연스럽게 대응된다. 이 대응을 Yoneda의 construction이라 부른다. 명제 6의 결과는 이 관점에서 $$A$$를 coefficient로 하는 $$\Z/n\Z$$-extension이 $$A/nA$$에 의해 분류됨을 보여준다. ([Ext functor - Wikipedia](https://en.wikipedia.org/wiki/Ext_functor))
+$$\Ext$$라는 이름은 *extension*에서 유래한다. 일반적으로 $$\Ext^1(M,N)$$는 $$0 \to N \to E \to M \to 0$$ 형태의 short exact sequence, 즉 $$N$$에 의한 $$M$$의 extension의 동치류 집합과 자연스럽게 대응된다 (Yoneda의 construction). 명제 6은 이 관점에서 $$A$$를 coefficient로 하는 $$\Z/n\Z$$-extension이 $$A/nA$$에 의해 분류됨을 보여준다. ([Ext functor - Wikipedia](https://en.wikipedia.org/wiki/Ext_functor))
 
 <div class="definition" markdown="1">
 
@@ -265,9 +261,9 @@ $$d(e_{j_1} \wedge \cdots \wedge e_{j_i}) = \sum_{k=1}^{i} (-1)^{k+1} \x_{j_k} e
 
 </div>
 
-Koszul complex $$K(\x_1, \ldots, \x_n)$$는 $$\mathbb{K} = A/(\x_1, \ldots, \x_n)$$의 projective resolution이 된다. $$K_0 = A$$이고, $$d_1 \colon K_1 = A^n \to K_0 = A$$는 $$(a_1, \ldots, a_n) \mapsto \sum a_i \x_i$$이므로 *augmentation map* $$\epsilon \colon A \to \mathbb{K}$$에 대해 $$\im d_1 = (\x_1, \ldots, \x_n) = \ker \epsilon$$이다. 따라서 $$0 \to K_n \to \cdots \to K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} \mathbb{K} \to 0$$이 exact함을 보이면 된다.
+Koszul complex $$K(\x_1, \ldots, \x_n)$$가 $$\mathbb{K} = A/(\x_1, \ldots, \x_n)$$의 projective resolution이 됨을 보인다. $$K_0 = A$$이고, $$d_1 \colon K_1 = A^n \to K_0 = A$$는 $$(a_1, \ldots, a_n) \mapsto \sum a_i \x_i$$이므로 *augmentation map* $$\epsilon \colon A \to \mathbb{K}$$에 대해 $$\im d_1 = (\x_1, \ldots, \x_n) = \ker \epsilon$$이다. 따라서 $$0 \to K_n \to \cdots \to K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} \mathbb{K} \to 0$$이 exact함을 보이면 된다.
 
-이 exactness는 $$n$$에 대한 귀납법으로 증명한다. $$n = 0$$인 경우 자명하다. 이제 $$n-1$$개의 변수에 대해 $$K(\x_1, \ldots, \x_{n-1})$$가 exact함을 가정하고, $$A' = \mathbb{K}[\x_1, \ldots, \x_{n-1}]$$ 위에서 $$K'\bullet = K(\x_1, \ldots, \x_{n-1})$$를 생각하자. 그러면
+이는 $$n$$에 대한 귀납법으로 증명한다. $$n = 0$$은 자명하다. $$n-1$$개의 변수에 대해 $$K(\x_1, \ldots, \x_{n-1})$$가 exact함을 가정하자. $$A' = \mathbb{K}[\x_1, \ldots, \x_{n-1}]$$ 위에서 $$K'\bullet = K(\x_1, \ldots, \x_{n-1})$$를 생각하면
 
 $$K(\x_1, \ldots, \x_n)_i \cong K'_i \oplus K'_{i-1} \cdot e_n$$
 
@@ -275,13 +271,11 @@ $$K(\x_1, \ldots, \x_n)_i \cong K'_i \oplus K'_{i-1} \cdot e_n$$
 
 $$d_i = \begin{pmatrix} d'_i & (-1)^i \x_n \\ 0 & d'_{i-1} \end{pmatrix}$$
 
-의 형태를 갖는다. $$(\alpha, \beta) \in \ker d_i$$라 하면 $$d'_{i-1}(\beta) = 0$$이므로 귀납 가정에 의해 $$\beta = d'_i(\gamma)$$가 존재한다. 또한 $$d'_i(\alpha) = (-1)^{i+1} \x_n \beta$$이므로 $$d'_i(\alpha + (-1)^{i+1} \x_n \gamma) = 0$$이고, 다시 귀납 가정에 의해 $$\alpha + (-1)^{i+1} \x_n \gamma \in \im d'_{i+1}$$이다. 따라서 $$\ker d_i \subseteq \im d_{i+1}$$이고, 반대 포함은 자명하다.
+의 형태를 갖는다. $$(\alpha, \beta) \in \ker d_i$$라 하면 $$d'_{i-1}(\beta) = 0$$이므로 귀납 가정에 의해 $$\beta = d'_i(\gamma)$$인 $$\gamma$$가 존재한다. 또한 $$d'_i(\alpha) = (-1)^{i+1} \x_n \beta$$이므로 $$d'_i(\alpha + (-1)^{i+1} \x_n \gamma) = 0$$이고, 다시 귀납 가정에 의해 $$\alpha + (-1)^{i+1} \x_n \gamma \in \im d'_{i+1}$$이다. 따라서 $$\ker d_i \subseteq \im d_{i+1}$$이고, 반대 포함은 자명하다.
 
-이제 이 resolution에 $$- \otimes_A \mathbb{K}$$를 적용하자. 각 $$K_i$$는 자유 $$A$$-module이므로 $$K_i \otimes_A \mathbb{K} \cong \bigwedge^i \mathbb{K}^n$$이며, $$d_i \otimes 1$$은 $$\x_j$$를 $$0$$으로 보내므로 영사상이다. 따라서
+이 resolution에 $$- \otimes_A \mathbb{K}$$를 적용하자. 각 $$K_i$$는 자유 $$A$$-module이므로 $$K_i \otimes_A \mathbb{K} \cong \bigwedge^i \mathbb{K}^n$$이며, $$d_i \otimes 1$$은 모든 $$\x_j$$를 $$0$$으로 보내므로 영사상이다. 따라서
 
 $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).$$
-
-따라서 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
