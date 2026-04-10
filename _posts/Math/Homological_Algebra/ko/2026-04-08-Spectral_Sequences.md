@@ -1,5 +1,5 @@
 ---
-title: "스펙트럴 열"
+title: "스펙트럼 열"
 excerpt: ""
 
 categories: [Math / Homological Algebra]
@@ -17,15 +17,11 @@ published: false
 
 ---
 
-## 동기
-
-([§유도함자, ⁋정의 4](/ko/math/homological_algebra/derived_functors#def4))에서 우리는 exact하지 않은 functor에 대해 derived functor를 정의하고, short exact sequence로부터 long exact sequence를 유도하는 방법을 살펴보았다. Long exact sequence는 cohomology group 사이의 관계를 밝혀주는 강력한 도구이지만, 정보의 양에 본질적인 한계가 있다. Long exact sequence 하나에서 얻을 수 있는 정보는 본질적으로 "한 차원"에서 다음 차원으로의 연결뿐이며, 여러 차원에 걸쳐 동시에 전개되는 구조를 파악하기에는 부족하다.
-
-예를 들어, double complex $$K^{p,q}$$에서 total complex $$\mathrm{Tot}(K)^n = \bigoplus_{p+q=n} K^{p,q}$$의 cohomology를 계산하고 싶은 상황을 생각하자. Double complex에는 두 개의 미분 $$d_h \colon K^{p,q} \to K^{p+1,q}$$과 $$d_v \colon K^{p,q} \to K^{p,q+1}$$이 존재하며, 이들은 서로 anti-commute한다. 이러한 상황에서 total complex의 cohomology는 행(row)과 열(column) 각각의 cohomology를 통해 근사할 수 있지만, long exact sequence 하나로는 이 근사를 정확하게 수행할 수 없다. 실제로 ([§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3))에서 이미 filtration을 사용하여 double complex의 cohomology를 계산한 바 있으며, 이는 spectral sequence의 원시적 형태에 해당한다.
-
-Spectral sequence는 본질적으로 **여러 단계에 걸쳐 차례로 cohomology를 취하는 과정**이다. 각 단계에서 이전 단계의 cohomology를 계산하고, 새로운 미분을 도입하여 다음 단계로 넘어간다. 이 과정이 안정화되면, 최종적으로 우리가 원하는 cohomology group에 대한 정보를 얻는다.
+우리는 앞선 글에서 $$\Ext$$와 $$\Tor$$의 balancing을 증명하며, filtration과 이를 이용한 귀납법을 유용하게 사용하였다. 이는 이번 글에서 다룰 spectral sequence의 원시적인 형태라 생각할 수 있다. 
 
 ## Filtered Complex
+
+우선 다음을 정의하자.
 
 <div class="definition" markdown="1">
 
