@@ -21,8 +21,6 @@ published: false
 
 ## Filtered Complex
 
-
-
 <div class="definition" markdown="1">
 
 <ins id="def1">**정의 1**</ins> Cochain complex $$A^\bullet$$ 위의 *decreasing filtration<sub>감소 여과</sub>* $$F$$는 다음 조건을 만족하는 subcomplex들의 열
@@ -45,18 +43,14 @@ $$\mathrm{Gr}^p A^\bullet = F^p A^\bullet / F^{p+1} A^\bullet$$
 
 <ins id="def2">**정의 2**</ins> *Spectral sequence<sub>스펙트럼 열</sub>*는 다음과 같은 데이터의 모임이다. 
 
-1. 각각의 $$r \geq 1$$과 각각의 $$(p, q)$$에 대해 정의된 abelian group $$E_r^{p,q}$$
-2. Bidegree $$(r, 1-r)$$의 differential $$d_r \colon E_r^{p,q} \to E_r^{p+r, q-r+1}$$
+1. Bigraded object $$E_r=(E_r^{p,q})_{p,q}$$,
+2. $$E_r$$ 위의 bidegree $$(r,1-r)$$ differential $$d_r:E_r^{p,q}\rightarrow E_r^{p+r, q-r+1}$$ (즉, $$d_r^2=0$$)
 
-이 때, 각 $$r$$에 대해 $$(E_r^{p,q}, d_r)$$을 *$$r$$번째 page*라고 부른다. 각 page는 다음의 식
+각 $$r$$에 대하여, bigraded complex $$(E_r^{p,q}, d_r)$$을 *$$r$$번째 page*라고 부른다. 이 때 이들 두 데이터는 다음의 식
 
-$$E_{r+1}^{p,q} = H^{p+q}(E_r^{p-r,q+r-1} \overset{d_r}{\to} E_r^{p,q} \overset{d_r}{\to} E_r^{p+r,q-r+1})$$
+$$E_{r+1}^{p,q}\cong \frac{\ker(d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r,q-r+1})}{\im(d_r^{p-r,q+r-1}: E_r^{p-r, q+r-1}\rightarrow E_r^{p,q})}$$
 
-으로 연결된다.
-
-즉, $$E_{r+1}$$은 $$E_r$$에서 $$d_r$$에 대한 cohomology를 취하여 얻어진다.
-
-Filtered complex $$(A^\bullet, F)$$로부터 유도된 spectral sequence가 cohomology $$H^\bullet(A^\bullet)$$에 *수렴한다*는 것은, 각 $$(p,q)$$에 대해 충분히 큰 $$r$$에 대해 $$E_r^{p,q}$$가 안정화되어 $$E_\infty^{p,q}$$에 도달하며, 이것이 $$H^{p+q}(A^\bullet)$$의 filtration에 의한 associated graded와 일치하는 것을 의미한다.
+을 통해 연결된다.
 
 </div>
 
