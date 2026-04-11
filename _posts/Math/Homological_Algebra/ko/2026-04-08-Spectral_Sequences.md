@@ -100,13 +100,9 @@ $$E_\infty^{p,q} \cong F^p H^{p+q} / F^{p+1} H^{p+q} = \mathrm{Gr}^p H^{p+q}$$
 
 이 성립하는 것이다. 기호로는 $$E_r^{p,q} \Rightarrow H^{p+q}$$로 쓴다.
 
-수렴에는 다음과 같은 강도의 구분이 있다. Spectral sequence가 $$(H^n, F)$$에 *strongly convergent*하다는 것은, 각 $$n$$에 대해 filtration $$F^p H^n$$이 Hausdorff 조건 $$\bigcap_p F^p H^n = 0$$을 만족하고 $$H^n = \bigcup_p F^p H^n$$이 성립하는 것이다. 이 조건 하에서 filtration은 $$E_\infty$$의 associated graded를 통해 $$H^n$$을 유일하게 결정한다. 반면, *weakly convergent*하다는 것은 $$E_\infty^{p,q} \cong \mathrm{Gr}^p H^{p+q}$$만이 성립하며, 위의 completeness 조건이 반드시 충족되지 않을 수 있는 경우를 말한다.
-
 </div>
 
-Strong convergence에서는 filtration이 $$H^n$$의 구조를 완전히 회복할 수 있지만, weak convergence에서는 associated graded만 알 수 있으므로 extension problem이 남는다. 
-
-한편, unbounded filtration의 경우에는 *conditional convergence*의 개념이 필요하다. Boardman는 spectral sequence가 filtered object에 conditionally convergent하다는 것을, filtration에 대한 completion과 spectral sequence의 $$E_\infty$$ page 사이의 적절한 대응으로 정의하였다. 이 경우 completeness 조건이 성립하지 않을 수 있으므로, 수렴값이 원래의 $$H^n$$이 아닌 그 completion에 해당할 수 있다. 이에 대한 자세한 논의는 Boardman의 원론을 참고한다.
+만일 각 $$n$$에 대해 $$\bigcap_p F^p H^n = 0$$이고 $$\bigcup_p F^p H^n = H^n$$이면, filtration이 cohomology 전체를 덮는다. Filtration이 $$0$$에서 $$H^n$$까지 "dense"하므로, 각 $$\mathrm{Gr}^p H^{p+q}$$의 정보를 모으면 $$H^n$$을 유일하게 재구성할 수 있다. 이러한 경우 spectral sequence가 $$(H^n, F)$$에 *strongly converge*한다고 한다. 반면, $$\bigcap_p F^p H^n \neq 0$$이거나 $$\bigcup_p F^p H^n \neq H^n$$인 경우에는 *weakly converge*한다고 하며, 이 때에는 $$E_\infty^{p,q}$$만으로는 $$H^n$$을 유일하게 결정할 수 없다.
 
 <div class="proposition" markdown="1">
 
@@ -243,4 +239,4 @@ $$H^n(\Tot(K)^\bullet) \cong \bigoplus_p E_\infty^{p, n-p} = \Ext^n_A(M, N)$$
 **[GM]** S. I. Gelfand, Y. I. Manin, *Methods of homological algebra*, Springer, 2003.
 **[Wei]** C. A. Weibel, *An introduction to homological algebra*, Cambridge University Press, 1994.
 **[God]** R. Godement, *Topologie algébrique et théorie des faisceaux*, Hermann, 1958.
-**[Boa]** C. B. Boardman, *Conditionally convergent spectral sequences*, University of Rochester, preprint, 1981.
+
