@@ -120,13 +120,32 @@ Filtered complex $$(A^\bullet, F)$$가 주어졌다 하자. 그럼 우리는 다
 
 $$E_0^{p,q} = \gr^p A^{p+q} = F^p A^{p+q} / F^{p+1} A^{p+q}$$
 
-을 통해 직접 $$E_0$$ page를 구성할 수 있다. $$A^\bullet$$의 미분 $$d$$는 filtration과 호환되므로
+을 통해 직접 $$E_0$$ page를 구성할 수 있다. 이제 이 위의 미분을 정확하게 정의하자. 우선 filtration이 differential을 보존하므로, 이로부터 
 
-$$d(F^p A^{p+q}) \subset F^p A^{p+q+1}$$
+$$F^p A^{p+q}\rightarrow F^p A^{p+q+1}$$
 
-이 성립하고, 따라서 $$d$$는 $$\gr^p A^{p+q}$$ 위에 bidegree $$(0,1)$$의 미분 $$d_0$$을 유도한다.
+이 정의된다. 이를 편의상 $$F^p d$$라 적자. 그럼 원하는 미분은 $$F^p d$$에 quotient
 
-이제 $$E_1$$ page를 구성해야 한다. [정의 1](#def1)로부터 $$E_1^{p,q} = H(E_0^{p,q}, d_0)$$이며, 각각을 $$F^p A^{p+q}$$의 언어로 나타내면
+$$F^pA^{p+q+1}\rightarrow F^pA^{p+q+1}/F^{p+1}A^{p+q+1}$$
+
+를 합성한 후, first isomorphism theorem을 사용하여 이를 
+
+$$F^p A^{p+q}/F^{p+1}A^{p+q}\rightarrow F^pA^{p+q+1}/F^{p+1}A^{p+q+1}$$
+
+로 factor through하여 얻어진다. 이 때, first isomorphism이 잘 적용되는 것은 분모가 $$F^{p+1}d$$이므로 자명하다. 
+
+이제 $$E_1$$ page를 구성하자. [정의 1](#def1)로부터 $$E_1^{p,q} = H(E_0^{p,q}, d_0)$$로 정의해야 하는 것이 자연스러우며, 문제는 이 위에 $$d_1:E_1^{p,q}\rightarrow E_1^{p+1, q}$$을 정의하는 것이다. 
+
+다시 
+
+정의에 의해 
+
+$$d_1: \frac{\ker d_0^{}}{\im d_0^{p,q}}\rightarrow \frac{\ker d_0}{\im d_0}$$
+
+이며 이 함수는 다시 
+
+
+다시 정의를 쓰면
 
 $$\ker(d_0^{p,q}) = \{a \in F^p A^{p+q} : da \in F^{p+1} A^{p+q+1}\} / F^{p+1} A^{p+q}$$
 
