@@ -188,7 +188,33 @@ $$\check{H}^p(\mathcal{U}, \mathcal{F}) \to H^p(X, \mathcal{F})$$
 
 </div>
 
-이를 증명하기 위해서는 주어진 sheaf $$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$과 이들 각각에 대한 Čech complex $$\check{C}^p(\mathcal{U}, \mathcal{I}^q)$$를 생각하여 double complex를 구성한 후 spectral sequence argument를 사용하면 된다. 중요한 것은 이 acyclic 조건이 생각보다는 널널한 조건이라는 것이다. 
+<details class="proof" markdown="1"><summary>증명</summary>
+
+Sheaf $$\mathcal{F}$$의 injective resolution $$0 \to \mathcal{F} \to \mathcal{I}^0 \to \mathcal{I}^1 \to \cdots$$를 고정하자. Open cover $$\mathcal{U} = \{U_i\}_{i \in I}$$에 대하여, 각 $$\mathcal{I}^q$$ 위의 Čech complex $$\check{C}^\bullet(\mathcal{U}, \mathcal{I}^q)$$를 구성한다. 이때 $$p$$를 Čech 차수, $$q$$를 injective resolution의 차수로 하여 double complex $$K^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{I}^q)$$를 얻는다. 여기서 수평 differential은 Čech differential $$\delta \colon \check{C}^p \to \check{C}^{p+1}$$이고, 수직 differential은 resolution의 differential $$d \colon \mathcal{I}^q \to \mathcal{I}^{q+1}$$에 의해 유도된다.
+
+이 double complex의 total complex $$\Tot(K)^\bullet$$에 대하여, 우리는 두 가지 방향의 filtration을 걸어 각각 spectral sequence를 얻는다 ([§스펙트럼 열, ⁋명제 7](/ko/math/homological_algebra/spectral_sequences#prop7), [§스펙트럼 열, ⁋명제 9](/ko/math/homological_algebra/spectral_sequences#prop9) 참고).
+
+*첫 번째 spectral sequence.* 수직 방향으로 먼저 cohomology를 취하는 filtration을 생각하자. $$E_1$$ page에서 $$E_1^{p,q} = H^q(K^{p,\bullet})$$이며, 각 $$p$$에서 $$K^{p,\bullet} = \check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$$는 $$\mathcal{I}^\bullet$$이 injective resolution이므로 $$\check{C}^p(\mathcal{U}, -)$$를 가하면 $$\check{C}^p(\mathcal{U}, \mathcal{F})$$로 수렴하는 resolution이 된다. 따라서 $$q \neq 0$$에서 $$E_1^{p,q} = 0$$이고 $$E_1^{p,0} = \check{C}^p(\mathcal{U}, \mathcal{F})$$이다. $$E_2$$ page에서는 $$q \neq 0$$인 모든 항목이 소멸하므로
+
+$$E_2^{p,0} = H^p(\check{C}^\bullet(\mathcal{U}, \mathcal{F})) = \check{H}^p(\mathcal{U}, \mathcal{F})$$
+
+이고, 이 spectral sequence는 $$E_2$$에서 degenerate한다. 따라서 $$H^n(\Tot(K)^\bullet) \cong \check{H}^n(\mathcal{U}, \mathcal{F})$$를 얻는다.
+
+*두 번째 spectral sequence.* 수평 방향으로 먼저 cohomology를 취하는 filtration을 생각하자. $$E_1$$ page에서 $$E_1^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{I}^q)$$이다. Injective sheaf는 flasque이고 flasque sheaf는 임의의 open set에서 acyclic이므로, acyclic 조건에 의하여 $$p > 0$$에서 $$E_1^{p,q} = 0$$이다. 따라서 $$E_2$$ page에서
+
+$$E_2^{0,q} = H^q(\mathcal{I}^\bullet) = H^q(X, \mathcal{F})$$
+
+이고 $$p > 0$$인 항목은 모두 소멸한다. 이 역시 $$E_2$$에서 degenerate하므로 $$H^n(\Tot(K)^\bullet) \cong H^n(X, \mathcal{F})$$를 얻는다.
+
+두 spectral sequence는 같은 total complex $$\Tot(K)^\bullet$$의 cohomology에 수렴하므로
+
+$$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$$
+
+이며, 이 동형사상은 구성에서 자명히 자연스럽다. $$\square$$
+
+</details>
+
+이 acyclic 조건은 생각보다 널널한 조건이다. 
 
 <div class="proposition" markdown="1">
 
