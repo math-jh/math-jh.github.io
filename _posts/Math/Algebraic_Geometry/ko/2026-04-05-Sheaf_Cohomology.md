@@ -182,7 +182,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 <div class="proposition" markdown="1">
 
-<ins id="thm9">**정리 9** (Leray)</ins> 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$와 open cover $$\mathcal{U} = \{U_i\}$$에 대하여, 모든 유한 교집합 $$U_{i_0 \cdots i_p}$$에서 $$\mathcal{F}$$가 acyclic이면 자연스러운 map
+<ins id="thm9">**정리 9 (Leray)**</ins> 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$와 open cover $$\mathcal{U} = \{U_i\}$$에 대하여, 모든 유한 교집합 $$U_{i_0 \cdots i_p}$$에서 $$\mathcal{F}$$가 acyclic이면 자연스러운 map
 
 $$\check{H}^p(\mathcal{U}, \mathcal{F}) \to H^p(X, \mathcal{F})$$
 
@@ -193,7 +193,7 @@ $$\check{H}^p(\mathcal{U}, \mathcal{F}) \to H^p(X, \mathcal{F})$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-증명의 아이디어는 sheaf cohomology와 Čech cohomology를 사용하여 double complex를 생각하고, 이것의 total complex에 수직방향과 수평방향의 filtration을 걸었을 때 같은 호몰로지로 수럼한다는 것을 보이면 된다. 이는 본질적으로 
+증명의 아이디어는 sheaf cohomology와 Čech cohomology를 사용하여 double complex를 생각하고, 이것의 total complex에 수직방향과 수평방향의 filtration을 걸었을 때 같은 호몰로지로 수럼한다는 것을 보이면 된다. 이는 본질적으로 [\[호몰로지 대수학\] §Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)와 동일한 증명이지만, 
 
 이를 위해 sheaf $$\mathcal{F}$$의 injective resolution 
 
@@ -208,6 +208,10 @@ $$\check{C}^\bullet(\mathcal{U}, \mathcal{I}^q)$$
 $$K^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{I}^q)$$
 
 를 얻는다. 즉, 이 double complex에서 horizontal differential은 Čech differential $$\delta : \check{C}^p \to \check{C}^{p+1}$$이고, vertical differential은 resolution의 differential $$d : \mathcal{I}^q \to \mathcal{I}^{q+1}$$로부터 오는 것이다.
+
+이제 다음의 두 filtration
+
+$$F^p$$
 
 
 
