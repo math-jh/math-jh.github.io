@@ -193,43 +193,25 @@ $$\check{H}^p(\mathcal{U}, \mathcal{F}) \to H^p(X, \mathcal{F})$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-증명의 아이디어는 sheaf cohomology와 Čech cohomology를 사용하여 double complex를 생각하고, 이것의 total complex에 수직방향과 수평방향의 filtration을 걸었을 때 같은 호몰로지로 수럼한다는 것을 보이면 된다. 이는 본질적으로 [\[호몰로지 대수학\] §Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)와 동일한 증명이지만, 
-
-이를 위해 sheaf $$\mathcal{F}$$의 injective resolution 
-
-$$0 \to \mathcal{F} \to \mathcal{I}^0 \to \mathcal{I}^1 \to \cdots$$
-
-을 고정하고, 주어진 조건을 만족하는 open cover $$\mathcal{U} = \{U_i\}_{i \in I}$$에 대하여 $$\mathcal{I}^q$$ 위의 Čech complex 
-
-$$\check{C}^\bullet(\mathcal{U}, \mathcal{I}^q)$$
-
-를 구성한다. 그럼 우리는 $$p$$가 Čech degree, $$q$$를 injective resolution의 degree를 갖는 double complex 
+Sheaf $$\mathcal{F}$$의 injective resolution $$0 \to \mathcal{F} \to \mathcal{I}^0 \to \mathcal{I}^1 \to \cdots$$을 고정하고, double complex
 
 $$K^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{I}^q)$$
 
-를 얻는다. 즉, 이 double complex에서 horizontal differential은 Čech differential $$\delta : \check{C}^p \to \check{C}^{p+1}$$이고, vertical differential은 resolution의 differential $$d : \mathcal{I}^q \to \mathcal{I}^{q+1}$$로부터 오는 것이다.
+을 구성한다. 여기서 horizontal differential은 Čech differential, vertical differential은 resolution의 differential이다. [§스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11)의 프레임워크에 따라, 이 double complex의 total complex $$\Tot(K)^\bullet$$에 두 방향의 filtration을 걸어 각각 spectral sequence를 얻을 수 있다.
 
-이제 다음의 두 filtration
+*첫 번째 spectral sequence* (수직 먼저). $$E_1$$ page에서 $$E_1^{p,q} = H^q(K^{p,\bullet})$$이며, $$K^{p,\bullet} = \check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$$이다. $$\check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$$는 본질적으로 각 유한 교집합 $$U_{i_0 \cdots i_p}$$에서의 $$\Gamma(-, \mathcal{I}^\bullet)$$의 cohomology를 모은 것이므로, $$H^q(K^{p,\bullet}) = H^q(U_{i_0 \cdots i_p}, \mathcal{F})$$이다. Acyclicity condition에 의하여 모든 유한 교집합에서 $$H^q(U_{i_0 \cdots i_p}, \mathcal{F}) = 0$$이므로 ($$q > 0$$), $$E_1^{p,q} = 0$$ for $$q > 0$$이고 $$E_1^{p,0} = \check{C}^p(\mathcal{U}, \mathcal{F})$$이다. 따라서
 
-$$F^p$$
+$$E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F})$$
 
+이고 $$E_2$$에서 degenerate하므로 $$H^n(\Tot(K)^\bullet) \cong \check{H}^n(\mathcal{U}, \mathcal{F})$$를 얻는다.
 
-
-이 double complex의 total complex $$\Tot(K)^\bullet$$에 대하여, 우리는 두 가지 방향의 filtration을 걸어 각각 spectral sequence를 얻는다 ([§스펙트럼 열, ⁋명제 7](/ko/math/homological_algebra/spectral_sequences#prop7), [§스펙트럼 열, ⁋명제 9](/ko/math/homological_algebra/spectral_sequences#prop9) 참고).
-
-*첫 번째 spectral sequence.* 수직 방향으로 먼저 cohomology를 취하는 filtration을 생각하자. $$E_1$$ page에서 $$E_1^{p,q} = H^q(K^{p,\bullet})$$이며, 각 $$p$$에서 $$K^{p,\bullet} = \check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$$는 $$\mathcal{I}^\bullet$$이 injective resolution이므로 $$\check{C}^p(\mathcal{U}, -)$$를 가하면 $$\check{C}^p(\mathcal{U}, \mathcal{F})$$로 수렴하는 resolution이 된다. 따라서 $$q \neq 0$$에서 $$E_1^{p,q} = 0$$이고 $$E_1^{p,0} = \check{C}^p(\mathcal{U}, \mathcal{F})$$이다. $$E_2$$ page에서는 $$q \neq 0$$인 모든 항목이 소멸하므로
-
-$$E_2^{p,0} = H^p(\check{C}^\bullet(\mathcal{U}, \mathcal{F})) = \check{H}^p(\mathcal{U}, \mathcal{F})$$
-
-이고, 이 spectral sequence는 $$E_2$$에서 degenerate한다. 따라서 $$H^n(\Tot(K)^\bullet) \cong \check{H}^n(\mathcal{U}, \mathcal{F})$$를 얻는다.
-
-*두 번째 spectral sequence.* 수평 방향으로 먼저 cohomology를 취하는 filtration을 생각하자. $$E_1$$ page에서 $$E_1^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{I}^q)$$이다. Injective sheaf는 flasque이고 flasque sheaf는 임의의 open set에서 acyclic이므로, acyclic 조건에 의하여 $$p > 0$$에서 $$E_1^{p,q} = 0$$이다. 따라서 $$E_2$$ page에서
+*두 번째 spectral sequence* (수평 먼저). $$E_1$$ page에서 $$E_1^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{I}^q)$$이다. Injective sheaf는 flasque이고, flasque sheaf는 임의의 open cover에 대하여 Čech-acyclic이므로 $$p > 0$$에서 $$E_1^{p,q} = 0$$이다. 이 degeneration은 acyclicity condition과 무관하다. 따라서
 
 $$E_2^{0,q} = H^q(\mathcal{I}^\bullet) = H^q(X, \mathcal{F})$$
 
-이고 $$p > 0$$인 항목은 모두 소멸한다. 이 역시 $$E_2$$에서 degenerate하므로 $$H^n(\Tot(K)^\bullet) \cong H^n(X, \mathcal{F})$$를 얻는다.
+이고 $$E_2$$에서 degenerate하므로 $$H^n(\Tot(K)^\bullet) \cong H^n(X, \mathcal{F})$$를 얻는다.
 
-두 spectral sequence는 같은 total complex $$\Tot(K)^\bullet$$의 cohomology에 수렴하므로
+두 spectral sequence는 예시 11에 의해 같은 $$H^\bullet(\Tot(K))$$에 수렴하므로
 
 $$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$$
 
@@ -251,7 +233,7 @@ $$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$$
 
 $$\Delta_X\hookrightarrow X\times X$$
 
-이 $$X\times X$$의 *closed* immersion이라면, 이 조건이 성립하는 것을 보일 수 있으며 이런 경우 $$X$$가 *separated* variety라 부른다. 이는 (그 정의에서 알 수 있듯) Hausdorff 조건의 Zariski topology 버전이라 할 수 있으며 그만큼 합당한 조건이며, 현재 우리의 정의와 같이 quasi-projective variety를 variety라 부른다면 이 조건은 자동으로 충족된다. 즉, 현재 우리의 언어에서 이 논증은 임의의 variety 위에 정의된 quasi-coherent sheaf에 대해서는 Čech cohomology와 sheaf cohomology가 일치한다는 말이 되고, 뿐만 아니라 [명제 9](#prop9)의 전제조건을 만족하는 open cover $$\mathcal{U}$$를 잡는다면 direct limit을 계산할 필요없이 해당 open cover에 대한 Čech cohomology를 계산하면 충분하다는 것을 보여준다. 
+이 $$X\times X$$의 *closed* immersion이라면, 이 조건이 성립하는 것을 보일 수 있으며 이런 경우 $$X$$가 *separated* variety라 부른다. 이는 (그 정의에서 알 수 있듯) Hausdorff 조건의 Zariski topology 버전이라 할 수 있으며 그만큼 합당한 조건이며, 현재 우리의 정의와 같이 quasi-projective variety를 variety라 부른다면 이 조건은 자동으로 충족된다. 즉, 현재 우리의 언어에서 이 논증은 임의의 variety 위에 정의된 quasi-coherent sheaf에 대해서는 Čech cohomology와 sheaf cohomology가 일치한다는 말이 되고, 뿐만 아니라 [정리 9](#thm9)의 전제조건을 만족하는 open cover $$\mathcal{U}$$를 잡는다면 direct limit을 계산할 필요없이 해당 open cover에 대한 Čech cohomology를 계산하면 충분하다는 것을 보여준다. 
 
 지금까지의 이론을 구체적인 계산 예시로 확인해보자. 
 

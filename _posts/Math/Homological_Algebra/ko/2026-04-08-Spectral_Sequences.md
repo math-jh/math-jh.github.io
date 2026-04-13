@@ -198,35 +198,43 @@ $$E_\infty^{p,q}\cong F^p H^{p+q}(A^\bullet)/F^{p+1}H^{p+q}(A^\bullet)$$
 
 </div>
 
-## 예시: Double complex의 total complex
+## 이중열의 스펙트럼 열
+
+우리는 지금까지 $$\Ext$$와 $$\Tor$$의 balancing을 증명했던 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)을 우리 이론의 motivation으로 삼았다. 우리는 이 글의 마지막을 double sequence로부터 정의되는 spectral sequence를 살펴보며 마무리한다. 
 
 <div class="example" markdown="1">
-<ins id="ex11">**예시 11**</ins> 임의의 double complex $$K^{p,q}$$의 total complex $$\Tot(K)^\bullet$$을 생각하자. 이 total complex에 두 가지 방식으로 filtration을 걸 수 있으며, 각각 서로 다른 spectral sequence를 유도한다.
+    
+<ins id="ex11">**예시 11**</ins> 임의의 double complex $$K^{p,q}$$의 total complex $$\Tot(K)^\bullet$$을 생각하자. 이 total complex에 두 가지 방식으로 filtration을 걸 수 있다. 
 
 먼저 *vertical filtration*을
 
-$$F^p_{\text{vert}} \Tot(K)^n = \bigoplus_{j \geq p} K^{n-j, j}$$
+$$F^p_v \Tot(K)^n = \bigoplus_{j \geq p} K^{n-j, j}$$
 
-로 정의하자. 이 filtration으로부터 유도되는 spectral sequence의 $$E_1$$ page는
+로 정의하자. 이 filtration에 대한 associated graded object는 $$\mathrm{gr}^p_v \Tot(K)^{p+q} = K^{p,q}$$이므로, $$E_0$$ page는
 
-$$E_1^{p,q} = H^q_{\text{vert}}(K^{p,\bullet})$$
+$$E_0^{p,q} = K^{p,q}$$
 
-이며, $$d_1$$은 horizontal differential $$d_h$$에 의해 유도된다. 따라서 $$E_2$$ page에서는 먼저 vertical 방향 cohomology를 계산한 뒤 horizontal 방향 cohomology를 계산하게 된다.
+이며, $$d_0$$은 degree $$(0,1)$$의 derivation이며 vertical differential $$d_v$$에 의해 주어진다. 따라서 $$E_1$$ page는
 
-반면 *horizontal filtration*을
+$$E_1^{p,q} = H^q_v(K^{p,\bullet})$$
 
-$$F^p_{\text{horiz}} \Tot(K)^n = \bigoplus_{i \geq p} K^{i, n-i}$$
+이며, $$E_1$$ page의 $$d_1$$은 degree $$(1,0)$$의 derivation이며 horizontal differential $$d_h$$에 의해 유도된다. 한편, 이번에는 *horizontal filtration*을
 
-로 정의하면, 이로부터 유도되는 spectral sequence의 $$E_1$$ page는
+$$F^p_h \Tot(K)^n = \bigoplus_{i \geq p} K^{i, n-i}$$
 
-$$E_1^{p,q} = H^p_{\text{horiz}}(K^{\bullet, q})$$
+로 정의하면, 마찬가지로 $$E_0$$ page는
 
-이며, $$d_1$$은 vertical differential $$d_v$$에 의해 유도된다. 즉 이쪽에서는 먼저 horizontal 방향 cohomology를 계산한 뒤 vertical 방향 cohomology를 계산한다.
+$$E_0^{p,q} = K^{p,q}$$
 
-두 filtration 모두 bounded filtered complex를 정의하므로, [명제 10](#prop10)에 의해 각각의 spectral sequence는 $$H^*(\Tot(K)^\bullet)$$에 strongly converge한다. 이것이 spectral sequence의 가장 근본적인 응용 중 하나이다: total complex의 cohomology를 두 가지 다른 순서로 계산할 수 있다는 사실이다.
+이며, $$d_0$$은 horizontal differential $$d_h$$에 의해 주어진다. 따라서 $$E_1$$ page는
+
+$$E_1^{p,q} = H^p_h(K^{\bullet, q})$$
+
+이며, $$d_1$$은 vertical differential $$d_v$$에 의해 유도된다. 
+
 </div>
 
-특히 $$K^{p,q}$$가 first quadrant double complex인 경우, $$p, q \geq 0$$이므로 [명제 6](#prop6)에 의해 두 spectral sequence 모두 regular하다. 또한 충분히 큰 $$r$$에 대해서는 $$d_r^{p,q}$$의 source나 target이 first quadrant를 벗어나 $$0$$이 되므로, $$d_r = 0$$이고 따라서 $$E_r = E_\infty$$이다. 즉 first quadrant의 경우에는 spectral sequence가 유한한 page에서 반드시 안정화된다.
+특별히 $$K^{p,q}$$가 first quadrant double complex라 하자. 그럼 두 filtration이 모두 bounded filtered complex를 정의하므로, [명제 10](#prop10)에 의해 각각의 spectral sequence는 $$H^\bullet(\Tot(K))$$에 수렴한다. 이로부터 우리는 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명을 더 fancy한 언어로 다시 복원해낼 수 있다. 
 
 ---
 
