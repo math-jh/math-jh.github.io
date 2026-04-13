@@ -133,62 +133,65 @@ $$F^p A^{p+q}/F^{p+1}A^{p+q}\rightarrow F^pA^{p+q+1}/F^{p+1}A^{p+q+1}$$
 
 로 factor through하여 얻어진다. 이 때, first isomorphism theorem이 잘 적용된다: $$a \in F^{p+1}A^{p+q}$$이면 $$d(a) \in F^{p+1}A^{p+q+1}$$이므로 공역 몫 $$F^p A^{p+q+1}/F^{p+1}A^{p+q+1}$$에서 $$0$$으로 간다.
 
-이 과정은 일반적으로 $$E_{r-1}$$ 페이지에서 $$E_r$$페이지를 구성하는 데에 사용되므로, 일반화한 논증을 살펴보자. $$r \geq 1$$에 대해
+더 일반적으로, $$E_r$$페이지에서의 미분 $$d_r$$ 또한 비슷한 방식으로 정의된다. 본질적으로 $$E_r^{p,q}$$는 $$F^pC^{p+q}$$에 여러 단계의 quotient를 취하여 만들어지는 것이므로, $$E_r^{p,q}$$의 원소는 어떠한 원소 $$x\in F^pC^{p+q}$$의 적당한 equivalence class $$[x]$$로 생각할 수 있다. 이제 $$d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r, q-r+1}$$은 다음의 식
 
-$$Z_r^{p,q} = \frac{\{a \in F^p A^{p+q} : d(a) \in F^{p+r} A^{p+q+1}\}}{F^{p+1} A^{p+q}}, \qquad B_r^{p,q} = \frac{d(F^{p-r+1} A^{p+q-1}) + F^{p+1} A^{p+q}}{F^{p+1} A^{p+q}}$$
+$$d_r^{p,q}([x])=[dx]\in E_r^{p+r, q-r+1}$$
 
-를 정의하자. 둘 다 $$E_0^{p,q}$$의 부분군이고 $$B_r \subset Z_r$$이므로 $$E_r^{p,q} = Z_r^{p,q}/B_r^{p,q}$$를 얻는다. $$r = 0$$일 때 $$Z_0^{p,q} = E_0^{p,q}$$, $$B_0^{p,q} = 0$$이므로 정의는 $$E_0$$과 일치한다. 이것이 실제로 $$H(E_{r-1}, d_{r-1})$$임은 직접 계산으로 알 수 있다: $$[a] \in Z_r^{p,q}$$에 대해 $$d(a) \in F^{p+r}A^{p+q+1}$$이므로 $$d_{r-1}[a] = 0$$, 즉 $$Z_r \subset \ker d_{r-1}$$이다. 반대로 $$[a] \in \ker d_{r-1}$$이면 $$d_{r-1}[a] = 0$$이고 $$E_{r-1}^{p,q} = Z_{r-1}/B_{r-1}$$이므로 $$d(a) \in F^{p+r}A^{p+q+1}$$, 즉 $$[a] \in Z_r$$이다. $$\im$$ 쪽도 마찬가지이므로 $$E_r = Z_r/B_r = \ker d_{r-1}/\im d_{r-1} = H(E_{r-1}, d_{r-1})$$이다.
-
-이제 $$d_r$$을 구성하자. $$d$$를
-
-$$\{a \in F^p A^{p+q} : d(a) \in F^{p+r}A^{p+q+1}\} \rightarrow \{b \in F^{p+r} A^{p+q+1} : d(b) \in F^{p+2r} A^{p+q+2}\}$$
-
-로 제한할 수 있다. 이를 편의상 $$Z_r d$$라 적자. $$Z_r^{p,q}$$는 전자를 $$F^{p+1}A^{p+q}$$로 나눈 몫이고 $$E_r^{p+r,q-r+1}$$는 후자를 $$F^{p+r+1}A^{p+q+1}$$로 나눈 몫이므로, $$Z_r d$$에 quotient
-
-$$\{b \in F^{p+r} A^{p+q+1} : d(b) \in F^{p+2r} A^{p+q+2}\} \rightarrow E_r^{p+r,q-r+1}$$
-
-를 합성한 후, first isomorphism theorem을 사용하여
-
-$$d_r: E_r^{p,q} \rightarrow E_r^{p+r,q-r+1}$$
-
-로 factor through하여 얻어진다.
+로 주어진다. 물론 이 대응이 잘 정의되며 differential을 정의하는 것은 다소 복잡한 계산을 통해 보여야 하지만 ([링크](https://stacks.math.columbia.edu/tag/012K)) 이것이 본질적인 것은 아니다. 중요한 것은 $$d_r$$들이 모두 본질적으로는 $$d$$와 같은 것이며, 그 index $$r$$은 filtration을 건너뛰는 정도를 측정해주는 데에만 쓰인다는 것이다. 즉 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Filtered complex $$(A^\bullet, F)$$로부터 위에서 구성한 $$E_r^{p,q}$$와 $$d_r$$은 [정의 1](#def1)의 spectral sequence 조건을 만족한다. 즉 $$d_r \circ d_r = 0$$이며 $$E_{r+1}^{p,q} \cong H(E_r, d_r)$$이다.
+<ins id="prop7">**명제 7**</ins> Filtered complex $$(A^\bullet, F)$$로부터 위에서 구성한 $$E_r^{p,q}$$와 $$d_r$$은 [정의 1](#def1)의 spectral sequence 조건을 만족한다. 즉 
+
+$$d_r \circ d_r = 0$$
+
+이 성립하며, $$E_{r+1}^{p,q} \cong H(E_r, d_r)$$이다.
 
 </div>
 
+뿐만 아니라, 이렇게 정의된 spectral sequence는 일종의 functoriality 또한 갖는다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop8">**명제 8**</ins> $$f : (A^\bullet, F) \to (B^\bullet, G)$$가 filtered complex 사이의 chain map이라 하자. 즉, 각 $$p$$에 대해 
+
+$$f(F^p A^\bullet) \subset G^p B^\bullet$$
+
+이 성립한다. 그럼 $$f$$는 각 $$r$$에 대해 well-defined된 사상 $$f_r : E_r(A) \to E_r(B)$$를 유도한다.
+
+</div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-본문에서 정의한 $$Z_r^{p,q}$$, $$B_r^{p,q}$$에 의해 $$E_r^{p,q} = Z_r^{p,q}/B_r^{p,q}$$이고, $$E_r = \ker d_{r-1}/\im d_{r-1} = H(E_{r-1}, d_{r-1})$$임을 이미 확인하였으므로, $$d_r \circ d_r = 0$$은 $$d_r$$이 원래의 $$d$$를 제한하여 얻어지는 사상이므로 $$d \circ d = 0$$에서 바로 따른다. 또한 $$E_{r+1} \cong H(E_r, d_r)$$ 역시 위에서 보인 바와 같이 $$E_r = Z_r/B_r = \ker d_{r-1}/\im d_{r-1}$$의 관계를 반복 적용하면 $$E_{r+1} = Z_{r+1}/B_{r+1} = \ker d_r/\im d_r$$를 얻는다.
+$$f$$가 chain map이므로 cocycle을 cocycle으로, boundary를 boundary로 보낸다. 또한 $$f(F^p) \subset G^p$$이므로 $$f(Z_r^{p,q}(A)) \subset Z_r^{p,q}(B)$$이고 $$f(B_r^{p,q}(A)) \subset B_r^{p,q}(B)$$이다. 따라서 $$f$$는 각 $$r$$에 대해 $$E_r$$ 상에서 well-defined map을 유도한다.
 
 </details>
 
+그럼 우리의 핵심적인 결과는 이러한 spectral sequence가 실제로 원래의 complex의 cohomology에 도달한다는 것이다. 우선 다음을 정의하자.
+
+<div class="definition" markdown="1">
+
+<ins id="def9">**정의 9**</ins> Filtered complex $$(A^\bullet, F)$$이 *bounded*라는 것은 각각의 $$n$$마다 $$F^pA^n=0$$을 만족하는 충분히 큰 $$p$$와, $$F^pA^n=A^n$$을 만족하는 충분히 작은 $$p$$가 존재하는 것이다. 
+
+</div>
+
+즉 [정의 2](#def2)를 degree $$n$$으로 고정해두고 여기서의 filtration 
+
+$$\cdots\supset F^{p-1}A^n\supset \cdots F^p A^n \supset \cdots F^{p+1}A^n\supset\cdots$$
+
+을 시작했을 때, 이 filtration이 bounded되는 것을 의미한다. 이제 다음이 성립한다. 
+
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> $$f \colon (A^\bullet, F) \to (B^\bullet, G)$$가 filtered complex 사이의 chain map, 즉 각 $$p$$에 대해 $$f(F^p A^\bullet) \subset G^p B^\bullet$$을 만족하는 chain map이면, $$f$$는 각 $$r$$에 대해 well-defined된 사상 $$f_r \colon E_r(A) \to E_r(B)$$를 유도한다.
+<ins id="prop9">**명제 9**</ins> Bounded filtered complex $$(A^\bullet, F)$$가 주어졌다 하고, 이것이 정의하는 spectral sequence $$(E_r^{p,q})$$가 주어졌다 하자. 그럼 $$(E_r^{p,q})$$는 [정의 3](#def3)의 filtered graded object $$(H^\bullet, F)$$에 수렴한다. 즉 $$E_r^{p,q}\Rightarrow H^{p+q}(A^\bullet)$$이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$f$$가 chain map이므로 cocycle을 cocycle으로, boundary를 boundary로 보낸다. 또한 $$f(F^p) \subset G^p$$이므로 $$f(Z_r^{p,q}(A)) \subset Z_r^{p,q}(B)$$이고 $$f(B_r^{p,q}(A)) \subset B_r^{p,q}(B)$$이다. 따라서 $$f$$는 각 $$r$$에 대해 $$E_r$$ 상에서 well-defined된 사상을 유도한다.
+우선 주어진 boundedness로부터, 각각의 $$(p,q)$$마다 $$F^mA^{p+q}=F$$이고 $$F^nA^{p+q}=0$$이도록 하는 
 
-</details>
-
-이제 위에서 구성한 spectral sequence가 실제로 cohomology에 도달하는지를 확인하자.
-
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> *Bounded* filtered complex $$(A^\bullet, F)$$, 즉 각 $$n$$에 대해 $$F^p A^n = 0$$인 충분히 큰 $$p$$와 $$F^p A^n = A^n$$인 충분히 작은 $$p$$가 존재하는 filtered complex로부터 [명제 7](#prop7)에 의해 유도된 spectral sequence $$\{E_r^{p,q}\}$$는 cohomology $$H^\bullet(A^\bullet)$$ 위의 filtration $$F^p H^n$$ ([정의 3](#def3))에 수렴한다. 즉 [정의 5](#def5)의 의미에서 $$E_r^{p,q} \Rightarrow H^{p+q}(A^\bullet)$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-우선 spectral sequence가 regular함을 확인한다. Filtration이 *bounded*라는 조건, 즉 각 $$n$$에 대해 $$F^p A^n = 0$$인 충분히 큰 $$p$$와 $$F^p A^n = A^n$$인 충분히 작은 $$p$$가 존재한다는 조건 하에서는, 각 $$(p,q)$$에 대해 충분히 큰 $$r$$에 대해 $$d_r^{p,q}$$의 출발점과 도착점이 정의 영역 밖에 있게 되어 $$d_r^{p,q} = 0$$이 되므로 regularity가 성립한다.
+spectral sequence가 regular함을 확인한다. Filtration이 *bounded*라는 조건, 즉 각 $$n$$에 대해 $$F^p A^n = 0$$인 충분히 큰 $$p$$와 $$F^p A^n = A^n$$인 충분히 작은 $$p$$가 존재한다는 조건 하에서는, 각 $$(p,q)$$에 대해 충분히 큰 $$r$$에 대해 $$d_r^{p,q}$$의 출발점과 도착점이 정의 영역 밖에 있게 되어 $$d_r^{p,q} = 0$$이 되므로 regularity가 성립한다.
 
 $$Z_r^{p,q}$$, $$B_r^{p,q}$$는 [명제 7](#prop7)의 증명에서 정의한 것과 같다.
 
