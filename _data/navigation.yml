@@ -250,8 +250,6 @@ category_theory-ko:
         url: ko/math/category_theory/adjoints
       # - title: "요네다 보조정리"
         # url: ko/math/category_theory/Yoneda_lemma
-      # - title: "극한"
-        # url: ko/math/category_theory/limits
       # - title: "모나드"
         # url: ko/math/category_theory/monads
       # - title: "오퍼라드"
@@ -376,7 +374,7 @@ homological_algebra-ko:
         url: ko/math/homological_algebra/derived_functors
       - title: "Ext와 Tor"
         url: ko/math/homological_algebra/ext_and_tor
-      - title: "스펙트럴 열"
+      - title: "스펙트럼 열"
         url: ko/math/homological_algebra/spectral_sequences
       - title: "유도카테고리"
         url: ko/math/homological_algebra/derived_categories
