@@ -178,7 +178,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$에 대하여, 다음을 정의한다.
+<ins id="def8">**정의 8**</ins> Variety $$X$$ 위의 sheaf $$\mathcal{F}$$에 대하여, 다음을 정의한다.
 
 1. Sheaf $$\mathcal{F}$$가 *acyclic*이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다.
 2. $$\Sh(X)$$의 injective object $$\mathcal{F}$$를 *injective sheaf*라 부른다. 
@@ -204,21 +204,17 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 $$i^U: U \hookrightarrow X,\qquad i^V: V \hookrightarrow X$$
 
-그리고 이들의 extension by zero로 얻어지는 sheaf들 $$i^U_!\mathbb{Z}_U, i^V_!\mathbb{Z}_V$$를 도입하자. 여기서 $$\mathbb{Z}_U, \mathbb{Z}_V$$는 각각 constatn sheaf들이며, 가정에 의해 $$V \subset U$$이므로 natural한 monomorphism $$i^V_!\mathbb{Z}_V \to i^U_!\mathbb{Z}_U$$가 존재한다.
+그리고 이들의 extension by zero로 얻어지는 sheaf들 $$i^U_!\mathbb{Z}_U, i^V_!\mathbb{Z}_V$$를 도입하자. 여기서 $$\mathbb{Z}_U, \mathbb{Z}_V$$는 각각 constant sheaf들이며, 가정에 의해 $$V \subset U$$이므로 natural한 monomorphism $$i^V_!\mathbb{Z}_V \to i^U_!\mathbb{Z}_U$$가 존재한다.
 
 우선 $$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$$가 성립함을 확인하자. Extension by zero $$i^U_!$$는 restriction $$\mathcal{G} \mapsto \mathcal{G}\vert_U$$의 left adjoint이므로 ([\[위상수학\] §층, ⁋예시 14](/ko/math/topology/sheaves#ex14)),
 
 $$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U)$$
 
-이 성립한다. 이제 $$\mathbb{Z}_U$$는 $$U$$ 위의 constant sheaf이므로 $$\mathbb{Z}_U(U) = \mathbb{Z}$$이고, 따라서 $$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U)$$는 global section $$\Hom(1, \mathcal{F}(U))$$와 같다. Yoneda lemma에 의해 $$\Hom(1, \mathcal{F}(U)) = \mathcal{F}(U)$$이므로,
+이 성립한다. 이제 $$\mathbb{Z}_U$$는 $$U$$ 위의 constant sheaf이므로 임의의 열린집합 $$W \subset U$$에 대해 $$\mathbb{Z}_U(W) = \mathbb{Z}$$이며, 모든 section은 상수 함수의 restriction으로 주어진다. 따라서 sheaf morphism $$\varphi: \mathbb{Z}_U \to \mathcal{F}\vert_U$$는 global section의 image $$\varphi_U(1) \in \mathcal{F}(U)$$에 의해 완전히 결정된다. 역으로, 임의의 $$s \in \mathcal{F}(U)$$에 대해 각 $$W \subset U$$에서 $$\mathbb{Z}_U(W) \to \mathcal{F}(W),\; n \mapsto n \cdot s\vert_W$$로 정의하면 well-defined된 sheaf morphism이 된다. 따라서
 
-$$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$$
+$$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U) \cong \Hom_{\Ab}(\mathbb{Z}, \mathcal{F}(U)) \cong \mathcal{F}(U)$$
 
-을 얻는다. 마찬가지로 $$\Hom_{\Sh(X)}(i^V_!\mathbb{Z}_V, \mathcal{F}) \cong \mathcal{F}(V)$$이다. 따라서 monomorphism $$i^V_!\mathbb{Z}_V \to i^U_!\mathbb{Z}_U$$가 유도하는 map
-
-$$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \to \Hom_{\Sh(X)}(i^V_!\mathbb{Z}_V, \mathcal{F})$$
-
-은 정확히 restriction $$\mathcal{F}(U) \to \mathcal{F}(V)$$에 해당한다. $$\mathcal{F}$$가 injective이고 $$i^V_!\mathbb{Z}_V \to i^U_!\mathbb{Z}_U$$가 monomorphism이므로, 이 map은 surjective이다. 따라서 $$\mathcal{F}(U) \to \mathcal{F}(V)$$가 surjective이고, $$\mathcal{F}$$는 flasque이다.
+이 성립한다. 마찬가지로 $$\Hom_{\Sh(X)}(i^V_!\mathbb{Z}_V, \mathcal{F}) \cong \mathcal{F}(V)$$이며, 이제 naturality로부터 이들 사이의 함수가 정확히 restriction $$\mathcal{F}(U)\rightarrow \mathcal{F}(V)$$와 일치함을 안다. 이제 $$\mathcal{F}$$가 injective라는 가정으로부터 이것이 surjective이므로 증명이 완료된다.
 
 </details>
 
