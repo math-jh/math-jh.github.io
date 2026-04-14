@@ -58,7 +58,7 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0$$
 
 이지만, $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$$이므로 오른쪽 부분의 surjectivity가 성립할 수 없다. 
 
-이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)). 구체적으로, $$\QCoh(X)$$에는 충분한 injective object가 존재하는 것을 보일 수 있으므로 임의의 quasi-coherent sheaf $$\mathcal{F}$$는 항상 injective resolution $$\mathcal{I}^\bullet$$을 가지고, 이로부터 다음의 
+이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)). 구체적으로, $$\lMod{A}$$는 enough injective를 가지므로, 이들을 이어붙여 $$\QCoh(X)$$도 충분한 injective object가 존재하는 것을 보일 수 있으므로 임의의 quasi-coherent sheaf $$\mathcal{F}$$는 항상 injective resolution $$\mathcal{I}^\bullet$$을 가지고, 이로부터 다음의 
 
 $$0 \to \Gamma(X, \mathcal{I}^0) \to \Gamma(X, \mathcal{I}^1) \to \Gamma(X, \mathcal{I}^2) \to \cdots$$
 
@@ -74,6 +74,8 @@ $$H^i(X, \mathcal{F}) = \frac{\ker(\Gamma(X, \mathcal{I}^i) \to \Gamma(X, \mathc
 
 </div>
 
+더 일반적으로, $$X$$ 위의 임의의 sheaf에 대해서도 stalk별로 injective object를 잡은 후 sheafification을 취해주면 $$\Sh(X)$$가 enough injective를 갖는다는 것을 보일 수 있으나, 우리의 주된 관심은 항상 quasi-coherent sheaf 뿐이므로 category $$\QCoh(X)$$로 우리의 관심을 제한한다.
+
 이것이 $$\mathcal{I}^\bullet$$의 선택에 무관한 것 등등은 모두 homological algebra의 표준적인 논증으로부터 따라온다.
 
 우리는 앞서 global section space $$\Gamma(X, \mathcal{L})$$을 소개하며 이 공간의 또 다른 대중적인 표기 중 하나가 $$H^0(X, \mathcal{L})$$이라고 하였는데, 이 표기법이 바로 위의 정의로부터 정당화됨을 안다. 
@@ -86,7 +88,7 @@ $$H^i(X, \mathcal{F}) = \frac{\ker(\Gamma(X, \mathcal{I}^i) \to \Gamma(X, \mathc
 
 $$0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$$
 
-에 대하여, 긴 완전열
+에 대하여, long exact sequence
 
 $$0 \to H^0(X, \mathcal{F}') \to H^0(X, \mathcal{F}) \to H^0(X, \mathcal{F}'') \xrightarrow{\delta} H^1(X, \mathcal{F}') \to \cdots$$
 
@@ -113,6 +115,8 @@ $$(d\alpha)_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k \alpha_{i_0 \cdots \h
 으로 정의된다. 여기서 $$\hat{i_k}$$는 index $$i_k$$를 생략한다는 의미이다.
 
 </div>
+
+Sheaf cohomology에서와 마찬가지로, 이 정의는 임의의 sheaf에 대해서도 말이 되지만, 우리는 주로 $$\QCoh(X)$$만을 신경쓴다.
 
 이 정의가 잘 정의되기 위해서는, 즉, $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$이 실제로 complex가 되기 위해서는 coboundary map이 실제로 coboundary map이 되어야 한다. 즉 $$d^2=0$$이어야 한다. 이는 위의 식을 전개해보면 부호 차이로부터 직접 확인할 수 있다. 결론적으로 $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$는 cochain complex이며, 따라서 다음을 정의할 수 있다. 
 
@@ -170,28 +174,54 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 위의 논증을 더 간단히 설명하자면, open cover를 점점 더 세밀하게 잡으며 추가되는 cohomology data를 모두 합쳐 이를 $$\check{H}(X, \mathcal{F})$$로 정의하겠다는 의미이다.
 
-일반적으로 [정의 7](#def7)의 $$\check{H}^p(X, \mathcal{F})$$와 [정의 1](#def1)의 $$H^p(X, \mathcal{F})$$가 isomorphic하다는 것은 보장되지 않지만, 다행히 대수기하학에서 등장하는 대부분의 sheaf에 대해서는 둘이 일치한다. 이 조건을 쓰기 위해 우선 다음을 정의하자. 
+일반적으로 [정의 7](#def7)의 $$\check{H}^p(X, \mathcal{F})$$와 [정의 1](#def1)의 $$H^p(X, \mathcal{F})$$가 isomorphic하다는 것은 보장되지 않지만, 다행히 대수기하학에서 등장하는 대부분의 sheaf에 대해서는 둘이 일치한다. 이를 보이기 위해서는 다소 기술적인 것들이 필요하다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$가 *acyclic*이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다.
+<ins id="def8">**정의 8**</ins> 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$에 대하여, 다음을 정의한다.
+
+1. Sheaf $$\mathcal{F}$$가 *acyclic*이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다.
+2. $$\Sh(X)$$의 injective object $$\mathcal{F}$$를 *injective sheaf*라 부른다. 
+3. 임의의 열린집합 $$V\subset U$$에 대하여, restriction map $$\mathcal{F}(U)
+rightarrow \mathcal{F}(V)$$가 surjective라면 $$\mathcal{F}$$를 *flasque sheaf*라 부른다. 
 
 </div>
 
-만일 임의의 열린집합 $$V \subseteq U$$에 대해, restriction map $$\mathcal{F}(U) \to \mathcal{F}(V)$$가 surjective라면 우리는 $$\mathcal{F}$$를 *flasque* sheaf라 부르며, 이는 acyclic sheaf의 대표적인 예시이다. 앞서 말했듯, 대수기하에서 좋은 경우에는 Čech cohomology와 sheaf cohomology가 일치하는데, 이는 다음 정리를 의미한다. 
+우리가 cohomology 단계에서 원하는 조건은 물론 첫 번째 조건이다. 우리는 위의 개념들 사이의 관계를 우선 살펴본다.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem9">**보조정리 9**</ins>
-
-Injective sheaf $$\mathcal{F}$$는 flasque sheaf이다.
+<ins id="lem9">**보조정리 9**</ins> Injective sheaf $$\mathcal{F}$$는 flasque이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 열린집합 $$U \subset X$$와 포함사상 $$j: U \hookrightarrow X$$에 대해, extension sheaf $$j_!(\mathcal{F}|_U)$$를 생각하자. 이는 $$V \subset U$$에서 $$j_!(\mathcal{F}|_U)(V) = \mathcal{F}(V)$$이고, $$V \not\subset U$$에서 $$j_!(\mathcal{F}|_U)(V) = 0$$인 sheaf이다. 포함사상 $$j_!(\mathcal{F}|_U) \to j_*(\mathcal{F}|_U) = \mathcal{F}$$는 sheaf monomorphism이므로, $$\mathcal{F}$$가 injective이면 이는 split된다. 즉, 적당한 sheaf morphism $$\sigma: \mathcal{F} \to j_!(\mathcal{F}|_U)$$가 존재하여 $$j_!(\mathcal{F}|_U) \to \mathcal{F} \to j_!(\mathcal{F}|_U)$$가 항등사상이다. 따라서 $$\Gamma(X, \mathcal{F}) \to \Gamma(X, j_!(\mathcal{F}|_U)) = \Gamma(U, \mathcal{F})$$로의 map은 split되어 surjective이며, 이는 $$\mathcal{F}$$가 flasque임을 보여준다. $$\square$$
+우선, 우리는 임의의 열린집합 $$i:U\hookrightarrow X$$와 $$U$$ 위에 정의된 sheaf $$\mathcal{G}$$에 대하여, extension sheaf
+
+$$i_!\mathcal{G}(V)=\begin{cases}\mathcal{F}(V)&\text{if $V\subset U$}\\ 0&\text{otherwise}\end{cases}$$
+
+그리고 direct image sheaf
+
+$$i_\ast\mathcal{G}(V)=\mathcal{G}(U\vap V)$$
+
+을 생각한다. 그럼 canonical map $$i_!\mathcal{G}\rightarrow i_\ast\mathcal{G}$$가 존재하는 것이 자명하며, 특히 $$\mathcal{G}=\mathcal{F}\vert_U$$에 대하여 다음의 sheaf monomorphism
+
+$$i_!(\mathcal{F}\vert_U)\rightarrow i_\ast(\mathcal{F}\vert_U)$$
+
+이 존재한다. 
+
+으로 정의한다. 이제 injective sheaf $$\mathcal{F}$$에 대하여
+
+$$i_\ast(\mathcal{F}\vert_U)(V)=\mathcal{F}(U\cap V)$$
+
+
+
+을 생각하면 natural map $$i_!(\mathcal{F}\vert_U)\rightarrow $$
+
+
+임의의 열린집합 $$U \subset X$$와 포함사상 $$j: U \hookrightarrow X$$에 대해, extension sheaf $$j_!(\mathcal{F}\vert_U)$$를 생각하자. 이는 $$V \subset U$$에서 $$j_!(\mathcal{F}\vert_U)(V) = \mathcal{F}(V)$$이고, $$V \not\subset U$$에서 $$j_!(\mathcal{F}\vert_U)(V) = 0$$인 sheaf이다. 포함사상 $$j_!(\mathcal{F}\vert_U) \to j_\ast(\mathcal{F}\vert_U) = \mathcal{F}$$는 sheaf monomorphism이므로, $$\mathcal{F}$$가 injective이면 이는 split된다. 즉, 적당한 sheaf morphism $$\sigma: \mathcal{F} \to j_!(\mathcal{F}\vert_U)$$가 존재하여 $$j_!(\mathcal{F}\vert_U) \to \mathcal{F} \to j_!(\mathcal{F}\vert_U)$$가 항등사상이다. 따라서 $$\Gamma(X, \mathcal{F}) \to \Gamma(X, j_!(\mathcal{F}\vert_U)) = \Gamma(U, \mathcal{F})$$로의 map은 split되어 surjective이며, 이는 $$\mathcal{F}$$가 flasque임을 보여준다. 
 
 </details>
 
@@ -212,19 +242,19 @@ $$s_{\sigma(i_0) \cdots \sigma(i_p)} = \operatorname{sgn}(\sigma) \cdot s_{i_0 \
 
 으로 대칭 확장하자. $$d^2 = 0$$의 성질에 의해 이 대칭 확장은 cocycle condition을 보존하며, 이를 기존의 친숙한 형태로 변환한다: 예를 들어 $$p = 1$$의 경우, 대칭 확장에 의해 cocycle condition은 $$s_{ij} + s_{jk} = s_{ik}$$ (on $$U_i \cap U_j \cap U_k$$)의 형태가 되며, 특히 $$s_{ji} = -s_{ij}$$를 얻는다.
 
-**$$p = 1$$의 경우.** Cocycle $$s \in \check{Z}^1(\mathcal{U}, \mathcal{F})$$가 주어졌다 하자. Open cover $$\mathcal{U} = \{U_i\}_{i \in I}$$의 원소 개수 $$|I|$$에 대한 귀납법으로 $$s = dt$$임을 보인다.
+**$$p = 1$$의 경우.** Cocycle $$s \in \check{Z}^1(\mathcal{U}, \mathcal{F})$$가 주어졌다 하자. Open cover $$\mathcal{U} = \{U_i\}_{i \in I}$$의 원소 개수 $$\lvert I\rvert$$에 대한 귀납법으로 $$s = dt$$임을 보인다.
 
-$$|I| = 1$$인 경우는 자명하다. $$|I| = n > 1$$이고, 임의의 $$i_0 \in I$$를 고르자. 귀납 가정에 의해 $$\{U_i\}_{i \neq i_0}$$에 대한 restriction은 coboundary이므로, 적당한 $$(t_i)_{i \neq i_0}$$가 존재하여 모든 $$i, j \neq i_0$$에 대해 $$s_{ij} = t_j - t_i$$ on $$U_i \cap U_j$$이다. 이제 $$s_{i_0 j}$$에 대해, cocycle condition $$s_{i_0 j} + s_{jk} = s_{i_0 k}$$로부터
+$$\lvert I\rvert = 1$$인 경우는 자명하다. $$\lvert I\rvert = n > 1$$이고, 임의의 $$i_0 \in I$$를 고르자. 귀납 가정에 의해 $$\{U_i\}_{i \neq i_0}$$에 대한 restriction은 coboundary이므로, 적당한 $$(t_i)_{i \neq i_0}$$가 존재하여 모든 $$i, j \neq i_0$$에 대해 $$s_{ij} = t_j - t_i$$ on $$U_i \cap U_j$$이다. 이제 $$s_{i_0 j}$$에 대해, cocycle condition $$s_{i_0 j} + s_{jk} = s_{i_0 k}$$로부터
 
 $$s_{i_0 j} = s_{i_0 k} - s_{jk} = s_{i_0 k} - (t_k - t_j) = (s_{i_0 k} + t_k) - t_j$$
 
 을 얻는다. 따라서 $$\tau_j := t_j + s_{i_0 j}$$는 $$U_{i_0} \cap U_j$$ 위에서 $$j$$에 무관한 값을 가짐, 즉 $$\bigcup_{j \neq i_0}(U_{i_0} \cap U_j)$$ 위에 잘 정의된 section $$\tau$$가 존재한다. $$\mathcal{F}$$가 flasque이므로 이를 $$U_{i_0}$$ 전체로 extend할 수 있고, 이를 $$t_{i_0}$$로 삼으면 $$s_{i_0 j} = t_j - t_{i_0}$$가 성립한다. 따라서 모든 $$i, j$$에 대해 $$s_{ij} = t_j - t_i$$이고, $$\check{H}^1(\mathcal{U}, \mathcal{F}) = 0$$이다.
 
-**$$p > 1$$의 경우.** Cocycle $$s \in \check{Z}^p(\mathcal{U}, \mathcal{F})$$가 주어졌을 때, 한 index $$i_0$$를 고정하자. $$s_{i_0, i_1, \ldots, i_p}$$를 $$(i_1, \ldots, i_p)$$에 대한 $$(p-1)$$-cochain으로 생각하면, $$s$$가 cocycle이므로 이것은 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle을 이룬다. $$|I \setminus \{i_0\}| < |I|$$이므로 귀납 가정에 의해 이것은 coboundary이다. 즉, 적당한 $$(p-2)$$-cochain $$\alpha$$가 존재하여
+**$$p > 1$$의 경우.** Cocycle $$s \in \check{Z}^p(\mathcal{U}, \mathcal{F})$$가 주어졌을 때, 한 index $$i_0$$를 고정하자. $$s_{i_0, i_1, \ldots, i_p}$$를 $$(i_1, \ldots, i_p)$$에 대한 $$(p-1)$$-cochain으로 생각하면, $$s$$가 cocycle이므로 이것은 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle을 이룬다. $$\lvert  I \setminus \{i_0\}\rvert < \lvert I\rvert$$이므로 귀납 가정에 의해 이것은 coboundary이다. 즉, 적당한 $$(p-2)$$-cochain $$\alpha$$가 존재하여
 
 $$s_{i_0, i_1, \ldots, i_p} = (d\alpha)_{i_0, i_1, \ldots, i_p} \qquad (i_0 < i_1 < \cdots < i_p)$$
 
-on $$U_{i_0} \cap \cdots \cap U_{i_p}$$이다. 여기서 $$\alpha$$의 각 성분은 $$i_0$$를 포함하지 않는 교집합들 위에 정의되어 있다. 이제 $$s - d\alpha$$를 생각하면, 이 cochain의 $$i_0$$을 포함하는 성분은 모두 0이므로, $$s - d\alpha$$는 사실상 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle으로 볼 수 있다. $$|I \setminus \{i_0\}| < |I|$$이므로 귀납 가정에 의해 이것도 coboundary이다. 즉, $$s - d\alpha = d\beta$$ for some $$(p-2)$$-cochain $$\beta$$이고, 따라서 $$s = d(\alpha + \beta)$$이다. 결국 $$s$$ 자체도 coboundary이다. $$\square$$
+on $$U_{i_0} \cap \cdots \cap U_{i_p}$$이다. 여기서 $$\alpha$$의 각 성분은 $$i_0$$를 포함하지 않는 교집합들 위에 정의되어 있다. 이제 $$s - d\alpha$$를 생각하면, 이 cochain의 $$i_0$$을 포함하는 성분은 모두 0이므로, $$s - d\alpha$$는 사실상 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle으로 볼 수 있다. $$\lvert I \setminus \{i_0\}\rvert < \lvert I\rvert$$이므로 귀납 가정에 의해 이것도 coboundary이다. 즉, $$s - d\alpha = d\beta$$ for some $$(p-2)$$-cochain $$\beta$$이고, 따라서 $$s = d(\alpha + \beta)$$이다. 결국 $$s$$ 자체도 coboundary이다. $$\square$$
 
 
 </details>
