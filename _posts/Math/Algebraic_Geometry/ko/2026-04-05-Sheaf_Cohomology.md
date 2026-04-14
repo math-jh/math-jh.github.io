@@ -183,7 +183,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 1. Sheaf $$\mathcal{F}$$가 *acyclic*이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다.
 2. $$\Sh(X)$$의 injective object $$\mathcal{F}$$를 *injective sheaf*라 부른다. 
 3. 임의의 열린집합 $$V\subset U$$에 대하여, restriction map $$\mathcal{F}(U)
-rightarrow \mathcal{F}(V)$$가 surjective라면 $$\mathcal{F}$$를 *flasque sheaf*라 부른다. 
+\rightarrow \mathcal{F}(V)$$가 surjective라면 $$\mathcal{F}$$를 *flasque sheaf*라 부른다. 
 
 </div>
 
@@ -198,63 +198,64 @@ rightarrow \mathcal{F}(V)$$가 surjective라면 $$\mathcal{F}$$를 *flasque shea
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선, 우리는 임의의 열린집합 $$i:U\hookrightarrow X$$와 $$U$$ 위에 정의된 sheaf $$\mathcal{G}$$에 대하여, extension sheaf
+정의에 의해 $$\mathcal{F}$$가 injective라는 것은 임의의 monomorphism $$\mathcal{A} \hookrightarrow \mathcal{B}$$에 대해 $$\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \to \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$$가 surjective인 것이다. ([\[호몰로지 대수학\] §분해, ⁋정의 1](/ko/math/homological_algebra/resolutions#def1)) 이제 임의의 열린집합 $$V \subset U \subset X$$에 대해 restriction $$\mathcal{F}(U) \to \mathcal{F}(V)$$가 surjective임을 보이자. 
 
-$$i_!\mathcal{G}(V)=\begin{cases}\mathcal{F}(V)&\text{if $V\subset U$}\\ 0&\text{otherwise}\end{cases}$$
+이 map은 sheaf morphism이 아니라 abelian group들 사이의 morphism이고, 우리가 갖고 있는 도구는 sheaf morphism이므로 이 조건을 sheaf morphism으로 돌려놔야 한다. 이를 위해 open embedding
 
-그리고 direct image sheaf
+$$i^U: U \hookrightarrow X,\qquad i^V: V \hookrightarrow X$$
 
-$$i_\ast\mathcal{G}(V)=\mathcal{G}(U\vap V)$$
+그리고 이들의 extension by zero로 얻어지는 sheaf들 $$i^U_!\mathbb{Z}_U, i^V_!\mathbb{Z}_V$$를 도입하자. 여기서 $$\mathbb{Z}_U, \mathbb{Z}_V$$는 각각 constatn sheaf들이며, 가정에 의해 $$V \subset U$$이므로 natural한 monomorphism $$i^V_!\mathbb{Z}_V \to i^U_!\mathbb{Z}_U$$가 존재한다.
 
-을 생각한다. 그럼 canonical map $$i_!\mathcal{G}\rightarrow i_\ast\mathcal{G}$$가 존재하는 것이 자명하며, 특히 $$\mathcal{G}=\mathcal{F}\vert_U$$에 대하여 다음의 sheaf monomorphism
+우선 $$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$$가 성립함을 확인하자. Extension by zero $$i^U_!$$는 restriction $$\mathcal{G} \mapsto \mathcal{G}\vert_U$$의 left adjoint이므로 ([\[위상수학\] §층, ⁋예시 14](/ko/math/topology/sheaves#ex14)),
 
-$$i_!(\mathcal{F}\vert_U)\rightarrow i_\ast(\mathcal{F}\vert_U)$$
+$$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U)$$
 
-이 존재한다. 
+이 성립한다. 이제 $$\mathbb{Z}_U$$는 $$U$$ 위의 constant sheaf이므로 $$\mathbb{Z}_U(U) = \mathbb{Z}$$이고, 따라서 $$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U)$$는 global section $$\Hom(1, \mathcal{F}(U))$$와 같다. Yoneda lemma에 의해 $$\Hom(1, \mathcal{F}(U)) = \mathcal{F}(U)$$이므로,
 
-으로 정의한다. 이제 injective sheaf $$\mathcal{F}$$에 대하여
+$$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$$
 
-$$i_\ast(\mathcal{F}\vert_U)(V)=\mathcal{F}(U\cap V)$$
+을 얻는다. 마찬가지로 $$\Hom_{\Sh(X)}(i^V_!\mathbb{Z}_V, \mathcal{F}) \cong \mathcal{F}(V)$$이다. 따라서 monomorphism $$i^V_!\mathbb{Z}_V \to i^U_!\mathbb{Z}_U$$가 유도하는 map
 
+$$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \to \Hom_{\Sh(X)}(i^V_!\mathbb{Z}_V, \mathcal{F})$$
 
-
-을 생각하면 natural map $$i_!(\mathcal{F}\vert_U)\rightarrow $$
-
-
-임의의 열린집합 $$U \subset X$$와 포함사상 $$j: U \hookrightarrow X$$에 대해, extension sheaf $$j_!(\mathcal{F}\vert_U)$$를 생각하자. 이는 $$V \subset U$$에서 $$j_!(\mathcal{F}\vert_U)(V) = \mathcal{F}(V)$$이고, $$V \not\subset U$$에서 $$j_!(\mathcal{F}\vert_U)(V) = 0$$인 sheaf이다. 포함사상 $$j_!(\mathcal{F}\vert_U) \to j_\ast(\mathcal{F}\vert_U) = \mathcal{F}$$는 sheaf monomorphism이므로, $$\mathcal{F}$$가 injective이면 이는 split된다. 즉, 적당한 sheaf morphism $$\sigma: \mathcal{F} \to j_!(\mathcal{F}\vert_U)$$가 존재하여 $$j_!(\mathcal{F}\vert_U) \to \mathcal{F} \to j_!(\mathcal{F}\vert_U)$$가 항등사상이다. 따라서 $$\Gamma(X, \mathcal{F}) \to \Gamma(X, j_!(\mathcal{F}\vert_U)) = \Gamma(U, \mathcal{F})$$로의 map은 split되어 surjective이며, 이는 $$\mathcal{F}$$가 flasque임을 보여준다. 
+은 정확히 restriction $$\mathcal{F}(U) \to \mathcal{F}(V)$$에 해당한다. $$\mathcal{F}$$가 injective이고 $$i^V_!\mathbb{Z}_V \to i^U_!\mathbb{Z}_U$$가 monomorphism이므로, 이 map은 surjective이다. 따라서 $$\mathcal{F}(U) \to \mathcal{F}(V)$$가 surjective이고, $$\mathcal{F}$$는 flasque이다.
 
 </details>
 
 <div class="proposition" markdown="1">
 
-<ins id="lem10">**보조정리 10**</ins>
-
-Flasque sheaf $$\mathcal{F}$$는 임의의 open cover $$\mathcal{U}$$에 대해 Čech-acyclic이다. 즉, 모든 $$p > 0$$에 대해 $$\check{H}^p(\mathcal{U}, \mathcal{F}) = 0$$이다.
+<ins id="lem10">**보조정리 10**</ins> Flasque sheaf $$\mathcal{F}$$는 임의의 open cover $$\mathcal{U}$$에 대해 Čech-acyclic이다. 즉, 모든 $$p > 0$$에 대해 $$\check{H}^p(\mathcal{U}, \mathcal{F}) = 0$$이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$p$$에 대한 귀납법으로 보인다. [정의 3](#def3)에서 $$\check{C}^p(\mathcal{U}, \mathcal{F})$$는 strictly ordered index $$i_0 < \cdots < i_p$$로 정의되었으므로, cocycle의 성분 또한 $$s_{i_0 \cdots i_p}$$ ($$i_0 < \cdots < i_p$$)만으로 주어진다. 편의를 위해 이 성분들을 모든 순열에 대해
+$$p$$에 대한 귀납법으로 보인다. 각 $$p$$에 대하여, open cover의 원소 개수 $$\lvert I\rvert$$에 대한 귀납법으로 $$\check{H}^p(\mathcal{U}, \mathcal{F}) = 0$$임을 보인다.
+
+[정의 3](#def3)에서 $$\check{C}^p(\mathcal{U}, \mathcal{F})$$는 strictly ordered index $$i_0 < \cdots < i_p$$로 정의되었으므로, cocycle의 성분 또한 $$s_{i_0 \cdots i_p}$$ ($$i_0 < \cdots < i_p$$)만으로 주어진다. 편의를 위해 이 성분들을 모든 순열에 대해
 
 $$s_{\sigma(i_0) \cdots \sigma(i_p)} = \operatorname{sgn}(\sigma) \cdot s_{i_0 \cdots i_p}$$
 
 으로 대칭 확장하자. $$d^2 = 0$$의 성질에 의해 이 대칭 확장은 cocycle condition을 보존하며, 이를 기존의 친숙한 형태로 변환한다: 예를 들어 $$p = 1$$의 경우, 대칭 확장에 의해 cocycle condition은 $$s_{ij} + s_{jk} = s_{ik}$$ (on $$U_i \cap U_j \cap U_k$$)의 형태가 되며, 특히 $$s_{ji} = -s_{ij}$$를 얻는다.
 
-**$$p = 1$$의 경우.** Cocycle $$s \in \check{Z}^1(\mathcal{U}, \mathcal{F})$$가 주어졌다 하자. Open cover $$\mathcal{U} = \{U_i\}_{i \in I}$$의 원소 개수 $$\lvert I\rvert$$에 대한 귀납법으로 $$s = dt$$임을 보인다.
+**$$p$$에 대한 귀납법.** $$p$$에 대한 귀납 가정으로, 임의의 open cover $$\mathcal{V} = \{V_j\}_{j \in J}$$와 임의의 $$q < p$$에 대해 $$\check{H}^q(\mathcal{V}, \mathcal{F}) = 0$$이 성립한다고 가정한다.
 
-$$\lvert I\rvert = 1$$인 경우는 자명하다. $$\lvert I\rvert = n > 1$$이고, 임의의 $$i_0 \in I$$를 고르자. 귀납 가정에 의해 $$\{U_i\}_{i \neq i_0}$$에 대한 restriction은 coboundary이므로, 적당한 $$(t_i)_{i \neq i_0}$$가 존재하여 모든 $$i, j \neq i_0$$에 대해 $$s_{ij} = t_j - t_i$$ on $$U_i \cap U_j$$이다. 이제 $$s_{i_0 j}$$에 대해, cocycle condition $$s_{i_0 j} + s_{jk} = s_{i_0 k}$$로부터
+***귀납 단계: 고정된 $$p$$에 대해 $$\lvert I\rvert$$에 대한 귀납법.*** $$p$$를 고정하고, open cover $$\mathcal{U} = \{U_i\}_{i \in I}$$의 원소 개수 $$\lvert I\rvert$$에 대한 귀납법으로 모든 cocycle이 coboundary임을 보인다.
+
+**$$\lvert I\rvert = 1$$인 경우.** 모든 $$p > 0$$에 대해 $$\check{C}^p(\mathcal{U}, \mathcal{F}) = 0$$이므로 자명하다.
+
+**$$\lvert I\rvert = n > 1$$인 경우.** 우선 $$p = 1$$을 처리한다. Cocycle $$s \in \check{Z}^1(\mathcal{U}, \mathcal{F})$$가 주어졌다 하자. 임의의 $$i_0 \in I$$를 고르자. $$\lvert I \setminus \{i_0\}\rvert = n-1 < n$$이므로, $$\{U_i\}_{i \neq i_0}$$에 대한 귀납 가정에 의해 restriction은 coboundary이므로, 적당한 $$(t_i)_{i \neq i_0}$$가 존재하여 모든 $$i, j \neq i_0$$에 대해 $$s_{ij} = t_j - t_i$$ on $$U_i \cap U_j$$이다. 이제 $$s_{i_0 j}$$에 대해, cocycle condition $$s_{i_0 j} + s_{jk} = s_{i_0 k}$$로부터
 
 $$s_{i_0 j} = s_{i_0 k} - s_{jk} = s_{i_0 k} - (t_k - t_j) = (s_{i_0 k} + t_k) - t_j$$
 
 을 얻는다. 따라서 $$\tau_j := t_j + s_{i_0 j}$$는 $$U_{i_0} \cap U_j$$ 위에서 $$j$$에 무관한 값을 가짐, 즉 $$\bigcup_{j \neq i_0}(U_{i_0} \cap U_j)$$ 위에 잘 정의된 section $$\tau$$가 존재한다. $$\mathcal{F}$$가 flasque이므로 이를 $$U_{i_0}$$ 전체로 extend할 수 있고, 이를 $$t_{i_0}$$로 삼으면 $$s_{i_0 j} = t_j - t_{i_0}$$가 성립한다. 따라서 모든 $$i, j$$에 대해 $$s_{ij} = t_j - t_i$$이고, $$\check{H}^1(\mathcal{U}, \mathcal{F}) = 0$$이다.
 
-**$$p > 1$$의 경우.** Cocycle $$s \in \check{Z}^p(\mathcal{U}, \mathcal{F})$$가 주어졌을 때, 한 index $$i_0$$를 고정하자. $$s_{i_0, i_1, \ldots, i_p}$$를 $$(i_1, \ldots, i_p)$$에 대한 $$(p-1)$$-cochain으로 생각하면, $$s$$가 cocycle이므로 이것은 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle을 이룬다. $$\lvert  I \setminus \{i_0\}\rvert < \lvert I\rvert$$이므로 귀납 가정에 의해 이것은 coboundary이다. 즉, 적당한 $$(p-2)$$-cochain $$\alpha$$가 존재하여
+이번에는 $$p > 1$$을 처리한다. Cocycle $$s \in \check{Z}^p(\mathcal{U}, \mathcal{F})$$가 주어졌을 때, 한 index $$i_0$$를 고정하자. $$s_{i_0, i_1, \ldots, i_p}$$를 $$(i_1, \ldots, i_p)$$에 대한 $$(p-1)$$-cochain으로 생각하면, $$s$$가 cocycle이므로 이것은 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle을 이룬다. $$\lvert I \setminus \{i_0\}\rvert = n-1 < n$$이므로 $$p$$에 대한 귀납 가정 ($$p-1 < p$$)에 의해 이것은 coboundary이다. 즉, 적당한 $$(p-2)$$-cochain $$\alpha$$가 존재하여
 
 $$s_{i_0, i_1, \ldots, i_p} = (d\alpha)_{i_0, i_1, \ldots, i_p} \qquad (i_0 < i_1 < \cdots < i_p)$$
 
-on $$U_{i_0} \cap \cdots \cap U_{i_p}$$이다. 여기서 $$\alpha$$의 각 성분은 $$i_0$$를 포함하지 않는 교집합들 위에 정의되어 있다. 이제 $$s - d\alpha$$를 생각하면, 이 cochain의 $$i_0$$을 포함하는 성분은 모두 0이므로, $$s - d\alpha$$는 사실상 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle으로 볼 수 있다. $$\lvert I \setminus \{i_0\}\rvert < \lvert I\rvert$$이므로 귀납 가정에 의해 이것도 coboundary이다. 즉, $$s - d\alpha = d\beta$$ for some $$(p-2)$$-cochain $$\beta$$이고, 따라서 $$s = d(\alpha + \beta)$$이다. 결국 $$s$$ 자체도 coboundary이다. $$\square$$
+on $$U_{i_0} \cap \cdots \cap U_{i_p}$$이다. 여기서 $$\alpha$$의 각 성분은 $$i_0$$를 포함하지 않는 교집합들 위에 정의되어 있다. 이제 $$s - d\alpha$$를 생각하면, 이 cochain의 $$i_0$$을 포함하는 성분은 모두 0이므로, $$s - d\alpha$$는 사실상 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle으로 볼 수 있다. $$\lvert I \setminus \{i_0\}\rvert = n-1 < n$$이므로 $$p$$에 대한 귀납 가정에 의해 이것도 coboundary이다. 즉, $$s - d\alpha = d\beta$$ for some $$(p-2)$$-cochain $$\beta$$이고, 따라서 $$s = d(\alpha + \beta)$$이다. 결국 $$s$$ 자체도 coboundary이다.
 
 
 </details>
@@ -302,7 +303,7 @@ $$E_2^{0,q} = H^q(\mathcal{I}^\bullet) = H^q(X, \mathcal{F})$$
 
 $$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$$
 
-이며, 이 동형사상은 구성에서 자명히 자연스럽다. $$\square$$
+이며, 이 동형사상은 구성에서 자명히 자연스럽다. 
 
 </details>
 
@@ -344,7 +345,7 @@ $$d(s_1, s_2) = s_2\vert_{U_1 \cap U_2} - s_1\vert_{U_1 \cap U_2} = (s_2 - s_1, 
 
 ## Spectral Sequence
 
-Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 통한 cohomology의 계산이다 ([\[호몰로지 대수학\] §스펙트럴 열](/ko/math/homological_algebra/spectral_sequences)). 이 섹션에서는 sheaf cohomology와 자연스럽게 연결되는 세 가지 spectral sequence를 소개한다.
+Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 통한 cohomology의 계산이다 ([\[호몰로지 대수학\] §스펙트럼 열](/ko/math/homological_algebra/spectral_sequences)). 이 섹션에서는 sheaf cohomology와 자연스럽게 연결되는 세 가지 spectral sequence를 소개한다.
 
 <div class="proposition" markdown="1">
 
@@ -359,7 +360,7 @@ $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
 <details class="proof" markdown="1">
 <summary>증명 개요</summary>
 
-$$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡자. 이때 double complex $$C^{p,q} = \Gamma(Y, f_* \mathcal{I}^q)^{(p)}$$를 생각한다. 여기서 $$(-)^{(p)}$$는 $$\Gamma(Y, -)$$의 $$p$$번째 derived functor를 의미한다. 이 double complex의 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology에 수렴함은 ([\[호몰로지 대수학\] §스펙트럴 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11))의 프레임워크에 의한다.
+$$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡자. 이때 double complex $$C^{p,q} = \Gamma(Y, f_* \mathcal{I}^q)^{(p)}$$를 생각한다. 여기서 $$(-)^{(p)}$$는 $$\Gamma(Y, -)$$의 $$p$$번째 derived functor를 의미한다. 이 double complex의 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology에 수렴함은 ([\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11))의 프레임워크에 의한다.
 
 </details>
 
@@ -378,7 +379,7 @@ $$0 \to H^1(Y, f_* \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_* \math
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Leray spectral sequence $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$의 $$E_2$$ page에서 $$p+q \leq 2$$인 항목들을 고려하자. ([\[호몰로지 대수학\] §스펙트럴 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5))에 의해 $$E_\infty^{p,q} \cong \gr^p H^{p+q} = F^p H^{p+q}/F^{p+1}H^{p+q}$$이다. 또한 이는 first quadrant spectral sequence이므로 ([\[호몰로지 대수학\] §스펙트럴 열, ⁋명제 6](/ko/math/homological_algebra/spectral_sequences#prop6)) 충분히 큰 $$r$$에서 $$E_r^{p,q} = E_\infty^{p,q}$$이다.
+Leray spectral sequence $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$의 $$E_2$$ page에서 $$p+q \leq 2$$인 항목들을 고려하자. ([\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5))에 의해 $$E_\infty^{p,q} \cong \gr^p H^{p+q} = F^p H^{p+q}/F^{p+1}H^{p+q}$$이다. 또한 이는 first quadrant spectral sequence이므로 ([\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 6](/ko/math/homological_algebra/spectral_sequences#prop6)) 충분히 큰 $$r$$에서 $$E_r^{p,q} = E_\infty^{p,q}$$이다.
 
 $$p+q = 1$$인 항목: $$E_2^{1,0}$$와 $$E_2^{0,1}$$만이 존재한다. 차수 이유로 $$E_2^{p,q}$$에서 $$p+q=1$$인 항에 도달하는 유일한 가능한 differential은 없으므로 $$E_2^{1,0} = E_\infty^{1,0}$$이고 $$E_2^{0,1} = E_\infty^{0,1}$$이다. 따라서
 
@@ -425,7 +426,7 @@ $$E_2^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) \Rightarrow H
 <details class="proof" markdown="1">
 <summary>증명 개요</summary>
 
-$$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡고, double complex $$C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{I}^q)$$를 구성한다. 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology $$H^{p+q}(X, \mathcal{F})$$에 수렴함은 ([\[호몰로지 대수학\] §스펙트럴 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11))의 프레임워크에 의한다.
+$$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡고, double complex $$C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{I}^q)$$를 구성한다. 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology $$H^{p+q}(X, \mathcal{F})$$에 수렴함은 ([\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11))의 프레임워크에 의한다.
 
 </details>
 
