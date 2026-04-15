@@ -180,10 +180,10 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 <ins id="def8">**정의 8**</ins> Variety $$X$$ 위의 sheaf $$\mathcal{F}$$에 대하여, 다음을 정의한다.
 
-1. Sheaf $$\mathcal{F}$$가 **acyclic**이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다.
-2. $$\Sh(X)$$의 injective object $$\mathcal{F}$$를 **injective sheaf**라 부른다. 
+1. Sheaf $$\mathcal{F}$$가 *acyclic*이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다.
+2. $$\Sh(X)$$의 injective object $$\mathcal{F}$$를 *injective sheaf*라 부른다. 
 3. 임의의 열린집합 $$V\subset U$$에 대하여, restriction map $$\mathcal{F}(U)
-\rightarrow \mathcal{F}(V)$$가 surjective라면 $$\mathcal{F}$$를 **flasque sheaf**라 부른다. 
+\rightarrow \mathcal{F}(V)$$가 surjective라면 $$\mathcal{F}$$를 *flasque sheaf*라 부른다. 
 
 </div>
 
@@ -231,47 +231,23 @@ Augmented Čech complex
 
 $$0 \to \mathcal{F}(U) \xrightarrow{\epsilon} \check{C}^0(\mathcal{U}, \mathcal{F}) \xrightarrow{d^0} \check{C}^1(\mathcal{U}, \mathcal{F}) \xrightarrow{d^1} \cdots$$
 
-를 생각하자. 우리가 보여야 할 것은 $$p>0$$에서 이것이 exact라는 것이므로, identity chain map이 nullhomotopic임을 보이면 된다. 이를 위해 각각의 $$p\geq 1$$에 대하여 homotopy operator $$s^p : \check{C}^p(\mathcal{U}, \mathcal{F}) \to \check{C}^{p-1}(\mathcal{U}, \mathcal{F})$$를 명시적으로 구성하자. 
+를 생각하자. 우리가 보여야 할 것은 $$p>0$$에서 이것이 exact라는 것이므로, identity chain map이 nullhomotopic임을 보이면 된다. 이를 위해 각각의 $$p\geq 1$$에 대하여 homotopy operator $$s^p : \check{C}^p(\mathcal{U}, \mathcal{F}) \to \check{C}^{p-1}(\mathcal{U}, \mathcal{F})$$를 명시적으로 구성해야 한다. 
 
-증명의 편의를 위해, 우리는 순서를 고려하지 않은 (non-alternating) Čech complex $$\check{C}^p(\mathcal{U}, \mathcal{F}) = \prod_{i_0, \ldots, i_p \in I} \mathcal{F}(U_{i_0 \cdots i_p})$$에서 작업한다. 이것이 원래의 Čech complex와 quasi-isomorphic하다는 것은 쉽게 보일 수 있으며, 혹은 
+이 함수를 정의하기 위해서는 우리는 각각의 
 
+$$t=(t_{j_0<\cdots< j_p})\in \check{C}^p(\mathcal{U}, \mathcal{F})$$
 
+가 주어졌을 때, $$s^p(t)$$의 각 성분
 
-우리는 $$\mathcal{F}$$가 flasque sheaf임을 사용해야 하므로, 이를 
+$$s^p(t)_{j_0<\cdots< j_{p-1}}$$
 
-각 성분 $$W \mapsto \mathcal{F}(W \cap U_{i_0 \cdots i_q})$$는 $$\mathcal{F}$$를 $$U_{i_0 \cdots i_q}$$로 restrict한 sheaf의 section functor이므로 sheaf이고, sheaf의 product는 다시 sheaf이므로 $$\check{C}^q(\cdot, \mathcal{F})$$도 sheaf이다.
+이 어떻게 정의되는지를 설명해야 한다. 본질적으로 우리가 하고 싶은 것은, chain map을 정의하기 위해 항상 그러하듯, index $$i_0$$을 하나 고정한 후 이를 $$j_0<\cdots< j_{p-1}$$에 끼워넣어서 (편의상 $$i_0< j_0<\cdots< j_{p-1}$$이라 하자.) 
 
-먼저, $$\mathcal{F}$$가 flasque이면 각 $$\check{C}^q(\cdot, \mathcal{F})$$도 flasque sheaf임을 확인한다. 열린집합 $$V \subset W$$에 대해 restriction map $$\check{C}^q(W, \mathcal{F}) \to \check{C}^q(V, \mathcal{F})$$은 각 성분이 $$\mathcal{F}(W \cap U_{i_0 \cdots i_q}) \to \mathcal{F}(V \cap U_{i_0 \cdots i_q})$$의 형태이며, $$V \cap U_{i_0 \cdots i_q} \subset W \cap U_{i_0 \cdots i_q}$$이므로 $$\mathcal{F}$$의 flasque 성질에 의해 surjective이다. flasque sheaf의 product는 다시 flasque이므로 성립한다.
+$$s^p(t)_{j_0<\cdots< j_{p-1}}=t_{i_0< j_0<\cdots < j_{p-1}}\tag{$\ast$}$$
 
-증명의 편의를 위해 순서를 고려하지 않은 (non-alternating) Čech complex $$\check{C}^p(\mathcal{U}, \mathcal{F}) = \prod_{i_0, \ldots, i_p \in I} \mathcal{F}(U_{i_0 \cdots i_p})$$에서 작업한다. Alternating Čech complex는 non-alternating complex와 quasi-isomorphic하므로 같은 cohomology를 가진다. $$I$$의 원소 $$i_0$$를 하나 고정한다.
+으로 정의하는 것이다. 이 때, $$s^p(t)_{j_0<\cdots< j_{p-1}}$$는 그 정의에 의해 $$U_{j_0}\cap\cdots\cap U_{j_{p-1}}$$ 위에서의 section이지만, 우변의 $$t_{i_0< j_0<\cdots < j_{p-1}}$$는 그보다 작은 집합 $$U_{i_0}\cap U_{j_0}\cap\cdots\cap U_{j_{p-1}}$$에서의 section임을 주목하자. 일반적인 $$\mathcal{F}$$에 대해서는 이렇게 정의하는 것이 불가능하겠지만, 우리는 $$\mathcal{F}$$가 flasque임을 가정하고 있으므로 항상 이 함수를 extension하여 $$U_{j_0}\cap\cdots\cap U_{j_{p-1}}$$의 section이도록 해줄 수 있으며 식 ($$\ast$$) 또한 이러한 방식으로 이해해야 한다. 그럼 이렇게 정의한 $$s^p$$가 실제로 chain homotopy가 된다는 것은 단순한 계산을 거치면 쉽게 보일 수 있다. 
 
-Section $$t = (t_{j_0 \cdots j_p}) \in \check{C}^p(\mathcal{U}, \mathcal{F})$$에 대해, $$s^p : \check{C}^p(\mathcal{U}, \mathcal{F}) \to \check{C}^{p-1}(\mathcal{U}, \mathcal{F})$$를 다음과 같이 정의한다. $$(s^p(t))_{j_0 \cdots j_{p-1}} \in \mathcal{F}(U_{j_0 \cdots j_{p-1}})$$를 $$t_{i_0 j_0 \cdots j_{p-1}} \in \mathcal{F}(U_{i_0 j_0 \cdots j_{p-1}})$$의 $$U_{j_0 \cdots j_{p-1}} \subset U_{i_0 j_0 \cdots j_{p-1}}$$ 위에서의 restriction $$t_{i_0 j_0 \cdots j_{p-1}}\vert_{U_{j_0 \cdots j_{p-1}}}$$을 $$\mathcal{F}$$의 flasque 성질에 의한 $$\mathcal{F}(U_{j_0 \cdots j_{p-1}})$$로의 확장으로 둔다. $$i_0$$가 고정되어 있으므로 이 정의는 well-defined이다.
-
-Homotopy 관계식 $$d^{p-1} s^p + s^{p+1} d^p = \mathrm{id}$$을 명시적으로 계산한다. 임의의 tuple $$(j_0, \ldots, j_p)$$에 대해, $$U_{j_0 \cdots j_p}$$ 위에서 restriction하여 두 항을 각각 계산한다. 먼저
-
-$$(d^{p-1} s^p(t))_{j_0 \cdots j_p}\vert_{U_{j_0 \cdots j_p}} = \sum_{k=0}^{p} (-1)^k (s^p(t))_{j_0 \cdots \hat{j}_k \cdots j_p}\vert_{U_{j_0 \cdots j_p}}$$
-
-이고, flasque 확장의 정의에 의해 각 항은 restriction 이후 단순화된다. $$k = 0$$일 때 $$t_{i_0 j_1 \cdots j_p}\vert_{U_{j_0 \cdots j_p}}$$이고, $$1 \leq k \leq p$$일 때 $$(-1)^k t_{i_0 j_0 \cdots \hat{j}_k \cdots j_p}\vert_{U_{j_0 \cdots j_p}}$$이다. 따라서
-
-$$(d^{p-1} s^p(t))\vert = t_{i_0 j_1 \cdots j_p}\vert + \sum_{k=1}^{p} (-1)^k t_{i_0 j_0 \cdots \hat{j}_k \cdots j_p}\vert$$
-
-이다 (모든 restriction은 $$U_{j_0 \cdots j_p}$$ 위에서 취한다). 한편 $$s^{p+1}$$의 정의에 의해
-
-$$(s^{p+1} d^p(t))_{j_0 \cdots j_p}\vert_{U_{j_0 \cdots j_p}} = d^p(t)_{i_0 j_0 \cdots j_p}\vert_{U_{j_0 \cdots j_p}}$$
-
-이고, Čech differential의 정의에 의해 $$(i_0, j_0, \ldots, j_p)$$에서 각 index를 생략하는 교대합을 $$U_{j_0 \cdots j_p}$$ 위에서 restriction하면
-
-$$d^p(t)_{i_0 j_0 \cdots j_p}\vert = t_{j_0 \cdots j_p} - t_{i_0 j_1 \cdots j_p}\vert + \sum_{m=1}^{p} (-1)^{m+1} t_{i_0 j_0 \cdots \hat{j}_m \cdots j_p}\vert$$
-
-이 된다. 여기서 첫 항은 $$i_0$$를 생략한 것이고, 두 번째 항은 $$j_0$$를 생략한 것이며, 나머지는 $$j_m$$을 생략한 것이다. 두 식을 더하면
-
-$$(d^{p-1}s^p + s^{p+1}d^p)(t)\vert = t_{j_0 \cdots j_p} + \bigl[t_{i_0 j_1 \cdots j_p}\vert - t_{i_0 j_1 \cdots j_p}\vert\bigr] + \sum_{m=1}^{p} \bigl[(-1)^m + (-1)^{m+1}\bigr] t_{i_0 j_0 \cdots \hat{j}_m \cdots j_p}\vert = t_{j_0 \cdots j_p}$$
-
-이고, $$\mathcal{F}(U_{j_0 \cdots j_p}) \to \mathcal{F}(U_{j_0 \cdots j_p})$$가 injective이므로 $$(d^{p-1}s^p + s^{p+1}d^p)(t) = t$$를 얻는다. 따라서 항등사상이 homotopic to zero이므로 complex는 양의 차수에서 exact하고
-
-$$\check{H}^p(\mathcal{U}, \mathcal{F}) = 0 \quad (p > 0)$$
-
-이다.
+약간의 기술적인 문제는 우리가 고정한 index $$i_0$$이 $$j_0<\cdots< j_{p-1}$$에 포함되는 경우가 존재할 수 있다는 것이다. 이를 위해 우리는 보편적인 Čech complex 대신 그냥 $$I$$의 $$p+1$$개의 원소 $$i_0,\ldots, i_{p+1}\in I$$로 좌표를 주는 *non-alternating* Čech complex를 사용한다. 이는 원래의 Čech complex와 quasi-isomorphic하며 따라서 이렇게 우회하는 것이 정당화된다.
 
 </details>
 
