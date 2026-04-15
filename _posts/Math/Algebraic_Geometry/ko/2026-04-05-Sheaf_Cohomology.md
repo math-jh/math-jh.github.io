@@ -180,10 +180,10 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 <ins id="def8">**정의 8**</ins> Variety $$X$$ 위의 sheaf $$\mathcal{F}$$에 대하여, 다음을 정의한다.
 
-1. Sheaf $$\mathcal{F}$$가 *acyclic*이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다.
-2. $$\Sh(X)$$의 injective object $$\mathcal{F}$$를 *injective sheaf*라 부른다. 
+1. Sheaf $$\mathcal{F}$$가 **acyclic**이라는 것은 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{F}) = 0$$인 것이다.
+2. $$\Sh(X)$$의 injective object $$\mathcal{F}$$를 **injective sheaf**라 부른다. 
 3. 임의의 열린집합 $$V\subset U$$에 대하여, restriction map $$\mathcal{F}(U)
-\rightarrow \mathcal{F}(V)$$가 surjective라면 $$\mathcal{F}$$를 *flasque sheaf*라 부른다. 
+\rightarrow \mathcal{F}(V)$$가 surjective라면 $$\mathcal{F}$$를 **flasque sheaf**라 부른다. 
 
 </div>
 
@@ -227,41 +227,51 @@ $$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U) \cong \Hom_{\Ab}(\mathbb{Z}, \
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[정의 3](#def3)에서 $$\check{C}^p(\mathcal{U}, \mathcal{F})$$는 strictly ordered index $$i_0 < \cdots < i_p$$로 정의되었으므로, cocycle의 성분 또한 $$s_{i_0 \cdots i_p}$$ ($$i_0 < \cdots < i_p$$)만으로 주어진다. 편의를 위해 이 성분들을 모든 순열에 대해
+Augmented Čech complex
 
-$$s_{\sigma(i_0) \cdots \sigma(i_p)} = \operatorname{sgn}(\sigma) \cdot s_{i_0 \cdots i_p}$$
+$$0 \to \mathcal{F}(U) \xrightarrow{\epsilon} \check{C}^0(\mathcal{U}, \mathcal{F}) \xrightarrow{d^0} \check{C}^1(\mathcal{U}, \mathcal{F}) \xrightarrow{d^1} \cdots$$
 
-으로 대칭 확장하자. $$d^2 = 0$$의 성질에 의해 이 대칭 확장은 cocycle condition을 보존하며, 이를 기존의 친숙한 형태로 변환한다: 예를 들어 $$p = 1$$의 경우, 대칭 확장에 의해 cocycle condition은 $$s_{ij} + s_{jk} = s_{ik}$$ (on $$U_i \cap U_j \cap U_k$$)의 형태가 되며, 특히 $$s_{ji} = -s_{ij}$$를 얻는다.
+를 생각하자. 우리가 보여야 할 것은 $$p>0$$에서 이것이 exact라는 것이므로, identity chain map이 nullhomotopic임을 보이면 된다. 이를 위해 각각의 $$p\geq 1$$에 대하여 homotopy operator $$s^p : \check{C}^p(\mathcal{U}, \mathcal{F}) \to \check{C}^{p-1}(\mathcal{U}, \mathcal{F})$$를 명시적으로 구성하자. 
 
-우리가 보일 것은 다음이다: 임의의 open cover $$\mathcal{U} = \{U_i\}_{i \in I}$$와 cocycle $$s \in \check{Z}^p(\mathcal{U}, \mathcal{F})$$ ($$p > 0$$)에 대해, $$s$$는 coboundary이다. 이를 $$p$$에 대한 귀납법으로 보인다.
+증명의 편의를 위해, 우리는 순서를 고려하지 않은 (non-alternating) Čech complex $$\check{C}^p(\mathcal{U}, \mathcal{F}) = \prod_{i_0, \ldots, i_p \in I} \mathcal{F}(U_{i_0 \cdots i_p})$$에서 작업한다. 이것이 원래의 Čech complex와 quasi-isomorphic하다는 것은 쉽게 보일 수 있으며, 혹은 
 
-**유한 subcover로의 환원.** Cocycle $$s$$가 주어졌을 때, 실제로 non-zero 성분에 참여하는 index만 모아 유한 부분집합 $$I_0 \subset I$$을 정의하자. 구체적으로, $$s_{i_0 \cdots i_p} \neq 0$$인 $$p+1$$-tuple $$(i_0, \ldots, i_p)$$에서 등장하는 모든 index를 모아 $$I_0$$를 만든다. Cocycle $$s$$는 $$I$$ 전체가 아닌 유한집합 $$I_0$$에만 의존하므로, $$s$$를 $$\mathcal{U}_0 = \{U_i\}_{i \in I_0}$$에 대한 cocycle으로 간주할 수 있다. 즉, $$s \in \check{Z}^p(\mathcal{U}_0, \mathcal{F})$$이다. 따라서 $$s$$가 $$\mathcal{U}_0$$에 대한 coboundary임을 보이면 충분하다.
 
-이제 $$\mathcal{U}_0$$는 유한 open cover이므로, 원소 개수 $$\lvert I_0\rvert = n$$에 대한 귀납법으로 진행한다.
 
-**$$n = 1$$인 경우.** 모든 $$p > 0$$에 대해 $$\check{C}^p(\mathcal{U}_0, \mathcal{F}) = 0$$이므로 자명하다.
+우리는 $$\mathcal{F}$$가 flasque sheaf임을 사용해야 하므로, 이를 
 
-**$$n > 1$$인 경우.** 임의의 $$i_0 \in I_0$$를 고르고, $$\mathcal{U}' = \{U_i\}_{i \in I_0 \setminus \{i_0\}}$$를 생각하자. $$\lvert I_0 \setminus \{i_0\}\rvert = n - 1 < n$$이므로, $$\mathcal{U}'$$에 대한 귀납 가정이 성립한다.
+각 성분 $$W \mapsto \mathcal{F}(W \cap U_{i_0 \cdots i_q})$$는 $$\mathcal{F}$$를 $$U_{i_0 \cdots i_q}$$로 restrict한 sheaf의 section functor이므로 sheaf이고, sheaf의 product는 다시 sheaf이므로 $$\check{C}^q(\cdot, \mathcal{F})$$도 sheaf이다.
 
-***$$p = 1$$인 경우.*** Cocycle $$s \in \check{Z}^1(\mathcal{U}_0, \mathcal{F})$$가 주어졌다. 귀납 가정에 의해 $$s$$를 $$\mathcal{U}'$$로 제한한 것은 coboundary이므로, 적당한 $$(t_i)_{i \in I_0 \setminus \{i_0\}}$$가 존재하여 모든 $$i, j \in I_0 \setminus \{i_0\}$$에 대해 $$s_{ij} = t_j - t_i$$ on $$U_i \cap U_j$$이다. 이제 $$s_{i_0 j}$$에 대해, cocycle condition $$s_{i_0 j} + s_{jk} = s_{i_0 k}$$ (on $$U_{i_0} \cap U_j \cap U_k$$)으로부터
+먼저, $$\mathcal{F}$$가 flasque이면 각 $$\check{C}^q(\cdot, \mathcal{F})$$도 flasque sheaf임을 확인한다. 열린집합 $$V \subset W$$에 대해 restriction map $$\check{C}^q(W, \mathcal{F}) \to \check{C}^q(V, \mathcal{F})$$은 각 성분이 $$\mathcal{F}(W \cap U_{i_0 \cdots i_q}) \to \mathcal{F}(V \cap U_{i_0 \cdots i_q})$$의 형태이며, $$V \cap U_{i_0 \cdots i_q} \subset W \cap U_{i_0 \cdots i_q}$$이므로 $$\mathcal{F}$$의 flasque 성질에 의해 surjective이다. flasque sheaf의 product는 다시 flasque이므로 성립한다.
 
-$$s_{i_0 j} = s_{i_0 k} - s_{jk} = s_{i_0 k} - (t_k - t_j) = (s_{i_0 k} + t_k) - t_j$$
+증명의 편의를 위해 순서를 고려하지 않은 (non-alternating) Čech complex $$\check{C}^p(\mathcal{U}, \mathcal{F}) = \prod_{i_0, \ldots, i_p \in I} \mathcal{F}(U_{i_0 \cdots i_p})$$에서 작업한다. Alternating Čech complex는 non-alternating complex와 quasi-isomorphic하므로 같은 cohomology를 가진다. $$I$$의 원소 $$i_0$$를 하나 고정한다.
 
-을 얻는다. 따라서 $$\tau_j := t_j + s_{j i_0}$$는 $$U_{i_0} \cap U_j$$ 위에서 $$j$$에 무관한 값을 가짐, 즉 $$\bigcup_{j \neq i_0}(U_{i_0} \cap U_j)$$ 위에 잘 정의된 section $$\tau$$가 존재한다. $$\mathcal{F}$$가 flasque이므로 이를 $$U_{i_0}$$ 전체로 extend할 수 있고, 이를 $$t_{i_0}$$로 삼으면 $$s_{i_0 j} = t_{j} - t_{i_0}$$가 모든 $$j \neq i_0$$에 대해 성립한다 (여기서 대칭 확장에 의해 $$s_{j i_0} = -s_{i_0 j}$$를 사용하였다). 따라서 모든 $$i, j \in I_0$$에 대해 $$s_{ij} = t_j - t_i$$이고, $$s = dt$$이다.
+Section $$t = (t_{j_0 \cdots j_p}) \in \check{C}^p(\mathcal{U}, \mathcal{F})$$에 대해, $$s^p : \check{C}^p(\mathcal{U}, \mathcal{F}) \to \check{C}^{p-1}(\mathcal{U}, \mathcal{F})$$를 다음과 같이 정의한다. $$(s^p(t))_{j_0 \cdots j_{p-1}} \in \mathcal{F}(U_{j_0 \cdots j_{p-1}})$$를 $$t_{i_0 j_0 \cdots j_{p-1}} \in \mathcal{F}(U_{i_0 j_0 \cdots j_{p-1}})$$의 $$U_{j_0 \cdots j_{p-1}} \subset U_{i_0 j_0 \cdots j_{p-1}}$$ 위에서의 restriction $$t_{i_0 j_0 \cdots j_{p-1}}\vert_{U_{j_0 \cdots j_{p-1}}}$$을 $$\mathcal{F}$$의 flasque 성질에 의한 $$\mathcal{F}(U_{j_0 \cdots j_{p-1}})$$로의 확장으로 둔다. $$i_0$$가 고정되어 있으므로 이 정의는 well-defined이다.
 
-$$p > 1$$인 경우. 같은 $$i_0$$와 $$\mathcal{U}'$$에서, 귀납 가정에 의해 $$s$$의 $$\mathcal{U}'$$ 제한은 coboundary이다: 적당한 $$\beta' \in \check{C}^{p-1}(\mathcal{U}', \mathcal{F})$$가 존재하여 $$s\vert_{\mathcal{U}'} = d\beta'$$이며, 이를 $$i_0$$을 포함하는 교집합에서 0으로 확장하여 $$\check{C}^{p-1}(\mathcal{U}_0, \mathcal{F})$$의 원소로 삼는다.
+Homotopy 관계식 $$d^{p-1} s^p + s^{p+1} d^p = \mathrm{id}$$을 명시적으로 계산한다. 임의의 tuple $$(j_0, \ldots, j_p)$$에 대해, $$U_{j_0 \cdots j_p}$$ 위에서 restriction하여 두 항을 각각 계산한다. 먼저
 
-이제 $$s' := s - d\beta'$$를 정의하자. $$s'$$의 $$i_0$$을 포함하지 않는 성분은 모두 0이므로, $$ds'$$에서 $$i_0$$을 포함하는 성분에 기여하는 것은 $$i_0$$을 포함하는 $$s'$$ 성분뿐이다. 따라서 $$s'_{i_0, j_1, \ldots, j_{p-1}}$$를 $$i_0$$을 고정한 $$(p-1)$$-cochain $$\alpha' \in \check{C}^{p-1}(\{U_i\}_{i \neq i_0}, \mathcal{F})$$로 보면 $$d\alpha' = 0$$, 즉 $$\alpha'$$는 차수 $$p-1$$의 cocycle이다. 차수에 대한 귀납 가정에 의해 적당한 $$\gamma' \in \check{C}^{p-2}(\{U_i\}_{i \neq i_0}, \mathcal{F})$$가 존재하여 $$\alpha' = d\gamma'$$이다.
+$$(d^{p-1} s^p(t))_{j_0 \cdots j_p}\vert_{U_{j_0 \cdots j_p}} = \sum_{k=0}^{p} (-1)^k (s^p(t))_{j_0 \cdots \hat{j}_k \cdots j_p}\vert_{U_{j_0 \cdots j_p}}$$
 
-마지막으로 $$\gamma'$$로부터 $$\mathcal{U}_0$$ 위의 $$(p-1)$$-cochain $$\tilde{\beta} \in \check{C}^{p-1}(\mathcal{U}_0, \mathcal{F})$$를
+이고, flasque 확장의 정의에 의해 각 항은 restriction 이후 단순화된다. $$k = 0$$일 때 $$t_{i_0 j_1 \cdots j_p}\vert_{U_{j_0 \cdots j_p}}$$이고, $$1 \leq k \leq p$$일 때 $$(-1)^k t_{i_0 j_0 \cdots \hat{j}_k \cdots j_p}\vert_{U_{j_0 \cdots j_p}}$$이다. 따라서
 
-$$\tilde{\beta}_{i_0, j_1, \ldots, j_{p-2}} = -\gamma'_{j_1, \ldots, j_{p-2}}, \qquad \tilde{\beta}_{j_0, \ldots, j_{p-1}} = 0 \;\; (i_0 \notin \{j_0, \ldots, j_{p-1}\})$$
+$$(d^{p-1} s^p(t))\vert = t_{i_0 j_1 \cdots j_p}\vert + \sum_{k=1}^{p} (-1)^k t_{i_0 j_0 \cdots \hat{j}_k \cdots j_p}\vert$$
 
-으로 정의하면, $$i_0$$을 포함하지 않는 $$p$$-tuple에서 $$(d\tilde{\beta}) = 0$$이고 $$i_0$$을 포함하는 $$(i_0, j_1, \ldots, j_{p-1})$$에서
+이다 (모든 restriction은 $$U_{j_0 \cdots j_p}$$ 위에서 취한다). 한편 $$s^{p+1}$$의 정의에 의해
 
-$$(d\tilde{\beta})_{i_0, j_1, \ldots, j_{p-1}} = \alpha'_{j_1, \ldots, j_{p-1}} = s'_{i_0, j_1, \ldots, j_{p-1}}$$
+$$(s^{p+1} d^p(t))_{j_0 \cdots j_p}\vert_{U_{j_0 \cdots j_p}} = d^p(t)_{i_0 j_0 \cdots j_p}\vert_{U_{j_0 \cdots j_p}}$$
 
-이 되어 $$d\tilde{\beta} = s'$$이다. 따라서 $$s = d(\beta' + \tilde{\beta})$$이고, $$s$$는 coboundary이다.
+이고, Čech differential의 정의에 의해 $$(i_0, j_0, \ldots, j_p)$$에서 각 index를 생략하는 교대합을 $$U_{j_0 \cdots j_p}$$ 위에서 restriction하면
+
+$$d^p(t)_{i_0 j_0 \cdots j_p}\vert = t_{j_0 \cdots j_p} - t_{i_0 j_1 \cdots j_p}\vert + \sum_{m=1}^{p} (-1)^{m+1} t_{i_0 j_0 \cdots \hat{j}_m \cdots j_p}\vert$$
+
+이 된다. 여기서 첫 항은 $$i_0$$를 생략한 것이고, 두 번째 항은 $$j_0$$를 생략한 것이며, 나머지는 $$j_m$$을 생략한 것이다. 두 식을 더하면
+
+$$(d^{p-1}s^p + s^{p+1}d^p)(t)\vert = t_{j_0 \cdots j_p} + \bigl[t_{i_0 j_1 \cdots j_p}\vert - t_{i_0 j_1 \cdots j_p}\vert\bigr] + \sum_{m=1}^{p} \bigl[(-1)^m + (-1)^{m+1}\bigr] t_{i_0 j_0 \cdots \hat{j}_m \cdots j_p}\vert = t_{j_0 \cdots j_p}$$
+
+이고, $$\mathcal{F}(U_{j_0 \cdots j_p}) \to \mathcal{F}(U_{j_0 \cdots j_p})$$가 injective이므로 $$(d^{p-1}s^p + s^{p+1}d^p)(t) = t$$를 얻는다. 따라서 항등사상이 homotopic to zero이므로 complex는 양의 차수에서 exact하고
+
+$$\check{H}^p(\mathcal{U}, \mathcal{F}) = 0 \quad (p > 0)$$
+
+이다.
 
 </details>
 
