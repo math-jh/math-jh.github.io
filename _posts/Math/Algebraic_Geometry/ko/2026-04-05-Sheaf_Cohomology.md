@@ -249,11 +249,19 @@ $$s_{i_0 j} = s_{i_0 k} - s_{jk} = s_{i_0 k} - (t_k - t_j) = (s_{i_0 k} + t_k) -
 
 을 얻는다. 따라서 $$\tau_j := t_j + s_{j i_0}$$는 $$U_{i_0} \cap U_j$$ 위에서 $$j$$에 무관한 값을 가짐, 즉 $$\bigcup_{j \neq i_0}(U_{i_0} \cap U_j)$$ 위에 잘 정의된 section $$\tau$$가 존재한다. $$\mathcal{F}$$가 flasque이므로 이를 $$U_{i_0}$$ 전체로 extend할 수 있고, 이를 $$t_{i_0}$$로 삼으면 $$s_{i_0 j} = t_{j} - t_{i_0}$$가 모든 $$j \neq i_0$$에 대해 성립한다 (여기서 대칭 확장에 의해 $$s_{j i_0} = -s_{i_0 j}$$를 사용하였다). 따라서 모든 $$i, j \in I_0$$에 대해 $$s_{ij} = t_j - t_i$$이고, $$s = dt$$이다.
 
-***$$p > 1$$인 경우.*** Cocycle $$s \in \check{Z}^p(\mathcal{U}_0, \mathcal{F})$$가 주어졌을 때, index $$i_0$$를 고정하고 $$\mathcal{U}' = \{U_i\}_{i \in I_0 \setminus \{i_0\}}$$를 생각하자. $$\lvert I_0 \setminus \{i_0\}\rvert = n - 1 < n$$이므로, $$\mathcal{U}'$$에 대한 귀납 가정이 성립한다.
+$$p > 1$$인 경우. 같은 $$i_0$$와 $$\mathcal{U}'$$에서, 귀납 가정에 의해 $$s$$의 $$\mathcal{U}'$$ 제한은 coboundary이다: 적당한 $$\beta' \in \check{C}^{p-1}(\mathcal{U}', \mathcal{F})$$가 존재하여 $$s\vert_{\mathcal{U}'} = d\beta'$$이며, 이를 $$i_0$$을 포함하는 교집합에서 0으로 확장하여 $$\check{C}^{p-1}(\mathcal{U}_0, \mathcal{F})$$의 원소로 삼는다.
 
-**첫 번째 단계: 제한 cocycle의 trivialization.** $$s$$를 $$\mathcal{U}'$$로 제한한 $$s\vert_{\mathcal{U}'} \in \check{Z}^p(\mathcal{U}', \mathcal{F})$$는 차수 $$p > 0$$인 cocycle이고, $$\mathcal{U}'$$에 대한 귀납 가정에 의해 coboundary이다. 즉, 적당한 $$\beta' \in \check{C}^{p-1}(\mathcal{U}', \mathcal{F})$$가 존재하여 $$s\vert_{\mathcal{U}'} = d\beta'$$이다. 이 $$\beta'$$를 $$i_0$$을 포함하는 교집합에서는 0으로 정의하여 $$\check{C}^{p-1}(\mathcal{U}_0, \mathcal{F})$$의 원소로 확장하자.
+이제 $$s' := s - d\beta'$$를 정의하자. $$s'$$의 $$i_0$$을 포함하지 않는 성분은 모두 0이므로, $$ds'$$에서 $$i_0$$을 포함하는 성분에 기여하는 것은 $$i_0$$을 포함하는 $$s'$$ 성분뿐이다. 따라서 $$s'_{i_0, j_1, \ldots, j_{p-1}}$$를 $$i_0$$을 고정한 $$(p-1)$$-cochain $$\alpha' \in \check{C}^{p-1}(\{U_i\}_{i \neq i_0}, \mathcal{F})$$로 보면 $$d\alpha' = 0$$, 즉 $$\alpha'$$는 차수 $$p-1$$의 cocycle이다. 차수에 대한 귀납 가정에 의해 적당한 $$\gamma' \in \check{C}^{p-2}(\{U_i\}_{i \neq i_0}, \mathcal{F})$$가 존재하여 $$\alpha' = d\gamma'$$이다.
 
-**두 번째 단계: 차수 귀납.** 이제 $$s' := s - d\beta'$$를 정의하자. 첫 번째 단계에 의해 $$s'$$의 $$i_0$$을 포함하지 않는 모든 성분은 0이다. cocycle condition $$ds = 0$$이고 $$d(d\beta') = 0$$이므로 $$s'$$도 cocycle이다. 대칭 확장된 cocycle condition에서 $$i_0$$ 자리에 대한 항을 분리하면, $$s'$$가 $$i_0$$을 포함하지 않는 성분에서 0이므로 $$ds'$$에서 $$i_0$$을 포함하는 성분에 기여하는 것은 $$i_0$$을 포함하는 $$s'$$ 성분뿐이다. 따라서 $$s'_{i_0, i_1, \ldots, i_p}$$를 $$i_0$$을 고정한 $$(p-1)$$-cochain $$\alpha' \in \check{C}^{p-1}(\{U_i\}_{i \neq i_0}, \mathcal{F})$$로 볼 때, $$d\alpha' = 0$$이 성립한다. 즉, $$\alpha'$$는 진짜 cocycle이다. 차수 $$p - 1 < p$$이므로 차수에 대한 귀납 가정에 의해 $$\alpha' = d\gamma'$$ for some $$\gamma' \in \check{C}^{p-2}(\{U_i\}_{i \neq i_0}, \mathcal{F})$$이다. 이 $$\gamma'$$를 $$i_0$$을 포함하는 교집합에서는 0으로 정의하여 확장하면, $$s' = d\alpha' = d(d\gamma') = 0$$에서 $$s = d\beta'$$이고 따라서 $$s$$는 coboundary이다.
+마지막으로 $$\gamma'$$로부터 $$\mathcal{U}_0$$ 위의 $$(p-1)$$-cochain $$\tilde{\beta} \in \check{C}^{p-1}(\mathcal{U}_0, \mathcal{F})$$를
+
+$$\tilde{\beta}_{i_0, j_1, \ldots, j_{p-2}} = -\gamma'_{j_1, \ldots, j_{p-2}}, \qquad \tilde{\beta}_{j_0, \ldots, j_{p-1}} = 0 \;\; (i_0 \notin \{j_0, \ldots, j_{p-1}\})$$
+
+으로 정의하면, $$i_0$$을 포함하지 않는 $$p$$-tuple에서 $$(d\tilde{\beta}) = 0$$이고 $$i_0$$을 포함하는 $$(i_0, j_1, \ldots, j_{p-1})$$에서
+
+$$(d\tilde{\beta})_{i_0, j_1, \ldots, j_{p-1}} = \alpha'_{j_1, \ldots, j_{p-1}} = s'_{i_0, j_1, \ldots, j_{p-1}}$$
+
+이 되어 $$d\tilde{\beta} = s'$$이다. 따라서 $$s = d(\beta' + \tilde{\beta})$$이고, $$s$$는 coboundary이다.
 
 </details>
 
