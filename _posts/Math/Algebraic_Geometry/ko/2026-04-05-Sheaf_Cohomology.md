@@ -227,32 +227,33 @@ $$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U) \cong \Hom_{\Ab}(\mathbb{Z}, \
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$p$$에 대한 귀납법으로 보인다. 각 $$p$$에 대하여, open cover의 원소 개수 $$\lvert I\rvert$$에 대한 귀납법으로 $$\check{H}^p(\mathcal{U}, \mathcal{F}) = 0$$임을 보인다.
-
 [정의 3](#def3)에서 $$\check{C}^p(\mathcal{U}, \mathcal{F})$$는 strictly ordered index $$i_0 < \cdots < i_p$$로 정의되었으므로, cocycle의 성분 또한 $$s_{i_0 \cdots i_p}$$ ($$i_0 < \cdots < i_p$$)만으로 주어진다. 편의를 위해 이 성분들을 모든 순열에 대해
 
 $$s_{\sigma(i_0) \cdots \sigma(i_p)} = \operatorname{sgn}(\sigma) \cdot s_{i_0 \cdots i_p}$$
 
 으로 대칭 확장하자. $$d^2 = 0$$의 성질에 의해 이 대칭 확장은 cocycle condition을 보존하며, 이를 기존의 친숙한 형태로 변환한다: 예를 들어 $$p = 1$$의 경우, 대칭 확장에 의해 cocycle condition은 $$s_{ij} + s_{jk} = s_{ik}$$ (on $$U_i \cap U_j \cap U_k$$)의 형태가 되며, 특히 $$s_{ji} = -s_{ij}$$를 얻는다.
 
-**$$p$$에 대한 귀납법.** $$p$$에 대한 귀납 가정으로, 임의의 open cover $$\mathcal{V} = \{V_j\}_{j \in J}$$와 임의의 $$q < p$$에 대해 $$\check{H}^q(\mathcal{V}, \mathcal{F}) = 0$$이 성립한다고 가정한다.
+우리가 보일 것은 다음이다: 임의의 open cover $$\mathcal{U} = \{U_i\}_{i \in I}$$와 cocycle $$s \in \check{Z}^p(\mathcal{U}, \mathcal{F})$$ ($$p > 0$$)에 대해, $$s$$는 coboundary이다. 이를 $$p$$에 대한 귀납법으로 보인다.
 
-***귀납 단계: 고정된 $$p$$에 대해 $$\lvert I\rvert$$에 대한 귀납법.*** $$p$$를 고정하고, open cover $$\mathcal{U} = \{U_i\}_{i \in I}$$의 원소 개수 $$\lvert I\rvert$$에 대한 귀납법으로 모든 cocycle이 coboundary임을 보인다.
+**유한 subcover로의 환원.** Cocycle $$s$$가 주어졌을 때, 실제로 non-zero 성분에 참여하는 index만 모아 유한 부분집합 $$I_0 \subset I$$을 정의하자. 구체적으로, $$s_{i_0 \cdots i_p} \neq 0$$인 $$p+1$$-tuple $$(i_0, \ldots, i_p)$$에서 등장하는 모든 index를 모아 $$I_0$$를 만든다. Cocycle $$s$$는 $$I$$ 전체가 아닌 유한집합 $$I_0$$에만 의존하므로, $$s$$를 $$\mathcal{U}_0 = \{U_i\}_{i \in I_0}$$에 대한 cocycle으로 간주할 수 있다. 즉, $$s \in \check{Z}^p(\mathcal{U}_0, \mathcal{F})$$이다. 따라서 $$s$$가 $$\mathcal{U}_0$$에 대한 coboundary임을 보이면 충분하다.
 
-**$$\lvert I\rvert = 1$$인 경우.** 모든 $$p > 0$$에 대해 $$\check{C}^p(\mathcal{U}, \mathcal{F}) = 0$$이므로 자명하다.
+이제 $$\mathcal{U}_0$$는 유한 open cover이므로, 원소 개수 $$\lvert I_0\rvert = n$$에 대한 귀납법으로 진행한다.
 
-**$$\lvert I\rvert = n > 1$$인 경우.** 우선 $$p = 1$$을 처리한다. Cocycle $$s \in \check{Z}^1(\mathcal{U}, \mathcal{F})$$가 주어졌다 하자. 임의의 $$i_0 \in I$$를 고르자. $$\lvert I \setminus \{i_0\}\rvert = n-1 < n$$이므로, $$\{U_i\}_{i \neq i_0}$$에 대한 귀납 가정에 의해 restriction은 coboundary이므로, 적당한 $$(t_i)_{i \neq i_0}$$가 존재하여 모든 $$i, j \neq i_0$$에 대해 $$s_{ij} = t_j - t_i$$ on $$U_i \cap U_j$$이다. 이제 $$s_{i_0 j}$$에 대해, cocycle condition $$s_{i_0 j} + s_{jk} = s_{i_0 k}$$로부터
+**$$n = 1$$인 경우.** 모든 $$p > 0$$에 대해 $$\check{C}^p(\mathcal{U}_0, \mathcal{F}) = 0$$이므로 자명하다.
+
+**$$n > 1$$인 경우.** 임의의 $$i_0 \in I_0$$를 고르고, $$\mathcal{U}' = \{U_i\}_{i \in I_0 \setminus \{i_0\}}$$를 생각하자. $$\lvert I_0 \setminus \{i_0\}\rvert = n - 1 < n$$이므로, $$\mathcal{U}'$$에 대한 귀납 가정이 성립한다.
+
+***$$p = 1$$인 경우.*** Cocycle $$s \in \check{Z}^1(\mathcal{U}_0, \mathcal{F})$$가 주어졌다. 귀납 가정에 의해 $$s$$를 $$\mathcal{U}'$$로 제한한 것은 coboundary이므로, 적당한 $$(t_i)_{i \in I_0 \setminus \{i_0\}}$$가 존재하여 모든 $$i, j \in I_0 \setminus \{i_0\}$$에 대해 $$s_{ij} = t_j - t_i$$ on $$U_i \cap U_j$$이다. 이제 $$s_{i_0 j}$$에 대해, cocycle condition $$s_{i_0 j} + s_{jk} = s_{i_0 k}$$ (on $$U_{i_0} \cap U_j \cap U_k$$)으로부터
 
 $$s_{i_0 j} = s_{i_0 k} - s_{jk} = s_{i_0 k} - (t_k - t_j) = (s_{i_0 k} + t_k) - t_j$$
 
-을 얻는다. 따라서 $$\tau_j := t_j + s_{i_0 j}$$는 $$U_{i_0} \cap U_j$$ 위에서 $$j$$에 무관한 값을 가짐, 즉 $$\bigcup_{j \neq i_0}(U_{i_0} \cap U_j)$$ 위에 잘 정의된 section $$\tau$$가 존재한다. $$\mathcal{F}$$가 flasque이므로 이를 $$U_{i_0}$$ 전체로 extend할 수 있고, 이를 $$t_{i_0}$$로 삼으면 $$s_{i_0 j} = t_j - t_{i_0}$$가 성립한다. 따라서 모든 $$i, j$$에 대해 $$s_{ij} = t_j - t_i$$이고, $$\check{H}^1(\mathcal{U}, \mathcal{F}) = 0$$이다.
+을 얻는다. 따라서 $$\tau_j := t_j + s_{j i_0}$$는 $$U_{i_0} \cap U_j$$ 위에서 $$j$$에 무관한 값을 가짐, 즉 $$\bigcup_{j \neq i_0}(U_{i_0} \cap U_j)$$ 위에 잘 정의된 section $$\tau$$가 존재한다. $$\mathcal{F}$$가 flasque이므로 이를 $$U_{i_0}$$ 전체로 extend할 수 있고, 이를 $$t_{i_0}$$로 삼으면 $$s_{i_0 j} = t_{j} - t_{i_0}$$가 모든 $$j \neq i_0$$에 대해 성립한다 (여기서 대칭 확장에 의해 $$s_{j i_0} = -s_{i_0 j}$$를 사용하였다). 따라서 모든 $$i, j \in I_0$$에 대해 $$s_{ij} = t_j - t_i$$이고, $$s = dt$$이다.
 
-이번에는 $$p > 1$$을 처리한다. Cocycle $$s \in \check{Z}^p(\mathcal{U}, \mathcal{F})$$가 주어졌을 때, 한 index $$i_0$$를 고정하자. $$s_{i_0, i_1, \ldots, i_p}$$를 $$(i_1, \ldots, i_p)$$에 대한 $$(p-1)$$-cochain으로 생각하면, $$s$$가 cocycle이므로 이것은 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle을 이룬다. $$\lvert I \setminus \{i_0\}\rvert = n-1 < n$$이므로 $$p$$에 대한 귀납 가정 ($$p-1 < p$$)에 의해 이것은 coboundary이다. 즉, 적당한 $$(p-2)$$-cochain $$\alpha$$가 존재하여
+***$$p > 1$$인 경우.*** Cocycle $$s \in \check{Z}^p(\mathcal{U}_0, \mathcal{F})$$가 주어졌을 때, index $$i_0$$를 고정하고 $$\mathcal{U}' = \{U_i\}_{i \in I_0 \setminus \{i_0\}}$$를 생각하자. $$\lvert I_0 \setminus \{i_0\}\rvert = n - 1 < n$$이므로, $$\mathcal{U}'$$에 대한 귀납 가정이 성립한다.
 
-$$s_{i_0, i_1, \ldots, i_p} = (d\alpha)_{i_0, i_1, \ldots, i_p} \qquad (i_0 < i_1 < \cdots < i_p)$$
+**첫 번째 단계: 제한 cocycle의 trivialization.** $$s$$를 $$\mathcal{U}'$$로 제한한 $$s\vert_{\mathcal{U}'} \in \check{Z}^p(\mathcal{U}', \mathcal{F})$$는 차수 $$p > 0$$인 cocycle이고, $$\mathcal{U}'$$에 대한 귀납 가정에 의해 coboundary이다. 즉, 적당한 $$\beta' \in \check{C}^{p-1}(\mathcal{U}', \mathcal{F})$$가 존재하여 $$s\vert_{\mathcal{U}'} = d\beta'$$이다. 이 $$\beta'$$를 $$i_0$$을 포함하는 교집합에서는 0으로 정의하여 $$\check{C}^{p-1}(\mathcal{U}_0, \mathcal{F})$$의 원소로 확장하자.
 
-on $$U_{i_0} \cap \cdots \cap U_{i_p}$$이다. 여기서 $$\alpha$$의 각 성분은 $$i_0$$를 포함하지 않는 교집합들 위에 정의되어 있다. 이제 $$s - d\alpha$$를 생각하면, 이 cochain의 $$i_0$$을 포함하는 성분은 모두 0이므로, $$s - d\alpha$$는 사실상 $$\{U_i\}_{i \neq i_0}$$에 대한 $$(p-1)$$-cocycle으로 볼 수 있다. $$\lvert I \setminus \{i_0\}\rvert = n-1 < n$$이므로 $$p$$에 대한 귀납 가정에 의해 이것도 coboundary이다. 즉, $$s - d\alpha = d\beta$$ for some $$(p-2)$$-cochain $$\beta$$이고, 따라서 $$s = d(\alpha + \beta)$$이다. 결국 $$s$$ 자체도 coboundary이다.
-
+**두 번째 단계: 차수 귀납.** 이제 $$s' := s - d\beta'$$를 정의하자. 첫 번째 단계에 의해 $$s'$$의 $$i_0$$을 포함하지 않는 모든 성분은 0이다. cocycle condition $$ds = 0$$이고 $$d(d\beta') = 0$$이므로 $$s'$$도 cocycle이다. 대칭 확장된 cocycle condition에서 $$i_0$$ 자리에 대한 항을 분리하면, $$s'$$가 $$i_0$$을 포함하지 않는 성분에서 0이므로 $$ds'$$에서 $$i_0$$을 포함하는 성분에 기여하는 것은 $$i_0$$을 포함하는 $$s'$$ 성분뿐이다. 따라서 $$s'_{i_0, i_1, \ldots, i_p}$$를 $$i_0$$을 고정한 $$(p-1)$$-cochain $$\alpha' \in \check{C}^{p-1}(\{U_i\}_{i \neq i_0}, \mathcal{F})$$로 볼 때, $$d\alpha' = 0$$이 성립한다. 즉, $$\alpha'$$는 진짜 cocycle이다. 차수 $$p - 1 < p$$이므로 차수에 대한 귀납 가정에 의해 $$\alpha' = d\gamma'$$ for some $$\gamma' \in \check{C}^{p-2}(\{U_i\}_{i \neq i_0}, \mathcal{F})$$이다. 이 $$\gamma'$$를 $$i_0$$을 포함하는 교집합에서는 0으로 정의하여 확장하면, $$s' = d\alpha' = d(d\gamma') = 0$$에서 $$s = d\beta'$$이고 따라서 $$s$$는 coboundary이다.
 
 </details>
 
