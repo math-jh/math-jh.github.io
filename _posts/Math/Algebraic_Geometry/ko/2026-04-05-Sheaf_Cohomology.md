@@ -316,22 +316,43 @@ $$\Delta_X\hookrightarrow X\times X$$
 
 Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 통한 cohomology의 계산이다. 우리는 이번 섹션에서 구체적인 계산으로 이 글을 마무리하기로 한다. 지금 소개하는 명제들은 일반적인 위상수학적 설정에서 성립하지만, 우리는 주로 variety와 quasi-coherent sheaf에의 적용을 염두에 둘 것이므로 이 카테고리에 담았다. 
 
+연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$를 고정하고, $$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡자. 그럼 각각의 $$p\geq 0$$에 대하여, $$\mathcal{I}^p$$의 direct image sheaf $$f_\ast \mathcal{I}^p$$를 $$Y$$ 위에서 injectively resolve하여 다음의 injective resolution 
+
+$$f_* \mathcal{I}^p \to \mathcal{J}^{p,\bullet}$$
+
+를 얻어낼 수 있다. 이로부터 double complex
+
+$$K^{p,q} = \Gamma(Y, \mathcal{J}^{p,q})$$
+
+를 정의할 수 있다. 여기서 $$q$$-방향의 differential은 $$\mathcal{J}^{p,\bullet}$$의 resolution differential이고, $$p$$-방향의 differential은 $$\mathcal{I}^\bullet$$에서 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)를 통해 유도된 것이다. 
+
+이제 다시 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11)을 따라 두 가지 filtration을 각각 걸어주자. 우선 $$p$$-filtration(graded piece가 각 행 $$K^{p,\bullet}$$인 filtration)의 경우, 먼저 $$q$$-방향의 cohomology를 취하므로
+
+$$E_1^{p,q}=H^q(K^{p,\bullet})$$
+
+이다. 그런데 $$\mathcal{J}^{p,\bullet}$$은 $$f_\ast \mathcal{I}^p$$의 injective resolution이므로, $$K^{p,\bullet}=\Gamma(Y, \mathcal{J}^{p,\bullet})$$의 cohomology는 $$H^q(Y, f_\ast \mathcal{I}^p)$$를 계산한다. 여기서 $$f_\ast$$는 injective sheaf를 보존하는데, 그 이유는 $$f^{-1} \dashv f_\ast$$이고 inverse image functor $$f^{-1}$$이 exact하기 때문이다(exact functor의 right adjoint는 injective를 보존한다). 따라서 $$f_\ast \mathcal{I}^p$$는 injective이고, $$q>0$$일 경우
+
+$$H^q(Y, f_\ast \mathcal{I}^p)=0$$
+
+이 성립하며, 따라서 $$E_2$$ page
+
+$$E_2^{p,q}=\begin{cases}H^p(X, \mathcal{F})&\text{if $q=0$}\\0&\text{otherwise}\end{cases}$$
+
+에서 spectral sequence가 stabilize하여 total cohomology는 $$H^\bullet(X, \mathcal{F})$$가 됨을 안다. 한편 $$q$$-filtration(graded piece가 각 열 $$K^{\bullet,q}$$인 filtration)의 경우, $$p$$-방향의 cohomology를 먼저 취하게 되므로 우리가 구하는 것은 $$R^qf_\ast \mathcal{F}$$의 injective resolution이 되고, 따라서 $$E_2$$ page는
+
+$$E_2^{p,q}=H^p(Y, R^q f_\ast \mathcal{F})$$
+
+가 됨을 안다. 따라서 다음을 얻는다.
+
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13 (Leray Spectral Sequence)**</ins> 연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, Leray spectral sequence
+<ins id="prop13">**명제 13 (Leray Spectral Sequence)**</ins> 연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, 다음의 $$E_2$$ page를 가지는 spectral sequence가 존재한다.
 
 $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
 
-이 존재한다. 여기서 $$R^q f_* \mathcal{F}$$는 direct image functor $$f_*$$의 $$q$$번째 right derived functor이다. pushforward functor에 대해서는 ([\[위상수학\] §준층, ⁋예시 8](/ko/math/topology/presheaves#ex8))을 참고하라.
+여기서 $$R^q f_* \mathcal{F}$$는 direct image functor $$f_*$$의 $$q$$번째 right derived functor이다. pushforward functor에 대해서는 ([\[위상수학\] §준층, ⁋예시 8](/ko/math/topology/presheaves#ex8))을 참고하라.
 
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명 개요</summary>
-
-$$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡자. 이때 double complex $$C^{p,q} = \Gamma(Y, f_* \mathcal{I}^q)^{(p)}$$를 생각한다. 여기서 $$(-)^{(p)}$$는 $$\Gamma(Y, -)$$의 $$p$$번째 derived functor를 의미한다. 이 double complex의 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology에 수렴함은 ([\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11))의 프레임워크에 의한다.
-
-</details>
 
 기하적 직관으로 이 spectral sequence는 다음을 말한다. $$X$$ 위의 cohomology를 계산하려면, $$Y$$ 위에서의 cohomology를 먼저 계산하고, 각 점의 "fiber 위에서의 cohomology"를 high sheaf $$R^q f_* \mathcal{F}$$로 기억한 뒤, 이들을 $$Y$$ 위에서 합성하면 된다는 것이다. 즉, $$f$$가 fiber bundle과 같은 좋은 구조를 가질 때, $$X$$의 cohomology는 $$Y$$의 cohomology와 fiber의 cohomology의 합성으로 분해된다.
 
