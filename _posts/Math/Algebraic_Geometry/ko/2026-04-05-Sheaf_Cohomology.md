@@ -312,33 +312,93 @@ $$\Delta_X\hookrightarrow X\times X$$
 
 이 $$X\times X$$의 *closed* immersion이라면, 이 조건이 성립하는 것을 보일 수 있으며 이런 경우 $$X$$가 *separated* variety라 부른다. 이는 (그 정의에서 알 수 있듯) Hausdorff 조건의 Zariski topology 버전이라 할 수 있으며 그만큼 합당한 조건이며, 현재 우리의 정의와 같이 quasi-projective variety를 variety라 부른다면 이 조건은 자동으로 충족된다. 즉, 현재 우리의 언어에서 이 논증은 임의의 variety 위에 정의된 quasi-coherent sheaf에 대해서는 Čech cohomology와 sheaf cohomology가 일치한다는 말이 되고, 뿐만 아니라 [정리 11](#thm11)의 전제조건을 만족하는 open cover $$\mathcal{U}$$를 잡는다면 direct limit을 계산할 필요없이 해당 open cover에 대한 Čech cohomology를 계산하면 충분하다는 것을 보여준다. 
 
+## Godement Resolution
+
+[정의 1](#def1)에서 sheaf cohomology를 injective resolution을 통해 정의하였으나, injective resolution을 명시적으로 구성하는 것은 일반적으로 매우 어렵다. 이번 섹션에서는 모든 sheaf에 대하여 functorial하고 canonical하게 flasque resolution을 구성하는 방법을 소개한다. 이를 *Godement resolution*이라 부르며, injective resolution과 달리 명시적으로 기술될 수 있으므로 spectral sequence의 증명 등에서 유용하게 활용된다.
+
+<div class="definition" markdown="1">
+
+<ins id="def13">**정의 13**</ins> 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$에 대하여, *Godement sheaf* $$C^0(\mathcal{F})$$를 각 열린집합 $$U \subset X$$에 대하여
+
+$$C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x$$
+
+으로 정의한다. 여기서 $$\mathcal{F}_x$$는 $$\mathcal{F}$$의 $$x$$에서의 stalk이다. Sheaf $$\mathcal{F}$$에서 $$C^0(\mathcal{F})$$로의 natural map은 각 $$x$$에서의 identity $$\mathcal{F}_x \to \mathcal{F}_x$$에 의해 주어진다.
+
+</div>
+
+$$C^0(\mathcal{F})$$가 sheaf임은 자명하다: restriction map은 product의 projection이며, sheaf condition은 $$C^0(\mathcal{F})(U)$$의 원소가 stalk별로 주어진다는 점에서 자명하게 만족된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop14">**명제 14**</ins> Godement sheaf $$C^0(\mathcal{F})$$는 flasque sheaf이다. 나아가, $$\mathcal{F} \mapsto C^0(\mathcal{F})$$는 exact functor이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Flasque임을 보이자. 열린집합 $$V \subset U$$에 대하여, restriction map $$C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x \to \prod_{x \in V} \mathcal{F}_x = C^0(\mathcal{F})(V)$$는 projection이므로 surjective이다. 따라서 $$C^0(\mathcal{F})$$는 flasque이다.
+
+Exactness는 $$C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x$$에서 따른다: stalk functor $$\mathcal{F} \mapsto \mathcal{F}_x$$는 exact이며, abelian group의 product는 exact functor이므로 $$C^0$$는 exact하다.
+
+</details>
+
+Godement sheaf를 반복적으로 적용하여 flasque resolution을 구성할 수 있다. $$\mathcal{F} \to C^0(\mathcal{F})$$의 cokernel sheaf를 $$\mathcal{Q}^1$$이라 하자. 그럼 short exact sequence
+
+$$0 \to \mathcal{F} \to C^0(\mathcal{F}) \to \mathcal{Q}^1 \to 0$$
+
+를 얻으며, 여기에 다시 $$C^0$$을 적용하면
+
+$$0 \to \mathcal{Q}^1 \to C^0(\mathcal{Q}^1) \to \mathcal{Q}^2 \to 0$$
+
+을 얻는다. 이 과정을 반복하여 다음의 열을 얻는다.
+
+$$0 \to \mathcal{F} \to C^0(\mathcal{F}) \to C^0(\mathcal{Q}^1) \to C^0(\mathcal{Q}^2) \to \cdots$$
+
+이를 간략히 $$0 \to \mathcal{F} \to \mathcal{G}^0(\mathcal{F}) \to \mathcal{G}^1(\mathcal{F}) \to \cdots$$로 표기하고, 이를 $$\mathcal{F}$$의 *Godement resolution*이라 부른다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop15">**명제 15**</ins> Godement resolution $$\mathcal{G}^\bullet(\mathcal{F})$$는 $$\mathcal{F}$$의 flasque resolution이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[명제 14](#prop14)에서 $$C^0$$가 flasque sheaf를 준다는 것을 보였으므로, 각 $$\mathcal{G}^n(\mathcal{F}) = C^0(\mathcal{Q}^n)$$도 flasque이다.
+
+Resolution의 exactness는 construction에 의해 자명하다: 각 단계에서 $$\mathcal{Q}^n = \operatorname{coker}(\mathcal{G}^{n-1} \to \mathcal{G}^n)$$이므로 $$\ker(\mathcal{G}^n \to \mathcal{G}^{n+1}) = \im(\mathcal{G}^{n-1} \to \mathcal{G}^n)$$이 성립한다.
+
+</details>
+
+Godement resolution의 핵심적 장점은 functoriality와 canonicity이다. Injective resolution은 일반적으로 선택을 필요로 하지만, Godement resolution은 각 sheaf에 대해 canonically하고 functorial하게 결정된다. 즉, sheaf morphism $$\varphi: \mathcal{F} \to \mathcal{G}$$는 natural하게 resolution morphism $$\mathcal{G}^\bullet(\varphi): \mathcal{G}^\bullet(\mathcal{F}) \to \mathcal{G}^\bullet(\mathcal{G})$$를 유도한다. 또한 $$\mathcal{G}^\bullet(\mathcal{F})$$의 각 항이 flasque이므로 $$\Gamma(X, -)$$-acyclic이며, 따라서 $$H^i(X, \mathcal{F})$$를 $$\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))$$의 cohomology로 계산할 수 있다.
+
+나아가 flasque sheaf의 direct image도 flasque이므로, 연속함수 $$f: X \to Y$$에 대하여 $$f_* \mathcal{G}^p(\mathcal{F})$$도 flasque, 특히 $$\Gamma(Y, -)$$-acyclic이다. 이 성질은 뒤에서 spectral sequence를 논의할 때 핵심적으로 활용된다.
+
 ## Spectral Sequence
 
 Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 통한 cohomology의 계산이다. 우리는 이번 섹션에서 구체적인 계산으로 이 글을 마무리하기로 한다. 지금 소개하는 명제들은 일반적인 위상수학적 설정에서 성립하지만, 우리는 주로 variety와 quasi-coherent sheaf에의 적용을 염두에 둘 것이므로 이 카테고리에 담았다. 
 
-연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$를 고정하고, $$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡자. 그럼 각각의 $$p\geq 0$$에 대하여, $$\mathcal{I}^p$$의 direct image sheaf $$f_\ast \mathcal{I}^p$$를 $$Y$$ 위에서 injectively resolve하여 다음의 injective resolution 
-
-$$f_* \mathcal{I}^p \to \mathcal{J}^{p,\bullet}$$
-
-를 얻어낼 수 있다. (여기서 $f_*$가 injective sheaf를 보존하는 것은 $f^{-1} \dashv f_*$이고 $f^{-1}$이 exact하기 때문이다: exact functor의 right adjoint는 injective를 보존한다.) 이로부터 double complex
+연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$를 고정하고, [명제 15](#prop15)에서 구성한 $$\mathcal{F}$$의 Godement resolution $$\mathcal{G}^\bullet(\mathcal{F})$$을 잡자. 각각의 $$p\geq 0$$에 대하여, $$\mathcal{G}^p(\mathcal{F})$$의 direct image sheaf $$f_\ast \mathcal{G}^p(\mathcal{F})$$를 $$Y$$ 위에서 injectively resolve하여 다음의 injective resolution $$f_* \mathcal{G}^p(\mathcal{F}) \to \mathcal{J}^{p,\bullet}$$를 얻어낼 수 있다. Godement resolution의 각 항이 flasque이며 flasque sheaf의 direct image는 다시 flasque이므로, 각 $$f_* \mathcal{G}^p(\mathcal{F})$$는 flasque, 특히 $$\Gamma(Y, -)$$-acyclic이다. 이로부터 double complex
 
 $$K^{p,q} = \Gamma(Y, \mathcal{J}^{p,q})$$
 
-를 정의할 수 있다. 여기서 $$q$$-방향의 differential은 $$\mathcal{J}^{p,\bullet}$$의 resolution differential이고, $$p$$-방향의 differential은 $$\mathcal{I}^\bullet$$에서 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)를 통해 유도된 것이다. 
+를 정의할 수 있다. 여기서 $$q$$-방향의 differential은 $$\mathcal{J}^{p,\bullet}$$의 resolution differential이고, $$p$$-방향의 differential은 $$\mathcal{G}^\bullet(\mathcal{F})$$에서 유도된 것이다. 
 
 이제 다시 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11)을 따라 두 가지 filtration을 각각 걸어주자. 우선 $$p$$-filtration, 즉 $F^s = \bigoplus_{p \geq s} K^{p,\bullet}$로 정의되는 filtration의 경우이다. 이때 graded piece는 $F^s/F^{s+1} \cong K^{s,\bullet}$이며, 먼저 $$q$$-방향의 cohomology를 취하므로
 
 $$E_1^{p,q}=H^q(K^{p,\bullet})$$
 
-이다. 그런데 $$\mathcal{J}^{p,\bullet}$$은 $$f_\ast \mathcal{I}^p$$의 injective resolution이므로, $$K^{p,\bullet}=\Gamma(Y, \mathcal{J}^{p,\bullet})$$의 cohomology는 $$H^q(Y, f_\ast \mathcal{I}^p)$$를 계산한다. 앞서 언급한 대로 $$f_\ast \mathcal{I}^p$$는 injective이므로, $$q>0$$일 경우
+이다. 그런데 $$\mathcal{J}^{p,\bullet}$$은 $$f_\ast \mathcal{G}^p(\mathcal{F})$$의 injective resolution이므로, $$K^{p,\bullet}=\Gamma(Y, \mathcal{J}^{p,\bullet})$$의 cohomology는 $$H^q(Y, f_\ast \mathcal{G}^p(\mathcal{F}))$$를 계산한다. 앞서 언급한 대로 $$f_\ast \mathcal{G}^p(\mathcal{F})$$는 flasque이므로 $$\Gamma(Y, -)$$-acyclic이고, $$q>0$$일 경우
 
-$$H^q(Y, f_\ast \mathcal{I}^p)=0$$
+$$H^q(Y, f_\ast \mathcal{G}^p(\mathcal{F}))=0$$
 
 이 성립하며, 따라서 $$E_2$$ page
 
 $$E_2^{p,q}=\begin{cases}H^p(X, \mathcal{F})&\text{if $q=0$}\\0&\text{otherwise}\end{cases}$$
 
-에서 spectral sequence가 stabilize하여 total cohomology는 $$H^\bullet(X, \mathcal{F})$$가 됨을 안다. 한편 $$q$$-filtration, 즉 $F^t = \bigoplus_{q \geq t} K^{\bullet,q}$로 정의되는 filtration의 경우이다. 이때 먼저 $$p$$-방향의 cohomology를 취하면, 각 $$q$$에 대하여 열 $$K^{\bullet,q}$$의 $$p$$-방향 cohomology는 $f_\ast \mathcal{I}^\bullet$에서 유도된 complex의 $q$-번째 항에서의 cohomology, 즉 $$R^q f_\ast \mathcal{F}$$의 injective resolution의 $$q$$-번째 항을 계산하게 된다. 따라서 $$E_2$$ page는
+에서 spectral sequence가 stabilize하여 total cohomology는 $$H^\bullet(X, \mathcal{F})$$가 됨을 안다. 한편 $$q$$-filtration, 즉 $F'^t = \bigoplus_{q \geq t} K^{\bullet,q}$로 정의되는 filtration의 경우이다. 이때 먼저 $$p$$-방향의 cohomology를 취하면, 각 $$q$$에 대하여 열 $$K^{\bullet,q}$$의 $$p$$-방향 cohomology는 $f_\ast \mathcal{G}^\bullet(\mathcal{F})$에서 유도된 complex의 $q$-번째 항에서의 cohomology, 즉 $$R^q f_\ast \mathcal{F}$$의 injective resolution의 $$q$-번째 항을 계산하게 된다. 따라서 $$E_2$$ page는
 
 $$E_2^{p,q}=H^p(Y, R^q f_\ast \mathcal{F})$$
 
@@ -346,7 +406,7 @@ $$E_2^{p,q}=H^p(Y, R^q f_\ast \mathcal{F})$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13 (Leray Spectral Sequence)**</ins> 연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, 다음의 $$E_2$$ page를 가지는 spectral sequence가 존재한다.
+<ins id="prop16">**명제 16 (Leray Spectral Sequence)**</ins> 연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, 다음의 $$E_2$$ page를 가지는 spectral sequence가 존재한다.
 
 $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
 
@@ -360,7 +420,7 @@ Leray spectral sequence의 가장 낮은 차원에서는 다음의 exact sequenc
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**따름정리 14** (Five-Term Exact Sequence)</ins> 연속 사상 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, Leray spectral sequence로부터 다음의 exact sequence를 얻는다.
+<ins id="prop17">**따름정리 17** (Five-Term Exact Sequence)</ins> 연속 사상 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, Leray spectral sequence로부터 다음의 exact sequence를 얻는다.
 
 $$0 \to H^1(Y, f_* \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_* \mathcal{F}) \overset{d_2}{\to} H^2(Y, f_* \mathcal{F}) \to H^2(X, \mathcal{F})$$
 
@@ -399,13 +459,13 @@ $$E_2^{0,1} \overset{d_2}{\to} E_2^{2,0} \to H^2(X, \mathcal{F})$$
 
 </details>
 
-이 exact sequence는 $$d_2$$-differential의 존재가 cohomology의 계산에 어떤 제약을 주는지를 보여주며, $$f$$가 good morphism일 때 (예를 들어 $$R^1 f_* \mathcal{F} = 0$$인 경우) $$H^i(X, \mathcal{F}) \cong H^i(Y, f_* \mathcal{F})$$라는 직관을 부분적으로 정당화한다.
+이 exact sequence는 $$d_2$$-differential의 존재가 cohomology의 계산에 어떤 제약을 주는지를 보여주며, $$f$$가 good morphism일 때 (예를 들어 $$R^1 f_* \mathcal{F} = 0$$인 경우) $$H^i(X, \mathcal{F}) \cong H^i(Y, f_* \mathcal{F})$$라는 직관을 부분적으로 정당화한다. 여기서 마지막 map $$H^2(Y, f_* \mathcal{F}) \to H^2(X, \mathcal{F})$$는 일반적으로 surjective가 아님에 주의하자. 이는 $$E_\infty^{0,2}$$의 존재, 즉 $$H^2(X, \mathcal{F})$$의 filtration에서 $$F^3 H^2 = 0$$이지만 $$F^2 H^2 = E_\infty^{2,0}$$에 의해 kernel이 존재할 수 있기 때문이다.
 
 세 번째로, Čech cohomology와 derived functor cohomology의 관계를 spectral sequence로 기술할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15** (Čech-to-Derived Functor Spectral Sequence)</ins> 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$와 open cover $$\mathcal{U}$$에 대하여, spectral sequence
+<ins id="prop18">**명제 18**</ins> (Čech-to-Derived Functor Spectral Sequence) 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$와 open cover $$\mathcal{U}$$에 대하여, spectral sequence
 
 $$E_2^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) \Rightarrow H^{p+q}(X, \mathcal{F})$$
 
@@ -414,9 +474,9 @@ $$E_2^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) \Rightarrow H
 </div>
 
 <details class="proof" markdown="1">
-<summary>증명 개요</summary>
+<summary>증명</summary>
 
-$$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡고, double complex $$C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{I}^q)$$를 구성한다. 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology $$H^{p+q}(X, \mathcal{F})$$에 수렴함은 ([\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11))의 프레임워크에 의한다.
+$$\mathcal{F}$$의 Godement resolution $$\mathcal{G}^\bullet(\mathcal{F})$$을 잡고, double complex $$C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{G}^q(\mathcal{F}))$$를 구성한다. 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology $$H^{p+q}(X, \mathcal{F})$$에 수렴함은 ([\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11))의 프레임워크에 의한다. Godement sheaf $$\mathcal{G}^q(\mathcal{F})$$가 flasque이므로 [보조정리 10](#lem10)에 의해 Čech-acyclic이라는 점이 증명의 핵심이다.
 
 </details>
 
@@ -430,7 +490,7 @@ $$\mathcal{F}$$의 injective resolution $$\mathcal{I}^\bullet$$을 잡고, doubl
 
 <div class="proposition" markdown="1">
 
-<ins id="prop16">**명제 16**</ins> $$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$$이다.
+<ins id="prop19">**명제 19**</ins> $$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$$이다.
 
 </div>
 
