@@ -316,10 +316,7 @@ $$\Delta_X\hookrightarrow X\times X$$
 
 우리는 [정의 1](#def1)에서 sheaf cohomology를 injective resolution을 통해 정의하였으나, 일반적으로 injective resolution을 직접 계산하는 것은 어렵기에 이에 대한 해결책 중 하나로 Čech cohomology와 sheaf cohomology가 isomorphic하다는 앞선 결과 [정리 11](#def11)을 사용하는 방법을 살펴보았다.
 
-이번 글에서 살펴볼 Godement resolution 또한 같은 문제에서 출발한다. 즉 sheaf cohomology를 일반적으로 계산하는 것은 매우 복잡한 일이므로, [정의 1](#def1)이 개념적으로 깔끔한 것에 비해 실용성은 다소 떨어진다는 것이다. 우리는 이제 구체적인 resolution을 하나 정의한다. 이는 injective resolution은 아니지만, flasque resolution이며 우리 계산에서 이는 충분하다는 것
-
-
- injective resolution을 명시적으로 구성하는 것은 일반적으로 매우 어렵다. 이번 섹션에서는 모든 sheaf에 대하여 functorial하고 canonical하게 flasque resolution을 구성하는 방법을 소개한다. 이를 *Godement resolution*이라 부르며, injective resolution과 달리 명시적으로 기술될 수 있으므로 spectral sequence의 증명 등에서 유용하게 활용된다.
+이번 글에서 살펴볼 Godement resolution 또한 같은 문제에서 출발한다. 즉 sheaf cohomology를 일반적으로 계산하는 것은 매우 복잡한 일이므로, [정의 1](#def1)이 개념적으로 깔끔한 것에 비해 실용성은 다소 떨어진다는 것이다. 우리는 이제 구체적인 resolution을 하나 정의한다. 이는 injective resolution은 아니지만, flasque resolution이며 우리의 사용에서는 이것으로 충분하다. 
 
 <div class="definition" markdown="1">
 
@@ -327,11 +324,13 @@ $$\Delta_X\hookrightarrow X\times X$$
 
 $$C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x$$
 
-으로 정의한다. 여기서 $$\mathcal{F}_x$$는 $$\mathcal{F}$$의 $$x$$에서의 stalk이다. Sheaf $$\mathcal{F}$$에서 $$C^0(\mathcal{F})$$로의 natural map은 각 $$x$$에서의 identity $$\mathcal{F}_x \to \mathcal{F}_x$$에 의해 주어진다.
+으로 정의한다. 여기서 $$\mathcal{F}_x$$는 $$\mathcal{F}$$의 $$x$$에서의 stalk이다. 
 
 </div>
 
-$$C^0(\mathcal{F})$$가 sheaf임은 자명하다: restriction map은 product의 projection이며, sheaf condition은 $$C^0(\mathcal{F})(U)$$의 원소가 stalk별로 주어진다는 점에서 자명하게 만족된다.
+그럼 각각의 $$x\in X$$에 대하여, stalk에서의 identity $$\mathcal{F}_x\rightarrow \mathcal{F}_x$$으로부터 canonical morphism $$\mathcal{F}\rightarrow C^0(\mathcal{F})$$이 잘 정의된다. 또, $$C^0(\mathcal{F})$$가 sheaf라는 것도 거의 자명하게 정의된다. 
+
+직관적으로 $$C^0(\mathcal{F})$$는 각각의 점 $$x\in X$$에서 $$\mathcal{F}_x$$의 원소를 택하는 것에 어떠한 제약도 없는 함수들의 모임으로 생각할 수 있으며, 이러한 관점에서 종종 *sheaf of discontinuous sections*라 불리기도 한다. 다음은 이 sheaf의 기본적인 성질이다. 
 
 <div class="proposition" markdown="1">
 
@@ -342,25 +341,29 @@ $$C^0(\mathcal{F})$$가 sheaf임은 자명하다: restriction map은 product의 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Flasque임을 보이자. 열린집합 $$V \subset U$$에 대하여, restriction map $$C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x \to \prod_{x \in V} \mathcal{F}_x = C^0(\mathcal{F})(V)$$는 projection이므로 surjective이다. 따라서 $$C^0(\mathcal{F})$$는 flasque이다.
+우선 주어진 sheaf가 flasque임을 보이자. 열린집합 $$V \subset U$$에 대하여, restriction map $$C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x \to \prod_{x \in V} \mathcal{F}_x = C^0(\mathcal{F})(V)$$는 projection이므로 surjective이다. 따라서 $$C^0(\mathcal{F})$$는 flasque이다.
 
-Exactness는 $$C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x$$에서 따른다: stalk functor $$\mathcal{F} \mapsto \mathcal{F}_x$$는 exact이며, abelian group의 product는 exact functor이므로 $$C^0$$는 exact하다.
+Exactness는 stalk functor $$\mathcal{F} \mapsto \mathcal{F}_x$$가 exact이고 $$C^0(\mathcal{F})$$는 stalk들의 product에 불과하므로 자명하다. 
 
 </details>
 
-Godement sheaf를 반복적으로 적용하여 flasque resolution을 구성할 수 있다. $$\mathcal{F} \to C^0(\mathcal{F})$$의 cokernel sheaf를 $$\mathcal{Q}^1$$이라 하자. 그럼 short exact sequence
+이제 canonical map $$0\rightarrow\mathcal{F}\rightarrow C^0(\mathcal{F})$$이 유도하는 cokernel exact sequence
 
-$$0 \to \mathcal{F} \to C^0(\mathcal{F}) \to \mathcal{Q}^1 \to 0$$
+$$0\rightarrow \mathcal{F}\rightarrow C^0(\mathcal{F})\rightarrow \mathcal{Q}^1\rightarrow 0$$
 
-를 얻으며, 여기에 다시 $$C^0$$을 적용하면
+을 생각하자. 직관적으로 $$\mathcal{Q}^1$$은 순수하게 discontinuous한 부분들을 모아둔 것이며, 이러한 관점에서이 construction을 계속 반복할수록 discontinuity에 대한 더 미세한 정보가 담기게 된다. 즉, sheaf $$\mathcal{Q}^1$$에 $$C^0$$을 적용하여 다음의 cokernel exact sequence
 
-$$0 \to \mathcal{Q}^1 \to C^0(\mathcal{Q}^1) \to \mathcal{Q}^2 \to 0$$
+$$0 \rightarrow \mathcal{Q}^1\rightarrow C^0(\mathcal{Q}^1)\rightarrow\mathcal{Q}^1\rightarrow 0$$
 
-을 얻는다. 이 과정을 반복하여 다음의 열을 얻는다.
+을 얻고, splicing을 통해 complex
 
-$$0 \to \mathcal{F} \to C^0(\mathcal{F}) \to C^0(\mathcal{Q}^1) \to C^0(\mathcal{Q}^2) \to \cdots$$
+$$0 \rightarrow C^0(\mathcal{F}) \rightarrow C^0(\mathcal{Q}^1) \rightarrow C^0 (\mathcal{Q}^2)\rightarrow \cdots$$
 
-이를 간략히 $$0 \to \mathcal{F} \to \mathcal{G}^0(\mathcal{F}) \to \mathcal{G}^1(\mathcal{F}) \to \cdots$$로 표기하고, 이를 $$\mathcal{F}$$의 *Godement resolution*이라 부른다.
+을 얻어낼 수 있다. 우리는 이 cmomplex를 $$\mathcal{F}$$의 *Godement resolution*이라 부르고, 각각의 성분들을
+
+$$0 \to \mathcal{F} \to \mathcal{G}^0(\mathcal{F}) \to \mathcal{G}^1(\mathcal{F}) \to \cdots$$
+
+로 표기한다. 그럼 [명제 14](#prop14)에 의하여 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
@@ -368,14 +371,7 @@ $$0 \to \mathcal{F} \to C^0(\mathcal{F}) \to C^0(\mathcal{Q}^1) \to C^0(\mathcal
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-[명제 14](#prop14)에서 $$C^0$$가 flasque sheaf를 준다는 것을 보였으므로, 각 $$\mathcal{G}^n(\mathcal{F}) = C^0(\mathcal{Q}^n)$$도 flasque이다.
-
-Resolution의 exactness는 construction에 의해 자명하다: 각 단계에서 $$\mathcal{Q}^n = \operatorname{coker}(\mathcal{G}^{n-1} \to \mathcal{G}^n)$$이므로 $$\ker(\mathcal{G}^n \to \mathcal{G}^{n+1}) = \im(\mathcal{G}^{n-1} \to \mathcal{G}^n)$$이 성립한다.
-
-</details>
+이 construction의 가장 핵심적인 장점은 이 과정에서 어떠한 choice도 없으므로, 어떤 측면에서 canonical하다는 것이다. 이는 Godement resolution의 functoriality로부터도 다시 확인할 수 있는데, 일반적으로 
 
 Godement resolution의 핵심적 장점은 functoriality와 canonicity이다. Injective resolution은 일반적으로 선택을 필요로 하지만, Godement resolution은 각 sheaf에 대해 canonically하고 functorial하게 결정된다. 즉, sheaf morphism $$\varphi: \mathcal{F} \to \mathcal{G}$$는 natural하게 resolution morphism $$\mathcal{G}^\bullet(\varphi): \mathcal{G}^\bullet(\mathcal{F}) \to \mathcal{G}^\bullet(\mathcal{G})$$를 유도한다. 또한 $$\mathcal{G}^\bullet(\mathcal{F})$$의 각 항이 flasque이므로 $$\Gamma(X, -)$$-acyclic이며, 따라서 $$H^i(X, \mathcal{F})$$를 $$\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))$$의 cohomology로 계산할 수 있다.
 
