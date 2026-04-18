@@ -198,7 +198,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-정의에 의해 $$\mathcal{F}$$가 injective라는 것은 임의의 monomorphism $$\mathcal{A} \hookrightarrow \mathcal{B}$$에 대해 $$\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \to \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$$가 surjective인 것이다. ([\[호몰로지 대수학\] §분해, ⁋정의 1](/ko/math/homological_algebra/resolutions#def1)) 이제 임의의 열린집합 $$V \subset U \subset X$$에 대해 restriction $$\mathcal{F}(U) \to \mathcal{F}(V)$$가 surjective임을 보이자. 
+정의에 의해 $$\mathcal{F}$$가 injective라는 것은 임의의 monomorphism $$\mathcal{A} \hookrightarrow \mathcal{B}$$에 대해 $$\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \to \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$$가 surjective인 것이다. ([\[호몰로지 대수학\] §분해, ⁋정의 1](/ko/math/homological_algebra/resolutions#def1)) 이제 임의의 열린집합 $$V \subset U \**subset** X$$에 대해 restriction $$\mathcal{F}(U) \to \mathcal{F}(V)$$가 surjective임을 보이자. 
 
 이 map은 sheaf morphism이 아니라 abelian group들 사이의 morphism이고, 우리가 갖고 있는 도구는 sheaf morphism이므로 이 조건을 sheaf morphism으로 돌려놔야 한다. 이를 위해 open embedding
 
