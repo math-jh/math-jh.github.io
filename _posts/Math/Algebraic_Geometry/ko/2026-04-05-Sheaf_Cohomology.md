@@ -314,7 +314,12 @@ $$\Delta_X\hookrightarrow X\times X$$
 
 ## Godement Resolution
 
-[정의 1](#def1)에서 sheaf cohomology를 injective resolution을 통해 정의하였으나, injective resolution을 명시적으로 구성하는 것은 일반적으로 매우 어렵다. 이번 섹션에서는 모든 sheaf에 대하여 functorial하고 canonical하게 flasque resolution을 구성하는 방법을 소개한다. 이를 *Godement resolution*이라 부르며, injective resolution과 달리 명시적으로 기술될 수 있으므로 spectral sequence의 증명 등에서 유용하게 활용된다.
+우리는 [정의 1](#def1)에서 sheaf cohomology를 injective resolution을 통해 정의하였으나, 일반적으로 injective resolution을 직접 계산하는 것은 어렵기에 이에 대한 해결책 중 하나로 Čech cohomology와 sheaf cohomology가 isomorphic하다는 앞선 결과 [정리 11](#def11)을 사용하는 방법을 살펴보았다.
+
+이번 글에서 살펴볼 Godement resolution 또한 같은 문제에서 출발한다. 즉 sheaf cohomology를 일반적으로 계산하는 것은 매우 복잡한 일이므로, [정의 1](#def1)이 개념적으로 깔끔한 것에 비해 실용성은 다소 떨어진다는 것이다. 우리는 이제 구체적인 resolution을 하나 정의한다. 이는 injective resolution은 아니지만, flasque resolution이며 우리 계산에서 이는 충분하다는 것
+
+
+ injective resolution을 명시적으로 구성하는 것은 일반적으로 매우 어렵다. 이번 섹션에서는 모든 sheaf에 대하여 functorial하고 canonical하게 flasque resolution을 구성하는 방법을 소개한다. 이를 *Godement resolution*이라 부르며, injective resolution과 달리 명시적으로 기술될 수 있으므로 spectral sequence의 증명 등에서 유용하게 활용된다.
 
 <div class="definition" markdown="1">
 
