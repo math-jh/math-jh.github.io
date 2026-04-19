@@ -316,7 +316,7 @@ $$\Delta_X\hookrightarrow X\times X$$
 
 우리는 [정의 1](#def1)에서 sheaf cohomology를 injective resolution을 통해 정의하였으나, 일반적으로 injective resolution을 직접 계산하는 것은 어렵기에 이에 대한 해결책 중 하나로 Čech cohomology와 sheaf cohomology가 isomorphic하다는 앞선 결과 [정리 11](#thm11)을 사용하는 방법을 살펴보았다.
 
-이번 글에서 살펴볼 Godement resolution 또한 같은 문제에서 출발한다. 즉 sheaf cohomology를 일반적으로 계산하는 것은 매우 복잡한 일이므로, [정의 1](#def1)이 개념적으로 깔끔한 것에 비해 실용성은 다소 떨어진다는 것이다. 우리는 이제 구체적인 resolution을 하나 정의한다. 이는 injective resolution은 아니지만, flasque resolution이며 우리의 사용에서는 이것으로 충분하다. 
+이번 섹션에서 살펴볼 Godement resolution 또한 같은 문제에서 출발한다. 즉 sheaf cohomology를 일반적으로 계산하는 것은 매우 복잡한 일이므로, [정의 1](#def1)이 개념적으로 깔끔한 것에 비해 실용성은 다소 떨어진다는 것이다. 우리는 이제 구체적인 resolution을 하나 정의한다. 이는 injective resolution은 아니지만, flasque resolution이며 우리의 사용에서는 이것으로 충분하다. 
 
 <div class="definition" markdown="1">
 
@@ -392,31 +392,30 @@ $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarr
 
 ![Commutative diagram]({{ site.baseurl }}/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-1.png){:style="width:20em" class="invert" .align-center}
 
-에서, $$\mathcal{F}$$는 가정에 의해 flasque이며 $$\mathcal{I}$$는 injective이므로 flasque이다. 따라서 앞선 두 개의 restriction map들이 surjective이고 이로부터 
-
-을 생각하자. $$\mathcal{F}$$는 flasque이므로 $$\mathcal{F}(U) \to \mathcal{F}(V)$$는 surjective이고, $$\mathcal{I}$$는 injective sheaf이므로 [보조정리 9](#lem9)에 의해 flasque이어서 $$\mathcal{I}(U) \to \mathcal{I}(V)$$ 역시 surjective이다. Diagram chase로부터 $$\mathcal{Q}(U) \to \mathcal{Q}(V)$$도 surjective임을 알 수 있다. 따라서 $$\mathcal{Q}$$는 flasque이다.
+에서 diagram chase를 하면 된다. 여기서 $$\mathcal{F}$$는 가정에 의해 flasque이며 $$\mathcal{I}$$는 injective이므로 flasque이다. 이제 임의의 $$s\in \mathcal{Q}(V)$$에 대하여, $$\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$$가 surjective이므로 $$s$$를 $$t\in \mathcal{I}(V)$$로 lift할 수 있으며, 다시 $$\mathcal{I}$$가 flasque임을 이용하여 $$t$$를 $$\overline{t}\in\mathcal{I}(U)$$로 올린 후 이를 $$\mathcal{Q}$$로 옮겨주어 $$\overline{s}\in \mathcal{Q}(U)$$를 정의하면 된다. 이제 $$\mathcal{Q}(U)$$에서의 원소 $$\overline{s}\vert_V-s$$는 $$\mathcal{F}(V)$$의 원소이고, 다시 $$\mathcal{F}$$의 flasqueness로부터 적당한 $$h\in \mathcal{F}(U)$$가 존재하여 $$h\vert_V=\overline{s}\vert_V-s$$이다. 이제 이로부터 $$\overline{s}-h$$는 정확히 $$s\in \mathcal{Q}(V)$$로 restrict하며 이로부터 $$\mathcal{Q}$$의 flasqueness를 얻는다. 
 
 이제 $$\Gamma(X, -)$$를 적용하여 long exact sequence
 
 $$0 \to \Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{I}) \to \Gamma(X, \mathcal{Q}) \xrightarrow{\delta} H^1(X, \mathcal{F}) \to H^1(X, \mathcal{I}) = 0$$
 
-을 얻는다. $$\mathcal{I}$$가 injective이므로 $$H^1(X, \mathcal{I}) = 0$$이다. 따라서 $$H^1(X, \mathcal{F}) \cong \operatorname{coker}(\Gamma(X, \mathcal{I}) \to \Gamma(X, \mathcal{Q}))$$인데, $$\mathcal{Q}$$가 flasque이므로 $$\Gamma(X, \mathcal{I}) \to \Gamma(X, \mathcal{Q})$$가 surjective인 것을 보이면 충분하다. 임의의 $$s \in \Gamma(X, \mathcal{Q})$$를 잡자. $$\mathcal{I} \to \mathcal{Q}$$는 stalk에서 surjective이므로, 각 $$x \in X$$에 대하여 $$t_x \in \mathcal{I}(U_x)$$가 존재하여 $$t_x$$의 $$\mathcal{Q}$$에서의 상이 $$s\vert_{U_x}$$와 일치한다. $$\mathcal{I}$$가 flasque이므로 $$t_x$$를 $$T_x \in \Gamma(X, \mathcal{I})$$로 확장할 수 있다. $$T_x$$의 $$\mathcal{Q}$$에서의 상 $$\sigma_x$$는 $$s$$와 $$U_x$$에서 일치한다. 이제 $$\sigma_x - \sigma_y \in \Gamma(X, \mathcal{Q})$$를 생각하면, 이것은 $$U_x \cap U_y$$에서 0이므로 $$U_x \cap U_y$$ 위에서 $$\mathcal{F}$$의 section $$f_{xy}$$로 lifting할 수 있다. $$\mathcal{F}$$가 flasque이므로 $$f_{xy}$$를 $$f_x \in \mathcal{F}(U_x)$$로 확장한 뒤 $$T_x$$를 $$T_x - f_x$$로 교정하면, 교정된 $$T_x$$들이 모든 $$x$$에 대하여 $$\Gamma(X, \mathcal{Q})$$에서 $$s$$로 보내지는 것이 호환됨을 확인할 수 있다. 따라서 $$\Gamma(X, \mathcal{I}) \to \Gamma(X, \mathcal{Q})$$가 surjective이고 $$H^1(X, \mathcal{F}) = 0$$이다.
+을 얻자. 여기서 $$\mathcal{I}$$가 injective이므로 $$H^1(X, \mathcal{I}) = 0$$이다. 따라서
 
-이제 $$i \geq 2$$에 대하여 $$H^i(X, \mathcal{F}) = 0$$임을 induction으로 보인다. $$\mathcal{F}$$의 injective resolution에서 short exact sequence
+$$H^1(X, \mathcal{F}) \cong \coker(\Gamma(X, \mathcal{I}) \to \Gamma(X, \mathcal{Q}))$$
 
-$$0 \to \mathcal{F} \to \mathcal{I}^0 \to \mathcal{Q}^0 \to 0$$
+이며, 이것이 $$0$$이 된다는 것을 보이기 위해 우리는 $$\Gamma(X, \mathcal{I})\rightarrow \Gamma(X, \mathcal{Q})$$가 surjective임을 보여야 한다. 이를 위해 임의의 $$s\in \Gamma(X, \mathcal{Q})$$가 주어졌다 하자. 그럼 임의의 $$x\in X$$에 대하여, stalk 레벨에서는 $$\mathcal{I}\rightarrow \mathcal{Q}$$가 surjective하므로 각각의 $$x\in X$$마다 적당한 $$t_x\in \mathcal{I}_x$$가 존재하여 $$t_x$$가 $$s_x\in \mathcal{Q}_x$$로 가도록 할 수 있다. 이제 $$t_x$$의 한 representative를 택하여, $$t_x$$가 $$\mathcal{I}(U_x)$$의 원손
+인 것으로 생각하면 $$\mathcal{I}$$가 flasque이므로 이들 각각을 $$X$$에서의 global section $$T_x$$들로 확장할 수 있으며, 그럼 $$T_x\mid_{U_x}=s\mid_{U_x}$$이다. 
 
-을 생각하자. 앞서 보인 바와 같이 $$\mathcal{Q}^0$$은 flasque이다. Long exact sequence
+이제 $$T_x$$들의 $$\Gamma(X,\mathcal{Q})$$에서의 image를 $$S_x$$라 하자. 그럼 $$S_x-S_y$$는 $$U_x\cap U_y$$에서 identitcally zero이며, 따라서 이를 $$U_x\cap U_y$$ 위에서 $$\mathcal{F}$$의 section $$f_{xy}$$로 lift할 수 있다. 다시 $$\mathcal{F}$$의 flasqueness를 사용하면 이를 $$f_x\in \mathcal{F}(U_x)$$와 $$f_y\in \mathcal{F}(U_y)$$ 각각으로 확장할 수 있고, 그럼 이 상황에서 $$T_x$$를 $$T'_x=T_x-f_x$$들로 대체하면 이것이 compatibility condition을 만족하고 따라서 이들을 붙인 것이 $$s$$의 preimage인 것을 안다. 
 
-$$\cdots \to H^{i-1}(X, \mathcal{Q}^0) \xrightarrow{\delta} H^i(X, \mathcal{F}) \to H^i(X, \mathcal{I}^0) = 0$$
+마지막으로, long exact sequence에 의하여
 
-에서 $$\mathcal{I}^0$$이 injective이므로 $$H^i(X, \mathcal{I}^0) = 0$$이며, dimension shifting에 의해 $$H^i(X, \mathcal{F}) \cong H^{i-1}(X, \mathcal{Q}^0)$$이다. $$\mathcal{Q}^0$$가 flasque이므로 induction hypothesis로 $$H^{i-1}(X, \mathcal{Q}^0) = 0$$이고, 따라서 $$H^i(X, \mathcal{F}) = 0$$이다.
+$$H^i(X, \mathcal{F})\cong H^{i-1}(X, \mathcal{Q})$$
+
+이고, $$\mathcal{Q}$$가 flasque이므로 귀납법에 의하여 원하는 결과를 얻는다. 
 
 </details>
 
-[명제 16](#prop16)에 의하여 Godement resolution의 각 항 $$\mathcal{G}^p(\mathcal{F})$$는 flasque이므로 $$\Gamma(X, -)$$-acyclic이다. 즉, 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{G}^p(\mathcal{F})) = 0$$이다.
-
-이제 flasque resolution이면 충분하다는 것을 더 일반적인 형태로 정리할 수 있다.
+특히, [명제 16](#prop16)에 의하여 Godement resolution의 각 항 $$\mathcal{G}^p(\mathcal{F})$$는 flasque이므로 $$\Gamma(X, -)$$-acyclic이다. 즉, 모든 $$i > 0$$에 대해 $$H^i(X, \mathcal{G}^p(\mathcal{F})) = 0$$이다. 이제 결론을 내기 위해 우리가 필요한 것은 다음 결과이다. 
 
 <div class="proposition" markdown="1">
 
@@ -431,19 +430,23 @@ $$H^q(\Gamma(X, A^\bullet)) \cong H^q(X, \mathcal{F})$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathcal{F}$$의 injective resolution $$0 \to \mathcal{F} \to \mathcal{I}^\bullet$$을 고정하자. Comparison theorem ([\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6))에 의해 acyclic resolution과 injective resolution 사이에 chain map $$f\colon A^\bullet \to \mathcal{I}^\bullet$$이 존재한다. $$f$$의 *mapping cone* $$C(f)^\bullet$$을 생각하자. 각 차수에서
+$$\mathcal{F}$$의 injective resolution $$0 \to \mathcal{F} \to \mathcal{I}^\bullet$$을 고정하자. Comparison theorem ([\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6))에 의해 acyclic resolution과 injective resolution 사이에 chain map $$f\colon \mathcal{A}^\bullet \to \mathcal{I}^\bullet$$이 존재한다. $$f$$의 *mapping cone* $$C(f)^\bullet$$을 생각하자. 각 차수에서
 
-$$C(f)^n = A^{n+1} \oplus \mathcal{I}^n$$
+$$C(f)^n = \mathcal{A}^{n+1} \oplus \mathcal{I}^n$$
 
-이며, $$\mathcal{I}^n$$는 injective이므로 [보조정리 9](#lem9)에 의해 flasque, 특히 $$\Gamma(X, -)$$-acyclic이다. $$C(f)^n \to A^{n+1}$$로의 projection으로부터 얻어지는 short exact sequence $$0 \to \mathcal{I}^n \to C(f)^n \to A^{n+1} \to 0$$에서, 양 끝 항이 $$\Gamma(X, -)$$-acyclic이므로 long exact sequence로부터 $$C(f)^n$$ 역시 $$\Gamma(X, -)$$-acyclic임을 알 수 있다.
+이며, $$\mathcal{I}^n$$는 injective이므로 [보조정리 9](#lem9)에 의해 flasque, 특히 $$\Gamma(X, -)$$-acyclic이다. 따라서 canonical short exact sequence
 
-한편 $$f$$는 quasi-isomorphism이므로 $$C(f)^\bullet$$은 exact complex이다. $$C(f)^\bullet$$의 각 항이 $$\Gamma(X, -)$$-acyclic이므로, exact한 sheaf complex에 $$\Gamma(X, -)$$를 적용한 것은 exact한 cochain complex를 준다. 즉 $$\Gamma(X, C(f)^\bullet)$$은 exact하다. 이것은 chain map
+$$0 \to \mathcal{I}^n \to C(f)^n \to \mathcal{A}^{n+1} \to 0$$
 
-$$\Gamma(X, f)\colon \Gamma(X, A^\bullet) \to \Gamma(X, \mathcal{I}^\bullet)$$
+를 생각하면 양 끝 항이 $$\Gamma(X, -)$$-acyclic이므로 long exact sequence로부터 $$C(f)^n$$ 역시 $$\Gamma(X, -)$$-acyclic임을 알 수 있다.
 
-이 quasi-isomorphism이라는 것과 동치이며, 따라서
+한편 $$f$$는 quasi-isomorphism이므로 $$C(f)^\bullet$$은 exact complex이다. ([\[호몰로지 대수학\] §긴 완전열, ⁋따름정리 9](/ko/math/homological_algebra/long_exact_sequence#cor9)) 뿐만 아니라 $$C(f)^\bullet$$은 위에서 살펴봤듯 $$\Gamma(X,-)$$-acyclic이므로, 여기에 $$\Gamma(X,-)$$를 취해 exact complex $$\Gamma(X, C(f)^\bullet)$$을 얻을 수 있으며 다시 [\[호몰로지 대수학\] §긴 완전열, ⁋따름정리 9](/ko/math/homological_algebra/long_exact_sequence#cor9)을 적용하여 이것을 chain map
 
-$$H^q(\Gamma(X, A^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) = H^q(X, \mathcal{F})$$
+$$\Gamma(X, f)\colon \Gamma(X, \mathcal{A}^\bullet) \to \Gamma(X, \mathcal{I}^\bullet)$$
+
+이 quasi-isomorphism이라는 조건으로 바꿔줄 수 있다. 이로부터
+
+$$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) = H^q(X, \mathcal{F})$$
 
 을 얻는다.
 
@@ -451,35 +454,39 @@ $$H^q(\Gamma(X, A^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) = H^q(X, \
 
 [명제 17](#prop17)는 [명제 16](#prop16)과 함께 Godement resolution이 실제로 sheaf cohomology를 계산하기에 충분하다는 것을 보장한다. 즉, flasque resolution $$\mathcal{G}^\bullet(\mathcal{F})$$의 global section을 취하여 얻은 complex $$\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))$$의 cohomology가 $$H^\bullet(X, \mathcal{F})$$와 일치한다.
 
-
-
 ## Spectral Sequence
 
 Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 통한 cohomology의 계산이다. 우리는 이번 섹션에서 구체적인 계산으로 이 글을 마무리하기로 한다. 지금 소개하는 명제들은 일반적인 위상수학적 설정에서 성립하지만, 우리는 주로 variety와 quasi-coherent sheaf에의 적용을 염두에 둘 것이므로 이 카테고리에 담았다. 
 
-연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$를 고정하고, [명제 15](#prop15)에서 구성한 $$\mathcal{F}$$의 Godement resolution $$\mathcal{G}^\bullet(\mathcal{F})$$을 잡자. 각각의 $$p\geq 0$$에 대하여, $$\mathcal{G}^p(\mathcal{F})$$의 direct image sheaf $$f_\ast \mathcal{G}^p(\mathcal{F})$$를 $$Y$$ 위에서 injectively resolve하여 다음의 injective resolution $$f_* \mathcal{G}^p(\mathcal{F}) \to \mathcal{J}^{p,\bullet}$$를 얻어낼 수 있다. Godement resolution의 각 항이 flasque이며 flasque sheaf의 direct image는 다시 flasque이므로, 각 $$f_* \mathcal{G}^p(\mathcal{F})$$는 flasque, 특히 $$\Gamma(Y, -)$$-acyclic이다. 이로부터 double complex
+연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$를 고정하자. $$\mathcal{F}$$의 Godement resolution $$\mathcal{G}^\bullet(\mathcal{F})$$을 생각하면, 각각의 $$p\geq 0$$에 대해 $$\mathcal{G}^p(\mathcal{F})$$의 direct image sheaf $$f_\ast\mathcal{G}^p(\mathcal{F})$$의 injective resolution
 
-$$K^{p,q} = \Gamma(Y, \mathcal{J}^{p,q})$$
+$$0\rightarrow f_\ast \mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{J}^{p,\bullet}$$
 
-를 정의할 수 있다. 여기서 $$q$$-방향의 differential은 $$\mathcal{J}^{p,\bullet}$$의 resolution differential이고, $$p$$-방향의 differential은 $$\mathcal{G}^\bullet(\mathcal{F})$$에서 유도된 것이다. 
+을 택할 수 있다. Flasque sheaf의 direct image가 flasque sheaf임은 정의에 의해 자명하므로, $$f_\ast \mathcal{G}^p(\mathcal{F})$$들 각각은 특히 [명제 16](#prop16)에 의해 $$\Gamma(Y,-)$$-acyclic이며 이로부터 double complex
 
-이제 다시 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11)을 따라 두 가지 filtration을 각각 걸어주자. 우선 $$p$$-filtration, 즉 $F^s = \bigoplus_{p \geq s} K^{p,\bullet}$로 정의되는 filtration의 경우이다. 이때 graded piece는 $F^s/F^{s+1} \cong K^{s,\bullet}$이며, 먼저 $$q$$-방향의 cohomology를 취하므로
+$$K^{p,q}=\Gamma(Y, \mathcal{J}^{p,q})$$
+
+이 잘 정의된다는 것을 안다. 이 때, $$q$$ 방향 differential은 $$\mathcal{J}^{p,\bullet}$$으로부터, $$p$$ 방향 differential은 $$\mathcal{G}^\bullet(\mathcal{F})$$와 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)로부터 유도되는 것이다. 
+
+이제 이 double complex의 total complex와 자연스러운 filtration들로 이루어진 spectral sequence를 생각하자. 우선 $$p$$ 방향 filtration은 $$q$$ 방향의 cohomology를 우선 취하는 것으로, $$E_1$$ page는
 
 $$E_1^{p,q}=H^q(K^{p,\bullet})$$
 
-이다. 그런데 $$\mathcal{J}^{p,\bullet}$$은 $$f_\ast \mathcal{G}^p(\mathcal{F})$$의 injective resolution이므로, $$K^{p,\bullet}=\Gamma(Y, \mathcal{J}^{p,\bullet})$$의 cohomology는 $$H^q(Y, f_\ast \mathcal{G}^p(\mathcal{F}))$$를 계산한다. 앞서 언급한 대로 $$f_\ast \mathcal{G}^p(\mathcal{F})$$는 flasque이므로 $$\Gamma(Y, -)$$-acyclic이고, $$q>0$$일 경우
-
-$$H^q(Y, f_\ast \mathcal{G}^p(\mathcal{F}))=0$$
-
-이 성립하며, 따라서 $$E_2$$ page
+으로 주어지며 이 때 $$K^{p,\bullet}=J^{p,\bullet}$$은 $$f_\ast \mathcal{G}^p(\mathcal{F})$$의 injective resolution이므로 이는 정확히 cohomology $$H^1(Y, f_\ast \mathcal{G}^p(\mathcal{F}))$$를 계산하는 것이다. 이 때, $$f_\ast \mathcal{G}^p(\mathcal{F})$$는 flasque이므로 $$\Gamma(Y,-)$$-acyclic이고 따라서 $$q>0$$에서는 cohomology가 모두 사라져 $$E_2$$ page는
 
 $$E_2^{p,q}=\begin{cases}H^p(X, \mathcal{F})&\text{if $q=0$}\\0&\text{otherwise}\end{cases}$$
 
-에서 spectral sequence가 stabilize하여 total cohomology는 $$H^\bullet(X, \mathcal{F})$$가 됨을 안다. 한편 $$q$$-filtration, 즉 $F'^t = \bigoplus_{q \geq t} K^{\bullet,q}$로 정의되는 filtration의 경우이다. 이때 먼저 $$p$$-방향의 cohomology를 취하면, 각 $$q$$에 대하여 열 $$K^{\bullet,q}$$의 $$p$$-방향 cohomology는 $f_\ast \mathcal{G}^\bullet(\mathcal{F})$에서 유도된 complex의 $q$-번째 항에서의 cohomology, 즉 $$R^q f_\ast \mathcal{F}$$의 injective resolution의 $$q$-번째 항을 계산하게 된다. 따라서 $$E_2$$ page는
+이다. 
+
+한편 $$q$$-filtration, 즉 total degree $$n$$에 대해 $$F^q T^n = \bigoplus_{r \geq q} K^{n-r, r}$$로 정의되는 filtration을 생각하면 먼저 $$p$$ 방향 cohomology를 취하게 되며, 이 때
+
+$$E_1^{p,q}=H^p(K^{\bullet, q})$$
+
+이다. 여기서 $$K^{\bullet,q}$$는 고정된 $$q$$에 대해 $$p$$ 방향의 complex로, 그 differential은 $$f_\ast \mathcal{G}^\bullet(\mathcal{F})$$의 degree $$q$$ 성분에 의해 주어진다. 따라서 $$H^p(K^{\bullet, q})$$는 $$f_\ast \mathcal{F}$$의 injective resolution에서 $$q$$번째 위치를 고정한 뒤 $$p$$ 방향으로 cohomology를 취한 것이며, 이는 $$R^q f_\ast \mathcal{F}$$에 대한 sheaf cohomology를 계산하는 것과 같다. $$E_2$$ page는
 
 $$E_2^{p,q}=H^p(Y, R^q f_\ast \mathcal{F})$$
 
-가 됨을 안다. 따라서 다음을 얻는다.
+가 된다. 따라서 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
