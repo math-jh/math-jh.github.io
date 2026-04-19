@@ -390,7 +390,7 @@ $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarr
 
 을 생각한다. 우리 주장은 $$\mathcal{Q}$$가 flasque라는 것이며, 이는 임의의 열린집합 $$V\subset U$$에 대하여 다음의 commutative diagram
 
-![Commutative diagram]({{ site.baseurl }}/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-1.png){:style="width:20em" class="invert" .align-center}
+![Commutative diagram](/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-1.png){:style="width:20em" class="invert" .align-center}
 
 에서 diagram chase를 하면 된다. 여기서 $$\mathcal{F}$$는 가정에 의해 flasque이며 $$\mathcal{I}$$는 injective이므로 flasque이다. 이제 임의의 $$s\in \mathcal{Q}(V)$$에 대하여, $$\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$$가 surjective이므로 $$s$$를 $$t\in \mathcal{I}(V)$$로 lift할 수 있으며, 다시 $$\mathcal{I}$$가 flasque임을 이용하여 $$t$$를 $$\overline{t}\in\mathcal{I}(U)$$로 올린 후 이를 $$\mathcal{Q}$$로 옮겨주어 $$\overline{s}\in \mathcal{Q}(U)$$를 정의하면 된다. 이제 $$\mathcal{Q}(U)$$에서의 원소 $$\overline{s}\vert_V-s$$는 $$\mathcal{F}(V)$$의 원소이고, 다시 $$\mathcal{F}$$의 flasqueness로부터 적당한 $$h\in \mathcal{F}(U)$$가 존재하여 $$h\vert_V=\overline{s}\vert_V-s$$이다. 이제 이로부터 $$\overline{s}-h$$는 정확히 $$s\in \mathcal{Q}(V)$$로 restrict하며 이로부터 $$\mathcal{Q}$$의 flasqueness를 얻는다. 
 
@@ -478,11 +478,17 @@ $$E_2^{p,q}=\begin{cases}H^p(X, \mathcal{F})&\text{if $q=0$}\\0&\text{otherwise}
 
 이다. 
 
-한편 $$q$$-filtration, 즉 total degree $$n$$에 대해 $$F^q T^n = \bigoplus_{r \geq q} K^{n-r, r}$$로 정의되는 filtration을 생각하면 먼저 $$p$$ 방향 cohomology를 취하게 되며, 이 때
+한편 $$q$$-filtration을 생각하면 먼저 $$p$$ 방향 cohomology를 취하게 되며, 이 때
 
 $$E_1^{p,q}=H^p(K^{\bullet, q})$$
 
-이다. 여기서 $$K^{\bullet,q}$$는 고정된 $$q$$에 대해 $$p$$ 방향의 complex로, 그 differential은 $$f_\ast \mathcal{G}^\bullet(\mathcal{F})$$의 degree $$q$$ 성분에 의해 주어진다. 따라서 $$H^p(K^{\bullet, q})$$는 $$f_\ast \mathcal{F}$$의 injective resolution에서 $$q$$번째 위치를 고정한 뒤 $$p$$ 방향으로 cohomology를 취한 것이며, 이는 $$R^q f_\ast \mathcal{F}$$에 대한 sheaf cohomology를 계산하는 것과 같다. $$E_2$$ page는
+이다. 여기서 $$K^{\bullet,q}$$는 고정된 $$q$$에 대해 $$p$$ 방향의 complex로, 그 differential은 $$f_\ast \mathcal{G}^\bullet(\mathcal{F})$$의 degree $$q$$ 성분에 의해 주어진다. Section 전체에 걸쳐 global section을 취하기 전의 sheaf 수준에서도 동일한 구조를 생각할 수 있다. Sheaf 수준에서, 고정된 $$q$$에 대한 vertical complex $$\mathcal{J}^{\bullet,q}$$의 $$p$$-번째 cohomology sheaf를
+
+$$\mathcal{H}^p_q := H^p(\mathcal{J}^{\bullet,q})$$
+
+로 정의하자. 이때 각 $$\mathcal{J}^{p,\bullet}$$은 $$f_\ast \mathcal{G}^p(\mathcal{F})$$의 injective resolution이므로, $$\mathcal{J}^{\bullet,q}$$의 differential은 $$\mathcal{G}^\bullet(\mathcal{F})$$의 differential로부터 $$f_\ast$$를 거쳐 유도되며, 따라서 vertical cohomology sheaf들 사이에도 differential $$\bar{d}_v : \mathcal{H}^p_q \to \mathcal{H}^p_{q+1}$$이 유도된다. 이로부터 vertical complex $$(\mathcal{H}^p_0 \to \mathcal{H}^p_1 \to \cdots)$$를 얻으며, 그 $$q$$-번째 cohomology sheaf는 정의에 의해 $$R^q f_\ast H^p(\mathcal{G}^\bullet(\mathcal{F}))$$이다.
+
+한편, $$\mathcal{G}^\bullet(\mathcal{F})$$은 $$\mathcal{F}$$의 resolution이므로 $$H^0(\mathcal{G}^\bullet(\mathcal{F})) = \mathcal{F}$$이고 $$H^p(\mathcal{G}^\bullet(\mathcal{F})) = 0$$ for $$p>0$$이다. 따라서 $$\mathcal{H}^0_q = R^q f_\ast \mathcal{F}$$이고 $$\mathcal{H}^p_q = 0$$ for $$p>0$$이다. 이제 global section functor $$\Gamma(Y, -)$$를 적용하면, $$E_1^{p,q} = H^p(K^{\bullet,q})$$는 $$\Gamma(Y, \mathcal{H}^0_q)$$에 대한 cohomology를 계산하는 것이 되며, 여기서 $$\mathcal{H}^0_q = R^q f_\ast \mathcal{F}$$이므로
 
 $$E_2^{p,q}=H^p(Y, R^q f_\ast \mathcal{F})$$
 
