@@ -1,17 +1,24 @@
 \documentclass[convert={imagemagick, density=1024}]{standalone}
 \usepackage{amsmath, amsthm, amsfonts,mathrsfs}
+\usepackage{amscd}
 \usepackage{tikz-cd, kotex,tikz-3dplot}
 \usepackage{../.preamble/quiver}
 \usepackage{../.preamble/Operators}
 \usetikzlibrary{arrows.meta}
 \begin{document}
 
+%% Flasque quotient commutative diagram (Sheaf_Cohomology-1.png)
+\begin{tikzcd}
+0 \arrow[r] & {\mathcal{F}(U)} \arrow[r] \arrow[d] & {\mathcal{I}(U)} \arrow[r] \arrow[d] & {\mathcal{Q}(U)} \arrow[d] \\
+ & {\mathcal{F}(V)} \arrow[r] & {\mathcal{I}(V)} \arrow[r] & {\mathcal{Q}(V)}
+\end{tikzcd}
+
+\end{document}
+
 \begin{tikzcd}
 	\CaDiv(X)\rar\dar&\Div(X)\dar\\
 	\CaCl(X)\rar&\Cl(X)
 \end{tikzcd}
-
-\end{document}
 
 %% localizations (Affine_schemes-1.png)
 \begin{tikzcd}
