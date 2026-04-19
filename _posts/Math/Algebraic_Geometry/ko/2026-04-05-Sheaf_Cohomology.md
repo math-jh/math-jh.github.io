@@ -466,9 +466,13 @@ $$0\rightarrow f_\ast \mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{J}^{p,\bull
 
 $$K^{p,q}=\Gamma(Y, \mathcal{J}^{p,q})$$
 
-이 잘 정의된다는 것을 안다. 이 때, $$q$$ 방향 differential은 $$\mathcal{J}^{p,\bullet}$$으로부터, $$p$$ 방향 differential은 $$\mathcal{G}^\bullet(\mathcal{F})$$와 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)로부터 유도되는 것이다. 
+이 잘 정의된다는 것을 안다. 
 
-이제 이 double complex의 total complex와 자연스러운 filtration들로 이루어진 spectral sequence를 생각하자. 우선 $$p$$ 방향 filtration은 $$q$$ 방향의 cohomology를 우선 취하는 것으로, $$E_1$$ page는
+![Leray_double_complex](/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-2.png){:style="width:30em" class="invert" .align-center}
+
+이 때, $$q$$ 방향 differential은 $$\mathcal{J}^{p,\bullet}$$으로부터, $$p$$ 방향 differential은 $$\mathcal{G}^\bullet(\mathcal{F})$$와 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)로부터 유도되는 것이다. 
+
+이제 이 double complex의 total complex $$\mathcal{K}=\Tot(\mathcal{J})^\bullet$$와 자연스러운 filtration들로 이루어진 spectral sequence를 생각하자. 우선 Godement degree $$p$$로의 filtration의 경우, $$q$$ 방향의 cohomology를 우선 취하는 것으로, $$E_1$$ page는
 
 $$E_1^{p,q}=H^q(K^{p,\bullet})$$
 
