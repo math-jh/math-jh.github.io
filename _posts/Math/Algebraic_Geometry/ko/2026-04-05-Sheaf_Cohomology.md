@@ -419,9 +419,9 @@ $$H^i(X, \mathcal{F})\cong H^{i-1}(X, \mathcal{Q})$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop17">**명제 17 (Acyclic Resolution)**</ins> $$\Gamma(X, -)$$-acyclic resolution $$0 \to \mathcal{F} \to A^0 \to A^1 \to \cdots$$이 주어지면
+<ins id="prop17">**명제 17 (Acyclic Resolution)**</ins> $$\Gamma(X, -)$$-acyclic resolution $$0 \to \mathcal{F} \to \mathcal{A}^0 \to \mathcal{A}^1 \to \cdots$$이 주어지면
 
-$$H^q(\Gamma(X, A^\bullet)) \cong H^q(X, \mathcal{F})$$
+$$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(X, \mathcal{F})$$
 
 이 모든 $$q \geq 0$$에 대해 성립한다.
 
@@ -464,13 +464,17 @@ $$0\rightarrow f_\ast \mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{I}^{p,\bull
 
 을 택할 수 있다. 
 
-이제 이 double complex에 $$f_\ast:\Sh(X)\rightarrow \Sh(Y)$$와 $$\Gamma(Y,-)$$를 순서대로 취하여 다음의 double complex
+이제 이 double complex
+
+![Leray_original](/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-2.png){:style="width:30em" class="invert" .align-center}
+
+에 $$f_\ast:\Sh(X)\rightarrow \Sh(Y)$$와 $$\Gamma(Y,-)$$를 순서대로 취하여 다음의 double complex
 
 $$\mathcal{J}^{p,q}=\Gamma(Y, f_\ast\mathcal{I}^{p,q})$$
 
 를 얻자. 우리는 $$f_\ast$$가 injective sheaf들에 대해서는 exact임을 직접 계산을 통해 확인할 수 있으므로, 이렇게 얻어진 double complex
 
-img
+![Leray_pushed](/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-3.png){:style="width:40em" class="invert" .align-center}
 
 는 다음과 같은 성질을 가진다.
 
