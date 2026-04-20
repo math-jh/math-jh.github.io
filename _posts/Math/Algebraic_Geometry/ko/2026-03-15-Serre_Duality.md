@@ -19,11 +19,11 @@ published: false
 
 Finite-dimensional vector space $$V$$와 그 dual $$V^\ast$$ 사이에는 자연스러운 쌍대성이 존재한다. Serre duality는 이 관계를 cohomology로 확장한 것이다. 구체적으로, field $$\mathbb{K}$$ 위의 $$n$$차원 smooth projective variety $$X$$ 위에서 $$i$$차 cohomology $$H^i(X, \mathcal{E})$$와 $$(n-i)$$차 cohomology $$H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)$$ 사이에 자연스러운 쌍대성이 성립한다. 여기서 canonical bundle $$\omega_X$$가 $$i$$와 $$n-i$$를 연결하는 교량 역할을 하며, trace map이 이 쌍대성을 실제로 구현한다.
 
-이 duality는 Riemann-Roch theorem의 증명에 필수적이며, cohomology group의 계산을 크게 단순화한다. 본 글에서는 Serre duality의 정의와 그 주요 응용을 다룬다. ([§Sheaf Cohomology, ⁋정의 2](/ko/math/algebraic_geometry/sheaf_cohomology#def2))
+이 duality는 Riemann-Roch theorem의 증명에 필수적이며, cohomology group의 계산을 크게 단순화한다. 본 글에서는 Serre duality의 정의와 그 주요 응용을 다룬다. ([§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1))
 
 ## 동기
 
-Cohomology는 sheaf를 국소적으로 주어진 자료로부터 전역적으로 재구성하려는 시도의 '실패'를 측정하는 도구이다. ([§Sheaf Cohomology, ⁋명제 2](/ko/math/algebraic_geometry/sheaf_cohomology#prop2)) Sheaf cohomology $$H^i(X, \mathcal{E})$$가 nonzero라는 것은, $$\mathcal{E}$$가 $$X$$ 위에서 국소 trivial해도 전역적으로는 gluing이 불가능함을 의미한다.
+Cohomology는 sheaf를 국소적으로 주어진 자료로부터 전역적으로 재구성하려는 시도의 '실패'를 측정하는 도구이다. ([§층 코호몰로지, ⁋명제 2](/ko/math/algebraic_geometry/sheaf_cohomology#prop2)) Sheaf cohomology $$H^i(X, \mathcal{E})$$가 nonzero라는 것은, $$\mathcal{E}$$가 $$X$$ 위에서 국소 trivial해도 전역적으로는 gluing이 불가능함을 의미한다.
 
 이 관점에서 $$\mathbb{P}^n$$ 위에서 $$H^n(\mathbb{P}^n, \mathcal{O}(d))$$의 행동을 살펴보자. $$n$$차 cohomology는 $$d \leq -n-1$$에서만 nonzero이며, 이 threshold는 $$\omega_{\mathbb{P}^n} = \mathcal{O}(-n-1)$$에 의해 정확히 결정된다. 즉, top cohomology가 nonzero가 되는 조건이 canonical bundle과 직접적으로 연결되어 있다.
 
@@ -74,17 +74,22 @@ $$H^0(C, \mathcal{O}_C) \cong H^1(C, \omega_C)^\ast$$이고 $$H^1(C, \mathcal{O}
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> $$\mathbb{P}^n$$에서 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$ ([§Canonical Bundle, ⁋예시 8](/ko/math/algebraic_geometry/canonical_bundle#ex8))이므로:
+<ins id="prop4">**명제 4**</ins> $$\mathbb{P}^n$$에서 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$ ([§표준선다발, ⁋예시 8](/ko/math/algebraic_geometry/canonical_bundle#ex8))이므로:
 
 $$H^i(\mathbb{P}^n, \mathcal{O}(d)) \cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-d-n-1))^\ast$$
 
-**증명.** $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$이므로 $$\mathcal{O}(d)^\vee \cong \mathcal{O}(-d)$$이고, 따라서 $$\omega_{\mathbb{P}^n} \otimes \mathcal{O}(d)^\vee \cong \mathcal{O}(-n-1) \otimes \mathcal{O}(-d) \cong \mathcal{O}(-d-n-1)$$이다. [명제 1](#prop1)에 의해
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$이므로 $$\mathcal{O}(d)^\vee \cong \mathcal{O}(-d)$$이고, 따라서 $$\omega_{\mathbb{P}^n} \otimes \mathcal{O}(d)^\vee \cong \mathcal{O}(-n-1) \otimes \mathcal{O}(-d) \cong \mathcal{O}(-d-n-1)$$이다. [명제 1](#prop1)에 의해
 
 $$H^i(\mathbb{P}^n, \mathcal{O}(d)) \cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-d-n-1))^\ast$$
 
 을 얻는다. 오른쪽의 차원은 ([§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#prop1))의 Bott's formula로 계산할 수 있다. $$\square$$
 
-</div>
+</details>
 
 <div class="example" markdown="1">
 
@@ -108,7 +113,7 @@ Grothendieck duality를 기술하려면 derived category 위에서 정의되는 
 
 **$$R f_\ast$$** ([§유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8)). Pushforward $$f_\ast$$는 left exact functor이다: $$0 \to f_\ast \mathcal{F}' \to f_\ast \mathcal{F} \to f_\ast \mathcal{F}''$$는 exact하지만 오른쪽에서는 $$f_\ast \mathcal{F}''$$로의 surjectivity가 보장되지 않는다. 따라서 right derived functor $$R f_\ast$$가 필요하다. Sheaf $$\mathcal{F}$$에 injective resolution $$\mathcal{F} \to \mathcal{I}^\bullet$$을 취한 뒤 $$f_\ast \mathcal{I}^\bullet$$을 적용한다. 이 complex의 cohomology가 higher direct image $$R^i f_\ast$$를 준다.
 
-**$$L f^\ast$$** ([§유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8)). Pullback $$f^\ast$$는 right exact functor이다. 이는 $$f^\ast$$가 $$f^{-1}\mathcal{O}_Y \otimes_{f^{-1}\mathcal{O}_X} -$$와 같은 tensor product의 형태이기 때문이다: tensor product는 항상 right exact하지만 left exact가 아니다. 따라서 left derived functor $$L f^\ast$$가 필요하며, flat resolution로 치환한 뒤 pullback을 적용한다.
+**$$L f^\ast$$** ([§유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8)). Pullback $$f^\ast$$는 right exact functor이다. 이는 $$f^\ast$$가 $$f^{-1}(-) \otimes_{f^{-1}\mathcal{O}_Y} \mathcal{O}_X$$와 같은 tensor product의 형태이기 때문이다: tensor product는 항상 right exact하지만 left exact가 아니다. 따라서 left derived functor $$L f^\ast$$가 필요하며, flat resolution로 치환한 뒤 pullback을 적용한다.
 
 **$$f^!$$** ([§유도카테고리, ⁋명제 13](/ko/math/homological_algebra/derived_categories#prop13)). 이 functor는 $$R f_\ast$$의 right adjoint로 derived category에서만 자연스럽게 정의된다. Sheaf category $$\operatorname{Coh}(X)$$의 수준에서는 $$f^!$$에 올바른 의미를 부여할 수 없다: $$R f_\ast$$가 complex 수준의 functor이므로, 그 adjoint 역시 complex 수준에서 존재해야 한다.
 

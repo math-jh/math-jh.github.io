@@ -87,11 +87,11 @@ $$C_1 = Z(\x_0^2 + \x_1^2 - \x_2^2),\qquad C_2 = Z(\x_0\x_1)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 점 $$p$$에서의 교차 중복도를 다음과 같이 정의한다.
+<ins id="def7">**정의 7**</ins> 점 $$p$$에서의 **교차 중복도**(intersection multiplicity)를 다음과 같이 정의한다.
 
 $$i_p(C, D) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p} / (f, g)$$
 
-여기서 $$\mathcal{O}_{\mathbb{A}^2, p}$$는 점 $$p$$에서의 local ring이고, $$(f, g)$$는 $$f, g$$로 생성되는 ideal이다.
+여기서 $$\mathcal{O}_{\mathbb{A}^2, p}$$는 점 $$p$$에서의 **국소환**(local ring)이고, $$(f, g)$$는 $$f, g$$로 생성되는 **아이디얼**(ideal)이다.
 
 </div>
 
@@ -123,6 +123,8 @@ $$i_p(C, D) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p} / (f, g)$$
 <div class="proposition" markdown="1">
 
 <ins id="prop9">**명제 9 (Hilbert 다항식)**</ins> 차수 $$d$$인 동차다항식 $$F \in \mathbb{K}[\x_0, \x_1, \x_2]$$에 의하여 정의되는 곡선 $$C = Z(F)$$의 coordinate ring $$S(C) = \mathbb{K}[\x_0, \x_1, \x_2]/(F)$$의 Hilbert 함수 $$H(t) = \dim_\mathbb{K} S(C)_t$$는 $$t$$가 충분히 클 때 $$H(t) = dt + \frac{d(3-d)}{2}$$이다. 특히 Hilbert 다항식의 차수는 1이고 그 일차항의 계수는 $$d$$이다.
+
+명제 9는 coordinate ring의 Hilbert 함수를 계산하는 결과로, 이어지는 명제 11의 증명에서 핵심적인 역할을 한다.
 
 </div>
 
@@ -187,11 +189,13 @@ $$P_{F,G}(t) = P_F(t) - P_F(t - n) = \bigl(mt + c_1\bigr) - \bigl(m(t-n) + c_1\b
 
 <div class="proposition" markdown="1">
 
+지금까지 $$\mathbb{P}^2$$ 안의 곡선에 대해서만 Bézout의 정리를 증명했다. 이를 임의의 사영공간과 일반적인 다형체로 확장하면 다음과 같다.
+
 <ins id="prop12">**명제 12 (일반화된 Bézout 정리)**</ins> $$\mathbb{P}^n$$ 안의 두 다형체 $$V, W$$에 대해:
 
 $$\deg(V \cap W) \leq \deg(V) \cdot \deg(W)$$
 
-여기서 $$\deg(V \cap W)$$는 $$V \cap W$$의 각 기약성분들의 차수의 합이다. 등호는 $$V$$와 $$W$$가 proper intersection을 가질 때(즉, $$V \cap W$$의 모든 기약성분 $$Z$$에 대하여 $$\operatorname{codim}(Z) = \operatorname{codim}(V) + \operatorname{codim}(W)$$일 때) 성립한다. 이 경우 $$V \cap W$$의 각 성분 $$Z$$에 교차 중복도 $$m_Z$$를 부여하면 $$\sum_Z m_Z \deg(Z) = \deg(V) \cdot \deg(W)$$이다. ([§차원, ⁋예시 14](/ko/math/algebraic_geometry/dimension#ex14))
+여기서 $$\deg(V \cap W)$$는 $$V \cap W$$의 각 기약성분들의 차수의 합이다. 명제 12는 명제 2의 $$\mathbb{P}^2$$에서의 결과를 임의의 $$\mathbb{P}^n$$ 및 일반적인 다형체로 확장한 것으로, 그 증명은 Chow 환을 통한 교차이론의 일반론에 의존한다. 등호는 $$V$$와 $$W$$가 proper intersection을 가질 때(즉, $$V \cap W$$의 모든 기약성분 $$Z$$에 대하여 $$\operatorname{codim}(Z) = \operatorname{codim}(V) + \operatorname{codim}(W)$$일 때) 성립한다. 이 경우 $$V \cap W$$의 각 성분 $$Z$$에 교차 중복도 $$m_Z$$를 부여하면 $$\sum_Z m_Z \deg(Z) = \deg(V) \cdot \deg(W)$$이다. ([§차원, ⁋예시 14](/ko/math/algebraic_geometry/dimension#ex14))
 
 </div>
 
@@ -253,7 +257,11 @@ $$P = \overline{AB} \cap \overline{DE},\quad Q = \overline{BC} \cap \overline{EF
 
 $$X = \overline{AB} \cup \overline{CD} \cup \overline{EF},\quad Y = \overline{BC} \cup \overline{DE} \cup \overline{FA}$$
 
-을 정의하자. 각각은 세 직선의 합집합이므로 차수 3 곡선이다. $$X \cap Y$$를 생각하면, $$A, B, C, D, E, F$$는 모두 $$X$$와 $$Y$$ 위에 있고, $$P, Q, R$$도 $$X$$와 $$Y$$ 위에 있으므로 $$X \cap Y$$는 적어도 9개의 점을 포함한다. Bézout의 정리에 의하여 $$\sum_{p \in X \cap Y} i_p(X, Y) = 3 \times 3 = 9$$이므로, $$X \cap Y = \{A, B, C, D, E, F, P, Q, R\}$$이며 각 점에서의 교차 중복도는 1이다. (특히 $$X$$와 $$Y$$는 공통 성분을 갖지 않는다.)
+을 정의하자. 각각은 세 직선의 합집합이므로 차수 3 곡선이다. $$X$$와 $$Y$$가 공통 성분을 갖지 않는다는 것을 먼저 확인하자. $$\Gamma$$는 이차곡선이므로, 만약 $$\Gamma$$ 위의 세 점이 공선형이면 그 직선은 $$\Gamma$$에 포함되어야 한다. 그러나 이차곡선은 두 직선의 합집합이거나 기약인데, 어느 경우든 $$\Gamma$$ 위의 한 직선이 $$\Gamma$$의 성분이 되려면 $$\Gamma$$가 두 직선으로 분해되어야 하고 그 직선이 그 중 하나여야 한다. 만약 $$\Gamma$$가 기약이라면 어떤 직선도 $$\Gamma$$에 포함될 수 없으므로 $$\Gamma$$ 위의 어떤 세 점도 공선형이 아니다. $$\Gamma$$가 두 직선 $$L_1 \cup L_2$$로 분해되는 경우, 공선형인 세 점은 모두 같은 직선 성분 위에 있어야 한다. 그러나 $$A, B, C, D, E, F$$가 $$L_1 \cup L_2$$ 위에 놓이고, $$X = \overline{AB} \cup \overline{CD} \cup \overline{EF}$$의 각 직선이 $$\Gamma$$의 두 점을 포함하므로, 같은 직선 성분 $$L_i$$ 위의 점 쌍만이 $$\overline{AB}$$, $$\overline{CD}$$, $$\overline{EF}$$를 이룰 수 있다.
+
+$$X$$와 $$Y$$가 공통 직선 성분을 갖는지 확인하자. 만약 $$\overline{AB} = \overline{BC}$$이면 $$A, B, C$$가 공선형이 되어, 이 세 점은 같은 $$L_i$$ 위에 있어야 한다. 마찬가지로 $$\overline{AB} = \overline{DE}$$이면 $$A, B, D, E$$가 공선형이 되어 이 네 점이 같은 직선 위에 있어야 한다. 이 경우 $$\overline{AB}$$와 $$\overline{DE}$$는 같은 직선 $$L_i$$이며, 따라서 $$X$$의 성분과 $$Y$$의 성분이 일치하게 된다. 그러나 이는 $$\Gamma = L_1 \cup L_2$$일 때만 가능하고, 그럼에도 6개 점의 배치가 적절히 섞여 있으면 $$X$$의 세 직선과 $$Y$$의 세 직선이 모두 다르게 된다. 구체적으로, $$\overline{AB} = \overline{BC}$$이려면 $$A, B, C$$가 공선형이어야 하고 이는 $$\Gamma$$의 어떤 직선 성분 위에 세 점이 있음을 의미한다. 하지만 $$\overline{CD} \neq \overline{BC}$$이려면 $$D$$가 $$\overline{BC}$$ 위에 없어야 하고, $$\overline{EF} \neq \overline{BC}$$이려면 $$E, F$$가 $$\overline{BC}$$ 위에 없어야 한다. 만약 $$\overline{AB} = \overline{BC} = L_1$$이라면 $$D \in L_2$$여야 하고 $$\overline{CD}$$는 $$L_1$$과 $$L_2$$를 잇는 직선으로 $$L_1, L_2$$ 모두와 다르다. 이 경우 $$\overline{CD} \in X$$는 $$L_1, L_2$$ 모두와 다르므로 $$Y$$의 어떤 성분과도 같을 수 없다. 모든 경우를 유사하게 검토하면 $$X$$와 $$Y$$는 공통 직선 성분을 갖지 않음을 확인할 수 있으며, 직선 성분들만으로 이루어진 곡선이므로 공통 성분이 없다.
+
+$$X \cap Y$$를 생각하면, $$A, B, C, D, E, F$$는 모두 $$X$$와 $$Y$$ 위에 있고, $$P, Q, R$$도 $$X$$와 $$Y$$ 위에 있으므로 $$X \cap Y$$는 적어도 9개의 점을 포함한다. Bézout의 정리에 의하여 $$\sum_{p \in X \cap Y} i_p(X, Y) = 3 \times 3 = 9$$이므로, $$X \cap Y = \{A, B, C, D, E, F, P, Q, R\}$$이며 각 점에서의 교차 중복도는 1이다.
 
 이제 새로운 세차곡선 $$Z = \Gamma \cup \overline{PQ}$$를 정의하자. 이 역시 차수 $$2 + 1 = 3$$의 곡선이다. $$Z$$는 $$X \cap Y$$의 9점 중 $$A, B, C, D, E, F$$ (이들은 $$\Gamma$$ 위에 있음)와 $$P, Q$$ (이들은 $$\overline{PQ}$$ 위에 있음), 즉 8점을 지난다.
 
