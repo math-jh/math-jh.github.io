@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/computation_of_homology
 header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Computation_of_homology.png
+    overlay_image: /assets/images/Math/Algebraic_Topology/Computation_of_Homology.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-en"

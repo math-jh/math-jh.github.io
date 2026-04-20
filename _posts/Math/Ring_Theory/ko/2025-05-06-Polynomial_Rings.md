@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/polynomial_rings
 header:
-    overlay_image: /assets/images/Math/Ring_Theory/Polynomial_rings.png
+    overlay_image: /assets/images/Math/Ring_Theory/Polynomial_Rings.png
     overlay_filter: 0.5
 sidebar: 
     nav: "ring_theory-ko"

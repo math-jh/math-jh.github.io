@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/characteristic_classes
 header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Characteristic_classes.png
+    overlay_image: /assets/images/Math/Algebraic_Topology/Characteristic_Classes.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-ko"

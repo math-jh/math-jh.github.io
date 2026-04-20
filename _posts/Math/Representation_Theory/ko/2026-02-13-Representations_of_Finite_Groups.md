@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/representations_of_finite_groups
 header:
-    overlay_image: /assets/images/Math/Representation_Theory/Representations_of_finite_groups.png
+    overlay_image: /assets/images/Math/Representation_Theory/Representations_of_Finite_Groups.png
     overlay_filter: 0.5
 sidebar: 
     nav: "representation_theory-ko"

@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/character_theory
 header:
-    overlay_image: /assets/images/Math/Representation_Theory/Character_theory.png
+    overlay_image: /assets/images/Math/Representation_Theory/Character_Theory.png
     overlay_filter: 0.5
 sidebar: 
     nav: "representation_theory-ko"
