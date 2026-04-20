@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/galois_extension
 header:
-    overlay_image: /assets/images/Math/Field_Theory/Galois_extension.png
+    overlay_image: /assets/images/Math/Field_Theory/Galois_Extension.png
     overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-ko"

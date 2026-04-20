@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/separable_degree
 header:
-    overlay_image: /assets/images/Math/Field_Theory/Separable_degree.png
+    overlay_image: /assets/images/Math/Field_Theory/Separable_Degree.png
     overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-ko"

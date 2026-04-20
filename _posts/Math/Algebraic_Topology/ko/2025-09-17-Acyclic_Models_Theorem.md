@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/acyclic_models_theorem
 header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Acyclic_models_theorem.png
+    overlay_image: /assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-ko"

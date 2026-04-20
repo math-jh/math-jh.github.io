@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/Jordan_canonical_form
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Primary_decomposition_theorem.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Primary_Decomposition_Theorem.png
     overlay_filter: 0.5
 sidebar: 
     nav: "linear_algebra-ko"

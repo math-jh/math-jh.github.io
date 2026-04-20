@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Misc / Peripherals]
 permalink: /ko/misc/peripherals/keyboards/charybdis
 header:
-    overlay_image: /assets/images/Misc/peripherals/Charybdis.jpeg
+    overlay_image: /assets/images/Misc/Peripherals/Charybdis.jpeg
     overlay_filter: 0.5
 
 toc: false
