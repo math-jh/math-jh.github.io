@@ -6,7 +6,7 @@ excerpt: "Normal subgroups and quotient groups"
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/quotient_groups
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Quotient_groups.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Quotient_Groups.png
     overlay_filter: 0.5
 sidebar:
     nav: "algebraic_structures-en"

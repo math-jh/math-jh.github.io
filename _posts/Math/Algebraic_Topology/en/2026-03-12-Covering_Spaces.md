@@ -60,7 +60,7 @@ In what follows, we will only consider path-connected spaces for convenience. To
 
 The definition may seem somewhat complex, but essentially it is convenient to keep the following picture in mind.
 
-![S1_covering](/assets/images/Math/Algebraic_Topology/Covering_spaces-1.png){:style="width:26em" class="invert" .align-center}
+![S1_covering](/assets/images/Math/Algebraic_Topology/Covering_Spaces-1.png){:style="width:26em" class="invert" .align-center}
 
 This represents the covering map
 
@@ -147,7 +147,7 @@ The transport map is bijective. This is because, first, if any $$y_1\in p^{-1}(x
 
 For a fixed base space $$B$$, we define the category $$\Cov(B)$$ of covering spaces of $$B$$ in a trivial manner. Explicitly, the objects of this category are covering maps $$p:E\rightarrow B$$, and morphisms between them are the following commutative diagram 
 
-![morphism_of_covering_spaces](/assets/images/Math/Algebraic_Topology/Covering_spaces-2.png){:style="width:8em" class="invert" .align-center}
+![morphism_of_covering_spaces](/assets/images/Math/Algebraic_Topology/Covering_Spaces-2.png){:style="width:8em" class="invert" .align-center}
 
 Through this, we see that associating each $$p\in \Cov(B)$$ with the monodromy functor $$M_p$$ defines a functor
 
@@ -240,11 +240,11 @@ While we can compute the fundamental group or homology from the definition for n
 
 The simplest of such methods is the case where a space $$X$$ can be expressed as a union of two open sets $$X=U\cup V$$. Then by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1), we know that the following diagram 
 
-![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_spaces-3.png){:style="width:8em" class="invert" .align-center}
+![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-3.png){:style="width:8em" class="invert" .align-center}
 
 is a colimit diagram. In this case, our goal is to apply the fundamental groupoid functor $$\Pi_1$$ to this diagram and represent $$\Pi_1(X)$$ in terms of $$\Pi_1(U)$$, $$\Pi_1(V)$$, and $$\Pi_1(U\cap V)$$. On the other hand, [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) tells us that for any open covering $$(U_i)$$, the following diagram 
 
-![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_spaces-4.png){:style="width:8em" class="invert" .align-center}
+![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-4.png){:style="width:8em" class="invert" .align-center}
 
 is a colimit diagram. Our claim is that if the fundamental groupoids of $$(U_i)$$ and their finite intersections are all known, we can compute the fundamental groupoid of $$\Pi_1(X)$$ from them.
 
@@ -266,7 +266,7 @@ Now, just as when we obtained [Corollary 12](#cor12) above, if we apply this the
 
 <ins id="cor14">**Corollary 14 (Seifert-van Kampen theorem, classical version)**</ins> Suppose a topological space $$X$$ is expressed as a union of two connected open subsets $$U,V$$, and let $$U\cap V$$ be connected. Then the following diagram
 
-![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_spaces-5.png){:style="width:20em" class="invert" .align-center}
+![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_Spaces-5.png){:style="width:20em" class="invert" .align-center}
 
 is a pushout diagram and the resulting $$\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)\rightarrow \pi_1(X)$$ is an isomorphism.
 

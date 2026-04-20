@@ -7,7 +7,7 @@ categories: [Math / Set Theory]
 permalink: /en/math/set_theory/property_of_products
 
 header:
-    overlay_image: /assets/images/Math/Set_Theory/Property_of_products.png
+    overlay_image: /assets/images/Math/Set_Theory/Property_of_Products.png
     overlay_filter: 0.5
 
 sidebar: 
@@ -103,17 +103,17 @@ $$\pr_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{\pr_k}{\longri
 
 Then by the universal property of the product $$\prod_{i\in I}A_i$$, we know there exists a $$\phi:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\rightarrow\prod_{i\in I}A_i$$ making the following diagram commute:
 
-![partial_product_pf_1](/assets/images/Math/Set_Theory/Property_of_products-1.png){:style="width:18em" class="invert" .align-center}
+![partial_product_pf_1](/assets/images/Math/Set_Theory/Property_of_Products-1.png){:style="width:18em" class="invert" .align-center}
 
 Similarly, by the universal property of the product $$\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$$ with respect to index set $$K$$, we know there exists a $$\psi:\prod_{i\in I}A_i\rightarrow\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$$ making the following diagram commute:
 
-![partial_product_pf_2](/assets/images/Math/Set_Theory/Property_of_products-2.png){:style="width:22em" class="invert" .align-center}
+![partial_product_pf_2](/assets/images/Math/Set_Theory/Property_of_Products-2.png){:style="width:22em" class="invert" .align-center}
 
 Then $$\phi\circ\psi$$ and $$\psi\circ\phi$$ are each identity functions, and thus they give the desired bijection.
 
 For example, let us show that $$\phi\circ\psi$$ is the identity function from $$\prod_{i\in I}A_i$$ to itself. To do this, it suffices to show that for all $$i\in I$$, the following diagram commutes:
 
-![partial_product_pf_3](/assets/images/Math/Set_Theory/Property_of_products-3.png){:style="width:8em" class="invert" .align-center}
+![partial_product_pf_3](/assets/images/Math/Set_Theory/Property_of_Products-3.png){:style="width:8em" class="invert" .align-center}
 
 The universal property of the product implies that there exists a *unique* function $$\prod_{i\in I}A_i\rightarrow \prod_{i\in I}A_i$$ making the diagram above commute. Naturally, the identity function from $$\prod_{i\in I}A_i$$ to itself also makes the diagram above commute, so by uniqueness this function must equal $$\phi\circ\psi$$.
 
@@ -123,7 +123,7 @@ $${\pr_i}\circ(\phi\circ\psi)=({\pr_i}\circ\phi)\circ\psi={\pr_{ik}}\circ\psi={\
 
 we obtain the desired conclusion. (The last equality views $$\pr_j$$ as a projection function to $$\{j\}\subseteq I$$.) This equation may look complicated, but it is merely writing out in formula form that the following diagram commutes:
 
-![partial_product_pf_4](/assets/images/Math/Set_Theory/Property_of_products-4.png){:style="width:16em" class="invert" .align-center}
+![partial_product_pf_4](/assets/images/Math/Set_Theory/Property_of_Products-4.png){:style="width:16em" class="invert" .align-center}
 
 </details> 
 
@@ -149,11 +149,11 @@ holds.
 
 There is nothing particularly special to explain beyond the following two commutative diagrams:
 
-![composition_of_product_functions](/assets/images/Math/Set_Theory/Property_of_products-5.png){:width="287.1px" class="invert" .align-center}
+![composition_of_product_functions](/assets/images/Math/Set_Theory/Property_of_Products-5.png){:width="287.1px" class="invert" .align-center}
 
 and
 
-![composition_of_product_fuctions_2](/assets/images/Math/Set_Theory/Property_of_products-6.png){:width="335.4px" class="invert" .align-center}
+![composition_of_product_fuctions_2](/assets/images/Math/Set_Theory/Property_of_Products-6.png){:width="335.4px" class="invert" .align-center}
 
 </details>
 

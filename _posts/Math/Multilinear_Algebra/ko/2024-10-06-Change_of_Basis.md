@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/change_of_basis
 header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Change_of_basis.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Change_of_Basis.png
     overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"

@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/various_modules
 header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Various_modules.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Various_Modules.png
     overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"

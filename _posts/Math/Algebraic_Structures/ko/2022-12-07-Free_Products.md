@@ -6,7 +6,7 @@ excerpt: "Free product와 universal property"
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/free_products
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Free_products.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Free_Products.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
@@ -29,7 +29,7 @@ $$f_1(1)=a, \qquad f_2(1)=b$$
 
 그러나 우리는 다음의 diagram
 
-![counterexample](/assets/images/Math/Algebraic_Structures/Free_products-1.png){:style="width:11.6em" class="invert" .align-center}
+![counterexample](/assets/images/Math/Algebraic_Structures/Free_Products-1.png){:style="width:11.6em" class="invert" .align-center}
 
 을 commute하게 만드는 $$f:\mathbb{Z}\times\mathbb{Z}\rightarrow G$$는 존재하지 않음을 알 수 있다. 만일 그러한 $$f$$가 존재한다면 
 

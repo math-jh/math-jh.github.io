@@ -51,7 +51,7 @@ $$\cdots \rightarrow H_k(A) \rightarrow H_k(X) \rightarrow H_k(X,A)\rightarrow H
 
 이 존재한다. 이 때 connecting map $$H_k(X,A) \rightarrow H_{k-1}(A)$$는 $$H_k(X,A)$$의 임의의 cycle(의 임의의 representative)에 boundary map을 취한 것에 불과하다. 뿐만 아니라, 만일 continuous map $$f:X \rightarrow Y$$가 $$f(A)\subseteq B$$를 만족한다면 $$f$$가 기존의 chain map $$C_\bullet(X)\rightarrow C_\bullet(Y)$$ 외에도 $$C_\bullet(A) \rightarrow C_\bullet(B)$$를 유도하고, 다음 diagram 
 
-![relative_homology](/assets/images/Math/Algebraic_Topology/Computation_of_homology-1.png){:style="width:12em" class="invert" .align-center}
+![relative_homology](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-1.png){:style="width:12em" class="invert" .align-center}
 
 이 commute한다는 것으로부터 chain map $$C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$$ 또한 유도된다. 즉, 이러한 조건을 만족하는 $$f:(X,A) \rightarrow (Y,B)$$는 homology에서의 map $$H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$$ 또한 유도한다. 그럼 [§호모토피, ⁋명제 6](/ko/math/algebraic_topology/homotopy#prop6)을 $$X$$와 $$A$$ 각각에 적용하고 [\[호몰로지 대수학\] §Digram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)를 사용하면 이 조건을 만족하는 homotopic한 연속함수들 $$f,g$$가 호몰로지에서 같은 함수를 유도하는 것을 안다. 
 
@@ -85,7 +85,7 @@ $$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A)$$
 
 Good pair $$(X,A)$$가 주어졌다 하고, $$U$$가 [정의 3](#def3)의 가정을 만족하는 열린집합이라 하자. 그럼 다음의 diagram
 
-![3*3_diagram](/assets/images/Math/Algebraic_Topology/Computation_of_homology-2.png){:style="width:26em" class="invert" .align-center}
+![3*3_diagram](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-2.png){:style="width:26em" class="invert" .align-center}
 
 에서, 각 행은 모두 exact이며 처음 두 열도 exact이므로 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 7](/ko/math/homological_algebra/diagram_chasing#cor7)에 의하여 chain complex들의 short exact sequence
 
@@ -107,7 +107,7 @@ $$H_k(X/A, [A])\cong H_k(X/A, U/A)$$
 
 을 얻으며 이들은 quotient map에 의해 유도되는 다음의 diagram
 
-![excision-1](/assets/images/Math/Algebraic_Topology/Computation_of_homology-3.png){:style="width:16em" class="invert" .align-center}
+![excision-1](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-3.png){:style="width:16em" class="invert" .align-center}
 
 에 넣을 수 있다. 이제 $$(X,A)$$가 good pair라는 가정으로부터, $$A\subset U\subset X$$는 [정리 2](#thm2)의 조건 $$\cl A\subseteq \interior U$$를 만족하고 따라서 inclusion 
 
@@ -119,7 +119,7 @@ $$H_k((X/A)\setminus [A], (U/A)\setminus [A])$$
 
 이 isomorphism이라는 것을 안다. 이들은 마찬가지로 quotient map에 의해 유도되는 다음의 diagram
 
-![excision-2](/assets/images/Math/Algebraic_Topology/Computation_of_homology-4.png){:style="width:24em" class="invert" .align-center}
+![excision-2](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-4.png){:style="width:24em" class="invert" .align-center}
 
 에 들어가는데, 이 때 왼쪽 수직방향의 $$H_k(X\setminus A, U\setminus A)\rightarrow H_k((X/A)\setminus [A], (U/A)\setminus [A])$$는 quotient map $$p:X\rightarrow X/A$$가 $$A$$ 바깥에서는 homeomorphism이라는 가정으로부터 isomorphism이 된다. 이 결과들을 종합하면 다음의 isomorphism
 
@@ -173,7 +173,7 @@ $$H_\bullet^\Delta(A)\rightarrow H_\bullet^\Delta(A),\qquad H_\bullet^\Delta(X,A
 
 이 존재한다. 그럼 이들은 [\[호몰로지 대수학\] §긴 완전열, ⁋명제 2](/ko/math/homological_algebra/long_exact_sequence#prop2)에 의하여 다음의 commutative diagram
 
-![functoriality](/assets/images/Math/Algebraic_Topology/Computation_of_homology-5.png){:style="width:48em" class="invert" .align-center}
+![functoriality](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-5.png){:style="width:48em" class="invert" .align-center}
 
 을 정의한다. 이를 사용하면 다음이 성립한다.
 
@@ -191,7 +191,7 @@ $$X_0\subset X_1\subset\cdots\subset X_l=X$$
 
 을 생각한 후 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)를 다음 diagram
 
-![induction](/assets/images/Math/Algebraic_Topology/Computation_of_homology-6.png){:style="width:56em" class="invert" .align-center}
+![induction](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-6.png){:style="width:56em" class="invert" .align-center}
 
 에 적용하여 귀납법을 돌리자. 귀납법을 위해서는 임의의 $$n$$과 임의의 $$k$$에 대하여 relative homology들 사이의 homomorphism
 
@@ -253,7 +253,7 @@ $$C^\Delta_\bullet(X;A):=C^\Delta_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet
 
 호몰로지의 대부분의 성질들은 [정의 6](#def6)의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로브터 유도할 수 있다. 위상공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cup V$$로 나타난다 하자. 그럼 다음의 inclusion
 
-![inclusions](/assets/images/Math/Algebraic_Topology/Computation_of_homology-7.png){:style="width:8em" class="invert" .align-center}
+![inclusions](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-7.png){:style="width:8em" class="invert" .align-center}
 
 들에 homology를 취하면 exactness에 의하여 long exact sequence들 사이의 morphism을 얻으며, 이 때 inclusion
 
@@ -261,7 +261,7 @@ $$(V,U\cap V)\rightarrow (X,U)$$
 
 은 excision axiom에 의하여 homology 상에서 isomorphism을 유도하므로, 위의 morphism 중 여기에 해당하는 것들은 모두 isomorphism이다. 즉 다음의 long exact sequence morphism
 
-![morphism_of_les](/assets/images/Math/Algebraic_Topology/Computation_of_homology-8.png){:style="width:44em" class="invert" .align-center}
+![morphism_of_les](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-8.png){:style="width:44em" class="invert" .align-center}
 
 을 얻는다. 여기서 $$i,j,k$$들은 각각의 inclusion에 의해 유도되는 함수들이고, $$\partial$$들은 connecting map이며 $$p$$들은 cokernel morphism들이다. 편의를 위해 index들은 생략하였다. 이제 이 long exact sequence morphism을 $$\alpha$$라 하고, $$\alpha$$의 mapping cone exact sequence
 

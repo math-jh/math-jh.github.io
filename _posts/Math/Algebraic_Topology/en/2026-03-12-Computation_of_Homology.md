@@ -49,7 +49,7 @@ $$\cdots \rightarrow H_k(A) \rightarrow H_k(X) \rightarrow H_k(X,A)\rightarrow H
 
 Here, the connecting map $$H_k(X,A) \rightarrow H_{k-1}(A)$$ is simply the boundary map applied to any cycle (or any representative thereof) in $$H_k(X,A)$$. Moreover, if a continuous map $$f:X \rightarrow Y$$ satisfies $$f(A)\subseteq B$$, then $$f$$ induces not only the existing chain map $$C_\bullet(X)\rightarrow C_\bullet(Y)$$ but also $$C_\bullet(A) \rightarrow C_\bullet(B)$$, and from the fact that the following diagram
 
-![relative_homology](/assets/images/Math/Algebraic_Topology/Computation_of_homology-1.png){:style="width:12em" class="invert" .align-center}
+![relative_homology](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-1.png){:style="width:12em" class="invert" .align-center}
 
 commutes, a chain map $$C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$$ is also induced. That is, $$f:(X,A) \rightarrow (Y,B)$$ satisfying such conditions also induces a map $$H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$$ in homology. Then by applying [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6) to $$X$$ and $$A$$ separately and using [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2), we can see that homotopic continuous functions $$f,g$$ satisfying this condition induce the same map in homology.
 
@@ -83,7 +83,7 @@ On the other hand, we know of a way to ignore information contained in $$A$$ in 
 
 Let $$(X,A)$$ be a good pair, and let $$U$$ be an open set satisfying the assumption of [Definition 3](#def3). Then in the following diagram
 
-![3*3_diagram](/assets/images/Math/Algebraic_Topology/Computation_of_homology-2.png){:style="width:26em" class="invert" .align-center}
+![3*3_diagram](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-2.png){:style="width:26em" class="invert" .align-center}
 
 each row is exact and the first two columns are also exact, so by [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 7](/en/math/homological_algebra/diagram_chasing#cor7), we obtain a short exact sequence of chain complexes
 
@@ -105,7 +105,7 @@ $$H_k(X/A, [A])\cong H_k(X/A, U/A)$$
 
 which can be placed in the following diagram induced by the quotient map
 
-![excision-1](/assets/images/Math/Algebraic_Topology/Computation_of_homology-3.png){:style="width:16em" class="invert" .align-center}
+![excision-1](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-3.png){:style="width:16em" class="invert" .align-center}
 
 Now, from the assumption that $$(X,A)$$ is a good pair, $$A\subset U\subset X$$ satisfies the condition $$\cl A\subseteq \interior U$$ of [Theorem 2](#thm2), and therefore the map $$H_k(X\setminus A, U\setminus A)\rightarrow H_k(X,U)$$ induced by the inclusion
 
@@ -117,7 +117,7 @@ $$H_k((X/A)\setminus [A], (U/A)\setminus [A])$$
 
 is an isomorphism. These also fit into the following diagram induced by the quotient map
 
-![excision-2](/assets/images/Math/Algebraic_Topology/Computation_of_homology-4.png){:style="width:24em" class="invert" .align-center}
+![excision-2](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-4.png){:style="width:24em" class="invert" .align-center}
 
 where the left vertical map $$H_k(X\setminus A, U\setminus A)\rightarrow H_k((X/A)\setminus [A], (U/A)\setminus [A])$$ is an isomorphism due to the assumption that the quotient map $$p:X\rightarrow X/A$$ is a homeomorphism outside of $$A$$. Combining these results, we obtain the following isomorphism
 
@@ -169,7 +169,7 @@ $$H_\bullet^\Delta(A)\rightarrow H_\bullet^\Delta(A),\qquad H_\bullet^\Delta(X,A
 
 exist. By [\[Homological Algebra\] §Long Exact Sequences, ⁋Proposition 2](/en/math/homological_algebra/long_exact_sequence#prop2), these define the following commutative diagram
 
-![functoriality](/assets/images/Math/Algebraic_Topology/Computation_of_homology-5.png){:style="width:48em" class="invert" .align-center}
+![functoriality](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-5.png){:style="width:48em" class="invert" .align-center}
 
 Using this, we obtain the following.
 
@@ -187,7 +187,7 @@ $$X_0\subset X_1\subset\cdots\subset X_l=X$$
 
 defined by the $$\Delta$$-complex structure of $$X$$, and then apply [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2) to the following diagram
 
-![induction](/assets/images/Math/Algebraic_Topology/Computation_of_homology-6.png){:style="width:56em" class="invert" .align-center}
+![induction](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-6.png){:style="width:56em" class="invert" .align-center}
 
 to run an induction. For the induction, it suffices to show that for any $$n$$ and any $$k$$, the homomorphism between relative homologies
 
@@ -247,7 +247,7 @@ we would have obtained this kind of homology.
 
 Most properties of homology follow from the axioms in [Definition 6](#def6). For example, the generalization of equation (1), which is the goal of this article, can be derived from this. Suppose a topological space $$X$$ is expressed as the union of two open sets $$X=U\cup V$$. Then applying homology to the following inclusions
 
-![inclusions](/assets/images/Math/Algebraic_Topology/Computation_of_homology-7.png){:style="width:8em" class="invert" .align-center}
+![inclusions](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-7.png){:style="width:8em" class="invert" .align-center}
 
 we obtain a morphism between long exact sequences by exactness, and here the inclusion
 
@@ -255,7 +255,7 @@ $$(V,U\cap V)\rightarrow (X,U)$$
 
 induces an isomorphism in homology by the excision axiom, so all corresponding parts in the above morphism are isomorphisms. That is, we obtain the following long exact sequence morphism
 
-![morphism_of_les](/assets/images/Math/Algebraic_Topology/Computation_of_homology-8.png){:style="width:44em" class="invert" .align-center}
+![morphism_of_les](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-8.png){:style="width:44em" class="invert" .align-center}
 
 Here $$i,j,k$$ are maps induced by each inclusion, $$\partial$$ are connecting maps, and $$p$$ are cokernel morphisms. For convenience, indices are omitted. Now let us call this long exact sequence morphism $$\alpha$$, and denote the mapping cone exact sequence of $$\alpha$$
 

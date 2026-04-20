@@ -6,7 +6,7 @@ excerpt: "집합론의 공리들"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/zfc_axioms
 header:
-    overlay_image: /assets/images/Math/Set_Theory/ZFC_axioms.png
+    overlay_image: /assets/images/Math/Set_Theory/ZFC_Axioms.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"

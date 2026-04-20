@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/fractional_ideals
 header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Fractional_ideals.png
+    overlay_image: /assets/images/Math/Commutative_Algebra/Fractional_Ideals.png
     overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"

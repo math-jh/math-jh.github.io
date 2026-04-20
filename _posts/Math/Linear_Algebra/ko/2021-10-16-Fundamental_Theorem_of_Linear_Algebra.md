@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-categorical_viewpoint.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Fundamental_Theorem_of_Linear_Algebra-categorical_Viewpoint.png
     overlay_filter: 0.5
 
 date: 2021-10-16
@@ -123,7 +123,7 @@ $$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$의 $$i$$번째 열은 $$e_i$$
 
 앞서 우리가 증명한 기본정리는 유클리드 공간에 대해서만 적용되지만, 아주 작은 수정만 있으면 일반적인 유한차원 $$\mathbb{K}$$-벡터공간에 대해서도 성립한다. 이 과정은 다음의 diagram으로 간단하게 요약할 수 있다.
 
-![FTLA](/assets/images/Math/Linear_Algebra/Fundamental_theorem_of_linear_algebra-1.png){:style="width:14em" class="invert" .align-center} 
+![FTLA](/assets/images/Math/Linear_Algebra/Fundamental_Theorem_of_Linear_Algebra-1.png){:style="width:14em" class="invert" .align-center} 
 
 임의의 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$와 그 basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$에 대해 정의된 *좌표표현*은 다음의 isomorphism
 
@@ -239,7 +239,7 @@ $$I=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=[\id_V]_{\mathcal{B}}^{\mathcal{B}'}[\id
 
 기저변환행렬이 어떤 방식으로 작동하는지를 살펴보기 위해 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 고정하고, $$V$$ 위에 정의된 두 basis $$\mathcal{B},\mathcal{B}'$$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
 
-![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_basis-1.png){:style="width:7em" class="invert" .align-center}
+![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_Basis-1.png){:style="width:7em" class="invert" .align-center}
 
 이 때 두 개의 수직방향 함수는 각각 $$v\mapsto [v]_\mathcal{B}$$와 $$v\mapsto[v]_{\mathcal{B}'}$$를 의미한다. 따라서 기저변환행렬은 $$v\in V$$의 $$\mathcal{B}$$에 대한 좌표표현을 받아, $$\mathcal{B}'$$에 대한 좌표표현으로 바꾸어주는 행렬이라 생각할 수 있다. 더 일반적으로 임의의 linear map $$L:V\rightarrow W$$가 주어졌다 하고, $$V,W$$의 basis $$\mathcal{B},\mathcal{C}$$, 그리고 또 다른 basis $$\mathcal{B}',\mathcal{C}'$$가 주어졌다 하면, 선형대수학의 기본정리로부터 다음의 식
 

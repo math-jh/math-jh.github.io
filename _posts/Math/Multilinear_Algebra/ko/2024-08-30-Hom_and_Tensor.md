@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/hom_and_tensor
 header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Hom_and_tensor.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Hom_and_Tensor.png
     overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"
