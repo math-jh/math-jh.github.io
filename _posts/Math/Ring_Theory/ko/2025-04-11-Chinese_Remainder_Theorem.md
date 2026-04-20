@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/chinese_remainder_theorem
 header:
-    overlay_image: /assets/images/Math/Ring_Theory/Chinese_remainder_theorem.png
+    overlay_image: /assets/images/Math/Ring_Theory/Chinese_Remainder_Theorem.png
     overlay_filter: 0.5
 sidebar: 
     nav: "ring_theory-ko"

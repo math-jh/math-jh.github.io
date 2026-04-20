@@ -6,7 +6,7 @@ categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/affine_toric_varieties
 
 header:
-    overlay_image: /assets/images/Math/Toric_Geometry/affine_toric_varieties.png
+    overlay_image: /assets/images/Math/Toric_Geometry/Affine_Toric_Varieties.png
     overlay_filter: 0.5
 
 sidebar:

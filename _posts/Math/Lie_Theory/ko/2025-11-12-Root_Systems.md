@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/root_systems
 header:
-    overlay_image: /assets/images/Math/Lie_Theory/Root_systems.png
+    overlay_image: /assets/images/Math/Lie_Theory/Root_Systems.png
     overlay_filter: 0.5
 sidebar: 
     nav: "Lie_theory-ko"

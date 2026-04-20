@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/Poincare_duality
 header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Poincare_duality.png
+    overlay_image: /assets/images/Math/Algebraic_Topology/Poincare_Duality.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-ko"

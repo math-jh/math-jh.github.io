@@ -5,7 +5,7 @@ excerpt: "Dynkin diagram, ADE 분류, 그리고 flag variety"
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/borel_subgroup
 header:
-    overlay_image: /assets/images/Math/Lie_Theory/Borel_subgroup.png
+    overlay_image: /assets/images/Math/Lie_Theory/Borel_Subgroup.png
     overlay_filter: 0.5
 sidebar: 
     nav: "Lie_theory-ko"

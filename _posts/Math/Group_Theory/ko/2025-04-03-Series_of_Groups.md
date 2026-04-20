@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/series_of_groups
 header:
-    overlay_image: /assets/images/Math/Group_Theory/Series_of_groups.png
+    overlay_image: /assets/images/Math/Group_Theory/Series_of_Groups.png
     overlay_filter: 0.5
 sidebar: 
     nav: "group_theory-ko"

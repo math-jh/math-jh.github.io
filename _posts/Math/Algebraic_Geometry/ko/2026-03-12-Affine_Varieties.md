@@ -8,7 +8,7 @@ sidebar:
     nav: "algebraic_geometry-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Affine_Zarieties.png
+    overlay_image: /assets/images/Math/Algebraic_Geometry/Affine_Varieties.png
     overlay_filter: 0.5
 
 date: 2026-03-12

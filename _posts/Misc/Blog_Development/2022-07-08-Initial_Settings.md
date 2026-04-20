@@ -42,8 +42,8 @@ math-jh.github.io
 ├──  minimal-mistakes-jekyll.gemspec
 ├──  package-lock.json
 ├──  package.json
-├──  screenshot-layouts.png
-└──  screenshot.png
+├──  Screenshot-layouts.png
+└──  Screenshot.png
 ```
 
 macOS에서는 작업을 할 때마다 일종의 캐시처럼 `.DS_Store`파일이 생성된다. 이 파일들을 무시하기 위해 `.gitignore` 파일에 `.DS_Store`를 추가하였다.  
@@ -96,7 +96,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 # Site Author
 author:
   name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : # path of avatar image, e.g. "/assets/images/Bio-photo.jpg"
   bio              : "I am an **amazing** person."
   location         : "Somewhere"
   email            :
@@ -110,7 +110,7 @@ author:
 # Site Author
 author:
   name             : "Junhyeok Kim"
-  avatar           : /assets/images/home/Octahedral.jpeg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/images/home/Octahedral.jpeg # path of avatar image, e.g. "/assets/images/Bio-photo.jpg"
   bio              : "Grad. student in mathematics"
   location         : "Seoul, Korea"
   email            : "kujuburi@icloud.com"
