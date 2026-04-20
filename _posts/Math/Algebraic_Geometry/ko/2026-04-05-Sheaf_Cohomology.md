@@ -476,10 +476,16 @@ $$\mathcal{J}^{p,q}=\Gamma(Y, f_\ast\mathcal{I}^{p,q})$$
 
 ![Leray_pushed](/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-3.png){:style="width:40em" class="invert" .align-center}
 
-는 다음과 같은 성질을 가진다.
+를 살펴보자.
 
-1. 각각의 $$p>0$$에 대하여, $$\mathcal{J}^{p,\bullet}$$은 exact이다. 
+<div class="proposition" markdown="1">
 
+<ins id="lem18">**보조정리 18 (Leray)**</ins> Injective resolution $$\mathcal{I}^\bullet$$와 
+
+</div>
+
+1. 각각의 $$p>0$$에 대하여, $$\mathcal{J}^{p,\bullet}$$은 $$0$$보다 큰 항에서 exact이다. 
+2. 
 
 
 Flasque sheaf의 direct image가 flasque sheaf임은 정의에 의해 자명하므로, $$f_\ast \mathcal{G}^p(\mathcal{F})$$들 각각은 특히 [명제 16](#prop16)에 의해 $$\Gamma(Y,-)$$-acyclic이며 이로부터 double complex
