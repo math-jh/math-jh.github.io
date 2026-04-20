@@ -471,29 +471,27 @@ $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 <ins id="def18">**정의 18 (Cartan–Eilenberg Resolution)**</ins> Abelian category에서 cochain complex $$K^\bullet$$의 *Cartan–Eilenberg resolution<sub>카르탕–아일렌베르크 분해</sub>*은 double complex $$I^{p,q}$$와 augmentation $$K^\bullet \to I^{\bullet,0}$$으로 이루어진 데이터로, 다음 조건들을 만족하는 것이다.
 
 1. 각 열 $$I^{p,\bullet}$$은 $$K^p$$의 injective resolution이다.
-2. 각 행의 cohomology $$H^p(I^{\bullet,q})$$는 $$H^p(K^\bullet)$$의 injective resolution을 이룬다. 즉, 복합체
-$$\cdots \to H^p(I^{\bullet,q-1}) \to H^p(I^{\bullet,q}) \to H^p(I^{\bullet,q+1}) \to \cdots$$
-은 $$H^p(K^\bullet)$$의 injective resolution이다.
+2. 각 행의 cohomology $$H^p(I^{\bullet,q})$$는 $$H^p(K^\bullet)$$의 injective resolution을 이룬다. 즉, chain complex
+       
+    $$\cdots \to H^p(I^{\bullet,q-1}) \to H^p(I^{\bullet,q}) \to H^p(I^{\bullet,q+1}) \to \cdots$$
+    
+    은 $$H^p(K^\bullet)$$의 injective resolution이다.
 
 </div>
 
-우리는 Cartan-Eilenberg resolution의 존재성은 별도로 증명하지 않지만, 
+이 정의의 핵심은 위에서 언급한 직관만으로는 Cartan-Eilenberg resolution이 얻어지지 않는다는 것으로, 특히 각 행의 cohomology가 $$H^p(K^\bullet)$$의 horozontal resolution을 이룬다는 것이 존재성의 증명에 핵심적인 요소이다. 우리는 Cartan-Eilenberg resolution의 존재성은 별도로 증명하지 않지만, 기본적으로는 [\[호몰로지 대수학\] §분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7)를 반복적으로 적용하여 얻을 수 있다. 
 
-CE resolution의 존재성은 horseshoe lemma를 반복적으로 적용하여 보일 수 있다. ([Wei, §5.7]) 이 정의의 핵심은, complex 전체를 한 번에 resolve함으로써 각 행의 cohomology가 원래 complex의 cohomology의 injective resolution이 자동으로 된다는 점이다. 이 성질은 각 항을 독립적으로 resolve할 때는 성립하지 않는다.
+이제 complex $$f_\ast\mathcal{G}^\bullet(\mathcal{F})$$의 Cartan–Eilenberg resolution $$\mathcal{I}^{p,q}$$을 고정하자. 그럼 정의에 의해 각 열 $$\mathcal{I}^{p,\bullet}$$은 $$f_\ast\mathcal{G}^p(\mathcal{F})$$의 injective resolution이며, 각 행의 horizontal cohomology $$H^p(\mathcal{I}^{\bullet,q})$$는 $$H^p(f_\ast\mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast\mathcal{F}$$의 injective resolution을 이룬다. 이를 바탕으로 두 방향의 filtration이 주는 spectral sequence들을 각각 생각하자.
 
-이제 complex $$f_\ast\mathcal{G}^\bullet(\mathcal{F})$$의 Cartan–Eilenberg resolution $$\mathcal{I}^{p,q}$$를 잡자. 각 열 $$\mathcal{I}^{p,\bullet}$$은 $$f_\ast\mathcal{G}^p(\mathcal{F})$$의 injective resolution이며, 각 행의 horizontal cohomology $$H^p(\mathcal{I}^{\bullet,q})$$는 $$H^p(f_\ast\mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast\mathcal{F}$$의 injective resolution을 이룬다. 이 double complex를 $$Y$$ 위의 sheaf 수준에서 그대로 다루자. 즉, $$\Gamma(Y,-)$$를 아직 적용하지 않은 상태에서 sheaf들로 이루어진 double complex $$\mathcal{I}^{p,q}$$를 생각하는 것이다. 여기서 $$p$$는 Godement resolution 방향의 차수이고, $$q$$는 CE resolution 방향의 차수이다.
-
-이 double complex에 대하여 두 개의 spectral sequence가 존재한다.
-
-**첫 번째 spectral sequence (CE resolution $$q$$-방향 filtration):** $$E_1$$ page에서
+우선 $$q$$방향의 filtration으로부터 오는 spectral sequence를 생각하면, 그 $$E_1$$ page는
 
 $$E_1^{p,q} = H^q(\mathcal{I}^{p,\bullet})$$
 
-이다. 각 $$p$$에 대하여 $$\mathcal{I}^{p,\bullet}$$은 $$f_\ast \mathcal{G}^p(\mathcal{F})$$의 injective resolution이므로, injective resolution의 exactness에 의하여
+로 주어진다. 이 때, 각 $$p$$에 대하여 $$\mathcal{I}^{p,\bullet}$$은 $$f_\ast \mathcal{G}^p(\mathcal{F})$$의 injective resolution이므로, injective resolution의 exactness에 의하여
 
 $$E_1^{p,q} = \begin{cases} f_\ast \mathcal{G}^p(\mathcal{F}) & \text{if $q = 0$} \\ 0 & \text{if $q > 0$} \end{cases}$$
 
-이다. $$d_1$$-differential은 $$E_1^{p,0} = f_\ast \mathcal{G}^p(\mathcal{F})$$에서 $$E_1^{p+1,0} = f_\ast \mathcal{G}^{p+1}(\mathcal{F})$$로 가는 사상으로, Godement resolution의 differential $$f_\ast \mathcal{G}^p(\mathcal{F}) \to f_\ast \mathcal{G}^{p+1}(\mathcal{F})$$에 해당한다. 따라서 $$E_2$$ page는 complex
+이며 $$d_1$$-differential은 $$E_1^{p,0} = f_\ast \mathcal{G}^p(\mathcal{F})$$에서 $$E_1^{p+1,0} = f_\ast \mathcal{G}^{p+1}(\mathcal{F})$$로 가는 사상으로, Godement resolution의 differential $$f_\ast \mathcal{G}^p(\mathcal{F}) \to f_\ast \mathcal{G}^{p+1}(\mathcal{F})$$에 해당한다. 즉, $$E_2$$ page는 complex
 
 $$0 \to f_\ast \mathcal{F} \to f_\ast \mathcal{G}^0(\mathcal{F}) \to f_\ast \mathcal{G}^1(\mathcal{F}) \to \cdots$$
 
@@ -501,19 +499,20 @@ $$0 \to f_\ast \mathcal{F} \to f_\ast \mathcal{G}^0(\mathcal{F}) \to f_\ast \mat
 
 $$E_2^{p,q} = \begin{cases} R^p f_\ast \mathcal{F} & \text{if $q = 0$} \\ 0 & \text{if $q > 0$} \end{cases}$$
 
-이다. $$q > 0$$에서 모두 소멸하므로 $$E_2 = E_\infty$$이고, sheaf 수준 double complex의 total cohomology는 $$R^n f_\ast \mathcal{F}$$이다.
+이로 주어진다. 
 
-**두 번째 spectral sequence (Godement $$p$$-방향 filtration):** 이것이 Leray spectral sequence를 준다. $$E_1$$ page에서 각 행 $$q$$에 대하여 horizontal cohomology sheaf
+이제 $$p$$ 방향의 filtration이 주는 spectral sequence를 생각하자. 우리는 이를 *Leray spectral sequence*라 부르며, 이 spectral sequence는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11)의 계산에 의하여 
+
+
+그럼 우리는 우선 $$E_1$$ page를
 
 $$\mathcal{H}^{p,q} := H^p(\mathcal{I}^{\bullet, q})$$
 
-를 정의한다. 여기서 $$\mathcal{I}^{\bullet,q}$$는 고정된 $$q$$에 대한 horizontal complex $$\cdots \to \mathcal{I}^{p-1,q} \xrightarrow{d_h} \mathcal{I}^{p,q} \xrightarrow{d_h} \mathcal{I}^{p+1,q} \to \cdots$$이다. Vertical differential $$d_v$$는 cohomology로 내려와서 유도된 사상 $$\bar{d}_v: \mathcal{H}^{p,q} \to \mathcal{H}^{p,q+1}$$을 정의한다. 따라서 각 $$p$$에 대하여 vertical complex
+로 쓸 수 있다. 이 때 vertical differential은 injective resolution의 diffeential이 cohomology level로 내려와서 정의하는 $$\mathcal{H}^{p,q}\rightarrow \mathcal{H}^{p,q+1}$$로, $$E_2$$ page는 이 vertical complex의 cohomology sheaf
 
-$$\mathcal{H}^{p,0} \xrightarrow{\bar{d}_v} \mathcal{H}^{p,1} \xrightarrow{\bar{d}_v} \mathcal{H}^{p,2} \xrightarrow{\bar{d}_v} \cdots$$
+$$E_2^{p,q} = H^q(\mathcal{H}^{p,\bullet})$$
 
-을 얻는다. $$E_2$$ page는 이 vertical complex의 cohomology sheaf이다:
-
-$$E_2^{p,q} = H^q(\mathcal{H}^{p,\bullet}).$$
+이다. 한편 $$\mathcal{I}^{\bullet,\bullet}$$이 Cartan resolution이라는 것으로부터, 
 
 이 spectral sequence 역시 같은 total cohomology $$R^{p+q} f_\ast \mathcal{F}$$에 수렴한다.
 
