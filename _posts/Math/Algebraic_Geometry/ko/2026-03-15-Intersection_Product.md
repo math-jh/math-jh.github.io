@@ -212,6 +212,8 @@ $$c_1(L) \cap Z$$를 구체적으로 정의하려면, $$L = \mathcal{O}(D)$$라 
 
 $$c_1(L) \cap [X] = [D] \in \operatorname{CH}^1(X)$$
 
+</div>
+
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
@@ -219,13 +221,13 @@ $$c_1(L)$$의 정의에 의해, $$L = \mathcal{O}(D)$$에 대해 $$c_1(L) = [D] 
 
 </details>
 
-</div>
-
 ## 사상 공식
 
 <div class="proposition" markdown="1">
 
 <ins id="prop16">**명제 16 (Projection Formula)**</ins> Proper morphism $$f: X \to Y$$와 $$\alpha \in \operatorname{CH}^\ast(X)$$, $$\beta \in \operatorname{CH}^\ast(Y)$$에 대해 $$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$가 성립한다.
+
+</div>
 
 <details class="proof" markdown="1">
 <summary>증명 sketch</summary>
@@ -235,8 +237,6 @@ $$c_1(L)$$의 정의에 의해, $$L = \mathcal{O}(D)$$에 대해 $$c_1(L) = [D] 
 일반적인 morphism $$f$$의 경우, pullback $$f^\ast$$는 moving lemma나 deformation to normal cone을 통해 정의된다. 핵심은 intersection product가 rational equivalence와 호환된다는 것이다. $$\alpha = [V]$$를 $$V' \sim_{\text{rat}} V$$로 이동시켜 $$V'$$가 $$f^{-1}(W)$$와 properly intersect하도록 만들면, $$[V'] \cdot [f^{-1}(W)]$$와 $$[f(V')] \cdot [W]$$ 사이의 관계를 pushforward-pullback의 호환성으로 추적할 수 있다. Proper map 하에서의 degree 보존과 rational equivalence의 호환성으로부터 양변이 같음이 따른다.
 
 </details>
-
-</div>
 
 ---
 
