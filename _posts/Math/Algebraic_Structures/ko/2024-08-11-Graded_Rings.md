@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/graded_rings
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Graded_rings.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Graded_Rings.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"

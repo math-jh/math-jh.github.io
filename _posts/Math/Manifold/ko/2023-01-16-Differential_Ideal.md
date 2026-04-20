@@ -6,7 +6,7 @@ excerpt: "Differential ideal과 Frobenius theorem"
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/differential_ideal
 header:
-    overlay_image: /assets/images/Math/Manifold/Differential_ideal.png
+    overlay_image: /assets/images/Math/Manifold/Differential_Ideal.png
     overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"

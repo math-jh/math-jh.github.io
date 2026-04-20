@@ -6,7 +6,7 @@ excerpt: "Product of Sets"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/product_of_sets
 header:
-    overlay_image: /assets/images/Math/Set_Theory/Product_of_sets.png
+    overlay_image: /assets/images/Math/Set_Theory/Product_of_Sets.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
@@ -41,7 +41,7 @@ Conversely, for any function $$f=(F,A,B)$$, the correspondence sending $$f$$ to 
 
 Let functions $$u:A'\rightarrow A$$ and $$v:B\rightarrow B'$$ be given, and consider the following diagram.
 
-![induced_mapping](/assets/images/Math/Set_Theory/Product_of_sets-1.png){:style="width:6em"  class="invert" .align-center}
+![induced_mapping](/assets/images/Math/Set_Theory/Product_of_Sets-1.png){:style="width:6em"  class="invert" .align-center}
 
 In this diagram, whenever a function $$f:A\rightarrow B$$ is given, we can associate to it the function $$\tilde{f}=v\circ f\circ u$$ from $$A'$$ to $$B'$$. The assignment $$f\mapsto \tilde{f}$$ is a function from $$\Fun(A, B)$$ to $$\Fun(A', B')$$.
 
@@ -99,7 +99,7 @@ and then verify that the correspondence $$y\mapsto f(y)$$ is indeed a function.
 
 Since at least one $$(P, \pr_i)$$ satisfying the conditions of [Theorem 3](#thm3) exists ([Definition 1](#def1)), we may take this as the definition of the product set. That is, the product of $$(A_i)_{i\in I}$$ can be characterized as a set $$\prod_{i\in I} A_i$$ together with functions $$\pr_i:\prod_{i\in I}A_i\rightarrow A_i$$ satisfying the following universal property.
 
-![universal_property_of_product](/assets/images/Math/Set_Theory/Product_of_sets-2.png){:style="width:13em" class="invert" .align-center}
+![universal_property_of_product](/assets/images/Math/Set_Theory/Product_of_Sets-2.png){:style="width:13em" class="invert" .align-center}
 
 By the same reasoning as in [§Sum of Sets, ⁋Corollary 9](/en/math/set_theory/sum_of_sets#cor9), one can verify that the object and projections $$\pr_i$$ satisfying this universal property are unique up to bijection.
 
@@ -152,7 +152,7 @@ Immediately after defining the union, we observed that replacing the index set v
 <summary>Proof</summary>
 Consider the diagram
 
-![induced_bijection](/assets/images/Math/Set_Theory/Product_of_sets-3.png){:style="width:13em"  class="invert" .align-center}
+![induced_bijection](/assets/images/Math/Set_Theory/Product_of_Sets-3.png){:style="width:13em"  class="invert" .align-center}
 
 Here $$v$$ is the bijection sending $$(x_i)_{i\in I}$$ to $$(x_{u(k)})_{k\in K}$$. By [Proposition 2](#prop2) above, $$F\mapsto F\circ U$$ is a bijection.
 </details>

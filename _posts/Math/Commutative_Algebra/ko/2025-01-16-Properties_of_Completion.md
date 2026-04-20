@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/properties_of_completion
 header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Properties_of_completion.png
+    overlay_image: /assets/images/Math/Commutative_Algebra/Properties_of_Completion.png
     overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"

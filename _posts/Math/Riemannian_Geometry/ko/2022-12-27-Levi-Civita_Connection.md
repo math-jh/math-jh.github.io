@@ -6,7 +6,7 @@ excerpt: "Riemannian manifold 위에서의 connection"
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/Levi-Civita_connection
 header:
-    overlay_image: /assets/images/Math/Riemannian_Geometry/Levi-Civita_connection.png
+    overlay_image: /assets/images/Math/Riemannian_Geometry/Levi-Civita_Connection.png
     overlay_filter: 0.5
 sidebar: 
     nav: "riemannian_geometry-ko"

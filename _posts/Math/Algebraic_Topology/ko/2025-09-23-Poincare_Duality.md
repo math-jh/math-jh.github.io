@@ -103,17 +103,17 @@ $$\omega_M^\pre(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underl
 
 <ins id="ex5">**예시 5**</ins> 예를 들어 $$S^1$$의 orientation double cover $$p:\Spe(\omega_{S^1})\rightarrow S^1$$을 생각하자. 임의의 점 $$x\in S^1$$의 $$p$$에 의한 preimage $$p^{-1}(x)$$는 두 개의 점 $$(p,+)$$와 $$(p,-)$$로 이루어져 있으며, 이는 $$x$$를 포함하는 chart $$U$$에 대해서도 마찬가지가 되어 $$p^{-1}(U)$$가 두 개의 open subset $$U^+,U^-$$로 나뉘게 된다. 
 
-![Orientation_cover_of_S1](/assets/images/Math/Algebraic_Topology/Poincare_duality-1.png){:style="width:45%" class="invert" .align-center}
+![Orientation_cover_of_S1](/assets/images/Math/Algebraic_Topology/Poincare_Duality-1.png){:style="width:45%" class="invert" .align-center}
 
 이제 $$S^1$$을 이러한 cover들로 덮어주면, 각각의 chart들이 겹치는 곳에서 orientation을 그대로 붙여주면 이들은 다음과 같이 두 개의 component를 갖는 double cover가 된다.
 
-![Orientation_cover_of_S1_glued](/assets/images/Math/Algebraic_Topology/Poincare_duality-2.png){:style="width:45%" class="invert" .align-center}
+![Orientation_cover_of_S1_glued](/assets/images/Math/Algebraic_Topology/Poincare_Duality-2.png){:style="width:45%" class="invert" .align-center}
 
 그러나 임의의 double cover가 항상 trivial cover가 되는 것은 아니다. 예를 들어 위의 $$S^1$$의 cover에서 위쪽과 아래쪽 component를 교차해서 붙이면 component가 하나인 double cover를 얻게 되며, 비슷한 일이 non-orientable manifold의 orientation double cover에서 일어난다. 
 
 이를 관찰하기 위해 뫼비우스 띠 $$M$$의 orientation cover를 생각하자. $$S^1$$과 마찬가지로, 임의의 점 $$x\in M$$에 대하여 $$p^{-1}(x)$$는 두 개의 점 $$(x,+)$$와 $$(x,-)$$로 이루어지며 이는 $$M$$의 임의의 점에 대해서도 마찬가지이다. 
 
-![orientation_cover_of_M](/assets/images/Math/Algebraic_Topology/Poincare_duality-3.png){:style="width:40%" class="invert" .align-center}
+![orientation_cover_of_M](/assets/images/Math/Algebraic_Topology/Poincare_Duality-3.png){:style="width:40%" class="invert" .align-center}
 
 그러나 이를 이어붙여 $$M$$ 전체를 이어붙이려 하면 문제가 생기는데, 이 그림에서 보여지는 두 개의 cover를, orientation을 고려해가며 반시계방향으로 붙여나가면, 다시 $$x$$로 돌아왔을 때 $$(x,+)$$와 $$(x,-)$$가 서로 뒤바뀌어 있으므로 위쪽과 아래쪽 component를 교차해서 붙여야 한다. 이렇게 만들어진 $$M$$의 double cover는 원기둥과 homeomorphic하게 된다. 
 
@@ -341,7 +341,7 @@ $$\cdots\rightarrow H^k(M,M\setminus(K\cap L);A)\rightarrow H^k(M,M\setminus K;A
 
 를 생각한 후, excision을 하고 limit을 취하면 다음의 commutative diagram
 
-![MVseq_duality](/assets/images/Math/Algebraic_Topology/Poincare_duality-4.png){:style="width:36em" class="invert" .align-center}
+![MVseq_duality](/assets/images/Math/Algebraic_Topology/Poincare_Duality-4.png){:style="width:36em" class="invert" .align-center}
 
 을 얻고, 귀납적 과정과 [\[호몰로지 대수학\] §Diagram chasing, ⁋정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)로부터 귀납법이 완성된다. 
 
@@ -481,7 +481,7 @@ $$H^2(T^2;\mathbb{Z})=H^1(T^2;\mathbb{Z})\otimes H^1(T^2;\mathbb{Z})\cong \mathb
 
 이 때, 이들의 cup product가 $$\alpha\times \beta$$의 $$\pm 1$$이 아닌 상수배로 나타나지 않는 이유는 기하학적으로 다음과 같다. $$\alpha$$, $$\beta$$에 해당하는 homology class들을 $$a,b$$라 하면, $$a$$와 $$b$$의 교집합이 다음 그림과 같이 한 점에서만 만나기 때문이다.
 
-![Torus_intersection](/assets/images/Math/Algebraic_Topology/Poincare_duality-5.png){:style="width:30%" class="invert" .align-center}
+![Torus_intersection](/assets/images/Math/Algebraic_Topology/Poincare_Duality-5.png){:style="width:30%" class="invert" .align-center}
 
 이 때, 두 곡선이 어떻게 만나는지를 분류하여 하나는 양의 방향, 하나는 음의 방향으로 정하는 것이 곧 $$T^2$$의 orientation을 주는 것과 같다. 
 
@@ -489,7 +489,7 @@ $$H^2(T^2;\mathbb{Z})=H^1(T^2;\mathbb{Z})\otimes H^1(T^2;\mathbb{Z})\cong \mathb
 
 이제 homology class가 $$a$$인 $$T^2$$의 곡선들을 생각하자. 그럼 이들은 서로 만나지 않을 가능성이 높고, 만약 만난다면 (마찬가지로 general position이 아닌, 접하는 경우를 제외하면) 다음의 모양
 
-![intersections_on_torus](/assets/images/Math/Algebraic_Topology/Poincare_duality-6.png){:style="width:40%" class="invert" .align-center}
+![intersections_on_torus](/assets/images/Math/Algebraic_Topology/Poincare_Duality-6.png){:style="width:40%" class="invert" .align-center}
 
 과 같이 만날 것이다. 이는 일견 두 개의 교점이 생기는 것 같지만, 위의 그림에서 양쪽 교점은 그 부호가 다르다, 즉, 가령 직선을 첫 번째 벡터, 곡선을 두 번째 벡터로 두고 외적을 할 경우, 하나는 바깥쪽, 다른 하나는 안쪽으로 들어가는 벡터가 나올 것이며 따라서 부호가 반대이다. 이렇게 두 교점이 상쇄되어 이들의 교집합은 $$0$$이 되고, 따라서 $$\alpha\smile\alpha=0$$이 된다.
 

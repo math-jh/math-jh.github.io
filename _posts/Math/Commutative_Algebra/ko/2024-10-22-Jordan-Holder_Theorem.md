@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/Jordan-Holder_theorem
 header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Jordan-Holder_theorem.png
+    overlay_image: /assets/images/Math/Commutative_Algebra/Jordan-Holder_Theorem.png
     overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"

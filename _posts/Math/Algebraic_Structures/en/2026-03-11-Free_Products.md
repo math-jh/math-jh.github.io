@@ -6,7 +6,7 @@ excerpt: "Free product and universal property"
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/free_products
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Free_products.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Free_Products.png
     overlay_filter: 0.5
 sidebar:
     nav: "algebraic_structures-en"
@@ -29,7 +29,7 @@ Since the index set $$I=\{1,2\}$$ is finite, the weak direct product of two copi
 
 However, we can see that there is no $$f:\mathbb{Z}\times\mathbb{Z}\rightarrow G$$ making the following diagram
 
-![counterexample](/assets/images/Math/Algebraic_Structures/Free_products-1.png){:style="width:11.6em" class="invert" .align-center}
+![counterexample](/assets/images/Math/Algebraic_Structures/Free_Products-1.png){:style="width:11.6em" class="invert" .align-center}
 
 commute. If such an $$f$$ existed, then
 

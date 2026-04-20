@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/basic_notions
 header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Basic_notions.png
+    overlay_image: /assets/images/Math/Commutative_Algebra/Basic_Notions.png
     overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"

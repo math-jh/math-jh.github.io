@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/basis_of_free_modules
 header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Basis_of_free_modules.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Basis_of_Free_Modules.png
     overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"

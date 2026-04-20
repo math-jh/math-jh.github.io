@@ -6,7 +6,7 @@ excerpt: "Sum of Sets (Disjoint Union)"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/sum_of_sets
 header:
-    overlay_image: /assets/images/Math/Set_Theory/Sum_of_sets.png
+    overlay_image: /assets/images/Math/Set_Theory/Sum_of_Sets.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
@@ -150,7 +150,7 @@ Thus we might instead adopt the following definition from the start.
  
 > For any set $$B$$ and functions $$f_i:A_i\rightarrow B$$, there exists a unique function $$f:\sum A_i\rightarrow B$$ such that $$f_i=f\circ\iota_i$$.
 
-![universal_property_of_sum](/assets/images/Math/Set_Theory/Sum_of_sets-1.png){:style="width:12em" class="invert" .align-center}
+![universal_property_of_sum](/assets/images/Math/Set_Theory/Sum_of_Sets-1.png){:style="width:12em" class="invert" .align-center}
 
 </div>
 

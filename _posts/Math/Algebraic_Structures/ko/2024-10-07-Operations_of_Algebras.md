@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/operations_of_algebras
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Operations_of_algebras.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Operations_of_Algebras.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"

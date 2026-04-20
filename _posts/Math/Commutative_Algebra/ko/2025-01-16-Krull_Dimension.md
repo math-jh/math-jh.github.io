@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/Krull_dimension
 header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Krull_dimension.png
+    overlay_image: /assets/images/Math/Commutative_Algebra/Krull_Dimension.png
     overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"

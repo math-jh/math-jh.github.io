@@ -6,7 +6,7 @@ excerpt: "유향집합과 lattice"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/directed_set
 header: 
-    overlay_image: /assets/images/Math/Set_Theory/Directed_set.png
+    overlay_image: /assets/images/Math/Set_Theory/Directed_Set.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
@@ -19,7 +19,7 @@ weight: 17
 
 Preordered set $$A$$에 대하여, $$X\subseteq A$$가 $$A$$에서 *cofinal* (resp. *coinitial*)이라는 것은 임의의 $$x\in A$$에 대하여 $$y\in X$$가 존재하여 $$x\leq y$$ (resp. $$y\leq x$$)인 것이다. 예를 들어, 다음의 diagram
 
-![cofinal_sequence](/assets/images/Math/Set_Theory/Directed_set-1.png){:style="width:20em" class="invert" .align-center}
+![cofinal_sequence](/assets/images/Math/Set_Theory/Directed_Set-1.png){:style="width:20em" class="invert" .align-center}
 
 에서 집합 $$\left\{a_{2n}\right\}_{n\in\mathbb{N}}$$, $$\left\{a_{1000+n}\right\}_{n\in\mathbb{N}}$$ 등은 모두 cofinal이다.
 
@@ -32,7 +32,7 @@ Hasse diagram에서, 큰 원소는 위쪽에 적는 것이 보편적이지만 �
 
 예컨대 임의의 집합 $$A$$에 대하여, 순서집합 $$(\mathcal{P}(A),\subseteq)$$는 right directed이다. 임의의 $$X, Y\in\mathcal{P}(A)$$에 대하여, $$X\cup Y$$는 $$\mathcal{P}(A)$$의 원소이고 $$X$$와 $$Y$$의 upper bound이기 때문이다. 이를 diagram으로 나타내면 다음과 같다.
 
-![directed_system](/assets/images/Math/Set_Theory/Directed_set-2.png){:style="width:24em" class="invert" .align-center}
+![directed_system](/assets/images/Math/Set_Theory/Directed_Set-2.png){:style="width:24em" class="invert" .align-center}
 
 <ins id="prop2">**명제 2**</ins>  Ordered set $$A$$가 right directed라면 $$A$$의 maximal element는 greatest element이기도 하다.
 {: .proposition}

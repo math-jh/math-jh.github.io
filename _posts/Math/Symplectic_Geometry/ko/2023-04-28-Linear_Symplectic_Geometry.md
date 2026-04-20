@@ -6,7 +6,7 @@ excerpt: "Symplectic form의 정의"
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/linear_symplectic_geometry
 header:
-    overlay_image: /assets/images/Math/Symplectic_Geometry/Linear_symplectic_geometry.png
+    overlay_image: /assets/images/Math/Symplectic_Geometry/Linear_Symplectic_Geometry.png
     overlay_filter: 0.5
 sidebar: 
     nav: "symplectic_geometry-ko"

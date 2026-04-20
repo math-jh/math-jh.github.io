@@ -286,11 +286,11 @@ $$\Omega_{\S(M)/A}\cong M\otimes_A\S(M)$$
 
 <ins id="prop11">**명제 11**</ins> 다음의 commutative diagram
 
-![change_of_base_ring-1](/assets/images/Math/Multilinear_Algebra/Differential_modules-1.png){:style="width:6.8em" class="invert" .align-center}
+![change_of_base_ring-1](/assets/images/Math/Multilinear_Algebra/Differential_Modules-1.png){:style="width:6.8em" class="invert" .align-center}
 
 이 주어졌다 하고, 수직방향의 함수들을 통해 $$E,E'$$를 각각 $$A,A'$$-algebra로 생각하자. 그럼 다음의 diagram
 
-![change_of_base_ring-2](/assets/images/Math/Multilinear_Algebra/Differential_modules-2.png){:style="width:10em" class="invert" .align-center}
+![change_of_base_ring-2](/assets/images/Math/Multilinear_Algebra/Differential_Modules-2.png){:style="width:10em" class="invert" .align-center}
 
 을 commute하게 하는 유일한 $$A$$-linear mapping
 
@@ -320,7 +320,7 @@ $$\Hom_E(\Omega_A(E), M)\cong\Der_A(E, M)$$
 
 을 생각하면, 우리는 다음의 commutative diagram
 
-![change_of_base_ring-3](/assets/images/Math/Multilinear_Algebra/Differential_modules-3.png){:style="width:28em" class="invert" .align-center}
+![change_of_base_ring-3](/assets/images/Math/Multilinear_Algebra/Differential_Modules-3.png){:style="width:28em" class="invert" .align-center}
 
 을 얻는다. 여기서 오른쪽의 수직방향 함수는 위의 isomorphism과 [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)의 isomorphism을 합친
 
@@ -376,7 +376,7 @@ $$E'\overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrigh
 
 이 존재한다. 그럼 다시 universal property에 의하여 다음의 commutative diagram
 
-![change_of_base_ring-4](/assets/images/Math/Multilinear_Algebra/Differential_modules-4.png){:style="width:24em" class="invert" .align-center}
+![change_of_base_ring-4](/assets/images/Math/Multilinear_Algebra/Differential_Modules-4.png){:style="width:24em" class="invert" .align-center}
 
 이 존재한다. 
 

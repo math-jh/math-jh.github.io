@@ -6,7 +6,7 @@ excerpt: "Properties of Surjective and Injective Functions"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/retraction_and_section
 header:
-    overlay_image: /assets/images/Math/Set_Theory/Retraction_and_section.png
+    overlay_image: /assets/images/Math/Set_Theory/Retraction_and_Section.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
@@ -46,11 +46,11 @@ so $$y\in f(A)$$, and hence $$f$$ is surjective.
 
 Thus a function $$f:A\rightarrow B$$ is injective if and only if there exists $$r:B\rightarrow A$$ making the diagram
 
-![injection](/assets/images/Math/Set_Theory/Retraction_and_section-1.png){:style="width:6em" class="invert" .align-center}
+![injection](/assets/images/Math/Set_Theory/Retraction_and_Section-1.png){:style="width:6em" class="invert" .align-center}
 
 commute. A function $$f:A\rightarrow B$$ is surjective if and only if there exists $$s:B\rightarrow A$$ making the diagram
 
-![surjection](/assets/images/Math/Set_Theory/Retraction_and_section-2.png){:style="width:6em" class="invert" .align-center}
+![surjection](/assets/images/Math/Set_Theory/Retraction_and_Section-2.png){:style="width:6em" class="invert" .align-center}
 
 commute. Such $$r$$ and $$s$$ have names.
 
@@ -132,11 +132,11 @@ so the above inclusions become equalities. The following proposition is straight
 
 The result in part 1 states that there exists $$h$$ making the diagram
 
-![surjection](/assets/images/Math/Set_Theory/Retraction_and_section-3.png){:style="width:6em"  class="invert" .align-center}
+![surjection](/assets/images/Math/Set_Theory/Retraction_and_Section-3.png){:style="width:6em"  class="invert" .align-center}
 
 commute. Part 2 states that there exists $$h$$ making the diagram
 
-![injection](/assets/images/Math/Set_Theory/Retraction_and_section-4.png){:style="width:6em"  class="invert" .align-center}
+![injection](/assets/images/Math/Set_Theory/Retraction_and_Section-4.png){:style="width:6em"  class="invert" .align-center}
 
 commute.
 

@@ -6,7 +6,7 @@ excerpt: "Examples of equivalence relations, saturation of equivalence relations
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/examples_of_equivalence
 header:
-    overlay_image: /assets/images/Math/Set_Theory/Examples_of_equivalence.png
+    overlay_image: /assets/images/Math/Set_Theory/Examples_of_Equivalence.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
@@ -88,7 +88,7 @@ The reverse direction is obvious. Suppose for some $$t\in A/R$$ there exists $$a
 
 </div>
 
-![saturated_set](/assets/images/Math/Set_Theory/Examples_of_equivalence-1.png){:style="width:600px" class="invert" .align-center}
+![saturated_set](/assets/images/Math/Set_Theory/Examples_of_Equivalence-1.png){:style="width:600px" class="invert" .align-center}
 
 <cap>A saturated subset (left) and a non-saturated subset (right) in a given quotient set (top)</cap>
 
@@ -135,13 +135,13 @@ That is, for $$f$$ to be compatible with $$R$$, $$f$$ must be a constant functio
 
 That is, the following diagram commutes:
 
-![induced_injection](/assets/images/Math/Set_Theory/Examples_of_equivalence-2.png){:style="width:7em"  class="invert" .align-center}
+![induced_injection](/assets/images/Math/Set_Theory/Examples_of_Equivalence-2.png){:style="width:7em"  class="invert" .align-center}
 
 In this case, $$h$$ is uniquely determined by a section $$s$$ of $$p$$ as $$h=f\circ s$$.
 
 In particular, let $$R$$ be the equivalence relation defined by $$f$$. ([Definition 2](#def2)) Then we can consider the following diagram:
 
-![canonical_decomposition](/assets/images/Math/Set_Theory/Examples_of_equivalence-3.png){:style="width:12.4em"  class="invert" .align-center}
+![canonical_decomposition](/assets/images/Math/Set_Theory/Examples_of_Equivalence-3.png){:style="width:12.4em"  class="invert" .align-center}
 
 Here $$\tilde{f}$$ is the function obtained by restricting the codomain of $$f$$ to $$f(A)$$, and $$j$$ is the canonical injection. From the commutativity of the diagram above, we obtain the equation
 
@@ -151,7 +151,7 @@ If $$h(t)=h(t')$$ for some $$t, t'\in A/R$$, then for $$x\in t$$ and $$x'\in t'$
 
 Additionally, suppose an equivalence relation $$S$$ is given on the codomain $$B$$. Then we first obtain the following diagram:
 
-![induced_mapping_of_equivalence](/assets/images/Math/Set_Theory/Examples_of_equivalence-4.png){:style="width:8em"  class="invert" .align-center}
+![induced_mapping_of_equivalence](/assets/images/Math/Set_Theory/Examples_of_Equivalence-4.png){:style="width:8em"  class="invert" .align-center}
 
 If $$q\circ f$$ is compatible with $$R$$, then $$f$$ is said to be *$$(R,S)$$-compatible*. By [Proposition 7](#p75), this is equivalent to the existence of $$h:A/R\rightarrow B/S$$ such that $$h\circ p=q\circ f$$.
 
@@ -159,7 +159,7 @@ If $$q\circ f$$ is compatible with $$R$$, then $$f$$ is said to be *$$(R,S)$$-co
 
 Let a function $$f:A\rightarrow B$$ be given, and consider an equivalence relation $$(S,B,B)$$ and the canonical projection $$p:B\rightarrow B/S$$.
 
-![inverse_image_of_equivalence](/assets/images/Math/Set_Theory/Examples_of_equivalence-5.png){:style="width:6.9em"  class="invert" .align-center}
+![inverse_image_of_equivalence](/assets/images/Math/Set_Theory/Examples_of_Equivalence-5.png){:style="width:6.9em"  class="invert" .align-center}
 
 Then the function $$p\circ f:A\rightarrow B/S$$ is naturally defined, and the equivalence relation it creates through [Definition 2](#def2) is called the *preimage* of $$S$$ under $$f$$.
 
@@ -175,11 +175,11 @@ The following definition was already mentioned in [§Equivalence Relations, ⁋E
 
 Let two equivalence relations $$R$$ and $$S$$ defined on a set $$A$$ be given, and suppose $$S$$ is finer than $$R$$.
 
-![third_iso_1](/assets/images/Math/Set_Theory/Examples_of_equivalence-6.png){:style="width:8em"  class="invert" .align-center}
+![third_iso_1](/assets/images/Math/Set_Theory/Examples_of_Equivalence-6.png){:style="width:8em"  class="invert" .align-center}
 
 Then the function $$p_S$$ is surjective, and $$p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$$ always holds. Therefore, there exists a unique $$h:A/S \rightarrow A/R$$ such that $$p_R=h\circ p_S$$. ([§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4)) In this case, $$h$$ is called the *quotient* of $$R$$ by $$S$$ defined on $$A/S$$, and is written as $$R/S$$. The canonical decomposition gives:
 
-![third_iso_2](/assets/images/Math/Set_Theory/Examples_of_equivalence-7.png){:style="width:16.6em"  class="invert" .align-center}
+![third_iso_2](/assets/images/Math/Set_Theory/Examples_of_Equivalence-7.png){:style="width:16.6em"  class="invert" .align-center}
 
 In particular, $$k$$ is a bijection.
 
@@ -204,11 +204,11 @@ $$\begin{aligned}u\sim_{\tiny S}v&\iff (f\times f')(u)=(f\times f')(v)\iff (f(x)
 
 so $$S=R\times R'$$. At this point, since the image of $$A\times A'$$ under $$f\times f'$$ equals $$f(A)\times f'(A')$$, considering the canonical decomposition of $$f\times f'$$, there exists a bijection between $$(A\times A')/(R\times R')$$ and $$f(A)\times f'(A')$$.
 
-![canonical_bijection_between_product](/assets/images/Math/Set_Theory/Examples_of_equivalence-8.png){:style="width:24em" class="invert" .align-center}
+![canonical_bijection_between_product](/assets/images/Math/Set_Theory/Examples_of_Equivalence-8.png){:style="width:24em" class="invert" .align-center}
 
 On the other hand, consider the following diagram:
 
-![canonical_bijection_between_product_2](/assets/images/Math/Set_Theory/Examples_of_equivalence-9.png){:style="width:20em" class="invert" .align-center}
+![canonical_bijection_between_product_2](/assets/images/Math/Set_Theory/Examples_of_Equivalence-9.png){:style="width:20em" class="invert" .align-center}
 
 Here $$A/R\rightarrow f(A)$$ and $$A'/R'\rightarrow f'(A')$$ are the bijections obtained from the canonical decompositions of $$f$$ and $$f'$$, respectively. Therefore, the function $$(A/R)\times (A/R')\rightarrow f(A)\times f'(A')$$ induced by these is also a bijection.
 

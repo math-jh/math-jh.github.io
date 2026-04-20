@@ -293,7 +293,7 @@ $$\frac{H'(H\cap K)}{H'(H\cap K')}\cong \frac{K'(K\cap H)}{K'(K\cap H')}$$
 
 이 증명은 대략적으로 다음의 lattice
 
-![Zassenhaus](/assets/images/Math/Group_Theory/Series_of_groups-1.png){:style="width:26em" class="invert" .align-center}
+![Zassenhaus](/assets/images/Math/Group_Theory/Series_of_Groups-1.png){:style="width:26em" class="invert" .align-center}
 
 로 요약할 수 있다. 
 

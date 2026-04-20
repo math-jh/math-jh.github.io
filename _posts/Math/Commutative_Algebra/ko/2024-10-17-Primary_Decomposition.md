@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/primary_decomposition
 header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Primary_decomposition.png
+    overlay_image: /assets/images/Math/Commutative_Algebra/Primary_Decomposition.png
     overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"
@@ -143,7 +143,7 @@ $$\bigcap_{k\neq j} M_k=\left(\bigcap_{k\neq j} M_k\right)\bigg/\left(M_k\cap \b
 
 이제 다음의 commutative diagram
 
-![injective](/assets/images/Math/Commutative_Algebra/Primary_decomposition-1.png){:style="width:12em" class="invert" .align-center}
+![injective](/assets/images/Math/Commutative_Algebra/Primary_Decomposition-1.png){:style="width:12em" class="invert" .align-center}
 
 을 생각하자. 그럼 $$M \rightarrow M/M_k$$의 kernel이 $$M_k$$이므로, 원하는 주장을 보이기 위해서는 $$M_{\mathfrak{p}_k}\rightarrow (M/M_k)_{\mathfrak{p}_k}$$ 그리고 $$M/M_k \rightarrow (M/M_k)_{\mathfrak{p}_k}$$가 모두 injective임을 보이면 충분하다. 우선 $$M/M_k \rightarrow (M/M_k)_{\mathfrak{p}_k}$$이 injective인 것은 $$M_k$$가 $$\mathfrak{p}_k$$-primary라는 것으로부터 자명하다. 그럼 맨 처음 살펴본 것과 같이 
 

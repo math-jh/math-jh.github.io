@@ -6,7 +6,7 @@ excerpt: "Definition and properties of equivalence relations"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/equivalence_relations
 header:
-    overlay_image: /assets/images/Math/Set_Theory/Equivalence_relations.png
+    overlay_image: /assets/images/Math/Set_Theory/Equivalence_Relations.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
@@ -81,7 +81,7 @@ In this post, we will explore the fundamental properties of equivalence relation
 
 By definition, $$R(x)$$ is the collection of elements that are considered equivalent to $$x$$ under the equivalence relation $$R$$. In many cases, the equivalence class containing $$x$$ is written as $$[x]_R$$. When there is no risk of confusion, their set $$A/R$$ may also be denoted as $$A/\mathord{\sim}$$.
 
-![Quotient_set](/assets/images/Math/Set_Theory/Equivalence_relations-1.png){:style="width:600px" class="invert" .align-center}
+![Quotient_set](/assets/images/Math/Set_Theory/Equivalence_Relations-1.png){:style="width:600px" class="invert" .align-center}
 
 <cap>Set $A$ (left), equivalence relation $R$ defined on it (center), and quotient set $A/R$ (right). Each element of $A/R$ is an equivalence class $[x]_R$ from the middle figure.</cap>
 

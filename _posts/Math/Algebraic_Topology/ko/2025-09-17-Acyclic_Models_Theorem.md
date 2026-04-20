@@ -75,13 +75,13 @@ $$f_\bullet(-):F_\bullet(-) \rightarrow G_\bullet(-)$$
 
 즉, 호몰로지 레벨에서 정의된 $$f(X)_0: H_0(F(X))\rightarrow H_0(G(X))$$에서부터 시작하여, chain map $$f_\bullet(X):F_\bullet(X)\rightarrow G_\bullet(X)$$를 만들어야 한다. 이를 위해 우선 $$f_\bullet(X)$$의 $$0$$번째 성분 $$f_0(X)$$를 정의하자. 이는, $$F_0(X)$$이 free이므로, 각각의 $$u:M\rightarrow X$$이 어디로 옮겨지는지를 정의하는 것과 같다. 한편 다음의 commutative diagram
 
-![lifting](/assets/images/Math/Algebraic_Topology/Acyclic_models_theorem-1.png){:style="width:14em" class="invert" .align-center}
+![lifting](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-1.png){:style="width:14em" class="invert" .align-center}
 
 에 의하여, $$F_0(X)\rightarrow H_0(G(X))$$는 자명한 방식으로 정의되고, $$p_G$$가 surjective이므로 이로부터 lifting $$F_0(X)\rightarrow G_0(X)$$를 정의할 수 있다. 
 
 그러나 더 높은 차수에서 $$f_\bullet(X)$$를 정의하려면 약간의 문제가 있다. 귀납적으로 $$f_{n-1}(X)$$까지의 성분이 정의되었다고 하고 $$f_n(X)$$를 정의하자. 즉 다음의 diagram 
 
-![lifting_general](/assets/images/Math/Algebraic_Topology/Acyclic_models_theorem-2.png){:style="width:24em" class="invert" .align-center}
+![lifting_general](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-2.png){:style="width:24em" class="invert" .align-center}
 
 의 lifting을 정의해야하는데, 위의 상황과는 다르게 우리는 새로 정의한 $$f_n(X)$$가 다음의 commutativity 조건 
 
@@ -91,11 +91,11 @@ $$d_n^{G(X)}\circ f_n(X)=f_{n-1}(X)\circ d_n^{F(X)}$$
 
 이를 해결하기 위해 $$G$$가 acyclic on $$\mathcal{M}$$이라는 조건을 사용한다. 우선 functor $$F_n$$이 free라는 것으로부터, 우리는 $$f_n$$을 *model들* $$M$$ 위에서만 정의하면 된다는 것을 안다. 임의의 대상 $$X$$와 free module $$F_n(X)$$, 그리고 generator $$u:M \rightarrow X$$에 대하여 다음 diagram
 
-![reduction_to_models](/assets/images/Math/Algebraic_Topology/Acyclic_models_theorem-3.png){:style="width:11em" class="invert" .align-center}
+![reduction_to_models](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-3.png){:style="width:11em" class="invert" .align-center}
 
 을 이용하면, $$\id_M$$에 해당하는 $$F_n(M)$$의 원소가 $$F_n(X)$$에서는 $$u$$가 되며, 그럼 $$u$$를 $$(G_n(u)\circ f_n(M))(\id_M)$$으로 옮겨주면 되기 때문이다. 이제 우리의 관심사를 model들로 옮겨놓고 나면, 우리가 해야할 일은 앞선 diagram
 
-![lifting_reduced](/assets/images/Math/Algebraic_Topology/Acyclic_models_theorem-4.png){:style="width:24em" class="invert" .align-center}
+![lifting_reduced](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-4.png){:style="width:24em" class="invert" .align-center}
 
 을 lift하는 것이다. 그런데 이제 임의의 $$x_n\in F_n(M)$$에 대하여, 
 
@@ -129,7 +129,7 @@ $$(X,Y)\mapsto C_\bullet(X\times Y;A),\quad (X,Y)\mapsto C_\bullet(Y\times X;A),
 
 를 생각하면, 이들 사이의 자명한 함수들을 생각할 수 있으며 이를 [정리 3](#thm3)을 이용하여 lift하면 $$\Ch_{\geq0}(\lMod{A})$$에서의 commutative diagram
 
-![flip_map](/assets/images/Math/Algebraic_Topology/Acyclic_models_theorem-5.png){:style="width:24em" class="invert" .align-center}
+![flip_map](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-5.png){:style="width:24em" class="invert" .align-center}
 
 을 얻는다. 
 

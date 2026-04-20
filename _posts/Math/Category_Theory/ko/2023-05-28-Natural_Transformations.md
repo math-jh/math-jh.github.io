@@ -6,7 +6,7 @@ excerpt: "Natural transformation과 category들 사이의 equivalence"
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/natural_transformations
 header:
-    overlay_image: /assets/images/Math/Category_Theory/Natural_transformations.png
+    overlay_image: /assets/images/Math/Category_Theory/Natural_Transformations.png
     overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-ko"
@@ -29,7 +29,7 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 이 각각의 $$A_1,A_2\in\obj(\mathcal{A})$$마다 다음의 diagram
 
-![natural_transformation](/assets/images/Math/Category_Theory/Natural_transformations-1.png){:style="width:11em" class="invert" .align-center}
+![natural_transformation](/assets/images/Math/Category_Theory/Natural_Transformations-1.png){:style="width:11em" class="invert" .align-center}
 
 을 commute하도록 한다면, $$\alpha=(\alpha_A)_{A\in\obj(\mathcal{A})}$$를 *natural transformation<sub>자연변환</sub>*이라 부르고 이를 $$\alpha:F\Rightarrow G$$와 같이 표기한다.
 

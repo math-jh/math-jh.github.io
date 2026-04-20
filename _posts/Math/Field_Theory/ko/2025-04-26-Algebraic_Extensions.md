@@ -27,7 +27,7 @@ weight: 2
 
 정의에 의하여, 두 extension $$\mathbb{K} \rightarrow \mathbb{L}_1$$과 $$\mathbb{K} \rightarrow \mathbb{L}_2$$가 주어졌다 하면, 다음 commutative diagram
 
-![morphism_of_field_extensions](/assets/images/Math/Field_Theory/Algebraic_extensions-1.png){:style="width:10em" class="invert" .align-center}
+![morphism_of_field_extensions](/assets/images/Math/Field_Theory/Algebraic_Extensions-1.png){:style="width:10em" class="invert" .align-center}
 
 이 이들 사이의 morphism이 된다. 이 때, $$\mathbb{L}_1$$과 $$\mathbb{L}_2$$는 모두 field이므로, morphism $$\mathbb{L}_1 \rightarrow \mathbb{L}_2$$는 반드시 injective여야 한다. 위의 주의사항을 지키는 선에서, 이 경우 우리는 $$\mathbb{L}_1$$이 $$\mathbb{L}_2$$의 *subextension*이라 부른다. 
 
@@ -113,7 +113,7 @@ $$K(M \cup N) = K(M)(N) = K(N)(M)$$
 
 <ins id="def7">**정의 7**</ins> 두 개의 $$\mathbb{K}$$-extension $$\mathbb{L}_1/\mathbb{K}$$, $$\mathbb{L}_2/\mathbb{L}$$에 대하여, $$\mathbb{K}$$-extension $$\mathbb{K} \rightarrow \mathbb{M}$$이 이들의 *composite*이라는 것은 다음의 diagram
 
-![composite_field](/assets/images/Math/Field_Theory/Algebraic_extensions-2.png){:style="width:10em" class="invert" .align-center}
+![composite_field](/assets/images/Math/Field_Theory/Algebraic_Extensions-2.png){:style="width:10em" class="invert" .align-center}
 
 을 commute하도록 하는 $$\mathbb{K}$$-algebra homomorphism $$\mathbb{L}_1 \rightarrow \mathbb{M}$$과 $$\mathbb{L}_2 \rightarrow \mathbb{M}$$이 존재하는 것이다. 
 

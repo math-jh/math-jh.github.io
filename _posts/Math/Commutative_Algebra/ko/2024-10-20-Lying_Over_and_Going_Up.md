@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/lying_over_and_going_up
 header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Lying_over_and_going_up.png
+    overlay_image: /assets/images/Math/Commutative_Algebra/Lying_Over_and_Going_Up.png
     overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"

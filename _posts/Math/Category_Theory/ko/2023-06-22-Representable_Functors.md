@@ -6,7 +6,7 @@ excerpt: "Initial object, terminal object, representable functor"
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/representable_functors
 header:
-    overlay_image: /assets/images/Math/Category_Theory/Representable_functors.png
+    overlay_image: /assets/images/Math/Category_Theory/Representable_Functors.png
     overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-ko"
@@ -68,7 +68,7 @@ $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(A,-)$ to $F$}\}\ri
 
 이 함수가 bijection임을 보이기 위해서는 역함수를 만들면 충분하다. 즉, 임의의 원소 $$x\in F(A)$$로부터 natural transformation $$\Psi(x)$$를 만들어내야 하고, 이 때 $$\Psi(x)$$는 다시 $$\mathcal{A}$$의 임의의 대상 $$X$$에 대하여 함수 $$\Psi(x)_X:\Hom_\mathcal{A}(A,X)\rightarrow F(X)$$로 주어진다. 그런데 $$\Psi(x)$$가 natural transformation이라면, 다음의 diagram이 commute해야 한다.
 
-![naturality](/assets/images/Math/Category_Theory/Representable_functors-1.png){:style="width:15em" class="invert" .align-center}
+![naturality](/assets/images/Math/Category_Theory/Representable_Functors-1.png){:style="width:15em" class="invert" .align-center}
 
 다시 $$\id_A\in\Hom_\mathcal{A}(A,A)$$를 생각하자. 그럼 오른쪽 위 방향으로 따라가면 이는 $$F(f)(\Psi(x)_A(\id_A))$$이고, 왼쪽 아래 방향을 따라가면 $$\Psi(x)_X(f)$$가 된다. 즉
 

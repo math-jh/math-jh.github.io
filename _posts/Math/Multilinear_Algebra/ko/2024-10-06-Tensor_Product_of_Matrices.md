@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/tensor_product_of_matrices
 header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Tensor_product_of_matrices.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Tensor_Product_of_Matrices.png
     overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"

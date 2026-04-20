@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/norms_and_traces
 header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Norms_and_traces.png
+    overlay_image: /assets/images/Math/Multilinear_Algebra/Norms_and_Traces.png
     overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"
