@@ -476,64 +476,29 @@ $$\mathcal{J}^{p,q}=\Gamma(Y, f_\ast\mathcal{I}^{p,q})$$
 
 ![Leray_pushed](/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-3.png){:style="width:40em" class="invert" .align-center}
 
-를 살펴보자.
+를 생각할 수 있다. 그럼 Godement resolution 방향의 filtration을 생각하면, 이 filtration이 주는 spectral sequence의 $$E_1$$ page는
 
-<div class="proposition" markdown="1">
+$$E_1^{p,q}=H^q(\mathcal{J}^{p,\bullet})=\begin{cases}\Gamma(Y, f_\ast \mathcal{G}^p(F))&\text{if $q=0$}\\0&\text{othewise}\end{cases}$$
 
-<ins id="lem18">**보조정리 18 (Leray)**</ins> Injective resolution $$\mathcal{I}^\bullet$$와 
+임을 안다. 
 
-</div>
+이 spectral sequence에서 $$q > 0$$인 항목이 $$E_1$$ page에서 이미 모두 0이므로, $$d_1$$-differential은 자명하고 $$E_2 = E_\infty$$이다. 따라서
 
-1. 각각의 $$p>0$$에 대하여, $$\mathcal{J}^{p,\bullet}$$은 $$0$$보다 큰 항에서 exact이다. 
-2. 
+$$H^n(X, \mathcal{F}) \cong E_2^{n,0} = H^n(\Gamma(Y, f_\ast \mathcal{G}^\bullet(\mathcal{F}))) = H^n(\Gamma(X, \mathcal{G}^\bullet(\mathcal{F})))$$
 
+을 얻으며, 이는 [명제 17](#prop17)의 재확인에 불과하다. Leray spectral sequence를 얻기 위해서는 functor 합성의 관점에서 접근하는 것이 더 효과적이다.
 
-Flasque sheaf의 direct image가 flasque sheaf임은 정의에 의해 자명하므로, $$f_\ast \mathcal{G}^p(\mathcal{F})$$들 각각은 특히 [명제 16](#prop16)에 의해 $$\Gamma(Y,-)$$-acyclic이며 이로부터 double complex
+### Grothendieck Spectral Sequence
 
-$$K^{p,q}=\Gamma(Y, \mathcal{J}^{p,q})$$
+Direct image functor의 정의에 의하여 $$\Gamma(Y, f_\ast(-)) = \Gamma(X, -)$$이므로, global section functor $$\Gamma(X,-)$$는 두 left-exact functor $$\Gamma(Y,-)$$와 $$f_\ast$$의 합성이다. Functor 합성의 derived functor에 대하여 일반적인 결과가 성립하는데, 이를 Grothendieck spectral sequence라 부른다. 핵심 조건은 앞의 functor $$f_\ast$$가 injective object를 뒤의 functor $$$\Gamma(Y,-)$$에 대하여 acyclic인 object로 보내야 한다는 것이다.
 
-이 잘 정의된다는 것을 안다. 
+이 조건이 성립함을 확인하자. Injective sheaf는 항상 flasque이며, flasque sheaf $$\mathcal{G}$$의 임의의 열린집합 $$U$$ 위에서의 제한 $$\mathcal{G}\vert_U$$ 역시 flasque이다. 임의의 열린집합 $$V \subset Y$$에 대하여 $$(f_\ast\mathcal{G})(V) = \mathcal{G}(f^{-1}(V))$$이므로, $$f_\ast\mathcal{G}$$의 임의의 open subset에서의 section이 전체 space에서의 section으로 확장됨을 알 수 있다. 즉, **flasque sheaf의 direct image는 flasque**이고, flasque sheaf는 $$\Gamma(Y,-)$$-acyclic이다. 따라서 $$f_\ast$$는 injective sheaf를 $$\Gamma(Y,-)$$-acyclic object로 보낸다.
 
-![Leray_double_complex](/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-2.png){:style="width:30em" class="invert" .align-center}
+Grothendieck spectral sequence에 의하여, 합성 $$\Gamma(X,-) = \Gamma(Y,-) \circ f_\ast$$의 right derived functor에 대하여
 
-이 때, $$q$$ 방향 differential은 $$\mathcal{J}^{p,\bullet}$$으로부터, $$p$$ 방향 differential은 $$\mathcal{G}^\bullet(\mathcal{F})$$와 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)로부터 유도되는 것이다. 
+$$E_2^{p,q} = R^p\Gamma(Y, R^q f_\ast \mathcal{F}) = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow R^{p+q}\Gamma(X, \mathcal{F}) = H^{p+q}(X, \mathcal{F})$$
 
-
-
-
-
-
-
-
-
-이제 이 double complex의 total complex $$\mathcal{K}=\Tot(\mathcal{J})^\bullet$$와 자연스러운 filtration들로 이루어진 spectral sequence를 생각하자. 우선 Godement degree $$p$$로의 filtration의 경우, $$q$$ 방향의 cohomology를 우선 취하는 것이며, 이 때 $$q>0$$인 곳에서는 [명제 16](#prop16)에 의해 이것이 $$0$$이 되므로 다음의 식
-
-$$E_1^{p,q}=\begin{cases}H^0(K^{p,\bullet})=\Gamma(X, \mathcal{G}^p(\mathcal{F}))&\text{if $q=0$}\\0&\text{otherwise}\end{cases}$$
-
-을 얻는다. 따라서 $$E_2$$ page는 $$H^{p+q}(X, \mathcal{F})$$로 수렴하는 것을 안다. 
-
-이제 injective resolution 방향의 filtration을 생각하면, 우리는 우선 $$p$$에 대한 cohomology를 취하게 되므로
-
-$$E_1^{p,q}=\begin{cases}H^$$
-
-으로 주어지며 이 때 $$K^{p,\bullet}=J^{p,\bullet}$$은 $$f_\ast \mathcal{G}^p(\mathcal{F})$$의 injective resolution이므로 이는 정확히 cohomology $$H^1(Y, f_\ast \mathcal{G}^p(\mathcal{F}))$$를 계산하는 것이다. 이 때, $$f_\ast \mathcal{G}^p(\mathcal{F})$$는 flasque이므로 $$\Gamma(Y,-)$$-acyclic이고 따라서 $$q>0$$에서는 cohomology가 모두 사라져 $$E_2$$ page는
-
-$$E_2^{p,q}=\begin{cases}H^p(X, \mathcal{F})&\text{if $q=0$}\\0&\text{otherwise}\end{cases}$$
-
-이다. 
-
-한편 우리는 이 double complex에 $$f_\ast$$를 적용하여 $$Y$$에서 살펴볼 수 있다. 직접 계산을 통해 다음의 식
-
-$$H^k(Y, f_\ast\mathcal{J}^{p,q})=0$$
-
-이 모든 $$(p,q)$$와 모든 $$k>0$$에 대해 성립하는 것을 보일 수 있으므로, 
-
-
- $$q$$-filtration을 생각하면 먼저 $$p$$ 방향 cohomology를 취하게 되며, 이 때
-
-$$E_1^{p,q}=H^p(K^{\bullet, q})$$
-
-이다. 
+인 spectral sequence가 존재한다. 동일한 double complex $$\mathcal{J}^{p,q}$$에서 injective resolution 방향 $$q$$에 대한 filtration을 사용하여도 이 spectral sequence를 직접 얻을 수 있다.
 
 <div class="proposition" markdown="1">
 
