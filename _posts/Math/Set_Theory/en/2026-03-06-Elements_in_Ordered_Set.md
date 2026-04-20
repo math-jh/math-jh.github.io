@@ -6,7 +6,7 @@ excerpt: "Maximum, minimum, maximal, and minimal elements of ordered sets"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/elements_in_ordered_set
 header: 
-    overlay_image: /assets/images/Math/Set_Theory/Elements_in_ordered_set.png
+    overlay_image: /assets/images/Math/Set_Theory/Elements_in_Ordered_Set.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
@@ -19,11 +19,11 @@ weight: 16
 
 Consider the following diagram
 
-![diagram_representing_single_ordering](/assets/images/Math/Set_Theory/Elements_in_ordered_set-1.png){:style="width:1.4em" class="invert" .align-center}
+![diagram_representing_single_ordering](/assets/images/Math/Set_Theory/Elements_in_Ordered_Set-1.png){:style="width:1.4em" class="invert" .align-center}
 
 to represent $$b\leq a$$. For instance, the diagram
 
-![diagram_representing_two_orderings](/assets/images/Math/Set_Theory/Elements_in_ordered_set-2.png){:style="width:6em" class="invert" .align-center}
+![diagram_representing_two_orderings](/assets/images/Math/Set_Theory/Elements_in_Ordered_Set-2.png){:style="width:6em" class="invert" .align-center}
 
 represents a situation where $$b\leq a$$ and $$c\leq a$$, but there is no particular relation between $$b$$ and $$c$$. Such a diagram is called a *Hasse diagram*.
 
@@ -34,7 +34,7 @@ represents a situation where $$b\leq a$$ and $$c\leq a$$, but there is no partic
 
 A minimal element need not be unique. For example, in
 
-![diagram_representing_two_orderings](/assets/images/Math/Set_Theory/Elements_in_ordered_set-2.png){:style="width:6em" class="invert" .align-center}
+![diagram_representing_two_orderings](/assets/images/Math/Set_Theory/Elements_in_Ordered_Set-2.png){:style="width:6em" class="invert" .align-center}
 
 both $$b$$ and $$c$$ are minimal elements of the set $$\{a,b,c\}$$. Mathematicians generally prefer such elements to be unique, so this situation is not particularly desirable.
 
@@ -81,7 +81,7 @@ A set that has a lower bound (resp. upper bound) is called *bounded below* (resp
 
 Consider the following ordered set $$A=\{a,b,c,d,e\}$$.
 
-![upper_and_lower_bounds](/assets/images/Math/Set_Theory/Elements_in_ordered_set-3.png){:style="width:7em" class="invert" .align-center}
+![upper_and_lower_bounds](/assets/images/Math/Set_Theory/Elements_in_Ordered_Set-3.png){:style="width:7em" class="invert" .align-center}
 
 Then $$a$$ is an upper bound of the set $$X=\left\{c,d,e\right\}$$ but $$b$$ is not. If we consider the set $$X'=\left\{d,e\right\}$$, then both $$a$$ and $$b$$ are upper bounds of this set. From the above example, we see that a lower bound of a set $$X$$ need not belong to $$X$$, but if it does, then that element is the least element of $$X$$.
 

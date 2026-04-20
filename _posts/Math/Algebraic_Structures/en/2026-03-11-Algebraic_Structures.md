@@ -6,7 +6,7 @@ excerpt: "Binary operations defined on sets"
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/algebraic_structures
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Algebraic_structures.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Algebraic_Structures.png
     overlay_filter: 0.5
 sidebar:
     nav: "algebraic_structures-en"
@@ -65,7 +65,7 @@ $$(x\star y)\star z=x\star(y\star z)$$
 
 so $$x\star y\star z$$ has an unambiguous meaning. In terms of diagrams, this means that the following diagram
 
-![associativity](/assets/images/Math/Algebraic_Structures/Algebraic_structures-1.png){:style="width:11em" class="invert" .align-center}
+![associativity](/assets/images/Math/Algebraic_Structures/Algebraic_Structures-1.png){:style="width:11em" class="invert" .align-center}
 
 commutes. Meanwhile, the previous operations exhibit another difference.
 
@@ -81,7 +81,7 @@ always holds for any $$x,y\in A$$, we say that $$\star$$ is *commutative*, and t
 
 Commutativity means that the following diagram
 
-![commutativity](/assets/images/Math/Algebraic_Structures/Algebraic_structures-2.png){:style="width:13em" class="invert" .align-center}
+![commutativity](/assets/images/Math/Algebraic_Structures/Algebraic_Structures-2.png){:style="width:13em" class="invert" .align-center}
 
 commutes. Here, $$\sigma$$ is the function defined by $$(x,y)\mapsto (y,x)$$.
 

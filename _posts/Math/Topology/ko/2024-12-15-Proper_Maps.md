@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Topology]
 permalink: /ko/math/topology/proper_maps
 header:
-    overlay_image: /assets/images/Math/Topology/Proper_maps.png
+    overlay_image: /assets/images/Math/Topology/Proper_Maps.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"

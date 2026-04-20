@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/system_of_parameters
 header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/System_of_parameters.png
+    overlay_image: /assets/images/Math/Commutative_Algebra/System_of_Parameters.png
     overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"

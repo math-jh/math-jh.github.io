@@ -6,7 +6,7 @@ excerpt: "Directed sets and lattices"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/directed_set
 header: 
-    overlay_image: /assets/images/Math/Set_Theory/Directed_set.png
+    overlay_image: /assets/images/Math/Set_Theory/Directed_Set.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
@@ -19,7 +19,7 @@ weight: 17
 
 For a preordered set $$A$$, a subset $$X\subseteq A$$ is *cofinal* (resp. *coinitial*) in $$A$$ if for any $$x\in A$$, there exists $$y\in X$$ such that $$x\leq y$$ (resp. $$y\leq x$$). For example, in the following diagram
 
-![cofinal_sequence](/assets/images/Math/Set_Theory/Directed_set-1.png){:style="width:20em" class="invert" .align-center}
+![cofinal_sequence](/assets/images/Math/Set_Theory/Directed_Set-1.png){:style="width:20em" class="invert" .align-center}
 
 the sets $$\left\{a_{2n}\right\}_{n\in\mathbb{N}}$$ and $$\left\{a_{1000+n}\right\}_{n\in\mathbb{N}}$$ are both cofinal.
 
@@ -32,7 +32,7 @@ In Hasse diagrams, it is conventional to place larger elements at the top, but s
 
 For example, for any set $$A$$, the ordered set $$(\mathcal{P}(A),\subseteq)$$ is right directed. This is because for any $$X, Y\in\mathcal{P}(A)$$, $$X\cup Y$$ is an element of $$\mathcal{P}(A)$$ and is an upper bound of $$X$$ and $$Y$$. This can be represented as follows:
 
-![directed_system](/assets/images/Math/Set_Theory/Directed_set-2.png){:style="width:24em" class="invert" .align-center}
+![directed_system](/assets/images/Math/Set_Theory/Directed_Set-2.png){:style="width:24em" class="invert" .align-center}
 
 <ins id="prop2">**Proposition 2**</ins>  If an ordered set $$A$$ is right directed, then every maximal element of $$A$$ is also a greatest element.
 {: .proposition}

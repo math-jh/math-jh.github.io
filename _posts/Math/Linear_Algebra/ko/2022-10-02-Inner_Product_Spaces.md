@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Inner_product_spaces.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Inner_Product_Spaces.png
     overlay_filter: 0.5
 
 date: 2022-10-02

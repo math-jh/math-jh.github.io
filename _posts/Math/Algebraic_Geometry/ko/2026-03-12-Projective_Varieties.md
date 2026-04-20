@@ -224,7 +224,7 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 이제 이 관점에서, $$U_i$$에서의 $$X$$를 보는 것은 $$\mathbb{P}^2$$에서 무한대 직선 $$\x_i=0$$을 빼는 것에 해당한다. 만일 $$U_2$$에서 $$X$$를 본다면, 위에서 살펴보았듯 $$X$$는 무한대 직선 $$\x_2=0$$과 만나지 않으므로 이 직선을 빼도 온전한 원으로 남는다. 그러나 가령 무한대 직선 $$\x_1=0$$을 뺀다면, $$X$$는 $$\x_1$$과 두 점에서 만나고 있고, 따라서 원 $$X$$에서 이 두 점을 뺀 후 펼치게 되면 쌍곡선이 나오게 되는 것으로 이해할 수 있다. 
 
-![sketch](/assets/images/Math/Algebraic_Geometry/Projective_varieties-1.png){:style="width:50em" class="invert" .align-center}
+![sketch](/assets/images/Math/Algebraic_Geometry/Projective_Varieties-1.png){:style="width:50em" class="invert" .align-center}
 
 </div>
 

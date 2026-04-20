@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/change_of_base_ring
 header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Change_of_base_ring.png
+    overlay_image: /assets/images/Math/Algebraic_Structures/Change_of_Base_Ring.png
     overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-en"
@@ -23,11 +23,11 @@ In this article, we examine methods to convert $$A$$-modules to $$B$$-modules or
 
 Let a $$B$$-module $$\rho_N:B\otimes N \rightarrow N$$ be given. Then considering the composition
 
-![restriction_of_scalars](/assets/images/Math/Algebraic_Structures/Change_of_base_ring-1.png){:style="width:14em" class="invert" .align-center}
+![restriction_of_scalars](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-1.png){:style="width:14em" class="invert" .align-center}
 
 the map $$\phi^\ast\rho_N:A\otimes N \rightarrow N$$ satisfies all the conditions that an action must satisfy, and thus defines an $$A$$-module structure on $$N$$. Moreover, considering the diagram
 
-![restriction_of_scalars_functoriality](/assets/images/Math/Algebraic_Structures/Change_of_base_ring-2.png){:style="width:16em" class="invert" .align-center}
+![restriction_of_scalars_functoriality](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-2.png){:style="width:16em" class="invert" .align-center}
 
 we see that this correspondence of $$A$$-modules is functorial.
 
@@ -123,7 +123,7 @@ The following propositions can be proved in the general case, but for convenienc
 
 Fix arbitrary $$A$$-module $$M$$ and $$B$$-module $$N$$. First, for any $$v\in\Hom_B(\phi_!M,N)$$, the composition of functions
 
-![Adjointness-1](/assets/images/Math/Algebraic_Structures/Change_of_base_ring-3.png){:style="width:21em" class="invert" .align-center}
+![Adjointness-1](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-3.png){:style="width:21em" class="invert" .align-center}
 
 gives a function $$M \rightarrow N$$. Here, $$M \rightarrow A\otimes_AM \rightarrow \phi^\ast B\otimes_AM$$ is a composition of $$A$$-linear maps, and $$v:\phi^\ast B\otimes M \rightarrow N$$ is a $$B$$-linear map. First, for any $$\alpha\in A$$ and $$x\in M$$, looking at the composition of $$A$$-linear maps,
 
@@ -141,7 +141,7 @@ That is, regarding $$N$$ as an $$A$$-module through restriction of scalars, we s
 
 Conversely, let any $$u\in\Hom_A(M, \phi^\ast N)$$ be given. Then the composition
 
-![Adjointness-2](/assets/images/Math/Algebraic_Structures/Change_of_base_ring-4.png){:style="width:28em" class="invert" .align-center}
+![Adjointness-2](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-4.png){:style="width:28em" class="invert" .align-center}
 
 gives a function $$\phi_!M \rightarrow N$$. For any $$\beta'\in B$$ and $$\beta\otimes_A x\in \phi^\ast B\otimes_AM$$,
 

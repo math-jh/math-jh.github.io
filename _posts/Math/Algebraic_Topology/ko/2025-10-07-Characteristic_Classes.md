@@ -28,7 +28,7 @@ weight: 10
 
 <ins id="def1">**정의 1**</ins> 위상공간 사이의 contiuous surjection $$p:E \rightarrow B$$, 그리고 위상공간 $$F$$에 대하여 *fiber bundle<sub>올다발</sub>*이라는 것은 각각의 $$x\in B$$마다 열린집합 $$U$$가 존재하여, 다음의 diagram
 
-![fiber_bundle](/assets/images/Math/Algebraic_Topology/Characteristic_classes-1.png){:style="width:10em" class="invert" .align-center}
+![fiber_bundle](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-1.png){:style="width:10em" class="invert" .align-center}
 
 을 commute하게 하는 homeomorphism $$\phi:U\times F\rightarrow p^{-1}(U)$$가 존재하는 것이다. 
 
@@ -54,7 +54,7 @@ $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
 이를 통해 각각의 fiber $$p^{-1}(x)$$에는 $$F$$로부터 물려받는 vector space 구조가 정의된다. 일반적으로 두 vector bundle $$p_1:E_1 \rightarrow B_1$$과 $$p_2:E_2\rightarrow B_2$$가 주어졌을 때, 이들 사이의 *morphism*은 연속함수들의 commutatuve diagram
 
-![morphism_of_bundles](/assets/images/Math/Algebraic_Topology/Characteristic_classes-2.png){:style="width:7em" class="invert" .align-center}
+![morphism_of_bundles](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-2.png){:style="width:7em" class="invert" .align-center}
 
 을 의미한다. 단, 여기에서 $$g$$를 각각의 $$x\in B_1$$에 대하여 $$p^{-1}(x)\rightarrow p_2^{-1}(f(x)))$$로 제한하였을 때 이 함수가 벡터공간들 사이의 linear map이 되어야 한다.  Vector bundle들 사이의 isomorphism을 어떻게 정의해야 하는지는 자명하다. 
 
@@ -191,7 +191,7 @@ $$w(p)=w_0(p)+w_1(p)+\cdots$$
 
 첫째 주장은 자명하다. 둘째 주장의 경우, trivial bundle은 다음의 pullback
 
-![trivial_bundle](/assets/images/Math/Algebraic_Topology/Characteristic_classes-3.png){:style="width:5.5em" class="invert" .align-center}
+![trivial_bundle](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-3.png){:style="width:5.5em" class="invert" .align-center}
 
 으로 주어지는 것을 확인하면 된다.
 
@@ -203,11 +203,11 @@ $$w(p)=w_0(p)+w_1(p)+\cdots$$
 
 더 일반적으로, 임의의 공간 위의 rank $$k$$ vector bundle은 *infinite Grassmannian* $$\Gr_k(\mathbb{R}^\infty)$$의 universal bundle $$\gamma^k_\infty:E(\gamma_\infty^k)\rightarrow \Gr_k(\mathbb{R}^\infty)$$을 pullback하여 얻어진다. 즉 임의의 vector bundle $$p:E \rightarrow B$$가 주어졌다면, $$p$$에서 $$\gamma_k^\infty$$로의 유일한 bundle map이 존재하여 다음의 diagram
 
-![universality](/assets/images/Math/Algebraic_Topology/Characteristic_classes-4.png){:style="width:9em" class="invert" .align-center}
+![universality](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-4.png){:style="width:9em" class="invert" .align-center}
 
 을 commute하도록 할 수 있고, 이는 다음의 pullback diagram
 
-![universality-2](/assets/images/Math/Algebraic_Topology/Characteristic_classes-5.png){:style="width:10em" class="invert" .align-center}
+![universality-2](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-5.png){:style="width:10em" class="invert" .align-center}
 
 과 isomorphic하다. 뿐만 아니라, vector bundle $$E$$의 Stiefel-Whitney class 또한 universal bundle $$\gamma^k_\infty$$의 Stiefel-Whitney class $$w(\gamma^k_\infty)$$를 pullback하여 얻어진다. 
 

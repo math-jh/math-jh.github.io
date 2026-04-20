@@ -6,7 +6,7 @@ excerpt: "Initial/final topology와 그 예시들"
 categories: [Math / Topology]
 permalink: /ko/math/topology/initial_and_final_topology
 header:
-    overlay_image: /assets/images/Math/Topology/Initial_and_final_topology.png
+    overlay_image: /assets/images/Math/Topology/Initial_and_Final_Topology.png
     overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"

@@ -6,7 +6,7 @@ excerpt: ""
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/integral_extension
 header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Integral_extension.png
+    overlay_image: /assets/images/Math/Commutative_Algebra/Integral_Extension.png
     overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"

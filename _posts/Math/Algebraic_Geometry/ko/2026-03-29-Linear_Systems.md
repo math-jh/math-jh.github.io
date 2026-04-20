@@ -92,7 +92,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 이 $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, $$a_{00}=a_{11}$$을 강제하므로 실질적인 변수는 $$a_{00}$$, $$a_{02}$$의 두 개이다. 즉, 이들 conic의 모임은 $$\Gamma(X,\mathcal{O}(2))$$의 2차원 부분공간 $$V$$를 이룰 것이며, 이를 projectivize한 것이 $$[\lambda:\mu]$$로 나타나는 $$\mathbb{P}^1$$이 된다. 
 
-![pencil_of_circles](/assets/images/Math/Algebraic_Geometry/Linear_systems-1.png){:style="width:40em" class="invert" .align-center}
+![pencil_of_circles](/assets/images/Math/Algebraic_Geometry/Linear_Systems-1.png){:style="width:40em" class="invert" .align-center}
 
 </div>
 

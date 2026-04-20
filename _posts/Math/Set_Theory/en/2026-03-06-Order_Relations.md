@@ -6,7 +6,7 @@ excerpt: "Definition and properties of order relations"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/order_relations
 header:
-    overlay_image: /assets/images/Math/Set_Theory/Order_relations.png
+    overlay_image: /assets/images/Math/Set_Theory/Order_Relations.png
     overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"

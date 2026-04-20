@@ -9,7 +9,7 @@ sidebar:
     nav: "linear_algebra-ko"
 
 header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Gaussian_elimination.png
+    overlay_image: /assets/images/Math/Linear_Algebra/Gaussian_Elimination.png
     overlay_filter: 0.5
 
 date: 2022-08-19
