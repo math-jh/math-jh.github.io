@@ -1,4 +1,4 @@
-\documentclass[convert={magick, density=1024}]{standalone}
+\documentclass[convert={imagemagick, density=1024}]{standalone}
 \usepackage{amsmath, amsthm, amsfonts,mathrsfs}
 \usepackage{tikz-cd, kotex,tikz-3dplot}
 \usepackage{../../.preamble/quiver}
@@ -6,13 +6,13 @@
 \usetikzlibrary{arrows.meta}
 \begin{document}
 
-% Leray_double_sequence (Sheaf_Cohomology-2.png)
+%% Leray_double_sequence-1 (Sheaf_Cohomology-3.png)
 \begin{tikzcd}
 	& \vdots & \vdots & \vdots & \vdots & \\
-	0 & {\mathcal{I}^{2}} & {\mathcal{I}^{0,2}} & {\mathcal{I}^{1,2}} & {\mathcal{I}^{2,2}} & \cdots \\
-	0 & {\mathcal{I}^{1}} & {\mathcal{I}^{0,1}} & {\mathcal{I}^{1,1}} & {\mathcal{I}^{2,1}} & \cdots \\
-	0 & {\mathcal{I}^{0}} & {\mathcal{I}^{0,0}} & {\mathcal{I}^{1,0}} & {\mathcal{I}^{2,0}} & \cdots \\
-	0 & {\mathcal{F}} & {\mathcal{G}^0(\mathcal{F})} & {\mathcal{G}^1(\mathcal{F})} & {\mathcal{G}^2(\mathcal{F})} & \cdots \\
+	0 & \Gamma(Y,f_\ast\mathcal{I}^{2}) & {\Gamma(Y,f_\ast\mathcal{I}^{0,2})} & {\Gamma(Y,f_\ast\mathcal{I}^{1,2})} & {\Gamma(Y,f_\ast\mathcal{I}^{2,2})} & \cdots \\
+	0 & {\Gamma(Y,f_\ast\mathcal{I}^{1})} & {\Gamma(Y,f_\ast\mathcal{I}^{0,1})} & {\Gamma(Y,f_\ast\mathcal{I}^{1,1})} & {\Gamma(Y,f_\ast\mathcal{I}^{2,1})} & \cdots \\
+	0 & {\Gamma(Y,f_\ast\mathcal{I}^{0})} & {\Gamma(Y,f_\ast\mathcal{I}^{0,0})} & {\Gamma(Y,f_\ast\mathcal{I}^{1,0})} & {\Gamma(Y,f_\ast\mathcal{I}^{2,0})} & \cdots \\
+	0 & {\Gamma(Y,f_\ast\mathcal{F})} & {\Gamma(Y,f_\ast\mathcal{G}^0(\mathcal{F}))} & {\Gamma(Y,f_\ast\mathcal{G}^1(\mathcal{F}))} & {\Gamma(Yf_\ast\mathcal{G}^2(\mathcal{F}))} & \cdots \\
 	& 0 & 0 & 0 & 0
 	\arrow[from=2-1, to=2-2]
 	\arrow[from=2-2, to=1-2]
