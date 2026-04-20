@@ -481,9 +481,19 @@ $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 
 이 정의의 핵심은 위에서 언급한 직관만으로는 Cartan-Eilenberg resolution이 얻어지지 않는다는 것으로, 특히 각 행의 cohomology가 $$H^p(K^\bullet)$$의 horozontal resolution을 이룬다는 것이 존재성의 증명에 핵심적인 요소이다. 우리는 Cartan-Eilenberg resolution의 존재성은 별도로 증명하지 않지만, 기본적으로는 [\[호몰로지 대수학\] §분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7)를 반복적으로 적용하여 얻을 수 있다. 
 
-이제 complex $$f_\ast\mathcal{G}^\bullet(\mathcal{F})$$의 Cartan–Eilenberg resolution $$\mathcal{I}^{p,q}$$을 고정하자. 그럼 정의에 의해 각 열 $$\mathcal{I}^{p,\bullet}$$은 $$f_\ast\mathcal{G}^p(\mathcal{F})$$의 injective resolution이며, 각 행의 horizontal cohomology $$H^p(\mathcal{I}^{\bullet,q})$$는 $$H^p(f_\ast\mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast\mathcal{F}$$의 injective resolution을 이룬다. 이를 바탕으로 두 방향의 filtration이 주는 spectral sequence들을 각각 생각하자.
+이제 complex $$f_\ast\mathcal{G}^\bullet(\mathcal{F})$$의 Cartan–Eilenberg resolution $$\mathcal{I}^{p,q}$$을 고정하자. 그럼 정의에 의해 각 열 $$\mathcal{I}^{p,\bullet}$$은 $$f_\ast\mathcal{G}^p(\mathcal{F})$$의 injective resolution이며, 각 행의 horizontal cohomology $$H^p(\mathcal{I}^{\bullet,q})$$는 $$H^p(f_\ast\mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast\mathcal{F}$$의 injective resolution을 이룬다. 
 
-우선 $$q$$방향의 filtration으로부터 오는 spectral sequence를 생각하면, 그 $$E_1$$ page는
+우리는 이 spectral sequence가 1사분면에 있으므로, total complex $$\Tot(\mathcal{I})^\bullet$$의 cohomology로 수렴한다는 것을 안다. 구체적인 계산을 위해 Godement 방향의 $$p$$로 filtration을 걸자. 그럼 우리는 우선 $$E_1$$ page를
+
+$$\mathcal{H}^{p,q} := H^p(\mathcal{I}^{\bullet, q})$$
+
+로 쓸 수 있다. 이 때 vertical differential은 injective resolution의 diffeential이 cohomology level로 내려와서 정의하는 $$\mathcal{H}^{p,q}\rightarrow \mathcal{H}^{p,q+1}$$로, $$E_2$$ page는 이 vertical complex의 cohomology sheaf
+
+$$E_2^{p,q} = H^q(\mathcal{H}^{p,\bullet})$$
+
+이다. 한편 $$\mathcal{I}^{\bullet,\bullet}$$이 Cartan resolution이라는 것으로부터, 우리는 각각의 $$\mathcal{H}^{p,\bullet}$$이 $$R^p f_\ast \mathcal{F}$$의 injective resolution임을 알고 따라서 이 때의 cohomology는 정확하게 $$H^q(Y, R^p f_\ast\mathcal{F})$$임을 안다. 우리는 이 spectral sequence를 *Leray spectral sequence*라 부른다. 
+
+한편 $$q$$방향의 filtration으로부터 오는 spectral sequence를 생각하면, 그 $$E_1$$ page는
 
 $$E_1^{p,q} = H^q(\mathcal{I}^{p,\bullet})$$
 
@@ -499,111 +509,104 @@ $$0 \to f_\ast \mathcal{F} \to f_\ast \mathcal{G}^0(\mathcal{F}) \to f_\ast \mat
 
 $$E_2^{p,q} = \begin{cases} R^p f_\ast \mathcal{F} & \text{if $q = 0$} \\ 0 & \text{if $q > 0$} \end{cases}$$
 
-이로 주어진다. 
+으로 주어진다. 따라서 $$\mathcal{I}^{\bullet,\bullet}$$의 total complex의 cohomology가 $$R^n f_\ast \mathcal{F}$$으로 수렴해야 하는 것을 안다.
 
-이제 $$p$$ 방향의 filtration이 주는 spectral sequence를 생각하자. 우리는 이를 *Leray spectral sequence*라 부르며, 이 spectral sequence는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11)의 계산에 의하여 
+이제 이 결과에 global section functor $$\Gamma(Y,-)$$을 취하여 위의 논의를 다시 살펴보자. 즉 우리는 double complex
 
+$$\mathcal{J}^{p,q}=\Gamma(Y, \mathcal{I}^{p,q})$$
 
-그럼 우리는 우선 $$E_1$$ page를
+와 그 total complex $$\Tot(\mathcal{J})^\bullet$$을 생각한다. 그럼 위와 마찬가지 계산으로, $$p$$방향의 filtration은 $$E_1$$ page에서
 
-$$\mathcal{H}^{p,q} := H^p(\mathcal{I}^{\bullet, q})$$
+$$E_1^{p,q}=H^p(\mathcal{J}^{\bullet, q})=\Gamma(Y, \mathcal{H}^{p,q})$$
 
-로 쓸 수 있다. 이 때 vertical differential은 injective resolution의 diffeential이 cohomology level로 내려와서 정의하는 $$\mathcal{H}^{p,q}\rightarrow \mathcal{H}^{p,q+1}$$로, $$E_2$$ page는 이 vertical complex의 cohomology sheaf
+이며, $$\mathcal{H}^{p,q}$$는 $$R^pf_\ast \mathcal{F}$$의 injective resolution이므로 그 cohomology가 $$H^q(Y, R^p f_\ast \mathcal{F})$$으로 나오는 것을 안다. 
 
-$$E_2^{p,q} = H^q(\mathcal{H}^{p,\bullet})$$
+한편, $$q$$ 방향 filtration의 경우 $$E_1$$ page는
 
-이다. 한편 $$\mathcal{I}^{\bullet,\bullet}$$이 Cartan resolution이라는 것으로부터, 
+$$E_1^{p,q}=H^q(\Gamma(Y, \mathcal{I}^{p,\bullet}))$$
 
-이 spectral sequence 역시 같은 total cohomology $$R^{p+q} f_\ast \mathcal{F}$$에 수렴한다.
+이며, 이 때 각각의 $$\mathcal{I}^{p,\bullet}$$은 Cartan-Eilenberg resolution의 정의에 의하여 injective resolution이므로 flasque이고 ([보조정리 9](#lem9)), flasque sheaf는 $$\Gamma$$-acyclic이므로 $$q>0$$에서의 항들이 소멸하며 남는 것은
 
-### $$E_2$$ Page의 계산
+$$E_1^{p,0}=\Gamma(Y, f_\ast \mathcal{G}^p (\mathcal{F}))=\Gamma(X, \mathcal{G}^p(\mathcal{F}))$$
 
-각 $$p$$에 대하여 horizontal cohomology sheaf
+이며 여기서의 differential은 Godement differential이다. 따라서 $$E_2$$ page는
 
-$$\mathcal{H}^{p,q} := H^p(\mathcal{I}^{\bullet, q})$$
+$$E_2^{n,0}=H^n(\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))=H^n(X, \mathcal{F})$$
 
-를 정의하자. CE resolution의 정의에 의하여, 각 고정된 $$p$$에 대하여 complex $$\mathcal{H}^{p,\bullet}$$은 $$R^p f_\ast\mathcal{F}$$의 injective resolution이다. 따라서 $$\Gamma(Y, \mathcal{H}^{p,\bullet})$$의 cohomology는 정확히 $$H^q(Y, R^p f_\ast\mathcal{F})$$이다.
-
-### Global Section 적용
-
-이제 sheaf 수준의 결과에 $$\Gamma(Y,-)$$를 적용한다. Double complex $$\mathcal{J}^{p,q} = \Gamma(Y, \mathcal{I}^{p,q})$$의 total complex $$\Tot(\mathcal{J})^\bullet$$의 cohomology는 $$H^\bullet(X, \mathcal{F})$$이다. 이 total complex에 대하여 같은 $$p$$-방향 filtration을 사용하면, $$E_1$$ page에서
-
-$$E_1^{p,q} = H^p(\mathcal{J}^{\bullet, q}) = \Gamma(Y, \mathcal{H}^{p,q})$$
-
-이다. CE resolution의 성질에 의하여 $$\mathcal{H}^{p,\bullet}$$은 $$R^p f_\ast\mathcal{F}$$의 injective resolution이므로, complex $$\Gamma(Y, \mathcal{H}^{p,\bullet})$$의 cohomology는 $$H^q(Y, R^p f_\ast \mathcal{F})$$이다. 따라서
-
-$$E_2^{p,q} = H^q(Y, R^p f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
-
-을 얻는다. 관례상 $$p$$와 $$q$$를 교환하면 표준적인 형태
-
-$$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
-
-을 얻는다. Convergence는 $$\Tot(\mathcal{J})^\bullet$$의 cohomology가 $$H^\bullet(X, \mathcal{F})$$라는 사실로부터 따른다.
-
-
+가 되며, 따라서 다음을 얻는다. 
 
 <div class="proposition" markdown="1">
 
 <ins id="prop19">**명제 19 (Leray Spectral Sequence)**</ins> 연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, 다음의 $$E_2$$ page를 가지는 spectral sequence가 존재한다.
 
-$$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
-
-여기서 $$R^q f_* \mathcal{F}$$는 direct image functor $$f_*$$의 $$q$$번째 right derived functor이다. pushforward functor에 대해서는 ([\[위상수학\] §준층, ⁋예시 8](/ko/math/topology/presheaves#ex8))을 참고하라.
+$$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$$
 
 </div>
 
-기하적 직관으로 이 spectral sequence는 다음을 말한다. $$X$$ 위의 cohomology를 계산하려면, $$Y$$ 위에서의 cohomology를 먼저 계산하고, 각 점의 "fiber 위에서의 cohomology"를 high sheaf $$R^q f_* \mathcal{F}$$로 기억한 뒤, 이들을 $$Y$$ 위에서 합성하면 된다는 것이다. 즉, $$f$$가 fiber bundle과 같은 좋은 구조를 가질 때, $$X$$의 cohomology는 $$Y$$의 cohomology와 fiber의 cohomology의 합성으로 분해된다.
+기하학적으로 이는 $$f:X\rightarrow Y$$가 fibration일 때 그 의미가 가장 명확한데, 이 경우 이 spectral sequence가 뜻하는 바는 $$X$$ 위의 cohomology를 계산하기 위해서는 $$Y$$ 위에서의 cohomology를 먼저 계산한 후, 각 점의 fiber 위에서의 cohomology를 higher sheaf $$R^q f_* \mathcal{F}$$로 기억한 뒤, 이들을 $$Y$$ 위에서 합성하면 된다는 것이다. 
 
-Leray spectral sequence의 가장 낮은 차원에서는 다음의 exact sequence를 얻을 수 있다.
+이제 Leray spectral sequence의 가장 낮은 차원에서는 다음의 exact sequence를 얻을 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor20">**따름정리 20** (Five-Term Exact Sequence)</ins> 연속 사상 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, Leray spectral sequence로부터 다음의 exact sequence를 얻는다.
+<ins id="cor20">**따름정리 20 (Five-Term Exact Sequence)**</ins> 연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, Leray spectral sequence로부터 다음의 exact sequence
 
 $$0 \to H^1(Y, f_* \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_* \mathcal{F}) \overset{d_2}{\to} H^2(Y, f_* \mathcal{F}) \to H^2(X, \mathcal{F})$$
+
+를 얻는다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Leray spectral sequence $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$의 $$E_2$$ page에서 $$p+q \leq 2$$인 항목들을 고려하자. ([\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5))에 의해 $$E_\infty^{p,q} \cong \gr^p H^{p+q} = F^p H^{p+q}/F^{p+1}H^{p+q}$$이다. 또한 이는 first quadrant spectral sequence이므로 ([\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 6](/ko/math/homological_algebra/spectral_sequences#prop6)) 충분히 큰 $$r$$에서 $$E_r^{p,q} = E_\infty^{p,q}$$이다.
+Leray spectral sequence $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$의 $$E_2$$ page에서 $$p+q \leq 2$$인 항목들을 고려하자. [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5)에 의해 우리는 
 
-$$p+q = 1$$인 항목: $$E_2^{1,0}$$와 $$E_2^{0,1}$$만이 존재한다. 차수 이유로 $$E_2^{1,0}$$로 들어오거나 나가는 differential은 모두 0이므로 $$E_2^{1,0} = E_\infty^{1,0}$$이다. 그러나 $$E_2^{0,1}$$에서 $$E_2^{2,0}$$으로 가는 $$d_2$$가 비자명할 수 있으므로 $$E_\infty^{0,1} = \ker(d_2: E_2^{0,1} \to E_2^{2,0})$$이다. Filtration에 의하여
+$$E_\infty^{p,q} \cong \gr^p H^{p+q} = F^p H^{p+q}/F^{p+1}H^{p+q}$$
+
+임을 안다. 특히, 이는 first quadrant spectral sequence이므로 충분히 큰 $$r$$에서 $$E_r^{p,q} = E_\infty^{p,q}$$이다. ([\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 6](/ko/math/homological_algebra/spectral_sequences#prop6)) 
+
+우선 $$p+q = 1$$인 성분들을 보면, 오직 두 개의 항 $$E_2^{1,0}$$와 $$E_2^{0,1}$$만이 존재한다. 그런데 차수를 고려하면 $$E_2^{1,0}$$로 들어오거나 나가는 differential은 모두 0이므로 $$E_2^{1,0} = E_\infty^{1,0}$$이다. 반면, $$E_2^{0,1}$$에서 $$E_2^{2,0}$$으로 가는 $$d_2$$가 비자명할 수 있으므로 $$E_\infty^{0,1} = \ker(d_2: E_2^{0,1} \to E_2^{2,0})$$이다. 그럼 filtration에 의하여
 
 $$0 \to E_\infty^{1,0} \to H^1(X, \mathcal{F}) \to E_\infty^{0,1} \to 0$$
 
-이 exact하다. $$E_\infty^{1,0} = E_2^{1,0}$$이고 $$E_\infty^{0,1} = \ker(d_2) \hookrightarrow E_2^{0,1}$$이므로, 이를 합치면
+이 exact하며, 여기서 $$E_\infty^{1,0} = E_2^{1,0}$$이고 $$E_\infty^{0,1} = \ker(d_2) \hookrightarrow E_2^{0,1}$$이므로 이를 합치면 다음의 exact sequence
 
 $$0 \to E_2^{1,0} \to H^1(X, \mathcal{F}) \to E_2^{0,1} \xrightarrow{d_2} E_2^{2,0}$$
 
-이 exact함을 얻는다.
+를 얻는다.
 
-$$p+q = 2$$인 항목: $$E_2^{2,0}$$, $$E_2^{1,1}$$, $$E_2^{0,2}$$가 존재하며, $$d_2 : E_2^{0,1} \to E_2^{2,0}$$가 유일한 비자명한 differential이다. $$E_3$$ page에서
+이제 증명을 완성하기 위해 $$p+q = 2$$인 성분 $$E_2^{2,0}$$, $$E_2^{1,1}$$, $$E_2^{0,2}$$을 보자. 마찬가지 이유로 $$d_2 : E_2^{0,1} \to E_2^{2,0}$$가 유일한 비자명한 differential이며, 이 differential이 정의하는 $$E_3$$ page에서
 
 $$E_3^{0,2} = \ker(d_2 : E_2^{0,2} \to E_2^{2,1}), \qquad E_3^{2,0} = \operatorname{coker}(d_2 : E_2^{0,1} \to E_2^{2,0})$$
 
-이며, 다시 차수 이유로 $$E_3^{p,q} = E_\infty^{p,q}$$이므로
+이고, 다시 차수를 분석하면 $$E_3^{p,q} = E_\infty^{p,q}$$이므로
 
 $$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2 : E_2^{0,1} \to E_2^{2,0})$$
 
-이다.
+이다. 우리는 지금까지 exact sequence
 
-이제 exact sequence를 구성한다. 앞서 보인 바와 같이 $$0 \to E_2^{1,0} \to H^1(X, \mathcal{F}) \to E_2^{0,1} \xrightarrow{d_2} E_2^{2,0}$$이 exact하다. 다음으로, $$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2: E_2^{0,1} \to E_2^{2,0})$$이며, 이것은 $$F^2 H^2 \hookrightarrow H^2(X, \mathcal{F})$$로 포함되므로
+$$0 \to E_2^{1,0} \to H^1(X, \mathcal{F}) \to E_2^{0,1} \xrightarrow{d_2} E_2^{2,0}$$
+
+가 존재함을 보였으며, 위의 계산에서
+
+$$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2: E_2^{0,1} \to E_2^{2,0})$$
+
+이므로 filtration을 통해 $$F^2 H^2 \hookrightarrow H^2(X, \mathcal{F})$$로 넣어주면
 
 $$E_2^{0,1} \overset{d_2}{\to} E_2^{2,0} \to H^2(X, \mathcal{F})$$
 
-이 exact하다. 이를 합치면 원하는 five-term exact sequence를 얻는다.
+이 exact하다. 이를 합치면 원하는 결과를 얻는다.
 
 </details>
 
-이 exact sequence는 $$d_2$$-differential의 존재가 cohomology의 계산에 어떤 제약을 주는지를 보여주며, $$f$$가 good morphism일 때 (예를 들어 $$R^1 f_* \mathcal{F} = 0$$인 경우) $$H^i(X, \mathcal{F}) \cong H^i(Y, f_* \mathcal{F})$$라는 직관을 부분적으로 정당화한다. 여기서 마지막 map $$H^2(Y, f_* \mathcal{F}) \to H^2(X, \mathcal{F})$$는 일반적으로 surjective가 아님에 주의하자. 이는 $$E_\infty^{0,2}$$의 존재, 즉 $$H^2(X, \mathcal{F})$$의 filtration에서 $$F^3 H^2 = 0$$이지만 $$F^2 H^2 = E_\infty^{2,0}$$에 의해 kernel이 존재할 수 있기 때문이다.
+이 exact sequence는 $$d_2$$-differential의 존재가 cohomology의 계산에 어떤 제약을 주는지를 보여주며, $$H^i(X, \mathcal{F}) \cong H^i(Y, f_* \mathcal{F})$$라는 직관을 좋은 경우에서는 정당화해준다. 
 
-세 번째로, Čech cohomology와 derived functor cohomology의 관계를 spectral sequence로 기술할 수 있다.
+마지막으로 우리는 Čech cohomology와 derived functor cohomology의 관계를 spectral sequence로 기술할 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop21">**명제 21**</ins> (Čech-to-Derived Functor Spectral Sequence) 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$와 open cover $$\mathcal{U}$$에 대하여, spectral sequence
+<ins id="prop21">**명제 21 (Čech-to-Derived Functor Spectral Sequence)**</ins> 위상공간 $$X$$ 위의 sheaf $$\mathcal{F}$$와 open cover $$\mathcal{U}$$에 대하여, spectral sequence
 
 $$E_2^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) \Rightarrow H^{p+q}(X, \mathcal{F})$$
 
