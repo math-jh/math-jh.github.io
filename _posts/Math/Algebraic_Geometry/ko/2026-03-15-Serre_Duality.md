@@ -17,17 +17,19 @@ weight: 15
 published: false
 ---
 
-Finite-dimensional vector space $$V$$와 그 dual $$V^\ast$$ 사이에는 자연스러운 쌍대성이 존재한다. Serre duality는 이 관계를 cohomology로 확장한 것이다. 구체적으로, field $$\mathbb{K}$$ 위의 $$n$$차원 smooth projective variety $$X$$ 위에서 $$i$$차 cohomology $$H^i(X, \mathcal{E})$$와 $$(n-i)$$차 cohomology $$H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)$$ 사이에 자연스러운 쌍대성이 성립한다. 여기서 canonical bundle $$\omega_X$$가 $$i$$와 $$n-i$$를 연결하는 교량 역할을 하며, trace map이 이 쌍대성을 실제로 구현한다.
+기하적으로 좋은 경우 dimension $$k$$의 cohomology와 codimension $$k$$ cohomology 사이에는 자연스러운 쌍대성이 존재한다. 이를 증명하기 위해 우리는 perfect pairing
 
-이 duality는 Riemann-Roch theorem의 증명에 필수적이며, cohomology group의 계산을 크게 단순화한다. 본 글에서는 Serre duality의 정의와 그 주요 응용을 다룬다. ([§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1))
+$$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
-## 동기
+을 사용했으며, 이를 통해 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)와 같은 결과를 얻었다. 더 구체적으로, 이 pairing은 cap product와 fundamental class $$[M] \in H_n(M;R)$$를 통해 구성되므로 즉 위상수학에서 duality의 원천은 orientation class $$[M]$$이라 할 수 있다. 
 
-Cohomology는 sheaf를 국소적으로 주어진 자료로부터 전역적으로 재구성하려는 시도의 '실패'를 측정하는 도구이다. ([§층 코호몰로지, ⁋명제 2](/ko/math/algebraic_geometry/sheaf_cohomology#prop2)) Sheaf cohomology $$H^i(X, \mathcal{E})$$가 nonzero라는 것은, $$\mathcal{E}$$가 $$X$$ 위에서 국소 trivial해도 전역적으로는 gluing이 불가능함을 의미한다.
+이번 글에서 우리는 대수기하학 버전의 duality를 살펴본다. 이를 위해서는 orientation class $$[M]$$에 대응하는 대상을 찾아야 한다. 직관적으로 대수기하학에서 $$\Omega_X$$가 differential form들의 sheaf이고, 이 sheaf의 top exterior power가 $$\omega_X$$이므로 $$\omega_X$$의 section들은 volume form, 즉 orientation class라 할 수 있다. 이를 통해 우리는 다음의 cup product pairing
 
-이 관점에서 $$\mathbb{P}^n$$ 위에서 $$H^n(\mathbb{P}^n, \mathcal{O}(d))$$의 행동을 살펴보자. $$n$$차 cohomology는 $$d \leq -n-1$$에서만 nonzero이며, 이 threshold는 $$\omega_{\mathbb{P}^n} = \mathcal{O}(-n-1)$$에 의해 정확히 결정된다. 즉, top cohomology가 nonzero가 되는 조건이 canonical bundle과 직접적으로 연결되어 있다.
+$$$$
 
-더 일반적으로 $$n$$차원 smooth projective variety $$X$$ 위에서 $$H^n(X, \omega_X \otimes \mathcal{E}^\vee)$$는 $$\mathcal{E}$$의 global section $$H^0(X, \mathcal{E})$$와 쌍대적이다. Canonical bundle $$\omega_X$$는 top cohomology와 global section 사이의 교량 역할을 하며, 이것이 Serre duality의 본질이다. Duality를 이해한다는 것은, $$\omega_X$$가 왜 이런 교량 역할을 하는지, 그리고 trace map이 이 관계를 어떻게 구체적으로 구현하는지를 이해하는 것이다.
+ Smooth $$n$$차원 projective variety $$X$$에서 cohomology group $$H^i(X, \mathcal{E})$$를 다루려면, cup product pairing $$H^i(X, \mathcal{E}) \times H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee) \to H^n(X, \omega_X)$$가 자연스럽게 구성되며, 여기서 $$H^n(X, \omega_X)$$가 기저필드 $$\mathbb{K}$$와 동형이어야 duality가 완성된다. 즉 canonical bundle $$\omega_X$$가 orientation class의 역할을 담당하며, trace map $$H^n(X, \omega_X) \xrightarrow{\sim} \mathbb{K}$$가 cap product의 평가에 해당한다. 미분기하학에서 $$\omega_X$$의 section이 top-degree differential form이고, trace map이 적분 $$\eta \mapsto \int_X \eta$$로 주어진다는 사실은 이 대응을 직관적으로 뒷받침한다.
+
+이 관점에서 $$\mathbb{P}^n$$의 cohomology를 살펴보자. $$\omega_{\mathbb{P}^n} = \mathcal{O}(-n-1)$$이므로 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_geometry/canonical_bundle#ex8)), Serre duality는 $$H^i(\mathbb{P}^n, \mathcal{O}(d)) \cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-d-n-1))^\ast$$를 예측한다. 실제로 $$n$$차 cohomology $$H^n(\mathbb{P}^n, \mathcal{O}(d))$$는 $$d \leq -n-1$$에서만 nonzero이며, 이 threshold가 정확히 $$\omega_{\mathbb{P}^n}$$의 degree에 의해 결정된다. Canonical bundle이 orientation class로서 top cohomology의 비자명성을 통제하는 것이다.
 
 ## Statement
 
