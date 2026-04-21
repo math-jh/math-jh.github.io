@@ -12,10 +12,9 @@ header:
     overlay_filter: 0.5
 
 date: 2026-03-29
-last_modified_at: 2026-03-29
+last_modified_at: 2026-04-22
 weight: 11
 
-published: false
 ---
 
 [§선형계](/ko/math/algebraic_geometry/linear_systems)에서 우리는 line bundle의 (basepoint-free) complete linear system을 사용하여 projective space에 embed할 수 있다는 것을 살펴보았고, 만일 이것이 closed embedding을 정의한다면 이러한 line bundle을 *very ample*이라 부르기도 하였다. 
@@ -58,17 +57,19 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 이 두 정의는 본질적으로 같은 대상을 다른 기하적 언어로 표현한 것에 불과하다. 즉, affine variety $$X$$와 그 coordinate ring $$A$$, finitely generated $$A$$-module $$M$$에 대하여, $$\widetilde{M}$$의 étale space가 곧 $$V(M)$$이고, $$V(M)$$의 section sheaf가 $$\widetilde{M}$$이다. 
 
-일반적으로, 구체적인 기하적 언어에 비교했을 때 sheaf 언어의 장점은 더 일반적인 경우에 적용이 가능하다는 것이다. 가령 다음을 정의한다. 
+일반적으로, 구체적인 기하적 언어에 비교했을 때 sheaf 언어의 장점은 더 일반적인 경우에 적용이 가능하다는 것이다. 가령 다음을 정의한다. ([\[가환대수학\] §기본 개념들, ⁋정의 8](/ko/math/commutative_algebra/basic_notions#def8))
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 일반적인 variety $$X$$ 위의 $$\mathcal{O}_X$$-module $$\mathcal{F}$$가 *quasi-coherent sheaf<sub>준연접층</sub>라는 것은, $$X$$의 affine open cover $$\{U_i\}$$와 각각의 coordinate ring $$A_i=\mathcal{O}_X(U_i)$$-module $$M_i$$가 존재하여 $$\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$$가 되는 것이다. 만일 각 $$M_i$$가 finitely generated $$A_i$$-module이라면, $$\mathcal{F}$$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
+<ins id="def1">**정의 1**</ins> 일반적인 variety $$X$$ 위의 $$\mathcal{O}_X$$-module $$\mathcal{F}$$가 *quasi-coherent sheaf<sub>준연접층</sub>*라는 것은, $$X$$의 affine open cover $$\{U_i\}$$와 각각의 coordinate ring $$A_i=\mathcal{O}_X(U_i)$$-module $$M_i$$가 존재하여 $$\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$$가 되는 것이다. 만일 각 $$M_i$$가 finitely generated $$A_i$$-module이라면, $$\mathcal{F}$$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
 
 </div>
 
-일반적으로 quasi-coherent sheaf를 다룰 때는 각각의 affine cover마다 다른 $$M$$이 붙어있을 수 있으므로 조심해야 하지만, affine case로만 한정할 경우 $$M\mapsto \widetilde{M}$$은 $$\lMod{A}$$에서 $$\QCoh(X)$$로의 categorical equivalence를 정의한다. 이는 임의의 quasi-coherent sheaf $$\mathcal{F}$$에 대하여, $$\widetilde{\Gamma(X,\mathcal{F})}$$가 $$\mathcal{F}$$ 자신을 복원한다는 것을 확인하면 된다. 즉 우리의 슬로건은, affine case에서는 quasi-coherent sheaf는 $$A$$-module이고, coherent sheaf는 finite rank $$A$$-module이라는 것이다.
+일반적으로 quasi-coherent sheaf를 다룰 때는 각각의 affine cover마다 다른 $$M$$이 붙어있을 수 있으므로 조심해야 하지만, affine case로만 한정할 경우 $$M\mapsto \widetilde{M}$$은 $$\lMod{A}$$에서 $$\QCoh(X)$$로의 categorical equivalence를 정의한다. 이는 임의의 quasi-coherent sheaf $$\mathcal{F}$$에 대하여, $$\widetilde{\Gamma(X,\mathcal{F})}$$가 $$\mathcal{F}$$ 자신을 복원한다는 것을 확인하면 된다. 즉 우리의 슬로건은, affine case에서는 quasi-coherent sheaf는 $$A$$-module이고, coherent sheaf는 finite rank $$A$$-module이라는 것이다. 
 
 이러한 관점에서는 vector bundle은 아주 특수한 경우의 (quasi-)coherent sheaf라 생각할 수 있다. 혹은 반대로 이들 (quasi-)coherent sheaf들을 생각할 때 아주 일반적인 형태의 vector bundle이라 생각해도 된다. 구체적으로, coherent sheaf는 (finite rank) vector bundle들의 category에서 이들이 abelian category의 연산, 즉 kernel이나 image, cokernel 등에 대해 닫혀있도록 하기 위해서 확장한 것이라 생각할 수 있으며 직관적으로는 fiber dimension이 점마다 달라질 수 있는 vector bundle이라 생각할 수 있다. Quasi-coherent sheaf는 여기에서 finite rank 조건까지 뺀 것이다. 
+
+다만 위의 직관에서 다소 주의할 부분은 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9)가 기하학적 상황에서는 정확히 맞아떨어지지는 않는다는 것이다. 가령, smooth variety 위에 정의된 임의의 coherent sheaf는 유한한 길이의 locally free resolution을 갖지만, singular variety에서는 그렇지 않다. 
 
 ## Canonical Bundle
 
