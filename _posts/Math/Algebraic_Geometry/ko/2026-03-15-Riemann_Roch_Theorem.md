@@ -1,6 +1,6 @@
 ---
 title: "Riemann–Roch 정리"
-excerpt: "The Riemann–Roch theorem for curves and surfaces"
+excerpt: "The Riemann–Roch theorem for curves"
 
 categories: [Math / Algebraic Geometry]
 permalink: /ko/math/algebraic_geometry/riemann_roch_theorem
@@ -19,7 +19,7 @@ published: false
 
 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_geometry/line_bundles#ex24)에서 우리는 variety $$X$$의 tangent bundle $$\mathcal{T}_X$$와 cotangent bundle $$\Omega_X^1$$을 정의하였다. 특히 $$X$$가 smooth인 경우, $$\Omega_X^1$$의 top exterior power를 생각하면 canonical line bundle $$\omega_X = \bigwedge^{\dim X} \Omega_X^1$$을 얻을 수 있었으며, 이에 대응하는 divisor를 canonical divisor $$K_X$$라 정의하였다.
 
-한편 [§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)에서 우리는 line bundle $$\mathcal{L}$$의 complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$을 정의하였으며, 직관적으로 이는 line bundle $$\mathcal{L}$$과 linearly equivalent한 effective divisor들의 모임이다. 그렇다면 가장 자연스러운 질문 중 하나는 $$H^0(X, \mathcal{L})$$의 차원에 대한 것이다. Riemann–Roch theorem은 바로 이 질문에 대한 답을 제공하며, 특히 곡선과 곡면에 대해 매우 구체적인 결과를 준다.
+한편 [§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)에서 우리는 line bundle $$\mathcal{L}$$의 complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$을 정의하였으며, 직관적으로 이는 line bundle $$\mathcal{L}$$과 linearly equivalent한 effective divisor들의 모임이다. 그렇다면 가장 자연스러운 질문 중 하나는 $$H^0(X, \mathcal{L})$$의 차원에 대한 것이다. Riemann–Roch theorem은 바로 이 질문에 대한 답을 제공하며, 특히 곡선에 대해 매우 구체적인 결과를 준다. Surface에 대한 일반화는 [§Riemann–Roch for Surfaces](/ko/math/algebraic_geometry/riemann_roch_surfaces)에서 다룬다.
 
 ## 곡선에서의 Riemann–Roch 정리
 
@@ -99,78 +99,7 @@ $$\ell(D) - \ell(-D) = \deg D$$
 
 </div>
 
-## 곡면에서의 Riemann–Roch 정리
-
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> Smooth projective surface $$S$$ 위의 divisor $$D$$에 대해 *Euler characteristic*을
-
-$$\chi(\mathcal{O}_S(D)) = \sum_{i=0}^2 (-1)^i h^i(S, \mathcal{O}_S(D)) = h^0(S, \mathcal{O}_S(D)) - h^1(S, \mathcal{O}_S(D)) + h^2(S, \mathcal{O}_S(D))$$
-
-라고 정의한다. 여기서 $$h^i(S, \mathcal{O}_S(D)) = \dim H^i(S, \mathcal{O}_S(D))$$이다.
-
-</div>
-
-Curve의 경우와 달리 surface에서는 $$H^2$$ 항이 추가로 등장한다. $$h^0$$은 global section의 수이고, $$h^1$$과 $$h^2$$는 더 높은 cohomology group들의 dimension이다. Smooth projective surface에 대한 Serre duality에 의해 $$h^2(S, \mathcal{O}_S(D)) = h^0(S, \omega_S \otimes \mathcal{O}_S(-D)) = h^0(S, \mathcal{O}_S(K_S - D))$$이다. Riemann–Roch for surfaces는 이 Euler characteristic을 intersection number로 계산할 수 있게 해준다.
-
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> (Riemann–Roch for surfaces) Smooth projective surface $$S$$ 위의 divisor $$D$$에 대해
-
-$$\chi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \chi(\mathcal{O}_S)$$
-
-이 성립한다. 여기서 $$D \cdot E$$는 두 divisor 사이의 intersection number이고, $$K_S$$는 canonical divisor이며, $$\chi(\mathcal{O}_S) = 1 - q + p_g$$에서 $$q = h^1(S, \mathcal{O}_S)$$는 *irregularity*, $$p_g = h^2(S, \mathcal{O}_S)$$는 *geometric genus*이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-Hirzebruch–Riemann–Roch 정리를 적용한다.
-
-$$\chi(\mathcal{O}_S(D)) = \int_S \operatorname{ch}(\mathcal{O}_S(D)) \operatorname{td}(T_S).$$
-
-Chern character $$\operatorname{ch}(\mathcal{O}_S(D)) = 1 + D + \tfrac{1}{2}D^2$$이고, tangent bundle의 Todd class는 $$c_1(T_S) = -K_S$$임에 주의하여
-
-$$\operatorname{td}(T_S) = 1 + \tfrac{1}{2}c_1(T_S) + \tfrac{1}{12}(c_1(T_S)^2 + c_2(T_S)) = 1 - \tfrac{1}{2}K_S + \tfrac{1}{12}(K_S^2 + c_2)$$
-
-이다. 이들의 곱에서 차수 2인 항만 계산하면
-
-$$\tfrac{1}{2}D^2 + D \cdot \left(-\tfrac{1}{2}K_S\right) + \tfrac{1}{12}(K_S^2 + c_2) = \tfrac{1}{2}D \cdot (D - K_S) + \tfrac{1}{12}(K_S^2 + c_2)$$
-
-이다. HRR에서 surface의 적분은 차수 2인 항만 기여하므로, 위에서 계산한 차수 2 성분
-$$\tfrac{1}{2}D \cdot (D - K_S) + \tfrac{1}{12}(K_S^2 + c_2)$$
-이 곧 $$\chi(\mathcal{O}_S(D))$$가 되어, 최종적으로
-
-$$\chi(\mathcal{O}_S(D)) = \tfrac{1}{2}D \cdot (D - K_S) + \tfrac{1}{12}(K_S^2 + c_2)$$
-
-을 얻는다. 한편 $$D = 0$$을 대입하면 $$\chi(\mathcal{O}_S) = \tfrac{1}{12}(K_S^2 + c_2)$$이므로 (이것이 바로 Noether 공식이다), 이를 다시 대입하면
-
-$$\chi(\mathcal{O}_S(D)) = \tfrac{1}{2}D \cdot (D - K_S) + \chi(\mathcal{O}_S)$$
-
-이 된다.
-
-</details>
-
-Curve의 경우와 마찬가지로, 만약 $$D$$가 충분히 "양의" 방향이라면 $$h^1$$과 $$h^2$$가 사라져 $$\chi(\mathcal{O}_S(D)) = h^0(S, \mathcal{O}_S(D))$$가 된다. 이는 [§선형계, ⁋정의 9](/ko/math/algebraic_geometry/linear_systems#def9)에서 정의한 ampleness 개념과 밀접하게 관련되어 있다.
-
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8**</ins> **$$\mathbb{P}^2$$**: $$K_{\mathbb{P}^2} = -3H$$이고 $$\chi(\mathcal{O}_{\mathbb{P}^2}) = 1$$이다. Divisor $$D = dH$$에 대해 intersection number $$H \cdot H = 1$$을 사용하면
-
-$$\chi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1.$$
-
-한편 $$d \ge 0$$에 대해서는 $$h^0 = \binom{d+2}{2}$$이고 $$h^1 = h^2 = 0$$임을 알고 있으므로, $$\chi(\mathcal{O}_{\mathbb{P}^2}(d)) = \binom{d+2}{2} = \frac{(d+1)(d+2)}{2}$$가 되어 위 식과 일치함을 확인할 수 있다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex9">**예시 9**</ins> **Blow-up of $$\mathbb{P}^2$$**: 한 점 $$p$$에서의 blow-up $$\pi: \tilde{\mathbb{P}}^2 \to \mathbb{P}^2$$를 생각하자. Exceptional divisor를 $$E$$라 하면, canonical divisor는 $$K_{\tilde{\mathbb{P}}^2} = \pi^* K_{\mathbb{P}^2} + E = -3H + E$$이다. Divisor $$D = dH - kE$$에 대해 intersection number $$H \cdot H = 1$$, $$H \cdot E = 0$$, $$E \cdot E = -1$$을 사용하여
-
-$$\chi(\mathcal{O}_{\tilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) \cdot (dH - kE + 3H - E) + 1 = \frac{1}{2}d(d+3) - \frac{1}{2}k(k+1) + 1.$$
-
-</div>
+지금까지 곡선에서의 Riemann–Roch 정리와 몇 가지 구체적인 예시를 살펴보았다. 이제 이 정리의 응용들을 다룬다.
 
 ## 응용
 
@@ -178,7 +107,7 @@ $$\chi(\mathcal{O}_{\tilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) \cdot
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> Degree $$d$$의 smooth plane curve $$C \subset \mathbb{P}^2$$에 대해
+<ins id="prop6">**명제 6**</ins> Degree $$d$$의 smooth plane curve $$C \subset \mathbb{P}^2$$에 대해
 
 $$g(C) = \frac{(d-1)(d-2)}{2}$$
 
@@ -201,7 +130,7 @@ $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> Degree $$d$$에 따른 genus의 예시들이다.
+<ins id="ex7">**예시 7**</ins> Degree $$d$$에 따른 genus의 예시들이다.
 
 - **Degree 3 (cubic)**: $$g = \frac{2 \cdot 1}{2} = 1$$ (elliptic curve).
 - **Degree 4 (quartic)**: $$g = \frac{3 \cdot 2}{2} = 3$$.
@@ -211,48 +140,13 @@ Genus가 degree에 따라 빠르게 증가하므로, 고차원의 smooth plane c
 
 </div>
 
-### Noether 공식
-
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**명제 12**</ins> (Noether Formula) Smooth projective surface $$S$$에 대해
-
-$$K_S^2 + c_2(S) = 12\,\chi(\mathcal{O}_S)$$
-
-이 성립한다. 여기서 $$K_S^2 = K_S \cdot K_S$$는 canonical divisor의 self-intersection number이고, $$c_2(S)$$는 tangent bundle의 top Chern class이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-[명제 7](#prop7)의 증명에서 사용한 Hirzebruch–Riemann–Roch 정리를 $$D = 0$$에 적용한다.
-
-$$\chi(\mathcal{O}_S) = \int_S \operatorname{td}(T_S).$$
-
-Todd class $$\operatorname{td}(T_S) = 1 + \tfrac{1}{2}c_1(T_S) + \tfrac{1}{12}(c_1(T_S)^2 + c_2)$$에서 차수 2인 항만 적분하면 $$c_1(T_S) = -K_S$$이므로 $$c_1(T_S)^2 = K_S^2$$이고
-
-$$\chi(\mathcal{O}_S) = \frac{1}{12}(K_S^2 + c_2)$$
-
-를 얻는다. 따라서 $$K_S^2 + c_2 = 12 \cdot \chi(\mathcal{O}_S)$$이다.
-
-</details>
-
-Noether 공식은 곡면의 세 가지 기본적인 불변량인 canonical self-intersection $$K_S^2$$, topological Euler number $$c_2(S)$$, 그리고 holomorphic Euler characteristic $$\chi(\mathcal{O}_S)$$ 사이의 관계를 제공한다. 이는 곡면의 분류에서 핵심적인 역할을 한다.
-
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13**</ins> **$$\mathbb{P}^2$$**: $$K_{\mathbb{P}^2} = -3H$$이므로 $$K_{\mathbb{P}^2}^2 = (-3H)^2 = 9$$이고, $$\chi(\mathcal{O}_{\mathbb{P}^2}) = 1$$이다. Noether 공식에 의해 $$9 + c_2 = 12$$, 즉 $$c_2(\mathbb{P}^2) = 3$$이다. 이는 $$\mathbb{P}^2$$의 topological Euler characteristic이 3이라는 것을 의미하며, 이는 $$\mathbb{P}^2$$의 cell decomposition $$\mathbb{C}^0 \cup \mathbb{C}^1 \cup \mathbb{C}^2$$ (점 + 직선 + 평면)으로부터 $$\chi_{\text{top}} = 1 + 1 + 1 = 3$$로도 확인된다.
-
-</div>
-
 ### Brill–Noether 이론
 
 Riemann–Roch 정리의 자연스러운 응용 중 하나는 주어진 곡선 위에서 특정한 성질을 갖는 divisor를 찾는 것이다. 구체적으로, genus $$g$$인 곡선 $$C$$ 위에서 degree $$d$$이고 $$\ell(D) \ge r + 1$$인 divisor $$D$$가 언제 존재하는지를 묻는다. 이 질문에 대한 기본적인 답은 다음과 같다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**명제 14**</ins> Genus $$g$$인 curve $$C$$ 위의 degree $$d$$인 divisor $$D$$에 대해, $$d \ge r + g$$이면 $$\ell(D) \ge r + 1$$이다.
+<ins id="prop8">**명제 8**</ins> Genus $$g$$인 curve $$C$$ 위의 degree $$d$$인 divisor $$D$$에 대해, $$d \ge r + g$$이면 $$\ell(D) \ge r + 1$$이다.
 
 </div>
 
@@ -271,10 +165,10 @@ $$\rho(g, r, d) = g - (r+1)(g - d + r)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> **$$g = 2$$에서의 Brill–Noether**: $$K_C$$는 degree $$2$$를 갖는다.
+<ins id="ex9">**예시 9**</ins> **$$g = 2$$에서의 Brill–Noether**: $$K_C$$는 degree $$2$$를 갖는다.
 
 - $$d = 2$$, $$r = 1$$: Brill–Noether 수 $$\rho = 2 - (1+1)(2-2+1) = 2 - 2 = 0$$이므로, 일반적인 $$g = 2$$ 곡선에서 $$W^1_2$$는 차원 0, 즉 유한개의 점으로 구성된다. 실제로 $$D = K_C$$가 유일한 $$g^1_2$$인데, 모든 genus 2 곡선은 hyperelliptic curve이므로 canonical divisor에 의해 유일한 degree 2 map $$C \to \mathbb{P}^1$$을 갖는다.
-- $$d = 3$$, $$r = 1$$: $$\rho = 2 - (1+1)(2-3+1) = 2 - 0 = 2 > 0$$이므로 $$W^1_3$$은 차원 2의 nonempty variety이다. [명제 14](#prop14)에 의해서도 $$d = 3 \ge r + g = 3$$이므로 $$\ell(D) \ge 2$$가 보장된다. Riemann–Roch에 의해 $$\ell(D) \ge 3 + 1 - 2 = 2$$이다.
+- $$d = 3$$, $$r = 1$$: $$\rho = 2 - (1+1)(2-3+1) = 2 - 0 = 2 > 0$$이므로 $$W^1_3$$은 차원 2의 nonempty variety이다. [명제 8](#prop8)에 의해서도 $$d = 3 \ge r + g = 3$$이므로 $$\ell(D) \ge 2$$가 보장된다. Riemann–Roch에 의해 $$\ell(D) \ge 3 + 1 - 2 = 2$$이다.
 - $$d = 0$$, $$r = 0$$: $$\rho = 2 - 1 \cdot 2 = 0$$이고, $$W^0_0 = \{0\}$$ (trivial divisor)로 유일한 점이다.
 
 </div>
@@ -285,11 +179,11 @@ $$\rho(g, r, d) = g - (r+1)(g - d + r)$$
 
 ## Smooth Curve의 Canonical Bundle
 
-[명제 10](#prop10)의 degree-genus formula는 Riemann–Roch theorem의 특수한 경우이다. Curve의 차원이 1이므로 $$\omega_C = \Omega_C^1$$이며, $$\omega_C$$의 global section은 $$C$$ 위의 *regular 1-form*이다. Adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_geometry/canonical_bundle#prop9))에 의해 $$\mathbb{P}^2$$ 안의 degree $$d$$ smooth plane curve $$C$$에 대해 $$\omega_C \cong \mathcal{O}_C(d-3)$$이 된다. 따라서 $$\deg K_C = d(d-3)$$이고, [명제 10](#prop10)의 genus 공식 $$g = (d-1)(d-2)/2$$을 대입하면 $$\deg K_C = 2g - 2$$를 얻는다. 이 결과는 임의의 smooth projective curve에 대해 성립한다.
+[명제 6](#prop6)의 degree-genus formula는 Riemann–Roch theorem의 특수한 경우이다. Curve의 차원이 1이므로 $$\omega_C = \Omega_C^1$$이며, $$\omega_C$$의 global section은 $$C$$ 위의 *regular 1-form*이다. Adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_geometry/canonical_bundle#prop9))에 의해 $$\mathbb{P}^2$$ 안의 degree $$d$$ smooth plane curve $$C$$에 대해 $$\omega_C \cong \mathcal{O}_C(d-3)$$이 된다. 따라서 $$\deg K_C = d(d-3)$$이고, [명제 6](#prop6)의 genus 공식 $$g = (d-1)(d-2)/2$$을 대입하면 $$\deg K_C = 2g - 2$$를 얻는다. 이 결과는 임의의 smooth projective curve에 대해 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop16">**명제 16**</ins> Smooth projective curve $$C$$의 genus가 $$g$$이면 $$\deg K_C = 2g - 2$$이다.
+<ins id="prop10">**명제 10**</ins> Smooth projective curve $$C$$의 genus가 $$g$$이면 $$\deg K_C = 2g - 2$$이다.
 
 </div>
 
