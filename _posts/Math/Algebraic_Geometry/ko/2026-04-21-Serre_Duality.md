@@ -1,5 +1,5 @@
 ---
-title: "Serre Duality"
+title: "세르 쌍대성"
 excerpt: "Serre duality theorem and its applications"
 
 categories: [Math / Algebraic Geometry]
@@ -11,8 +11,8 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Serre_Duality.png
     overlay_filter: 0.5
 
-date: 2026-03-15
-last_modified_at: 2026-04-21
+date: 2026-04-21
+last_modified_at: 2026-04-22
 weight: 15
 published: false
 ---
@@ -25,7 +25,7 @@ $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
 이번 글에서 우리는 대수기하학 버전의 duality인 Serre duality를 살펴본다. 
 
-## 사영공간에서의 Serre Duality
+## 사영공간에서의 세르 쌍대성
 
 우리는 우선 $$X=\mathbb{P}^n$$인 경우만 엄밀하게 살펴본다. 우리는 $$\mathbb{P}^n$$ 위에 정의된 line bundle은 모두 $$\mathcal{O}(d)$$의 꼴인 것을 알고 있으며, 특히 [§표준선다발, ⁋명제 7](/ko/math/algebraic_geometry/canonical_bundle#prop7)에서 이것이 $$\mathcal{O}(-n-1)$$임을 살펴보았다. 그럼 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#prop1)에서 우리는 다음을 얻는다.
 
@@ -65,7 +65,7 @@ $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2 (Serre duality pairing, projective case)**</ins> $$\mathbb{P}^n$$ 위의 locally free sheaf $$\mathcal{E}$$에 대해 쌍선형 형식
+<ins id="prop2">**명제 2 (Serre duality pairing, projective case)**</ins> $$\mathbb{P}^n$$ 위의 locally free sheaf $$\mathcal{E}$$에 대해 bilinear form
 
 $$H^k(\mathbb{P}^n, \mathcal{E}) \times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n} \otimes \mathcal{E}^\vee) \to \mathbb{K};\quad (\alpha, \beta) \mapsto \tr(\alpha \smile \beta)$$
 
@@ -95,13 +95,34 @@ $$d = 1$$인 경우도 살펴보자. Bott's formula에 의해 $$H^0(\mathbb{P}^2
 
 </div>
 
-지금까지의 논의는 variety가 smooth할 때 성립하지만, $$X$$가 singular point를 갖는 경우에는 canonical line bundle $$\omega_X$$ 대신 *dualizing sheaf* $$\omega_X^\circ$$를 사용하여 Serre duality를 서술할 수 있다. Dualizing sheaf는 Cohen-Macaulay variety 위에서 항상 정의되는 sheaf로,
+## 세르 쌍대성의 일반화
 
-$$\operatorname{Ext}^i_X(\mathcal{F}, \omega_X^\circ)\cong H^{n-i}(X, \mathcal{F})^\vee$$
+우리는 지금까지의 논의를 일반화시킨다. 가장 처음으로 할 수 있는 것은 locally free sheaf $$\mathcal{E}$$를 임의의 coherent sheaf $$\mathcal{E}$$로 확장하는 것이다. 이는 생각보다 어려운 일은 아닌데, smooth variety에서는 임의의 coherent sheaf가 finite length locally free resolution을 갖기 때문으로, Serre duality의 주장을 귀납적으로 사용하면 된다. ([§표준선다발, ⁋정의 1](/ko/math/algebraic_geometry/canonical_bundle#def1))
+
+그 후 우리는 $$X$$에서 smooth 조건을 포기한다. 이 경우 크게 두 가지의 문제가 있는데, 처음으로 보이는 문제는 $$X$$가 canonical line bundle을 갖지 않는다는 사실이다. 또 다른 문제는 약간 미묘한 것으로, 우리는 perfect pairing에서 명시적인 isomorphism을 얻어낼 때 다소 implicit하게 다음의 isomorphism
+
+$$\mathcal{H}om(\mathcal{E}, \mathcal{F})\cong \mathcal{E}^\vee\otimes \mathcal{F}$$
+
+를 사용하였으나, 실제로 이는 $$\mathcal{E}$$가 locally free이기 때문에 가능한 것으로, 만일 $$\mathcal{E}$$가 coherent sheaf이고 $$X$$가 singular라면 $$\mathcal{E}$$가 finite length locally free resolution을 갖는다는 보장이 없으므로 이 isomorphism이 성립하지 않는다. 때문에 우리는 다시 derived functor를 도입하여, 다음의 식
+
+$$\Ext^i_X(\mathcal{F},\omega_X)\cong H^{n-i}(X,\mathcal{F})^\vee$$
+
+을 만족하는 $$\omega_X$$를 $$X$$의 *dualizing sheaf*라 부른다. 일반적으로 이는 Cohen-Macaulay variety of pure dimension $$n$$에 대하여는 그 존재성이 보장되며, 정의를 내리지는 않을 것이지만 Cohen-Macaulay condition은 직관적으로 차원 문제를 일으키지 않는 singular variety들을 포함하는 개념이라 생각하면 된다.[^1]
+
+조금 덜 직관적인 버전의 일반화는 relative Serre duality이다. 우리는 그 동안 variety의 underlying field $$\mathbb{K}$$에 대해 신경을 쓰지 않은 것이 사실이지만, 이 맥락에서는 그 역할을 명확하게 하는 것이 도움이 된다. 우리는 
+
+
+
+우선 더 직관적인 방향의 일반화는 $$X$$에서 smooth 조건을 포기하는 것이다. 이 경우, $$X$$는 canonical line bundle을 갖지 않으므로 Serre duality를 설명할 때 주의해야 한다. 
+
+또 다른 주의사항 중 하나는, 일반적으로 smooth variety에서는 locally free sheaf $$\mathcal{E}$$에 대하여 
+
+
+지금까지의 논의는 variety가 smooth할 때 성립하지만, $$X$$가 singular point를 갖는 경우에는 canonical line bundle $$\omega_X$$가 정의되지 않으므로, 이 경우에는 *dualizing sheaf*의 개념을 사용하여 Serre duality를 서술할 수 있다. 
+
+$$\operatorname{Ext}^i_X(\mathcal{F}, \omega_X)\cong H^{n-i}(X, \mathcal{F})^\vee$$
 
 를 만족하는 sheaf이며, $$X$$가 smooth일 때는 canonical bundle $$\omega_X$$가 정확히 이러한 역할을 해 준다. 
-
-## Relative Duality
 
 Smooth projective morphism $$f \colon X \to Y$$는 임의의 점 $$y \in Y$$에 대해 섬유 $$f^{-1}(y)$$가 smooth projective variety가 되는 사상이다. Relative dualizing sheaf $$\omega_{X/Y}$$는 이런 상황에서 섬유별 canonical sheaf를 일관되게 모은 것이며, 각 섬유 $$X_y$$에서 $$\omega_{X/Y}\vert_{X_y} \cong \omega_{X_y}$$가 성립한다.
 
@@ -163,3 +184,7 @@ $$R f_\ast \mathbf{R}\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G})
 
 **[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Ser]** J.-P. Serre, *Faisceaux algébriques cohérents*, Annals of Mathematics, 1955.
+
+---
+
+[^1]: 가령 $$\x\y=0$$은 CM이 아니지만, $$\y^2-\x^3=0$$은 CM이다. 
