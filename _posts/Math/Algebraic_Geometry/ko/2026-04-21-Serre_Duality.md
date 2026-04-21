@@ -14,7 +14,7 @@ header:
 date: 2026-04-21
 last_modified_at: 2026-04-22
 weight: 15
-published: false
+
 ---
 
 기하적으로 좋은 경우 dimension $$k$$의 cohomology와 codimension $$k$$ cohomology 사이에는 자연스러운 쌍대성이 존재한다. 이를 증명하기 위해 우리는 perfect pairing
@@ -87,11 +87,25 @@ $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $$\mathbb{P}^2$$에서 [명제 2](#prop2)가 어떻게 작동하는지 확인해보자. 우선 $$\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$$이므로, Serre duality는 $$H^i(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-i}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$$을 준다.
+<ins id="ex3">**예시 3**</ins> $$\mathbb{P}^2$$에서 [명제 2](#prop2)를 구체적으로 살펴보자. 여기에서 $$\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$$이므로, Serre duality가 주장하는 바는 isomorphism $$H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$$이다.
 
-$$d = 0$$인 경우를 생각하자. [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#prop1)에 의해 $$H^0(\mathbb{P}^2, \mathcal{O}) = \mathbb{K}$$, $$H^1(\mathbb{P}^2, \mathcal{O}) = 0$$, $$H^2(\mathbb{P}^2, \mathcal{O}) = 0$$이다. 한편 $$\mathcal{O}(-3)$$의 cohomology는 $$H^0(\mathbb{P}^2, \mathcal{O}(-3)) = 0$$, $$H^1(\mathbb{P}^2, \mathcal{O}(-3)) = 0$$, $$H^2(\mathbb{P}^2, \mathcal{O}(-3)) = \mathbb{K}$$이다. 따라서 Serre duality는 $$i = 0$$일 때 $$H^0(\mathcal{O}) = \mathbb{K} \cong H^2(\mathcal{O}(-3))^\ast = \mathbb{K}$$를, $$i = 1$$일 때 $$H^1(\mathcal{O}) = 0 \cong H^1(\mathcal{O}(-3))^\ast = 0$$을, $$i = 2$$일 때 $$H^2(\mathcal{O}) = 0 \cong H^0(\mathcal{O}(-3))^\ast = 0$$을 각각 준다. 모든 경우에 차원이 정확히 대응함을 확인할 수 있다.
+우선 $$d=0$$인 경우, [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#prop1)에 의해 
 
-$$d = 1$$인 경우도 살펴보자. Bott's formula에 의해 $$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}^3$$이고 나머지 cohomology는 모두 0이다. Serre duality에 의해 $$H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$$이어야 하므로 $$\dim H^2(\mathcal{O}(-4)) = 3$$이다. 실제로 $$\mathcal{O}(-4)$$의 $$H^2$$는 $${n+q \choose n} = {2+(-4) \choose 2} = {-2 \choose 2} = 3$$로 계산되어 일치한다.
+$$H^0(\mathbb{P}^2, \mathcal{O}) = \mathbb{K},\qquad H^1(\mathbb{P}^2, \mathcal{O}) = 0, \qquad H^2(\mathbb{P}^2, \mathcal{O}) = 0$$
+
+이며 $$\mathcal{O}(-3)$$의 cohomology는 
+
+$$H^0(\mathbb{P}^2, \mathcal{O}(-3)) = 0, \qquad H^1(\mathbb{P}^2, \mathcal{O}(-3)) = 0,\qquad H^2(\mathbb{P}^2, \mathcal{O}(-3)) = \mathbb{K}$$
+
+이 되어 Serre duality가 성립하는 것을 알 수 있다. 비슷하게 $$d=1$$인 경우에서도, 유일한 nonzero cohomology는
+
+$$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}^3$$
+
+이며, Serre duality에 의해 $$H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$$이어야 하므로 $$\dim H^2(\mathcal{O}(-4)) = 3$$이어야 할 것이다. 다시 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#prop1)를 적용하면 실제로 $$\mathcal{O}(-4)$$의 $$H^2$$는 
+
+$$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
+
+차원이므로 일치하는 것을 확인할 수 있다.
 
 </div>
 
@@ -107,30 +121,17 @@ $$\mathcal{H}om(\mathcal{E}, \mathcal{F})\cong \mathcal{E}^\vee\otimes \mathcal{
 
 $$\Ext^i_X(\mathcal{F},\omega_X)\cong H^{n-i}(X,\mathcal{F})^\vee$$
 
-을 만족하는 $$\omega_X$$를 $$X$$의 *dualizing sheaf*라 부른다. 일반적으로 이는 Cohen-Macaulay variety of pure dimension $$n$$에 대하여는 그 존재성이 보장되며, 정의를 내리지는 않을 것이지만 Cohen-Macaulay condition은 직관적으로 차원 문제를 일으키지 않는 singular variety들을 포함하는 개념이라 생각하면 된다.[^1]
+을 만족하는 $$\omega_X$$를 $$X$$의 *dualizing sheaf*라 부른다. 일반적으로 이는 Cohen-Macaulay variety of pure dimension $$n$$에 대하여는 그 존재성이 보장되며, 정의를 내리지는 않을 것이지만 Cohen-Macaulay condition은 직관적으로 차원 문제를 일으키지 않는 singular variety들을 포함하는 개념이라 생각하면 된다.
 
-조금 덜 직관적인 버전의 일반화는 relative Serre duality이다. 우리는 그 동안 variety의 underlying field $$\mathbb{K}$$에 대해 신경을 쓰지 않은 것이 사실이지만, 이 맥락에서는 그 역할을 명확하게 하는 것이 도움이 된다. 우리는 
+조금 덜 직관적인 버전의 일반화는 relative Serre duality이다. 우리는 그 동안 variety의 underlying field $$\mathbb{K}$$에 대해 신경을 쓰지 않은 것이 사실이지만, 이 맥락에서는 그 역할을 명확하게 하는 것이 도움이 된다. 
 
+Affine variety $$X$$가 $$\mathbb{K}$$ 위에서 정의되었다는 것은 그 coordinate ring $$A$$가 $$\mathbb{K}$$-algebra라는 것으로, 이 구조를 담는 ring homomorphism $$\mathbb{K}\rightarrow A$$가 존재한다. 이를 각각 $$\mathbb{A}^1_\mathbb{K}$$와 $$X$$의 coordinate ring 사이의 morphism으로 본다면, 이 structure morphism은 기하적으로는 $$X\rightarrow \mathbb{A}^1_\mathbb{K}$$로 주어지게 된다.
 
-
-우선 더 직관적인 방향의 일반화는 $$X$$에서 smooth 조건을 포기하는 것이다. 이 경우, $$X$$는 canonical line bundle을 갖지 않으므로 Serre duality를 설명할 때 주의해야 한다. 
-
-또 다른 주의사항 중 하나는, 일반적으로 smooth variety에서는 locally free sheaf $$\mathcal{E}$$에 대하여 
-
-
-지금까지의 논의는 variety가 smooth할 때 성립하지만, $$X$$가 singular point를 갖는 경우에는 canonical line bundle $$\omega_X$$가 정의되지 않으므로, 이 경우에는 *dualizing sheaf*의 개념을 사용하여 Serre duality를 서술할 수 있다. 
-
-$$\operatorname{Ext}^i_X(\mathcal{F}, \omega_X)\cong H^{n-i}(X, \mathcal{F})^\vee$$
-
-를 만족하는 sheaf이며, $$X$$가 smooth일 때는 canonical bundle $$\omega_X$$가 정확히 이러한 역할을 해 준다. 
-
-Smooth projective morphism $$f \colon X \to Y$$는 임의의 점 $$y \in Y$$에 대해 섬유 $$f^{-1}(y)$$가 smooth projective variety가 되는 사상이다. Relative dualizing sheaf $$\omega_{X/Y}$$는 이런 상황에서 섬유별 canonical sheaf를 일관되게 모은 것이며, 각 섬유 $$X_y$$에서 $$\omega_{X/Y}\vert_{X_y} \cong \omega_{X_y}$$가 성립한다.
-
-Serre duality에서 $$H^n(X, \omega_X) \cong \mathbb{K}$$였던 사실은 relative situation에서 다음과 같이 일반화된다.
+Relative Serre duality는 이 세팅을 일반화하는 것으로, target $$\mathbb{A}^1_\mathbb{K}$$를 또 다른 variety로 바꿔준다. 우선 임의의 variety $$X,Y$$에 대하여, morphism $$f:X\rightarrow Y$$가 *smooth projective morphism*이라는 것을 각각의 $$y\in Y$$ 위에서의 fiber $$f^{-1}(y)$$가 smooth projective variety가 되는 것으로 정의하자. 그럼 이 경우, $$f^{-1}(y)$$는 smooth projective variety로서 canonical line bundle $$\omega_{X_y}$$가 존재할 것이며, 이들을 일관적으로 모은 *relative dualizing sheaf* $$\omega_{X/Y}$$가 $$X$$ 위에 정의된다. 즉 $$\omega_{X/Y}$$는 각각의 $$y$$에 대하여 $$\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$$을 만족하는 sheaf이다. 그럼 이 때의 일반화는 다음과 같다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> Smooth projective morphism $$f \colon X \to Y$$에서 $$n = \dim X - \dim Y$$라 하자. 그럼
+<ins id="prop4">**명제 4 (Relative Serre duality)**</ins> Smooth projective morphism $$f \colon X \to Y$$에서 $$n = \dim X - \dim Y$$라 하자. 그럼
 
 $$R^n f_\ast \omega_{X/Y} \cong \mathcal{O}_Y$$
 
@@ -138,45 +139,37 @@ $$R^n f_\ast \omega_{X/Y} \cong \mathcal{O}_Y$$
 
 </div>
 
-
-
 ## Grothendieck Duality
 
-Serre duality는 variety $$X$$를 하나의 점 $$\operatorname{Spec}(\mathbb{K})$$로 보내는 상사상에 대한 특수한 경우이다. Grothendieck는 이를 임의의 proper morphism으로 일반화하였다. Proper morphism $$f \colon X \to Y$$는 위상수학적으로 compact map의 대수기하학적 대응물로, 임의의 base change에 대해 닫힌 사상이 되는 사상이다.
+앞서 Serre duality를 일반화하는 과정들을 되짚어보자. 우리는 먼저 $$\mathbb{P}^n$$ 위에서 trace map과 cup product를 사용하여 Serre duality를 증명하였고 ([명제 2](#prop2)), 이를 finite morphism을 통해 임의의 smooth projective variety로 확장하였다. 이후 coherent sheaf로의 확장은 locally free resolution을 통한 귀납으로 처리하였고, singular variety로의 확장은 dualizing sheaf의 도입으로 처리하였다. Relative Serre duality ([명제 4](#prop4))는 target을 point에서 임의의 variety로 바꾼 일반화였다.
 
-Serre duality에서 canonical bundle $$\omega_X$$가 핵심적인 역할을 하였듯이, relative 상황에서는 relative dualizing sheaf $$\omega_{X/Y}$$가 그 역할을 담당한다. 이는 섬유 $$f^{-1}(y)$$ 각각에서 canonical sheaf를 일관되게 모아둔 것이며, Serre duality에서 $$\omega_X$$가 하던 역할을 상대적인 상황으로 옮긴 것이다. 구체적으로 $$\omega_{X/Y}$$는 derived pullback $$f^!$$에 의해 $$\omega_{X/Y} = f^! \mathcal{O}_Y$$로 정의된다. 여기서 $$f^!$$는 $$R f_\ast$$의 right adjoint로 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 13](/ko/math/homological_algebra/derived_categories#prop13)), derived category에서만 자연스럽게 정의된다.
+Serre duality의 가장 현대적인 해석은 Grothendieck duality로, 이는 derived category의 언어에서 서술된다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2)) 이 일반화는 그 언어에 비해 motivation은 상당히 설득력 있는 것으로, 가령 우리는 sheaf cohomology를 정의할 때만 해도 injective resolution을 생각해야 했고, 위에서 Serre duality를 임의의 coherent sheaf로 일반화할 때도 locally free resolution을 생각해야 했으므로 derived category가 모든 일이 실제로 일어나는 곳임을 안다. 특히 핵심적인 내용은 Serre duality에서 perfect pairing이, 사실은 구체적인 isomorphism
 
-### Derived functor 개념
+$$H^n(X, \omega_X) \cong \mathbb{K}$$
 
-Grothendieck duality를 기술하려면 derived category 위에서 정의되는 여러 functor가 필요하다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8)) 여기서는 각 functor가 왜 필요한지, 그리고 구성적으로 어떻게 정의되는지를 설명한다.
+의 선택과 같은 정보라는 것이며, 이를 derived category로 올리면 derived pushforward $$R f_\ast$$와 그 right adjoint 사이의 adjunction의 특수한 경우라는 관찰이다. 구체적으로, Serre duality의 isomorphism
 
-**$$\mathcal{H}om$$**. 이것은 module category의 $$\operatorname{Hom}$$과 다른 개념이다. $$\mathcal{H}om(\mathcal{F}, \mathcal{G})$$는 각 열린집합 $$U$$마다 $$\operatorname{Hom}_{\mathcal{O}_X(U)}(\mathcal{F}(U), \mathcal{G}(U))$$를 취한 뒤, 이 presheaf를 sheafify하여 얻은 sheaf이다. 즉 open set마다 독립적으로 Hom을 계산하고 이를 sheaf로 모은 것이다.
+$$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
-**$$\mathbf{R}\mathcal{H}om$$** ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10)). $$\mathcal{H}om$$은 covariant 인수에서 left exact, contravariant 인수에서도 left exact하지만 right exact가 아니므로, 이 functor를 그대로 사용하면 정보가 손실된다. 예를 들어 short exact sequence $$0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$$에 대해 $$\mathcal{H}om(-, \mathcal{G})$$를 적용하면 오른쪽에서 exactness가 깨진다. 따라서 두 인수 모두에서 derived functor가 필요하다. 구체적으로, contravariant 인수에 injective resolution을 취해 $$\mathcal{F} \to \mathcal{I}^\bullet$$로 치환한 뒤, covariant 인수에도 injective resolution을 취해 $$\mathcal{G} \to \mathcal{J}^\bullet$$로 치환하고 $$\mathcal{H}om(\mathcal{I}^\bullet, \mathcal{J}^\bullet)$$을 적용한다. 이 complex의 cohomology가 $$\operatorname{Ext}^i(\mathcal{F}, \mathcal{G})$$를 준다.
+은 derived category에서 다음의 adjunction isomorphism
 
-**$$R f_\ast$$** ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8)). Pushforward $$f_\ast$$는 left exact functor이다: $$0 \to f_\ast \mathcal{F}' \to f_\ast \mathcal{F} \to f_\ast \mathcal{F}''$$는 exact하지만 오른쪽에서는 $$f_\ast \mathcal{F}''$$로의 surjectivity가 보장되지 않는다. 따라서 right derived functor $$R f_\ast$$가 필요하다. Sheaf $$\mathcal{F}$$에 injective resolution $$\mathcal{F} \to \mathcal{I}^\bullet$$을 취한 뒤 $$f_\ast \mathcal{I}^\bullet$$을 적용한다. 이 complex의 cohomology가 higher direct image $$R^i f_\ast$$를 준다.
+$$\operatorname{Hom}_{D(X)}(\mathcal{F}, f^! \mathcal{G}) \cong \operatorname{Hom}_{D(Y)}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
-**$$L f^\ast$$** ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8)). Pullback $$f^\ast$$는 right exact functor이다. 이는 $$f^\ast$$가 $$f^{-1}(-) \otimes_{f^{-1}\mathcal{O}_Y} \mathcal{O}_X$$와 같은 tensor product의 형태이기 때문이다: tensor product는 항상 right exact하지만 left exact가 아니다. 따라서 left derived functor $$L f^\ast$$가 필요하며, flat resolution로 치환한 뒤 pullback을 적용한다.
+으로부터 도출된다. 여기서 *exceptional inverse image* $$f^!$$는 derived category에서 $$R f_\ast$$의 right adjoint로 정의되는 functor이며, 이를 잘 정의하기 위해서는 반드시 derived category에서 이를 서술해야만 한다.
 
-**$$f^!$$** ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 13](/ko/math/homological_algebra/derived_categories#prop13)). 이 functor는 $$R f_\ast$$의 right adjoint로 derived category에서만 자연스럽게 정의된다. Sheaf category $$\operatorname{Coh}(X)$$의 수준에서는 $$f^!$$에 올바른 의미를 부여할 수 없다: $$R f_\ast$$가 complex 수준의 functor이므로, 그 adjoint 역시 complex 수준에서 존재해야 한다.
+앞서 말했듯 Grothendieck duality는 relative Serre duality를 포함하는 결과이다. 이를 살펴보기 위해 smooth morphism $$f:X\rightarrow Y$$의 경우를 생각하면, $$f^! \mathcal{O}_Y \cong \omega_{X/Y}[n]$$이 성립하며, 이로부터 $$\omega_{X/Y}$$가 올바른 dimension에 들어있는 것이 정확히 $$f^!\mathcal{O}_Y$$임을 알 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5 (Grothendieck Duality)**</ins> Smooth projective variety 사이의 proper morphism $$f \colon X \to Y$$와 coherent sheaf $$\mathcal{F}$$ on $$X$$에 대해, derived category에서 다음 isomorphism이 성립한다:
+<ins id="prop5">**명제 5 (Grothendieck Duality)**</ins> Proper morphism $$f \colon X \to Y$$와 coherent sheaf $$\mathcal{F}$$ on $$X$$에 대해, derived category에서 다음 isomorphism이 성립한다:
 
-$$R f_\ast \mathbf{R}\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong \mathbf{R}\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
+$$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
-여기서 $$R f_\ast$$는 derived pushforward ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 6](/ko/math/homological_algebra/derived_categories#def6)), $$\mathbf{R}\mathcal{H}om$$은 derived Hom ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10)), 그리고 $$f^!$$는 $$R f_\ast$$의 right adjoint ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 13](/ko/math/homological_algebra/derived_categories#prop13))이다. $$\mathcal{G}$$는 $$Y$$ 위의 coherent sheaf의 bounded below complex ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 4](/ko/math/homological_algebra/derived_categories#def4))이다. 특히 $$f$$가 smooth morphism of relative dimension $$n$$이면 $$f^! \mathcal{O}_Y \cong \omega_{X/Y}[n]$$이고, 여기서 $$\omega_{X/Y}$$는 relative canonical sheaf이다.
-
-</div>
-
-이 정리의 의미를 직관적으로 이해해보자. $$\mathbf{R}\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G})$$는 $$\mathcal{F}$$와 $$f^! \mathcal{G}$$ 사이의 '모든 가능한 Hom'을 모은 complex이며, $$R f_\ast$$를 적용하면 이를 $$Y$$ 위로 pushforward한다. 우변 $$\mathbf{R}\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$는 pushforward된 $$\mathcal{F}$$와 $$\mathcal{G}$$ 사이의 '모든 가능한 Hom'이다. 즉, 'pushforward 후 Hom'과 'Hom 후 pushforward'가 같다는 뜻이다. 본 글에서는 정리의 형태만 소개하며, 증명과 상세한 논의는 추후 별도의 글에서 다룬다.
-
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6**</ins> $$Y = \operatorname{Spec}(\mathbb{K})$$이고 $$X$$가 $$n$$차원 smooth projective variety인 경우를 생각하자. 구조 사상 $$f \colon X \to \operatorname{Spec}(\mathbb{K})$$에 대해 $$R f_\ast \mathcal{F}$$의 cohomology는 단순히 cohomology group $$H^i(X, \mathcal{F})$$이고, $$\mathbf{R}\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{O}_Y)$$의 cohomology는 dual vector space $$H^i(X, \mathcal{F})^\ast$$이다. 또한 $$f$$는 smooth of relative dimension $$n$$이므로 $$f^! \mathcal{O}_Y \cong \omega_X[n]$$이다. 따라서 [명제 5](#prop5)에서 $$\mathcal{G} = \mathcal{O}_Y$$, $$\mathcal{F}$$를 locally free sheaf로 취하면 cohomology 수준에서 $$H^i(X, \omega_X \otimes \mathcal{E}^\vee) \cong H^{n-i}(X, \mathcal{E})^\ast$$을 얻으며, 이는 정확히 Serre duality이다. 즉 Serre duality는 Grothendieck duality의 특수한 경우이다.
+여기서 $$R\mathcal{H}om$$은 derived Hom ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10))이며, $$\mathcal{G}$$는 $$Y$$ 위의 coherent sheaf의 bounded complex이다. 
 
 </div>
+
+직관적으로 이 정리는 'pushforward 후 Hom'과 'Hom 후 pushforward'가 같다는 것을 의미한다. 즉, $$\mathcal{F}$$와 $$f^! \mathcal{G}$$ 사이의 Hom을 $$X$$에서 계산한 후 $$Y$$로 내려보내는 것과, $$\mathcal{F}$$를 먼저 $$Y$$로 내려보낸 후 $$\mathcal{G}$$와의 Hom을 계산하는 것이 같다는 뜻이다. 
 
 ---
 
@@ -186,5 +179,3 @@ $$R f_\ast \mathbf{R}\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G})
 **[Ser]** J.-P. Serre, *Faisceaux algébriques cohérents*, Annals of Mathematics, 1955.
 
 ---
-
-[^1]: 가령 $$\x\y=0$$은 CM이 아니지만, $$\y^2-\x^3=0$$은 CM이다. 
