@@ -445,7 +445,7 @@ $$H^k(X; \mathscr{F})$$
 
 </div>
 
-이제 푸앵카레 쌍대성은 다음의 isomorphism
+이에 대한 자세한 내용은 [\[대수기하학\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1)에서 더 자세히 다룬다. 이제 푸앵카레 쌍대성은 다음의 isomorphism
 
 $$H^k(M;\mathscr{L})\cong H_{m-k}(M;\or_M^A\otimes \mathscr{L})$$
 
