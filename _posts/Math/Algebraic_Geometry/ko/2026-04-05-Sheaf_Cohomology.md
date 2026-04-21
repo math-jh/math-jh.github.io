@@ -12,9 +12,8 @@ header:
     overlay_filter: 0.5
 
 date: 2026-04-05
-last_modified_at: 2026-04-13
+last_modified_at: 2026-04-20
 weight: 12
-published: false
 
 ---
 
