@@ -17,6 +17,8 @@ weight: 16
 published: false
 ---
 
+
+
 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_geometry/line_bundles#ex24)에서 우리는 variety $$X$$의 tangent bundle $$\mathcal{T}_X$$와 cotangent bundle $$\Omega_X^1$$을 정의하였다. 특히 $$X$$가 smooth인 경우, $$\Omega_X^1$$의 top exterior power를 생각하면 canonical line bundle $$\omega_X = \bigwedge^{\dim X} \Omega_X^1$$을 얻을 수 있었으며, 이에 대응하는 divisor를 canonical divisor $$K_X$$라 정의하였다.
 
 한편 [§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)에서 우리는 line bundle $$\mathcal{L}$$의 complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(H^0(X, \mathcal{L}))$$을 정의하였으며, 직관적으로 이는 line bundle $$\mathcal{L}$$과 linearly equivalent한 effective divisor들의 모임이다. 그렇다면 가장 자연스러운 질문 중 하나는 $$H^0(X, \mathcal{L})$$의 차원에 대한 것이다. Riemann–Roch theorem은 바로 이 질문에 대한 답을 제공하며, 특히 곡선에 대해 매우 구체적인 결과를 준다. Surface에 대한 일반화는 [§Riemann–Roch for Surfaces](/ko/math/algebraic_geometry/riemann_roch_surfaces)에서 다룬다.
