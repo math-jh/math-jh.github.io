@@ -41,7 +41,7 @@ algebraic_geometry-ko:
       - title: "Serre Duality"
         url: ko/math/algebraic_geometry/serre_duality
       - title: "리만-로흐 정리"
-        url: ko/math/algebraic_geometry/riemann_roch
+        url: ko/math/algebraic_geometry/riemann_roch_theorem
       - title: "Riemann-Roch for Surfaces"
         url: ko/math/algebraic_geometry/riemann_roch_surfaces
       - title: "Intersection Multiplicity"
