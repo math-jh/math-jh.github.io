@@ -31,7 +31,15 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 </div>
 
-즉, 위에서 언급한 $$D$$의 complete linear system $$\lvert D \rvert$$의 dimension을 Riemann–Roch dimension으로 정의한다. 
+일반적으로 우리는 $$\mathcal{O}_X(D)$$를 $$D$$를 따라 order $$1$$의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $$H^0(C, \mathcal{O}_XD)$$는 $$X$$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
+
+그럼 Serre duality에 의하여
+
+$$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee$$
+
+이 성립하는 것은 자명하다. ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)) 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 
+
+
 
 <div class="proposition" markdown="1">
 
@@ -46,7 +54,7 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Smooth projective curve $$C$$에 대해 Serre duality ([§Serre Duality, ⁋명제 1](/ko/math/algebraic_geometry/serre_duality#prop1))에 의하여
+Smooth projective curve $$C$$에 대해 Serre duality 에 의하여
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee$$
 
