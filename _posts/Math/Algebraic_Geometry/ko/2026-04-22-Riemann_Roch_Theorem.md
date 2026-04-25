@@ -27,7 +27,7 @@ published: false
 
 $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
-라고 정의한다.
+로 정의한다.
 
 </div>
 

@@ -38,7 +38,7 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/sheaf_cohomology
       - title: "사영공간의 코호몰로지"
         url: ko/math/algebraic_geometry/cohomology_of_projective_spaces
-      - title: "Serre Duality"
+      - title: "세르 쌍대성"
         url: ko/math/algebraic_geometry/serre_duality
       - title: "리만-로흐 정리"
         url: ko/math/algebraic_geometry/riemann_roch_theorem
