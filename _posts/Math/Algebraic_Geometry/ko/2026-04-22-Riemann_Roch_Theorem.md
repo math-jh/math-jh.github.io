@@ -29,6 +29,7 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 로 정의한다.
 
+
 </div>
 
 일반적으로 우리는 $$\mathcal{O}_X(D)$$를 $$D$$를 따라 order $$1$$의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $$H^0(C, \mathcal{O}_XD)$$는 $$X$$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
@@ -39,7 +40,30 @@ $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee
 
 이 성립하는 것은 자명하다. ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)) 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 
 
+이제 다음 보조정리를 준비한다.
 
+<div class="proposition" markdown="1">
+
+<ins id="lem2">**보조정리 2**</ins> Smooth projective curve $C$ 위의 임의의 coherent sheaf $\mathcal{F}$에 대해
+
+$$H^i(C, \mathcal{F}) = 0 \quad (i \ge 2)$$
+
+가 성립한다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$C$ 위의 어떤 affine open 부분 $U$를 취하고, $U$의 여집합 $C \setminus U$를 또 다른 affine open $V$로 덮는다. 그러면 $C = U \cup V$는 두 개의 affine open들의 결합으로 표현된다. Affine scheme 위의 quasi-coherent sheaf에 대한 Serre's criterion에 의해 $H^i(U, \mathcal{F}) = H^i(V, \mathcal{F}) = 0$ ($i \ge 1$)이고, Mayer–Vietoris exact sequence에 의해 $H^i(C, \mathcal{F}) = 0$ ($i \ge 2$)를 얻는다. 이 결과에 의해 임의의 divisor $D$에 대해
+
+$$\chi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D))$$
+
+가 성립한다.
+
+</details>
+
+이제 다음 명제를 증명한다.
 
 <div class="proposition" markdown="1">
 
