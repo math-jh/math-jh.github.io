@@ -38,9 +38,7 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee$$
 
-이 성립하는 것은 자명하다. ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)) 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 
-
-이제 다음 보조정리를 준비한다.
+이 성립하는 것은 자명하다. ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)) 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 이제 다음 보조정리를 준비한다.
 
 <div class="proposition" markdown="1">
 
