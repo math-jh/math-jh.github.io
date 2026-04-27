@@ -55,31 +55,19 @@ Embedding $$C\hookrightarrow \mathbb{P}^N$$을 고정하면, dimension count를 
 
 이제 $$\{U_1,U_2\}$$에 대한 Čech cohomology를 생각하자. [§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12) 직후에 간략하게 소개했듯, projective variety 위의 임의의 affine open cover는 [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_geometry/sheaf_cohomology#thm11)의 전제조건을 만족하며 따라서 구하고자 하는 sheaf cohomology는 정확하게 이 affine open cover에 대한 계산으로 귀결된다. 이제 Čech complex가 단순히
 
+$$\check{C}(\mathcal{U}, \mathcal{F}):\qquad \mathcal{F}(U)\oplus \mathcal{F}(V)\rightarrow \mathcal{F}(U\cap V)\rightarrow 0$$
 
-
-
-그럼 이렇게 embed된 curve $$C$$에 대하여, $$\mathbb{P}^N$$의 적당한 hyperplane $$H_1, H_2$$가 존재하여 $$C\cap H_1\cap H_2=\emptyset$$이도록 할 수 있음은 차원을 생각하면 자명하다. 
-
-</details>
-
-여기서 
-
-<details class="proof--alone" markdown="1">
-<summary>증명</summary>
-
-$$C$$는 projective variety이므로 $$\mathbb{P}^n$$에 임베드할 수 있다. 초평면 $$H_1 \subset \mathbb{P}^n$$을 택하면 $$C \setminus H_1$$은 affine variety이다(프로젝티브 variety에서 hyperplane section을 제거하면 affine). 한편 $$C \cap H_1$$은 curve와 hyperplane의 교차이므로 유한개의 점 $$P_1, \ldots, P_m$$으로 구성된다. $$k$$가 무한체이므로 이 점들을 모두 피하는 초평면 $$H_2$$를 택할 수 있으며, 그러면 $$C \setminus H_2$$도 affine이고 $$C = (C \setminus H_1) \cup (C \setminus H_2)$$가 된다.
-
-$$C$$는 separated이므로 $$(C \setminus H_1) \cap (C \setminus H_2) = C \setminus (H_1 \cup H_2)$$도 affine이다. Serre's criterion에 의해 affine 위의 quasi-coherent sheaf의 higher cohomology는 소멸하므로 ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12)),  (Leray 정리)의 전제조건이 충족되어 $$\check{H}^i(\mathcal{U}, \mathcal{F}) \cong H^i(C, \mathcal{F})$$ ($$i \ge 0$$)가 성립한다. 한편 $$\mathcal{U} = \{C \setminus H_1, C \setminus H_2\}$$는 두 개의 open으로 구성되어 있으므로 Čech complex는 degree $$1$$에서 끝나, $$\check{H}^i(\mathcal{U}, \mathcal{F}) = 0$$ ($$i \ge 2$$)이 자명하다. 따라서 $$H^i(C, \mathcal{F}) = 0$$ ($$i \ge 2$$)를 얻는다.
+으로 끝나므로 원하는 보조정리는 자명하다. 
 
 </details>
 
-이 결과에 의해 임의의 divisor $$D$$에 대해
+따라서, 이 결과에 의해 임의의 divisor $$D$$에 대해
 
-$$\chi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D))$$
+$$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D))$$
 
-가 성립한다.
+가 성립한다. 여기서 $$h^i$$는 $$H^i$$의 dimension에 대한 shorthand notation이다.
 
-이제 다음 명제를 증명한다.
+한편, 우리는 임의의 surface $$S$$의 위상수학적 
 
 <div class="proposition" markdown="1">
 
