@@ -1,5 +1,5 @@
 ---
-title: "리만-로흐 정리"
+title: "곡선에서의 리만-로흐 정리"
 excerpt: "The Riemann–Roch theorem for curves"
 
 categories: [Math / Algebraic Geometry]
@@ -77,30 +77,13 @@ $$\rchi(S)=2(1-g)$$
 
 $$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})$$
 
-으로 주어진다. 한편, 위상수학에서 $$1$$차원 구멍이 $$H^1$$을 통해 나타나듯 대수기하에서의 1차원 구멍, 즉 위상수학 관점에서의 2차원 구멍인 genus는 $$g=h^1(C_S, \mathcal{O}_{C_S})$$로 정의되며, 따라서 $$C_S$$의 Euler characteristic은
+으로 주어진다. 한편, 위상수학에서 $$1$$차원 구멍이 $$H^1$$을 통해 나타나듯 대수기하에서의 1차원 구멍, 즉 위상수학 관점에서의 2차원 구멍인 genus는 $$g=h^1(C_S, \mathcal{O}_{C_S})$$로 정의되며, global section은 상수함수 뿐이므로 $$C_S$$의 Euler characteristic은
 
-$$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})$$
+$$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})=1-g$$
 
-문에 대수기하 버전의 Euler characteristic은 위상수학 관점에서의 Euler characteristic의 절반인 $$1-g$$가 나오며, 
+로 나타난다. 이 값이 위상수학적인 Euler characteristic의 절반이라는 것은 우연이 아니며, Hodge theory를 통해 확인할 수 있지만 이것은 우리의 목표와는 무관하므로 우선은 넘기기로 한다. 중요한 것은 대수기하에서의 Euler characteristic과, 이를 curve에서 계산했을 때의 값이 $$1-g$$가 나오는 것이 뜬금없는 것이 아니라 위상수학에서의 결과를 재해석하는 것이라는 것이다. 
 
-
-
-
-이제 동일한 surface를 complex manifold, 즉 복소차원 1의 대수적 다양체로 보자. 이때 위상적 Euler characteristic $$\chi(S) = 2(1-g)$$의 "절반"에 해당하는 대수기하학적 불변량이 sheaf cohomology를 통하여 얻어진다. 구체적으로, 구조층(structure sheaf) $$\mathcal{O}_C$$에 대한 Euler characteristic을
-
-$$\chi(\mathcal{O}_C) = h^0(C, \mathcal{O}_C) - h^1(C, \mathcal{O}_C)$$
-
-라 정의하면, $$h^0(C, \mathcal{O}_C) = 1$$ (상수함수만이 global section)이고 $$g = h^1(C, \mathcal{O}_C)$$ (이것이 대수기하학에서의 genus 정의)이므로
-
-$$\chi(\mathcal{O}_C) = 1 - g$$
-
-를 얻는다. 즉, $$\chi(\mathcal{O}_C)$$는 위상적 결과 $$2(1-g)$$의 대수기하학적 대응물(analogue)이라 할 수 있다.
-
-한편, 위의 계산은 구조층 $$\mathcal{O}_C$$, 즉 "아무것도 붙이지 않은" trivial sheaf에 대한 것이다. 임의의 divisor $$D$$에 대해 twisted sheaf $$\mathcal{O}_C(D)$$를 생각하면, 이에 대한 Euler characteristic은 차수 $$\deg D$$만큼의 보정이 생긴다:
-
-$$\chi(\mathcal{O}_C(D)) = \deg D + 1 - g$$
-
-이 결과는 divisor의 차수가 sheaf cohomology의 Euler characteristic에 직접적으로 기여함을 보여준다. 이것이 바로 Riemann–Rch 정리의 핵심이며, 이제 우리는 이 정리를 정식으로 서술하고 증명한다.
+이번 글의 주제인 Riemann-Roch 정리는 여기에 한 가지의 작업을 추가한다. 위의 계산은 아무것도 붙이지 않은 trivial sheaf $$\mathcal{O}_{C_S}$$에 대한 것이므로, 이를 임의의 divisor $$D$$를 사용하여 twist한 sheaf $$\mathcal{O}_{C_S}(D)$$를 생각하는 것이다. 그럼 이 때의 보정항이 $$\deg D$$만큼 생긴다는 것이 Riemann-Roch 정리의 결과이다. 
 
 <div class="proposition" markdown="1">
 
@@ -115,19 +98,21 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Smooth projective curve $$C$$에 대해 Serre duality 에 의하여
+위의 계산들과 정의들에 의하여
 
-$$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee$$
+$$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D)) = \ell(D) - \ell(K_C - D)$$
 
-이 성립한다. 따라서 $$h^1(C, \mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(K_C - D)) = \ell(K_C - D)$$이고, Euler characteristic의 정의에 의해
+인 것은 자명하다. 한편, effective divisor $$D$$에 대해 short exact sequence 
 
-$$\chi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D)) = \ell(D) - \ell(K_C - D)$$
+$$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0$$
 
-이다. 한편 effective divisor $$D$$에 대해 short exact sequence $$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0$$이 존재하며, Euler characteristic의 additivity에 의해 $$\chi(\mathcal{O}_C(D)) = \chi(\mathcal{O}_C) + \chi(\mathcal{O}_D)$$이다. 여기서 $$\mathcal{O}_D$$는 차수 $$\deg D$$의 skyscraper sheaf이므로 $$\chi(\mathcal{O}_D) = \deg D$$이고, $$\chi(\mathcal{O}_C) = h^0(\mathcal{O}_C) - h^1(\mathcal{O}_C) = 1 - g$$이다 (genus의 정의에 의해 $$g = h^1(C, \mathcal{O}_C)$$). 따라서 $$\chi(\mathcal{O}_C(D)) = \deg D + 1 - g$$이고, 이를 앞선 식과 결합하면 원하는 결과를 얻는다. 일반적인 (effective가 아닌) divisor에 대해서는 $$D$$를 effective divisor $$D'$$과의 차이로 표현한 후 동일한 additivity 논증을 적용한다.
+이 존재하며, 그럼 Euler characteristic의 additivity에 의해 $$\rchi(\mathcal{O}_C(D)) = \rchi(\mathcal{O}_C) + \rchi(\mathcal{O}_D)$$이다. 
+
+여기서 $$\mathcal{O}_D$$는 차수 $$\deg D$$의 skyscraper sheaf이므로 $$\rchi(\mathcal{O}_D) = \deg D$$이고, 위에서 살펴본 것과 같이 $$\rchi(\mathcal{O}_C)=1-g$$이므로 이를 앞선 식과 결합하면 원하는 결과를 얻는다. 일반적인 (effective가 아닌) divisor에 대해서는 $$D$$를 effective divisor $$D'$$과의 차이로 표현한 후 동일한 additivity 논증을 적용하면 된다. 
 
 </details>
 
-Riemann–Roch 정리의 핵심적인 유용성은 다음과 같은 상황에서 드러난다. 만약 $$\deg D > 2g - 2$$, 즉 $$\deg(K_C - D) < 0$$이라면 $$K_C - D$$는 음수 차수를 갖고, 따라서 $$K_C - D$$는 effective divisor와 linearly equivalent할 수 없으므로 $$\ell(K_C - D) = 0$$이 되어, 식이 $$\ell(D) = \deg D + 1 - g$$로 단순화된다. 따라서 충분히 큰 degree의 divisor에 대해서는 $$\ell(D)$$를 직접적으로 계산할 수 있다. 반면 작은 degree에서는 $$\ell(K_C - D)$$ 항이 남아 정밀한 정보를 제공하는데, 이 항이 바로 canonical divisor $$K_C$$의 기하학적 의미이다.
+Riemann–Roch 정리는 divisor $$D$$의 complete linear system $$\lvert D\rvert$$의 차원을 계산하는 공식이다. 충분히 큰 degree $$\deg D > 2g - 2$$에서는 $$K_C - D$$가 음수 차수를 가지므로 $$\ell(K_C - D) = 0$$이 되어, $$\ell(D) = \deg D + 1 - g$$로 단순화된다. 즉 차수와 genus만으로 정확한 값을 얻을 수 있다. 반면 작은 degree에서는 $$\ell(K_C - D)$$ 항이 남아 이 '오차'가 바로 canonical divisor가 담고 있는 기하학적 정보이다.
 
 <div class="example" markdown="1">
 
@@ -167,7 +152,7 @@ $$d = 2$$의 경우가 더 흥미롭다. 만약 $$2p \sim K_C$$이면 $$\ell(K_C
 
 ## 응용
 
-### 평면곡선의 Genus 공식
+**Degree-genus formula**
 
 <div class="proposition" markdown="1">
 
@@ -198,9 +183,9 @@ $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}$$
 
 </div>
 
-### Brill–Noether 이론
+**Brill–Noether theory**
 
-Riemann–Roch 정리의 자연스러운 응용 중 하나는 주어진 곡선 위에서 특정한 성질을 갖는 divisor를 찾는 것이다. 구체적으로, genus $$g$$인 곡선 $$C$$ 위에서 degree $$d$$이고 $$\ell(D) \ge r + 1$$인 divisor $$D$$가 언제 존재하는지를 묻는다. 이 질문에 대한 기본적인 답은 다음과 같다.
+Riemann–Roch 정리가 divisor의 complete linear system $$\lvert D\rvert$$의 차원을 계산하는 공식임을 생각하면, 자연스러운 다음 질문이 떠오른다. 주어진 곡선 $$C$$ (genus $$g$$) 위에서, degree $$d$$이고 차원이 $$r$$ 이상인 linear system을 갖는 divisor가 존재하는가? 그리고 그런 divisor들이 이루는 공간은 어떤 기하학적 구조를 갖는가? 이것이 Brill–Noether 이론의 출발점이다.
 
 <div class="proposition" markdown="1">
 
