@@ -37,7 +37,7 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee$$
 
-이 성립하는 것은 자명하다. ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)) 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 이제 다음 보조정리를 준비한다.
+이 성립하는 것은 자명하다. ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)) 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $$\mathcal{O}_C(D)$$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 여기서 base field $$\mathbb{K}$$는 infinite field인 것으로 가정한다. 
 
 <div class="proposition" markdown="1">
 
@@ -48,19 +48,28 @@ $$H^i(C, \mathcal{F}) = 0 \quad (i \ge 2)$$
 가 성립한다.
 
 </div>
-
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$C$$는 projective variety이므로 affine open cover $$\{U, V\}$$로 둘 수 있다. $$C$$는 separated이므로 $$U \cap V$$도 affine이다. Serre's criterion에 의해 affine variety 위의 quasi-coherent sheaf의 higher cohomology는 소멸하므로 ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12)), $$i \ge 1$$에서 $$H^i(U, \mathcal{F}) = H^i(V, \mathcal{F}) = H^i(U \cap V, \mathcal{F}) = 0$$이다. 이제 다음 short exact sequence를 생각하자. $$C = U \cup V$$이고 $$j_U: U \hookrightarrow C$$, $$j_V: V \hookrightarrow C$$, $$j_{U \cap V}: U \cap V \hookrightarrow C$$가 포함 사상일 때,
+Embedding $$C\hookrightarrow \mathbb{P}^N$$을 고정하면, dimension count를 통해 $$C\cap H_1\cap H_2=\emptyset$$이도록 하는 hyperplane $$H_1,H_2$$가 존재한다. 따라서 $$U_i=C\setminus H_i$$로 두면 이들은 $$C$$의 affine open cover를 이루는 것을 안다. 
 
-$$0 \longrightarrow \mathcal{F} \longrightarrow j_{U!}\mathcal{F}|_U \oplus j_{V!}\mathcal{F}|_V \longrightarrow j_{U \cap V!}\mathcal{F}|_{U \cap V} \longrightarrow 0$$
+이제 $$\{U_1,U_2\}$$에 대한 Čech cohomology를 생각하자. [§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12) 직후에 간략하게 소개했듯, projective variety 위의 임의의 affine open cover는 [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_geometry/sheaf_cohomology#thm11)의 전제조건을 만족하며 따라서 구하고자 하는 sheaf cohomology는 정확하게 이 affine open cover에 대한 계산으로 귀결된다. 이제 Čech complex가 단순히
 
-이 성립한다. 여기서 $$j_!$$는 extension by zero functor이다. 이 exact sequence의 long exact sequence로부터 Mayer–Vietoris sequence ([\[대수적 위상수학\] §코호몰로지, ⁋명제 6](/ko/math/algebraic_topology/cohomology#prop6))
 
-$$\cdots \to H^i(U, \mathcal{F}) \oplus H^i(V, \mathcal{F}) \to H^i(U \cap V, \mathcal{F}) \to H^{i+1}(C, \mathcal{F}) \to H^{i+1}(U, \mathcal{F}) \oplus H^{i+1}(V, \mathcal{F}) \to \cdots$$
 
-를 얻는다. 여기서 exactness에 의해 $$H^{i+1}(C, \mathcal{F}) = 0$$ ($$i \ge 1$$), 즉 $$H^i(C, \mathcal{F}) = 0$$ ($$i \ge 2$$)를 얻는다.
+
+그럼 이렇게 embed된 curve $$C$$에 대하여, $$\mathbb{P}^N$$의 적당한 hyperplane $$H_1, H_2$$가 존재하여 $$C\cap H_1\cap H_2=\emptyset$$이도록 할 수 있음은 차원을 생각하면 자명하다. 
+
+</details>
+
+여기서 
+
+<details class="proof--alone" markdown="1">
+<summary>증명</summary>
+
+$$C$$는 projective variety이므로 $$\mathbb{P}^n$$에 임베드할 수 있다. 초평면 $$H_1 \subset \mathbb{P}^n$$을 택하면 $$C \setminus H_1$$은 affine variety이다(프로젝티브 variety에서 hyperplane section을 제거하면 affine). 한편 $$C \cap H_1$$은 curve와 hyperplane의 교차이므로 유한개의 점 $$P_1, \ldots, P_m$$으로 구성된다. $$k$$가 무한체이므로 이 점들을 모두 피하는 초평면 $$H_2$$를 택할 수 있으며, 그러면 $$C \setminus H_2$$도 affine이고 $$C = (C \setminus H_1) \cup (C \setminus H_2)$$가 된다.
+
+$$C$$는 separated이므로 $$(C \setminus H_1) \cap (C \setminus H_2) = C \setminus (H_1 \cup H_2)$$도 affine이다. Serre's criterion에 의해 affine 위의 quasi-coherent sheaf의 higher cohomology는 소멸하므로 ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12)),  (Leray 정리)의 전제조건이 충족되어 $$\check{H}^i(\mathcal{U}, \mathcal{F}) \cong H^i(C, \mathcal{F})$$ ($$i \ge 0$$)가 성립한다. 한편 $$\mathcal{U} = \{C \setminus H_1, C \setminus H_2\}$$는 두 개의 open으로 구성되어 있으므로 Čech complex는 degree $$1$$에서 끝나, $$\check{H}^i(\mathcal{U}, \mathcal{F}) = 0$$ ($$i \ge 2$$)이 자명하다. 따라서 $$H^i(C, \mathcal{F}) = 0$$ ($$i \ge 2$$)를 얻는다.
 
 </details>
 
