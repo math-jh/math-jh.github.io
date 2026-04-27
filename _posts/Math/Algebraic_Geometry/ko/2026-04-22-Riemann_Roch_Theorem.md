@@ -29,7 +29,6 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 로 정의한다.
 
-
 </div>
 
 일반적으로 우리는 $$\mathcal{O}_X(D)$$를 $$D$$를 따라 order $$1$$의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $$H^0(C, \mathcal{O}_XD)$$는 $$X$$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
@@ -53,11 +52,15 @@ $$H^i(C, \mathcal{F}) = 0 \quad (i \ge 2)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$C$$는 projective variety이므로 affine open cover $$\{U, V\}$$로 둘 수 있다. $$C$$는 separated이므로 $$U \cap V$$도 affine이다. Serre's criterion에 의해 affine variety 위의 quasi-coherent sheaf의 higher cohomology는 소멸하므로 ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12)), $$i \ge 1$$에서 $$H^i(U, \mathcal{F}) = H^i(V, \mathcal{F}) = H^i(U \cap V, \mathcal{F}) = 0$$이다. Mayer–Vietoris exact sequence ([\[대수적 위상수학\] §코호몰로지, ⁋명제 6](/ko/math/algebraic_topology/cohomology#prop6))
+$$C$$는 projective variety이므로 affine open cover $$\{U, V\}$$로 둘 수 있다. $$C$$는 separated이므로 $$U \cap V$$도 affine이다. Serre's criterion에 의해 affine variety 위의 quasi-coherent sheaf의 higher cohomology는 소멸하므로 ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12)), $$i \ge 1$$에서 $$H^i(U, \mathcal{F}) = H^i(V, \mathcal{F}) = H^i(U \cap V, \mathcal{F}) = 0$$이다. 이제 다음 short exact sequence를 생각하자. $$C = U \cup V$$이고 $$j_U: U \hookrightarrow C$$, $$j_V: V \hookrightarrow C$$, $$j_{U \cap V}: U \cap V \hookrightarrow C$$가 포함 사상일 때,
+
+$$0 \longrightarrow \mathcal{F} \longrightarrow j_{U!}\mathcal{F}|_U \oplus j_{V!}\mathcal{F}|_V \longrightarrow j_{U \cap V!}\mathcal{F}|_{U \cap V} \longrightarrow 0$$
+
+이 성립한다. 여기서 $$j_!$$는 extension by zero functor이다. 이 exact sequence의 long exact sequence로부터 Mayer–Vietoris sequence ([\[대수적 위상수학\] §코호몰로지, ⁋명제 6](/ko/math/algebraic_topology/cohomology#prop6))
 
 $$\cdots \to H^i(U, \mathcal{F}) \oplus H^i(V, \mathcal{F}) \to H^i(U \cap V, \mathcal{F}) \to H^{i+1}(C, \mathcal{F}) \to H^{i+1}(U, \mathcal{F}) \oplus H^{i+1}(V, \mathcal{F}) \to \cdots$$
 
-에서 exactness에 의해 $$H^{i+1}(C, \mathcal{F}) = 0$$ ($$i \ge 1$$), 즉 $$H^i(C, \mathcal{F}) = 0$$ ($$i \ge 2$$)를 얻는다.
+를 얻는다. 여기서 exactness에 의해 $$H^{i+1}(C, \mathcal{F}) = 0$$ ($$i \ge 1$$), 즉 $$H^i(C, \mathcal{F}) = 0$$ ($$i \ge 2$$)를 얻는다.
 
 </details>
 
