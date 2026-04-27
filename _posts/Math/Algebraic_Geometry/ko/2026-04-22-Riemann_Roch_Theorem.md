@@ -53,13 +53,13 @@ $$H^i(C, \mathcal{F}) = 0 \quad (i \ge 2)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$C$ 위의 어떤 affine open 부분 $U$를 취하고, $U$의 여집합 $C \setminus U$를 또 다른 affine open $V$로 덮는다. 그러면 $C = U \cup V$는 두 개의 affine open들의 결합으로 표현된다. Affine variety 위의 quasi-coherent sheaf에 대한 Serre's criterion에 의해 $H^i(U, \mathcal{F}) = H^i(V, \mathcal{F}) = 0$ ($i \ge 1$) ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12))이다. 또한 $C$는 projective이므로 separated이고, separated scheme에서 두 affine open의 교집합은 affine이므로 $U \cap V$ 역시 affine이다. 따라서 $H^i(U \cap V, \mathcal{F}) = 0$ ($i \ge 1$)이다.
+$$C$$는 projective variety이므로 quasi-compact separated scheme이며, 따라서 임의의 점을 포함하는 affine open neighborhood가 존재한다. $$C$$ 위의 nonempty affine open subset $$U$$를 하나 택하자. $$C$$는 1차원 irreducible variety이고 $$U$$는 nonempty open이므로, 그 여집합 $$C \setminus U$$는 proper closed subset이다. 차원 이론에 의해 이는 0차원, 즉 유한개의 점 $$P_1, \ldots, P_m$$으로 구성된다. 각 $$P_i$$에 대해 $$P_i$$를 포함하는 affine open neighborhood $$V_i$$를 택하면
 
-한편 sheaf cohomology에 대한 Mayer–Vietoris exact sequence는 $X = U \cup V$일 때
+$$\mathfrak{U} = \{U, V_1, \ldots, V_m\}$$
 
-$$\cdots \to H^i(U, \mathcal{F}) \oplus H^i(V, \mathcal{F}) \to H^i(U \cap V, \mathcal{F}) \to H^{i+1}(X, \mathcal{F}) \to H^{i+1}(U, \mathcal{F}) \oplus H^{i+1}(V, \mathcal{F}) \to \cdots$$
+은 $$C$$의 finite affine open cover이다. Serre's criterion에 의해 affine scheme 위의 quasi-coherent sheaf의 higher cohomology는 소멸하므로, 각 $$W \in \mathfrak{U}$$에 대해 $$H^i(W, \mathcal{F}) = 0$$ ($$i \ge 1$$)이다 ([§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_geometry/sheaf_cohomology#prop12)). 또한 $$C$$는 separated이므로, 임의의 두 affine open의 교집합은 다시 affine이다. 이를 반복 적용하면 $$\mathfrak{U}$$에 속하는 open들의 임의의 유한 교집합 역시 affine이 되어, 이들 위에서의 higher cohomology도 모두 소멸한다.
 
-를 준다. $i \ge 1$이면 위에서 보인 소멸 결과에 의해 $H^i(U \cap V, \mathcal{F}) = 0$이고 $H^{i+1}(U, \mathcal{F}) \oplus H^{i+1}(V, \mathcal{F}) = 0$이므로, exactness에 의해 $H^{i+1}(C, \mathcal{F}) = 0$이다. 즉 $H^i(C, \mathcal{F}) = 0$ ($i \ge 2$)를 얻는다.
+이제 이 affine cover $$\mathfrak{U}$$에 대한 Čech cohomology를 생각하자. Čech complex $$\check{C}^p(\mathfrak{U}, \mathcal{F})$$는 $$\mathfrak{U}$$에서 $$(p+1)$$개의 open들의 교집합 위의 section들로 구성되는데, 위에서 보인 바와 같이 이러한 교집합들이 모두 affine이므로, Leray's theorem에 의해 Čech cohomology $$\check{H}^i(\mathfrak{U}, \mathcal{F})$$는 derived functor cohomology $$H^i(C, \mathcal{F})$$와 일치한다. 한편 $$\mathfrak{U}$$는 $$(m+1)$$개의 open으로 구성되어 있으므로 Čech complex는 degree $$m$$에서 끝나지만, 더 핵심적으로 $$C$$가 1차원이므로 세 개 이상의 서로 다른 $$\mathfrak{U}$$-원소들의 교집합은 (비어 있지 않다면) 0차원이다. 구체적으로 Čech complex의 degree $$p$$ 부분은 $$(p+1)$$개의 open들의 교집합 위의 section들의 직합인데, $$p \ge 1$$인 경우 이러한 교집합들 위의 higher cohomology가 모두 소멸하므로, $$\check{H}^i(\mathfrak{U}, \mathcal{F}) = 0$$ ($$i \ge 2$$)이다. 따라서 $$H^i(C, \mathcal{F}) = 0$$ ($$i \ge 2$$)을 얻는다.
 
 </details>
 
