@@ -190,7 +190,11 @@ $$\binom{-d-1}{n}=(-1)^n\binom{n+d}{n}$$
 
 </details>
 
-Euler characteristic은 short exact sequence에 대해 가산적(additive)이라는 중요한 성질을 갖는다. 즉, short exact sequence $$0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0$$에 대해 $$\rchi(\mathcal{G}) = \rchi(\mathcal{F}) + \rchi(\mathcal{H})$$가 성립한다. 따라서 Euler characteristic은 개별 cohomology group의 정보를 잃는 대신, 계산과 조작이 훨씬 용이한 불변량이 된다.
+Euler characteristic은 short exact sequence에 대해 additivity라는 중요한 성질을 갖는다. 즉, short exact sequence 
+
+$$0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0$$
+
+에 대해 $$\rchi(\mathcal{G}) = \rchi(\mathcal{F}) + \rchi(\mathcal{H})$$가 성립한다. 따라서 Euler characteristic은 개별 cohomology group의 정보를 잃는 대신, 계산과 조작이 훨씬 용이한 불변량이 된다.
 
 ## Serre Vanishing
 
