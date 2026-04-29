@@ -63,7 +63,7 @@ $$\check{C}(\mathcal{U}, \mathcal{F}):\qquad \mathcal{F}(U)\oplus \mathcal{F}(V)
 
 따라서, 이 결과에 의해 임의의 divisor $$D$$에 대해
 
-$$\chi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D))\tag{\ast}$$
+$$\chi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D))\tag{$\ast$}$$
 
 가 성립한다. 여기서 $$h^i$$는 $$H^i$$의 dimension에 대한 shorthand notation이다.
 
