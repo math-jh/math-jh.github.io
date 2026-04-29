@@ -112,7 +112,15 @@ $$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0$$
 
 </details>
 
-Riemann–Roch 정리는 divisor $$D$$의 complete linear system $$\lvert D\rvert$$의 차원을 계산하는 공식이다. 충분히 큰 degree $$\deg D > 2g - 2$$에서는 $$K_C - D$$가 음수 차수를 가지므로 $$\ell(K_C - D) = 0$$이 되어, $$\ell(D) = \deg D + 1 - g$$로 단순화된다. 즉 차수와 genus만으로 정확한 값을 얻을 수 있다. 반면 작은 degree에서는 $$\ell(K_C - D)$$ 항이 남아 이 '오차'가 바로 canonical divisor가 담고 있는 기하학적 정보이다.
+Riemann–Roch 정리의 의미를 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$의 각 항에 대해 기하학적으로 읽어보자. 좌변의 $$\ell(D)$$는 $$D$$의 complete linear system의 차원, 즉 $$D$$를 divisor로 갖는 meromorphic 함수의 자유도를 나타내고, $$\ell(K_C - D)$$는 canonical divisor $$K_C$$가 $$D$$ 위에 추가로 부과하는 수정항이다.
+
+큰 degree, 즉 $$\deg D > 2g - 2$$인 경우를 생각해보자. $$D$$가 충분히 많은 점을 포함하면 curve 위의 meromorphic 함수가 극과 영점에서 받는 제약이 거의 사라진다. 극의 위치만 지정하면 영점은 자동으로 결정되므로, complete linear system $$\lvert D\rvert$$의 차원은 오직 degree와 genus만으로 결정된다. 수식으로는 $$K_C - D$$의 degree가 음수가 되어 $$\ell(K_C - D) = 0$$이 되므로 $$\ell(D) = \deg D + 1 - g$$로 단순화된다.
+
+반면 작은 degree에서는 $$D$$의 점이 적어 meromorphic 함수의 pole과 zero 사이의 상호작용이 더 복잡해진다. $$\ell(K_C - D)$$는 단순한 오차항이 아니라 $$D$$ 위에서 추가로 가질 수 있는 제약의 여유공간을 측정한다. $$D$$의 점이 적을수록 meromorphic 함수의 pole과 zero 관계가 더 엄밀해지며, $$K_C - D$$의 degree가 클수록 canonical divisor가 허용하는 여유 공간이 넓어지고 $$\ell(K_C - D)$$의 값이 커진다.
+
+Canonical divisor $$K_C$$ 자체는 curve 위의 regular differential form의 자유도를 나타낸다. $$\ell(K_C) = h^0(C, \omega_C) = g$$인 것은 genus $$g$$의 smooth projective curve 위에서 독립적인 global regular 1-form이 정확히 $$g$$개 존재한다는 의미이며, 이는 genus의 미분기하학적 정의—$$g$$차원의 holomorphic differential space $$H^0(C, \omega_C)$$의 차원—과 정확히 일치한다. 이 $$g$$개의 differential form들이 $$\ell(K_C - D)$$에서 나타나는 수정항의 원천이다.
+
+정리하면, $$\ell(D)$$는 $$D$$의 complete linear system의 차원, $$\ell(K_C - D)$$는 $$K_C$$가 $$D$$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $$K_C$$의 기하학적 정보를 반영한다.
 
 <div class="example" markdown="1">
 
