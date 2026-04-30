@@ -112,13 +112,21 @@ $$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0$$
 
 </details>
 
-Riemann–Roch 정리의 의미를 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$의 각 항에 대해 기하학적으로 읽어보자. 좌변의 $$\ell(D)$$는 $$D$$의 complete linear system의 차원, 즉 $$D$$를 divisor로 갖는 meromorphic 함수의 자유도를 나타내고, $$\ell(K_C - D)$$는 canonical divisor $$K_C$$가 $$D$$ 위에 추가로 부과하는 수정항이다.
+이제 이 정리의 기하학적 의미를 살펴보기 위해 등식을 항별로 읽어보자. 우선 정의에 의해 
 
-큰 degree, 즉 $$\deg D > 2g - 2$$인 경우를 생각해보자. $$D$$가 충분히 많은 점을 포함하면 curve 위의 meromorphic 함수가 극과 영점에서 받는 제약이 거의 사라진다. 극의 위치만 지정하면 영점은 자동으로 결정되므로, complete linear system $$\lvert D\rvert$$의 차원은 오직 degree와 genus만으로 결정된다. 수식으로는 $$K_C - D$$의 degree가 음수가 되어 $$\ell(K_C - D) = 0$$이 되므로 $$\ell(D) = \deg D + 1 - g$$로 단순화된다.
+$$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
-반면 작은 degree에서는 $$D$$의 점이 적어 meromorphic 함수의 pole과 zero 사이의 상호작용이 더 복잡해진다. $$\ell(K_C - D)$$는 단순한 오차항이 아니라 $$D$$ 위에서 추가로 가질 수 있는 제약의 여유공간을 측정한다. $$D$$의 점이 적을수록 meromorphic 함수의 pole과 zero 관계가 더 엄밀해지며, $$K_C - D$$의 degree가 클수록 canonical divisor가 허용하는 여유 공간이 넓어지고 $$\ell(K_C - D)$$의 값이 커진다.
+이며, 이 때 우변의 공간 $$H^0(C, \mathcal{O}_C(D))$$는 기하적으로 
 
-Canonical divisor $$K_C$$ 자체는 curve 위의 regular differential form의 자유도를 나타낸다. $$\ell(K_C) = h^0(C, \omega_C) = g$$인 것은 genus $$g$$의 smooth projective curve 위에서 독립적인 global regular 1-form이 정확히 $$g$$개 존재한다는 의미이며, 이는 genus의 미분기하학적 정의—$$g$$차원의 holomorphic differential space $$H^0(C, \omega_C)$$의 차원—과 정확히 일치한다. 이 $$g$$개의 differential form들이 $$\ell(K_C - D)$$에서 나타나는 수정항의 원천이다.
+$$\divisor(f)+d\geq 0$$
+
+을 만족하는 meromorphic function들의 모임이다. 
+
+Riemann–Roch 정리의 의미를 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$의 각 항에 대해 기하학적으로 읽어보자. $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$의 global section은 $$\operatorname{div}(f) + D \ge 0$$을 만족하는 meromorphic 함수 $$f$$이므로, $$D$$가 함수의 pole 위치와 최대 차수를 지정하는 셈이다. 따라서 $$\deg D$$가 커질수록 $$\ell(D)$$도 커져야 하며 자명한 부등식 $$\ell(D) \le \deg D + 1$$이 성립한다 ([§선형계, ⁋명제 5](/ko/math/algebraic_geometry/linear_systems#prop5)). 한편 Serre duality에 의해 $$\ell(K_C - D) = \dim H^1(C, \mathcal{O}_C(D))^\vee$$이므로, 이 항은 $$\ell(D)$$가 자명한 한계로부터 얼마나 끌어내려지는지를 측정하는 수정항이다. 기하학적으로는 "$$D$$의 모든 점에서 영점을 갖는 regular differential form"의 공간이며, $$D$$의 위치에 따라 이 차원이 달라진다.
+
+큰 degree, 즉 $$\deg D > 2g - 2$$인 경우 $$\deg(K_C - D) < 0$$이 되어 $$\ell(K_C - D) = 0$$이고 $$\ell(D) = \deg D + 1 - g$$로 단순화된다. 자명한 한계와 정확히 $$g$$만큼 차이가 나는데, 이 결손이 바로 curve의 위상수학적 복잡도(genus)가 함수론에 새기는 흔적이다. $$\mathbb{P}^1$$ ($$g = 0$$)에서는 결손이 없어 등호가 성립하지만, genus가 커질수록 같은 degree의 divisor가 만드는 함수공간이 그만큼 좁아진다.
+
+반면 $$\deg D \le 2g - 2$$인 영역에서는 $$\ell(K_C - D)$$가 $$D$$의 위치—$$D$$가 어떤 점들로 이루어졌는지—에 민감하게 의존한다. 같은 degree라도 $$D$$의 점들이 canonical class와 어떤 관계에 있느냐에 따라 $$\ell(D)$$가 달라지며, 이는 *special divisor*의 현상으로 [응용 섹션의 Brill–Noether theory](#brill-noether)에서 본격적으로 다룬다. Canonical divisor $$K_C$$ 자체에 대해서는 $$\ell(K_C) = h^0(C, \omega_C) = g$$인데, 이는 genus의 미분기하학적 정의—독립적인 global regular 1-form의 개수—와 정확히 일치한다. 정리의 우변 $$\deg D + 1 - g$$도 "$$D$$가 자명하게 기여하는 자유도 ($$\deg D$$)" 더하기 "구조층의 Euler characteristic ($$\chi(\mathcal{O}_C) = 1 - g$$)"이라는 두 부분의 합으로 읽을 수 있다.
 
 정리하면, $$\ell(D)$$는 $$D$$의 complete linear system의 차원, $$\ell(K_C - D)$$는 $$K_C$$가 $$D$$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $$K_C$$의 기하학적 정보를 반영한다.
 
