@@ -120,7 +120,7 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 $$\divisor(f)+D\geq 0$$
 
-을 만족하는 meromorphic function들의 모임이며 위의 식을 통해 $$D$$는 $$f$$의 pole이 $$D$$ 위에, 많아봐야 총합 $$\deg(D)$$만큼 있도록 강제한다. 따라서, $$\deg D$$가 커질수록 허용되는 pole의 차수도 커지므로 $$\ell(D)$$가 커진다. 
+을 만족하는 meromorphic function들의 모임이며 위의 식을 통해 $$D$$는 $$f$$의 pole이 $$D$$ 위에, 많아봐야 총합 $$\deg(D)$$만큼 있도록 강제한다. 따라서, $$\deg D$$가 커질수록 허용되는 pole의 차수도 커지므로 $$\ell(D)$$가 커진다. 이를 정량적으로 보기 위해 
 
 보다 정량적으로는 다음과 같이 부등식
 
