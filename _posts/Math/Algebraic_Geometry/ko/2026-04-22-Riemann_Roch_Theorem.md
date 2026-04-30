@@ -118,11 +118,21 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 이며, 이 때 우변의 공간 $$H^0(C, \mathcal{O}_C(D))$$는 기하적으로 
 
-$$\divisor(f)+d\geq 0$$
+$$\divisor(f)+D\geq 0$$
 
-을 만족하는 meromorphic function들의 모임이다. 
+을 만족하는 meromorphic function들의 모임이며 위의 식을 통해 $$D$$는 $$f$$의 pole이 $$D$$ 위에, 많아봐야 총합 $$\deg(D)$$만큼 있도록 강제한다. 따라서, $$\deg D$$가 커질수록 허용되는 pole의 차수도 커지므로 $$\ell(D)$$가 커진다. 
 
-Riemann–Roch 정리의 의미를 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$의 각 항에 대해 기하학적으로 읽어보자. $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$의 global section은 $$\operatorname{div}(f) + D \ge 0$$을 만족하는 meromorphic 함수 $$f$$이므로, $$D$$가 함수의 pole 위치와 최대 차수를 지정하는 셈이다. 따라서 $$\deg D$$가 커질수록 $$\ell(D)$$도 커져야 하며 자명한 부등식 $$\ell(D) \le \deg D + 1$$이 성립한다 ([§선형계, ⁋명제 5](/ko/math/algebraic_geometry/linear_systems#prop5)). 한편 Serre duality에 의해 $$\ell(K_C - D) = \dim H^1(C, \mathcal{O}_C(D))^\vee$$이므로, 이 항은 $$\ell(D)$$가 자명한 한계로부터 얼마나 끌어내려지는지를 측정하는 수정항이다. 기하학적으로는 "$$D$$의 모든 점에서 영점을 갖는 regular differential form"의 공간이며, $$D$$의 위치에 따라 이 차원이 달라진다.
+보다 정량적으로는 다음과 같이 부등식
+
+$$\ell(D)\leq \deg(D)+1$$
+
+을 얻을 수 있다. $$D = \sum n_i p_i$$가 effective라 하면, $$f\in H^0(C, \mathcal{O}_C(D))$$를 각 $$p_i$$에서의 principal part (Laurent 전개의 음의 차수 부분)로 보내는 선형사상
+
+$$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}$$
+
+을 생각하자. 우변의 차원은 $$\sum n_i = \deg D$$이고, 이 사상의 kernel은 pole을 갖지 않는 global section, 즉 $$H^0(C, \mathcal{O}_C) = \mathbb{K}$$ (projective curve 위의 global regular function은 상수뿐이다)와 같다. 따라서 $$\ell(D) \leq 1 + \deg D$$를 얻는다. $$D$$가 effective가 아니지만 $$\ell(D) > 0$$인 경우, $$D$$는 어떤 effective divisor와 linearly equivalent이므로 동일한 부등식이 성립한다.
+
+한편 Serre duality에 의해 $$\ell(K_C - D) = \dim H^1(C, \mathcal{O}_C(D))^\vee$$이므로, 이 항은 $$\ell(D)$$가 자명한 한계로부터 얼마나 끌어내려지는지를 측정하는 수정항이다. 기하학적으로는 "$$D$$의 모든 점에서 영점을 갖는 regular differential form"의 공간이며, $$D$$의 위치에 따라 이 차원이 달라진다.
 
 큰 degree, 즉 $$\deg D > 2g - 2$$인 경우 $$\deg(K_C - D) < 0$$이 되어 $$\ell(K_C - D) = 0$$이고 $$\ell(D) = \deg D + 1 - g$$로 단순화된다. 자명한 한계와 정확히 $$g$$만큼 차이가 나는데, 이 결손이 바로 curve의 위상수학적 복잡도(genus)가 함수론에 새기는 흔적이다. $$\mathbb{P}^1$$ ($$g = 0$$)에서는 결손이 없어 등호가 성립하지만, genus가 커질수록 같은 degree의 divisor가 만드는 함수공간이 그만큼 좁아진다.
 
