@@ -152,7 +152,7 @@ $$0\rightarrow \mathcal{O}_C\rightarrow \mathcal{O}_C(D)\rightarrow \mathcal{O}_
 
 $$0\to H^0(\mathcal{O}_C)\to H^0(\mathcal{O}_C(D)) \to H^0(\mathcal{O}_D) \to H^1(\mathcal{O}_C)\to H^1(\mathcal{O}_C(D))\to 0$$
 
-를 생각하자. 그럼 위에서 살펴본 linear map이 실제로 이 connecting morphism $$H^0(\$$
+를 생각하자. 그럼 위에서 살펴본 linear map이 실제로 이 connecting morphism $$H^0(\mathcal{O}_C(D))\rightarrow H^0(\mathcal{O}_D)$$이 되는 것을 확인핼 수 있다. 
 
 
 
