@@ -200,7 +200,7 @@ $$P_{F,G}(t) = P_F(t) - P_F(t - n) = \bigl(mt + c_1\bigr) - \bigl(m(t-n) + c_1\b
 
 $$\deg(V \cap W) \leq \deg(V) \cdot \deg(W)$$
 
-이 성립한다. 여기서 $$\deg(V \cap W)$$는 $$V \cap W$$의 각 기약 성분들의 차수의 합이다. 등호는 $$V$$와 $$W$$가 proper intersection을 가질 때 (즉 $$V \cap W$$의 모든 기약성분 $$Z$$에 대해 $$\operatorname{codim}(Z) = \operatorname{codim}(V) + \operatorname{codim}(W)$$일 때) 성립하며, 이 경우 각 성분 $$Z$$에 교차 중복도 $$m_Z$$를 부여하면 $$\sum_Z m_Z \deg(Z) = \deg(V) \cdot \deg(W)$$이다.
+이 성립한다. 여기서 $$\deg(V \cap W)$$는 $$V \cap W$$의 각 기약 성분들의 차수의 합이다. 등호는 $$V$$와 $$W$$가 proper intersection을 가질 때 (즉 $$V \cap W$$의 모든 기약성분 $$Z$$에 대해 $$\codim(Z) = \codim(V) + \codim(W)$$일 때) 성립하며, 이 경우 각 성분 $$Z$$에 교차 중복도 $$m_Z$$를 부여하면 $$\sum_Z m_Z \deg(Z) = \deg(V) \cdot \deg(W)$$이다.
 
 </div>
 

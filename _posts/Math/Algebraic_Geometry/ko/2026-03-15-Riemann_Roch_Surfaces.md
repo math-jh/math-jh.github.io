@@ -66,7 +66,7 @@ $$C_1 \cdot D + C_2 \cdot D = \chi(\mathcal{O}(C_1 + D)) - \chi(\mathcal{O}(C_1)
 
 $$(C_1 + C_2) \cdot D - (C_1 \cdot D + C_2 \cdot D) \\= \bigl(\chi(\mathcal{O}(C_1 + C_2 + D)) - \chi(\mathcal{O}(C_1 + D)) - \chi(\mathcal{O}(C_2 + D)) + \chi(\mathcal{O}(D))\bigr) \\- \bigl(\chi(\mathcal{O}(C_1 + C_2)) - \chi(\mathcal{O}(C_1)) - \chi(\mathcal{O}(C_2)) + \chi(\mathcal{O}_S)\bigr)$$
 
-이다. 이 차이가 0임을 보이는 핵심은 Snapper의 정리이다. 즉, coherent sheaf $$\mathcal{F}$$에 대해 함수 $$\operatorname{Pic}(S) \to \mathbb{Z}$$, $$D \mapsto \chi(\mathcal{F} \otimes \mathcal{O}(D))$$는 $$\operatorname{Pic}(S)$$ 위에서 차수 $$\le \dim S = 2$$의 polynomial이라는 것이다. 이로부터 임의의 세 line bundle $$L_1, L_2, L_3$$에 대해 third difference
+이다. 이 차이가 0임을 보이는 핵심은 Snapper의 정리이다. 즉, coherent sheaf $$\mathcal{F}$$에 대해 함수 $$\Pic(S) \to \mathbb{Z}$$, $$D \mapsto \chi(\mathcal{F} \otimes \mathcal{O}(D))$$는 $$\Pic(S)$$ 위에서 차수 $$\le \dim S = 2$$의 polynomial이라는 것이다. 이로부터 임의의 세 line bundle $$L_1, L_2, L_3$$에 대해 third difference
 
 $$\Delta^3 \chi(\mathcal{F}; L_1, L_2, L_3) := \sum_{I \subseteq \{1,2,3\}} (-1)^{3-\lvert I \rvert} \chi\left(\mathcal{F} \otimes \bigotimes_{i \in I} L_i\right) = 0$$
 
@@ -234,7 +234,7 @@ $$\chi(\mathcal{O}(D)) = 1 + \frac{1}{2}(2ab + 2a + 2b) = (a+1)(b+1)$$
 
 <ins id="def9">**정의 9**</ins> 두 divisor $$D_1, D_2$$가 *numerically equivalent<sub>수치적으로 동치</sub>* $$D_1 \equiv D_2$$라는 것은, 모든 divisor $$E$$에 대해 $$D_1 \cdot E = D_2 \cdot E$$인 것이다. Numerical equivalence class의 집합을
 
-$$\operatorname{Num}(S) = \operatorname{Div}(S) / \{\text{numerical equivalence}\}$$
+$$\operatorname{Num}(S) = \Div(S) / \{\text{numerical equivalence}\}$$
 
 라고 하며, 교차 형식에 의해 $$\operatorname{Num}(S) \otimes \mathbb{R}$$는 자연스럽게 real vector space 위의 이차 형식을 갖는다.
 
@@ -244,15 +244,15 @@ Numerical equivalence는 linear equivalence보다 약한 관계이다. 즉 $$D_1
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> Surface $$S$$의 *Néron–Severi group*은 ([§선다발과 벡터다발, ⁋정의 9](/ko/math/algebraic_geometry/line_bundles#def9))에서 정의한 Picard group $$\operatorname{Pic}(S)$$에서 algebraic equivalence를 취한 몫이다:
+<ins id="def10">**정의 10**</ins> Surface $$S$$의 *Néron–Severi group*은 ([§선다발과 벡터다발, ⁋정의 9](/ko/math/algebraic_geometry/line_bundles#def9))에서 정의한 Picard group $$\Pic(S)$$에서 algebraic equivalence를 취한 몫이다:
 
-$$\operatorname{NS}(S) = \operatorname{Pic}(S) / \{\text{algebraic equivalence}\}$$
+$$\operatorname{NS}(S) = \Pic(S) / \{\text{algebraic equivalence}\}$$
 
-이것의 rank $$\rho(S) = \operatorname{rank} \operatorname{NS}(S)$$를 $$S$$의 *Picard number*라고 한다.
+이것의 rank $$\rho(S) = \rank \operatorname{NS}(S)$$를 $$S$$의 *Picard number*라고 한다.
 
 </div>
 
-Algebraic equivalence는 numerical equivalence보다 강한 관계이므로 $$\operatorname{NS}(S) \otimes \mathbb{R}$$는 $$\operatorname{Num}(S)$$의 부분 공간이며, 특히 $$\rho(S) \le \operatorname{rank} \operatorname{Num}(S)$$이다. 사실 divisor (= codimension 1 cycle)에 대해서는 Matsusaka의 정리에 의해 algebraic equivalence와 numerical equivalence가 일치함(up to torsion)이 이미 증명되어 있으므로, $$\operatorname{NS}(S) \otimes \mathbb{Q} = \operatorname{Num}(S) \otimes \mathbb{Q}$$이다. 보다 일반적으로, 임의의 codimension의 cycle에 대해 homological equivalence와 numerical equivalence가 일치할 것이라는 Grothendieck의 standard conjecture D는 아직 미해결 문제이다. ([§선다발과 벡터다발, ⁋정의 9](/ko/math/algebraic_geometry/line_bundles#def9))에서 정의한 Picard group은 divisor class들을 분류하는 대수적 대상이며, Néron–Severi group은 여기서 "연속적인" 변화를 factor out하여 얻어지는 이산적인 불변량이다. Picard number $$\rho(S)$$는 surface의 "효과적인" divisor class의 차원을 나타낸다. 예를 들어 $$\mathbb{P}^2$$의 경우 $$\rho = 1$$이며, $$\mathbb{P}^1 \times \mathbb{P}^1$$의 경우 $$\rho = 2$$이다.
+Algebraic equivalence는 numerical equivalence보다 강한 관계이므로 $$\operatorname{NS}(S) \otimes \mathbb{R}$$는 $$\operatorname{Num}(S)$$의 부분 공간이며, 특히 $$\rho(S) \le \rank \operatorname{Num}(S)$$이다. 사실 divisor (= codimension 1 cycle)에 대해서는 Matsusaka의 정리에 의해 algebraic equivalence와 numerical equivalence가 일치함(up to torsion)이 이미 증명되어 있으므로, $$\operatorname{NS}(S) \otimes \mathbb{Q} = \operatorname{Num}(S) \otimes \mathbb{Q}$$이다. 보다 일반적으로, 임의의 codimension의 cycle에 대해 homological equivalence와 numerical equivalence가 일치할 것이라는 Grothendieck의 standard conjecture D는 아직 미해결 문제이다. ([§선다발과 벡터다발, ⁋정의 9](/ko/math/algebraic_geometry/line_bundles#def9))에서 정의한 Picard group은 divisor class들을 분류하는 대수적 대상이며, Néron–Severi group은 여기서 "연속적인" 변화를 factor out하여 얻어지는 이산적인 불변량이다. Picard number $$\rho(S)$$는 surface의 "효과적인" divisor class의 차원을 나타낸다. 예를 들어 $$\mathbb{P}^2$$의 경우 $$\rho = 1$$이며, $$\mathbb{P}^1 \times \mathbb{P}^1$$의 경우 $$\rho = 2$$이다.
 
 ([§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10))에서 정의한 ample line bundle과 대응되는 ample divisor $$H$$는 교차 형식에 대해 특별한 역할을 한다.
 
