@@ -112,7 +112,7 @@ $$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0$$
 
 </details>
 
-이제 이 정리의 기하학적 의미를 살펴보기 위해 등식을 항별로 읽어보자. 우선 정의에 의해 
+위의 증명은 깔끔하지만 그 기하학적 내용이 Euler characterstic 안에 압축되어 있어 직관적으로 잘 와닿지 않을 수 있다. 이를 보완하기 위해 등식을 항별로 읽어보자. 우선 정의에 의해 
 
 $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
@@ -124,11 +124,11 @@ $$\divisor(f)+D\geq 0$$
 
 뿐만 아니라, 우리의 상황에서 $$C$$는 $$1$$차원이므로 (effective) divisor는 $$D=\sum n_i p_i$$의 꼴이며 이를 이용하면 보다 정량적으로 다음의 부등식
 
-$$\ell(D)\leq \deg(D)+1$$
+$$\ell(D)\leq \deg(D)+1\tag{$3$}$$
 
 을 얻을 수 있다. 구체적으로 $$D = \sum n_i p_i$$가 effective라 하면, $$f\in H^0(C, \mathcal{O}_C(D))$$를 각 점 $$p_i$$에서의 principal part로 보내는 선형사상
 
-$$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}\tag{$3$}$$
+$$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}\tag{$4$}$$
 
 을 생각할 수 있다. 직관적으로, 이는 $$f$$가 점 $$p_i$$에서의 Laurent polynomial의 principal part를 다음의 식
 
@@ -148,13 +148,25 @@ $$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\ov
 
 $$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\to 0$$
 
-를 생각하자. 여기서 $$C$$는 curve이고 $$D=\sum n_i p_i$$이므로, $$\mathcal{O}_D$$는 support $$\lvert D\rvert$$를 갖는 degree $$D$$의 skyscraper sheaf이며 이로부터 $$H^0(C, \mathcal{O}_C)=\bigoplus_i \mathbb{K}^{n_i}$$임을 안다. 뿐만 아니라 위에서 살펴본 linear map ($$3$$)이 실제로 이 long exact sequence에서의 $$p^\ast$$와 맞아떨어진다는 것을 알고 이로부터 $$p^\ast$$의 cokernel은 다음 isomorphism들의 chain
+를 생각하자. 여기서 $$C$$는 curve이고 $$D=\sum n_i p_i$$이므로, $$\mathcal{O}_D$$는 support $$\lvert D\rvert$$를 갖는 degree $$D$$의 skyscraper sheaf이며 이로부터 $$H^0(C, \mathcal{O}_C)=\bigoplus_i \mathbb{K}^{n_i}$$임을 안다. 뿐만 아니라 위에서 살펴본 linear map ($$4$$)이 실제로 이 long exact sequence에서의 $$p^\ast$$와 맞아떨어진다는 것을 알고 이로부터 $$p^\ast$$의 cokernel은 다음 isomorphism들의 chain
 
-$$\coker p^\ast=\frac{}{}$$
+$$\coker p^\ast=\frac{H^0(C, \mathcal{O}_D)}{\im p^\ast}=\frac{H^0(C, \mathcal{O}_D)}{\ker\delta}\cong \im\delta\cong\ker i^\ast$$
 
-$$\dim H^0(\mathcal{O}_D) - \dim H^0(\mathcal{O}_C(D)) + \dim H^0(\mathcal{O}_C) - \dim H^1(\mathcal{O}_C(D)) = \deg D - \ell(D) + 1 - \ell(K_C-D)$$
+으로 구할 수 있고, 특히 그 차원은
 
-가 된다. 이 cokernel의 차원이 $$0$$이면 (즉 principal part 사상이 surjective이면) Riemann–Roch 등식 $$\ell(D) = \deg D + 1 - g + \ell(K_C-D)$$가 곧바로 나오며, 일반적으로는 $$H^0(\mathcal{O}_D)\to H^1(\mathcal{O}_C)$$의 image가 cokernel이 되어 위 long exact sequence의 나머지 항들로부터 같은 식이 따라온다. 즉 $$\ell(K_C-D)$$는 "$$\ell(D)$$가 자명한 한계 $$\deg D + 1$$로부터 얼마나 끌어내려지는지"를 정확히 측정하는 양이며, Serre duality가 이 obstruction을 1-form 쪽 공간으로 계산할 수 있게 해 준다.
+$$\dim\coker p^\ast =\dim \ker (i^\ast: H^1(C, \mathcal{O}_C)\twoheadrightarrow H^1(C, \mathcal{O}_C(D)))=\dim H^1(C, \mathcal{O}_C)-\dim H^1(C, \mathcal{O}_C(D))$$
+
+이다. 만일 여기에 식 (1)을 적용한다면, 
+
+$$\dim\coker p^\ast=\dim H^1(C, \mathcal{O}_C)-\dim H^0(C, \mathcal{O}_C(K_C-D))^\vee=g-\ell(K_C-D)$$
+
+임을 안다. 위의 부등식 ($$3$$)에서 $$\deg(D)+1$$과 $$\ell(D)$$의 차이만큼이 cokernel의 차원이므로, 이 계산들이 [명제 3](#prop3)의 결과를 복원한다. 즉, 바꿔말하면 $$\ell(K_C-D)$$는 $$\ell(D)$$가 그 upper bound $$\deg D+1$$로부터 얼마나 떨어지는지를 측정하는 양이며, 이는 본디 $$D$$를 따라 vanishing하는 $$1$$-form들의 counting 문제이지만 Serre duality를 사용하여 $$\ell(K_C-D)$$로 바꾸어 쓴 것이다. 
+
+예로 degree $$D$$가 매우 커서 $$\deg(K_C-D)<0$$을 만족하는 경우를 생각하자. 그럼 이 경우 $$\ell(K_C-D)=0$$이고 따라서 Riemann-Roch theorem은 다음의 식
+
+$$\ell(D)=\deg D+1-g$$
+
+을 준다. 즉 genus가 커질수록 같은 degree의 divisor가 만드는 공간이 좁아지는 것이다. 
 
 큰 degree, 즉 $$\deg D > 2g - 2$$인 경우 $$\deg(K_C - D) < 0$$이 되어 $$\ell(K_C - D) = 0$$이고 $$\ell(D) = \deg D + 1 - g$$로 단순화된다. 자명한 한계와 정확히 $$g$$만큼 차이가 나는데, 이 결손이 바로 curve의 위상수학적 복잡도(genus)가 함수론에 새기는 흔적이다. $$\mathbb{P}^1$$ ($$g = 0$$)에서는 결손이 없어 등호가 성립하지만, genus가 커질수록 같은 degree의 divisor가 만드는 함수공간이 그만큼 좁아진다.
 
