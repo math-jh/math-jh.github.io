@@ -21,7 +21,7 @@ published: false
 
 이 글에서는 variety 위의 *algebraic cycle*<sub>대수적 순환</sub>들의 group인 Chow group을 정의한다. 이는 homology/cohomology의 대수적 아날로그로, intersection theory의 기본적인 설정을 제공한다.
 
-([§인자](/ko/math/algebraic_geometry/divisors))에서 우리는 codimension 1 closed irreducible subvariety들의 formal sum인 divisor와, rational equivalence로 모은 divisor class group $$\operatorname{Cl}(X)$$를 정의했다. Chow group은 이를 임의 차원으로 확장한 것이다: $$k$$-dimensional closed irreducible subvariety들의 formal sum을 rational equivalence로 나누어 $$\operatorname{CH}_k(X)$$를 얻는다. 이렇게 하면 variety의 "위상적 정보" 가운데 대수적으로 기술할 수 있는 부분을 남기고, 그렇지 않은 정보는 버리게 된다. 예를 들어 $$\operatorname{CH}_0(\mathbb{A}^n) = 0$$이므로 affine space 위의 점들은 Chow group에서 모두 동치이다 — 이는 $$\mathbb{A}^n$$이 "대수적으로 구부러질 여지"가 없기 때문에 점의 위치라는 정보를 보존하지 못하는 것이다.
+([§인자](/ko/math/algebraic_geometry/divisors))에서 우리는 codimension 1 closed irreducible subvariety들의 formal sum인 divisor와, rational equivalence로 모은 divisor class group $$\Cl(X)$$를 정의했다. Chow group은 이를 임의 차원으로 확장한 것이다: $$k$$-dimensional closed irreducible subvariety들의 formal sum을 rational equivalence로 나누어 $$\operatorname{CH}_k(X)$$를 얻는다. 이렇게 하면 variety의 "위상적 정보" 가운데 대수적으로 기술할 수 있는 부분을 남기고, 그렇지 않은 정보는 버리게 된다. 예를 들어 $$\operatorname{CH}_0(\mathbb{A}^n) = 0$$이므로 affine space 위의 점들은 Chow group에서 모두 동치이다 — 이는 $$\mathbb{A}^n$$이 "대수적으로 구부러질 여지"가 없기 때문에 점의 위치라는 정보를 보존하지 못하는 것이다.
 
 Chow group은 variety를 subvariety들의 "formal sum"으로 이해하게 해주며, 두 cycle 사이의 *intersection*<sub>교차</sub>을 정의할 수 있게 한다. 교차에 대한 자세한 내용은 ([§Intersection Multiplicity](/ko/math/algebraic_geometry/intersection_multiplicity))에서 다룬다.
 
@@ -57,11 +57,11 @@ $$k$$-cycle들이 이루는 free abelian group을 $$Z_k(X)$$로 표기한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Variety $$X$$의 $$(k+1)$$-dimensional closed irreducible subvariety $$Y \subset X$$ 위의 rational function $$f \in \mathbb{K}(Y)^\ast$$에 대해 *principal cycle*<sub>주순환</sub> $$\operatorname{div}(f) \in Z_k(X)$$를 다음과 같이 정의한다:
+<ins id="def4">**정의 4**</ins> Variety $$X$$의 $$(k+1)$$-dimensional closed irreducible subvariety $$Y \subset X$$ 위의 rational function $$f \in \mathbb{K}(Y)^\ast$$에 대해 *principal cycle*<sub>주순환</sub> $$\divisor(f) \in Z_k(X)$$를 다음과 같이 정의한다:
 
-$$\operatorname{div}(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
+$$\divisor(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
 
-여기서 합은 $$Y$$의 codimension 1 closed irreducible subvariety $$V$$들에 대해 돌고, $$v_V(f)$$는 $$f$$의 $$V$$에서의 valuation (영점 또는 극점의 order)이다. $$f \in \mathbb{K}(Y)^\ast$$이므로 $$v_V(f) = 0$$인 $$V$$는 유한 개뿐이며, 따라서 $$\operatorname{div}(f)$$는 유한합이다.
+여기서 합은 $$Y$$의 codimension 1 closed irreducible subvariety $$V$$들에 대해 돌고, $$v_V(f)$$는 $$f$$의 $$V$$에서의 valuation (영점 또는 극점의 order)이다. $$f \in \mathbb{K}(Y)^\ast$$이므로 $$v_V(f) = 0$$인 $$V$$는 유한 개뿐이며, 따라서 $$\divisor(f)$$는 유한합이다.
 
 </div>
 
@@ -69,7 +69,7 @@ $$\operatorname{div}(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
 
 <ins id="def5">**정의 5**</ins> 두 $$k$$-cycle $$Z_1, Z_2$$가 *rationally equivalent*<sub>유리 동치</sub>라는 것은, $$X$$의 $$(k+1)$$-dimensional closed irreducible subvariety $$Y_j$$와 그 위의 rational function $$f_j \in \mathbb{K}(Y_j)^\ast$$들이 존재하여
 
-$$Z_1 - Z_2 = \sum_j \operatorname{div}(f_j)$$
+$$Z_1 - Z_2 = \sum_j \divisor(f_j)$$
 
 을 만족하는 것이다. 이를 $$Z_1 \sim_{\text{rat}} Z_2$$로 표기한다.
 
@@ -84,9 +84,9 @@ $$Z_1 - Z_2 = \sum_j \operatorname{div}(f_j)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-**Reflexivity**: $$Z - Z = 0 = \operatorname{div}(1)$$이므로 $$Z \sim_{\text{rat}} Z$$이다. **Symmetry**: $$Z_1 - Z_2 = \sum_j \operatorname{div}(f_j)$$이면 $$Z_2 - Z_1 = \sum_j \operatorname{div}(f_j^{-1}) = -\sum_j \operatorname{div}(f_j)$$이므로 $$Z_2 \sim_{\text{rat}} Z_1$$이다. **Transitivity**: $$Z_1 \sim_{\text{rat}} Z_2$$이고 $$Z_2 \sim_{\text{rat}} Z_3$$이라면, $$Z_1 - Z_2 = \sum_i \operatorname{div}(f_i)$$, $$Z_2 - Z_3 = \sum_j \operatorname{div}(g_j)$$이므로
+**Reflexivity**: $$Z - Z = 0 = \divisor(1)$$이므로 $$Z \sim_{\text{rat}} Z$$이다. **Symmetry**: $$Z_1 - Z_2 = \sum_j \divisor(f_j)$$이면 $$Z_2 - Z_1 = \sum_j \divisor(f_j^{-1}) = -\sum_j \divisor(f_j)$$이므로 $$Z_2 \sim_{\text{rat}} Z_1$$이다. **Transitivity**: $$Z_1 \sim_{\text{rat}} Z_2$$이고 $$Z_2 \sim_{\text{rat}} Z_3$$이라면, $$Z_1 - Z_2 = \sum_i \divisor(f_i)$$, $$Z_2 - Z_3 = \sum_j \divisor(g_j)$$이므로
 
-$$Z_1 - Z_3 = (Z_1 - Z_2) + (Z_2 - Z_3) = \sum_i \operatorname{div}(f_i) + \sum_j \operatorname{div}(g_j)$$
+$$Z_1 - Z_3 = (Z_1 - Z_2) + (Z_2 - Z_3) = \sum_i \divisor(f_i) + \sum_j \divisor(g_j)$$
 
 역시 principal cycle들의 유한합이므로 $$Z_1 \sim_{\text{rat}} Z_3$$이다.
 
@@ -108,19 +108,19 @@ Codimension $$k$$ Chow group: $$\operatorname{CH}^k(X) = \operatorname{CH}_{n-k}
 
 <ins id="ex8">**예시 8 ($$\mathbb{P}^n$$)**</ins> 모든 $$k$$에 대해 $$\operatorname{CH}_k(\mathbb{P}^n) \cong \mathbb{Z}$$이다.
 
-$$k$$-dimensional linear subspace $$\mathbb{P}^k \subset \mathbb{P}^n$$를 $$\ell_k$$라 하자. 임의의 $$k$$-dimensional irreducible subvariety $$V \subset \mathbb{P}^n$$에 대해, 적당한 정수 $$d \geq 0$$이 존재하여 $$[V] \sim_{\text{rat}} d \cdot \ell_k$$이다. 이 정수 $$d$$는 $$V$$와 일반 위치의 $$(n-k)$$-dimensional linear subspace 사이의 intersection multiplicity ([§Intersection Multiplicity](/ko/math/algebraic_geometry/intersection_multiplicity))와 일치한다. 따라서 $$\operatorname{CH}_k(\mathbb{P}^n)$$는 $$[\ell_k]$$에 의해 생성되고 $$\mathbb{Z}$$와 동형이다. 이는 $$\operatorname{Cl}(\mathbb{P}^n) \cong \mathbb{Z}$$과 일치한다.
+$$k$$-dimensional linear subspace $$\mathbb{P}^k \subset \mathbb{P}^n$$를 $$\ell_k$$라 하자. 임의의 $$k$$-dimensional irreducible subvariety $$V \subset \mathbb{P}^n$$에 대해, 적당한 정수 $$d \geq 0$$이 존재하여 $$[V] \sim_{\text{rat}} d \cdot \ell_k$$이다. 이 정수 $$d$$는 $$V$$와 일반 위치의 $$(n-k)$$-dimensional linear subspace 사이의 intersection multiplicity ([§Intersection Multiplicity](/ko/math/algebraic_geometry/intersection_multiplicity))와 일치한다. 따라서 $$\operatorname{CH}_k(\mathbb{P}^n)$$는 $$[\ell_k]$$에 의해 생성되고 $$\mathbb{Z}$$와 동형이다. 이는 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$과 일치한다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9 (Smooth curve)**</ins> Smooth projective curve $$C$$에 대해 $$\operatorname{CH}_1(C) \cong \mathbb{Z}$$이며 생성원은 $$C$$ 자체이고, $$\operatorname{CH}_0(C) \cong \operatorname{Cl}(C)$$이다.
+<ins id="ex9">**예시 9 (Smooth curve)**</ins> Smooth projective curve $$C$$에 대해 $$\operatorname{CH}_1(C) \cong \mathbb{Z}$$이며 생성원은 $$C$$ 자체이고, $$\operatorname{CH}_0(C) \cong \Cl(C)$$이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10 (Affine space)**</ins> $$k < n$$에 대해 $$\operatorname{CH}_k(\mathbb{A}^n) = 0$$이고, $$\operatorname{CH}_n(\mathbb{A}^n) \cong \mathbb{Z}$$이며 그 생성원은 $$\mathbb{A}^n$$ 자체이다. 이는 $$\operatorname{Cl}(\mathbb{A}^n) = 0$$ ([§인자, ⁋예시 10](/ko/math/algebraic_geometry/divisors#ex10))와 같은 정신이다: $$\mathbb{A}^n$$에는 "대수적으로 움직일 수 있는 여지"가 충분하여, 임의의 $$k$$-dimensional irreducible subvariety $$V$$에 대해 곱공간 $$\mathbb{A}^1 \times V$$를 통해 family를 구성하면 $$V$$가 rational equivalence로 $$0$$이 됨을 보일 수 있다.
+<ins id="ex10">**예시 10 (Affine space)**</ins> $$k < n$$에 대해 $$\operatorname{CH}_k(\mathbb{A}^n) = 0$$이고, $$\operatorname{CH}_n(\mathbb{A}^n) \cong \mathbb{Z}$$이며 그 생성원은 $$\mathbb{A}^n$$ 자체이다. 이는 $$\Cl(\mathbb{A}^n) = 0$$ ([§인자, ⁋예시 10](/ko/math/algebraic_geometry/divisors#ex10))와 같은 정신이다: $$\mathbb{A}^n$$에는 "대수적으로 움직일 수 있는 여지"가 충분하여, 임의의 $$k$$-dimensional irreducible subvariety $$V$$에 대해 곱공간 $$\mathbb{A}^1 \times V$$를 통해 family를 구성하면 $$V$$가 rational equivalence로 $$0$$이 됨을 보일 수 있다.
 
 </div>
 
@@ -170,7 +170,7 @@ $$f_\ast[V] = \begin{cases}
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> Flat morphism $$f: X \to Y$$에 대해 pullback $$f^\ast: \operatorname{CH}^k(Y) \to \operatorname{CH}^k(X)$$가 존재한다. 구체적으로, subvariety $$V \subset Y$$에 대해 $$f^\ast[V] = [f^{-1}(V)]$$이다. Flatness에 의해 $$\operatorname{codim}_X(f^{-1}(V)) = \operatorname{codim}_Y(V)$$가 보장되므로 codimension 표기 $$\operatorname{CH}^k$$로 보면 이 사상이 well-defined이다. (Dimension 표기로 보면 fiber의 relative dimension $$r$$만큼 차원이 증가하여 $$f^\ast: \operatorname{CH}_k(Y) \to \operatorname{CH}_{k+r}(X)$$이다.)
+<ins id="prop15">**명제 15**</ins> Flat morphism $$f: X \to Y$$에 대해 pullback $$f^\ast: \operatorname{CH}^k(Y) \to \operatorname{CH}^k(X)$$가 존재한다. 구체적으로, subvariety $$V \subset Y$$에 대해 $$f^\ast[V] = [f^{-1}(V)]$$이다. Flatness에 의해 $$\codim_X(f^{-1}(V)) = \codim_Y(V)$$가 보장되므로 codimension 표기 $$\operatorname{CH}^k$$로 보면 이 사상이 well-defined이다. (Dimension 표기로 보면 fiber의 relative dimension $$r$$만큼 차원이 증가하여 $$f^\ast: \operatorname{CH}_k(Y) \to \operatorname{CH}_{k+r}(X)$$이다.)
 
 </div>
 
@@ -197,7 +197,7 @@ $$\pi_\ast[\mathbb{P}^1 \times \{p\}] = [p] \in \operatorname{CH}_0(\mathbb{P}^1
 
 <ins id="prop17">**명제 17**</ins> Smooth variety $$X$$에 대해
 
-$$\operatorname{CH}^1(X) \cong \operatorname{Cl}(X) \cong \operatorname{Pic}(X)$$
+$$\operatorname{CH}^1(X) \cong \Cl(X) \cong \Pic(X)$$
 
 이 성립한다.
 
@@ -208,9 +208,9 @@ $$\operatorname{CH}^1(X) \cong \operatorname{Cl}(X) \cong \operatorname{Pic}(X)$
 
 $$\operatorname{CH}^1(X) = \operatorname{CH}_{n-1}(X)$$는 codimension 1 closed irreducible subvariety(즉 Weil divisor의 성분)들의 rational equivalence에 의한 quotient group이다. $$X$$가 smooth이므로 모든 local ring이 regular이며, regular local ring이 UFD라는 사실에 의해 ([Hart, Theorem II.6.2A] 참조) $$X$$는 locally factorial이고, 따라서 Weil divisor와 Cartier divisor가 일치한다.
 
-$$\operatorname{Cl}(X)$$는 Weil divisor들의 linear equivalence에 의한 quotient group이다. 두 동치 관계를 비교하자: rational equivalence는 임의의 $$(k+1)$$-dimensional subvariety $$Y$$ 위의 rational function $$f \in \mathbb{K}(Y)^\ast$$의 principal cycle $$\operatorname{div}(f)$$에 의해 생성되고, linear equivalence는 $$X$$ 자체 위의 rational function $$f \in \mathbb{K}(X)^\ast$$의 principal divisor $$\operatorname{div}(f)$$에 의해서만 생성된다.
+$$\Cl(X)$$는 Weil divisor들의 linear equivalence에 의한 quotient group이다. 두 동치 관계를 비교하자: rational equivalence는 임의의 $$(k+1)$$-dimensional subvariety $$Y$$ 위의 rational function $$f \in \mathbb{K}(Y)^\ast$$의 principal cycle $$\divisor(f)$$에 의해 생성되고, linear equivalence는 $$X$$ 자체 위의 rational function $$f \in \mathbb{K}(X)^\ast$$의 principal divisor $$\divisor(f)$$에 의해서만 생성된다.
 
-하지만 codimension 1에서는 임의의 $$n$$-dimensional closed irreducible subvariety $$Y \subset X$$가 $$X$$ 자체뿐이므로 ($$\dim X = n$$), rational equivalence와 linear equivalence는 동일한 동치 관계이다. 따라서 $$\operatorname{CH}^1(X) \cong \operatorname{Cl}(X)$$. $$\operatorname{Cl}(X) \cong \operatorname{Pic}(X)$$는 ([§인자](/ko/math/algebraic_geometry/divisors))에서 이미 확인하였다.
+하지만 codimension 1에서는 임의의 $$n$$-dimensional closed irreducible subvariety $$Y \subset X$$가 $$X$$ 자체뿐이므로 ($$\dim X = n$$), rational equivalence와 linear equivalence는 동일한 동치 관계이다. 따라서 $$\operatorname{CH}^1(X) \cong \Cl(X)$$. $$\Cl(X) \cong \Pic(X)$$는 ([§인자](/ko/math/algebraic_geometry/divisors))에서 이미 확인하였다.
 
 </details>
 
@@ -218,13 +218,13 @@ $$\operatorname{Cl}(X)$$는 Weil divisor들의 linear equivalence에 의한 quot
 
 <ins id="prop18">**명제 18**</ins> Complex variety $$X$$에 대해 **cycle class map**
 
-$$\operatorname{cl}: \operatorname{CH}_k(X) \to H^{\text{BM}}_{2k}(X, \mathbb{Z})$$
+$$\cl: \operatorname{CH}_k(X) \to H^{\text{BM}}_{2k}(X, \mathbb{Z})$$
 
 이 존재한다. 여기서 $$H^{\text{BM}}_\ast$$는 Borel–Moore homology이다. Borel–Moore homology는 일반적인 singular homology와 달리 비콤팩트 공간에서도 well-defined한 homology with closed support이며, $$2k$$ 차원이 등장하는 것은 $$k$$-dimensional algebraic cycle이 복소위상에서 실수 차원 $$2k$$를 갖는 것을 반영한다. $$X$$가 smooth projective variety이면 Poincaré duality에 의해 이는
 
-$$\operatorname{cl}: \operatorname{CH}^k(X) \to H^{2k}(X, \mathbb{Z})$$
+$$\cl: \operatorname{CH}^k(X) \to H^{2k}(X, \mathbb{Z})$$
 
-으로 볼 수 있다. 이 map은 일반적으로 injective도 surjective도 아니다. Hodge conjecture는 $$\operatorname{cl}$$의 image를 $$\mathbb{Q}$$-coefficients로 기술하는 것과 관련된 유명한 미해결 문제이다.
+으로 볼 수 있다. 이 map은 일반적으로 injective도 surjective도 아니다. Hodge conjecture는 $$\cl$$의 image를 $$\mathbb{Q}$$-coefficients로 기술하는 것과 관련된 유명한 미해결 문제이다.
 
 </div>
 

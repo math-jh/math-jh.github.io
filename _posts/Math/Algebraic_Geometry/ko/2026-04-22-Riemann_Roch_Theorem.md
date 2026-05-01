@@ -35,7 +35,7 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 그럼 Serre duality에 의하여
 
-$$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee$$
+$$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$\ast$}$$
 
 이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)). 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $$\mathcal{O}_C(D)$$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 본 절에서 base field $$\mathbb{K}$$는 일반 위치(general position)에 있는 hyperplane을 충분히 많이 잡을 수 있도록 infinite field로 가정한다. (Finite field의 경우 algebraic closure로 base change한 후 동일한 결론을 얻는다.)
 
@@ -63,23 +63,23 @@ $$\check{C}(\mathcal{U}, \mathcal{F}):\qquad \mathcal{F}(U_1)\oplus \mathcal{F}(
 
 따라서, 이 결과에 의해 임의의 divisor $$D$$에 대해
 
-$$\chi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D))\tag{$\ast$}$$
+$$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D))\tag{$\ast\ast$}$$
 
 가 성립한다. 여기서 $$h^i$$는 $$H^i$$의 dimension에 대한 shorthand notation이다.
 
 한편, 우리는 위상수학적 관점에서 genus $$g$$ compact Riemann surface $$S$$의 Euler characteristic은
 
-$$\chi(S)=2(1-g)$$
+$$\rchi(S)=2(1-g)$$
 
 로 주어진다는 사실을 잘 알고 있다. 이 때 Euler characteristic은 triangulation을 사용하여 꼭짓점 수 $$V$$, 모서리 수 $$E$$, 면 수 $$F$$를 사용하여 $$V-E+F$$로 생각할 수도 있고[^1], 혹은 Gauss-Bonnet 정리 등의 미분기하적 도구를 사용하여 정의된 것으로 생각해도 된다. 
 
-대수기하학에서 우리는 보편적으로 underlying field $$\mathbb{K}$$가 복소수인 것으로 생각하므로, 위에서의 genus $$g$$ compact Riemann surface는 대수기하 관점에서는 1차원 곡선 $$C_S$$에 불과하다. 이 때, 대수기하적 관점에서의 Euler characteristic은 따라서 위의 식 ($$\ast$$)에 $$D=0$$을 대입한
+대수기하학에서 우리는 보편적으로 underlying field $$\mathbb{K}$$가 복소수인 것으로 생각하므로, 위에서의 genus $$g$$ compact Riemann surface는 대수기하 관점에서는 1차원 곡선 $$C_S$$에 불과하다. 이 때, 대수기하적 관점에서의 Euler characteristic은 따라서 위의 식 ($$\ast\ast$$)에 $$D=0$$을 대입한
 
-$$\chi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})$$
+$$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})$$
 
 으로 주어진다. 한편, 위상수학에서 $$1$$차원 구멍이 $$H^1$$을 통해 나타나듯 대수기하에서의 1차원 구멍, 즉 위상수학 관점에서의 2차원 구멍인 genus는 $$g=h^1(C_S, \mathcal{O}_{C_S})$$로 정의되며, global section은 상수함수 뿐이므로 $$C_S$$의 Euler characteristic은
 
-$$\chi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})=1-g$$
+$$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})=1-g$$
 
 로 나타난다. 이 값이 위상수학적인 Euler characteristic의 절반이라는 것은 우연이 아니며, Hodge theory를 통해 확인할 수 있지만 이것은 우리의 목표와는 무관하므로 우선은 넘기기로 한다. 중요한 것은 대수기하에서의 Euler characteristic과, 이를 curve에서 계산했을 때의 값이 $$1-g$$가 나오는 것이 뜬금없는 것이 아니라 위상수학에서의 결과를 재해석하는 것이라는 것이다. 
 
@@ -100,15 +100,15 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
 위의 계산들과 정의들에 의하여
 
-$$\chi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D)) = \ell(D) - \ell(K_C - D)$$
+$$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D)) = \ell(D) - \ell(K_C - D)$$
 
 이다. 한편, effective divisor $$D$$에 대해 short exact sequence 
 
 $$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0$$
 
-이 존재하며, 그럼 Euler characteristic의 additivity에 의해 $$\chi(\mathcal{O}_C(D)) = \chi(\mathcal{O}_C) + \chi(\mathcal{O}_D)$$이다. 
+이 존재하며, 그럼 Euler characteristic의 additivity에 의해 $$\rchi(\mathcal{O}_C(D)) = \rchi(\mathcal{O}_C) + \rchi(\mathcal{O}_D)$$이다. 
 
-여기서 $$\mathcal{O}_D$$는 차수 $$\deg D$$의 skyscraper sheaf이므로 $$\chi(\mathcal{O}_D) = \deg D$$이고, 위에서 살펴본 것과 같이 $$\chi(\mathcal{O}_C)=1-g$$이므로 이를 앞선 식과 결합하면 원하는 결과를 얻는다. 일반적인 (effective가 아닌) divisor에 대해서는 $$D$$를 effective divisor $$D'$$과의 차이로 표현한 후 동일한 additivity 논증을 적용하면 된다. 
+여기서 $$\mathcal{O}_D$$는 차수 $$\deg D$$의 skyscraper sheaf이므로 $$\rchi(\mathcal{O}_D) = \deg D$$이고, 위에서 살펴본 것과 같이 $$\rchi(\mathcal{O}_C)=1-g$$이므로 이를 앞선 식과 결합하면 원하는 결과를 얻는다. 일반적인 (effective가 아닌) divisor에 대해서는 $$D$$를 effective divisor $$D'$$과의 차이로 표현한 후 동일한 additivity 논증을 적용하면 된다. 
 
 </details>
 
@@ -118,23 +118,61 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 이며, 이 때 우변의 공간 $$H^0(C, \mathcal{O}_C(D))$$는 기하적으로 
 
-$$\operatorname{div}(f)+D\geq 0$$
+$$\divisor(f)+D\geq 0$$
 
-을 만족하는 meromorphic function들의 모임이다. 즉 $$D$$는 $$f$$의 극(pole)이 $$D$$의 support 안에서만 일어나도록, 그리고 각 점 $$p$$에서 극의 차수가 최대 $$\operatorname{ord}_p D$$가 되도록 강제한다. 따라서 $$\deg D$$가 커질수록 허용되는 pole의 차수도 커지므로 $$\ell(D)$$가 커진다. 보다 정량적으로는 다음과 같이 부등식
+을 만족하는 meromorphic function들의 모임이다. 즉 $$D$$는 $$f$$의 pole이 $$D$$의 support 안에서만 일어나도록, 그리고 각 점 $$p$$에서 극의 차수가 최대 $$\operatorname{ord}_p D$$가 되도록 강제하며, 따라서 $$\deg D$$가 커질수록 허용되는 pole의 차수도 커지므로 $$\ell(D)$$가 커진다. 
+
+뿐만 아니라, 우리의 상황에서 $$C$$는 $$1$$차원이므로 (effective) divisor는 $$D=\sum n_i p_i$$의 꼴이며 이를 이용하면 보다 정량적으로 다음의 부등식
 
 $$\ell(D)\leq \deg(D)+1$$
 
-을 얻을 수 있다. $$D = \sum n_i p_i$$가 effective라 하면, $$f\in H^0(C, \mathcal{O}_C(D))$$를 각 $$p_i$$에서의 principal part (Laurent 전개의 음의 차수 부분)로 보내는 선형사상
+을 얻을 수 있다. 구체적으로 $$D = \sum n_i p_i$$가 effective라 하면, $$f\in H^0(C, \mathcal{O}_C(D))$$를 각 점 $$p_i$$에서의 principal part로 보내는 선형사상
 
 $$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}$$
 
-을 생각하자. 우변의 차원은 $$\sum n_i = \deg D$$이고, 이 사상의 kernel은 pole을 갖지 않는 global section, 즉 $$H^0(C, \mathcal{O}_C) = \mathbb{K}$$ (projective curve 위의 global regular function은 상수뿐이다)와 같다. 따라서 $$\ell(D) \leq 1 + \deg D$$를 얻는다. $$D$$가 effective가 아니지만 $$\ell(D) > 0$$인 경우, $$D$$는 어떤 effective divisor와 linearly equivalent이므로 동일한 부등식이 성립한다.
+을 생각할 수 있다. 직관적으로, 이는 $$f$$가 점 $$p_i$$에서의 Laurent polynomial의 principal part를 다음의 식
 
-한편 Serre duality에 의해 $$\ell(K_C - D) = \dim H^1(C, \mathcal{O}_C(D))^\vee$$이므로, 이 항은 $$\ell(D)$$가 자명한 한계로부터 얼마나 끌어내려지는지를 측정하는 수정항이다. 기하학적으로는 "$$D$$의 모든 점에서 영점을 갖는 regular differential form"의 공간이며, $$D$$의 위치에 따라 이 차원이 달라진다.
+$$\frac{a_{-n_i}}{(x-p_i)^{n_i}}+\frac{a_{-n_i-1}}{(x-p_i)^{n_i-1}}+\cdots +\frac{a_{-1}}{x-p_i}$$
+
+과 같이 나타냈을 때, 
+
+$$f\mapsto (a_{-n_i}, \ldots, a_{-1})$$
+
+를 모든 $$p_i$$에 대해서 한 번에 고려하는 함수이다. 그럼 위의 선형사상의 우변의 차원은 $$\sum n_i = \deg D$$이고, 이 사상의 kernel은 pole을 갖지 않는 global section, 즉 $$H^0(C, \mathcal{O}_C) = \mathbb{K}$$와 같으며 이로부터 $$\ell(D) \leq 1 + \deg D$$를 얻는다. $$D$$가 effective가 아니지만 $$\ell(D) > 0$$이라면, $$D$$는 어떤 effective divisor와 linearly equivalent이므로 동일한 부등식이 성립한다.
+
+일반적으로 이 식이 등식이 되기 위해서는 선형사상이 surjective여야 하지만, 이것이 항상 성립하는 것은 아니다. 이를 보정하는 항이 남은 항들 $$g$$와 $$\ell(K_C-D)$$으로, 우선 둘째 항은 위의 ($$\ast$$)에 의해
+
+$$\ell(K_C - D) = \dim H^0(C, \mathcal{O}_C(K_C - D)) = \dim H^1(C, \mathcal{O}_C(D))^\ast$$
+
+이며, 이로부터 이를 $$D$$를 따라 vanishing 조건을 만족하는 regular 1-form들의 공간으로 생각할 수 있다. 즉, $$\ell(D)$$가 $$D$$를 따라 pole을 허용하는 함수를 세는 양이라면, $$\ell(K_C-D)$$는 그 dual로서 $$D$$를 따라 zero를 강제받는 differential 1-form을 세는 양이다. 한편, [명제 2](#prop2)의 증명에서 살펴본 short exact sequence
+
+$$0\rightarrow \mathcal{O}_C\rightarrow \mathcal{O}_C(D)\rightarrow \mathcal{O}_D\rightarrow 0$$
+
+으로부터 얻어지는 long exact sequence
+
+$$0\to H^0(\mathcal{O}_C)\to H^0(\mathcal{O}_C(D)) \to H^0(\mathcal{O}_D) \to H^1(\mathcal{O}_C)\to H^1(\mathcal{O}_C(D))\to 0$$
+
+를 생각하자. 그럼 위에서 살펴본 linear map이 실제로 이 connecting morphism $$H^0(\$$
+
+
+
+
+ 위에서 $$\ell(D)$$를 다룰 때 사용한 principal part 사상
+
+$$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}$$
+
+이 일반적으로는 surjective가 아니고, 그 cokernel이 곧 $$\ell(K_C-D)$$의 정체이다. 구체적으로, 위 사상은 short exact sequence $$0\to \mathcal{O}_C\to \mathcal{O}_C(D)\to \mathcal{O}_D\to 0$$ ($$\mathcal{O}_D$$는 차수 $$\deg D$$의 skyscraper sheaf)의 long exact sequence in cohomology
+
+
+의 첫 세 항에 해당하므로 (cokernel은 $$H^0(\mathcal{O}_D) \to H^1(\mathcal{O}_C)$$의 image), Serre duality ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)) $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \mathcal{O}_C(K_C-D))^\ast$$에 의해 cokernel의 차원은 정확히
+
+$$\dim H^0(\mathcal{O}_D) - \dim H^0(\mathcal{O}_C(D)) + \dim H^0(\mathcal{O}_C) - \dim H^1(\mathcal{O}_C(D)) = \deg D - \ell(D) + 1 - \ell(K_C-D)$$
+
+가 된다. 이 cokernel의 차원이 $$0$$이면 (즉 principal part 사상이 surjective이면) Riemann–Roch 등식 $$\ell(D) = \deg D + 1 - g + \ell(K_C-D)$$가 곧바로 나오며, 일반적으로는 $$H^0(\mathcal{O}_D)\to H^1(\mathcal{O}_C)$$의 image가 cokernel이 되어 위 long exact sequence의 나머지 항들로부터 같은 식이 따라온다. 즉 $$\ell(K_C-D)$$는 "$$\ell(D)$$가 자명한 한계 $$\deg D + 1$$로부터 얼마나 끌어내려지는지"를 정확히 측정하는 양이며, Serre duality가 이 obstruction을 1-form 쪽 공간으로 계산할 수 있게 해 준다.
 
 큰 degree, 즉 $$\deg D > 2g - 2$$인 경우 $$\deg(K_C - D) < 0$$이 되어 $$\ell(K_C - D) = 0$$이고 $$\ell(D) = \deg D + 1 - g$$로 단순화된다. 자명한 한계와 정확히 $$g$$만큼 차이가 나는데, 이 결손이 바로 curve의 위상수학적 복잡도(genus)가 함수론에 새기는 흔적이다. $$\mathbb{P}^1$$ ($$g = 0$$)에서는 결손이 없어 등호가 성립하지만, genus가 커질수록 같은 degree의 divisor가 만드는 함수공간이 그만큼 좁아진다.
 
-반면 $$\deg D \le 2g - 2$$인 영역에서는 $$\ell(K_C - D)$$가 $$D$$의 위치—$$D$$가 어떤 점들로 이루어졌는지—에 민감하게 의존한다. 같은 degree라도 $$D$$의 점들이 canonical class와 어떤 관계에 있느냐에 따라 $$\ell(D)$$가 달라지며, 이는 *special divisor*의 현상으로 [Brill–Noether theory](#brill-noether)에서 본격적으로 다룬다. Canonical divisor $$K_C$$ 자체에 대해서는 $$\ell(K_C) = h^0(C, \omega_C) = g$$인데, 이는 genus의 미분기하학적 정의—독립적인 global regular 1-form의 개수—와 정확히 일치한다. 정리의 우변 $$\deg D + 1 - g$$도 "$$D$$가 자명하게 기여하는 자유도 ($$\deg D$$)" 더하기 "구조층의 Euler characteristic ($$\chi(\mathcal{O}_C) = 1 - g$$)"이라는 두 부분의 합으로 읽을 수 있다.
+반면 $$\deg D \le 2g - 2$$인 영역에서는 $$\ell(K_C - D)$$가 $$D$$의 위치—$$D$$가 어떤 점들로 이루어졌는지—에 민감하게 의존한다. 같은 degree라도 $$D$$의 점들이 canonical class와 어떤 관계에 있느냐에 따라 $$\ell(D)$$가 달라지며, 이는 *special divisor*의 현상으로 [Brill–Noether theory](#brill-noether)에서 본격적으로 다룬다. Canonical divisor $$K_C$$ 자체에 대해서는 $$\ell(K_C) = h^0(C, \omega_C) = g$$인데, 이는 genus의 미분기하학적 정의—독립적인 global regular 1-form의 개수—와 정확히 일치한다. 정리의 우변 $$\deg D + 1 - g$$도 "$$D$$가 자명하게 기여하는 자유도 ($$\deg D$$)" 더하기 "구조층의 Euler characteristic ($$\rchi(\mathcal{O}_C) = 1 - g$$)"이라는 두 부분의 합으로 읽을 수 있다.
 
 정리하면, $$\ell(D)$$는 $$D$$의 complete linear system의 차원, $$\ell(K_C - D)$$는 $$K_C$$가 $$D$$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $$K_C$$의 기하학적 정보를 반영한다.
 
@@ -228,7 +266,7 @@ Riemann–Roch에 의해 $$\ell(D) - \ell(K_C - D) = d + 1 - g$$이다. $$\ell(K
 
 $$\rho(g, r, d) = g - (r+1)(g - d + r)$$
 
-가 음이 아닐 때 ($$\rho \ge 0$$) 차원 $$\rho$$인 nonempty variety이고, $$\rho < 0$$이면 빈 집합이다. 이 수치는 $$G^r_d(C)$$ (degree $$d$$, rank $$r$$의 complete linear series들의 parameter space)가 Grassmannian $$\operatorname{Gr}(r+1, h^0(C, \mathcal{O}_C(D)))$$ 위에서 갖는 예상 차원으로부터 산출된다.
+가 음이 아닐 때 ($$\rho \ge 0$$) 차원 $$\rho$$인 nonempty variety이고, $$\rho < 0$$이면 빈 집합이다. 이 수치는 $$G^r_d(C)$$ (degree $$d$$, rank $$r$$의 complete linear series들의 parameter space)가 Grassmannian $$\Gr(r+1, h^0(C, \mathcal{O}_C(D)))$$ 위에서 갖는 예상 차원으로부터 산출된다.
 
 <div class="example" markdown="1">
 
