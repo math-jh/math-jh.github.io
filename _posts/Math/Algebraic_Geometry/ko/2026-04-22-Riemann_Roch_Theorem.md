@@ -35,9 +35,9 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 그럼 Serre duality에 의하여
 
-$$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$\ast$}$$
+$$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$1$}$$
 
-이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)). 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $$\mathcal{O}_C(D)$$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 본 절에서 base field $$\mathbb{K}$$는 일반 위치(general position)에 있는 hyperplane을 충분히 많이 잡을 수 있도록 infinite field로 가정한다. (Finite field의 경우 algebraic closure로 base change한 후 동일한 결론을 얻는다.)
+이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)). 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $$\mathcal{O}_C(D)$$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 이 글에서 우리는 $$\mathbb{K}$$가 *infinite* field임을 가정한다. 
 
 <div class="proposition" markdown="1">
 
@@ -63,7 +63,7 @@ $$\check{C}(\mathcal{U}, \mathcal{F}):\qquad \mathcal{F}(U_1)\oplus \mathcal{F}(
 
 따라서, 이 결과에 의해 임의의 divisor $$D$$에 대해
 
-$$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D))\tag{$\ast\ast$}$$
+$$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D))\tag{$2$}$$
 
 가 성립한다. 여기서 $$h^i$$는 $$H^i$$의 dimension에 대한 shorthand notation이다.
 
@@ -73,7 +73,7 @@ $$\rchi(S)=2(1-g)$$
 
 로 주어진다는 사실을 잘 알고 있다. 이 때 Euler characteristic은 triangulation을 사용하여 꼭짓점 수 $$V$$, 모서리 수 $$E$$, 면 수 $$F$$를 사용하여 $$V-E+F$$로 생각할 수도 있고[^1], 혹은 Gauss-Bonnet 정리 등의 미분기하적 도구를 사용하여 정의된 것으로 생각해도 된다. 
 
-대수기하학에서 우리는 보편적으로 underlying field $$\mathbb{K}$$가 복소수인 것으로 생각하므로, 위에서의 genus $$g$$ compact Riemann surface는 대수기하 관점에서는 1차원 곡선 $$C_S$$에 불과하다. 이 때, 대수기하적 관점에서의 Euler characteristic은 따라서 위의 식 ($$\ast\ast$$)에 $$D=0$$을 대입한
+대수기하학에서 우리는 보편적으로 underlying field $$\mathbb{K}$$가 복소수인 것으로 생각하므로, 위에서의 genus $$g$$ compact Riemann surface는 대수기하 관점에서는 1차원 곡선 $$C_S$$에 불과하다. 이 때, 대수기하적 관점에서의 Euler characteristic은 따라서 위의 식 ($$2$$)에 $$D=0$$을 대입한
 
 $$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})$$
 
@@ -128,7 +128,7 @@ $$\ell(D)\leq \deg(D)+1$$
 
 을 얻을 수 있다. 구체적으로 $$D = \sum n_i p_i$$가 effective라 하면, $$f\in H^0(C, \mathcal{O}_C(D))$$를 각 점 $$p_i$$에서의 principal part로 보내는 선형사상
 
-$$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}$$
+$$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}\tag{$3$}$$
 
 을 생각할 수 있다. 직관적으로, 이는 $$f$$가 점 $$p_i$$에서의 Laurent polynomial의 principal part를 다음의 식
 
@@ -140,31 +140,17 @@ $$f\mapsto (a_{-n_i}, \ldots, a_{-1})$$
 
 를 모든 $$p_i$$에 대해서 한 번에 고려하는 함수이다. 그럼 위의 선형사상의 우변의 차원은 $$\sum n_i = \deg D$$이고, 이 사상의 kernel은 pole을 갖지 않는 global section, 즉 $$H^0(C, \mathcal{O}_C) = \mathbb{K}$$와 같으며 이로부터 $$\ell(D) \leq 1 + \deg D$$를 얻는다. $$D$$가 effective가 아니지만 $$\ell(D) > 0$$이라면, $$D$$는 어떤 effective divisor와 linearly equivalent이므로 동일한 부등식이 성립한다.
 
-일반적으로 이 식이 등식이 되기 위해서는 선형사상이 surjective여야 하지만, 이것이 항상 성립하는 것은 아니다. 이를 보정하는 항이 남은 항들 $$g$$와 $$\ell(K_C-D)$$으로, 우선 둘째 항은 위의 ($$\ast$$)에 의해
+일반적으로 이 식이 등식이 되기 위해서는 선형사상이 surjective여야 하지만, 이것이 항상 성립하는 것은 아니다. 이를 확인하기 위해 [명제 2](#prop2)의 증명에서 살펴본 short exact sequence
 
-$$\ell(K_C - D) = \dim H^0(C, \mathcal{O}_C(K_C - D)) = \dim H^1(C, \mathcal{O}_C(D))^\ast$$
-
-이며, 이로부터 이를 $$D$$를 따라 vanishing 조건을 만족하는 regular 1-form들의 공간으로 생각할 수 있다. 즉, $$\ell(D)$$가 $$D$$를 따라 pole을 허용하는 함수를 세는 양이라면, $$\ell(K_C-D)$$는 그 dual로서 $$D$$를 따라 zero를 강제받는 differential 1-form을 세는 양이다. 한편, [명제 2](#prop2)의 증명에서 살펴본 short exact sequence
-
-$$0\rightarrow \mathcal{O}_C\rightarrow \mathcal{O}_C(D)\rightarrow \mathcal{O}_D\rightarrow 0$$
+$$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\overset{p}{\longrightarrow} \mathcal{O}_D\longrightarrow 0$$
 
 으로부터 얻어지는 long exact sequence
 
-$$0\to H^0(\mathcal{O}_C)\to H^0(\mathcal{O}_C(D)) \to H^0(\mathcal{O}_D) \to H^1(\mathcal{O}_C)\to H^1(\mathcal{O}_C(D))\to 0$$
+$$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\to 0$$
 
-를 생각하자. 그럼 위에서 살펴본 linear map이 실제로 이 connecting morphism $$H^0(\mathcal{O}_C(D))\rightarrow H^0(\mathcal{O}_D)$$이 되는 것을 확인할 수 있다. 
+를 생각하자. 여기서 $$C$$는 curve이고 $$D=\sum n_i p_i$$이므로, $$\mathcal{O}_D$$는 support $$\lvert D\rvert$$를 갖는 degree $$D$$의 skyscraper sheaf이며 이로부터 $$H^0(C, \mathcal{O}_C)=\bigoplus_i \mathbb{K}^{n_i}$$임을 안다. 뿐만 아니라 위에서 살펴본 linear map ($$3$$)이 실제로 이 long exact sequence에서의 $$p^\ast$$와 맞아떨어진다는 것을 알고 이로부터 $$p^\ast$$의 cokernel은 다음 isomorphism들의 chain
 
-
-
-
- 위에서 $$\ell(D)$$를 다룰 때 사용한 principal part 사상
-
-$$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}$$
-
-이 일반적으로는 surjective가 아니고, 그 cokernel이 곧 $$\ell(K_C-D)$$의 정체이다. 구체적으로, 위 사상은 short exact sequence $$0\to \mathcal{O}_C\to \mathcal{O}_C(D)\to \mathcal{O}_D\to 0$$ ($$\mathcal{O}_D$$는 차수 $$\deg D$$의 skyscraper sheaf)의 long exact sequence in cohomology
-
-
-의 첫 세 항에 해당하므로 (cokernel은 $$H^0(\mathcal{O}_D) \to H^1(\mathcal{O}_C)$$의 image), Serre duality ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_geometry/serre_duality#prop2)) $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \mathcal{O}_C(K_C-D))^\ast$$에 의해 cokernel의 차원은 정확히
+$$\coker p^\ast=\frac{}{}$$
 
 $$\dim H^0(\mathcal{O}_D) - \dim H^0(\mathcal{O}_C(D)) + \dim H^0(\mathcal{O}_C) - \dim H^1(\mathcal{O}_C(D)) = \deg D - \ell(D) + 1 - \ell(K_C-D)$$
 
