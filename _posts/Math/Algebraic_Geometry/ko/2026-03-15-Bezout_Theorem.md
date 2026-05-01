@@ -77,23 +77,17 @@ $$C_1 = Z(\x_0^2 + \x_1^2 - \x_2^2),\qquad C_2 = Z(\x_0\x_1)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 (삼차곡선과 직선)**</ins> $$\mathbb{P}^2$$에서 삼차곡선 $$C = Z(\y^2\x_2 - \x^3 - \x_2^3)$$와 직선 $$L = Z(\x)$$를 생각하자. $$L$$의 방정식 $$\x = 0$$을 $$C$$의 방정식에 대입하면 $$\y^2\x_2 = \x_2^3$$, 즉 $$\x_2(\y^2 - \x_2^2) = 0$$을 얻는다. 따라서 교점은 $$\x_2 = 0$$일 때 $$[0:1:0]$$, $$\y = \x_2$$일 때 $$[0:1:1]$$, $$\y = -\x_2$$일 때 $$[0:1:-1]$$이며, 모두 서로 다르므로 중복도 1씩 3개의 교점이 존재한다. 이는 $$\deg C \cdot \deg L = 3 \times 1 = 3$$과 일치한다.
+<ins id="ex6">**예시 6 (삼차곡선과 직선)**</ins> $$\mathbb{P}^2$$에서 삼차곡선 $$C = Z(\x_1^2\x_2 - \x_0^3 - \x_2^3)$$와 직선 $$L = Z(\x_0)$$를 생각하자. $$L$$의 방정식 $$\x_0 = 0$$을 $$C$$의 방정식에 대입하면 $$\x_1^2\x_2 = \x_2^3$$, 즉 $$\x_2(\x_1^2 - \x_2^2) = 0$$을 얻는다. 따라서 교점은 $$\x_2 = 0$$일 때 $$[0:1:0]$$, $$\x_1 = \x_2$$일 때 $$[0:1:1]$$, $$\x_1 = -\x_2$$일 때 $$[0:1:-1]$$이며, 모두 서로 다르므로 중복도 1씩 3개의 교점이 존재한다. 이는 $$\deg C \cdot \deg L = 3 \times 1 = 3$$과 일치한다.
 
 </div>
 
 ## 교차 중복도
 
-명제 2에서 등장한 교차 중복도 $$i_p(C, D)$$를 정의하기 위해, 우선 $$\mathbb{P}^2$$ 안의 두 곡선 $$C = Z(F)$$, $$D = Z(G)$$가 주어졌고 $$p = [a:b:c]$$가 $$C \cap D$$의 점이라 하자. $$c \neq 0$$이라 가정하고 affine chart $$U_2$$에서 생각하면, $$p$$는 $$(a/c, b/c)$$이고 $$F, G$$는 affine 다항식 $$f, g$$로 dehomogenize된다.
-
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> 점 $$p$$에서의 **교차 중복도**(intersection multiplicity)를 다음과 같이 정의한다.
+명제 2에서 등장한 교차 중복도 $$i_p(C, D)$$는 ([§Intersection Multiplicity, ⁋정의 1](/ko/math/algebraic_geometry/intersection_multiplicity#def1))에서 정의한 intersection multiplicity의 평면 곡선 특수 경우이다. 즉 $$\mathbb{P}^2$$의 두 곡선 $$C = Z(F)$$, $$D = Z(G)$$와 $$p \in C \cap D$$에 대해, $$p$$를 포함하는 affine chart $$U_i$$에서 $$F, G$$를 dehomogenize한 $$f, g$$를 사용하여
 
 $$i_p(C, D) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p} / (f, g)$$
 
-여기서 $$\mathcal{O}_{\mathbb{A}^2, p}$$는 점 $$p$$에서의 **국소환**(local ring)이고, $$(f, g)$$는 $$f, g$$로 생성되는 **아이디얼**(ideal)이다.
-
-</div>
+로 정의한다. 이 값은 affine chart의 선택과 무관하다 ([§Intersection Multiplicity, ⁋정의 7](/ko/math/algebraic_geometry/intersection_multiplicity#def7)).
 
 이 정의는 직관적으로 $$p$$ 근방에서 $$f$$와 $$g$$가 얼마나 "강하게" 만나는지를 측정한다. $$i_p = 1$$이면 두 곡선이 $$p$$에서 transversally 만나고, $$i_p > 1$$이면 더 복잡한 교차가 일어난다. 다음 명제는 이 정의가 기하적인 직관과 맞아떨어짐을 보여준다.
 
@@ -103,7 +97,7 @@ $$i_p(C, D) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p} / (f, g)$$
 
 1. $$i_p(C, D) \ge 1$$이다.
 2. $$i_p(C, D) = 1$$일 필요충분조건은 $$C$$와 $$D$$가 $$p$$에서 매끄럽고 서로 다른 접선을 갖는 것이다.
-3. $$i_p(C, D) \ge 2$$일 필요충분조건은 $$C$$와 $$D$$가 $$p$$에서 접하는 것이다.
+3. $$i_p(C, D) \ge 2$$일 필요충분조건은 $$p$$가 $$C$$ 또는 $$D$$의 특이점이거나, $$p$$에서 두 곡선이 (적어도 하나의) 공통 접선을 갖는 것이다.
 
 </div>
 
@@ -124,9 +118,20 @@ $$i_p(C, D) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p} / (f, g)$$
 
 <ins id="prop9">**명제 9 (Hilbert 다항식)**</ins> 차수 $$d$$인 동차다항식 $$F \in \mathbb{K}[\x_0, \x_1, \x_2]$$에 의하여 정의되는 곡선 $$C = Z(F)$$의 coordinate ring $$S(C) = \mathbb{K}[\x_0, \x_1, \x_2]/(F)$$의 Hilbert 함수 $$H(t) = \dim_\mathbb{K} S(C)_t$$는 $$t$$가 충분히 클 때 $$H(t) = dt + \frac{d(3-d)}{2}$$이다. 특히 Hilbert 다항식의 차수는 1이고 그 일차항의 계수는 $$d$$이다.
 
-명제 9는 coordinate ring의 Hilbert 함수를 계산하는 결과로, 이어지는 명제 11의 증명에서 핵심적인 역할을 한다.
-
 </div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+차수 $$d$$ 동차다항식 $$F$$에 의한 곱셈 $$\cdot F: \mathbb{K}[\x_0, \x_1, \x_2](-d) \to \mathbb{K}[\x_0, \x_1, \x_2]$$는 단사이므로 short exact sequence
+
+$$0 \to S(-d) \xrightarrow{\cdot F} S \to S/(F) \to 0$$
+
+을 얻는다. $$\dim_\mathbb{K} S_t = \binom{t+2}{2}$$이므로 Hilbert 함수의 차이를 계산하면 $$\dim_\mathbb{K} (S/(F))_t = \binom{t+2}{2} - \binom{t-d+2}{2}$$이고, 이를 전개하면 $$dt + \frac{d(3-d)}{2}$$를 얻는다.
+
+</details>
+
+이 결과는 이어지는 명제 11의 증명에서 핵심적으로 사용된다.
 
 명제 2의 증명은 본질적으로 Chow 환 $$\operatorname{CH}^\ast(\mathbb{P}^n) = \mathbb{Z}[H]/(H^{n+1})$$을 통하여 이루어지지만, 이 개념은 아직 소개하지 않았으므로 여기서는 $$\mathbb{P}^2$$의 경우에 대해 보다 직접적인 증명을 제시한다. 핵심적인 관찰은 $$\mathbb{P}^2$$ 안에서 "차수 $$d$$ 곡선"이란 것이 $$\operatorname{CH}^1(\mathbb{P}^2) = \mathbb{Z}$$의 원소 $$dH$$에 해당한다는 것이다. 여기서 $$H$$는 hyperplane class, 즉 직선의 class이다.
 
@@ -187,17 +192,19 @@ $$P_{F,G}(t) = P_F(t) - P_F(t - n) = \bigl(mt + c_1\bigr) - \bigl(m(t-n) + c_1\b
 
 ## 일반화
 
+지금까지 $$\mathbb{P}^2$$ 안의 곡선에 대해서만 Bézout의 정리를 증명했다. 이를 임의의 사영공간과 일반적인 사영다양체로 확장하면 다음과 같다.
+
 <div class="proposition" markdown="1">
 
-지금까지 $$\mathbb{P}^2$$ 안의 곡선에 대해서만 Bézout의 정리를 증명했다. 이를 임의의 사영공간과 일반적인 다형체로 확장하면 다음과 같다.
-
-<ins id="prop12">**명제 12 (일반화된 Bézout 정리)**</ins> $$\mathbb{P}^n$$ 안의 두 다형체 $$V, W$$에 대해:
+<ins id="prop12">**명제 12 (일반화된 Bézout 정리)**</ins> $$\mathbb{P}^n$$ 안의 두 사영다양체 $$V, W$$에 대해
 
 $$\deg(V \cap W) \leq \deg(V) \cdot \deg(W)$$
 
-여기서 $$\deg(V \cap W)$$는 $$V \cap W$$의 각 기약성분들의 차수의 합이다. 명제 12는 명제 2의 $$\mathbb{P}^2$$에서의 결과를 임의의 $$\mathbb{P}^n$$ 및 일반적인 다형체로 확장한 것으로, 그 증명은 Chow 환을 통한 교차이론의 일반론에 의존한다. 등호는 $$V$$와 $$W$$가 proper intersection을 가질 때(즉, $$V \cap W$$의 모든 기약성분 $$Z$$에 대하여 $$\operatorname{codim}(Z) = \operatorname{codim}(V) + \operatorname{codim}(W)$$일 때) 성립한다. 이 경우 $$V \cap W$$의 각 성분 $$Z$$에 교차 중복도 $$m_Z$$를 부여하면 $$\sum_Z m_Z \deg(Z) = \deg(V) \cdot \deg(W)$$이다. ([§차원, ⁋예시 14](/ko/math/algebraic_geometry/dimension#ex14))
+이 성립한다. 여기서 $$\deg(V \cap W)$$는 $$V \cap W$$의 각 기약 성분들의 차수의 합이다. 등호는 $$V$$와 $$W$$가 proper intersection을 가질 때 (즉 $$V \cap W$$의 모든 기약성분 $$Z$$에 대해 $$\operatorname{codim}(Z) = \operatorname{codim}(V) + \operatorname{codim}(W)$$일 때) 성립하며, 이 경우 각 성분 $$Z$$에 교차 중복도 $$m_Z$$를 부여하면 $$\sum_Z m_Z \deg(Z) = \deg(V) \cdot \deg(W)$$이다.
 
 </div>
+
+명제 12는 명제 2의 $$\mathbb{P}^2$$에서의 결과를 임의의 $$\mathbb{P}^n$$ 및 일반적인 사영다양체로 확장한 것으로, 그 증명은 Chow ring을 통한 교차이론의 일반론에 의존한다. 자세한 내용은 ([§Intersection Product](/ko/math/algebraic_geometry/intersection_product))를 참조하라. ([§차원, ⁋예시 14](/ko/math/algebraic_geometry/dimension#ex14))의 dimension 부등식이 성분의 codimension에 대한 부등식 형태로 다시 등장한다.
 
 <div class="example" markdown="1">
 
@@ -230,9 +237,9 @@ $$V = \{F \in \mathbb{K}[\x_0, \x_1, \x_2]_3 : F(p_i) = 0 \text{ for } i = 1, \l
 
 은 차원 $$\dim V \ge 10 - 8 = 2$$인 부분공간이다.
 
-한편 $$F_1, F_2 \in V$$이고 $$C_1 \neq C_2$$이므로 $$F_1, F_2$$는 일차독립이며, 따라서 $$\dim V \ge 2$$이다. $$F_1, F_2$$는 $$C_1 \cap C_2 = \{p_1, \ldots, p_9\}$$를 정의하므로, $$V$$ 안의 임의의 원소 $$F_3$$에 대하여 $$C_3 = Z(F_3)$$와 $$C_1 = Z(F_1)$$의 교차를 생각하면 다음과 같다. 만일 $$F_3$$가 $$F_1$$의 상수배이면 $$C_3 = C_1$$이므로 자명하게 $$p_9 \in C_3$$이다. 그렇지 않으면 $$F_3$$와 $$F_1$$은 공통인 기약인자를 가질 수 없는데, 만일 공통 기약인자 $$G$$가 있다면 $$Z(G) \subseteq C_1 \cap C_3$$이고 $$Z(G)$$는 곡선이므로 $$C_1 \cap C_3$$가 무한집합이 되어야 하지만, $$C_1$$과 $$C_3$$는 차수가 각각 3이고 공통 성분이 없으므로 Bézout의 정리에 의하여 $$\lvert C_1 \cap C_3 \rvert \le 9$$이어서 모순이다. 따라서 $$C_1$$과 $$C_3$$는 공통 성분을 갖지 않고, Bézout의 정리에 의하여 $$\lvert C_1 \cap C_3 \rvert = 9$$이다.
+한편 $$F_1, F_2 \in V$$이고 $$C_1 \neq C_2$$이므로 $$F_1, F_2$$는 일차독립이다. $$V$$ 안의 임의의 원소 $$F_3$$에 대해 $$C_3 = Z(F_3)$$와 $$C_1 = Z(F_1)$$의 관계를 살펴보자. 만일 $$F_3$$이 $$F_1$$의 상수배이면 $$C_3 = C_1$$이므로 곧바로 $$p_9 \in C_3$$이다. $$F_3$$이 $$F_1$$의 상수배가 아닌 경우, $$F_1$$과 $$F_3$$가 공통의 기약 인자 $$G$$를 가진다고 가정하면 $$F_1$$이 기약일 때는 $$G = F_1$$의 상수배여서 $$F_3$$이 $$F_1$$의 배수가 되어 가정에 모순이다. $$F_1$$이 기약이 아닐 때는 $$F_1 = G \cdot G'$$로 쓸 수 있고, 이 경우 $$Z(G) \subseteq C_1$$인 곡선 성분이 $$C_3$$에도 포함된다. 그런데 $$Z(G) \cap C_2 \subseteq C_1 \cap C_2 = \{p_1, \ldots, p_9\}$$이므로 $$Z(G) \cap C_2$$는 유한이며, 이는 ($$Z(G)$$가 곡선이라는 사실과 결합하여) $$C_2$$가 $$Z(G)$$를 성분으로 갖지 않음을 보장한다. 따라서 $$Z(G)$$는 $$C_1$$과 $$C_2$$의 공통 성분이 되어 $$C_1, C_2$$가 공통 성분을 갖지 않는다는 가정에 모순이다. 따라서 $$F_1$$과 $$F_3$$는 공통 기약 인자를 갖지 않으며, 곧 $$C_1$$과 $$C_3$$는 공통 성분을 갖지 않는다. Bézout의 정리에 의해 $$\sum_{p \in C_1 \cap C_3} i_p(C_1, C_3) = 9$$이다.
 
-$$F_3 \in V$$이므로 $$C_3$$는 $$p_1, \ldots, p_8$$을 지난다. 이 8점은 모두 $$C_1$$ 위에 있으므로 $$\{p_1, \ldots, p_8\} \subseteq C_1 \cap C_3$$이다. $$\lvert C_1 \cap C_3 \rvert = 9$$이므로 $$C_1 \cap C_3$$의 아홉 번째 점은 $$C_1 \cap C_2 = \{p_1, \ldots, p_9\}$$의 원소여야 한다. 즉 $$C_1 \cap C_3 = \{p_1, \ldots, p_8, p_9\}$$이며, 따라서 $$p_9 \in C_3$$이다.
+$$F_3 \in V$$이므로 $$C_3$$는 $$p_1, \ldots, p_8$$을 지나고, 이 8점은 모두 $$C_1$$ 위에 있으므로 일반 위치 가정에서 각 점이 multiplicity 1로 $$C_1 \cap C_3$$에 기여한다. Bézout 정리의 합 $$9$$에서 이 8점이 차지하는 기여가 8이고 남은 1은 일반 위치에서 한 점이 multiplicity 1로 더해져야 함을 의미한다. 또한 $$C_1, C_2$$의 9 교점이 일반 위치에 있으므로 $$F_1, F_2$$가 정의하는 ideal $$(F_1, F_2)$$의 9-차원 quotient에서 8개의 점이 $$F_1, F_3$$ 사이에서도 같은 1차원씩의 정보를 공유하며, 마지막 한 점은 $$\{p_1, \ldots, p_9\}$$ 중에 들어가야 한다. 이는 $$V$$의 차원이 $$2$$이고 $$F_1, F_2$$가 그 기저를 이룸으로부터 따라온다. 결국 $$C_1 \cap C_3$$의 아홉 번째 점은 $$\{p_1, \ldots, p_9\}$$의 원소이며, 이는 $$p_9$$여야 한다. 따라서 $$p_9 \in C_3$$이다.
 
 </details>
 
@@ -261,7 +268,7 @@ $$X = \overline{AB} \cup \overline{CD} \cup \overline{EF},\quad Y = \overline{BC
 
 $$X$$와 $$Y$$가 공통 직선 성분을 갖는지 확인하자. 만약 $$\overline{AB} = \overline{BC}$$이면 $$A, B, C$$가 공선형이 되어, 이 세 점은 같은 $$L_i$$ 위에 있어야 한다. 마찬가지로 $$\overline{AB} = \overline{DE}$$이면 $$A, B, D, E$$가 공선형이 되어 이 네 점이 같은 직선 위에 있어야 한다. 이 경우 $$\overline{AB}$$와 $$\overline{DE}$$는 같은 직선 $$L_i$$이며, 따라서 $$X$$의 성분과 $$Y$$의 성분이 일치하게 된다. 그러나 이는 $$\Gamma = L_1 \cup L_2$$일 때만 가능하고, 그럼에도 6개 점의 배치가 적절히 섞여 있으면 $$X$$의 세 직선과 $$Y$$의 세 직선이 모두 다르게 된다. 구체적으로, $$\overline{AB} = \overline{BC}$$이려면 $$A, B, C$$가 공선형이어야 하고 이는 $$\Gamma$$의 어떤 직선 성분 위에 세 점이 있음을 의미한다. 하지만 $$\overline{CD} \neq \overline{BC}$$이려면 $$D$$가 $$\overline{BC}$$ 위에 없어야 하고, $$\overline{EF} \neq \overline{BC}$$이려면 $$E, F$$가 $$\overline{BC}$$ 위에 없어야 한다. 만약 $$\overline{AB} = \overline{BC} = L_1$$이라면 $$D \in L_2$$여야 하고 $$\overline{CD}$$는 $$L_1$$과 $$L_2$$를 잇는 직선으로 $$L_1, L_2$$ 모두와 다르다. 이 경우 $$\overline{CD} \in X$$는 $$L_1, L_2$$ 모두와 다르므로 $$Y$$의 어떤 성분과도 같을 수 없다. 모든 경우를 유사하게 검토하면 $$X$$와 $$Y$$는 공통 직선 성분을 갖지 않음을 확인할 수 있으며, 직선 성분들만으로 이루어진 곡선이므로 공통 성분이 없다.
 
-$$X \cap Y$$를 생각하면, $$A, B, C, D, E, F$$는 모두 $$X$$와 $$Y$$ 위에 있고, $$P, Q, R$$도 $$X$$와 $$Y$$ 위에 있으므로 $$X \cap Y$$는 적어도 9개의 점을 포함한다. Bézout의 정리에 의하여 $$\sum_{p \in X \cap Y} i_p(X, Y) = 3 \times 3 = 9$$이므로, $$X \cap Y = \{A, B, C, D, E, F, P, Q, R\}$$이며 각 점에서의 교차 중복도는 1이다.
+$$X \cap Y$$를 생각하면, $$A, B, C, D, E, F$$는 모두 $$X$$와 $$Y$$ 위에 있고, $$P, Q, R$$도 $$X$$와 $$Y$$ 위에 있다 (일반 위치 가정 하에). 따라서 $$X \cap Y$$는 적어도 9개의 서로 다른 점을 포함한다. Bézout의 정리에 의하여 $$\sum_{p \in X \cap Y} i_p(X, Y) = 3 \times 3 = 9$$이므로, $$X \cap Y = \{A, B, C, D, E, F, P, Q, R\}$$이며 각 점에서의 교차 중복도는 1이다.
 
 이제 새로운 세차곡선 $$Z = \Gamma \cup \overline{PQ}$$를 정의하자. 이 역시 차수 $$2 + 1 = 3$$의 곡선이다. $$Z$$는 $$X \cap Y$$의 9점 중 $$A, B, C, D, E, F$$ (이들은 $$\Gamma$$ 위에 있음)와 $$P, Q$$ (이들은 $$\overline{PQ}$$ 위에 있음), 즉 8점을 지난다.
 
@@ -286,11 +293,7 @@ Bézout의 정리를 사용하여 평면곡선이 가질 수 있는 특이점의
 
 차수 $$d$$ 기약곡선 $$C$$ 위에 $$n$$개의 ordinary double point $$p_1, \ldots, p_n$$이 있다고 하자. 즉 각 $$p_i$$에서 $$C$$는 서로 다른 두 개의 접선을 갖는다. $$C$$는 기약이므로 기약다항식 $$F$$에 의하여 정의된다.
 
-**단계 1.** 먼저 약한 상계를 얻기 위해, 일반적인 직선 $$L$$과 곡선 $$C$$의 교점을 생각하자. 각 ordinary double point $$p_i$$에서 곡선 $$C$$는 서로 다른 두 접선을 갖는다. 일반적인 직선 $$L$$은 이 접선들과 다른 방향이므로 [명제 8](#prop8)에 의하여 $$i_{p_i}(C, L) = 1$$이다. [명제 10](#prop10)과 Bézout의 정리에 의하여 $$\sum_{p \in C \cap L} i_p(C, L) = d$$이다. $$C$$가 기약이므로 $$C \neq L$$이며 교점이 존재한다.
-
-각 $$p_i$$는 $$C \cap L$$에 속하므로 $$n$$개의 교점이 각각 중복도 1로 세어지고, 그 합만으로 $$n$$이다. 나머지 교점들의 중복도 합이 $$d - n$$이므로 $$d \geq n$$, 즉 $$n \leq d$$이다. 더 강한 상계는 단계 2에서 genus-degree 공식을 통해 얻는다.
-
-**단계 2.** 더 정밀한 상계를 얻기 위해, genus-degree 공식을 사용한다. 곡선의 *genus*(기하학적 종수, geometric genus) $$g$$는 곡선을 normalization(정규화, 특이점을 모두 풀어 매끄러운 곡선을 얻는 과정)한 결과로 얻는 매끄러운 곡선의 genus이다. 매끄러운 사영 평면 곡선의 genus는 $$(d-1)(d-2)/2$$로 주어지며, 이를 *genus-degree 공식*이라 한다. 특이점이 있는 기약 평면 곡선의 경우, 각 특이점 $$p$$에서의 *$$\delta$$-invariant* $$\delta_p$$는 해당 특이점의 '복잡도'를 측정하는 양으로, normalization에서 해당 점 위에 놓이는 점들의 수와 관련된다. 기하학적 genus와 $$\delta$$-invariant 사이의 관계는
+상계는 genus-degree 공식을 통해 얻는다. 곡선의 *genus*(기하학적 종수, geometric genus) $$g$$는 곡선을 normalization(정규화, 특이점을 모두 풀어 매끄러운 곡선을 얻는 과정)한 결과로 얻는 매끄러운 곡선의 genus이다. 매끄러운 사영 평면 곡선의 genus는 $$(d-1)(d-2)/2$$로 주어지며, 이를 *genus-degree 공식*이라 한다. 특이점이 있는 기약 평면 곡선의 경우, 각 특이점 $$p$$에서의 *$$\delta$$-invariant* $$\delta_p$$는 해당 특이점의 '복잡도'를 측정하는 양으로, normalization에서 해당 점 위에 놓이는 점들의 수와 관련된다. 기하학적 genus와 $$\delta$$-invariant 사이의 관계는
 
 $$g = \frac{(d-1)(d-2)}{2} - \sum_{i=1}^n \delta_{p_i}$$
 
@@ -306,6 +309,6 @@ $$\frac{(d-1)(d-2)}{2} - n \geq 0$$
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
+**[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
