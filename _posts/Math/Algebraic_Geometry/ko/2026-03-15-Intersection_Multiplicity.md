@@ -41,7 +41,7 @@ $$i_p(V, W) = \dim_{\mathbb{K}} \mathcal{O}_{\mathbb{A}^n, p} / (I(V) + I(W))$$
 
 위 정의는 $$V, W$$가 모두 local complete intersection이거나 (특히 hypersurface인 경우 자동으로 성립) Cohen–Macaulay인 경우에 정확한 교차수를 준다. 보다 일반적인 (singular한) 상황에서는 Serre의 *Tor formula*
 
-$$i_p(V, W) = \sum_{i \ge 0} (-1)^i \dim_{\mathbb{K}} \operatorname{Tor}_i^{R}\bigl(R/I(V),\ R/I(W)\bigr)$$
+$$i_p(V, W) = \sum_{i \ge 0} (-1)^i \dim_{\mathbb{K}} \Tor_i^{R}\bigl(R/I(V),\ R/I(W)\bigr)$$
 
 가 올바른 정의이며, 위 정의는 그 $$i = 0$$ 항에 해당한다. 본 글에서 다루는 평면 곡선이나 hypersurface 사이의 교차에서는 두 정의가 일치하므로 위 단순한 정의로 충분하다. 일반적인 형태의 교차수는 ([§Intersection Product](/ko/math/algebraic_geometry/intersection_product))에서 다룬다.
 

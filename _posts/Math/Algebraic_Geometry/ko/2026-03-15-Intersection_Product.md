@@ -35,7 +35,7 @@ Intersection product를 정의하기 위해서는 먼저 두 subvariety가 "잘"
 
 <ins id="def1">**정의 1**</ins> Smooth variety $$X$$ 위의 두 subvariety $$V, W \subset X$$가 *properly intersect<sub>적절히 교차</sub>*한다는 것은 모든 irreducible component $$Z$$ of $$V \cap W$$에 대해:
 
-$$\operatorname{codim}(Z) = \operatorname{codim}(V) + \operatorname{codim}(W)$$
+$$\codim(Z) = \codim(V) + \codim(W)$$
 
 인 것이다.
 
@@ -51,7 +51,7 @@ Proper intersection의 중요성은 다음 명제에 담겨있다.
 
 $$[V] \cdot [W] = \sum_{Z \subset V \cap W} i_Z(V, W) [Z]$$
 
-여기서 $$i_Z(V, W)$$는 각 component $$Z$$에서의 intersection multiplicity이며, 우변은 $$\operatorname{CH}^{\operatorname{codim}(V)+\operatorname{codim}(W)}(X)$$의 원소이다.
+여기서 $$i_Z(V, W)$$는 각 component $$Z$$에서의 intersection multiplicity이며, 우변은 $$\operatorname{CH}^{\codim(V)+\codim(W)}(X)$$의 원소이다.
 
 </div>
 
@@ -60,7 +60,7 @@ $$[V] \cdot [W] = \sum_{Z \subset V \cap W} i_Z(V, W) [Z]$$
 
 Proper intersection의 경우, Serre의 Tor formula에 의해 각 component $$Z$$에서의 intersection multiplicity가
 
-$$i_Z(V, W) = \sum_{i=0}^{\dim X} (-1)^i \operatorname{length}_{\mathcal{O}_{X,Z}} \operatorname{Tor}_i^{\mathcal{O}_{X,Z}}(\mathcal{O}_{V,Z}, \mathcal{O}_{W,Z})$$
+$$i_Z(V, W) = \sum_{i=0}^{\dim X} (-1)^i \length_{\mathcal{O}_{X,Z}} \Tor_i^{\mathcal{O}_{X,Z}}(\mathcal{O}_{V,Z}, \mathcal{O}_{W,Z})$$
 
 로 정의된다. ([§Intersection Multiplicity](/ko/math/algebraic_geometry/intersection_multiplicity))에서 정의한 이 multiplicity는 $$V$$ 또는 $$W$$를 rational equivalence 내에서 이동시켜도 불변임을 보이는 것이 핵심이다. 이 불변성은 곡선족에 의한 deformation argument와 intersection multiplicity의 연속성으로부터 따른다.
 
@@ -89,7 +89,7 @@ $$[L_1] \cdot [L_2] = [p] \in \operatorname{CH}^2(\mathbb{P}^2)$$
 <details class="proof" markdown="1">
 <summary>증명 (스케치)</summary>
 
-핵심은 정의가 cycle의 rational equivalence class에만 의존한다는 것이다. Quasi-projective variety의 경우 moving lemma([명제 6](#prop6))에 의해 $$Z$$를 rationally equivalent한 $$Z'$$로 이동시켜 $$W$$와 properly intersect하도록 할 수 있으며, 두 이동 $$Z'_1, Z'_2$$가 주어지면 $$Z'_1 - Z'_2 = \operatorname{div}(f)$$인 rational function $$f$$가 존재한다. 이때 $$\operatorname{div}(f)$$와 $$W$$의 교차가 rational equivalence에서 $$0$$이 됨을 보이면 $$Z'_1 \cdot W = Z'_2 \cdot W$$가 성립한다. 일반적인 scheme의 경우 Fulton의 deformation to normal cone([명제 9](#prop9))을 사용하여 well-definedness를 pushforward-pullback의 호환성으로 환원한다. 교환법칙은 Serre의 Tor formula의 대칭성으로부터, 결합법칙은 세 cycle의 이동이 독립적으로 가능하다는 사실로부터 따른다.
+핵심은 정의가 cycle의 rational equivalence class에만 의존한다는 것이다. Quasi-projective variety의 경우 moving lemma([명제 6](#prop6))에 의해 $$Z$$를 rationally equivalent한 $$Z'$$로 이동시켜 $$W$$와 properly intersect하도록 할 수 있으며, 두 이동 $$Z'_1, Z'_2$$가 주어지면 $$Z'_1 - Z'_2 = \divisor(f)$$인 rational function $$f$$가 존재한다. 이때 $$\divisor(f)$$와 $$W$$의 교차가 rational equivalence에서 $$0$$이 됨을 보이면 $$Z'_1 \cdot W = Z'_2 \cdot W$$가 성립한다. 일반적인 scheme의 경우 Fulton의 deformation to normal cone([명제 9](#prop9))을 사용하여 well-definedness를 pushforward-pullback의 호환성으로 환원한다. 교환법칙은 Serre의 Tor formula의 대칭성으로부터, 결합법칙은 세 cycle의 이동이 독립적으로 가능하다는 사실로부터 따른다.
 
 </details>
 
@@ -135,7 +135,7 @@ $$Z \cdot W := Z' \cdot W = \sum_{Z \subset Z' \cap W} i_Z(Z', W) [Z]$$
 <details class="proof" markdown="1">
 <summary>증명 (스케치)</summary>
 
-이는 [명제 6](#prop6)의 직접적인 따름이다. 두 이동 $$Z'_1, Z'_2$$ 모두 moving lemma로 얻어진 것이므로 $$Z'_1 - Z'_2$$는 $$\operatorname{div}(f)$$의 형태이다. $$\operatorname{div}(f) \cdot W$$를 계산하면, $$f$$가 rational function이므로 그 graph가 $$\mathbb{P}^1 \times X$$ 위에서 $$W$$와의 교차로 주어지며, $$\mathbb{P}^1$$ 위의 두 점 $$0$$과 $$\infty$$에서의 fiber가 각각 $$Z'_1 \cdot W$$와 $$Z'_2 \cdot W$$에 해당한다. $$\mathbb{P}^1$$의 $$0$$과 $$\infty$$가 rationally equivalent하므로 두 fiber 역시 rationally equivalent하고, 따라서 $$Z'_1 \cdot W = Z'_2 \cdot W \in \operatorname{CH}^\ast(X)$$이다.
+이는 [명제 6](#prop6)의 직접적인 따름이다. 두 이동 $$Z'_1, Z'_2$$ 모두 moving lemma로 얻어진 것이므로 $$Z'_1 - Z'_2$$는 $$\divisor(f)$$의 형태이다. $$\divisor(f) \cdot W$$를 계산하면, $$f$$가 rational function이므로 그 graph가 $$\mathbb{P}^1 \times X$$ 위에서 $$W$$와의 교차로 주어지며, $$\mathbb{P}^1$$ 위의 두 점 $$0$$과 $$\infty$$에서의 fiber가 각각 $$Z'_1 \cdot W$$와 $$Z'_2 \cdot W$$에 해당한다. $$\mathbb{P}^1$$의 $$0$$과 $$\infty$$가 rationally equivalent하므로 두 fiber 역시 rationally equivalent하고, 따라서 $$Z'_1 \cdot W = Z'_2 \cdot W \in \operatorname{CH}^\ast(X)$$이다.
 
 </details>
 
@@ -160,7 +160,7 @@ Fulton의 접근에서 핵심적인 관찰은 다음과 같다. ([§접공간과
 <details class="proof" markdown="1">
 <summary>증명 (스케치)</summary>
 
-구성은 blow-up을 사용한다. 먼저 $$X \times \mathbb{A}^1$$ 안에서 $$Y \times \{0\}$$를 따라 blow-up하여 $$\widetilde{M} = \operatorname{Bl}_{Y \times \{0\}}(X \times \mathbb{A}^1)$$을 얻고, 그 후 $$X \times \{0\}$$의 proper transform을 제거하여 $$M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$$로 정의한다. 이 blow-up의 exceptional divisor는 $$\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$$이며, proper transform을 제거하면 $$t=0$$ fiber에서 정확히 normal cone $$C_{Y/X}$$가 남는다. $$t \neq 0$$에서는 blow-up이 isomorphism이므로 fiber가 $$X$$ 그대로이다. 따라서 $$M \to \mathbb{A}^1$$은 $$t=1$$에서의 $$X$$를 $$t=0$$에서의 $$C_{Y/X}$$로 연결하는 deformation을 제공한다. Chow group에서 $$M$$ 위의 specialization map $$\sigma: \operatorname{CH}^\ast(X) \to \operatorname{CH}^\ast(C_{Y/X})$$을 정의할 수 있고, normal cone이 vector bundle 구조를 가질 때 (즉 regular embedding의 경우) Thom isomorphism에 의해 $$\operatorname{CH}^\ast(C_{Y/X}) \cong \operatorname{CH}^\ast(Y)$$가 되어 intersection product의 well-definedness가 확립된다.
+구성은 blow-up을 사용한다. 먼저 $$X \times \mathbb{A}^1$$ 안에서 $$Y \times \{0\}$$를 따라 blow-up하여 $$\widetilde{M} = \Bl_{Y \times \{0\}}(X \times \mathbb{A}^1)$$을 얻고, 그 후 $$X \times \{0\}$$의 proper transform을 제거하여 $$M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$$로 정의한다. 이 blow-up의 exceptional divisor는 $$\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$$이며, proper transform을 제거하면 $$t=0$$ fiber에서 정확히 normal cone $$C_{Y/X}$$가 남는다. $$t \neq 0$$에서는 blow-up이 isomorphism이므로 fiber가 $$X$$ 그대로이다. 따라서 $$M \to \mathbb{A}^1$$은 $$t=1$$에서의 $$X$$를 $$t=0$$에서의 $$C_{Y/X}$$로 연결하는 deformation을 제공한다. Chow group에서 $$M$$ 위의 specialization map $$\sigma: \operatorname{CH}^\ast(X) \to \operatorname{CH}^\ast(C_{Y/X})$$을 정의할 수 있고, normal cone이 vector bundle 구조를 가질 때 (즉 regular embedding의 경우) Thom isomorphism에 의해 $$\operatorname{CH}^\ast(C_{Y/X}) \cong \operatorname{CH}^\ast(Y)$$가 되어 intersection product의 well-definedness가 확립된다.
 
 </details>
 
@@ -225,7 +225,7 @@ $$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = ab' H_1 H_2 + a'b H_1 H_2 = (ab' +
 <details class="proof" markdown="1">
 <summary>증명 (스케치)</summary>
 
-Well-definedness의 핵심은 $$c_1(L) \cap Z$$가 $$L$$의 rational section의 선택에 의존하지 않는다는 것이다. $$L$$의 두 rational section $$s_1, s_2$$를 생각하면 $$\operatorname{div}(s_1) - \operatorname{div}(s_2) = \operatorname{div}(s_1/s_2)$$이고, $$s_1/s_2 \in \mathbb{K}(X)^\ast$$는 rational function이다. 따라서 $$[\operatorname{div}(s_1)] - [\operatorname{div}(s_2)] = 0 \in \operatorname{CH}^1(X)$$이며, 이는 $$c_1(L)$$가 divisor의 선택과 무관함을 보인다. Cap product의 호환성, 즉 $$c_1(L_1 \otimes L_2) = c_1(L_1) + c_1(L_2)$$는 tensor product에 대응하는 divisor의 덧셈으로부터 바로 따른다.
+Well-definedness의 핵심은 $$c_1(L) \cap Z$$가 $$L$$의 rational section의 선택에 의존하지 않는다는 것이다. $$L$$의 두 rational section $$s_1, s_2$$를 생각하면 $$\divisor(s_1) - \divisor(s_2) = \divisor(s_1/s_2)$$이고, $$s_1/s_2 \in \mathbb{K}(X)^\ast$$는 rational function이다. 따라서 $$[\divisor(s_1)] - [\divisor(s_2)] = 0 \in \operatorname{CH}^1(X)$$이며, 이는 $$c_1(L)$$가 divisor의 선택과 무관함을 보인다. Cap product의 호환성, 즉 $$c_1(L_1 \otimes L_2) = c_1(L_1) + c_1(L_2)$$는 tensor product에 대응하는 divisor의 덧셈으로부터 바로 따른다.
 
 </details>
 
