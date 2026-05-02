@@ -208,7 +208,7 @@ $$\deg D=0$$인 경우가 위에서 언급한 작은 degree의 경우인데, 우
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**</ins> **Genus 2 curve**: $$g = 2$$이면 $$\deg K_C = 2g - 2 = 2$$이다. Canonical divisor $$K_C$$는 두 점의 linear equivalence class이다. 일반적인 점 $$p$$에 대해 $$D = d \cdot p$$라고 하자.
+<ins id="ex6">**예시 6 ($$g=2$$)**</ins> 이제 한 단계 더 복잡한 상황인 $$g=2$$ 경우를 보자. 이 경우 $$\deg K_C = 2g - 2 = 2$$이다. Canonical divisor $$K_C$$는 두 점의 linear equivalence class이다. 일반적인 점 $$p$$에 대해 $$D = d \cdot p$$라고 하자.
 
 $$d = 0$$이면 $$\ell(0) = 1$$로 상수함수만이 global section이다. $$d = 1$$의 경우, $$\ell(p) \ge 2$$라면 degree 1 사상 $$C \to \mathbb{P}^1$$이 존재하여 $$C \cong \mathbb{P}^1$$이 되지만 $$g = 2$$와 모순이므로 $$\ell(p) = 1$$이다. Riemann–Roch에 의해 $$\ell(p) - \ell(K_C - p) = 1 + 1 - 2 = 0$$이므로 $$\ell(K_C - p) = 1$$이다.
 
