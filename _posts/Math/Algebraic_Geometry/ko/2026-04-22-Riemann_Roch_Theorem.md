@@ -208,11 +208,17 @@ $$\deg D=0$$인 경우가 위에서 언급한 작은 degree의 경우인데, 우
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 ($$g=2$$)**</ins> 이제 한 단계 더 복잡한 상황인 $$g=2$$ 경우를 보자. 이 경우 $$\deg K_C = 2g - 2 = 2$$이다. Canonical divisor $$K_C$$는 두 점의 linear equivalence class이다. 일반적인 점 $$p$$에 대해 $$D = d \cdot p$$라고 하자.
+<ins id="ex6">**예시 6 ($$g=2$$)**</ins> 이제 한 단계 더 복잡한 상황인 $$g=2$$ 경우를 보자. 이 경우 $$\deg K_C = 2g - 2 = 2$$이고 $$\ell(K_C)=2$$이다. 즉, complete linear system $$\lvert K_C\rvert$$은 projective dimension $$1$$이며 이로부터 canonical map 
 
-$$d = 0$$이면 $$\ell(0) = 1$$로 상수함수만이 global section이다. $$d = 1$$의 경우, $$\ell(p) \ge 2$$라면 degree 1 사상 $$C \to \mathbb{P}^1$$이 존재하여 $$C \cong \mathbb{P}^1$$이 되지만 $$g = 2$$와 모순이므로 $$\ell(p) = 1$$이다. Riemann–Roch에 의해 $$\ell(p) - \ell(K_C - p) = 1 + 1 - 2 = 0$$이므로 $$\ell(K_C - p) = 1$$이다.
+$$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
-$$d = 2$$의 경우가 더 흥미롭다. 만약 $$2p \sim K_C$$이면 $$\ell(K_C - 2p) = \ell(0) = 1$$이므로 $$\ell(2p) - 1 = 2 + 1 - 2 = 1$$, 즉 $$\ell(2p) = 2$$이다. 이 경우 $$p$$를 *Weierstrass point*라 부른다. 일반적인 점에서는 $$2p \not\sim K_C$$이므로 $$\ell(K_C - 2p) = 0$$이고 $$\ell(2p) = 1$$이다. 마지막으로 $$d \ge 3$$이면 $$\deg(K_C - D) = 2 - d < 0$$이므로 $$\ell(K_C - D) = 0$$이고, 따라서 $$\ell(D) = d - 1$$이다.
+이 주어진다. ([§선형계, ⁋명제 7](/ko/math/algebraic_geometry/linear_systems#prop7)) 그럼 $$\mathbb{P}^1$$을 
+
+즉, 따라서 canonical divisor $$K_C$$는 어떤 두 점의 linear equivalence class $$p_1+p_2$$이다. 이제 일반적인 점 $$p$$에 대해 $$D = d \cdot p$$라고 하자.
+
+1. 만일 $$d = 0$$이면 $$\ell(0) = 1$$이고, 따라서 상수함수만이 global section이다. 
+2. $$d = 1$$의 경우, $$\ell(p) \ge 2$$라면 degree 1 사상 $$C \to \mathbb{P}^1$$이 존재하여 $$C \cong \mathbb{P}^1$$이 되지만 $$g = 2$$와 모순이므로 $$\ell(p) = 1$$이다. Riemann–Roch에 의해 $$\ell(p) - \ell(K_C - p) = 1 + 1 - 2 = 0$$이므로 $$\ell(K_C - p) = 1$$이다.
+3. $$d = 2$$의 경우가 더 흥미롭다. 만약 $$2p \sim K_C$$이면 $$\ell(K_C - 2p) = \ell(0) = 1$$이므로 $$\ell(2p) - 1 = 2 + 1 - 2 = 1$$, 즉 $$\ell(2p) = 2$$이다. 이 경우 $$p$$를 *Weierstrass point*라 부른다. 일반적인 점에서는 $$2p \not\sim K_C$$이므로 $$\ell(K_C - 2p) = 0$$이고 $$\ell(2p) = 1$$이다. 마지막으로 $$d \ge 3$$이면 $$\deg(K_C - D) = 2 - d < 0$$이므로 $$\ell(K_C - D) = 0$$이고, 따라서 $$\ell(D) = d - 1$$이다.
 
 </div>
 
