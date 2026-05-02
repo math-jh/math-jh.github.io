@@ -166,21 +166,27 @@ $$\dim\coker p^\ast=\dim H^1(C, \mathcal{O}_C)-\dim H^0(C, \mathcal{O}_C(K_C-D))
 
 $$\ell(D)=\deg D+1-g$$
 
-을 준다. 즉 genus가 커질수록 같은 degree의 divisor가 만드는 공간이 좁아지는 것이다. 
+을 준다. 즉 genus가 커질수록 같은 degree의 divisor가 만드는 공간이 좁아지는 것이다. 그러나 일반적인 경우는 여기에 $$\ell(K_C-D)$$의 영향이 추가되며, 이 때 주의할 것은 $$\ell(K_C-D)$$ 항은 그 정의상 $$D$$의 degree 뿐만 아니라 $$D$$가 canonical class $$K_C$$와 어떤 관계가 있는지에 따라 달라질 수 있다는 것이다. 이는 *special divisor*의 현상으로 [Brill–Noether theory](#brill-noether)에서 본격적으로 다룬다. 
 
-큰 degree, 즉 $$\deg D > 2g - 2$$인 경우 $$\deg(K_C - D) < 0$$이 되어 $$\ell(K_C - D) = 0$$이고 $$\ell(D) = \deg D + 1 - g$$로 단순화된다. 자명한 한계와 정확히 $$g$$만큼 차이가 나는데, 이 결손이 바로 curve의 위상수학적 복잡도(genus)가 함수론에 새기는 흔적이다. $$\mathbb{P}^1$$ ($$g = 0$$)에서는 결손이 없어 등호가 성립하지만, genus가 커질수록 같은 degree의 divisor가 만드는 함수공간이 그만큼 좁아진다.
+또 다른 특별한 예시로, $$D=0$$을 넣으면
 
-반면 $$\deg D \le 2g - 2$$인 영역에서는 $$\ell(K_C - D)$$가 $$D$$의 위치—$$D$$가 어떤 점들로 이루어졌는지—에 민감하게 의존한다. 같은 degree라도 $$D$$의 점들이 canonical class와 어떤 관계에 있느냐에 따라 $$\ell(D)$$가 달라지며, 이는 *special divisor*의 현상으로 [Brill–Noether theory](#brill-noether)에서 본격적으로 다룬다. Canonical divisor $$K_C$$ 자체에 대해서는 $$\ell(K_C) = h^0(C, \omega_C) = g$$인데, 이는 genus의 미분기하학적 정의—독립적인 global regular 1-form의 개수—와 정확히 일치한다. 정리의 우변 $$\deg D + 1 - g$$도 "$$D$$가 자명하게 기여하는 자유도 ($$\deg D$$)" 더하기 "구조층의 Euler characteristic ($$\rchi(\mathcal{O}_C) = 1 - g$$)"이라는 두 부분의 합으로 읽을 수 있다.
+$$\ell(0)-\ell(K_C)=\deg D+1-g$$
 
-정리하면, $$\ell(D)$$는 $$D$$의 complete linear system의 차원, $$\ell(K_C - D)$$는 $$K_C$$가 $$D$$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $$K_C$$의 기하학적 정보를 반영한다.
+에서, $$\deg D=0$$, $$\ell(0)=1$$이므로 $$\ell(K_C)=g$$가 성립하는 것을 안다. 이제 $$D=K_C$$를 넣으면
+
+$$\ell(K_C)-\ell(0)=\deg K_C +1-g$$
+
+이고 이로부터 [§표준선다발, ⁋예시 10](/ko/math/algebraic_geometry/canonical_bundle#ex10)에서의 계산 $$\deg(K_C)=2g-2$$를 복원할 수 있다. 해당 예시에서는 degree-genus formula를 잘 알려진 공식으로 언급하고 이로부터 $$\deg(K_C)$$를 얻어냈지만 (그리고 이것이 역사적인 맥락에서는 더 타당하지만) 우리는 잠시 후 [명제 7](#prop7)에서 degree-genus formula가 Riemann-Roch theorem의 특수한 경우임을 살펴볼 것이다. 
+
+어쨌든 지금까지의 계산을 정리하면 $$\ell(D)$$는 $$D$$의 complete linear system의 차원, $$\ell(K_C - D)$$는 $$K_C$$가 $$D$$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $$K_C$$의 기하학적 정보를 반영한다는 것으로 생각할 수 있다.
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> **$$\mathbb{P}^1$$**: $$\mathbb{P}^1$$의 genus는 $$g = 0$$이고, canonical divisor는 $$K_{\mathbb{P}^1} = -2H$$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_geometry/canonical_bundle#ex8)). ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_geometry/line_bundles#ex12))에서 $$\mathcal{O}_{\mathbb{P}^1}(d)$$의 global section이 차수 $$d$$의 동차다항식들임을 보였으므로,
+<ins id="ex4">**예시 4**</ins> **$$\mathbb{P}^1$$**: $$\mathbb{P}^1$$의 genus는 $$g = 0$$이고, canonical divisor는 $$K_{\mathbb{P}^1} = -2H$$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_geometry/canonical_bundle#ex8)). 한편, 우리는 ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_geometry/line_bundles#ex12))에서 $$\mathcal{O}_{\mathbb{P}^1}(d)$$의 global section이 차수 $$d$$의 동차다항식들임을 보였으므로,
 
-$$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0).$$
+$$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
-Riemann–Roch 식을 확인해보면, $$D = dH$$에 대해 $$\deg D = d$$이고 $$K_C - D = (-2-d)H$$이므로
+이 성립하는 것을 안다. 이제 Riemann–Roch 식을 확인해보면, $$D = dH$$에 대해 $$\deg D = d$$이고 $$K_C - D = (-2-d)H$$이므로
 
 $$\ell(dH) - \ell(-2H-dH) = d + 1 - 0 = d + 1$$
 
@@ -190,11 +196,13 @@ $$\ell(dH) - \ell(-2H-dH) = d + 1 - 0 = d + 1$$
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> **Genus 1 curve (elliptic curve)**: $$g = 1$$이므로 $$\deg K_C = 2g - 2 = 0$$이다. Riemann–Roch에서 $$D = 0$$을 대입하면 $$\ell(0) - \ell(K_C) = 0 + 1 - 1 = 0$$, 즉 $$\ell(K_C) = \ell(0) = 1$$이다. Degree가 0이고 $$\ell(K_C) = 1$$인 divisor는 반드시 trivial, 즉 $$K_C \sim 0$$이다. 따라서 Riemann–Roch 식은
+<ins id="ex5">**예시 5 (Elliptic curve)**</ins> Genus $$1$$ case $$g = 1$$의 경우, 우리는 위의 계산을 통해 $$\deg K_C=2g-2=0$$이고 $$\ell(K_C)=g=1$$임을 안다. 정의에 의해 $$\ell(K_C)=1$$이라는 것은 $$K_C$$와 linearly equivalent한 effective divisor가 존재한다는 것인데, $$\deg K_C=0$$이므로 이 divisor는 반드시 $$0$$이어야 하고 이로부터 $$K_C\sim 0$$임을 안다. 이를 사용하여 Riemann-Roch를 다시 보면
 
 $$\ell(D) - \ell(-D) = \deg D$$
 
-이 된다. 특히 $$\deg D > 0$$이면 $$\ell(-D) = 0$$이므로 $$\ell(D) = \deg D$$이다. 또 $$\deg D = 0$$이면 $$\ell(D) = 1$$ 또는 $$0$$인데, $$D \sim 0$$인 경우에만 $$\ell(D) = 1$$이다.
+이 된다. 특히 $$\deg D > 0$$이면 $$\ell(-D) = 0$$이므로 $$\ell(D) = \deg D$$이다. 
+
+$$\deg D=0$$인 경우가 위에서 언급한 작은 degree의 경우인데, 우선 부등식 ($$3$$)으로부터 $$\ell(D)=0$$이거나 $$\ell(D)=1$$이어야 한다. 앞서 우리는 $$\ell(K_C-D)$$가 $$K_C$$와 $$D$$의 관계에 의해 결정된다고 하였는데, 이것이 그 좋은 예시로 만일 $$\ell(D)=1$$이라면 적당한 $$f\in H^0(C, \mathcal{O}_C(D))$$가 존재하여 $$\divisor(f)+D\geq 0$$인데, 이 때 effective divisor $$\divisor(f)+D$$의 degree가 $$0$$이므로 이것이 곧 $$0$$이어야 한다. 즉 $$D=-\divisor(f)=\divisor(1/f)$$가 되어 $$D$$는 $$0$$과 linearly equivalent하다. 거꾸로 $$D\sim 0$$이면 $$\mathcal{O}_C(D)\cong \mathcal{O}_C$$이므로 $$\ell(D)=1$$이 성립한다. 즉 $$D$$가 canonical divisor $$K_C$$와 linearly equivalent할 때만 $$\ell(K_C-D)$$ 항이 $$1$$이 되고, 그렇지 않으면 $$0$$이 되는 상황이 된다. 
 
 </div>
 
