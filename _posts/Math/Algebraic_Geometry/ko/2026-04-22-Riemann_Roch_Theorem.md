@@ -39,9 +39,9 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 $$\mathcal{O}_C(D-p)\cong \mathcal{O}_C(D)\otimes \mathcal{O}_C(-p)$$
 
-의 global section임을 확인할 수 있다. 따라서 만일 $$H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C, \mathcal{O}_C(D)$$에서 등호가 성립한다면, 이는 곧 $$\lvert D\rvert$$의 모든 원소가 $$p$$를 지난다는 뜻이므로 $$p$$가 $$\lvert D\rvert$$의 base point가 된다. 한편 $$\lvert D\rvert$$가 basepoint-free라면 우리는 [§선형계](/ko/math/algebraic_geometry/linear_systems)에서 이를 사용하여 regular map $$\varphi_D:C\rightarrow \mathbb{P}^{\ell(D)-1}$$을 정의할 수 있었는데, 이러한 관점에서 $$\ell(D)$$와 $$\ell(D-p)$$의 차이는 점 $$p$$가 divisor $$D$$에 가하는 보정항이라 볼 수 있다. 
+의 global section임을 확인할 수 있다. 따라서 만일 $$H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C, \mathcal{O}_C(D))$$에서 등호가 성립한다면, 이는 곧 $$\lvert D\rvert$$의 모든 원소가 $$p$$를 지난다는 뜻이므로 $$p$$가 $$\lvert D\rvert$$의 base point가 된다. 한편 $$\lvert D\rvert$$가 basepoint-free라면 우리는 [§선형계](/ko/math/algebraic_geometry/linear_systems)에서 이를 사용하여 regular map $$\varphi_D:C\rightarrow \mathbb{P}^{\ell(D)-1}$$을 정의할 수 있었는데, 이러한 관점에서 $$\ell(D)$$와 $$\ell(D-p)$$의 차이는 점 $$p$$가 divisor $$D$$에 가하는 보정항이라 볼 수 있다. 
 
-그럼 이번 글과 다음 글에서 살펴볼 리만-로흐 정리는 이를 어떤 의미에서 확장한 것으로, canonical class 곡선에서의 리만-로흐 정리는 $$K_C$$가 $$D$$에 global하게 가하는 제약이라 생각할 수 있다. 구체적으로 우리가 증명하고자 하는 식은
+그럼 이번 글과 다음 글에서 살펴볼 리만-로흐 정리는 이를 어떤 의미에서 확장한 것으로, canonical class $$K_C$$가 점 $$p$$의 역할을 대신하는 전역적인 역할을 해 준다. 구체적으로 우리가 증명하고자 하는 식은
 
 $$\ell(D)-\ell(K_C-D)=\deg D+1-g$$
 
@@ -220,37 +220,45 @@ $$\deg D=0$$인 경우가 위에서 언급한 작은 degree의 경우인데, 우
 
 </div>
 
+$$K_C \sim 0$$이므로 elliptic curve에서 Riemann-Roch는 특히 단순해진다. $$\deg D > 0$$이면 보정항 $$\ell(K_C-D)=\ell(-D)$$가 사라지므로 $$\ell(D)=\deg D$$로 완벽히 결정되며, 이는 genus가 커질수록 보정항의 영향이 복잡해지는 과정에서 $$g=1$$이 가장 간단한 non-trivial case임을 보여준다.
+
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 ($$g=2$$)**</ins> 이제 한 단계 더 복잡한 상황인 $$g=2$$ 경우를 보자. 이 경우 $$\deg K_C = 2g - 2 = 2$$이고 $$\ell(K_C)=2$$이다. 즉, complete linear system $$\lvert K_C\rvert$$은 projective dimension $$1$$이 된다. 뿐만 아니라, [명제 3](#prop3)에 $$D=p$$를 대입하면
+<ins id="ex6">**예시 6 ($$g=2$$)**</ins> 이제 한 단계 더 복잡한 상황인 $$g=2$$ 경우를 보자. 이 경우 $$\deg K_C = 2g - 2 = 2$$이고 $$\ell(K_C)=2$$이며, [명제 3](#prop3)에 $$D=p$$를 대입하면
 
 $$\ell(p)-\ell(K_C-p)=2-g$$
 
-이고, $$g\ge 1$$에서는 $$\ell(p)=1$$이므로 $$\ell(K_C-p)=g-1=\ell(K_C)-1$$이다. 앞서 본 것처럼, 이는 $$\lvert K_C\rvert$$의 모든 원소가 $$p$$를 지나지 않음을 의미하므로 $$\lvert K_C\rvert$$는 basepoint-free이다. 따라서 [§선형계](/ko/math/algebraic_geometry/linear_systems)에 의해 canonical map
+이므로 $$\ell(K_C-p)=\ell(K_C)-1<\ell(K_C)$$이므로 canonical map
 
 $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
-이 잘 정의된다.
+이 잘 정의된다. 그럼 $$\mathbb{P}^1$$에서의 hyperplane, 즉 $$\mathbb{P}^1$$의 한 점에 대한 preimage는 $$K_C$$와 linearly equivalent한 effective divisor가 되며 이것이 degree $$2$$ map이라는 사실로부터 $$K_C$$를 두 점의 합 $$p_1+p_2$$로 쓸 수 있다.
 
-그럼 $$\mathbb{P}^1$$을 공역으로 하는 $$\varphi_{K_C}$$는 실제로 $$C$$에서 $$\mathbb{P}^1$$으로의 2:1 branched covering이며, 따라서 $$\mathbb{P}^1$$ 위의 한 점 $$q$$에 대한 preimage $$\varphi_{K_C}^{-1}(q)$$는 일반적으로 서로 다른 두 점 $$p_1, p_2$$의 합이 된다. 한편 $$\varphi_{K_C}$$는 기저 $$s_0,s_1\in H^0(C,K_C)$$에 의해 $$p\mapsto[s_0(p):s_1(p)]$$으로 주어지므로, $$q=[a:b]$$의 preimage는 section $$bs_0-as_1\in H^0(C,K_C)$$의 zero divisor이다. 따라서 이 preimage는 $$\lvert K_C\rvert$$에 속하는 effective divisor이며, 특히 $$K_C$$와 linearly equivalent하다.
+이제 한 점 $$p$$의 배수 $$D=d\cdot p$$에 Riemann-Roch를 적용하여 $$\ell(D)$$가 $$d$$에 따라 어떻게 변하는지 살펴 보자. 작은 $$d$$, 즉 $$\ell(K_C-D)$$가 살아있는 곳에서는 특수한 현상이 나타나지만, $$d$$가 커지면 $$\ell(D)$$는 선형적으로 안정화된다.
 
-즉, canonical divisor $$K_C$$는 일반적으로 서로 다른 두 점의 linear equivalence class $$p_1+p_2$$이다. 이제 일반적인 점 $$p$$에 대해 $$D = d \cdot p$$라고 하자.
-
-1. 만일 $$d = 0$$이면 $$\ell(0) = 1$$이고, 따라서 상수함수만이 global section이다. 
-2. $$d = 1$$의 경우, $$\ell(p) \ge 2$$라면 degree 1 사상 $$C \to \mathbb{P}^1$$이 존재하여 $$C \cong \mathbb{P}^1$$이 되지만 $$g = 2$$와 모순이므로 $$\ell(p) = 1$$이다. Riemann–Roch에 의해 $$\ell(p) - \ell(K_C - p) = 1 + 1 - 2 = 0$$이므로 $$\ell(K_C - p) = 1$$이다.
-3. $$d = 2$$의 경우가 더 흥미롭다. 만약 $$2p \sim K_C$$이면 $$\ell(K_C - 2p) = \ell(0) = 1$$이므로 $$\ell(2p) - 1 = 2 + 1 - 2 = 1$$, 즉 $$\ell(2p) = 2$$이다. 이 경우 $$p$$를 *Weierstrass point*라 부른다. Geometric하게 본다면, 이는 $$p$$가 hyperelliptic involution의 고정점이자 canonical map $$\varphi_{K_C}$$의 ramification point라는 뜻이다. 일반적인 점에서는 $$2p \not\sim K_C$$이므로 $$\ell(K_C - 2p) = 0$$이고 $$\ell(2p) = 1$$이다. 마지막으로 $$d \ge 3$$이면 $$\deg(K_C - D) = 2 - d < 0$$이므로 $$\ell(K_C - D) = 0$$이고, 따라서 $$\ell(D) = d - 1$$이다.
+1. $$d=1$$의 경우, $$\ell(p)\ge 2$$라면 degree 1 사상 $$C\to\mathbb{P}^1$$이 존재하여 $$C\cong\mathbb{P}^1$$이 되지만 $$g=2$$와 모순이므로 $$\ell(p)=1$$이다. Riemann-Roch에 의해 $$\ell(K_C-p)=1$$이다.
+2. $$d=2$$의 경우, 만약 $$2p\sim K_C$$이면 $$\ell(2p)=2$$이다. 이 경우 $$p$$를 *Weierstrass point*라 부르는데, 이 조건은 정확히 위의 canonical map $$\varphi_{K_C}$$에 대한 어떤 점의 preimage가 $$p$$로 겹쳐있는 상황에 해당한다. 일반적인 점에서는 $$2p\not\sim K_C$$이므로 $$\ell(2p)=1$$이다.
+3. $$d\ge 3$$이면 $$\deg(K_C-D)=2-d<0$$이므로 $$\ell(K_C-D)=0$$이고, 따라서 $$\ell(D)=d-1$$이다.
 
 </div>
 
-지금까지 곡선에서의 Riemann–Roch 정리와 몇 가지 구체적인 예시를 살펴보았다. 이제 이 정리의 응용들을 다룬다.
+위의 예시에서 살펴 본 $$g=2$$의 canonical map $$\varphi_{K_C}: C \rightarrow \mathbb{P}^1$$은 2:1 branched covering이었다. 더 일반적으로, 우리는 genus $$g \ge 2$$인 curve 중 $$\mathbb{P}^1$$로의 degree 2 covering이 존재하는 것을 *hyperelliptic curve<sub>초타원곡선</sub>*라 부르고, 그렇지 않은 경우를 *non-hyperelliptic curve*라 한다. 관례적으로 genus $$0,1$$인 경우는 hyperelliptic curve에서 제외하는 것에 유의하자.
+
+이제 $$g\geq 2$$인 $$C$$에서 canonical bundle $$K_C$$의 complete linear system $$\lvert K_C\rvert$$가 정의하는 morphism $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$의 거동을 살펴보자. 우리는 위에서 $$\deg K_C = 2g - 2$$이고 $$h^0(K_C) = g$$인 것을 확인했으므로, $$\varphi_{K_C}$$의 공역은 $$\mathbb{P}^{g-1}$$이다. 그러나 이는 일반적으로는 closed embedding이 아니며, 이는 $$g=2$$인 경우 이것이 $$2:1$$ covering map이 된다는 것에서 이미 확인하였다. 실제로 $$\varphi_{K_C}$$의 image는 정확히 Veronese embedding $$\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$$의 image, 즉 degree $$g-1$$의 rational normal curve이다. 이에 대한 증명은 [Har, IV.5.2]를 참조한다.
+
+따라서 $$K_C$$는 ample이지만 very ample이 아닌 line bundle의 구체적인 예시를 제공한다. 이는 [§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)에서 언급되었던 "ample but not very ample" 현상의 실현이다. Curve에서 $$\mathcal{L}$$이 very ample이기 위한 충분조건이 $$\deg \mathcal{L} \ge 2g + 1$$임이 알려져 있으며 ([Har, IV.3.2]), $$\deg K_C = 2g - 2 < 2g + 1$$이므로 이 조건을 만족하지 못함도 확인할 수 있다. 대신 $$K_C$$의 적절한 거듭제곱이 very ample이 됨을 확인할 수 있다. $$g \ge 3$$이면 $$\deg K_C^{\otimes 2} = 4g - 4 \ge 2g + 1$$이 성립하므로 $$K_C^{\otimes 2}$$는 very ample이다. $$g = 2$$이면 $$\deg K_C^{\otimes 2} = 4 < 5 = 2g + 1$$이지만, $$\deg K_C^{\otimes 3} = 3(2g - 2) = 6 > 5 = 2g + 1$$이므로 $$K_C^{\otimes 3}$$가 very ample이다. 어느 경우에도 $$K_C$$의 어떤 거듭제곱이 very ample이 되므로, ample의 정의—어떤 거듭제곱이 very ample이면 ample—와 완벽하게 부합한다.
+
+이와 대조적으로, $$g \ge 3$$인 non-hyperelliptic curve에서는 canonical map $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$가 closed embedding이 되어, $$K_C$$ 자체가 very ample이다 ([Har, IV.5.4]).
+
+
 
 ## 응용
 
-### Degree-genus formula
+우리는 [§표준선다발, ⁋예시 10](/ko/math/algebraic_geometry/canonical_bundle#ex10)에서 $$\deg K_C=2g-2$$가 된다는 것을 보이기 위해 다음 명제를 잘 알려진 사실이라고 주장하며 넘겼지만, 이제는 이에 대한 증명을 엄밀하게 할 수 있다. 다만 이는 해당 예시와는 정반대로, 해당 예시에서는 adjunction formula와 degree-genus formula를 활용하여 $$\deg K_C=2g-2$$임을 증명하였지만 이제 우리는 $$\deg K_C=2g-2$$라는 사실과 adjunction formula로부터 degree-genus formula를 유도한다. $$K_C$$의 degree는 앞서 [예시 4](#ex4) 이전에 이미 Riemann-Roch로부터 (degree-genus formula를 사용하지 않고) 얻어졌음에 유의하자.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Degree $$d$$의 smooth plane curve $$C \subset \mathbb{P}^2$$에 대해
+<ins id="prop7">**명제 7 (Degree-genus formula)**</ins> Degree $$d$$의 smooth plane curve $$C \subset \mathbb{P}^2$$에 대해
 
 $$g(C) = \frac{(d-1)(d-2)}{2}$$
 
@@ -309,22 +317,6 @@ $$d = 3$$, $$r = 1$$의 경우 $$\rho = 2 - (1+1)(2-3+1) = 2 - 0 = 2 > 0$$이므
 $$d = 0$$, $$r = 0$$의 경우 $$\rho = 2 - 1 \cdot 2 = 0$$이고, $$W^0_0 = \{0\}$$로 trivial divisor가 유일한 점이다.
 
 </div>
-
-### Canonical divisor의 degree와 genus
-
-Riemann–Roch 정리에서 $$D = K_C$$를 대입하면 $$\ell(K_C) - \ell(0) = \deg K_C + 1 - g$$를 얻는다. $$\ell(0) = 1$$이고 $$\ell(K_C) = h^0(C, \omega_C) = g$$이므로, $$\deg K_C = 2g - 2$$라는 기본적인 관계식이 따라 나온다. 이 결과는 degree-genus formula ([명제 7](#prop7))의 증명에서도 이미 사용되었음을 기억하자.
-
-Canonical divisor의 degree는 curve의 genus에 따라 본질적으로 다른 거동을 보인다. $$g = 0$$, 즉 $$C \cong \mathbb{P}^1$$의 경우, $$\deg K_C = -2 < 0$$이므로 $$K_C$$는 ample이 아니다. 사실 $$K_{\mathbb{P}^1} = -2P$$이므로 $$K_C$$는 negative degree를 갖는다. $$g = 1$$, 즉 *elliptic curve*의 경우를 살펴보기 전에, 이 용어를 정의하자. Genus 1인 smooth projective curve를 *elliptic curve<sub>타원곡선</sub>*라 부른다. (엄밀하게는 하나의 기준점이 선택된 genus 1 curve를 elliptic curve라 하지만, 여기서는 이 구분을 중요하게 다루지 않는다.) 이 경우 $$\deg K_C = 0$$이며 실제로 $$K_C \sim 0$$이므로 $$\omega_C \cong \mathcal{O}_C$$가 trivial하다. 따라서 $$K_C$$ 역시 ample이 아니다. $$g \ge 2$$의 경우, $$\deg K_C = 2g - 2 > 0$$이다. Curve에서 $$\deg \mathcal{L} > 0$$인 line bundle $$\mathcal{L}$$은 항상 ample이다. Riemann–Roch theorem에 의해 $$\dim H^0(C, \mathcal{L}^{\otimes m}) = m \cdot \deg \mathcal{L} - g + 1$$ ($$m$$이 충분히 클 때)이며, 이는 충분히 큰 $$m$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample section들을 충분히 많이 가짐을 의미하므로 ([§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)), $$K_C$$는 ample이다.
-
-### Hyperelliptic curve에서의 canonical bundle
-
-Genus $$g \ge 2$$인 curve 중 $$\mathbb{P}^1$$로의 degree 2 covering이 존재하는 것을 *hyperelliptic curve<sub>초타원곡선</sub>*라 부른다. 구체적으로, $$C$$는 $$\y^2 = f(\x)$$ ($$f$$는 서로 다른 근을 갖는 degree $$2g + 1$$ 또는 $$2g + 2$$ 다항식)에 의해 주어진 affine curve의 smooth completion으로 나타낼 수 있다. 주의할 점은, genus 0인 $$\mathbb{P}^1$$과 genus 1인 elliptic curve 역시 $$\mathbb{P}^1$$에 대한 degree 2 covering을 갖지만, 이들은 관례적으로 hyperelliptic curve에서 제외한다는 것이다.
-
-이러한 $$C$$에서 canonical bundle $$K_C$$의 complete linear system $$\lvert K_C\rvert$$가 정의하는 morphism $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$의 거동을 살펴보자. $$\deg K_C = 2g - 2$$이고 $$h^0(K_C) = g$$이므로, $$\varphi_{K_C}$$의 공역은 $$\mathbb{P}^{g-1}$$이다. 그러나 실제로 $$\varphi_{K_C}$$는 본래의 hyperelliptic double cover $$C \rightarrow \mathbb{P}^1$$로 분해되며, 2:1 covering map이 되므로 closed embedding이 아니다. 즉, $$\varphi_{K_C}$$의 image는 정확히 Veronese embedding $$\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$$의 image, 즉 degree $$g-1$$의 rational normal curve이다. 이에 대한 증명은 [Har, IV.5.2]를 참조한다.
-
-따라서 $$K_C$$는 ample이지만 very ample이 아닌 line bundle의 구체적인 예시를 제공한다. 이는 [§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)에서 언급되었던 "ample but not very ample" 현상의 실현이다. Curve에서 $$\mathcal{L}$$이 very ample이기 위한 충분조건이 $$\deg \mathcal{L} \ge 2g + 1$$임이 알려져 있으며 ([Har, IV.3.2]), $$\deg K_C = 2g - 2 < 2g + 1$$이므로 이 조건을 만족하지 못함도 확인할 수 있다. 대신 $$K_C$$의 적절한 거듭제곱이 very ample이 됨을 확인할 수 있다. $$g \ge 3$$이면 $$\deg K_C^{\otimes 2} = 4g - 4 \ge 2g + 1$$이 성립하므로 $$K_C^{\otimes 2}$$는 very ample이다. $$g = 2$$이면 $$\deg K_C^{\otimes 2} = 4 < 5 = 2g + 1$$이지만, $$\deg K_C^{\otimes 3} = 3(2g - 2) = 6 > 5 = 2g + 1$$이므로 $$K_C^{\otimes 3}$$가 very ample이다. 어느 경우에도 $$K_C$$의 어떤 거듭제곱이 very ample이 되므로, ample의 정의—어떤 거듭제곱이 very ample이면 ample—와 완벽하게 부합한다.
-
-이와 대조적으로, $$g \ge 3$$인 non-hyperelliptic curve에서는 canonical map $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$가 closed embedding이 되어, $$K_C$$ 자체가 very ample이다 ([Har, IV.5.4]).
 
 ---
 
