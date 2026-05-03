@@ -33,11 +33,21 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 일반적으로 우리는 $$\mathcal{O}_X(D)$$를 $$D$$를 따라 order $$1$$의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $$H^0(C, \mathcal{O}_C(D))$$는 $$X$$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
 
-이 공간 $$H^0(C, \mathcal{O}_C(D))$$는 [§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)에서 처음 도입했던 것을 기억하자. 그에 따르면 공간 $$H^0(C, \mathcal{O}_C(D))$$는 주어진 divisor $$D$$와 linearly equivalent한 divisor들의 모임이며, 이로부터 우
+이 공간 $$H^0(C, \mathcal{O}_C(D))$$는 [§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)에서 처음 도입했던 것을 기억하자. 그에 따르면 공간 $$H^0(C, \mathcal{O}_C(D))$$는 주어진 divisor $$D$$와 linearly equivalent한 divisor들의 모임이며, 이를 projectivize하여 $$\mathcal{O}_C(D)$$의 *complete linear system* $$\lvert \mathcal{O}_X(D)\rvert$$를 얻을 수 있었다. 이 글에서는 편의상 이를 $$\lvert D\rvert$$으로 적기로 한다. 그럼 위의 Riemann-Roch dimension은 $$\lvert D\rvert$$의 projective dimension에 $$1$$을 더한 값이 된다. 
 
-한편, $$H^0(C,\mathcal{O}_C(D))$$의 (nonzero) 원소 $$s$$는 $$\mathcal{O}_C(D)$$의 global section이며, 이는 $$D$$와 linearly equivalent한 effective divisor $$\operatorname{div}(s)+D$$를 정의한다. 이때 $$s$$와 그 nonzero scalar multiple은 동일한 divisor를 주므로, 실제로 $$D$$와 linearly equivalent한 effective divisor들의 모임, 즉 complete linear system $$\lvert D\rvert$$는 $$H^0(C,\mathcal{O}_C(D))$$의 projectivization $$\mathbb{P}(H^0(C,\mathcal{O}_C(D)))$$와 일치한다. () 이 관점에서 $$\ell(D)$$는 바로 $$\lvert D\rvert$$의 projective dimension에 $$1$$을 더한 값이 된다. 특히 $$\ell(D)>0$$이면 $$\lvert D\rvert$$는 비어있지 않으며, 따라서 $$D$$와 linearly equivalent한 effective divisor가 존재한다. 반대로 effective divisor의 degree는 항상 nonnegative이고, degree가 $$0$$인 effective divisor는 오직 $$0$$뿐이다.
+이제 점 $$p\in C$$를 고정하자. 그럼 $$p$$를 지나는 $$\lvert D\rvert$$의 원소들은 그 정의에 의해 $$H^0(C,\mathcal{O}_C(D))$$의 원소들 중 $$s(p)=0$$을 만족하는 section들로 생각할 수 있다. 즉, 이러한 $$s$$는 $$\divisor(s)-p\geq 0$$을 만족하는 $$H^0(C, \mathcal{O}_C(D))$$의 원소이며, 이를 통해 정확히 이러한 원소들의 모임이
 
-특히, 고정된 점 $$p\in C$$를 지나는 $$\lvert D\rvert$$의 원소들은 $$s(p)=0$$을 만족하는 section들, 다시 말해 부분공간 $$H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C,\mathcal{O}_C(D))$$에 해당한다. 따라서 $$\ell(D-p)=\ell(D)$$가 성립한다면 $$\lvert D\rvert$$의 모든 원소가 $$p$$를 지나게 되어 $$p$$는 basepoint가 되고, 그렇지 않다면 $$p$$를 지나지 않는 원소가 존재하게 된다. 앞으로의 예시들에서 이러한 해석을 반복적으로 사용할 것이다.
+$$\mathcal{O}_C(D-p)\cong \mathcal{O}_C(D)\otimes \mathcal{O}_C(-p)$$
+
+의 global section임을 확인할 수 있다. 따라서 만일 $$H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C, \mathcal{O}_C(D)$$에서 등호가 성립한다면, 이는 곧 $$\lvert D\rvert$$의 모든 원소가 $$p$$를 지난다는 뜻이므로 $$p$$가 $$\lvert D\rvert$$의 base point가 된다. 만일 $$\lvert D\rvert$$가 basepoint-free라면, 우리는 [§선형계](/ko/math/algebraic_geometry/linear_systems)에서 이를 사용하여 regular map $$\varphi_D:C\rightarrow \mathbb{P}^{\ell(D)-1}$$을 정의할 수 있었다. 이제 $$\mathbb{P}^{\ell(D)-1}$$의 임의의 hyperplane 
+
+$$H: a_0\x_0+\cdots+a_{\ell(d)-1}\x_{\ell(d)-1}=0$$
+
+를 생각하면, $$H$$의 $$\varphi_D$$에 대한 preimage는 다음의 global section
+
+$$\sigma=a_0s_0+\cdots+a_{\ell(d)-1}s_{\ell(d)-1}\in H^0(C, \mathcal{O}_C(D))$$
+
+의 zero set이며, 따라서 이 section이 정의하는 divisor $$\divisor(\sigma)$$는 $$\lvert D\rvert$$에 속하는 effective divisor가 된다. 
 
 그럼 Serre duality에 의하여
 
@@ -218,7 +228,7 @@ $$\deg D=0$$인 경우가 위에서 언급한 작은 degree의 경우인데, 우
 
 $$\ell(p)-\ell(K_C-p)=2-g$$
 
-이고, $$g\ge 1$$에서는 $$\ell(p)=1$$이므로 $$\ell(K_C-p)=g-1=\ell(K_C)-1$$이다. 앞서 본 것처럼, 이는 $$\lvert K_C\rvert$$의 모든 원소가 $$p$$를 지나지 않음을 의미하므로 $$\lvert K_C\rvert$$는 basepoint-free이다. 따라서 [§선형계, ⁋명제 7](/ko/math/algebraic_geometry/linear_systems#prop7)에 의해 canonical map
+이고, $$g\ge 1$$에서는 $$\ell(p)=1$$이므로 $$\ell(K_C-p)=g-1=\ell(K_C)-1$$이다. 앞서 본 것처럼, 이는 $$\lvert K_C\rvert$$의 모든 원소가 $$p$$를 지나지 않음을 의미하므로 $$\lvert K_C\rvert$$는 basepoint-free이다. 따라서 [§선형계](/ko/math/algebraic_geometry/linear_systems)에 의해 canonical map
 
 $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 

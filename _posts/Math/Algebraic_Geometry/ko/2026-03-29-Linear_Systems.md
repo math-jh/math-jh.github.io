@@ -146,9 +146,33 @@ $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\
 
 </div>
 
+Basepoint-free linear system의 핵심적인 성질은 다음과 같다. $$L=\mathbb{P}(V)$$가 basepoint-free이면 $$V$$의 기저 $$F_0,\ldots,F_r$$는 $$\bigcap Z(F_i)\cap X=\emptyset$$을 만족하므로, 이를 사용하면 다음의 regular map
+
+$$\varphi_L:X\to\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
+
+을 정의된다. 우리가 처음 linear system에 관심을 가진 것은 주어진 divisor $$D$$에 대해 $$D$$와 linearly equivalent한 effective divisor를 찾기 위해서였는데, 다음 명제는 이에 대한 직접적인 대답을 준다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop6">**명제 6**</ins> 위의 상황에서, $$\mathbb{P}^r$$의 hyperplane $$H$$는 $$\lvert L\rvert$$에 속하는 effective divisor를 정의한다. 
+
+</div>
+
+이를 확인하기 위해서는 
+
+$$\mathbb{P}^r$$의 hyperplane $$H: a_0\x_0+\cdots+a_r\x_r=0$$
+
+에 대하여, $$\varphi_L^{-1}(H)$$는 다음의 global section 
+
+$$\sigma=a_0F_0+\cdots+a_rF_r\in V$$
+
+의 zero set, 즉 $$\divisor(\sigma)$$와 일치한다는 것을 확인하면 된다. 
+
+좀 더 구체적인 예시를 살펴 보자.
+
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**</ins> [예시 3](#ex3)에서 살펴본 $$\mathbb{P}^n$$의 두 예시를 살펴보자. 우선 처음의 complete linear system 
+<ins id="ex7">**예시 7**</ins> [예시 3](#ex3)에서 살펴 본 $$\mathbb{P}^n$$의 두 예시를 살펴 보자. 우선 처음의 complete linear system 
 
 $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_1)$$
 
@@ -158,23 +182,7 @@ $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_
 
 </div>
 
-위에서 살펴봤듯, basepoint-free linear system의 핵심 성질은 $$\varphi_L$$이 잘 정의된다는 것이다. 즉 다음이 성립한다.
-
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> Quasiprojective variety $$X \subseteq \mathbb{P}^n$$ 위의 basepoint-free linear system $$L = \mathbb{P}(V)$$에서, $$V$$의 기저 $$F_0, \ldots, F_r \in \mathbb{K}[\x_0, \ldots, \x_n]_d$$가 다음 조건을 만족한다고 하자.
-
-$$\bigcap_{i=0}^r Z(F_i) \cap X = \emptyset$$
-
-그러면 $$V$$는 $$X$$에서 projective space로의 regular map
-
-$$\varphi_L: X \to \mathbb{P}^r, \quad p \mapsto [F_0(p) : \cdots : F_r(p)]$$
-
-을 정의한다. 여기서 $$F_i(p)$$는 $$F_i$$의 $$p$$에서의 값을 나타낸다.
-
-</div>
-
-위에서와 다른 예시를 하나만 더 살펴보자.
+위의 예시는 basepoint라는 이름의 유래를 직관적으로 보여주지만, $$\varphi_L$$이 identity이므로 [명제 6](#prop6)은 사실 큰 의미가 없다. 좀 더 non-trivial한 예시를 살펴 보자.
 
 <div class="example" markdown="1">
 
@@ -184,6 +192,17 @@ $$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : 
 
 이다. 이는 [§사영다양체, ⁋예시 16](/ko/math/algebraic_geometry/projective_varieties#ex16)에서 살펴본 Veronese embedding을 complete linear system의 언어로 복원할 수 있다는 것을 보여준다. 
 
+
+예를 들어 $$\mathbb{P}^d$$의 hyperplane $$H_0: \x_0 = 0$$을 생각하면,
+
+$$\nu_d^{-1}(H_0) = \{[s:t] \in \mathbb{P}^1 \mid s^d = 0\}$$
+
+이므로 scheme-theoretic하게 이는 점 $$[0:1]$$에 multiplicity $$d$$를 주는 effective divisor $$d\cdot[0:1]$$이 된다. 반면 hyperplane $$H_1: \x_0 - \x_d = 0$$에 대해서는
+
+$$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
+
+이고, $$s^d - t^d$$는 $$d$$개의 서로 다른 linear factor의 곱으로 분해되므로(가령 $$\mathbb{K}=\mathbb{C}$$라면 $$s^d-t^d=\prod_{k=0}^{d-1}(s-\zeta^k t)$$) $$\nu_d^{-1}(H_1)$$은 $$\mathbb{P}^1$$ 위의 서로 다른 $$d$$개의 점으로 이루어진 effective divisor이다. 어떤 경우에도 이 preimage들은 $$\lvert \mathcal{O}_{\mathbb{P}^1}(d)\rvert$$에 속하는 degree $$d$$ effective divisor이다.
+
 </div>
 
 ## Ample line bundle
@@ -192,7 +211,7 @@ $$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : 
 
 가령 우리의 언어에서 $$\mathbb{P}^1\times \mathbb{P}^1$$이 (quasi-projective) variety라고 하려면 반드시 이를 어떤 projective space로 넣어주어야 한다. ([§사영다양체, ⁋예시 16](/ko/math/algebraic_geometry/projective_varieties#ex16)) 대신, variety의 정의에서 ambient projective space의 존재를 가정하지 않는다면 이를 굳이 보이지 않아도 $$\mathbb{P}^1\times \mathbb{P}^1$$은 자동으로 variety이지만, 일반적인 variety가 projective space로 embed되는지는 불분명하다는 것이다. 
 
-그러나 추상적인 variety에서도 line bundle과 linear system 등등을 모두 정의할 수 있다. 그럼 특히 [명제 7](#prop7)을 사용하면 projective space로의 적절한 함수를 정의할 수 있게 된다. 다음 정의의 중요성은 이러한 맥락에서 이해해야 한다.
+그러나 추상적인 variety에서도 line bundle과 linear system 등등을 모두 정의할 수 있다. 그럼 특히 [명제 6](#prop6)을 사용하면 projective space로의 적절한 함수를 정의할 수 있게 된다. 다음 정의의 중요성은 이러한 맥락에서 이해해야 한다.
 
 <div class="definition" markdown="1">
 
