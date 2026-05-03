@@ -158,17 +158,11 @@ $$\varphi_L:X\to\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
 
 </div>
 
-이를 확인하기 위해서는 
-
-$$\mathbb{P}^r$$의 hyperplane $$H: a_0\x_0+\cdots+a_r\x_r=0$$
-
-에 대하여, $$\varphi_L^{-1}(H)$$는 다음의 global section 
+이를 확인하기 위해서는 $$\mathbb{P}^r$$의 hyperplane $$H: a_0\x_0+\cdots+a_r\x_r=0$$에 대하여, $$\varphi_L^{-1}(H)$$는 다음의 global section 
 
 $$\sigma=a_0F_0+\cdots+a_rF_r\in V$$
 
-의 zero set, 즉 $$\divisor(\sigma)$$와 일치한다는 것을 확인하면 된다. 
-
-좀 더 구체적인 예시를 살펴 보자.
+의 zero set, 즉 $$\divisor(\sigma)$$와 일치한다는 것을 확인하면 된다. 좀 더 구체적인 예시를 살펴 보자.
 
 <div class="example" markdown="1">
 
@@ -192,12 +186,11 @@ $$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : 
 
 이다. 이는 [§사영다양체, ⁋예시 16](/ko/math/algebraic_geometry/projective_varieties#ex16)에서 살펴본 Veronese embedding을 complete linear system의 언어로 복원할 수 있다는 것을 보여준다. 
 
-
 예를 들어 $$\mathbb{P}^d$$의 hyperplane $$H_0: \x_0 = 0$$을 생각하면,
 
 $$\nu_d^{-1}(H_0) = \{[s:t] \in \mathbb{P}^1 \mid s^d = 0\}$$
 
-이므로 scheme-theoretic하게 이는 점 $$[0:1]$$에 multiplicity $$d$$를 주는 effective divisor $$d\cdot[0:1]$$이 된다. 반면 hyperplane $$H_1: \x_0 - \x_d = 0$$에 대해서는
+이므로 scheme-theoretic하게 이는 점 $$[0:1]$$에 multiplicity $$d$$를 주는 effective divisor $$d\cdot[0:1]$$이 된다. 또 다른 예시로 hyperplane $$H_1: \x_0 - \x_d = 0$$에 대해서는
 
 $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 
