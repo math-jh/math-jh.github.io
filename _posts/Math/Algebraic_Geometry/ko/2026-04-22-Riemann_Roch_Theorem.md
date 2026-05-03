@@ -39,17 +39,15 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 $$\mathcal{O}_C(D-p)\cong \mathcal{O}_C(D)\otimes \mathcal{O}_C(-p)$$
 
-의 global section임을 확인할 수 있다. 따라서 만일 $$H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C, \mathcal{O}_C(D)$$에서 등호가 성립한다면, 이는 곧 $$\lvert D\rvert$$의 모든 원소가 $$p$$를 지난다는 뜻이므로 $$p$$가 $$\lvert D\rvert$$의 base point가 된다. 만일 $$\lvert D\rvert$$가 basepoint-free라면, 우리는 [§선형계](/ko/math/algebraic_geometry/linear_systems)에서 이를 사용하여 regular map $$\varphi_D:C\rightarrow \mathbb{P}^{\ell(D)-1}$$을 정의할 수 있었다. 이제 $$\mathbb{P}^{\ell(D)-1}$$의 임의의 hyperplane 
+의 global section임을 확인할 수 있다. 따라서 만일 $$H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C, \mathcal{O}_C(D)$$에서 등호가 성립한다면, 이는 곧 $$\lvert D\rvert$$의 모든 원소가 $$p$$를 지난다는 뜻이므로 $$p$$가 $$\lvert D\rvert$$의 base point가 된다. 한편 $$\lvert D\rvert$$가 basepoint-free라면 우리는 [§선형계](/ko/math/algebraic_geometry/linear_systems)에서 이를 사용하여 regular map $$\varphi_D:C\rightarrow \mathbb{P}^{\ell(D)-1}$$을 정의할 수 있었는데, 이러한 관점에서 $$\ell(D)$$와 $$\ell(D-p)$$의 차이는 점 $$p$$가 divisor $$D$$에 가하는 보정항이라 볼 수 있다. 
 
-$$H: a_0\x_0+\cdots+a_{\ell(d)-1}\x_{\ell(d)-1}=0$$
+그럼 이번 글과 다음 글에서 살펴볼 리만-로흐 정리는 이를 어떤 의미에서 확장한 것으로, canonical class 곡선에서의 리만-로흐 정리는 $$K_C$$가 $$D$$에 global하게 가하는 제약이라 생각할 수 있다. 구체적으로 우리가 증명하고자 하는 식은
 
-를 생각하면, $$H$$의 $$\varphi_D$$에 대한 preimage는 다음의 global section
+$$\ell(D)-\ell(K_C-D)=\deg D+1-g$$
 
-$$\sigma=a_0s_0+\cdots+a_{\ell(d)-1}s_{\ell(d)-1}\in H^0(C, \mathcal{O}_C(D))$$
+로, 여기에서 $$\deg D+1$$는 기대값이며, $$g$$는 곡선의 위상적인 데이터가 가하는 손실이며 $$\ell(K_C-D)$$는 canonical class와 $$D$$의 위치관계가 가하는 보정항이다. 
 
-의 zero set이며, 따라서 이 section이 정의하는 divisor $$\divisor(\sigma)$$는 $$\lvert D\rvert$$에 속하는 effective divisor가 된다. 
-
-그럼 Serre duality에 의하여
+이를 보기 위해 우선 Serre duality를 적용하면
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$1$}$$
 
