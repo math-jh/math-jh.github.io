@@ -12,9 +12,9 @@ header:
     overlay_filter: 0.5
 
 date: 2026-04-22
-last_modified_at: 2026-04-22
+last_modified_at: 2026-05-04
 weight: 16
-published: false
+
 ---
 
 우리는 이제 [§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)에서 살펴본 line bundle $$\mathcal{L}$$의 complete linear system $$H^0(X, \mathcal{L})$$을 더 자세하게 살펴본다. 이는 linear system을 도입한 직후에 소개해도 되었겠지만, 증명을 위해서는 Serre duality가 필요하여 뒤로 두었다. 
@@ -180,7 +180,7 @@ $$\dim\coker p^\ast=\dim H^1(C, \mathcal{O}_C)-\dim H^0(C, \mathcal{O}_C(K_C-D))
 
 $$\ell(D)=\deg D+1-g$$
 
-을 준다. 즉 genus가 커질수록 같은 degree의 divisor가 만드는 공간이 좁아지는 것이다. 그러나 일반적인 경우는 여기에 $$\ell(K_C-D)$$의 영향이 추가되며, 이 때 주의할 것은 $$\ell(K_C-D)$$ 항은 그 정의상 $$D$$의 degree 뿐만 아니라 $$D$$가 canonical class $$K_C$$와 어떤 관계가 있는지에 따라 달라질 수 있다는 것이다. 이는 *special divisor*의 현상으로 [Brill–Noether theory](#brill-noether)에서 본격적으로 다룬다. 
+을 준다. 즉 genus가 커질수록 같은 degree의 divisor가 만드는 공간이 좁아지는 것이다. 그러나 일반적인 경우는 여기에 $$\ell(K_C-D)$$의 영향이 추가되며, 이 때 주의할 것은 $$\ell(K_C-D)$$ 항은 그 정의상 $$D$$의 degree 뿐만 아니라 $$D$$가 canonical class $$K_C$$와 어떤 관계가 있는지에 따라 달라질 수 있다는 것이다. 
 
 또 다른 특별한 예시로, $$D=0$$을 넣으면
 
@@ -244,15 +244,9 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
 위의 예시에서 살펴 본 $$g=2$$의 canonical map $$\varphi_{K_C}: C \rightarrow \mathbb{P}^1$$은 2:1 branched covering이었다. 더 일반적으로, 우리는 genus $$g \ge 2$$인 curve 중 $$\mathbb{P}^1$$로의 degree 2 covering이 존재하는 것을 *hyperelliptic curve<sub>초타원곡선</sub>*라 부르고, 그렇지 않은 경우를 *non-hyperelliptic curve*라 한다. 관례적으로 genus $$0,1$$인 경우는 hyperelliptic curve에서 제외하는 것에 유의하자.
 
-이제 $$g\geq 2$$인 $$C$$에서 canonical bundle $$K_C$$의 complete linear system $$\lvert K_C\rvert$$가 정의하는 morphism $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$의 거동을 살펴보자. 우리는 위에서 $$\deg K_C = 2g - 2$$이고 $$h^0(K_C) = g$$인 것을 확인했으므로, $$\varphi_{K_C}$$의 공역은 $$\mathbb{P}^{g-1}$$이다. 그러나 이는 일반적으로는 closed embedding이 아니며, 이는 $$g=2$$인 경우 이것이 $$2:1$$ covering map이 된다는 것에서 이미 확인하였다. 실제로 $$\varphi_{K_C}$$의 image는 정확히 Veronese embedding $$\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$$의 image, 즉 degree $$g-1$$의 rational normal curve이다. 이에 대한 증명은 [Har, IV.5.2]를 참조한다.
+이제 $$g\geq 2$$인 $$C$$에서 canonical bundle $$K_C$$의 complete linear system $$\lvert K_C\rvert$$가 정의하는 morphism $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$의 거동을 살펴보자. 우리는 위에서 $$\deg K_C = 2g - 2$$이고 $$h^0(K_C) = g$$인 것을 확인했으므로, $$\varphi_{K_C}$$의 공역은 $$\mathbb{P}^{g-1}$$이다. 그러나 이는 일반적으로는 closed embedding이 아니며, 이는 $$g=2$$인 경우 이것이 $$2:1$$ covering map이 된다는 것에서 이미 확인하였다. 이를 구체적으로 계산해보면, $$\varphi_{K_C}$$는 Veronese map $$\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$$과 hyperelliptic covering $$C\rightarrow \mathbb{P}^1$$의 합성으로 나오는 것을 알 수 있다.
 
-따라서 $$K_C$$는 ample이지만 very ample이 아닌 line bundle의 구체적인 예시를 제공한다. 이는 [§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10)에서 언급되었던 "ample but not very ample" 현상의 실현이다. Curve에서 $$\mathcal{L}$$이 very ample이기 위한 충분조건이 $$\deg \mathcal{L} \ge 2g + 1$$임이 알려져 있으며 ([Har, IV.3.2]), $$\deg K_C = 2g - 2 < 2g + 1$$이므로 이 조건을 만족하지 못함도 확인할 수 있다. 대신 $$K_C$$의 적절한 거듭제곱이 very ample이 됨을 확인할 수 있다. $$g \ge 3$$이면 $$\deg K_C^{\otimes 2} = 4g - 4 \ge 2g + 1$$이 성립하므로 $$K_C^{\otimes 2}$$는 very ample이다. $$g = 2$$이면 $$\deg K_C^{\otimes 2} = 4 < 5 = 2g + 1$$이지만, $$\deg K_C^{\otimes 3} = 3(2g - 2) = 6 > 5 = 2g + 1$$이므로 $$K_C^{\otimes 3}$$가 very ample이다. 어느 경우에도 $$K_C$$의 어떤 거듭제곱이 very ample이 되므로, ample의 정의—어떤 거듭제곱이 very ample이면 ample—와 완벽하게 부합한다.
-
-이와 대조적으로, $$g \ge 3$$인 non-hyperelliptic curve에서는 canonical map $$\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$$가 closed embedding이 되어, $$K_C$$ 자체가 very ample이다 ([Har, IV.5.4]).
-
-
-
-## 응용
+## Degree-genus formula
 
 우리는 [§표준선다발, ⁋예시 10](/ko/math/algebraic_geometry/canonical_bundle#ex10)에서 $$\deg K_C=2g-2$$가 된다는 것을 보이기 위해 다음 명제를 잘 알려진 사실이라고 주장하며 넘겼지만, 이제는 이에 대한 증명을 엄밀하게 할 수 있다. 다만 이는 해당 예시와는 정반대로, 해당 예시에서는 adjunction formula와 degree-genus formula를 활용하여 $$\deg K_C=2g-2$$임을 증명하였지만 이제 우리는 $$\deg K_C=2g-2$$라는 사실과 adjunction formula로부터 degree-genus formula를 유도한다. $$K_C$$의 degree는 앞서 [예시 4](#ex4) 이전에 이미 Riemann-Roch로부터 (degree-genus formula를 사용하지 않고) 얻어졌음에 유의하자.
 
@@ -284,40 +278,6 @@ $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}$$
 <ins id="ex8">**예시 8**</ins> Degree $$d$$에 따른 genus를 계산해보면, degree 3 (cubic)의 경우 $$g = \frac{2 \cdot 1}{2} = 1$$로 elliptic curve이고, degree 4 (quartic)의 경우 $$g = \frac{3 \cdot 2}{2} = 3$$, degree 5 (quintic)의 경우 $$g = \frac{4 \cdot 3}{2} = 6$$이다. Genus가 degree에 따라 빠르게 증가하므로, 고차원의 smooth plane curve는 점점 더 복잡한 위상적 구조를 갖는다.
 
 </div>
-
-### Brill–Noether theory {#brill-noether}
-
-Riemann–Roch 정리가 divisor의 complete linear system $$\lvert D\rvert$$의 차원을 계산하는 공식임을 생각하면, 자연스러운 다음 질문이 떠오른다. 주어진 곡선 $$C$$ (genus $$g$$) 위에서, degree $$d$$이고 차원이 $$r$$ 이상인 linear system을 갖는 divisor가 존재하는가? 그리고 그런 divisor들이 이루는 공간은 어떤 기하학적 구조를 갖는가? 이것이 Brill–Noether 이론의 출발점이다.
-
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> Genus $$g$$인 curve $$C$$ 위의 degree $$d$$인 divisor $$D$$에 대해, $$d \ge r + g$$이면 $$\ell(D) \ge r + 1$$이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-Riemann–Roch에 의해 $$\ell(D) - \ell(K_C - D) = d + 1 - g$$이다. $$\ell(K_C - D) \ge 0$$이므로 $$\ell(D) \ge d + 1 - g$$이다. $$d \ge r + g$$이면 $$\ell(D) \ge r + 1$$을 얻는다.
-
-</details>
-
-이 결과의 역방향, 즉 $$d < r + g$$일 때 어떤 일이 일어나는지를 묻는 것이 Brill–Noether 이론의 본질적인 내용이다. 보다 정밀한 Brill–Noether 정리에 의하면, 일반적인 (general) genus $$g$$ curve에서 $$\ell(D) \ge r + 1$$인 degree $$d$$ divisor들의 parameter space $$W^r_d$$는 *Brill–Noether 수*
-
-$$\rho(g, r, d) = g - (r+1)(g - d + r)$$
-
-가 음이 아닐 때 ($$\rho \ge 0$$) 차원 $$\rho$$인 nonempty variety이고, $$\rho < 0$$이면 빈 집합이다. 이 수치는 $$G^r_d(C)$$ (degree $$d$$, rank $$r$$의 complete linear series들의 parameter space)가 Grassmannian $$\Gr(r+1, h^0(C, \mathcal{O}_C(D)))$$ 위에서 갖는 예상 차원으로부터 산출된다.
-
-<div class="example" markdown="1">
-
-<ins id="ex10">**예시 10**</ins> **$$g = 2$$에서의 Brill–Noether**: $$K_C$$는 degree $$2$$를 갖는다. $$d = 2$$, $$r = 1$$의 경우 Brill–Noether 수 $$\rho = 2 - (1+1)(2-2+1) = 2 - 2 = 0$$이므로, 일반적인 $$g = 2$$ 곡선에서 $$W^1_2$$는 차원 0, 즉 유한개의 점으로 구성된다. 실제로 $$D = K_C$$가 유일한 $$g^1_2$$인데, 모든 genus 2 곡선은 hyperelliptic curve이므로 canonical divisor에 의해 유일한 degree 2 map $$C \to \mathbb{P}^1$$을 갖는다.
-
-$$d = 3$$, $$r = 1$$의 경우 $$\rho = 2 - (1+1)(2-3+1) = 2 - 0 = 2 > 0$$이므로 $$W^1_3$$은 차원 2의 nonempty variety이다. [명제 9](#prop9)에 의해서도 $$d = 3 \ge r + g = 3$$이므로 $$\ell(D) \ge 2$$가 보장된다. Riemann–Roch에 의해 $$\ell(D) \ge 3 + 1 - 2 = 2$$이다.
-
-$$d = 0$$, $$r = 0$$의 경우 $$\rho = 2 - 1 \cdot 2 = 0$$이고, $$W^0_0 = \{0\}$$로 trivial divisor가 유일한 점이다.
-
-</div>
-
 ---
 
 **참고문헌**
