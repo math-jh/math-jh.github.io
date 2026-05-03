@@ -13,3 +13,13 @@ assets/Tokens
 *.ps
 gemfile
 Gemfile
+
+# Backups
+.backups/
+*.backup_*
+
+# Obsidian
+.obsidian/
+
+# Bundler
+.bundle/
