@@ -33,6 +33,12 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 일반적으로 우리는 $$\mathcal{O}_X(D)$$를 $$D$$를 따라 order $$1$$의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $$H^0(C, \mathcal{O}_C(D))$$는 $$X$$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
 
+이 공간 $$H^0(C, \mathcal{O}_C(D))$$는 [§선형계, ⁋정의 2](/ko/math/algebraic_geometry/linear_systems#def2)에서 처음 도입했던 것을 기억하자. 그에 따르면 공간 $$H^0(C, \mathcal{O}_C(D))$$는 주어진 divisor $$D$$와 linearly equivalent한 divisor들의 모임이며, 이로부터 우
+
+한편, $$H^0(C,\mathcal{O}_C(D))$$의 (nonzero) 원소 $$s$$는 $$\mathcal{O}_C(D)$$의 global section이며, 이는 $$D$$와 linearly equivalent한 effective divisor $$\operatorname{div}(s)+D$$를 정의한다. 이때 $$s$$와 그 nonzero scalar multiple은 동일한 divisor를 주므로, 실제로 $$D$$와 linearly equivalent한 effective divisor들의 모임, 즉 complete linear system $$\lvert D\rvert$$는 $$H^0(C,\mathcal{O}_C(D))$$의 projectivization $$\mathbb{P}(H^0(C,\mathcal{O}_C(D)))$$와 일치한다. () 이 관점에서 $$\ell(D)$$는 바로 $$\lvert D\rvert$$의 projective dimension에 $$1$$을 더한 값이 된다. 특히 $$\ell(D)>0$$이면 $$\lvert D\rvert$$는 비어있지 않으며, 따라서 $$D$$와 linearly equivalent한 effective divisor가 존재한다. 반대로 effective divisor의 degree는 항상 nonnegative이고, degree가 $$0$$인 effective divisor는 오직 $$0$$뿐이다.
+
+특히, 고정된 점 $$p\in C$$를 지나는 $$\lvert D\rvert$$의 원소들은 $$s(p)=0$$을 만족하는 section들, 다시 말해 부분공간 $$H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C,\mathcal{O}_C(D))$$에 해당한다. 따라서 $$\ell(D-p)=\ell(D)$$가 성립한다면 $$\lvert D\rvert$$의 모든 원소가 $$p$$를 지나게 되어 $$p$$는 basepoint가 되고, 그렇지 않다면 $$p$$를 지나지 않는 원소가 존재하게 된다. 앞으로의 예시들에서 이러한 해석을 반복적으로 사용할 것이다.
+
 그럼 Serre duality에 의하여
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$1$}$$
@@ -196,23 +202,31 @@ $$\ell(dH) - \ell(-2H-dH) = d + 1 - 0 = d + 1$$
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5 (Elliptic curve)**</ins> Genus $$1$$ case $$g = 1$$의 경우, 우리는 위의 계산을 통해 $$\deg K_C=2g-2=0$$이고 $$\ell(K_C)=g=1$$임을 안다. 정의에 의해 $$\ell(K_C)=1$$이라는 것은 $$K_C$$와 linearly equivalent한 effective divisor가 존재한다는 것인데, $$\deg K_C=0$$이므로 이 divisor는 반드시 $$0$$이어야 하고 이로부터 $$K_C\sim 0$$임을 안다. 이를 사용하여 Riemann-Roch를 다시 보면
+<ins id="ex5">**예시 5 (Elliptic curve)**</ins> Genus $$1$$ case $$g = 1$$의 경우, 우리는 위의 계산을 통해 $$\deg K_C=2g-2=0$$이고 $$\ell(K_C)=g=1$$임을 안다. $$\ell(K_C)=1>0$$이므로, 앞서 본 것처럼 $$K_C$$와 linearly equivalent한 effective divisor가 존재하는데, $$\deg K_C=0$$이고 degree가 $$0$$인 effective divisor는 $$0$$뿐이므로 $$K_C\sim 0$$이다. 이를 사용하여 Riemann-Roch를 다시 보면
 
 $$\ell(D) - \ell(-D) = \deg D$$
 
 이 된다. 특히 $$\deg D > 0$$이면 $$\ell(-D) = 0$$이므로 $$\ell(D) = \deg D$$이다. 
 
-$$\deg D=0$$인 경우가 위에서 언급한 작은 degree의 경우인데, 우선 부등식 ($$3$$)으로부터 $$\ell(D)=0$$이거나 $$\ell(D)=1$$이어야 한다. 앞서 우리는 $$\ell(K_C-D)$$가 $$K_C$$와 $$D$$의 관계에 의해 결정된다고 하였는데, 이것이 그 좋은 예시로 만일 $$\ell(D)=1$$이라면 적당한 $$f\in H^0(C, \mathcal{O}_C(D))$$가 존재하여 $$\divisor(f)+D\geq 0$$인데, 이 때 effective divisor $$\divisor(f)+D$$의 degree가 $$0$$이므로 이것이 곧 $$0$$이어야 한다. 즉 $$D=-\divisor(f)=\divisor(1/f)$$가 되어 $$D$$는 $$0$$과 linearly equivalent하다. 거꾸로 $$D\sim 0$$이면 $$\mathcal{O}_C(D)\cong \mathcal{O}_C$$이므로 $$\ell(D)=1$$이 성립한다. 즉 $$D$$가 canonical divisor $$K_C$$와 linearly equivalent할 때만 $$\ell(K_C-D)$$ 항이 $$1$$이 되고, 그렇지 않으면 $$0$$이 되는 상황이 된다. 
+$$\deg D=0$$인 경우가 위에서 언급한 작은 degree의 경우인데, 우선 부등식 ($$3$$)으로부터 $$\ell(D)=0$$이거나 $$\ell(D)=1$$이어야 한다. 만일 $$\ell(D)=1$$이면 $$D$$와 linearly equivalent한 유일한 effective divisor가 존재하는데 그 degree가 $$0$$이므로 이는 $$0$$이다. 따라서 $$D\sim 0$$이고, 거꾸로 $$D\sim 0$$이면 $$\mathcal{O}_C(D)\cong \mathcal{O}_C$$이므로 $$\ell(D)=1$$이다. 즉 $$D$$가 $$0$$과 linearly equivalent할 때만 $$\ell(K_C-D)$$ 항이 $$1$$이 되고, 그렇지 않으면 $$0$$이 되는 상황이 된다. 
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 ($$g=2$$)**</ins> 이제 한 단계 더 복잡한 상황인 $$g=2$$ 경우를 보자. 이 경우 $$\deg K_C = 2g - 2 = 2$$이고 $$\ell(K_C)=2$$이다. 즉, complete linear system $$\lvert K_C\rvert$$은 projective dimension $$1$$이며 이로부터 canonical map 
+<ins id="ex6">**예시 6 ($$g=2$$)**</ins> 이제 한 단계 더 복잡한 상황인 $$g=2$$ 경우를 보자. 이 경우 $$\deg K_C = 2g - 2 = 2$$이고 $$\ell(K_C)=2$$이다. 즉, complete linear system $$\lvert K_C\rvert$$은 projective dimension $$1$$이 된다. 뿐만 아니라, [명제 3](#prop3)에 $$D=p$$를 대입하면
+
+$$\ell(p)-\ell(K_C-p)=2-g$$
+
+이고, $$g\ge 1$$에서는 $$\ell(p)=1$$이므로 $$\ell(K_C-p)=g-1=\ell(K_C)-1$$이다. 앞서 본 것처럼, 이는 $$\lvert K_C\rvert$$의 모든 원소가 $$p$$를 지나지 않음을 의미하므로 $$\lvert K_C\rvert$$는 basepoint-free이다. 따라서 [§선형계, ⁋명제 7](/ko/math/algebraic_geometry/linear_systems#prop7)에 의해 canonical map
 
 $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
-이 주어진다. ([§선형계, ⁋명제 7](/ko/math/algebraic_geometry/linear_systems#prop7)) 그럼 $$\mathbb{P}^1$$을 공역으로 하는 $$\varphi_{K_C}$$는 실제로 $$C$$에서 $$\mathbb{P}^1$$으로의 2:1 branched covering이며, 따라서 $$\mathbb{P}^1$$ 위의 한 점 $$q$$에 대한 preimage $$\varphi_{K_C}^{-1}(q)$$는 일반적으로 서로 다른 두 점 $$p_1, p_2$$의 합이 된다. 한편 $$\varphi_{K_C}$$는 complete linear system $$\lvert K_C\rvert$$로 정의된 map이므로, 이 preimage는 $$\lvert K_C\rvert$$에 속하는 effective divisor다. 즉, canonical divisor $$K_C$$는 일반적으로 서로 다른 두 점의 linear equivalence class $$p_1+p_2$$이다. 이제 일반적인 점 $$p$$에 대해 $$D = d \cdot p$$라고 하자.
+이 잘 정의된다.
+
+그럼 $$\mathbb{P}^1$$을 공역으로 하는 $$\varphi_{K_C}$$는 실제로 $$C$$에서 $$\mathbb{P}^1$$으로의 2:1 branched covering이며, 따라서 $$\mathbb{P}^1$$ 위의 한 점 $$q$$에 대한 preimage $$\varphi_{K_C}^{-1}(q)$$는 일반적으로 서로 다른 두 점 $$p_1, p_2$$의 합이 된다. 한편 $$\varphi_{K_C}$$는 기저 $$s_0,s_1\in H^0(C,K_C)$$에 의해 $$p\mapsto[s_0(p):s_1(p)]$$으로 주어지므로, $$q=[a:b]$$의 preimage는 section $$bs_0-as_1\in H^0(C,K_C)$$의 zero divisor이다. 따라서 이 preimage는 $$\lvert K_C\rvert$$에 속하는 effective divisor이며, 특히 $$K_C$$와 linearly equivalent하다.
+
+즉, canonical divisor $$K_C$$는 일반적으로 서로 다른 두 점의 linear equivalence class $$p_1+p_2$$이다. 이제 일반적인 점 $$p$$에 대해 $$D = d \cdot p$$라고 하자.
 
 1. 만일 $$d = 0$$이면 $$\ell(0) = 1$$이고, 따라서 상수함수만이 global section이다. 
 2. $$d = 1$$의 경우, $$\ell(p) \ge 2$$라면 degree 1 사상 $$C \to \mathbb{P}^1$$이 존재하여 $$C \cong \mathbb{P}^1$$이 되지만 $$g = 2$$와 모순이므로 $$\ell(p) = 1$$이다. Riemann–Roch에 의해 $$\ell(p) - \ell(K_C - p) = 1 + 1 - 2 = 0$$이므로 $$\ell(K_C - p) = 1$$이다.
