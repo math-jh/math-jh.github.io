@@ -40,9 +40,9 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/cohomology_of_projective_spaces
       - title: "세르 쌍대성"
         url: ko/math/algebraic_geometry/serre_duality
-      - title: "리만-로흐 정리"
+      - title: "곡선에서의 리만-로흐 정리"
         url: ko/math/algebraic_geometry/riemann_roch_theorem
-      - title: "Riemann-Roch for Surfaces"
+      - title: "곡면에서의 리만-로흐 정리"
         url: ko/math/algebraic_geometry/riemann_roch_surfaces
       - title: "Intersection Multiplicity"
         url: ko/math/algebraic_geometry/intersection_multiplicity

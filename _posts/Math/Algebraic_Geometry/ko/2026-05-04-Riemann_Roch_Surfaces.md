@@ -1,5 +1,5 @@
 ---
-title: "Riemann-Roch for Surfaces"
+title: "곡면에서의 리만-로흐 정리"
 excerpt: "Intersection theory on surfaces and its applications"
 
 categories: [Math / Algebraic Geometry]
@@ -11,13 +11,14 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Riemann_Roch_Surfaces.png
     overlay_filter: 0.5
 
-date: 2026-03-15
-last_modified_at: 2026-03-15
+date: 2026-05-04
+last_modified_at: 2026-05-04
 weight: 17
 published: false
 ---
 
-## 도입
+우리는 앞선 글에서 Riemann-Roch 정리를 곡선에서 살펴보았다. 본질적으로 Riemann-Roch 정리는 Euler characteristic을 다른 정량적인 수치들로 계산하는 것으로, 
+
 
 Surface $$S$$ 위의 Riemann–Roch 공식은 곡선의 경우의 자연스러운 일반화이다. Curve $$C$$ 위에서는 임의의 divisor $$D$$에 대해 $$\dim H^0(C, \mathcal{O}(D)) - \dim H^1(C, \mathcal{O}(D)) = \deg D + 1 - g$$가 성립하였는데, 여기서 $$\deg D$$는 선형인 항이었다. 반면 surface로 넘어가면 새로운 현상이 나타난다. 아래 [명제 5](#prop5)에서 다룰 Riemann–Roch 공식에는 $$D^2 := D \cdot D$$ (self-intersection)와 $$D \cdot K_S$$라는 이차항이 등장하며, 이들은 surface 위의 두 divisor가 "얼마나 교차하는지"를 측정하는 intersection number로 이해된다.
 
