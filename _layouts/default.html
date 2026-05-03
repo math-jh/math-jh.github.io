@@ -50,12 +50,10 @@
       .toc__menu::-webkit-scrollbar-track{display: none}
       .toc__menu::-webkit-scrollbar-thumb:hover {background: #071734; background-clip: padding-box; border: 1px solid transparent}
     </style>
-    <style id="scrollbar-color">
-
-    </style>
+    
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" data-lang="{% assign lang_prefix = page.url | slice: 1, 2 %}{% if lang_prefix == 'ko' %}ko{% elsif lang_prefix == 'en' %}en{% endif %}" onload="darkmode(), scrollbar()">
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" data-lang="{% assign lang_prefix = page.url | slice: 1, 2 %}{% if lang_prefix == 'ko' %}ko{% elsif lang_prefix == 'en' %}en{% endif %}" onload="darkmode()">
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
 
