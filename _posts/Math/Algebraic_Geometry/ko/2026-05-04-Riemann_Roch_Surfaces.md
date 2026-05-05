@@ -12,7 +12,7 @@ header:
     overlay_filter: 0.5
 
 date: 2026-05-04
-last_modified_at: 2026-05-04
+last_modified_at: 2026-05-06
 weight: 17
 published: false
 ---
@@ -31,7 +31,7 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
 ## Intersection Number
 
-우리의 출발점은 다소 추상적으로 보일 수 있는 Euler characteristic을 이용한 정의이다. 이 정의의 장점은 linear equivalence에 대해 불변이라는 사실이 즉시 따라온다는 것이며, 곧 기하학적 해석을 통해 이것이 실제로 교차점의 수를 세고 있음을 확인할 것이다.
+우리의 출발점은 다소 추상적으로 보일 수 있는 Euler characteristic을 이용한 정의이다. 이 정의의 장점은 linear equivalence에 대해 불변이라는 사실이 즉시 따라온다는 것으로, 정의 직후 이것이 실제로 교차점의 수를 세고 있음을 확인할 것이다.
 
 <div class="definition" markdown="1">
 
@@ -41,13 +41,23 @@ $$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mat
 
 </div>
 
-$$C$$와 $$D$$가 각각 global section $$s \in H^0(\mathcal{O}(C))$$, $$t \in H^0(\mathcal{O}(D))$$로 정의되는 effective divisor라 하면, 이들의 common zero locus는 $$C \cap D$$이며, 다음 exact sequence가 성립한다.
+이들의 기하학적 의미를 살펴보기 위해, $$C$$와 $$D$$가 각각 global section $$s \in H^0(\mathcal{O}(C))$$, $$t \in H^0(\mathcal{O}(D))$$로 정의되는 effective divisor라 하자. 그럼 이들의 common zero locus는 $$C \cap D$$이며, 다음 exact sequence가 성립한다.
 
 $$0 \to \mathcal{O} \xrightarrow{(t,-s)} \mathcal{O}(C) \oplus \mathcal{O}(D) \xrightarrow{(s,t)} \mathcal{O}(C+D) \to \mathcal{O}_{C \cap D} \to 0$$
 
-여기서 첫 번째 화살표는 $$h \mapsto (ht, -hs)$$, 두 번째 화살표는 $$(f, g) \mapsto fs + gt$$이고, 마지막 화살표는 $$\mathcal{O}(C+D)$$에서 $$C \cap D$$ 위로의 자연스러운 제한 사상이다. $$\mathcal{O}_{C \cap D}$$는 $$C \cap D$$ 위의 structure sheaf이다. Euler characteristic을 취하면 $$C \cdot D = \rchi(\mathcal{O}_{C \cap D})$$를 얻는다. 따라서 $$C \cap D = D \cap C$$에서 symmetry $$C \cdot D = D \cdot C$$가 자명하다. 나아가 $$C$$와 $$D$$가 transversal하게 만나면 $$C \cap D$$는 유한 집합이고 $$\mathcal{O}_{C \cap D}$$는 각 점에서 $$\mathbb{K}$$를 주므로 $$\rchi(\mathcal{O}_{C \cap D}) = \lvert C \cap D \rvert$$가 되며, 공통된 irreducible component를 가지지 않는 일반적인 경우에는 $$\rchi(\mathcal{O}_{C \cap D}) = \sum_{p \in C \cap D} (C \cdot D)_p$$가 성립한다. 여기서 $$(C \cdot D)_p$$는 $$p$$에서의 local intersection multiplicity이다.
+여기서 첫 번째 화살표는 $$h \mapsto (ht, -hs)$$, 두 번째 화살표는 $$(f, g) \mapsto fs + gt$$이고, 마지막 화살표는 $$\mathcal{O}(C+D)$$에서 $$C \cap D$$ 위로의 자연스러운 restriction map이다. 그럼 Euler characteristic의 additivity에 의하여
 
-이를 염두에 두고 다음의 기본적인 성질들을 만들자. 
+$$C \cdot D = \rchi(\mathcal{O}_{C \cap D})$$
+
+이며, 이 때 $$C\cap D$$는 곡선 두 개의 교집합, 즉 점들이고 따라서 우변의 Euler characteristic은 정확히 $$C\cap D$$의 점들의 갯수를 세게 된다. 다소 미묘한 부분은 이것이 잘 정의되기 위해서는 $$C$$와 $$D$$가 일반적인 위치에 있어야 한다는 것인데, 이를 위해 우리는 두 곡선 $$C,D$$가 점 $$p$$에서 *transversally intersect*한다는 것을 다음의 조건
+
+$$T_pC\oplus T_pD\cong T_pS$$
+
+으로 정의한다. 가령 $$\mathbb{A}^2$$에서, $$\x=0$$은 자기 자신과 transversally intersect하지 않으며 $$\y=\x^3$$은 $$\y=0$$과 transversally intersect하지 않는다. 반면 $$\y=\x$$와 $$\y=-\x$$는 transversal하게 만난다. 뿐만 아니라, 이 예시는 intersection multiplicity의 직관 또한 제공하는데, $$\y=\x$$와 $$\y=-\x$$의 (원점에서의) intersection multiplicity는 $$1$$이지만 $$\y=\x^3$$과 $$\y=0$$의 intersection multiplicity는 $$3$$이다. 그럼 $$C$$와 $$D$$가 transversal하게 만나지 않을 수도 있는 일반적인 경우에서는 
+
+$$\rchi(\mathcal{O}_{C \cap D}) = \sum_{p \in C \cap D} (C \cdot D)_p$$
+
+가 성립하며, 여기서 $$(C \cdot D)_p$$는 $$p$$에서의 local intersection multiplicity이다. 이 때 이 식에서 $$C\cap D$$가 점들의 유한집합 대신 curve가 되는 상황을 막기 위해서는 (가령 $$C=D$$인 상황을 막기 위해서는) 우리는 $$C,D$$가 공통의 component를 갖지 않는다 가정한다. 
 
 <div class="proposition" markdown="1">
 
@@ -59,29 +69,19 @@ $$0 \to \mathcal{O} \xrightarrow{(t,-s)} \mathcal{O}(C) \oplus \mathcal{O}(D) \x
 
 </div>
 
-Symmetry는 위에서 보인 직관에 의해 자명하며, linear invariance 또한 거의 자명하다. 가장 덜 자명한 것은 bilinearity인데, 일반적으로 이는 Snapper's lemma를 사용하지만 우리는 이를 단순히 성질로만 받아들이고 넘어가기로 한다. 다소 미묘한 부분은 이것이 잘 정의되기 위해서는 $$C$$와 $$D$$가 일반적인 위치에 있어야 한다는 것인데, 이를 위해 우리는 두 곡선 $$C,D$$가 점 $$p$$에서 *transversally intersect*한다는 것을 다음의 조건
+Symmetry는 위에서 보인 직관에 의해 자명하며, linear invariance 또한 거의 자명하다. 의외로 가장 덜 자명한 것은 bilinearity인데, 이는 보통 Snapper's theorem으로 설명할 수 있다. Snapper's theorem에 의하면, projective variety 위의 임의의 coherent sheaf $$\mathcal{F}$$, line bundles $$L_1, \ldots, L_k$$에 대해, Euler characteristic 
 
-$$T_pC\oplus T_pD\cong T_pS$$
+$$\rchi(\mathcal{F} \otimes L_1^{\otimes n_1} \otimes \cdots \otimes L_k^{\otimes n_k})$$
 
-으로 정의한다. 가령 $$\mathbb{A}^2$$에서, $$\x=0$$은 자기 자신과 transversally intersect하지 않으며 $$\y=\x^3$$은 $$\y=0$$과 transversally intersect하지 않는다. 반면 $$\y=\x$$와 $$\y=-\x$$는 transversal하게 만난다. 뿐만 아니라, 이 예시는 intersection multiplicity의 직관 또한 제공하는데, $$\y=\x$$와 $$\y=-\x$$의 (원점에서의) intersection multiplicity는 $$1$$이지만 $$\y=\x^3$$과 $$\y=0$$의 intersection multiplicity는 $$3$$이다. 이제 surface에서의 Riemann–Roch 정리로 넘어가자.
+는 $$n_1, \ldots, n_k$$에 대한 다항식으로 주어진다. 그럼 특히 intersection number의 정의에서 $$\rchi(\mathcal{O}_S(aC_1 + bC_2 + D))$$는 $$a, b$$에 대한 다항식이 되며, 이 다항식의 이차 계수를 비교한 것이 bilinearity가 된다.
 
 ## 곡면에서의 Riemann–Roch 정리
 
-Curve의 경우와 달리 surface에서는 $$H^2$$ 항이 추가로 등장한다. $$h^0$$은 global section의 수이고, $$h^1$$과 $$h^2$$는 더 높은 cohomology group들의 dimension이다. Smooth projective surface에 대한 Serre duality에 의해 $$h^2(S, \mathcal{O}_S(D)) = h^0(S, \omega_S \otimes \mathcal{O}_S(-D)) = h^0(S, \mathcal{O}_S(K_S - D))$$이다. Riemann–Roch for surfaces는 이 Euler characteristic을 intersection number로 계산할 수 있게 해준다.
+이제 우리는 Riemann-Roch 정리를 곡면으로 확장할 때 필요한 언어를 전부 가지고 있다. 이제 우리에게 필요한 것은 다음의 보조정리이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> (Riemann–Roch for surfaces) Smooth projective surface $$S$$ 위의 divisor $$D$$에 대해
-
-$$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
-
-이 성립한다. 여기서 $$D \cdot E$$는 두 divisor 사이의 intersection number이고, $$K_S$$는 canonical divisor이며, $$\rchi(\mathcal{O}_S) = 1 - q + p_g$$에서 $$q = h^1(S, \mathcal{O}_S)$$는 *irregularity*, $$p_g = h^2(S, \mathcal{O}_S)$$는 *geometric genus*이다.
-
-</div>
-
-<div class="lemma" markdown="1">
-
-<ins id="lem_adjunction">**보조정리 (위수 공식)**</ins> Smooth projective surface $$S$$ 위의 smooth irreducible curve $$D$$에 대해
+<ins id="lem3">**보조정리 3 (Genus formula))**</ins> Smooth projective surface $$S$$ 위의 smooth irreducible curve $$D$$에 대해
 
 $$2g(D) - 2 = D^2 + D \cdot K_S$$
 
@@ -92,44 +92,50 @@ $$2g(D) - 2 = D^2 + D \cdot K_S$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$D \hookrightarrow S$$의 conormal exact sequence
+Adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_geometry/canonical_bundle#prop9))에 의해
 
-$$0 \to \mathcal{I}/\mathcal{I}^2 \to \Omega_S|_D \to \Omega_D \to 0$$
-
-를 생각하자. 여기서 $$\mathcal{I}/\mathcal{I}^2 \cong \mathcal{O}_D(-D)$$는 conormal bundle이다. $$\omega_D = \det(\Omega_D)$$, $$\omega_S = \det(\Omega_S)$$이므로 determinant를 취하면
-
-$$\omega_D \cong (\omega_S \otimes \mathcal{O}_S(D))|_D$$
+$$\omega_D \cong (\omega_S \otimes \mathcal{O}_S(D))\vert_D$$
 
 이다. 양변의 degree를 취하면
 
-$$\deg(\omega_D) = \deg(\omega_S|_D) + \deg(\mathcal{O}_D(D))$$
+$$\deg(\omega_D) = \deg(\omega_S\vert_D) + \deg(\mathcal{O}_D(D))$$
 
-이다. $$\deg(\omega_D) = 2g - 2$$이고, $$\deg(\omega_S|_D) = D \cdot K_S$$이며 $$\deg(\mathcal{O}_D(D)) = D^2$$이므로
+이다. 우리는 앞서 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_geometry/riemann_roch_theorem#prop3)의 결과로 $$\deg(\omega_D)=2g-2$$라는 것을 유도하였으며 우변의 두 항만 intersection numbery로 해석하면 된다. 우선 $$\omega_S\vert_D$$는 $$D$$ 위로 restriction된 canonical bundle로, 이는 $$D$$와 canonical divisor $$K_S$$의 교차수를 측정한다. 구체적으로 $$K_S$$가 $$\omega_S$$에 대응하는 divisor이므로, $$\omega_S\vert_D$$의 degree는 $$D$$ 위에서 $$K_S$$가 차지하는 점들의 수, 즉 $$D \cdot K_S$$가 된다. 비슷하게 $$\mathcal{O}_D(D)$$는 $$D$$의 normal bundle $$\mathcal{N}_{D/S}$$에 해당하며, 이는 $$D$$가 $$S$$ 안에서 자기 자신과 만나는 정도를 측정한다. 이 bundle의 degree는 $$D$$의 self-intersection number $$D^2$$와 일치한다. 이들을 종합하면
 
-$$2g - 2 = D \cdot K_S + D^2$$
+$$2g(D) - 2 = D \cdot K_S + D^2$$
 
-를 얻는다. $$\square$$
+를 얻는다. 
 
 </details>
+
+그럼 Riemann-Roch 정리는 곡면에서 다음과 같이 주어진다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop4">**명제 4 (Riemann–Roch for surfaces)**</ins> Smooth projective surface $$S$$ 위의 divisor $$D$$에 대해
+
+$$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
+
+이 성립한다. 
+
+</div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-**1단계: $$D$$가 smooth irreducible effective divisor인 경우.**
-
-Short exact sequence
+우선 $$D$$가 smooth irreducible effective divisor인 경우를 보자. 다음의 short exact sequence
 
 $$0 \to \mathcal{O}_S \to \mathcal{O}_S(D) \to \mathcal{O}_D(D) \to 0$$
 
-로부터 Euler characteristic의 가산성에 의해
+로부터 Euler characteristic의 additivity에 의해
 
 $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \rchi(\mathcal{O}_D(D))$$
 
-이다. $$\mathcal{O}_D(D)$$는 $$D$$ 위의 line bundle이고 $$\deg(\mathcal{O}_D(D)) = D^2$$이다. 곡선에서의 Riemann–Roch ([§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_geometry/riemann_roch_theorem#prop3))에 의해
+이다. 이 때, $$\mathcal{O}_D(D)$$는 $$D$$ 위에 정의된 line bundle이므로, 곡선에서의 Riemann–Roch ([§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_geometry/riemann_roch_theorem#prop3))에 의해
 
 $$\rchi(\mathcal{O}_D(D)) = D^2 + 1 - g(D)$$
 
-이다. 위수 공식에서
+이다. 앞선 [보조정리 3](#lem3)에서 
 
 $$g(D) = \frac{1}{2}(D^2 + D \cdot K_S) + 1$$
 
@@ -141,17 +147,25 @@ $$\rchi(\mathcal{O}_D(D)) = D^2 + 1 - \frac{1}{2}(D^2 + D \cdot K_S) - 1 = \frac
 
 $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}D \cdot (D - K_S)$$
 
-를 얻는다. $$\square$$
+를 얻는다.
+
+이제 우리는 이를 일반적인 divisor $$D$$에 대해 이를 일반화해야 한다. 우리는 
 
 **2단계: 일반적인 divisor $$D$$의 경우.**
 
-$$D$$가 effective이면 1단계에서 증명이 완료되었다. 일반적인 $$D$$에 대해서는 $$S$$ 위의 ample divisor $$H$$를 고정하자. 충분히 큰 정수 $$n$$에 대해 $$D + nH$$는 effective이다. 1단계를 $$D + nH$$에 적용하면
+$$D$$가 effective이면 1단계에서 증명이 완료되었다. 일반적인 $$D$$에 대해서는 $$S$$ 위의 ample divisor $$H$$를 고정하자. 충분히 큰 정수 $$n$$에 대해 $$D + nH$$는 effective이므로 1단계를 적용할 수 있다.
 
-$$\rchi(\mathcal{O}(D+nH)) = \frac{1}{2}(D+nH) \cdot (D+nH - K_S) + \rchi(\mathcal{O}_S)$$
+이제 $$n$$에 대한 함수 $$f(n) = \rchi(\mathcal{O}(D+nH))$$와 $$g(n) = \frac{1}{2}(D+nH)\cdot(D+nH-K_S) + \rchi(\mathcal{O}_S)$$를 생각하자. 교차수의 bilinearity에 의해 $$g(n)$$을 전개하면
 
-이다. 한편 $$\rchi(\mathcal{O}(D+H)) - \rchi(\mathcal{O}(D))$$는 $$D$$에 무관한 상수이다. 정의 1의 intersection number 정의에서 $$D$$를 $$D+H$$로 대체하면 bilinearity에 의해 이 차이는 $$D$$와 무관하게 결정된다. 따라서 양변 모두 $$D$$에 대한 다항식임을 알 수 있다.
+$$g(n) = \frac{1}{2}H^2 n^2 + \frac{1}{2}(2D\cdot H - H\cdot K_S)n + \left(\frac{1}{2}D\cdot(D-K_S) + \rchi(\mathcal{O}_S)\right)$$
 
-좌변 $$\rchi(\mathcal{O}(D))$$는 $$D$$에 대한 2차 다항식이고, 우변 $$\frac{1}{2}D \cdot (D-K_S) + \rchi(\mathcal{O}_S)$$도 2차 다항식이다. Ample divisor의 $$n$$에 대해 충분히 많은 점에서 두 다항식이 일치하므로, 두 다항식은 같다. $$\square$$
+이 되어 $$n^2$$의 계수는 $$\frac{1}{2}H^2 > 0$$이므로, $$g(n)$$은 $$n$$에 대한 2차 다항식이다. 한편, Snapper의 정리에 의해 $$\rchi(\mathcal{O}_S(D+nH))$$는 $$n$$에 대한 다항식이 된다. 여기서 $$S$$의 차원이 2이므로 이 다항식의 차수는 2 이하이며, $$g(n)$$이 실제로 2차이므로 $$f(n)$$ 또한 $$n$$에 대한 2차 다항식이다.
+
+$$n \gg 0$$에 대해 $$D+nH$$가 effective이므로 1단계에 의해 $$f(n) = g(n)$$이다. 두 2차 다항식이 무한히 많은 점에서 일치하면 서로 같으므로, 모든 $$n$$에 대해 $$f(n) = g(n)$$이다. 특히 $$n = 0$$을 대입하면
+
+$$\rchi(\mathcal{O}(D)) = \frac{1}{2}D\cdot(D-K_S) + \rchi(\mathcal{O}_S)$$
+
+를 얻는다. $$\square$$
 
 </details>
 
@@ -209,7 +223,7 @@ $$\rchi(\mathcal{O}(D)) = 1 + \frac{1}{2}(2ab + 2a + 2b) = (a+1)(b+1)$$
 
 교차 형식이 surface의 geometry에 대해 어떤 정보를 담고 있는지 이해하는 것은 대수기하학에서 중요한 문제이다. $$\mathbb{P}^2$$의 경우 $$\operatorname{Num}(S)$$는 $$\mathbb{Z}$$이고 교차 형식은 $$H \mapsto H^2 = 1$$로 주어지므로 양의 정부호이다. 그러나 일반적인 surface에서는 교차 형식이 부정부호이거나 퇴화할 수 있다. Hodge index theorem은 surface 위의 교차 형식이 Minkowski space와 유사한 부호수를 갖는다는 것, 즉 positive direction은 단 하나뿐이라는 것을 말해준다.
 
-이 결과를 서술하기 위해 먼저 몇 가지 정의를 도입한다. 교차수가 linear equivalence에 대해 불변이라는 [명제 2](#prop2)의 성질은, 교차수가 divisor의 numerical한 정보만을 담고 있음을 시사한다. 이를 공식화하면 다음과 같다.
+이 결과를 서술하기 위해 먼저 몇 가지 정의를 도입한다. 교차수가 linear equivalence에 대해 불변이라는 [명제 2](#prop2)의 성질은, 교차수가 divisor의 수치적인 정보만을 담고 있음을 시사한다. 이를 공식화하면 다음과 같다.
 
 <div class="definition" markdown="1">
 
@@ -235,7 +249,7 @@ $$\operatorname{NS}(S) = \Pic(S) / \{\text{algebraic equivalence}\}$$
 
 Algebraic equivalence는 numerical equivalence보다 강한 관계이므로 $$\operatorname{NS}(S) \otimes \mathbb{R}$$는 $$\operatorname{Num}(S)$$의 부분 공간이며, 특히 $$\rho(S) \le \rank \operatorname{Num}(S)$$이다. 사실 divisor (= codimension 1 cycle)에 대해서는 Matsusaka의 정리에 의해 algebraic equivalence와 numerical equivalence가 일치함(up to torsion)이 이미 증명되어 있으므로, $$\operatorname{NS}(S) \otimes \mathbb{Q} = \operatorname{Num}(S) \otimes \mathbb{Q}$$이다. 보다 일반적으로, 임의의 codimension의 cycle에 대해 homological equivalence와 numerical equivalence가 일치할 것이라는 Grothendieck의 standard conjecture D는 아직 미해결 문제이다. ([§선다발과 벡터다발, ⁋정의 9](/ko/math/algebraic_geometry/line_bundles#def9))에서 정의한 Picard group은 divisor class들을 분류하는 대수적 대상이며, Néron–Severi group은 여기서 "연속적인" 변화를 factor out하여 얻어지는 이산적인 불변량이다. Picard number $$\rho(S)$$는 surface의 "효과적인" divisor class의 차원을 나타낸다. 예를 들어 $$\mathbb{P}^2$$의 경우 $$\rho = 1$$이며, $$\mathbb{P}^1 \times \mathbb{P}^1$$의 경우 $$\rho = 2$$이다.
 
-([§선형계, ⁋정의 9](/ko/math/algebraic_geometry/linear_systems#def9))에서 정의한 ample line bundle과 대응되는 ample divisor $$H$$는 교차 형식에 대해 특별한 역할을 한다.
+([§선형계, ⁋정의 10](/ko/math/algebraic_geometry/linear_systems#def10))에서 정의한 ample line bundle과 대응되는 ample divisor $$H$$는 교차 형식에 대해 특별한 역할을 한다.
 
 <div class="proposition" markdown="1">
 
@@ -320,17 +334,30 @@ $$\rchi(\mathcal{O}(K_S)) = \frac{1}{2}K_S \cdot (K_S - K_S) + \rchi(\mathcal{O}
 
 $$\rchi(\mathcal{O}(K_S)) = h^0(K_S) - h^1(K_S) + h^2(K_S) = h^2(\mathcal{O}_S) - h^1(\mathcal{O}_S) + h^0(\mathcal{O}_S) = \rchi(\mathcal{O}_S)$$
 
-이다. 이는 자명히 일치하며, $$c_2$$가 등장하지 않으므로 이 접근만으로는 Noether 공식을 유도할 수 없다.
+이다. 이는 직접 계산으로 확인할 수 있으며, $$c_2$$가 등장하지 않으므로 이 접근만으로는 Noether 공식을 유도할 수 없다.
 
-Noether 공식은 Hirzebruch–Riemann–Roch 정리의 surface에서의 특수한 경우이다. HRR에 의해
+대신 다음과 같이 증명한다. 먼저 Gauss–Bonnet 정리에 의해 compact complex surface의 topological Euler characteristic은
 
-$$\rchi(\mathcal{O}_S) = \int_S \operatorname{ch}(\mathcal{O}_S)\operatorname{td}(T_S) = \frac{1}{12}(c_1(T_S)^2 + c_2(T_S))$$
+$$e(S) = c_2(T_S) = 2 - 2b_1 + b_2$$
 
-이고, $$c_1(T_S) = -K_S$$이므로 $$c_1(T_S)^2 = K_S^2$$이다. 또한 Gauss–Bonnet 정리에 의해 compact complex surface의 topological Euler number는 $$e(S) = c_2(T_S)$$이다. 이들을 대입하면
+이다. Smooth projective surface는 Kähler이므로 Hodge theory를 적용할 수 있다. Hodge decomposition에 의해 $$b_1 = 2q$$이고, $$H^2(S, \mathbb{C}) = H^{2,0} \oplus H^{1,1} \oplus H^{0,2}$$에서 $$H^{2,0} \oplus H^{0,2}$$는 positive definite이고 $$H^{1,1}$$ 위의 교차 형식은 signature $$(1, h^{1,1}-1)$$를 갖는다. 따라서
 
-$$\rchi(\mathcal{O}_S) = \frac{1}{12}(K_S^2 + e(S))$$
+$$b_2^+ = 2p_g + 1, \quad b_2^- = h^{1,1} - 1, \quad \tau = b_2^+ - b_2^- = 2p_g + 2 - h^{1,1}$$
 
-를 얻어 $$K_S^2 + c_2(S) = 12\,\rchi(\mathcal{O}_S)$$가 성립한다. Hirzebruch–Riemann–Roch 정리와 그 증명은 이후 더 일반적인 setting에서 다룬다.
+이다. 한편 Hirzebruch의 표시 정리에 의해
+
+$$\tau = \frac{1}{3}(K_S^2 - 2e(S))$$
+
+이다. 이들을 정리하면
+
+$$\begin{aligned}
+K_S^2 + e(S) &= 3\tau + 2e(S) + e(S) \\
+&= 3(2p_g + 2 - h^{1,1}) + 3(2 - 4q + 2p_g + h^{1,1}) \\
+&= 12p_g + 12 - 12q \\
+&= 12(1 - q + p_g) = 12\,\rchi(\mathcal{O}_S)
+\end{aligned}$$
+
+를 얻는다. Gauss–Bonnet 정리에 의해 $$e(S) = c_2(S)$$이므로 $$K_S^2 + c_2(S) = 12\,\rchi(\mathcal{O}_S)$$가 성립한다.
 
 </details>
 
@@ -356,7 +383,7 @@ $$P_m(S) = h^0(S, \omega_S^{\otimes m})$$
 
 </div>
 
-$$m = 1$$인 경우 $$P_1(S) = h^0(\omega_S) = p_g(S)$$는 geometric genus이다. Plurigenus들의 열 $$\{P_m(S)\}_{m \ge 1}$$은 surface의 birational equivalence class를 결정하는 중요한 불변량이다. ([§표준선다발](/ko/math/algebraic_geometry/canonical_bundle))에서 살펴본 canonical bundle의 역할과 마찬가지로, $$\omega_S^{\otimes m}$$의 global section은 surface 위의 "multi-differential form", 즉 $$m$$개의 canonical divisor를 tensor한 형태의 differential form을 parameterize한다. 예를 들어 local coordinate $$z_1, z_2$$에서 $$\omega_S^{\otimes m}$$의 section은 $$f(z_1, z_2)(dz_1 \wedge dz_2)^{\otimes m}$$의 꼴로 쓰인다.
+$$m = 1$$인 경우 $$P_1(S) = h^0(\omega_S) = p_g(S)$$는 geometric genus이다. Plurigenus들의 열 $$\{P_m(S)\}_{m \ge 1}$$은 surface의 birational equivalence class를 결정하는 중요한 불변량이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_geometry/canonical_bundle#def5))에서 살펴본 canonical bundle의 역할과 마찬가지로, $$\omega_S^{\otimes m}$$의 global section은 surface 위의 "multi-differential form", 즉 $$m$$개의 canonical divisor를 tensor한 형태의 differential form을 parameterize한다. 예를 들어 local coordinate $$z_1, z_2$$에서 $$\omega_S^{\otimes m}$$의 section은 $$f(z_1, z_2)(dz_1 \wedge dz_2)^{\otimes m}$$의 꼴로 쓰인다.
 
 Plurigenus의 증가율은 surface의 Kodaira dimension과 밀접하게 관련되어 있다. Kodaira dimension $$\kappa(S)$$는 $$P_m(S)$$의 $$m$$에 대한 증가 차수로 정의된다. 구체적으로, 모든 $$m \ge 1$$에 대해 $$P_m(S) = 0$$이면 $$\kappa = -\infty$$이다. 그렇지 않은 경우, $$\kappa(S)$$는 $$P_m(S) / m^\kappa$$가 유계(bounded)가 되는 최소의 정수 $$\kappa$$로 정의된다. 즉 $$\kappa(S) = \min\{k \in \mathbb{Z}_{\ge 0} : P_m(S) = O(m^k)\}$$이다. 이 정의에 의하면 $$\kappa = 0$$은 $$P_m(S)$$가 항상 $$0$$ 또는 $$1$$이면서 모든 $$m$$에 대해 $$0$$인 것은 아닌 경우이며, $$\kappa = 1$$은 $$P_m(S) \sim cm$$으로 선형 성장하는 경우, $$\kappa = 2$$는 $$P_m(S) \sim cm^2$$으로 이차 성장하는 경우이다. Surface의 경우 $$\kappa \in \{-\infty, 0, 1, 2\}$$이다.
 
@@ -409,7 +436,7 @@ $$h^1(\omega_S^{\otimes m}) = 0$$
 
 </div>
 
-K3 surface의 가장 친숙한 예시는 $$\mathbb{P}^3$$ 안의 quartic surface, 즉 degree $$4$$ homogeneous 다항식의 zero set이다. ([§표준선다발](/ko/math/algebraic_geometry/canonical_bundle))에서 다룬 adjunction formula에 의해 $$\mathbb{P}^3$$ 안의 degree $$d$$ smooth hypersurface $$S$$의 canonical bundle은
+K3 surface의 가장 친숙한 예시는 $$\mathbb{P}^3$$ 안의 quartic surface, 즉 degree $$4$$ homogeneous 다항식의 zero set이다. ([§표준선다발, ⁋명제 9](/ko/math/algebraic_geometry/canonical_bundle#prop9))에서 다룬 adjunction formula에 의해 $$\mathbb{P}^3$$ 안의 degree $$d$$ smooth hypersurface $$S$$의 canonical bundle은
 
 $$K_S = (K_{\mathbb{P}^3} + S)\vert_S = (\mathcal{O}_{\mathbb{P}^3}(-4) + \mathcal{O}_{\mathbb{P}^3}(d))\vert_S = \mathcal{O}_S(d - 4)$$
 
