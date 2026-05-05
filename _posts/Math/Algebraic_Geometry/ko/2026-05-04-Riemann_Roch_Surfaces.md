@@ -81,7 +81,7 @@ $$\rchi(\mathcal{F} \otimes L_1^{\otimes n_1} \otimes \cdots \otimes L_k^{\otime
 
 <div class="proposition" markdown="1">
 
-<ins id="lem3">**보조정리 3 (Genus formula))**</ins> Smooth projective surface $$S$$ 위의 smooth irreducible curve $$D$$에 대해
+<ins id="lem3">**보조정리 3 (Genus formula)**</ins> Smooth projective surface $$S$$ 위의 smooth irreducible curve $$D$$에 대해
 
 $$2g(D) - 2 = D^2 + D \cdot K_S$$
 
@@ -149,23 +149,19 @@ $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}D \cdot (D - K_S)$
 
 를 얻는다.
 
-이제 우리는 이를 일반적인 divisor $$D$$에 대해 이를 일반화해야 한다. 우리는 
+이제 우리는 이를 일반적인 divisor $$D$$에 대해 이를 일반화해야 한다. 우리는 우선 $$S$$ 위의 ample divisor $$H$$를 고정하자. 그럼 Serre vanishing theorem ([§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#prop4))에 의해, 충분히 큰 $$n$$에 대해 
 
-**2단계: 일반적인 divisor $$D$$의 경우.**
+$$H^1(S, \mathcal{O}_S(D + nH)) = H^2(S, \mathcal{O}_S(D + nH)) = 0$$
 
-$$D$$가 effective이면 1단계에서 증명이 완료되었다. 일반적인 $$D$$에 대해서는 $$S$$ 위의 ample divisor $$H$$를 고정하자. 충분히 큰 정수 $$n$$에 대해 $$D + nH$$는 effective이므로 1단계를 적용할 수 있다.
+이다. 따라서
 
-이제 $$n$$에 대한 함수 $$f(n) = \rchi(\mathcal{O}(D+nH))$$와 $$g(n) = \frac{1}{2}(D+nH)\cdot(D+nH-K_S) + \rchi(\mathcal{O}_S)$$를 생각하자. 교차수의 bilinearity에 의해 $$g(n)$$을 전개하면
+$$\rchi(\mathcal{O}_S(D + nH)) = h^0(\mathcal{O}_S(D + nH))$$
 
-$$g(n) = \frac{1}{2}H^2 n^2 + \frac{1}{2}(2D\cdot H - H\cdot K_S)n + \left(\frac{1}{2}D\cdot(D-K_S) + \rchi(\mathcal{O}_S)\right)$$
-
-이 되어 $$n^2$$의 계수는 $$\frac{1}{2}H^2 > 0$$이므로, $$g(n)$$은 $$n$$에 대한 2차 다항식이다. 한편, Snapper의 정리에 의해 $$\rchi(\mathcal{O}_S(D+nH))$$는 $$n$$에 대한 다항식이 된다. 여기서 $$S$$의 차원이 2이므로 이 다항식의 차수는 2 이하이며, $$g(n)$$이 실제로 2차이므로 $$f(n)$$ 또한 $$n$$에 대한 2차 다항식이다.
-
-$$n \gg 0$$에 대해 $$D+nH$$가 effective이므로 1단계에 의해 $$f(n) = g(n)$$이다. 두 2차 다항식이 무한히 많은 점에서 일치하면 서로 같으므로, 모든 $$n$$에 대해 $$f(n) = g(n)$$이다. 특히 $$n = 0$$을 대입하면
+가 성립한다. 한편 $$D+nH$$는 effective divisor이므로, 앞선 논증에 의해 $$D+nH$$에 대해서는 원하는 등식이 성립한다. 따라서 $$n$$에 대한 두 함수 $$f(n) = \rchi(\mathcal{O}(D+nH))$$와 $$g(n) = \frac{1}{2}(D+nH)\cdot(D+nH-K_S) + \rchi(\mathcal{O}_S)$$를 생각하면 이들은 충분히 큰 $$n$$에 대해서는 항상 일치한다. 그런데 앞서 언급한 Snapper's theorem에 의해 $$\rchi(\mathcal{O}_S(D+nH))$$는 $$n$$에 대한 다항식이고, 무한히 많은 점들에 대해 그 값이 일치하는 다항식은 서로 같으므로 $$f$$와 $$g$$는 사실 같은 다항식이다. 즉, 모든 $$n$$에 대해 $$f(n) = g(n)$$이며 특히 $$n = 0$$을 대입하면
 
 $$\rchi(\mathcal{O}(D)) = \frac{1}{2}D\cdot(D-K_S) + \rchi(\mathcal{O}_S)$$
 
-를 얻는다. $$\square$$
+를 얻는다.
 
 </details>
 
@@ -173,19 +169,37 @@ Curve의 경우와 마찬가지로, 만약 $$D$$가 충분히 "양의" 방향이
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> **$$\mathbb{P}^2$$**: $$K_{\mathbb{P}^2} = -3H$$이고 $$\rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$이다. Divisor $$D = dH$$에 대해 intersection number $$H \cdot H = 1$$을 사용하면
+<ins id="ex5">**예시 5 ($$\mathbb{P}^2$$)**</ins> 우리는 $$\mathbb{P}^2$$에서 hyperplane class $$H$$를 고정하면
 
-$$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1.$$
+$$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
-한편 $$d \ge 0$$에 대해서는 $$h^0 = \binom{d+2}{2}$$이고 $$h^1 = h^2 = 0$$임을 알고 있으므로, $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \binom{d+2}{2} = \frac{(d+1)(d+2)}{2}$$가 되어 위 식과 일치함을 확인할 수 있다.
+임을 안다.  ([§표준선다발, ⁋명제 7](/ko/math/algebraic_geometry/canonical_bundle#prop7), [§사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#cor3)) $$\mathbb{P}^2$$에서 임의의 두 직선은 일반적으로 한 점에서 만나므로, $$H$$의 self-intersection number는 1이며 따라서 임의의 divisor $$D = dH$$에 대해
+
+$$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
+
+이 성립한다. 이것이 실제로 성립한다는 것은 [§사영공간의 코호몰로지, ⁋정리 3](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#cor3)의 결과이다. 특별히 $$d \ge 0$$에 대해서는 $$h^0 = \binom{d+2}{2}$$이고 $$h^1 = h^2 = 0$$임을 알고 있으므로, 이것이 위에서 언급한 $$h^1, h^2$$의 vanishingjㅔ 대한 직접적인 예시가 된다. 
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6**</ins> **Blow-up of $$\mathbb{P}^2$$**: 한 점 $$p$$에서의 blow-up $$\pi: \tilde{\mathbb{P}}^2 \to \mathbb{P}^2$$를 생각하자. Exceptional divisor를 $$E$$라 하면, canonical divisor는 $$K_{\tilde{\mathbb{P}}^2} = \pi^* K_{\mathbb{P}^2} + E = -3H + E$$이다. Divisor $$D = dH - kE$$에 대해 intersection number $$H \cdot H = 1$$, $$H \cdot E = 0$$, $$E \cdot E = -1$$을 사용하여
+<ins id="ex6">**예시 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> 이제 우리는 $$\mathbb{P}^2$$의 한 점 $$p$$에서의 blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$을 생각한다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_geometry/rational_maps#ex12)) 이는 기하적으로 $$p$$를 대체하여 exceptional divisor $$E \cong \mathbb{P}^1$$를 삽입하는 birational map이었다. 즉, $$\pi$$는 $$E$$ 위에서는 한 점으로 collapse되고, $$\widetilde{\mathbb{P}}^2 \setminus E$$에서는 $$\mathbb{P}^2 \setminus \{p\}$$와 isomorphic하다. 
 
-$$\rchi(\mathcal{O}_{\tilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) \cdot (dH - kE + 3H - E) + 1 = \frac{1}{2}d(d+3) - \frac{1}{2}k(k+1) + 1.$$
+이제 exceptional divisor를 $$E$$라 하면, 일반적으로 $$\pi: \tilde{X} \to X$$가 codimension $$r$$인 subvariety $$Z$$를 blow-up하고 $$E$$가 exceptional divisor일 때
+
+$$K_{\tilde{X}} = \pi^* K_X + (r-1)E$$
+
+가 성립한다. 이 공식이 왜 성립하는지 살펴보자. $$\tilde{X}$$와 $$X$$는 $$E$$를 제외한 곳에서 isomorphic하므로, $$\pi$$가 isomorphism인 곳에서는 $$K_{\tilde{X}} = \pi^* K_X$$이다. $$E$$ 주변에서의 차이를 보기 위해 $$K_{\tilde{X}} = \pi^* K_X + aE$$ 꼴을 가정하자. $$E$$ 위에서 adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_geometry/canonical_bundle#prop9))를 적용하면
+
+$$K_E = (K_{\tilde{X}} + E)\vert_E = (\pi^* K_X + (a+1)E)\vert_E$$
+
+이다. $$\pi^* K_X$$는 $$E$$ 위로 restriction되면 trivial하며, $$E \cong \mathbb{P}^{r-1}$$이고 $$K_E = \mathcal{O}_E(-r)$$이다. 한편 $$\mathcal{O}_{\tilde{X}}(E)\vert_E \cong \mathcal{O}_E(-1)$$이므로 $$(a+1)E\vert_E = \mathcal{O}_E(-(a+1))$$이다. 따라서 $$\mathcal{O}_E(-r) = \mathcal{O}_E(-(a+1))$$에서 $$a = r-1$$을 얻는다. 여기서는 한 점 $$p \in \mathbb{P}^2$$의 codimension이 2이므로 $$r-1 = 1$$이 되어
+
+$$K_{\widetilde{\mathbb{P}}^2} = \pi^* K_{\mathbb{P}^2} + E = -3H + E$$
+
+를 얻는다. $$\mathbb{P}^2$$에서 $$p$$를 지나지 않는 직선 $$H$$를 선택할 수 있는데, 이는 일반적인 직선이 주어진 한 점을 지나지 않기 때문이다. 이러한 $$H$$에 대해 $$\pi^* H$$는 strict transform과 일치하며 $$E$$와 교차하지 않아 $$H \cdot E = 0$$이다. 한편 $$E \cong \mathbb{P}^1$$이며, $$E$$의 normal bundle $$\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}$$는 $$\mathcal{O}_{\mathbb{P}^1}(-1)$$와 isomorphic하다. Self-intersection number는 normal bundle의 degree와 일치하므로 $$E^2 = \deg(\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}) = -1$$이며, 기하학적으로 이는 $$E$$가 한 점으로 collapse되면서 주변에서 "접혀 들어가" negativity를 갖게 됨을 의미한다. Divisor $$D = dH - kE$$에 대해 intersection number $$H \cdot H = 1$$, $$H \cdot E = 0$$, $$E^2 = -1$$을 사용하여
+
+$$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) \cdot (dH - kE + 3H - E) + 1 = \frac{1}{2}d(d+3) - \frac{1}{2}k(k+1) + 1.$$
 
 </div>
 
