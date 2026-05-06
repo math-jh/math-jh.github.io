@@ -185,7 +185,7 @@ $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \fr
 
 <ins id="ex6">**예시 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> 이제 우리는 $$\mathbb{P}^2$$의 한 점 $$p$$에서의 blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$을 생각한다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_geometry/rational_maps#ex12)) 이는 기하적으로 $$p$$를 대체하여 exceptional divisor $$E \cong \mathbb{P}^1$$를 삽입하는 birational map이다. 즉, $$\pi$$는 $$E$$ 위에서는 한 점으로 collapse되고, $$\widetilde{\mathbb{P}}^2 \setminus E$$에서는 $$\mathbb{P}^2 \setminus \{p\}$$와 isomorphic하다. 
 
-([§표준선다발, ⁋예시 11](/ko/math/algebraic_geometry/canonical_bundle#ex11))에 의해, $$\mathbb{P}^2$$의 한 점에서의 blow-up에 대해서는 $$r=2$$이므로
+([§표준선다발, ⁋명제 12](/ko/math/algebraic_geometry/canonical_bundle#prop12))에 의해, $$\mathbb{P}^2$$의 한 점에서의 blow-up에 대해서는 $$r=2$$이므로
 
 $$K_{\widetilde{\mathbb{P}}^2} = \pi^\ast K_{\mathbb{P}^2} + E = -3H + E$$
 
