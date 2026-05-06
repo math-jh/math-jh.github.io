@@ -177,7 +177,7 @@ $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
 
-이 성립한다. 이것이 실제로 성립한다는 것은 [§사영공간의 코호몰로지, ⁋정리 3](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#cor3)의 결과이다. 특별히 $$d \ge 0$$에 대해서는 $$h^0 = \binom{d+2}{2}$$이고 $$h^1 = h^2 = 0$$임을 알고 있으므로, 이것이 위에서 언급한 $$h^1, h^2$$의 vanishingjㅔ 대한 직접적인 예시가 된다. 
+이 성립한다. 이것이 실제로 성립한다는 것은 [§사영공간의 코호몰로지, ⁋정리 3](/ko/math/algebraic_geometry/cohomology_of_projective_spaces#cor3)의 결과이다. 특별히 $$d \ge 0$$에 대해서는 $$h^0 = \binom{d+2}{2}$$이고 $$h^1 = h^2 = 0$$임을 알고 있으므로, 이것이 위에서 언급한 $$h^1, h^2$$의 vanishing에 대한 직접적인 예시가 된다. 
 
 </div>
 
@@ -185,15 +185,17 @@ $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \fr
 
 <ins id="ex6">**예시 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> 이제 우리는 $$\mathbb{P}^2$$의 한 점 $$p$$에서의 blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$을 생각한다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_geometry/rational_maps#ex12)) 이는 기하적으로 $$p$$를 대체하여 exceptional divisor $$E \cong \mathbb{P}^1$$를 삽입하는 birational map이었다. 즉, $$\pi$$는 $$E$$ 위에서는 한 점으로 collapse되고, $$\widetilde{\mathbb{P}}^2 \setminus E$$에서는 $$\mathbb{P}^2 \setminus \{p\}$$와 isomorphic하다. 
 
-이제 exceptional divisor를 $$E$$라 하면, 일반적으로 $$\pi: \tilde{X} \to X$$가 codimension $$r$$인 subvariety $$Z$$를 blow-up하고 $$E$$가 exceptional divisor일 때
+이제 exceptional divisor를 $$E$$라 하면, 일반적으로 $$\widetilde{X}$$와 $$X$$는 $$E$$를 제외한 곳에서 isomorphic하므로 $$\widetilde{X$$
 
-$$K_{\tilde{X}} = \pi^* K_X + (r-1)E$$
+ $$\pi: \widetilde{X} \to X$$가 codimension $$r$$인 subvariety $$Z$$를 blow-up하고 $$E$$가 exceptional divisor일 때 $$\pi$$가 isomorphism인 곳에서는 $$K_{\widetilde{X}} = \pi^* K_X$$이 성립한다. $$E$$ 위에서는 adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_geometry/canonical_bundle#prop9))를 적용할 수 있으며, 이 때
 
-가 성립한다. 이 공식이 왜 성립하는지 살펴보자. $$\tilde{X}$$와 $$X$$는 $$E$$를 제외한 곳에서 isomorphic하므로, $$\pi$$가 isomorphism인 곳에서는 $$K_{\tilde{X}} = \pi^* K_X$$이다. $$E$$ 주변에서의 차이를 보기 위해 $$K_{\tilde{X}} = \pi^* K_X + aE$$ 꼴을 가정하자. $$E$$ 위에서 adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_geometry/canonical_bundle#prop9))를 적용하면
+$$K_E = (r-2)E$$
 
-$$K_E = (K_{\tilde{X}} + E)\vert_E = (\pi^* K_X + (a+1)E)\vert_E$$
+이며, 다. 이로부터 우리는
 
-이다. $$\pi^* K_X$$는 $$E$$ 위로 restriction되면 trivial하며, $$E \cong \mathbb{P}^{r-1}$$이고 $$K_E = \mathcal{O}_E(-r)$$이다. 한편 $$\mathcal{O}_{\tilde{X}}(E)\vert_E \cong \mathcal{O}_E(-1)$$이므로 $$(a+1)E\vert_E = \mathcal{O}_E(-(a+1))$$이다. 따라서 $$\mathcal{O}_E(-r) = \mathcal{O}_E(-(a+1))$$에서 $$a = r-1$$을 얻는다. 여기서는 한 점 $$p \in \mathbb{P}^2$$의 codimension이 2이므로 $$r-1 = 1$$이 되어
+$$K_{\widetilde{X}}=\pi^\ast K_X+(r-1)E$$
+
+$$\pi^* K_X$$는 $$E$$ 위로 restriction되면 trivial하며, $$E \cong \mathbb{P}^{r-1}$$이고 $$K_E = \mathcal{O}_E(-r)$$이다. 한편 $$\mathcal{O}_{\tilde{X}}(E)\vert_E \cong \mathcal{O}_E(-1)$$이므로 $$(a+1)E\vert_E = \mathcal{O}_E(-(a+1))$$이다. 따라서 $$\mathcal{O}_E(-r) = \mathcal{O}_E(-(a+1))$$에서 $$a = r-1$$을 얻는다. 여기서는 한 점 $$p \in \mathbb{P}^2$$의 codimension이 2이므로 $$r-1 = 1$$이 되어
 
 $$K_{\widetilde{\mathbb{P}}^2} = \pi^* K_{\mathbb{P}^2} + E = -3H + E$$
 
