@@ -183,29 +183,25 @@ $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \fr
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> 이제 우리는 $$\mathbb{P}^2$$의 한 점 $$p$$에서의 blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$을 생각한다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_geometry/rational_maps#ex12)) 이는 기하적으로 $$p$$를 대체하여 exceptional divisor $$E \cong \mathbb{P}^1$$를 삽입하는 birational map이다. 즉, $$\pi$$는 $$E$$ 위에서는 한 점으로 collapse되고, $$\widetilde{\mathbb{P}}^2 \setminus E$$에서는 $$\mathbb{P}^2 \setminus \{p\}$$와 isomorphic하다. 
-
-([§표준선다발, ⁋명제 12](/ko/math/algebraic_geometry/canonical_bundle#prop12))에 의해, $$\mathbb{P}^2$$의 한 점에서의 blow-up에 대해서는 $$r=2$$이므로
+<ins id="ex6">**예시 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> 이제 우리는 $$\mathbb{P}^2$$의 한 점 $$p$$에서의 blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$을 생각한다. [§표준선다발, ⁋명제 12](/ko/math/algebraic_geometry/canonical_bundle#prop12)에 의해, canonical bundle은 다음의 식
 
 $$K_{\widetilde{\mathbb{P}}^2} = \pi^\ast K_{\mathbb{P}^2} + E = -3H + E$$
 
-이다. $$\mathbb{P}^2$$에서 $$p$$를 지나지 않는 직선 $$H$$를 선택할 수 있는데, 이는 일반적인 직선이 주어진 한 점을 지나지 않기 때문이다. 이러한 $$H$$에 대해 $$\pi^\ast H$$는 strict transform과 일치하며 $$E$$와 교차하지 않아 $$H \cdot E = 0$$이다. 한편 $$E \cong \mathbb{P}^1$$이며, $$E$$의 normal bundle $$\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}$$는 $$\mathcal{O}_{\mathbb{P}^1}(-1)$$와 isomorphic하다. Self-intersection number는 normal bundle의 degree와 일치하므로 $$E^2 = \deg(\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}) = -1$$이며, 기하학적으로 이는 $$E$$가 한 점으로 collapse되면서 주변에서 "접혀 들어가" negativity를 갖게 됨을 의미한다. Divisor $$D = dH - kE$$에 대해 intersection number $$H \cdot H = 1$$, $$H \cdot E = 0$$, $$E^2 = -1$$을 사용하여
+으로 주어진다. $$\mathbb{P}^2$$에서는 hyperplane class $$H$$가 점 $$p$$를 피하도록 잡을 수 있으므로 $$H \cdot E = 0$$이다. 한편 $$E \cong \mathbb{P}^1$$이며, $$E$$의 normal bundle $$\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}$$는 $$\mathcal{O}_{\mathbb{P}^1}(-1)$$와 isomorphic하며 이로부터 self-intersection number $$E^2 = \deg(\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}) = -1$$이며, 기하학적으로 이는 $$E$$가 한 점으로 collapse되면서 주변에서 "접혀 들어가" negativity를 갖게 됨을 의미한다. 따라서 일반적인 divisor $$D = dH - kE$$에 대해서는
 
-$$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) \cdot (dH - kE + 3H - E) + 1 = \frac{1}{2}d(d+3) - \frac{1}{2}k(k+1) + 1.$$
+$$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) \cdot (dH - kE + 3H - E) + 1 = \frac{1}{2}d(d+3) - \frac{1}{2}k(k+1) + 1$$
+
+임을 계산할 수 있다.
 
 </div>
 
-## Serre duality를 통한 표현
-
-([§세르 쌍대성, ⁋명제 4](/ko/math/algebraic_geometry/serre_duality#prop4))에 의해 $$h^2(\mathcal{O}(D)) = h^0(\mathcal{O}(K_S - D))$$이다. 이 관계는 교차 형식의 이차항들이 실제로 cohomology의 정보를 담고 있다는 것을 보여준다. 구체적으로, Riemann–Roch 공식은 다음과 같이 쓸 수 있다:
+한편 곡선에서의 Riemann-Roch 정리는 위의 [명제 4](#prop4)에서 [§세르 쌍대성, ⁋명제 4](/ko/math/algebraic_geometry/serre_duality#prop4)를 적용하여 $$h^1$$ 부분을 $$h^0$$으로 바꾼 것으로, 곡면에서의 경우에도 이를 활용하여 $$h^2(\mathcal{O}(D)) = h^0(\mathcal{O}(K_S - D))$$로 적을 수 있고, 그럼 Riemann–Roch 공식은 다음의 식
 
 $$h^0(\mathcal{O}(D)) - h^1(\mathcal{O}(D)) + h^0(\mathcal{O}(K_S - D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}(D^2 - D \cdot K_S)$$
 
-이 표현은 $$D$$에 대한 정보를 $$K_S - D$$에 대한 정보와 연결해 준다. 특히 $$h^1(\mathcal{O}(D))$$는 직접 계산하기 어려운 항이지만, 만일 이 값이 0이거나 충분히 작다고 가정할 수 있다면—예를 들어 Kodaira vanishing theorem이 적용 가능한 경우—우리는 $$h^0(\mathcal{O}(D))$$와 $$h^0(\mathcal{O}(K_S - D))$$ 중 적어도 하나가 충분히 크다는 것을 보일 수 있다.
+으로 변하게 된다. 일반적으로 $$h^1(\mathcal{O}(D))$$는 직접 계산하기 어려운 항이지만, 만일 이 값이 0이거나 충분히 작다고 가정할 수 있다면—예를 들어 Kodaira vanishing theorem이 적용 가능한 경우—우리는 $$h^0(\mathcal{O}(D))$$와 $$h^0(\mathcal{O}(K_S - D))$$ 중 적어도 하나가 충분히 크다는 것을 보일 수 있다.
 
 이 공식의 유용성을 이해하기 위해 두 극단적인 경우를 생각해 보자. 만일 $$D$$가 "충분히 양수", 즉 $$D \cdot H$$가 ample divisor $$H$$에 대해 충분히 크다면, $$K_S - D$$는 "음수" 방향이 되어 $$h^0(\mathcal{O}(K_S - D)) = 0$$이 되고 Riemann–Roch는 $$h^0$$에 대한 하한을 준다. 반대로 $$D$$가 "충분히 음수"이면 $$h^0(\mathcal{O}(D)) = 0$$이 되고 $$K_S - D$$의 정보를 얻는다. 이러한 "양수와 음수의 대칭"은 Serre duality가 만들어내는 현상이다.
-
-## 예시: $$\mathbb{P}^1 \times \mathbb{P}^1$$
 
 $$\mathbb{P}^2$$에 대한 Riemann–Roch 계산은 이미 [예시 5](#ex5)에서 다루었다. 여기서는 다른 근본적인 예시를 살펴본다.
 
