@@ -264,6 +264,34 @@ $$\deg K_C=d(d-3)=(d-1)(d-2)-2=2g-2$$
 
 </div>
 
+<div class="example" markdown="1">
+
+<ins id="ex11">**예시 11 (Blow-up의 canonical bundle)**</ins> Smooth variety $$X$$의 codimension $$r$$인 smooth subvariety $$Z$$를 blow-up한 $$\pi: \widetilde{X} \to X$$에 대하여, exceptional divisor를 $$E$$라 하자. 그럼
+
+$$K_{\widetilde{X}} = \pi^\ast K_X + (r-1)E$$
+
+가 성립한다.
+
+이를 확인하자. $$\pi$$가 isomorphism인 $$\widetilde{X} \setminus E$$ 위에서는 자연스럽게 $$K_{\widetilde{X}} = \pi^\ast K_X$$가 성립하므로, $$K_{\widetilde{X}}$$와 $$\pi^\ast K_X$$의 차이는 $$E$$ 위에서만 발생할 수 있다. 따라서 적당한 정수 $$a$$가 존재하여
+
+$$K_{\widetilde{X}} = \pi^\ast K_X + aE$$
+
+로 쓸 수 있다. 이제 $$E$$ 위에서 adjunction formula ([명제 9](#prop9))를 적용하면
+
+$$K_E = (K_{\widetilde{X}} + E)\vert_E$$
+
+이다. 한편 $$E \cong \mathbb{P}^{r-1}$$이므로 $$K_E = \mathcal{O}_E(-r)$$이고, $$\mathcal{O}_{\widetilde{X}}(E)\vert_E \cong \mathcal{O}_E(-1)$$이다. 위의 식에서 $$K_{\widetilde{X}}\vert_E = aE\vert_E = \mathcal{O}_E(-a)$$로 두면,
+
+$$K_E = \mathcal{O}_E(-a-1)$$
+
+를 얻는다. 이로부터 $$\mathcal{O}_E(-r) = \mathcal{O}_E(-a-1)$$이므로 $$a = r-1$$이다. 따라서
+
+$$K_{\widetilde{X}} = \pi^\ast K_X + (r-1)E$$
+
+를 얻는다.
+
+</div>
+
 Degree-genus formula는, 실은 다음 글에서 살펴볼 Riemann-Roch theorem의 특수한 경우이며, 우리는 다음 글에서 이를 사용하여 smooth curve를 살펴볼 것이다. 
 
 ---
