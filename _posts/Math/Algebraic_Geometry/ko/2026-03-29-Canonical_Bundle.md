@@ -334,12 +334,6 @@ $$0\rightarrow \mathcal{O}_E\rightarrow (\pi\vert_E)^\ast \mathcal{N}_{Z/X}\otim
 
 를 얻는다. 
 
-이제 ($$\ast$$)와 ($$\ast\ast$$)으로부터, determinant를 취하면 우리는 다음의 두 식
-
-$$\det(T_E) = \det(T_{E/Z}) \otimes \pi_E^\ast \det(T_Z),\qquad \det(T_{E/Z}) = \pi_E^\ast \det(\mathcal{N}_{Z/X}) \otimes \mathcal{O}_E(r)$$
-
-을 얻으며, 따라서 
-
 <div class="proposition" markdown="1">
 
 <ins id="prop12">**명제 12 (Blow-up의 canonical bundle)**</ins> Smooth variety $$X$$의 codimension $$r$$인 smooth subvariety $$Z$$를 blow-up한 $$\pi: \widetilde{X} \to X$$에 대하여, exceptional divisor를 $$E$$라 하면
@@ -353,35 +347,7 @@ $$K_{\widetilde{X}} = \pi^\ast K_X + (r-1)E$$
 <details class="proof" markdown="1">
 <summary>증명</summary> 
 
-먼저 $$E$$는 $$Z$$ 위의 projective bundle
-
-$$E = \mathbb{P}(\mathcal{N}_{Z/X})$$
-
-이며, $$\pi_E: E \to Z$$를 이 bundle의 projection이라 하자. $$E$$ 위에서 tangent bundle $$T_E$$는 base $$Z$$의 tangent direction을 pull-back한 것과 fiber $$\mathbb{P}^{r-1}$$의 tangent direction으로 이루어지므로, 다음 short exact sequence를 갖는다:
-
-
-
-여기서 $$T_{E/Z}$$는 relative tangent bundle이다. 한편 $$\mathbb{P}(\mathcal{N}_{Z/X})$$ 위에서는 relative Euler sequence
-
-$$0 \to \mathcal{O}_E \to \pi_E^\ast \mathcal{N}_{Z/X} \otimes \mathcal{O}_E(1) \to T_{E/Z} \to 0$$
-
-가 성립한다. 이 sequence에서 $$\mathcal{O}_E(1)$$은 $$\mathbb{P}(\mathcal{N}_{Z/X})$$의 tautological line bundle에 dual을 취한 것, 즉 standard convention 하에서의 $$\mathcal{O}(1)$$이다. 위 두 exact sequence로부터 top exterior power를 취하면
-
-
-
-를 얻는다. 또한 relative Euler sequence로부터
-
-$$$$
-
-를 얻는데, 이는 $$\mathcal{O}_E(1)$$이 rank $$r$$인 bundle과 tensor product되므로 $$r$$번 곱해지기 때문이다. 따라서 relative canonical bundle은
-
-$$\omega_{E/Z} = \det(T_{E/Z})^{-1} = \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-r)$$
-
-가 되고, 최종적으로
-
-$$K_E = \det(T_E)^{-1} = \omega_{E/Z} \otimes \pi_E^\ast K_Z = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-r)$$
-
-를 얻는다. 한편 $$\widetilde{X}$$ 위의 adjunction formula에 의해
+우선 $$\widetilde{X}$$ 위의 adjunction formula에 의해
 
 $$K_E = (K_{\widetilde{X}} + E)\vert_E$$
 
@@ -389,7 +355,9 @@ $$K_E = (K_{\widetilde{X}} + E)\vert_E$$
 
 $$K_{\widetilde{X}} = \pi^\ast K_X + aE$$
 
-로 둘 수 있다. 이 식을 $$E$$로 restrict하면
+로 둘 수 있으며 우리는 $$a=r-1$$임을 보여야 한다. 
+
+이를 위해 위의 식을 $$E$$로 restrict하면
 
 $$K_{\widetilde{X}}\vert_E = (\pi^\ast K_X)\vert_E + aE\vert_E$$
 
@@ -409,13 +377,29 @@ $$K_{\widetilde{X}}\vert_E = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_
 
 $$(K_{\widetilde{X}} + E)\vert_E = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-a-1)$$
 
-가 되며, 앞서 구한 $$K_E$$의 두 표현을 비교하면 $$-a-1 = -r$$, 즉 $$a = r-1$$을 얻는다.
+가 된다.
+
+한편 우리는 ($$\ast$$)와 ($$\ast\ast$$)으로부터, determinant를 취하면 우리는 다음의 두 식
+
+$$\det(T_E) = \det(T_{E/Z}) \otimes \pi_E^\ast \det(T_Z),\qquad \det(T_{E/Z}) = \pi_E^\ast \det(\mathcal{N}_{Z/X}) \otimes \mathcal{O}_E(r)$$
+
+을 얻는다. 이제 우리는 둘째 식으로부터 명시적으로 relative canonical bundle을
+
+$$\omega_{E/Z} = \det(T_{E/Z})^{-1} = \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-r)$$
+
+로 얻어낼 수 있고, 이를 다시 첫째 식에 대입하면
+
+$$K_E = \det(T_E)^{-1} = \omega_{E/Z} \otimes \pi_E^\ast K_Z = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-r)$$
+
+임을 안다. 이제 이 두 표현을 비교하면 $$-a-1 = -r$$, 즉 $$a = r-1$$을 얻는다.
 
 </details>
 
+구체적으로 다음을 살펴보자.
+
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12 ($$\mathbb{A}^2$$의 점에서의 blow-up)**</ins> $$X = \mathbb{A}^2$$의 원점 $$Z = \{0\}$$에서의 blow-up을 고려하자. $$K_{\mathbb{A}^2} = 0$$이고 $$Z$$의 codimension은 $$r = 2$$이므로, [명제 11](#prop11)에 의해
+<ins id="ex13">**예시 13 ($$\mathbb{A}^2$$의 점에서의 blow-up)**</ins> $$X = \mathbb{A}^2$$의 원점 $$Z = \{0\}$$에서의 blow-up을 고려하자. $$K_{\mathbb{A}^2} = 0$$이고 $$Z$$의 codimension은 $$r = 2$$이므로, [명제 12](#prop12)에 의해
 
 $$K_{\widetilde{\mathbb{A}^2}} = E$$
 
