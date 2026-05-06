@@ -183,23 +183,13 @@ $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \fr
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> 이제 우리는 $$\mathbb{P}^2$$의 한 점 $$p$$에서의 blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$을 생각한다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_geometry/rational_maps#ex12)) 이는 기하적으로 $$p$$를 대체하여 exceptional divisor $$E \cong \mathbb{P}^1$$를 삽입하는 birational map이었다. 즉, $$\pi$$는 $$E$$ 위에서는 한 점으로 collapse되고, $$\widetilde{\mathbb{P}}^2 \setminus E$$에서는 $$\mathbb{P}^2 \setminus \{p\}$$와 isomorphic하다. 
+<ins id="ex6">**예시 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> 이제 우리는 $$\mathbb{P}^2$$의 한 점 $$p$$에서의 blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$을 생각한다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_geometry/rational_maps#ex12)) 이는 기하적으로 $$p$$를 대체하여 exceptional divisor $$E \cong \mathbb{P}^1$$를 삽입하는 birational map이다. 즉, $$\pi$$는 $$E$$ 위에서는 한 점으로 collapse되고, $$\widetilde{\mathbb{P}}^2 \setminus E$$에서는 $$\mathbb{P}^2 \setminus \{p\}$$와 isomorphic하다. 
 
-이제 exceptional divisor를 $$E$$라 하면, 일반적으로 $$\widetilde{X}$$와 $$X$$는 $$E$$를 제외한 곳에서 isomorphic하므로 $$\widetilde{X$$
+([§표준선다발, ⁋예시 11](/ko/math/algebraic_geometry/canonical_bundle#ex11))에 의해, $$\mathbb{P}^2$$의 한 점에서의 blow-up에 대해서는 $$r=2$$이므로
 
- $$\pi: \widetilde{X} \to X$$가 codimension $$r$$인 subvariety $$Z$$를 blow-up하고 $$E$$가 exceptional divisor일 때 $$\pi$$가 isomorphism인 곳에서는 $$K_{\widetilde{X}} = \pi^* K_X$$이 성립한다. $$E$$ 위에서는 adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_geometry/canonical_bundle#prop9))를 적용할 수 있으며, 이 때
+$$K_{\widetilde{\mathbb{P}}^2} = \pi^\ast K_{\mathbb{P}^2} + E = -3H + E$$
 
-$$K_E = (r-2)E$$
-
-이며, 다. 이로부터 우리는
-
-$$K_{\widetilde{X}}=\pi^\ast K_X+(r-1)E$$
-
-$$\pi^* K_X$$는 $$E$$ 위로 restriction되면 trivial하며, $$E \cong \mathbb{P}^{r-1}$$이고 $$K_E = \mathcal{O}_E(-r)$$이다. 한편 $$\mathcal{O}_{\tilde{X}}(E)\vert_E \cong \mathcal{O}_E(-1)$$이므로 $$(a+1)E\vert_E = \mathcal{O}_E(-(a+1))$$이다. 따라서 $$\mathcal{O}_E(-r) = \mathcal{O}_E(-(a+1))$$에서 $$a = r-1$$을 얻는다. 여기서는 한 점 $$p \in \mathbb{P}^2$$의 codimension이 2이므로 $$r-1 = 1$$이 되어
-
-$$K_{\widetilde{\mathbb{P}}^2} = \pi^* K_{\mathbb{P}^2} + E = -3H + E$$
-
-를 얻는다. $$\mathbb{P}^2$$에서 $$p$$를 지나지 않는 직선 $$H$$를 선택할 수 있는데, 이는 일반적인 직선이 주어진 한 점을 지나지 않기 때문이다. 이러한 $$H$$에 대해 $$\pi^* H$$는 strict transform과 일치하며 $$E$$와 교차하지 않아 $$H \cdot E = 0$$이다. 한편 $$E \cong \mathbb{P}^1$$이며, $$E$$의 normal bundle $$\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}$$는 $$\mathcal{O}_{\mathbb{P}^1}(-1)$$와 isomorphic하다. Self-intersection number는 normal bundle의 degree와 일치하므로 $$E^2 = \deg(\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}) = -1$$이며, 기하학적으로 이는 $$E$$가 한 점으로 collapse되면서 주변에서 "접혀 들어가" negativity를 갖게 됨을 의미한다. Divisor $$D = dH - kE$$에 대해 intersection number $$H \cdot H = 1$$, $$H \cdot E = 0$$, $$E^2 = -1$$을 사용하여
+이다. $$\mathbb{P}^2$$에서 $$p$$를 지나지 않는 직선 $$H$$를 선택할 수 있는데, 이는 일반적인 직선이 주어진 한 점을 지나지 않기 때문이다. 이러한 $$H$$에 대해 $$\pi^\ast H$$는 strict transform과 일치하며 $$E$$와 교차하지 않아 $$H \cdot E = 0$$이다. 한편 $$E \cong \mathbb{P}^1$$이며, $$E$$의 normal bundle $$\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}$$는 $$\mathcal{O}_{\mathbb{P}^1}(-1)$$와 isomorphic하다. Self-intersection number는 normal bundle의 degree와 일치하므로 $$E^2 = \deg(\mathcal{N}_{E/\widetilde{\mathbb{P}}^2}) = -1$$이며, 기하학적으로 이는 $$E$$가 한 점으로 collapse되면서 주변에서 "접혀 들어가" negativity를 갖게 됨을 의미한다. Divisor $$D = dH - kE$$에 대해 intersection number $$H \cdot H = 1$$, $$H \cdot E = 0$$, $$E^2 = -1$$을 사용하여
 
 $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) \cdot (dH - kE + 3H - E) + 1 = \frac{1}{2}d(d+3) - \frac{1}{2}k(k+1) + 1.$$
 
