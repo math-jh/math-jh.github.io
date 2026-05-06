@@ -264,35 +264,164 @@ $$\deg K_C=d(d-3)=(d-1)(d-2)-2=2g-2$$
 
 </div>
 
-<div class="example" markdown="1">
+Degree-genus formula는, 실은 나중에 살펴 볼 Riemann-Roch theorem의 특수한 경우이며, 우리는 해당 글에서 위의 계산의 결과 $$\deg K_C=2g-2$$와 degree-genus formula를 모두 유도할 것이다.
 
-<ins id="ex11">**예시 11 (Blow-up의 canonical bundle)**</ins> Smooth variety $$X$$의 codimension $$r$$인 smooth subvariety $$Z$$를 blow-up한 $$\pi: \widetilde{X} \to X$$에 대하여, exceptional divisor를 $$E$$라 하자. 그럼
+## Blow-up의 canonical divisor
+
+우리는 [§유리사상, ⁋예시 12](/ko/math/algebraic_geometry/rational_maps#ex12)에서 $$\mathbb{A}^2$$ 위의 한 점 $$0$$에서의 blow-up을 살펴보았다. 우리는 이제 이 예시를 더 일반화시키고, 이 일반적인 세팅에서 canonical divisor가 어떻게 행동하는지를 살펴볼 것이다.
+
+Smooth variety $$X$$와 codimension $$r$$ smooth subvariety $$Z$$에 대하여, $$Z$$를 따라 $$X$$를 blowup한 것은 다음의 birational morphism
+
+$$\pi:\widetilde{X}\rightarrow X;$$
+
+으로 주어지며, 이 때 $$\pi$$는 $$Z$$의 fiber 바깥에서는 isomorphism이며 $$Z$$의 fiber는 *exceptional divisor*
+
+$$E=\mathbb{P}(\mathcal{N}_{Z/X})$$
+
+로 주어진다. 이 때 $$\mathcal{N}_{Z/X}$$는 $$X$$ 안에서 $$Z$$의 normal bundle이며, $$\mathbb{P}(\mathcal{N}_{Z/X})$$는 $$Z$$의 각 점의 fiber에 해당하는 vector space를 projectivize해서 얻어진 projective bundle을 의미한다. 이는 [§유리사상, ⁋예시 12](/ko/math/algebraic_geometry/rational_maps#ex12)에서, 한 점 $$0$$의 fiber에 해당하는 exceptional divisor는 이 점 바깥에서 이 점으로 <em-ko>들어오는</em-ko> 방향을 projective하여 달아준 것의 analogue이다. 
+
+그럼 $$\pi:\widetilde{X}\rightarrow X$$를 $$E$$로 제한하여 
+
+$$\pi\vert_E: E\rightarrow Z$$
+
+를 생각하자. 이제 $$E$$의 tangent bundle을 생각하면, 우리는 이를 base space $$Z$$로부터 오는 수평 방향 $$(\pi\vert_E)^\ast T_Z$$과 그에 수직인 relative tangenb bundle 방향 $$T_{E/Z}$$으로 나눌 수 있다. 즉 다음의 short exact sequence
+
+$$0 \to T_{E/Z} \to T_E \to \pi_E^\ast T_Z \to 0\tag{$\ast$}$$
+
+를 얻는다. 
+
+한편 가정에 의해 $$Z$$는 codimension $$r$$이었으므로, $$\mathcal{N}_{Z/X}$$는 rank $$r$$이고 따라서 $$E$$의 각 fiber는 $$\mathbb{P}^{r-1}$$이다. 우리는 [명제 7](#prop7)을 일반화하여 다음을 얻는다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11 (Relative Euler sequence)**</ins> 임의의 vector bundle $$V\rightarrow B$$와 projectivized vector bundle $$\pi: \mathbb{P}(V)\rightarrow B$$에 대하여, 다음의 short exact sequence
+
+$$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$$
+
+가 존재한다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+정의에 의해 $$\mathbb{P}(V)$$의 각 점 $$[v]\in \mathbb{P}(V)$$는 $$V$$의 한 fiber 위의 1차원 부분공간이다. 이제 $$\mathbb{P}^n$$에서 그러하듯, $$\mathcal{O}_{\mathbb{P}(V)}(-1)$$은 이 직선들을 모아둔 line bundle이며 이로부터 tautological exact sequence
+
+$$0\rightarrow \mathcal{O}(-1)\rightarrow \pi^\ast V\rightarrow \mathcal{Q}\rightarrow 0$$
+
+를 얻고, exact sequence에 line bundle을 tensor product 하는 것은 exact를 보존하므로
+
+$$0 \rightarrow \mathcal{O}\rightarrow \mathcal{O}(1)\otimes \pi^\ast V \rightarrow \mathcal{Q}\otimes\mathcal{O}(1)\rightarrow 0$$
+
+이 성립한다. 그런데 
+
+$$\mathcal{Q}\otimes \mathcal{O}(1)\cong \Hom(\mathcal{O}(-1),\mathcal{Q})$$
+
+부분을 살펴보면, 우리는 이미 [명제 7](#prop7)의 증명에서 $$\mathbb{P}^n$$의 line이 어떠한 quotient로 가는지를 보는 것이 곧 tangent space임을 보았으므로 이 또한
+
+$$\Hom(\mathcal{O}(-1),\mathcal{Q})\cong T_{\mathbb{P}(V)/B}$$
+
+가 얻어지고, 이로부터 *relative* Euler sequence
+
+$$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$$
+
+을 얻는다.
+
+</details>
+
+따라서 우리 상황으로 돌아오면 다음의 exact sequence
+
+$$0\rightarrow \mathcal{O}_E\rightarrow (\pi\vert_E)^\ast \mathcal{N}_{Z/X}\otimes \mathcal{O}_E(1)\rightarrow T_{E/Z}\rightarrow 0\tag{$\ast\ast$}$$
+
+를 얻는다. 
+
+이제 ($$\ast$$)와 ($$\ast\ast$$)으로부터, determinant를 취하면 우리는 다음의 두 식
+
+$$\det(T_E) = \det(T_{E/Z}) \otimes \pi_E^\ast \det(T_Z),\qquad \det(T_{E/Z}) = \pi_E^\ast \det(\mathcal{N}_{Z/X}) \otimes \mathcal{O}_E(r)$$
+
+을 얻으며, 따라서 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop12">**명제 12 (Blow-up의 canonical bundle)**</ins> Smooth variety $$X$$의 codimension $$r$$인 smooth subvariety $$Z$$를 blow-up한 $$\pi: \widetilde{X} \to X$$에 대하여, exceptional divisor를 $$E$$라 하면
 
 $$K_{\widetilde{X}} = \pi^\ast K_X + (r-1)E$$
 
 가 성립한다.
 
-이를 확인하자. $$\pi$$가 isomorphism인 $$\widetilde{X} \setminus E$$ 위에서는 자연스럽게 $$K_{\widetilde{X}} = \pi^\ast K_X$$가 성립하므로, $$K_{\widetilde{X}}$$와 $$\pi^\ast K_X$$의 차이는 $$E$$ 위에서만 발생할 수 있다. 따라서 적당한 정수 $$a$$가 존재하여
+</div>
 
-$$K_{\widetilde{X}} = \pi^\ast K_X + aE$$
+<details class="proof" markdown="1">
+<summary>증명</summary> 
 
-로 쓸 수 있다. 이제 $$E$$ 위에서 adjunction formula ([명제 9](#prop9))를 적용하면
+먼저 $$E$$는 $$Z$$ 위의 projective bundle
+
+$$E = \mathbb{P}(\mathcal{N}_{Z/X})$$
+
+이며, $$\pi_E: E \to Z$$를 이 bundle의 projection이라 하자. $$E$$ 위에서 tangent bundle $$T_E$$는 base $$Z$$의 tangent direction을 pull-back한 것과 fiber $$\mathbb{P}^{r-1}$$의 tangent direction으로 이루어지므로, 다음 short exact sequence를 갖는다:
+
+
+
+여기서 $$T_{E/Z}$$는 relative tangent bundle이다. 한편 $$\mathbb{P}(\mathcal{N}_{Z/X})$$ 위에서는 relative Euler sequence
+
+$$0 \to \mathcal{O}_E \to \pi_E^\ast \mathcal{N}_{Z/X} \otimes \mathcal{O}_E(1) \to T_{E/Z} \to 0$$
+
+가 성립한다. 이 sequence에서 $$\mathcal{O}_E(1)$$은 $$\mathbb{P}(\mathcal{N}_{Z/X})$$의 tautological line bundle에 dual을 취한 것, 즉 standard convention 하에서의 $$\mathcal{O}(1)$$이다. 위 두 exact sequence로부터 top exterior power를 취하면
+
+
+
+를 얻는다. 또한 relative Euler sequence로부터
+
+$$$$
+
+를 얻는데, 이는 $$\mathcal{O}_E(1)$$이 rank $$r$$인 bundle과 tensor product되므로 $$r$$번 곱해지기 때문이다. 따라서 relative canonical bundle은
+
+$$\omega_{E/Z} = \det(T_{E/Z})^{-1} = \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-r)$$
+
+가 되고, 최종적으로
+
+$$K_E = \det(T_E)^{-1} = \omega_{E/Z} \otimes \pi_E^\ast K_Z = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-r)$$
+
+를 얻는다. 한편 $$\widetilde{X}$$ 위의 adjunction formula에 의해
 
 $$K_E = (K_{\widetilde{X}} + E)\vert_E$$
 
-이다. 한편 $$E \cong \mathbb{P}^{r-1}$$이므로 $$K_E = \mathcal{O}_E(-r)$$이고, $$\mathcal{O}_{\widetilde{X}}(E)\vert_E \cong \mathcal{O}_E(-1)$$이다. 위의 식에서 $$K_{\widetilde{X}}\vert_E = aE\vert_E = \mathcal{O}_E(-a)$$로 두면,
+이다. 이제 $$\widetilde{X} \setminus E$$와 $$X \setminus Z$$가 isomorphic하므로, $$K_{\widetilde{X}}$$와 $$\pi^\ast K_X$$의 차이는 $$E$$ 위에서만 발생할 수 있다. 따라서 적당한 정수 $$a$$가 존재하여
 
-$$K_E = \mathcal{O}_E(-a-1)$$
+$$K_{\widetilde{X}} = \pi^\ast K_X + aE$$
 
-를 얻는다. 이로부터 $$\mathcal{O}_E(-r) = \mathcal{O}_E(-a-1)$$이므로 $$a = r-1$$이다. 따라서
+로 둘 수 있다. 이 식을 $$E$$로 restrict하면
 
-$$K_{\widetilde{X}} = \pi^\ast K_X + (r-1)E$$
+$$K_{\widetilde{X}}\vert_E = (\pi^\ast K_X)\vert_E + aE\vert_E$$
 
-를 얻는다.
+이다. 여기서 $$(\pi^\ast K_X)\vert_E = \pi_E^\ast(K_X\vert_Z)$$이고, $$Z \subset X$$에 대한 adjunction formula에 의해
+
+$$K_X\vert_Z = K_Z \otimes \det(\mathcal{N}_{Z/X})^{-1}$$
+
+이므로
+
+$$(\pi^\ast K_X)\vert_E = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1}$$
+
+를 얻는다. 또한 $$E\vert_E = \mathcal{O}_E(-1)$$이므로
+
+$$K_{\widetilde{X}}\vert_E = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-a)$$
+
+이다. 따라서
+
+$$(K_{\widetilde{X}} + E)\vert_E = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-a-1)$$
+
+가 되며, 앞서 구한 $$K_E$$의 두 표현을 비교하면 $$-a-1 = -r$$, 즉 $$a = r-1$$을 얻는다.
+
+</details>
+
+<div class="example" markdown="1">
+
+<ins id="ex12">**예시 12 ($$\mathbb{A}^2$$의 점에서의 blow-up)**</ins> $$X = \mathbb{A}^2$$의 원점 $$Z = \{0\}$$에서의 blow-up을 고려하자. $$K_{\mathbb{A}^2} = 0$$이고 $$Z$$의 codimension은 $$r = 2$$이므로, [명제 11](#prop11)에 의해
+
+$$K_{\widetilde{\mathbb{A}^2}} = E$$
+
+이다. $$K_{\widetilde{\mathbb{A}^2}} = E$$이므로 exceptional divisor $$E$$가 canonical divisor의 역할을 함을 알 수 있다.
 
 </div>
-
-Degree-genus formula는, 실은 다음 글에서 살펴볼 Riemann-Roch theorem의 특수한 경우이며, 우리는 다음 글에서 이를 사용하여 smooth curve를 살펴볼 것이다. 
 
 ---
 
