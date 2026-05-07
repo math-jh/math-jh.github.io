@@ -34,12 +34,44 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/linear_systems
       - title: "표준선다발"
         url: ko/math/algebraic_geometry/canonical_bundle
+      - title: "다양체에서 스킴으로"
+        url: ko/math/algebraic_geometry/from_varieties_to_schemes
+      - title: "스펙트럼"
+        url: ko/math/algebraic_geometry/spectrums
+      - title: "아핀스킴"
+        url: ko/math/algebraic_geometry/affine_schemes
+      - title: "스킴"
+        url: ko/math/algebraic_geometry/schemes
+      - title: "스킴의 위상구조"
+        url: ko/math/algebraic_geometry/topology_of_schemes
+      - title: "스킴의 대수구조"
+        url: ko/math/algebraic_geometry/algebra_of_schemes
+      - title: "스킴 사이의 사상"
+        url: ko/math/algebraic_geometry/morphism_of_schemes
+      - title: "스킴 사상의 성질들"
+        url: ko/math/algebraic_geometry/properties_of_scheme_morphisms
+      - title: "올곱"
+        url: ko/math/algebraic_geometry/fiber_products
+      - title: "닫힌 부분스킴"
+        url: ko/math/algebraic_geometry/closed_subschemes
+      - title: "사영스킴"
+        url: ko/math/algebraic_geometry/projective_schemes
+      - title: "사영공간의 닫힌 부분스킴"
+        url: ko/math/algebraic_geometry/closed_subschemes_of_projective_spaces
+      - title: "완전교차"
+        url: ko/math/algebraic_geometry/complete_intersections
+      - title: "차원 (스킴)"
+        url: ko/math/algebraic_geometry/dimension
+      - title: "대수적 군"
+        url: ko/math/algebraic_geometry/algebraic_groups
       - title: "층 코호몰로지"
         url: ko/math/algebraic_geometry/sheaf_cohomology
       - title: "사영공간의 코호몰로지"
         url: ko/math/algebraic_geometry/cohomology_of_projective_spaces
       - title: "세르 쌍대성"
         url: ko/math/algebraic_geometry/serre_duality
+      - title: "코다이라 소멸정리"
+        url: ko/math/algebraic_geometry/kodaira_vanishing
       - title: "곡선에서의 리만-로흐 정리"
         url: ko/math/algebraic_geometry/riemann_roch_theorem
       - title: "곡면에서의 리만-로흐 정리"
@@ -52,6 +84,16 @@ algebraic_geometry-ko:
         url: ko/math/algebraic_geometry/intersection_product
       - title: "Bézout's Theorem"
         url: ko/math/algebraic_geometry/bezout_theorem
+      - title: "Chern Classes"
+        url: ko/math/algebraic_geometry/chern_classes
+      - title: "Todd Class"
+        url: ko/math/algebraic_geometry/todd_class
+      - title: "Hirzebruch-Riemann-Roch"
+        url: ko/math/algebraic_geometry/hirzebruch_riemann_roch
+      - title: "Noether Formula"
+        url: ko/math/algebraic_geometry/noether_formula
+      - title: "K3 Surfaces"
+        url: ko/math/algebraic_geometry/k3_surfaces
   - title: 
     children:
       - title: "블로그 소개"
