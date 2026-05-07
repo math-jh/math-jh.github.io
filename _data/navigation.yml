@@ -9,98 +9,108 @@ main:
 
 ########## 본문 사이드바 ##########
 
-algebraic_geometry-ko:
-  - title: <a href="/ko/algebraic_geometry/" class="sidebar_title">대수기하학</a>
+algebraic_varieties-ko:
+  - title: <a href="/ko/algebraic_varieties/" class="sidebar_title">대수다양체</a>
     children:
       - title: "아핀다양체"
-        url: ko/math/algebraic_geometry/affine_varieties
+        url: ko/math/algebraic_varieties/affine_varieties
       - title: "사영다양체"
-        url: ko/math/algebraic_geometry/projective_varieties
+        url: ko/math/algebraic_varieties/projective_varieties
       - title: "준사영다양체"
-        url: ko/math/algebraic_geometry/quasi_projective_varieties
+        url: ko/math/algebraic_varieties/quasi_projective_varieties
       - title: "유리사상"
-        url: ko/math/algebraic_geometry/rational_maps
+        url: ko/math/algebraic_varieties/rational_maps
       - title: "차원"
-        url: ko/math/algebraic_geometry/dimension
+        url: ko/math/algebraic_varieties/dimension
       - title: "접공간과 매끄러움"
-        url: ko/math/algebraic_geometry/tangent_spaces_and_smoothness
+        url: ko/math/algebraic_varieties/tangent_spaces_and_smoothness
       - title: "그라스만다양체"
-        url: ko/math/algebraic_geometry/grassmannians
+        url: ko/math/algebraic_varieties/grassmannians
       - title: "인자"
-        url: ko/math/algebraic_geometry/divisors
+        url: ko/math/algebraic_varieties/divisors
       - title: "선다발과 벡터다발"
-        url: ko/math/algebraic_geometry/line_bundles
+        url: ko/math/algebraic_varieties/line_bundles
       - title: "선형계"
-        url: ko/math/algebraic_geometry/linear_systems
+        url: ko/math/algebraic_varieties/linear_systems
       - title: "표준선다발"
-        url: ko/math/algebraic_geometry/canonical_bundle
-      - title: "다양체에서 스킴으로"
-        url: ko/math/algebraic_geometry/from_varieties_to_schemes
-      - title: "스펙트럼"
-        url: ko/math/algebraic_geometry/spectrums
-      - title: "아핀스킴"
-        url: ko/math/algebraic_geometry/affine_schemes
-      - title: "스킴"
-        url: ko/math/algebraic_geometry/schemes
-      - title: "스킴의 위상구조"
-        url: ko/math/algebraic_geometry/topology_of_schemes
-      - title: "스킴의 대수구조"
-        url: ko/math/algebraic_geometry/algebra_of_schemes
-      - title: "스킴 사이의 사상"
-        url: ko/math/algebraic_geometry/morphism_of_schemes
-      - title: "스킴 사상의 성질들"
-        url: ko/math/algebraic_geometry/properties_of_scheme_morphisms
-      - title: "올곱"
-        url: ko/math/algebraic_geometry/fiber_products
-      - title: "닫힌 부분스킴"
-        url: ko/math/algebraic_geometry/closed_subschemes
-      - title: "사영스킴"
-        url: ko/math/algebraic_geometry/projective_schemes
-      - title: "사영공간의 닫힌 부분스킴"
-        url: ko/math/algebraic_geometry/closed_subschemes_of_projective_spaces
-      - title: "완전교차"
-        url: ko/math/algebraic_geometry/complete_intersections
-      - title: "차원 (스킴)"
-        url: ko/math/algebraic_geometry/dimension
-      - title: "대수적 군"
-        url: ko/math/algebraic_geometry/algebraic_groups
+        url: ko/math/algebraic_varieties/canonical_bundle
       - title: "층 코호몰로지"
-        url: ko/math/algebraic_geometry/sheaf_cohomology
+        url: ko/math/algebraic_varieties/sheaf_cohomology
       - title: "사영공간의 코호몰로지"
-        url: ko/math/algebraic_geometry/cohomology_of_projective_spaces
+        url: ko/math/algebraic_varieties/cohomology_of_projective_spaces
       - title: "세르 쌍대성"
-        url: ko/math/algebraic_geometry/serre_duality
+        url: ko/math/algebraic_varieties/serre_duality
       - title: "코다이라 소멸정리"
-        url: ko/math/algebraic_geometry/kodaira_vanishing
+        url: ko/math/algebraic_varieties/kodaira_vanishing
       - title: "곡선에서의 리만-로흐 정리"
-        url: ko/math/algebraic_geometry/riemann_roch_theorem
+        url: ko/math/algebraic_varieties/riemann_roch_theorem
       - title: "곡면에서의 리만-로흐 정리"
-        url: ko/math/algebraic_geometry/riemann_roch_surfaces
+        url: ko/math/algebraic_varieties/riemann_roch_surfaces
       - title: "Intersection Multiplicity"
-        url: ko/math/algebraic_geometry/intersection_multiplicity
+        url: ko/math/algebraic_varieties/intersection_multiplicity
       - title: "Chow Groups"
-        url: ko/math/algebraic_geometry/chow_groups
+        url: ko/math/algebraic_varieties/chow_groups
       - title: "Intersection Product"
-        url: ko/math/algebraic_geometry/intersection_product
+        url: ko/math/algebraic_varieties/intersection_product
       - title: "Bézout's Theorem"
-        url: ko/math/algebraic_geometry/bezout_theorem
+        url: ko/math/algebraic_varieties/bezout_theorem
       - title: "Chern Classes"
-        url: ko/math/algebraic_geometry/chern_classes
+        url: ko/math/algebraic_varieties/chern_classes
       - title: "Todd Class"
-        url: ko/math/algebraic_geometry/todd_class
+        url: ko/math/algebraic_varieties/todd_class
       - title: "Hirzebruch-Riemann-Roch"
-        url: ko/math/algebraic_geometry/hirzebruch_riemann_roch
+        url: ko/math/algebraic_varieties/hirzebruch_riemann_roch
       - title: "Noether Formula"
-        url: ko/math/algebraic_geometry/noether_formula
+        url: ko/math/algebraic_varieties/noether_formula
       - title: "K3 Surfaces"
-        url: ko/math/algebraic_geometry/k3_surfaces
+        url: ko/math/algebraic_varieties/k3_surfaces
   - title: 
     children:
       - title: "블로그 소개"
         url: ko/about
       - title: "찾아보기"
         url: ko/misc/index_ko
-          
+
+scheme_theory-ko:
+  - title: <a href="/ko/scheme_theory/" class="sidebar_title">스킴</a>
+    children:
+      - title: "다양체에서 스킴으로"
+        url: ko/math/scheme_theory/from_varieties_to_schemes
+      - title: "스펙트럼"
+        url: ko/math/scheme_theory/spectrums
+      - title: "아핀스킴"
+        url: ko/math/scheme_theory/affine_schemes
+      - title: "스킴"
+        url: ko/math/scheme_theory/schemes
+      - title: "스킴의 위상구조"
+        url: ko/math/scheme_theory/topology_of_schemes
+      - title: "스킴의 대수구조"
+        url: ko/math/scheme_theory/algebra_of_schemes
+      - title: "스킴 사이의 사상"
+        url: ko/math/scheme_theory/morphism_of_schemes
+      - title: "스킴 사상의 성질들"
+        url: ko/math/scheme_theory/properties_of_scheme_morphisms
+      - title: "올곱"
+        url: ko/math/scheme_theory/fiber_products
+      - title: "닫힌 부분스킴"
+        url: ko/math/scheme_theory/closed_subschemes
+      - title: "사영스킴"
+        url: ko/math/scheme_theory/projective_schemes
+      - title: "사영공간의 닫힌 부분스킴"
+        url: ko/math/scheme_theory/closed_subschemes_of_projective_spaces
+      - title: "완전교차"
+        url: ko/math/scheme_theory/complete_intersections
+      - title: "차원 (스킴)"
+        url: ko/math/scheme_theory/dimension
+      - title: "대수적 군"
+        url: ko/math/scheme_theory/algebraic_groups
+  - title: 
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
 algebraic_structures-ko:
   - title: <a href="/ko/algebraic_structures/" class="sidebar_title">대수적 구조</a>
     children:
@@ -878,8 +888,10 @@ category-ko:
         url: ko/lie_theory/
       - title: "리만기하학"
         url: ko/riemannian_geometry/
-      - title: "대수기하학"
-        url: ko/algebraic_geometry/
+      - title: "대수다양체"
+        url: ko/algebraic_varieties/
+      - title: "스킴"
+        url: ko/scheme_theory/
       - title: "사교기하학"
         url: ko/symplectic_geometry/
       - title: "토릭기하학"
@@ -950,8 +962,10 @@ category-en:
         url: en/lie_theory/
       - title: "Riemannian Geometry"
         url: en/riemannian_geometry/
-      - title: "Algebraic Geometry"
-        url: en/algebraic_geometry/
+      - title: "Algebraic Varieties"
+        url: en/algebraic_varieties/
+      - title: "Scheme Theory"
+        url: en/scheme_theory/
       - title: "Symplectic Geometry"
         url: en/symplectic_geometry/
       - title: "Toric Geometry"
