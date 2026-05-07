@@ -118,7 +118,7 @@ feature_row:
     alt: "algebraic_geometry"
     title: "대수다양체"
     excerpt: "기하학 및 위상수학: 대수다양체"
-    url: "/ko/algebraic_geometry"
+    url: "/ko/algebraic_varieties"
     btn_class: "btn--primary"
     btn_label: "Read more"
   - image_path: /assets/images/Pages/Thumbnails/Files/Symplectic_Geometry.jpeg
