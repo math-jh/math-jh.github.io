@@ -35,7 +35,8 @@ author_profile: true
 - [미분다양체](/ko/manifold/)
 - [리만기하학](/ko/riemannian_geometry/)
 - [대수적 위상수학](/ko/algebraic_topology/)
-- [대수기하학](/ko/algebraic_geometry/)
+- [대수다양체](/ko/algebraic_varieties/)
+- [스킴](/ko/scheme_theory/)
 - [사교기하학](/ko/symplectic_geometry/)
 
 ## 기타
