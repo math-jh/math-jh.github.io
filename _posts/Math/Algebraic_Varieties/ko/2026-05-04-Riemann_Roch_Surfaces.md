@@ -268,13 +268,13 @@ $$\Num(S) = \Div(S) / \{\text{numerical equivalence}\}$$
 
 $$\rchi(\mathcal{O}(mD)) = \rchi(\mathcal{O}_S) + \frac{m^2 D^2 - m D \cdot K_S}{2}$$
 
-가 성립한다. 그런데 우리는 $$D^2 > 0$$이라 가정하고 있으므로, $$|m|$$이 커질 때 $$\rchi(\mathcal{O}(mD))$$ 또한 무한히 커진다는 것을 안다. 
+가 성립한다. 그런데 우리는 $$D^2 > 0$$이라 가정하고 있으므로, $$\lvert m\rvert$$이 커질 때 $$\rchi(\mathcal{O}(mD))$$ 또한 무한히 커진다는 것을 안다. 
 
-먼저 $$n$$을 충분히 크게 잡아 $$H_n = D + nH$$가 very ample이 되도록 하자. 그럼 
+먼저 $$n$$을 충분히 크게 잡아 $$H_n = D + nH$$가 very ample이 되도록 하자. ([§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)의 Serre vanishing theorem에 의해 이는 항상 가능하다.) 그럼 
 
 $$D \cdot H_n = D^2 + n(D \cdot H) = D^2 > 0$$
 
-이다. 한편 Serre duality에 의해 $$h^2(\mathcal{O}(mD)) = h^0(\mathcal{O}(K_S - mD))$$이며, $$m \gg 0$$일 때
+이다. 한편 Serre duality에 의해 $$h^2(\mathcal{O}(mD)) = h^0(\mathcal{O}(K_S - mD))$$이며, $$m \gg 0$$일 때문에
 
 $$(K_S - mD) \cdot H_n = K_S \cdot H_n - m(D \cdot H_n) = K_S \cdot H_n - mD^2 < 0$$
 
