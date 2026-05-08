@@ -8,6 +8,7 @@ header: { overlay_image: /assets/images/Math/Algebraic_Geometry/Todd_Class.png, 
 date: 2026-05-07
 last_modified_at: 2026-05-07
 weight: 23
+published: false
 ---
 
 **Hirzebruch-Riemann-Roch (HRR)** 정리는 smooth projective variety $X$ 위의 vector bundle $E$에 대하여, 그 Euler characteristic $\chi(X,E)$를 $X$의 intersection theory 위에서 적분으로 표현한다. 구체적으로 HRR 정리는
