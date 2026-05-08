@@ -267,6 +267,46 @@ $$H^j(\mathcal{G}(n_0)) \cong H^{j+N}(\mathcal{K}_{N-1})$$
 
 </details>
 
+## Very ample과 ample의 성질
+
+[명제 4](#prop4)의 Serre vanishing theorem은 ample line bundle의 성질에 대한 대표적인 결과이다. 이 절에서는 ample과 very ample의 관계를 더 정리한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop5">**명제 5**</ins> $$\mathcal{L}$$이 very ample이고 $$\mathcal{M}$$이 globally generated이면, $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\mathcal{L}$$이 very ample이므로, projective embedding $$i: X \hookrightarrow \mathbb{P}^r$$이 존재하여 $$\mathcal{L} = i^*\mathcal{O}_{\mathbb{P}^r}(1)$$이다. $$\mathcal{M}$$이 globally generated이므로, global sections $$s_0, \ldots, s_s \in H^0(X, \mathcal{M})$$가 모든 점에서 stalk를 generate한다. 이는 morphism $$\phi: X \to \mathbb{P}^s$$를 정의한다.
+
+$$(i, \phi): X \to \mathbb{P}^r \times \mathbb{P}^s$$는 closed embedding이다. (왜냐하면 $$\mathbb{P}^r \times \mathbb{P}^s \to \mathbb{P}^r$$로 투영하면 $$i$$를 recover하므로, $$(i, \phi)$$는 injective on points and tangent vectors.) Segre embedding $$\sigma: \mathbb{P}^r \times \mathbb{P}^s \hookrightarrow \mathbb{P}^{rs+r+s}$$에 의해 $$\sigma^*\mathcal{O}(1) = \pi_1^*\mathcal{O}(1) \otimes \pi_2^*\mathcal{O}(1)$$이므로,
+
+$$(\sigma \circ (i, \phi))^*\mathcal{O}(1) = i^*\mathcal{O}(1) \otimes \phi^*\mathcal{O}(1) = \mathcal{L} \otimes \mathcal{M}.$$
+
+따라서 $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop6">**명제 6 (Hartshorne II.7.10)**</ins> $$X$$를 projective scheme, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{M}$$을 임의의 invertible sheaf라 하자. 그럼 충분히 큰 $$n$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes n}$$은 very ample이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+**단계 1.** $$\mathcal{L}$$이 ample이므로, 어떤 $$m > 0$$에 대해 $$\mathcal{L}^{\otimes m}$$은 very ample이다.
+
+**단계 2.** $$\mathcal{M}$$에 대해, 충분히 큰 $$k$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes k}$$은 global sections에 의해 generated된다. ([명제 4](#prop4)의 Serre vanishing을 사용하여 projective scheme 위의 coherent sheaf에 대해 ample twist 이후 global sections에 의해 generated됨을 보장한다.)
+
+**단계 3.** [명제 5](#prop5)에 의해, $$(\mathcal{M} \otimes \mathcal{L}^{\otimes k}) \otimes \mathcal{L}^{\otimes m} = \mathcal{M} \otimes \mathcal{L}^{\otimes (k+m)}$$은 very ample이다. $$n = k + m$$으로 두면 증명이 완료된다.
+
+</details>
+
 ## Regularity
 
 [명제 4](#prop4)는 higher cohomology가 충분히 큰 twisting 후 vanish한다는 qualitative한 결과를 주었다. Regularity는 이를 정량화하여, 구체적으로 얼마만큼의 twisting이 필요한지를 측정하는 개념이다.
