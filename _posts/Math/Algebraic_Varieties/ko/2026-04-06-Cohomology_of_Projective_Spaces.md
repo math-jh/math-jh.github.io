@@ -12,7 +12,7 @@ header:
     overlay_filter: 0.5
 
 date: 2026-04-06
-last_modified_at: 2026-04-08
+last_modified_at: 2026-05-09
 weight: 13
 published: false
 ---
@@ -223,7 +223,7 @@ $$\mathcal{L}$$이 ample이므로, 충분히 큰 $$m_0$$에 대해 $$\mathcal{L}
 
 $$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{F})$$
 
-이 성립한다. $$X$$와 $$\mathbb{P}^N$$은 separated scheme이므로 ([§층 코호몰로지, ⁋명제 10](/ko/math/algebraic_varieties/sheaf_cohomology#prop10)), quasi-coherent sheaf에 대해 Čech cohomology = sheaf cohomology:
+이 성립한다. $$X$$와 $$\mathbb{P}^N$$은 separated scheme이므로 ([§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)), quasi-coherent sheaf에 대해 Čech cohomology = sheaf cohomology:
 
 $$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{G}) = H^i(\mathbb{P}^N, i_*\mathcal{G})$$ 따라서 다음을 보이면 충분하다: $$\mathbb{P}^N$$ 위의 coherent sheaf $$\mathcal{G}$$에 대해, 충분히 큰 $$n$$에 대해 $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$$ ($$i > 0$$). 여기서 $$\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$$이다.
 
@@ -264,46 +264,6 @@ $$H^j(\mathcal{G}(n_0)) \cong H^{j+N}(\mathcal{K}_{N-1})$$
 을 얻는다. $$\mathbb{P}^N$$의 cohomological dimension은 $$N$$이므로 $$H^{j+N} = 0$$ ($$j \geq 1$$, $$j + N \geq N+1 > N$$), 따라서 $$H^j(\mathcal{G}(n_0)) = 0$$이다.
 
 마지막으로, $$\mathcal{G}(n_0)$$이 globally generated이므로 $$\mathcal{G}(n) = \mathcal{G}(n_0) \otimes \mathcal{O}(n - n_0)$$ 역시 $$n \geq n_0$$에 대해 globally generated이고, 따라서 위와 동일한 resolution 인자를 $$\mathcal{G}(n)$$에 대해서도 구성할 수 있으므로 vanishing은 $$n \geq n_0$$인 모든 $$n$$에 대해 성립한다.
-
-</details>
-
-## Very ample과 ample의 성질
-
-[명제 4](#prop4)의 Serre vanishing theorem은 ample line bundle의 성질에 대한 대표적인 결과이다. 이 절에서는 ample과 very ample의 관계를 더 정리한다.
-
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> $$\mathcal{L}$$이 very ample이고 $$\mathcal{M}$$이 globally generated이면, $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$$\mathcal{L}$$이 very ample이므로, projective embedding $$i: X \hookrightarrow \mathbb{P}^r$$이 존재하여 $$\mathcal{L} = i^*\mathcal{O}_{\mathbb{P}^r}(1)$$이다. $$\mathcal{M}$$이 globally generated이므로, global sections $$s_0, \ldots, s_s \in H^0(X, \mathcal{M})$$가 모든 점에서 stalk를 generate한다. 이는 morphism $$\phi: X \to \mathbb{P}^s$$를 정의한다.
-
-$$(i, \phi): X \to \mathbb{P}^r \times \mathbb{P}^s$$는 closed embedding이다. (왜냐하면 $$\mathbb{P}^r \times \mathbb{P}^s \to \mathbb{P}^r$$로 투영하면 $$i$$를 recover하므로, $$(i, \phi)$$는 injective on points and tangent vectors.) Segre embedding $$\sigma: \mathbb{P}^r \times \mathbb{P}^s \hookrightarrow \mathbb{P}^{rs+r+s}$$에 의해 $$\sigma^*\mathcal{O}(1) = \pi_1^*\mathcal{O}(1) \otimes \pi_2^*\mathcal{O}(1)$$이므로,
-
-$$(\sigma \circ (i, \phi))^*\mathcal{O}(1) = i^*\mathcal{O}(1) \otimes \phi^*\mathcal{O}(1) = \mathcal{L} \otimes \mathcal{M}.$$
-
-따라서 $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
-
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6 (Hartshorne II.7.10)**</ins> $$X$$를 projective scheme, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{M}$$을 임의의 invertible sheaf라 하자. 그럼 충분히 큰 $$n$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes n}$$은 very ample이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-**단계 1.** $$\mathcal{L}$$이 ample이므로, 어떤 $$m > 0$$에 대해 $$\mathcal{L}^{\otimes m}$$은 very ample이다.
-
-**단계 2.** $$\mathcal{M}$$에 대해, 충분히 큰 $$k$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes k}$$은 global sections에 의해 generated된다. ([명제 4](#prop4)의 Serre vanishing을 사용하여 projective scheme 위의 coherent sheaf에 대해 ample twist 이후 global sections에 의해 generated됨을 보장한다.)
-
-**단계 3.** [명제 5](#prop5)에 의해, $$(\mathcal{M} \otimes \mathcal{L}^{\otimes k}) \otimes \mathcal{L}^{\otimes m} = \mathcal{M} \otimes \mathcal{L}^{\otimes (k+m)}$$은 very ample이다. $$n = k + m$$으로 두면 증명이 완료된다.
 
 </details>
 
@@ -430,11 +390,55 @@ $$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \to H
 
 </div>
 
+## Very ample과 ample의 성질
+
+위의 [명제 4](#prop4)와 [명제 7](#prop7)은 ample line bundle의 성질에 대한 대표적인 결과이다. 우리는 이 글을 ample line bundle과 very ample line bundle에 대한 추가적인 성질을 살펴보며 마무리한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9**</ins> $$\mathcal{L}$$이 very ample이고 $$\mathcal{M}$$이 globally generated이면, $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\mathcal{L}$$이 very ample이므로, projective embedding $$i: X \hookrightarrow \mathbb{P}^N$$이 존재하여 $$\mathcal{L} = i^*\mathcal{O}_{\mathbb{P}^N}(1)$$이도록 할 수 있다. 한편, $$\mathcal{M}$$이 globally generated이므로, global section들 $$s_0, \ldots, s_n \in H^0(X, \mathcal{M})$$가 모든 점에서 stalk를 generate하며, 이로부터 morphism $$\phi: X \to \mathbb{P}^n$$를 정의할 수 있다.
+
+이제 closed embedding $$(i, \phi): X \to \mathbb{P}^N \times \mathbb{P}^n$$을 생각하자. 그럼 여기에 Segre embedding ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 
+
+$$\sigma: \mathbb{P}^N \times \mathbb{P}^n \hookrightarrow \mathbb{P}^{Nn+N+n}$$
+
+을 합성하면 $$\sigma^*\mathcal{O}(1) = \pi_1^*\mathcal{O}(1) \otimes \pi_2^*\mathcal{O}(1)$$이므로,
+
+$$(\sigma \circ (i, \phi))^*\mathcal{O}(1) = i^*\mathcal{O}(1) \otimes \phi^*\mathcal{O}(1) = \mathcal{L} \otimes \mathcal{M}$$
+
+인 것을 안다. 즉 $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
+
+</details>
+
+<div class="proposition" markdown="1">
+
+<ins id="prop10">**명제 10**</ins> $$X$$를 projective scheme, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{M}$$을 임의의 invertible sheaf라 하자. 그럼 충분히 큰 $$n$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes n}$$은 very ample이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+**단계 1.** $$\mathcal{L}$$이 ample이므로, 어떤 $$m > 0$$에 대해 $$\mathcal{L}^{\otimes m}$$은 very ample이다.
+
+**단계 2.** $$\mathcal{M}$$에 대해, 충분히 큰 $$k$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes k}$$은 global sections에 의해 generated된다. ([명제 4](#prop4)의 Serre vanishing을 사용하여 projective scheme 위의 coherent sheaf에 대해 ample twist 이후 global sections에 의해 generated됨을 보장한다.)
+
+**단계 3.** [명제 9](#prop9)에 의해, $$(\mathcal{M} \otimes \mathcal{L}^{\otimes k}) \otimes \mathcal{L}^{\otimes m} = \mathcal{M} \otimes \mathcal{L}^{\otimes (k+m)}$$은 very ample이다. $$n = k + m$$으로 두면 증명이 완료된다.
+
+</details>
+
 ---
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.
-**[Bot]** R. Bott, *Homogeneous vector bundles*, Annals of Mathematics, 1957.
-**[Laz]** R. Lazarsfeld, *Positivity in Algebraic Geometry I*, Ergebnisse der Mathematik, Springer, 2004.
+**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
+**[Bot]** R. Bott, *Homogeneous vector bundles*, Annals of Mathematics, 1957.  
+**[Laz]** R. Lazarsfeld, *Positivity in Algebraic Geometry I*, Ergebnisse der Mathematik, Springer, 2004.  
 **[Mum]** D. Mumford, *Lectures on Curves on an Algebraic Surface*, Annals of Mathematics Studies, Princeton, 1966.
