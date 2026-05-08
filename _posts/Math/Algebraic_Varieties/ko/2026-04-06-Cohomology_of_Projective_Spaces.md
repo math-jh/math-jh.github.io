@@ -14,7 +14,6 @@ header:
 date: 2026-04-06
 last_modified_at: 2026-05-09
 weight: 13
-published: false
 ---
 
 우리는 일찍이 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)에서 line bundle $$\mathcal{O}(d)$$를 정의하고, 그 global section $$H^0(\mathbb{P}^n, \mathcal{O}(d))$$이 degree $$d$$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 sheaf cohomology ([§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1))는 $$H^0$$뿐만 아니라 higher cohomology group들 $$H^1, H^2, \ldots$$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $$H^0$$ 뿐만 아니라 higher cohomology group들을 사용하여 $$\mathcal{O}(d)$$의 정보를 모두 알아낼 것이다.
@@ -417,20 +416,22 @@ $$(\sigma \circ (i, \phi))^*\mathcal{O}(1) = i^*\mathcal{O}(1) \otimes \phi^*\ma
 
 </details>
 
+즉, 다소 복잡하게 설명하기는 했으나 핵심은 globally generated line bundle $$\mathcal{M}$$이 정의하는 morphism $$\phi:X\rightarrow \mathbb{P}^n$$은 closed embedding이 아닐 수 있으나, 이를 $$\mathcal{L}$$과 텐서하여 $$(i,\phi)$$ 형태로 projective space에 넣어주면 첫 번째 성분인 $$i$$가 이 map을 closed embedding으로 만들어준다는 것이다. 그럼 이로부터 다음의 유용한 결과 또한 증명할 수 있다. 
+
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> $$X$$를 projective scheme, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{M}$$을 임의의 invertible sheaf라 하자. 그럼 충분히 큰 $$n$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes n}$$은 very ample이다.
+<ins id="prop10">**명제 10**</ins> Projective variety $$X$$ 위에 정의된 ample line bundle $$\mathcal{L}$$과 임의의 line bundle $$\mathcal{M}$$에 대하여, 충분히 큰 $$n$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes n}$$은 very ample이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-**단계 1.** $$\mathcal{L}$$이 ample이므로, 어떤 $$m > 0$$에 대해 $$\mathcal{L}^{\otimes m}$$은 very ample이다.
+우선 $$\mathcal{L}$$이 ample이므로 적당한 $$m>0$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample이다. 한편, [명제 4](#prop4)에 의해 우리는 충분히 큰 $$k$$에 대해서는 $$\mathcal{M}\otimes \mathcal{L}^{\otimes k}$$의 higher cohomology가 사라지도록 할 수 있으므로, 이러한 $$k$$에 대해서 $$\mathcal{M}\otimes \mathcal{L}^{\otimes k}$$는 globally generated이다. 이제 [명제 9](#prop9)에 의해 
 
-**단계 2.** $$\mathcal{M}$$에 대해, 충분히 큰 $$k$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes k}$$은 global sections에 의해 generated된다. ([명제 4](#prop4)의 Serre vanishing을 사용하여 projective scheme 위의 coherent sheaf에 대해 ample twist 이후 global sections에 의해 generated됨을 보장한다.)
+$$(\mathcal{M} \otimes \mathcal{L}^{\otimes k}) \otimes \mathcal{L}^{\otimes m} = \mathcal{M} \otimes \mathcal{L}^{\otimes (k+m)}$$
 
-**단계 3.** [명제 9](#prop9)에 의해, $$(\mathcal{M} \otimes \mathcal{L}^{\otimes k}) \otimes \mathcal{L}^{\otimes m} = \mathcal{M} \otimes \mathcal{L}^{\otimes (k+m)}$$은 very ample이다. $$n = k + m$$으로 두면 증명이 완료된다.
+은 very ample이고, 이로부터 $$n = k + m$$으로 두면 증명이 완료된다.
 
 </details>
 
