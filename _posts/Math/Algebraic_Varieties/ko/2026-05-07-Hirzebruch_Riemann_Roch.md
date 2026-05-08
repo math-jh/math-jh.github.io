@@ -11,6 +11,7 @@ header:
 date: 2026-05-07
 last_modified_at: 2026-05-07
 weight: 24
+published: false
 ---
 
 Riemann-Roch 정리는 algebraic geometry의 핵심 정리 중 하나로, 주어진 다양체 위의 sheaf의 cohomology에 대한 정보를 그 다양체의 기하학적 불변량으로 계산하는 공식을 제공한다. Curve에서의 classical Riemann-Roch 정리는 divisor의 degree와 curve의 genus만을 사용하여 Euler characteristic을 계산하며, surface로의 일반화에서는 intersection number가 추가적으로 등장한다. Hirzebruch는 이러한 저차원의 결과들을 통일적인 공식으로 일반화하여, 임의의 차원을 갖는 smooth projective variety 위의 coherent sheaf에 대한 Riemann-Roch 공식을 얻었다. 본 글에서는 이 **Hirzebruch-Riemann-Roch (HRR)** 정리를 서술하고, 저차원으로의 환원, 증명의 개요, 그리고 구체적인 계산 예시를 다룬다.

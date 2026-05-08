@@ -195,23 +195,23 @@ $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) 
 
 </div>
 
-한편 곡선에서의 Riemann-Roch 정리는 위의 [명제 4](#prop4)에서 [§세르 쌍대성, ⁋명제 4](/ko/math/algebraic_varieties/serre_duality#prop4)를 적용하여 $$h^1$$ 부분을 $$h^0$$으로 바꾼 것으로, 곡면에서의 경우에도 이를 활용하여 $$h^2(\mathcal{O}(D)) = h^0(\mathcal{O}(K_S - D))$$로 적을 수 있고, 그럼 Riemann–Roch 공식은 다음의 식
+한편 곡선에서의 Riemann-Roch 정리는 위의 [명제 4](#prop4)에서 [§세르 쌍대성, ⁋명제 4](/ko/math/algebraic_varieties/serre_duality#prop4)를 적용하여 $$h^1$$ 부분을 $$h^0$$으로 바꾼 것으로, 곡면에서의 경우에도 이를 활용하여 $$h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$$로 적을 수 있고, 그럼 Riemann–Roch 공식은 다음의 식
 
-$$h^0(\mathcal{O}(D)) - h^1(\mathcal{O}(D)) + h^0(\mathcal{O}(K_S - D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}(D^2 - D \cdot K_S)$$
+$$h^0(\mathcal{O}(D)) - h^1(\mathcal{O}(D)) + h^0(\omega_S(-D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}(D^2 - D \cdot K_S)$$
 
-으로 변하게 된다. 일반적으로 $$h^1(\mathcal{O}(D))$$는 직접 계산하기 어려운 항이지만, 만일 이 값이 0이거나 충분히 작다고 가정할 수 있다면 우리는 $$h^0(\mathcal{O}(D))$$와 $$h^0(\mathcal{O}(K_S - D))$$ 중 적어도 하나가 충분히 크다는 것을 보일 수 있다. 이를 위한 강력한 도구 중 하나는 다음의 Kodaira vanishing theorem이다.
+으로 변하게 된다. 일반적으로 $$h^1(\mathcal{O}(D))$$는 직접 계산하기 어려운 항이지만, 만일 이 값이 0이거나 충분히 작다고 가정할 수 있다면 우리는 $$h^0(\mathcal{O}(D))$$와 $$h^0(\omega_S(-D))$$ 중 적어도 하나가 충분히 크다는 것을 보일 수 있다. 이를 위한 강력한 도구 중 하나는 다음의 Kodaira vanishing theorem이다.
 
 <div class="proposition" markdown="1">
 
 <ins id="prop7">**명제 7 (Kodaira Vanishing Theorem)**</ins> Smooth projective variety $$X$$와 ample line bundle $$L$$에 대하여,
 
-$$H^i(X, K_X \otimes L) = 0$$
+$$H^i(X, \omega_X \otimes L) = 0$$
 
 가 모든 $$i > 0$$에 대해 성립한다.
 
 </div>
 
-Kodaira vanishing theorem의 본격적인 응용은 다음 글에서 다룬다. 이 공식의 유용성을 이해하기 위해 두 극단적인 경우를 생각해 보자. 만일 $$D$$가 "충분히 양수", 즉 $$D \cdot H$$가 ample divisor $$H$$에 대해 충분히 크다면, $$K_S - D$$는 "음수" 방향이 되어 $$h^0(\mathcal{O}(K_S - D)) = 0$$이 되고 Riemann–Roch는 $$h^0$$에 대한 하한을 준다. 반대로 $$D$$가 "충분히 음수"이면 $$h^0(\mathcal{O}(D)) = 0$$이 되고 $$K_S - D$$의 정보를 얻는다. 이러한 "양수와 음수의 대칭"은 Serre duality가 만들어내는 현상이다.
+Kodaira vanishing theorem의 본격적인 응용은 다음 글에서 다룬다. 이 공식의 유용성을 이해하기 위해 두 극단적인 경우를 생각해 보자. 만일 $$D$$가 "충분히 양수", 즉 $$D \cdot H$$가 ample divisor $$H$$에 대해 충분히 크다면, $$K_S - D$$는 "음수" 방향이 되어 $$h^0(\omega_S(-D)) = 0$$이 되고 Riemann–Roch는 $$h^0$$에 대한 하한을 준다. 반대로 $$D$$가 "충분히 음수"이면 $$h^0(\mathcal{O}(D)) = 0$$이 되고 $$K_S - D$$의 정보를 얻는다. 이러한 "양수와 음수의 대칭"은 Serre duality가 만들어내는 현상이다.
 
 $$\mathbb{P}^2$$에 대한 Riemann–Roch 계산은 이미 [예시 5](#ex5)에서 다루었다. 여기서는 다른 근본적인 예시를 살펴본다.
 
@@ -243,7 +243,7 @@ $$\rchi(\mathcal{O}(D)) = 1 + \frac{1}{2}(2ab + 2a + 2b) = (a+1)(b+1)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 두 divisor $$D_1, D_2$$가 *numerically equivalent<sub>수치적으로 동치</sub>* $$D_1 \equiv D_2$$라는 것은, 모든 divisor $$E$$에 대해 $$D_1 \cdot E = D_2 \cdot E$$인 것이다. Numerical equivalence class의 집합을
+<ins id="def9">**정의 9**</ins> 두 divisor $$D_1, D_2$$가 *numerically equivalent<sub>수치적으로 동치</sub>* $$D_1 \equiv D_2$$라는 것은, 모든 divisor $$E$$에 대해 $$D_1 \cdot E = D_2 \cdot E$$인 것이다. Numerical equivalence class의 집합을
 
 $$\Num(S) = \Div(S) / \{\text{numerical equivalence}\}$$
 
@@ -253,128 +253,85 @@ $$\Num(S) = \Div(S) / \{\text{numerical equivalence}\}$$
 
 위의 동치관계는 별다른 것이 아니고, divisor들의 intersection product를 생각할 때 같은 값을 주는 원소들은 같은 것으로 보는 equivalence class에 불과하다. 일반적으로 numerical equivalence는 linear equivalence보다 약한 관계이므로, numerically equivalent한 두 divisor는 서로 linearly equivalent하지 않을 수도 있다. 
 
-한편, ample line bundle과 대응되는 ample divisor ([§선형계, ⁋정의 10](/ko/math/algebraic_varieties/linear_systems#def10)) $$H$$는 intersection product에서 특별한 역할을 한다. 
+한편, ample line bundle과 대응되는 ample divisor ([§선형계, ⁋정의 10](/ko/math/algebraic_varieties/linear_systems#def10)) $$H$$는 intersection product에서 특별한 역할을 한다. 이는 근본적으로 (very) ample divisor와 effective divisor의 intersection number는 반드시 양수라는 사실로부터 기인하는 것으로, 이는 very ample divisor를 이용하여 projective variety를 projective space 안으로 넣었을 때, effective divisor와 very ample divisor의 실제 교집합을 생각하여 증명할 수 있다. 이를 활용하면 다음을 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9 (Hodge Index Theorem)**</ins> Smooth projective surface $$S$$와 ample divisor $$H$$를 고정하자. 만일 divisor $$D$$가 $$D \cdot H = 0$$이고 $$D \not\equiv 0$$을 만족하면 $$D^2 < 0$$이다.
+<ins id="prop10">**명제 10 (Hodge Index Theorem)**</ins> Smooth projective surface $$S$$와 ample divisor $$H$$를 고정하자. 만일 divisor $$D$$가 $$D \cdot H = 0$$이고 $$D \not\equiv 0$$을 만족하면 $$D^2 < 0$$이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$D^2>0$$이라 가정하자. 그럼 [명제 4](#prop4)에 의해
-
-$$\rchi(\mathcal{O}(mD)) = \rchi(\mathcal{O}_S) + \frac{m^2 D^2 - m D \cdot K_S}{2}$$
-
-가 성립한다. 그런데 우리는 $$D^2 > 0$$이라 가정하고 있으므로, $$\lvert m\rvert$$이 커질 때 $$\rchi(\mathcal{O}(mD))$$ 또한 무한히 커진다는 것을 안다. 
-
-먼저 $$n$$을 충분히 크게 잡아 $$H_n = D + nH$$가 very ample이 되도록 하자. ([§사영공간의 코호몰로지, ⁋명제 10](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop10)에 의해 이는 항상 가능하다.) 그럼 
+우선 $$D^2>0$$이라 가정하자. [§사영공간의 코호몰로지, ⁋명제 10](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop10)를 사용하면 우리는 $$H_n=D+nH$$가 very ample이도록 할 수 있다. 그럼
 
 $$D \cdot H_n = D^2 + n(D \cdot H) = D^2 > 0$$
 
-이다. 한편 Serre duality에 의해 $$h^2(\mathcal{O}(mD)) = h^0(\mathcal{O}(K_S - mD))$$이며, $$m \gg 0$$일 때문에
+이다. 한편 Serre duality에 의해 $$h^2(\mathcal{O}(mD)) = h^0(\omega_S(-mD))$$이며, $$m \gg 0$$일 때
 
 $$(K_S - mD) \cdot H_n = K_S \cdot H_n - m(D \cdot H_n) = K_S \cdot H_n - mD^2 < 0$$
 
-이 된다. $$H_n$$이 very ample이므로 effective divisor는 $$H_n$$과 양수 교차를 가져야 하는데, $$(K_S - mD) \cdot H_n < 0$$이므로 $$K_S - mD$$는 effective가 될 수 없다. 따라서 
+이 된다. 그런데 우리는 $$H_n$$을 very ample이도록 잡았으므로, 이 부등식은 $$K_S-mD$$가 effective divisor가 아니라는 것을 보여준다. 즉 $$h^0(\omega_S(-mD)) = 0$$이다. 이제 $$\rchi(\mathcal{O}(mD)) = h^0(\mathcal{O}(mD)) - h^1(\mathcal{O}(mD)) + h^2(\mathcal{O}(mD))$$에서 $$h^2 = 0$$이므로, $$m \gg 0$$에서 
 
-$$h^0(\mathcal{O}(K_S - mD)) = 0$$
+$$h^0(\mathcal{O}(mD)) \geq \rchi(\mathcal{O}(mD))$$
 
-이다. 
+이다. 그런데 [명제 4](#prop4)에 의해
 
-이제 $$\rchi(\mathcal{O}(mD)) = h^0(\mathcal{O}(mD)) - h^1(\mathcal{O}(mD)) + h^2(\mathcal{O}(mD))$$에서 $$h^2 = 0$$이므로, $$m \gg 0$$에서 
+$$\rchi(\mathcal{O}(mD)) = \rchi(\mathcal{O}_S) + \frac{m^2 D^2 - m D \cdot K_S}{2}$$
 
-$$h^0(\mathcal{O}(mD)) \geq \rchi(\mathcal{O}(mD)) \to +\infty$$
+이고, 우리는 $$D^2 > 0$$이라 가정하고 있으므로 $$\lvert m\rvert$$이 커질 때 $$\rchi(\mathcal{O}(mD))$$ 또한 무한히 커진다는 것을 안다. 즉 충분히 큰 $$m > 0$$에 대해 $$mD$$가 effective divisor가 되고, 그럼 위의 논의에 의해 $$mD \cdot H > 0$$이다. 그러나 이는 $$D \cdot H = 0$$에 모순이고, 따라서 $$D^2 \leq 0$$이다.
 
-이 된다. 따라서 충분히 큰 $$m > 0$$에 대해 $$mD$$가 effective divisor가 되어 $$mD \cdot H > 0$$이다. 그러나 이는 $$D \cdot H = 0$$에 모순이다. 그러므로 $$D^2 \leq 0$$이다.
-
-**단계 2: $$D^2 = 0$$도 불가능함을 보인다.**
-
-$$D^2 = 0$$이고 $$D \cdot H = 0$$이며 $$D \not\equiv 0$$이라고 가정하자. $$D \not\equiv 0$$이므로, $$D \cdot E \ne 0$$인 어떤 divisor $$E$$가 존재한다.
-
-이 $$E$$로부터 $$H$$에 직교하는 새로운 divisor를 만든다. 즉
+이제 $$D^2\neq 0$$임을 보여 증명을 마무리하자. 결론에 반하여 $$D^2 = 0$$이고 $$D \cdot H = 0$$이며 $$D \not\equiv 0$$이라 하면, $$D \not\equiv 0$$이므로 $$D \cdot E \ne 0$$인 어떤 divisor $$E$$가 존재한다. 이제
 
 $$E' = (H^2)\,E - (E \cdot H)\,H$$
 
-로 정의하면 $$E' \cdot H = (H^2)(E \cdot H) - (E \cdot H)(H^2) = 0$$이다. 또한 $$D \cdot H = 0$$이므로
+로 정의하면 $$E' \cdot H = (H^2)(E \cdot H) - (E \cdot H)(H^2) = 0$$이고,  $$D \cdot H = 0$$이므로
 
 $$D \cdot E' = (H^2)(D \cdot E) - (E \cdot H)(D \cdot H) = (H^2)(D \cdot E) \ne 0$$
 
-이다 ($$H^2 > 0$$, $$D \cdot E \ne 0$$이므로).
-
-이제 정수 $$n$$을 잡아 $$F_n := nD + E'$$를 생각하자. $$F_n \cdot H = n(D \cdot H) + (E' \cdot H) = 0$$이고
+이다. 이제 앞선 논증과 비슷하게 $$F_n := nD + E'$$이라 하면 $$F_n \cdot H = n(D \cdot H) + (E' \cdot H) = 0$$이고
 
 $$F_n^2 = n^2 D^2 + 2n(D \cdot E') + E'^2 = 2n(D \cdot E') + E'^2$$
 
-이다. $$D \cdot E' \ne 0$$이므로 $$n$$의 부호를 적절히 택해 $$\lvert n \rvert$$이 충분히 크면 $$F_n^2 > 0$$이 된다. 그러나 $$F_n \cdot H = 0$$이므로 단계 1에 의해 $$F_n^2 \le 0$$이어야 한다. 모순이다.
-
-따라서 $$D \cdot E = 0$$인 모든 $$E$$에 대해 동일한 논증이 성립하지 않으려면 처음 가정 자체가 잘못된 것이며, 결국 $$D \equiv 0$$이어야 한다. 이는 $$D \not\equiv 0$$ 가정에 모순이므로 $$D^2 = 0$$은 불가능하다. 그러므로 $$D^2 < 0$$이다.
+이다. 그럼 $$D \cdot E' \ne 0$$이므로 $$n$$의 부호를 적절히 택하고 $$\lvert n \rvert$$을 키워주면 $$F_n^2 > 0$$이도록 할 수 있다. 그러나 $$F_n \cdot H = 0$$이므로, 앞선 논증을 $$D=F_n$$에 적용하면 $$F_n^2 \le 0$$이어야 하므로 모순이다. 
 
 </details>
 
+그럼 이로부터 다음의 따름정리를 얻는다.
+
 <div class="proposition" markdown="1">
 
-<ins id="cor10">**따름정리 10**</ins> 교차 형식 on $$\Num(S) \otimes \mathbb{R}$$는 signature $$(1, \rho - 1)$$를 갖는다. 즉, positive direction은 하나뿐이며, 이것은 ample cone에 의해 span된다.
+<ins id="cor11">**따름정리 11**</ins> $$\Num(S) \otimes \mathbb{R}$$ 위의 intersection form은 signature $$(1, \rho - 1)$$를 갖는다. 
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Ample divisor $$H$$에 대해 $$H^2 > 0$$이므로 교차 형식은 적어도 하나의 positive direction을 갖는다. Hodge index theorem에 의해 $$H$$에 orthogonal인 모든 nonzero 방향은 음의 self-intersection을 갖는다. 따라서 $$\Num(S) \otimes \mathbb{R}$$을 $$\mathbb{R} \cdot H$$와 그 orthogonal complement로 분해하면, 전자에서 이차 형식은 양의 정부호이고 후자에서는 음의 정부호이다. Sylvester의 관성법칙에 의해 signature는 $$(1, \rho - 1)$$이다.
+Ample divisor $$H$$에 대해 $$H^2 > 0$$이므로 intersection form은 적어도 하나의 positive direction을 갖는다. 그런데 [명제 10](#prop10)에 의해 $$H$$에 orthogonal인 모든 nonzero 방향은 음의 self-intersection을 가지므로 증명이 완료된다. 
 
 </details>
 
-Hodge index theorem의 기하학적 의미는 다음과 같다. Surface 위의 교차 형식은 특수상대성이론의 Minkowski space와 유사하게, positive direction 하나와 negative direction $$\rho - 1$$개를 갖는 이차 형식이다. Ample cone이 이 유일한 positive direction을 span하므로, surface 위의 "양수" 방향은 본질적으로 하나뿐이며, 다른 모든 방향은 어떤 의미에서 "음수"이다. 이 결과는 surface의 birational geometry에서 minimal model의 유일성과 같은 깊은 결과들을 이끌어낸다.
+즉, surface 위의 "양수" 방향은 본질적으로 하나뿐이며, 다른 모든 방향은 어떤 의미에서 "음수"로 생각할 수 있다. 이 결과는 surface의 birational geometry에서 minimal model의 유일성과 같은 깊은 결과들을 이끌어낸다.
 
-## Application: Plurigenera
+## Plurigenera
 
 Curve의 경우, genus $$g$$는 curve의 birational equivalence class를 완전히 결정한다. Surface에서는 상황이 더 복잡한데, 그 이유는 birational equivalence가 cohomology의 차원을 모두 보존하지 않기 때문이다. 그러나 canonical bundle의 tensor power의 global section 차원은 birational invariant이며, 이 값들이 surface의 birational type에 대한 필수적인 정보를 제공한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> Surface $$S$$의 *$$m$$-th plurigenus*는
+<ins id="def12">**정의 12**</ins> Surface $$S$$의 *$$m$$-th plurigenus*는
 
 $$P_m(S) = h^0(S, \omega_S^{\otimes m})$$
 
-이다. 여기서 $$\omega_S = \mathcal{O}_S(K_S)$$는 ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5))에서 정의한 canonical bundle이다.
+이다. 
 
 </div>
 
-$$m = 1$$인 경우 $$P_1(S) = h^0(\omega_S) = p_g(S)$$는 geometric genus이다. Plurigenus들의 열 $$\{P_m(S)\}_{m \ge 1}$$은 surface의 birational equivalence class를 결정하는 중요한 불변량이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5))에서 살펴본 canonical bundle의 역할과 마찬가지로, $$\omega_S^{\otimes m}$$의 global section은 surface 위의 "multi-differential form", 즉 $$m$$개의 canonical divisor를 tensor한 형태의 differential form을 parameterize한다. 예를 들어 local coordinate $$z_1, z_2$$에서 $$\omega_S^{\otimes m}$$의 section은 $$f(z_1, z_2)(dz_1 \wedge dz_2)^{\otimes m}$$의 꼴로 쓰인다.
+여기서 $$\omega_S$$는 ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5))에서 정의한 canonical bundle이다. 특히 $$m = 1$$인 경우 $$P_1(S) = h^0(\omega_S) = p_g(S)$$는 geometric genus이며, plurigenus들의 열 $$\{P_m(S)\}_{m \ge 1}$$은 어떤 의미에서 이것을 확장한 것이라 할 수 있다. 이는 surface의 birational equivalence class를 결정하는 중요한 불변량이다.
 
-Plurigenus의 증가율은 surface의 Kodaira dimension과 밀접하게 관련되어 있다. Kodaira dimension $$\kappa(S)$$는 $$P_m(S)$$의 $$m$$에 대한 증가 차수로 정의된다. 구체적으로, 모든 $$m \ge 1$$에 대해 $$P_m(S) = 0$$이면 $$\kappa = -\infty$$이다. 그렇지 않은 경우, $$\kappa(S)$$는 $$P_m(S) / m^\kappa$$가 유계(bounded)가 되는 최소의 정수 $$\kappa$$로 정의된다. 즉 $$\kappa(S) = \min\{k \in \mathbb{Z}_{\ge 0} : P_m(S) = O(m^k)\}$$이다. 이 정의에 의하면 $$\kappa = 0$$은 $$P_m(S)$$가 항상 $$0$$ 또는 $$1$$이면서 모든 $$m$$에 대해 $$0$$인 것은 아닌 경우이며, $$\kappa = 1$$은 $$P_m(S) \sim cm$$으로 선형 성장하는 경우, $$\kappa = 2$$는 $$P_m(S) \sim cm^2$$으로 이차 성장하는 경우이다. Surface의 경우 $$\kappa \in \{-\infty, 0, 1, 2\}$$이다.
-
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**명제 12**</ins> $$m \ge 2$$에 대해, 만일 $$h^0(\mathcal{O}_S((1-m)K_S)) = 0$$이면
-
-$$P_m(S) \ge \rchi(\mathcal{O}_S) + \frac{m(m-1)}{2} K_S^2$$
-
-이다. 가설 $$h^0(\mathcal{O}_S((1-m)K_S)) = 0$$은 Serre duality에 의해 $$h^2(\omega_S^{\otimes m}) = 0$$과 동치이며, 이는 $$m \gg 0$$에서 항상 만족된다—$$(1-m)K_S$$가 어떤 effective divisor보다도 "더 음수"이기 때문이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-Riemann–Roch 공식 ([명제 4](#prop4))에 $$D = mK_S$$를 대입한다:
-
-$$\rchi(\omega_S^{\otimes m}) = \rchi(\mathcal{O}_S) + \frac{1}{2}\left((mK_S)^2 - (mK_S) \cdot K_S\right) = \rchi(\mathcal{O}_S) + \frac{1}{2}\left(m^2 K_S^2 - m K_S^2\right)$$
-
-$$= \rchi(\mathcal{O}_S) + \frac{m(m-1)}{2} K_S^2$$
-
-한편 $$\rchi(\omega_S^{\otimes m}) = h^0(\omega_S^{\otimes m}) - h^1(\omega_S^{\otimes m}) + h^2(\omega_S^{\otimes m})$$이다. Serre duality에 의해 $$h^2(\omega_S^{\otimes m}) = h^0(\mathcal{O}_S((1-m)K_S))$$이다. 이 값은 명제의 가설에 의해 $$0$$이다. 따라서
-
-$$P_m(S) = h^0(\omega_S^{\otimes m}) = \rchi(\omega_S^{\otimes m}) + h^1(\omega_S^{\otimes m}) \ge \rchi(\omega_S^{\otimes m}) = \rchi(\mathcal{O}_S) + \frac{m(m-1)}{2} K_S^2$$
-
-이다. 이로써 부등식이 얻어진다.
-
-등식이 성립하기 위해서는 추가적인 vanishing theorem이 필요하며, 이는 추후 다룰 Kodaira vanishing theorem으로부터 얻어진다.
-
-</details>
+다음 글에서는 Kodaira vanishing theorem을 다루며, 이 정리가 plurigenera의 계산과 surface의 classification에 어떻게 활용되는지 살펴 본다.
 
 ---
 

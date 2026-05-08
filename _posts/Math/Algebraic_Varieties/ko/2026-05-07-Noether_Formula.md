@@ -11,6 +11,7 @@ header:
 date: 2026-05-07
 last_modified_at: 2026-05-07
 weight: 25
+published: false
 ---
 
 Smooth projective surface의 기하학을 분류하는 데 있어 가장 기본적인 불변량들은 자기교차수 $K_S^2$, topological Euler characteristic $\\rchi_{\\mathrm{top}}(S)$, 그리고 structure sheaf의 Euler characteristic $\\rchi(\\rO_S)$이다. 이 세 불변량 사이에는 놀랍도록도 단순한 선형관계가 존재하며, 이를 **Noether formula**라 부른다. 본 글에서는 Hirzebruch-Riemann-Roch 정리의 곡면으로의 환원을 통해 Noether formula를 유도하고, $c_2(S)$의 기하학적 의미를 설명한 뒤, 다양한 구체적인 예시를 통해 이 공식을 검증한다.

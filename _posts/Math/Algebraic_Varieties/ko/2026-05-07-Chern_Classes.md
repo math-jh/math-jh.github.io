@@ -1,12 +1,20 @@
 ---
 title: "Chern Classes"
-permalink: /ko/math/algebraic_varieties/chern_classes
 excerpt: "벡터다발의 Chern classes와 그 성질들"
+
 categories: [Math / Algebraic Varieties]
-sidebar: { nav: "algebraic_varieties-ko" }
+permalink: /ko/math/algebraic_varieties/chern_classes
+sidebar: 
+    nav: "algebraic_varieties-ko"
+
+header:
+    overlay_image: /assets/images/Math/Algebraic_Geometry/Chern_classes.png
+    overlay_filter: 0.5
+
 date: 2026-05-07
 last_modified_at: 2026-05-07
 weight: 22
+published: false
 ---
 
 벡터다발은 대수기하학에서 기하적 대상을 다루는 데 핵심적인 도구이다. 그러나 주어진 벡터다발이 얼마나 "뒤틀려" 있는지, 즉 자명다발에서 얼마나 벗어나 있는지를 측정하는 전역적인 불변량이 필요하다. Chern class는 바로 이러한 특성류 중 하나로, complex vector bundle에 대해 정의되는 위상적·기하적 불변량이다. 우리는 이 글에서 Chern class를 공리적으로 정의하고, 이를 계산하는 데 필수적인 splitting principle을 소개한 뒤, 여러 구체적인 예시를 통해 그 성질을 살펳을 것이다.
