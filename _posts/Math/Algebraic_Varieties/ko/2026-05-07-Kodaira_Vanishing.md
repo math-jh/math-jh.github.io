@@ -90,13 +90,11 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(d - n - 1)) = 0$$
 
 Kodaira vanishing theorem은 algebraic geometry에서 다양한 중요한 결과들의 핵심적인 ingredient로 작용한다. 증명의 자세한 내용보다는, 이 정리가 실제 문제 해결에서 어떻게 활용되는지를 중심으로 살펴 보자.
 
-### 히제브루흐-리만-로흐 공식과의 연결
-
-Riemann-Roch 공식은 surface $$S$$ 위의 divisor $$D$$에 대해
+우선 이전 글에서 살펴본 Riemann-Roch 공식은 surface $$S$$ 위의 divisor $$D$$에 대해
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
-를 준다. 여기서 $$K_S$$는 canonical divisor를 나타내고, $$\rchi(S, \mathcal{O}_S(D)) = \sum_{i=0}^{2} (-1)^i \dim H^i(S, \mathcal{O}_S(D))$$는 Euler 지표이다. 이 공식의 강력함은 $$\rchi$$를 순전히 대수적·위상적 데이터로 계산할 수 있다는 데 있지만, 문제는 $$\rchi$$가 $$h^0, h^1, h^2$$의 교대합이라는 점이다. 따라서 단순히 $$h^0(S, \mathcal{O}_S(D))$$만을 알고 싶을 때는 higher cohomology들의 값을 각각 따로 구해야 하므로, Riemann-Roch 공식만으로는 직접적인 답을 얻기 어렵다.
+를 준다. ([§곡면에서의 리만-로흐 정리, ⁋명제 4](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop4)) 여기서 $$K_S$$는 canonical divisor를 나타내고, $$\rchi(S, \mathcal{O}_S(D)) = \sum_{i=0}^{2} (-1)^i \dim H^i(S, \mathcal{O}_S(D))$$는 Euler 지표이다. 이 공식의 강력함은 $$\rchi$$를 순전히 대수적·위상적 데이터로 계산할 수 있다는 데 있지만, 문제는 $$\rchi$$가 $$h^0, h^1, h^2$$의 교대합이라는 점이다. 따라서 단순히 $$h^0(S, \mathcal{O}_S(D))$$만을 알고 싶을 때는 higher cohomology들의 값을 각각 따로 구해야 하므로, Riemann-Roch 공식만으로는 직접적인 답을 얻기 어렵다.
 
 특히 Kodaira vanishing에서 다루는 $$\omega_S \otimes \mathcal{L}$$에 대해서는, $$\mathcal{L} \cong \mathcal{O}_S(L)$$로 두면 $$\omega_S \otimes \mathcal{L} \cong \mathcal{O}_S(K_S + L)$$이 되어 위 공식에 $$D = K_S + L$$을 대입할 수 있다. $$\mathcal{L}$$이 ample line bundle이면 명제 1에 의해 $$H^i(S, \omega_S \otimes \mathcal{L}) = 0$$ ($$i > 0$$)이므로,
 
