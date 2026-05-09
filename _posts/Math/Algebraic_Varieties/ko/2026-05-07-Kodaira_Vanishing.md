@@ -1,5 +1,5 @@
 ---
-title: "코다이라 소멸정리"
+title: "고다이라 소멸정리"
 permalink: /ko/math/algebraic_varieties/kodaira_vanishing
 excerpt: "Kodaira vanishing theorem과 그 응용"
 categories: [Math / Algebraic Varieties]
@@ -17,29 +17,35 @@ weight: 17
 published: false
 ---
 
-우리는 [§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)에서 Serre vanishing theorem을 살펴 보았다. 이 정리는 projective variety 위의 ample line bundle $$\mathcal{L}$$과 coherent sheaf $$\mathcal{F}$$에 대해, 충분히 큰 $$m$$에 대하여 $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $$m$$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
+[§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)의 Serre vanishing theorem은 projective variety 위의 ample line bundle $$\mathcal{L}$$과 coherent sheaf $$\mathcal{F}$$에 대해, 충분히 큰 $$m$$에 대하여 $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $$m$$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
 
-이에 비해 Kodaira vanishing theorem은 훨씬 더 정교한 결과로, canonical bundle $$\omega_X$$와 ample line bundle $$\mathcal{L}$$의 tensor product $$\omega_X \otimes \mathcal{L}$$에 대해 higher cohomology가 *항상* 사라진다는 사실을 보장한다. 이 정리는 1950년대 Kodaira에 의해 증명된 이래, algebraic geometry의 중심에 자리 잡았으며, 이후 Deligne과 Illusie에 의해 purely algebraic한 증명이 주어지기까지 그 중요성은 계속 커져왔다. 우리는 이 글에서 Kodaira vanishing theorem과 그 응용, 그리고 이 정리가 algebraic geometry에서 어떻게 활용되는지를 살펴 본다.
+Kodaira vanishing theorem은 훨이보다 씬 더 정교한 결과로, canonical bundle $$\omega_X$$와 ample line bundle $$\mathcal{L}$$의 tensor product $$\omega_X \otimes \mathcal{L}$$에 대해 higher cohomology가 *항상* 사라진다는 사실을 보장한다. 우리는 이 글에서 Kodaira vanishing theorem과 그 응용, 그리고 이 정리가 algebraic geometry에서 어떻게 활용되는지를 살펴 본다.
 
-## 코다이라 소멸정리
+## 고다이라 소멸정리
 
-우리가 다룰 기본적인 설정은 다음과 같다. $$X$$는 차원 $$n$$의 smooth projective variety이고, $$\mathcal{L}$$은 $$X$$ 위의 ample line bundle이다. Canonical bundle $$\omega_X = \det \Omega_X^1 = \Omega_X^n$$은 [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1)에서 정의한 바와 같으며, 이는 regular $$n$$-forms들의 sheaf이다. Kodaira vanishing theorem은 이들 데이터에 대해 다음을 주장한다.
+우리가 다룰 기본적인 설정은 다음과 같다. $$X$$는 $$n$$차원 smooth projective variety이고, $$\mathcal{L}$$은 $$X$$ 위의 ample line bundle, $$\omega_X = \det \Omega_X^1 = \Omega_X^n$$은 canonical line bundle이다. ([§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1)) 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1 (Kodaira vanishing)**</ins> $$X$$를 차원 $$n$$인 smooth projective variety, $$\mathcal{L}$$을 $$X$$ 위의 ample line bundle이라 하자. 그럼 모든 $$i > 0$$에 대하여
+<ins id="prop1">**명제 1 (Kodaira vanishing)**</ins> $$n$$차원 smooth projective variety $$X$$, ample line bundle $$\mathcal{L}$$이 주어졌다 하자. 그럼 모든 $$i > 0$$에 대하여
 
 $$H^i(X, \omega_X \otimes \mathcal{L}) = 0$$
 
-이 성립한다.
+이 성립한다. 더 일반적으로, $$p+q>n$$을 만족하는 $$p,q$$에 대하여
+
+$$H^p(X, \Omega^q\otimes \mathcal{L})_0$$
+
+이 성립한다. 
 
 </div>
+
+첫째 주장은 둘째 주장에서 $$q=n$$으로 두어 얻어지는 것이다. 이 명제에 대한 증명은 꽤나 기술적인 부분이 있어 이번 글에서는 이를 엄밀하게 증명하기보다는 대수기하학에서 어떻게 사용되는지에 초점을 맞춘다. 
 
 명제의 서술에서 알 수 있듯, Kodaira vanishing은 canonical bundle에 대한 twist 이후의 higher cohomology를 제거한다. Serre duality를 사용하면 이는 다음의 동치된 서술로 바꾸어 쓸 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 명제 1의 가정 아래, 모든 $$i < n$$에 대하여
+<ins id="prop2">**명제 2**</ins> [명제 1](#prop1)의 가정 아래, 모든 $$i < n$$에 대하여
 
 $$H^i(X, \mathcal{L}^{-1}) = 0$$
 
@@ -58,7 +64,7 @@ $$H^i(X, \mathcal{L}^{-1}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{L})^\vee$$
 
 </details>
 
-명제 2의 서술은 Kodaira의 원래 증명과 더 가까운 형태로, negative line bundle $$\mathcal{L}^{-1}$$에 대한 cohomology vanishing을 다룬다. 두 서술은 Serre duality를 통해 완전히 동치이므로 상황에 따라 더 편한 쪽을 사용하면 된다.
+이 두 formulation은 위의 증명에서 살펴본 것과 같이 Serre duality를 통해 완전히 동치이므로 상황에 따라 더 편한 쪽을 사용하면 된다.
 
 ## 사영공간에서의 검증
 
@@ -169,7 +175,7 @@ $$P_m(S) = h^0(\omega_S^{\otimes m}) = \rchi(\omega_S^{\otimes m}) + h^1(\omega_
 
 </details>
 
-### 코다이라 임베딩정리
+### 고다이라 임베딩정리
 
 Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem이다.
 
