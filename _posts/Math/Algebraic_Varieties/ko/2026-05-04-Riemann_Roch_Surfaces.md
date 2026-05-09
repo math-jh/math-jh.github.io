@@ -14,7 +14,6 @@ header:
 date: 2026-05-04
 last_modified_at: 2026-05-09
 weight: 16
-published: false
 ---
 
 우리는 앞선 글에서 Riemann-Roch 정리를 곡선에서 살펴보았다. 본질적으로 Riemann-Roch 정리는 Euler characteristic을 다른 정량적인 수치들로 계산하는 것으로, 더 일반적으로 우리는 임의의 경우로 이를 일반화할 수도 있으나 이번 글에서는 surface로의 일반화만  다루기로 한다.
