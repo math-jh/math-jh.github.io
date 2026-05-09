@@ -92,13 +92,13 @@ Kodaira vanishing theorem은 algebraic geometry에서 다양한 중요한 결과
 
 ### 히제브루흐-리만-로흐 공식과의 연결
 
-Riemann-Roch 공식은 surface $$S$$ 위의 line bundle $$\mathcal{L}$$에 대해
+Riemann-Roch 공식은 surface $$S$$ 위의 divisor $$D$$에 대해
 
-$$\rchi(S, \omega_S \otimes \mathcal{L}) = \frac{1}{2}\mathcal{L} \cdot (\mathcal{L} + K_S) + \rchi(\mathcal{O}_S)$$
+$$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
-를 준다. 여기서 $$K_S$$는 canonical divisor를 나타내고, $$\rchi(S, \mathcal{L}) = \sum_{i=0}^{2} (-1)^i \dim H^i(S, \mathcal{L})$$는 Euler 지표이다. 이 공식의 강력함은 $$\rchi$$를 순전히 대수적·위상적 데이터로 계산할 수 있다는 데 있지만, 문제는 $$\rchi$$가 $$h^0, h^1, h^2$$의 교대합이라는 점이다. 따라서 단순히 $$h^0(S, \omega_S \otimes \mathcal{L})$$만을 알고 싶을 때는 higher cohomology들의 값을 각각 따로 구해야 하므로, Riemann-Roch 공식만으로는 직접적인 답을 얻기 어렵다.
+를 준다. 여기서 $$K_S$$는 canonical divisor를 나타내고, $$\rchi(S, \mathcal{O}_S(D)) = \sum_{i=0}^{2} (-1)^i \dim H^i(S, \mathcal{O}_S(D))$$는 Euler 지표이다. 이 공식의 강력함은 $$\rchi$$를 순전히 대수적·위상적 데이터로 계산할 수 있다는 데 있지만, 문제는 $$\rchi$$가 $$h^0, h^1, h^2$$의 교대합이라는 점이다. 따라서 단순히 $$h^0(S, \mathcal{O}_S(D))$$만을 알고 싶을 때는 higher cohomology들의 값을 각각 따로 구해야 하므로, Riemann-Roch 공식만으로는 직접적인 답을 얻기 어렵다.
 
-Kodaira vanishing은 바로 이 간극을 메운다. $$\mathcal{L}$$이 ample line bundle이면 명제 1에 의해 $$H^i(S, \omega_S \otimes \mathcal{L}) = 0$$ ($$i > 0$$)이므로,
+특히 Kodaira vanishing에서 다루는 $$\omega_S \otimes \mathcal{L}$$에 대해서는, $$\mathcal{L} \cong \mathcal{O}_S(L)$$로 두면 $$\omega_S \otimes \mathcal{L} \cong \mathcal{O}_S(K_S + L)$$이 되어 위 공식에 $$D = K_S + L$$을 대입할 수 있다. $$\mathcal{L}$$이 ample line bundle이면 명제 1에 의해 $$H^i(S, \omega_S \otimes \mathcal{L}) = 0$$ ($$i > 0$$)이므로,
 
 $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$$
 
@@ -130,15 +130,15 @@ $$P_m(C) = m(2g - 2) + 1 - g = (2m - 1)(g - 1)$$
 
 을 얻는다. 이는 curve의 birational invariant로서 moduli problem을 다룰 때 중요한 역할을 한다.
 
-Surface의 경우도 유사하다. [§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces)에서 보듯, surface $$S$$ 위의 line bundle $$\mathcal{L}$$에 대해 Riemann-Roch formula는
+Surface의 경우도 유사하다. [§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces)에서 보듯, surface $$S$$ 위의 divisor $$D$$에 대해 Riemann-Roch formula는
 
-$$\rchi(\mathcal{L}) = \frac{\mathcal{L} \cdot (\mathcal{L} - K_S)}{2} + \rchi(\mathcal{O}_S)$$
+$$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
-으로 주어진다. $$\mathcal{L} = \omega_S^{\otimes m}$$을 대입하면
+으로 주어진다. $$\omega_S^{\otimes m} \cong \mathcal{O}_S(mK_S)$$이므로 $$D = mK_S$$를 대입하면
 
-$$\rchi(\omega_S^{\otimes m}) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
+$$\rchi(\mathcal{O}_S(mK_S)) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
-이다. $$m \geq 2$$이고 $$K_S$$가 nef이거나 ample한 상황에서 Kodaira vanishing을 사용하면 higher cohomology가 사라지므로, 이 formula로부터 직접 $$P_m(S) = h^0(S, \omega_S^{\otimes m})$$을 계산할 수 있다. 이러한 plurigenera의 계산은 surface의 classification theory, 특히 Enriques-Kodaira classification에서 핵심적인 역할을 한다.
+이다. $$m \geq 2$$이고 $$K_S$$가 nef이거나 ample한 상황에서 Kodaira vanishing을 사용하면 higher cohomology가 사라지므로, 이 formula로부터 직접 $$P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$$을 계산할 수 있다. 이러한 plurigenera의 계산은 surface의 classification theory, 특히 Enriques-Kodaira classification에서 핵심적인 역할을 한다.
 
 <div class="definition" markdown="1">
 
@@ -152,7 +152,7 @@ $$\rchi(\omega_S^{\otimes m}) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
 $$P_m(S) \ge \rchi(\mathcal{O}_S) + \frac{m(m-1)}{2} K_S^2$$
 
-이다. 가설 $$h^0(\mathcal{O}_S((1-m)K_S)) = 0$$은 Serre duality에 의해 $$h^2(\omega_S^{\otimes m}) = 0$$과 동치이며, 이는 $$m \gg 0$$에서 항상 만족된다—$$(1-m)K_S$$가 어떤 effective divisor보다도 "더 음수"이기 때문이다.
+이다. 가설 $$h^0(\mathcal{O}_S((1-m)K_S)) = 0$$은 Serre duality에 의해 $$h^2(\mathcal{O}_S(mK_S)) = 0$$과 동치이며, 이는 $$m \gg 0$$에서 항상 만족된다—$$(1-m)K_S$$가 어떤 effective divisor보다도 "더 음수"이기 때문이다.
 
 </div>
 
@@ -161,13 +161,13 @@ $$P_m(S) \ge \rchi(\mathcal{O}_S) + \frac{m(m-1)}{2} K_S^2$$
 
 Riemann–Roch 공식 ([§곡면에서의 리만-로흐 정리, ⁋명제 4](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop4))에 $$D = mK_S$$를 대입한다:
 
-$$\rchi(\omega_S^{\otimes m}) = \rchi(\mathcal{O}_S) + \frac{1}{2}\left((mK_S)^2 - (mK_S) \cdot K_S\right) = \rchi(\mathcal{O}_S) + \frac{1}{2}\left(m^2 K_S^2 - m K_S^2\right)$$
+$$\rchi(\mathcal{O}_S(mK_S)) = \rchi(\mathcal{O}_S) + \frac{1}{2}\left((mK_S)^2 - (mK_S) \cdot K_S\right) = \rchi(\mathcal{O}_S) + \frac{1}{2}\left(m^2 K_S^2 - m K_S^2\right)$$
 
 $$= \rchi(\mathcal{O}_S) + \frac{m(m-1)}{2} K_S^2$$
 
-한편 $$\rchi(\omega_S^{\otimes m}) = h^0(\omega_S^{\otimes m}) - h^1(\omega_S^{\otimes m}) + h^2(\omega_S^{\otimes m})$$이다. Serre duality에 의해 $$h^2(\omega_S^{\otimes m}) = h^0(\mathcal{O}_S((1-m)K_S))$$이다. 이 값은 명제의 가설에 의해 $$0$$이다. 따라서
+한편 $$\rchi(\mathcal{O}_S(mK_S)) = h^0(\mathcal{O}_S(mK_S)) - h^1(\mathcal{O}_S(mK_S)) + h^2(\mathcal{O}_S(mK_S))$$이다. Serre duality에 의해 $$h^2(\mathcal{O}_S(mK_S)) = h^0(\mathcal{O}_S((1-m)K_S))$$이다. 이 값은 명제의 가설에 의해 $$0$$이다. 따라서
 
-$$P_m(S) = h^0(\omega_S^{\otimes m}) = \rchi(\omega_S^{\otimes m}) + h^1(\omega_S^{\otimes m}) \ge \rchi(\omega_S^{\otimes m}) = \rchi(\mathcal{O}_S) + \frac{m(m-1)}{2} K_S^2$$
+$$P_m(S) = h^0(\mathcal{O}_S(mK_S)) = \rchi(\mathcal{O}_S(mK_S)) + h^1(\mathcal{O}_S(mK_S)) \ge \rchi(\mathcal{O}_S(mK_S)) = \rchi(\mathcal{O}_S) + \frac{m(m-1)}{2} K_S^2$$
 
 이다. 이로써 부등식이 얻어진다.
 
