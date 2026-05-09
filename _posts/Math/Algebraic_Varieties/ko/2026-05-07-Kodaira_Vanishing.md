@@ -142,55 +142,61 @@ $$\kappa(X) = \limsup_{m \to \infty} \frac{\log P_m(X)}{\log m}$$
 
 우리는 위의 계산으로부터, surface의 경우 $$\kappa \in \{-\infty, 0, 1, 2\}$$인 것을 안다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $$\kappa=0$$과 $$\kappa=-\infty$$인 경우는 geometric genus $$p_g$$와 irregularity $$q$$를 사용하여 추가적인 세부 분류를 해 준다. 
 
-우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서 line bundle $$\mathcal{L}$$이 very ample이라는 것은 complete linear system $$\lvert \mathcal{L} \rvert$$가 정의하는 사상 $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(H^0(X, \mathcal{L}))$$이 closed embedding인 것으로 정의하였다. 다음은 이 정의와 동치인 두 가지 separation 조건이다.
+우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서 line bundle $$\mathcal{L}$$이 very ample이라는 것은 complete linear system $$\lvert \mathcal{L} \rvert$$가 정의하는 사상 $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
 
-**(1) Separation of points:** 임의의 두 서로 다른 closed point $$p, q \in X$$에 대하여, $$s(p) = 0$$이고 $$s(q) \neq 0$$인 global section $$s \in H^0(X, \mathcal{L})$$가 존재한다. 이는 evaluation map
+우선 very ample line bundle $$\mathcal{L}$$이 주어졌다 하고, 이로부터 정의되는 closed embedding $$\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$$을 생각하자. 그럼 $$\varphi$$가 embedding인 것으로부터 $$\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$$가 성립하는 것을 알고, 뿐만 아니라 $$\varphi_\mathcal{L}$$이 closed embedding이므로 $$d\varphi_\mathcal{L}$$이 injective이고, 따라서 cotangent space에서의 dual map $$\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$$은 surjective이다. 이로부터 다음의 두 결과가 성립함을 안다. 
+
+1. *$$\varphi_\mathcal{L}$$ separates points.* 즉, 임의의 두 서로 다른 closed point $$p, q \in X$$에 대하여, $$s(p) = 0$$이고 $$s(q) \neq 0$$인 global section $$s \in H^0(X, \mathcal{L})$$가 존재한다.
+2. *$$\varphi_\mathcal{L}$$ separates tangent vectors.* 즉, 임의의 closed point $$p \in X$$에 대하여, $$p$$에서 vanish하는 sections의 모음 $$\{ s \in H^0(X, \mathcal{L}) : s(p) = 0 \}$$가 cotangent space에 대응하는 벡터공간 $$\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$를 span한다.
+
+첫 번째 조건은 evaluation map
+
 $$H^0(X, \mathcal{L}) \longrightarrow \mathcal{L}_p \oplus \mathcal{L}_q$$
-이 surjective임을 의미한다.
 
-**(2) Separation of tangent vectors:** 임의의 closed point $$p \in X$$에 대하여, $$p$$에서 vanish하는 sections의 모음 $$\{ s \in H^0(X, \mathcal{L}) : s(p) = 0 \}$$가 cotangent space에 대응하는 벡터공간 $$\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$를 span한다. 이는 evaluation map
+이 surjective임을 의미하고, 두 번째 조건은 evaluation map
+
 $$H^0(X, \mathcal{L}) \longrightarrow \mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
-이 surjective임을 의미한다.
+
+이 surjective임을 의미한다. 어렵지 않게 이들의 반대방향 또한 성립한다는 것을 확인할 수 있다. 즉 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Projective variety $$X$$ 위의 line bundle $$\mathcal{L}$$에 대해, $$\mathcal{L}$$이 very ample인 것은 위의 두 가지 separation 조건을 동시에 만족하는 것과 동치이다.
+<ins id="prop5">**명제 5**</ins> Projective variety $$X$$ 위의 line bundle $$\mathcal{L}$$에 대해, $$\mathcal{L}$$이 very ample인 것은 위의 두 가지 separation 조건을 동시에 만족하는 것과 동치이다.
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
+이제 이러한 separation 조건들이 cohomology를 통해 검증되는 방식을 살펴 보자. 먼저 (1)의 경우, 두 점 $$p \neq q$$를 포함하는 closed subvariety $$Z = \{p\} \cup \{q\}$$를 생각하면, $$Z$$를 정의하는 ideal sheaf $$\mathcal{I}_Z$$에 대해 short exact sequence
 
-$$(\Rightarrow)$$ $$\mathcal{L}$$이 very ample이라 하면 $$\varphi_{\mathcal{L}}: X \to \mathbb{P}^n$$은 closed embedding이다. 두 점 $$p \neq q$$를 택하면 $$\varphi_{\mathcal{L}}(p) \neq \varphi_{\mathcal{L}}(q)$$이므로, projective space의 어떤 homogeneous coordinate $$x_i$$가 $$p$$와 $$q$$에서 다른 값을 갖는다. 이에 대응하는 section $$s_i \in H^0(X, \mathcal{L})$$는 $$s_i(p) \neq s_i(q)$$를 만족하며, 적절한 상수 배와 합을 취하면 $$s(p) = 0$$, $$s(q) \neq 0$$인 section $$s$$를 얻는다.
-
-한편 $$\varphi_{\mathcal{L}}$$가 closed embedding이면 각 점 $$p$$에서의 differential $$d\varphi_{\mathcal{L},p}: T_p X \to T_{\varphi_{\mathcal{L}}(p)} \mathbb{P}^n$$은 injective이다. 이는 dual map인 cotangent space 사이의 map
-$$\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$$
-이 surjective임과 동치이다. $$\{s : s(p)=0\}$$가 $$\mathfrak{m}_p\mathcal{L}_p/\mathfrak{m}_p^2\mathcal{L}_p$$를 span한다는 조건은 이 map의 surjectivity를 보장하므로, $$d\varphi_{\mathcal{L},p}$$의 injectivity와 동치이다.
-
-$$(\Leftarrow)$$ Separation of points가 성립하면 $$\varphi_{\mathcal{L}}$$은 집합론적으로 injective하다. Separation of tangent vectors가 성립하면 모든 점 $$p$$에서 differential $$d\varphi_{\mathcal{L},p}$$가 injective하다. $$X$$가 proper이고 $$\mathbb{P}^n$$이 separated이므로, injective이며 everywhere immersive인 morphism은 자동으로 closed immersion이 된다. 따라서 $$\mathcal{L}$$은 very ample이다.
-
-</details>
-
-이러한 separation 조건들이 cohomology를 통해 검증되는 방식을 살펴 보자. 먼저 (1)의 경우, 두 점 $$p \neq q$$를 포함하는 closed subscheme $$Z = p \cup q$$를 생각하면, $$Z$$를 정의하는 ideal sheaf $$\mathcal{I}_Z$$에 대해 short exact sequence
 $$0 \longrightarrow \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z \longrightarrow 0$$
-을 얻는다. 여기서 $$\mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z \cong \mathcal{L}^{\otimes m}_p \oplus \mathcal{L}^{\otimes m}_q$$이다. 이로부터 유도되는 long exact sequence
-$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow \mathcal{L}^{\otimes m}_p \oplus \mathcal{L}^{\otimes m}_q \longrightarrow H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m})$$
+
+을 얻는다. 여기서 $$\mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z$$는 $$Z$$ 위의 line bundle이고,
+
+$$H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \cong \mathcal{L}^{\otimes m}_p \oplus \mathcal{L}^{\otimes m}_q$$
+
+이다. 이로부터 유도되는 long exact sequence
+
+$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \longrightarrow H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m})$$
+
 를 고려하면, 만약 $$H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m}) = 0$$이면 evaluation map이 surjective가 되어 separation of points가 성립함을 알 수 있다.
 
 마찬가지로 (2)의 경우, 점 $$p$$의 first infinitesimal neighborhood $$\operatorname{Spec}(\mathcal{O}_{X,p}/\mathfrak{m}_p^2)$$를 생각하여, $$\mathcal{I}_p$$를 $$p$$의 ideal sheaf라 할 때 short exact sequence
+
 $$0 \longrightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2) \longrightarrow 0$$
+
 에서 유도되는 long exact sequence
+
 $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow \mathcal{L}^{\otimes m}_p / \mathfrak{m}_p^2\mathcal{L}^{\otimes m}_p \longrightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
+
 를 고려하면, $$H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$$이면 separation of tangent vectors가 성립한다.
 
-구체적으로, $$\mathcal{L}$$이 ample이면 Kodaira vanishing은 $$H^i(X, \omega_X \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)을 보장한다. 적절한 twist와 Serre duality를 사용하면 위의 $$H^1$$들 역시 vanishing하게 되어, 충분히 큰 $$m$$에서 $$\mathcal{L}^{\otimes m}$$의 sections가 위의 separation 조건들을 만족함을 보일 수 있다. 이는 [명제 5](#prop5)의 Kodaira embedding theorem의 증명에서 핵심적으로 사용되는 바이다. 더 나아가 $$\mathcal{L}^{\otimes m}$$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도, Kodaira vanishing을 통해 관련된 multiplication map
+구체적으로, $$\mathcal{L}$$이 ample이면 Kodaira vanishing은 $$H^i(X, \omega_X \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)을 보장한다. 적절한 twist와 Serre duality를 사용하면 위의 $$H^1$$들 역시 vanishing하게 되어, 충분히 큰 $$m$$에서 $$\mathcal{L}^{\otimes m}$$의 sections가 위의 separation 조건들을 만족함을 보일 수 있다. 이는 [명제 6](#prop6)의 Kodaira embedding theorem의 증명에서 핵심적으로 사용되는 바이다. 더 나아가 $$\mathcal{L}^{\otimes m}$$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도, Kodaira vanishing을 통해 관련된 multiplication map
 
 $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
 
 의 surjectivity를 검증함으로써 얻을 수 있다. 이러한 vanishing은 higher cohomology가 sections의 생성을 방해하지 않음을 보장하여, linear system의 풍부함을 정량적으로 다룰 수 있게 한다.
 
 
-### 고다이라 매장정리
+### 고다이라 임베딩정리
 
 Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem이다.
 
@@ -200,7 +206,7 @@ Line bundle $$\mathcal{L}$$에 Hermitian metric $$h$$가 주어지면, 그 curva
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5 (Kodaira embedding)**</ins> $$X$$를 compact Kähler manifold, $$\mathcal{L}$$을 positive line bundle이라 하자. 그럼 충분히 큰 $$k$$에 대해 $$\mathcal{L}^{\otimes k}$$는 very ample이며, 특히 $$\mathcal{L}$$은 ample line bundle이다. 따라서 $$X$$는 projective variety이다.
+<ins id="prop6">**명제 6 (Kodaira embedding)**</ins> $$X$$를 compact Kähler manifold, $$\mathcal{L}$$을 positive line bundle이라 하자. 그럼 충분히 큰 $$k$$에 대해 $$\mathcal{L}^{\otimes k}$$는 very ample이며, 특히 $$\mathcal{L}$$은 ample line bundle이다. 따라서 $$X$$는 projective variety이다.
 
 </div>
 
