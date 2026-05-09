@@ -19,23 +19,15 @@ published: false
 
 우리는 [§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)에서 Serre vanishing theorem을 살펴 보았다. 이 정리는 projective variety 위의 ample line bundle $$\mathcal{L}$$과 coherent sheaf $$\mathcal{F}$$에 대해, 충분히 큰 $$m$$에 대하여 $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $$m$$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
 
-이에 비해 Kodaira vanishing theorem은 훨씬 더 정교한 결과로, canonical bundle $$\omega_X$$와 positive line bundle $$\mathcal{L}$$의 tensor product $$\omega_X \otimes \mathcal{L}$$에 대해 higher cohomology가 *항상* 사라진다는 사실을 보장한다. 이 정리는 1950년대 Kodaira가 complex manifold 위에서 Kähler metric과 Hodge theory를 사용하여 증명한 이래, algebraic geometry의 중심에 자리 잡았으며, 이후 Deligne과 Illusie에 의해 purely algebraic한 증명이 주어지기까지 그 중요성은 계속 커져왔다. 우리는 이 글에서 Kodaira vanishing theorem과 그 응용, 그리고 이 정리가 algebraic geometry에서 어떻게 활용되는지를 살펴 본다.
+이에 비해 Kodaira vanishing theorem은 훨씬 더 정교한 결과로, canonical bundle $$\omega_X$$와 ample line bundle $$\mathcal{L}$$의 tensor product $$\omega_X \otimes \mathcal{L}$$에 대해 higher cohomology가 *항상* 사라진다는 사실을 보장한다. 이 정리는 1950년대 Kodaira에 의해 증명된 이래, algebraic geometry의 중심에 자리 잡았으며, 이후 Deligne과 Illusie에 의해 purely algebraic한 증명이 주어지기까지 그 중요성은 계속 커져왔다. 우리는 이 글에서 Kodaira vanishing theorem과 그 응용, 그리고 이 정리가 algebraic geometry에서 어떻게 활용되는지를 살펴 본다.
 
 ## 코다이라 소멸정리
 
-우리가 다룰 기본적인 설정은 다음과 같다. $$X$$는 차원 $$n$$의 smooth projective variety이고, $$\mathcal{L}$$은 $$X$$ 위의 holomorphic line bundle이다.
-
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Complex manifold $$X$$ 위의 holomorphic line bundle $$\mathcal{L}$$에 hermitian metric $$h$$가 존재하여 그 curvature form $$\Theta_h$$가 positive definite $$(1,1)$$-form일 때, $$\mathcal{L}$$을 *positive line bundle*이라 한다.
-
-</div>
-
-Algebraic geometry에서는 Kodaira embedding theorem ([명제 8](#prop8))에 의해 projective variety 위의 ample line bundle이 positive line bundle과 동치이다. 따라서 우리는 이 정리를 projective variety 위에서 positive line bundle에 대해 서술하되, algebraic geometry의 관점에서 필요할 때는 ample이라는 용어를 동일한 의미로 사용할 것이다. Canonical bundle $$\omega_X = \det \Omega_X^1 = \Omega_X^n$$은 [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1)에서 정의한 바와 같으며, 이는 holomorphic $$n$$-forms들의 sheaf이다. Kodaira vanishing theorem은 이들 데이터에 대해 다음을 주장한다.
+우리가 다룰 기본적인 설정은 다음과 같다. $$X$$는 차원 $$n$$의 smooth projective variety이고, $$\mathcal{L}$$은 $$X$$ 위의 ample line bundle이다. Canonical bundle $$\omega_X = \det \Omega_X^1 = \Omega_X^n$$은 [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1)에서 정의한 바와 같으며, 이는 regular $$n$$-forms들의 sheaf이다. Kodaira vanishing theorem은 이들 데이터에 대해 다음을 주장한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2 (Kodaira vanishing)**</ins> $$X$$를 차원 $$n$$인 smooth projective variety, $$\mathcal{L}$$을 $$X$$ 위의 positive line bundle이라 하자. 그럼 모든 $$i > 0$$에 대하여
+<ins id="prop1">**명제 1 (Kodaira vanishing)**</ins> $$X$$를 차원 $$n$$인 smooth projective variety, $$\mathcal{L}$$을 $$X$$ 위의 ample line bundle이라 하자. 그럼 모든 $$i > 0$$에 대하여
 
 $$H^i(X, \omega_X \otimes \mathcal{L}) = 0$$
 
@@ -47,7 +39,7 @@ $$H^i(X, \omega_X \otimes \mathcal{L}) = 0$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 명제 2의 가정 아래, 모든 $$i < n$$에 대하여
+<ins id="prop2">**명제 2**</ins> 명제 1의 가정 아래, 모든 $$i < n$$에 대하여
 
 $$H^i(X, \mathcal{L}^{-1}) = 0$$
 
@@ -62,11 +54,11 @@ $$H^i(X, \mathcal{L}^{-1}) = 0$$
 
 $$H^i(X, \mathcal{L}^{-1}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{L})^\vee$$
 
-이 성립한다. $$i < n$$이면 $$n - i > 0$$이므로, [명제 2](#prop2)에 의해 우변은 $$0$$이다.
+이 성립한다. $$i < n$$이면 $$n - i > 0$$이므로, [명제 1](#prop1)에 의해 우변은 $$0$$이다.
 
 </details>
 
-명제 3의 서술은 Kodaira의 원래 증명과 더 가까운 형태로, negative line bundle $$\mathcal{L}^{-1}$$에 대한 cohomology vanishing을 다룬다. 두 서술은 Serre duality를 통해 완전히 동치이므로 상황에 따라 더 편한 쪽을 사용하면 된다.
+명제 2의 서술은 Kodaira의 원래 증명과 더 가까운 형태로, negative line bundle $$\mathcal{L}^{-1}$$에 대한 cohomology vanishing을 다룬다. 두 서술은 Serre duality를 통해 완전히 동치이므로 상황에 따라 더 편한 쪽을 사용하면 된다.
 
 ## 사영공간에서의 검증
 
@@ -78,7 +70,7 @@ $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> $$\mathbb{P}^n$$ 위에서 $$d > 0$$일 때, 모든 $$i > 0$$에 대하여
+<ins id="ex3">**예시 3**</ins> $$\mathbb{P}^n$$ 위에서 $$d > 0$$일 때, 모든 $$i > 0$$에 대하여
 
 $$H^i(\mathbb{P}^n, \mathcal{O}(d - n - 1)) = 0$$
 
@@ -100,7 +92,7 @@ $$\rchi(S, \omega_S \otimes \mathcal{L}) = \frac{1}{2}\mathcal{L} \cdot (\mathca
 
 를 준다. 여기서 $$K_S$$는 canonical divisor를 나타내고, $$\rchi(S, \mathcal{L}) = \sum_{i=0}^{2} (-1)^i \dim H^i(S, \mathcal{L})$$는 Euler 지표이다. 이 공식의 강력함은 $$\rchi$$를 순전히 대수적·위상적 데이터로 계산할 수 있다는 데 있지만, 문제는 $$\rchi$$가 $$h^0, h^1, h^2$$의 교대합이라는 점이다. 따라서 단순히 $$h^0(S, \omega_S \otimes \mathcal{L})$$만을 알고 싶을 때는 higher cohomology들의 값을 각각 따로 구해야 하므로, Riemann-Roch 공식만으로는 직접적인 답을 얻기 어렵다.
 
-Kodaira vanishing은 바로 이 간극을 메운다. $$\mathcal{L}$$이 positive line bundle이면 명제 2에 의해 $$H^i(S, \omega_S \otimes \mathcal{L}) = 0$$ ($$i > 0$$)이므로,
+Kodaira vanishing은 바로 이 간극을 메운다. $$\mathcal{L}$$이 ample line bundle이면 명제 1에 의해 $$H^i(S, \omega_S \otimes \mathcal{L}) = 0$$ ($$i > 0$$)이므로,
 
 $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$$
 
@@ -112,7 +104,7 @@ $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Smooth projective variety $$X$$의 *m-th plurigenus* $$P_m(X)$$는
+<ins id="def4">**정의 4**</ins> Smooth projective variety $$X$$의 *m-th plurigenus* $$P_m(X)$$는
 
 $$P_m(X) = \dim H^0(X, \omega_X^{\otimes m})$$
 
@@ -144,13 +136,13 @@ $$\rchi(\omega_S^{\otimes m}) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Surface $$S$$의 *Kodaira dimension* $$\kappa(S)$$는 $$P_m(S)$$의 $$m$$에 대한 증가 차수로 정의된다. 구체적으로, 모든 $$m \ge 1$$에 대해 $$P_m(S) = 0$$이면 $$\kappa = -\infty$$이다. 그렇지 않은 경우, $$\kappa(S)$$는 $$P_m(S) / m^\kappa$$가 유계(bounded)가 되는 최소의 정수 $$\kappa$$로 정의된다. 즉 $$\kappa(S) = \min\{k \in \mathbb{Z}_{\ge 0} : P_m(S) = O(m^k)\}$$이다. 이 정의에 의하면 $$\kappa = 0$$은 $$P_m(S)$$가 항상 $$0$$ 또는 $$1$$이면서 모든 $$m$$에 대해 $$0$$인 것은 아닌 경우이며, $$\kappa = 1$$은 $$P_m(S) \sim cm$$으로 선형 성장하는 경우, $$\kappa = 2$$는 $$P_m(S) \sim cm^2$$으로 이차 성장하는 경우이다. Surface의 경우 $$\kappa \in \{-\infty, 0, 1, 2\}$$이다.
+<ins id="def5">**정의 5**</ins> Surface $$S$$의 *Kodaira dimension* $$\kappa(S)$$는 $$P_m(S)$$의 $$m$$에 대한 증가 차수로 정의된다. 구체적으로, 모든 $$m \ge 1$$에 대해 $$P_m(S) = 0$$이면 $$\kappa = -\infty$$이다. 그렇지 않은 경우, $$\kappa(S)$$는 $$P_m(S) / m^\kappa$$가 유계(bounded)가 되는 최소의 정수 $$\kappa$$로 정의된다. 즉 $$\kappa(S) = \min\{k \in \mathbb{Z}_{\ge 0} : P_m(S) = O(m^k)\}$$이다. 이 정의에 의하면 $$\kappa = 0$$은 $$P_m(S)$$가 항상 $$0$$ 또는 $$1$$이면서 모든 $$m$$에 대해 $$0$$인 것은 아닌 경우이며, $$\kappa = 1$$은 $$P_m(S) \sim cm$$으로 선형 성장하는 경우, $$\kappa = 2$$는 $$P_m(S) \sim cm^2$$으로 이차 성장하는 경우이다. Surface의 경우 $$\kappa \in \{-\infty, 0, 1, 2\}$$이다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $$m \ge 2$$에 대해, 만일 $$h^0(\mathcal{O}_S((1-m)K_S)) = 0$$이면
+<ins id="prop6">**명제 6**</ins> $$m \ge 2$$에 대해, 만일 $$h^0(\mathcal{O}_S((1-m)K_S)) = 0$$이면
 
 $$P_m(S) \ge \rchi(\mathcal{O}_S) + \frac{m(m-1)}{2} K_S^2$$
 
@@ -179,15 +171,15 @@ $$P_m(S) = h^0(\omega_S^{\otimes m}) = \rchi(\omega_S^{\otimes m}) + h^1(\omega_
 
 ### 코다이라 임베딩정리
 
-Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem으로, 이는 Kähler manifold가 projective manifold가 될 충분조건을 제공한다. 여기서 Kähler manifold란 complex structure, Riemannian metric, symplectic structure가 서로 호환되는 complex manifold를 의미한다. $$\mathbb{P}^n$$이나 smooth projective variety는 모두 Kähler manifold의 대표적인 예시이다.
+Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8 (Kodaira embedding)**</ins> Compact Kähler manifold $$X$$ 위에 positive line bundle $$\mathcal{L}$$이 존재하면, $$X$$는 smooth projective variety이고 충분히 큰 $$k$$에 대하여 $$\mathcal{L}^{\otimes k}$$는 very ample이다. 즉 $$\mathcal{L}^{\otimes k}$$는 $$X$$를 어떤 projective space로 embedding하는 linear system을 정의한다.
+<ins id="prop7">**명제 7 (Kodaira embedding)**</ins> $$X$$를 smooth projective variety, $$\mathcal{L}$$을 ample line bundle이라 하자. 충분히 큰 $$k$$에 대해 $$\mathcal{L}^{\otimes k}$$는 very ample이다. 즉 $$\mathcal{L}^{\otimes k}$$는 $$X$$를 어떤 projective space로 embedding하는 linear system을 정의한다.
 
 </div>
 
-명제 8의 증명에서 Kodaira vanishing은 higher cohomology의 소멸을 통해 $$H^0(X, \mathcal{L}^{\otimes k})$$의 dimension을 계산하고, 이를 통해 sections가 base points를 갖지 않으며 separating property를 만족함을 보이는 데 사용된다. 이 정리는 Kähler geometry와 algebraic geometry 사이의 다리 역할을 하며, 어떤 Kähler manifold가 algebraic하려면 반드시 integral Kähler class를 가져야 한다는 필요충분조건도 함께 제공한다.
+명제 7의 증명에서 Kodaira vanishing은 higher cohomology의 소멸을 통해 $$H^0(X, \mathcal{L}^{\otimes k})$$의 dimension을 계산하고, 이를 통해 sections가 base points를 갖지 않으며 separating property를 만족함을 보이는 데 사용된다. 이 정리는 ample line bundle의 존재가 projectivity를 보장함을 나타내며, algebraic geometry에서 기본적인 embedding 도구로 사용된다.
 
 ### very ampleness와 projective normality
 
