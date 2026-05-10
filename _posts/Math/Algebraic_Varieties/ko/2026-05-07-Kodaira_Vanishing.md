@@ -153,11 +153,11 @@ $$\kappa(X) = \limsup_{m \to \infty} \frac{\log P_m(X)}{\log m}$$
 
 $$H^0(X, \mathcal{L}) \longrightarrow \mathcal{L}_p \oplus \mathcal{L}_q$$
 
-이 surjective임을 의미하고, 두 번째 조건은 evaluation map
+이 surjective임을 의미하고, 두 번째 조건은 $$p$$에서 vanish하는 sections들에 의한 restriction map
 
-$$H^0(X, \mathcal{L}) \longrightarrow \mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
+$$\{s \in H^0(X, \mathcal{L}) : s(p) = 0\} \longrightarrow \mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
 
-이 surjective임을 의미한다. 어렵지 않게 이들의 반대방향 또한 성립한다는 것을 확인할 수 있다. 즉 다음이 성립한다. 
+의 image가 전체 $$\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$를 span함을 의미한다. 어렵지 않게 이들의 반대방향 또한 성립한다는 것을 확인할 수 있다. 즉 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
@@ -185,7 +185,7 @@ $$0 \longrightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \longrightar
 
 에서 유도되는 long exact sequence
 
-$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow \mathcal{L}^{\otimes m}_p / \mathfrak{m}_p^2\mathcal{L}^{\otimes m}_p \longrightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
+$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \longrightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
 
 를 고려하면, $$H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$$이면 separation of tangent vectors가 성립한다.
 
@@ -196,7 +196,7 @@ $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\oti
 의 surjectivity를 검증함으로써 얻을 수 있다. 이러한 vanishing은 higher cohomology가 sections의 생성을 방해하지 않음을 보장하여, linear system의 풍부함을 정량적으로 다룰 수 있게 한다.
 
 
-### 고다이라 임베딩정리
+### 고다이라 매장정리
 
 Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem이다.
 
