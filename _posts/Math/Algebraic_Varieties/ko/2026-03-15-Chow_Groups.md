@@ -1,5 +1,5 @@
 ---
-title: "Chow Groups"
+title: "저우 군"
 excerpt: "Chow groups and the cycle class map"
 
 categories: [Math / Algebraic Varieties]
@@ -17,11 +17,9 @@ weight: 18
 published: false
 ---
 
-## 도입
+앞서 우리는 [\[대수다양체\] §곡면에서의 리만-로흐 정리, ⁋정의 1](/ko/math/algebraic_varieties/riemann_roch_surfaces#def1)에서 두 divisor의 intersection number를 정의했다. 이는 당연히 아주 흥미로운 개념으로, 이번 글에서 우리는 임의의 variety 위에서 이 개념을 일반화하기 위해 *Chow group*을 정의한다. 
 
-이 글에서는 variety 위의 *algebraic cycle*<sub>대수적 순환</sub>들의 group인 Chow group을 정의한다. 이는 homology/cohomology의 대수적 아날로그로, intersection theory의 기본적인 설정을 제공한다.
-
-([§인자](/ko/math/algebraic_varieties/divisors))에서 우리는 codimension 1 closed irreducible subvariety들의 formal sum인 divisor와, rational equivalence로 모은 divisor class group $$\Cl(X)$$를 정의했다. Chow group은 이를 임의 차원으로 확장한 것이다: $$k$$-dimensional closed irreducible subvariety들의 formal sum을 rational equivalence로 나누어 $$\operatorname{CH}_k(X)$$를 얻는다. 이렇게 하면 variety의 "위상적 정보" 가운데 대수적으로 기술할 수 있는 부분을 남기고, 그렇지 않은 정보는 버리게 된다. 예를 들어 $$\operatorname{CH}_0(\mathbb{A}^n) = 0$$이므로 affine space 위의 점들은 Chow group에서 모두 동치이다 — 이는 $$\mathbb{A}^n$$이 "대수적으로 구부러질 여지"가 없기 때문에 점의 위치라는 정보를 보존하지 못하는 것이다.
+[§인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1)에서 우리는 codimension 1 closed irreducible subvariety들의 formal sum을 (Weil) divisor로 정의하였고, 이들을 up to linear equivalence로 모아 divisor class group $$\Cl(X)$$를 정의했다. Chow group은 이를 임의 차원으로 확장한 것이다: $$k$$-dimensional closed irreducible subvariety들의 formal sum을 rational equivalence로 나누어 $$\operatorname{CH}_k(X)$$를 얻는다. 이렇게 하면 variety의 "위상적 정보" 가운데 대수적으로 기술할 수 있는 부분을 남기고, 그렇지 않은 정보는 버리게 된다. 예를 들어 $$\operatorname{CH}_0(\mathbb{A}^n) = 0$$이므로 affine space 위의 점들은 Chow group에서 모두 동치이다 — 이는 $$\mathbb{A}^n$$이 "대수적으로 구부러질 여지"가 없기 때문에 점의 위치라는 정보를 보존하지 못하는 것이다.
 
 Chow group은 variety를 subvariety들의 "formal sum"으로 이해하게 해주며, 두 cycle 사이의 *intersection*<sub>교차</sub>을 정의할 수 있게 한다. 교차에 대한 자세한 내용은 ([§교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1))에서 다룬다.
 
