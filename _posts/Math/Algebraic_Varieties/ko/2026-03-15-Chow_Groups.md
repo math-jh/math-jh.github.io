@@ -19,23 +19,19 @@ published: false
 
 앞서 우리는 [\[대수다양체\] §곡면에서의 리만-로흐 정리, ⁋정의 1](/ko/math/algebraic_varieties/riemann_roch_surfaces#def1)에서 두 divisor의 intersection number를 정의했다. 이는 당연히 아주 흥미로운 개념으로, 이번 글에서 우리는 임의의 variety 위에서 이 개념을 일반화하기 위해 *Chow group*을 정의한다. 
 
-[§인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1)에서 우리는 codimension 1 closed irreducible subvariety들의 formal sum을 (Weil) divisor로 정의하였고, 이들을 up to linear equivalence로 모아 divisor class group $$\Cl(X)$$를 정의했다. Chow group은 이를 임의 차원으로 확장한 것이다: $$k$$-dimensional closed irreducible subvariety들의 formal sum을 rational equivalence로 나누어 $$\operatorname{CH}_k(X)$$를 얻는다. 이렇게 하면 variety의 "위상적 정보" 가운데 대수적으로 기술할 수 있는 부분을 남기고, 그렇지 않은 정보는 버리게 된다. 예를 들어 $$\operatorname{CH}_0(\mathbb{A}^n) = 0$$이므로 affine space 위의 점들은 Chow group에서 모두 동치이다 — 이는 $$\mathbb{A}^n$$이 "대수적으로 구부러질 여지"가 없기 때문에 점의 위치라는 정보를 보존하지 못하는 것이다.
-
-Chow group은 variety를 subvariety들의 "formal sum"으로 이해하게 해주며, 두 cycle 사이의 *intersection*<sub>교차</sub>을 정의할 수 있게 한다. 교차에 대한 자세한 내용은 ([§교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1))에서 다룬다.
-
-## 대수적 순환
+[§인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1)에서 우리는 codimension 1 closed irreducible subvariety들의 formal sum을 (Weil) divisor로 정의하였고, 이들을 up to linear equivalence로 모아 divisor class group $$\Cl(X)$$를 정의했다. 이와 유사하게, Chow group은 $$k$$-dimensional closed irreducible subvariety들의 formal sum을 up to rational equivalence로 모아둔 것이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Variety $$X$$의 *algebraic $$k$$-cycle*<sub>대수적 $$k$$-순환</sub>은 $$X$$의 $$k$$-dimensional closed irreducible subvariety들의 formal sum이다:
+<ins id="def1">**정의 1**</ins> Variety $$X$$의 *algebraic $$k$$-cycle*<sub>대수적 $$k$$-순환</sub>은 $$X$$의 $$k$$-dimensional closed irreducible subvariety들의 formal sum
 
 $$Z = \sum_{i} n_i V_i$$
 
-여기서 $$V_i \subset X$$는 $$k$$-dimensional closed irreducible subvariety이고 $$n_i \in \mathbb{Z}$$이다.
-
-$$k$$-cycle들이 이루는 free abelian group을 $$Z_k(X)$$로 표기한다.
+이다. 여기서 $$V_i \subset X$$는 $$k$$-dimensional closed irreducible subvariety이고 $$n_i \in \mathbb{Z}$$이다. $$k$$-cycle들이 이루는 free abelian group을 $$Z_k(X)$$로 표기한다.
 
 </div>
+
+그 정의에 의해 algebraic $$k$$-cycle은 homology에 가까운 것이다. 만일 이를 (duality를 통해) cohomology의 관점에서 해석해야 할 일이 있을 때에는 다음과 같은 표기를 쓴다.
 
 <div class="definition" markdown="1">
 
@@ -49,19 +45,19 @@ $$k$$-cycle들이 이루는 free abelian group을 $$Z_k(X)$$로 표기한다.
 
 </div>
 
-## 유리 동치
-
-([§인자](/ko/math/algebraic_varieties/divisors))에서 우리는 rational function의 영점과 극점의 정보를 담는 principal divisor를 정의했다. 이 개념을 임의의 차원으로 확장하면 rational equivalence를 정의할 수 있다.
+위에서 언급한 것과 같이 Chow group은 이들 $$Z_k(X)$$에 특정한 equivalence를 취하여 얻어지는 것이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4**</ins> Variety $$X$$의 $$(k+1)$$-dimensional closed irreducible subvariety $$Y \subset X$$ 위의 rational function $$f \in \mathbb{K}(Y)^\ast$$에 대해 *principal cycle*<sub>주순환</sub> $$\divisor(f) \in Z_k(X)$$를 다음과 같이 정의한다:
+<ins id="def4">**정의 4**</ins> Variety $$X$$의 $$(k+1)$$-dimensional closed irreducible subvariety $$Y \subset X$$ 위의 rational function $$f \in \mathbb{K}(Y)^\ast$$에 대해 *principal cycle*<sub>주순환</sub> $$\divisor(f) \in Z_k(X)$$를 다음의 식
 
 $$\divisor(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
 
-여기서 합은 $$Y$$의 codimension 1 closed irreducible subvariety $$V$$들에 대해 돌고, $$v_V(f)$$는 $$f$$의 $$V$$에서의 valuation (영점 또는 극점의 order)이다. $$f \in \mathbb{K}(Y)^\ast$$이므로 $$v_V(f) = 0$$인 $$V$$는 유한 개뿐이며, 따라서 $$\divisor(f)$$는 유한합이다.
+으로 정의한다. 여기서 $$v_V(f)$$는 $$f$$의 $$V$$에서의 valuation이다. 
 
 </div>
+
+직관적으로 $$v_V(f)$$는 $$f$$의 $$V$$에서의 영점 또는 극점의 order를 나타내는 것이다. 유리함수는 오직 유한히 많은 극점과 영점을 가지므로 위 식은 잘 정의되며, 이것이 [§인자, ⁋정의 3](/ko/math/algebraic_varieties/divisors#def3)의 일반화인 것 또한 명확하다. 
 
 <div class="definition" markdown="1">
 
