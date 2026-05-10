@@ -57,7 +57,9 @@ $$Z_1 - Z_2 = \sum_j \divisor(f_j)$$
 
 </div>
 
-즉, divisor class group을 정의할 때와 마찬가지로 우리는 principal divisor만큼의 차이만 나는 divisor를 같은 것으로 볼 것이다. 그럼 다음 명제가 성립한다. 
+즉, divisor class group을 정의할 때와 마찬가지로 우리는 principal divisor만큼의 차이만 나는 divisor를 같은 것으로 볼 것이다. 이 동치관계는 이전 [\[대수다양체\] §인자, ⁋정의 9](/ko/math/algebraic_varieties/divisors#def9) 직후에 설명한 직관과 동일하게, homotopy의 개념을 대수기하학으로 옮겨온 것으로 생각할 수 있다.
+
+그럼 다음 명제가 성립한다. 
 
 <div class="proposition" markdown="1">
 
@@ -82,6 +84,8 @@ Codimension $$k$$ Chow group은 $$\CH^k(X) = \CH_{n-k}(X)$$로 정의하고, 위
 <div class="example" markdown="1">
 
 <ins id="ex6">**예시 6**</ins> 우선 가장 친숙한 예시인 $$\mathbb{A}^n$$과 $$\mathbb{P}^n$$의 Chow group을 살펴보자. 
+
+우선 affine space의 경우, 임의의 $$k$$-dimensional irreducible closed subvariety는 $$0$$과 rationally equivalent하다. 이를 위해 $$(k+1)$$-dimensional projective variety $$\mathbb{P}^1\times V$$를 생각하자. 그럼 
 
 먼저 $$k < n$$에 대해 $$\CH_k(\mathbb{A}^n) = 0$$이고, $$\CH_n(\mathbb{A}^n) \cong \mathbb{Z}$$이며 그 생성원은 $$\mathbb{A}^n$$ 자체이다. 이는 $$\Cl(\mathbb{A}^n) = 0$$ ([§인자, ⁋예시 10](/ko/math/algebraic_varieties/divisors#ex10))와 같은 정신이다. 구체적으로, $$V \subset \mathbb{A}^n$$를 $$k$$-dimensional irreducible closed subvariety라 하자. $$\mathbb{P}^1 \times V$$를 생각하면 이는 $$(k+1)$$-dimensional projective variety이다. $$\mathbb{P}^1$$의 coordinate $$t \in \mathbb{K}(\mathbb{P}^1)^\times$$를 $$\mathbb{P}^1 \times V$$로 pull-back하면 $$\divisor(t) = \{0\} \times V - \{\infty\} \times V$$가 되므로, $$\{0\} \times V$$와 $$\{\infty\} \times V$$는 rationally equivalent하다. $$\{0\} \times V$$를 $$\mathbb{A}^n$$에 대응시키면 $$V$$가 되고, $$\{\infty\} \times V$$는 $$\mathbb{A}^n$$의 compactification $$\mathbb{P}^n$$의 무한대 hyperplane에 해당하므로 $$\mathbb{A}^n$$ 안에서는 0으로 본다. 따라서 $$[V] \sim_{\text{rat}} 0$$이다.
 
