@@ -14,7 +14,7 @@ header:
 date: 2026-05-07
 last_modified_at: 2026-05-09
 weight: 17
-published: false
+
 ---
 
 [§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)의 Serre vanishing theorem은 projective variety 위의 ample line bundle $$\mathcal{L}$$과 coherent sheaf $$\mathcal{F}$$에 대해, 충분히 큰 $$m$$에 대하여 $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $$m$$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
@@ -196,13 +196,9 @@ $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\oti
 의 surjectivity를 검증함으로써 얻을 수 있다. 이러한 vanishing은 higher cohomology가 sections의 생성을 방해하지 않음을 보장하여, linear system의 풍부함을 정량적으로 다룰 수 있게 한다.
 
 
-### 고다이라 매장정리
+## 고다이라 매장정리
 
-Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem이다.
-
-Kodaira embedding theorem을 서술하기 위해 먼저 간략한 complex geometric 배경을 설명한다. Compact complex manifold $$X$$가 **Kähler manifold**라는 것은, $$X$$ 위에 Riemannian metric $$g$$, symplectic form $$\omega$$, 그리고 complex structure $$J$$가 주어져 있고 이들이 compatible 관계 $$g(v,w) = \omega(v, Jw)$$를 만족하는 것이다. Smooth projective variety는 항상 Fubini-Study metric에 의해 Kähler manifold가 된다.
-
-Line bundle $$\mathcal{L}$$에 Hermitian metric $$h$$가 주어지면, 그 curvature form $$\Theta_h$$가 정의된다. $$\mathcal{L}$$이 **positive**라는 것은 $$\frac{i}{2\pi}\Theta_h$$가 Kähler form이 되는 (positive definite $(1,1)$-form) 것이다.
+Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem이다. 다만 이는 complex manifold의 영역으로 나가는 감이 있어 우리 글에서는 간단히만 소개한다. 우선 Compact complex manifold $$X$$가 **Kähler manifold**라는 것은, $$X$$ 위에 서로 호환되는 Riemannian metric, symplectic form, complex structure가 정의된 것이다. 이 때, Line bundle $$\mathcal{L}$$에 Hermitian metric $$h$$가 주어지면, 그 curvature form $$\Theta_h$$가 정의되며 $$\mathcal{L}$$이 **positive**라는 것은 $$\frac{i}{2\pi}\Theta_h$$가 positive definite $$(1,1)$$-form이 되는 것이다. 그럼 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -210,9 +206,7 @@ Line bundle $$\mathcal{L}$$에 Hermitian metric $$h$$가 주어지면, 그 curva
 
 </div>
 
-이 정리의 핵심은 \"positive $$\Rightarrow$$ ample $$\Rightarrow$$ projective\"라는 함의로, Kähler manifold가 projective variety가 되기 위한 충분조건을 제공한다. 명제 5의 증명에서 Kodaira vanishing은 higher cohomology의 소멸을 통해 $$H^0(X, \mathcal{L}^{\otimes k})$$의 dimension을 계산하고, 이를 통해 sections가 base points를 갖지 않으며 separating property를 만족함을 보이는 데 사용된다.
-
-
+즉 이 명제를 사용하면 Kähler manifold가 projective variety가 되는 것을 보일 수 있다. 
 
 ---
 

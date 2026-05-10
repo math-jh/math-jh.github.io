@@ -13,7 +13,7 @@ header:
 
 date: 2026-03-15
 last_modified_at: 2026-03-15
-weight: 19
+weight: 18
 published: false
 ---
 
@@ -23,7 +23,7 @@ published: false
 
 ([§인자](/ko/math/algebraic_varieties/divisors))에서 우리는 codimension 1 closed irreducible subvariety들의 formal sum인 divisor와, rational equivalence로 모은 divisor class group $$\Cl(X)$$를 정의했다. Chow group은 이를 임의 차원으로 확장한 것이다: $$k$$-dimensional closed irreducible subvariety들의 formal sum을 rational equivalence로 나누어 $$\operatorname{CH}_k(X)$$를 얻는다. 이렇게 하면 variety의 "위상적 정보" 가운데 대수적으로 기술할 수 있는 부분을 남기고, 그렇지 않은 정보는 버리게 된다. 예를 들어 $$\operatorname{CH}_0(\mathbb{A}^n) = 0$$이므로 affine space 위의 점들은 Chow group에서 모두 동치이다 — 이는 $$\mathbb{A}^n$$이 "대수적으로 구부러질 여지"가 없기 때문에 점의 위치라는 정보를 보존하지 못하는 것이다.
 
-Chow group은 variety를 subvariety들의 "formal sum"으로 이해하게 해주며, 두 cycle 사이의 *intersection*<sub>교차</sub>을 정의할 수 있게 한다. 교차에 대한 자세한 내용은 ([§Intersection Multiplicity](/ko/math/algebraic_varieties/intersection_multiplicity))에서 다룬다.
+Chow group은 variety를 subvariety들의 "formal sum"으로 이해하게 해주며, 두 cycle 사이의 *intersection*<sub>교차</sub>을 정의할 수 있게 한다. 교차에 대한 자세한 내용은 ([§교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1))에서 다룬다.
 
 ## 대수적 순환
 
@@ -108,7 +108,7 @@ Codimension $$k$$ Chow group: $$\operatorname{CH}^k(X) = \operatorname{CH}_{n-k}
 
 <ins id="ex8">**예시 8 ($$\mathbb{P}^n$$)**</ins> 모든 $$k$$에 대해 $$\operatorname{CH}_k(\mathbb{P}^n) \cong \mathbb{Z}$$이다.
 
-$$k$$-dimensional linear subspace $$\mathbb{P}^k \subset \mathbb{P}^n$$를 $$\ell_k$$라 하자. 임의의 $$k$$-dimensional irreducible subvariety $$V \subset \mathbb{P}^n$$에 대해, 적당한 정수 $$d \geq 0$$이 존재하여 $$[V] \sim_{\text{rat}} d \cdot \ell_k$$이다. 이 정수 $$d$$는 $$V$$와 일반 위치의 $$(n-k)$$-dimensional linear subspace 사이의 intersection multiplicity ([§Intersection Multiplicity](/ko/math/algebraic_varieties/intersection_multiplicity))와 일치한다. 따라서 $$\operatorname{CH}_k(\mathbb{P}^n)$$는 $$[\ell_k]$$에 의해 생성되고 $$\mathbb{Z}$$와 동형이다. 이는 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$과 일치한다.
+$$k$$-dimensional linear subspace $$\mathbb{P}^k \subset \mathbb{P}^n$$를 $$\ell_k$$라 하자. 임의의 $$k$$-dimensional irreducible subvariety $$V \subset \mathbb{P}^n$$에 대해, 적당한 정수 $$d \geq 0$$이 존재하여 $$[V] \sim_{\text{rat}} d \cdot \ell_k$$이다. 이 정수 $$d$$는 $$V$$와 일반 위치의 $$(n-k)$$-dimensional linear subspace 사이의 intersection multiplicity ([§교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1))와 일치한다. 따라서 $$\operatorname{CH}_k(\mathbb{P}^n)$$는 $$[\ell_k]$$에 의해 생성되고 $$\mathbb{Z}$$와 동형이다. 이는 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$과 일치한다.
 
 </div>
 

@@ -46,8 +46,6 @@ algebraic_varieties-ko:
         url: ko/math/algebraic_varieties/riemann_roch_surfaces
       - title: "코다이라 소멸정리"
         url: ko/math/algebraic_varieties/kodaira_vanishing
-      - title: "Intersection Multiplicity"
-        url: ko/math/algebraic_varieties/intersection_multiplicity
       - title: "Chow Groups"
         url: ko/math/algebraic_varieties/chow_groups
       - title: "Intersection Product"

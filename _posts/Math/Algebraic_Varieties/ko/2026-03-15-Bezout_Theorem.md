@@ -13,7 +13,7 @@ header:
 
 date: 2026-03-15
 last_modified_at: 2026-04-02
-weight: 21
+weight: 20
 published: false
 ---
 
@@ -83,11 +83,11 @@ $$C_1 = Z(\x_0^2 + \x_1^2 - \x_2^2),\qquad C_2 = Z(\x_0\x_1)$$
 
 ## 교차 중복도
 
-명제 2에서 등장한 교차 중복도 $$i_p(C, D)$$는 ([§Intersection Multiplicity, ⁋정의 1](/ko/math/algebraic_varieties/intersection_multiplicity#def1))에서 정의한 intersection multiplicity의 평면 곡선 특수 경우이다. 즉 $$\mathbb{P}^2$$의 두 곡선 $$C = Z(F)$$, $$D = Z(G)$$와 $$p \in C \cap D$$에 대해, $$p$$를 포함하는 affine chart $$U_i$$에서 $$F, G$$를 dehomogenize한 $$f, g$$를 사용하여
+명제 2에서 등장한 교차 중복도 $$i_p(C, D)$$는 ([§교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1))에서 정의한 intersection multiplicity의 평면 곡선 특수 경우이다. 즉 $$\mathbb{P}^2$$의 두 곡선 $$C = Z(F)$$, $$D = Z(G)$$와 $$p \in C \cap D$$에 대해, $$p$$를 포함하는 affine chart $$U_i$$에서 $$F, G$$를 dehomogenize한 $$f, g$$를 사용하여
 
 $$i_p(C, D) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p} / (f, g)$$
 
-로 정의한다. 이 값은 affine chart의 선택과 무관하다 ([§Intersection Multiplicity, ⁋정의 7](/ko/math/algebraic_varieties/intersection_multiplicity#def7)).
+로 정의한다. 이 값은 affine chart의 선택과 무관하다 ([§교차곱, ⁋정의 7](/ko/math/algebraic_varieties/intersection_product#def7)).
 
 이 정의는 직관적으로 $$p$$ 근방에서 $$f$$와 $$g$$가 얼마나 "강하게" 만나는지를 측정한다. $$i_p = 1$$이면 두 곡선이 $$p$$에서 transversally 만나고, $$i_p > 1$$이면 더 복잡한 교차가 일어난다. 다음 명제는 이 정의가 기하적인 직관과 맞아떨어짐을 보여준다.
 
