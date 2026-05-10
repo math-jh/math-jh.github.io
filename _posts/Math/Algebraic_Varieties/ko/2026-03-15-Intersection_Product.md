@@ -317,7 +317,7 @@ Fulton의 접근에서 핵심적인 관찰은 다음과 같다. ([§접공간과
 
 이 방법의 아이디어는 $$X$$를 연속적으로 변형하여 $$Y$$의 normal cone으로 수축시키는 것이다. 기하적으로, $$t=1$$에서는 원래 공간 $$X$$를 보고, $$t$$가 $$0$$으로 갈수록 $$X$$가 $$Y$$를 따라 점점 더 "펴지면서" 결국 $$t=0$$에서는 $$Y$$를 따라 벌어진 normal cone이 된다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12))의 blow-up이 한 점을 $$\mathbb{P}^1$$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
 
-이 접근은 moving lemma와 달리 scheme에 대한 추가 가정 (quasi-projectivity 등)이 필요하지 않아 더 일반적이며, Fulton의 *Intersection Theory*에서 채택한 주요 프레임워크이다. Pullback $$f^\ast$$는 ([§Chow Groups, ⁋명제 13](/ko/math/algebraic_varieties/chow_groups#prop13)) 및 ([§Chow Groups, ⁋명제 15](/ko/math/algebraic_varieties/chow_groups#prop15))에서 정의되었다.
+이 접근은 moving lemma와 달리 scheme에 대한 추가 가정 (quasi-projectivity 등)이 필요하지 않아 더 일반적이며, Fulton의 *Intersection Theory*에서 채택한 주요 프레임워크이다. Pullback $$f^\ast$$는 ([§Chow Groups, ⁋명제 7](/ko/math/algebraic_varieties/chow_groups#prop7)) 및 ([§Chow Groups, ⁋명제 12](/ko/math/algebraic_varieties/chow_groups#prop12))에서 정의되었다.
 
 ## 예시들
 
