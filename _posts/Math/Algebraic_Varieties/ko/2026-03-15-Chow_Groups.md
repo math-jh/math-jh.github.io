@@ -83,24 +83,19 @@ Codimension $$k$$ Chow group은 $$\CH^k(X) = \CH_{n-k}(X)$$로 정의하고, 위
 
 ## 함자성
 
-대수위상에서 homology 및 cohomology가 functoriality를 갖듯이, Chow group 또한 적절한 종류의 functoriality를 갖는다. 
+대수위상에서 homology 및 cohomology는 임의의 연속함수에 대해 functoriality를 갖지만, Chow group은 그렇지 않다. Chow group은 **proper morphism**에 대해서만 pushforward functoriality를, **flat morphism**에 대해서만 pullback functoriality를 갖는다. 이는 algebraic variety의 위상적 특성(특히 Zariski topology) 때문이다. 
 
-Variety 사이의 morphism $$f: X \to Y$$가 **proper**<sub>고유 사상</sub>이라는 것은, 대략적으로 말해 compactness의 상대적 버전이라고 생각할 수 있다. $$Y$$ 위의 어떤 compact한 family를 $$f$$를 통해 $$X$$로 끌어올리면, 그 역상 역시 compact한 family가 되는 성질이다. 구체적인 예시로, $$\mathbb{A}^1 \hookrightarrow \mathbb{P}^1$$의 inclusion은 proper이 아닌데, 이는 $$x \to \infty$$로 갈 때 점이 projective line의 추가된 점, 즉 무한대로 도망가서 사라지기 때문이다. 반면 $$\mathbb{P}^n \to \operatorname{pt}$$는 projective space 자체가 compact하므로 점이 도망갈 곳이 없어 proper이다. 이러한 직관 속에서 기억해둘 가장 중요한 사실은 **projective morphism은 항상 proper**이라는 것이다. 엄밀한 정의는 [§스킴 사상의 성질들](/ko/math/scheme_theory/properties_of_scheme_morphisms)을 참조하라.
+Variety 사이의 morphism $$f: X \to Y$$가 **proper**<sub>고유 사상</sub>이라는 것은, 대략적으로 말해 compactness의 상대적 버전이라고 생각할 수 있다. 그러나 algebraic variety에서 compactness는 위상수학과는 다르게 작동한다: Zariski topology에서는 Hausdorff 성질이 일반적으로 성립하지 않고, 따라서 일반적인 위상공간에서처럼 "닫힌 집합의 유한 부분집합" 정도로 생각할 수 없다. 대신 proper morphism은 "점들이 무한대로 도망가지 않는" 사상으로, base change 후에도 닫힌 사상으로 남는 (universally closed) 성질로 정의된다. 구체적인 예시로, $$\mathbb{A}^1 \hookrightarrow \mathbb{P}^1$$의 inclusion은 proper이 아닌데, 이는 $$x \to \infty$$로 갈 때 점이 projective line의 추가된 점, 즉 무한대로 도망가서 사라지기 때문이다. 반면 $$\mathbb{P}^n \to \operatorname{pt}$$는 projective space 자체가 compact하므로 점이 도망갈 곳이 없어 proper이다. 기억해둘 가장 중요한 사실은 **projective morphism은 항상 proper**이라는 것이다. 엄밀한 정의는 [§스킴 사상의 성질들](/ko/math/scheme_theory/properties_of_scheme_morphisms)을 참조하라.
 
-Pushforward $f_\ast$가 proper morphism에 대해서만 정의되는 근본적인 이유는, non-proper morphism은 점들을 "무한대로 도망가게" 할 수 있어 cycle의 image가 유한한 차수를 갖지 않기 때문이다. 예를 들어 $\mathbb{A}^1 \to \operatorname{pt}$를 생각하면, $[\mathbb{A}^1]$를 점으로 본려면 차수가 필요하지만 $\mathbb{A}^1$은 non-compact하여 이 차수가 무한하거나 정의되지 않는다. Proper morphism은 이런 도주를 막아 pushforward의 well-definedness를 보장한다. 특히 Chow group에서 rational equivalence를 정의할 때 $\mathbb{P}^1 \times X \to X$ 위의 cycle를 pushforward해야 하는데, 이 사상이 projective(따라서 proper)이기 때문에 이런 정의가 가능하다.
+왜 pushforward가 properness를 요구하는지를 이해하기 위해, 우리는 먼저 non-proper morphism에서 무엇이 잘못되는지 살펴 보아야 한다. 예를 들어 $$\mathbb{A}^1 \to \operatorname{pt}$$를 생각하자. 만약 이 사상에 대해 pushforward를 정의하려 한다면, $$[\mathbb{A}^1]$$를 점 하나에 대응시켜야 한다. 그러나 $$\mathbb{A}^1$$은 non-compact하여 그 위의 점들이 무한대로 도망갈 수 있으므로, 이 대응은 유한한 정수 계수를 가질 수 없다. 이는 Borel–Moore homology가 임의의 연속함수에 대해 covariant functoriality를 갖지 못하는 것과 정확히 같은 현상이다. 반면 proper morphism은 fiber가 유한한 개수의 점으로 구성되도록 강제하며, 따라서 $$V$$를 $$f(V)$$ 위로 본 후 "몇 겹으로 덮는지"를 세는 것이 가능해진다. [명제 6](#prop6)에서 등장하는 $$\deg(V/f(V))$$는 바로 이 겹침의 횟수를 센 것으로, residue field extension $$[\mathbb{K}(V) : \mathbb{K}(f(V))]$$를 통해 계산된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Proper morphism $$f: X \to Y$$에 대해 pushforward $$f_\ast: \CH_k(X) \to \CH_k(Y)$$가 존재한다. Subvariety $$V \subset X$$에 대해 $$\dim f(V) = \dim V$$일 때 $$f_\ast[V] = \deg(V/f(V)) \cdot [f(V)]$$이고, $$\dim f(V) < \dim V$$일 때 $$f_\ast[V] = 0$$이다. 여기서 $$\deg(V/f(V))$$는 residue field extension $$[\mathbb{K}(V) : \mathbb{K}(f(V))]$$의 차수이다.
+<ins id="prop6">**명제 6**</ins> Proper morphism $$f: X \to Y$$에 대해 pushforward $$f_\ast: \CH_k(X) \to \CH_k(Y)$$가 존재한다. Subvariety $$V \subset X$$에 대해, $$f_\ast[V]$$는 $$f(V)$$ 위로 $$V$$를 "덮어씌우는" 것으로 생각할 수 있다. $$\dim f(V) = \dim V$$일 때 $$V$$는 $$f(V)$$를 $$\deg(V/f(V))$$겹으로 덮으며, 이때 $$f_\ast[V] = \deg(V/f(V)) \cdot [f(V)]$$이다. $$\dim f(V) < \dim V$$일 때는 $$f_\ast[V] = 0$$이다.
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-자세한 증명은 [Ful, §1.4]를 참조하라.
-
-</details>
+직관적으로, proper morphism은 "점이 도망가지 않으므로" $$V$$의 image $$f(V)$$ 위에 $$V$$가 유한하게 겹쳐지게 된다. $$\deg(V/f(V))$$는 이 겹침의 횟수, 즉 $$V$$가 $$f(V)$$를 몇 겹으로 덮는지를 센 것이다. 이 degree는 residue field extension $$[\mathbb{K}(V) : \mathbb{K}(f(V))]$$로 계산되며, properness가 없었다면 이 겹침이 무한해져 degree를 셀 수 없었을 것이다.
 
 Morphism $$f: X \to Y$$가 **flat**<sub>평탄 사상</sub>이라는 것은, $$Y$$ 위의 각 점에 대한 fiber를 생각할 때 그 차원이 일정하고, $$Y$$의 parameter가 변함에 따라 fiber의 구조가 갑작스럽게 변하지 않고 부드럽게 바뀌는 사상이다. 예를 들어 $$y^2 = x^3 + t$$로 주어진 family를 보면, $$t \neq 0$$에서는 fiber가 smooth elliptic curve이지만 $$t = 0$$에서는 cusp singularity가 나타나면서 구조가 급격히 달라진다. 이러한 갑작스러운 특이점의 출현이 바로 flatness가 깨지는 전형적인 상황이다. 이와 같이 flat morphism은 fiber들이 일정한 차원을 유지하면서 smooth family를 이루는 직관을 갖는다. 엄밀한 정의는 [§스킴 사상의 성질들](/ko/math/scheme_theory/properties_of_scheme_morphisms)을 참조하라.
 
@@ -121,7 +116,7 @@ Pullback $f^\ast$가 flat morphism에 대해서만 정의되는 이유는, non-f
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 11 (Localization Exact Sequence)**</ins> $$Z \subset X$$가 closed subvariety이고 $$U = X \setminus Z$$이면, 다음의 exact sequence가 성립한다:
+<ins id="prop8">**명제 8 (Localization Exact Sequence)**</ins> $$Z \subset X$$가 closed subvariety이고 $$U = X \setminus Z$$이면, 다음의 exact sequence가 성립한다:
 
 $$\operatorname{CH}_k(Z) \xrightarrow{i_\ast} \operatorname{CH}_k(X) \xrightarrow{j^\ast} \operatorname{CH}_k(U) \to 0$$
 
