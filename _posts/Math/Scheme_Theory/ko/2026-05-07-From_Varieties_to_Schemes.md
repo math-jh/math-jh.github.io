@@ -11,7 +11,7 @@ header:
 date: 2026-05-07
 last_modified_at: 2026-05-07
 weight: 1
-published: true
+published: false
 ---
 
 우리는 지금까지 classical algebraic geometry의 기본적인 틀을 따라 왔다. Algebraically closed field $k$ 위에서 affine space $\mathbb{A}_k^n$의 부분집합으로 정의되는 affine variety, 그리고 이들을 적절히 paste하여 얻어지는 projective variety의 이론은 여러 방면에서 풍부한 결과를 낳았다. 특히 variety의 좌표환(coordinate ring)과 정의ideal 사이의 대응, Zariski topology 위에서의 regular function과 rational map 등은 기하와 대수의 깊은 연관성을 보여주는 대표적인 예이다.
