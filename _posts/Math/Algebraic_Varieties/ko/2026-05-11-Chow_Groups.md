@@ -11,13 +11,12 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Chow_Groups.png
     overlay_filter: 0.5
 
-date: 2026-03-15
-last_modified_at: 2026-03-15
+date: 2026-05-11
+last_modified_at: 2026-05-11
 weight: 18
-published: false
 ---
 
-앞서 우리는 [\[대수다양체\] §곡면에서의 리만-로흐 정리, ⁋정의 1](/ko/math/algebraic_varieties/riemann_roch_surfaces#def1)에서 두 divisor의 intersection number를 정의했다. 이는 당연히 아주 흥미로운 개념으로, 이번 글에서 우리는 임의의 variety 위에서 이 개념을 일반화하기 위해 *Chow group*을 정의한다. 
+앞서 우리는 [§곡면에서의 리만-로흐 정리, ⁋정의 1](/ko/math/algebraic_varieties/riemann_roch_surfaces#def1)에서 두 divisor의 intersection number를 정의했다. 이는 당연히 아주 흥미로운 개념으로, 이번 글에서 우리는 임의의 variety 위에서 이 개념을 일반화하기 위해 *Chow group*을 정의한다. 
 
 ## 저우 군
 
@@ -173,7 +172,7 @@ $$\CH^1(X) \cong \Cl(X) \cong \Pic(X)$$
 
 </div>
 
-또, 우리는 
+또, 우리는 [예시 9](#ex9)에서 $$\mathbb{A}^n$$과 $$\mathbb{P}^n$$의 경우 classical한 계산과 맞아떨어짐을 보았는데, 이는 다음과 같이 엄밀하게 formulate할 수 있다. 
 
 <div class="proposition" markdown="1">
 
@@ -185,35 +184,29 @@ $$\cl: \CH_k(X) \to H^{\text{BM}}_{2k}(X, \mathbb{Z})$$
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
+여기서 우변의 $$H^{\text{BM}}$$은 Borel-Moore homology로, singular homology와는 다르게 (non-compact 상황에서) closed oriented submanifold를 Borel-Moore homology에서의 class로 볼 수 있으며, 이런 관점에서 우리의 Chow group과는 singular cohomology보다는 Borel-Moore homology가 조금 더 맞는 analogue임을 알 수 있다. 또 $$X$$는 complex variety이므로 우변의 차원은 두 배가 되어 $$2k$$가 되는 것도 주목할 만하다.
 
-자세한 구성과 증명은 [Ful, §19.1]을 참조하라.
+## 저우 환
 
-</details>
-
-## Chow ring
+우리는 이번 글을 intersection product를 도입하기 위한 motivation으로서 다음 명제를 소개하며 마친다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> Smooth variety $$X$$에 대해 $$\CH^\ast(X) = \bigoplus_k \CH^k(X)$$는 intersection product에 대해 graded ring을 이룬다. Intersection product $$\CH^k(X) \times \CH^l(X) \to \CH^{k+l}(X)$$의 자세한 정의는 ([§Intersection Product](/ko/math/algebraic_varieties/intersection_product))에서 다룬다.
+<ins id="prop13">**명제 13**</ins> Smooth variety $$X$$에 대해 $$\CH^\ast(X) = \bigoplus_k \CH^k(X)$$는 intersection product에 대해 graded ring을 이룬다. ([§Intersection Product](/ko/math/algebraic_varieties/intersection_product))
 
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-자세한 증명은 [Ful, §8.1]을 참조하라.
-
-</details>
+ 
+이 ring 구조는 [명제 12](#prop12)와 마찬가지로 기존에 알고있던 cohomology ring 구조와도 맞아떨어진다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 18 ($\mathbb{P}^n$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
+<ins id="ex14">**예시 14 ($\mathbb{P}^n$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 
 여기서 $$H$$는 hyperplane class이다. $$H^k$$는 $$k$$-codimensional linear subspace를 나타낸다.
 
 </div>
+
+[명제 13](#prop13)의 intersection product는 다음 글에서 엄밀히 소개하게 될 것이다. 
 
 ---
 
