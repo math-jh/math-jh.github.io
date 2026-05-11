@@ -33,11 +33,11 @@ $$i_p(V, W) = \dim_{\mathbb{K}} \mathcal{O}_{\mathbb{A}^n, p} / (I(V) + I(W))$$
 
 정의에 의해 $$V$$와 $$W$$는 점 $$p$$ 근방에서 $$I(V), I(W)$$의 원소들 각각의 공통 zero set으로 나타난다. 그럼 점 $$p$$가 이들 두 subvariety에 공통적으로 포함되기 위해서는 $$I(V)$$와 $$I(W)$$의 원소들 모두의 zero set으로 나타나야 하므로, 이를 위해 ideal sum $$I(V)+I(W)$$을 생각하게 된다. 일반적으로 ambient space에 비하여 $$V,W$$가 너무 작으면 이들은 일반적으로 만나지 않으므로 위의 식이 잘 정의되지 않는다. 즉, 우리는 $$\dim V+\dim W=n$$이 성립할 때만 위의 식을 사용한다. 일반적으로, 임의의 두 subvariety가 서로 만날 때 그 intersection의 예상 차원은 $$\dim V + \dim W -n$$이며, 이것이 점으로 나오기 위해서는 반드시 $$\dim V+\dim W=n$$이어야 함을 안다. 
 
-위 정의는 $$V, W$$가 모두 local complete intersection이거나 (특히 hypersurface인 경우 자동으로 성립) Cohen–Macaulay인 경우에 정확한 교차수를 준다. 보다 일반적인 (singular한) 상황에서는 Serre의 *Tor formula*
+일반적으로 이 정의는 local complete intersection의 경우에 적용되고, singular한 상황에서는 다음의 *Tor formula*
 
 $$i_p(V, W) = \sum_{i \ge 0} (-1)^i \dim_{\mathbb{K}} \Tor_i^{R}\bigl(R/I(V),\ R/I(W)\bigr)$$
 
-가 올바른 정의이며, 위 정의는 그 $$i = 0$$ 항에 해당한다. 이 글에서 다루는 평면 곡선이나 hypersurface 사이의 교차에서는 두 정의가 일치하므로 위 단순한 정의로 충분하다. 일반적인 형태의 교차수는 Serre의 Tor formula로 다룬다.
+가 이를 정의해준다. 위의 식은 $$i = 0$$ 항에 해당한다. 이 글에서 우리는 단순한 경우만 살펴보므로 위의 [정의 1](#def1)로 충분하다. 
 
 <div class="example" markdown="1">
 
@@ -45,7 +45,7 @@ $$i_p(V, W) = \sum_{i \ge 0} (-1)^i \dim_{\mathbb{K}} \Tor_i^{R}\bigl(R/I(V),\ R
 
 $$\mathcal{O}_{\mathbb{A}^2, 0} / (\y, \y - \x^2) = \mathcal{O}_{\mathbb{A}^2, 0} / (\y, \x^2)$$
 
-이며, 이 quotient는 basis $$\{1, \x\}$$를 갖는 2차원 $$\mathbb{K}$$-vector space이다. 따라서 $$i_0(V, W) = 2$$이다. 이는 곡선 $$W$$가 $$V$$ 위에서 $$\x=0$$에서 order 2로 접한다는 사실과 일치한다. 더 일반적으로 $$V: y = 0$$과 $$W: y = x^n$$에 대하여 $$i_0(V, W) = n$$이다.
+이며, 이 quotient는 basis $$\{1, \x\}$$를 갖는 2차원 $$\mathbb{K}$$-vector space이다. 따라서 $$i_0(V, W) = 2$$이다. 이는 곡선 $$W$$가 $$V$$ 위에서 $$\x=0$$에서 order 2로 접한다는 사실과 일치한다. 더 일반적으로 $$V=\{ \y = 0\}$$과 $$W=\{\y = \x^n\}$$에 대하여 $$i_0(V, W) = n$$이다.
 
 </div>
 
@@ -53,65 +53,27 @@ $$\mathcal{O}_{\mathbb{A}^2, 0} / (\y, \y - \x^2) = \mathcal{O}_{\mathbb{A}^2, 0
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> 두 variety $$V, W \subseteq \mathbb{A}^n$$이 점 $$p \in V \cap W$$에서 *transversely intersect<sub>횡단 교차</sub>*한다는 것은 tangent space의 합이 전체 공간을 채우는 것이다.
+<ins id="def3">**정의 3**</ins> 두 variety $$V, W \subseteq \mathbb{A}^n$$이 점 $$p \in V \cap W$$에서 *transversely intersect*한다는 것은 tangent space의 합이 전체 공간을 채우는 것이다.
 
 </div>
 
-그럼 다음 명제는 [§곡면에서의 리만-로흐 정리, ⁋명제 2](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop2)의 자연스러운 일반화이다. 
+그럼 다음 두 명제는 [§곡면에서의 리만-로흐 정리, ⁋명제 2](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop2)의 자연스러운 일반화이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> Intersection multiplicity는 항상 음이 아닌 정수로 정의되며, $$p \notin V \cap W$$이면 $$i_p(V, W) = 0$$이다. $$V, W$$가 $$p$$에서 transversely intersect하면 ([정의 4](#def4)) $$i_p(V, W) = 1$$이다. 또한 $$i_p(V, W) = i_p(W, V)$$가 성립한다 (symmetry). 마지막으로 $$\dim V + \dim W = n$$이면 $$i_p(V, W) < \infty$$이다.
+<ins id="prop4">**명제 4**</ins> Intersection multiplicity는 항상 음이 아닌 정수로 정의되며, $$p \notin V \cap W$$이면 $$i_p(V, W) = 0$$이다. $$V, W$$가 $$p$$에서 transversely intersect하면 $$i_p(V, W) = 1$$이다. 또, $$i_p(V, W) = i_p(W, V)$$가 성립하며, 만일 $$\dim V + \dim W = n$$이면 $$i_p(V, W) < \infty$$이다.
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$$R = \mathcal{O}_{\mathbb{A}^n, p}$$, $$\mathfrak{a} = I(V)R$$, $$\mathfrak{b} = I(W)R$$라 하자.
-
-먼저 명제의 마지막 주장(유한성)을 가정하면 $$i_p(V, W)$$는 유한 차원 vector space의 dimension이므로 음이 아닌 정수이다. $$p \notin V \cap W$$이면 $$p \notin V$$이거나 $$p \notin W$$이다. 만일 $$p \notin V$$이면 $$p$$에서 0이 아닌 $$f \in I(V)$$가 존재하고 (Nullstellensatz 또는 정의에 의해), 이는 local ring $$R$$에서 invertible이다. 즉 $$\mathfrak{a} + \mathfrak{b} = R$$이 되어 $$R/(\mathfrak{a} + \mathfrak{b}) = 0$$이고 $$i_p(V, W) = 0$$이다.
-
-다음으로 횡단 교차의 경우를 보이자. $$V, W$$가 $$p$$에서 transversely intersect하면 $$T_p V + T_p W = \mathbb{A}^n$$이다. Ambient space $$\mathbb{A}^n$$의 cotangent space는 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$이고, $$V$$의 tangent space는 몫 공간 $$\mathfrak{m}_p/\mathfrak{m}_p^2 \twoheadrightarrow \mathfrak{m}_p/(\mathfrak{a}+\mathfrak{m}_p^2)$$의 쌍대이다. 즉 $$T_p V = (\mathfrak{m}_p/(\mathfrak{a}+\mathfrak{m}_p^2))^\ast$$이고, 마찬가지로 $$T_p W = (\mathfrak{m}_p/(\mathfrak{b}+\mathfrak{m}_p^2))^\ast$$이다.
-
-$$T_p V$$와 $$T_p W$$는 각각 $$T_p \mathbb{A}^n = (\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$$의 부분공간이다. $$T_p V$$의 annihilator는 $$\mathfrak{a}/(\mathfrak{a} \cap \mathfrak{m}_p^2) \cong (\mathfrak{a}+\mathfrak{m}_p^2)/\mathfrak{m}_p^2 \subseteq \mathfrak{m}_p/\mathfrak{m}_p^2$$이고, $$T_p W$$의 annihilator는 $$(\mathfrak{b}+\mathfrak{m}_p^2)/\mathfrak{m}_p^2$$이다. $$T_p V + T_p W = T_p \mathbb{A}^n$$이면 두 annihilator의 교집합이 0이고, 이것은 $$\mathfrak{a}+\mathfrak{b}$$의 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$에서의 image가 전체 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$임을 의미한다. 따라서 $$\mathfrak{a}+\mathfrak{b}+\mathfrak{m}_p^2 = \mathfrak{m}_p$$이고, Nakayama의 보조정리에 의해 $$\mathfrak{a}+\mathfrak{b}=\mathfrak{m}_p$$이다. 결과적으로 $$R/(\mathfrak{a}+\mathfrak{b})=R/\mathfrak{m}_p\cong\mathbb{K}$$이므로 $$i_p(V, W) = 1$$이다.
-
-Symmetry는 $$\mathfrak{a} + \mathfrak{b} = \mathfrak{b} + \mathfrak{a}$$이므로 $$R/(\mathfrak{a} + \mathfrak{b}) \cong R/(\mathfrak{b} + \mathfrak{a})$$에서 즉시 따라온다.
-
-마지막으로 유한성을 보이자. $$R = \mathcal{O}_{\mathbb{A}^n, p}$$는 Krull dimension $$n$$의 regular local ring이다. $$\dim V = \dim(R/\mathfrak{a})$$, $$\dim W = \dim(R/\mathfrak{b})$$이다. dimension inequality ([§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14))에 의하여
-$$\dim(R/(\mathfrak{a} + \mathfrak{b})) \geq \dim(R/\mathfrak{a}) + \dim(R/\mathfrak{b}) - \dim R = \dim V + \dim W - n$$
-이고, $$\dim V + \dim W = n$$이므로 $$\dim(R/(\mathfrak{a} + \mathfrak{b})) \geq 0$$이다. 한편 $$\mathfrak{a} + \mathfrak{b} \subseteq \mathfrak{m}_p$$이므로 $$R/(\mathfrak{a} + \mathfrak{b})$$의 모든 prime ideal은 $$\mathfrak{m}_p/(\mathfrak{a} + \mathfrak{b})$$에 포함된다. 즉 $$R/(\mathfrak{a} + \mathfrak{b})$$는 유일한 prime ideal $$\mathfrak{m}_p/(\mathfrak{a} + \mathfrak{b})$$를 갖는 local ring이며, 이는 $$\mathfrak{a} + \mathfrak{b}$$가 $$\mathfrak{m}_p$$-primary ideal임을 의미한다. 따라서 $$\dim(R/(\mathfrak{a} + \mathfrak{b})) \leq 0$$이고, 앞의 부등식과 합쳐 $$\dim(R/(\mathfrak{a} + \mathfrak{b})) = 0$$이다. Krull dimension $$0$$의 Noetherian local ring은 Artinian이고 ([\[가환대수학\] §차원, ⁋따름정리 3](/ko/math/commutative_algebra/Krull_dimension#cor3)), Artinian local ring은 유한 길이를 가지므로 유한 차원 $$\mathbb{K}$$-vector space이다. 특히 $$\dim_{\mathbb{K}} R/(\mathfrak{a} + \mathfrak{b}) < \infty$$이다.
-
-</details>
-
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6 (Additivity)**</ins> $$\dim V + \dim W = n$$이고, $$V = V_1 \cup V_2$$이며 $$V_1$$, $$V_2$$가 $$p$$를 포함하는 공통 irreducible component를 갖지 않으면
+<ins id="prop5">**명제 5 (Additivity)**</ins> $$\dim V + \dim W = n$$이고, $$V = V_1 \cup V_2$$이며 $$V_1$$, $$V_2$$가 $$p$$를 포함하는 공통 irreducible component를 갖지 않으면
 
 $$i_p(V, W) = i_p(V_1, W) + i_p(V_2, W)$$
 
 가 성립한다.
 
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$$R = \mathcal{O}_{\mathbb{A}^n, p}$$, $$I_1 = I(V_1)R$$, $$I_2 = I(V_2)R$$, $$J = I(W)R$$라 하자. $$V = V_1 \cup V_2$$이므로 $$I(V) = I_1 \cap I_2$$이다.
-
-$$\bar{R} = R/J$$, $$\bar{I}_1 = (I_1 + J)/J$$, $$\bar{I}_2 = (I_2 + J)/J$$라 두면 표준적인 short exact sequence
-$$0 \to \bar{R}/(\bar{I}_1 \cap \bar{I}_2) \to \bar{R}/\bar{I}_1 \oplus \bar{R}/\bar{I}_2 \to \bar{R}/(\bar{I}_1 + \bar{I}_2) \to 0$$
-이 존재한다. 여기서 첫 사상은 $$\bar{a} \mapsto (\bar{a}, -\bar{a})$$, 둘째 사상은 $$(\bar{a}, \bar{b}) \mapsto \overline{a - b}$$이며, exactness는 직접 확인할 수 있다. $$\mathbb{K}$$-dimension을 비교하면
-$$i_p(V, W) + \dim_{\mathbb{K}} R/(I_1 + I_2 + J) = i_p(V_1, W) + i_p(V_2, W)$$
-이다.
-
-이제 $$\dim_{\mathbb{K}} R/(I_1 + I_2 + J) = 0$$임을 보이자. 대우 논증을 이용한다. 만일 $$p \in V_1 \cap V_2 \cap W$$ 근방이라면 ([§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14))의 부등식에 의해
-$$\dim_p(V_1 \cap V_2 \cap W) \geq \dim_p(V_1 \cap V_2) + \dim_p W - n$$
-가 성립한다. 그런데 $$V_1$$과 $$V_2$$가 $$p$$를 포함하는 공통 irreducible component를 갖지 않으므로 $$\dim_p(V_1 \cap V_2) < \dim V$$이고, $$\dim V + \dim W = n$$이므로 우변이 음수가 되어 모순이다. 따라서 $$p \notin V_1 \cap V_2 \cap W$$ 근방이고, [명제 5](#prop5)의 첫 번째 주장에 의하여 $$\dim_{\mathbb{K}} R/(I_1 + I_2 + J) = 0$$이다. 결과적으로
-$$i_p(V, W) = i_p(V_1, W) + i_p(V_2, W)$$
-이다.
-
-</details>
 
 ## Projective case
 
@@ -177,7 +139,7 @@ Bézout 정리의 일반 형태이다. $$V, W$$를 각각 $$\deg(V)$$, $$\deg(W)
 
 $$i_p(V, W) = 1 \iff T_p V + T_p W = \mathbb{A}^n$$
 
-이 성립한다. 즉, tangent space가 transversely intersect하면 ([정의 4](#def4)) multiplicity 1이다.
+이 성립한다. 즉, tangent space가 transversely intersect하면 ([정의 3](#def3)) multiplicity 1이다.
 
 </div>
 
@@ -188,7 +150,7 @@ $$R = \mathcal{O}_{\mathbb{A}^n, p}$$, $$\mathfrak{a} = I(V)R$$, $$\mathfrak{b} 
 
 $$\Rightarrow$$ 방향: $$i_p(V, W) = 1$$이면 $$R/(\mathfrak{a} + \mathfrak{b}) \cong \mathbb{K}$$이므로 $$\mathfrak{a} + \mathfrak{b} = \mathfrak{m}_p$$이다. 따라서 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$에서 $$\mathfrak{a}$$의 image와 $$\mathfrak{b}$$의 image의 합이 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$ 전체이다. $$V$$의 tangent space는 $$T_p V = (\mathfrak{m}_p/(\mathfrak{a} + \mathfrak{m}_p^2))^\ast$$이고 $$T_p \mathbb{A}^n = (\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$$이며, 포함 $$T_p V \hookrightarrow T_p \mathbb{A}^n$$은 surjection $$\mathfrak{m}_p/\mathfrak{m}_p^2 \twoheadrightarrow \mathfrak{m}_p/(\mathfrak{a} + \mathfrak{m}_p^2)$$의 쌍대이다. $$T_p V \subseteq T_p \mathbb{A}^n$$의 annihilator는 $$(\mathfrak{a} + \mathfrak{m}_p^2)/\mathfrak{m}_p^2 \subseteq \mathfrak{m}_p/\mathfrak{m}_p^2$$이고, 마찬가지로 $$T_p W \subseteq T_p \mathbb{A}^n$$의 annihilator는 $$(\mathfrak{b} + \mathfrak{m}_p^2)/\mathfrak{m}_p^2$$이다. $$\mathfrak{a} + \mathfrak{b} + \mathfrak{m}_p^2 = \mathfrak{m}_p$$이므로 두 annihilator의 합이 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$ 전체이고, 쌍대에서 $$T_p V + T_p W = T_p \mathbb{A}^n$$을 얻는다.
 
-$$\Leftarrow$$ 방향: $$T_p V + T_p W = \mathbb{A}^n$$이면 [명제 5](#prop5)의 횡단 교차 증명과 동일한 논증에 의해 $$i_p(V, W) = 1$$이다.
+$$\Leftarrow$$ 방향: $$T_p V + T_p W = \mathbb{A}^n$$이면 [명제 4](#prop4)의 횡단 교차 증명과 동일한 논증에 의해 $$i_p(V, W) = 1$$이다.
 
 </details>
 
@@ -207,7 +169,17 @@ $$\Leftarrow$$ 방향: $$T_p V + T_p W = \mathbb{A}^n$$이면 [명제 5](#prop5)
 
 ## Intersection Product의 정의
 
-이제 proper intersection에서의 계산을 바탕으로, 일반적인 두 cycle에 대해 intersection product를 정의한다. 문제는 일반적으로 두 subvariety가 properly intersect하지 않는다는 것이다. 가령 $$\mathbb{P}^3$$에서 두 surface가 curve를 공유하면, 이 curve의 codimension은 $$1 + 1 = 2$$가 아닌 $$1$$이 되어 proper intersection이 아니다.
+만약 두 cycle $$V, W$$가 properly intersect한다면, 즉 $$\codim(V \cap W) = \codim V + \codim W$$가 성립한다면, intersection product는 local intersection multiplicity를 직접 모아서 정의할 수 있다. 구체적으로 $$V \cap W$$의 각 irreducible component $$T$$에 대해, generic point $$\eta_T$$에서의 local intersection multiplicity $$i_{\eta_T}(V, W)$$를 계산하고
+
+$$V \cdot W = \sum_T i_{\eta_T}(V, W) [T]$$
+
+으로 정의한다. 이때 [명제 4](#prop4)에 의해 각 계수 $$i_{\eta_T}(V, W)$$는 항상 음이 아닌 정수가 된다.
+
+그러나 이 정의는 오직 $$V$$와 $$W$$가 properly intersect할 때만 가능하다. 예를 들어 $$\mathbb{P}^3$$에서 두 surface가 curve를 공유하면, 이 curve의 codimension은 $$1 + 1 = 2$$가 아닌 $$1$$이 되어 proper intersection이 아니다. 더 극단적으로 $$V = W$$인 self-intersection의 경우에는, cycle $$[V]$$를 $$[V]$$ 자체와 properly intersect하도록 이동시키지 않고서는 위의 정의를 적용할 수조차 없다.
+
+따라서 일반적인 두 cycle $$Z \in \CH^k(X)$$, $$W \in \CH^l(X)$$에 대해서는 $$Z$$를 rational equivalence 내에서 이동시켜 $$Z' \sim_{\text{rat}} Z$$이고 $$Z'$$이 $$W$$와 properly intersect하도록 만든 뒤, $$Z \cdot W := Z' \cdot W$$로 정의해야 한다. 이 정의가 $$Z'$$의 선택에 의존하지 않는다는 것, 즉 well-definedness는 뒤에서 다룰 moving lemma를 통해 확립된다.
+
+이 과정에서 중요한 점은 최종 결과가 cycle 자체가 아니라 **rational equivalence class**, 즉 $$\CH^\ast(X)$$의 원소로서 결정된다는 것이다. 따라서 class 수준에서는 음수 계수가 나올 수 있다. 대표적인 예로 ([§곡면에서의 리만-로흐 정리, ⁋예시 6](/ko/math/algebraic_varieties/riemann_roch_surfaces#ex6))의 blow-up exceptional divisor $$E$$는 effective divisor이지만, intersection product의 관점에서 $$E \cdot E = -1$$이 성립한다.
 
 <div class="proposition" markdown="1">
 
@@ -221,8 +193,6 @@ $$\Leftarrow$$ 방향: $$T_p V + T_p W = \mathbb{A}^n$$이면 [명제 5](#prop5)
 핵심은 정의가 cycle의 rational equivalence class에만 의존한다는 것이다. Quasi-projective variety의 경우 moving lemma([명제 16](#prop16))에 의해 $$Z$$를 rationally equivalent한 $$Z'$$로 이동시켜 $$W$$와 properly intersect하도록 할 수 있으며, 두 이동 $$Z'_1, Z'_2$$가 주어지면 $$Z'_1 - Z'_2 = \divisor(f)$$인 rational function $$f$$가 존재한다. 이때 $$\divisor(f)$$와 $$W$$의 교차가 rational equivalence에서 $$0$$이 됨을 보이면 $$Z'_1 \cdot W = Z'_2 \cdot W$$가 성립한다. 일반적인 scheme의 경우 Fulton의 deformation to normal cone([명제 19](#prop19))을 사용하여 well-definedness를 pushforward-pullback의 호환성으로 환원한다. 교환법칙은 Serre의 Tor formula의 대칭성으로부터, 결합법칙은 세 cycle의 이동이 독립적으로 가능하다는 사실로부터 따른다.
 
 </details>
-
-Intersection product를 정의하는 핵심 아이디어는 주어진 cycle $$Z \in \CH^k(X)$$와 $$W \in \CH^l(X)$$에 대해, $$Z$$를 rational equivalence 내에서 적절히 "이동"시켜 $$Z' \sim_{\text{rat}} Z$$이고 $$Z'$$가 $$W$$와 properly intersect하도록 만드는 것이다. 그러면 $$Z'$$가 $$W$$와 properly intersect하므로 $$Z' \cdot W$$를 직접 계산할 수 있고, 이것을 $$Z \cdot W$$로 정의한다. 이것이 가능하다는 것, 즉 $$Z'$$의 선택에 관계없이 결과가 같다는 것을 보이는 것이 이 절의 핵심 내용이다.
 
 <div class="definition" markdown="1">
 
