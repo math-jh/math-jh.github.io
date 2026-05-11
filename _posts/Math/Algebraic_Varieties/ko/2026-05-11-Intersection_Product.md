@@ -113,58 +113,33 @@ $$Z \cdot W \in \CH^{k+l}(X)$$
 
 </div>
 
-
 ## Moving Lemma
 
-Intersection product의 정의가 성립하려면, 임의의 두 cycle $$Z, W$$에 대해 $$Z$$를 rational equivalence 내에서 "이동"시켜 $$W$$와 properly intersect하도록 만들 수 있어야 한다. 이를 보장하는 정리가 **moving lemma**이다.
+이제 우리의 유일한 문제는 임의의 두 class가 주어졌을 때, 이들이 차원 조건을 만족한다 해도 두 cycle이 실제로 좋게 만나는지는 알 수 없다. 가령 현재 상태에서 우리는 특정한 class의 self-intersection을 정의할 수 없다. 이를 위해서는 더 일반적으로, 임의의 두 cycle이 주어졌을 때 하나를 rational equivalence 안에서 이동시켜 $$W$$와 properly intersect하도록 해 주어야 한다. 이를 보장하는 정리가 다음의 *moving lemma*이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12 (Moving Lemma)**</ins> Smooth quasi-projective variety $$X$$와 cycle $$Z \in \CH^k(X)$$, 그리고 임의의 cycle $$W \in \CH^l(X)$$에 대해, $$Z' \sim_{\text{rat}} Z$$이고 $$Z'$$과 $$W$$가 properly intersect하는 $$Z'$$가 존재한다.
+<ins id="lem8">**보조정리 8 (Moving Lemma)**</ins> Smooth quasi-projective variety $$X$$와 cycle $$Z \in \CH^k(X)$$, 그리고 임의의 cycle $$W \in \CH^l(X)$$에 대해, $$Z' \sim_{\text{rat}} Z$$이고 $$Z'$$과 $$W$$가 properly intersect하는 $$Z'$$가 존재한다.
 
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명 (스케치)</summary>
-
-핵심은 $$Z$$를 구성하는 각 irreducible component $$V_i$$에 대해, $$V_i$$를 rational equivalence 내에서 적절히 이동시킬 수 있다는 것이다. $$V_i$$를 포함하는 충분히 큰 projective space에 포함시킨 뒤, basepoint-free linear system을 사용하여 $$V_i$$를 "일반적인" hypersurface들로 자른다. 구체적으로 $$V_i$$의 cone을 이루는 point들을 충분히 일반적인 hyperplane들로 slicing하면 차원이 $$1$$씩 떨어지며, 이 과정에서 $$W$$와의 교차가 proper가 되도록 hyperplane의 방향을 선택할 수 있다. Basepoint-free 조건에 의해 이 slicing은 regular rational map을 유도하고, 그 graph의 closure가 rational equivalence를 보존하는 deformation을 제공한다. 각 component에 대해 독립적으로 이 과정을 수행하면 원하는 $$Z'$$를 얻는다.
-
-</details>
 
 핵심 아이디어는 다음과 같다. $$Z$$를 구성하는 irreducible component $$V_i$$마다, $$V_i$$를 포함하는 충분히 "일반적인" hypersurface $$H_i$$로 자르고, $$V_i \cap H_1 \cap \cdots \cap H_s$$와 같은 형태의 cycle을 취한다. 이때 "일반적"이라는 것은 $$H_i$$가 $$W$$와 generic한 위치에서 만나도록 선택한다는 것으로, 이렇게 하면 차원이 적절히 떨어져 proper intersection을 이룬다. ([§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5))에서 보았듯 basepoint-free linear system을 사용하면 이러한 "일반적인" 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop13">**명제 13**</ins> Moving lemma에 의해 intersection product를 다음과 같이 정의할 수 있다. $$Z' \sim_{\text{rat}} Z$$이고 $$Z'$$이 $$W$$와 properly intersect하도록 선택한 뒤,
+그럼 우리는 위의 보조정리를 사용하여 $$Z$$를 $$Z'$$로 옮겨준 후, 다음의 식
 
 $$Z \cdot W := Z' \cdot W = \sum_{T \subset Z' \cap W} i_T(Z', W) [T]$$
 
-으로 정의하면, 이 값은 $$Z'$$의 선택과 무관하게 결정된다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명 (스케치)</summary>
-
-이는 [명제 12](#prop12)의 직접적인 따름이다. 두 이동 $$Z'_1, Z'_2$$ 모두 moving lemma로 얻어진 것이므로 $$Z'_1 - Z'_2$$는 $$\divisor(f)$$의 형태이다. $$\divisor(f) \cdot W$$를 계산하면, $$f$$가 rational function이므로 그 graph가 $$\mathbb{P}^1 \times X$$ 위에서 $$W$$와의 교차로 주어지며, $$\mathbb{P}^1$$ 위의 두 점 $$0$$과 $$\infty$$에서의 fiber가 각각 $$Z'_1 \cdot W$$와 $$Z'_2 \cdot W$$에 해당한다. $$\mathbb{P}^1$$의 $$0$$과 $$\infty$$가 rationally equivalent하므로 두 fiber 역시 rationally equivalent하고, 따라서 $$Z'_1 \cdot W = Z'_2 \cdot W \in \CH^\ast(X)$$이다.
-
-</details>
-
-<div class="example" markdown="1">
-
-<ins id="ex14">**예시 14**</ins> $$\mathbb{P}^2$$에서 두 conic $$C_1 = Z(F_1)$$, $$C_2 = Z(F_2)$$가 curve를 공유하는 상황, 즉 proper intersection이 아닌 경우를 생각하자. 예를 들어 $$C_1$$과 $$C_2$$가 한 직선 $$L$$을 공유한다면, $$C_1 \cap C_2$$는 $$L$$과 $$L$$ 밖의 유한 개의 점들로 구성된다. 이때 moving lemma에 의해 $$C_2$$를 $$C_2' \sim_{\text{rat}} C_2$$로 이동시켜 $$C_1$$과 properly intersect하도록 할 수 있다. 기하적으로, $$C_2'$$는 $$C_2$$를 ([§유리사상, ⁋정의 5](/ko/math/algebraic_varieties/rational_maps#def5))의 rational map에 의해 약간 "밀어" 얻은 conic이며, 이것이 $$C_1$$과 $$4$$개의 점에서 만나게 된다.
-
-</div>
+으로 intersection을 정의한다. 
 
 ## Deformation to Normal Cone
 
-Moving lemma는 quasi-projective setting에서 intersection product를 정의하는 고전적 방법이다. 그러나 이 접근은 quasi-projectivity라는 가정에 의존하며, general scheme으로 확장하는 것은 매우 어렵다. 이에 대한 대안이 Fulton이 개발한 **deformation to normal cone**이다.
+Moving lemma는 두 class가 주어졌을 때, 이를 perturb하여 intersection을 계산한다는 점에서 우리의 직관을 현실화한다. 그러나 이 접근은 quasi-projectivity라는 가정에 의존하며, 이를 일반적인 세팅으로 확장하기 위해서는 *deformation to normal cone*을 해야 한다. 
 
-Fulton의 접근에서 핵심적인 관찰은 다음과 같다. ([§접공간과 매끄러움, ⁋정의 13](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9))에서 우리는 tangent cone을 정의했는데, 이는 singular point에서의 국소적 구조를 이해하는 도구였다. Normal cone은 이를 embedding의 언어로 일반화한 것으로, closed embedding $$i: Y \hookrightarrow X$$에 대해 $$Y$$의 $$X$$ 안에서의 *normal cone* $$C_{Y/X}$$를 정의할 수 있다. 만일 $$X$$가 $$Y$$를 따라 smooth하다면 normal cone은 normal bundle $$N_{Y/X}$$가 되지만, 일반적으로는 cone 구조를 가진다.
+핵심적인 관찰은 다음과 같다. 우선 [§접공간과 매끄러움, ⁋정의 13](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9)에서 tangent cone을 정의했던 것을 기억하자. 이는 singular point에서의 국소적 구조를 이해하는 도구였으며, 이를 일반화하여 우리는 closed embedding $$i: Y \hookrightarrow X$$에 대해 $$Y$$의 $$X$$ 안에서의 *normal cone* $$C_{Y/X}$$를 정의할 수 있다. 만일 $$X$$가 $$Y$$를 따라 smooth하다면 normal cone은 normal bundle $$N_{Y/X}$$가 되지만, 일반적으로는 cone 구조를 가진다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15 (Deformation to Normal Cone)**</ins> Closed embedding $$i: Y \hookrightarrow X$$에 대해, $$\mathbb{A}^1$$을 매개변수로 하는 family $$M \to \mathbb{A}^1$$을 구성할 수 있다. 구체적으로, $$t \neq 0$$에서의 fiber $$M_t$$는 $$X$$ 자신이며, $$t = 0$$에서의 fiber $$M_0$$는 normal cone $$C_{Y/X}$$이다. 이 family의 존재는 intersection product의 well-definedness를 이 family에 대한 pushforward/pullback의 호환성으로 환원시킨다.
+<ins id="prop9">**명제 9 (Deformation to Normal Cone)**</ins> Closed embedding $$i: Y \hookrightarrow X$$에 대해, $$\mathbb{A}^1$$을 매개변수로 하는 family $$M \to \mathbb{A}^1$$을 구성할 수 있다. 구체적으로, $$t \neq 0$$에서의 fiber $$M_t$$는 $$X$$ 자신이며, $$t = 0$$에서의 fiber $$M_0$$는 normal cone $$C_{Y/X}$$이다. 이 family의 존재는 intersection product의 well-definedness를 이 family에 대한 pushforward/pullback의 호환성으로 환원시킨다.
 
 </div>
 
@@ -177,15 +152,13 @@ Fulton의 접근에서 핵심적인 관찰은 다음과 같다. ([§접공간과
 
 이 방법의 아이디어는 $$X$$를 연속적으로 변형하여 $$Y$$의 normal cone으로 수축시키는 것이다. 기하적으로, $$t=1$$에서는 원래 공간 $$X$$를 보고, $$t$$가 $$0$$으로 갈수록 $$X$$가 $$Y$$를 따라 점점 더 "펴지면서" 결국 $$t=0$$에서는 $$Y$$를 따라 벌어진 normal cone이 된다. ([§유리사상, ⁋예시 8](/ko/math/algebraic_varieties/rational_maps#ex8))의 blow-up이 한 점을 $$\mathbb{P}^1$$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
 
-이 접근은 moving lemma와 달리 scheme에 대한 추가 가정 (quasi-projectivity 등)이 필요하지 않아 더 일반적이며, Fulton의 *Intersection Theory*에서 채택한 주요 프레임워크이다. Pullback $$f^\ast$$는 ([§저우 군, ⁋명제 7](/ko/math/algebraic_varieties/chow_groups#prop7)) 및 ([§저우 군, ⁋명제 7](/ko/math/algebraic_varieties/chow_groups#prop7))에서 정의되었다.
-
 ## 예시들
 
 Intersection product의 성질을 구체적인 예시들을 통해 확인해 보자.
 
 <div class="example" markdown="1">
 
-<ins id="ex16">**예시 16 ($$\mathbb{P}^n$$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$이다. 여기서 $$H = [\text{hyperplane}] \in \CH^1(\mathbb{P}^n)$$로, $$H^k$$는 $$k$$-codimensional linear subspace의 class와 같다. Degree $$d$$ hypersurface $$V(f)$$에 대해서는 $$[V(f)] = dH$$이다. 이 결과는 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex7))에서 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$임을 이미 보였으므로 자연스러운 것이다. Picard group $$\Pic(\mathbb{P}^n) \cong \CH^1(\mathbb{P}^n) \cong \mathbb{Z}$$에 intersection product를 더하면, $$H \cdot H = H^2$$, $$H \cdot H^2 = H^3$$, ...의 곱셈이 추가되어 Chow ring이 완성된다.
+<ins id="ex10">**예시 10 ($$\mathbb{P}^n$$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$이다. 여기서 $$H = [\text{hyperplane}] \in \CH^1(\mathbb{P}^n)$$로, $$H^k$$는 $$k$$-codimensional linear subspace의 class와 같다. Degree $$d$$ hypersurface $$V(f)$$에 대해서는 $$[V(f)] = dH$$이다. 이 결과는 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex7))에서 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$임을 이미 보였으므로 자연스러운 것이다. Picard group $$\Pic(\mathbb{P}^n) \cong \CH^1(\mathbb{P}^n) \cong \mathbb{Z}$$에 intersection product를 더하면, $$H \cdot H = H^2$$, $$H \cdot H^2 = H^3$$, ...의 곱셈이 추가되어 Chow ring이 완성된다.
 
 $$H^k$$는 $$k$$-codimensional linear subspace의 class와 같다. Degree $$d$$ hypersurface $$V(f)$$에 대해서는 $$[V(f)] = dH$$이다. 이 결과는 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex7))에서 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$임을 이미 보였으므로 자연스러운 것이다. Picard group $$\Pic(\mathbb{P}^n) \cong \CH^1(\mathbb{P}^n) \cong \mathbb{Z}$$에 intersection product를 더하면, $$H \cdot H = H^2$$, $$H \cdot H^2 = H^3$$, ...의 곱셈이 추가되어 Chow ring이 완성된다.
 
@@ -193,7 +166,7 @@ $$H^k$$는 $$k$$-codimensional linear subspace의 class와 같다. Degree $$d$$ 
 
 <div class="example" markdown="1">
 
-<ins id="ex17">**예시 17 (Surface)**</ins> Surface $$S$$ 위의 두 curve $$C, D$$에 대해:
+<ins id="ex11">**예시 11 (Surface)**</ins> Surface $$S$$ 위의 두 curve $$C, D$$에 대해:
 
 $$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in \CH^2(S)$$
 
@@ -205,7 +178,7 @@ $$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in \CH^2(S)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex18">**예시 14 ($$\mathbb{P}^1 \times \mathbb{P}^1$$)**</ins> ([§유리사상, ⁋예시 11](/ko/math/algebraic_varieties/rational_maps#ex7))에서 $$\mathbb{P}^1 \times \mathbb{P}^1$$과 quadric surface $$Q = V(\x\y - \z\w)$$가 birationally equivalent (실은 isomorphic)임을 보았다. $$\mathbb{P}^1 \times \mathbb{P}^1$$의 Chow ring은
+<ins id="ex12">**예시 12 ($$\mathbb{P}^1 \times \mathbb{P}^1$$)**</ins> ([§유리사상, ⁋예시 11](/ko/math/algebraic_varieties/rational_maps#ex7))에서 $$\mathbb{P}^1 \times \mathbb{P}^1$$과 quadric surface $$Q = V(\x\y - \z\w)$$가 birationally equivalent (실은 isomorphic)임을 보았다. $$\mathbb{P}^1 \times \mathbb{P}^1$$의 Chow ring은
 
 $$\CH^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2, H_2^2)$$
 
@@ -219,7 +192,7 @@ $$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = ab' H_1 H_2 + a'b H_1 H_2 = (ab' +
 
 <div class="example" markdown="1">
 
-<ins id="ex19">**예시 19 (Segre embedding과 교차)**</ins> ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex8))의 Segre embedding $$\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$$를 생각하자. 이 embedding의 image는 quadric surface $$Q = V(\x_0\x_3 - \x_1\x_2)$$이다. ([§선다발과 벡터다발, ⁋명제 20](/ko/math/algebraic_varieties/line_bundles#prop16))에 의해 pullback $$\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$$은 $$\mathbb{P}^1 \times \mathbb{P}^1$$ 위의 line bundle이며, 실제로 $$\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$$이다. 이는 Chow ring 수준에서도 확인할 수 있다. $$\mathbb{P}^3$$에서 hyperplane class $$H_{\mathbb{P}^3}$$를 pullback하면 $$H_1 + H_2$$를 얻고, 이는 bidegree $$(1,1)$$에 해당한다.
+<ins id="ex13">**예시 13 (Segre embedding과 교차)**</ins> ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex8))의 Segre embedding $$\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$$를 생각하자. 이 embedding의 image는 quadric surface $$Q = V(\x_0\x_3 - \x_1\x_2)$$이다. ([§선다발과 벡터다발, ⁋명제 20](/ko/math/algebraic_varieties/line_bundles#prop16))에 의해 pullback $$\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$$은 $$\mathbb{P}^1 \times \mathbb{P}^1$$ 위의 line bundle이며, 실제로 $$\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$$이다. 이는 Chow ring 수준에서도 확인할 수 있다. $$\mathbb{P}^3$$에서 hyperplane class $$H_{\mathbb{P}^3}$$를 pullback하면 $$H_1 + H_2$$를 얻고, 이는 bidegree $$(1,1)$$에 해당한다.
 
 이를 통해 $$\mathbb{P}^3$$에서의 교차 계산을 $$\mathbb{P}^1 \times \mathbb{P}^1$$으로 옮겨 수행할 수 있다. 가령 $$\mathbb{P}^3$$에서 두 개의 hyperplane section $$H_1 \cap H_2 \cap Q$$의 교차는, $$\mathbb{P}^1 \times \mathbb{P}^1$$에서 $$(H_1 + H_2)^2 = 2H_1 H_2$$로 계산된다. 즉, 두 hyperplane과 quadric surface의 교차는 $$2$$개의 점으로, 이는 $$Q \cong \mathbb{P}^1 \times \mathbb{P}^1$$에서 두 개의 bidegree $$(1,1)$$ curve가 만나는 것과 같다.
 
@@ -229,7 +202,7 @@ $$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = ab' H_1 H_2 + a'b H_1 H_2 = (ab' +
 
 <div class="proposition" markdown="1">
 
-<ins id="prop20">**명제 20**</ins> Line bundle $$L$$과 cycle $$Z \in \CH_k(X)$$에 대해 $$c_1(L) \cap Z \in \CH_{k-1}(X)$$가 well-defined되어 있다. 여기서 **first Chern class** $$c_1(L) \in \CH^1(X)$$는 line bundle $$L$$에 대응하는 divisor class이며, $$L$$이 Cartier divisor $$D$$에 의해 주어지면 $$c_1(L) = [D] \in \CH^1(X)$$이다. 이 대응은 ([§인자](/ko/math/algebraic_varieties/divisors))와 ([§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles))에서 다룬 Cartier divisor와 line bundle 사이의 동치관계에 근거한다. 구체적으로 $$L = \mathcal{O}(D)$$, $$D = \sum n_i V_i$$일 때 $$D$$와 $$Z$$가 properly intersect하면 $$c_1(L) \cap Z = \sum n_i \cdot (V_i \cdot Z)$$로 정의되며, proper intersection이 아닌 경우 moving lemma나 deformation to normal cone을 사용한다.
+<ins id="prop14">**명제 14**</ins> Line bundle $$L$$과 cycle $$Z \in \CH_k(X)$$에 대해 $$c_1(L) \cap Z \in \CH_{k-1}(X)$$가 well-defined되어 있다. 여기서 **first Chern class** $$c_1(L) \in \CH^1(X)$$는 line bundle $$L$$에 대응하는 divisor class이며, $$L$$이 Cartier divisor $$D$$에 의해 주어지면 $$c_1(L) = [D] \in \CH^1(X)$$이다. 이 대응은 ([§인자](/ko/math/algebraic_varieties/divisors))와 ([§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles))에서 다룬 Cartier divisor와 line bundle 사이의 동치관계에 근거한다. 구체적으로 $$L = \mathcal{O}(D)$$, $$D = \sum n_i V_i$$일 때 $$D$$와 $$Z$$가 properly intersect하면 $$c_1(L) \cap Z = \sum n_i \cdot (V_i \cdot Z)$$로 정의되며, proper intersection이 아닌 경우 moving lemma나 deformation to normal cone을 사용한다.
 
 </div>
 
@@ -242,7 +215,7 @@ Well-definedness의 핵심은 $$c_1(L) \cap Z$$가 $$L$$의 rational section의 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop21">**명제 21**</ins> $$L = \mathcal{O}(D)$$이면:
+<ins id="prop15">**명제 15**</ins> $$L = \mathcal{O}(D)$$이면:
 
 $$c_1(L) \cap [X] = [D] \in \CH^1(X)$$
 
@@ -259,7 +232,7 @@ $$c_1(L)$$의 정의에 의해, $$L = \mathcal{O}(D)$$에 대해 $$c_1(L) = [D] 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop22">**명제 22 (Projection Formula)**</ins> Proper morphism $$f: X \to Y$$와 $$\alpha \in \CH^\ast(X)$$, $$\beta \in \CH^\ast(Y)$$에 대해 $$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$가 성립한다.
+<ins id="prop16">**명제 16 (Projection Formula)**</ins> Proper morphism $$f: X \to Y$$와 $$\alpha \in \CH^\ast(X)$$, $$\beta \in \CH^\ast(Y)$$에 대해 $$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$가 성립한다.
 
 </div>
 
