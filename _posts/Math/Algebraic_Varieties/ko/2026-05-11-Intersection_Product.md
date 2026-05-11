@@ -11,8 +11,8 @@ header:
     overlay_image: /assets/images/Math/Algebraic_Geometry/Intersection_Product.png
     overlay_filter: 0.5
 
-date: 2026-03-15
-last_modified_at: 2026-03-31
+date: 2026-05-11
+last_modified_at: 2026-05-11
 weight: 20
 published: false
 ---
@@ -20,13 +20,13 @@ published: false
 
 ## 도입
 
-([§Chow Groups](/ko/math/algebraic_varieties/chow_groups))에서 우리는 Chow group $$\operatorname{CH}^\ast(X)$$를 정의하였다. Chow group은 variety $$X$$ 위의 cycle들을 rational equivalence로 묶은 abelian group으로, 기하학적 대상들을 대수적으로 다룰 수 있게 해 준다. 그러나 Chow group이 단순한 abelian group이 아니라는 것은 이미 여러 예시에서 암시되었다. ([§인자, ⁋정의 7](/ko/math/algebraic_varieties/divisors#def7))에서 정의한 linear equivalence는 Weil divisor들 사이의 관계였고, 이를 ([§선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_varieties/line_bundles#prop19))에서 Picard group과 연결하였다. Linear equivalence가 divisor class들 사이의 "덧셈" 구조를 준다면, 자연스럽게 떠오르는 질문은 *곱셈* 구조가 존재하는지, 즉 두 cycle을 "곱하여" 새로운 cycle을 얻을 수 있는지이다.
+([§저우 군](/ko/math/algebraic_varieties/chow_groups))에서 우리는 Chow group $$\operatorname{CH}^\ast(X)$$를 정의하였다. Chow group은 variety $$X$$ 위의 cycle들을 rational equivalence로 묶은 abelian group으로, 기하학적 대상들을 대수적으로 다룰 수 있게 해 준다. 그러나 Chow group이 단순한 abelian group이 아니라는 것은 이미 여러 예시에서 암시되었다. ([§인자, ⁋정의 7](/ko/math/algebraic_varieties/divisors#def7))에서 정의한 linear equivalence는 Weil divisor들 사이의 관계였고, 이를 ([§선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_varieties/line_bundles#prop19))에서 Picard group과 연결하였다. Linear equivalence가 divisor class들 사이의 "덧셈" 구조를 준다면, 자연스럽게 떠오르는 질문은 *곱셈* 구조가 존재하는지, 즉 두 cycle을 "곱하여" 새로운 cycle을 얻을 수 있는지이다.
 
 이 질문에 대한 답이 **intersection product**이다. 직관적으로, 두 기하학적 대상이 만나는 방식을 하나의 대상으로 기술하는 연산이다. Surface $$S$$ 위의 두 curve $$C, D$$를 생각하자. ([정의 1](#def1))에서 정의하는 intersection multiplicity $$i_p(C,D)$$를 사용하면 교차 수 $$C \cdot D = \sum_p i_p(C,D)$$를 계산할 수 있다. 이때 핵심적인 관찰은 이 정수가 $$C$$와 $$D$$의 구체적인 *위치*가 아니라 그들이 대표하는 *rational equivalence class*에만 의존한다는 것이다. 즉, $$C$$를 rational equivalence 내에서 적당히 "이동"시켜도 교차 수는 변하지 않는다. 이로부터 두 curve의 intersection은 각 curve 자체보다는 그들이 대표하는 Chow class 사이의 곱셈으로 이해되어야 한다는 것을 안다.
 
 이는 topology에서의 상황과 완전히 같다. Singular homology group $$H_\ast(X)$$는 단순한 abelian group이 아니라 cap product에 의해 **homology ring** 구조를 갖는다. Poincaré dual을 통한 cap product가 homology class 사이의 곱셈을 주듯이, 대수기하학에서는 intersection product가 같은 역할을 한다. 실제로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11))에서 우리는 이미 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$임을 보았고, ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12))에서 $$\Pic(\mathbb{P}^n) \cong \mathbb{Z}$$임을 보였으므로, 이제 이들에 곱셈 구조를 주어 Chow *ring*을 완성할 차례이다.
 
-구체적인 예로, $$\mathbb{P}^2$$에서 degree $$d_1$$ curve $$C_1$$과 degree $$d_2$$ curve $$C_2$$를 생각하자. Bézout 정리에 의해 $$C_1 \cdot C_2 = d_1 d_2$$이며, 이 결과는 두 curve의 구체적인 위치에 무관하다. 이는 오직 그들의 Chow class $$d_1[H]$$와 $$d_2[H]$$의 곱 $$d_1 d_2 H^2$$로부터 얻어진다 — 마치 ([§선형계, ⁋예시 3](/ko/math/algebraic_varieties/linear_systems#ex3))에서 degree가 곱해지듯이, intersection product에서는 Chow class가 곱해진다. 본 글은 이러한 곱셈 구조를 일반적인 smooth variety에서 엄밀하게 정의하고, 그 기본 성질들을 살펴 본다. Chow group ([§Chow Groups](/ko/math/algebraic_varieties/chow_groups)), intersection multiplicity ([정의 1](#def1)), line bundle ([§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles))에 대한 기본 지식을 전제로 한다.
+구체적인 예로, $$\mathbb{P}^2$$에서 degree $$d_1$$ curve $$C_1$$과 degree $$d_2$$ curve $$C_2$$를 생각하자. Bézout 정리에 의해 $$C_1 \cdot C_2 = d_1 d_2$$이며, 이 결과는 두 curve의 구체적인 위치에 무관하다. 이는 오직 그들의 Chow class $$d_1[H]$$와 $$d_2[H]$$의 곱 $$d_1 d_2 H^2$$로부터 얻어진다 — 마치 ([§선형계, ⁋예시 3](/ko/math/algebraic_varieties/linear_systems#ex3))에서 degree가 곱해지듯이, intersection product에서는 Chow class가 곱해진다. 본 글은 이러한 곱셈 구조를 일반적인 smooth variety에서 엄밀하게 정의하고, 그 기본 성질들을 살펴 본다. Chow group ([§저우 군](/ko/math/algebraic_varieties/chow_groups)), intersection multiplicity ([정의 1](#def1)), line bundle ([§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles))에 대한 기본 지식을 전제로 한다.
 
 
 ## Proper Intersection과 Intersection Multiplicity
@@ -317,7 +317,7 @@ Fulton의 접근에서 핵심적인 관찰은 다음과 같다. ([§접공간과
 
 이 방법의 아이디어는 $$X$$를 연속적으로 변형하여 $$Y$$의 normal cone으로 수축시키는 것이다. 기하적으로, $$t=1$$에서는 원래 공간 $$X$$를 보고, $$t$$가 $$0$$으로 갈수록 $$X$$가 $$Y$$를 따라 점점 더 "펴지면서" 결국 $$t=0$$에서는 $$Y$$를 따라 벌어진 normal cone이 된다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12))의 blow-up이 한 점을 $$\mathbb{P}^1$$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
 
-이 접근은 moving lemma와 달리 scheme에 대한 추가 가정 (quasi-projectivity 등)이 필요하지 않아 더 일반적이며, Fulton의 *Intersection Theory*에서 채택한 주요 프레임워크이다. Pullback $$f^\ast$$는 ([§Chow Groups, ⁋명제 7](/ko/math/algebraic_varieties/chow_groups#prop7)) 및 ([§Chow Groups, ⁋명제 11](/ko/math/algebraic_varieties/chow_groups#prop11))에서 정의되었다.
+이 접근은 moving lemma와 달리 scheme에 대한 추가 가정 (quasi-projectivity 등)이 필요하지 않아 더 일반적이며, Fulton의 *Intersection Theory*에서 채택한 주요 프레임워크이다. Pullback $$f^\ast$$는 ([§저우 군, ⁋명제 7](/ko/math/algebraic_varieties/chow_groups#prop7)) 및 ([§저우 군, ⁋명제 11](/ko/math/algebraic_varieties/chow_groups#prop11))에서 정의되었다.
 
 ## 예시들
 
