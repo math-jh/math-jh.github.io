@@ -48,7 +48,7 @@ algebraic_varieties-ko:
         url: ko/math/algebraic_varieties/kodaira_vanishing
       - title: "저우 군"
         url: ko/math/algebraic_varieties/chow_groups
-      - title: "Intersection Product"
+      - title: "교차곱"
         url: ko/math/algebraic_varieties/intersection_product
       - title: "Bézout's Theorem"
         url: ko/math/algebraic_varieties/bezout_theorem
