@@ -88,8 +88,12 @@ scheme_theory-ko:
         url: ko/math/scheme_theory/morphism_of_schemes
       - title: "스킴 사상의 성질들"
         url: ko/math/scheme_theory/properties_of_scheme_morphisms
+      - title: "값매김환"
+        url: ko/math/scheme_theory/valuative_criteria
       - title: "올곱"
         url: ko/math/scheme_theory/fiber_products
+      - title: "평탄사상"
+        url: ko/math/scheme_theory/flat_morphisms
       - title: "닫힌 부분스킴"
         url: ko/math/scheme_theory/closed_subschemes
       - title: "사영스킴"
