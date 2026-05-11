@@ -83,23 +83,27 @@ Codimension $$k$$ Chow group은 $$\CH^k(X) = \CH_{n-k}(X)$$로 정의하고, 위
 
 ## 함자성
 
-대수위상에서 homology 및 cohomology는 임의의 연속함수에 대해 functoriality를 갖지만, Chow group은 그렇지 않다. Chow group은 **proper morphism**에 대해서만 pushforward functoriality를, **flat morphism**에 대해서만 pullback functoriality를 갖는다. 이는 algebraic variety의 위상적 특성(특히 Zariski topology) 때문이다. 
+대수위상에서 homology 및 cohomology는 임의의 연속함수에 대해 functoriality를 갖지만, Chow group은 그렇지 않다. Chow group은 **proper morphism**에 대해서만 pushforward functoriality를, **flat morphism**에 대해서만 pullback functoriality를 갖는다. 
 
-Variety 사이의 morphism $$f: X \to Y$$가 **proper**<sub>고유 사상</sub>이라는 것은, 대략적으로 말해 compactness의 상대적 버전이라고 생각할 수 있다. 그러나 algebraic variety에서 compactness는 위상수학과는 다르게 작동한다: Zariski topology에서는 Hausdorff 성질이 일반적으로 성립하지 않고, 따라서 일반적인 위상공간에서처럼 "닫힌 집합의 유한 부분집합" 정도로 생각할 수 없다. 대신 proper morphism은 "점들이 무한대로 도망가지 않는" 사상으로, base change 후에도 닫힌 사상으로 남는 (universally closed) 성질로 정의된다. 구체적인 예시로, $$\mathbb{A}^1 \hookrightarrow \mathbb{P}^1$$의 inclusion은 proper이 아닌데, 이는 $$x \to \infty$$로 갈 때 점이 projective line의 추가된 점, 즉 무한대로 도망가서 사라지기 때문이다. 반면 $$\mathbb{P}^n \to \operatorname{pt}$$는 projective space 자체가 compact하므로 점이 도망갈 곳이 없어 proper이다. 기억해둘 가장 중요한 사실은 **projective morphism은 항상 proper**이라는 것이다. 엄밀한 정의는 [§스킴 사상의 성질들](/ko/math/scheme_theory/properties_of_scheme_morphisms)을 참조하라.
+우선 두 variety 사이의 morphism $$f: X \to Y$$가 *proper morphism*이라는 것은 대략적으로 compact map의 대수기하적 analogue라 할 수 있다. ([\[스킴\] §값매김환, ⁋정의 8](/ko/math/scheme_theory/valuative_criteria#def8)) 다소 주의할 것은, compactness의 경우 대수기하학에서는 잘 작동하지 않으므로 이를 곧바로 옮겨올 수는 없다는 것이다. 직관은 compact map의 fiber와 image가 무한대로 새어나가지 않듯이 proper morphism 또한 그러하다는 것이며, 특히 중요한 것은 이 fiber를 묘사하는 데 유한 개의 좌표만 추가적으로 필요하다는 것이다. ([\[스킴\] §스킴 사상의 성질들, ⁋예시 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex15)) 이 때 필요한 좌표의 개수는 function field의 extension degree $$[\mathbb{K}(V):\mathbb{K}(f(V))]$$으로 계산되며, 이는 $$V$$와 $$f(V)$$가 같은 차원일 때 정의된다. 편의상
 
-왜 pushforward가 properness를 요구하는지를 이해하기 위해, 우리는 먼저 non-proper morphism에서 무엇이 잘못되는지 살펴 보아야 한다. 예를 들어 $$\mathbb{A}^1 \to \operatorname{pt}$$를 생각하자. 만약 이 사상에 대해 pushforward를 정의하려 한다면, $$[\mathbb{A}^1]$$를 점 하나에 대응시켜야 한다. 그러나 $$\mathbb{A}^1$$은 non-compact하여 그 위의 점들이 무한대로 도망갈 수 있으므로, 이 대응은 유한한 정수 계수를 가질 수 없다. 이는 Borel–Moore homology가 임의의 연속함수에 대해 covariant functoriality를 갖지 못하는 것과 정확히 같은 현상이다. 반면 proper morphism은 fiber가 유한한 개수의 점으로 구성되도록 강제하며, 따라서 $$V$$를 $$f(V)$$ 위로 본 후 "몇 겹으로 덮는지"를 세는 것이 가능해진다. [명제 6](#prop6)에서 등장하는 $$\deg(V/f(V))$$는 바로 이 겹침의 횟수를 센 것으로, residue field extension $$[\mathbb{K}(V) : \mathbb{K}(f(V))]$$를 통해 계산된다.
+$$\deg(V/f(V))=\begin{cases}[\mathbb{K}(V):\mathbb{K}(f(V))]&\text{if $\dim f(V)=\dim V$,}\\ 0&\text{if $\dim f(V)<\dim V$}\end{cases}$$
+
+으로 적으면, 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Proper morphism $$f: X \to Y$$에 대해 pushforward $$f_\ast: \CH_k(X) \to \CH_k(Y)$$가 존재한다. Subvariety $$V \subset X$$에 대해, $$f_\ast[V]$$는 $$f(V)$$ 위로 $$V$$를 "덮어씌우는" 것으로 생각할 수 있다. $$\dim f(V) = \dim V$$일 때 $$V$$는 $$f(V)$$를 $$\deg(V/f(V))$$겹으로 덮으며, 이때 $$f_\ast[V] = \deg(V/f(V)) \cdot [f(V)]$$이다. $$\dim f(V) < \dim V$$일 때는 $$f_\ast[V] = 0$$이다.
+<ins id="prop6">**명제 6**</ins> Proper morphism $$f: X \to Y$$에 대해 pushforward $$f_\ast: \CH_k(X) \to \CH_k(Y)$$가 존재한다. 특히, 임의의 subvariety $$V\subset X$$에 대하여, 
+
+$$f_\ast[V]=\deg(V/f(V))[f(V)]$$
+
+가 성립한다. 
 
 </div>
 
-직관적으로, proper morphism은 "점이 도망가지 않으므로" $$V$$의 image $$f(V)$$ 위에 $$V$$가 유한하게 겹쳐지게 된다. $$\deg(V/f(V))$$는 이 겹침의 횟수, 즉 $$V$$가 $$f(V)$$를 몇 겹으로 덮는지를 센 것이다. 이 degree는 residue field extension $$[\mathbb{K}(V) : \mathbb{K}(f(V))]$$로 계산되며, properness가 없었다면 이 겹침이 무한해져 degree를 셀 수 없었을 것이다.
+즉 직관적으로 proper morphism $$f$$를 통해 algebraic cycle $$[V]$$가 degree $$d$$만큼 겹쳐져 $$[f(V)]$$로 옮겨진다면 $$f_\ast[V]$$는 바로 이 degree를 잡아내는 것이다. 
 
-Morphism $$f: X \to Y$$가 **flat**<sub>평탄 사상</sub>이라는 것은, $$Y$$ 위의 각 점에 대한 fiber를 생각할 때 그 차원이 일정하고, $$Y$$의 parameter가 변함에 따라 fiber의 구조가 갑작스럽게 변하지 않고 부드럽게 바뀌는 사상이다. 예를 들어 $$y^2 = x^3 + t$$로 주어진 family를 보면, $$t \neq 0$$에서는 fiber가 smooth elliptic curve이지만 $$t = 0$$에서는 cusp singularity가 나타나면서 구조가 급격히 달라진다. 이러한 갑작스러운 특이점의 출현이 바로 flatness가 깨지는 전형적인 상황이다. 이와 같이 flat morphism은 fiber들이 일정한 차원을 유지하면서 smooth family를 이루는 직관을 갖는다. 엄밀한 정의는 [§스킴 사상의 성질들](/ko/math/scheme_theory/properties_of_scheme_morphisms)을 참조하라.
-
-Pullback $f^\ast$가 flat morphism에 대해서만 정의되는 이유는, non-flat morphism에서는 base change 시 fiber의 차원이나 구조가 갑자기 달라질 수 있기 때문이다. 예를 들어 closed embedding $i: Z \hookrightarrow X$는 일반적으로 flat이 아닌데, 이 때 단순히 $[V \cap Z]$로 정의하면 intersection multiplicity를 놓치거나 차원이 예상과 다르게 될 수 있다. Flat morphism은 이런 갑작스러운 변화를 막아 pullback이 일관되게 정의되도록 한다.
+이제 우리는 pullback을 살펴본다. 이는 homology convention보다는 cohomology convention에 가까운 것이므로, 우리는 codimension $$k$$ Chow group을 생각한다. Pullback $$f^\ast: \CH^k(Y)\rightarrow \CH^k(X)$$는 직관적으로 target $$Y$$의 cycle을 받은 후, 이를 fiber 방향으로 늘려주어 source에서의 cycle을 주는 것으로 생각할 수 있다. 그럼 이것이 잘 정의되기 위해서는 $$Y$$의 각 점에 대한 fiber의 차원이 일정하고, 또 $$Y$$의 각 점을 parameter로 볼 때, 이 parameter에 따라 fiber의 구조가 갑작스레 바뀌지 않아야 한다. *Flat morphism*이 바로 이러한 성질을 반영하는 morphism으로, 이러한 경우에 우리는 다음의 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
 
@@ -107,12 +111,11 @@ Pullback $f^\ast$가 flat morphism에 대해서만 정의되는 이유는, non-f
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
+## 저우 군의 계산
 
-자세한 증명은 [Ful, §1.7]을 참조하라.
+우리는 지금까지 두 가지 종류의 functoriality를 살펴 보았는데, 이들을 함께 사용하면 Chow group의 구조를 더 잘 이해할 수 있다. 예를 들어 $$Z \subset X$$를 closed subvariety라 하고 $$U = X \setminus Z$$라 하자. 그럼 $$i: Z \hookrightarrow X$$는 closed embedding이므로 proper morphism이고, 따라서 pushforward $$i_\ast$$가 정의된다. 한편 $$j: U \hookrightarrow X$$는 open embedding이므로 flat morphism이고, 따라서 pullback $$j^\ast$$가 정의된다. 
 
-</details>
+여기서 한 가지 짚고 넘어갈 것은, 원래 pullback $$j^\ast$$는 cohomology convention $$\CH^k$$에 대해 정의되는 contravariant 연산이다. 그러나 open embedding의 경우에는 $$U$$가 $$X$$와 같은 차원을 가지므로, $$k$$-dimensional cycle을 그대로 $$U$$로 제한하는 것이 자연스럽게 정의된다. 
 
 <div class="proposition" markdown="1">
 
@@ -123,6 +126,8 @@ $$\operatorname{CH}_k(Z) \xrightarrow{i_\ast} \operatorname{CH}_k(X) \xrightarro
 여기서 $$i: Z \hookrightarrow X$$는 closed embedding이고 $$j: U \hookrightarrow X$$는 open embedding이다.
 
 </div>
+
+이 exact sequence가 성립하는 이유는 다음과 같다. 먼저 $$j^\ast$$가 surjective인 것은 자명하다. 더 중요한 것은 $$\ker j^\ast = \im i_\ast$$인 것으로, $$U$$에서 사라지는 cycle은 반드시 $$Z$$를 따라 쌓여있는 cycle들 뿐이라는 의미이며 이는 $$U$$가 $$X\setminus Z$$로 정의되었으므로 자명하다. 
 
 <div class="example" markdown="1">
 
