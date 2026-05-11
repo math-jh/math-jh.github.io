@@ -129,39 +129,43 @@ $$\operatorname{CH}_k(Z) \xrightarrow{i_\ast} \operatorname{CH}_k(X) \xrightarro
 
 이 exact sequence가 성립하는 이유는 다음과 같다. 먼저 $$j^\ast$$가 surjective인 것은 자명하다. 더 중요한 것은 $$\ker j^\ast = \im i_\ast$$인 것으로, $$U$$에서 사라지는 cycle은 반드시 $$Z$$를 따라 쌓여있는 cycle들 뿐이라는 의미이며 이는 $$U$$가 $$X\setminus Z$$로 정의되었으므로 자명하다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex9">**예시 9**</ins> 우선 가장 친숙한 예시인 $$\mathbb{A}^n$$과 $$\mathbb{P}^n$$의 Chow group을 살펴보자. 
-
-우선 affine space의 경우, 임의의 $$k$$-dimensional irreducible closed subvariety는 $$0$$과 rationally equivalent하다. 이를 위해 $$(k+1)$$-dimensional projective variety $$\mathbb{P}^1\times V$$를 생각하자.
-
-먼저 $$k < n$$에 대해 $$\CH_k(\mathbb{A}^n) = 0$$이고, $$\CH_n(\mathbb{A}^n) \cong \mathbb{Z}$$이며 그 생성원은 $$\mathbb{A}^n$$ 자체이다. 이는 $$\Cl(\mathbb{A}^n) = 0$$ ([§인자, ⁋예시 10](/ko/math/algebraic_varieties/divisors#ex10))와 같은 정신이다. 구체적으로, $$V \subset \mathbb{A}^n$$를 $$k$$-dimensional irreducible closed subvariety라 하자. $$\mathbb{P}^1 \times V$$를 생각하면 이는 $$(k+1)$$-dimensional projective variety이다. $$\mathbb{P}^1$$의 coordinate $$t \in \mathbb{K}(\mathbb{P}^1)^\times$$를 $$\mathbb{P}^1 \times V$$로 pull-back하면 $$\divisor(t) = \{0\} \times V - \{\infty\} \times V$$가 되므로, $$\{0\} \times V$$와 $$\{\infty\} \times V$$는 rationally equivalent하다. $$\{0\} \times V$$를 $$\mathbb{A}^n$$에 대응시키면 $$V$$가 되고, $$\{\infty\} \times V$$는 $$\mathbb{A}^n$$의 compactification $$\mathbb{P}^n$$의 무한대 hyperplane에 해당하므로 $$\mathbb{A}^n$$ 안에서는 0으로 본다. 따라서 $$[V] \sim_{\text{rat}} 0$$이다.
-
-한편 $$\mathbb{P}^n$$의 경우, 모든 $$k$$에 대해 $$\CH_k(\mathbb{P}^n) \cong \mathbb{Z}$$이다. $$k$$-dimensional linear subspace $$\mathbb{P}^k \subset \mathbb{P}^n$$를 $$\ell_k$$라 하자. 임의의 $$k$$-dimensional irreducible subvariety $$V \subset \mathbb{P}^n$$에 대해, 적당한 정수 $$d \geq 0$$이 존재하여 $$[V] \sim_{\text{rat}} d \cdot \ell_k$$이다. 이 정수 $$d$$는 $$V$$와 일반 위치의 $$(n-k)$$-dimensional linear subspace 사이의 intersection multiplicity ([§Intersection Product, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1))와 일치한다. 따라서 $$\CH_k(\mathbb{P}^n)$$는 $$[\ell_k]$$에 의해 생성되고 $$\mathbb{Z}$$와 동형이다. 이는 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$과 일치한다.
-
-</div>
+다음 예시는 여러 Chow group을 계산할 때 기본 출발점이 된다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 13 (Smooth curve)**</ins> Smooth projective curve $$C$$에 대해 $$\CH_1(C) \cong \mathbb{Z}$$이며 생성원은 $$C$$ 자체이고, $$\CH_0(C) \cong \Cl(C)$$이다.
+<ins id="ex9">**예시 9**</ins> 가장 기본적인 예시로, 
+
+$$\CH_k(\mathbb{A}^n)=\begin{cases}\mathbb{Z}&\text{if $k=n$}\\0&\text{otherwise}\end{cases}$$
+
+그리고 
+
+$$\CH_k(\mathbb{P}^n)=\mathbb{Z}\qquad\text{for all $0\leq k\leq n$}$$
+
+이 성립한다. 이는 Euclidean space와 projective space의 homology와 일치하는 결과로, 우리가 정의한 Chow group이 실제로 기하적 직관을 잘 반영함을 보여준다. 
 
 </div>
+
+일반적으로
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> Projection $$\pi: \mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^1$$에 대해:
+<ins id="ex10">**예시 10**</ins> 위의 예시를 더 직관적으로 보기 위해 degree $$d$$ morphism $$f: \mathbb{P}^1 \to \mathbb{P}^1$$을
 
-$$\pi_\ast[\mathbb{P}^1 \times \{p\}] = [p] \in \CH_0(\mathbb{P}^1) \cong \mathbb{Z}$$
+$$f([x:y]) = [x^d:y^d]$$
 
-잔여체 확대 차수가 $$[\mathbb{K}(\mathbb{P}^1 \times \{p\}) : \mathbb{K}(\{p\})] = 1$$이므로 계수가 $$\deg = 1$$이다. 즉, fiber $$\mathbb{P}^1 \times \{p\}$$가 한 점 위로 일대일로 대응되므로 pushforward가 순환의 차원을 유지하면서 그대로 내려보낸다.
+으로 정의하면 이는 proper이며, $$\mathbb{P}^1$$ 위의 coordinate $$t = x/y$$에 대해 $$f^\ast(t) = t^d$$이므로 field extension $$\mathbb{K}(\mathbb{P}^1) \hookrightarrow \mathbb{K}(\mathbb{P}^1)$$는 $$t \mapsto t^d$$에 의해 주어지고, 이 때의 extension degree는 $$d$$이다. 따라서 [명제 6](#prop6)에 의해
+
+$$f_\ast[\mathbb{P}^1] = d \cdot [\mathbb{P}^1] \in \CH_1(\mathbb{P}^1) \cong \mathbb{Z}$$
+
+가 성립한다. 즉, $$\mathbb{P}^1$$가 $$\mathbb{P}^1$$ 위로 $$d$$겹으로 덮혀지며, pushforward는 이를 잡아내는 역할을 한다.
 
 </div>
 
-## 다른 이론들과의 관계
+그 정의에 의해 다음 명제는 거의 자명하다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> Smooth variety $$X$$에 대해
+<ins id="prop11">**명제 11**</ins> Smooth variety $$X$$에 대해
 
 $$\CH^1(X) \cong \Cl(X) \cong \Pic(X)$$
 
@@ -169,28 +173,15 @@ $$\CH^1(X) \cong \Cl(X) \cong \Pic(X)$$
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$$\CH^1(X) = \CH_{n-1}(X)$$는 codimension 1 closed irreducible subvariety(즉 Weil divisor의 성분)들의 rational equivalence에 의한 quotient group이다. $$X$$가 smooth이므로 모든 local ring이 regular이며, regular local ring이 UFD라는 사실에 의해 ([Hart, Theorem II.6.2A] 참조) $$X$$는 locally factorial이고, 따라서 Weil divisor와 Cartier divisor가 일치한다.
-
-$$\Cl(X)$$는 Weil divisor들의 linear equivalence에 의한 quotient group이다. 두 동치 관계를 비교하자: rational equivalence는 임의의 $$(k+1)$$-dimensional subvariety $$Y$$ 위의 rational function $$f \in \mathbb{K}(Y)^\ast$$의 principal cycle $$\divisor(f)$$에 의해 생성되고, linear equivalence는 $$X$$ 자체 위의 rational function $$f \in \mathbb{K}(X)^\ast$$의 principal divisor $$\divisor(f)$$에 의해서만 생성된다.
-
-하지만 codimension 1에서는 임의의 $$n$$-dimensional closed irreducible subvariety $$Y \subset X$$가 $$X$$ 자체뿐이므로 ($$\dim X = n$$), rational equivalence와 linear equivalence는 동일한 동치 관계이다. 따라서 $$\CH^1(X) \cong \Cl(X)$$. $$\Cl(X) \cong \Pic(X)$$는 ([§인자](/ko/math/algebraic_varieties/divisors))에서 이미 확인하였다.
-
-</details>
+또, 우리는 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> Complex variety $$X$$에 대해 **cycle class map**
+<ins id="prop12">**명제 12**</ins> Complex variety $$X$$에 대해 *cycle class map*
 
 $$\cl: \CH_k(X) \to H^{\text{BM}}_{2k}(X, \mathbb{Z})$$
 
-이 존재한다. 여기서 $$H^{\text{BM}}_\ast$$는 Borel–Moore homology이다. Borel–Moore homology는 일반적인 singular homology와 달리 비콤팩트 공간에서도 well-defined한 homology with closed support이며, $$2k$$ 차원이 등장하는 것은 $$k$$-dimensional algebraic cycle이 복소위상에서 실수 차원 $$2k$$를 갖는 것을 반영한다. $$X$$가 smooth projective variety이면 Poincaré duality에 의해 이는
-
-$$\cl: \CH^k(X) \to H^{2k}(X, \mathbb{Z})$$
-
-으로 볼 수 있다. 이 map은 일반적으로 injective도 surjective도 아니다. Hodge conjecture는 $$\cl$$의 image를 $$\mathbb{Q}$$-coefficients로 기술하는 것과 관련된 유명한 미해결 문제이다.
+이 존재한다. 이는 algebraic cycle을 위상적으로 해석하는 사상으로, $$X$$가 smooth projective이면 Poincaré duality에 의해 $$\cl: \CH^k(X) \to H^{2k}(X, \mathbb{Z})$$로 볼 수 있다.
 
 </div>
 
@@ -205,7 +196,7 @@ $$\cl: \CH^k(X) \to H^{2k}(X, \mathbb{Z})$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**명제 14**</ins> Smooth variety $$X$$에 대해 $$\CH^\ast(X) = \bigoplus_k \CH^k(X)$$는 intersection product에 대해 graded ring을 이룬다. Intersection product $$\CH^k(X) \times \CH^l(X) \to \CH^{k+l}(X)$$의 자세한 정의는 ([§Intersection Product](/ko/math/algebraic_varieties/intersection_product))에서 다룬다.
+<ins id="prop13">**명제 13**</ins> Smooth variety $$X$$에 대해 $$\CH^\ast(X) = \bigoplus_k \CH^k(X)$$는 intersection product에 대해 graded ring을 이룬다. Intersection product $$\CH^k(X) \times \CH^l(X) \to \CH^{k+l}(X)$$의 자세한 정의는 ([§Intersection Product](/ko/math/algebraic_varieties/intersection_product))에서 다룬다.
 
 </div>
 
@@ -218,7 +209,7 @@ $$\cl: \CH^k(X) \to H^{2k}(X, \mathbb{Z})$$
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 18 ($\mathbb{P}^n$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
+<ins id="ex14">**예시 18 ($\mathbb{P}^n$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 
 여기서 $$H$$는 hyperplane class이다. $$H^k$$는 $$k$$-codimensional linear subspace를 나타낸다.
 
