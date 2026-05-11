@@ -87,30 +87,32 @@ $$\codim(V \cap W) = \codim V + \codim W$$
 
 $$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) \, [T]$$
 
-으로 정의할 수 있다. 여기서 $$i_T(V, W)$$는 component $$T$$에서의 intersection multiplicity로, [정의 1](#def1)의 점에서의 multiplicity를 component $$T$$로 자연스럽게 확장한 값이다. $$T$$가 점 $$p$$라면 $$i_T(V, W) = i_p(V, W)$$이고, 일반적으로는 $$T$$ 위의 일반적인 점에서 두 variety가 만나는 정도를 측정한 값으로, generic point에서의 intersection multiplicity로 엄밀하게 정의할 수 있다. 
-
-이 과정에서 중요한 점은 최종 결과가 cycle 자체가 아니라 **rational equivalence class**, 즉 $$\CH^\ast(X)$$의 원소로서 결정된다는 것이다. 따라서 class 수준에서는 음수 계수가 나올 수 있다. 대표적인 예로 ([§곡면에서의 리만-로흐 정리, ⁋예시 6](/ko/math/algebraic_varieties/riemann_roch_surfaces#ex6))의 blow-up exceptional divisor $$E$$는 effective divisor이지만, intersection product의 관점에서 $$E \cdot E = -1$$이 성립한다.
+으로 정의할 수 있다. 여기서 $$i_T(V, W)$$는 component $$T$$에서의 intersection multiplicity로, [정의 1](#def1)의 점에서의 multiplicity를 component $$T$$로 자연스럽게 확장한 값이다. $$T$$가 점 $$p$$라면 $$i_T(V, W) = i_p(V, W)$$이고, 일반적으로는 $$T$$ 위의 일반적인 점에서 두 variety가 만나는 정도를 측정한 값으로, generic point에서의 intersection multiplicity로 엄밀하게 정의할 수 있다. 그럼 다음은 intersection multiplicity의 성질들을 intersection product로 올려둔 것이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10 (Intersection Product)**</ins> Smooth irreducible variety $$X$$ 위에서 codimension $$k$$, $$l$$의 두 cycle $$Z, W$$의 **intersection product** $$Z \cdot W \in \CH^{k+l}(X)$$를 정의할 수 있다. 이 연산은 교환법칙 $$Z \cdot W = W \cdot Z$$, 결합법칙 $$(Z_1 \cdot Z_2) \cdot Z_3 = Z_1 \cdot (Z_2 \cdot Z_3)$$, 분배법칙 $$Z \cdot (W_1 + W_2) = Z \cdot W_1 + Z \cdot W_2$$을 만족하며, $$[X] \in \CH^0(X)$$가 항등원 역할을 한다.
+<ins id="prop6">**명제 6**</ins> Smooth irreducible variety $$X$$ 위에서 codimension $$k$$, $$l$$의 두 cycle $$Z, W$$에 대하여, 위의 식으로부터 *intersection product* 
+
+$$Z \cdot W \in \CH^{k+l}(X)$$
+
+가 잘 정의된다. 뿐만 아니라, 이는 다음의 성질들을 만족한다. 
+
+를 정의할 수 있다. 
+
+1. *Symmetry.* $$Z \cdot W = W \cdot Z$$가 성립한다.
+2. *Bilinearity.* $$(aZ_1 + bZ_2) \cdot W = a(Z_1 \cdot W) + b(Z_2 \cdot W)$$가 성립한다. 
+3. *Associativity*. $$(Z_1 \cdot Z_2) \cdot Z_3 = Z_1 \cdot (Z_2 \cdot Z_3)$$가 성립한다. 
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명 (스케치)</summary>
-
-핵심은 정의가 cycle의 rational equivalence class에만 의존한다는 것이다. Quasi-projective variety의 경우 moving lemma([명제 12](#prop12))에 의해 $$Z$$를 rationally equivalent한 $$Z'$$로 이동시켜 $$W$$와 properly intersect하도록 할 수 있으며, 두 이동 $$Z'_1, Z'_2$$가 주어지면 $$Z'_1 - Z'_2 = \divisor(f)$$인 rational function $$f$$가 존재한다. 이때 $$\divisor(f)$$와 $$W$$의 교차가 rational equivalence에서 $$0$$이 됨을 보이면 $$Z'_1 \cdot W = Z'_2 \cdot W$$가 성립한다. 일반적인 scheme의 경우 Fulton의 deformation to normal cone([명제 15](#prop15))을 사용하여 well-definedness를 pushforward-pullback의 호환성으로 환원한다. 교환법칙은 Serre의 Tor formula의 대칭성으로부터, 결합법칙은 세 cycle의 이동이 독립적으로 가능하다는 사실로부터 따른다.
-
-</details>
+그럼 다음 정의는 앞선 글에서부터 예견되었던 것이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**정의 11**</ins> Intersection product에 의해 $$\CH^\ast(X) = \bigoplus_k \CH^k(X)$$는 *graded ring*이 된다. 이를 *Chow ring*이라 부른다.
+<ins id="def7">**정의 7**</ins> Intersection product에 의해 $$\CH^\ast(X) = \bigoplus_k \CH^k(X)$$는 *graded ring*이 된다. 이를 *Chow ring*이라 부른다.
 
 </div>
 
-Chow ring은 ([§선다발과 벡터다발, ⁋정의 9](/ko/math/algebraic_varieties/line_bundles#def9))에서 정의한 Picard group $$\Pic(X) \cong \CH^1(X)$$을 자연스럽게 포함한다. Picard group이 line bundle (즉 codimension 1 cycle)들의 곱셈이 덧셈으로 기록된 group이었다면, Chow ring은 이를 모든 codimension으로 확장하여 곱셈까지 갖춘 구조로 만든 것이다.
 
 ## Moving Lemma
 
