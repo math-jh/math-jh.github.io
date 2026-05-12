@@ -12,9 +12,9 @@ header:
     overlay_filter: 0.5
 
 date: 2026-05-11
-last_modified_at: 2026-05-11
-weight: 20
-published: false
+last_modified_at: 2026-05-12
+weight: 19
+
 ---
 
 [§저우 군](/ko/math/algebraic_varieties/chow_groups)에서 우리는 Chow group $$\CH^\ast(X)$$를 정의하였다. 우리는 해당 글의 말미에서 여기에 intersection product를 정의하여 ring구조를 줄 수 있다고 주장했었는데, 이번 글에서는 이를 정의하고 성질들을 살펴본다. 
@@ -135,7 +135,7 @@ $$Z \cdot W := Z' \cdot W = \sum_{T \subset Z' \cap W} i_T(Z', W) [T]$$
 
 Moving lemma는 두 class가 주어졌을 때, 이를 perturb하여 intersection을 계산한다는 점에서 우리의 직관을 현실화한다. 그러나 이 접근은 quasi-projectivity라는 가정에 의존하며, 이를 일반적인 세팅으로 확장하기 위해서는 *deformation to normal cone*을 해야 한다. 
 
-핵심적인 관찰은 다음과 같다. 우선 [§접공간과 매끄러움, ⁋정의 13](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9)에서 tangent cone을 정의했던 것을 기억하자. 이는 singular point에서의 국소적 구조를 이해하는 도구였으며, 이를 일반화하여 우리는 closed embedding $$i: Y \hookrightarrow X$$에 대해 $$Y$$의 $$X$$ 안에서의 *normal cone* $$C_{Y/X}$$를 정의할 수 있다. 만일 $$X$$가 $$Y$$를 따라 smooth하다면 normal cone은 normal bundle $$N_{Y/X}$$가 되지만, 일반적으로는 cone 구조를 가진다.
+핵심적인 관찰은 다음과 같다. 우선 [§접공간과 매끄러움, ⁋정의 13](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def13)에서 tangent cone을 정의했던 것을 기억하자. 이는 singular point에서의 국소적 구조를 이해하는 도구였으며, 이를 일반화하여 우리는 closed embedding $$i: Y \hookrightarrow X$$에 대해 $$Y$$의 $$X$$ 안에서의 *normal cone* $$C_{Y/X}$$를 정의할 수 있다. 만일 $$X$$가 $$Y$$를 따라 smooth하다면 normal cone은 normal bundle $$N_{Y/X}$$가 되지만, 일반적으로는 cone 구조를 가진다.
 
 <div class="proposition" markdown="1">
 
@@ -150,7 +150,7 @@ Moving lemma는 두 class가 주어졌을 때, 이를 perturb하여 intersection
 
 </details>
 
-이 방법의 아이디어는 $$X$$를 연속적으로 변형하여 $$Y$$의 normal cone으로 수축시키는 것이다. 기하적으로, $$t=1$$에서는 원래 공간 $$X$$를 보고, $$t$$가 $$0$$으로 갈수록 $$X$$가 $$Y$$를 따라 점점 더 "펴지면서" 결국 $$t=0$$에서는 $$Y$$를 따라 벌어진 normal cone이 된다. ([§유리사상, ⁋예시 8](/ko/math/algebraic_varieties/rational_maps#ex8))의 blow-up이 한 점을 $$\mathbb{P}^1$$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
+이 방법의 아이디어는 $$X$$를 연속적으로 변형하여 $$Y$$의 normal cone으로 수축시키는 것이다. 기하적으로, $$t=1$$에서는 원래 공간 $$X$$를 보고, $$t$$가 $$0$$으로 갈수록 $$X$$가 $$Y$$를 따라 점점 더 "펴지면서" 결국 $$t=0$$에서는 $$Y$$를 따라 벌어진 normal cone이 된다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12))의 blow-up이 한 점을 $$\mathbb{P}^1$$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
 
 ## 예시들
 
@@ -158,19 +158,17 @@ Intersection product의 성질을 구체적인 예시들을 통해 확인해 보
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10 ($$\mathbb{P}^n$$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$이다. 여기서 $$H = [\text{hyperplane}] \in \CH^1(\mathbb{P}^n)$$로, $$H^k$$는 $$k$$-codimensional linear subspace의 class와 같다. Degree $$d$$ hypersurface $$V(f)$$에 대해서는 $$[V(f)] = dH$$이다. 이 결과는 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex7))에서 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$임을 이미 보였으므로 자연스러운 것이다. Picard group $$\Pic(\mathbb{P}^n) \cong \CH^1(\mathbb{P}^n) \cong \mathbb{Z}$$에 intersection product를 더하면, $$H \cdot H = H^2$$, $$H \cdot H^2 = H^3$$, ...의 곱셈이 추가되어 Chow ring이 완성된다.
-
-$$H^k$$는 $$k$$-codimensional linear subspace의 class와 같다. Degree $$d$$ hypersurface $$V(f)$$에 대해서는 $$[V(f)] = dH$$이다. 이 결과는 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex7))에서 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$임을 이미 보였으므로 자연스러운 것이다. Picard group $$\Pic(\mathbb{P}^n) \cong \CH^1(\mathbb{P}^n) \cong \mathbb{Z}$$에 intersection product를 더하면, $$H \cdot H = H^2$$, $$H \cdot H^2 = H^3$$, ...의 곱셈이 추가되어 Chow ring이 완성된다.
+<ins id="ex10">**예시 10 ($$\mathbb{P}^n$$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$이다. 여기서 $$H$$는 hyperplane class로, 우리가 이미 계산한 $$\Pic(\mathbb{P}^n) \cong \CH^1(\mathbb{P}^n) \cong \mathbb{Z}$$에 intersection product를 추가하면, $$H \cdot H = H^2$$, $$H \cdot H^2 = H^3$$, ...의 곱셈이 추가되어 Chow ring이 완성된다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11 (Surface)**</ins> Surface $$S$$ 위의 두 curve $$C, D$$에 대해:
+<ins id="ex11">**예시 11 (Surface)**</ins> 앞선 글에서 우리는 surface $$S$$ 위의 두 curve $$C, D$$에 대해:
 
 $$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in \CH^2(S)$$
 
-이다. 일반적인 surface의 경우 $$\CH^2(S)$$의 구조는 단순하지 않다. Zero-cycles modulo rational equivalence는 degree map $$\deg: \CH^2(S) \to \mathbb{Z}$$에 의해 $$\mathbb{Z}$$으로 가는 surjection을 갖지만, 그 kernel은 일반적으로 비자명이다. 가령 $$p_g(S) > 0$$인 surface에서는 Mumford의 정리에 의해 $$\CH^2(S)$$가 "infinite dimensional"이 된다. 따라서 교차 수 $$C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$$는 degree map의 image로서 정수값을 얻지만, $$\CH^2(S)$$ 자체는 $$\mathbb{Z}$$이 아닐 수 있다.
+임을 보았다. 일반적인 surface의 경우 $$\CH^2(S)$$의 구조는 매우 복잡하며, 일반적으로 intersection multiplicity $$C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$$는 degree map의 image로서 정수값을 얻지만, 이것의 kernel이 nontrivial이 아닐 수 있어 $$\CH^2(S)$$가 $$\mathbb{Z}$$이 아닐 수 있다.
 
 그러나 $$\mathbb{P}^2$$에서는 상황이 단순하다. $$\CH^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$$이므로 $$\CH^2(\mathbb{P}^2) \cong \mathbb{Z}$$이고, 교차 수가 완전히 결정된다. Chow ring에서 conic의 class는 $$[X] = 2H$$이고 직선의 class는 $$[L] = H$$이므로, $$[X] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{point}]$$이다.
 
@@ -178,72 +176,40 @@ $$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in \CH^2(S)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12 ($$\mathbb{P}^1 \times \mathbb{P}^1$$)**</ins> ([§유리사상, ⁋예시 11](/ko/math/algebraic_varieties/rational_maps#ex7))에서 $$\mathbb{P}^1 \times \mathbb{P}^1$$과 quadric surface $$Q = V(\x\y - \z\w)$$가 birationally equivalent (실은 isomorphic)임을 보았다. $$\mathbb{P}^1 \times \mathbb{P}^1$$의 Chow ring은
+<ins id="ex12">**예시 12 ($$\mathbb{P}^1 \times \mathbb{P}^1$$)**</ins> 약간 더 복잡한 예시로, 우리는 [§유리사상, ⁋예시 11](/ko/math/algebraic_varieties/rational_maps#ex11)에서 $$\mathbb{P}^1 \times \mathbb{P}^1$$과 quadric surface $$Q = V(\x\y - \z\w)$$가 isomorphic함
+을 보았다. $$\mathbb{P}^1 \times \mathbb{P}^1$$의 Chow ring은
 
 $$\CH^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2, H_2^2)$$
 
-이다. 여기서 $$H_1 = [\mathbb{P}^1 \times \{p\}]$$, $$H_2 = [\{p\} \times \mathbb{P}^1]$$이다. Bidegree $$(a, b)$$의 curve $$C$$에 대해 $$[C] = aH_1 + bH_2$$이며, 따라서 두 curve $$C = aH_1 + bH_2$$, $$C' = a'H_1 + b'H_2$$의 교차 수는
+이며, 여기서 $$H_1 = [\mathbb{P}^1 \times \{p\}]$$, $$H_2 = [\{p\} \times \mathbb{P}^1]$$이다. Bidegree $$(a, b)$$의 curve $$C$$에 대해 $$[C] = aH_1 + bH_2$$이며, 따라서 두 curve $$C = aH_1 + bH_2$$, $$C' = a'H_1 + b'H_2$$의 intersection product는
 
 $$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = ab' H_1 H_2 + a'b H_1 H_2 = (ab' + a'b) H_1 H_2$$
 
-으로 계산된다. $$H_1 H_2 = [\text{point}]$$이므로 교차 수는 $$ab' + a'b$$이다. 이는 곡선의 bidegree로부터 교차 수를 직접 계산할 수 있음을 보여준다.
+으로 계산된다. 
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13 (Segre embedding과 교차)**</ins> ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex8))의 Segre embedding $$\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$$를 생각하자. 이 embedding의 image는 quadric surface $$Q = V(\x_0\x_3 - \x_1\x_2)$$이다. ([§선다발과 벡터다발, ⁋명제 20](/ko/math/algebraic_varieties/line_bundles#prop16))에 의해 pullback $$\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$$은 $$\mathbb{P}^1 \times \mathbb{P}^1$$ 위의 line bundle이며, 실제로 $$\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$$이다. 이는 Chow ring 수준에서도 확인할 수 있다. $$\mathbb{P}^3$$에서 hyperplane class $$H_{\mathbb{P}^3}$$를 pullback하면 $$H_1 + H_2$$를 얻고, 이는 bidegree $$(1,1)$$에 해당한다.
+<ins id="ex13">**예시 13**</ins> Segre embedding $$\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$$를 생각하자. ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 이 embedding의 image는 quadric surface $$Q = V(\x\y - \z\w)$$이다. [§선다발과 벡터다발, ⁋명제 20](/ko/math/algebraic_varieties/line_bundles#prop20)에 의해 pullback $$\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$$은 $$\mathbb{P}^1 \times \mathbb{P}^1$$ 위의 line bundle이며, 실제로 $$\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$$이다. 이는 Chow ring 수준에서도 확인할 수 있는데, $$\mathbb{P}^3$$에서 hyperplane class $$H_{\mathbb{P}^3}$$를 pullback하면 $$H_1 + H_2$$를 얻고, 이는 bidegree $$(1,1)$$에 해당한다.
 
-이를 통해 $$\mathbb{P}^3$$에서의 교차 계산을 $$\mathbb{P}^1 \times \mathbb{P}^1$$으로 옮겨 수행할 수 있다. 가령 $$\mathbb{P}^3$$에서 두 개의 hyperplane section $$H_1 \cap H_2 \cap Q$$의 교차는, $$\mathbb{P}^1 \times \mathbb{P}^1$$에서 $$(H_1 + H_2)^2 = 2H_1 H_2$$로 계산된다. 즉, 두 hyperplane과 quadric surface의 교차는 $$2$$개의 점으로, 이는 $$Q \cong \mathbb{P}^1 \times \mathbb{P}^1$$에서 두 개의 bidegree $$(1,1)$$ curve가 만나는 것과 같다.
-
-</div>
-
-## 선다발과의 교차
-
-<div class="proposition" markdown="1">
-
-<ins id="prop14">**명제 14**</ins> Line bundle $$L$$과 cycle $$Z \in \CH_k(X)$$에 대해 $$c_1(L) \cap Z \in \CH_{k-1}(X)$$가 well-defined되어 있다. 여기서 **first Chern class** $$c_1(L) \in \CH^1(X)$$는 line bundle $$L$$에 대응하는 divisor class이며, $$L$$이 Cartier divisor $$D$$에 의해 주어지면 $$c_1(L) = [D] \in \CH^1(X)$$이다. 이 대응은 ([§인자](/ko/math/algebraic_varieties/divisors))와 ([§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles))에서 다룬 Cartier divisor와 line bundle 사이의 동치관계에 근거한다. 구체적으로 $$L = \mathcal{O}(D)$$, $$D = \sum n_i V_i$$일 때 $$D$$와 $$Z$$가 properly intersect하면 $$c_1(L) \cap Z = \sum n_i \cdot (V_i \cdot Z)$$로 정의되며, proper intersection이 아닌 경우 moving lemma나 deformation to normal cone을 사용한다.
+이를 통해 $$\mathbb{P}^3$$에서의 교차 계산을 $$\mathbb{P}^1 \times \mathbb{P}^1$$으로 옮겨 수행할 수 있다. 가령 $$\mathbb{P}^3$$에서 두 hyperplane $$H, H'$$ 각각과 quadric surface $$Q$$의 교차, 즉 $$(H \cap Q)$$와 $$(H' \cap Q)$$의 교차는 $$\mathbb{P}^1 \times \mathbb{P}^1$$에서 $$(H_1 + H_2)^2 = 2H_1 H_2$$로 계산된다. 즉, 두 hyperplane과 quadric surface의 교차는 $$2$$개의 점으로, 이는 $$Q \cong \mathbb{P}^1 \times \mathbb{P}^1$$에서 두 개의 bidegree $$(1,1)$$ curve가 만나는 것과 같다.
 
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명 (스케치)</summary>
-
-Well-definedness의 핵심은 $$c_1(L) \cap Z$$가 $$L$$의 rational section의 선택에 의존하지 않는다는 것이다. $$L$$의 두 rational section $$s_1, s_2$$를 생각하면 $$\divisor(s_1) - \divisor(s_2) = \divisor(s_1/s_2)$$이고, $$s_1/s_2 \in \mathbb{K}(X)^\ast$$는 rational function이다. 따라서 $$[\divisor(s_1)] - [\divisor(s_2)] = 0 \in \CH^1(X)$$이며, 이는 $$c_1(L)$$가 divisor의 선택과 무관함을 보인다. Cap product의 호환성, 즉 $$c_1(L_1 \otimes L_2) = c_1(L_1) + c_1(L_2)$$는 tensor product에 대응하는 divisor의 덧셈으로부터 바로 따른다.
-
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop15">**명제 15**</ins> $$L = \mathcal{O}(D)$$이면:
-
-$$c_1(L) \cap [X] = [D] \in \CH^1(X)$$
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-$$c_1(L)$$의 정의에 의해, $$L = \mathcal{O}(D)$$에 대해 $$c_1(L) = [D] \in \CH^1(X)$$이다. 기본 class $$[X] \in \CH^0(X)$$에 대한 cap product $$c_1(L) \cap [X]$$는 intersection product $$[D] \cdot [X]$$와 같다. $$[X] \in \CH^0(X)$$가 항등원이므로 $$[D] \cdot [X] = [D]$$이다.
-
-</details>
 
 ## 사상 공식
 
+마지막으로 유용한 다음의 공식을 소개하며 이 글을 마친다.
+
 <div class="proposition" markdown="1">
 
-<ins id="prop16">**명제 16 (Projection Formula)**</ins> Proper morphism $$f: X \to Y$$와 $$\alpha \in \CH^\ast(X)$$, $$\beta \in \CH^\ast(Y)$$에 대해 $$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$가 성립한다.
+<ins id="prop14">**명제 14 (Projection Formula)**</ins> Proper morphism $$f: X \to Y$$와 $$\alpha \in \CH^\ast(X)$$, $$\beta \in \CH^\ast(Y)$$에 대해 
+
+$$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$
+
+가 성립한다.
 
 </div>
-
-<details class="proof" markdown="1">
-<summary>증명 (스케치)</summary>
-
-먼저 $$f$$가 flat인 경우를 생각하자. 이 경우 flat pullback $$f^\ast$$는 cycle level에서 $$f^\ast[W] = [f^{-1}(W)]$$로 정의되므로, $$\alpha = [V]$$, $$\beta = [W]$$에 대해 $$[V] \cdot f^\ast[W] = [V] \cap [f^{-1}(W)]$$이다. 한편 $$f_\ast(\alpha) \cdot \beta = [f(V)] \cdot [W]$$이며, $$f|_{V \cap f^{-1}(W)}: V \cap f^{-1}(W) \to f(V) \cap W$$가 proper surjective이므로 pushforward가 교차를 보존한다.
-
-일반적인 morphism $$f$$의 경우, pullback $$f^\ast$$는 moving lemma나 deformation to normal cone을 통해 정의된다. 핵심은 intersection product가 rational equivalence와 호환된다는 것이다. $$\alpha = [V]$$를 $$V' \sim_{\text{rat}} V$$로 이동시켜 $$V'$$가 $$f^{-1}(W)$$와 properly intersect하도록 만들면, $$[V'] \cdot [f^{-1}(W)]$$와 $$[f(V')] \cdot [W]$$ 사이의 관계를 pushforward-pullback의 호환성으로 추적할 수 있다. Proper map 하에서의 degree 보존과 rational equivalence의 호환성으로부터 양변이 같음이 따른다.
-
-</details>
 
 
 ---
