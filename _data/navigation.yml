@@ -50,9 +50,9 @@ algebraic_varieties-ko:
         url: ko/math/algebraic_varieties/chow_groups
       - title: "교차곱"
         url: ko/math/algebraic_varieties/intersection_product
-      - title: "Bézout's Theorem"
+      - title: "베주 정리"
         url: ko/math/algebraic_varieties/bezout_theorem
-      - title: "Chern Classes"
+      - title: "천 특성류"
         url: ko/math/algebraic_varieties/chern_classes
       - title: "Todd Class"
         url: ko/math/algebraic_varieties/todd_class
