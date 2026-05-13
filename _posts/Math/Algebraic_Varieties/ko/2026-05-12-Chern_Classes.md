@@ -148,8 +148,8 @@ $$\chern(\mathcal{E}) = \sum_{i=1}^r e^{x_i} = r + c_1(\mathcal{E}) + \frac{c_1(
 
 <ins id="prop8">**명제 8**</ins> Chern character는 다음의 성질을 만족한다.
 
-1. $$\chern(\mathcal{E} \oplus \mathcal{F}) = \chern(\mathcal{E}) + \chern(\mathcal{F})$$
-2. $$\chern(\mathcal{E} \otimes \mathcal{F}) = \chern(\mathcal{E}) \cup \chern(\mathcal{F})$$
+1. $$\chern(\mathcal{E} \oplus \mathcal{F}) = \chern(\mathcal{E}) + \chern(\mathcal{F})$$,
+2. $$\chern(\mathcal{E} \otimes \mathcal{F}) = \chern(\mathcal{E}) \cup \chern(\mathcal{F})$$.
 
 즉, Chern character는 vector bundle들의 direct sum을 cohomology의 덧셈으로, tensor product를 cup product로 본다.
 
