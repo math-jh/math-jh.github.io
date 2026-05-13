@@ -448,6 +448,14 @@ Lie_theory-ko:
         url: ko/math/lie_theory/torus_action
       - title: "근계"
         url: ko/math/lie_theory/root_systems
+      - title: "Borel subgroup과 flag variety"
+        url: ko/math/lie_theory/borel_subgroup
+      - title: "Bruhat decomposition과 parabolic subgroup"
+        url: ko/math/lie_theory/bruhat_decomposition
+      - title: "Richardson variety"
+        url: ko/math/lie_theory/richardson_variety
+      - title: "Peterson variety"
+        url: ko/math/lie_theory/peterson_variety
   - title: 
     children:
       - title: "블로그 소개"
@@ -778,6 +786,8 @@ toric_geometry-ko:
     children:
       - title: "아핀 토릭 다양체"
         url: ko/math/toric_geometry/affine_toric_varieties
+      - title: "Normal fan과 projective toric variety"
+        url: ko/math/toric_geometry/normal_fan_projective_toric
   - title: 
     children:
       - title: "블로그 소개"
