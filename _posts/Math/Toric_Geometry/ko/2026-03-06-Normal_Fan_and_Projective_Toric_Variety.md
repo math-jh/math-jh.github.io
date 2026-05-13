@@ -15,6 +15,7 @@ sidebar:
 date: 2026-03-06
 last_modified_at: 2026-03-06
 weight: 2
+published: false
 ---
 
 [§아핀 토릭 다양체, ⁋정의 5](/ko/math/toric_geometry/affine_toric_varieties#def5)에서 정의한 affine toric variety는 하나의 strongly convex rational polyhedral cone $\tau$에 대응하는 대수다양체 $U_\tau$이다. 그러나 $\tau$가 원점 $\{0\}$인 경우에만 $U_\tau$는 algebraic torus $T_N$과 같으며, 일반적인 cone에 대해서는 $U_\tau$는 적절한 방향으로 열린 부분공간의 형태를 띤다. 우리는 이러한 affine toric variety들을 여러 개 모아서 이어붙이는 방법을 찾고자 하며, 이를 통해 compact한 toric variety를 얻는 것이 이 글의 목표이다.

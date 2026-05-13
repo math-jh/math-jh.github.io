@@ -15,6 +15,7 @@ sidebar:
 date: 2026-03-07
 last_modified_at: 2026-03-07
 weight: 3
+published: false
 ---
 
 [§Normal fan과 projective toric variety](/ko/math/toric_geometry/normal_fan_projective_toric)에서 우리는 lattice polytope $$P \subset M_{\mathbb{R}}$$의 normal fan $$\Sigma_P$$을 통해 projective toric variety $$X_P$$를 구성하는 방법을 살펴 보았다. 이 구성에서 $$P$$의 기하학적 성질이 $$X_P$$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. Reflexive polytope는 1994년 Batyrev에 의해 도입되어 toric Fano variety의 분류와 mirror symmetry의 조합론적 기반을 제공하는 핵심적인 도구가 되었다. 우리는 이 글에서 reflexive polytope의 정의와 이것이 Gorenstein Fano variety 및 anticanonical divisor와 어떻게 대응하는지를 살펴 본다.
@@ -27,7 +28,7 @@ weight: 3
 
 <ins id="def1">**정의 1**</ins> $$M_{\mathbb{R}}$$의 $$d$$차원 *lattice polytope* $$\Delta$$가 다음 두 조건을 만족할 때, 이를 *reflexive polytope<sub>반사 다면체</sub>*라 부른다:
 
-1. 원점 $$0$$이 $$\Delta$$의 남집합에 포함된다: $$0 \in \operatorname{int}(\Delta)$$.
+1. 원점 $$0$$이 $$\Delta$$의 낮부에 포함된다: $$0 \in \operatorname{int}(\Delta)$$.
 2. $$\Delta$$의 *dual polytope*<sub>쌍대 다면체</sub>
 
 $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{ for all } u \in \Delta \}$$
@@ -36,7 +37,7 @@ $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{
 
 </div>
 
-Dual polytope의 정의에서 부등호 $$\langle u, v \rangle \ge -1$$는 원점이 $$\Delta$$의 남집합에 있을 때 $$\Delta^\circ$$가 bounded set이 됨을 보장한다. 만약 $$0$$이 $$\Delta$$의 boundary 위에 놓인다면 $$\Delta^\circ$$는 unbounded하게 되어 polytope가 아니게 된다. 따라서 reflexive polytope를 논의할 때 $$0 \in \operatorname{int}(\Delta)$$라는 조건은 필수적이다.
+Dual polytope의 정의에서 부등호 $$\langle u, v \rangle \ge -1$$는 원점이 $$\Delta$$의 낮부에 있을 때 $$\Delta^\circ$$가 bounded set이 됨을 보장한다. 만약 $$0$$이 $$\Delta$$의 boundary 위에 놓인다면 $$\Delta^\circ$$는 unbounded하게 되어 polytope가 아니게 된다. 따라서 reflexive polytope를 논의할 때 $$0 \in \operatorname{int}(\Delta)$$라는 조건은 필수적이다.
 
 Reflexive polytope의 가장 기본적인 성질은 dual 연산 $$\Delta \mapsto \Delta^\circ$$이 reflexive polytope들의 모임 위에서 초대합(involution)을 이룬다는 것이다.
 
@@ -125,29 +126,33 @@ $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ 
 
 ## 예시: Projective space
 
-가장 기본적인 reflexive polytope의 예시는 projective space $$\mathbb{P}^n$$에 대응하는 simplex이다. [§Normal fan과 projective toric variety, ⁋예시 11](/ko/math/toric_geometry/normal_fan_projective_toric#ex11)에서 standard simplex $$\Delta_n$$의 normal fan이 $$\mathbb{P}^n$$의 표준 fan임을 보았다. 그러나 $$\Delta_n$$의 꼭짓점 중 하나가 원점이므로 $$0 \notin \operatorname{int}(\Delta_n)$$이다. 따라서 $$\Delta_n$$ 자체는 reflexive polytope가 아니다. 대신, 적절한 affine transformation을 통해 원점을 내부로 옮긴 polytope를 생각할 수 있다.
+가장 기본적인 reflexive polytope의 예시는 projective space $$\mathbb{P}^n$$에 대응하는 simplex이다. [§Normal fan과 projective toric variety, ⁋예시 11](/ko/math/toric_geometry/normal_fan_projective_toric#ex11)에서 standard simplex $$\Delta_n$$의 normal fan이 $$\mathbb{P}^n$$의 표준 fan임을 보았다. 그러나 $$\Delta_n$$의 꼭짓점 중 하나가 원점이므로 $$0 \notin \operatorname{int}(\Delta_n)$$이다. 따라서 $$\Delta_n$$ 자체는 reflexive polytope가 아니다. 대신, 적절한 변형을 통해 원점을 내부로 옮긴 polytope를 생각할 수 있다.
 
 <div class="example" markdown="1">
 
 <ins id="ex6">**예시 6**</ins> Lattice $$M = \mathbb{Z}^n$$에서 다음의 polytope를 정의한다:
 
-$$\Delta = \operatorname{conv}\{ e_1, e_2, \ldots, e_n, -(e_1 + e_2 + \cdots + e_n) \}.$$
+$$\Delta = \{ (x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge -1 \text{ for all } i, \; x_1 + x_2 + \cdots + x_n \le 1 \}.$$
 
-이 polytope는 원점 $$0$$을 내부에 포함하며, 각 facet은 원점으로부터 lattice distance $$1$$을 갖는다. 예를 들어 $$e_1, \ldots, e_n$$을 포함하는 facet은 방정식 $$x_1 + x_2 + \cdots + x_n = 1$$으로 주어지며, 이를 $$\langle u, e_1 + \cdots + e_n \rangle = 1$$의 형태로 쓰면 해당 normal vector는 $$v = e_1 + \cdots + e_n \in N$$이 된다. 나머지 facet들은 각각 $$x_i = -1$$의 형태로, 이에 대응하는 normal vector는 $$-e_i \in N$$이다. 따라서 $$\Delta$$의 dual polytope는
+이 polytope는 standard simplex를 원점 방향으로 확장한 형태이며, 그 꼭짓점은 $$(-1, -1, \ldots, -1)$$과 $$(n, -1, \ldots, -1), \ldots, (-1, \ldots, -1, n)$$이다. 각 facet은 방정식 $$x_i = -1$$ 또는 $$x_1 + \cdots + x_n = 1$$으로 주어지며, 이들에 대응하는 primitive inner normal vector는 각각 $$-e_i \in N$$과 $$e_1 + \cdots + e_n \in N$$이다. 따라서 $$\Delta$$의 dual polytope는
 
-$$\Delta^\circ = \operatorname{conv}\{ e_1, e_2, \ldots, e_n, -(e_1 + e_2 + \cdots + e_n) \}$$
+$$\Delta^\circ = \operatorname{conv}\{ -e_1, -e_2, \ldots, -e_n, e_1 + e_2 + \cdots + e_n \}$$
 
-가 되어 다시 lattice polytope가 된다. 즉 $$\Delta$$는 reflexive polytope이다. $$\Delta$$의 normal fan은 $$\mathbb{P}^n$$의 표준 fan과 동일하므로 $$X_\Delta \cong \mathbb{P}^n$$이 성립한다. 한편 $$\Delta$$의 lattice points는 $$n+1$$개의 꼭짓점과 원점 $$0$$을 포함하여 총 $$n+2$$개이며, 이는 $$h^0(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(n+1)) = \binom{2n+1}{n}$$? ... 아니다, 실제로 $$\mathbb{P}^n$$의 anticanonical divisor는 $$\mathcal{O}_{\mathbb{P}^n}(n+1)$$이고 $$h^0(\mathbb{P}^n, \mathcal{O}(n+1)) = \binom{2n+1}{n}$$인데, 이는 $$n=2$$일 때 $$h^0(\mathbb{P}^2, \mathcal{O}(3)) = 10$$이고 $$\Delta \cap M$$은 원점 포함 4개... 
+가 되어 다시 lattice polytope가 된다. 즉 $$\Delta$$는 reflexive polytope이다. 한편 $$\Delta$$의 normal fan은 [§Normal fan과 projective toric variety, ⁋예시 11](/ko/math/toric_geometry/normal_fan_projective_toric#ex11)에서 확인한 $$\mathbb{P}^n$$의 표준 fan과 일치하므로 $$X_\Delta \cong \mathbb{P}^n$$이 성립한다.
 
-사실 $$\mathbb{P}^n$$의 toric variety로서의 anticanonical divisor는 boundary divisor $$D_0 + D_1 + \cdots + D_n$$의 합이고, 이에 대응하는 선다발은 $$\mathcal{O}_{\mathbb{P}^n}(n+1)$$이다. 그러나 [§Normal fan과 projective toric variety, ⁋예시 11](/ko/math/toric_geometry/normal_fan_projective_toric#ex11)에서 standard simplex $$\Delta_n$$의 lattice points는 $$0, e_1, \ldots, e_n$$이었다. 지금의 $$\Delta$$는 그것을 평행이동한 것이므로 lattice points의 개수는 동일하게 $$n+1$$개이다. 그런데 $$\Delta$$가 reflexive이므로 원점 $$0$$이 내부에 있어 $$\Delta \cap M$$에는 $$0$$도 포함되어 총 $$n+2$$개가 되어야 하는데, 실제로 $$n=2$$일 때 $$\Delta = \operatorname{conv}\{(1,0), (0,1), (-1,-1)\}$$의 내부 lattice point는 $$0$$뿐이고 꼭짓점 외의 boundary lattice point는 없으므로 $$|\Delta \cap M| = 4$$가 맞다.
+이 예시에서 $$\Delta$$의 lattice points는 꼭짓점 외에도 boundary와 낮부 위에 여러 lattice point들이 존재할 수 있다. 예를 들어 $$n=2$$일 때 $$\Delta = \operatorname{conv}\{(-1,-1), (2,-1), (-1,2)\}$$의 lattice points는
+
+$$(-1,-1), (-1,0), (-1,1), (-1,2), (0,-1), (0,0), (0,1), (1,-1), (1,0), (2,-1)$$
+
+으로 총 $$10$$개이며, 이는 $$h^0(\mathbb{P}^2, \mathcal{O}_{\mathbb{P}^2}(3)) = 10$$과 일치함을 확인할 수 있다.
 
 </div>
 
-위의 예시에서 주목할 점은 $$\Delta$$와 $$\Delta^\circ$$가 동일한 형태를 가질 수도 있지만, 일반적으로는 서로 다른 combinatorial type을 가진다는 것이다. $$n=2$$인 경우 $$\Delta = \operatorname{conv}\{(1,0), (0,1), (-1,-1)\}$$의 dual은 $$\Delta^\circ = \operatorname{conv}\{(-1,-1), (2,-1), (-1,2)\}$$가 되어 서로 다른 모양을 가진다. 그러나 이들이 정의하는 toric variety는 모두 $$\mathbb{P}^2$$이거나 그 quotient 형태가 된다.
+위의 예시에서 주목할 점은 $$\Delta$$와 $$\Delta^\circ$$가 동일한 combinatorial type을 가질 수도 있지만, 일반적으로는 서로 다른 모양을 가진다는 것이다. $$n=2$$인 경우 $$\Delta^\circ = \operatorname{conv}\{(-1,0), (0,-1), (1,1)\}$$이 되어 $$\Delta$$와 다른 모양을 가진다. 그러나 이들이 정의하는 toric variety는 모두 $$\mathbb{P}^2$$에 해당한다.
 
 ## Mirror symmetry와 Batyrev construction
 
-Reflexive polytope가 대수기하학에서 특별한 관심을 받는 이유는 이겨 mirror symmetry와 깊이 연결되어 있기 때문이다. 1994년 Batyrev는 reflexive polytope $$\Delta$$와 그 dual $$\Delta^\circ$$를 이용하여 Calabi-Yau variety들의 mirror pair를 조합론적으로 구성하는 방법을 제시하였다.
+Reflexive polytope가 대수기하학에서 특별한 관심을 받는 이유는 이것이 mirror symmetry와 깊이 연결되어 있기 때문이다. 1994년 Batyrev는 reflexive polytope $$\Delta$$와 그 dual $$\Delta^\circ$$를 이용하여 Calabi-Yau variety들의 mirror pair를 조합론적으로 구성하는 방법을 제시하였다.
 
 구체적으로, reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$에 대해 $$\Delta^\circ \subset N_{\mathbb{R}}$$도 reflexive이다. $$\Delta$$의 normal fan $$\Sigma_\Delta$$에 대응하는 toric variety $$X_\Delta$$는 Gorenstein Fano variety이며, $$\Delta^\circ$$의 normal fan에 대응하는 toric variety $$X_{\Delta^\circ}$$도 마찬가지이다. 이때 $$\Delta$$에 내재된 정보로부터 $$X_\Delta$$ 위의 anticanonical divisor의 일반적인 단면 $$Y_\Delta$$를 정의할 수 있고, 이는 적절한 crepant resolution을 거친 후 Calabi-Yau variety가 된다. 마찬가지로 $$\Delta^\circ$$로부터 $$X_{\Delta^\circ}$$ 위의 Calabi-Yau variety $$Y_{\Delta^\circ}$$를 얻는다. Batyrev는 이 두 Calabi-Yau variety $$Y_\Delta$$와 $$Y_{\Delta^\circ}$$가 mirror symmetry의 관계에 놓여 있음을 제안하였다.
 
