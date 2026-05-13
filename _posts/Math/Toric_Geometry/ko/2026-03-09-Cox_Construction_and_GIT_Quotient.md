@@ -8,6 +8,7 @@ header: { overlay_image: /assets/images/Math/Toric_Geometry/cox_construction.png
 date: 2026-03-09
 last_modified_at: 2026-03-09
 weight: 5
+published: false
 ---
 
 Projective space $$\mathbb{P}^n$$은 homogeneous coordinate를 통해
