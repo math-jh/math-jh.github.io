@@ -147,7 +147,7 @@ $$P_D = \{u \in M_\mathbb{R} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ f
 
 </details>
 
-이 명제는 toric variety의 기하학적 성질이 fan의 조합론적 성질로 완전히 기술됨을 보여주는 대표적인 결과이다. 특히, complete fan $$\Sigma$$에 대해 $$X_\Sigma$$가 projective인 것은 $$\Sigma$$가 normal fan인 것과 필요충분조건이다.
+이 명제는 toric variety의 기하학적 성질이 fan의 조합론적 성질로 완전히 기술됨을 보여주는 대표적인 결과이다. 특히, normal fan으로 정의되는 toric variety는 항상 projective이며, projective toric variety의 fan은 항상 어떤 lattice polytope의 normal fan이다.
 
 ## Toric embedding
 
@@ -182,7 +182,7 @@ $$P$$가 very ample lattice polytope일 때, 각 vertex $$v$$에 대응하는 af
 
 $$\Delta_n = \{(x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge 0,\; x_1 + \cdots + x_n \le 1\}.$$
 
-이 polytope의 꼭짓점은 $$0, e_1, \ldots, e_n$$이며, 각 facet은 좌표 초평면들과 $$x_1 + \cdots + x_n = 1$$으로 주어진다. 각 facet의 primitive inner normal vector는 각각 $$-e_1, \ldots, -e_n$$과 $$e_1 + \cdots + e_n$$이다. 따라서 normal fan $$\Sigma_{\Delta_n}$$은 원점을 중심으로 하는 $$n+1$$개의 반직선들로 생성되는 cone들의 모임이 되며, 이는 $$\mathbb{P}^n$$의 표준 fan과 일치한다. 따라서
+이 polytope의 꼭짓점은 $$0, e_1, \ldots, e_n$$이며, 각 facet은 좌표 초평면들과 $$x_1 + \cdots + x_n = 1$$으로 주어진다. 각 facet의 primitive inner normal vector는 각각 $$e_1, \ldots, e_n$$과 $$-e_1 - \cdots - e_n$$이다. 따라서 normal fan $$\Sigma_{\Delta_n}$$은 원점을 중심으로 하는 $$n+1$$개의 반직선들로 생성되는 cone들의 모임이 되며, 이는 $$\mathbb{P}^n$$의 표준 fan과 일치한다. 따라서
 
 $$X_{\Delta_n} \cong \mathbb{P}^n$$
 

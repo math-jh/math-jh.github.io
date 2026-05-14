@@ -50,7 +50,7 @@ Reflexive polytope의 가장 기본적인 성질은 dual 연산 $$\Delta \mapsto
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\Delta$$가 reflexive이므로 $$\Delta^\circ$$는 정의에 의해 lattice polytope이다. $$\Delta$$의 모든 원소 $$u$$에 대해 $$\langle u, v \rangle \ge -1$$이 모든 $$v \in \Delta^\circ$$에서 성립하므로, $$\Delta \subseteq (\Delta^\circ)^\circ$$가 자명하다. 반대로 $$w \in (\Delta^\circ)^\circ$$라 하면, $$w$$는 모든 $$v \in \Delta^\circ$$에 대해 $$\langle w, v \rangle \ge -1$$을 만족한다. 이것이 $$w \in \Delta$$를 함의함을 보이기 위해, $$\Delta$$의 각 facet $$\Theta$$를 생각한다. $$\Theta$$는 $$\Delta$$의 boundary 위의 $$(d-1)$$차원 면이며, reflexive polytope의 정의에 의해 $$\Theta$$는 방정식 $$\langle u, v_\Theta \rangle = -1$$으로 주어진다. 여기서 $$v_\Theta \in N$$은 $$\Theta$$에 대응하는 primitive inner normal vector이다. 그런데 $$v_\Theta \in \Delta^\circ$$의 꼭짓점이 되므로, $$\langle w, v_\Theta \rangle \ge -1$$이 성립한다. 이는 $$w$$가 $$\Delta$$의 모든 facet을 정의하는 반평면들의 교집합에 포함됨을 의미하며, 따라서 $$w \in \Delta$$이다. 이로부터 $$(\Delta^\circ)^\circ = \Delta$$를 얻는다. 마지막으로 $$(\Delta^\circ)^\circ = \Delta$$가 lattice polytope이므로 $$\Delta^\circ$$도 reflexive이다.
+$$\Delta$$가 reflexive이므로 $$\Delta^\circ$$는 정의에 의해 lattice polytope이다. $$\Delta$$의 모든 원소 $$u$$에 대해 $$\langle u, v \rangle \ge -1$$이 모든 $$v \in \Delta^\circ$$에서 성립하므로, $$\Delta \subseteq (\Delta^\circ)^\circ$$는 정의로부터 직접 확인할 수 있다. 반대로 $$w \in (\Delta^\circ)^\circ$$라 하면, $$w$$는 모든 $$v \in \Delta^\circ$$에 대해 $$\langle w, v \rangle \ge -1$$을 만족한다. 이것이 $$w \in \Delta$$를 함의함을 보이기 위해, $$\Delta$$의 각 facet $$\Theta$$를 생각한다. $$\Theta$$는 $$\Delta$$의 boundary 위의 $$(d-1)$$차원 면이며, reflexive polytope의 정의에 의해 $$\Theta$$는 방정식 $$\langle u, v_\Theta \rangle = -1$$으로 주어진다. 여기서 $$v_\Theta \in N$$은 $$\Theta$$에 대응하는 primitive inner normal vector이다. 그런데 $$v_\Theta \in \Delta^\circ$$의 꼭짓점이 되므로, $$\langle w, v_\Theta \rangle \ge -1$$이 성립한다. 이는 $$w$$가 $$\Delta$$의 모든 facet을 정의하는 반평면들의 교집합에 포함됨을 의미하며, 따라서 $$w \in \Delta$$이다. 이로부터 $$(\Delta^\circ)^\circ = \Delta$$를 얻는다. 마지막으로 $$(\Delta^\circ)^\circ = \Delta$$가 lattice polytope이므로 $$\Delta^\circ$$도 reflexive이다.
 
 </details>
 
@@ -72,7 +72,7 @@ $$-K_{X_\Sigma} = \sum_{\rho \in \Sigma(1)} D_\rho$$
 
 </div>
 
-Toric variety에서 divisor가 Cartier이기 위해서는 각 maximal cone $$\sigma \in \Sigma$$에 대해 lattice point $$m_\sigma \in M$$이 존재하여, 해당 divisor의 support function이 $$\sigma$$ 위에서 $$u \mapsto \langle m_\sigma, u \rangle$$의 형태로 주어져야 한다. Anticanonical divisor $$-K_{X_\Sigma}$$에 대응하는 support function $$\psi_{-K}$$는 각 ray generator $$v_\rho$$에 대해 $$\psi_{-K}(v_\rho) = -1$$의 값을 갖는 piecewise linear function이다. 따라서 $$-K_{X_\Sigma}$$가 Cartier인 것은 각 maximal cone $$\sigma$$에 대해 $$m_\sigma \in M$$이 존재하여 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$인 것과 동치이다. 이 조건이 reflexive polytope의 dual $$\Delta^\circ$$의 꼭짓점 조건과 정확히 일치함을 확인할 수 있다.
+Toric variety에서 divisor $$D=\sum a_\rho D_\rho$$에 대응하는 **support function** $$\psi_D$$는 각 ray generator $$v_\rho$$에서 $$\psi_D(v_\rho)=-a_\rho$$의 값을 가지는 함수이다. divisor가 Cartier이기 위해서는 각 maximal cone $$\sigma \in \Sigma$$에 대해 lattice point $$m_\sigma \in M$$이 존재하여, 이 support function이 $$\sigma$$ 위에서 $$u \mapsto \langle m_\sigma, u \rangle$$의 형태로 주어져야 한다. Anticanonical divisor $$-K_{X_\Sigma}$$에 대응하는 support function $$\psi_{-K}$$는 각 ray generator $$v_\rho$$에 대해 $$\psi_{-K}(v_\rho) = -1$$의 값을 갖는 piecewise linear function이다. 따라서 $$-K_{X_\Sigma}$$가 Cartier인 것은 각 maximal cone $$\sigma$$에 대해 $$m_\sigma \in M$$이 존재하여 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$인 것과 동치이다. 이 조건이 reflexive polytope의 dual $$\Delta^\circ$$의 꼭짓점 조건과 정확히 일치함을 확인할 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -83,7 +83,7 @@ Toric variety에서 divisor가 Cartier이기 위해서는 각 maximal cone $$\si
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\Delta$$가 reflexive polytope라고 하자. $$\Sigma_\Delta$$의 각 maximal cone $$\sigma$$에 대해, $$\sigma$$는 $$\Delta$$의 어떤 꼭짓점 $$u_\sigma$$에 대응하며, 이 대응은 normal fan의 정의에 의해 다음 성질을 갖는다: $$\sigma$$의 ray generator $$v_\rho$$들은 $$\langle u_\sigma, v_\rho \rangle \ge \langle u, v_\rho \rangle$$ for all $$u \in \Delta$$를 만족한다. 특히 $$\Delta$$의 facet 방정식이 $$\langle u, v_\Theta \rangle = -1$$의 형태이므로, $$\sigma$$의 각 ray generator $$v_\rho$$에 대해 $$\langle u_\sigma, v_\rho \rangle = -1$$이 성립한다. 따라서 $$m_\sigma = -u_\sigma \in M$$을 선택하면 $$\langle m_\sigma, v_\rho \rangle = 1$$ for all $$\rho \in \sigma(1)$$이 되며, 이는 $$-K_{X_\Delta}$$가 Cartier임을 의미한다. 한편 $$-K_{X_\Delta}$$의 ample성은 $$\psi_{-K}(v_\rho) = -1$$인 support function이 strictly convex함으로부터 얻어진다. 이는 $$\Sigma_\Delta$$가 projective fan임을 보장하며, $$-K_{X_\Delta}$$가 ample divisor임을 의미한다.
+$$\Delta$$가 reflexive polytope라고 하자. $$\Sigma_\Delta$$의 각 maximal cone $$\sigma$$에 대해, $$\sigma$$는 $$\Delta$$의 어떤 꼭짓점 $$u_\sigma$$에 대응하며, 이 대응은 normal fan의 정의에 의해 다음 성질을 갖는다: $$\sigma$$의 ray generator $$v_\rho$$들은 $$\langle u_\sigma, v_\rho \rangle \ge \langle u, v_\rho \rangle$$ for all $$u \in \Delta$$를 만족한다. 특히 $$\Delta$$의 facet 방정식이 $$\langle u, v_\Theta \rangle = -1$$의 형태이므로, $$\sigma$$의 각 ray generator $$v_\rho$$에 대해 $$\langle u_\sigma, v_\rho \rangle = -1$$이 성립한다. 따라서 $$m_\sigma = u_\sigma \in M$$을 선택하면 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$이 되며, 이는 $$-K_{X_\Delta}$$가 Cartier임을 의미한다. 한편 $$-K_{X_\Delta}$$의 ample성은 $$\psi_{-K}(v_\rho) = -1$$인 support function이 strictly convex함으로부터 얻어진다. **strictly convex**한 support function은 서로 다른 maximal cone 위에서 서로 다른 선형 함수를 가지며, 이에 대응하는 divisor가 ample이다. 이는 $$\Sigma_\Delta$$가 projective fan임을 보장하며, $$-K_{X_\Delta}$$가 ample divisor임을 의미한다.
 
 반대로 $$X_\Sigma$$가 Gorenstein Fano라고 가정하자. $$-K_{X_\Sigma}$$가 Cartier이므로 각 maximal cone $$\sigma$$에 대해 $$m_\sigma \in M$$이 존재하여 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$이다. 이제
 
@@ -134,9 +134,9 @@ $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ 
 
 $$\Delta = \{ (x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge -1 \text{ for all } i, \; x_1 + x_2 + \cdots + x_n \le 1 \}.$$
 
-이 polytope는 standard simplex를 원점 방향으로 확장한 형태이며, 그 꼭짓점은 $$(-1, -1, \ldots, -1)$$과 $$(n, -1, \ldots, -1), \ldots, (-1, \ldots, -1, n)$$이다. 각 facet은 방정식 $$x_i = -1$$ 또는 $$x_1 + \cdots + x_n = 1$$으로 주어지며, 이들에 대응하는 primitive inner normal vector는 각각 $$-e_i \in N$$과 $$e_1 + \cdots + e_n \in N$$이다. 따라서 $$\Delta$$의 dual polytope는
+이 polytope는 standard simplex를 원점 방향으로 확장한 형태이며, 그 꼭짓점은 $$(-1, -1, \ldots, -1)$$과 $$(n, -1, \ldots, -1), \ldots, (-1, \ldots, -1, n)$$이다. 각 facet은 방정식 $$x_i = -1$$ 또는 $$x_1 + \cdots + x_n = 1$$으로 주어지며, 이들에 대응하는 primitive inner normal vector는 각각 $$e_i \in N$$과 $$-(e_1 + \cdots + e_n) \in N$$이다. 따라서 $$\Delta$$의 dual polytope는
 
-$$\Delta^\circ = \operatorname{conv}\{ -e_1, -e_2, \ldots, -e_n, e_1 + e_2 + \cdots + e_n \}$$
+$$\Delta^\circ = \operatorname{conv}\{ e_1, e_2, \ldots, e_n, -(e_1 + e_2 + \cdots + e_n) \}$$
 
 가 되어 다시 lattice polytope가 된다. 즉 $$\Delta$$는 reflexive polytope이다. 한편 $$\Delta$$의 normal fan은 [§Normal fan과 projective toric variety, ⁋예시 11](/ko/math/toric_geometry/normal_fan_projective_toric#ex11)에서 확인한 $$\mathbb{P}^n$$의 표준 fan과 일치하므로 $$X_\Delta \cong \mathbb{P}^n$$이 성립한다.
 
@@ -148,19 +148,19 @@ $$(-1,-1), (-1,0), (-1,1), (-1,2), (0,-1), (0,0), (0,1), (1,-1), (1,0), (2,-1)$$
 
 </div>
 
-위의 예시에서 주목할 점은 $$\Delta$$와 $$\Delta^\circ$$가 동일한 combinatorial type을 가질 수도 있지만, 일반적으로는 서로 다른 모양을 가진다는 것이다. $$n=2$$인 경우 $$\Delta^\circ = \operatorname{conv}\{(-1,0), (0,-1), (1,1)\}$$이 되어 $$\Delta$$와 다른 모양을 가진다. 그러나 이들이 정의하는 toric variety는 모두 $$\mathbb{P}^2$$에 해당한다.
+위의 예시에서 주목할 점은 $$\Delta$$와 $$\Delta^\circ$$가 동일한 combinatorial type을 가질 수도 있지만, 일반적으로는 서로 다른 모양을 가진다는 것이다. $$n=2$$인 경우 $$\Delta^\circ = \operatorname{conv}\{(1,0), (0,1), (-1,-1)\}$$이 되어 $$\Delta$$와 다른 모양을 가진다. 그러나 이들이 정의하는 toric variety는 모두 $$\mathbb{P}^2$$에 해당한다.
 
 ## Mirror symmetry와 Batyrev construction
 
-Reflexive polytope가 대수기하학에서 특별한 관심을 받는 이유는 이것이 mirror symmetry와 깊이 연결되어 있기 때문이다. 1994년 Batyrev는 reflexive polytope $$\Delta$$와 그 dual $$\Delta^\circ$$를 이용하여 Calabi-Yau variety들의 mirror pair를 조합론적으로 구성하는 방법을 제시하였다.
+Reflexive polytope가 대수기하학에서 특별한 관심을 받는 이유는 이것이 mirror symmetry와 깊이 연결되어 있기 때문이다. 1994년 Batyrev는 reflexive polytope $$\Delta$$와 그 dual $$\Delta^\circ$$를 이용하여 Calabi-Yau variety(canonical class가 0인 compact Kähler 다양체)들의 mirror pair를 조합론적으로 구성하는 방법을 제시하였다.
 
-구체적으로, reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$에 대해 $$\Delta^\circ \subset N_{\mathbb{R}}$$도 reflexive이다. $$\Delta$$의 normal fan $$\Sigma_\Delta$$에 대응하는 toric variety $$X_\Delta$$는 Gorenstein Fano variety이며, $$\Delta^\circ$$의 normal fan에 대응하는 toric variety $$X_{\Delta^\circ}$$도 마찬가지이다. 이때 $$\Delta$$에 내재된 정보로부터 $$X_\Delta$$ 위의 anticanonical divisor의 일반적인 단면 $$Y_\Delta$$를 정의할 수 있고, 이는 적절한 crepant resolution을 거친 후 Calabi-Yau variety가 된다. 마찬가지로 $$\Delta^\circ$$로부터 $$X_{\Delta^\circ}$$ 위의 Calabi-Yau variety $$Y_{\Delta^\circ}$$를 얻는다. Batyrev는 이 두 Calabi-Yau variety $$Y_\Delta$$와 $$Y_{\Delta^\circ}$$가 mirror symmetry의 관계에 놓여 있음을 제안하였다.
+구체적으로, reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$에 대해 $$\Delta^\circ \subset N_{\mathbb{R}}$$도 reflexive이다. $$\Delta$$의 normal fan $$\Sigma_\Delta$$에 대응하는 toric variety $$X_\Delta$$는 Gorenstein Fano variety이며, $$\Delta^\circ$$의 normal fan에 대응하는 toric variety $$X_{\Delta^\circ}$$도 마찬가지이다. 이때 $$\Delta$$에 내재된 정보로부터 $$X_\Delta$$ 위의 anticanonical divisor의 일반적인 단면 $$Y_\Delta$$를 정의할 수 있고, 이는 적절한 crepant resolution(canonical divisor를 보존하는 특이점 해소)을 거친 후 Calabi-Yau variety가 된다. 마찬가지로 $$\Delta^\circ$$로부터 $$X_{\Delta^\circ}$$ 위의 Calabi-Yau variety $$Y_{\Delta^\circ}$$를 얻는다. Batyrev는 이 두 Calabi-Yau variety $$Y_\Delta$$와 $$Y_{\Delta^\circ}$$가 mirror symmetry의 관계에 놓여 있음을 제안하였다.
 
-이 구성의 핵심은 reflexive polytope의 dual 연산 $$\Delta \leftrightarrow \Delta^\circ$$이 Calabi-Yau variety들 사이의 mirror involution을 유도한다는 점이다. 특히 이 mirror pair의 Hodge number들은 다음과 같은 대칭성을 보인다:
+이 구성의 핵심은 reflexive polytope의 dual 연산 $$\Delta \leftrightarrow \Delta^\circ$$이 Calabi-Yau variety들 사이의 mirror involution을 유도한다는 점이다. 특히 이 mirror pair의 Hodge number(Dolbeault cohomology 차원 $$h^{p,q} = \dim H^{p,q}$$)들은 다음과 같은 대칭성을 보인다:
 
 $$h^{p,q}(Y_\Delta) = h^{d-1-p,q}(Y_{\Delta^\circ}).$$
 
-이러한 Batyrev construction은 이후 Borisov에 의해 complete intersection으로 확장되어 nef-partition의 이론으로 발전하였으며, 오늘날까지도 toric mirror symmetry의 기본적인 틀로 자리 잡고 있다.
+이러한 Batyrev construction은 이후 Borisov에 의해 complete intersection으로 확장되어 nef-partition(여러 개의 nef divisor로 이루어진 분할)의 이론으로 발전하였으며, 오늘날까지도 toric mirror symmetry의 기본적인 틀로 자리 잡고 있다.
 
 ---
 
