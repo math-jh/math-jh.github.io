@@ -788,6 +788,12 @@ toric_geometry-ko:
         url: ko/math/toric_geometry/affine_toric_varieties
       - title: "Normal fan과 projective toric variety"
         url: ko/math/toric_geometry/normal_fan_projective_toric
+      - title: "Reflexive polytope와 Fano variety"
+        url: ko/math/toric_geometry/reflexive_polytope_fano
+      - title: "Toric divisor와 line bundle"
+        url: ko/math/toric_geometry/toric_divisors
+      - title: "Cox construction과 GIT quotient"
+        url: ko/math/toric_geometry/cox_construction
   - title: 
     children:
       - title: "블로그 소개"
