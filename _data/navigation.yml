@@ -456,7 +456,9 @@ Lie_theory-ko:
         url: ko/math/lie_theory/richardson_variety
       - title: "Peterson variety"
         url: ko/math/lie_theory/peterson_variety
-  - title: 
+      - title: "Kazhdan-Lusztig polynomial"
+        url: ko/math/lie_theory/kazhdan_lusztig
+  - title:
     children:
       - title: "블로그 소개"
         url: ko/about
@@ -774,7 +776,9 @@ symplectic_geometry-ko:
         url: ko/math/symplectic_geometry/linear_symplectic_geometry
       - title: "사교다양체"
         url: ko/math/symplectic_geometry/symplectic_manifold
-  - title: 
+      - title: "Morse 이론과 stationary phase"
+        url: ko/math/symplectic_geometry/morse_stationary_phase
+  - title:
     children:
       - title: "블로그 소개"
         url: ko/about
@@ -792,6 +796,8 @@ toric_geometry-ko:
         url: ko/math/toric_geometry/reflexive_polytope_fano
       - title: "Toric divisor와 line bundle"
         url: ko/math/toric_geometry/toric_divisors
+      - title: "Geometric invariant theory 입문"
+        url: ko/math/toric_geometry/geometric_invariant_theory
       - title: "Cox construction과 GIT quotient"
         url: ko/math/toric_geometry/cox_construction
   - title: 
