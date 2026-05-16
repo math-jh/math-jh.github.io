@@ -28,7 +28,7 @@ published: false
 
 <ins id="def1">**정의 1**</ins> $$M_{\mathbb{R}}$$의 $$d$$차원 *lattice polytope* $$\Delta$$가 다음 두 조건을 만족할 때, 이를 *reflexive polytope<sub>반사 다면체</sub>*라 부른다:
 
-1. 원점 $$0$$이 $$\Delta$$의 낮부에 포함된다: $$0 \in \operatorname{int}(\Delta)$$.
+1. 원점 $$0$$이 $$\Delta$$의 내부에 포함된다: $$0 \in \operatorname{int}(\Delta)$$.
 2. $$\Delta$$의 *dual polytope*<sub>쌍대 다면체</sub>
 
 $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{ for all } u \in \Delta \}$$
@@ -37,9 +37,9 @@ $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{
 
 </div>
 
-Dual polytope의 정의에서 부등호 $$\langle u, v \rangle \ge -1$$는 원점이 $$\Delta$$의 낮부에 있을 때 $$\Delta^\circ$$가 bounded set이 됨을 보장한다. 만약 $$0$$이 $$\Delta$$의 boundary 위에 놓인다면 $$\Delta^\circ$$는 unbounded하게 되어 polytope가 아니게 된다. 따라서 reflexive polytope를 논의할 때 $$0 \in \operatorname{int}(\Delta)$$라는 조건은 필수적이다.
+Dual polytope의 정의에서 부등호 $$\langle u, v \rangle \ge -1$$는 원점이 $$\Delta$$의 내부에 있을 때 $$\Delta^\circ$$가 bounded set이 됨을 보장한다. 만약 $$0$$이 $$\Delta$$의 boundary 위에 놓인다면 $$\Delta^\circ$$는 unbounded하게 되어 polytope가 아니게 된다. 따라서 reflexive polytope를 논의할 때 $$0 \in \operatorname{int}(\Delta)$$라는 조건은 필수적이다.
 
-Reflexive polytope의 가장 기본적인 성질은 dual 연산 $$\Delta \mapsto \Delta^\circ$$이 reflexive polytope들의 모임 위에서 초대합(involution)을 이룬다는 것이다.
+Reflexive polytope의 가장 기본적인 성질은 dual 연산 $$\Delta \mapsto \Delta^\circ$$이 reflexive polytope들의 모임 위에서 대합(involution)을 이룬다는 것이다.
 
 <div class="proposition" markdown="1">
 
@@ -58,7 +58,7 @@ $$\Delta$$가 reflexive이므로 $$\Delta^\circ$$는 정의에 의해 lattice po
 
 ## Gorenstein Fano variety
 
-대수기하학에서 *Fano variety*는 anticanonical divisor $$-K_X$$가 ample한 normal projective variety $$X$$를 의미한다. 만약 $$-K_X$$가 추가로 Cartier divisor라면 $$X$$를 *Gorenstein Fano variety*라 부른다. Toric variety의 맥락에서 이 조건은 매우 명시적인 조합론적 조건으로 번역된다.
+대수기하학에서 *Fano variety*는 anticanonical divisor $$-K_X$$가 ample한 ([\[대수다양체\] §선형계, ⁋정의 10](/ko/math/algebraic_varieties/linear_systems#def10)) normal projective variety $$X$$를 의미한다. 여기서 canonical divisor $$K_X$$는 canonical bundle에 대응하는 divisor class이며 ([\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)), $$-K_X$$는 그 역원이다. 만약 $$-K_X$$가 추가로 Cartier divisor라면 ([\[대수다양체\] §인자, ⁋정의 12](/ko/math/algebraic_varieties/divisors#def12)) $$X$$를 *Gorenstein Fano variety*라 부른다. Toric variety의 맥락에서 이 조건은 매우 명시적인 조합론적 조건으로 번역된다.
 
 [§Normal fan과 projective toric variety, ⁋정의 8](/ko/math/toric_geometry/normal_fan_projective_toric#def8)에서 기술한 것처럼, lattice polytope $$P \subset M_{\mathbb{R}}$$에 대해 그 normal fan $$\Sigma_P$$을 통해 toric variety $$X_P = X_{\Sigma_P}$$를 구성할 수 있다. 이제 $$P = \Delta$$가 reflexive polytope라고 가정하자.
 
@@ -114,7 +114,7 @@ Toric variety에서 $$T_N$$-invariant Cartier divisor $$D$$에 대응하는 poly
 
 $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1) \}$$
 
-으로 정의되며, [§Normal fan과 projective toric variety, ⁋명제 9](/ko/math/toric_geometry/normal_fan_projective_toric#prop9)의 증명에서 언급된 바와 같이 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$의 basis는 $$P_D \cap M$$의 원소들에 대응하는 characters $$\chi^u$$들로 주어진다. Anticanonical divisor $$-K_{X_\Delta}$$의 경우 $$a_\rho = 1$$ for all $$\rho$$이므로,
+으로 정의되며, [§Toric divisors와 line bundles, ⁋명제 8](/ko/math/toric_geometry/toric_divisors#prop8)에서 보인 바와 같이 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$의 basis는 $$P_D \cap M$$의 원소들에 대응하는 characters $$\chi^u$$들로 주어진다. Anticanonical divisor $$-K_{X_\Delta}$$의 경우 $$a_\rho = 1$$ for all $$\rho$$이므로,
 
 $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma_\Delta(1) \}$$
 
@@ -140,7 +140,7 @@ $$\Delta^\circ = \operatorname{conv}\{ e_1, e_2, \ldots, e_n, -(e_1 + e_2 + \cdo
 
 가 되어 다시 lattice polytope가 된다. 즉 $$\Delta$$는 reflexive polytope이다. 한편 $$\Delta$$의 normal fan은 [§Normal fan과 projective toric variety, ⁋예시 11](/ko/math/toric_geometry/normal_fan_projective_toric#ex11)에서 확인한 $$\mathbb{P}^n$$의 표준 fan과 일치하므로 $$X_\Delta \cong \mathbb{P}^n$$이 성립한다.
 
-이 예시에서 $$\Delta$$의 lattice points는 꼭짓점 외에도 boundary와 낮부 위에 여러 lattice point들이 존재할 수 있다. 예를 들어 $$n=2$$일 때 $$\Delta = \operatorname{conv}\{(-1,-1), (2,-1), (-1,2)\}$$의 lattice points는
+이 예시에서 $$\Delta$$의 lattice points는 꼭짓점 외에도 boundary와 내부 위에 여러 lattice point들이 존재할 수 있다. 예를 들어 $$n=2$$일 때 $$\Delta = \operatorname{conv}\{(-1,-1), (2,-1), (-1,2)\}$$의 lattice points는
 
 $$(-1,-1), (-1,0), (-1,1), (-1,2), (0,-1), (0,0), (0,1), (1,-1), (1,0), (2,-1)$$
 

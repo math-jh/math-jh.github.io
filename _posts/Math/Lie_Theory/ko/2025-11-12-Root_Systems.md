@@ -23,7 +23,7 @@ Lie group에는 자연스러운 (finite-dimensional) representation $$\Ad: G \ri
 
 $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
-을 얻을 수 있으며 [§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15)을 생각하면 본질적으로 $$\Ad$$가 알고있는 정보는 여기에 다 담겨있다고 생각해도 된다. 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $$\mathfrak{g}$$를 reresentation space $$\mathfrak{g}$$를 이용하여 표현한다 생각할 수 있고, 이 때 $$\ad$$는 명시적으로 
+을 얻을 수 있으며 [§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15)을 생각하면 본질적으로 $$\Ad$$가 알고있는 정보는 여기에 다 담겨있다고 생각해도 된다. 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $$\mathfrak{g}$$를 representation space $$\mathfrak{g}$$를 이용하여 표현한다 생각할 수 있고, 이 때 $$\ad$$는 명시적으로 
 
 $$\ad(X)Y=[X,Y]$$
 
@@ -85,9 +85,9 @@ $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+
 
 두 diagonalizable operator $$A,B$$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $$\mathfrak{h}$$의 모든 원소들은 simultaneously diagonalizable이다. 이제 simultaneously diagonalizable operator들의 family $$\{H\in \mathfrak{h}\}$$를 사용하여 $$\mathfrak{g}$$를 분해하자. 만일 simultaneously diagonalizable operator들의 <em-ko>유한한</em-ko> family $$A_1,\ldots, A_n$$이 주어졌다면, simultaneous eigenspace로 공간을 분해하는 것은 
 
-$$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v_\alpha\in V$ for all $i$}$$
+$$$V=\bigoplus V_\alpha,\qquad \text{$$A_i v_\alpha=\lambda_i v_\alpha$$ for all $$v_\alpha\in V$$ for all $$i$$}$$$
 
-와 같은 형태이지만, 현재 우리 상황에서는 $$\mathfrak{h}$$가 벡터공간이므로 linear functional $$\mathfrak{\alpha}: \mathfrak{h}\rightarrow \mathbb{C}$$를 택하여 $$\alpha(H)$$가 각각의 $$H$$의 고유값 역할을 해주도록 하는 것이 낫다. 따라서 다음과 같이 정의한다. 
+와 같은 형태이지만, 현재 우리 상황에서는 $$\mathfrak{h}$$가 벡터공간이므로 linear functional $$\alpha: \mathfrak{h}\rightarrow \mathbb{C}$$를 택하여 $$\alpha(H)$$가 각각의 $$H$$의 고유값 역할을 해주도록 하는 것이 낫다. 따라서 다음과 같이 정의한다. 
 
 <div class="definition" markdown="1">
 
@@ -97,7 +97,7 @@ $$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\
 
 의 원소들을 $$\mathfrak{g}$$의 *root*라 부른다. 이 때 
 
-$$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
+$$$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $$H\in \mathfrak{h}$$}\right\}$$$
 
 이다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19))
 
@@ -111,7 +111,7 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi}\mathfrak{g}_\alpha$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Seimisimple Lie algebra $$\mathfrak{g}$$, Cartan subalgebra $$\mathfrak{h}$$와 그 root decomposition 
+<ins id="prop6">**명제 6**</ins> Semisimple Lie algebra $$\mathfrak{g}$$, Cartan subalgebra $$\mathfrak{h}$$와 그 root decomposition 
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
@@ -151,7 +151,7 @@ $$[H,E]=2E,\quad [H,F]=-2F,\quad [E,F]=H$$
 
 을 통해 얻어진다. 
 
-우리는 임의의 $$\sl(2;\mathbb{C})$$-representation이 irreducible representation들의 direct sum으로 나타난다는 것을 보인다. 이는 compact Lie group에 대해서는 자명한 결과이지만 $$\SL(w,\mathbb{C})$$와 같은 non-compact group에 대해서는 Haar measure의 존재성이 보장되지 않고 따라서 적분을 통해 내적을 평균내는 등의 아이디어를 사용할 수 없다는 것을 기억하자. 
+우리는 임의의 $$\sl(2;\mathbb{C})$$-representation이 irreducible representation들의 direct sum으로 나타난다는 것을 보인다. 이는 compact Lie group에 대해서는 자명한 결과이지만 $$\SL(n,\mathbb{C})$$와 같은 non-compact group에 대해서는 Haar measure의 존재성이 보장되지 않고 따라서 적분을 통해 내적을 평균내는 등의 아이디어를 사용할 수 없다는 것을 기억하자. 
 
 임의의 finite-dimensional $$\sl_2$$-representation $$V$$가 주어졌다 하고, 각각의 $$\lambda\in \mathbb{C}$$에 대하여 weight space
 
@@ -165,7 +165,7 @@ $$E\cdot V_\lambda\subset V_{\lambda+2},\qquad F\cdot V_\lambda\subset V_{\lambd
 
 $$V=\bigoplus_{\lambda} V_\lambda$$
 
-를 생각하면, $$V_\mu\neq 0$$이지만 $$V_{\mu+2}=0$$이 성립하는 $$\mu$$가 존재한다. 이러한 $$\mu$$를 *heighest weight*이라 부르고, $$V_\mu$$의 원소를 *highest weight vector*라 부른다. 그럼 highest weight vector $$v$$에 대하여 우리는 다음의 두 식
+를 생각하면, $$V_\mu\neq 0$$이지만 $$V_{\mu+2}=0$$이 성립하는 $$\mu$$가 존재한다. 이러한 $$\mu$$를 *highest weight*이라 부르고, $$V_\mu$$의 원소를 *highest weight vector*라 부른다. 그럼 highest weight vector $$v$$에 대하여 우리는 다음의 두 식
 
 $$H\cdot v=\mu v,\qquad E\cdot v=0$$
 
@@ -213,7 +213,7 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 </div>
 
-어렵지 않게 $$V(m)$$은 irrducible인 것을 보일 수 있다. 이제 임의의 $$\sl_2$$-representation $$V$$에 대하여, 우리는 $$V$$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 7](#prop7)을 적용하고, 남아있는 highest weight vector가 있다면 다시 이를 반복하는 식으로 $$V$$를 irreducible $$\sl_2$$-representation으로 분해할 수 있다. 
+어렵지 않게 $$V(m)$$은 irreducible인 것을 보일 수 있다. 이제 임의의 $$\sl_2$$-representation $$V$$에 대하여, 우리는 $$V$$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 7](#prop7)을 적용하고, 남아있는 highest weight vector가 있다면 다시 이를 반복하는 식으로 $$V$$를 irreducible $$\sl_2$$-representation으로 분해할 수 있다. 
 
 ## 근계
 
@@ -275,7 +275,7 @@ $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
 이 존재한다. 그럼 $$\Phi\subseteq \mathfrak{h}^\ast$$는 $$\mathfrak{h}^\ast$$의 spanning set이다. $$\Phi$$의 원소들의 일차결합으로 나타나지 않는 $$\mathfrak{h}^\ast$$의 원소가 있다 하면, 이에 해당하는 $$\mathfrak{h}$$의 원소는 모든 $$\alpha\in H$$에 대하여 $$\alpha(H)$$를 만족하여야 한다. 이제 임의의 root space $$\mathfrak{g}_\alpha$$에 대하여, $$H$$는
 
-$$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
+$$$[H,X]=\alpha(H)X=0\qquad\text{for all $$X\in \mathfrak{g}_\alpha$$}$$$
 
 으로 작용하고, $$\mathfrak{h}$$는 abelian이므로 이 위에는 $$0$$으로 작용한다. 즉 $$\mathfrak{g}$$의 root decomposition을 생각하면 $$H$$는 $$\mathfrak{g}$$ 위의 모든 원소에 대하여 $$0$$으로 작용하고, 이로부터 $$H$$는 $$\mathfrak{g}$$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 4](#prop4)에 의하여 $$\mathfrak{g}$$는 nonzero abelian ideal을 가질 수 없고, 특히 $$Z(\mathfrak{g})=0$$이 성립해야 하므로 $$H=0$$이어야 한다. 
 
@@ -283,7 +283,7 @@ $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
 각각의 root들 $$\alpha\in\Phi$$에 대하여, Killing form의 non-degeneracy로부터 다음의 식
 
-$$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $X\in \mathfrak{h}$}$$
+$$$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $$X\in \mathfrak{h}$$}$$$
 
 을 만족하는 $$H_\alpha\in \mathfrak{h}$$이 존재한다. 우리의 첫 번째 관찰은 다음의 보조정리이다. 
 
@@ -331,7 +331,7 @@ $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alp
 
 특히 $$h_\alpha$$가 $$\mathfrak{g}$$의 원소들에 어떻게 작용하는지를 살펴보자. 우선 $$\mathfrak{g}$$의 root space $$\mathfrak{g}_\beta$$에 $$h_\alpha$$의 adjoint action이 어떻게 작용하는지를 보면
 
-$$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $x\in \mathfrak{g}_\beta$}$$
+$$$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $$x\in \mathfrak{g}_\beta$$}$$$
 
 이므로 $$\mathfrak{g}_\beta$$는 이 action에 대한 weight $$\beta(h_\alpha)$$의 weight space이다. 그런데 앞서 살펴봤듯 $$\sl_2$$-representation의 weight은 항상 정수이므로, 이 값 $$\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$$은 반드시 정수여야 함을 안다. 또 $$\sl_2$$ representation의 임의의 weight subspace는 $$1$$차원이므로 각각의 $$\mathfrak{g}_\beta$$들도 $$1$$차원이다. 
 
@@ -519,7 +519,7 @@ $$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 root $$\alpha\in\Phi$$에 대하여, 앞서 살펴본 것과 같이 $$\sl_{2;\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$$는 $$\sl(2;\mathbb{C})$$와 isomorphic한 $$\mathfrak{g}$$의 subalgebra이다. 이에 대응하는 $$G$$의 Lie subgroup $$G_\alpha$$는 $$\SU(2)$$ 혹은 $$\SO(3)$$와 locally isomorphic하다.
+임의의 root $$\alpha\in\Phi$$에 대하여, 앞서 살펴본 것과 같이 $$\sl_{2,\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$$는 $$\sl(2;\mathbb{C})$$와 isomorphic한 $$\mathfrak{g}$$의 subalgebra이다. 이에 대응하는 $$G$$의 Lie subgroup $$G_\alpha$$는 $$\SU(2)$$ 혹은 $$\SO(3)$$와 locally isomorphic하다.
 
 $$G_\alpha$$는 $$T$$와 교집합을 취했을 때 1차원 torus $$T_\alpha=T\cap G_\alpha$$를 이룬다. 이제 $$N(T)$$의 원소 중 $$\Ad$$-action이 $$\mathfrak{t}$$ 위에서 reflection $$s_\alpha$$를 유도하는 것을 찾아야 한다. 이를 위해 다음 원소
 
@@ -536,3 +536,5 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}$$
 </details>
 
 이로부터 우리는 두 관점에서의 Weyl group이 본질적으로 같은 대상임을 안다. Lie group 관점에서 $$W=N(T)/T$$는 maximal torus의 conjugation action을 포착하고, Lie algebra 관점에서의 $$W$$는 root system의 대칭성을 포착한다. 두 정의의 일치는 compact Lie group의 구조가 그 Lie algebra의 root system에 의해 완전히 결정된다는 사실의 구체적인 표현이다.
+
+이 두 관점을 통합하여 root system으로부터 자연스럽게 등장하는 기하적 대상인 Borel subgroup과 flag variety는 [§Borel subgroup과 flag variety](/ko/math/lie_theory/borel_subgroup)에서 다룬다.

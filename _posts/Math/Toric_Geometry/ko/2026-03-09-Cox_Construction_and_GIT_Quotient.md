@@ -33,11 +33,11 @@ $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)]$$
 
 Cox ring $$S$$는 polynomial ring이므로 특히 unique factorization domain이다. 이 점에서 Cox ring은 toric variety의 대수적 특성을 반영하는 중요한 불변량이다. 실제로 toric variety가 아닌 일반 variety에 대해서도 Cox ring을 정의할 수 있으나, toric variety의 경우에만 Cox ring이 polynomial ring이 된다.
 
-이제 $$S$$ 위의 grading을 도입해야 한다. [§Toric divisors와 line bundles, ⁋정의 1](/ko/math/toric_geometry/toric_divisors#def1)에서 살펴 보았듯이, 각 $$\rho \in \Sigma(1)$$에 대응하는 torus-invariant divisor $$D_\rho$$를 생각할 수 있다. 이들의 정리에 의해 Weil divisor class group $$\operatorname{Cl}(X_\Sigma)$$는 다음 exact sequence로부터 얻어진다.
+이제 $$S$$ 위의 grading을 도입해야 한다. [§Toric divisors와 line bundles, ⁋정의 1](/ko/math/toric_geometry/toric_divisors#def1)에서 살펴 보았듯이, 각 $$\rho \in \Sigma(1)$$에 대응하는 torus-invariant divisor $$D_\rho$$를 생각할 수 있으며, [§Toric divisors와 line bundles, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4)에 의해 Weil divisor class group $$\operatorname{Cl}(X_\Sigma)$$는 다음 exact sequence
 
 $$0 \longrightarrow M \longrightarrow \bigoplus_{\rho \in \Sigma(1)} \mathbb{Z} \cdot D_\rho \longrightarrow \operatorname{Cl}(X_\Sigma) \longrightarrow 0$$
 
-여기서 첫 번째 화살표는 $$m \mapsto \sum_{\rho} \langle m, u_\rho \rangle D_\rho$$로 주어진다. 이 exact sequence에 $$\operatorname{Hom}_\mathbb{Z}(-, \mathbb{C}^\ast)$$를 적용하면 다음 exact sequence를 얻는다.
+로부터 얻어진다. 여기서 첫 번째 화살표는 [§Toric divisors와 line bundles, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)에 의해 $$m \mapsto \sum_{\rho} \langle m, u_\rho \rangle D_\rho$$로 주어진다. 이 exact sequence에 $$\operatorname{Hom}_\mathbb{Z}(-, \mathbb{C}^\ast)$$를 적용하면 다음 exact sequence를 얻는다.
 
 $$1 \longrightarrow G \longrightarrow (\mathbb{C}^\ast)^{\Sigma(1)} \longrightarrow T_N \longrightarrow 1$$
 
@@ -189,7 +189,7 @@ Cox ring $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)]$$의 $$\beta$$차 성
 
 ## Birational geometry와 secondary fan
 
-Cox construction은 toric variety의 birational geometry를 이해하는 데에도 강력한 도구를 제공한다. [§Normal fan과 projective toric variety, ⁋명제 10](/ko/math/toric_geometry/normal_fan_projective_toric#prop10)에서 보았듯이, lattice polytope으로부터 projective toric variety를 구성할 수 있다. Cox construction의 관점에서, 이러한 polytope들의 변화는 GIT quotient에서 linearization의 변화에 대응한다.
+Cox construction은 toric variety의 birational geometry를 이해하는 데에도 강력한 도구를 제공한다. [§Normal fan과 projective toric variety, ⁋명제 9](/ko/math/toric_geometry/normal_fan_projective_toric#prop9)에서 보았듯이, lattice polytope으로부터 projective toric variety를 구성할 수 있다. Cox construction의 관점에서, 이러한 polytope들의 변화는 GIT quotient에서 linearization의 변화에 대응한다.
 
 구체적으로, Cox ring $$S$$와 군 $$G$$를 고정하면, different linearizations of the $$G$$-action correspond to different choices of ample line bundles, 즉 character space에서 GIT equivalence classes에 해당하는 chamber decomposition, 즉 **secondary fan**의 다른 chamber를 선택하는 것에 대응한다. Effective cone $$\operatorname{Eff}(X_\Sigma)$$는 divisor class group에서 pseudo-effective divisor들의 cone이며, 이 cone은 finitely many rational polyhedral chamber로 분해된다. 각 chamber의 interior에서는 GIT quotient가 동일한 birational type의 toric variety를 준다. 이러한 chamber decomposition을 *secondary fan*<sub>secondary fan</sub>이라 부른다.
 
