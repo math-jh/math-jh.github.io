@@ -179,23 +179,19 @@ $$\rchi^m(t) = z_1^{m_1} \cdots z_n^{m_n}$$
 
 $$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
 
-을 정의하자. 여기서 $$\mathbb{C}[M] = \mathbb{C}[\rchi^m \mid m \in M]$$은 $$T_N$$의 coordinate ring이며, $$\rchi^u \in \mathbb{C}[S_\sigma]$$는 weight $$u$$를 갖는 eigenvector이다. $$\rho$$가 well-defined한 algebra homomorphism임은 bilinearity에 의해 직접 확인할 수 있다.
+을 정의하자. 여기서 $$\mathbb{C}[M] = \mathbb{C}[\rchi^m \mid m \in M]$$은 $$T_N$$의 coordinate ring이며, $$\rchi^u \in \mathbb{C}[S_\sigma]$$는 weight $$u$$를 갖는 eigenvector이다. $$\rho$$가 well-defined algebra homomorphism임은 bilinearity에 의해 직접 확인할 수 있다. 그럼 이제 각각의 $$t\in T_N$$에 대하여, $$t$$는 $$\mathbb{C}[S_\sigma]$$ 위에 다음의 합성함수
 
-이 comodule structure로부터 $$U_\sigma$$ 위의 torus action을 얻는다. 각각의 $$t \in T_N$$에 대하여 evaluation map $$\ev_t : \mathbb{C}[M] \to \mathbb{C}$$, $$\rchi^m \mapsto \rchi^m(t)$$를 고려하면, $$t$$가 $$\mathbb{C}[S_\sigma]$$에 작용하는 방식은 다음의 합성사상에 의해 주어진다:
+$$\mathbb{C}[S_\sigma] \xrightarrow{\rho} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M] \xrightarrow{\id \otimes \ev_t} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C} \cong \mathbb{C}[S_\sigma]$$
 
-$$\mathbb{C}[S_\sigma] \xrightarrow{\rho} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M] \xrightarrow{\id \otimes \ev_t} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C} \cong \mathbb{C}[S_\sigma].$$
+에 의해 주어지는 것이다. 이 합성함수를 $$\rchi^u$$에 적용하면,
 
-이 합성사상을 $$\rchi^u$$에 적용하면,
+$$(\id \otimes \ev_t)(\rchi^u \otimes \rchi^u) = \rchi^u \otimes \rchi^u(t) = \rchi^u(t) \rchi^u$$
 
-$$(\id \otimes \ev_t)(\rchi^u \otimes \rchi^u) = \rchi^u \otimes \rchi^u(t) = \rchi^u(t) \rchi^u.$$
-
-따라서 $$t$$가 $$\rchi^u \in \mathbb{C}[S_\sigma]$$에 작용하는 결과는 $$\rchi^u(t) \rchi^u$$이다.
-
----
+이고, 구체적으로 $$t$$가 $$\rchi^u \in \mathbb{C}[S_\sigma]$$에 작용하는 결과는 $$\rchi^u(t) \rchi^u$$이다. 즉 다음임 성립한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 대수적 토러스 $$T_N$$이 아핀 토릭 다양체 $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$ 위에 작용한다. 우선 coordinate ring $$\mathbb{C}[S_\sigma]$$ 위에 다음의 $$\mathbb{C}$$-algebra homomorphism $$\rho$$를 정의한다:
+<ins id="prop8">**명제 8**</ins> Algebraic torus $$T_N$$이 affine toric variety $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$ 위에 작용한다. 우선 coordinate ring $$\mathbb{C}[S_\sigma]$$ 위에 다음의 $$\mathbb{C}$$-algebra homomorphism $$\rho$$를 정의한다.
 
 $$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
 
@@ -207,34 +203,17 @@ $$t \cdot \rchi^u = \rchi^u(t) \rchi^u.$$
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
+다소 주의할 것은 지금까지의 논의에서 $$\rchi^u$$라는 기호가 두 가지 다른 의미로 쓰이고 있다는 것이다. 우선 $$\rchi^u$$는 그 정의에 의해 $$T_N$$에서 $$\mathbb{C}^\ast$$로의 group homomorphism이지만, 벡터공간 $$\mathbb{C}[S_\sigma]$$의 원소로서 $$\rchi^u$$를 생각할 때 우리는 이를 weight $$u$$를 갖는 eigenvector로 생각한다. 위의 식
 
-우선 $$\rho$$가 algebra homomorphism임을 확인한다. $$\rchi^u, \rchi^{u'} \in \mathbb{C}[S_\sigma]$$라고 하면,
+$$t\cdot \rchi^u=\rchi^u(t)\rchi^u$$
 
-$$\rho(\rchi^u \cdot \rchi^{u'}) = \rho(\rchi^{u+u'}) = \rchi^{u+u'} \otimes \rchi^{u+u'} = \rchi^u \rchi^{u'} \otimes \rchi^u \rchi^{u'} = (\rchi^u \otimes \rchi^u)(\rchi^{u'} \otimes \rchi^{u'}) = \rho(\rchi^u) \rho(\rchi^{u'}).$$
+가 바로 이 둘의 관계를 알려주며, 구체적으로 벡터공간 $$\mathbb{C}[S_\sigma]$$ 위에 $$T_N$$이 act할 때 $$\rchi^u$$는 이 작용의 eigenvector이며, 그에 해당하는 eigenvalue가 정확히 $$\rchi^u(t)$$로 주어지는 것이다. 
 
-따라서 $$\rho$$는 $$\mathbb{C}$$-algebra homomorphism이다.
-
-한편, 각각의 $$t \in T_N$$에 대해 evaluation map $$\ev_t : \mathbb{C}[M] \to \mathbb{C}$$, $$\rchi^m \mapsto \rchi^m(t)$$를 고려한다. 그럼 $$t$$가 $$\mathbb{C}[S_\sigma]$$에 작용하는 방식은 다음의 합성사상에 의해 주어진다:
-
-$$\mathbb{C}[S_\sigma] \xrightarrow{\rho} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M] \xrightarrow{\id \otimes \ev_t} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C} \cong \mathbb{C}[S_\sigma].$$
-
-이 합성사상을 $$\rchi^u$$에 적용하면,
-
-$$(\id \otimes \ev_t)(\rchi^u \otimes \rchi^u) = \rchi^u \otimes \rchi^u(t) = \rchi^u(t) \rchi^u.$$
-
-따라서 $$t \cdot \rchi^u = \rchi^u(t) \rchi^u$$가 성립한다.
-
-</details>
-
-이제 우리는 $$\rchi^u$$라는 기호가 두 가지 다른 의미로 쓰이고 있음을 확인해야 한다. 우선 coordinate ring $$\mathbb{C}[S_\sigma]$$의 원소로서 $$\rchi^u$$는 weight $$u$$를 갖는 eigenvector이며, character로서의 $$\rchi^u$$는 $$T_N$$에서 $$\mathbb{C}^\ast$$로의 group homomorphism이다. 이 두 대상이 같은 기호로 적히는 이유는, $$\rchi^u \in \mathbb{C}[S_\sigma]$$가 $$T_N$$-action 하에서 eigenvalue $$\rchi^u(t)$$를 갖기 때문이다. 즉, $$u \in M$$이 주어지면 eigenvector $$\rchi^u \in \mathbb{C}[S_\sigma]$$, character $$\rchi^u : T_N \to \mathbb{C}^\ast$$, 그리고 weight $$u \in M$$이 모두 대응된다.
-
-이 작용은 $$U_\sigma$$ 안에 열린 조밀한 torus orbit을 가지며, 이 orbit은 정확히 torus $$T_N$$ 자체이다.
+이 작용은 $$U_\sigma$$ 안에서 open dense torus orbit을 가지며, 이 orbit은 정확히 torus $$T_N$$ 자체이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> $$\tau$$가 $$\sigma$$의 면일 때, $$U_\tau$$는 $$U_\sigma$$의 **주 열린 부분집합(principal open subset)**이다. 구체적으로, $$u \in S_\sigma$$를 $$\tau = \sigma \cap u^{\perp}$$를 만족하는 것으로 선택하면
+<ins id="prop9">**명제 9**</ins> Cone $$\sigma$$의 face $$\tau$$에 대하여, $$U_\tau$$는 $$U_\sigma$$의 principal open subset이다. ([\[대수다양체\] §아핀다양체, ⁋정의 5](/ko/math/algebraic_varieties/affine_varieties#def5)) 구체적으로, $$u \in S_\sigma$$를 $$\tau = \sigma \cap u^{\perp}$$를 만족하는 것으로 선택하면
 
 $$U_\tau = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}$$
 
@@ -261,47 +240,37 @@ $$U_\tau = \Spec(\mathbb{C}[S_\tau]) = \Spec(\mathbb{C}[S_\sigma]_{\rchi^u}) = (
 
 </details>
 
-이 명제는 작은 콘이 더 작은 열린 집합에 대응된다는 것을 보여준다. 이것이 바로 $$N$$에서의 기하학이 $$M$$에서의 기하학보다 선호되는 이유이다.
+가령 [예시 7](#ex7)의 2차원 cone $$\sigma$$의 경우, $$\sigma$$의 face $$\tau_1=\mathbb{R}_{\geq}e_1$$과 $$\tau_2=\mathbb{R}_{\geq}e_2$$는 그 각각 또한 1차원 cone이 되며, 이들의 face는 원점이다. 이 구조 하에서 전체 $$U_\sigma$$ 안에서 $$U_{\tau_1}$$과 $$U_{\tau_2}$$ 각각은 principal open set이며, 이러한 구조가 전체 toric variety에 complex 구조를 준다. 
 
-한편, 위의 open embedding $$U_\tau \hookrightarrow U_\sigma$$는 $$T_N$$-equivariant이다. 즉, $$T_N$$이 $$U_\tau$$와 $$U_\sigma$$ 위에 각각 작용할 때, 이 작용들은 inclusion과 compatible하다. 이것이 의미하는 것은, 여러 affine toric variety들을 face 관계를 통해 glue할 때, 이 glue가 torus action을 보존한다는 것이다. 결과적으로 일반적인 toric variety는 자연스러운 torus action을 가지며, 이것이 toric variety의 핵심적인 성질이 된다.
+우리 주장은 위의 open embedding $$U_\tau \hookrightarrow U_\sigma$$는 $$T_N$$-equivariant라는 것이다. 즉, $$T_N$$이 $$U_\tau$$와 $$U_\sigma$$ 위에 각각 작용할 때, 이 작용들은 inclusion과 compatible하다. 이는 단순한 계산으로 보일 수 있으며, 따라서 위의 inclusion은 toric variety로서의 inclusion이기도 하다.
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10 (구면의 회전)**</ins> Torus action을 직관적으로 이해하기 위해, 2차원 구면 $$S^2$$이 자전축 중심으로 회전하는 상황을 생각하자.
+<ins id="ex10">**예시 10**</ins> [예시 7](#ex7)에서 $$N = \mathbb{Z}^2$$이고 $$\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$$일 때 $$U_\sigma = \mathbb{C}^2$$임을 보았다. 이제 torus $$T_N = (\mathbb{C}^\ast)^2$$가 $$U_\sigma = \mathbb{C}^2$$ 위에 어떻게 작용하는지 구체적으로 살펴보자.
 
-$$S^2$$을 $$\mathbb{C} \times \mathbb{R}$$의 부분집합
+우선 이 상황에서 $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{e_1^\ast}, \rchi^{e_2^\ast}]$$이며, 여기서 $$\rchi^{e_i^\ast}$$를 $$\z_i$$로 표기하면 $$U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$$이다. 이제 [명제 8](#prop8)에 따르면, $$t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$$는 coordinate ring 위에 다음의 식
 
-$$S^2 = \{(z, x_3) \in \mathbb{C} \times \mathbb{R} \mid \lvert z \rvert^2 + x_3^2 = 1\}$$
+$$t \cdot \z_i = \rchi^{e_i^\ast}(t) \z_i = t_i \z_i \qquad i = 1, 2$$
 
-으로 생각하자. 1차원 torus $$S^1 = \{e^{i\theta} \mid \theta \in \mathbb{R}/2\pi\mathbb{Z}\}$$가 다음과 같이 작용한다:
+을 통해 작용한다. 따라서 $$U_\sigma$$의 점 $$(z_1, z_2) \in \mathbb{C}^2$$에 대한 작용은
 
-$$e^{i\theta} \cdot (z, x_3) = (e^{i\theta}z, x_3)$$
+$$(t_1, t_2) \cdot (z_1, z_2) = (t_1 z_1, t_2 z_2)$$
 
-이 작용 하에서:
+로 주어진다. 이는 $$(\mathbb{C}^\ast)^2$$의 각 성분이 $$\mathbb{C}^2$$의 대응하는 coordinate를 scaling하는 가장 자연스러운 작용이다.
 
-- **궤도(Orbits)**: 같은 위도에 있는 모든 점들이 하나의 궤도를 이룬다. 예를 들어 적도 $$\{(z, 0) \mid \lvert z \rvert = 1\}$$은 하나의 원 모양 궤도이고, 북위 45° 선도 마찬가지로 하나의 궤도이다.
-  
-- **고정점(Fixed points)**: 북극 $$(0, 1)$$과 남극 $$(0, -1)$$은 회전해도 그 자리에 남는다. 이들은 0차원 궤도이다.
+이 작용에서 각 coordinate 함수 $$z_i$$는 weight $$e_i^\ast \in M$$을 갖는 eigenvector이다. 즉, 임의의 $$t \in T_N$$에 대해
 
-- **Orbit space**: $$S^2 / S^1 \cong [-1, 1]$$로, 각 위도 $$x_3 \in [-1, 1]$$이 하나의 궤도를 대표한다. 이것이 **moment polytope**의 가장 간단한 예시이다.
+$$t \cdot z_i = \rchi^{e_i^\ast}(t) z_i$$
 
-사실 $$S^2 \cong \mathbb{P}^1$$이며, $$\mathbb{P}^1$$은 가장 기본적인 (projective) toric variety이다. 이 예시에서 볼 수 있듯이, torus action은 다양체를 궤도들로 나누고, 각 궤도의 차원은 그 점에서의 torus action의 "자유도"에 의해 결정된다.
+가 성립하여, $$z_i$$는 character $$\rchi^{e_i^\ast} : T_N \to \mathbb{C}^\ast$$에 해당하는 eigenvalue를 갖는다.
 
-이제 위에서 정의한 canonical한 torus action이 이 예시에서 어떻게 작동하는지 확인해보자. $$\mathbb{P}^1$$의 경우 $$N = \mathbb{Z}$$이고 $$M = \Hom(\mathbb{Z}, \mathbb{Z}) \cong \mathbb{Z}$$이다. 따라서 $$T_N = \mathbb{Z} \otimes_{\mathbb{Z}} \mathbb{C}^\ast \cong \mathbb{C}^\ast$$이며, $$S^1 \subset \mathbb{C}^\ast$$가 그 안에 포함된다.
+이 작용의 궤도(orbit) 구조는 다음과 같다:
 
-$$\mathbb{P}^1$$의 한 affine patch $$U_1 = \{[1:z] \mid z \in \mathbb{C}\}$$를 생각하면, 그 coordinate ring은 $$\mathbb{C}[\z]$$이다. 단항식 $$\z^n$$에 대해, $$t \in \mathbb{C}^\ast$$가 다음과 같이 작용한다:
+- **열린 조밀한 궤도**: $$(\mathbb{C}^\ast)^2 = \{(z_1, z_2) \mid z_1 \neq 0, z_2 \neq 0\}$$. 이는 torus $$T_N$$ 자체이며, $$U_\sigma$$에서 Zariski open dense subset을 이룬다.
+- **1차원 궤도**: coordinate axis $$(\mathbb{C}^\ast) \times \{0\}$$과 $$\{0\} \times (\mathbb{C}^\ast)$$. 이들은 각각 한 개의 coordinate가 0이 되어 torus action의 "자유도"가 하나 줄어든 궤도이다.
+- **고정점**: 원점 $$(0, 0)$$. 이는 torus의 모든 원소에 의해 고정되며, **0차원 궤도**이다.
 
-$$t \cdot \z^n = \rchi^n(t) \cdot \z^n$$
-
-여기서 canonical 정의에 따라 $$\rchi^n(t)$$를 계산해보자. $$t = 1 \otimes c \in T_N = \mathbb{Z} \otimes_{\mathbb{Z}} \mathbb{C}^\ast$$ (즉 $$c = t$$)이고 $$n \in M = \mathbb{Z}$$이므로
-
-$$\rchi^n(t) = c^{n(1)} = t^n$$
-
-이다. 따라서 $$t \cdot \z^n = t^n \cdot \z^n$$이고, 특히 $$S^1 \subset \mathbb{C}^\ast$$의 원소 $$e^{i\theta}$$에 대해서는
-
-$$e^{i\theta} \cdot \z^n = e^{i\theta n} \cdot \z^n$$
-
-이다. 이것이 정확히 $$\mathbb{C}[\z] = \bigoplus_{n \geq 0} \mathbb{C} \cdot \z^n$$에서의 weight decomposition이며, 각 $$\z^n$$은 weight $$n \in M$$을 갖는 eigenvector이다.
+이 예시는 torus action의 가장 기본적이고 대표적인 예시이다. [예시 7](#ex7)에서 살펴\-본 $$\sigma = \cone(e_1, e_2)$$에 대응하는 아핀 토릭 다양체 $$U_\sigma = \mathbb{C}^2$$ 위에서, torus는 단순히 좌표축 방향으로 scaling함으로써 작용하며, 이로부터 자연스럽게 궤도 분해가 이루어진다. 이러한 구조는 일반적인 affine toric variety에서도 동일한 패턴을 따륨며, cone의 face들에 대응하는 궤도들이 차원이 낮아지는 방식으로 배엸된다.
 
 </div>
 
