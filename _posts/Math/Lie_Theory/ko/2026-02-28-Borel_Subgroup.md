@@ -262,16 +262,16 @@ $$G/T\hookrightarrow G_\mathbb{C}/B$$
 
 $$G_\mathbb{C}$$의 Iwasawa decomposition $$G_\mathbb{C}=G\cdot A\cdot N$$을 생각하자. 여기서
 
-- $$A$$는 $$T$$의 complexification에 해당하는 diagonalizable subgroup으로, $$\mathfrak{a}=\mathfrak{t}\otimes_\mathbb{R}\mathbb{R}$$에 의해 결정된다.
-- $$N=\exp(\mathfrak{n})$$는 $$\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$에 대응하는 unipotent subgroup이다.
+- $$A=\exp(i\mathfrak{t})$$는 $$T$$의 split real form에 해당하는 abelian subgroup이다.
+- $$N=\exp(\mathfrak{n})$$은 $$\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$에 대응하는 unipotent subgroup이다.
 
-Borel subgroup $$B$$는 $$B=A\cdot N$$으로 분해되며, $$G\cap B=T$$이다. 이제 다음의 chain을 생각하자.
+Iwasawa decomposition은 $$G\cap (A\cdot N)=\{e\}$$ (각 원소의 분해가 유일)을 함의한다. Borel subgroup $$B$$는 complex maximal torus $$T_\mathbb{C}=T\cdot A$$를 포함하며 $$B=T\cdot A\cdot N$$으로 분해되므로, $$G\cap B = T\cdot(G\cap A\cdot N)=T$$이다. 이제 다음의 chain을 생각하자.
 
-$$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(A\cdot N)\cong G/(G\cap A\cdot N)=G/T$$
+$$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(T\cdot A\cdot N)\cong G/(G\cap T\cdot A\cdot N)=G/T$$
 
 첫 번째 inclusion은 $$G\hookrightarrow G_\mathbb{C}$$로부터 유도되며, composition이 $$G/T$$의 identity map이므로 이 inclusion은 homotopy equivalence이다.
 
-더 정확히는 $$A\cdot N\cong\mathbb{R}^n$$이므로 $$G_\mathbb{C}/B\to G/T$$는 deformation retraction을 유도한다.
+더 정확히는 $$A\cdot N\cong\mathbb{R}^n$$ (Euclidean space로 contractible)이므로 $$G_\mathbb{C}/B\to G/T$$는 deformation retraction을 유도한다.
 
 </details>
 
@@ -287,7 +287,7 @@ $$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(A\cdot N)\cong G/(G\cap A
 
 $$G_\mathbb{C}=\bigsqcup_{w\in W}BwB$$
 
-이를 *Bruhat decomposition*이라 한다. 각 double coset $$BwB$$는 $$G_\mathbb{C}$$에서 locally closed subset이며, 그 closure는 다음과 같이 주어진다.
+이를 *Bruhat decomposition*이라 한다. 이에 대한 더 자세한 논의와 parabolic subgroup으로의 일반화는 [§Bruhat decomposition과 parabolic subgroup, ⁋정리 4](/ko/math/lie_theory/bruhat_decomposition#thm4)에서 다룬다. 각 double coset $$BwB$$는 $$G_\mathbb{C}$$에서 locally closed subset이며, 그 closure는 다음과 같이 주어진다.
 
 $$\overline{BwB}=\bigcup_{v\leq w}BvB$$
 
@@ -309,7 +309,7 @@ Bruhat decomposition은 flag variety $$G_\mathbb{C}/B$$의 cell decomposition을
 
 <div class="example" markdown="1">
 
-<ins id="ex17">**예시 17**</ins> $$G_\mathbb{C}=\GL(n,\mathbb{C})$$인 경우, Weyl group $$W\cong S_n$$이고 각 permutation $$\sigma\in S_n$$에 대하여 $$\ell(\sigma)$$는 inversion의 개수이다. 
+<ins id="ex17">**예시 17**</ins> $$G_\mathbb{C}=\GL(n,\mathbb{C})$$인 경우, Weyl group $$W\cong S_n$$이고 각 permutation $$\sigma\in S_n$$에 대하여 $$\ell(\sigma)$$는 inversion의 개수이다. 이 분해의 구체적 모습과 Gauss elimination과의 관련은 [§Bruhat decomposition과 parabolic subgroup, ⁋예시 6](/ko/math/lie_theory/bruhat_decomposition#ex6)에서 다룬다.
 
 구체적으로 $$\sigma$$의 inversion은 $$i<j$$이면서 $$\sigma(i)>\sigma(j)$$인 쌍 $$(i,j)$$의 개수이다. Bruhat decomposition에 의해 $$\GL(n,\mathbb{C})/B$$는 $$0$$차원 cell (identity permutation, inversion $$0$$개)부터 $$n(n-1)/2$$차원 cell (reverse permutation, inversion 최대)까지의 cell decomposition를 갖는다.
 

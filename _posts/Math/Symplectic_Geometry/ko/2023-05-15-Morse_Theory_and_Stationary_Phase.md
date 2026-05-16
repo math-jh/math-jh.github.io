@@ -29,7 +29,7 @@ $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Smooth manifold $$M$$과 smooth function $$f:M\to\mathbb{R}$$이 주어졌다 하자. 점 $$p\in M$$이 $$f$$의 *critical point<sub>임계점</sub>*라는 것은 differential $$df_p:T_pM\to\mathbb{R}$$이 영사상인 것을 뜻한다.
+<ins id="def1">**정의 1**</ins> Smooth manifold $$M$$([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifold/smooth_manifolds#def1))과 smooth function $$f:M\to\mathbb{R}$$이 주어졌다 하자. 점 $$p\in M$$이 $$f$$의 *critical point<sub>임계점</sub>*라는 것은 differential $$df_p:T_pM\to\mathbb{R}$$([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifold/differentials#def7))이 영사상인 것을 뜻한다. 여기서 $$T_pM$$은 $$p$$에서의 tangent space ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifold/tangent_space#def3))이다.
 
 </div>
 
@@ -192,7 +192,7 @@ $$I(\hbar) = (2\pi\hbar)^{n/2}\sum_{p\in\operatorname{Crit}(\phi)\cap\operatorna
 
 $$X\bigl(e^{i\phi/\hbar}\bigr) = \frac{i}{\hbar}(X\phi)e^{i\phi/\hbar} = \frac{i}{\hbar}e^{i\phi/\hbar}$$
 
-이므로 $$e^{i\phi/\hbar} = (\hbar/i)\,X(e^{i\phi/\hbar})$$로 쓸 수 있다. 이를 적분에 대입하고 divergence theorem (즉 $$X$$의 transpose에 대한 부분적분)을 $$N$$번 적용하면 $$I(\hbar)$$ 중 critical point의 밖에 해당하는 기여가 $$O(\hbar^N)$$임을 알 수 있다. 따라서 partition of unity를 이용하여 $$a$$의 support를 critical point들의 작은 근방으로 잘라내도 점근전개의 오차는 임의의 차수로 통제된다. 이제 $$\operatorname{supp}(a)$$가 단 하나의 critical point $$p$$의 작은 근방에 들어 있는 경우만 다루면 충분하다.
+이므로 $$e^{i\phi/\hbar} = (\hbar/i)\,X(e^{i\phi/\hbar})$$로 쓸 수 있다. 이를 적분에 대입하고 divergence theorem (즉 $$X$$의 transpose에 대한 부분적분)을 $$N$$번 적용하면 $$I(\hbar)$$ 중 critical point의 밖에 해당하는 기여가 $$O(\hbar^N)$$임을 알 수 있다. 따라서 smooth partition of unity ([\[미분다양체\] §미분다양체](/ko/math/manifold/smooth_manifolds))를 이용하여 $$a$$의 support를 critical point들의 작은 근방으로 잘라내도 점근전개의 오차는 임의의 차수로 통제된다. 이제 $$\operatorname{supp}(a)$$가 단 하나의 critical point $$p$$의 작은 근방에 들어 있는 경우만 다루면 충분하다.
 
 **2단계 (Morse lemma에 의한 표준화).** [정리 6](#thm6)을 $$\phi$$에 적용하면 $$p$$ 근방에서 좌표 $$y=(y_1,\ldots,y_n)$$이 존재하여
 
@@ -284,7 +284,7 @@ $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 
 라 하면, $$h$$는 smooth real-valued function이며, $$W$$의 holomorphic critical point $$p$$ (즉 $$dW(p)=0$$) 가 정확히 $$h$$의 critical point에 대응한다. 또한 $$W$$가 $$p$$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $$h$$가 $$p$$에서 비퇴화 critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 절반 차원이다 (complex Hessian의 eigenvalue가 $$\lambda_1,\ldots,\lambda_n\in\mathbb{C}^\ast$$일 때 $$-\operatorname{Re}(\lambda_i/\hbar)$$의 부호 분포가 정확히 절반씩이라는 사실로부터 얻어진다).
 
-$$X$$ 위에 적당한 Kähler metric을 고정하고 $$h$$의 gradient flow를 생각하자.
+$$X$$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/Riemannian_metric)의 일반론에 따라 gradient vector field가 정의된다) $$h$$의 gradient flow를 생각하자.
 
 <div class="definition" markdown="1">
 
@@ -292,7 +292,7 @@ $$X$$ 위에 적당한 Kähler metric을 고정하고 $$h$$의 gradient flow를 
 
 $$\frac{dx}{dt} = -\nabla h(x)$$
 
-의 $$p$$에서의 stable manifold, 즉 $$t\to-\infty$$일 때 $$p$$로 수렴하는 점들의 집합이다.
+의 $$p$$에서의 unstable manifold, 즉 $$t\to-\infty$$일 때 $$p$$로 수렴하는 점들의 집합이다.
 
 </div>
 
