@@ -43,7 +43,7 @@ Affine toric variety들을 이어붙이기 위해서는 각각의 cone들이 서
 
 ## Toric variety의 정의
 
-이제 fan $$\Sigma$$가 주어졌을 때, 이로부터 대수다양체 $$X_\Sigma$$를 구성하는 방법을 설명한다. 각각의 cone $$\tau \in \Sigma$$에 대하여 [§Affine toric varieties, ⁋정의 5](/ko/math/toric_geometry/affine_toric_varieties#def5)에 의해 affine toric variety $$U_\tau$$를 얻는다. 두 cone $$\tau_1, \tau_2 \in \Sigma$$가 공통 face $$\tau_1 \cap \tau_2$$를 가질 때, [§Affine toric varieties, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에 의해 $$U_{\tau_1 \cap \tau_2}$$는 $$U_{\tau_1}$$과 $$U_{\tau_2}$$ 모두의 주 열린 부분집합이 된다. 따라서 이들 사이에 자연스러운 동형사상
+이제 fan $$\Sigma$$가 주어졌을 때, 이로부터 대수다양체 $$X_\Sigma$$를 구성하는 방법을 설명한다. 각각의 cone $$\tau \in \Sigma$$에 대하여 [§Affine toric varieties, ⁋정의 5](/ko/math/toric_geometry/affine_toric_varieties#def5)에 의해 affine toric variety $$U_\tau$$를 얻는다. 두 cone $$\tau_1, \tau_2 \in \Sigma$$가 공통 face $$\tau_1 \cap \tau_2$$를 가질 때, [§Affine toric varieties, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)에 의해 $$U_{\tau_1 \cap \tau_2}$$는 $$U_{\tau_1}$$과 $$U_{\tau_2}$$ 모두의 주 열린 부분집합이 된다. 따라서 이들 사이에 자연스러운 동형사상
 
 $$U_{\tau_1} \supset U_{\tau_1 \cap \tau_2} \cong U_{\tau_2 \cap \tau_1} \subset U_{\tau_2}$$
 
@@ -64,7 +64,7 @@ $$U_{\tau_1} \supset U_{\tau_1 \cap \tau_2} \cong U_{\tau_2 \cap \tau_1} \subset
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$X_\Sigma$$의 normality는 각 affine chart $$U_\tau$$가 [§Affine toric varieties, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문이다. Separatedness를 보이기 위해서는 diagonal morphism $$\Delta: X_\Sigma \to X_\Sigma \times X_\Sigma$$의 image가 닫힌 집합임을 확인하면 된다. 각 affine chart 위에서 이는 두 cone의 교집합이 face임을 보장하는 fan의 두 번째 조건에 의해 성립한다. 
+$$X_\Sigma$$의 normality는 각 affine chart $$U_\tau$$가 [§Affine toric varieties, ⁋명제 13](/ko/math/toric_geometry/affine_toric_varieties#prop13)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문이다. Separatedness를 보이기 위해서는 diagonal morphism $$\Delta: X_\Sigma \to X_\Sigma \times X_\Sigma$$의 image가 닫힌 집합임을 확인하면 된다. 각 affine chart 위에서 이는 두 cone의 교집합이 face임을 보장하는 fan의 두 번째 조건에 의해 성립한다. 
 
 </details>
 
