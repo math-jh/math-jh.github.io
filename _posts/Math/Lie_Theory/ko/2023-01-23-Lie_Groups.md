@@ -79,7 +79,7 @@ $$\SL(n;\mathbb{R})=\left\{A\in \GL(n; \mathbb{R})\mid \det(A)=1\right\}$$
 
 을 통해 $$\GL(n;\mathbb{R})$$의 부분집합 $$\SL(n; \mathbb{R})$$을 정의할 수 있다. 이 함수는 행렬의 각 성분들에 대한 다항함수이므로 smooth이고, 약간의 계산을 통해 모든 점에서 regular임을 알 수 있다. [\[미분다양체\] §음함수 정리, ⁋따름정리 4](/ko/math/manifold/implicit_function_theorem#cor4)로부터 $$\SL(n;\mathbb{R})$$은 $$n^2-1$$차원 manifold가 된다. 이 때 $$\GL(n;\mathbb{R})$$의 곱셈과 역원 또한 $$\SL(n;\mathbb{R})$$로 잘 제한되며 따라서 $$\SL(n; \mathbb{R})$$ 또한 Lie group이다. 
 
-비슷한 방식으로, classical matrix group들 $$\Omat(n)$$, $$\SO(n)$$, $$\Umat(n)$$, $$\SU(n)$$ 등의 matrix group들 또한 Lie group 구조를 갖는 것을 확인할 수 있다. 
+비슷한 방식으로, classical matrix group들 $$\Omat(n)$$, $$\SO(n)$$, $$\Umat(n)$$, $$\SU(n)$$ 등의 matrix group들 또한 Lie group 구조를 갖는 것을 확인할 수 있다. 더 일반적으로는 아래 [정리 5](#thm5)를 통해 $$\GL(n;\mathbb{R})$$의 임의의 closed subgroup이 자동으로 Lie group이 됨을 알 수 있다. 
 
 </div>
 
@@ -87,7 +87,7 @@ $$\SL(n;\mathbb{R})=\left\{A\in \GL(n; \mathbb{R})\mid \det(A)=1\right\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm5">**정리 5**</ins> Lie group $$G,H$$가 주어졌다 하고, 이들의 Lie algebra $$\mathfrak{g},\mathfrak{h}$$ 사이의 homomorphism $$L:\mathfrak{g} \rightarrow \mathfrak{h}$$이 주어졌다 하자. 만일 $$G$$가 simply connected라면, $$dF=L$$을 만족하는 homomorphism $$F:G \rightarrow H$$가 유일하게 존재한다.
+<ins id="thm5">**정리 5 (Cartan's closed subgroup theorem)**</ins> Lie group $$G$$와 그 closed subgroup $$H \subseteq G$$에 대하여, $$H$$는 자연스럽게 $$G$$의 embedded smooth submanifold 구조를 가지며, 이 구조 하에서 $$H$$ 자신이 Lie group이 된다.
 
 </div>
 
@@ -192,7 +192,7 @@ $$\left(d(L_g)\right)(X_p)=X_{gp}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> 앞선 [예시 2](#ex2), [예시 3](#ex3), 그리고 [예시 4](#ex4)의 $$\GL(n;\mathbb{R})$$의 경우는 모두 벡터공간으로부터 오므로, 이들의 tangent space는 각각 원래의 벡터공간과 isomorphic하다. 즉 $$\mathbb{R}^n$$의 경우 그 tangent space는 $$\mathbb{R}^n$$ 자기자신이며, 비슷하게 $$n$$-torus $$S^n\cong \mathbb{R}^n/\mathbb{Z}^n$$의 경우 각 점에서의 tangent space는 quotient topology를 취하기 전인 $$\mathbb{R}^n$$과 같다. $$\GL(n;\mathbb{R})$$의 경우, 벡터공간 $$\Mat_n(\mathbb{R})$$의 open submanifold이므로 마찬가지로 각 점에서의 tangent space는 $$\Mat_n(\mathbb{R})$$과 같다.
+<ins id="ex10">**예시 10**</ins> 앞선 [예시 2](#ex2), [예시 3](#ex3), 그리고 [예시 4](#ex4)의 $$\GL(n;\mathbb{R})$$의 경우는 모두 벡터공간으로부터 오므로, 이들의 tangent space는 각각 원래의 벡터공간과 isomorphic하다. 즉 $$\mathbb{R}^n$$의 경우 그 tangent space는 $$\mathbb{R}^n$$ 자기자신이며, 비슷하게 $$n$$-torus $$T^n\cong \mathbb{R}^n/\mathbb{Z}^n$$의 경우 각 점에서의 tangent space는 quotient topology를 취하기 전인 $$\mathbb{R}^n$$과 같다. $$\GL(n;\mathbb{R})$$의 경우, 벡터공간 $$\Mat_n(\mathbb{R})$$의 open submanifold이므로 마찬가지로 각 점에서의 tangent space는 $$\Mat_n(\mathbb{R})$$과 같다.
 
 </div>
 
@@ -206,7 +206,7 @@ $$\lVert XY\rVert\leq\lVert X\rVert\lVert Y\rVert$$
 
 이 성립하므로, 이 사실들을 종합하면 임의의 $$X\in\Mat_n(\mathbb{R})$$에 대하여 다음의 *matrix exponential*
 
-$$\exp(X)=\sum_{i=0}^\infty\frac{X^k}{k!}$$
+$$\exp(X)=\sum_{k=0}^\infty\frac{X^k}{k!}$$
 
 이 잘 정의된다는 것을 알 수 있다. 
 

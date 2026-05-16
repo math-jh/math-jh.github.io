@@ -34,23 +34,23 @@ $$\mathfrak{g} = \mathfrak{h} \oplus \bigoplus_{\alpha \in \Phi} \mathfrak{g}_\a
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$G$$의 parabolic subgroup $$P$$를 포함하는 Borel subgroup $$B$$를 고정하고, regular nilpotent element $$e \in \mathfrak{g}$$를 선택한다. 이제 affine space $$\mathfrak{n}^-$$ 위에서 다음과 같이 **Peterson variety** $$Y_P^\ast$$를 정의한다.
+<ins id="def1">**정의 1**</ins> $$G$$의 parabolic subgroup $$P$$를 포함하는 Borel subgroup $$B$$를 고정하고, regular nilpotent element $$e \in \mathfrak{g}$$를 선택한다. 이제 affine space $$\mathfrak{n}^-$$ 위에서 다음과 같이 **Peterson variety** $$Y_P^\circ$$를 정의한다.
 
-$$Y_P^\ast = \left\{ x \in \mathfrak{n}^- \;\middle|\; x \in [\mathfrak{n}^-, \mathfrak{n}^-]^\perp,\; e \in \overline{G \cdot x} \right\}$$
+$$Y_P^\circ = \left\{ x \in \mathfrak{n}^- \;\middle|\; x \in [\mathfrak{n}^-, \mathfrak{n}^-]^\perp,\; e \in \overline{G \cdot x} \right\}$$
 
-보다 엄밀하게, $$Y_P^\ast$$는 regular nilpotent element $$e$$와 parabolic subgroup $$P$$에 의해 결정되는 $$\mathfrak{n}^-$$의 affine closed subvariety이며, $$e \in Y_P^\ast$$를 포함한다.
+보다 엄밀하게, $$Y_P^\circ$$는 regular nilpotent element $$e$$와 parabolic subgroup $$P$$에 의해 결정되는 $$\mathfrak{n}^-$$의 affine closed subvariety이며, $$e \in Y_P^\circ$$를 포함한다.
 
 </div>
 
-위의 정의는 의도적으로 직관적인 형태로 기술하였다. Peterson variety의 정확한 방정식은 Lie algebra의 representation theory에 깊게 의존하며, 일반적으로는 explicit하게 적기가 어렵다. 그러나 중요한 점은 $$Y_P^\ast$$가 $$\mathfrak{n}^-$$ 내에서 자연스럽게 등장하는 affine variety이며, 그 기하학적 성질이 $$G/P$$의 quantum cohomology를 완전히 결정한다는 사실이다.
+위의 정의는 의도적으로 직관적인 형태로 기술하였다. Peterson variety의 정확한 방정식은 Lie algebra의 representation theory에 깊게 의존하며, 일반적으로는 explicit하게 적기가 어렵다. 그러나 중요한 점은 $$Y_P^\circ$$가 $$\mathfrak{n}^-$$ 내에서 자연스럽게 등장하는 affine variety이며, 그 기하학적 성질이 $$G/P$$의 quantum cohomology를 완전히 결정한다는 사실이다.
 
-실제로 Marsh-Rietsch의 formulation에서는 $$Y_P^\ast$$를 flag variety의 한 chart 위에서 정의할 수도 있다. $$R = G/B_-$$를 full flag variety의 opposite 버전이라 하고, $$F \in \mathfrak{g}^\ast$$를 dualized positive Chevalley generators의 합
+실제로 Marsh-Rietsch의 formulation에서는 $$Y_P^\circ$$를 flag variety의 한 chart 위에서 정의할 수도 있다. $$R = G/B_-$$를 full flag variety의 opposite 버전이라 하고, $$F \in \mathfrak{g}^\ast$$를 dualized positive Chevalley generators의 합
 
 $$F = e_1^\ast + e_2^\ast + \cdots + e_{n-1}^\ast$$
 
 이라 할 때, coadjoint action을 이용하여
 
-$$Y_P^\ast = \{ gB_- \in R \mid g^{-1} \cdot F \in [\mathfrak{n}_-, \mathfrak{n}_-]^\perp \}$$
+$$Y_P^\circ = \{ gB_- \in R \mid g^{-1} \cdot F \in [\mathfrak{n}_-, \mathfrak{n}_-]^\perp \}$$
 
 로 정의할 수 있다. 이 정의는 $$\mathfrak{n}^-$$의 원소들과 $$G/B_-$$의 적절한 affine chart 사이의 동형을 통해 위의 정의 1과 일치한다.
 
@@ -92,7 +92,7 @@ $$\tilde{M}_n = \begin{pmatrix} \x_1 & q_1 & 0 & \cdots & 0 \\ -1 & \x_2 & q_2 &
 
 <ins id="prop3">**명제 3**</ins> (Quantum Chevalley formula). $$X = G/P$$의 quantum cohomology에서 simple root $$\alpha$$에 대응하는 divisor class $$\sigma^{s_\alpha}$$와 임의의 Schubert class $$\sigma^w$$의 quantum product는
 
-$$\sigma^{s_\alpha} \star \sigma^w = \sum_{\beta} c_{\beta} \sigma^{w\'} q^\beta$$
+$$\sigma^{s_\alpha} \star \sigma^w = \sum_{w', \beta} c_{w', \beta} \sigma^{w'} q^\beta$$
 
 로 주어진다. 여기서 우변의 합은 classical term과 quantum correction term으로 이루어지며, quantum correction은 degree $$\beta \in H_2(X, \mathbb{Z})$$를 갖는 rational curve들의 기여를 반영한다.
 
@@ -108,13 +108,13 @@ quantum Chevalley formula의 정확한 계수 $$c_\beta$$는 Gromov-Witten invar
 
 ## Dale Peterson의 정리
 
-Dale Peterson의 핵심 발견은 다음과 같다. Peterson variety $$Y_P^\ast$$의 coordinate ring이 $$G/P$$의 quantum cohomology ring과 동형이다. 이 동형은 단순한 차원의 일치를 넘어서, Schubert class와 regular function 사이의 명시적 대응을 제공한다.
+Dale Peterson의 핵심 발견은 다음과 같다. Peterson variety $$Y_P^\circ$$의 coordinate ring이 $$G/P$$의 quantum cohomology ring과 동형이다. 이 동형은 단순한 차원의 일치를 넘어서, Schubert class와 regular function 사이의 명시적 대응을 제공한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> (Dale Peterson). $$G$$를 complex semisimple algebraic group, $$P \subset G$$를 parabolic subgroup이라 하자. Peterson variety $$Y_P^\ast \subset \mathfrak{n}^-$$에 대해, 그 coordinate ring $$\mathbb{C}[Y_P^\ast]$$는 $$X = G/P$$의 quantum cohomology ring $$qH^\ast(X, \mathbb{C})[q^{-1}]$$과 isomorphic하다. 즉,
+<ins id="prop4">**명제 4**</ins> (Dale Peterson). $$G$$를 complex semisimple algebraic group, $$P \subset G$$를 parabolic subgroup이라 하자. Peterson variety $$Y_P^\circ \subset \mathfrak{n}^-$$에 대해, 그 coordinate ring $$\mathbb{C}[Y_P^\circ]$$는 $$X = G/P$$의 quantum cohomology ring $$qH^\ast(X, \mathbb{C})[q^{-1}]$$과 isomorphic하다. 즉,
 
-$$\mathbb{C}[Y_P^\ast] \cong qH^\ast(X, \mathbb{C})[q^{-1}]$$
+$$\mathbb{C}[Y_P^\circ] \cong qH^\ast(X, \mathbb{C})[q^{-1}]$$
 
 이 성립한다. 여기서 $$[q^{-1}]$$은 모든 quantum parameter $$q_i$$를 invert시킨 localized ring을 의미한다.
 
@@ -122,39 +122,39 @@ $$\mathbb{C}[Y_P^\ast] \cong qH^\ast(X, \mathbb{C})[q^{-1}]$$
 
 <details class="proof">
 
-<ins>**증명**</ins> Peterson isomorphism의 핵심 아이디어는 quantum cohomology ring의 Schubert basis가 Peterson variety 위의 regular function으로 표현될 수 있다는 점이다. Peterson은 full flag variety의 opposite 버전 $$R = G/B_-$$ 위에 $$Y_P^\ast$$를 정의하고, coadjoint action을 이용하여 $$Y_P^\ast$$의 coordinate ring이 quantum cohomology와 동형임을 보였다. 이 증명은 Langlands dual group $$G^\vee$$의 Toda lattice integrable system과의 연결을 핵심적으로 사용하며, quantum parameter $$q_i$$는 $$Y_P^\ast$$ 위의 regular function으로 해석된다. Rietsch는 type A의 경우 이 동형이 explicit하게 주어짐을 보였으며, 최근 Lam-Shimozono와 others는 equivariant setting으로 확장하였다. 자세한 내용은 [Pet], [Rie]를 참조한다.
+<ins>**증명**</ins> Peterson isomorphism의 핵심 아이디어는 quantum cohomology ring의 Schubert basis가 Peterson variety 위의 regular function으로 표현될 수 있다는 점이다. Peterson은 full flag variety의 opposite 버전 $$R = G/B_-$$ 위에 $$Y_P^\circ$$를 정의하고, coadjoint action을 이용하여 $$Y_P^\circ$$의 coordinate ring이 quantum cohomology와 동형임을 보였다. 이 증명은 Langlands dual group $$G^\vee$$의 Toda lattice integrable system과의 연결을 핵심적으로 사용하며, quantum parameter $$q_i$$는 $$Y_P^\circ$$ 위의 regular function으로 해석된다. Rietsch는 type A의 경우 이 동형이 explicit하게 주어짐을 보였으며, 최근 Lam-Shimozono와 others는 equivariant setting으로 확장하였다. 자세한 내용은 [Pet], [Rie]를 참조한다.
 
 </details>
 
-이 동형을 **Peterson isomorphism**이라 부른다. 위 명제에서 coordinate ring $$\mathbb{C}[Y_P^\ast]$$는 possibly non-reduced sense로 이해할 수 있으나, type A의 경우에는 $$Y_P^\ast$$가 reduced variety가 되어 reduced coordinate ring을 사용할 수 있다.
+이 동형을 **Peterson isomorphism**이라 부른다. 위 명제에서 coordinate ring $$\mathbb{C}[Y_P^\circ]$$는 possibly non-reduced sense로 이해할 수 있으나, type A의 경우에는 $$Y_P^\circ$$가 reduced variety가 되어 reduced coordinate ring을 사용할 수 있다.
 
 명제 4의 중요한 특징은 **좌변이 순수하게 Lie-theoretic 객체이며, 우변이 순수하게 enumerative-geometric 객체**라는 점이다. Peterson variety는 Lie algebra $$\mathfrak{g}$$의 nilpotent cone 근처에서 자연스럽게 정의되는 객체인 반면, quantum cohomology는 holomorphic curve의 개수를 세는 Gromov-Witten theory에서 비롯된다. 이 두 세계가 동일한 대수적 구조를 갖는다는 사실은 매우 비직관적이다.
 
 ## 동형의 직관적 의미
 
-Peterson isomorphism $$\mathbb{C}[Y_P^\ast] \cong qH^\ast(X)$$가 갖는 기하학적 의미를 여러 관점에서 해석할 수 있다.
+Peterson isomorphism $$\mathbb{C}[Y_P^\circ] \cong qH^\ast(X)$$가 갖는 기하학적 의미를 여러 관점에서 해석할 수 있다.
 
-**첫째, deformation theory의 관점이다.** Classical cohomology $$H^\ast(X)$$는 $$X$$의 linearized geometric information을 담고 있다. Quantum cohomology는 이에 quantum correction을 가하여 deformation한 구조이며, 이 deformation의 방향과 크기는 $$X$$ 안의 holomorphic curve들이 결정한다. 한편 Peterson variety $$Y_P^\ast$$는 nilpotent cone의 특정한 slice로 볼 수 있으며, 이 slice의 기하학은 $$G/P$$의 combinatorics와 밀접하게 연결된다. Peterson isomorphism은 이 deformation이 Lie algebra의 representation theory에 내재되어 있음을 보여준다.
+**첫째, deformation theory의 관점이다.** Classical cohomology $$H^\ast(X)$$는 $$X$$의 linearized geometric information을 담고 있다. Quantum cohomology는 이에 quantum correction을 가하여 deformation한 구조이며, 이 deformation의 방향과 크기는 $$X$$ 안의 holomorphic curve들이 결정한다. 한편 Peterson variety $$Y_P^\circ$$는 nilpotent cone의 특정한 slice로 볼 수 있으며, 이 slice의 기하학은 $$G/P$$의 combinatorics와 밀접하게 연결된다. Peterson isomorphism은 이 deformation이 Lie algebra의 representation theory에 내재되어 있음을 보여준다.
 
-**둘째, mirror symmetry의 관점이다.** [\[Mirror Symmetry\] \S Mirror Symmetry 개요](/ko/math/mirror_symmetry/overview)에서 우리는 A-model의 quantum cohomology $$QH^\ast(X)$$가 B-model의 Jacobi ring $$\operatorname{Jac}(W)$$와 동형임을 살펴 보았다. Peterson variety는 이 mirror symmetry의 또 다른 면모를 드러낸다. $$Y_P^\ast$$ 위에는 natural한 superpotential $$W$$가 존재하며, Peterson variety의 특정 stratum은 $$W$$의 critical locus와 동형이 된다. 따라서 Peterson isomorphism은
+**둘째, mirror symmetry의 관점이다.** [\[Mirror Symmetry\] \S Mirror Symmetry 개요](/ko/math/mirror_symmetry/overview)에서 우리는 A-model의 quantum cohomology $$QH^\ast(X)$$가 B-model의 Jacobi ring $$\operatorname{Jac}(W)$$와 동형임을 살펴 보았다. Peterson variety는 이 mirror symmetry의 또 다른 면모를 드러낸다. $$Y_P^\circ$$ 위에는 natural한 superpotential $$W$$가 존재하며, Peterson variety의 특정 stratum은 $$W$$의 critical locus와 동형이 된다. 따라서 Peterson isomorphism은
 
-$$qH^\ast(X) \cong \mathbb{C}[Y_P^\ast] \cong \operatorname{Jac}(W)$$
+$$qH^\ast(X) \cong \mathbb{C}[Y_P^\circ] \cong \operatorname{Jac}(W)$$
 
 의 연쇄를 형성하여, A-model과 B-model 사이의 대응을 Lie-theoretic 언어로 재구성한다.
 
-**셋째, integrable system의 관점이다.** Quantum cohomology ring에는 commutative differential operator들의 체계, 즉 quantum integrable system이 내재되어 있다. Peterson variety 위의 regular function들은 이 operator들의 동시 고유함수로 작용하며, $$Y_P^\ast$$의 점들은 고유값을 parameterize한다. 이는 quantum cohomology의 곱셈연산자들을 동시 대각화하는 문제를 기하학적으로 해석한 것이다.
+**셋째, integrable system의 관점이다.** Quantum cohomology ring에는 commutative differential operator들의 체계, 즉 quantum integrable system이 내재되어 있다. Peterson variety 위의 regular function들은 이 operator들의 동시 고유함수로 작용하며, $$Y_P^\circ$$의 점들은 고유값을 parameterize한다. 이는 quantum cohomology의 곱셈연산자들을 동시 대각화하는 문제를 기하학적으로 해석한 것이다.
 
 ## Strata와 quantum parameter의 대응
 
-Peterson variety $$Y_P^\ast$$는 자연스러운 stratification을 갖는다. 이 stratification은 $$G/P$$의 Schubert decomposition과 대응하며, 각 stratum은 특정한 quantum parameter $$q$$의 값과 관련된다.
+Peterson variety $$Y_P^\circ$$는 자연스러운 stratification을 갖는다. 이 stratification은 $$G/P$$의 Schubert decomposition과 대응하며, 각 stratum은 특정한 quantum parameter $$q$$의 값과 관련된다.
 
-구체적으로, Peterson variety는 Bruhat decomposition의 dual 버전과 유사한 방식으로 decompose된다. $$Y_P^\ast$$의 각 stratum $$Y_{P,w}^\ast$$는 Weyl group element $$w$$에 의해 인덱싱되며, 이 stratum의 coordinate ring은 quantum cohomology에서 특정한 localization을 취한 것과 동형이 된다.
+구체적으로, Peterson variety는 Bruhat decomposition의 dual 버전과 유사한 방식으로 decompose된다. $$Y_P^\circ$$의 각 stratum $$Y_{P,w}^\ast$$는 Weyl group element $$w$$에 의해 인덱싱되며, 이 stratum의 coordinate ring은 quantum cohomology에서 특정한 localization을 취한 것과 동형이 된다.
 
-특히 중요한 것은 open stratum $$Y_{P, e}^\ast$$이다. 여기서 $$e$$는 identity element를 의미하며, 이 stratum은 $$Y_P^\ast$$의 가장 큰 Zariski open subset이다. Rietsch의 결과에 따르면, 이 open stratum의 coordinate ring $$\mathbb{C}[Y_{P,e}^\ast]$$는 localized quantum cohomology $$qH^\ast(X)_{\text{loc}}$$와 동형이며, 이는 Marsh-Rietsch의 Grassmannian mirror symmetry construction의 출발점이 된다.
+특히 중요한 것은 open stratum $$Y_{P, e}^\ast$$이다. 여기서 $$e$$는 identity element를 의미하며, 이 stratum은 $$Y_P^\circ$$의 가장 큰 Zariski open subset이다. Rietsch의 결과에 따르면, 이 open stratum의 coordinate ring $$\mathbb{C}[Y_{P,e}^\ast]$$는 localized quantum cohomology $$qH^\ast(X)_{\text{loc}}$$와 동형이며, 이는 Marsh-Rietsch의 Grassmannian mirror symmetry construction의 출발점이 된다.
 
 quantum parameter $$q$$는 Peterson variety 위에서 geometric morphism로 해석될 수 있다. 명제 4의 동형 아래에서 $$q$$에 해당하는 regular function은 유한사상
 
-$$q: Y_P^\ast \longrightarrow (\mathbb{C}^\ast)^r$$
+$$q: Y_P^\circ \longrightarrow (\mathbb{C}^\ast)^r$$
 
 을 정의하며, 여기서 $$r$$은 quantum parameter의 개수이다. 이 사상의 fiber는 특정한 $$q$$ 값을 고정했을 때의 Peterson variety를 주며, 이는 quantum cohomology의 특정한 specialization과 대응한다. 특히 $$q \to 0$$이 classical limit이며, $$q=1$$은 특수한 값으로 Gromov-Witten invariant를 직접 계산할 때 나타난다.
 
@@ -162,7 +162,7 @@ $$q: Y_P^\ast \longrightarrow (\mathbb{C}^\ast)^r$$
 
 Peterson variety와 quantum cohomology의 동형은 Grassmannian mirror symmetry의 핵심 building block이다. Marsh와 Rietsch는 이 동형을 확장하여, Grassmannian $$\operatorname{Gr}(k, n)$$의 mirror Landau-Ginzburg model을 명시적으로 구성하였다. 그들의 construction에서는 Peterson variety의 open stratum이 mirror dual space의 일부로 등장하며, superpotential $$W$$는 Lie-theoretic data로부터 자연스럽게 정의된다.
 
-이러한 결과는 Lie theory와 enumerative geometry 사이의 깊은 연결을 보여주며, 특히 Langlands duality의 관점에서 풍부한 해석을 허용한다. Peterson scheme의 정의를 Langlands dual group $$G^\vee$$로 확장하면, equivariant quantum cohomology까지 포괄하는 더 일반적인 동형을 얻을 수 있다. 이 방향의 최근 결과는 Peterson의 원래 발견이 갖는 힘과 범용성을 다시 한번 확인시켜 준다.
+이러한 결과는 Lie theory와 enumerative geometry 사이의 깊은 연결을 보여주며, 특히 Langlands duality의 관점에서 풍부한 해석을 허용한다. Peterson scheme의 정의를 Langlands dual group $$G^\vee$$로 확장하면, equivariant quantum cohomology까지 포괄하는 더 일반적인 동형을 얻을 수 있다. 이 방향의 최근 결과는 Peterson의 원래 발견이 갖는 힘과 범용성을 다시 한번 확인시켜 준다. Peterson stratification에 나타나는 Schubert variety의 특이점 정보는 [§Kazhdan–Lusztig polynomial](/ko/math/lie_theory/kazhdan_lusztig)을 통해 조합적으로 인코딩되며, quantum Schubert positivity의 일부 측면은 KL theory의 양성과 관련된다.
 
 ---
 
