@@ -1,0 +1,46 @@
+---
+layout: archive
+---
+
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+  {% assign lang_full = lang_prefix | append: "/" %}
+{% endif %}
+
+{{ content }}
+
+{% assign limit = page.limit | default: 50 %}
+{% comment %}
+  Sort by `date` (always Time-typed) because `last_modified_at` from
+  jekyll-last-modified-at can return a Drop/lazy object that breaks Liquid's
+  `sort` filter ("comparison of Array with Array"). Display still uses
+  `last_modified_at` for accuracy.
+{% endcomment %}
+{% assign posts_filtered = site.posts | where_exp: "post", "post.permalink contains lang_full" | sort: 'date' | reverse %}
+
+<div class="entries-list">
+  {% for post in posts_filtered limit: limit %}
+    {% assign mod_date = post.last_modified_at | default: post.date %}
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+          <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
+        </h2>
+        <p class="page__meta">
+          <span class="page__meta-date">
+            <i class="material-icons md-14" aria-hidden="true" style="vertical-align:-.1em;">&#xEBCC;</i>
+            <time datetime="{{ mod_date | date_to_xmlschema }}">{{ mod_date | date: "%Y-%m-%d" }}</time>
+          </span>
+          {% if post.categories.size > 0 %}
+            <span class="page__meta-sep"></span>
+            <span class="page__meta-category">{{ post.categories | first }}</span>
+          {% endif %}
+        </p>
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+        {% endif %}
+      </article>
+    </div>
+  {% endfor %}
+</div>
