@@ -61,11 +61,11 @@ $$\Div_T(X_\Sigma) \hookrightarrow \Div(X_\Sigma) \twoheadrightarrow \Cl(X_\Sigm
 
 정의에 의해 이 kernel은 $$\Div_T(X_\Sigma)$$의 원소 중 $$\Cl(X_\Sigma)$$에서 $$0$$이 되는 것들, 즉 *torus-invariant이면서 동시에 principal*한 divisor들의 모임이다. 그러므로 이는 결국 toric variety 위에서 어떤 rational function이 torus-invariant principal divisor를 정의하는지를 묻는 문제로 귀결된다.
 
-그럼 가장 자연스러운 후보는 lattice $$M$$의 원소 $$m \in M$$에 대응하는 *character* $$\rchi^m$$이다. 각각의 $$m \in M$$에 대해, character $$\rchi^m: T_N \to \mathbb{C}^\ast$$는 $$T_N \subset X_\Sigma$$가 open dense이므로 $$X_\Sigma$$ 위의 유리함수로 볼 수 있다 ([§아핀 토릭 다양체, ⁋명제 8](/ko/math/toric_geometry/affine_toric_varieties#prop8)). 이 때, $$\rchi^m$$ 자체는 $$T_N$$의 작용 하에서 invariant하지 않지만, $$t \in T_N$$에 대해
+그럼 가장 자연스러운 후보는 lattice $$M$$의 원소 $$m \in M$$에 대응하는 *character* $$\rchi^m$$이다. 각각의 $$m \in M$$에 대해, character $$\rchi^m: T_N \to \mathbb{C}^\ast$$는 $$T_N \subset X_\Sigma$$가 open dense이므로 $$X_\Sigma$$ 위의 유리함수로 볼 수 있다 ([§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)). 이 때, $$\rchi^m$$ 자체는 $$T_N$$의 작용 하에서 invariant하지 않지만, $$t \in T_N$$에 대해
 
 $$(t \cdot \rchi^m)(x) = \rchi^m(t x) = \rchi^m(t) \cdot \rchi^m(x)$$
 
-으로 ([§아핀 토릭 다양체, ⁋명제 8](/ko/math/toric_geometry/affine_toric_varieties#prop8)의 convention) 이들은 상수배만큼만 차이난다. 그런데 상수배는 zero와 pole을 변화시키지 않으므로, $$\rchi^m$$들 자체는 torus-invariant가 아니더라도 $$\divisor(\rchi^m)$$은 torus-invariant이고, $$\divisor(\rchi^m) \in \Div_T(X_\Sigma)$$이다. 우리의 첫 목표는 이 divisor를 fan의 데이터로 명시적으로 적는 것이다.
+으로 ([§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)의 convention) 이들은 상수배만큼만 차이난다. 그런데 상수배는 zero와 pole을 변화시키지 않으므로, $$\rchi^m$$들 자체는 torus-invariant가 아니더라도 $$\divisor(\rchi^m)$$은 torus-invariant이고, $$\divisor(\rchi^m) \in \Div_T(X_\Sigma)$$이다. 우리의 첫 목표는 이 divisor를 fan의 데이터로 명시적으로 적는 것이다.
 
 <div class="proposition" markdown="1">
 
