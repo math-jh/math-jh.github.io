@@ -149,7 +149,7 @@ $$P_D = \{u \in M_\mathbb{R} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ f
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-($$\Rightarrow$$) $$X_\Sigma$$가 projective라면 그 위에 very ample line bundle $$\mathcal{L}$$이 존재하며, 위의 대응에 의해 이는 $$T_N$$-invariant Cartier divisor $$D$$로 표현된다. 앞서 본 바, 이로부터 얻어지는 $$P_D$$는 lattice polytope이며, $$\mathcal{L}$$이 very ample이라는 사실은 대응되는 piecewise linear function $$\psi_D$$가 strictly convex임과 동치이고 ([§토러스 인자와 선다발, ⁋명제 10](/ko/math/toric_geometry/toric_divisors#prop10)), 이로부터 $$P_D$$의 normal fan이 $$\Sigma$$와 일치함을 얻는다.
+($$\Rightarrow$$) $$X_\Sigma$$가 projective라면 그 위에 very ample line bundle $$\mathcal{L}$$이 존재하며, 위의 대응에 의해 이는 $$T_N$$-invariant Cartier divisor $$D$$로 표현된다. 앞서 본 바, 이로부터 얻어지는 $$P_D$$는 lattice polytope이며, $$\mathcal{L}$$이 very ample이라는 사실은 대응되는 piecewise linear function $$\psi_D$$가 strictly convex임과 동치이고 ([§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)), 이로부터 $$P_D$$의 normal fan이 $$\Sigma$$와 일치함을 얻는다.
 
 ($$\Leftarrow$$) $$\Sigma = \Sigma_P$$라 하자. Polytope $$P$$의 데이터 — 즉 각 ray $$\rho$$에 대해 $$a_\rho = -\min_{u \in P}\langle u, v_\rho\rangle$$ — 로부터 $$T_N$$-invariant divisor $$D_P = \sum_\rho a_\rho D_\rho$$를 얻는다. 여기서 $$P$$의 각 vertex가 lattice point라는 사실이 정확히 앞의 compatibility 조건을 충족시켜 $$D_P$$가 Cartier가 되며, 충분히 큰 $$k > 0$$에 대해 $$kD_P$$가 very ample이 된다. 이때 $$kP$$의 lattice point들로 정의되는 monomial map $$\phi_{kP}: T_N \to \mathbb{P}^s$$의 image의 Zariski closure가 $$X_\Sigma$$와 동형이므로 ([명제 9](#prop9) 참고), $$X_\Sigma$$는 projective이다.
 
