@@ -18,7 +18,7 @@ weight: 3
 published: false
 ---
 
-[§Normal fan과 projective toric variety](/ko/math/toric_geometry/normal_fan_projective_toric)에서 우리는 lattice polytope $$P \subset M_{\mathbb{R}}$$의 normal fan $$\Sigma_P$$을 통해 projective toric variety $$X_P$$를 구성하는 방법을 살펴 보았다. 이 구성에서 $$P$$의 기하학적 성질이 $$X_P$$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. Reflexive polytope는 1994년 Batyrev에 의해 도입되어 toric Fano variety의 분류와 mirror symmetry의 조합론적 기반을 제공하는 핵심적인 도구가 되었다. 우리는 이 글에서 reflexive polytope의 정의와 이것이 Gorenstein Fano variety 및 anticanonical divisor와 어떻게 대응하는지를 살펴 본다.
+[§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 우리는 lattice polytope $$P \subset M_{\mathbb{R}}$$의 normal fan $$\Sigma_P$$을 통해 projective toric variety $$X_P$$를 구성하는 방법을 살펴 보았다. 이 구성에서 $$P$$의 기하학적 성질이 $$X_P$$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. Reflexive polytope는 1994년 Batyrev에 의해 도입되어 toric Fano variety의 분류와 mirror symmetry의 조합론적 기반을 제공하는 핵심적인 도구가 되었다. 우리는 이 글에서 reflexive polytope의 정의와 이것이 Gorenstein Fano variety 및 anticanonical divisor와 어떻게 대응하는지를 살펴 본다.
 
 ## Reflexive polytope와 dual polytope
 
@@ -60,7 +60,7 @@ $$\Delta$$가 reflexive이므로 $$\Delta^\circ$$는 정의에 의해 lattice po
 
 대수기하학에서 *Fano variety*는 anticanonical divisor $$-K_X$$가 ample한 ([\[대수다양체\] §선형계, ⁋정의 10](/ko/math/algebraic_varieties/linear_systems#def10)) normal projective variety $$X$$를 의미한다. 여기서 canonical divisor $$K_X$$는 canonical bundle에 대응하는 divisor class이며 ([\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)), $$-K_X$$는 그 역원이다. 만약 $$-K_X$$가 추가로 Cartier divisor라면 ([\[대수다양체\] §인자, ⁋정의 12](/ko/math/algebraic_varieties/divisors#def12)) $$X$$를 *Gorenstein Fano variety*라 부른다. Toric variety의 맥락에서 이 조건은 매우 명시적인 조합론적 조건으로 번역된다.
 
-[§Normal fan과 projective toric variety, ⁋정의 8](/ko/math/toric_geometry/normal_fan_projective_toric#def8)에서 기술한 것처럼, lattice polytope $$P \subset M_{\mathbb{R}}$$에 대해 그 normal fan $$\Sigma_P$$을 통해 toric variety $$X_P = X_{\Sigma_P}$$를 구성할 수 있다. 이제 $$P = \Delta$$가 reflexive polytope라고 가정하자.
+[§토릭 다양체의 정의, ⁋정의 8](/ko/math/toric_geometry/toric_varieties#def8)에서 기술한 것처럼, lattice polytope $$P \subset M_{\mathbb{R}}$$에 대해 그 normal fan $$\Sigma_P$$을 통해 toric variety $$X_P = X_{\Sigma_P}$$를 구성할 수 있다. 이제 $$P = \Delta$$가 reflexive polytope라고 가정하자.
 
 <div class="definition" markdown="1">
 
@@ -126,7 +126,7 @@ $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ 
 
 ## 예시: Projective space
 
-가장 기본적인 reflexive polytope의 예시는 projective space $$\mathbb{P}^n$$에 대응하는 simplex이다. [§Normal fan과 projective toric variety, ⁋예시 11](/ko/math/toric_geometry/normal_fan_projective_toric#ex11)에서 standard simplex $$\Delta_n$$의 normal fan이 $$\mathbb{P}^n$$의 표준 fan임을 보았다. 그러나 $$\Delta_n$$의 꼭짓점 중 하나가 원점이므로 $$0 \notin \operatorname{int}(\Delta_n)$$이다. 따라서 $$\Delta_n$$ 자체는 reflexive polytope가 아니다. 대신, 적절한 변형을 통해 원점을 내부로 옮긴 polytope를 생각할 수 있다.
+가장 기본적인 reflexive polytope의 예시는 projective space $$\mathbb{P}^n$$에 대응하는 simplex이다. [§토릭 다양체의 정의, ⁋예시 11](/ko/math/toric_geometry/toric_varieties#ex11)에서 standard simplex $$\Delta_n$$의 normal fan이 $$\mathbb{P}^n$$의 표준 fan임을 보았다. 그러나 $$\Delta_n$$의 꼭짓점 중 하나가 원점이므로 $$0 \notin \operatorname{int}(\Delta_n)$$이다. 따라서 $$\Delta_n$$ 자체는 reflexive polytope가 아니다. 대신, 적절한 변형을 통해 원점을 내부로 옮긴 polytope를 생각할 수 있다.
 
 <div class="example" markdown="1">
 
@@ -138,7 +138,7 @@ $$\Delta = \{ (x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge -1 \text{ for all
 
 $$\Delta^\circ = \operatorname{conv}\{ e_1, e_2, \ldots, e_n, -(e_1 + e_2 + \cdots + e_n) \}$$
 
-가 되어 다시 lattice polytope가 된다. 즉 $$\Delta$$는 reflexive polytope이다. 한편 $$\Delta$$의 normal fan은 [§Normal fan과 projective toric variety, ⁋예시 11](/ko/math/toric_geometry/normal_fan_projective_toric#ex11)에서 확인한 $$\mathbb{P}^n$$의 표준 fan과 일치하므로 $$X_\Delta \cong \mathbb{P}^n$$이 성립한다.
+가 되어 다시 lattice polytope가 된다. 즉 $$\Delta$$는 reflexive polytope이다. 한편 $$\Delta$$의 normal fan은 [§토릭 다양체의 정의, ⁋예시 11](/ko/math/toric_geometry/toric_varieties#ex11)에서 확인한 $$\mathbb{P}^n$$의 표준 fan과 일치하므로 $$X_\Delta \cong \mathbb{P}^n$$이 성립한다.
 
 이 예시에서 $$\Delta$$의 lattice points는 꼭짓점 외에도 boundary와 내부 위에 여러 lattice point들이 존재할 수 있다. 예를 들어 $$n=2$$일 때 $$\Delta = \operatorname{conv}\{(-1,-1), (2,-1), (-1,2)\}$$의 lattice points는
 

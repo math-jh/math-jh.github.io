@@ -189,7 +189,7 @@ Cox ring $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)]$$의 $$\beta$$차 성
 
 ## Birational geometry와 secondary fan
 
-Cox construction은 toric variety의 birational geometry를 이해하는 데에도 강력한 도구를 제공한다. [§Normal fan과 projective toric variety, ⁋명제 9](/ko/math/toric_geometry/normal_fan_projective_toric#prop9)에서 보았듯이, lattice polytope으로부터 projective toric variety를 구성할 수 있다. Cox construction의 관점에서, 이러한 polytope들의 변화는 GIT quotient에서 linearization의 변화에 대응한다.
+Cox construction은 toric variety의 birational geometry를 이해하는 데에도 강력한 도구를 제공한다. [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)에서 보았듯이, lattice polytope으로부터 projective toric variety를 구성할 수 있다. Cox construction의 관점에서, 이러한 polytope들의 변화는 GIT quotient에서 linearization의 변화에 대응한다.
 
 구체적으로, Cox ring $$S$$와 군 $$G$$를 고정하면, different linearizations of the $$G$$-action correspond to different choices of ample line bundles, 즉 character space에서 GIT equivalence classes에 해당하는 chamber decomposition, 즉 **secondary fan**의 다른 chamber를 선택하는 것에 대응한다. Effective cone $$\operatorname{Eff}(X_\Sigma)$$는 divisor class group에서 pseudo-effective divisor들의 cone이며, 이 cone은 finitely many rational polyhedral chamber로 분해된다. 각 chamber의 interior에서는 GIT quotient가 동일한 birational type의 toric variety를 준다. 이러한 chamber decomposition을 *secondary fan*<sub>secondary fan</sub>이라 부른다.
 

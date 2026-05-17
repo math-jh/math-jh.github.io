@@ -828,8 +828,8 @@ toric_geometry-ko:
     children:
       - title: "아핀 토릭 다양체"
         url: ko/math/toric_geometry/affine_toric_varieties
-      - title: "Normal fan과 projective toric variety"
-        url: ko/math/toric_geometry/normal_fan_projective_toric
+      - title: "토릭 다양체의 정의"
+        url: ko/math/toric_geometry/toric_varieties
       - title: "Reflexive polytope와 Fano variety"
         url: ko/math/toric_geometry/reflexive_polytope_fano
       - title: "Toric divisor와 line bundle"
