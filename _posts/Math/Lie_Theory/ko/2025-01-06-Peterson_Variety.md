@@ -5,7 +5,7 @@ excerpt: "Dale Peterson의 정리를 중심으로 Peterson variety와 quantum co
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/peterson_variety
 sidebar: 
-    nav: "lie_theory-ko"
+    nav: "Lie_theory-ko"
 
 header:
     overlay_image: /assets/images/Math/Mirror_Symmetry/Peterson_Variety.png
@@ -34,25 +34,21 @@ $$\mathfrak{g} = \mathfrak{h} \oplus \bigoplus_{\alpha \in \Phi} \mathfrak{g}_\a
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$G$$의 parabolic subgroup $$P$$를 포함하는 Borel subgroup $$B$$를 고정하고, regular nilpotent element $$e \in \mathfrak{g}$$를 선택한다. 이제 affine space $$\mathfrak{n}^-$$ 위에서 다음과 같이 **Peterson variety** $$Y_P^\circ$$를 정의한다.
-
-$$Y_P^\circ = \left\{ x \in \mathfrak{n}^- \;\middle|\; x \in [\mathfrak{n}^-, \mathfrak{n}^-]^\perp,\; e \in \overline{G \cdot x} \right\}$$
-
-보다 엄밀하게, $$Y_P^\circ$$는 regular nilpotent element $$e$$와 parabolic subgroup $$P$$에 의해 결정되는 $$\mathfrak{n}^-$$의 affine closed subvariety이며, $$e \in Y_P^\circ$$를 포함한다.
-
-</div>
-
-위의 정의는 의도적으로 직관적인 형태로 기술하였다. Peterson variety의 정확한 방정식은 Lie algebra의 representation theory에 깊게 의존하며, 일반적으로는 explicit하게 적기가 어렵다. 그러나 중요한 점은 $$Y_P^\circ$$가 $$\mathfrak{n}^-$$ 내에서 자연스럽게 등장하는 affine variety이며, 그 기하학적 성질이 $$G/P$$의 quantum cohomology를 완전히 결정한다는 사실이다.
-
-실제로 Marsh-Rietsch의 formulation에서는 $$Y_P^\circ$$를 flag variety의 한 chart 위에서 정의할 수도 있다. $$R = G/B_-$$를 full flag variety의 opposite 버전이라 하고, $$F \in \mathfrak{g}^\ast$$를 dualized positive Chevalley generators의 합
+<ins id="def1">**정의 1**</ins> $$R = G/B_-$$를 full flag variety의 opposite version이라 하고, $$F \in \mathfrak{g}^\ast$$를 dualized positive Chevalley generators의 합
 
 $$F = e_1^\ast + e_2^\ast + \cdots + e_{n-1}^\ast$$
 
-이라 할 때, coadjoint action을 이용하여
+이라 하자 (이는 $$\mathfrak{g}^\ast$$에서의 *regular nilpotent*에 해당). Parabolic subgroup $$P \supseteq B$$에 대해, $$G/P$$의 *Peterson variety* $$Y_P^\circ \subseteq R$$는 다음과 같이 정의된다:
 
-$$Y_P^\circ = \{ gB_- \in R \mid g^{-1} \cdot F \in [\mathfrak{n}_-, \mathfrak{n}_-]^\perp \}$$
+$$Y_P^\circ = \{\, gB_- \in R \;\mid\; g^{-1} \cdot F \in [\mathfrak{n}_-, \mathfrak{n}_-]^\perp \,\}.$$
 
-로 정의할 수 있다. 이 정의는 $$\mathfrak{n}^-$$의 원소들과 $$G/B_-$$의 적절한 affine chart 사이의 동형을 통해 위의 정의 1과 일치한다.
+여기서 $$g^{-1} \cdot F$$는 $$G$$의 $$\mathfrak{g}^\ast$$에 대한 coadjoint action, $$[\mathfrak{n}_-, \mathfrak{n}_-]^\perp \subseteq \mathfrak{g}^\ast$$는 derived subalgebra의 annihilator이다.
+
+</div>
+
+이 정의는 표준 Peterson variety가 flag variety의 *부분다양체*로 등장한다는 사실을 반영한다. $$P = B$$인 full flag 경우는 Kostant–Peterson의 원래 정의이며 ([Pet], [Rie]), 일반 $$P$$에 대해서는 Marsh-Rietsch [MR]의 일반화에 해당한다. $$F$$가 regular nilpotent이고 그 centralizer가 $$\dim = \operatorname{rank}(\mathfrak{g})$$의 abelian subalgebra가 된다는 Kostant의 정리가 본 정의의 기하학적 차원을 결정한다.
+
+동치인 표현으로, $$\mathfrak{n}^-$$의 적절한 affine chart 위에서 $$Y_P^\circ$$는 *Hessenberg variety*의 한 예시 (regular nilpotent Hessenberg variety with Hessenberg space $$\mathfrak{b} \oplus \bigoplus_i \mathbb{C} f_i$$)로 기술된다. 이는 Insko-Tymoczko 등의 후속 work에서 활용된다.
 
 ## Quantum cohomology의 generator와 relation
 
@@ -80,9 +76,10 @@ $$\tilde{M}_n = \begin{pmatrix} \x_1 & q_1 & 0 & \cdots & 0 \\ -1 & \x_2 & q_2 &
 
 </div>
 
-<details class="proof">
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-<ins>**증명**</ins> Givental과 Kim은 flag variety의 quantum cohomology를 Toda lattice의 spectral curve와 연결하였다. 핵심 아이디어는 Schubert class $$\sigma^{s_i}$$를 generator로 하는 quantum cohomology ring의 관계식이, Toda Hamiltonian의 spectral problem에서 자연스럽게 얻어진다는 점이다. Ciocan-Fontanine은 이를 algebraically 완성하여 quantized elementary symmetric polynomial의 vanishing ideal로 quantum cohomology를 기술하였다. 구체적으로 tridiagonal matrix $$\tilde{M}_n$$의 characteristic polynomial은 Toda lattice의 Lax operator와 직접 대응하며, 이 계수들이 0이 되는 조건은 quantum correction을 포함한 Schubert calculus의 관계식을 완전히 encoding한다. 자세한 내용은 [CF], [GK]를 참조한다.
+Givental과 Kim은 flag variety의 quantum cohomology를 Toda lattice의 spectral curve와 연결하였다. 핵심 아이디어는 Schubert class $$\sigma^{s_i}$$를 generator로 하는 quantum cohomology ring의 관계식이, Toda Hamiltonian의 spectral problem에서 자연스럽게 얻어진다는 점이다. Ciocan-Fontanine은 이를 algebraically 완성하여 quantized elementary symmetric polynomial의 vanishing ideal로 quantum cohomology를 기술하였다. 구체적으로 tridiagonal matrix $$\tilde{M}_n$$의 characteristic polynomial은 Toda lattice의 Lax operator와 직접 대응하며, 이 계수들이 0이 되는 조건은 quantum correction을 포함한 Schubert calculus의 관계식을 완전히 encoding한다. 자세한 내용은 [CF], [GK]를 참조한다.
 
 </details>
 
@@ -98,9 +95,10 @@ $$\sigma^{s_\alpha} \star \sigma^w = \sum_{w', \beta} c_{w', \beta} \sigma^{w'} 
 
 </div>
 
-<details class="proof">
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-<ins>**증명**</ins> Quantum Chevalley formula는 classical Chevalley formula의 자연스러운 양자화이다. Classical 설정에서는 divisor class $$\sigma^{s_\alpha}$$와 Schubert class $$\sigma^w$$의 곱이 Bruhat order 위로 주어지는 명시적 합으로 표현된다. Quantum setting에서는 이 classical term에 더해, degree $$\beta > 0$$인 rational curve의 기여가 추가된다. 이 quantum correction term의 계수는 3-point Gromov-Witten invariant $$\langle \sigma^{s_\alpha}, \sigma^w, \sigma_{w'} \rangle_\beta$$로 주어지며, 이는 degree $$\beta$$의 rational curve가 주어진 Schubert variety들과 만나는 횟수를 센다. Fulton과 Woodward는 이 formula가 quantum cohomology ring의 generator와 relation을 완전히 결정함을 보였다. 자세한 내용은 [CF]를 참조한다.
+Quantum Chevalley formula는 classical Chevalley formula의 자연스러운 양자화이다. Classical 설정에서는 divisor class $$\sigma^{s_\alpha}$$와 Schubert class $$\sigma^w$$의 곱이 Bruhat order 위로 주어지는 명시적 합으로 표현된다. Quantum setting에서는 이 classical term에 더해, degree $$\beta > 0$$인 rational curve의 기여가 추가된다. 이 quantum correction term의 계수는 3-point Gromov-Witten invariant $$\langle \sigma^{s_\alpha}, \sigma^w, \sigma_{w'} \rangle_\beta$$로 주어지며, 이는 degree $$\beta$$의 rational curve가 주어진 Schubert variety들과 만나는 횟수를 센다. Fulton과 Woodward는 이 formula가 quantum cohomology ring의 generator와 relation을 완전히 결정함을 보였다. 자세한 내용은 [CF]를 참조한다.
 
 </details>
 
@@ -120,9 +118,10 @@ $$\mathbb{C}[Y_P^\circ] \cong qH^\ast(X, \mathbb{C})[q^{-1}]$$
 
 </div>
 
-<details class="proof">
+<details class="proof" markdown="1">
+<summary>증명</summary>
 
-<ins>**증명**</ins> Peterson isomorphism의 핵심 아이디어는 quantum cohomology ring의 Schubert basis가 Peterson variety 위의 regular function으로 표현될 수 있다는 점이다. Peterson은 full flag variety의 opposite 버전 $$R = G/B_-$$ 위에 $$Y_P^\circ$$를 정의하고, coadjoint action을 이용하여 $$Y_P^\circ$$의 coordinate ring이 quantum cohomology와 동형임을 보였다. 이 증명은 Langlands dual group $$G^\vee$$의 Toda lattice integrable system과의 연결을 핵심적으로 사용하며, quantum parameter $$q_i$$는 $$Y_P^\circ$$ 위의 regular function으로 해석된다. Rietsch는 type A의 경우 이 동형이 explicit하게 주어짐을 보였으며, 최근 Lam-Shimozono와 others는 equivariant setting으로 확장하였다. 자세한 내용은 [Pet], [Rie]를 참조한다.
+Peterson isomorphism의 핵심 아이디어는 quantum cohomology ring의 Schubert basis가 Peterson variety 위의 regular function으로 표현될 수 있다는 점이다. Peterson은 full flag variety의 opposite 버전 $$R = G/B_-$$ 위에 $$Y_P^\circ$$를 정의하고, coadjoint action을 이용하여 $$Y_P^\circ$$의 coordinate ring이 quantum cohomology와 동형임을 보였다. 이 증명은 Langlands dual group $$G^\vee$$의 Toda lattice integrable system과의 연결을 핵심적으로 사용하며, quantum parameter $$q_i$$는 $$Y_P^\circ$$ 위의 regular function으로 해석된다. Rietsch는 type A의 경우 이 동형이 explicit하게 주어짐을 보였으며, 최근 Lam-Shimozono와 others는 equivariant setting으로 확장하였다. 자세한 내용은 [Pet], [Rie]를 참조한다.
 
 </details>
 

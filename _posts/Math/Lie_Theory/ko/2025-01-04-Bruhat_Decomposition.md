@@ -6,7 +6,7 @@ excerpt: "Bruhat decomposition을 중심으로 한 homogeneous space의 cell dec
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/bruhat_decomposition
 sidebar: 
-    nav: "lie_theory-ko"
+    nav: "Lie_theory-ko"
 
 header:
     overlay_image: /assets/images/Math/Mirror_Symmetry/Bruhat_Decomposition.png
@@ -251,7 +251,7 @@ Grassmannian은 projective variety로 실현될 수 있으며, homogeneous space
 
 $$P_k=\left\{\begin{pmatrix}A&C\\0&D\end{pmatrix}\in GL_n(\mathbb{C})\;\middle|\;A\in GL_k(\mathbb{C}),\;D\in GL_{n-k}(\mathbb{C})\right\}$$
 
-이다. 이 subgroup은 standard $$k$$-plane $$E_k=\span\{e_1,\ldots,e_k\}$$를 고정하므로, $$GL_n(\mathbb{C})$$의 자연스러운 $$Gr_k(\mathbb{C}^n)$$ 위의 작용은 transitive하고, isotropy group이 바로 $$P_k$$이다. 따라서
+이다. 이 subgroup은 standard $$k$$-plane $$E_k=\operatorname{span}\{e_1,\ldots,e_k\}$$를 고정하므로, $$GL_n(\mathbb{C})$$의 자연스러운 $$Gr_k(\mathbb{C}^n)$$ 위의 작용은 transitive하고, isotropy group이 바로 $$P_k$$이다. 따라서
 
 $$Gr_k(\mathbb{C}^n)\cong GL_n(\mathbb{C})/P_k$$
 
@@ -307,7 +307,7 @@ $$X_w=\overline{X_w^\circ},\qquad X^w=\overline{X^w_\circ}$$
 
 </div>
 
-정의에 의해 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$이고 $$X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$$이다. 특히 $$X_e^\circ=B^-P/P$$는 open dense cell이며, $$X_{w_0^P}^\circ$$는 $$G/P$$의 $$B^-$$-fixed point $$\{w_0^P P\}$$이다. 여기서 $$w_0^P$$는 $$W^P$$에서 가장 긴 원소이다.
+정의에 의해 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$이고 $$X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$$이다. 특히 $$X_{w_0^P}^\circ = Bw_0^P P/P$$는 $$B$$-orbit으로서 $$G/P$$ 안에서 open dense cell이며 ($$\ell(w_0^P)=\dim(G/P)$$), $$X_e^\circ = \{eP\}$$는 $$B$$-fixed point이다. 여기서 $$w_0^P$$는 $$W^P$$에서 가장 긴 원소이다. 대칭적으로 opposite cell 쪽을 보면 $$X^e_\circ = B^- P/P$$가 open dense cell이고 $$X^{w_0^P}_\circ = \{w_0^P P\}$$가 $$B^-$$-fixed point가 된다.
 
 Schubert variety들 사이의 inclusion 관계는 Weyl group 위의 *Bruhat order*에 의해 결정된다.
 

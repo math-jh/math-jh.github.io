@@ -96,7 +96,7 @@ Cox 구성으로 본격적으로 들어가기 전에, 가장 간단한 toric var
 
 $$t \cdot (z_1, z_2) = (tz_1, tz_2)$$
 
-으로 작용한다고 하자. 우선 자명한 linearization, 즉 character $$\chi = 1$$의 경우 affine GIT을 본다. 좌표환 $$A = \mathbb{C}[\z_1, \z_2]$$ 위의 $$G$$-작용은 $$\z_i$$를 $$t^{-1} \z_i$$로 보내며 (점 위 작용의 contravariance에 의함), 임의의 monomial $$\z_1^a \z_2^b$$는 $$t^{-(a+b)}$$ 배가 된다. 따라서
+으로 작용한다고 하자. 우선 자명한 linearization, 즉 character $$\chi = 1$$의 경우 affine GIT을 본다. 좌표환 $$A = \mathbb{C}[\z_1, \z_2]$$ 위의 $$G$$-작용은 (이 글에서는 자매 글인 [§아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties)의 *inverse 없는* convention $$t \cdot f = f \circ t$$와는 반대로, 표준 GIT 컨벤션을 따라 $$(t \cdot f)(x) = f(t^{-1} x)$$를 채택한다) $$\z_i$$를 $$t^{-1}\z_i$$로 보내며, 임의의 monomial $$\z_1^a \z_2^b$$는 $$t^{-(a+b)}$$ 배가 된다. 따라서
 
 $$A^G = \mathbb{C}$$
 
