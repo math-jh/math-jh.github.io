@@ -49,7 +49,7 @@ $$N_{\mathbb{R}} = N \otimes_{\mathbb{Z}} \mathbb{R},\qquad M_{\mathbb{R}} = M \
 
 </div>
 
-여기서 세 번째 조건은 $$\sigma$$가 원점을 지나는 직선을 포함하지 않는다는 것을 의미한다. 한편 각각의 cone $$\sigma$$에 대하여, 다음을 정의할 수 있다.
+여기서 첫 번째 조건만으로는 $$\sigma$$가 convex일 보장이 없지만, 두 번째 조건의 $$\mathbb{R}_{\ge 0}$$-linear combination 형태에 의해 $$\sigma$$가 closed convex cone이 됨이 자동으로 따른다. 또한 세 번째 조건은 $$\sigma$$가 원점을 지나는 직선을 포함하지 않는다는 것을 의미한다. 한편 각각의 cone $$\sigma$$에 대하여, 다음을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -89,7 +89,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\,{\rchi}^u \mid u \in S_\sigma]$$
 
 $$\rchi^u\cdot\rchi^{u'}=\rchi^{u+u'}$$
 
-을 부여한 것으로 기술된다. 즉 $$\mathbb{C}[S_\sigma]$$는 $$\{\rchi^u \mid u\in S_\sigma\}$$를 basis로 가지며, 위의 곱셈으로 생성되는 $$\mathbb{C}$$-algebra이다. 그럼 이 $$\mathbb{C}$$-algebra가 affine toric variety의 coordinate ring이 된다. 
+을 부여한 것으로 기술된다. 즉 $$\mathbb{C}[S_\sigma]$$는 $$\{\rchi^u \mid u\in S_\sigma\}$$를 basis로 가지며, 위의 곱셈으로 생성되는 $$\mathbb{C}$$-algebra이다. 한편 $$S_\sigma$$가 finitely generated semigroup임은 *Gordan's lemma* ([Wikipedia](https://en.wikipedia.org/wiki/Gordan%27s_lemma))에 의해 알려져 있으며, 따라서 $$\mathbb{C}[S_\sigma]$$는 finitely generated $$\mathbb{C}$$-algebra가 된다. 그럼 이 $$\mathbb{C}$$-algebra가 affine toric variety의 coordinate ring이 된다. 
 
 <div class="definition" markdown="1">
 
@@ -129,11 +129,11 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{e_1^\ast}, \rchi^{e_2^\ast}] = \mathb
 
 우리는 $$\Spec(\mathbb{C}[S_\sigma])$$ 위에 torus action을 정의하기 위해, 이미 친숙한 $$\mathbb{P}^N$$의 예시를 살펴본다. $$\mathbb{P}^N = \Proj(\mathbb{C}[\x_0, \ldots, \x_N])$$의 경우, $$\mathbb{C}^\ast$$가 scaling action을 하면 polynomial ring $$\mathbb{C}[\x_0, \ldots, \x_N]$$이 degree-by-degree로 분해된다. 각 homogeneous component $$\mathbb{C}[\x_0, \ldots, \x_N]_d$$는 $$\mathbb{C}^\ast$$-module로서 eigenspace를 형성한다.
 
-이와 비슷하게, $$\mathbb{C}[S_\sigma]$$ 위에서도 $$M$$-grading이 weight decomposition을 제공한다. $$M$$-grading에 의해
+이와 비슷하게, $$\mathbb{C}[S_\sigma]$$ 위에서도 자연스러운 $$M$$-grading
 
 $$\mathbb{C}[S_\sigma] = \bigoplus_{u \in S_\sigma} \mathbb{C} \cdot \rchi^u$$
 
-라 하자. 여기서 각 $$\rchi^u$$는 weight $$u$$를 갖는 eigenvector이다. 즉, $$\mathbb{C}^\ast$$가 $$\mathbb{C}[S_\sigma]$$에 scaling을 하면, 각 $$\rchi^u$$는 eigenvalue $$\rchi^u(t) \in \mathbb{C}^\ast$$를 갖는다. 이 $$M$$-grading이 정확히 torus action에 대한 weight decomposition을 나타낸다.
+이 존재하며, 곧 정의할 $$n$$차원 algebraic torus $$T_N$$이 $$\mathbb{C}[S_\sigma]$$ 위에 act할 때 각 1차원 부분공간 $$\mathbb{C}\cdot\rchi^u$$가 weight $$u \in M$$의 eigenspace가 된다. 즉 임의의 $$t \in T_N$$에 대해 $$\rchi^u$$는 eigenvalue $$\rchi^u(t) \in \mathbb{C}^\ast$$를 갖는 eigenvector이다. 이 $$M$$-grading이 정확히 torus action에 대한 weight decomposition을 나타낸다.
 
 한편 $$T_N$$을 다음과 같이 정의한다:
 
@@ -161,7 +161,7 @@ $$\rchi^m(t) := z^{m(v)}, \qquad t = v \otimes z \in T_N, \; m(v) \in \mathbb{Z}
 
 $$\rchi^m(t) := \prod_i z_i^{m(v_i)}$$
 
-으로 정의하면 이것이 위의 정의를 확장하는 well-defined function을 준다는 것을 안다. 한편 임의의 두 원소
+으로 정의하면 이것이 위의 정의를 확장하는 well-defined function을 준다는 것을 확인할 수 있다. 한편 임의의 두 원소
 
 $$t = \sum_i v_i \otimes z_i,\qquad t' = \sum_j v_j' \otimes z_j'$$
 
@@ -191,7 +191,7 @@ $$\mathbb{C}[S_\sigma] \xrightarrow{\rho} \mathbb{C}[S_\sigma] \otimes_{\mathbb{
 
 $$(\id \otimes \ev_t)(\rchi^u \otimes \rchi^u) = \rchi^u \otimes \rchi^u(t) = \rchi^u(t) \rchi^u$$
 
-이고, 구체적으로 $$t$$가 $$\rchi^u \in \mathbb{C}[S_\sigma]$$에 작용하는 결과는 $$\rchi^u(t) \rchi^u$$이다. 즉 다음이 성립한다. 
+이고, 구체적으로 $$t$$가 $$\rchi^u \in \mathbb{C}[S_\sigma]$$에 작용하는 결과는 $$\rchi^u(t) \rchi^u$$이다. Basis 원소 $$\rchi^u$$에 대해 counitality $$(\id \otimes \ev_e)\circ\rho = \id$$와 coassociativity $$(\rho \otimes \id)\circ\rho = (\id\otimes\Delta)\circ\rho$$가 직접 확인되므로 $$\rho$$는 $$\mathbb{C}[M]$$-comodule structure를 정의하며, 이는 $$U_\sigma$$ 위의 algebraic $$T_N$$-action에 정확히 대응한다. 따라서 다음이 성립한다. 
 
 <div class="proposition" markdown="1">
 
@@ -279,7 +279,7 @@ $$u \in S_\sigma$$이고 $$\tau = \sigma \cap u^\perp$$라고 하자. [보조정
 
 $$S_\tau = \tau^\vee \cap M = (\sigma^\vee + \mathbb{R}_{\ge 0}(-u)) \cap M = S_\sigma + \mathbb{Z}_{\ge 0}(-u)$$
 
-이다. 이로부터 semigroup algebra의 localization이
+이다. 마지막 등호는 $$u \in S_\sigma$$와 $$-u \in M$$이라는 사실로부터, $$\sigma^\vee + \mathbb{R}_{\ge 0}(-u)$$의 임의의 lattice point가 어떤 $$w \in S_\sigma$$와 $$k \in \mathbb{Z}_{\ge 0}$$에 대해 $$w - ku$$ 꼴로 표현됨을 확인하면 얻어진다. 이로부터 semigroup algebra의 localization이
 
 $$\mathbb{C}[S_\tau] = \mathbb{C}[S_\sigma + \mathbb{Z}_{\ge 0}(-u)] = \mathbb{C}[S_\sigma][\rchi^{-u}] = \mathbb{C}[S_\sigma]_{\rchi^u}$$
 
@@ -321,26 +321,24 @@ $$(\mathbb{C}^\ast)^2 = \{(z_1, z_2) \mid z_1 \neq 0, z_2 \neq 0\}$$
 
 </div>
 
-## 기본 성질
+마지막으로 affine toric variety의 기본적인 성질을 증명하며 이 글을 마친다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> 아핀 토릭 다양체 $$U_\sigma$$에 대해 다음이 성립한다:
+<ins id="prop13">**명제 13**</ins> Affine toric variety $$U_\sigma$$에 대해 다음이 성립한다:
 
-1. $$U_\sigma$$는 **정규(normal)** 다양체이다.
-2. $$U_\sigma$$는 **기약(irreducible)**이다.
-3. $$U_\sigma$$의 차원은 $$n$$이다 (여기서 $$N \cong \mathbb{Z}^n$$).
+1. $$U_\sigma$$는 normal variety이다.
+2. $$U_\sigma$$는 irreducible이다.
+3. $$U_\sigma$$는 $$n$$-dimensional variety이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-**1. 정규성(Normality).** Gordan의 보조정리(Gordan's lemma)에 의해 $$S_\sigma = \sigma^\vee \cap M$$은 finitely generated semigroup이다. 더욱이 $$S_\sigma$$는 *saturated*이다: 즉 $$k \cdot u \in S_\sigma$$인 $$k \in \mathbb{Z}_{>0}$$와 $$u \in M$$에 대해 $$u \in S_\sigma$$이다. 이는 $$\langle u, v \rangle \ge 0$$가 $$\sigma$$ 위에서 성립함을 의미한다. Affine semigroup algebra가 normal domain이 되는 것은 그 semigroup이 saturated인 것과 동치이므로 ([CLS] Theorem 1.3.5 참조), $$\mathbb{C}[S_\sigma]$$는 normal domain이고 그 스펙트럼인 $$U_\sigma$$는 정규 다양체이다.
-
-**2. 기약성(Irreducibility).** $$S_\sigma$$는 torsion-free abelian group $$M$$의 부분 semigroup이므로, $$\mathbb{C}[S_\sigma]$$에는 zero divisor가 존재하지 않는다. 따라서 $$\mathbb{C}[S_\sigma]$$는 integral domain이고 $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$는 기약 다양체이다.
-
-**3. 차원(Dimension).** $$\mathbb{C}[S_\sigma] \subseteq \mathbb{C}[M]$$이므로 fraction field는 $$\mathbb{C}(M)$$에 포함된다. 한편 $$\sigma$$가 strongly convex이므로 $$\sigma^\vee$$는 $$M_{\mathbb{R}}$$에서 full-dimensional cone이며, 따라서 $$\sigma^\vee$$ 내부에 lattice point $$u_0 \in M$$이 존재한다. 임의의 $$m \in M$$에 대해 충분히 큰 $$N$$을 잡으면 $$Nu_0$$과 $$Nu_0 + m$$이 모두 $$S_\sigma$$에 속하므로 $$m = (Nu_0 + m) - Nu_0$$로 $$S_\sigma$$가 group으로서 $$M$$ 전체를 생성하고, $$\mathbb{C}[S_\sigma]$$의 fraction field는 정확히 $$\mathbb{C}(M)$$과 일치한다. $$M \cong \mathbb{Z}^n$$이므로 $$\mathbb{C}(M)$$의 transcendence degree는 $$n$$이고, 이로부터 $$\dim U_\sigma = n$$이 성립한다.
+1. Normality의 경우, Gordan's lemma에 의해 $$S_\sigma = \sigma^\vee \cap M$$은 finitely generated semigroup이다. 더욱이 $$S_\sigma$$는 *saturated*이다: 즉 $$k \cdot u \in S_\sigma$$인 $$k \in \mathbb{Z}_{>0}$$와 $$u \in M$$에 대해 $$u \in S_\sigma$$이다. 이는 $$\langle u, v \rangle \ge 0$$가 $$\sigma$$ 위에서 성립함을 의미한다. Affine semigroup algebra가 normal domain이 되는 것은 그 semigroup이 saturated인 것과 동치이므로, $$\mathbb{C}[S_\sigma]$$는 normal domain이고 그 스펙트럼인 $$U_\sigma$$는 normal이다.
+2. Irreducibility의 경우, $$S_\sigma$$는 torsion-free abelian group $$M$$의 부분 semigroup이므로, $$\mathbb{C}[S_\sigma]$$에는 zero divisor가 존재하지 않는다. 따라서 $$\mathbb{C}[S_\sigma]$$는 integral domain이고 $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$는 irreducible이다.
+3. $$\mathbb{C}[S_\sigma] \subseteq \mathbb{C}[M]$$이므로 fraction field는 $$\mathbb{C}(M)$$에 포함된다. 한편 $$\sigma$$가 strongly convex이므로 $$\sigma^\vee$$는 $$M_{\mathbb{R}}$$에서 full-dimensional cone이며, 따라서 $$\sigma^\vee$$ 내부에 lattice point $$u_0 \in M$$이 존재한다. 임의의 $$m \in M$$에 대해 충분히 큰 $$N$$을 잡으면 $$Nu_0$$과 $$Nu_0 + m$$이 모두 $$S_\sigma$$에 속하므로 $$m = (Nu_0 + m) - Nu_0$$로 $$S_\sigma$$가 group으로서 $$M$$ 전체를 생성하고, $$\mathbb{C}[S_\sigma]$$의 fraction field는 정확히 $$\mathbb{C}(M)$$과 일치한다. $$M \cong \mathbb{Z}^n$$이므로 $$\mathbb{C}(M)$$의 transcendence degree는 $$n$$이고, 이로부터 $$\dim U_\sigma = n$$이 성립한다.
 
 </details>
 
