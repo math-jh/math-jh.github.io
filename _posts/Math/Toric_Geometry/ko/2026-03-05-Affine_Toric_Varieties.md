@@ -1,5 +1,5 @@
 ---
-title: "Affine toric varieties"
+title: "아핀 토릭 다양체"
 excerpt: "Toric geometry"
 
 categories: [Math / Toric Geometry]
@@ -181,7 +181,9 @@ $$\rchi^m(t) = z_1^{m_1} \cdots z_n^{m_n}$$
 
 $$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
 
-을 정의하자. 여기서 $$\mathbb{C}[M] = \mathbb{C}[\rchi^m \mid m \in M]$$은 $$T_N$$의 coordinate ring이며, $$\rchi^u \in \mathbb{C}[S_\sigma]$$는 weight $$u$$를 갖는 eigenvector이다. $$\rho$$가 well-defined algebra homomorphism임은 bilinearity에 의해 직접 확인할 수 있다. 한편 tensor 순서 $$\mathbb{C}[S_\sigma] \otimes \mathbb{C}[M]$$은 Spec을 취했을 때 기하학적으로 $$U_\sigma \times T_N \to U_\sigma$$에 해당하므로, 엄밀히 말하면 이는 $$T_N$$의 right action의 comorphism이다. 그러나 $$T_N$$이 abelian이므로 right action과 left action을 같게 취급할 수 있고, 우리는 이를 left action $$T_N \times U_\sigma \to U_\sigma$$로 다룰 것이다. 그럼 이제 각각의 $$t\in T_N$$에 대하여, $$t$$는 $$\mathbb{C}[S_\sigma]$$ 위에 다음의 합성함수
+을 정의하자. 여기서 $$\mathbb{C}[M] = \mathbb{C}[\rchi^m \mid m \in M]$$은 $$T_N$$의 coordinate ring이며, $$\rchi^u \in \mathbb{C}[S_\sigma]$$는 weight $$u$$를 갖는 eigenvector이다. $$\rho$$가 well-defined algebra homomorphism임은 bilinearity에 의해 직접 확인할 수 있다. 
+
+엄밀히 말하면 $$\mathbb{C}[S_\sigma] \otimes \mathbb{C}[M]$$은 Spec을 취했을 때 기하학적으로 $$U_\sigma \times T_N \to U_\sigma$$에 해당하므로, 이는 $$T_N$$의 right action의 comorphism이다. 그러나 $$T_N$$이 abelian이므로 right action과 left action을 같게 취급할 수 있고, 우리는 이를 left action $$T_N \times U_\sigma \to U_\sigma$$로 다룰 것이다. 그럼 이제 각각의 $$t\in T_N$$에 대하여, $$t$$는 $$\mathbb{C}[S_\sigma]$$ 위에 다음의 합성함수
 
 $$\mathbb{C}[S_\sigma] \xrightarrow{\rho} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M] \xrightarrow{\id \otimes \ev_t} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C} \cong \mathbb{C}[S_\sigma]$$
 
@@ -211,13 +213,21 @@ $$t\cdot \rchi^u=\rchi^u(t)\rchi^u$$
 
 가 바로 이 둘의 관계를 알려주며, 구체적으로 벡터공간 $$\mathbb{C}[S_\sigma]$$ 위에 $$T_N$$이 act할 때 $$\rchi^u$$는 이 작용의 eigenvector이며, 그에 해당하는 eigenvalue가 정확히 $$\rchi^u(t)$$로 주어지는 것이다. 
 
-또한 위에서 정의한 $$T_N$$의 함수 위 작용 $$t\cdot f$$는 좀 더 정확히는 *pullback* $$(t\cdot f)(x) := f(t\cdot x)$$로 주어진 것이다. 임의의 대수군에 대해서는 함수 위의 left action을 표준적으로 $$(g\cdot f)(x) = f(g^{-1}\cdot x)$$로 정의하지만, $$T_N$$이 abelian이므로 위와 같이 inverse 없이 정의해도 여전히 left action이 된다. 이 convention의 장점은 $$\rchi^u$$가 정확히 weight $$u$$를 갖는 eigenvector가 된다는 점이며 (표준 convention을 따랐다면 weight는 $$-u$$가 되었을 것이다), 이는 [CLS, §1.1]의 convention과 일치한다. 곧 살펴볼 점 위의 작용이 inverse 없이 $$(t_1, t_2)\cdot(z_1, z_2) = (t_1 z_1, t_2 z_2)$$로 나오는 것도 같은 이유이다.
+또 다른 미묘한 점은 위에서 정의한 $$T_N$$의 함수 위 작용 $$t\cdot f$$는 좀 더 정확히는 *pullback* 
 
-이 작용은 $$U_\sigma$$ 안에서 open dense torus orbit을 가지며, 이 orbit은 정확히 torus $$T_N$$ 자체이다. 즉 다음이 성립한다.
+$$(t\cdot f)(x) := f(t\cdot x)$$
+
+로 주어졌다는 것이다. 일반적으로, 임의의 group algebra에 대해서는 함수 위의 left action을
+
+$$(g\cdot f)(x) = f(g^{-1}\cdot x)$$
+
+와 같이 정의하는 것이 표준적이지만, $$T_N$$이 abelian이므로 위와 같이 inverse 없이 정의해도 여전히 left action이 된다. 이 convention의 장점은 $$\rchi^u$$가 정확히 weight $$u$$를 갖는 eigenvector가 된다는 점으로, 만일 표준 convention을 따랐다면 $$\rchi^u$$의 weight는 $$-u$$가 되었을 것이다. 곧 살펴볼 점 위의 작용이 inverse 없이 $$(t_1, t_2)\cdot(z_1, z_2) = (t_1 z_1, t_2 z_2)$$로 나오는 것도 같은 이유이다.
+
+어쨌든 위에서 정의한 torus action은 $$U_\sigma$$ 안에서 open dense torus orbit을 가지며, 이 orbit은 정확히 torus $$T_N$$ 자체이다. 즉 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 모든 affine toric variety $$U_\sigma$$는 torus $$T_N$$을 열린 조밀한 부분집합으로 포함한다.
+<ins id="prop9">**명제 9**</ins> 모든 affine toric variety $$U_\sigma$$는 torus $$T_N$$을 open dense subset으로 포함한다.
 
 </div>
 
@@ -238,7 +248,7 @@ $$T_N = \Spec(\mathbb{C}[M]) \longrightarrow \Spec(\mathbb{C}[S_\sigma]) = U_\si
 
 <div class="proposition" markdown="1">
 
-<ins id="lem10">**보조정리 10 (separation lemma)**</ins> Cone $$\sigma$$의 face $$\tau$$에 대하여 다음을 만족하는 $$u \in S_\sigma$$가 존재한다.
+<ins id="lem10">**보조정리 10 (Separation lemma)**</ins> Cone $$\sigma$$의 face $$\tau$$에 대하여 다음을 만족하는 $$u \in S_\sigma$$가 존재한다.
 
 $$\tau = \sigma \cap u^{\perp}.$$
 
@@ -246,7 +256,7 @@ $$\tau = \sigma \cap u^{\perp}.$$
 
 $$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$$
 
-가 성립한다. (증명은 [CLS] Proposition 1.2.13 및 1.2.10을 참조한다.)
+가 성립한다.
 
 </div>
 

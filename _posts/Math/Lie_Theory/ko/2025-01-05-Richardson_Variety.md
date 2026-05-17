@@ -13,7 +13,7 @@ header:
 
 date: 2025-01-05
 last_modified_at: 2025-01-05
-weight: 5
+weight: 6
 ---
 
 본 글은 Lie theory 시리즈의 일부이다. [§Bruhat Decomposition](/ko/math/lie_theory/bruhat_decomposition)에서 살펴 보았듯이, generalized flag variety $$X = G/P$$는 Bruhat cell들의 불연속합으로 분필된다. 각 Bruhat cell은 Borel subgroup $$B$$의 궤도이며, 그 Zariski closure인 Schubert variety는 $$X$$의 중요한 닫힌 부분다양체를 이룬다. 그러나 한쪽 방향의 궤도만으로는 $$X$$의 교차이론이나 대칭성을 충분히 기술할 수 없으며, 서로 다른 방향에서 오는 두 가지 셀 구조의 교차를 고려해야 할 때가 많다. Richardson variety는 바로 이러한 교차에 해당하는 대상으로, Schubert variety와 opposite Schubert variety의 교집합을 통해 정의된다. 본 글에서는 Richardson variety의 기본적인 정의와 성질, 특히 이것이 smooth affine variety가 되는 이유를 직관적으로 살펴 본 뒤, Grassmannian의 mirror symmetry에서 Marsh-Rietsch가 이를 B-model domain으로 활용하는 방식을 설명한다.

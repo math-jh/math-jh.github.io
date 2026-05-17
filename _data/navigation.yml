@@ -559,6 +559,44 @@ manifold-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
+mirror_symmetry-ko:
+  - title: <a href="/ko/mirror_symmetry/" class="sidebar_title">거울 대칭</a>
+    children:
+      - title: "Mirror Symmetry 개요"
+        url: ko/math/mirror_symmetry/overview
+      - title: "Reflexive Polytope과 Batyrev Mirror"
+        url: ko/math/mirror_symmetry/toric_geometry_batyrev
+      - title: "Postnikov diagram과 plabic graph"
+        url: ko/math/mirror_symmetry/postnikov_plabic
+      - title: "Marsh–Rietsch의 Plücker coordinate superpotential"
+        url: ko/math/mirror_symmetry/marsh_rietsch_superpotential
+      - title: "Cluster algebra와 W_q의 Laurent expansion"
+        url: ko/math/mirror_symmetry/cluster_algebra
+      - title: "Jacobi ring과 Quantum cohomology의 동형"
+        url: ko/math/mirror_symmetry/jacobi_ring
+      - title: "Cluster monomial basis와 Schubert correspondence"
+        url: ko/math/mirror_symmetry/cluster_monomial_basis
+      - title: "Oscillating integral과 Gauss–Manin system"
+        url: ko/math/mirror_symmetry/oscillating_integral
+      - title: "Frobenius manifold"
+        url: ko/math/mirror_symmetry/frobenius_manifold
+      - title: "Dubrovin connection과 D-module 동형"
+        url: ko/math/mirror_symmetry/dubrovin_connection
+      - title: "Givental J-function과 A-series"
+        url: ko/math/mirror_symmetry/givental_j_function
+      - title: "Equivariant mirror symmetry"
+        url: ko/math/mirror_symmetry/equivariant_mirror
+      - title: "Quantum K-theory와 matrix factorization 입문"
+        url: ko/math/mirror_symmetry/quantum_k_theory_intro
+      - title: "Newton–Okounkov body와 cluster duality"
+        url: ko/math/mirror_symmetry/newton_okounkov
+  - title:
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
 multilinear_algebra-ko:
   - title: <a href="/ko/multilinear_algebra/" class="sidebar_title">다중선형대수학</a>
     children:
