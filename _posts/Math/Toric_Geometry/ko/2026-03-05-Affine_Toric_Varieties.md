@@ -303,19 +303,21 @@ $$U_\tau = \Spec(\mathbb{C}[S_\tau]) = \Spec(\mathbb{C}[S_\sigma]_{\rchi^u}) = (
 
 $$t \cdot \z_i = \rchi^{e_i^\ast}(t) \z_i = t_i \z_i \qquad i = 1, 2$$
 
-을 통해 작용한다. 이로부터 점 위의 작용을 읽어내기 위해, $$\mathbb{C}^2$$의 점 $$(z_1, z_2)$$가 $$\mathbb{C}[\z_1, \z_2]$$의 maximal ideal $$\mathfrak{m} = (\z_1 - z_1, \z_2 - z_2)$$에 대응한다는 사실을 떠올리자. 이 때 $$\mathfrak{m}$$의 generator에 ring map $$\sigma_t^\ast : \z_i \mapsto t_i \z_i$$를 단순히 적용해서 얻어지는 ideal $$(t_1\z_1 - z_1, t_2\z_2 - z_2) = (\z_1 - z_1/t_1, \z_2 - z_2/t_2)$$는 점 $$(z_1/t_1, z_2/t_2)$$에 대응하므로 inverse action처럼 보이는데, 이는 점 위의 작용이 forward image가 아니라 Spec functor의 contravariance에 따라 *preimage*로 주어지기 때문이다. 실제로 $$\sigma_t^\ast(\z_i - t_i z_i) = t_i(\z_i - z_i) \in \mathfrak{m}$$이므로 $$\z_i - t_i z_i \in (\sigma_t^\ast)^{-1}(\mathfrak{m})$$이고, 따라서 $$t \cdot (z_1, z_2)$$에 대응하는 maximal ideal은 $$(\z_1 - t_1 z_1, \z_2 - t_2 z_2)$$이며
+을 통해 작용한다. 이로부터 점 위의 작용을 읽어내기 위해, $$\mathbb{C}^2$$의 점 $$(z_1, z_2)$$가 $$\mathbb{C}[\z_1, \z_2]$$의 maximal ideal $$\mathfrak{m} = (\z_1 - z_1, \z_2 - z_2)$$에 대응한다는 사실을 떠올리자. 이 때 $$\mathfrak{m}$$의 generator에 ring map $$\sigma_t^\ast : \z_i \mapsto t_i \z_i$$를 적용해서 얻어지는 ideal은
+
+$$(t_1\z_1 - z_1, t_2\z_2 - z_2) = (\z_1 - z_1/t_1, \z_2 - z_2/t_2)$$
+
+인데, 이는 점 $$(z_1/t_1, z_2/t_2)$$에 대응하는 것이다. $$\Spec$$을 취했을 때는 contravariance에 의해 $$(z_1/t_1, z_2/t_2)$$이 $$(z_1,z_2)$$로 옮겨지는 것으로 해석되며, 따라서 점에서 이를 계산하면 torus action은
 
 $$(t_1, t_2) \cdot (z_1, z_2) = (t_1 z_1, t_2 z_2)$$
 
 로 주어진다. 이는 $$(\mathbb{C}^\ast)^2$$의 각 성분이 $$\mathbb{C}^2$$의 대응하는 coordinate를 scaling하는 가장 자연스러운 작용이다.
 
-이 작용의 궤도(orbit) 구조는 다음과 같다:
+이제 이 action의 orbit 구조를 살펴보자. [명제 9](#prop9)가 주는 open dense orbit은 
 
-- **열린 조밀한 궤도**: $$(\mathbb{C}^\ast)^2 = \{(z_1, z_2) \mid z_1 \neq 0, z_2 \neq 0\}$$. 이는 torus $$T_N$$ 자체이며, $$U_\sigma$$에서 Zariski open dense subset을 이룬다.
-- **1차원 궤도**: coordinate axis $$(\mathbb{C}^\ast) \times \{0\}$$과 $$\{0\} \times (\mathbb{C}^\ast)$$. 이들은 각각 한 개의 coordinate가 0이 되어 torus action의 "자유도"가 하나 줄어든 궤도이다.
-- **고정점**: 원점 $$(0, 0)$$. 이는 torus의 모든 원소에 의해 고정되며, **0차원 궤도**이다.
+$$(\mathbb{C}^\ast)^2 = \{(z_1, z_2) \mid z_1 \neq 0, z_2 \neq 0\}$$
 
-이 예시는 torus action의 가장 기본적이고 대표적인 예시이다. [예시 7](#ex7)에서 살펴본 $$\sigma = \cone(e_1, e_2)$$에 대응하는 아핀 토릭 다양체 $$U_\sigma = \mathbb{C}^2$$ 위에서, torus는 단순히 좌표축 방향으로 scaling함으로써 작용하며, 이로부터 자연스럽게 궤도 분해가 이루어진다. 이러한 구조는 일반적인 affine toric variety에서도 동일한 패턴을 따르며, cone의 face들에 대응하는 궤도들이 차원이 낮아지는 방식으로 배열된다.
+으로, 이는 $$2$$차원 torus $$T_N$$ 자체이다. 또 흥미로운 것은 이보다 낮은 차원의 orbit들로, coordinate axis들 $$(\mathbb{C}^\ast) \times \{0\}$$과 $$\{0\} \times (\mathbb{C}^\ast)$$이 이에 해당한다. 이들은 각각 한 개의 coordinate가 0이 되어 torus action의 자유도가 하나 줄어든 궤도이다. 마찬가지로 원점 $$(0, 0)$$는 torus action의 fixed point로, 형식적으로는 $$0$$차원 orbit으로 생각할 수 있다. 
 
 </div>
 
