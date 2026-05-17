@@ -1,49 +1,55 @@
 ---
-title: "Normal fan과 projective toric variety"
+title: "토릭 다양체의 정의"
 excerpt: "Toric geometry"
 
 categories: [Math / Toric Geometry]
-permalink: /ko/math/toric_geometry/normal_fan_projective_toric
+permalink: /ko/math/toric_geometry/toric_varieties
 
 header:
-    overlay_image: /assets/images/Math/Toric_Geometry/Normal_Fan_and_Projective_Toric_Variety.png
+    overlay_image: /assets/images/Math/Toric_Geometry/Toric_Varieties.png
     overlay_filter: 0.5
 
 sidebar:
     nav: "toric_geometry-ko"
 
-date: 2026-03-06
-last_modified_at: 2026-03-06
+date: 2026-05-17
+last_modified_at: 2026-05-17
 weight: 2
 published: false
 ---
 
-[§Affine toric varieties, ⁋정의 5](/ko/math/toric_geometry/affine_toric_varieties#def5)에서 정의한 affine toric variety는 하나의 strongly convex rational polyhedral cone $$\tau$$에 대응하는 대수다양체 $$U_\tau$$이다. 그러나 $$\tau$$가 원점 $$\{0\}$$인 경우에만 $$U_\tau$$는 algebraic torus $$T_N$$과 같으며, 일반적인 cone에 대해서는 $$U_\tau$$는 적절한 방향으로 열린 부분공간의 형태를 띤다. 우리는 이러한 affine toric variety들을 여러 개 모아서 이어붙이는 방법을 찾고자 하며, 이를 통해 compact한 toric variety를 얻는 것이 이 글의 목표이다.
+[§아핀 토릭 다양체, ⁋정의 5](/ko/math/toric_geometry/affine_toric_varieties#def5)에서 정의한 affine toric variety는 하나의 strongly convex rational polyhedral cone $$\tau$$에 대응하는 대수다양체 $$U_\tau$$이다. 이는 [§아핀 토릭 다양체, ⁋예시 12](/ko/math/toric_geometry/affine_toric_varieties#ex12)에서 살펴봤듯, torus action 구조를 가지고 있는 algebraic variety인 것으로 생각할 수 있으며 그 정의에 의해 적당한 ring의 $$\Spec$$이므로 affine variety이다. 
+
+이번 글에서 우리는 affine toric variety들을 붙여 일반적인 toric variety를 얻어내는 과정을 살펴볼 것이다. 구체적으로, 우리는 cone $$\sigma$$의 face $$\tau$$에 해당하는 affine toric variety $$U_\tau$$가 $$U_\sigma$$의 principal open set인 것을 보았는데 ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)), 바꿔말하면 두 cone이 하나의 face를 공유한다면 이는 각각의 cone이 정의하는 affine toric variety들로의 inclusion 또한 정의할 것이고, 따라서 이를 통해 gluing을 해 줄 수 있게 된다.
 
 ## Fan의 정의
 
-Affine toric variety들을 이어붙이기 위해서는 각각의 cone들이 서로 어떻게 만나는지를 제어하는 조합론적인 구조가 필요하다. 이를 위해 우리는 *fan*을 정의한다.
+위와 같이 affine toric variety들을 이어붙이기 위해서는 각각의 cone들이 서로 어떻게 만나는지를 제어하는 조합론적인 구조가 필요하다. 이를 위해 우리는 *fan*을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Lattice $$N$$에 대해, $$N_\mathbb{R}$$에 정의된 **fan** $$\Sigma$$는 다음 조건을 만족하는 strongly convex rational polyhedral cone들의 모임이다:
+<ins id="def1">**정의 1**</ins> Lattice $$N$$에 대해, $$N_\mathbb{R}$$에 정의된 *fan* $$\Sigma$$는 다음 조건을 만족하는 strongly convex rational polyhedral cone들의 모임이다:
 
 1. $$\Sigma$$에 속하는 임의의 cone $$\tau$$의 face도 $$\Sigma$$에 속한다.
 2. $$\Sigma$$에 속하는 임의의 두 cone $$\tau_1, \tau_2$$의 교집합 $$\tau_1 \cap \tau_2$$는 각각의 face이다.
 
 </div>
 
-두 번째 조건이 중요한 이유는, 서로 다른 두 cone $$\tau_1, \tau_2$$가 만나는 방식이 그들의 공통 face에서만 일어나도록 강제하기 때문이다. 이는 훗날 $$U_{\tau_1}$$과 $$U_{\tau_2}$$를 이어붙일 때 그 교집합이 자연스럽게 정의되도록 보장한다. 한편 첫 번째 조건은 fan이 각 cone의 모든 면을 포함함으로써 닫혀 있음을 요구한다.
+둘째 조건은 [정의 3](#def3)에서 위의 과정을 통해 gluing을 할 때 필요한 것으로, 서로 다른 두 cone $$\tau_1, \tau_2$$가 그들의 공통 face에서만 만나도록 강제해준다. 한편 첫 번째 조건은 fan이 각 cone의 모든 면을 포함하므로, 일종의 closedness를 요구하는 것으로 볼 수 있다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> $$N = \mathbb{Z}^2$$에서 원점을 중심으로 방사형으로 세 개의 2차원 cone $$\tau_0, \tau_1, \tau_2$$가 $$\mathbb{R}^2$$를 덮는 fan을 생각할 수 있다. 각각의 cone은 두 개의 반직선 원소 $$\rho_i, \rho_{i+1}$$에 의해 생성되며, 이러한 반직선들은 1차원 cone들이 된다. 원점 $$\{0\}$$ 자체는 0차원 cone으로서 모든 fan에 포함된다. 이 fan은 $$\mathbb{P}^2$$의 toric variety를 정의하는 가장 기본적인 예시이다.
+<ins id="ex2">**예시 2**</ins> $$N = \mathbb{Z}^2$$에서 원점을 중심으로 방사형으로 세 개의 2차원 cone $$\tau_0, \tau_1, \tau_2$$가 $$\mathbb{R}^2$$를 덮는 fan을 생각할 수 있다. 가령 세 개의 벡터 $$e_1, e_2, -e_1-e_2$$를 생각한 후, 이들이 만드는 세 개의 cone을 생각하자.
+
+![$$\mathbb{P}^2$$의 fan](/assets/images/Math/Toric_Geometry/Toric_Varieties-1.png){:style="width:20em" class="invert" .align-center}
+
+각각의 cone은 두 개의 반직선 원소 $$\rho_i, \rho_{i+1}$$에 의해 생성되며, 이러한 반직선들은 1차원 cone들이 된다. 원점 $$\{0\}$$ 자체는 0차원 cone으로서 모든 fan에 포함된다. 이 fan은 $$\mathbb{P}^2$$의 toric variety를 정의하는 가장 기본적인 예시이다.
 
 </div>
 
-## Toric variety의 정의
+## 토릭 다양체의 정의
 
-이제 fan $$\Sigma$$가 주어졌을 때, 이로부터 대수다양체 $$X_\Sigma$$를 구성하는 방법을 설명한다. 각각의 cone $$\tau \in \Sigma$$에 대하여 [§Affine toric varieties, ⁋정의 5](/ko/math/toric_geometry/affine_toric_varieties#def5)에 의해 affine toric variety $$U_\tau$$를 얻는다. 두 cone $$\tau_1, \tau_2 \in \Sigma$$가 공통 face $$\tau_1 \cap \tau_2$$를 가질 때, [§Affine toric varieties, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)에 의해 $$U_{\tau_1 \cap \tau_2}$$는 $$U_{\tau_1}$$과 $$U_{\tau_2}$$ 모두의 주 열린 부분집합이 된다. 따라서 이들 사이에 자연스러운 동형사상
+이제 우리는 fan $$\Sigma$$가 주어졌을 때 이로부터 algebraic variety $$X_\Sigma$$를 정의할 수 있다. 사실 이를 위한 기본적인 도구는 이미 전부 설명했던 것이며, 오직 [정의 1](#def1)의 언어만이 추가로 필요했던 것이다. 이를 만드는 흐름을 명확한 수학적 언어로 정리하자면, fan $$\Sigma$$가 주어졌다 하고, 각각의 cone $$\tau \in \Sigma$$에 대하여 [§아핀 토릭 다양체, ⁋정의 5](/ko/math/toric_geometry/affine_toric_varieties#def5)에 의해 affine toric variety $$U_\tau$$를 얻는다. 이 때, 두 cone $$\tau_1, \tau_2 \in \Sigma$$가 공통 face $$\tau_1 \cap \tau_2$$를 가질 때, [§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)에 의해 $$U_{\tau_1 \cap \tau_2}$$는 $$U_{\tau_1}$$과 $$U_{\tau_2}$$ 모두의 principal open subset이 되며, 따라서 이들 사이의 isomorphism, inclusion
 
 $$U_{\tau_1} \supset U_{\tau_1 \cap \tau_2} \cong U_{\tau_2 \cap \tau_1} \subset U_{\tau_2}$$
 
@@ -51,43 +57,45 @@ $$U_{\tau_1} \supset U_{\tau_1 \cap \tau_2} \cong U_{\tau_2 \cap \tau_1} \subset
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Fan $$\Sigma$$에 대하여, affine toric variety들 $$\{U_\tau\}_{\tau \in \Sigma}$$를 위에서 기술한 방식으로 이어붙여 얻어지는 대수다양체를 $$\Sigma$$가 정의하는 **toric variety**라 하며, $$X_\Sigma$$로 적는다.
+<ins id="def3">**정의 3**</ins> Fan $$\Sigma$$에 대하여, affine toric variety들 $$\{U_\tau\}_{\tau \in \Sigma}$$를 위에서 기술한 방식으로 이어붙여 얻어지는 algebraic variety를 $$\Sigma$$가 정의하는 *toric variety<sub>토릭 다양체</sub>*라 하며, $$X_\Sigma$$로 적는다.
 
 </div>
 
+그럼 다음은 [§아핀 토릭 다양체, ⁋명제 13](/ko/math/toric_geometry/affine_toric_varieties#prop13)을 일반화하는 것이다. 
+
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> Toric variety $$X_\Sigma$$는 normal이고 separated인 대수다양체이다.
+<ins id="prop4">**명제 4**</ins> Toric variety $$X_\Sigma$$는 normal, separated algebraic variety이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$X_\Sigma$$의 normality는 각 affine chart $$U_\tau$$가 [§Affine toric varieties, ⁋명제 13](/ko/math/toric_geometry/affine_toric_varieties#prop13)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문이다. Separatedness를 보이기 위해서는 diagonal morphism $$\Delta: X_\Sigma \to X_\Sigma \times X_\Sigma$$의 image가 닫힌 집합임을 확인하면 된다. 각 affine chart 위에서 이는 두 cone의 교집합이 face임을 보장하는 fan의 두 번째 조건에 의해 성립한다. 
+$$X_\Sigma$$의 normality는 각 affine chart $$U_\tau$$가 [§아핀 토릭 다양체, ⁋명제 13](/ko/math/toric_geometry/affine_toric_varieties#prop13)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문에 얻어진다. Separatedness를 보이기 위해서는 diagonal morphism $$\Delta: X_\Sigma \to X_\Sigma \times X_\Sigma$$의 image가 닫힌 집합임을 확인하면 된다. 각 affine chart 위에서 이는 두 cone의 교집합이 face임을 보장하는 fan의 두 번째 조건에 의해 성립한다. 
 
 </details>
 
-Toric variety $$X_\Sigma$$가 가지는 중요한 성질 중 하나는 algebraic torus $$T_N$$을 열린 조밀한 부분집합으로 포함한다는 것이다. 실제로, 0차원 cone $$\{0\} \in \Sigma$$에 대응하는 affine chart $$U_{\{0\}}$$는 $$T_N$$과 동형이며, 다른 모든 $$U_\tau$$는 이를 열린 부분집합으로 포함한다. 따라서 $$T_N \subset X_\Sigma$$는 열린 조밀한 임베딩을 정의한다.
+Toric variety $$X_\Sigma$$가 affine toric variety로부터 물려받는 중요한 성질 중 하나는 algebraic torus $$T_N$$을 열린 조밀한 부분집합으로 포함한다는 것이다. ([§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)) 실제로, 0차원 cone $$\{0\} \in \Sigma$$에 대응하는 affine chart $$U_{\{0\}}$$는 $$T_N$$과 동형이며, 다른 모든 $$U_\tau$$는 이를 열린 부분집합으로 포함한다. 따라서 $$T_N \subset X_\Sigma$$는 open dense embedding을 정의한다.
 
-## 토러스 작용과 궤도
-
-[§Affine toric varieties, ⁋명제 8](/ko/math/toric_geometry/affine_toric_varieties#prop8)에서 보았듯이, 각 affine toric variety $$U_\tau$$ 위에는 algebraic torus $$T_N$$의 작용이 자연스럽게 정의된다. 이 작용은 gluing을 통해 $$X_\Sigma$$ 전체로 확장되며, 이로부터 $$X_\Sigma$$는 $$T_N$$의 *equivariant compactification*이 된다.
+[§아핀 토릭 다양체, ⁋명제 8](/ko/math/toric_geometry/affine_toric_varieties#prop8)에서 보았듯이, 각 affine toric variety $$U_\tau$$ 위에는 algebraic torus $$T_N$$의 작용이 자연스럽게 정의된다. 우리는 해당 글에서, cone의 inclusion이 유도하는 affine toric variety들 사이의 inclusion이 torus action에 대해 invariant하다는 것을 살펴보았으므로, 이 작용은 gluing을 통해 $$X_\Sigma$$ 전체로 확장된다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> Toric variety $$X_\Sigma$$ 위에는 algebraic torus $$T_N$$의 작용이 자연스럽게 정의되며, 이 작용은 $$X_\Sigma$$를 $$T_N$$의 equivariant compactification으로 만든다. 즉, $$T_N$$은 $$X_\Sigma$$의 열린 조밀한 부분집합으로 포함되고, $$T_N$$의 자기작용은 $$X_\Sigma$$ 위의 작용으로 확장된다.
+<ins id="prop5">**명제 5**</ins> 임의의 fan $$\Sigma$$에 대하여 toric variety $$X_\Sigma$$ 위에는 algebraic torus $$T_N$$의 작용이 자연스럽게 정의되며, 이 작용 하에서 $$T_N \subset X_\Sigma$$는 open dense $$T_N$$-invariant 부분집합이고 $$T_N$$의 자기작용이 $$X_\Sigma$$ 위의 작용으로 확장된다. 
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-각각의 cone $$\tau \in \Sigma$$에 대해, $$U_\tau$$ 위의 $$T_N$$-action은 [§Affine toric varieties, ⁋명제 8](/ko/math/toric_geometry/affine_toric_varieties#prop8)에 의해 정의된다. 두 affine chart $$U_{\tau_1}$$과 $$U_{\tau_2}$$의 교집합 $$U_{\tau_1 \cap \tau_2}$$ 위에서 이들 작용은 일치하므로, 이들은 $$X_\Sigma$$ 전체에서 well-defined한 $$T_N$$-action을 정의한다. 한편 $$\{0\} \in \Sigma$$에 대응하는 chart $$U_{\{0\}} \cong T_N$$은 열린 조밀한 부분집합이며, $$T_N$$의 자기작용은 이 chart 위에서 좌곱셈으로 주어지므로 $$X_\Sigma$$ 위의 작용으로 자연스럽게 확장된다.
+각각의 cone $$\tau \in \Sigma$$에 대해, $$U_\tau$$ 위의 $$T_N$$-action은 [§아핀 토릭 다양체, ⁋명제 8](/ko/math/toric_geometry/affine_toric_varieties#prop8)에 의해 정의된다. 두 affine chart $$U_{\tau_1}$$과 $$U_{\tau_2}$$의 교집합 $$U_{\tau_1 \cap \tau_2}$$ 위에서 이들 작용은 일치하므로, 이들은 $$X_\Sigma$$ 전체에서 well-defined한 $$T_N$$-action을 정의한다. 한편 $$\{0\} \in \Sigma$$에 대응하는 chart $$U_{\{0\}} \cong T_N$$은 열린 조밀한 부분집합이며, $$T_N$$의 자기작용은 이 chart 위에서 left multiplication으로 주어지므로 $$X_\Sigma$$ 위의 작용으로 자연스럽게 확장된다. 
 
 </details>
 
-이 작용에 의한 궤도들의 구조는 fan의 조합론과 밀접하게 연관된다. 구체적으로, $$d$$-차원 cone $$\tau \in \Sigma$$에 대응하는 궤도 $$\mathcal{O}(\tau)$$는 차원 $$n-d$$의 torus $$(\mathbb{C}^\ast)^{n-d}$$와 동형이다. 특히 $$n$$-차원 cone, 즉 maximal cone에 대응하는 궤도는 0차원이며 이는 $$T_N$$-action의 고정점이 된다.
+만일 fan $$\Sigma$$가 $$\bigcup_{\tau \in \Sigma} \tau = N_\mathbb{R}$$을 만족한다면 우리는 이를 *complete<sub>완전</sub>* fan이라 부른다. 이 경우 $$X_\Sigma$$는 *complete<sub>완비</sub>* algebraic variety, 즉 $$\Spec\mathbb{C}$$ 위에서 proper한 variety가 됨이 알려져 있다. Completeness는 대수기하에서 compactness에 대응하는 개념이므로, 우리는 이 경우 $$X_\Sigma$$를 $$T_N$$의 *equivariant compactification*이라 부른다.
+
+이 작용에 의한 궤도들의 구조는 fan의 조합론과 밀접하게 연관된다. 구체적으로, $$d$$-차원 cone $$\tau \in \Sigma$$에 대응하는 궤도 $$O(\tau)$$는 차원 $$n-d$$의 torus $$(\mathbb{C}^\ast)^{n-d}$$와 동형이다. 특히 $$n$$-차원 cone, 즉 maximal cone에 대응하는 궤도는 0차원이며 이는 $$T_N$$-action의 고정점이 된다.
 
 ## Normal fan과 projective toric variety
 
