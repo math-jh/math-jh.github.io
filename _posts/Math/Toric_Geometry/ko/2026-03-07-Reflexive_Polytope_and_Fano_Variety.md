@@ -72,7 +72,7 @@ $$-K_{X_\Sigma} = \sum_{\rho \in \Sigma(1)} D_\rho$$
 
 </div>
 
-Toric variety에서 divisor $$D=\sum a_\rho D_\rho$$에 대응하는 **support function** $$\psi_D$$는 각 ray generator $$v_\rho$$에서 $$\psi_D(v_\rho)=-a_\rho$$의 값을 가지는 함수이다. divisor가 Cartier이기 위해서는 각 maximal cone $$\sigma \in \Sigma$$에 대해 lattice point $$m_\sigma \in M$$이 존재하여, 이 support function이 $$\sigma$$ 위에서 $$u \mapsto \langle m_\sigma, u \rangle$$의 형태로 주어져야 한다. Anticanonical divisor $$-K_{X_\Sigma}$$에 대응하는 support function $$\psi_{-K}$$는 각 ray generator $$v_\rho$$에 대해 $$\psi_{-K}(v_\rho) = -1$$의 값을 갖는 piecewise linear function이다. 따라서 $$-K_{X_\Sigma}$$가 Cartier인 것은 각 maximal cone $$\sigma$$에 대해 $$m_\sigma \in M$$이 존재하여 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$인 것과 동치이다. 이 조건이 reflexive polytope의 dual $$\Delta^\circ$$의 꼭짓점 조건과 정확히 일치함을 확인할 수 있다.
+Toric variety에서 divisor $$D=\sum a_\rho D_\rho$$에 대응하는 **piecewise linear function** $$\psi_D$$는 각 ray generator $$v_\rho$$에서 $$\psi_D(v_\rho)=-a_\rho$$의 값을 가지는 함수이다. divisor가 Cartier이기 위해서는 각 maximal cone $$\sigma \in \Sigma$$에 대해 lattice point $$m_\sigma \in M$$이 존재하여, 이 piecewise linear function이 $$\sigma$$ 위에서 $$u \mapsto \langle m_\sigma, u \rangle$$의 형태로 주어져야 한다. Anticanonical divisor $$-K_{X_\Sigma}$$에 대응하는 piecewise linear function $$\psi_{-K}$$는 각 ray generator $$v_\rho$$에 대해 $$\psi_{-K}(v_\rho) = -1$$의 값을 갖는 함수이다. 따라서 $$-K_{X_\Sigma}$$가 Cartier인 것은 각 maximal cone $$\sigma$$에 대해 $$m_\sigma \in M$$이 존재하여 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$인 것과 동치이다. 이 조건이 reflexive polytope의 dual $$\Delta^\circ$$의 꼭짓점 조건과 정확히 일치함을 확인할 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -83,7 +83,7 @@ Toric variety에서 divisor $$D=\sum a_\rho D_\rho$$에 대응하는 **support f
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\Delta$$가 reflexive polytope라고 하자. $$\Sigma_\Delta$$의 각 maximal cone $$\sigma$$에 대해, $$\sigma$$는 $$\Delta$$의 어떤 꼭짓점 $$u_\sigma$$에 대응하며, 이 대응은 normal fan의 정의에 의해 다음 성질을 갖는다: $$\sigma$$의 ray generator $$v_\rho$$들은 $$\langle u_\sigma, v_\rho \rangle \ge \langle u, v_\rho \rangle$$ for all $$u \in \Delta$$를 만족한다. 특히 $$\Delta$$의 facet 방정식이 $$\langle u, v_\Theta \rangle = -1$$의 형태이므로, $$\sigma$$의 각 ray generator $$v_\rho$$에 대해 $$\langle u_\sigma, v_\rho \rangle = -1$$이 성립한다. 따라서 $$m_\sigma = u_\sigma \in M$$을 선택하면 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$이 되며, 이는 $$-K_{X_\Delta}$$가 Cartier임을 의미한다. 한편 $$-K_{X_\Delta}$$의 ample성은 $$\psi_{-K}(v_\rho) = -1$$인 support function이 strictly convex함으로부터 얻어진다. **strictly convex**한 support function은 서로 다른 maximal cone 위에서 서로 다른 선형 함수를 가지며, 이에 대응하는 divisor가 ample이다. 이는 $$\Sigma_\Delta$$가 projective fan임을 보장하며, $$-K_{X_\Delta}$$가 ample divisor임을 의미한다.
+$$\Delta$$가 reflexive polytope라고 하자. $$\Sigma_\Delta$$의 각 maximal cone $$\sigma$$에 대해, $$\sigma$$는 $$\Delta$$의 어떤 꼭짓점 $$u_\sigma$$에 대응하며, 이 대응은 normal fan의 정의에 의해 다음 성질을 갖는다: $$\sigma$$의 ray generator $$v_\rho$$들은 $$\langle u_\sigma, v_\rho \rangle \ge \langle u, v_\rho \rangle$$ for all $$u \in \Delta$$를 만족한다. 특히 $$\Delta$$의 facet 방정식이 $$\langle u, v_\Theta \rangle = -1$$의 형태이므로, $$\sigma$$의 각 ray generator $$v_\rho$$에 대해 $$\langle u_\sigma, v_\rho \rangle = -1$$이 성립한다. 따라서 $$m_\sigma = u_\sigma \in M$$을 선택하면 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$이 되며, 이는 $$-K_{X_\Delta}$$가 Cartier임을 의미한다. 한편 $$-K_{X_\Delta}$$의 ample성은 $$\psi_{-K}(v_\rho) = -1$$인 piecewise linear function이 strictly convex함으로부터 얻어진다. **strictly convex**한 piecewise linear function은 서로 다른 maximal cone 위에서 서로 다른 선형 함수를 가지며, 이에 대응하는 divisor가 ample이다. 이는 $$\Sigma_\Delta$$가 projective fan임을 보장하며, $$-K_{X_\Delta}$$가 ample divisor임을 의미한다.
 
 반대로 $$X_\Sigma$$가 Gorenstein Fano라고 가정하자. $$-K_{X_\Sigma}$$가 Cartier이므로 각 maximal cone $$\sigma$$에 대해 $$m_\sigma \in M$$이 존재하여 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$이다. 이제
 
@@ -114,7 +114,7 @@ Toric variety에서 $$T_N$$-invariant Cartier divisor $$D$$에 대응하는 poly
 
 $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1) \}$$
 
-으로 정의되며, [§Toric divisors와 line bundles, ⁋명제 8](/ko/math/toric_geometry/toric_divisors#prop8)에서 보인 바와 같이 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$의 basis는 $$P_D \cap M$$의 원소들에 대응하는 characters $$\chi^u$$들로 주어진다. Anticanonical divisor $$-K_{X_\Delta}$$의 경우 $$a_\rho = 1$$ for all $$\rho$$이므로,
+으로 정의되며, [§토러스 인자와 선다발, ⁋명제 8](/ko/math/toric_geometry/toric_divisors#prop8)에서 보인 바와 같이 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$의 basis는 $$P_D \cap M$$의 원소들에 대응하는 characters $$\chi^u$$들로 주어진다. Anticanonical divisor $$-K_{X_\Delta}$$의 경우 $$a_\rho = 1$$ for all $$\rho$$이므로,
 
 $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma_\Delta(1) \}$$
 

@@ -830,7 +830,7 @@ toric_geometry-ko:
         url: ko/math/toric_geometry/affine_toric_varieties
       - title: "토릭 다양체의 정의"
         url: ko/math/toric_geometry/toric_varieties
-      - title: "Toric divisor와 line bundle"
+      - title: "토러스 인자와 선다발"
         url: ko/math/toric_geometry/toric_divisors
       - title: "Reflexive polytope와 Fano variety"
         url: ko/math/toric_geometry/reflexive_polytope_fano

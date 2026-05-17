@@ -33,11 +33,11 @@ $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)]$$
 
 Cox ring $$S$$는 polynomial ring이므로 특히 unique factorization domain이다. 이 점에서 Cox ring은 toric variety의 대수적 특성을 반영하는 중요한 불변량이다. 실제로 toric variety가 아닌 일반 variety에 대해서도 Cox ring을 정의할 수 있으나, toric variety의 경우에만 Cox ring이 polynomial ring이 된다.
 
-이제 $$S$$ 위의 grading을 도입해야 한다. [§Toric divisors와 line bundles, ⁋정의 1](/ko/math/toric_geometry/toric_divisors#def1)에서 살펴 보았듯이, 각 $$\rho \in \Sigma(1)$$에 대응하는 torus-invariant divisor $$D_\rho$$를 생각할 수 있으며, [§Toric divisors와 line bundles, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4)에 의해 Weil divisor class group $$\operatorname{Cl}(X_\Sigma)$$는 다음 exact sequence
+이제 $$S$$ 위의 grading을 도입해야 한다. [§토러스 인자와 선다발, ⁋정의 1](/ko/math/toric_geometry/toric_divisors#def1)에서 살펴 보았듯이, 각 $$\rho \in \Sigma(1)$$에 대응하는 torus-invariant divisor $$D_\rho$$를 생각할 수 있으며, [§토러스 인자와 선다발, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4)에 의해 Weil divisor class group $$\operatorname{Cl}(X_\Sigma)$$는 다음 exact sequence
 
 $$0 \longrightarrow M \longrightarrow \bigoplus_{\rho \in \Sigma(1)} \mathbb{Z} \cdot D_\rho \longrightarrow \operatorname{Cl}(X_\Sigma) \longrightarrow 0$$
 
-로부터 얻어진다. 여기서 첫 번째 화살표는 [§Toric divisors와 line bundles, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)에 의해 $$m \mapsto \sum_{\rho} \langle m, u_\rho \rangle D_\rho$$로 주어진다. 이 exact sequence에 $$\operatorname{Hom}_\mathbb{Z}(-, \mathbb{C}^\ast)$$를 적용하면 다음 exact sequence를 얻는다.
+로부터 얻어진다. 여기서 첫 번째 화살표는 [§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)에 의해 $$m \mapsto \sum_{\rho} \langle m, u_\rho \rangle D_\rho$$로 주어진다. 이 exact sequence에 $$\operatorname{Hom}_\mathbb{Z}(-, \mathbb{C}^\ast)$$를 적용하면 다음 exact sequence를 얻는다.
 
 $$1 \longrightarrow G \longrightarrow (\mathbb{C}^\ast)^{\Sigma(1)} \longrightarrow T_N \longrightarrow 1$$
 
@@ -179,7 +179,7 @@ $$S_\beta \cong H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Cox ring $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)]$$의 $$\beta$$차 성분은 monomial $$\prod_\rho \x_\rho^{a_\rho}$$들로 생성되며, 여기서 $$\sum_\rho a_\rho D_\rho$$가 class $$\beta$$를 가진다. 한편, [§Toric divisors와 line bundles, ⁋명제 8](/ko/math/toric_geometry/toric_divisors#prop8)에 의해, $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$의 원소는 lattice point $$m \in M$$에 대응하는 character $$\chi^m$$들로 이루어지며, 이들은 $$\langle m, u_\rho \rangle \geq -a_\rho$$를 만족한다. 이 조건은 $$\beta$$차 monomial의 정의와 정확히 일치하므로, 각 lattice point $$m \in M$$에 대응하는 monomial $$\prod_\rho \x_\rho^{\langle m, u_\rho\rangle + a_\rho}$$의 degree는 $$\sum_\rho (\langle m, u_\rho\rangle + a_\rho)D_\rho = \sum_\rho a_\rho D_\rho + \operatorname{div}(\chi^m) = \beta$$가 되어 principal divisor에 의해 $$\beta$$가 됨을 알 수 있다. 따라서 자연스러운 isomorphism이 존재한다.
+Cox ring $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)]$$의 $$\beta$$차 성분은 monomial $$\prod_\rho \x_\rho^{a_\rho}$$들로 생성되며, 여기서 $$\sum_\rho a_\rho D_\rho$$가 class $$\beta$$를 가진다. 한편, [§토러스 인자와 선다발, ⁋명제 8](/ko/math/toric_geometry/toric_divisors#prop8)에 의해, $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$의 원소는 lattice point $$m \in M$$에 대응하는 character $$\chi^m$$들로 이루어지며, 이들은 $$\langle m, u_\rho \rangle \geq -a_\rho$$를 만족한다. 이 조건은 $$\beta$$차 monomial의 정의와 정확히 일치하므로, 각 lattice point $$m \in M$$에 대응하는 monomial $$\prod_\rho \x_\rho^{\langle m, u_\rho\rangle + a_\rho}$$의 degree는 $$\sum_\rho (\langle m, u_\rho\rangle + a_\rho)D_\rho = \sum_\rho a_\rho D_\rho + \operatorname{div}(\chi^m) = \beta$$가 되어 principal divisor에 의해 $$\beta$$가 됨을 알 수 있다. 따라서 자연스러운 isomorphism이 존재한다.
 
 </details>
 
