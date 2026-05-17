@@ -125,6 +125,64 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{e_1^\ast}, \rchi^{e_2^\ast}] = \mathb
 
 </div>
 
+## 매끄러움
+
+위의 [예시 6](#ex6)의 $$\sigma = \{0\}$$과 [예시 7](#ex7)의 standard quadrant $$\sigma = \mathrm{cone}(e_1, e_2)$$에서 $$U_\sigma$$가 각각 $$T_N$$, $$\mathbb{C}^2$$로 모두 smooth algebraic variety였다. 이제 우리는 이것이 우연이 아닐 뿐만 아니라 $$U_\sigma$$의 smoothness가 cone $$\sigma$$의 조합론적 데이터만으로 완전히 판정된다는 것을 살펴볼 것이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> Strongly convex rational polyhedral cone $$\sigma \subset N_{\mathbb{R}}$$가 *smooth<sub>매끄러운</sub>* (또는 *regular*, *nonsingular*) cone이라는 것은, $$\sigma$$의 primitive ray generator들 $$v_1, \ldots, v_k$$ ($$k = \dim \sigma$$)이 lattice $$N$$의 어떤 $$\mathbb{Z}$$-basis의 일부를 이루는 것이다.
+
+</div>
+
+정의 자체는 다소 추상적으로 보일 수 있지만, 실용적으로는 다음의 두 조건이 합쳐진 것과 동치이다.
+
+1. $$\sigma$$가 *simplicial*이다. 즉 ray 수와 차원이 일치한다.
+2. ($$\sigma$$가 full-dimensional인 경우) primitive ray generator $$v_1, \ldots, v_n$$들을 열로 모은 행렬 $$[v_1 \mid \cdots \mid v_n] \in \mathrm{Mat}_n(\mathbb{Z})$$의 determinant가 $$\pm 1$$이다.
+
+특히 $$N = \mathbb{Z}^2$$에서 2차원 cone에 대해서는 두 ray generator로 만든 $$2 \times 2$$ 행렬의 determinant가 $$\pm 1$$인지만 확인하면 되고, 실제로 [예시 6](#ex6)과 [예시 7](#ex7)은 이를 만족한다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9**</ins> Affine toric variety $$U_\sigma$$가 smooth algebraic variety인 것은 $$\sigma$$가 smooth cone인 것과 필요충분조건이다. 더 구체적으로, $$\sigma$$가 smooth이고 $$k = \dim \sigma$$이면
+
+$$U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$$
+
+가 성립한다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+($$\Leftarrow$$) $$\sigma$$가 smooth라 하자. 정의에 의해 ray generator $$v_1, \ldots, v_k$$가 $$N$$의 어떤 기저 $$\{v_1, \ldots, v_n\}$$의 일부를 이룬다. 이 기저의 dual basis $$\{v_1^\ast, \ldots, v_n^\ast\} \subset M$$를 택하면,
+
+$$\sigma^\vee = \{u \in M_{\mathbb{R}} \mid \langle u, v_i\rangle \ge 0,\ i = 1, \ldots, k\} = \mathbb{R}_{\ge 0}\langle v_1^\ast, \ldots, v_k^\ast\rangle + \mathbb{R}\langle v_{k+1}^\ast, \ldots, v_n^\ast\rangle$$
+
+이고 따라서
+
+$$S_\sigma = \sigma^\vee \cap M = \mathbb{Z}_{\ge 0}\langle v_1^\ast, \ldots, v_k^\ast\rangle \oplus \mathbb{Z}\langle v_{k+1}^\ast, \ldots, v_n^\ast\rangle$$
+
+이 된다. 그럼
+
+$$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{v_1^\ast}, \ldots, \rchi^{v_k^\ast}, \rchi^{\pm v_{k+1}^\ast}, \ldots, \rchi^{\pm v_n^\ast}] \cong \mathbb{C}[x_1, \ldots, x_k, x_{k+1}^{\pm 1}, \ldots, x_n^{\pm 1}]$$
+
+이므로 $$U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$$가 smooth이다.
+
+($$\Rightarrow$$) 역방향은 $$U_\sigma$$의 unique torus-fixed point (orbit-cone correspondence에서 $$\sigma$$ 자신에 대응)에서 cotangent space 차원이 ray 수 $$\lvert \sigma(1) \rvert$$와 같음을 보이는 데서 출발한다. $$U_\sigma$$가 smooth이면 이 차원이 $$n = \dim U_\sigma$$여야 하므로 ray 수가 $$n$$, 즉 $$\sigma$$가 simplicial이고 또한 $$N$$의 $$\mathbb{Z}$$-기저를 이뤄야 한다.
+
+</details>
+
+가령 $$N = \mathbb{Z}^2$$에서 $$\sigma = \mathrm{cone}(e_2,\ 2e_1 - e_2)$$를 잡으면, 두 ray의 primitive generator로 만든 행렬
+
+$$\begin{vmatrix} 0 & 2 \\ 1 & -1 \end{vmatrix} = -2$$
+
+이므로 $$\sigma$$는 simplicial이지만 smooth가 아니다. 실제로 $$S_\sigma$$의 minimal generator를 계산하면 $$u_1 = e_1^\ast$$, $$u_2 = e_1^\ast + e_2^\ast$$, $$u_3 = 2 e_1^\ast + e_2^\ast$$의 세 원소이고 관계식 $$u_1 u_3 = u_2^2$$가 성립하므로
+
+$$\mathbb{C}[S_\sigma] \cong \mathbb{C}[x, y, z]/(xz - y^2)$$
+
+이 되어, $$U_\sigma$$는 원점에 $$A_1$$ 특이점을 갖는 affine toric variety가 된다. 일반적으로 행렬식이 $$\pm d$$이면 $$U_\sigma$$는 원점에 $$\mathbb{Z}/d$$ quotient singularity를 갖는다.
+
 ## 토러스 작용
 
 우리는 $$\Spec(\mathbb{C}[S_\sigma])$$ 위에 torus action을 정의하기 위해, 이미 친숙한 $$\mathbb{P}^N$$의 예시를 살펴본다. $$\mathbb{P}^N = \Proj(\mathbb{C}[\x_0, \ldots, \x_N])$$의 경우, $$\mathbb{C}^\ast$$가 scaling action을 하면 polynomial ring $$\mathbb{C}[\x_0, \ldots, \x_N]$$이 degree-by-degree로 분해된다. 각 homogeneous component $$\mathbb{C}[\x_0, \ldots, \x_N]_d$$는 $$\mathbb{C}^\ast$$-module로서 eigenspace를 형성한다.
@@ -175,7 +233,7 @@ $$\rchi^m(t) = z_1^{m_1} \cdots z_n^{m_n}$$
 
 가 된다. 즉, *character group* $$\Hom(T_N, \mathbb{C}^\ast)$$는 dual lattice $$M$$과 isomorphic하다.
 
-이제 위와 같이 torus에 대한 이해를 바탕으로 $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$ 위에 $$T_N$$-action을 정의한다. $$\Spec$$이 contravariant functor라는 사실로부터, geometric action $$T_N \times U_\sigma \to U_\sigma$$는 coordinate ring $$\mathbb{C}[S_\sigma]$$ 위의 comodule structure로 인코딩되며, 이 contravariance가 점 차원에서 어떻게 발현되는지는 [예시 12](#ex12)에서 직접 확인한다.
+이제 위와 같이 torus에 대한 이해를 바탕으로 $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$ 위에 $$T_N$$-action을 정의한다. $$\Spec$$이 contravariant functor라는 사실로부터, geometric action $$T_N \times U_\sigma \to U_\sigma$$는 coordinate ring $$\mathbb{C}[S_\sigma]$$ 위의 comodule structure로 인코딩되며, 이 contravariance가 점 차원에서 어떻게 발현되는지는 [예시 14](#ex14)에서 직접 확인한다.
 
 구체적으로, 다음의 $$\mathbb{C}$$-algebra homomorphism
 
@@ -195,7 +253,7 @@ $$(\id \otimes \ev_t)(\rchi^u \otimes \rchi^u) = \rchi^u \otimes \rchi^u(t) = \r
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> Algebraic torus $$T_N$$이 affine toric variety $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$ 위에 작용한다. 우선 coordinate ring $$\mathbb{C}[S_\sigma]$$ 위에 다음의 $$\mathbb{C}$$-algebra homomorphism $$\rho$$를 정의한다.
+<ins id="prop10">**명제 10**</ins> Algebraic torus $$T_N$$이 affine toric variety $$U_\sigma = \Spec(\mathbb{C}[S_\sigma])$$ 위에 작용한다. 우선 coordinate ring $$\mathbb{C}[S_\sigma]$$ 위에 다음의 $$\mathbb{C}$$-algebra homomorphism $$\rho$$를 정의한다.
 
 $$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
 
@@ -227,7 +285,7 @@ $$(g\cdot f)(x) = f(g^{-1}\cdot x)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 모든 affine toric variety $$U_\sigma$$는 torus $$T_N$$을 open dense subset으로 포함한다.
+<ins id="prop11">**명제 11**</ins> 모든 affine toric variety $$U_\sigma$$는 torus $$T_N$$을 open dense subset으로 포함한다.
 
 </div>
 
@@ -248,7 +306,7 @@ $$T_N = \Spec(\mathbb{C}[M]) \longrightarrow \Spec(\mathbb{C}[S_\sigma]) = U_\si
 
 <div class="proposition" markdown="1">
 
-<ins id="lem10">**보조정리 10 (Separation lemma)**</ins> Cone $$\sigma$$의 face $$\tau$$에 대하여 다음을 만족하는 $$u \in S_\sigma$$가 존재한다.
+<ins id="lem12">**보조정리 12 (Separation lemma)**</ins> Cone $$\sigma$$의 face $$\tau$$에 대하여 다음을 만족하는 $$u \in S_\sigma$$가 존재한다.
 
 $$\tau = \sigma \cap u^{\perp}.$$
 
@@ -264,7 +322,7 @@ $$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Cone $$\sigma$$의 face $$\tau$$에 대하여, $$U_\tau$$는 $$U_\sigma$$의 principal open subset이다. ([\[대수다양체\] §아핀다양체, ⁋정의 5](/ko/math/algebraic_varieties/affine_varieties#def5)) 구체적으로, $$u \in S_\sigma$$를 $$\tau = \sigma \cap u^{\perp}$$를 만족하는 것으로 선택하면
+<ins id="prop13">**명제 13**</ins> Cone $$\sigma$$의 face $$\tau$$에 대하여, $$U_\tau$$는 $$U_\sigma$$의 principal open subset이다. ([\[대수다양체\] §아핀다양체, ⁋정의 5](/ko/math/algebraic_varieties/affine_varieties#def5)) 구체적으로, $$u \in S_\sigma$$를 $$\tau = \sigma \cap u^{\perp}$$를 만족하는 것으로 선택하면
 
 $$U_\tau = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}$$
 
@@ -275,7 +333,7 @@ $$U_\tau = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$u \in S_\sigma$$이고 $$\tau = \sigma \cap u^\perp$$라고 하자. [보조정리 10](#lem10)에 의해 $$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$$이 성립하므로,
+$$u \in S_\sigma$$이고 $$\tau = \sigma \cap u^\perp$$라고 하자. [보조정리 12](#lem12)에 의해 $$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$$이 성립하므로,
 
 $$S_\tau = \tau^\vee \cap M = (\sigma^\vee + \mathbb{R}_{\ge 0}(-u)) \cap M = S_\sigma + \mathbb{Z}_{\ge 0}(-u)$$
 
@@ -297,9 +355,9 @@ $$U_\tau = \Spec(\mathbb{C}[S_\tau]) = \Spec(\mathbb{C}[S_\sigma]_{\rchi^u}) = (
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> [예시 7](#ex7)에서 $$N = \mathbb{Z}^2$$이고 $$\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$$일 때 $$U_\sigma = \mathbb{C}^2$$임을 보았다. 이제 torus $$T_N = (\mathbb{C}^\ast)^2$$가 $$U_\sigma = \mathbb{C}^2$$ 위에 어떻게 작용하는지 구체적으로 살펴보자.
+<ins id="ex14">**예시 14**</ins> [예시 7](#ex7)에서 $$N = \mathbb{Z}^2$$이고 $$\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$$일 때 $$U_\sigma = \mathbb{C}^2$$임을 보았다. 이제 torus $$T_N = (\mathbb{C}^\ast)^2$$가 $$U_\sigma = \mathbb{C}^2$$ 위에 어떻게 작용하는지 구체적으로 살펴보자.
 
-우선 [예시 7](#ex7)에서 본 대로 $$\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$$이며 ($$\z_i = \rchi^{e_i^\ast}$$), $$U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$$이다. 이제 [명제 8](#prop8)에 따르면, $$t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$$는 coordinate ring 위에 다음의 식
+우선 [예시 7](#ex7)에서 본 대로 $$\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$$이며 ($$\z_i = \rchi^{e_i^\ast}$$), $$U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$$이다. 이제 [명제 10](#prop10)에 따르면, $$t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$$는 coordinate ring 위에 다음의 식
 
 $$t \cdot \z_i = \rchi^{e_i^\ast}(t) \z_i = t_i \z_i \qquad i = 1, 2$$
 
@@ -313,7 +371,7 @@ $$(t_1, t_2) \cdot (z_1, z_2) = (t_1 z_1, t_2 z_2)$$
 
 로 주어진다. 이는 $$(\mathbb{C}^\ast)^2$$의 각 성분이 $$\mathbb{C}^2$$의 대응하는 coordinate를 scaling하는 가장 자연스러운 작용이다.
 
-이제 이 action의 orbit 구조를 살펴보자. [명제 9](#prop9)가 주는 open dense orbit은 
+이제 이 action의 orbit 구조를 살펴보자. [명제 11](#prop11)이 주는 open dense orbit은 
 
 $$(\mathbb{C}^\ast)^2 = \{(z_1, z_2) \mid z_1 \neq 0, z_2 \neq 0\}$$
 
@@ -325,7 +383,7 @@ $$(\mathbb{C}^\ast)^2 = \{(z_1, z_2) \mid z_1 \neq 0, z_2 \neq 0\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> Affine toric variety $$U_\sigma$$에 대해 다음이 성립한다:
+<ins id="prop15">**명제 15**</ins> Affine toric variety $$U_\sigma$$에 대해 다음이 성립한다:
 
 1. $$U_\sigma$$는 normal variety이다.
 2. $$U_\sigma$$는 irreducible이다.
