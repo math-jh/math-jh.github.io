@@ -15,7 +15,6 @@ sidebar:
 date: 2026-05-18
 last_modified_at: 2026-05-18
 weight: 4
-published: false
 ---
 
 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 우리는 lattice polytope $$P \subset M_{\mathbb{R}}$$의 normal fan $$\Sigma_P$$을 통해 projective toric variety $$X_P$$를 구성하는 방법을 살펴 보았다. 이 구성에서 $$P$$의 기하학적 성질이 $$X_P$$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. 
@@ -202,26 +201,24 @@ $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 
 위에서 언급했듯 $$X_\Delta$$와 $$X_{\Delta^\circ}$$ 사이의 관계는 쉽게 드러나는 종류의 것이 아니며, 이 글의 남은 부분에서 이를 엄밀하게 설명하는 것 또한 불가능하다. 이 둘은 mirror symmetry를 통해 서로 관련되어 있는데, 이는 한 마디로, 두 개의 (보통 isomorphic하지 않은) Calabi-Yau variety가 Hodge 데이터의 특정 대칭을 통해 *짝지어진다*는 가설이다.
 
-[명제 7](#prop7)의 결론 $$K_V = 0$$은 (거의) 정확히 *Calabi-Yau variety*를 특징짓는 대수적인 조건이라는 점에서, $$V$$가 이 mirror symmetry의 무대 위로 올라올 여지를 준다. 마찬가지로 동일한 construction을 $$X_\{\Delta^\circ}$$에서도 반복하면 우리는 이 $$V$$의 "mirror pair" $$V^\circ$$ 또한 정의할 수 있을 것이다. 
+[명제 7](#prop7)의 결론 $$K_V = 0$$은 (거의) 정확히 *Calabi-Yau variety*를 특징짓는 대수적인 조건이라는 점에서, $$V$$가 이 mirror symmetry의 무대 위로 올라올 여지를 준다. 마찬가지로 동일한 construction을 $$X_{\Delta^\circ}$$에서도 반복하면 우리는 이 $$V$$의 "mirror pair" $$V^\circ$$ 또한 정의할 수 있을 것이다. 
 
+그러나 일반적으로 reflexive polytope $$\Delta$$로부터 만들어진 $$X_\Delta$$는 singular하며, 이로 인해 두 가지 미묘한 문제가 생긴다.
 
- algebraic 조건이기 때문이다. 일반적으로 $$n$$차원의 smooth projective variety $$V$$가 *Calabi-Yau<sub>칼라비-야우</sub>*라는 것은 $$K_V \sim 0$$ — 동치로, nowhere-vanishing 정칙 top-form $$\Omega \in H^0(V, \omega_V)$$가 존재하는 것 — 을 의미한다 (통상 추가로 $$h^{i,0}(V) = 0$$ for $$0 < i < n$$을 요구하지만, 우리의 논의에서는 본질적인 조건이 $$K_V \sim 0$$이다). 미분기하학적으로 이는 Yau의 정리에 의해 $$V$$가 Ricci-flat Kähler metric을 갖는 것과 동치이며, 1980년대 후반 끈이론의 compactification manifold로 본격적으로 등장한 이래 *mirror symmetry* 가설의 중심 무대로 자리잡았다 — mirror symmetry란  그래서 우리의 자연스러운 follow-up 질문은 reflexive pair $$(\Delta, \Delta^\circ)$$로부터 두 개의 Calabi-Yau family를 자연스럽게 만들 수 있는가, 그리고 만들 수 있다면 이들이 mirror pair를 이루는가 하는 것이다. 명제 7은 그 첫 단추로, smooth Fano variety의 generic anticanonical hypersurface가 ($$K_V = 0$$이라는 의미에서) Calabi-Yau 후보임을 보장한다. 즉 $$X_\Delta$$가 smooth라면 generic $$V \in \lvert -K_{X_\Delta} \rvert$$는 $$(n-1)$$차원 Calabi-Yau의 후보가 되며, 동일한 구성을 $$X_{\Delta^\circ}$$에 대해서도 수행하여 mirror 후보 $$V^\circ \in \lvert -K_{X_{\Delta^\circ}} \rvert$$를 얻는다.
+1. Codimension $$1$$인 $$V$$가 $$X_\Delta$$의 singular locus와 만나는 경우, $$V$$ 자신이 그 점에서 singular하게 된다. 우리 예시인 $$\mathbb{P}^2/(\mathbb{Z}/3)$$에서는 singular locus가 isolated된 세 점이므로 generic cubic curve $$V$$는 이를 피해 smooth하게 잡아줄 수 있지만, 차원이 커질수록 singular locus가 양의 차원이 되어 $$V$$가 반드시 이를 가로지르는 현상이 나타난다. 따라서 [명제 7](#prop7)의 결론을 *singular* $$V$$에 그대로 적용할 수 없다.
+2. 따라서, singular한 $$V$$로부터 진정한 smooth Calabi-Yau를 얻으려면 적절한 resolution $$\pi: \widetilde{V} \to V$$가 필요한데, 일반적인 resolution은 canonical class를 보존하지 않는다. 구체적으로, normal Gorenstein variety $$V$$의 임의의 resolution은 다음의 *discrepancy formula*
+    
+    $$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i$$
+    
+    를 만족한다는 것이 알려져 있다. 여기서 $$E_i$$는 $$\pi$$의 exceptional divisor이며, $$a_i \in \mathbb{Q}$$는 *discrepancy*라 부르는 유리수이다. 이 식은 $$\pi^\ast K_V$$가 $$\tilde V$$ 위 differential form의 vanishing/pole 구조를 정확히 잡아내지 못하는 부분을 $$a_i E_i$$로 보정한 것으로, $$a_i$$의 부호와 크기가 $$V$$의 특이점 종류를 분류해주는 표준적인 invariant가 된다.
+    
+    이제 $$V$$가 adjunction에 의해 $$K_V \sim 0$$를 만족한다 하더라도, 임의의 resolution에서
+    
+    $$K_{\tilde V} = \pi^\ast \cdot 0 + \sum_i a_i E_i = \sum_i a_i E_i$$
+    
+    이고 generic하게는 $$a_i > 0$$인 항이 존재하여 $$K_{\tilde V} \not\sim 0$$, 즉 $$\tilde V$$가 Calabi-Yau 성질을 잃어버린다. 
 
-그러나 일반적으로 reflexive polytope $$\Delta$$로부터 만들어진 $$X_\Delta$$는 singular하며 (가령 위의 $$X_{\Delta^\circ} = \mathbb{P}^2/(\mathbb{Z}/3)$$), 이 경우 두 가지 미묘한 문제가 생긴다.
-
-첫째, codimension $$1$$인 $$V$$가 $$X_\Delta$$의 singular locus와 차원 비교상 만나야 하는 경우 $$V$$ 자신이 그 점에서 singular하게 된다. ($$n=2$$인 $$\mathbb{P}^2/(\mathbb{Z}/3)$$의 경우 singular locus가 isolated된 3점이므로 generic cubic curve $$V$$는 이를 피해 smooth하지만, 차원이 커질수록 — 가령 $$n \ge 4$$의 K3나 Calabi-Yau 3-fold — singular locus가 양의 차원이 되어 $$V$$가 반드시 이를 가로지른다.) 따라서 [명제 7](#prop7)의 결론을 *singular* $$V$$에 그대로 적용할 수 없다.
-
-둘째, singular $$V$$로부터 진정한 smooth Calabi-Yau를 얻으려면 resolution $$\pi: \tilde V \to V$$가 필요한데, 일반적인 resolution은 canonical class를 보존하지 않는다. 구체적으로, normal Gorenstein variety $$V$$의 임의의 resolution은 다음의 *discrepancy formula*를 만족한다.
-
-$$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i.$$
-
-여기서 $$E_i$$는 $$\pi$$의 exceptional divisor (즉 $$\pi(E_i) \subset V$$가 $$V$$의 특이점)이고, $$a_i \in \mathbb{Q}$$는 *discrepancy*라 부르는 유리수이다. 이 식은 $$\pi^\ast K_V$$가 $$\tilde V$$ 위 differential form의 vanishing/pole 구조를 정확히 잡아내지 못하는 부분을 $$a_i E_i$$로 보정한 것이며, $$a_i$$의 부호·크기가 $$V$$의 특이점 종류를 분류해주는 표준 invariant가 된다 — 모든 $$a_i > 0$$이면 *terminal*, $$a_i \ge 0$$이면 *canonical* (toric Gorenstein은 항상 이 클래스), $$a_i > -1$$이면 *Kawamata log terminal* singularity로 분류된다.
-
-이제 $$V$$가 adjunction에 의해 $$K_V \sim 0$$를 만족한다 하더라도, 임의의 resolution에서
-
-$$K_{\tilde V} = \pi^\ast \cdot 0 + \sum_i a_i E_i = \sum_i a_i E_i$$
-
-이고 generic하게는 $$a_i > 0$$인 항이 존재하여 $$K_{\tilde V} \not\sim 0$$, 즉 $$\tilde V$$가 Calabi-Yau 성질을 잃어버린다. 따라서 Calabi-Yau 성질을 *보존하는* 유일한 종류의 resolution은 모든 $$a_i = 0$$인 것이며, 이러한 special한 resolution을 다음과 같이 정의한다.
+따라서 Calabi-Yau 성질을 *보존하는* 유일한 종류의 resolution은 모든 $$a_i = 0$$인 것이며, 이러한 resolution을 다음과 같이 정의한다.
 
 <div class="definition" markdown="1">
 
@@ -233,13 +230,15 @@ $$K_{\tilde{X}} = \pi^* K_X$$
 
 </div>
 
-"Crepant"라는 단어는 모든 discrepancy가 $$0$$이라는 의미에서 "dis-crepancy"의 접두사를 떼어 만든 Miles Reid의 말장난이다. 이 조건이 정확히 [명제 7](#prop7)의 결론을 singular setting까지 끌고 가는 데 필요한 만큼이라는 것은 위의 discrepancy formula로부터 즉시 확인된다 — $$V$$의 crepant resolution $$\pi: \tilde V \to V$$가 존재한다면 $$K_{\tilde V} = \pi^\ast K_V = 0$$이 유지되어 $$\tilde V$$가 진정한 (smooth) Calabi-Yau가 된다.
+즉 crepant resolution은 dis-crepancy가 없는 resolution이다. 그럼 이 조건이 정확히 [명제 7](#prop7)의 결론을 singular setting까지 끌고 가는 데 필요한 조건이라는 것을 즉시 확인할 수 있고, 이로부터 $$\widetilde{V}$$가 진정한 (smooth) Calabi-Yau가 된다.
 
-Toric setting에서 crepant resolution은 매우 명시적인 격자 데이터로 번역된다. 일반적인 toric resolution이 fan의 refinement (즉 동일 support 위의 더 세밀한 fan)로 주어진다는 사실은 이미 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11) 이후의 논의에서 살펴보았다. 그 중 birational morphism $$\pi: X_{\Sigma'} \to X_\Delta$$가 crepant일 필요충분조건은 새로 추가된 ray $$v$$들이 모두 $$\Delta^\circ$$의 *경계* 위에 놓인 lattice point라는 것이다 ([CLS] §11.4). 직관적으로 이는 [명제 3](#prop3)의 증명에서 본 anticanonical piecewise linear function $$\psi_{-K}$$가 새 ray $$v$$에 대해서도 여전히 $$\psi_{-K}(v) = -1$$를 만족해야 하며 — $$v$$가 cone $$\sigma$$ (vertex $$u_\sigma$$)의 내부에 들어오면 $$\psi_{-K}(v) = \langle u_\sigma, v\rangle = -1$$은 정확히 $$v$$가 $$\Delta^\circ$$의 facet $$F_{u_\sigma}$$ 위에 있다는 것과 동치이기 때문이다. 가령 $$\mathbb{P}^2/(\mathbb{Z}/3)$$의 fan에서 인접 두 ray 사이의 lattice point $$(1,0), (0,1), (-1,-1)$$를 새 ray로 추가하면 (이들은 모두 $$\Delta^\circ$$의 경계 위에 있다) 세 $$\mathbb{Z}/3$$ 특이점이 동시에 해소되며, 결과는 smooth $$\mathbb{P}^2$$의 fan이 된다 — 이것이 $$X_{\Delta^\circ}$$의 crepant resolution이다.
+Toric setting에서 crepant resolution은 매우 명시적인 격자 데이터로 번역된다. 일반적인 toric resolution이 fan의 refinement (즉 동일 support 위의 더 세밀한 fan)로 주어진다는 사실은 이미 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11) 이후의 논의에서 살펴보았다. 그렇다면 이 resolution이 언제 crepant인지가 진정한 의문일텐데, 역시 이 또한 fan의 조합론적 성질로 나타낼 수 있다. 구체적으로, birational morphism $$\pi: X_{\Sigma'} \to X_\Delta$$가 crepant일 필요충분조건은 새로 추가된 ray $$v$$들이 모두 $$\Delta^\circ$$의 *경계* 위에 놓인 lattice point라는 것이다. 
 
-다만 crepant resolution이 항상 존재하지는 않는다. Toric Gorenstein variety의 경우 $$n \le 3$$에서는 항상 존재하지만 ($$\Delta^\circ$$의 경계 격자점을 모두 ray로 추가하는 unimodular triangulation이 항상 가능하다), $$n \ge 4$$에서는 일반적으로 모든 특이점을 동시에 해소할 수 없고 *MPCP* (Maximal Projective Crepant Partial desingularization)만 보장된다 (Batyrev). 잔여 quotient 특이점의 cohomology 기여를 흡수하기 위해 도입된 것이 아래 mirror 진술에 등장하는 *stringy* Hodge number이며, 이 보정 덕분에 mirror symmetry가 singular한 잔여 부분과 무관하게 reflexive 데이터의 함수로 깔끔히 표현된다. ($$X_{\Delta^\circ}$$ 측의 mirror 후보 $$V^\circ$$도 동일한 — 필요 시 crepant resolution을 거치는 — 구성으로 얻는다.)
+직관적으로 이는 [명제 3](#prop3)의 증명에서 본 anticanonical piecewise linear function $$\psi_{-K}$$가 새 ray $$v$$에 대해서도 여전히 $$\psi_{-K}(v) = -1$$를 만족해야 한다는 것으로 생각할 수 있다. 이는 $$v$$가 cone $$\sigma$$ (vertex $$u_\sigma$$)의 내부에 들어오면 $$\psi_{-K}(v) = \langle u_\sigma, v\rangle = -1$$은 정확히 $$v$$가 $$\Delta^\circ$$의 facet $$F_{u_\sigma}$$ 위에 있다는 것과 동치이기 때문이다. 가령, $$\mathbb{P}^2/(\mathbb{Z}/3)$$의 fan에서 인접 두 ray 사이의 lattice point $$(1,0), (0,1), (-1,-1)$$를 새 ray로 추가하면 세 $$\mathbb{Z}/3$$ 특이점이 동시에 해소되며, 결과는 smooth $$\mathbb{P}^2$$의 fan이 된다.
 
-Batyrev (1994)의 핵심 통찰은 이 두 Calabi-Yau family가 단순히 짝지어 만들어진 객체가 아니라 서로 *mirror dual*을 이룬다는 것이다. 보다 구체적으로, reflexive pair $$(\Delta, \Delta^\circ)$$로부터 만들어지는 두 family
+다만 crepant resolution이 항상 존재하지는 않는다. Toric Gorenstein variety의 경우, $$n \le 3$$에서는 항상 crepant resolution이 존재한다는 것이 알려져 있지만 $$n \ge 4$$에서는 일반적으로 모든 특이점을 동시에 해소할 수 없다. 이제 남는 quotient 특이점의 cohomology 기여를 흡수하기 위해 도입된 것이 아래 mirror 진술에 등장하는 *stringy* Hodge number이며, 이 보정 덕분에 mirror symmetry가 singular한 잔여 부분과 무관하게 reflexive 데이터의 함수로 깔끔히 표현된다. 
+
+Batyrev의 핵심 통찰은 두 Calabi-Yau family $$V, V^\circ$$가 서로 *mirror dual*을 이룬다는 것이다. 보다 구체적으로, reflexive pair $$(\Delta, \Delta^\circ)$$로부터 만들어지는 두 family
 
 $$\bigl\{ V \subset X_\Delta : V \in \lvert -K_{X_\Delta}\rvert \bigr\}, \qquad \bigl\{ V^\circ \subset X_{\Delta^\circ} : V^\circ \in \lvert -K_{X_{\Delta^\circ}}\rvert \bigr\}$$
 
@@ -247,9 +246,7 @@ $$\bigl\{ V \subset X_\Delta : V \in \lvert -K_{X_\Delta}\rvert \bigr\}, \qquad 
 
 $$h^{p,q}_{\mathrm{st}}(V) = h^{n-1-p,\, q}_{\mathrm{st}}(V^\circ)$$
 
-을 만족한다. 즉 $$X_\Delta$$와 $$X_{\Delta^\circ}$$ 자체가 동치라는 의미는 아니지만, 그 위의 Calabi-Yau hypersurface family들이 mirror symmetry를 통해 짝지어진다는 것이 reflexive duality의 기하학적 내용이다.
-
-본 글에서 다룬 두 핵심 결과 — reflexive polytope ↔ Gorenstein Fano toric variety 대응 ([명제 4](#prop4))과 $$\Delta \cap M$$이 결정하는 anticanonical sections ([명제 5](#prop5)) — 는 정확히 이 mirror 구성의 출발점이 된다. 위 reflexive pair $$(\Delta, \Delta^\circ)$$가 곧 [§Reflexive Polytope과 Batyrev Mirror, ⁋예시 3](/ko/math/mirror_symmetry/toric_geometry_batyrev#ex3)에서 다루는 *Batyrev mirror pair*의 가장 작은 예시이며, 그 글에서 정의의 정확한 의미, $$\mathbb{P}^2$$ 예제의 explicit 계산, 그리고 Hodge 대칭성의 정량적 진술을 본격적으로 다룬다.
+을 만족한다. 즉 $$X_\Delta$$와 $$X_{\Delta^\circ}$$ 자체가 동치라는 의미는 아니지만, 그 위의 Calabi-Yau hypersurface family들이 mirror symmetry를 통해 짝지어진다는 것이 reflexive duality의 기하학적 내용이다. 
 
 ---
 
