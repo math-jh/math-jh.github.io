@@ -1,5 +1,5 @@
 ---
-title: "Reflexive polytope와 Fano variety"
+title: "파노 다양체"
 excerpt: "Toric geometry"
 
 categories: [Math / Toric Geometry]
@@ -12,23 +12,23 @@ header:
 sidebar:
     nav: "toric_geometry-ko"
 
-date: 2026-03-07
-last_modified_at: 2026-03-07
+date: 2026-05-18
+last_modified_at: 2026-05-18
 weight: 4
 published: false
 ---
 
-[§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 우리는 lattice polytope $$P \subset M_{\mathbb{R}}$$의 normal fan $$\Sigma_P$$을 통해 projective toric variety $$X_P$$를 구성하는 방법을 살펴 보았다. 이 구성에서 $$P$$의 기하학적 성질이 $$X_P$$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. Reflexive polytope는 1994년 Batyrev에 의해 도입되어 toric Fano variety의 분류와 mirror symmetry의 조합론적 기반을 제공하는 핵심적인 도구가 되었다. 우리는 이 글에서 reflexive polytope의 정의와 이것이 Gorenstein Fano variety 및 anticanonical divisor와 어떻게 대응하는지를 살펴 본다.
+[§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 우리는 lattice polytope $$P \subset M_{\mathbb{R}}$$의 normal fan $$\Sigma_P$$을 통해 projective toric variety $$X_P$$를 구성하는 방법을 살펴 보았다. 이 구성에서 $$P$$의 기하학적 성질이 $$X_P$$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. Batyrev가 1994년 도입한 이 조합론적 대상은 toric variety가 *Gorenstein Fano variety* — anticanonical divisor가 ample이면서 Cartier인 매우 좋은 종류의 projective variety — 인 것과 정확히 대응되며, 따라서 reflexive polytope의 분류는 toric Fano variety의 분류와 동치이다. 이 글에서는 reflexive polytope의 정의와 기본 성질을 정리하고, reflexive polytope이 어떻게 Gorenstein Fano toric variety와 anticanonical divisor의 데이터를 동시에 결정하는지를 살펴 본다.
 
-## Reflexive polytope와 dual polytope
+## 반사 다면체
 
-우선 lattice $$M$$과 그 쌍대 lattice $$N = \Hom(M, \mathbb{Z})$$를 고정하고, $$\langle -, - \rangle : M_{\mathbb{R}} \times N_{\mathbb{R}} \to \mathbb{R}$$를 자연스러운 쌍대 페어링이라 하자. 다음은 reflexive polytope의 정의이다.
+우선 lattice $$M$$과 그 dual lattice $$N = \Hom(M, \mathbb{Z})$$를 고정하고, $$\langle -, - \rangle : M_{\mathbb{R}} \times N_{\mathbb{R}} \to \mathbb{R}$$를 자연스러운 쌍대 페어링이라 하자. 다음은 reflexive polytope의 정의이다.
 
 <div class="definition" markdown="1">
 
 <ins id="def1">**정의 1**</ins> $$M_{\mathbb{R}}$$의 $$d$$차원 *lattice polytope* $$\Delta$$가 다음 두 조건을 만족할 때, 이를 *reflexive polytope<sub>반사 다면체</sub>*라 부른다:
 
-1. 원점 $$0$$이 $$\Delta$$의 내부에 포함된다: $$0 \in \operatorname{int}(\Delta)$$.
+1. 원점 $$0$$이 $$\Delta$$의 내부에 포함된다.
 2. $$\Delta$$의 *dual polytope*<sub>쌍대 다면체</sub>
 
 $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{ for all } u \in \Delta \}$$
@@ -37,7 +37,15 @@ $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{
 
 </div>
 
-Dual polytope의 정의에서 부등호 $$\langle u, v \rangle \ge -1$$는 원점이 $$\Delta$$의 내부에 있을 때 $$\Delta^\circ$$가 bounded set이 됨을 보장한다. 만약 $$0$$이 $$\Delta$$의 boundary 위에 놓인다면 $$\Delta^\circ$$는 unbounded하게 되어 polytope가 아니게 된다. 따라서 reflexive polytope를 논의할 때 $$0 \in \operatorname{int}(\Delta)$$라는 조건은 필수적이다.
+정의 1의 첫 번째 조건 $$0 \in \operatorname{int}(\Delta)$$는 단순한 정규화가 아니라 dual $$\Delta^\circ$$가 polytope가 되기 위한 필수 조건이다. 이를 두 방향으로 확인해 보자.
+
+먼저 $$0 \in \operatorname{int}(\Delta)$$일 때 $$\Delta^\circ$$가 bounded임을 보인다. 가정으로부터 어떤 $$\varepsilon > 0$$에 대해 ball $$B_\varepsilon(0) \subseteq \Delta$$이다. 임의의 $$v \in \Delta^\circ$$와 단위벡터 $$w$$에 대해 $$\varepsilon w \in \Delta$$이므로 정의에 의해 $$\langle \varepsilon w, v\rangle \ge -1$$, 즉 $$\langle w, v\rangle \ge -1/\varepsilon$$이다. 이 부등식을 $$w = -v/\lVert v \rVert$$에 적용하면 $$-\lVert v \rVert \ge -1/\varepsilon$$, 즉 $$\lVert v \rVert \le 1/\varepsilon$$을 얻으므로 $$\Delta^\circ \subseteq B_{1/\varepsilon}(0)$$이며 bounded이다.
+
+반대로 $$0 \in \partial \Delta$$인 경우에는 $$\Delta^\circ$$가 unbounded가 된다. $$\Delta$$가 convex이므로 원점에서의 supporting hyperplane이 존재하며, 그 외향 normal vector를 $$w_0 \neq 0$$이라 하면 모든 $$u \in \Delta$$에 대해 $$\langle u, w_0\rangle \le \langle 0, w_0\rangle = 0$$이다. 이제 $$\lambda \ge 0$$에 대해 $$v = -\lambda w_0$$를 잡으면 모든 $$u \in \Delta$$에서
+
+$$\langle u, -\lambda w_0\rangle = -\lambda \langle u, w_0\rangle \ge 0 \ge -1$$
+
+이 성립하므로 $$-\lambda w_0 \in \Delta^\circ$$이다. 즉 $$\Delta^\circ$$는 ray $$\{-\lambda w_0 : \lambda \ge 0\}$$ 전체를 포함하여 unbounded하다. 따라서 reflexive polytope를 논의할 때 $$0 \in \operatorname{int}(\Delta)$$라는 조건은 필수적이다.
 
 Reflexive polytope의 가장 기본적인 성질은 dual 연산 $$\Delta \mapsto \Delta^\circ$$이 reflexive polytope들의 모임 위에서 대합(involution)을 이룬다는 것이다.
 
@@ -64,7 +72,7 @@ $$\Delta$$가 reflexive이므로 $$\Delta^\circ$$는 정의에 의해 lattice po
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Complete fan $$\Sigma$$가 주어졌을 때, toric variety $$X_\Sigma$$의 *anticanonical divisor*는 boundary divisor들의 합
+<ins id="def3">**정의 3**</ins> Toric variety $$X_\Sigma$$의 *anticanonical divisor*는 boundary divisor들의 합
 
 $$-K_{X_\Sigma} = \sum_{\rho \in \Sigma(1)} D_\rho$$
 
@@ -72,7 +80,9 @@ $$-K_{X_\Sigma} = \sum_{\rho \in \Sigma(1)} D_\rho$$
 
 </div>
 
-Toric variety에서 divisor $$D=\sum a_\rho D_\rho$$에 대응하는 **piecewise linear function** $$\psi_D$$는 각 ray generator $$v_\rho$$에서 $$\psi_D(v_\rho)=-a_\rho$$의 값을 가지는 함수이다. divisor가 Cartier이기 위해서는 각 maximal cone $$\sigma \in \Sigma$$에 대해 lattice point $$m_\sigma \in M$$이 존재하여, 이 piecewise linear function이 $$\sigma$$ 위에서 $$u \mapsto \langle m_\sigma, u \rangle$$의 형태로 주어져야 한다. Anticanonical divisor $$-K_{X_\Sigma}$$에 대응하는 piecewise linear function $$\psi_{-K}$$는 각 ray generator $$v_\rho$$에 대해 $$\psi_{-K}(v_\rho) = -1$$의 값을 갖는 함수이다. 따라서 $$-K_{X_\Sigma}$$가 Cartier인 것은 각 maximal cone $$\sigma$$에 대해 $$m_\sigma \in M$$이 존재하여 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$인 것과 동치이다. 이 조건이 reflexive polytope의 dual $$\Delta^\circ$$의 꼭짓점 조건과 정확히 일치함을 확인할 수 있다.
+이 정의 자체는 임의의 fan에 대해 well-defined하지만, 우리가 관심을 갖는 *ample* 조건은 (그리고 Fano 조건은) $$X_\Sigma$$가 complete일 때 의미를 가지므로 이하에서는 $$\Sigma$$가 complete fan임을 가정한다.
+
+$$-K_{X_\Sigma}$$가 Cartier divisor일 때 그에 대응하는 piecewise linear function ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)) $$\psi_{-K} \in \PL(\Sigma, M)$$은 정확히 $$\psi_{-K}(v_\rho) = -1$$ for all $$\rho \in \Sigma(1)$$인 함수이다. 따라서 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)의 compatibility 조건에 의해 $$-K_{X_\Sigma}$$가 Cartier인 것은 각 maximal cone $$\sigma$$에 대해 $$m_\sigma \in M$$이 존재하여 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$인 것과 동치이다. 이 조건이 reflexive polytope의 dual $$\Delta^\circ$$의 꼭짓점 조건과 정확히 일치함이 다음 명제의 핵심이다.
 
 <div class="proposition" markdown="1">
 
@@ -83,7 +93,13 @@ Toric variety에서 divisor $$D=\sum a_\rho D_\rho$$에 대응하는 **piecewise
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\Delta$$가 reflexive polytope라고 하자. $$\Sigma_\Delta$$의 각 maximal cone $$\sigma$$에 대해, $$\sigma$$는 $$\Delta$$의 어떤 꼭짓점 $$u_\sigma$$에 대응하며, 이 대응은 normal fan의 정의에 의해 다음 성질을 갖는다: $$\sigma$$의 ray generator $$v_\rho$$들은 $$\langle u_\sigma, v_\rho \rangle \ge \langle u, v_\rho \rangle$$ for all $$u \in \Delta$$를 만족한다. 특히 $$\Delta$$의 facet 방정식이 $$\langle u, v_\Theta \rangle = -1$$의 형태이므로, $$\sigma$$의 각 ray generator $$v_\rho$$에 대해 $$\langle u_\sigma, v_\rho \rangle = -1$$이 성립한다. 따라서 $$m_\sigma = u_\sigma \in M$$을 선택하면 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$이 되며, 이는 $$-K_{X_\Delta}$$가 Cartier임을 의미한다. 한편 $$-K_{X_\Delta}$$의 ample성은 $$\psi_{-K}(v_\rho) = -1$$인 piecewise linear function이 strictly convex함으로부터 얻어진다. **strictly convex**한 piecewise linear function은 서로 다른 maximal cone 위에서 서로 다른 선형 함수를 가지며, 이에 대응하는 divisor가 ample이다. 이는 $$\Sigma_\Delta$$가 projective fan임을 보장하며, $$-K_{X_\Delta}$$가 ample divisor임을 의미한다.
+$$\Delta$$가 reflexive polytope라고 하자. $$\Sigma_\Delta$$의 각 maximal cone $$\sigma$$는 inner normal fan ([§토릭 다양체의 정의, ⁋정의 6](/ko/math/toric_geometry/toric_varieties#def6))의 정의에 의해 $$\Delta$$의 어떤 꼭짓점 $$u_\sigma$$에 대응하며, $$\sigma$$의 ray generator $$v_\rho$$들은 정확히 $$u_\sigma$$를 포함하는 facet들의 inner primitive normal이다. $$\Delta$$의 facet 방정식이 $$\langle u, v_\Theta \rangle = -1$$ (그리고 $$\Delta$$ 위에서는 $$\langle u, v_\Theta\rangle \ge -1$$)이므로, $$u_\sigma$$는 $$\Delta$$ 위 $$\langle -, v_\rho\rangle$$의 최솟값을 정확히 $$-1$$로 달성한다. 즉
+
+$$\langle u_\sigma, v_\rho\rangle = -1 \le \langle u, v_\rho\rangle \quad \text{for all } u \in \Delta, \rho \in \sigma(1)$$
+
+이며 등호는 $$u \in F_\rho$$ (facet)일 때만 성립한다. 따라서 $$m_\sigma = u_\sigma \in M$$이 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)의 Cartier compatibility를 만족하며 $$-K_{X_\Delta}$$는 Cartier이다.
+
+한편 $$-K_{X_\Delta}$$의 ample성을 보이려면 piecewise linear function $$\psi_{-K}$$가 strictly convex ([§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8))임을 확인하면 충분하다 ([§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)). $$v$$가 $$\sigma$$의 interior에 있을 때 $$\psi_{-K}(v) = \langle u_\sigma, v\rangle$$이고, 위에서 본 minimum 성질이 $$\sigma$$의 interior 위에서는 strict로 강화된다 — 다른 cone $$\sigma' \neq \sigma$$의 vertex $$u_{\sigma'}$$에 대해 $$u_{\sigma'}$$는 $$u_\sigma$$를 포함하는 facet들 중 적어도 하나에 속하지 않으므로 $$\langle u_\sigma, v\rangle < \langle u_{\sigma'}, v\rangle$$이다. 즉 $$\psi_{-K}(v) < \langle m_{\sigma'}, v\rangle$$이 [§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8)의 strict convexity 조건을 그대로 충족한다.
 
 반대로 $$X_\Sigma$$가 Gorenstein Fano라고 가정하자. $$-K_{X_\Sigma}$$가 Cartier이므로 각 maximal cone $$\sigma$$에 대해 $$m_\sigma \in M$$이 존재하여 $$\langle m_\sigma, v_\rho \rangle = -1$$ for all $$\rho \in \sigma(1)$$이다. 이제
 
@@ -114,7 +130,7 @@ Toric variety에서 $$T_N$$-invariant Cartier divisor $$D$$에 대응하는 poly
 
 $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1) \}$$
 
-으로 정의되며, [§토러스 인자와 선다발, ⁋명제 8](/ko/math/toric_geometry/toric_divisors#prop8)에서 보인 바와 같이 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$의 basis는 $$P_D \cap M$$의 원소들에 대응하는 characters $$\chi^u$$들로 주어진다. Anticanonical divisor $$-K_{X_\Delta}$$의 경우 $$a_\rho = 1$$ for all $$\rho$$이므로,
+으로 정의되며, [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에서 보인 바와 같이 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$의 basis는 $$P_D \cap M$$의 원소들에 대응하는 characters $$\chi^u$$들로 주어진다. Anticanonical divisor $$-K_{X_\Delta}$$의 경우 $$a_\rho = 1$$ for all $$\rho$$이므로,
 
 $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma_\Delta(1) \}$$
 
@@ -132,7 +148,7 @@ $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ 
 
 <ins id="ex6">**예시 6**</ins> Lattice $$M = \mathbb{Z}^n$$에서 다음의 polytope를 정의한다:
 
-$$\Delta = \{ (x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge -1 \text{ for all } i, \; x_1 + x_2 + \cdots + x_n \le 1 \}.$$
+$$\Delta = \{ (x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge -1 \;\text{for all}\; i,\; x_1 + x_2 + \cdots + x_n \le 1 \}.$$
 
 이 polytope는 standard simplex를 원점 방향으로 확장한 형태이며, 그 꼭짓점은 $$(-1, -1, \ldots, -1)$$과 $$(n, -1, \ldots, -1), \ldots, (-1, \ldots, -1, n)$$이다. 각 facet은 방정식 $$x_i = -1$$ 또는 $$x_1 + \cdots + x_n = 1$$으로 주어지며, 이들에 대응하는 primitive inner normal vector는 각각 $$e_i \in N$$과 $$-(e_1 + \cdots + e_n) \in N$$이다. 따라서 $$\Delta$$의 dual polytope는
 
@@ -148,19 +164,9 @@ $$(-1,-1), (-1,0), (-1,1), (-1,2), (0,-1), (0,0), (0,1), (1,-1), (1,0), (2,-1)$$
 
 </div>
 
-위의 예시에서 주목할 점은 $$\Delta$$와 $$\Delta^\circ$$가 동일한 combinatorial type을 가질 수도 있지만, 일반적으로는 서로 다른 모양을 가진다는 것이다. $$n=2$$인 경우 $$\Delta^\circ = \operatorname{conv}\{(1,0), (0,1), (-1,-1)\}$$이 되어 $$\Delta$$와 다른 모양을 가진다. 그러나 이들이 정의하는 toric variety는 모두 $$\mathbb{P}^2$$에 해당한다.
+위의 예시에서 주목할 점은 $$\Delta$$와 $$\Delta^\circ$$가 서로 다른 toric variety를 정의한다는 것이다. $$X_\Delta \cong \mathbb{P}^2$$ (smooth)인 반면, $$\Delta^\circ = \mathrm{conv}\{(1,0), (0,1), (-1,-1)\}$$의 normal fan을 구체적으로 계산해 보면 그 ray들이 $$(-1,-1)$$, $$(2,-1)$$, $$(-1,2)$$임을 알 수 있는데, 인접한 두 ray로 만든 행렬의 determinant가 $$\pm 1$$이 아닌 $$\pm 3$$이므로 $$X_{\Delta^\circ}$$는 smooth하지 않다 (사실 세 점에 $$\mathbb{Z}/3$$ 특이점을 갖는 singular Gorenstein Fano surface이다). 이 reflexive pair $$(\Delta, \Delta^\circ)$$이 곧 [§Reflexive Polytope과 Batyrev Mirror, ⁋예시 3](/ko/math/mirror_symmetry/toric_geometry_batyrev#ex3)에서 다루는 *Batyrev mirror pair*의 가장 작은 예시이며, 두 reflexive polytope이 서로 dual 관계를 이루는 데서 mirror symmetry가 발생한다.
 
-## Mirror symmetry와 Batyrev construction
-
-Reflexive polytope가 대수기하학에서 특별한 관심을 받는 이유는 이것이 mirror symmetry와 깊이 연결되어 있기 때문이다. 1994년 Batyrev는 reflexive polytope $$\Delta$$와 그 dual $$\Delta^\circ$$를 이용하여 Calabi-Yau variety(canonical class가 0인 compact Kähler 다양체)들의 mirror pair를 조합론적으로 구성하는 방법을 제시하였다.
-
-구체적으로, reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$에 대해 $$\Delta^\circ \subset N_{\mathbb{R}}$$도 reflexive이다. $$\Delta$$의 normal fan $$\Sigma_\Delta$$에 대응하는 toric variety $$X_\Delta$$는 Gorenstein Fano variety이며, $$\Delta^\circ$$의 normal fan에 대응하는 toric variety $$X_{\Delta^\circ}$$도 마찬가지이다. 이때 $$\Delta$$에 내재된 정보로부터 $$X_\Delta$$ 위의 anticanonical divisor의 일반적인 단면 $$Y_\Delta$$를 정의할 수 있고, 이는 적절한 crepant resolution(canonical divisor를 보존하는 특이점 해소)을 거친 후 Calabi-Yau variety가 된다. 마찬가지로 $$\Delta^\circ$$로부터 $$X_{\Delta^\circ}$$ 위의 Calabi-Yau variety $$Y_{\Delta^\circ}$$를 얻는다. Batyrev는 이 두 Calabi-Yau variety $$Y_\Delta$$와 $$Y_{\Delta^\circ}$$가 mirror symmetry의 관계에 놓여 있음을 제안하였다.
-
-이 구성의 핵심은 reflexive polytope의 dual 연산 $$\Delta \leftrightarrow \Delta^\circ$$이 Calabi-Yau variety들 사이의 mirror involution을 유도한다는 점이다. 특히 이 mirror pair의 Hodge number(Dolbeault cohomology 차원 $$h^{p,q} = \dim H^{p,q}$$)들은 다음과 같은 대칭성을 보인다:
-
-$$h^{p,q}(Y_\Delta) = h^{d-1-p,q}(Y_{\Delta^\circ}).$$
-
-이러한 Batyrev construction은 이후 Borisov에 의해 complete intersection으로 확장되어 nef-partition(여러 개의 nef divisor로 이루어진 분할)의 이론으로 발전하였으며, 오늘날까지도 toric mirror symmetry의 기본적인 틀로 자리 잡고 있다.
+본 글의 결과 — reflexive polytope ↔ Gorenstein Fano toric variety 대응과 $$\Delta \cap M$$이 결정하는 anticanonical sections — 는 정확히 [§Reflexive Polytope과 Batyrev Mirror](/ko/math/mirror_symmetry/toric_geometry_batyrev)에서 Calabi-Yau hypersurface의 mirror pair를 구성하기 위한 출발점이 된다. 그 글에서 Hodge number 대칭성과 $$\mathbb{P}^2$$ 예제의 자세한 계산을 다룬다.
 
 ---
 

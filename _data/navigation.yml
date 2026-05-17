@@ -832,11 +832,9 @@ toric_geometry-ko:
         url: ko/math/toric_geometry/toric_varieties
       - title: "토러스 인자와 선다발"
         url: ko/math/toric_geometry/toric_divisors
-      - title: "Reflexive polytope와 Fano variety"
+      - title: "파노 다양체"
         url: ko/math/toric_geometry/reflexive_polytope_fano
-      - title: "Geometric invariant theory 입문"
-        url: ko/math/toric_geometry/geometric_invariant_theory
-      - title: "Cox construction과 GIT quotient"
+      - title: "Cox 구성과 GIT quotient"
         url: ko/math/toric_geometry/cox_construction
   - title: 
     children:
