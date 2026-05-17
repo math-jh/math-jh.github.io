@@ -188,11 +188,11 @@ $$P$$가 very ample lattice polytope일 때 (즉, $$X_P$$ 위에서 대응되는
 
 $$\Delta_n = \{(x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge 0,\; x_1 + \cdots + x_n \le 1\}$$
 
-으로 정의한다. 이 polytope의 꼭짓점은 $$0, e_1, \ldots, e_n$$이며, facet들은 좌표 초평면 $$\{x_i = 0\}$$ ($$i = 1, \ldots, n$$)과 $$\{x_1 + \cdots + x_n = 1\}$$로 주어진다. 각 facet의 primitive inner normal vector는 dual lattice $$N = \mathbb{Z}^n$$의 원소로
+으로 정의한다. 이 polytope의 꼭짓점은 $$0, e_1, \ldots, e_n$$이며, facet들은 좌표 초평면 $$\{x_i = 0\}$$과 $$\{x_1 + \cdots + x_n = 1\}$$로 주어진다. 각 facet의 primitive inner normal vector는 dual lattice $$N = \mathbb{Z}^n$$의 원소로
 
 $$v_i = e_i \quad (i = 1, \ldots, n), \qquad v_0 = -e_1 - \cdots - e_n$$
 
-이다. 따라서 normal fan $$\Sigma_{\Delta_n}$$의 ray는 $$\rho_i = \mathbb{R}_{\ge 0} v_i$$ ($$i = 0, 1, \ldots, n$$)으로 $$n+1$$개이며, 그 maximal cone들은 이들 $$n+1$$개 ray 중 $$n$$개를 골라 생성한 simplicial cone들이다.
+이다. 따라서 normal fan $$\Sigma_{\Delta_n}$$의 ray는 $$\rho_i = \mathbb{R}_{\ge 0} v_i$$ ($$i = 0, 1, \ldots, n$$)으로 $$n+1$$개이며, 그 maximal cone들은 이들 $$n+1$$개 ray 중 $$n$$개를 골라 생성되는 $$n$$차원 cone들이다.
 
 **$$n = 2$$인 경우 — $$\mathbb{P}^2$$의 fan**: 위 구성을 $$n = 2$$에 적용하면 ray들의 generator는 $$v_0 = -e_1-e_2,\ v_1 = e_1,\ v_2 = e_2$$이며, 이는 [예시 2](#ex2)에서 그림과 함께 살펴본 fan과 정확히 일치한다. 즉 예시 2의 fan은 standard simplex $$\Delta_2$$의 normal fan이고, 이가 정의하는 toric variety가 $$\mathbb{P}^2$$임이 확인된다.
 
