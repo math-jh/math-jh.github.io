@@ -1,7 +1,7 @@
 ---
 
 title: "피복공간"
-excerpt: ""
+excerpt: "Simply connected의 동치조건과 covering space, Seifert-van Kampen 정리"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/covering_spaces

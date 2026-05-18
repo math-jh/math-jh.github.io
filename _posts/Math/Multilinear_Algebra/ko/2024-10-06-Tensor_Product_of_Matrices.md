@@ -1,7 +1,7 @@
 ---
 
 title: "행렬의 텐서곱"
-excerpt: ""
+excerpt: "Tensor product에 대응하는 Kronecker product 행렬연산"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/tensor_product_of_matrices

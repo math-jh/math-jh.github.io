@@ -1,7 +1,7 @@
 ---
 
 title: "중국인의 나머지정리"
-excerpt: ""
+excerpt: "Ideal의 곱과 comaximal ideal에 대한 중국인의 나머지정리"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/chinese_remainder_theorem

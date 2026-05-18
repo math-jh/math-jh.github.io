@@ -1,7 +1,7 @@
 ---
 
 title: "모노이드 범주"
-excerpt: ""
+excerpt: "Monoidal category의 정의와 coherence 조건"
 
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/monoidal_categories

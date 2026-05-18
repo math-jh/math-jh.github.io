@@ -1,7 +1,7 @@
 ---
 
 title: "옹골성"
-excerpt: ""
+excerpt: "Tychonoff 정리와 local compactness, paracompactness"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/compactness

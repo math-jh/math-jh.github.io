@@ -1,7 +1,7 @@
 ---
 
 title: "환의 곱, 쌍대곱, 텐서곱"
-excerpt: ""
+excerpt: "환의 product, coproduct, tensor product의 정의"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/operations_of_rings

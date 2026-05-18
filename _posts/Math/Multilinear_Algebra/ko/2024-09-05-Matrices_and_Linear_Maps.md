@@ -1,7 +1,7 @@
 ---
 
 title: "행렬과 선형사상"
-excerpt: ""
+excerpt: "Free module 사이의 linear map의 행렬표현과 좌표계"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/matrices_and_linear_maps

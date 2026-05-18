@@ -1,7 +1,7 @@
 ---
 
 title: "특성류"
-excerpt: ""
+excerpt: "Fiber bundle의 특성류 정의와 분류공간을 통한 해석"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/characteristic_classes

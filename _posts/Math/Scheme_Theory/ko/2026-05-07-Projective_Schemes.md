@@ -1,7 +1,7 @@
 ---
 
 title: "사영스킴"
-excerpt: ""
+excerpt: "Graded ring으로부터의 Proj 구성과 projective scheme"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/projective_schemes

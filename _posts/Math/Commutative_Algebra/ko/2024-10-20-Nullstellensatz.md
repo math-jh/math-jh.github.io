@@ -1,7 +1,7 @@
 ---
 
 title: "영점정리"
-excerpt: ""
+excerpt: "Jacobson ring과 Hilbert Nullstellensatz의 증명"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/nullstellensatz

@@ -1,7 +1,7 @@
 ---
 
 title: "준층"
-excerpt: ""
+excerpt: "Gluing lemma와 presheaf의 정의"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/presheaves

@@ -1,7 +1,7 @@
 ---
 
 title: "완전열"
-excerpt: ""
+excerpt: "Module의 exact sequence와 short/long exact sequence"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/exact_sequences

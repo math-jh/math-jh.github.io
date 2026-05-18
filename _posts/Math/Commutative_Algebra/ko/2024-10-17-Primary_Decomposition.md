@@ -1,7 +1,7 @@
 ---
 
 title: "으뜸분해"
-excerpt: ""
+excerpt: "Noetherian ring 위 가군의 primary decomposition과 유일성"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/primary_decomposition

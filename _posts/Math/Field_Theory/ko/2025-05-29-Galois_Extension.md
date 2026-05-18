@@ -1,7 +1,7 @@
 ---
 
 title: "갈루아 확장"
-excerpt: ""
+excerpt: "Normal과 separable을 모두 만족하는 Galois extension의 정의"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/galois_extension

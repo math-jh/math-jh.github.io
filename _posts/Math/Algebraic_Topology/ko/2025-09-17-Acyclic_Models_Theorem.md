@@ -1,7 +1,7 @@
 ---
 
 title: "Acyclic models theorem"
-excerpt: ""
+excerpt: "Category with models 위에서의 acyclic models 정리와 응용"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/acyclic_models_theorem

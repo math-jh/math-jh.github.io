@@ -1,7 +1,7 @@
 ---
 
 title: "분리가능확대체"
-excerpt: ""
+excerpt: "Étale algebra를 통한 separable extension의 특성화"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/separable_extensions

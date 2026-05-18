@@ -1,7 +1,7 @@
 ---
 
 title: "갈루아 이론의 기본정리"
-excerpt: ""
+excerpt: "Subgroup과 intermediate field 사이의 Galois correspondence"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/fundamental_theorem_of_galois_theory

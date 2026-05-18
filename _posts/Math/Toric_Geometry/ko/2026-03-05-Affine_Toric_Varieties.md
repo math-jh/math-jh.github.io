@@ -1,6 +1,6 @@
 ---
 title: "아핀 토릭 다양체"
-excerpt: "Toric geometry"
+excerpt: "Strongly convex rational polyhedral cone으로부터 아핀 토릭 다양체의 구성"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/affine_toric_varieties

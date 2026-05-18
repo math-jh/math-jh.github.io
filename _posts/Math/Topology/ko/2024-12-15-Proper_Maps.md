@@ -1,7 +1,7 @@
 ---
 
 title: "고유함수"
-excerpt: ""
+excerpt: "Universally closed map으로서의 proper map과 compactness와의 관계"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/proper_maps

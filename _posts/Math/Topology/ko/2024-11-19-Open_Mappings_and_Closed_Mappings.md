@@ -1,7 +1,7 @@
 ---
 
 title: "열린사상과 닫힌사상"
-excerpt: ""
+excerpt: "Open map과 closed map의 정의 및 quotient map과의 관계"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/open_mappings_and_closed_mappings

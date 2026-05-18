@@ -1,7 +1,7 @@
 ---
 
 title: "행렬식"
-excerpt: ""
+excerpt: "Free module 자기사상의 determinant와 기본 성질"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/determinants

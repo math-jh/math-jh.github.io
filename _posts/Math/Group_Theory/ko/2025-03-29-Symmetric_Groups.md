@@ -1,7 +1,7 @@
 ---
 
 title: "대칭군"
-excerpt: ""
+excerpt: "Symmetric group의 cycle 분해와 sign, alternating group"
 
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/symmetric_groups

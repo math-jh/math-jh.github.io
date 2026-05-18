@@ -1,6 +1,6 @@
 ---
 title: "Cox 구성과 GIT quotient"
-excerpt: "Toric variety를 homogeneous coordinate ring과 GIT quotient로 구성하는 Cox의 방법과, 이를 위해 필요한 categorical/geometric quotient의 구분을 다룬다."
+excerpt: "토릭 다양체의 homogeneous coordinate ring과 GIT quotient 표현"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/cox_construction

@@ -1,7 +1,7 @@
 ---
 
 title: "Hom과 텐서곱"
-excerpt: ""
+excerpt: "Hom functor와 tensor product의 adjunction과 exactness"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/hom_and_tensor

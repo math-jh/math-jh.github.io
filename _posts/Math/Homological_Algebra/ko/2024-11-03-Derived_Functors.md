@@ -1,7 +1,7 @@
 ---
 
 title: "유도함자"
-excerpt: ""
+excerpt: "δ-functor를 통한 right/left derived functor의 정의"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/derived_functors

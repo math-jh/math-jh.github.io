@@ -1,7 +1,7 @@
 ---
 
 title: "국소화"
-excerpt: ""
+excerpt: "환과 가군의 localization과 local ring 구성"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/localization

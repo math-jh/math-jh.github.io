@@ -1,7 +1,7 @@
 ---
 
 title: "조르당 표준형"
-excerpt: ""
+excerpt: "일반화된 고유공간 분해를 통한 Jordan 표준형의 구성"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/Jordan_canonical_form

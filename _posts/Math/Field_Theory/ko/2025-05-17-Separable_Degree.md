@@ -1,7 +1,7 @@
 ---
 
 title: "분리가능차수"
-excerpt: ""
+excerpt: "Separable degree와 inseparable degree의 분해"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/separable_degree

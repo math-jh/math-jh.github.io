@@ -1,7 +1,7 @@
 ---
 
 title: "미분"
-excerpt: ""
+excerpt: "Kähler differential module의 대수적 정의와 universal property"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/differentials

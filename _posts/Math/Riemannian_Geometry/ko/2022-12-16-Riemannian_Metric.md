@@ -1,7 +1,7 @@
 ---
 
 title: "리만 계량"
-excerpt: ""
+excerpt: "Tangent bundle 위의 양의 정부호 symmetric 2-텐서로서의 Riemannian metric"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/Riemannian_metric

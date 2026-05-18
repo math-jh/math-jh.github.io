@@ -1,7 +1,7 @@
 ---
 
 title: "하우스도르프 공간"
-excerpt: ""
+excerpt: "점열의 수렴과 Hausdorff 공리"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/Hausdorff_spaces

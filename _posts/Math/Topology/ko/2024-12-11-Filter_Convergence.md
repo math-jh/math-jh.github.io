@@ -1,7 +1,7 @@
 ---
 
 title: "옹골성과 필터의 수렴"
-excerpt: ""
+excerpt: "Filter의 수렴을 통한 compactness의 특성화"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/filter_convergence

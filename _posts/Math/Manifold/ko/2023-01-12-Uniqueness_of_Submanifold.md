@@ -1,7 +1,7 @@
 ---
 
 title: "부분다양체의 유일성"
-excerpt: ""
+excerpt: "Immersed submanifold의 위상구조와 매끄러운 함수의 인수분해"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/uniqueness_of_submanifold

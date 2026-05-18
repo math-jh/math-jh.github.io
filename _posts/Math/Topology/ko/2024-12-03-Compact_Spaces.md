@@ -1,7 +1,7 @@
 ---
 
 title: "옹골공간"
-excerpt: ""
+excerpt: "Open cover의 finite subcover로 정의되는 compact space"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/compact_spaces

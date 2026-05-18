@@ -1,7 +1,7 @@
 ---
 
 title: "군의 열"
-excerpt: ""
+excerpt: "Commutator와 normal/composition/derived series, solvability"
 
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/series_of_groups

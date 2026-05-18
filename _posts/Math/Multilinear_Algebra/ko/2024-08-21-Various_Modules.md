@@ -1,7 +1,7 @@
 ---
 
 title: "사영가군, 단사가군, 평탄가군"
-excerpt: ""
+excerpt: "Projective, injective, flat module의 정의와 동치조건"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/various_modules

@@ -1,7 +1,7 @@
 ---
 
 title: "스칼라의 변환"
-excerpt: ""
+excerpt: "Ring homomorphism을 통한 restriction과 extension of scalars"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/change_of_base_ring

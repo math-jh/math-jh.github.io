@@ -1,7 +1,7 @@
 ---
 
 title: "에탈대수"
-excerpt: ""
+excerpt: "Field 위 étale algebra의 정의와 diagonalizable 특성화"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/etale_algebras

@@ -1,7 +1,7 @@
 ---
 
 title: "연결공간"
-excerpt: ""
+excerpt: "Connected space와 path-connected, connected component"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/connected_spaces

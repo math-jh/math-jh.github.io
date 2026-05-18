@@ -1,7 +1,7 @@
 ---
 
 title: "분해"
-excerpt: ""
+excerpt: "Abelian category에서의 projective와 injective resolution"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/resolutions

@@ -1,7 +1,7 @@
 ---
 
 title: "다항식환"
-excerpt: ""
+excerpt: "가환환 위 polynomial ring의 인수분해와 Gauss lemma"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/polynomial_rings

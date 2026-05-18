@@ -1,7 +1,7 @@
 ---
 
 title: "가군의 직접곱과 직합, 텐서곱"
-excerpt: ""
+excerpt: "Module category의 product, coproduct, tensor product"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/operations_of_modules
