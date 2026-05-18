@@ -1,7 +1,7 @@
 ---
 
 title: "갈루아 군의 성질들"
-excerpt: ""
+excerpt: "Krull 위상을 갖는 무한 Galois group의 구조"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/properties_of_galois_extensions

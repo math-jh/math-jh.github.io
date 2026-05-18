@@ -1,7 +1,7 @@
 ---
 
 title: "원환면의 작용"
-excerpt: ""
+excerpt: "Torus의 작용과 weight space decomposition"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/torus_action

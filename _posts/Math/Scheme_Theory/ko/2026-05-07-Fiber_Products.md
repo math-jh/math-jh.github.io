@@ -1,7 +1,7 @@
 ---
 
 title: "올곱"
-excerpt: ""
+excerpt: "Category of S-schemes에서의 fiber product 정의와 존재성"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/fiber_products

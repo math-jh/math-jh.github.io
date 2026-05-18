@@ -1,7 +1,7 @@
 ---
 
 title: "정수적 확장"
-excerpt: ""
+excerpt: "Cayley-Hamilton 정리와 integral element, integral extension"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/integral_extension

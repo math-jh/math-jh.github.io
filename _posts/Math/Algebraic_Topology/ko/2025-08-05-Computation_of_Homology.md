@@ -1,7 +1,7 @@
 ---
 
 title: "호몰로지의 계산"
-excerpt: ""
+excerpt: "Relative homology와 Mayer-Vietoris를 통한 호몰로지의 실제 계산"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/computation_of_homology

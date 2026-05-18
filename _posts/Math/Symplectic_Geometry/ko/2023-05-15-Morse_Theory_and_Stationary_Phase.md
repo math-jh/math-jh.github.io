@@ -1,6 +1,6 @@
 ---
 title: "Morse 이론과 stationary phase 근사"
-excerpt: "Morse function의 critical point 분석과 oscillating integral의 stationary phase 점근전개를 다룬다."
+excerpt: "Morse function의 critical point와 oscillating integral의 점근전개"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/morse_stationary_phase

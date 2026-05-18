@@ -1,7 +1,7 @@
 ---
 
 title: "푸앵카레 쌍대성"
-excerpt: ""
+excerpt: "방향층과 fundamental class를 통한 호몰로지와 코호몰로지의 쌍대성"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/Poincare_duality

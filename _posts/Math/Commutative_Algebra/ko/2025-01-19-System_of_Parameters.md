@@ -1,7 +1,7 @@
 ---
 
 title: "매개계"
-excerpt: ""
+excerpt: "Local ring의 system of parameters와 차원과의 관계"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/system_of_parameters

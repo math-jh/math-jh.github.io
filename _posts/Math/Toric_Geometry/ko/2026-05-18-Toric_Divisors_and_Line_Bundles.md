@@ -1,6 +1,6 @@
 ---
 title: "토러스 인자와 선다발"
-excerpt: "Toric geometry"
+excerpt: "Fan의 ray로부터 얻어지는 torus-invariant divisor와 line bundle"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/toric_divisors

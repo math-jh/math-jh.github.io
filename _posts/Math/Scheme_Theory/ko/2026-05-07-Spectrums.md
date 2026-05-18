@@ -1,7 +1,7 @@
 ---
 
 title: "스펙트럼"
-excerpt: ""
+excerpt: "가환환의 prime spectrum과 Zariski topology"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/spectrums

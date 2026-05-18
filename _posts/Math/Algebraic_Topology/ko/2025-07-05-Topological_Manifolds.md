@@ -1,7 +1,7 @@
 ---
 
 title: "위상다양체"
-excerpt: ""
+excerpt: "Locally Euclidean 공간으로서의 topological manifold 정의와 성질"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/topological_manifolds

@@ -1,7 +1,7 @@
 ---
 
 title: "대수의 직접곱, 직합, 텐서곱"
-excerpt: ""
+excerpt: "Algebra의 product, direct sum, tensor product 구조"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/operations_of_algebras

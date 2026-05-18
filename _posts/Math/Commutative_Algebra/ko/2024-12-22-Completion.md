@@ -1,7 +1,7 @@
 ---
 
 title: "완비화"
-excerpt: ""
+excerpt: "Filtration으로 정의되는 ring과 module의 completion"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/completion

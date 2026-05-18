@@ -1,7 +1,7 @@
 ---
 
 title: "표현의 지표"
-excerpt: ""
+excerpt: "Character function의 정의와 orthogonality relation"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/character_theory

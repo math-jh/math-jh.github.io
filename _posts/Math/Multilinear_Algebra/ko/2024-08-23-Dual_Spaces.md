@@ -1,7 +1,7 @@
 ---
 
 title: "쌍대공간"
-excerpt: ""
+excerpt: "Module의 Hom과 dual module, bidual map"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/dual_spaces

@@ -1,7 +1,7 @@
 ---
 
 title: "정역"
-excerpt: ""
+excerpt: "Euclidean domain, PID, UFD의 정의와 포함관계"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/integral_domains

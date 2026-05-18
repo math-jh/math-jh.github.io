@@ -1,7 +1,7 @@
 ---
 
 title: "아핀스킴"
-excerpt: ""
+excerpt: "Ring의 spectrum 위 structure sheaf로 정의되는 affine scheme"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/affine_schemes

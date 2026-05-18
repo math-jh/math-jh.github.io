@@ -1,7 +1,7 @@
 ---
 
 title: "Stable maps의 moduli space"
-excerpt: "Genus $$g$$, $$n$$개의 marked points, homology class $$\\beta$$의 stable map의 정의와 그 moduli space $$\\overline{\\mathcal{M}}_{g,n}(X,\\beta)$$의 기본 성질—compactness, expected dimension, virtual fundamental class—을 살펴본다"
+excerpt: "Stable map의 정의와 moduli space의 compactness, virtual fundamental class"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/stable_maps

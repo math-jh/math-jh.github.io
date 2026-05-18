@@ -1,7 +1,7 @@
 ---
 
 title: "기본 개념들"
-excerpt: ""
+excerpt: "가환대수에서 사용하는 ring, algebra의 기본 약속과 정의"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/basic_notions

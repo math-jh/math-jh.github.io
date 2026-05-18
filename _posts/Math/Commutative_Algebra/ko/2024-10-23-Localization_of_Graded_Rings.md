@@ -1,7 +1,7 @@
 ---
 
 title: "등급환의 국소화"
-excerpt: ""
+excerpt: "Graded ring과 graded module의 homogeneous localization"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/localization_of_graded_rings

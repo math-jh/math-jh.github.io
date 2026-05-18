@@ -1,7 +1,7 @@
 ---
 
 title: "등급가군"
-excerpt: ""
+excerpt: "Graded ring 위에 정의되는 graded module의 정의"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/graded_modules

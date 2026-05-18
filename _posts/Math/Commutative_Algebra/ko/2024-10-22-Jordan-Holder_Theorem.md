@@ -1,7 +1,7 @@
 ---
 
 title: "조르단-횔더 정리"
-excerpt: ""
+excerpt: "Composition series의 유일성과 length의 well-definedness"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/Jordan-Holder_theorem

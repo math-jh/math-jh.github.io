@@ -1,7 +1,7 @@
 ---
 
 title: "국소화의 성질들"
-excerpt: ""
+excerpt: "Localization과 Hom, tensor의 호환성 및 local 성질"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/properties_of_localization

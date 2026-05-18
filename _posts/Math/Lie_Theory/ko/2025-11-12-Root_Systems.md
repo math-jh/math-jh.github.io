@@ -1,7 +1,7 @@
 ---
 
 title: "근계"
-excerpt: ""
+excerpt: "Adjoint representation의 weight decomposition으로 얻는 root system"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/root_systems

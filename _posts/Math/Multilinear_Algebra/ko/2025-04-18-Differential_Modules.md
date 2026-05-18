@@ -1,7 +1,7 @@
 ---
 
 title: "미분가군"
-excerpt: ""
+excerpt: "Graded algebra 위 derivation을 갖는 differential module"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/differential_modules

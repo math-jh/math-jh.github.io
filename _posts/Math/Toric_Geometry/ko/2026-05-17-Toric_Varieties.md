@@ -1,6 +1,6 @@
 ---
 title: "토릭 다양체의 정의"
-excerpt: "Toric geometry"
+excerpt: "Fan으로부터 아핀 토릭 다양체들을 이어붙여 얻는 일반적 토릭 다양체"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/toric_varieties

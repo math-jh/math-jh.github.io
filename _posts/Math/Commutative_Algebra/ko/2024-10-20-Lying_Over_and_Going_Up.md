@@ -1,7 +1,7 @@
 ---
 
 title: "정수적 확장과 아이디얼"
-excerpt: ""
+excerpt: "Integral extension 하 prime ideal의 lying over와 going up 정리"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/lying_over_and_going_up

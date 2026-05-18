@@ -1,6 +1,6 @@
 ---
 title: "스펙트럼 열"
-excerpt: ""
+excerpt: "Filtered complex의 cohomology를 page 단위로 근사하는 spectral sequence"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/spectral_sequences

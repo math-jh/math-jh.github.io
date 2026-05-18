@@ -1,7 +1,7 @@
 ---
 
 title: "코호몰로지"
-excerpt: ""
+excerpt: "코호몰로지의 정의와 universal coefficient theorem"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/cohomology

@@ -1,7 +1,7 @@
 ---
 
 title: "등급환"
-excerpt: ""
+excerpt: "Monoid로 index된 graded ring의 정의와 기본 성질"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/graded_rings
