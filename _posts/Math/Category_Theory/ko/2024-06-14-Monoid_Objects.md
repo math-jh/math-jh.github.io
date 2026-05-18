@@ -1,7 +1,7 @@
 ---
 
 title: "모노이드 대상"
-excerpt: ""
+excerpt: "Monoidal category 내부의 monoid object와 그 예시들"
 
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/monoid_objects

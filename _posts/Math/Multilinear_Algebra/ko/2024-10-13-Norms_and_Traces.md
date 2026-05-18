@@ -1,7 +1,7 @@
 ---
 
 title: "노름과 대각합"
-excerpt: ""
+excerpt: "Algebra의 원소가 정의하는 norm과 trace"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/norms_and_traces

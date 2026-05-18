@@ -1,7 +1,7 @@
 ---
 
 title: "대수적 확장"
-excerpt: ""
+excerpt: "체의 algebraic extension의 정의와 degree"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/algebraic_extensions

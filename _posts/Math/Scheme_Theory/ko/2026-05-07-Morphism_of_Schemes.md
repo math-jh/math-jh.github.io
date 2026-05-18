@@ -1,7 +1,7 @@
 ---
 
 title: "스킴 사이의 사상"
-excerpt: ""
+excerpt: "Locally ringed space morphism으로서의 scheme morphism의 네 관점"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/morphism_of_schemes

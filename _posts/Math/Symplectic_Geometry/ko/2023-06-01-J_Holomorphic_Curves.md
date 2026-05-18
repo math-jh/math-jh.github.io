@@ -1,7 +1,7 @@
 ---
 
 title: "J-holomorphic curves"
-excerpt: "Symplectic manifold 위의 compatible almost complex structure $$J$$와 그에 대한 J-holomorphic curve의 정의, energy identity, removable singularity, 그리고 Gromov compactness theorem의 개요"
+excerpt: "Almost complex structure에 대한 holomorphic curve와 Gromov compactness"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/j_holomorphic_curves

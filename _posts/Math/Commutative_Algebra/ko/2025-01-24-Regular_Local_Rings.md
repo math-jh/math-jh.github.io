@@ -1,7 +1,7 @@
 ---
 
 title: "정칙국소환"
-excerpt: ""
+excerpt: "Regular system of parameters와 regular local ring의 특성화"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/regular_local_rings

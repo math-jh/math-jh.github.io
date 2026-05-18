@@ -1,7 +1,7 @@
 ---
 
 title: "스킴 사상의 성질들"
-excerpt: ""
+excerpt: "Affine, finite, finite type 등 scheme morphism의 기본 성질"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/properties_of_scheme_morphisms

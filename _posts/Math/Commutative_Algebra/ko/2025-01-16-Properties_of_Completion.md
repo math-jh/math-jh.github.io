@@ -1,7 +1,7 @@
 ---
 
 title: "완비화의 성질들"
-excerpt: ""
+excerpt: "Completion과 exact sequence의 호환성, Artin-Rees lemma"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/properties_of_completion

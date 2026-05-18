@@ -1,6 +1,6 @@
 ---
 title: "파노 다양체"
-excerpt: "Toric geometry"
+excerpt: "Reflexive polytope과 그에 대응하는 Gorenstein Fano 토릭 다양체"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/reflexive_polytope_fano

@@ -1,7 +1,7 @@
 ---
 
 title: "유도카테고리"
-excerpt: ""
+excerpt: "Chain complex와 quasi-isomorphism을 통한 derived category 구성"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/derived_categories

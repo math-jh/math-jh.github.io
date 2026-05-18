@@ -1,7 +1,7 @@
 ---
 
 title: "Gromov-Witten 불변량"
-excerpt: "Stable maps의 virtual fundamental class를 사용하여 Gromov-Witten invariant와 그 descendant 버전을 정의한다. Genus-0 axioms (string, divisor, dilaton, WDVV), quantum cohomology의 구성, 그리고 mirror symmetry로의 연결"
+excerpt: "Stable map moduli로부터의 GW invariant 정의와 quantum cohomology"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/gromov_witten

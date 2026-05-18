@@ -1,7 +1,7 @@
 ---
 
 title: "분수아이디얼"
-excerpt: ""
+excerpt: "Fractional ideal과 invertible module, Picard group"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/fractional_ideals

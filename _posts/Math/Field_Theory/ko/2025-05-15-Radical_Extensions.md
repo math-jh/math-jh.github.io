@@ -1,7 +1,7 @@
 ---
 
 title: "제곱근확대체"
-excerpt: ""
+excerpt: "Radical extension의 정의와 Galois theory에서의 역할"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/radical_extensions

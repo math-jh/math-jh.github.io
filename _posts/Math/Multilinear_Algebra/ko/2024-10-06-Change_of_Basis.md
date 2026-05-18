@@ -1,7 +1,7 @@
 ---
 
 title: "기저변환"
-excerpt: ""
+excerpt: "정사각행렬과 가역행렬, 기저변환에 의한 행렬의 변환"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/change_of_basis

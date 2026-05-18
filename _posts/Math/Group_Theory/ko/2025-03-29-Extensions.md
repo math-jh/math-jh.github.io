@@ -1,7 +1,7 @@
 ---
 
 title: "군의 확장"
-excerpt: ""
+excerpt: "Short exact sequence로서의 group extension과 semidirect product"
 
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/extensions

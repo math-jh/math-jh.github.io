@@ -1,7 +1,7 @@
 ---
 
 title: "뇌터 정규화"
-excerpt: ""
+excerpt: "유한생성 algebra의 Noether normalization 정리와 응용"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/noether_normalization

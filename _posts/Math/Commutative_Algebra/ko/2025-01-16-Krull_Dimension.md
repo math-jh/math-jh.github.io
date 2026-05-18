@@ -1,7 +1,7 @@
 ---
 
 title: "차원"
-excerpt: ""
+excerpt: "Prime chain으로 정의되는 Krull dimension과 기본 성질"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/Krull_dimension

@@ -1,7 +1,7 @@
 ---
 
 title: "Ext와 Tor"
-excerpt: ""
+excerpt: "Hom과 tensor의 derived functor인 Ext, Tor의 정의와 성질"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/ext_and_tor

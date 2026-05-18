@@ -1,7 +1,7 @@
 ---
 
 title: "사영공간의 닫힌 부분스킴"
-excerpt: ""
+excerpt: "Projective space의 closed subscheme과 homogeneous ideal의 대응"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/closed_subschemes_of_projective_spaces

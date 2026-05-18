@@ -1,7 +1,7 @@
 ---
 
 title: "스킴의 대수구조"
-excerpt: ""
+excerpt: "Reduced scheme과 integral scheme의 정의와 성질"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/algebra_of_schemes

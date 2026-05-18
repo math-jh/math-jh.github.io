@@ -1,7 +1,7 @@
 ---
 
 title: "동반소아이디얼"
-excerpt: ""
+excerpt: "Prime avoidance와 associated prime의 정의 및 성질"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/associated_primes

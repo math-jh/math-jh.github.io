@@ -1,7 +1,7 @@
 ---
 
 title: "평탄성과 국소화"
-excerpt: ""
+excerpt: "Maximal ideal에서의 점검을 통한 flatness의 local criterion"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/local_criterion_for_flatness

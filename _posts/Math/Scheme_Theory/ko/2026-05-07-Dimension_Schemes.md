@@ -1,7 +1,7 @@
 ---
 
 title: "차원"
-excerpt: ""
+excerpt: "Scheme의 dimension 정의와 local ring의 Krull dimension과의 관계"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/dimension

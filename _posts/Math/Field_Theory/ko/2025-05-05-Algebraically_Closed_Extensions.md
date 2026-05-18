@@ -1,7 +1,7 @@
 ---
 
 title: "대수적 폐포"
-excerpt: ""
+excerpt: "Algebraically closed field와 algebraic closure의 존재성"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/algebraically_closed_extensions
