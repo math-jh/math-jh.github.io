@@ -17,11 +17,11 @@ published: false
 
 ---
 
-[\[거울대칭\] §Oscillating integral과 Gauss–Manin system](/ko/math/mirror_symmetry/oscillating_integral) 또는 [\[거울대칭\] §Givental $$J$$-function](/ko/math/mirror_symmetry/givental_j_function)에서 우리는 oscillating integral
+해석학과 기하학의 여러 응용에서 다음 형태의 진동적분
 
 $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 
-의 $$z\to 0$$ 점근행동이 phase function $$W$$의 임계점에서의 국소 데이터로 환원된다는 사실을 반복적으로 사용하였다. 이러한 환원은 두 개의 기초 위에 서 있다. 첫째는 임계점 근방에서 phase를 표준형으로 환원하는 *Morse lemma*이며, 둘째는 Gaussian integral의 다변수 일반화로 얻어지는 *stationary phase formula*이다. 또한 적분 경로의 선택을 통제하는 *Lefschetz thimble*의 구성도 본질적으로 Morse 이론의 gradient flow에 의해 주어진다. 본 글에서는 이 세 도구를 차례로 정리한다.
+의 $$z\to 0$$ 점근행동이 자주 등장하며, 그 점근치가 phase function $$W$$의 임계점에서의 국소 데이터로 환원된다는 사실은 양자역학의 semiclassical limit, partial differential equation의 WKB 해석, singularity theory, 그리고 후술할 mirror symmetry의 B-model superpotential 분석 등 다양한 맥락에서 핵심적이다. 이러한 환원은 두 개의 기초 위에 서 있다. 첫째는 임계점 근방에서 phase를 표준형으로 환원하는 *Morse lemma*이며, 둘째는 Gaussian integral의 다변수 일반화로 얻어지는 *stationary phase formula*이다. 또한 적분 경로의 선택을 통제하는 *Lefschetz thimble*의 구성도 본질적으로 Morse 이론의 gradient flow에 의해 주어진다. 본 글에서는 이 세 도구를 차례로 정리한다. 본 글의 결과는 이후 mirror symmetry에서 oscillating integral, $$J$$-function의 점근분석, Gauss-Manin connection 등을 다룰 때 직접 사용된다.
 
 ## Morse function과 임계점
 
@@ -272,7 +272,7 @@ $$\int_{\mathbb{R}^2} e^{ixy/\hbar}\,a(x,y)\,dx\,dy = 2\pi\hbar\,a(0,0) + O(\hba
 
 ## Lefschetz thimble
 
-지금까지 우리는 phase function이 *실가*라고 가정하였다. 그러나 거울대칭 등에서 등장하는 superpotential은 holomorphic function이며, 그 경우 적분 contour 자체를 신중하게 선택해야 한다. 이 선택을 Morse 이론으로부터 자연스럽게 얻어내는 구성이 *Lefschetz thimble*이다. 본 절에서는 [\[거울대칭\] §Oscillating integral과 Gauss–Manin system, ⁋정의 2](/ko/math/mirror_symmetry/oscillating_integral#def2)에서 사용된 thimble을 Morse 이론의 관점에서 짧게 정리한다.
+지금까지 우리는 phase function이 *실가*라고 가정하였다. 그러나 응용에서 마주치는 phase는 holomorphic function인 경우가 많고 (가령 singularity theory의 versal family, mirror symmetry의 superpotential 등), 이 경우 적분 contour 자체를 신중하게 선택해야 한다. 이 선택을 Morse 이론으로부터 자연스럽게 얻어내는 구성이 *Lefschetz thimble*이다.
 
 $$X$$가 complex manifold이고 $$W:X\to\mathbb{C}$$가 holomorphic function이라 하자. 형식적으로 우리는 진동적분
 
@@ -331,7 +331,7 @@ $$e^{W(p)/\hbar}\,\alpha(p)\,\prod_{i=1}^n \int_{\mathbb{R}} e^{e^{2i\theta_i}t_
 
 </details>
 
-[명제 15](#prop15)는 [\[거울대칭\] §Oscillating integral과 Gauss–Manin system, ⁋명제 3](/ko/math/mirror_symmetry/oscillating_integral#prop3)에서 사용된 stationary phase 공식이 정확히 이 holomorphic 세팅에서의 thimble별 점근임을 명시한다. 거울대칭의 맥락에서는 superpotential $$W_q$$의 critical point가 양자 매개변수 $$q$$에 따라 변하고, thimble들의 monodromy가 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
+[명제 15](#prop15)는 위의 stationary phase formula ([정리 10](#thm10))를 holomorphic 세팅으로 확장한 것이며, mirror symmetry의 superpotential $$W_q$$에 대한 oscillating integral의 thimble별 점근 분해에 직접 사용된다. 그 맥락에서는 critical point가 양자 매개변수 $$q$$에 따라 이동하며, thimble들의 monodromy가 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
 
 ---
 
