@@ -63,11 +63,46 @@
       "in_chars": 11887,
       "out_chars": 12547,
       "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-22-Tangent_Spaces_and_Smoothness.md": {
+      "status": "done",
+      "last_attempt_ts": 1779167388.9729216,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-22-Tangent_Spaces_and_Smoothness.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T05:00:02+00:00",
+      "in_chars": 15360,
+      "out_chars": 16973,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-24-Grassmannians.md": {
+      "status": "done",
+      "last_attempt_ts": 1779169252.7599382,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-24-Grassmannians.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T05:30:01+00:00",
+      "in_chars": 11370,
+      "out_chars": 11967,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-25-Divisors.md": {
+      "status": "done",
+      "last_attempt_ts": 1779171235.4276605,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-25-Divisors.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T06:00:01+00:00",
+      "in_chars": 15549,
+      "out_chars": 17442,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-25-Line_Bundles.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779173101.6884851,
+      "error": "timeout after 900s"
     }
   },
   "stats": {
-    "total_done": 5,
-    "total_in_chars": 69173,
-    "total_out_chars": 75356
+    "total_done": 8,
+    "total_in_chars": 111452,
+    "total_out_chars": 121738
   }
 }
