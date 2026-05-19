@@ -1,6 +1,6 @@
 ---
 title: "Mirror Symmetry 개요"
-excerpt: "A-model과 B-model의 대응, 그리고 Hori-Vafa mirror construction을 중심으로 한 mirror symmetry의 직관적 소개"
+excerpt: "역사적 배경과 Hori-Vafa mirror"
 
 categories: [Math / Mirror Symmetry]
 permalink: /ko/math/mirror_symmetry/overview
@@ -16,6 +16,8 @@ last_modified_at: 2026-05-18
 weight: 1
 
 ---
+
+## 역사적 배경
 
 Mirror symmetry는 수학 체계 안에서 자연스럽게 생겨난 분야가 아니라, 초끈이론을 그 기반으로 한다. 초끈이론에 따르면 우리가 살고 있는 세상은 그 기본 자유도가 *점 입자*가 아닌 *1차원 string*이라는 한 줄의 가정에서 출발한다. 그럼 입자가 시간축을 따라 움직일 때의 시공간 상에서의 궤적은 더 이상 $$1$$차원 worldline이 아니라 $$2$$차원 worldsheet가 되며, 그 운동방정식은 [\[사교기하학\] §고전역학, §§최소작용의 원리](/ko/math/symplectic_geometry/classical_mechanics#최소작용의-원리)에서와 마찬가지로 특정 한 action-minimizing solution으로 결정된다. 이 해석을 기존의 양자역학의 프레임에 일치시키기 위해서는 시공간이 $$10$$차원으로 강제되므로, 물리학자들은 이 10차원 시공간을 $$4$$차원 Minkowski 시공간과, 나머지 $$6$$차원을 해결해주는 compact manifold $$M$$의 곱으로 생각한다. 물리적으로 이 공간 $$X$$가 만족해야 하는 조건들을 써 보면, $$X$$는 *Calabi-Yau threefold*가 되어야 하는 것을 알 수 있다.
 
