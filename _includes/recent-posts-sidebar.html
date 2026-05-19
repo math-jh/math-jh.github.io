@@ -1,0 +1,35 @@
+{% comment %}
+  Renders the 5 most-recent posts in the same language as the current page.
+  Used inside the sticky right sidebar (split with the TOC).
+  Language is detected from the URL prefix (/en/ or /ko/), with site.locale fallback.
+  Strict separation: ko posts never appear on en pages, and vice versa.
+{% endcomment %}
+{% assign _lang = site.locale %}
+{% assign _lang_prefix = page.url | truncate: 3, "" %}
+{% if _lang_prefix contains "en" or _lang_prefix contains "ko" %}
+  {% assign _lang = _lang_prefix | remove_first: "/" %}
+{% endif %}
+{% assign _lang_full = "/" | append: _lang | append: "/" %}
+{% assign _recent_limit = include.limit | default: 5 %}
+{% assign _recent_posts = site.posts
+  | where_exp: "post", "post.permalink contains _lang_full"
+  | sort: 'date'
+  | reverse %}
+
+<nav class="recents-block recents-block--posts" aria-label="{{ site.data.ui-text[_lang].recent_posts | default: 'Recent posts' }}">
+  <header>
+    <h4 class="nav__title">
+      <a href="{{ '/' | append: _lang | append: '/recent/' | relative_url }}">
+        <span class="material-icons md-18" style="vertical-align:-.2em">&#xE164;</span>
+        {{ site.data.ui-text[_lang].recent_posts | default: "Recent posts" }}
+      </a>
+    </h4>
+  </header>
+  <ul class="recents-list">
+    {% for post in _recent_posts limit: _recent_limit %}
+      <li class="recents-list__item">
+        <a href="{{ post.url | relative_url }}">{{ post.title | markdownify | strip_html | truncate: 60 }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

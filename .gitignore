@@ -26,3 +26,7 @@ Gemfile
 
 # Preprint dependent — local only
 _posts/Math/Mirror_Symmetry/ko/2025-01-15-Quantum_K_Theory.md
+
+# Local-only term harvester
+scripts/extract_terms.py
+scripts/term_extraction_state.json

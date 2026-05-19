@@ -6,6 +6,7 @@
 
 @import "minimal-mistakes/skins/{{ site.dark_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+@import "recents-sidebar"; // custom: recent posts / comments in the right sidebar
 
 img.invert {
   filter: invert(1);

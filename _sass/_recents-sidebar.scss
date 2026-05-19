@@ -1,0 +1,147 @@
+/* ==========================================================================
+   Recents (recent posts / recent comments) in the right sidebar.
+
+   Desktop layout (>= $large): the sticky sidebar is split into three rows
+   anchored to the viewport — TOC at 0%, Recent posts at 50%, Recent comments
+   at 75%. Each section has a thin separator above its title; the list items
+   themselves carry no row separators.
+
+   Mobile (< $large): TOC stays inline above the article (default MM
+   behaviour). The recents block becomes a collapsible <details> toggle
+   ("최근 글/댓글" / "Recents").
+   ========================================================================== */
+
+/* No dividers anywhere — neither between list items nor above section titles.
+   Visual separation comes from whitespace (grid row-gap below) only. */
+.recents-list__item {
+  border-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  /* Promote the recents children up so the three sections (TOC, posts,
+     comments) become direct grid items of .sidebar__right.sticky. */
+  .recents-wrapper {
+    display: contents;
+  }
+  .recents-wrapper__body {
+    display: contents;
+  }
+  .recents-wrapper__toggle {
+    display: none;
+  }
+
+  .sidebar__right.sticky {
+    /* Pin the sidebar to a fixed viewport-anchored grid. To keep the
+       three sections clearly separated we cap row heights below the
+       theoretical 50/25/25 split and let row-gap soak up the slack. */
+    height: calc(100vh - 2em);
+    display: grid;
+    grid-template-rows: 33vh 20vh 20vh;
+    align-items: stretch;
+    row-gap: 2rem;
+  }
+
+  .sidebar__right.sticky > .toc,
+  .sidebar__right.sticky > .recents-block {
+    min-height: 0; /* let the grid track shrink even with overflow children */
+    overflow-y: auto;
+    padding-right: 0.25rem;
+  }
+
+  .sidebar__right.sticky .toc__menu {
+    /* Override the theme's inline cap so the TOC fills its grid row. */
+    max-height: none;
+  }
+}
+
+/* Shared section styling. */
+.recents-block {
+  font-family: $sans-serif-narrow;
+
+  .nav__title {
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    color: $highlight-color;
+    font-size: $type-size-6;
+    background: $background-color;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $text-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.recents-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: $type-size-7;
+
+  &__item a {
+    display: block;
+    padding: 0.2rem 0.75rem;
+    color: mix($gray, $background-color, 20%);
+    font-weight: 600;
+    line-height: 1.35;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  &__meta {
+    color: $muted-text-color;
+    font-weight: normal;
+    font-size: 0.9em;
+  }
+
+  &__empty {
+    margin: 0;
+    padding: 0.2rem 0.75rem;
+    color: $muted-text-color;
+    font-size: $type-size-7;
+  }
+}
+
+/* Mobile: the <details> toggle. Hidden on desktop via the rule above. */
+.recents-wrapper {
+  margin-top: 0.5em;
+
+  &__toggle {
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    font-family: $sans-serif-narrow;
+    font-size: $type-size-5;
+    font-weight: bold;
+    color: $highlight-color;
+    background: $background-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    list-style: none;
+
+    &::-webkit-details-marker { display: none; }
+    &::marker { content: ""; }
+
+    &::after {
+      content: "▾";
+      float: right;
+      transition: transform 0.15s ease;
+    }
+  }
+
+  &[open] > &__toggle::after {
+    content: "▴";
+  }
+
+  &__body {
+    padding-top: 0.5em;
+  }
+}
