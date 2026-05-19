@@ -1,9 +1,0 @@
----
-layout: archive
-permalink: /probe.html
----
-<pre>
-{% for cat in site.categories-ko_order %}
-[{{ cat }}] count: {% assign p = site.categories[cat] %}{% if p %}{{ p.size }}{% else %}NIL{% endif %}
-{% endfor %}
-</pre>
