@@ -35,7 +35,7 @@ weight: 17
 
 우선 $$\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$$라 가정하자. 그럼 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)에 의하여 $$\mathfrak{m}$$은 $$(a_1,\ldots, a_d)$$를 포함하는 prime ideal 중 minimal한 것이다. 따라서 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 $$\codim \mathfrak{m}\leq d$$가 성립한다. 
 
-반대로 $$(A,\mathfrak{m})$$이 $$\dim A=d$$를 만족한다 하자. 그럼 정의에 의하여, 길이 $$d$$의 supremum은 $$\mathfrak{m}$$에서 시작하는 prime ideal들의 chain에서 나오므로, 정확히 $$\codim \mathfrak{m}$$과 같다. 따라서, [§차원, ⁋따름정리 8](/ko/math/commutative_algebra/Krull_dimension#cor8)을 사용하면 $$\mathfrak{m}$$이 ideal $$(a_1,\ldots, a_d)$$를 포함하는 것 중 minimal한 prime이도록 할 수 있다. 그럼 $$\mathfrak{m}$$은 $$A/(a_1,\ldots, a_d)$$에서 유일한 prime ideal이 되므로, 이것이 정확히 $$A/(a_1,\ldots, a_d)$$의 nilradical이 되어야 하고 ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra//ko/math/commutative_algebra/properties_of_localization#cor8)) 따라서 원하는 결과를 얻는다. 
+반대로 $$(A,\mathfrak{m})$$이 $$\dim A=d$$를 만족한다 하자. 그럼 정의에 의하여, 길이 $$d$$의 supremum은 $$\mathfrak{m}$$에서 시작하는 prime ideal들의 chain에서 나오므로, 정확히 $$\codim \mathfrak{m}$$과 같다. 따라서, [§차원, ⁋따름정리 8](/ko/math/commutative_algebra/Krull_dimension#cor8)을 사용하면 $$\mathfrak{m}$$이 ideal $$(a_1,\ldots, a_d)$$를 포함하는 것 중 minimal한 prime이도록 할 수 있다. 그럼 $$\mathfrak{m}$$은 $$A/(a_1,\ldots, a_d)$$에서 유일한 prime ideal이 되므로, 이것이 정확히 $$A/(a_1,\ldots, a_d)$$의 nilradical이 되어야 하고 ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)) 따라서 원하는 결과를 얻는다. 
 
 </details>
 
@@ -92,7 +92,7 @@ $$\sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra//ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여 $$\ann(M/\mathfrak{a}M)$$을 포함하는 prime ideal들의 집합과 $$\mathfrak{a}+\ann(M)$$을 포함하는 prime ideal들의 집합이 정확히 동일하다는 것을 보이면 충분하다. 이제 prime ideal $$\mathfrak{p}$$가 $$\ann(M/\mathfrak{a}M)$$을 포함하는 것은 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 $$(M/\mathfrak{a}M)_\mathfrak{p}\neq 0$$인 것과 동치이다. 그럼 $$(M/\mathfrak{a}M)_\mathfrak{p}=M_\mathfrak{p}/\mathfrak{a}M_\mathfrak{p}\neq 0$$인 것은, [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여, $$M_\mathfrak{p}\neq 0$$이고 $$\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$$인 것과 동치이다. 이는 다시 [§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra//ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여, $$\mathfrak{p}\supseteq \ann(M)$$이고 $$\mathfrak{p}\supseteq \mathfrak{a}$$인 것, 즉 $$\mathfrak{p}\supseteq \mathfrak{a}+\ann(M)$$인 것과 동치이므로 원하는 결과를 얻는다. 
+[§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여 $$\ann(M/\mathfrak{a}M)$$을 포함하는 prime ideal들의 집합과 $$\mathfrak{a}+\ann(M)$$을 포함하는 prime ideal들의 집합이 정확히 동일하다는 것을 보이면 충분하다. 이제 prime ideal $$\mathfrak{p}$$가 $$\ann(M/\mathfrak{a}M)$$을 포함하는 것은 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 $$(M/\mathfrak{a}M)_\mathfrak{p}\neq 0$$인 것과 동치이다. 그럼 $$(M/\mathfrak{a}M)_\mathfrak{p}=M_\mathfrak{p}/\mathfrak{a}M_\mathfrak{p}\neq 0$$인 것은, [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여, $$M_\mathfrak{p}\neq 0$$이고 $$\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$$인 것과 동치이다. 이는 다시 [§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여, $$\mathfrak{p}\supseteq \ann(M)$$이고 $$\mathfrak{p}\supseteq \mathfrak{a}$$인 것, 즉 $$\mathfrak{p}\supseteq \mathfrak{a}+\ann(M)$$인 것과 동치이므로 원하는 결과를 얻는다. 
 
 </details>
 

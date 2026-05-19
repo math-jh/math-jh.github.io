@@ -8,7 +8,7 @@ sidebar:
     nav: "algebraic_varieties-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Chow_Groups.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Chow_Groups.png
     overlay_filter: 0.5
 
 date: 2026-05-11

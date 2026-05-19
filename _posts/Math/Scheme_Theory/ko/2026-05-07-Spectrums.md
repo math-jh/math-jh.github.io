@@ -6,7 +6,7 @@ excerpt: "가환환의 prime spectrum과 Zariski topology"
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/spectrums
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Spectrums.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Spectrums.png
     overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"

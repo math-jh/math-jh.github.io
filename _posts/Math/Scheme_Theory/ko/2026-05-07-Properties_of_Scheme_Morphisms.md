@@ -6,7 +6,7 @@ excerpt: "Affine, finite, finite type 등 scheme morphism의 기본 성질"
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/properties_of_scheme_morphisms
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Properties_of_scheme_morphisms.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Properties_of_scheme_morphisms.png
     overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"
@@ -218,7 +218,7 @@ $$(\varphi\vert_{U})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \maths
 
 이제 이에 대응되는 scheme morphism $$\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$$를 생각하자. 이는 임의의 prime ideal $$\mathfrak{p}\subset \mathbb{K}[\x,\y]$$를 받아 $$\mathbb{K}[\x]$$의 prime ideal $$\mathfrak{p}\cap \mathbb{K}[\x]$$를 내놓는 함수이다. 이는 기하적으로는 affine plane $$\mathbb{A}^2_\mathbb{K}$$의 점 $$(x,y)$$를 affine line $$\mathbb{A}^1_\mathbb{K}$$의 점 $$x$$에 대응시키는 함수이다. 
 
-![finite_type_morphism](/assets/images/Math/Algebraic_Geometry/Properties_of_scheme_morphisms-1.png){:style="width:25em" class="invert" .align-center}
+![finite_type_morphism](/assets/images/Math/Algebraic_Varieties/Properties_of_scheme_morphisms-1.png){:style="width:25em" class="invert" .align-center}
 
 이와 관련된 finite morphism의 예시로는 위의 ring homomorphism $$\iota:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x,\y]$$에 projection map $$\pi:\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$$을 합성한 것이 있다. 그럼 $$\mathbb{K}[\x,\y]/(\x-\y^2)$$은 $$\mathbb{K}[\x]$$-module로서 $$1$$과 $$\y$$에 의해 생성되므로 $$\phi:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$$은 finite morphism이다. 
 
@@ -232,7 +232,7 @@ $$\Spec\phi: \Spec \frac{\mathbb{K}[\x,\y]}{(\x-\y^2)}\rightarrow \Spec \mathbb{
 
 은 기하적으로 $$\x=\y^2$$의 zero set $$Z(\x-\y^2)$$에서 $$x$$축으로의 projection으로 볼 수 있다.
 
-![finite_morphism](/assets/images/Math/Algebraic_Geometry/Properties_of_scheme_morphisms-2.png){:style="width:25em" class="invert" .align-center}
+![finite_morphism](/assets/images/Math/Algebraic_Varieties/Properties_of_scheme_morphisms-2.png){:style="width:25em" class="invert" .align-center}
 
 이 두 예시의 기하학적인 차이는 꽤나 명확하다. 첫 번째 예시의 경우, target의 한 점에서의 fiber가 무한집합인 반면 두 번째 예시의 경우 한 점에서의 fiber가 유한집합이다. 대수적으로 이는 target $$\mathbb{A}_\mathbb{K}^1$$의 임의의 점 $$\mathfrak{p}=(\x-a)$$를 가져왔을 때, 임의의 $$\mathfrak{q}_b=(\x-a, \y-b)\in \mathbb{A}_\mathbb{K}^2$$는 $$(\Spec\iota)(\mathfrak{q}_b)=\mathfrak{p}$$를 만족하는 반면, 두 번째 예시에서는 오직 두 개의 점 $$\mathfrak{q}_+=(\x-a, \y-\sqrt{a})$$와 $$\mathfrak{q}_-=(\x-a, \y+\sqrt{a})$$만이 $$(\Spec\phi)(\mathfrak{q}_\pm)=\mathfrak{p}$$를 만족하는 것으로 확인할 수 있다. 
 
