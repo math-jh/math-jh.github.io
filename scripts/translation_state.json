@@ -98,11 +98,36 @@
       "status": "failed",
       "last_attempt_ts": 1779173101.6884851,
       "error": "timeout after 900s"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Canonical_Bundle.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779174902.5106273,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Linear_Systems.md": {
+      "status": "done",
+      "last_attempt_ts": 1779176668.1064677,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-29-Linear_Systems.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T07:30:02+00:00",
+      "in_chars": 16040,
+      "out_chars": 18010,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-04-05-Sheaf_Cohomology.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779178502.1749923,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779180219.6834018,
+      "error": "kimi CLI exited 75: stderr='To resume this session: kimi -r 97219a8a-b42c-4a78-9168-a717f28abb71'"
     }
   },
   "stats": {
-    "total_done": 8,
-    "total_in_chars": 111452,
-    "total_out_chars": 121738
+    "total_done": 9,
+    "total_in_chars": 127492,
+    "total_out_chars": 139748
   }
 }
