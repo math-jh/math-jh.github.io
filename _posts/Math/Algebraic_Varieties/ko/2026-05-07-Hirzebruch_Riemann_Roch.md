@@ -6,7 +6,7 @@ categories: [Math / Algebraic Varieties]
 sidebar:
     nav: "algebraic_varieties-ko"
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Hirzebruch_Riemann_Roch.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Hirzebruch_Riemann_Roch.png
     overlay_filter: 0.5
 date: 2026-05-07
 last_modified_at: 2026-05-07

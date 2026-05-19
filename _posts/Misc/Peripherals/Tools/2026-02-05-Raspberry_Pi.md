@@ -27,7 +27,7 @@ weight: 4
 
 장단점은 명확하다. 기존 AI에 비해서 훨씬 편리한 대신, 보안상의 우려가 매우 크다. 또, `OpenClaw`의 장점 중 하나는 AI의 기억을 마크다운 형태로 저장해서, 기억이 휘발되지 않도록 할 수 있다는 것이다. 가령, 다음 스크린샷은 `OpenClaw`에게, 블로그에 쓸 Raspberry Pi에 `OpenClaw` 설정하는 과정을 안내하는 글의 초안을 부탁했을 때의 반응이다. 
 
-![](/assets/images/Math//Volumes/junhyeok/math-jh.github.io/_posts/Misc/Peripherals/Tools/2026-02-05-Raspberry_Pi.md/Raspberry_Pi-1.png){:style="width:em" class="invert" .align-center}
+![](/assets/images/Misc/Peripherals/Tools/Raspberry_Pi-1.png){:style="width:30em" class="invert" .align-center}
 
 스크린샷들을 보면, 한 번의 명령으로 다음 과정들을 모두 수행하는 것을 확인할 수 있다. 
 

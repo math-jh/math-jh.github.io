@@ -8,7 +8,7 @@ sidebar:
     nav: "algebraic_varieties-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Dimension.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Dimension.png
     overlay_filter: 0.5
 
 date: 2026-03-22

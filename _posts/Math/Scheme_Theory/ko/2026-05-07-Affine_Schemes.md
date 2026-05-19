@@ -6,7 +6,7 @@ excerpt: "Ring의 spectrum 위 structure sheaf로 정의되는 affine scheme"
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/affine_schemes
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Affine_schemes.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Affine_schemes.png
     overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"
@@ -104,7 +104,7 @@ $$S(f)^{-1}A\cong S_f^{-1}A$$
 
 이 존재한다. 뿐만 아니라, 만일 $$S(g)\subseteq S(f)$$라면 다음의 diagram
 
-![localizations](/assets/images/Math/Algebraic_Geometry/Affine_schemes-1.png){:style="width:10.4em" class="invert" .align-center}
+![localizations](/assets/images/Math/Algebraic_Varieties/Affine_schemes-1.png){:style="width:10.4em" class="invert" .align-center}
 
 이 commute한다.
 
@@ -114,7 +114,7 @@ $$S(f)^{-1}A\cong S_f^{-1}A$$
 
 우선 canonical morphism들을 $$\epsilon(f): A \rightarrow S(f)^{-1}A$$, $$\epsilon_f:A \rightarrow S_f^{-1}A$$으로 표기하기로 하자. 그럼 임의의 $$n\geq 1$$에 대하여 $$D(f)=D(f^n)$$이므로, $$f^n\in S(f)$$가 성립하고 따라서 $$S_f$$의 $$\epsilon(f)$$에 의한 image는 모두 $$S(f)^{-1}A$$의 unit이다. 따라서 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)로부터 다음의 commutative diagram
 
-![universal_property-1](/assets/images/Math/Algebraic_Geometry/Affine_schemes-2.png){:style="width:8.5em" class="invert" .align-center}
+![universal_property-1](/assets/images/Math/Algebraic_Varieties/Affine_schemes-2.png){:style="width:8.5em" class="invert" .align-center}
 
 을 얻는다. 
 
@@ -128,21 +128,21 @@ $$\frac{g}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
 
 로부터 $$g$$는 $$S_f^{-1}A$$의 unit임을 안다. 따라서 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)로부터 다음의 commutative diagram
 
-![universal_property-2](/assets/images/Math/Algebraic_Geometry/Affine_schemes-3.png){:style="width:8.5em" class="invert" .align-center}
+![universal_property-2](/assets/images/Math/Algebraic_Varieties/Affine_schemes-3.png){:style="width:8.5em" class="invert" .align-center}
 
 을 얻는다. 이제 $$\overline{\epsilon(f)}$$와 $$\overline{\epsilon_f}$$가 서로의 역함수임은 유일성으로부터 자명하다.
 
 이제 $$S(g)\subseteq S(f)$$라 하자. 그럼 $$\widehat{\epsilon(f)}:S(g)^{-1}A \rightarrow S(f)^{-1}A$$는 마찬가지로 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)을 통해 다음의 diagram
 
-![universal_property-3](/assets/images/Math/Algebraic_Geometry/Affine_schemes-4.png){:style="width:8.5em" class="invert" .align-center}
+![universal_property-3](/assets/images/Math/Algebraic_Varieties/Affine_schemes-4.png){:style="width:8.5em" class="invert" .align-center}
 
 으로 자명하게 정의되는 것이며, 또 $$S(g)\subseteq S(f)\iff D(f)\subseteq D(g)$$이므로 위의 동치관계 ($$\ast$$)로부터 $$g$$는 $$S_f^{-1}A$$의 unit이며, 따라서 $$g^k$$들도 모두 마찬가지이다. 이로부터 $$\widecheck{\epsilon_f}: S_g^{-1}A \rightarrow S_f^{-1}$$를 포함하는 다음의 commutative diagram
 
-![universal_property-4](/assets/images/Math/Algebraic_Geometry/Affine_schemes-5.png){:style="width:8em" class="invert" .align-center}
+![universal_property-4](/assets/images/Math/Algebraic_Varieties/Affine_schemes-5.png){:style="width:8em" class="invert" .align-center}
 
 이 존재한다. 그럼 주장의 diagram이 commute한다는 것은 다음 diagram
 
-![universal_property-5](/assets/images/Math/Algebraic_Geometry/Affine_schemes-6.png){:style="width:17em" class="invert" .align-center}
+![universal_property-5](/assets/images/Math/Algebraic_Varieties/Affine_schemes-6.png){:style="width:17em" class="invert" .align-center}
 
 을 생각하면 자명한데, 즉
 
@@ -268,7 +268,7 @@ $$A_\mathfrak{p}\cong \mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scri
 
 이 존재한다. 뿐만 아니라, $$\mathfrak{p}\in D(f)$$를 만족하는 임의의 $$f\in A$$에 대하여, 다음의 diagram
 
-![stalk_and_localization-1](/assets/images/Math/Algebraic_Geometry/Affine_schemes-7.png){:style="width:13.2em" class="invert" .align-center}
+![stalk_and_localization-1](/assets/images/Math/Algebraic_Varieties/Affine_schemes-7.png){:style="width:13.2em" class="invert" .align-center}
 
 이 commute한다. 
 
@@ -282,7 +282,7 @@ $$\mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathscr{
 
 이 성립한다. 한편 $$\mathfrak{p}\in D(f)\iff f\not\in \mathfrak{p}$$이므로, 우리는 다음의 diagram
 
-![stalk_and_localization-2](/assets/images/Math/Algebraic_Geometry/Affine_schemes-8.png){:style="width:32em" class="invert" .align-center}
+![stalk_and_localization-2](/assets/images/Math/Algebraic_Varieties/Affine_schemes-8.png){:style="width:32em" class="invert" .align-center}
 
 을 얻고, 따라서 주어진 isomorphism을 보이는 것은 단순히 다음의 대수적인 isomorphism
 
@@ -378,11 +378,11 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 임을 보이자. 우선 [보조정리 8](#lem8)에서 $$f=1$$로 두면 우리는 다음의 diagram
 
-![faithuful](/assets/images/Math/Algebraic_Geometry/Affine_schemes-9.png){:style="width:32em" class="invert" .align-center}
+![faithuful](/assets/images/Math/Algebraic_Varieties/Affine_schemes-9.png){:style="width:32em" class="invert" .align-center}
 
 을 얻는다. 이 diagram에서 수직방향 함수들은 모두 isomorphism들이고, 다음의 면
 
-![commuting_square](/assets/images/Math/Algebraic_Geometry/Affine_schemes-10.png){:style="width:11em" class="invert" .align-center}
+![commuting_square](/assets/images/Math/Algebraic_Varieties/Affine_schemes-10.png){:style="width:11em" class="invert" .align-center}
 
 을 제외한 모든 면들은 commuting square임을 알고 있다. 따라서 위의 diagram에서 $$A \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$는 어떤 함수를 타고 가도 동일하게 결정되며, 이 함수에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)를 적용하면 $$A_{\varphi(\mathfrak{q})} \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$가 유일하게 결정된다. 이로부터 위의 diagram의 <em-ko>모든</em-ko> 면들이 commuting square인 것을 안다. 즉, $$\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$$도 local homomorphism이고, 따라서 $$\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$임을 안다. 이제 structure sheaf에서 $$\phi$$가 $$\varphi^\sharp$$과 같다는 것은 restriction map만 생각하면 충분하므로, 이상에서 원하는 주장이 증명된다. 
 
@@ -406,7 +406,7 @@ $$\mathscr{O}_{\Spec A}(A)=\mathscr{O}_{\Spec A}(D(1))\cong A$$
 
 [명제 11](#prop11)의 증명에서 주목할 만한 사실은 $$(X, \mathscr{O}_X)$$가 affine scheme이라는 가정은 필요가 없다는 사실이다. 즉, $$(X, \mathscr{O}_X)\cong(\Spec B, \mathscr{O}_{\Spec B})$$라는 가정을 버리고 [명제 11](#prop11)의 diagram 대신 다음의 diagram
 
-![adjoint](/assets/images/Math/Algebraic_Geometry/Affine_schemes-11.png){:style="width:32em" class="invert" .align-center}
+![adjoint](/assets/images/Math/Algebraic_Varieties/Affine_schemes-11.png){:style="width:32em" class="invert" .align-center}
 
 을 사용하여도 비슷한 논증을 해 나갈 수 있으며, 이 때 결론의 $$B$$는 $$\Gamma(X, \mathscr{O}_X)$$로 바뀌게 된다. 어차피 $$\mathscr{O}_X$$는 $$X$$에 의해 결정되는 데이터이므로, 이를 간략히 $$\Gamma(X)$$로만 표기하면 이로부터 다음의 정리를 얻는다.
 

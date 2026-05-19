@@ -8,7 +8,7 @@ sidebar:
     nav: "algebraic_varieties-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology.png
     overlay_filter: 0.5
 
 date: 2026-04-05
@@ -389,7 +389,7 @@ $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarr
 
 을 생각한다. 우리 주장은 $$\mathcal{Q}$$가 flasque라는 것이며, 이는 임의의 열린집합 $$V\subset U$$에 대하여 다음의 commutative diagram
 
-![Commutative diagram](/assets/images/Math/Algebraic_Geometry/Sheaf_Cohomology-1.png){:style="width:20em" class="invert" .align-center}
+![Commutative diagram](/assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology-1.png){:style="width:20em" class="invert" .align-center}
 
 에서 diagram chase를 하면 된다. 여기서 $$\mathcal{F}$$는 가정에 의해 flasque이며 $$\mathcal{I}$$는 injective이므로 flasque이다. 이제 임의의 $$s\in \mathcal{Q}(V)$$에 대하여, $$\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$$가 surjective이므로 $$s$$를 $$t\in \mathcal{I}(V)$$로 lift할 수 있으며, 다시 $$\mathcal{I}$$가 flasque임을 이용하여 $$t$$를 $$\overline{t}\in\mathcal{I}(U)$$로 올린 후 이를 $$\mathcal{Q}$$로 옮겨주어 $$\overline{s}\in \mathcal{Q}(U)$$를 정의하면 된다. 이제 $$\mathcal{Q}(U)$$에서의 원소 $$\overline{s}\vert_V-s$$는 $$\mathcal{F}(V)$$의 원소이고, 다시 $$\mathcal{F}$$의 flasqueness로부터 적당한 $$h\in \mathcal{F}(U)$$가 존재하여 $$h\vert_V=\overline{s}\vert_V-s$$이다. 이제 이로부터 $$\overline{s}-h$$는 정확히 $$s\in \mathcal{Q}(V)$$로 restrict하며 이로부터 $$\mathcal{Q}$$의 flasqueness를 얻는다.
 
