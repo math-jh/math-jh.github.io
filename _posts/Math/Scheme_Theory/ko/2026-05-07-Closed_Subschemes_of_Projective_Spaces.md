@@ -6,7 +6,7 @@ excerpt: "Projective space의 closed subscheme과 homogeneous ideal의 대응"
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/closed_subschemes_of_projective_spaces
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Closed_subschemes_of_projective_spaces.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Closed_subschemes_of_projective_spaces.png
     overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"

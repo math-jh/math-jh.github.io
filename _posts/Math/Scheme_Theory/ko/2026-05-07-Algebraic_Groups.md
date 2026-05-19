@@ -8,7 +8,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Algebraic_Groups.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Algebraic_Groups.png
     overlay_filter: 0.5
 
 date: 2026-03-11

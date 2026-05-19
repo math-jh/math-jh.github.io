@@ -8,7 +8,7 @@ sidebar:
     nav: "algebraic_varieties-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Rational_Maps.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Rational_Maps.png
     overlay_filter: 0.5
 
 date: 2026-03-15
@@ -172,7 +172,7 @@ $$\Bl_{(0,0)} \mathbb{A}^2 = \{((x, y), [u : v]) \in \mathbb{A}^2 \times \mathbb
 - $$\mathbb{A}^2$$의 원점이 아닌 점 $$(x,y)$$에 대해서는, 조건 $$xv=yu$$를 통해 $$\mathbb{P}^1$$의 점 $$[u:v]$$를 유일하게 결정할 수 있으며, 이를 통해 $$\Bl_{(0,0)}\mathbb{A}^2$$의 점이 유일하게 결정된다. 
 - $$\mathbb{A}^2$$의 원점 $$(0,0)$$에는 모든 $$\mathbb{P}^1$$의 점이 존재할 수 있다. 
 
-![Blowup](/assets/images/Math/Algebraic_Geometry/Rational_Maps-1.png){:style="width:32em" class="invert" .align-center}
+![Blowup](/assets/images/Math/Algebraic_Varieties/Rational_Maps-1.png){:style="width:32em" class="invert" .align-center}
 <cap markdown="1">[Har1] p.29. Fig. 3.</cap>
 
 구체적으로, projection $$\pi_1: \operatorname{Bl}_{(0,0)} \mathbb{A}^2 \to \mathbb{A}^2$$를 $$\pi((x, y), [u : v]) = (x, y)$$로 정의하면, 원점이 아닌 모든 점의 preimage는 한 점이며, 원점의 preimage는 $$\mathbb{P}^1$$이다. 이를 *exceptional divisor*라 부른다.

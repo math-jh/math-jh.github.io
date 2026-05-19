@@ -8,7 +8,7 @@ sidebar:
     nav: "algebraic_varieties-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Quasi_Projective_Varieties.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Quasi_Projective_Varieties.png
     overlay_filter: 0.5
 
 date: 2026-03-15

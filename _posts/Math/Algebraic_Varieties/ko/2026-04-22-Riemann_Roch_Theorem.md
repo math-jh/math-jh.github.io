@@ -8,7 +8,7 @@ sidebar:
     nav: "algebraic_varieties-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Riemann_Roch.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Riemann_Roch.png
     overlay_filter: 0.5
 
 date: 2026-04-22

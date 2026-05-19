@@ -6,7 +6,7 @@ excerpt: "Generic point와 Zariski topology, irreducible component"
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/topology_of_schemes
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Topology_of_schemes.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Topology_of_schemes.png
     overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"
@@ -99,7 +99,7 @@ $$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 
 이 있으며, 이 scheme의 irreducible component는 $$\Spec\mathbb{K}[\x,\y]/(\x)$$와 $$\Spec \mathbb{K}[\x,\y]/(\y)$$이다. 
 
-![counterexamples](/assets/images/Math/Algebraic_Geometry/Properties_of_schemes-1.png){:style="width:20em" class="invert" .align-center}
+![counterexamples](/assets/images/Math/Algebraic_Varieties/Properties_of_schemes-1.png){:style="width:20em" class="invert" .align-center}
 
 </div>
 

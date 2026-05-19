@@ -8,7 +8,7 @@ sidebar:
     nav: "algebraic_varieties-ko"
 
 header:
-    overlay_image: /assets/images/Math/Algebraic_Geometry/Intersection_Product.png
+    overlay_image: /assets/images/Math/Algebraic_Varieties/Intersection_Product.png
     overlay_filter: 0.5
 
 date: 2026-05-11

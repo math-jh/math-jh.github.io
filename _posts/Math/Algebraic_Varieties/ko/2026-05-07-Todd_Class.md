@@ -4,7 +4,7 @@ permalink: /ko/math/algebraic_varieties/todd_class
 excerpt: "Todd class와 Chern character, HRR 정리의 좌변"
 categories: [Math / Algebraic Varieties]
 sidebar: { nav: "algebraic_varieties-ko" }
-header: { overlay_image: /assets/images/Math/Algebraic_Geometry/Todd_Class.png, overlay_filter: 0.5 }
+header: { overlay_image: /assets/images/Math/Algebraic_Varieties/Todd_Class.png, overlay_filter: 0.5 }
 date: 2026-05-07
 last_modified_at: 2026-05-07
 weight: 23

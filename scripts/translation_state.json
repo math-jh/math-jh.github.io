@@ -1,0 +1,39 @@
+{
+  "files": {
+    "_posts/Math/Algebraic_Structures/ko/2024-10-07-Operations_of_Algebras.md": {
+      "status": "stub",
+      "last_attempt_ts": 1779150601.7143152
+    },
+    "_posts/Math/Manifold/ko/2023-02-17-Integration.md": {
+      "status": "stub",
+      "last_attempt_ts": 1779150601.7143152
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-05-11-Cotangent_Complex.md": {
+      "status": "stub",
+      "last_attempt_ts": 1779150601.7143152
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-10-06-Tensor_Product_of_Matrices.md": {
+      "status": "stub",
+      "last_attempt_ts": 1779150601.7143152
+    },
+    "_posts/Math/Riemannian_Geometry/ko/2022-12-27-Levi-Civita_Connection.md": {
+      "status": "stub",
+      "last_attempt_ts": 1779150601.7143152
+    },
+    "_posts/Math/Algebraic_Structures/ko/2021-09-02-Algebraic_Structures.md": {
+      "status": "done",
+      "last_attempt_ts": 1779150922.5211856,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2021-09-02-Algebraic_Structures.md",
+      "ko_mtime": 1776658225.8377666,
+      "translated_at": "2026-05-19T00:35:22+00:00",
+      "in_chars": 10077,
+      "out_chars": 10507,
+      "reason": "pending"
+    }
+  },
+  "stats": {
+    "total_done": 1,
+    "total_in_chars": 10077,
+    "total_out_chars": 10507
+  }
+}
