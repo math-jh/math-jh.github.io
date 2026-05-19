@@ -23,11 +23,51 @@
       "status": "failed",
       "last_attempt_ts": 1779158702.1943917,
       "error": "timeout after 900s"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-12-Projective_Varieties.md": {
+      "status": "done",
+      "last_attempt_ts": 1779160407.9884856,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-12-Projective_Varieties.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T03:00:02+00:00",
+      "in_chars": 16027,
+      "out_chars": 17666,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-15-Quasi_Projective_Varieties.md": {
+      "status": "done",
+      "last_attempt_ts": 1779161859.9809802,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-15-Quasi_Projective_Varieties.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T03:30:01+00:00",
+      "in_chars": 13767,
+      "out_chars": 14860,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-15-Rational_Maps.md": {
+      "status": "done",
+      "last_attempt_ts": 1779163959.5334618,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-15-Rational_Maps.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T04:00:02+00:00",
+      "in_chars": 14122,
+      "out_chars": 15549,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-03-22-Dimension.md": {
+      "status": "done",
+      "last_attempt_ts": 1779165623.0001535,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-22-Dimension.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T04:30:02+00:00",
+      "in_chars": 11887,
+      "out_chars": 12547,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 1,
-    "total_in_chars": 13370,
-    "total_out_chars": 14734
+    "total_done": 5,
+    "total_in_chars": 69173,
+    "total_out_chars": 75356
   }
 }
