@@ -123,11 +123,44 @@
       "status": "failed",
       "last_attempt_ts": 1779180219.6834018,
       "error": "kimi CLI exited 75: stderr='To resume this session: kimi -r 97219a8a-b42c-4a78-9168-a717f28abb71'"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-04-21-Serre_Duality.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779182101.6211827,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-04-22-Riemann_Roch_Theorem.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779183902.01418,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-04-Riemann_Roch_Surfaces.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779185702.0004866,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-07-Hirzebruch_Riemann_Roch.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779186601.5267353
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-07-K3_Surfaces.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779186601.5267353
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-07-Kodaira_Vanishing.md": {
+      "status": "done",
+      "last_attempt_ts": 1779187377.3021145,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-05-07-Kodaira_Vanishing.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T10:30:01+00:00",
+      "in_chars": 14524,
+      "out_chars": 15492,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 9,
-    "total_in_chars": 127492,
-    "total_out_chars": 139748
+    "total_done": 10,
+    "total_in_chars": 142016,
+    "total_out_chars": 155240
   }
 }

@@ -43,12 +43,20 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-        {% if page.toc %}
+        {% include translation-notice.html %}
+        {% assign _show_recents = true %}
+        {% if page.recents == false %}{% assign _show_recents = false %}{% endif %}
+        {% if page.toc or _show_recents %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
+            {% if page.toc %}
             <nav class="toc">
               <header><h4 class="nav__title"><span class="material-icons md-18" style="vertical-align:-.2em">&#xE8DE;</span> {{ page.toc_label | default: site.data.ui-text[lang].toc_label | default: "On this page" }}</h4></header>
               {% include toc.html lang=lang sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>
+            {% endif %}
+            {% if _show_recents %}
+              {% include recents-sidebar.html %}
+            {% endif %}
           </aside>
         {% endif %}
         {{ content }}

@@ -35,7 +35,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 250
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname            : "math-jh" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -49,12 +49,12 @@ comments:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
   giscus:
-    repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
-    discussion_term      : # "pathname" (default), "url", "title", "og:title"
-    reactions_enabled    : # '1' for enabled (default), '0' for disabled
-    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+    repo_id              : "R_kgDOHqXFrA"
+    category_name        : "Giscus Comments"
+    category_id          : "DIC_kwDOHqXFrM4C9YLq"
+    discussion_term      : "pathname" # keeps ko/en pages as separate threads
+    reactions_enabled    : "1"
+    theme                : "preferred_color_scheme"
   staticman:
     branch               : # "main" # "master"
     endpoint             : # "https://math-jh-staticman.herokuapp.com/v2/entry/" # "https://{your Staticman v3 API}/v3/entry/github/"

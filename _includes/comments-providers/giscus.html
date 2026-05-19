@@ -1,3 +1,12 @@
+{%- comment -%}
+  Resolve the per-page giscus UI language from the URL prefix (/ko/ or /en/).
+  Falls back to site.locale's two-letter code.
+{%- endcomment -%}
+{%- assign _giscus_lang = site.locale | slice: 0, 2 -%}
+{%- assign _giscus_prefix = page.url | truncate: 3, "" -%}
+{%- if _giscus_prefix contains "en" or _giscus_prefix contains "ko" -%}
+  {%- assign _giscus_lang = _giscus_prefix | remove_first: "/" -%}
+{%- endif -%}
 <script>
   'use strict';
 
@@ -10,14 +19,19 @@
 
     var script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
-    script.setAttribute('data-repo', '{{ site.repository | downcase }}');
+    script.setAttribute('data-repo', '{{ site.repository }}');
     script.setAttribute('data-repo-id', '{{ site.comments.giscus.repo_id }}');
     script.setAttribute('data-category', '{{ site.comments.giscus.category_name }}');
     script.setAttribute('data-category-id', '{{ site.comments.giscus.category_id }}');
     script.setAttribute('data-mapping', '{{ site.comments.giscus.discussion_term | default: "pathname" }}');
+    script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '{{ site.comments.giscus.reactions_enabled | default: 1 }}');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
     script.setAttribute('data-theme', '{{ site.comments.giscus.theme | default: "light" }}');
+    script.setAttribute('data-lang', '{{ _giscus_lang }}');
     script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
 
     commentContainer.appendChild(script);
   })();

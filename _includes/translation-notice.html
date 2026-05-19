@@ -1,0 +1,19 @@
+{% comment %}
+  Renders a notice block at the top of any post whose frontmatter has
+  `translation_source: kimi-cli`. The text comes from
+  `_data/ui-text.yml` -> `<lang>.kimi_translation_notice` (per-language).
+  No per-file edits are needed; setting the frontmatter key is enough.
+{% endcomment %}
+{% if page.translation_source == "kimi-cli" %}
+  {% assign _lang = site.locale %}
+  {% assign _lang_prefix = page.url | truncate: 3, "" %}
+  {% if _lang_prefix contains "en" or _lang_prefix contains "ko" %}
+    {% assign _lang = _lang_prefix | remove_first: "/" %}
+  {% endif %}
+  {% assign _notice = site.data.ui-text[_lang].kimi_translation_notice %}
+  {% if _notice and _notice != "" %}
+  <div class="notice--warning translation-notice" role="note">
+    {{ _notice | markdownify }}
+  </div>
+  {% endif %}
+{% endif %}
