@@ -53,6 +53,8 @@ KIMI_BIN              = shutil.which("kimi") or str(Path.home() / ".local/bin/ki
 KIMI_TIMEOUT_SEC      = 900                  # generous for thinking + long posts
 MIN_KO_BODY_CHARS     = 300                  # skip stubs below this
 FAIL_RETRY_AFTER_SEC  = 24 * 3600
+POLISH_MIN_AGE_SEC    = 7 * 24 * 3600        # only polish if last translated > 7 days ago
+GIT_DRIFT_MARGIN_SEC  = 60                   # ignore drift within this window of translation time
 
 
 # ---------------------------------------------------------------------------
@@ -101,50 +103,188 @@ def save_state(state: dict) -> None:
 # Target selection
 # ---------------------------------------------------------------------------
 
-def ko_to_en_path(ko_path: Path) -> Path:
-    parts = list(ko_path.parts)
+_DATE_PREFIX_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-")
+_FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+
+
+def topic_slug(path: Path) -> str:
+    """Filename with leading 'YYYY-MM-DD-' stripped. Pairing key for ko↔en."""
+    return _DATE_PREFIX_RE.sub("", path.name, count=1)
+
+
+def en_dir_for_ko(ko_path: Path) -> Path:
+    parts = list(ko_path.parts[:-1])     # drop filename
     parts[parts.index("ko")] = "en"
     return Path(*parts)
+
+
+def find_en_counterpart(ko_path: Path) -> Optional[Path]:
+    """Return existing en/ file matching ko's topic slug, ignoring date prefix."""
+    en_dir = en_dir_for_ko(ko_path)
+    if not en_dir.exists():
+        return None
+    slug = topic_slug(ko_path)
+    for en_file in en_dir.glob("*.md"):
+        if topic_slug(en_file) == slug:
+            return en_file
+    return None
+
+
+def en_path_for_new_translation(ko_path: Path) -> Path:
+    """Where to write a fresh translation: en/ dir + ko's filename (mirrors ko date)."""
+    return en_dir_for_ko(ko_path) / ko_path.name
+
+
+def _read_frontmatter(path: Path) -> str:
+    text = path.read_text(encoding="utf-8")
+    m = _FRONTMATTER_RE.match(text)
+    return m.group(1) if m else ""
 
 
 def _ko_body_length(ko_path: Path) -> int:
     """Length of the body after frontmatter — used to skip stubs."""
     text = ko_path.read_text(encoding="utf-8")
-    m = re.match(r"^---\s*\n.*?\n---\s*\n", text, re.DOTALL)
+    m = _FRONTMATTER_RE.match(text)
     body = text[m.end():] if m else text
     return len(body.strip())
 
 
-def find_next_target(state: dict) -> Optional[Tuple[Path, str]]:
-    """Return (ko_path, reason) for next translation, or None."""
+def is_draft(ko_path: Path) -> bool:
+    """True if frontmatter has `published: false`. Drafts are skipped."""
+    for line in _read_frontmatter(ko_path).splitlines():
+        s = line.strip()
+        if s.startswith("published"):
+            value = s.split(":", 1)[1].strip().strip('"').strip("'").lower()
+            return value == "false"
+    return False
+
+
+TRANSLATION_SOURCE_TAG = "kimi-cli"
+
+
+def en_translation_meta(en_path: Path) -> dict:
+    """Read translated_at / translation_source markers from en frontmatter."""
+    meta = {}
+    for line in _read_frontmatter(en_path).splitlines():
+        s = line.strip()
+        if s.startswith("translated_at:"):
+            meta["translated_at"] = s.split(":", 1)[1].strip().strip('"').strip("'")
+        elif s.startswith("translation_source:"):
+            meta["translation_source"] = s.split(":", 1)[1].strip().strip('"').strip("'")
+    return meta
+
+
+def is_our_translation(en_path: Path) -> bool:
+    """True iff en file frontmatter has translation_source matching our tag."""
+    return en_translation_meta(en_path).get("translation_source") == TRANSLATION_SOURCE_TAG
+
+
+def inject_translation_metadata(translated_md: str, translated_at_iso: str) -> str:
+    """Insert `translated_at` and `translation_source` into the translated frontmatter.
+
+    Idempotent: removes any pre-existing markers before injecting fresh ones, so
+    polish/drift re-translations always end with a current timestamp.
+    """
+    m = _FRONTMATTER_RE.match(translated_md)
+    if not m:
+        return translated_md
+    fm = m.group(1)
+    fm = re.sub(r"^translated_at\s*:.*\n?",     "", fm, flags=re.MULTILINE)
+    fm = re.sub(r"^translation_source\s*:.*\n?", "", fm, flags=re.MULTILINE)
+    fm = fm.rstrip() + (
+        f"\ntranslated_at: {translated_at_iso}\n"
+        f"translation_source: {TRANSLATION_SOURCE_TAG}\n"
+    )
+    return f"---\n{fm}---\n{translated_md[m.end():]}"
+
+
+def git_last_commit_ts(path: Path) -> Optional[float]:
+    """Unix timestamp of the last git commit touching `path`, or None if not tracked."""
+    try:
+        out = subprocess.check_output(
+            ["git", "log", "-1", "--format=%ct", "--", str(path)],
+            cwd=str(BLOG_ROOT),
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).strip()
+        return float(out) if out else None
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return None
+
+
+def _iso_to_ts(iso: str) -> float:
+    try:
+        return datetime.fromisoformat(iso).timestamp()
+    except Exception:
+        return 0.0
+
+
+def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
+    """Three-phase priority: pending → drift → polish.
+
+    Returns (ko_path, en_path_to_write, reason) or None.
+    """
     ko_files = sorted(POSTS_ROOT.glob("*/ko/*.md"))
-    pending, drift = [], []
     now = time.time()
+
+    # --- Phase 1: untranslated (no en counterpart, not a draft) ----------
     for ko in ko_files:
         key = str(ko.relative_to(BLOG_ROOT))
         entry = state["files"].get(key, {})
 
-        # Skip recently-failed files (retry window)
         if entry.get("status") == "failed":
             if now - entry.get("last_attempt_ts", 0) < FAIL_RETRY_AFTER_SEC:
                 continue
 
-        # Skip empty / stub files
+        if is_draft(ko):
+            if entry.get("status") != "draft_skip":
+                state["files"][key] = {"status": "draft_skip", "last_attempt_ts": now}
+            continue
+
         if _ko_body_length(ko) < MIN_KO_BODY_CHARS:
             if entry.get("status") != "stub":
                 state["files"][key] = {"status": "stub", "last_attempt_ts": now}
             continue
 
-        en = ko_to_en_path(ko)
-        if not en.exists():
-            pending.append(ko)
-        elif ko.stat().st_mtime > en.stat().st_mtime + 1:
-            drift.append(ko)
+        if find_en_counterpart(ko) is None:
+            return ko, en_path_for_new_translation(ko), "pending"
 
-    if pending:
-        return pending[0], "pending"
-    if drift:
-        return drift[0], "drift"
+    # --- Phase 2: drift (git history says ko updated since our last translate) -
+    for ko in ko_files:
+        if is_draft(ko):
+            continue
+        existing_en = find_en_counterpart(ko)
+        if existing_en is None:
+            continue
+        if not is_our_translation(existing_en):    # manual translation — leave alone
+            continue
+        ko_commit_ts = git_last_commit_ts(ko)
+        if ko_commit_ts is None:
+            continue
+        translated_ts = _iso_to_ts(en_translation_meta(existing_en).get("translated_at", ""))
+        if ko_commit_ts > translated_ts + GIT_DRIFT_MARGIN_SEC:
+            return ko, existing_en, "drift"
+
+    # --- Phase 3: polish (oldest our-translation, if > POLISH_MIN_AGE_SEC old) ---
+    polish_candidates = []
+    for ko in ko_files:
+        if is_draft(ko):
+            continue
+        existing_en = find_en_counterpart(ko)
+        if existing_en is None:
+            continue
+        if not is_our_translation(existing_en):
+            continue
+        translated_ts = _iso_to_ts(en_translation_meta(existing_en).get("translated_at", ""))
+        if now - translated_ts < POLISH_MIN_AGE_SEC:
+            continue
+        polish_candidates.append((translated_ts, ko, existing_en))
+
+    if polish_candidates:
+        polish_candidates.sort()      # oldest translated_at first
+        _, ko, en = polish_candidates[0]
+        return ko, en, "polish"
+
     return None
 
 
@@ -195,6 +335,57 @@ def build_prompt(ko_content: str) -> str:
     return INSTRUCTIONS + "\n\n--- BEGIN POST ---\n" + ko_content + "\n--- END POST ---\n"
 
 
+POLISH_INSTRUCTIONS = """You are polishing an existing English translation of a Korean math blog post. Output ONLY the polished markdown — no explanation, no code fences, no preamble. Start at the opening `---` (frontmatter) and end at the last content line.
+
+# Task
+
+Given the Korean source (for meaning reference) and the current English translation, produce an *improved* English version. Refine prose quality. Preserve everything else exactly.
+
+# What to improve
+
+- Awkward translations or literal Korean grammar → idiomatic English
+- Word choice → more precise mathematical or natural English
+- Sentence flow → smoother connectives, less choppy
+- Terminology consistency within the post and against standard mathematical English
+- Fix translation drift: if the EN diverges from the KO meaning, restore fidelity
+
+# What to preserve VERBATIM
+
+1. Math blocks `$$...$$` — every character, including LaTeX commands, variable names, spacing
+2. Frontmatter — every line, every field, in the same order (do not add or reorder fields)
+3. Cross-reference link **paths** `/en/math/...` — unchanged. Visible **labels** may be lightly refined only if materially clearer.
+4. HTML structure — `<div class="...">`, `<ins id="...">**...**</ins>`, `<details class="proof"><summary>...</summary>`, `<sub>...</sub>` — keep exactly
+5. Section headers (`## ...`) — keep as-is unless genuinely wrong
+6. Footnote markers `[^N]` and identifiers — unchanged
+7. References / bibliography entries (BibTeX-style) — unchanged
+
+# Style anchors
+
+- First-person plural ("we ...") throughout
+- Precise, technical, declarative; matches the user's canonical voice in other posts
+- No "translator notes", no meta-commentary, no apologies
+- Do not restructure paragraphs unless the original is broken
+
+# Input format
+
+You will receive:
+- Korean source between `--- KO SOURCE ---` / `--- END KO SOURCE ---`
+- Current English translation between `--- EN CURRENT ---` / `--- END EN CURRENT ---`
+
+Output ONLY the polished English markdown."""
+
+
+def build_polish_prompt(ko_content: str, en_content: str) -> str:
+    # Strip our injected markers from en before passing — we re-inject post-call.
+    en_clean = re.sub(r"^translated_at\s*:.*\n?",     "", en_content, flags=re.MULTILINE)
+    en_clean = re.sub(r"^translation_source\s*:.*\n?", "", en_clean,   flags=re.MULTILINE)
+    return (
+        POLISH_INSTRUCTIONS
+        + "\n\n--- KO SOURCE ---\n"   + ko_content + "\n--- END KO SOURCE ---\n"
+        + "\n--- EN CURRENT ---\n"    + en_clean   + "\n--- END EN CURRENT ---\n"
+    )
+
+
 # ---------------------------------------------------------------------------
 # Kimi invocation
 # ---------------------------------------------------------------------------
@@ -225,10 +416,21 @@ def call_kimi(prompt: str) -> str:
     return out
 
 
-def translate(ko_path: Path) -> Tuple[str, int, int]:
+def translate(
+    ko_path: Path,
+    translated_at_iso: str,
+    *,
+    reason: str,
+    en_path: Optional[Path] = None,
+) -> Tuple[str, int, int]:
     ko_content = ko_path.read_text(encoding="utf-8")
-    prompt = build_prompt(ko_content)
+    if reason == "polish" and en_path is not None and en_path.exists():
+        en_content = en_path.read_text(encoding="utf-8")
+        prompt = build_polish_prompt(ko_content, en_content)
+    else:                                       # pending or drift → re-translate from scratch
+        prompt = build_prompt(ko_content)
     translated = call_kimi(prompt)
+    translated = inject_translation_metadata(translated, translated_at_iso)
     return translated, len(prompt), len(translated)
 
 
@@ -262,8 +464,7 @@ def cmd_dry_run(state: dict) -> int:
     if target is None:
         print("No pending translation.")
         return 0
-    ko_path, reason = target
-    en_path = ko_to_en_path(ko_path)
+    ko_path, en_path, reason = target
     print(f"Would translate ({reason}):")
     print(f"  ko: {ko_path.relative_to(BLOG_ROOT)}")
     print(f"  en: {en_path.relative_to(BLOG_ROOT)}")
@@ -303,14 +504,16 @@ def main() -> int:
             log("nothing pending")
             save_state(state)                # may have updated stub markers
             return 0
-        ko_path, reason = target
-        en_path = ko_to_en_path(ko_path)
+        ko_path, en_path, reason = target
         en_path.parent.mkdir(parents=True, exist_ok=True)
         key = str(ko_path.relative_to(BLOG_ROOT))
-        log(f"translating ({reason}): {key} (ko {ko_path.stat().st_size}B)")
+        log(f"translating ({reason}): {key} → {en_path.relative_to(BLOG_ROOT)} (ko {ko_path.stat().st_size}B)")
 
+        translated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
         try:
-            translated, in_chars, out_chars = translate(ko_path)
+            translated, in_chars, out_chars = translate(
+                ko_path, translated_at, reason=reason, en_path=en_path,
+            )
         except subprocess.TimeoutExpired:
             state["files"][key] = {
                 "status": "failed",
@@ -335,8 +538,8 @@ def main() -> int:
             "status": "done",
             "last_attempt_ts": time.time(),
             "en_path": str(en_path.relative_to(BLOG_ROOT)),
-            "ko_mtime": ko_path.stat().st_mtime,
-            "translated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "ko_git_commit_ts": git_last_commit_ts(ko_path),
+            "translated_at": translated_at,
             "in_chars": in_chars,
             "out_chars": out_chars,
             "reason": reason,
