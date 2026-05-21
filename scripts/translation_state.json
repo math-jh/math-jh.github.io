@@ -1049,11 +1049,51 @@
       "in_chars": 11855,
       "out_chars": 12320,
       "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-19-Implicit_Function_Theorem.md": {
+      "status": "done",
+      "last_attempt_ts": 1779383134.1359375,
+      "en_path": "_posts/Math/Manifold/en/2022-06-19-Implicit_Function_Theorem.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T17:00:01+00:00",
+      "in_chars": 7215,
+      "out_chars": 6330,
+      "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-19-Tangent_and_Cotangent_Bundles.md": {
+      "status": "done",
+      "last_attempt_ts": 1779384887.045885,
+      "en_path": "_posts/Math/Manifold/en/2022-06-19-Tangent_and_Cotangent_Bundles.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T17:30:02+00:00",
+      "in_chars": 10936,
+      "out_chars": 10901,
+      "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-19-Vector_Fields.md": {
+      "status": "done",
+      "last_attempt_ts": 1779387099.8520696,
+      "en_path": "_posts/Math/Manifold/en/2022-06-19-Vector_Fields.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T18:00:01+00:00",
+      "in_chars": 11569,
+      "out_chars": 12603,
+      "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-21-Differential_Forms.md": {
+      "status": "done",
+      "last_attempt_ts": 1779388463.2835686,
+      "en_path": "_posts/Math/Manifold/en/2022-06-21-Differential_Forms.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T18:30:01+00:00",
+      "in_chars": 8916,
+      "out_chars": 7963,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 99,
-    "total_in_chars": 1356951,
-    "total_out_chars": 1322938
+    "total_done": 103,
+    "total_in_chars": 1395587,
+    "total_out_chars": 1360735
   }
 }
