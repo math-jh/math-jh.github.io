@@ -37,7 +37,7 @@ en: &DEFAULT_EN
   recents_label              : "Recents"
   # Notice shown at the top of any post whose frontmatter has
   # `translation_source: kimi-cli`. Edit the value below to set the text.
-  kimi_translation_notice    : "This post was machine-translated from Korean by Kimi CLI. The translation may contain errors. The Korean original is the source of truth."
+  kimi_translation_notice    : "This post was translated from Korean by LLM (Kimi). The translation may contain errors or awkward sentences. The Korean original is the source of truth."
   undefined_wpm              : "Undefined parameter words_per_minute at _config.yml"
   comment_form_info          : "Your email address will not be published. Required fields are marked"
   comment_form_comment_label : "Comment"

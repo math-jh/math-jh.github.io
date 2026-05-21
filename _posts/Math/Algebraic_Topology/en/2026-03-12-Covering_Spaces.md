@@ -15,6 +15,8 @@ date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 4
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 In the previous post, we defined the fundamental group $$\pi_1(X)$$ and explored its basic properties. Then the following lemma is almost trivial from the definitions.

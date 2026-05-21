@@ -47,9 +47,7 @@ What is important is that this proposition provides a practical way to compute r
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**Proposition 3**</ins> 
-
-For a variety $$X$$ and a nonempty open subset $$U$$, we have $$\mathbb{K}(U) = \mathbb{K}(X)$$.
+<ins id="prop3">**Proposition 3**</ins> For a variety $$X$$ and a nonempty open subset $$U$$, we have $$\mathbb{K}(U) = \mathbb{K}(X)$$.
 
 </div>
 <details class="proof" markdown="1">

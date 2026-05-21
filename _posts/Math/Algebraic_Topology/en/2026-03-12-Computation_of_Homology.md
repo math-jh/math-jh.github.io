@@ -15,6 +15,8 @@ date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 5
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 We now explore tools for computing homology in practice. Since directly computing the homology of an arbitrary space from its definition is nearly impossible, we need to develop tools for breaking large spaces into smaller pieces and computing the homology of the large space from the homology of the smaller ones. The most intuitive situation would be that of the Seifert-van Kampen theorem ([§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13)), where we observed that the functor $$\pi_1:\Top \rightarrow \Grp$$ preserves colimits. However, the abelianization functor $$\ab:\Grp \rightarrow \Ab$$ is the left adjoint of the forgetful functor $$U:\Ab \rightarrow \Grp$$ ([\[Algebraic Structures\] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7)), and left adjoint functors preserve colimits ([\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)), so the first homology functor $$H_1:\Top \rightarrow \Ab$$, being their composition ([§Covering Spaces, ⁋Theorem 15](/en/math/algebraic_topology/covering_spaces#thm15)), should also preserve colimits. In particular, as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14), suppose a topological space $$X$$ is expressed as the union of two connected open subsets $$U,V$$. Then in the category $$\Ab$$, since the pushout of two abelian groups is given as the coequalizer of their direct sum, the following isomorphism

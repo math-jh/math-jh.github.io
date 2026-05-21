@@ -15,6 +15,8 @@ date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 1
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 In this category, we study homology, cohomology, and related concepts that are essential for geometry. While these concepts are defined on general topological spaces, for them to behave well, the space must satisfy additional properties. A space satisfying all these conditions is precisely the topological manifold defined in [\[Topology\] §Compactness, ⁋Definition 9](/en/math/topology/compactness#def9). In this article, we will explore the properties and examples of topological manifolds, and in the next article, we will examine what homology is through illustrative examples. These two articles serve to outline the direction of this category; the main content begins from the third article.

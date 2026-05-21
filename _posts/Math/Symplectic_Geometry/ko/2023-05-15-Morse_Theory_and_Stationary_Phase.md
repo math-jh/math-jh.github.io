@@ -21,7 +21,7 @@ published: false
 
 $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 
-의 $$z\to 0$$ 점근행동이 자주 등장하며, 그 점근치가 phase function $$W$$의 임계점에서의 국소 데이터로 환원된다는 사실은 양자역학의 semiclassical limit, partial differential equation의 WKB 해석, singularity theory, 그리고 후술할 mirror symmetry의 B-model superpotential 분석 등 다양한 맥락에서 핵심적이다. 이러한 환원은 두 개의 기초 위에 서 있다. 첫째는 임계점 근방에서 phase를 표준형으로 환원하는 *Morse lemma*이며, 둘째는 Gaussian integral의 다변수 일반화로 얻어지는 *stationary phase formula*이다. 또한 적분 경로의 선택을 통제하는 *Lefschetz thimble*의 구성도 본질적으로 Morse 이론의 gradient flow에 의해 주어진다. 본 글에서는 이 세 도구를 차례로 정리한다. 본 글의 결과는 이후 mirror symmetry에서 oscillating integral, $$J$$-function의 점근분석, Gauss-Manin connection 등을 다룰 때 직접 사용된다.
+의 $$z\to 0$$ 점근행동이 자주 등장하며, 그 점근치가 phase function $$W$$의 임계점에서의 국소 데이터로 환원된다는 사실은 양자역학의 semiclassical limit, partial differential equation의 WKB 해석, singularity theory 등 다양한 맥락에서 핵심적이다. 이러한 환원은 두 개의 기초 위에 서 있다. 첫째는 임계점 근방에서 phase를 표준형으로 환원하는 *Morse lemma*이며, 둘째는 Gaussian integral의 다변수 일반화로 얻어지는 *stationary phase formula*이다. 또한 적분 경로의 선택을 통제하는 *Lefschetz thimble*의 구성도 본질적으로 Morse 이론의 gradient flow에 의해 주어진다. 본 글에서는 이 세 도구를 차례로 정리한다.
 
 ## Morse function과 임계점
 
@@ -71,7 +71,7 @@ $$\sigma_p = n - 2\lambda_p$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk5">**참고 5**</ins> 문헌에 따라 signature를 $$|\det\operatorname{Hess}_p(f)|$$의 부호와 혼동하는 경우가 있으나, 우리는 signature를 위와 같이 *eigenvalue 부호의 부호화*로 정의한다. Stationary phase formula의 위상 인자 $$e^{i\pi\sigma_p/4}$$에서 사용되는 것은 이 정의이다.
+<ins id="rmk5">**참고 5**</ins> 문헌에 따라 signature를 $$\lvert\det\operatorname{Hess}_p(f)\rvert$$의 부호와 혼동하는 경우가 있으나, 우리는 signature를 위와 같이 *eigenvalue 부호의 부호화*로 정의한다. Stationary phase formula의 위상 인자 $$e^{i\pi\sigma_p/4}$$에서 사용되는 것은 이 정의이다.
 
 </div>
 
@@ -272,7 +272,7 @@ $$\int_{\mathbb{R}^2} e^{ixy/\hbar}\,a(x,y)\,dx\,dy = 2\pi\hbar\,a(0,0) + O(\hba
 
 ## Lefschetz thimble
 
-지금까지 우리는 phase function이 *실가*라고 가정하였다. 그러나 응용에서 마주치는 phase는 holomorphic function인 경우가 많고 (가령 singularity theory의 versal family, mirror symmetry의 superpotential 등), 이 경우 적분 contour 자체를 신중하게 선택해야 한다. 이 선택을 Morse 이론으로부터 자연스럽게 얻어내는 구성이 *Lefschetz thimble*이다.
+지금까지 우리는 phase function이 *실가*라고 가정하였다. 그러나 응용에서 마주치는 phase는 holomorphic function인 경우가 많고 (가령 singularity theory의 versal family 등), 이 경우 적분 contour 자체를 신중하게 선택해야 한다. 이 선택을 Morse 이론으로부터 자연스럽게 얻어내는 구성이 *Lefschetz thimble*이다.
 
 $$X$$가 complex manifold이고 $$W:X\to\mathbb{C}$$가 holomorphic function이라 하자. 형식적으로 우리는 진동적분
 
@@ -284,7 +284,7 @@ $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 
 라 하면, $$h$$는 smooth real-valued function이며, $$W$$의 holomorphic critical point $$p$$ (즉 $$dW(p)=0$$) 가 정확히 $$h$$의 critical point에 대응한다. 또한 $$W$$가 $$p$$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $$h$$가 $$p$$에서 비퇴화 critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 절반 차원이다 (complex Hessian의 eigenvalue가 $$\lambda_1,\ldots,\lambda_n\in\mathbb{C}^\ast$$일 때 $$-\operatorname{Re}(\lambda_i/\hbar)$$의 부호 분포가 정확히 절반씩이라는 사실로부터 얻어진다).
 
-$$X$$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/Riemannian_metric)의 일반론에 따라 gradient vector field가 정의된다) $$h$$의 gradient flow를 생각하자.
+$$X$$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/riemannian_metric)의 일반론에 따라 gradient vector field가 정의된다) $$h$$의 gradient flow를 생각하자.
 
 <div class="definition" markdown="1">
 
@@ -331,7 +331,7 @@ $$e^{W(p)/\hbar}\,\alpha(p)\,\prod_{i=1}^n \int_{\mathbb{R}} e^{e^{2i\theta_i}t_
 
 </details>
 
-[명제 15](#prop15)는 위의 stationary phase formula ([정리 10](#thm10))를 holomorphic 세팅으로 확장한 것이며, mirror symmetry의 superpotential $$W_q$$에 대한 oscillating integral의 thimble별 점근 분해에 직접 사용된다. 그 맥락에서는 critical point가 양자 매개변수 $$q$$에 따라 이동하며, thimble들의 monodromy가 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
+[명제 15](#prop15)는 위의 stationary phase formula ([정리 10](#thm10))를 holomorphic 세팅으로 확장한 것이며, holomorphic superpotential에 대한 oscillating integral의 thimble별 점근 분해의 표준적인 출발점이다. 일반적으로 critical point가 매개변수에 따라 이동할 때, thimble들의 monodromy는 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
 
 ---
 

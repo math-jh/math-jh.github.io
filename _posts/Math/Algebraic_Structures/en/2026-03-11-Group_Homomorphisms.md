@@ -15,6 +15,8 @@ date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 4
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 For the time being, we explore properties of groups. Thus, we will simply refer to group homomorphisms between groups as homomorphisms.

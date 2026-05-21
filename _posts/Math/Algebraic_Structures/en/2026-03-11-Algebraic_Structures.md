@@ -15,6 +15,8 @@ date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 1
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 In the [Algebraic Structures](/en/algebraic_structures) category, we define various algebraic objects and explore their fundamental properties. These structures are obtained by adding binary operation structures to sets: groups arise from adding a single operation, while rings arise from adding two operations. By additionally equipping rings with actions, we obtain modules and algebras. Topics such as Galois theory and tensor algebra are treated in separate categories.

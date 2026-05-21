@@ -9,20 +9,21 @@ sidebar:
     nav: "Lie_theory-ko"
 
 header:
-    overlay_image: /assets/images/Math/Mirror_Symmetry/Bruhat_Decomposition.png
+    overlay_image: /assets/images/Math/Lie_Theory/Bruhat_Decomposition.png
     overlay_filter: 0.5
 
 date: 2025-01-04
 last_modified_at: 2025-01-04
 weight: 5
+published: false
 
 ---
 
-[§Mirror Symmetry 개요](/ko/math/mirror_symmetry/overview)에서 우리는 Grassmannian에 대한 mirror symmetry를 다루기 위해 Marsh-Rietsch의 construction을 예고하였다. 그 construction은 Grassmannian의 풍부한 combinatorial 및 Lie-theoretic 구조에 깊이 의존하며, 이 구조의 출발점은 바로 Bruhat decomposition이다. 본 글에서는 Lie theory 시리즈의 일환으로, reductive algebraic group $$G$$의 Bruhat decomposition
+Connected reductive algebraic group $$G$$와 그 Borel subgroup $$B$$가 주어졌을 때, $$G$$의 구조를 파악하는 가장 기본적인 도구가 Bruhat decomposition
 
 $$G=\bigsqcup_{w\in W}BwB$$
 
-을 정확히 이해한 뒤, 이를 parabolic subgroup $$P\supseteq B$$로 확장하여 partial flag variety $$G/P$$의 cell decomposition을 얻는 과정을 살펴 본다. 특히 Grassmannian $$Gr_{n-k}(\mathbb{C}^n)$$을 $$GL_n/P_k$$로 실현하는 구체적인 대응과, 이 위에서 정의되는 Schubert cell 및 Schubert variety를 소개한다.
+이다. 이 분해는 $$G$$의 $$B\times B$$-orbit을 Weyl group $$W$$의 원소들로 색인화하며, 이로부터 자연스럽게 flag variety $$G/B$$의 cell decomposition이 얻어진다. 본 글에서는 우선 Bruhat decomposition 자체를 정확히 이해한 뒤, 이를 parabolic subgroup $$P\supseteq B$$로 확장하여 partial flag variety $$G/P$$의 cell decomposition을 얻는 과정을 살펴 본다. 특히 Grassmannian $$Gr_{n-k}(\mathbb{C}^n)$$을 $$GL_n/P_k$$로 실현하는 구체적인 대응과, 이 위에서 정의되는 Schubert cell 및 Schubert variety를 소개한다.
 
 ## Reductive group과 Weyl group
 
@@ -338,7 +339,7 @@ $$1234\leq 1324\leq 2314\leq 2413\leq 3412$$
 
 </div>
 
-Schubert variety $$X_w\subset G/P$$는 일반적으로 singular하며, 그 singular locus 역시 더 작은 Schubert variety들의 union으로 표현될 수 있다. Mirror symmetry와 Schubert calculus의 맥락에서, Schubert variety의 cohomology class $$[X_w]\in H^\ast(G/P)$$는 $$H^\ast(G/P)$$의 additive basis를 이루는 것이 중요하다. 특히 Grassmannian의 경우, Schubert variety는 Young diagram으로 색인화되며, 이들의 intersection theory는 classical Schubert calculus의 핵심을 이룬다. 이는 이후 글에서 quantum cohomology의 관점에서 더 자세히 다룰 것이다.
+Schubert variety $$X_w\subset G/P$$는 일반적으로 singular하며, 그 singular locus 역시 더 작은 Schubert variety들의 union으로 표현될 수 있다. Schubert variety의 cohomology class $$[X_w]\in H^\ast(G/P)$$는 $$H^\ast(G/P)$$의 additive basis를 이루며, 이로부터 classical Schubert calculus라 불리는 intersection theory가 전개된다. 특히 Grassmannian의 경우, Schubert variety는 Young diagram으로 색인화되며, 이들의 intersection number는 Littlewood-Richardson coefficient로 주어진다.
 
 ---
 

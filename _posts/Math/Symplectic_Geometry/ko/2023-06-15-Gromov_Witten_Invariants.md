@@ -20,7 +20,7 @@ published: false
 
 [§Stable maps의 moduli space](/ko/math/symplectic_geometry/stable_maps)에서 우리는 stable map들의 moduli space $$\overline{\mathcal{M}}_{g, n}(X, \beta)$$와 그 위의 virtual fundamental class $$[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}}$$를 구성하였다. 이제 evaluation map과 cotangent line bundle의 first Chern class를 결합하여 *Gromov-Witten invariant*를 정의한다.
 
-본 글에서는 GW invariant와 descendant 버전의 정의, genus-0의 핵심 axiom들 (string, divisor, dilaton, splitting/WDVV), 그리고 quantum cohomology의 구성을 다룬다. 마지막으로 mirror symmetry로의 자연스러운 연결을 정리한다.
+본 글에서는 GW invariant와 descendant 버전의 정의, genus-0의 핵심 axiom들 (string, divisor, dilaton, splitting/WDVV), 그리고 quantum cohomology의 구성을 다룬다.
 
 ## Gromov-Witten invariant의 정의
 
@@ -38,7 +38,7 @@ $$\langle \alpha_1, \ldots, \alpha_n \rangle_{g, n, \beta}^X := \int_{[\overline
 
 ## Descendant Gromov-Witten invariant
 
-Mirror symmetry, 특히 Givental의 framework는 *descendant* 버전을 본질적으로 사용한다.
+Cotangent line bundle의 first Chern class $$\psi_i$$를 적분 안에 끼워 넣은 *descendant* 버전은 GW invariant의 풍부한 정합성 조건을 표현하는 데 필수적이다.
 
 <div class="definition" markdown="1">
 
@@ -130,7 +130,7 @@ $$\sum_{e, f} \partial_a \partial_b \partial_e F\, \eta^{ef}\, \partial_f \parti
 
 </details>
 
-WDVV equation은 $$F$$가 [\[거울 대칭\] §Frobenius manifold](/ko/math/mirror_symmetry/frobenius_manifold)의 potential임을 정확히 의미한다. 즉, $$F$$의 세 번째 도함수가 정의하는 곱셈 $$\circ$$가 associative하다는 statement와 WDVV equation은 정확히 동치이다.
+WDVV equation의 의미는 다음과 같다. $$F$$의 세 번째 도함수가 정의하는 곱셈 $$\circ$$가 associative하다는 statement와 WDVV equation은 정확히 동치이다. 즉 WDVV는 곧 *quantum product의 결합법칙*이다.
 
 ## Quantum cohomology
 
@@ -146,19 +146,7 @@ $$T_a \circ_t T_b := \sum_{c, d}\, \partial_a \partial_b \partial_c F(t)\, \eta^
 
 </div>
 
-Quantum cohomology ring $$(H^\ast(X), \circ_t)$$은 $$t \in H^\ast(X)$$ 위에 매개되는 Frobenius manifold를 이룬다. 그 ring 차원의 mirror symmetry expression이
-
-$$QH^\ast(X) \cong \operatorname{Jac}(W)$$
-
-로, [\[거울 대칭\] §Jacobi Ring과 Quantum Cohomology의 동형](/ko/math/mirror_symmetry/jacobi_ring)에서 다룬다.
-
-## Mirror symmetry와의 연결
-
-GW invariant를 모두 모아 만든 생성함수가 [\[거울 대칭\] §Givental $$J$$-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function)의 $$J$$-function이다.
-
-$$J_X(t, z) = e^{t_{(2)}/z}\Big( 1 + \sum_{\beta \neq 0} \sum_a q^\beta\, \big\langle \tfrac{T_a}{z - \psi} \big\rangle_{0, 1, \beta}^X T^a\Big)$$
-
-$$J$$-function은 quantum cohomology의 Dubrovin connection ([\[거울 대칭\] §Dubrovin Connection](/ko/math/mirror_symmetry/dubrovin_connection))의 fundamental solution이며, mirror symmetry는 그것이 B-model의 oscillating integral ([\[거울 대칭\] §Oscillating Integral과 Gauss–Manin System](/ko/math/mirror_symmetry/oscillating_integral)) $$\int e^{W/z}\omega$$와 일치한다는 statement이다.
+Quantum cohomology ring $$(H^\ast(X), \circ_t)$$은 $$t \in H^\ast(X)$$ 위에 매개되는 family of commutative, associative algebra를 이룬다. Classical cup product는 $$q \to 0$$의 극한에서 회복되며, $$\star_q$$의 비자명한 항들은 $$X$$ 위의 rational curve의 수를 부호화한다.
 
 ## $$\mathbb{P}^n$$의 GW invariant 예시
 
@@ -184,7 +172,7 @@ $$\langle H^2, H^2, H^2, H^2, H^2 \rangle_{0, 5, 2}^{\mathbb{P}^2} = 1$$
 
 ## 더 멀리: virtual class와 비-symplectic 확장
 
-$$X$$가 Calabi-Yau ($$c_1(TX) = 0$$)일 때 expected dimension은 $$g, n$$에만 의존하며, 일반적으로 $$\dim X = 3$$이면 genus $$0$$ point-free invariant가 *유한 개의 rational curve*를 세는 enumerative 의미를 갖는다. 이것이 1991년 Candelas–de la Ossa–Green–Parkes의 quintic 3-fold rational curve count의 출발점이다 ([\[거울 대칭\] §Mirror Symmetry 개요](/ko/math/mirror_symmetry/overview)).
+$$X$$가 Calabi-Yau ($$c_1(TX) = 0$$)일 때 expected dimension은 $$g, n$$에만 의존하며, 일반적으로 $$\dim X = 3$$이면 genus $$0$$ point-free invariant가 *유한 개의 rational curve*를 세는 enumerative 의미를 갖는다.
 
 Higher genus 및 K-theoretic 확장 (Givental, Lee, Okounkov), open/relative GW invariant (Solomon, Joyce-Song), Donaldson-Thomas invariant와의 동치 (MNOP conjecture) 등은 본 글의 범위를 넘어선다.
 
@@ -199,7 +187,5 @@ Higher genus 및 K-theoretic 확장 (Givental, Lee, Okounkov), open/relative GW 
 **[BF]** K. Behrend, B. Fantechi, *The intrinsic normal cone*, Invent. Math. **128** (1997), 45--88.
 
 **[MS]** D. McDuff, D. Salamon, *J-holomorphic Curves and Symplectic Topology*, AMS Colloquium Publications **52**, 2nd ed., 2012.
-
-**[CK]** D. A. Cox, S. Katz, *Mirror symmetry and algebraic geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.
 
 **[HKKPTVVZ]** K. Hori, S. Katz, A. Klemm, R. Pandharipande, R. Thomas, C. Vafa, R. Vakil, E. Zaslow, *Mirror Symmetry*, Clay Mathematics Monographs **1**, AMS, 2003.
