@@ -20,7 +20,7 @@ permalink: /ko/misc/index_ko
 | <selected id="algebraic">algebraic &#9745;</selected> | <unselected>대수적</unselected> | [\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) |  |
 | <selected id="algebraic_extension">algebraic extension &#9745;</selected> | <unselected>대수적 확장</unselected> | [\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) |  |
 | <unselected id="algebraic_multiplicity">algebraic multiplicity</unselected> | <selected> 대수적 중복도 &#9745;</selected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
-| <selected id="algebraically_closed_field">algebraically closed field &#9745;</selected> | <unselected>대수적으로 닫힌 체</unselected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
+| <selected id="algebraically_closed_field">algebraically closed field &#9745;</selected> | <unselected>대수적으로 닫힌 체</unselected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial)<br/>[\[체론\] §대수적 폐포](/ko/math/field_theory/algebraically_closed_extensions) |  |
 | <selected id="alternating">alternating &#9745;</selected> | <unselected>교대적</unselected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form) <br/> [\[선형대수학\] §행렬식](/ko/math/linear_algebra/determinant) |  |
 | <selected id="alternating_multilinear_map">alternating multilinear map &#9745;</selected> | <unselected>교대다중선형사상</unselected> | [\[선형대수학\] §행렬식](/ko/math/linear_algebra/determinant) |  |
 | <selected id="annihilator">annihilator &#9745;</selected> | <unselected>소멸자</unselected> | [\[선형대수학\] §쌍대공간](/ko/math/linear_algebra/dual_space)<br/>[\[가환대수학\] §기본 개념들](/ko/math/commutative_algebra/basic_notions) |  |
@@ -342,6 +342,7 @@ permalink: /ko/misc/index_ko
 | <selected id="homogeneous_element">homogeneous element &#9745;</selected> | <unselected>동차원소</unselected> | [\[대수적 구조\] §등급환](/ko/math/algebraic_structures/graded_rings) |  |
 | <selected id="homogeneous_ideal">homogeneous ideal &#9745;</selected> | <unselected>동차 아이디얼</unselected> | [\[대수적 구조\] §등급환](/ko/math/algebraic_structures/graded_rings) |  |
 | <selected id="homogeneous_localization">homogeneous localization &#9745;</selected> | <unselected>동차국소화</unselected> | [\[가환대수학\] §등급환의 국소화](/ko/math/commutative_algebra/localization_of_graded_rings) |  |
+| <selected id="homogeneous_polynomial">homogeneous polynomial &#9745;</selected> | <unselected>동차다항식</unselected> | [\[환론\] §다항식환](/ko/math/ring_theory/polynomial_rings) |  |
 | <selected id="homology">homology &#9745;</selected> | <unselected>호몰로지</unselected> | [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology) |  |
 | <selected id="homomorphism">homomorphism &#9745;</selected> | <unselected>준동형사상</unselected> | [\[대수적 구조\] §대수적 구조](/ko/math/algebraic_structures/algebraic_structures) |  | 
 | <selected id="hopf_monoid">hopf monoid &#9745;</selected> | <unselected>호프 모노이드</unselected> | [\[범주론\] §모노이드 대상](/ko/math/category_theory/monoid_objects) |  |
@@ -636,6 +637,7 @@ permalink: /ko/misc/index_ko
 | <selected id="regular_local_ring">regular local ring &#9745;</selected> | <unselected>정칙국소환</unselected> | [\[가환대수학\] §차원](/ko/math/commutative_algebra/Krull_dimension) |  |
 | <selected id="regular_space">regular space &#9745;</selected> | <unselected>정칙공간</unselected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
 | <unselected id="relation">relation</unselected> | <selected>관계 &#9745;</selected> | [\[집합론\] §이항관계](/ko/math/set_theory/binary_relation) |
+| <selected id="relatively_algebraically_closed_field">relatively algebraically closed field &#9745;</selected> | <unselected>상대적으로 대수적으로 닫힌 체</unselected> | [\[체론\] §대수적 폐포](/ko/math/field_theory/algebraically_closed_extensions) |  |
 | <unselected id="remainder">remainder</unselected> | <selected>나머지 &#9745;</selected> | [\[환론\] §정역](/ko/math/ring_theory/integral_domains) |  |
 | <selected id="representable_functor">representable functor &#9745;</selected> | <unselected>표현 가능한 함자</unselected> | [\[범주론\] §표현가능한 함자](/ko/math/category_theory/representable_functors) |  |
 | <selected id="representation">representation &#9745;</selected> | <unselected>표현</unselected> | [\[범주론\] §표현가능한 함자](/ko/math/category_theory/representable_functors) |  |
@@ -674,6 +676,8 @@ permalink: /ko/misc/index_ko
 | <selected id="semi-direct_product">semi-direct product &#9745;</selected> | <unselected>반직접곱</unselected> | [\[군론\] §군의 확장](/ko/math/group_theory/extensions) |  |
 | <selected id="semigroup">semigroup &#9745;</selected> | <unselected>반군</unselected> | [\[대수적 구조\] §반군, 모노이드, 군](/ko/math/algebraic_structures/groups) |  | 
 | <selected id="semilocal_ring">semilocal ring &#9745;</selected> | <unselected>반국소환</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension) |  |
+| <selected id="separable_degree">separable degree &#9745;</selected> | <unselected>분리가능차수</unselected> | [\[체론\] §에탈대수](/ko/math/field_theory/etale_algebras) |  |
+| <selected id="separable_extension">separable extension &#9745;</selected> | <unselected>분해가능확대</unselected> | [\[체론\] §분리가능확대체](/ko/math/field_theory/separable_extensions) |  |
 | <unselected id="separated">separated</unselected> | <selected>분리가능 &#9745;</selected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
 | <unselected id="separated_by_closed_neighborhoods">separated by closed neighborhoods</unselected> | <selected>닫힌근방으로 분리가능 &#9745;</selected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
 | <unselected id="separated_by_continuous_functions">separated by continuous functions</unselected> | <selected>연속함수로 분리가능 &#9745;</selected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
@@ -708,6 +712,7 @@ permalink: /ko/misc/index_ko
 | <selected id="spectral_sequence">spectral sequence &#9745;</selected> | <unselected>분광열</unselected> | [\[호몰로지 대수학\] §분광열](/ko/math/homological_algebra/spectral_sequences) | |
 | <selected id="spectrum">spectrum &#9745;</selected> | <unselected>스펙트럼</unselected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
 | <selected id="split">split &#9745;</selected> | <unselected>분해</unselected> | [\[다중선형대수학\] §완전열](/ko/math/multilinear_algebra/exact_sequences) |  |
+| <selected id="splitting_extension">splitting extension &#9745;</selected> | <unselected>분해확대체</unselected> | [\[체론\] §대수적 폐포](/ko/math/field_theory/algebraically_closed_extensions) |  |
 | <unselected id="square_matrix">square matrix</unselected> | <selected>정사각행렬 &#9745;</selected> | [\[다중선형대수학\] §기저변환](/ko/math/multilinear_algebra/change_of_basis) |  |
 | <selected id="stabilizer">stabilizer &#9745;</selected> | <unselected>안정자</unselected> | [\[대수적 구조\] §군의 작용](/ko/math/algebraic_structures/group_actions) |  |
 | <selected id="stalk">stalk &#9745;</selected> | <unselected>줄기</unselected> | [\[위상수학\] §준층](/ko/math/topology/presheaves) |  |
@@ -746,6 +751,7 @@ permalink: /ko/misc/index_ko
 | <selected id="symmetric_algebra">symmetric algebra &#9745;</selected> | <unselected>대칭대수</unselected> | [\[다중선형대수\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras) |  |
 | <selected id="symmetric_group">symmetric group &#9745;</selected> | <unselected>대칭군</unselected> |
 | <selected id="symmetric_monoidal_category">symmetric monoidal category &#9745;</selected> | <unselected>대칭 모노이드 범주</unselected> | [\[범주론\] §모노이드 범주](/ko/math/category_theory/monoidal_categories) |  |
+| <selected id="symmetric_tensor">symmetric tensor &#9745;</selected> | <unselected>대칭텐서</unselected> | [\[다중선형대수학\] §대칭텐서](/ko/math/multilinear_algebra/symmetric_tensors) |  |
 | <selected id="symplectic_form">symplectic form &#9745;</selected> | <unselected>사교형식</unselected> | [\[심플렉틱 기하학\] §사교다양체](/ko/math/symplectic_geometry/symplectic_manifold) |  |
 | <selected id="symplectic_manifold">symplectic manifold &#9745;</selected> | <unselected>사교다양체</unselected> | [\[심플렉틱 기하학\] §사교다양체](/ko/math/symplectic_geometry/symplectic_manifold) |  |
 | <selected id="system_of_parameters">system of parameters &#9745;</selected> | <unselected>매개계</unselected> | [\[가환대수학\] §매개계](/ko/math/commutative_algebra/system_of_parameters) |  |
