@@ -113,7 +113,7 @@ Connection $$\nabla$$는 본질적으로 section을 *미분*하는 도구이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Complex manifold $$B$$ 위에서, *$$B$$ 위 미분 연산자들의 sheaf of rings* $$\mathcal{D}_B$$는 structure sheaf $$\mathcal{O}_B$$와 vector field들 ($$\mathcal{O}_B$$ 위의 derivation, [\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1))이 생성하는 operator들의 sheaf이다. 이 때, vector field $$\partial$$과 함수 $$f$$는 다음의 관계식
+<ins id="def3">**정의 3**</ins> Complex manifold $$B$$ 위에서, *$$B$$ 위 미분 연산자들의 sheaf of rings* $$\mathcal{D}_B$$는 structure sheaf $$\mathcal{O}_B$$와 vector field들, 즉 $$\mathcal{O}_B$$ 위의 derivation ([\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1))이 생성하는 operator들의 sheaf이다. 이 때, vector field $$\partial$$과 함수 $$f$$는 다음의 관계식
 
 $$[\partial, f] = \partial(f)$$
 
@@ -133,23 +133,38 @@ $$\partial(f s) = (\partial f)\, s + f\, \partial s \qquad (f \in \mathcal{O}_B,
 
 $$\partial_\alpha s^\beta + \frac{1}{z} \sum_\gamma c_{\alpha\gamma}^\beta\, s^\gamma = 0$$
 
-을 얻고, 이를 *quantum differential equation*이라 부른다. 한편 위의 방정식은 first order linear ODE이므로, base point $$b_0$$와 초기조건 $$s(b_0)$$이 주어지면 경로를 따라 그 해가 유일하게 결정되고, $$\nabla^z$$가 flat이므로 이 parallel transport가 경로에 무관하여 $$b_0$$의 simply connected neighborhood에서 well-defined horizontal section을 준다. 따라서 위의 QDE의 solution space는 다발의 rank와 일치하는 $$\dim_\mathbb{C} M$$차원이 되며, base $$M \times \mathbb{C}^\ast$$의 $$\pi_1$$이 평행이동을 통해 이 해 공간에 작용하여 monodromy representation을 준다. 특히 $$z$$-방향 $$\mathbb{C}^\ast$$의 loop ($$\pi_1 \cong \mathbb{Z}$$)은 $$z = 0, \infty$$의 irregular singularity 둘레 monodromy를, Novikov 좌표 $$q = e^t$$의 $$q$$-방향 loop은 quantum monodromy를 준다. 
+을 얻고, 이를 *quantum differential equation*이라 부른다. 한편 위의 방정식은 first order linear ODE이므로, base point $$b_0$$와 초기조건 $$s(b_0)$$이 주어지면 경로를 따라 그 해가 유일하게 결정되고, $$\nabla^z$$가 flat이므로 이 parallel transport가 경로에 무관하여 $$b_0$$의 simply connected neighborhood에서 well-defined horizontal section을 준다. 따라서 위의 QDE의 solution space는 다발의 rank와 일치하는 $$\dim_\mathbb{C} M$$차원이 되며, base $$M \times \mathbb{C}^\ast$$의 $$\pi_1$$이 평행이동을 통해 이 해 공간에 작용하여 monodromy representation을 준다. 특히 $$z$$-방향 $$\mathbb{C}^\ast$$의 loop ($$\pi_1 \cong \mathbb{Z}$$)은 $$z = 0, \infty$$의 irregular singularity 둘레 monodromy를, Novikov parameter $$q = e^t$$의 $$q$$-방향 loop은 quantum monodromy를 준다. 
 
-특히 $$M = H^\ast(X, \mathbb{C})$$이고 $$c_{\alpha\beta}^\gamma$$가 small quantum product $$\star_q$$의 구조상수일 때 QDE는
+특히 $$M = H^\ast(X, \mathbb{C})$$이고 $$c_{\alpha\beta}^\gamma$$가 small quantum product $$\star_q$$의 structure constant일 때 QDE는
 
 $$z\, q_a \partial_{q_a} s = -\,(T_a \star_q s), \qquad a = 1, \ldots, r$$
 
-의 형태가 된다. 여기서 $$\{ T_a \}$$는 $$H^2(X, \mathbb{C})$$의 basis, $$q_a = e^{t^a}$$는 대응하는 Novikov variable이며, 우변의 부호는 [정의 1](#def1)의 $$+z^{-1}\mathcal{C}_\alpha$$ 약속을 따른 것이다. 이 QDE의 fundamental solution이 Gromov-Witten invariant들의 생성함수로 명시적으로 풀린다는 것이 Givental formalism의 핵심이며, 이는 ([§Givental J-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function))에서 다룬다.
+의 형태가 된다. 여기서 $$\{ T_a \}$$는 $$H^2(X, \mathbb{C})$$의 basis, $$q_a = e^{t^a}$$는 대응하는 Novikov variable이며, 우변의 부호는 [정의 1](#def1)의 $$+z^{-1}\mathcal{C}_\alpha$$ 약속을 따른 것이다. 이 QDE의 fundamental solution을 명시적인 형태로 표현하는 것이 [§Givental J-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function)의 목표이다. 위와 같은 경우, 즉 connection이 Dubrovin connection $$\nabla^z$$인 경우는 이러한 방식으로 $$X$$의 A-model data를 담고 있으므로 이를 *A-model $$D$$-module*이라 부르기도 한다.
 
-이처럼 quantum $$D$$-module은 주로 $$X$$의 Gromov-Witten 이론, 즉 A-model 데이터로 해석되므로 *A-model $$D$$-module*이라 부르기도 한다.
+정리하면, A-side에서 우리는 base manifold 
 
-같은 일이 mirror의 B-model 측에서도 일어난다. $$X$$의 mirror를 $$\check{X}$$로 적자 (Fano $$X$$의 경우 Landau-Ginzburg model $$(\check{X}, W_q)$$). 거기에는 quantum $$D$$-module과 비슷한 역할을 하는 flat connection, 곧 *Gauss-Manin connection* $$\nabla^{GM}$$이 있어, $$\check{X}$$의 Jacobi ring $$\Jac(W_q)$$가 deformation parameter $$q$$를 따라 이루는 family에 작용하여 이를 하나의 $$\mathcal{D}$$-module, 곧 *Gauss-Manin system*으로 만든다. 이 connection과 그 flat section을 이루는 oscillating integral의 구체적 구성은 ([§Oscillating Integral과 Gauss–Manin System](/ko/math/mirror_symmetry/oscillating_integral))에서 다룬다.
+$$(M, \mathbb{C}^\ast)\cong\Spec \mathbb{C}[z^{\pm 1}, q^{\pm 1}]$$
+
+위에 
+
+
+ *A-model state space*
+
+$$H_A := H^\ast(X, \mathbb{C}[z^{\pm 1}, q^{\pm 1}])$$
+
+는 base $$M\times \mathbb{C}^\ast$$ 위 quantum $$D$$-module의 (global) section들이 이루는 free module이고, 그 $$\mathcal{D}$$-module 구조는 Dubrovin connection $$\nabla^z$$로 미분하는 작용이 준다. 여기서 base의 두 방향은 성격이 전혀 다르다. 첫째로 *moduli 방향* $$q$$는 Novikov 좌표 $$q_a = e^{t^a}$$로, 이것이 base $$M$$ (small quantum cohomology에서는 Kähler 모수공간)의 좌표이다. 이 방향의 작용 $$\nabla^z_{q_a\partial_{q_a}}$$이 곧 위의 QDE이며 quantum product의 $$q$$-의존성을 담고, mirror가 식별하는 것이 바로 이 방향이다. 둘째로 *spectral 방향* $$z$$는 moduli가 아니라 auxiliary parameter로, 그 역할은 둘이다. 하나는 $$z\to\infty$$의 $$\nabla$$와 $$z\to 0$$의 $$\circ$$를 하나의 flat connection으로 묶는 것이고 ([정의 1](#def1)), 다른 하나는 $$z$$-방향 성분 $$\nabla^z_{\partial_z}$$이 grading $$\mu$$와 Euler field $$E$$의 정보를 나르는 것이다. $$z$$는 뒤에서 보듯 A-side와 B-side에아 공통으로 나타나는 universal parameter이므로, $$q$$와 달리 mirror가 식별하는 대상이 아니다.
+
+같은 구조가 mirror의 B-side에서도 나타난다. $$X$$의 mirror를 $$\check{X}$$로 적자 (Fano $$X$$의 경우 Landau-Ginzburg model $$(\check{X}, W_q)$$). 여기서 A-model의 quantum product에 대응하는 것은 superpotential $$W_q$$의 *Jacobi ring* $$\Jac(W_q)$$로, [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 본 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 양쪽이 이어진다. 이 $$\Jac(W_q)$$를 deformation parameter $$q$$를 따라 모으면 base $$M$$ 위의 vector bundle을 이루고, 그 위에는 quantum $$D$$-module의 역할을 하는 flat connection, 곧 *Gauss-Manin connection* $$\nabla^{GM}$$이 있어 이를 하나의 $$\mathcal{D}$$-module, 곧 *Gauss-Manin system*으로 만든다. 그 section들이 이루는 free module이 *B-model state space*
+
+$$H_B := H^n_{dR}(\check{X})[z^{\pm 1}, q^{\pm 1}]$$
+
+이며, 각 fiber는 $$\Jac(W_q)$$와 동형이다. 여기서 $$q$$는 A-side와 동일하게 base $$M$$의 좌표이지만 이번에는 $$\check{X}$$의 complex structure를 변형하는 모수로, $$z$$는 A-side와 *같은* spectral parameter로서 B-side에서는 oscillating integral $$\int_\Gamma e^{W_q/z}\omega$$의 지수에 들어가는 모수로 나타난다. 이 connection과 그 flat section을 이루는 oscillating integral의 구체적 구성은 ([§Oscillating Integral과 Gauss–Manin System](/ko/math/mirror_symmetry/oscillating_integral))에서 다룬다.
 
 이로써 mirror symmetry를 한 단계 끌어올릴 수 있다. [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 본 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$는, 이제 두 $$\mathcal{D}$$-module — A-model quantum $$D$$-module과 B-model Gauss-Manin system — 이 connection까지 호환되며 isomorphic하다는 더 강한 진술로 격상된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="conj4">**주장 4** (Mirror theorem, $$D$$-module form)</ins> Mirror pair $$(X, \check{X})$$에 대해 A-model state space $$H_A := H^\ast(X, \mathbb{C}[z^{\pm 1}, q^{\pm 1}])$$와 B-model state space $$H_B := H^n_{dR}(\check{X})[z^{\pm 1}, q^{\pm 1}]$$ 사이의 *mirror isomorphism*
+<ins id="conj4">**주장 4** (Mirror theorem, $$D$$-module form)</ins> Mirror pair $$(X, \check{X})$$에 대해, 앞서 도입한 A-model state space $$H_A$$와 B-model state space $$H_B$$ 사이의 *mirror isomorphism*
 
 $$\Phi: H_A \xrightarrow{\sim} H_B$$
 
@@ -159,7 +174,7 @@ $$\Phi \circ \nabla^z = \nabla^{GM} \circ \Phi$$
 
 </div>
 
-두 state space가 어떻게 생겼는지는 $$\mathbb{P}^1$$로 보면 분명하다. $$H_A$$는 cohomology $$H^\ast(X)$$를 spectral parameter $$z$$와 Novikov variable $$q$$의 Laurent 다항식 환 $$\mathbb{C}[z^{\pm 1}, q^{\pm 1}]$$ 위로 확장한 자유 가군, 곧 quantum $$D$$-module의 state space이고, $$H_B$$는 mirror 측 Jacobi ring(relative de Rham cohomology)을 같은 환 위에서 본 것이다. 예컨대 $$X = \mathbb{P}^1$$이면 $$H^\ast(\mathbb{P}^1) = \langle 1, H\rangle$$이 rank $$2$$이고, mirror $$\check{X}$$의 superpotential $$W_q = x + q/x$$의 Jacobi ring $$\Jac(W_q) = \mathbb{C}[x^{\pm 1}]/(1 - q/x^2)$$ 또한 critical point $$x = \pm\sqrt{q}$$ 두 개에 대응하여 rank $$2$$이다. 일반적으로 두 state space는 모두 $$\dim_\mathbb{C} H^\ast(X)$$ (= $$W_q$$의 critical point 수)를 rank로 갖는 자유 가군이며, *mirror isomorphism* $$\Phi$$는 이 둘을 connection까지 호환되도록 식별한다.
+두 state space가 같은 rank를 갖는다는 사실은 $$\mathbb{P}^1$$로 보면 분명하다. $$X = \mathbb{P}^1$$이면 $$H^\ast(\mathbb{P}^1) = \langle 1, H\rangle$$이 rank $$2$$이고, mirror $$\check{X}$$의 superpotential $$W_q = x + q/x$$의 Jacobi ring $$\Jac(W_q) = \mathbb{C}[x^{\pm 1}]/(1 - q/x^2)$$ 또한 critical point $$x = \pm\sqrt{q}$$ 두 개에 대응하여 rank $$2$$이다. 일반적으로 두 state space는 모두 $$\dim_\mathbb{C} H^\ast(X)$$ (= $$W_q$$의 critical point 수)를 rank로 갖는 자유 가군이며, *mirror isomorphism* $$\Phi$$는 이 둘을 connection까지 호환되도록 식별한다.
 
 [주장 4](#conj4)는 일반적인 statement로서 *각 mirror pair에 대해* 별도로 증명되어야 한다. 가장 먼저 증명된 경우는 Calabi-Yau hypersurface in toric variety로, Givental [Giv]과 Lian-Liu-Yau가 *mirror theorem*으로 증명하였고, 그 핵심은 Givental의 $$J$$-function이 oscillating integral의 stationary phase asymptotic과 일치한다는 것이다. Toric Fano variety의 경우 Givental은 이 isomorphism의 명시적 construction을 제시하였고, Iritani는 이것이 integral structure(Gamma class)와도 호환됨을 보였다 [Iri].
 
