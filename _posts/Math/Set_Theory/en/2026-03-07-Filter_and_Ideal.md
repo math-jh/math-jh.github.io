@@ -15,6 +15,8 @@ date: 2026-03-07
 last_modified_at: 2026-03-07
 weight: 18
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 This article gathers topics that are scattered throughout **[Bou]** along with some topics not covered there, combining them into a single post.

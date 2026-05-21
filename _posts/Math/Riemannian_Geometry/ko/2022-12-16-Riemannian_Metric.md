@@ -35,6 +35,8 @@ $$\bigwedge\nolimits(T^\ast M)\cong\bigoplus_{k=0}^n\bigwedge\nolimits^k(T^\ast 
 
 </div>
 
+위 정의에서 positive-definiteness 조건을 non-degeneracy로 약화시킨 smooth section $$g \in \Gamma(\mathcal{S}^2(T^\ast M))$$을 *pseudo-Riemannian metric<sub>준-리만 계량</sub>*이라 부른다. 이 경우 $$g_p$$는 더 이상 내적은 아니지만 $$T_pM$$ 위의 non-degenerate symmetric bilinear form을 정의한다. 
+
 위에서 살펴본 것과 같이, $$g$$가 Riemannian metric이라면 임의의 한 점 $$p$$에서 $$g_p(-,-)$$는 $$T_pM$$ 위의 내적을 정의하므로, 이를 간단히 $$\langle -,-\rangle_g$$와 같이 표기한다. 
 
 특별히 점 $$p$$ 근방의 coordinate system $$(U,(x^i))$$를 잡는다 하면, $$g$$를

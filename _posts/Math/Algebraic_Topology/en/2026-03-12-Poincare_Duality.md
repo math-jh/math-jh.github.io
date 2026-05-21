@@ -15,6 +15,8 @@ date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 9
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 In this post, we discuss Poincaré duality, one of the beautiful theorems of algebraic topology. As mentioned in the previous post, Poincaré duality reveals a duality between homology and cohomology. While the universal coefficient theorem ([§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm65)) was somewhat expected when we defined $$C^\bullet(X;A)$$ as the dual of $$C_\bullet(X;A)$$, Poincaré duality has a more geometric significance.

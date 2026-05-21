@@ -18,39 +18,57 @@
 }
 
 @media (min-width: 1024px) {
-  /* Promote the recents children up so the three sections (TOC, posts,
-     comments) become direct grid items of .sidebar__right.sticky. */
-  .recents-wrapper {
-    display: contents;
-  }
-  .recents-wrapper__body {
-    display: contents;
-  }
-  .recents-wrapper__toggle {
-    display: none;
-  }
+  /* Plain flex column. The earlier `display: contents` approach on the
+     <details> wrapper + grid promotion didn't reliably flatten the two
+     recents blocks into separate grid rows in all browsers — they ended up
+     stuck inside one row. Doing it explicitly with margins is robust. */
 
   .sidebar__right.sticky {
-    /* Pin the sidebar to a fixed viewport-anchored grid. To keep the
-       three sections clearly separated we cap row heights below the
-       theoretical 50/25/25 split and let row-gap soak up the slack. */
     height: calc(100vh - 2em);
-    display: grid;
-    grid-template-rows: 33vh 20vh 20vh;
-    align-items: stretch;
-    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
   }
+  /* Suppress the theme's clearfix pseudo so it doesn't become a stray flex
+     item with its own height contribution. */
+  .sidebar__right.sticky::after { display: none; }
 
-  .sidebar__right.sticky > .toc,
-  .sidebar__right.sticky > .recents-block {
-    min-height: 0; /* let the grid track shrink even with overflow children */
+  .sidebar__right.sticky > .toc {
+    flex: 0 0 33vh;          /* TOC anchored at top, 33vh tall */
+    min-height: 0;
     overflow-y: auto;
     padding-right: 0.25rem;
   }
-
   .sidebar__right.sticky .toc__menu {
-    /* Override the theme's inline cap so the TOC fills its grid row. */
-    max-height: none;
+    max-height: none;        /* override theme's inline cap */
+  }
+
+  .recents-wrapper {
+    flex: 0 0 auto;
+    margin-top: 0;           /* override the mobile margin */
+  }
+  .recents-wrapper__toggle { display: none; }
+  .recents-wrapper__body {
+    display: flex !important;
+    flex-direction: column !important;
+    /* Posts margin + gap must sum to a constant to keep the comments
+       block anchored. Currently: 6vh + 11vh = 17vh of vertical budget
+       between TOC bottom and comments header (minus the posts content
+       height). Adjust both in lockstep when retuning. */
+    gap: 11vh;
+    padding-top: 0;
+  }
+
+  /* Recents posts: sits a little below TOC (not flush). */
+  .sidebar__right.sticky .recents-block--posts {
+    margin-top: 6vh !important;
+  }
+  /* Recents comments: spacing handled by the parent's `gap`. */
+  .sidebar__right.sticky .recents-block--comments {
+    margin-top: 0 !important;
+  }
+
+  .recents-block {
+    padding-right: 0.25rem;
   }
 }
 
@@ -111,37 +129,41 @@
   }
 }
 
-/* Mobile: the <details> toggle. Hidden on desktop via the rule above. */
-.recents-wrapper {
-  margin-top: 0.5em;
+/* Mobile-only styling for the <details> toggle wrapper. On desktop the
+   @media (min-width: 1024px) block above sets the wrapper to flex and
+   hides the toggle, so none of this applies there. */
+@media (max-width: 1023px) {
+  .recents-wrapper {
+    margin-top: 0.5em;
 
-  &__toggle {
-    cursor: pointer;
-    padding: 0.5rem 0.75rem;
-    font-family: $sans-serif-narrow;
-    font-size: $type-size-5;
-    font-weight: bold;
-    color: $highlight-color;
-    background: $background-color;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    list-style: none;
+    &__toggle {
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      font-family: $sans-serif-narrow;
+      font-size: $type-size-5;
+      font-weight: bold;
+      color: $highlight-color;
+      background: $background-color;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      list-style: none;
 
-    &::-webkit-details-marker { display: none; }
-    &::marker { content: ""; }
+      &::-webkit-details-marker { display: none; }
+      &::marker { content: ""; }
 
-    &::after {
-      content: "▾";
-      float: right;
-      transition: transform 0.15s ease;
+      &::after {
+        content: "▾";
+        float: right;
+        transition: transform 0.15s ease;
+      }
     }
-  }
 
-  &[open] > &__toggle::after {
-    content: "▴";
-  }
+    &[open] > &__toggle::after {
+      content: "▴";
+    }
 
-  &__body {
-    padding-top: 0.5em;
+    &__body {
+      padding-top: 0.5em;
+    }
   }
 }

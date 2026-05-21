@@ -15,6 +15,8 @@ date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 8
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 Previously, we verified in [§Direct Products of Groups](/en/math/algebraic_structures/direct_products) that any product exists in $$\Grp$$, and in [§Group Homomorphisms, ⁋Proposition 2](/en/math/algebraic_structures/group_homomorphisms#prop2) that any morphism in $$\Grp$$ has an equalizer. Therefore, by the argument after [\[Category Theory\] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $$\Grp$$ is a complete category.

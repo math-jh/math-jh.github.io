@@ -122,7 +122,7 @@ $$\dim H^0(C, f^\ast TX(-\sum p_i)) - \dim H^1(C, f^\ast TX(-\sum p_i)) + \dim \
 
 으로 주어진다. Riemann-Roch on $$C$$를 사용하면 $$\chi(f^\ast TX) = \int_\beta c_1(TX) + d(1-g)$$이고, marked points의 $$-\sum p_i$$는 차원을 $$-nd$$만큼 감소시킨다. Prestable curve의 deformation 차원은 $$3g - 3 + n$$이다. 모두 더하면 위 공식이 나온다.
 
-$$X$$가 Calabi-Yau ($$c_1 = 0$$) 이고 $$g = 0$$, $$n = 0$$이면 $$\mathrm{vdim} = d - 3$$이므로, $$d = 3$$ (Calabi-Yau 3-fold)에서 $$\mathrm{vdim} = 0$$이 되어 *유한 개의 점*을 세는 enumerative problem이 된다. 이것이 quintic 3-fold 위의 rational curve enumeration의 기원이다.
+$$X$$가 Calabi-Yau ($$c_1 = 0$$) 이고 $$g = 0$$, $$n = 0$$이면 $$\mathrm{vdim} = d - 3$$이므로, $$d = 3$$ (Calabi-Yau 3-fold)에서 $$\mathrm{vdim} = 0$$이 되어 *유한 개의 점*을 세는 enumerative problem이 된다.
 
 ## Virtual fundamental class
 
@@ -154,7 +154,7 @@ Virtual fundamental class는 다음의 핵심 성질을 만족한다.
 
 $$\langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{g, \beta}^X := \int_{[\overline{\mathcal{M}}_{g,n}(X,\beta)]^{\mathrm{vir}}} \prod_i \psi_i^{a_i}\, \mathrm{ev}_i^\ast \alpha_i$$
 
-으로 *descendant Gromov-Witten invariant*를 정의한다. 이로부터 quantum cohomology, Frobenius manifold ([\[거울 대칭\] §Frobenius manifold](/ko/math/mirror_symmetry/frobenius_manifold)), Givental의 $$J$$-function ([\[거울 대칭\] §Givental $$J$$-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function)) 등 mirror symmetry의 모든 A-model 객체가 유도된다.
+으로 *descendant Gromov-Witten invariant*를 정의한다. 이로부터 quantum cohomology 구조가 유도된다.
 
 ---
 

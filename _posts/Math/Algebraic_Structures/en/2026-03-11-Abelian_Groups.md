@@ -14,6 +14,8 @@ date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 10
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 We have not paid particularly close attention to the category $$\Ab$$ until now; in this article, we examine abelian groups.

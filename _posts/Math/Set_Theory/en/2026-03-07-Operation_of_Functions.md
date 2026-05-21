@@ -18,6 +18,8 @@ last_modified_at: 2026-03-07
 
 weight: 6
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 A function is a binary relation satisfying certain conditions, and we have already defined the composition and inverse of binary relations. For the composition and inverse of functions to be well-defined, the result of composing them as binary relations or taking their inverse as binary relations must be a function.

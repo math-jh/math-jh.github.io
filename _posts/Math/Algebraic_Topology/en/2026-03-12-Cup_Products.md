@@ -15,6 +15,8 @@ date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 8
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 When we introduced cohomology earlier, we mentioned that one of the greatest advantages of cohomology is the naturally defined multiplicative structure on it. A natural question then arises: why was this structure not visible in homology? As we will see in this post, once we define this multiplicative structure, it becomes clear that this is essentially because cohomology is a contravariant functor.

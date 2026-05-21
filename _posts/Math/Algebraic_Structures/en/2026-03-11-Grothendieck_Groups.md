@@ -15,6 +15,8 @@ date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 3
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 In the previous post, we examined the definition of a monoid. Notably, the natural numbers defined in set theory form a commutative monoid under addition. In this post, we introduce a method for obtaining an abelian group from a commutative semigroup.

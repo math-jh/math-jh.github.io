@@ -15,6 +15,8 @@ date: 2026-03-06
 last_modified_at: 2026-03-06
 weight: 5
 
+translated_at: 2026-03-25T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 In previous posts, we defined binary relations. Under this definition, the binary relation $$<$$ defined on the set of natural numbers $$\mathbb{N}$$ is the set

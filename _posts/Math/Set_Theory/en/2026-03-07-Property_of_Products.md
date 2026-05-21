@@ -18,6 +18,8 @@ last_modified_at: 2026-03-07
 
 weight: 11
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 ## Partial Products and Associativity

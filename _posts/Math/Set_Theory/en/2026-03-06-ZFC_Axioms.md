@@ -13,6 +13,8 @@ sidebar:
 date: 2026-03-06
 weight: 1
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 ## Historical Background

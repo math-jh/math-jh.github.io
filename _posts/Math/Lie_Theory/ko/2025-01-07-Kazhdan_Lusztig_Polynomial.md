@@ -17,7 +17,7 @@ weight: 8
 published: false
 ---
 
-Schubert variety $$X_w \subseteq G/B$$는 일반적으로 특이점을 갖는 사영다양체이며, 그 특이점의 양상은 단순한 차원 정보만으로는 포착되지 않는다. 1979년 Kazhdan과 Lusztig는 [\[Lie 이론\] §Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition)의 조합적 구조 위에 정의되는 일군의 정수계수 다항식을 도입하여, $$X_w$$의 local intersection cohomology의 점별 차원이 이 다항식들로 완전히 인코딩됨을 보였다. 이 *Kazhdan–Lusztig polynomial*은 한편으로는 Hecke algebra의 한 특별한 basis로부터 순수히 조합적으로 정의되며, 다른 한편으로는 Schubert variety의 특이점, infinite-dimensional Lie algebra의 표현론, 그리고 [§Richardson variety](/ko/math/lie_theory/richardson_variety)와 [§Peterson variety](/ko/math/lie_theory/peterson_variety)에서 등장하는 여러 기하학적 대상의 cohomological 정보와 직접 연결된다. 본 글에서는 이 다항식의 정의와 기본 성질을 정리하고, Schubert variety와의 관계를 statement 수준에서 정리한다.
+Schubert variety $$X_w \subseteq G/B$$는 일반적으로 특이점을 갖는 사영다양체이며, 그 특이점의 양상은 단순한 차원 정보만으로는 포착되지 않는다. 1979년 Kazhdan과 Lusztig는 [§Bruhat decomposition과 parabolic subgroup](/ko/math/lie_theory/bruhat_decomposition)의 조합적 구조 위에 정의되는 일군의 정수계수 다항식을 도입하여, $$X_w$$의 local intersection cohomology의 점별 차원이 이 다항식들로 완전히 인코딩됨을 보였다. 이 *Kazhdan-Lusztig polynomial*은 한편으로는 Hecke algebra의 한 특별한 basis로부터 순수히 조합적으로 정의되며, 다른 한편으로는 Schubert variety의 특이점과 infinite-dimensional Lie algebra의 표현론에 대한 직접적인 cohomological 정보를 담는다. 본 글에서는 이 다항식의 정의와 기본 성질을 정리하고, Schubert variety와의 관계를 statement 수준에서 정리한다.
 
 ## Coxeter group과 Bruhat order 복습
 
@@ -239,7 +239,7 @@ $$P_{e, w}(q) = 1 + q$$
 
 위의 예시 [예시 11](#ex11)에서 처음으로 등장한 다항식 $$1 + q$$는 매우 단순한 형태이지만, 일반적인 Weyl group에서는 KL polynomial이 매우 복잡한 형태를 가질 수 있다. 사실 KL polynomial의 계수가 항상 비음 (non-negative) 이라는 추측 (KL positivity conjecture) 은 [정리 8](#thm8)의 기하학적 해석에서 곧장 따라오지만, 일반 Coxeter group, 특히 finite type을 벗어난 경우에는 매우 어려운 문제이며 Elias–Williamson의 Soergel bimodule 이론을 통해 비로소 일반적으로 증명되었다.
 
-KL polynomial은 본 시리즈의 다른 글들과도 직접적으로 연결된다. [§Richardson variety](/ko/math/lie_theory/richardson_variety)에서 언급한 대로 Richardson variety는 KL polynomial의 기하학적 해석의 자연스러운 무대이며, [§Peterson variety](/ko/math/lie_theory/peterson_variety)와 관련된 quantum cohomology의 맥락에서도 KL polynomial은 곱셈 구조의 양성을 제어하는 핵심적인 조합적 객체로 등장한다.
+KL polynomial은 본 시리즈의 다른 글들과도 직접적으로 연결된다. [§Richardson variety](/ko/math/lie_theory/richardson_variety)에서 정의한 Richardson variety는 두 Schubert variety의 transversal한 교차로서, 그 stalk intersection cohomology가 KL polynomial의 차이로 기술되는 자연스러운 기하학적 무대이다.
 
 ---
 
