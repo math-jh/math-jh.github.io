@@ -15,6 +15,8 @@ date: 2026-03-07
 last_modified_at: 2026-03-07
 weight: 17
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 For a preordered set $$A$$, a subset $$X\subseteq A$$ is *cofinal* (resp. *coinitial*) in $$A$$ if for any $$x\in A$$, there exists $$y\in X$$ such that $$x\leq y$$ (resp. $$y\leq x$$). For example, in the following diagram

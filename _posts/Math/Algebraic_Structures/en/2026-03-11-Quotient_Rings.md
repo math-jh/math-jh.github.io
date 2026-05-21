@@ -15,6 +15,8 @@ date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 102
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 In this article, we define the notion of a quotient ring. Recall from [§Quotient Groups](/en/math/algebraic_structures/quotient_groups) that for any subgroup $$H$$ of a group $$G$$, the set $$G/H$$ is always defined as a set, but it does not always carry a group structure; for this, we needed the condition that $$H$$ be a normal subgroup. Similarly, for a ring $$A$$ and a subring $$S$$, the set $$A/S$$ does not always carry a ring structure.

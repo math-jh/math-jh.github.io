@@ -15,6 +15,8 @@ date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 11
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 When dealing with complex algebraic structures, one effective strategy is to examine how a given algebraic object acts on another algebraic object, rather than analyzing the structure directly. We are particularly interested in group actions, but as always, we begin by considering the more general case of a monoid acting on a set.

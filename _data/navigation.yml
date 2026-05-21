@@ -210,6 +210,8 @@ algebraic_structures-en:
         url: en/math/algebraic_structures/change_of_base_ring
       - title: "Graded Modules"
         url: en/math/algebraic_structures/graded_modules
+      - title: "Algebras"
+        url: en/math/algebraic_structures/algebras
   - title: 
     children:
       - title: "About This Site"
@@ -560,20 +562,20 @@ manifold-ko:
         url: ko/misc/index_ko
 
 mirror_symmetry-ko:
-  - title: <a href="/ko/mirror_symmetry/" class="sidebar_title">거울 대칭</a>
+  - title: <a href="/ko/mirror_symmetry/" class="sidebar_title">거울대칭</a>
     children:
-      - title: "Mirror Symmetry 개요"
+      - title: "거울대칭 개요"
         url: ko/math/mirror_symmetry/overview
       - title: "Reflexive Polytope과 Batyrev Mirror"
         url: ko/math/mirror_symmetry/toric_geometry_batyrev
-      - title: "Frobenius manifold"
+      - title: "프로베니우스 다양체"
         url: ko/math/mirror_symmetry/frobenius_manifold
-      - title: "Dubrovin connection"
+      - title: "두브로빈 접속"
         url: ko/math/mirror_symmetry/dubrovin_connection
-      - title: "Givental J-function과 Mirror Theorem"
-        url: ko/math/mirror_symmetry/givental_j_function
       - title: "Oscillating integral과 Gauss–Manin system"
         url: ko/math/mirror_symmetry/oscillating_integral
+      - title: "Givental J-function과 Mirror Theorem"
+        url: ko/math/mirror_symmetry/givental_j_function
       - title: "Jacobi ring과 Quantum cohomology의 동형"
         url: ko/math/mirror_symmetry/jacobi_ring
       - title: "── Marsh-Rietsch stream ──"
@@ -637,7 +639,7 @@ multilinear_algebra-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
-Riemannian_geometry-ko:
+riemannian_geometry-ko:
   - title: <a href="/ko/riemannian_geometry/" class="sidebar_title">리만기하학</a>
     children:
       - title: "리만 계량"
@@ -646,7 +648,9 @@ Riemannian_geometry-ko:
         url: ko/math/riemannian_geometry/connection
       - title: "레비-치비타 접속"
         url: ko/math/riemannian_geometry/Levi-Civita_connection
-  - title: 
+      - title: "리만 곡률"
+        url: ko/math/riemannian_geometry/curvature
+  - title:
     children:
       - title: "블로그 소개"
         url: ko/about
@@ -805,6 +809,183 @@ set_theory-en:
       - title: "About This Site"
         url: en/about
 
+algebraic_topology-en:
+  - title: <a href="/en/algebraic_topology/" class="sidebar_title">Algebraic Topology</a>
+    children:
+      - title: "Topological Manifolds"
+        url: en/math/algebraic_topology/topological_manifolds
+      - title: "Homology"
+        url: en/math/algebraic_topology/homology
+      - title: "Homotopy"
+        url: en/math/algebraic_topology/homotopy
+      - title: "Covering Spaces"
+        url: en/math/algebraic_topology/covering_spaces
+      - title: "Computation of Homology"
+        url: en/math/algebraic_topology/computation_of_homology
+      - title: "Cohomology"
+        url: en/math/algebraic_topology/cohomology
+      - title: "Acyclic models theorem"
+        url: en/math/algebraic_topology/acyclic_models_theorem
+      - title: "Cup Product"
+        url: en/math/algebraic_topology/cup_products
+      - title: "Poincaré Duality"
+        url: en/math/algebraic_topology/Poincare_duality
+  - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
+
+algebraic_varieties-en:
+  - title: <a href="/en/algebraic_varieties/" class="sidebar_title">Algebraic Varieties</a>
+    children:
+      - title: "Projective Varieties"
+        url: en/math/algebraic_varieties/projective_varieties
+      - title: "Quasi-projective Varieties"
+        url: en/math/algebraic_varieties/quasi_projective_varieties
+      - title: "Rational Maps"
+        url: en/math/algebraic_varieties/rational_maps
+      - title: "Dimension"
+        url: en/math/algebraic_varieties/dimension
+      - title: "Tangent Spaces and Smoothness"
+        url: en/math/algebraic_varieties/tangent_spaces_and_smoothness
+      - title: "Grassmannians"
+        url: en/math/algebraic_varieties/grassmannians
+      - title: "Divisors"
+        url: en/math/algebraic_varieties/divisors
+      - title: "Linear Systems"
+        url: en/math/algebraic_varieties/linear_systems
+      - title: "Serre Duality"
+        url: en/math/algebraic_varieties/serre_duality
+      - title: "The Riemann–Roch Theorem for Curves"
+        url: en/math/algebraic_varieties/riemann_roch_theorem
+      - title: "The Riemann-Roch Theorem for Surfaces"
+        url: en/math/algebraic_varieties/riemann_roch_surfaces
+      - title: "Kodaira Vanishing Theorem"
+        url: en/math/algebraic_varieties/kodaira_vanishing
+      - title: "Chow Groups"
+        url: en/math/algebraic_varieties/chow_groups
+      - title: "Intersection Product"
+        url: en/math/algebraic_varieties/intersection_product
+      - title: "Bézout's Theorem"
+        url: en/math/algebraic_varieties/bezout_theorem
+  - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
+
+category_theory-en:
+  - title: <a href="/en/category_theory/" class="sidebar_title">Category Theory</a>
+    children:
+      - title: "Categories"
+        url: en/math/category_theory/categories
+      - title: "Functors"
+        url: en/math/category_theory/functors
+      - title: "Natural Transformations"
+        url: en/math/category_theory/natural_transformations
+      - title: "Representable Functors"
+        url: en/math/category_theory/representable_functors
+      - title: "Limits"
+        url: en/math/category_theory/limits
+      - title: "Monoidal Categories"
+        url: en/math/category_theory/monoidal_categories
+      - title: "Adjoint Functors"
+        url: en/math/category_theory/adjoints
+      - title: "Abelian Categories"
+        url: en/math/category_theory/abelian_categories
+  - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
+
+commutative_algebra-en:
+  - title: <a href="/en/commutative_algebra/" class="sidebar_title">Commutative Algebra</a>
+    children:
+      - title: "Basic Notions"
+        url: en/math/commutative_algebra/basic_notions
+      - title: "Localization"
+        url: en/math/commutative_algebra/localization
+      - title: "Properties of Localization"
+        url: en/math/commutative_algebra/properties_of_localization
+      - title: "Localization of Graded Rings"
+        url: en/math/commutative_algebra/localization_of_graded_rings
+      - title: "The Jordan-Hölder Theorem"
+        url: en/math/commutative_algebra/Jordan-Holder_theorem
+      - title: "Associated Primes"
+        url: en/math/commutative_algebra/associated_primes
+      - title: "Primary Decomposition"
+        url: en/math/commutative_algebra/primary_decomposition
+      - title: "Integral Extensions"
+        url: en/math/commutative_algebra/integral_extension
+      - title: "Integral Extensions and Ideals"
+        url: en/math/commutative_algebra/lying_over_and_going_up
+      - title: "Nullstellensatz"
+        url: en/math/commutative_algebra/nullstellensatz
+      - title: "Blowup Algebras"
+        url: en/math/commutative_algebra/blowup_algebra
+      - title: "Flatness"
+        url: en/math/commutative_algebra/flatness
+      - title: "Flatness and Localization"
+        url: en/math/commutative_algebra/local_criterion_for_flatness
+      - title: "Completion"
+        url: en/math/commutative_algebra/completion
+      - title: "Properties of Completion"
+        url: en/math/commutative_algebra/properties_of_completion
+      - title: "Dimension"
+        url: en/math/commutative_algebra/Krull_dimension
+      - title: "System of Parameters"
+        url: en/math/commutative_algebra/system_of_parameters
+      - title: "Regular Local Rings"
+        url: en/math/commutative_algebra/regular_local_rings
+      - title: "Divisors"
+        url: en/math/commutative_algebra/divisors
+      - title: "Noether Normalization"
+        url: en/math/commutative_algebra/noether_normalization
+      - title: "Differentials"
+        url: en/math/commutative_algebra/differentials
+  - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
+
+field_theory-en:
+  - title: <a href="/en/field_theory/" class="sidebar_title">Field Theory</a>
+    children:
+      - title: "Fields"
+        url: en/math/field_theory/fields
+      - title: "Algebraic Extensions"
+        url: en/math/field_theory/algebraic_extensions
+      - title: "Algebraic Closures"
+        url: en/math/field_theory/algebraically_closed_extensions
+      - title: "Radical Extensions"
+        url: en/math/field_theory/radical_extensions
+      - title: "Separable Degree"
+        url: en/math/field_theory/separable_degree
+      - title: "Galois Extensions"
+        url: en/math/field_theory/galois_extension
+      - title: "Properties of Galois Groups"
+        url: en/math/field_theory/properties_of_galois_extensions
+      - title: "The Fundamental Theorem of Galois Theory"
+        url: en/math/field_theory/fundamental_theorem_of_galois_theory
+  - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
+
+group_theory-en:
+  - title: <a href="/en/group_theory/" class="sidebar_title">Group Theory</a>
+    children:
+      - title: "Symmetric Groups"
+        url: en/math/group_theory/symmetric_groups
+      - title: "Group Extensions"
+        url: en/math/group_theory/extensions
+      - title: "Series of Groups"
+        url: en/math/group_theory/series_of_groups
+      - title: "Sylow Theorems"
+        url: en/math/group_theory/Sylow_theorems
+  - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
 symplectic_geometry-ko:
   - title: <a href="/ko/symplectic_geometry/" class="sidebar_title">사교기하학</a>
     children:
@@ -822,6 +1003,8 @@ symplectic_geometry-ko:
         url: ko/math/symplectic_geometry/stable_maps
       - title: "Gromov-Witten 불변량"
         url: ko/math/symplectic_geometry/gromov_witten
+      - title: "양자 코호몰로지"
+        url: ko/math/symplectic_geometry/quantum_cohomology
   - title:
     children:
       - title: "블로그 소개"

@@ -15,6 +15,8 @@ date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 203
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 In this article, we examine methods to convert $$A$$-modules to $$B$$-modules or vice versa via a ring homomorphism $$\phi:A \rightarrow B$$. Therefore, since abbreviating scalar multiplication and operations as before could cause confusion, we will denote multiplication maps as before by omitting $$\cdot$$, and denote actions by $$\cdot$$ (or $$\cdot_A$$ and $$\cdot_B$$).

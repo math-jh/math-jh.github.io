@@ -114,6 +114,7 @@ window.KATEX_MACROS = {
     "\\Gr":"\\operatorname{Gr}",
     "\\gr":"\\operatorname{gr}",
     "\\graph":"\\operatorname{graph}",
+    "\\Hess":"\\operatorname{Hess}",
     "\\Hom":"\\operatorname{Hom}",
     "\\id":"\\mathrm{id}",
     "\\im":"\\operatorname{im}",

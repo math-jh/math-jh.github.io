@@ -17,6 +17,8 @@ last_modified_at: 2026-03-06
 
 weight: 2
 
+translated_at: 2026-03-29T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 ## Subset Relations of Sets

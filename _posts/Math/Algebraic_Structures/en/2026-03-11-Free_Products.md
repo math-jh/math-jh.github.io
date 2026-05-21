@@ -15,6 +15,8 @@ date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 9
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 Unlike abelian groups, the weak direct product defined in the previous post does not satisfy the universal property for general groups.

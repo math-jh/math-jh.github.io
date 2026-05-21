@@ -16,12 +16,12 @@
     },
     "_posts/Math/Algebraic_Topology/ko/2025-10-07-Characteristic_Classes.md": {
       "status": "failed",
-      "last_attempt_ts": 1779156901.7523973,
+      "last_attempt_ts": 1779333302.1084063,
       "error": "timeout after 900s"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-12-Affine_Varieties.md": {
       "status": "failed",
-      "last_attempt_ts": 1779158702.1943917,
+      "last_attempt_ts": 1779335101.6252203,
       "error": "timeout after 900s"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-12-Projective_Varieties.md": {
@@ -95,13 +95,18 @@
       "reason": "pending"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-25-Line_Bundles.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779173101.6884851,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779349401.0504508,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-25-Line_Bundles.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-21T07:30:02+00:00",
+      "in_chars": 32356,
+      "out_chars": 6827,
+      "reason": "pending"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Canonical_Bundle.md": {
       "status": "failed",
-      "last_attempt_ts": 1779174902.5106273,
+      "last_attempt_ts": 1779351301.8938477,
       "error": "timeout after 900s"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Linear_Systems.md": {
@@ -116,28 +121,48 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-05-Sheaf_Cohomology.md": {
       "status": "failed",
-      "last_attempt_ts": 1779178502.1749923,
+      "last_attempt_ts": 1779354901.9833639,
       "error": "timeout after 900s"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779180219.6834018,
-      "error": "kimi CLI exited 75: stderr='To resume this session: kimi -r 97219a8a-b42c-4a78-9168-a717f28abb71'"
+      "status": "done",
+      "last_attempt_ts": 1779356531.612548,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-04-06-Cohomology_of_Projective_Spaces.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-21T09:30:01+00:00",
+      "in_chars": 29924,
+      "out_chars": 5843,
+      "reason": "pending"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-21-Serre_Duality.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779182101.6211827,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779270014.4414263,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-04-21-Serre_Duality.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-20T09:30:01+00:00",
+      "in_chars": 13248,
+      "out_chars": 13902,
+      "reason": "pending"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-22-Riemann_Roch_Theorem.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779183902.01418,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779272004.1628485,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-04-22-Riemann_Roch_Theorem.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-20T10:00:01+00:00",
+      "in_chars": 18652,
+      "out_chars": 19834,
+      "reason": "pending"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-05-04-Riemann_Roch_Surfaces.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779185702.0004866,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779273521.480387,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-05-04-Riemann_Roch_Surfaces.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-20T10:30:01+00:00",
+      "in_chars": 20556,
+      "out_chars": 253,
+      "reason": "pending"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-05-07-Hirzebruch_Riemann_Roch.md": {
       "status": "draft_skip",
@@ -156,11 +181,819 @@
       "in_chars": 14524,
       "out_chars": 15492,
       "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-07-Noether_Formula.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779188402.0663984
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-07-Todd_Class.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779188402.0663984
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-11-Chow_Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779188752.7729392,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-05-11-Chow_Groups.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T11:00:02+00:00",
+      "in_chars": 11806,
+      "out_chars": 12537,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-11-Intersection_Product.md": {
+      "status": "done",
+      "last_attempt_ts": 1779191097.2588885,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-05-11-Intersection_Product.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T11:30:02+00:00",
+      "in_chars": 14203,
+      "out_chars": 15675,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-12-Bezout_Theorem.md": {
+      "status": "done",
+      "last_attempt_ts": 1779192313.9580004,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-05-12-Bezout_Theorem.md",
+      "ko_git_commit_ts": 1779188441.0,
+      "translated_at": "2026-05-19T12:00:01+00:00",
+      "in_chars": 13927,
+      "out_chars": 16301,
+      "reason": "pending"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-05-12-Chern_Classes.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779193801.105972
+    },
+    "_posts/Math/Category_Theory/ko/2023-05-22-Categories.md": {
+      "status": "done",
+      "last_attempt_ts": 1779194688.4158847,
+      "en_path": "_posts/Math/Category_Theory/en/2023-05-22-Categories.md",
+      "ko_git_commit_ts": 1772793002.0,
+      "translated_at": "2026-05-19T12:30:01+00:00",
+      "in_chars": 13757,
+      "out_chars": 14655,
+      "reason": "pending"
+    },
+    "_posts/Math/Category_Theory/ko/2023-05-28-Natural_Transformations.md": {
+      "status": "done",
+      "last_attempt_ts": 1779196033.865867,
+      "en_path": "_posts/Math/Category_Theory/en/2023-05-28-Natural_Transformations.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-19T13:00:02+00:00",
+      "in_chars": 7398,
+      "out_chars": 6643,
+      "reason": "pending"
+    },
+    "_posts/Math/Category_Theory/ko/2023-05-29-Adjoints.md": {
+      "status": "done",
+      "last_attempt_ts": 1779198273.5097713,
+      "en_path": "_posts/Math/Category_Theory/en/2023-05-29-Adjoints.md",
+      "ko_git_commit_ts": 1772793002.0,
+      "translated_at": "2026-05-19T13:30:01+00:00",
+      "in_chars": 11733,
+      "out_chars": 12027,
+      "reason": "pending"
+    },
+    "_posts/Math/Category_Theory/ko/2023-06-19-Functors.md": {
+      "status": "done",
+      "last_attempt_ts": 1779199741.8903298,
+      "en_path": "_posts/Math/Category_Theory/en/2023-06-19-Functors.md",
+      "ko_git_commit_ts": 1772792401.0,
+      "translated_at": "2026-05-19T14:00:02+00:00",
+      "in_chars": 10887,
+      "out_chars": 10509,
+      "reason": "pending"
+    },
+    "_posts/Math/Category_Theory/ko/2023-06-22-Limits.md": {
+      "status": "done",
+      "last_attempt_ts": 1779201474.6700926,
+      "en_path": "_posts/Math/Category_Theory/en/2023-06-22-Limits.md",
+      "ko_git_commit_ts": 1772910001.0,
+      "translated_at": "2026-05-19T14:30:01+00:00",
+      "in_chars": 15086,
+      "out_chars": 15702,
+      "reason": "pending"
+    },
+    "_posts/Math/Category_Theory/ko/2023-06-22-Representable_Functors.md": {
+      "status": "done",
+      "last_attempt_ts": 1779202987.609376,
+      "en_path": "_posts/Math/Category_Theory/en/2023-06-22-Representable_Functors.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-19T15:00:01+00:00",
+      "in_chars": 11163,
+      "out_chars": 11357,
+      "reason": "pending"
+    },
+    "_posts/Math/Category_Theory/ko/2024-06-12-Monoidal_Categories.md": {
+      "status": "done",
+      "last_attempt_ts": 1779205121.2196662,
+      "en_path": "_posts/Math/Category_Theory/en/2024-06-12-Monoidal_Categories.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T15:30:01+00:00",
+      "in_chars": 9835,
+      "out_chars": 10104,
+      "reason": "pending"
+    },
+    "_posts/Math/Category_Theory/ko/2024-06-14-Monoid_Objects.md": {
+      "status": "done",
+      "last_attempt_ts": 1779294942.7118793,
+      "en_path": "_posts/Math/Category_Theory/en/2024-06-14-Monoid_Objects.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T16:30:02+00:00",
+      "in_chars": 11535,
+      "out_chars": 12204,
+      "reason": "pending"
+    },
+    "_posts/Math/Category_Theory/ko/2024-08-29-Abelian_Categories.md": {
+      "status": "done",
+      "last_attempt_ts": 1779208526.9335861,
+      "en_path": "_posts/Math/Category_Theory/en/2024-08-29-Abelian_Categories.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-19T16:30:02+00:00",
+      "in_chars": 10218,
+      "out_chars": 9941,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-09-05-Localization.md": {
+      "status": "done",
+      "last_attempt_ts": 1779210867.9975417,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-09-05-Localization.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T17:00:01+00:00",
+      "in_chars": 12326,
+      "out_chars": 12871,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-16-Associated_Primes.md": {
+      "status": "done",
+      "last_attempt_ts": 1779212443.5663707,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-16-Associated_Primes.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T17:30:01+00:00",
+      "in_chars": 12699,
+      "out_chars": 13210,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-16-Properties_of_Localization.md": {
+      "status": "done",
+      "last_attempt_ts": 1779215824.7244802,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-16-Properties_of_Localization.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T18:30:01+00:00",
+      "in_chars": 10672,
+      "out_chars": 10596,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-17-Integral_Extension.md": {
+      "status": "done",
+      "last_attempt_ts": 1779217996.8814478,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-17-Integral_Extension.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-19T19:00:01+00:00",
+      "in_chars": 19332,
+      "out_chars": 21378,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-17-Primary_Decomposition.md": {
+      "status": "done",
+      "last_attempt_ts": 1779219496.0748808,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-17-Primary_Decomposition.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T19:30:02+00:00",
+      "in_chars": 11044,
+      "out_chars": 11067,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-20-Blowup_Algebra.md": {
+      "status": "done",
+      "last_attempt_ts": 1779221196.2245302,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-20-Blowup_Algebra.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T20:00:01+00:00",
+      "in_chars": 11663,
+      "out_chars": 11345,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md": {
+      "status": "done",
+      "last_attempt_ts": 1779222911.6336565,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-20-Lying_Over_and_Going_Up.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T20:30:01+00:00",
+      "in_chars": 7340,
+      "out_chars": 6383,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-20-Nullstellensatz.md": {
+      "status": "done",
+      "last_attempt_ts": 1779224886.547081,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-20-Nullstellensatz.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T21:00:02+00:00",
+      "in_chars": 12142,
+      "out_chars": 12900,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-22-Basic_Notions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779226558.45633,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-22-Basic_Notions.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T21:30:02+00:00",
+      "in_chars": 12382,
+      "out_chars": 12811,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-22-Jordan-Holder_Theorem.md": {
+      "status": "done",
+      "last_attempt_ts": 1779228555.885723,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-22-Jordan-Holder_Theorem.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T22:00:02+00:00",
+      "in_chars": 14869,
+      "out_chars": 15973,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-23-Localization_of_Graded_Rings.md": {
+      "status": "done",
+      "last_attempt_ts": 1779230207.682312,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-23-Localization_of_Graded_Rings.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T22:30:02+00:00",
+      "in_chars": 13319,
+      "out_chars": 13685,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-10-30-Flatness.md": {
+      "status": "done",
+      "last_attempt_ts": 1779232232.0799432,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-30-Flatness.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T23:00:01+00:00",
+      "in_chars": 13996,
+      "out_chars": 14765,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-12-22-Completion.md": {
+      "status": "done",
+      "last_attempt_ts": 1779233882.0254927,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-12-22-Completion.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-19T23:30:01+00:00",
+      "in_chars": 13038,
+      "out_chars": 13639,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2024-12-26-Differentials.md": {
+      "status": "done",
+      "last_attempt_ts": 1779235536.4252825,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2024-12-26-Differentials.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T00:00:01+00:00",
+      "in_chars": 7691,
+      "out_chars": 6603,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2025-01-12-Local_Criterion_for_Flatness.md": {
+      "status": "done",
+      "last_attempt_ts": 1779237218.9205973,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2025-01-12-Local_Criterion_for_Flatness.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T00:30:02+00:00",
+      "in_chars": 10890,
+      "out_chars": 10439,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2025-01-16-Krull_Dimension.md": {
+      "status": "done",
+      "last_attempt_ts": 1779239311.3700066,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2025-01-16-Krull_Dimension.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T01:00:02+00:00",
+      "in_chars": 16985,
+      "out_chars": 18024,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2025-01-16-Properties_of_Completion.md": {
+      "status": "done",
+      "last_attempt_ts": 1779241260.3674922,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2025-01-16-Properties_of_Completion.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T01:30:02+00:00",
+      "in_chars": 12896,
+      "out_chars": 13496,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2025-01-19-System_of_Parameters.md": {
+      "status": "done",
+      "last_attempt_ts": 1779242855.0877798,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2025-01-19-System_of_Parameters.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-20T02:00:01+00:00",
+      "in_chars": 15642,
+      "out_chars": 16472,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2025-01-21-Fractional_Ideals.md": {
+      "status": "done",
+      "last_attempt_ts": 1779336552.7727299,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2025-01-21-Fractional_Ideals.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-21T04:00:02+00:00",
+      "in_chars": 14946,
+      "out_chars": 15590,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2025-01-24-Divisors.md": {
+      "status": "done",
+      "last_attempt_ts": 1779250335.5426483,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2025-01-24-Divisors.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T04:00:01+00:00",
+      "in_chars": 20096,
+      "out_chars": 3897,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2025-01-24-Regular_Local_Rings.md": {
+      "status": "done",
+      "last_attempt_ts": 1779251768.525958,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2025-01-24-Regular_Local_Rings.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T04:30:01+00:00",
+      "in_chars": 16411,
+      "out_chars": 17200,
+      "reason": "pending"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2025-03-23-Noether_Normalization.md": {
+      "status": "done",
+      "last_attempt_ts": 1779253528.5131588,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2025-03-23-Noether_Normalization.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T05:00:01+00:00",
+      "in_chars": 6013,
+      "out_chars": 5141,
+      "reason": "pending"
+    },
+    "_posts/Math/Field_Theory/ko/2025-04-11-Fields.md": {
+      "status": "done",
+      "last_attempt_ts": 1779255444.1535125,
+      "en_path": "_posts/Math/Field_Theory/en/2025-04-11-Fields.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-20T05:30:01+00:00",
+      "in_chars": 17253,
+      "out_chars": 19615,
+      "reason": "pending"
+    },
+    "_posts/Math/Field_Theory/ko/2025-04-26-Algebraic_Extensions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779257510.0403512,
+      "en_path": "_posts/Math/Field_Theory/en/2025-04-26-Algebraic_Extensions.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T06:00:02+00:00",
+      "in_chars": 20692,
+      "out_chars": 22398,
+      "reason": "pending"
+    },
+    "_posts/Math/Field_Theory/ko/2025-05-05-Algebraically_Closed_Extensions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779259122.790856,
+      "en_path": "_posts/Math/Field_Theory/en/2025-05-05-Algebraically_Closed_Extensions.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T06:30:01+00:00",
+      "in_chars": 9599,
+      "out_chars": 9722,
+      "reason": "pending"
+    },
+    "_posts/Math/Field_Theory/ko/2025-05-11-Etale_Algebras.md": {
+      "status": "done",
+      "last_attempt_ts": 1779352963.0413992,
+      "en_path": "_posts/Math/Field_Theory/en/2025-05-11-Etale_Algebras.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-21T08:30:02+00:00",
+      "in_chars": 20034,
+      "out_chars": 22273,
+      "reason": "pending"
+    },
+    "_posts/Math/Field_Theory/ko/2025-05-15-Radical_Extensions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779275194.9934044,
+      "en_path": "_posts/Math/Field_Theory/en/2025-05-15-Radical_Extensions.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T11:00:01+00:00",
+      "in_chars": 8032,
+      "out_chars": 7652,
+      "reason": "pending"
+    },
+    "_posts/Math/Field_Theory/ko/2025-05-15-Separable_Extensions.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779365702.339464,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Field_Theory/ko/2025-05-17-Separable_Degree.md": {
+      "status": "done",
+      "last_attempt_ts": 1779279071.2078266,
+      "en_path": "_posts/Math/Field_Theory/en/2025-05-17-Separable_Degree.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T12:00:02+00:00",
+      "in_chars": 16932,
+      "out_chars": 18139,
+      "reason": "pending"
+    },
+    "_posts/Math/Field_Theory/ko/2025-05-29-Galois_Extension.md": {
+      "status": "done",
+      "last_attempt_ts": 1779280461.6654572,
+      "en_path": "_posts/Math/Field_Theory/en/2025-05-29-Galois_Extension.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T12:30:01+00:00",
+      "in_chars": 15141,
+      "out_chars": 16409,
+      "reason": "pending"
+    },
+    "_posts/Math/Field_Theory/ko/2025-06-18-Properties_of_Galois_Extensions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779282390.4777749,
+      "en_path": "_posts/Math/Field_Theory/en/2025-06-18-Properties_of_Galois_Extensions.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T13:00:02+00:00",
+      "in_chars": 12886,
+      "out_chars": 13611,
+      "reason": "pending"
+    },
+    "_posts/Math/Field_Theory/ko/2025-06-27-Fundamental_Theorem_of_Galois_Theory.md": {
+      "status": "done",
+      "last_attempt_ts": 1779283832.578633,
+      "en_path": "_posts/Math/Field_Theory/en/2025-06-27-Fundamental_Theorem_of_Galois_Theory.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T13:30:01+00:00",
+      "in_chars": 3641,
+      "out_chars": 1881,
+      "reason": "pending"
+    },
+    "_posts/Math/Group_Theory/ko/2025-03-29-Extensions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779286059.6851141,
+      "en_path": "_posts/Math/Group_Theory/en/2025-03-29-Extensions.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T14:00:01+00:00",
+      "in_chars": 8340,
+      "out_chars": 7849,
+      "reason": "pending"
+    },
+    "_posts/Math/Group_Theory/ko/2025-03-29-Symmetric_Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779287772.5610988,
+      "en_path": "_posts/Math/Group_Theory/en/2025-03-29-Symmetric_Groups.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T14:30:02+00:00",
+      "in_chars": 14144,
+      "out_chars": 15868,
+      "reason": "pending"
+    },
+    "_posts/Math/Group_Theory/ko/2025-04-03-Series_of_Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779289852.2940567,
+      "en_path": "_posts/Math/Group_Theory/en/2025-04-03-Series_of_Groups.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T15:00:01+00:00",
+      "in_chars": 15035,
+      "out_chars": 16054,
+      "reason": "pending"
+    },
+    "_posts/Math/Group_Theory/ko/2025-04-07-Sylow_Theorems.md": {
+      "status": "done",
+      "last_attempt_ts": 1779291334.7222717,
+      "en_path": "_posts/Math/Group_Theory/en/2025-04-07-Sylow_Theorems.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T15:30:02+00:00",
+      "in_chars": 13885,
+      "out_chars": 14946,
+      "reason": "pending"
+    },
+    "_posts/Math/Homological_Algebra/ko/2022-09-10-Diagram_Chasing.md": {
+      "status": "done",
+      "last_attempt_ts": 1779293203.3562295,
+      "en_path": "_posts/Math/Homological_Algebra/en/2022-09-10-Diagram_Chasing.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-20T16:00:02+00:00",
+      "in_chars": 14059,
+      "out_chars": 14444,
+      "reason": "pending"
+    },
+    "_posts/Math/Homological_Algebra/ko/2022-09-10-Homology.md": {
+      "status": "done",
+      "last_attempt_ts": 1779296838.0177584,
+      "en_path": "_posts/Math/Homological_Algebra/en/2022-09-10-Homology.md",
+      "ko_git_commit_ts": 1775754003.0,
+      "translated_at": "2026-05-20T17:00:02+00:00",
+      "in_chars": 14656,
+      "out_chars": 15142,
+      "reason": "pending"
+    },
+    "_posts/Math/Homological_Algebra/ko/2023-01-02-Long_Exact_Sequence.md": {
+      "status": "done",
+      "last_attempt_ts": 1779298684.495928,
+      "en_path": "_posts/Math/Homological_Algebra/en/2023-01-02-Long_Exact_Sequence.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-20T17:30:01+00:00",
+      "in_chars": 11550,
+      "out_chars": 11553,
+      "reason": "pending"
+    },
+    "_posts/Math/Homological_Algebra/ko/2024-11-01-Resolutions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779300343.840874,
+      "en_path": "_posts/Math/Homological_Algebra/en/2024-11-01-Resolutions.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T18:00:01+00:00",
+      "in_chars": 10980,
+      "out_chars": 10449,
+      "reason": "pending"
+    },
+    "_posts/Math/Homological_Algebra/ko/2024-11-03-Derived_Functors.md": {
+      "status": "done",
+      "last_attempt_ts": 1779302245.097417,
+      "en_path": "_posts/Math/Homological_Algebra/en/2024-11-03-Derived_Functors.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T18:30:01+00:00",
+      "in_chars": 10496,
+      "out_chars": 9888,
+      "reason": "pending"
+    },
+    "_posts/Math/Homological_Algebra/ko/2024-11-06-Ext_and_Tor.md": {
+      "status": "done",
+      "last_attempt_ts": 1779304253.227888,
+      "en_path": "_posts/Math/Homological_Algebra/en/2024-11-06-Ext_and_Tor.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T19:00:02+00:00",
+      "in_chars": 17511,
+      "out_chars": 18380,
+      "reason": "pending"
+    },
+    "_posts/Math/Homological_Algebra/ko/2026-04-08-Spectral_Sequences.md": {
+      "status": "done",
+      "last_attempt_ts": 1779305711.7191076,
+      "en_path": "_posts/Math/Homological_Algebra/en/2026-04-08-Spectral_Sequences.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T19:30:01+00:00",
+      "in_chars": 13713,
+      "out_chars": 15346,
+      "reason": "pending"
+    },
+    "_posts/Math/Homological_Algebra/ko/2026-04-13-Derived_Categories.md": {
+      "status": "done",
+      "last_attempt_ts": 1779307865.8723917,
+      "en_path": "_posts/Math/Homological_Algebra/en/2026-04-13-Derived_Categories.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T20:00:02+00:00",
+      "in_chars": 20516,
+      "out_chars": 22555,
+      "reason": "pending"
+    },
+    "_posts/Math/Lie_Theory/ko/2023-01-23-Lie_Groups.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779309902.612561,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Lie_Theory/ko/2025-01-04-Bruhat_Decomposition.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779330601.8579597
+    },
+    "_posts/Math/Lie_Theory/ko/2025-01-05-Richardson_Variety.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779330601.8579597
+    },
+    "_posts/Math/Lie_Theory/ko/2025-01-06-Peterson_Variety.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779314402.0299275
+    },
+    "_posts/Math/Lie_Theory/ko/2025-01-07-Kazhdan_Lusztig_Polynomial.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779314402.0299275
+    },
+    "_posts/Math/Lie_Theory/ko/2025-11-12-Root_Systems.md": {
+      "status": "done",
+      "last_attempt_ts": 1779315052.2421362,
+      "en_path": "_posts/Math/Lie_Theory/en/2025-11-12-Root_Systems.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T22:00:02+00:00",
+      "in_chars": 27710,
+      "out_chars": 16400,
+      "reason": "pending"
+    },
+    "_posts/Math/Lie_Theory/ko/2026-02-24-Torus_Action.md": {
+      "status": "done",
+      "last_attempt_ts": 1779316819.9839146,
+      "en_path": "_posts/Math/Lie_Theory/en/2026-02-24-Torus_Action.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-20T22:30:02+00:00",
+      "in_chars": 27229,
+      "out_chars": 24693,
+      "reason": "pending"
+    },
+    "_posts/Math/Lie_Theory/ko/2026-02-28-Borel_Subgroup.md": {
+      "status": "done",
+      "last_attempt_ts": 1779318463.221589,
+      "en_path": "_posts/Math/Lie_Theory/en/2026-02-28-Borel_Subgroup.md",
+      "ko_git_commit_ts": 1778965204.0,
+      "translated_at": "2026-05-20T23:00:01+00:00",
+      "in_chars": 17247,
+      "out_chars": 19105,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2021-10-07-Fields.md": {
+      "status": "done",
+      "last_attempt_ts": 1779320137.009516,
+      "en_path": "_posts/Math/Linear_Algebra/en/2021-10-07-Fields.md",
+      "ko_git_commit_ts": 1773172201.0,
+      "translated_at": "2026-05-20T23:30:02+00:00",
+      "in_chars": 7953,
+      "out_chars": 8515,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2021-10-10-Basis.md": {
+      "status": "done",
+      "last_attempt_ts": 1779322030.2668357,
+      "en_path": "_posts/Math/Linear_Algebra/en/2021-10-10-Basis.md",
+      "ko_git_commit_ts": 1772796001.0,
+      "translated_at": "2026-05-21T00:00:02+00:00",
+      "in_chars": 11738,
+      "out_chars": 12671,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2021-10-13-Linear_Map.md": {
+      "status": "done",
+      "last_attempt_ts": 1779323701.114984,
+      "en_path": "_posts/Math/Linear_Algebra/en/2021-10-13-Linear_Map.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T00:30:01+00:00",
+      "in_chars": 11521,
+      "out_chars": 12259,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2021-10-14-Matrices.md": {
+      "status": "done",
+      "last_attempt_ts": 1779325761.0213845,
+      "en_path": "_posts/Math/Linear_Algebra/en/2021-10-14-Matrices.md",
+      "ko_git_commit_ts": 1773172201.0,
+      "translated_at": "2026-05-21T01:00:01+00:00",
+      "in_chars": 10408,
+      "out_chars": 11307,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2021-10-16-Fundamental_Theorem_of_Linear_Algebra.md": {
+      "status": "done",
+      "last_attempt_ts": 1779327834.9267287,
+      "en_path": "_posts/Math/Linear_Algebra/en/2021-10-16-Fundamental_Theorem_of_Linear_Algebra.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T01:30:02+00:00",
+      "in_chars": 18284,
+      "out_chars": 20382,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-03-07-Determinant.md": {
+      "status": "done",
+      "last_attempt_ts": 1779329518.474795,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-03-07-Determinant.md",
+      "ko_git_commit_ts": 1772796001.0,
+      "translated_at": "2026-05-21T02:00:01+00:00",
+      "in_chars": 9178,
+      "out_chars": 10520,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-07-28-Vector_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779331219.2121615,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-07-28-Vector_Spaces.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T02:30:01+00:00",
+      "in_chars": 9021,
+      "out_chars": 9830,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-07-29-Subspaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779338113.1420145,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-07-29-Subspaces.md",
+      "ko_git_commit_ts": 1772910001.0,
+      "translated_at": "2026-05-21T04:30:01+00:00",
+      "in_chars": 8081,
+      "out_chars": 8154,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-07-31-Dimension.md": {
+      "status": "done",
+      "last_attempt_ts": 1779340000.661712,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-07-31-Dimension.md",
+      "ko_git_commit_ts": 1772792401.0,
+      "translated_at": "2026-05-21T05:00:01+00:00",
+      "in_chars": 14011,
+      "out_chars": 16157,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-08-02-Isomorphic_Vector_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779341695.2227468,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-08-02-Isomorphic_Vector_Spaces.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T05:30:01+00:00",
+      "in_chars": 8599,
+      "out_chars": 8778,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-08-05-Space_of_Linear_Maps.md": {
+      "status": "done",
+      "last_attempt_ts": 1779343914.580099,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-08-05-Space_of_Linear_Maps.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T06:00:02+00:00",
+      "in_chars": 10733,
+      "out_chars": 10896,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-08-07-Dual_Space.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779345527.2924974,
+      "error": "kimi CLI exited 75: stderr='To resume this session: kimi -r 98b10d8d-903b-4922-99bb-179a93236dc9'"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-08-12-Existence_and_Uniqueness_of_Determinant.md": {
+      "status": "done",
+      "last_attempt_ts": 1779347438.8065386,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-08-12-Existence_and_Uniqueness_of_Determinant.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T07:00:02+00:00",
+      "in_chars": 14413,
+      "out_chars": 16651,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-08-19-Gaussian_Elimination.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779358501.618166,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-08-28-Characteristic_Polynomial.md": {
+      "status": "done",
+      "last_attempt_ts": 1779359893.6295002,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-08-28-Characteristic_Polynomial.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T10:30:02+00:00",
+      "in_chars": 7911,
+      "out_chars": 8535,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-09-18-Eigenspace_Decomposition.md": {
+      "status": "done",
+      "last_attempt_ts": 1779362098.9085317,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-09-18-Eigenspace_Decomposition.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T11:00:01+00:00",
+      "in_chars": 20741,
+      "out_chars": 24674,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-09-28-Bilinear_Form.md": {
+      "status": "done",
+      "last_attempt_ts": 1779363588.2708347,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-09-28-Bilinear_Form.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T11:30:02+00:00",
+      "in_chars": 13493,
+      "out_chars": 14182,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-10-02-Inner_Product_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779367264.991356,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-10-02-Inner_Product_Spaces.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T12:30:01+00:00",
+      "in_chars": 13373,
+      "out_chars": 14688,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2022-10-09-Least_Squares_Method.md": {
+      "status": "done",
+      "last_attempt_ts": 1779368553.8896432,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-10-09-Least_Squares_Method.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T13:00:02+00:00",
+      "in_chars": 4465,
+      "out_chars": 3608,
+      "reason": "pending"
+    },
+    "_posts/Math/Linear_Algebra/ko/2026-01-21-Jordan_Canonical_Form.md": {
+      "status": "done",
+      "last_attempt_ts": 1779370692.843403,
+      "en_path": "_posts/Math/Linear_Algebra/en/2026-01-21-Jordan_Canonical_Form.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-21T13:30:01+00:00",
+      "in_chars": 18196,
+      "out_chars": 21027,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 10,
-    "total_in_chars": 142016,
-    "total_out_chars": 155240
+    "total_done": 93,
+    "total_in_chars": 1288765,
+    "total_out_chars": 1250388
   }
 }

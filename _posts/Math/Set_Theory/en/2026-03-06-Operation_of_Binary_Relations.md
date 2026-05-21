@@ -18,6 +18,8 @@ last_modified_at: 2026-03-06
 
 weight: 4
 
+translated_at: 2026-03-27T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 We now define the inverse of a binary relation and the composition of binary relations.

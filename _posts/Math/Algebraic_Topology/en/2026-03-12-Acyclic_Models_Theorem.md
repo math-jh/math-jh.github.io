@@ -15,6 +15,8 @@ date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 7
 
+translated_at: 2026-05-19T21:30:02+00:00
+translation_source: kimi-cli
 ---
 
 As mentioned in [§Cohomology](/en/math/algebraic_topology/cohomology), the acyclic models theorem is a generalization of the original proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9), and can be used not only for proving [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9) but also in various other situations. In this post, we prove the acyclic models theorem and introduce several corollaries, including the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9).
