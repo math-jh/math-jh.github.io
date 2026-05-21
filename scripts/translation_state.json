@@ -1009,11 +1009,51 @@
       "in_chars": 12724,
       "out_chars": 14162,
       "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-14-Tangent_Space.md": {
+      "status": "done",
+      "last_attempt_ts": 1779376157.8182375,
+      "en_path": "_posts/Math/Manifold/en/2022-06-14-Tangent_Space.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T15:00:01+00:00",
+      "in_chars": 8827,
+      "out_chars": 9499,
+      "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-15-Differentials.md": {
+      "status": "done",
+      "last_attempt_ts": 1779377947.3576467,
+      "en_path": "_posts/Math/Manifold/en/2022-06-15-Differentials.md",
+      "ko_git_commit_ts": 1772792401.0,
+      "translated_at": "2026-05-21T15:30:01+00:00",
+      "in_chars": 13816,
+      "out_chars": 14922,
+      "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-16-Examples_of_Differentials.md": {
+      "status": "done",
+      "last_attempt_ts": 1779379808.7763906,
+      "en_path": "_posts/Math/Manifold/en/2022-06-16-Examples_of_Differentials.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T16:00:02+00:00",
+      "in_chars": 11878,
+      "out_chars": 12489,
+      "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-17-Submanifolds.md": {
+      "status": "done",
+      "last_attempt_ts": 1779381588.8884542,
+      "en_path": "_posts/Math/Manifold/en/2022-06-17-Submanifolds.md",
+      "ko_git_commit_ts": 1772794801.0,
+      "translated_at": "2026-05-21T16:30:01+00:00",
+      "in_chars": 11855,
+      "out_chars": 12320,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 95,
-    "total_in_chars": 1310575,
-    "total_out_chars": 1273708
+    "total_done": 99,
+    "total_in_chars": 1356951,
+    "total_out_chars": 1322938
   }
 }
