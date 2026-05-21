@@ -750,9 +750,14 @@
       "reason": "pending"
     },
     "_posts/Math/Lie_Theory/ko/2023-01-23-Lie_Groups.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779309902.612561,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779397872.5735507,
+      "en_path": "_posts/Math/Lie_Theory/en/2023-01-23-Lie_Groups.md",
+      "ko_git_commit_ts": 1778965204.0,
+      "translated_at": "2026-05-21T21:00:01+00:00",
+      "in_chars": 21754,
+      "out_chars": 1421,
+      "reason": "pending"
     },
     "_posts/Math/Lie_Theory/ko/2025-01-04-Bruhat_Decomposition.md": {
       "status": "draft_skip",
@@ -1129,11 +1134,85 @@
       "in_chars": 10784,
       "out_chars": 11891,
       "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2023-01-16-Differential_Ideal.md": {
+      "status": "done",
+      "last_attempt_ts": 1779399211.2497382,
+      "en_path": "_posts/Math/Manifold/en/2023-01-16-Differential_Ideal.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T21:30:01+00:00",
+      "in_chars": 7745,
+      "out_chars": 7073,
+      "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2023-02-13-Orientation.md": {
+      "status": "done",
+      "last_attempt_ts": 1779400954.91091,
+      "en_path": "_posts/Math/Manifold/en/2023-02-13-Orientation.md",
+      "ko_git_commit_ts": 1772792401.0,
+      "translated_at": "2026-05-21T22:00:01+00:00",
+      "in_chars": 5293,
+      "out_chars": 4339,
+      "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2023-02-17-Integration.md": {
+      "status": "stub",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-03-Toric_Geometry_and_Batyrev_Mirror.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-04-Postnikov_Diagram_and_Plabic_Graph.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-07-Marsh_Rietsch_Superpotential.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-08-Cluster_Algebra.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-09-Jacobi_Ring_Quantum_Cohomology.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-10-Cluster_Monomial_Basis.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-11-Oscillating_Integral.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-13-Givental_J_Function.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-16-Newton_Okounkov_Body.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2025-01-17-Marsh_Rietsch_Mirror_Theorem.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779402601.2667787
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2026-05-18-Mirror_Symmetry_Overview.md": {
+      "status": "done",
+      "last_attempt_ts": 1779403081.4857953,
+      "en_path": "_posts/Math/Mirror_Symmetry/en/2026-05-18-Mirror_Symmetry_Overview.md",
+      "ko_git_commit_ts": 1779375607.0,
+      "translated_at": "2026-05-21T22:30:01+00:00",
+      "in_chars": 12881,
+      "out_chars": 14776,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 107,
-    "total_in_chars": 1438442,
-    "total_out_chars": 1405760
+    "total_done": 111,
+    "total_in_chars": 1486115,
+    "total_out_chars": 1433369
   }
 }

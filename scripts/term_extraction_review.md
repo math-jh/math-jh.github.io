@@ -707,3 +707,51 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `symmetrization` | looks like emphasis (no <sub> partner) |
 
+## 분리가능차수
+- post: `_posts/Math/Field_Theory/ko/2025-05-17-Separable_Degree.md`
+- permalink: `/ko/math/field_theory/separable_degree`
+- scanned: 2026-05-21T21:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `perfect` | looks like emphasis (no <sub> partner) |
+
+## 갈루아 군의 성질들
+- post: `_posts/Math/Field_Theory/ko/2025-06-18-Properties_of_Galois_Extensions.md`
+- permalink: `/ko/math/field_theory/properties_of_galois_extensions`
+- scanned: 2026-05-21T22:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `finite` | looks like emphasis (no <sub> partner) |
+| `Galois` | looks like emphasis (no <sub> partner) |
+
+## 갈루아 이론의 기본정리
+- post: `_posts/Math/Field_Theory/ko/2025-06-27-Fundamental_Theorem_of_Galois_Theory.md`
+- permalink: `/ko/math/field_theory/fundamental_theorem_of_galois_theory`
+- scanned: 2026-05-21T22:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `closed` | looks like emphasis (no <sub> partner) |
+
+## 위상다양체
+- post: `_posts/Math/Algebraic_Topology/ko/2025-07-05-Topological_Manifolds.md`
+- permalink: `/ko/math/algebraic_topology/topological_manifolds`
+- scanned: 2026-05-21T22:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `half-space` | looks like emphasis (no <sub> partner) |
+
+## 호모토피
+- post: `_posts/Math/Algebraic_Topology/ko/2025-07-09-Homotopy.md`
+- permalink: `/ko/math/algebraic_topology/homotopy`
+- scanned: 2026-05-21T23:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `Topology` | looks like emphasis (no <sub> partner) |
+
