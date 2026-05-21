@@ -591,3 +591,14 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `non-zerodivisor` | looks like emphasis (no <sub> partner) |
 | `homogenization` | looks like emphasis (no <sub> partner) |
 
+## 최소제곱법
+- post: `_posts/Math/Linear_Algebra/ko/2022-10-09-Least_Squares_Method.md`
+- permalink: `/ko/math/linear_algebra/least_squares_method`
+- scanned: 2026-05-21T14:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `full row rank` | multi-word English emphasis — possibly a definition |
+| `오른쪽 역행렬` | looks like emphasis (no <sub> partner) |
+| `full column rank` | multi-word English emphasis — possibly a definition |
+

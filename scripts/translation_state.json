@@ -989,11 +989,31 @@
       "in_chars": 18196,
       "out_chars": 21027,
       "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-06-Smooth_Manifolds.md": {
+      "status": "done",
+      "last_attempt_ts": 1779372455.5483835,
+      "en_path": "_posts/Math/Manifold/en/2022-06-06-Smooth_Manifolds.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T14:00:01+00:00",
+      "in_chars": 9086,
+      "out_chars": 9158,
+      "reason": "pending"
+    },
+    "_posts/Math/Manifold/ko/2022-06-09-Examples_of_Manifolds.md": {
+      "status": "done",
+      "last_attempt_ts": 1779374347.5741506,
+      "en_path": "_posts/Math/Manifold/en/2022-06-09-Examples_of_Manifolds.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T14:30:02+00:00",
+      "in_chars": 12724,
+      "out_chars": 14162,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 93,
-    "total_in_chars": 1288765,
-    "total_out_chars": 1250388
+    "total_done": 95,
+    "total_in_chars": 1310575,
+    "total_out_chars": 1273708
   }
 }

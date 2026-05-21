@@ -1,6 +1,6 @@
 ---
 
-title: "최소제곱법 (작성중)"
+title: "최소제곱법"
 excerpt: "정사영과 최소제곱법"
 
 categories: [Math / Linear Algebra]
@@ -59,7 +59,27 @@ $$A^tAx=A^ty$$
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**예시 2**</ins> 
+<ins id="ex2">**예시 2**</ins> 평면 위의 세 점 $$(0,1)$$, $$(1,3)$$, $$(2,4)$$가 주어졌다 하고, 이들을 가장 잘 적합하는 직선 $$y=ax+b$$를 찾는 문제를 생각하자. 세 점이 모두 한 직선 위에 있다면 미지수 $$a,b$$에 대한 연립방정식
+
+$$\begin{aligned}a\cdot 0+b&=1\\ a\cdot 1+b&=3\\ a\cdot 2+b&=4\end{aligned}$$
+
+가 해를 가져야 하지만, 세 점이 일직선 위에 있지 않으므로 정확한 해는 존재하지 않는다. 이 연립방정식을 $$Ax=y$$의 꼴로 적으면
+
+$$A=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix},\qquad x=\begin{pmatrix}a\\ b\end{pmatrix},\qquad y=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}$$
+
+이며, $$A$$의 첫째 열은 각 점의 $$x$$좌표를, 둘째 열은 상수 $$1$$을 담는다. [명제 1](#prop1)에 따라, $$\lVert Ax-y\rVert$$을 최소로 하는 $$(a,b)$$는 normal equation
+
+$$A^tAx=A^ty$$
+
+의 해로 주어진다. 직접 계산하면
+
+$$A^tA=\begin{pmatrix}5&3\\ 3&3\end{pmatrix},\qquad A^ty=\begin{pmatrix}11\\ 8\end{pmatrix}$$
+
+이고, $$\det(A^tA)=5\cdot 3-3\cdot 3=6\neq 0$$이므로 $$A^tA$$는 가역이다. 따라서
+
+$$\begin{pmatrix}a\\ b\end{pmatrix}=(A^tA)^{-1}A^ty=\frac{1}{6}\begin{pmatrix}3&-3\\ -3&5\end{pmatrix}\begin{pmatrix}11\\ 8\end{pmatrix}=\frac{1}{6}\begin{pmatrix}9\\ 7\end{pmatrix}=\begin{pmatrix}3/2\\ 7/6\end{pmatrix}$$
+
+을 얻는다. 즉, 주어진 세 점을 최소제곱의 의미에서 가장 잘 적합하는 직선은 $$y=\frac{3}{2}x+\frac{7}{6}$$이다.
 
 </div>
 
@@ -69,4 +89,86 @@ $$A^tAx=A^ty$$
 
 이번에는 반대로 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에서 $$m< n$$인 경우를 생각한다. 
 
-우선 임의의 $$A\in\Mat_{m\times n}(\mathbb{R})$$과 $$y\in\im(A)$$가 주어졌다 하고, $$A$$가 단사가 아니라 하자. 그럼 $$Au=0$$을 만족하는 영이 아닌 벡터 $$u$$들이 존재하며, 따라서 $$Ax=y$$를 만족하는 벡터 $$x$$가 하나 주어진다면, $$x+u$$들 또한 해가 된다는 것을 알 수 있다. 이제 이들 중 가장 작은 norm을 갖는 해를 찾아 이를 *minimum-norm solution*이라 부르자. 
+우선 임의의 $$A\in\Mat_{m\times n}(\mathbb{R})$$과 $$y\in\im(A)$$가 주어졌다 하고, $$A$$가 단사가 아니라 하자. 그럼 $$Au=0$$을 만족하는 영이 아닌 벡터 $$u$$들이 존재하며, 따라서 $$Ax=y$$를 만족하는 벡터 $$x$$가 하나 주어진다면, $$x+u$$들 또한 해가 된다는 것을 알 수 있다. 이제 이들 중 가장 작은 norm을 갖는 해를 찾아 이를 *최소노름해<sub>minimum-norm solution</sub>*라 부르자. 즉, $$Ax=y$$의 해 전체는 한 특수해 $$x_0$$에 대하여 $$x_0+\ker A$$의 꼴을 이루며, 우리는 이 affine 부분공간 위에서 norm을 최소로 만드는 점을 찾는다.
+
+이는 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9)의 projection theorem이 다루는 상황과 정확히 같다. 원점에서 affine 부분공간 $$x_0+\ker A$$까지의 거리를 최소로 만드는 점은 유일하며, 이 점에서 affine 부분공간으로 그은 벡터는 $$\ker A$$에 수직이다. 따라서 최소노름해는 $$(\ker A)^\perp$$에 놓인 유일한 해이다. 한편 [§쌍선형형식, ⁋명제 5](/ko/math/linear_algebra/bilinear_form#prop5)에 의하여 $$(\ker A)^\perp=\im A^t$$이 성립한다. 이를 정리하면 다음과 같다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop3">**명제 3**</ins> 임의의 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$과 $$y\in\im A$$에 대하여, 방정식 $$Ax=y$$의 해들 중 norm을 최소로 하는 해는 유일하게 존재하며, 이는 $$\im A^t$$에 속하는 유일한 해이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$y\in\im A$$이므로 $$Ax_0=y$$를 만족하는 $$x_0$$이 존재하고, $$Ax=y$$의 해 전체는 $$x_0+\ker A$$와 같다. [§쌍선형형식, ⁋명제 5](/ko/math/linear_algebra/bilinear_form#prop5)에 의하여
+
+$$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
+
+이 성립하므로, $$x_0$$을 $$x_0=p+q$$로 분해할 수 있다. 여기서 $$p\in (\ker A)^\perp$$이고 $$q\in\ker A$$이다. 그럼 $$p=x_0-q$$ 또한 $$Ax=y$$의 해이고, 임의의 해 $$x=p+u$$ (단 $$u\in\ker A$$)에 대하여 $$p\perp u$$이므로 피타고라스 정리에 의해
+
+$$\lVert x\rVert^2=\lVert p\rVert^2+\lVert u\rVert^2\geq \lVert p\rVert^2$$
+
+이 성립한다. 등호는 $$u=0$$, 즉 $$x=p$$일 때만 성립하므로 norm을 최소로 하는 해는 $$p$$로 유일하다. 또한 같은 명제에 의하여 $$(\ker A)^\perp=\im A^t$$이므로 $$p\in\im A^t$$이다.
+
+</details>
+
+이제 이 최소노름해를 명시적으로 구할 수 있는 경우를 생각하자. $$A$$가 *full row rank*, 즉 $$\rank A=m$$인 경우에는 $$\im A=\mathbb{R}^m$$이므로 모든 $$y\in\mathbb{R}^m$$에 대하여 $$Ax=y$$가 해를 가지며, 위 명제에 따라 최소노름해는 $$\im A^t$$ 위에서 유일하게 결정된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop4">**명제 4**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$이 $$\rank A=m$$을 만족한다면 $$AA^t\in\Mat_m(\mathbb{R})$$은 가역이며, 임의의 $$y\in\mathbb{R}^m$$에 대하여 방정식 $$Ax=y$$의 최소노름해는
+
+$$x=A^t(AA^t)^{-1}y$$
+
+로 주어진다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+먼저 $$AA^t$$가 가역임을 보인다. $$AA^t$$는 $$m\times m$$ 정사각행렬이므로 $$AA^tz=0$$이 $$z=0$$만을 해로 가짐을 보이면 충분하다. $$AA^tz=0$$이라 하면
+
+$$\lVert A^tz\rVert^2=\langle A^tz, A^tz\rangle=\langle z, AA^tz\rangle=0$$
+
+이므로 $$A^tz=0$$, 즉 $$z\in\ker A^t$$이다. 그런데 $$\rank A^t=\rank A=m$$이므로 $$A^t$$은 단사이고, 따라서 $$z=0$$이다. 이로써 $$AA^t$$이 가역임을 안다.
+
+이제 $$x=A^t(AA^t)^{-1}y$$로 놓으면
+
+$$Ax=AA^t(AA^t)^{-1}y=y$$
+
+이므로 $$x$$는 $$Ax=y$$의 해이다. 뿐만 아니라 $$x=A^t\big((AA^t)^{-1}y\big)\in\im A^t$$이므로, [명제 3](#prop3)에 의하여 $$x$$는 최소노름해이다.
+
+</details>
+
+증명에서 보았듯이, 최소노름해가 $$\im A^t$$ 위에 있다는 사실로부터 $$x=A^tz$$의 꼴을 가정하고 이를 $$Ax=y$$에 대입하여 $$AA^tz=y$$를 풀면 $$z=(AA^t)^{-1}y$$를 얻는다. 이때 $$A^t(AA^t)^{-1}$$은 $$A$$의 *오른쪽 역행렬*, 즉 $$A\cdot A^t(AA^t)^{-1}=I_m$$을 만족하는 행렬이 된다.
+
+앞 절에서 다룬 최소제곱의 경우와 이 절에서 다룬 최소노름의 경우는 서로 쌍대적인 상황으로 볼 수 있다. $$A$$가 *full column rank*, 즉 $$\rank A=n$$인 경우 $$A^tA$$이 가역이 되어 [명제 1](#prop1)의 normal equation이 유일한 최소제곱해 $$x=(A^tA)^{-1}A^ty$$를 주며, 이때 $$(A^tA)^{-1}A^t$$은 $$A$$의 왼쪽 역행렬이 된다. 반면 $$A$$가 full row rank인 경우에는 위와 같이 오른쪽 역행렬 $$A^t(AA^t)^{-1}$$이 최소노름해를 준다. 이 두 행렬을 통합하는 것이 다음의 개념이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def5">**정의 5**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에 대하여, 만일 $$A$$가 full column rank라면
+
+$$A^+:=(A^tA)^{-1}A^t$$
+
+으로, full row rank라면
+
+$$A^+:=A^t(AA^t)^{-1}$$
+
+으로 정의되는 행렬 $$A^+\in\Mat_{n\times m}(\mathbb{R})$$을 $$A$$의 *유사역행렬<sub>Moore-Penrose pseudoinverse</sub>*이라 부른다.
+
+</div>
+
+위 두 식은 $$A$$의 rank에 대한 가정이 없는 일반적인 상황에서는 그대로 쓸 수 없는데, $$A^tA$$이나 $$AA^t$$ 중 적어도 하나가 가역이 아니기 때문이다. 일반적인 행렬에 대한 유사역행렬은 singular value decomposition을 이용하여 정의되며, $$A$$가 위 두 경우에 해당할 때에는 그 정의가 위의 식과 일치한다. 이때 $$A^+$$은 다음 네 조건
+
+$$AA^+A=A,\quad A^+AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+A)^t=A^+A$$
+
+으로 유일하게 특징지어진다는 것이 알려져 있으며, 이를 통해 $$A^+$$이 $$A$$에 의해 잘 정의됨을 확인할 수 있다.
+
+<div class="remark" markdown="1">
+
+<ins id="rmk6">**참고 6**</ins> $$A$$가 가역인 정사각행렬이라면 $$A^+=A^{-1}$$이 성립한다. 이는 $$A^tA$$과 $$AA^t$$이 모두 가역이어서 $$A^+=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$$이 되기 때문이다. 이러한 의미에서 유사역행렬은 역행렬의 개념을 일반화한다.
+
+</div>
+
+유사역행렬을 도입하면 앞 절의 최소제곱과 이 절의 최소노름이 하나의 공식으로 통합된다. $$A$$가 full column rank인 경우 $$x=A^+y=(A^tA)^{-1}A^ty$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 유일한 최소제곱해이고, $$A$$가 full row rank인 경우 $$x=A^+y=A^t(AA^t)^{-1}y$$는 $$Ax=y$$의 최소노름해이다. 일반적인 행렬에 대해서도 $$x=A^+y$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 해들 중 다시 norm이 최소인 유일한 해를 주며, 이로써 두 절에서 따로 다룬 문제가 유사역행렬이라는 하나의 대상으로 자연스럽게 통합된다. 
