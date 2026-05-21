@@ -113,7 +113,7 @@ Connection $$\nabla$$는 본질적으로 section을 *미분*하는 도구이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Complex manifold $$B$$ 위에서, *$$B$$ 위 미분 연산자들의 sheaf of rings* $$\mathcal{D}_B$$는 structure sheaf $$\mathcal{O}_B$$와 vector field들, 즉 $$\mathcal{O}_B$$ 위의 derivation ([\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1))이 생성하는 operator들의 sheaf이다. 이 때, vector field $$\partial$$과 함수 $$f$$는 다음의 관계식
+<ins id="def3">**정의 3**</ins> Complex manifold $$B$$ 위에서, $$B$$ 위 미분 연산자들의 sheaf of rings $$\mathcal{D}_B$$는 structure sheaf $$\mathcal{O}_B$$와 vector field들, 즉 $$\mathcal{O}_B$$ 위의 derivation ([\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1))이 생성하는 operator들의 sheaf이다. 이 때, vector field $$\partial$$과 함수 $$f$$는 다음의 관계식
 
 $$[\partial, f] = \partial(f)$$
 
@@ -141,18 +141,11 @@ $$z\, q_a \partial_{q_a} s = -\,(T_a \star_q s), \qquad a = 1, \ldots, r$$
 
 의 형태가 된다. 여기서 $$\{ T_a \}$$는 $$H^2(X, \mathbb{C})$$의 basis, $$q_a = e^{t^a}$$는 대응하는 Novikov variable이며, 우변의 부호는 [정의 1](#def1)의 $$+z^{-1}\mathcal{C}_\alpha$$ 약속을 따른 것이다. 이 QDE의 fundamental solution을 명시적인 형태로 표현하는 것이 [§Givental J-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function)의 목표이다. 위와 같은 경우, 즉 connection이 Dubrovin connection $$\nabla^z$$인 경우는 이러한 방식으로 $$X$$의 A-model data를 담고 있으므로 이를 *A-model $$D$$-module*이라 부르기도 한다.
 
-정리하면, A-side에서 우리는 base manifold 
-
-$$(M, \mathbb{C}^\ast)\cong\Spec \mathbb{C}[z^{\pm 1}, q^{\pm 1}]$$
-
-위에 
-
-
- *A-model state space*
+정리하면, A-side에서 우리는 base manifold $$M \times \mathbb{C}^\ast$$ 위에 *A-model state space*
 
 $$H_A := H^\ast(X, \mathbb{C}[z^{\pm 1}, q^{\pm 1}])$$
 
-는 base $$M\times \mathbb{C}^\ast$$ 위 quantum $$D$$-module의 (global) section들이 이루는 free module이고, 그 $$\mathcal{D}$$-module 구조는 Dubrovin connection $$\nabla^z$$로 미분하는 작용이 준다. 여기서 base의 두 방향은 성격이 전혀 다르다. 첫째로 *moduli 방향* $$q$$는 Novikov 좌표 $$q_a = e^{t^a}$$로, 이것이 base $$M$$ (small quantum cohomology에서는 Kähler 모수공간)의 좌표이다. 이 방향의 작용 $$\nabla^z_{q_a\partial_{q_a}}$$이 곧 위의 QDE이며 quantum product의 $$q$$-의존성을 담고, mirror가 식별하는 것이 바로 이 방향이다. 둘째로 *spectral 방향* $$z$$는 moduli가 아니라 auxiliary parameter로, 그 역할은 둘이다. 하나는 $$z\to\infty$$의 $$\nabla$$와 $$z\to 0$$의 $$\circ$$를 하나의 flat connection으로 묶는 것이고 ([정의 1](#def1)), 다른 하나는 $$z$$-방향 성분 $$\nabla^z_{\partial_z}$$이 grading $$\mu$$와 Euler field $$E$$의 정보를 나르는 것이다. $$z$$는 뒤에서 보듯 A-side와 B-side에아 공통으로 나타나는 universal parameter이므로, $$q$$와 달리 mirror가 식별하는 대상이 아니다.
+를 둔다. 이것은 이 base 위 quantum $$D$$-module의 (global) section들이 이루는 free module이고, 그 $$\mathcal{D}$$-module 구조는 Dubrovin connection $$\nabla^z$$로 미분하는 작용이 준다. 여기서 base의 두 방향은 성격이 전혀 다르다. 첫째로 *moduli 방향*은 본래 $$M$$의 flat 좌표 $$t^\alpha$$로, big quantum cohomology에서는 $$H^\ast(X)$$의 basis에 dual한 이 $$t^\alpha$$가 $$M = H^\ast(X, \mathbb{C})$$ 전체를 좌표화한다. 위의 small quantum product는 이 가운데 $$H^2(X)$$ 방향에만, 그것도 구조상수가 $$t \mapsto t + 2\pi i$$에 대해 주기적이어서 $$e^t$$를 통해서만 의존하므로, Novikov 좌표 $$q_a = e^{t^a}$$ ($$a = 1, \ldots, r = \dim H^2(X)$$)를 자연스러운 좌표로 삼는다. 이렇게 지수화하면 base는 벡터공간이 아니라 algebraic torus $$H^2(X, \mathbb{C}) / 2\pi i\, H^2(X, \mathbb{Z}) \cong (\mathbb{C}^\ast)^r$$, 곧 complexified Kähler 모수공간이 되며, spectral 방향 $$\mathbb{C}^\ast$$와 합치면 $$\Spec \mathbb{C}[z^{\pm 1}, q^{\pm 1}]$$로 적힌다. 이 방향의 작용 $$\nabla^z_{q_a\partial_{q_a}}$$이 곧 위의 QDE이며 quantum product의 $$q$$-의존성을 담고, mirror가 식별하는 것이 바로 이 $$q$$ 방향이다. 둘째로 *spectral 방향* $$z$$는 moduli가 아니라 auxiliary parameter로, 그 역할은 둘이다. 하나는 $$z\to\infty$$의 $$\nabla$$와 $$z\to 0$$의 $$\circ$$를 하나의 flat connection으로 묶는 것이고 ([정의 1](#def1)), 다른 하나는 $$z$$-방향 성분 $$\nabla^z_{\partial_z}$$이 grading $$\mu$$와 Euler field $$E$$의 정보를 나르는 것이다. $$z$$는 뒤에서 보듯 A-side와 B-side에 공통으로 나타나는 universal parameter이므로, $$q$$와 달리 mirror가 식별하는 대상이 아니다.
 
 같은 구조가 mirror의 B-side에서도 나타난다. $$X$$의 mirror를 $$\check{X}$$로 적자 (Fano $$X$$의 경우 Landau-Ginzburg model $$(\check{X}, W_q)$$). 여기서 A-model의 quantum product에 대응하는 것은 superpotential $$W_q$$의 *Jacobi ring* $$\Jac(W_q)$$로, [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 본 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 양쪽이 이어진다. 이 $$\Jac(W_q)$$를 deformation parameter $$q$$를 따라 모으면 base $$M$$ 위의 vector bundle을 이루고, 그 위에는 quantum $$D$$-module의 역할을 하는 flat connection, 곧 *Gauss-Manin connection* $$\nabla^{GM}$$이 있어 이를 하나의 $$\mathcal{D}$$-module, 곧 *Gauss-Manin system*으로 만든다. 그 section들이 이루는 free module이 *B-model state space*
 

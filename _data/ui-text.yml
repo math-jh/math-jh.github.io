@@ -12,7 +12,7 @@ en: &DEFAULT_EN
   pagination_next            : "Next"
   breadcrumb_home_label      : "Home"
   breadcrumb_separator       : "/"
-  menu_label                 : "Toggle menu"
+  menu_label                 : "Navigation"
   search_label               : "Toggle search"
   toc_label                  : "On this page"
   ext_link_label             : "Direct link"
@@ -611,7 +611,7 @@ ko: &DEFAULT_KO
   pagination_next            : "다음"
   breadcrumb_home_label      : "홈"
   breadcrumb_separator       : "/"
-  menu_label                 : "토글 메뉴"
+  menu_label                 : "Navigation"
   search_label               :
   toc_label                  : "목차"
   ext_link_label             : "직접 링크"

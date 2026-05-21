@@ -129,7 +129,82 @@
   }
 }
 
-/* Mobile-only styling for the <details> toggle wrapper. On desktop the
+/* ==========================================================================
+   Recents inside the sidebar nav_list (alongside category navigation).
+   On desktop, the right sidebar handles recents; these are for mobile.
+   ========================================================================== */
+
+.sidebar-recents__details {
+  margin: 0.5em 0 0 0;
+
+  &[open] > .sidebar-recents__toggle::after { content: "▴"; }
+}
+
+.sidebar-recents__toggle {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  font-family: $sans-serif-narrow;
+  font-size: $type-size-5;
+  font-weight: bold;
+  color: $highlight-color;
+  background: $background-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  list-style: none;
+
+  &::-webkit-details-marker { display: none; }
+  &::marker { content: ""; }
+
+  &::after {
+    content: "▾";
+    float: right;
+    transition: transform 0.15s ease;
+  }
+}
+
+.sidebar-recents__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: $type-size-7;
+
+  li a {
+    display: block;
+    padding: 0.2rem 0.75rem;
+    color: mix($gray, $background-color, 20%);
+    font-weight: 600;
+    line-height: 1.35;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    &:hover { color: $text-color; }
+  }
+}
+
+.sidebar-recents__meta {
+  color: $muted-text-color;
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+.sidebar-recents__empty {
+  margin: 0;
+  padding: 0.2rem 0.75rem;
+  color: $muted-text-color;
+  font-size: $type-size-7;
+}
+
+/* Sidebar recents: hide on mobile (shown in Navigation dropdown instead),
+   show on desktop (≥1024px) where the sidebar is visible. */
+@media (min-width: 1024px) {
+  .sidebar-recents-desktop { display: block; }
+}
+@media (max-width: 1023px) {
+  .sidebar-recents-desktop { display: none; }
+}
+
+/* ==========================================================================
+   Mobile-only styling for the <details> toggle wrapper. On desktop the
    @media (min-width: 1024px) block above sets the wrapper to flex and
    hides the toggle, so none of this applies there. */
 @media (max-width: 1023px) {

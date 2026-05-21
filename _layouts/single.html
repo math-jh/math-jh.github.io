@@ -2,6 +2,9 @@
 layout: default
 ---
 
+{% assign _show_recents = true %}
+{% if page.recents == false %}{% assign _show_recents = false %}{% endif %}
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
@@ -44,8 +47,6 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {% include translation-notice.html %}
-        {% assign _show_recents = true %}
-        {% if page.recents == false %}{% assign _show_recents = false %}{% endif %}
         {% if page.toc or _show_recents %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             {% if page.toc %}
@@ -54,9 +55,11 @@ layout: default
               {% include toc.html lang=lang sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>
             {% endif %}
+            <div class="sidebar-recents-desktop">
             {% if _show_recents %}
               {% include recents-sidebar.html %}
             {% endif %}
+            </div>
           </aside>
         {% endif %}
         {{ content }}
