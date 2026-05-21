@@ -184,6 +184,8 @@ permalink: /ko/misc/index_ko
 | <unselected id="decreasing">decreasing</unselected> | <selected>감소 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
 | <unselected id="decreasing_function">decreasing function</unselected> | <selected>감소함수 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) |  |
 | <selected id="dedekind_domain">dedekind domain &#9745;</selected> | <unselected>데데킨트 정역</unselected> | [\[가환대수학\] §인자](/ko/math/commutative_algebra/divisors) |  |
+| <selected id="deformation_retract">deformation retract &#9745;</selected> | <unselected>변형 수축</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
+| <selected id="deformation_retraction">deformation retraction &#9745;</selected> | <unselected>변형 수축</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
 | <selected id="degree">degree &#9745;</selected> | <unselected>차수</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)<br/>[\[선형대수학\] §부분공간](/ko/math/linear_algebra/subspaces)<br/>[\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) | |
 | <selected id="delta_functor">delta functor &#9745;</selected> | <unselected>델타 함자</unselected> | [\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors) |  |
 | <selected id="dense">dense &#9745;</selected> | <unselected>조밀</unselected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  | 
@@ -303,8 +305,10 @@ permalink: /ko/misc/index_ko
 
 | 영문 용어 | 한글 용어 | 정의 | 참고 |
 | --- | --- | --- | --- |
+| <selected id="galois">Galois &#9745;</selected> | <unselected>갈루아</unselected> | [\[체론\] §갈루아 확장](/ko/math/field_theory/galois_extension) |  |
 | <selected id="Galois_connection">Galois connection &#9745;</selected> | <unselected>갈루아 연결</unselected> | [\[집합론\] §필터와 아이디얼, 갈루아 대응](/ko/math/set_theory/filter_and_ideal)|  |
 | <selected id="Galois_correspondence">Galois correspondence &#9745;</selected> | <unselected>갈루아 대응</unselected> | [\[집합론\] §필터와 아이디얼, 갈루아 대응](/ko/math/set_theory/filter_and_ideal)|  |
+| <selected id="galois_group">Galois group &#9745;</selected> | <unselected>갈루아 군</unselected> | [\[체론\] §갈루아 확장](/ko/math/field_theory/galois_extension) |  |
 | <unselected id="Gaussian_elimination">Gaussian elimination</unselected> | <selected> 가우스 소거법 &#9745;</selected> | [\[선형대수학\] §가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination) |  |
 | <selected id="general_linear_group">general linear group &#9745;</selected> | <unselected>일반선형군</unselected> | [\[선형대수학\] §행렬](/ko/math/linear_algebra/matrices) |  |
 | <selected id="generate">generate &#9745;</selected> | <unselected>생성</unselected> | [\[대수적 구조\] §가군](/ko/math/algebraic_structures/modules)<br/>[\[다중선형대수학\] §기저](/ko/math/multilinear_algebra/basis_of_free_modules) |  |
@@ -345,6 +349,10 @@ permalink: /ko/misc/index_ko
 | <selected id="homogeneous_polynomial">homogeneous polynomial &#9745;</selected> | <unselected>동차다항식</unselected> | [\[환론\] §다항식환](/ko/math/ring_theory/polynomial_rings) |  |
 | <selected id="homology">homology &#9745;</selected> | <unselected>호몰로지</unselected> | [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology) |  |
 | <selected id="homomorphism">homomorphism &#9745;</selected> | <unselected>준동형사상</unselected> | [\[대수적 구조\] §대수적 구조](/ko/math/algebraic_structures/algebraic_structures) |  | 
+| <selected id="homotopic">homotopic &#9745;</selected> | <unselected>호모토픽</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
+| <selected id="homotopically_equivalent">homotopically equivalent &#9745;</selected> | <unselected>호모토피 동형</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
+| <selected id="homotopy">homotopy &#9745;</selected> | <unselected>호모토피</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
+| <selected id="homotopy_equivalence">homotopy equivalence &#9745;</selected> | <unselected>호모토피 동형사상</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
 | <selected id="hopf_monoid">hopf monoid &#9745;</selected> | <unselected>호프 모노이드</unselected> | [\[범주론\] §모노이드 대상](/ko/math/category_theory/monoid_objects) |  |
 | <selected id="hyperplane">hyperplane &#9745;</selected> | <unselected>초평면</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces) | |
 
@@ -524,12 +532,14 @@ permalink: /ko/misc/index_ko
 | <selected id="norm">norm &#9745;</selected> | <unselected>노름</unselected> | [\[선형대수학\] §내적공간](/ko/math/linear_algebra/inner_product_spaces)<br/>[\[환론\] §정역](/ko/math/ring_theory/integral_domains) |  |
 | <selected id="normal_bundle">normal bundle &#9745;</selected> | <unselected>법다발</unselected> | [\[미분기하학\] §리만계량](/ko/math/differential_geometry/Riemannian_metric) |  |
 | <selected id="normal_domain">normal domain &#9745;</selected> | <unselected>정규정역</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension) |  |
+| <selected id="normal_extension">normal extension &#9745;</selected> | <unselected>정규확대</unselected> | [\[체론\] §갈루아 확장](/ko/math/field_theory/galois_extension) |  |
 | <selected id="normal_hausdorff_space">normal hausdorff space &#9745;</selected> | <unselected>정규 하우스도르프 공간</unselected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
 | <selected id="normal_regular_space">normal regular space &#9745;</selected> | <unselected>정규정칙공간</unselected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
 | <selected id="normal_ring">normal ring &#9745;</selected> | <unselected>정규환</unselected> | [\[가환대수학\] §인자](/ko/math/commutative_algebra/divisors)<br/>[\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings) |  |
 | <selected id="normal_space">normal space &#9745;</selected> | <unselected>정규공간</unselected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
 | <selected id="normal_subgroup">normal subgroup &#9745;</selected> | <unselected>정규부분군</unselected> | [\[대수적 구조\] §몫군](/ko/math/algebraic_structures/quotient_groups) |  |
 | <selected id="normalization">normalization &#9745;</selected> | <unselected>정규화</unselected> | [\[가환대수학\] §인자](/ko/math/commutative_algebra/divisors)<br/>[\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings) |  |
+| <selected id="null-homotopic">null-homotopic &#9745;</selected> | <unselected>영호모토픽</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
 | <selected id="nullity">nullity &#9745;</selected> | <unselected>영공간의 차원</unselected> | [\[선형대수학\] §동형사상](/ko/math/linear_algebra/isomorphic_vector_spaces) |  |
 
 ## O
@@ -609,6 +619,7 @@ permalink: /ko/misc/index_ko
 | 영문 용어 | 한글 용어 | 정의 | 참고 |
 | --- | --- | --- | --- |
 | <selected id="quasi-coherent_sheaf">quasi-coherent sheaf &#9745;</selected> | <unselected>준연속층</unselected> | [\[대수기하학\] §Sheaf Cohomology](/ko/math/algebraic_varieties/sheaf_cohomology) | |
+| <selected id="quasi-galois_extension">quasi-Galois extension &#9745;</selected> | <unselected>준갈루아확대</unselected> | [\[체론\] §갈루아 확장](/ko/math/field_theory/galois_extension) |  |
 | <selected id="quasi-isomorphic">quasi-isomorphic &#9745;</selected> | <unselected>유사동형</unselected> | [\[호몰로지 대수학\] §긴 완전열](/ko/math/homological_algebra/long_exact_sequence) |  |
 | <selected id="quasi-isomorphism">quasi-isomorphism &#9745;</selected> | <unselected></unselected> | [\[호몰로지 대수학\] §긴 완전열](/ko/math/homological_algebra/long_exact_sequence) |  |
 | <selected id="quotient">quotient &#9745;</selected> | <unselected>몫</unselected> | [\[집합론\] §동치관계의 예시들](/ko/math/set_theory/examples_of_equivalence) (동치관계)<br/><br/>[\[환론\] §정역](/ko/math/ring_theory/integral_domains) |  |
@@ -644,7 +655,8 @@ permalink: /ko/misc/index_ko
 | <selected id="residue_field">residue field &#9745;</selected> | <unselected>잉여류체</unselected> | [\[가환대수학\] §국소화](/ko/math/commutative_algebra/localization) |  |
 | <selected id="restriction">restriction &#9745;</selected> | <unselected>제한</unselected> | [\[집합론\] §함수](/ko/math/set_theory/functions) (함수)<br/> [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
 | <selected id="restriction_of_scalar">restriction of scalar &#9745;</selected> | <unselected>스칼라의 제한</unselected> | [\[대수적 구조\] §스칼라의 변환](/ko/math/algebraic_structures/change_of_base_ring) |  |
-| <selected id="retraction">retraction &#9745;</selected> | <unselected>수축</unselected> | [\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section) | [Section](#section) |
+| <selected id="retract">retract &#9745;</selected> | <unselected>수축</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
+| <selected id="retraction">retraction &#9745;</selected> | <unselected>수축</unselected> | [\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section)<br/>[\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) | [Section](#section) |
 | <selected id="Riemannian_metric">Riemannian metric &#9745;</selected> | <unselected>리만 계량</unselected> | [\[미분기하학\] §리만 계량](/ko/math/differential_geometry/Riemannian_metric)<br/>[\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/Riemannian_metric) |  | 
 | <selected id="right_a_-module">right $A$-module &#9745;</selected> | <unselected>오른쪽 $A$-가군</unselected> | [\[대수적 구조\] §가군](/ko/math/algebraic_structures/modules) |  |
 | <selected id="right_action">right action &#9745;</selected> | <unselected>오른쪽 작용</unselected> | [\[대수적 구조\] §군의 작용](/ko/math/algebraic_structures/group_actions) |  |
@@ -676,8 +688,10 @@ permalink: /ko/misc/index_ko
 | <selected id="semi-direct_product">semi-direct product &#9745;</selected> | <unselected>반직접곱</unselected> | [\[군론\] §군의 확장](/ko/math/group_theory/extensions) |  |
 | <selected id="semigroup">semigroup &#9745;</selected> | <unselected>반군</unselected> | [\[대수적 구조\] §반군, 모노이드, 군](/ko/math/algebraic_structures/groups) |  | 
 | <selected id="semilocal_ring">semilocal ring &#9745;</selected> | <unselected>반국소환</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension) |  |
+| <selected id="separable_algebraic_closure">separable algebraic closure &#9745;</selected> | <unselected>분리가능폐포</unselected> | [\[체론\] §분리가능차수](/ko/math/field_theory/separable_degree) |  |
 | <selected id="separable_degree">separable degree &#9745;</selected> | <unselected>분리가능차수</unselected> | [\[체론\] §에탈대수](/ko/math/field_theory/etale_algebras) |  |
 | <selected id="separable_extension">separable extension &#9745;</selected> | <unselected>분해가능확대</unselected> | [\[체론\] §분리가능확대체](/ko/math/field_theory/separable_extensions) |  |
+| <selected id="separably_closed">separably closed &#9745;</selected> | <unselected>분리가능닫힘</unselected> | [\[체론\] §분리가능차수](/ko/math/field_theory/separable_degree) |  |
 | <unselected id="separated">separated</unselected> | <selected>분리가능 &#9745;</selected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
 | <unselected id="separated_by_closed_neighborhoods">separated by closed neighborhoods</unselected> | <selected>닫힌근방으로 분리가능 &#9745;</selected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
 | <unselected id="separated_by_continuous_functions">separated by continuous functions</unselected> | <selected>연속함수로 분리가능 &#9745;</selected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |

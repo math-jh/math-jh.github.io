@@ -30,3 +30,36 @@
     {% endfor %}
   </ul>
 </nav>
+
+{% assign _lang = lang %}
+{% assign _lang_full = "/" | append: _lang | append: "/" %}
+{% assign _recent_posts = site.posts | where_exp: "post", "post.permalink contains _lang_full" | sort: "date" | reverse %}
+{% assign _comments = site.data.recent_comments[_lang] | default: empty %}
+
+<details class="sidebar-recents__details" open>
+  <summary class="sidebar-recents__toggle">
+    <span class="material-icons md-18" style="vertical-align:-.2em">&#xE164;</span>
+    {{ site.data.ui-text[_lang].recent_posts | default: "Recent posts" }}
+  </summary>
+  <ul class="sidebar-recents__list">
+    {% for _post in _recent_posts limit: 5 %}
+      <li><a href="{{ _post.url | relative_url }}">{{ _post.title | markdownify | strip_html | truncate: 60 }}</a></li>
+    {% endfor %}
+  </ul>
+</details>
+
+<details class="sidebar-recents__details" open>
+  <summary class="sidebar-recents__toggle">
+    <span class="material-icons md-18" style="vertical-align:-.2em">&#xE0B9;</span>
+    {{ site.data.ui-text[_lang].recent_comments | default: "Recent comments" }}
+  </summary>
+  {% if _comments.size > 0 %}
+  <ul class="sidebar-recents__list">
+    {% for _c in _comments limit: 5 %}
+      <li><a href="{{ _c.permalink | relative_url }}#{{ _c.anchor | default: 'comments' }}">{{ _c.title | truncate: 50 }}{% if _c.author %} <span class="sidebar-recents__meta">— {{ _c.author }}</span>{% endif %}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="sidebar-recents__empty">—</p>
+  {% endif %}
+</details>
