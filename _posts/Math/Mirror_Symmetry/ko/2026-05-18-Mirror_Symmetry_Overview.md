@@ -1,5 +1,5 @@
 ---
-title: "Mirror Symmetry 개요"
+title: "거울대칭 개요"
 excerpt: "역사적 배경과 Hori-Vafa mirror"
 
 categories: [Math / Mirror Symmetry]

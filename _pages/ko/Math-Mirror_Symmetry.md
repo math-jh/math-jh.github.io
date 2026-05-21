@@ -1,5 +1,5 @@
 ---
-title: "거울 대칭"
+title: "거울대칭"
 layout: archive_custom
 permalink: /ko/mirror_symmetry/
 ---

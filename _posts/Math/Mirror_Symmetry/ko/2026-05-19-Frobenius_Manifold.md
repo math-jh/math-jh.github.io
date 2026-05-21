@@ -1,5 +1,5 @@
 ---
-title: "Frobenius manifold"
+title: "프로베니우스 다양체"
 excerpt: "Frobenius manifold와 WDVV equation"
 
 categories: [Math / Mirror Symmetry]
@@ -17,7 +17,7 @@ weight: 3
 
 ---
 
-우리는 [§Mirror Symmetry 개요](/ko/math/mirror_symmetry/overview)에서 toric Fano variety $$X_\Sigma$$의 mirror symmetry가 Jacobi ring과 quantum cohomology 사이의 isomorphism 
+우리는 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 toric Fano variety $$X_\Sigma$$의 mirror symmetry가 Jacobi ring과 quantum cohomology 사이의 isomorphism 
 
 $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 
@@ -61,7 +61,7 @@ $$\eta(\alpha \smile \beta, \gamma) = \eta(\alpha, \beta \smile \gamma)$$
 
 </div>
 
-한편, 우리는 [§Mirror Symmetry 개요](/ko/math/mirror_symmetry/overview)의 예시에서 Landau-Ginzburg model을 소개했는데, 이는 주어진 manifold $$\check{X}$$ 위에 주어진 holomorphic function $$W$$로 이루어지며, $$W$$의 critical point들을 담고 있는 Jacobi ring이 B-model의 정보를 들고 있었다. 국소적으로 이는 다음과 같이 적힌다. 
+한편, 우리는 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 예시에서 Landau-Ginzburg model을 소개했는데, 이는 주어진 manifold $$\check{X}$$ 위에 주어진 holomorphic function $$W$$로 이루어지며, $$W$$의 critical point들을 담고 있는 Jacobi ring이 B-model의 정보를 들고 있었다. 국소적으로 이는 다음과 같이 적힌다. 
 
 <div class="definition" markdown="1">
 
@@ -100,7 +100,7 @@ $$\Jac(f)=\bigoplus_{p\in \Crit(f)}\mathbb{C}$$
 
 로 분해되며, 이 basis에 대하여 residue pairing은 critical point basis 위에서 $$\operatorname{diag}(1/\det \Hess_p(f))$$로 대각화되는 것을 확인할 수 있다. 
 
-특별한 예시로 [§Mirror Symmetry 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서 본 $$\mathbb{P}^1$$의 Hori-Vafa superpotential
+특별한 예시로 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서 본 $$\mathbb{P}^1$$의 Hori-Vafa superpotential
 
 $$W_q = \x + \frac{q}{\x}$$
 
@@ -124,7 +124,7 @@ $$\eta(1, 1) = \frac{1}{2\sqrt{q}} + \frac{1}{-2\sqrt{q}} = 0, \qquad \eta(1, \x
 
 이 되어, 이 basis에 대한 $$\eta$$의 행렬표현은 $$\begin{pmatrix}0&1\\1&0\end{pmatrix}$$이다. 이는 정확히 $$\mathbb{P}^1$$의 classical Poincaré pairing과 일치하며, ring isomorphism $$\Jac(W_q) \cong QH^\ast(\mathbb{P}^1)$$이 실은 Frobenius algebra isomorphism이었음을 보여준다.
 
-같은 방식으로 [§Mirror Symmetry 개요, ⁋예시 6](/ko/math/mirror_symmetry/overview#ex6)에서 본 $$\mathbb{P}^2$$의 Hori-Vafa superpotential
+같은 방식으로 [§거울대칭 개요, ⁋예시 6](/ko/math/mirror_symmetry/overview#ex6)에서 본 $$\mathbb{P}^2$$의 Hori-Vafa superpotential
 
 $$W_q = \z_1 + \z_2 + \frac{q}{\z_1 \z_2}$$
 
@@ -325,7 +325,7 @@ $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partia
 
 $$F(t^0, t^1) = \frac{1}{2}(t^0)^2 t^1 + e^{t^1}$$
 
-로 주어진다. 여기서 첫째 항은 classical cup product의 기여이고, 둘째 항은 [§Mirror Symmetry 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 degree-$$1$$ rational curve의 기여 $$\langle H, H, H\rangle_{0,3,1} = 1$$이 $$H^2$$ 방향 좌표 $$t^1$$에 대해 (Euler vector field를 타고) 지수함수로 누적된 것이다. Metric은 이미 [예시 4](#ex4)에서 계산하였으며, 위의 식을 따라 $$F$$의 삼계도함수들을 계산하면
+로 주어진다. 여기서 첫째 항은 classical cup product의 기여이고, 둘째 항은 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 degree-$$1$$ rational curve의 기여 $$\langle H, H, H\rangle_{0,3,1} = 1$$이 $$H^2$$ 방향 좌표 $$t^1$$에 대해 (Euler vector field를 타고) 지수함수로 누적된 것이다. Metric은 이미 [예시 4](#ex4)에서 계산하였으며, 위의 식을 따라 $$F$$의 삼계도함수들을 계산하면
 
 $$\partial_{t^0}^3 F = 0,\qquad \partial_{t^0}^2\partial_{t^1} F = 1,\qquad \partial_{t^0}\partial_{t^1}^2 F = 0,\qquad \partial_{t^1}^3 F = e^{t^1}$$
 
@@ -353,7 +353,7 @@ $$\Lie_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 
 
 가 되어 $$\Lie_E(\circ) = \circ$$이다.
 
-이제 Novikov variable을 $$q = e^{t^1}$$로 두면, 둘째 식은 $$\partial_{t^1} \circ \partial_{t^1} = qe$$가 되며, 이는 다시 cohomology 언어로 옮겨오면 $$H \star H = q \cdot 1$$이므로 [§Mirror Symmetry 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 small quantum ring을 복원한다. 뿐만 아니라, 이제 이 isomorphism은 $$q=e^{t^1}$$의 변화에 따라 parametrize되어 기존의 ring isomorphism 수준에서의 mirror symmetry를 더 업그레이드한 것이다. 
+이제 Novikov variable을 $$q = e^{t^1}$$로 두면, 둘째 식은 $$\partial_{t^1} \circ \partial_{t^1} = qe$$가 되며, 이는 다시 cohomology 언어로 옮겨오면 $$H \star H = q \cdot 1$$이므로 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 small quantum ring을 복원한다. 뿐만 아니라, 이제 이 isomorphism은 $$q=e^{t^1}$$의 변화에 따라 parametrize되어 기존의 ring isomorphism 수준에서의 mirror symmetry를 더 업그레이드한 것이다. 
 
 </div>
 

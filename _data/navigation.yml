@@ -852,8 +852,12 @@ algebraic_varieties-en:
         url: en/math/algebraic_varieties/grassmannians
       - title: "Divisors"
         url: en/math/algebraic_varieties/divisors
+      - title: "Line Bundles and Vector Bundles"
+        url: en/math/algebraic_varieties/line_bundles
       - title: "Linear Systems"
         url: en/math/algebraic_varieties/linear_systems
+      - title: "Cohomology of Projective Space"
+        url: en/math/algebraic_varieties/cohomology_of_projective_spaces
       - title: "Serre Duality"
         url: en/math/algebraic_varieties/serre_duality
       - title: "The Riemann–Roch Theorem for Curves"
@@ -888,6 +892,8 @@ category_theory-en:
         url: en/math/category_theory/limits
       - title: "Monoidal Categories"
         url: en/math/category_theory/monoidal_categories
+      - title: "Monoid Objects"
+        url: en/math/category_theory/monoid_objects
       - title: "Adjoint Functors"
         url: en/math/category_theory/adjoints
       - title: "Abelian Categories"
@@ -936,6 +942,8 @@ commutative_algebra-en:
         url: en/math/commutative_algebra/system_of_parameters
       - title: "Regular Local Rings"
         url: en/math/commutative_algebra/regular_local_rings
+      - title: "Fractional Ideals"
+        url: en/math/commutative_algebra/fractional_ideals
       - title: "Divisors"
         url: en/math/commutative_algebra/divisors
       - title: "Noether Normalization"
@@ -958,6 +966,8 @@ field_theory-en:
         url: en/math/field_theory/algebraically_closed_extensions
       - title: "Radical Extensions"
         url: en/math/field_theory/radical_extensions
+      - title: "Étale Algebras"
+        url: en/math/field_theory/etale_algebras
       - title: "Separable Degree"
         url: en/math/field_theory/separable_degree
       - title: "Galois Extensions"
@@ -982,6 +992,85 @@ group_theory-en:
         url: en/math/group_theory/series_of_groups
       - title: "Sylow Theorems"
         url: en/math/group_theory/Sylow_theorems
+  - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
+homological_algebra-en:
+  - title: <a href="/en/homological_algebra/" class="sidebar_title">Homological Algebra</a>
+    children:
+      - title: "Diagram chasing"
+        url: en/math/homological_algebra/diagram_chasing
+      - title: "Homology"
+        url: en/math/homological_algebra/homology
+      - title: "The Long Exact Sequence"
+        url: en/math/homological_algebra/long_exact_sequence
+      - title: "Resolutions"
+        url: en/math/homological_algebra/resolutions
+      - title: "Derived Functors"
+        url: en/math/homological_algebra/derived_functors
+      - title: "Ext and Tor"
+        url: en/math/homological_algebra/ext_and_tor
+      - title: "Spectral Sequences"
+        url: en/math/homological_algebra/spectral_sequences
+      - title: "Derived Categories"
+        url: en/math/homological_algebra/derived_categories
+  - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
+linear_algebra-en:
+  - title: <a href="/en/linear_algebra/" class="sidebar_title">Linear Algebra</a>
+    children:
+      - title: "Abelian Groups and Fields"
+        url: en/math/linear_algebra/fields
+      - title: "Vector Spaces"
+        url: en/math/linear_algebra/vector_spaces
+      - title: "Subspaces"
+        url: en/math/linear_algebra/subspaces
+      - title: "Basis of a Vector Space"
+        url: en/math/linear_algebra/basis
+      - title: "Dimension of Vector Spaces"
+        url: en/math/linear_algebra/dimension
+      - title: "Linear Maps"
+        url: en/math/linear_algebra/linear_map
+      - title: "Isomorphisms"
+        url: en/math/linear_algebra/isomorphic_vector_spaces
+      - title: "Matrices"
+        url: en/math/linear_algebra/matrices
+      - title: "Space of Linear Maps"
+        url: en/math/linear_algebra/space_of_linear_maps
+      - title: "Fundamental Theorem of Linear Algebra"
+        url: en/math/linear_algebra/ftla
+      - title: "Determinant"
+        url: en/math/linear_algebra/determinant
+      - title: "Existence and Uniqueness of the Determinant"
+        url: en/math/linear_algebra/existence_and_uniqueness_of_determinant
+      - title: "Characteristic Polynomial"
+        url: en/math/linear_algebra/characteristic_polynomial
+      - title: "Eigenspace Decomposition"
+        url: en/math/linear_algebra/eigenspace_decomposition
+      - title: "Jordan Canonical Form"
+        url: en/math/linear_algebra/Jordan_canonical_form
+      - title: "Bilinear Forms"
+        url: en/math/linear_algebra/bilinear_form
+      - title: "Inner Product Spaces"
+        url: en/math/linear_algebra/inner_product_spaces
+      - title: "Least Squares Method"
+        url: en/math/linear_algebra/least_squares_method
+  - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
+lie_theory-en:
+  - title: <a href="/en/lie_theory/" class="sidebar_title">Lie Theory</a>
+    children:
+      - title: "Torus Action"
+        url: en/math/lie_theory/torus_action
+      - title: "Root Systems"
+        url: en/math/lie_theory/root_systems
+      - title: "Borel Subgroups and Flag Varieties"
+        url: en/math/lie_theory/borel_subgroup
   - title: 
     children:
       - title: "About This Site"
