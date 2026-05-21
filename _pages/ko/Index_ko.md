@@ -17,6 +17,8 @@ permalink: /ko/misc/index_ko
 | <selected id="additive_functor">additive functor &#9745;</selected> | <unselected>덧셈함자</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |
 | <selected id="adjunction">adjunction &#9745;</selected> | <unselected>수반쌍</unselected> | [\[범주론\] §수반함자](/ko/math/category_theory/adjoints) |  |
 | <selected id="affine_open_cover">affine open cover &#9745;</selected> | <unselected>아핀 열린덮개</unselected> | [\[대수기하학\] §Sheaf Cohomology](/ko/math/algebraic_varieties/sheaf_cohomology) | |
+| <selected id="algebraic">algebraic &#9745;</selected> | <unselected>대수적</unselected> | [\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) |  |
+| <selected id="algebraic_extension">algebraic extension &#9745;</selected> | <unselected>대수적 확장</unselected> | [\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) |  |
 | <unselected id="algebraic_multiplicity">algebraic multiplicity</unselected> | <selected> 대수적 중복도 &#9745;</selected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
 | <selected id="algebraically_closed_field">algebraically closed field &#9745;</selected> | <unselected>대수적으로 닫힌 체</unselected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
 | <selected id="alternating">alternating &#9745;</selected> | <unselected>교대적</unselected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form) <br/> [\[선형대수학\] §행렬식](/ko/math/linear_algebra/determinant) |  |
@@ -182,7 +184,7 @@ permalink: /ko/misc/index_ko
 | <unselected id="decreasing">decreasing</unselected> | <selected>감소 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
 | <unselected id="decreasing_function">decreasing function</unselected> | <selected>감소함수 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) |  |
 | <selected id="dedekind_domain">dedekind domain &#9745;</selected> | <unselected>데데킨트 정역</unselected> | [\[가환대수학\] §인자](/ko/math/commutative_algebra/divisors) |  |
-| <selected id="degree">degree &#9745;</selected> | <unselected>차수</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)<br/>[\[선형대수학\] §부분공간](/ko/math/linear_algebra/subspaces) | |
+| <selected id="degree">degree &#9745;</selected> | <unselected>차수</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)<br/>[\[선형대수학\] §부분공간](/ko/math/linear_algebra/subspaces)<br/>[\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) | |
 | <selected id="delta_functor">delta functor &#9745;</selected> | <unselected>델타 함자</unselected> | [\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors) |  |
 | <selected id="dense">dense &#9745;</selected> | <unselected>조밀</unselected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  | 
 | <selected id="dense_subset">dense subset &#9745;</selected> | <unselected>조밀 부분집합</unselected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  |
@@ -483,6 +485,7 @@ permalink: /ko/misc/index_ko
 | <selected id="meet">meet &#9745;</selected> | <unselected>만남</unselected> | [\[집합론\] §유향집합](/ko/math/set_theory/directed_set)|  |
 | <selected id="minimal">minimal &#9745;</selected> | <unselected>극소</unselected> | [\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)|  |
 | <selected id="minimal_element">minimal element &#9745;</selected> | <unselected>극소원소</unselected> | [\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set) |  |
+| <selected id="minimal_polynomial">minimal polynomial &#9745;</selected> | <unselected>최소다항식</unselected> | [\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) |  |
 | <unselected id="minimum-norm_solution">minimum-norm solution</unselected> | <selected>최소노름해 &#9745;</selected> | [\[선형대수학\] §최소제곱법](/ko/math/linear_algebra/least_squares_method) |  |
 | <selected id="monogenous">monogenous &#9745;</selected> | <unselected>단일생성</unselected> | [\[다중선형대수학\] §기저](/ko/math/multilinear_algebra/basis_of_free_modules) |  |
 | <selected id="monoid">monoid &#9745;</selected> | <unselected>모노이드</unselected> | [\[대수적 구조\] §반군, 모노이드, 군](/ko/math/algebraic_structures/groups)<br/>[\[범주론\] §모노이드 범주](/ko/math/category_theory/monoidal_categories) |  | 
@@ -767,6 +770,8 @@ permalink: /ko/misc/index_ko
 | <selected id="total_space">total space &#9745;</selected> | <unselected>전체공간</unselected> | [\[미분다양체\] §접다발과 여접다발](/ko/math/manifold/tangent_and_cotangent_bundles) |
 | <selected id="totally_ordered_set">totally ordered set &#9745;</selected> | <unselected>전순서집합</unselected> | [\[집합론\] §유향집합](/ko/math/set_theory/directed_set)|  |
 | <selected id="trace">trace &#9745;</selected> | <unselected>대각합</unselected> | [\[선형대수학\] §행렬](/ko/math/linear_algebra/matrices) |  |
+| <selected id="transcendental">transcendental &#9745;</selected> | <unselected>초월적</unselected> | [\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) |  |
+| <selected id="transcendental_extension">transcendental extension &#9745;</selected> | <unselected>초월적 확장</unselected> | [\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) |  |
 | <selected id="transition_function">transition function &#9745;</selected> | <unselected>전이함수</unselected> | [\[대수기하학\] §선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles) | |
 | <selected id="transition_map">transition map &#9745;</selected> | <unselected>좌표변환사상</unselected> | [\[미분다양체\] §미분다양체](/ko/math/manifold/smooth_manifolds) |
 | <unselected id="transition_matrix">transition matrix</unselected> | <selected>기저변환행렬 &#9745;</selected> | [\[선형대수학\] §기저변환](/ko/math/linear_algebra/change_of_basis) |  |
