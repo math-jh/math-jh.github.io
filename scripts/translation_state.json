@@ -131,7 +131,7 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-05-Sheaf_Cohomology.md": {
       "status": "failed",
-      "last_attempt_ts": 1779354901.9833639,
+      "last_attempt_ts": 1779443102.161177,
       "error": "timeout after 900s"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md": {
@@ -942,7 +942,7 @@
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-19-Gaussian_Elimination.md": {
       "status": "failed",
-      "last_attempt_ts": 1779358501.618166,
+      "last_attempt_ts": 1779446701.6810195,
       "error": "timeout after 900s"
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-28-Characteristic_Polynomial.md": {
@@ -1379,11 +1379,31 @@
       "in_chars": 13470,
       "out_chars": 14438,
       "reason": "pending"
+    },
+    "_posts/Math/Representation_Theory/ko/2026-02-14-Character_Theory.md": {
+      "status": "done",
+      "last_attempt_ts": 1779441205.335968,
+      "en_path": "_posts/Math/Representation_Theory/en/2026-02-14-Character_Theory.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T09:00:01+00:00",
+      "in_chars": 16424,
+      "out_chars": 17535,
+      "reason": "pending"
+    },
+    "_posts/Math/Riemannian_Geometry/ko/2022-12-16-Connection.md": {
+      "status": "done",
+      "last_attempt_ts": 1779444741.1210327,
+      "en_path": "_posts/Math/Riemannian_Geometry/en/2022-12-16-Connection.md",
+      "ko_git_commit_ts": 1772796001.0,
+      "translated_at": "2026-05-22T10:00:01+00:00",
+      "in_chars": 12420,
+      "out_chars": 12725,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 128,
-    "total_in_chars": 1731187,
-    "total_out_chars": 1690338
+    "total_done": 130,
+    "total_in_chars": 1760031,
+    "total_out_chars": 1720598
   }
 }
