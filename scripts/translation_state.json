@@ -1315,11 +1315,55 @@
       "in_chars": 11431,
       "out_chars": 12066,
       "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-10-06-Change_of_Basis.md": {
+      "status": "done",
+      "last_attempt_ts": 1779426276.4413776,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-10-06-Change_of_Basis.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T05:00:01+00:00",
+      "in_chars": 6519,
+      "out_chars": 5602,
+      "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-10-06-Tensor_Product_of_Matrices.md": {
+      "status": "stub",
+      "last_attempt_ts": 1779427802.2715285
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-10-07-Determinants.md": {
+      "status": "done",
+      "last_attempt_ts": 1779428234.3473868,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-10-07-Determinants.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T05:30:02+00:00",
+      "in_chars": 12838,
+      "out_chars": 13488,
+      "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-10-13-Norms_and_Traces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779429772.606354,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-10-13-Norms_and_Traces.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T06:00:01+00:00",
+      "in_chars": 6979,
+      "out_chars": 6188,
+      "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2025-04-18-Differential_Modules.md": {
+      "status": "done",
+      "last_attempt_ts": 1779432002.2362723,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2025-04-18-Differential_Modules.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T06:30:01+00:00",
+      "in_chars": 22737,
+      "out_chars": 25222,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 122,
-    "total_in_chars": 1650020,
-    "total_out_chars": 1605284
+    "total_done": 126,
+    "total_in_chars": 1699093,
+    "total_out_chars": 1655784
   }
 }
