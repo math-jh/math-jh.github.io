@@ -477,6 +477,7 @@ permalink: /ko/misc/index_ko
 
 | 영문 용어 | 한글 용어 | 정의 | 참고 |
 | --- | --- | --- | --- |
+| <selected id="landau-ginzburg_model">landau-ginzburg model &#9745;</selected> | <unselected>란다우-긴즈부르크 모델</unselected> | [\[거울대칭\] §거울대칭 개요](/ko/math/mirror_symmetry/overview) |  |
 | <selected id="lattice">lattice &#9745;</selected> | <unselected>격자</unselected> | [\[집합론\] §유향집합](/ko/math/set_theory/directed_set)<br/>[\[Toric 기하학\] §아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties) |  |
 | <selected id="Laurent_series">Laurent series &#9745;</selected> | <unselected>로랑 급수</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces) | |
 | <unselected id="leading_coefficient">leading coefficient</unselected> | <selected>선행계수 &#9745;</selected> | [\[선형대수학\] §가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination) |  |
