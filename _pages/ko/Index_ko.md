@@ -12,6 +12,7 @@ permalink: /ko/misc/index_ko
 | --- | --- | --- | --- |
 | <selected id="abelian_category">abelian category &#9745;</selected> | <unselected>아벨 카테고리</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |
 | <selected id="abelian_group">abelian group &#9745;</selected> | <unselected>가환군</unselected> | [\[대수적 구조\] §반군, 모노이드, 군](/ko/math/algebraic_structures/groups)<br/>[\[선형대수학\] §가환군과 체](/ko/math/linear_algebra/fields) | [Group](#group) |
+| <selected id="action">action &#9745;</selected> | <unselected>작용</unselected> | [\[스킴 이론\] §대수적 군](/ko/math/scheme_theory/algebraic_groups) |  |
 | <selected id="acyclic_sheaf">acyclic sheaf &#9745;</selected> | <unselected>비순환층</unselected> | [\[대수기하학\] §Sheaf Cohomology](/ko/math/algebraic_varieties/sheaf_cohomology) | |
 | <selected id="additive_category">additive category &#9745;</selected> | <unselected>덧셈 카테고리</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |
 | <selected id="additive_functor">additive functor &#9745;</selected> | <unselected>덧셈함자</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |
@@ -20,11 +21,14 @@ permalink: /ko/misc/index_ko
 | <selected id="affine_algebraic_set">affine algebraic set &#9745;</selected> | <unselected>아핀 대수적 집합</unselected> | [\[대수기하학\] §아핀다양체](/ko/math/algebraic_varieties/affine_varieties) |  |
 | <selected id="affine_cone">affine cone &#9745;</selected> | <unselected>아핀 뿔</unselected> | [\[대수기하학\] §사영다양체](/ko/math/algebraic_varieties/projective_varieties) |  |
 | <selected id="affine_open_cover">affine open cover &#9745;</selected> | <unselected>아핀 열린덮개</unselected> | [\[대수기하학\] §Sheaf Cohomology](/ko/math/algebraic_varieties/sheaf_cohomology) | |
+| <selected id="affine_scheme">affine scheme &#9745;</selected> | <unselected>아핀스킴</unselected> | [\[스킴 이론\] §아핀스킴](/ko/math/scheme_theory/affine_schemes) |  |
 | <selected id="affine_toric_variety">affine toric variety &#9745;</selected> | <unselected>아핀 토릭 다양체</unselected> | [\[Toric 기하학\] §아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties) |  |
 | <selected id="affine_variety">affine variety &#9745;</selected> | <unselected>아핀다양체</unselected> | [\[대수기하학\] §아핀다양체](/ko/math/algebraic_varieties/affine_varieties) |  |
 | <selected id="algebraic">algebraic &#9745;</selected> | <unselected>대수적</unselected> | [\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) |  |
 | <selected id="algebraic_extension">algebraic extension &#9745;</selected> | <unselected>대수적 확장</unselected> | [\[체론\] §대수적 확장](/ko/math/field_theory/algebraic_extensions) |  |
+| <selected id="algebraic_group">algebraic group &#9745;</selected> | <unselected>대수적 군</unselected> | [\[스킴 이론\] §대수적 군](/ko/math/scheme_theory/algebraic_groups) |  |
 | <unselected id="algebraic_multiplicity">algebraic multiplicity</unselected> | <selected> 대수적 중복도 &#9745;</selected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
+| <selected id="algebraic_torus">algebraic torus &#9745;</selected> | <unselected>대수적 토러스</unselected> | [\[스킴 이론\] §대수적 군](/ko/math/scheme_theory/algebraic_groups) |  |
 | <selected id="algebraically_closed_field">algebraically closed field &#9745;</selected> | <unselected>대수적으로 닫힌 체</unselected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial)<br/>[\[체론\] §대수적 폐포](/ko/math/field_theory/algebraically_closed_extensions) |  |
 | <selected id="alternating">alternating &#9745;</selected> | <unselected>교대적</unselected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form) <br/> [\[선형대수학\] §행렬식](/ko/math/linear_algebra/determinant) |  |
 | <selected id="alternating_multilinear_map">alternating multilinear map &#9745;</selected> | <unselected>교대다중선형사상</unselected> | [\[선형대수학\] §행렬식](/ko/math/linear_algebra/determinant) |  |
@@ -35,6 +39,7 @@ permalink: /ko/misc/index_ko
 | <unselected id="apex">apex</unselected> | <selected>꼭짓점 &#9745;</selected> | [\[범주론\] §극한](/ko/math/category_theory/limits) |  |
 | <selected id="artinian">artinian &#9745;</selected> | <unselected>아틴가군</unselected> | [\[가환대수학\] §기본 개념들](/ko/math/commutative_algebra/basic_notions) |  |
 | <selected id="ascending_chain_condition">ascending chain condition &#9745;</selected> | <unselected>오름사슬조건</unselected> | [\[가환대수학\] §기본 개념들](/ko/math/commutative_algebra/basic_notions) |  |
+| <selected id="associated_point">associated point &#9745;</selected> | <unselected>동반점</unselected> | [\[스킴 이론\] §스킴의 대수구조](/ko/math/scheme_theory/algebra_of_schemes) |  |
 | <selected id="associated_prime_ideal">associated prime ideal &#9745;</selected> | <unselected>동반소아이디얼</unselected> | [\[가환대수학\] §동반소아이디얼](/ko/math/commutative_algebra/associated_primes) |  |
 | <unselected id="associative">associative</unselected> | <selected>결합법칙을 만족한다 &#9745;</selected> | [\[대수적 구조\] §대수적 구조](/ko/math/algebraic_structures/algebraic_structures) |  |
 | <selected id="associative_a_-algebra">associative $A$-algebra &#9745;</selected> | <unselected>결합 $A$-대수</unselected> | [\[대수적 구조\] §대수](/ko/math/algebraic_structures/algebras) |  |
@@ -102,7 +107,7 @@ permalink: /ko/misc/index_ko
 | <selected id="chain_homotopy">chain homotopy &#9745;</selected> | <unselected>사슬 호모토피</unselected> | [\[호몰로지 대수학\] §긴 완전열](/ko/math/homological_algebra/long_exact_sequence) |  |
 | <selected id="chain_map">chain map &#9745;</selected> | <unselected>사슬사상</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories)<br/>[\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology) |  |
 | <unselected id="change-of-basis_matrix">change-of-basis matrix</unselected> | <selected>기저변환행렬 &#9745;</selected> | [\[선형대수학\] §선형대수학의 기본정리](/ko/math/linear_algebra/ftla)<br/>[\[다중선형대수학\] §기저변환](/ko/math/multilinear_algebra/change_of_basis) |  |
-| <selected id="character">character &#9745;</selected> | <unselected>지표</unselected> | [\[표현론\] §표현의 지표](/ko/math/representation_theory/character_theory) |  |
+| <selected id="character">character &#9745;</selected> | <unselected>지표</unselected> | [\[표현론\] §표현의 지표](/ko/math/representation_theory/character_theory)<br/>[\[스킴 이론\] §대수적 군](/ko/math/scheme_theory/algebraic_groups) |  |
 | <selected id="characteristic">characteristic &#9745;</selected> | <unselected>표수</unselected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form) |  |
 | <unselected id="characteristic_function">characteristic function</unselected> | <selected>특성함수 &#9745;</selected> | [\[집합론\] §자연수와 무한집합](/ko/math/set_theory/natural_numbers)|  |
 | <unselected id="characteristic_polynomial">characteristic polynomial</unselected> | <selected>특성다항식 &#9745;</selected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial)<br/>[\[다중선형대수학\] §행렬식](/ko/math/multilinear_algebra/determinants) |  |
@@ -113,6 +118,7 @@ permalink: /ko/misc/index_ko
 | <selected id="class_function">class function &#9745;</selected> | <unselected>유함수</unselected> | [\[표현론\] §표현의 지표](/ko/math/representation_theory/character_theory) |  |
 | <selected id="class_group">class group &#9745;</selected> | <unselected>유군</unselected> | [\[가환대수학\] §인자](/ko/math/commutative_algebra/divisors) |  |
 | <unselected id="closed">closed</unselected> | <selected>닫힌 &#9745;</selected> | [\[집합론\] §유향집합](/ko/math/set_theory/directed_set) (interval) <br/> [\[집합론\] §필터와 아이디얼, 갈루아 대응](/ko/math/set_theory/filter_and_ideal) (lattice) <br/> [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  |
+| <selected id="closed_embedding">closed embedding &#9745;</selected> | <unselected>닫힌 몰입</unselected> | [\[스킴 이론\] §닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes) |  |
 | <unselected id="closed_interval">closed interval</unselected> | <selected>닫힌구간 &#9745;</selected> | [\[집합론\] §유향집합](/ko/math/set_theory/directed_set) |  |
 | <selected id="closed_mapping">closed mapping &#9745;</selected> | <unselected>닫힌사상</unselected> | [\[위상수학\] §열린사상과 닫힌사상](/ko/math/topology/open_mappings_and_closed_mappings) |  |
 | <unselected id="closed_set">closed set</unselected> | <selected>닫힌집합 &#9745;</selected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  |
@@ -383,6 +389,7 @@ permalink: /ko/misc/index_ko
 | <selected id="homotopy">homotopy &#9745;</selected> | <unselected>호모토피</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
 | <selected id="homotopy_equivalence">homotopy equivalence &#9745;</selected> | <unselected>호모토피 동형사상</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
 | <selected id="hopf_monoid">hopf monoid &#9745;</selected> | <unselected>호프 모노이드</unselected> | [\[범주론\] §모노이드 대상](/ko/math/category_theory/monoid_objects) |  |
+| <selected id="hyperelliptic_curve">hyperelliptic curve &#9745;</selected> | <unselected>초타원곡선</unselected> | [\[대수기하학\] §곡선에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_theorem) |  |
 | <selected id="hyperplane">hyperplane &#9745;</selected> | <unselected>초평면</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces) | |
 | <unselected id="hypersurface">hypersurface</unselected> | <selected>초곡면 &#9745;</selected> | [\[대수기하학\] §아핀다양체](/ko/math/algebraic_varieties/affine_varieties) |  |
 
@@ -414,7 +421,7 @@ permalink: /ko/misc/index_ko
 | <selected id="inner_automorphism">inner automorphism &#9745;</selected> | <unselected>내부자기동형사상</unselected> | [\[대수적 구조\] §군의 작용](/ko/math/algebraic_structures/group_actions) |  |
 | <unselected id="inner_product">inner product</unselected> | <selected> 내적 &#9745;</selected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form)<br/>[\[선형대수학\] §내적공간](/ko/math/linear_algebra/inner_product_spaces) |  |
 | <unselected id="inner_product_space">inner product space</unselected> | <selected> 내적공간 &#9745;</selected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form)<br/>[\[선형대수학\] §내적공간](/ko/math/linear_algebra/inner_product_spaces) |  |
-| <selected id="integral">integral &#9745;</selected> | <unselected>정수적</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension) |  |
+| <selected id="integral">integral &#9745;</selected> | <unselected>정수적</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension)<br/>[\[스킴 이론\] §스킴의 대수구조](/ko/math/scheme_theory/algebra_of_schemes) |  |
 | <selected id="integral_domain">integral domain &#9745;</selected> | <unselected>정역</unselected> | [\[대수적 구조\] §분수체](/ko/math/algebraic_structures/field_of_fractions) |  |
 | <selected id="integral_extension">integral extension &#9745;</selected> | <unselected>정수적 확장</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension) |  |
 | <selected id="integral_flow">integral flow &#9745;</selected> | <unselected>적분곡선</unselected> | [\[미분다양체\] §벡터장](/ko/math/manifold/vector_fields) 
@@ -422,6 +429,7 @@ permalink: /ko/misc/index_ko
 | <selected id="interior">interior &#9745;</selected> | <unselected>내부</unselected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  | 
 | <selected id="interior_multiplication">interior multiplication &#9745;</selected> | <unselected>내부곱</unselected> | [\[미분다양체\] §미분형식](/ko/math/manifold/differential_forms) |  |
 | <unselected id="intersection">intersection</unselected> | <selected>교집합 &#9745;</selected> | [\[집합론\] §ZFC 공리계](/ko/math/set_theory/zfc_axioms) <br/> [\[집합론\] §합집합과 교집합](/ko/math/set_theory/union_and_intersection) |  |
+| <selected id="intersection_number">intersection number &#9745;</selected> | <unselected>교차수</unselected> | [\[대수기하학\] §곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces) |  |
 | <unselected id="interval">interval</unselected> | <selected>구간 &#9745;</selected> | [\[집합론\] §유향집합](/ko/math/set_theory/directed_set)|  |
 | <selected id="invariant_basis_number_property">invariant basis number property &#9745;</selected> | <unselected>불변 기저수 성질</unselected> | [\[다중선형대수학\] §기저](/ko/math/multilinear_algebra/basis_of_free_modules) |  |
 | <unselected id="inverse">inverse</unselected> | <selected>역 &#9745;</selected> | [\[집합론\] §이항관계들 사이의 연산](/ko/math/set_theory/operation_of_binary_relations) (이항관계)<br/>[\[집합론\] §함수들 사이의 연산](/ko/math/set_theory/operation_of_functions) (함수) <br/> [\[대수적 구조\] §반군, 모노이드, 군](/ko/math/algebraic_structures/groups)<br/>[\[대수적 구조\] §대수적 구조](/ko/math/algebraic_structures/algebraic_structures)<br/>[\[범주론\] §범주](/ko/math/category_theory/categories) |  | 
@@ -507,6 +515,7 @@ permalink: /ko/misc/index_ko
 | <selected id="locally_connected">locally connected &#9745;</selected> | <unselected>국소연결</unselected> | [\[위상수학\] §연결공간](/ko/math/topology/connected_spaces) |  |
 | <selected id="locally_finite">locally finite &#9745;</selected> | <unselected>국소적으로 유한</unselected> | [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts) |  |
 | <selected id="locally_free_sheaf">locally free sheaf &#9745;</selected> | <unselected>국소 자유층</unselected> | [\[대수기하학\] §선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles) | |
+| <selected id="locally_ringed_space">locally ringed space &#9745;</selected> | <unselected>국소적 환 달린 공간</unselected> | [\[스킴 이론\] §아핀스킴](/ko/math/scheme_theory/affine_schemes) |  |
 | <unselected id="locally_small_category">locally small category</unselected> | <selected> 국소적으로 작은 카테고리 &#9745;</selected> | [\[범주론\] §카테고리](/ko/math/category_theory/categories) |  |
 | <selected id="long_exact_sequence">long exact sequence &#9745;</selected> | <unselected>긴 완전열</unselected> | [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology) |  |
 | <selected id="lower_bound">lower bound &#9745;</selected> | <unselected>하계</unselected> | [\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)|  |
@@ -564,6 +573,7 @@ permalink: /ko/misc/index_ko
 | <selected id="non-degenerate_bilinear_form">non-degenerate bilinear form &#9745;</selected> | <unselected>비퇴화 쌍선형형식</unselected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form) |  |
 | <selected id="nondegenerate">nondegenerate &#9745;</selected> | <unselected>비퇴화</unselected> | [\[선형대수학\] §쌍대공간](/ko/math/linear_algebra/dual_space) (pairing) <br/> [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form) (bilinear form) |  |
 | <selected id="norm">norm &#9745;</selected> | <unselected>노름</unselected> | [\[선형대수학\] §내적공간](/ko/math/linear_algebra/inner_product_spaces)<br/>[\[환론\] §정역](/ko/math/ring_theory/integral_domains) |  |
+| <selected id="normal">normal &#9745;</selected> | <unselected>정규스킴</unselected> | [\[스킴 이론\] §스킴의 대수구조](/ko/math/scheme_theory/algebra_of_schemes) |  |
 | <selected id="normal_bundle">normal bundle &#9745;</selected> | <unselected>법다발</unselected> | [\[미분기하학\] §리만계량](/ko/math/differential_geometry/Riemannian_metric) |  |
 | <selected id="normal_domain">normal domain &#9745;</selected> | <unselected>정규정역</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension) |  |
 | <selected id="normal_extension">normal extension &#9745;</selected> | <unselected>정규확대</unselected> | [\[체론\] §갈루아 확장](/ko/math/field_theory/galois_extension) |  |
@@ -575,6 +585,7 @@ permalink: /ko/misc/index_ko
 | <selected id="normalization">normalization &#9745;</selected> | <unselected>정규화</unselected> | [\[가환대수학\] §인자](/ko/math/commutative_algebra/divisors)<br/>[\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings) |  |
 | <selected id="null-homotopic">null-homotopic &#9745;</selected> | <unselected>영호모토픽</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
 | <selected id="nullity">nullity &#9745;</selected> | <unselected>영공간의 차원</unselected> | [\[선형대수학\] §동형사상](/ko/math/linear_algebra/isomorphic_vector_spaces) |  |
+| <selected id="numerically_equivalent">numerically equivalent &#9745;</selected> | <unselected>수치적으로 동치</unselected> | [\[대수기하학\] §곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces) |  |
 
 ## O
 
@@ -679,12 +690,13 @@ permalink: /ko/misc/index_ko
 | <selected id="radical">radical &#9745;</selected> | <unselected>근기</unselected> | [\[가환대수학\] §국소화의 성질들](/ko/math/commutative_algebra/properties_of_localization) |  |
 | <selected id="radical_ideal">radical ideal &#9745;</selected> | <unselected>근기아이디얼</unselected> | [\[가환대수학\] §영점정리](/ko/math/commutative_algebra/nullstellensatz) |  |
 | <selected id="rank">rank &#9745;</selected> | <unselected>랭크</unselected> | [\[선형대수학\] §동형사상](/ko/math/linear_algebra/isomorphic_vector_spaces) (linear map)<br/> [\[미분다양체\] §접다발과 여접다발](/ko/math/manifold/tangent_and_cotangent_bundles) (vector bundle)<br/>[\[다중선형대수학\] §기저](/ko/math/multilinear_algebra/basis_of_free_modules) |  |
-| <selected id="rational_function">rational function &#9745;</selected> | <unselected>유리함수</unselected> | [\[대수기하학\] §유리사상](/ko/math/algebraic_varieties/rational_maps) |  |
+| <selected id="rational_function">rational function &#9745;</selected> | <unselected>유리함수</unselected> | [\[대수기하학\] §유리사상](/ko/math/algebraic_varieties/rational_maps)<br/>[\[스킴 이론\] §스킴의 대수구조](/ko/math/scheme_theory/algebra_of_schemes) |  |
 | <selected id="rational_map">rational map &#9745;</selected> | <unselected>유리사상</unselected> | [\[대수기하학\] §유리사상](/ko/math/algebraic_varieties/rational_maps) |  |
 | <selected id="recursion_theorem">recursion theorem &#9745;</selected> | <unselected>재귀정리</unselected> | [\[집합론\] §서수와 정렬집합](/ko/math/set_theory/ordinals)|  |
 | <selected id="reduced">reduced &#9745;</selected> | <unselected>기약</unselected> | [\[대수적 구조\] §분수체](/ko/math/algebraic_structures/field_of_fractions) |  |
 | <unselected id="reduced_row_echelon_matrix">reduced row échelon matrix</unselected> | <selected>기약행사다리꼴행렬 &#9745;</selected> | [\[선형대수학\] §가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination) |  |
 | <unselected id="reduced_row_échelon_matrix_rref">reduced row échelon matrix, rref</unselected> | <selected>기약행사다리꼴행렬 &#9745;</selected> | [\[선형대수학\] §가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination) |  |
+| <selected id="reduced_scheme">reduced scheme &#9745;</selected> | <unselected>축소스킴</unselected> | [\[스킴 이론\] §스킴의 대수구조](/ko/math/scheme_theory/algebra_of_schemes) |  |
 | <selected id="rees_algebra">rees algebra &#9745;</selected> | <unselected>리스 대수</unselected> | [\[가환대수학\] §평탄성과 국소화](/ko/math/commutative_algebra/local_criterion_for_flatness) |  |
 | <selected id="refinement">refinement &#9745;</selected> | <unselected>세분화</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_varieties/sheaf_cohomology) |  |
 | <selected id="reflexive">reflexive &#9745;</selected> | <unselected>반사적</unselected> | [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations) | [Binary relation](#binary_relation) |
@@ -698,7 +710,7 @@ permalink: /ko/misc/index_ko
 | <selected id="relatively_algebraically_closed_field">relatively algebraically closed field &#9745;</selected> | <unselected>상대적으로 대수적으로 닫힌 체</unselected> | [\[체론\] §대수적 폐포](/ko/math/field_theory/algebraically_closed_extensions) |  |
 | <unselected id="remainder">remainder</unselected> | <selected>나머지 &#9745;</selected> | [\[환론\] §정역](/ko/math/ring_theory/integral_domains) |  |
 | <selected id="representable_functor">representable functor &#9745;</selected> | <unselected>표현 가능한 함자</unselected> | [\[범주론\] §표현가능한 함자](/ko/math/category_theory/representable_functors) |  |
-| <selected id="representation">representation &#9745;</selected> | <unselected>표현</unselected> | [\[범주론\] §표현가능한 함자](/ko/math/category_theory/representable_functors)<br/>[\[표현론\] §유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups)<br/>[\[리 이론\] §원환면의 작용](/ko/math/lie_theory/torus_action) |  |
+| <selected id="representation">representation &#9745;</selected> | <unselected>표현</unselected> | [\[범주론\] §표현가능한 함자](/ko/math/category_theory/representable_functors)<br/>[\[표현론\] §유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups)<br/>[\[리 이론\] §원환면의 작용](/ko/math/lie_theory/torus_action)<br/>[\[스킴 이론\] §대수적 군](/ko/math/scheme_theory/algebraic_groups) |  |
 | <selected id="residue_field">residue field &#9745;</selected> | <unselected>잉여류체</unselected> | [\[가환대수학\] §국소화](/ko/math/commutative_algebra/localization) |  |
 | <selected id="restriction">restriction &#9745;</selected> | <unselected>제한</unselected> | [\[집합론\] §함수](/ko/math/set_theory/functions) (함수)<br/> [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
 | <selected id="restriction_of_scalar">restriction of scalar &#9745;</selected> | <unselected>스칼라의 제한</unselected> | [\[대수적 구조\] §스칼라의 변환](/ko/math/algebraic_structures/change_of_base_ring) |  |
