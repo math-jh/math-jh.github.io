@@ -1090,3 +1090,64 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `relative dualizing sheaf` | multi-word English emphasis — possibly a definition |
 | `exceptional inverse image` | multi-word English emphasis — possibly a definition |
 
+## 곡선에서의 리만-로흐 정리
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-04-22-Riemann_Roch_Theorem.md`
+- permalink: `/ko/math/algebraic_varieties/riemann_roch_theorem`
+- scanned: 2026-05-22T09:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `complete linear system` | multi-word English emphasis — possibly a definition |
+| `infinite` | looks like emphasis (no <sub> partner) |
+
+## 곡면에서의 리만-로흐 정리
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-05-04-Riemann_Roch_Surfaces.md`
+- permalink: `/ko/math/algebraic_varieties/riemann_roch_surfaces`
+- scanned: 2026-05-22T09:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Symmetry.` | looks like emphasis (no <sub> partner) |
+| `Bilinearity.` | looks like emphasis (no <sub> partner) |
+| `Linear invariance.` | multi-word English emphasis — possibly a definition |
+
+## 아핀스킴
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Affine_Schemes.md`
+- permalink: `/ko/math/scheme_theory/affine_schemes`
+- scanned: 2026-05-22T10:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `global section functor` | multi-word English emphasis — possibly a definition |
+
+## 스킴의 대수구조
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Algebra_of_Schemes.md`
+- permalink: `/ko/math/scheme_theory/algebra_of_schemes`
+- scanned: 2026-05-22T10:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `주장` | looks like emphasis (no <sub> partner) |
+| `connected` | looks like emphasis (no <sub> partner) |
+| `정의역` | looks like emphasis (no <sub> partner) |
+| `total quotient ring` | multi-word English emphasis — possibly a definition |
+
+## 대수적 군
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Algebraic_Groups.md`
+- permalink: `/ko/math/scheme_theory/algebraic_groups`
+- scanned: 2026-05-22T10:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `General linear group` | multi-word English emphasis — possibly a definition |
+| `Special linear group` | multi-word English emphasis — possibly a definition |
+| `character` | looks like emphasis (no <sub> partner) |
+| `Orbit` | looks like emphasis (no <sub> partner) |
+| `Stabilizer` | looks like emphasis (no <sub> partner) |
+| `Fixed point set` | multi-word English emphasis — possibly a definition |
+| `invariant ring` | multi-word English emphasis — possibly a definition |
+| `Algebraic torus` | multi-word English emphasis — possibly a definition |
+| `Orthogonal group, Unitary group` | multi-word English emphasis — possibly a definition |
+| `GIT quotient` | multi-word English emphasis — possibly a definition |
+| `semistable` | looks like emphasis (no <sub> partner) |
+
