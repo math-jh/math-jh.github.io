@@ -89,6 +89,7 @@ permalink: /ko/misc/index_ko
 | <selected id="canonical_projection">canonical projection &#9745;</selected> | <unselected>동치관계로부터 유도된 전사함수</unselected> | [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations) |  |
 | <selected id="cardinal">cardinal &#9745;</selected> | <unselected>기수</unselected> | [\[집합론\] §기수](/ko/math/set_theory/cardinals)|  |
 | <selected id="cartan_subalgebra">Cartan subalgebra &#9745;</selected> | <unselected>카르탕 부분대수</unselected> | [\[리 이론\] §근계](/ko/math/lie_theory/root_systems) |  |
+| <selected id="cartan-eilenberg_resolution">Cartan-eilenberg resolution &#9745;</selected> | <unselected>카르탕-아일렌베르크 분해</unselected> | [\[대수기하학\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology) |  |
 | <selected id="cartesian_product">cartesian product &#9745;</selected> | <unselected>데카르트 곱</unselected> |  [\[집합론\] §순서쌍](/ko/math/set_theory/ordered_pair) |  |
 | <selected id="cartier_divisor">cartier divisor &#9745;</selected> | <unselected>카르티에 인자</unselected> | [\[가환대수학\] §분수아이디얼](/ko/math/commutative_algebra/fractional_ideals) |  |
 | <selected id="Regularity">Castelnuovo-Mumford regularity &#9745;</selected> | <unselected>정칙성</unselected> | [\[대수기하학\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces) | |
@@ -194,6 +195,7 @@ permalink: /ko/misc/index_ko
 | <unselected id="de_Morgan's_law">de Morgan's law</unselected> | <selected> 드 모르간 법칙 &#9745;</selected> |[\[집합론\] §합집합과 교집합](/ko/math/set_theory/union_and_intersection)
 | <selected id="de_rham_cohomology_group">de rham cohomology group &#9745;</selected> | <unselected>드람 코호몰로지 군</unselected> | [\[미분다양체\] §미분형식](/ko/math/manifold/differential_forms) |  |
 | <unselected id="decreasing">decreasing</unselected> | <selected>감소 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
+| <selected id="decreasing_filtration">decreasing filtration &#9745;</selected> | <unselected>감소 여과</unselected> | [\[호몰로지 대수학\] §스펙트럼 열](/ko/math/homological_algebra/spectral_sequences) |  |
 | <unselected id="decreasing_function">decreasing function</unselected> | <selected>감소함수 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) |  |
 | <selected id="dedekind_domain">dedekind domain &#9745;</selected> | <unselected>데데킨트 정역</unselected> | [\[가환대수학\] §인자](/ko/math/commutative_algebra/divisors) |  |
 | <selected id="deformation_retract">deformation retract &#9745;</selected> | <unselected>변형 수축</unselected> | [\[대수적 위상수학\] §호모토피](/ko/math/algebraic_topology/homotopy) |  |
@@ -940,6 +942,8 @@ permalink: /ko/misc/index_ko
 | <selected id="k_-simplex">$k$-simplex &#9745;</selected> | <unselected>$k$-심플렉스, $k$-단체</unselected> | [\[대수적 위상수학\] §호몰로지](/ko/math/algebraic_topology/homology) |  |
 | <unselected id="n_-th_homology">$n$-th homology</unselected> | <selected>$n$번째 호몰로지 &#9745;</selected> | [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology) |  |
 | <selected id="nilpotency_index">(nilpotency) index &#9745;</selected> | <unselected>멱영지수</unselected> | [\[선형대수학\] §조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form) |  |
+| <selected id="čech_cohomology">Čech cohomology &#9745;</selected> | <unselected>체흐 코호몰로지</unselected> | [\[대수기하학\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology) |  |
+| <selected id="čech_complex">Čech complex &#9745;</selected> | <unselected>체흐 복합체</unselected> | [\[대수기하학\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology) |  |
 | <selected id="zariski_tangent_space">Zariski tangent space &#9745;</selected> | <unselected>Zariski 접공간</unselected> | [\[대수기하학\] §접공간과 매끄러움](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness) |  |
 | <selected id="zariski_topology">Zariski topology &#9745;</selected> | <unselected>자리스키 위상</unselected> | [\[대수기하학\] §아핀다양체](/ko/math/algebraic_varieties/affine_varieties) |  |
 | <selected id="zero_map">zero map &#9745;</selected> | <unselected>영사상</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |

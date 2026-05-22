@@ -116,7 +116,7 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Canonical_Bundle.md": {
       "status": "failed",
-      "last_attempt_ts": 1779351301.8938477,
+      "last_attempt_ts": 1779439501.8961701,
       "error": "timeout after 900s"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Linear_Systems.md": {
@@ -927,8 +927,8 @@
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-07-Dual_Space.md": {
       "status": "failed",
-      "last_attempt_ts": 1779345527.2924974,
-      "error": "kimi CLI exited 75: stderr='To resume this session: kimi -r 98b10d8d-903b-4922-99bb-179a93236dc9'"
+      "last_attempt_ts": 1779434102.2321763,
+      "error": "timeout after 900s"
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-12-Existence_and_Uniqueness_of_Determinant.md": {
       "status": "done",
@@ -1359,11 +1359,31 @@
       "in_chars": 22737,
       "out_chars": 25222,
       "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2025-05-07-Symmetric_Tensors.md": {
+      "status": "done",
+      "last_attempt_ts": 1779435873.7408197,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2025-05-07-Symmetric_Tensors.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T07:30:01+00:00",
+      "in_chars": 18624,
+      "out_chars": 20116,
+      "reason": "pending"
+    },
+    "_posts/Math/Representation_Theory/ko/2026-02-13-Representations_of_Finite_Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779437430.2898107,
+      "en_path": "_posts/Math/Representation_Theory/en/2026-02-13-Representations_of_Finite_Groups.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T08:00:01+00:00",
+      "in_chars": 13470,
+      "out_chars": 14438,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 126,
-    "total_in_chars": 1699093,
-    "total_out_chars": 1655784
+    "total_done": 128,
+    "total_in_chars": 1731187,
+    "total_out_chars": 1690338
   }
 }
