@@ -1546,11 +1546,46 @@
       "in_chars": 20431,
       "out_chars": 23037,
       "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Properties_of_Scheme_Morphisms.md": {
+      "status": "done",
+      "last_attempt_ts": 1779477163.3486946,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Properties_of_Scheme_Morphisms.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T19:00:01+00:00",
+      "in_chars": 17895,
+      "out_chars": 19692,
+      "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Schemes.md": {
+      "status": "done",
+      "last_attempt_ts": 1779478678.4755216,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Schemes.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T19:30:01+00:00",
+      "in_chars": 16826,
+      "out_chars": 17933,
+      "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Spectrums.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779480902.1874135,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Topology_of_Schemes.md": {
+      "status": "done",
+      "last_attempt_ts": 1779482414.7788494,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Topology_of_Schemes.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T20:30:02+00:00",
+      "in_chars": 19650,
+      "out_chars": 22818,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 142,
-    "total_in_chars": 1920709,
-    "total_out_chars": 1889775
+    "total_done": 145,
+    "total_in_chars": 1975080,
+    "total_out_chars": 1950218
   }
 }
