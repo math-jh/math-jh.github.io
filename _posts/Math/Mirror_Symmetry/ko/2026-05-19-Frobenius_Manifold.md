@@ -307,25 +307,47 @@ $$\sum_e C_{\alpha\beta}{}^e C_{e\gamma}{}^\delta = \delta_{\alpha\beta}\delta_{
 
 이 예시에서 좌표들 $$t^i$$는 몹시 좋은데, 이들 좌표에서는 곱셈 $$\circ$$이 자연스레 대각화된다. 일반적으로 우리는 곱셈 $$\circ_p$$가 generic point에서 idempotent들의 direct sum으로 나타나는 경우 이를 *semisimple* Frobenius manifold라 부르는데, [예시 8](#ex8)은 그러한 것들 중 가장 단순한 예시라 할 수 있다.
 
-<div class="example" markdown="1">
+이제 우리가 이 글에서 본래 다루고자 한 것, 곧 quantum cohomology를 Frobenius manifold로 이해하는 것으로 넘어가자. Compact Kähler manifold $$X$$에 대해 base를 cohomology vector space 자체
 
-<ins id="ex9">**예시 9**</ins> Compact Kähler manifold $$X$$의 cohomology vector space $$H^\ast(X, \mathbb{C})$$ 위에 formal coordinate $$t = \sum_\alpha t^\alpha \sigma^\alpha$$를 도입하자. 여기서 $$\{\sigma^\alpha\}$$는 cohomology basis이다. 그럼 Gromov-Witten potential
+$$M = H^\ast(X, \mathbb{C})$$
 
-$$F(t) = \sum_{n \ge 3} \sum_\beta \frac{1}{n!} \langle t, \ldots, t \rangle_{0, n, \beta}^X$$
+로 잡고, cohomology basis $$\{\sigma^\alpha\}$$의 dual로 formal coordinate $$t = \sum_\alpha t^\alpha \sigma^\alpha$$를 도입하자. $$M$$이 그 자체로 벡터공간이므로 각 점에서의 tangent space $$T_tM$$은 $$H^\ast(X, \mathbb{C})$$와 canonically isomorphic하다. 따라서 여기에 Frobenius manifold 구조를 주는 것은 $$T_tM\cong H^\ast(X, \mathbb{C})$$ 위에 Frobenius product $$\circ_t$$를 주는 것과 같고, (당연히) 이를 big quantum cohomology의 곱셈 $$\circ_t$$, 즉 GW potential $$F(t)$$의 삼계도함수가 정의하는 곱셈으로 택할 것이다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)) 다음 명제는 이 데이터가 실제로 Frobenius manifold를 이룬다는 것을 보여준다.
 
-는 splitting principle ([\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6))에 의하여 WDVV equation을 만족하며, 이 potential의 삼계도함수 $$\partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$$가 정의하는 곱셈 $$\circ_t$$는 [\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)의 big quantum product가 된다. 이들 $$\circ_t$$는 각각의 $$t$$에 대하여, tangent space $$T_tH^\ast(X)$$를 Frobenius algebra로 만들며, 이 위에 $$\eta$$를 Poincaré pairing으로, 항등원을 $$1 \in H^0(X)$$로, Euler vector field를
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9**</ins> Compact Kähler manifold $$X$$에 대하여, $$M = H^\ast(X, \mathbb{C})$$ 위에 big quantum product $$\circ_t$$ ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)), Poincaré pairing $$\eta$$, 항등원 $$e = 1 \in H^0(X)$$, 그리고 Euler vector field
 
 $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partial_{t^\alpha} + \sum_\alpha r^\alpha \partial_{t^\alpha}, \qquad c_1(X) = \sum_\alpha r^\alpha \sigma^\alpha$$
 
-로 두면 Frobenius manifold 구조를 얻는다.
+를 두면 $$(M, \eta, \circ_t, e, E)$$는 Frobenius manifold ([정의 5](#def5))이다.
 
-위 곱셈 $$\circ_t$$가 $$t$$에 따라 변한다는 것을 명시적으로 확인하기 위해 $$X = \mathbb{P}^1$$인 경우를 계산하자. Manifold $$M = H^\ast(\mathbb{P}^1) = \mathbb{C}\langle 1, H\rangle$$는 그 자체가 vector space이므로, 그 위의 좌표는 cohomology basis $$\{1, H\}$$의 dual로 주어진다. 이를 각각 $$t^0, t^1$$이라 하자. 
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[정의 5](#def5)의 여섯 조건을 차례로 확인한다. 
+
+1. 우선 Poincaré pairing $$\eta_{\alpha\beta} = \int_X \sigma_\alpha \smile \sigma_\beta$$는 linear coordinate $$t^\alpha$$에서 상수이므로 그 Levi-Civita connection이 flat이고 $$t^\alpha$$가 flat coordinate을 이룬다. 
+2. 두 번째 조건의 경우, 곱셈 $$\circ_t$$는 [\[사교기하학\] §양자 코호몰로지, ⁋정리 6](/ko/math/symplectic_geometry/quantum_cohomology#thm6)에 의해 commutative associative이며 $$t$$에 대해 smooth이다.
+3. 이 곱셈의 항등원은 $$1 \in H^0(X)$$이며, 이는 flat coordinate에서 constant section이므로 $$\nabla e = 0$$이다. 
+4. 한편 [\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)에 의해 structure constant는 $$c_{\alpha\beta\gamma}(t) = \eta(\partial_{t^\alpha} \circ_t \partial_{t^\beta}, \partial_{t^\gamma}) = \partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$$이므로, 이것이 세 index에 대해 대칭이라는 사실로부터 $$\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$$를 얻는다.
+5. 비슷하게 $$\nabla c$$가 네 index에 대해 대칭이라는 것을 확인할 수 있으며, 이 potentiality 아래에서 associativity는 [명제 7](#prop7)의 WDVV equation과 동치이며, A-model 측에서는 GW invariant의 splitting axiom으로 보장된다. 
+6. 마지막으로 quantum cohomology의 grading ([\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2))이 위 본문에서 본 대로 $$\Lie_E(\circ) = \circ$$, $$\Lie_E(\eta) = (2-d)\eta$$로 번역되고, 주어진 $$E$$가 $$\nabla^2 E = 0$$인 affine vector field로서 이를 만족한다.
+
+</details>
+
+한편 [\[사교기하학\] §양자 코호몰로지](/ko/math/symplectic_geometry/quantum_cohomology)에서 보았듯, $$H^2$$ 방향의 deformation만 생각하면 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)에 의하여 이 deformation은 Novikov variable $$q$$에만 의존하는 small quantum cohomology를 주는 것과 같게 된다. 다음 $$\mathbb{P}^1$$ 예시에서는 어차피 처음부터 $$H^2$$ 방향 이외의 방향은 없으므로 이 제한이 [명제 9](#prop9)를 모두 복원하게 된다.
+
+<div class="example" markdown="1">
+
+<ins id="ex10">**예시 10**</ins> 위 곱셈 $$\circ_t$$가 $$t$$에 따라 변한다는 것을 명시적으로 확인하기 위해 $$X = \mathbb{P}^1$$인 경우를 계산하자. Manifold $$M = H^\ast(\mathbb{P}^1) = \mathbb{C}\langle 1, H\rangle$$는 그 자체가 vector space이므로, 그 위의 좌표는 cohomology basis $$\{1, H\}$$의 dual로 주어진다. 이를 각각 $$t^0, t^1$$이라 하자. 
 
 이제 $$\mathbb{P}^1$$의 Gromov-Witten potential은
 
 $$F(t^0, t^1) = \frac{1}{2}(t^0)^2 t^1 + e^{t^1}$$
 
-로 주어진다. 여기서 첫째 항은 classical cup product의 기여이고, 둘째 항은 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 degree-$$1$$ rational curve의 기여 $$\langle H, H, H\rangle_{0,3,1} = 1$$이 $$H^2$$ 방향 좌표 $$t^1$$에 대해 (Euler vector field를 타고) 지수함수로 누적된 것이다. Metric은 이미 [예시 4](#ex4)에서 계산하였으며, 위의 식을 따라 $$F$$의 삼계도함수들을 계산하면
+로 주어진다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)) 여기서 첫째 항은 classical cup product의 기여이고, 둘째 항은 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 degree-$$1$$ rational curve의 기여 $$\langle H, H, H\rangle_{0,3,1} = 1$$이 $$H^2$$ 방향 좌표 $$t^1$$에 대해 (Euler vector field를 타고) 지수함수로 누적된 것으로 생각할 수 있다. Metric은 이미 [예시 4](#ex4)에서 계산하였으며, 위의 식을 따라 $$F$$의 삼계도함수들을 계산하면
 
 $$\partial_{t^0}^3 F = 0,\qquad \partial_{t^0}^2\partial_{t^1} F = 1,\qquad \partial_{t^0}\partial_{t^1}^2 F = 0,\qquad \partial_{t^1}^3 F = e^{t^1}$$
 
@@ -353,7 +375,7 @@ $$\Lie_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 
 
 가 되어 $$\Lie_E(\circ) = \circ$$이다.
 
-이제 Novikov variable을 $$q = e^{t^1}$$로 두면, 둘째 식은 $$\partial_{t^1} \circ \partial_{t^1} = qe$$가 되며, 이는 다시 cohomology 언어로 옮겨오면 $$H \star H = q \cdot 1$$이므로 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 small quantum ring을 복원한다. 뿐만 아니라, 이제 이 isomorphism은 $$q=e^{t^1}$$의 변화에 따라 parametrize되어 기존의 ring isomorphism 수준에서의 mirror symmetry를 더 업그레이드한 것이다. 
+이제 Novikov variable을 $$q = e^{t^1}$$로 두면, 둘째 식은 $$\partial_{t^1} \circ \partial_{t^1} = qe$$가 되며, 이는 다시 cohomology 언어로 옮겨오면 $$H \star H = q \cdot 1$$이므로 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 small quantum ring을 복원한다. 뿐만 아니라, 이제 이 isomorphism은 $$q=e^{t^1}$$의 변화에 따라 parametrize되어 기존의 ring isomorphism 수준에서의 mirror symmetry를 더 업그레이드한 것이다.
 
 </div>
 
