@@ -326,6 +326,8 @@ permalink: /ko/misc/index_ko
 | <selected id="free_abelian_group">free abelian group &#9745;</selected> | <unselected>자유아벨군</unselected> | [\[범주론\] §수반함자](/ko/math/category_theory/adjoints) |  |
 | <selected id="free_family">free family &#9745;</selected> | <unselected>자유족</unselected> | [\[다중선형대수학\] §기저](/ko/math/multilinear_algebra/basis_of_free_modules) |  |
 | <selected id="free_group">free group &#9745;</selected> | <unselected>자유군</unselected> | [\[대수적 구조\] §자유곱](/ko/math/algebraic_structures/free_products)<br/>[\[범주론\] §수반함자](/ko/math/category_theory/adjoints) |  |
+| <selected id="frobenius_algebra">Frobenius algebra &#9745;</selected> | <unselected>프로베니우스 대수</unselected> | [\[거울대칭\] §프로베니우스 다양체](/ko/math/mirror_symmetry/frobenius_manifold) |  |
+| <selected id="frobenius_manifold">Frobenius manifold &#9745;</selected> | <unselected>프로베니우스 다양체</unselected> | [\[거울대칭\] §프로베니우스 다양체](/ko/math/mirror_symmetry/frobenius_manifold) |  |
 | <selected id="full">full &#9745;</selected> | <unselected>충만</unselected> | [\[범주론\] §함자](/ko/math/category_theory/functors) |  |
 | <selected id="full_subcategory">full subcategory &#9745;</selected> | <unselected>충만한 부분카테고리</unselected> | [\[범주론\] §자연변환](/ko/math/category_theory/natural_transformations) |  |
 | <unselected id="function">function</unselected> | <selected>함수 &#9745;</selected> | [\[집합론\] §함수](/ko/math/set_theory/functions) |  |
@@ -425,7 +427,7 @@ permalink: /ko/misc/index_ko
 | <selected id="inner_automorphism">inner automorphism &#9745;</selected> | <unselected>내부자기동형사상</unselected> | [\[대수적 구조\] §군의 작용](/ko/math/algebraic_structures/group_actions) |  |
 | <unselected id="inner_product">inner product</unselected> | <selected> 내적 &#9745;</selected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form)<br/>[\[선형대수학\] §내적공간](/ko/math/linear_algebra/inner_product_spaces) |  |
 | <unselected id="inner_product_space">inner product space</unselected> | <selected> 내적공간 &#9745;</selected> | [\[선형대수학\] §쌍선형형식](/ko/math/linear_algebra/bilinear_form)<br/>[\[선형대수학\] §내적공간](/ko/math/linear_algebra/inner_product_spaces) |  |
-| <selected id="integral">integral &#9745;</selected> | <unselected>정수적</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension)<br/>[\[스킴 이론\] §스킴의 대수구조](/ko/math/scheme_theory/algebra_of_schemes)<br/>[\[스킴 이론\] §스킴 사상의 성질들](/ko/math/scheme_theory/properties_of_scheme_morphisms) |  |
+| <selected id="integral">integral &#9745;</selected> | <unselected>정수적</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension)<br/>[\[스킴 이론\] §스킴의 대수구조](/ko/math/scheme_theory/algebra_of_schemes)<br/>[\[스킴 이론\] §스킴 사상의 성질들](/ko/math/scheme_theory/properties_of_scheme_morphisms)<br/>[\[Toric 기하학\] §토러스 인자와 선다발](/ko/math/toric_geometry/toric_divisors) |  |
 | <selected id="integral_domain">integral domain &#9745;</selected> | <unselected>정역</unselected> | [\[대수적 구조\] §분수체](/ko/math/algebraic_structures/field_of_fractions) |  |
 | <selected id="integral_extension">integral extension &#9745;</selected> | <unselected>정수적 확장</unselected> | [\[가환대수학\] §정수적 확장](/ko/math/commutative_algebra/integral_extension) |  |
 | <selected id="integral_flow">integral flow &#9745;</selected> | <unselected>적분곡선</unselected> | [\[미분다양체\] §벡터장](/ko/math/manifold/vector_fields) 
@@ -647,6 +649,7 @@ permalink: /ko/misc/index_ko
 | <selected id="permutation">permutation &#9745;</selected> | <unselected>치환</unselected> | [\[선형대수학\] §행렬식의 존재성과 유일성](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant) |  |
 | <selected id="phase_space">phase space &#9745;</selected> | <unselected>위상공간</unselected> | [\[심플렉틱 기하학\] §고전역학](/ko/math/symplectic_geometry/classical_mechanics) |  |
 | <selected id="Picard_group">Picard group &#9745;</selected> | <unselected>피카르 군</unselected> | [\[대수기하학\] §Picard Group](/ko/math/algebraic_varieties/picard_group)<br/>[\[가환대수학\] §분수아이디얼](/ko/math/commutative_algebra/fractional_ideals) | |
+| <selected id="piecewise_linear_function">piecewise linear function &#9745;</selected> | <unselected>조각별 선형 함수</unselected> | [\[Toric 기하학\] §토러스 인자와 선다발](/ko/math/toric_geometry/toric_divisors) |  |
 | <unselected id="point">point</unselected> | <selected>점 &#9745;</selected> | [\[위상수학\] §열린집합](/ko/math/topology/open_sets)<br/>[\[대수기하학\] §아핀다양체](/ko/math/algebraic_varieties/affine_varieties)<br/>[\[스킴 이론\] §스펙트럼](/ko/math/scheme_theory/spectrums) |  |
 | <unselected id="power_set">power set</unselected> | <selected> 멱집합 &#9745;</selected> | [\[집합론\] §ZFC 공리계](/ko/math/set_theory/zfc_axioms) |  |
 | <unselected id="precisely_separated_by_continuous_functions">precisely separated by continuous functions</unselected> | <selected>연속함수로 정확히 분리가능 &#9745;</selected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
@@ -816,6 +819,7 @@ permalink: /ko/misc/index_ko
 | <selected id="stiefel-whitney_class">Stiefel-whitney class &#9745;</selected> | <unselected>슈티펠-휘트니 특성류</unselected> | [\[대수적 위상수학\] §특성류](/ko/math/algebraic_topology/characteristic_classes) |  |
 | <selected id="strict_ordering">strict ordering &#9745;</selected> | <unselected>강한 순서관계</unselected> | [\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations) | [Order relation](#order_relation) |
 | <selected id="strict_stabilizer">strict stabilizer &#9745;</selected> | <unselected>강한 안정자</unselected> | [\[대수적 구조\] §군의 작용](/ko/math/algebraic_structures/group_actions) |  |
+| <selected id="strictly_convex">strictly convex &#9745;</selected> | <unselected>엄격볼록</unselected> | [\[Toric 기하학\] §토러스 인자와 선다발](/ko/math/toric_geometry/toric_divisors) |  |
 | <unselected id="strictly_decreasing">strictly decreasing</unselected> | <selected>순감소 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
 | <unselected id="strictly_decreasing_function">strictly decreasing function</unselected> | <selected>순감소함수 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) |  |
 | <unselected id="strictly_increasing">strictly increasing</unselected> | <selected>순증가 &#9745;</selected> | [\[집합론\] §단조함수](/ko/math/set_theory/monotone_functions) (순서관계) |  |
@@ -874,6 +878,7 @@ permalink: /ko/misc/index_ko
 | <unselected id="topologically indistinguishable">topologically indistinguishable</unselected> | <selected> 위상적으로 구별불가능 &#9745;</selected> | [\[위상수학\] §열린집합](/ko/math/topology/open_sets) |  | 
 | <unselected id="topology">topology</unselected> | <selected> 위상 &#9745;</selected> | [\[위상수학\] §열린집합](/ko/math/topology/open_sets) |  | 
 | <selected id="toric_variety">toric variety &#9745;</selected> | <unselected>토릭 다양체</unselected> | [\[Toric 기하학\] §토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties) |  |
+| <selected id="torus-invariant_prime_divisor">torus-invariant prime divisor &#9745;</selected> | <unselected>토러스 불변 소인자</unselected> | [\[Toric 기하학\] §토러스 인자와 선다발](/ko/math/toric_geometry/toric_divisors) |  |
 | <selected id="total_space">total space &#9745;</selected> | <unselected>전체공간</unselected> | [\[미분다양체\] §접다발과 여접다발](/ko/math/manifold/tangent_and_cotangent_bundles) |
 | <selected id="totally_ordered_set">totally ordered set &#9745;</selected> | <unselected>전순서집합</unselected> | [\[집합론\] §유향집합](/ko/math/set_theory/directed_set)|  |
 | <selected id="trace">trace &#9745;</selected> | <unselected>대각합</unselected> | [\[선형대수학\] §행렬](/ko/math/linear_algebra/matrices) |  |
