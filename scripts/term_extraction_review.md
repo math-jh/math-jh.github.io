@@ -1303,3 +1303,32 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `경계` | looks like emphasis (no <sub> partner) |
 | `stringy` | looks like emphasis (no <sub> partner) |
 
+## 토러스 인자와 선다발
+- post: `_posts/Math/Toric_Geometry/ko/2026-05-18-Toric_Divisors_and_Line_Bundles.md`
+- permalink: `/ko/math/toric_geometry/toric_divisors`
+- scanned: 2026-05-22T17:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `boundary` | looks like emphasis (no <sub> partner) |
+| `torus-invariant` | looks like emphasis (no <sub> partner) |
+| `ray` | looks like emphasis (no <sub> partner) |
+| `character` | looks like emphasis (no <sub> partner) |
+| `support` | looks like emphasis (no <sub> partner) |
+| `locally` | looks like emphasis (no <sub> partner) |
+| `rational` | looks like emphasis (no <sub> partner) |
+
+## 프로베니우스 다양체
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-19-Frobenius_Manifold.md`
+- permalink: `/ko/math/mirror_symmetry/frobenius_manifold`
+- scanned: 2026-05-22T17:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Jacobi ring` | multi-word English emphasis — possibly a definition |
+| `residue pairing` | multi-word English emphasis — possibly a definition |
+| `Euler vector field` | multi-word English emphasis — possibly a definition |
+| `affine` | looks like emphasis (no <sub> partner) |
+| `splitting axiom` | multi-word English emphasis — possibly a definition |
+| `semisimple` | looks like emphasis (no <sub> partner) |
+
