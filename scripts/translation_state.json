@@ -1502,11 +1502,55 @@
       "in_chars": 12296,
       "out_chars": 12949,
       "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Fiber_Products.md": {
+      "status": "done",
+      "last_attempt_ts": 1779469807.3436418,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Fiber_Products.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T17:00:01+00:00",
+      "in_chars": 17551,
+      "out_chars": 19191,
+      "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Flat_Morphisms.md": {
+      "status": "done",
+      "last_attempt_ts": 1779471457.4597995,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Flat_Morphisms.md",
+      "ko_git_commit_ts": 1778482800.0,
+      "translated_at": "2026-05-22T17:30:02+00:00",
+      "in_chars": 13095,
+      "out_chars": 15635,
+      "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-From_Varieties_to_Schemes.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779472802.0154781
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Morphism_of_Schemes.md": {
+      "status": "done",
+      "last_attempt_ts": 1779473474.8531291,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Morphism_of_Schemes.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T18:00:02+00:00",
+      "in_chars": 13118,
+      "out_chars": 14243,
+      "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Projective_Schemes.md": {
+      "status": "done",
+      "last_attempt_ts": 1779475315.3218799,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Projective_Schemes.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T18:30:02+00:00",
+      "in_chars": 20431,
+      "out_chars": 23037,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 138,
-    "total_in_chars": 1856514,
-    "total_out_chars": 1817669
+    "total_done": 142,
+    "total_in_chars": 1920709,
+    "total_out_chars": 1889775
   }
 }
