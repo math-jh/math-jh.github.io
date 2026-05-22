@@ -1221,3 +1221,85 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `affine` | looks like emphasis (no <sub> partner) |
 
+## 값매김환
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Valuative_Criteria.md`
+- permalink: `/ko/math/scheme_theory/valuative_criteria`
+- scanned: 2026-05-22T15:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `separated` | looks like emphasis (no <sub> partner) |
+
+## 저우 군
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-05-11-Chow_Groups.md`
+- permalink: `/ko/math/algebraic_varieties/chow_groups`
+- scanned: 2026-05-22T15:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `algebraic $$k$$-cycle` | multi-word English emphasis — possibly a definition |
+| `codimension $$k$$ cycle` | multi-word English emphasis — possibly a definition |
+| `principal cycle` | multi-word English emphasis — possibly a definition |
+| `rationally equivalent` | multi-word English emphasis — possibly a definition |
+| `Chow group` | multi-word English emphasis — possibly a definition |
+| `cycle class map` | multi-word English emphasis — possibly a definition |
+
+## 교차곱
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-05-11-Intersection_Product.md`
+- permalink: `/ko/math/algebraic_varieties/intersection_product`
+- scanned: 2026-05-22T16:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Tor formula` | multi-word English emphasis — possibly a definition |
+| `intersection product` | multi-word English emphasis — possibly a definition |
+| `Symmetry.` | looks like emphasis (no <sub> partner) |
+| `Bilinearity.` | looks like emphasis (no <sub> partner) |
+| `Associativity` | looks like emphasis (no <sub> partner) |
+| `normal cone` | multi-word English emphasis — possibly a definition |
+
+## 베주 정리
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-05-12-Bezout_Theorem.md`
+- permalink: `/ko/math/algebraic_varieties/bezout_theorem`
+- scanned: 2026-05-22T16:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `단계 1.` | looks like emphasis (no <sub> partner) |
+| `단계 2.` | looks like emphasis (no <sub> partner) |
+| `genus` | looks like emphasis (no <sub> partner) |
+| `$$\delta$$-invariant` | looks like emphasis (no <sub> partner) |
+
+## 토릭 다양체의 정의
+- post: `_posts/Math/Toric_Geometry/ko/2026-05-17-Toric_Varieties.md`
+- permalink: `/ko/math/toric_geometry/toric_varieties`
+- scanned: 2026-05-22T16:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `fan` | looks like emphasis (no <sub> partner) |
+| `primitive inner normal vector` | multi-word English emphasis — possibly a definition |
+| `normal fan` | multi-word English emphasis — possibly a definition |
+| `projective` | looks like emphasis (no <sub> partner) |
+| `Cartier` | looks like emphasis (no <sub> partner) |
+| `standard simplex` | multi-word English emphasis — possibly a definition |
+| `maximal` | looks like emphasis (no <sub> partner) |
+| `resolution of singularities` | multi-word English emphasis — possibly a definition |
+| `star subdivision` | multi-word English emphasis — possibly a definition |
+
+## 파노 다양체
+- post: `_posts/Math/Toric_Geometry/ko/2026-05-18-Reflexive_Polytope_and_Fano_Variety.md`
+- permalink: `/ko/math/toric_geometry/reflexive_polytope_fano`
+- scanned: 2026-05-22T17:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `lattice polytope` | multi-word English emphasis — possibly a definition |
+| `dual polytope` | multi-word English emphasis — possibly a definition |
+| `ample` | looks like emphasis (no <sub> partner) |
+| `singular` | looks like emphasis (no <sub> partner) |
+| `discrepancy formula` | multi-word English emphasis — possibly a definition |
+| `보존하는` | looks like emphasis (no <sub> partner) |
+| `경계` | looks like emphasis (no <sub> partner) |
+| `stringy` | looks like emphasis (no <sub> partner) |
+
