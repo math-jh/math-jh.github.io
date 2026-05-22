@@ -15,14 +15,24 @@
       "last_attempt_ts": 1779156001.6345232
     },
     "_posts/Math/Algebraic_Topology/ko/2025-10-07-Characteristic_Classes.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779333302.1084063,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779421488.0490527,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2025-10-07-Characteristic_Classes.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T03:30:02+00:00",
+      "in_chars": 24633,
+      "out_chars": 28511,
+      "reason": "pending"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-12-Affine_Varieties.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779335101.6252203,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779422925.0502315,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-12-Affine_Varieties.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T04:00:01+00:00",
+      "in_chars": 23021,
+      "out_chars": 27206,
+      "reason": "pending"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-12-Projective_Varieties.md": {
       "status": "done",
@@ -1200,14 +1210,8 @@
       "last_attempt_ts": 1779402601.2667787
     },
     "_posts/Math/Mirror_Symmetry/ko/2026-05-18-Mirror_Symmetry_Overview.md": {
-      "status": "done",
-      "last_attempt_ts": 1779403081.4857953,
-      "en_path": "_posts/Math/Mirror_Symmetry/en/2026-05-18-Mirror_Symmetry_Overview.md",
-      "ko_git_commit_ts": 1779375607.0,
-      "translated_at": "2026-05-21T22:30:01+00:00",
-      "in_chars": 12881,
-      "out_chars": 14776,
-      "reason": "pending"
+      "status": "draft_skip",
+      "last_attempt_ts": 1779424201.997914
     },
     "_posts/Math/Mirror_Symmetry/ko/2026-05-19-Frobenius_Manifold.md": {
       "status": "done",
@@ -1291,11 +1295,31 @@
       "in_chars": 7318,
       "out_chars": 7171,
       "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-09-05-Matrices_and_Linear_Maps.md": {
+      "status": "done",
+      "last_attempt_ts": 1779419077.5920758,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-09-05-Matrices_and_Linear_Maps.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T03:00:01+00:00",
+      "in_chars": 10250,
+      "out_chars": 10695,
+      "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-09-17-Exact_Sequences.md": {
+      "status": "done",
+      "last_attempt_ts": 1779424610.8770642,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-09-17-Exact_Sequences.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T04:30:02+00:00",
+      "in_chars": 11431,
+      "out_chars": 12066,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 118,
-    "total_in_chars": 1580685,
-    "total_out_chars": 1526806
+    "total_done": 122,
+    "total_in_chars": 1650020,
+    "total_out_chars": 1605284
   }
 }
