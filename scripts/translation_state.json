@@ -1581,11 +1581,51 @@
       "in_chars": 19650,
       "out_chars": 22818,
       "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Valuative_Criteria.md": {
+      "status": "done",
+      "last_attempt_ts": 1779484016.894538,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Valuative_Criteria.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T21:00:01+00:00",
+      "in_chars": 10198,
+      "out_chars": 10180,
+      "reason": "pending"
+    },
+    "_posts/Math/Symplectic_Geometry/ko/2022-12-15-Classical_Mechanics.md": {
+      "status": "done",
+      "last_attempt_ts": 1779485764.4236195,
+      "en_path": "_posts/Math/Symplectic_Geometry/en/2022-12-15-Classical_Mechanics.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-22T21:30:02+00:00",
+      "in_chars": 9930,
+      "out_chars": 11006,
+      "reason": "pending"
+    },
+    "_posts/Math/Symplectic_Geometry/ko/2023-04-28-Linear_Symplectic_Geometry.md": {
+      "status": "done",
+      "last_attempt_ts": 1779487539.4717515,
+      "en_path": "_posts/Math/Symplectic_Geometry/en/2023-04-28-Linear_Symplectic_Geometry.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-22T22:00:02+00:00",
+      "in_chars": 10748,
+      "out_chars": 10824,
+      "reason": "pending"
+    },
+    "_posts/Math/Symplectic_Geometry/ko/2023-05-08-Symplectic_Manifold.md": {
+      "status": "done",
+      "last_attempt_ts": 1779489100.9527874,
+      "en_path": "_posts/Math/Symplectic_Geometry/en/2023-05-08-Symplectic_Manifold.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-22T22:30:02+00:00",
+      "in_chars": 3137,
+      "out_chars": 1301,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 145,
-    "total_in_chars": 1975080,
-    "total_out_chars": 1950218
+    "total_done": 149,
+    "total_in_chars": 2009093,
+    "total_out_chars": 1983529
   }
 }

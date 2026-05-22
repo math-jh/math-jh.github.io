@@ -178,7 +178,7 @@ $$\Jac(W_q)\cong QH^\ast(X)$$
 
 마지막으로 $$QH^\ast(X)$$에는 이미 grading이 주어져있으므로 이를 반영할 데이터가 추가로 필요하다. 여기서 $$QH^\ast(X)$$의 grading은 classical cohomology $$H^\ast(X)$$에 Novikov ring의 grading으로부터 나오는 grading을 더하여 얻어졌던 것을 기억하자. 즉 $$QH^\ast(X) = H^\ast(X) \otimes_\mathbb{C} \Lambda$$라 할 때, 임의의 generator $$T_\alpha \otimes q^\beta$$의 degree는 $$\deg(T_\alpha \otimes q^\beta) = p_\alpha + 2\, c_1 \cdot \beta$$로 주어졌었다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2))
 
-이러한 grading 자료를 manifold $$M$$ 위의 *vector field*로 부호화한 것이 *Euler vector field* $$E$$이다. $$E$$의 flow를 따라 곱셈 $$\circ$$를 흘려보냈을 때 그 *무한소 deformation*이 Lie derivative $$\Lie_E(\circ)$$로 주어지는데, [§양자 코호몰로지](/ko/math/symplectic_geometry/quantum_cohomology)에서 살펴본 quantum product가 degree를 respect한다는 사실은 이 deformation이 정확히 $$\circ$$ 자기 자신과 같다는 식
+이러한 grading 자료를 manifold $$M$$ 위의 *vector field*로 부호화한 것이 *Euler vector field* $$E$$이다. $$E$$의 flow를 따라 곱셈 $$\circ$$를 흘려보냈을 때 그 *무한소 deformation*이 Lie derivative $$\Lie_E(\circ)$$로 주어지는데, [\[사교기하학\] §양자 코호몰로지](/ko/math/symplectic_geometry/quantum_cohomology)에서 살펴본 quantum product가 degree를 respect한다는 사실은 이 deformation이 정확히 $$\circ$$ 자기 자신과 같다는 식
 
 $$\Lie_E(\circ) = \circ$$
 
@@ -337,7 +337,11 @@ $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partia
 
 </details>
 
-한편 [\[사교기하학\] §양자 코호몰로지](/ko/math/symplectic_geometry/quantum_cohomology)에서 보았듯, $$H^2$$ 방향의 deformation만 생각하면 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)에 의하여 이 deformation은 Novikov variable $$q$$에만 의존하는 small quantum cohomology를 주는 것과 같게 된다. 다음 $$\mathbb{P}^1$$ 예시에서는 어차피 처음부터 $$H^2$$ 방향 이외의 방향은 없으므로 이 제한이 [명제 9](#prop9)를 모두 복원하게 된다.
+한편 우리의 mirror symmetry statement
+
+$$\Jac(W_q)\cong QH^\ast(X)$$
+
+을 생각하면, 결국 이는 quantum parameter $$q$$의 deformation에 의존하는 것이며, 따라서 이 수준에서만 고려한다면 big quantum cohomology는 다소 큰 것이며 우리는 $$H^2$$ 방향의 deformation, 혹은 small quantum cohomology만 생각하면 된다. 더 일반적인 수준에서도, big quantum cohomology와 $$W_q$$의 bulk deformation을 포함하여 mirror symmetry를 연구할 수는 있지만, 이는 우리의 일차적인 목표에서 벗어나므로 대부분의 경우 우리는 $$H^2$$ 방향의 deformation만 고려하기로 한다. 다음 $$\mathbb{P}^1$$ 예시에서는 unit 방향 $$H^0$$를 빼면 $$H^2$$가 cohomology의 전부라 ($$\deg \ge 4$$ 방향이 없어) big quantum cohomology가 곧 small과 일치하므로, 아래 계산이 [명제 9](#prop9)를 그대로 실현한다.
 
 <div class="example" markdown="1">
 

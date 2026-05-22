@@ -12,10 +12,9 @@ header:
     overlay_filter: 0.5
 
 date: 2026-05-18
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-23
 weight: 1
 
-published: false
 ---
 
 ## 역사적 배경
@@ -119,15 +118,15 @@ $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}$
 
 $$t = B + i\omega \in H^2(X, \mathbb{C})$$
 
-를 만든다. 이는 직관적으로 Kähler form $$\omega$$를 복소방향으로 채워 complexification을 하는 것이며, 물리적으로는 초끈이론에 등장하는 $$B$$-field를 의미한다. 이제 Novikov parameter는 바로 이 $$t$$를 지수화한 것으로, curve class $$\beta \in H_2(X)$$에 대해
+를 만든다. 이는 직관적으로 Kähler form $$\omega$$를 복소방향으로 채워 complexification을 하는 것이며, 물리적으로는 초끈이론에 등장하는 $$B$$-field를 의미한다. 이제 Novikov parameter는 바로 이 $$t$$를 지수화한 것으로, curve class $$\beta_0 \in H_2(X)$$에 대해
 
-$$q^\beta = e^{2\pi i \int_\beta t} = e^{2\pi i \int_\beta B}\, e^{-2\pi \int_\beta \omega}$$
+$$q^{\beta_0} = e^{2\pi i \int_{\beta_0} t} = e^{2\pi i \int_{\beta_0} B}\, e^{-2\pi \int_{\beta_0} \omega}$$
 
-로 주어진다. 그럼 $$q^\beta$$의 크기 $$\lvert q^\beta\rvert = e^{-2\pi \int_\beta \omega}$$는 곡선 class $$\beta$$의 *symplectic volume* $$\int_\beta \omega$$를, phase $$\arg q^\beta = 2\pi \int_\beta B$$는 $$B$$-field를 담는다. 따라서 symplectic volume이 $$0$$으로 가는 상황에서는 $$q$$의 크기가 $$1$$로 가서 양자적인 효과가 full로 나타나며, 반대로 symplectic volume이 무한대로 가는 상황에서는 $$q$$의 크기가 $$0$$으로 가서 양자적인 효과가 사라진다. 
+로 주어진다. 그럼 $$q^{\beta_0}$$의 크기 $$\lvert q^{\beta_0}\rvert = e^{-2\pi \int_{\beta_0} \omega}$$는 곡선 class $$\beta_0$$의 *symplectic volume* $$\int_{\beta_0} \omega$$를, phase $$\arg q^{\beta_0} = 2\pi \int_{\beta_0} B$$는 $$B$$-field를 담는다. 따라서 symplectic volume이 $$0$$으로 가는 상황에서는 $$q$$의 크기가 $$1$$로 가서 양자적인 효과가 full로 나타나며, 반대로 symplectic volume이 무한대로 가는 상황에서는 $$q$$의 크기가 $$0$$으로 가서 양자적인 효과가 사라진다. 
 
-이제 위의 계산에서, $$q$$ 하나를 정하는 것은 complexified Kähler class $$t$$를 결정하는 것, 즉 $$B$$-field와 $$\omega$$를 각각 정해주는 것과 같다. 그럼 위의 식으로부터 $$B$$는 $$2\pi$$만큼의 주기를 가지고, $$\omega$$는 $$B$$가 정해주는 방향의 반지름을 정해주므로 $$q$$의 moduli space (혹은 $$t$$의 moduli space)는 $$r=H^2(X, \mathbb{R})$$차원의 algebraic torus $$(\mathbb{C}^\ast)^r$$가 된다. 
+이제 위의 계산에서, $$q$$ 하나를 정하는 것은 complexified Kähler class $$t$$를 결정하는 것, 즉 $$B$$-field와 $$\omega$$를 각각 정해주는 것과 같다. 그럼 위의 식으로부터 $$B$$는 $$2\pi$$만큼의 주기를 가지고, $$\omega$$는 $$B$$가 정해주는 방향의 반지름을 정해주므로 $$q$$의 moduli space (혹은 $$t$$의 moduli space)는 $$r=\dim_\mathbb{R} H^2(X, \mathbb{R})$$인 algebraic torus $$(\mathbb{C}^\ast)^r$$가 된다. 다만 $$\omega$$는 Kähler form이라 *Kähler cone* 안에 있어야 하므로 (effective curve class $$\beta_0$$에 대해 $$\int_{\beta_0} \omega > 0$$, 곧 $$\lvert q^{\beta_0}\rvert < 1$$), 엄밀히는 moduli가 이 torus 전체가 아니라 $$q = 0$$인 large volume limit 근방의 열린 영역이고, $$(\mathbb{C}^\ast)^r$$은 이를 품는 ambient algebraic torus이다. 
 
-B-side에서의 $$q$$는 위에서 살펴봤듯 superpotential의 계수로 나타났다. 직관적으로 superpotential이 $$\x^k$$ 꼴인 경우를 생각하면, $$\x^k=q$$의 critical point는 $$q$$가 $$0$$으로 갈 때 한 점으로 degenerate하고, 나머지 경우에는 적당히 분리되어 있는 singularity가 나온다. 
+B-side에서의 $$q$$는 위에서 살펴봤듯 superpotential의 계수로 나타났다. 직관적으로 이를 통해 얻어지는 critical point의 방정식이 $$\x^k=q$$ 꼴인 경우를 생각하면, $$\x^k=q$$의 해, 즉 critical point는 $$q$$가 $$0$$으로 갈 때 한 점으로 degenerate하고, 나머지 경우에는 적당히 분리되어 있는 singularity가 나온다. 
 
 이제 mirror symmetry statement를 잘 적기 위해서는 $$X$$의 (small) *quantum cohomology*를 정의해야 한다. 구체적으로, $$X$$의 symplectic structure와 complex structure를 살펴볼 때 필요한 도구 중 하나는 $$J$$-holomorphic curve들이다. 이들을 이용하면, $$X$$의 cohomology $$H^\ast(X, \mathbb{C})$$ 위에 다음의 식
 
@@ -139,7 +138,9 @@ $$\alpha \star_q \beta \;=\; \alpha \smile \beta + \sum_{\beta_0} q^{\beta_0} \s
 
 $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 
-임을 주장한다. 단순한 두 경우 $$\mathbb{P}^1$$, $$\mathbb{P}^2$$에서 이것이 실제로 성립함을 확인하자. 
+임을 주장한다. 이 statement는 여러 면에서 기존에 우리가 알고 있던 그림과 맞아떨어지는데, 가령 $$q\rightarrow 0$$인 *classical limit*에서 quantum cohomology ring은 classical cohomology ring으로 돌아가며 이는 $$\Jac(W_q)$$에서 보면 singularity들이 뭉쳐서 degenerate하는 non-reduced singularity를 만드는 것과 같다. 혹은, 거꾸로 말하면, 양자효과를 도입하는 것은 A-side에서는 classical cohomology를 Novikov variable $$q$$를 사용하여 풀어주는 것으로, B-side에서는 뭉쳐있던 singularity를 펴주는 것으로 각각 생각할 수 있다. 
+
+일반적으로 위 isomorphism 우변의 $$QH^\ast(X_\Sigma)$$를 살펴보는 것은 주어진 class들을 동시에 지나는 curve를 세는 것으로, 상대적으로 복잡하고 어려운 일로 여겨지지만 mirror symmetry는 이를 단순한 ring의 계산으로 환원시킨다. 단순한 두 경우 $$\mathbb{P}^1$$, $$\mathbb{P}^2$$에서 이것이 실제로 성립함을 확인하자. 
 
 <div class="example" markdown="1">
 

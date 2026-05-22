@@ -1332,3 +1332,47 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `splitting axiom` | multi-word English emphasis — possibly a definition |
 | `semisimple` | looks like emphasis (no <sub> partner) |
 
+## 프로베니우스 다양체
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-19-Frobenius_Manifold.md`
+- permalink: `/ko/math/mirror_symmetry/frobenius_manifold`
+- scanned: 2026-05-22T22:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Jacobi ring` | multi-word English emphasis — possibly a definition |
+| `residue pairing` | multi-word English emphasis — possibly a definition |
+| `Euler vector field` | multi-word English emphasis — possibly a definition |
+| `affine` | looks like emphasis (no <sub> partner) |
+| `splitting axiom` | multi-word English emphasis — possibly a definition |
+| `semisimple` | looks like emphasis (no <sub> partner) |
+
+## 거울대칭 개요
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-18-Mirror_Symmetry_Overview.md`
+- permalink: `/ko/math/mirror_symmetry/overview`
+- scanned: 2026-05-22T22:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Jacobi ring` | multi-word English emphasis — possibly a definition |
+| `critical scheme` | multi-word English emphasis — possibly a definition |
+| `Mirror domain` | multi-word English emphasis — possibly a definition |
+| `Kähler form` | multi-word English emphasis — possibly a definition |
+| `complexified Kähler class` | multi-word English emphasis — possibly a definition |
+| `symplectic volume` | multi-word English emphasis — possibly a definition |
+| `Kähler cone` | multi-word English emphasis — possibly a definition |
+| `quantum cohomology` | multi-word English emphasis — possibly a definition |
+
+## 프로베니우스 다양체
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-19-Frobenius_Manifold.md`
+- permalink: `/ko/math/mirror_symmetry/frobenius_manifold`
+- scanned: 2026-05-22T22:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Jacobi ring` | multi-word English emphasis — possibly a definition |
+| `residue pairing` | multi-word English emphasis — possibly a definition |
+| `Euler vector field` | multi-word English emphasis — possibly a definition |
+| `affine` | looks like emphasis (no <sub> partner) |
+| `splitting axiom` | multi-word English emphasis — possibly a definition |
+| `semisimple` | looks like emphasis (no <sub> partner) |
+
