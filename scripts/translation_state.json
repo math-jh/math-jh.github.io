@@ -1462,11 +1462,51 @@
       "in_chars": 15315,
       "out_chars": 16164,
       "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Closed_Subschemes.md": {
+      "status": "done",
+      "last_attempt_ts": 1779462880.9876854,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Closed_Subschemes.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T15:00:01+00:00",
+      "in_chars": 20366,
+      "out_chars": 18792,
+      "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Closed_Subschemes_of_Projective_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779463936.7629337,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Closed_Subschemes_of_Projective_Spaces.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T15:30:01+00:00",
+      "in_chars": 2973,
+      "out_chars": 1228,
+      "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Complete_Intersections.md": {
+      "status": "done",
+      "last_attempt_ts": 1779465936.5608027,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Complete_Intersections.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T16:00:01+00:00",
+      "in_chars": 4685,
+      "out_chars": 3281,
+      "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Dimension_Schemes.md": {
+      "status": "done",
+      "last_attempt_ts": 1779467838.6909912,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Dimension_Schemes.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T16:30:02+00:00",
+      "in_chars": 12296,
+      "out_chars": 12949,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 134,
-    "total_in_chars": 1816194,
-    "total_out_chars": 1781419
+    "total_done": 138,
+    "total_in_chars": 1856514,
+    "total_out_chars": 1817669
   }
 }
