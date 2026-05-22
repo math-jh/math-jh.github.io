@@ -949,3 +949,85 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `$$i$$번째 standard open set` | mixed-script emphasis — possibly a definition |
 | `Veronese embedding` | multi-word English emphasis — possibly a definition |
 
+## 차원
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-22-Dimension.md`
+- permalink: `/ko/math/algebraic_varieties/dimension`
+- scanned: 2026-05-22T05:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `affine` | looks like emphasis (no <sub> partner) |
+| `affine cone` | multi-word English emphasis — possibly a definition |
+
+## 접공간과 매끄러움
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-22-Tangent_Spaces_and_Smoothness.md`
+- permalink: `/ko/math/algebraic_varieties/tangent_spaces_and_smoothness`
+- scanned: 2026-05-22T05:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Zariski cotangent space` | multi-word English emphasis — possibly a definition |
+| `nonsingular point` | multi-word English emphasis — possibly a definition |
+| `smooth` | looks like emphasis (no <sub> partner) |
+| `nonsingular` | looks like emphasis (no <sub> partner) |
+| `initial term` | multi-word English emphasis — possibly a definition |
+| `initial ideal` | multi-word English emphasis — possibly a definition |
+
+## 그라스만 다양체
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-24-Grassmannians.md`
+- permalink: `/ko/math/algebraic_varieties/grassmannians`
+- scanned: 2026-05-22T06:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Plücker embedding` | multi-word English emphasis — possibly a definition |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `decomposable` | looks like emphasis (no <sub> partner) |
+| `Plücker relations` | multi-word English emphasis — possibly a definition |
+| `Schubert cell` | multi-word English emphasis — possibly a definition |
+
+## 인자
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-25-Divisors.md`
+- permalink: `/ko/math/algebraic_varieties/divisors`
+- scanned: 2026-05-22T06:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `principal Cartier divisor` | multi-word English emphasis — possibly a definition |
+
+## 선다발과 벡터다발
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-25-Line_Bundles.md`
+- permalink: `/ko/math/algebraic_varieties/line_bundles`
+- scanned: 2026-05-22T06:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `line bundle` | multi-word English emphasis — possibly a definition |
+| `local trivialization` | multi-word English emphasis — possibly a definition |
+| `transition function` | multi-word English emphasis — possibly a definition |
+| `morphism` | looks like emphasis (no <sub> partner) |
+| `Trivial line bundle` | multi-word English emphasis — possibly a definition |
+| `dual bundle` | multi-word English emphasis — possibly a definition |
+| `Picard group` | multi-word English emphasis — possibly a definition |
+| `pullback` | looks like emphasis (no <sub> partner) |
+| `rank r vector bundle` | multi-word English emphasis — possibly a definition |
+| `trivial vector bundle` | multi-word English emphasis — possibly a definition |
+| `Tangent bundle` | multi-word English emphasis — possibly a definition |
+| `Cotangent bundle` | multi-word English emphasis — possibly a definition |
+| `Tautological bundle` | multi-word English emphasis — possibly a definition |
+| `Quotient bundle` | multi-word English emphasis — possibly a definition |
+
+## 표준선다발
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-29-Canonical_Bundle.md`
+- permalink: `/ko/math/algebraic_varieties/canonical_bundle`
+- scanned: 2026-05-22T07:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `smooth` | looks like emphasis (no <sub> partner) |
+| `canonical bundle` | multi-word English emphasis — possibly a definition |
+| `ring` | looks like emphasis (no <sub> partner) |
+| `normal sheaf` | multi-word English emphasis — possibly a definition |
+| `exceptional divisor` | multi-word English emphasis — possibly a definition |
+| `relative` | looks like emphasis (no <sub> partner) |
+
