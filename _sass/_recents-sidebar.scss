@@ -130,71 +130,50 @@
 }
 
 /* ==========================================================================
-   Recents inside the sidebar nav_list (alongside category navigation).
-   On desktop, the right sidebar handles recents; these are for mobile.
+   Section links in nav_list (category title + recent posts).
+   Gray by default, black on hover. Does NOT affect child items.
+   Must override .nav__list .nav__items a with higher specificity.
    ========================================================================== */
 
-.sidebar-recents__details {
-  margin: 0.5em 0 0 0;
+.nav__list .nav__items a.nav__section-link,
+.nav__list .nav__items a.sidebar_title {
+  color: mix($primary-color, #fff, 40%);
+  text-decoration: none;
 
-  &[open] > .sidebar-recents__toggle::after { content: "▴"; }
-}
-
-.sidebar-recents__toggle {
-  cursor: pointer;
-  padding: 0.5rem 0.75rem;
-  font-family: $sans-serif-narrow;
-  font-size: $type-size-5;
-  font-weight: bold;
-  color: $highlight-color;
-  background: $background-color;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  list-style: none;
-
-  &::-webkit-details-marker { display: none; }
-  &::marker { content: ""; }
-
-  &::after {
-    content: "▾";
-    float: right;
-    transition: transform 0.15s ease;
-  }
-}
-
-.sidebar-recents__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: $type-size-7;
-
-  li a {
-    display: block;
-    padding: 0.2rem 0.75rem;
-    color: mix($gray, $background-color, 20%);
-    font-weight: 600;
-    line-height: 1.35;
+  &:hover,
+  &:active {
+    color: $text-color !important;
     text-decoration: none;
-    overflow-wrap: anywhere;
+  }
 
-    &:hover { color: $text-color; }
+  .nav__sub-title {
+    color: inherit;
   }
 }
 
-.sidebar-recents__meta {
+/* When .nav__items is hovered (sidebar hovered), our links should inherit the muted color */
+.nav__list .nav__items:hover a.nav__section-link,
+.nav__list .nav__items:hover a.sidebar_title {
   color: $muted-text-color;
-  font-weight: normal;
-  font-size: 0.9em;
 }
 
-.sidebar-recents__empty {
-  margin: 0;
-  padding: 0.2rem 0.75rem;
-  color: $muted-text-color;
-  font-size: $type-size-7;
+.nav__list .nav__items .nav__sub-title--no-link {
+  color: mix($primary-color, #fff, 40%);
 }
 
-/* Sidebar recents: hide on mobile (shown in Navigation dropdown instead),
+/* When .nav__items is hovered (sidebar hovered), recent comments should also inherit the muted color */
+.nav__list .nav__items:hover .nav__sub-title--no-link {
+  color: $muted-text-color;
+}
+
+/* Desktop-only spacing between category navigation and recents */
+@media (min-width: 1024px) {
+  .nav__recents-section--posts {
+    margin-top: 6em;
+  }
+}
+
+/* Sidebar recents: hide on mobile (shown in nav_list instead),
    show on desktop (≥1024px) where the sidebar is visible. */
 @media (min-width: 1024px) {
   .sidebar-recents-desktop { display: block; }

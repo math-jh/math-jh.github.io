@@ -1208,11 +1208,54 @@
       "in_chars": 12881,
       "out_chars": 14776,
       "reason": "pending"
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2026-05-19-Frobenius_Manifold.md": {
+      "status": "done",
+      "last_attempt_ts": 1779405063.2191503,
+      "en_path": "_posts/Math/Mirror_Symmetry/en/2026-05-19-Frobenius_Manifold.md",
+      "ko_git_commit_ts": 1779375607.0,
+      "translated_at": "2026-05-21T23:00:01+00:00",
+      "in_chars": 25012,
+      "out_chars": 22218,
+      "reason": "pending"
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2026-05-21-Dubrovin_Connection.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779406201.2957911
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2022-12-03-Tensor_Algebras.md": {
+      "status": "done",
+      "last_attempt_ts": 1779406883.5806534,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2022-12-03-Tensor_Algebras.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-21T23:30:01+00:00",
+      "in_chars": 14922,
+      "out_chars": 16441,
+      "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md": {
+      "status": "done",
+      "last_attempt_ts": 1779408508.5532768,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2022-12-08-Derivations.md",
+      "ko_git_commit_ts": 1772910001.0,
+      "translated_at": "2026-05-22T00:00:01+00:00",
+      "in_chars": 18823,
+      "out_chars": 20420,
+      "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-05-11-Cotangent_Complex.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779409801.7127612
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-08-18-Basis_of_Free_Modules.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779410701.8649065,
+      "error": "timeout after 900s"
     }
   },
   "stats": {
-    "total_done": 111,
-    "total_in_chars": 1486115,
-    "total_out_chars": 1433369
+    "total_done": 114,
+    "total_in_chars": 1544872,
+    "total_out_chars": 1492448
   }
 }

@@ -461,7 +461,7 @@
     font-weight: bold;
   }
 
-  &:hover{color: $text-color;}
+  &:hover{color: $muted-text-color;}
 
   @include breakpoint(max-width $large - 1px) {
     position: relative;
