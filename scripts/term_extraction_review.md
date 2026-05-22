@@ -1172,3 +1172,52 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `항상` | looks like emphasis (no <sub> partner) |
 
+## 스킴 사이의 사상
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Morphism_of_Schemes.md`
+- permalink: `/ko/math/scheme_theory/morphism_of_schemes`
+- scanned: 2026-05-22T13:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `family parametrized by $$S$$` | multi-word English emphasis — possibly a definition |
+
+## 사영스킴
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Projective_Schemes.md`
+- permalink: `/ko/math/scheme_theory/projective_schemes`
+- scanned: 2026-05-22T13:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `graded` | looks like emphasis (no <sub> partner) |
+| `homogeneous` | looks like emphasis (no <sub> partner) |
+
+## 스킴
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Schemes.md`
+- permalink: `/ko/math/scheme_theory/schemes`
+- scanned: 2026-05-22T14:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `cocycle condition` | multi-word English emphasis — possibly a definition |
+
+## 스펙트럼
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Spectrums.md`
+- permalink: `/ko/math/scheme_theory/spectrums`
+- scanned: 2026-05-22T14:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `ideal` | looks like emphasis (no <sub> partner) |
+| `minimal` | looks like emphasis (no <sub> partner) |
+| `라 하고, 각각의 $$x_i$$들을 $$x$$의` | mixed-script emphasis — possibly a definition |
+| `모든` | looks like emphasis (no <sub> partner) |
+
+## 스킴의 위상구조
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Topology_of_Schemes.md`
+- permalink: `/ko/math/scheme_theory/topology_of_schemes`
+- scanned: 2026-05-22T15:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `affine` | looks like emphasis (no <sub> partner) |
+
