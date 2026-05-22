@@ -829,3 +829,71 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `Algebraic Topology` | multi-word English emphasis — possibly a definition |
 | `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
 
+## 특성류
+- post: `_posts/Math/Algebraic_Topology/ko/2025-10-07-Characteristic_Classes.md`
+- permalink: `/ko/math/algebraic_topology/characteristic_classes`
+- scanned: 2026-05-22T01:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `base space` | multi-word English emphasis — possibly a definition |
+| `total space` | multi-word English emphasis — possibly a definition |
+| `infinite Grassmannian` | multi-word English emphasis — possibly a definition |
+| `Schubert symbol` | multi-word English emphasis — possibly a definition |
+| `polynomial algebra로서` | mixed-script emphasis — possibly a definition |
+
+## 근계
+- post: `_posts/Math/Lie_Theory/ko/2025-11-12-Root_Systems.md`
+- permalink: `/ko/math/lie_theory/root_systems`
+- scanned: 2026-05-22T01:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `traceless` | looks like emphasis (no <sub> partner) |
+| `raising operator` | multi-word English emphasis — possibly a definition |
+| `real` | looks like emphasis (no <sub> partner) |
+
+## 조르당 표준형
+- post: `_posts/Math/Linear_Algebra/ko/2026-01-21-Jordan_Canonical_Form.md`
+- permalink: `/ko/math/linear_algebra/Jordan_canonical_form`
+- scanned: 2026-05-22T02:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$T$$-invariant` | looks like emphasis (no <sub> partner) |
+| `Jordan block` | multi-word English emphasis — possibly a definition |
+
+## 유한군의 표현론
+- post: `_posts/Math/Representation_Theory/ko/2026-02-13-Representations_of_Finite_Groups.md`
+- permalink: `/ko/math/representation_theory/representations_of_finite_groups`
+- scanned: 2026-05-22T02:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유한차원` | looks like emphasis (no <sub> partner) |
+| `dual representation` | multi-word English emphasis — possibly a definition |
+| `conjugate representation` | multi-word English emphasis — possibly a definition |
+| `simple` | looks like emphasis (no <sub> partner) |
+| `semisimple` | looks like emphasis (no <sub> partner) |
+
+## 표현의 지표
+- post: `_posts/Math/Representation_Theory/ko/2026-02-14-Character_Theory.md`
+- permalink: `/ko/math/representation_theory/character_theory`
+- scanned: 2026-05-22T02:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `abelian` | looks like emphasis (no <sub> partner) |
+
+## 원환면의 작용
+- post: `_posts/Math/Lie_Theory/ko/2026-02-24-Torus_Action.md`
+- permalink: `/ko/math/lie_theory/torus_action`
+- scanned: 2026-05-22T03:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `compact` | looks like emphasis (no <sub> partner) |
+| `weight space decomposition` | multi-word English emphasis — possibly a definition |
+| `Regular:` | looks like emphasis (no <sub> partner) |
+| `Singular:` | looks like emphasis (no <sub> partner) |
+

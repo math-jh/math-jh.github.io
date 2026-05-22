@@ -1251,11 +1251,51 @@
       "status": "failed",
       "last_attempt_ts": 1779410701.8649065,
       "error": "timeout after 900s"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-08-21-Various_Modules.md": {
+      "status": "done",
+      "last_attempt_ts": 1779411920.4257524,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-08-21-Various_Modules.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T01:00:01+00:00",
+      "in_chars": 11116,
+      "out_chars": 11032,
+      "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-08-23-Dual_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779413876.7244387,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-08-23-Dual_Spaces.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T01:30:01+00:00",
+      "in_chars": 9064,
+      "out_chars": 8618,
+      "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-08-30-Hom_and_Tensor.md": {
+      "status": "done",
+      "last_attempt_ts": 1779415733.56796,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-08-30-Hom_and_Tensor.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T02:00:01+00:00",
+      "in_chars": 8315,
+      "out_chars": 7537,
+      "reason": "pending"
+    },
+    "_posts/Math/Multilinear_Algebra/ko/2024-09-03-Matrices.md": {
+      "status": "done",
+      "last_attempt_ts": 1779417411.4081764,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-09-03-Matrices.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T02:30:01+00:00",
+      "in_chars": 7318,
+      "out_chars": 7171,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 114,
-    "total_in_chars": 1544872,
-    "total_out_chars": 1492448
+    "total_done": 118,
+    "total_in_chars": 1580685,
+    "total_out_chars": 1526806
   }
 }
