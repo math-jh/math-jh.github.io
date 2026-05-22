@@ -1432,11 +1432,41 @@
       "in_chars": 10939,
       "out_chars": 10671,
       "reason": "pending"
+    },
+    "_posts/Math/Ring_Theory/ko/2025-05-06-Polynomial_Rings.md": {
+      "status": "done",
+      "last_attempt_ts": 1779455658.7689703,
+      "en_path": "_posts/Math/Ring_Theory/en/2025-05-06-Polynomial_Rings.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T13:00:02+00:00",
+      "in_chars": 22329,
+      "out_chars": 26747,
+      "reason": "pending"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Affine_Schemes.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779457502.1893647,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Algebra_of_Schemes.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779459302.2636006,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Algebraic_Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779460908.0120778,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Algebraic_Groups.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-22T14:30:01+00:00",
+      "in_chars": 15315,
+      "out_chars": 16164,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 132,
-    "total_in_chars": 1778550,
-    "total_out_chars": 1738508
+    "total_done": 134,
+    "total_in_chars": 1816194,
+    "total_out_chars": 1781419
   }
 }
