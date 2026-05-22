@@ -129,7 +129,7 @@ permalink: /ko/misc/index_ko
 | <selected id="cochain_complex">cochain complex &#9745;</selected> | <unselected>사슬복합체</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |
 | <selected id="cocomplete_categoory">cocomplete categoory &#9745;</selected> | <unselected>여완비범주</unselected> | [\[범주론\] §극한](/ko/math/category_theory/limits) |  |
 | <selected id="cocycle">cocycle &#9745;</selected> | <unselected>쌍순환</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_varieties/sheaf_cohomology) | |
-| <selected id="codimension">codimension &#9745;</selected> | <unselected>여차원</unselected> | [\[가환대수학\] §차원](/ko/math/commutative_algebra/Krull_dimension) |  |
+| <selected id="codimension">codimension &#9745;</selected> | <unselected>여차원</unselected> | [\[가환대수학\] §차원](/ko/math/commutative_algebra/Krull_dimension)<br/>[\[스킴 이론\] §차원](/ko/math/scheme_theory/dimension) |  |
 | <unselected id="codomain">codomain</unselected> | <selected>공역 &#9745;</selected> | [\[범주론\] §범주](/ko/math/category_theory/categories) |  |
 | <selected id="coextension_of_scalar">coextension of scalar &#9745;</selected> | <unselected>스칼라의 쌍대확장</unselected> | [\[대수적 구조\] §스칼라의 변환](/ko/math/algebraic_structures/change_of_base_ring) |  |
 | <selected id="cofactor_expansion">cofactor expansion &#9745;</selected> | <unselected>여인자전개</unselected> | [\[선형대수학\] §행렬식의 존재성과 유일성](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant) |  |
@@ -227,7 +227,7 @@ permalink: /ko/misc/index_ko
 | <selected id="differential_k_-form">differential $k$-form &#9745;</selected> | <unselected>$k$차 미분형식</unselected> | [\[미분다양체\] §미분형식](/ko/math/manifold/differential_forms) |  |
 | <selected id="differential_form">differential form &#9745;</selected> | <unselected>미분형식</unselected> | [\[미분다양체\] §미분형식](/ko/math/manifold/differential_forms) |  | 
 | <selected id="differential_ideal">differential ideal &#9745;</selected> | <unselected>미분 아이디얼</unselected> | [\[미분다양체\] §미분 아이디얼](/ko/math/manifold/differential_ideal) |  |
-| <unselected id="dimension">dimension</unselected> | <selected>차원 &#9745;</selected> | [\[선형대수학\] §벡터공간의 차원](/ko/math/linear_algebra/dimension)<br/>[\[위상수학\] §차원](/ko/math/topology/dimension) |  |
+| <unselected id="dimension">dimension</unselected> | <selected>차원 &#9745;</selected> | [\[선형대수학\] §벡터공간의 차원](/ko/math/linear_algebra/dimension)<br/>[\[위상수학\] §차원](/ko/math/topology/dimension)<br/>[\[스킴 이론\] §차원](/ko/math/scheme_theory/dimension) |  |
 | <selected id="direct_limit">direct limit (injective limit) &#9745;</selected> | <unselected>직접극한 (귀납적극한)</unselected> | [\[집합론\] §극한](/ko/math/set_theory/limits)|  |
 | <selected id="direct_product">direct product &#9745;</selected> | <unselected>직접곱</unselected> | [\[대수적 구조\] §군의 직접곱](/ko/math/algebraic_structures/direct_products) |  |
 | <selected id="direct_sum">direct sum &#9745;</selected> | <unselected>직합</unselected> | [\[선형대수학\] §고유공간분해](/ko/math/linear_algebra/eigenspace_decomposition)<br/>[\[대수적 구조\] §가환군](/ko/math/algebraic_structures/abelian_groups) |  |
@@ -296,6 +296,7 @@ permalink: /ko/misc/index_ko
 | <selected id="face">face &#9745;</selected> | <unselected>면</unselected> | [\[Toric 기하학\] §아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties) |  |
 | <selected id="faithful">faithful &#9745;</selected> | <unselected>충실</unselected> | [\[범주론\] §함자](/ko/math/category_theory/functors) |  |
 | <selected id="family_of_sets">family of sets &#9745;</selected> | <unselected>집합족</unselected> | [\[집합론\] §합집합과 교집합](/ko/math/set_theory/union_and_intersection) |  |
+| <selected id="fiber">fiber &#9745;</selected> | <unselected>올</unselected> | [\[스킴 이론\] §올곱](/ko/math/scheme_theory/fiber_products) |  |
 | <selected id="fiber_bundle">fiber bundle &#9745;</selected> | <unselected>올다발</unselected> | [\[대수적 위상수학\] §특성류](/ko/math/algebraic_topology/characteristic_classes) |  |
 | <selected id="field">field &#9745;</selected> | <unselected>체</unselected> | [\[선형대수학\] §가환군과 체](/ko/math/linear_algebra/fields)<br/>[\[대수적 구조\] §분수체](/ko/math/algebraic_structures/field_of_fractions) |  |
 | <selected id="field_of_fractions">field of fractions &#9745;</selected> | <unselected>분수체</unselected> | [\[대수적 구조\] §분수체](/ko/math/algebraic_structures/field_of_fractions) |  |
@@ -461,6 +462,7 @@ permalink: /ko/misc/index_ko
 | --- | --- | --- | --- |
 | <selected id="kähler_differential_module">Kähler differential module &#9745;</selected> | <unselected>캘러 미분가군</unselected> | [\[가환대수학\] §미분](/ko/math/commutative_algebra/differentials) |  |
 | <selected id="kernel">kernel &#9745;</selected> | <unselected>핵</unselected> | [\[선형대수학\] §선형사상](/ko/math/linear_algebra/linear_map) <br/> [\[범주론\] §극한](/ko/math/category_theory/limits)<br/>[\[대수적 구조\] §군 준동형사상](/ko/math/algebraic_structures/group_homomorphisms) |  | 
+| <selected id="kodaira_dimension">Kodaira dimension &#9745;</selected> | <unselected>고다이라 차원</unselected> | [\[대수기하학\] §고다이라 소멸정리](/ko/math/algebraic_varieties/kodaira_vanishing) |  |
 | <selected id="kolmogorov_space">kolmogorov space &#9745;</selected> | <unselected>콜모고로프 공간</unselected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
 | <selected id="kronecker_pairing">Kronecker pairing &#9745;</selected> | <unselected>크로네커 쌍</unselected> | [\[다중선형대수학\] §쌍대공간](/ko/math/multilinear_algebra/dual_spaces) |  |
 | <selected id="krull_dimension">krull dimension &#9745;</selected> | <unselected>크룰 차원</unselected> | [\[위상수학\] §차원](/ko/math/topology/dimension)<br/>[\[가환대수학\] §차원](/ko/math/commutative_algebra/Krull_dimension) |  |

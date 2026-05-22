@@ -1151,3 +1151,24 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `GIT quotient` | multi-word English emphasis — possibly a definition |
 | `semistable` | looks like emphasis (no <sub> partner) |
 
+## 평탄사상
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Flat_Morphisms.md`
+- permalink: `/ko/math/scheme_theory/flat_morphisms`
+- scanned: 2026-05-22T12:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `평탄성` | looks like emphasis (no <sub> partner) |
+| `평탄` | looks like emphasis (no <sub> partner) |
+| `충실히 평탄` | looks like emphasis (no <sub> partner) |
+| `Frobenius 사상` | mixed-script emphasis — possibly a definition |
+
+## 고다이라 소멸정리
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-05-07-Kodaira_Vanishing.md`
+- permalink: `/ko/math/algebraic_varieties/kodaira_vanishing`
+- scanned: 2026-05-22T13:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `항상` | looks like emphasis (no <sub> partner) |
+

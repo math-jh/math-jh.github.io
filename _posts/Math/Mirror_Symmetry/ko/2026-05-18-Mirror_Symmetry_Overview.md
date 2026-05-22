@@ -115,21 +115,21 @@ $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}$
 
 여기서 $$q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$$은 mirror LG model의 complex structure를 담는 변수이다. Mirror domain $$\check{X}$$ 자체의 complex structure는 항상 같은 affine torus $$(\mathbb{C}^\ast)^n$$이지만, 그 위에 얹는 superpotential $$W_q$$가 $$q$$에 의해 결정된다. 즉, 한 $$q$$ 값마다 하나의 LG model $$(\check{X}, W_q)$$가 유일하게 결정되며, 이 family $$\{(\check{X}, W_q)\}_q$$ 전체가 $$X_\Sigma$$의 mirror로 등장한다는 것이 더 맞는 말이다. 이 때 complex structure $$q$$는 A-model에서는 Novikov parameter $$q$$로 등장한다.
 
-A-side에서 이 $$q$$가 갖는 기하적 의미를 짚어 두자. A-model이 보는 것은 $$X$$의 *symplectic 구조*로, Kähler form $$\omega \in H^2(X, \mathbb{R})$$가 바로 그 symplectic form이다. (quantum cohomology는 $$J$$ 선택에 무관한 symplectic invariant이며, complex 구조는 B-side가 본다.) 이 실수 데이터를 그대로 두면 moduli가 실다양체가 되어 다루기 불편하므로, 초끈이론에서 함께 등장하는 *$$B$$-field* $$B \in H^2(X, \mathbb{R})$$를 짝지어 *complexified Kähler class*
+우리는 앞서 mirror symmetry를 complex structure와 symplectic structure의 대칭으로 설명하였는데, 위에서 설명한 Novikov parameter가 바로 symplectic structure를 담고 있다. 구체적으로, 우리는 compact Kähler manifold $$X$$가 주어졌을 때 그 *Kähler form* $$\omega\in H^2(X, \mathbb{R})$$를 $$X$$의 symplectic form으로 정의한다. 이는 real form이 되어 moduli space를 생각하는 것이 다소 귀찮으므로, $$B\in H^2(X, \mathbb{R})$$을 택하여 *complexified Kähler class*
 
 $$t = B + i\omega \in H^2(X, \mathbb{C})$$
 
-를 만든다. 직관적으로 $$B$$-field는 실수 데이터인 Kähler form $$\omega$$를 복소 방향으로 채워, 이 moduli를 실다양체가 아니라 복소 다양체로 만들어 주는 짝꿍이라 보면 된다. Novikov parameter는 바로 이 $$t$$를 지수화한 것으로, 곡선 class $$\beta \in H_2(X)$$에 대해
+를 만든다. 이는 직관적으로 Kähler form $$\omega$$를 복소방향으로 채워 complexification을 하는 것이며, 물리적으로는 초끈이론에 등장하는 $$B$$-field를 의미한다. 이제 Novikov parameter는 바로 이 $$t$$를 지수화한 것으로, curve class $$\beta \in H_2(X)$$에 대해
 
 $$q^\beta = e^{2\pi i \int_\beta t} = e^{2\pi i \int_\beta B}\, e^{-2\pi \int_\beta \omega}$$
 
-로 주어진다. (글에 따라 $$2\pi i$$를 $$t$$에 흡수시켜 $$q = e^t$$로 적기도 한다.) 따라서 그 크기 $$\lvert q^\beta\rvert = e^{-2\pi \int_\beta \omega}$$는 곡선 class $$\beta$$의 *symplectic 부피* $$\int_\beta \omega$$를, 위상 $$\arg q^\beta = 2\pi \int_\beta B$$는 $$B$$-field를 담는다. 즉 $$q$$ 하나를 정하는 것은 complexified Kähler class $$t$$를, 따라서 Kähler form $$\omega = -\tfrac{1}{2\pi}\log\lvert q\rvert$$와 $$B$$-field를 정하는 것과 같다. Moduli가 벡터공간 $$H^2(X, \mathbb{C})$$가 아니라 torus $$(\mathbb{C}^\ast)^r$$로 나타나는 것은 $$B$$-field가 정수 cohomology class만큼의 이동에 대해 주기적이기 때문이다. 실제로 $$B$$는 오직 위상 $$e^{2\pi i \int_\beta B}$$ (곧 $$q^\beta$$의 위상)을 통해서만 나타나는데, $$B$$를 정수 class $$b \in H^2(X, \mathbb{Z})$$만큼 옮기면 $$\int_\beta B$$가 정수 $$\int_\beta b \in \mathbb{Z}$$만큼만 바뀌므로 ($$\beta \in H_2(X, \mathbb{Z})$$와 정수 class의 pairing은 정수이다) 이 위상이 변하지 않는다. 따라서 $$B$$는 $$H^2(X, \mathbb{R})/H^2(X, \mathbb{Z})$$의 원소로만 의미를 가지며, 이것이 $$q$$가 torus 위에 놓이는 이유이다.
+로 주어진다. 그럼 $$q^\beta$$의 크기 $$\lvert q^\beta\rvert = e^{-2\pi \int_\beta \omega}$$는 곡선 class $$\beta$$의 *symplectic volume* $$\int_\beta \omega$$를, phase $$\arg q^\beta = 2\pi \int_\beta B$$는 $$B$$-field를 담는다. 따라서 symplectic volume이 $$0$$으로 가는 상황에서는 $$q$$의 크기가 $$1$$로 가서 양자적인 효과가 full로 나타나며, 반대로 symplectic volume이 무한대로 가는 상황에서는 $$q$$의 크기가 $$0$$으로 가서 양자적인 효과가 사라진다. 
 
-이 관점은 아래에서 정의할 quantum cup product의 $$q^{\beta_0}$$-전개와도 맞물린다. 각 곡선 기여가 부피에 따라 $$\lvert q^{\beta_0}\rvert = e^{-2\pi \int_{\beta_0} \omega}$$로 지수적으로 가중되므로, $$q \to 0$$인 *large volume limit* (부피 $$\to \infty$$)에서는 비자명한 모든 곡선 기여가 사라지고 quantum cup product가 고전적 cup product로 환원된다. 결국 "A-side의 $$q$$와 B-side의 $$q$$가 같은 변수"라는 위의 진술은, mirror symmetry가 $$X$$의 *Kähler 모듈라이*를 $$\check{X}$$의 *complex structure 모듈라이*와 맞바꾼다는 이 글 처음의 원리를 $$q$$ 수준에서 구체화한 것이다.
+이제 위의 계산에서, $$q$$ 하나를 정하는 것은 complexified Kähler class $$t$$를 결정하는 것, 즉 $$B$$-field와 $$\omega$$를 각각 정해주는 것과 같다. 그럼 위의 식으로부터 $$B$$는 $$2\pi$$만큼의 주기를 가지고, $$\omega$$는 $$B$$가 정해주는 방향의 반지름을 정해주므로 $$q$$의 moduli space (혹은 $$t$$의 moduli space)는 $$r=H^2(X, \mathbb{R})$$차원의 algebraic torus $$(\mathbb{C}^\ast)^r$$가 된다. 
 
-거꾸로 B-side에서 같은 $$q$$의 의미도 짚어 두자. 거기서 $$q$$는 superpotential $$W_q$$의 계수를 정하고, 따라서 그 critical point들과 critical value들의 배치 — 곧 LG model $$(\check{X}, W_q)$$의 complex 기하 — 를 결정한다. (domain $$\check{X} = (\mathbb{C}^\ast)^n$$ 자체는 고정이고 모든 complex structure 정보가 $$W_q$$에 담겨 있음을 기억하자.) 예컨대 아래에서 볼 $$\mathbb{P}^1$$의 $$W_q = \x + q/\x$$는 critical point $$\x_\pm = \pm\sqrt{q}$$ 두 개를 갖는데, $$q \to 0$$이면 이 둘이 한 점으로 모여 superpotential이 퇴화한다. 이렇게 critical point들이 모여 complex structure가 최대로 degenerate되는 극한을 *large complex structure limit*이라 부른다. mirror map이 양쪽 $$q$$를 식별하므로, **A-side의 large volume limit과 B-side의 large complex structure limit이 바로 이 $$q \to 0$$ 점에서 만난다.** 
+B-side에서의 $$q$$는 위에서 살펴봤듯 superpotential의 계수로 나타났다. 직관적으로 superpotential이 $$\x^k$$ 꼴인 경우를 생각하면, $$\x^k=q$$의 critical point는 $$q$$가 $$0$$으로 갈 때 한 점으로 degenerate하고, 나머지 경우에는 적당히 분리되어 있는 singularity가 나온다. 
 
-이제 mirror symmetry statement를 적기 위해서는 $$X$$의 (small) *quantum cohomology*를 정의해야 한다. 구체적으로, $$X$$의 symplectic structure와 complex structure를 살펴볼 때 필요한 도구 중 하나는 $$J$$-holomorphic curve들이다. 이들을 이용하면, $$X$$의 cohomology $$H^\ast(X, \mathbb{C})$$ 위에 다음의 식
+이제 mirror symmetry statement를 잘 적기 위해서는 $$X$$의 (small) *quantum cohomology*를 정의해야 한다. 구체적으로, $$X$$의 symplectic structure와 complex structure를 살펴볼 때 필요한 도구 중 하나는 $$J$$-holomorphic curve들이다. 이들을 이용하면, $$X$$의 cohomology $$H^\ast(X, \mathbb{C})$$ 위에 다음의 식
 
 $$\alpha \star_q \beta \;=\; \alpha \smile \beta + \sum_{\beta_0} q^{\beta_0} \sum_\gamma \langle \alpha, \beta, \gamma^\vee \rangle_{0, 3, \beta_0}\, \gamma$$
 
