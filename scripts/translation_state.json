@@ -596,7 +596,7 @@
     },
     "_posts/Math/Field_Theory/ko/2025-05-15-Separable_Extensions.md": {
       "status": "failed",
-      "last_attempt_ts": 1779365702.339464,
+      "last_attempt_ts": 1779453902.0994828,
       "error": "timeout after 900s"
     },
     "_posts/Math/Field_Theory/ko/2025-05-17-Separable_Degree.md": {
@@ -1399,11 +1399,44 @@
       "in_chars": 12420,
       "out_chars": 12725,
       "reason": "pending"
+    },
+    "_posts/Math/Riemannian_Geometry/ko/2022-12-16-Riemannian_Metric.md": {
+      "status": "done",
+      "last_attempt_ts": 1779448062.5100546,
+      "en_path": "_posts/Math/Riemannian_Geometry/en/2022-12-16-Riemannian_Metric.md",
+      "ko_git_commit_ts": 1779371019.0,
+      "translated_at": "2026-05-22T11:00:02+00:00",
+      "in_chars": 7580,
+      "out_chars": 7239,
+      "reason": "pending"
+    },
+    "_posts/Math/Riemannian_Geometry/ko/2022-12-27-Levi-Civita_Connection.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779449402.1097257
+    },
+    "_posts/Math/Riemannian_Geometry/ko/2026-05-20-Curvature.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779449402.1097257
+    },
+    "_posts/Math/Ring_Theory/ko/2025-04-01-Integral_Domains.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779450302.2747118,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Ring_Theory/ko/2025-04-11-Chinese_Remainder_Theorem.md": {
+      "status": "done",
+      "last_attempt_ts": 1779451740.608279,
+      "en_path": "_posts/Math/Ring_Theory/en/2025-04-11-Chinese_Remainder_Theorem.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-22T12:00:02+00:00",
+      "in_chars": 10939,
+      "out_chars": 10671,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 130,
-    "total_in_chars": 1760031,
-    "total_out_chars": 1720598
+    "total_done": 132,
+    "total_in_chars": 1778550,
+    "total_out_chars": 1738508
   }
 }
