@@ -596,7 +596,7 @@
     },
     "_posts/Math/Field_Theory/ko/2025-05-15-Separable_Extensions.md": {
       "status": "failed",
-      "last_attempt_ts": 1779453902.0994828,
+      "last_attempt_ts": 1779542101.544887,
       "error": "timeout after 900s"
     },
     "_posts/Math/Field_Theory/ko/2025-05-17-Separable_Degree.md": {
@@ -1464,13 +1464,18 @@
       "reason": "pending"
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Affine_Schemes.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779457502.1893647,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779545357.8218384,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Affine_Schemes.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-23T14:00:01+00:00",
+      "in_chars": 24234,
+      "out_chars": 27224,
+      "reason": "pending"
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Algebra_of_Schemes.md": {
       "status": "failed",
-      "last_attempt_ts": 1779459302.2636006,
+      "last_attempt_ts": 1779547501.87505,
       "error": "timeout after 900s"
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Algebraic_Groups.md": {
@@ -1875,11 +1880,16 @@
       "in_chars": 21128,
       "out_chars": 545,
       "reason": "pending"
+    },
+    "_posts/Math/Toric_Geometry/ko/2026-05-18-Toric_Divisors_and_Line_Bundles.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779543901.5769944,
+      "error": "timeout after 900s"
     }
   },
   "stats": {
-    "total_done": 173,
-    "total_in_chars": 2284687,
-    "total_out_chars": 2255886
+    "total_done": 174,
+    "total_in_chars": 2308921,
+    "total_out_chars": 2283110
   }
 }
