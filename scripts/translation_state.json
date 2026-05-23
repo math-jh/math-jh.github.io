@@ -926,9 +926,14 @@
       "reason": "pending"
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-07-Dual_Space.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779434102.2321763,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779521786.1921408,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-08-07-Dual_Space.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T07:30:01+00:00",
+      "in_chars": 14924,
+      "out_chars": 16043,
+      "reason": "pending"
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-12-Existence_and_Uniqueness_of_Determinant.md": {
       "status": "done",
@@ -1791,11 +1796,41 @@
       "in_chars": 12376,
       "out_chars": 9438,
       "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2024-12-15-Compactness.md": {
+      "status": "done",
+      "last_attempt_ts": 1779520030.928079,
+      "en_path": "_posts/Math/Topology/en/2024-12-15-Compactness.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T07:00:01+00:00",
+      "in_chars": 12310,
+      "out_chars": 13730,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2024-12-15-Connected_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779523498.4680698,
+      "en_path": "_posts/Math/Topology/en/2024-12-15-Connected_Spaces.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T08:00:01+00:00",
+      "in_chars": 7685,
+      "out_chars": 7363,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2024-12-15-Dimension.md": {
+      "status": "done",
+      "last_attempt_ts": 1779525514.1264274,
+      "en_path": "_posts/Math/Topology/en/2024-12-15-Dimension.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T08:30:01+00:00",
+      "in_chars": 12228,
+      "out_chars": 13758,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 164,
-    "total_in_chars": 2148708,
-    "total_out_chars": 2125392
+    "total_done": 168,
+    "total_in_chars": 2195855,
+    "total_out_chars": 2176286
   }
 }
