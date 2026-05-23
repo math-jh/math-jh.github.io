@@ -946,9 +946,14 @@
       "reason": "pending"
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-19-Gaussian_Elimination.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779446701.6810195,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779534603.1074474,
+      "en_path": "_posts/Math/Linear_Algebra/en/2022-08-19-Gaussian_Elimination.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T11:00:02+00:00",
+      "in_chars": 15391,
+      "out_chars": 20933,
+      "reason": "pending"
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-28-Characteristic_Polynomial.md": {
       "status": "done",
@@ -1429,9 +1434,14 @@
       "last_attempt_ts": 1779449402.1097257
     },
     "_posts/Math/Ring_Theory/ko/2025-04-01-Integral_Domains.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779450302.2747118,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779538233.1987174,
+      "en_path": "_posts/Math/Ring_Theory/en/2025-04-01-Integral_Domains.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T12:00:01+00:00",
+      "in_chars": 17898,
+      "out_chars": 20575,
+      "reason": "pending"
     },
     "_posts/Math/Ring_Theory/ko/2025-04-11-Chinese_Remainder_Theorem.md": {
       "status": "done",
@@ -1846,11 +1856,30 @@
       "in_chars": 23947,
       "out_chars": 26342,
       "reason": "pending"
+    },
+    "_posts/Math/Toric_Geometry/ko/2026-03-09-Cox_Construction_and_GIT_Quotient.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779535802.0010517
+    },
+    "_posts/Math/Toric_Geometry/ko/2026-05-17-Toric_Varieties.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779536702.1821437,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Toric_Geometry/ko/2026-05-18-Reflexive_Polytope_and_Fano_Variety.md": {
+      "status": "done",
+      "last_attempt_ts": 1779539788.3388011,
+      "en_path": "_posts/Math/Toric_Geometry/en/2026-05-18-Reflexive_Polytope_and_Fano_Variety.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T12:30:01+00:00",
+      "in_chars": 21128,
+      "out_chars": 545,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 170,
-    "total_in_chars": 2230270,
-    "total_out_chars": 2213833
+    "total_done": 173,
+    "total_in_chars": 2284687,
+    "total_out_chars": 2255886
   }
 }
