@@ -1621,11 +1621,71 @@
       "in_chars": 3137,
       "out_chars": 1301,
       "reason": "pending"
+    },
+    "_posts/Math/Symplectic_Geometry/ko/2023-05-15-Morse_Theory_and_Stationary_Phase.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779490802.2254546
+    },
+    "_posts/Math/Symplectic_Geometry/ko/2023-06-01-J_Holomorphic_Curves.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779490802.2254546
+    },
+    "_posts/Math/Symplectic_Geometry/ko/2023-06-10-Stable_Maps_Moduli.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779490802.2254546
+    },
+    "_posts/Math/Symplectic_Geometry/ko/2023-06-15-Gromov_Witten_Invariants.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779490802.2254546
+    },
+    "_posts/Math/Symplectic_Geometry/ko/2023-06-30-Quantum_Cohomology.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779490802.2254546
+    },
+    "_posts/Math/Topology/ko/2022-11-08-Open_Sets.md": {
+      "status": "done",
+      "last_attempt_ts": 1779491114.3172913,
+      "en_path": "_posts/Math/Topology/en/2022-11-08-Open_Sets.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-22T23:00:02+00:00",
+      "in_chars": 9866,
+      "out_chars": 11459,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2022-11-08-Topological_Bases.md": {
+      "status": "done",
+      "last_attempt_ts": 1779492902.7814302,
+      "en_path": "_posts/Math/Topology/en/2022-11-08-Topological_Bases.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-22T23:30:01+00:00",
+      "in_chars": 9436,
+      "out_chars": 9955,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2022-11-09-Equivalent_Formulations_of_Topology.md": {
+      "status": "done",
+      "last_attempt_ts": 1779494772.1246967,
+      "en_path": "_posts/Math/Topology/en/2022-11-09-Equivalent_Formulations_of_Topology.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T00:00:01+00:00",
+      "in_chars": 8498,
+      "out_chars": 8707,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2022-11-09-Other_Concepts.md": {
+      "status": "done",
+      "last_attempt_ts": 1779496482.401609,
+      "en_path": "_posts/Math/Topology/en/2022-11-09-Other_Concepts.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T00:30:01+00:00",
+      "in_chars": 9164,
+      "out_chars": 9755,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 149,
-    "total_in_chars": 2009093,
-    "total_out_chars": 1983529
+    "total_done": 153,
+    "total_in_chars": 2046057,
+    "total_out_chars": 2023405
   }
 }
