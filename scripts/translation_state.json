@@ -1599,9 +1599,14 @@
       "reason": "pending"
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Spectrums.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779480902.1874135,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779568865.9424272,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Spectrums.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-23T20:30:01+00:00",
+      "in_chars": 24543,
+      "out_chars": 1559,
+      "reason": "pending"
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Topology_of_Schemes.md": {
       "status": "done",
@@ -1945,11 +1950,41 @@
       "in_chars": 9875,
       "out_chars": 9631,
       "reason": "drift"
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-23-Axiom_of_Choice.md": {
+      "status": "done",
+      "last_attempt_ts": 1779563232.0018811,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Axiom_of_Choice.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T19:00:02+00:00",
+      "in_chars": 8974,
+      "out_chars": 9226,
+      "reason": "drift"
+    },
+    "_posts/Math/Set_Theory/ko/2022-11-22-Operation_of_Binary_Relations.md": {
+      "status": "done",
+      "last_attempt_ts": 1779565038.4863951,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Operation_of_Binary_Relations.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T19:30:02+00:00",
+      "in_chars": 8298,
+      "out_chars": 8315,
+      "reason": "drift"
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-15-Functions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779566716.3602698,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Functions.md",
+      "ko_git_commit_ts": 1772793002.0,
+      "translated_at": "2026-05-23T20:00:03+00:00",
+      "in_chars": 15639,
+      "out_chars": 7640,
+      "reason": "polish"
     }
   },
   "stats": {
-    "total_done": 182,
-    "total_in_chars": 2405571,
-    "total_out_chars": 2388295
+    "total_done": 186,
+    "total_in_chars": 2463025,
+    "total_out_chars": 2415035
   }
 }
