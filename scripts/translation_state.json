@@ -1751,11 +1751,51 @@
       "in_chars": 6216,
       "out_chars": 5497,
       "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2024-11-19-Presheaves.md": {
+      "status": "done",
+      "last_attempt_ts": 1779512922.687958,
+      "en_path": "_posts/Math/Topology/en/2024-11-19-Presheaves.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T05:00:02+00:00",
+      "in_chars": 13530,
+      "out_chars": 14188,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2024-12-03-Compact_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779514384.3953223,
+      "en_path": "_posts/Math/Topology/en/2024-12-03-Compact_Spaces.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T05:30:02+00:00",
+      "in_chars": 9100,
+      "out_chars": 9452,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2024-12-03-Hausdorff_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779516560.6612399,
+      "en_path": "_posts/Math/Topology/en/2024-12-03-Hausdorff_Spaces.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T06:00:01+00:00",
+      "in_chars": 11562,
+      "out_chars": 11984,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2024-12-11-Filter_Convergence.md": {
+      "status": "done",
+      "last_attempt_ts": 1779518324.6207519,
+      "en_path": "_posts/Math/Topology/en/2024-12-11-Filter_Convergence.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T06:30:02+00:00",
+      "in_chars": 12376,
+      "out_chars": 9438,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 160,
-    "total_in_chars": 2102140,
-    "total_out_chars": 2080330
+    "total_done": 164,
+    "total_in_chars": 2148708,
+    "total_out_chars": 2125392
   }
 }
