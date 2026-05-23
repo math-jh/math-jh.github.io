@@ -1980,11 +1980,31 @@
       "in_chars": 15639,
       "out_chars": 7640,
       "reason": "polish"
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-23-Ordinals.md": {
+      "status": "done",
+      "last_attempt_ts": 1779570455.0310185,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Ordinals.md",
+      "ko_git_commit_ts": 1772822402.0,
+      "translated_at": "2026-05-23T21:00:03+00:00",
+      "in_chars": 17877,
+      "out_chars": 9064,
+      "reason": "polish"
+    },
+    "_posts/Math/Set_Theory/ko/2021-09-04-Cardinals.md": {
+      "status": "done",
+      "last_attempt_ts": 1779572290.705502,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Cardinals.md",
+      "ko_git_commit_ts": 1772823001.0,
+      "translated_at": "2026-05-23T21:30:03+00:00",
+      "in_chars": 17719,
+      "out_chars": 8846,
+      "reason": "polish"
     }
   },
   "stats": {
-    "total_done": 186,
-    "total_in_chars": 2463025,
-    "total_out_chars": 2415035
+    "total_done": 188,
+    "total_in_chars": 2498621,
+    "total_out_chars": 2432945
   }
 }
