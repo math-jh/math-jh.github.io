@@ -997,13 +997,13 @@
     },
     "_posts/Math/Linear_Algebra/ko/2022-10-09-Least_Squares_Method.md": {
       "status": "done",
-      "last_attempt_ts": 1779368553.8896432,
+      "last_attempt_ts": 1779548874.2992086,
       "en_path": "_posts/Math/Linear_Algebra/en/2022-10-09-Least_Squares_Method.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-21T13:00:02+00:00",
-      "in_chars": 4465,
-      "out_chars": 3608,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779375607.0,
+      "translated_at": "2026-05-23T15:00:02+00:00",
+      "in_chars": 9768,
+      "out_chars": 11223,
+      "reason": "drift"
     },
     "_posts/Math/Linear_Algebra/ko/2026-01-21-Jordan_Canonical_Form.md": {
       "status": "done",
@@ -1220,18 +1220,24 @@
       "last_attempt_ts": 1779402601.2667787
     },
     "_posts/Math/Mirror_Symmetry/ko/2026-05-18-Mirror_Symmetry_Overview.md": {
-      "status": "draft_skip",
-      "last_attempt_ts": 1779424201.997914
+      "status": "done",
+      "last_attempt_ts": 1779550969.760943,
+      "en_path": "_posts/Math/Mirror_Symmetry/en/2026-05-18-Mirror_Symmetry_Overview.md",
+      "ko_git_commit_ts": 1779490807.0,
+      "translated_at": "2026-05-23T15:30:02+00:00",
+      "in_chars": 15391,
+      "out_chars": 18346,
+      "reason": "drift"
     },
     "_posts/Math/Mirror_Symmetry/ko/2026-05-19-Frobenius_Manifold.md": {
       "status": "done",
-      "last_attempt_ts": 1779405063.2191503,
+      "last_attempt_ts": 1779552852.0282934,
       "en_path": "_posts/Math/Mirror_Symmetry/en/2026-05-19-Frobenius_Manifold.md",
-      "ko_git_commit_ts": 1779375607.0,
-      "translated_at": "2026-05-21T23:00:01+00:00",
-      "in_chars": 25012,
-      "out_chars": 22218,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779490807.0,
+      "translated_at": "2026-05-23T16:00:02+00:00",
+      "in_chars": 27374,
+      "out_chars": 31843,
+      "reason": "drift"
     },
     "_posts/Math/Mirror_Symmetry/ko/2026-05-21-Dubrovin_Connection.md": {
       "status": "draft_skip",
@@ -1885,11 +1891,25 @@
       "status": "failed",
       "last_attempt_ts": 1779543901.5769944,
       "error": "timeout after 900s"
+    },
+    "_posts/Math/Toric_Geometry/ko/2026-05-20-Logarithmic_Differentials.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779548401.129664
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-09-Ordered_Pair.md": {
+      "status": "done",
+      "last_attempt_ts": 1779554332.8063474,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Ordered_Pair.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T16:30:02+00:00",
+      "in_chars": 8635,
+      "out_chars": 8632,
+      "reason": "drift"
     }
   },
   "stats": {
-    "total_done": 174,
-    "total_in_chars": 2308921,
-    "total_out_chars": 2283110
+    "total_done": 178,
+    "total_in_chars": 2370089,
+    "total_out_chars": 2353154
   }
 }
