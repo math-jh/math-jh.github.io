@@ -1716,11 +1716,46 @@
       "in_chars": 9490,
       "out_chars": 10466,
       "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2022-11-17-Quotient_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779505625.3975222,
+      "en_path": "_posts/Math/Topology/en/2022-11-17-Quotient_Spaces.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T03:00:02+00:00",
+      "in_chars": 7811,
+      "out_chars": 7898,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2022-11-21-Product_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779507348.2334356,
+      "en_path": "_posts/Math/Topology/en/2022-11-21-Product_Spaces.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T03:30:01+00:00",
+      "in_chars": 6655,
+      "out_chars": 6220,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2023-11-01-Sheaves.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779509701.6252182,
+      "error": "timeout after 900s"
+    },
+    "_posts/Math/Topology/ko/2024-11-19-Open_Mappings_and_Closed_Mappings.md": {
+      "status": "done",
+      "last_attempt_ts": 1779510838.8191054,
+      "en_path": "_posts/Math/Topology/en/2024-11-19-Open_Mappings_and_Closed_Mappings.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T04:30:01+00:00",
+      "in_chars": 6216,
+      "out_chars": 5497,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 157,
-    "total_in_chars": 2081458,
-    "total_out_chars": 2060715
+    "total_done": 160,
+    "total_in_chars": 2102140,
+    "total_out_chars": 2080330
   }
 }
