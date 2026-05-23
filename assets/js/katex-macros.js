@@ -149,6 +149,7 @@ window.KATEX_MACROS = {
     "\\Prin":"\\operatorname{Prin}",
     "\\Proj":"\\operatorname{Proj}",
     "\\proj":"\\operatorname{proj}",
+    "\\qtimes":"\\mathbin{\\star}_q",
     "\\rank":"\\operatorname{rank}",
     "\\red":"\\mathrm{red}",
     "\\reg":"\\mathrm{reg}",

@@ -1376,3 +1376,20 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `splitting axiom` | multi-word English emphasis — possibly a definition |
 | `semisimple` | looks like emphasis (no <sub> partner) |
 
+## 토릭 다양체의 정의
+- post: `_posts/Math/Toric_Geometry/ko/2026-05-17-Toric_Varieties.md`
+- permalink: `/ko/math/toric_geometry/toric_varieties`
+- scanned: 2026-05-23T18:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `fan` | looks like emphasis (no <sub> partner) |
+| `primitive inner normal vector` | multi-word English emphasis — possibly a definition |
+| `normal fan` | multi-word English emphasis — possibly a definition |
+| `projective` | looks like emphasis (no <sub> partner) |
+| `Cartier` | looks like emphasis (no <sub> partner) |
+| `standard simplex` | multi-word English emphasis — possibly a definition |
+| `maximal` | looks like emphasis (no <sub> partner) |
+| `resolution of singularities` | multi-word English emphasis — possibly a definition |
+| `star subdivision` | multi-word English emphasis — possibly a definition |
+

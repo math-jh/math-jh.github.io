@@ -29,7 +29,7 @@ published: false
 
 Dubrovin에 따르면 $$\nabla$$와 $$\circ$$은 *Dubrovin connection*이라 부르는, $$M\times \mathbb{C}^\ast$$ 위의 flat connection $$\nabla^z$$로 연결되며, 이 connection은 $$z\rightarrow 0$$일 때 $$\circ$$을, $$z\rightarrow\infty$$일 때 $$\nabla$$를 복원한다. 이것이 말이 되기 위해서는 $$\circ$$을 connection처럼 취급하는 것이 어떤 것인지를 다소 정당화해야 한다.
 
-일반적으로 connection은 local frame에서 $$\nabla_{\partial_\alpha} = \partial_\alpha + A_\alpha$$ 꼴로 적히며, 여기서 $$A_\alpha$$는 fiber 위의 endomorphism인 connection $$1$$-form이다. ([\[리만기하학\] §접속, ⁋정의 3](/ko/math/riemannian_geometry/connection#def3)) 핵심적인 관찰은 product $$\circ$$가 각 방향 $$\partial_\alpha$$에 대해 "$$\partial_\alpha$$를 곱하는" endomorphism $$\mathcal{C}_\alpha = \partial_\alpha \circ -$$을 생각하면 그 행렬 성분이 바로 product의 구조상수 $$c_{\alpha\beta}^\gamma$$라는 점이다. 즉, 엄밀히는 $$\circ$$ 그 자체가 connection인 것이 아니라, 그 구조상수들이 Christoffel symbol의 역할을 맡는 것이다. ([\[리만기하학\] §레비-치비타 접속, ⁋명제 6](/ko/math/riemannian_geometry/Levi-Civita_connection#prop6))
+일반적으로 connection은 local frame에서 $$\nabla_{\partial_\alpha} = \partial_\alpha + A_\alpha$$ 꼴로 적히며, 여기서 $$A_\alpha$$는 fiber 위의 endomorphism인 connection $$1$$-form이다. ([\[리만기하학\] §접속, ⁋정의 3](/ko/math/riemannian_geometry/connection#def3)) 핵심적인 관찰은 product $$\circ$$가 각 방향 $$\partial_\alpha$$에 대해 "$$\partial_\alpha$$를 곱하는" endomorphism $$\mathcal{C}_\alpha = \partial_\alpha \circ -$$을 생각하면 그 행렬 성분이 바로 product의 structure constant $$c_{\alpha\beta}^\gamma$$라는 점이다. 즉, 엄밀히는 $$\circ$$ 그 자체가 connection인 것이 아니라, 그 structure constant들이 Christoffel symbol의 역할을 맡는 것이다. ([\[리만기하학\] §레비-치비타 접속, ⁋명제 6](/ko/math/riemannian_geometry/Levi-Civita_connection#prop6))
 
 실제로, (flat) coordinate $$\{ t^\alpha \}$$를 택하면
 
@@ -135,23 +135,17 @@ $$\partial_\alpha s^\beta + \frac{1}{z} \sum_\gamma c_{\alpha\gamma}^\beta\, s^\
 
 Frobenius manifold의 대표적인 예시는 quantum cohomology의 deformation을 담는 $$M = H^\ast(X, \mathbb{C})$$의 경우였다. ([§프로베니우스 다양체, ⁋명제 9](/ko/math/mirror_symmetry/frobenius_manifold#prop9)) 이 경우의 Dubrovin connection을 구체적으로 살펴보자. 우선 base manifold는 $$M \times \mathbb{C}^\ast$$이고, 이 manifold의 점을 $$(t,z)\in M\times \mathbb{C}^\ast$$으로 쓸 수 있다. 정의에 의하여, 한 점 $$(t,z)$$ 위의 fiber는 $$(\pr_1^\ast TM)_{(t,z)}\cong T_tM$$이고, $$M$$은 원래부터 벡터공간이었으므로 이 fiber는 $$H^\ast(X, \mathbb{C})$$와 canonically isomorphic하며 이들 각각에 $$t$$가 정의하는 big quantum product $$\circ_t$$를 주는 것이 Frobenius manifold 
 
-다. 이 bundle 위에서 Dubrovin connection은 $$\nabla^z_{\partial_\alpha} = \partial_\alpha + z^{-1}\mathcal{C}_\alpha$$으로 주어지며, $$\mathcal{C}_\alpha = \partial_\alpha \circ_t -$$는 big quantum product로 곱하는 endomorphism이다. 이렇게 $$M = H^\ast(X)$$ 전체를 base로 둔 것이 big quantum cohomology에 대응하는 quantum $$D$$-module이다.
+다. 이 bundle 위에서 Dubrovin connection은 $$\nabla^z_{\partial_\alpha} = \partial_\alpha + z^{-1}\mathcal{C}_\alpha$$으로 주어지며, $$\mathcal{C}_\alpha = \partial_\alpha \circ_t -$$는 big quantum product로 곱하는 endomorphism이다. 이렇게 $$M = H^\ast(X)$$ 전체를 base로 둔 것이 big quantum cohomology에 대응하는 quantum $$D$$-module이다. 앞선 글에서 살펴봤듯, 우리가 우선적으로 관심있는 대상은 이 중 small quantum cohomology에 해당하는 $$H^2$$ 방향 deformation이므로, 특별히 $$H^2(X)$$의 basis를 $$\{T_\alpha\}$$라 하면, 이 방향의 connection constant는 $$\mathcal{C}_a=T_a\qtimes -$$이다. 따라서 이 방향의 QDE는
 
-이제 mirror symmetry를 향해 이 connection을 Kähler 방향으로 좁히자. [\[사교기하학\] §양자 코호몰로지](/ko/math/symplectic_geometry/quantum_cohomology)에서 보았듯 big quantum product $$\circ_t$$를 $$H^2(X)$$ 방향으로 제한하면 그 의존성이 전부 Novikov 변수 $$q$$로 흡수되어 small quantum product $$\star_q$$가 된다. 이 $$q$$가 complexified Kähler 모수로서 base를 이루는 기하는 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 다루었고, 독립적인 $$q$$ 좌표는 $$H^2(X)$$의 basis $$\{T_a\}$$에 대응하여 $$r = \dim H^2(X)$$개이다. 따라서 base는 $$M = H^\ast(X)$$ 전체에서 $$r$$차원 Kähler moduli ($$q$$-torus)로 줄어들지만, product와 그것이 작용하는 fiber는 여전히 $$H^\ast(X)$$ 전체이다. 그 $$q_a$$ 방향의 connection 계수는 $$\mathcal{C}_a = T_a \star_q$$, 곧 divisor $$T_a$$를 quantum 곱하는 연산이 되는데, $$T_a$$가 이렇게 *미분 방향* $$q_a\partial_{q_a}$$과 *곱하는 class* $$T_a \star_q$$ 양쪽에 동시에 나타나는 것은 우연이 아니라 divisor equation의 귀결이다. ([\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)) mirror theorem이 사는 곳이 바로 이 Kähler 방향이며, mirror map은 $$q$$를 거울의 복소구조 모수와 식별한다. (big 방향까지 켜면 거울 쪽에서 superpotential의 bulk deformation이 필요하므로, 여기서는 이 $$q$$-방향 버전을 다룬다.)
+$$z\, q_a \partial_{q_a} s = -\,(T_a \qtimes s), \qquad a = 1, \ldots, r$$
 
-이제 이 connection의 horizontal section, 즉 $$\nabla^z s = 0$$을 만족하는 $$s$$를 찾는 것이 곧 quantum $$D$$-module의 flat section을 찾는 것이다. 앞서 적은 일반적 QDE를 $$H^2$$ 방향에 대해 풀어 쓰면
-
-$$z\, q_a \partial_{q_a} s = -\,(T_a \star_q s), \qquad a = 1, \ldots, r$$
-
-가 되며 (우변의 부호는 [정의 1](#def1)의 $$+z^{-1}\mathcal{C}_\alpha$$ 약속을 따른 것이다), 이는 $$H^\ast(X)$$-값을 갖는 first order linear 시스템이다. 따라서 그 solution space는 앞서 본 대로 fiber와 같은 $$\dim_\mathbb{C} H^\ast(X)$$차원이고, 이 시스템의 fundamental solution을 명시적으로 적은 것이 Givental의 $$J$$-function이다. ([§Givental J-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function))
-
-이처럼 connection이 Dubrovin connection $$\nabla^z$$인 경우 그 quantum $$D$$-module은 $$X$$의 A-model data를 담으므로, 이를 *A-model $$D$$-module*이라 부르기도 한다.
+가 되며, 위에서 살펴봤듯 이 방정식의 solution space는 $$\dim_\mathbb{C} H^\ast(X)$$차원이다. 이 system의 fundametnal solution을 명시적으로 적은 것이 A-side의 데이터를 담고 있는 Givental의 $$J$$-function이다. 이처럼 connection이 Dubrovin connection $$\nabla^z$$인 경우 그 quantum $$D$$-module은 $$X$$의 A-model data를 담으므로, 이를 *A-model $$D$$-module*이라 부르기도 한다.
 
 정리하면, A-side에서 우리는 base manifold $$M \times \mathbb{C}^\ast$$ 위에 *A-model state space*
 
 $$H_A := H^\ast(X, \mathbb{C}[z^{\pm 1}, q^{\pm 1}])$$
 
-를 둔다. 이것은 이 base 위 quantum $$D$$-module의 (global) section들이 이루는 free module이고, 그 $$\mathcal{D}$$-module 구조는 Dubrovin connection $$\nabla^z$$로 미분하는 작용이 준다. 여기서 base의 두 방향은 성격이 전혀 다르다. 첫째 *moduli 방향* $$q$$는 앞서 본 complexified Kähler moduli, 곧 $$q$$-torus $$(\mathbb{C}^\ast)^r$$이고, spectral 방향 $$\mathbb{C}^\ast$$와 합치면 base가 $$\Spec \mathbb{C}[z^{\pm 1}, q^{\pm 1}]$$로 적힌다. 이 방향의 작용 $$\nabla^z_{q_a\partial_{q_a}}$$이 곧 위의 QDE이며 quantum product의 $$q$$-의존성을 담고, mirror가 식별하는 것이 바로 이 $$q$$ 방향이다. 둘째로 *spectral 방향* $$z$$는 moduli가 아니라 auxiliary parameter로, 그 역할은 둘이다. 하나는 $$z\to\infty$$의 $$\nabla$$와 $$z\to 0$$의 $$\circ$$를 하나의 flat connection으로 묶는 것이고 ([정의 1](#def1)), 다른 하나는 $$z$$-방향 성분 $$\nabla^z_{\partial_z}$$이 grading $$\mu$$와 Euler field $$E$$의 정보를 나르는 것이다. $$z$$는 뒤에서 보듯 A-side와 B-side에 공통으로 나타나는 universal parameter이므로, $$q$$와 달리 mirror가 식별하는 대상이 아니다.
+를 둔다. 구체적으로 $$H_A$$는 계수환 $$\mathbb{C}[z^{\pm 1}, q^{\pm 1}]$$ 위의 free module로, $$H^\ast(X)$$의 cohomology basis $$\{\sigma^\alpha\}$$를 그대로 basis로 가지며 rank가 $$\dim_\mathbb{C} H^\ast(X)$$이다. 그 원소 $$s \in H_A$$는 따라서 $$s = \sum_\alpha s^\alpha(z, q)\, \sigma^\alpha$$ ($$s^\alpha \in \mathbb{C}[z^{\pm 1}, q^{\pm 1}]$$) 꼴로 적힌다. 기하학적으로 이는 base $$M \times \mathbb{C}^\ast$$ 위 fiber $$H^\ast(X)$$인 trivial bundle의 (Laurent polynomial 계수) section module과 같다. 그 $$\mathcal{D}$$-module 구조는 Dubrovin connection $$\nabla^z$$가 부여하는데, 구체적으로 $$q$$-방향에서는 $$q_a\partial_{q_a}$$가 $$\nabla^z_{q_a\partial_{q_a}}$$로 작용하여 위의 QDE $$z\,q_a\partial_{q_a} s = -(T_a \star_q s)$$를 주고, $$z$$-방향에서는 $$\partial_z$$가 [정의 1](#def1)의 $$\nabla^z_{\partial_z} = \partial_z - z^{-2}\,E\circ + z^{-1}\mu$$로 작용한다. flat section ($$\nabla^z s = 0$$)들이 곧 QDE의 해이며, 그 공간은 앞서 본 대로 $$\dim_\mathbb{C} H^\ast(X)$$차원이다. 여기서 base의 두 방향은 성격이 전혀 다르다. 첫째 *moduli 방향* $$q$$는 앞서 본 complexified Kähler moduli, 곧 $$q$$-torus $$(\mathbb{C}^\ast)^r$$이고, spectral 방향 $$\mathbb{C}^\ast$$와 합치면 base가 $$\Spec \mathbb{C}[z^{\pm 1}, q^{\pm 1}]$$로 적힌다. 이 방향의 작용 $$\nabla^z_{q_a\partial_{q_a}}$$이 곧 위의 QDE이며 quantum product의 $$q$$-의존성을 담고, mirror가 식별하는 것이 바로 이 $$q$$ 방향이다. 둘째로 *spectral 방향* $$z$$는 moduli가 아니라 auxiliary parameter로, 그 역할은 둘이다. 하나는 $$z\to\infty$$의 $$\nabla$$와 $$z\to 0$$의 $$\circ$$를 하나의 flat connection으로 묶는 것이고 ([정의 1](#def1)), 다른 하나는 $$z$$-방향 성분 $$\nabla^z_{\partial_z}$$이 grading $$\mu$$와 Euler field $$E$$의 정보를 나르는 것이다. $$z$$는 뒤에서 보듯 A-side와 B-side에 공통으로 나타나는 universal parameter이므로, $$q$$와 달리 mirror가 식별하는 대상이 아니다.
 
 같은 구조가 mirror의 B-side에서도 나타난다. $$X$$의 mirror를 $$\check{X}$$로 적자 (Fano $$X$$의 경우 Landau-Ginzburg model $$(\check{X}, W_q)$$). 여기서 A-model의 quantum product에 대응하는 것은 superpotential $$W_q$$의 *Jacobi ring* $$\Jac(W_q)$$로, [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 본 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 양쪽이 이어진다. 이 $$\Jac(W_q)$$를 deformation parameter $$q$$를 따라 모으면 base $$M$$ 위의 vector bundle을 이루고, 그 위에는 quantum $$D$$-module의 역할을 하는 flat connection, 곧 *Gauss-Manin connection* $$\nabla^{GM}$$이 있어 이를 하나의 $$\mathcal{D}$$-module, 곧 *Gauss-Manin system*으로 만든다. 그 section들이 이루는 free module이 *B-model state space*
 
@@ -185,10 +179,7 @@ $$z \to 0$$ limit을 취하면 $$\nabla^z$$의 leading term은 product $$\circ$$
 
 **참고문헌**
 
-**[Dub]** B. Dubrovin, *Geometry of $$2$$D topological field theories*, Integrable systems and quantum groups (Montecatini Terme, 1993), Lecture Notes in Math. **1620**, Springer, 1996, 120--348.
-
-**[Giv]** A. Givental, *Equivariant Gromov-Witten invariants*, Internat. Math. Res. Notices **1996**, no. 13, 613--663.
-
-**[Iri]** H. Iritani, *An integral structure in quantum cohomology and mirror symmetry for toric orbifolds*, Adv. Math. **222** (2009), no. 3, 1016--1079.
-
+**[Dub]** B. Dubrovin, *Geometry of $$2$$D topological field theories*, Integrable systems and quantum groups (Montecatini Terme, 1993), Lecture Notes in Math. **1620**, Springer, 1996, 120--348.  
+**[Giv]** A. Givental, *Equivariant Gromov-Witten invariants*, Internat. Math. Res. Notices **1996**, no. 13, 613--663.  
+**[Iri]** H. Iritani, *An integral structure in quantum cohomology and mirror symmetry for toric orbifolds*, Adv. Math. **222** (2009), no. 3, 1016--1079.  
 **[CK]** D. A. Cox, S. Katz, *Mirror symmetry and algebraic geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.
