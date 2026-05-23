@@ -1252,9 +1252,14 @@
       "last_attempt_ts": 1779409801.7127612
     },
     "_posts/Math/Multilinear_Algebra/ko/2024-08-18-Basis_of_Free_Modules.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779410701.8649065,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779498509.2694292,
+      "en_path": "_posts/Math/Multilinear_Algebra/en/2024-08-18-Basis_of_Free_Modules.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T01:00:01+00:00",
+      "in_chars": 10471,
+      "out_chars": 11276,
+      "reason": "pending"
     },
     "_posts/Math/Multilinear_Algebra/ko/2024-08-21-Various_Modules.md": {
       "status": "done",
@@ -1681,11 +1686,41 @@
       "in_chars": 9164,
       "out_chars": 9755,
       "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2022-11-13-Continuous_Functions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779500011.5388484,
+      "en_path": "_posts/Math/Topology/en/2022-11-13-Continuous_Functions.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T01:30:01+00:00",
+      "in_chars": 7620,
+      "out_chars": 7537,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2022-11-15-Initial_and_Final_Topology.md": {
+      "status": "done",
+      "last_attempt_ts": 1779501788.886182,
+      "en_path": "_posts/Math/Topology/en/2022-11-15-Initial_and_Final_Topology.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T02:00:01+00:00",
+      "in_chars": 7820,
+      "out_chars": 8031,
+      "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2022-11-15-Subspaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779503899.9519446,
+      "en_path": "_posts/Math/Topology/en/2022-11-15-Subspaces.md",
+      "ko_git_commit_ts": 1772792401.0,
+      "translated_at": "2026-05-23T02:30:01+00:00",
+      "in_chars": 9490,
+      "out_chars": 10466,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 153,
-    "total_in_chars": 2046057,
-    "total_out_chars": 2023405
+    "total_done": 157,
+    "total_in_chars": 2081458,
+    "total_out_chars": 2060715
   }
 }
