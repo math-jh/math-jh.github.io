@@ -1905,11 +1905,51 @@
       "in_chars": 8635,
       "out_chars": 8632,
       "reason": "drift"
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-14-Binary_Relation.md": {
+      "status": "done",
+      "last_attempt_ts": 1779556131.3377068,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Binary_Relation.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T17:00:03+00:00",
+      "in_chars": 6748,
+      "out_chars": 6582,
+      "reason": "drift"
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-22-Elements_in_Ordered_Set.md": {
+      "status": "done",
+      "last_attempt_ts": 1779557802.4666533,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Elements_in_Ordered_Set.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T17:30:03+00:00",
+      "in_chars": 10937,
+      "out_chars": 10917,
+      "reason": "drift"
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-22-Equivalence_Relations.md": {
+      "status": "done",
+      "last_attempt_ts": 1779559671.190188,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Equivalence_Relations.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T18:00:02+00:00",
+      "in_chars": 7922,
+      "out_chars": 8011,
+      "reason": "drift"
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-22-Order_Relations.md": {
+      "status": "done",
+      "last_attempt_ts": 1779561388.026277,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Order_Relations.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-23T18:30:03+00:00",
+      "in_chars": 9875,
+      "out_chars": 9631,
+      "reason": "drift"
     }
   },
   "stats": {
-    "total_done": 178,
-    "total_in_chars": 2370089,
-    "total_out_chars": 2353154
+    "total_done": 182,
+    "total_in_chars": 2405571,
+    "total_out_chars": 2388295
   }
 }
