@@ -116,7 +116,7 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Canonical_Bundle.md": {
       "status": "failed",
-      "last_attempt_ts": 1779439501.8961701,
+      "last_attempt_ts": 1779527702.1531007,
       "error": "timeout after 900s"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Linear_Systems.md": {
@@ -131,7 +131,7 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-05-Sheaf_Cohomology.md": {
       "status": "failed",
-      "last_attempt_ts": 1779443102.161177,
+      "last_attempt_ts": 1779531301.7373059,
       "error": "timeout after 900s"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md": {
@@ -1826,11 +1826,31 @@
       "in_chars": 12228,
       "out_chars": 13758,
       "reason": "pending"
+    },
+    "_posts/Math/Topology/ko/2024-12-15-Proper_Maps.md": {
+      "status": "done",
+      "last_attempt_ts": 1779528945.6828809,
+      "en_path": "_posts/Math/Topology/en/2024-12-15-Proper_Maps.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T09:30:01+00:00",
+      "in_chars": 10468,
+      "out_chars": 11205,
+      "reason": "pending"
+    },
+    "_posts/Math/Toric_Geometry/ko/2026-03-05-Affine_Toric_Varieties.md": {
+      "status": "done",
+      "last_attempt_ts": 1779533045.9191475,
+      "en_path": "_posts/Math/Toric_Geometry/en/2026-03-05-Affine_Toric_Varieties.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-23T10:30:01+00:00",
+      "in_chars": 23947,
+      "out_chars": 26342,
+      "reason": "pending"
     }
   },
   "stats": {
-    "total_done": 168,
-    "total_in_chars": 2195855,
-    "total_out_chars": 2176286
+    "total_done": 170,
+    "total_in_chars": 2230270,
+    "total_out_chars": 2213833
   }
 }
