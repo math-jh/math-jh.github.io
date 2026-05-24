@@ -1604,6 +1604,16 @@
       "out_chars": 17933,
       "reason": "pending"
     },
+    "_posts/Math/Scheme_Theory/ko/2026-05-07-Spectrums.md": {
+      "status": "done",
+      "last_attempt_ts": 1779568865.9424272,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Spectrums.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-23T20:30:01+00:00",
+      "in_chars": 24543,
+      "out_chars": 1559,
+      "reason": "pending"
+    },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Topology_of_Schemes.md": {
       "status": "done",
       "last_attempt_ts": 1779482414.7788494,
@@ -2001,22 +2011,11 @@
       "in_chars": 17719,
       "out_chars": 8846,
       "reason": "polish"
-    },
-    "_posts/Math/Scheme_Theory/ko/2026-05-07-Spectrums.md": {
-      "status": "done",
-      "last_attempt_ts": 1779605128.9103472,
-      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Spectrums.md",
-      "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-24T06:45:28+00:00",
-      "in_chars": 22470,
-      "out_chars": 26566,
-      "reason": "pending",
-      "note": "manual translation by Claude (Kimi timeouts on this 30KB post); source label kept as kimi-cli"
     }
   },
   "stats": {
-    "total_done": 192,
-    "total_in_chars": 2578203,
-    "total_out_chars": 2520178
+    "total_done": 191,
+    "total_in_chars": 2555733,
+    "total_out_chars": 2493612
   }
 }
