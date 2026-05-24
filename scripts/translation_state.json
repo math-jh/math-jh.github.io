@@ -2162,14 +2162,40 @@
       ]
     },
     "_posts/Math/Algebraic_Structures/ko/2023-02-14-Group_Actions.md": {
+      "status": "done",
+      "last_attempt_ts": 1779644478.4217465,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Group_Actions.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T17:30:03+00:00",
+      "in_chars": 30758,
+      "out_chars": 14930,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=262, en=255"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2024-05-05-Quotient_Rings.md": {
+      "status": "done",
+      "last_attempt_ts": 1779646242.1908205,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Quotient_Rings.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T18:00:04+00:00",
+      "in_chars": 13416,
+      "out_chars": 5715,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=90, en=84"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2024-05-08-Field_of_Fractions.md": {
       "status": "failed",
-      "last_attempt_ts": 1779641104.2565987,
-      "error": "timeout after 900s"
+      "last_attempt_ts": 1779648119.6433914,
+      "error": "validation failed: <ins id> mismatch: missing=['def10', 'def11', 'def13', 'prop12', 'prop14'] extra=[]"
     }
   },
   "stats": {
-    "total_done": 205,
-    "total_in_chars": 2846223,
-    "total_out_chars": 2690130
+    "total_done": 207,
+    "total_in_chars": 2890397,
+    "total_out_chars": 2710775
   }
 }
