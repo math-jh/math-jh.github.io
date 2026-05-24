@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://math-jh.github.io/sitemap.xml
+Sitemap: https://math-jh.github.io/sitemap-2026.xml
