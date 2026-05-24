@@ -1,7 +1,6 @@
 ---
-
 title: "Products, Coproducts, and Tensor Products of Rings"
-excerpt: ""
+excerpt: "Definition of the product, coproduct, and tensor product of rings"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/operations_of_rings
@@ -14,36 +13,35 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 103
-
-translated_at: 2026-05-19T21:30:02+00:00
+translated_at: 2026-05-24T22:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-24T22:30:04+00:00
 ---
-
 We now define products and coproducts of rings.
 
 ## Products of Rings
 
-The product of rings can be defined without difficulty. Let a family $$(A_i)_{i\in I}$$ of rings be given. Then the product $$\prod_{i\in I}A_i$$ of abelian groups is well-defined. On the other hand, the multiplication structure $$\mu_i: A_i\otimes A_i \rightarrow A_i$$ on $$A_i$$ is the same as a bilinear map $$A_i\times A_i \rightarrow A_i$$, and through this, we can define a function between sets
+The product of rings can be defined without difficulty. Let $$(A_i)_{i\in I}$$ be a family of rings. Then the product of abelian groups $$\prod_{i\in I}A_i$$ is well-defined. The multiplication structure $$\mu_i: A_i\otimes A_i \rightarrow A_i$$ on each $$A_i$$ is identified with a bilinear map $$A_i\times A_i \rightarrow A_i$$, and via this identification we obtain a function of sets
 
 $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \prod_{i\in I} (A_i\times A_i) \overset{\prod \mu_i}{\longrightarrow} \prod_{i\in I}A_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**Proposition 1**</ins> The function defined above is a bilinear map from the abelian group $$\left(\prod A_i\right)\times\left(\prod A_i\right)$$ to $$\prod A_i$$, and thus induces an abelian group homomorphism $$\left(\prod A_i\right)\otimes\left(\prod A_i\right) \rightarrow \prod A_i$$.
+<ins id="prop1">**Proposition 1**</ins> The function defined above is a bilinear map from the abelian group $$\left(\prod A_i\right)\times\left(\prod A_i\right)$$ to $$\prod A_i$$, and therefore induces an abelian group homomorphism $$\left(\prod A_i\right)\otimes\left(\prod A_i\right) \rightarrow \prod A_i$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Writing the above function explicitly in terms of elements, elements of $$\prod A_i$$ are tuples of the form $$(\alpha_i)_{i\in I}$$, and for two elements $$(\alpha_i)_{i\in I}, (\beta_i)_{i\in I}\in \prod A_i$$, the result of applying the above function to these two is
+Writing the function above explicitly in terms of elements, elements of $$\prod A_i$$ are tuples $$(\alpha_i)_{i\in I}$$, and for two elements $$(\alpha_i)_{i\in I}, (\beta_i)_{i\in I}\in \prod A_i$$, the result of applying the function to them is
 
 $$(\alpha_i)_{i\in I}(\beta_i)_{i\in I}=(\alpha_i\beta_i)_{i\in I}$$
 
-giving the multiplication. That is, the given function multiplies two elements componentwise. Now bilinearity can also be verified componentwise.
+which defines the multiplication. In other words, the function multiplies two elements componentwise. Bilinearity can now also be verified componentwise.
 
 </details>
 
-Through this, $$\prod A_i$$ also carries a ring structure. In this case, the additive identity of this ring is the element with all components being $$0$$, and the multiplicative identity is the element with all components being $$1$$. On the other hand, for any two ring homomorphisms $$\phi,\psi:A \rightarrow B$$, if we define
+Thus $$\prod A_i$$ acquires a ring structure. Here, the additive identity is the element all of whose components are $$0$$, and the multiplicative identity is the element all of whose components are $$1$$. Now, for any two ring homomorphisms $$\phi,\psi:A \rightarrow B$$, if we define
 
 $$\Eq(\phi,\psi)=\{\alpha\in A\mid \phi(\alpha)=\psi(\alpha)\}$$
 
@@ -51,7 +49,7 @@ then by [§Group Homomorphisms, ⁋Proposition 2](/en/math/algebraic_structures/
 
 $$\phi(\alpha\beta)=\phi(\alpha)\phi(\beta)=\psi(\alpha)\psi(\beta)=\psi(\alpha\beta)$$
 
-so $$\alpha\beta\in\Eq(\phi,\psi)$$. That is, $$\Eq(\phi,\psi)$$ is a subring of $$A$$, and this defines the equalizer of $$\phi$$ and $$\psi$$ in $$\Ring$$. From this, the following holds.
+hence $$\alpha\beta\in\Eq(\phi,\psi)$$. Thus $$\Eq(\phi,\psi)$$ is a subring of $$A$$, and it defines the equalizer of $$\phi$$ and $$\psi$$ in $$\Ring$$. From this we obtain the following.
 
 <div class="proposition" markdown="1">
 
@@ -61,7 +59,7 @@ so $$\alpha\beta\in\Eq(\phi,\psi)$$. That is, $$\Eq(\phi,\psi)$$ is a subring of
 
 ## Coproducts of Rings
 
-On the other hand, defining coproducts of rings requires some effort. This is essentially because the multiplication operation of a ring is not commutative, and we encountered a similar problem when defining coproducts in $$\Grp$$. To overcome this, in [§Free Products](/en/math/algebraic_structures/free_products), we had to define free products in a rather cumbersome way. In the case of rings, coproducts can be defined in the same way, but since this will not be used in subsequent discussions, we simply state it as a proposition.
+Defining coproducts of rings requires some effort. This is essentially because the multiplication operation in a ring is noncommutative, and a similar problem arose in defining coproducts in $$\Grp$$. To overcome this, we had to define free products in a rather cumbersome manner in [§Free Products](/en/math/algebraic_structures/free_products). For rings, coproducts can be defined in the same way, but since they will not be used in what follows, we merely record it as a proposition.
 
 <div class="proposition" markdown="1">
 
@@ -69,7 +67,7 @@ On the other hand, defining coproducts of rings requires some effort. This is es
 
 </div>
 
-On the other hand, let any two ring homomorphisms $$\phi,\psi:A \rightarrow B$$ be given. If we define the ideal $$\mathfrak{b}$$ of $$B$$ as the two-sided ideal generated by the elements $$\phi(\alpha)-\psi(\alpha)$$, then $$B/\mathfrak{b}$$ is well-defined. Then by the same proof as [§Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8), the following holds.
+Now let $$\phi,\psi:A \rightarrow B$$ be two ring homomorphisms. Let $$\mathfrak{b}$$ be the two-sided ideal of $$B$$ generated by the elements $$\phi(\alpha)-\psi(\alpha)$$; then $$B/\mathfrak{b}$$ is well-defined. Then the same proof as in [§Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8) yields the following.
 
 <div class="proposition" markdown="1">
 
@@ -77,7 +75,7 @@ On the other hand, let any two ring homomorphisms $$\phi,\psi:A \rightarrow B$$ 
 
 </div>
 
-Therefore, the following holds.
+Therefore the following holds.
 
 <div class="proposition" markdown="1">
 
@@ -87,7 +85,7 @@ Therefore, the following holds.
 
 ## Tensor Products of Rings
 
-Finally, we define the tensor product $$\otimes$$ in $$\Ring$$. For this, it suffices to define, for any two rings $$A,B$$, a multiplication structure on the abelian group $$A\otimes B$$, that is, the abelian group homomorphism
+Finally, we define the tensor product $$\otimes$$ in $$\Ring$$. To do so, it suffices to define, for any two rings $$A,B$$, a multiplication structure on the abelian group $$A\otimes B$$, that is, the abelian group homomorphism
 
 $$(A\otimes B)\otimes(A\otimes B) \rightarrow A\otimes B$$
 
@@ -109,12 +107,12 @@ Through this, we can verify that the category $$\Ring$$ forms a symmetric monoid
 
 $$(\alpha\otimes \beta)(\alpha'\otimes \beta')=\alpha\alpha'\otimes \beta\beta'$$
 
-An interesting fact is that $$\otimes$$ coincides with the coproduct in $$\cRing$$. To verify this, we need to show that for any commutative rings $$A,B$$ and
+It is an interesting fact that $$\otimes$$ coincides with the coproduct in $$\cRing$$. To verify this, it suffices to show that for any commutative rings $$A,B$$, the map
 
 $$\iota_A: A \hookrightarrow A\otimes B;\quad \alpha\mapsto \alpha\otimes 1$$
 
-and $$\iota_B$$ defined similarly, the universal property of coproducts is satisfied. Let any $$\phi_A: A \rightarrow C$$ and $$\phi_B: B \rightarrow C$$ be given. If a $$\phi: A\otimes B \rightarrow C$$ satisfying the universal property of coproducts exists, then it must satisfy
+and $$\iota_B$$ defined similarly satisfy the universal property of the coproduct. Let $$\phi_A: A \rightarrow C$$ and $$\phi_B: B \rightarrow C$$ be given. If there exists a map $$\phi: A\otimes B \rightarrow C$$ satisfying the universal property of the coproduct, then it must satisfy
 
 $$\phi(\alpha\otimes \beta)=\phi((\alpha\otimes 1)(1\otimes \beta))=\cdots=\phi_A(\alpha)\phi_B(\beta)$$
 
-so uniqueness is clear. On the other hand, since the function $$(\alpha,\beta)\mapsto \phi_A(\alpha)\phi_B(\beta)$$ from $$A\times B$$ to $$C$$ is bilinear, by the universal property of tensor products, there exists a ring homomorphism $$A\otimes B \rightarrow C$$ satisfying $$\alpha\otimes \beta\mapsto \phi_A(\alpha)\phi_B(\beta)$$, and this is precisely $$\phi$$.
+so its uniqueness is clear. Meanwhile, since the map $$(\alpha,\beta)\mapsto \phi_A(\alpha)\phi_B(\beta)$$ from $$A\times B$$ to $$C$$ is bilinear, the universal property of the tensor product yields a ring homomorphism $$A\otimes B \rightarrow C$$ satisfying $$\alpha\otimes \beta\mapsto \phi_A(\alpha)\phi_B(\beta)$$, and this is precisely $$\phi$$.
