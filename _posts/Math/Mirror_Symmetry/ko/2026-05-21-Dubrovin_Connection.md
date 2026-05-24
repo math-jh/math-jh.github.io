@@ -149,7 +149,7 @@ $$H_A=H^\ast(X)\otimes_\mathbb{C}\mathbb{C}[q^\pm, z^\pm]=H^\ast(X, \mathbb{C}[z
 
 으로 주어진다. 이를 *A-model state space*라 부른다. 
 
-이와 비슷하게, 우리는 다음 글에서 $$X$$의 mirror dual $$\check{X}$$이 정의하는 Jacibi ring들 $$\Jac(W_q)$$들도 
+이와 비슷하게, 우리는 다음 글에서 $$X$$의 mirror dual $$\check{X}$$이 정의하는 Jacibi ring들 $$\Jac(W_q)$$들도 적당한 manifold $$M_B$$ 위에 정의된 fiber가 되도록 할 수 있다는 것을 보인다. 
 
 같은 구조가 mirror의 B-side에서도 나타난다. $$X$$의 mirror를 $$\check{X}$$로 적자 (Fano $$X$$의 경우 Landau-Ginzburg model $$(\check{X}, W_q)$$). 여기서 A-model의 quantum product에 대응하는 것은 superpotential $$W_q$$의 *Jacobi ring* $$\Jac(W_q)$$로, [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 본 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 양쪽이 이어진다. 이 $$\Jac(W_q)$$를 deformation parameter $$q$$를 따라 모으면 base $$M_B$$ ($$\check{X}$$의 complex 구조 deformation을 매개하는 effective base) 위의 vector bundle을 이루고, 그 위에는 quantum $$D$$-module의 역할을 하는 flat connection, 곧 *Gauss-Manin connection* $$\nabla^{GM}$$이 있어 이를 하나의 $$\mathcal{D}$$-module, 곧 *Gauss-Manin system*으로 만든다. 그 section들이 이루는 free module이 *B-model state space*
 
