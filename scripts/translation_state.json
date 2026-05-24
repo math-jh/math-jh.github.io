@@ -2012,11 +2012,59 @@
       "out_chars": 26566,
       "reason": "pending",
       "note": "manual translation by Claude (Kimi timeouts on this 30KB post); source label kept as kimi-cli"
+    },
+    "_posts/Math/Algebraic_Structures/ko/2021-09-02-Algebraic_Structures.md": {
+      "status": "done",
+      "last_attempt_ts": 1779606598.8421757,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Algebraic_Structures.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T07:00:03+00:00",
+      "in_chars": 21821,
+      "out_chars": 10436,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=146, en=145"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2021-09-04-Grothendieck_Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779608330.6792164,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Grothendieck_Groups.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T07:30:03+00:00",
+      "in_chars": 25761,
+      "out_chars": 12696,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=186, en=183"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2021-09-08-Group_Homomorphisms.md": {
+      "status": "done",
+      "last_attempt_ts": 1779609990.7896447,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Group_Homomorphisms.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T08:00:03+00:00",
+      "in_chars": 14126,
+      "out_chars": 6200,
+      "reason": "polish",
+      "warnings": null
+    },
+    "_posts/Math/Algebraic_Structures/ko/2021-10-31-Direct_Products.md": {
+      "status": "done",
+      "last_attempt_ts": 1779612211.3827846,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Direct_Products.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T08:30:03+00:00",
+      "in_chars": 14941,
+      "out_chars": 6529,
+      "reason": "polish",
+      "warnings": null
     }
   },
   "stats": {
-    "total_done": 192,
-    "total_in_chars": 2578203,
-    "total_out_chars": 2520178
+    "total_done": 196,
+    "total_in_chars": 2654852,
+    "total_out_chars": 2556039
   }
 }

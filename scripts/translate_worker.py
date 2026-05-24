@@ -575,15 +575,20 @@ def translate(
     return translated, len(prompt), len(translated)
 
 
+HERMES_BIN = shutil.which("hermes") or str(Path.home() / ".local/bin/hermes")
+
+
 def _notify_telegram(subject: str, body: str) -> None:
-    """Best-effort hermes telegram notify; never raises."""
+    """Best-effort hermes telegram notify; logs (but doesn't raise) on failure."""
     try:
-        subprocess.run(
-            ["hermes", "send", "-t", "telegram", "-s", subject, "-q", body],
-            check=False, timeout=15, capture_output=True,
+        r = subprocess.run(
+            [HERMES_BIN, "send", "-t", "telegram", "-s", subject, "-q", body],
+            check=False, timeout=15, capture_output=True, text=True,
         )
-    except Exception:
-        pass
+        if r.returncode != 0:
+            log(f"telegram notify failed rc={r.returncode}: {r.stderr.strip()[:300]!r}")
+    except Exception as e:
+        log(f"telegram notify exception: {e!r}")
 
 
 # ---------------------------------------------------------------------------
