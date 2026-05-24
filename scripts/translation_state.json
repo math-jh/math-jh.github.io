@@ -2188,14 +2188,35 @@
       ]
     },
     "_posts/Math/Algebraic_Structures/ko/2024-05-08-Field_of_Fractions.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779648119.6433914,
-      "error": "validation failed: <ins id> mismatch: missing=['def10', 'def11', 'def13', 'prop12', 'prop14'] extra=[]"
+      "status": "done",
+      "last_attempt_ts": 1779653427.5376408,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Field_of_Fractions.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T20:00:03+00:00",
+      "in_chars": 33347,
+      "out_chars": 16381,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=260, en=254"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2024-05-10-Modules.md": {
+      "status": "done",
+      "last_attempt_ts": 1779655269.18763,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Modules.md",
+      "ko_git_commit_ts": 1772796001.0,
+      "translated_at": "2026-05-24T20:30:03+00:00",
+      "in_chars": 18106,
+      "out_chars": 7369,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=153, en=128"
+      ]
     }
   },
   "stats": {
-    "total_done": 207,
-    "total_in_chars": 2890397,
-    "total_out_chars": 2710775
+    "total_done": 209,
+    "total_in_chars": 2941850,
+    "total_out_chars": 2734525
   }
 }

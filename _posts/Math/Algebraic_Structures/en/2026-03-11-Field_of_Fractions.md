@@ -1,5 +1,4 @@
 ---
-
 title: "Field of Fractions"
 excerpt: "Localization, ring of fraction, prime ideal"
 
@@ -14,24 +13,23 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 105
-
-translated_at: 2026-05-19T21:30:02+00:00
+translated_at: 2026-05-24T20:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-24T20:00:03+00:00
 ---
-
 ## Ring of Fractions
 
-The monoid $$\mathbb{N}$$ of natural numbers defined in [\[Set Theory\] §Natural Numbers and Infinite Sets](/en/math/set_theory/natural_numbers) could be written in the language of set theory (with some minor technical issues). Then $$\mathbb{Z}$$ was defined as the Grothendieck group of the commutative monoid $$\mathbb{N}$$. Recalling the number systems learned in middle school, the next object to define is the set of rational numbers $$\mathbb{Q}$$.
+The monoid $$\mathbb{N}$$ of natural numbers defined in [\[Set Theory\] §Natural Numbers and Infinite Sets](/en/math/set_theory/natural_numbers) could be expressed in the language of set theory, aside from some minor technical issues. Then $$\mathbb{Z}$$ was defined as the Grothendieck group of the commutative monoid $$\mathbb{N}$$. Recalling the number systems learned in middle school, the next object we must define is the set of rational numbers $$\mathbb{Q}$$.
 
-If we forget the additive structure of $$\mathbb{Z}$$ and remember only the multiplicative structure, then $$(\mathbb{Z},\cdot,1)$$ is a commutative monoid. What we need to do is add inverses, and since $$1/0$$ is undefined, we set $$S=\mathbb{Z}\setminus\{0\}$$ and consider the monoid of fractions as in [§Grothendieck Groups, ⁋Definition 7](/en/math/algebraic_structures/Grothendieck_groups#def7), obtaining the multiplicative group $$\mathbb{Q}$$.
+If we forget the additive structure of $$\mathbb{Z}$$ and retain only the multiplicative structure, then $$(\mathbb{Z},\cdot,1)$$ is a commutative monoid. We must adjoin inverses; since $$1/0$$ is undefined, we set $$S=\mathbb{Z}\setminus\{0\}$$ and consider the monoid of fractions as in [§Grothendieck Groups, ⁋Definition 7](/en/math/algebraic_structures/Grothendieck_groups#def7), obtaining the multiplicative group $$\mathbb{Q}$$.
 
 In general, this process is made possible by the following theorem.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm1">**Theorem 1**</ins> Let $$A$$ be a commutative ring and $$S$$ a subset of $$A$$. Regarding $$A$$ as a multiplicative monoid, consider the monoid of fractions $$A_S$$. Then for the canonical morphism $$\epsilon:A \rightarrow A_S$$, there exists a unique additive structure satisfying the following two conditions:
+<ins id="thm1">**Theorem 1**</ins> Let $$A$$ be a commutative ring and $$S$$ a subset of $$A$$. Regarding $$A$$ as a multiplicative monoid, consider the monoid of fractions $$A_S$$. Then for the canonical morphism $$\epsilon:A \rightarrow A_S$$, there exists a unique additive structure on $$A_S$$ satisfying the following two conditions:
 
-1. The multiplicative structure on $$A_S$$ together with this additive structure makes $$A_S$$ a commutative ring.
+1. Together with the multiplicative structure on $$A_S$$, this additive structure makes $$A_S$$ a commutative ring.
 2. $$\epsilon$$ is a ring homomorphism.
 
 </div>
@@ -42,15 +40,15 @@ Before beginning the proof, let us briefly review the construction from [§Groth
 
 $$(\alpha,\gamma)\equiv (\beta,\delta)\pmod{R}\iff \alpha\delta\zeta=\beta\gamma\zeta\text{ for some $\zeta\in S'$}$$
 
-and define $$A_S$$ as the quotient monoid $$(A\times S')/R$$. Here, an element of $$A_S$$ having $$(\alpha,\gamma)\in A\times S'$$ as a representative is denoted by $$\alpha/\gamma$$, and $$A_S$$ carries a multiplicative monoid structure via the operation
+and define $$A_S$$ as the quotient monoid $$(A\times S')/R$$. Here, an element of $$A_S$$ represented by $$(\alpha,\gamma)\in A\times S'$$ is denoted by $$\alpha/\gamma$$, and $$A_S$$ becomes a multiplicative monoid under the operation
 
 $$\frac{\alpha}{\gamma}\frac{\beta}{\delta}=\frac{\alpha\beta}{\gamma\delta}$$
 
-The canonical morphism $$\epsilon:A \rightarrow A_S$$ between two multiplicative monoids was defined by $$\alpha\mapsto \alpha/1$$, and this being a monoid homomorphism means that $$\epsilon$$ is a function from $$A$$ to $$A_S$$ that preserves the multiplicative structure (after we show that $$A_S$$ is a ring).
+The canonical morphism $$\epsilon:A \rightarrow A_S$$ was defined by $$\alpha\mapsto \alpha/1$$, and the fact that this is a monoid homomorphism means that $$\epsilon$$ preserves the multiplicative structure (once we show that $$A_S$$ is a ring).
 
-Thus, what we need to do is to give $$A_S$$ an additive structure satisfying the two conditions of the theorem, show that this additive structure makes $$A_S$$ a ring, and verify that $$\epsilon$$ indeed preserves this additive structure as well.
+Thus, what we need to do is endow $$A_S$$ with an additive structure satisfying the two conditions of the theorem, show that this additive structure makes $$A_S$$ a ring, and verify that $$\epsilon$$ preserves addition as well.
 
-First, assuming such an additive structure exists, let us prove uniqueness. Any $$x,y\in A_S$$ can be written as $$x=\alpha/\gamma,y=\beta/\delta$$ for some $$\alpha,\beta\in A$$ and $$\gamma,\delta\in S'$$. Then
+First, assuming that such an additive structure exists, we prove uniqueness. Any $$x,y\in A_S$$ can be written as $$x=\alpha/\gamma$$ and $$y=\beta/\delta$$ for some $$\alpha,\beta\in A$$ and $$\gamma,\delta\in S'$$. Then
 
 $$x=\epsilon(\alpha)\epsilon(\gamma)^{-1}=\epsilon(\alpha\delta)\epsilon(\gamma\delta)^{-1},\qquad y=\epsilon(\beta)\epsilon(\delta)^{-1}=\epsilon(\beta\gamma)\epsilon(\gamma\delta)^{-1}$$
 
@@ -58,25 +56,25 @@ so we must have
 
 $$x+y=(\epsilon(\alpha\delta)+\epsilon(\beta\gamma))\epsilon(\gamma\delta)^{-1}=\frac{\alpha\delta+\beta\gamma}{\gamma\delta}$$
 
-Now, taking a hint from the uniqueness proof, we define the additive structure on $$A_S$$ by the above formula. What we need to show is:
+Guided by the uniqueness proof, we define the additive structure on $$A_S$$ by the above formula. It remains to verify the following:
 
-1. This definition is independent of the choice of $$\alpha,\beta,\gamma,\delta$$. That is, suppose $$x=\alpha'/\gamma',y=\beta'/\delta'$$. We need to show that
+1. This definition is independent of the choice of $$\alpha,\beta,\gamma,\delta$$. That is, suppose $$x=\alpha'/\gamma'$$ and $$y=\beta'/\delta'$$. We need to show that
 
     $$(\alpha\delta+\beta\gamma)/\delta\gamma=(\alpha'\delta'+\beta'\gamma')/\gamma'\delta'$$
 
-    holds in $$A_S$$. Since $$\alpha/\gamma=\alpha'/\gamma',\beta/\delta=\beta'/\delta'$$, by definition there exist $$\zeta,\xi\in S'$$ satisfying $$\alpha\gamma'\zeta=\alpha'\gamma\zeta$$ and $$\beta\delta'\xi=\beta'\delta\xi$$. From this, we can verify
+    holds in $$A_S$$. Since $$\alpha/\gamma=\alpha'/\gamma'$$ and $$\beta/\delta=\beta'/\delta'$$, by definition there exist $$\zeta,\xi\in S'$$ satisfying $$ap's=a'ps,bq't=b'qt$$. From this, we can verify
 
     $$(\alpha\delta+\beta\gamma)(\gamma'\delta')(\zeta\xi)=(\alpha'\delta'+\beta'\gamma')(\gamma\delta)(\zeta\xi)$$
 
     so the desired equality holds.
 
-2. The $$+$$ defined this way satisfies the associative law. For any $$x_1=\alpha_1/\gamma_1,x_2=\alpha_2/\gamma_2,x_3=\alpha_3/\gamma_3$$,
+2. Addition defined in this way is associative. For any $$x_1=\alpha_1/\gamma_1$$, $$x_2=\alpha_2/\gamma_2$$, $$x_3=\alpha_3/\gamma_3$$,
 
     $$(x_1+x_2)+x_3=\frac{\alpha_1\gamma_2+\alpha_2\gamma_1}{\gamma_1\gamma_2}+\frac{\alpha_3}{\gamma_3}=\frac{(\alpha_1\gamma_2+\alpha_2\gamma_1)\gamma_3+\alpha_3(\gamma_1\gamma_2)}{\gamma_1\gamma_2\gamma_3}=\frac{\alpha_1\gamma_2\gamma_3+\gamma_1\alpha_2\gamma_3+\gamma_1\gamma_2\alpha_3}{\gamma_1\gamma_2\gamma_3}$$
 
-    and similarly, one can verify that $$x_1+(x_2+x_3)$$ has the same value as the right-hand side.
-3. The commutative law for $$+$$ is clear since the addition and multiplication of $$A$$ are commutative.
-4. $$+$$ has the additive identity $$0/1$$. This is because for any $$x=\alpha/\gamma\in A_S$$,
+    and similarly one verifies that $$x_1+(x_2+x_3)$$ equals the same expression.
+3. Commutativity of $$+$$ is immediate because addition and multiplication in $$A$$ are commutative.
+4. The element $$0/1$$ serves as the additive identity. Indeed, for any $$x=\alpha/\gamma\in A_S$$,
 
     $$\frac{0}{1}+\frac{\alpha}{\gamma}=\frac{\alpha}{\gamma}$$
 
@@ -85,7 +83,7 @@ Now, taking a hint from the uniqueness proof, we define the additive structure o
 
     $$\frac{-\alpha}{\gamma}+\frac{\alpha}{\gamma}=\frac{(-\alpha)\gamma+\alpha\gamma}{\gamma^2}=0$$
 
-6. $$+$$ satisfies the distributive law with respect to multiplication. For any $$x=\alpha/\gamma,y_1=\beta_1/\delta_1,y_2=\beta_2/\delta_2$$,
+6. Addition is distributive over multiplication. For any $$x=\alpha/\gamma$$, $$y_1=\beta_1/\delta_1$$, $$y_2=\beta_2/\delta_2$$,
 
     $$x(y_1+y_2)=\frac{\alpha}{\gamma}\left(\frac{\beta_1}{\delta_1}+\frac{\beta_2}{\delta_2}\right)=\frac{\alpha}{\gamma}\frac{\beta_1\delta_2+\delta_1\beta_2}{\delta_1\delta_2}=\frac{\alpha\beta_1\delta_2+\alpha\delta_1\beta_2}{\gamma\delta_1\delta_2}$$
 
@@ -93,9 +91,9 @@ Now, taking a hint from the uniqueness proof, we define the additive structure o
 
     $$xy_1+xy_2=\frac{\alpha\beta_1}{\gamma\delta_1}+\frac{\alpha\beta_2}{\gamma\delta_2}=\frac{\alpha\beta_1\gamma\delta_2+\alpha\beta_2\gamma\delta_1}{\gamma^2\delta_1\delta_2}$$
 
-    and using $$1,\gamma\in S'$$, we can verify that these two expressions are equal. Similarly, the equality $$(x_1+x_2)y=x_1y+x_2y$$ can be shown.
+    and using $$1,\gamma\in S'$$, we verify that these two expressions are equal. Similarly one shows $$(x_1+x_2)y=x_1y+x_2y$$.
 
-From the above, we conclude that $$A_S$$ has a commutative ring structure. Finally, to show that $$\epsilon$$ is a ring homomorphism, it suffices to show that $$\epsilon$$ preserves addition, which follows from
+From the above, we see that $$A_S$$ carries a commutative ring structure. Finally, that $$\epsilon$$ is a ring homomorphism follows once we verify that it preserves addition, since
 
 $$\epsilon(\alpha+\beta)=(\alpha+\beta)/1=\alpha/1+\beta/1=\epsilon(\alpha)+\epsilon(\beta)$$
 
@@ -103,53 +101,53 @@ $$\epsilon(\alpha+\beta)=(\alpha+\beta)/1=\alpha/1+\beta/1=\epsilon(\alpha)+\eps
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> The ring obtained as above is called the *ring of fractions* of $$A$$ defined by $$S$$, and is denoted by $$S^{-1}A$$.
+<ins id="def2">**Definition 2**</ins> The ring obtained in this way is called the *ring of fractions<sub>분수환</sub>* of $$A$$ defined by $$S$$, and is denoted by $$S^{-1}A$$.
 
 </div>
 
-If $$S$$ is the collection of cancellable elements of $$A$$, then it is clear that $$\epsilon$$ is an injection, so we can regard $$A$$ as a subring of $$S^{-1}A$$. In this case, $$S^{-1}A$$ is called the *total ring of fractions* of $$A$$.
+If $$S$$ is the set of cancellable elements of $$A$$, then it is clear that $$\epsilon$$ is injective, and we may regard $$A$$ as a subring of $$S^{-1}A$$. In this case, $$S^{-1}A$$ is called the *total ring of fractions* of $$A$$.
 
 ## Fields
 
-The rational numbers $$\mathbb{Q}$$ have the following distinguishing characteristic from general rings.
+The rational numbers $$\mathbb{Q}$$ possess a property that distinguishes them from arbitrary rings.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> A ring $$A$$ is called a *division ring* if $$A\neq0$$ and every nonzero element of $$A$$ has a multiplicative inverse. A commutative division ring is called a *field*.
+<ins id="def3">**Definition 3**</ins> A ring $$A$$ is called a *division ring<sub>나눗셈환</sub>* if $$A\neq0$$ and every nonzero element of $$A$$ has a multiplicative inverse. A commutative division ring is called a *field<sub>체</sub>*.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> A nonzero ring $$A$$ is a division ring if and only if the only left ideals of $$A$$ are $$0$$ and $$A$$.
+<ins id="prop4">**Proposition 4**</ins> A nonzero ring $$A$$ is a division ring if and only if its only left ideals are $$0$$ and $$A$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, suppose $$A$$ is a division ring. If a left ideal $$\mathfrak{a}\neq 0$$ is given, then there exists $$0\neq x\in \mathfrak{a}$$. Since in $$A$$ the inverse $$x^{-1}$$ of $$x$$ exists,
+First, suppose $$A$$ is a division ring. If $$\mathfrak{a}\neq 0$$ is a left ideal, then there exists $$0\neq x\in \mathfrak{a}$$. Since $$x$$ has an inverse $$x^{-1}$$ in $$A$$,
 
 $$1=x^{-1}x\in A\mathfrak{a}=\mathfrak{a}$$
 
-so $$\mathfrak{a}=A$$. Conversely, suppose the only left ideals of $$A$$ are $$0$$ and $$A$$. For any $$0\neq x\in A$$, consider the left ideal $$Ax$$ of $$A$$. Since $$0\neq x\in Ax$$, we have $$Ax\neq 0$$. Since the only left ideals of $$A$$ are $$0$$ or $$A$$, we must have $$Ax=A$$, so $$1\in Ax$$. That is, there exists $$\alpha\in A$$ such that $$\alpha x=1$$. Then $$\alpha\neq 0$$, and by the same argument, there exists $$\beta\in A$$ such that $$\beta\alpha=1$$. Now
+and thus $$\mathfrak{a}=A$$. Conversely, suppose the only left ideals of $$A$$ are $$0$$ and $$A$$. For any $$0\neq x\in A$$, consider the left ideal $$Ax$$. Since $$0\neq x\in Ax$$, we have $$Ax\neq 0$$, and hence $$Ax=A$$. Thus $$1\in Ax$$, so there exists $$\alpha\in A$$ with $$\alpha x=1$$. Then $$\alpha\neq 0$$, and by the same argument there exists $$\beta\in A$$ with $$\beta\alpha=1$$. Now
 
 $$\beta=\beta1=\beta\alpha x=x$$
 
-so $$\beta=x$$, and thus $$\alpha$$ is the multiplicative inverse of $$x$$.
+so $$\beta=x$$, and therefore $$\alpha$$ is the multiplicative inverse of $$x$$.
 
 </details>
 
 ## Integral Domains
 
-By definition, $$\mathbb{Q}$$ is the total ring of fractions of $$\mathbb{Z}$$. That this is a field is clear from the definition, and this can be extended as follows.
+By definition, $$\mathbb{Q}$$ is the total ring of fractions of $$\mathbb{Z}$$. That it is a field is clear from the definition, and this fact can be extended as follows.
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> Elements $$\alpha,\beta$$ of a ring $$A$$ are called *zero divisors* if $$\alpha\beta=0$$ but $$\alpha\neq 0$$ and $$\beta\neq 0$$. A ring $$A$$ is called an *integral domain* if $$A$$ is commutative, $$0\neq 1$$, and $$A$$ has no zero divisors.
+<ins id="def5">**Definition 5**</ins> Elements $$\alpha,\beta$$ of a ring $$A$$ are called *zero divisors<sub>영인자</sub>* if $$\alpha\beta=0$$ but $$\alpha\neq 0$$ and $$\beta\neq 0$$. A ring $$A$$ is called an *integral domain<sub>정역</sub>* if $$A$$ is commutative, $$0\neq 1$$, and $$A$$ has no zero divisors.
 
 </div>
 
-By definition, it is clear that a subring of an integral domain is an integral domain. For any nonzero rings $$A,B$$, the product $$A\times B$$ can never be an integral domain since
+By definition, any subring of an integral domain is again an integral domain. Moreover, for any nonzero rings $$A$$ and $$B$$, the product $$A\times B$$ is never an integral domain, since
 
 $$(1,0)(0,1)=(0,0)$$
 
@@ -161,23 +159,23 @@ $$(1,0)(0,1)=(0,0)$$
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-From the assumption that $$A$$ is an integral domain, we have $$S=A\setminus\{0\}$$. Thus, any element of $$S^{-1}A$$ can be written as $$\alpha/\beta$$ for some $$\alpha\in A$$ and $$\beta\in A\setminus\{0\}$$. Here, $$\alpha/\beta\neq 0$$ requires $$\alpha\neq 0$$, so $$\beta/\alpha\in K$$ is well-defined, and $$\beta/\alpha$$ becomes the inverse of $$\alpha/\beta$$.
+Since $$A$$ is an integral domain, we have $$S=A\setminus\{0\}$$. Thus any element of $$S^{-1}A$$ can be written as $$\alpha/\beta$$ with $$\alpha\in A$$ and $$\beta\in A\setminus\{0\}$$. If $$\alpha/\beta\neq 0$$, then $$\alpha\neq 0$$, so $$\beta/\alpha\in K$$ is well-defined, and it is the inverse of $$\alpha/\beta$$.
 
 </details>
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> The field $$S^{-1}A$$ obtained from [Proposition 6](#prop6) is called the *field of fractions* of $$A$$ and is denoted by $$\Frac(A)$$.
+<ins id="def7">**Definition 7**</ins> The field $$S^{-1}A$$ obtained from [Proposition 6](#prop6) is called the *field of fractions<sub>분수체</sub>* of $$A$$ and is denoted by $$\Frac(A)$$.
 
 </div>
 
 ## Prime Ideals
 
-From the fourth isomorphism theorem for ring homomorphisms, for any nonzero ring $$A$$ and maximal left ideal $$\mathfrak{m}$$, the only left ideals of $$A/\mathfrak{m}$$ are $$0$$ and $$A/\mathfrak{m}$$ itself. Thus by [Proposition 4](#prop4), $$A/\mathfrak{m}$$ is a division ring. Integral domains can also be characterized in a similar way.
+By the fourth isomorphism theorem for ring homomorphisms, for any nonzero ring $$A$$ and any maximal left ideal $$\mathfrak{m}$$, the only left ideals of $$A/\mathfrak{m}$$ are $$0$$ and $$A/\mathfrak{m}$$ itself. Thus by [Proposition 4](#prop4), $$A/\mathfrak{m}$$ is a division ring. Integral domains admit a similar characterization.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**Proposition 8**</ins> For a commutative ring $$A$$ and an ideal $$\mathfrak{p}\neq A$$, the following are all equivalent:
+<ins id="prop8">**Proposition 8**</ins> For a commutative ring $$A$$ and an ideal $$\mathfrak{p}\neq A$$, the following are equivalent:
 
 1. $$A/\mathfrak{p}$$ is an integral domain.
 2. If $$\alpha,\beta\in A\setminus \mathfrak{p}$$, then $$\alpha\beta\in A\setminus \mathfrak{p}$$.
@@ -187,35 +185,35 @@ From the fourth isomorphism theorem for ring homomorphisms, for any nonzero ring
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The second and third conditions are contrapositives of each other, so it suffices to show equivalence with the first. First, assume $$A/\mathfrak{p}$$ is an integral domain. That is, if
+Conditions 2 and 3 are contrapositives of each other, so it suffices to show the equivalence of 1 and 3. First, assume that $$A/\mathfrak{p}$$ is an integral domain. That is, if
 
 $$(\alpha+\mathfrak{p})(\beta+\mathfrak{p})=0+\mathfrak{p}$$
 
-then necessarily $$\alpha+\mathfrak{p}=0+\mathfrak{p}$$ or $$\beta+\mathfrak{p}=0+\mathfrak{p}$$. From this, we see that if condition 1 holds, then condition 3 holds. This argument also works in the reverse direction.
+then necessarily $$\alpha+\mathfrak{p}=0+\mathfrak{p}$$ or $$\beta+\mathfrak{p}=0+\mathfrak{p}$$. Hence condition 1 implies condition 3, and the reverse implication follows by the same argument.
 
 </details>
 
-An ideal $$\mathfrak{p}$$ satisfying the above equivalent conditions is called a *prime ideal*. Since every field is an integral domain, every maximal ideal is a prime ideal. The converse does not hold; for example, one can easily verify that the prime ideals of $$\mathbb{Z}$$ are only $$(0)$$ and those of the form $$p\mathbb{Z}$$ for prime numbers $$p$$. Thus $$(0)$$ is a prime ideal but not a maximal ideal.
+An ideal $$\mathfrak{p}$$ satisfying the above equivalent conditions is called a *prime ideal<sub>소아이디얼</sub>*. Since every field is an integral domain, every maximal ideal is prime. The converse does not hold: for example, the prime ideals of $$\mathbb{Z}$$ are easily seen to be $$(0)$$ and the ideals $$p\mathbb{Z}$$ for prime numbers $$p$$. Thus $$(0)$$ is a prime ideal but not a maximal ideal.
 
-On the other hand, the following holds.
+The following also holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**Proposition 9**</ins> For a ring homomorphism $$\phi:A \rightarrow B$$ between commutative rings $$A,B$$ and a prime ideal $$\mathfrak{p}$$ of $$B$$, the preimage $$\phi^{-1}(\mathfrak{p})$$ is a prime ideal of $$A$$.
+<ins id="prop9">**Proposition 9**</ins> For a ring homomorphism $$\phi:A \rightarrow B$$ between commutative rings $$A$$ and $$B$$ and a prime ideal $$\mathfrak{p}$$ of $$B$$, the preimage $$\phi^{-1}(\mathfrak{p})$$ is a prime ideal of $$A$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Assume for contradiction that there exist $$\alpha,\beta\in A$$ such that $$\alpha\beta\in\phi^{-1}(\mathfrak{p})$$ but $$\alpha,\beta\not\in\phi^{-1}(\mathfrak{p})$$. Then $$\phi(\alpha)\phi(\beta)=\phi(\alpha\beta)\in \mathfrak{p}$$ but $$\phi(\alpha),\phi(\beta)\not\in \mathfrak{p}$$, contradicting the equivalence in [Proposition 8](#prop8).
+Suppose for contradiction that there exist $$\alpha,\beta\in A$$ with $$\alpha\beta\in\phi^{-1}(\mathfrak{p})$$ but $$\alpha,\beta\not\in\phi^{-1}(\mathfrak{p})$$. Then $$\phi(\alpha)\phi(\beta)=\phi(\alpha\beta)\in \mathfrak{p}$$ whereas $$\phi(\alpha),\phi(\beta)\not\in \mathfrak{p}$$, contradicting the equivalence in [Proposition 8](#prop8).
 
 </details>
 
-On the other hand, by condition 2 of the equivalence in [Proposition 8](#prop8), if we regard a commutative ring $$A$$ as a multiplicative monoid, then for any prime ideal $$\mathfrak{p}$$, the complement $$A\setminus\mathfrak{p}$$ can be viewed as a submonoid of $$A$$. Thus the ring of fractions $$(A\setminus \mathfrak{p})^{-1}A$$ is well-defined, and only elements of $$A\setminus \mathfrak{p}$$ appear in the denominators of this ring. We make the following definition.
+On the other hand, by condition 2 of the equivalence in [Proposition 8](#prop8), if we regard a commutative ring $$A$$ as a multiplicative monoid, then for any prime ideal $$\mathfrak{p}$$, the complement $$A\setminus\mathfrak{p}$$ is a submonoid of $$A$$. Thus the ring of fractions $$(A\setminus \mathfrak{p})^{-1}A$$ is well-defined, and only elements of $$A\setminus \mathfrak{p}$$ appear as denominators. This motivates the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**Definition 10**</ins> For a commutative ring $$A$$ and a prime ideal $$\mathfrak{p}$$, the *localization* of $$A$$ at $$\mathfrak{p}$$ is defined as $$(A\setminus \mathfrak{p})^{-1}A$$, and is simply denoted by $$A_\mathfrak{p}$$.
+<ins id="def10">**Definition 10**</ins> For a commutative ring $$A$$ and a prime ideal $$\mathfrak{p}$$, the *localization<sub>국소화</sub>* of $$A$$ at $$\mathfrak{p}$$ is defined as $$(A\setminus \mathfrak{p})^{-1}A$$, and is denoted simply by $$A_\mathfrak{p}$$.
 
 </div>
 
@@ -223,27 +221,27 @@ On the other hand, by condition 2 of the equivalence in [Proposition 8](#prop8),
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**Definition 11**</ins> An element $$\alpha$$ of a ring $$A$$ is called *nilpotent* if there exists $$n>0$$ such that $$\alpha^n=0$$. If $$A$$ has no nonzero nilpotent elements, then $$A$$ is called *reduced*.
+<ins id="def11">**Definition 11**</ins> An element $$\alpha$$ of a ring $$A$$ is called *nilpotent<sub>멱영</sub>* if there exists $$n>0$$ such that $$\alpha^n=0$$. If $$A$$ has no nonzero nilpotent elements, then $$A$$ is called *reduced<sub>기약</sub>*.
 
 </div>
 
-By definition, a nonzero nilpotent element is a zero divisor. Thus every integral domain is a (commutative) reduced ring. Moreover, restricting to commutative rings, we obtain the following.
+By definition, every nonzero nilpotent element is a zero divisor. Hence every integral domain is a (commutative) reduced ring. Moreover, for commutative rings we have the following.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**Proposition 12**</ins> For a commutative ring $$A$$, the collection $$\mathfrak{N}$$ of nilpotent elements forms an ideal.
+<ins id="prop12">**Proposition 12**</ins> For a commutative ring $$A$$, the set $$\mathfrak{N}$$ of nilpotent elements is an ideal.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-If $$x\in \mathfrak{N}$$, then there exists $$n>0$$ such that $$x^n=0$$, and for any $$\alpha\in A$$, we have $$(\alpha x)^n=\alpha^nx^n=0$$, showing that $$\alpha x\in \mathfrak{N}$$.
+If $$x\in \mathfrak{N}$$, then there exists $$n>0$$ with $$x^n=0$$, and for any $$\alpha\in A$$ we have $$(\alphax)^n=\alpha^nx^n=0$$; hence $$\alpha x\in \mathfrak{N}$$.
 
-Now we need to show that $$\mathfrak{N}$$ is closed under addition. Let $$x,y\in \mathfrak{N}$$ be given, and suppose $$x^m=0$$ and $$y^n=0$$ for some $$m,n>0$$. Then
+It remains to show that $$\mathfrak{N}$$ is closed under addition. Let $$x,y\in \mathfrak{N}$$, and suppose $$x^m=0$$ and $$y^n=0$$ for some $$m,n>0$$. Then
 
 $$(x+y)^{m+n}=x^{m+n}+\binom{m+n}{1}x^{m+n-1}y+\cdots+\binom{m+n}{n}x^my^n+\binom{m+n}{n+1}x^{m-1}y^{n+1}+\cdots+y^n$$
 
-and we can see that all terms on the right-hand side are $$0$$. Thus $$x+y\in \mathfrak{N}$$.
+and every term on the right-hand side is $$0$$. Hence $$x+y\in \mathfrak{N}$$.
 
 </details>
 
@@ -253,7 +251,7 @@ and we can see that all terms on the right-hand side are $$0$$. Thus $$x+y\in \m
 
 </div>
 
-By definition, $$A$$ is reduced if and only if the nilradical of $$A$$ is $$0$$. On the other hand, if $$x\in \mathfrak{N}$$, then from the equation $$x^n=0$$ and the definition of prime ideals, we see that $$x\in \mathfrak{p}$$ for all prime ideals $$\mathfrak{p}$$. That is, the inclusion
+By definition, $$A$$ is reduced if and only if its nilradical is $$0$$. On the other hand, if $$x\in \mathfrak{N}$$, then from the equation $$x^n=0$$ and the definition of a prime ideal, we see that $$x\in \mathfrak{p}$$ for every prime ideal $$\mathfrak{p}$$. Hence
 
 $$\mathfrak{N}\subseteq\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
 
@@ -271,7 +269,7 @@ holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-If $$x\not\in \mathfrak{N}$$, it suffices to show that there exists $$\mathfrak{p}$$ such that $$x\not\in \mathfrak{p}$$. First, consider the ring of fractions $$A_x=S^{-1}A$$ where $$S=\{1,x,x^2,\ldots\}$$. The multiplicative identity $$x/x$$ of $$A_x$$ is necessarily different from $$0/1$$, so in particular $$A_x\neq 0$$. By [§Definition of Rings, ⁋Theorem 9](/en/math/algebraic_structures/rings#thm9), $$A_x$$ has a maximal ideal $$\mathfrak{m}$$, and since every maximal ideal is a prime ideal, $$A_x$$ has a prime ideal. Now applying [Proposition 9](#prop9) to $$\epsilon:A \rightarrow A_x$$, we see that $$\epsilon^{-1}(\mathfrak{p})$$ is a prime ideal of $$A$$, and if $$x\in\epsilon^{-1}(\mathfrak{p})$$, then $$x/1\in \mathfrak{p}$$, and since $$x/1$$ is invertible in $$A_x$$, we have $$\mathfrak{p}=A_x$$, a contradiction.
+If $$x\not\in \mathfrak{N}$$, it suffices to exhibit a prime ideal $$\mathfrak{p}$$ with $$x\not\in \mathfrak{p}$$. Consider the ring of fractions $$A_x=S^{-1}A$$ where $$S=\{1,x,x^2,\ldots\}$$. The multiplicative identity $$x/x$$ of $$A_x$$ is necessarily different from $$0/1$$, so in particular $$A_x\neq 0$$. By [§Definition of Rings, ⁋Theorem 9](/en/math/algebraic_structures/rings#thm9), $$A_x$$ has a maximal ideal $$\mathfrak{m}$$, and since every maximal ideal is prime, $$A_x$$ has a prime ideal. Applying [Proposition 9](#prop9) to $$\epsilon:A \rightarrow A_x$$, we see that $$\epsilon^{-1}(\mathfrak{p})$$ is a prime ideal of $$A$$. If $$x\in\epsilon^{-1}(\mathfrak{p})$$, then $$x/1\in \mathfrak{p}$$, and since $$x/1$$ is invertible in $$A_x$$, we obtain $$\mathfrak{p}=A_x$$, a contradiction.
 
 </details>
 
