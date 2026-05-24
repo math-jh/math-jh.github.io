@@ -1,5 +1,4 @@
 ---
-
 title: "Algebraic Structures"
 excerpt: "Binary operations defined on sets"
 
@@ -14,16 +13,15 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 1
-
-translated_at: 2026-05-19T21:30:02+00:00
+translated_at: 2026-05-24T07:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-24T07:00:03+00:00
 ---
-
-In the [Algebraic Structures](/en/algebraic_structures) category, we define various algebraic objects and explore their fundamental properties. These structures are obtained by adding binary operation structures to sets: groups arise from adding a single operation, while rings arise from adding two operations. By additionally equipping rings with actions, we obtain modules and algebras. Topics such as Galois theory and tensor algebra are treated in separate categories.
+In the [Algebraic Structures](/en/algebraic_structures) category, we define groups and rings and investigate their fundamental properties. These structures are obtained by endowing sets with binary operations: a group is obtained by adding one operation, and a ring by adding two. If we further consider actions of rings, we obtain modules and algebras. Outside these algebraic structures, we have separated Galois theory and tensor algebra into separate categories.
 
 ## Binary Operations
 
-In this post, we examine *magmas*, which are algebraic structures equipped with a single binary operation. Although this structure contains too little information to be of much use in practice, whenever we define new algebraic structures in what follows, we will consider notions such as substructures and quotient structures that we introduce here.
+In this post, we examine *magmas*, algebraic structures equipped with a single binary operation. This structure carries too little information to be of use going forward; however, whenever we define new algebraic structures, we will find ourselves considering the substructures and quotient structures introduced here.
 
 <div class="definition" markdown="1">
 
@@ -31,53 +29,53 @@ In this post, we examine *magmas*, which are algebraic structures equipped with 
 
 </div>
 
-The value $$\star(x,y)$$ of a binary operation $$\star$$ is abbreviated as $$x\ast y$$. Since a magma is a structure that includes not only the set $$A$$ but also the operation defined on it, we denote a magma as $$(A,\star)$$, explicitly indicating both the operation and the set, except when the context makes it clear.
+The value $$\star(x,y)$$ of a binary operation $$\star$$ is abbreviated as $$x\ast y$$. A magma is a structure comprising not only the set $$A$$ but also the operation defined on it, so we denote a magma by $$(A,\star)$$, explicitly indicating both the set and the operation, except when the context makes this clear.
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**Example 2**</ins> For any set $$X$$, both $$(\mathcal{P}(X),\cup)$$ and $$(\mathcal{P}(X),\cap)$$ are magmas.
+<ins id="ex2">**Example 2**</ins> For any set $$X$$, both $$(\mathcal{P}(X),\cup)$$ and $$\mathcal{P}(X),\cap)$$ are magmas.
 
-The operation $$x-y$$ defined on $$\mathbb{N}$$ is also a binary operation, so $$(\mathbb{N}, -)$$ is a magma as well.
+The operation $$x-y$$ on $$\mathbb{N}$$ is also a binary operation, so $$(\mathbb{N}, -)$$ is a magma as well.
 
 </div>
 
-In both magmas $$(\mathcal{P}(X),\cup)$$ and $$(\mathcal{P}(X),\cap)$$, the following equations
+In both magmas $$(\mathcal{P}(X),\cup)$$ and $$\mathcal{P}(X),\cap)$$, the equations
 
 $$A\cup(B\cup C)=(A\cup B)\cup C,\qquad A\cap(B\cap C)=(A\cap B)\cap C$$
 
-hold for all $$A,B,C\in\mathcal{P}(X)$$. On the other hand, since
+hold for all $$A,B,C\in\mathcal{P}(X)$$. On the other hand,
 
 $$4-(1-2)=5\neq 1=(4-1)-2$$
 
-this property does not hold in $$(\mathbb{N},-)$$.
+so this property fails in $$(\mathbb{N},-)$$.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> For a magma $$(A,\star)$$, if the equation
+<ins id="def3">**Definition 3**</ins> For a magma $$(A,\star)$$, if
 
 $$x\star(y\star z)=(x\star y)\star z$$
 
-always holds for any $$x$$, $$y$$, $$z\in A$$, we say that $$\star$$ is *associative*, and the magma $$A$$ is called an *associative magma*.
+holds for all $$x$$, $$y$$, $$z\in A$$, we say that $$\star$$ is *associative*, and we call the magma $$A$$ an *associative magma*.
 
 </div>
 
-If $$\star$$ is associative, then even when we compute the expression $$x\star y\star z$$ in two different ways, we obtain
+If $$\star$$ is associative, then computing $$x\star y\star z$$ in either of the two possible ways yields
 
 $$(x\star y)\star z=x\star(y\star z)$$
 
-so $$x\star y\star z$$ has an unambiguous meaning. In terms of diagrams, this means that the following diagram
+so $$x\star y\star z$$ has an unambiguous meaning. Diagrammatically, this means that the following diagram
 
 ![associativity](/assets/images/Math/Algebraic_Structures/Algebraic_Structures-1.png){:style="width:11em" class="invert" .align-center}
 
-commutes. Meanwhile, the previous operations exhibit another difference.
+commutes. The operations above also differ in another respect.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> For a magma $$(A, \star)$$, if the equation
+<ins id="def4">**Definition 4**</ins> For a magma $$(A, \star)$$, if
 
 $$x\star y=y\star x$$
 
-always holds for any $$x,y\in A$$, we say that $$\star$$ is *commutative*, and the magma $$A$$ is called a *commutative magma*.
+holds for all $$x,y\in A$$, we say that $$\star$$ is *commutative*, and we call the magma $$A$$ a *commutative magma*.
 
 </div>
 
@@ -87,7 +85,7 @@ Commutativity means that the following diagram
 
 commutes. Here, $$\sigma$$ is the function defined by $$(x,y)\mapsto (y,x)$$.
 
-In general, commutativity does not imply associativity, and conversely, associativity does not imply commutativity.
+In general, commutativity does not imply associativity, nor does associativity imply commutativity.
 
 <div class="example" markdown="1">
 
@@ -95,23 +93,23 @@ In general, commutativity does not imply associativity, and conversely, associat
 
 $$\prod_{i\in I} (A_i\times A_i)\cong\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$
 
-([[\[Set Theory\] §Properties of Product Sets, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3)), we can regard the function
+([\[Set Theory\] §Properties of Product Sets, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3)), we may regard the function
 
 $$\prod_{i\in I}\star_i:\prod_{i\in I} (A_i\times A_i) \rightarrow \prod_{i\in I} A_i$$
 
-as a function from $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$ to $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$. ([[\[Set Theory\] §Properties of Product Sets, ⁋Definition 4](/en/math/set_theory/property_of_products#def4)) Thus $$\prod A_i$$ has a magma structure with respect to $$\star=\prod\star_i$$. The magma $$(\prod A_i, \star)$$ obtained in this way is called the *product magma*.
+as a function from $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$ to $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$. ([\[Set Theory\] §Properties of Product Sets, ⁋Definition 4](/en/math/set_theory/property_of_products#def4)) Thus $$\prod A_i$$ carries a magma structure with respect to $$\star=\prod\star_i$$. The magma $$(\prod A_i, \star)$$ obtained in this way is called the *product magma*.
 
-By taking the product of the two diagrams above for all $$i\in I$$, we see that if all $$\star_i$$ are commutative or all are associative, then $$\star$$ inherits the same property.
+Taking the product of the two diagrams above over all $$i\in I$$, we see that if all $$\star_i$$ are commutative, or if all are associative, then $$\star$$ inherits the same property.
 
 </div>
 
 ## Homomorphisms and Substructures
 
-Let two magmas $$A$$ and $$A'$$ be given. As sets, there exist functions $$f:A\rightarrow A'$$ between them, but since these are not merely sets but algebraic structures with binary operations, it is natural for functions to preserve the binary operations.
+Let $$A$$ and $$A'$$ be two magmas. As sets, there are functions $$f:A\rightarrow A'$$ between them, but since they are not merely sets but algebraic structures equipped with binary operations, it is natural to require that functions preserve these operations.
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> A function $$f:A\rightarrow A'$$ between two magmas $$(A,\star)$$ and $$(A',\star')$$ is called a *homomorphism* if it satisfies the equation
+<ins id="def6">**Definition 6**</ins> A function $$f:A\rightarrow A'$$ between two magmas $$(A,\star)$$ and $$(A',\star')$$ is called a *homomorphism* if it satisfies
 
 $$f(x\star y)=f(x)\star'f(y)$$
 
@@ -119,7 +117,7 @@ for all $$x$$, $$y\in A$$. When emphasis is needed, we call it a *magma homomorp
 
 $$g\circ f=\id_A,\qquad f\circ g=\id_{A'}$$
 
-holds, then $$f$$ and $$g$$ are called *inverses* of each other, and $$f$$ and $$g$$ are called *isomorphisms*. In this case, $$A$$ and $$A'$$ are said to be *isomorphic*, denoted by $$A\cong A'$$.
+then we call $$f$$ and $$g$$ *inverses* of each other, and we call $$f$$ and $$g$$ *isomorphisms*. In this case, $$A$$ and $$A'$$ are said to be *isomorphic*, denoted $$A\cong A'$$.
 
 </div>
 
@@ -127,7 +125,7 @@ It is not difficult to see that a bijective magma homomorphism is a magma isomor
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 7**</ins> For magma homomorphisms $$f:A_1\rightarrow A_2$$ and $$g:A_2\rightarrow A_3$$, the composition $$g\circ f$$ is a magma homomorphism.
+<ins id="prop7">**Proposition 7**</ins> Given magma homomorphisms $$f:A_1\rightarrow A_2$$ and $$g:A_2\rightarrow A_3$$, the composition $$g\circ f$$ is a magma homomorphism.
 
 </div>
 <details class="proof" markdown="1">
@@ -143,35 +141,35 @@ holds.
 
 Therefore, there exists a cartesian monoidal category $$\Magma$$ whose objects are magmas and whose morphisms are magma homomorphisms.
 
-In algebra, it is customary to write the image of $$f$$ as $$\im f$$ rather than $$f(A)$$. Let us choose arbitrary $$w,z\in\im f$$. Then there exist $$x,y\in A$$ such that $$w=f(x)$$ and $$z=f(y)$$. Now
+In algebra, it is customary to write the image of $$f$$ as $$\im f$$ rather than $$f(A)$$. Take arbitrary $$w,z\in\im f$$. Then there exist $$x,y\in A$$ such that $$w=f(x)$$ and $$z=f(y)$$. Now
 
 $$w\star'z=f(x)\star'f(y)=f(x\star y)$$
 
 and since $$x\star y\in A$$, we have $$w\star'z\in\im f$$.
 
-A subset of a magma that is closed under the operation in this manner is defined as follows.
+We define a subset of a magma closed under the operation in this manner as follows.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**Definition 8**</ins> For a magma $$(A,\star)$$, if some subset $$S$$ of $$A$$ is closed under $$\star$$, then $$S$$ is called a *submagma* of $$A$$.
+<ins id="def8">**Definition 8**</ins> For a magma $$(A,\star)$$, if a subset $$S$$ of $$A$$ is closed under $$\star$$, then we call $$S$$ a *submagma* of $$A$$.
 
 </div>
 
-Thus, for a magma $$(A,\star)$$ and a family of submagmas $$(S_i)_{i\in I}$$, it is clear that the intersection $$S=\bigcap S_i$$ is also a submagma. If we choose arbitrary $$a,b\in S$$, then from the fact that $$a,b\in S_i$$ for all $$i$$, we obtain $$a\star b\in S_i$$, and therefore $$a\star b\in S$$.
+Then, for a magma $$(A,\star)$$ and a family of submagmas $$(S_i)_{i\in I}$$, it is clear that the intersection $$S=\bigcap S_i$$ is also a submagma. Indeed, for any $$a,b\in S$$, we have $$a,b\in S_i$$ for all $$i$$, so $$a\star b\in S_i$$ for all $$i$$, and hence $$a\star b\in S$$.
 
 ## Quotient Structures
 
-Since equivalence relations exist on sets, we can also define equivalence relations on magmas. However, just as with functions, not all equivalence relations are of interest to us.
+Just as sets admit equivalence relations, so do magmas. However, not every equivalence relation is of interest to us.
 
-Consider a magma $$A$$ and an equivalence relation $$R$$. Suppose $$x\equiv x'\pmod{R}$$ and $$y\equiv y'\pmod{R}$$ hold. Since $$x$$ and $$x'$$, as well as $$y$$ and $$y'$$, are treated as the same elements by $$R$$, it is reasonable to expect the equation
+Consider a magma $$A$$ with an equivalence relation $$R$$. Suppose $$x\equiv x'\pmod{R}$$ and $$y\equiv y'\pmod{R}$$. Since $$R$$ identifies $$x$$ with $$x'$$ and $$y$$ with $$y'$$, it is reasonable to expect that
 
 $$x\star y\equiv x'\star y'\pmod{R}$$
 
-to hold. However, without any conditions on $$R$$, there is no reason for this equation to hold. Therefore, we define the following additional condition.
+holds. Yet without additional conditions on $$R$$, there is no reason for this to be true. Therefore, we impose the following additional condition.
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**Definition 9**</ins> Let an equivalence relation $$R$$ be defined on a magma $$(A,\star)$$. If for any $$a\in A$$,
+<ins id="def9">**Definition 9**</ins> Let $$R$$ be an equivalence relation on a magma $$(A,\star)$$. If for any $$a\in A$$,
 
 $$x\equiv x'\implies a\star x\equiv a\star x'$$
 
@@ -182,31 +180,31 @@ $$x\equiv x'\implies x\star a\equiv x'\star a$$
 holds for all $$a$$, we say that $$R$$ is *right compatible* with $$\star$$. An equivalence relation that is both left and right compatible is simply called *compatible*.
 </div>
 
-Of course, in the above equations, $$\equiv$$ always refers to the relation $$R$$.
+Of course, in the above equations, $$\equiv$$ always denotes the relation $$R$$.
 
-If $$R$$ is an equivalence relation, we have already seen in set theory that the *quotient set* $$A/R$$ is well-defined. ([[\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4)) The most natural attempt to define an operation $$\tiny\char"2606$$ on the set $$A/R$$ is
+If $$R$$ is an equivalence relation, we have already seen in set theory that the *quotient set* $$A/R$$ is well-defined. ([\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4)) The most natural attempt to define an operation $$\tiny\char"2606$$ on $$A/R$$ is
 
 $$[x]\mathbin{\tiny\char"2606}[y]=[x\star y]$$
 
-However, for this equation to be meaningful, the value of $$[x]\mathbin{\tiny\char"2606}[y]$$ must be well-defined even if we choose a representative $$x'$$ instead of $$x$$ for the equivalence class $$[x]$$. That is, the equation
+However, for this expression to be well-defined, the value of $$[x]\mathbin{\tiny\char"2606}[y]$$ must not depend on the choice of representative for $$[x]$$. That is,
 
 $$[x\star y]=[x]\mathbin{\tiny\char"2606}[y]=[x'\star y]$$
 
-must hold. This equation can be rewritten as
+must hold whenever $$x\equiv x'$$. This can be rewritten as
 
 $$x'\star y\equiv x\star y\mod R$$
 
-which, according to the previous definition, means precisely that $$R$$ must be *right* compatible with the operation. Similarly, since the value of the operation $$\mathbin{\tiny\char"2606}$$ must not change with the choice of representative for $$[y]$$, $$R$$ must be *left* compatible with the operation.
+which, by the previous definition, means precisely that $$R$$ must be *right* compatible with the operation. Similarly, since the value of the operation $$\mathbin{\tiny\char"2606}$$ must not change when we choose a different representative for $$[y]$$, $$R$$ must also be *left* compatible with the operation.
 
 Summarizing this, we obtain the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**Definition 10**</ins> Let an equivalence relation $$R$$ compatible with $$\star$$ be given on a magma $$(A,\star)$$. The magma $$(A/R,\mathbin{\tiny\char"2606})$$ obtained as above is called the *quotient magma*.
+<ins id="def10">**Definition 10**</ins> Let $$R$$ be an equivalence relation on a magma $$(A,\star)$$ that is compatible with $$\star$$. The magma $$(A/R,\mathbin{\tiny\char"2606})$$ obtained above is called the *quotient magma*.
 
 </div>
 
-It is easy to verify that if $$\star$$ is associative or commutative, then $$\mathbin{\tiny\char"2606}$$ inherits the same property. In the above construction, we distinguished between $$\star$$ and $$\mathbin{\tiny\char"2606}$$ by using different notations, but since they are easily distinguishable from context, it is customary to denote the operation in the quotient magma also by $$\star$$.
+It is easy to verify that if $$\star$$ is associative or commutative, then $$\mathbin{\tiny\char"2606}$$ inherits the same property. In the above construction, we distinguished between $$\star$$ and $$\mathbin{\tiny\char"2606}$$ by using different notations, but since they are easily distinguished from context, it is customary to denote the operation in the quotient magma also by $$\star$$.
 
 ---
 
