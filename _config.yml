@@ -76,13 +76,11 @@ algolia:
   powered_by             : false # true (default), false
   files_to_exclude       : 
     - _pages/ko/Index_ko.md
-    - _pages/ko/Music.md
-    - _posts/Misc/Music/*.md
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification : "D1SY1jalQEE3sKKJjj1KWASZwCSTFRApCluC9Bmdpqo"
+google_site_verification : "yFpbvl3mlOU_qKtfTCT4EkVWBgdCSV2m1FQsH6bQw38"
 bing_site_verification   :
 naver_site_verification  : "4eb7cd46f1bd3875a2c91482087ea23d615353c7"
 yandex_site_verification :
