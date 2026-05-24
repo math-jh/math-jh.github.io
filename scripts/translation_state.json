@@ -115,9 +115,17 @@
       "reason": "pending"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Canonical_Bundle.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779527702.1531007,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779615528.4520574,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-29-Canonical_Bundle.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-24T09:30:01+00:00",
+      "in_chars": 25429,
+      "out_chars": 29636,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=355, en=363"
+      ]
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Linear_Systems.md": {
       "status": "done",
@@ -131,7 +139,7 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-05-Sheaf_Cohomology.md": {
       "status": "failed",
-      "last_attempt_ts": 1779531301.7373059,
+      "last_attempt_ts": 1779619501.7615945,
       "error": "timeout after 900s"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md": {
@@ -2060,11 +2068,24 @@
       "out_chars": 6529,
       "reason": "polish",
       "warnings": null
+    },
+    "_posts/Math/Algebraic_Structures/ko/2022-11-29-Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779617400.7336411,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Groups.md",
+      "ko_git_commit_ts": 1772794801.0,
+      "translated_at": "2026-05-24T10:00:04+00:00",
+      "in_chars": 27615,
+      "out_chars": 13666,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=196, en=188"
+      ]
     }
   },
   "stats": {
-    "total_done": 196,
-    "total_in_chars": 2654852,
-    "total_out_chars": 2556039
+    "total_done": 198,
+    "total_in_chars": 2707896,
+    "total_out_chars": 2599341
   }
 }
