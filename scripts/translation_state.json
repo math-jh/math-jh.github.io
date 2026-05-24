@@ -1494,9 +1494,17 @@
       "reason": "pending"
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Algebra_of_Schemes.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779547501.87505,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779635314.899159,
+      "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Algebra_of_Schemes.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-24T15:00:01+00:00",
+      "in_chars": 19307,
+      "out_chars": 21505,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=281, en=277"
+      ]
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Algebraic_Groups.md": {
       "status": "done",
@@ -2139,11 +2147,29 @@
       "warnings": [
         "math block count mismatch: ko=148, en=144"
       ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2023-01-09-Restricted_Sums.md": {
+      "status": "done",
+      "last_attempt_ts": 1779637302.907897,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Restricted_Sums.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T15:30:03+00:00",
+      "in_chars": 19217,
+      "out_chars": 8989,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=146, en=143"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2023-02-14-Group_Actions.md": {
+      "status": "failed",
+      "last_attempt_ts": 1779641104.2565987,
+      "error": "timeout after 900s"
     }
   },
   "stats": {
-    "total_done": 203,
-    "total_in_chars": 2807699,
-    "total_out_chars": 2659636
+    "total_done": 205,
+    "total_in_chars": 2846223,
+    "total_out_chars": 2690130
   }
 }
