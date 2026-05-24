@@ -53,8 +53,13 @@ KIMI_BIN              = shutil.which("kimi") or str(Path.home() / ".local/bin/ki
 KIMI_TIMEOUT_SEC      = 900                  # generous for thinking + long posts
 MIN_KO_BODY_CHARS     = 300                  # skip stubs below this
 FAIL_RETRY_AFTER_SEC  = 24 * 3600
-POLISH_MIN_AGE_SEC    = 7 * 24 * 3600        # only polish if last translated > 7 days ago
+POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # re-polish only if last polish > 14d ago
 GIT_DRIFT_MARGIN_SEC  = 60                   # ignore drift within this window of translation time
+TRUNCATION_RATIO      = 0.60                 # min output/reference body length; below → fail
+
+# Local helper (label fix/audit)
+sys.path.insert(0, str(SCRIPT_DIR))
+from label_normalize import fix_text as label_fix, audit_text as label_audit  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -162,15 +167,18 @@ def is_draft(ko_path: Path) -> bool:
 TRANSLATION_SOURCE_TAG = "kimi-cli"
 
 
+_META_KEYS = ("translated_at", "translation_source", "last_polished_at")
+
+
 def en_translation_meta(en_path: Path) -> dict:
-    """Read translated_at / translation_source markers from en frontmatter."""
+    """Read translated_at / translation_source / last_polished_at from en frontmatter."""
     meta = {}
     for line in _read_frontmatter(en_path).splitlines():
         s = line.strip()
-        if s.startswith("translated_at:"):
-            meta["translated_at"] = s.split(":", 1)[1].strip().strip('"').strip("'")
-        elif s.startswith("translation_source:"):
-            meta["translation_source"] = s.split(":", 1)[1].strip().strip('"').strip("'")
+        for key in _META_KEYS:
+            if s.startswith(key + ":"):
+                meta[key] = s.split(":", 1)[1].strip().strip('"').strip("'")
+                break
     return meta
 
 
@@ -179,22 +187,30 @@ def is_our_translation(en_path: Path) -> bool:
     return en_translation_meta(en_path).get("translation_source") == TRANSLATION_SOURCE_TAG
 
 
-def inject_translation_metadata(translated_md: str, translated_at_iso: str) -> str:
-    """Insert `translated_at` and `translation_source` into the translated frontmatter.
+def inject_translation_metadata(
+    translated_md: str,
+    translated_at_iso: str,
+    *,
+    polished_at_iso: Optional[str] = None,
+) -> str:
+    """Insert translated_at / translation_source / last_polished_at into frontmatter.
 
-    Idempotent: removes any pre-existing markers before injecting fresh ones, so
-    polish/drift re-translations always end with a current timestamp.
+    Idempotent: strips any pre-existing markers before re-injecting. `last_polished_at`
+    is only written when `polished_at_iso` is provided (i.e. on polish runs); pending
+    and drift re-translations drop the field so the next polish becomes due again.
     """
     m = _FRONTMATTER_RE.match(translated_md)
     if not m:
         return translated_md
     fm = m.group(1)
-    fm = re.sub(r"^translated_at\s*:.*\n?",     "", fm, flags=re.MULTILINE)
-    fm = re.sub(r"^translation_source\s*:.*\n?", "", fm, flags=re.MULTILINE)
+    for k in _META_KEYS:
+        fm = re.sub(rf"^{k}\s*:.*\n?", "", fm, flags=re.MULTILINE)
     fm = fm.rstrip() + (
         f"\ntranslated_at: {translated_at_iso}\n"
         f"translation_source: {TRANSLATION_SOURCE_TAG}\n"
     )
+    if polished_at_iso:
+        fm += f"last_polished_at: {polished_at_iso}\n"
     return f"---\n{fm}---\n{translated_md[m.end():]}"
 
 
@@ -265,7 +281,7 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
         if ko_commit_ts > translated_ts + GIT_DRIFT_MARGIN_SEC:
             return ko, existing_en, "drift"
 
-    # --- Phase 3: polish (oldest our-translation, if > POLISH_MIN_AGE_SEC old) ---
+    # --- Phase 3: polish (never-polished first, then oldest last_polished_at > 14d) ---
     polish_candidates = []
     for ko in ko_files:
         if is_draft(ko):
@@ -275,13 +291,14 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
             continue
         if not is_our_translation(existing_en):
             continue
-        translated_ts = _iso_to_ts(en_translation_meta(existing_en).get("translated_at", ""))
-        if now - translated_ts < POLISH_MIN_AGE_SEC:
+        meta = en_translation_meta(existing_en)
+        last_polished = _iso_to_ts(meta.get("last_polished_at", ""))
+        if last_polished > 0 and now - last_polished < POLISH_INTERVAL_SEC:
             continue
-        polish_candidates.append((translated_ts, ko, existing_en))
+        polish_candidates.append((last_polished, ko, existing_en))
 
     if polish_candidates:
-        polish_candidates.sort()      # oldest translated_at first
+        polish_candidates.sort()      # 0.0 (never polished) first, then oldest
         _, ko, en = polish_candidates[0]
         return ko, en, "polish"
 
@@ -328,6 +345,14 @@ Conversion rules:
 
 9. References: `참고문헌` → `References`. BibTeX entries (author / journal / year / pages) unchanged.
 
+# Self-check before responding (must all pass)
+
+- Same number of `$$...$$` blocks as the KO source — no math added, dropped, split, or merged
+- Every `<ins id="...">` from KO appears with the same id and the same number N
+- No `/ko/` paths remain in the body (all cross-ref paths use `/en/`)
+- No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌)
+- Frontmatter has both opening and closing `---`, and the body ends at the final content line (do not truncate mid-sentence)
+
 Now translate the post below."""
 
 
@@ -349,15 +374,25 @@ Given the Korean source (for meaning reference) and the current English translat
 - Terminology consistency within the post and against standard mathematical English
 - Fix translation drift: if the EN diverges from the KO meaning, restore fidelity
 
-# What to preserve VERBATIM
+# What to preserve VERBATIM — mathematical fidelity is non-negotiable
 
-1. Math blocks `$$...$$` — every character, including LaTeX commands, variable names, spacing
-2. Frontmatter — every line, every field, in the same order (do not add or reorder fields)
-3. Cross-reference link **paths** `/en/math/...` — unchanged. Visible **labels** may be lightly refined only if materially clearer.
-4. HTML structure — `<div class="...">`, `<ins id="...">**...**</ins>`, `<details class="proof"><summary>...</summary>`, `<sub>...</sub>` — keep exactly
-5. Section headers (`## ...`) — keep as-is unless genuinely wrong
-6. Footnote markers `[^N]` and identifiers — unchanged
-7. References / bibliography entries (BibTeX-style) — unchanged
+1. **Math blocks `$$...$$`** — every character byte-for-byte: LaTeX commands, variable names, spacing, ordering. The COUNT and ORDER of math blocks in the output MUST match the Korean source exactly. Do not split, merge, reorder, add, or remove math blocks. Easiest rule: never touch what is inside `$$...$$`.
+2. **`<ins id="...">**Label N**</ins>` numbering** — every `<ins>` id (e.g. `def1`, `prop2`, `thm3`) and the integer N inside MUST appear in the output with the same id, the same number, in the same order as in the source. Numbering drift breaks every cross-reference in the blog.
+3. Frontmatter — every key, in the same order. Do not add or drop fields. `translated_at` and `last_polished_at` are injected automatically — do not write them yourself.
+4. Cross-reference link **paths** `/en/math/...` and **anchors** (`#def1`, `#prop2`) — unchanged. Visible labels may be lightly refined only if materially clearer.
+5. HTML structure — `<div class="...">`, `<ins id="...">**...**</ins>`, `<details class="proof"><summary>...</summary>`, `<sub>...</sub>` — keep exactly
+6. Section headers (`## ...`) — keep as-is unless genuinely wrong
+7. Footnote markers `[^N]` and identifiers — unchanged
+8. References / bibliography entries (BibTeX-style) — unchanged
+
+# Self-check before responding
+
+Mentally verify:
+- Same number of `$$...$$` blocks as the KO source? ✓
+- Every `<ins id="...">**Label N**</ins>` from KO is present with identical id and N? ✓
+- No `/ko/` paths remain in the body? ✓
+- No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌)? ✓
+- Frontmatter starts with `---` and the closing `---` is present? ✓
 
 # Style anchors
 
@@ -390,7 +425,97 @@ def build_polish_prompt(ko_content: str, en_content: str) -> str:
 # Kimi invocation
 # ---------------------------------------------------------------------------
 
-_FENCE_RE = re.compile(r"^\s*```(?:markdown|md)?\s*\n|\n```\s*$", re.MULTILINE)
+_FENCE_RE     = re.compile(r"^\s*```(?:markdown|md)?\s*\n|\n```\s*$", re.MULTILINE)
+_MATH_BLOCK_RE = re.compile(r"\$\$.*?\$\$", re.DOTALL)
+_INS_ID_RE     = re.compile(r'<ins\s+id="([^"]+)"')
+_KO_PATH_RE    = re.compile(r"/ko/[A-Za-z0-9_\-/]+")
+
+
+def _body_after_frontmatter(text: str) -> str:
+    m = _FRONTMATTER_RE.match(text)
+    return text[m.end():] if m else text
+
+
+def _fm_top_keys(text: str) -> set[str]:
+    m = _FRONTMATTER_RE.match(text)
+    if not m:
+        return set()
+    keys: set[str] = set()
+    for line in m.group(1).splitlines():
+        if not line or line[0] in (" ", "\t", "#", "-"):
+            continue
+        if ":" in line:
+            keys.add(line.split(":", 1)[0].strip())
+    return keys
+
+
+def validate_translation(
+    translated: str,
+    *,
+    ko_content: str,
+    reason: str,
+    en_current: Optional[str],
+    warnings: Optional[list] = None,
+) -> Optional[str]:
+    """Return None on success, error string on hard failure.
+
+    `warnings`, if provided, is appended with non-blocking issues (logged + notified
+    by caller, but the translation is still accepted).
+    """
+    if warnings is None:
+        warnings = []
+
+    if not _FRONTMATTER_RE.match(translated):
+        return "frontmatter missing or malformed (no enclosing --- block)"
+
+    # Truncation: output body must be >= 60% of reference body
+    ref = en_current if (reason == "polish" and en_current) else ko_content
+    ref_body = _body_after_frontmatter(ref).strip()
+    out_body = _body_after_frontmatter(translated).strip()
+    if ref_body and len(out_body) < TRUNCATION_RATIO * len(ref_body):
+        return (
+            f"output body {len(out_body)}c < {TRUNCATION_RATIO:.0%} of reference "
+            f"{len(ref_body)}c — truncation suspected"
+        )
+
+    # Math block count: WARN ONLY. Strip <sub>...</sub> first (bilingual glosses
+    # are dropped per translation rules, which legitimately reduces the count).
+    # False positives (rephrasings that merge/split blocks) are common enough that
+    # a hard fail wastes a whole day per file; we log + notify instead.
+    _SUB_RE = re.compile(r"<sub>.*?</sub>", re.DOTALL)
+    ko_math = len(_MATH_BLOCK_RE.findall(_SUB_RE.sub("", ko_content)))
+    en_math = len(_MATH_BLOCK_RE.findall(_SUB_RE.sub("", translated)))
+    if ko_math != en_math:
+        warnings.append(f"math block count mismatch: ko={ko_math}, en={en_math}")
+
+    # <ins id="..."> id set must match KO source exactly
+    ko_ids = set(_INS_ID_RE.findall(ko_content))
+    en_ids = set(_INS_ID_RE.findall(translated))
+    if ko_ids != en_ids:
+        missing = sorted(ko_ids - en_ids)
+        extra   = sorted(en_ids - ko_ids)
+        return f"<ins id> mismatch: missing={missing} extra={extra}"
+
+    # No /ko/ paths in body (must all be /en/)
+    body = _body_after_frontmatter(translated)
+    ko_paths = _KO_PATH_RE.findall(body)
+    if ko_paths:
+        return f"{len(ko_paths)} /ko/ path(s) in body, e.g. {ko_paths[0]!r}"
+
+    # Residual KO labels (delegated to label_normalize.audit_text)
+    label_issues = label_audit(translated)
+    if label_issues:
+        more = f" (+{len(label_issues)-1} more)" if len(label_issues) > 1 else ""
+        return f"residual KO label — {label_issues[0]}{more}"
+
+    # Frontmatter keys: ko ⊆ en (en may add translated_at / translation_source / last_polished_at)
+    ko_keys = _fm_top_keys(ko_content)
+    en_keys = _fm_top_keys(translated)
+    missing_keys = ko_keys - en_keys
+    if missing_keys:
+        return f"frontmatter keys dropped: {sorted(missing_keys)}"
+
+    return None
 
 
 def call_kimi(prompt: str) -> str:
@@ -422,16 +547,43 @@ def translate(
     *,
     reason: str,
     en_path: Optional[Path] = None,
+    warnings: Optional[list] = None,
 ) -> Tuple[str, int, int]:
     ko_content = ko_path.read_text(encoding="utf-8")
+    en_current: Optional[str] = None
     if reason == "polish" and en_path is not None and en_path.exists():
-        en_content = en_path.read_text(encoding="utf-8")
-        prompt = build_polish_prompt(ko_content, en_content)
+        en_current = en_path.read_text(encoding="utf-8")
+        prompt = build_polish_prompt(ko_content, en_current)
     else:                                       # pending or drift → re-translate from scratch
         prompt = build_prompt(ko_content)
+
     translated = call_kimi(prompt)
-    translated = inject_translation_metadata(translated, translated_at_iso)
+    # Mechanical KO-label cleanup before any validation / metadata injection.
+    translated, _n_fixed = label_fix(translated)
+
+    err = validate_translation(
+        translated, ko_content=ko_content, reason=reason, en_current=en_current,
+        warnings=warnings,
+    )
+    if err:
+        raise RuntimeError(f"validation failed: {err}")
+
+    polished = translated_at_iso if reason == "polish" else None
+    translated = inject_translation_metadata(
+        translated, translated_at_iso, polished_at_iso=polished,
+    )
     return translated, len(prompt), len(translated)
+
+
+def _notify_telegram(subject: str, body: str) -> None:
+    """Best-effort hermes telegram notify; never raises."""
+    try:
+        subprocess.run(
+            ["hermes", "send", "-t", "telegram", "-s", subject, "-q", body],
+            check=False, timeout=15, capture_output=True,
+        )
+    except Exception:
+        pass
 
 
 # ---------------------------------------------------------------------------
@@ -510,9 +662,11 @@ def main() -> int:
         log(f"translating ({reason}): {key} → {en_path.relative_to(BLOG_ROOT)} (ko {ko_path.stat().st_size}B)")
 
         translated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        warnings: list = []
         try:
             translated, in_chars, out_chars = translate(
                 ko_path, translated_at, reason=reason, en_path=en_path,
+                warnings=warnings,
             )
         except subprocess.TimeoutExpired:
             state["files"][key] = {
@@ -543,7 +697,15 @@ def main() -> int:
             "in_chars": in_chars,
             "out_chars": out_chars,
             "reason": reason,
+            "warnings": warnings or None,
         }
+        if warnings:
+            for w in warnings:
+                log(f"WARN ({key}): {w}")
+            _notify_telegram(
+                f"[translate-worker] {reason} warnings",
+                f"{key}\n→ {en_path.relative_to(BLOG_ROOT)}\n\n" + "\n".join(f"• {w}" for w in warnings),
+            )
         stats = state.setdefault("stats", {})
         stats["total_done"]      = stats.get("total_done", 0) + 1
         stats["total_in_chars"]  = stats.get("total_in_chars",  0) + in_chars
