@@ -1,5 +1,4 @@
 ---
-
 title: "Free Products"
 excerpt: "Free product and universal property"
 
@@ -14,12 +13,11 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 9
-
-translated_at: 2026-05-19T21:30:02+00:00
+translated_at: 2026-05-24T14:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-24T14:30:03+00:00
 ---
-
-Unlike abelian groups, the weak direct product defined in the previous post does not satisfy the universal property for general groups.
+Unlike in the category of abelian groups, the weak direct product defined in the previous post does not satisfy the universal property for general groups.
 
 <div class="example" markdown="1">
 
@@ -27,7 +25,7 @@ Unlike abelian groups, the weak direct product defined in the previous post does
 
 $$f_1(1)=a, \qquad f_2(1)=b$$
 
-Since the index set $$I=\{1,2\}$$ is finite, the weak direct product of two copies of $$(\mathbb{Z},+)$$ equals $$\mathbb{Z}\times\mathbb{Z}$$.
+Since the index set $$I=\{1,2\}$$ is finite, the weak direct product of two copies of $$(\mathbb{Z},+)$$ is $$\mathbb{Z}\times\mathbb{Z}$$.
 
 However, we can see that there is no $$f:\mathbb{Z}\times\mathbb{Z}\rightarrow G$$ making the following diagram
 
@@ -43,41 +41,41 @@ contradicting the choice of $$a,b$$.
 
 </div>
 
-Therefore, to find an object satisfying the universal property among general groups, analogous to direct sums, we need to introduce a new method. For this, we first need to define free groups.
+Therefore, to find an object satisfying the universal property for general groups, just as direct sums do, we must introduce a new construction. For this we first define free groups.
 
 ## Free Group
 
-Any group $$G$$ can be thought of as a set with a binary operation, an identity element, and inverses added to it. Moreover, any group homomorphism can naturally be viewed as a function between sets. That is, there exists a forgetful functor $$U: \Grp \rightarrow\Set$$. In this section, we define the left adjoint $$F:\Set \rightarrow\Grp$$ of $$U$$. By the definition of a left adjoint functor, this is a functor satisfying the natural isomorphism
+Any group $$G$$ may be viewed as a set equipped with a binary operation, an identity element, and inverses. Moreover, any group homomorphism can naturally be regarded as a function between sets. That is, there is a forgetful functor $$U: \Grp \rightarrow\Set$$. In this section we define the left adjoint $$F:\Set \rightarrow\Grp$$ of $$U$$. By the definition of a left adjoint functor, it is a functor satisfying the natural isomorphism
 
 $$\Hom_\Set(X, U(G))\cong\Hom_\Grp(F(X), G)$$
 
-([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1)) That is, functor $$F$$ is given by a bijection that uniquely corresponds an element of $$\Hom_\Grp(F(X),G)$$ to each $$f\in\Hom_\Set(X, U(G))$$ for any set $$X$$ and any group $$G$$. This can be rewritten as follows.
+([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1)). In other words, for any set $$X$$ and any group $$G$$, the functor $$F$$ is given by a bijection assigning to each $$f\in\Hom_\Set(X, U(G))$$ a unique element of $$\Hom_\Grp(F(X),G)$$. This may be rewritten as follows.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> For a nonempty set $$X$$, the *free group* $$F(X)$$ defined by $$X$$ is determined as the solution $$(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$$ to the following universal mapping problem.
+<ins id="def2">**Definition 2**</ins> For a nonempty set $$X$$, the *free group<sub>자유군</sub>* $$F(X)$$ on $$X$$ is defined as the solution $$(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$$ to the following universal mapping problem.
 
-> For any group $$G$$, if a function $$f:X\rightarrow U(G)$$ is given, there exists a unique group homomorphism $$\hat{f}:F(X)\rightarrow G$$ satisfying $$U(\hat{f})\circ\eta_X=f$$.
+> For any group $$G$$, given any function $$f:X\rightarrow U(G)$$, there exists a unique group homomorphism $$\hat{f}:F(X)\rightarrow G$$ satisfying $$U(\hat{f})\circ\eta_X=f$$.
 
 </div>
 
-Here, $$\eta_X$$ is merely the unit of the adjunction $$F\dashv U$$. Of course, for this, we need to actually construct $$F(X)$$.
+Here $$\eta_X$$ is merely the unit of the adjunction $$F\dashv U$$. Of course, to this end we must actually construct $$F(X)$$.
 
-We outline the general approach. First, consider a set $$X^{-1}$$ that is disjoint from $$X$$ and has the same cardinality. There is no particular reason for $$X^{-1}$$ to be any specific set, but we will choose a bijection $$X\rightarrow X^{-1}$$ and denote the image of $$x\in X$$ in $$X^{-1}$$ as $$x^{-1}$$. Also, choose a singleton set disjoint from $$X\cup X^{-1}$$ and denote its element as $$e$$.
+We outline the general approach. First, consider a set $$X^{-1}$$ disjoint from $$X$$ and having the same cardinality. There is nothing special about the set $$X^{-1}$$ itself; we simply choose a bijection $$X\rightarrow X^{-1}$$ and denote the image of $$x\in X$$ in $$X^{-1}$$ by $$x^{-1}$$. Also, choose a singleton set disjoint from $$X\cup X^{-1}$$ and denote its element by $$e$$.
 
-Then the elements of group $$F$$ are the collection of *reduced words* defined by the set $$X\cup X^{-1}\cup \{e\}$$. Here, a *word* is simply a sequence of elements of the set $$X\cup X^{-1}\cup \{e\}$$, but if the same element appears twice in a row like $$xx$$, or $$x^{-1}$$ appears immediately after $$x$$ like $$xx^{-1}$$, or $$e$$ lies between two terms like $$xey$$, these can be shortened to $$x^2$$, $$e$$, and $$xy$$, respectively. However, for example, if $$y\neq x^{-1}$$, there is no way to shorten $$xyx$$. A word shortened in this way is called a *reduced word*.
+Then the elements of the group $$F$$ are the reduced words on the set $$X\cup X^{-1}\cup \{e\}$$. Here a *word* is simply a sequence of elements from $$X\cup X^{-1}\cup \{e\}$$; if the same element appears twice in succession, as in $$xx$$, or if $$x^{-1}$$ follows immediately after $$x$$, as in $$xx^{-1}$$, or if $$e$$ lies between two symbols, as in $$xey$$, then these may be shortened to $$x^2$$, $$e$$, and $$xy$$, respectively. For instance, if $$y\neq x^{-1}$$, there is no way to reduce $$xyx$$. A word that has been shortened in this manner is called a *reduced word*.
 
-We can shorten every word to a reduced word.[^1] Let us define the operation and identity element among these. The identity element is naturally the reduced word $$e$$. The operation is defined as concatenating two words and then shortening to a reduced word. For example, the operation of words $$x_1x_2$$ and $$x_3x_4$$ is given by $$x_1x_2x_3x_4$$. Then $$e$$ can also be viewed as the *empty word* under this operation. This operation is trivially associative. The inverse is obtained by taking the inverse of each term of the original element and reversing their order. For example, the inverse of the word
+We can reduce every word to a reduced word.[^1] Let us define an operation and an identity element on these. The identity element is of course the reduced word $$e$$. The operation is defined by concatenating two words and then reducing the result to a reduced word. For example, the product of the words $$x_1x_2$$ and $$x_3x_4$$ is $$x_1x_2x_3x_4$$. Thus $$e$$ may also be regarded as the *empty word* under this operation. This operation is obviously associative. The inverse of a word is obtained by taking the inverse of each term in the original word and reversing their order. For example, the inverse of the word
 
 $$x_1x_2^{-1}x_3^2$$
 
 is
 
-$$x_3^{-2}x_2x_1^{-1}$$
+$$x_3^{-2}x_2x_1^{-1}$$;
 
-and we can verify that actually computing the operation of these two gives $$e$$.
+indeed, their product is $$e$$.
 
-Now we have constructed the group $$F$$, and by identifying the length-1 elements consisting of elements of $$X$$ with the elements of $$X$$, we also obtain $$\iota:X\rightarrow F$$. Then it is easy to show that these satisfy the universal property of [Definition 2](#def2). For this, it suffices to define $$\bar{f}$$ as the function that replaces all elements $$x\in X$$ appearing in $$F$$ with $$g(x)$$, and verify that this is a group homomorphism.
+Now we have constructed the group $$F$$. By identifying each element of $$X$$ with the corresponding word of length 1, we obtain $$\iota:X\rightarrow F$$. Then it is easy to verify that these satisfy the universal property of [Definition 2](#def2). For this, it suffices to define $$\bar{f}$$ as the map sending each $$x\in X$$ (regarded as an element of $$F$$) to $$g(x)$$, and to check that this defines a group homomorphism.
 
 <div class="proposition" markdown="1">
 
@@ -87,43 +85,43 @@ Now we have constructed the group $$F$$, and by identifying the length-1 element
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Consider the collection $$X$$ of generators of $$G$$, and consider the free group $$F$$ on $$X$$. There exists a group homomorphism from $$F$$ to $$G$$ defined by the function $$X\hookrightarrow G$$, and since the image of this homomorphism contains all generators of $$G$$, it is surjective.
+Take a set $$X$$ of generators of $$G$$, and let $$F$$ be the free group on $$X$$. The inclusion $$X\hookrightarrow G$$ induces a group homomorphism $$F\rightarrow G$$, and since its image contains all generators of $$G$$, it is surjective.
 
 </details>
 
 ## Free Product
 
-Applying the above idea, we can similarly define the free product, which becomes the coproduct we have been seeking. Similarly, we only briefly introduce the construction.
+Applying the above idea, we can define the free product in a similar manner; this is precisely the coproduct we have been seeking. As before, we give only a brief sketch of the construction.
 
-Let a family of groups $$(G_i)$$ be given. For convenience, assume they are all mutually disjoint, and let $$X=\coprod G_i$$. That is, for any element $$x\in X$$, we can uniquely find $$i$$ such that $$x\in G_i$$. Since $$G_i$$ already contain inverses, it suffices to consider $$X\cup\{e\}$$ as the collection of generators.
+Let $$(G_i)$$ be a family of groups. For convenience, assume that they are pairwise disjoint, and set $$X=\coprod G_i$$. Thus each element $$x\in X$$ belongs to a unique $$G_i$$. Since the $$G_i$$ already contain inverses, it suffices to take $$X\cup\{e\}$$ as the set of generators.
 
-The *free product* $$\prod^\ast  G_i$$ of $$(G_i)$$ is the collection of reduced words constructed from this set $$X\cup\{e\}$$. The overall flow is the same as when defining free groups, but this time, since elements of $$G_i$$ can be operated among themselves, we need to be a bit more careful when defining reduced words. A reduced word used in defining the free product refers to a word
+The *free product* $$\prod^\ast  G_i$$ of $$(G_i)$$ is the set of reduced words constructed from this set $$X\cup\{e\}$$. The overall idea is the same as for free groups, but since elements from the same $$G_i$$ can be multiplied together, we must take a little more care in defining reduced words. By a reduced word in the free product, we mean a word
 
 $$x_1x_2\cdots x_n$$
 
-made from elements of the set $$X\cup\{e\}$$ satisfying the following three conditions.
+formed from elements of $$X\cup\{e\}$$ satisfying the following three conditions.
 
 1. If $$n>1$$, none of the $$x_k$$ equals $$e$$.
-2. If $$x_k\in X$$, then $$x_k$$ is not the identity element in the group $$G_i$$ containing this element.
+2. If $$x_k\in X$$, then $$x_k$$ is not the identity element of the group $$G_i$$ to which it belongs.
 3. Two adjacent elements $$x_i, x_{i+1}$$ must belong to different groups.
 
-Given any word, the method to make it a reduced word is simple. Check whether adjacent elements belong to the same group, and combine elements belonging to the same group into a single element through the operation in that group. If during this process (or originally) an identity element in some group appears, simply delete that element.
+Given any word, the reduction procedure is simple. Check whether adjacent elements belong to the same group, and merge consecutive elements from the same group into a single element using the group operation. If an identity element arises during this process (or was present from the start), simply delete it.
 
-Then the operation on $$\prod^\ast G_i$$ is, as in defining free groups, the *concatenation* operation, and it is not difficult to verify that this collection has a group structure. Also, the situation like [Example 1](#ex1) no longer occurs because even if two groups $$G_1,G_2$$ are abelian, their free product $$G_1\ast G_2$$ is no longer an abelian group.
+Then the operation on $$\prod^\ast G_i$$ is, as with free groups, the *concatenation* operation, and one easily verifies that this set forms a group. Moreover, a situation like that of [Example 1](#ex1) no longer arises, because even if two groups $$G_1,G_2$$ are abelian, their free product $$G_1\ast G_2$$ is not an abelian group.
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**Example 4**</ins> Consider the same situation as [Example 1](#ex1). Instead, for notational convenience, let $$G_1=\langle a\rangle\cong\mathbb{Z}$$ and $$G_2=\langle b\rangle\cong\mathbb{Z}$$. Then elements of $$G_1\ast G_2$$ are the collection of elements like
+<ins id="ex4">**Example 4**</ins> Consider the same situation as in [Example 1](#ex1). For notational convenience, let $$G_1=\langle a\rangle\cong\mathbb{Z}$$ and $$G_2=\langle b\rangle\cong\mathbb{Z}$$. Then the elements of $$G_1\ast G_2$$ are words such as
 
 $$ab, a^2b, a^{-1}ba^3, bab^2, \cdots$$
 
-For example, operating two elements $$a^2b$$ and $$bab^2$$ gives
+For example, multiplying the two elements $$a^2b$$ and $$bab^2$$ yields
 
 $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 
-Here $$\langle a\rangle$$ and $$\langle b\rangle$$ are cyclic subgroups of $$G_1\ast G_2$$, so by defining homomorphisms from $$G_1$$ and $$G_2$$ to $$G_1\ast G_2$$ by $$a\mapsto a$$ and $$b\mapsto b$$, we obtain natural inclusion maps $$\iota_1$$ and $$\iota_2$$.
+Here $$\langle a\rangle$$ and $$\langle b\rangle$$ are cyclic subgroups of $$G_1\ast G_2$$. Defining homomorphisms $$G_1\rightarrow G_1\ast G_2$$ and $$G_2\rightarrow G_1\ast G_2$$ by $$a\mapsto a$$ and $$b\mapsto b$$, we obtain the natural inclusion maps $$\iota_1$$ and $$\iota_2$$.
 
-Of course, the problem like [Example 1](#ex1) also does not occur. $$\iota_1(a)\iota_2(b)=ab$$ and $$\iota_2(b)\iota_1(a)=ba$$, but these two elements are different elements of $$\prod^\ast G_i$$.
+Of course, the problem of [Example 1](#ex1) does not arise here either: $$\iota_1(a)\iota_2(b)=ab$$ and $$\iota_2(b)\iota_1(a)=ba$$, but these are distinct elements of $$\prod^\ast G_i$$.
 
 </div>
 
@@ -135,19 +133,19 @@ Of course, the problem like [Example 1](#ex1) also does not occur. $$\iota_1(a)\
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let an arbitrary group $$H$$ and group homomorphisms $$f_i:G_i\rightarrow H$$ be given. By the universal property of $$X=\coprod U(G_i)$$, there exists a unique function $$f:X\rightarrow U(H)$$ satisfying $$U(f_i)=f\circ \iota_i$$ for the inclusion maps $$\iota_i:U(G_i)\rightarrow X$$. Now from the universal property of free products ([Definition 2](#def2)), we obtain a group homomorphism $$\hat{f}:F(X)\rightarrow H$$, and using the fact that $$f_i$$ are group homomorphisms, we see that $$f$$ factors through the above reduction process, thus defining $$\prod^\ast G_i\rightarrow H$$.
+Let $$H$$ be an arbitrary group, and let $$f_i:G_i\rightarrow H$$ be group homomorphisms. By the universal property of the disjoint union $$X=\coprod U(G_i)$$, there exists a unique function $$f:X\rightarrow U(H)$$ such that $$U(f_i)=f\circ \iota_i$$ for the inclusion maps $$\iota_i:U(G_i)\rightarrow X$$. Now from the universal property of the free product ([Definition 2](#def2)), we obtain a group homomorphism $$\hat{f}:F(X)\rightarrow H$$. Using the fact that the $$f_i$$ are group homomorphisms, we see that $$f$$ factors through the reduction process described above, thereby defining a homomorphism $$\prod^\ast G_i\rightarrow H$$.
 
 </details>
 
-On the other hand, for any group $$G$$, a group homomorphism $$\mathbb{Z}\rightarrow G$$ is uniquely determined by which element of $$G$$ $$1\in \mathbb{Z}$$ is sent to. That is, there exists an isomorphism
+On the other hand, for any group $$G$$, a group homomorphism $$\mathbb{Z}\rightarrow G$$ is uniquely determined by the image of $$1\in \mathbb{Z}$$. That is, there is an isomorphism
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong U(G)$$
 
-and by an argument similar to [\[Category Theory\] §Representable Functors, Example 2](/en/math/category_theory/representable_functors#ex2), we see that the above isomorphism is a representation of $$U$$, and moreover, thinking of
+and by an argument similar to [\[Category Theory\] §Representable Functors, Example 2](/en/math/category_theory/representable_functors#ex2), we see that this isomorphism gives a representation of $$U$$. Moreover, viewing it as
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong \Hom_\Set(\ast, U(G))$$
 
-we can interpret this as $$\mathbb{Z}=F(\ast)$$. Therefore, for any set $$X$$, using [\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9), we can express the free group $$F(X)$$ as the free product of copies of $$\mathbb{Z}$$
+we may interpret $$\mathbb{Z}$$ as $$F(\ast)$$. Therefore, for any set $$X$$, applying [\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9), we may write the free group $$F(X)$$ as the free product of copies of $$\mathbb{Z}$$:
 
 $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong \coprod_{x\in X} F(\ast)={\prod_{x\in X}}^\ast \mathbb{Z}$$
 
@@ -159,4 +157,4 @@ $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong \coprod_{x\in X} F(\ast)={\prod
 
 ---
 
-[^1]: While it is not strictly necessary to introduce reduced words to define the operation between words, it is good to introduce reduced words for uniqueness of representation.
+[^1]: While reduced words are not strictly necessary to define the operation on words, it is preferable to introduce them for uniqueness of representation.

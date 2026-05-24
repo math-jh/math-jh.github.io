@@ -604,7 +604,7 @@
     },
     "_posts/Math/Field_Theory/ko/2025-05-15-Separable_Extensions.md": {
       "status": "failed",
-      "last_attempt_ts": 1779542101.544887,
+      "last_attempt_ts": 1779630301.450718,
       "error": "timeout after 900s"
     },
     "_posts/Math/Field_Theory/ko/2025-05-17-Separable_Degree.md": {
@@ -1911,7 +1911,7 @@
     },
     "_posts/Math/Toric_Geometry/ko/2026-05-18-Toric_Divisors_and_Line_Bundles.md": {
       "status": "failed",
-      "last_attempt_ts": 1779543901.5769944,
+      "last_attempt_ts": 1779632102.3162174,
       "error": "timeout after 900s"
     },
     "_posts/Math/Toric_Geometry/ko/2026-05-20-Logarithmic_Differentials.md": {
@@ -2113,11 +2113,37 @@
       "out_chars": 7792,
       "reason": "polish",
       "warnings": null
+    },
+    "_posts/Math/Algebraic_Structures/ko/2022-12-01-Rings.md": {
+      "status": "done",
+      "last_attempt_ts": 1779628416.918305,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Rings.md",
+      "ko_git_commit_ts": 1772795136.0,
+      "translated_at": "2026-05-24T13:00:03+00:00",
+      "in_chars": 24667,
+      "out_chars": 11887,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=170, en=168"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2022-12-07-Free_Products.md": {
+      "status": "done",
+      "last_attempt_ts": 1779633685.2968297,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Free_Products.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T14:30:03+00:00",
+      "in_chars": 21796,
+      "out_chars": 10500,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=148, en=144"
+      ]
     }
   },
   "stats": {
-    "total_done": 201,
-    "total_in_chars": 2761236,
-    "total_out_chars": 2637249
+    "total_done": 203,
+    "total_in_chars": 2807699,
+    "total_out_chars": 2659636
   }
 }
