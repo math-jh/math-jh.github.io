@@ -1887,9 +1887,17 @@
       "last_attempt_ts": 1779535802.0010517
     },
     "_posts/Math/Toric_Geometry/ko/2026-05-17-Toric_Varieties.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779536702.1821437,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779624818.543845,
+      "en_path": "_posts/Math/Toric_Geometry/en/2026-05-17-Toric_Varieties.md",
+      "ko_git_commit_ts": 1779598807.0,
+      "translated_at": "2026-05-24T12:00:01+00:00",
+      "in_chars": 18984,
+      "out_chars": 21977,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=274, en=272"
+      ]
     },
     "_posts/Math/Toric_Geometry/ko/2026-05-18-Reflexive_Polytope_and_Fano_Variety.md": {
       "status": "done",
@@ -2081,11 +2089,35 @@
       "warnings": [
         "math block count mismatch: ko=196, en=188"
       ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2022-11-30-Isomorphism_Theorems.md": {
+      "status": "done",
+      "last_attempt_ts": 1779621014.938436,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Isomorphism_Theorems.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T11:00:03+00:00",
+      "in_chars": 17779,
+      "out_chars": 8139,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=135, en=138"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2022-11-30-Quotient_Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779626518.6189654,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Quotient_Groups.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T12:30:03+00:00",
+      "in_chars": 16577,
+      "out_chars": 7792,
+      "reason": "polish",
+      "warnings": null
     }
   },
   "stats": {
-    "total_done": 198,
-    "total_in_chars": 2707896,
-    "total_out_chars": 2599341
+    "total_done": 201,
+    "total_in_chars": 2761236,
+    "total_out_chars": 2637249
   }
 }

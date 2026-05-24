@@ -1,7 +1,6 @@
 ---
-
 title: "Isomorphism Theorems"
-excerpt: "The isomorphism theorems"
+excerpt: "Isomorphism theorems"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/isomorphism_theorems
@@ -14,11 +13,10 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 6
-
-translated_at: 2026-05-19T21:30:02+00:00
+translated_at: 2026-05-24T11:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-24T11:00:03+00:00
 ---
-
 ## The First Isomorphism Theorem
 
 We begin with a simple lemma.
@@ -83,9 +81,9 @@ $$NK=\{nk\mid n\in N,k\in K\}$$
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-1. For any $$n\in N\cap K$$ and $$k\in K$$, $$knk^{-1}$$ is a product of elements of $$K$$, so it is an element of $$K$$, and at the same time, since $$N$$ is a normal subgroup of $$G$$, it is an element of $$N$$. Therefore, $$knk^{-1}\in N\cap K$$.
-2. It is clear that $$N$$ is a subgroup of $$N\vee K$$. Also, for any $$g\in N\vee K$$ and $$n\in N$$, $$gng^{-1}\in N$$ holds.
-3. For any $$nk\in NK$$, since $$n,k\in N\vee K$$, we have $$nk\in N\vee K$$. Thus it suffices to show the reverse inclusion. Consider the subset of $$G$$ containing all products $$n_1k_1\cdots n_rk_r$$ of elements of $$N$$ and $$K$$. It is easy to verify that this set is a subgroup, and since this subgroup contains both $$N$$ and $$K$$, it also contains $$N\vee K$$.[^1]
+1. For any $$n\in N\cap K$$ and $$k\in K$$, the element $$knk^{-1}$$ is a product of elements of $$K$$, hence lies in $$K$$; and since $$N$$ is a normal subgroup of $$G$$, it also lies in $$N$$. Therefore $$knk^{-1}\in N\cap K$$.
+2. It is clear that $$N$$ is a subgroup of $$N\vee K$$. Moreover, for any $$g\in N\vee K$$ and $$n\in N$$, we have $$gng^{-1}\in N$$.
+3. For any $$nk\in NK$$, since $$n,k\in N\vee K$$, we have $$nk\in N\vee K$$. Thus it suffices to show the reverse inclusion. Consider the subset of $$G$$ containing all products $$n_1k_1\cdots n_rk_r$$ of elements of $$N$$ and $$K$$. It is easy to verify that this set is a subgroup, and since this subgroup contains both $$N$$ and $$K$$, it also contains $$N\vee K$$.[^1]  
 Therefore, every element of $$N\vee K$$ can be written in the form $$n_1k_1\cdots n_rk_r$$. Now since $$N$$ is a normal subgroup of $$N\vee K$$, there exists $$n_1'\in N$$ such that $$k_1n_2=n_2'k_1$$. Repeating this process, we can rewrite $$n_1k_1\cdots n_rk_r$$ in the form of an element of $$NK$$.
 
 </details>
@@ -98,7 +96,7 @@ Therefore, every element of $$N\vee K$$ can be written in the form $$n_1k_1\cdot
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-From the previous lemma, $$N$$ is a normal subgroup of $$NK=N\vee K=KN$$. On the other hand, since $$K\subset NK$$, we can consider the composition of homomorphisms
+From the previous lemma, $$N$$ is a normal subgroup of $$NK=N\vee K=KN$$. Now since $$K\subset NK$$, we can consider the composition of homomorphisms
 
 $$K\overset{\iota}{\hookrightarrow}NK\overset{\pi}{\twoheadrightarrow}NK/N$$
 
@@ -106,11 +104,11 @@ Then
 
 $$\ker(\pi\iota)=(\pi\iota)^{-1}(e)=\iota^{-1}(\ker\pi)=\iota^{-1}(N)=K\cap N$$
 
-so applying the first isomorphism theorem to $$\pi\iota$$,
+so applying the first isomorphism theorem to $$\pi\iota$$, we obtain
 
 $$K/\ker(\pi\iota)=K/(K\cap N)\cong\im(\pi\iota)$$
 
-is obtained. But every element of $$NK/N$$ has the form $$nkN$$, and for some $$n'\in N$$, we can write $$nk=kn'$$, so every element $$nkN$$ of $$NK/N$$ satisfies
+But every element of $$NK/N$$ has the form $$nkN$$, and there exists $$n'\in N$$ such that $$nk=kn'$$, so every element $$nkN$$ of $$NK/N$$ satisfies
 
 $$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 
@@ -128,23 +126,23 @@ and thus we obtain the desired result.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-See the decomposition after [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8).
+This follows from the decomposition after [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8).
 
 </details>
 
 ## The Fourth Isomorphism Theorem
 
-The following theorem is used extensively, and while its proof is not difficult, there is too much to verify, so we omit the proof.
+The following theorem is used extensively; while its proof is not difficult, there is too much to verify, so we omit it.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm7">**Theorem 7 (The Fourth Isomorphism Theorem)**</ins> Let $$G$$ be a group and $$N$$ a normal subgroup of $$G$$. Then there exists an inclusion-preserving bijection between *the set of subgroups of $$G$$ containing $$N$$* and *the set of subgroups of $$G/N$$*. Moreover, this bijection preserves relations such as intersections, indices, and normal subgroups.
+<ins id="thm7">**Theorem 7 (The Fourth Isomorphism Theorem)**</ins> Let $$G$$ be a group and $$N$$ a normal subgroup of $$G$$. Then there exists an inclusion-preserving bijection between *the set of subgroups of $$G$$ containing $$N$$* and *the set of subgroups of $$G/N$$*. Moreover, this bijection preserves all relations such as intersections, indices, and normal subgroups.
 
 </div>
 
 ## Coequalizer of Homomorphisms
 
-Now suppose two group homomorphisms $$f,g:G \rightarrow H$$ are given. We previously saw that the equalizer $$\Eq(f,g)$$ of $$f$$ and $$g$$ is always a subgroup of $$G$$. Their coequalizer is somewhat more complicated.
+Now let $$f,g:G \rightarrow H$$ be two group homomorphisms. We previously saw that the equalizer $$\Eq(f,g)$$ of $$f$$ and $$g$$ is always a subgroup of $$G$$. Their coequalizer is somewhat more complicated.
 
 First, considering the universal property of coequalizers, $$q:H\rightarrow\CoEq(f,g)$$ is initial among those satisfying $$q\circ f=q\circ g$$. If we encountered this situation in $$\Set$$, we would define an equivalence relation $$\sim$$ on $$H$$ as the relation generated by
 
@@ -166,7 +164,7 @@ To resolve this, let $$\overline{S}$$ be the *normal closure* of $$S$$, i.e., th
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Suppose there exists an arbitrary group homomorphism $$q': G \rightarrow H'$$ satisfying $$q'\circ f=q'\circ g$$. Then by [Lemma 1](#lem1), $$\ker q'$$ is a normal subgroup, and by the condition $$q'\circ f=q'\circ g$$,
+Let $$q': G \rightarrow H'$$ be a group homomorphism satisfying $$q'\circ f=q'\circ g$$. Then by [Lemma 1](#lem1), $$\ker q'$$ is a normal subgroup, and by the condition $$q'\circ f=q'\circ g$$,
 
 $$q'(f(x))=q'(g(x))\iff q'(f(x)g(x)^{-1})=e$$
 
@@ -182,4 +180,4 @@ so $$f(x)g(x)^{-1}\in\ker q'$$ holds for all $$x\in g$$. Therefore, by the defin
 
 ---
 
-[^1]: The reverse inclusion can also be easily shown.
+[^1]: The reverse inclusion is also easily verified.
