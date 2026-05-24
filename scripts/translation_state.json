@@ -1240,8 +1240,14 @@
       "reason": "drift"
     },
     "_posts/Math/Mirror_Symmetry/ko/2026-05-21-Dubrovin_Connection.md": {
-      "status": "draft_skip",
-      "last_attempt_ts": 1779406201.2957911
+      "status": "done",
+      "last_attempt_ts": 1779597328.590097,
+      "en_path": "_posts/Math/Mirror_Symmetry/en/2026-05-21-Dubrovin_Connection.md",
+      "ko_git_commit_ts": 1779591607.0,
+      "translated_at": "2026-05-24T04:30:01+00:00",
+      "in_chars": 18357,
+      "out_chars": 20751,
+      "reason": "pending"
     },
     "_posts/Math/Multilinear_Algebra/ko/2022-12-03-Tensor_Algebras.md": {
       "status": "done",
@@ -2003,8 +2009,8 @@
     }
   },
   "stats": {
-    "total_done": 188,
-    "total_in_chars": 2498621,
-    "total_out_chars": 2432945
+    "total_done": 189,
+    "total_in_chars": 2516978,
+    "total_out_chars": 2453696
   }
 }

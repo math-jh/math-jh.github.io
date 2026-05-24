@@ -1393,3 +1393,34 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `resolution of singularities` | multi-word English emphasis — possibly a definition |
 | `star subdivision` | multi-word English emphasis — possibly a definition |
 
+## 토릭 다양체의 정의
+- post: `_posts/Math/Toric_Geometry/ko/2026-05-17-Toric_Varieties.md`
+- permalink: `/ko/math/toric_geometry/toric_varieties`
+- scanned: 2026-05-24T04:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `fan` | looks like emphasis (no <sub> partner) |
+| `primitive inner normal vector` | multi-word English emphasis — possibly a definition |
+| `normal fan` | multi-word English emphasis — possibly a definition |
+| `projective` | looks like emphasis (no <sub> partner) |
+| `Cartier` | looks like emphasis (no <sub> partner) |
+| `standard simplex` | multi-word English emphasis — possibly a definition |
+| `maximal` | looks like emphasis (no <sub> partner) |
+| `resolution of singularities` | multi-word English emphasis — possibly a definition |
+| `star subdivision` | multi-word English emphasis — possibly a definition |
+
+## 프로베니우스 다양체
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-19-Frobenius_Manifold.md`
+- permalink: `/ko/math/mirror_symmetry/frobenius_manifold`
+- scanned: 2026-05-24T05:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Jacobi ring` | multi-word English emphasis — possibly a definition |
+| `residue pairing` | multi-word English emphasis — possibly a definition |
+| `Euler vector field` | multi-word English emphasis — possibly a definition |
+| `affine` | looks like emphasis (no <sub> partner) |
+| `splitting axiom` | multi-word English emphasis — possibly a definition |
+| `semisimple` | looks like emphasis (no <sub> partner) |
+
