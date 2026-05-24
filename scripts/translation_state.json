@@ -2212,11 +2212,48 @@
       "warnings": [
         "math block count mismatch: ko=153, en=128"
       ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2024-05-12-Operations_of_Modules.md": {
+      "status": "done",
+      "last_attempt_ts": 1779657003.5195947,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Operations_of_Modules.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-24T21:00:03+00:00",
+      "in_chars": 23175,
+      "out_chars": 10877,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=158, en=153"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2024-07-04-Abelian_Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779660600.7534158,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Abelian_Groups.md",
+      "ko_git_commit_ts": 1776661221.0,
+      "translated_at": "2026-05-24T22:00:04+00:00",
+      "in_chars": 27645,
+      "out_chars": 13454,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=202, en=201"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2024-08-10-Operations_of_Rings.md": {
+      "status": "done",
+      "last_attempt_ts": 1779662354.5673819,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Operations_of_Rings.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-24T22:30:04+00:00",
+      "in_chars": 14938,
+      "out_chars": 6607,
+      "reason": "polish",
+      "warnings": null
     }
   },
   "stats": {
-    "total_done": 209,
-    "total_in_chars": 2941850,
-    "total_out_chars": 2734525
+    "total_done": 212,
+    "total_in_chars": 3007608,
+    "total_out_chars": 2765463
   }
 }
