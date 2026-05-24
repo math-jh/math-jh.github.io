@@ -139,23 +139,23 @@ $$z\, q_a \partial_{q_a} s = -\,(T_a \qtimes s), \qquad a = 1, \ldots, r$$
 
 가 되며, 위에서 살펴봤듯 이 방정식의 solution space는 $$\dim_\mathbb{C} H^\ast(X)$$차원이다. 이 system의 fundametnal solution을 명시적으로 적은 것이 A-side의 데이터를 담고 있는 Givental의 $$J$$-function이다. 이처럼 connection이 Dubrovin connection $$\nabla^z$$인 경우 그 quantum $$D$$-module은 $$X$$의 A-model data를 담으므로, 이를 *A-model $$D$$-module*이라 부르기도 한다.
 
-이 A-model $$D$$-module을 명시적인 module로 적어두자. 위에서 우리는 mirror가 보는 $$H^2$$/Kähler 방향만 남겨 small QH로 좁혔는데, 그러면 *effective* base는 $$M$$의 $$H^2$$ slice를 지수화한 $$q$$-torus $$(\mathbb{C}^\ast)^r$$과 spectral line $$\mathbb{C}^\ast_z$$를 합친
+우리는 manifold $$M\times \mathbb{C}^\ast$$에서 $$M$$의 $$H^2$$ 방향의 torus만 남겼으므로, 이제 우리가 다루는 A-side의 effective base는 $$(r+1)$$차원 algebraic torus
 
-$$\operatorname{Spec}R, \qquad R := \mathbb{C}[z^{\pm 1}, q^{\pm 1}]$$
+$$M_A := (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast_z = \operatorname{Spec}\mathbb{C}[q_1^{\pm}, \ldots, q_r^\pm, z^\pm]$$
 
-이고, $$R$$이 그 affine coord ring이다. (이건 본래의 $$M\times\mathbb{C}^\ast$$ 전체 ($$M = H^\ast(X)$$ vector 공간)의 coord ring — 그건 $$\operatorname{Sym}(H^\ast(X)^\vee)[z^{\pm1}]$$이다 — 이 아니라 $$H^2$$ 방향만 뽑은 *effective* base의 coord ring이다.) 이 effective base 위에 fiber가 $$H^\ast(X)$$인 trivial bundle을 얹고, 그 Laurent-polynomial 계수 section module을
+이다. 이 $$M_A$$ 위에서의 fiber는 여전히 $$\pr_1^\ast TM$$의 fiber인 $$H^\ast(X)$$와 같고, 따라서 이 위의 bundle은 다음의 식
 
-$$H_A := H^\ast(X) \otimes_\mathbb{C} R = H^\ast(X, R)$$
+$$H_A=H^\ast(X)\otimes_\mathbb{C}\mathbb{C}[q^\pm, z^\pm]=H^\ast(X, \mathbb{C}[z^\pm, q^\pm])$$
 
-로 정의한 것이 *A-model state space*다. 즉 $$H_A$$는 cohomology basis $$\{\sigma^\alpha\}$$를 그대로 가지는 rank-$$\dim_\mathbb{C} H^\ast(X)$$ free $$R$$-module이고, 원소 $$s\in H_A$$는 $$s = \sum_\alpha s^\alpha(z,q)\,\sigma^\alpha$$ ($$s^\alpha \in R$$) 꼴이다. Dubrovin connection $$\nabla^z$$가 미분 작용 $$q_a\partial_{q_a}\mapsto \nabla^z_{q_a\partial_{q_a}}$$, $$\partial_z\mapsto\nabla^z_{\partial_z}$$ ([정의 1](#def1))로 $$H_A$$를 $$\mathcal{D}$$-module로 만들고, flat section ($$\nabla^z s = 0$$)들이 곧 위 QDE의 해 ($$\dim_\mathbb{C} H^\ast(X)$$차원)이다.
+으로 주어진다. 이를 *A-model state space*라 부른다. 
 
-여기서 effective base의 두 방향 $$q$$와 $$z$$의 성격은 전혀 다르다. $$q$$는 앞서 본 complexified Kähler moduli (곧 $$q$$-torus $$(\mathbb{C}^\ast)^r$$)로, mirror가 식별하는 것이 바로 이 방향이다. 반면 $$z$$는 moduli가 아니라 auxiliary spectral parameter로, $$z\to\infty$$의 $$\nabla$$와 $$z\to 0$$의 $$\circ$$를 하나의 flat connection으로 묶는 역할과 ([정의 1](#def1)), $$\nabla^z_{\partial_z}$$ 성분이 grading $$\mu$$ · Euler field $$E$$ 정보를 나르는 역할을 한다. $$z$$는 뒤에서 보듯 A-side와 B-side에 공통으로 나타나는 universal parameter라, $$q$$와 달리 mirror 식별의 대상이 아니다.
+이와 비슷하게, 우리는 다음 글에서 $$X$$의 mirror dual $$\check{X}$$이 정의하는 Jacibi ring들 $$\Jac(W_q)$$들도 
 
-같은 구조가 mirror의 B-side에서도 나타난다. $$X$$의 mirror를 $$\check{X}$$로 적자 (Fano $$X$$의 경우 Landau-Ginzburg model $$(\check{X}, W_q)$$). 여기서 A-model의 quantum product에 대응하는 것은 superpotential $$W_q$$의 *Jacobi ring* $$\Jac(W_q)$$로, [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 본 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 양쪽이 이어진다. 이 $$\Jac(W_q)$$를 deformation parameter $$q$$를 따라 모으면 base $$M$$ 위의 vector bundle을 이루고, 그 위에는 quantum $$D$$-module의 역할을 하는 flat connection, 곧 *Gauss-Manin connection* $$\nabla^{GM}$$이 있어 이를 하나의 $$\mathcal{D}$$-module, 곧 *Gauss-Manin system*으로 만든다. 그 section들이 이루는 free module이 *B-model state space*
+같은 구조가 mirror의 B-side에서도 나타난다. $$X$$의 mirror를 $$\check{X}$$로 적자 (Fano $$X$$의 경우 Landau-Ginzburg model $$(\check{X}, W_q)$$). 여기서 A-model의 quantum product에 대응하는 것은 superpotential $$W_q$$의 *Jacobi ring* $$\Jac(W_q)$$로, [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 본 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 양쪽이 이어진다. 이 $$\Jac(W_q)$$를 deformation parameter $$q$$를 따라 모으면 base $$M_B$$ ($$\check{X}$$의 complex 구조 deformation을 매개하는 effective base) 위의 vector bundle을 이루고, 그 위에는 quantum $$D$$-module의 역할을 하는 flat connection, 곧 *Gauss-Manin connection* $$\nabla^{GM}$$이 있어 이를 하나의 $$\mathcal{D}$$-module, 곧 *Gauss-Manin system*으로 만든다. 그 section들이 이루는 free module이 *B-model state space*
 
-$$H_B := H^n_{dR}(\check{X})[z^{\pm 1}, q^{\pm 1}]$$
+$$H_B := H^n_{dR}(\check{X})[z^{\pm 1}, q_1^{\pm 1}, \ldots, q_r^{\pm 1}]$$
 
-이며, 각 fiber는 $$\Jac(W_q)$$와 동형이다. 여기서 $$q$$는 A-side와 동일하게 base $$M$$의 좌표이지만 이번에는 $$\check{X}$$의 complex structure를 변형하는 parameter로, $$z$$는 A-side와 *같은* spectral parameter로서 B-side에서는 oscillating integral $$\int_\Gamma e^{W_q/z}\omega$$의 지수에 들어가는 parameter로 나타난다. 이 connection과 그 flat section을 이루는 oscillating integral의 구체적 구성은 ([§Oscillating Integral과 Gauss–Manin System](/ko/math/mirror_symmetry/oscillating_integral))에서 다룬다.
+이며, 각 fiber는 $$\Jac(W_q)$$와 동형이다. 여기서 $$q$$는 mirror map으로 $$M_A$$와 식별되는 $$M_B$$의 좌표이지만 이번에는 $$\check{X}$$의 complex structure를 변형하는 parameter로, $$z$$는 A-side와 *같은* spectral parameter로서 B-side에서는 oscillating integral $$\int_\Gamma e^{W_q/z}\omega$$의 지수에 들어가는 parameter로 나타난다. 이 connection과 그 flat section을 이루는 oscillating integral의 구체적 구성은 ([§Oscillating Integral과 Gauss–Manin System](/ko/math/mirror_symmetry/oscillating_integral))에서 다룬다.
 
 이로써 mirror symmetry를 한 단계 끌어올릴 수 있다. [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 본 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$는, 이제 두 $$\mathcal{D}$$-module — A-model quantum $$D$$-module과 B-model Gauss-Manin system — 이 connection까지 호환되며 isomorphic하다는 더 강한 진술로 격상된다.
 
