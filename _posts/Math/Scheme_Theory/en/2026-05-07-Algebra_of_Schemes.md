@@ -13,7 +13,7 @@ sidebar:
 date: 2025-02-05
 last_modified_at: 2025-02-11
 weight: 6
-translated_at: 2026-05-24T15:00:01+00:00
+translated_at: 2026-05-25T02:02:37+00:00
 translation_source: kimi-cli
 ---
 Since a scheme is a geometric as well as an algebraic object, in order to understand it well we must simultaneously consider not only the topological structure of schemes examined in previous posts but also their algebraic structure, and in the previous post we briefly saw how this philosophy is reflected. In this post we develop this philosophy further.
@@ -139,7 +139,7 @@ $$X_1\cap \Spec A_i,\quad X_2\cap \Spec A_i,\quad\ldots,\quad X_s\cap \Spec A_i$
 
 the nonempty ones are the irreducible components of $$\Spec A_i$$. Now by [§Spectrums, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), each of these defines a minimal prime ideal $$\mathfrak{q}_j=I(X_j)$$, and conversely any minimal prime ideal of $$A_i$$ uniquely determines an irreducible component $$X_j\cap \Spec A_i$$.
 
-On the other hand, since $$X$$ is connected, considering in the irreducible decomposition ($$\ast$) the intersection
+On the other hand, since $$X$$ is connected, considering in the irreducible decomposition ($$\ast$$) the intersection
 
 $$X_1\cap \bigcup_{j=2}^s X_j$$
 
@@ -195,7 +195,7 @@ On the other hand, algebraically a minimal prime ideal is always an associated p
 
 </div>
 
-Then this definition does not depend on the choice of $$U$$, and moreover can be written stalk-locally. This is because for an affine open neighborhood $$\Spec A$$ containing $$x$$, assuming that $$A$$ is a Noetherian ring from the condition that $$X$$ is a locally Noetherian scheme, from the third condition of [\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) we know that there is a one-to-one correspondence between the associated prime ideals of $$A$$ contained in $$\mathfrak{p}_x$$ and the associated prime ideals of $$A_{\mathfrak{p}_x}$$, and from this one-to-one correspondence we can rewrite [Definition 8](#prop8) as
+Then this definition does not depend on the choice of $$U$$, and moreover can be written stalk-locally. This is because for an affine open neighborhood $$\Spec A$$ containing $$x$$, assuming that $$A$$ is a Noetherian ring from the condition that $$X$$ is a locally Noetherian scheme, from the third condition of [\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) we know that there is a one-to-one correspondence between the associated prime ideals of $$A$$ contained in $$\mathfrak{p}_x$$ and the associated prime ideals of $$A_{\mathfrak{p}_x}$$, and from this one-to-one correspondence we can rewrite [Definition 8](#def8) as
 
 > For a locally Noetherian scheme $$X$$ and a point $$x$$, we say that $$x$$ is an *associated point* of $$X$$ if $$\mathfrak{m}_x$$ is an associated prime ideal of $$\mathscr{O}_{X,x}$$.
 

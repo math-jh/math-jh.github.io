@@ -41,4 +41,4 @@ author_profile: true
 
 ## 기타
 
-- [찾아보기](/ko/misc/index)
+- [찾아보기](/ko/misc/index_ko)

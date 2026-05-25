@@ -1441,3 +1441,15 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `주장 4 (Mirror theorem, $$D$$-module form)` | mixed-script emphasis — possibly a definition |
 | `mirror isomorphism` | multi-word English emphasis — possibly a definition |
 
+## 스킴의 대수구조
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Algebra_of_Schemes.md`
+- permalink: `/ko/math/scheme_theory/algebra_of_schemes`
+- scanned: 2026-05-25T02:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `주장` | looks like emphasis (no <sub> partner) |
+| `connected` | looks like emphasis (no <sub> partner) |
+| `정의역` | looks like emphasis (no <sub> partner) |
+| `total quotient ring` | multi-word English emphasis — possibly a definition |
+
