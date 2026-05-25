@@ -282,7 +282,7 @@ $$\int_\Gamma e^{W(x)/\hbar}\,\omega$$
 
 $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 
-라 하면, $$h$$는 smooth real-valued function이며, $$W$$의 holomorphic critical point $$p$$ (즉 $$dW(p)=0$$) 가 정확히 $$h$$의 critical point에 대응한다. 또한 $$W$$가 $$p$$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $$h$$가 $$p$$에서 비퇴화 critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 절반 차원이다 (complex Hessian의 eigenvalue가 $$\lambda_1,\ldots,\lambda_n\in\mathbb{C}^\ast$$일 때 $$-\operatorname{Re}(\lambda_i/\hbar)$$의 부호 분포가 정확히 절반씩이라는 사실로부터 얻어진다).
+라 하면, $$h$$는 smooth real-valued function이며, $$W$$의 holomorphic critical point $$p$$ (즉 $$dW(p)=0$$) 가 정확히 $$h$$의 critical point에 대응한다. 또한 $$W$$가 $$p$$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $$h$$가 $$p$$에서 비퇴화 critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 $$n$$ (= 절반 차원)이며, 이는 아래 [명제 15](#prop15)에서 정식으로 보인다.
 
 $$X$$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/riemannian_metric)의 일반론에 따라 gradient vector field가 정의된다) $$h$$의 gradient flow를 생각하자.
 
@@ -296,7 +296,34 @@ $$\frac{dx}{dt} = -\nabla h(x)$$
 
 </div>
 
-위에서 언급한 *Morse index가 절반*이라는 사실로부터, $$\Gamma_p$$는 $$X$$의 실차원의 절반에 해당하는 real submanifold이며, 정확히 적분의 수렴 조건 $$\operatorname{Re}(W/\hbar)\to -\infty$$를 따라가는 경로의 다발이 된다. 정의에 의해 $$h$$는 $$\Gamma_p$$ 위에서 $$p$$에서 최소를 가지므로 $$\operatorname{Re}(W/\hbar)$$는 $$p$$에서 최대를 가지며, $$\Gamma_p$$를 따라 무한대로 가면 $$\operatorname{Re}(W/\hbar)\to-\infty$$이다. 따라서 적분
+이 thimble의 차원이 항상 $$\dim_\mathbb{C} X$$임은 holomorphic이라는 가정의 직접적 결과이며, 다음 명제로 정리한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop15">**명제 15**</ins> Holomorphic function $$W: U \to \mathbb{C}$$ ($$U \subset \mathbb{C}^n$$ open)의 non-degenerate critical point $$p$$와 $$\hbar \in \mathbb{C}^\ast$$에 대해, real-valued function $$h = -\operatorname{Re}(W/\hbar): U \to \mathbb{R}$$의 $$p$$에서의 Morse index $$\lambda_p$$는 항상 $$n$$이다. 즉 $$\operatorname{Hess}_p(h)$$의 양·음 eigenvalue 개수가 정확히 $$n$$씩으로 split된다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+1차원 ($$n=1$$) 경우 직접 계산. $$W(x) = W(p) + \tfrac{a}{2}(x-p)^2 + O(\lvert x-p\rvert^3)$$ ($$a \in \mathbb{C}^\ast$$가 complex Hessian)으로 쓰고, $$b := a/\hbar = b_1 + i b_2$$, $$x - p = u + iv$$ ($$u, v \in \mathbb{R}$$)로 두면
+
+$$\operatorname{Re}\!\left(\frac{W(x) - W(p)}{\hbar}\right) = \frac{1}{2}\bigl[b_1(u^2 - v^2) - 2 b_2 uv\bigr] + O(\lvert x - p\rvert^3).$$
+
+따라서 $$h = -\operatorname{Re}(W/\hbar)$$의 $$(u, v)$$-좌표에서의 real Hessian은
+
+$$\operatorname{Hess}_p(h) = -\begin{pmatrix} b_1 & -b_2 \\ -b_2 & -b_1 \end{pmatrix}$$
+
+이고, determinant $$= -(b_1^2 + b_2^2) = -\lvert b\rvert^2 < 0$$. 음의 determinant는 signature $$(1, 1)$$, 즉 Morse index $$1 = n$$을 의미한다.
+
+$$n$$차원의 경우 [정리 6](#thm6)의 복소 버전 (holomorphic Morse lemma)에 의해 적당한 좌표에서 $$W = W(p) + \tfrac{1}{2}\sum_{i=1}^n z_i^2$$로 쓸 수 있고, 위 1차원 계산이 각 $$z_i$$-direction에 독립적으로 적용되어 signature $$(n, n)$$, Morse index $$n$$.
+
+</details>
+
+기하적으로는 complex 구조 $$J$$ (즉 $$i$$를 곱하는 operator)가 $$\operatorname{Hess}_p(h)$$의 양·음 eigenspace를 서로 swap한다는 사실 ($$HJ = -JH$$, anti-$$J$$-invariance)로 해석할 수 있으며, 이는 두 eigenspace의 차원이 자동으로 $$n$$씩 split됨을 강제한다. Holomorphic이라는 가정이 real-valued Morse function이 항상 *saddle* (index $$n$$)만 갖도록 만들어, real Morse 이론의 "극대점 (index $$2n$$)"이나 "극소점 (index $$0$$)" 타입은 holomorphic setting에서 존재할 수 없다.
+
+[명제 15](#prop15)로부터, $$\Gamma_p$$는 $$X$$의 실차원의 절반에 해당하는 real submanifold이며, 정확히 적분의 수렴 조건 $$\operatorname{Re}(W/\hbar)\to -\infty$$를 따라가는 경로의 다발이 된다. 정의에 의해 $$h$$는 $$\Gamma_p$$ 위에서 $$p$$에서 최소를 가지므로 $$\operatorname{Re}(W/\hbar)$$는 $$p$$에서 최대를 가지며, $$\Gamma_p$$를 따라 무한대로 가면 $$\operatorname{Re}(W/\hbar)\to-\infty$$이다. 따라서 적분
 
 $$\mathcal{I}_p(\hbar) = \int_{\Gamma_p} e^{W(x)/\hbar}\,\omega$$
 
@@ -308,7 +335,7 @@ $$\mathcal{I}_p(\hbar) = \int_{\Gamma_p} e^{W(x)/\hbar}\,\omega$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> $$W$$가 비퇴화 critical point $$p$$를 가질 때, $$\hbar\to 0^+$$에서
+<ins id="prop16">**명제 16**</ins> $$W$$가 비퇴화 critical point $$p$$를 가질 때, $$\hbar\to 0^+$$에서
 
 $$\int_{\Gamma_p} e^{W(x)/\hbar}\,\omega = (2\pi\hbar)^{n/2}\,\frac{e^{W(p)/\hbar}}{\sqrt{\det\operatorname{Hess}_p(W)}}\bigl(\alpha(p) + O(\hbar)\bigr)$$
 
@@ -331,7 +358,7 @@ $$e^{W(p)/\hbar}\,\alpha(p)\,\prod_{i=1}^n \int_{\mathbb{R}} e^{e^{2i\theta_i}t_
 
 </details>
 
-[명제 15](#prop15)는 위의 stationary phase formula ([정리 10](#thm10))를 holomorphic 세팅으로 확장한 것이며, holomorphic superpotential에 대한 oscillating integral의 thimble별 점근 분해의 표준적인 출발점이다. 일반적으로 critical point가 매개변수에 따라 이동할 때, thimble들의 monodromy는 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
+[명제 16](#prop16)는 위의 stationary phase formula ([정리 10](#thm10))를 holomorphic 세팅으로 확장한 것이며, holomorphic superpotential에 대한 oscillating integral의 thimble별 점근 분해의 표준적인 출발점이다. 일반적으로 critical point가 매개변수에 따라 이동할 때, thimble들의 monodromy는 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
 
 ---
 
