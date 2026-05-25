@@ -2221,17 +2221,17 @@
     },
     "_posts/Math/Algebraic_Topology/ko/2025-10-07-Characteristic_Classes.md": {
       "status": "done",
-      "last_attempt_ts": 1779674645.97607,
+      "last_attempt_ts": 1779733980.2238526,
       "en_path": "_posts/Math/Algebraic_Topology/en/2025-10-07-Characteristic_Classes.md",
       "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-25T02:00:01+00:00",
-      "in_chars": 25120,
-      "out_chars": 28651,
-      "reason": "pending",
+      "translated_at": "2026-05-25T18:30:04+00:00",
+      "in_chars": 54227,
+      "out_chars": 28687,
+      "reason": "polish",
       "warnings": [
         "math block count mismatch: ko=389, en=380"
       ],
-      "verify_verdict": "verify-failed: kimi timeout"
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=389 en_old=380 en_new=380\nPOLISH CHANGED:\n- [def1] SAFE-REPHRASE: \"열린집합 U\" translated as \"open neighborhood U\" instead of \"open set U\" — no math content changed.\n- [def2] SAFE-REPHRASE: \"위상구조가 주어진\" translated as \"equipped with a topology\" vs \"with a topology as above\" — rephrasing only.\n- [ex3] SAFE-REPHRASE: \"non-vanishing\" changed to \"nowhere-vanishing\" — synonymous mathematical term.\n- [ex3] SAFE-REPHRASE: \"원래 ...에 있을 때 속해있던 바로 그 직선\" translated as \"originally lay on\" vs \"originally belonged to\" — equivalent meaning.\n- [Čech] SAFE-REPHRASE: \"우리가 원래 알던 cohomology\" translated as \"ordinary cohomology we know\" vs \"the cohomology we originally knew\" — rephrasing only.\n- [Grassmannians] SAFE-REPHRASE: \"complex structure\" (cell complex structure sense) unchanged in meaning, though \"complex\" could mislead — context makes meaning clear.\n- [Grassmannians] SAFE-REPHRASE: \"gemerator\" typo in EN OLD fixed to \"generator\" in EN NEW — correction, no content loss.\n- [prop6/def5] SAFE-REPHRASE: Minor punctuation and formatting changes (colons, commas) around math blocks — no math content affected."
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-25-Line_Bundles.md": {
       "status": "done",
@@ -2462,11 +2462,50 @@
     "_posts/Math/Mirror_Symmetry/ko/2026-05-24-Gauss_Manin_Connection.md": {
       "status": "draft_skip",
       "last_attempt_ts": 1779726601.5662854
+    },
+    "_posts/Math/Algebraic_Topology/ko/2025-09-12-Cup_Products.md": {
+      "status": "done",
+      "last_attempt_ts": 1779728505.5538688,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Cup_Products.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T17:00:04+00:00",
+      "in_chars": 22267,
+      "out_chars": 10551,
+      "reason": "polish",
+      "warnings": null
+    },
+    "_posts/Math/Algebraic_Topology/ko/2025-09-17-Acyclic_Models_Theorem.md": {
+      "status": "done",
+      "last_attempt_ts": 1779730275.2390294,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Acyclic_Models_Theorem.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T17:30:04+00:00",
+      "in_chars": 18225,
+      "out_chars": 8017,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=105, en=103"
+      ],
+      "verify_verdict": "Now I have all the information needed.\n\nVERDICT: minor\nCOUNTS: ko=105 en_old=105 en_new=103\nPOLISH CHANGED:\n- [thm3] LOSSY: dropped the isolated math block `$$f$$` in \"such a natural transformation $$f$$ is unique up to natural chain homotopy\" — KO explicitly has `$$f$$` here.\n- [thm3] SAFE-REPHRASE: dropped the trailing math block `$$f_\\bullet(X)$$` from \"the $$0$$-th component $$f_0(X)$$ of $$f_\\bullet(X)$$\" by rephrasing to \"the $$0$$-th component $$f_0(X)$$\" — KO places `$$f_\\bullet(X)$$` earlier in the same sentence (\"$$f_\\bullet(X)$$의 $$0$$번째 성분\"), so the symbol is still present in the sentence and no content is lost."
+    },
+    "_posts/Math/Algebraic_Topology/ko/2025-09-23-Poincare_Duality.md": {
+      "status": "done",
+      "last_attempt_ts": 1779732259.6336696,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Poincare_Duality.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T18:00:04+00:00",
+      "in_chars": 70475,
+      "out_chars": 35186,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=485, en=461"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     }
   },
   "stats": {
-    "total_done": 246,
-    "total_in_chars": 3821153,
-    "total_out_chars": 3459629
+    "total_done": 250,
+    "total_in_chars": 3986347,
+    "total_out_chars": 3542070
   }
 }
