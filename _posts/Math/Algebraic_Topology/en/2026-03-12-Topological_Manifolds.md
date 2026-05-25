@@ -13,18 +13,19 @@ sidebar:
 date: 2025-07-05
 last_modified_at: 2025-07-05
 weight: 1
-translated_at: 2026-05-25T08:30:01+00:00
+translated_at: 2026-05-25T13:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-25T13:30:04+00:00
 ---
-In this category we cover homology, cohomology, and other concepts that are essential when studying geometry. These notions are defined on general topological spaces, but for them to behave well the spaces must satisfy additional properties, and a space meeting all of these conditions is exactly the topological manifold defined in [\[Topology\] §Compactness, ⁋Definition 9](/en/math/topology/compactness#def9). In this post we examine the properties and examples of topological manifolds, and in the next post we will get a rough idea of what homology is through some examples. These two posts serve to outline the broad direction of this category; the substantive content begins with the third post.
+In this category we cover homology, cohomology, and other concepts essential to the study of geometry. Although these notions are defined on general topological spaces, they behave well only when the spaces satisfy additional conditions, and a space meeting all of these requirements is precisely the topological manifold defined in [\[Topology\] §Compactness, ⁋Definition 9](/en/math/topology/compactness#def9). In this post we examine the properties and examples of topological manifolds, and in the next post we will gain a rough idea of what homology is through some illustrative examples. These two posts outline the broad direction of this category; the substantive content begins with the third post.
 
-## Definition of Topological Manifolds
+## Definition of a Topological Manifold
 
-For convenience of exposition, we repeat [\[Topology\] §Compactness, ⁋Definition 8](/en/math/topology/compactness#def8) and [\[Topology\] §Compactness, ⁋Definition 9](/en/math/topology/compactness#def9) as follows.
+For ease of exposition, we repeat [\[Topology\] §Compactness, ⁋Definition 8](/en/math/topology/compactness#def8) and [\[Topology\] §Compactness, ⁋Definition 9](/en/math/topology/compactness#def9) below.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A topological space $$M$$ is *locally Euclidean of dimension $$m$$* if for every $$x\in M$$ there exists a suitable open neighborhood $$U$$ of $$x$$ such that $$U$$ is homeomorphic to an open subset of $$\mathbb{R}^m$$.
+<ins id="def1">**Definition 1**</ins> A topological space $$M$$ is *locally Euclidean of dimension $$m$$* if for every $$x\in M$$ there exists an open neighborhood $$U$$ of $$x$$ such that $$U$$ is homeomorphic to an open subset of $$\mathbb{R}^m$$.
 
 </div>
 
@@ -34,25 +35,25 @@ For convenience of exposition, we repeat [\[Topology\] §Compactness, ⁋Definit
 
 </div>
 
-For convenience, let us call a topological manifold of dimension $$m$$ an *$$m$$-manifold*. Although it was not defined in [\[Topology\] §Compactness, ⁋Definition 8](/en/math/topology/compactness#def8), we sometimes consider a *manifold with boundary* by replacing $$\mathbb{R}^m$$ in the above definition with the *half-space*
+For convenience, we shall refer to a topological manifold of dimension $$m$$ as an *$$m$$-manifold*. Although it was not defined in [\[Topology\] §Compactness, ⁋Definition 8](/en/math/topology/compactness#def8), we sometimes also consider a *manifold with boundary* by replacing $$\mathbb{R}^m$$ in the above definition with the *half-space*
 
 $$\mathbb{H}^m=\left\{(x_1,\ldots,x_m)\in \mathbb{R}^m\mid x_m\geq 0\right\}.$$
 
 ## Examples of Topological Manifolds
 
-We have already learned many ways to construct new spaces from given spaces in topology. Therefore, if we are given topological manifolds to begin with, it is natural to ask whether the resulting spaces are still topological manifolds.
+We have already learned many ways to construct new spaces from given ones in topology. Hence, if we begin with topological manifolds, it is natural to ask whether the resulting spaces remain topological manifolds.
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**Example 3 (Open submanifold)**</ins> An open subspace $$U$$ of an $$m$$-manifold $$M$$ is again an $$m$$-manifold. This is because, letting $$\mathcal{B}$$ be a base for $$M$$, the collection
+<ins id="ex3">**Example 3 (Open submanifold)**</ins> An open subspace $$U$$ of an $$m$$-manifold $$M$$ is again an $$m$$-manifold. Indeed, letting $$\mathcal{B}$$ be a base for $$M$$, the collection
 
 $$\mathcal{B}_U=\left\{B\cap U\mid B\in \mathcal{B}\right\}$$
 
-is a base for $$U$$, so $$U$$ is second-countable; a subspace of a Hausdorff space is always Hausdorff ([\[Topology\] §Hausdorff Spaces, §§Subspaces and Products of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#하우스도르프-공간의-부분공간과-곱)); and if $$x\in U$$ is given arbitrarily, then by the assumption that $$M$$ is locally Euclidean we can choose an open neighborhood $$V$$ of $$x$$ in $$M$$ such that $$V$$ is homeomorphic to an open subset of $$\mathbb{R}^m$$, and therefore $$U\cap V$$ is an open neighborhood of $$x$$ in $$U$$ that is homeomorphic to an open subset of $$\mathbb{R}^m$$.
+is a base for $$U$$, so $$U$$ is second-countable; a subspace of a Hausdorff space is always Hausdorff ([\[Topology\] §Hausdorff Spaces, §§Subspaces and Products of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#하우스도르프-공간의-부분공간과-곱)); and if $$x\in U$$ is given arbitrarily, then by the assumption that $$M$$ is locally Euclidean we can choose an open neighborhood $$V$$ of $$x$$ in $$M$$ such that $$V$$ is homeomorphic to an open subset of $$\mathbb{R}^m$$, whence $$U\cap V$$ is an open neighborhood of $$x$$ in $$U$$ homeomorphic to an open subset of $$\mathbb{R}^m$$.
 
 </div>
 
-Similarly, the set in [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7) also gives the following example of a topological manifold.
+Similarly, the set appearing in [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7) yields the following example of a topological manifold.
 
 <div class="example" markdown="1">
 
@@ -60,7 +61,7 @@ Similarly, the set in [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math
 
 $$\Gamma(f)=\left\{(x,f(x))\mid x\in U\right\}\subset \mathbb{R}^m\times \mathbb{R}^k$$
 
-is an $$m$$-manifold. In fact, this is because the two continuous maps
+is an $$m$$-manifold. In fact, the two continuous maps
 
 $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 
@@ -68,13 +69,13 @@ are inverses of each other, so $$\Gamma(f)$$ and $$U$$ are homeomorphic.
 
 </div>
 
-By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7), $$\Gamma(f)$$ is a closed subset of $$\mathbb{R}^{m+k}$$, so this gives an example of a somewhat different nature from [Example 3](#ex3).
+By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7), $$\Gamma(f)$$ is a closed subset of $$\mathbb{R}^{m+k}$$; thus this gives an example of a somewhat different character from [Example 3](#ex3).
 
-On the other hand, the following also holds for the product topology.
+For the product topology, the following also holds.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**Example 5 (Product manifold)**</ins> Let two topological manifolds $$M_1$$ and $$M_2$$ be given, and suppose they have dimensions $$m_1$$ and $$m_2$$ respectively. Then $$M_1\times M_2$$ is an $$(m_1+m_2)$$-manifold. This is because, letting $$\mathcal{B}_i$$ be a base for $$M_i$$, the collection $$\mathcal{B}$$ given by
+<ins id="ex5">**Example 5 (Product manifold)**</ins> Let $$M_1$$ and $$M_2$$ be topological manifolds of dimensions $$m_1$$ and $$m_2$$, respectively. Then $$M_1\times M_2$$ is an $$(m_1+m_2)$$-manifold. Indeed, letting $$\mathcal{B}_i$$ be a base for $$M_i$$, the collection
 
 $$\mathcal{B}=\left\{B_1\times B_2\mid B_i\in \mathcal{B}_i\right\}$$
 
@@ -82,18 +83,18 @@ is a basis for $$M_1\times M_2$$, so $$M_1\times M_2$$ is second countable; the 
 
 </div>
 
-The last general construction we examine is the quotient space. However, as we saw in [\[Topology\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#하우스도르프-공간의-몫공간), an arbitrary quotient space of a Hausdorff space need not be Hausdorff. Moreover, there is no guarantee that a quotient space of a Euclidean space is Euclidean, so to show that a quotient space is a topological manifold one must at least verify the Hausdorff and locally Euclidean conditions separately. On the other hand, second countability follows from the locally Euclidean condition.
+The last general construction we examine is the quotient space. However, as we saw in [\[Topology\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#하우스도르프-공간의-몫공간), an arbitrary quotient of a Hausdorff space need not be Hausdorff. Moreover, there is no guarantee that the quotient of a Euclidean space is Euclidean, so to show that a quotient space is a topological manifold one must verify the Hausdorff and locally Euclidean conditions separately. On the other hand, second countability follows from the locally Euclidean condition.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> For a quotient map $$X \rightarrow X/R$$, suppose $$X$$ is second-countable and $$X/R$$ is locally Euclidean. Then $$X/R$$ is second countable.
+<ins id="prop6">**Proposition 6**</ins> Let $$X\rightarrow X/R$$ be a quotient map. If $$X$$ is second-countable and $$X/R$$ is locally Euclidean, then $$X/R$$ is second countable.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$X/R$$ is locally Euclidean, we can cover $$X/R$$ by Euclidean neighborhoods $$(U_i)_{i\in I}$$, and the collection of their preimages $$(\pi^{-1}(U_i))_{i\in I}$$ covers $$X$$. Now any second-countable space is Lindelöf ([§Compactness and Convergence of Filters, ⁋Definition 10](/en/math/topology/filter_convergence#def10)), so there exists a suitable countable subset $$J\subset I$$ such that $$(\pi^{-1}(U_i))_{i\in J}$$ is a countable open cover of $$X$$, and therefore the corresponding $$(U_i)_{i\in J}$$ form a countable cover of $$X/R$$. But each of these is a Euclidean neighborhood, so each again has a countable base, and since there are countably many of them, their union is a countable base for $$X/R$$.
+Since $$X/R$$ is locally Euclidean, we can cover $$X/R$$ by Euclidean neighborhoods $$(U_i)_{i\in I}$$, and the collection of their preimages $$(\pi^{-1}(U_i))_{i\in I}$$ covers $$X$$. Now any second-countable space is Lindelöf ([§Compactness and Convergence of Filters, ⁋Definition 10](/en/math/topology/filter_convergence#def10)), so there exists a countable subset $$J\subset I$$ such that $$(\pi^{-1}(U_i))_{i\in J}$$ is a countable open cover of $$X$$; hence the corresponding $$(U_i)_{i\in J}$$ form a countable cover of $$X/R$$. But each of these is a Euclidean neighborhood and therefore has a countable base, so the union of all of them constitutes a countable base for $$X/R$$.
 
 </details>
 
-If we restrict our attention only to the flow of this category, it would suffice to limit our interest to topological manifolds; however, especially when dealing with the product structure on cohomology, it is more convenient to keep in mind the notion of integration on differentiable manifolds.
+Viewed solely in terms of the flow of this category, it would suffice to restrict our attention to topological manifolds; however, especially when dealing with the product structure on cohomology, it is more convenient to keep in mind the notion of integration on differentiable manifolds.

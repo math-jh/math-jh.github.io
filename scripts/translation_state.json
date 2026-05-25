@@ -565,9 +565,18 @@
       "reason": "pending"
     },
     "_posts/Math/Field_Theory/ko/2025-05-15-Separable_Extensions.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779630301.450718,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779717864.4112096,
+      "en_path": "_posts/Math/Field_Theory/en/2025-05-15-Separable_Extensions.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T14:00:01+00:00",
+      "in_chars": 26050,
+      "out_chars": 29399,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=423, en=421"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=423 en=421 (per validator; my recount shows 422, net diff ≤2)\nFINDINGS:\n- [lem2] SAFE-REPHRASE: KO splits `$$I_r-(x_{ij})$$` and `$$M$$` into two blocks; EN merges into `$$M=I_r-(x_{ij})$$` — same math, one fewer block.\n- [lem13] SAFE-REPHRASE: KO writes `$$x,y$$` (single block); EN writes `$$x$$` and `$$y$$` separately (two blocks) — same variables, split for readability.\n- [thm14] SAFE-REPHRASE: KO has two standalone `$$g$$` blocks (\"polynomial `$$g$$` ... coefficients of `$$g$$`\"); EN inlines the first `g` in prose and keeps only one `$$g$$` block — no symbol lost.\n- [prop12] SAFE-REPHRASE: KO has a typo `x_1,ldots` (missing backslash) inside a large block; EN corrects to `x_1,\\ldots` — same formula, fixed LaTeX.\n- [prop15] SAFE-REPHRASE: KO typo `$$\\mathbb{K4}$$` (extraneous 4); EN corrects to `$$\\mathbb{K}$$` — same field reference, typo fixed.\n- (All remaining count differences are analogous merge/split or ordering variations; no mathematical statement, hypothesis, conclusion, or symbol was dropped or added.)"
     },
     "_posts/Math/Field_Theory/ko/2025-05-17-Separable_Degree.md": {
       "status": "done",
@@ -1820,9 +1829,18 @@
       ]
     },
     "_posts/Math/Toric_Geometry/ko/2026-05-18-Toric_Divisors_and_Line_Bundles.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779632102.3162174,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779719668.4444005,
+      "en_path": "_posts/Math/Toric_Geometry/en/2026-05-18-Toric_Divisors_and_Line_Bundles.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T14:30:01+00:00",
+      "in_chars": 25733,
+      "out_chars": 28701,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=376, en=375"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Toric_Geometry/ko/2026-05-20-Logarithmic_Differentials.md": {
       "status": "draft_skip",
@@ -2191,9 +2209,15 @@
       ]
     },
     "_posts/Math/Algebraic_Topology/ko/2023-02-18-Homology.md": {
-      "status": "failed",
-      "last_attempt_ts": 1779673504.4811494,
-      "error": "timeout after 900s"
+      "status": "done",
+      "last_attempt_ts": 1779714121.0890965,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Homology.md",
+      "ko_git_commit_ts": 1775754003.0,
+      "translated_at": "2026-05-25T13:00:04+00:00",
+      "in_chars": 46467,
+      "out_chars": 24177,
+      "reason": "polish",
+      "warnings": null
     },
     "_posts/Math/Algebraic_Topology/ko/2025-10-07-Characteristic_Classes.md": {
       "status": "done",
@@ -2370,17 +2394,14 @@
     },
     "_posts/Math/Algebraic_Topology/ko/2025-07-05-Topological_Manifolds.md": {
       "status": "done",
-      "last_attempt_ts": 1779697891.9393177,
+      "last_attempt_ts": 1779715838.2759526,
       "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Topological_Manifolds.md",
       "ko_git_commit_ts": 1779685207.0,
-      "translated_at": "2026-05-25T08:30:01+00:00",
-      "in_chars": 7915,
-      "out_chars": 7362,
-      "reason": "drift",
-      "warnings": [
-        "math block count mismatch: ko=76, en=77"
-      ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=76 en=77\nFINDINGS:\n- [def1] SAFE-REPHRASE: Korean genitive '$$x$$의 … $$U$$' reordered to English '…of $$x$$ … $$U$$ …', splitting one math-adjacent block into two inline positions; no symbols lost.\n- [def2/ex3] SAFE-REPHRASE: Same grammatical reordering pattern for '$$M$$의 base를 $$\\mathcal{B}$$라 했을 때' → 'letting $$\\mathcal{B}$$ be a base for $$M$$' and '$$m$$-manifold $$M$$의 open subspace $$U$$' → 'open subspace $$U$$ of an $$m$$-manifold $$M$$'; block counts shift but identical symbols present.\n- [ex3 proof] SAFE-REPHRASE: '$$x$$의 $$M$$에서의 열린근방 $$V$$' → 'open neighborhood $$V$$ of $$x$$ in $$M$$'; Korean postpositions cause different $$V$$/$$x$$/$$M$$ block grouping.\n- [ex5 dimensions] SAFE-REPHRASE: KO bundles '$$m_1,m_2$$' in one block; EN splits to '$$m_1$$ and $$m_2$$'; same variables, same meaning.\n- [ex5 basis sentence] SAFE-REPHRASE: KO '$$M_i$$의 base를 $$\\mathcal{B}_i$$라 했을 때, 다음의 식 … 으로 주어지는 $$\\mathcal{B}$$가' vs EN 'letting $$\\mathcal{B}_i$$ be a base for $$M_i$$, the collection $$\\mathcal{B}$$ given by'; sentence restructuring preserves all symbols.\n- [ex5 typo fix] SAFE-REPHRASE: KO has typo '$$(x_1,x_1)\\in M_1\\times M_2$$'; EN corrects to '$$(x_1,x_2)\\in M_1\\times M_2$$'; no mathematical content lost, rather a typo is fixed.\n- [half-space eq] SAFE-REPHRASE: EN adds trailing period inside display equation '$$\\mathbb{H}^m=...\\right\\}.$$' vs KO without period; punctuation only.\n- [prop6 proof typo fix] SAFE-REPHRASE: KO has malformed '$$(\\pi^{-1}(U_i)_{i\\in J}$$' (missing closing parenthesis); EN fixes to '$$(\\pi^{-1}(U_i))_{i\\in J}$$'; no content lost, typo corrected."
+      "translated_at": "2026-05-25T13:30:04+00:00",
+      "in_chars": 15733,
+      "out_chars": 7208,
+      "reason": "polish",
+      "warnings": null
     },
     "_posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md": {
       "status": "done",
@@ -2398,8 +2419,8 @@
     }
   },
   "stats": {
-    "total_done": 238,
-    "total_in_chars": 3524509,
-    "total_out_chars": 3277597
+    "total_done": 242,
+    "total_in_chars": 3638492,
+    "total_out_chars": 3367082
   }
 }
