@@ -19,43 +19,59 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-12-Affine_Varieties.md": {
       "status": "done",
-      "last_attempt_ts": 1779422925.0502315,
+      "last_attempt_ts": 1779735780.8673506,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-12-Affine_Varieties.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-22T04:00:01+00:00",
-      "in_chars": 23021,
-      "out_chars": 27206,
-      "reason": "pending"
+      "translated_at": "2026-05-25T19:00:03+00:00",
+      "in_chars": 51170,
+      "out_chars": 26872,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=350, en=346"
+      ],
+      "verify_verdict": "VERDICT: minor\nCOUNTS: ko=350 en_old=347 en_new=346\nPOLISH CHANGED:\n- [ex3] SAFE-REPHRASE: dropped extra $$\\mathbb{A}^3$$ after $$\\z-\\x^3$$ that OLD had added (not in KO).\n- [prop4-proof] LOSSY: introduced double-backslash typo $$f \\in \\\\mathfrak{b}$$, breaking LaTeX rendering.\n- [prop4] QUESTIONABLE: changed $$\\mathfrak{a}=1$$ to $$\\mathfrak{a}=(1)$$ and same for $$\\mathfrak{b}$$; mathematically equivalent unit-ideal notation but not what KO wrote.\n- [thm10-proof] SAFE-REPHRASE: inlined $$x\\in Z(\\sqrt{\\mathfrak{a}})$$ instead of referring to \"it\", preserving meaning vs KO."
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-12-Projective_Varieties.md": {
       "status": "done",
-      "last_attempt_ts": 1779160407.9884856,
+      "last_attempt_ts": 1779737523.7610679,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-12-Projective_Varieties.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-19T03:00:02+00:00",
-      "in_chars": 16027,
-      "out_chars": 17666,
-      "reason": "pending"
+      "translated_at": "2026-05-25T19:30:03+00:00",
+      "in_chars": 34636,
+      "out_chars": 17675,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=218, en=217"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=218 en_old=217 en_new=217\nPOLISH CHANGED:\n- [def15] SAFE-REPHRASE: polish reordered two inline math blocks ($x \\in X$ and $F_i(x)$) within the morphism definition sentence, preserving meaning.\n- [global] SAFE-REPHRASE: prose-only polish (e.g., \"In this post we define\" → \"We now define\", \"give ... a topology\" → \"endow ... with a topology\", typo \"Zarieties\" → \"Varieties\"); no math blocks added, dropped, merged, or split.\n- [global] SAFE-REPHRASE: all other text polish is cosmetic; math block count and content remain identical to EN_OLD.\n- [global] NOTE: the ko→en block count divergence (218 vs 217) already existed in EN_OLD; polish did not produce it. The divergence stems from KO using inline $$0$$ in def1 (\"not 0\") and def15 (\"not simultaneously 0\") where EN_OLD/EN_NEW use the prose words \"nonzero\"/\"zero\"."
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-15-Quasi_Projective_Varieties.md": {
       "status": "done",
-      "last_attempt_ts": 1779161859.9809802,
+      "last_attempt_ts": 1779739304.2425764,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-15-Quasi_Projective_Varieties.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-19T03:30:01+00:00",
-      "in_chars": 13767,
-      "out_chars": 14860,
-      "reason": "pending"
+      "translated_at": "2026-05-25T20:00:03+00:00",
+      "in_chars": 29570,
+      "out_chars": 14883,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=156, en=152"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-15-Rational_Maps.md": {
       "status": "done",
-      "last_attempt_ts": 1779163959.5334618,
+      "last_attempt_ts": 1779741097.8095844,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-15-Rational_Maps.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-19T04:00:02+00:00",
-      "in_chars": 14122,
-      "out_chars": 15549,
-      "reason": "pending"
+      "translated_at": "2026-05-25T20:30:03+00:00",
+      "in_chars": 30612,
+      "out_chars": 15537,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=187, en=181"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=187 en_old=181 en_new=181\nPOLISH CHANGED:\n- [def1] SAFE-REPHRASE: no math change; prose tightened (\"functions between\" → \"functions between\", \"Above all\" unchanged).\n- [prop2] SAFE-REPHRASE: no math change; minor punctuation tweak in prose surrounding $$\\mathbb{K}(X)=\\Frac\\mathbb{K}[X]$$.\n- [prop3] SAFE-REPHRASE: no math change; \"inclusion\" → \"injective\" in proof prose, math blocks identical.\n- [ex4] SAFE-REPHRASE: no math change; semicolon swap and \"and thus\" → \"thus\" in prose, all $$...$$ blocks preserved.\n- [ex7] SAFE-REPHRASE: no math change; prose polish around $$x_1\\x_0-x_0\\x_1=0$$ and projection formula, blocks untouched.\n- [prop10] SAFE-REPHRASE: no math change; proof prose tightened (\"Since $$\\Phi$$ is assumed to be an isomorphism\" unchanged), all math blocks identical.\n- [ex11] SAFE-REPHRASE: no math change; prose polish around function-field calculations, every $$\\mathbb{K}(\\t_1,\\t_2)$$ and fraction-field block preserved.\n- [ex12] SAFE-REPHRASE: no math change; prose tightened (\"That is,\" unchanged), blow-up equation and projection definition blocks identical.\n\nNote: The validator's count divergence (ko=187 vs en_old/en_new=181) already existed in the validated EN OLD baseline; polish did not alter the $$...$$ block count. No math content was added, dropped, merged, or split between EN OLD and EN NEW."
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-22-Dimension.md": {
       "status": "done",
@@ -2504,8 +2520,8 @@
     }
   },
   "stats": {
-    "total_done": 250,
-    "total_in_chars": 3986347,
-    "total_out_chars": 3542070
+    "total_done": 254,
+    "total_in_chars": 4132335,
+    "total_out_chars": 3617037
   }
 }
