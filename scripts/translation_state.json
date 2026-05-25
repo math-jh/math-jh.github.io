@@ -884,13 +884,17 @@
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-28-Characteristic_Polynomial.md": {
       "status": "done",
-      "last_attempt_ts": 1779359893.6295002,
+      "last_attempt_ts": 1779701456.9315615,
       "en_path": "_posts/Math/Linear_Algebra/en/2022-08-28-Characteristic_Polynomial.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-21T10:30:02+00:00",
-      "in_chars": 7911,
-      "out_chars": 8535,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779678007.0,
+      "translated_at": "2026-05-25T09:30:03+00:00",
+      "in_chars": 8403,
+      "out_chars": 8202,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=128, en=7"
+      ],
+      "verify_verdict": "Now I have all the information needed to make a definitive ruling.\n\nVERDICT: safe\nCOUNTS: ko=128 en=7\nFINDINGS:\n- [Global] SAFE-REPHRASE: KO uses `$$...$$` for all 129 math expressions (128 display + 1 inline), while EN correctly uses `$...$` for 122 inline expressions and `$$...$$` for 7 true display equations; total math expression count is identical (129=129).\n- [def1] SAFE-REPHRASE: KO `$$n$$차 정사각행렬` → EN `$n\\times n$ square matrix` combines dimension into one expression; no content lost.\n- [Body text] SAFE-REPHRASE: KO has standalone `$$\\tau$$` before `즉` (i.e.) where EN integrates the variable into the sentence flow; same mathematical content.\n- [Body text] SAFE-REPHRASE: KO `$$n-1$$차식`/`$$n-1$$차 항` vs EN `degree $n-1$`/`degree-$(n-1)$ term`; same content with prose-adjusted parentheses.\n- [def6] SAFE-REPHRASE: KO `$(\\x-a)^k$` vs EN `$(x-a)^k$`; identical math, KO uses `\\x` macro.\n- [cor4] SAFE-REPHRASE: KO uses `$$L:V\\rightarrow V$$` (display) where EN uses `$L:V\\rightarrow V$` (inline); same content.\n- [ex7] SAFE-REPHRASE: KO puts matrix `J` and polynomial `x^2+1` in display math; EN uses inline; same content.\n- [All 7 display equations] SAFE-REPHRASE: All major formulas (Leibniz expansion, coefficient extraction, constant term, similar matrices, J matrix, eigenvector equation) are preserved identically in both versions."
     },
     "_posts/Math/Linear_Algebra/ko/2022-09-18-Eigenspace_Decomposition.md": {
       "status": "done",
@@ -1272,13 +1276,14 @@
     },
     "_posts/Math/Multilinear_Algebra/ko/2024-10-06-Change_of_Basis.md": {
       "status": "done",
-      "last_attempt_ts": 1779426276.4413776,
+      "last_attempt_ts": 1779703265.1444325,
       "en_path": "_posts/Math/Multilinear_Algebra/en/2024-10-06-Change_of_Basis.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-22T05:00:01+00:00",
-      "in_chars": 6519,
-      "out_chars": 5602,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779678007.0,
+      "translated_at": "2026-05-25T10:00:02+00:00",
+      "in_chars": 7011,
+      "out_chars": 5641,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Multilinear_Algebra/ko/2024-10-06-Tensor_Product_of_Matrices.md": {
       "status": "stub",
@@ -1414,16 +1419,17 @@
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Algebra_of_Schemes.md": {
       "status": "done",
-      "last_attempt_ts": 1779635314.899159,
+      "last_attempt_ts": 1779705105.1489365,
       "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Algebra_of_Schemes.md",
-      "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-24T15:00:01+00:00",
-      "in_chars": 19307,
-      "out_chars": 21505,
-      "reason": "pending",
+      "ko_git_commit_ts": 1779678007.0,
+      "translated_at": "2026-05-25T10:30:03+00:00",
+      "in_chars": 19306,
+      "out_chars": 21655,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=281, en=277"
-      ]
+        "math block count mismatch: ko=281, en=280"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=281 en=280\nFINDINGS:\n- [prop10] SAFE-REPHRASE: KO splits \"f가 0인\" into two blocks `$$f$$` `$$0$$` while EN inlines it as one block `$$f=0$$`; same mathematical meaning, no content lost.\n- [lem3] SAFE-REPHRASE: EN adds a trailing period inside the math block `$$... \\mathfrak{N}(A).$$` versus KO's `$$... \\mathfrak{N}(A)$$`; pure punctuation, math content identical.\n- [prop5] SAFE-REPHRASE: EN adds a trailing period inside the math block `$$... \\cap X_j).$$` versus KO's `$$... \\cap X_j)$$`; pure punctuation, math content identical.\n- [ex11] SAFE-REPHRASE: EN adds a trailing period inside the math block `$$... =\\{(0,0)\\}.$$` versus KO's `$$... =\\{(0,0)\\}$$`; pure punctuation, math content identical.\n- [global] SAFE-REPHRASE: All remaining block-order differences across the document are due to Korean SOV vs English SVO prose ordering; every mathematical symbol and expression is preserved."
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Algebraic_Groups.md": {
       "status": "done",
@@ -2358,11 +2364,25 @@
         "math block count mismatch: ko=76, en=77"
       ],
       "verify_verdict": "VERDICT: safe\nCOUNTS: ko=76 en=77\nFINDINGS:\n- [def1] SAFE-REPHRASE: Korean genitive '$$x$$의 … $$U$$' reordered to English '…of $$x$$ … $$U$$ …', splitting one math-adjacent block into two inline positions; no symbols lost.\n- [def2/ex3] SAFE-REPHRASE: Same grammatical reordering pattern for '$$M$$의 base를 $$\\mathcal{B}$$라 했을 때' → 'letting $$\\mathcal{B}$$ be a base for $$M$$' and '$$m$$-manifold $$M$$의 open subspace $$U$$' → 'open subspace $$U$$ of an $$m$$-manifold $$M$$'; block counts shift but identical symbols present.\n- [ex3 proof] SAFE-REPHRASE: '$$x$$의 $$M$$에서의 열린근방 $$V$$' → 'open neighborhood $$V$$ of $$x$$ in $$M$$'; Korean postpositions cause different $$V$$/$$x$$/$$M$$ block grouping.\n- [ex5 dimensions] SAFE-REPHRASE: KO bundles '$$m_1,m_2$$' in one block; EN splits to '$$m_1$$ and $$m_2$$'; same variables, same meaning.\n- [ex5 basis sentence] SAFE-REPHRASE: KO '$$M_i$$의 base를 $$\\mathcal{B}_i$$라 했을 때, 다음의 식 … 으로 주어지는 $$\\mathcal{B}$$가' vs EN 'letting $$\\mathcal{B}_i$$ be a base for $$M_i$$, the collection $$\\mathcal{B}$$ given by'; sentence restructuring preserves all symbols.\n- [ex5 typo fix] SAFE-REPHRASE: KO has typo '$$(x_1,x_1)\\in M_1\\times M_2$$'; EN corrects to '$$(x_1,x_2)\\in M_1\\times M_2$$'; no mathematical content lost, rather a typo is fixed.\n- [half-space eq] SAFE-REPHRASE: EN adds trailing period inside display equation '$$\\mathbb{H}^m=...\\right\\}.$$' vs KO without period; punctuation only.\n- [prop6 proof typo fix] SAFE-REPHRASE: KO has malformed '$$(\\pi^{-1}(U_i)_{i\\in J}$$' (missing closing parenthesis); EN fixes to '$$(\\pi^{-1}(U_i))_{i\\in J}$$'; no content lost, typo corrected."
+    },
+    "_posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md": {
+      "status": "done",
+      "last_attempt_ts": 1779699852.3588989,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Cohomology.md",
+      "ko_git_commit_ts": 1779685207.0,
+      "translated_at": "2026-05-25T09:00:02+00:00",
+      "in_chars": 25522,
+      "out_chars": 27501,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=278, en=62"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     }
   },
   "stats": {
-    "total_done": 230,
-    "total_in_chars": 3372268,
-    "total_out_chars": 3123702
+    "total_done": 234,
+    "total_in_chars": 3432510,
+    "total_out_chars": 3186701
   }
 }

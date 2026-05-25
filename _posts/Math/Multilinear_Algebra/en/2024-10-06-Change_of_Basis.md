@@ -13,18 +13,18 @@ sidebar:
 date: 2024-10-06
 last_modified_at: 2024-10-06
 weight: 8
-translated_at: 2026-05-22T05:00:01+00:00
+translated_at: 2026-05-25T10:00:02+00:00
 translation_source: kimi-cli
 ---
 ## Square Matrices
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> An $$I\times I$$ matrix is called a *square matrix*. Their collection is denoted by $$\Mat_I(A)$$.
+<ins id="def1">**Definition 1**</ins> An $$I\times I$$ matrix is called a *square matrix*. We denote the collection of these by $$\Mat_I(A)$$.
 
 </div>
 
-In particular, when $$I$$ is a finite set and $$A$$ is commutative, $$\Mat_{n}(A)$$ has special properties: this object is not only an $$A$$-module but also carries a multiplication defined on it. In other words, $$\Mat_{n}(A)$$ is an $$A$$-algebra.
+In particular, when $$I$$ is a finite set and $$A$$ is commutative, $$\Mat_{n}(A)$$ has special properties: this object is not only an $$A$$-module, but also carries a multiplication defined on it. That is, $$\Mat_{n}(A)$$ is an $$A$$-algebra.
 
 <div class="proposition" markdown="1">
 
@@ -34,51 +34,49 @@ In particular, when $$I$$ is a finite set and $$A$$ is commutative, $$\Mat_{n}(A
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-That $$\Mat_n(A)$$ is an associative $$A$$-algebra follows immediately from [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#행렬의-곱셈). One can verify that the identity element for multiplication in $$\Mat_n(A)$$ is the following identity matrix
+That $$\Mat_n(A)$$ is an associative $$A$$-algebra is obvious from [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#행렬의-곱셈). We can verify that the identity element for multiplication in $$\Mat_n(A)$$ is the identity matrix
 
 $$I_n=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\end{pmatrix}$$
 
 </details>
 
-$$M_n(A)$$ has the canonical basis $$(E_{ij})$$, and considering the structure constants for these yields the formula
+$$M_n(A)$$ has the canonical basis $$(E_{ij})$$, and considering the structure constants for these, we can write the following formula:
 
 $$E_{ij}E_{jk}=\delta_{jh}E_{ik}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> We denote by $$\GL_n(A)$$ the collection of elements of $$\Mat_n(A)$$ that have multiplicative inverses.
+<ins id="def3">**Definition 3**</ins> Among the elements of $$\Mat_n(A)$$, we denote by $$\GL_n(A)$$ the set of those that have a multiplicative inverse.
 
 </div>
 
-Fix a basis $$\mathcal{B}=(e_i)_{i\in I}$$ of a free $$A$$-module $$M$$, and let $$\lvert I\rvert=n$$. Then for any $$u\in \End_{\lMod{A}}(M)$$, we have $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$, and if $$u$$ is an isomorphism then by [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#lem4) we have $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$$. Then by [§Dual Spaces, ⁋Proposition 5](/en/math/multilinear_algebra/dual_spaces#prop5) and [§Matrices and Linear Maps, ⁋Proposition 5](/en/math/multilinear_algebra/matrices_and_linear_maps#prop5), the formula
+Fix a basis $$\mathcal{B}=(e_i)_{i\in I}$$ of a free $$A$$-module $$M$$, and let $$\lvert I\rvert=n$$. Then for any $$u\in \End_{\lMod{A}}(M)$$, we have $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$, and if $$u$$ is an isomorphism, then by [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#lem4) we have $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$$. Then by [§Dual Spaces, ⁋Proposition 5](/en/math/multilinear_algebra/dual_spaces#prop5) and [§Matrices and Linear Maps, ⁋Proposition 5](/en/math/multilinear_algebra/matrices_and_linear_maps#prop5), the following formula holds:
 
 $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\mathcal{B}^\ast}^{\mathcal{B}^\ast}\bigr)^{-1}$$
-
-holds.
 
 ## Change of Basis
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> Let $$M$$ be an arbitrary $$A$$-module, and let $$\mathcal{B}=(e_i)_{i\in I}$$ be a finite basis of $$M$$. Then the condition that the formula
+<ins id="prop4">**Proposition 4**</ins> Let an arbitrary $$A$$-module $$M$$ and a finite basis $$\mathcal{B}=(e_i)_{i\in I}$$ of $$M$$ be given. Then the following are equivalent: the formula
 
 $$e_i'=\sum_{j=1}^n a_{ji}e_i,\qquad 1\leq i\leq n$$
 
-gives a basis of $$M$$ is equivalent to the square matrix $$(a_{ji})$$ having an inverse.
+gives a basis of $$M$$, and the square matrix $$(a_{ji})$$ has an inverse.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The given matrix $$(a_{ji})$$ is simply the matrix representation $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$ of the linear map $$u\in\End_{\lMod{A}}(M)$$ defined by
+The given matrix $$(a_{ji})$$ is simply the matrix representation $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$ with respect to $$\mathcal{B}$$ of the linear map $$u\in\End_{\lMod{A}}(M)$$ defined by the formula
 
 $$u:e_i\mapsto e_i'=\sum_{j=1}^n a_{ji}e_i$$
 
-Now this matrix having an inverse is equivalent to $$u$$ being an isomorphism, which in turn is equivalent to $$(u(e_i))_{i\in I}$$ being a basis of $$M$$.
+Now, this matrix having an inverse is equivalent to $$u$$ being an isomorphism, which is in turn equivalent to $$(u(e_i))_{i\in I}$$ being a basis of $$M$$.
 
 </details>
 
-Conversely, we may also regard the matrix $$(a_{ji})$$ as the matrix representation of the identity map $$\id_M:M \rightarrow M$$ with respect to different bases. We write the basis $$(e_i')$$ as $$\mathcal{B}'$$. Then since
+Conversely to the proof above, we can also think of the matrix $$(a_{ji})$$ as the matrix representation of the identity map $$\id_M:M \rightarrow M$$ with respect to different bases. Let us write the basis $$(e_i')$$ as $$\mathcal{B}'$$. Then since
 
 $$\id_M(e_i')=\sum_{j=1}^n a_{ji}e_i$$
 
@@ -92,11 +90,9 @@ More generally, the following holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> Let $$M$$ and $$N$$ be two $$A$$-modules, and let $$\mathcal{B}=(e_i)_{i\in I}$$ and $$\mathcal{C}=(f_j)_{j\in J}$$ be finite bases of $$M$$ and $$N$$, respectively. Then for other bases $$\mathcal{B}'=(e_i')_{i\in I}$$ of $$M$$ and $$\mathcal{C}'=(f_j')_{j\in J}$$ of $$N$$, the formula
+<ins id="prop5">**Proposition 5**</ins> Let two $$A$$-modules $$M,N$$ and their finite bases $$\mathcal{B}=(e_i)_{i\in I}$$, $$\mathcal{C}=(f_j)_{j\in J}$$ be given. For another bases $$\mathcal{B}'=(e_i')_{i\in I}$$ of $$M$$ and $$\mathcal{C}'=(f_j')_{j\in J}$$ of $$N$$, the following formula holds:
 
 $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathcal{B}_\mathcal{C}[\id_M]^{\mathcal{B}'}_{\mathcal{B}}$$
-
-holds.
 
 </div>
 
@@ -108,7 +104,7 @@ holds.
 
 </div>
 
-In the same context as the discussion preceding [\[Basic Linear Algebra\] §Change of Basis, ⁋Definition 2](/en/math/linear_algebra/change_of_basis#def2), it is better to consider the following finer equivalence relation than that of equivalent matrices.
+In the same context as the discussion before [\[Basic Linear Algebra\] §Change of Basis, ⁋Definition 2](/en/math/multilinear_algebra/change_of_basis#def2), it is better to consider the following finer equivalence relation than equivalent matrices.
 
 <div class="definition" markdown="1">
 
@@ -116,4 +112,4 @@ In the same context as the discussion preceding [\[Basic Linear Algebra\] §Chan
 
 </div>
 
-Then setting $$M=N$$, $$\mathcal{B}=\mathcal{C}$$, and $$\mathcal{B}'=\mathcal{C}'$$ in [Proposition 5](#prop5) above, we see that the matrix representations of an element $$u$$ of $$\End_\rMod{A}(M)$$ obtained through different bases are similar to each other.
+Then, setting $$M=N$$, $$\mathcal{B}=\mathcal{C}$$, and $$\mathcal{B}'=\mathcal{C}'$$ in [Proposition 5](#prop5) above, we see that matrix representations of an element $$u$$ of $$\End_\rMod{A}(M)$$ with respect to different bases are similar to each other.
