@@ -109,7 +109,7 @@ $$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{N/2} \frac{e^{W_q(p)/z}}{\sqrt{\de
 
 ## 가우스-마닌 접속
 
-Oscillating integral의 $$(q, z)$$ 의존성을 추적하기 위해 *Gauss-Manin connection* $$\nabla^{GM}$$을 도입한다. 이는 $$(q,z)$$ parameter들의 공간 $$B=(\mathbb{C}^\ast)^r\times \mathbb{C}^\ast$$를 base manifold로 삼는 공간으로, 이 위에 각 base point $$(q, z) \in B$$에 대해, 위에서 정의한 rapid decay homology의 dual인 *rapid decay relative cohomology*
+Oscillating integral의 $$(q, z)$$ 의존성을 추적하기 위해 *Gauss-Manin connection* $$\nabla^{GM}$$을 도입한다. 이를 정의하기 위해서는 우선 그 무대가 되는 vector bundle을 잡아야 한다. $$(q,z)$$ parameter들의 공간 $$B=(\mathbb{C}^\ast)^r\times \mathbb{C}^\ast$$를 base manifold로 하고, 그 위에 각 base point $$(q, z) \in B$$에 대해, 위에서 정의한 rapid decay homology의 dual인 *rapid decay relative cohomology*
 
 $$\mathcal{H}_{(q, z)} := H^N(\check{X}, \{ \Real(W_q/z) \ll 0 \};\, \mathbb{C})$$
 
@@ -117,9 +117,11 @@ $$\mathcal{H}_{(q, z)} := H^N(\check{X}, \{ \Real(W_q/z) \ll 0 \};\, \mathbb{C})
 
 $$\{\mathcal{H}_{(q, z)}\}_{(q, z) \in B}$$
 
-를 생각한다. 이는 만일 $$W_q$$가 Morse type이라면 $$B$$ 위에 정의된 vector bundle $$\mathcal{H}$$를 정의한다는 것이 알려져 있다. 특히 이들 각각의 fiber가 잘 붙는다는 것은 앞서 Lefschetz thimble을 택할 때 $$(q,z)$$에 따라 continuously isotoped될 수 있는 것들을 모았기 때문에 가능하다. 즉, cycle $$\Gamma$$가 $$(q, z)$$의 변화에 따라 연속적으로 움직일 때 그와 pairing되는 cohomology class도 함께 "따라가도록" 평행 이동시킬 수 있고, 이 평행 이동을 connection 형태로 정리한 것이 *Gauss-Manin connection*이다.
+를 생각한다. 각각의 점 $$(q,z)$$에서 이들은 위의 cohomology의 원소로서, rapidly decay homology의 원소와 pairing되어 값을 주는 것이 그 본질이다. Rapid decay homology는 Lefschetz thimble들을 그 basis로 가지므로, [정의 2](#def2)를 생각하면 위의 cohomology의 원소는 $$[e^{W_q/z}\omega]$$로 그 representative를 잡는 것이 자연스럽다. 
 
-<div class="definition" markdown="1">
+이 family는 만일 $$W_q$$가 Morse type이라면 $$B$$ 위에 정의된 vector bundle $$\mathcal{H}$$를 정의한다는 것이 알려져 있다. 특히 이들 각각의 fiber가 잘 붙는다는 것은 앞서 Lefschetz thimble을 택할 때 $$(q,z)$$에 따라 continuously isotoped될 수 있는 것들을 모았기 때문에 가능하다. 즉, cycle $$\Gamma$$가 $$(q, z)$$의 변화에 따라 연속적으로 움직일 때 그와 pairing되는 cohomology class도 함께 "따라가도록" 평행 이동시킬 수 있고, 이 평행 이동을 connection 형태로 정리한 것이 *Gauss-Manin connection*이다.
+
+<div class="definition" markdown="1"> 
 
 <ins id="def4">**정의 4 (Gauss-Manin connection)**</ins> Vector bundle $$\mathcal{H} \to (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$$ 위의 *Gauss-Manin connection* $$\nabla^{GM}$$은 다음 조건으로 유일하게 결정되는 flat connection이다.
 
@@ -131,7 +133,7 @@ $$\{\mathcal{H}_{(q, z)}\}_{(q, z) \in B}$$
 
 </div>
 
-정의에 의하여, cohomology fiber  $$\mathcal{H}_{(q,z)}$$의 원소는 dual rapid decay homology의 cycle과의 integral pairing으로 완전히 결정된다. 이 때, 위의 local system 구조에서 fiber 사이의 canonical identification은 정확히 cycle들의 parallel transport의 dual로 결정되었다. 따라서, 위의 bundle의 section들을 이 identification을 통해 locally constant인지 확인하기 위해서는 모든 parallel transport된 cycle들과의 pairing 값이 locally constant인지 보면 되고, 이 값이 바로 period인 것이다. 약간의 계산을 거치면 이렇게 정의된 $$\nabla^{GM}$$이 유일하게 결정되며, $$\nabla^{GM}$$의 flaness 또한 확인할 수 있다. 
+위에서 언급했듯 cohomology fiber $$\mathcal{H}_{(q,z)}$$의 원소는 dual rapid decay homology의 cycle과의 integral pairing으로 완전히 결정된다. 이 때, 위의 local system 구조에서 fiber 사이의 canonical identification은 정확히 cycle들의 parallel transport의 dual로 결정되었다. 따라서, 위의 bundle의 section들을 이 identification을 통해 locally constant인지 확인하기 위해서는 모든 parallel transport된 cycle들과의 pairing 값이 locally constant인지 보면 되고, 이 값이 바로 period인 것이다. 약간의 계산을 거치면 이렇게 정의된 $$\nabla^{GM}$$이 유일하게 결정되며, $$\nabla^{GM}$$의 flatness 또한 확인할 수 있다. 
 
 $$\nabla^{GM}$$의 representative form 차원에서의 계산은 다음과 같다.
 
@@ -156,21 +158,25 @@ $$\partial_{q_a}\!\left(e^{W_q/z}\,\omega\right) = \frac{\partial_{q_a} W_q}{z}\
 
 </details>
 
-## B-model connection과 flat section equation
+## B-model connection
 
-[§두브로빈 접속, ⁋정의 1](/ko/math/mirror_symmetry/dubrovin_connection#def1)의 A-model Dubrovin connection $$\nabla^z$$와 직접 비교 가능하도록, Gauss-Manin connection을 $$z$$만큼 rescaling한 **B-model connection**을 정의한다.
+[§두브로빈 접속, ⁋정의 1](/ko/math/mirror_symmetry/dubrovin_connection#def1)의 A-model Dubrovin connection $$\nabla^z$$와 직접 비교 가능하도록, Gauss-Manin connection을 $$z$$만큼 rescaling한 *B-model connection*을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6** (B-model connection)</ins> $$\mathcal{H}$$ 위에 정의되는 *B-model connection* $$\nabla^z_B$$은
+<ins id="def6">**정의 6 (B-model connection)**</ins> $$\mathcal{H}$$ 위에 정의되는 *B-model connection* $$\nabla^z_B$$은
 
-$$\nabla^z_B := z\, \nabla^{GM}$$
+$$\nabla^z_B := z\nabla^{GM}$$
 
-으로 정의된다. 명시적으로, frame $$[e^{W_q/z}\omega]$$를 기준으로 하면 [명제 5](#prop5)에서 $$\nabla^z_{B, \partial_{q_a}}[e^{W_q/z}\omega] = \partial_{q_a} W_q \cdot [e^{W_q/z}\omega]$$, $$\nabla^z_{B, z\partial_z}[e^{W_q/z}\omega] = -W_q \cdot [e^{W_q/z}\omega]$$로 작용한다 ($$\partial_{q_a} W_q$$, $$W_q$$는 cohomology class에 대한 multiplication operator).
+으로 정의된다. 
 
 </div>
 
-이 rescaling은 [명제 5](#prop5)의 $$1/z$$ 인자를 흡수하여, $$z \to 0$$에서 B-model connection의 *symbol*이 $$\partial_{q_a} W_q$$의 Jacobi ring 안에서의 multiplication으로 well-defined classical limit을 가지며, 이는 A-model의 quantum product $$T_a\ast_q$$에 대응한다.
+명시적으로, frame $$[e^{W_q/z}\omega]$$에 B-model connection을 적용해보면 [명제 5](#prop5)에서 
+
+$$\nabla^z_{B, \partial_{q_a}}[e^{W_q/z}\omega] = \partial_{q_a} W_q \cdot [e^{W_q/z}\omega],\qquad \nabla^z_{B, z\partial_z}[e^{W_q/z}\omega] = -W_q \cdot [e^{W_q/z}\omega]$$
+
+가 성립한다. 이 rescaling으로 [명제 5](#prop5)의 $$1/z$$ 인자가 흡수되므로, $$z \to 0$$ 극한에서 B-model connection의 *symbol*은 cohomology class에 대한 $$\partial_{q_a} W_q$$의 multiplication이라는 well-defined classical limit을 가진다. 이는 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 ring 동형 $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 A-model의 quantum product $$T_a\ast_q$$에 정확히 대응한다.
 
 <div class="proposition" markdown="1">
 
