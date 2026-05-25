@@ -627,7 +627,7 @@ multilinear_algebra-ko:
       - title: "노름과 대각합"
         url: ko/math/multilinear_algebra/norms_and_traces
       - title: "미분"
-        url: ko/math/multilinear_algebra/derivation
+        url: ko/math/multilinear_algebra/derivations
       - title: "미분가군"
         url: ko/math/multilinear_algebra/differential_modules
       - title: "대칭텐서"
@@ -643,7 +643,7 @@ riemannian_geometry-ko:
   - title: <a href="/ko/riemannian_geometry/" class="sidebar_title">리만기하학</a>
     children:
       - title: "리만 계량"
-        url: ko/math/riemannian_geometry/riemannian_metric
+        url: ko/math/riemannian_geometry/Riemannian_metric
       - title: "접속"
         url: ko/math/riemannian_geometry/connection
       - title: "레비-치비타 접속"

@@ -1453,3 +1453,12 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `정의역` | looks like emphasis (no <sub> partner) |
 | `total quotient ring` | multi-word English emphasis — possibly a definition |
 
+## 위상다양체
+- post: `_posts/Math/Algebraic_Topology/ko/2025-07-05-Topological_Manifolds.md`
+- permalink: `/ko/math/algebraic_topology/topological_manifolds`
+- scanned: 2026-05-25T05:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `half-space` | looks like emphasis (no <sub> partner) |
+

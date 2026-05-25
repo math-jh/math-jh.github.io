@@ -292,7 +292,7 @@ and then extended linearly.
 
 </div>
 
-In other words, $(C\otimes D)_\bullet$ can be described as the total complex of a double complex whose $(p,q)$ component is $C_p\otimes D_q$, with horizontal differential $\partial^C\otimes\id_D$ and vertical differential $\id_C\otimes \partial^D$. ([##ref##](total_complex))
+In other words, $(C\otimes D)_\bullet$ can be described as the total complex of a double complex whose $(p,q)$ component is $C_p\otimes D_q$, with horizontal differential $\partial^C\otimes\id_D$ and vertical differential $\id_C\otimes \partial^D$. ([§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5))
 
 The algebraic content of the Künneth formula is contained in the following lemma.
 
