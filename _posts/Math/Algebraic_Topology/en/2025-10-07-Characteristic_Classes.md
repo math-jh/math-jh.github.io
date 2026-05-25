@@ -13,19 +13,20 @@ sidebar:
 date: 2025-10-07
 last_modified_at: 2025-10-07
 weight: 10
-translated_at: 2026-05-25T02:00:01+00:00
+translated_at: 2026-05-25T18:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-25T18:30:04+00:00
 ---
-In the previous post, the map $$p:\Spe(\or_M^A)\rightarrow M$$ played an important role as a covering space, and these had the following properties.
+In the previous post, the map $$p:\Spe(\or_M^A)\rightarrow M$$ played an important role as a covering space, and such coverings enjoyed the following properties:
 
 1. For any $$x\in M$$, we have $$p^{-1}(x)\cong \{x\}\times A^\times$$.
-2. Moreover, for any $$x\in M$$, there exists a suitable open set $$U$$ such that $$p^{-1}(U)\cong U\times A^\times$$.
+2. Moreover, for any $$x\in M$$ there exists a suitable open set $$U$$ such that $$p^{-1}(U)\cong U\times A^\times$$.
 
-Now we generalize this further and examine the case where $$p^{-1}(x)$$ carries additional structure (not merely a discrete set). The most general definition is as follows.
+We now generalize this further and examine the case where $$p^{-1}(x)$$ carries additional structure (not merely a discrete set). The most general definition is as follows.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> For a continuous surjection $$p:E \rightarrow B$$ between topological spaces and a topological space $$F$$, a *fiber bundle* is the existence of, for each $$x\in B$$, an open set $$U$$ and a homeomorphism $$\phi:U\times F\rightarrow p^{-1}(U)$$ making the following diagram
+<ins id="def1">**Definition 1**</ins> For a continuous surjection $$p:E \rightarrow B$$ between topological spaces and a topological space $$F$$, a *fiber bundle* consists of, for each $$x\in B$$, an open neighborhood $$U$$ and a homeomorphism $$\phi:U\times F\rightarrow p^{-1}(U)$$ making the following diagram
 
 ![fiber_bundle](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-1.png){:style="width:10em" class="invert" .align-center}
 
@@ -33,17 +34,17 @@ commute.
 
 </div>
 
-In this case, $$B$$ is called the *base space*, $$E$$ the *total space*, and $$F$$ the *fiber* of this bundle; if we can take $$U=B$$, then this fiber bundle is called a *trivial bundle*. For instance, in the preceding example $$M$$ is the base space, $$\Spe(\or_M^A)$$ is the total space, and $$A^\times$$ with the discrete topology is the fiber. More generally, any covering space can be regarded as a fiber bundle whose fiber is given the discrete topology.
+Here $$B$$ is called the *base space*, $$E$$ the *total space*, and $$F$$ the *fiber* of this bundle; if we can take $$U=B$$, then this fiber bundle is called a *trivial bundle*. For instance, in the preceding example $$M$$ is the base space, $$\Spe(\or_M^A)$$ is the total space, and $$A^\times$$ equipped with the discrete topology is the fiber. More generally, any covering space can be regarded as a fiber bundle whose fiber is given the discrete topology.
 
 The two cases of particular interest to us are when the fiber $$F$$ is a vector space and when it is a topological group. For convenience, we henceforth assume that $$B$$ is connected.
 
 ## Vector Bundles
 
-First we consider the case where $$F$$ is a vector space. When the fiber $$F$$ is a topological group, a topology is already given on $$F$$, so the topology on the product space $$U\times F$$ in [Definition 1](#def1) is clear; however, when $$F$$ is a vector space the situation is somewhat ambiguous. The most general setting would use the notion of a topological vector space $$V$$ on which a topological ring $$\mathbb{K}$$ acts, but for convenience we shall for now consider only the case where the base field of $$F$$ is $$\mathbb{R}$$ and $$F$$ is equipped with the metric topology arising from a canonical inner product.
+First we consider the case where $$F$$ is a vector space. When the fiber $$F$$ is a topological group, a topology is already given on $$F$$, so the topology on the product space $$U\times F$$ in [Definition 1](#def1) is clear; however, when $$F$$ is a vector space the situation is somewhat ambiguous. The most general setting would use the notion of a topological vector space $$V$$ on which a topological ring $$\mathbb{K}$$ acts, but for convenience we shall for now consider only the case where the base field of $$F$$ is $$\mathbb{R}$$ and $$F$$ carries the metric topology induced by a canonical inner product.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> For a fiber bundle $$p:E \rightarrow B$$, suppose the fiber space $$F$$ is an $$\mathbb{R}$$-vector space with a topology as above, and additionally that for any $$x\in B$$ and any homeomorphism $$\phi:U\times  F\rightarrow p^{-1}(U)$$ as in [Definition 1](#def1), the map
+<ins id="def2">**Definition 2**</ins> For a fiber bundle $$p:E \rightarrow B$$, suppose the fiber space $$F$$ is an $$\mathbb{R}$$-vector space equipped with a topology as above, and additionally that for any $$x\in B$$ and any homeomorphism $$\phi:U\times  F\rightarrow p^{-1}(U)$$ as in [Definition 1](#def1), the map
 
 $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
@@ -51,27 +52,27 @@ is an isomorphism of vector spaces.
 
 </div>
 
-Through this, each fiber $$p^{-1}(x)$$ inherits a vector space structure from $$F$$. In general, given two vector bundles $$p_1:E_1 \rightarrow B_1$$ and $$p_2:E_2\rightarrow B_2$$, a *morphism* between them means a commutative diagram of continuous functions
+Through this, each fiber $$p^{-1}(x)$$ inherits a vector space structure from $$F$$. In general, given two vector bundles $$p_1:E_1 \rightarrow B_1$$ and $$p_2:E_2\rightarrow B_2$$, a *morphism* between them is a commutative diagram of continuous maps
 
 ![morphism_of_bundles](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-2.png){:style="width:7em" class="invert" .align-center}
 
-where, for each $$x\in B_1$$, the restriction of $$g$$ to $$p^{-1}(x)\rightarrow p_2^{-1}(f(x))$$ must be a linear map between vector spaces. How to define an isomorphism between vector bundles is obvious.
+where, for each $$x\in B_1$$, the restriction of $$g$$ to $$p^{-1}(x)\rightarrow p_2^{-1}(f(x))$$ is a linear map between vector spaces. It is obvious how to define an isomorphism between vector bundles.
 
 Meanwhile, in [Definition 2](#def2) above we considered only the case where $$F$$ is an $$\mathbb{R}$$-vector space, using the inner product structure on $$\mathbb{R}^n$$ and the topology of $$\mathbb{R}$$ to define a topology on it. But strictly speaking, the only information needed here is the topology of the vector space $$F$$ itself; when $$F$$ is regarded as an inner product space, this is called a *Euclidean bundle*. In any case, since we will mostly consider only $$\mathbb{R}$$-vector spaces, we shall gloss over this distinction.
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**Example 3**</ins> As a non-trivial bundle example, we have the orientation double cover of the Möbius strip. On the other hand, in [§Poincaré Duality, ⁋Example 3](/en/math/algebraic_topology/Poincare_duality#ex3) we also considered a non-trivial cover of $$S^1$$, which can be generalized geometrically as follows.
+<ins id="ex3">**Example 3**</ins> As a non-trivial example, we have the orientation double cover of the Möbius strip. On the other hand, in [§Poincaré Duality, ⁋Example 3](/en/math/algebraic_topology/Poincare_duality#ex3) we also considered a non-trivial cover of $$S^1$$, which can be generalized geometrically as follows.
 
-For an $$(n+1)$$-dimensional vector space $$\mathbb{R}^{n+1}$$, the space of lines passing through the origin is called *projective $$n$$-space* and denoted $$\RP^n$$. Since among the points on a line through the origin, the two points at distance $$1$$ from the origin specify the same line, we can regard this as the quotient space obtained from the unit $$n$$-sphere $$S^n$$ by identifying antipodal points.
+For an $$(n+1)$$-dimensional vector space $$\mathbb{R}^{n+1}$$, the space of lines through the origin is called *projective $$n$$-space* and denoted $$\RP^n$$. Since among the points on a line through the origin, the two points at distance $$1$$ from the origin determine the same line, we can regard this as the quotient space obtained from the unit $$n$$-sphere $$S^n$$ by identifying antipodal points.
 
 Now taking this space $$\RP^n$$ as the base space $$B$$, we define a vector bundle $$E(\gamma_n^1)$$ over it as follows. As a set,
 
 $$E(\gamma_n^1)=\{((x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid x\in \span(x)\}$$
 
-and the projection $$\gamma_n^1:E(\gamma_n^1)\rightarrow \RP^n$$ is projection onto the first coordinate. That is, $$\gamma_n^1$$ attaches to each point $$x\in \RP^n$$ precisely the line that $$x$$ originally belonged to in $$\mathbb{R}^{n+1}$$.
+and the projection $$\gamma_n^1:E(\gamma_n^1)\rightarrow \RP^n$$ is projection onto the first coordinate. That is, $$\gamma_n^1$$ attaches to each point $$x\in \RP^n$$ precisely the line that $$x$$ originally lay on in $$\mathbb{R}^{n+1}$$.
 
-This is not a trivial bundle. If it were trivial, there would exist a non-vanishing continuous section $$\RP^n\rightarrow E(\gamma_n^1)$$; for instance, the map sending every point of $$B$$ to the element $$1$$ in the fiber would be such a section. But given any section $$s:\RP^n \rightarrow E(\gamma_n^1)$$, consider the following composition using the quotient map $$q:S^n \rightarrow \RP^n$$:
+This is not a trivial bundle. If it were, there would exist a nowhere-vanishing continuous section $$\RP^n\rightarrow E(\gamma_n^1)$$; for instance, the map sending every point of $$B$$ to the element $$1$$ in the fiber would be such a section. But given any section $$s:\RP^n \rightarrow E(\gamma_n^1)$$, consider the following composition using the quotient map $$q:S^n \rightarrow \RP^n$$:
 
 $$S^n \overset{q}{\longrightarrow} \RP^n \overset{s}{\longrightarrow} E\overset{\pr_2}{\longrightarrow} \mathbb{R}^{n+1}$$
 
@@ -111,9 +112,9 @@ Although we have not given detailed proofs, in a similar manner we can lift oper
 
 ## Čech Cohomology
 
-At this point we establish another cohomology theory. Like sheaf cohomology ([§Poincaré Duality, ⁋Definition 14](/en/math/algebraic_topology/Poincare_duality#def14)), this is a cohomology for sheaves defined on a topological space, and since via the étale space construction a sheaf whose stalks are vector spaces can be identified with a vector bundle, it plays an important role in our story.
+At this point we establish another cohomology theory. Like sheaf cohomology ([§Poincaré Duality, ⁋Definition 14](/en/math/algebraic_topology/Poincare_duality#def14)), this is a cohomology theory for sheaves defined on a topological space, and since via the étale space construction a sheaf whose stalks are vector spaces can be identified with a vector bundle, it plays an important role in our story.
 
-Sheaf cohomology showed that cohomology captures the obstruction to the existence of global sections of a sheaf. The Čech cohomology we now examine yields similar results, but differs in that it answers this question by examining the process of gluing local sections together to form a global section. In any case, for nice cases including manifolds, Čech cohomology gives the same result as sheaf cohomology, and thus the Čech cohomology of a constant sheaf recovers the cohomology we originally knew.
+Sheaf cohomology showed that cohomology captures the obstruction to the existence of global sections of a sheaf. The Čech cohomology we now examine yields similar results, but differs in that it answers this question by examining the process of gluing local sections together to form a global section. In any case, for nice cases including manifolds, Čech cohomology gives the same result as sheaf cohomology, and thus the Čech cohomology of a constant sheaf recovers the ordinary cohomology we know.
 
 Consider a topological space $$X$$, a sheaf $$\mathscr{F}$$ on it, and an open cover $$\mathcal{U}=\{U_i\}_{i\in I}$$ of $$X$$. For each $$p\geq 0$$, the group of *Čech $$p$$-cochains* is defined by the formula
 
@@ -143,9 +144,9 @@ which must satisfy the condition
 
 $$g_{ij}\cdot g_{jk}\cdot g_{ki}=\id.$$
 
-If this condition were absent, it would mean that on the triple intersection $$U_i\cap U_j\cap U_k$$, transporting the local trivialization from $$U_i$$ to $$U_j$$ via $$g_{ij}$$, then to $$U_k$$ via $$g_{jk}$$, and back to $$U_i$$ via $$g_{ki}$$, would result in a different trivialization; but in reality this does not happen. Then the transition functions $$g_{ij}$$ become Čech 1-cochains, and thus fixing local trivializations $$U_i\rightarrow \GL(n;\mathbb{R})$$, we know there is a one-to-one correspondence between isomorphism classes of rank $$n$$ vector bundles and 1-cochains. That is, there is a one-to-one correspondence between isomorphism classes of rank $$n$$ vector bundles trivializable over an open cover $$U$$ and $$\check{H}^1(\mathcal{U}, \GL(n;\mathbb{R}))$$.
+If this condition were absent, it would mean that on the triple intersection $$U_i\cap U_j\cap U_k$$, transporting the local trivialization from $$U_i$$ to $$U_j$$ via $$g_{ij}$$, then to $$U_k$$ via $$g_{jk}$$, and back to $$U_i$$ via $$g_{ki}$$, would result in a different trivialization; but in reality this does not happen. Then the transition functions $$g_{ij}$$ become Čech 1-cochains, and thus fixing local trivializations $$U_i\rightarrow \GL(n;\mathbb{R})$$, we know there is a one-to-one correspondence between isomorphism classes of rank $$n$$ vector bundles and 1-cochains. That is, there is a one-to-one correspondence between isomorphism classes of rank $$n$$ vector bundles trivializable over an open cover $$\mathcal{U}$$ and $$\check{H}^1(\mathcal{U}, \GL(n;\mathbb{R}))$$.
 
-Earlier, in [§Poincaré Duality, ⁋Proposition 4](/en/math/algebraic_topology/Poincare_duality#prop4), we saw that the $$A$$-orientability of a manifold $$M$$ is defined by the group homomorphism
+Earlier, in [§Poincaré Duality, ⁋Proposition 4](/en/math/algebraic_topology/Poincare_duality#prop4), we saw that the $$A$$-orientability of a manifold $$M$$ is determined by the group homomorphism
 
 $$\pi_1(M,x)\rightarrow A^\times.$$
 
@@ -155,11 +156,11 @@ $$H_1(M)\rightarrow A^\times$$
 
 and by [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3) this is an element of $$H^1(M;A)$$. If this element is $$0$$, it means the monodromy action is trivial, which in turn means that $$\Spe(\or_M^A)$$ is a trivial covering space and hence $$M$$ is an $$A$$-orientable manifold. Meanwhile, for any commutative ring $$A$$, since the initial object of $$\cRing$$ is $$\mathbb{Z}$$, once a $$\mathbb{Z}$$-orientation $$H_1(M)\rightarrow \mathbb{Z}^\times$$ is determined for any manifold $$M$$, we can compose it with $$\mathbb{Z}^\times\rightarrow A^\times$$ to determine an $$A$$-orientation $$H_1(M)\rightarrow A^\times$$; thus the essential information about whether $$\Spe(\or_M^A)$$ is a trivial cover is contained in $$H^1(M;\mathbb{Z}/2)$$, and thinking of $$\mathbb{Z}/2$$ as $$\GL(1;\mathbb{Z})$$, this is an example of how first cohomology carries information about covering spaces.
 
-In this way, information about a vector bundle $$E\rightarrow B$$ of rank $$k$$ can be regarded as contained in $$\check{H}^1(B; \underline{\GL(k,\mathbb{R})})$$. However, since the coefficients in the cohomology of $$B$$ that we use are in $$\mathbb{Z}$$, we do not have all the data contained here. Instead, our goal is to find weaker substitutes for this, namely invariants in the cohomology ring $$H^\bullet(B)$$.
+In this way, information about a vector bundle $$E\rightarrow B$$ of rank $$k$$ can be regarded as contained in $$\check{H}^1(B; \underline{\GL(k,\mathbb{R})})$$. However, since the coefficients in the cohomology of $$B$$ that we use lie in $$\mathbb{Z}$$, we do not have all the data contained here. Instead, our goal is to find weaker substitutes for this, namely invariants in the cohomology ring $$H^\bullet(B)$$.
 
 ## Stiefel-Whitney Classes
 
-The first characteristic class we examine is the *Stiefel-Whitney class*. First, for any given vector bundle $$p:E\rightarrow B$$, this is an element $$w(p)$$ of the cohomology ring $$H^\bullet(B;\mathbb{Z}/2)$$, and as above, if $$w(p)=0$$ then $$E$$ becomes a trivial bundle. That is, if $$w(p)=0$$, then by [Proposition 4](#prop4) there exist $$n=\rank(E)$$ everywhere linearly independent continuous sections. Moreover, decomposing $$w(p)$$ according to degree in the cohomology ring as
+The first characteristic class we examine is the *Stiefel-Whitney class*. First, for any given vector bundle $$p:E\rightarrow B$$, this is an element $$w(p)$$ of the cohomology ring $$H^\bullet(B;\mathbb{Z}/2)$$, and as above, if $$w(p)=0$$ then $$E$$ is a trivial bundle. That is, if $$w(p)=0$$, then by [Proposition 4](#prop4) there exist $$n=\rank(E)$$ everywhere linearly independent continuous sections. Moreover, decomposing $$w(p)$$ according to degree in the cohomology ring as
 
 $$w(p)=w_0(p)+w_1(p)+\cdots,$$
 
