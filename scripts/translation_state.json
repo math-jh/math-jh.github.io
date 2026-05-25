@@ -75,43 +75,59 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-22-Dimension.md": {
       "status": "done",
-      "last_attempt_ts": 1779165623.0001535,
+      "last_attempt_ts": 1779742890.8722622,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-22-Dimension.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-19T04:30:02+00:00",
-      "in_chars": 11887,
-      "out_chars": 12547,
-      "reason": "pending"
+      "translated_at": "2026-05-25T21:00:04+00:00",
+      "in_chars": 25377,
+      "out_chars": 12133,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=125, en=126"
+      ],
+      "verify_verdict": "VERDICT: minor\nCOUNTS: ko=125 en_old=125 en_new=126\nPOLISH CHANGED:\n- [prop4] SAFE-REPHRASE: merged separate $$S(X)$$ and $$S(X)=\\mathbb{K}[\\x_0,\\ldots,\\x_n]/I(X)$$ blocks into one definition block.\n- [prop6/proof] SAFE-REPHRASE: converted three plain-text \"1\"s (\"is 1\", \"length 1\", \"codimension 1\") into inline math $$1$$ blocks.\n- [prop9] LOSSY: dropped \"of $$X$$\" that was translating KO's possessive $$X$$의, removing one explicit $$X$$ reference versus the Korean."
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-22-Tangent_Spaces_and_Smoothness.md": {
       "status": "done",
-      "last_attempt_ts": 1779167388.9729216,
+      "last_attempt_ts": 1779744707.314812,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-22-Tangent_Spaces_and_Smoothness.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-19T05:00:02+00:00",
-      "in_chars": 15360,
-      "out_chars": 16973,
-      "reason": "pending"
+      "translated_at": "2026-05-25T21:30:04+00:00",
+      "in_chars": 33276,
+      "out_chars": 16938,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=178, en=177"
+      ],
+      "verify_verdict": "Based on my thorough analysis, I can now provide the verdict. The key finding is that **EN OLD and EN NEW have exactly the same math block count (177) and identical math block content**. The divergence from KO (178) was already present in EN OLD and was not introduced by polish.\n\nVERDICT: safe\nCOUNTS: ko=178 en_old=177 en_new=177\nPOLISH CHANGED:\n- [global] SAFE-REPHRASE: polish made no changes to any $$...$$ block count or content; EN NEW's block inventory is byte-for-byte identical to EN OLD's.\n- [def1] SAFE-REPHRASE: reworded surrounding text (\"We define\" → \"The ... is defined by\") without altering the math block.\n- [prop4] SAFE-REPHRASE: added \"we have\" before the inequality math block, keeping the block itself unchanged.\n- [ex6/ex7] SAFE-REPHRASE: minor prose tightening around unchanged math blocks (e.g., \"was always equal\" → \"always equals\").\n- [def9-prop10] SAFE-REPHRASE: \"We can use this idea\" → \"We exploit this idea\" and \"Thinking of\" → \"Passing to\"; math blocks untouched.\n- [def11] SAFE-REPHRASE: \"We now give the following definition\" → \"We now make the following definition\"; no math change.\n- [def13-ex15] SAFE-REPHRASE: \"more accurate\" → \"more precise\", \"may change\" → \"may improve\"; math blocks identical.\n- [global] SAFE-REPHRASE: all remaining polish changes are purely stylistic rephrasing of English prose; zero math blocks added, dropped, merged, or split.\n\nNote: The single-block divergence (KO 178 vs EN 177) originates in EN OLD's translation choice at the initial-ideal sentence, where Korean's two instances of $$\\\\mathfrak{a}$$ (\"ideal $$\\\\mathfrak{a}$$에 대하여, $$\\\\mathfrak{a}$$의 initial ideal\") were rendered with one instance in English (\"for any ideal $$\\\\mathfrak{a}$$, the initial ideal\"). Polish inherited this; it did not create it."
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-24-Grassmannians.md": {
       "status": "done",
-      "last_attempt_ts": 1779169252.7599382,
+      "last_attempt_ts": 1779746476.5511527,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-24-Grassmannians.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-19T05:30:01+00:00",
-      "in_chars": 11370,
-      "out_chars": 11967,
-      "reason": "pending"
+      "translated_at": "2026-05-25T22:00:03+00:00",
+      "in_chars": 24280,
+      "out_chars": 11682,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=144, en=139"
+      ],
+      "verify_verdict": "VERDICT: minor\nCOUNTS: ko=144 en_old=144 en_new=139\nPOLISH CHANGED:\n- [prop4] LOSSY: dropped standalone $$W$$ after \"cover containing\" that exists in KO (\"$$W$$를 포함하는\")\n- [prop7] LOSSY: dropped second $$W$$ in proof despite KO mentioning $$W$$ twice (\"$$W$$의 다른 basis\")\n- [prop7] LOSSY: dropped $$\\\\iota$$ in \"image of $$\\\\iota$$\" where KO has \"$$\\\\iota$$의 image\"\n- [ex9] SAFE-REPHRASE: removed extraneous $$3$$ math block; OLD over-mathified \"3-term\" vs KO's plain text\n- [def10] SAFE-REPHRASE: added redundant $$i$$ block in \"for each $$i$$\" not present in KO\n- [ex11] SAFE-REPHRASE: merged $$W$$ and $$\\\\Gr(k,V)$$ into single block $$W \\\\in \\\\Gr(k,V)$$, content preserved\n- [prop14] SAFE-REPHRASE: merged $$\\\\Omega_\\\\lambda(F_\\\\bullet)$$ and $$\\\\lvert \\\\lambda \\\\rvert$$ into single equation block"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-25-Divisors.md": {
       "status": "done",
-      "last_attempt_ts": 1779171235.4276605,
+      "last_attempt_ts": 1779748305.988347,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-25-Divisors.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-19T06:00:01+00:00",
-      "in_chars": 15549,
-      "out_chars": 17442,
-      "reason": "pending"
+      "translated_at": "2026-05-25T22:30:04+00:00",
+      "in_chars": 33934,
+      "out_chars": 17289,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=240, en=236"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Canonical_Bundle.md": {
       "status": "done",
@@ -2520,8 +2536,8 @@
     }
   },
   "stats": {
-    "total_done": 254,
-    "total_in_chars": 4132335,
-    "total_out_chars": 3617037
+    "total_done": 258,
+    "total_in_chars": 4249202,
+    "total_out_chars": 3675079
   }
 }

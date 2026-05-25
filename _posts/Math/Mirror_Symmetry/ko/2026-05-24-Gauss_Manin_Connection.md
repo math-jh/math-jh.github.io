@@ -176,7 +176,10 @@ $$\nabla^z_B := z\nabla^{GM}$$
 
 $$\nabla^z_{B, \partial_{q_a}}[e^{W_q/z}\omega] = \partial_{q_a} W_q \cdot [e^{W_q/z}\omega],\qquad \nabla^z_{B, z\partial_z}[e^{W_q/z}\omega] = -W_q \cdot [e^{W_q/z}\omega]$$
 
-가 성립한다. 이 rescaling으로 [명제 5](#prop5)의 $$1/z$$ 인자가 흡수되므로, $$z \to 0$$ 극한에서 B-model connection의 *symbol*은 cohomology class에 대한 $$\partial_{q_a} W_q$$의 multiplication이라는 well-defined classical limit을 가진다. 이는 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 ring 동형 $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 A-model의 quantum product $$T_a\ast_q$$에 정확히 대응한다.
+가 성립한다. 이 rescaling으로 [명제 5](#prop5)의 $$1/z$$ 인자가 흡수되므로, $$z \to 0$$ 극한에서 B-model connection의 connection 1-form은 정확하게 cohomology class에 대한 $$\partial_{q_a} W_q$$의 곱셈이 된다. 이는 앞서 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#prop4)에서 살펴본 것과 같은 맥락으로, $$z\rightarrow 0$$인 상황에서 Frobenius manifold $$M\timex \mathbb{C}^\ast$$의 
+
+
+이는 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 ring 동형 $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 A-model의 quantum product $$T_a\ast_q$$에 정확히 대응한다.
 
 <div class="proposition" markdown="1">
 
