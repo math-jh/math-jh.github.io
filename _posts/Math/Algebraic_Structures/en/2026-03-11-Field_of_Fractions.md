@@ -13,7 +13,7 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 105
-translated_at: 2026-05-24T20:00:03+00:00
+translated_at: 2026-05-25T02:04:55+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-24T20:00:03+00:00
 ---
@@ -101,7 +101,7 @@ $$\epsilon(\alpha+\beta)=(\alpha+\beta)/1=\alpha/1+\beta/1=\epsilon(\alpha)+\eps
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> The ring obtained in this way is called the *ring of fractions<sub>분수환</sub>* of $$A$$ defined by $$S$$, and is denoted by $$S^{-1}A$$.
+<ins id="def2">**Definition 2**</ins> The ring obtained in this way is called the *ring of fractions* of $$A$$ defined by $$S$$, and is denoted by $$S^{-1}A$$.
 
 </div>
 
@@ -113,7 +113,7 @@ The rational numbers $$\mathbb{Q}$$ possess a property that distinguishes them f
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> A ring $$A$$ is called a *division ring<sub>나눗셈환</sub>* if $$A\neq0$$ and every nonzero element of $$A$$ has a multiplicative inverse. A commutative division ring is called a *field<sub>체</sub>*.
+<ins id="def3">**Definition 3**</ins> A ring $$A$$ is called a *division ring* if $$A\neq0$$ and every nonzero element of $$A$$ has a multiplicative inverse. A commutative division ring is called a *field*.
 
 </div>
 
@@ -143,7 +143,7 @@ By definition, $$\mathbb{Q}$$ is the total ring of fractions of $$\mathbb{Z}$$. 
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> Elements $$\alpha,\beta$$ of a ring $$A$$ are called *zero divisors<sub>영인자</sub>* if $$\alpha\beta=0$$ but $$\alpha\neq 0$$ and $$\beta\neq 0$$. A ring $$A$$ is called an *integral domain<sub>정역</sub>* if $$A$$ is commutative, $$0\neq 1$$, and $$A$$ has no zero divisors.
+<ins id="def5">**Definition 5**</ins> Elements $$\alpha,\beta$$ of a ring $$A$$ are called *zero divisors* if $$\alpha\beta=0$$ but $$\alpha\neq 0$$ and $$\beta\neq 0$$. A ring $$A$$ is called an *integral domain* if $$A$$ is commutative, $$0\neq 1$$, and $$A$$ has no zero divisors.
 
 </div>
 
@@ -165,7 +165,7 @@ Since $$A$$ is an integral domain, we have $$S=A\setminus\{0\}$$. Thus any eleme
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> The field $$S^{-1}A$$ obtained from [Proposition 6](#prop6) is called the *field of fractions<sub>분수체</sub>* of $$A$$ and is denoted by $$\Frac(A)$$.
+<ins id="def7">**Definition 7**</ins> The field $$S^{-1}A$$ obtained from [Proposition 6](#prop6) is called the *field of fractions* of $$A$$ and is denoted by $$\Frac(A)$$.
 
 </div>
 
@@ -193,7 +193,7 @@ then necessarily $$\alpha+\mathfrak{p}=0+\mathfrak{p}$$ or $$\beta+\mathfrak{p}=
 
 </details>
 
-An ideal $$\mathfrak{p}$$ satisfying the above equivalent conditions is called a *prime ideal<sub>소아이디얼</sub>*. Since every field is an integral domain, every maximal ideal is prime. The converse does not hold: for example, the prime ideals of $$\mathbb{Z}$$ are easily seen to be $$(0)$$ and the ideals $$p\mathbb{Z}$$ for prime numbers $$p$$. Thus $$(0)$$ is a prime ideal but not a maximal ideal.
+An ideal $$\mathfrak{p}$$ satisfying the above equivalent conditions is called a *prime ideal*. Since every field is an integral domain, every maximal ideal is prime. The converse does not hold: for example, the prime ideals of $$\mathbb{Z}$$ are easily seen to be $$(0)$$ and the ideals $$p\mathbb{Z}$$ for prime numbers $$p$$. Thus $$(0)$$ is a prime ideal but not a maximal ideal.
 
 The following also holds.
 
@@ -213,7 +213,7 @@ On the other hand, by condition 2 of the equivalence in [Proposition 8](#prop8),
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**Definition 10**</ins> For a commutative ring $$A$$ and a prime ideal $$\mathfrak{p}$$, the *localization<sub>국소화</sub>* of $$A$$ at $$\mathfrak{p}$$ is defined as $$(A\setminus \mathfrak{p})^{-1}A$$, and is denoted simply by $$A_\mathfrak{p}$$.
+<ins id="def10">**Definition 10**</ins> For a commutative ring $$A$$ and a prime ideal $$\mathfrak{p}$$, the *localization* of $$A$$ at $$\mathfrak{p}$$ is defined as $$(A\setminus \mathfrak{p})^{-1}A$$, and is denoted simply by $$A_\mathfrak{p}$$.
 
 </div>
 
@@ -221,7 +221,7 @@ On the other hand, by condition 2 of the equivalence in [Proposition 8](#prop8),
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**Definition 11**</ins> An element $$\alpha$$ of a ring $$A$$ is called *nilpotent<sub>멱영</sub>* if there exists $$n>0$$ such that $$\alpha^n=0$$. If $$A$$ has no nonzero nilpotent elements, then $$A$$ is called *reduced<sub>기약</sub>*.
+<ins id="def11">**Definition 11**</ins> An element $$\alpha$$ of a ring $$A$$ is called *nilpotent* if there exists $$n>0$$ such that $$\alpha^n=0$$. If $$A$$ has no nonzero nilpotent elements, then $$A$$ is called *reduced*.
 
 </div>
 

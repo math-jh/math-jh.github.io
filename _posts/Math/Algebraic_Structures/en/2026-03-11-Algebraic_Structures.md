@@ -33,13 +33,13 @@ The value $$\star(x,y)$$ of a binary operation $$\star$$ is abbreviated as $$x\a
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**Example 2**</ins> For any set $$X$$, both $$(\mathcal{P}(X),\cup)$$ and $$\mathcal{P}(X),\cap)$$ are magmas.
+<ins id="ex2">**Example 2**</ins> For any set $$X$$, both $$(\mathcal{P}(X),\cup)$$ and $$(\mathcal{P}(X),\cap)$$ are magmas.
 
 The operation $$x-y$$ on $$\mathbb{N}$$ is also a binary operation, so $$(\mathbb{N}, -)$$ is a magma as well.
 
 </div>
 
-In both magmas $$(\mathcal{P}(X),\cup)$$ and $$\mathcal{P}(X),\cap)$$, the equations
+In both magmas $$(\mathcal{P}(X),\cup)$$ and $$(\mathcal{P}(X),\cap)$$, the equations
 
 $$A\cup(B\cup C)=(A\cup B)\cup C,\qquad A\cap(B\cap C)=(A\cap B)\cap C$$
 

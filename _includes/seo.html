@@ -27,9 +27,52 @@
   {%- assign canonical_url = page.url | replace: "index.html", "" | absolute_url %}
 {% endif %}
 
-{%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
+{%- comment -%}
+Localized site-description fallback: KO pages get site.description (Korean),
+EN pages get site.description_en if present. Without this, EN pages inherit
+the Korean tagline as their description, which weakens English-language signals.
+{%- endcomment -%}
+{%- if lang contains "en" and site.description_en -%}
+  {%- assign site_description_for_lang = site.description_en -%}
+{%- else -%}
+  {%- assign site_description_for_lang = site.description -%}
+{%- endif -%}
+{%- assign seo_description = page.description | default: page.excerpt | default: site_description_for_lang -%}
 {%- if seo_description -%}
   {%- assign seo_description = seo_description | markdownify | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | escape_once | strip -%}
+{%- endif -%}
+
+{%- comment -%}
+Find alternate-language version of this post by URL substitution. Posts pair
+ko↔en on identical category+slug (date prefix may differ). We do an exact
+URL swap first; if no match exists in site.posts we skip hreflang emission
+(prevents broken hreflang clusters which Google penalizes).
+{%- endcomment -%}
+{%- assign alt_post = nil -%}
+{%- if page.url contains "/ko/" -%}
+  {%- assign this_lang = "ko" -%}
+  {%- assign other_lang = "en" -%}
+  {%- assign alt_url = page.url | replace_first: "/ko/", "/en/" -%}
+{%- elsif page.url contains "/en/" -%}
+  {%- assign this_lang = "en" -%}
+  {%- assign other_lang = "ko" -%}
+  {%- assign alt_url = page.url | replace_first: "/en/", "/ko/" -%}
+{%- endif -%}
+{%- if alt_url -%}
+  {%- for p in site.posts -%}
+    {%- if p.url == alt_url -%}
+      {%- assign alt_post = p -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if alt_post == nil -%}
+    {%- for p in site.pages -%}
+      {%- if p.url == alt_url -%}
+        {%- assign alt_post = p -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
 {%- endif -%}
 
 {%- assign author = page.author | default: page.authors[0] | default: site.author -%}
@@ -66,6 +109,9 @@
 
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:locale" content="{{ lang | replace: "-", "_" | default: "en_US" }}">
+{%- if alt_post %}
+<meta property="og:locale:alternate" content="{{ other_lang }}">
+{%- endif %}
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 <meta property="og:url" content="{{ canonical_url }}">
@@ -121,6 +167,19 @@
 
 <link rel="canonical" href="{{ canonical_url }}">
 
+{%- if alt_post %}
+  {%- if this_lang == "ko" -%}
+    {%- assign ko_canonical = canonical_url -%}
+    {%- assign en_canonical = alt_post.url | absolute_url -%}
+  {%- else -%}
+    {%- assign ko_canonical = alt_post.url | absolute_url -%}
+    {%- assign en_canonical = canonical_url -%}
+  {%- endif %}
+<link rel="alternate" hreflang="ko" href="{{ ko_canonical }}" />
+<link rel="alternate" hreflang="en" href="{{ en_canonical }}" />
+<link rel="alternate" hreflang="x-default" href="{{ ko_canonical }}" />
+{%- endif %}
+
 {% if paginator.previous_page %}
   <link rel="prev" href="{{ paginator.previous_page_path | absolute_url }}">
 {% endif %}
@@ -128,6 +187,43 @@
   <link rel="next" href="{{ paginator.next_page_path | absolute_url }}">
 {% endif %}
 
+{%- if og_type == "article" and page.date %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | markdownify | strip_html | strip_newlines | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  {%- if page.last_modified_at %}
+  "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
+  {%- else %}
+  "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+  {%- endif %}
+  "inLanguage": {{ lang | jsonify }},
+  {%- if page_large_image %}
+  "image": {{ page_large_image | jsonify }},
+  {%- endif %}
+  {%- if seo_description %}
+  "description": {{ seo_description | jsonify }},
+  {%- endif %}
+  "author": {
+    "@type": "Person",
+    "name": {{ author.name | default: author | jsonify }}{% if author.url %},
+    "url": {{ author.url | jsonify }}{% endif %}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.author.name | default: site.title | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ canonical_url | jsonify }}
+  }
+}
+</script>
+{%- else %}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -143,6 +239,7 @@
     {% endif %}
   }
 </script>
+{%- endif %}
 
 {% if site.google_site_verification %}
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />

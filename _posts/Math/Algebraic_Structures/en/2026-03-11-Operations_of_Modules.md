@@ -13,7 +13,7 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 202
-translated_at: 2026-05-24T21:00:03+00:00
+translated_at: 2026-05-25T02:04:55+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-24T21:00:03+00:00
 ---
@@ -88,7 +88,7 @@ must hold; the above representation shows that we should define $$F(X)=\bigoplus
 
 </div>
 
-For any set $$X$$, $$A$$-modules isomorphic to $$F(X)$$ are called *free $$A$$-modules<sub>자유 $$A$$-가군</sub>*.
+For any set $$X$$, $$A$$-modules isomorphic to $$F(X)$$ are called *free $$A$$-modules*.
 
 ## Tensor Products of Modules
 

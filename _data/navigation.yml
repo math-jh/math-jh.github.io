@@ -572,8 +572,8 @@ mirror_symmetry-ko:
         url: ko/math/mirror_symmetry/frobenius_manifold
       - title: "두브로빈 접속"
         url: ko/math/mirror_symmetry/dubrovin_connection
-      - title: "Oscillating integral과 Gauss–Manin system"
-        url: ko/math/mirror_symmetry/oscillating_integral
+      - title: "가우스-마닌 접속"
+        url: ko/math/mirror_symmetry/gauss-manin_connection
       - title: "Givental J-function과 Mirror Theorem"
         url: ko/math/mirror_symmetry/givental_j_function
       - title: "Jacobi ring과 Quantum cohomology의 동형"

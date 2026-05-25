@@ -13,7 +13,7 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 9
-translated_at: 2026-05-24T14:30:03+00:00
+translated_at: 2026-05-25T02:04:55+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-24T14:30:03+00:00
 ---
@@ -53,7 +53,7 @@ $$\Hom_\Set(X, U(G))\cong\Hom_\Grp(F(X), G)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> For a nonempty set $$X$$, the *free group<sub>자유군</sub>* $$F(X)$$ on $$X$$ is defined as the solution $$(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$$ to the following universal mapping problem.
+<ins id="def2">**Definition 2**</ins> For a nonempty set $$X$$, the *free group* $$F(X)$$ on $$X$$ is defined as the solution $$(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$$ to the following universal mapping problem.
 
 > For any group $$G$$, given any function $$f:X\rightarrow U(G)$$, there exists a unique group homomorphism $$\hat{f}:F(X)\rightarrow G$$ satisfying $$U(\hat{f})\circ\eta_X=f$$.
 

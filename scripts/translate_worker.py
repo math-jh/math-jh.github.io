@@ -50,7 +50,7 @@ LOCK_PATH   = Path("/tmp/translate-worker.lock")
 # ---------------------------------------------------------------------------
 
 KIMI_BIN              = shutil.which("kimi") or str(Path.home() / ".local/bin/kimi")
-KIMI_TIMEOUT_SEC      = 900                  # generous for thinking + long posts
+KIMI_TIMEOUT_SEC      = 1500                 # 25min — large posts (>30KB) often need >15min
 MIN_KO_BODY_CHARS     = 300                  # skip stubs below this
 FAIL_RETRY_AFTER_SEC  = 24 * 3600
 POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # re-polish only if last polish > 14d ago
@@ -468,15 +468,24 @@ def validate_translation(
     if not _FRONTMATTER_RE.match(translated):
         return "frontmatter missing or malformed (no enclosing --- block)"
 
-    # Truncation: output body must be >= 60% of reference body
-    ref = en_current if (reason == "polish" and en_current) else ko_content
-    ref_body = _body_after_frontmatter(ref).strip()
+    # Truncation: output body must be >= 60% of KO body. For polish, ALSO require
+    # >= 85% of en_current — polish should never significantly shrink the post,
+    # so a big drop signals the model truncated mid-output (Modules.md 2026-05-25
+    # incident: file ended mid-sentence at thm10 yet passed the 60% gate).
     out_body = _body_after_frontmatter(translated).strip()
-    if ref_body and len(out_body) < TRUNCATION_RATIO * len(ref_body):
+    ko_body  = _body_after_frontmatter(ko_content).strip()
+    if ko_body and len(out_body) < TRUNCATION_RATIO * len(ko_body):
         return (
-            f"output body {len(out_body)}c < {TRUNCATION_RATIO:.0%} of reference "
-            f"{len(ref_body)}c — truncation suspected"
+            f"output body {len(out_body)}c < {TRUNCATION_RATIO:.0%} of ko "
+            f"{len(ko_body)}c — truncation suspected"
         )
+    if reason == "polish" and en_current:
+        en_body = _body_after_frontmatter(en_current).strip()
+        if en_body and len(out_body) < 0.85 * len(en_body):
+            return (
+                f"polish output body {len(out_body)}c < 85% of en_current "
+                f"{len(en_body)}c — polish truncation suspected"
+            )
 
     # Math block count: WARN ONLY. Strip <sub>...</sub> first (bilingual glosses
     # are dropped per translation rules, which legitimately reduces the count).
@@ -518,10 +527,18 @@ def validate_translation(
     return None
 
 
-def call_kimi(prompt: str) -> str:
-    """Invoke `kimi --quiet` with prompt on stdin, return final assistant message."""
+def call_kimi(prompt: str, *, thinking: bool = False) -> str:
+    """Invoke `kimi --quiet` with prompt on stdin, return final assistant message.
+
+    Thinking is OFF by default — it shares the 32K output-token budget with the
+    actual response, and on large posts (e.g. Modules.md 2026-05-25) the model
+    can burn the entire budget on internal reasoning and then truncate the
+    visible output. Callers that need analytical depth (e.g. verify) opt in.
+    """
+    args = [KIMI_BIN, "--quiet", "--print", "--final-message-only",
+            "--thinking" if thinking else "--no-thinking"]
     proc = subprocess.run(
-        [KIMI_BIN, "--quiet", "--print", "--final-message-only"],
+        args,
         input=prompt,
         capture_output=True,
         text=True,
@@ -560,6 +577,11 @@ def translate(
     translated = call_kimi(prompt)
     # Mechanical KO-label cleanup before any validation / metadata injection.
     translated, _n_fixed = label_fix(translated)
+    # Strip residual bilingual `<sub>...</sub>` glosses. The translation rule
+    # already drops/replaces them, but Kimi occasionally leaves them behind
+    # (esp. `<sub>한국어</sub>`). No legitimate <sub> use exists in this blog
+    # (math uses LaTeX subscripts), so blanket-stripping is safe.
+    translated = re.sub(r"<sub>[^<]*?</sub>", "", translated)
 
     err = validate_translation(
         translated, ko_content=ko_content, reason=reason, en_current=en_current,
@@ -589,6 +611,105 @@ def _notify_telegram(subject: str, body: str) -> None:
             log(f"telegram notify failed rc={r.returncode}: {r.stderr.strip()[:300]!r}")
     except Exception as e:
         log(f"telegram notify exception: {e!r}")
+
+
+# ---------------------------------------------------------------------------
+# Math-mismatch verification (Kimi second opinion)
+# ---------------------------------------------------------------------------
+
+_SUB_STRIP_RE = re.compile(r"<sub>.*?</sub>", re.DOTALL)
+
+VERIFY_INSTRUCTIONS_FRESH = """You audit a Korean→English math blog translation for content fidelity.
+
+The validator flagged that the COUNT of `$$...$$` math blocks differs between KO and EN. Your job is to decide whether any actual mathematical content was lost, altered, or added, OR whether the difference is just a rephrasing that merges/splits blocks while preserving meaning.
+
+Method:
+1. Walk both versions in parallel, anchoring by `<ins id="...">` labels.
+2. For each anchor region where the math-block count differs, identify the specific block(s) involved.
+3. Classify each difference:
+   - SAFE-REPHRASE: blocks merged/split or variable inlined, no math content lost (e.g. KO `$$A$$ + $$S$$` → EN `$$S \\subseteq A$$`).
+   - LOSSY: a mathematical statement, hypothesis, conclusion, or symbol that carries meaning was dropped, or content was added that does not exist in KO.
+   - QUESTIONABLE: cannot tell from surrounding context alone.
+
+Output format (strict, terse, no preamble, no closing remarks):
+
+VERDICT: <safe | minor | lossy>
+COUNTS: ko=<N> en=<M>
+FINDINGS:
+- [<anchor or section>] <SAFE-REPHRASE | LOSSY | QUESTIONABLE>: <one short sentence on what changed>
+- ...
+(Limit to at most 8 findings. If more, summarize the rest in one closing bullet.)
+"""
+
+VERIFY_INSTRUCTIONS_POLISH = """You audit a polish pass on an English translation of a Korean math blog post for content fidelity.
+
+Three inputs:
+- KO SOURCE: the Korean original (ground truth for mathematical content).
+- EN OLD: the previous English translation, already validated — treat as the trusted baseline.
+- EN NEW: the polished output. The validator flagged that EN NEW's `$$...$$` block count diverges from KO.
+
+Since EN OLD was previously validated against KO, the most likely cause of the new mismatch is that POLISH changed something. Focus your analysis on EN OLD → EN NEW: what did polish add, drop, merge, or split that produced the divergence?
+
+Method:
+1. Walk EN OLD and EN NEW in parallel, anchoring by `<ins id="...">` labels.
+2. For each anchor region where math-block count or content differs, identify the specific block(s) polish modified.
+3. Cross-check against KO to judge whether the change preserves meaning.
+4. Classify each difference:
+   - SAFE-REPHRASE: polish merged/split blocks or inlined a variable, no math content lost vs KO.
+   - LOSSY: polish dropped a hypothesis/conclusion/symbol that exists in KO, or introduced something not in KO.
+   - QUESTIONABLE: cannot tell from surrounding context alone.
+
+Output format (strict, terse, no preamble, no closing remarks):
+
+VERDICT: <safe | minor | lossy>
+COUNTS: ko=<N> en_old=<O> en_new=<M>
+POLISH CHANGED:
+- [<anchor>] <SAFE-REPHRASE | LOSSY | QUESTIONABLE>: <what polish did, one short sentence>
+- ...
+(Limit to at most 8 findings. If more, summarize the rest in one closing bullet.)
+"""
+
+
+def build_verify_prompt(
+    ko_content: str, en_new: str, ko_count: int, en_count: int,
+    *, en_old: Optional[str] = None,
+) -> str:
+    if en_old is not None:
+        en_old_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", en_old)))
+        return (
+            VERIFY_INSTRUCTIONS_POLISH
+            + f"\n\nFlagged counts: ko={ko_count}, en_old={en_old_n}, en_new={en_count}\n"
+            + "\n--- KO SOURCE ---\n"   + ko_content + "\n--- END KO SOURCE ---\n"
+            + "\n--- EN OLD ---\n"      + en_old     + "\n--- END EN OLD ---\n"
+            + "\n--- EN NEW ---\n"      + en_new     + "\n--- END EN NEW ---\n"
+        )
+    return (
+        VERIFY_INSTRUCTIONS_FRESH
+        + f"\n\nFlagged counts: ko={ko_count}, en={en_count}\n"
+        + "\n--- KO SOURCE ---\n"  + ko_content + "\n--- END KO SOURCE ---\n"
+        + "\n--- EN TRANSLATION ---\n" + en_new + "\n--- END EN TRANSLATION ---\n"
+    )
+
+
+def verify_math_mismatch(
+    ko_content: str, en_new: str, ko_count: int, en_count: int,
+    *, en_old: Optional[str] = None,
+) -> str:
+    """Run a separate Kimi call to diagnose a math-count mismatch.
+
+    For polish, pass `en_old` (the pre-polish EN content) so the model can focus
+    on what polish changed rather than re-deriving the whole KO↔EN alignment.
+
+    Returns the assistant's terse verdict text. On failure, returns a short
+    error string starting with 'verify-failed:' so caller can still notify.
+    """
+    prompt = build_verify_prompt(ko_content, en_new, ko_count, en_count, en_old=en_old)
+    try:
+        return call_kimi(prompt, thinking=True).strip()
+    except subprocess.TimeoutExpired:
+        return "verify-failed: kimi timeout"
+    except Exception as e:
+        return f"verify-failed: {e!r}"
 
 
 # ---------------------------------------------------------------------------
@@ -692,6 +813,10 @@ def main() -> int:
             log(f"FAILED: {e!r}")
             return 1
 
+        # Snapshot pre-polish EN before overwrite — verify needs it for old→new diff.
+        en_old_snapshot: Optional[str] = None
+        if reason == "polish" and en_path.exists():
+            en_old_snapshot = en_path.read_text(encoding="utf-8")
         en_path.write_text(translated, encoding="utf-8")
         state["files"][key] = {
             "status": "done",
@@ -707,9 +832,34 @@ def main() -> int:
         if warnings:
             for w in warnings:
                 log(f"WARN ({key}): {w}")
+            # If the math-block count mismatch is the warning, run a Kimi second
+            # opinion to diagnose what changed before notifying — the raw count is
+            # rarely actionable on its own (most mismatches are safe rephrasings).
+            math_warn = next(
+                (w for w in warnings if w.startswith("math block count mismatch")),
+                None,
+            )
+            verdict_text = ""
+            if math_warn:
+                ko_text = ko_path.read_text(encoding="utf-8")
+                # Reuse the same SUB-strip the validator used so counts agree.
+                ko_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", ko_text)))
+                en_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", translated)))
+                log(f"VERIFY ({key}): running kimi diagnosis for math mismatch ko={ko_n}/en={en_n}"
+                    + (" (with en_old)" if en_old_snapshot else ""))
+                verdict_text = verify_math_mismatch(
+                    ko_text, translated, ko_n, en_n, en_old=en_old_snapshot,
+                )
+                for line in verdict_text.splitlines():
+                    log(f"VERIFY ({key}): {line}")
+                state["files"][key]["verify_verdict"] = verdict_text[:4000]
+            body_lines = [key, f"→ {en_path.relative_to(BLOG_ROOT)}", ""]
+            body_lines += [f"• {w}" for w in warnings]
+            if verdict_text:
+                body_lines += ["", "--- kimi verify ---", verdict_text]
             _notify_telegram(
                 f"[translate-worker] {reason} warnings",
-                f"{key}\n→ {en_path.relative_to(BLOG_ROOT)}\n\n" + "\n".join(f"• {w}" for w in warnings),
+                "\n".join(body_lines),
             )
         stats = state.setdefault("stats", {})
         stats["total_done"]      = stats.get("total_done", 0) + 1

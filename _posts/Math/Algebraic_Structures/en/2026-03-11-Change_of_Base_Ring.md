@@ -13,7 +13,7 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 203
-translated_at: 2026-05-24T23:30:03+00:00
+translated_at: 2026-05-25T02:04:55+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-24T23:30:03+00:00
 ---
@@ -33,7 +33,7 @@ we see that this assignment of an $$A$$-module is functorial.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> For a ring homomorphism $$\phi:A \rightarrow B$$, the functor defined above is denoted by $$\phi^\ast: \lMod{B} \rightarrow \lMod{A}$$ and called the *restriction of scalars<sub>restriction of scalars</sub>*.
+<ins id="def1">**Definition 1**</ins> For a ring homomorphism $$\phi:A \rightarrow B$$, the functor defined above is denoted by $$\phi^\ast: \lMod{B} \rightarrow \lMod{A}$$ and called the *restriction of scalars*.
 
 </div>
 
@@ -63,7 +63,7 @@ $$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast 
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> The functor $$\phi^\ast B\otimes_A-:\lMod{A} \rightarrow \lMod{B}$$ defined above is simply denoted by $$\phi_!$$ and called the *extension of scalars<sub>extension of scalars</sub>*.
+<ins id="def3">**Definition 3**</ins> The functor $$\phi^\ast B\otimes_A-:\lMod{A} \rightarrow \lMod{B}$$ defined above is simply denoted by $$\phi_!$$ and called the *extension of scalars*.
 
 </div>
 
@@ -85,7 +85,7 @@ so $$\beta\cdot g$$ is also an $$A$$-linear map. A short calculation shows that 
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> The functor $$\Hom_A(\phi^\ast B,-): \lMod{A} \rightarrow \lMod{B}$$ is called the *coextension of scalars<sub>coextension of scalars</sub>* and written $$\phi_\ast$$.
+<ins id="def4">**Definition 4**</ins> The functor $$\Hom_A(\phi^\ast B,-): \lMod{A} \rightarrow \lMod{B}$$ is called the *coextension of scalars* and written $$\phi_\ast$$.
 
 </div>
 
