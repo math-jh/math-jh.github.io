@@ -2081,16 +2081,17 @@
     },
     "_posts/Math/Algebraic_Structures/ko/2024-05-10-Modules.md": {
       "status": "done",
-      "last_attempt_ts": 1779655269.18763,
+      "last_attempt_ts": 1779696105.6228795,
       "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Modules.md",
-      "ko_git_commit_ts": 1772796001.0,
-      "translated_at": "2026-05-24T20:30:03+00:00",
-      "in_chars": 18106,
-      "out_chars": 7369,
-      "reason": "polish",
+      "ko_git_commit_ts": 1779678007.0,
+      "translated_at": "2026-05-25T08:00:02+00:00",
+      "in_chars": 9339,
+      "out_chars": 7978,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=153, en=128"
-      ]
+        "math block count mismatch: ko=153, en=8"
+      ],
+      "verify_verdict": "Now I have a complete picture. Let me summarize the findings:\n\n**Root cause of count difference**: KO uses `$$...$$` for ALL math (both inline and display), while EN uses `$...$` for inline math and `$$...$$` for display math. The validator only counted `$$...$$` blocks, giving ko=153, en=8. This is a formatting difference, not a content difference.\n\n**Actual math content comparison** (counting all math regardless of delimiter):\n- KO: 156 math expressions\n- EN: 151 math expressions\n- Difference: 5 extra expressions in KO\n\n**The 5 extra expressions in KO are all due to rephrasing/sentence structure differences**:\n\n1. **def1**: 2 extra `A` in KO — KO has Korean subscript glosses `<sub>왼쪽 $$A$$-가군</sub>` and `<sub>오른쪽 $$A$$-가군</sub>` that EN drops (English doesn't need translation glosses). SAFE-REPHRASE.\n\n2. **def2**: 1 extra `A` in KO — KO has `<sub>유한생성 $$A$$-가군</sub>` that EN drops. SAFE-REPHRASE.\n\n3. **prop8 proof**: 1 extra `\\Hom_{\\lMod{A}}(M,N)` in KO — KO sentence structure: \"$$\\Hom_{\\lMod{A}}(M,N)$$의 임의의 두 원소...\" explicitly names the set before \"any two elements of\". EN rephrases: \"The sum $v+w\\in\\Hom_{\\lMod{A}}(M,N)$ of any two elements...\". The same mathematical objects are referenced. SAFE-REPHRASE.\n\n4. **After prop8 proof**: 1 extra `\\cdot` in KO — KO says \"으로 정의된 $$\\cdot$$이\" (the operation $$\\cdot$$ defined by...). EN says \"the operation defined by... gives...\" without explicitly naming `\\cdot` as a standalone symbol. The operation is still defined the same way. SAFE-REPHRASE.\n\n**No mathematical content was lost, altered, or added.** The only differences are:\n- Korean translation subscripts (glosses) that don't exist in English\n- Sentence structure differences in how mathematical objects are referenced\n- One standalone `\\cdot` reference vs. implicit reference\n\nAll differences are SAFE-REPHRASE.\n\nVERDICT: safe\nCOUNTS: ko=153 en=8\nFINDINGS:\n- [global] SAFE-REPHRASE: KO uses $$...$$ for all math (inline+display); EN uses $...$ for inline and $$...$$ for display — the raw $$ block count difference is purely a delimiter convention change with zero semantic impact.\n- [def1] SAFE-REPHRASE: 2 extra $$A$$ in KO come from Korean subscript glosses <sub>왼쪽 $$A$$-가군</sub> and <sub>오른쪽 $$A$$-가군</sub> that EN correctly drops (no English gloss needed).\n- [def2] SAFE-REPHRASE: 1 extra $$A$$ in KO is inside the Korean subscript gloss <sub>유한생성 $$A$$-가군</sub> that EN omits.\n- [prop8 proof] SAFE-REPHRASE: 1 extra $$\\Hom_{\\lMod{A}}(M,N)$$ in KO because Korean syntax explicitly names the set before \"의 임의의 두 원소\"; EN rephrases as \"The sum ... of any two elements\" without the standalone set reference.\n- [post-prop8] SAFE-REPHRASE: 1 extra $$\\cdot$$ in KO because Korean text says \"으로 정의된 $$\\cdot$$이\" explicitly naming the operation; EN says \"the operation defined by\" without standalone symbol reference."
     },
     "_posts/Math/Algebraic_Structures/ko/2024-05-12-Operations_of_Modules.md": {
       "status": "done",
@@ -2315,11 +2316,53 @@
         "math block count mismatch: ko=187, en=188"
       ],
       "verify_verdict": "VERDICT: safe\nCOUNTS: ko=187 en=188\nFINDINGS:\n- [<ins id=\"def2\">Definition 2</ins>] SAFE-REPHRASE: EN adds one extra `$$X$$` in \"presheaf of sets on $$X$$\" versus KO's \"defined on $$X$$ ... presheaf\"; the extra \"on X\" is semantically redundant because the presheaf is already defined on X, so no mathematical meaning was added or lost.\n- [Global block-order differences] SAFE-REPHRASE: All remaining pairwise mismatches are block-sequence swaps caused by English rephrasing (e.g., KO \"space X ... presheaf F\" → EN \"presheaf F ... space X\"); every distinct math expression appears the same number of times in both versions.\n- [Set comparison] SAFE-REPHRASE: The multiset of unique math blocks is identical between KO and EN except for the single extra `X` noted above; no symbols, formulas, hypotheses, or conclusions were dropped or invented."
+    },
+    "_posts/Math/Topology/ko/2024-12-11-Filter_Convergence.md": {
+      "status": "done",
+      "last_attempt_ts": 1779692527.9368417,
+      "en_path": "_posts/Math/Topology/en/2024-12-11-Filter_Convergence.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T07:00:01+00:00",
+      "in_chars": 12863,
+      "out_chars": 14131,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=239, en=235"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=239 en=235\nFINDINGS:\n- [def10] SAFE-REPHRASE: KO has separate $$X$$ blocks in intro and list item (\"위상공간 $$X$$에 대하여 ... 1. $$X$$가\"); EN merges to one intro block (\"For a topological space $$X$$, we define ... 1. $$X$$ is\") — same 7 symbols, 6 delimiters.\n- [ex8] SAFE-REPHRASE: KO inlines $$\\mathbb{R}$$ before $$\\mathbb{R}^J$$ in \"일반적인 위상구조가 주어진 $$\\mathbb{R}$$의 uncountable product $$\\mathbb{R}^J$$\"; EN drops the standalone $$\\mathbb{R}$$ block by rephrasing to \"Consider the uncountable product $$\\mathbb{R}^J$$ with the usual product topology\" — no math content lost.\n- [prop14] SAFE-REPHRASE: KO repeats sequence notation twice (\"위상공간 $$X$$의 점열 $$(x_n)_{n\\geq 1}$$에 대하여, $$(x_n)_{n\\geq 1}$$이\"); EN merges to one mention (\"For a sequence $$(x_n)_{n\\geq 1}$$ in a topological space $$X$$, the sequence converges\") — identical mathematical content.\n- [prop11 proof / intro to filters] SAFE-REPHRASE: KO repeats $$x$$ and $$A$$ in the narrative transition from proof to filter section; EN rephrases with fewer inline math blocks while preserving the same formulas and logical flow."
+    },
+    "_posts/Math/Toric_Geometry/ko/2026-05-18-Reflexive_Polytope_and_Fano_Variety.md": {
+      "status": "done",
+      "last_attempt_ts": 1779694350.4891064,
+      "en_path": "_posts/Math/Toric_Geometry/en/2026-05-18-Reflexive_Polytope_and_Fano_Variety.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T07:30:02+00:00",
+      "in_chars": 21615,
+      "out_chars": 25005,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=321, en=319"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
+    },
+    "_posts/Math/Algebraic_Topology/ko/2025-07-05-Topological_Manifolds.md": {
+      "status": "done",
+      "last_attempt_ts": 1779697891.9393177,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Topological_Manifolds.md",
+      "ko_git_commit_ts": 1779685207.0,
+      "translated_at": "2026-05-25T08:30:01+00:00",
+      "in_chars": 7915,
+      "out_chars": 7362,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=76, en=77"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=76 en=77\nFINDINGS:\n- [def1] SAFE-REPHRASE: Korean genitive '$$x$$의 … $$U$$' reordered to English '…of $$x$$ … $$U$$ …', splitting one math-adjacent block into two inline positions; no symbols lost.\n- [def2/ex3] SAFE-REPHRASE: Same grammatical reordering pattern for '$$M$$의 base를 $$\\mathcal{B}$$라 했을 때' → 'letting $$\\mathcal{B}$$ be a base for $$M$$' and '$$m$$-manifold $$M$$의 open subspace $$U$$' → 'open subspace $$U$$ of an $$m$$-manifold $$M$$'; block counts shift but identical symbols present.\n- [ex3 proof] SAFE-REPHRASE: '$$x$$의 $$M$$에서의 열린근방 $$V$$' → 'open neighborhood $$V$$ of $$x$$ in $$M$$'; Korean postpositions cause different $$V$$/$$x$$/$$M$$ block grouping.\n- [ex5 dimensions] SAFE-REPHRASE: KO bundles '$$m_1,m_2$$' in one block; EN splits to '$$m_1$$ and $$m_2$$'; same variables, same meaning.\n- [ex5 basis sentence] SAFE-REPHRASE: KO '$$M_i$$의 base를 $$\\mathcal{B}_i$$라 했을 때, 다음의 식 … 으로 주어지는 $$\\mathcal{B}$$가' vs EN 'letting $$\\mathcal{B}_i$$ be a base for $$M_i$$, the collection $$\\mathcal{B}$$ given by'; sentence restructuring preserves all symbols.\n- [ex5 typo fix] SAFE-REPHRASE: KO has typo '$$(x_1,x_1)\\in M_1\\times M_2$$'; EN corrects to '$$(x_1,x_2)\\in M_1\\times M_2$$'; no mathematical content lost, rather a typo is fixed.\n- [half-space eq] SAFE-REPHRASE: EN adds trailing period inside display equation '$$\\mathbb{H}^m=...\\right\\}.$$' vs KO without period; punctuation only.\n- [prop6 proof typo fix] SAFE-REPHRASE: KO has malformed '$$(\\pi^{-1}(U_i)_{i\\in J}$$' (missing closing parenthesis); EN fixes to '$$(\\pi^{-1}(U_i))_{i\\in J}$$'; no content lost, typo corrected."
     }
   },
   "stats": {
-    "total_done": 226,
-    "total_in_chars": 3320536,
-    "total_out_chars": 3069226
+    "total_done": 230,
+    "total_in_chars": 3372268,
+    "total_out_chars": 3123702
   }
 }
