@@ -14,37 +14,38 @@ header:
 date: 2026-03-22
 last_modified_at: 2026-03-22
 weight: 5
-translated_at: 2026-05-19T04:30:02+00:00
+translated_at: 2026-05-25T21:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-25T21:00:04+00:00
 ---
-In geometry, dimension is one of the most basic invariants. In algebraic geometry as well, dimension is equally important, and there are several equivalent ways to define it. In this post we examine various ways to define the dimension of a variety.
+In geometry, dimension is among the most fundamental invariants. In algebraic geometry it is equally important, and there are several equivalent ways to define it. In this post we examine various definitions of the dimension of a variety.
 
 ## Dimension as a Topological Space
 
-An algebraic variety is already a topological space, so using [\[Topology\] §Dimension, ⁋Definition 10](/en/math/topology/dimension#def10), we can define the dimension of $$X$$ as the supremum of the lengths of strictly descending chains of irreducible closed subsets.
+An algebraic variety is already a topological space, so by [\[Topology\] §Dimension, ⁋Definition 10](/en/math/topology/dimension#def10) we may define the dimension of $$X$$ as the supremum of the lengths of strictly descending chains of irreducible closed subsets.
 
 <div class="example" markdown="1">
 
-<ins id="ex1">**Example 1**</ins> In $$\mathbb{A}^1$$, the closed sets are only $$\mathbb{A}^1$$ itself and finite sets. Thus the longest chain is $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$, which is a chain of length $$2$$, so $$\mathbb{A}^1$$ is $$1$$-dimensional according to this definition.
+<ins id="ex1">**Example 1**</ins> In $$\mathbb{A}^1$$ the only closed sets are $$\mathbb{A}^1$$ itself and finite sets. Hence the longest chain is $$\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$$, a chain of length $$2$$, so $$\mathbb{A}^1$$ is $$1$$-dimensional under this definition.
 
 </div>
 
-This definition has the advantage of defining dimension from a purely topological point of view. However, in practice it is not very efficient for computation because we need to know all chains of irreducible closed subsets.
+This definition has the virtue of being purely topological. However, it is not very efficient in practice, because one must know all chains of irreducible closed subsets.
 
 ## Dimension of an Affine Variety
 
-Meanwhile, we already know that the relationship between an algebraic variety and the functions defined on it is very close. Then, it would not be so surprising that the algebraic structure of functions on an algebraic variety contains information about the dimension. To approach from this perspective, it is best to look at the case of an *affine* variety, where its coordinate ring $$\mathbb{K}[X]$$ is neatly given.
+We already know that an algebraic variety and the functions defined on it are intimately related. It is therefore not surprising that the algebraic structure of these functions encodes information about the dimension. To pursue this viewpoint, it is natural to begin with the case of an *affine* variety, whose coordinate ring $$\mathbb{K}[X]$$ is given explicitly.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**Proposition 2**</ins> The dimension of an affine variety $$X$$ is equal to the Krull dimension of its coordinate ring $$\mathbb{K}[X]$$. ([\[Commutative Algebra\] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1))
+<ins id="prop2">**Proposition 2**</ins> The dimension of an affine variety $$X$$ equals the Krull dimension of its coordinate ring $$\mathbb{K}[X]$$. ([\[Commutative Algebra\] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1))
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-From [§Affine Varieties, ⁋Proposition 12](/en/math/algebraic_varieties/affine_varieties#prop12), there is a one-to-one correspondence between irreducible closed subsets of an affine variety and prime ideals of $$\mathbb{K}[X]$$.
+By [§Affine Varieties, ⁋Proposition 12](/en/math/algebraic_varieties/affine_varieties#prop12), irreducible closed subsets of an affine variety correspond bijectively to prime ideals of $$\mathbb{K}[X]$$.
 
 </details>
 <div class="proposition" markdown="1">
@@ -60,21 +61,21 @@ From [§Affine Varieties, ⁋Proposition 12](/en/math/algebraic_varieties/affine
 
 </details>
 
-Meanwhile, for any prime ideal $$\mathfrak{p}\subset \mathbb{K}[\x_1,\ldots, \x_n]$$, we know that the following equation
+Meanwhile, for any prime ideal $$\mathfrak{p}\subset \mathbb{K}[\x_1,\ldots, \x_n]$$ we know that
 
 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
 
-holds. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Proposition 4](/en/math/commutative_algebra/regular_local_rings#prop4)) Here, the codimension of $$\mathfrak{p}$$ is defined in [\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2), as the supremum of the lengths of chains of prime ideals contained in $$\mathfrak{p}$$, and geometrically it is the supremum of the lengths of chains of closed subvarieties of $$\mathbb{A}^n$$ containing $$X=Z(\mathfrak{p})$$. Geometrically, since we know that $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$$ is the dimension of $$Z(\mathfrak{p})$$, we can give ($\ast$) a geometric meaning through this.
+holds. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Proposition 4](/en/math/commutative_algebra/regular_local_rings#prop4)) Here the codimension of $$\mathfrak{p}$$ is defined in [\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2) as the supremum of the lengths of chains of prime ideals contained in $$\mathfrak{p}$$; geometrically it is the supremum of the lengths of chains of closed subvarieties of $$\mathbb{A}^n$$ containing $$X=Z(\mathfrak{p})$$. Since $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$$ is the dimension of $$Z(\mathfrak{p})$$, equation ($\ast$) acquires a geometric meaning.
 
 ## Dimension of a Projective Variety
 
-The problem arises when we move to projective varieties. Recall that global functions on $$\mathbb{P}^n$$ were only constant functions. In this situation, to define the dimension of a projective variety, we can take an affine chart. That is, given $$X\subset \mathbb{P}^n$$, we choose an affine open chart $$U_i$$ of $$\mathbb{P}^n$$ and consider the dimension of $$X_i=X\cap U_i$$ as an affine variety. However, for this definition we would need to show that the dimension of any open subset equals that of the original variety, so we cannot adopt this as a definition yet. Instead, we use the *affine cone* $$C(X)$$ of $$X$$.
+The difficulty appears when we pass to projective varieties. Recall that global functions on $$\mathbb{P}^n$$ are only the constants. In this situation one might try to define the dimension of a projective variety by choosing an affine chart: given $$X\subset \mathbb{P}^n$$, pick an affine open chart $$U_i$$ of $$\mathbb{P}^n$$ and consider the dimension of $$X_i=X\cap U_i$$ as an affine variety. But this would require proving first that the dimension of any open subset equals that of the original variety, so we cannot adopt it as a definition yet. Instead we use the *affine cone* $$C(X)$$ of $$X$$.
 
-For a projective variety $$X\subseteq \mathbb{P}^n$$, the affine cone $$C(X)\subseteq \mathbb{A}^{n+1}$$ is the affine variety in $$\mathbb{A}^{n+1}$$ defined by the homogeneous ideal defining $$X$$, viewed as an ideal in $$\mathbb{K}[\x_0,\ldots, \x_n]$$. That is, for the homogeneous ideal $$I(X)$$ defining $$X$$, if we define the ring $$S(X)$$ as
+For a projective variety $$X\subseteq \mathbb{P}^n$$, the affine cone $$C(X)\subseteq \mathbb{A}^{n+1}$$ is the affine variety in $$\mathbb{A}^{n+1}$$ defined by the homogeneous ideal defining $$X$$, regarded as an ideal in $$\mathbb{K}[\x_0,\ldots, \x_n]$$. That is, for the homogeneous ideal $$I(X)$$ defining $$X$$, the ring
 
 $$S(X)=\mathbb{K}[\x_0,\ldots, \x_n]/I(X)$$
 
-this becomes the coordinate ring of the affine cone. The following result is key for computing the dimension of a projective variety.
+is the coordinate ring of the affine cone. The following result is the key to computing the dimension of a projective variety.
 
 <div class="proposition" markdown="1">
 
@@ -82,7 +83,7 @@ this becomes the coordinate ring of the affine cone. The following result is key
 
 </div>
 
-This can be shown by computation in graded rings. In particular, $$\dim C(X) = \dim X + 1$$, and from this we obtain the following.
+This follows from a computation in graded rings. In particular $$\dim C(X) = \dim X + 1$$, and from this we obtain:
 
 <div class="proposition" markdown="1">
 
@@ -99,7 +100,7 @@ The cone of $$\mathbb{P}^n$$ is $$\mathbb{A}^{n+1}$$ and $$\dim \mathbb{A}^{n+1}
 
 ## Dimension of a Hypersurface
 
-A hypersurface is a variety defined as the zero set of a single polynomial. Intuitively, adding one equation is the same as imposing one constraint, so it should reduce the dimension by one.
+A hypersurface is a variety defined as the zero set of a single polynomial. Intuitively, adding one equation imposes one constraint and should reduce the dimension by one.
 
 <div class="proposition" markdown="1">
 
@@ -110,7 +111,7 @@ A hypersurface is a variety defined as the zero set of a single polynomial. Intu
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$f$$ is irreducible, $$(f)$$ is a prime ideal, and thus the coordinate ring of $$Z(f)$$ is $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$. Now let us show that the codimension of $$(f)$$ in $$\mathbb{K}[\x_1, \ldots, \x_n]$$ is 1. $$(0) \subsetneq (f)$$ is a chain of length 1, so $$\codim(f) \ge 1$$. On the other hand, in the UFD $$\mathbb{K}[\x_1, \ldots, \x_n]$$, every prime ideal of codimension 1 is a principal prime ideal, so no other prime ideal can lie between $$(0)$$ and $$(f)$$. Therefore $$\codim(f) = 1$$, and
+Since $$f$$ is irreducible, $$(f)$$ is prime, and the coordinate ring of $$Z(f)$$ is $$\mathbb{K}[\x_1, \ldots, \x_n]/(f)$$. We show that the codimension of $$(f)$$ in $$\mathbb{K}[\x_1, \ldots, \x_n]$$ is $$1$$. The chain $$(0) \subsetneq (f)$$ has length $$1$$, so $$\codim(f) \ge 1$$. On the other hand, in the UFD $$\mathbb{K}[\x_1, \ldots, \x_n]$$ every prime ideal of codimension $$1$$ is principal, so no prime ideal can lie strictly between $$(0)$$ and $$(f)$$. Hence $$\codim(f) = 1$$, and
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \codim(f) = n - 1$$
 
@@ -120,7 +121,7 @@ In general, for a regular local ring $$R$$ and a prime ideal $$\mathfrak{p}$$, w
 
 ## Dimension via Function Fields
 
-Another way to define dimension is by using the function field. The function field $$\mathbb{K}(X)$$ carries information about the generic point of the variety, and it is also a birational invariant. The following proposition is also deduced from an algebraic fact.
+Another way to define dimension is through the function field. The function field $$\mathbb{K}(X)$$ carries information about the generic point of the variety and is a birational invariant. The following proposition is also deduced from an algebraic fact.
 
 <div class="proposition" markdown="1">
 
@@ -130,7 +131,7 @@ Another way to define dimension is by using the function field. The function fie
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**Example 8**</ins> The following are examples of computing dimension via the function field.
+<ins id="ex8">**Example 8**</ins> The following are examples of dimension computations via function fields.
 
 1. $$\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(x_1, \ldots, x_n)$$, and $$x_1, \ldots, x_n$$ are algebraically independent over $$\mathbb{K}$$, so $$\dim \mathbb{A}^n = n$$.
 2. $$\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(x)$$, and $$x$$ is algebraically independent over $$\mathbb{K}$$, so $$\dim V(\y - \x^2) = 1$$. This agrees with the intuition that a parabola is a curve.
@@ -140,11 +141,11 @@ Another way to define dimension is by using the function field. The function fie
 
 ## Basic Properties of Dimension
 
-The most basic property of dimension is that a proper subset has smaller dimension. This is geometrically obvious.
+The most basic property of dimension is that a proper closed subvariety has smaller dimension. This is geometrically evident.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**Proposition 9**</ins> For a closed subvariety $$Y \subsetneq X$$ of $$X$$, we have $$\dim Y < \dim X$$.
+<ins id="prop9">**Proposition 9**</ins> For a closed subvariety $$Y \subsetneq X$$, we have $$\dim Y < \dim X$$.
 
 </div>
 
@@ -163,11 +164,11 @@ is a chain in $$X$$ of length $$n+1$$.
 
 </details>
 
-This can be thought of as a generalization of [Proposition 6](#prop6). Now let us examine the relationship between regular maps and dimension.
+This may be regarded as a generalization of [Proposition 6](#prop6). We now turn to the relationship between regular maps and dimension.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**Proposition 10**</ins> For two varieties $$X, Y$$ and a regular map $$\varphi: X \to Y$$, the following hold.
+<ins id="prop10">**Proposition 10**</ins> For varieties $$X, Y$$ and a regular map $$\varphi: X \to Y$$, the following hold.
 
 1. $$\dim \varphi(X) \le \dim X$$.
 2. If $$\varphi$$ is dominant, then $$\dim Y \le \dim X$$. ([§Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8))
@@ -177,7 +178,7 @@ This can be thought of as a generalization of [Proposition 6](#prop6). Now let u
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-1. For a chain of closed subsets of $$\varphi(X)$$,
+1. Given a chain of closed subsets of $$\varphi(X)$$
     
     $$Z_0 \supsetneq Z_1 \supsetneq \cdots \supsetneq Z_n$$
 
@@ -186,11 +187,11 @@ This can be thought of as a generalization of [Proposition 6](#prop6). Now let u
     $$\varphi^{-1}(Z_0) \supsetneq \varphi^{-1}(Z_1) \supsetneq \cdots \supsetneq \varphi^{-1}(Z_n)$$
 
     form a chain of closed subsets in $$X$$.
-2. If $$\varphi$$ is dominant, the pullback $$\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$$ is injective, and thus we obtain the desired result from [Proposition 7](#prop7).
+2. If $$\varphi$$ is dominant, the pullback $$\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$$ is injective, and the desired result follows from [Proposition 7](#prop7).
 
 </details>
 
-The first result supports our intuition that a geometric map cannot increase dimension in general. The second result roughly shows that if $$\varphi$$ is surjective (up to birational equivalence), then the dimension of the target cannot exceed that of the domain.
+The first statement supports the intuition that a geometric map cannot increase dimension. The second says, roughly, that if $$\varphi$$ is surjective (up to birational equivalence), then the dimension of the target cannot exceed that of the source.
 
 <div class="definition" markdown="1">
 
@@ -198,34 +199,34 @@ The first result supports our intuition that a geometric map cannot increase dim
 
 </div>
 
-It can be shown that a finite morphism has finite fibers. Then the following is obvious.
+A finite morphism has finite fibers. From this the next result is immediate.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**Proposition 12**</ins> For two varieties $$X, Y$$ and a finite map $$\varphi: X \to Y$$, we have $$\dim X = \dim Y$$.
+<ins id="prop12">**Proposition 12**</ins> For varieties $$X, Y$$ and a finite map $$\varphi: X \to Y$$, we have $$\dim X = \dim Y$$.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-If $$\varphi$$ is finite, then at the coordinate ring level $$\mathbb{K}[X]$$ is finitely generated as a $$\mathbb{K}[Y]$$-module. Hence $$\mathbb{K}(X)$$ is a finite-degree extension of $$\mathbb{K}(Y)$$, and the transcendence degrees are equal. Thus $$\dim X = \dim Y$$.
+If $$\varphi$$ is finite, then at the level of coordinate rings $$\mathbb{K}[X]$$ is finitely generated as a $$\mathbb{K}[Y]$$-module. Hence $$\mathbb{K}(X)$$ is a finite extension of $$\mathbb{K}(Y)$$, and the transcendence degrees are equal. Thus $$\dim X = \dim Y$$.
 
 </details>
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**Example 13**</ins> A $$k$$-dimensional linear subspace $$L$$ of $$\mathbb{A}^n$$ satisfies $$\dim L = k$$. This is because $$L \cong \mathbb{A}^k$$. Likewise, a $$k$$-dimensional linear subspace $$L$$ of $$\mathbb{P}^n$$ satisfies $$\dim L = k$$.
+<ins id="ex13">**Example 13**</ins> A $$k$$-dimensional linear subspace $$L$$ of $$\mathbb{A}^n$$ satisfies $$\dim L = k$$, because $$L \cong \mathbb{A}^k$$. Likewise, a $$k$$-dimensional linear subspace $$L$$ of $$\mathbb{P}^n$$ satisfies $$\dim L = k$$.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**Example 14**</ins> For two varieties $$X, Y \subseteq \mathbb{A}^n$$, in general
+<ins id="ex14">**Example 14**</ins> For varieties $$X, Y \subseteq \mathbb{A}^n$$, in general
 
 $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 
-This is called the *dimension inequality*. The reason this is an inequality is that, for example, in extreme situations such as $$X=Y$$, the desired equality may not hold. When equality holds, we call it a *proper intersection*.
+This is called the *dimension inequality*. It is an inequality because in extreme cases, such as $$X=Y$$, equality may fail. When equality does hold, we call the intersection *proper*.
 
 </div>
 
