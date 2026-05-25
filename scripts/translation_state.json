@@ -2405,22 +2405,68 @@
     },
     "_posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md": {
       "status": "done",
-      "last_attempt_ts": 1779699852.3588989,
+      "last_attempt_ts": 1779726843.277897,
       "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Cohomology.md",
       "ko_git_commit_ts": 1779685207.0,
-      "translated_at": "2026-05-25T09:00:02+00:00",
-      "in_chars": 25522,
-      "out_chars": 27501,
-      "reason": "drift",
+      "translated_at": "2026-05-25T16:30:04+00:00",
+      "in_chars": 53479,
+      "out_chars": 27500,
+      "reason": "polish",
       "warnings": [
         "math block count mismatch: ko=278, en=62"
       ],
       "verify_verdict": "verify-failed: kimi timeout"
+    },
+    "_posts/Math/Algebraic_Topology/ko/2025-07-09-Homotopy.md": {
+      "status": "done",
+      "last_attempt_ts": 1779721385.382946,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Homotopy.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T15:00:03+00:00",
+      "in_chars": 38140,
+      "out_chars": 19277,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=275, en=278"
+      ],
+      "verify_verdict": "Now I have all the information. Let me summarize:\n\n**Summary of differences:**\n\n1. **[def2] -2 blocks**: OLD had \"and if a homotopy exists between $f_0$ and $f_1$, we write $f_0\\simeq f_1$\" (with extra `$f_0$` and `$f_1$` inline blocks). NEW has \"and when a homotopy exists we write $f_0\\simeq f_1$\". KO has both mentions. Polish dropped redundant references. **SAFE-REPHRASE** - no math content lost, just streamlined.\n\n2. **[prop3] -1 block**: OLD had standalone `$$\\tilde{F}$$` display block + equations. NEW merged into \"we obtain a continuous map satisfying the two equations\" without the standalone `$$\\tilde{F}$$` block. KO has `$\\tilde{F}$` inline in the sentence. The standalone display block in OLD was actually malformed (display math in the middle of a sentence). NEW fixed this by removing it. The equations still contain `$\\tilde{F}$`. **SAFE-REPHRASE** - fix of formatting, content preserved.\n\n3. **[def10] +1 block**: OLD had \"of course, we need $\\alpha(1)=\\beta(0)$\" (missing `$*$`). NEW has \"of course $\\ast$ requires $\\alpha(1)=\\beta(0)$\" (restored `$*$`). KO has \"$*$는 $\\alpha(1)=\\beta(0)$를 만족해야 한다\". This is actually **SAFE-REPHRASE** - NEW restored a symbol that OLD had incorrectly omitted.\n\n4. **[prop6] content changes (no count change)**:\n   - Simplex list spacing: OLD `...,\\quad\\ldots,[v_0` vs NEW `...,\\quad\\ldots,\\quad[v_0`. KO matches OLD. NEW added extra `\\quad` - minor formatting, **SAFE-REPHRASE**.\n   - Contractible space: OLD \"the $k>0$-th homology of a contractible space is always $0$\" vs NEW \"the $k$-th homology of a contractible space is zero for every $k>0$\". KO: \"contractible space의 $k>0$번째 호몰로지는 항상 $0$임을 안다\". OLD matches KO structure better ($k>0$ as modifier). NEW split into \"k-th homology... for every k>0\". This is **SAFE-REPHRASE** - same mathematical meaning, restructured.\n\nWait, I need to re-check the prop6 count. The comparison said prop6 had 46 blocks in both OLD and NEW but content differences. Let me verify the total count again... The total was 280 for OLD and 278 for NEW. The differences I found:\n- def2: 21 → 19 (-2)\n- prop3: 27 → 26 (-1)\n- def10: 41 → 42 (+1)\n- Net: -2 ✓\n\nBut wait, I also need to check if there are other regions with count differences that I missed. Let me verify there are no other divergences.\n\nActually, looking back at my comparison output, it only showed divergences at def2, prop3, and def10. The prop6 had content differences but same count. So the total difference is indeed -2 (280 → 278).\n\nNow, the task says ko=275, en_old=280, en_new=278. So KO has 275, OLD has 280 (+5 vs KO), NEW has 278 (+3 vs KO). The polish pass reduced the gap by 2.\n\nBut the task asks me to focus on EN OLD → EN NEW: what did polish add, drop, merge, or split.\n\nLet me finalize my verdict:\n\n- **[def2] SAFE-REPHRASE**: Polish dropped two redundant inline math blocks `$f_0$` and `$f_1$` by rephrasing \"if a homotopy exists between $f_0$ and $f_1$, we write...\" → \"when a homotopy exists we write...\". The defining formula `$f_0\\simeq f_1$` is preserved. KO mentions $f_0, f_1$ twice but the second mention is redundant given the definition context.\n\n- **[prop3] SAFE-REPHRASE**: Polish dropped a malformed standalone `$$\\tilde{F}$$` display block, merging it into \"we obtain a continuous map satisfying the two equations\". The equations still contain `$\\tilde{F}$`. KO has `$\\tilde{F}$` inline, not as a standalone display block. This is a formatting fix.\n\n- **[def10] SAFE-REPHRASE**: Polish added back the missing `$$\\ast$$` block that OLD had omitted. KO explicitly has `$*$` as the subject. This restores fidelity to KO.\n\n- **[prop6] SAFE-REPHRASE**: Polish restructured \"the $k>0$-th homology... is always $0$\" → \"the $k$-th homology... is zero for every $k>0$\". Same mathematical content, reordered. Also minor spacing change in simplex list.\n\nAll changes are SAFE-REPHRASE. The net count change is -2, but this comes from removing redundant blocks and fixing formatting, not from losing mathematical content.\n\nVERDICT: sa"
+    },
+    "_posts/Math/Algebraic_Topology/ko/2025-07-27-Covering_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779723229.1462064,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Covering_Spaces.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T15:30:03+00:00",
+      "in_chars": 49007,
+      "out_chars": 24892,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=365, en=345"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
+    },
+    "_posts/Math/Algebraic_Topology/ko/2025-08-05-Computation_of_Homology.md": {
+      "status": "done",
+      "last_attempt_ts": 1779724896.9415915,
+      "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Computation_of_Homology.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T16:00:04+00:00",
+      "in_chars": 42035,
+      "out_chars": 20878,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=213, en=214"
+      ],
+      "verify_verdict": "VERDICT: minor\nCOUNTS: ko=213 en_old=213 en_new=214\nPOLISH CHANGED:\n- [prop7] SAFE-REPHRASE: added one inline $$X$$ block by rephrasing \"defined on it\" to \"on $$X$$\".\n- [prop7] LOSSY: changed $$X=U\\cap V$$ to $$X=U\\cup V$$, fixing a KO typo but diverging from ground-truth block content.\n- [thm2] SAFE-REPHRASE: swapped order of the inclusion and induced-map blocks (same two blocks).\n- [prop4] SAFE-REPHRASE: swapped order of the inclusion and canonical-homomorphism blocks (same two blocks).\n- [thm5] SAFE-REPHRASE: reordered several inline variable blocks in the proof paragraph (same content).\n- [def6] SAFE-REPHRASE: reordered inline variable blocks in the Mayer–Vietoris derivation (same content).\n- [prop7] SAFE-REPHRASE: reordered inline variable blocks around the long exact sequence (same content)."
+    },
+    "_posts/Math/Mirror_Symmetry/ko/2026-05-24-Gauss_Manin_Connection.md": {
+      "status": "draft_skip",
+      "last_attempt_ts": 1779726601.5662854
     }
   },
   "stats": {
-    "total_done": 242,
-    "total_in_chars": 3638492,
-    "total_out_chars": 3367082
+    "total_done": 246,
+    "total_in_chars": 3821153,
+    "total_out_chars": 3459629
   }
 }
