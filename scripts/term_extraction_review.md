@@ -1462,3 +1462,16 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `half-space` | looks like emphasis (no <sub> partner) |
 
+## 코호몰로지
+- post: `_posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md`
+- permalink: `/ko/math/algebraic_topology/cohomology`
+- scanned: 2026-05-25T05:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `, j^` | multi-word English emphasis — possibly a definition |
+| `- l^` | multi-word English emphasis — possibly a definition |
+| `tensor product` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+
