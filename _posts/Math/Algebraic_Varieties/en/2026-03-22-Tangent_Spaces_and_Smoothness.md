@@ -14,30 +14,31 @@ header:
 date: 2026-03-22
 last_modified_at: 2026-03-22
 weight: 6
-translated_at: 2026-05-19T05:00:02+00:00
+translated_at: 2026-05-25T21:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-25T21:30:04+00:00
 ---
 As in differential geometry, the tangent space is a central tool in algebraic geometry for understanding the local structure of varieties.
 
 ## Definition of the Tangent Space
 
-In differential geometry, for the sheaf $$\mathcal{C}^\infty_M$$ of smooth functions defined on $$M$$, we verified that the collection of all germs vanishing at a point $$x\in M$$,
+In differential geometry, for the sheaf $$\mathcal{C}^\infty_M$$ of smooth functions on $$M$$, we verified that the set of all germs vanishing at a point $$x\in M$$,
 
 $$\mathfrak{m}_x=\{\mathbf{f}\in \mathcal{C}^\infty_x\mid \mathbf{f}(x)=0\}$$
 
-is a maximal ideal. We then proved that the tangent space can be viewed as
+is a maximal ideal. We then proved that the tangent space can be identified with
 
 $$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast$$
 
-([\[Differentiable Manifolds\] §Cotangent Spaces, ⁋Lemma 1](/en/math/manifold/cotangent_space#lem1)). This construction is not usually emphasized in differential geometry, but it is extremely helpful for generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what functions defined on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7)), and we also know that the collection of all functions vanishing at $$x\in X$$ corresponds to the maximal ideal of $$\mathbb{K}[X]$$ at this point. Therefore we define
+([\[Differentiable Manifolds\] §Cotangent Spaces, ⁋Lemma 1](/en/math/manifold/cotangent_space#lem1)). This construction is usually not emphasized in differential geometry, yet it is extremely helpful for generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what functions on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7)), and we also know that the set of all functions vanishing at $$x\in X$$ corresponds to the maximal ideal of $$\mathbb{K}[X]$$ at this point. Therefore we define
 
 $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 
-and can consider the localization $$\mathbb{K}[X]_{\mathfrak{m}_x}=\mathcal{O}_{X,x}$$ of $$\mathbb{K}[X]$$ at this maximal ideal ([\[Commutative Algebra\] §Localization, ⁋Definition 1](/en/math/commutative_algebra/localization#def1)). Geometrically, by [§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14), these can be defined as germs of regular functions at the point $$x$$.
+and consider the localization $$\mathbb{K}[X]_{\mathfrak{m}_x}=\mathcal{O}_{X,x}$$ of $$\mathbb{K}[X]$$ at this maximal ideal ([\[Commutative Algebra\] §Localization, ⁋Definition 1](/en/math/commutative_algebra/localization#def1)). Geometrically, by [§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14), these can be regarded as germs of regular functions at the point $$x$$.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> We define the *Zariski tangent space* $$T_x X$$ of a variety $$X$$ at a point $$x$$ by
+<ins id="def1">**Definition 1**</ins> The *Zariski tangent space* $$T_x X$$ of a variety $$X$$ at a point $$x$$ is defined by
 
 $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast$$
 
@@ -45,9 +46,9 @@ where $$\mathfrak{m}_x$$ is the unique maximal ideal of the local ring $$\mathca
 
 </div>
 
-The essence of this definition is that the quotient $$\mathfrak{m}_x / \mathfrak{m}_x^2$$ carries the first-order infinitesimal data at $$x$$, so we define it to be the *Zariski cotangent space* $$T_x^\ast X$$. The dual $$T_x X$$ is the space of linear functionals acting on this data—that is, directional derivative operators—and this definition coincides with defining $$T_xX=\Der_\mathbb{K}(\mathcal{O}_{X,x}, \mathbb{K})$$.
+The essence of this definition is that the quotient $$\mathfrak{m}_x / \mathfrak{m}_x^2$$ encodes the first-order infinitesimal data at $$x$$, so we declare it to be the *Zariski cotangent space* $$T_x^\ast X$$. Its dual $$T_x X$$ is the space of linear functionals acting on this data—that is, directional derivative operators—and this definition agrees with $$T_xX=\Der_\mathbb{K}(\mathcal{O}_{X,x}, \mathbb{K})$$.
 
-We do not use the analysis-style $$\epsilon$$-$$\delta$$ differential, but essentially varieties are defined by polynomials, and their differentiation can be thought of formally as differentiating $$\x^n$$ to obtain $$n\cdot \x^{n-1}$$. In particular, for an affine variety this can be written more explicitly.
+We do not use the analysis-style $$\epsilon$$-$$\delta$$ differential, but since varieties are defined by polynomials, their differentiation can be understood formally: differentiating $$\x^n$$ yields $$n\cdot \x^{n-1}$$. For an affine variety this can be made more explicit.
 
 <div class="proposition" markdown="1">
 
@@ -80,7 +81,7 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \m
 
 </details>
 
-Although the proof is written in the language of maximal ideals and looks complicated, its philosophy is simple when one thinks of $$X=Z(f_i)$$. In this case $$(df_i)_x(v)=0$$ is precisely the (ordinary) tangent space of the hypersurface $$Z(f_i)$$ in $$\mathbb{A}^n$$ (viewing $$\mathbb{K}^n$$ as $$\mathbb{A}^n$$). [Proposition 2](#prop2) applies only to affine varieties as stated, but any point $$x$$ of an arbitrary variety $$X$$ has an affine neighborhood, so it essentially applies to all varieties. The same is true of the next proposition concerning the dimension of the tangent space.
+Although the proof is written in the language of maximal ideals and looks complicated, its underlying idea is simple once one thinks of $$X=Z(f_i)$$. In this case $$(df_i)_x(v)=0$$ is precisely the (ordinary) tangent space of the hypersurface $$Z(f_i)$$ in $$\mathbb{A}^n$$ (viewing $$\mathbb{K}^n$$ as $$\mathbb{A}^n$$). [Proposition 2](#prop2) applies only to affine varieties as stated, but any point $$x$$ of an arbitrary variety $$X$$ has an affine neighborhood, so it essentially applies to all varieties. The same is true of the next proposition on the dimension of the tangent space.
 
 <div class="proposition" markdown="1">
 
@@ -102,11 +103,11 @@ By the rank-nullity theorem, $$\dim T_x X = n - \operatorname{rank}(J_x)$$.
 
 ## Smooth and Singular Points
 
-In differential geometry, the dimension of the tangent space at any point was always equal to the dimension of the manifold. Yet this is because the definition of a manifold is rather stringent; in algebraic geometry, even an affine variety defined by a single polynomial may fail to be a manifold (in the classical sense). ([Example 6](#ex6), [Example 7](#ex7)) Nonetheless, the dimension of the tangent space is not unrelated to the dimension of the variety.
+In differential geometry, the dimension of the tangent space at any point always equals the dimension of the manifold. This is because the definition of a manifold is rather stringent; in algebraic geometry, even an affine variety defined by a single polynomial may fail to be a manifold in the classical sense. ([Example 6](#ex6), [Example 7](#ex7)) Nonetheless, the dimension of the tangent space is not unrelated to the dimension of the variety.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> For any point $$x$$ of an irreducible variety $$X$$, $$\dim T_x X \ge \dim X$$.
+<ins id="prop4">**Proposition 4**</ins> For any point $$x$$ of an irreducible variety $$X$$, we have $$\dim T_x X \ge \dim X$$.
 
 </div>
 
@@ -121,7 +122,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 
 </details>
 
-To sharpen our intuition, it is helpful to look at when the inequality is strict. We call such points singular points.
+To sharpen our intuition, it is helpful to examine when this inequality is strict. Such points are called singular points.
 
 <div class="definition" markdown="1">
 
@@ -192,7 +193,7 @@ Any algebraic variety is smooth at most points. To show this we need the notion 
 
 </div>
 
-In the affine case $$X = \operatorname{Spec} A$$, $$\eta$$ corresponds to the minimal prime ideal of $$A$$ (namely, the $$(0)$$ ideal), and the local ring $$\mathcal{O}_{X,\eta}$$ is precisely the function field $$\mathbb{K}(X) = \operatorname{Frac}(A)$$. Geometrically, the generic point is the "most general" point of $$X$$, a point that has no particular property of $$X$$. We can use this idea in the following proof.
+In the affine case $$X = \operatorname{Spec} A$$, $$\eta$$ corresponds to the minimal prime ideal of $$A$$ (namely, the $$(0)$$ ideal), and the local ring $$\mathcal{O}_{X,\eta}$$ is precisely the function field $$\mathbb{K}(X) = \operatorname{Frac}(A)$$. Geometrically, the generic point is the "most general" point of $$X$$, a point possessing no particular property of $$X$$. We exploit this idea in the following proof.
 
 <div class="proposition" markdown="1">
 
@@ -207,9 +208,9 @@ Let $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$ have dimension $$\dim X =
 
 $$X_\sm = \{x \in X \mid \operatorname{rank}(J_x) = n - d\}$$
 
-We show that this set is a dense open subset. First, it is relatively obvious that $$X_\sm$$ is open. Having rank exactly $$n-d$$ means that two conditions hold simultaneously. First, having rank *at least* $$n-d$$ is equivalent to some $$(n-d) \times (n-d)$$ minor being nonzero, which is an open condition in the Zariski topology. Second, having rank *at most* $$n-d$$ is equivalent to every $$(n-d+1) \times (n-d+1)$$ minor vanishing, which is a closed condition. Hence the set of points where the rank is exactly $$n-d$$ is an open subset of $$X$$.
+We show that this set is a dense open subset. First, that $$X_\sm$$ is open is relatively clear. Having rank exactly $$n-d$$ means that two conditions hold simultaneously. First, having rank *at least* $$n-d$$ is equivalent to some $$(n-d) \times (n-d)$$ minor being nonzero, which is an open condition in the Zariski topology. Second, having rank *at most* $$n-d$$ is equivalent to every $$(n-d+1) \times (n-d+1)$$ minor vanishing, which is a closed condition. Hence the set of points where the rank is exactly $$n-d$$ is an open subset of $$X$$.
 
-Showing that $$X_\sm$$ is nonempty is somewhat technical. The idea is that a generic point should be smooth, so we consider the generic point $$\eta$$ of $$X$$. Thinking of the localization at $$\eta$$, the local ring $$\mathcal{O}_{X,\eta} = \mathbb{K}(X)$$ is a field, hence a regular local ring. By [\[Commutative Algebra\] §Systems of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2),
+Showing that $$X_\sm$$ is nonempty is somewhat technical. The idea is that a generic point should be smooth, so we consider the generic point $$\eta$$ of $$X$$. Passing to the localization at $$\eta$$, the local ring $$\mathcal{O}_{X,\eta} = \mathbb{K}(X)$$ is a field, hence a regular local ring. By [\[Commutative Algebra\] §Systems of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2),
 
 $$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d$$
 
@@ -217,7 +218,7 @@ while the reverse inequality also holds by [Proposition 4](#prop4), so $$\dim T_
 
 </details>
 
-We now give the following definition.
+We now make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -233,7 +234,7 @@ We now give the following definition.
 
 ## Tangent Cones
 
-At a singular point the tangent space is too large to reflect the local structure of the variety accurately. In this case the *tangent cone* provides more accurate information. Intuitively, the tangent space is too large because the Jacobian has too small a rank; this happens, for example, when the first-order approximation of the given function carries no information. Thus, if we consider higher-order approximations of the given function, the situation may change.
+At a singular point the tangent space is too large to reflect the local structure of the variety accurately. In this case the *tangent cone* provides more precise information. Intuitively, the tangent space is too large because the Jacobian has too small a rank; this happens, for example, when the first-order approximation of the given function carries no information. Thus, if we consider higher-order approximations of the given function, the situation may improve.
 
 To this end, for any polynomial $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$ we define the *initial term* $$\initial(f)$$ of $$f$$ to be the homogeneous component of $$f$$ of least degree. Then for any ideal $$\mathfrak{a}$$, the *initial ideal* $$\initial(\mathfrak{a})$$ is defined to be the homogeneous ideal generated by the $$\initial(f)$$.
 
