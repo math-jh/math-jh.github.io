@@ -1,14 +1,9 @@
 {
   "files": {
     "_posts/Math/Algebraic_Structures/ko/2024-08-30-Algebras.md": {
-      "status": "done",
-      "last_attempt_ts": 1779154770.4314568,
-      "en_path": "_posts/Math/Algebraic_Structures/en/2024-08-30-Algebras.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-19T01:30:01+00:00",
-      "in_chars": 13370,
-      "out_chars": 14734,
-      "reason": "pending"
+      "status": "failed",
+      "last_attempt_ts": 1779669799.9020908,
+      "error": "validation failed: output body 8331c < 60% of reference 14209c — truncation suspected"
     },
     "_posts/Math/Algebraic_Structures/ko/2024-10-07-Operations_of_Algebras.md": {
       "status": "stub",
@@ -2249,11 +2244,48 @@
       "out_chars": 6607,
       "reason": "polish",
       "warnings": null
+    },
+    "_posts/Math/Algebraic_Structures/ko/2024-08-11-Graded_Rings.md": {
+      "status": "done",
+      "last_attempt_ts": 1779663850.728422,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Graded_Rings.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-24T23:00:04+00:00",
+      "in_chars": 13823,
+      "out_chars": 5973,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=83, en=80"
+      ]
+    },
+    "_posts/Math/Algebraic_Structures/ko/2024-08-12-Change_of_Base_Ring.md": {
+      "status": "done",
+      "last_attempt_ts": 1779665871.8230186,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Change_of_Base_Ring.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-24T23:30:03+00:00",
+      "in_chars": 18993,
+      "out_chars": 8661,
+      "reason": "polish",
+      "warnings": null
+    },
+    "_posts/Math/Algebraic_Structures/ko/2024-08-12-Graded_Modules.md": {
+      "status": "done",
+      "last_attempt_ts": 1779667611.953671,
+      "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Graded_Modules.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T00:00:04+00:00",
+      "in_chars": 9920,
+      "out_chars": 3889,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=64, en=65"
+      ]
     }
   },
   "stats": {
-    "total_done": 212,
-    "total_in_chars": 3007608,
-    "total_out_chars": 2765463
+    "total_done": 215,
+    "total_in_chars": 3050344,
+    "total_out_chars": 2783986
   }
 }
