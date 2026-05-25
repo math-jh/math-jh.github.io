@@ -308,7 +308,7 @@ $$\partial(x,y)=(\partial^Cx,y)+(-1)^{\deg(x)}(x,\partial^Dy)$$
 
 </div>
 
-즉, $$(C\otimes D)_\bullet$$은 $$(p,q)$$ 성분이 $$C_p\otimes D_q$$이고, horizontal differential이 $$\partial^C\otimes\id_D$$, vertical differential이 $$\id_C\otimes \partial^D$$로 주어지는 double complex의 total complex라 할 수 있다. ([##ref##](total_complex))
+즉, $$(C\otimes D)_\bullet$$은 $$(p,q)$$ 성분이 $$C_p\otimes D_q$$이고, horizontal differential이 $$\partial^C\otimes\id_D$$, vertical differential이 $$\id_C\otimes \partial^D$$로 주어지는 double complex의 total complex라 할 수 있다. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
 
 그럼 퀴네트 공식의 대수적인 내용은 다음 보조정리에 담겨있다.
 
