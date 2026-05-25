@@ -276,7 +276,7 @@ The above example is what we already examined in [§Properties of Scheme Morphis
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-It suffices to show the affine case. That is, it suffices to show that for an arbitrary finite ring homomorphism $$\phi: B \rightarrow A$$ and a prime ideal $$\mathfrak{q}$$ of $$B$$, the tensor product $$A\otimes_B\kappa(\mathfrak{q})$$ has only finitely many prime ideals. But since $$\phi$$ is finite, $$A\otimes_B\kappa(\mathfrak{q})$$ is a finite $$\kappa(\mathfrak{q})$$-algebra and hence artinian, from which we obtain the desired result. ([##ref##](CRT))
+It suffices to show the affine case. That is, it suffices to show that for an arbitrary finite ring homomorphism $$\phi: B \rightarrow A$$ and a prime ideal $$\mathfrak{q}$$ of $$B$$, the tensor product $$A\otimes_B\kappa(\mathfrak{q})$$ has only finitely many prime ideals. But since $$\phi$$ is finite, $$A\otimes_B\kappa(\mathfrak{q})$$ is a finite $$\kappa(\mathfrak{q})$$-algebra and hence artinian, from which we obtain the desired result. ([\[Ring Theory\] §Chinese Remainder Theorem](/en/math/ring_theory/chinese_remainder_theorem))
 
 </details>
 

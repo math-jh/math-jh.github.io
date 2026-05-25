@@ -95,7 +95,7 @@ The final general construction we will examine is the quotient space. However, a
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$X/R$$ is locally Euclidean, we can cover $$X/R$$ with Euclidean neighborhoods $$(U_i)_{i\in I}$$, and the collection of their preimages $$(\pi^{-1}(U_i))_{i\in I}$$ covers $$X$$. Now, since any second-countable space is Lindelöf ([##ref##](countability)), there exists a countable subset $$J\subset I$$ such that $$(\pi^{-1}(U_i))_{i\in J}$$ is a countable open cover of $$X$$, and therefore the corresponding $$(U_i)_{i\in J}$$ is a countable cover of $$X/R$$. Since each of these is a Euclidean neighborhood, it again has a countable base, and since there are countably many such neighborhoods, collecting all of them yields a countable base for $$X/R$$.
+Since $$X/R$$ is locally Euclidean, we can cover $$X/R$$ with Euclidean neighborhoods $$(U_i)_{i\in I}$$, and the collection of their preimages $$(\pi^{-1}(U_i))_{i\in I}$$ covers $$X$$. Now, since any second-countable space is Lindelöf ([§Filter Convergence, ⁋Definition 10](/en/math/topology/filter_convergence#def10)), there exists a countable subset $$J\subset I$$ such that $$(\pi^{-1}(U_i))_{i\in J}$$ is a countable open cover of $$X$$, and therefore the corresponding $$(U_i)_{i\in J}$$ is a countable cover of $$X/R$$. Since each of these is a Euclidean neighborhood, it again has a countable base, and since there are countably many such neighborhoods, collecting all of them yields a countable base for $$X/R$$.
 
 </details>
 

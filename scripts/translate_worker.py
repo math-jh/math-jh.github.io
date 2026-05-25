@@ -704,8 +704,13 @@ def verify_math_mismatch(
     error string starting with 'verify-failed:' so caller can still notify.
     """
     prompt = build_verify_prompt(ko_content, en_new, ko_count, en_count, en_old=en_old)
+    # Thinking OFF: with 400+ math blocks the model burns the 32K output budget on
+    # internal reasoning and times out before producing the verdict (observed
+    # 2026-05-25 on Characteristic_Classes, Cohomology_of_Projective_Spaces,
+    # Riemann_Roch_Theorem). The verdict format is short bullet list — no
+    # reasoning depth needed; the model can still classify SAFE/LOSSY from prose.
     try:
-        return call_kimi(prompt, thinking=True).strip()
+        return call_kimi(prompt, thinking=False).strip()
     except subprocess.TimeoutExpired:
         return "verify-failed: kimi timeout"
     except Exception as e:

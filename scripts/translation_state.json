@@ -2198,11 +2198,67 @@
         "math block count mismatch: ko=443, en=108"
       ],
       "verify_verdict": "VERDICT: safe\nCOUNTS: ko=443 en=108\nFINDINGS:\n- [def1] SAFE-REPHRASE: KO wraps inline symbols (`$$X$$`, `$$i$$`, `$$\\phi_i$$`) in `$$...$$`; EN renders the identical formulas with `$...$`.\n- [ex12] SAFE-REPHRASE: KO uses `$$...$$` for every inline expression including `$$h_{ij}$$`, `$$c_{ij}(\\x_i/\\x_j)^d$$`, and `$$d-d'=0$$`; EN keeps the same formulas in `$...$`.\n- [ex24] SAFE-REPHRASE: KO double-dollar-wraps coordinates, partial derivatives, and single variables (`$$n$$`, `$$r$$`, `$$1$$`); EN inlines them with `$...$` or plain text without changing meaning.\n- [prop20 proof] SAFE-REPHRASE: The three numbered cocycle equations are `$$...$$` in KO and `$...$` in EN, preserving every term and relation.\n- [global pattern] SAFE-REPHRASE: The remaining ~300-block discrepancy is uniformly the same style shift: KO uses `$$...$$` for all inline math (including single letters and short formulas), while EN converts them to `$...$`; no equation, symbol, or hypothesis is omitted, added, or altered."
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md": {
+      "status": "done",
+      "last_attempt_ts": 1779678217.7067819,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-04-06-Cohomology_of_Projective_Spaces.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-25T03:00:02+00:00",
+      "in_chars": 30411,
+      "out_chars": 33758,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=477, en=474"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
+    },
+    "_posts/Math/Algebraic_Varieties/ko/2026-04-22-Riemann_Roch_Theorem.md": {
+      "status": "done",
+      "last_attempt_ts": 1779679992.4116623,
+      "en_path": "_posts/Math/Algebraic_Varieties/en/2026-04-22-Riemann_Roch_Theorem.md",
+      "ko_git_commit_ts": 1779152404.0,
+      "translated_at": "2026-05-25T03:30:01+00:00",
+      "in_chars": 19139,
+      "out_chars": 21742,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=305, en=300"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
+    },
+    "_posts/Math/Commutative_Algebra/ko/2025-01-24-Divisors.md": {
+      "status": "done",
+      "last_attempt_ts": 1779681763.9040053,
+      "en_path": "_posts/Math/Commutative_Algebra/en/2025-01-24-Divisors.md",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T04:00:01+00:00",
+      "in_chars": 20583,
+      "out_chars": 21702,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=341, en=332"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
+    },
+    "_posts/Math/Lie_Theory/ko/2023-01-23-Lie_Groups.md": {
+      "status": "done",
+      "last_attempt_ts": 1779683528.205855,
+      "en_path": "_posts/Math/Lie_Theory/en/2023-01-23-Lie_Groups.md",
+      "ko_git_commit_ts": 1778965204.0,
+      "translated_at": "2026-05-25T04:30:01+00:00",
+      "in_chars": 22241,
+      "out_chars": 26066,
+      "reason": "pending",
+      "warnings": [
+        "math block count mismatch: ko=358, en=353"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=358 en=353\nFINDINGS:\n- [def6] SAFE-REPHRASE: KO repeats inline $$G$$ in \"Lie group $$G$$와, $$G$$의 임의의 원소\" where EN merges to \"For a Lie group $$G$$ and any element\"; no semantic loss.\n- [def7] SAFE-REPHRASE: KO repeats subject $$X$$ in definition clause (\"$$X$$가 자기 자신과\") where EN uses \"is $$L_g$$-related to itself\"; same mathematical content.\n- [def7] SAFE-REPHRASE: KO writes \"$$X$$의 smoothness\" where EN uses pronoun \"its smoothness\"; referent is identical.\n- [ex4] SAFE-REPHRASE: KO inlines $$0$$ in \"분모가 $$0$$이 되지 않는\" while EN rephrases as \"denominator does not vanish\"; the zero is implicit.\n- [ex10] SAFE-REPHRASE: KO writes \"$$G$$의 Lie algebra\" where EN uses \"its Lie algebra\" after already naming $$G$$; same referent."
     }
   },
   "stats": {
-    "total_done": 218,
-    "total_in_chars": 3137354,
-    "total_out_chars": 2864370
+    "total_done": 222,
+    "total_in_chars": 3229728,
+    "total_out_chars": 2967638
   }
 }
