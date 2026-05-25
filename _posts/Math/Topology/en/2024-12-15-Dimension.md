@@ -16,7 +16,7 @@ weight: 19
 translated_at: 2026-05-23T08:30:01+00:00
 translation_source: kimi-cli
 ---
-In this post we define the dimension of a topological space. First we define the dimension in common use, and then we separately define the notion of dimension used in [algebraic geometry](/en/algebraic_geometry).
+In this post we define the dimension of a topological space. First we define the dimension in common use, and then we separately define the notion of dimension used in [algebraic geometry](/en/algebraic_varieties/).
 
 ## Covering dimension
 

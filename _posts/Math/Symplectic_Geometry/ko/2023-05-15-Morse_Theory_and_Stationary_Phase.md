@@ -284,7 +284,7 @@ $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 
 라 하면, $$h$$는 smooth real-valued function이며, $$W$$의 holomorphic critical point $$p$$ (즉 $$dW(p)=0$$) 가 정확히 $$h$$의 critical point에 대응한다. 또한 $$W$$가 $$p$$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $$h$$가 $$p$$에서 비퇴화 critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 $$n$$ (= 절반 차원)이며, 이는 아래 [명제 15](#prop15)에서 정식으로 보인다.
 
-$$X$$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/riemannian_metric)의 일반론에 따라 gradient vector field가 정의된다) $$h$$의 gradient flow를 생각하자.
+$$X$$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/Riemannian_metric)의 일반론에 따라 gradient vector field가 정의된다) $$h$$의 gradient flow를 생각하자.
 
 <div class="definition" markdown="1">
 
