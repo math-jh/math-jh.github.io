@@ -21,9 +21,13 @@ published: false
 
 ## Landau-Ginzburg model과 volume form
 
-우선 우리는 B-model의 무대를 만들어야 한다. [§거울대칭 개요, ⁋정의 4](/ko/math/mirror_symmetry/overview#def4)에서 살펴보았듯, Landau-Ginzburg model $$(\check{X}, W_q)$$에서 $$\check{X}$$는 보통 algebraic torus $$(\mathbb{C}^\ast)^N$$ 혹은 그 안에 있는 subvariety이며, $$W_q$$는 $$q$$로 parametrize되는 holomorphic function이다. 우리는 이 위에 oscillating integral을 정의하기 위해 우선 holomorphic volume form $$\omega$$를 정의한다.
+우선 우리는 B-model의 무대를 만들어야 한다. [§거울대칭 개요, ⁋정의 4](/ko/math/mirror_symmetry/overview#def4)에서 살펴보았듯, Landau-Ginzburg model $$(\check{X}, W_q)$$에서 $$\check{X}$$는 보통 algebraic torus $$(\mathbb{C}^\ast)^N$$ 혹은 그 안에 있는 subvariety이며, $$W_q$$는 *quantum parameter* $$q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$$로 parametrize되는 holomorphic function이다. 여기서 $$r$$은 A-side mirror $$X$$의 *complexified Kähler moduli*의 차원이었으며, Fano variety의 경우
 
-즉 우리의 $$\omega$$는 $$\check{X}$$ 위에서 영점도, pole도 가지지 않아야 한다. 일반적으로 이는 compact (대수기하학에서는 complete) 공간에서는 불가능한 일이었던 것을 기억하자. 이를 위해 우리는 이러한 점들을 임의로 제거해준다. 즉, $$\check{X}$$를 어떤 smooth projective variety $$Y$$의 open subset $$\check{X} = Y \setminus D$$로 본 후, $$Y$$의 divisor $$D$$를 $$\mathcal{K}_Y$$의 rational section의 bad locus를 정확히 흡수하는 divisor로 고르는 것이다. 구체적으로 anti-canonical class $$-K_Y$$의 effective representative $$D \geq 0$$ (즉 $$D \sim -K_Y$$)를 잡으면 $$\mathcal{K}_Y \otimes \mathcal{O}_Y(D) \cong \mathcal{O}_Y$$가 trivial이 되어 nowhere-vanishing global section
+$$r = \operatorname{rank}\,\operatorname{Pic}(X) = \dim_\mathbb{C} H^2(X; \mathbb{C})$$
+
+로 주어졌다. 우리는 이 위에 oscillating integral을 정의하기 위해 우선 holomorphic volume form $$\omega$$를 정의한다.
+
+일반적으로 compact (대수기하학에서는 complete) 공간에서는 form이 non-vanishing일 수 없으므로, volume form을 얻기 위해 우리는 이러한 점들을 임의로 제거해주어야 한다. 즉, $$\check{X}$$를 어떤 smooth projective variety $$Y$$의 open subset $$\check{X} = Y \setminus D$$로 본 후, $$Y$$의 divisor $$D$$를 $$\mathcal{K}_Y$$의 rational section의 bad locus를 정확히 흡수하는 divisor로 고르는 것이다. 구체적으로 anti-canonical class $$-K_Y$$의 effective representative $$D \geq 0$$ (즉 $$D \sim -K_Y$$)를 잡으면 $$\mathcal{K}_Y \otimes \mathcal{O}_Y(D) \cong \mathcal{O}_Y$$가 trivial이 되어 nowhere-vanishing global section
 
 $$\Omega\in H^0(Y, \mathcal{K}_Y\otimes \mathcal{O}_Y(D))$$
 
@@ -61,15 +65,15 @@ $$\Gamma_p := \left\{ x \in \check{X} \,\middle\vert\, \lim_{t \to +\infty} \Rea
 
 $$H_N(\check{X}, \{\Real(W_q/z) \ll 0\}; \mathbb{C})$$
 
-의 $$\mathbb{C}$$-basis가 된다. 여기서 rapid decay cohomology $$H_\ast(\check{X}, \{\Real(W_q/z) \ll 0\}; \mathbb{C})$$는 충분히 작은 $$\Real(W_q/z)$$를 갖는 점들로 이루어진 *rapid decay zone*
+의 $$\mathbb{C}$$-basis가 된다. 여기서 rapid decay homology $$H_\ast(\check{X}, \{\Real(W_q/z) \ll 0\}; \mathbb{C})$$는 충분히 작은 $$\Real(W_q/z)$$를 갖는 점들로 이루어진 *rapid decay zone*
 
-$$S_z=\{x \in \check{X} : \Real(W(x)/z) \ll 0\}$$
+$$S_z=\{x \in \check{X} \mid \Real(W(x)/z) \ll 0\}$$
 
-에 사는 chain들을 같은 것으로 보고, $$n$$-chain $$\sigma$$들을 이 rapid decay zone 안에 들어가는 것들만 모은 것이다. 더 엄밀하게는
+에 대해, boundary $$\partial \sigma$$가 $$S_z$$ 안에 들어가는 $$n$$-chain $$\sigma$$들을, $$S_z$$ 안에 완전히 들어가는 chain은 0으로 quotient하여 모은 것이다. 더 엄밀하게는
 
-$$S_z^M=\{x \in \check{X} : \Real(W(x)/z) <-M\}$$
+$$S_z^M=\{x \in \check{X} \mid \Real(W(x)/z) <-M\}$$
 
-으로 두고, relative singular homology $$H_n(\check{X}, S_z^M; \mathbb{C})$$을 생각한 것으로, $$S_z^M$$ 등은 물론 $$M$$의 값에 의존하지만 이 relative homology 자체는 $$M$$의 값이 커지면 stabilize한다는 것이 알려져 있다. 우리는 이 stabilize한 값을 rapid decay homology로 정의하는 것이다. 
+으로 두고, relative singular homology $$H_n(\check{X}, S_z^M; \mathbb{C})$$을 생각한 것으로, $$S_z^M$$은 물론 $$M$$의 값에 의존하지만 이 relative homology 자체는 $$M$$의 값이 커지면 stabilize한다는 것이 알려져 있다. 우리는 이 stabilize한 값을 rapid decay homology로 정의하는 것이다. 
 
 이 식으로부터 $$z$$의 역할도 어느정도 보이는데, $$z\rightarrow 0$$인 경우 $$e^{W_q/z}$$는 $$W_q$$의 phase에 따라 급격히 진동하며, 따라서 적분의 dominant한 contribution은 stationary phase, 즉 $$p$$ 근처에서만 나타나게 된다. 우리는 mirror symmetry statement가 B-side에서는 $$W_q$$의 critical point에 대한 것임을 알고 있으므로 $$z$$의 역할은 명확하다. 
 
@@ -95,7 +99,7 @@ $$\mathcal{I}_{\Gamma_p}(q, z) := \int_{\Gamma_p} e^{W_q / z}\, \omega$$
 
 <ins id="prop3">**명제 3 (Stationary phase asymptotic)**</ins> $$W_q$$의 non-degenerate critical point $$p$$와 이를 통과하는 Lefschetz thimble $$\Gamma_p$$에 대해, $$z \to 0^+$$에서
 
-$$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{N/2}\, \frac{e^{W_q(p)/z}}{\sqrt{\det\,\Hess_p(W_q)}}\, \big(1 + O(z)\big)$$
+$$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{N/2} \frac{e^{W_q(p)/z}}{\sqrt{\det\Hess_p(W_q)}} \big(1 + O(z)\big)$$
 
 이 성립한다. 여기서 $$N = \dim_\mathbb{C} \check{X}$$, $$\Hess_p$$는 $$p$$에서의 Hessian이며, $$\sqrt{}$$의 branch는 $$\Gamma_p$$의 orientation으로 결정된다.
 
@@ -105,17 +109,29 @@ $$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{N/2}\, \frac{e^{W_q(p)/z}}{\sqrt{\
 
 ## 가우스-마닌 접속
 
-Oscillating integral의 $$q, z$$ 의존성을 추적하기 위해 *Gauss-Manin connection* $$\nabla^{GM}$$을 도입한다. 도입 무대는 §Lefschetz thimble에서 본 rapid decay homology의 dual인 *rapid decay relative cohomology*
+Oscillating integral의 $$(q, z)$$ 의존성을 추적하기 위해 *Gauss-Manin connection* $$\nabla^{GM}$$을 도입한다. 이는 $$(q,z)$$ parameter들의 공간 $$B=(\mathbb{C}^\ast)^r\times \mathbb{C}^\ast$$를 base manifold로 삼는 공간으로, 이 위에 각 base point $$(q, z) \in B$$에 대해, 위에서 정의한 rapid decay homology의 dual인 *rapid decay relative cohomology*
 
-$$H^N(\check{X}, \{ \Real(W_q/z) \ll 0 \};\, \mathbb{C})$$
+$$\mathcal{H}_{(q, z)} := H^N(\check{X}, \{ \Real(W_q/z) \ll 0 \};\, \mathbb{C})$$
 
-이다 (cycle을 평가하는 cocycle들의 cohomology; 각 fiber에서 dimension은 $$\lvert\Crit(W_q)\rvert = \dim_\mathbb{C} H^\ast(X, \mathbb{C})$$로 일정). Parameter $$(q, z) \in (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$$가 변할 때 이 cohomology가 *local system*을 이루어 (dimension이 일정하고 fiber가 연속적으로 식별 가능) vector bundle $$\mathcal{H}$$이 되며 (**[Pha11]**, **[Sab08]**), $$\mathcal{H}$$ 위에는 cycle의 *parallel transport*로부터 비롯되는 자연스러운 flat connection이 존재한다.
+을 fiber로 할당하는 family
+
+$$\{\mathcal{H}_{(q, z)}\}_{(q, z) \in B}$$
+
+를 생각한다. 이는 만일 $$W_q$$가 Morse type이라면 $$B$$ 위에 정의된 vector bundle $$\mathcal{H}$$를 정의한다는 것이 알려져 있다. 특히 이들 각각의 fiber가 잘 붙는다는 것은 앞서 Lefschetz thimble을 택할 때 $$(q,z)$$에 따라 continuously isotoped될 수 있는 것들을 모았기 때문에 가능하다. 즉, cycle $$\Gamma$$가 $$(q, z)$$의 변화에 따라 연속적으로 움직일 때 그와 pairing되는 cohomology class도 함께 "따라가도록" 평행 이동시킬 수 있고, 이 평행 이동을 connection 형태로 정리한 것이 *Gauss-Manin connection*이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**정의 4** (Gauss-Manin connection)</ins> Bundle $$\mathcal{H} \to (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$$의 *Gauss-Manin connection* $$\nabla^{GM}$$은 각 fiber 사이의 *comparison isomorphism*에 의해 정의되는 flat connection이다. 즉, $$(q, z)$$가 작게 움직일 때 vanishing cycle의 homology class를 "parallel하게" 옮겨주는 connection이며, flatness $$\nabla^{GM} \circ \nabla^{GM} = 0$$이 성립한다.
+<ins id="def4">**정의 4 (Gauss-Manin connection)**</ins> Vector bundle $$\mathcal{H} \to (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$$ 위의 *Gauss-Manin connection* $$\nabla^{GM}$$은 다음 조건으로 유일하게 결정되는 flat connection이다.
+
+> Section $$\mathbf{s}: (q, z) \mapsto [\alpha(q, z)] \in \mathcal{H}_{(q,z)}$$가 *$$\nabla^{GM}$$-flat*이라는 것은, [정의 2](#def2) 직후의 의미로 continuously isotoped된 *임의의* cycle family $$\{\Gamma(q, z)\}$$에 대해 *period*
+> 
+> $$\Pi_\Gamma(q, z) := \int_{\Gamma(q, z)} \alpha(q, z)$$
+> 
+> 이 $$(q, z)$$의 locally constant function이 되는 것과 동치이다.
 
 </div>
+
+정의에 의하여, cohomology fiber  $$\mathcal{H}_{(q,z)}$$의 원소는 dual rapid decay homology의 cycle과의 integral pairing으로 완전히 결정된다. 이 때, 위의 local system 구조에서 fiber 사이의 canonical identification은 정확히 cycle들의 parallel transport의 dual로 결정되었다. 따라서, 위의 bundle의 section들을 이 identification을 통해 locally constant인지 확인하기 위해서는 모든 parallel transport된 cycle들과의 pairing 값이 locally constant인지 보면 되고, 이 값이 바로 period인 것이다. 약간의 계산을 거치면 이렇게 정의된 $$\nabla^{GM}$$이 유일하게 결정되며, $$\nabla^{GM}$$의 flaness 또한 확인할 수 있다. 
 
 $$\nabla^{GM}$$의 representative form 차원에서의 계산은 다음과 같다.
 

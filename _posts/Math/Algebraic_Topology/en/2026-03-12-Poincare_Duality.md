@@ -1,7 +1,6 @@
 ---
-
 title: "Poincaré Duality"
-excerpt: ""
+excerpt: "Duality between homology and cohomology via orientation sheaves and fundamental classes"
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/Poincare_duality
@@ -14,22 +13,21 @@ sidebar:
 date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 9
-
-translated_at: 2026-05-19T21:30:02+00:00
+translated_at: 2026-05-25T18:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-25T18:00:04+00:00
 ---
-
-In this post, we discuss Poincaré duality, one of the beautiful theorems of algebraic topology. As mentioned in the previous post, Poincaré duality reveals a duality between homology and cohomology. While the universal coefficient theorem ([§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm65)) was somewhat expected when we defined $$C^\bullet(X;A)$$ as the dual of $$C_\bullet(X;A)$$, Poincaré duality has a more geometric significance.
+In this post we discuss Poincaré duality, one of the most beautiful theorems of algebraic topology. As mentioned previously, Poincaré duality reveals a duality between homology and cohomology. The universal coefficient theorem ([§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm65)) gave a result that was more or less expected once we defined $$C^\bullet(X;A)$$ as the dual of $$C_\bullet(X;A)$$; Poincaré duality, by contrast, carries a far more geometric meaning.
 
 ## Orientation Sheaf
 
-To define Poincaré duality, we first need to define the notion of orientation. This is a concept defined on topological manifolds ([§Topological Manifolds, ⁋Definition 2](/en/math/algebraic_topology/topological_manifolds#def2)), and in this post, unless otherwise stated, we assume that any manifold is *connected*.
+To define Poincaré duality we must first define the notion of orientation. This is a concept defined on a topological manifold ([§Topological Manifolds, ⁋Definition 2](/en/math/algebraic_topology/topological_manifolds#def2)); throughout this post, unless stated otherwise, we assume every manifold is *connected*.
 
-Consider an arbitrary topological manifold $$M$$ of dimension $$m$$ and an open set $$U$$. The correspondence
+Let $$M$$ be a topological manifold of dimension $$m$$ and let $$U$$ be an open set. The correspondence
 
 $$U\mapsto H_m(M, M\setminus U;\mathbb{Z})$$
 
-is a presheaf since for any $$U\subseteq V$$, there is a natural restriction map
+is a presheaf, since for any $$U\subseteq V$$ there is a natural restriction map
 
 $$H_m(M, M\setminus V;\mathbb{Z})\rightarrow H_m(M,M\setminus U;\mathbb{Z})\tag{1}$$
 
@@ -39,17 +37,17 @@ $$H_m(M, M\setminus V;\mathbb{Z})\rightarrow H_m(M,M\setminus U;\mathbb{Z})\tag{
 
 </div>
 
-Then for any $$x\in M$$ and any open neighborhood $$U$$ of $$x$$, the following canonical map
+For any $$x\in M$$ and any open neighborhood $$U$$ of $$x$$, the canonical map
 
 $$H_m(M,M\setminus U;\mathbb{Z})\rightarrow H_m(M,M\setminus\{x\};\mathbb{Z})$$
 
-exists. These maps behave well with respect to the restriction maps above, and thus the direct limit map
+exists. These maps are compatible with the restriction maps above, and hence the direct-limit map
 
 $$\or_{M,x}=\varinjlim_{x\in U} H_m(M,M\setminus U;\mathbb{Z})\rightarrow H_m(M,M\setminus \{x\};\mathbb{Z})$$
 
 is well-defined.
 
-By definition, an element of $$H_m(M,M\setminus\{x\};\mathbb{Z})$$ is an $$m$$-simplex $$\sigma:\Delta^m \rightarrow M$$ whose boundary does not meet $$x$$, and we can choose a sufficiently small neighborhood $$U$$ of $$x$$ such that this boundary does not meet $$U$$. On the other hand, if two homology classes $$\alpha_U\in H_m(M,M\setminus U;\mathbb{Z})$$, $$\alpha_V\in H_m(M,M\setminus V;\mathbb{Z})$$ are the same element in $$H_m(M,M\setminus \{x\};\mathbb{Z})$$, then similarly we can find a sufficiently small open neighborhood $$W$$ of $$x$$ that does not meet the boundaries of either element, and then $$\alpha_U$$ and $$\alpha_V$$ must be the same element in $$H_m(M,M\setminus W;\mathbb{Z})$$. That is, the above function
+By definition, an element of $$H_m(M,M\setminus\{x\};\mathbb{Z})$$ is represented by an $$m$$-simplex $$\sigma:\Delta^m \rightarrow M$$ whose boundary avoids $$x$$, and we can choose a sufficiently small neighborhood $$U$$ of $$x$$ so that this boundary avoids $$U$$ as well. Conversely, if two homology classes $$\alpha_U\in H_m(M,M\setminus U;\mathbb{Z})$$ and $$\alpha_V\in H_m(M,M\setminus V;\mathbb{Z})$$ become the same element in $$H_m(M,M\setminus \{x\};\mathbb{Z})$$, then we can likewise find a sufficiently small open neighborhood $$W$$ of $$x$$ avoiding the boundaries of both elements, and then $$\alpha_U$$ and $$\alpha_V$$ must coincide in $$H_m(M,M\setminus W;\mathbb{Z})$$. Thus the map
 
 $$\varinjlim_{x\in U}H_m(M,M\setminus U;\mathbb{Z})\rightarrow H_m(M,M\setminus \{x\};\mathbb{Z})$$
 
@@ -57,7 +55,7 @@ is an isomorphism. Moreover, by [§Computation of Homology, ⁋Theorem 2](/en/ma
 
 $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong H_m(U,U\setminus\{x\};\mathbb{Z})\cong H_m(\mathbb{R}^m, \mathbb{R}^m\setminus\{0\};\mathbb{Z})$$
 
-and since $$\mathbb{R}^m\setminus\{0\}$$ deformation retracts to $$S^{m-1}$$, by the relative homology long exact sequence, the right-hand side is isomorphic to $$\mathbb{Z}$$, and we can also verify that this sheaf is a locally constant sheaf. That is, for any $$x\in M$$, there exists an open neighborhood $$U$$ such that $$\or_M\vert_U$$ is a constant sheaf. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9))
+and since $$\mathbb{R}^m\setminus\{0\}$$ deformation retracts onto $$S^{m-1}$$, the relative homology long exact sequence shows that the right-hand side is isomorphic to $$\mathbb{Z}$$. One also verifies that this sheaf is locally constant: for every $$x\in M$$ there exists an open neighborhood $$U$$ such that $$\or_M\vert_U$$ is a constant sheaf. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9))
 
 <div class="definition" markdown="1">
 
@@ -65,17 +63,17 @@ and since $$\mathbb{R}^m\setminus\{0\}$$ deformation retracts to $$S^{m-1}$$, by
 
 </div>
 
-## Constant Sheaves and Covering Spaces, Orientation-Generator Sheaf
+## Constant Sheaves, Covering Spaces, and the Orientation-Generator Sheaf
 
-To examine the orientation sheaf $$\or_M$$ defined above in more detail, we need to look more carefully at constant sheaves and locally constant sheaves. First, consider an arbitrary abelian group $$A$$, and give it the discrete topology to regard it as a topological space. Then the projection map $$X\times A \rightarrow X$$ between topological spaces is a trivial covering space, and the sheaf of sections of this covering map is precisely the constant sheaf $$\underline{A}$$. Conversely, given a constant sheaf $$\underline{A}$$, we can verify that the étale space $$\Spe(\underline{A})$$ becomes the covering space $$X\times A \rightarrow X$$. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9)) Thus, a locally constant sheaf is simply a sheaf whose étale space is a covering space.
+To examine the orientation sheaf $$\or_M$$ in more detail, we need a closer look at constant and locally constant sheaves. First, consider an arbitrary abelian group $$A$$ equipped with the discrete topology, regarded as a topological space. The projection $$X\times A \rightarrow X$$ is then a trivial covering space, and the sheaf of sections of this covering map is precisely the constant sheaf $$\underline{A}$$. Conversely, given a constant sheaf $$\underline{A}$$, one verifies that its étale space $$\Spe(\underline{A})$$ is the covering space $$X\times A \rightarrow X$$. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9)) Hence a locally constant sheaf is nothing more than a sheaf whose étale space is a covering space.
 
-Intuitively, $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong \mathbb{Z}$$ tells us how many times an $$m$$-simplex $$\sigma:\Delta^m\rightarrow M$$ containing $$x$$ in its interior covers $$x$$. Since $$\Delta^m$$ can be given a sign depending on how its vertices are ordered, and through this isomorphism we can associate elements of $$\mathbb{Z}$$ to these $$m$$-simplices, the sign difference between two $$m$$-simplices can be thought of as the source $$\Delta^m$$ of the two simplices being ordered in opposite directions, or when the sign of $$\Delta^m$$ is fixed, the two simplex maps specifying different directions. Thus $$H_m(M,M\setminus\{x\};\mathbb{Z})$$ contains information about the orientation at the point $$x$$.
+Intuitively, the isomorphism $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong \mathbb{Z}$$ records how many times an $$m$$-simplex $$\sigma:\Delta^m\rightarrow M$$ containing $$x$$ in its interior covers $$x$$. Since $$\Delta^m$$ can be assigned a sign according to the ordering of its vertices, and through this isomorphism we may associate elements of $$\mathbb{Z}$$ to such $$m$$-simplices, the sign difference between two $$m$$-simplices can be interpreted either as their common source $$\Delta^m$$ being oppositely oriented, or, with the orientation of $$\Delta^m$$ fixed, as the two simplex maps specifying opposite directions. Thus $$H_m(M,M\setminus\{x\};\mathbb{Z})$$ encodes the orientation at the point $$x$$.
 
-A natural question then arises: can we assign an orientation to every point $$x\in M$$ in a way that these orientations can be pieced together to match a global orientation on $$M$$? To do this, we first need a $$\mathbb{Z}$$ to serve as a reference. For this purpose, let us fix a constant sheaf $$\underline{\mathbb{Z}}$$ on $$M$$. ([\[Topology\] §Presheaves, ⁋Example 6](/en/math/topology/presheaves#ex6)) Then for each $$x\in M$$, we can think of its stalk $$\underline{\mathbb{Z}}_x$$ as having a generator $$1$$ chosen in a consistent way, and thus for each $$x$$, choosing an isomorphism
+A natural question arises: can we assign an orientation to every point $$x\in M$$ in such a way that these orientations patch together to yield a global orientation on $$M$$? To do so we first need a reference copy of $$\mathbb{Z}$$; fix a constant sheaf $$\underline{\mathbb{Z}}$$ on $$M$$. ([\[Topology\] §Presheaves, ⁋Example 6](/en/math/topology/presheaves#ex6)) For each $$x\in M$$ we may think of the stalk $$\underline{\mathbb{Z}}_x$$ as having its generator $$1$$ chosen in a consistent manner, and therefore choosing an isomorphism
 
 $$\Iso_\mathbb{Z}(H_m(M, M\setminus\{x\}), \underline{\mathbb{Z}}_x)$$
 
-is equivalent to choosing whether $$M$$ has a positive or negative orientation at each $$x$$.
+for each $$x$$ is equivalent to choosing whether $$M$$ is positively or negatively oriented at $$x$$.
 
 <div class="definition" markdown="1">
 
@@ -83,43 +81,43 @@ is equivalent to choosing whether $$M$$ has a positive or negative orientation a
 
 </div>
 
-Now for each open set $$U$$, define
+Now define, for each open set $$U$$,
 
 $$\omega_M^\pre(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underline{\mathbb{Z}}_x)$$
 
-and for each $$U\subseteq V$$, define $$\rho_{VU}:\omega_M^\pre(V)\rightarrow \omega_M^\pre(U)$$ as the canonical projection. ([\[Set Theory\] §Properties of Product Sets, ⁋Definition 1](/en/math/set_theory/property_of_products#def1)) Then $$\omega_M^\pre$$ becomes a presheaf defined on $$M$$ ([\[Topology\] §Presheaves, ⁋Definition 4](/en/math/topology/presheaves#def4)), and for each $$p\in M$$, the stalk $$\omega_{M,x}^\pre$$ of $$\omega_M^\pre$$ at the point $$x$$ is $$\{\pm 1\}$$. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9))
+and for each $$U\subseteq V$$, define $$\rho_{VU}:\omega_M^\pre(V)\rightarrow \omega_M^\pre(U)$$ to be the canonical projection. ([\[Set Theory\] §Properties of Products, ⁋Definition 1](/en/math/set_theory/property_of_products#def1)) Then $$\omega_M^\pre$$ is a presheaf on $$M$$ ([\[Topology\] §Presheaves, ⁋Definition 4](/en/math/topology/presheaves#def4)), and for each $$p\in M$$ the stalk $$\omega_{M,x}^\pre$$ at the point $$x$$ is $$\{\pm 1\}$$. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9))
 
-The sheafification $$\omega_M$$ of $$\omega_M^\pre$$ is called the *orientation-generator sheaf* of $$M$$. This involves examining, when the generator $$1$$ of the constant sheaf $$\underline{\mathbb{Z}}$$ with fixed orientation is fixed, whether the isomorphism $$H_m(M,M\setminus\{x\};\mathbb{Z})$$ maps $$1$$ to $$1$$ or to $$-1$$, and through this $$\omega_M$$ can be viewed as a subsheaf of $$\or_M$$. Since $$\omega_M$$ is a locally constant sheaf, its étale space $$\Spe(\omega_M)$$ is a covering space of $$M$$ with each fiber consisting of two elements.
+The sheafification $$\omega_M$$ of $$\omega_M^\pre$$ is called the *orientation-generator sheaf* of $$M$$. Fixing the generator $$1$$ of the oriented constant sheaf $$\underline{\mathbb{Z}}$$, this sheaf records whether the isomorphism $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong\mathbb{Z}$$ sends $$1$$ to $$1$$ or to $$-1$$; through this observation $$\omega_M$$ may be viewed as a subsheaf of $$\or_M$$. Since $$\omega_M$$ is locally constant, its étale space $$\Spe(\omega_M)$$ is a covering space of $$M$$ whose every fiber consists of two points.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> The étale space $$\Spe(\omega_M)$$ defined above is called the *orientation double cover* of $$M$$, and a global section $$M \rightarrow \Spe(\omega_M)$$ is called a *global orientation*. $$M$$ is *orientable* if a global orientation exists.
+<ins id="def4">**Definition 4**</ins> The étale space $$\Spe(\omega_M)$$ defined above is called the *orientation double cover* of $$M$$, and a global section $$M \rightarrow \Spe(\omega_M)$$ is called a *global orientation*. The manifold $$M$$ is *orientable* if a global orientation exists.
 
 </div>
 
-As the name suggests, $$\Spe(\omega_M)$$ is a covering space of $$M$$, and moreover, for any $$x\in M$$, considering a chart $$U$$ of $$x$$, the preimage $$p^{-1}(U)$$ under the canonical projection $$p:\Spe(\omega_M)\rightarrow M$$ consists of two disjoint open subsets each homeomorphic to $$U$$.
+As its name indicates, $$\Spe(\omega_M)$$ is a covering space of $$M$$; moreover, for any $$x\in M$$, taking a chart $$U$$ about $$x$$, the preimage $$p^{-1}(U)$$ under the canonical projection $$p:\Spe(\omega_M)\rightarrow M$$ splits into two disjoint open subsets each homeomorphic to $$U$$.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**Example 5**</ins> For example, consider the orientation double cover $$p:\Spe(\omega_{S^1})\rightarrow S^1$$ of $$S^1$$. The preimage $$p^{-1}(x)$$ of any point $$x\in S^1$$ under $$p$$ consists of two points $$(p,+)$$ and $$(p,-)$$, and the same holds for a chart $$U$$ containing $$x$$, so $$p^{-1}(U)$$ is divided into two open subsets $$U^+,U^-$$.
+<ins id="ex5">**Example 5**</ins> Consider the orientation double cover $$p:\Spe(\omega_{S^1})\rightarrow S^1$$ of the circle. For any point $$x\in S^1$$, the fiber $$p^{-1}(x)$$ consists of two points $$(x,+)$$ and $$(x,-)$$; the same holds for any chart $$U$$ containing $$x$$, so $$p^{-1}(U)$$ decomposes into two open subsets $$U^+,U^-$$.
 
 ![Orientation_cover_of_S1](/assets/images/Math/Algebraic_Topology/Poincare_Duality-1.png){:style="width:45%" class="invert" .align-center}
 
-Now if we cover $$S^1$$ with such covers and glue the orientations together where the charts overlap, we obtain a double cover with two components as follows.
+Covering $$S^1$$ by such charts and gluing the orientations where they overlap, we obtain a double cover with two components as shown below.
 
 ![Orientation_cover_of_S1_glued](/assets/images/Math/Algebraic_Topology/Poincare_Duality-2.png){:style="width:45%" class="invert" .align-center}
 
-However, not every double cover is a trivial cover. For example, if we glue the top and bottom components of the above cover of $$S^1$$ in a crossed manner, we obtain a double cover with one component, and a similar thing happens with the orientation double cover of a non-orientable manifold.
+However, not every double cover is trivial. For instance, if we cross-glue the top and bottom components of the above cover of $$S^1$$, we obtain a double cover with a single component; the same phenomenon occurs for the orientation double cover of a non-orientable manifold.
 
-To observe this, consider the orientation cover of the Möbius strip $$M$$. As with $$S^1$$, for any point $$x\in M$$, $$p^{-1}(x)$$ consists of two points $$(x,+)$$ and $$(x,-)$$, and the same holds for any point of $$M$$.
+To see this, consider the orientation cover of the Möbius strip $$M$$. As with $$S^1$$, for any point $$x\in M$$ the fiber $$p^{-1}(x)$$ consists of two points $$(x,+)$$ and $$(x,-)$$, and the same is true at every point of $$M$$.
 
 ![orientation_cover_of_M](/assets/images/Math/Algebraic_Topology/Poincare_Duality-3.png){:style="width:40%" class="invert" .align-center}
 
-However, when we try to glue this together to cover all of $$M$$, a problem arises. If we glue the two covers shown in this figure, proceeding counterclockwise while considering the orientation, when we return to $$x$$, $$(x,+)$$ and $$(x,-)$$ are swapped, so we must glue the top and bottom components in a crossed manner. The double cover of $$M$$ created this way becomes homeomorphic to a cylinder.
+Yet when we attempt to glue these together over all of $$M$$, a problem arises. Proceeding counterclockwise around the strip while respecting orientations, by the time we return to $$x$$ the labels $$(x,+)$$ and $$(x,-)$$ have been interchanged, forcing us to cross-glue the top and bottom components. The resulting double cover of $$M$$ is homeomorphic to a cylinder.
 
 </div>
 
-By definition, $$M$$ is orientable if and only if a global section of $$\omega_M$$ exists, which is equivalent to $$\Spe(\omega_M)$$ being a trivial covering space, which is again equivalent to $$\omega_M$$ being a constant sheaf. Applying [§Covering Spaces, ⁋Corollary 12](/en/math/algebraic_topology/covering_spaces#cor12) here, we obtain the following proposition.
+By definition, $$M$$ is orientable if and only if $$\omega_M$$ admits a global section, which is equivalent to $$\Spe(\omega_M)$$ being a trivial covering space, and in turn equivalent to $$\omega_M$$ being a constant sheaf. Applying [§Covering Spaces, ⁋Corollary 12](/en/math/algebraic_topology/covering_spaces#cor12) yields the following proposition.
 
 <div class="proposition" markdown="1">
 
@@ -127,29 +125,29 @@ By definition, $$M$$ is orientable if and only if a global section of $$\omega_M
 
 1. $$M$$ is orientable.
 2. $$\Spe(\omega_M)$$ has two components.
-3. The monodromy action of $$\pi_1(M)$$ acts trivially on $$\Spe(\omega_M)$$.
+3. The monodromy action of $$\pi_1(M)$$ on $$\Spe(\omega_M)$$ is trivial.
 
 </div>
 
-However, since we have already dealt with not only $$\mathbb{Z}$$-modules but also general $$A$$-modules when discussing homology and cohomology, the above argument can also be extended to general $$A$$-modules. For this purpose, first consider the relative homology version of [\[Algebraic Topology\] §Cohomology, ⁋Proposition 1](/en/math/algebraic_topology/cohomology#prop1), and observe that the following (non-canonical) isomorphism
+Since we have already extended homology and cohomology from $$\mathbb{Z}$$-modules to general $$A$$-modules, the preceding argument can be carried out for arbitrary $$A$$ as well. To this end, consider the relative-homology version of [\[Algebraic Topology\] §Cohomology, ⁋Proposition 1](/en/math/algebraic_topology/cohomology#prop1) and observe that there is a (non-canonical) isomorphism
 
 $$H_k(M, M\setminus\{x\};A)\cong H_k(M,M\setminus\{x\})\otimes_\mathbb{Z}A\oplus\Tor_1^\mathbb{Z}(H_{k-1}(M, M\setminus\{x\}), A)$$
 
-exists. However, since $$H_k(M,M\setminus \{x\})$$ is always a trivial group when $$k\neq m$$, from this isomorphism we know that
+Since $$H_k(M,M\setminus \{x\})$$ is trivial whenever $$k\neq m$$, this isomorphism gives
 
 $$H_m(M,M\setminus \{x\};A)\cong H_m(M,M\setminus\{x\})\otimes_\mathbb{Z}A\cong A$$
 
-Therefore, replacing all instances of $$\mathbb{Z}$$ in the above argument with $$A$$ will still make sense, and in particular, we obtain the presheaf of $$A$$-orientations
+Hence replacing every occurrence of $$\mathbb{Z}$$ in the above discussion by $$A$$ remains valid. In particular we obtain the presheaf of $$A$$-orientations
 
 $$\omega_M^A(U)=\prod_{x\in U}\Iso_A(H_m(M,M\setminus\{x\};A), \underline{A}_x)$$
 
-and the concept of global $$A$$-orientation defined from it. The resulting $$A$$-orientation sheaf $$\omega_M^A$$ is nothing but $$\omega_M\otimes A$$.
+and from it the notion of a global $$A$$-orientation. The resulting $$A$$-orientation sheaf $$\omega_M^A$$ is simply $$\omega_M\otimes A$$.
 
-To derive a result like [Proposition 6](#prop6) from this definition, let us revisit [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11). For each covering space $$p:E \rightarrow M$$, we considered the $$\pi_1(M,x)$$-action defined by the monodromy functor on the fiber $$p^{-1}(x)$$, which is equivalent to considering a group homomorphism $$\pi_1(M,x)\rightarrow \Aut(p^{-1}(x))$$. We then need to examine how the $$\pi_1(M,x)$$-action is defined for the covering space $$p:\Spe(\omega_M)\rightarrow M$$, where the fiber $$p^{-1}(x)$$ is defined from the automorphisms of the stalk $$\mathbb{Z}$$
+To derive a result analogous to [Proposition 6](#prop6) for this definition, we revisit [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11). For each covering space $$p:E \rightarrow M$$ we considered the $$\pi_1(M,x)$$-action on the fiber $$p^{-1}(x)$$ defined by the monodromy functor, which is the same as a group homomorphism $$\pi_1(M,x)\rightarrow \Aut(p^{-1}(x))$$. For the covering space $$p:\Spe(\omega_M)\rightarrow M$$, the fiber $$p^{-1}(x)$$ is defined by the automorphisms of the stalk $$\mathbb{Z}$$,
 
 $$\Iso_\mathbb{Z}(\mathbb{Z},\mathbb{Z})\cong \mathbb{Z}^\times\cong \{\pm 1\}$$
 
-and thus the $$\pi_1(M,x)$$-action can be thought of precisely as a group homomorphism $$\pi_1(M,x)\rightarrow \mathbb{Z}^\times$$. Since an $$A$$-module isomorphism from $$A$$ to $$A$$ corresponds exactly to an element of the unit group $$A^\times$$ of $$A$$, this is ultimately equivalent to examining a group homomorphism $$\pi_1(M,x)\rightarrow A^\times$$. Thus [Proposition 6](#prop6) can be generalized as follows.
+so the $$\pi_1(M,x)$$-action is precisely a group homomorphism $$\pi_1(M,x)\rightarrow \mathbb{Z}^\times$$. Since an $$A$$-module isomorphism from $$A$$ to $$A$$ corresponds exactly to an element of the unit group $$A^\times$$, the same construction yields a group homomorphism $$\pi_1(M,x)\rightarrow A^\times$$. Thus [Proposition 6](#prop6) generalizes as follows.
 
 <div class="proposition" markdown="1">
 
@@ -161,101 +159,101 @@ and thus the $$\pi_1(M,x)$$-action can be thought of precisely as a group homomo
 
 </div>
 
-The most noteworthy case in this generalization is when $$A=\mathbb{Z}/2$$. In this case, the only unit of $$A$$ is $$-1=1$$, so there is a unique way to specify an orientation, and thus any manifold is always $$\mathbb{Z}/2$$-orientable.
+The most striking case of this generalization is $$A=\mathbb{Z}/2$$. Here the only unit of $$A$$ is $$-1=1$$, so there is a unique way to specify an orientation, and consequently every manifold is automatically $$\mathbb{Z}/2$$-orientable.
 
 ## Fundamental Class
 
-We now examine the existence of global ($$A$$-)orientations. That is, when local orientations $$s_x$$ are given for all $$x\in X$$, we investigate whether there exists a global section $$s:M\rightarrow \Spe(\omega_M^A)$$ such that $$s(x)=(x,s_x)$$.
+We now turn to the existence of global ($$A$$-)orientations. That is, given local orientations $$s_x$$ for all $$x\in X$$, we ask whether there exists a global section $$s:M\rightarrow \Spe(\omega_M^A)$$ with $$s(x)=(x,s_x)$$.
 
-On the other hand, we know that through the following canonical homomorphism
+On the other hand, via the canonical homomorphism
 
 $$H_m(M; A)\rightarrow H_m(M,M\setminus\{x\};A)\tag{1}$$
 
-any top homology class $$\alpha\in H_m(M;A)$$ defines an element $$\alpha_x\in H_m(M,M\setminus\{x\};A)$$ of the local homology group. A natural question then is whether, when given local orientations $$s_x$$ for each $$x\in S_x$$ viewed as elements of $$A^\times$$ and treated as elements of $$H_m(M,M\setminus\{x\};A)$$, there exists an $$\alpha\in H_m(M;A)$$ whose image in $$H_m(M,M\setminus\{x\};A)$$ under the canonical map equals $$s_x$$ for all $$x\in X$$.
+every top homology class $$\alpha\in H_m(M;A)$$ defines an element $$\alpha_x\in H_m(M,M\setminus\{x\};A)$$ in the local homology group. A natural question is then: regarding the given local orientations $$s_x$$ as elements of $$A^\times$$ and hence of $$H_m(M,M\setminus\{x\};A)$$, does there exist a class $$\alpha\in H_m(M;A)$$ whose image in $$H_m(M,M\setminus\{x\};A)$$ equals $$s_x$$ for every $$x\in X$$?
 
-The above two paragraphs show what form Poincaré duality takes. A global section $$s:M \rightarrow \Spe(\omega_M^A)$$ is essentially a function defined on all of $$M$$, corresponding to the 0-th cohomology. On the other hand, $$\alpha\in H_m(M;A)$$ is an element of the $$m$$-th homology. Poincaré duality shows that these two concepts are equivalent, and more generally, shows a duality between the $$k$$-th cohomology and the $$(n-k)$$-th homology.
+These two paragraphs illustrate the form that Poincaré duality takes. A global section $$s:M \rightarrow \Spe(\omega_M^A)$$ is essentially a function defined on all of $$M$$, corresponding to the notion of $$0$$-th cohomology. By contrast, $$\alpha\in H_m(M;A)$$ is an element of the $$m$$-th homology. Poincaré duality asserts the equivalence of these two notions, and more generally establishes a duality between the $$k$$-th cohomology and the $$(m-k)$$-th homology.
 
-What we need to do in the remainder of this post is largely twofold:
+What remains in this post falls largely into two steps.
 
-1. Show that the lifting of the canonical homomorphism (1) defines a global orientation, and conversely.
-2. Define the *sheaf cohomology* for which a global orientation $$M \rightarrow \Spe(\omega_M^A)$$ exists.
+1. Show that a lift of the canonical homomorphism (1) defines a global orientation, and conversely.
+2. Define the *sheaf cohomology* in which a global orientation $$M \rightarrow \Spe(\omega_M^A)$$ lives.
 
-The core content of Poincaré duality is all contained in the first step, while the second step is closer to learning a language that can express this wisely. Therefore, we start with the first step. This is obtained by the following lemma.
+The heart of Poincaré duality lies entirely in the first step; the second is more a matter of learning the language that expresses it cleanly. We therefore begin with the first step, which is furnished by the following lemma.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem8">**Lemma 8**</ins> Fix a topological manifold $$M$$ of dimension $$m$$. For any compact subset $$C$$ of $$M$$, the following holds:
+<ins id="lem8">**Lemma 8**</ins> Fix a topological manifold $$M$$ of dimension $$m$$. For any compact subset $$C$$ of $$M$$, the following hold.
 
-1. For any given section $$s:M \rightarrow \Spe(\omega_M^A)$$, there exists a unique homology class
+1. Given any section $$s:M \rightarrow \Spe(\omega_M^A)$$, there exists a unique homology class
     
     $$\alpha_C\in H_m(M,M\setminus C;A)$$
 
-    such that for any $$x\in C$$, the image of $$\alpha_C$$ under the canonical homomorphism
+    such that for every $$x\in C$$, the image of $$\alpha_C$$ under the canonical homomorphism
 
     $$H_m(M,M\setminus C;A)\rightarrow H_m(M,M\setminus\{x\};A)$$
 
     equals $$s_x$$.
-2. For all $$i>n$$, $$H_i(M, M\setminus C;A)=0$$.
+2. $$H_i(M, M\setminus C;A)=0$$ for all $$i>m$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, let us show that if this proposition holds for arbitrary compact sets $$C_1,C_2$$ and their intersection $$C_1\cap C_2$$, then it also holds for $$C_1\cup C_2$$. From the Mayer-Vietoris sequence
+First we show that if the proposition holds for arbitrary compact sets $$C_1,C_2$$ and their intersection $$C_1\cap C_2$$, then it also holds for $$C_1\cup C_2$$. From the Mayer–Vietoris sequence
 
 $$\cdots \rightarrow H_k(M,M\setminus (C_1\cup C_2); A)\rightarrow H_k(M,M\setminus C_1;A)\oplus H_k(M,M\setminus C_2;A)\rightarrow H_k(M, M\setminus (C_1\cap C_2);A)\rightarrow\cdots\tag{2}$$
 
-for $$k>m$$, by the inductive hypothesis,
+the inductive hypothesis gives
 
 $$H_k(M,M\setminus C_1;A)=H_k(M,M\setminus C_2;A)=H_k(M,M\setminus(C_1\cap C_2);A)=0$$
 
-so $$H_k(M,M\setminus (C_1\cup C_2);A)$$ must also be $$0$$, from which the second claim follows.
+for $$k>m$$, forcing $$H_k(M,M\setminus (C_1\cup C_2);A)=0$$ as well; this establishes the second claim.
 
-To show the first claim, suppose a section $$s:M \rightarrow \Spe(\omega_M^A)$$ is given. By the inductive hypothesis, these can be lifted for $$C_1,C_2,C_1\cap C_2$$, so we need to piece these together to create a class $$\alpha_{C_1\cup C_2}$$ for $$C_1\cup C_2$$. By the uniqueness of $$\alpha_{C_1},\alpha_{C_2},\alpha_{C_1\cap C_2}$$, both $$\alpha_{C_1}$$ and $$\alpha_{C_2}$$ must become the same element at $$\alpha_{C_1\cap C_2}$$, so in (2), considering the element
+For the first claim, suppose a section $$s:M \rightarrow \Spe(\omega_M^A)$$ is given. By the inductive hypothesis there are unique lifts over $$C_1,C_2,C_1\cap C_2$$, and we must patch these to a class $$\alpha_{C_1\cup C_2}$$. Uniqueness forces $$\alpha_{C_1}$$ and $$\alpha_{C_2}$$ to agree over $$C_1\cap C_2$$, so the element
 
 $$(\alpha_{C_1},-\alpha_{C_2})\in H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus C_2;A)$$
 
-this element belongs to the kernel of $$H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus C_2;A)\rightarrow H_m(M, M\setminus (C_1\cap C_2);A)$$, and thus we can choose an element of $$H_m(M,M\setminus (C_1\cup C_2);A)$$, and uniqueness follows from the injectivity of
+lies in the kernel of the map to $$H_m(M, M\setminus (C_1\cap C_2);A)$$. Hence it lifts to $$H_m(M,M\setminus (C_1\cup C_2);A)$$, and uniqueness follows from the injectivity of
 
 $$0=H_{m+1}(M,M\setminus (C_1\cap C_2);A)\rightarrow H_m(M,M\setminus (C_1\cup C_2))\rightarrow H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus C_2;A)$$
 
-For the base case of the induction, it suffices to consider the case where $$M=\mathbb{R}^m$$ and $$A$$ is a convex compact subset. This is because for a compact set of an arbitrary manifold $$M$$, after covering it with Euclidean charts and using compactness, we can assume $$M=\mathbb{R}^m$$, and by using a basis of open balls of $$\mathbb{R}^m$$ and using compactness again, we can additionally assume $$A$$ is convex. Then in this step, both spaces $$\mathbb{R}^m\setminus A$$ and $$\mathbb{R}^m\setminus \{x\}$$ deformation retract to the same space $$S^{m-1}$$, giving an isomorphism, and the proof is complete.
+For the base case of the induction it suffices to consider $$M=\mathbb{R}^m$$ with $$A$$ a convex compact subset. Indeed, any compact set in an arbitrary manifold $$M$$ can be covered by Euclidean charts, and compactness reduces us to $$M=\mathbb{R}^m$$; using a basis of open balls and compactness again, we may further assume $$A$$ is convex. In this situation both $$\mathbb{R}^m\setminus A$$ and $$\mathbb{R}^m\setminus \{x\}$$ deformation retract onto $$S^{m-1}$$, yielding the required isomorphism and completing the proof.
 
 </details>
 
-In this proof, compactness is absolutely necessary to ensure that the inductive process terminates in finitely many steps when constructing $$\alpha$$ inductively using the Mayer-Vietoris sequence. Indeed, when compactness is absent, Poincaré duality takes a somewhat different form, and to express this in a unified formula, we need to introduce the language of sheaf cohomology.
+In this proof compactness is essential: it guarantees that the inductive construction of $$\alpha$$ via the Mayer–Vietoris sequence terminates in finitely many steps. When compactness is dropped, Poincaré duality assumes a somewhat different form, and to capture both cases in a single statement one must introduce the language of sheaf cohomology.
 
-In any case, by [Lemma 8](#lem8) above, if $$M$$ is a compact topological manifold of dimension $$m$$, setting $$C=M$$ yields the following theorem.
+In any case, by [Lemma 8](#lem8), if $$M$$ is a compact topological manifold of dimension $$m$$, setting $$C=M$$ yields the following theorem.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm9">**Theorem 9**</ins> Let $$M$$ be a compact connected topological manifold of dimension $$m$$. Then for any orientation sheaf $$\omega_M^A$$, there exists a unique class $$[M]\in H_m(M;A)$$ such that the image of $$[M]$$ under the canonical homomorphism (1) coincides with $$s_x$$.
+<ins id="thm9">**Theorem 9**</ins> Let $$M$$ be a compact connected topological manifold of dimension $$m$$. Then for any orientation sheaf $$\omega_M^A$$, there exists a unique class $$[M]\in H_m(M;A)$$ whose image under the canonical homomorphism (1) coincides with $$s_x$$.
 
 </div>
 
-Then by [Lemma 8](#lem8), $$H_m(M;A)$$ is a free $$A$$-module of rank 1 generated by $$[M]$$, and different choices of global orientation correspond to different choices of generators of $$H_m(M;A)$$.
+By [Lemma 8](#lem8), $$H_m(M;A)$$ is the free $$A$$-module of rank $$1$$ generated by $$[M]$$, and distinct choices of global orientation correspond to distinct choices of generator of $$H_m(M;A)$$.
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**Definition 10**</ins> The $$[M]$$ defined in [Theorem 9](#thm9) above is called the *fundamental class* of $$M$$ defined by the global orientation $$s$$.
+<ins id="def10">**Definition 10**</ins> The class $$[M]$$ defined in [Theorem 9](#thm9) is called the *fundamental class* of $$M$$ determined by the global orientation $$s$$.
 
 </div>
 
-Moreover, if a homology class $$[M]$$ satisfying the conditions of [Theorem 9](#thm9) exists, we know that this gives rise to a global section $$s:M \rightarrow \Spe(\omega_M^A)$$.
+Moreover, if a homology class $$[M]$$ satisfying the conditions of [Theorem 9](#thm9) exists, it in turn determines a global section $$s:M \rightarrow \Spe(\omega_M^A)$$.
 
 ## Poincaré Duality
 
-We can now prove Poincaré's theorem for an $$A$$-orientable manifold. For this, consider the cap product homomorphism
+We are now in position to prove Poincaré's theorem for an $$A$$-orientable manifold. Consider the cap product homomorphism
 
 $$-\frown -: H^p(M;A)\otimes_A H_m(M;A) \rightarrow H_{m-p}(M;A)$$
 
-Since $$H_m(M;A)\cong A$$, this homomorphism can be thought of as an $$A$$-module homomorphism from $$H^p(M;A)$$ to $$H_{m-p}(M;A)$$. In particular, introducing the generator $$[M]$$ of $$H_m(M;A)$$, this becomes the homomorphism
+Since $$H_m(M;A)\cong A$$, this homomorphism may be viewed as an $$A$$-module homomorphism from $$H^p(M;A)$$ to $$H_{m-p}(M;A)$$. In particular, fixing the generator $$[M]$$ of $$H_m(M;A)$$, we obtain the homomorphism
 
 $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm11">**Theorem 11**</ins> For an $$A$$-orientable compact manifold $$M$$ of dimension $$m$$ and its fundamental class $$[M]$$, the above homomorphism
+<ins id="thm11">**Theorem 11**</ins> For an $$A$$-orientable compact manifold $$M$$ of dimension $$m$$ and its fundamental class $$[M]$$, the homomorphism
 
 $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 
@@ -263,31 +261,31 @@ is an isomorphism.
 
 </div>
 
-The proof of this also proceeds by induction using the Mayer-Vietoris sequence, similar to the proof of [Lemma 8](#lem8). However, a somewhat different point is that while [Lemma 8](#lem8) was a statement about compact subsets $$C$$, so compactness could be used actively, this time the statement is about $$M$$ itself, so for example, if a chart $$U$$ of $$M$$ is given, it is not compact, so a simple inductive approach is not possible. For this, we define the following.
+The proof again proceeds by induction using the Mayer–Vietoris sequence, much as for [Lemma 8](#lem8). The difference is that [Lemma 8](#lem8) concerned compact subsets $$C$$, so compactness could be exploited directly, whereas here the statement is about $$M$$ itself. If a chart $$U$$ of $$M$$ is given, it need not be compact, so a naive inductive approach fails. To remedy this we make the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**Definition 12**</ins> A cochain $$\varphi\in C^p(M;A)$$ is *compactly supported* if there exists a compact set $$K\subseteq M$$ such that $$\varphi(\sigma)=0$$ holds for all simplices contained in $$M\setminus K$$. The $$i$$-th homology of the cochain complex of compactly supported cochains is called the $$p$$-th *compactly supported cohomology* and is denoted by $$H_c^p(M;A)$$.
+<ins id="def12">**Definition 12**</ins> A cochain $$\varphi\in C^p(M;A)$$ is *compactly supported* if there exists a compact set $$K\subseteq M$$ such that $$\varphi(\sigma)=0$$ for every simplex contained in $$M\setminus K$$. The $$p$$-th *compactly supported cohomology* $$H_c^p(M;A)$$ is the $$p$$-th cohomology of the cochain complex of compactly supported cochains.
 
 </div>
 
-Then the following equation
+The identity
 
 $$H_c^p(M;A)\cong \varinjlim_{\text{\scriptsize$K$ compact}}H^p(M,M\setminus K;A)$$
 
-is intuitively obvious and the proof is clear. For each compact set $$K$$,
+is intuitively clear and straightforward to verify. For each compact set $$K$$ the canonical map
 
 $$H^p(M,M\setminus K;A)\rightarrow H_c^p(M;A)$$
 
-exists canonically, and this is compatible with the directed system on the right-hand side, so the homomorphism
+is compatible with the directed system on the right, yielding a well-defined homomorphism
 
 $$\varinjlim_{\text{\scriptsize$K$ compact}}H^p(M,M\setminus K;A)\rightarrow H_c^p(M;A)$$
 
-is well-defined. That this is an isomorphism can be shown directly. In particular, for any compact manifold $$M$$, $$H_c^p(M,A)\cong H^p(M;A)$$ holds, so the desired result follows from the lemma below.
+that one checks directly is an isomorphism. In particular, for any compact manifold $$M$$ we have $$H_c^p(M,A)\cong H^p(M;A)$$, so the desired result follows from the next lemma.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem13">**Lemma 13**</ins> For any $$A$$-orientable $$m$$-manifold $$M$$, the following isomorphism
+<ins id="lem13">**Lemma 13**</ins> For any $$A$$-orientable $$m$$-manifold $$M$$, the isomorphism
 
 $$H_c^p(M;A)\cong H_{m-p}(M;A)$$
 
@@ -297,139 +295,139 @@ holds for all $$p$$.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-For this, we first need to define the isomorphism. For this purpose, for any compact subset $$K$$, consider the cap product
+We must first define the isomorphism. For any compact subset $$K$$, consider the cap product
 
 $$H^p(M,M\setminus K;A)\times H_m(M,M\setminus K;A)\rightarrow H_{m-p}(M;A)$$
 
-Then by [Lemma 8](#lem8), we can find a homology class
+By [Lemma 8](#lem8), for each point $$x$$ we can find a homology class
 
 $$s_K\in H_m(M,M\setminus K;A)$$
 
-that matches the orientation $$x$$ of $$M$$ when restricted to each point $$x$$. Our claim is that the cap product homomorphism made from these $$s_K$$'s
+restricting to the orientation of $$M$$ at $$x$$. Our claim is that the cap product homomorphisms
 
 $$-\frown s_K: H^p(M,M\setminus K;A) \rightarrow H_{m-p}(M;A)$$
 
-satisfies compatibility with respect to the direct system, and thus defines a homomorphism $$H_c^p(M;A)\rightarrow H_{m-p}(M;A)$$. To verify this, suppose another compact subset $$K'$$ containing $$K$$ and the inclusion $$i:K\rightarrow K'$$ are given. Then for any $$\alpha\in H^p(M,M\setminus K;A)$$,
+are compatible with the direct system, and therefore define a homomorphism $$H_c^p(M;A)\rightarrow H_{m-p}(M;A)$$. To verify this, let $$K'$$ be another compact subset containing $$K$$ and let $$i:K\rightarrow K'$$ be the inclusion. Then for any $$\alpha\in H^p(M,M\setminus K;A)$$,
 
 $$i^\ast\alpha\frown s_{K'}=\alpha\frown i_\ast s_{K'}$$
 
-holds by the projection formula ([§Cup Products, ⁋Proposition 6](/en/math/algebraic_topology/cup_products#prop6)), and by the uniqueness in [Lemma 8](#lem8), $$i_\ast s_{K'}=s_K$$, so we know that this well-defines a homomorphism $$H_c^p(M;A)\rightarrow H_{n-p}(M;A)$$.
+by the projection formula ([§Cup Products, ⁋Proposition 6](/en/math/algebraic_topology/cup_products#prop6)), and uniqueness in [Lemma 8](#lem8) gives $$i_\ast s_{K'}=s_K$$. Hence we obtain a well-defined homomorphism $$H_c^p(M;A)\rightarrow H_{m-p}(M;A)$$.
 
-Our claim is that this homomorphism $$D_M:H_c^p(M;A)\rightarrow H_{n-p}(M;A)$$ is an isomorphism, and to show this, we use induction with the Mayer-Vietoris sequence as in the proof of [Lemma 8](#lem8).
+We claim that this homomorphism $$D_M:H_c^p(M;A)\rightarrow H_{m-p}(M;A)$$ is an isomorphism. The proof again uses induction via the Mayer–Vietoris sequence, as in [Lemma 8](#lem8).
 
-The base step of the induction is when $$M=\mathbb{R}^m$$. In this case, for any ball $$B\subseteq \mathbb{R}^m$$, we know that the orientation $$s_B$$ of $$B$$ gives
+The base case is $$M=\mathbb{R}^m$$. For any ball $$B\subseteq \mathbb{R}^m$$, the orientation $$s_B$$ of $$B$$ yields
 
 $$H_m(\mathbb{R}^m, \mathbb{R}^m\setminus B;A)\cong A$$
 
-and from [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3), $$H^m(\mathbb{R}^m,\mathbb{R}^m\setminus B;A)\cong A$$, where the $$\alpha_B$$ corresponding to the dual basis of the orientation of $$B$$ satisfies
+and by [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3) we have $$H^m(\mathbb{R}^m,\mathbb{R}^m\setminus B;A)\cong A$$. The element $$\alpha_B$$ corresponding to the dual basis of the orientation of $$B$$ satisfies
 
 $$\langle 1\smile \alpha_B, s_B\rangle=\langle 1,\alpha_B\frown s_B\rangle$$
 
-so $$\alpha_B\frown s_B$$ corresponds to the generator of $$H_0(\mathbb{R}^m)\cong A$$, and thus
+so $$\alpha_B\frown s_B$$ corresponds to the generator of $$H_0(\mathbb{R}^m)\cong A$$. Consequently
 
 $$H^p(\mathbb{R}^m,\mathbb{R}^m\setminus B;A)\cong H_{m-p}(\mathbb{R}^m;A)$$
 
-holds for all $$p$$. (For $$p\neq m$$, it is an isomorphism between zero modules, hence a zero map.) Now by increasing the radius of $$B$$ and constructing a directed system covering all of $$\mathbb{R}^m$$, we know that $$H_c^p(M)\rightarrow H_{m-p}(M)$$ is an isomorphism.
+for all $$p$$. (When $$p\neq m$$ both sides are zero modules, so the zero map is an isomorphism.) Enlarging the radius of $$B$$ and passing to the directed system covering all of $$\mathbb{R}^m$$, we conclude that $$H_c^p(M)\rightarrow H_{m-p}(M)$$ is an isomorphism.
 
-Now for the next step, suppose there exist open sets $$U,V$$ of $$M$$ such that $$M=U\cap V$$ and the given proposition holds for $$U,V,U\cap V$$. Then for each compact subset $$K\subset U$$, $$L\subset V$$, consider the relative Mayer-Vietoris sequence
+For the inductive step, suppose $$M=U\cup V$$ with open sets $$U,V$$ for which the proposition holds, as well as for $$U\cap V$$. For compact subsets $$K\subset U$$, $$L\subset V$$, consider the relative Mayer–Vietoris sequence
 
 $$\cdots\rightarrow H^k(M,M\setminus(K\cap L);A)\rightarrow H^k(M,M\setminus K;A)\oplus H^k(M,M\setminus L;A)\rightarrow H^k(M,M\setminus(K\cup L);A)\rightarrow \cdots$$
 
-then after excision and taking the limit, we obtain the following commutative diagram
+After excision and passage to the limit we obtain the commutative diagram
 
 ![MVseq_duality](/assets/images/Math/Algebraic_Topology/Poincare_Duality-4.png){:style="width:36em" class="invert" .align-center}
 
-and the induction is completed from the inductive process and [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2).
+and the induction is completed by the inductive hypothesis and [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2).
 
-However, since there is no assumption that $$M$$ is compact, we need to add some argument. First, suppose $$M$$ is the union of a nested family of open subsets
+Since $$M$$ need not be compact, an additional argument is required. Suppose $$M$$ is the union of a nested family of open subsets
 
 $$U_1\subset U_2\subset\cdots$$
 
-and the given proposition holds for each of them. Then any compact subset of $$M$$ must be contained in some $$U_i$$, from which we obtain the following isomorphisms
+and that the proposition holds for each $$U_i$$. Any compact subset of $$M$$ is contained in some $$U_i$$, whence
 
 $$H_c^p(M)=\varinjlim_i H^p_c(U_i),\qquad H_{m-p}(M)=\varinjlim_i H_{m-p}(U_i)$$
 
-By the assumption, $$H^p_c(U_i)\rightarrow H_{m-p}(U_i)$$ are all isomorphisms, so we obtain the desired result.
+By hypothesis the maps $$H^p_c(U_i)\rightarrow H_{m-p}(U_i)$$ are all isomorphisms, yielding the desired result.
 
-Now consider the case when $$M$$ is an open subset of $$\mathbb{R}^m$$. Then we can first cover $$M$$ with countably many convex open subsets (i.e., open balls) $$U_1,U_2,\ldots$$ each homeomorphic to $$\mathbb{R}^m$$, and since any convex open subset is homeomorphic to $$\mathbb{R}^m$$, we showed in the base step above that the isomorphism of the theorem holds for each of them. Also, the intersection of two convex sets is again a convex set, so by the above induction, the conclusion also holds for $$U_1\cup U_2$$. Next, to show that the conclusion holds for $$U_1\cup U_2\cup U_3$$, we need to show that the intersection
+Now suppose $$M$$ is an open subset of $$\mathbb{R}^m$$. We can cover $$M$$ by countably many convex open subsets (i.e. open balls) $$U_1,U_2,\ldots$$, each homeomorphic to $$\mathbb{R}^m$$; the base step above gives the theorem's isomorphism for each of them. The intersection of two convex sets is again convex, so by induction the conclusion holds for $$U_1\cup U_2$$. To extend to $$U_1\cup U_2\cup U_3$$ we use
 
 $$(U_1\cup U_2)\cap U_3=(U_1\cap U_3)\cup (U_2\cap U_3)$$
 
-satisfies the given condition, where $$U_1\cap U_3$$, $$U_2\cap U_3$$, and $$U_1\cap U_2\cap U_3$$ are all convex open subsets of $$\mathbb{R}^m$$, satisfying the given condition. Similarly, we know that each of
+where $$U_1\cap U_3$$, $$U_2\cap U_3$$, and $$U_1\cap U_2\cap U_3$$ are all convex open subsets of $$\mathbb{R}^m$$, hence satisfy the hypothesis. Proceeding in this way, each of
 
 $$U_1,\quad U_1\cup U_2, \quad U_1\cup U_2\cup U_3,\quad \cdots$$
 
-satisfies the conclusion. Therefore, applying the preceding (infinite) induction to the sequence of nested open subsets
+satisfies the conclusion. Applying the preceding (infinite) induction to the nested sequence
 
 $$U_1\subset U_1\cup U_2\subset U_1\cup U_2\cup U_3\cdots$$
 
-yields the desired result.
+yields the result.
 
-Finally, when $$M$$ is an arbitrary manifold, we can use second countability to cover $$M$$ with countable Euclidean charts and go through the same argument as above.
+Finally, for an arbitrary manifold $$M$$, second countability allows us to cover $$M$$ by countably many Euclidean charts and apply the same argument.
 
 </details>
 
-In particular, in the proof, if $$M$$ were compact, the duality map $$D_M$$ would be exactly the cap product with the fundamental class $$[M]$$.
+In particular, if $$M$$ is compact, the duality map $$D_M$$ is precisely the cap product with the fundamental class $$[M]$$.
 
 ## Twisted Poincaré Duality
 
-When $$M$$ is not $$A$$-orientable, the main reason [Theorem 11](#thm11) fails is fundamentally because $$\or_M^A$$ fails to be a constant sheaf and is only locally constant. In terms of covering spaces, this means that the monodromy action acts nontrivially on the stalk $$A$$, so when we go "one full circle" and return, the stalk $$A$$ gets twisted and attached. Since this twist is an automorphism of $$A$$, it suffices to consider a bijection of the unit group $$A^\times$$ of $$A$$.
+When $$M$$ is not $$A$$-orientable, the principal reason [Theorem 11](#thm11) fails is that $$\or_M^A$$ is not a constant sheaf but merely locally constant. In the language of covering spaces, the monodromy action is nontrivial on the stalk $$A$$: traversing a loop twists the stalk before reattaching it. This twist is an automorphism of $$A$$, so it suffices to consider the action on the unit group $$A^\times$$.
 
-To consider this twist together in the duality, we define *homology with local coefficient*.
+To incorporate this twist into the duality, we define *homology with local coefficients*.
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**Definition 14**</ins> A locally constant sheaf $$\mathscr{L}$$ defined on $$M$$ is called a *local coefficient system*.
+<ins id="def14">**Definition 14**</ins> A locally constant sheaf $$\mathscr{L}$$ on $$M$$ is called a *local coefficient system*.
 
 </div>
 
-Let the stalk of a local system $$\mathscr{L}$$ be $$L$$. Then by [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11), we know that for any path $$\alpha:[0,1]\rightarrow M$$, there exists an isomorphism $$\mathscr{L}_{\alpha(0)}\rightarrow \mathscr{L}_{\alpha(1)}$$ between the stalks. This is simply the isomorphism obtained by lifting the path $$\alpha$$ in the covering space $$\Spe(\mathscr{L})\rightarrow M$$. That is, we obtain the following functor
+Let $$L$$ be the stalk of a local system $$\mathscr{L}$$. By [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11), every path $$\alpha:[0,1]\rightarrow M$$ induces an isomorphism $$\mathscr{L}_{\alpha(0)}\rightarrow \mathscr{L}_{\alpha(1)}$$ between stalks. This is simply the isomorphism obtained by lifting the path $$\alpha$$ in the covering space $$\Spe(\mathscr{L})\rightarrow M$$. Hence we obtain a functor
 
 $$\Pi_1(M)\rightarrow \Ab; \qquad x\mapsto \mathscr{L}_x$$
 
-Then fixing a point $$e_0=(1,0,\ldots,0)$$ of $$\Delta^k$$, we define $$C_\bullet(M,\mathscr{L})$$ by
+Fixing the vertex $$e_0=(1,0,\ldots,0)$$ of $$\Delta^k$$, we define
 
 $$C_\bullet(M,\mathscr{L})=\bigoplus_{\sigma:\Delta^k\rightarrow M}\mathscr{L}_{\sigma(e_0)}$$
 
-While $$\mathscr{L}_x\cong L$$ for each $$x$$, the key point of this definition is that the $$L$$ at each point can change through nontrivial automorphisms. The differential map of this chain complex is defined for a singular $$k$$-simplex $$\sigma:\Delta^k \rightarrow M$$ and coefficient $$a\in \mathscr{L}_{\sigma(e_0)}$$ by
+Although $$\mathscr{L}_x\cong L$$ for each $$x$$, the essential feature of this definition is that the copies of $$L$$ at different points may differ by nontrivial automorphisms. The differential of this chain complex is defined, for a singular $$k$$-simplex $$\sigma:\Delta^k \rightarrow M$$ and coefficient $$a\in \mathscr{L}_{\sigma(e_0)}$$, by
 
 $$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^k\mathscr{L}_{\sigma_k}(a) (\sigma|_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
 
-Here $$\mathscr{L}_{\sigma_k}$$ is obtained by applying the functor $$\Pi_1(M) \rightarrow \Ab$$ to the path in $$M$$ obtained by sending the edge connecting the first vertex $$\sigma(e_0)$$ of the original simplex and the first vertex of the $$k$$-th face. In good situations like ours, we know that using the universal cover $$\widetilde{M}$$ of $$M$$, the monodromy action acting on it (i.e., Deck transformation), and the monodromy representation $$\pi_1(X)\rightarrow \Aut(A)$$, the chain complex obtained by considering
+Here $$\mathscr{L}_{\sigma_k}$$ is obtained by applying the functor $$\Pi_1(M) \rightarrow \Ab$$ to the path in $$M$$ given by the edge joining the first vertex $$\sigma(e_0)$$ of the original simplex to the first vertex of the $$i$$-th face. In favorable situations such as ours, one may instead use the universal cover $$\widetilde{M}$$, the monodromy action (i.e. Deck transformations) upon it, and the monodromy representation $$\pi_1(X)\rightarrow \Aut(A)$$ to form the chain complex
 
 $$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(X)]} A$$
 
-gives the same homology group as the above homology group.
+which yields the same homology group as above.
 
-This may seem like an excessive generalization, since to state the non-orientable version of Poincaré duality, we would set the local coefficient system $$\mathscr{L}$$ to be the constant sheaf $$\underline{A}$$. However, through this generalization, we can also generalize the cohomology part, and this generalization makes Poincaré duality more transparent.
+This may seem an excessive level of generality, for to state the non-orientable version of Poincaré duality we shall ultimately take the local coefficient system $$\mathscr{L}$$ to be the constant sheaf $$\underline{A}$$. Yet this generalization also permits a parallel extension on the cohomology side, and that extension renders Poincaré duality more transparent.
 
-For any topological space $$X$$ and sheaf $$\mathscr{F}$$ defined on it, the global section functor
+For any topological space $$X$$ and sheaf $$\mathscr{F}$$ on it, the global section functor
 
 $$\Gamma(X,-):\Sh(X,\mathcal{A})\rightarrow \mathcal{A}$$
 
-is a left exact functor, so its right derived functor exists. To compute this directly, we use the Godement resolution, defined as follows.
+is left exact, hence admits right derived functors. To compute these directly one uses the Godement resolution, defined as follows.
 
-Consider a topological space $$X$$ and a sheaf $$\mathscr{F}$$ defined on it, and consider the étalé space $$\Spe(\mathscr{F})$$. We know that $$\mathscr{F}$$ is precisely the sheaf of continuous sections of $$\Spe(\mathscr{F})\rightarrow X$$. Now for any open set $$U$$, define
+Given a topological space $$X$$ and a sheaf $$\mathscr{F}$$ on it, consider the étalé space $$\Spe(\mathscr{F})$$. We know that $$\mathscr{F}$$ is precisely the sheaf of continuous sections of $$\Spe(\mathscr{F})\rightarrow X$$. For any open set $$U$$, define
 
 $$\mathscr{G}_0(U)=\prod_{x\in U}\mathscr{F}_x$$
 
-That is, $$\mathscr{G}_0$$ is the sheaf of set-theoretic (not necessarily continuous) sections of $$\Spe(\mathscr{F})\rightarrow X$$. Our idea is to put into the quotient sheaf $$\mathscr{Q}$$ the parts where locally defined functions fail to become functions when pieced together, through the following sequence induced by the inclusion $$\mathscr{F}\rightarrow \mathscr{G}_0$$
+Thus $$\mathscr{G}_0$$ is the sheaf of set-theoretic (not necessarily continuous) sections of $$\Spe(\mathscr{F})\rightarrow X$$. The idea is to push into the quotient sheaf $$\mathscr{Q}$$ the obstructions to piecing together local sections into global ones, via the sequence induced by the inclusion $$\mathscr{F}\rightarrow \mathscr{G}_0$$:
 
 $$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{Q}\rightarrow 0$$
 
-Then for the sheaf $$\mathscr{Q}$$ as well, we can create a sheaf defined by
+Repeating the construction for $$\mathscr{Q}$$ by setting
 
 $$\mathscr{G}_1(U)=\prod_{x\in U}\mathscr{Q}_x$$
 
-and this defines the following *Godement resolution*
+we obtain the *Godement resolution*
 
 $$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{G}_1\rightarrow \cdots$$
 
-Intuitively, this repeatedly puts into $$\mathscr{Q}$$ the parts that prevent the existence of global sections of $$\Spe(\mathscr{F})$$, then into $$\mathscr{Q}'$$ the parts that prevent the existence of global sections of $$\mathscr{Q}$$, and so on. This resolution $$\mathscr{G}_\bullet$$ is not an injective resolution, but since each sheaf is a flabby (flasque) sheaf, we can compute the right derived functors $$R^i\Gamma$$ of the global section functor through it.
+Intuitively, this repeatedly isolates in successive quotients whatever prevents the existence of global sections. The resolution $$\mathscr{G}_\bullet$$ is not an injective resolution, but each $$\mathscr{G}_i$$ is a flabby (flasque) sheaf, so the right derived functors $$R^i\Gamma$$ of the global section functor can be computed from it.
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**Definition 14**</ins> For a topological space $$X$$ and a sheaf $$\mathscr{F}$$ defined on it, the $$k$$-th homology of the sequence of global sections of the Godement resolution
+<ins id="def14">**Definition 14**</ins> For a topological space $$X$$ and a sheaf $$\mathscr{F}$$ on it, the $$k$$-th cohomology of the complex of global sections of the Godement resolution
 
 $$0 \rightarrow \mathscr{F}(X)\rightarrow \mathscr{G}_0(X)\rightarrow \mathscr{G}_1(X)\rightarrow \cdots$$
 
@@ -437,55 +435,55 @@ is denoted by
 
 $$H^k(X; \mathscr{F})$$
 
-and is called the *sheaf cohomology*.
+and is called the *sheaf cohomology* of $$X$$ with coefficients in $$\mathscr{F}$$.
 
 </div>
 
-Now Poincaré duality is generalized to the following isomorphism
+Further details can be found in [\[Algebraic Geometry\] §Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_geometry/sheaf_cohomology#def1). Poincaré duality now generalizes to the isomorphism
 
 $$H^k(M;\mathscr{L})\cong H_{m-k}(M;\or_M^A\otimes \mathscr{L})$$
 
-To return to the original Poincaré duality from this, first set $$\mathscr{L}$$ to be the constant sheaf $$\underline{A}$$. Then for nice spaces like manifolds, it is known that sheaf cohomology $$H^k(M;\underline{A})$$ and singular cohomology $$H^k(M;A)$$ are isomorphic, so we obtain the isomorphism
+To recover the original Poincaré duality, set $$\mathscr{L}$$ to be the constant sheaf $$\underline{A}$$. For nice spaces such as manifolds, sheaf cohomology $$H^k(M;\underline{A})$$ is isomorphic to singular cohomology $$H^k(M;A)$$, whence
 
 $$H^k(M;A)\cong H_{m-k}(M;\or_M^A)$$
 
-Additionally, if $$M$$ is $$A$$-orientable, $$\or_M^A$$ also becomes a constant sheaf, from which we can recover the classical Poincaré duality
+If in addition $$M$$ is $$A$$-orientable, then $$\or_M^A$$ is also constant, and we recover the classical Poincaré duality
 
 $$H^k(M;A)\cong H_{m-k}(M;A)$$
 
-## Poincaré Duality and Cup Product
+## Poincaré Duality and the Cup Product
 
-So far, we have freely used the cup product on the cohomology ring and the cap product defined from it. However, if someone asks *what* the cup product is, it would be difficult to answer. The answer is simple:
+Thus far we have used the cup product on the cohomology ring, and the cap product derived from it, without hesitation. Yet if someone asks *what* the cup product is, the answer is awkward. The answer is simple:
 
-> Cup product is the Poincaré dual of intersection.
+> The cup product is the Poincaré dual of intersection.
 
-To explain rigorously what this means would require at least as much additional effort as we have put in so far. However, to understand intuitively what this means, the following example is probably sufficient.
+To make this statement rigorous would require at least as much effort as we have already expended. To grasp its intuitive meaning, however, the following example suffices.
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**Example 15**</ins> Consider the torus $$T^2=S^1\times S^1$$. From the Künneth formula, we know that the cohomology of $$T^2$$ is
+<ins id="ex15">**Example 15**</ins> Consider the torus $$T^2=S^1\times S^1$$. By the Künneth formula, the cohomology of $$T^2$$ is
 
 $$H^0(T^2;\mathbb{Z})\cong \mathbb{Z}, \quad H^1(T^2;\mathbb{Z})\cong \mathbb{Z}^2,\quad H^2(T^2;\mathbb{Z})$$
 
-The only non-trivial product in this cohomology ring is the product of the two generators $$\alpha,\beta$$ of $$H^1(T^2;\mathbb{Z})$$. According to [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3), these correspond to the duals of two circles of $$T^2$$. Taking their cup product gives a generator of $$H^2(T^2;\mathbb{Z})$$, which follows immediately from the definition of cup product or algebraically since
+The only non-trivial product in this cohomology ring is the product of the two generators $$\alpha,\beta$$ of $$H^1(T^2;\mathbb{Z})$$. By [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3), these correspond to the duals of the two standard circle factors of $$T^2$$. Their cup product is a generator of $$H^2(T^2;\mathbb{Z})$$, which is immediate from the definition of cup product or from the algebraic fact that
 
 $$H^2(T^2;\mathbb{Z})=H^1(T^2;\mathbb{Z})\otimes H^1(T^2;\mathbb{Z})\cong \mathbb{Z}\otimes \mathbb{Z}\cong \mathbb{Z}$$
 
 is generated by $$\alpha\otimes \beta$$.
 
-At this point, the reason why their cup product does not appear as a constant multiple other than $$\pm 1$$ times $$\alpha\times \beta$$ is geometrically as follows. If we denote the homology classes corresponding to $$\alpha$$, $$\beta$$ by $$a,b$$, the intersection of $$a$$ and $$b$$ meets at only one point as shown in the following figure.
+Geometrically, the reason this cup product is $$\pm 1$$ times the generator rather than some other constant multiple is the following. Let $$a,b$$ be the homology classes dual to $$\alpha,\beta$$; then $$a$$ and $$b$$ intersect transversely in a single point, as shown below.
 
 ![Torus_intersection](/assets/images/Math/Algebraic_Topology/Poincare_Duality-5.png){:style="width:30%" class="invert" .align-center}
 
-At this point, classifying how the two curves meet and designating one as positive and one as negative direction is equivalent to giving an orientation of $$T^2$$.
+Classifying how the two curves meet and assigning one a positive and the other a negative direction is precisely what it means to specify an orientation of $$T^2$$.
 
-Then, under this geometric interpretation, how can we explain that $$\alpha^2=0$$? If we literally compute the intersection $$a\cap a$$, it becomes $$a$$ again. The reason this computation gets tangled is that two cycles (in this case, two copies of $$a$$) are not in *general position*. Roughly speaking, if two lines in $$\mathbb{R}^2$$ are given, they generally meet at one point except when they are parallel (including the case where they coincide), and the concept of general position generalizes this.
+How then does this geometric picture explain that $$\alpha^2=0$$? A literal computation of $$a\cap a$$ would yield $$a$$ again. The difficulty is that two copies of the cycle $$a$$ are not in *general position*. Roughly, two lines in $$\mathbb{R}^2$$ generally meet in one point unless they are parallel (including coincidence); the notion of general position extends this idea.
 
-Now consider curves in $$T^2$$ with homology class $$a$$. These are likely not to meet each other, and if they do meet (excluding the case of tangency, which is not general position), they will meet in the following pattern
+Consider curves in $$T^2$$ representing the homology class $$a$$. They can typically be chosen disjoint; if they do meet (excluding tangencies, which violate general position), the intersection looks as follows.
 
 ![intersections_on_torus](/assets/images/Math/Algebraic_Topology/Poincare_Duality-6.png){:style="width:40%" class="invert" .align-center}
 
-At first glance, this seems to create two intersection points, but in the figure above, the two intersection points have opposite signs. That is, if we take the cross product with the line as the first vector and the curve as the second vector, one will give a vector pointing outward and the other pointing inward, hence opposite signs. Thus the two intersection points cancel out, and the intersection becomes $$0$$, so $$\alpha\smile\alpha=0$$.
+At first sight there appear to be two intersection points, but their signs are opposite: taking the cross product with the line as first vector and the curve as second, one points outward and the other inward. The two intersections therefore cancel, giving intersection number zero, and hence $$\alpha\smile\alpha=0$$.
 
 </div>
 
