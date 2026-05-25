@@ -14,12 +14,13 @@ header:
 date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 2
-translated_at: 2026-05-19T03:00:02+00:00
+translated_at: 2026-05-25T19:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-25T19:30:03+00:00
 ---
 ## Definition of Projective Space
 
-In this post we define projective varieties, another important class of algebraic varieties. We begin with the following.
+We now define projective varieties, another important class of algebraic varieties. We begin with the following.
 
 <div class="definition" markdown="1">
 
@@ -39,7 +40,7 @@ The equivalence class $$[(x_0, \ldots, x_n)]$$ is usually denoted by $$[x_0 : \c
 
 ## Homogeneous Polynomials and Projective Space
 
-Just as in the affine case, we must now give $$\mathbb{P}^n$$ a topology. Again, we will define closed sets as zero sets of polynomials, but the point to notice is that since $$\mathbb{P}^n$$ is defined as a quotient set, a polynomial does not in general define a function on $$\mathbb{P}^n$$. That is, for arbitrary $$F \in \mathbb{K}[x_0, \ldots, x_n]$$ we have $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$, but in general
+Just as in the affine case, we must now endow $$\mathbb{P}^n$$ with a topology. Again, we will define closed sets as zero sets of polynomials, but the point to notice is that since $$\mathbb{P}^n$$ is defined as a quotient set, a polynomial does not in general define a function on $$\mathbb{P}^n$$. That is, for arbitrary $$F \in \mathbb{K}[x_0, \ldots, x_n]$$ we have $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$, but in general
 
 $$F(x_0, \ldots, x_n)\neq F(\lambda x_0, \ldots, \lambda x_n),$$
 
@@ -104,7 +105,7 @@ The only difference from the affine case is that the polynomials treated here ar
 
 </details>
 
-Just as in the affine case, this shows that there exists a topology on projective space $$\mathbb{P}^n$$ whose closed sets are the projective algebraic sets, and we can give each projective variety the subspace topology induced from it. This topology is likewise called the *Zariski topology*. (We first studied the Zariski topology in the affine case in [[Affine Varieties] §Definition of Affine Varieties](/en/math/algebraic_varieties/affine_varieties).)
+Just as in the affine case, this shows that there exists a topology on projective space $$\mathbb{P}^n$$ whose closed sets are the projective algebraic sets, and we can give each projective variety the subspace topology induced from it. This topology is likewise called the *Zariski topology*. (We first examined the Zariski topology in the affine case in [[Affine Varieties] §Definition of Affine Varieties](/en/math/algebraic_varieties/affine_varieties).)
 
 ## Projective Nullstellensatz
 
@@ -150,7 +151,7 @@ Give each $$U_i$$ the subspace topology inherited from $$\mathbb{P}^n$$. Then th
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-For convenience of notation we prove the case $$i=0$$. Define a map $$\varphi_0: U_0 \to \mathbb{A}^n$$ by
+For notational convenience we prove the case $$i=0$$. Define a map $$\varphi_0: U_0 \to \mathbb{A}^n$$ by
 
 $$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right).$$
 
@@ -180,7 +181,7 @@ Therefore $$\varphi_0$$ and $$\psi_0$$ are continuous inverses of each other, so
 
 </details>
 
-Intuitively, we may think of $$U_i$$ as the set of points whose coordinate $$x_i$$ is not “at infinity.” Moreover, $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$, and by the proposition above each $$U_i \cong \mathbb{A}^n$$. Since the key ingredient in the proof of the above proposition is the following statement, we separate it out.
+Intuitively, we may think of $$U_i$$ as the set of points whose coordinate $$x_i$$ is not "at infinity." Moreover, $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$, and by the proposition above each $$U_i \cong \mathbb{A}^n$$. Since the key ingredient in the proof of the above proposition is the following statement, we separate it out.
 
 <div class="proposition" markdown="1">
 
@@ -214,11 +215,11 @@ This conic is the expression in homogeneous coordinates of the cone $$\x_0^2 + \
 
 This happens because the equation $$\x_0^2 + \x_1^2 = \x_2^2$$ defines a cone in $$\mathbb{A}^3$$, and intersecting it with the planes $$\x_0=1$$, $$\x_1=1$$, $$\x_2=1$$ yields hyperbolas and a circle.
 
-On the other hand, we can also interpret this directly in $$\mathbb{P}^2$$. To do so, we construct $$\mathbb{P}^2$$ as follows. For points with $$\x_2\neq 0$$ we apply radial projection onto the upper hemisphere satisfying $$\x_2>0$$; for points with $$\x_2=0$$ we identify antipodal points. Through this construction, $$\mathbb{P}^2$$ can be thought of as the “line at infinity” $$\mathbb{P}^1$$ together with the plane $$\mathbb{A}^2$$ corresponding to the surface of the upper hemisphere. Then the given cone first becomes a circle contained in the upper hemisphere via radial projection, and from this we see that $$X$$ appears as a circle in $$\mathbb{P}^2$$.
+On the other hand, we can also interpret this directly in $$\mathbb{P}^2$$. To do so, we construct $$\mathbb{P}^2$$ as follows. For points with $$\x_2\neq 0$$ we apply radial projection onto the upper hemisphere satisfying $$\x_2>0$$; for points with $$\x_2=0$$ we identify antipodal points. Through this construction, $$\mathbb{P}^2$$ can be thought of as the "line at infinity" $$\mathbb{P}^1$$ together with the plane $$\mathbb{A}^2$$ corresponding to the surface of the upper hemisphere. Then the given cone first becomes a circle contained in the upper hemisphere via radial projection, and from this we see that $$X$$ appears as a circle in $$\mathbb{P}^2$$.
 
 Of course, we could also have constructed $$\mathbb{P}^2$$ by radially projecting points with $$\x_0\neq 0$$ onto the upper hemisphere with $$\x_0>0$$ and taking the points with $$\x_0=0$$ as $$\mathbb{P}^1$$. In this process two semicircles would be drawn on the upper hemisphere, but the boundary points of these two semicircles would be identified with each other in the process of identifying the points with $$\x_0=0$$, so in this picture too $$X$$ would be a circle.
 
-From this point of view, looking at $$X$$ in $$U_i$$ corresponds to removing the line at infinity $$\x_i=0$$ from $$\mathbb{P}^2$$. If we look at $$X$$ in $$U_2$$, then as we saw above, $$X$$ does not meet the line at infinity $$\x_2=0$$, so removing this line leaves a complete circle. However, if for instance we remove the line at infinity $$\x_1=0$$, then $$X$$ meets $$\x_1=0$$ in two points, and so we can understand that removing these two points from the circle $$X$$ and “unfolding” gives a hyperbola.
+From this point of view, looking at $$X$$ in $$U_i$$ corresponds to removing the line at infinity $$\x_i=0$$ from $$\mathbb{P}^2$$. If we look at $$X$$ in $$U_2$$, then as we saw above, $$X$$ does not meet the line at infinity $$\x_2=0$$, so removing this line leaves a complete circle. However, if for instance we remove the line at infinity $$\x_1=0$$, then $$X$$ meets $$\x_1=0$$ in two points, and so we can understand that removing these two points from the circle $$X$$ and "unfolding" gives a hyperbola.
 
 ![sketch](/assets/images/Math/Algebraic_Varieties/Projective_Varieties-1.png){:style="width:50em" class="invert" .align-center}
 
@@ -234,7 +235,7 @@ The preceding example shows how to view a curve in projective space inside each 
 
 $$C(X) = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 : \cdots : x_n] \in X\} \cup \{0\}.$$
 
-In other words, $$C(X)$$ is the union of the points of $$\mathbb{A}^{n+1}$$ that appear when all points of $$X$$ are expressed in homogeneous coordinates, together with the origin.
+That is, $$C(X)$$ is the union of the points of $$\mathbb{A}^{n+1}$$ that appear when all points of $$X$$ are expressed in homogeneous coordinates, together with the origin.
 
 </div>
 
@@ -244,7 +245,7 @@ In other words, $$C(X)$$ is the union of the points of $$\mathbb{A}^{n+1}$$ that
 
 </div>
 
-The following properties then hold, and their proofs are not difficult.
+The following then hold, and their proofs are not difficult.
 
 <div class="proposition" markdown="1">
 
@@ -270,7 +271,7 @@ Finally we define morphisms of projective varieties. Earlier, when defining proj
 
 $$\varphi(x) = [F_0(x) : \cdots : F_m(x)]$$
 
-and for every $$x \in X$$ the $$F_i(x)$$ are not simultaneously zero.
+and the $$F_i(x)$$ are not simultaneously zero for any $$x \in X$$.
 
 </div>
 
@@ -286,7 +287,7 @@ so one can check that well-definedness is guaranteed. The following examples are
 
 $$[x:y]\mapsto [x^2: xy:y^2]$$
 
-is a morphism between projective spaces. As another example, the *Segre embedding* of $$\mathbb{P}^1\times \mathbb{P}^1$$ into $$\mathbb{P}^3$$ is the morphism given by the formula
+is a morphism between projective spaces. As another example, the *Segre embedding* of $$\mathbb{P}^1\times \mathbb{P}^1$$ into $$\mathbb{P}^3$$ is the morphism given by
 
 $$([x:y], [u:v])\mapsto [xu: xv: yu: yv].$$
 
@@ -315,5 +316,5 @@ is an isomorphism from $$\mathbb{P}^1$$ onto $$C$$.
 **References**
 
 **[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Zarieties in Projective Space*, Springer, 2013.  
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
 **[Ful]** W. Fulton, *Algebraic Curves*, 2008.

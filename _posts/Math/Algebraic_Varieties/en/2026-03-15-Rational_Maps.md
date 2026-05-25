@@ -14,12 +14,13 @@ header:
 date: 2026-03-15
 last_modified_at: 2026-03-15
 weight: 4
-translated_at: 2026-05-19T04:00:02+00:00
+translated_at: 2026-05-25T20:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-25T20:30:03+00:00
 ---
 In [§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7) we defined regular maps, functions between quasi-projective varieties. Above all, these are functions defined at every point of the domain; even if expressed in rational form over $$D(f)$$ as in [§Affine Varieties, ⁋Definition 13](/en/math/algebraic_varieties/affine_varieties#def13), the only denominators allowed are powers of $$f$$, so they are defined everywhere.
 
-However, many kinds of functions are still given in a form that is not a regular map. For example, $$(x, y) \mapsto [x : y]$$ is not a regular map because it is undefined at the origin, yet it looks like a perfectly natural function. In this post we examine *rational maps*, functions defined <em>at most points</em>.
+However, many natural functions are still not regular maps. For example, $$(x, y) \mapsto [x : y]$$ is not a regular map because it is undefined at the origin, yet it is a perfectly natural function. In this post we examine *rational maps*, functions defined <em>at most points</em>.
 
 ## Rational Functions
 
@@ -31,7 +32,7 @@ Just as when we defined regular maps, before defining rational maps we first def
 
 </div>
 
-The intuition is as follows. In the Zariski topology closed sets are small and open sets are large. Thus a rational function is a function that is undefined on a small set but defined at most remaining points. For instance, essentially every open set in the Zariski topology can be thought of as a union of sets of the form $$D(g)$$, and regular functions of the form $$f/g$$ defined on them are now regarded as functions. ([§Affine Varieties, ⁋Definition 13](/en/math/algebraic_varieties/affine_varieties#def13)) Of course this function is undefined at points where $$g$$ vanishes, but that is precisely why we consider functions defined on an open set $$U$$, and in any case the zero locus of $$g$$ is small from the viewpoint of the whole space.
+The intuition is as follows. In the Zariski topology closed sets are small and open sets are large. Thus a rational function is a function that is undefined on a small set but defined at most remaining points. For instance, essentially every open set in the Zariski topology can be thought of as a union of sets of the form $$D(g)$$, and regular functions of the form $$f/g$$ defined on them are now regarded as functions. ([§Affine Varieties, ⁋Definition 13](/en/math/algebraic_varieties/affine_varieties#def13)) Of course this function is undefined at points where $$g$$ vanishes, but that is precisely why we consider functions defined on an open set $$U$$; in any case, the zero locus of $$g$$ is small from the viewpoint of the whole space.
 
 We denote the set of all rational functions on $$X$$ by $$\mathbb{K}(X)$$. The sum and product of two rational functions are defined on the intersection of their domains, and the inverse of a nonzero rational function is defined at points where the function does not vanish. Hence $$\mathbb{K}(X)$$ is a field, which we call the *function field*.
 
@@ -41,7 +42,7 @@ We denote the set of all rational functions on $$X$$ by $$\mathbb{K}(X)$$. The s
 
 </div>
 
-The heart of this proposition is representing an arbitrary regular function $$f:U\rightarrow \mathbb{K}$$ defined on an arbitrary open set $$U$$ as a fraction; since $$U$$ can be written as a union of $$D(f)$$'s ([§Affine Varieties, ⁋Proposition 6](/en/math/algebraic_varieties/affine_varieties#prop6)) and a regular function on it has the form of a rational expression whose denominator is a power of $$f$$, the proof is not difficult.
+The heart of this proposition is representing an arbitrary regular function $$f:U\rightarrow \mathbb{K}$$ defined on an arbitrary open set $$U$$ as a fraction. Since $$U$$ can be written as a union of $$D(f)$$'s ([§Affine Varieties, ⁋Proposition 6](/en/math/algebraic_varieties/affine_varieties#prop6)) and a regular function on it has the form of a rational expression whose denominator is a power of $$f$$, the proof is not difficult.
 
 What is important is that this proposition provides a practical way to compute rational functions. For example, the coordinate ring of $$X = V(\y - \x^2)$$ is $$\mathbb{K}[\x, \y]/(\y - \x^2) \cong \mathbb{K}[\x]$$, and therefore $$\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[\x]) = \mathbb{K}(\x)$$.
 
@@ -53,9 +54,9 @@ What is important is that this proposition provides a practical way to compute r
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, it is obvious that the inclusion $$\iota: U \hookrightarrow X$$ induces an embedding of function fields $$\iota^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(U)$$. Since any nonzero field homomorphism is an inclusion, it suffices to show that $$\iota^\ast$$ is surjective. ([\[Field Theory\] §Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2))
+First, it is obvious that the inclusion $$\iota: U \hookrightarrow X$$ induces an embedding of function fields $$\iota^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(U)$$. Since any nonzero field homomorphism is injective, it suffices to show that $$\iota^\ast$$ is surjective. ([\[Field Theory\] §Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2))
 
-Now for any $$f \in \mathbb{K}(U)$$, the function $$f$$ is a regular function on some nonempty open subset $$V$$ of $$U$$, and then since this $$V$$ is also open in $$X$$, the pair $$(V,f)$$ belongs to $$\mathbb{K}(X)$$. 
+Now for any $$f \in \mathbb{K}(U)$$, the function $$f$$ is a regular function on some nonempty open subset $$V$$ of $$U$$; since this $$V$$ is also open in $$X$$, the pair $$(V,f)$$ belongs to $$\mathbb{K}(X)$$.
 
 </details>
 <div class="example" markdown="1">
@@ -63,7 +64,7 @@ Now for any $$f \in \mathbb{K}(U)$$, the function $$f$$ is a regular function on
 <ins id="ex4">**Example 4**</ins> 
 To determine the function field $$\mathbb{K}(\mathbb{P}^n)$$ of $$\mathbb{P}^n$$, by [Proposition 3](#prop3) it is enough to compute the function field on the open set $$U_0$$ of $$\mathbb{P}^n$$. Since $$U_0$$ is an affine variety, by [Proposition 2](#prop2) this equals the fraction field of $$\mathbb{K}[U_0]$$, and therefore the function field of $$\mathbb{P}^n$$ is the field $$\mathbb{K}(\t_1,\ldots, \t_n)$$ generated by $$n$$ indeterminates. 
 
-Concretely, writing elements of $$\mathbb{P}^n$$ as $$[x_0:\cdots: x_n]$$ and letting $$\x_i$$ be the coordinate function extracting the $$i$$-th coordinate, we obtain this by setting $$\t_i=\x_i/\x_0$$. If we had chosen a different open set $$U_j$$, similar rational functions would be defined by $$\t_i=\x_i/\x_j$$, and thus in general the rational functions on $$\mathbb{P}^n$$ are represented as ratios $$F/G$$ of homogeneous polynomials of the same degree. 
+Concretely, writing elements of $$\mathbb{P}^n$$ as $$[x_0:\cdots: x_n]$$ and letting $$\x_i$$ be the coordinate function extracting the $$i$$-th coordinate, we obtain this by setting $$\t_i=\x_i/\x_0$$. If we had chosen a different open set $$U_j$$, similar rational functions would be defined by $$\t_i=\x_i/\x_j$$; thus in general the rational functions on $$\mathbb{P}^n$$ are represented as ratios $$F/G$$ of homogeneous polynomials of the same degree. 
 
 </div>
 

@@ -14,14 +14,15 @@ header:
 date: 2026-03-15
 last_modified_at: 2026-03-17
 weight: 3
-translated_at: 2026-05-19T03:30:01+00:00
+translated_at: 2026-05-25T20:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-25T20:00:03+00:00
 ---
-In [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties) and [§Projective Varieties](/en/math/algebraic_varieties/projective_varieties), we examined geometric objects defined as subsets of affine space and projective space, respectively. However, the most natural objects in algebraic geometry belong to a larger category that encompasses both. In this section we define *quasi-projective varieties* and show that they include both affine and projective varieties. We also define morphisms between quasi-projective varieties and show that they agree with the existing notions.
+In [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties) and [§Projective Varieties](/en/math/algebraic_varieties/projective_varieties), we examined geometric objects defined as subsets of affine space and projective space, respectively. However, the most natural objects in algebraic geometry belong to a larger category encompassing both. In this section we define *quasi-projective varieties* and show that they include both affine and projective varieties. We also define morphisms between quasi-projective varieties and verify that they agree with the existing notions.
 
 ## Definition of Quasi-projective Varieties
 
-Open subsets of projective space are natural geometric objects. For example, the standard affine cover $$U_0$$ obtained by removing the line $$\x_0=0$$ from $$\mathbb{P}^2$$ is not a projective variety, but it is still an object defined by polynomials—in fact, it is an affine variety.
+Open subsets of projective space are natural geometric objects. For example, the standard affine cover $$U_0$$ obtained by removing the line $$\x_0=0$$ from $$\mathbb{P}^2$$ is not a projective variety, yet it is still an object defined by polynomials—in fact, it is an affine variety.
 
 <div class="definition" markdown="1">
 
@@ -29,7 +30,7 @@ Open subsets of projective space are natural geometric objects. For example, the
 
 </div>
 
-Of course, $$X$$ inherits the topology of $$Y$$, and this topology is also called the *Zariski topology*. By definition, it is obvious that quasi-projective varieties include all projective varieties. Our first proposition is that any affine variety is quasi-projective.
+Of course, $$X$$ inherits the topology of $$Y$$, and this topology is again called the *Zariski topology*. By definition, it is obvious that quasi-projective varieties include all projective varieties. Our first proposition is that any affine variety is quasi-projective.
 
 <div class="proposition" markdown="1">
 
@@ -53,7 +54,7 @@ an open set. This completes the proof.
 
 Examining the proof above, one easily sees that the Zariski topology defined on a quasi-projective variety agrees with the Zariski topology previously defined on an affine variety, and similarly for projective varieties.
 
-In general, for both the affine and projective cases, open subsets of a given variety are more often not themselves affine or projective varieties. Quasi-projective varieties form a much broader category than these, and the following holds.
+In general, for both the affine and projective cases, open subsets of a given variety are more often not themselves affine or projective varieties. Quasi-projective varieties form a much broader category, and the following holds.
 
 <div class="proposition" markdown="1">
 
@@ -77,7 +78,7 @@ Hence $$Z$$ is an open subset of the projective variety $$Y \cap W$$.
 
 ## Regular Functions and Regular Maps
 
-From now on, unless otherwise mentioned, a variety will always mean a quasi-projective variety. Our geometric intuition is that every point of a variety $$X$$ has an affine open neighborhood. We have already proved this for the affine and projective cases respectively, so we only need to extend it to the quasi-projective case.
+Henceforth, unless otherwise stated, a variety will always mean a quasi-projective variety. Our geometric intuition is that every point of a variety $$X$$ has an affine open neighborhood. We have already proved this for the affine and projective cases separately, so we only need to extend it to the quasi-projective case.
 
 <div class="proposition" markdown="1">
 
@@ -126,7 +127,7 @@ must hold. For the right-hand side to be a polynomial, $$q$$ must be a constant 
 
 </div>
 
-We now define morphisms between varieties, that is, regular maps. There are several ways to define this, but we will always assume that a variety is given together with an embedding into projective space, and since morphisms between projective spaces have already been defined, we use them to make the following definition. ([§Projective Varieties, ⁋Definition 15](/en/math/algebraic_varieties/projective_varieties#def15))
+We now define morphisms between varieties, that is, regular maps. There are several ways to do this, but we shall always assume that a variety is given together with an embedding into projective space, and since morphisms between projective spaces have already been defined, we use them to make the following definition. ([§Projective Varieties, ⁋Definition 15](/en/math/algebraic_varieties/projective_varieties#def15))
 
 <div class="definition" markdown="1">
 
