@@ -1,6 +1,6 @@
 ---
 title: "Vector Spaces"
-excerpt: "Definition of vector spaces, simple properties, and examples"
+excerpt: "The definition of vector spaces, simple properties, and examples"
 
 categories: [Math / Linear Algebra]
 permalink: /en/math/linear_algebra/vector_spaces
@@ -15,42 +15,42 @@ date: 2022-07-28
 last_modified_at: 2022-07-28
 
 weight: 2
-translated_at: 2026-05-21T02:30:01+00:00
+translated_at: 2026-05-26T16:30:02+00:00
 translation_source: kimi-cli
 ---
-As we mentioned in the opening of the previous post, the *vector space* is the space studied in linear algebra; it is a concept generalizing the coordinate space learned in high school. For this purpose, we defined abelian groups and fields in the previous post.
+As we mentioned in the introduction to the previous post, the *vector space* is the central object of study in linear algebra, generalizing the coordinate spaces learned in high school. To prepare for this, we defined abelian groups and fields in the last post.
 
-Many linear algebra textbooks avoid these definitions and simply consider only $$\mathbb{R}$$-vector spaces or $$\mathbb{C}$$-vector spaces, but the more general case is not at all complicated, so there is no need to restrict our attention to special cases.
+Many linear algebra textbooks avoid these definitions and consider only $$\mathbb{R}$$-vector spaces or $$\mathbb{C}$$-vector spaces, but the more general case is not at all more complicated, so there is no need to restrict our attention to special cases.
 
-## Definition
+## Definition of Vector Spaces
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let $$\mathbb{K}$$ be a field and let $$V$$ be an abelian group. We say that $$V$$ is a *vector space over $$\mathbb{K}$$*, or simply a *$$\mathbb{K}$$-vector space*, if there exists an additional operation (*scalar multiplication*) $$\cdot:\mathbb{K}\times V\rightarrow V$$ such that
+<ins id="def1">**Definition 1**</ins> Let $$\mathbb{K}$$ be a field and $$V$$ an abelian group. We say that $$V$$ is a *vector space over $$\mathbb{K}$$*, or simply a *$$\mathbb{K}$$-vector space*, if there is an additional operation (*scalar multiplication*) $$\cdot:\mathbb{K}\times V\rightarrow V$$ satisfying
 
-1. for any $$\alpha,\beta\in\mathbb{K}$$ and any $$u\in V$$, we have $$\alpha\cdot(\beta\cdot u)=(\alpha\beta)\cdot u$$.
-2. for any $$\alpha\in\mathbb{K}$$ and any $$u,v\in V$$, we have $$\alpha\cdot(u+_{\tiny V}v)=(\alpha\cdot u)+_{\tiny V}(\alpha\cdot v)$$.
-3. for any $$\alpha,\beta\in\mathbb{K}$$ and any $$u\in V$$, we have $$(\alpha+_{\tiny \mathbb{K}}\beta)\cdot u=(\alpha\cdot u)+_{\tiny V}(\beta\cdot u)$$.
-4. for the multiplicative identity $$1\in\mathbb{K}$$ of $$\mathbb{K}$$, we have $$1\cdot u=u$$ for any $$u\in V$$.
+1. $$\alpha\cdot(\beta\cdot u)=(\alpha\beta)\cdot u$$ for any $$\alpha,\beta\in\mathbb{K}$$ and any $$u\in V$$.
+2. $$\alpha\cdot(u+_{\tiny V}v)=(\alpha\cdot u)+_{\tiny V}(\alpha\cdot v)$$ for any $$\alpha\in\mathbb{K}$$ and any $$u,v\in V$$.
+3. $$(\alpha+_{\tiny \mathbb{K}}\beta)\cdot u=(\alpha\cdot u)+_{\tiny V}(\beta\cdot u)$$ for any $$\alpha,\beta\in\mathbb{K}$$ and any $$u\in V$$.
+4. $$1\cdot u=u$$ for any $$u\in V$$, where $$1\in\mathbb{K}$$ is the multiplicative identity.
 
-all hold. The elements of $$V$$ are called *vectors*.
+The elements of $$V$$ are called *vectors*.
 
 </div>
 
-As in the definition above, from now on we shall write elements of the field $$\mathbb{K}$$ as $$\alpha,\beta,\ldots$$ and elements of a $$\mathbb{K}$$-vector space as $$u,v,\ldots$$ in order to avoid confusion. In the above definition we distinguished $$+_{\tiny V}$$ and $$+_{\tiny \mathbb{K}}$$, but if we separate them as in the notation we just introduced, it is clear whether the elements around $$+$$ belong to $$\mathbb{K}$$ or to $$V$$, so there is no danger of confusion in writing them simply as $$+$$.
+As in the definition above, to avoid confusion we will write elements of the field $$\mathbb{K}$$ as $$\alpha,\beta,\ldots$$ and elements of a $$\mathbb{K}$$-vector space as $$u,v,\ldots$$. In the definition we distinguished $$+_{\tiny V}$$ and $$+_{\tiny \mathbb{K}}$$, but with this notation the elements around $$+$$ make it clear whether they belong to $$\mathbb{K}$$ or $$V$$, so we may simply write $$+$$ without risk of confusion.
 
-Likewise, we shall write the scalar multiplication as $$\alpha u$$ instead of $$\alpha\cdot u$$. The only concern in this case is that when we write $$\alpha\beta u$$, it may be unclear whether this means $$(\alpha\beta)u$$ or $$\alpha(\beta u)$$; however, by the first condition of the above definition the value is the same no matter which interpretation we choose, so this is nothing to worry about.
+Similarly, we will write $$\alpha u$$ instead of $$\alpha\cdot u$$. The only concern is that $$\alpha\beta u$$ could be read as either $$(\alpha\beta)u$$ or $$\alpha(\beta u)$$, but by the first condition of the definition both choices yield the same value, so this is not a problem.
 
-A vector space is an abelian group $$V$$ equipped with the additional structure of $$\mathbb{K}$$-scalar multiplication. Therefore $$V$$ has all the properties that an abelian group has. ([§Abelian Groups and Fields, ⁋Proposition 2](/en/math/linear_algebra/fields#prop2) and [§Abelian Groups and Fields, ⁋Corollary 3](/en/math/linear_algebra/fields))
+A vector space is an abelian group $$V$$ equipped with the additional structure of $$\mathbb{K}$$-scalar multiplication. Therefore $$V$$ possesses all the properties of an abelian group. ([§Abelian Groups and Fields, ⁋Proposition 2](/en/math/linear_algebra/fields#prop2) and [§Abelian Groups and Fields, ⁋Corollary 3](/en/math/linear_algebra/fields))
 
-The following are additional properties determined by the $$\mathbb{K}$$-scalar multiplication.
+The following properties are additional ones determined by the $$\mathbb{K}$$-scalar multiplication.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**Proposition 2**</ins> Let a $$\mathbb{K}$$-vector space $$V$$ be given. Then
+<ins id="prop2">**Proposition 2**</ins> Let $$V$$ be a $$\mathbb{K}$$-vector space. Then
 
-1. for any $$\alpha\in\mathbb{K}$$, we have $$\alpha0=0$$, and
-2. for any $$v\in V$$, we have $$0v=0$$.
+1. $$\alpha 0=0$$ for any $$\alpha\in\mathbb{K}$$, and
+2. $$0v=0$$ for any $$v\in V$$.
 
 Conversely, if $$\alpha v=0$$, then either $$\alpha=0$$ or $$v=0$$.
 
@@ -66,25 +66,25 @@ so $$\alpha0=0$$, and similarly
 
 $$0v+0v=(0+0)v=0v$$
 
-so $$0v=0$$. Finally, suppose $$\alpha v=0$$ and $$\alpha\neq 0$$. Then there exists $$\alpha^{-1}\in\mathbb{K}$$ with $$\alpha\alpha^{-1}=1$$, and therefore
+so $$0v=0$$. Finally, suppose $$\alpha v=0$$ and $$\alpha\neq 0$$. Then $$\alpha^{-1}\in\mathbb{K}$$ exists with $$\alpha\alpha^{-1}=1$$, and thus
 
 $$v=1v=(\alpha^{-1}\alpha)v=\alpha^{-1}(\alpha v)=\alpha^{-1}0=0$$
 
-so $$v=0$$, and the given proposition holds.
+so $$v=0$$, and the proposition follows.
 
 </details>
 
-The $$0$$ appearing in item 1 of the above proposition and the $$0$$ on the right-hand side of item 2 are both elements of $$V$$, while the $$0$$ on the left-hand side of item 2 is an element of $$\mathbb{K}$$. To be rigorous we ought to distinguish them as $$0_{\tiny V}$$ and $$0_{\tiny \mathbb{K}}$$, but in context they can be clearly distinguished, so we write them simply as $$0$$.
+The $$0$$ appearing in part 1 of the proposition and on the right-hand side of part 2 are elements of $$V$$, while the $$0$$ on the left-hand side of part 2 is an element of $$\mathbb{K}$$. Strictly speaking these should be distinguished as $$0_{\tiny V}$$ and $$0_{\tiny \mathbb{K}}$$, but context makes the distinction clear, so we write them all as $$0$$.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor3">**Corollary 3**</ins> For any element $$v$$ of a $$\mathbb{K}$$-vector space $$V$$, we always have $$(-1)v=-v$$.
+<ins id="cor3">**Corollary 3**</ins> For any element $$v$$ of a $$\mathbb{K}$$-vector space $$V$$, $$(-1)v=-v$$ always holds.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-This is immediate from the identity
+This follows immediately from the equation
 
 $$(-1)v+v=(-1)v+1v=((-1)+1)v=0v=0$$
 
@@ -92,53 +92,53 @@ and the uniqueness of additive inverses in $$V$$.
 
 </details>
 
-## Examples
+## Examples of Vector Spaces
 
-Now let us look at some examples of vector spaces.
+Let us now look at some examples of vector spaces.
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**Example 4**</ins> The simplest example of a vector space is $$\{0\}$$. There is only one way to endow this set with an addition structure (namely $$0+0=0$$), and under this structure the set has the structure of an abelian group. Moreover, no matter which field $$\mathbb{K}$$ we take, there is also only one way to define a scalar multiplication on this set (namely $$\alpha 0=0$$), and the scalar multiplication thus defined makes $$\{0\}$$ into a $$\mathbb{K}$$-vector space. This is called the *trivial space*.
+<ins id="ex4">**Example 4**</ins> The simplest example of a vector space is $$\{0\}$$. There is only one way to give this set an addition structure (namely $$0+0=0$$), and with this structure the set is an abelian group. Moreover, for any field $$\mathbb{K}$$ there is also only one way to define scalar multiplication on this set (namely $$\alpha 0=0$$), and this scalar multiplication makes $$\{0\}$$ a $$\mathbb{K}$$-vector space. We call this the *trivial space*.
 
-A slightly less trivial example is the field itself. For any field $$\mathbb{K}$$, $$\mathbb{K}$$ is a $$\mathbb{K}$$-vector space. Since $$\mathbb{K}$$ is a field, it is obvious that it is an abelian group under addition. We only need to give it a scalar multiplication structure, which is simply given by the multiplication in $$\mathbb{K}$$, $$\mathbb{K}\times \mathbb{K}\rightarrow \mathbb{K}$$. One can check that with this definition the scalar multiplication satisfies all the conditions of [Definition 1](#def1), and therefore $$\mathbb{K}$$ is itself a $$\mathbb{K}$$-vector space.
+A slightly less trivial example is the field itself. For any field $$\mathbb{K}$$, $$\mathbb{K}$$ is a $$\mathbb{K}$$-vector space. Since $$\mathbb{K}$$ is a field, it is trivially an abelian group under addition. We only need to give it a scalar multiplication structure, which is simply multiplication in $$\mathbb{K}$$, i.e. $$\mathbb{K}\times \mathbb{K}\rightarrow \mathbb{K}$$. One can verify that this scalar multiplication satisfies all the conditions of [Definition 1](#def1), and thus $$\mathbb{K}$$ is a $$\mathbb{K}$$-vector space in its own right.
 
-More generally, let $$\mathbb{K}$$ be a field and suppose there exists another field $$\mathbb{K}'$$ with $$\mathbb{K}'\supseteq \mathbb{K}$$. Then $$\mathbb{K}'$$ becomes a $$\mathbb{K}$$-vector space. Since $$\mathbb{K}'$$ is a field, it forms an abelian group under addition just as before, and the scalar multiplication by an element $$\alpha\in\mathbb{K}$$ is given by treating $$\alpha$$ as an element of $$\mathbb{K}'$$ and using the multiplication structure of $$\mathbb{K}'$$. For example, $$\mathbb{C}$$ is an $$\mathbb{R}$$-vector space, and $$\mathbb{R}$$ is a $$\mathbb{Q}$$-vector space.
+More generally, let $$\mathbb{K}$$ be a field and suppose there is another field $$\mathbb{K}'$$ with $$\mathbb{K}'\supseteq \mathbb{K}$$. Then $$\mathbb{K}'$$ is a $$\mathbb{K}$$-vector space. Since $$\mathbb{K}'$$ is a field, it is an abelian group under addition as before, and scalar multiplication by an element $$\alpha\in\mathbb{K}$$ is given by viewing $$\alpha$$ as an element of $$\mathbb{K}'$$ and using the multiplication in $$\mathbb{K}'$$. For example, $$\mathbb{C}$$ is an $$\mathbb{R}$$-vector space, and $$\mathbb{R}$$ is a $$\mathbb{Q}$$-vector space.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**Example 5**</ins> Now suppose a field $$\mathbb{K}$$ is given. Then the *Euclidean $$n$$-space* is the $$\mathbb{K}$$-vector space consisting of the following $$n$$-tuples
+<ins id="ex5">**Example 5**</ins> Now suppose a field $$\mathbb{K}$$ is given. The *Euclidean $$n$$-dimensional space* is the $$\mathbb{K}$$-vector space consisting of $$n$$-tuples
 
 $$\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix},\qquad a_i\in\mathbb{K}\text{ for all $i$}$$
 
-Addition and scalar multiplication between them are defined respectively by
+Addition and scalar multiplication are defined by
 
 $$\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix}+\begin{pmatrix}b_1\\b_2\\\vdots\\b_n\end{pmatrix}=\begin{pmatrix}a_1+b_1\\a_2+b_2\\\vdots\\a_n+b_n\end{pmatrix},\qquad \alpha\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix}=\begin{pmatrix}\alpha a_1\\\alpha a_2\\\vdots\\\alpha a_n\end{pmatrix}$$
 
-When $$\mathbb{K}=\mathbb{R}$$ and $$n=2,3$$, this definition becomes the familiar coordinate plane and coordinate space.
+When $$\mathbb{K}=\mathbb{R}$$ and $$n=2,3$$, this gives the familiar coordinate plane and coordinate space.
 
 </div>
 
-Euclidean spaces are objects we shall encounter particularly often. In the above example we are using column notation instead of the notation $$(a_1, a_2, \ldots, a_n)$$ for ordered tuples, and this is closely related to the fundamental theorem of linear algebra.
+Euclidean spaces will be especially important objects for us. In the example above we used column notation instead of the ordered pair $$(a_1, a_2, \ldots, a_n)$$, which is closely related to the fundamental theorem of linear algebra.
 
-But no matter how compelling the reason, it would be foolish to insist on this notation $$\begin{pmatrix}a_1\\a_2\\ \vdots\\a_n\end{pmatrix}$$ throughout the text. Therefore, in the body of the text we shall write $$(a_1\;a_2\;\cdots\;a_n)^t$$ or, following high-school notation, $$(a_1,a_2,\ldots, a_n)$$.
+However, no matter how compelling the reason, insisting on this $$\begin{pmatrix}a_1\\a_2\\ \vdots\\a_n\end{pmatrix}$$ notation throughout the text would be foolish. Therefore, in the main text we will use notation such as $$(a_1\;a_2\;\cdots\;a_n)^t$$, or following high school convention, simply $$(a_1,a_2,\ldots, a_n)$$.
 
-The two vector spaces examined above are fairly concrete examples. As the next example shows, vector spaces in general are not always representable visually like the coordinate plane or coordinate space.
+The two vector spaces examined above are fairly concrete examples. As the next example shows, vector spaces are not always visualizable like the coordinate plane or coordinate space.
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**Example 6**</ins> Let $$I$$ be an interval and consider the collection $$\Fun(I,\mathbb{R})$$ of functions from $$I$$ to $$\mathbb{R}$$. Now define addition and scalar multiplication on this set by the formulas
+<ins id="ex6">**Example 6**</ins> Let $$I$$ be an interval and consider the set $$\Fun(I,\mathbb{R})$$ of functions from $$I$$ to $$\mathbb{R}$$. If we define addition and scalar multiplication on this set by
 
 $$f+g:t\mapsto f(t)+g(t),\qquad \alpha f:t\mapsto \alpha f(t)$$
 
-then one can check that $$\Fun(I,\mathbb{R})$$ has the structure of a vector space. That is, $$f+g$$ is defined as the function sending any $$t\in I$$ to the value $$f(t)+g(t)$$, and $$\alpha f$$ is defined as the function sending any $$t\in I$$ to $$\alpha f(t)$$.
+then one can verify that $$\Fun(I,\mathbb{R})$$ has a vector space structure. That is, $$f+g$$ is the function sending each $$t\in I$$ to $$f(t)+g(t)$$, and $$\alpha f$$ is the function sending each $$t\in I$$ to $$\alpha f(t)$$.
 
-Moreover, various subsets of $$\Fun(I,\mathbb{R})$$ are also $$\mathbb{R}$$-vector spaces. For example, the collection $$C(I)$$ of continuous functions from $$I$$ to $$\mathbb{R}$$ is also an $$\mathbb{R}$$-vector space, and more generally one can check that the collections $$C^k(I)$$ of functions whose $$k$$-th derivatives are continuous are also $$\mathbb{R}$$-vector spaces.
+Moreover, various subsets of $$\Fun(I,\mathbb{R})$$ are also $$\mathbb{R}$$-vector spaces. For example, the set $$C(I)$$ of continuous functions from $$I$$ to $$\mathbb{R}$$ is an $$\mathbb{R}$$-vector space, and more generally one can verify that the set $$C^k(I)$$ of functions whose $$k$$th derivative is continuous is also an $$\mathbb{R}$$-vector space.
 
 </div>
 
-Thinking of $$\Fun(I,\mathbb{R})$$ as the product set $$\mathbb{R}^I$$, [Example 6](#ex6) can also be viewed as a natural generalization of [Example 5](#ex5). ([\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1))
+If we think of $$\Fun(I,\mathbb{R})$$ as the product set $$\mathbb{R}^I$$, then [Example 6](#ex6) can be viewed as a natural generalization of [Example 5](#ex5). ([\[Set Theory\] §Products of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1))
 
 ---
 

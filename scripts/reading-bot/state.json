@@ -12,7 +12,9 @@
     "/ko/math/linear_algebra/linear_map",
     "/ko/math/linear_algebra/isomorphic_vector_spaces",
     "/ko/math/linear_algebra/matrices",
-    "/ko/math/linear_algebra/space_of_linear_maps"
+    "/ko/math/linear_algebra/space_of_linear_maps",
+    "/ko/math/linear_algebra/ftla",
+    "/ko/math/linear_algebra/gaussian_elimination"
   ],
   "all_complete": false
 }
