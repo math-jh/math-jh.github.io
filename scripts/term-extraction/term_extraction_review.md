@@ -1669,3 +1669,64 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `유일한` | looks like emphasis (no <sub> partner) |
 
+## 특성류
+- post: `_posts/Math/Algebraic_Topology/ko/2025-10-07-Characteristic_Classes.md`
+- permalink: `/ko/math/algebraic_topology/characteristic_classes`
+- scanned: 2026-05-26T13:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `base space` | multi-word English emphasis — possibly a definition |
+| `total space` | multi-word English emphasis — possibly a definition |
+| `infinite Grassmannian` | multi-word English emphasis — possibly a definition |
+| `Schubert symbol` | multi-word English emphasis — possibly a definition |
+| `polynomial algebra로서` | mixed-script emphasis — possibly a definition |
+
+## 근계
+- post: `_posts/Math/Lie_Theory/ko/2025-11-12-Root_Systems.md`
+- permalink: `/ko/math/lie_theory/root_systems`
+- scanned: 2026-05-26T13:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `traceless` | looks like emphasis (no <sub> partner) |
+| `raising operator` | multi-word English emphasis — possibly a definition |
+| `real` | looks like emphasis (no <sub> partner) |
+
+## 유한군의 표현론
+- post: `_posts/Math/Representation_Theory/ko/2026-02-13-Representations_of_Finite_Groups.md`
+- permalink: `/ko/math/representation_theory/representations_of_finite_groups`
+- scanned: 2026-05-26T14:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유한차원` | looks like emphasis (no <sub> partner) |
+| `dual representation` | multi-word English emphasis — possibly a definition |
+| `conjugate representation` | multi-word English emphasis — possibly a definition |
+| `simple` | looks like emphasis (no <sub> partner) |
+| `semisimple` | looks like emphasis (no <sub> partner) |
+
+## 원환면의 작용
+- post: `_posts/Math/Lie_Theory/ko/2026-02-24-Torus_Action.md`
+- permalink: `/ko/math/lie_theory/torus_action`
+- scanned: 2026-05-26T14:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `compact` | looks like emphasis (no <sub> partner) |
+| `weight space decomposition` | multi-word English emphasis — possibly a definition |
+| `Regular:` | looks like emphasis (no <sub> partner) |
+| `Singular:` | looks like emphasis (no <sub> partner) |
+
+## 사영다양체
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-12-Projective_Varieties.md`
+- permalink: `/ko/math/algebraic_varieties/projective_varieties`
+- scanned: 2026-05-26T14:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `homogeneous ideal` | multi-word English emphasis — possibly a definition |
+| `irrelevant ideal` | multi-word English emphasis — possibly a definition |
+| `$$i$$번째 standard open set` | mixed-script emphasis — possibly a definition |
+| `Veronese embedding` | multi-word English emphasis — possibly a definition |
+
