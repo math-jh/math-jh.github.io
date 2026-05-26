@@ -254,13 +254,14 @@
     },
     "_posts/Math/Category_Theory/ko/2023-05-22-Categories.md": {
       "status": "done",
-      "last_attempt_ts": 1779194688.4158847,
+      "last_attempt_ts": 1779793268.5626378,
       "en_path": "_posts/Math/Category_Theory/en/2023-05-22-Categories.md",
-      "ko_git_commit_ts": 1772793002.0,
-      "translated_at": "2026-05-19T12:30:01+00:00",
-      "in_chars": 13757,
-      "out_chars": 14655,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T11:00:02+00:00",
+      "in_chars": 14240,
+      "out_chars": 14648,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Category_Theory/ko/2023-05-28-Natural_Transformations.md": {
       "status": "done",
@@ -294,13 +295,17 @@
     },
     "_posts/Math/Category_Theory/ko/2023-06-22-Limits.md": {
       "status": "done",
-      "last_attempt_ts": 1779201474.6700926,
+      "last_attempt_ts": 1779795144.4438577,
       "en_path": "_posts/Math/Category_Theory/en/2023-06-22-Limits.md",
-      "ko_git_commit_ts": 1772910001.0,
-      "translated_at": "2026-05-19T14:30:01+00:00",
-      "in_chars": 15086,
-      "out_chars": 15702,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T11:30:02+00:00",
+      "in_chars": 15571,
+      "out_chars": 15633,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=160, en=161"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=160 en=161\nFINDINGS:\n- [thm9] SAFE-REPHRASE: KO has a typo in Theorem 9 equation ($\\lim\\Hom \\cong \\lim\\Hom$ instead of $\\lim\\Hom \\cong \\Hom(A,\\lim F)$); EN corrects it, preserving the intended mathematical conclusion derived from the preceding two isomorphisms.\n- [prop10/cocomplete] SAFE-REPHRASE: EN puts $\\Set$ in math mode a second time (\"$\\Set$ is cocomplete\") where KO uses Korean text \"cocomplete하다는\" without math mode, adding one block with no semantic change.\n- [canonical morphism] SAFE-REPHRASE: EN adds a trailing period inside the display math for the canonical morphism; identical formula.\n- [ex6+ex7 combo] SAFE-REPHRASE: KO has \"$\\Set$에서의 diagram $\\mathcal{I}\\rightarrow \\Set$\" while EN has \"diagram $\\mathcal{I}\\rightarrow \\Set$ in $\\Set$\"; same two blocks, order swapped due to grammar.\n- [footnote] SAFE-REPHRASE: Both versions contain block $I$ in the footnote; position shift caused by sentence restructuring."
     },
     "_posts/Math/Category_Theory/ko/2023-06-22-Representable_Functors.md": {
       "status": "done",
@@ -402,13 +407,17 @@
     },
     "_posts/Math/Commutative_Algebra/ko/2024-10-20-Blowup_Algebra.md": {
       "status": "done",
-      "last_attempt_ts": 1779221196.2245302,
+      "last_attempt_ts": 1779796933.8565788,
       "en_path": "_posts/Math/Commutative_Algebra/en/2024-10-20-Blowup_Algebra.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-19T20:00:01+00:00",
-      "in_chars": 11663,
-      "out_chars": 11345,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T12:00:02+00:00",
+      "in_chars": 12146,
+      "out_chars": 11283,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=198, en=201"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=198 en=201\nFINDINGS:\n- [preamble] SAFE-REPHRASE: EN adds one $$A$$ block for \"ideal $$\\mathfrak{a}$$ of $$A$$\" vs KO possessive \"ring $$A$$의 ideal $$\\mathfrak{a}$$\".\n- [def1 paragraph] SAFE-REPHRASE: KO has inline $$a,b$$ block; EN merges variables into the prose flow with reordered representative blocks.\n- [lem2 proof] SAFE-REPHRASE: KO merges $$\\tilde{a}'=\\tilde{a}+x,\\tilde{b}'=\\tilde{b}+y$$ into one block; EN splits into two blocks for readability.\n- [prop4 statement] SAFE-REPHRASE: KO leads with \"module $$M$$의 … filtration $$\\mathcal{J}$$\"; EN reorders to \"filtration $$\\mathcal{J}$$ on … module $$M$$\", shifting block positions.\n- [def5] SAFE-REPHRASE: KO repeats $$\\Bl_\\mathcal{J}M$$ inline after the display equation; EN incorporates it solely into the display equation.\n- [lem7 statement] SAFE-REPHRASE: KO contains a source typo $$\\mathcal{a}$$ (extra block); EN corrects it to $$\\mathfrak{a}$$ and adds $$M$$ for \"submodule $$M'$$ of $$M$$\".\n- [lem7 proof] SAFE-REPHRASE: EN adds one $$\\Bl_\\mathcal{J}M$$ block for \"submodule … of $$\\Bl_\\mathcal{J}M$$\" vs KO possessive \"의\".\n- [cor8 statement] SAFE-REPHRASE: EN adds one $$A$$ block for \"ideal $$\\mathfrak{a}$$ of $$A$$\" vs KO conjunctive \"그 ideal $$\\mathfrak{a}$$와\".\n- [cor8 proof] SAFE-REPHRASE: EN adds one $$A$$ block for \"maximal ideal $$\\mathfrak{m}$$ of $$A$$\"; note EN also has a rendering typo $$a\\in \\\\mathfrak{m}$$ (double backslash inside the block, not an extra block)."
     },
     "_posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md": {
       "status": "done",
@@ -472,13 +481,17 @@
     },
     "_posts/Math/Commutative_Algebra/ko/2024-12-22-Completion.md": {
       "status": "done",
-      "last_attempt_ts": 1779233882.0254927,
+      "last_attempt_ts": 1779798737.0960124,
       "en_path": "_posts/Math/Commutative_Algebra/en/2024-12-22-Completion.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-19T23:30:01+00:00",
-      "in_chars": 13038,
-      "out_chars": 13639,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T12:30:02+00:00",
+      "in_chars": 13521,
+      "out_chars": 13408,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=204, en=201"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Commutative_Algebra/ko/2024-12-26-Differentials.md": {
       "status": "done",
@@ -2552,8 +2565,8 @@
     }
   },
   "stats": {
-    "total_done": 281,
-    "total_in_chars": 4866119,
-    "total_out_chars": 4156951
+    "total_done": 285,
+    "total_in_chars": 4921597,
+    "total_out_chars": 4211923
   }
 }
