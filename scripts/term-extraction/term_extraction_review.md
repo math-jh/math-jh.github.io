@@ -1622,3 +1622,23 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `혹은 간단히` | looks like emphasis (no <sub> partner) |
 | `graded` | looks like emphasis (no <sub> partner) |
 
+## 호몰로지
+- post: `_posts/Math/Algebraic_Topology/ko/2023-02-18-Homology.md`
+- permalink: `/ko/math/algebraic_topology/homology`
+- scanned: 2026-05-26T09:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$n$$-cycle` | looks like emphasis (no <sub> partner) |
+| `singular` | looks like emphasis (no <sub> partner) |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+
+## 가군의 직접곱과 직합, 텐서곱
+- post: `_posts/Math/Algebraic_Structures/ko/2024-05-12-Operations_of_Modules.md`
+- permalink: `/ko/math/algebraic_structures/operations_of_modules`
+- scanned: 2026-05-26T10:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$A$$-module` | looks like emphasis (no <sub> partner) |
+

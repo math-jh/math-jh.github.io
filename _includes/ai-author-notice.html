@@ -1,0 +1,20 @@
+{% comment %}
+  Renders a notice block at the top of any post whose author entry in
+  `_data/authors.yml` has `ai: true`. Text comes from
+  `_data/ui-text.yml` -> `<lang>.ai_post_notice` (per-language).
+  Mark a persona as AI-authored by adding `ai: true` to its authors.yml entry.
+{% endcomment %}
+{% assign _ai_author = site.data.authors[page.author] %}
+{% if _ai_author and _ai_author.ai %}
+  {% assign _lang = site.locale %}
+  {% assign _lang_prefix = page.url | truncate: 3, "" %}
+  {% if _lang_prefix contains "en" or _lang_prefix contains "ko" %}
+    {% assign _lang = _lang_prefix | remove_first: "/" %}
+  {% endif %}
+  {% assign _notice = site.data.ui-text[_lang].ai_post_notice %}
+  {% if _notice and _notice != "" %}
+  <div class="notice--warning ai-author-notice" role="note">
+    {{ _notice | replace: "__AUTHOR__", _ai_author.name | markdownify }}
+  </div>
+  {% endif %}
+{% endif %}

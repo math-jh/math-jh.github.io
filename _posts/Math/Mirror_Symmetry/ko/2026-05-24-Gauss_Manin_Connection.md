@@ -194,17 +194,17 @@ $$\dim_\mathbb{C}\mathcal{H}_{(q,z)} = \lvert\Crit(W_q)\rvert$$
 
 이기 때문이다.
 
-더 나아가, $$\mathcal{H}_{(q,z)}$$의 concrete basis는 $$\Jac(W_q) = \mathcal{O}(\check{X})/ㅣ(\partial_iW_q)$$에서 곧장 얻어진다. 자연스러운 map
+더 나아가, $$\Jac(W_q) = \mathcal{O}(\check{X})/(\partial_iW_q)$$의 임의의 $$\mathbb{C}$$-basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$ ($$\mu := \lvert\Crit(W_q)\rvert$$)에 대해
+
+$$\bigl\{\,e_\alpha := [T_\alpha\,e^{W_q/z}\omega]\,\bigr\}_{\alpha=0,\ldots,\mu-1}$$
+
+가 $$\mathcal{H}_{(q,z)}$$의 *concrete basis*를 이룬다. 이는 자연스러운 map
 
 $$\Jac(W_q) \;\longrightarrow\; \mathcal{H}_{(q,z)},\qquad T \;\longmapsto\; [T\cdot e^{W_q/z}\omega]$$
 
-은 [명제 5](#prop5) 증명의 cocycle-coboundary 식 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1}dW_q\wedge\beta)$$로부터 well-defined ($$T = \sum_i h_i\,\partial_iW_q$$일 때 $$[T\cdot e^{W_q/z}\omega]$$가 적절한 form의 $$d$$로 표현되어 cohomology class가 $$0$$이 됨)이고, 한편 Morse 조건 하 $$\Jac(W_q)$$의 차원도 정확히 $$\lvert\Crit(W_q)\rvert$$ (이상 $$(\partial_iW_q)$$의 zero locus가 isolated critical points들이고 multiplicity 1이라 quotient ring의 dim이 점의 개수와 일치)이므로 양변 dim 일치로 자동 isomorphism
+이 isomorphism이라는 사실의 직접적인 귀결이다. Well-defined ($$T = \sum_i h_i\,\partial_iW_q$$일 때 $$[T\cdot e^{W_q/z}\omega]$$가 적절한 form의 $$d$$로 표현되어 cohomology class가 $$0$$이 됨)은 [명제 5](#prop5) 증명의 cocycle-coboundary 식 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1}dW_q\wedge\beta)$$로부터 따라오고, Morse 조건 하 $$\Jac(W_q)$$의 차원도 정확히 $$\lvert\Crit(W_q)\rvert$$ (이상 $$(\partial_iW_q)$$의 zero locus가 isolated critical points들이고 multiplicity 1이라 quotient ring의 dim이 점의 개수와 일치)이므로 양변 dim 일치로 자동 iso이다 (이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실; mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$와 ring으로 매칭시키는 그 다음 단계의 statement).
 
-$$\Jac(W_q) \;\xrightarrow{\sim}\; \mathcal{H}_{(q,z)}$$
-
-가 성립한다 (이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실; mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$와 ring으로 매칭시키는 그 다음 단계의 statement).
-
-이로써 cohomology side에는 $$\Jac(W_q)$$의 basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$ ($$\mu := \lvert\Crit(W_q)\rvert$$)에 대응하는 frame $$\{e_\alpha := [T_\alpha\,e^{W_q/z}\omega]\}$$가, homology side에는 thimble basis $$\{[\Gamma_b]\}_{b=0,\ldots,\mu-1}$$가 *서로 독립적으로* 잡혔다. 이 두 basis 사이의 period pairing을 모은 *period matrix*
+이로써 cohomology side에는 frame $$\{e_\alpha\}_\alpha$$가, homology side에는 thimble basis $$\{[\Gamma_b]\}_{b=0,\ldots,\mu-1}$$가 *서로 독립적으로* 잡혔다. 이 두 basis 사이의 period pairing을 모은 *period matrix*
 
 $$\mathcal{I}^\alpha_b(q, z) \;:=\; \langle e_\alpha,\,[\Gamma_b]\rangle \;=\; \int_{\Gamma_b} T_\alpha\,e^{W_q/z}\,\omega$$
 
