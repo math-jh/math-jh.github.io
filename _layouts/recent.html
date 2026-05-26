@@ -20,7 +20,11 @@ layout: archive
 {% assign posts_filtered = site.posts | where_exp: "post", "post.permalink contains lang_full" | sort: 'date' | reverse %}
 
 <div class="entries-list">
-  {% for post in posts_filtered limit: limit %}
+  {% assign _shown = 0 %}
+  {% for post in posts_filtered %}
+    {% if _shown >= limit %}{% break %}{% endif %}
+    {% if post.categories contains "Misc / LLM Workshop" %}{% continue %}{% endif %}
+    {% assign _shown = _shown | plus: 1 %}
     {% assign mod_date = post.last_modified_at | default: post.date %}
     <div class="list__item">
       <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">

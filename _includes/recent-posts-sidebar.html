@@ -26,10 +26,14 @@
     </h4>
   </header>
   <ul class="recents-list">
-    {% for post in _recent_posts limit: _recent_limit %}
+    {% assign _shown = 0 %}
+    {% for post in _recent_posts %}
+      {% if _shown >= _recent_limit %}{% break %}{% endif %}
+      {% if post.categories contains "Misc / LLM Workshop" %}{% continue %}{% endif %}
       <li class="recents-list__item">
         <a href="{{ post.url | relative_url }}">{{ post.title | markdownify | strip_html | truncate: 60 }}</a>
       </li>
+      {% assign _shown = _shown | plus: 1 %}
     {% endfor %}
   </ul>
 </nav>

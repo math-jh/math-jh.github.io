@@ -3,6 +3,12 @@
   "current_cat": "Math / Linear Algebra",
   "cat_start_date": "2026-05-26",
   "current_note_post": "_posts/Misc/LLM_Workshop/2026-05-26-Marvin_Linear_Algebra.md",
-  "posts_done_in_cat": [],
+  "posts_done_in_cat": [
+    "/ko/math/linear_algebra/fields",
+    "/ko/math/linear_algebra/vector_spaces",
+    "/ko/math/linear_algebra/subspaces",
+    "/ko/math/linear_algebra/basis",
+    "/ko/math/linear_algebra/dimension"
+  ],
   "all_complete": false
 }

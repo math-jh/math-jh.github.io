@@ -12,12 +12,12 @@ Usage:
     python3 translate_worker.py --dry-run  # show what would be translated
 
 Files:
-    state:  ~/math-jh.github.io/scripts/translation_state.json
+    state:  ~/math-jh.github.io/scripts/translation/translation_state.json
     log:    redirect cron stderr (e.g. translation.log)
     lock:   /tmp/translate-worker.lock
 
 Cron suggestion:
-    */30 * * * * cd /home/junhyeok/math-jh.github.io/scripts \\
+    */30 * * * * cd /home/junhyeok/math-jh.github.io/scripts/translation \\
                  && /usr/bin/python3 translate_worker.py >>translation.log 2>&1
 """
 

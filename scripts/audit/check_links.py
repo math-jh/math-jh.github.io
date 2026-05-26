@@ -27,17 +27,17 @@ Usage examples
 --------------
 Run a full audit (default = stdout, no external checks)::
 
-    python3 ~/math-jh.github.io/scripts/check_links.py
+    python3 ~/math-jh.github.io/scripts/audit/check_links.py
 
 Save a markdown report and limit to one category::
 
-    python3 ~/math-jh.github.io/scripts/check_links.py \
-        --report ~/math-jh.github.io/scripts/audit-report.md \
+    python3 ~/math-jh.github.io/scripts/audit/check_links.py \
+        --report ~/math-jh.github.io/scripts/audit/audit-report.md \
         --category Linear_Algebra
 
 Include slow external HEAD checks::
 
-    python3 ~/math-jh.github.io/scripts/check_links.py --check-external
+    python3 ~/math-jh.github.io/scripts/audit/check_links.py --check-external
 
 Exit code is ``0`` when nothing is broken and ``1`` otherwise, so the
 script can be wired into CI.
