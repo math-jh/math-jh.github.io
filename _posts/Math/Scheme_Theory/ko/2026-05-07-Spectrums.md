@@ -354,7 +354,7 @@ $$(D(f)\cap Y)\cap (D(g)\cap Y)=D(f)\cap D(g)\cap Y=D(fg)\cap Y$$
 
 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n=\{(x_1,\ldots, x_n)\mid x_1,\ldots, x_n\in \mathbb{K}\}$$
 
-을 의미한다. 이 때, $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$의 각 원소 $$x=(x_1,\ldots, x_n)$$을 *점<sub>point</sub>*라 하고, 각각의 $$x_i$$들을 $$x$$의 *$$i$$번째 좌표<sub>$$i$$-th coordinate</sub>*라 부른다. 
+을 의미한다. 이 때, $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$의 각 원소 $$x=(x_1,\ldots, x_n)$$을 *점<sub>point</sub>*라 하고, 각각의 $$x_i$$들을 $$x$$의 *$$i$$번째 좌표<sub>$i$-th coordinate</sub>*라 부른다. 
 
 이제 $$\mathbb{K}$$를 계수로 갖는 다항식들로 이루어진 polynomial ring $$A=\mathbb{K}[\x_1,\ldots,\x_n]$$를 생각하자. 그럼 임의의 $$x=(x_1,\ldots, x_n)\in \mathbb{A}_{\mathbb{K},\text{classical}}^n$$에 대하여, $$A$$의 ideal $$\mathfrak{m}_x$$를
 

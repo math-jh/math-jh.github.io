@@ -59,22 +59,22 @@ $$n\geq N\implies x_n\in U$$
 
 <ins id="def3">**정의 3**</ins> 위상공간 $$X$$에 대하여, 다음을 정의한다. 
 
-1. $$X$$가 *$$T_0$$-space<sub>$$T_0$$-공간</sub>*, 혹은 *Kolmogorov space<sub>콜모고로프 공간</sub>*라는 것은 임의의 서로 다른 두 점 $$x,y$$가 위상적으로 구별가능한 것이다.
-2. $$X$$가 *$$R_0$$-space<sub>$$R_0$$-공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 분리가능한 것이다.
-3. $$X$$가 *$$T_1$$-space<sub>$$T_1$$-공간</sub>*, 혹은 *Fréchet space<sub>프레셰 공간</sub>*라는 것은 임의의 서로 다른 두 점이 분리가능한 것이다. 따라서, $$X$$가 $$T_1$$인 것과 $$X$$가 $$T_0$$이며 $$R_0$$인 것이 동치이다.
-4. $$X$$가 *$$R_1$$-space<sub>$$R_1$$-공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 근방으로 분리가능한 것이다. 따라서 임의의 $$R_1$$-space는 $$R_0$$-space이다.
-5. $$X$$가 *$$T_2$$-space<sub>$$T_2$$-공간</sub>*, 혹은 *Hausdorff space<sub>하우스도르프 공간</sub>*이라는 것은 임의의 서로 다른 두 점이 근방으로 분리가능한 것이다. 따라서, $$X$$가 $$T_2$$인 것과 $$X$$가 $$T_0$$이며 $$R_1$$인 것이 동치이고, 임의의 $$T_2$$-space는 $$T_1$$이다. 
-6. $$X$$가 *$$T_{2\frac{1}{2}}$$-space<sub>$$T_{2\frac{1}{2}}$$-공간</sub>*, 혹은 *Urysohn space<sub>유리손 공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 닫힌근방으로 분리가능한 것이다. 따라서, 임의의 $$T_{2\frac{1}{2}}$$-space는 $$T_2$$이다. 
-7. $$X$$가 *completely $$T_2$$-space<sub>완전 $$T_2$$-공간</sub>*, 혹은 *completely Hausdorff space<sub>완전 하우스도르프 공간</sub>*인 것은 임의의 서로 다른 두 점이 연속함수로 분리 가능한 것이다.
+1. $$X$$가 *$$T_0$$-space<sub>$T_0$-공간</sub>*, 혹은 *Kolmogorov space<sub>콜모고로프 공간</sub>*라는 것은 임의의 서로 다른 두 점 $$x,y$$가 위상적으로 구별가능한 것이다.
+2. $$X$$가 *$$R_0$$-space<sub>$R_0$-공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 분리가능한 것이다.
+3. $$X$$가 *$$T_1$$-space<sub>$T_1$-공간</sub>*, 혹은 *Fréchet space<sub>프레셰 공간</sub>*라는 것은 임의의 서로 다른 두 점이 분리가능한 것이다. 따라서, $$X$$가 $$T_1$$인 것과 $$X$$가 $$T_0$$이며 $$R_0$$인 것이 동치이다.
+4. $$X$$가 *$$R_1$$-space<sub>$R_1$-공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 근방으로 분리가능한 것이다. 따라서 임의의 $$R_1$$-space는 $$R_0$$-space이다.
+5. $$X$$가 *$$T_2$$-space<sub>$T_2$-공간</sub>*, 혹은 *Hausdorff space<sub>하우스도르프 공간</sub>*이라는 것은 임의의 서로 다른 두 점이 근방으로 분리가능한 것이다. 따라서, $$X$$가 $$T_2$$인 것과 $$X$$가 $$T_0$$이며 $$R_1$$인 것이 동치이고, 임의의 $$T_2$$-space는 $$T_1$$이다. 
+6. $$X$$가 *$$T_{2\frac{1}{2}}$$-space<sub>$T_{2\frac{1}{2}}$-공간</sub>*, 혹은 *Urysohn space<sub>유리손 공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 닫힌근방으로 분리가능한 것이다. 따라서, 임의의 $$T_{2\frac{1}{2}}$$-space는 $$T_2$$이다. 
+7. $$X$$가 *completely $$T_2$$-space<sub>완전 $T_2$-공간</sub>*, 혹은 *completely Hausdorff space<sub>완전 하우스도르프 공간</sub>*인 것은 임의의 서로 다른 두 점이 연속함수로 분리 가능한 것이다.
 8. $$X$$가 *regular space<sub>정칙공간</sub>*이라는 것은 임의의 점 $$x\in X$$와 $$x$$를 포함하지 않는 닫힌집합 $$A\subseteq X$$가 항상 근방으로 분리가능한 것이다.
-9. $$X$$가 *$$T_3$$-space<sub>$$T_3$$-공간</sub>*, 혹은 *regular Hausdorff space<sub>정칙 하우스도르프 공간</sub>*이라는 것은 $$X$$가 $$T_0$$이며 regular인 것이다. 임의의 $$T_3$$-space는 $$T_{2\frac{1}{2}}$$이다. 
+9. $$X$$가 *$$T_3$$-space<sub>$T_3$-공간</sub>*, 혹은 *regular Hausdorff space<sub>정칙 하우스도르프 공간</sub>*이라는 것은 $$X$$가 $$T_0$$이며 regular인 것이다. 임의의 $$T_3$$-space는 $$T_{2\frac{1}{2}}$$이다. 
 10. $$X$$가 *completely regular space<sub>완전정칙공간</sub>*이라는 것은 임의의 점 $$x\in X$$와 $$x$$를 포함하지 않는 닫힌집합 $$A\subseteq X$$가 항상 연속함수로 분리가능한 것이다.
-11. $$X$$가 *completely $$T_3$$-space<sub>완전 $$T_3$$-공간</sub>*, 혹은 *Tychonoff space<sub>티코노프 공간</sub>*인 것은 $$X$$가 $$T_0$$이고 completely regular인 것이다. 따라서 $$X$$가 completely $$T_3$$이면 completely Hausdorff이고 regular Hausdorff이므로, 이를 *completely regular Hausdorff space<sub>완전 정칙 하우스도르프 공간</sub>*라 부르기도 한다.
+11. $$X$$가 *completely $$T_3$$-space<sub>완전 $T_3$-공간</sub>*, 혹은 *Tychonoff space<sub>티코노프 공간</sub>*인 것은 $$X$$가 $$T_0$$이고 completely regular인 것이다. 따라서 $$X$$가 completely $$T_3$$이면 completely Hausdorff이고 regular Hausdorff이므로, 이를 *completely regular Hausdorff space<sub>완전 정칙 하우스도르프 공간</sub>*라 부르기도 한다.
 12. $$X$$가 *normal space<sub>정규공간</sub>*인 것은 임의의 서로소인 두 닫힌집합이 근방으로 분리가능한 것이다. 
 13. $$X$$가 *normal regular space<sub>정규정칙공간</sub>*인 것은 $$X$$가 normal이고 $$R_0$$인 것이다. 따라서 $$X$$가 normal regular라면 $$X$$는 completely regular이다. 
-14. $$X$$가 *$$T_4$$-space<sub>$$T_4$$-공간</sub>*, 혹은 *normal Hausdorff space<sub>정규 하우스도르프 공간</sub>*인 것은 $$X$$가 $$T_1$$이며 normal인 것이다. 임의의 $$T_1$$-space는 $$R_0$$이므로 임의의 $$T_4$$-space는 normal regular이고, 따라서 completely regular이다. 한편 임의의 $$T_1$$-space는 $$T_0$$-space이므로 이로부터 임의의 $$T_4$$-space는 completely $$T_3$$인 것을 안다.
+14. $$X$$가 *$$T_4$$-space<sub>$T_4$-공간</sub>*, 혹은 *normal Hausdorff space<sub>정규 하우스도르프 공간</sub>*인 것은 $$X$$가 $$T_1$$이며 normal인 것이다. 임의의 $$T_1$$-space는 $$R_0$$이므로 임의의 $$T_4$$-space는 normal regular이고, 따라서 completely regular이다. 한편 임의의 $$T_1$$-space는 $$T_0$$-space이므로 이로부터 임의의 $$T_4$$-space는 completely $$T_3$$인 것을 안다.
 15. $$X$$가 *completely normal space<sub>완전정규공간</sub>*인 것은 임의의 두 분리가능한 집합이 근방으로 분리가능한 것이다. 그럼 임의의 completely normal space는 normal이다.
-16. $$X$$가 *completely $$T_4$$-space<sub>완전 $$T_4$$-공간</sub>*인 것은 $$X$$가 completely normal이고 $$T_1$$인 것이다. 따라서 임의의 completely $$T_4$$-space는 $$T_4$$이다.
+16. $$X$$가 *completely $$T_4$$-space<sub>완전 $T_4$-공간</sub>*인 것은 $$X$$가 completely normal이고 $$T_1$$인 것이다. 따라서 임의의 completely $$T_4$$-space는 $$T_4$$이다.
 17. $$X$$가 *perfectly normal space*인 것은 임의의 두 서로소인 닫힌집합이 연속함수로 정확히 분리가능한 것이다.
 18. $$X$$가 *perfectly $$T_4$$-space*인 것은 $$X$$가 perfectly normal이고 $$T_0$$인 것이다. 
 

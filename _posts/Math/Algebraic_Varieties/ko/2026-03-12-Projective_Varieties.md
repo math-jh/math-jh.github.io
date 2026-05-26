@@ -23,7 +23,7 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Field $$\mathbb{K}$$ 위의 *projective $$n$$-space<sub>$$n$$차원 사영공간</sub>* $$\mathbb{P}^n_{\mathbb{K}}$$를 다음과 같이 정의한다. 집합으로서
+<ins id="def1">**정의 1**</ins> Field $$\mathbb{K}$$ 위의 *projective $$n$$-space<sub>$n$차원 사영공간</sub>* $$\mathbb{P}^n_{\mathbb{K}}$$를 다음과 같이 정의한다. 집합으로서
 
 $$\mathbb{P}^n = (\mathbb{K}^{n+1} \setminus \{0\}) / \sim$$
 

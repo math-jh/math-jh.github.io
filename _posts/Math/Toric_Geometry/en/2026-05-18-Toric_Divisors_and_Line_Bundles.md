@@ -188,7 +188,7 @@ so the necessary and sufficient condition for this divisor to be effective is th
 
 </details>
 
-Thinking of the condition appearing in [Proposition 7](#prop7), <em>$$\langle m, v_\rho\rangle \ge -a_\rho$$ for all $$\rho \in \Sigma(1)$$</em>, we can collect all $$m$$ satisfying this condition and define the polyhedron in $$M_\mathbb{R}$$
+Thinking of the condition appearing in [Proposition 7](#prop7), <em>$\langle m, v_\rho\rangle \ge -a_\rho$ for all $\rho \in \Sigma(1)$</em>, we can collect all $$m$$ satisfying this condition and define the polyhedron in $$M_\mathbb{R}$$
 
 $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}.$$
 

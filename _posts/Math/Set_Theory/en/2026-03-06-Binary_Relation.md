@@ -48,8 +48,8 @@ If the product of two universal sets existed, then by the following proposition 
 <ins id="prop3">**Proposition 3**</ins> Let $$R$$ be a binary relation. Then there exist unique sets $$A$$ and $$B$$ such that
 
 <ul>
-<li> <phrase>$$x\in A$$</phrase> is equivalent to <phrase>there exists some $$y$$ such that $$(x,y)\in R$$</phrase>, and</li>
-<li> <phrase>$$y\in B$$</phrase> is equivalent to <phrase>there exists some $$x$$ such that $$(x,y)\in R$$</phrase>.</li>
+<li> <phrase>$x\in A$</phrase> is equivalent to <phrase>there exists some $y$ such that $(x,y)\in R$</phrase>, and</li>
+<li> <phrase>$y\in B$</phrase> is equivalent to <phrase>there exists some $x$ such that $(x,y)\in R$</phrase>.</li>
 </ul>
 
 </div>
@@ -90,7 +90,7 @@ so the Cartesian product $$A\times B$$ may be said to be the largest binary rela
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> Consider a binary relation $$(R,A,B)$$ and a subset $$A'\subseteq A$$. Then we call the <phrase>set of all elements related to elements of $$A'$$ by $$R$$</phrase> the *image* of $$A'$$ under $$R$$, and denote it by $$R(A')$$.
+<ins id="def5">**Definition 5**</ins> Consider a binary relation $$(R,A,B)$$ and a subset $$A'\subseteq A$$. Then we call the <phrase>set of all elements related to elements of $A'$ by $R$</phrase> the *image* of $$A'$$ under $$R$$, and denote it by $$R(A')$$.
 
 </div>
 

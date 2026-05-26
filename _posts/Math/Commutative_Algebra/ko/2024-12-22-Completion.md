@@ -55,7 +55,7 @@ $$\widehat{A}=\varprojlim_i A/\mathfrak{a}_i$$
 
 $$A\supseteq\mathfrak{a}\supseteq \mathfrak{a}^2\cdots$$
 
-꼴로 주어졌다면 이를 $$A$$의 *$$\mathfrak{a}$$-adic completion<sub>$$\mathfrak{a}$$진 완비화</sub>*이라 부른다. 이 경우, 만일 $$\mathfrak{a}$$가 maximal ideal이라면 $$\widehat{A}$$은 유일한 maximal ideal $$\widehat{\mathfrak{a}}$$를 갖는 local ring이 되므로, $$\widehat{A}$$을 *complete local ring<sub>국소완비환</sub>*이라 부른다. 
+꼴로 주어졌다면 이를 $$A$$의 *$$\mathfrak{a}$$-adic completion<sub>$\mathfrak{a}$진 완비화</sub>*이라 부른다. 이 경우, 만일 $$\mathfrak{a}$$가 maximal ideal이라면 $$\widehat{A}$$은 유일한 maximal ideal $$\widehat{\mathfrak{a}}$$를 갖는 local ring이 되므로, $$\widehat{A}$$을 *complete local ring<sub>국소완비환</sub>*이라 부른다. 
 
 </div>
 
@@ -97,7 +97,7 @@ $$\mathcal{N}(0)=\{U\subseteq G\mid\text{$G_n\subseteq U$ for some $n$}\}$$
 
 으로 정의하면 이것이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 안다. 이제 임의의 $$g\in G$$와 $$U\in \mathcal{N}(0)$$에 대하여, $$g+U\in \mathcal{N}(g)$$이도록 하면 이것이 $$G$$ 위에 위상구조를 준다. 
 
-특별히 이를 [정의 1](#def1)의 상황에 대입하면 위의 과정을 통해 정의한 위상구조를 *$$\mathfrak{a}$$-adic topology<sub>$$\mathfrak{a}$$진 위상</sub>*이라 부른다. 이 때, $$0\in A$$는 countable local base
+특별히 이를 [정의 1](#def1)의 상황에 대입하면 위의 과정을 통해 정의한 위상구조를 *$$\mathfrak{a}$$-adic topology<sub>$\mathfrak{a}$진 위상</sub>*이라 부른다. 이 때, $$0\in A$$는 countable local base
 
 $$\mathfrak{a}\supseteq \mathfrak{a}^2\supseteq\cdots\tag{2}$$
 
