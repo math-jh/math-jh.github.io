@@ -27,7 +27,7 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$\mathbb{K}$$가 field이고, $$V$$가 abelian group이라 하자. $$V$$가 *$$\mathbb{K}$$에 대한 벡터공간<sub>vector space over $$\mathbb{K}$$</sub>*, 혹은 간단히 *$$\mathbb{K}$$-벡터공간<sub>$$\mathbb{K}$$-vector space</sub>*이라는 것은 여기에 추가적인 연산 (*스칼라곱*) $$\cdot:\mathbb{K}\times V\rightarrow V$$가 존재하여 
+<ins id="def1">**정의 1**</ins> $$\mathbb{K}$$가 field이고, $$V$$가 abelian group이라 하자. $$V$$가 *$$\mathbb{K}$$에 대한 벡터공간<sub>vector space over $\mathbb{K}$</sub>*, 혹은 간단히 *$$\mathbb{K}$$-벡터공간<sub>$\mathbb{K}$-vector space</sub>*이라는 것은 여기에 추가적인 연산 (*스칼라곱*) $$\cdot:\mathbb{K}\times V\rightarrow V$$가 존재하여 
 
 1. 임의의 $$\alpha,\beta\in\mathbb{K}$$와 임의의 $$u\in V$$에 대하여 $$\alpha\cdot(\beta\cdot u)=(\alpha\beta)\cdot u$$가 성립한다.
 2. 임의의 $$\alpha\in\mathbb{K}$$와 임의의 $$u,v\in V$$에 대하여 $$\alpha\cdot(u+_{\tiny V}v)=(\alpha\cdot u)+_{\tiny V}(\alpha\cdot v)$$가 성립한다.

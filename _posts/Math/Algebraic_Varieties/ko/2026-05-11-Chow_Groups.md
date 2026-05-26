@@ -24,7 +24,7 @@ weight: 18
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Variety $$X$$의 *algebraic $$k$$-cycle*<sub>대수적 $$k$$-순환</sub>은 $$X$$의 $$k$$-dimensional closed irreducible subvariety들의 formal sum
+<ins id="def1">**정의 1**</ins> Variety $$X$$의 *algebraic $$k$$-cycle*<sub>대수적 $k$-순환</sub>은 $$X$$의 $$k$$-dimensional closed irreducible subvariety들의 formal sum
 
 $$Z = \sum_{i} n_i V_i$$
 
@@ -32,7 +32,7 @@ $$Z = \sum_{i} n_i V_i$$
 
 </div>
 
-그 정의에 의해 algebraic $$k$$-cycle은 homology에 가까운 것이다. 만일 이를 (duality를 통해) cohomology의 관점에서 해석해야 할 일이 있을 때에는 *codimension $$k$$ cycle*<sub>여차원 $$k$$ 순환</sub>을 $$Z^k(X) = Z_{n-k}(X)$$ (단 $$n = \dim X$$)로 표기한다. 위에서 언급한 것과 같이 Chow group은 이들 $$Z_k(X)$$에 특정한 equivalence를 취하여 얻어지는 것이다. 
+그 정의에 의해 algebraic $$k$$-cycle은 homology에 가까운 것이다. 만일 이를 (duality를 통해) cohomology의 관점에서 해석해야 할 일이 있을 때에는 *codimension $$k$$ cycle*<sub>여차원 $k$ 순환</sub>을 $$Z^k(X) = Z_{n-k}(X)$$ (단 $$n = \dim X$$)로 표기한다. 위에서 언급한 것과 같이 Chow group은 이들 $$Z_k(X)$$에 특정한 equivalence를 취하여 얻어지는 것이다. 
 
 <div class="definition" markdown="1">
 

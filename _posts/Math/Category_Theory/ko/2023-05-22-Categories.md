@@ -217,10 +217,10 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 
 <ins id="ex13">**예시 13**</ins> Category $$\mathcal{A}$$가 주어졌다 하고, $$A\in\obj(\mathcal{A})$$를 고정하자. 
 
-- $$\mathcal{A}$$의 *slice category over $$A$$<sub>$$A$$ 위에서의 조각 범주</sub>* $$A_{/\mathcal{A}}$$는 다음과 같은 데이터로 주어진다.
+- $$\mathcal{A}$$의 *slice category over $$A$$<sub>$A$ 위에서의 조각 범주</sub>* $$A_{/\mathcal{A}}$$는 다음과 같은 데이터로 주어진다.
   - $$\mathcal{A}_{/A}$$의 object들은 $$\mathcal{A}$$의 morphism들 $$f:A_1\rightarrow A$$이다.
   - 임의의 $$(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$$와 $$(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$$에 대하여, $$f_1$$에서 $$f_2$$로의 morphism은 $$f_1=g\circ f_2$$가 성립하도록 하는 $$g:A_1\rightarrow A_2$$이다.
-- $$\mathcal{A}$$의 *slice category under $$A$$<sub>$$A$$ 위에서의 쌍대 조각 범주</sub>* $${}_{A/}\mathcal{A}$$는 다음과 같은 데이터로 주어진다.
+- $$\mathcal{A}$$의 *slice category under $$A$$<sub>$A$ 위에서의 쌍대 조각 범주</sub>* $${}_{A/}\mathcal{A}$$는 다음과 같은 데이터로 주어진다.
   - $${}_{A/}\mathcal{A}$$의 object들은 $$\mathcal{A}$$의 morphism들 $$f:A\rightarrow A_1$$이다.
   - 임의의 $$(A\overset{f_1}{\longrightarrow}A_1)\in\obj({}_{A/}\mathcal{A})$$와 $$(A\overset{f_2}{\longrightarrow}A_2)\in\obj({}_{A/}\mathcal{A})$$에 대하여, $$f_1$$에서 $$f_2$$로의 morphism은 $$f_2=g\circ f_1$$가 성립하도록 하는 $$g:A_1\rightarrow A_2$$이다.
 

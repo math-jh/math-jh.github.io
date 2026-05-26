@@ -23,7 +23,7 @@ weight: 204
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Commutative monoid $$I$$에 대해, $$A=\bigoplus_{i\in I}A_i$$가 $$I$$-graded ring이라 하고, $$M$$이 left $$A$$-module이라 하자. 그럼 $$M$$이 *$$I$$-graded left $$A$$-module<sub>$$I$$-등급 왼쪽가군</sub>*이라는 것은 임의의 $$i,j\in I$$에 대하여 
+<ins id="def1">**정의 1**</ins> Commutative monoid $$I$$에 대해, $$A=\bigoplus_{i\in I}A_i$$가 $$I$$-graded ring이라 하고, $$M$$이 left $$A$$-module이라 하자. 그럼 $$M$$이 *$$I$$-graded left $$A$$-module<sub>$I$-등급 왼쪽가군</sub>*이라는 것은 임의의 $$i,j\in I$$에 대하여 
 
 $$A_iM_j\subseteq M_{i+j}$$
 

@@ -90,7 +90,7 @@ $$x_1=c_1,\quad x_2=c_2,\quad\ldots,\quad x_i=d_i,\quad\ldots,\quad x_n=c_n$$
 
 is also a solution of equation (3). Therefore, if all $$a_{ij}$$ are $$0$$, then if $$b$$ is the zero vector, equation (3) has every tuple in $$\mathbb{K}^n$$ as a solution; otherwise, no solution exists. To avoid such trivial cases, we assume that at least one $$a_{ij}$$ is not zero.
 
-Now define the integer $$k$$ to be <phrase>the smallest integer among those for which there exists $$1\leq j\leq m$$ such that $$a_{jk}\neq 0$$</phrase>, and for this fixed $$k$$, choose the smallest integer $$j$$ satisfying $$a_{jk}\neq 0$$. Now the $$j$$-th equation
+Now define the integer $$k$$ to be <phrase>the smallest integer among those for which there exists $1\leq j\leq m$ such that $a_{jk}\neq 0$</phrase>, and for this fixed $$k$$, choose the smallest integer $$j$$ satisfying $$a_{jk}\neq 0$$. Now the $$j$$-th equation
 
 $$a_{j1}x_1+a_{j2}x_2+\cdots+a_{jk}x_k+\cdots+a_{nk}x_n=b_j$$
 

@@ -184,35 +184,72 @@ $$z\,\partial_{q_a}\mathcal{I}_\Gamma = \int_\Gamma \partial_{q_a}W_q\cdot e^{W_
 
 이다. 그런데 ($$\ast$$)의 우변은 우리가 알고 있는 형태 ([정의 2](#def2))와는 다른 것으로, 이를 해결하기 위해서는 $$f$$가 rapid decay homology의 decaying condition을 깨지 않는 한에서 $$f e^{W_q/z}\omega$$ 꼴로 integrand를 넓혀주어야 한다. Thimble $$\Gamma$$의 boundary 부근에서 $$\lvert e^{W_q/z}\rvert = e^{\Real(W_q/z)}$$가 지수적으로 $$0$$으로 사라지므로, $$f$$가 polynomial 정도의 성장만 한다면 충분히 컨트롤이 가능하며 따라서 자연스러운 함수 공간은 regular function들의 공간 $$\mathcal{O}(\check{X})$$이다. 
 
- Hori-Vafa 경우 $$\check{X}=(\mathbb{C}^\ast)^N$$이라 $$f$$는 Laurent polynomial이다. 우변의 $$\partial_{q_a}W_q$$, $$W_q$$도 모두 $$\mathcal{O}(\check{X})$$의 원소이므로 ($$\ast$$)의 우변은 정확히 이 family 안에 들어오고, $$\mathcal{I}^f_\Gamma$$의 미분도 다시 $$f\cdot\partial_{q_a}W_q$$를 곱한 적분으로 같은 family에 머무른다.
-
-그러나 $$\mathcal{O}(\check{X})$$가 *무한차원*이라 unknown이 여전히 너무 많다. 여기서 결정적인 사실은 period pairing이 *cohomology class에만 의존*한다는 점이다. 만일 $$f, g \in \mathcal{O}(\check{X})$$가 같은 cohomology class를 정의 — 즉 $$(f-g)\cdot e^{W_q/z}\omega = d\alpha$$가 어떤 rapid decay form $$\alpha$$의 미분 — 한다면, Stokes 정리로
+문제는 이렇게 정의할 경우 regular function들의 모임은 (벡터공간으로서) 무한차원이므로 이들을 모두 추가하는 것이 불가능하다는 것에 있다. 이를 해결하기 위해 우리는 period integral을 사용해서 pairing을 정의할 경우, 그 값이 cohomology class에만 의존한다는 것을 관찰한다. 이는 만일 $$f, g \in \mathcal{O}(\check{X})$$가 같은 cohomology class를 정의한다면, 즉 만일 적당한 rapid decay form $$\alpha$$에 대하여 다음의 식 $$(f-g)\cdot e^{W_q/z}\omega = d\alpha$$이 성립한다면, Stokes 정리로부터
 
 $$\int_\Gamma (f-g)\cdot e^{W_q/z}\omega = \int_\Gamma d\alpha = \int_{\partial\Gamma}\alpha = 0$$
 
-이다 ($$\partial\Gamma \subset S_z$$이고 거기서 $$\alpha$$가 rapid decay이므로 boundary integral이 사라짐). 따라서 $$\mathcal{I}^f_\Gamma$$는 $$f$$의 cohomology class $$[f\cdot e^{W_q/z}\omega] \in \mathcal{H}_{(q,z)}$$에만 의존하고, 우리가 정말 다뤄야 하는 공간은 $$\mathcal{O}(\check{X})$$가 아니라 $$\mathcal{H}_{(q,z)}$$이다.
-
-그리고 $$W_q$$가 Morse type이면 $$\mathcal{H}_{(q,z)}$$는 *유한차원*이다. 직접적으로 말하면, $$\mathcal{H}_{(q,z)}$$가 rapid decay homology $$H_N(\check{X}, S_z;\mathbb{C})$$의 dual이고 앞서 본 바와 같이 후자가 thimble basis $$\{[\Gamma_p]\}_{p\in\Crit(W_q)}$$를 가지므로
+이고, 따라서 $$\mathcal{I}^f_\Gamma$$의 값은 $$f$$의 cohomology class $$[f\cdot e^{W_q/z}\omega] \in \mathcal{H}_{(q,z)}$$에만 의존함이 따라온다. 즉 우리가 다뤄야 하는 unknown 공간은 사실상 $$\mathcal{O}(\check{X})$$가 아니라 $$\mathcal{H}_{(q,z)}$$이고, $$\mathcal{H}_{(q,z)}$$만 유한차원이면 이 문제가 해결된다. 그리고 이는 실제로 성립하는데, $$W_q$$가 Morse type이면 rapid decay homology $$H_N(\check{X}, S_z;\mathbb{C})$$가 thimble basis $$\{[\Gamma_p]\}_{p\in\Crit(W_q)}$$를 가지고, 이것이 $$\mathcal{H}_{(q,z)}$$의 dual이므로
 
 $$\dim_\mathbb{C}\mathcal{H}_{(q,z)} = \lvert\Crit(W_q)\rvert$$
 
-이다. 한편 $$\Jac(W_q) = \mathcal{O}(\check{X})/(\partial_i W_q)$$도 Morse 조건 하에서 같은 차원을 갖는다 (이상 $$(\partial_i W_q)$$의 zero locus가 isolated point들 $$\Crit(W_q)$$이고 Morse라 multiplicity가 모두 $$1$$이므로, quotient ring의 dim이 점의 개수와 일치).
+이기 때문이다.
 
-자연스러운 map
+더 나아가, $$\mathcal{H}_{(q,z)}$$의 concrete basis는 $$\Jac(W_q) = \mathcal{O}(\check{X})/(\partial_iW_q)$$에서 곧장 얻어진다. 자연스러운 map
 
 $$\Jac(W_q) \;\longrightarrow\; \mathcal{H}_{(q,z)},\qquad T \;\longmapsto\; [T\cdot e^{W_q/z}\omega]$$
 
-은 [명제 5](#prop5) 증명의 cocycle-coboundary 식 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1}dW_q\wedge\beta)$$로부터 well-defined임이 따라온다 (즉 $$T = \sum_i h_i \partial_i W_q$$일 때 $$[T\cdot e^{W_q/z}\omega]$$가 적절한 form의 $$d$$로 표현되어 cohomology class가 $$0$$이 됨). 양변의 dim이 같으므로 이 well-defined map은 자동으로 isomorphism이고 (finite-dim vector space 사이의 dim-preserving linear map은 단사 ↔ 전사 ↔ iso),
+은 [명제 5](#prop5) 증명의 cocycle-coboundary 식 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1}dW_q\wedge\beta)$$로부터 well-defined임이 따라오고 ($$T = \sum_i h_i\,\partial_iW_q$$일 때 $$[T\cdot e^{W_q/z}\omega]$$가 적절한 form의 $$d$$로 표현되어 cohomology class가 $$0$$이 됨), 한편 Morse 조건 하 $$\Jac(W_q)$$의 차원도 정확히 $$\lvert\Crit(W_q)\rvert$$이므로 (이상 $$(\partial_iW_q)$$의 zero locus가 isolated critical points들이고 multiplicity 1이라 quotient ring의 dim이 점의 개수와 일치) 양변 dim 일치로 자동 isomorphism
 
 $$\Jac(W_q) \;\xrightarrow{\sim}\; \mathcal{H}_{(q,z)}$$
 
-가 성립한다.
+가 성립한다. 이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실이며 (mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$와 ring으로 매칭시키는, 그 다음 단계의 statement), 무한차원 $$\mathcal{O}(\check{X})$$의 family가 cohomology level에서 $$\mu := \lvert\Crit(W_q)\rvert$$ 차원의 finite quotient $$\Jac(W_q)$$로 축소된다.
 
-요컨대 무한차원 $$\mathcal{O}(\check{X})$$가 cohomology level에서 $$\mu := \lvert\Crit(W_q)\rvert$$ 차원의 finite quotient $$\Jac(W_q)$$로 축소된다. 이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실이다 (mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$과 ring으로 매칭시키는, 그 다음 단계의 statement).
+따라서 $$\Jac(W_q)$$의 finite basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$와 thimble basis $$\{\Gamma_b\}_{b=0,\ldots,\mu-1}$$를 함께 잡으면 ($$\ast$$)는 *유한 개의 적분 사이의 닫힌 행렬 ODE*로 정리되고, 다음 정리를 얻는다.
 
-따라서 $$\Jac(W_q)$$의 finite basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$를 잡으면 모든 oscillating integral $$\mathcal{I}^f_\Gamma$$가 결국 $$\{\mathcal{I}^{T_\alpha}_\Gamma\}_\alpha$$의 linear combination으로 환원되고, ($$\ast$$)는 이 *유한* 개의 적분 사이의 *닫힌* ODE system이 된다.
+<div class="proposition" markdown="1">
 
-이 system의 explicit 행렬 형태와 fundamental solution matrix는 [§Givental J-function과 Mirror Theorem, ⁋명제 3](/ko/math/mirror_symmetry/givental_j_function#prop3)에서, A-side quantum cohomology $$D$$-module과의 비교(mirror theorem)는 같은 글의 [명제 4](/ko/math/mirror_symmetry/givental_j_function#prop4)에서 다룬다.
+<ins id="thm7">**정리 7 (Fundamental solution matrix)**</ins> $$W_q$$가 Morse type이라 하고 $$\mu := \lvert\Crit(W_q)\rvert$$이라 두자. Jacobi ring $$\Jac(W_q)$$의 $$\mathbb{C}$$-basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$와 rapid decay homology $$H_N(\check{X},\{\Real(W_q/z)\ll 0\};\mathbb{C})$$의 Lefschetz thimble basis $$\{\Gamma_b\}_{b=0,\ldots,\mu-1}$$에 대하여, *period matrix*
+
+$$\mathcal{I}^\alpha_{\Gamma_b}(q, z) := \int_{\Gamma_b} T_\alpha\cdot e^{W_q/z}\,\omega$$
+
+를 정의하자. $$\Jac(W_q)$$ 안의 multiplication 행렬을
+
+$$T_\alpha\cdot \partial_{q_a}W_q = \sum_\beta (M_a)^\alpha_\beta\, T_\beta,\qquad T_\alpha\cdot W_q = \sum_\beta E^\alpha_\beta\, T_\beta\quad\text{in}\;\Jac(W_q)$$
+
+로 두면, 행렬 $$\mathcal{I} = (\mathcal{I}^\alpha_{\Gamma_b})$$는 다음의 닫힌 ODE system을 만족한다.
+
+$$z\,\partial_{q_a}\mathcal{I}^\alpha_{\Gamma_b} = \sum_\beta (M_a)^\alpha_\beta\,\mathcal{I}^\beta_{\Gamma_b},\qquad z^2\,\partial_z\mathcal{I}^\alpha_{\Gamma_b} = -\sum_\beta E^\alpha_\beta\,\mathcal{I}^\beta_{\Gamma_b}$$
+
+특히 $$\mathcal{I}$$는 invertible matrix-valued function이며, frame $$\{[T_\alpha\,e^{W_q/z}\omega]\}_\alpha$$로 trivialize한 B-model connection $$\nabla^z_B$$의 *fundamental solution matrix*를 이룬다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+**닫힌 ODE.** 각 $$\alpha, b$$에 대해 ($$\ast$$)와 동일한 적분 미분 교환을 적용하면
+
+$$z\,\partial_{q_a}\mathcal{I}^\alpha_{\Gamma_b} = \int_{\Gamma_b}T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega,\qquad z^2\,\partial_z\mathcal{I}^\alpha_{\Gamma_b} = -\int_{\Gamma_b}T_\alpha\cdot W_q\cdot e^{W_q/z}\omega$$
+
+가 된다. 앞서 확립한 isomorphism $$\Jac(W_q)\xrightarrow{\sim}\mathcal{H}_{(q,z)}$$ 하에서 cohomology class $$[T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega]$$는 $$T_\alpha\cdot\partial_{q_a}W_q$$를 $$\Jac(W_q)$$ 안에서 reduce한 결과 $$\sum_\beta(M_a)^\alpha_\beta T_\beta$$에 대응하므로
+
+$$[T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega] = \sum_\beta (M_a)^\alpha_\beta\,[T_\beta\,e^{W_q/z}\omega]\in\mathcal{H}_{(q,z)}$$
+
+이고, period pairing은 cohomology class에만 의존하므로 양변을 $$\Gamma_b$$ 위에서 적분하면
+
+$$\int_{\Gamma_b}T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega = \sum_\beta (M_a)^\alpha_\beta\,\mathcal{I}^\beta_{\Gamma_b}$$
+
+가 따른다. $$z$$-방향도 $$T_\alpha\cdot W_q = \sum_\beta E^\alpha_\beta T_\beta$$로 동일한 논의를 거치면 된다.
+
+**Fundamental solution interpretation.** Frame $$\{e_\alpha := [T_\alpha\,e^{W_q/z}\omega]\}$$에 대해 [명제 5](#prop5)의 일반화
+
+$$\nabla^z_{B,\partial_{q_a}}\,e_\alpha = \sum_\beta (M_a)^\alpha_\beta\,e_\beta$$
+
+가 성립한다 ($$\nabla^z_B = z\nabla^{GM}$$의 $$z$$ factor가 $$\nabla^{GM}$$의 $$1/z$$를 흡수). 한편 [정의 4](#def4)의 setup에 의해 continuously isotoped된 thimble $$\Gamma_b$$는 dual bundle $$\mathcal{H}^\vee$$의 flat section이므로, 두 frame 사이의 transition $$\mathcal{I}^\alpha_{\Gamma_b} = \langle e_\alpha, \Gamma_b\rangle$$이 따르는 미분방정식이 위의 닫힌 ODE이며, $$\{\Gamma_b\}$$가 각 fiber에서 dual bundle의 basis임으로부터 $$\mathcal{I}$$의 invertibility가 따라온다. 따라서 $$\mathcal{I}$$의 column들이 horizontal dual section $$\{\Gamma_b\}$$와 cohomology frame $$\{e_\alpha\}$$의 pairing 데이터를 모은 $$\nabla^z_B$$의 *fundamental solution matrix*가 된다.
+
+</details>
+
+이 fundamental solution matrix $$\mathcal{I}$$가 A-side quantum cohomology $$D$$-module의 fundamental solution($$J$$-function)과 일치한다는 mirror theorem은 [§Givental J-function과 Mirror Theorem, ⁋명제 3](/ko/math/mirror_symmetry/givental_j_function#prop3)에서 다룬다.
 
 ## Mirror theorem과 $$J$$-function의 복원
 

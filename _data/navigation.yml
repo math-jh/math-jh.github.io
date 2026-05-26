@@ -304,6 +304,8 @@ category_theory-ko:
         url: ko/math/category_theory/monoid_objects
       - title: "수반함자"
         url: ko/math/category_theory/adjoints
+      - title: "아벨 카테고리"
+        url: ko/math/category_theory/abelian_categories
       # - title: "요네다 보조정리"
         # url: ko/math/category_theory/Yoneda_lemma
       # - title: "모나드"
@@ -396,6 +398,12 @@ field_theory-ko:
         url: ko/math/field_theory/separable_extensions
       - title: "분해차수"
         url: ko/math/field_theory/separable_degree
+      - title: "갈루아 확장"
+        url: ko/math/field_theory/galois_extension
+      - title: "갈루아 군의 성질들"
+        url: ko/math/field_theory/properties_of_galois_extensions
+      - title: "갈루아 이론의 기본정리"
+        url: ko/math/field_theory/fundamental_theorem_of_galois_theory
   - title: 
     children:
       - title: "블로그 소개"
@@ -632,6 +640,8 @@ multilinear_algebra-ko:
         url: ko/math/multilinear_algebra/differential_modules
       - title: "대칭텐서"
         url: ko/math/multilinear_algebra/symmetric_tensors
+      - title: "코탄젠트 복합체"
+        url: ko/math/multilinear_algebra/cotangent_complex
   - title: 
     children:
       - title: "블로그 소개"
@@ -1114,6 +1124,8 @@ toric_geometry-ko:
         url: ko/math/toric_geometry/reflexive_polytope_fano
       - title: "Cox 구성과 GIT quotient"
         url: ko/math/toric_geometry/cox_construction
+      - title: "토릭 다양체 위의 로그 미분형식"
+        url: ko/math/toric_geometry/logarithmic_differentials
   - title: 
     children:
       - title: "블로그 소개"
@@ -1307,6 +1319,250 @@ category-en:
       - title: "Toric Geometry"
         url: en/toric_geometry/
   - title: 
+    children:
+      - title: "About This Site"
+        url: en/about
+
+topology-en:
+  - title: <a href="/en/topology/" class="sidebar_title">Point-Set Topology</a>
+    children:
+      - title: "Open Sets"
+        url: en/math/topology/open_sets
+      - title: "Bases of a Topological Space"
+        url: en/math/topology/topological_bases
+      - title: "Interior, Closure, and Boundary"
+        url: en/math/topology/other_concepts
+      - title: "Other Definitions of Topological Spaces"
+        url: en/math/topology/equivalent_formulations_of_topology
+      - title: "Continuous Functions"
+        url: en/math/topology/continuous_functions
+      - title: "Initial and Final Topologies"
+        url: en/math/topology/initial_and_final_topology
+      - title: "Subspaces"
+        url: en/math/topology/subspaces
+      - title: "Presheaves"
+        url: en/math/topology/presheaves
+      - title: "Sheaves"
+        url: en/math/topology/sheaves
+      - title: "Quotient Spaces"
+        url: en/math/topology/quotient_spaces
+      - title: "Product Spaces"
+        url: en/math/topology/product_spaces
+      - title: "Open Mappings and Closed Mappings"
+        url: en/math/topology/open_mappings_and_closed_mappings
+      - title: "Hausdorff Spaces"
+        url: en/math/topology/Hausdorff_spaces
+      - title: "Compact Spaces"
+        url: en/math/topology/compact_spaces
+      - title: "Compactness and Filter Convergence"
+        url: en/math/topology/filter_convergence
+      - title: "Compactness"
+        url: en/math/topology/compactness
+      - title: "Proper Maps"
+        url: en/math/topology/proper_maps
+      - title: "Connected Spaces"
+        url: en/math/topology/connected_spaces
+      - title: "Dimension"
+        url: en/math/topology/dimension
+  - title:
+    children:
+      - title: "About This Site"
+        url: en/about
+
+manifold-en:
+  - title: <a href="/en/manifold/" class="sidebar_title">Manifolds</a>
+    children:
+      - title: "Differentiable Manifolds"
+        url: en/math/manifold/smooth_manifolds
+      - title: "Examples of Differentiable Manifolds"
+        url: en/math/manifold/examples_of_manifolds
+      - title: "Tangent Space"
+        url: en/math/manifold/tangent_space
+      - title: "Cotangent Space"
+        url: en/math/manifold/cotangent_space
+      - title: "Differentials"
+        url: en/math/manifold/differentials
+      - title: "Examples of Differentials"
+        url: en/math/manifold/examples_of_differentials
+      - title: "Submanifolds and the Inverse Function Theorem"
+        url: en/math/manifold/submanifolds
+      - title: "Uniqueness of Submanifolds"
+        url: en/math/manifold/uniqueness_of_submanifold
+      - title: "Implicit Function Theorem"
+        url: en/math/manifold/implicit_function_theorem
+      - title: "Tangent and Cotangent Bundles"
+        url: en/math/manifold/tangent_and_cotangent_bundles
+      - title: "Vector Fields"
+        url: en/math/manifold/vector_fields
+      - title: "Differential Forms"
+        url: en/math/manifold/differential_forms
+      - title: "Lie Derivative"
+        url: en/math/manifold/Lie_derivative
+      - title: "Distribution"
+        url: en/math/manifold/distribution
+      - title: "Differential Ideal"
+        url: en/math/manifold/differential_ideal
+      - title: "Orientation"
+        url: en/math/manifold/orientation
+  - title:
+    children:
+      - title: "About This Site"
+        url: en/about
+
+multilinear_algebra-en:
+  - title: <a href="/en/multilinear_algebra/" class="sidebar_title">Multilinear Algebra</a>
+    children:
+      - title: "Exact Sequences"
+        url: en/math/multilinear_algebra/exact_sequences
+      - title: "Projective, Injective, and Flat Modules"
+        url: en/math/multilinear_algebra/various_modules
+      - title: "Basis"
+        url: en/math/multilinear_algebra/basis_of_free_modules
+      - title: "Dual Spaces"
+        url: en/math/multilinear_algebra/dual_spaces
+      - title: "Hom and the Tensor Product"
+        url: en/math/multilinear_algebra/hom_and_tensor
+      - title: "Matrices"
+        url: en/math/multilinear_algebra/matrices
+      - title: "Matrices and Linear Maps"
+        url: en/math/multilinear_algebra/matrices_and_linear_maps
+      - title: "Change of Basis"
+        url: en/math/multilinear_algebra/change_of_basis
+      - title: "Tensor Algebras"
+        url: en/math/multilinear_algebra/tensor_algebras
+      - title: "Determinants"
+        url: en/math/multilinear_algebra/determinants
+      - title: "Norms and Traces"
+        url: en/math/multilinear_algebra/norms_and_traces
+      - title: "Derivations"
+        url: en/math/multilinear_algebra/derivations
+      - title: "Differential Modules"
+        url: en/math/multilinear_algebra/differential_modules
+      - title: "Symmetric Tensors"
+        url: en/math/multilinear_algebra/symmetric_tensors
+  - title:
+    children:
+      - title: "About This Site"
+        url: en/about
+
+scheme_theory-en:
+  - title: <a href="/en/scheme_theory/" class="sidebar_title">Scheme Theory</a>
+    children:
+      - title: "Spectrum"
+        url: en/math/scheme_theory/spectrums
+      - title: "Affine Schemes"
+        url: en/math/scheme_theory/affine_schemes
+      - title: "Schemes"
+        url: en/math/scheme_theory/schemes
+      - title: "Topological Structure of Schemes"
+        url: en/math/scheme_theory/topology_of_schemes
+      - title: "Algebra of Schemes"
+        url: en/math/scheme_theory/algebra_of_schemes
+      - title: "Morphisms of Schemes"
+        url: en/math/scheme_theory/morphism_of_schemes
+      - title: "Properties of Scheme Morphisms"
+        url: en/math/scheme_theory/properties_of_scheme_morphisms
+      - title: "Valuation Rings"
+        url: en/math/scheme_theory/valuative_criteria
+      - title: "Flat Morphisms"
+        url: en/math/scheme_theory/flat_morphisms
+      - title: "Fiber Products"
+        url: en/math/scheme_theory/fiber_products
+      - title: "Closed Subschemes"
+        url: en/math/scheme_theory/closed_subschemes
+      - title: "Projective Schemes"
+        url: en/math/scheme_theory/projective_schemes
+      - title: "Closed Subschemes of Projective Space"
+        url: en/math/scheme_theory/closed_subschemes_of_projective_spaces
+      - title: "Complete Intersections"
+        url: en/math/scheme_theory/complete_intersections
+      - title: "Dimension"
+        url: en/math/scheme_theory/dimension
+      - title: "Algebraic Groups"
+        url: en/math/scheme_theory/algebraic_groups
+  - title:
+    children:
+      - title: "About This Site"
+        url: en/about
+
+mirror_symmetry-en:
+  - title: <a href="/en/mirror_symmetry/" class="sidebar_title">Mirror Symmetry</a>
+    children:
+      - title: "Overview of Mirror Symmetry"
+        url: en/math/mirror_symmetry/overview
+      - title: "Frobenius Manifolds"
+        url: en/math/mirror_symmetry/frobenius_manifold
+      - title: "Dubrovin Connection"
+        url: en/math/mirror_symmetry/dubrovin_connection
+  - title:
+    children:
+      - title: "About This Site"
+        url: en/about
+
+symplectic_geometry-en:
+  - title: <a href="/en/symplectic_geometry/" class="sidebar_title">Symplectic Geometry</a>
+    children:
+      - title: "Classical Mechanics"
+        url: en/math/symplectic_geometry/classical_mechanics
+      - title: "Symplectic Vector Spaces"
+        url: en/math/symplectic_geometry/linear_symplectic_geometry
+      - title: "Symplectic Manifolds"
+        url: en/math/symplectic_geometry/symplectic_manifold
+  - title:
+    children:
+      - title: "About This Site"
+        url: en/about
+
+toric_geometry-en:
+  - title: <a href="/en/toric_geometry/" class="sidebar_title">Toric Geometry</a>
+    children:
+      - title: "Affine Toric Varieties"
+        url: en/math/toric_geometry/affine_toric_varieties
+      - title: "Definition of Toric Varieties"
+        url: en/math/toric_geometry/toric_varieties
+      - title: "Torus-Invariant Divisors and Line Bundles"
+        url: en/math/toric_geometry/toric_divisors
+      - title: "Fano Varieties"
+        url: en/math/toric_geometry/reflexive_polytope_fano
+  - title:
+    children:
+      - title: "About This Site"
+        url: en/about
+
+riemannian_geometry-en:
+  - title: <a href="/en/riemannian_geometry/" class="sidebar_title">Riemannian Geometry</a>
+    children:
+      - title: "Riemannian Metric"
+        url: en/math/riemannian_geometry/Riemannian_metric
+      - title: "Connection"
+        url: en/math/riemannian_geometry/connection
+  - title:
+    children:
+      - title: "About This Site"
+        url: en/about
+
+ring_theory-en:
+  - title: <a href="/en/ring_theory/" class="sidebar_title">Ring Theory</a>
+    children:
+      - title: "Integral Domains"
+        url: en/math/ring_theory/integral_domains
+      - title: "Chinese Remainder Theorem"
+        url: en/math/ring_theory/chinese_remainder_theorem
+      - title: "Polynomial Rings"
+        url: en/math/ring_theory/polynomial_rings
+  - title:
+    children:
+      - title: "About This Site"
+        url: en/about
+
+representation_theory-en:
+  - title: <a href="/en/representation_theory/" class="sidebar_title">Representation Theory</a>
+    children:
+      - title: "Representation Theory of Finite Groups"
+        url: en/math/representation_theory/representations_of_finite_groups
+      - title: "Characters"
+        url: en/math/representation_theory/character_theory
+  - title:
     children:
       - title: "About This Site"
         url: en/about

@@ -31,7 +31,7 @@ $$\mathcal{T}^{r,s}(M)=\mathcal{T}^{r,s}(TM),\quad \bigwedge\nolimits^\ast(M)=\b
 
 $$\Gamma\left(\mathcal{T}^{r,s}(M)\right),\quad\Omega^\ast(M):=\Gamma\left(\bigwedge\nolimits^\ast(M)\right),\quad\Omega^k(M):=\Gamma\left(\bigwedge\nolimits^k(M)\right)$$
 
-의 원소들을 각각 *tensor field<sub>텐서장</sub>*, *differential form<sub>미분형식</sub>*, *differential $$k$$-form<sub>$$k$$차 미분형식</sub>*이라 부른다. 
+의 원소들을 각각 *tensor field<sub>텐서장</sub>*, *differential form<sub>미분형식</sub>*, *differential $$k$$-form<sub>$k$차 미분형식</sub>*이라 부른다. 
 
 </div>
 

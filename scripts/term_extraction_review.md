@@ -1541,3 +1541,33 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `pseudo-ring` | looks like emphasis (no <sub> partner) |
 | `히니민` | looks like emphasis (no <sub> partner) |
 
+## 준층
+- post: `_posts/Math/Topology/ko/2024-11-19-Presheaves.md`
+- permalink: `/ko/math/topology/presheaves`
+- scanned: 2026-05-26T05:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `presheaf cokernel` | multi-word English emphasis — possibly a definition |
+| `presheaf image` | multi-word English emphasis — possibly a definition |
+| `presheaf coimage` | multi-word English emphasis — possibly a definition |
+| `presheaf quotient` | multi-word English emphasis — possibly a definition |
+
+## 인자
+- post: `_posts/Math/Commutative_Algebra/ko/2025-01-24-Divisors.md`
+- permalink: `/ko/math/commutative_algebra/divisors`
+- scanned: 2026-05-26T06:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `uniform하게` | mixed-script emphasis — possibly a definition |
+
+## 벡터공간의 기저
+- post: `_posts/Math/Linear_Algebra/ko/2021-10-10-Basis.md`
+- permalink: `/ko/math/linear_algebra/basis`
+- scanned: 2026-05-26T07:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `모든` | looks like emphasis (no <sub> partner) |
+

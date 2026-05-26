@@ -59,7 +59,7 @@ From this, the following theorem is obtained.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**Theorem 2**</ins> Suppose a function $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$ satisfying all the conditions of [Definition 1](#def1) is given. If we define $$\mathcal{C}$$ as <phrase>the collection of all $$C$$ satisfying $$\cl(C)=C$$</phrase>, then $$\mathcal{C}$$ satisfies all the conditions of [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2) and thus defines a unique topological structure.
+<ins id="thm2">**Theorem 2**</ins> Suppose a function $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$ satisfying all the conditions of [Definition 1](#def1) is given. If we define $$\mathcal{C}$$ as <phrase>the collection of all $C$ satisfying $\cl(C)=C$</phrase>, then $$\mathcal{C}$$ satisfies all the conditions of [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2) and thus defines a unique topological structure.
 
 </div>
 
@@ -104,7 +104,7 @@ Then among the four conditions that $$\mathcal{N}(x)$$ must satisfy, the first t
 
 <div class="misc" markdown="1">
 
-**Neighborhood Axiom.** For an arbitrary $$z\in X$$, suppose a filter $$\mathcal{N}(z)$$ on $$X$$ is given whose elements each contain $$z$$. Then for every $$S\in\mathcal{N}(z)$$, there exists a suitable $$S'\in\mathcal{N}(z)$$ such that <phrase>for every $$x\in S'$$, $$S\in\mathcal{N}(x)$$</phrase> holds.
+**Neighborhood Axiom.** For an arbitrary $$z\in X$$, suppose a filter $$\mathcal{N}(z)$$ on $$X$$ is given whose elements each contain $$z$$. Then for every $$S\in\mathcal{N}(z)$$, there exists a suitable $$S'\in\mathcal{N}(z)$$ such that <phrase>for every $x\in S'$, $S\in\mathcal{N}(x)$</phrase> holds.
 
 </div>
 

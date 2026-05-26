@@ -187,7 +187,7 @@ $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1x_2\cdots x_n)$$
 
 </div>
 
-이 때, $$A$$-module $$\S^n(M)$$을 $$M$$의 *$$n$$번째 symmetric power<sub>$$n$$번째 대칭곱</sub>*이라 부른다. 그럼 임의의 $$A$$-linear map $$u:M \rightarrow N$$에 대하여, $$\S^n(u): \S^n(M) \rightarrow \S^n(N)$$이 유도되며 이들의 direct sum을 취하면 $$\S(u)$$를 복원할 수 있다.
+이 때, $$A$$-module $$\S^n(M)$$을 $$M$$의 *$$n$$번째 symmetric power<sub>$n$번째 대칭곱</sub>*이라 부른다. 그럼 임의의 $$A$$-linear map $$u:M \rightarrow N$$에 대하여, $$\S^n(u): \S^n(M) \rightarrow \S^n(N)$$이 유도되며 이들의 direct sum을 취하면 $$\S(u)$$를 복원할 수 있다.
 
 ## 대칭대수의 성질들
 
