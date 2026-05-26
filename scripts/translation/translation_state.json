@@ -619,27 +619,28 @@
     },
     "_posts/Math/Field_Theory/ko/2025-05-15-Radical_Extensions.md": {
       "status": "done",
-      "last_attempt_ts": 1779275194.9934044,
+      "last_attempt_ts": 1779800456.455286,
       "en_path": "_posts/Math/Field_Theory/en/2025-05-15-Radical_Extensions.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-20T11:00:01+00:00",
-      "in_chars": 8032,
-      "out_chars": 7652,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T13:00:02+00:00",
+      "in_chars": 8518,
+      "out_chars": 7536,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=113, en=112"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=113 en=112\nFINDINGS:\n- [opening paragraph] SAFE-REPHRASE: KO has one extra `$$\\mathbb{Q}$$` in \"가령 $$\\mathbb{Q}$$의 degree\" where EN says \"Consider the degree\"; EN recovers the same field as \"of $$\\mathbb{Q}$$\" immediately after.\n- [rmk1–def1 region] SAFE-REPHRASE: identical math content; block counts match.\n- [def4] SAFE-REPHRASE: KO order `$$\\mathbb{L}$$`, `$$x$$`, `$$x^{p^e}\\in\\mathbb{K}$$`, `$$e$$`, `$$e$$`, `$$\\mathbb{L}$$` vs EN order `$$e$$`, `$$x^{p^e}\\in\\mathbb{K}$$`, `$$x$$`, `$$\\mathbb{L}$$`, `$$e$$`, `$$\\mathbb{L}$$` — same six blocks reordered by grammar (Korean postposition vs English relative clause).\n- [prop5] SAFE-REPHRASE: KO lists `$$\\mathbb{L}_n$$`, `$$\\mathbb{L}_\\infty$$` then `$$\\mathbb{K}$$`, `$$\\mathbb{L}$$`, `$$p$$`; EN lists `$$\\mathbb{L}_\\infty$$`, `$$\\mathbb{L}_n$$` then `$$p$$`, `$$\\mathbb{L}$$`, `$$\\mathbb{K}$$` — same five blocks reordered by noun-phrase structure (\"sequence L_n의 union L_∞\" vs \"union L_∞ of the sequence L_n\").\n- [prop6→cor7] SAFE-REPHRASE: KO order `$$\\mathbb{K}$$`, `$$\\mathbb{F}$$`, `$$u$$`, `$$u$$`, `$$v$$` vs EN order `$$u$$`, `$$\\mathbb{K}$$`, `$$\\mathbb{F}$$`, `$$v$$`, `$$u$$` — same five blocks reordered by prepositional phrase (\"K에서 F로의 homomorphism u\" vs \"homomorphism u from K to F\").\n- [ex9] SAFE-REPHRASE: KO order `$$\\mathbb{L}$$`, `$$u(\\x)=0$$`, `$$\\alpha$$`, `$$u(\\x)$$` vs EN order `$$\\alpha$$`, `$$u(\\x)=0$$`, `$$\\mathbb{L}$$`, `$$u(\\x)$$` — same four blocks reordered by adverbial placement (\"L에서의 … 근 α\" vs \"root α … in L\").\n- [all remaining regions] SAFE-REPHRASE: no other count mismatches; every mathematical statement, hypothesis, conclusion, and symbol in KO appears in EN and vice-versa."
     },
     "_posts/Math/Field_Theory/ko/2025-05-15-Separable_Extensions.md": {
       "status": "done",
-      "last_attempt_ts": 1779717864.4112096,
+      "last_attempt_ts": 1779802512.0740013,
       "en_path": "_posts/Math/Field_Theory/en/2025-05-15-Separable_Extensions.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-25T14:00:01+00:00",
-      "in_chars": 26050,
-      "out_chars": 29399,
-      "reason": "pending",
-      "warnings": [
-        "math block count mismatch: ko=423, en=421"
-      ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=423 en=421 (per validator; my recount shows 422, net diff ≤2)\nFINDINGS:\n- [lem2] SAFE-REPHRASE: KO splits `$$I_r-(x_{ij})$$` and `$$M$$` into two blocks; EN merges into `$$M=I_r-(x_{ij})$$` — same math, one fewer block.\n- [lem13] SAFE-REPHRASE: KO writes `$$x,y$$` (single block); EN writes `$$x$$` and `$$y$$` separately (two blocks) — same variables, split for readability.\n- [thm14] SAFE-REPHRASE: KO has two standalone `$$g$$` blocks (\"polynomial `$$g$$` ... coefficients of `$$g$$`\"); EN inlines the first `g` in prose and keeps only one `$$g$$` block — no symbol lost.\n- [prop12] SAFE-REPHRASE: KO has a typo `x_1,ldots` (missing backslash) inside a large block; EN corrects to `x_1,\\ldots` — same formula, fixed LaTeX.\n- [prop15] SAFE-REPHRASE: KO typo `$$\\mathbb{K4}$$` (extraneous 4); EN corrects to `$$\\mathbb{K}$$` — same field reference, typo fixed.\n- (All remaining count differences are analogous merge/split or ordering variations; no mathematical statement, hypothesis, conclusion, or symbol was dropped or added.)"
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T13:30:02+00:00",
+      "in_chars": 26049,
+      "out_chars": 29219,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Field_Theory/ko/2025-05-17-Separable_Degree.md": {
       "status": "done",
@@ -713,13 +714,17 @@
     },
     "_posts/Math/Group_Theory/ko/2025-04-07-Sylow_Theorems.md": {
       "status": "done",
-      "last_attempt_ts": 1779291334.7222717,
+      "last_attempt_ts": 1779804181.4862766,
       "en_path": "_posts/Math/Group_Theory/en/2025-04-07-Sylow_Theorems.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-20T15:30:02+00:00",
-      "in_chars": 13885,
-      "out_chars": 14946,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T14:00:02+00:00",
+      "in_chars": 14370,
+      "out_chars": 14704,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=349, en=348"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=349 en=348\nFINDINGS:\n- [def5 region] SAFE-REPHRASE: KO contains a typo `$$p\\not\\mid p$$` (p does not divide p), which EN corrects to `$$p\\nmid m$$`; the mathematical condition is preserved, and the count difference of exactly 1 block is due to this typo fix."
     },
     "_posts/Math/Homological_Algebra/ko/2022-09-10-Diagram_Chasing.md": {
       "status": "done",
@@ -733,13 +738,17 @@
     },
     "_posts/Math/Homological_Algebra/ko/2022-09-10-Homology.md": {
       "status": "done",
-      "last_attempt_ts": 1779296838.0177584,
+      "last_attempt_ts": 1779805958.6244686,
       "en_path": "_posts/Math/Homological_Algebra/en/2022-09-10-Homology.md",
-      "ko_git_commit_ts": 1775754003.0,
-      "translated_at": "2026-05-20T17:00:02+00:00",
-      "in_chars": 14656,
-      "out_chars": 15142,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T14:30:02+00:00",
+      "in_chars": 15141,
+      "out_chars": 15014,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=197, en=196"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=197 en=196\nFINDINGS:\n- [def1 identity paragraph] SAFE-REPHRASE: inline math order permuted due to KO SOV → EN SVO restructuring (e.g., `$$\\id_{C_\\bullet}$$은 모든 $$n$$에 대하여 $$\\id_n:C_n\\rightarrow C_n$$이 $$\\id_{C_n}$$으로 정의된 $$\\id_\\bullet:C_\\bullet\\rightarrow C_\\bullet$$이며` → `$$\\id_{C_\\bullet}$$ is the chain map $$\\id_\\bullet:C_\\bullet\\rightarrow C_\\bullet$$ defined by $$\\id_n:C_n\\rightarrow C_n$$ being $$\\id_{C_n}$$ for all $$n$$, and`); all five math expressions preserved.\n- [kernel universal property] SAFE-REPHRASE: sentence rephrasing shuffles inline math block order (`$$\\ker(f_\\bullet)$$이 $$\\Ch(\\mathcal{A})$$에서 $$f_\\bullet$$의 kernel` → `kernel of $$f_\\bullet$$ in $$\\Ch(\\mathcal{A})$$`) without dropping content.\n- [def2 homology] SAFE-REPHRASE: definition wording restructured (`$$C_\\bullet$$의 *$$n$$-cycle*들의 module은` → `the module of *$$n$$-cycles* of $$C_\\bullet$$ is given by`) permuting inline $$C_\\bullet$$, $$n$$, $$B_n(C)$$ blocks; all definitions identical.\n- [total complex differential] SAFE-REPHRASE: KO presents component formulas before the resulting tuple, EN presents the tuple before the component formulas; both equations `$$d^h(x_{0,2})+\\dots$$` and `$(d^v(x_{0,2})+\\dots)$` are fully preserved, only order inverted.\n- [footnote 3 / total complex nonzero] SAFE-REPHRASE: KO `$$p,q\\geq 0$$인 곳에서만 $$0$$이 아니라` uses two blocks ($$p,q\\geq 0$$ and $$0$$); EN `nonzero only where $$p,q\\geq 0$$` absorbs the symbol $$0$$ into the English word \"nonzero\"; no mathematical content lost.\n- [displayed equations] SAFE-REPHRASE: EN adds trailing periods to standalone equations (e.g., `$$g_\\bullet\\circ f_\\bullet=\\dots$$` → `$$g_\\bullet\\circ f_\\bullet=\\dots.$$`, `$$d^vd^h+\\dots=0$$` → `$$d^vd^h+\\dots=0.$$`); cosmetic punctuation only."
     },
     "_posts/Math/Homological_Algebra/ko/2023-01-02-Long_Exact_Sequence.md": {
       "status": "done",
@@ -2565,8 +2574,8 @@
     }
   },
   "stats": {
-    "total_done": 285,
-    "total_in_chars": 4921597,
-    "total_out_chars": 4211923
+    "total_done": 289,
+    "total_in_chars": 4985675,
+    "total_out_chars": 4278396
   }
 }
