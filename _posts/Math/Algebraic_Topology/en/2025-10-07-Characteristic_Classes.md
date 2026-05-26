@@ -62,7 +62,7 @@ Meanwhile, in [Definition 2](#def2) above we considered only the case where $$F$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**Example 3**</ins> As a non-trivial example, we have the orientation double cover of the Möbius strip. On the other hand, in [§Poincaré Duality, ⁋Example 3](/en/math/algebraic_topology/Poincare_duality#ex3) we also considered a non-trivial cover of $$S^1$$, which can be generalized geometrically as follows.
+<ins id="ex3">**Example 3**</ins> As a non-trivial example, we have the orientation double cover of the Möbius strip. On the other hand, in [§Poincaré Duality, ⁋Example 5](/en/math/algebraic_topology/Poincare_duality#ex5) we also considered a non-trivial cover of $$S^1$$, which can be generalized geometrically as follows.
 
 For an $$(n+1)$$-dimensional vector space $$\mathbb{R}^{n+1}$$, the space of lines through the origin is called *projective $$n$$-space* and denoted $$\RP^n$$. Since among the points on a line through the origin, the two points at distance $$1$$ from the origin determine the same line, we can regard this as the quotient space obtained from the unit $$n$$-sphere $$S^n$$ by identifying antipodal points.
 
@@ -146,7 +146,7 @@ $$g_{ij}\cdot g_{jk}\cdot g_{ki}=\id.$$
 
 If this condition were absent, it would mean that on the triple intersection $$U_i\cap U_j\cap U_k$$, transporting the local trivialization from $$U_i$$ to $$U_j$$ via $$g_{ij}$$, then to $$U_k$$ via $$g_{jk}$$, and back to $$U_i$$ via $$g_{ki}$$, would result in a different trivialization; but in reality this does not happen. Then the transition functions $$g_{ij}$$ become Čech 1-cochains, and thus fixing local trivializations $$U_i\rightarrow \GL(n;\mathbb{R})$$, we know there is a one-to-one correspondence between isomorphism classes of rank $$n$$ vector bundles and 1-cochains. That is, there is a one-to-one correspondence between isomorphism classes of rank $$n$$ vector bundles trivializable over an open cover $$\mathcal{U}$$ and $$\check{H}^1(\mathcal{U}, \GL(n;\mathbb{R}))$$.
 
-Earlier, in [§Poincaré Duality, ⁋Proposition 4](/en/math/algebraic_topology/Poincare_duality#prop4), we saw that the $$A$$-orientability of a manifold $$M$$ is determined by the group homomorphism
+Earlier, in [§Poincaré Duality, ⁋Proposition 7](/en/math/algebraic_topology/Poincare_duality#prop7), we saw that the $$A$$-orientability of a manifold $$M$$ is determined by the group homomorphism
 
 $$\pi_1(M,x)\rightarrow A^\times.$$
 

@@ -290,7 +290,7 @@ $$\{x\}\cup \{y+\lambda x\mid \lambda\in\mathbb{K}\}$$
 
 우선 $$\mathbb{L}$$이 primitive element $$x$$를 갖는다 하고, $$f(\x)\in \mathbb{K}[\x]$$가 $$x$$의 minimal polynomial이라 하자. 다항식 $$f(\x)$$를 $$\mathbb{L}[\x]$$에서 나누는 monic polynomial $$g(\x)\in \mathbb{L}[\x]$$를 생각하면, 우리는 이러한 다항식 $$g$$가 주어질 때마다 $$g$$의 계수들로 생성되는 $$\mathbb{L}$$의 subextension을 생각할 수 있다. 이를 $$\mathbb{K}_g$$로 적자. 그럼 우리 주장은 이들 $$\mathbb{K}_g$$들이 정확히 $$\mathbb{L}$$의 subextension이라는 것이다. 특히 이러한 extension들은 $$f$$를 $$d$$차식이라 할 때, 많아야 $$2^d$$개이므로 둘째 조건이 성립할 것이다. 
 
-주장을 보이기 위해 임의의 subextension $$\mathbb{M}$$을 택하자. 그럼 $$x$$가 primitive element이므로 $$\mathbb{M}[x]=\mathbb{L}$$이 성립한다. 즉, $$x$$는 extension $$\mathbb{L}/\mathbb{M}$$의 algebraic element이므로, minimal polynomial $$h(\x)\in\mathbb{M}[\x]$$를 택할 수 있으며 이는 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#prop15)에 의하여 $$\mathbb{L}[\x]$$에서 $$f$$를 나누는 monic polynomial이다. 따라서 $$\mathbb{K}_h$$가 위와 같이 정의되며, 그 정의에 의하여 $$\mathbb{K}_h\subset\mathbb{M}$$이다. 한편 $$x$$가 $$\mathbb{L}/\mathbb{K}$$의 primitive element이므로, 우리는 다음의 등식
+주장을 보이기 위해 임의의 subextension $$\mathbb{M}$$을 택하자. 그럼 $$x$$가 primitive element이므로 $$\mathbb{M}[x]=\mathbb{L}$$이 성립한다. 즉, $$x$$는 extension $$\mathbb{L}/\mathbb{M}$$의 algebraic element이므로, minimal polynomial $$h(\x)\in\mathbb{M}[\x]$$를 택할 수 있으며 이는 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $$\mathbb{L}[\x]$$에서 $$f$$를 나누는 monic polynomial이다. 따라서 $$\mathbb{K}_h$$가 위와 같이 정의되며, 그 정의에 의하여 $$\mathbb{K}_h\subset\mathbb{M}$$이다. 한편 $$x$$가 $$\mathbb{L}/\mathbb{K}$$의 primitive element이므로, 우리는 다음의 등식
 
 $$\mathbb{K}_h[x]=\mathbb{M}[x]=\mathbb{L}$$
 

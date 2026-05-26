@@ -52,7 +52,7 @@ $$\mathscr{O}(D(\mathfrak{m}))=\mathscr{O}(D(\pi))\cong A_\pi\cong \Frac(A)$$
 
 Of course $\mathscr{O}(\Spec A)\cong A$. 
 
-Meanwhile, in [§Schemes, ⁋Example 6](/en/math/scheme_theory/schemes#ex6) we saw how to examine the two points of $\Spec A$ geometrically. According to this, the two points of $\Spec A$ are determined by ring homomorphisms from $A$ to the residue fields $\kappa((0))$, $\kappa(\mathfrak{m})$, respectively, and using [§Spectrum, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5) again we obtain
+Meanwhile, the two points of $\\Spec A$ can be examined geometrically as follows: each point is determined by a ring homomorphism from $A$ to its residue field, namely $\\kappa((0))$ and $\\kappa(\\mathfrak{m})$. Using [§Spectrum, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5) again we obtain
 
 $$\mathscr{O}_{(0)}\cong A_{(0)}\cong \Frac(A),\qquad \mathscr{O}_\mathfrak{m}\cong A_\mathfrak{m}$$
 

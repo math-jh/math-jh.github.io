@@ -154,7 +154,7 @@ Then for any open set $$U\subseteq X$$ and any $$s\in \mathscr{F}(U)$$, the func
 
 $$\tilde{s}:U \rightarrow \Spe(\mathscr{F}); \quad x\mapsto (x,s_x)$$
 
-exist. Now we endow $$\Spe(\mathscr{F})$$ with the final topology defined by this family of functions ([§Initial and Final Topologies, ⁋Definition 4](/en/math/topology/initial_and_final_topology#def6)) and call this space the *étalé space* of $$\mathscr{F}$$.
+exist. Now we endow $$\Spe(\mathscr{F})$$ with the final topology defined by this family of functions ([§Initial and Final Topologies, ⁋Definition 4](/en/math/topology/initial_and_final_topology#def4)) and call this space the *étalé space* of $$\mathscr{F}$$.
 
 ## Morphisms of presheaves
 

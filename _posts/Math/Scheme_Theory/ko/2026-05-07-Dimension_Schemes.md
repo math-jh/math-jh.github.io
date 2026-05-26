@@ -27,7 +27,7 @@ weight: 16
 
 </div>
 
-그럼 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#def16)의 Galois correspondence로부터 우리는 $$\Spec A$$의 scheme으로서의 차원과 $$A$$의 ring으로서의 차원이 같다는 것을 안다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1)) 뿐만 아니라, 정의에 의하여 $$\Spec A$$와 $$\Spec A/\mathfrak{N}(A)$$가 homeomorphic하다는 것을 보일 수 있으므로 $$\dim A=\dim A/\mathfrak{N}(A)$$가 성립한다. 즉 reducedness는 차원에 영향을 주지 않는다. 
+그럼 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)의 Galois correspondence로부터 우리는 $$\Spec A$$의 scheme으로서의 차원과 $$A$$의 ring으로서의 차원이 같다는 것을 안다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1)) 뿐만 아니라, 정의에 의하여 $$\Spec A$$와 $$\Spec A/\mathfrak{N}(A)$$가 homeomorphic하다는 것을 보일 수 있으므로 $$\dim A=\dim A/\mathfrak{N}(A)$$가 성립한다. 즉 reducedness는 차원에 영향을 주지 않는다. 
 
 한편 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)와 마찬가지 이유로 다음이 성립한다. 
 

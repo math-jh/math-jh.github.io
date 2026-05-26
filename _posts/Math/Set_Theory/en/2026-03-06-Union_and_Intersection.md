@@ -105,7 +105,7 @@ Set operations satisfy the associative law.
 
 <div class="proposition" markdown="1">
 
-<ins id="def5">**Proposition 5**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets, and suppose the index set $$I$$ is the union of a family $$(J_k)_{k\in K}$$. Then
+<ins id="prop5">**Proposition 5**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets, and suppose the index set $$I$$ is the union of a family $$(J_k)_{k\in K}$$. Then
 
 $$\bigcup_{i\in I} A_i=\bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right),\quad \bigcap_{i\in I}A_i=\bigcap_{k\in K}\left(\bigcap_{j\in J_k} A_j\right)$$
 

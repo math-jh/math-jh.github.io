@@ -26,7 +26,7 @@ In this post we define the dimension of a scheme.
 
 </div>
 
-Then, from the Galois correspondence of [§Spectra, ⁋Proposition 16](/en/math/scheme_theory/spectrums#def16), we know that the dimension of $$\Spec A$$ as a scheme equals the dimension of $$A$$ as a ring. ([\[Commutative Algebra\] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1)) Moreover, by definition one can show that $$\Spec A$$ and $$\Spec A/\mathfrak{N}(A)$$ are homeomorphic, so $$\dim A=\dim A/\mathfrak{N}(A)$$ holds. In other words, reducedness does not affect the dimension.
+Then, from the Galois correspondence of [§Spectra, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), we know that the dimension of $$\Spec A$$ as a scheme equals the dimension of $$A$$ as a ring. ([\[Commutative Algebra\] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1)) Moreover, by definition one can show that $$\Spec A$$ and $$\Spec A/\mathfrak{N}(A)$$ are homeomorphic, so $$\dim A=\dim A/\mathfrak{N}(A)$$ holds. In other words, reducedness does not affect the dimension.
 
 On the other hand, for the same reason as [\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13), the following holds.
 

@@ -14,28 +14,29 @@ header:
 date: 2026-04-05
 last_modified_at: 2026-04-20
 weight: 12
-translated_at: 2026-05-25T11:00:01+00:00
+translated_at: 2026-05-26T00:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-26T00:30:04+00:00
 ---
-We have seen that line bundles can be used to define various invariants. For example, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles) we defined the global section space $$\Gamma(X, \mathcal{L})$$ of a line bundle $$\mathcal{L}$$. In particular, in [§Linear Systems, ⁋Proposition 7](/en/math/algebraic_varieties/linear_systems#prop7) we saw that this dimension plays a key role in determining the dimension of the complete linear system, and hence the projective embedding of the variety.
+We have seen that line bundles can be used to construct various invariants. For instance, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles) we defined the global section space $$\Gamma(X, \mathcal{L})$$ of a line bundle $$\mathcal{L}$$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9) we examined how this dimension plays a key role in determining the dimension of the complete linear system, and hence the projective embedding of the variety.
 
-So far we have mainly used the language of line bundles for geometric intuition, but as we saw right after [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), if we think in terms of the section sheaf of a line bundle, this can fundamentally be rephrased in the language of sheaves. In this post we define the notion of sheaf cohomology.
+Although we have mainly used the language of line bundles for geometric intuition, as we observed right after [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), passing to the section sheaf of a line bundle allows us to rephrase everything fundamentally in the language of sheaves. In this post we define the notion of sheaf cohomology.
 
 ## Definition as a Derived Functor
 
-While sheaves are a powerful tool for systematically describing all the information of a topological space, they have appeared front and center in our discussion only once: in [§Linear Systems](/en/math/algebraic_varieties/linear_systems), when we saw that the global section space $$\Gamma(X, \mathcal{L})$$ determines the projective embedding of the complete linear system.
+While sheaves are a powerful tool for systematically encoding all the information of a topological space, they have appeared front and center in our discussion only once: in [§Linear Systems](/en/math/algebraic_varieties/linear_systems), when we saw that the global section space $$\Gamma(X, \mathcal{L})$$ determines the projective embedding of the complete linear system.
 
-However, if global sections were our only concern, there would be no need to think about sheaves at all—we could have simply considered the global section functor. In fact, the global section functor does not capture all the information contained in a sheaf. For example, consider the global section functor
+However, if global sections were our only concern, there would be no need to think about sheaves at all—we could simply have considered the global section functor. In fact, the global section functor does not capture all the information contained in a sheaf. Consider, for example, the global section functor
 
 $$\Gamma(X, -): \QCoh(X) \to \Vect_\mathbb{K}; \qquad \mathcal{F} \mapsto \mathcal{F}(X)$$
 
-When we defined quasi-coherent sheaves in [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), our motivation was that the category $$\Bun(X)$$ of vector bundles is not an abelian category, so we wanted to consider a larger category where kernels and cokernels exist. From this perspective, it is not surprising that $$\QCoh(X)$$ is an abelian category. [^1]
+When we defined quasi-coherent sheaves in [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), our motivation was that the category $$\Bun(X)$$ of vector bundles is not an abelian category, so we wanted to consider a larger category where kernels and cokernels exist. From this perspective, it is hardly surprising that $$\QCoh(X)$$ is an abelian category. [^1]
 
-If $$\Gamma(X,-)$$ did not lose any information, this functor would have to be exact. That is, given a short exact sequence of (quasi-coherent) sheaves
+If $$\Gamma(X,-)$$ lost no information whatsoever, this functor would have to be exact. That is, given a short exact sequence of (quasi-coherent) sheaves
 
 $$0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$$
 
-applying $$\Gamma(X,-)$$ should again yield a short exact sequence. However, this functor is only left exact. In other words, the exactness of
+applying $$\Gamma(X,-)$$ should again yield a short exact sequence. Yet this functor is only left exact. In other words, exactness of
 
 $$0 \to \Gamma(X, \mathcal{F}') \to \Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'')$$
 
@@ -43,21 +44,21 @@ is guaranteed, but the surjection
 
 $$\Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'') \to 0$$
 
-is not guaranteed in general. For a concrete example, consider the Euler sequence
+fails in general. For a concrete example, consider the Euler sequence
 
 $$0 \to \Omega^1_{\mathbb{P}^n} \to \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n} \to 0$$
 
-([§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7)). Applying $$\Gamma(\mathbb{P}^n, -)$$ to this short exact sequence gives
+([§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7)). Applying $$\Gamma(\mathbb{P}^n, -)$$ to this short exact sequence yields
 
 $$0 \to \Gamma(\mathbb{P}^n, \Omega^1_{\mathbb{P}^n}) \to \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) \to \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})$$
 
-But as we saw in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16), the global sections of $$\mathcal{O}_{\mathbb{P}^n}(-1)$$ are zero, so
+But as we saw in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16), the global sections of $$\mathcal{O}_{\mathbb{P}^n}(-1)$$ vanish, so
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0$$
 
-whereas $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$$, so surjectivity on the right cannot hold.
+whereas $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$$; hence surjectivity on the right cannot hold.
 
-The standard way to address this is to consider right derived functors. ([\[Homological Algebra\] §Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, since $$\lMod{A}$$ has enough injectives, one can show that $$\QCoh(X)$$ also has enough injective objects, so any quasi-coherent sheaf $$\mathcal{F}$$ always has an injective resolution $$\mathcal{I}^\bullet$$, and from this we can define sheaf cohomology via
+The standard remedy is to consider right derived functors. ([\[Homological Algebra\] §Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, since $$\lMod{A}$$ has enough injectives, one can show that $$\QCoh(X)$$ also has enough injective objects; consequently any quasi-coherent sheaf $$\mathcal{F}$$ admits an injective resolution $$\mathcal{I}^\bullet$$, and from this we define sheaf cohomology via the complex
 
 $$0 \to \Gamma(X, \mathcal{I}^0) \to \Gamma(X, \mathcal{I}^1) \to \Gamma(X, \mathcal{I}^2) \to \cdots$$
 
@@ -71,7 +72,7 @@ where $$\mathcal{I}^\bullet$$ is an injective resolution of $$\mathcal{F}$$.
 
 </div>
 
-More generally, for any sheaf on $$X$$, one can show that $$\Sh(X)$$ has enough injectives by taking injective objects stalkwise and then sheafifying, but our main interest is always in quasi-coherent sheaves, so we restrict our attention to the category $$\QCoh(X)$$.
+More generally, for any sheaf on $$X$$ one can show that $$\Sh(X)$$ has enough injectives by taking injective objects stalkwise and then sheafifying, but our main interest is always in quasi-coherent sheaves, so we restrict our attention to the category $$\QCoh(X)$$.
 
 That this is independent of the choice of $$\mathcal{I}^\bullet$$, and so on, all follow from standard arguments in homological algebra.
 
@@ -97,7 +98,7 @@ where $$\delta$$ is the *connecting homomorphism*.
 
 [Definition 1](#def1) is a rigorous definition of sheaf cohomology, but explicitly constructing an injective resolution is generally very difficult. Therefore, in actual computations we use the Čech approach, which defines cohomology from a different perspective.
 
-Intuitively, Čech cohomology $$\check{H}^i(X, \mathcal{F})$$ is a tool that measures the failure of gluing local information. That is, $$\check{H}^0(X, \mathcal{F})$$ is exactly the global section space, and $$\check{H}^1(X, \mathcal{F})$$ tells us how much the process of gluing local sections together to obtain a global section fails. To define this rigorously, we begin with the following.
+Intuitively, Čech cohomology $$\check{H}^i(X, \mathcal{F})$$ is a tool that measures the failure of gluing local information. That is, $$\check{H}^0(X, \mathcal{F})$$ is exactly the global section space, and $$\check{H}^1(X, \mathcal{F})$$ tells us how much the process of gluing local sections together to obtain a global section fails. To make this precise, we begin with the following.
 
 <div class="definition" markdown="1">
 
@@ -115,7 +116,7 @@ where $$\hat{i_k}$$ means omit the index $$i_k$$.
 
 As with sheaf cohomology, this definition makes sense for arbitrary sheaves, but we are mainly concerned with $$\QCoh(X)$$.
 
-For this definition to be well-defined, that is, for $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$ to actually be a complex, the coboundary map must actually be a coboundary map: we need $$d^2=0$$. This can be verified directly by expanding the above formula and tracking the sign differences. In conclusion, $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$ is a cochain complex, and thus we can define the following.
+For this definition to be well-defined—that is, for $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$ to actually be a complex—the coboundary map must square to zero: we need $$d^2=0$$. This can be verified directly by expanding the above formula and tracking the sign differences. In conclusion, $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$ is a cochain complex, and thus we can define the following.
 
 <div class="definition" markdown="1">
 
@@ -137,11 +138,11 @@ Therefore
 
 $$\check{H}^0(\mathcal{U}, \mathcal{F}) = \ker(d: \check{C}^0 \to \check{C}^1) = \left\{(s_i) \in \prod_i \mathcal{F}(U_i) \mid s_i\vert_{U_i \cap U_j} = s_j\vert_{U_i \cap U_j} \text{ for all } i, j\right\}$$
 
-By the gluing condition for sheaves ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1)), such a family of sections coincides exactly with a section over all of $$X$$, that is, with $$\Gamma(X, \mathcal{F})$. Thus $$\check{H}^0(\mathcal{U}, \mathcal{F}) = H^0(X, \mathcal{F})$$, and this is independent of the choice of open cover.
+By the gluing condition for sheaves ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1)), such a family of sections coincides exactly with a section over all of $$X$$, that is, with $$\Gamma(X, \mathcal{F})$$. Thus $$\check{H}^0(\mathcal{U}, \mathcal{F}) = H^0(X, \mathcal{F})$$, and this is independent of the choice of open cover.
 
 </div>
 
-We will soon show that in favorable situations, Čech cohomology and sheaf cohomology always agree as above. For now, let us see how the case $$p=1$$ measures the failure of gluing.
+We will soon show that in favorable situations Čech cohomology and sheaf cohomology always agree as above. For now, let us see how the case $$p=1$$ measures the failure of gluing.
 
 <div class="example" markdown="1">
 
@@ -155,7 +156,7 @@ Thus a nontrivial element of $$\check{H}^1(\mathcal{U}, \mathcal{F})$$ reflects 
 
 </div>
 
-So far we have defined Čech cohomology $$\check{H}^p(\mathcal{U}, \mathcal{F})$$ for a single open cover $$\mathcal{U}$$. However, different open covers can generally give different Čech cohomologies. For example, for a cover consisting of a single open set $$U_0 = X$$, all intersections are $$X$$, so $$\check{H}^p$$ is nonzero only at $$p = 0$$. The finer the cover, the more topological information we can capture, so we need to understand the relationship between open covers and synthesize the information over all of them. That is, let us impose an ordering on *all* open covers using refinement. Then for a refinement $$\mathcal{V} \preceq \mathcal{U}$$, it is clear that a natural map $$\check{H}^p(\mathcal{U}, \mathcal{F}) \to \check{H}^p(\mathcal{V}, \mathcal{F})$$ exists, and thus we can define a direct system $$\check{H}^p(\mathcal{U}, \mathcal{F})$$ indexed by all open covers. From this we define the following.
+So far we have defined Čech cohomology $$\check{H}^p(\mathcal{U}, \mathcal{F})$$ for a single open cover $$\mathcal{U}$$. However, different open covers can generally give different Čech cohomologies. For example, for a cover consisting of a single open set $$U_0 = X$$, all intersections are $$X$$, so $$\check{H}^p$$ is nonzero only at $$p = 0$$. The finer the cover, the more topological information we can capture, so we need to understand the relationship between open covers and synthesize the information over all of them. That is, let us impose an ordering on <em>all</em> open covers using refinement. Then for a refinement $$\mathcal{V} \preceq \mathcal{U}$$, it is clear that a natural map $$\check{H}^p(\mathcal{U}, \mathcal{F}) \to \check{H}^p(\mathcal{V}, \mathcal{F})$$ exists, and thus we can define a direct system $$\check{H}^p(\mathcal{U}, \mathcal{F})$$ indexed by all open covers. From this we define the following.
 
 <div class="definition" markdown="1">
 
@@ -167,7 +168,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 To explain the above argument more simply: by taking increasingly finer open covers and combining all the additional cohomology data that appears, we define $$\check{H}(X, \mathcal{F})$$.
 
-In general, the $$\check{H}^p(X, \mathcal{F})$$ of [Definition 7](#def7) and the $$H^p(X, \mathcal{F})$$ of [Definition 1](#def1) are not guaranteed to be isomorphic, but fortunately for most sheaves that appear in algebraic geometry, the two coincide. Showing this requires some technical machinery.
+In general, the $$\check{H}^p(X, \mathcal{F})$$ of [Definition 7](#def7) and the $$H^p(X, \mathcal{F})$$ of [Definition 1](#def1) are not guaranteed to be isomorphic, but fortunately for most sheaves that appear in algebraic geometry the two coincide. Showing this requires some technical machinery.
 
 <div class="definition" markdown="1">
 
@@ -361,7 +362,7 @@ Then by [Proposition 14](#prop14) the following holds.
 
 The most essential advantage of this construction is that no choices are made in the process, so in some sense it is canonical. This can also be seen again from the functoriality of the Godement resolution: in general, to show functoriality in sheaf cohomology one must use the argument that a sheaf morphism at the $$0$$th stage of an augmented complex induces sheaf morphisms at stages $$i>0$$ giving a chain map, and such chain maps are identical up to chain homotopy equivalence, hence induce the same value in cohomology. ([\[Homological Algebra\] §Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6)) However, in the case of the Godement resolution, the functions are induced purely at the chain level without any equivalence. Nevertheless, the Godement resolution carries exactly the information of sheaf cohomology.
 
-To show this, we first prove more generally that flasque resolution gives the same sheaf cohomology as injective resolution. For this we first show the following.
+To show this, we first prove more generally that a flasque resolution gives the same sheaf cohomology as an injective resolution. For this we first show the following.
 
 <div class="proposition" markdown="1">
 
