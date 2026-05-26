@@ -1730,3 +1730,61 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `$$i$$번째 standard open set` | mixed-script emphasis — possibly a definition |
 | `Veronese embedding` | multi-word English emphasis — possibly a definition |
 
+## 선다발과 벡터다발
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-25-Line_Bundles.md`
+- permalink: `/ko/math/algebraic_varieties/line_bundles`
+- scanned: 2026-05-26T15:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `line bundle` | multi-word English emphasis — possibly a definition |
+| `local trivialization` | multi-word English emphasis — possibly a definition |
+| `transition function` | multi-word English emphasis — possibly a definition |
+| `morphism` | looks like emphasis (no <sub> partner) |
+| `Trivial line bundle` | multi-word English emphasis — possibly a definition |
+| `dual bundle` | multi-word English emphasis — possibly a definition |
+| `Picard group` | multi-word English emphasis — possibly a definition |
+| `pullback` | looks like emphasis (no <sub> partner) |
+| `rank r vector bundle` | multi-word English emphasis — possibly a definition |
+| `trivial vector bundle` | multi-word English emphasis — possibly a definition |
+| `Tangent bundle` | multi-word English emphasis — possibly a definition |
+| `Cotangent bundle` | multi-word English emphasis — possibly a definition |
+| `Tautological bundle` | multi-word English emphasis — possibly a definition |
+| `Quotient bundle` | multi-word English emphasis — possibly a definition |
+
+## 층 코호몰로지
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-04-05-Sheaf_Cohomology.md`
+- permalink: `/ko/math/algebraic_varieties/sheaf_cohomology`
+- scanned: 2026-05-26T16:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `sheaf cohomology` | multi-word English emphasis — possibly a definition |
+| `coboundary map` | multi-word English emphasis — possibly a definition |
+| `non-alternating` | looks like emphasis (no <sub> partner) |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `separated` | looks like emphasis (no <sub> partner) |
+| `Godement sheaf` | multi-word English emphasis — possibly a definition |
+| `mapping cone` | multi-word English emphasis — possibly a definition |
+
+## 스펙트럼
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Spectrums.md`
+- permalink: `/ko/math/scheme_theory/spectrums`
+- scanned: 2026-05-26T16:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `ideal` | looks like emphasis (no <sub> partner) |
+| `minimal` | looks like emphasis (no <sub> partner) |
+| `라 하고, 각각의 $$x_i$$들을 $$x$$의` | mixed-script emphasis — possibly a definition |
+| `모든` | looks like emphasis (no <sub> partner) |
+
+## 값매김환
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Valuative_Criteria.md`
+- permalink: `/ko/math/scheme_theory/valuative_criteria`
+- scanned: 2026-05-26T17:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `separated` | looks like emphasis (no <sub> partner) |
+

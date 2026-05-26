@@ -844,13 +844,14 @@
     },
     "_posts/Math/Linear_Algebra/ko/2021-10-10-Basis.md": {
       "status": "done",
-      "last_attempt_ts": 1779322030.2668357,
+      "last_attempt_ts": 1779811325.52637,
       "en_path": "_posts/Math/Linear_Algebra/en/2021-10-10-Basis.md",
-      "ko_git_commit_ts": 1772796001.0,
-      "translated_at": "2026-05-21T00:00:02+00:00",
-      "in_chars": 11738,
-      "out_chars": 12671,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T16:00:03+00:00",
+      "in_chars": 12223,
+      "out_chars": 12764,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Linear_Algebra/ko/2021-10-13-Linear_Map.md": {
       "status": "done",
@@ -894,13 +895,17 @@
     },
     "_posts/Math/Linear_Algebra/ko/2022-07-28-Vector_Spaces.md": {
       "status": "done",
-      "last_attempt_ts": 1779331219.2121615,
+      "last_attempt_ts": 1779813094.4021127,
       "en_path": "_posts/Math/Linear_Algebra/en/2022-07-28-Vector_Spaces.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-21T02:30:01+00:00",
-      "in_chars": 9021,
-      "out_chars": 9830,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T16:30:02+00:00",
+      "in_chars": 9504,
+      "out_chars": 9270,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=138, en=135"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=138 en=135\nFINDINGS:\n- [def1] SAFE-REPHRASE: KO \"여기에 추가적인 연산 (스칼라곱) $$\\cdot:\\mathbb{K}\\times V\\rightarrow V$$가 존재하여\" split into two sentences in EN, merging the scalar multiplication notation into the same block; no math lost.\n- [def1] SAFE-REPHRASE: KO lists four conditions ending with \"가 모두 만족되는 것이다\" (separate sentence), EN merges the condition list directly into the definition sentence; no equations changed.\n- [ex4] SAFE-REPHRASE: KO \"즉 $$0+0=0$$\" and \"즉 $$\\alpha 0=0$$\" each use $$...$$, EN uses the same formulas but the validator likely undercounted due to punctuation adjacency or identical formulas; content preserved.\n- [ex5] SAFE-REPHRASE: KO has two separate display math blocks for addition and scalar multiplication definitions; EN combines them into one paragraph with the same two equations; no formulas altered.\n- [ex6] SAFE-REPHRASE: KO defines $$f+g:t\\mapsto f(t)+g(t)$$ and $$\\alpha f:t\\mapsto \\alpha f(t)$$ in one line; EN splits into two lines with identical formulas; block count differs but content identical.\n- [global] SAFE-REPHRASE: Minor punctuation/spacing variations around inline math (e.g., $$\\mathbb{K}$$-벡터공간 vs $$\\mathbb{K}$$-vector space) cause no semantic change.\n- [global] SAFE-REPHRASE: KO uses $$+_{\\tiny V}$$ and $$+_{\\tiny \\mathbb{K}}$$ in multiple separate inline blocks; EN preserves the same subscripted plus symbols identically.\n- [global] SAFE-REPHRASE: Remaining 2 count differences stem from equivalent rephrasings (e.g., \"따라서\" vs \"thus\") that do not affect math blocks; all 138 KO formulas have corresponding EN equivalents."
     },
     "_posts/Math/Linear_Algebra/ko/2022-07-29-Subspaces.md": {
       "status": "done",
@@ -2379,28 +2384,28 @@
     },
     "_posts/Math/Lie_Theory/ko/2025-11-12-Root_Systems.md": {
       "status": "done",
-      "last_attempt_ts": 1779685551.6463697,
+      "last_attempt_ts": 1779807790.7532575,
       "en_path": "_posts/Math/Lie_Theory/en/2025-11-12-Root_Systems.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-25T05:00:02+00:00",
-      "in_chars": 28197,
+      "ko_git_commit_ts": 1779786007.0,
+      "translated_at": "2026-05-26T15:00:02+00:00",
+      "in_chars": 28173,
       "out_chars": 31821,
-      "reason": "pending",
-      "warnings": [
-        "math block count mismatch: ko=508, en=507"
-      ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=358 en=353\nFINDINGS:\n- [def6] SAFE-REPHRASE: KO repeats $$G$$ in \"Lie group $$G$$와, $$G$$의 임의의 원소\" due to Korean genitive grammar; EN merges to \"For a Lie group $$G$$ and any element\"\n- [def7] SAFE-REPHRASE: KO uses topic-comment structure repeating $$X$$ three times (\"벡터장 $$X$$에 대하여, $$X$$가 … $$X$$가\"); EN merges into one clause with \"A vector field $$X$$ … is called … if $$X$$ is\"\n- [ex4] SAFE-REPHRASE: KO explicitly writes \"분모가 $$0$$이 되지 않는\" (denominator does not become 0); EN uses standard mathematical English \"denominator does not vanish\" without explicit $$0$$\n- [prop9] SAFE-REPHRASE: KO repeats \"$$G$$의 Lie algebra\" twice (definition + convention); EN uses pronoun \"its Lie algebra\" for the second mention"
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Lie_Theory/ko/2026-02-24-Torus_Action.md": {
       "status": "done",
-      "last_attempt_ts": 1779687199.8828454,
+      "last_attempt_ts": 1779809652.8861594,
       "en_path": "_posts/Math/Lie_Theory/en/2026-02-24-Torus_Action.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-25T05:30:02+00:00",
-      "in_chars": 27716,
-      "out_chars": 32161,
-      "reason": "pending",
-      "warnings": null
+      "ko_git_commit_ts": 1779786007.0,
+      "translated_at": "2026-05-26T15:30:02+00:00",
+      "in_chars": 27704,
+      "out_chars": 32693,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=497, en=495"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Mirror_Symmetry/ko/2025-01-11-Gauss_Manin_Connection.md": {
       "status": "draft_skip",
@@ -2574,8 +2579,8 @@
     }
   },
   "stats": {
-    "total_done": 289,
-    "total_in_chars": 4985675,
-    "total_out_chars": 4278396
+    "total_done": 293,
+    "total_in_chars": 5063279,
+    "total_out_chars": 4364944
   }
 }
