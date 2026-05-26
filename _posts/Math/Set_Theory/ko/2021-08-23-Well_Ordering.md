@@ -29,7 +29,7 @@ weight: 20
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§유향집합, ⁋명제 6](/ko/math/set_theory/directed_set#prop16)을 사용한다. $$S$$가 순증가이고 $$s(A)=A^\ast\setminus\{A\}$$임을 보이자. 
+[§유향집합, ⁋명제 6](/ko/math/set_theory/directed_set#prop6)을 사용한다. $$S$$가 순증가이고 $$s(A)=A^\ast\setminus\{A\}$$임을 보이자. 
 
 $$s$$가 증가함수인 것은 자명하다. 만약 $$x\leq y$$이고 $$a\in S_x$$라면, $$a < x\leq y$$이므로 $$a\in S_y$$이기 때문이다. 또, 이 포함관계는 strict한데, 만약 $$x < y$$라면, $$x\not< x$$이고 $$x < y$$이므로 $$x\not\in S_x$$지만 $$x\in S_y$$이기 때문이다. 따라서 함수 $$s$$는 $$A$$와 그 image 사이의 isomorphism이다. 따라서 [§서수와 정렬집합, ⁋명제 5](/ko/math/set_theory/ordinals#prop5)에 의해 $$s(A)=A^\ast\setminus\{A\}$$이다.
 

@@ -21,7 +21,7 @@ translation_source: kimi-cli
 ---
 ## Binary Relations
 
-We begin with the definition. The following definition is nothing special; it merely gives a name to the *set of ordered pairs* that appeared in [§Ordered Pairs](/en/math/set_theory/ordered_pair#%EC%88%9C%EC%84%9C%EC%8C%8D) when explaining the motivation for introducing ordered pairs.
+We begin with the definition. The following definition is nothing special; it merely gives a name to the *set of ordered pairs* that appeared in [§Ordered Pairs](/en/math/set_theory/ordered_pair#ordered-pairs) when explaining the motivation for introducing ordered pairs.
 
 <div class="definition" markdown="1">
 

@@ -31,7 +31,7 @@ In the previous post, we briefly introduced ordinals and postponed their definit
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-We use [§Directed Sets, ⁋Proposition 6](/en/math/set_theory/directed_set#prop16). Let us show that $$S$$ is strictly increasing and $$s(A)=A^\ast\setminus\{A\}$$.
+We use [§Directed Sets, ⁋Proposition 6](/en/math/set_theory/directed_set#prop6). Let us show that $$S$$ is strictly increasing and $$s(A)=A^\ast\setminus\{A\}$$.
 
 It is clear that $$s$$ is an increasing function. For if $$x\leq y$$ and $$a\in S_x$$, then $$a < x\leq y$$, so $$a\in S_y$$. Moreover, this inclusion is strict: if $$x < y$$, then $$x\not< x$$ and $$x < y$$, so $$x\not\in S_x$$ but $$x\in S_y$$. Thus the function $$s$$ is an isomorphism between $$A$$ and its image. Therefore by [§Ordinals and Well-Ordered Sets, ⁋Proposition 5](/en/math/set_theory/ordinals#prop5), $$s(A)=A^\ast\setminus\{A\}$$.
 

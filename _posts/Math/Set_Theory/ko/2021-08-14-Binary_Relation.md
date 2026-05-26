@@ -22,7 +22,7 @@ weight: 3
 
 ## 이항관계
 
-우선 정의부터 시작한다. 다음 정의는 별다른 것은 아니고, [§순서쌍](/ko/math/set_theory/ordered_pair#%EC%88%9C%EC%84%9C%EC%8C%8D)에서 순서쌍을 도입해야 하는 당위성을 설명하며 나왔던 <em-ko>순서쌍들의 집합</em-ko>에 이름을 준 것에 불과하다. 
+우선 정의부터 시작한다. 다음 정의는 별다른 것은 아니고, [§순서쌍](/ko/math/set_theory/ordered_pair#순서쌍)에서 순서쌍을 도입해야 하는 당위성을 설명하며 나왔던 <em-ko>순서쌍들의 집합</em-ko>에 이름을 준 것에 불과하다. 
 
 <div class="definition" markdown="1">
 

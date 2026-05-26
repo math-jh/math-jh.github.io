@@ -1475,3 +1475,40 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `Algebraic Topology` | multi-word English emphasis — possibly a definition |
 | `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
 
+## 이항관계
+- post: `_posts/Math/Set_Theory/ko/2021-08-14-Binary_Relation.md`
+- permalink: `/ko/math/set_theory/binary_relation`
+- scanned: 2026-05-26T01:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `source` | looks like emphasis (no <sub> partner) |
+
+## 벡터공간
+- post: `_posts/Math/Linear_Algebra/ko/2022-07-28-Vector_Spaces.md`
+- permalink: `/ko/math/linear_algebra/vector_spaces`
+- scanned: 2026-05-26T02:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `, 혹은 간단히` | looks like emphasis (no <sub> partner) |
+| `스칼라곱` | looks like emphasis (no <sub> partner) |
+
+## 내적공간
+- post: `_posts/Math/Linear_Algebra/ko/2022-10-02-Inner_Product_Spaces.md`
+- permalink: `/ko/math/linear_algebra/inner_product_spaces`
+- scanned: 2026-05-26T02:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `dot product` | multi-word English emphasis — possibly a definition |
+
+## Initial topology와 final topology
+- post: `_posts/Math/Topology/ko/2022-11-15-Initial_and_Final_Topology.md`
+- permalink: `/ko/math/topology/initial_and_final_topology`
+- scanned: 2026-05-26T03:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `임의의` | looks like emphasis (no <sub> partner) |
+
