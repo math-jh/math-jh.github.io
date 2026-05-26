@@ -8,4 +8,5 @@ author_profile: true
 - [블로그 개발일지](/ko/blog_development/)
 - [주변기기](/ko/peripherals/)
     - [키보드](/ko/keyboards/)
+- [LLM 작업실](/ko/llm_workshop/)
 - [찾아보기](/ko/misc/index_ko)

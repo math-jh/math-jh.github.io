@@ -1,29 +1,28 @@
 ---
 title: "Graded Modules"
-excerpt: "The definition of a graded module over a graded ring"
+excerpt: "The definition of graded modules over a graded ring"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/graded_modules
 header:
     overlay_image: /assets/images/Math/Algebraic_Structures/Graded_Modules.png
     overlay_filter: 0.5
-sidebar:
+sidebar: 
     nav: "algebraic_structures-en"
 
-date: 2026-03-11
-last_modified_at: 2026-03-11
+date: 2024-08-12
+last_modified_at: 2024-08-12
 weight: 204
-translated_at: 2026-05-25T00:00:04+00:00
+translated_at: 2026-05-26T08:30:01+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-25T00:00:04+00:00
 ---
-We now define the notion of a graded module.
+Now we define the notion of a graded module.
 
-## Graded Modules
+## Definition
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> For a commutative monoid $$I$$, let $$A=\bigoplus_{i\in I}A_i$$ be an $$I$$-graded ring and let $$M$$ be a left $$A$$-module. Then $$M$$ is called an *$$I$$-graded left $$A$$-module* if for any $$i,j\in I$$,
+<ins id="def1">**Definition 1**</ins> Let $$I$$ be a commutative monoid, let $$A=\bigoplus_{i\in I}A_i$$ be an $$I$$-graded ring, and let $$M$$ be a left $$A$$-module. Then $$M$$ is called an *$$I$$-graded left $$A$$-module* if for any $$i,j\in I$$,
 
 $$A_iM_j\subseteq M_{i+j}$$
 
@@ -31,50 +30,50 @@ holds.
 
 </div>
 
-Similarly, we define an $$I$$-graded right $$A$$-module. In particular, if we regard $$A$$ as a left $$A$$-module over itself, then by [Definition 1](#def1) every graded ring is a graded (left) $$A$$-module over itself. If every element of $$I$$ is cancellable under addition, then by [§Graded Rings, ⁋Proposition 2](/en/math/algebraic_structures/graded_rings#prop2), $$A_0$$ is a ring. It is then immediate from the above formula that each $$M_j$$ is an $$A_0$$-module.
+Similarly we define an $$I$$-graded right $$A$$-module. In particular, if we view $$A$$ as a left $$A$$-module over itself, then by [Definition 1](#def1) every graded ring is a graded (left) $$A$$-module over itself. If every element of $$I$$ is cancellable with respect to addition, then by [§Graded Rings, ⁋Proposition 2](/en/math/algebraic_structures/graded_rings#prop2), $$A_0$$ is a ring. Then from the above equation it is obvious that each $$M_j$$ becomes an $$A_0$$-module.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> For two $$I$$-graded left $$A$$-modules $$M,M'$$, an $$A$$-linear map $$u:M \rightarrow M'$$ is called a *graded homomorphism* if $$u(M_i)\subseteq M_i'$$ holds for all $$i$$.
+<ins id="def2">**Definition 2**</ins> For two $$I$$-graded left $$A$$-modules $$M,M'$$, an $$A$$-linear map $$u:M \rightarrow M'$$ is called a *graded homomorphism* if $$u(M_i)\subseteq M_i'$$ always holds.
 
 </div>
 
-Using this, we can define the category $$\bgr_I\lMod{A}$$ of $$I$$-graded left $$A$$-modules. More generally, we make the following definition.
+Through this we can define the category $$\bgr_I\lMod{A}$$ of $$I$$-graded left $$A$$-modules. More generally, we define the following.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> For two $$I$$-graded left $$A$$-modules $$M,M'$$, an $$A$$-linear map $$u:M \rightarrow M'$$ is called a *graded homomorphism of degree $$i$$* if $$u(M_j)\subseteq M_{i+j}'$$ holds for all $$j$$.
+<ins id="def3">**Definition 3**</ins> For two $$I$$-graded left $$A$$-modules $$M,M'$$, an $$A$$-linear map $$u:M \rightarrow M'$$ is called a *graded homomorphism of degree $$i$$* if $$u(M_j)\subseteq M_{i+j}'$$ always holds.
 
 </div>
 
-Then the graded homomorphisms of [Definition 2](#def2) are nothing but graded homomorphisms of degree $$0$$. If every element of $$I$$ is cancellable, we can also define a *graded homomorphism of degree $$-i$$* by the conditions
+Then the graded homomorphisms in [Definition 2](#def2) are nothing but graded homomorphisms of degree $$0$$. If every element of $$I$$ is cancellable, we can also define a *graded homomorphism of degree $$-i$$* by the condition
 
 $$u(M_{i+j})\subseteq M_j',\qquad u(M_j)=0\text{ if $j-i\not\in I$}$$
 
-However, note that when defined in this way, a bijective graded homomorphism of degree $$i$$ with $$i\neq 0$$ is generally not regarded as an isomorphism between $$I$$-graded left $$A$$-modules.
+However, one point to be careful about when defining in this way is that a bijective graded homomorphism of degree $$i$$ with $$i\neq 0$$ is generally not regarded as an isomorphism between $$I$$-graded left $$A$$-modules.
 
-This type of generalization is discussed in more detail in homological algebra.
+This kind of generalization is treated in more detail in homological algebra.
 
 ## Graded Submodules
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> Let $$M=\bigoplus_{i\in I} M_i$$ be an $$I$$-graded left $$A$$-module. Then for a submodule $$N$$ of $$M$$, the following are equivalent:
+<ins id="prop4">**Proposition 4**</ins> Let an $$I$$-graded left $$A$$-module $$M=\bigoplus_{i\in I} M_i$$ be given. Then for a submodule $$N$$ of $$M$$, the following are all equivalent.
 
 1. $$N$$ is the sum of the $$N\cap M_i$$.
-2. Whenever an element of $$N$$ is decomposed into homogeneous elements, each of them also belongs to $$N$$.
+2. If an arbitrary element of $$N$$ is decomposed into homogeneous elements, then each of those elements also belongs to $$N$$.
 3. $$N$$ is generated by homogeneous elements.
 
 </div>
 
-This proposition is a generalization of [§Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6), and its proof is identical. Submodules satisfying this equivalent condition are called *graded submodules*. The following proposition is also a generalization of [§Graded Rings, ⁋Proposition 7](/en/math/algebraic_structures/graded_rings#prop7).
+This proposition is a generalization of [§Graded Rings, §Proposition 6](/en/math/algebraic_structures/graded_rings#prop6), and its proof is also the same. Submodules satisfying this equivalent condition are called *graded submodules*. The following proposition is also a generalization of [§Graded Rings, §Proposition 7](/en/math/algebraic_structures/graded_rings#prop7).
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> For a graded $$A$$-homomorphism $$u:M \rightarrow N$$ of degree $$d$$, the following hold:
+<ins id="prop5">**Proposition 5**</ins> For a graded $$A$$-homomorphism $$u:M \rightarrow N$$ of degree $$d$$, the following hold.
 
 1. $$\im(u)$$ is a graded submodule of $$N$$.
 2. If $$d$$ is cancellable, then $$\ker(u)$$ is a graded submodule of $$M$$.
-3. If $$d=0$$, the canonical bijection $$M/\ker(u)\cong\im(u)$$ defines an isomorphism between graded modules.
+3. If $$d=0$$, then the canonical bijection $$M/\ker(u)\cong\im(u)$$ defines an isomorphism between graded modules.
 
 </div>

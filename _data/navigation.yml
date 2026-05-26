@@ -1250,6 +1250,8 @@ category-ko:
     children:
       - title: "블로그 개발"
         url: ko/blog_development/
+      - title: "LLM 작업실"
+        url: ko/llm_workshop/
       - title: "블로그 소개"
         url: ko/about
       - title: "찾아보기"

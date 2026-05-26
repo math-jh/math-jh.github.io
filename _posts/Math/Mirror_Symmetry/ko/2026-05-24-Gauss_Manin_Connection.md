@@ -194,33 +194,33 @@ $$\dim_\mathbb{C}\mathcal{H}_{(q,z)} = \lvert\Crit(W_q)\rvert$$
 
 이기 때문이다.
 
-더 나아가, $$\mathcal{H}_{(q,z)}$$의 concrete basis는 $$\Jac(W_q) = \mathcal{O}(\check{X})/(\partial_iW_q)$$에서 곧장 얻어진다. 자연스러운 map
+더 나아가, $$\mathcal{H}_{(q,z)}$$의 concrete basis는 $$\Jac(W_q) = \mathcal{O}(\check{X})/ㅣ(\partial_iW_q)$$에서 곧장 얻어진다. 자연스러운 map
 
 $$\Jac(W_q) \;\longrightarrow\; \mathcal{H}_{(q,z)},\qquad T \;\longmapsto\; [T\cdot e^{W_q/z}\omega]$$
 
-은 [명제 5](#prop5) 증명의 cocycle-coboundary 식 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1}dW_q\wedge\beta)$$로부터 well-defined임이 따라오고 ($$T = \sum_i h_i\,\partial_iW_q$$일 때 $$[T\cdot e^{W_q/z}\omega]$$가 적절한 form의 $$d$$로 표현되어 cohomology class가 $$0$$이 됨), 한편 Morse 조건 하 $$\Jac(W_q)$$의 차원도 정확히 $$\lvert\Crit(W_q)\rvert$$이므로 (이상 $$(\partial_iW_q)$$의 zero locus가 isolated critical points들이고 multiplicity 1이라 quotient ring의 dim이 점의 개수와 일치) 양변 dim 일치로 자동 isomorphism
+은 [명제 5](#prop5) 증명의 cocycle-coboundary 식 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1}dW_q\wedge\beta)$$로부터 well-defined ($$T = \sum_i h_i\,\partial_iW_q$$일 때 $$[T\cdot e^{W_q/z}\omega]$$가 적절한 form의 $$d$$로 표현되어 cohomology class가 $$0$$이 됨)이고, 한편 Morse 조건 하 $$\Jac(W_q)$$의 차원도 정확히 $$\lvert\Crit(W_q)\rvert$$ (이상 $$(\partial_iW_q)$$의 zero locus가 isolated critical points들이고 multiplicity 1이라 quotient ring의 dim이 점의 개수와 일치)이므로 양변 dim 일치로 자동 isomorphism
 
 $$\Jac(W_q) \;\xrightarrow{\sim}\; \mathcal{H}_{(q,z)}$$
 
-가 성립한다. 이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실이며 (mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$와 ring으로 매칭시키는, 그 다음 단계의 statement), 무한차원 $$\mathcal{O}(\check{X})$$의 family가 cohomology level에서 $$\mu := \lvert\Crit(W_q)\rvert$$ 차원의 finite quotient $$\Jac(W_q)$$로 축소된다.
+가 성립한다 (이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실; mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$와 ring으로 매칭시키는 그 다음 단계의 statement).
 
-따라서 $$\Jac(W_q)$$의 finite basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$와 thimble basis $$\{\Gamma_b\}_{b=0,\ldots,\mu-1}$$를 함께 잡으면 ($$\ast$$)는 *유한 개의 적분 사이의 닫힌 행렬 ODE*로 정리되고, 다음 정리를 얻는다.
+이로써 cohomology side에는 $$\Jac(W_q)$$의 basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$ ($$\mu := \lvert\Crit(W_q)\rvert$$)에 대응하는 frame $$\{e_\alpha := [T_\alpha\,e^{W_q/z}\omega]\}$$가, homology side에는 thimble basis $$\{[\Gamma_b]\}_{b=0,\ldots,\mu-1}$$가 *서로 독립적으로* 잡혔다. 이 두 basis 사이의 period pairing을 모은 *period matrix*
+
+$$\mathcal{I}^\alpha_b(q, z) \;:=\; \langle e_\alpha,\,[\Gamma_b]\rangle \;=\; \int_{\Gamma_b} T_\alpha\,e^{W_q/z}\,\omega$$
+
+가 자연스럽게 등장한다 ($$T_\alpha$$와 $$\Gamma_b$$는 *dual basis가 아니므로* $$\mathcal{I}\neq I$$이며, 일반적으로 비자명한 oscillating integral의 값들로 채워진다). ($$\ast$$)를 이 행렬 entries에 대해 풀어 정리하면 다음의 닫힌 행렬 ODE를 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm7">**정리 7 (Fundamental solution matrix)**</ins> $$W_q$$가 Morse type이라 하고 $$\mu := \lvert\Crit(W_q)\rvert$$이라 두자. Jacobi ring $$\Jac(W_q)$$의 $$\mathbb{C}$$-basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$와 rapid decay homology $$H_N(\check{X},\{\Real(W_q/z)\ll 0\};\mathbb{C})$$의 Lefschetz thimble basis $$\{\Gamma_b\}_{b=0,\ldots,\mu-1}$$에 대하여, *period matrix*
-
-$$\mathcal{I}^\alpha_{\Gamma_b}(q, z) := \int_{\Gamma_b} T_\alpha\cdot e^{W_q/z}\,\omega$$
-
-를 정의하자. $$\Jac(W_q)$$ 안의 multiplication 행렬을
+<ins id="thm7">**정리 7 (Fundamental solution matrix)**</ins> 위의 setup에서 $$\Jac(W_q)$$ 안의 multiplication 행렬을
 
 $$T_\alpha\cdot \partial_{q_a}W_q = \sum_\beta (M_a)^\alpha_\beta\, T_\beta,\qquad T_\alpha\cdot W_q = \sum_\beta E^\alpha_\beta\, T_\beta\quad\text{in}\;\Jac(W_q)$$
 
-로 두면, 행렬 $$\mathcal{I} = (\mathcal{I}^\alpha_{\Gamma_b})$$는 다음의 닫힌 ODE system을 만족한다.
+로 정의하면, period matrix $$\mathcal{I} = (\mathcal{I}^\alpha_b)$$는 닫힌 ODE system
 
-$$z\,\partial_{q_a}\mathcal{I}^\alpha_{\Gamma_b} = \sum_\beta (M_a)^\alpha_\beta\,\mathcal{I}^\beta_{\Gamma_b},\qquad z^2\,\partial_z\mathcal{I}^\alpha_{\Gamma_b} = -\sum_\beta E^\alpha_\beta\,\mathcal{I}^\beta_{\Gamma_b}$$
+$$z\,\partial_{q_a}\mathcal{I}^\alpha_b = \sum_\beta (M_a)^\alpha_\beta\,\mathcal{I}^\beta_b,\qquad z^2\,\partial_z\mathcal{I}^\alpha_b = -\sum_\beta E^\alpha_\beta\,\mathcal{I}^\beta_b$$
 
-특히 $$\mathcal{I}$$는 invertible matrix-valued function이며, frame $$\{[T_\alpha\,e^{W_q/z}\omega]\}_\alpha$$로 trivialize한 B-model connection $$\nabla^z_B$$의 *fundamental solution matrix*를 이룬다.
+을 만족한다. 특히 $$\mathcal{I}$$는 invertible matrix-valued function이며, frame $$\{e_\alpha\}_\alpha$$로 trivialize한 B-model connection $$\nabla^z_B$$의 *fundamental solution matrix*를 이룬다.
 
 </div>
 
@@ -229,7 +229,7 @@ $$z\,\partial_{q_a}\mathcal{I}^\alpha_{\Gamma_b} = \sum_\beta (M_a)^\alpha_\beta
 
 **닫힌 ODE.** 각 $$\alpha, b$$에 대해 ($$\ast$$)와 동일한 적분 미분 교환을 적용하면
 
-$$z\,\partial_{q_a}\mathcal{I}^\alpha_{\Gamma_b} = \int_{\Gamma_b}T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega,\qquad z^2\,\partial_z\mathcal{I}^\alpha_{\Gamma_b} = -\int_{\Gamma_b}T_\alpha\cdot W_q\cdot e^{W_q/z}\omega$$
+$$z\,\partial_{q_a}\mathcal{I}^\alpha_b = \int_{\Gamma_b}T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega,\qquad z^2\,\partial_z\mathcal{I}^\alpha_b = -\int_{\Gamma_b}T_\alpha\cdot W_q\cdot e^{W_q/z}\omega$$
 
 가 된다. 앞서 확립한 isomorphism $$\Jac(W_q)\xrightarrow{\sim}\mathcal{H}_{(q,z)}$$ 하에서 cohomology class $$[T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega]$$는 $$T_\alpha\cdot\partial_{q_a}W_q$$를 $$\Jac(W_q)$$ 안에서 reduce한 결과 $$\sum_\beta(M_a)^\alpha_\beta T_\beta$$에 대응하므로
 
@@ -237,31 +237,19 @@ $$[T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega] = \sum_\beta (M_a)^\alph
 
 이고, period pairing은 cohomology class에만 의존하므로 양변을 $$\Gamma_b$$ 위에서 적분하면
 
-$$\int_{\Gamma_b}T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega = \sum_\beta (M_a)^\alpha_\beta\,\mathcal{I}^\beta_{\Gamma_b}$$
+$$\int_{\Gamma_b}T_\alpha\cdot\partial_{q_a}W_q\cdot e^{W_q/z}\omega = \sum_\beta (M_a)^\alpha_\beta\,\mathcal{I}^\beta_b$$
 
 가 따른다. $$z$$-방향도 $$T_\alpha\cdot W_q = \sum_\beta E^\alpha_\beta T_\beta$$로 동일한 논의를 거치면 된다.
 
-**Fundamental solution interpretation.** Frame $$\{e_\alpha := [T_\alpha\,e^{W_q/z}\omega]\}$$에 대해 [명제 5](#prop5)의 일반화
+**Fundamental solution interpretation.** 위 derivation은 frame $$\{e_\alpha\}$$에서
 
 $$\nabla^z_{B,\partial_{q_a}}\,e_\alpha = \sum_\beta (M_a)^\alpha_\beta\,e_\beta$$
 
-가 성립한다 ($$\nabla^z_B = z\nabla^{GM}$$의 $$z$$ factor가 $$\nabla^{GM}$$의 $$1/z$$를 흡수). 한편 [정의 4](#def4)의 setup에 의해 continuously isotoped된 thimble $$\Gamma_b$$는 dual bundle $$\mathcal{H}^\vee$$의 flat section이므로, 두 frame 사이의 transition $$\mathcal{I}^\alpha_{\Gamma_b} = \langle e_\alpha, \Gamma_b\rangle$$이 따르는 미분방정식이 위의 닫힌 ODE이며, $$\{\Gamma_b\}$$가 각 fiber에서 dual bundle의 basis임으로부터 $$\mathcal{I}$$의 invertibility가 따라온다. 따라서 $$\mathcal{I}$$의 column들이 horizontal dual section $$\{\Gamma_b\}$$와 cohomology frame $$\{e_\alpha\}$$의 pairing 데이터를 모은 $$\nabla^z_B$$의 *fundamental solution matrix*가 된다.
+가 성립함과 ([명제 5](#prop5)의 일반화; $$\nabla^z_B = z\nabla^{GM}$$의 $$z$$ factor가 $$\nabla^{GM}$$의 $$1/z$$를 흡수), [정의 4](#def4)의 setup에 의해 continuously isotoped된 $$\{[\Gamma_b]\}$$가 dual bundle $$\mathcal{H}^\vee$$의 *flat* basis라는 사실, 그리고 $$\mathcal{I}^\alpha_b = \langle e_\alpha, [\Gamma_b]\rangle$$가 두 basis 사이의 *period pairing 행렬*이라는 사실만 사용한 것이다. $$\{[\Gamma_b]\}$$가 각 fiber에서 $$\mathcal{H}^\vee$$의 basis이므로 pairing이 non-degenerate, 즉 $$\mathcal{I}$$가 invertible이다. 그러면 $$\mathcal{I}^{-1}$$의 column들이 frame $$\{e_\alpha\}$$로 표현한 $$\nabla^z_B$$의 horizontal sections이 되고 ($$\{[\Gamma_b]\}$$의 dual basis가 곧 horizontal frame이므로), 이런 의미에서 $$\mathcal{I}$$를 $$\nabla^z_B$$의 *fundamental solution matrix*라 부른다.
 
 </details>
 
 이 fundamental solution matrix $$\mathcal{I}$$가 A-side quantum cohomology $$D$$-module의 fundamental solution($$J$$-function)과 일치한다는 mirror theorem은 [§Givental J-function과 Mirror Theorem, ⁋명제 3](/ko/math/mirror_symmetry/givental_j_function#prop3)에서 다룬다.
-
-## Mirror theorem과 $$J$$-function의 복원
-
-[§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 D-module isomorphism
-
-$$\Phi: H_A \xrightarrow{\sim} H_B$$
-
-는 A-model의 horizontal section을 B-model의 horizontal section에 대응시킨다. 그 가장 명시적 form이 이후 [§Givental J-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function)에서 다룰 mirror theorem으로,
-
-$$J^a_X(q, z) = \frac{1}{(2\pi i z)^N}\int_{\Gamma_a} e^{W_q/z}\, \omega$$
-
-의 형태이다 (적절한 normalization). $$z \to 0$$에서 좌변은 $$X$$의 classical cohomology의 basis로 수렴하고, 우변은 [명제 3](#prop3)에 의해 $$W_q$$의 critical points의 contribution으로 풀어진다. 두 limit이 같다는 것은 정확히 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴본 ring 동형 $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$의 진술이다.
 
 ## 예시: $$\mathbb{P}^n$$의 oscillating integral
 
@@ -271,27 +259,53 @@ $$J^a_X(q, z) = \frac{1}{(2\pi i z)^N}\int_{\Gamma_a} e^{W_q/z}\, \omega$$
 
 $$\check{X} = (\mathbb{C}^\ast)^n,\qquad W_q = x_1 + \cdots + x_n + \frac{q}{x_1 \cdots x_n},\qquad \omega = \frac{dx_1 \wedge \cdots \wedge dx_n}{x_1 \cdots x_n}$$
 
-이다. Oscillating integral은
+이다. $$W_q$$의 critical equation $$\partial_{x_i}W_q = 1 - q/(x_i\,x_1\cdots x_n) = 0$$로부터 $$x_1 = \cdots = x_n =: x$$이고 $$x^{n+1} = q$$를 만족하는 $$n+1$$개의 점들 $$x_\zeta = \zeta\,q^{1/(n+1)}$$ ($$\zeta$$는 $$(n+1)$$-th root of unity)를 얻는다.
 
-$$\mathcal{I}_\Gamma(q, z) = \int_\Gamma \exp\!\left(\frac{x_1 + \cdots + x_n + q/(x_1\cdots x_n)}{z}\right)\, \frac{dx_1 \cdots dx_n}{x_1 \cdots x_n}$$
+**Jacobi ring과 multiplication 행렬.** 위 critical equation을 $$\Jac(W_q)$$의 relation으로 보면 모든 $$x_i$$가 동일해지고 $$x^{n+1} = q$$가 성립하므로
 
-이다. $$W_q$$의 critical points는 $$x_1 = \cdots = x_n = x$$이고 $$x^{n+1} = q$$를 만족하는 $$n+1$$개의 점들이며, 각 critical point에서의 critical value는 $$W_q(x) = (n+1)\, x$$이다. $$x = \zeta\, q^{1/(n+1)}$$ ($$\zeta$$가 $$(n+1)$$-th root of unity)에서의 Hessian을 계산하자. Critical point에서 $$q/(x_1\cdots x_n) = x$$이므로 $$\partial_i \partial_j W_q$$는 대각 성분이 $$2/x$$, 비대각 성분이 $$1/x$$인 행렬, 즉 $$\Hess_p(W_q) = \tfrac{1}{x}\big(I_n + \mathbf{1}\mathbf{1}^\top\big)$$이다 (여기서 $$\mathbf{1}$$은 모든 성분이 $$1$$인 vector). $$\det(I_n + \mathbf{1}\mathbf{1}^\top) = n+1$$이므로
+$$\Jac(W_q) \;\cong\; \mathbb{C}[x, x^{-1}]\,/\,(x^{n+1} - q)$$
 
-$$\det \Hess_p(W_q) = (n+1)\,(\zeta q^{1/(n+1)})^{-n}$$
+이며, $$\mathbb{C}$$-basis $$\{T_\alpha := x^\alpha\}_{\alpha=0,\ldots,n}$$ ($$\mu = n+1 = \dim_\mathbb{C} H^\ast(\mathbb{P}^n;\mathbb{C})$$)을 갖는다. 이 basis에서 $$\partial_qW_q = (x_1\cdots x_n)^{-1} = x^{-n}$$이 $$\Jac$$ 안에서 $$x^{n+1} = q$$ relation으로 $$x^{-n} = x/q$$로 reduce되므로
 
-이며, 따라서 stationary phase asymptotic은
+$$T_\alpha\cdot \partial_qW_q = T_\alpha\cdot \frac{x}{q} = \frac{x^{\alpha+1}}{q} = \begin{cases}\dfrac{1}{q}\,T_{\alpha+1} & (\alpha < n),\\[0.4em] T_0 & (\alpha = n)\end{cases}$$
 
-$$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{n/2}\, \frac{\exp\big( (n+1)\, \zeta\, q^{1/(n+1)} / z \big)}{\sqrt{\det \Hess_p(W_q)}}\,(1 + O(z))$$
+이다 (마지막은 $$x^{n+1}/q = q/q = 1$$). 즉 multiplication matrix $$M_q$$는 cyclic shift 형태
 
-이다.
+$$M_q = \begin{pmatrix} 0 & \tfrac{1}{q} & & & \\ & 0 & \tfrac{1}{q} & & \\ & & \ddots & \ddots & \\ & & & 0 & \tfrac{1}{q} \\ 1 & & & & 0\end{pmatrix}$$
 
-한편 $$\mathbb{P}^n$$의 $$J$$-function은 (이후 [§Givental J-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function)에서 다루듯)
+이고, 한편 $$W_q = nx + q\cdot x^{-n} = nx + q\cdot x/q = (n+1)x$$이므로 $$E = (n+1)q\,M_q$$이다.
 
-$$J_{\mathbb{P}^n}(q, z) = e^{H \ln q/z} \sum_{d \geq 0} \frac{q^d}{\prod_{j=1}^d (H + jz)^{n+1}}$$
+**닫힌 행렬 ODE.** [정리 7](#thm7)에 따라 period matrix
 
-이다. $$H^{n+1} = q$$ relation을 사용하여 $$J$$-function의 $$z \to 0$$ stationary phase asymptotic을 풀면 정확히 위의 oscillating integral expansion이 복원된다. 이것이 $$\mathbb{P}^n$$에 대한 mirror theorem의 explicit form이다.
+$$\mathcal{I}^\alpha_b(q, z) := \int_{\Gamma_b} x^\alpha\,\exp\!\left(\frac{x_1 + \cdots + x_n + q/(x_1\cdots x_n)}{z}\right)\,\frac{dx_1\cdots dx_n}{x_1\cdots x_n}$$
+
+($$b$$는 thimble basis $$\{\Gamma_{x_\zeta}\}$$의 index)는 닫힌 ODE
+
+$$z\,\partial_q\mathcal{I}^\alpha_b = \sum_\beta (M_q)^\alpha_\beta\,\mathcal{I}^\beta_b$$
+
+를 만족한다. 한 column ($$b$$ 고정)에 대해 풀어쓰면 $$\mathcal{I}^{\alpha+1}_b = qz\,\partial_q\mathcal{I}^\alpha_b$$ ($$\alpha < n$$)와 $$z\,\partial_q\mathcal{I}^n_b = \mathcal{I}^0_b$$로부터 $$\mathcal{I}^0_b$$가 $$(n+1)$$-차 ODE
+
+$$(z\partial_q)\bigl(qz\partial_q\bigr)^n\,\mathcal{I}^0_b = \mathcal{I}^0_b$$
+
+를 만족한다. 이것이 곧 $$\mathbb{P}^n$$의 *quantum differential equation*으로, A-side에서 $$J$$-function이 만족하는 hypergeometric ODE와 동일하다.
+
+**Stationary phase asymptotic.** 한편 $$z\to 0^+$$에서 각 critical point의 contribution은 [명제 3](#prop3)으로 직접 계산할 수 있다. $$x_\zeta = \zeta\,q^{1/(n+1)}$$에서 $$\partial_i\partial_j W_q$$는 대각 성분 $$2/x_\zeta$$, 비대각 성분 $$1/x_\zeta$$인 행렬
+
+$$\Hess_{x_\zeta}(W_q) = \tfrac{1}{x_\zeta}\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr)$$
+
+이고 ($$\mathbf{1}$$은 모든 성분이 $$1$$인 vector), $$\det(I_n + \mathbf{1}\mathbf{1}^\top) = n+1$$이므로
+
+$$\det \Hess_{x_\zeta}(W_q) = (n+1)\,(\zeta\,q^{1/(n+1)})^{-n}$$
+
+이며, critical value $$W_q(x_\zeta) = (n+1)\,\zeta\,q^{1/(n+1)}$$로부터 stationary phase asymptotic
+
+$$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1)\,\zeta\,q^{1/(n+1)}/z\bigr)}{\sqrt{\det \Hess_{x_\zeta}(W_q)}}\,(1 + O(z))$$
+
+가 따른다.
 
 </div>
+
+위에서 유도한 $$\mathbb{P}^n$$의 quantum differential equation과 A-side $$J$$-function의 일치, 그리고 그 explicit한 hypergeometric 형태 ($$J_{\mathbb{P}^n}(q, z) = e^{H\ln q/z}\sum_{d\geq 0} q^d/\prod_{j=1}^d(H+jz)^{n+1}$$ 등)는 [§Givental J-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function)에서 mirror theorem의 진술과 함께 다룬다.
 
 A-model과 B-model 양측의 connection-level 데이터를 이렇게 정리해두면, 이어지는 [§Jacobi Ring과 Quantum Cohomology의 동형](/ko/math/mirror_symmetry/jacobi_ring)에서 두 측면의 *ring-level* 골조에 해당하는 Jacobi ring과 quantum cohomology 사이의 isomorphism, 즉 $$z\to 0$$ 극한으로 볼 때 oscillating integral의 critical-point 분해와 Gromov-Witten 계산이 만나는 지점을 정밀하게 다룬다.
 

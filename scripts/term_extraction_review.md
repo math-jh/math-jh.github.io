@@ -1571,3 +1571,54 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `모든` | looks like emphasis (no <sub> partner) |
 
+## 미분다양체
+- post: `_posts/Math/Manifold/ko/2022-06-06-Smooth_Manifolds.md`
+- permalink: `/ko/math/manifold/smooth_manifolds`
+- scanned: 2026-05-26T07:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `라 부르고, 이 때 $$M$$을` | mixed-script emphasis — possibly a definition |
+| `maximal` | looks like emphasis (no <sub> partner) |
+
+## 미분형식
+- post: `_posts/Math/Manifold/ko/2022-06-21-Differential_Forms.md`
+- permalink: `/ko/math/manifold/differential_forms`
+- scanned: 2026-05-26T07:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$(r,s)$$-tensor bundle` | multi-word English emphasis — possibly a definition |
+| `exterior algebra bundle` | multi-word English emphasis — possibly a definition |
+| `differential graded algebra` | multi-word English emphasis — possibly a definition |
+
+## 벡터공간
+- post: `_posts/Math/Linear_Algebra/ko/2022-07-28-Vector_Spaces.md`
+- permalink: `/ko/math/linear_algebra/vector_spaces`
+- scanned: 2026-05-26T08:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `, 혹은 간단히` | looks like emphasis (no <sub> partner) |
+| `스칼라곱` | looks like emphasis (no <sub> partner) |
+
+## 호몰로지
+- post: `_posts/Math/Homological_Algebra/ko/2022-09-10-Homology.md`
+- permalink: `/ko/math/homological_algebra/homology`
+- scanned: 2026-05-26T08:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `total complex` | multi-word English emphasis — possibly a definition |
+| `$$p$$-th translation` | multi-word English emphasis — possibly a definition |
+
+## 미분
+- post: `_posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md`
+- permalink: `/ko/math/multilinear_algebra/derivations`
+- scanned: 2026-05-26T09:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `혹은 간단히` | looks like emphasis (no <sub> partner) |
+| `graded` | looks like emphasis (no <sub> partner) |
+

@@ -32,11 +32,11 @@ Classical variety의 세계에서는 모든 점이 closed point였다. 즉, $\ma
 
 <ins id="ex2">**예시 2**</ins> $\mathbb{A}_k^2$ 위에서 두 곡선 $V(\y-\x)$와 $V(\y)$의 교차를 생각하자. 이들은 원점에서 서로 다른 방향으로 만나므로 transversal intersection을 이룬다. 한편 $V(\y-\x^2)$와 $V(\y)$의 교차는 원점에서 접하므로 tangential intersection이다. Classical variety의 범주에서는 두 경우 모두 원점이라는 동일한 집합 $V(\x,\y)=\{(0,0)\}$를 교차로 얻는다. 그러나 ideal의 관점에서는
 
-$$$(\y-\x)+(\y)=(\x,\y),\qquad (\y-\x^2)+(\y)=(\x^2,\y)$$$
+$$(\y-\x)+(\y)=(\x,\y),\qquad (\y-\x^2)+(\y)=(\x^2,\y)$$
 
 이므로, 첫 번째 경우와 달리 두 번째 경우에는 $\mathbb{A}_k^2$의 좌표환 $k[\x,\y]$에 남는 nilpotent element $\bar{\x}$가 존재한다. 사실
 
-$$$\frac{k[\x,\y]}{(\x^2,\y)} \cong \frac{k[\epsilon]}{(\epsilon^2)}$$$
+$$\frac{k[\x,\y]}{(\x^2,\y)} \cong \frac{k[\epsilon]}{(\epsilon^2)}$$
 
 이 성립하며, 이 환의 $k$-벡터공간으로서의 차원은 $2$이다. 이 차원이 바로 교차 multiplicity를 계수로 반영하는 scheme-theoretic intersection의 핵심이다.
 
@@ -128,7 +128,7 @@ Scheme을 단순히 locally ringed space로만 이해하는 것은 그 본질을
 
 <ins id="def13">**정의 13**</ins> Scheme $X$에 대하여, 그 **functor of points** $h_X$는 범주 $(\operatorname{Sch}/S)^{\mathrm{op}}$에서 $\mathbf{Sets}$로의 functor로, 임의의 $S$-scheme $T$에 대하여
 
-$$$h_X(T)=\operatorname{Hom}_S(T,X)$$$
+$$h_X(T)=\operatorname{Hom}_S(T,X)$$
 
 를 정의하고, morphism $f:T'\rightarrow T$에 대하여 $h_X(f):h_X(T)\rightarrow h_X(T')$를 precomposition by $f$로 준다.
 
