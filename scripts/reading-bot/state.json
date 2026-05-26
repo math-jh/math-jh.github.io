@@ -1,24 +1,8 @@
 {
-  "current_cat_idx": 0,
-  "current_cat": "Math / Linear Algebra",
-  "cat_start_date": "2026-05-26",
-  "current_note_post": "_posts/Misc/LLM_Workshop/2026-05-26-Marvin_Linear_Algebra.md",
-  "posts_done_in_cat": [
-    "/ko/math/linear_algebra/fields",
-    "/ko/math/linear_algebra/vector_spaces",
-    "/ko/math/linear_algebra/subspaces",
-    "/ko/math/linear_algebra/basis",
-    "/ko/math/linear_algebra/dimension",
-    "/ko/math/linear_algebra/linear_map",
-    "/ko/math/linear_algebra/isomorphic_vector_spaces",
-    "/ko/math/linear_algebra/matrices",
-    "/ko/math/linear_algebra/space_of_linear_maps",
-    "/ko/math/linear_algebra/ftla",
-    "/ko/math/linear_algebra/gaussian_elimination",
-    "/ko/math/linear_algebra/determinant",
-    "/ko/math/linear_algebra/existence_and_uniqueness_of_determinant",
-    "/ko/math/linear_algebra/characteristic_polynomial",
-    "/ko/math/linear_algebra/eigenspace_decomposition"
-  ],
+  "current_cat_idx": 1,
+  "current_cat": "Math / Set Theory",
+  "cat_start_date": "2026-05-27",
+  "current_note_post": "_posts/Misc/LLM_Workshop/2026-05-27-Marvin_Set_Theory.md",
+  "posts_done_in_cat": ["/ko/math/set_theory/zfc_axioms", "/ko/math/set_theory/ordered_pair", "/ko/math/set_theory/binary_relation", "/ko/math/set_theory/operation_of_binary_relations", "/ko/math/set_theory/functions", "/ko/math/set_theory/operation_of_functions", "/ko/math/set_theory/retraction_and_section", "/ko/math/set_theory/union_and_intersection"],
   "all_complete": false
 }
