@@ -191,6 +191,7 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - scripts
 keep_files:
   - .git
   - .svn

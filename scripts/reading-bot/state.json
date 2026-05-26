@@ -8,7 +8,9 @@
     "/ko/math/linear_algebra/vector_spaces",
     "/ko/math/linear_algebra/subspaces",
     "/ko/math/linear_algebra/basis",
-    "/ko/math/linear_algebra/dimension"
+    "/ko/math/linear_algebra/dimension",
+    "/ko/math/linear_algebra/linear_map",
+    "/ko/math/linear_algebra/isomorphic_vector_spaces"
   ],
   "all_complete": false
 }
