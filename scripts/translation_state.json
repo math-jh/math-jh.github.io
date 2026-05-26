@@ -2170,30 +2170,28 @@
     },
     "_posts/Math/Algebraic_Structures/ko/2024-05-10-Modules.md": {
       "status": "done",
-      "last_attempt_ts": 1779712288.3516357,
+      "last_attempt_ts": 1779780659.9987438,
       "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Modules.md",
-      "ko_git_commit_ts": 1779678007.0,
-      "translated_at": "2026-05-25T12:30:04+00:00",
-      "in_chars": 17773,
-      "out_chars": 8065,
-      "reason": "polish",
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T07:30:02+00:00",
+      "in_chars": 9333,
+      "out_chars": 8305,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=153, en=8"
+        "math block count mismatch: ko=153, en=151"
       ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=153 en_old=8 en_new=8\nPOLISH CHANGED:\n- [def1] SAFE-REPHRASE: no math changes; minor wording polish only.\n- [def2] SAFE-REPHRASE: no math changes; minor wording polish only.\n- [def3] SAFE-REPHRASE: no math changes; minor wording polish only.\n- [def4] SAFE-REPHRASE: no math changes; minor wording polish only.\n- [ex5] SAFE-REPHRASE: no math changes; minor wording polish only.\n- [def6] SAFE-REPHRASE: no math changes; minor wording polish only.\n- [prop7] SAFE-REPHRASE: no math changes; minor wording polish only.\n- [prop8] SAFE-REPHRASE: corrected a typo in the proof equation (EN OLD had `\\Hom_{\\lMod{A}}(f\\u, N)` and `\\Hom_{\\lMod{A}(u,N)}`; EN NEW fixed both to `\\Hom_{\\lMod{A}}(u, N)` and `\\Hom_{\\lMod{A}}(u,N)`), preserving intended mathematical meaning vs KO."
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=153 en=151\nFINDINGS:\n- [def1 proof] SAFE-REPHRASE: KO repeats `$$\\mathfrak{a}$$` as explicit object of verb, EN merges into one phrase\n- [def3/def11/prop12 proofs] SAFE-REPHRASE: Korean grammar requires extra `$$A$$`/`$$x$$` as topic markers; EN merges `$$K=\\Frac(A)$$` and `$$x$$` into single block `$$x\\in K=\\Frac(A)$$`\n- [def11/def18 statements] SAFE-REPHRASE: extra `$$A$$` in KO genitive constructions (`A의`) rendered as English prepositional phrases (`of A`)\n- [thm17 after-proof] SAFE-REPHRASE: KO puts `$$1$$` in math for \"1-dimensional\", EN writes \"one-dimensional\" in text\n- [thm17 proof] SAFE-REPHRASE: EN corrects KO source bug—KO erroneously uses `$$\\mathfrak{a}\\subsetneq\\mathfrak{p}$$` for both cases; EN correctly distinguishes `$$\\mathfrak{a}\\not\\subseteq\\mathfrak{p}$$` (unit case) and `$$\\mathfrak{a}\\subseteq\\mathfrak{p}$$` (minimal prime case)\n- [thm17 transition] SAFE-REPHRASE: KO mentions `$$\\CaDiv(A)$$` twice in transition sentence, EN once with same referent\n- [Remaining differences] SAFE-REPHRASE: all other block count deltas are sentence-structure merges/splits with identical mathematical content"
     },
     "_posts/Math/Algebraic_Structures/ko/2024-05-12-Operations_of_Modules.md": {
       "status": "done",
-      "last_attempt_ts": 1779657003.5195947,
+      "last_attempt_ts": 1779782531.5618703,
       "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Operations_of_Modules.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-24T21:00:03+00:00",
-      "in_chars": 23175,
-      "out_chars": 10877,
-      "reason": "polish",
-      "warnings": [
-        "math block count mismatch: ko=158, en=153"
-      ]
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T08:00:01+00:00",
+      "in_chars": 11627,
+      "out_chars": 11205,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Algebraic_Structures/ko/2024-07-04-Abelian_Groups.md": {
       "status": "done",
@@ -2245,16 +2243,17 @@
     },
     "_posts/Math/Algebraic_Structures/ko/2024-08-12-Graded_Modules.md": {
       "status": "done",
-      "last_attempt_ts": 1779667611.953671,
+      "last_attempt_ts": 1779784266.8947265,
       "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Graded_Modules.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-25T00:00:04+00:00",
-      "in_chars": 9920,
-      "out_chars": 3889,
-      "reason": "polish",
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T08:30:01+00:00",
+      "in_chars": 5670,
+      "out_chars": 3897,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=64, en=65"
-      ]
+        "math block count mismatch: ko=64, en=63"
+      ],
+      "verify_verdict": "Now I have the full picture. Let me compare the math blocks carefully:\n\n**KO around def2:**\n- `$$M,M'$$` \n- `$$A$$`\n- `$$u:M \\rightarrow M'$$`\n- `$$u(M_i)\\subseteq M_i'$$`\n\n**EN around def2:**\n- `$$M,M'$$` \n- `$$A$$`\n- `$$u:M \\rightarrow M'$` ← **MALFORMED**: the `$'` closes the `$$` early\n- ` is called a *graded homomorphism* if ` (plain text leaked out)\n- `$$u(M_i)\\subseteq M_i'$$` ← **MALFORMED**: same issue, `$'` closes early\n- ` always holds.` (plain text leaked out)\n\nSo the EN text has a **syntax bug**: `M'$` inside `$$...$$` causes premature closing. In KO, `M'` is followed by Korean text `이` which doesn't trigger the `$` closing. But in EN, `M'$` has the apostrophe-prime right after `$` which the regex parser misinterprets.\n\nWait, let me re-check. In KO: `$$u:M \\rightarrow M'$$이` — the `$$` is followed by `이` (Korean), so the `$$` closes correctly. In EN: `$$u:M \\rightarrow M'$ is` — the `$$` is followed by `$ is`... Hmm, actually `M'$` has a single `$` inside. Let me look more carefully:\n\nKO: `$$u:M \\rightarrow M'$$이` → the sequence is `$ $ u : M \\rightarrow M ' $ $ 이` → no single `$` inside.\nEN: `$$u:M \\rightarrow M'$ is` → the sequence is `$ $ u : M \\rightarrow M ' $   i s` → wait, that's `M'` then `$$` closes... no, `M'$` is `M ' $` then space then `is`. So there's a single `$` after `M'` before the closing `$$`? No wait, let me re-read:\n\n`$$u:M \\rightarrow M'$ is called` \n\nLet me break it down character by character:\n- `$$` = opening\n- `u:M \\rightarrow M'` = content  \n- `$` = THIS IS A SINGLE `$` inside the math!\n- ` is called` = text after\n\nSo the EN text has `M'$` where the `$` is meant to be part of `M'` (prime notation), but it's written as `$` (dollar sign) instead of `'` (apostrophe) or as part of the closing `$$`. Actually wait — in LaTeX, `M'` produces M-prime. But here we have `M'$` which is `M` + `'` + `$`. The `$` is a literal dollar sign inside the math block, which would break the `$$...$$` parsing.\n\nBut looking at KO: `$$u:M \\rightarrow M'$$이` — this is `M` + `'` + `$$` closing. So `M'` is M-prime, then `$$` closes.\n\nIn EN: `$$u:M \\rightarrow M'$ is` — this is `M` + `'` + `$` + ` is`. The `$` after `M'` is a literal dollar sign, not part of closing `$$`. This breaks the math block.\n\nSo this is a **translation error/typo** in EN: `M'$` should be `M'$$` (with `$$` closing the block).\n\nLet me verify by counting what the intended math blocks should be:\n\nIn EN def2, the intended math is:\n1. `$$I$$`\n2. `$$A$$`\n3. `$$M,M'$$`\n4. `$$A$$`\n5. `$$u:M \\rightarrow M'$$`\n6. `$$u(M_i)\\subseteq M_i'$$`\n\nBut due to the typo `M'$` instead of `M'$$`, blocks 5 and 6 are merged into one malformed block, and the text in between leaks out. Similarly for def3.\n\nSo the actual mathematical content is NOT lost — it's a **syntax bug** where `$$` was mistyped as `$` after `M'`, causing two adjacent math blocks to merge into one malformed block. The content `u:M \\rightarrow M'` and `u(M_i)\\subseteq M_i'` is still present, just with broken delimiters.\n\nWait, but the user said ko=64, en=63. My count shows ko=64, en=62. Let me recount the EN more carefully. The parser found 62 blocks because of the malformed delimiters. But if we count intended math blocks (ignoring the syntax error), EN should have the same 64.\n\nActually, let me recount by looking at the actual intended math expressions in EN:\n\n1. `I` (def1)\n2. `A=\\bigoplus_{i\\in I}A_i` (def1)\n3. `I` (def1)\n4. `M` (def1)\n5. `A` (def1)\n6. `M` (def1)\n7. `I` (def1)\n8. `A` (def1)\n9. `i,j\\in I` (def1)\n10. `A_iM_j\\subseteq M_{i+j}` (def1)\n11. `I` (after def1)\n12. `A` (after def1)\n13. `A` (after def1)\n14. `A` (after def1)\n15. `A` (after def1)\n16. `I` (after def1)\n17. `A_0` (after def1)\n18. `M_j` (after def1)\n19. `A_0` (after def1)\n20. `I` (def2)\n21. `A` (def2)\n22. `M,M'` (def2)\n23. `A` (def2)\n24. `u:M \\rightarrow M'` (def2) ← **intended**\n25. `u(M_i)\\subseteq M_i'` (def2) ← **intended**\n26. `I` (between def2/def3)\n27. `A` (between def2/def3)\n28. `\\bgr_I\\lMod{A}` (between def2/def3)\n29. `I`"
     },
     "_posts/Math/Algebraic_Topology/ko/2023-02-18-Homology.md": {
       "status": "done",
@@ -2322,17 +2321,17 @@
     },
     "_posts/Math/Commutative_Algebra/ko/2025-01-24-Divisors.md": {
       "status": "done",
-      "last_attempt_ts": 1779681763.9040053,
+      "last_attempt_ts": 1779779029.6051805,
       "en_path": "_posts/Math/Commutative_Algebra/en/2025-01-24-Divisors.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-25T04:00:01+00:00",
-      "in_chars": 20583,
-      "out_chars": 21702,
-      "reason": "pending",
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T07:00:03+00:00",
+      "in_chars": 20587,
+      "out_chars": 21699,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=341, en=332"
+        "math block count mismatch: ko=341, en=333"
       ],
-      "verify_verdict": "verify-failed: kimi timeout"
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=341 en=333\nFINDINGS:\n- [def11] SAFE-REPHRASE: KO splits subject/possessive into two $$A$$ blocks (\"$$A$$가 … $$A$$의 maximal ideal\"); EN uses one $$A$$ block plus \"its\".\n- [def18] SAFE-REPHRASE: KO has separate $$A$$ blocks for conjunct and possessive (\"$$A$$와 $$A$$의 total ring of fractions\"); EN uses \"its\".\n- [prop12] SAFE-REPHRASE: KO item 1 has extra $$x$$ block (\"$$x$$는 unit\"); item 2 splits $$K=\\Frac(A)$$ and $$x$$ into separate blocks where EN merges into $$x\\in K=\\Frac(A)$$.\n- [thm2] SAFE-REPHRASE: KO statement preamble uses two $$A$$ blocks; EN merges into one sentence. Proof has extra $$\\\\mathfrak{a}$$ block (\"그럼 우선 $$\\\\mathfrak{a}$$를\") where EN folds it into \"the localization $$\\\\mathfrak{a}A_\\\\mathfrak{m}$$\".\n- [thm17] SAFE-REPHRASE: KO statement swaps order of formula and $$\\Phi$$ declaration (same content). KO proof has extra $$1$$ block in \"$$1$$차원\" (EN: \"one-dimensional\") and extra $$\\CaDiv(A)$$ block in transition sentence where EN uses \"of elements of $$\\CaDiv(A)$$\" once."
     },
     "_posts/Math/Lie_Theory/ko/2023-01-23-Lie_Groups.md": {
       "status": "done",
@@ -2549,8 +2548,8 @@
     }
   },
   "stats": {
-    "total_done": 274,
-    "total_in_chars": 4768869,
-    "total_out_chars": 4057041
+    "total_done": 278,
+    "total_in_chars": 4816086,
+    "total_out_chars": 4102147
   }
 }

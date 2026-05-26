@@ -82,7 +82,7 @@ One of the most powerful tools in linear algebra was diagonalization, and in Lie
 
 Since two diagonalizable operators $$A,B$$ are simultaneously diagonalizable if and only if they commute, by definition all elements of $$\mathfrak{h}$$ are simultaneously diagonalizable. Now let us decompose $$\mathfrak{g}$$ using the family of simultaneously diagonalizable operators $$\{H\in \mathfrak{h}\}$$. If a <em>finite</em> family of simultaneously diagonalizable operators $$A_1,\ldots, A_n$$ is given, decomposing the space into simultaneous eigenspaces takes the form
 
-$$V=\bigoplus V_\alpha,\qquad \text{$$A_i v_\alpha=\lambda_i v_\alpha$$ for all $$v_\alpha\in V$$ for all $$i$$}$$
+$$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v_\alpha\in V$ for all $i$}$$
 
 but in our present situation, since $$\mathfrak{h}$$ is a vector space, it is better to choose a linear functional $$\alpha: \mathfrak{h}\rightarrow \mathbb{C}$$ so that $$\alpha(H)$$ plays the role of the eigenvalue for each $$H$$. Thus we define as follows.
 
@@ -94,7 +94,7 @@ $$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\
 
 are called the *roots* of $$\mathfrak{g}$$. Here
 
-$$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $$H\in \mathfrak{h}$$}\right\}.$$
+$$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}.$$
 
 ([§Lie Groups, ⁋Definition 19](/en/math/lie_theory/Lie_groups#def19))
 
@@ -267,7 +267,7 @@ $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -).$$
 
 Then $$\Phi\subseteq \mathfrak{h}^\ast$$ is a spanning set of $$\mathfrak{h}^\ast$$. If there were an element of $$\mathfrak{h}^\ast$$ not expressible as a linear combination of elements of $$\Phi$$, the corresponding element of $$\mathfrak{h}$$ would have to satisfy $$\alpha(H)$$ for all $$\alpha\in H$$. Now for any root space $$\mathfrak{g}_\alpha$$, $$H$$ acts by
 
-$$[H,X]=\alpha(H)X=0\qquad\text{for all $$X\in \mathfrak{g}_\alpha$$}$$
+$$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
 and since $$\mathfrak{h}$$ is abelian it acts by $$0$$ on itself. That is, considering the root decomposition of $$\mathfrak{g}$$, $$H$$ acts by $$0$$ on every element of $$\mathfrak{g}$$, and from this we know that $$H$$ commutes with every element of $$\mathfrak{g}$$ under the Lie bracket. But by [Proposition 4](#prop4), $$\mathfrak{g}$$ cannot have a nonzero abelian ideal, and in particular $$Z(\mathfrak{g})=0$$ must hold, so $$H=0$$.
 
@@ -275,7 +275,7 @@ From this we know that $$\Phi$$ spans $$\mathfrak{h}^\ast$$. However, $$\mathfra
 
 For each root $$\alpha\in\Phi$$, by the non-degeneracy of the Killing form there exists $$H_\alpha\in \mathfrak{h}$$ satisfying the formula
 
-$$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $$X\in \mathfrak{h}$$}.$$
+$$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $X\in \mathfrak{h}$}.$$
 
 Our first observation is the following lemma.
 
@@ -323,7 +323,7 @@ That is, they give a subalgebra of $$\mathfrak{g}$$ isomorphic to $$\sl_2$$. Let
 
 In particular, let us examine how $$h_\alpha$$ acts on elements of $$\mathfrak{g}$$. First, looking at how the adjoint action of $$h_\alpha$$ on a root space $$\mathfrak{g}_\beta$$ of $$\mathfrak{g}$$ works,
 
-$$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $$x\in \mathfrak{g}_\beta$$}$$
+$$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $x\in \mathfrak{g}_\beta$}$$
 
 so $$\mathfrak{g}_\beta$$ is the weight space of weight $$\beta(h_\alpha)$$ for this action. But as we saw earlier, the weights of an $$\sl_2$$-representation are always integers, so this value $$\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$$ must always be an integer. Also, since any weight subspace of an $$\sl_2$$ representation is one-dimensional, each $$\mathfrak{g}_\beta$$ is one-dimensional.
 

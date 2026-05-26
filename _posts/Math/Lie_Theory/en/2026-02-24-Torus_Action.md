@@ -78,7 +78,7 @@ But if $$T$$ acts on $$V_i$$ by scalar multiples, then any subspace of $$V_i$$ i
 
 Now since $$\dim V_i=1$$, we have $$\Aut(V_i)\cong \mathbb{C}^\times$$, and we see that the above $$\lambda_i: T\rightarrow \mathbb{C}^\times$$ corresponds exactly to a character of $$\rho$$, so the irreducible decomposition can be thought of as being directly parametrized by characters $$\lambda_i$$. That is, consider the irreducible decomposition given by the formula
 
-$$$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{t\cdot v=\lambda(t)v\text{ for all $$t\in T$$}\}$$$
+$$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{t\cdot v=\lambda(t)v\text{ for all $t\in T$}\}$$
 
 Then for each $$t\in T$$, $$\rho(t)$$ is diagonalized by this decomposition, and the eigenvalue corresponding to each eigenspace $$V_\lambda$$ is $$\lambda(t)$$. A different choice of $$t$$ leaves the above decomposition unchanged and only changes the eigenvalue assigned to each eigenspace $$V_\lambda$$.
 
@@ -108,7 +108,7 @@ The trace of this matrix, $$e^{4\pi i t}+e^{-2\pi i t}$$, is precisely the chara
 
 It is obvious that the weight spaces of this action are $$\span(e_1)$$ and $$\span(e_2)$$; for instance, the weight corresponding to $$\span(e_1)$$ is given by the linear functional $$\lambda_1:\mathfrak{t}\rightarrow \mathbb{C}$$ satisfying
 
-$$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $$X\in \mathfrak{t}$$}$$$
+$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $X\in \mathfrak{t}$}$$
 
 This is of course defined by $$\lambda_1(t)=2t$$, which sends $$1\in \mathbb{R}$$ to $$2$$, and thus the weight corresponding to this weight space can be called $$2$$ (with a slight abuse of notation). For $$\lambda$$ to satisfy the above formula, since $$e^{2\pi i}=1$$, we must have $$\lambda(1)\in \mathbb{Z}$$.
 
@@ -134,7 +134,7 @@ This time $$T$$ acts on the two-dimensional space $$\mathbb{C}^2$$ as if it had 
 
 <ins id="def4">**Definition 4**</ins> Let a torus $$T$$ and a complex $$T$$-module $$V$$ be given. For an irreducible character $$\rchi_\lambda: T \rightarrow S^1$$ and the corresponding linear functional $$\lambda:\mathfrak{t}\rightarrow\mathbb{C}$$, we say that $$\lambda$$ is a *weight* of $$V$$ if the set
 
-$$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $$t\in T$$}\right\}$$$
+$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
 is nontrivial. We call $$V_\lambda$$ the *weight space* of $$\lambda$$, and the decomposition
 
