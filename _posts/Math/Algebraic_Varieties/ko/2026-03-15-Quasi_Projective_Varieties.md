@@ -154,7 +154,7 @@ $$\varphi(q) = [F_0(q) : \cdots : F_m(q)]$$
 
 </div>
 
-이는 본질적으로 [§아핀다양체, ⁋명제 15](/ko/math/algebraic_varieties/affine_varieties#prop15)에 의한 것이다. 
+이는 본질적으로 [§아핀다양체, ⁋정의 15](/ko/math/algebraic_varieties/affine_varieties#def15)에 의한 것이다. 
 
 ## 정칙사상의 성질들
 

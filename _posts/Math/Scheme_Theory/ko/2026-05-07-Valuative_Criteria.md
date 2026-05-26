@@ -53,7 +53,7 @@ $$\mathscr{O}(D(\mathfrak{m}))=\mathscr{O}(D(\pi))\cong A_\pi\cong \Frac(A)$$
 
 이다. 물론 $\mathscr{O}(\Spec A)\cong A$이다. 
 
-한편 [§스킴, ⁋예시 6](/ko/math/scheme_theory/schemes#ex6)에서 우리는 기하적으로 $\Spec A$의 두 점을 살펴보는 방법을 보았다. 이에 따르면 $\Spec A$의 두 점은 각각 $A$에서 residue field $\kappa((0))$, $\kappa(\mathfrak{m})$으로 가는 ring homomorphism에 의해 결정되는데, 다시 [§스펙트럼, ⁋명제 5](/ko/math/scheme_theory/spectrums#prop5)을 사용하면
+한편 $\\Spec A$의 두 점은 기하적으로 다음과 같이 살펴볼 수 있다: 각 점은 $A$에서 그 residue field로 가는 ring homomorphism에 의해 결정되는데, 즉 $\\kappa((0))$와 $\\kappa(\\mathfrak{m})$이다. 다시 [§스펙트럼, ⁋명제 5](/ko/math/scheme_theory/spectrums#prop5)를 사용하면
 
 $$\mathscr{O}_{(0)}\cong A_{(0)}\cong \Frac(A),\qquad \mathscr{O}_\mathfrak{m}\cong A_\mathfrak{m}$$
 

@@ -115,7 +115,7 @@ If $$f_i:A_i\rightarrow S_i$$ are the bijections satisfying the condition of [Pr
 
 </details>
 
-The intuition for calling this the sum of sets will emerge later. ([§Cardinals, ⁋Definition 6](/en/math/set_theory/cardinals#def6))
+The intuition for calling this the sum of sets will emerge later. ([§Operations of Cardinals, ⁋Definition 1](/en/math/set_theory/operation_of_cardinals#def1))
 
 ## Universal Property
 

@@ -58,7 +58,7 @@ Conversely, if $$\alpha v=0$$, then either $$\alpha=0$$ or $$v=0$$.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The first two claims proceed similarly to [§Abelian Groups and Fields, ⁋Proposition 6](/en/math/linear_algebra/fields#prop6). For example,
+The first two claims proceed similarly to [§Abelian Groups and Fields, ⁋Proposition 5](/en/math/linear_algebra/fields#prop5). For example,
 
 $$\alpha0+\alpha0=\alpha(0+0)=\alpha0$$
 

@@ -60,7 +60,7 @@ $$(g\circ f)(x)$$의 임의의 근방 $$W$$를 택하자. 그럼 $$g$$가 $$f(x)
 
 <div class="proposition" markdown="1">
 
-<ins is="thm4">**정리 4**</ins> 두 위상공간 $$X,Y$$와 함수 $$f:X\rightarrow Y$$에 대하여, 다음이 모두 동치이다.
+<ins id="thm4">**정리 4**</ins> 두 위상공간 $$X,Y$$와 함수 $$f:X\rightarrow Y$$에 대하여, 다음이 모두 동치이다.
 
 1. $$f$$가 연속이다. 
 2. $$X$$의 임의의 부분집합 $$A$$에 대하여, $$f(\cl A)\subset\cl f(A)$$가 성립한다.

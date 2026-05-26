@@ -30,7 +30,7 @@ In this post, we assume that $$A$$ is Noetherian and $$M$$ is a finitely generat
 
 </div>
 
-That is, if $$M/N$$ is a coprimary submodule, then $$N$$ is a primary submodule. Also, from [§Associated Primes, ⁋Lemma 5](/en/math/commutative_algebra/associated_primes#lem3), we know that a finite intersection of arbitrary $$\mathfrak{p}$$-primary submodules is $$\mathfrak{p}$$-primary.
+That is, if $$M/N$$ is a coprimary submodule, then $$N$$ is a primary submodule. Also, from [§Associated Primes, ⁋Lemma 5](/en/math/commutative_algebra/associated_primes#lem5), we know that a finite intersection of arbitrary $$\mathfrak{p}$$-primary submodules is $$\mathfrak{p}$$-primary.
 
 The following now holds.
 

@@ -17,7 +17,7 @@ weight: 12
 
 ---
 
-우리는 그 동안 line bundle을 활용하여 다양한 invariant를 생각할 수 있다는 것을 확인하였다. 가령 [§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles)에서 우리는 line bundle $$\mathcal{L}$$의 global section space $$\Gamma(X, \mathcal{L})$$을 정의하였다. 특히 [§선형계, ⁋명제 7](/ko/math/algebraic_varieties/linear_systems#prop7)에서는 이 차원이 complete linear system의 dimension, 나아가 variety의 projective embedding을 결정하는 핵심적 역할을 한다는 것을 살펴보았다.
+우리는 그 동안 line bundle을 활용하여 다양한 invariant를 생각할 수 있다는 것을 확인하였다. 가령 [§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles)에서 우리는 line bundle $$\mathcal{L}$$의 global section space $$\Gamma(X, \mathcal{L})$$을 정의하였다. 특히 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서는 이 차원이 complete linear system의 dimension, 나아가 variety의 projective embedding을 결정하는 핵심적 역할을 한다는 것을 살펴보았다.
 
 우리는 지금까지 기하적 직관을 위해 주로 line bundle의 언어를 사용하였으나, [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1) 직후에 살펴보았듯 line bundle의 section sheaf를 생각하면 이는 근본적으로는 sheaf의 언어로 바꾸어 쓸 수 있다. 이번 글에서 우리는 sheaf cohomology의 개념을 정의한다.
 

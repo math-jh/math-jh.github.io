@@ -107,7 +107,7 @@ $$\bigcup_{j\in J}A_j\subset\bigcup_{i\in I} A_i,\qquad\bigcap_{j\in J}A_j\supse
 
 <div class="proposition" markdown="1">
 
-<ins id="def5">**명제 5**</ins>  $$(A_i)_{i\in I}$$가 집합들의 family고, index set $$I$$가 family $$(J_k)_{k\in K}$$들의 합집합이라 하자. 그럼
+<ins id="prop5">**명제 5**</ins>  $$(A_i)_{i\in I}$$가 집합들의 family고, index set $$I$$가 family $$(J_k)_{k\in K}$$들의 합집합이라 하자. 그럼
 
 $$\bigcup_{i\in I} A_i=\bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right),\quad \bigcap_{i\in I}A_i=\bigcap_{k\in K}\left(\bigcap_{j\in J_k} A_j\right)$$
 

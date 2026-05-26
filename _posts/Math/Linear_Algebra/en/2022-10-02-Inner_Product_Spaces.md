@@ -149,7 +149,7 @@ is an inner product. The proof of this is not very difficult, but one must use t
 
 ## Orthonormal Bases
 
-Since we know that $$\ch\mathbb{R}=0$$, from [§Bilinear Forms, ⁋Proposition 6](/en/math/linear_algebra/bilinear_form#prop6) we know that any $$\mathbb{R}$$-inner product space $$V$$ has an orthogonal basis.
+Since we know that $$\ch\mathbb{R}=0$$, from [§Bilinear Forms, ⁋Proposition 7](/en/math/linear_algebra/bilinear_form#prop7) we know that any $$\mathbb{R}$$-inner product space $$V$$ has an orthogonal basis.
 
 Let $$V$$ be an arbitrary $$\mathbb{R}$$-inner product space, and let $$\mathcal{B}=\{x_1,\ldots, x_n\}$$ be a basis of $$V$$. First define
 

@@ -90,7 +90,7 @@ Then the union $$\mathbb{L}_\infty$$ of the increasing sequence $$\mathbb{L}_n$$
 
 The proof of this is essentially obvious.
 
-In the previous post, we saw that any field $$\mathbb{K}$$ has an algebraic closure $$\overline{\mathbb{K}}$$. Therefore, in [Proposition 5](#prop5) we may set $$\mathbb{L}=\overline{\mathbb{K}}$$. Then $$\overline{\mathbb{K}}$$ is a perfect field, and moreover, we know that for each $$n$$, $$\overline{\mathbb{K}}_n$$ is exactly $$\mathbb{K}^{p^{-n}}$$. Let us write the (relative) $$p$$-radical closure in this situation as $$\mathbb{K}^{p^{-\infty}}$$. This is exactly the same as [§Fields, ⁋Theorem 15](/en/math/field_theory/fields#prop15). If $$\mathbb{K}$$ is imperfect, that is, if $$\mathbb{K}\neq \mathbb{K}^p$$, then the above ascending sequence is strictly increasing, and therefore $$\mathbb{K}^{p^{-\infty}}/\mathbb{K}$$ becomes an extension of infinite degree. 
+In the previous post, we saw that any field $$\mathbb{K}$$ has an algebraic closure $$\overline{\mathbb{K}}$$. Therefore, in [Proposition 5](#prop5) we may set $$\mathbb{L}=\overline{\mathbb{K}}$$. Then $$\overline{\mathbb{K}}$$ is a perfect field, and moreover, we know that for each $$n$$, $$\overline{\mathbb{K}}_n$$ is exactly $$\mathbb{K}^{p^{-n}}$$. Let us write the (relative) $$p$$-radical closure in this situation as $$\mathbb{K}^{p^{-\infty}}$$. This is exactly the same as [§Fields, ⁋Theorem 15](/en/math/field_theory/fields#thm15). If $$\mathbb{K}$$ is imperfect, that is, if $$\mathbb{K}\neq \mathbb{K}^p$$, then the above ascending sequence is strictly increasing, and therefore $$\mathbb{K}^{p^{-\infty}}/\mathbb{K}$$ becomes an extension of infinite degree. 
 
 Meanwhile, the following holds. 
 
