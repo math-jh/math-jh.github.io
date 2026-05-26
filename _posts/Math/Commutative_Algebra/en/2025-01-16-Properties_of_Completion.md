@@ -37,7 +37,7 @@ For the second result, we again know by [§Completion, ⁋Proposition 7](/en/mat
 
 </details>
 
-The following lemma can be easily proved by examining the topological structure and base of completion studied in [§Completion, §§$$\mathfrak{a}$$-adic topology](http://localhost:4000/en/math/commutative_algebra/completion#mathfraka%EC%A7%84-%EC%9C%84%EC%83%81) and using [\[Topology\] §Bases of Topological Spaces, ⁋Proposition 2](/en/math/topology/topological_bases#prop2) to determine when two bases of a topological space define the same topology.
+The following lemma can be easily proved by examining the topological structure and base of completion studied in [§Completion, §§$$\mathfrak{a}$$-adic topology](/en/math/commutative_algebra/completion#mathfraka-adic-topology) and using [\[Topology\] §Bases of Topological Spaces, ⁋Proposition 2](/en/math/topology/topological_bases#prop2) to determine when two bases of a topological space define the same topology.
 
 <div class="proposition" markdown="1">
 

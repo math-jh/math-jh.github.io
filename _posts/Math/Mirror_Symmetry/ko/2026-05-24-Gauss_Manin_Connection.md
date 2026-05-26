@@ -178,29 +178,37 @@ $$\nabla^z_{B, \partial_{q_a}}[e^{W_q/z}\omega] = \partial_{q_a} W_q \cdot [e^{W
 
 가 성립한다. 이 rescaling으로 [명제 5](#prop5)의 $$1/z$$ 인자가 흡수되므로, $$z \to 0$$ 극한에서 B-model connection의 connection 1-form은 정확하게 cohomology class에 대한 $$\partial_{q_a} W_q$$의 곱셈이 된다. 이는 앞서 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)에서 살펴본 것과 같은 맥락으로, $$z\rightarrow 0$$인 상황에서 Frobenius manifold $$M\times \mathbb{C}^\ast$$에서 $$z$$를 $$0$$으로 보낼 때 Frobenius algebra의 product 구조를 복원해내는 것과 동일한 상황이다.
 
-위의 식은 cohomology class 차원의 statement이다. 실제로 손에 잡을 수 있는 *수*로 풀어내려면 dual인 homology class와 pair시켜야 한다. [정의 4](#def4)에 의해 continuously isotoped된 thimble $$[\Gamma]$$가 dual bundle $$\mathcal{H}^\vee$$의 flat section이므로, 좌변의 $$\nabla^z_B = z\nabla^{GM}$$가 그대로 $$\Gamma$$ 적분에 대한 미분 ($$z\partial_{q_a}$$ 또는 $$z^2\partial_z$$; 후자에서 $$z^2$$이 나오는 것은 $$\nabla^z_B$$가 $$z\partial_z$$ vector field에 contract될 때 rescaling factor $$z$$가 한 번 더 들어가기 때문)으로 빠져나오고, 우변은 cohomology class를 $$\Gamma$$ 위에서 적분한 것이 된다. 즉 위 식을 $$[\Gamma]$$에 pair시키면 *period 미분 공식*
+위의 식은 cohomology class 차원의 statement이므로, 이를 구체적으로 계산하려면 임의의 Lefschetz thimble (즉 rapid decay homology의 basis)와 pair하여 실제 적분을 계산하면 된다. 그 결과는 다음의 
 
 $$z\,\partial_{q_a}\mathcal{I}_\Gamma = \int_\Gamma \partial_{q_a}W_q\cdot e^{W_q/z}\,\omega,\qquad z^2\,\partial_z\mathcal{I}_\Gamma = -\int_\Gamma W_q\cdot e^{W_q/z}\,\omega \tag{$\ast$}$$
 
-이 등장한다.
+이다. 그런데 ($$\ast$$)의 우변은 우리가 알고 있는 형태 ([정의 2](#def2))와는 다른 것으로, 이를 해결하기 위해서는 $$f$$가 rapid decay homology의 decaying condition을 깨지 않는 한에서 $$f e^{W_q/z}\omega$$ 꼴로 integrand를 넓혀주어야 한다. Thimble $$\Gamma$$의 boundary 부근에서 $$\lvert e^{W_q/z}\rvert = e^{\Real(W_q/z)}$$가 지수적으로 $$0$$으로 사라지므로, $$f$$가 polynomial 정도의 성장만 한다면 충분히 컨트롤이 가능하며 따라서 자연스러운 함수 공간은 regular function들의 공간 $$\mathcal{O}(\check{X})$$이다. 
 
-여기서 한 가지 obstruction이 있다. 우변의 적분은 *integrand에 $$\partial_{q_a}W_q$$ (또는 $$W_q$$)가 추가된* 형태로, 원래 $$\mathcal{I}_\Gamma = \int_\Gamma e^{W_q/z}\omega$$로 직접 표현되지 않는다. 즉 ($$\ast$$) 단독은 $$\mathcal{I}_\Gamma$$에 대한 closed ODE가 아니다.
+ Hori-Vafa 경우 $$\check{X}=(\mathbb{C}^\ast)^N$$이라 $$f$$는 Laurent polynomial이다. 우변의 $$\partial_{q_a}W_q$$, $$W_q$$도 모두 $$\mathcal{O}(\check{X})$$의 원소이므로 ($$\ast$$)의 우변은 정확히 이 family 안에 들어오고, $$\mathcal{I}^f_\Gamma$$의 미분도 다시 $$f\cdot\partial_{q_a}W_q$$를 곱한 적분으로 같은 family에 머무른다.
 
-자연스러운 해결은 *integrand에 함수 $$f$$를 곱한* 형태의 적분들
+그러나 $$\mathcal{O}(\check{X})$$가 *무한차원*이라 unknown이 여전히 너무 많다. 여기서 결정적인 사실은 period pairing이 *cohomology class에만 의존*한다는 점이다. 만일 $$f, g \in \mathcal{O}(\check{X})$$가 같은 cohomology class를 정의 — 즉 $$(f-g)\cdot e^{W_q/z}\omega = d\alpha$$가 어떤 rapid decay form $$\alpha$$의 미분 — 한다면, Stokes 정리로
 
-$$\mathcal{I}^f_\Gamma(q, z) := \int_\Gamma f\cdot e^{W_q/z}\,\omega$$
+$$\int_\Gamma (f-g)\cdot e^{W_q/z}\omega = \int_\Gamma d\alpha = \int_{\partial\Gamma}\alpha = 0$$
 
-을 함께 unknown으로 보는 것이다. 단 $$f$$는 *적분이 수렴하도록* 하는 함수여야 한다. Thimble $$\Gamma$$의 boundary 부근에서 $$|e^{W_q/z}| = e^{\Real(W_q/z)}$$가 *지수적으로* $$0$$으로 감쇠하므로, $$f$$가 polynomial 정도의 성장만 한다면 적분은 수렴한다. 자연스러운 함수 공간은
+이다 ($$\partial\Gamma \subset S_z$$이고 거기서 $$\alpha$$가 rapid decay이므로 boundary integral이 사라짐). 따라서 $$\mathcal{I}^f_\Gamma$$는 $$f$$의 cohomology class $$[f\cdot e^{W_q/z}\omega] \in \mathcal{H}_{(q,z)}$$에만 의존하고, 우리가 정말 다뤄야 하는 공간은 $$\mathcal{O}(\check{X})$$가 아니라 $$\mathcal{H}_{(q,z)}$$이다.
 
-$$f \in \mathcal{O}(\check{X})\quad(\check{X}\text{ 위의 regular function})$$
+그리고 $$W_q$$가 Morse type이면 $$\mathcal{H}_{(q,z)}$$는 *유한차원*이다. 직접적으로 말하면, $$\mathcal{H}_{(q,z)}$$가 rapid decay homology $$H_N(\check{X}, S_z;\mathbb{C})$$의 dual이고 앞서 본 바와 같이 후자가 thimble basis $$\{[\Gamma_p]\}_{p\in\Crit(W_q)}$$를 가지므로
 
-이고, Hori-Vafa 경우 $$\check{X}=(\mathbb{C}^\ast)^N$$이라 $$f$$는 Laurent polynomial이다. 우변의 $$\partial_{q_a}W_q$$, $$W_q$$도 모두 $$\mathcal{O}(\check{X})$$의 원소이므로 ($$\ast$$)의 우변은 정확히 이 family 안에 들어오고, $$\mathcal{I}^f_\Gamma$$의 미분도 다시 $$f\cdot\partial_{q_a}W_q$$를 곱한 적분으로 같은 family에 머무른다.
+$$\dim_\mathbb{C}\mathcal{H}_{(q,z)} = |\Crit(W_q)|$$
 
-그러나 $$\mathcal{O}(\check{X})$$가 *무한차원*이라 unknown이 여전히 너무 많다. 여기서 결정적인 사실: $$\mathcal{I}^f_\Gamma$$의 값은 $$f$$의 cohomology class $$[f\cdot e^{W_q/z}\omega]\in\mathcal{H}_{(q,z)}$$에만 의존하고 (period pairing은 cohomology class에 well-defined), $$W_q$$가 Morse type이면 $$\mathcal{H}_{(q,z)}$$는 *유한차원*이다. 구체적으로 자연스러운 map
+이다. 한편 $$\Jac(W_q) = \mathcal{O}(\check{X})/(\partial_i W_q)$$도 Morse 조건 하에서 같은 차원을 갖는다 (이상 $$(\partial_i W_q)$$의 zero locus가 isolated point들 $$\Crit(W_q)$$이고 Morse라 multiplicity가 모두 $$1$$이므로, quotient ring의 dim이 점의 개수와 일치).
 
-$$\Jac(W_q) \;\xrightarrow{\sim}\; \mathcal{H}_{(q,z)},\qquad T \;\longmapsto\; [T\cdot e^{W_q/z}\omega]$$
+자연스러운 map
 
-이 isomorphism이며, 차원은 $$W_q$$의 critical point 개수와 같다 ([명제 5](#prop5) 증명의 cocycle-coboundary 식 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1}dW_q\wedge\beta)$$에서 직접 따라옴). 즉 무한차원 $$\mathcal{O}(\check{X})$$가 cohomology level에서 $$\Jac(W_q) = \mathcal{O}(\check{X})/(\partial_i W_q)$$의 유한차원 quotient로 축소된다. 이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실이다 (mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$과 ring으로 매칭시키는, 그 다음 단계의 statement).
+$$\Jac(W_q) \;\longrightarrow\; \mathcal{H}_{(q,z)},\qquad T \;\longmapsto\; [T\cdot e^{W_q/z}\omega]$$
+
+은 [명제 5](#prop5) 증명의 cocycle-coboundary 식 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1}dW_q\wedge\beta)$$로부터 well-defined임이 따라온다 (즉 $$T = \sum_i h_i \partial_i W_q$$일 때 $$[T\cdot e^{W_q/z}\omega]$$가 적절한 form의 $$d$$로 표현되어 cohomology class가 $$0$$이 됨). 양변의 dim이 같으므로 이 well-defined map은 자동으로 isomorphism이고 (finite-dim vector space 사이의 dim-preserving linear map은 단사 ↔ 전사 ↔ iso),
+
+$$\Jac(W_q) \;\xrightarrow{\sim}\; \mathcal{H}_{(q,z)}$$
+
+가 성립한다.
+
+요컨대 무한차원 $$\mathcal{O}(\check{X})$$가 cohomology level에서 $$\mu := |\Crit(W_q)|$$ 차원의 finite quotient $$\Jac(W_q)$$로 축소된다. 이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실이다 (mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$과 ring으로 매칭시키는, 그 다음 단계의 statement).
 
 따라서 $$\Jac(W_q)$$의 finite basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$를 잡으면 모든 oscillating integral $$\mathcal{I}^f_\Gamma$$가 결국 $$\{\mathcal{I}^{T_\alpha}_\Gamma\}_\alpha$$의 linear combination으로 환원되고, ($$\ast$$)는 이 *유한* 개의 적분 사이의 *닫힌* ODE system이 된다.
 

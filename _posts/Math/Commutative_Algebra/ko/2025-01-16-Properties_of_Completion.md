@@ -38,7 +38,7 @@ weight: 15
 
 </details>
 
-다음 보조정리는 [§완비화, §§$$\mathfrak{a}$$진 위상](http://localhost:4000/ko/math/commutative_algebra/completion#mathfraka%EC%A7%84-%EC%9C%84%EC%83%81)에서 살펴본 completion의 위상구조 및 base와, [\[위상수학\] §위상공간의 기저, ⁋명제 2](/ko/math/topology/topological_bases#prop2)를 사용하여 위상공간의 두 base가 언제 같은 위상을 정의하는지를 따져보면 쉽게 증명할 수 있다.
+다음 보조정리는 [§완비화, §§$$\mathfrak{a}$$진 위상](/ko/math/commutative_algebra/completion#mathfraka진-위상)에서 살펴본 completion의 위상구조 및 base와, [\[위상수학\] §위상공간의 기저, ⁋명제 2](/ko/math/topology/topological_bases#prop2)를 사용하여 위상공간의 두 base가 언제 같은 위상을 정의하는지를 따져보면 쉽게 증명할 수 있다.
 
 <div class="proposition" markdown="1">
 

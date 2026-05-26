@@ -155,7 +155,7 @@ $$\mathcal{L} \otimes \mathcal{L}^\vee$$의 transition functions은 $$g_{ij} \cd
 
 $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 
-는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop19)로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $$\pi^{-1}(U_i)$$의 coordinate ring을 $$U_i$$의 coordinate ring을 계수로 갖는 module로 만들고, 차원을 고려해보면 그 rank는 1이다. $$U_i$$의 임의의 열린집합에서도 $$\mathcal{L}$$은 trivial하므로, 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1)) 그럼 이 때 line bundle들 위에서 정의되는 연산 $$\otimes$$와 $$\vee$$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3)의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5)을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
+는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16)로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $$\pi^{-1}(U_i)$$의 coordinate ring을 $$U_i$$의 coordinate ring을 계수로 갖는 module로 만들고, 차원을 고려해보면 그 rank는 1이다. $$U_i$$의 임의의 열린집합에서도 $$\mathcal{L}$$은 trivial하므로, 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1)) 그럼 이 때 line bundle들 위에서 정의되는 연산 $$\otimes$$와 $$\vee$$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3)의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5)을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
 
 <div class="definition" markdown="1">
 
