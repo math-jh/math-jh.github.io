@@ -1,21 +1,26 @@
 #!/usr/bin/env bash
 # Tmux-driver helpers for Marvin (reading-bot).
-# Long-lived `claude` session named $R_SESSION. Each tick: ensure session is up,
-# git sync the blog, /clear context, /model haiku, inject a one-liner pointing
-# at marvin.md. Fire-and-forget; turn runs visibly in the session.
-# `tmux attach -t reader-bot` to watch.
+# Long-lived `claudemimo` session named $R_SESSION. Each tick: ensure session is
+# up, git sync the blog, /clear context, /model mimo-v2.5-pro, inject a one-
+# liner pointing at marvin.md. Fire-and-forget; turn runs visibly in the
+# session. `tmux attach -t reader-bot` to watch.
+#
+# Backend is temporarily routed through claudemimo (Xiaomi MiMo's Anthropic-
+# compatible endpoint) to preserve Anthropic quota during MiMo's quota reset
+# event. To revert: swap CLAUDE_BIN back to `claude` and use `--model haiku`.
 
 set -euo pipefail
 
 R_SESSION="reader-bot"
 BLOG_ROOT="$HOME/math-jh.github.io"
+BOT_MODEL="mimo-v2.5-pro"
 
-if command -v claude >/dev/null 2>&1; then
-  CLAUDE_BIN="$(command -v claude)"
-elif [ -x "$HOME/.npm-global/bin/claude" ]; then
-  CLAUDE_BIN="$HOME/.npm-global/bin/claude"
+if [ -x "$HOME/.local/bin/claudemimo" ]; then
+  CLAUDE_BIN="$HOME/.local/bin/claudemimo"
+elif command -v claudemimo >/dev/null 2>&1; then
+  CLAUDE_BIN="$(command -v claudemimo)"
 else
-  CLAUDE_BIN="claude"
+  CLAUDE_BIN="claudemimo"
 fi
 
 BUSY_RE='esc to interrupt|Esc to interrupt|Interrupt'
@@ -31,7 +36,7 @@ ensure_session() {
   log "session '$R_SESSION' missing — launching claude"
   tmux new-session -d -s "$R_SESSION" -x 220 -y 50
   tmux send-keys -t "$R_SESSION" -l -- \
-    "cd $BLOG_ROOT && $CLAUDE_BIN --permission-mode bypassPermissions --model haiku"
+    "cd $BLOG_ROOT && $CLAUDE_BIN --permission-mode bypassPermissions --model $BOT_MODEL"
   tmux send-keys -t "$R_SESSION" Enter
   if ! wait_ready 60; then
     if _pane | grep -qiE 'do you trust|trust the files|trust this folder'; then
@@ -100,5 +105,32 @@ prep_marvin() {
   tmux send-keys -t "$R_SESSION" C-u
   send_line "/clear"
   sleep 3
-  send_verify "/model haiku" "haiku"
+  send_verify "/model $BOT_MODEL" "mimo"
+}
+
+# Delete bot-injected Claude session jsonl files so they stop cluttering
+# `claude --resume`. Identified by the fixed first-user-prompt we send via
+# tmux. Scoped to the blog project directory, and we keep files modified in
+# the last 10 minutes to avoid deleting the still-running session.
+cleanup_bot_sessions() {
+  # Match the injected prompt as a user message *content* field, not just any
+  # appearance of the string — otherwise normal sessions that happened to read
+  # or grep marvin.md would also match.
+  local pattern='"content":"Read [^"]*/scripts/(reading-bot|blogdev-bot)/marvin\.md and execute it now\."'
+  local d f deleted=0
+  for d in \
+    "$HOME/.claude/projects/-home-junhyeok-math-jh-github-io" \
+    "$HOME/.claudemimo/projects/-home-junhyeok-math-jh-github-io" \
+    "$HOME/.claudekimi/projects/-home-junhyeok-math-jh-github-io"
+  do
+    [ -d "$d" ] || continue
+    while IFS= read -r f; do
+      if grep -qE "$pattern" "$f" 2>/dev/null; then
+        rm -f "$f"
+        deleted=$((deleted + 1))
+      fi
+    done < <(find "$d" -maxdepth 1 -type f -name '*.jsonl' -mmin +10 2>/dev/null)
+  done
+  [ "$deleted" -gt 0 ] && log "cleaned $deleted bot session file(s)"
+  return 0
 }
