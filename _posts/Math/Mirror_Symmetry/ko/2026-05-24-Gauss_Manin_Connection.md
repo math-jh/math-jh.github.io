@@ -194,7 +194,7 @@ $$\int_\Gamma (f-g)\cdot e^{W_q/z}\omega = \int_\Gamma d\alpha = \int_{\partial\
 
 그리고 $$W_q$$가 Morse type이면 $$\mathcal{H}_{(q,z)}$$는 *유한차원*이다. 직접적으로 말하면, $$\mathcal{H}_{(q,z)}$$가 rapid decay homology $$H_N(\check{X}, S_z;\mathbb{C})$$의 dual이고 앞서 본 바와 같이 후자가 thimble basis $$\{[\Gamma_p]\}_{p\in\Crit(W_q)}$$를 가지므로
 
-$$\dim_\mathbb{C}\mathcal{H}_{(q,z)} = |\Crit(W_q)|$$
+$$\dim_\mathbb{C}\mathcal{H}_{(q,z)} = \lvert\Crit(W_q)\rvert$$
 
 이다. 한편 $$\Jac(W_q) = \mathcal{O}(\check{X})/(\partial_i W_q)$$도 Morse 조건 하에서 같은 차원을 갖는다 (이상 $$(\partial_i W_q)$$의 zero locus가 isolated point들 $$\Crit(W_q)$$이고 Morse라 multiplicity가 모두 $$1$$이므로, quotient ring의 dim이 점의 개수와 일치).
 
@@ -208,7 +208,7 @@ $$\Jac(W_q) \;\xrightarrow{\sim}\; \mathcal{H}_{(q,z)}$$
 
 가 성립한다.
 
-요컨대 무한차원 $$\mathcal{O}(\check{X})$$가 cohomology level에서 $$\mu := |\Crit(W_q)|$$ 차원의 finite quotient $$\Jac(W_q)$$로 축소된다. 이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실이다 (mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$과 ring으로 매칭시키는, 그 다음 단계의 statement).
+요컨대 무한차원 $$\mathcal{O}(\check{X})$$가 cohomology level에서 $$\mu := \lvert\Crit(W_q)\rvert$$ 차원의 finite quotient $$\Jac(W_q)$$로 축소된다. 이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실이다 (mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$과 ring으로 매칭시키는, 그 다음 단계의 statement).
 
 따라서 $$\Jac(W_q)$$의 finite basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$를 잡으면 모든 oscillating integral $$\mathcal{I}^f_\Gamma$$가 결국 $$\{\mathcal{I}^{T_\alpha}_\Gamma\}_\alpha$$의 linear combination으로 환원되고, ($$\ast$$)는 이 *유한* 개의 적분 사이의 *닫힌* ODE system이 된다.
 

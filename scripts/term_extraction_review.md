@@ -1512,3 +1512,32 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `임의의` | looks like emphasis (no <sub> partner) |
 
+## 반군, 모노이드, 군
+- post: `_posts/Math/Algebraic_Structures/ko/2022-11-29-Groups.md`
+- permalink: `/ko/math/algebraic_structures/groups`
+- scanned: 2026-05-26T03:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `반드시` | looks like emphasis (no <sub> partner) |
+| `magma homomorphism` | multi-word English emphasis — possibly a definition |
+
+## 몫군
+- post: `_posts/Math/Algebraic_Structures/ko/2022-11-30-Quotient_Groups.md`
+- permalink: `/ko/math/algebraic_structures/quotient_groups`
+- scanned: 2026-05-26T03:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `index` | looks like emphasis (no <sub> partner) |
+
+## 환의 정의
+- post: `_posts/Math/Algebraic_Structures/ko/2022-12-01-Rings.md`
+- permalink: `/ko/math/algebraic_structures/rings`
+- scanned: 2026-05-26T04:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `pseudo-ring` | looks like emphasis (no <sub> partner) |
+| `히니민` | looks like emphasis (no <sub> partner) |
+

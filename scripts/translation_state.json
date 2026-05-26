@@ -47,31 +47,31 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-15-Quasi_Projective_Varieties.md": {
       "status": "done",
-      "last_attempt_ts": 1779739304.2425764,
+      "last_attempt_ts": 1779764545.544832,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-15-Quasi_Projective_Varieties.md",
-      "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-25T20:00:03+00:00",
-      "in_chars": 29570,
-      "out_chars": 14883,
-      "reason": "polish",
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T03:00:02+00:00",
+      "in_chars": 14253,
+      "out_chars": 14786,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=156, en=152"
+        "math block count mismatch: ko=156, en=153"
       ],
-      "verify_verdict": "verify-failed: kimi timeout"
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=156 en=153\nFINDINGS:\n- [def13] SAFE-REPHRASE: KO standalone `$$\\psi$$` dropped; EN inlines it as prose \"that is also a morphism\" while preserving the definition content.\n- [prop10] SAFE-REPHRASE: KO has extra standalone `$$Z$$` as sentence subject; EN rephrases to avoid repeating the variable, no math lost.\n- [prop8] SAFE-REPHRASE: KO splits `$$d$$`, `$$F,G$$`, `$$F/G$$` into three blocks; EN writes \"of the same degree\" in prose and names F, G in prose before `$$F/G$$`, preserving all mathematical content."
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-15-Rational_Maps.md": {
       "status": "done",
-      "last_attempt_ts": 1779741097.8095844,
+      "last_attempt_ts": 1779768193.2107463,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-15-Rational_Maps.md",
-      "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-25T20:30:03+00:00",
-      "in_chars": 30612,
-      "out_chars": 15537,
-      "reason": "polish",
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T04:00:02+00:00",
+      "in_chars": 14609,
+      "out_chars": 15719,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=187, en=181"
+        "math block count mismatch: ko=187, en=182"
       ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=187 en_old=181 en_new=181\nPOLISH CHANGED:\n- [def1] SAFE-REPHRASE: no math change; prose tightened (\"functions between\" → \"functions between\", \"Above all\" unchanged).\n- [prop2] SAFE-REPHRASE: no math change; minor punctuation tweak in prose surrounding $$\\mathbb{K}(X)=\\Frac\\mathbb{K}[X]$$.\n- [prop3] SAFE-REPHRASE: no math change; \"inclusion\" → \"injective\" in proof prose, math blocks identical.\n- [ex4] SAFE-REPHRASE: no math change; semicolon swap and \"and thus\" → \"thus\" in prose, all $$...$$ blocks preserved.\n- [ex7] SAFE-REPHRASE: no math change; prose polish around $$x_1\\x_0-x_0\\x_1=0$$ and projection formula, blocks untouched.\n- [prop10] SAFE-REPHRASE: no math change; proof prose tightened (\"Since $$\\Phi$$ is assumed to be an isomorphism\" unchanged), all math blocks identical.\n- [ex11] SAFE-REPHRASE: no math change; prose polish around function-field calculations, every $$\\mathbb{K}(\\t_1,\\t_2)$$ and fraction-field block preserved.\n- [ex12] SAFE-REPHRASE: no math change; prose tightened (\"That is,\" unchanged), blow-up equation and projection definition blocks identical.\n\nNote: The validator's count divergence (ko=187 vs en_old/en_new=181) already existed in the validated EN OLD baseline; polish did not alter the $$...$$ block count. No math content was added, dropped, merged, or split between EN OLD and EN NEW."
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=187 en=182\nFINDINGS:\n- [def1] SAFE-REPHRASE: KO splits $$g$$ and $$0$$ into separate blocks (twice); EN merges each pair into $$g=0$$\n- [def8] SAFE-REPHRASE: KO has standalone $$\\varphi$$ before '의 image가'; EN inlines as 'its image'\n- [prop10] SAFE-REPHRASE: KO has standalone $$\\varphi$$ before '의 birational inverse'; EN inlines as 'the birational inverse'\n- [prop10] SAFE-REPHRASE: KO has standalone $$X$$ before '의 임의의 affine open subset'; EN inlines as 'For any affine open subset'\n- [global] SAFE-REPHRASE: numerous block reorderings within sentences (e.g. $$\\mathbb{P}^n$$, $$\\mathbb{K}(\\mathbb{P}^n)$$ order swapped in ex4) with identical mathematical content"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-22-Dimension.md": {
       "status": "done",
@@ -2068,14 +2068,17 @@
     },
     "_posts/Math/Algebraic_Structures/ko/2022-11-30-Quotient_Groups.md": {
       "status": "done",
-      "last_attempt_ts": 1779626518.6189654,
+      "last_attempt_ts": 1779766278.864514,
       "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Quotient_Groups.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-24T12:30:03+00:00",
-      "in_chars": 16577,
-      "out_chars": 7792,
-      "reason": "polish",
-      "warnings": null
+      "ko_git_commit_ts": 1779764407.0,
+      "translated_at": "2026-05-26T03:30:02+00:00",
+      "in_chars": 8322,
+      "out_chars": 7876,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=137, en=141"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=137 en=141\nFINDINGS:\n- [tail/Lagrange] SAFE-REPHRASE: KO `<phrase>` tag contains broken single-$ math (`$G$`, `$H`, `$\\lvert H\\rvert`, undelimited `\\lvert G\\rvert`); EN fixes to 4 proper `$$` blocks with identical mathematical content.\n- [prop1–def4] SAFE-REPHRASE: all remaining count differences are word-order rephrasing (e.g. \"subgroup $$H$$ of $$G$$\" vs \"$$G$$의 임의의 subgroup $$H$$\") that shifts the position of identical math blocks without changing content."
     },
     "_posts/Math/Algebraic_Structures/ko/2022-12-01-Rings.md": {
       "status": "done",
@@ -2265,17 +2268,17 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-25-Line_Bundles.md": {
       "status": "done",
-      "last_attempt_ts": 1779750227.3355646,
+      "last_attempt_ts": 1779770169.1984372,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-25-Line_Bundles.md",
-      "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-25T23:00:03+00:00",
-      "in_chars": 70393,
-      "out_chars": 37126,
-      "reason": "polish",
+      "ko_git_commit_ts": 1779764407.0,
+      "translated_at": "2026-05-26T04:30:01+00:00",
+      "in_chars": 32843,
+      "out_chars": 37052,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=443, en=108"
+        "math block count mismatch: ko=443, en=83"
       ],
-      "verify_verdict": "Now I have a complete picture. Let me write the final verdict.\n\nVERDICT: safe\nCOUNTS: ko=443 en_old=108 en_new=108\nPOLISH CHANGED:\n- [ex16] SAFE-REPHRASE: polish split one inline math expression `$\\phi_i(s) \\in \\mathcal{O}(U_i) = \\mathbb{K}[...]$` into two (`$\\phi_i(s)$` and `$\\mathcal{O}(U_i) = \\mathbb{K}[...]$`) by inserting the words \"lies in\" between them; all mathematical content from KO is preserved.\n- [meta] SAFE-REPHRASE: the validator's flagged count divergence (ko=443 vs en_new=108) is inherited from EN_OLD; the KO source uses `$$...$$` for both inline and display math, while the English translations correctly render inline math with `$...$` and display math with `$$...$$`. Polish introduced no new display-block divergence.\n- [def4] SAFE-REPHRASE: \"there is a neighborhood\" → \"there exists a neighborhood\"; no math change.\n- [def9] SAFE-REPHRASE: \"group obtained by taking the set of isomorphism classes... with tensor product as the operation\" → \"group of isomorphism classes... under tensor product\"; no math change.\n- [ex12] SAFE-REPHRASE: \"each standard open cover... is a trivializing open set\" → \"the standard open sets... constitute a trivializing open cover\"; no math change.\n- [global] SAFE-REPHRASE: numerous minor prose polishings (e.g., \"thanks to it\" → \"by virtue of it\", \"shows\" → \"elucidates\", \"think of\" → \"regard\") with zero impact on math block count or content."
+      "verify_verdict": "Based on my thorough parallel analysis of both versions, I can now provide the verdict.\n\nVERDICT: safe\nCOUNTS: ko=443 en=83\nFINDINGS:\n- [Global] SAFE-REPHRASE: KO uses `$$...$$` for all math (443 blocks), while EN correctly uses `$...$` for inline math and `$$...$$` for display math only; total math expressions are equal (472 vs 472).\n- [def1–prop2 region] SAFE-REPHRASE: Single variables like `$$X$$`, `$$\\mathcal{L}$$`, `$$i$$` converted to `$X$`, `$\\mathcal{L}$`, `$i$` — no content change.\n- [def25 region] SAFE-REPHRASE: KO `$$([V], v) \\in S$$를 $$([V], v) \\in \\mathcal{O}^{\\oplus n}$$으로` merged into EN `$([V], v) \\in S \\mapsto ([V], v) \\in \\mathcal{O}^{\\oplus n}$` with explicit `\\mapsto` arrow added.\n- [prop21 proof] SAFE-REPHRASE: KO had malformed `$$\\varphi^\\ast\\mathcal{L}$과 $\\varphi^\\ast\\mathcal{M}$$$`; EN fixed to two proper inline expressions `$\\varphi^\\ast\\mathcal{L}$` and `$\\varphi^\\ast\\mathcal{M}$`.\n- [ex12, ex16, def17, prop19] SAFE-REPHRASE: Display equations (transition functions, exact sequences, section formulas) remain as `$$...$$` in both; punctuation changes (periods/commas) are the only differences.\n- [All anchors] All 26 `<ins id=\"...\">` anchors match exactly between KO and EN; no sections or numbered statements were dropped."
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md": {
       "status": "done",
@@ -2534,8 +2537,8 @@
     }
   },
   "stats": {
-    "total_done": 266,
-    "total_in_chars": 4619401,
-    "total_out_chars": 3896835
+    "total_done": 270,
+    "total_in_chars": 4689428,
+    "total_out_chars": 3972268
   }
 }
