@@ -39,8 +39,12 @@
         <span class="nav__sub-title"><span class="material-icons md-12" style="vertical-align:-.2em">&#xE164;</span> {{ site.data.ui-text[_lang].recent_posts | default: "Recent posts" }}</span>
       </a>
       <ul>
-        {% for _post in _recent_posts limit: 5 %}
+        {% assign _shown = 0 %}
+        {% for _post in _recent_posts %}
+          {% if _shown >= 5 %}{% break %}{% endif %}
+          {% if _post.categories contains "Misc / LLM Workshop" %}{% continue %}{% endif %}
           <li><a href="{{ _post.url | relative_url }}">{{ _post.title | markdownify | strip_html | truncate: 60 }}</a></li>
+          {% assign _shown = _shown | plus: 1 %}
         {% endfor %}
       </ul>
     </li>

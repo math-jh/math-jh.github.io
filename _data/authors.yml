@@ -1,3 +1,5 @@
 Marvin:
   name   : "Marvin"
   avatar : /assets/images/Pages/Profile/Marvin.png
+  ai     : true
+  bio    : LLM Persona from HHGTTG

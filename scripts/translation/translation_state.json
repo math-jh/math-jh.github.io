@@ -2,17 +2,16 @@
   "files": {
     "_posts/Math/Algebraic_Structures/ko/2024-08-30-Algebras.md": {
       "status": "done",
-      "last_attempt_ts": 1779786159.2278829,
+      "last_attempt_ts": 1779671325.2019308,
       "en_path": "_posts/Math/Algebraic_Structures/en/2024-08-30-Algebras.md",
-      "ko_git_commit_ts": 1779778808.0,
-      "translated_at": "2026-05-26T09:00:01+00:00",
-      "in_chars": 13847,
-      "out_chars": 14291,
-      "reason": "drift",
+      "ko_git_commit_ts": 1779145204.0,
+      "translated_at": "2026-05-25T01:00:04+00:00",
+      "in_chars": 29047,
+      "out_chars": 14639,
+      "reason": "polish",
       "warnings": [
-        "math block count mismatch: ko=219, en=218"
-      ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=219 en=218\nFINDINGS:\n- [intro, before def1] SAFE-REPHRASE: KO repeats $$G$$ in \"$$G$$의 덧셈\" while EN uses \"its addition\" without a math block—same meaning, one fewer block in EN.\n- [between def1 and def2] SAFE-REPHRASE: KO writes \"on $$\\rho^\\ast E$$\" as a standalone block before $$\\mu$$; EN says \"the multiplication on $$E$$ gives a map $$\\mu:\\rho^\\ast E\\times\\dots$$\"—$$\\rho^\\ast E$$ still appears inside the $$\\mu$$ block in EN.\n- [prop6 proof] SAFE-REPHRASE: EN splits $$\\bar{u}: G \\rightarrow E$$ and its full definition into two consecutive $$ blocks; KO merges them into one block.\n- [def1 block] SAFE-REPHRASE: sentence reordering (\"$$A$$-module $$E$$ 위에 $$A$$-bilinear map $$\\mu$$\" vs \"If an $$A$$-bilinear map $$\\mu$$ is given on an $$A$$-module $$E$$\") shuffles block order without changing content.\n- [historical paragraph] SAFE-REPHRASE: identical math blocks appear in different order due to clause reordering.\n- [prop12 item 4] SAFE-REPHRASE: KO order is $$E$$, $$\\mathfrak{a}$$, $$E/\\mathfrak{a}$$, $$\\mathfrak{a}$$, $$A$$; EN order is $$\\mathfrak{a}$$, $$E$$, $$E/\\mathfrak{a}$$, $$A$$, $$\\mathfrak{a}$$—same five blocks, sentence rephrased.\n- [tilde-f formula] SAFE-REPHRASE: KO uses $$f(\\x_i)^\\alpha_i$$, EN uses $$f(\\x_i)^{\\alpha_i}$$—equivalent LaTeX syntax, no semantic change."
+        "math block count mismatch: ko=219, en=220"
+      ]
     },
     "_posts/Math/Algebraic_Structures/ko/2024-10-07-Operations_of_Algebras.md": {
       "status": "stub",
@@ -34,17 +33,17 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-12-Projective_Varieties.md": {
       "status": "done",
-      "last_attempt_ts": 1779737523.7610679,
+      "last_attempt_ts": 1779789775.5253704,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-12-Projective_Varieties.md",
-      "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-25T19:30:03+00:00",
-      "in_chars": 34636,
-      "out_chars": 17675,
-      "reason": "polish",
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T10:00:02+00:00",
+      "in_chars": 16512,
+      "out_chars": 17523,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=218, en=217"
+        "math block count mismatch: ko=218, en=216"
       ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=218 en_old=217 en_new=217\nPOLISH CHANGED:\n- [def15] SAFE-REPHRASE: polish reordered two inline math blocks ($x \\in X$ and $F_i(x)$) within the morphism definition sentence, preserving meaning.\n- [global] SAFE-REPHRASE: prose-only polish (e.g., \"In this post we define\" → \"We now define\", \"give ... a topology\" → \"endow ... with a topology\", typo \"Zarieties\" → \"Varieties\"); no math blocks added, dropped, merged, or split.\n- [global] SAFE-REPHRASE: all other text polish is cosmetic; math block count and content remain identical to EN_OLD.\n- [global] NOTE: the ko→en block count divergence (218 vs 217) already existed in EN_OLD; polish did not produce it. The divergence stems from KO using inline $$0$$ in def1 (\"not 0\") and def15 (\"not simultaneously 0\") where EN_OLD/EN_NEW use the prose words \"nonzero\"/\"zero\"."
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=218 en=216\nFINDINGS:\n- [prop10 proof] SAFE-REPHRASE: KO splits index variable as standalone $$i$$, EN inlines it in $$x_i$$\n- [prop11 text] SAFE-REPHRASE: KO puts $$\\Ab$$ in math mode, EN writes \"abelian groups\" as text\n- [prop11 text] SAFE-REPHRASE: EN repeats variable $$k$$ in \"when $$k$$ is even\" for clarity, KO omits repetition"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-15-Quasi_Projective_Varieties.md": {
       "status": "done",
@@ -220,13 +219,14 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-05-11-Chow_Groups.md": {
       "status": "done",
-      "last_attempt_ts": 1779188752.7729392,
+      "last_attempt_ts": 1779791526.931762,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-05-11-Chow_Groups.md",
-      "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-19T11:00:02+00:00",
-      "in_chars": 11806,
-      "out_chars": 12537,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T10:30:02+00:00",
+      "in_chars": 12289,
+      "out_chars": 12532,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-05-11-Intersection_Product.md": {
       "status": "done",
@@ -2258,14 +2258,17 @@
     },
     "_posts/Math/Algebraic_Topology/ko/2023-02-18-Homology.md": {
       "status": "done",
-      "last_attempt_ts": 1779714121.0890965,
+      "last_attempt_ts": 1779788032.3824546,
       "en_path": "_posts/Math/Algebraic_Topology/en/2026-03-12-Homology.md",
-      "ko_git_commit_ts": 1775754003.0,
-      "translated_at": "2026-05-25T13:00:04+00:00",
-      "in_chars": 46467,
-      "out_chars": 24177,
-      "reason": "polish",
-      "warnings": null
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T09:30:02+00:00",
+      "in_chars": 21232,
+      "out_chars": 24749,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=297, en=296"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=297 en=296\nFINDINGS:\n- [prop11→prop12] SAFE-REPHRASE: KO standalone $$\\Ab$$ before '들의' was inlined into EN plain text 'abelian groups', while $$\\Ch_{\\geq 0}(\\Ab)$$ is preserved in both.\n- [prop11] SAFE-REPHRASE: KO splits $$k>0$$ and $$H_k(X)\\cong 0$$ across the sentence '모른 ... 에 대해서는'; EN merges them as '$$H_k(X)\\cong 0$$ for all $$k>0$$' — identical mathematical content."
     },
     "_posts/Math/Algebraic_Topology/ko/2025-10-07-Characteristic_Classes.md": {
       "status": "done",
@@ -2549,8 +2552,8 @@
     }
   },
   "stats": {
-    "total_done": 279,
-    "total_in_chars": 4829933,
-    "total_out_chars": 4116438
+    "total_done": 281,
+    "total_in_chars": 4866119,
+    "total_out_chars": 4156951
   }
 }
