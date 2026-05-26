@@ -1642,3 +1642,30 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `$$A$$-module` | looks like emphasis (no <sub> partner) |
 
+## 대수
+- post: `_posts/Math/Algebraic_Structures/ko/2024-08-30-Algebras.md`
+- permalink: `/ko/math/algebraic_structures/algebras`
+- scanned: 2026-05-26T11:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `polynomial algebra` | multi-word English emphasis — possibly a definition |
+
+## 부풀림 대수
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-20-Blowup_Algebra.md`
+- permalink: `/ko/math/commutative_algebra/blowup_algebra`
+- scanned: 2026-05-26T12:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `initial form` | multi-word English emphasis — possibly a definition |
+
+## 실로우 정리
+- post: `_posts/Math/Group_Theory/ko/2025-04-07-Sylow_Theorems.md`
+- permalink: `/ko/math/group_theory/Sylow_theorems`
+- scanned: 2026-05-26T13:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유일한` | looks like emphasis (no <sub> partner) |
+
