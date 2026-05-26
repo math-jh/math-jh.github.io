@@ -959,13 +959,17 @@
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-12-Existence_and_Uniqueness_of_Determinant.md": {
       "status": "done",
-      "last_attempt_ts": 1779347438.8065386,
+      "last_attempt_ts": 1779814960.3510146,
       "en_path": "_posts/Math/Linear_Algebra/en/2022-08-12-Existence_and_Uniqueness_of_Determinant.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-21T07:00:02+00:00",
-      "in_chars": 14413,
-      "out_chars": 16651,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T17:00:02+00:00",
+      "in_chars": 14900,
+      "out_chars": 16314,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=193, en=187"
+      ],
+      "verify_verdict": "Now I have a clear picture of all the differences. Let me analyze each one:\n\n1. **KO[18] `m,n`** vs EN[18:20] `m` and `n` separately: KO has `$$m,n$$` as one block, EN splits into `$$m$$` and `$$n$$`. Same math content, just split differently. **SAFE-REPHRASE**\n\n2. **KO[54:56] `1`, `2`** vs EN nothing: KO has `$$1$$`과 `$$2$$`의 위치를 바꾸는 함수 (the function that swaps the positions of 1 and 2). EN says \"the function τ that swaps 1 and 2\" — the numbers 1 and 2 are inline text, not math blocks. **SAFE-REPHRASE** (inlined variables)\n\n3. **KO[71:72] `i,j`** vs EN nothing: KO has `$$i,j$$` 성분은 (the (i,j)-entry). EN says \"The $(i,j)$-entry\" — this is using single `$` inline math, not `$$`. Wait, let me check... Actually EN says `The $$(i,j)$$-entry` — no, looking at the EN text: `The $(i,j)$-entry` or `The $$(i,j)$$-entry`? Let me re-check. The EN says: `The $(i,j)$-entry of the matrix $AB$ is given by` — actually looking at the raw EN text, it says `The $$(i,j)$$-entry` — no wait, the EN block 69 is `(i,j)` which is a `$$...$$` block. But in the EN source, looking at block 69-70: `(i,j)` then `AB`. So EN does have `$$i,j$$` split as `$$i$$` and `$$j$$`? No wait, EN block 69 is `(i,j)` — that's the `(i,j)` part. Let me re-check.\n\nActually looking more carefully at the diff output: `insert: KO[70:70] -> EN[69:70]` means EN has an extra block at position 69-70 which is `(i,j)`. And `delete: KO[71:72] -> EN[71:71]` means KO has extra blocks `i,j` and something else. Wait, the diff says:\n- `insert: KO[70:70] -> EN[69:70]` — EN has extra `(i,j)` at position 69\n- `delete: KO[71:72] -> EN[71:71]` — KO has extra `i,j` and `AB` at positions 71-72\n\nHmm, this is getting confusing. Let me look at the actual text more carefully.\n\nIn KO: `행렬 $$AB$$의 $$i,j$$ 성분은 다음의 식` — so KO has `$$AB$$` then `$$i,j$$`.\nIn EN: `The $$(i,j)$$-entry of the matrix $$AB$$ is given by` — so EN has `$$i,j$$` (as `(i,j)`) then `$$AB$$`.\n\nWait, but the EN block list shows `(i,j)` at position 69 and `AB` at position 70. And KO shows `AB` at 70 and `i,j` at 71. So the order is swapped but the content is the same. The diff algorithm is just showing this as a complex diff. **SAFE-REPHRASE**\n\n4. **KO[84:85] `L_A`** vs EN nothing: KO has `$$L_A:\\mathbb{K}^n\\rightarrow \\mathbb{K}^n$$` as a block, and then another block. EN has `$$L_A:\\mathbb{K}^n\\rightarrow \\mathbb{K}^n$$` as a single block. Wait, looking at the diff: `insert: KO[83:83] -> EN[82:83]` means EN has an extra block at 82-83 which is `L_A:...`. And `delete: KO[84:85] -> EN[84:84]` means KO has extra blocks at 84-85. \n\nLooking at KO blocks 83-85: `L_A:...`, `mathbb{K}^n`, `L_A`\nLooking at EN blocks 82-84: `L_A:...`, `A`, `mathbb{K}^n`\n\nHmm, this is about the text: KO has `linear map $$L_A:\\mathbb{K}^n\\rightarrow \\mathbb{K}^n$$이 가역인 것과 동치라는 것을 안다. $$\\mathbb{K}^n$$은 유한차원이므로 이는 다시 $$L_A$$가 surjective인 것과 동치이고`\n\nEN has `linear map $$L_A:\\mathbb{K}^n\\rightarrow \\mathbb{K}^n$$ defined by $$A$$ being invertible. Since $$\\mathbb{K}^n$$ is finite-dimensional, this is equivalent to $$L_A$$ being surjective`\n\nSo KO has `$$L_A:\\mathbb{K}^n\\rightarrow \\mathbb{K}^n$$` then `$$\\mathbb{K}^n$$` then `$$L_A$$`.\nEN has `$$L_A:\\mathbb{K}^n\\rightarrow \\mathbb{K}^n$$` then `$$A$$` then `$$\\mathbb{K}^n$$` then `$$L_A$$`.\n\nWait, EN has `defined by $$A$$ being invertible` where KO just says `이 가역인 것과` (is equivalent to being invertible). So EN adds `defined by $$A$$` which is an extra math block. But the diff says EN has fewer blocks overall. Let me recount...\n\nActually the diff says `insert: KO[83:83] -> EN[82:83]` which means EN inserted something relative to KO. And `delete: KO[84:85] -> EN[84:84]` means KO deleted something. This is just the diff algorithm's way of showing that the sequences diverge and converge.\n\nThe key point: KO has blocks at 84-85 that EN doesn't have at the corresponding position. Looking at the actual content:\n- KO[83] = `L_A:\\mathbb{K}^n\\rightarrow \\mathbb{K}^n`\n- KO[84] = `mathbb{K}^n` (the second `\\mathbb{K}^n`)\n- KO"
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-19-Gaussian_Elimination.md": {
       "status": "done",
@@ -979,17 +983,14 @@
     },
     "_posts/Math/Linear_Algebra/ko/2022-08-28-Characteristic_Polynomial.md": {
       "status": "done",
-      "last_attempt_ts": 1779701456.9315615,
+      "last_attempt_ts": 1779816675.0378833,
       "en_path": "_posts/Math/Linear_Algebra/en/2022-08-28-Characteristic_Polynomial.md",
-      "ko_git_commit_ts": 1779678007.0,
-      "translated_at": "2026-05-25T09:30:03+00:00",
-      "in_chars": 8403,
-      "out_chars": 8202,
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T17:30:03+00:00",
+      "in_chars": 8404,
+      "out_chars": 8264,
       "reason": "drift",
-      "warnings": [
-        "math block count mismatch: ko=128, en=7"
-      ],
-      "verify_verdict": "Now I have all the information needed to make a definitive ruling.\n\nVERDICT: safe\nCOUNTS: ko=128 en=7\nFINDINGS:\n- [Global] SAFE-REPHRASE: KO uses `$$...$$` for all 129 math expressions (128 display + 1 inline), while EN correctly uses `$...$` for 122 inline expressions and `$$...$$` for 7 true display equations; total math expression count is identical (129=129).\n- [def1] SAFE-REPHRASE: KO `$$n$$차 정사각행렬` → EN `$n\\times n$ square matrix` combines dimension into one expression; no content lost.\n- [Body text] SAFE-REPHRASE: KO has standalone `$$\\tau$$` before `즉` (i.e.) where EN integrates the variable into the sentence flow; same mathematical content.\n- [Body text] SAFE-REPHRASE: KO `$$n-1$$차식`/`$$n-1$$차 항` vs EN `degree $n-1$`/`degree-$(n-1)$ term`; same content with prose-adjusted parentheses.\n- [def6] SAFE-REPHRASE: KO `$(\\x-a)^k$` vs EN `$(x-a)^k$`; identical math, KO uses `\\x` macro.\n- [cor4] SAFE-REPHRASE: KO uses `$$L:V\\rightarrow V$$` (display) where EN uses `$L:V\\rightarrow V$` (inline); same content.\n- [ex7] SAFE-REPHRASE: KO puts matrix `J` and polynomial `x^2+1` in display math; EN uses inline; same content.\n- [All 7 display equations] SAFE-REPHRASE: All major formulas (Leibniz expansion, coefficient extraction, constant term, similar matrices, J matrix, eigenvector equation) are preserved identically in both versions."
+      "warnings": null
     },
     "_posts/Math/Linear_Algebra/ko/2022-09-18-Eigenspace_Decomposition.md": {
       "status": "done",
@@ -1013,13 +1014,17 @@
     },
     "_posts/Math/Linear_Algebra/ko/2022-10-02-Inner_Product_Spaces.md": {
       "status": "done",
-      "last_attempt_ts": 1779367264.991356,
+      "last_attempt_ts": 1779818541.5577433,
       "en_path": "_posts/Math/Linear_Algebra/en/2022-10-02-Inner_Product_Spaces.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-21T12:30:01+00:00",
-      "in_chars": 13373,
-      "out_chars": 14688,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T18:00:02+00:00",
+      "in_chars": 13860,
+      "out_chars": 14517,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=203, en=204"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=203 en=204\nFINDINGS:\n- [prop4→prop5 transition] SAFE-REPHRASE: KO uses one $$V$$ in \"an inner product defined on $$V$$ determines a norm, but a norm given [on $$V$$ implicit] does not necessarily define an inner product\" while EN makes the second $$V$$ explicit as \"a norm given on $$V$$\"; no mathematical content lost or added."
     },
     "_posts/Math/Linear_Algebra/ko/2022-10-09-Least_Squares_Method.md": {
       "status": "done",
@@ -1043,13 +1048,17 @@
     },
     "_posts/Math/Manifold/ko/2022-06-06-Smooth_Manifolds.md": {
       "status": "done",
-      "last_attempt_ts": 1779372455.5483835,
+      "last_attempt_ts": 1779820276.2380385,
       "en_path": "_posts/Math/Manifold/en/2022-06-06-Smooth_Manifolds.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-21T14:00:01+00:00",
-      "in_chars": 9086,
-      "out_chars": 9158,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T18:30:03+00:00",
+      "in_chars": 9569,
+      "out_chars": 9028,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=142, en=144"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Manifold/ko/2022-06-09-Examples_of_Manifolds.md": {
       "status": "done",
@@ -2579,8 +2588,8 @@
     }
   },
   "stats": {
-    "total_done": 293,
-    "total_in_chars": 5063279,
-    "total_out_chars": 4364944
+    "total_done": 297,
+    "total_in_chars": 5110012,
+    "total_out_chars": 4413067
   }
 }

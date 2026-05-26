@@ -1788,3 +1788,34 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `separated` | looks like emphasis (no <sub> partner) |
 
+## 저우 군
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-05-11-Chow_Groups.md`
+- permalink: `/ko/math/algebraic_varieties/chow_groups`
+- scanned: 2026-05-26T17:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `algebraic $$k$$-cycle` | multi-word English emphasis — possibly a definition |
+| `codimension $$k$$ cycle` | multi-word English emphasis — possibly a definition |
+| `principal cycle` | multi-word English emphasis — possibly a definition |
+| `rationally equivalent` | multi-word English emphasis — possibly a definition |
+| `Chow group` | multi-word English emphasis — possibly a definition |
+| `cycle class map` | multi-word English emphasis — possibly a definition |
+
+## 두브로빈 접속
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-21-Dubrovin_Connection.md`
+- permalink: `/ko/math/mirror_symmetry/dubrovin_connection`
+- scanned: 2026-05-26T17:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Dubrovin connection` | multi-word English emphasis — possibly a definition |
+| `potentiality` | looks like emphasis (no <sub> partner) |
+| `associativity` | looks like emphasis (no <sub> partner) |
+| `정확하게` | looks like emphasis (no <sub> partner) |
+| `Potentiality:` | looks like emphasis (no <sub> partner) |
+| `Associativity (WDVV):` | multi-word English emphasis — possibly a definition |
+| `Gauss-Manin connection` | multi-word English emphasis — possibly a definition |
+| `주장 4 (Mirror theorem, $$D$$-module form)` | mixed-script emphasis — possibly a definition |
+| `mirror isomorphism` | multi-word English emphasis — possibly a definition |
+

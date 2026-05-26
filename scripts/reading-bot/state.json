@@ -14,7 +14,9 @@
     "/ko/math/linear_algebra/matrices",
     "/ko/math/linear_algebra/space_of_linear_maps",
     "/ko/math/linear_algebra/ftla",
-    "/ko/math/linear_algebra/gaussian_elimination"
+    "/ko/math/linear_algebra/gaussian_elimination",
+    "/ko/math/linear_algebra/determinant",
+    "/ko/math/linear_algebra/existence_and_uniqueness_of_determinant"
   ],
   "all_complete": false
 }
