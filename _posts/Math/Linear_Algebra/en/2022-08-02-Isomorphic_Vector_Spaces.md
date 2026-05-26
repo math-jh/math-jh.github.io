@@ -52,7 +52,7 @@ Similarly, $$L^{-1}(w_1+w_2)=L^{-1}(w_1)+L^{-1}(w_2)$$ can also be shown.
 
 </details>
 
-The following proposition involves the same set-theoretic issue that was briefly mentioned after [\[Set Theory\] §Cardinals, ⁋Definition 1](/en/math/set_theory/cardinals#def1). Namely, it is uncertain whether <phrase>the collection of all $$\mathbb{K}$$-vector spaces</phrase> is actually a set, but we will pass over this without further comment.
+The following proposition involves the same set-theoretic issue that was briefly mentioned after [\[Set Theory\] §Cardinals, ⁋Definition 1](/en/math/set_theory/cardinals#def1). Namely, it is uncertain whether <phrase>the collection of all $\mathbb{K}$-vector spaces</phrase> is actually a set, but we will pass over this without further comment.
 
 <div class="proposition" markdown="1">
 
@@ -80,7 +80,7 @@ Although this proposition may seem obvious, it proves the less obvious part of t
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-[\[§Linear Maps, ⁋Example 14\]](/en/math/linear_algebra/linear_map#ex14) means that any $$n$$-dimensional $$\mathbb{K}$$-vector space $$V$$ satisfies $$V\cong \mathbb{K}^n$$. For another $$n$$-dimensional $$\mathbb{K}$$-vector space $$W$$ we also have $$W\cong \mathbb{K}^n$$, so from the fact that $$\cong$$ is an equivalence relation we know that $$V\cong W$$.
+[§Linear Maps, ⁋Example 14](/en/math/linear_algebra/linear_map#ex14) means that any $$n$$-dimensional $$\mathbb{K}$$-vector space $$V$$ satisfies $$V\cong \mathbb{K}^n$$. For another $$n$$-dimensional $$\mathbb{K}$$-vector space $$W$$ we also have $$W\cong \mathbb{K}^n$$, so from the fact that $$\cong$$ is an equivalence relation we know that $$V\cong W$$.
 
 </details>
 
@@ -94,7 +94,7 @@ Of course the converse also holds, and therefore we see that the only invariant 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-[\[§Linear Maps, ⁋Corollary 9\]](/en/math/linear_algebra/linear_map#cor9).
+[§Linear Maps, ⁋Corollary 9](/en/math/linear_algebra/linear_map#cor9).
 
 </details>
 

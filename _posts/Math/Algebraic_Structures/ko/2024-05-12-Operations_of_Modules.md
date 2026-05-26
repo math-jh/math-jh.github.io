@@ -88,7 +88,7 @@ $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong\bigoplus_{x\in X} F(\{x\})$$
 
 </div>
 
-임의의 집합 $$X$$에 대하여, $$F(X)$$와 isomorphic한 $$A$$-module들을 *free $$A$$-module<sub>자유 $$A$$-가군</sub>*이라 부른다.
+임의의 집합 $$X$$에 대하여, $$F(X)$$와 isomorphic한 $$A$$-module들을 *free $$A$$-module<sub>자유 $A$-가군</sub>*이라 부른다.
 
 ## 가군의 텐서곱
 
