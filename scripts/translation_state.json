@@ -2044,16 +2044,14 @@
     },
     "_posts/Math/Algebraic_Structures/ko/2022-11-29-Groups.md": {
       "status": "done",
-      "last_attempt_ts": 1779617400.7336411,
+      "last_attempt_ts": 1779759184.4869337,
       "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Groups.md",
-      "ko_git_commit_ts": 1772794801.0,
-      "translated_at": "2026-05-24T10:00:04+00:00",
-      "in_chars": 27615,
-      "out_chars": 13666,
-      "reason": "polish",
-      "warnings": [
-        "math block count mismatch: ko=196, en=188"
-      ]
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T01:30:01+00:00",
+      "in_chars": 13361,
+      "out_chars": 14118,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Algebraic_Structures/ko/2022-11-30-Isomorphism_Theorems.md": {
       "status": "done",
@@ -2081,16 +2079,14 @@
     },
     "_posts/Math/Algebraic_Structures/ko/2022-12-01-Rings.md": {
       "status": "done",
-      "last_attempt_ts": 1779628416.918305,
+      "last_attempt_ts": 1779760982.724561,
       "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Rings.md",
-      "ko_git_commit_ts": 1772795136.0,
-      "translated_at": "2026-05-24T13:00:03+00:00",
-      "in_chars": 24667,
-      "out_chars": 11887,
-      "reason": "polish",
-      "warnings": [
-        "math block count mismatch: ko=170, en=168"
-      ]
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T02:00:01+00:00",
+      "in_chars": 12384,
+      "out_chars": 12213,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Algebraic_Structures/ko/2022-12-07-Free_Products.md": {
       "status": "done",
@@ -2258,17 +2254,14 @@
     },
     "_posts/Math/Algebraic_Topology/ko/2025-10-07-Characteristic_Classes.md": {
       "status": "done",
-      "last_attempt_ts": 1779733980.2238526,
+      "last_attempt_ts": 1779762846.7570553,
       "en_path": "_posts/Math/Algebraic_Topology/en/2025-10-07-Characteristic_Classes.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-25T18:30:04+00:00",
-      "in_chars": 54227,
-      "out_chars": 28687,
-      "reason": "polish",
-      "warnings": [
-        "math block count mismatch: ko=389, en=380"
-      ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=389 en_old=380 en_new=380\nPOLISH CHANGED:\n- [def1] SAFE-REPHRASE: \"열린집합 U\" translated as \"open neighborhood U\" instead of \"open set U\" — no math content changed.\n- [def2] SAFE-REPHRASE: \"위상구조가 주어진\" translated as \"equipped with a topology\" vs \"with a topology as above\" — rephrasing only.\n- [ex3] SAFE-REPHRASE: \"non-vanishing\" changed to \"nowhere-vanishing\" — synonymous mathematical term.\n- [ex3] SAFE-REPHRASE: \"원래 ...에 있을 때 속해있던 바로 그 직선\" translated as \"originally lay on\" vs \"originally belonged to\" — equivalent meaning.\n- [Čech] SAFE-REPHRASE: \"우리가 원래 알던 cohomology\" translated as \"ordinary cohomology we know\" vs \"the cohomology we originally knew\" — rephrasing only.\n- [Grassmannians] SAFE-REPHRASE: \"complex structure\" (cell complex structure sense) unchanged in meaning, though \"complex\" could mislead — context makes meaning clear.\n- [Grassmannians] SAFE-REPHRASE: \"gemerator\" typo in EN OLD fixed to \"generator\" in EN NEW — correction, no content loss.\n- [prop6/def5] SAFE-REPHRASE: Minor punctuation and formatting changes (colons, commas) around math blocks — no math content affected."
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T02:30:01+00:00",
+      "in_chars": 25120,
+      "out_chars": 28741,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-25-Line_Bundles.md": {
       "status": "done",
@@ -2286,15 +2279,15 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md": {
       "status": "done",
-      "last_attempt_ts": 1779678217.7067819,
+      "last_attempt_ts": 1779757441.9898453,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-04-06-Cohomology_of_Projective_Spaces.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-25T03:00:02+00:00",
-      "in_chars": 30411,
-      "out_chars": 33758,
-      "reason": "pending",
+      "translated_at": "2026-05-26T01:00:04+00:00",
+      "in_chars": 64625,
+      "out_chars": 33803,
+      "reason": "polish",
       "warnings": [
-        "math block count mismatch: ko=477, en=474"
+        "math block count mismatch: ko=477, en=475"
       ],
       "verify_verdict": "verify-failed: kimi timeout"
     },
@@ -2541,8 +2534,8 @@
     }
   },
   "stats": {
-    "total_done": 262,
-    "total_in_chars": 4503911,
-    "total_out_chars": 3807960
+    "total_done": 266,
+    "total_in_chars": 4619401,
+    "total_out_chars": 3896835
   }
 }
