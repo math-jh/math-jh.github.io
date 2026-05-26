@@ -1142,13 +1142,17 @@
     },
     "_posts/Math/Manifold/ko/2022-06-21-Differential_Forms.md": {
       "status": "done",
-      "last_attempt_ts": 1779388463.2835686,
+      "last_attempt_ts": 1779822074.6159134,
       "en_path": "_posts/Math/Manifold/en/2022-06-21-Differential_Forms.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-21T18:30:01+00:00",
-      "in_chars": 8916,
-      "out_chars": 7963,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T19:00:03+00:00",
+      "in_chars": 9401,
+      "out_chars": 7955,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=99, en=96"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=99 en=96\nFINDINGS:\n- [def1] SAFE-REPHRASE: KO uses display $$...$$ for (r,s), k, k in definition prose; EN uses inline $...$ for same symbols\n- All 3 block differences are display→inline conversions with zero mathematical content change\n- No theorems, formulas, equations, or meaningful symbols were lost or added"
     },
     "_posts/Math/Manifold/ko/2022-12-09-Cotangent_Space.md": {
       "status": "done",
@@ -1286,23 +1290,31 @@
     },
     "_posts/Math/Multilinear_Algebra/ko/2022-12-03-Tensor_Algebras.md": {
       "status": "done",
-      "last_attempt_ts": 1779406883.5806534,
+      "last_attempt_ts": 1779823918.187678,
       "en_path": "_posts/Math/Multilinear_Algebra/en/2022-12-03-Tensor_Algebras.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-21T23:30:01+00:00",
-      "in_chars": 14922,
-      "out_chars": 16441,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T19:30:03+00:00",
+      "in_chars": 15407,
+      "out_chars": 16299,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=262, en=260"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=262 en=260\nFINDINGS:\n- [def1/prop2 region] SAFE-REPHRASE: KO splits \"$$M$$에서 $$\\\\T(M)$$으로의\" into two blocks while EN merges them into \"$$\\\\iota: M \\\\rightarrow \\\\T(M)$$\"; no math content lost.\n- [prop3 region] SAFE-REPHRASE: basis element formula and $$e_s$$ appear in swapped order due to sentence restructuring.\n- [prop4 proof] SAFE-REPHRASE: adjunction formula and $$\\\\id_{\\\\phi_!M}$$ block order swapped; same for $$A$$-linear map phrase.\n- [prop7/prop12 regions] SAFE-REPHRASE: \"$$n$$-linear\" and Hom-set blocks reordered with surrounding text, preserving all symbols.\n- [footnote] SAFE-REPHRASE: $$\\\\cRing$$ and $$\\\\otimes_A$$ blocks appear in swapped order between KO and EN.\n- [global] SAFE-REPHRASE: all remaining count differences are local block swaps or splits from Korean postposition particles (e.g., 에서, 으로의) being math-blocked in KO and absorbed into prose in EN."
     },
     "_posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md": {
       "status": "done",
-      "last_attempt_ts": 1779408508.5532768,
+      "last_attempt_ts": 1779825750.1193528,
       "en_path": "_posts/Math/Multilinear_Algebra/en/2022-12-08-Derivations.md",
-      "ko_git_commit_ts": 1772910001.0,
-      "translated_at": "2026-05-22T00:00:01+00:00",
-      "in_chars": 18823,
-      "out_chars": 20420,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T20:00:03+00:00",
+      "in_chars": 19308,
+      "out_chars": 20249,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=361, en=359"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Multilinear_Algebra/ko/2024-05-11-Cotangent_Complex.md": {
       "status": "draft_skip",
@@ -1350,13 +1362,17 @@
     },
     "_posts/Math/Multilinear_Algebra/ko/2024-09-03-Matrices.md": {
       "status": "done",
-      "last_attempt_ts": 1779417411.4081764,
+      "last_attempt_ts": 1779827454.310997,
       "en_path": "_posts/Math/Multilinear_Algebra/en/2024-09-03-Matrices.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-22T02:30:01+00:00",
-      "in_chars": 7318,
-      "out_chars": 7171,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779778808.0,
+      "translated_at": "2026-05-26T20:30:03+00:00",
+      "in_chars": 7801,
+      "out_chars": 7200,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=101, en=100"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Multilinear_Algebra/ko/2024-09-05-Matrices_and_Linear_Maps.md": {
       "status": "done",
@@ -2588,8 +2604,8 @@
     }
   },
   "stats": {
-    "total_done": 297,
-    "total_in_chars": 5110012,
-    "total_out_chars": 4413067
+    "total_done": 301,
+    "total_in_chars": 5161929,
+    "total_out_chars": 4464770
   }
 }
