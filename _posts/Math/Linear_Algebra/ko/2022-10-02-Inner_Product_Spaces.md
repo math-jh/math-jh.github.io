@@ -150,7 +150,7 @@ $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\rig
 
 ## 정규직교기저
 
-우리는 $$\ch\mathbb{R}=0$$임을 알고 있으므로, [§쌍선형형식, ⁋명제 6](/ko/math/linear_algebra/bilinear_form#prop6)으로부터 임의의 $$\mathbb{R}$$-내적공간 $$V$$에는 orthogonal basis가 존재한다는 것을 안다. 
+우리는 $$\ch\mathbb{R}=0$$임을 알고 있으므로, [§쌍선형형식, ⁋명제 7](/ko/math/linear_algebra/bilinear_form#prop7)으로부터 임의의 $$\mathbb{R}$$-내적공간 $$V$$에는 orthogonal basis가 존재한다는 것을 안다. 
 
 임의의 $$\mathbb{R}$$-내적공간 $$V$$가 주어졌다 하고, $$V$$에 basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$이 주어졌다 하자. 우선
 

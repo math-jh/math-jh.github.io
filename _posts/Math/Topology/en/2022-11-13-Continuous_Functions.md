@@ -59,7 +59,7 @@ If $$f$$ is continuous at every point of $$X$$, we call $$f$$ a *continuous func
 
 <div class="proposition" markdown="1">
 
-<ins is="thm4">**Theorem 4**</ins> For two topological spaces $$X$$, $$Y$$ and a function $$f:X\rightarrow Y$$, the following are all equivalent.
+<ins id="thm4">**Theorem 4**</ins> For two topological spaces $$X$$, $$Y$$ and a function $$f:X\rightarrow Y$$, the following are all equivalent.
 
 1. $$f$$ is continuous.
 2. For any subset $$A$$ of $$X$$, $$f(\cl A)\subset\cl f(A)$$ holds.

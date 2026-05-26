@@ -31,7 +31,7 @@ weight: 7
 
 </div>
 
-즉, $$M/N$$이 coprimary submodule이라면 $$N$$은 primary submodule이 된다. 또, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem3)로부터 임의의 $$\mathfrak{p}$$-primary submodule들의 유한한 교집합은 $$\mathfrak{p}$$-primary인 것을 안다. 
+즉, $$M/N$$이 coprimary submodule이라면 $$N$$은 primary submodule이 된다. 또, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)로부터 임의의 $$\mathfrak{p}$$-primary submodule들의 유한한 교집합은 $$\mathfrak{p}$$-primary인 것을 안다. 
 
 이제 다음이 성립한다.
 

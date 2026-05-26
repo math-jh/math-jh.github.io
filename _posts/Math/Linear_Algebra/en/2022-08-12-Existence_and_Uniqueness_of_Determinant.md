@@ -195,7 +195,7 @@ Meanwhile, the entries $$A_{ii}$$ of a matrix $$A$$ are called its *diagonal ent
 
 </div>
 
-In particular, every $$n\times n$$ row echelon matrix is an upper triangular matrix. ([§Gaussian Elimination, ⁋Definition 2](/en/math/linear_algebra/Gaussian_elimination#def2))
+In particular, every $$n\times n$$ row echelon matrix is an upper triangular matrix. ([§Gaussian Elimination, ⁋Definition 4](/en/math/linear_algebra/Gaussian_elimination#def4))
 
 
 <div class="proposition" markdown="1">

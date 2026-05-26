@@ -87,7 +87,7 @@ and by assumption $$(f_j\circ g)^{-1}(U_j)$$ is an open set, so $$g^{-1}(U)$$ mu
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 4**</ins> Let a set $$X$$ and a family of topological spaces $$(Y_i,\mathcal{T}_i)_{i\in I}$$ be given, and for each $$i$$ let a function $$f_i:Y_i\rightarrow X$$ be given. The strongest topology on $$X$$ making all the $$f_i$$ continuous is called the *final topology induced by the $$f_i$$*.
+<ins id="def4">**Definition 4**</ins> Let a set $$X$$ and a family of topological spaces $$(Y_i,\mathcal{T}_i)_{i\in I}$$ be given, and for each $$i$$ let a function $$f_i:Y_i\rightarrow X$$ be given. The strongest topology on $$X$$ making all the $$f_i$$ continuous is called the *final topology induced by the $$f_i$$*.
 
 </div>
 
@@ -95,7 +95,7 @@ If the trivial topology is given on $$X$$, any function into $$X$$ is always con
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 5**</ins> The topology in [Definition 4](#def4) is defined as the following set
+<ins id="prop5">**Proposition 5**</ins> The topology in [Definition 4](#def4) is defined as the following set
 
 $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
 
@@ -113,7 +113,7 @@ Likewise, the final topology also satisfies the following universal property sim
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**Proposition 6**</ins> In the situation of [Definition 4](#def4), suppose furthermore that a topological space $$Z$$ and a map $$g:X\rightarrow Z$$ are given. Then $$g$$ is continuous if and only if each $$g\circ f_i$$ is continuous.
+<ins id="prop6">**Proposition 6**</ins> In the situation of [Definition 4](#def4), suppose furthermore that a topological space $$Z$$ and a map $$g:X\rightarrow Z$$ are given. Then $$g$$ is continuous if and only if each $$g\circ f_i$$ is continuous.
 
 </div>
 <details class="proof" markdown="1">

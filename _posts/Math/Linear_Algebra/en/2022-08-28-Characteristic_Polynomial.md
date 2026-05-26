@@ -76,7 +76,7 @@ Thus $A$ and $B$ have the same characteristic polynomial. From this we obtain th
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-That is, we must show that the characteristic polynomial of $L$ does not change even if we choose a basis $\mathcal{C}$ of $V$ instead of $\mathcal{B}$. By the preceding argument, it suffices to observe from the equation after [§Change of Basis, ⁋Definition 2](/en/math/multilinear_algebra/change_of_basis#def2) that the two matrix representations $[L]_\mathcal{B}^\mathcal{B}$ and $[L]_\mathcal{C}^\mathcal{C}$ are similar matrices.
+That is, we must show that the characteristic polynomial of $L$ does not change even if we choose a basis $\mathcal{C}$ of $V$ instead of $\mathcal{B}$. By the preceding argument, it suffices to observe from the equation after [§Change of Basis, ⁋Proposition 5](/en/math/multilinear_algebra/change_of_basis#prop5) that the two matrix representations $[L]_\mathcal{B}^\mathcal{B}$ and $[L]_\mathcal{C}^\mathcal{C}$ are similar matrices.
 
 </details>
 

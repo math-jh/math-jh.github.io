@@ -164,11 +164,11 @@ $$\partial_{q_a}\!\left(e^{W_q/z}\,\omega\right) = \frac{\partial_{q_a} W_q}{z}\
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6 (B-model connection)**</ins> $$\mathcal{H}$$ 위에 정의되는 *B-model connection* $$\nabla^z_B$$은
+<ins id="def6">**정의 6 (B-model connection)**</ins> $$\mathcal{H}$$ 위에 *B-model connection* $$\nabla^z_B$$을
 
 $$\nabla^z_B := z\nabla^{GM}$$
 
-으로 정의된다. 
+으로 정의한다. 
 
 </div>
 
@@ -176,43 +176,35 @@ $$\nabla^z_B := z\nabla^{GM}$$
 
 $$\nabla^z_{B, \partial_{q_a}}[e^{W_q/z}\omega] = \partial_{q_a} W_q \cdot [e^{W_q/z}\omega],\qquad \nabla^z_{B, z\partial_z}[e^{W_q/z}\omega] = -W_q \cdot [e^{W_q/z}\omega]$$
 
-가 성립한다. 이 rescaling으로 [명제 5](#prop5)의 $$1/z$$ 인자가 흡수되므로, $$z \to 0$$ 극한에서 B-model connection의 connection 1-form은 정확하게 cohomology class에 대한 $$\partial_{q_a} W_q$$의 곱셈이 된다. 이는 앞서 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#prop4)에서 살펴본 것과 같은 맥락으로, $$z\rightarrow 0$$인 상황에서 Frobenius manifold $$M\timex \mathbb{C}^\ast$$의 
+가 성립한다. 이 rescaling으로 [명제 5](#prop5)의 $$1/z$$ 인자가 흡수되므로, $$z \to 0$$ 극한에서 B-model connection의 connection 1-form은 정확하게 cohomology class에 대한 $$\partial_{q_a} W_q$$의 곱셈이 된다. 이는 앞서 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)에서 살펴본 것과 같은 맥락으로, $$z\rightarrow 0$$인 상황에서 Frobenius manifold $$M\times \mathbb{C}^\ast$$에서 $$z$$를 $$0$$으로 보낼 때 Frobenius algebra의 product 구조를 복원해내는 것과 동일한 상황이다.
 
+위의 식은 cohomology class 차원의 statement이다. 실제로 손에 잡을 수 있는 *수*로 풀어내려면 dual인 homology class와 pair시켜야 한다. [정의 4](#def4)에 의해 continuously isotoped된 thimble $$[\Gamma]$$가 dual bundle $$\mathcal{H}^\vee$$의 flat section이므로, 좌변의 $$\nabla^z_B = z\nabla^{GM}$$가 그대로 $$\Gamma$$ 적분에 대한 미분 ($$z\partial_{q_a}$$ 또는 $$z^2\partial_z$$; 후자에서 $$z^2$$이 나오는 것은 $$\nabla^z_B$$가 $$z\partial_z$$ vector field에 contract될 때 rescaling factor $$z$$가 한 번 더 들어가기 때문)으로 빠져나오고, 우변은 cohomology class를 $$\Gamma$$ 위에서 적분한 것이 된다. 즉 위 식을 $$[\Gamma]$$에 pair시키면 *period 미분 공식*
 
-이는 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 ring 동형 $$\Jac(W_q) \cong QH^\ast(X)$$를 통해 A-model의 quantum product $$T_a\ast_q$$에 정확히 대응한다.
+$$z\,\partial_{q_a}\mathcal{I}_\Gamma = \int_\Gamma \partial_{q_a}W_q\cdot e^{W_q/z}\,\omega,\qquad z^2\,\partial_z\mathcal{I}_\Gamma = -\int_\Gamma W_q\cdot e^{W_q/z}\,\omega \tag{$\ast$}$$
 
-<div class="proposition" markdown="1">
+이 등장한다.
 
-<ins id="thm7">**정리 7** (Period 미분 공식)</ins> 임의의 Lefschetz thimble $$\Gamma$$에 대응하는 oscillating integral $$\mathcal{I}_\Gamma$$는 다음 미분 관계식을 만족한다.
+여기서 한 가지 obstruction이 있다. 우변의 적분은 *integrand에 $$\partial_{q_a}W_q$$ (또는 $$W_q$$)가 추가된* 형태로, 원래 $$\mathcal{I}_\Gamma = \int_\Gamma e^{W_q/z}\omega$$로 직접 표현되지 않는다. 즉 ($$\ast$$) 단독은 $$\mathcal{I}_\Gamma$$에 대한 closed ODE가 아니다.
 
-$$z\, \partial_{q_a} \mathcal{I}_\Gamma = \int_\Gamma \partial_{q_a} W_q \cdot e^{W_q/z}\, \omega,\qquad z^2 \partial_z \mathcal{I}_\Gamma = -\int_\Gamma W_q\, e^{W_q/z}\, \omega.$$
+자연스러운 해결은 *integrand에 함수 $$f$$를 곱한* 형태의 적분들
 
-식의 *형태*는 $$\Gamma$$의 구체적 선택과 무관하며, 양변 모두 $$\Gamma$$에 한 번씩 의존한다.
+$$\mathcal{I}^f_\Gamma(q, z) := \int_\Gamma f\cdot e^{W_q/z}\,\omega$$
 
-</div>
+을 함께 unknown으로 보는 것이다. 단 $$f$$는 *적분이 수렴하도록* 하는 함수여야 한다. Thimble $$\Gamma$$의 boundary 부근에서 $$|e^{W_q/z}| = e^{\Real(W_q/z)}$$가 *지수적으로* $$0$$으로 감쇠하므로, $$f$$가 polynomial 정도의 성장만 한다면 적분은 수렴한다. 자연스러운 함수 공간은
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
+$$f \in \mathcal{O}(\check{X})\quad(\check{X}\text{ 위의 regular function})$$
 
-$$\Gamma$$의 boundary 부근에서 $$\Real(W_q/z) \to -\infty$$이므로 $$e^{W_q/z} \to 0$$이고, differentiation under the integral sign이 boundary term 없이 정당화된다. Chain rule에 의해
+이고, Hori-Vafa 경우 $$\check{X}=(\mathbb{C}^\ast)^N$$이라 $$f$$는 Laurent polynomial이다. 우변의 $$\partial_{q_a}W_q$$, $$W_q$$도 모두 $$\mathcal{O}(\check{X})$$의 원소이므로 ($$\ast$$)의 우변은 정확히 이 family 안에 들어오고, $$\mathcal{I}^f_\Gamma$$의 미분도 다시 $$f\cdot\partial_{q_a}W_q$$를 곱한 적분으로 같은 family에 머무른다.
 
-$$\partial_{q_a} \mathcal{I}_\Gamma = \int_\Gamma \partial_{q_a}(e^{W_q/z})\, \omega = \frac{1}{z}\int_\Gamma \partial_{q_a} W_q \cdot e^{W_q/z}\, \omega,$$
+그러나 $$\mathcal{O}(\check{X})$$가 *무한차원*이라 unknown이 여전히 너무 많다. 여기서 결정적인 사실: $$\mathcal{I}^f_\Gamma$$의 값은 $$f$$의 cohomology class $$[f\cdot e^{W_q/z}\omega]\in\mathcal{H}_{(q,z)}$$에만 의존하고 (period pairing은 cohomology class에 well-defined), $$W_q$$가 Morse type이면 $$\mathcal{H}_{(q,z)}$$는 *유한차원*이다. 구체적으로 자연스러운 map
 
-$$\partial_z \mathcal{I}_\Gamma = \int_\Gamma \partial_z(e^{W_q/z})\, \omega = -\frac{1}{z^2}\int_\Gamma W_q \cdot e^{W_q/z}\, \omega$$
+$$\Jac(W_q) \;\xrightarrow{\sim}\; \mathcal{H}_{(q,z)},\qquad T \;\longmapsto\; [T\cdot e^{W_q/z}\omega]$$
 
-이며, 양변에 각각 $$z$$, $$z^2$$를 곱하면 정리의 식을 얻는다.
+이 isomorphism이며, 차원은 $$W_q$$의 critical point 개수와 같다 ([명제 5](#prop5) 증명의 cocycle-coboundary 식 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1}dW_q\wedge\beta)$$에서 직접 따라옴). 즉 무한차원 $$\mathcal{O}(\check{X})$$가 cohomology level에서 $$\Jac(W_q) = \mathcal{O}(\check{X})/(\partial_i W_q)$$의 유한차원 quotient로 축소된다. 이는 mirror symmetry isomorphism $$\Jac(W_q)\cong QH^\ast(X)$$와 무관한 *순수 B-side* 사실이다 (mirror symmetry는 이 B-side $$\Jac(W_q)$$를 A-side $$QH^\ast(X)$$과 ring으로 매칭시키는, 그 다음 단계의 statement).
 
-</details>
+따라서 $$\Jac(W_q)$$의 finite basis $$\{T_\alpha\}_{\alpha=0,\ldots,\mu-1}$$를 잡으면 모든 oscillating integral $$\mathcal{I}^f_\Gamma$$가 결국 $$\{\mathcal{I}^{T_\alpha}_\Gamma\}_\alpha$$의 linear combination으로 환원되고, ($$\ast$$)는 이 *유한* 개의 적분 사이의 *닫힌* ODE system이 된다.
 
-[정리 7](#thm7)은 oscillating integral이 단순한 적분이 아니라 B-model $$D$$-module의 horizontal section을 명시적으로 제공한다는 강력한 주장이다. Cohomology bundle $$\mathcal{H}$$ 위에서 [정의 6](#def6)의 B-model connection은 $$\nabla^z_B [e^{W_q/z}\omega] = [\partial_{q_a} W_q \cdot e^{W_q/z}\omega]$$로 작용하므로, $$\mathcal{I}_\Gamma$$ 자체는 closed equation을 따르지 않는다. 그러나 Jacobi ring basis $$\{T_\alpha\}$$ ([§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 ring 동형 $$\Jac \cong QH^\ast$$를 통해 $$QH^\ast(X)$$의 basis에 대응)와 Lefschetz thimble basis $$\{\Gamma_b\}$$를 vectorize한 행렬
-
-$$\mathcal{I}^\alpha_{\Gamma_b}(q, z) := \int_{\Gamma_b} T_\alpha\, e^{W_q/z}\, \omega$$
-
-은 Jacobi ring 안에서 $$T_\alpha \cdot \partial_{q_a} W_q = \sum_\beta (M_a)^\alpha_\beta T_\beta$$의 multiplication matrix에 의해 닫힌 system
-
-$$z\, \partial_{q_a} \mathcal{I}^\alpha_{\Gamma_b} = \sum_\beta (M_a)^\alpha_\beta\, \mathcal{I}^\beta_{\Gamma_b}$$
-
-를 만족하며, 이 matrix가 정확히 B-model $$D$$-module의 *fundamental solution matrix*를 이룬다. 두 basis $$\{T_\alpha\}$$, $$\{\Gamma_b\}$$의 선택에 따라 matrix는 invertible 변환만큼 다르게 표현되므로 fundamental solution은 basis 선택에 covariant하며, D-module 구조 자체는 처음부터 $$\Gamma$$ 선택과 무관한 cohomology bundle $$\mathcal{H}$$와 $$\nabla^{GM}$$의 intrinsic 데이터이다.
+이 system의 explicit 행렬 형태와 fundamental solution matrix는 [§Givental J-function과 Mirror Theorem, ⁋명제 3](/ko/math/mirror_symmetry/givental_j_function#prop3)에서, A-side quantum cohomology $$D$$-module과의 비교(mirror theorem)는 같은 글의 [명제 4](/ko/math/mirror_symmetry/givental_j_function#prop4)에서 다룬다.
 
 ## Mirror theorem과 $$J$$-function의 복원
 

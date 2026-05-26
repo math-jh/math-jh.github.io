@@ -59,7 +59,7 @@ weight: 2
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-처음 두 주장은 [§가환군과 체, ⁋명제 6](/ko/math/linear_algebra/fields#prop6)과 비슷하게 진행하면 된다. 예를 들어, 
+처음 두 주장은 [§가환군과 체, ⁋명제 5](/ko/math/linear_algebra/fields#prop5)과 비슷하게 진행하면 된다. 예를 들어, 
 
 $$\alpha0+\alpha0=\alpha(0+0)=\alpha0$$
 

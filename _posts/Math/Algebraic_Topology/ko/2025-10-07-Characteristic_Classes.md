@@ -62,7 +62,7 @@ $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> Trivial bundle이 아닌 예시로는 뫼비우스 띠의 orientation double cover가 있다. 한편 [§푸앵카레 쌍대성, ⁋예시 3](/ko/math/algebraic_topology/Poincare_duality#ex3)에서 우리는 $$S^1$$의 non-trivial cover또한 생각했었는데, 이는 다음과 같이 기하학적으로 일반화할 수 있다. 
+<ins id="ex3">**예시 3**</ins> Trivial bundle이 아닌 예시로는 뫼비우스 띠의 orientation double cover가 있다. 한편 [§푸앵카레 쌍대성, ⁋예시 5](/ko/math/algebraic_topology/Poincare_duality#ex5)에서 우리는 $$S^1$$의 non-trivial cover또한 생각했었는데, 이는 다음과 같이 기하학적으로 일반화할 수 있다. 
 
 $$n+1$$차원 벡터공간 $$\mathbb{R}^{n+1}$$에 대하여, 원점을 지나는 직선들의 공간을 우리는 *projective $$n$$-space*라 부르고 $$\RP^n$$으로 표기한다. 원점을 지나는 직선 위의 점들 중, 원점까지의 거리가 $$1$$인 두 점은 같은 직선을 지정하므로, 우리는 이를 unit $$n$$-sphere $$S^n$$ 위의 antipodal point들을 identify하여 얻어지는 quotient space로 생각할 수 있다. 
 
@@ -148,7 +148,7 @@ $$g_{ij}\cdot g_{jk}\cdot g_{ki}=\id$$
 
 을 만족해야 하며, 만일 이 조건이 없다면 triple intersection $$U_i\cap U_j\cap U_k$$에서, $$U_i$$의 local trivialization을 $$g_{ij}$$를 통해 $$U_j$$로, 이를 다시 $$g_{jk}$$를 통해 $$U_k$$로, 이를 다시 $$g_{ki}$$를 통해 $$U_i$$로 가져왔을 때 trivialization이 달라져 있겠지만 실제로는 그렇지 않다는 것을 의미한다. 그럼 transition function들 $$g_{ij}$$들은 Čech 1-cochain들이 되며, 따라서 local trivialization $$U_i\rightarrow \GL(n;\mathbb{R})$$을 고정하면 rank $$n$$ vector bundle들의 isomorphism class들과 $$1$$-cochain들 사이의 일대일 대응이 있는 것을 안다. 즉, open cover $$U$$ 위에서 trivializable한 rank $$n$$ vector bundle들의 isomorphism class들과 $$\check{H}^1(\mathcal{U}, \GL(n;\mathbb{R}))$$ 사이의 일대일 대응이 있다.
 
-앞서 우리는 [§푸앵카레 쌍대성, ⁋명제 4](/ko/math/algebraic_topology/Poincare_duality#prop4)에서 manifold $$M$$의 $$A$$-orientability가 다음의 group homomorphism
+앞서 우리는 [§푸앵카레 쌍대성, ⁋명제 7](/ko/math/algebraic_topology/Poincare_duality#prop7)에서 manifold $$M$$의 $$A$$-orientability가 다음의 group homomorphism
 
 $$\pi_1(M,x)\rightarrow A^\times$$
 

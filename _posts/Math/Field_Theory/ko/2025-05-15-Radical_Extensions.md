@@ -91,7 +91,7 @@ $$\mathbb{L}_n=\{x\in \mathbb{L}\mid\text{$x$ is $p$-radical of height $\leq n$}
 
 이에 대한 증명은 본질적으로 자명하다.
 
-앞선 글에서 우리는 임의의 field $$\mathbb{K}$$는 algebraic closure $$\overline{\mathbb{K}}$$를 갖는다는 것을 보았다. 따라서 [명제 5](#prop5)에서 $$\mathbb{L}=\overline{\mathbb{K}}$$로 둘 수 있다. 그럼 $$\overline{\mathbb{K}}$$는 perfect field이며, 뿐만 아니라 각각의 $$n$$에 대하여 $$\overline{\mathbb{K}}_n$$은 정확히 $$\mathbb{K}^{p^{-n}}$$과 같음을 안다. 이 상황에서의 (relative) $$p$$-radical closure를 $$\mathbb{K}^{p^{-\infty}}$$라 적자. 이는 정확히 [§체, ⁋정리 15](/ko/math/field_theory/fields#prop15)와 같은 것이다. 만일 $$\mathbb{K}$$가 imperfect라면, 즉 $$\mathbb{K}\neq \mathbb{K}^p$$라면 위의 ascending sequence는 strictly increasing이며, 따라서 $$\mathbb{K}^{p^{-\infty}}/\mathbb{K}$$는 infinite degree의 extension이 된다. 
+앞선 글에서 우리는 임의의 field $$\mathbb{K}$$는 algebraic closure $$\overline{\mathbb{K}}$$를 갖는다는 것을 보았다. 따라서 [명제 5](#prop5)에서 $$\mathbb{L}=\overline{\mathbb{K}}$$로 둘 수 있다. 그럼 $$\overline{\mathbb{K}}$$는 perfect field이며, 뿐만 아니라 각각의 $$n$$에 대하여 $$\overline{\mathbb{K}}_n$$은 정확히 $$\mathbb{K}^{p^{-n}}$$과 같음을 안다. 이 상황에서의 (relative) $$p$$-radical closure를 $$\mathbb{K}^{p^{-\infty}}$$라 적자. 이는 정확히 [§체, ⁋정리 15](/ko/math/field_theory/fields#thm15)와 같은 것이다. 만일 $$\mathbb{K}$$가 imperfect라면, 즉 $$\mathbb{K}\neq \mathbb{K}^p$$라면 위의 ascending sequence는 strictly increasing이며, 따라서 $$\mathbb{K}^{p^{-\infty}}/\mathbb{K}$$는 infinite degree의 extension이 된다. 
 
 한편 다음이 성립한다. 
 

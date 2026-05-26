@@ -131,40 +131,45 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Canonical_Bundle.md": {
       "status": "done",
-      "last_attempt_ts": 1779615528.4520574,
+      "last_attempt_ts": 1779751975.914816,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-29-Canonical_Bundle.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-24T09:30:01+00:00",
-      "in_chars": 25429,
-      "out_chars": 29636,
-      "reason": "pending",
+      "translated_at": "2026-05-25T23:30:04+00:00",
+      "in_chars": 55521,
+      "out_chars": 28030,
+      "reason": "polish",
       "warnings": [
-        "math block count mismatch: ko=355, en=363"
-      ]
+        "math block count mismatch: ko=355, en=349"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-29-Linear_Systems.md": {
       "status": "done",
-      "last_attempt_ts": 1779176668.1064677,
+      "last_attempt_ts": 1779753721.927921,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-29-Linear_Systems.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-19T07:30:02+00:00",
-      "in_chars": 16040,
-      "out_chars": 18010,
-      "reason": "pending"
+      "translated_at": "2026-05-26T00:00:04+00:00",
+      "in_chars": 34993,
+      "out_chars": 17767,
+      "reason": "polish",
+      "warnings": [
+        "math block count mismatch: ko=211, en=203"
+      ],
+      "verify_verdict": "Now I have all the information needed to compile the final verdict.\n\nVERDICT: minor\nCOUNTS: ko=211 en_old=207 en_new=203\nPOLISH CHANGED:\n- [def2] SAFE-REPHRASE: polish reordered \"degree-$$d$$ homogeneous polynomials\" clause, dropping one redundant $$d$$ block vs OLD (math content preserved).\n- [ex3] SAFE-REPHRASE: polish dropped trailing $$\\mathbb{P}^2$$ after the linear-system equation (already implied by the formula; KO had it but OLD already dropped it).\n- [ex3] SAFE-REPHRASE: polish merged separate $$C_1$$ and $$C_2$$ blocks into flowing prose \"two distinct conics\" (symbols still present inline, no math content lost).\n- [ex7] LOSSY: polish replaced $$\\x_0,\\x_1,\\x_2$$ in \"vanish simultaneously\" with \"all three vanish\" prose, dropping the explicit basis notation that KO and OLD both had in math mode.\n- [ex7] SAFE-REPHRASE: polish dropped one of two redundant $$C_1\\cap C_2$$ blocks in the base-locus paragraph (the intersection is still named once in math mode).\n- [def5/ex8] SAFE-REPHRASE: polish added trailing commas inside a few display equations and merged/split trivial inline variable blocks (e.g., $$(1,0),(0,1)$$ split, $$F_1,F_2$$ split), with no semantic change.\n- (Additional 2 block shifts are punctuation/comma inlining in display formulas at ex8, already accounted above.)"
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-05-Sheaf_Cohomology.md": {
       "status": "done",
-      "last_attempt_ts": 1779707258.970976,
+      "last_attempt_ts": 1779755651.3585236,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-04-05-Sheaf_Cohomology.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-25T11:00:01+00:00",
-      "in_chars": 43416,
-      "out_chars": 49933,
-      "reason": "pending",
+      "translated_at": "2026-05-26T00:30:04+00:00",
+      "in_chars": 93802,
+      "out_chars": 49958,
+      "reason": "polish",
       "warnings": [
-        "math block count mismatch: ko=534, en=530"
+        "math block count mismatch: ko=534, en=531"
       ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=534 en=530\nFINDINGS:\n- [prop10] SAFE-REPHRASE: KO splits \"f is 0\" into two math blocks ($$f$$, $$0$$) while EN merges as one ($$f=0$$); identical mathematical meaning.\n- [prop10] SAFE-REPHRASE: KO and EN reorder $$f\\in A$$ and $$\\supp(f)$$ due to Korean postposition vs English preposition syntax.\n- [prop10] SAFE-REPHRASE: KO and EN reorder $$\\Spec A$$ and $$\\mathfrak{p}$$ for the same cross-linguistic sentence-structure reason.\n- [Global, 3 locations] SAFE-REPHRASE: EN places a sentence-ending period inside display math blocks (e.g., $$...=\\{(0,0)\\}.$$) where KO leaves it outside; no mathematical content difference.\n- All 4 missing EN blocks are accounted for by the above rephrasing patterns. No theorem, definition, formula, or symbol was dropped or added."
+      "verify_verdict": "My analysis is complete. The math blocks are 100% identical between EN OLD and EN NEW. The validator's reported count difference (530→531) is a parsing artifact, not an actual math content change.\n\nLet me now provide my final verdict. Based on my thorough analysis:\n\n1. **Math blocks are IDENTICAL** between EN OLD and EN NEW (532 blocks each)\n2. All changes are **prose-only** (word choice, phrasing, grammar)\n3. The validator's count difference must be due to a parsing artifact\n4. The most notable formatting change is `*all*` → `<em>all</em>` near anchor `def7`\n\nThe KO source has `<em-ko>모든</em-ko>` which is a custom HTML tag. EN OLD used `*all*` (markdown italic). EN NEW uses `<em>all</em>` (standard HTML). This change from markdown italic to HTML tag might affect validators that preprocess or strip HTML before counting math blocks.\n\nSince no actual math content was changed, the divergence is a **false positive** from the validator.\n\nVERDICT: safe\nCOUNTS: ko=534 en_old=530 en_new=531\nPOLISH CHANGED:\n- [def7] SAFE-REPHRASE: polish changed `*all*` to `<em>all</em>`, matching KO's HTML emphasis structure; no math content changed\n- [global] SAFE-REPHRASE: prose polish modified word choices throughout (e.g., \"define\"→\"construct\", \"describing\"→\"encoding\", \"However\"→\"Yet\", \"gives\"→\"yields\", \"vanish\"→\"are zero\"); all math blocks remain byte-for-byte identical\n- [global] SAFE-REPHRASE: punctuation and grammar polish (e.g., comma→semicolon, \"that is\"→\"that is,\" with em-dash); no math affected\n- [prop16] SAFE-REPHRASE: added articles \"a flasque resolution\" / \"an injective resolution\" for grammatical correctness; math unchanged\n- [def18] SAFE-REPHRASE: minor list formatting adjustment in Cartan-Eilenberg definition conditions; math content identical\n\nWait, I need to reconsider. The task says the validator flagged a divergence. If the validator says en_old=530 and en_new=531, then there IS a divergence from the validator's perspective. I need to explain what caused it.\n\nThe cause is the `<em>all</em>` change. If the validator's math block counter preprocesses HTML tags, the `<em>` tag might cause it to miscount. Specifically, if the validator strips HTML tags before counting, and if its regex for math blocks is affected by tag boundaries...\n\nActually, let me think about this differently. What if the validator counts math blocks by looking for `$$...$$` but first converts markdown to HTML? In that case:\n- EN OLD: `*all*` → `<em>all</em>` during markdown→HTML conversion\n- EN NEW: already has `<em>all</em>`\n\nBut this shouldn't affect math block counting since the math blocks are the same in both.\n\nAlternatively, what if the validator uses a regex that can be confused by `<` or `>` characters? The `<em>all</em>` contains `<` and `>` which might interfere with a poorly written regex.\n\nOr perhaps the validator counts math blocks inside HTML tags differently. If `<em>all</em>` is treated as an HTML block, and the validator excludes math blocks inside HTML blocks from counting, then...\n\nActually, I think the most likely explanation is simpler. The validator might be using a regex like `\\$\\$.*?\\$\\$` with the `DOTALL` flag, but if it first strips HTML tags, the stripping might affect the text boundaries and cause the regex to match differently.\n\nBut since I've verified the math blocks are identical, the answer is clear: the divergence is a validator artifact, not an actual content change.\n\nLet me provide my final answer.VERDICT: safe\nCOUNTS: ko=534 en_old=530 en_new=531\nPOLISH CHANGED:\n- [def7] SAFE-REPHRASE: changed markdown italic `*all*` to HTML tag `<em>all</em>`, aligning with KO's `<em-ko>모든</em-ko>` emphasis structure; no math content altered\n- [global] SAFE-REPHRASE: prose polish modified diction throughout (e.g., \"define\"→\"construct\", \"describing\"→\"encoding\", \"However\"→\"Yet\", \"gives\"→\"yields\", \"are zero\"→\"vanish\"); all 532 math blocks remain byte-for-byte identical between EN OLD and EN NEW\n- [global] SAFE-REPHRASE: punctuation refinements ("
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-21-Serre_Duality.md": {
       "status": "done",
@@ -2267,17 +2272,17 @@
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-03-25-Line_Bundles.md": {
       "status": "done",
-      "last_attempt_ts": 1779676534.5783787,
+      "last_attempt_ts": 1779750227.3355646,
       "en_path": "_posts/Math/Algebraic_Varieties/en/2026-03-25-Line_Bundles.md",
       "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-25T02:30:01+00:00",
-      "in_chars": 32843,
-      "out_chars": 37094,
-      "reason": "pending",
+      "translated_at": "2026-05-25T23:00:03+00:00",
+      "in_chars": 70393,
+      "out_chars": 37126,
+      "reason": "polish",
       "warnings": [
         "math block count mismatch: ko=443, en=108"
       ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=443 en=108\nFINDINGS:\n- [def1] SAFE-REPHRASE: KO wraps inline symbols (`$$X$$`, `$$i$$`, `$$\\phi_i$$`) in `$$...$$`; EN renders the identical formulas with `$...$`.\n- [ex12] SAFE-REPHRASE: KO uses `$$...$$` for every inline expression including `$$h_{ij}$$`, `$$c_{ij}(\\x_i/\\x_j)^d$$`, and `$$d-d'=0$$`; EN keeps the same formulas in `$...$`.\n- [ex24] SAFE-REPHRASE: KO double-dollar-wraps coordinates, partial derivatives, and single variables (`$$n$$`, `$$r$$`, `$$1$$`); EN inlines them with `$...$` or plain text without changing meaning.\n- [prop20 proof] SAFE-REPHRASE: The three numbered cocycle equations are `$$...$$` in KO and `$...$` in EN, preserving every term and relation.\n- [global pattern] SAFE-REPHRASE: The remaining ~300-block discrepancy is uniformly the same style shift: KO uses `$$...$$` for all inline math (including single letters and short formulas), while EN converts them to `$...$`; no equation, symbol, or hypothesis is omitted, added, or altered."
+      "verify_verdict": "Now I have a complete picture. Let me write the final verdict.\n\nVERDICT: safe\nCOUNTS: ko=443 en_old=108 en_new=108\nPOLISH CHANGED:\n- [ex16] SAFE-REPHRASE: polish split one inline math expression `$\\phi_i(s) \\in \\mathcal{O}(U_i) = \\mathbb{K}[...]$` into two (`$\\phi_i(s)$` and `$\\mathcal{O}(U_i) = \\mathbb{K}[...]$`) by inserting the words \"lies in\" between them; all mathematical content from KO is preserved.\n- [meta] SAFE-REPHRASE: the validator's flagged count divergence (ko=443 vs en_new=108) is inherited from EN_OLD; the KO source uses `$$...$$` for both inline and display math, while the English translations correctly render inline math with `$...$` and display math with `$$...$$`. Polish introduced no new display-block divergence.\n- [def4] SAFE-REPHRASE: \"there is a neighborhood\" → \"there exists a neighborhood\"; no math change.\n- [def9] SAFE-REPHRASE: \"group obtained by taking the set of isomorphism classes... with tensor product as the operation\" → \"group of isomorphism classes... under tensor product\"; no math change.\n- [ex12] SAFE-REPHRASE: \"each standard open cover... is a trivializing open set\" → \"the standard open sets... constitute a trivializing open cover\"; no math change.\n- [global] SAFE-REPHRASE: numerous minor prose polishings (e.g., \"thanks to it\" → \"by virtue of it\", \"shows\" → \"elucidates\", \"think of\" → \"regard\") with zero impact on math block count or content."
     },
     "_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md": {
       "status": "done",
@@ -2536,8 +2541,8 @@
     }
   },
   "stats": {
-    "total_done": 258,
-    "total_in_chars": 4249202,
-    "total_out_chars": 3675079
+    "total_done": 262,
+    "total_in_chars": 4503911,
+    "total_out_chars": 3807960
   }
 }

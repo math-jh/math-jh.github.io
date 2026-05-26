@@ -155,7 +155,7 @@ The key point of the proof is that a morphism is represented locally by homogene
 
 </div>
 
-This is essentially [§Affine Varieties, ⁋Proposition 15](/en/math/algebraic_varieties/affine_varieties#prop15).
+This is essentially [§Affine Varieties, ⁋Definition 15](/en/math/algebraic_varieties/affine_varieties#def15).
 
 ## Properties of Regular Maps
 

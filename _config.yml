@@ -26,7 +26,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "K"
 description              : "수학쟁이의 낙서장"
-description_en           : "A mathematician's notebook — lecture notes, definitions, and proofs across algebra, geometry, topology, and related fields."
+description_en           : "Some notes across algebra, geometry, topology, and related fields."
 url                      : "https://math-jh.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "math-jh/math-jh.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -71,9 +71,9 @@ search_provider          : lunr # lunr (default), algolia, google
 lunr:
   search_within_pages    : true # true, false (default)
 algolia:
-  application_id         : 919RU1KVX3 # YOUR_APPLICATION_ID
-  index_name             : math-jh_blog # YOUR_INDEX_NAME
-  search_only_api_key    : cf2a0afdacacf7bc3328a49c5f755203 # YOUR_SEARCH_ONLY_API_KEY
+  application_id         :  # YOUR_APPLICATION_ID
+  index_name             :  # YOUR_INDEX_NAME
+  search_only_api_key    :  # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : false # true (default), false
   files_to_exclude       : 
     - _pages/ko/Index_ko.md

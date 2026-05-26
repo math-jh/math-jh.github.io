@@ -157,7 +157,7 @@ $$\Spe(\mathscr{F})=\coprod_{x\in X} \mathscr{F}_x=\{(x,\xi)\mid x\in X, \xi\in 
  
 $$\tilde{s}:U \rightarrow \Spe(\mathscr{F}); \quad x\mapsto (x,s_x)$$
 
-이 존재한다. 이제 우리는 $$\Spe(\mathscr{F})$$에 이들 함수들의 family가 정의하는 final topology를 부여하고 ([§Initial topology와 final topology, ⁋정의 4](/ko/math/topology/initial_and_final_topology#def6)) 이 공간을 $$\mathscr{F}$$의 *étalé space*라 부른다.
+이 존재한다. 이제 우리는 $$\Spe(\mathscr{F})$$에 이들 함수들의 family가 정의하는 final topology를 부여하고 ([§Initial topology와 final topology, ⁋정의 4](/ko/math/topology/initial_and_final_topology#def4)) 이 공간을 $$\mathscr{F}$$의 *étalé space*라 부른다.
 
 ## 준층들 사이의 사상
 

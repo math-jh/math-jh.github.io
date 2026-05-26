@@ -202,7 +202,7 @@ holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-One direction is obvious, and conversely, if $$a\not\in \sqrt{\mathfrak{a}}$$ then setting $$S=\{a^k\mid k\geq 1\}$$ and applying [§Localization, ⁋Proposition 10](/en/math/commutative_algebra/localization#prop10) suffices.
+One direction is obvious, and conversely, if $$a\not\in \sqrt{\mathfrak{a}}$$ then setting $$S=\{a^k\mid k\geq 1\}$$ and applying [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) suffices.
 
 </details>
 

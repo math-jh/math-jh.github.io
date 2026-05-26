@@ -196,7 +196,7 @@ $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 
 </div>
 
-특별히 모든 $$n\times n$$ 행사다리꼴행렬은 모두 상삼각행렬이다. ([§가우스 소거법, ⁋정의 2](/ko/math/linear_algebra/Gaussian_elimination#def2))
+특별히 모든 $$n\times n$$ 행사다리꼴행렬은 모두 상삼각행렬이다. ([§가우스 소거법, ⁋정의 4](/ko/math/linear_algebra/Gaussian_elimination#def4))
 
 
 <div class="proposition" markdown="1">
