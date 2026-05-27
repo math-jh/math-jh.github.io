@@ -5,8 +5,10 @@
 {% endif %}
 
 <div class="search-content__inner-wrap">
-  {%- assign search_provider = site.search_provider | default: "lunr" -%}
+  {%- assign search_provider = site.search_provider | default: "pagefind" -%}
   {%- case search_provider -%}
+  {%- when "pagefind" -%}
+  <div id="pagefind-search-popup" class="pagefind-mount"></div>
   {%- when "lunr" -%}
   <form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">

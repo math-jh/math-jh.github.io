@@ -23,11 +23,15 @@ _site/
 
 # Bundler
 .bundle/
+vendor/
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
+
+# Node
+node_modules/
 
 # Claude Code local config
 .claude/

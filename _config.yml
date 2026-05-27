@@ -67,7 +67,7 @@ atom_feed:
   hide                   : # true, false (default)
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
-search_provider          : lunr # lunr (default), algolia, google
+search_provider          : pagefind # pagefind (default), lunr, algolia, google
 lunr:
   search_within_pages    : true # true, false (default)
 algolia:
@@ -216,7 +216,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-  math_engine: katex
 
 # Sass/SCSS
 sass:

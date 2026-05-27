@@ -1,0 +1,11 @@
+{
+  "name": "math-jh-blog",
+  "private": true,
+  "description": "Build-time tooling for math-jh.github.io (Pagefind search indexing).",
+  "scripts": {
+    "pagefind": "pagefind --site _site"
+  },
+  "devDependencies": {
+    "pagefind": "^1.4.0"
+  }
+}

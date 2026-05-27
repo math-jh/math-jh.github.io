@@ -28,8 +28,10 @@ layout: default
 
     {{ content }}
 
-    {%- assign search_provider = site.search_provider | default: "lunr" -%}
+    {%- assign search_provider = site.search_provider | default: "pagefind" -%}
     {%- case search_provider -%}
+      {%- when "pagefind" -%}
+        <div id="pagefind-search-page" class="pagefind-mount"></div>
       {%- when "lunr" -%}
         <input type="text" id="search" class="search-input" placeholder="{{ site.data.ui-text[lang].search_placeholder_text | default: 'Enter your search term...' }}" />
         <div id="results" class="results"></div>
