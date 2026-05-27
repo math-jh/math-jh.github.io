@@ -113,7 +113,7 @@ $$\{\id_\mathbb{L}\}=\bigcap_{\mathbb{M}\in \Lambda'}U_\mathbb{M}(\id_\mathbb{L}
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $$\sigma\in \Gal(\mathbb{L}/\mathbb{K})$$이 주어졌다 하자. 만일 $$\sigma\neq\id_\mathbb{L}$$이라면 $$\sigma(x)\neq x$$이도록 하는 $$x\in \mathbb{L}$$이 존재한다. 그럼 $$\mathbb{M}\mathbb{K}(x)$$으로 잡으면 $$\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$$이 성립한다. 이제 앞서 살펴본 것과 같이 $$\Lambda'$$이 $$\Lambda$$의 cofinal subset이므로 원하는 결과를 얻는다.
+임의의 $$\sigma\in \Gal(\mathbb{L}/\mathbb{K})$$이 주어졌다 하자. 만일 $$\sigma\neq\id_\mathbb{L}$$이라면 $$\sigma(x)\neq x$$이도록 하는 $$x\in \mathbb{L}$$이 존재한다. 그럼 $$\mathbb{M}=\mathbb{K}(x)$$으로 잡으면 $$\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$$이 성립한다. 이제 앞서 살펴본 것과 같이 $$\Lambda'$$이 $$\Lambda$$의 cofinal subset이므로 원하는 결과를 얻는다.
 
 </details>
 
@@ -153,7 +153,7 @@ $$i\leq j \iff \mathbb{L}_i\subset \mathbb{L}_j$$
 
 $$\rho_{ij}:\Gal(\mathbb{L}_j/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_i/\mathbb{K})\qquad \text{whenever $i\leq j$}$$
 
-을 정의할 수 있다. 그럼 이들은 contunuous homomorphism이며, 따라서 이들의 inverse limit
+을 정의할 수 있다. 그럼 이들은 continuous homomorphism이며, 따라서 이들의 inverse limit
 
 $$\varprojlim_{i\in I}\Gal(\mathbb{L}_i/\mathbb{K})$$
 
@@ -173,7 +173,7 @@ $$\lambda_i:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 3](#prop3)에 의하여 $$\Gal(\mathbb{L}_i/\mathbb{K})$$이 Hausdorff이며, Hausdorff space의 곱과 부분공간은 다시 Hausdorff이므로 이들의 inverse limit $$\varprojlim \Gal9\mathbb{L}_i/\mathbb{K})$$ 또한 Hausdorff이다. 한편 [명제 4](#prop4)에서 $$\Gal(\mathbb{L}/\mathbb{K})$$이 compact이므로, [\[위상수학\] §옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9)에 의하여 주장은 $$\lambda$$가 전단사임만 보이면 충분하미, 이는 $$\mathbb{L}= \bigcup \mathbb{L}_i$$로부터 거의 자명하다.
+[명제 3](#prop3)에 의하여 $$\Gal(\mathbb{L}_i/\mathbb{K})$$이 Hausdorff이며, Hausdorff space의 곱과 부분공간은 다시 Hausdorff이므로 이들의 inverse limit $$\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})$$ 또한 Hausdorff이다. 한편 [명제 4](#prop4)에서 $$\Gal(\mathbb{L}/\mathbb{K})$$이 compact이므로, [\[위상수학\] §옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9)에 의하여 주장은 $$\lambda$$가 전단사임만 보이면 충분하며, 이는 $$\mathbb{L}= \bigcup \mathbb{L}_i$$로부터 거의 자명하다.
 
 </details>
 

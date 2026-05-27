@@ -338,7 +338,7 @@ is a local homomorphism. But $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q}
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**Definition 10**</ins> We define the essential image of the functor $$\Spec:\cRing^\op \rightarrow \LRS$$ from [Proposition 8](#prop8) as the *affine scheme*.
+<ins id="def10">**Definition 10**</ins> We define the essential image of the functor $$\Spec:\cRing^\op \rightarrow \LRS$$ from [Proposition 9](#prop9) as the *affine scheme*.
 
 </div>
 

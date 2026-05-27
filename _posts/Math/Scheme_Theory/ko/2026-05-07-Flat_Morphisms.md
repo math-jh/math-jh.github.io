@@ -17,7 +17,7 @@ weight: 10
 
 ---
 
-대수기하학에서 모양들의 family를 다룰 때, 우리는 기저 위의 점이 변함에 따라 fiber가 "연속적으로" 변하기를 기대한다. 그러나 단순히 사상의 연속성만으로는 이 직관을 포착하기에 부족하다. 예를 들어 기저의 한 점에서 fiber의 차원이 갑자기 뛰거나, 특이점의 개수가 달라지는 등의 비연속적인 변화가 일어날 수 있다. 이러한 현상을 배제하고 fiber들이 일정한 대수적·기하학적 성질을 유지하도록 하는 개념이 바로 **평탄성**(flatness)이다. 본 글에서는 먼저 가환대수학적 맥락에서 평탄 가군을 정의한 뒤, 이를 바탕으로 [§스킴](/ko/math/scheme_theory/schemes) 사이의 평탄 사상을 소개하고 그 기하학적 의미와 판정법, 예시들을 살편본다.
+대수기하학에서 모양들의 family를 다룰 때, 우리는 기저 위의 점이 변함에 따라 fiber가 "연속적으로" 변하기를 기대한다. 그러나 단순히 사상의 연속성만으로는 이 직관을 포착하기에 부족하다. 예를 들어 기저의 한 점에서 fiber의 차원이 갑자기 뛰거나, 특이점의 개수가 달라지는 등의 비연속적인 변화가 일어날 수 있다. 이러한 현상을 배제하고 fiber들이 일정한 대수적·기하학적 성질을 유지하도록 하는 개념이 바로 **평탄성**(flatness)이다. 본 글에서는 먼저 가환대수학적 맥락에서 평탄 가군을 정의한 뒤, 이를 바탕으로 [§스킴](/ko/math/scheme_theory/schemes) 사이의 평탄 사상을 소개하고 그 기하학적 의미와 판정법, 예시들을 살펴본다.
 
 ## 평탄 가군
 
@@ -113,8 +113,7 @@ $$f: X \to Y$$가 매끄러운 사상이라 하자. 매끄러움은 locally of f
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-아이디얼 $$I$$에 대하여, $$M$$이 $$A$$-평탄임을 보이기 위해 $$\operatorname{Tor}_1^A(M, N) = 0$$이 임의의 유한생성 $$A$$-가군 $$N$$에 대해 성립함을 보인다. $$N$$에 대한 필tration을 사용하여, 귀납적으로 $$N = A/\mathfrak{p}$$인 소아이디얼 $$
-\mathfrak{p}$$에 대한 경우만 확인하면 충분하다. 국소 판정법의 표준적인 증명은 $$I$$-adic 완비화와 Artin-Rees 보조정리를 사용하여, $$M$$의 완비화가 평탄임을 보이고 이로부터 $$M$$ 자체의 평탄성을 유도한다. 자세한 내용은 [\[가환대수학\] §평탄성과 국소화, ⁋정의 4](/ko/math/commutative_algebra/local_criterion_for_flatness#def4)를 참고하라.
+아이디얼 $$I$$에 대하여, $$M$$이 $$A$$-평탄임을 보이기 위해 $$\operatorname{Tor}_1^A(M, N) = 0$$이 임의의 유한생성 $$A$$-가군 $$N$$에 대해 성립함을 보인다. $$N$$에 대한 filtration을 사용하여, 귀납적으로 $$N = A/\mathfrak{p}$$인 소아이디얼 $$\mathfrak{p}$$에 대한 경우만 확인하면 충분하다. 국소 판정법의 표준적인 증명은 $$I$$-adic 완비화와 Artin-Rees 보조정리를 사용하여, $$M$$의 완비화가 평탄임을 보이고 이로부터 $$M$$ 자체의 평탄성을 유도한다. 자세한 내용은 [\[가환대수학\] §평탄성과 국소화, ⁋정의 4](/ko/math/commutative_algebra/local_criterion_for_flatness#def4)를 참고하라.
 
 </details>
 
@@ -172,7 +171,7 @@ $$X = \operatorname{Spec} k[t, x, y]/(y^2 - x^3 - t) \longrightarrow \mathbb{A}_
 
 $$\operatorname{Spec} k[t, x, y]/(xy - t) \longrightarrow \mathbb{A}_k^1$$
 
-역시 $$t = 0$$에서 평탄하지 않다. $$t \neq 0$$일 때는 fiber가 두 개의 교차하는 직선이지만, $$t = 0$$에서는 이중원 $$xy = 0$$가 되어 위상적으로 다른 형태를 띤다.
+역시 $$t = 0$$에서 평탄하지 않다. $$t \neq 0$$일 때는 fiber가 두 개의 교차하는 직선이지만, $$t = 0$$에서는 노드(node) $$xy = 0$$가 되어 위상적으로 다른 형태를 띤다.
 
 </div>
 
@@ -182,7 +181,7 @@ $$\operatorname{Spec} k[t, x, y]/(xy - t) \longrightarrow \mathbb{A}_k^1$$
 
 $$F: X \longrightarrow X$$
 
-은 구조층 위에서 $$p$$제곱사상 $$a \mapsto a^p$$을 유도한다. 이 사상은 일반적으로 평탄하지 않다. Kunz의 정리에 의해, $$X$$가 정칙(regular)인 것과 $$F$$가 평탄인 것이 동치이다. 따라서 $$X$$가 특이점을 가지면 Frobenius 사상은 평탄이 아니다. 예를 들어 $$X = \operatorname{Spec} k[x, y]/(xy)$$는 이중원(node)이며, 이 점에서 Frobenius는 평탄하지 않다.
+은 구조층 위에서 $$p$$제곱사상 $$a \mapsto a^p$$을 유도한다. 이 사상은 일반적으로 평탄하지 않다. Kunz의 정리에 의해, $$X$$가 정칙(regular)인 것과 $$F$$가 평탄인 것이 동치이다. 따라서 $$X$$가 특이점을 가지면 Frobenius 사상은 평탄이 아니다. 예를 들어 $$X = \operatorname{Spec} k[x, y]/(xy)$$는 노드(node)이며, 이 점에서 Frobenius는 평탄하지 않다.
 
 </div>
 

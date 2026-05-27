@@ -35,13 +35,13 @@ $$U\subseteq f^{-1}(f(U))\subseteq f^{-1}(V)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> 두 위상공간 $$X,Y$$ 사이의 함수 $$f:X\rightarrow Y$$가 점 $$x$$에서 연속이라 하자. 만일 어떠한 $$A\subseteq X$$에 대하여 $$x\in\cl(A)$$라면, $$f(x)\in\cl(A)$$이다.
+<ins id="prop2">**명제 2**</ins> 두 위상공간 $$X,Y$$ 사이의 함수 $$f:X\rightarrow Y$$가 점 $$x$$에서 연속이라 하자. 만일 어떠한 $$A\subseteq X$$에 대하여 $$x\in\cl(A)$$라면, $$f(x)\in\cl(f(A))$$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$f(x)\in Y$$의 임의의 근방 $$V$$를 택하자. 그럼 $$f^{-1}(V)$$는 $$x$$의 근방이므로 $$f^{-1}(V)\cap A\neq\emptyset$$이고 ([§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)), $$x'\in f^{-1}(V)\cap A$$라 하면 $$f(x')\in V\cap f(A)$$이다. 특히 $$V\cap f(A)\neq\emptyset$$이므로, 다시 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)를 적용하면 $$f(x)\in\cl(A)$$임을 안다.
+$$f(x)\in Y$$의 임의의 근방 $$V$$를 택하자. 그럼 $$f^{-1}(V)$$는 $$x$$의 근방이므로 $$f^{-1}(V)\cap A\neq\emptyset$$이고 ([§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)), $$x'\in f^{-1}(V)\cap A$$라 하면 $$f(x')\in V\cap f(A)$$이다. 특히 $$V\cap f(A)\neq\emptyset$$이므로, 다시 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)를 적용하면 $$f(x)\in\cl(f(A))$$임을 안다.
 
 </details>
 
@@ -83,7 +83,7 @@ $$\cl(f^{-1}(C))\subseteq f^{-1}(f(\cl(f^{-1}(C)))\subseteq f^{-1}(C)$$
 
 로부터 $$f^{-1}(C)$$가 닫힌집합이라는 것을 안다. 식 $$(f^{-1}(A))^c=f^{-1}(A^c)$$가 임의의 부분집합 $$A\subseteq Y$$에 대해 성립하므로, 이로부터 넷째 조건 또한 얻어진다는 것이 자명하다. 
 
-따라서 넷째 조건을 가정하고 첫 번째 조건을 보이면 충분하다. $$x\in X$$를 임의로 택하고, $$f(x)\in Y$$의 임의의 근방 $$V$$가 주어졌다 하자. 그럼 $$f(x)\subseteq V'\subseteq V$$를 만족하는 $$f(x)$$의 <em-ko>열린근방</em-ko> $$V'$$이 존재한다. 이제 넷째 조건으로부터, $$f^{-1}(V')$$는 $$x\in X$$의 열린근방이고, $$f^{-1}(V')\subseteq f(V)$$로부터 $$f(V)$$가 $$x$$의 근방이 됨을 안다.
+따라서 넷째 조건을 가정하고 첫 번째 조건을 보이면 충분하다. $$x\in X$$를 임의로 택하고, $$f(x)\in Y$$의 임의의 근방 $$V$$가 주어졌다 하자. 그럼 $$f(x)\in V'\subseteq V$$를 만족하는 $$f(x)$$의 <em-ko>열린근방</em-ko> $$V'$$이 존재한다. 이제 넷째 조건으로부터, $$f^{-1}(V')$$는 $$x\in X$$의 열린근방이고, $$f^{-1}(V')\subseteq f(V)$$로부터 $$f(V)$$가 $$x$$의 근방이 됨을 안다.
 
 </details>
 

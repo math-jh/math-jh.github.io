@@ -52,7 +52,7 @@ is also an inner product. Also, if $$g$$ is an inner product, then $$\alpha g$$,
 
 ## Musical Isomorphism
 
-From an algebraic point of view, one of the best consequences of a non-degenerate pairing is that this pairing induces an isomorphism between $$V$$ and its dual space $$V^\ast$$. ([\[Linear Algebra\] §Bilinear Forms, §§Nondegenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#비퇴화-쌍선형형식)) Likewise, if a Riemannian metric $$g$$ is given, then $$g$$ induces an isomorphism between the two bundles $$TM$$ and $$T^\ast M$$ through the formula
+From an algebraic point of view, one of the best consequences of a non-degenerate pairing is that this pairing induces an isomorphism between $$V$$ and its dual space $$V^\ast$$. ([\[Linear Algebra\] §Bilinear Forms, §§Nondegenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms)) Likewise, if a Riemannian metric $$g$$ is given, then $$g$$ induces an isomorphism between the two bundles $$TM$$ and $$T^\ast M$$ through the formula
 
 $$\tilde{g}:T_pM\rightarrow T_p^\ast M;\qquad(p,v)\mapsto (p,\langle v,-\rangle)\tag{1}$$
 

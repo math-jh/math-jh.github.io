@@ -183,7 +183,7 @@ In particular, applying this to the one-point compactification examined earlier 
 
 <div class="proposition" markdown="1">
 
-<ins id="cor9">**Corollary 9**</ins> Let two locally compact Hausdorff spaces $$X_1, X_2$$ be given, and let their one-point compactifications $$\overline{X}_i=X\cup \{\ast_i\}$$ be given. Then $$f:X_1: X_2$$ being universally closed is equivalent to $$\overline{f}:\overline{X}_1 \rightarrow \overline{X}_2$$ defined by the formula
+<ins id="cor9">**Corollary 9**</ins> Let two locally compact Hausdorff spaces $$X_1, X_2$$ be given, and let their one-point compactifications $$\overline{X}_i=X_i\cup \{\ast_i\}$$ be given. Then $$f:X_1 \rightarrow X_2$$ being universally closed is equivalent to $$\overline{f}:\overline{X}_1 \rightarrow \overline{X}_2$$ defined by the formula
 
 $$\overline{f}(x)=\begin{cases}\ast_2&\text{if $x=\ast_1$}\\f(x)&\text{otherwise}\end{cases}$$
 

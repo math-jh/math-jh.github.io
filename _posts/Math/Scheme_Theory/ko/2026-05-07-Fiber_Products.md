@@ -41,7 +41,7 @@ weight: 11
 
 [§스킴 사이의 사상, ⁋예시 4](/ko/math/scheme_theory/morphism_of_schemes#ex4) 이후에 우리는 임의의 scheme $$X$$는 항상 유일한 방식으로 $$\mathbb{Z}$$-scheme으로 생각할 수 있다는 것을 보았다. 따라서 [정의 1](#def1)을 만족하는 fiber product $$X\times_SY$$가 항상 존재한다고 가정하면, 우리는 임의의 두 scheme $$X, Y$$에 대하여 $$X\times_{\Spec \mathbb{Z}}Y$$가 $$X$$와 $$Y$$의 product를 주는 것을 안다. 
 
-[정의 1](#def1)은 fiber product $$X\times_SY$$의 존재성에 대해서는 어떠한 것도 보장해주지 않으므로, 이것이 진짜 정의가 되기 위해서는 $$X\times_SY$$의 존재성을 별도로 증명해주어야 한다. ([정리 6](#thm6)) 그러나 특별히 $$\AffSch$$에서 fiber product의 존재성은 거의 자명하며, 이것이 우리의 증명의 시작이 될 것이다.
+[정의 1](#def1)은 fiber product $$X\times_SY$$의 존재성에 대해서는 어떠한 것도 보장해주지 않으므로, 이것이 진짜 정의가 되기 위해서는 $$X\times_SY$$의 존재성을 별도로 증명해주어야 한다. ([정리 8](#thm8)) 그러나 특별히 $$\AffSch$$에서 fiber product의 존재성은 거의 자명하며, 이것이 우리의 증명의 시작이 될 것이다.
 
 <div class="proposition" markdown="1">
 
@@ -133,7 +133,7 @@ $$\varphi^{-1}(U)$$가 fiber product의 universal property를 만족한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem7">**보조정리 7**</ins> 임의의 scheme $$X,Y,Z$$가 주어졌다 하고, scheme morphism $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y:Y \rightarrow Z$$ 그리고 aßffine scheme $$Z'$$로의 morphism $$\iota: Z \rightarrow Z'$$가 주어졌다 하자. 그럼 $$\iota\circ\varphi_X$$와 $$\iota\circ\varphi_Y$$의 fiber product $$X\times_{Z'}Y$$는 $$X\times_ZY$$의 universal property를 만족하고, 따라서 $$X\times_ZY$$가 존재한다.  
+<ins id="lem7">**보조정리 7**</ins> 임의의 scheme $$X,Y,Z$$가 주어졌다 하고, scheme morphism $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y:Y \rightarrow Z$$ 그리고 affine scheme $$Z'$$로의 morphism $$\iota: Z \rightarrow Z'$$가 주어졌다 하자. 그럼 $$\iota\circ\varphi_X$$와 $$\iota\circ\varphi_Y$$의 fiber product $$X\times_{Z'}Y$$는 $$X\times_ZY$$의 universal property를 만족하고, 따라서 $$X\times_ZY$$가 존재한다.  
 
 </div>
 

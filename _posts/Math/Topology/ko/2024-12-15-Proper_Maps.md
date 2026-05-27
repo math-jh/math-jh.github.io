@@ -186,7 +186,7 @@ $$f$$가 universally closed이므로 $$f\vert_{f^{-1}(C)}$$는 universally close
 
 <div class="proposition" markdown="1">
 
-<ins id="cor9">**따름정리 9**</ins> 두 locally compact Hausdorff space $$X_1,X_2$$가 주어졌다 하고, 이들의 one-point compactification $$\overline{X}_i=X\cup \{\ast_i\}$$가 주어졌다 하자. 그럼 $$f:X_1: X_2$$가 universally closed인 것은 다음 식
+<ins id="cor9">**따름정리 9**</ins> 두 locally compact Hausdorff space $$X_1,X_2$$가 주어졌다 하고, 이들의 one-point compactification $$\overline{X}_i=X_i\cup \{\ast_i\}$$가 주어졌다 하자. 그럼 $$f:X_1 \rightarrow X_2$$가 universally closed인 것은 다음 식
 
 $$\overline{f}(x)=\begin{cases}\ast_2&\text{if $x=\ast_1$}\\f(x)&\text{otherwise}\end{cases}$$
 

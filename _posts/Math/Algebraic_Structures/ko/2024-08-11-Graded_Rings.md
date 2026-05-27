@@ -53,7 +53,7 @@ $$\alpha=1\alpha=\sum_{i\in I} \epsilon_i\alpha\in A_j$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> 임의의 abelian group $$G$$에 대하여, $$A$$에 의해 생성되는 free ring $$F(G)$$는 $$\mathbb{N}$$-graded ring이다. 
+<ins id="ex3">**예시 3**</ins> 임의의 abelian group $$G$$에 대하여, $$G$$에 의해 생성되는 free ring $$F(G)$$는 $$\mathbb{N}$$-graded ring이다. 
 
 </div>
 

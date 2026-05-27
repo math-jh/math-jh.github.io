@@ -88,7 +88,7 @@ $$d(e)=d(e^2)=ed(e)+ed(e)=2ed(e)$$
 
 $$A\cong \mathfrak{a}\oplus\mathfrak{m}\cong \mathbb{K}\times A/\mathfrak{a}$$
 
-으로 적을 수 있다. 이제 $$\Omega$$가 right exact functor이므로 ([\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)) $$\Omega_{(A/\mathfrak{a})/\mathbb{K}}$$는 $$\Omega_{A/\mathbb{K}}=0$$의 quotient가 되어 ddd$$0$$이다. 따라서, $$A/\mathfrak{a}$$는 귀납적 가정에 의하여 diagonalizable이고, 이를 $$\mathbb{K}$$와 곱한 $$A$$ 또한 마찬가지이다. 
+으로 적을 수 있다. 이제 $$\Omega$$가 right exact functor이므로 ([\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)) $$\Omega_{(A/\mathfrak{a})/\mathbb{K}}$$는 $$\Omega_{A/\mathbb{K}}=0$$의 quotient가 되어 $$0$$이다. 따라서, $$A/\mathfrak{a}$$는 귀납적 가정에 의하여 diagonalizable이고, 이를 $$\mathbb{K}$$와 곱한 $$A$$ 또한 마찬가지이다. 
 
 </details>
 
@@ -245,9 +245,9 @@ $$1=[\mathbb{K}(a):\mathbb{K}]_s\nleq [\mathbb{K}(a):\mathbb{K}]=p^e$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-첫째 결과는 자명하므로 둘째 결과만 보이면 충분하다. 즉, $$\mathbb{L}$$의 임의의 finite degree subextension $$\mathbb{M}$$을 잡은 후 이것이 étale임을 보여야 한다. 우선 $$\mathbb{L}=\mathbb{K}(A)$$이고 $$\mathbb{M}$$이 $$\mathbb{L}$$의 finite degree subextension이므로, $$A$$의 원소 중 유한개의 $$x_1,ldots, x_m$$을 택하여
+첫째 결과는 자명하므로 둘째 결과만 보이면 충분하다. 즉, $$\mathbb{L}$$의 임의의 finite degree subextension $$\mathbb{M}$$을 잡은 후 이것이 étale임을 보여야 한다. 우선 $$\mathbb{L}=\mathbb{K}(A)$$이고 $$\mathbb{M}$$이 $$\mathbb{L}$$의 finite degree subextension이므로, $$A$$의 원소 중 유한개의 $$x_1,\ldots, x_m$$을 택하여
 
-$$\mathbb{M}\subset \mathbb{K}(x_1,\ldots, x_m)=\mathbb{K}[x_1,ldots, x_m]$$
+$$\mathbb{M}\subset \mathbb{K}(x_1,\ldots, x_m)=\mathbb{K}[x_1,\ldots, x_m]$$
 
 이도록 할 수 있다. 이 때 각각의 $$\mathbb{K}[x_i]$$들이 separable extension인 것은 $$A$$의 가정으로부터 자명하므로 이들은 étale이고, 그럼 $$\mathbb{K}[x_1,\ldots, x_m]$$은 이들의 tensor product $$\mathbb{K}[x_1]\otimes\cdots\otimes \mathbb{K}[x_n]$$을 이들의 associativity와 commutativity를 나타내는 relation으로 잘라서 얻어지고 $$\mathbb{M}$$이 이것의 subalgebra이므로 [§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14)에 의하여 $$\mathbb{M}$$이 étale이다.
 
@@ -318,7 +318,7 @@ $$\mathbb{K}_h[x]=\mathbb{M}[x]=\mathbb{L}$$
 
 따라서 이 명제의 핵심은 반대방향이다. 우선, 만일 $$\mathbb{M}/\mathbb{K}$$가 finite degree였다면 separable algebra와 étale algebra가 같은 말이므로, 주장은 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12)의 셋째 결과로부터 자명하다. 증명의 아이디어는 위와 비슷하게, $$\mathbb{M}/\mathbb{K}$$는 무한한 degree를 갖더라도 특정 원소 하나만 보면 이를 finite degree로 치환할 수 있다는 것이다.
 
-임의의 $$x\in \mathbb{M}$$이 주어졌다 하고, minimal polynomial $$f\in\mathbb{L}[\x]$$이 주어졌다 하면, $$f$$는 separable polynomial이다. 이제 $$\mathbb{L}/\mathbb{K}$$의 subextension $$\mathbb{L}'$$을, $$f$$에 등장하는 계수들을 $$\mathbb{K}$$에 넣어주어 생기는 subextension으로 정의하자. 그럼 $$\mathbb{L}'$$는 algebraic element들 유한개로 생성되므로 $$\mathbb{L}'/\mathbb{K}$$가 finite degree extension이다. 이제 $$f$$는 $$\mathbb{L}$$과 $$\mathbb{L}'$$ 모두에서 $$x$$의 minimal polynomial이고 $$\mathbb{L}$$에서 separable이므로 $$\mathbb{L}'$$에서도 separable이다. 즉 $$x$$는 extension $$\mathbb{M}/\mathbb{L}'$$의 separable element이며, $$\mathbb{M}'=\mathbb{L}'(x)$$라 하면 $$\mathbb{M}'/\mathbb{L}'$$는 finite degree separable extension, 즉 finite degree étale algebra다. 한편 $$\mathbb{L}/\mathbb{K}$$가 separable이므로 그 subextension $$\mathbb{L}'$$도 separable이고, 따라서 $$\mathbb{L}'/\mathbb{K}$$도 finite degree étale algebra다. 따라서 이들의 tower $$\mathbb{M}'/\mathbb{K}$$도 finite degree étale algebra이고, 따라서 finite degree separable extension이다. 즉 $$x$$가 $$\mathbb{K4}$$에 대한 separable element이며, $$x$$의 선택은 임의로 주어진 것이므로 원하는 결과를 얻는다. 
+임의의 $$x\in \mathbb{M}$$이 주어졌다 하고, minimal polynomial $$f\in\mathbb{L}[\x]$$이 주어졌다 하면, $$f$$는 separable polynomial이다. 이제 $$\mathbb{L}/\mathbb{K}$$의 subextension $$\mathbb{L}'$$을, $$f$$에 등장하는 계수들을 $$\mathbb{K}$$에 넣어주어 생기는 subextension으로 정의하자. 그럼 $$\mathbb{L}'$$는 algebraic element들 유한개로 생성되므로 $$\mathbb{L}'/\mathbb{K}$$가 finite degree extension이다. 이제 $$f$$는 $$\mathbb{L}$$과 $$\mathbb{L}'$$ 모두에서 $$x$$의 minimal polynomial이고 $$\mathbb{L}$$에서 separable이므로 $$\mathbb{L}'$$에서도 separable이다. 즉 $$x$$는 extension $$\mathbb{M}/\mathbb{L}'$$의 separable element이며, $$\mathbb{M}'=\mathbb{L}'(x)$$라 하면 $$\mathbb{M}'/\mathbb{L}'$$는 finite degree separable extension, 즉 finite degree étale algebra다. 한편 $$\mathbb{L}/\mathbb{K}$$가 separable이므로 그 subextension $$\mathbb{L}'$$도 separable이고, 따라서 $$\mathbb{L}'/\mathbb{K}$$도 finite degree étale algebra다. 따라서 이들의 tower $$\mathbb{M}'/\mathbb{K}$$도 finite degree étale algebra이고, 따라서 finite degree separable extension이다. 즉 $$x$$가 $$\mathbb{K}$$에 대한 separable element이며, $$x$$의 선택은 임의로 주어진 것이므로 원하는 결과를 얻는다. 
 
 </details>
 

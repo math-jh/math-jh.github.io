@@ -139,7 +139,7 @@ $$(xy)\otimes 1-1\otimes(xy)=(x\otimes 1-1\otimes x)y+x(y\otimes 1-1\otimes y).$
 
 Now let an arbitrary element $$\sum_i x_i\otimes y_i$$ of $$\mathfrak{I}$$ be given. That is, $$\sum_i x_iy_i=0$$. Then from this we obtain the formula
 
-$$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\orimes 1\right)=\sum_i x_i(1\otimes y_i-y_i\otimes 1),$$
+$$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\otimes 1\right)=\sum_i x_i(1\otimes y_i-y_i\otimes 1),$$
 
 so the second claim is also immediate.
 

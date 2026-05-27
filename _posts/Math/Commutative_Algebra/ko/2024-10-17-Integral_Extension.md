@@ -27,7 +27,7 @@ weight: 8
 
 $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
-이 존재하여 $$p(u)=0$$인 것과 동치이다.
+이 존재하여 $$p(u)=0$$을 만족한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -106,7 +106,7 @@ $$(\phi[\x](p))(\x)=\phi(a_n)\x^n+\cdots+\phi(a_0)\in E[\x]$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> Ring homomorphism $$\phi: A \rightarrow E$$와 $$E$$의 원소 $$x$$가 주어졌다 하자. 그럼 $$x$$가 $$A$$에 대해 integral인 것은, 적당한 $$E$$-module $$N$$과 $$N$$의 $$R$$-submodule $$M$$이 존재하여, $$M$$은 $$E$$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $$xM\subseteq M$$이 성립하는 것과 동치이다. 
+<ins id="lem5">**보조정리 5**</ins> Ring homomorphism $$\phi: A \rightarrow E$$와 $$E$$의 원소 $$x$$가 주어졌다 하자. 그럼 $$x$$가 $$A$$에 대해 integral인 것은, 적당한 $$E$$-module $$N$$과 $$N$$의 $$A$$-submodule $$M$$이 존재하여, $$M$$은 $$E$$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $$xM\subseteq M$$이 성립하는 것과 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -162,9 +162,9 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
 이 존재하여 $$p(\id_M)=0$$이다. 즉, 
 
-$$(1+p_1+\cdots_p_n)M=0$$
+$$(1+p_1+\cdots+p_n)M=0$$
 
-이고 $$a=-(p_1+\cdots_p_n)$$으로 두면 원하는 결과를 얻는다. 
+이고 $$a=-(p_1+\cdots+p_n)$$으로 두면 원하는 결과를 얻는다. 
 
 </details>
 
@@ -183,7 +183,7 @@ $$(1+p_1+\cdots_p_n)M=0$$
 
 1번 겷과의 경우 [보조정리 7](#lem7)으로부터 얻어지는 $$a\in \mathfrak{a}$$가 가정에 의하여 모든 maximal ideal에 속한다는 사실을 안다. 바꾸어 말하면 $$1-a$$는 어떠한 maximal ideal에도 속할 수 없으므로 $$1-a$$는 unit이다. 따라서 원하는 결과를 얻는다.
 
-2번 결과의 경우, $$N=M/\sum_i Ax_i$$라 하자. 그럼 $$N/IN=0$$임을 보일 수 있고 1번 결과로부터 $$N=0$$임을 안다.
+2번 결과의 경우, $$N=M/\sum_i Ax_i$$라 하자. 그럼 $$N/\mathfrak{a}N=0$$임을 보일 수 있고 1번 결과로부터 $$N=0$$임을 안다.
 
 </details>
 
@@ -311,13 +311,13 @@ $$1=\sum_{i=1}^n \alpha_i a_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> Ring homomorphism $$\phi: A \rightarrow E$$와 $$x\in E$$에 대하여, $$x$$가 $$\phi$$에 대해 integral인 것은, $$A$$의 임의의 prime ideal $$\mathfrak{p}$$에 대하여, $$x$$의 $$A_\mathfrak{p}$$에서의 image가 $$\phi_\mathfrak{p}: A_\mathfrak{p} \rightarrow E_\mathfrak{p}$$에 대해 integral인 것과 동치이다. 
+<ins id="prop16">**명제 16**</ins> Ring homomorphism $$\phi: A \rightarrow E$$와 $$x\in E$$에 대하여, $$x$$가 $$\phi$$에 대해 integral인 것은, $$A$$의 임의의 prime ideal $$\mathfrak{p}$$에 대하여, $$x$$의 $$E_\mathfrak{p}$$에서의 image가 $$\phi_\mathfrak{p}: A_\mathfrak{p} \rightarrow E_\mathfrak{p}$$에 대해 integral인 것과 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-한쪽 방향은 [보조정리 14](#lem14)를 이용하면 된다. 따라서 임의의 prime ideal $$\mathfrak{p}\subset A$$에 대하여, $$x$$의 $$E_\mathfrak{p}$$에서의 image가 $$A_\mathfrak{p}$$에 대해 integral이라 하고, $$x$$가 integral임을 보이자. 이를 위해서는 $$\phi(A)$$와 $$x$$로 생성되는 $$E$$의 $$A$$-subalgebra $$E'$$를 잡은 후, $$A \rightarrow E'$$가 integral임을 보이면 된다. 
+한쪽 방향은 [명제 14](#prop14)를 이용하면 된다. 따라서 임의의 prime ideal $$\mathfrak{p}\subset A$$에 대하여, $$x$$의 $$E_\mathfrak{p}$$에서의 image가 $$A_\mathfrak{p}$$에 대해 integral이라 하고, $$x$$가 integral임을 보이자. 이를 위해서는 $$\phi(A)$$와 $$x$$로 생성되는 $$E$$의 $$A$$-subalgebra $$E'$$를 잡은 후, $$A \rightarrow E'$$가 integral임을 보이면 된다. 
 
 우선 가정으로부터, $$E_\mathfrak{p}$$에서 다음의 식
 
