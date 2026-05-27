@@ -61,7 +61,7 @@ $$(u\beta)(\alpha x)=u(\alpha x)\beta=\alpha u(x)\beta=\alpha((u\beta)(x))$$
 
 $$M$$과 $$M^\ast$$의 두 부분집합의 임의의 원소들의 쌍이 orthogonal이라면 이들 둘이 orthogonal하다 말한다. 한편, $$x\in M$$를 임의로 고정하고 $$\xi,\xi_1,\xi_2\in M^\ast$$와 $$\alpha\in A$$가 주어졌다 하자. 그럼
 
-$$\langle x, \xi_1+\xi_2\rangle=\langle x, \xi_1\rangle,+\langle x,\xi_2\rangle=0,\qquad \langle x,\xi\cdot\alpha\rangle=\langle x,\xi\rangle\alpha=0$$
+$$\langle x, \xi_1+\xi_2\rangle=\langle x, \xi_1\rangle+\langle x,\xi_2\rangle=0,\qquad \langle x,\xi\cdot\alpha\rangle=\langle x,\xi\rangle\alpha=0$$
 
 이므로, $$M$$의 고정된 부분집합 $$S$$에 대해, $$S$$의 원소들과 orthogonal한 $$M^\ast$$의 원소들을 모아두면 이는 $$M^\ast$$의 submodule이 된다.
 

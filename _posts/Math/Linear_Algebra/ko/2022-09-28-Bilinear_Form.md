@@ -123,7 +123,7 @@ $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(
 
 한편, 이렇게 정의한 $$L':W\rightarrow V$$는 다음 식
 
-$$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and $w\in W$}\tag{1}$$
+$$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and $w\in W$}\tag{2}$$
 
 을 만족하는 것을 알 수 있다. 이는
 
@@ -131,7 +131,7 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 
 으로부터 확인할 수 있다. 이러한 식을 만족하는 $$L'$$을 우리는 linear map $$L$$의 *adjoint*라 부르고, 약간의 abuse of notation을 통해 $$L^\ast$$으로 적기도 한다. 
 
-[§쌍대공간, §§직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $$(Lv,f)=(v,L^\ast f)$$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $$\langle -,-\rangle$$들에 대한 식 (1)로 대체하면 다음 결과들을 얻는다.
+[§쌍대공간, §§직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $$(Lv,f)=(v,L^\ast f)$$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $$\langle -,-\rangle$$들에 대한 식 (2)로 대체하면 다음 결과들을 얻는다.
 
 <div class="proposition" markdown="1">
 

@@ -125,9 +125,9 @@ $$\bigl((u_1(x),\cdots, u_n(x)), (\alpha_1,\ldots, \alpha_n)\bigr) \mapsto \sum_
 
 then the induced map $$\mathbb{L}^n\rightarrow B^\ast$$ is injective, and hence $$B$$ must generate $$\mathbb{L}$$. Therefore there exist $$a_j\in A$$ such that the $$n\times n$$ matrix $$(u_i(a_j))$$ is invertible. 
 
-Now define the polynomial $$g \in \mathbb{L}[\y_1,\ldots, \y_n}$$ by
+Now define the polynomial $$g \in \mathbb{L}[\y_1,\ldots, \y_n]$$ by
 
-$$g(\y_1, \ldots, _n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y'_j \right).$$
+$$g(\y_1, \ldots, \y_n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y'_j \right).$$
 
 Substituting arbitrary elements $$y_i\in \mathbb{K}$$ and setting $$x=\sum_{i=1}^n a_iy_i$$, we have
 

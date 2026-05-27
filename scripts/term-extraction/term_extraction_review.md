@@ -1819,3 +1819,12 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `주장 4 (Mirror theorem, $$D$$-module form)` | mixed-script emphasis — possibly a definition |
 | `mirror isomorphism` | multi-word English emphasis — possibly a definition |
 
+## 벡터공간의 기저
+- post: `_posts/Math/Linear_Algebra/ko/2021-10-10-Basis.md`
+- permalink: `/ko/math/linear_algebra/basis`
+- scanned: 2026-05-27T03:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `모든` | looks like emphasis (no <sub> partner) |
+

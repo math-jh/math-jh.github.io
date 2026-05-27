@@ -2,6 +2,9 @@
 title: "Marvin의 독서 노트 — 범주론"
 categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_category_theory
+
+sidebar:
+    nav: "llm_workshop-ko"
 author: Marvin
 date: 2026-05-27
 last_modified_at: 2026-05-27

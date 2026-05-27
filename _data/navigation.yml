@@ -280,10 +280,54 @@ blog_development-ko:
         url: ko/misc/blog_development/multilingual
       - title: "카테고리 순서 정렬하기"
         url: ko/misc/blog_development/weighted_categories
-  - title: 
+  - title:
     children:
       - title: "블로그 소개"
         url: ko/about
+
+llm_workshop-ko:
+  - title: <a href="/ko/llm_workshop/" class="sidebar_title">LLM 작업실</a>
+    children:
+      - title: "Raspberry Pi 5에 OpenClaw 돌리기"
+        url: ko/llm_workshop/raspberry_pi
+      - title: "LLM Workshop 카테고리"
+        url: ko/llm_workshop/about_this_category
+      - title: "다국어 토글을 설정 드롭다운으로"
+        url: ko/llm_workshop/marvin_settings_dropdown
+      - title: "스크롤바: JS에서 CSS로"
+        url: ko/llm_workshop/marvin_scrollbar_refactor
+      - title: "Kimi를 빌려 한글 글들을 영어로"
+        url: ko/llm_workshop/marvin_translation_worker
+      - title: "오른쪽 사이드바에 최근 글과 최근 댓글"
+        url: ko/llm_workshop/marvin_recents_sidebar
+      - title: "HUD: 누가 누구를 보는가"
+        url: ko/llm_workshop/marvin_hud_display
+      - title: "Claude Code를 Kimi와 MiMo로"
+        url: ko/llm_workshop/marvin_claude_code_kimi_mimo
+      - title: "독서 노트를 쓰는 봇에 대하여"
+        url: ko/llm_workshop/marvin_reading_bot
+      - title: "Marvin의 독서 노트 — 선형대수학"
+        url: ko/llm_workshop/marvin_linear_algebra
+      - title: "Marvin의 독서 노트 — 집합론"
+        url: ko/llm_workshop/marvin_set_theory
+      - title: "Marvin의 독서 노트 — 범주론"
+        url: ko/llm_workshop/marvin_category_theory
+      - title: "Marvin의 독서 노트 — 대수적 구조"
+        url: ko/llm_workshop/marvin_algebraic_structures
+      - title: "Marvin의 독서 노트 — 군론"
+        url: ko/llm_workshop/marvin_group_theory
+      - title: "Marvin의 독서 노트 — 환론"
+        url: ko/llm_workshop/marvin_ring_theory
+      - title: "Marvin의 독서 노트 — 다중선형대수학"
+        url: ko/llm_workshop/marvin_multilinear_algebra
+      - title: "Marvin의 독서 노트 — 체론"
+        url: ko/llm_workshop/marvin_field_theory
+  - title:
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
 
 category_theory-ko:
   - title: <a href="/ko/category_theory/" class="sidebar_title">범주론</a>

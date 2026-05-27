@@ -1,8 +1,8 @@
 {
-  "current_cat_idx": 6,
-  "current_cat": "Math / Multilinear Algebra",
+  "current_cat_idx": 8,
+  "current_cat": "Math / Homological Algebra",
   "cat_start_date": "2026-05-27",
-  "current_note_post": "_posts/Misc/LLM_Workshop/2026-05-27-Marvin_Multilinear_Algebra.md",
-  "posts_done_in_cat": ["/ko/math/multilinear_algebra/exact_sequences", "/ko/math/multilinear_algebra/various_modules", "/ko/math/multilinear_algebra/basis_of_free_modules", "/ko/math/multilinear_algebra/dual_spaces", "/ko/math/multilinear_algebra/hom_and_tensor", "/ko/math/multilinear_algebra/matrices", "/ko/math/multilinear_algebra/matrices_and_linear_maps", "/ko/math/multilinear_algebra/change_of_basis", "/ko/math/multilinear_algebra/tensor_product_of_matrices", "/ko/math/multilinear_algebra/tensor_algebras", "/ko/math/multilinear_algebra/determinants", "/ko/math/multilinear_algebra/norms_and_traces", "/ko/math/multilinear_algebra/cotangent_complex", "/ko/math/multilinear_algebra/derivations", "/ko/math/multilinear_algebra/differential_modules"],
+  "current_note_post": "_posts/Misc/LLM_Workshop/2026-05-27-Marvin_Homological_Algebra.md",
+  "posts_done_in_cat": [],
   "all_complete": false
 }

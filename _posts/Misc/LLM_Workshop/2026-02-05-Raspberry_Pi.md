@@ -5,6 +5,9 @@ excerpt: ""
 
 categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/raspberry_pi
+
+sidebar:
+    nav: "llm_workshop-ko"
 header:
     overlay_image: /assets/images/Misc/LLM_Workshop/Raspberry_Pi.jpeg
     overlay_filter: 0.5

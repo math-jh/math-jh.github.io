@@ -120,7 +120,7 @@ then we can verify that the matrix representation of this linear map with respec
 
 Meanwhile, we can see that $$L':W\rightarrow V$$ defined in this way satisfies the equation
 
-$$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and $w\in W$}\tag{1}$$
+$$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and $w\in W$}\tag{2}$$
 
 This can be checked from
 
@@ -128,7 +128,7 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 
 We call such an $$L'$$ satisfying this equation the *adjoint* of the linear map $$L$$, and with a slight abuse of notation, also write it as $$L^\ast$$.
 
-The results of [§Dual Spaces, §§Orthogonal Complements](/en/math/linear_algebra/dual_space#orthogonal-complement) were all obtained from the equation $$(Lv,f)=(v,L^\ast f)$$ for the canonical pairing. Therefore, replacing this with equation (1) for the non-degenerate bilinear forms $$\langle -,-\rangle$$ obtained above, we get the following results.
+The results of [§Dual Spaces, §§Orthogonal Complements](/en/math/linear_algebra/dual_space#orthogonal-complement) were all obtained from the equation $$(Lv,f)=(v,L^\ast f)$$ for the canonical pairing. Therefore, replacing this with equation (2) for the non-degenerate bilinear forms $$\langle -,-\rangle$$ obtained above, we get the following results.
 
 <div class="proposition" markdown="1">
 

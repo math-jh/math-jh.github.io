@@ -40,7 +40,7 @@ $$a\x^\nu$$
 
 *monomials*. Then any polynomial $$u$$ can be expressed as a finite sum of monomials
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $\nu$}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu=0$ for all but finitely many $\nu$}$$
 
 On the other hand, for any $$\nu\in \mathbb{N}^{(I)}$$, if we define
 
@@ -56,7 +56,7 @@ Here, for each $$n$$, the elements of $$P_n$$ are called *homogeneous polynomial
 
 <ins id="def1">**Definition 1**</ins> Let an arbitrary element of the polynomial ring $$P=A[\x]_{i\in I}$$
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $\nu$}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu=0$ for all but finitely many $\nu$}$$
 
 be given. Then the largest $$n$$ satisfying $$u_n\neq 0$$ is called the *degree* of $$u$$, denoted by $$\deg(u)$$. By definition, the degree of a polynomial having only a constant term is $$0$$, but for the additive identity $$0$$ of $$P$$, we specially define $$\deg(0)=-\infty$$.
 
@@ -464,7 +464,7 @@ It suffices to consider only the case where $$r, s \ne 0$$. Thus let $$r =u/v$$ 
 
 The ring of formal power series is another variant of the polynomial ring; it is the collection of infinite sums of monomials
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu$ need not satisfy finiteness condition}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu$ need not satisfy finiteness condition}$$
 
 This is denoted by $$A[[\x_i]]_{i\in I}$$ and called the *ring of formal power series*. For formal power series, similar concepts to those for polynomials can be defined, except for the fact that they are infinite sums of monomials. For example, we can define the degree $$p$$ component $$u_p$$ of a formal power series $$u$$. However, for the (total) degree of $$u$$, since the degree of elements that are not polynomials would be $$+\infty$$, there is no particular reason to use it in $$A[[\x_i]]_{i\in I}$$. Instead, for any formal power series $$u$$, we define the *order* $$\omega(u)$$ of $$u$$ as the smallest $$p$$ such that $$u_p\neq 0$$. Likewise, setting $$\omega(0)=\infty$$, the formula
 

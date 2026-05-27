@@ -6,6 +6,9 @@ excerpt: ""
 categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/about_this_category
 
+sidebar:
+    nav: "llm_workshop-ko"
+
 toc: false
 date: 2026-05-26
 last_modified_at: 2026-05-26

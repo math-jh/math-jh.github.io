@@ -81,7 +81,7 @@ $$\bigcup_{k\in K}A_{f(k)}=\bigcup_{i\in I}A_i,\qquad \bigcap_{k\in K}A_{f(k)}=\
 반대로, 만일 $$x\in\bigcup_{k\in K}A_{f(k)}$$가 성립한다면, 어떤 $$k_0\in K$$에 대하여 $$x\in A_{f(k_0)}$$이다. 그런데 $$f(k_0)\in I$$이므로, $$A_{f(k_0)}$$는 $$(A_i)_{i\in I}$$를 구성하는 집합 중 하나이고 따라서 $$x\in \bigcup_{i\in I} A_{i}$$이다.
 
 이제 두 번째 식을 보여야 한다. 우선 $$x\in\bigcap_{i\in I}A_i$$라 하자. 그럼 모든 $$i\in I$$에 대하여 $$x\in A_i$$이다. 임의의 $$k_0\in K$$에 대하여 $$f(k_0)\in I$$이므로, 모든 $$k\in K$$에 대하여 $$x\in A_{f(k)}$$이고 따라서 $$x\in \bigcap_{k\in K}A_{f(k)}$$이다.  
-반대로 만일 모든 $$k\in K$$에 대하여 $$x\in A_{f(k)}$$라면, $$f$$는 전사이므로 모든 $$i\in I$$에 대해 $$x\in A_{f(k)}$$이기도 하다.
+반대로 만일 모든 $$k\in K$$에 대하여 $$x\in A_{f(k)}$$라면, $$f$$는 전사이므로 모든 $$i\in I$$에 대해 $$x\in A_i$$이기도 하다.
 
 </details>
 
