@@ -1,6 +1,6 @@
 ---
-
 title: "유향집합"
+description: "유향집합의 정의와 성질을 다룬다. 부분순서집합에서 오른쪽·왼쪽으로 유향한 집합을 정의하고, 유향집합의 최대 원소가 최대 원소인 것을 보이며, 유향집합들의 족 또한 유향집합임을 증명한다."
 excerpt: "유향집합과 lattice"
 
 categories: [Math / Set Theory]

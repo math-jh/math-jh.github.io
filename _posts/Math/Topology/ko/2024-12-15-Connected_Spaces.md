@@ -1,6 +1,6 @@
 ---
-
 title: "연결공간"
+description: "위상수학에서 연결공간의 정의와 성질을 다룬다. 연속함수에 의해 연결성이 보존되고, 교차하는 연결집합들의 합집합도 연결임을 증명한다."
 excerpt: "Connected space와 path-connected, connected component"
 
 categories: [Math / Topology]

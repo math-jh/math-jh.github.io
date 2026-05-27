@@ -1,5 +1,4 @@
----
-title: "System of Parameters"
+---title: "System of Parameters"
 excerpt: "The relationship between the system of parameters of a local ring and dimension"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-01-19
 last_modified_at: 2025-01-19
 weight: 17
-translated_at: 2026-05-20T02:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## System of parameters

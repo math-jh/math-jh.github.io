@@ -1,5 +1,4 @@
----
-title: "Cotangent Space"
+---title: "Cotangent Space"
 excerpt: "Tangent Vectors and Tangent Space"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-12-09
 last_modified_at: 2022-12-09
 weight: 4
-translated_at: 2026-05-21T19:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Cotangent Space and Dimension

@@ -1,5 +1,4 @@
----
-title: "Primary Decomposition"
+---title: "Primary Decomposition"
 excerpt: "Primary decomposition and uniqueness for modules over Noetherian rings"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-17
 last_modified_at: 2024-10-17
 weight: 7
-translated_at: 2026-05-26T06:00:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 <div class="remark" markdown="1">

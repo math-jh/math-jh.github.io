@@ -1,5 +1,4 @@
----
-title: "Open Mappings and Closed Mappings"
+---title: "Open Mappings and Closed Mappings"
 excerpt: "Definitions of open maps and closed maps, and their relationship to quotient maps"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-11-19
 last_modified_at: 2024-11-19
 weight: 12
-translated_at: 2026-05-23T04:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definitions and Basic Properties

@@ -1,5 +1,4 @@
----
-title: "Vector Spaces"
+---title: "Vector Spaces"
 excerpt: "The definition of vector spaces, simple properties, and examples"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-07-28
 last_modified_at: 2022-07-28
 
 weight: 2
-translated_at: 2026-05-26T16:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 As we mentioned in the introduction to the previous post, the *vector space* is the central object of study in linear algebra, generalizing the coordinate spaces learned in high school. To prepare for this, we defined abelian groups and fields in the last post.

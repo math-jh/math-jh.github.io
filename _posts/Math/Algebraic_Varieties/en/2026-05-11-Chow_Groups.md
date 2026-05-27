@@ -1,5 +1,4 @@
----
-title: "Chow Groups"
+---title: "Chow Groups"
 excerpt: "Chow groups and the cycle class map"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-05-11
 last_modified_at: 2026-05-11
 weight: 18
-translated_at: 2026-05-26T10:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Previously, in [§Riemann-Roch Theorem on Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1), we defined the intersection number of two divisors. This is naturally a very interesting concept, and in this post we define the *Chow group* in order to generalize this notion to arbitrary varieties.

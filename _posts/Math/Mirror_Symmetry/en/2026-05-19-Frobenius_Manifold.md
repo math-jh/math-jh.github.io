@@ -1,5 +1,4 @@
----
-title: "Frobenius Manifolds"
+---title: "Frobenius Manifolds"
 excerpt: "Frobenius manifolds and the WDVV equation"
 
 categories: [Math / Mirror Symmetry]
@@ -14,7 +13,7 @@ header:
 date: 2026-05-19
 last_modified_at: 2026-05-19
 weight: 3
-translated_at: 2026-05-23T16:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Mirror Symmetry Overview](/en/math/mirror_symmetry/overview) we saw that the mirror symmetry of a toric Fano variety $$X_\Sigma$$ is summarized by an isomorphism

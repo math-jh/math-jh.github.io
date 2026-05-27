@@ -1,5 +1,4 @@
----
-title: "Dual Spaces"
+---title: "Dual Spaces"
 excerpt: "Hom of modules, dual modules, and the bidual map"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-08-23
 last_modified_at: 2024-09-19
 weight: 4
-translated_at: 2026-05-22T01:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Module $$\Hom_\lMod{A}(M,N)$$

@@ -1,5 +1,4 @@
----
-title: "Properties of Galois Groups"
+---title: "Properties of Galois Groups"
 excerpt: "The structure of infinite Galois groups with the Krull topology"
 
 categories: [Math / Field Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-06-18
 last_modified_at: 2025-06-18
 weight: 9
-translated_at: 2026-05-20T13:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We previously defined Galois extensions and Galois groups. The central result of Galois theory is that for a field extension $$\mathbb{L}/\mathbb{K}$$, there exists an order-preserving bijection between the lattice of subgroups of the Galois group $$\Gal(\mathbb{L}/\mathbb{K})$$ and the lattice of Galois subextensions of $$\mathbb{L}/\mathbb{K}$$. In many cases this result treats only the case where the Galois group $$\Gal(\mathbb{L}/\mathbb{K})$$ is finite, but since we will also treat the case where $$\Gal(\mathbb{L}/\mathbb{K})$$ is infinite, we must endow $$\Gal(\mathbb{L}/\mathbb{K})$$ with an appropriate topological structure.

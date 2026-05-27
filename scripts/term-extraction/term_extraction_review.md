@@ -1903,3 +1903,13 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `schema` | looks like emphasis (no <sub> partner) |
 | `멱집합` | looks like emphasis (no <sub> partner) |
 
+## 2021-08-09-Ordered_Pair
+- post: `_posts/Math/Set_Theory/ko/2021-08-09-Ordered_Pair.md`
+- permalink: ``
+- scanned: 2026-05-27T11:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `동치관계` | looks like emphasis (no <sub> partner) |
+| `첫 번째 성분` | looks like emphasis (no <sub> partner) |
+

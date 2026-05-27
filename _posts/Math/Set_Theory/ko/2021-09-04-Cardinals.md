@@ -1,6 +1,6 @@
 ---
-
 title: "기수"
+description: "선택공리와 well-ordering 정리를 복습한 뒤, equipotent 관계를 이용해 집합의 크기를 비교하고 기수의 개념과 기수 연산을 정의한다."
 excerpt: "Cardinal number의 정의"
 
 categories: [Math / Set Theory]

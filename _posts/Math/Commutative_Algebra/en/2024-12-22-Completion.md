@@ -1,5 +1,4 @@
----
-title: "Completion"
+---title: "Completion"
 excerpt: "Completion of rings and modules defined by a filtration"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-12-22
 last_modified_at: 2024-12-22
 weight: 14
-translated_at: 2026-05-26T12:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definition of Completion

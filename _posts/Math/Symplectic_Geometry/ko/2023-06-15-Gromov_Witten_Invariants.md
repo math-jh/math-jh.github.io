@@ -1,6 +1,6 @@
 ---
-
 title: "Gromov-Witten 불변량"
+description: "Gromov-Witten 불변량을 evaluation map과 접선 다발의 첫 번째 Chern class로 정의하고, descendant 버전의 정의와 genus-0에서의 string, divisor, dilaton, splitting 공리들, 그리고 quantum cohomology 구성을 다룬다."
 excerpt: "Stable map moduli로부터의 GW invariant 정의와 quantum cohomology"
 
 categories: [Math / Symplectic Geometry]

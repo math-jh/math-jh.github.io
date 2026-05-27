@@ -1,6 +1,7 @@
 ---
 
 title: "동치관계의 예시들"
+description: "함수로부터 자연스럽게 정의되는 동치관계의 예시들과 함께, 동치관계의 포화 및 isomorphism theorem들을 다룬다."
 excerpt: "동치관계의 예시들, 동치관계의 포화, isomorphism theorem들"
 
 categories: [Math / Set Theory]

@@ -1,6 +1,6 @@
 ---
-
 title: "필터와 아이디얼, 갈루아 대응"
+description: "정렬된 집합과 격자에서 필터와 아이디얼의 개념을 정의하고, 주필터·주아이디얼·소아이디얼의 성질을 살펴본다."
 excerpt: "Filter와 ideal"
 
 categories: [Math / Set Theory]

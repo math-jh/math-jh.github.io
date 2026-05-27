@@ -1,6 +1,6 @@
 ---
 title: "행렬의 텐서곱"
-description: "행렬의 텐서곱 정의와 성质을 살펴보고, 두 행렬의 텐서곱이 어떻게构成되는지具体例와 함께 알아본다."
+description: "행렬의 텐서곱은 선형 사상의 텐서곱을 크로네커 곱으로 구현하는 행렬 연산이다. 텐서곱 위에서 유도되는 이 연산의 정의와 기본 성질을 정리한다."
 excerpt: "Tensor product에 대응하는 Kronecker product 행렬연산"
 
 categories: [Math / Multilinear Algebra]

@@ -1,5 +1,4 @@
----
-title: "Compactness and Filter Convergence"
+---title: "Compactness and Filter Convergence"
 excerpt: "A characterization of compactness through filter convergence"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-12-11
 last_modified_at: 2024-12-11
 weight: 15
-translated_at: 2026-05-25T07:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We first define the following.

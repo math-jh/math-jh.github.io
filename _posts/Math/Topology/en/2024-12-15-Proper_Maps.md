@@ -1,5 +1,4 @@
----
-title: "Proper Maps"
+---title: "Proper Maps"
 excerpt: "The relationship between proper maps as universally closed maps and compactness"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-12-15
 last_modified_at: 2024-12-15
 weight: 17
-translated_at: 2026-05-23T09:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Universally Closed Maps

@@ -1,5 +1,4 @@
----
-title: "Eigenspace Decomposition"
+---title: "Eigenspace Decomposition"
 excerpt: "Eigenspace decomposition of a vector space"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-09-18
 last_modified_at: 2022-09-18
 
 weight: 16
-translated_at: 2026-05-21T11:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Sums of Spaces

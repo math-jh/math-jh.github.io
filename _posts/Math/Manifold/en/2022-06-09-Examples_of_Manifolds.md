@@ -1,5 +1,4 @@
----
-title: "Examples of Differentiable Manifolds"
+---title: "Examples of Differentiable Manifolds"
 excerpt: "Various examples of differentiable manifolds"
 
 categories: [Math / Manifold]
@@ -14,7 +13,7 @@ date: 2022-06-09
 last_modified_at: 2022-06-09
 weight: 2
 toc: false
-translated_at: 2026-05-21T14:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post we saw two different ways of giving a manifold structure on $$\mathbb{R}$$. In this post we examine various examples of topological spaces equipped with manifold structures.

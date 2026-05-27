@@ -1,5 +1,4 @@
----
-title: "Nullstellensatz"
+---title: "Nullstellensatz"
 excerpt: "Proofs of Jacobson rings and Hilbert's Nullstellensatz"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-20
 last_modified_at: 2024-10-20
 weight: 10
-translated_at: 2026-05-19T21:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Jacobson Rings

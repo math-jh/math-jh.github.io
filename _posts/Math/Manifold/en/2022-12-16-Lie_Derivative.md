@@ -1,5 +1,4 @@
----
-title: "Lie Derivative"
+---title: "Lie Derivative"
 excerpt: "Lie derivative and Lie bracket"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-12-16
 last_modified_at: 2022-12-16
 weight: 14
-translated_at: 2026-05-21T19:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Directional Derivative of a Function and the Lie Derivative

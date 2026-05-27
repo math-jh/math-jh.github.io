@@ -1,5 +1,4 @@
----
-title: "Change of Basis"
+---title: "Change of Basis"
 excerpt: "Square matrices and invertible matrices, transformation of matrices under change of basis"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-06
 last_modified_at: 2024-10-06
 weight: 8
-translated_at: 2026-05-26T21:00:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Square Matrices

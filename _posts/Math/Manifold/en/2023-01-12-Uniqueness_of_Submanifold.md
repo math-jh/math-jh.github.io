@@ -1,5 +1,4 @@
----
-title: "Uniqueness of Submanifolds"
+---title: "Uniqueness of Submanifolds"
 excerpt: "The topological structure of immersed submanifolds and the factorization of smooth functions"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-01-12
 last_modified_at: 2023-01-12
 weight: 8
-translated_at: 2026-05-21T20:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 By definition, a submanifold of a manifold $$M$$ means an injective immersion. Let us denote this by $$\Phi:P\rightarrow M$$. Then the function $$\bar{\Phi}:P\rightarrow \Phi(P)$$ obtained by restricting the codomain of $$\Phi$$ is a bijection, so we can transfer the topology of $$P$$ directly onto $$\Phi(P)$$, and through this process a submanifold of $$M$$ can also be thought of as the inclusion of a subset $$\Phi(P)\hookrightarrow M$$. In this post we examine this in a bit more detail.

@@ -1,5 +1,4 @@
----
-title: "Bases of a Topological Space"
+---title: "Bases of a Topological Space"
 excerpt: "Bases, subbases, and local bases of a topological space"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-11-08
 last_modified_at: 2022-11-08
 weight: 2
-translated_at: 2026-05-22T23:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Bases and Subbases of a Topological Space

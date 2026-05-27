@@ -1,5 +1,4 @@
----
-title: "Linear Systems"
+---title: "Linear Systems"
 excerpt: "Complete linear systems, base loci, and ampleness"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-03-29
 last_modified_at: 2026-05-04
 weight: 10
-translated_at: 2026-05-26T00:00:04+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-26T00:00:04+00:00
 ---

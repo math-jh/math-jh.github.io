@@ -1,5 +1,4 @@
----
-title: "Properties of Scheme Morphisms"
+---title: "Properties of Scheme Morphisms"
 excerpt: "Basic properties of scheme morphisms such as affine, finite, and finite type"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-02-21
 last_modified_at: 2025-02-21
 weight: 8
-translated_at: 2026-05-22T19:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In previous posts we explored several viewpoints for studying scheme morphisms. In this post we define the properties that scheme morphisms can have. First we define the following property that these share.

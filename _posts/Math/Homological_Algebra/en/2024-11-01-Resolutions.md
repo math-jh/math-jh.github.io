@@ -1,5 +1,4 @@
----
-title: "Resolutions"
+---title: "Resolutions"
 excerpt: "Projective and injective resolutions in an abelian category"
 
 categories: [Math / Homological Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-11-01
 last_modified_at: 2024-11-01
 weight: 4
-translated_at: 2026-05-20T18:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Projective and Injective Resolutions

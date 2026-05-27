@@ -1,5 +1,4 @@
----
-title: "Dimension"
+---title: "Dimension"
 excerpt: "The definition of dimension for schemes and its relation to the Krull dimension of local rings"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-03-14
 last_modified_at: 2025-03-14
 weight: 16
-translated_at: 2026-05-26T22:00:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Dimension of Schemes

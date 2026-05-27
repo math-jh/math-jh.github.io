@@ -1,5 +1,4 @@
----
-title: "Abelian Categories"
+---title: "Abelian Categories"
 excerpt: "Abelian Categories"
 
 categories: [Math / Category Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-12-21
 last_modified_at: 2022-12-21
 weight: 9
-translated_at: 2026-05-19T16:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we define the notions of abelian categories, chain complexes, and exact sequences. 

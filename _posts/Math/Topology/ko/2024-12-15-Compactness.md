@@ -1,6 +1,6 @@
 ---
-
 title: "옹골성"
+description: "위상 공간의 옹골성과 관련된 결과들을 다루며, Tychonoff 정리와 ultrafilter 수렴을 이용한 옹골성의 동치 조건을 증명한다."
 excerpt: "Tychonoff 정리와 local compactness, paracompactness"
 
 categories: [Math / Topology]

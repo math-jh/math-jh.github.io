@@ -1,6 +1,6 @@
 ---
-
 title: "사교벡터공간"
+description: "사교기하학의 기초인 사교벡터공간과 사교형식을 정의하고, 반대칭성과 비퇴화성 조건을 통해 모든 사교벡터공간이 짝수차원임을 증명한다."
 excerpt: "Symplectic form의 정의"
 
 categories: [Math / Symplectic Geometry]

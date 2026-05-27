@@ -1,5 +1,4 @@
----
-title: "Symmetric Groups"
+---title: "Symmetric Groups"
 excerpt: "Cycle decomposition and sign of the symmetric group, and the alternating group"
 
 categories: [Math / Group Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-03-29
 last_modified_at: 2025-03-29
 weight: 1
-translated_at: 2026-05-20T14:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the [Algebraic Structures](/en/algebraic_structures) category we were interested in the common properties shared by various algebraic structures; however, while this approach is good for surveying how algebraic theories develop from an overall perspective, it is not good for examining details such as actually computing a specific group. Therefore, in the posts in this category we study properties of groups not covered in the [Algebraic Structures](/en/algebraic_structures) category.

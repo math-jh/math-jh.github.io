@@ -1,5 +1,4 @@
----
-title: "Algebraic Extensions"
+---title: "Algebraic Extensions"
 excerpt: "The definition and degree of algebraic extensions of fields"
 
 categories: [Math / Field Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-04-26
 last_modified_at: 2025-04-26
 weight: 2
-translated_at: 2026-05-20T06:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Field Extensions

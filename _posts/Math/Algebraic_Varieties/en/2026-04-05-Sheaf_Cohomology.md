@@ -1,5 +1,4 @@
----
-title: "Sheaf Cohomology"
+---title: "Sheaf Cohomology"
 excerpt: "Sheaf cohomology and its applications"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-04-05
 last_modified_at: 2026-04-20
 weight: 12
-translated_at: 2026-05-26T05:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We have seen that line bundles can be used to construct various invariants. For example, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles) we defined the global section space $$\Gamma(X, \mathcal{L})$$ of a line bundle $$\mathcal{L}$$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9) we saw that the dimension of this space plays a key role in determining the dimension of the complete linear system, and hence the projective embedding of the variety.

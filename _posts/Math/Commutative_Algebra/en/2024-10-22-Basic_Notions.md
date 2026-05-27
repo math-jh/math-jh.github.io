@@ -1,5 +1,4 @@
----
-title: "Basic Notions"
+---title: "Basic Notions"
 excerpt: "Basic conventions and definitions for rings and algebras used in commutative algebra"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-22
 last_modified_at: 2025-02-23
 weight: 1
-translated_at: 2026-05-19T21:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In every post in this category, a ring means a commutative ring. Also, an arbitrary $$A$$-algebra is always understood to be a commutative associative unital $$A$$-algebra. In particular, since we saw after [\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1) that an associative unital $$A$$-algebra $$E$$ and a ring homomorphism $$A\rightarrow Z(E)$$ are the same thing, it suffices to think of an $$A$$-algebra in what follows as a ring homomorphism $$A\rightarrow E$$.

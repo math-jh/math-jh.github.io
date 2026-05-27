@@ -1,5 +1,4 @@
----
-title: "Space of Linear Maps"
+---title: "Space of Linear Maps"
 excerpt: "Hom and Dual Space"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-08-05
 last_modified_at: 2022-08-05
 
 weight: 10
-translated_at: 2026-05-21T06:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Extension by linearity

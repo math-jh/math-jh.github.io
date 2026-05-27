@@ -1,5 +1,4 @@
----
-title: "Characters"
+---title: "Characters"
 excerpt: "Definition of character functions and orthogonality relations"
 
 categories: [Math / Representation Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2026-02-14
 last_modified_at: 2026-02-14
 weight: 2
-translated_at: 2026-05-22T09:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we define character functions and examine their properties. They will be of great help in our goal of classifying representations.

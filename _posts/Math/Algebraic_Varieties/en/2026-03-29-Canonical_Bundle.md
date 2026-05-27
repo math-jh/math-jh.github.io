@@ -1,5 +1,4 @@
----
-title: "Canonical Bundle"
+---title: "Canonical Bundle"
 excerpt: "Canonical Bundle and Canonical Divisor"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-03-29
 last_modified_at: 2026-04-22
 weight: 11
-translated_at: 2026-05-25T23:30:04+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-25T23:30:04+00:00
 ---

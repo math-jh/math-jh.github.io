@@ -1,5 +1,4 @@
----
-title: "Fundamental Theorem of Linear Algebra"
+---title: "Fundamental Theorem of Linear Algebra"
 excerpt: "Fundamental Theorem of Linear Algebra"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2021-10-16
 last_modified_at: 2022-08-07
 
 weight: 11
-translated_at: 2026-05-21T01:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post, we saw that for two $\mathbb{K}$-vector spaces $V,W$ of dimensions $n$ and $m$ respectively, $\Hom(V,W)$ is an $mn$-dimensional $\mathbb{K}$-vector space. Also, the space $\Mat_{m\times n}(\mathbb{K})$ of $m\times n$ matrices is an $mn$-dimensional $\mathbb{K}$-vector space. Thus, from [§Isomorphic Vector Spaces, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4) we know that these two vector spaces are isomorphic.

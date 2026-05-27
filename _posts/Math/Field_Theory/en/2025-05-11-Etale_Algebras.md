@@ -1,5 +1,4 @@
----
-title: "Étale Algebras"
+---title: "Étale Algebras"
 excerpt: "The definition of étale algebras over a field and a characterization via diagonalizability"
 
 categories: [Math / Field Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-05-11
 last_modified_at: 2025-05-11
 weight: 5
-translated_at: 2026-05-21T08:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Fix a $$\mathbb{K}$$-algebra $$A$$ and a field extension $$\mathbb{L}/\mathbb{K}$$. Then the collection $$\Hom_\mathbb{K}(A, \mathbb{L})$$ of $$\mathbb{K}$$-linear maps between $$\mathbb{K}$$-vector spaces is a $$\mathbb{K}$$-vector space, and via the isomorphism

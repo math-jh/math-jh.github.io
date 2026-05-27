@@ -1,5 +1,4 @@
----
-title: "Derived Categories"
+---title: "Derived Categories"
 excerpt: "Construction of derived categories via chain complexes and quasi-isomorphisms"
 
 categories: [Math / Homological Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2026-04-13
 last_modified_at: 2026-04-13
 weight: 8
-translated_at: 2026-05-20T20:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Derived Functors](/en/math/homological_algebra/derived_functors) we saw how to address the issue when a functor is not exact. Specifically, when given a left (resp. right) exact functor $$F$$, we chose an injective (resp. projective) resolution of an object $$A$$ and took the cohomology (resp. homology) of that resolution to define the right (resp. left) derived functor.

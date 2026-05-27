@@ -1,5 +1,4 @@
----
-title: "Tangent and Cotangent Bundles"
+---title: "Tangent and Cotangent Bundles"
 excerpt: "The definition of vector bundles and the tangent and cotangent bundles"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-06-19
 last_modified_at: 2022-12-11
 weight: 10
-translated_at: 2026-05-21T17:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Vector Bundles

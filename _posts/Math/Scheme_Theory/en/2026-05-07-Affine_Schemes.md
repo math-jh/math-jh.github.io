@@ -1,5 +1,4 @@
----
-title: "Affine Schemes"
+---title: "Affine Schemes"
 excerpt: "Affine schemes defined by the structure sheaf on the spectrum of a ring"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-01-27
 last_modified_at: 2025-01-27
 weight: 3
-translated_at: 2026-05-23T14:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 The most basic example of a sheaf defined on a topological space is the collection of continuous functions on that space, and the $$\mathscr{O}_{\Spec A}$$ we will define is similar. However, if $$\mathscr{O}_{\Spec A}$$ were merely the sheaf of continuous functions on $$\Spec A$$, there would be no need to give it a new name. For the simplest example, since the only prime ideal of any field $$\mathbb{K}$$ is $$(0)$$, the topological space $$\Spec \mathbb{K}$$ is always a singleton, and there is only one way to put a topology on it. In other words, if we want to distinguish the spectra of two non-isomorphic fields, that information must be contained in the structure sheaf of $$\Spec \mathbb{K}$$. To ensure that the spectrum carries enough algebraic information, we will define $$\mathscr{O}_{\Spec A}$$ as the sheaf of algebraic functions on $$A$$.

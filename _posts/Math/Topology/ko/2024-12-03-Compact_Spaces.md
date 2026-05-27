@@ -1,6 +1,6 @@
 ---
-
 title: "옹골공간"
+description: "위상공간의 옹골성 정의와 유한 부분덮개의 존재 조건을 다루며, 부분공간의 옹골성 판별법과 옹골공간의 닫힌집합이 옹골임을 증명한다."
 excerpt: "Open cover의 finite subcover로 정의되는 compact space"
 
 categories: [Math / Topology]

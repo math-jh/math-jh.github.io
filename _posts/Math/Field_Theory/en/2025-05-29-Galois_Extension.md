@@ -1,5 +1,4 @@
----
-title: "Galois Extensions"
+---title: "Galois Extensions"
 excerpt: "The definition of a Galois extension satisfying both normal and separable"
 
 categories: [Math / Field Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-05-29
 last_modified_at: 2025-05-29
 weight: 8
-translated_at: 2026-05-20T12:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We are now ready to define what a Galois extension is, but before that we first examine the following proposition.

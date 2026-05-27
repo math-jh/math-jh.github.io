@@ -1,5 +1,4 @@
----
-title: "Radical Extensions"
+---title: "Radical Extensions"
 excerpt: "The definition of radical extensions and their role in Galois theory"
 
 categories: [Math / Field Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-05-15
 last_modified_at: 2025-05-15
 weight: 4
-translated_at: 2026-05-26T13:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Let us look at the broad theme of Galois theory we will study through a very simple example. Consider the degree $$4$$ extension $$\mathbb{Q}(\sqrt{2}, \sqrt{3})$$ of $$\mathbb{Q}$$. The newly adjoined elements $$\sqrt{2}$$ and $$\sqrt{3}$$ arise from the minimal polynomials with rational coefficients

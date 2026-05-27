@@ -1,5 +1,4 @@
----
-title: "Flatness and Localization"
+---title: "Flatness and Localization"
 excerpt: "A local criterion for flatness via checking at the maximal ideal"
 
 categories: [Math / Commutative Algebra]
@@ -15,7 +14,7 @@ last_modified_at: 2025-01-12
 weight: 13
 
 toc: false
-translated_at: 2026-05-20T00:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post we saw several criteria for determining when an $$A$$-module $$M$$ is flat, and in this post we examine a criterion for determining this specifically through localization. The following theorem shows that it suffices to check [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1) only for the maximal ideal.

@@ -1,5 +1,4 @@
----
-title: "Fano Varieties"
+---title: "Fano Varieties"
 excerpt: "Reflexive polytopes and the corresponding Gorenstein Fano toric varieties"
 
 categories: [Math / Toric Geometry]
@@ -15,7 +14,7 @@ sidebar:
 date: 2026-05-18
 last_modified_at: 2026-05-18
 weight: 4
-translated_at: 2026-05-25T07:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Definition of Toric Varieties](/en/math/toric_geometry/toric_varieties) we saw how to construct a projective toric variety $$X_P$$ from a lattice polytope $$P \subset M_{\mathbb{R}}$$ via its normal fan $$\Sigma_P$$. In this construction there are many pathways by which the geometric properties of $$P$$ are translated into algebro-geometric properties of $$X_P$$, and among them *reflexive polytopes* occupy a special position.

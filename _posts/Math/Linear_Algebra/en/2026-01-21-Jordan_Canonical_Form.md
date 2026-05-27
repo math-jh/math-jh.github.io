@@ -1,5 +1,4 @@
----
-title: "Jordan Canonical Form"
+---title: "Jordan Canonical Form"
 excerpt: "Construction of the Jordan canonical form through generalized eigenspace decomposition"
 
 categories: [Math / Linear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2026-01-21
 last_modified_at: 2026-01-21
 weight: 17
-translated_at: 2026-05-21T13:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Generalized Eigenspaces

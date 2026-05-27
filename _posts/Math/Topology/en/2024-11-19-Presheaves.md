@@ -1,5 +1,4 @@
----
-title: "Presheaves"
+---title: "Presheaves"
 excerpt: "The gluing lemma and the definition of a presheaf"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-11-19
 last_modified_at: 2025-02-18
 weight: 8
-translated_at: 2026-05-27T02:30:04+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Gluing lemma

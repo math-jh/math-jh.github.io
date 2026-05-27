@@ -1,5 +1,4 @@
----
-title: "Inner Product Spaces"
+---title: "Inner Product Spaces"
 excerpt: "Properties of inner products defined over the real numbers"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-10-02
 last_modified_at: 2022-10-02
 
 weight: 117
-translated_at: 2026-05-26T18:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Inner Products and Norms

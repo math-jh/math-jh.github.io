@@ -1,5 +1,4 @@
----
-title: "Ext and Tor"
+---title: "Ext and Tor"
 excerpt: "Definitions and properties of Ext and Tor, the derived functors of Hom and tensor"
 
 categories: [Math / Homological Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-11-06
 last_modified_at: 2026-04-09
 weight: 6
-translated_at: 2026-05-20T19:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post we defined right/left derived functors for general left/right exact functors. In this post we study the derived functors of the left exact functor $$\Hom$$ and the right exact functor $$\otimes$$ defined on $$\lMod{A}$$.

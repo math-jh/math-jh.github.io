@@ -1,5 +1,4 @@
----
-title: "Bilinear Forms"
+---title: "Bilinear Forms"
 excerpt: "Bilinear forms and dual spaces"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-09-28
 last_modified_at: 2022-09-28
 
 weight: 116
-translated_at: 2026-05-21T11:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post, we defined the dual space $$V^\ast$$ of a vector space $$V$$, and saw that if $$V$$ is finite-dimensional, then $$V$$ is isomorphic to $$V^{\ast\ast}$$, the double dual of $$V^\ast$$. The key fact used in this process was that a non-degenerate pairing $$\langle -,-\rangle:V\times W \rightarrow \mathbb{K}$$ defines injective linear maps from $$V$$ to $$W^\ast$$ and from $$W$$ to $$V^\ast$$. We applied this fact to the canonical pairing

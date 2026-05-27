@@ -1,5 +1,4 @@
----
-title: "Separable Degree"
+---title: "Separable Degree"
 excerpt: "The decomposition of separable and inseparable degrees"
 
 categories: [Math / Field Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-05-17
 last_modified_at: 2025-05-17
 weight: 7
-translated_at: 2026-05-20T12:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Radical Extensions

@@ -1,6 +1,6 @@
 ---
-
 title: "Hom과 텐서곱"
+description: "분할 완전열 위에서의 Hom과 텐서곱의 거동을 살펴보고, 가환환 위의 가군들 사이의 Hom과 텐서곱 연산의 기본 성질을 다룬다."
 excerpt: "Hom functor와 tensor product의 adjunction과 exactness"
 
 categories: [Math / Multilinear Algebra]

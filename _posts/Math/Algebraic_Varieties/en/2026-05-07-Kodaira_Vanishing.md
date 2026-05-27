@@ -1,5 +1,4 @@
----
-title: "Kodaira Vanishing Theorem"
+---title: "Kodaira Vanishing Theorem"
 permalink: /en/math/algebraic_varieties/kodaira_vanishing
 excerpt: "The Kodaira vanishing theorem and its applications"
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-05-07
 last_modified_at: 2026-05-09
 weight: 17
-translated_at: 2026-05-19T10:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 [§Cohomology of Projective Spaces, ⁋Proposition 4](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4), the Serre vanishing theorem guarantees that for an ample line bundle $$\mathcal{L}$$ and a coherent sheaf $$\mathcal{F}$$ on a projective variety, $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$) holds for sufficiently large $$m$$. However, this result is merely an asymptotic property and gives no information about exactly which $$m$$ the vanishing begins at.

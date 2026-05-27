@@ -1,5 +1,4 @@
----
-title: "Algebraic Closures"
+---title: "Algebraic Closures"
 excerpt: "The existence of algebraically closed fields and algebraic closures"
 
 categories: [Math / Field Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-05-05
 last_modified_at: 2025-05-05
 weight: 3
-translated_at: 2026-05-20T06:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post we defined what an algebraic extension is. First, let us look at the following proposition.

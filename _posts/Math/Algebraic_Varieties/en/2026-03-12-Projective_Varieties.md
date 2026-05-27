@@ -1,5 +1,4 @@
----
-title: "Projective Varieties"
+---title: "Projective Varieties"
 excerpt: "Projective varieties and homogeneous coordinates"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 2
-translated_at: 2026-05-26T10:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definition of Projective Space

@@ -1,5 +1,4 @@
----
-title: "Natural Transformations"
+---title: "Natural Transformations"
 excerpt: "Natural transformations and equivalence between categories"
 
 categories: [Math / Category Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-05-28
 last_modified_at: 2023-05-28
 weight: 4
-translated_at: 2026-05-19T13:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definition of Natural Transformations

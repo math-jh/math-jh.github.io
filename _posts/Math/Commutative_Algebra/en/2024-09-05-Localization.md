@@ -1,5 +1,4 @@
----
-title: "Localization"
+---title: "Localization"
 excerpt: "The localization of rings and modules, and the construction of local rings"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-09-05
 last_modified_at: 2025-02-02
 weight: 2
-translated_at: 2026-05-19T17:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Local Rings

@@ -1,5 +1,4 @@
----
-title: "Tensor Algebras"
+---title: "Tensor Algebras"
 excerpt: "Tensor algebras, symmetric algebras, exterior algebras"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-12-03
 last_modified_at: 2022-12-03
 weight: 10
-translated_at: 2026-05-26T19:30:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We now define the determinant, and to this end we first define tensor algebras, symmetric algebras, and exterior algebras. Throughout this process, we always assume that $$A$$ is a commutative ring. In particular, then, $$A$$ has the IBN property. ([§Bases, ⁋Proposition 6](/en/math/multilinear_algebra/basis_of_free_modules#prop6))

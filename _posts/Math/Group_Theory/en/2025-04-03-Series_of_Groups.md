@@ -1,5 +1,4 @@
----
-title: "Series of Groups"
+---title: "Series of Groups"
 excerpt: "Commutators and normal, composition, and derived series; solvability"
 
 categories: [Math / Group Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-04-03
 last_modified_at: 2025-04-03
 weight: 3
-translated_at: 2026-05-20T15:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Commutators

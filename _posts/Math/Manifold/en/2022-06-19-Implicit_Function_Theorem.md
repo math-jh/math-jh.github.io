@@ -1,5 +1,4 @@
----
-title: "Implicit Function Theorem"
+---title: "Implicit Function Theorem"
 excerpt: "The implicit function theorem on differentiable manifolds and its consequences"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-06-19
 last_modified_at: 2022-12-10
 weight: 9
-translated_at: 2026-05-21T17:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 First, let us define the following.

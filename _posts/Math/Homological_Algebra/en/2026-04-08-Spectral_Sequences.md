@@ -1,5 +1,4 @@
----
-title: "Spectral Sequences"
+---title: "Spectral Sequences"
 excerpt: "Spectral sequences that approximate the cohomology of a filtered complex page by page"
 
 categories: [Math / Homological Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2026-04-08
 last_modified_at: 2026-04-12
 weight: 7
-translated_at: 2026-05-20T19:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post, we used filtrations and induction to prove the balancing of $$\Ext$$ and $$\Tor$$. This can be thought of as a primitive form of the spectral sequence that we will discuss in this post. A spectral sequence is a systematic method for approximating the cohomology of a cochain complex equipped with a filtration, passing through pages step by step. Let us formally define this data.

@@ -1,5 +1,4 @@
----
-title: "Other Definitions of Topological Spaces"
+---title: "Other Definitions of Topological Spaces"
 excerpt: "Definitions of topology using closed sets, closure, and neighborhood filters"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-11-09
 last_modified_at: 2022-11-09
 weight: 4
-translated_at: 2026-05-23T00:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We have covered the basics of topology so far. Historically, the definition of a topological space as a collection $$\mathcal{T}$$ of open sets is not very old, and various definitions have existed. Even today, depending on the field of study, these definitions can be useful. In this post, we explore how to define topology in different ways using the concepts we have studied.

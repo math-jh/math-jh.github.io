@@ -1,5 +1,4 @@
----
-title: "Smooth Manifolds"
+---title: "Smooth Manifolds"
 excerpt: "Definition of smooth manifolds"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-06-06
 last_modified_at: 2022-06-06
 weight: 1
-translated_at: 2026-05-26T18:30:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We defined the notion of a topological manifold in topology; in this series of posts we deal with differentiable manifolds, and in particular smooth manifolds.

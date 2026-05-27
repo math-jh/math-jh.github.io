@@ -1,5 +1,4 @@
----
-title: "Intersection Product"
+---title: "Intersection Product"
 excerpt: "The intersection product on Chow groups"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-05-11
 last_modified_at: 2026-05-12
 weight: 19
-translated_at: 2026-05-19T11:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Chow Groups](/en/math/algebraic_varieties/chow_groups) we defined the Chow group $$\CH^\ast(X)$$. At the end of that post we claimed that one can define an intersection product on it to give it a ring structure; in this post we define this and examine its properties.

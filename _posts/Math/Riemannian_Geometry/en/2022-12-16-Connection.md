@@ -1,5 +1,4 @@
----
-title: "Connection"
+---title: "Connection"
 excerpt: "Differentiation on a vector bundle"
 
 categories: [Math / Riemannian Geometry]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-12-16
 last_modified_at: 2022-12-16
 weight: 2
-translated_at: 2026-05-22T10:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Connections and Covariant Differentiation

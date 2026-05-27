@@ -1,5 +1,4 @@
----
-title: "Chinese Remainder Theorem"
+---title: "Chinese Remainder Theorem"
 excerpt: "Chinese remainder theorem for products of ideals and comaximal ideals"
 
 categories: [Math / Ring Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-04-11
 last_modified_at: 2025-04-11
 weight: 2
-translated_at: 2026-05-22T12:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Products of Ideals

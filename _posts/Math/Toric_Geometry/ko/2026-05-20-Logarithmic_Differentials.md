@@ -1,6 +1,6 @@
 ---
-
 title: "토릭 다양체 위의 로그 미분형식"
+description: "토릭 다양체 위에서 경계를 따라 로그 극점을 허용하는 로그 미분형식을 다루며, 캐릭터 격자를 통한 완전한 자명화로부터 캐논ical 클래스 공식과 표준 부피 형식을 유도한다."
 excerpt: "Fan으로부터 유도되는 logarithmic differential forms와 canonical class의 toric 표현"
 
 categories: [Math / Toric Geometry]

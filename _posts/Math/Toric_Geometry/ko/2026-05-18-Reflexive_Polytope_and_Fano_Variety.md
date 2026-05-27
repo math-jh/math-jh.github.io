@@ -1,5 +1,6 @@
 ---
 title: "파노 다양체"
+description: "반사 다면체의 정의와 쌍대 다면체의 성질을 살펴보고, bipolar theorem을 통해 파노 다양체의 기하학적 구조를 이해하는 방법을 다룬다."
 excerpt: "Reflexive polytope과 그에 대응하는 Gorenstein Fano 토릭 다양체"
 
 categories: [Math / Toric Geometry]

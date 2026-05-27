@@ -1,6 +1,6 @@
 ---
-
 title: "쌍대공간"
+description: "주어환 위의 가군에 대한 쌍대가군의 정의와 크로네커 쌍, 부분가군 사이의 작교 관계를 다룬다."
 excerpt: "Module의 Hom과 dual module, bidual map"
 
 categories: [Math / Multilinear Algebra]

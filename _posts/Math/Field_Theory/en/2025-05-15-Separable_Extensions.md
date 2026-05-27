@@ -1,5 +1,4 @@
----
-title: "Separable Extensions"
+---title: "Separable Extensions"
 excerpt: "Characterization of separable extensions through étale algebras"
 
 categories: [Math / Field Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-05-15
 last_modified_at: 2025-05-15
 weight: 6
-translated_at: 2026-05-26T13:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Properties of Étale Algebras

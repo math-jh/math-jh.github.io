@@ -1,6 +1,6 @@
 ---
-
 title: "곱공간"
+description: "위상공간들의 곱에 대한 곱_topology의 정의와 성질을 다룬다. 곱공간 위의 연속 함수의 성질을 universal property로 기술하고, 함수의 그래프와 homeomorphism에 적용하여 따름정리들을 유도한다."
 excerpt: "곱공간의 성질들"
 
 categories: [Math / Topology]

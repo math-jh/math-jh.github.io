@@ -1,5 +1,4 @@
----
-title: "Norms and Traces"
+---title: "Norms and Traces"
 excerpt: "The norm and trace defined by elements of an algebra"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-13
 last_modified_at: 2025-04-13
 weight: 12
-translated_at: 2026-05-22T06:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definition of Norms and Traces

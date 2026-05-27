@@ -1,5 +1,4 @@
----
-title: "Diagram chasing"
+---title: "Diagram chasing"
 excerpt: "Five lemma, snake lemma"
 
 categories: [Math / Homological Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-09-10
 last_modified_at: 2024-10-31
 weight: 1
-translated_at: 2026-05-20T16:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Homological algebra is, literally speaking, the study of the properties of chain complexes using their homology. ([\[Category Theory\] §Abelian Categories, ⁋Definition 4](/en/math/category_theory/abelian_categories#def4)) Chain complexes are defined in any abelian category, but by the Freyd-Mitchell embedding theorem they can all be embedded as a full subcategory of some $$\lMod{A}$$. ([\[Category Theory\] §Abelian Categories, ⁋Theorem 9](/en/math/category_theory/abelian_categories#thm9)) 

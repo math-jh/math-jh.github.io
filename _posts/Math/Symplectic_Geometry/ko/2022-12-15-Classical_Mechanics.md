@@ -1,6 +1,6 @@
 ---
-
 title: "고전역학"
+description: "에너지 보존법칙과 위상공간을 통해 사교기하학의 물리적 배경을 살펴본다. 19세기 물리학에서 사교다양체가 등장하게 된 과정을 정리한다."
 excerpt: "고전역학과 phase space"
 
 categories: [Math / Symplectic Geometry]

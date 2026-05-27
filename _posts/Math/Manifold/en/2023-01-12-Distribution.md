@@ -1,5 +1,4 @@
----
-title: "Distribution"
+---title: "Distribution"
 excerpt: "The definition of a distribution and the Frobenius theorem"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-01-12
 last_modified_at: 2023-01-12
 weight: 14
-translated_at: 2026-05-21T20:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Distribution and Integral Flow

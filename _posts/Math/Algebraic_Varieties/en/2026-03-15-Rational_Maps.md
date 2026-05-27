@@ -1,5 +1,4 @@
----
-title: "Rational Maps"
+---title: "Rational Maps"
 excerpt: "Rational maps and birational equivalence"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-03-15
 last_modified_at: 2026-03-15
 weight: 4
-translated_at: 2026-05-26T04:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7) we defined regular maps between quasi-projective varieties. Above all, these are functions defined at every point of the domain; even if they are written in rational form on $$D(f)$$ as in [§Affine Varieties, ⁋Definition 13](/en/math/algebraic_varieties/affine_varieties#def14), the only denominators allowed are powers of $$f$$, so they are defined everywhere.

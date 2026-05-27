@@ -1,5 +1,4 @@
----
-title: "The Riemann–Roch Theorem for Surfaces"
+---title: "The Riemann–Roch Theorem for Surfaces"
 excerpt: "Intersection theory on surfaces and its applications"
 
 categories: [Math / Algebraic Varieties]
@@ -14,6 +13,7 @@ header:
 date: 2026-05-04
 last_modified_at: 2026-05-09
 weight: 16
+translated_at: 2026-05-28T11:36:15+00:00
 ---
 
 We examined the Riemann–Roch theorem for curves in the previous post. Essentially, the Riemann–Roch theorem computes the Euler characteristic in terms of other quantitative invariants, and although we could generalize it to arbitrary cases, in this post we only discuss its generalization to surfaces.

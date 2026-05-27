@@ -1,5 +1,4 @@
----
-title: "Bézout's Theorem"
+---title: "Bézout's Theorem"
 excerpt: "Bézout's theorem and its applications"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-03-15
 last_modified_at: 2026-04-02
 weight: 20
-translated_at: 2026-05-19T12:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we introduce Bézout's theorem, a classical result in algebraic geometry. Intuitively, given two curves $$C,D$$ in the plane, the number of their intersection points depends on their degrees: for instance, the quadratic curve $$\y=x^2$$ and a line in the plane generally meet at two points. Bézout's theorem is a generalization of this observation.

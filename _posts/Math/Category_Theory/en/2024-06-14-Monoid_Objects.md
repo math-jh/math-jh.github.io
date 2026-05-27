@@ -1,5 +1,4 @@
----
-title: "Monoid Objects"
+---title: "Monoid Objects"
 excerpt: "Monoid objects in a monoidal category and their examples"
 
 categories: [Math / Category Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-06-14
 last_modified_at: 2024-06-14
 weight: 8
-translated_at: 2026-05-20T16:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Monoid Objects

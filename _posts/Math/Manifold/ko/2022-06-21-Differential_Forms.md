@@ -1,6 +1,6 @@
 ---
 title: "미분형식"
-description: "매끄럽 위상空間 위에서 정의된 텐서장, 미분형식의 개념을 다루고, wedge product를 통한 등급 대수 구조와 미분형식의 pullback을 설명한다."
+description: "다양체 위의 미분형식을 텐서다발과 외대수다발을 통해 정의하고, 웨지 곱으로 차수별 대수 구조를 부여한 뒤 함수에 의한 풀백 연산을 설명한다."
 excerpt: "Differential form"
 
 categories: [Math / Manifold]

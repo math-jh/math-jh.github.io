@@ -1,6 +1,6 @@
 ---
-
 title: "행렬식"
+description: "자유 가환군 위에서의 행렬식을 정의하고 그 기본 성질을 증명한다. 곱셈 공식, 가역성, 그리고 유한차원 자유 가환군에서 선형 사상의 가역성과의 관계를 다룬다."
 excerpt: "Free module 자기사상의 determinant와 기본 성질"
 
 categories: [Math / Multilinear Algebra]

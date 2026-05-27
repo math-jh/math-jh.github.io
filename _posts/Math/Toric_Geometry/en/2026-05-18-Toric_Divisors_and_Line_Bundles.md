@@ -1,5 +1,4 @@
----
-title: "Torus-Invariant Divisors and Line Bundles"
+---title: "Torus-Invariant Divisors and Line Bundles"
 excerpt: "Torus-invariant divisors and line bundles arising from the rays of a fan"
 
 categories: [Math / Toric Geometry]
@@ -15,7 +14,7 @@ sidebar:
 date: 2026-05-18
 last_modified_at: 2026-05-18
 weight: 3
-translated_at: 2026-05-25T14:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post we studied toric varieties, and in doing so we already saw that the combinatorial data of the fan defining a toric variety determines many of its properties. In this post we focus in particular on (torus-invariant) divisors defined on a toric variety.

@@ -1,5 +1,4 @@
----
-title: "Integral Extensions"
+---title: "Integral Extensions"
 excerpt: "The Cayley-Hamilton theorem, integral elements, and integral extensions"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-17
 last_modified_at: 2025-02-23
 weight: 8
-translated_at: 2026-05-19T19:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## The Cayley-Hamilton Theorem

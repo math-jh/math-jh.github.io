@@ -1,6 +1,6 @@
 ---
 title: "코탄젠트 복합체"
-description: "코탄젠트 복합체의 정의와 성질을 다루며, 칼러 미분을 파생 대수 기하학의框架으로 확장하는 과정을 설명한다. 호몰로지 대수학과 대수적 기하학에서 나타나는 변형과 장애물의 이해에 핵심적인 도구를 다룬다."
+description: "코흐 미분을 호모토피 이론적으로 일반화한 코탄젠트 복합체의 정의와 성질을 다룬다. 대수기하학과 미분 등급 대수에서의 응용을 중심으로 설명한다."
 excerpt: "Kähler 미분의 cotangent complex로의 derived 확장"
 
 categories: [Math / Multilinear Algebra]

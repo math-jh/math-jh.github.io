@@ -1,5 +1,4 @@
----
-title: "Characteristic Polynomial"
+---title: "Characteristic Polynomial"
 excerpt: "The characteristic polynomial of a matrix"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-08-28
 last_modified_at: 2022-08-29
 
 weight: 15
-translated_at: 2026-05-26T17:30:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Now we examine the characteristic polynomial of a matrix and a linear map, and through it we define eigenvalues.

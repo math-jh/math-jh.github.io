@@ -1,5 +1,4 @@
----
-title: "Determinants"
+---title: "Determinants"
 excerpt: "The determinant of an endomorphism of a free module and its basic properties"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-07
 last_modified_at: 2024-10-07
 weight: 11
-translated_at: 2026-05-22T05:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Determinant

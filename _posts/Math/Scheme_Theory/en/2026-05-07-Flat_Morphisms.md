@@ -1,5 +1,4 @@
----
-title: "Flat Morphisms"
+---title: "Flat Morphisms"
 excerpt: "Flat morphisms in algebraic geometry"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-02-21
 last_modified_at: 2025-02-21
 weight: 10
-translated_at: 2026-05-22T17:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 When dealing with families of varieties in algebraic geometry, we expect the fibers to vary "continuously" as the point in the base changes. However, mere continuity of the morphism is insufficient to capture this intuition. For example, the dimension of a fiber may suddenly jump at a point of the base, or the number of singularities may change, leading to discontinuous behavior. The notion that excludes such phenomena and ensures that the fibers maintain constant algebraic and geometric properties is precisely **flatness**. In this post, we first define flat modules in the context of commutative algebra, and then introduce flat morphisms between [§Schemes](/en/math/scheme_theory/schemes) and examine their geometric meaning, criteria, and examples.

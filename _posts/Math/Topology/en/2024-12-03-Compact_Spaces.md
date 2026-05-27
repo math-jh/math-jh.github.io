@@ -1,5 +1,4 @@
----
-title: "Compact Spaces"
+---title: "Compact Spaces"
 excerpt: "Compact spaces, defined by the existence of a finite subcover for every open cover"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-12-03
 last_modified_at: 2024-12-03
 weight: 14
-translated_at: 2026-05-23T05:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we define the notion of compactness.

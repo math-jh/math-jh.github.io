@@ -1,5 +1,4 @@
----
-title: "Representation Theory of Finite Groups"
+---title: "Representation Theory of Finite Groups"
 excerpt: "Definition of representations of finite groups and irreducible decomposition"
 
 categories: [Math / Representation Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2026-02-13
 last_modified_at: 2026-02-13
 weight: 1
-translated_at: 2026-05-26T21:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 One good strategy for dealing with a mathematical object whose structure is complicated is to see how it acts on other, simpler objects. In this category we study representation theory, and in particular the representation theory of finite groups.

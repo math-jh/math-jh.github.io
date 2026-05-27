@@ -1,5 +1,4 @@
----
-title: "Richardson Variety"
+---title: "Richardson Variety"
 excerpt: "The definition and basic geometric properties of Richardson varieties, defined as the intersection of Schubert varieties and opposite Schubert varieties"
 
 categories: [Math / Lie Theory]
@@ -14,7 +13,7 @@ header:
 date: 2025-01-05
 last_modified_at: 2025-01-05
 weight: 6
-translated_at: 2026-05-20T21:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 published: false
 ---

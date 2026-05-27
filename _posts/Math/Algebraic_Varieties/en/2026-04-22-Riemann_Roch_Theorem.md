@@ -1,5 +1,4 @@
----
-title: "The Riemann–Roch Theorem for Curves"
+---title: "The Riemann–Roch Theorem for Curves"
 excerpt: "The Riemann–Roch theorem for curves"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-04-22
 last_modified_at: 2026-05-04
 weight: 15
-translated_at: 2026-05-25T03:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We now examine the complete linear system $$H^0(X, \mathcal{L})$$ of a line bundle $$\mathcal{L}$$, which we saw in [§Linear Systems, ⁋Definition 2](/en/math/algebraic_varieties/linear_systems#def2), in greater detail. We could have introduced this right after defining linear systems, but the proof requires Serre duality, so we postponed it.

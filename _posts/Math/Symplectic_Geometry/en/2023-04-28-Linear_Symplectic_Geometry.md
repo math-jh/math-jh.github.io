@@ -1,5 +1,4 @@
----
-title: "Symplectic Vector Spaces"
+---title: "Symplectic Vector Spaces"
 excerpt: "Definition of symplectic forms"
 
 categories: [Math / Symplectic Geometry]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-04-28
 last_modified_at: 2023-04-28
 weight: 2
-translated_at: 2026-05-22T22:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Since momentum is treated as a covector in physics, it is natural to consider the cotangent bundle $$T^\ast M$$ of a manifold $$M$$ when describing phase space mathematically.

@@ -1,5 +1,4 @@
----
-title: "Torus Actions"
+---title: "Torus Actions"
 excerpt: "Actions of a torus and weight space decomposition"
 
 categories: [Math / Lie Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2026-02-24
 last_modified_at: 2026-02-24
 weight: 2
-translated_at: 2026-05-26T15:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Given an arbitrary finite group $$G$$, one of the best ways to study it is through its finite-dimensional representation

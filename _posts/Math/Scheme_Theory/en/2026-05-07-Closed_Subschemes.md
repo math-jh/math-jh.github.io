@@ -1,5 +1,4 @@
----
-title: "Closed Subschemes"
+---title: "Closed Subschemes"
 excerpt: "Closed subschemes and vanishing schemes defined by ideal sheaves"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-02-18
 last_modified_at: 2025-02-18
 weight: 12
-translated_at: 2026-05-22T15:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2) we saw that, for an affine scheme $$\Spec A$$, any element $$f$$ defines an open affine subscheme $$D(f)\cong \Spec A_f$$; in particular, to compare the two structure sheaves, we applied [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) to the morphism

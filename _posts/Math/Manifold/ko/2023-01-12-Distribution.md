@@ -1,6 +1,6 @@
 ---
 title: "Distribution"
-description: "다양체 위에 정의된 분포의 개념과 적분 다엽取得以及, 분포가 가법적일 필요충분 조건을 다루는 프로베니우스 정리를 설명한다."
+description: "매니폴드 위의 분포와 적분 다양체의 개념을 정의하고, 프로베니우스 정리로 적분 가능 분포를 involutivity 조건으로 특성짓는 방법을 다룬다."
 excerpt: "Distribution의 정의와 Frobenius theorem"
 
 categories: [Math / Manifold]

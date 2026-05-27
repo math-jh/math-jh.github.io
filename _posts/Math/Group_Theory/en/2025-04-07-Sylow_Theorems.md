@@ -1,5 +1,4 @@
----
-title: "Sylow Theorems"
+---title: "Sylow Theorems"
 excerpt: "p-subgroups of finite groups and the three Sylow theorems"
 
 categories: [Math / Group Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-04-07
 last_modified_at: 2025-04-07
 weight: 4
-translated_at: 2026-05-26T14:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## $$p$$-Groups

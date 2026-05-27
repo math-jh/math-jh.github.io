@@ -1,5 +1,4 @@
----
-title: "Complete Intersections"
+---title: "Complete Intersections"
 excerpt: "Codimension of vanishing schemes and complete intersections"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-03-08
 last_modified_at: 2025-03-08
 weight: 15
-translated_at: 2026-05-22T16:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 From dimension

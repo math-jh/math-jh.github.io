@@ -1,4 +1,5 @@
----title: "교차곱"
+---
+title: "교차곱"
 description: "교차곱의 정의와 성질을 다룬다. Chow 군 위에 intersection product를 정의하고, 교차 중복도와 Tor 공식을 통해 구체적 계산 예시를 살펴본다."
 excerpt: "The intersection product on Chow groups"
 

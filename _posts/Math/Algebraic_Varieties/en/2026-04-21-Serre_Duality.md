@@ -1,5 +1,4 @@
----
-title: "Serre Duality"
+---title: "Serre Duality"
 excerpt: "Serre duality theorem and its applications"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-04-21
 last_modified_at: 2026-04-22
 weight: 14
-translated_at: 2026-05-20T09:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In geometrically nice situations, there is a natural duality between cohomology in dimension $$k$$ and cohomology in codimension $$k$$. To prove this, we used a perfect pairing

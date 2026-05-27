@@ -1,5 +1,4 @@
----
-title: "Existence and Uniqueness of the Determinant"
+---title: "Existence and Uniqueness of the Determinant"
 excerpt: "Existence and uniqueness proof of the determinant, and methods for computing it"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-08-12
 last_modified_at: 2022-08-12
 
 weight: 14
-translated_at: 2026-05-26T17:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we show that the determinant exists uniquely, and examine methods for computing it.

@@ -1,6 +1,6 @@
 ---
-
 title: "이항관계들 사이의 연산"
+description: "이항관계의 역과 합성을 정의하고, 역의 성질과 합성의 결합법칙을 증명하며, 두 이항관계 합성의 역에 대한 명제를 다룬다."
 excerpt: "이항관계의 역과 합성"
 
 categories: [Math / Set Theory]

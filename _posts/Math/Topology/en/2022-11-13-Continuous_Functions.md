@@ -1,5 +1,4 @@
----
-title: "Continuous Functions"
+---title: "Continuous Functions"
 excerpt: "Properties of continuous functions"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-11-13
 last_modified_at: 2022-11-13
 weight: 5
-translated_at: 2026-05-27T01:30:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Continuous Functions

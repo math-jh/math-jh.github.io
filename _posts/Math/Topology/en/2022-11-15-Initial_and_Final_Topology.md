@@ -1,5 +1,4 @@
----
-title: "Initial and Final Topology"
+---title: "Initial and Final Topology"
 excerpt: "Initial/final topology and their examples"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-11-15
 last_modified_at: 2022-11-15
 weight: 6
-translated_at: 2026-05-27T02:00:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Continuous Functions](/en/math/topology/continuous_functions) we defined, for a continuous function $$f:X \rightarrow Y$$, the function $$f^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$ through the formula

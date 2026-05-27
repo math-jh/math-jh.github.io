@@ -1,5 +1,4 @@
----
-title: "Dubrovin Connection"
+---title: "Dubrovin Connection"
 excerpt: "A flat connection on a Frobenius manifold with a spectral parameter"
 
 categories: [Math / Mirror Symmetry]
@@ -14,7 +13,7 @@ header:
 date: 2026-05-21
 last_modified_at: 2026-05-21
 weight: 4
-translated_at: 2026-05-24T05:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post we saw that quantum cohomology $$QH^\ast(X)$$ and the Jacobi ring $$\Jac(W_q)$$ carry Frobenius algebra structures, and we embedded them into a Frobenius manifold structure in order to capture the naturality of their isomorphisms in the $$q$$-parameter direction. The data carried by a Frobenius manifold $$M$$ consists of the following:

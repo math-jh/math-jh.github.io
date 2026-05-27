@@ -1,6 +1,6 @@
 ---
-
 title: "곱집합의 성질"
+description: "곱집합의 부분곱과 결합법칙을 정의하고, 성분함수의 합성을 이용해 곱집합 결합법칙을 증명한다. 분할에 의한 전단사함수 존재와 universal property를 통한 증명도 다룬다."
 excerpt: "부분곱, 결합법칙과 결합법칙"
 
 categories: [Math / Set Theory]

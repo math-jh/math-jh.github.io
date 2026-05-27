@@ -1,6 +1,6 @@
 ---
-
 title: "준층"
+description: "위상공간 위의 열린집합에 대응하는 연속함수의 모임을 contravariant functor로 정의하는 준층의 개념을 소개하고, 글루잉 보조정리를 통해 부분집합족 위의 연속함수를 전체 공간으로 확장하는 조건을 다룬다."
 excerpt: "Gluing lemma와 presheaf의 정의"
 
 categories: [Math / Topology]

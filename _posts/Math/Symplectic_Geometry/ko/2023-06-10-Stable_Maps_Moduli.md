@@ -1,6 +1,6 @@
 ---
-
 title: "Stable maps의 moduli space"
+description: "J-holomorphic curve의 nodal limit을 다루는 stable map의 정의부터 moduli space의 compactness, expected dimension 계산, virtual fundamental class 존재까지 정리한다."
 excerpt: "Stable map의 정의와 moduli space의 compactness, virtual fundamental class"
 
 categories: [Math / Symplectic Geometry]

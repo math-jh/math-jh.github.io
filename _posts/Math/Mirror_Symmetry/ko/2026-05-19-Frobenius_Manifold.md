@@ -1,4 +1,5 @@
----title: "프로베니우스 다양체"
+---
+title: "프로베니우스 다양체"
 description: "프로베니우스 대수의 정의를 시작으로, 각 점에서 프로베니우스 대수 구조를 갖는 프로베니우스 다양체의 개념과 WDVV 방정식을 살펴보며, 거울대칭과 양자 코호몰로지, 야코비 환과의 관계를 다룬다."
 excerpt: "Frobenius manifold와 WDVV equation"
 

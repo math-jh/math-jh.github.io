@@ -1,5 +1,4 @@
----
-title: "Dimension"
+---title: "Dimension"
 excerpt: "Krull dimension, defined by prime chains, and its basic properties"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-01-16
 last_modified_at: 2025-01-16
 weight: 16
-translated_at: 2026-05-20T01:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definition of Dimension
