@@ -7,8 +7,10 @@
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}
-  {%- assign search_provider = site.search_provider | default: "lunr" -%}
+  {%- assign search_provider = site.search_provider | default: "pagefind" -%}
   {%- case search_provider -%}
+    {%- when "pagefind" -%}
+      {% include search/pagefind-search-scripts.html %}
     {%- when "lunr" -%}
       {% include_cached search/lunr-search-scripts.html %}
     {%- when "google" -%}

@@ -1828,3 +1828,12 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `모든` | looks like emphasis (no <sub> partner) |
 
+## 서수들 사이의 순서관계
+- post: `_posts/Math/Set_Theory/ko/2022-11-29-Order_Relations_Between_Ordinals.md`
+- permalink: `/ko/math/set_theory/order_relations_between_ordinals`
+- scanned: 2026-05-27T06:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `The Axiom schema of Replacement.` | multi-word English emphasis — possibly a definition |
+
