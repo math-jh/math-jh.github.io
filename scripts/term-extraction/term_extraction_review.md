@@ -1837,3 +1837,12 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `The Axiom schema of Replacement.` | multi-word English emphasis — possibly a definition |
 
+## 제한합
+- post: `_posts/Math/Algebraic_Structures/ko/2023-01-09-Restricted_Sums.md`
+- permalink: `/ko/math/algebraic_structures/restricted_sums`
+- scanned: 2026-05-27T06:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유한한` | looks like emphasis (no <sub> partner) |
+
