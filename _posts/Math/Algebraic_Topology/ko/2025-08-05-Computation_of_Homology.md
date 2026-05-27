@@ -1,6 +1,6 @@
 ---
-
 title: "호몰로지의 계산"
+description: "호몰로지를 계산하기 위한 실질적인 도구들을 다룬다. 범주론의 수반함자와 콜리밋 보존 성질을 이용해 호몰로지를 분석하고, 상대 호몰로지의 정의와 긴 완전열을 통한 계산 기법을 살펴본다. 아벨화와 콜리밋 보존을 활용한 구체적인 계산 과정을 다루게 된다."
 excerpt: "Relative homology와 Mayer-Vietoris를 통한 호몰로지의 실제 계산"
 
 categories: [Math / Algebraic Topology]

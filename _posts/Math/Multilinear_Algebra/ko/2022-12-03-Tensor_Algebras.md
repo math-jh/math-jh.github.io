@@ -1,6 +1,6 @@
 ---
-
 title: "텐서대수"
+description: "행렬식 정의에 필요한 텐서대수의 개념과 보편 성질을 정리하고, 직접 합과 스칼라 확장에서의 연산 거동을 살펴본다."
 excerpt: "텐서대수, 대칭대수, 외대수"
 
 categories: [Math / Multilinear Algebra]

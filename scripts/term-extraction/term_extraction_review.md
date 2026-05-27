@@ -1864,3 +1864,42 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `$$A$$-module` | looks like emphasis (no <sub> partner) |
 
+## 대수적 구조
+- post: `_posts/Math/Algebraic_Structures/ko/2021-09-02-Algebraic_Structures.md`
+- permalink: `/ko/math/algebraic_structures/algebraic_structures`
+- scanned: 2026-05-27T09:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `몫집합` | looks like emphasis (no <sub> partner) |
+| `right` | looks like emphasis (no <sub> partner) |
+| `left` | looks like emphasis (no <sub> partner) |
+
+## Grothendieck 군
+- post: `_posts/Math/Algebraic_Structures/ko/2021-09-04-Grothendieck_Groups.md`
+- permalink: `/ko/math/algebraic_structures/Grothendieck_groups`
+- scanned: 2026-05-27T09:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `group homomorphism` | multi-word English emphasis — possibly a definition |
+
+## 벡터공간의 기저
+- post: `_posts/Math/Linear_Algebra/ko/2021-10-10-Basis.md`
+- permalink: `/ko/math/linear_algebra/basis`
+- scanned: 2026-05-27T10:40:40+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `모든` | looks like emphasis (no <sub> partner) |
+
+## ZFC 공리계
+- post: `_posts/Math/Set_Theory/ko/2021-08-07-ZFC_Axioms.md`
+- permalink: `/ko/math/set_theory/zfc_axioms`
+- scanned: 2026-05-27T11:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `schema` | looks like emphasis (no <sub> partner) |
+| `멱집합` | looks like emphasis (no <sub> partner) |
+

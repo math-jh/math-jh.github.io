@@ -1,6 +1,6 @@
 ---
-
 title: "부분다양체와 역함수 정리"
+description: "부분다양체의 정의를 immersion과 submersion으로 설명하고, immersed 부분다양체와 embedded 부분다양체의 차이를 subspace topology 관점에서 그림 예시와 함께 다룬다."
 excerpt: "미분다양체의 부분구조"
 
 categories: [Math / Manifold]

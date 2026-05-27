@@ -1,6 +1,6 @@
 ---
-
 title: "선형사상"
+description: "벡터공간 사이에서 덧셈과 스칼라곱을 보존하는 함수인 선형사상을 정의하고, 합성과 기본 성질을 다룬다."
 excerpt: "선형사상의 정의와 예시"
 
 categories: [Math / Linear Algebra]

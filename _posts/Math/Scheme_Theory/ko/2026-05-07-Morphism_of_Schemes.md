@@ -1,6 +1,6 @@
 ---
-
 title: "스킴 사이의 사상"
+description: "스킴 사상은 연속 함수와 구조 층의 사상으로 정의되며, 아핀 스킴 사이의 사상은 환 준동형사상에 대응한다. 일반적인 스킴 사상은 아핀 열린 덮개 위에서 국소 사상들을 붙여서 이해할 수 있다."
 excerpt: "Locally ringed space morphism으로서의 scheme morphism의 네 관점"
 
 categories: [Math / Scheme Theory]

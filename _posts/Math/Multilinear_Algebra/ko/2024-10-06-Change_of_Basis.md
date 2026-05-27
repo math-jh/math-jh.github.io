@@ -1,6 +1,6 @@
 ---
-
 title: "기저변환"
+description: "기저변환은 유한 차원 벡터 공간에서 주어진 기저를 다른 기저로 바꾸는 과정을 다루며, 정사각행렬의 역행렬 존재 조건과 기저의 동치 관계를 성립한다."
 excerpt: "정사각행렬과 가역행렬, 기저변환에 의한 행렬의 변환"
 
 categories: [Math / Multilinear Algebra]

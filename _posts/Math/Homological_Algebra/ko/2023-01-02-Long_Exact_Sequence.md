@@ -1,6 +1,6 @@
 ---
-
 title: "긴 완전열"
+description: "short exact sequence가 호몰로지들 사이의 long exact sequence를 유도하는 과정을 다루며, snake lemma와 diagram chasing을 이용한 증명을 포함한다."
 excerpt: "긴 완전열"
 
 categories: [Math / Homological Algebra]

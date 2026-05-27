@@ -1,6 +1,6 @@
 ---
-
 title: "스펙트럼"
+description: "환의 소 아이들로 구성된 스펙트럼을 집합으로 정의하고, 위의 위상 구조를 부여하여 위상공간으로 만드는 과정을 다룬다."
 excerpt: "가환환의 prime spectrum과 Zariski topology"
 
 categories: [Math / Scheme Theory]

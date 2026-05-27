@@ -1,6 +1,6 @@
 ---
-
 title: "미분"
+description: "graded algebra 위에서 정의되는 미분의 개념을 다루며, commutation factor를 통한 부호 규칙과 곱에 대한 라이프니츠 법칙을 전개한다."
 excerpt: "Differential module"
 
 categories: [Math / Multilinear Algebra]

@@ -1,5 +1,5 @@
----
-title: "Borel subgroup과 flag variety"
+---title: "Borel subgroup과 flag variety"
+description: "근계의 구조를 통해 semisimple Lie algebra를 Dynkin diagram으로 분류하고, 이 분류에서 자연스럽게 등장하는 flag variety의 기하학적 성질을 다룬다."
 excerpt: "Dynkin diagram, ADE 분류, 그리고 flag variety"
 
 categories: [Math / Lie Theory]

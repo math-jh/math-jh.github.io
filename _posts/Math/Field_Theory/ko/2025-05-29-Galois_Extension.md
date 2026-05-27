@@ -1,6 +1,6 @@
 ---
-
 title: "갈루아 확장"
+description: "갈루아 확장의 정의와 성질을 다룬다. 필드의 대수적 확장들 사이의 동치 관계를 정의하고, conjugate 확장과 conjugate 원소의 관계를 살펴본다. 명제와 증명을 통해 automorphism, 최소 다항식을 이용한 동치 조건을 확인한다."
 excerpt: "Normal과 separable을 모두 만족하는 Galois extension의 정의"
 
 categories: [Math / Field Theory]

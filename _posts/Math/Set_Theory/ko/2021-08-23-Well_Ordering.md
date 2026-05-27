@@ -1,6 +1,6 @@
 ---
-
 title: "정렬집합의 성질들"
+description: "정렬집합의 세그먼트 구조를 분석하고, 폰 노이만의 정의를 통해 서수를 엄밀하게 구성한다. 자연수에서 일반 서수까지의 성질과 후임 서수가 서수임을 증명한다."
 excerpt: "Ordinal의 정의와 정렬집합의 성질들"
 
 categories: [Math / Set Theory]

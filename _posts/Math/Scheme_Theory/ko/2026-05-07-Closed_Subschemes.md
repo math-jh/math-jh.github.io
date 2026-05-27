@@ -1,6 +1,6 @@
 ---
-
 title: "닫힌 부분스킴"
+description: "아핀 스킴의 닫힌 부분스킴을 정의할 때, 위상적인 제한으로 얻는 층과 몫환으로부터 얻는 층이 어떻게 다른지 살펴본다. 아핀 직선의 구체적 예시를 통해 두 구조층의 차이를 확인한다."
 excerpt: "Ideal sheaf로부터 정의되는 closed subscheme과 vanishing scheme"
 
 categories: [Math / Scheme Theory]

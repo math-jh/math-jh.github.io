@@ -1,5 +1,5 @@
----
-title: "표준선다발"
+---title: "표준선다발"
+description: "쌍대접다발의 최고 외적 거듭제곱으로 정의되는 표준선다발을 살펴보고, 벡터다발과 준연접층의 관계를 통해 매끈한 대수다양체 위의 기하학적 구조를 이해합니다."
 excerpt: "Canonical bundle and canonical divisor"
 
 categories: [Math / Algebraic Varieties]

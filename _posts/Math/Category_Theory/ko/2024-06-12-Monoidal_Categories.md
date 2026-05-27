@@ -1,6 +1,6 @@
 ---
-
 title: "모노이드 범주"
+description: "대수적 모노이드의 정의를 복습하고 이를 범주론 언어로 번역하는 과정을 통해, 결합법칙과 항등원을 가환 도표로 표현하며 모노이드 범주와 모노이드 대상의 개념을 소개한다."
 excerpt: "Monoidal category의 정의와 coherence 조건"
 
 categories: [Math / Category Theory]

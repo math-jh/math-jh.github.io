@@ -1,6 +1,6 @@
 ---
-
 title: "차원"
+description: "스킴의 차원을 크룰 차원으로 정의하고, 가환대수학적 차원과의 관계를 살펴봅니다. 유한 사상과 적분 사상의 성질을 함께 다룹니다."
 excerpt: "Scheme의 dimension 정의와 local ring의 Krull dimension과의 관계"
 
 categories: [Math / Scheme Theory]

@@ -1,5 +1,5 @@
----
-title: "Hirzebruch-Riemann-Roch"
+---title: "Hirzebruch-Riemann-Roch"
+description: "Hirzebruch-Riemann-Roch 정리로 smooth projective variety 위의 coherent sheaf의 Euler characteristic을 Chern character와 Todd class를 사용해 계산하는 방법을 다룬다. 저차원 환원, 증명 개요, 구체적 계산 예시를 함께 서술한다."
 permalink: /ko/math/algebraic_varieties/hirzebruch_riemann_roch
 excerpt: "Hirzebruch-Riemann-Roch 정리와 그 특수한 경우들"
 categories: [Math / Algebraic Varieties]

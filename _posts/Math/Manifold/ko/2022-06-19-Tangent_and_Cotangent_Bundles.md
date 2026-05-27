@@ -1,6 +1,6 @@
 ---
-
 title: "접다발과 여접다발"
+description: "위상공간 위의 벡터다발을 정의하고, 그 대표적 예시인 접다발의 구조를 살펴본다."
 excerpt: "Vector bundle의 정의와 tangent, cotangent bundle"
 
 categories: [Math / Manifold]
