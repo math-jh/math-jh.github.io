@@ -1,6 +1,6 @@
 ---
 title: "Graded Rings"
-excerpt: "Definitions and basic properties of monoid-indexed graded rings"
+excerpt: "Definition and basic properties of a graded ring indexed by a monoid"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/graded_rings
@@ -10,46 +10,45 @@ header:
 sidebar: 
     nav: "algebraic_structures-en"
 
-date: 2026-03-11
-last_modified_at: 2026-03-11
+date: 2024-08-11
+last_modified_at: 2024-08-11
 weight: 106
-translated_at: 2026-05-24T23:00:04+00:00
+translated_at: 2026-05-27T07:00:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-24T23:00:04+00:00
 ---
 ## Graded Rings
 
-When the index set $$I$$ is a commutative monoid, we agreed to call the direct sum $$\bigoplus_{i\in I} A_i$$ of a family $$(A_i)_{i\in I}$$ of abelian groups a *graded abelian group*. At that time, since there were no conditions on the $$A_i$$, this was not a particularly interesting definition; now that the $$A_i$$ carry a multiplication structure, this definition becomes meaningful.
+When the index set $$I$$ is a commutative monoid, we agreed to call the direct sum $$\bigoplus_{i\in I} A_i$$ of a family of abelian groups $$(A_i)_{i\in I}$$ a *graded abelian group*. At that time there was no additional condition on the $$A_i$$, so this was not a particularly interesting definition; but now that a multiplicative structure is imposed on the $$A_i$$, the definition becomes more meaningful.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let $$I$$ be a commutative monoid and let $$(A_i)_{i\in I}$$ be an $$I$$-indexed family of abelian groups. If the multiplication defined on $$\bigoplus_{i\in I} A_i$$ makes it a ring and, in addition, satisfies the condition
+<ins id="def1">**Definition 1**</ins> Let $$I$$ be a commutative monoid and let $$(A_i)_{i\in I}$$ be an $$I$$-indexed family of abelian groups. If the multiplication defined on $$\bigoplus_{i\in I} A_i$$ makes it into a ring and, in addition, the condition
 
 $$A_i A_j\subseteq A_{i+j}\qquad\text{for all $i,j\in I$}$$
 
-then $$A$$ is called a *graded ring indexed by* $$I$$. Elements belonging to $$A_i$$ are called *homogeneous elements*.
+is satisfied, then we call $$A$$ a *graded ring* indexed by $$I$$. An element belonging to $$A_i$$ is called a *homogeneous element*.
 
 </div>
 
-By definition, every element of $$A$$ can be uniquely written as a finite sum of homogeneous elements.
+By definition, any element of $$A$$ can be written uniquely as a finite sum of homogeneous elements.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**Proposition 2**</ins> Assume that every element of $$I$$ is cancellable and that $$\bigoplus_{i\in I} A_i$$ is a graded ring. Then $$A_0$$ is a subring of $$A$$.
+<ins id="prop2">**Proposition 2**</ins> Suppose every element of $$I$$ is cancellable and that $$\bigoplus_{i\in I} A_i$$ is a graded ring. Then $$A_0$$ is a subring of $$A$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-It is obvious from $$A_0A_0\subseteq A_0$$ that $$A_0$$ is closed under multiplication. Thus it suffices to show that the multiplicative identity $$1$$ of $$A=\bigoplus A_i$$ lies in $$A_0$$. Write $$1=\sum_{i\in I} \epsilon_i$$. Then for any $$\alpha\in A_j$$,
+From $$A_0A_0\subseteq A_0$$ it is obvious that $$A_0$$ is closed under multiplication. Hence it suffices to show that the multiplicative identity $$1$$ of $$A=\bigoplus A_i$$ lies in $$A_0$$. Write $$1=\sum_{i\in I} \epsilon_i$$. Then for any $$\alpha\in A_j$$,
 
 $$\alpha=1\alpha=\sum_{i\in I} \epsilon_i\alpha\in A_j$$
 
-and therefore $$\epsilon_i\alpha=0$$ for all $$i\neq 0$$, while $$\epsilon_0\alpha=\alpha$$. Now since every element of $$A$$ can be written as a sum of homogeneous elements, the proof is complete.
+and therefore $$\epsilon_i\alpha=0$$ for all $$i\neq 0$$, while $$\epsilon_0\alpha=\alpha$$ holds only for $$i=0$$. Since any element of $$A$$ can be expressed as a sum of homogeneous elements, the proof is complete.
 
 </details>
 
-In most cases of interest, $$I=\mathbb{Z}$$ or $$I= \mathbb{N}$$, so the hypothesis of [Proposition 2](#prop2) is satisfied.
+In most cases of interest we have either $$I=\mathbb{Z}$$ or $$I= \mathbb{N}$$. Hence the hypothesis of [Proposition 2](#prop2) is satisfied.
 
 <div class="example" markdown="1">
 
@@ -65,61 +64,61 @@ In most cases of interest, $$I=\mathbb{Z}$$ or $$I= \mathbb{N}$$, so the hypothe
 
 </div>
 
-It is straightforward to see that $$I$$-graded rings and $$I$$-graded homomorphisms form a category $$\bgr_I\Ring$$.
+It is not difficult to see that $$I$$-graded rings and $$I$$-graded homomorphisms form a category $$\bgr_I\Ring$$.
 
 ## Homogeneous Ideals and Quotients of Graded Rings
 
-For a graded ring $$A=\bigoplus_{i\in I} A_i$$, the quotient ring $$A/\mathfrak{a}$$ by an ideal $$\mathfrak{a}$$ of $$A$$ need not always be a graded ring.
+For a graded ring $$A=\bigoplus_{i\in I} A_i$$, the quotient ring $$A/\mathfrak{a}$$ of an ideal $$\mathfrak{a}$$ of $$A$$ need not always be a graded ring.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**Example 5**</ins> Fix a ring $$A$$ and consider the *polynomial ring* with coefficients in $$A$$:
+<ins id="ex5">**Example 5**</ins> Fix a ring $$A$$ and consider the *polynomial ring*
 
 $$A[\x]=\{\alpha_n\x^n+\cdots+\alpha_1\x+\alpha_0\mid \alpha_i\in A\}$$
 
-It acquires a graded ring structure via the decomposition
+whose coefficients are elements of $$A$$. Then this ring carries a graded ring structure via the decomposition
 
-$$A[\x]=\bigoplus_{n\geq 0} A\x^n$$
+$$A[\x]=\bigoplus_{n\geq 0} A\x^n.$$
 
-Now consider the ideal $$(\x-1)$$ generated by $$\x-1$$. As a ring,
+On the other hand, consider the ideal $$(\x-1)$$ generated by $$\x-1$$. Then as rings
 
 $$A[\x]/(\x-1)\cong A$$
 
-Explicitly, this isomorphism is obtained by applying the first isomorphism theorem to the evaluation map
+and explicitly this isomorphism is obtained by applying the first isomorphism theorem to the evaluation map defined by
 
-$$\alpha_n\x^n +\cdots+\alpha_1\x+\alpha_0\quad \mapsto\quad \alpha_n+\cdots+\alpha_1+\alpha_0$$
+$$\alpha_n\x^n +\cdots+\alpha_1\x+\alpha_0\quad \mapsto\quad \alpha_n+\cdots+\alpha_1+\alpha_0.$$
 
 However, the above homomorphism is not a graded homomorphism.
 
 </div>
 
-To avoid this, we introduce the notion of a *homogeneous ideal*.
+To avoid this we introduce the notion of a *homogeneous ideal*.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> For an $$I$$-graded ring $$A=\bigoplus_{i\in I} A_i$$ and an ideal $$\mathfrak{a}$$ of $$A$$, the following are all equivalent:
+<ins id="prop6">**Proposition 6**</ins> Let $$A=\bigoplus_{i\in I} A_i$$ be an $$I$$-graded ring and let $$\mathfrak{a}$$ be an ideal of $$A$$. Then the following are all equivalent.
 
 1. $$\mathfrak{a}$$ is the sum of the $$\mathfrak{a}\cap A_i$$.
-2. When any element of $$\mathfrak{a}$$ is decomposed into homogeneous elements, each of them also belongs to $$\mathfrak{a}$$.
+2. Whenever an arbitrary element of $$\mathfrak{a}$$ is decomposed into homogeneous elements, each of those homogeneous elements also lies in $$\mathfrak{a}$$.
 3. $$\mathfrak{a}$$ is generated by homogeneous elements.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-As elements of $$A$$, all elements of $$\mathfrak{a}$$ can be uniquely written as sums of homogeneous elements. Thus the equivalence of the first two conditions is obvious, and that condition 1 implies condition 3 is also obvious. Now assume the third condition and prove the second. Suppose $$\mathfrak{a}$$ is generated by homogeneous elements $$(x_j)_{j\in J}$$. Then any $$x\in \mathfrak{a}$$ can be written as
+As elements of $$A$$, all elements of $$\mathfrak{a}$$ can be written uniquely as sums of homogeneous elements. Hence the equivalence of the first two conditions is obvious, and the first condition trivially implies the third. Now assume the third condition and prove the second. Suppose $$\mathfrak{a}$$ is generated by homogeneous elements $$(x_j)_{j\in J}$$. Then an arbitrary $$x\in \mathfrak{a}$$ can be written as
 
-$$x=\sum_{j\in J} \alpha_j x_j,\qquad\text{$(\alpha_j)_{j\in J}$ finitely supported}$$
+$$x=\sum_{j\in J} \alpha_j x_j,\qquad\text{$(\alpha_j)_{j\in J}$ finitely supported}.$$
 
-Now each $$\alpha_j$$ can in turn be written as a sum of homogeneous elements
+Now each $$\alpha_j$$ can in turn be written, as an element of $$A$$, as a sum of homogeneous elements
 
-$$\alpha_j=\sum_{k\in K_j} \alpha_{jk},\qquad \text{$(\alpha_{jk})_{k\in K_j}$ finitely supported}$$
+$$\alpha_j=\sum_{k\in K_j} \alpha_{jk},\qquad \text{$(\alpha_{jk})_{k\in K_j}$ finitely supported}.$$
 
-Thus
+Hence
 
 $$x=\sum_{j\in J}\sum_{k\in K_j}\alpha_{jk}x_j,\qquad \text{$(\alpha_{jk})_{j\in J,k\in K_j}$ finitely supported}$$
 
-and the $$\alpha_{jk}x_j$$ are each homogeneous elements and all belong to $$\mathfrak{a}$$. From this, condition 2 follows.
+and the $$\alpha_{jk}x_j$$ are each homogeneous elements and all belong to $$\mathfrak{a}$$. From this the second condition follows.
 
 </details>
 
@@ -127,10 +126,10 @@ An ideal satisfying the above equivalent conditions is called a *homogeneous ide
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 7**</ins> For a homogeneous ideal $$\mathfrak{a}$$, $$A/\mathfrak{a}$$ is a graded ring, and its decomposition is given by
+<ins id="prop7">**Proposition 7**</ins> For a homogeneous ideal $$\mathfrak{a}$$, the quotient $$A/\mathfrak{a}$$ is a graded ring and its decomposition is given by
 
-$$A/\mathfrak{a}=\bigoplus_{i\in I}A_i/(\mathfrak{a}\cap A_i)$$
+$$A/\mathfrak{a}=\bigoplus_{i\in I}A_i/(\mathfrak{a}\cap A_i).$$
 
 </div>
 
-We omit the proof, as it is clear.
+The proof of this is obvious and hence omitted.

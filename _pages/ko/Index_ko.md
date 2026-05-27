@@ -129,6 +129,7 @@ permalink: /ko/misc/index_ko
 | <selected id="coboundary_map">coboundary map &#9745;</selected> | <unselected>여경계 사상</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_varieties/sheaf_cohomology) | |
 | <selected id="cochain_complex">cochain complex &#9745;</selected> | <unselected>사슬복합체</unselected> | [\[범주론\] §아벨 카테고리](/ko/math/category_theory/abelian_categories) |  |
 | <selected id="cocomplete_categoory">cocomplete categoory &#9745;</selected> | <unselected>여완비범주</unselected> | [\[범주론\] §극한](/ko/math/category_theory/limits) |  |
+| <selected id="cocomplete_category">cocomplete category &#9745;</selected> | <unselected>여완비범주</unselected> | [\[범주론\] §극한](/ko/math/category_theory/limits) |  |
 | <selected id="cocycle">cocycle &#9745;</selected> | <unselected>쌍순환</unselected> | [\[대수기하학\] §Čech Cohomology](/ko/math/algebraic_varieties/sheaf_cohomology) | |
 | <selected id="codimension">codimension &#9745;</selected> | <unselected>여차원</unselected> | [\[가환대수학\] §차원](/ko/math/commutative_algebra/Krull_dimension)<br/>[\[스킴 이론\] §차원](/ko/math/scheme_theory/dimension) |  |
 | <unselected id="codomain">codomain</unselected> | <selected>공역 &#9745;</selected> | [\[범주론\] §범주](/ko/math/category_theory/categories) |  |

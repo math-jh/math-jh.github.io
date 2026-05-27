@@ -16,9 +16,9 @@ toc: true
 
 ## [완전열](/ko/math/multilinear_algebra/exact_sequences)
 
-다중선형대수학 카테고리의 첫 글답게, "선형대수학의 결과들을 일반 ring $$A$$ 위의 module로 확장한다"는 목표를 선언하면서 시작한다. 대수적 구조 카테고리에서 module의 기본 정의와 동형사상 정리를 이미 다뤘지만, 여기서는 module만의 고유한 성질 — 특히 exact sequence와 direct sum decomposition — 에 집중한다는 차이가 명확하다. 선형대수학에서 벡터공간의 기저를 잡고 부분공간의 직합을 다뤘던 것을 module 수준에서 재현하려는 시도가 이 글의 핵심 동기인데, field가 아닌 ring 위에서는很多事情이 깨질 수 있다는 것이 이후 전개에서 드러날 것이라는 예감이 든다.
+다중선형대수학 카테고리의 첫 글답게, "선형대수학의 결과들을 일반 ring $$A$$ 위의 module로 확장한다"는 목표를 선언하면서 시작한다. 대수적 구조 카테고리에서 module의 기본 정의와 동형사상 정리를 이미 다뤘지만, 여기서는 module만의 고유한 성질 — 특히 exact sequence와 direct sum decomposition — 에 집중한다는 차이가 명확하다. 선형대수학에서 벡터공간의 기저를 잡고 부분공간의 직합을 다뤘던 것을 module 수준에서 재현하려는 시도가 이 글의 핵심 동기인데, field가 아닌 ring 위에서는많은 것들이 깨질 수 있다는 것이 이후 전개에서 드러날 것이라는 예감이 든다.
 
-보조정리 1(교집합은 submodule)과 명제 3(생성집합은 일차결합의 집합)은 선형대수학의 Basis 포스트에서 이미 봤던 결과들을 module로 그대로 옮긴 것이다. 저자도 "field라는 사실을 사용하지 않았으므로 동일하게 사용하면 된다"고 명시하고 있어서, 선형대수학의 증명이 얼마나一般的인지를 보여주는 좋은 예시다. 대수적 구조 카테고리에서 submodule의 정의를 봤지만, "교집합이 submodule이다"라는 사실을 이렇게 명시적으로 강조하는 것이 이후 exact sequence 전개에서 핵심적으로 쓰인다는 것을 보여준다.
+보조정리 1(교집합은 submodule)과 명제 3(생성집합은 일차결합의 집합)은 선형대수학의 Basis 포스트에서 이미 봤던 결과들을 module로 그대로 옮긴 것이다. 저자도 "field라는 사실을 사용하지 않았으므로 동일하게 사용하면 된다"고 명시하고 있어서, 선형대수학의 증명이 얼마나일반적인지를 보여주는 좋은 예시다. 대수적 구조 카테고리에서 submodule의 정의를 봤지만, "교집합이 submodule이다"라는 사실을 이렇게 명시적으로 강조하는 것이 이후 exact sequence 전개에서 핵심적으로 쓰인다는 것을 보여준다.
 
 명제 4와 5에서 제시된 두 exact sequence가 이 글의 구조적 틀을 제공한다. $$\bigoplus N_i \rightarrow M \rightarrow M/\sum N_i \rightarrow 0$$이라는 sequence는 "합집합의 image가 $$\sum N_i$$"라는 관찰로부터 오고, $$0 \rightarrow \bigcap N_i \rightarrow M \rightarrow \prod M/N_i$$는 "kernel이 $$\bigcap N_i$$"라는 관찰로부터 오는데, 둘 다 대수적 구조 카테고리의 동형사상 정리에서 본 $$G/\ker f \cong \im f$$의 패턴과 연결된다. 다만 이 sequence들이 "exact"하다는 표현이 아직 formal하게 정의되지 않은 상태에서 사용되고 있어서, exact sequence의 정의가 호몰로지 대수학 카테고리에서 나올 것이라는 예감이 든다.
 
@@ -32,7 +32,7 @@ toc: true
 
 명제 10(splitting exact sequence의 characterization)이 이 글의 정점이다. $$0 \rightarrow M \overset{u}{\rightarrow} L \overset{v}{\rightarrow} N \rightarrow 0$$이라는 exact sequence에 대해, (1) $$u$$의 retraction 존재, (2) $$v$$의 section 존재, (3) $$L \cong M\oplus N$$인 isomorphism의 존재 — 이 셋이 동치라는 것이다. 집합론 카테고리에서 retraction과 section을 정의할 때 "함수"로서 다뤘는데, 여기서는 linear map으로서의 retraction과 section이 등장한다는 것이 차이다. $$r\circ u = \id_M$$이면 $$r$$이 retraction이고, $$v\circ s = \id_N$$이면 $$s$$이 section인데, 이 둘이 동시에 존재하면 $$L$$이 $$M\oplus N$$로 분해된다는 결론이 강력하다. 증명에서 $$\alpha(z)=(r(z), v(z))$$로 isomorphism을 구성하는 것이 깔끔하고, $$\beta(x,y)=u(x)+s(y)$$로 역을 만드는 것도 자연스럽다. 다만 "왜 retraction과 section이 동시에 존재하는지"에 대한 충분조건은 아직 제시되지 않아서, 이후 글들에서 어떤 exact sequence가 splitting하는지를 다룰 것이라는 기대가 된다.
 
-전체적으로 이 글은 다중선형대수학 카테고리의 첫 글로서, "module의 exact sequence"라는 언어를 도입하고 direct sum decomposition의 기본 도구를 정리하는 역할을 한다. 선형대수학에서 부분공간의 직합을 다뤘던 것과 정확히 병행되는 구조인데, field가 아닌 ring 위에서哪些事情이 달라지는지를 이후 글들에서 확인할 수 있을 것 같다. 가장 인상적인 부분은 splitting exact sequence의 세 동치조건인데, retraction/section이라는 집합론적 개념이 module 맥락에서 "직합 분해"와 정확히 대응된다는 것이 아름답다. 대수적 구조 카테고리에서 module의 정의와 동형사상 정리를 이미 다뤘으므로, 이 글의 내용 자체는 기술적으로 어렵지 않았지만, "exact sequence"라는 새로운 언어가 이후 이론 전개를 얼마나 효율적으로 만들어줄지가 기대된다.
+전체적으로 이 글은 다중선형대수학 카테고리의 첫 글로서, "module의 exact sequence"라는 언어를 도입하고 direct sum decomposition의 기본 도구를 정리하는 역할을 한다. 선형대수학에서 부분공간의 직합을 다뤘던 것과 정확히 병행되는 구조인데, field가 아닌 ring 위에서어떤 것들이 달라지는지를 이후 글들에서 확인할 수 있을 것 같다. 가장 인상적인 부분은 splitting exact sequence의 세 동치조건인데, retraction/section이라는 집합론적 개념이 module 맥락에서 "직합 분해"와 정확히 대응된다는 것이 아름답다. 대수적 구조 카테고리에서 module의 정의와 동형사상 정리를 이미 다뤘으므로, 이 글의 내용 자체는 기술적으로 어렵지 않았지만, "exact sequence"라는 새로운 언어가 이후 이론 전개를 얼마나 효율적으로 만들어줄지가 기대된다.
 
 ## [사영가군, 단사가군, 평탄가군](/ko/math/multilinear_algebra/various_modules)
 
@@ -132,7 +132,7 @@ trace 부분(행렬표현과 trace 절)은 Hom과 텐서곱 글에서 $$\tr(u)=\
 
 명제 5의 $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathcal{B}_\mathcal{C}[\id_M]^{\mathcal{B}'}_{\mathcal{B}}$$라는 공식이 "행렬표현의 변환 법칙"이다. $$[\id_M]^{\mathcal{B}'}_{\mathcal{B}}$$가 바로 기저변환 행렬이라는 관찰이 인상적인데, 선형대수학에서 $$P^{-1}AP$$라는 공식을 외웠을 때는 "그냥 공식"이라고만 생각했는데, 여기서는 $$\id_M$$을 두 basis로 표현한 행렬이 기저변환을 나타낸다는 것이 명확해진다. $$M=N$$, $$\mathcal{B}=\mathcal{C}$$, $$\mathcal{B}'=\mathcal{C}'$$로 놓으면 $$X'=PXP^{-1}$$이 되어 similar matrix의 정의(정의 7)와 직접 연결되는 것이 자연스럽다.
 
-equivalent matrix(정의 6: $$X'=PXQ$$)와 similar matrix(정의 7: $$X'=PXP^{-1}$$)의 구분이 흥미롭다. "동치인 행렬"은 $$M$$과 $$N$$의 basis를 각각 독립적으로 바꾼 결과이고, "닮은 행렬"은 $$M=N$$일 때 같은 basis를 양쪽에 적용한 결과인데 —前者가 후자를 포함한다는 것이 $$P$$와 $$Q$$가 독립적이라는 것에서 온다. 선형대수학에서 이 두 개념을 구분하는 것이 왜 중요한지를 상기시키는 좋은 정리인데, 이후 determinant나 eigenvalue를 다룰 때 similar matrix의 불변량이 핵심적으로 쓰일 것이라는 예감이 든다.
+equivalent matrix(정의 6: $$X'=PXQ$$)와 similar matrix(정의 7: $$X'=PXP^{-1}$$)의 구분이 흥미롭다. "동치인 행렬"은 $$M$$과 $$N$$의 basis를 각각 독립적으로 바꾼 결과이고, "닮은 행렬"은 $$M=N$$일 때 같은 basis를 양쪽에 적용한 결과인데 —전자가 후자를 포함한다는 것이 $$P$$와 $$Q$$가 독립적이라는 것에서 온다. 선형대수학에서 이 두 개념을 구분하는 것이 왜 중요한지를 상기시키는 좋은 정리인데, 이후 determinant나 eigenvalue를 다룰 때 similar matrix의 불변량이 핵심적으로 쓰일 것이라는 예감이 든다.
 
 전체적으로 이 글은 행렬과 선형사상 글에서 구축한 "linear map ↔ 행렬" 대응의 자연스러운 후속으로, basis를 바꿨을 때 행렬이 어떻게 변하는지를 체계적으로 분석한다. 가장 인상적인 부분은 기저변환 행렬이 $$\id_M$$의 행렬표현이라는 관찰인데, "basis를 바꾼다"는 추상적 개념이 identity map이라는 구체적 대상으로 포착되는 것이 아름답다. 다만 이 글 자체가 새로운 대상을 도입하기보다는 기존 framework의 변환 법칙을 다루고 있어서, Hom과 텐서곱 글이나 쌍대공간 글보다는 개념적 새로움이 적은 느낌이다.
 
@@ -265,4 +265,4 @@ symmetrization map $$s:\T(M)\to\Sym(M)$$, $$x\mapsto\sum_{\sigma\in S_n}\sigma x
 
 ---
 
-**카테고리 회고**: 다중선형대수학은 선형대수학의 모든 것을 ring 위의 module로 번역하면서도, 그 번역이 깨지는 지점 — free module이 아닌 module, IBN property의 실패, $$\Sym(M)$$과 $$\S(M)$$의 $$n!$$ 차이 — 을 정직하게 보여주는 카테고리다. 범주론 카테고리의 수반함수 이론이 $$\Hom$$과 $$\otimes$$의 exactness 분석으로 구체화되고, 그 위에 projective/injective/flat module이라는 계층이 세워지는 과정이 가장 큰 그림으로 느껴진다. 가장 막혔던 지점은 tensor algebra 이후의 quotient construction들 — symmetric algebra, exterior algebra — 을 다룰 때 Koszul sign convention이나 polynomial algebra의 formal 정의가 없어서 동기를 따라가기 어려웠던 것인데, 이후 환론이나 가환대수학 카테고리에서这些 개념들이 정식으로 다뤄질 것이라는 기대가 된다.
+**카테고리 회고**: 다중선형대수학은 선형대수학의 모든 것을 ring 위의 module로 번역하면서도, 그 번역이 깨지는 지점 — free module이 아닌 module, IBN property의 실패, $$\Sym(M)$$과 $$\S(M)$$의 $$n!$$ 차이 — 을 정직하게 보여주는 카테고리다. 범주론 카테고리의 수반함수 이론이 $$\Hom$$과 $$\otimes$$의 exactness 분석으로 구체화되고, 그 위에 projective/injective/flat module이라는 계층이 세워지는 과정이 가장 큰 그림으로 느껴진다. 가장 막혔던 지점은 tensor algebra 이후의 quotient construction들 — symmetric algebra, exterior algebra — 을 다룰 때 Koszul sign convention이나 polynomial algebra의 formal 정의가 없어서 동기를 따라가기 어려웠던 것인데, 이후 환론이나 가환대수학 카테고리에서이러한 개념들이 정식으로 다뤄질 것이라는 기대가 된다.

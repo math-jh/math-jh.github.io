@@ -22,7 +22,7 @@ toc: true
 
 Cayley의 정리(정리 8)는 이 글의 첫 번째 큰 결과다. $$L_g(x)=gx$$로 정의된 left translation map이 bijection이고, $$T(g)=L_g$$로 정의하면 injective group homomorphism이 된다는 논증이 명확하다. 대수적 구조 카테고리에서 group homomorphism의 정의와 injectivity 판정법을 이미 봤으므로, "임의의 유한군은 어떤 $$S_n$$의 subgroup과 isomorphic하다"는 결론이 추상적 이론과 구체적 대상 사이의 다리를 놓는 느낌이다. 다만 $$L_g$$가 "automorphism"이라 불리는데, 대수적 구조 카테고리의 Group Homomorphisms에서 group automorphism을 별도로 정의하지 않았고, Categories에서 범주론적 automorphism만 다뤄서 약간의 간극이 있다.
 
-교대군 부분의 핵심은 sign homomorphism $$\sgn:S_n\rightarrow\{\pm 1\}$$의 구성이다. Vandermonde polynomial $$\Delta=\prod_{i<j}(x_i-x_j)$$에 precomposition을 적용해서 $$\sgn(\sigma)=\sigma(\Delta)/\Delta$$로 정의하는 것이 처음에는 인위적으로 느껴졌지만, "inversion이 하나 발생할 때마다 $$\Delta$$의 부호가 바뀐다"는 관찰(식 (1))이 직관을 제공한다. $$\sgn$$이 group homomorphism임을 보이는 과정이 Vandermonde polynomial의 구조를巧妙하게 활용하는 것이 인상적이다. 보조정리 10(even permutation $$\iff$$ 짝수 개의 transposition의 곱)은 두 정의의 동치성을 $$\sgn$$이라는 homomorphism으로 연결하는 것인데, 대수적 구조 카테고리에서 "homomorphism의 kernel이 normal subgroup"이라는 결과가 $$A_n=\ker(\sgn)$$라는 정의로 구체화되는 순간이다.
+교대군 부분의 핵심은 sign homomorphism $$\sgn:S_n\rightarrow\{\pm 1\}$$의 구성이다. Vandermonde polynomial $$\Delta=\prod_{i<j}(x_i-x_j)$$에 precomposition을 적용해서 $$\sgn(\sigma)=\sigma(\Delta)/\Delta$$로 정의하는 것이 처음에는 인위적으로 느껴졌지만, "inversion이 하나 발생할 때마다 $$\Delta$$의 부호가 바뀐다"는 관찰(식 (1))이 직관을 제공한다. $$\sgn$$이 group homomorphism임을 보이는 과정이 Vandermonde polynomial의 구조를정교하게 활용하는 것이 인상적이다. 보조정리 10(even permutation $$\iff$$ 짝수 개의 transposition의 곱)은 두 정의의 동치성을 $$\sgn$$이라는 homomorphism으로 연결하는 것인데, 대수적 구조 카테고리에서 "homomorphism의 kernel이 normal subgroup"이라는 결과가 $$A_n=\ker(\sgn)$$라는 정의로 구체화되는 순간이다.
 
 $$A_5$$의 simplicity(예시 13)는 이 글의 백미다. $$A_5$$의 원소를 네 종류로 분류하고, conjugacy class의 크기를 계산해서 60의 약수를 만들 수 없다는 논증이 구체적이고 강력하다. 다만 "conjugacy class"라는 용어가 정의 없이 사용되어서, Group Actions에서 $$\rho_g(x)=gxg^{-1}$$로 정의한 inner automorphism의 orbit이라는 것을 알고 있어야만 따라갈 수 있다. 또한 "normal subgroup이 conjugacy class들의 합집합으로 나타나야 한다"는 주장이 증명 없이 사용되었는데, Group Actions의 orbit-stabilizer 정리를 떠올리면 "conjugacy class = inner automorphism의 orbit"이라는 연결은 가능하지만, 그것이 normal subgroup의 조건과 어떻게 관련되는지는 명시적으로 설명되지 않아서 한두 번 다시 읽었다.
 
@@ -44,7 +44,7 @@ semidirect product(정의 6)가 이 글의 핵심 construction이다. $$N\rtimes
 
 internal과 external semidirect product의 구분(따름정리 8 앞의 설명)은 솔직하게 "차이가 중요하지 않다"고 말하는 것이 좋다. $$N\cap H=\{e_G\}$$이고 $$NH=G$$이면 $$G\cong N\rtimes_\rho H$$라는 결론은, "이미 $$G$$ 안에 $$N$$과 $$H$$가 들어있는 상황에서 그 관계를 semidirect product로 읽어내는 것"인데, 이것이 group extension의 역문제 — "$$G$$가 주어졌을 때 $$N$$과 $$H$$를 찾아라" — 에 대한 하나의 해답이라는 것이 큰 그림이다.
 
-이 글의 내용은 대수적 구조 카테고리의 Group Actions에서 다룬 group action의 구체적 활용이라는 느낌이 강하다. $$\tau:H\rightarrow\Aut(N)$$이라는 homomorphism이 group action의 한 형태이고, semidirect product의 연산이 그 action으로부터 파생된다는 것이 명확하다. 다만 "왜 $$\tau(y_1)$$이 $$x_2$$에 작용하는지而不是 $$x_1$$에 작용하는지"에 대한 직관이 부족해서, 정의 6의 연산 공식을 처음 봤을 때 한두 번 다시 읽었다. $$x_1$$은 "이미 왼쪽에 있는" 원소이고 $$x_2$$는 "오른쪽에서 들어오는" 원소이므로, $$H$$의 action이 $$x_2$$에 가하는 것이 자연스럽다는 것은 계산을 해보고 나서야 이해했다.
+이 글의 내용은 대수적 구조 카테고리의 Group Actions에서 다룬 group action의 구체적 활용이라는 느낌이 강하다. $$\tau:H\rightarrow\Aut(N)$$이라는 homomorphism이 group action의 한 형태이고, semidirect product의 연산이 그 action으로부터 파생된다는 것이 명확하다. 다만 "왜 $$\tau(y_1)$$이 $$x_2$$에 작용하는지가 아니라 $$x_1$$에 작용하는지"에 대한 직관이 부족해서, 정의 6의 연산 공식을 처음 봤을 때 한두 번 다시 읽었다. $$x_1$$은 "이미 왼쪽에 있는" 원소이고 $$x_2$$는 "오른쪽에서 들어오는" 원소이므로, $$H$$의 action이 $$x_2$$에 가하는 것이 자연스럽다는 것은 계산을 해보고 나서야 이해했다.
 
 ## [군의 열](/ko/math/group_theory/series_of_groups)
 
