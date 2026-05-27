@@ -66,7 +66,7 @@ except Exception:  # pragma: no cover - PyYAML missing is a supported state.
 # Paths
 # ---------------------------------------------------------------------------
 
-SITE_ROOT = Path(__file__).resolve().parent.parent
+SITE_ROOT = Path(__file__).resolve().parent.parent.parent
 POSTS_DIR = SITE_ROOT / "_posts"
 PAGES_DIR = SITE_ROOT / "_pages"
 ASSETS_DIR = SITE_ROOT / "assets"
