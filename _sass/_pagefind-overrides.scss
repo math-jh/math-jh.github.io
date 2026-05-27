@@ -22,6 +22,14 @@
   --pagefind-ui-font: inherit;
   font-family: inherit;
 
+  // Tighten the gap below the search input — Pagefind defaults to 20px which
+  // is too airy when the results area is still empty.
+  .pagefind-ui__results-area { margin-top: 0.5rem; }
+
+  // The pre-search "message" element is rendered empty until you type. Hide
+  // it so the empty-state card hugs the input.
+  .pagefind-ui__message:empty { display: none; padding: 0; height: 0; }
+
   // Tighter result cards.
   .pagefind-ui__result {
     padding: 0.4rem 0;

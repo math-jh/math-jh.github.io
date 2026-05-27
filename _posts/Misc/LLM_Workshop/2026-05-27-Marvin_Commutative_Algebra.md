@@ -225,5 +225,26 @@ lying over 증명의 핵심은 $$\mathfrak{p}B \neq B$$를 보이는 것이다. 
 
 전체적으로 이 글은 평탄성 글에서 구축한 $$\Tor$$ characterization을 "local ring에서 확인하면 충분하다"는 방향으로 강화하는 자연스러운 후속이다. 평탄성 글에서 "flatness가 관계의 lifting이라는 본질을 갖는다"고 했는데, 여기서는 그 관계가 local ring의 maximal ideal에서만 확인하면 된다는 것이 핵심이다. 부풀림 대수 글의 Krull intersection theorem과 Artin-Rees lemma가 이 증명에서 결정적으로 사용되는데, "ideal의 거듭제곱으로 구성된 filtration"이라는 부풀림 대수의 주제가 flatness 판정과 이렇게 직접 연결되는 것이 좋은 연결이다.
 
+## [완비화](/ko/math/commutative_algebra/completion)
+
+이 글은 filtration으로 정의되는 ring과 module의 completion을 체계적으로 다룬다. 출발점은 abelian group $$G$$와 그 subgroup들의 decreasing sequence $$\mathcal{J}: G = H_0 \supseteq H_1 \supseteq \cdots$$로부터 정의되는 inverse limit $$\widehat{G}_\mathcal{J} = \varprojlim_i G/H_i$$인데, 범주론 카테고리에서 극한의 universal property를 이미 봤으므로 이 construction 자체는 자연스럽다. $$\rho_{ji}: G/H_j \to G/H_i$$들이 commute하는 조건이 inverse system을 정의하고, canonical morphism $$\rho_i: \widehat{G}_\mathcal{J} \to G/H_i$$들이 universal property를 만족한다는 것이 범주론적 관점의 핵심이다.
+
+정의 1에서 ring $$A$$와 ideal $$\mathfrak{a}$$의 $$\mathfrak{a}$$-filtration에 대해 $$\widehat{A} = \varprojlim_i A/\mathfrak{a}_i$$를 completion으로 정의하는 것이 이 글의 중심이다. Natural map $$\rho: A \to \widehat{A}$$의 kernel이 $$\bigcap \mathfrak{a}_i$$라는 관찰이 깔끔한데, $$\rho$$가 injective인 것과 $$\bigcap \mathfrak{a}_i = 0$$인 것이 동치라는 결론은 이후 Krull intersection theorem과 직접 연결된다. $$\widehat{A}/\widehat{\mathfrak{a}}_i \cong A/\mathfrak{a}_i$$라는 isomorphism으로부터 $$\widehat{A}$$가 자기 자신에 대해 complete이라는 관찰도 자연스러운데, "completion을 한번 하면 다시 completion해도 변하지 않는다"는 것이 직관적이다.
+
+$$\mathfrak{a}$$-adic topology 섹션은 completion에 위상학적 관점을 부여한다. Subgroup들의 decreasing sequence로부터 $$0$$의 neighborhood filter $$\mathcal{N}(0) = \{U \subseteq G \mid G_n \subseteq U \text{ for some } n\}$$를 정의하는 것이 출발점인데, 위상수학 카테고리에서 열린집합의 공리를 이미 봤으므로 이 정의가 위상구조를 만든다는 확인은 자연스럽다. $$\mathfrak{a}$$-adic topology가 first countable이라는 관찰도 중요한데, countable local base $$\mathfrak{a} \supseteq \mathfrak{a}^2 \supseteq \cdots$$가 그 역할을 한다.
+
+정의 2와 3에서 topological group 위의 Cauchy sequence와 equivalence를 정의하는 부분은 해석학에서의 Cauchy sequence를 일반화한 것인데, "근방 $$U$$ 안에 들어가는 차이"라는 조건이 metric 대신 topology로 표현된다는 것이 차이이다. First countable 가정이 있어서 Cauchy filter 대신 Cauchy sequence를 사용할 수 있다는 본문의 설명이 솔직한데, 실제로 이 가정이 $$\mathfrak{a}$$-adic topology에서 성립한다는 것이 확인되어서 안심이 된다. $$\widehat{G}$$의 위상구조를 $$\widehat{U}$$들로 정의하는 construction도 자연스러운데, "eventually $$U$$ 안에 들어가는 수열들의 equivalence class"라는 정의가 직관적이다.
+
+기본적인 성질들 섹션에서 $$\widehat{A}$$의 원소를 $$\sum_{j=1}^\infty b_j$$ ($$b_j \in \mathfrak{a}^j$$) 꼴로 표현할 수 있다는 관찰이 핵심이다. 예시 4에서 $$A = \mathbb{K}[\mathbf{x}]$$, $$\mathfrak{a} = (\mathbf{x})$$일 때 $$\widehat{A} = \mathbb{K}[[\mathbf{x}]]$$라는 결론이 가장 구체적인데, formal power series ring이 completion의 대표적 예시라는 것이 명확하다. $$\mathbb{K}[[\mathbf{x}]]$$의 유일한 nonzero prime ideal이 $$(\mathbf{x})$$라는 관찰과 $$(1+\mathbf{x})^{-1} = 1 - \mathbf{x} + \mathbf{x}^2 - \cdots$$라는 공식이 completion의 "무한급수" 본질을 보여준다.
+
+명제 5의 $$U = \{1+a \mid a \in \mathfrak{a}\}$$가 $$A$$의 unit들의 모임이라는 결과는 위의 $$\mathbb{K}[[\mathbf{x}]]$$ 예시를 일반화한 것인데, $$(1+a)^{-1} = 1 - a + a^2 - \cdots$$라는 무한급수가 $$A$$가 complete일 때 수렴한다는 것이 핵심이다. $$1-a$$가 unit이라는 논증은 정수적 확장 글의 나카야마 보조정리에서 이미 봤는데, 여기서는 $$\mathfrak{a}$$가 Jacobson radical이 아니라 $$\bigcap \mathfrak{a}^i = 0$$이라는 조건으로 $$1-a$$의 가역성이 보장된다는 것이 차이이다. 따름정리 6의 $$A[[\mathbf{x}_1, \ldots, \mathbf{x}_n]]$$이 local ring이라는 결론도 실용적인데, "local ring에 formal power series를 붙여도 local ring"이라는 것이 이후 deformation theory에서 활용될 것이라는 예감이 든다.
+
+명제 7의 "initial form이 generators로 되면 ideal도 generators로 된다"는 결과가 이 글에서 가장 구조적인 도구다. $$\initial(\mathfrak{a})$$가 $$\initial(a_1), \ldots, \initial(a_n)$$에 의해 생성되면 $$\mathfrak{a}$$도 $$a_1, \ldots, a_n$$에 의해 생성된다는 것인데, 증명에서 $$a - \sum_k b_k a_k$$가 점점 높은 차수의 $$\mathfrak{a}_i$$에 속하게 만드는 iterative process가 인상적이다. $$\sum_{l=0}^\infty b_k^{(l)}$$가 $$A$$의 원소 $$c_k$$로 수렴하는 것이 $$A$$가 complete이라는 가정을 직접 사용하는 부분인데, "complete이면 무한급수의 극한이 존재한다"는 것이 이 증명의 핵심 메커니즘이다. 부풀림 대수 글에서 initial form의 정의를 이미 봤는데, 여기서 그 initial form으로부터 원래 ideal의 generators를 복원할 수 있다는 것이 좋은 연결이다.
+
+솔직히 이 글의 초반부(inverse limit, $$\mathfrak{a}$$-adic topology, Cauchy sequence)는 범주론과 위상수학의 기본 개념들을 가환대수학에 적용하는 것이라 비교적 자연스럽게 따라갈 수 있었다. $$\widehat{A}/\widehat{\mathfrak{a}}_i \cong A/\mathfrak{a}_i$$라는 isomorphism과 $$\widehat{A}$$의 completeness도 정의로부터 바로 나오는 결론이라 이해하기 쉬웠다. 하지만 명제 7의 증명은 iterative construction의 수렴을 정확히 추적해야 해서 밀도가 높았는데, "$$\initial(a) = \sum \beta_k \initial(a_k)$$로부터 $$b_k$$를 택하고, 그 나머지를 반복한다"는 과정이 한두 번 읽으로는 명확해지지 않았다. $$b_k^{(l)} \in \mathfrak{a}_{e-d+l}$$라는 조건이 수렴성을 보장하는 것인데, 차수가 $$l$$마다 증가하므로 $$\sum b_k^{(l)}$$가 $$\widehat{A}$$에서 수렴한다는 것이 핵심이다.
+
+기존 노트들과의 연결을 정리하면, 범주론 카테고리에서 봤던 inverse limit의 universal property가 이 글의 출발점으로 사용되고, 위상수학 카테고리에서 봤던 Cauchy sequence와 근방의 개념이 $$\mathfrak{a}$$-adic topology의 정의에 직접 활용된다. 부풀림 대수 글의 associated graded ring과 initial form의 개념이 명제 7에서 결정적으로 사용되는데, "gr $$A$$의 구조로부터 $$A$$의 ideal 구조를 복원한다"는 것이 completion의 주요 응용 중 하나라는 것이 명확해진다. 정수적 확장 글의 나카야마 보조정리에서 $$1-a$$가 unit이라는 논증이 여기서 다시 등장하는 것도 좋은 연결이다. 다만 "discrete valuation ring"이라는 용어가 예시 4에서 갑자기 등장하는데, 이후 정칙국소환(regular local rings)이나 인자(divisors) 글에서 정의될 개념이라 여기서는 "$$\mathbb{K}[[\mathbf{x}]]$$가 유일한 nonzero prime ideal을 갖는 local ring"이라는 설명만으로는 충분하지 않다는 느낌이 든다.
+
+⚠️ 정의 없이 사용: `discrete valuation ring` (정칙국소환/인자 글에서 정의, 이 노트에서 도입 안 됨)
 ⚠️ 정의 없이 사용: `$$\Tor$$` (호몰로지 대수학 외부 정의, 이 노트에서 도입 안 됨)
 ⚠️ 정의 없이 사용: `projective module` (다중선형대수학 외부 정의, 이 노트에서 도입 안 됨)
