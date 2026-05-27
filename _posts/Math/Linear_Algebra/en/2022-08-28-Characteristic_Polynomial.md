@@ -1,4 +1,5 @@
----title: "Characteristic Polynomial"
+---
+title: "Characteristic Polynomial"
 excerpt: "The characteristic polynomial of a matrix"
 
 categories: [Math / Linear Algebra]

@@ -1,4 +1,5 @@
----title: "Monoid Objects"
+---
+title: "Monoid Objects"
 excerpt: "Monoid objects in a monoidal category and their examples"
 
 categories: [Math / Category Theory]

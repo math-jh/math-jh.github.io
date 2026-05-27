@@ -1,4 +1,5 @@
----title: "Symplectic Vector Spaces"
+---
+title: "Symplectic Vector Spaces"
 excerpt: "Definition of symplectic forms"
 
 categories: [Math / Symplectic Geometry]

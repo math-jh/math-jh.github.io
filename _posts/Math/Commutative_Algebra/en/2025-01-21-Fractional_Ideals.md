@@ -1,4 +1,5 @@
----title: "Fractional Ideals"
+---
+title: "Fractional Ideals"
 excerpt: "Fractional ideals, invertible modules, and the Picard group"
 
 categories: [Math / Commutative Algebra]

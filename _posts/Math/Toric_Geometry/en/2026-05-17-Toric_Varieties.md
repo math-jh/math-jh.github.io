@@ -1,4 +1,5 @@
----title: "Definition of Toric Varieties"
+---
+title: "Definition of Toric Varieties"
 excerpt: "General toric varieties obtained by gluing affine toric varieties from a fan"
 
 categories: [Math / Toric Geometry]

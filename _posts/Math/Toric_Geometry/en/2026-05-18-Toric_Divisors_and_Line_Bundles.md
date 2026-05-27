@@ -1,4 +1,5 @@
----title: "Torus-Invariant Divisors and Line Bundles"
+---
+title: "Torus-Invariant Divisors and Line Bundles"
 excerpt: "Torus-invariant divisors and line bundles arising from the rays of a fan"
 
 categories: [Math / Toric Geometry]

@@ -1,4 +1,5 @@
----title: "Bilinear Forms"
+---
+title: "Bilinear Forms"
 excerpt: "Bilinear forms and dual spaces"
 
 categories: [Math / Linear Algebra]

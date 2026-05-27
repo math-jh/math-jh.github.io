@@ -1,4 +1,5 @@
----title: "Affine Toric Varieties"
+---
+title: "Affine Toric Varieties"
 excerpt: "Construction of affine toric varieties from strongly convex rational polyhedral cones"
 
 categories: [Math / Toric Geometry]

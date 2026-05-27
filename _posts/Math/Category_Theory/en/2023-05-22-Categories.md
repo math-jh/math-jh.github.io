@@ -1,4 +1,5 @@
----title: "Categories"
+---
+title: "Categories"
 excerpt: "Definitions and basic concepts of category theory"
 
 categories: [Math / Category Theory]

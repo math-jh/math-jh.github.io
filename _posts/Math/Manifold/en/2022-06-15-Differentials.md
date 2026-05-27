@@ -1,4 +1,5 @@
----title: "Differentials"
+---
+title: "Differentials"
 excerpt: "The differential between two tangent spaces"
 
 categories: [Math / Manifold]

@@ -1,4 +1,5 @@
----title: "Subspaces"
+---
+title: "Subspaces"
 excerpt: "Properties of subspaces"
 
 categories: [Math / Topology]

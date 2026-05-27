@@ -1,4 +1,5 @@
----title: "Rational Maps"
+---
+title: "Rational Maps"
 excerpt: "Rational maps and birational equivalence"
 
 categories: [Math / Algebraic Varieties]

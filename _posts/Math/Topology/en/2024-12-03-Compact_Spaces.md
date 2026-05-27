@@ -1,4 +1,5 @@
----title: "Compact Spaces"
+---
+title: "Compact Spaces"
 excerpt: "Compact spaces, defined by the existence of a finite subcover for every open cover"
 
 categories: [Math / Topology]

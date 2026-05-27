@@ -1,4 +1,5 @@
----title: "Spectral Sequences"
+---
+title: "Spectral Sequences"
 excerpt: "Spectral sequences that approximate the cohomology of a filtered complex page by page"
 
 categories: [Math / Homological Algebra]

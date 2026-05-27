@@ -1,4 +1,5 @@
----title: "Dimension"
+---
+title: "Dimension"
 excerpt: "Krull dimension, defined by prime chains, and its basic properties"
 
 categories: [Math / Commutative Algebra]

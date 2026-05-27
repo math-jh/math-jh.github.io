@@ -1,4 +1,5 @@
----title: "Primary Decomposition"
+---
+title: "Primary Decomposition"
 excerpt: "Primary decomposition and uniqueness for modules over Noetherian rings"
 
 categories: [Math / Commutative Algebra]

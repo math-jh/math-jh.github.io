@@ -1,4 +1,5 @@
----title: "Bézout's Theorem"
+---
+title: "Bézout's Theorem"
 excerpt: "Bézout's theorem and its applications"
 
 categories: [Math / Algebraic Varieties]

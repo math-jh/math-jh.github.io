@@ -1,4 +1,5 @@
----title: "Fano Varieties"
+---
+title: "Fano Varieties"
 excerpt: "Reflexive polytopes and the corresponding Gorenstein Fano toric varieties"
 
 categories: [Math / Toric Geometry]

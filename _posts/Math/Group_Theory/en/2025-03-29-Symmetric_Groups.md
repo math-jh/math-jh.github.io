@@ -1,4 +1,5 @@
----title: "Symmetric Groups"
+---
+title: "Symmetric Groups"
 excerpt: "Cycle decomposition and sign of the symmetric group, and the alternating group"
 
 categories: [Math / Group Theory]

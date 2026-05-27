@@ -556,6 +556,12 @@ def call_kimi(prompt: str, *, thinking: bool = False) -> str:
         raise RuntimeError(f"kimi returned empty output; stderr={proc.stderr.strip()[:500]!r}")
     # Defensive: strip code fences if Kimi wrapped output
     out = _FENCE_RE.sub("", out).strip() + "\n"
+    # Defensive: Kimi occasionally outputs `---title: ...` with no newline
+    # after the opening triple-dash. _FRONTMATTER_RE (and the rest of the
+    # pipeline) then silently no-ops, leaving the EN file with corrupt
+    # frontmatter. Normalize here.
+    if out.startswith("---") and len(out) > 3 and out[3] != "\n":
+        out = "---\n" + out[3:]
     return out
 
 

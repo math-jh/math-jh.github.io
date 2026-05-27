@@ -1,4 +1,5 @@
----title: "Vector Spaces"
+---
+title: "Vector Spaces"
 excerpt: "The definition of vector spaces, simple properties, and examples"
 
 categories: [Math / Linear Algebra]

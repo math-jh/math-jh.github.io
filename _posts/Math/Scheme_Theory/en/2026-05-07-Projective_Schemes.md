@@ -1,4 +1,5 @@
----title: "Projective Schemes"
+---
+title: "Projective Schemes"
 excerpt: "The Proj construction from a graded ring and projective schemes"
 
 categories: [Math / Scheme Theory]

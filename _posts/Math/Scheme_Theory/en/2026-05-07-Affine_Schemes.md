@@ -1,4 +1,5 @@
----title: "Affine Schemes"
+---
+title: "Affine Schemes"
 excerpt: "Affine schemes defined by the structure sheaf on the spectrum of a ring"
 
 categories: [Math / Scheme Theory]

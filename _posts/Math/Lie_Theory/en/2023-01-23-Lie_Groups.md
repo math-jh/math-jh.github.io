@@ -1,4 +1,5 @@
----title: "Lie Groups"
+---
+title: "Lie Groups"
 excerpt: "Definition and properties of Lie groups"
 
 categories: [Math / Lie Theory]

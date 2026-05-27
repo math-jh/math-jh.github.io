@@ -1,4 +1,5 @@
----title: "The Fundamental Theorem of Galois Theory"
+---
+title: "The Fundamental Theorem of Galois Theory"
 excerpt: "The Galois correspondence between subgroups and intermediate fields"
 
 categories: [Math / Field Theory]

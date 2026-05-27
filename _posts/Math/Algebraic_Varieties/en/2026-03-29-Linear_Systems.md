@@ -1,4 +1,5 @@
----title: "Linear Systems"
+---
+title: "Linear Systems"
 excerpt: "Complete linear systems, base loci, and ampleness"
 
 categories: [Math / Algebraic Varieties]

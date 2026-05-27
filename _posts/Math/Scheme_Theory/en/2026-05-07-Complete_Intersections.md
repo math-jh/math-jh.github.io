@@ -1,4 +1,5 @@
----title: "Complete Intersections"
+---
+title: "Complete Intersections"
 excerpt: "Codimension of vanishing schemes and complete intersections"
 
 categories: [Math / Scheme Theory]

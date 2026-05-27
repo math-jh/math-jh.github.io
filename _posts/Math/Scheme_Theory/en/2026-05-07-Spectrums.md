@@ -1,4 +1,5 @@
----title: "Spectra"
+---
+title: "Spectra"
 excerpt: "The prime spectrum of a commutative ring and the Zariski topology"
 
 categories: [Math / Scheme Theory]

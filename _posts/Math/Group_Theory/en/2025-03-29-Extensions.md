@@ -1,4 +1,5 @@
----title: "Group Extensions"
+---
+title: "Group Extensions"
 excerpt: "Group extensions as short exact sequences, and semidirect products"
 
 categories: [Math / Group Theory]

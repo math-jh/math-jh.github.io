@@ -1,4 +1,5 @@
----title: "Submanifolds and the Inverse Function Theorem"
+---
+title: "Submanifolds and the Inverse Function Theorem"
 excerpt: "Substructures of differentiable manifolds"
 
 categories: [Math / Manifold]

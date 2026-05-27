@@ -1,4 +1,5 @@
----title: "Representation Theory of Finite Groups"
+---
+title: "Representation Theory of Finite Groups"
 excerpt: "Definition of representations of finite groups and irreducible decomposition"
 
 categories: [Math / Representation Theory]

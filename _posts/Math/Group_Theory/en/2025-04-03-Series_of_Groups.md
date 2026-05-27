@@ -1,4 +1,5 @@
----title: "Series of Groups"
+---
+title: "Series of Groups"
 excerpt: "Commutators and normal, composition, and derived series; solvability"
 
 categories: [Math / Group Theory]

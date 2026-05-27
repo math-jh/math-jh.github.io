@@ -1,4 +1,5 @@
----title: "Differential Modules"
+---
+title: "Differential Modules"
 excerpt: "Differential modules with derivations on graded algebras"
 
 categories: [Math / Multilinear Algebra]

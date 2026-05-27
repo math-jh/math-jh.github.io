@@ -1,4 +1,5 @@
----title: "Space of Linear Maps"
+---
+title: "Space of Linear Maps"
 excerpt: "Hom and Dual Space"
 
 categories: [Math / Linear Algebra]

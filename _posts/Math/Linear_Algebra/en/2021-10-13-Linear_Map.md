@@ -1,4 +1,5 @@
----title: "Linear Maps"
+---
+title: "Linear Maps"
 excerpt: "The definition and examples of linear maps"
 
 categories: [Math / Linear Algebra]
