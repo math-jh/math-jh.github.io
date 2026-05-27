@@ -70,10 +70,21 @@
       - 현재 노트 끝에 한 단락의 "카테고리 회고" 추가 — 2~5문장으로
         짧게. 큰 그림 한 줄, prior 카테고리들과의 연결 한 줄, 가장 막혔던
         지점 한 줄 정도. 그 후 6c.
-   c. state.json에서 `current_cat_idx += 1`, `posts_done_in_cat = []`,
-      새 `current_cat` / `cat_start_date` (오늘) / `current_note_post`
-      (= 새 카테고리의 신규 노트 경로) 세팅. 새 노트 frontmatter는 만들되
-      본문은 비워둠. 그 후 즉시 종료 (다음 틱에 새 카테고리 첫 글 읽음).
+   c. state.json 갱신:
+      - 먼저 `_data/navigation.yml`의 `category-ko:` 섹션을 끝까지 훑어
+        그 안의 (섹션 머리말이 아닌) 실제 카테고리 leaf 항목들을
+        평탄화된 순서로 나열했을 때의 인덱스가 `current_cat_idx + 1`에
+        해당하는 카테고리가 **존재하는지** 확인하라.
+      - **존재하면**: `current_cat_idx += 1`, `posts_done_in_cat = []`,
+        새 `current_cat` / `cat_start_date` (오늘) / `current_note_post`
+        (= 새 카테고리의 신규 노트 경로) 세팅. 새 노트 frontmatter는
+        만들되 본문은 비워둠. `all_complete`는 **건드리지 마라**.
+      - **존재하지 않으면 (= 정말로 마지막 카테고리까지 끝낸 경우)에만**
+        `all_complete: true` 설정. 한 카테고리 끝났다고 자의적으로
+        all_complete 찍지 마라 — 섹션 경계(예: Algebra → Topology and
+        geometry)는 종료 신호가 아니다. 오직 navigation.yml category-ko
+        리스트 자체의 끝에 도달했을 때만 all_complete.
+      - 그 후 즉시 종료 (다음 틱에 새 카테고리 첫 글 읽음).
 
 7. **state 갱신**: `posts_done_in_cat`에 이번 글 permalink 추가, 저장.
 
