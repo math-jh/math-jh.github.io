@@ -1,4 +1,5 @@
----title: "Differentials"
+---
+title: "Differentials"
 excerpt: "The algebraic definition of the Kähler differential module and its universal property"
 
 categories: [Math / Commutative Algebra]

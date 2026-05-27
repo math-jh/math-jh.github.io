@@ -1,4 +1,5 @@
----title: "Implicit Function Theorem"
+---
+title: "Implicit Function Theorem"
 excerpt: "The implicit function theorem on differentiable manifolds and its consequences"
 
 categories: [Math / Manifold]

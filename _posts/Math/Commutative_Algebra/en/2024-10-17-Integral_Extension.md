@@ -1,4 +1,5 @@
----title: "Integral Extensions"
+---
+title: "Integral Extensions"
 excerpt: "The Cayley-Hamilton theorem, integral elements, and integral extensions"
 
 categories: [Math / Commutative Algebra]

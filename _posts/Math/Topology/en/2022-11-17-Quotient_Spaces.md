@@ -1,4 +1,5 @@
----title: "Quotient Spaces"
+---
+title: "Quotient Spaces"
 excerpt: "Properties of Subspaces"
 
 categories: [Math / Topology]

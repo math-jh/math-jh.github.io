@@ -1,4 +1,5 @@
----title: "Classical Mechanics"
+---
+title: "Classical Mechanics"
 excerpt: "Classical mechanics and phase space"
 
 categories: [Math / Symplectic Geometry]

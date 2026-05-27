@@ -1,4 +1,5 @@
----title: "Distribution"
+---
+title: "Distribution"
 excerpt: "The definition of a distribution and the Frobenius theorem"
 
 categories: [Math / Manifold]

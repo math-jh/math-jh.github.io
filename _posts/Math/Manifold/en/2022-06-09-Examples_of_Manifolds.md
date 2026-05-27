@@ -1,4 +1,5 @@
----title: "Examples of Differentiable Manifolds"
+---
+title: "Examples of Differentiable Manifolds"
 excerpt: "Various examples of differentiable manifolds"
 
 categories: [Math / Manifold]

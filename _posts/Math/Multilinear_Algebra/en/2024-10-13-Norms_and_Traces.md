@@ -1,4 +1,5 @@
----title: "Norms and Traces"
+---
+title: "Norms and Traces"
 excerpt: "The norm and trace defined by elements of an algebra"
 
 categories: [Math / Multilinear Algebra]

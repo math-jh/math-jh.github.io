@@ -1,4 +1,5 @@
----title: "Hom and the Tensor Product"
+---
+title: "Hom and the Tensor Product"
 excerpt: "Adjunction and exactness of the Hom functor and the tensor product"
 
 categories: [Math / Multilinear Algebra]

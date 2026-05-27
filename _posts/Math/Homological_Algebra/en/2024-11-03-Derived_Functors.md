@@ -1,4 +1,5 @@
----title: "Derived Functors"
+---
+title: "Derived Functors"
 excerpt: "Definition of right/left derived functors via δ-functors"
 
 categories: [Math / Homological Algebra]

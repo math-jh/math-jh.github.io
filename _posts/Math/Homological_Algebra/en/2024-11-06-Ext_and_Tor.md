@@ -1,4 +1,5 @@
----title: "Ext and Tor"
+---
+title: "Ext and Tor"
 excerpt: "Definitions and properties of Ext and Tor, the derived functors of Hom and tensor"
 
 categories: [Math / Homological Algebra]

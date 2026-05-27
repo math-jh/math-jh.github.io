@@ -1,4 +1,5 @@
----title: "Determinant"
+---
+title: "Determinant"
 excerpt: "The definition and geometric meaning of the determinant"
 
 categories: [Math / Linear Algebra]

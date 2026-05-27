@@ -1,4 +1,5 @@
----title: "Isomorphisms"
+---
+title: "Isomorphisms"
 excerpt: "Equivalent vector spaces"
 
 categories: [Math / Linear Algebra]

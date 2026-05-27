@@ -1,4 +1,5 @@
----title: "Regular Local Rings"
+---
+title: "Regular Local Rings"
 excerpt: "Characterizations of regular systems of parameters and regular local rings"
 
 categories: [Math / Commutative Algebra]

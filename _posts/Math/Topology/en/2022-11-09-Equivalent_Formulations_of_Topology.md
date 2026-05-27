@@ -1,4 +1,5 @@
----title: "Other Definitions of Topological Spaces"
+---
+title: "Other Definitions of Topological Spaces"
 excerpt: "Definitions of topology using closed sets, closure, and neighborhood filters"
 
 categories: [Math / Topology]

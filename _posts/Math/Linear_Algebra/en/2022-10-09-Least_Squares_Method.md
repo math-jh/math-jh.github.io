@@ -1,4 +1,5 @@
----title: "Least Squares Method"
+---
+title: "Least Squares Method"
 excerpt: "Orthogonal Projection and Least Squares Method"
 
 categories: [Math / Linear Algebra]

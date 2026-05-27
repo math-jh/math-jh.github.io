@@ -1,4 +1,5 @@
----title: "Gaussian Elimination"
+---
+title: "Gaussian Elimination"
 excerpt: "Gaussian elimination and inverse matrices"
 
 categories: [Math / Linear Algebra]

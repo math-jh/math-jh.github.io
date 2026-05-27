@@ -1,4 +1,5 @@
----title: "Closed Subschemes of Projective Space"
+---
+title: "Closed Subschemes of Projective Space"
 excerpt: "The correspondence between closed subschemes of projective space and homogeneous ideals"
 
 categories: [Math / Scheme Theory]

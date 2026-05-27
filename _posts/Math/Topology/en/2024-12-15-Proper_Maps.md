@@ -1,4 +1,5 @@
----title: "Proper Maps"
+---
+title: "Proper Maps"
 excerpt: "The relationship between proper maps as universally closed maps and compactness"
 
 categories: [Math / Topology]

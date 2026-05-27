@@ -1,4 +1,5 @@
----title: "Flat Morphisms"
+---
+title: "Flat Morphisms"
 excerpt: "Flat morphisms in algebraic geometry"
 
 categories: [Math / Scheme Theory]

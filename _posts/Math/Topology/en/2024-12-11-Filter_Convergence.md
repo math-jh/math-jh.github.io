@@ -1,4 +1,5 @@
----title: "Compactness and Filter Convergence"
+---
+title: "Compactness and Filter Convergence"
 excerpt: "A characterization of compactness through filter convergence"
 
 categories: [Math / Topology]

@@ -1,4 +1,5 @@
----title: "Differential Ideal"
+---
+title: "Differential Ideal"
 excerpt: "Differential ideals and Frobenius's theorem"
 
 categories: [Math / Manifold]

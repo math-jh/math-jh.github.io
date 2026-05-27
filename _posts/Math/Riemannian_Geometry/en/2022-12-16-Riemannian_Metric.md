@@ -1,4 +1,5 @@
----title: "Riemannian Metric"
+---
+title: "Riemannian Metric"
 excerpt: "The Riemannian metric as a positive-definite symmetric 2-tensor on the tangent bundle"
 
 categories: [Math / Riemannian Geometry]

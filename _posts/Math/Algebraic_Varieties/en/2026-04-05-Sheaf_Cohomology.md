@@ -1,4 +1,5 @@
----title: "Sheaf Cohomology"
+---
+title: "Sheaf Cohomology"
 excerpt: "Sheaf cohomology and its applications"
 
 categories: [Math / Algebraic Varieties]

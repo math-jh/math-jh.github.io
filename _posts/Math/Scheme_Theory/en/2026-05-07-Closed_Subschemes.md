@@ -1,4 +1,5 @@
----title: "Closed Subschemes"
+---
+title: "Closed Subschemes"
 excerpt: "Closed subschemes and vanishing schemes defined by ideal sheaves"
 
 categories: [Math / Scheme Theory]

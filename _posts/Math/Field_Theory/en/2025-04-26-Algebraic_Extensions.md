@@ -1,4 +1,5 @@
----title: "Algebraic Extensions"
+---
+title: "Algebraic Extensions"
 excerpt: "The definition and degree of algebraic extensions of fields"
 
 categories: [Math / Field Theory]

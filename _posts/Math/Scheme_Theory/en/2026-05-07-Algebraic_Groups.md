@@ -1,4 +1,5 @@
----title: "Algebraic Groups"
+---
+title: "Algebraic Groups"
 excerpt: "Algebraic group action"
 
 categories: [Math / Scheme Theory]

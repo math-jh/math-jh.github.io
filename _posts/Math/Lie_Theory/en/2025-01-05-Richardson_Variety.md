@@ -1,4 +1,5 @@
----title: "Richardson Variety"
+---
+title: "Richardson Variety"
 excerpt: "The definition and basic geometric properties of Richardson varieties, defined as the intersection of Schubert varieties and opposite Schubert varieties"
 
 categories: [Math / Lie Theory]

@@ -1,4 +1,5 @@
----title: "Characteristic Classes"
+---
+title: "Characteristic Classes"
 excerpt: "The definition of characteristic classes of fiber bundles and their interpretation via classifying spaces"
 
 categories: [Math / Algebraic Topology]

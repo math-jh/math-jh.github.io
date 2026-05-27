@@ -1,4 +1,5 @@
----title: "Dimension"
+---
+title: "Dimension"
 excerpt: "Definitions of covering dimension and Krull dimension for algebraic geometry"
 
 categories: [Math / Topology]

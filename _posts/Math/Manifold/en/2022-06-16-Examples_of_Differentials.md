@@ -1,4 +1,5 @@
----title: "Examples of Differentials"
+---
+title: "Examples of Differentials"
 excerpt: "Examples of smooth functions and differentials"
 
 categories: [Math / Manifold]

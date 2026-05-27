@@ -1,4 +1,5 @@
----title: "Basis"
+---
+title: "Basis"
 excerpt: "Definition of free modules, basis, and the universal property"
 
 categories: [Math / Multilinear Algebra]

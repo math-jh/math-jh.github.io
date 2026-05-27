@@ -1,4 +1,5 @@
----title: "Dimension of Vector Spaces"
+---
+title: "Dimension of Vector Spaces"
 excerpt: "Bases and Dimension of Vector Spaces"
 
 categories: [Math / Linear Algebra]

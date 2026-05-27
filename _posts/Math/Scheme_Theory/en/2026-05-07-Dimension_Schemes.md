@@ -1,4 +1,5 @@
----title: "Dimension"
+---
+title: "Dimension"
 excerpt: "The definition of dimension for schemes and its relation to the Krull dimension of local rings"
 
 categories: [Math / Scheme Theory]

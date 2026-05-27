@@ -1,4 +1,5 @@
----title: "Root Systems"
+---
+title: "Root Systems"
 excerpt: "Root systems obtained from the weight decomposition of the adjoint representation"
 
 categories: [Math / Lie Theory]

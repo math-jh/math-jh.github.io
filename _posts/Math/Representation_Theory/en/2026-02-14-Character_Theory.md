@@ -1,4 +1,5 @@
----title: "Characters"
+---
+title: "Characters"
 excerpt: "Definition of character functions and orthogonality relations"
 
 categories: [Math / Representation Theory]

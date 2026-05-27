@@ -1,4 +1,5 @@
----title: "Étale Algebras"
+---
+title: "Étale Algebras"
 excerpt: "The definition of étale algebras over a field and a characterization via diagonalizability"
 
 categories: [Math / Field Theory]

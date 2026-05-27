@@ -1,4 +1,5 @@
----title: "Polynomial Rings"
+---
+title: "Polynomial Rings"
 excerpt: "Factorization of polynomial rings over commutative rings and Gauss's lemma"
 
 categories: [Math / Ring Theory]

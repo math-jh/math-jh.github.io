@@ -1,4 +1,5 @@
----title: "Borel Subgroups and Flag Varieties"
+---
+title: "Borel Subgroups and Flag Varieties"
 excerpt: "Dynkin diagrams, ADE classification, and flag varieties"
 
 categories: [Math / Lie Theory]

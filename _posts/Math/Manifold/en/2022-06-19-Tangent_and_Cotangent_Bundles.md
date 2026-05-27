@@ -1,4 +1,5 @@
----title: "Tangent and Cotangent Bundles"
+---
+title: "Tangent and Cotangent Bundles"
 excerpt: "The definition of vector bundles and the tangent and cotangent bundles"
 
 categories: [Math / Manifold]

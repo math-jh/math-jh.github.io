@@ -1,4 +1,5 @@
----title: "Kodaira Vanishing Theorem"
+---
+title: "Kodaira Vanishing Theorem"
 permalink: /en/math/algebraic_varieties/kodaira_vanishing
 excerpt: "The Kodaira vanishing theorem and its applications"
 categories: [Math / Algebraic Varieties]

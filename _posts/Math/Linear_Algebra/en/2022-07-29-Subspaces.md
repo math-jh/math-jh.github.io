@@ -1,4 +1,5 @@
----title: "Subspaces"
+---
+title: "Subspaces"
 excerpt: "Subspaces of a vector space and linear combinations of vectors"
 
 categories: [Math / Linear Algebra]

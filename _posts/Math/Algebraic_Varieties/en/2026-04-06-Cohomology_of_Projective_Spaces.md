@@ -1,4 +1,5 @@
----title: "Cohomology of Projective Space"
+---
+title: "Cohomology of Projective Space"
 excerpt: "Bott's formula and the cohomology of line bundles on projective space"
 
 categories: [Math / Algebraic Varieties]

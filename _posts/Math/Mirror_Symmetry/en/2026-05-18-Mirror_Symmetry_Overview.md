@@ -1,4 +1,5 @@
----title: "Overview of Mirror Symmetry"
+---
+title: "Overview of Mirror Symmetry"
 excerpt: "Historical background and the Hori-Vafa mirror"
 
 categories: [Math / Mirror Symmetry]

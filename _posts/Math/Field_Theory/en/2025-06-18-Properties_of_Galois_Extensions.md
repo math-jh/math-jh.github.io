@@ -1,4 +1,5 @@
----title: "Properties of Galois Groups"
+---
+title: "Properties of Galois Groups"
 excerpt: "The structure of infinite Galois groups with the Krull topology"
 
 categories: [Math / Field Theory]

@@ -1,4 +1,5 @@
----title: "Frobenius Manifolds"
+---
+title: "Frobenius Manifolds"
 excerpt: "Frobenius manifolds and the WDVV equation"
 
 categories: [Math / Mirror Symmetry]

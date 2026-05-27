@@ -1,4 +1,5 @@
----title: "Projective, Injective, and Flat Modules"
+---
+title: "Projective, Injective, and Flat Modules"
 excerpt: "Definitions and equivalent conditions for projective, injective, and flat modules"
 
 categories: [Math / Multilinear Algebra]

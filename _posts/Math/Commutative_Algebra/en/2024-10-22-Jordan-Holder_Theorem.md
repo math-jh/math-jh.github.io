@@ -1,4 +1,5 @@
----title: "The Jordan-Hölder Theorem"
+---
+title: "The Jordan-Hölder Theorem"
 excerpt: "Uniqueness of composition series and well-definedness of length"
 
 categories: [Math / Commutative Algebra]

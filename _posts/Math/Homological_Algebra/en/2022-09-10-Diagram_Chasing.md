@@ -1,4 +1,5 @@
----title: "Diagram chasing"
+---
+title: "Diagram chasing"
 excerpt: "Five lemma, snake lemma"
 
 categories: [Math / Homological Algebra]

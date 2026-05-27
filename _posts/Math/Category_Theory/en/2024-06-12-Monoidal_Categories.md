@@ -1,4 +1,5 @@
----title: "Monoidal Categories"
+---
+title: "Monoidal Categories"
 excerpt: "The definition of monoidal categories and coherence conditions"
 
 categories: [Math / Category Theory]
