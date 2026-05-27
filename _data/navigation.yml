@@ -304,6 +304,8 @@ llm_workshop-ko:
         url: ko/llm_workshop/marvin_hud_display
       - title: "Claude Code를 Kimi와 MiMo로"
         url: ko/llm_workshop/marvin_claude_code_kimi_mimo
+  - title: "Marvin의 독서 노트"
+    children:
       - title: "독서 노트를 쓰는 봇에 대하여"
         url: ko/llm_workshop/marvin_reading_bot
       - title: "Marvin의 독서 노트 — 선형대수학"
