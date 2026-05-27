@@ -1979,3 +1979,45 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `group homomorphism` | multi-word English emphasis — possibly a definition |
 
+## 행렬
+- post: `_posts/Math/Linear_Algebra/ko/2021-10-14-Matrices.md`
+- permalink: `/ko/math/linear_algebra/matrices`
+- scanned: 2026-05-27T17:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `row` | looks like emphasis (no <sub> partner) |
+| `column` | looks like emphasis (no <sub> partner) |
+| `행공간` | looks like emphasis (no <sub> partner) |
+
+## 선형대수학의 기본정리
+- post: `_posts/Math/Linear_Algebra/ko/2021-10-16-Fundamental_Theorem_of_Linear_Algebra.md`
+- permalink: `/ko/math/linear_algebra/ftla`
+- scanned: 2026-05-27T17:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `행렬표현` | looks like emphasis (no <sub> partner) |
+
+## 극한
+- post: `_posts/Math/Set_Theory/ko/2022-02-20-Limits.md`
+- permalink: `/ko/math/set_theory/limits`
+- scanned: 2026-05-27T18:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `inverse system` | multi-word English emphasis — possibly a definition |
+
+## 필터와 아이디얼, 갈루아 대응
+- post: `_posts/Math/Set_Theory/ko/2022-05-01-Filter_and_Ideal.md`
+- permalink: `/ko/math/set_theory/filter_and_ideal`
+- scanned: 2026-05-27T19:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `ideal` | looks like emphasis (no <sub> partner) |
+| `downward closure` | multi-word English emphasis — possibly a definition |
+| `upward closure` | multi-word English emphasis — possibly a definition |
+| `lower adjoint` | multi-word English emphasis — possibly a definition |
+| `upward closed set` | multi-word English emphasis — possibly a definition |
+
