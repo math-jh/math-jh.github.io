@@ -1,4 +1,5 @@
----title: "Torus Actions"
+---
+title: "Torus Actions"
 excerpt: "Actions of a torus and weight space decomposition"
 
 categories: [Math / Lie Theory]

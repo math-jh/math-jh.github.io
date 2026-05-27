@@ -1,4 +1,5 @@
----title: "Canonical Bundle"
+---
+title: "Canonical Bundle"
 excerpt: "Canonical Bundle and Canonical Divisor"
 
 categories: [Math / Algebraic Varieties]

@@ -1,4 +1,5 @@
----title: "Line Bundles and Vector Bundles"
+---
+title: "Line Bundles and Vector Bundles"
 excerpt: "Line bundles, invertible sheaves, and the Picard group"
 
 categories: [Math / Algebraic Varieties]

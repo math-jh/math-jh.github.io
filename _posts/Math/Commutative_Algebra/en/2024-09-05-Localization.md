@@ -1,4 +1,5 @@
----title: "Localization"
+---
+title: "Localization"
 excerpt: "The localization of rings and modules, and the construction of local rings"
 
 categories: [Math / Commutative Algebra]

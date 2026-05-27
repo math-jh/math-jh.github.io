@@ -1,4 +1,5 @@
----title: "System of Parameters"
+---
+title: "System of Parameters"
 excerpt: "The relationship between the system of parameters of a local ring and dimension"
 
 categories: [Math / Commutative Algebra]

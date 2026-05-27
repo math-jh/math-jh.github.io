@@ -1,4 +1,5 @@
----title: "Eigenspace Decomposition"
+---
+title: "Eigenspace Decomposition"
 excerpt: "Eigenspace decomposition of a vector space"
 
 categories: [Math / Linear Algebra]

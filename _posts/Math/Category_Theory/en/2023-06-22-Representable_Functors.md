@@ -1,4 +1,5 @@
----title: "Representable Functors"
+---
+title: "Representable Functors"
 excerpt: "Initial object, terminal object, representable functor"
 
 categories: [Math / Category Theory]

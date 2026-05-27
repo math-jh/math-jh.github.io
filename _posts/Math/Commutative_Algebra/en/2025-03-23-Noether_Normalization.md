@@ -1,4 +1,5 @@
----title: "Noether Normalization"
+---
+title: "Noether Normalization"
 excerpt: "The Noether normalization theorem for finitely generated algebras and its applications"
 
 categories: [Math / Commutative Algebra]

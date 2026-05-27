@@ -1,4 +1,5 @@
----title: "The Riemann–Roch Theorem for Curves"
+---
+title: "The Riemann–Roch Theorem for Curves"
 excerpt: "The Riemann–Roch theorem for curves"
 
 categories: [Math / Algebraic Varieties]

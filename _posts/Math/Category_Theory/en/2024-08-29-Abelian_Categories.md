@@ -1,4 +1,5 @@
----title: "Abelian Categories"
+---
+title: "Abelian Categories"
 excerpt: "Abelian Categories"
 
 categories: [Math / Category Theory]

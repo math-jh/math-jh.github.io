@@ -1,4 +1,5 @@
----title: "Properties of Completion"
+---
+title: "Properties of Completion"
 excerpt: "Compatibility of completion with exact sequences, Artin-Rees lemma"
 
 categories: [Math / Commutative Algebra]

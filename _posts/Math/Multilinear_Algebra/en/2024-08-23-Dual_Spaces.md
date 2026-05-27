@@ -1,4 +1,5 @@
----title: "Dual Spaces"
+---
+title: "Dual Spaces"
 excerpt: "Hom of modules, dual modules, and the bidual map"
 
 categories: [Math / Multilinear Algebra]

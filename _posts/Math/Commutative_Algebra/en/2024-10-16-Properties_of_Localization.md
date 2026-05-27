@@ -1,4 +1,5 @@
----title: "Properties of Localization"
+---
+title: "Properties of Localization"
 excerpt: "Compatibility of localization with Hom and tensor, and local properties"
 
 categories: [Math / Commutative Algebra]

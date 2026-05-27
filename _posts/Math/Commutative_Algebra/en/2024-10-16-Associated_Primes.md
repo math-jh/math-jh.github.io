@@ -1,4 +1,5 @@
----title: "Associated Primes"
+---
+title: "Associated Primes"
 excerpt: "The prime avoidance lemma and the definition and properties of associated primes"
 
 categories: [Math / Commutative Algebra]

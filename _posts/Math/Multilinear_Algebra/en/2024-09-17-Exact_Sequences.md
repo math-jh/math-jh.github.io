@@ -1,4 +1,5 @@
----title: "Exact Sequences"
+---
+title: "Exact Sequences"
 excerpt: "Exact sequences of modules, and short/long exact sequences"
 
 categories: [Math / Multilinear Algebra]

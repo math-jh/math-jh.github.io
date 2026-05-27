@@ -1,4 +1,5 @@
----title: "Morphisms of Schemes"
+---
+title: "Morphisms of Schemes"
 excerpt: "Four perspectives on scheme morphisms as morphisms of locally ringed spaces"
 
 categories: [Math / Scheme Theory]

@@ -1,4 +1,5 @@
----title: "Jordan Canonical Form"
+---
+title: "Jordan Canonical Form"
 excerpt: "Construction of the Jordan canonical form through generalized eigenspace decomposition"
 
 categories: [Math / Linear Algebra]

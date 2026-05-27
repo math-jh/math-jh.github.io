@@ -1,4 +1,5 @@
----title: "Flatness and Localization"
+---
+title: "Flatness and Localization"
 excerpt: "A local criterion for flatness via checking at the maximal ideal"
 
 categories: [Math / Commutative Algebra]

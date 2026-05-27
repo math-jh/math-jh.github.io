@@ -1,4 +1,5 @@
----title: "Completion"
+---
+title: "Completion"
 excerpt: "Completion of rings and modules defined by a filtration"
 
 categories: [Math / Commutative Algebra]

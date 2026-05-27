@@ -1,4 +1,5 @@
----title: "Valuation Rings"
+---
+title: "Valuation Rings"
 excerpt: "Valuative criteria for separatedness and properness"
 
 categories: [Math / Scheme Theory]

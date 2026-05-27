@@ -1,4 +1,5 @@
----title: "Resolutions"
+---
+title: "Resolutions"
 excerpt: "Projective and injective resolutions in an abelian category"
 
 categories: [Math / Homological Algebra]

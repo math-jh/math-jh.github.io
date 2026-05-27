@@ -1,4 +1,5 @@
----title: "Dubrovin Connection"
+---
+title: "Dubrovin Connection"
 excerpt: "A flat connection on a Frobenius manifold with a spectral parameter"
 
 categories: [Math / Mirror Symmetry]

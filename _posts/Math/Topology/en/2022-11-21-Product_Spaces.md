@@ -1,4 +1,5 @@
----title: "Product Spaces"
+---
+title: "Product Spaces"
 excerpt: "Properties of product spaces"
 
 categories: [Math / Topology]

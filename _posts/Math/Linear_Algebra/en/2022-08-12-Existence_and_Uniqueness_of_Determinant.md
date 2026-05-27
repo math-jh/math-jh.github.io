@@ -1,4 +1,5 @@
----title: "Existence and Uniqueness of the Determinant"
+---
+title: "Existence and Uniqueness of the Determinant"
 excerpt: "Existence and uniqueness proof of the determinant, and methods for computing it"
 
 categories: [Math / Linear Algebra]

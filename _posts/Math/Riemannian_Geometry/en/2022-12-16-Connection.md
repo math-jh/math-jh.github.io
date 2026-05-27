@@ -1,4 +1,5 @@
----title: "Connection"
+---
+title: "Connection"
 excerpt: "Differentiation on a vector bundle"
 
 categories: [Math / Riemannian Geometry]

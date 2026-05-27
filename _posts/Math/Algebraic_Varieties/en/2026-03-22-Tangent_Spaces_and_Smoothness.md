@@ -1,4 +1,5 @@
----title: "Tangent Spaces and Smoothness"
+---
+title: "Tangent Spaces and Smoothness"
 excerpt: "Tangent spaces and smoothness of algebraic varieties"
 
 categories: [Math / Algebraic Varieties]

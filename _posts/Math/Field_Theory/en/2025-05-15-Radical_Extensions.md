@@ -1,4 +1,5 @@
----title: "Radical Extensions"
+---
+title: "Radical Extensions"
 excerpt: "The definition of radical extensions and their role in Galois theory"
 
 categories: [Math / Field Theory]

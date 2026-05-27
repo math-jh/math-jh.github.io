@@ -1,4 +1,5 @@
----title: "Bases of a Topological Space"
+---
+title: "Bases of a Topological Space"
 excerpt: "Bases, subbases, and local bases of a topological space"
 
 categories: [Math / Topology]

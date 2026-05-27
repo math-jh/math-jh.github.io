@@ -1,4 +1,5 @@
----title: "Continuous Functions"
+---
+title: "Continuous Functions"
 excerpt: "Properties of continuous functions"
 
 categories: [Math / Topology]

@@ -1,4 +1,5 @@
----title: "Localization of Graded Rings"
+---
+title: "Localization of Graded Rings"
 excerpt: "Homogeneous localization of graded rings and graded modules"
 
 categories: [Math / Commutative Algebra]

@@ -1,4 +1,5 @@
----title: "Symmetric Tensors"
+---
+title: "Symmetric Tensors"
 excerpt: "The action of the symmetric group, symmetric tensors, and symmetric powers"
 
 categories: [Math / Multilinear Algebra]

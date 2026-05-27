@@ -1,4 +1,5 @@
----title: "Smooth Manifolds"
+---
+title: "Smooth Manifolds"
 excerpt: "Definition of smooth manifolds"
 
 categories: [Math / Manifold]

@@ -1,4 +1,5 @@
----title: "Integral Domains"
+---
+title: "Integral Domains"
 excerpt: "Definitions of Euclidean domains, PIDs, and UFDs, and their inclusion relationships"
 
 categories: [Math / Ring Theory]

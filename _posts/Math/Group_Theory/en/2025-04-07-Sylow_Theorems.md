@@ -1,4 +1,5 @@
----title: "Sylow Theorems"
+---
+title: "Sylow Theorems"
 excerpt: "p-subgroups of finite groups and the three Sylow theorems"
 
 categories: [Math / Group Theory]

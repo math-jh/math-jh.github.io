@@ -1,4 +1,5 @@
----title: "Algebraic Closures"
+---
+title: "Algebraic Closures"
 excerpt: "The existence of algebraically closed fields and algebraic closures"
 
 categories: [Math / Field Theory]

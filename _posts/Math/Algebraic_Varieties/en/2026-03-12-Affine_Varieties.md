@@ -1,4 +1,5 @@
----title: "Affine Varieties"
+---
+title: "Affine Varieties"
 excerpt: "Affine varieties and their basic properties"
 
 categories: [Math / Algebraic Varieties]

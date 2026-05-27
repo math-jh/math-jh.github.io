@@ -1,4 +1,5 @@
----title: "Integral Extensions and Ideals"
+---
+title: "Integral Extensions and Ideals"
 excerpt: "The lying over and going up theorems for integral extensions and prime ideals"
 
 categories: [Math / Commutative Algebra]

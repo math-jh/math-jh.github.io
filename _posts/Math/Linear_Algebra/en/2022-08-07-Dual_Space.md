@@ -1,4 +1,5 @@
----title: "Dual Space"
+---
+title: "Dual Space"
 excerpt: "Dual spaces, dual maps, and orthogonal complements"
 
 categories: [Math / Linear Algebra]

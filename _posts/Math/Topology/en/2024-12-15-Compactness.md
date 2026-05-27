@@ -1,4 +1,5 @@
----title: "Compactness"
+---
+title: "Compactness"
 excerpt: "Tychonoff's theorem, local compactness, and paracompactness"
 
 categories: [Math / Topology]

@@ -1,4 +1,5 @@
----title: "Interior, Closure, and Boundary"
+---
+title: "Interior, Closure, and Boundary"
 excerpt: "Basic concepts in topology"
 
 categories: [Math / Topology]

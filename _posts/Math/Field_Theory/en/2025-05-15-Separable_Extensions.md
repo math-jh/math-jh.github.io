@@ -1,4 +1,5 @@
----title: "Separable Extensions"
+---
+title: "Separable Extensions"
 excerpt: "Characterization of separable extensions through étale algebras"
 
 categories: [Math / Field Theory]

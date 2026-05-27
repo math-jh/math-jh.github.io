@@ -1,4 +1,5 @@
----title: "Galois Extensions"
+---
+title: "Galois Extensions"
 excerpt: "The definition of a Galois extension satisfying both normal and separable"
 
 categories: [Math / Field Theory]

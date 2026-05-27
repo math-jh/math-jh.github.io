@@ -1,4 +1,5 @@
----title: "Basic Notions"
+---
+title: "Basic Notions"
 excerpt: "Basic conventions and definitions for rings and algebras used in commutative algebra"
 
 categories: [Math / Commutative Algebra]

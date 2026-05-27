@@ -1,4 +1,5 @@
----title: "Open Mappings and Closed Mappings"
+---
+title: "Open Mappings and Closed Mappings"
 excerpt: "Definitions of open maps and closed maps, and their relationship to quotient maps"
 
 categories: [Math / Topology]

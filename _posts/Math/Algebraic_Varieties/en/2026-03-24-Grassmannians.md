@@ -1,4 +1,5 @@
----title: "Grassmannians"
+---
+title: "Grassmannians"
 excerpt: "Grassmannians as parameter spaces of linear subspaces"
 
 categories: [Math / Algebraic Varieties]

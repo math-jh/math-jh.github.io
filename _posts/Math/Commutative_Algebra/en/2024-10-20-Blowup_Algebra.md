@@ -1,4 +1,5 @@
----title: "Blowup Algebras"
+---
+title: "Blowup Algebras"
 excerpt: "Rees algebras and associated graded rings constructed from an ideal"
 
 categories: [Math / Commutative Algebra]

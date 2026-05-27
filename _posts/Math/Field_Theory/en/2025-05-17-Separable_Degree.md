@@ -1,4 +1,5 @@
----title: "Separable Degree"
+---
+title: "Separable Degree"
 excerpt: "The decomposition of separable and inseparable degrees"
 
 categories: [Math / Field Theory]

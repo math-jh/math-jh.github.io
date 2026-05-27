@@ -1,4 +1,5 @@
----title: "Projective Varieties"
+---
+title: "Projective Varieties"
 excerpt: "Projective varieties and homogeneous coordinates"
 
 categories: [Math / Algebraic Varieties]

@@ -1,4 +1,5 @@
----title: "Natural Transformations"
+---
+title: "Natural Transformations"
 excerpt: "Natural transformations and equivalence between categories"
 
 categories: [Math / Category Theory]

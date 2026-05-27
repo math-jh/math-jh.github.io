@@ -1,4 +1,5 @@
----title: "Symplectic Manifolds"
+---
+title: "Symplectic Manifolds"
 excerpt: "Definitions and properties of symplectic manifolds"
 
 categories: [Math / Symplectic Geometry]

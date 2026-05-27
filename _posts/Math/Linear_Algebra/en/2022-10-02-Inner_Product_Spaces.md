@@ -1,4 +1,5 @@
----title: "Inner Product Spaces"
+---
+title: "Inner Product Spaces"
 excerpt: "Properties of inner products defined over the real numbers"
 
 categories: [Math / Linear Algebra]

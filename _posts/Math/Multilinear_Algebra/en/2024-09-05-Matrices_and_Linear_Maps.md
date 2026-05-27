@@ -1,4 +1,5 @@
----title: "Matrices and Linear Maps"
+---
+title: "Matrices and Linear Maps"
 excerpt: "Matrix representations of linear maps between free modules and coordinate systems"
 
 categories: [Math / Multilinear Algebra]

@@ -1,4 +1,5 @@
----title: "Algebra of Schemes"
+---
+title: "Algebra of Schemes"
 excerpt: "Definitions and properties of reduced schemes and integral schemes"
 
 categories: [Math / Scheme Theory]

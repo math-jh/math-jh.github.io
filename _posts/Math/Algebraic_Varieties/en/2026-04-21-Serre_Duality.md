@@ -1,4 +1,5 @@
----title: "Serre Duality"
+---
+title: "Serre Duality"
 excerpt: "Serre duality theorem and its applications"
 
 categories: [Math / Algebraic Varieties]

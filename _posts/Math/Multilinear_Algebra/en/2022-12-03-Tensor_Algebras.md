@@ -1,4 +1,5 @@
----title: "Tensor Algebras"
+---
+title: "Tensor Algebras"
 excerpt: "Tensor algebras, symmetric algebras, exterior algebras"
 
 categories: [Math / Multilinear Algebra]

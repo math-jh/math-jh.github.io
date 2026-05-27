@@ -1,4 +1,5 @@
----title: "Determinants"
+---
+title: "Determinants"
 excerpt: "The determinant of an endomorphism of a free module and its basic properties"
 
 categories: [Math / Multilinear Algebra]

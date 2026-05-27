@@ -1,4 +1,5 @@
----title: "Hausdorff Spaces"
+---
+title: "Hausdorff Spaces"
 excerpt: "Convergence of sequences and the Hausdorff axiom"
 
 categories: [Math / Topology]

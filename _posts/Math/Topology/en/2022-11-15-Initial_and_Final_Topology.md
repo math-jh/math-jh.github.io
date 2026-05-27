@@ -1,4 +1,5 @@
----title: "Initial and Final Topology"
+---
+title: "Initial and Final Topology"
 excerpt: "Initial/final topology and their examples"
 
 categories: [Math / Topology]

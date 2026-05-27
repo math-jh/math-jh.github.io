@@ -1,4 +1,5 @@
----title: "Intersection Product"
+---
+title: "Intersection Product"
 excerpt: "The intersection product on Chow groups"
 
 categories: [Math / Algebraic Varieties]

@@ -1,4 +1,5 @@
----title: "Quasi-Projective Varieties"
+---
+title: "Quasi-Projective Varieties"
 excerpt: "Quasi-projective varieties and regular maps"
 
 categories: [Math / Algebraic Varieties]

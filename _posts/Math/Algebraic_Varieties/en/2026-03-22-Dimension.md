@@ -1,4 +1,5 @@
----title: "Dimension"
+---
+title: "Dimension"
 excerpt: "Dimension of algebraic varieties"
 
 categories: [Math / Algebraic Varieties]

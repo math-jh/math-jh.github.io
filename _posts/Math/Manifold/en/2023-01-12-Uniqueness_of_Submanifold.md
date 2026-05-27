@@ -1,4 +1,5 @@
----title: "Uniqueness of Submanifolds"
+---
+title: "Uniqueness of Submanifolds"
 excerpt: "The topological structure of immersed submanifolds and the factorization of smooth functions"
 
 categories: [Math / Manifold]

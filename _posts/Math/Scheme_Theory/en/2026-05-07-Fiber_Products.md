@@ -1,4 +1,5 @@
----title: "Fiber Products"
+---
+title: "Fiber Products"
 excerpt: "Definition and existence of fiber products in the category of S-schemes"
 
 categories: [Math / Scheme Theory]

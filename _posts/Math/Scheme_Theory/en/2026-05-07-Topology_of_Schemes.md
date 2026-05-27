@@ -1,4 +1,5 @@
----title: "Topological Structure of Schemes"
+---
+title: "Topological Structure of Schemes"
 excerpt: "Generic points, Zariski topology, and irreducible components"
 
 categories: [Math / Scheme Theory]

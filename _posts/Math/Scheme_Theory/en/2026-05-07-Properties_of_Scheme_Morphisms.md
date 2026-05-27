@@ -1,4 +1,5 @@
----title: "Properties of Scheme Morphisms"
+---
+title: "Properties of Scheme Morphisms"
 excerpt: "Basic properties of scheme morphisms such as affine, finite, and finite type"
 
 categories: [Math / Scheme Theory]

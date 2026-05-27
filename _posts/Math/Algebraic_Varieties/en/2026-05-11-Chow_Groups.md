@@ -1,4 +1,5 @@
----title: "Chow Groups"
+---
+title: "Chow Groups"
 excerpt: "Chow groups and the cycle class map"
 
 categories: [Math / Algebraic Varieties]

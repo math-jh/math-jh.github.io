@@ -1,4 +1,5 @@
----title: "The Long Exact Sequence"
+---
+title: "The Long Exact Sequence"
 excerpt: "The long exact sequence"
 
 categories: [Math / Homological Algebra]

@@ -1,4 +1,5 @@
----title: "Fundamental Theorem of Linear Algebra"
+---
+title: "Fundamental Theorem of Linear Algebra"
 excerpt: "Fundamental Theorem of Linear Algebra"
 
 categories: [Math / Linear Algebra]

@@ -1,4 +1,5 @@
----title: "Connected Spaces"
+---
+title: "Connected Spaces"
 excerpt: "Connected spaces, path-connectedness, and connected components"
 
 categories: [Math / Topology]

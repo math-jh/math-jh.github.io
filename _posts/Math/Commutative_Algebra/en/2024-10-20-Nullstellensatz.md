@@ -1,4 +1,5 @@
----title: "Nullstellensatz"
+---
+title: "Nullstellensatz"
 excerpt: "Proofs of Jacobson rings and Hilbert's Nullstellensatz"
 
 categories: [Math / Commutative Algebra]

@@ -1,4 +1,5 @@
----title: "Change of Basis"
+---
+title: "Change of Basis"
 excerpt: "Square matrices and invertible matrices, transformation of matrices under change of basis"
 
 categories: [Math / Multilinear Algebra]
