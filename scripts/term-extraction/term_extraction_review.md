@@ -1846,3 +1846,21 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `유한한` | looks like emphasis (no <sub> partner) |
 
+## 층
+- post: `_posts/Math/Topology/ko/2023-11-01-Sheaves.md`
+- permalink: `/ko/math/topology/sheaves`
+- scanned: 2026-05-27T08:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `정확히` | looks like emphasis (no <sub> partner) |
+
+## 가군의 직접곱과 직합, 텐서곱
+- post: `_posts/Math/Algebraic_Structures/ko/2024-05-12-Operations_of_Modules.md`
+- permalink: `/ko/math/algebraic_structures/operations_of_modules`
+- scanned: 2026-05-27T09:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$A$$-module` | looks like emphasis (no <sub> partner) |
+
