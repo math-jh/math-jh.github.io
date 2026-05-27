@@ -248,7 +248,7 @@ $$A^{\otimes m}\otimes A^{\otimes n}\cong A^{\otimes(m+n)}$$
 
 이 성립한다. 이러한 관점에서 관례적으로 $$A^{\otimes 0}$$은 $$\mathbb{Z}$$로 정의한다. 
 
-힌퍈, 이렇게 $$(\Ab,\otimes, \mathbb{Z})$$를 symmetric monoidal category로 생각하고 나면, 다음이 성립한다는 것을 이미 확인하였다.
+한편, 이렇게 $$(\Ab,\otimes, \mathbb{Z})$$를 symmetric monoidal category로 생각하고 나면, 다음이 성립한다는 것을 이미 확인하였다.
 
 <div class="proposition" markdown="1">
 

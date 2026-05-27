@@ -6,6 +6,7 @@ author: Marvin
 date: 2026-05-27
 last_modified_at: 2026-05-27
 
+
 weight: 106
 toc: true
 ---
@@ -163,7 +164,19 @@ Mixed tensor 부분에서 저자가 "아 이게 애매하네"라고 솔직하게
 ⚠️ 정의 없이 사용: `polynomial algebra` (검색해도 X)
 ⚠️ 정의 없이 사용: `Koszul sign convention` (검색해도 X)
 
-## [행렬식](/ko/math/multilinear_algebra/determinants)
+## [노름과 대각합](/ko/math/multilinear_algebra/norms_and_traces)
+
+행렬식 글에서 $$\bigwedge^n(u)$$가 1-dimensional이므로 scalar multiplication이라는 관찰로부터 determinant를 정의했고, trace map도 Hom과 텐서곱 글에서 coordinate-free하게 정의했는데, 이 글은 그 두 도구를 "algebra의 원소가 module 위에서 정의하는 endomorphism"에 적용하는 구체적인 응용이다. 출발점은 정의 1인데, unital associative $$A$$-algebra $$E$$의 원소 $$\alpha$$가 $$E$$-module $$M$$ 위에서 좌측곱 $$\alpha_M:x\mapsto\alpha x$$라는 endomorphism을 정의하고, 그 trace/determinant/characteristic polynomial을 각각 $$\tr_{M/A}(\alpha)$$, $$N_{M/A}(\alpha)$$, $$\chi_{M/A,\alpha}(x)$$로 표기하는 것이 핵심이다. Hom과 텐서곱 글에서 $$\tr(u)=\sum_i\langle x_i,\xi_i\rangle$$로 coordinate-free한 trace를 정의할 때 "endomorphism의 대각합"이라는 관점을 이미 봤는데, 여기서는 그 endomorphism이 특별히 "좌측곱으로 정의된 것"이라는 제약이 붙는다는 것이 차이다. $$M$$이 $$A$$-module로서 유한한 basis를 갖는다는 조건이 필수적인데, 행렬과 선형사상 글에서 finitely generated free module이 아니면 행렬표현이 불가능했던 것과 같은 맥락이다.
+
+행렬식 글의 따름정리 6에서 $$\det(\alpha\cdot\id+\beta u)=\sum_k\tr(\bigwedge^k(u))\alpha^{n-k}\beta^k$$라는 공식을 봤는데, 여기서는 $$\alpha=0$$, $$\beta=1$$로 놓으면 $$\det(u)=\tr(\bigwedge^n(u))$$가 되고 $$\alpha=1$$, $$\beta=0$$으로 놓으면 $$\tr(u)=\tr(\bigwedge^1(u))$$가 되는 식으로 — norm과 trace가 exterior power functor의 서로 다른 degree에서 온다는 것을 이해할 수 있다. 다만 이 글에서는 determinant와 trace를 "이미 알려진 도구"로 사용하고 있어서, 행렬식 글의 coordinate-free한 정의를 직접 재활용한다는 것이 깔끔하다.
+
+명제 2의 filtration에 대한 성질이 가장 구조적인 결과다. $$M=M_0\supset M_1\supset\cdots\supset M_r=\{0\}$$인 decreasing sequence에 대해 각 $$P_i=M_{i-1}/M_i$$가 finitely generated이면 $$\tr_{M/A}(\alpha)=\sum\tr_{P_i/A}(\alpha)$$이고 $$N_{M/A}(\alpha)=\prod N_{P_i/A}(\alpha)$$라는 것이다. 증명에서 $$\alpha_M$$의 행렬이 block upper-triangular 형태가 된다는 것이 핵심인데, 행렬과 선형사상 글에서 block 행렬의 곱셈을 다뤘으므로 "대각블록의 trace/determinant가 전체의 trace/determinant를 결정한다"는 결론이 자연스럽다. 다만 $$M$$ 자체가 free module이 아닐 수 있다는 것 — filtration의 각 quotient $$P_i$$만 finitely generated이면 충분하다는 것 — 이 선형대수학에서는 볼 수 없었던 일반화인데, $$M$$이 "너무 큰" module이어도 quotient를 잘 잡으면 norm과 trace를 정의할 수 있다는 것이 인상적이다.
+
+명제 3의 tensor product에 대한 성질 — $$\tr_{M\otimes M'/A}(\alpha\otimes\alpha')=\tr_{M/A}(\alpha)\cdot\tr_{M'/A}(\alpha')$$, $$N_{M\otimes M'/A}(\alpha\otimes\alpha')=N_{M/A}(\alpha)^{n'}\cdot N_{M'/A}(\alpha')^n$$ — 이 행렬식 글의 따름정리 6과 같은 맥락의 결과인데, tensor product의 행렬표현이 Kronecker product로 주어진다는 것(행렬의 텐서곱 글에서 예상했던 것)으로부터 오는 것이다. $$N$$의 공식에서 지수 $$n'$$과 $$n$$이 교차하는 것이 인상적인데, $$\det(A\otimes B)=\det(A)^{n'}\det(B)^n$$이라는 Kronecker product의 determinant 공식과 직접 연결된다.
+
+명제 4의 " $$\alpha$$가 invertible $$\iff$$ $$N_{E/A}(\alpha)$$가 $$A$$에서 invertible "이라는 동치조건이 가장 실용적인 결과다. $$N_{E/A}(\alpha)N_{E/A}(\alpha')=N_{E/A}(1)=1$$로부터 정방향은 바로 나오고, 역방향은 $$\alpha$$의 좌측곱 $$h:x\mapsto\alpha x$$가 $$N_{E/A}(\alpha)$$가 invertible이면 injective이고 finitely generated이므로 bijective라는 논증인데 — 행렬식 글의 따름정리 3( $$u$$가 bijective $$\iff$$ $$\det(u)$$가 가역 )을 직접 재활용하는 것이 깔끔하다. 다만 $$h(\alpha'\alpha-1)=(\alpha'\alpha-1)\alpha=0$$으로부터 $$\alpha'\alpha=1$$을 얻는 마지막 단계가 — "좌측역이 존재하면 우측역도 존재한다"는 일반적 사실을 $$h$$의 injectivity로부터 직접 증명하는 것이 — ring의 곱셈이 noncommutative일 수 있다는 것에 대한 주의깊은 처리라고 느꼈다.
+
+전체적으로 이 글은 행렬식 글에서 정의한 determinant와 Hom과 텐서곱 글에서 정의한 trace를 "algebra의 원소"라는 구체적인 대상에 적용하는 응용이다. 가장 인상적인 부분은 명제 2의 filtration에 대한 성질인데, "module 자체가 free가 아니어도 quotient를 통해 norm과 trace를 정의할 수 있다"는 것이 선형대수학의 intuition을 넘어서는 일반화라고 느꼈다. 다만 norm의 정의에서 $$M$$의 isomorphism class에만 의존한다는 관찰(행렬 표현으로부터)이 — basis 선택의 불변성이 exterior power functor의 functoriality로부터 오는 것인데 — 이 글에서는 "같은 이유"를 행렬 수준에서만 설명하고 있어서, 행렬식 글의 coordinate-free한 관점과의 연결이 명시적이지 않다는 것이 약간 아쉽다.
 
 텐서대수 글에서 exterior algebra $$\bigwedge(M)$$의 basis가 basis 원소들의 부분집합 $$e_J$$로 주어지는 것을 봤는데, 이 글은 그 중에서도 $$\bigwedge^n(M)$$ ( $$n$$이 free module의 rank일 때 )이 1-dimensional이라는 관찰로부터 determinant를 정의한다. $$\bigwedge^n(u)$$가 $$\bigwedge^n(M)$$에서 $$\bigwedge^n(M)$$으로의 map인데, 1-dimensional이므로 반드시 스칼라곱 $$x\mapsto\alpha x$$의 꼴이어야 한다는 논증이 — "차원이 1이면 linear map이 scalar multiplication이다"는 선형대수학의 관찰을 직접 활용하는 것이 깔끔하다. Hom과 텐서곱 글에서 $$\Hom$$ functor의 exactness를 다뤘고, 텐서대수 글에서 exterior algebra의 construction을 봤으므로, "exterior power functor $$\bigwedge^n$$를 endomorphism에 적용하면 determinant가 나온다"는 것이 그 두 도구의 합류점이라는 느낌이 든다.
 
@@ -178,3 +191,45 @@ Mixed tensor 부분에서 저자가 "아 이게 애매하네"라고 솔직하게
 Cayley-Hamilton 정리의 증명이 가장 우아한 부분이다. $$\det(x-\iota_!u)$$라는 $$A[x]$$-endomorphism의 determinant를 cofactor expansion으로 $$XY^t=(\det X)I$$ 꼴로 풀어서, exact sequence의 $$\psi$$를 factor out하는 논증 — "determinant를 $$A[x]$$-endomorphism으로 보면 자동으로 $$0$$이 된다"는 것 — 이 선형대수학에서 행렬로만 증명했던 것보다 훨씬 더 구조적인 이해를 준다. 선형대수학에서는 " $$\chi_A(A)=0$$ "이라는 결론을 행렬의 성분으로 확인했었는데, 여기서는 " $$M_u$$가 $$\psi$$의 cokernel이므로 $$\psi$$의 determinant가 $$M_u$$에서 0으로 작용한다"는 것이 핵심 논증이라는 것이 — "왜 성립하는가"를 더 깊이 보여준다고 느꼈다.
 
 전체적으로 이 글은 exterior algebra의 구체적 응용으로서 determinant를 정의하고, extension of scalar와 exact sequence를 이용해 특성다항식과 Cayley-Hamilton을 증명하는 구조를 따른다. 가장 인상적인 부분은 determinant가 " $$\bigwedge^n$$ functor의 scalar part"라는 coordinate-free한 정의인데, 선형대수학에서 "행렬의 성분으로 정의한 determinant"가 module 이론에서는 exterior power의 자연스러운 귀결이라는 것이 아름답다. 다만 polynomial algebra $$A[x]$$가 텐서대수 글에서 정의 없이 사용된 후 여기서도 같은 문제가 반복되고 있어서, commutative ring 위의 polynomial ring의 formal 정의가 어디선가 필요하다고 느꼈다.
+
+## [코탄젠트 복합체](/ko/math/multilinear_algebra/cotangent_complex)
+
+이 글은 "작성 예정" 상태로, 본문이 비어있다. 제목과 excerpt("Kähler 미분의 cotangent complex로의 derived 확장")로부터 추측하건대, 앞서 다룬 module 이론의 도구들 — 특히 tensor algebra, exterior algebra, 그리고 exact sequence — 을 이용해 Kähler 미분 $$\Omega_{A/B}$$를 정의하고, 이를 derived category의 맥락에서 cotangent complex로 확장하는 내용을 다룰 것으로 예상된다. 텐서대수 글에서 tensor algebra의 universal property를 봤고, 노름과 대각합 글에서 extension of scalar와 exact sequence를 활용하는 기법을 익혔으므로, cotangent complex의 construction도 비슷한 패턴을 따를 것이라는 직감이 든다. 다만 본문이 없어서 구체적으로 어떤 내용을 담을지는 확인할 수 없어서 아쉽다. derived algebraic geometry라는 주제가 이 블로그의 다른 카테고리(호몰로지 대수학 등)와 연결될 것이라는 예감이 드는데, 현재까지의 독서 노트로는 그 연결을 구체적으로 파악하기 어렵다.
+
+## [미분](/ko/math/multilinear_algebra/derivations)
+
+텐서대수 글에서 tensor algebra의 universal property를 봤고, 노름과 대각합 글에서 exterior algebra를 determinant의 도구로 활용하는 것을 확인했는데, 이 글은 "미분(derivation)"이라는 개념을 graded setting에서 체계적으로 도입한다. 출발점은 commutation factor $$\varepsilon: \Delta \times \Delta \to \{\pm 1\}$$라는 sign function인데, $$\varepsilon(\alpha+\alpha', \beta) = \varepsilon(\alpha,\beta)\varepsilon(\alpha',\beta)$$라는 조건이 "degree에 따라 부호가 바뀌는 곱셈"을 포착하는 것이 핵심이다. $$\Delta = \mathbb{Z}$$인 경우 $$\varepsilon(p,q) = (-1)^{pq}$$만이 non-trivial한 commutation factor인데, 텐서대수 글에서 언급된 Koszul sign convention이 정확히 이 $$\varepsilon$$라는 것을 이 글을 통해 비로소 이해했다.
+
+정의 2의 $$\varepsilon$$-derivation — $$d(xx') = (dx)x' + \varepsilon(\delta, \deg(x))x(dx')$$를 만족하는 degree $$\delta$$ graded homomorphism의 triple — 가 이 글의 개념적 핵심이다. Leibniz rule를 $$\varepsilon$$로 꾸민 것인데, $$\varepsilon$$이 항상 1이면 ordinary derivation이고, $$\varepsilon(p,q)=(-1)^{pq}$$이고 $$\delta$$이 홀수이면 anti-derivation이 된다는 관찰이 깔끔하다. 노름과 대각합 글에서 exterior algebra의 basis가 $$e_J$$로 주어지는 것을 봤는데, $$d\xi_{j_1} \wedge \cdots \wedge d\xi_{j_k}$$로 생성되는 graded module 위에서의 exterior derivative가 degree 1 anti-derivation이라는 구체적 예시가 — "왜 anti-derivation이 필요한지"에 대한 가장 좋은 답을 제공한다.
+
+명제 3의 bracket $$[d_1, d_2]_\varepsilon = d_1 \circ d_2 - \varepsilon(\delta_1, \delta_2) d_2 \circ d_1$$이 again a derivation이라는 결과가 가장 인상적이다. 두 derivation의 합성은 일반적으로 derivation이 아니지만, "교차항을 상쇄하는" bracket을 정의하면 닫힌 구조가 된다는 것이 — $$d_2 \circ d_1$$의 전개에서 가운데 두 항을 없애는 것이 정확히 $$\varepsilon$$-bracket의 역할이라는 계산이 — 추상적 정의 뒤의 동기를 명확히 보여준다. 범주론 카테고리에서 Lie bracket의 정의를 봤었는데, 여기서 graded version이 자연스럽게 등장하는 것이 좋다.
+
+$$\ker(d)$$가 graded subalgebra라는 명제 6은 선형대수학에서 "행렬식의 kernel은 부분공간이다"의 algebra 버전인데, $$d(1)=0$$이 자동으로 나온다는 것이 — $$d(1) = d(1 \cdot 1) = 2d(1)$$로부터 — ring의 단위원이 derivation의 kernel에 속한다는 것이 편리하다. 명제 8의 derivation의 field of fractions로의 유일한 확장 — $$\bar{d}(u/v) = v^{-1}d(u) - v^{-2}u\,d(v)$$ — 도 실용적인데, 정역 글에서 field of fractions를 정의할 때 "왜 fractions가 필요한가"라는 질문이 있었는데, derivation을 확장하는 도구로서의 역할이 명확해진다.
+
+정의 10의 inner derivation $$\operatorname{ad}_\varepsilon(z)(x) = [z, x]_\varepsilon$$가 이 글의 마지막 개념적 도입이다. $$E$$의 homogeneous element $$z$$가 $$E$$ 위의 derivation을 정의한다는 것이 — "algebra의 원소 자체가 미분 연산자를 만든다"는 것이 — 범주론 카테고리에서 Lie algebra의 adjoint representation을 봤으므로 익숙한 패턴인데, graded version으로 자연스럽게 일반화되는 것이 좋다. 따름정리 12의 $$[\operatorname{ad}_\varepsilon(x), \operatorname{ad}_\varepsilon(y)]_\varepsilon = \operatorname{ad}_\varepsilon([x,y]_\varepsilon)$$와 Jacobi identity가 이 글의 대미를 장식하는데, bracket과 adjoint map이 호환된다는 것이 Lie algebra의 핵심 구조라는 것을 다시 확인한다.
+
+전체적으로 이 글은 "Leibniz rule를 graded setting으로 확장한다"는 명확한 목표 아래 commutation factor, ε-derivation, bracket, inner derivation이라는 네 단계를 체계적으로 보여준다. 가장 인상적인 부분은 bracket의 closure property인데, "derivation들의 모임은 subalgebra가 아니지만 bracket을 정의하면 Lie algebra가 된다"는 것이 — Hom과 텐서곱 글에서 $$\Hom$$ functor의 exactness를 분석했던 것과 같은 수준의 구조적 관찰을 제공한다고 느꼈다. 다만 polynomial algebra가 텐서대수 글에서 정의 없이 사용된 후 여기서도 같은 문제가 반복되고 있고, "bracket"이라는 용어 자체도 이전 글들에서 formal하게 정의된 적이 없어서 — commutative ring 위의 polynomial ring의 formal 정의가 어디선가 필요하다고 느꼈다.
+
+⚠️ 정의 없이 사용: `bracket` (검색해도 X)
+
+## [미분가군](/ko/math/multilinear_algebra/differential_modules)
+
+미분 글에서 $$\varepsilon$$-derivation과 bracket, inner derivation을 체계적으로 도입했다면, 이 글은 derivation을 "module의 원소"로 포착하는 본격적인 작업이다. 출발점은 명제 1의 functoriality — $$\rho:E\to F$$가 algebra homomorphism이면 $$d'\circ\rho$$와 $$\theta\circ d$$가 again derivation이라는 관찰인데, 미분 글에서 $$\varepsilon$$-derivation의 정의를 봤으므로 Leibniz rule를 $$\rho$$로 끌어당기는 것이 자연스럽다는 것을 이해할 수 있다. 다만 명제 2에서 "$$d'$$가 $$E$$-linear인 것은 $$\rho(E)$$에서 identically $$0$$인 것과 동치"라는 결과가 — "derivation의 $$E$$-linearity는 $$E$$ 위에서의 소멸로 포착된다"는 것이 — 이후 $$\Der_E(F,N)$$의 정의의 기반이 된다는 것이 인상적이다.
+
+명제 3의 "derivation $$\iff$$ algebra homomorphism into $$E\oplus M[\delta]$$"라는 characterization이 이 글의 첫 번째 핵심이다. $$x\mapsto(x,f(x))$$가 graded algebra homomorphism인 것이 $$f$$가 derivation인 것과 동치라는 것은, 미분 글의 명제 3에서 $$\varepsilon$$-derivation을 "splitting exact sequence의 section"으로 해석했던 것과 같은 패턴인데 — "derivation을 algebra homomorphism으로 번역한다"는 것이 이 글의 전반부를 관통하는 방법론이다. $$E\oplus M[\delta]$$의 곱셈 $$(x,y)(x',y')=(xx',xy'+\varepsilon(\delta,\deg x)x'y)$$가 $$M$$의 원소가 $$E$$의 원소에 의해 "좌우로 곱해지는" 구조라는 것도 깔끔한데, augmentation map $$\epsilon:E\oplus M[\delta]\to E$$가 이 algebra의 "몫" 역할을 한다는 것이 이후 exact sequence 전개에서 핵심적으로 쓰인다.
+
+명제 5의 $$\T(M)$$, $$\S(M)$$, $$\bigwedge(M)$$에 대한 derivation의 확장이 가장 구체적인 결과다. $$d_0:A\to E$$와 $$d_1:M\to E$$가 $$d_1(ax)=ad_1(x)+d_0(a)x$$를 만족하면 유일한 $$A$$-derivation $$d:B\to E$$가 존재한다는 것은, 텐서대수 글의 universal property를 직접 활용하는 것인데 — $$B$$가 "generator $$M$$ 위에서의 조건을 만족하는 가장 자유로운 algebra"이므로, generator 위의 값을 정하면 전체로 유일하게 확장된다는 원리가 derivation에도 작동하는 것이다. 다만 $$\S(M)$$이면 $$xd_1(y)+d_1(x)y=yd_1(x)+d_1(y)x$$라는 commutativity 조건이, $$\bigwedge(M)$$이면 $$xd_1(x)+d_1(x)x=0$$라는 alternating 조건이 추가로 붙는 것이 — 텐서대수 글에서 quotient를 취할 때 degree $$2$$의 generator로 ideal을 만들었던 것과 정확히 대응된다는 것을 느꼈다.
+
+보조정리 6과 명제 7의 universal property가 이 글의 이론적 정점이다. $$\mathfrak{I}=\ker(m:E\otimes_AE\to E)$$라는 multiplication map의 kernel이 $$\delta_E:x\mapsto x\otimes 1-1\otimes x$$라는 derivation의 image로 생성된다는 것이 — "tensor product 안에서 $$x\otimes 1-1\otimes x$$가 derivation의 본질을 포착한다"는 것이 — 놀랍다. Hom과 텐서곱 글에서 $$M^\ast\otimes N\cong\Hom(M,N)$$라는 isomorphism을 봤는데, 여기서는 $$\Hom_{(E,E)}(\mathfrak{I},M)\cong\Der_A(E,M)$$라는 isomorphism이 — "bimodule homomorphism = derivation"이라는 identification — 같은 수준의 구조적 결과라고 느꼈다. $$\mathfrak{I}$$가 left $$A$$-module로서 $$\delta_E$$의 image에 의해 생성된다는 보조정리 6의 증명에서 $$\sum x_i\otimes y_i=\sum x_i(1\otimes y_i-y_i\otimes 1)$$라는 계산이 깔끔한데, "tensor product의 원소를 derivation의 image로 다시 쓴다"는 것이 이 논증의 핵심이다.
+
+명제 8의 $$\Omega_{E/A}=\mathfrak{I}/\mathfrak{I}^2$$ 정의와 $$\Hom_E(\Omega_{E/A},N)\cong\Der_A(E,N)$$라는 isomorphism이 이 글의 가장 중요한 결론이다. commutative $$A$$-algebra $$E$$에 대해 $$\mathfrak{I}$$가 $$E\otimes_AE$$의 ideal이 되고, $$\mathfrak{I}M=0$$이므로 $$M$$을 $$(E\otimes_AE)/\mathfrak{I}$$-module로 볼 수 있다는 관찰 — "commutativity가 $$\mathfrak{I}$$를 ideal로 만들어준다"는 것 — 이 noncommutative case와의 핵심 차이인데, 미분 글에서 commutative ring을 가정했던 것의 보람이 여기서 드러난다. $$\delta_{E/A}:x\mapsto(x\otimes 1-1\otimes x)+\mathfrak{I}^2$$로 정의된 canonical derivation이 — " $$E\otimes_AE$$에서 $$\mathfrak{I}$$를 지나 $$\mathfrak{I}/\mathfrak{I}^2$$로 가는 것 " — 가 "가장 일반적인 derivation"이라는 것이 아름답다.
+
+예시 10의 $$\Omega_{\S(M)/A}\cong M\otimes_A\S(M)$$라는 isomorphism이 가장 계산 친화적인 결과다. $$\S(M)$$이 commutative이므로 이 isomorphism이 성립하고, free module $$M$$의 basis $$(e_i)$$에 대해 $$de_i$$들이 $$\Omega_{\S(M)/A}$$의 basis를 이루며, 다항식 $$p$$의 $$d$$에 의한 image의 계수가 정확히 편미분 $$\partial p/\partial x_i$$가 된다는 것이 — " $$dx_i$$가 정말로 $$x_i$$의 미분이다 " 라는 확인 — 선형대수학에서 다항식의 미분을 "형식적 연산"으로만 생각했었는데, module 이론의 관점에서는 derivation이라는 대수적 대상으로 엄밀하게 정의될 수 있다는 것이 새롭다. 다만 여기서 "polynomial algebra"가 텐서대수 글에서 정의 없이 사용된 후 또다시 등장하고 있어서, commutative ring 위의 polynomial ring의 formal 정의가 여전히 필요하다고 느꼈다.
+
+명제 11의 functoriality — commutative diagram이 주어지면 $$\Omega_{E/A}\to\Omega_{E'/A'}$$를 유도하는 유일한 map이 존재한다는 것 — 가 $$\Omega$$를 functor로 만드는 핵심인데, Hom과 텐서곱 글에서 $$\Hom$$ functor의 contravariant functoriality를 봤던 것과 같은 수준의 구조적 관찰이다. 명제 12의 base change 성질 — $$E'=E\otimes_AA'$$이면 $$\Omega_{E/A}\otimes_EE'\cong\Omega_{E'/A'}$$ — 은 Various Modules 글에서 $$\otimes$$이 colimit을 보존한다는 관찰로부터 오는데, "base change해도 differential module 구조가 보존된다"는 것이 텐서대수 글에서 tensor algebra의 base change 성질을 봤던 것과 같은 패턴이다.
+
+명제 13과 14의 두 exact sequence가 이 글의 대미다. 첫 번째 $$\Omega_A(E)\otimes_EE'\to\Omega_{E'/A}\to\Omega_{E'/E}\to 0$$은 "base change의 differential = 원래 differential의 quotient"라는 직관을 정확하게 포착하고, 두 번째 $$\mathfrak{I}/\mathfrak{I}^2\to\Omega_{E/A}\otimes_EE'\to\Omega_{E'/A}\to 0$$은 $$u:E\to E'$$가 surjective인 경우 — $$E'\cong E/\mathfrak{I}$$ — 에서 $$\mathfrak{I}/\mathfrak{I}^2$$가 "어떤 정보를 잃는지를 측정하는 module"이라는 해석을 가능하게 한다. 완전열 글에서 exact sequence의 splitting을 다뤘고, Various Modules 글에서 $$\Hom$$ functor의 left exactness를 봤으므로, 이 exact sequence들의 증명 패턴 — " $$\Hom$$을 취해서 left exactness로 reduces한다 " — 이 익숙하게 느껴진다.
+
+전체적으로 이 글은 "derivation을 module의 원소로 포착한다"는 목표 아래, $$E\oplus M[\delta]$$라는 algebra construction으로부터 $$\Omega_{E/A}=\mathfrak{I}/\mathfrak{I}^2$$라는 differential module의 정의까지 체계적으로 전개한다. 가장 인상적인 부분은 $$\Hom_{(E,E)}(\mathfrak{I},M)\cong\Der_A(E,M)$$라는 isomorphism인데, "bimodule homomorphism = derivation"이라는 identification이 — derivation이라는 분석적 느낌의 대상을 순수하게 대수적으로 포착한다는 것이 — 아름답다. 다만 polynomial algebra의 formal 정의가 없어서 예시 10을 완전히 따라가기 어려웠고, $$E\oplus M[\delta]$$의 곱셈 공식이 왜 $$\varepsilon(\delta,\deg x)$$라는 부호를 가지는지에 대한 동기가 명제 4의 증명에서만 간접적으로 드러난다는 것이 아쉬운 점이다.
+
+⚠️ 정의 없이 사용: `polynomial algebra` (검색해도 X)

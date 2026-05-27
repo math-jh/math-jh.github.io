@@ -168,7 +168,7 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-두 개의 합 $$S$$, $$S'$$가 주어졌다 하고, $$A_i$$에서 $$S$$, $$S'$$로의 단사함수들을 각각 $$\iota_i$$, $$\iota_i'$$라 하자. 우선, 함수 $$\iota_i':A_i\rightarrow Y$$에 대하여, $$S$$의 universal property를 적용하면 유일한 $$\phi':S\rightarrow S'$$가 존재하여 $$\iota_i'=\phi'\circ\iota_i$$이도록 할 수 있다. 이와 비슷하게, 함수 $$\iota_i$$들에 $$S'$$의 universal property를 적용하면, 또 다시 유일한 $$\phi:S'\rightarrow S$$가 존재하여 $$\iota_i=\phi\circ\iota_i'$$이도록 할 수 있다. 그럼
+두 개의 합 $$S$$, $$S'$$가 주어졌다 하고, $$A_i$$에서 $$S$$, $$S'$$로의 단사함수들을 각각 $$\iota_i$$, $$\iota_i'$$라 하자. 우선, 함수 $$\iota_i':A_i\rightarrow S'$$에 대하여, $$S$$의 universal property를 적용하면 유일한 $$\phi':S\rightarrow S'$$가 존재하여 $$\iota_i'=\phi'\circ\iota_i$$이도록 할 수 있다. 이와 비슷하게, 함수 $$\iota_i$$들에 $$S'$$의 universal property를 적용하면, 또 다시 유일한 $$\phi:S'\rightarrow S$$가 존재하여 $$\iota_i=\phi\circ\iota_i'$$이도록 할 수 있다. 그럼
 
 $$\iota_i'=\phi'\circ\iota_i=\phi'\circ(\phi\circ\iota_i')=(\phi'\circ\phi)\circ\iota_i'$$
 
