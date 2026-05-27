@@ -1941,3 +1941,12 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `항등함수` | looks like emphasis (no <sub> partner) |
 
+## 선택공리
+- post: `_posts/Math/Set_Theory/ko/2021-08-23-Axiom_of_Choice.md`
+- permalink: `/ko/math/set_theory/axiom_of_choice`
+- scanned: 2026-05-27T15:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `The Axiom of Choice.` | multi-word English emphasis — possibly a definition |
+
