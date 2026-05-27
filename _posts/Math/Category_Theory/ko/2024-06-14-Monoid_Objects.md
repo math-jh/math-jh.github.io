@@ -1,6 +1,6 @@
 ---
-
 title: "모노이드 대상"
+description: "모노이드 대상은 모노이드 범주에서 곱셈과 단위 사상으로 정의되는 대상으로, 일반적인 모노이드부터 위상 모노이드, 결합 대수, 미분 등급 대수까지 다양한 대수적 구조를 범주론적으로 통합한다."
 excerpt: "Monoidal category 내부의 monoid object와 그 예시들"
 
 categories: [Math / Category Theory]

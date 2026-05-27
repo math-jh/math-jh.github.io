@@ -1,6 +1,6 @@
 ---
-
 title: "유한군의 표현론"
+description: "유한군이 벡터공간 위에서 작용하는 방식을 통해 정의되는 표현의 개념을 소개하고, 불변부분공간과 기약 표현 등 표현론의 기본 개념을 다룬다."
 excerpt: "유한군의 representation 정의와 기약분해"
 
 categories: [Math / Representation Theory]

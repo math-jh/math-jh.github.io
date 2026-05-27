@@ -1,6 +1,6 @@
 ---
-
 title: "선형대수학의 기본정리"
+description: "유클리드 공간의 선형사상과 행렬은 단순히 같은 차원을 갖는 것뿐만 아니라, 자연스러운 동형사상으로 실제 같은 공간을 이룸을 보인다."
 excerpt: "선형대수학의 기본정리"
 
 categories: [Math / Linear Algebra]

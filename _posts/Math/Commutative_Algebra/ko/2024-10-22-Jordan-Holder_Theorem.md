@@ -1,6 +1,6 @@
 ---
-
 title: "조르단-횔더 정리"
+description: "유한 composition series를 갖는 모듈은 artinian이면서 noetherian임을 보이는 조르단-횔더 정리를 모듈 이론의 관점에서 다룬다."
 excerpt: "Composition series의 유일성과 length의 well-definedness"
 
 categories: [Math / Commutative Algebra]

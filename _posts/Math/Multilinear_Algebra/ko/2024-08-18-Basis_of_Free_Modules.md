@@ -1,6 +1,6 @@
 ---
-
 title: "기저"
+description: "벡터 공간의 일차독립과 기저 개념을 가군으로 확장하여 정의하고, 임의의 가군이 자유 가군의 몫과 동형임을 보인다."
 excerpt: "Free module의 정의와 기저, universal property"
 
 categories: [Math / Multilinear Algebra]

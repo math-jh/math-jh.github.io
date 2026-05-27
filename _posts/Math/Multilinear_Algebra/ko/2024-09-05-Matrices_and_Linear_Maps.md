@@ -1,6 +1,6 @@
 ---
-
 title: "행렬과 선형사상"
+description: "행렬을 선형사상의 좌표표현으로 정의하고, 행렬의 곱이 선형사상의 합성에 대응됨을 보인다. 자유 가군 위의 선형사상과 그 행렬표현 사이의 관계를 체계적으로 다룬다."
 excerpt: "Free module 사이의 linear map의 행렬표현과 좌표계"
 
 categories: [Math / Multilinear Algebra]

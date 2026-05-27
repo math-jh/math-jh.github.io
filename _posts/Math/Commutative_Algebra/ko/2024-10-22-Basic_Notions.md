@@ -1,6 +1,6 @@
 ---
-
 title: "기본 개념들"
+description: "가환환과 그 위의 모듈을 다루는 기본 이론을 소개한다. 소멸자와 아이디얼 몫의 정의, 관련 완전열의 구조를 살펴보고, 모듈의 유한성 조건을 함께 다룬다."
 excerpt: "가환대수에서 사용하는 ring, algebra의 기본 약속과 정의"
 
 categories: [Math / Commutative Algebra]

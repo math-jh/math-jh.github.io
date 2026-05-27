@@ -1,6 +1,6 @@
 ---
-
 title: "Diagram chasing"
+description: "호몰로지 대수의 핵심 보조정리인 5항 보조정리와 뱀 보조정리를 diagram chasing 기법으로 증명하고, Freyd-Mitchell embedding theorem을 통한 일반화를 다룬다."
 excerpt: "Five lemma, snake lemma"
 
 categories: [Math / Homological Algebra]

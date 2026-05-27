@@ -1,5 +1,5 @@
----
-title: "차원"
+---title: "차원"
+description: "대수기하학에서 차원을 정의하는 여러 동등한 방법을 살펴본다. 위상공간으로서의 정의부터 affine variety의 coordinate ring의 Krull dimension까지 다룬다."
 excerpt: "Dimension of algebraic varieties"
 
 categories: [Math / Algebraic Varieties]

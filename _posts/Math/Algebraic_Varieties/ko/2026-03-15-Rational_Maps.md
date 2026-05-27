@@ -1,5 +1,5 @@
----
-title: "유리사상"
+---title: "유리사상"
+description: "유리사상은 정칙사상을 일반화하여 대수다양체 위에서 대부분의 점에 정의되는 함수를 다루며, 유리함수의 동치류 정의와 함수체의 구조를 살펴본다."
 excerpt: "Rational maps and birational equivalence"
 
 categories: [Math / Algebraic Varieties]

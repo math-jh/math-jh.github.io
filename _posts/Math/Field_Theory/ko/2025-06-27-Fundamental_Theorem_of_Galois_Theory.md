@@ -1,6 +1,6 @@
 ---
-
 title: "갈루아 이론의 기본정리"
+description: "갈루아 이론의 기본정리를 증명하며, 갈루아 확장의 부분확장과 갈루아 군의 닫힌 부분군 사이의 대응 관계를 다룬다."
 excerpt: "Subgroup과 intermediate field 사이의 Galois correspondence"
 
 categories: [Math / Field Theory]

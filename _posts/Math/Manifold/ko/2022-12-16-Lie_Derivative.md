@@ -1,6 +1,6 @@
 ---
-
 title: "리 미분"
+description: "매니폴드 위의 함수와 벡터장, 미분형식에 대한 리 미분을 정의하고, 곡선을 통한 방향미분 표현과의 관계를 통해 기하학적 의미를 설명한다."
 excerpt: "리 미분과 리 브라켓"
 
 categories: [Math / Manifold]

@@ -1,6 +1,6 @@
 ---
-
 title: "행렬식의 존재성과 유일성"
+description: "대칭군의 치환을 짝치환과 홀치환으로 분류하고, alternating multilinear map의 성질을 이용해 행렬식이 유일하게 존재함을 증명한다."
 excerpt: "행렬식의 존재성, 유일성 증명, 계산방법"
 
 categories: [Math / Linear Algebra]

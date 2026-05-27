@@ -1,6 +1,6 @@
 ---
-
 title: "평탄성과 국소화"
+description: "뇌터 국소환 위의 유한 생성 가군이 평탄한지 판단하는 기준을 다루며, 극대 ideal에서의 평탄성만 확인하면 충분함을 보여준다."
 excerpt: "Maximal ideal에서의 점검을 통한 flatness의 local criterion"
 
 categories: [Math / Commutative Algebra]

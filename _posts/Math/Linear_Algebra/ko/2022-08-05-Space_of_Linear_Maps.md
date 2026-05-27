@@ -1,6 +1,6 @@
 ---
-
 title: "선형사상들의 공간"
+description: "기저 위에서의 함수값으로 선형사상이 유일하게 결정됨을 보이고, 유한차원 벡터공간에서 선형사상의 행렬 표현 구조를 다룬다."
 excerpt: "Hom과 쌍대공간"
 
 categories: [Math / Linear Algebra]

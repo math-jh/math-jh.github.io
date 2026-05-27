@@ -1,6 +1,6 @@
 ---
-
 title: "피복공간"
+description: "단순연결 공간의 정의와 피복공간·피복사상의 개념을 정의하고, 균일하게 덮임의 성질을 통해 기본군 계산의 기초 방법을 소개한다."
 excerpt: "Simply connected의 동치조건과 covering space, Seifert-van Kampen 정리"
 
 categories: [Math / Algebraic Topology]

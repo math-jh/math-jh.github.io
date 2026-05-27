@@ -1,6 +1,6 @@
 ---
-
 title: "미분"
+description: "르니츠 법칙을 만족하는 유도 사상의 정의부터 시작하여 켈러 미분가군의 구조와 representable 성질까지 대수적 미분 이론의 핵심을 다룬다."
 excerpt: "Kähler differential module의 대수적 정의와 universal property"
 
 categories: [Math / Commutative Algebra]

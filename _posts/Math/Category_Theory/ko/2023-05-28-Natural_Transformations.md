@@ -1,6 +1,6 @@
 ---
-
 title: "자연변환"
+description: "함자 사이의 사상인 자연변환을 정의하고, 이를 바탕으로 함자 카테고리와 카테고리의 동등 개념을 소개한다."
 excerpt: "Natural transformation과 category들 사이의 equivalence"
 
 categories: [Math / Category Theory]

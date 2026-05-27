@@ -1,5 +1,5 @@
----
-title: "층 코호몰로지"
+---title: "층 코호몰로지"
+description: "선다발의 전역 단면을 넘어, 층의 정보를 더 정밀하게 포착하기 위해 층 코호몰로지를 유도 함수로 정의하고 성질을 탐구한다."
 excerpt: "Sheaf cohomology and its applications"
 
 categories: [Math / Algebraic Varieties]

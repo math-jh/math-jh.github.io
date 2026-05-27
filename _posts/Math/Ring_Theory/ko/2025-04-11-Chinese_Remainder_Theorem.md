@@ -1,6 +1,6 @@
 ---
-
 title: "중국인의 나머지정리"
+description: "환의 아이들 곱셈 구조와 쌍별 서로소 아이들 조건을 정리한 뒤, 이를 바탕으로 중국인의 나머지정리를 증명한다."
 excerpt: "Ideal의 곱과 comaximal ideal에 대한 중국인의 나머지정리"
 
 categories: [Math / Ring Theory]

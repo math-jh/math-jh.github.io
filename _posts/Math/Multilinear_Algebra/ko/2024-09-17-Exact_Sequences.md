@@ -1,6 +1,6 @@
 ---
-
 title: "완전열"
+description: "모 위의 부분모듈 교집합의 성질을 바탕으로 exact sequence와 splitting exact sequence의 개념을 정의하고 그 성질을 살펴본다."
 excerpt: "Module의 exact sequence와 short/long exact sequence"
 
 categories: [Math / Multilinear Algebra]

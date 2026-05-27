@@ -1,6 +1,6 @@
 ---
-
 title: "스킴의 대수구조"
+description: "스킴의 대수적 구조를 다루며, 축소스킴과 정역스킴의 정의 및 성질을 살펴보고 reducedness가 stalk-local property임을 증명한다. 정역스킴은 불가분 축소스킴과 동치인 것을 보인다."
 excerpt: "Reduced scheme과 integral scheme의 정의와 성질"
 
 categories: [Math / Scheme Theory]

@@ -1,6 +1,6 @@
 ---
-
 title: "음함수 정리"
+description: "미분가능한 다양체로 확장한 음함수 정리를 다루며, immersed submanifold가 locally embedded임을 보이고 submersion level set theorem을 유도한다."
 excerpt: "미분다양체에서의 음함수 정리와 그 결과들"
 
 categories: [Math / Manifold]

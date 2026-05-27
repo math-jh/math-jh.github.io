@@ -1,6 +1,6 @@
 ---
-
 title: "행렬식"
+description: "다중선형사상과 교대다중선형사상의 성질을 통해 행렬식을 정의하고, 이를 바탕으로 행렬의 역행렬 존재 여부와 고유값·고유벡터의 의미를 탐구한다."
 excerpt: "행렬식의 정의와 기하학적 의미"
 
 categories: [Math / Linear Algebra]

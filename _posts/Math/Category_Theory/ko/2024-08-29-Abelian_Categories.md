@@ -1,6 +1,6 @@
 ---
-
 title: "아벨 카테고리"
+description: "덧셈 카테고리와 아벨 카테고리의 정의를 다루며, additive functor와 zero map, kernel과 cokernel의 개념을 통해 chain complex와 exact sequence의 기초를 정의한다."
 excerpt: "아벨 카테고리"
 
 categories: [Math / Category Theory]

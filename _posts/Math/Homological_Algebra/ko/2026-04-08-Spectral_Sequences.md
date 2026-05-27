@@ -1,5 +1,5 @@
----
-title: "스펙트럼 열"
+---title: "스펙트럼 열"
+description: "filtration이 주어진 복합체의 코호몰로지를 page별로 근사하는 스펙트럼 열의 공식적 정의를 소개하고, 감소 여과와 여과 복합체의 개념을 다룬다."
 excerpt: "Filtered complex의 cohomology를 page 단위로 근사하는 spectral sequence"
 
 categories: [Math / Homological Algebra]

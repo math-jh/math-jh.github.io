@@ -1,6 +1,6 @@
 ---
-
 title: "국소화"
+description: "환의 국소화 과정과 유일한 극대 아이디어를 갖는 국소환의 성질을 다루며, 가군의 국소화와 곱셈에 대하여 닫힌 부분집합의 개념까지 확장한다."
 excerpt: "환과 가군의 localization과 local ring 구성"
 
 categories: [Math / Commutative Algebra]

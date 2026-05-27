@@ -1,6 +1,6 @@
 ---
-
 title: "값매김환"
+description: "분리사상과 proper 사상을 정의하고, 이들이 위상수학의 Hausdorff 조건과 compact 조건을 대수기하학적으로 어떻게 일반화하는지 살펴본다. 이산값매김환의 구조도 함께 다룬다."
 excerpt: "Valuative criteria for separated, properness"
 
 categories: [Math / Scheme Theory]

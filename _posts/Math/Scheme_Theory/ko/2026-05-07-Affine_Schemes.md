@@ -1,6 +1,6 @@
 ---
-
 title: "아핀스킴"
+description: "환의 스펙트럼 위에 구조층을 정의하여 아핀스킴을 구성하고, locally ringed space와 그 사상의 정의를 다룬다."
 excerpt: "Ring의 spectrum 위 structure sheaf로 정의되는 affine scheme"
 
 categories: [Math / Scheme Theory]

@@ -1,6 +1,6 @@
 ---
-
 title: "정칙국소환"
+description: "정칙국소환의 정의와 기본 성질을 다루며, 정칙국소환이 정역임을 차원에 대한 귀납법으로 증명한다. 정칙열의 개념도 함께 소개한다."
 excerpt: "Regular system of parameters와 regular local ring의 특성화"
 
 categories: [Math / Commutative Algebra]

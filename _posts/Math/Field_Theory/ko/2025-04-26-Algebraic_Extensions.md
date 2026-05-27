@@ -1,6 +1,6 @@
 ---
-
 title: "대수적 확장"
+description: "체의 확장과 field extension의 정의, 그리고 field extension을 associative 대수로 해석하는 관점을 다룬다."
 excerpt: "체의 algebraic extension의 정의와 degree"
 
 categories: [Math / Field Theory]

@@ -1,6 +1,6 @@
 ---
-
 title: "평탄사상"
+description: "가환대수학에서 평탄 가군의 정의를 시작으로, 스킴 사이의 평탄 사상의 개념과 기하학적 의미, 그리고 판정법과 예시를 다룬다. 평탄성은 사상의 fiber가 기저 위에서 일정한 대수적·기하학적 성질을 유지하도록 보장하는 핵심적인 성질이다."
 excerpt: "Flat morphisms in algebraic geometry"
 
 categories: [Math / Scheme Theory]

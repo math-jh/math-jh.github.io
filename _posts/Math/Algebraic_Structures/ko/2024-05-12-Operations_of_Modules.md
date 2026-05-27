@@ -1,6 +1,6 @@
 ---
-
 title: "가군의 직접곱과 직합, 텐서곱"
+description: "R-가군의 직접곱과 직합을 범주론적 관점에서 정의하고, product·coproduct로서의 성질을 살펴본다. 직접곱은 kernel과 cokernel을, 직합은 kernel을 각각 보존하며, R-Mod는 아벨 범주를 이룬다."
 excerpt: "Module category의 product, coproduct, tensor product"
 
 categories: [Math / Algebraic Structures]

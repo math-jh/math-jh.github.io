@@ -1,5 +1,5 @@
----
-title: "곡선에서의 리만-로흐 정리"
+---title: "곡선에서의 리만-로흐 정리"
+description: "곡선 위의 리만-로흐 정리를 다루며, complete linear system과 Riemann-Roch dimension의 의미를 살펴본 뒤 canonical divisor와의 관계를 통해 정리의 식을 유도한다."
 excerpt: "The Riemann–Roch theorem for curves"
 
 categories: [Math / Algebraic Varieties]

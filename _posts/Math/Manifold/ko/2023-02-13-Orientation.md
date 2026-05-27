@@ -1,6 +1,6 @@
 ---
-
 title: "향"
+description: "벡터 공간과 다양체에서의 방향을 다룹니다. 행렬식의 부호로 기저의 순서를 판별하고, 오리엔터블 다양체의 성질을 양의 야코비안을 갖는 좌표계와 소멸하지 않는 최고차 미분형으로 나타냅니다."
 excerpt: "Manifold 위의 orientation"
 
 categories: [Math / Manifold]

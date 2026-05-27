@@ -1,6 +1,6 @@
 ---
-
 title: "Ext와 Tor"
+description: "Hom 함자의 right derived functor인 Ext와 텐서곱의 left derived functor인 Tor를 정의하고, 사영·단사 분해를 통한 계산 방법과 긴 완전열을 살펴본다."
 excerpt: "Hom과 tensor의 derived functor인 Ext, Tor의 정의와 성질"
 
 categories: [Math / Homological Algebra]

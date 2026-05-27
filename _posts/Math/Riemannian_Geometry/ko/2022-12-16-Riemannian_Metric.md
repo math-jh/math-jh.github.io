@@ -1,6 +1,6 @@
 ---
-
 title: "리만 계량"
+description: "매끄러운 다양체 위에서 각 접공간에 내적을 부여하는 양의 정치 단면을 리만 계량이라 하며, 이를 통해 다양체에 기하학적 구조를 줄 수 있다. 준-리만 계량으로의 일반화와 국소 좌표계에서의 표현도 다룬다."
 excerpt: "Tangent bundle 위의 양의 정부호 symmetric 2-텐서로서의 Riemannian metric"
 
 categories: [Math / Riemannian Geometry]

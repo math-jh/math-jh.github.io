@@ -1,6 +1,6 @@
 ---
-
 title: "이항관계"
+description: "순서쌍으로 이루어진 집합으로서 이항관계를 정의하고, 이항관계를 구성하는 두 집합의 존재 조건과 projection, source, target 개념을 다룬다."
 excerpt: "이항관계의 정의"
 
 categories: [Math / Set Theory]

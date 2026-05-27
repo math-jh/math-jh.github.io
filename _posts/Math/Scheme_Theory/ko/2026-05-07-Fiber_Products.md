@@ -1,6 +1,6 @@
 ---
-
 title: "올곱"
+description: "스킴 사이의 올곱 정의와 보편 성질을 다루며, affine scheme들의 올곱 존재성을 증명한다."
 excerpt: "Category of S-schemes에서의 fiber product 정의와 존재성"
 
 categories: [Math / Scheme Theory]

@@ -1,6 +1,6 @@
 ---
-
 title: "자유곱"
+description: "자유곱의 존재성과 universal property를 증명하고, 자유군의 정의와 adjoint functor를 활용하여 자유곱의 구성을 설명한다."
 excerpt: "Free product와 universal property"
 
 categories: [Math / Algebraic Structures]

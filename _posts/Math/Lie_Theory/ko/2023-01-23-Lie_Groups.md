@@ -1,6 +1,6 @@
 ---
-
 title: "리 군"
+description: "리 군은 그룹 연산인 곱셈과 역원이 모두 매끄러운 매니폴드 위의 그룹으로, 예시로 벡터 공간과 토러스, 일반선형군 등이 있다."
 excerpt: "Lie group의 정의와 성질"
 
 categories: [Math / Lie Theory]

@@ -1,6 +1,6 @@
 ---
-
 title: "국소화의 성질들"
+description: "환의 국소화와 가군의 국소화 사이의 밀접한 관계를 증명하고, 국소화와 Hom 및 텐서곱의 관계를 살펴보며, 국소화가 flat 가군임을 보인다."
 excerpt: "Localization과 Hom, tensor의 호환성 및 local 성질"
 
 categories: [Math / Commutative Algebra]

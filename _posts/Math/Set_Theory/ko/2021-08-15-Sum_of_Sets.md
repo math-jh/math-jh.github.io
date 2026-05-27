@@ -1,6 +1,6 @@
 ---
-
 title: "집합의 합"
+description: "집합의 덮개와 분할의 개념을 정의하고, 덮개의 섬세한 관계와 전사함수에 의한 이미지 및 분할의 존재 조건을 다룬다."
 excerpt: "집합들 사이의 합 (분리합집합)"
 
 categories: [Math / Set Theory]

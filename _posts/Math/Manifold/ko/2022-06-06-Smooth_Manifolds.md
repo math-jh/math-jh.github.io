@@ -1,6 +1,6 @@
 ---
-
 title: "미분다양체"
+description: "위상다양체 위에 좌표 차트들의 호환성을 통해 미분 구조를 정의하고, 이를 바탕으로 매끄러운 다양체의 개념을 다룬다."
 excerpt: "Smooth manifold의 정의"
 
 categories: [Math / Manifold]

@@ -1,6 +1,6 @@
 ---
-
 title: "동형사상"
+description: "벡터공간 사이의 동형사상, 즉 구조를 보존하는 전단사 선형사상을 정의하고 그 역함수 역시 선형임을 보이며, 동형 관계가 동치관계임을 증명한다."
 excerpt: "서로 동등한 벡터공간들"
 
 categories: [Math / Linear Algebra]

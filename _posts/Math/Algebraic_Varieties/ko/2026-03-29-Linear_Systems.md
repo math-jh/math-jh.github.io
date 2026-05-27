@@ -1,5 +1,5 @@
----
-title: "선형계"
+---title: "선형계"
+description: "Weil divisor와 Cartier divisor의 effective 조건을 정의하고, divisor가 정의하는 선다발의 nonzero global section을 통해 linearly equivalent한 effective divisor를 구하는 방법을 다룬다."
 excerpt: "Complete linear systems, base loci, and ampleness"
 
 categories: [Math / Algebraic Varieties]

@@ -1,6 +1,6 @@
 ---
-
 title: "유도함자"
+description: "호몰로지 대수에서 유도함자의 기본 개념을 다룬다. 호몰로지·코호몰로지 δ-함자의 정의와 긴 완전열, 자연성 조건을 설명하고, 함자 사이의 사상의 성질을 살펴본다."
 excerpt: "δ-functor를 통한 right/left derived functor의 정의"
 
 categories: [Math / Homological Algebra]

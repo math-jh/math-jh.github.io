@@ -1,6 +1,6 @@
 ---
-
 title: "부풀림 대수"
+description: "환의 아이들로부터 associated graded ring과 associated graded module을 구성하고, 여과와 안정적 여과의 개념을 통해 유한 생성 모듈의 구조를 분석한다."
 excerpt: "Ideal로부터 만드는 Rees algebra와 associated graded ring"
 
 categories: [Math / Commutative Algebra]

@@ -1,6 +1,6 @@
 ---
-
 title: "완전교차"
+description: "전체 단면들의 가족으로 정의되는 vanishing scheme과 locally principal embedding, effective Cartier divisor의 개념과 성질을 다룬다."
 excerpt: "Vanishing scheme의 codimension과 complete intersection"
 
 categories: [Math / Scheme Theory]

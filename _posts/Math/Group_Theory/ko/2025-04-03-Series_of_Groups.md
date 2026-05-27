@@ -1,6 +1,6 @@
 ---
-
 title: "군의 열"
+description: "군의 교환자 부분군과 그 성질을 살펴보고, 정규 부분군 조건에서의 교환자 계산 보조정리를 정리한다. 이 결과를 바탕으로 군의 열을 구성하는 기본 명제를 다룬다."
 excerpt: "Commutator와 normal/composition/derived series, solvability"
 
 categories: [Math / Group Theory]

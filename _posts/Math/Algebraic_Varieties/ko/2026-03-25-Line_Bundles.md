@@ -1,5 +1,5 @@
----
-title: "선다발과 벡터다발"
+---title: "선다발과 벡터다발"
+description: "다양체 위의 선다발은 각 점에 1차원 벡터공간을 대응시켜, 점근적 제약 없이 임의의 인자를 독립적으로 다룰 수 있게 한다. 이 글에서는 선다발의 정의를 시작으로 벡터다발까지 확장한다."
 excerpt: "Line bundles, invertible sheaves, and the Picard group"
 
 categories: [Math / Algebraic Varieties]

@@ -1,6 +1,6 @@
 ---
-
 title: "차원"
+description: "가환대수학에서 크룰 차원의 정의를 소개하고, 아이디얼과 여차원의 개념을 정의하며, 뇌터 링에서의 차원 계산을 다룬다."
 excerpt: "Prime chain으로 정의되는 Krull dimension과 기본 성질"
 
 categories: [Math / Commutative Algebra]

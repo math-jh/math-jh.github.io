@@ -1,6 +1,6 @@
 ---
-
 title: "군 준동형사상"
+description: "군 준동형사상과 isomorphism의 정의를 다루며, magma homomorphism이 isomorphism이 되는 것은 전단사인 것과 동치임을 보인다. 준동형사상의 equalizer가 subgroup이 되는 성질도 함께 살펴본다."
 excerpt: "군 준동형사상의 정의와 성질들, 군 준동형사상의 핵과 상"
 
 categories: [Math / Algebraic Structures]

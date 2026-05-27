@@ -1,6 +1,6 @@
 ---
-
 title: "매개계"
+description: "뇌터 국소환의 크룰 차원을 매개계의 원소 수로 정의하고, 매개계의 존재와 성질을 다룬다."
 excerpt: "Local ring의 system of parameters와 차원과의 관계"
 
 categories: [Math / Commutative Algebra]

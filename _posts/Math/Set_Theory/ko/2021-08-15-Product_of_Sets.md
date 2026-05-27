@@ -1,6 +1,6 @@
 ---
-
 title: "집합의 곱"
+description: "집합의 곱을 함수의 관점에서 정의하고, 순서쌍의 일반화로서의 성분함수와 곱의 구조를 다룬다. 유도 사상의 단사성과 전사성 조건도 함께 살펴본다."
 excerpt: "집합들 사이의 곱"
 
 categories: [Math / Set Theory]

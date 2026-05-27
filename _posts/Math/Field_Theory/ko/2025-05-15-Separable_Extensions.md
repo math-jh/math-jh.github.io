@@ -1,6 +1,6 @@
 ---
-
 title: "분리가능확대체"
+description: "에탈대수의 성질을 바탕으로 분리가능확대체의 개념을 정의하고, 대수적으로 닫힌 체에서의 보조정리들을 통해 에탈대수의 미분적 특성화를 다룬다."
 excerpt: "Étale algebra를 통한 separable extension의 특성화"
 
 categories: [Math / Field Theory]

@@ -1,6 +1,6 @@
 ---
-
 title: "최소제곱법"
+description: "유클리드 공간과 내적공간에서 최소제곱법을 정규방정식으로 유도하고, 평면 위 점들의 직선 적합 예시와 유사역행렬까지 다룬다."
 excerpt: "정사영과 최소제곱법"
 
 categories: [Math / Linear Algebra]

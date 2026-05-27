@@ -1,5 +1,5 @@
----
-title: "그라스만 다양체"
+---title: "그라스만 다양체"
+description: "그라스만 다양체는 벡터공간의 차원 부분공간들의 공간으로, 사영 공간을 일반화한 개념이다. 아핀 덮개를 이용해 variety 구조를 정의하고 주요 성질을 살펴본다."
 excerpt: "Grassmannians as parameter spaces of linear subspaces"
 
 categories: [Math / Algebraic Varieties]

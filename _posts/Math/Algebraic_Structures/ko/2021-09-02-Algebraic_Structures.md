@@ -1,6 +1,6 @@
 ---
-
 title: "대수적 구조"
+description: "집합 위에 이항연산을 추가하여 얻는 대수적 구조인 마그마를 정의하고, 결합법칙과 교환법칙의 성질을 탐구한다."
 excerpt: "집합 위에 정의된 이항연산"
 
 categories: [Math / Algebraic Structures]

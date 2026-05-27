@@ -1,6 +1,6 @@
 ---
-
 title: "대칭텐서"
+description: "군환 위의 가군과 군의 작용으로 대칭텐서와 대칭멱을 정의하고, 상대적 추적의 성질과 텐서곱이 군의 부분군 작용에 불변인 것을 다룬다."
 excerpt: "Symmetric group의 작용과 symmetric tensor, symmetric power"
 
 categories: [Math / Multilinear Algebra]

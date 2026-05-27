@@ -1,6 +1,6 @@
 ---
-
 title: "정역"
+description: "유클리드 정역의 norm 정의와 나눗셈 알고리즘을 다루며, 정수 나눗셈과 다항식 나눗셈을 예시로 들어 모든 ideal이 주 아이디얼임을 보인다."
 excerpt: "Euclidean domain, PID, UFD의 정의와 포함관계"
 
 categories: [Math / Ring Theory]

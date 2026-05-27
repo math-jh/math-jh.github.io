@@ -1,6 +1,6 @@
 ---
-
 title: "뇌터 정규화"
+description: "뇌터 정규화 보조정리를 다루며, 가환대수에서 유한 생성 대수의 다항식환 위 구조를 보장하는 핵심 정리와 그 증명을 살펴본다."
 excerpt: "유한생성 algebra의 Noether normalization 정리와 응용"
 
 categories: [Math / Commutative Algebra]

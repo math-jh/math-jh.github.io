@@ -1,6 +1,6 @@
 ---
-
 title: "제곱근확대체"
+description: "갈루아 이론의 기본 아이디어를 제곱근확대체의 예시를 통해 소개한다. 성질이 좋은 수체의 확대에서 다항식의 근들을 바꾸는 작용으로 갈루아 군을 정의하는 과정을 다룬다."
 excerpt: "Radical extension의 정의와 Galois theory에서의 역할"
 
 categories: [Math / Field Theory]

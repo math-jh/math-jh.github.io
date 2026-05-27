@@ -1,6 +1,6 @@
 ---
-
 title: "레비-치비타 접속"
+description: "리만 계량과 호환되는 metric connection을 정의하고, Levi-Civita 접속의 존재와 유일성을 증명한 뒤 병렬 이송까지 다룬다."
 excerpt: "리만 다양체 위의 metric-compatible torsion-free connection"
 
 categories: [Math / Riemannian Geometry]

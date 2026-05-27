@@ -1,6 +1,6 @@
 ---
-
 title: "선택공리"
+description: "선택공리의 정의와 동치 명제를 소개하고, 정렬 정리와 타르스키-부르바키 보조정리를 증명하며 서수 사이의 순서관계를 정의한다."
 excerpt: "선택공리와 그 동치들"
 
 categories: [Math / Set Theory]

@@ -1,6 +1,34 @@
 ---
-
 title: "순서집합의 원소들"
+description: "순서집합의 Hasse diagram 표기법과 극소원소·극대원소의 정의를介绍하고, 최소원소·최대원소의 개념 및 유일성 성질을 증명한다.
+
+Hmm, that has a stray English word. Let me fix:
+
+순서집합을 나타내는 Hasse diagram의 정의와 극소원소·극대원소의 개념을介绍하며, 최소원소·최대원소의 유일성 성질을 증명한다.
+
+Still has \"介绍\" which is Chinese. Let me rewrite cleanly:
+
+순서집합의 Hasse diagram 표기와 극소원소·극대원소의 정의를 다루며, 최소원소·최대원소의 개념과 유일성을 증명으로 보인다.
+
+Let me count: ~58 chars. Need more:
+
+순서집합의 원소를 나타내는 Hasse diagram의 정의부터 극소원소·극대원소, 최소원소·최대원소의 개념과 유일성 성질까지 다룬다.
+
+Count: ~65. Still short. Let me try:
+
+순서집합에서 Hasse diagram을 이용한 원소의 관계 표현, 극소원소·극대원소의 정의, 그리고 최소원소·최대원소의 개념과 유일성 증명을 다룬다.
+
+~72. Close. One more attempt:
+
+순서집합의 Hasse diagram을 이용한 원소 관계 표현과 극소원소·극대원소의 정의를 살피고, 최소원소·최대원소의 개념 정의 및 유일성 명제를 증명한다.
+
+Count: ~78. Almost there.
+
+순서집합의 Hasse diagram을 이용한 원소 관계 표현, 극소원소·극대원소의 정의, 최소원소·최대원소의 개념과 유일성 명제의 증명을 다룬다.
+
+~80 characters. Good.
+
+순서집합의 Hasse diagram을 이용한 원소 관계 표현, 극소원소·극대원소의 정의, 최소원소·최대원소의 개념과 유일성 명제의 증명을 다룬다."
 excerpt: "순서집합의 최대, 최소, 극대, 극소 원소들"
 
 categories: [Math / Set Theory]

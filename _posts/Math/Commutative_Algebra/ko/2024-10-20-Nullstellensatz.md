@@ -1,6 +1,6 @@
 ---
-
 title: "영점정리"
+description: "제이콥슨 환과 근기아이디얼의 정의를 정리하고, 라비노비치 보조정리를 이용해 영점정리를 증명하는 과정을 다룬다."
 excerpt: "Jacobson ring과 Hilbert Nullstellensatz의 증명"
 
 categories: [Math / Commutative Algebra]

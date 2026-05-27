@@ -1,6 +1,6 @@
 ---
-
 title: "완비화"
+description: "링의 완비화는 주어진 아이들 여과를 통해 링을 완비환으로 만드는 구조로, 아이딕 완비화와 국소완비환의 정의를 포함하며 범주론적 극한으로서의 보편 성질을 갖는다."
 excerpt: "Filtration으로 정의되는 ring과 module의 completion"
 
 categories: [Math / Commutative Algebra]

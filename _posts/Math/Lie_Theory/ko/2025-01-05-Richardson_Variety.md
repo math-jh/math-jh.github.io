@@ -1,5 +1,5 @@
----
-title: "Richardson Variety"
+---title: "Richardson Variety"
+description: "Schubert variety와 opposite Schubert variety의 교집합으로 정의되는 Richardson variety의 기본 정의와 성질을 다루며, smooth affine variety가 되는 이유와 Grassmannian에서의 구체적인 모습을 살펴본다."
 excerpt: "Schubert variety와 opposite Schubert variety의 교집합으로 정의되는 Richardson variety의 정의와 기본적인 기하학적 성질"
 
 categories: [Math / Lie Theory]

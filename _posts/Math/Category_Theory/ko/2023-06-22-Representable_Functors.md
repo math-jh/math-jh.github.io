@@ -1,6 +1,6 @@
 ---
-
 title: "표현가능한 함자"
+description: "표현 가능한 함자는 Hom 함자와 자연 동형인 함자로, 요네다 보조정리는 임의의 함자에 대한 자연 변환과 함자의 원소 사이의 일대일 대응을 보여준다."
 excerpt: "Initial object, terminal object, representable functor"
 
 categories: [Math / Category Theory]

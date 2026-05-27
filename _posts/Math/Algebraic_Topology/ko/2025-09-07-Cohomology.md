@@ -1,6 +1,6 @@
 ---
-
 title: "코호몰로지"
+description: "호몰로지의 dual 개념인 코호몰로지를 정의하고, 자연스러운 곱셈 구조를 갖는 코호몰로지 환을 통해 같은 호몰로지를 가진 공간도 위상적으로 다를 수 있음을 보인다."
 excerpt: "코호몰로지의 정의와 universal coefficient theorem"
 
 categories: [Math / Algebraic Topology]

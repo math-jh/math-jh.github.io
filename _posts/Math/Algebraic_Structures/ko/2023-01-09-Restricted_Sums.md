@@ -1,6 +1,6 @@
 ---
-
 title: "제한합"
+description: "군의 가족에 대한 제한합과 약직접곱의 정의를 다루며, 아벨 군이 제한합을 통해 coproduct를 갖는 범주임을 보인다."
 excerpt: "Group들의 restricted sum"
 
 categories: [Math / Algebraic Structures]

@@ -1,6 +1,6 @@
 ---
-
 title: "고유공간분해"
+description: "벡터공간을 고유공간들의 직합으로 분해하는 조건을 정의와 명제를 통해 다룬다. 부분공간들의 직합이 성립하기 위한 필요충분조건과 basis의 역할을 설명한다."
 excerpt: "벡터공간의 고유공간분해"
 
 categories: [Math / Linear Algebra]

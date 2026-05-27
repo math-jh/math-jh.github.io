@@ -1,6 +1,6 @@
 ---
-
 title: "스킴의 위상구조"
+description: "스ܦ의 위상 구조에서 닫힌점, 일반점, 특수화 개념을 정의하고, 아핀 스킴의 점들이 아이디얼과 어떤 관계를 맺으며 위상적 성질을 나타내는지 살펴본다."
 excerpt: "Generic point와 Zariski topology, irreducible component"
 
 categories: [Math / Scheme Theory]

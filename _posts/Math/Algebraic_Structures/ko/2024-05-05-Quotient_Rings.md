@@ -1,6 +1,6 @@
 ---
-
 title: "몫환, 환 동형사상"
+description: "몫환은 ring과 two-sided ideal로 구성되며, ring homomorphism의 보편 성질을 만족한다. 임의의 ring homomorphism에 대해 induced homomorphism의 존재와 유일성이 성립한다."
 excerpt: "Quotient ring과 ring isomorphism theorems"
 
 categories: [Math / Algebraic Structures]

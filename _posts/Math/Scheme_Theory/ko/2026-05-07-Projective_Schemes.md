@@ -1,6 +1,6 @@
 ---
-
 title: "사영스킴"
+description: "아핀 직선들을 적당한 방식으로 붙여서 사영공간을 만들고, 이를 일반화하여 사영스킴을 정의한다. 위상수학적 관점에서 사영공간을 이해하고, 스테레오 사영법과 콕사이클 조건을 통해 아핀 직선들을 접합하는 방법을 살펴본다."
 excerpt: "Graded ring으로부터의 Proj 구성과 projective scheme"
 
 categories: [Math / Scheme Theory]
