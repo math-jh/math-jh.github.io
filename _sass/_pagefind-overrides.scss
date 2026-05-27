@@ -62,14 +62,17 @@
   // Input + button + meta
   // No own border — input should visually blend into the card; the card's
   // border (see _search-overlay.scss) carries the focus accent instead.
+  // !important needed because Pagefind's vendored stylesheet is loaded after
+  // main.css and uses an equal-specificity selector
+  // (.pagefind-ui__search-input.svelte-XXXX), so plain overrides lose.
   .pagefind-ui__search-input {
-    background: transparent;
+    background: transparent !important;
     color: $text-color;
-    border: none;
-    box-shadow: none;
+    border: none !important;
+    box-shadow: none !important;
     font-family: inherit;
     font-size: 1.1rem;
-    &:focus { outline: none; box-shadow: none; }
+    &:focus { outline: none !important; box-shadow: none !important; }
   }
   .pagefind-ui__search-clear,
   .pagefind-ui__button {
