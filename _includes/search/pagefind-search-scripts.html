@@ -5,70 +5,68 @@
 {% endif %}
 
 <link rel="stylesheet" href="{{ '/pagefind/pagefind-ui.css' | relative_url }}">
-<script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}" defer></script>
+<script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}"></script>
 <script>
-window.addEventListener('DOMContentLoaded', function () {
-    if (typeof PagefindUI === 'undefined') {
-        var poll = setInterval(function () {
-            if (typeof PagefindUI !== 'undefined') {
-                clearInterval(poll);
-                mountPagefind();
+(function () {
+    var pageLang = "{{ lang | slice: 0,2 | default: 'en' }}";
+    var koTranslations = {
+        placeholder: "검색어를 입력하세요...",
+        clear_search: "지우기",
+        load_more: "더 보기",
+        search_label: "이 사이트 검색",
+        filters_label: "필터",
+        zero_results: "[SEARCH_TERM]에 대한 검색 결과가 없습니다",
+        many_results: "[SEARCH_TERM]에 대한 [COUNT]개 결과",
+        one_result: "[SEARCH_TERM]에 대한 [COUNT]개 결과",
+        alt_search: "[SEARCH_TERM]에 대한 결과가 없습니다. 대신 [DIFFERENT_TERM]에 대한 결과를 표시합니다",
+        search_suggestion: "[SEARCH_TERM]에 대한 결과가 없습니다. 다음 검색어를 시도해 보세요:",
+        searching: "[SEARCH_TERM] 검색 중..."
+    };
+
+    function mountInto(id) {
+        var el = document.getElementById(id);
+        if (!el || el.dataset.pfMounted === "1") return;
+        if (typeof PagefindUI === "undefined") return;
+        try {
+            new PagefindUI({
+                element: "#" + id,
+                showSubResults: true,
+                showImages: false,
+                baseUrl: "{{ '/' | relative_url }}",
+                pageSize: 10,
+                excerptLength: 30,
+                translations: pageLang === "ko" ? koTranslations : {}
+            });
+            el.dataset.pfMounted = "1";
+            var input = el.querySelector("input");
+            if (input) {
+                try { input.focus(); } catch (e) {}
             }
-        }, 50);
-    } else {
-        mountPagefind();
+        } catch (e) {
+            console.error("Pagefind mount failed:", e);
+        }
     }
 
-    function mountPagefind() {
-        var pageLang = "{{ lang | slice: 0,2 | default: 'en' }}";
-        if (document.getElementById('pagefind-search-popup')) {
-            new PagefindUI({
-                element: "#pagefind-search-popup",
-                showSubResults: true,
-                showImages: false,
-                resetStyles: false,
-                baseUrl: "{{ '/' | relative_url }}",
-                pageSize: 10,
-                excerptLength: 30,
-                translations: pageLang === 'ko' ? {
-                    placeholder: "검색어를 입력하세요...",
-                    clear_search: "지우기",
-                    load_more: "더 보기",
-                    search_label: "이 사이트 검색",
-                    filters_label: "필터",
-                    zero_results: "[SEARCH_TERM]에 대한 검색 결과가 없습니다",
-                    many_results: "[SEARCH_TERM]에 대한 [COUNT]개 결과",
-                    one_result: "[SEARCH_TERM]에 대한 [COUNT]개 결과",
-                    alt_search: "[SEARCH_TERM]에 대한 결과가 없습니다. 대신 [DIFFERENT_TERM]에 대한 결과를 표시합니다",
-                    search_suggestion: "[SEARCH_TERM]에 대한 결과가 없습니다. 다음 검색어를 시도해 보세요:",
-                    searching: "[SEARCH_TERM] 검색 중..."
-                } : {}
-            });
-        }
-        if (document.getElementById('pagefind-search-page')) {
-            new PagefindUI({
-                element: "#pagefind-search-page",
-                showSubResults: true,
-                showImages: false,
-                resetStyles: false,
-                baseUrl: "{{ '/' | relative_url }}",
-                pageSize: 10,
-                excerptLength: 30,
-                translations: pageLang === 'ko' ? {
-                    placeholder: "검색어를 입력하세요...",
-                    clear_search: "지우기",
-                    load_more: "더 보기",
-                    search_label: "이 사이트 검색",
-                    filters_label: "필터",
-                    zero_results: "[SEARCH_TERM]에 대한 검색 결과가 없습니다",
-                    many_results: "[SEARCH_TERM]에 대한 [COUNT]개 결과",
-                    one_result: "[SEARCH_TERM]에 대한 [COUNT]개 결과",
-                    alt_search: "[SEARCH_TERM]에 대한 결과가 없습니다. 대신 [DIFFERENT_TERM]에 대한 결과를 표시합니다",
-                    search_suggestion: "[SEARCH_TERM]에 대한 결과가 없습니다. 다음 검색어를 시도해 보세요:",
-                    searching: "[SEARCH_TERM] 검색 중..."
-                } : {}
-            });
-        }
+    function mountPopupNow() { mountInto("pagefind-search-popup"); }
+    function mountPageNow() { mountInto("pagefind-search-page"); }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", attach);
+    } else {
+        attach();
     }
-});
+
+    function attach() {
+        // Mount the dedicated /search/ page immediately if present.
+        mountPageNow();
+        // Lazy-mount the popup on first toggle click — keeps initial page light
+        // and avoids any race between PagefindUI init and the masthead overlay.
+        var toggles = document.querySelectorAll(".search__toggle");
+        toggles.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                mountPopupNow();
+            });
+        });
+    }
+})();
 </script>
