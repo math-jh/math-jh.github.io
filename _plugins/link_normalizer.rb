@@ -3,28 +3,32 @@
 # Build-time link display normalizer.
 #
 # Rewrites internal cross-reference link display text in post bodies so that
-# the rendered HTML always uses the canonical target title and label,
-# regardless of what the author wrote in source markdown. The source markdown
-# files are NOT modified; only Jekyll's in-memory document content is touched.
+# the rendered HTML always uses the canonical target title, label, and
+# section heading, regardless of what the author wrote in source markdown.
+# The source markdown files are NOT modified; only Jekyll's in-memory
+# document content is touched.
 #
 # Patterns handled in display text:
-#   1. `\[Category\] §Title, ⁋Label N`  ← most common form with anchor
-#   2. `\[Category\] §Title`             ← page link with category bracket
-#   3. `§Title, ⁋Label N`                ← page+label, no category bracket
-#   4. `§Title`                          ← bare page link
-#   5. plain term (e.g. `Set Theory`)    ← category landing pages / terms
+#   1. `\[Category\] §Title, ⁋Label N`     — page+label, with category bracket
+#   2. `\[Category\] §Title, §§H2 section`  — page+H2, with category bracket
+#   3. `\[Category\] §Title`                — page link with category bracket
+#   4. `§Title, ⁋Label N`                   — page+label, no category bracket
+#   5. `§Title, §§H2 section`               — page+H2, no category bracket
+#   6. `§Title`                             — bare page link
+#   7. `Label N` with `(#labelN)` anchor    — in-document self-reference
+#   8. plain term (e.g. `Set Theory`)       — category landing pages / terms
 #
-# For each detected link, the plugin computes a canonical display by:
-#   - looking up the target post's frontmatter title from its URL
-#   - looking up `<ins id="...">**Label N**</ins>` text for any #anchor
-#   - looking up category display name from _data/navigation.yml
+# Resolution rules:
+#   - title:    target post's frontmatter title
+#   - category: navigation.yml category-{ko,en} display name
+#               — OMITTED if source and target are in the same category
+#   - label:    `<ins id="…">**Label N**</ins>` text in the target post
+#   - §§ H2:    `## …` heading text in the target post (slug match)
+#   - in-doc:   look up label / H2 in the *source* doc itself
 #
 # Every override is logged to `scripts/audit/link-overrides.log` (gitignored,
 # truncated at the start of each build). Each entry is a single-line JSON
 # object: {source, url, original, canonical}.
-#
-# Applies to both /ko/ and /en/ documents — KO bodies resolve targets in KO
-# space, EN bodies in EN space.
 
 require "json"
 require "fileutils"
@@ -32,33 +36,59 @@ require "fileutils"
 module LinkNormalizer
   TRACKER_REL = File.join("scripts", "audit", "link-overrides.log")
 
-  # display = group 1 (allows escaped \[ \] inside), url = group 2
-  LINK_RE = /\[((?:[^\[\]]|\\\[|\\\])*?)\]\((\/(?:ko|en)\/[^\s)]+)\)/
+  # display = capture 1; url = capture 2. URL may be an internal post path
+  # (/ko/... or /en/...) or a same-document anchor (#labelN, #h2-slug).
+  LINK_RE = /\[((?:[^\[\]]|\\\[|\\\])*?)\]\(((?:\/(?:ko|en)\/|#)[^\s)]*)\)/
+
+  H2_RE = /^##(?!#)\s+(.+?)\s*$/
 
   class Maps
-    attr_reader :title_by_url, :label_by_anchor, :category_by_lang
+    attr_reader :title_by_url, :label_by_anchor, :h2_by_anchor, :category_by_lang
 
     def initialize(site)
       @title_by_url = {}
       @label_by_anchor = {}
+      @h2_by_anchor = {}
       @category_by_lang = { "ko" => {}, "en" => {} }
 
       site.posts.docs.each do |doc|
         next unless doc.url =~ %r{\A/(ko|en)/}
-        url = doc.url.sub(/\.html\z/, "").sub(/\/\z/, "")
+        url = normalize_url(doc.url)
         title = (doc.data["title"] || "").to_s.strip
         @title_by_url[url] = title unless title.empty?
 
-        # Capture <ins id="...">**Label N**</ins> labels for in-page anchors
-        doc.content.to_s.scan(
-          /<ins\s+id="([^"]+)">\s*\*\*([^*]+?)\*\*\s*<\/ins>/
-        ) do |id, label|
-          key = "#{url}##{id}"
-          @label_by_anchor[key] = label.strip
+        body = doc.content.to_s
+        body.scan(/<ins\s+id="([^"]+)">\s*\*\*([^*]+?)\*\*\s*<\/ins>/) do |id, label|
+          @label_by_anchor["#{url}##{id}"] = label.strip
+        end
+        body.scan(H2_RE) do |h2|
+          text = h2[0].strip
+          slug = kramdown_slug(text)
+          @h2_by_anchor["#{url}##{slug}"] = text
         end
       end
 
       build_category_map(site)
+    end
+
+    # Approximate kramdown auto_ids slug: lowercase, spaces -> '-', drop most
+    # punctuation, keep Hangul + Han ideographs (the blog actually uses these
+    # in anchors, e.g. `#극한의-보편성질`).
+    def kramdown_slug(text)
+      s = text.dup
+      s.gsub!(/[^[:alnum:][:space:]一-鿿가-힯\-]+/, "")
+      s.strip!
+      s.gsub!(/\s+/, "-")
+      s.downcase!
+      s
+    end
+
+    def self.normalize_url(url)
+      url.sub(/\.html\z/, "").sub(/\/\z/, "")
+    end
+
+    def normalize_url(url)
+      self.class.normalize_url(url)
     end
 
     private
@@ -87,13 +117,20 @@ module LinkNormalizer
   class << self
     attr_accessor :maps, :tracker_io
 
-    # Returns [new_content, diffs] where diffs is an array of hashes.
-    def normalize(content, source_path)
+    def category_slug_from_url(url)
+      m = url.to_s.match(%r{\A/(?:ko|en)/(?:math/)?([A-Za-z0-9_]+)(?:/|$|#)})
+      m ? m[1] : nil
+    end
+
+    # Returns [new_content, diffs]
+    def normalize(content, source_path, source_url)
+      source_cat = category_slug_from_url(source_url)
+      source_url_norm = Maps.normalize_url(source_url)
       diffs = []
       new_content = content.gsub(LINK_RE) do |match|
         display = Regexp.last_match(1)
         url = Regexp.last_match(2)
-        canonical = canonical_display(display, url)
+        canonical = canonical_display(display, url, source_cat, source_url_norm)
         if canonical && canonical != display
           diffs << {
             "source" => source_path,
@@ -109,44 +146,65 @@ module LinkNormalizer
       [new_content, diffs]
     end
 
-    def canonical_display(display, url)
+    def canonical_display(display, url, source_cat, source_url)
+      if url.start_with?("#")
+        canonical_indoc(display, url, source_url)
+      else
+        canonical_external(display, url, source_cat)
+      end
+    end
+
+    # In-document refs: just the label text or H2 heading text.
+    def canonical_indoc(_display, url, source_url)
+      anchor = url[1..]
+      key = "#{source_url}##{anchor}"
+      maps.label_by_anchor[key] || maps.h2_by_anchor[key]
+    end
+
+    def canonical_external(display, url, source_cat)
       url_path, anchor = url.split("#", 2)
       url_path = url_path.sub(%r{/\z}, "")
       lang = url_path.start_with?("/ko/") ? "ko" : "en"
 
       target_title = maps.title_by_url[url_path]
+      target_cat = category_slug_from_url(url_path)
+      cat_name = target_cat ? maps.category_by_lang[lang][target_cat] : nil
 
-      # Category slug: matches /lang/CAT or /lang/math/CAT
-      cat_slug = nil
-      if url_path =~ %r{\A/(?:ko|en)/(?:math/)?([A-Za-z0-9_]+)(?:/|$)}
-        cat_slug = Regexp.last_match(1)
-      end
-      cat_name = cat_slug ? maps.category_by_lang[lang][cat_slug] : nil
-
-      # Category landing page (e.g., /ko/set_theory) — no specific post
+      # Category landing page (e.g., /ko/set_theory)
       if target_title.nil? && cat_name && url_path.count("/") <= 2
-        # Display is the category name itself
         return cat_name if !display.include?("\\[") && !display.include?("§")
         target_title = cat_name
       end
-
       return nil if target_title.nil?
 
       label_text = anchor ? maps.label_by_anchor["#{url_path}##{anchor}"] : nil
+      h2_text    = anchor ? maps.h2_by_anchor["#{url_path}##{anchor}"]    : nil
 
       has_cat = display.start_with?("\\[")
-      has_sec = display.include?("§")
-      has_lab = display.include?("⁋")
+      has_h2  = display.include?("§§")
+      # `§` only when it's the page marker (§foo), not the H2 marker (§§foo).
+      # has_section: the display contains §Title, regardless of §§ presence.
+      has_section = display =~ /(^|[^§])§[^§]/ ? true : false
+      has_label   = display.include?("⁋")
+
+      # Same-category source/target: drop the [Category] bracket.
+      same_cat = source_cat && target_cat && source_cat == target_cat
 
       pieces = []
-      pieces << "\\[#{cat_name}\\]" if has_cat && cat_name
-      if has_sec
+      if has_cat && cat_name && !same_cat
+        pieces << "\\[#{cat_name}\\]"
+      end
+      if has_section
         pieces << "§#{target_title}"
-      elsif !has_cat && !has_lab
-        # Plain text — use bare title
+      elsif !has_cat && !has_label && !has_h2
+        # Plain term — just the title.
         pieces << target_title
       end
-      if has_lab && label_text
+
+      if has_h2 && h2_text
+        pieces << target_title if pieces.empty?
+        pieces[-1] = "#{pieces[-1]}, §§#{h2_text}"
+      elsif has_label && label_text
         pieces << target_title if pieces.empty?
         pieces[-1] = "#{pieces[-1]}, ⁋#{label_text}"
       end
@@ -166,10 +224,9 @@ end
 Jekyll::Hooks.register :documents, :pre_render do |doc|
   next unless doc.url =~ %r{\A/(ko|en)/}
   next unless doc.content.is_a?(String)
-  new_content, diffs = LinkNormalizer.normalize(doc.content, doc.relative_path)
-  # Jekyll 4's Document#content= writer doesn't always replace the
-  # underlying @content for posts; setting the ivar directly is the
-  # reliable path. (Confirmed by post_render diagnostic 2026-05-27.)
+  new_content, diffs = LinkNormalizer.normalize(doc.content, doc.relative_path, doc.url)
+  # Jekyll 4's Document#content= writer doesn't always replace @content for
+  # posts; setting the ivar directly is the reliable mutation path.
   doc.instance_variable_set(:@content, new_content) unless diffs.empty?
   diffs.each do |d|
     LinkNormalizer.tracker_io.puts JSON.generate(d) rescue nil
