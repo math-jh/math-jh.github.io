@@ -11,7 +11,7 @@
 }
 
 .search-content {
-  // When visible, full-viewport fixed overlay with translucent backdrop.
+  // When visible, full-viewport fixed overlay with translucent + blurred backdrop.
   &.is--visible {
     position: fixed;
     inset: 0;
@@ -20,14 +20,20 @@
     align-items: flex-start;
     justify-content: center;
     padding: 4em 1em 2em;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     overflow-y: auto;
 
-    // Override any decorative ::after the theme injects.
-    &::after { content: none; }
+    // Override decorative pseudo-elements the theme injects.
+    &::after  { content: none !important; }
+    &::before { content: none !important; }
   }
 
   .search-content__inner-wrap {
+    position: relative;
+    z-index: 1;
+    pointer-events: auto;
     width: 100%;
     max-width: 720px;
     margin: 0 auto;
@@ -38,6 +44,20 @@
     border-radius: 8px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
     animation: pf-pop-in 0.18s ease-out both;
+
+    // Make sure interactive Pagefind UI elements receive clicks even if any
+    // ancestor inherits pointer-events:none. (Don't blanket-apply to all
+    // descendants — Pagefind has decorative pseudo-elements that legitimately
+    // use pointer-events:none.)
+    .pagefind-ui,
+    .pagefind-ui__form,
+    .pagefind-ui__search-input,
+    .pagefind-ui__search-clear,
+    .pagefind-ui__button,
+    .pagefind-ui__result-link,
+    input,
+    button,
+    a { pointer-events: auto !important; }
   }
 }
 
