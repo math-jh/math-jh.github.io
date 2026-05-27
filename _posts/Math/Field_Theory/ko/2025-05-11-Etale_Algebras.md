@@ -126,9 +126,9 @@ $$\bigl((u_1(x),\cdots, u_n(x)), (\alpha_1,\ldots, \alpha_n)\bigr) \mapsto \sum_
 
 으로 정의한다면 이것이 유도하는 $$\mathbb{L}^n\rightarrow B^\ast$$가 injective이고, 이로부터 $$B$$가 $$\mathbb{L}$$을 생성해야 하는 것을 안다. 따라서, $$n\times n$$ 행렬 $$(u_i(a_j))$$이 invertible이도록 하는 $$a_j\in A$$들이 존재한다. 
 
-이제 다항식 $$g \in \mathbb{L}[\y_1,\ldots, \y_n}$$을 다음의 식
+이제 다항식 $$g \in \mathbb{L}[\y_1,\ldots, \y_n]$$을 다음의 식
 
-$$g(\y_1, \ldots, _n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y'_j \right)$$
+$$g(\y_1, \ldots, \y_n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y'_j \right)$$
 
 으로 정의하자. 여기에 임의의 원소들 $$y_i\in \mathbb{K}$$들을 대입하고, $$x=\sum_{i=1}^n a_iy_i$$라 하면 
 

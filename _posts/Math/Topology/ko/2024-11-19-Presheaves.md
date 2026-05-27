@@ -77,7 +77,7 @@ Category $$\Open(X)$$를 ordered set $$(\mathcal{T}, \subseteq)$$를 category로
 
 - 임의의 열린집합 $$U\subseteq X$$에 대하여, $$\mathscr{F}(U)$$의 원소들을 $$U$$에서의 *section*이라 부른다. 특별히 $$\mathscr{F}(X)$$의 원소들은 *global section*이라 부른다.
 - 열린집합 $$U\subseteq V$$에 대하여, $$\rho_{VU}:\mathscr{F}(V) \rightarrow \mathscr{F}(U)$$를 $$V$$에서 $$U$$로의 *restriction map*이라 부른다. 
-- 특별히 열린집합들 $$U\subseteq V$$와 $$s\in \mathscr{F}(V)$$에 대하여, $$\rho_{UV}(f)\in \mathscr{F}(U)$$를 간단히 $$s\vert_U$$로 표기한다.
+- 특별히 열린집합들 $$U\subseteq V$$와 $$s\in \mathscr{F}(V)$$에 대하여, $$\rho_{VU}(s)\in \mathscr{F}(U)$$를 간단히 $$s\vert_U$$로 표기한다.
 
 </div>
 
@@ -169,7 +169,7 @@ $$\tilde{s}:U \rightarrow \Spe(\mathscr{F}); \quad x\mapsto (x,s_x)$$
 
 즉 $$X$$ 위에서 정의된 $$\mathcal{A}$$-valued presheaf들의 카테고리는 functor category $$[\Open(X)^\op, \mathcal{A}]$$이다. 이를 $$\PSh(X, \mathcal{A})$$로 표기하며, 문맥상 혼동의 여지가 없을 때에는 $$\PSh(X)$$로만 적기도 한다. 여담으로 [예시 8](#ex8)의 $$f_\ast$$는 functor $$\PSh(X, \mathcal{A})\rightarrow \PSh(Y, \mathcal{A})$$이다. 
 
-우리에게 직관을 주는 [예시 2](#ex2)를 생각해보면, 열린집합 $$U$$에 대하여 정의된 $$\phi(U):\mathscr{F}(U) \rightarrow \mathscr{G}(U)$$는 $$\phi:\mathscr{F}\rightarrow \mathscr{G}$$를 열린집합 $$U$$로 제한하여 얻어지는 함수라 생각할 수 있으므로, 이를 종종 $$\phi(U)$$ 대신 $$\phi\vert_U$$로 적는다. 
+우리에게 직관을 주는 [예시 3](#ex3)를 생각해보면, 열린집합 $$U$$에 대하여 정의된 $$\phi(U):\mathscr{F}(U) \rightarrow \mathscr{G}(U)$$는 $$\phi:\mathscr{F}\rightarrow \mathscr{G}$$를 열린집합 $$U$$로 제한하여 얻어지는 함수라 생각할 수 있으므로, 이를 종종 $$\phi(U)$$ 대신 $$\phi\vert_U$$로 적는다. 
 
 한편 limit cone의 universal property에 의해 다음 명제가 성립한다. 
 

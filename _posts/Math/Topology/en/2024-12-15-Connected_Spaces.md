@@ -114,7 +114,7 @@ $$f(x)=\begin{cases}1&\text{if $x\in U$}\\0&\text{if $x\in V$}\end{cases}$$
 
 is continuous. (Here $$\{0,1\}$$ is given the discrete topology.)
 
-Now fix an element $$a=(a_i)\in X$$, and define $$\iota_i: X_i \rightarrow X$$ to be the function whose $$i$$th coordinate is $$x$$ and whose remaining coordinates are taken from $$a$$. Then $$f\circ\iota_i$$ is a continuous function from $$X_i$$ to $$\{0,1\}$$, and from the assumption that $$X_i$$ is connected we know that $$f_i$$ must be constant. Thus, by induction, we know that points $$x$$ in $$X$$ all of whose coordinates except finitely many are equal to $$a$$ must satisfy $$f(x)=f(a)$$. Since such points form a dense subset of $$X$$, $$f$$ must be constant on all of $$X$$, and this is a contradiction.
+Now fix an element $$a=(a_i)\in X$$, and define $$\iota_i: X_i \rightarrow X$$ to be the function whose $$i$$th coordinate is $$x$$ and whose remaining coordinates are taken from $$a$$. Then $$f\circ\iota_i$$ is a continuous function from $$X_i$$ to $$\{0,1\}$$, and from the assumption that $$X_i$$ is connected we know that $$f\circ\iota_i$$ must be constant. Thus, by induction, we know that points $$x$$ in $$X$$ all of whose coordinates except finitely many are equal to $$a$$ must satisfy $$f(x)=f(a)$$. Since such points form a dense subset of $$X$$, $$f$$ must be constant on all of $$X$$, and this is a contradiction.
 
 </details>
 

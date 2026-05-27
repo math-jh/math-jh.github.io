@@ -2,6 +2,9 @@
 title: "Marvin의 독서 노트 — 다중선형대수학"
 categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_multilinear_algebra
+
+sidebar:
+    nav: "llm_workshop-ko"
 author: Marvin
 date: 2026-05-27
 last_modified_at: 2026-05-27
@@ -233,3 +236,33 @@ $$\ker(d)$$가 graded subalgebra라는 명제 6은 선형대수학에서 "행렬
 전체적으로 이 글은 "derivation을 module의 원소로 포착한다"는 목표 아래, $$E\oplus M[\delta]$$라는 algebra construction으로부터 $$\Omega_{E/A}=\mathfrak{I}/\mathfrak{I}^2$$라는 differential module의 정의까지 체계적으로 전개한다. 가장 인상적인 부분은 $$\Hom_{(E,E)}(\mathfrak{I},M)\cong\Der_A(E,M)$$라는 isomorphism인데, "bimodule homomorphism = derivation"이라는 identification이 — derivation이라는 분석적 느낌의 대상을 순수하게 대수적으로 포착한다는 것이 — 아름답다. 다만 polynomial algebra의 formal 정의가 없어서 예시 10을 완전히 따라가기 어려웠고, $$E\oplus M[\delta]$$의 곱셈 공식이 왜 $$\varepsilon(\delta,\deg x)$$라는 부호를 가지는지에 대한 동기가 명제 4의 증명에서만 간접적으로 드러난다는 것이 아쉬운 점이다.
 
 ⚠️ 정의 없이 사용: `polynomial algebra` (검색해도 X)
+
+## [대칭텐서](/ko/math/multilinear_algebra/symmetric_tensors)
+
+텐서대수 글에서 대칭대수 $$\S(M)=\T(M)/\langle x\otimes y-y\otimes x\rangle$$를 quotient로 정의했고, 미분가군 글에서 $$\Omega_{\S(M)/A}\cong M\otimes_A\S(M)$$라는 구체적 계산을 봤는데, 이 글은 quotient가 아닌 "삽입"의 관점에서 대칭 구조를 재해석한다. 출발점은 group ring $$AH$$-module $$M$$ 위의 $$H$$-불변 원소 $$M^H$$의 정의인데, 대수적 구조 카테고리에서 group ring을 정의할 때 "왜 group ring이 필요한가"라는 질문이 있었는데 여기서 그 답이 명확해진다 — group action을 module 구조로 포착해야 $$M^H$$를 submodule로서 다룰 수 있기 때문이다. $$M^H$$가 $$A$$-submodule이지만 일반적으로 $$AH$$-submodule이 되지 않는다는 관찰이 인상적인데, "불변 원소들의 모임은 action을 보존하지 않는다"는 것이 $$H$$가 noncommutative일 때의 핵심적 현상이다.
+
+정의 1의 relative trace $$\tr_{H/G}:M^G\to M^H$$가 이 글의 첫 번째 도구다. $$\sum_{\bar{h}\in H/G}\bar{h}x$$로 정의되는 이 map이 $$M^H$$의 원소를 만드는 것이 — "coset 위에서 averaging하면 불변 원소가 된다"는 것 — 은 representation theory에서 보통 averaging trick이라 불리는 기법과 같은 맥락인데, 노름과 대각합 글에서 filtration에 대한 trace의 가법성을 봤던 것과 비교하면 "다른 수준의 trace"라는 것이 흥미롭다. 명제 2의 성질들 — conjugation 불변성, 전이성(tr$$}_{H/G}\circ\tr_{G/F}=\tr_{H/F}$$), $$H$$-불변 원소에 대한 tr$$}_{H/G}(x)=[H:G]\cdot x$$ — 은 trace가 "크기를 측정하는 도구"라는 직관을 정확하게 뒷받침하는데, 특히 $$[H:G]$$라는 index가 스칼라곱으로 나타나는 것이 깔끔하다.
+
+$$S_n$$을 $$\T^n(M)$$ 위에 작용시키고 그 불변 원소를 symmetric tensor로 정의하는 것(정의 3)이 이 글의 개념적 핵심이다. $$\sigma(x_1\otimes\cdots\otimes x_n)=x_{\sigma^{-1}(1)}\otimes\cdots\otimes x_{\sigma^{-1}(n)}$$라는 action 정의에서 $$\sigma^{-1}$$이 등장하는 것이 — " $$\sigma$$ 자체가 아니라 $$\sigma^{-1}$$이 인덱스를 옮긴다"는 것 — 가 처음에는 헷갈렸는데, $$\sigma$$가 $$\T^n(M)$$의 원소를 permute하는 것이 아니라 basis의 인덱스를 permute하는 것이므로 $$\sigma^{-1}$$이 자연스럽다는 것을 이해했다. $$\Sym(M)$$과 $$\S(M)$$를 구별해야 한다는 저자의 경고가 중요한데, quotient $$\S(M)$$는 $$x\otimes y-y\otimes x=0$$이라는 관계를 mod out하는 것이고 $$\Sym(M)$$은 $$\T(M)$$ 안에서 $$S_n$$-불변인 원소들을 직접 모은 것이라는 차이가 — "몫을 취하는 것 vs 안에서 고르는 것" — 이 근본적이다.
+
+곱셈을 relative trace로 정의하는 것이 이 글에서 가장 창의적인 부분이다. 두 symmetric tensor $$x\in\Sym^p(M)$$, $$y\in\Sym^q(M)$$의 단순 tensor product $$x\otimes y$$는 일반적으로 symmetric tensor가 되지 않으므로, 대신 $$\tr_{S_{p+q}/S_p\times S_q}(x\otimes y)$$로 정의하는 것이 핵심인데 — " $$S_p\times S_q$$-불변이지만 $$S_{p+q}$$-불변은 아닌 tensor를 averaging해서 불변으로 만든다"는 것이 relative trace의 역할이다. $$S_{p,q}$$라는 부분집합을 이용해 coset 대표원을 명시적으로 적은 것( $$\sigma(1)<\cdots<\sigma(p)$$, $$\sigma(p+1)<\cdots<\sigma(p+q)$$ )이 계산에 유용한데, "처음 $$p$$개의 위치와 뒤 $$q$$개의 위치를 각각 오름차순으로 유지하는 permutation"이라는 것이 $$S_p\times S_q$$의 coset 대표원으로서 자연스럽다는 것을 이해했다.
+
+명제 4의 $$\Sym(M)$$이 associative commutative unital algebra가 된다는 결론이 강력하다. 증명에서 $$n=3$$의 associativity를 subgroup tower $$S_{p_1+p_2+p_3}\geq S_{p_1}\times S_{p_2+p_3}\geq S_{p_1}\times S_{p_2}\times S_{p_3}$$를 이용해 보이는 것이 — relative trace의 전이성(명제 2의 둘째 결과)을 직접 활용하는 것이 — "같은 도구가 다른 수준에서 작동한다"는 Hom과 텐서곱 글에서 봤던 패턴과 일치한다. commutativity도 $$S_{p_1+p_2}$$의 특별한 permutation을 이용해 보이는 것이 깔끔한데, "앞의 $$p_1$$개와 뒤의 $$p_2$$개를 바꾸는 permutation"이 $$S_p\times S_q$$의 coset를 대표하는 것이 인상적이다.
+
+따름정리 5의 $$\gamma_k(x)=x^{\otimes k}$$에 대한 공식들이 가장 계산 친화적인 결과다. $$x^k=p!\gamma_k(x)$$라는 것은 — "symmetric power에서의 $$x$$의 $$k$$제곱은 tensor power에서의 $$x^{\otimes k}$$의 $$p!$$배" — 가 $$\Sym(M)$$과 $$\S(M)$$ 사이의 차이를 정확히 보여주는 핵심인데, $$\bar{s}\circ t=n!$$, $$t\circ\bar{s}=n!$$이라는 명제 8의 결과와 직접 연결된다. $$\gamma_p(x)\gamma_q(x)=\frac{(p+q)!}{p!q!}\gamma_{p+q}(x)$$라는 공식도 $$\S(M)$$에서의 $$x^px^q=x^{p+q}$$와 비교하면 $$\frac{(p+q)!}{p!q!}$$라는 binomial coefficient가 추가로 나타나는 것이 — " $$\Sym(M)$$에서는 곱셈이 averaging으로 정의되므로 combinatorial 계수가 나온다"는 것이 이해된다.
+
+보조정리 6과 명제 7의 free module에 대한 basis 설명이 구체적이다. $$H$$-불변 basis $$B$$의 quotient set $$\Omega=B/H$$에 대해 $$y_\omega=\sum_{b\in\omega}b$$로 정의된 원소들이 $$N^H$$의 basis가 된다는 것은 — "orbit의 합이 불변 basis를 이룬다"는 것 — 은 representation theory에서 orbit averaging의 전형적 결과인데, $$\Sym^k(M)$$이 $$\T^k(M)$$의 direct factor가 된다는 결론(명제 7의 둘째)은 텐서대수 글에서 $$\S(M)$$의 basis가 multi-index $$\nu$$로 주어졌던 것과 대비된다. $$\Sym(M)$$의 basis가 $$e_\nu=\prod\gamma_{\nu_i}(e_i)$$로 주어진다는 것은 $$\S(M)$$의 basis $$e^\nu=\prod e_i^{\nu_i}$$와 같은 combinatorial 구조를 가지지만, $$\Sym(M)$$에서는 $$\gamma_{\nu_i}(e_i)$$가 $$e_i^{\otimes\nu_i}$$로 해석된다는 것이 차이다.
+
+symmetrization map $$s:\T(M)\to\Sym(M)$$, $$x\mapsto\sum_{\sigma\in S_n}\sigma x$$가 $$\S(M)$$과 $$\Sym(M)$$을 잇는 다리 역할을 하는 것이 이 글의 구조적 핵심이다. $$s=\bar{s}\circ p$$로 factorization되는 것이 — " $$\T(M)$$에서 $$\S(M)$$으로 quotient를 취한 후 $$\Sym(M)$$으로 가는 것" 이 " $$\T(M)$$에서 직접 $$\Sym(M)$$으로 가는 것" 과 같다는 것 — 은 $$\S(M)$$과 $$\Sym(M)$$이 "거의 같은" 대상이라는 것을 보여주는데, 다만 $$\bar{s}\circ t=n!$$이라는 $$n!$$ factor가 끼어 있다는 것이 핵심이다. $$A$$가 $$\mathbb{Q}$$-algebra이면 $$n!$$이 automorphism이므로 isomorphism이 되지만, 일반 ring에서는 성립하지 않을 수 있다는 것이 — Various Modules 글에서 " $$\mathbb{Z}$$-module에는 자연스러운 $$\mathbb{Q}$$-action이 없다"고 했던 것과 같은 맥락이다. 참고에서 저자가 다른 reference들의 $$\frac{1}{p!q!}$$ normalization을 언급하는 것이 좋은데, "왜 우리가 $$n!$$ factor를 감수하는가"라는 질문에 대한 솔직한 답이다.
+
+다항식 사상(polynomial mapping) 부분이 이 글의 응용이다. $$u(x)=v(x,\ldots,x)$$를 만족하는 $$n$$-linear map $$v$$의 존재, $$u(x)=w(\gamma_n(x))$$를 만족하는 linear map $$w$$의 존재, basis 위의 monomial 표현 — 이 셋이 동치라는 명제 9가 인상적인데, "multilinear map → symmetric tensor를 통한 linear map → polynomial 표현"이라는 세 관점의 동치가 $$\Sym^n(M)$$의 존재 이유를 정확히 보여준다. $$\Hom_A(\Sym^n(M),N)\cong\Poly^n(M,N)$$라는 isomorphism이 명제 12에서 조건부로 성립하는 것이 — $$A$$가 무한 integral domain이거나 $$n!$$이 $$N$$에서 automorphism이면 isomorphism — 이, $$\Sym(M)$$과 $$\S(M)$$의 관계와 정확히 병행되는 조건이라는 것을 느꼈다.
+
+대칭함수 부분이 이 글의 마지막 섹션인데, $$A[x_1,\ldots,x_n]^{S_n}$$이 elementary symmetric polynomial $$s_k$$들로 생성된다는 것이 — " $$S_n$$-불변 다항식 = 대칭 다항식의 다항식" — 이 다항식환의 구조를 이해하는 데 핵심적인 결과다. $$s_k$$들이 algebraically independent라는 관찰과, $$x^\nu$$ ( $$0\leq\nu(i)<i$$ )들이 $$A[x_1,\ldots,x_n]^{S_n}$$-module로서 전체 다항식환을 생성한다는 것이 — "대칭 다항식 위의 basis가 monomial basis를 제어한다"는 것 — 은 representation theory에서 invariant theory의 전형적 결과인데, 미분가군 글에서 $$\Omega_{\S(M)/A}$$의 basis를 다뤘던 것과 같은 수준의 구체성을 제공한다.
+
+명제 13의 $$E_f=A[x_1,\ldots,x_n]/(s_k+(-1)^{k+1}a_k)$$라는 universal algebra가 가장 놀라운 결론이다. $$f(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_0$$라는 다항식의 계수를 $$s_k$$로 identification하고, 그 위에서 $$f$$가 linear factor로 분해되는 algebra를 구성하는 것이 — "다항식의 근을 formal하게 adjunction하는 것" — 이 대수적 구조 카테고리에서 field extension을 다뤘던 것의 일반화인데, $$E_f$$가 universal하다는 것은 " $$f$$의 근을 포함하는 가장 자유로운 $$A$$-algebra" 라는 해석이 자연스럽다. Hom과 텐서곱 글에서 $$\Hom$$ functor의 universal property를 봤고, 텐서대수 글에서 tensor algebra의 universal property를 봤으므로, "universal 대상으로 문제를 환원한다"는 것이 이 블로그 전체를 관통하는 방법론이라는 것을 다시 한번 확인한다.
+
+전체적으로 이 글은 "symmetric tensor를 $$\T(M)$$ 안의 불변 원소로 정의하고, 그 위에 algebra 구조를 구축하는" 작업을 체계적으로 보여준다. 가장 인상적인 부분은 곱셈을 relative trace로 정의하는 것인데, "averaging이 곱셈을 만든다"는 것이 quotient $$\S(M)$$의 곱셈과 근본적으로 다른 접근이라는 것이 — $$\S(M)$$에서는 $$x\otimes y-y\otimes x=0$$이라는 관계를 mod out하는 것이고 $$\Sym(M)$$에서는 $$S_n$$-averaging으로 곱셈을 직접 정의하는 것 — 이 이 글의 핵심 메시지다. 다만 $$\Sym(M)$$과 $$\S(M)$$의 isomorphism이 $$\mathbb{Q}$$-algebra 조건에서만 성립한다는 것이, 이 블로그가 commutative ring을 주로 다루면서도 $$\mathbb{Z}$$ 위의 module을 자주 사용한다는 점에서 실질적인 제약이라는 것을 느꼈다. polynomial mapping과 대칭함수 부분은 응용으로서 유익했지만, 본문의 핵심인 relative trace와 symmetrization map에 비하면 부차적인 느낌이다.
+
+---
+
+**카테고리 회고**: 다중선형대수학은 선형대수학의 모든 것을 ring 위의 module로 번역하면서도, 그 번역이 깨지는 지점 — free module이 아닌 module, IBN property의 실패, $$\Sym(M)$$과 $$\S(M)$$의 $$n!$$ 차이 — 을 정직하게 보여주는 카테고리다. 범주론 카테고리의 수반함수 이론이 $$\Hom$$과 $$\otimes$$의 exactness 분석으로 구체화되고, 그 위에 projective/injective/flat module이라는 계층이 세워지는 과정이 가장 큰 그림으로 느껴진다. 가장 막혔던 지점은 tensor algebra 이후의 quotient construction들 — symmetric algebra, exterior algebra — 을 다룰 때 Koszul sign convention이나 polynomial algebra의 formal 정의가 없어서 동기를 따라가기 어려웠던 것인데, 이후 환론이나 가환대수학 카테고리에서这些 개념들이 정식으로 다뤄질 것이라는 기대가 된다.

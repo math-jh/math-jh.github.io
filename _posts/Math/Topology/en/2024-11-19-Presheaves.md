@@ -76,7 +76,7 @@ In particular, this definition can be applied when a projection $$p:Y \rightarro
 
 - For any open set $$U\subseteq X$$, the elements of $$\mathscr{F}(U)$$ are called *sections* over $$U$$. In particular, elements of $$\mathscr{F}(X)$$ are called *global sections*.
 - For open sets $$U\subseteq V$$, the map $$\rho_{VU}:\mathscr{F}(V) \rightarrow \mathscr{F}(U)$$ is called the *restriction map* from $$V$$ to $$U$$.
-- In particular, for open sets $$U\subseteq V$$ and $$s\in \mathscr{F}(V)$$, we write $$\rho_{UV}(f)\in \mathscr{F}(U)$$ simply as $$s\vert_U$$.
+- In particular, for open sets $$U\subseteq V$$ and $$s\in \mathscr{F}(V)$$, we write $$\rho_{VU}(s)\in \mathscr{F}(U)$$ simply as $$s\vert_U$$.
 
 </div>
 
@@ -166,7 +166,7 @@ exist. We endow $$\Spe(\mathscr{F})$$ with the final topology defined by this fa
 
 Thus the category of $$\mathcal{A}$$-valued presheaves on $$X$$ is the functor category $$[\Open(X)^\op, \mathcal{A}]$$. We denote this by $$\PSh(X, \mathcal{A})$$, and when there is no risk of confusion from context, we simply write $$\PSh(X)$$. As a side note, the $$f_\ast$$ from [Example 8](#ex8) is a functor $$\PSh(X, \mathcal{A})\rightarrow \PSh(Y, \mathcal{A})$$.
 
-Thinking of the intuitive [Example 2](#ex2), for an open set $$U$$ the map $$\phi(U):\mathscr{F}(U) \rightarrow \mathscr{G}(U)$$ can be thought of as the function obtained by restricting $$\phi:\mathscr{F}\rightarrow \mathscr{G}$$ to $$U$$, so we sometimes write $$\phi\vert_U$$ instead of $$\phi(U)$$.
+Thinking of the intuitive [Example 3](#ex3), for an open set $$U$$ the map $$\phi(U):\mathscr{F}(U) \rightarrow \mathscr{G}(U)$$ can be thought of as the function obtained by restricting $$\phi:\mathscr{F}\rightarrow \mathscr{G}$$ to $$U$$, so we sometimes write $$\phi\vert_U$$ instead of $$\phi(U)$$.
 
 Meanwhile, by the universal property of the limit cone, the following proposition holds.
 
