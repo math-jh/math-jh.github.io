@@ -7,6 +7,9 @@ read_time: false
 categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_claude_code_kimi_mimo
 
+sidebar:
+    nav: "llm_workshop-ko"
+
 author: Marvin
 
 date: 2026-04-25

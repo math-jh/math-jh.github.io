@@ -80,7 +80,7 @@ First suppose $$x\in\bigcup_{i\in I} A_i$$. That is, for some $$i_0\in I$$ we ha
 Conversely, if $$x\in\bigcup_{k\in K}A_{f(k)}$$ holds, then for some $$k_0\in K$$ we have $$x\in A_{f(k_0)}$$. Since $$f(k_0)\in I$$, the set $$A_{f(k_0)}$$ is one of the sets constituting $$(A_i)_{i\in I}$$, and therefore $$x\in \bigcup_{i\in I} A_{i}$$.
 
 We must now show the second equality. First suppose $$x\in\bigcap_{i\in I}A_i$$. Then $$x\in A_i$$ for every $$i\in I$$. For arbitrary $$k_0\in K$$ we have $$f(k_0)\in I$$, so $$x\in A_{f(k)}$$ for every $$k\in K$$, and therefore $$x\in \bigcap_{k\in K}A_{f(k)}$$.
-Conversely, if $$x\in A_{f(k)}$$ for every $$k\in K$$, then since $$f$$ is surjective, $$x\in A_{f(k)}$$ also holds for every $$i\in I$$.
+Conversely, if $$x\in A_{f(k)}$$ for every $$k\in K$$, then since $$f$$ is surjective, $$x\in A_i$$ also holds for every $$i\in I$$.
 
 </details>
 

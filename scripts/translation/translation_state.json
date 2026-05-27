@@ -2192,16 +2192,17 @@
     },
     "_posts/Math/Algebraic_Structures/ko/2023-01-09-Restricted_Sums.md": {
       "status": "done",
-      "last_attempt_ts": 1779637302.907897,
+      "last_attempt_ts": 1779856537.880574,
       "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Restricted_Sums.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-24T15:30:03+00:00",
-      "in_chars": 19217,
-      "out_chars": 8989,
-      "reason": "polish",
+      "ko_git_commit_ts": 1779852709.0,
+      "translated_at": "2026-05-27T04:30:01+00:00",
+      "in_chars": 9767,
+      "out_chars": 9265,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=146, en=143"
-      ]
+        "math block count mismatch: ko=146, en=145"
+      ],
+      "verify_verdict": "Based on my parallel walk through both versions, I can now provide the audit verdict.\n\n**Analysis Summary:**\n\nThe count difference is ko=146, en=145. I identified the specific differences by comparing all math blocks:\n\n1. **Block `$$G_i=\\mathbb{Z}/2\\mathbb{Z}=\\{\\bar{0}, \\bar{1}\\}이$$` vs `$$G_i=\\mathbb{Z}/2\\mathbb{Z}=\\{\\bar{0}, \\bar{1}\\}$$`**: In KO, the Korean subject-marker suffix \"이\" was accidentally sucked into the math block. In EN, it is correctly outside. Same mathematical content.\n\n2. **Block `$$x_i\\in H_i,x_j\\in H_j$$` vs `$$x_i\\in H_i, x_j\\in H_j$$`**: Trivial whitespace difference after the comma. Same content.\n\n3. **Extra `$$i$$` in KO**: In the proof of Theorem 2, KO has \"유한개의 $$i$$를 제외하면\" (with `i` in a math block). The EN equivalent is \"all but finitely many of the $$f_i(\\pr_ix)$$ on the right-hand side are the identity\" — the variable `i` appears only inside the `$$f_i(\\pr_ix)$$` block, not as a standalone `$$i$$`. This is a rephrasing that merges the standalone variable into the surrounding formula block.\n\n4. **Block reordering**: Many blocks appear in different order between KO and EN (e.g., `$$\\Set$$` and `$$\\coprod G_i$$` are swapped in sequence), but all mathematical content is preserved.\n\nNo mathematical statements, hypotheses, conclusions, or symbols were dropped or added. All differences are due to rephrasing, formatting artifacts (Korean suffix in math block), or trivial whitespace.\n\nVERDICT: safe\nCOUNTS: ko=146 en=145\nFINDINGS:\n- [def1] SAFE-REPHRASE: standalone `$$i$$` merged into `$$f_i(\\pr_ix)$$` in EN proof text\n- [def1] SAFE-REPHRASE: Korean suffix \"이\" sucked into KO math block `$$...\\\\bar{1}\\}이$$`, correctly outside in EN\n- [prop5 proof] SAFE-REPHRASE: missing space after comma in KO `$$x_i\\in H_i,x_j\\in H_j$$`, present in EN\n- [global] SAFE-REPHRASE: extensive block reordering between KO and EN (e.g., `$$\\Set$$`/`$$\\coprod G_i$$`, `$$\\iota_i$$`/`$$\\prod G_i$$`) with identical content preserved"
     },
     "_posts/Math/Algebraic_Structures/ko/2023-02-14-Group_Actions.md": {
       "status": "done",
@@ -2231,16 +2232,17 @@
     },
     "_posts/Math/Algebraic_Structures/ko/2024-05-08-Field_of_Fractions.md": {
       "status": "done",
-      "last_attempt_ts": 1779653427.5376408,
+      "last_attempt_ts": 1779854727.1468468,
       "en_path": "_posts/Math/Algebraic_Structures/en/2026-03-11-Field_of_Fractions.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-24T20:00:03+00:00",
-      "in_chars": 33347,
-      "out_chars": 16381,
-      "reason": "polish",
+      "ko_git_commit_ts": 1779850808.0,
+      "translated_at": "2026-05-27T03:30:01+00:00",
+      "in_chars": 16111,
+      "out_chars": 17027,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=260, en=254"
-      ]
+        "math block count mismatch: ko=260, en=261"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=260 en=261\nFINDINGS:\n- [thm1 statement] SAFE-REPHRASE: KO \"$$A$$와 $$A$$의 부분집합 $$S$$\" vs EN \"$$A$$ and subset $$S$$ of $$A$$\" — same three symbols, order swapped by grammar.\n- [thm1 proof, uniqueness] SAFE-REPHRASE: KO combined two equalities into one $$...$$ block; EN split into two separate blocks.\n- [thm1 proof, existence] SAFE-REPHRASE: KO combined $$ap's=a'ps,bq't=b'qt$$ into one block; EN split into two blocks with added spaces.\n- [thm1 proof] SAFE-REPHRASE: EN introduced an extra $$x,y$$ block where KO kept the variables inline in text — no new math content.\n- [prop4 statement] SAFE-REPHRASE: EN has one extra $$A$$ block due to English phrasing \"left ideals of $$A$$ are $$0$$ and $$A$$\" vs Korean genitive structure.\n- [prop9, post-proof] SAFE-REPHRASE: KO repeats $$A$$ twice (\"ring $$A$$를 $$A$$를 multiplicative monoid로\") while EN uses it once — grammatical, not mathematical.\n- [prop12 proof] SAFE-REPHRASE: KO typo $$(\\alphax)^n$$ corrected to $$(\\alpha x)^n$$ in EN; identical mathematical meaning.\n- [all remaining] SAFE-REPHRASE: all other count shifts are grammar-driven block reordering or minor splitting/merging with no loss of mathematical content."
     },
     "_posts/Math/Algebraic_Structures/ko/2024-05-10-Modules.md": {
       "status": "done",
@@ -2667,8 +2669,8 @@
     }
   },
   "stats": {
-    "total_done": 313,
-    "total_in_chars": 5301861,
-    "total_out_chars": 4603761
+    "total_done": 315,
+    "total_in_chars": 5327739,
+    "total_out_chars": 4630053
   }
 }

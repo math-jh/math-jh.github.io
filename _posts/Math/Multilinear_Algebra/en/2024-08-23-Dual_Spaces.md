@@ -60,7 +60,7 @@ By definition, for any $$x\in M$$ and $$\xi\in M^\ast$$, the pair assigns an ele
 
 If every pair of elements from a subset of $$M$$ and a subset of $$M^\ast$$ is orthogonal, we say that the two subsets are orthogonal. Now fix an arbitrary $$x\in M$$, and let $$\xi,\xi_1,\xi_2\in M^\ast$$ and $$\alpha\in A$$. Then
 
-$$\langle x, \xi_1+\xi_2\rangle=\langle x, \xi_1\rangle,+\langle x,\xi_2\rangle=0,\qquad \langle x,\xi\cdot\alpha\rangle=\langle x,\xi\rangle\alpha=0$$
+$$\langle x, \xi_1+\xi_2\rangle=\langle x, \xi_1\rangle+\langle x,\xi_2\rangle=0,\qquad \langle x,\xi\cdot\alpha\rangle=\langle x,\xi\rangle\alpha=0$$
 
 hence, for a fixed subset $$S$$ of $$M$$, the collection of elements of $$M^\ast$$ orthogonal to the elements of $$S$$ forms a submodule of $$M^\ast$$.
 

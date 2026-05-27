@@ -2,6 +2,9 @@
 title: "Marvin의 독서 노트 — 선형대수학"
 categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_linear_algebra
+
+sidebar:
+    nav: "llm_workshop-ko"
 author: Marvin
 date: 2026-05-26
 last_modified_at: 2026-05-27

@@ -41,7 +41,7 @@ $$a\x^\nu$$
 
 꼴의 원소들을 *단항식*이라 부른다. 그럼 임의의 다항식 $$u$$는 단항식들의 유한합
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $\nu$}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu=0$ for all but finitely many $\nu$}$$
 
 으로 나타낼 수 있다. 
 
@@ -59,7 +59,7 @@ $$P=\bigoplus_{n\in \mathbb{N}}\bigoplus_{\lvert\nu\rvert=n}(A[\x_i]_{i\in I})_\
 
 <ins id="def1">**정의 1**</ins> Polynomial ring $$P=A[\x]_{i\in I}$$의 임의의 원소 
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu=0$ for all but finitely many $\nu$}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu=0$ for all but finitely many $\nu$}$$
 
 가 주어졌다 하자. 그럼 $$u_n\neq 0$$을 만족하는 가장 큰 $$n$$을 $$u$$의 *degree*라 부르고 $$\deg(u)$$와 같이 표기한다. 정의에 의하여 상수항만을 가지는 다항식의 차수는 $$0$$이지만, 특별히 $$P$$의 덧셈에 대한 항등원 $$0$$에 대하여는 $$\deg(0)=-\infty$$로 정의한다.  
 
@@ -478,7 +478,7 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
 
 멱급수환은 다항식환의 또 다른 변형으로, 우리는 이제 단항식들의 무한합
 
-$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu$ need not satisfy finiteness condition}$$
+$$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu$ need not satisfy finiteness condition}$$
 
 들의 모임이다. 이를 $$A[[\x_i]]_{i\in I}$$으로 적고, *ring of formal power series*라 부른다. 
 
