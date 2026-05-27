@@ -170,6 +170,125 @@ TRANSLATION_SOURCE_TAG = "kimi-cli"
 
 _META_KEYS = ("translated_at", "translation_source", "last_polished_at")
 
+# Frontmatter fields that are LLM-translated (rest are deterministic).
+_LLM_FRONTMATTER_FIELDS = ("title", "excerpt", "description")
+
+
+def _split_fm_block(text: str) -> Tuple[str, str]:
+    """Return (frontmatter_inside_dashes, body_after_closing_dashes).
+
+    Tolerant of `---title:` (missing newline after opening ---).
+    """
+    m = _FRONTMATTER_RE.match(text)
+    if m:
+        return m.group(1), text[m.end():]
+    if text.startswith("---") and len(text) > 3:
+        close = text.find("\n---", 3)
+        if close != -1:
+            fm = text[3:close].lstrip("\n")
+            body_start = close + 4
+            if body_start < len(text) and text[body_start] == "\n":
+                body_start += 1
+            return fm, text[body_start:]
+    return "", text
+
+
+def _extract_fm_scalar(fm: str, key: str) -> Optional[str]:
+    """Extract a top-level scalar value (title/excerpt/description style)."""
+    m = re.search(rf'^{re.escape(key)}\s*:\s*"((?:[^"\\]|\\.)*)"\s*$', fm, re.M)
+    if m:
+        return m.group(1).replace('\\"', '"').replace("\\\\", "\\")
+    m = re.search(rf"^{re.escape(key)}\s*:\s*([^\n]+)$", fm, re.M)
+    if m:
+        return m.group(1).strip().strip('"').strip("'")
+    return None
+
+
+_FM_FIELDS_PROMPT = """Translate these Korean Jekyll frontmatter values to natural, idiomatic English. Output ONLY a single JSON object with the same keys; no preamble, no code fences, no commentary.
+
+Style:
+- title: a concise English noun phrase (e.g. "Abelian Groups and Fields"). Match the canonical English math terminology.
+- excerpt: a short phrase (≤ 12 words) describing the post's topic. Keep nouns parallel.
+- description: 1–2 sentences in natural English. No math notation, no escape characters.
+
+Constraints:
+- No Korean characters in any output value.
+- No surrounding quotes inside the JSON values.
+- Output must be valid JSON parseable by Python json.loads.
+
+KO input (JSON):
+{ko_json}
+
+Required output keys: {keys}"""
+
+
+def _translate_fm_fields_via_kimi(ko_fields: dict) -> dict:
+    """Small focused kimi call to translate title/excerpt/description.
+
+    `ko_fields` only includes keys whose values exist in KO frontmatter.
+    Returns a dict with the same keys mapped to English strings.
+    """
+    if not ko_fields:
+        return {}
+    prompt = _FM_FIELDS_PROMPT.format(
+        ko_json=json.dumps(ko_fields, ensure_ascii=False, indent=2),
+        keys=list(ko_fields.keys()),
+    )
+    out = call_kimi(prompt, thinking=False)
+    out = _FENCE_RE.sub("", out).strip()
+    try:
+        data = json.loads(out)
+    except json.JSONDecodeError as e:
+        raise RuntimeError(f"frontmatter-fields translation: invalid JSON output ({e}): {out[:200]!r}")
+    return {k: str(data.get(k, "")).strip() for k in ko_fields.keys()}
+
+
+def _compose_en_frontmatter(
+    ko_fm: str,
+    en_fields: dict,
+    *,
+    translated_at_iso: str,
+    polished_at_iso: Optional[str] = None,
+) -> str:
+    """Build EN frontmatter deterministically from KO frontmatter.
+
+    - LLM-translated fields (title/excerpt/description): replaced with en_fields
+    - permalink: `/ko/` → `/en/` (whole-token swap)
+    - sidebar.nav: trailing `-ko` → `-en`
+    - existing translation_source / translated_at / last_polished_at: stripped
+    - new translated_at / translation_source / (optionally last_polished_at): appended
+    """
+    fm = ko_fm
+    # Strip any existing translation meta to keep frontmatter idempotent.
+    for k in _META_KEYS:
+        fm = re.sub(rf"^{k}\s*:.*\n?", "", fm, flags=re.M)
+
+    out_lines: list[str] = []
+    for line in fm.splitlines():
+        stripped = line.strip()
+        if stripped and not stripped.startswith("#") and ":" in stripped and line[:1] not in (" ", "\t"):
+            key = stripped.split(":", 1)[0].strip()
+            if key in _LLM_FRONTMATTER_FIELDS and key in en_fields and en_fields[key]:
+                v = en_fields[key].replace("\\", "\\\\").replace('"', '\\"')
+                out_lines.append(f'{key}: "{v}"')
+                continue
+            if key == "permalink":
+                out_lines.append(line.replace("/ko/", "/en/", 1))
+                continue
+        # nested keys (sidebar nav, header) — pattern: `    nav: "xxx-ko"`
+        if re.search(r'^\s+nav\s*:\s*"[^"]*-ko"\s*$', line):
+            out_lines.append(re.sub(r'-ko"\s*$', '-en"', line))
+            continue
+        out_lines.append(line)
+
+    composed = "\n".join(out_lines).rstrip() + (
+        f"\ntranslated_at: {translated_at_iso}\n"
+        f"translation_source: {TRANSLATION_SOURCE_TAG}\n"
+    )
+    if polished_at_iso:
+        composed += f"last_polished_at: {polished_at_iso}\n"
+    return composed
+
 
 def en_translation_meta(en_path: Path) -> dict:
     """Read translated_at / translation_source / last_polished_at from en frontmatter."""
@@ -310,62 +429,56 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
 # Prompt
 # ---------------------------------------------------------------------------
 
-INSTRUCTIONS = """You translate Korean math blog posts (Jekyll markdown) into natural, idiomatic English. Output ONLY the translated markdown — no explanation, no code fences, no preamble. Start at the opening `---` and end at the last content line.
+INSTRUCTIONS = """You translate the BODY of a Korean math blog post (Jekyll markdown) into natural, idiomatic English. The input is the body content only — frontmatter has already been stripped and is handled separately by a script. Output ONLY the translated body. No frontmatter, no `---` lines, no explanation, no code fences, no preamble.
 
-Conversion rules:
+Conversion rules for the body:
 
-1. Math content: preserve every `$$...$$` block VERBATIM. Do not translate variable names or LaTeX commands.
+1. Math content: preserve every `$$...$$` block VERBATIM. Do not translate variable names or LaTeX commands. Same count and order as the KO source.
 
-2. Frontmatter:
-   - `title:` translate Korean to English (e.g. "가환군과 체" → "Abelian Groups and Fields")
-   - `excerpt:` translate to natural English
-   - `permalink:` replace `/ko/` with `/en/` (slug unchanged)
-   - `sidebar.nav:` replace `"{cat}-ko"` with `"{cat}-en"`
-   - `categories`, `header`, `date`, `last_modified_at`, `weight`, `published`: keep unchanged
+2. Cross-reference links:
+   - Path: `/ko/...` → `/en/...` (slug stays the same).
+   - Visible label: translate Korean section title (e.g. `§아핀다양체` → `§Affine Varieties`).
+   - Category bracket: `[\\[대수다양체\\] §..., ⁋정의 7]` → `[\\[Algebraic Varieties\\] §..., ⁋Definition 7]`.
+   - Labels: 정의→Definition, 명제→Proposition, 정리→Theorem, 보조정리→Lemma, 따름정리→Corollary, 예시→Example, 참고→Remark.
+   - Within-doc refs: `[정의 3](#def3)` → `[Definition 3](#def3)` (id unchanged).
+   - **Verification rule**: only emit a link `[display](url)` or an in-doc anchor `#labelN` if you are confident the target exists in the source body or in the linked post's English form. If uncertain about the precise English wording of a cross-reference label, keep the KO source form verbatim — a post-processing pass will normalise it. Do NOT invent English titles, definition numbers, or anchor ids that you have not seen.
 
-3. Cross-reference links in body:
-   - Path: `/ko/...` → `/en/...` (slug stays)
-   - Visible label: translate Korean section title (e.g. `§아핀다양체` → `§Affine Varieties`)
-   - Category bracket: `[\\[대수다양체\\] §..., ⁋정의 7]` → `[\\[Algebraic Varieties\\] §..., ⁋Definition 7]`
-   - Labels: 정의→Definition, 명제→Proposition, 정리→Theorem, 보조정리→Lemma, 따름정리→Corollary, 예시→Example, 참고→Remark
-   - Within-doc refs: `[정의 3](#def3)` → `[Definition 3](#def3)` (id unchanged)
+3. Bilingual italic terms:
+   - `*english<sub>한국어</sub>*` → `*english*` (drop Korean gloss).
+   - `*한국어<sub>english</sub>*` → `*English*` (use English gloss as primary).
 
-4. Bilingual italic terms:
-   - `*english<sub>한국어</sub>*` → `*english*` (drop Korean gloss)
-   - `*한국어<sub>english</sub>*` → `*English*` (use English gloss as primary)
+4. HTML structure: preserve `<div class="...">`, translate `<ins>` labels:
+   - `<ins id="def1">**정의 1**</ins>` → `<ins id="def1">**Definition 1**</ins>` (id and number N unchanged).
+   - `<details class="proof"><summary>증명</summary>` → `<summary>Proof</summary>`.
 
-5. HTML structure: preserve `<div class="...">`, translate `<ins>` labels:
-   - `<ins id="def1">**정의 1**</ins>` → `<ins id="def1">**Definition 1**</ins>` (id unchanged)
-   - `<details class="proof"><summary>증명</summary>` → `<summary>Proof</summary>`
+5. Style: first-person plural ("we"); idiomatic, not literal grammar. "우리는 ~를 정의한다" → "we define ~".
 
-6. Style: first-person plural "우리는" → "we"; "살펴보았다" → "we saw / we studied"; "이번 글에서 우리는 ~를 정의한다" → "In this post we define ~". Idiomatic English, not literal grammar.
+6. Section headers: `## 정의` → `## Definition`. Use noun phrases.
 
-7. Section headers: `## 정의` → `## Definition`. Use noun phrases.
+7. Footnotes: `[^1]` markers preserved; footnote bodies translated.
 
-8. Footnotes: `[^1]` markers preserved; footnote bodies translated.
-
-9. References: `참고문헌` → `References`. BibTeX entries (author / journal / year / pages) unchanged.
+8. References: `참고문헌` → `References`. BibTeX entries (author / journal / year / pages) unchanged.
 
 # Self-check before responding (must all pass)
 
-- Same number of `$$...$$` blocks as the KO source — no math added, dropped, split, or merged
-- Every `<ins id="...">` from KO appears with the same id and the same number N
-- No `/ko/` paths remain in the body (all cross-ref paths use `/en/`)
-- No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌)
-- Frontmatter has both opening and closing `---`, and the body ends at the final content line (do not truncate mid-sentence)
+- Same number of `$$...$$` blocks as the KO body — no math added, dropped, split, or merged.
+- Every `<ins id="...">` from KO appears with the same id and same number N.
+- No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
+- The body ends at the final content line — do not truncate mid-sentence.
+- Output begins with the first body character (no leading `---` or blank lines).
 
-Now translate the post below."""
-
-
-def build_prompt(ko_content: str) -> str:
-    return INSTRUCTIONS + "\n\n--- BEGIN POST ---\n" + ko_content + "\n--- END POST ---\n"
+Now translate the body below."""
 
 
-POLISH_INSTRUCTIONS = """You are polishing an existing English translation of a Korean math blog post. Output ONLY the polished markdown — no explanation, no code fences, no preamble. Start at the opening `---` (frontmatter) and end at the last content line.
+def build_prompt(ko_body: str) -> str:
+    return INSTRUCTIONS + "\n\n" + ko_body
+
+
+POLISH_INSTRUCTIONS = """You are polishing the BODY of an existing English translation of a Korean math blog post. Frontmatter has been stripped and is handled separately by a script. Output ONLY the polished body. No frontmatter, no `---` lines, no explanation, no code fences, no preamble.
 
 # Task
 
-Given the Korean source (for meaning reference) and the current English translation, produce an *improved* English version. Refine prose quality. Preserve everything else exactly.
+Given the Korean source body (for meaning reference) and the current English translation body, produce an *improved* English body. Refine prose quality. Preserve everything else exactly.
 
 # What to improve
 
@@ -377,48 +490,43 @@ Given the Korean source (for meaning reference) and the current English translat
 
 # What to preserve VERBATIM — mathematical fidelity is non-negotiable
 
-1. **Math blocks `$$...$$`** — every character byte-for-byte: LaTeX commands, variable names, spacing, ordering. The COUNT and ORDER of math blocks in the output MUST match the Korean source exactly. Do not split, merge, reorder, add, or remove math blocks. Easiest rule: never touch what is inside `$$...$$`.
-2. **`<ins id="...">**Label N**</ins>` numbering** — every `<ins>` id (e.g. `def1`, `prop2`, `thm3`) and the integer N inside MUST appear in the output with the same id, the same number, in the same order as in the source. Numbering drift breaks every cross-reference in the blog.
-3. Frontmatter — every key, in the same order. Do not add or drop fields. `translated_at` and `last_polished_at` are injected automatically — do not write them yourself.
-4. Cross-reference link **paths** `/en/math/...` and **anchors** (`#def1`, `#prop2`) — unchanged. Visible labels may be lightly refined only if materially clearer.
-5. HTML structure — `<div class="...">`, `<ins id="...">**...**</ins>`, `<details class="proof"><summary>...</summary>`, `<sub>...</sub>` — keep exactly
-6. Section headers (`## ...`) — keep as-is unless genuinely wrong
-7. Footnote markers `[^N]` and identifiers — unchanged
-8. References / bibliography entries (BibTeX-style) — unchanged
+1. **Math blocks `$$...$$`** — byte-for-byte: LaTeX commands, variable names, spacing, ordering. The COUNT and ORDER of math blocks in the output MUST match the KO source exactly. Easiest rule: never touch what is inside `$$...$$`.
+2. **`<ins id="...">**Label N**</ins>` numbering** — every `<ins>` id (e.g. `def1`, `prop2`) and the integer N MUST appear with the same id and N, in the same order as in the KO source.
+3. Cross-reference **paths** (`/en/math/...`) and **anchors** (`#def1`, `#prop2`) — unchanged. Visible labels may be lightly refined only if materially clearer.
+   - **Verification rule**: do NOT change an anchor target or invent a new `[display](url)` pairing unless you have actually seen the target with that exact form. If unsure, leave the existing form untouched.
+4. HTML structure — `<div class="...">`, `<ins id="...">**...**</ins>`, `<details class="proof"><summary>...</summary>`, `<sub>...</sub>` — keep exactly.
+5. Section headers (`## ...`) — keep as-is unless genuinely wrong.
+6. Footnote markers `[^N]` and identifiers — unchanged.
+7. References / bibliography entries (BibTeX-style) — unchanged.
 
 # Self-check before responding
 
-Mentally verify:
-- Same number of `$$...$$` blocks as the KO source? ✓
-- Every `<ins id="...">**Label N**</ins>` from KO is present with identical id and N? ✓
-- No `/ko/` paths remain in the body? ✓
-- No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌)? ✓
-- Frontmatter starts with `---` and the closing `---` is present? ✓
+- Same number of `$$...$$` blocks as the KO body.
+- Every `<ins id="...">**Label N**</ins>` from KO present with identical id and N.
+- No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
+- Output is body only — no frontmatter or `---` lines.
 
 # Style anchors
 
-- First-person plural ("we ...") throughout
-- Precise, technical, declarative; matches the user's canonical voice in other posts
-- No "translator notes", no meta-commentary, no apologies
-- Do not restructure paragraphs unless the original is broken
+- First-person plural ("we ...") throughout.
+- Precise, technical, declarative; match the user's canonical voice in other posts.
+- No "translator notes", no meta-commentary, no apologies.
+- Do not restructure paragraphs unless the original is broken.
 
 # Input format
 
 You will receive:
-- Korean source between `--- KO SOURCE ---` / `--- END KO SOURCE ---`
-- Current English translation between `--- EN CURRENT ---` / `--- END EN CURRENT ---`
+- Korean source body between `--- KO BODY ---` / `--- END KO BODY ---`
+- Current English translation body between `--- EN BODY ---` / `--- END EN BODY ---`
 
-Output ONLY the polished English markdown."""
+Output ONLY the polished English body."""
 
 
-def build_polish_prompt(ko_content: str, en_content: str) -> str:
-    # Strip our injected markers from en before passing — we re-inject post-call.
-    en_clean = re.sub(r"^translated_at\s*:.*\n?",     "", en_content, flags=re.MULTILINE)
-    en_clean = re.sub(r"^translation_source\s*:.*\n?", "", en_clean,   flags=re.MULTILINE)
+def build_polish_prompt(ko_body: str, en_body: str) -> str:
     return (
         POLISH_INSTRUCTIONS
-        + "\n\n--- KO SOURCE ---\n"   + ko_content + "\n--- END KO SOURCE ---\n"
-        + "\n--- EN CURRENT ---\n"    + en_clean   + "\n--- END EN CURRENT ---\n"
+        + "\n\n--- KO BODY ---\n"   + ko_body + "\n--- END KO BODY ---\n"
+        + "\n--- EN BODY ---\n"     + en_body + "\n--- END EN BODY ---\n"
     )
 
 
@@ -573,34 +681,79 @@ def translate(
     en_path: Optional[Path] = None,
     warnings: Optional[list] = None,
 ) -> Tuple[str, int, int]:
+    """Translate or polish a KO post into EN.
+
+    Pipeline:
+      1. Split KO into frontmatter + body.
+      2. Determine EN title/excerpt/description:
+         - translate: kimi small task on KO frontmatter values.
+         - polish: prefer existing EN values; only translate fields missing
+           from EN (e.g. description, added later via the KO description batch).
+      3. Body translation/polish: kimi main call. Output is body only — no
+         frontmatter handling on the LLM side.
+      4. Body post-processing: label_fix, strip residual <sub>, mechanical
+         /ko/ → /en/ (the validator no longer hard-fails on /ko/ residue;
+         we just normalise it).
+      5. Compose EN frontmatter deterministically from KO frontmatter
+         (permalink /ko/→/en/, sidebar.nav -ko→-en, translated fields, meta).
+      6. Validate the assembled output (math count, <ins> ids, label residue).
+    """
     ko_content = ko_path.read_text(encoding="utf-8")
+    ko_fm_text, ko_body = _split_fm_block(ko_content)
+
     en_current: Optional[str] = None
+    en_current_fm_text, en_current_body = "", ""
     if reason == "polish" and en_path is not None and en_path.exists():
         en_current = en_path.read_text(encoding="utf-8")
-        prompt = build_polish_prompt(ko_content, en_current)
-    else:                                       # pending or drift → re-translate from scratch
-        prompt = build_prompt(ko_content)
+        en_current_fm_text, en_current_body = _split_fm_block(en_current)
 
-    translated = call_kimi(prompt)
-    # Mechanical KO-label cleanup before any validation / metadata injection.
-    translated, _n_fixed = label_fix(translated)
-    # Strip residual bilingual `<sub>...</sub>` glosses. The translation rule
-    # already drops/replaces them, but Kimi occasionally leaves them behind
-    # (esp. `<sub>한국어</sub>`). No legitimate <sub> use exists in this blog
-    # (math uses LaTeX subscripts), so blanket-stripping is safe.
-    translated = re.sub(r"<sub>[^<]*?</sub>", "", translated)
+    # ---- Step 1: title / excerpt / description ----
+    en_fields: dict = {}
+    fields_to_translate: dict = {}
+    for key in _LLM_FRONTMATTER_FIELDS:
+        ko_val = _extract_fm_scalar(ko_fm_text, key)
+        if not ko_val:  # missing or empty in KO → skip the field entirely
+            continue
+        if reason == "polish" and en_current_fm_text:
+            existing = _extract_fm_scalar(en_current_fm_text, key)
+            if existing:
+                en_fields[key] = existing
+                continue
+        fields_to_translate[key] = ko_val
+    if fields_to_translate:
+        en_fields.update(_translate_fm_fields_via_kimi(fields_to_translate))
 
+    # ---- Step 2: body translation / polish ----
+    if reason == "polish" and en_current_body.strip():
+        prompt = build_polish_prompt(ko_body, en_current_body)
+    else:
+        prompt = build_prompt(ko_body)
+    en_body = call_kimi(prompt)
+
+    # ---- Step 3: body post-processing ----
+    en_body, _n_fixed = label_fix(en_body)
+    en_body = re.sub(r"<sub>[^<]*?</sub>", "", en_body)
+    # Mechanical /ko/ → /en/ for any cross-refs the LLM forgot to convert.
+    # Blanket substring replacement; the math blog body never has legitimate
+    # `/ko/` in prose or code, so we don't need a guarded regex.
+    en_body = en_body.replace("/ko/", "/en/")
+
+    # ---- Step 4: compose final EN file ----
+    polished_at_iso = translated_at_iso if reason == "polish" else None
+    en_fm = _compose_en_frontmatter(
+        ko_fm_text, en_fields,
+        translated_at_iso=translated_at_iso,
+        polished_at_iso=polished_at_iso,
+    )
+    translated = f"---\n{en_fm}---\n{en_body.lstrip(chr(10))}"
+
+    # ---- Step 5: validate assembled output ----
     err = validate_translation(
-        translated, ko_content=ko_content, reason=reason, en_current=en_current,
-        warnings=warnings,
+        translated, ko_content=ko_content, reason=reason,
+        en_current=en_current, warnings=warnings,
     )
     if err:
         raise RuntimeError(f"validation failed: {err}")
-
-    polished = translated_at_iso if reason == "polish" else None
-    translated = inject_translation_metadata(
-        translated, translated_at_iso, polished_at_iso=polished,
-    )
     return translated, len(prompt), len(translated)
 
 
