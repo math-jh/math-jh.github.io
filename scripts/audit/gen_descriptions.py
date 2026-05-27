@@ -142,7 +142,7 @@ def main():
             log(f"[{i}/{len(missing)}] SHORT {len(desc)}c {rel}: {desc!r}")
 
         new_fm = insert_description(fm, desc)
-        Path(f).write_text("---" + new_fm + "---" + body)
+        Path(f).write_text("---\n" + new_fm.lstrip("\n") + "---" + body)
         ok += 1
         log(f"[{i}/{len(missing)}] OK {rel}: {desc[:80]}")
 
