@@ -56,6 +56,15 @@
         attach();
     }
 
+    function closeOverlay() {
+        var overlay = document.querySelector(".search-content");
+        var initial = document.querySelector(".initial-content");
+        if (overlay && overlay.classList.contains("is--visible")) {
+            overlay.classList.remove("is--visible");
+            if (initial) initial.classList.remove("is--hidden");
+        }
+    }
+
     function attach() {
         // Mount the dedicated /search/ page immediately if present.
         mountPageNow();
@@ -67,6 +76,13 @@
                 mountPopupNow();
             });
         });
+        // Click backdrop (outside the card) closes the overlay.
+        var overlay = document.querySelector(".search-content");
+        if (overlay) {
+            overlay.addEventListener("click", function (ev) {
+                if (ev.target === overlay) closeOverlay();
+            });
+        }
     }
 })();
 </script>
