@@ -40,9 +40,13 @@
     padding: 0.4rem 0.9rem 0.5rem;
     background: $background-color;
     color: $text-color;
-    border: 1.5px solid $masthead-link-color-hover;
+    border: 1px solid $border-color;
     border-radius: 8px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    transition: border-color 0.15s ease;
+    // Gold accent moves to the card border when any descendant (the search
+    // input) is focused. The input itself stays borderless.
+    &:focus-within { border-color: $masthead-link-color-hover; }
     animation: pf-pop-in 0.18s ease-out both;
 
     // Make sure interactive Pagefind UI elements receive clicks even if any
