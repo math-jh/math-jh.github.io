@@ -110,7 +110,7 @@ $$F \rightarrow G \rightarrow M \rightarrow 0$$
 
 에 $$\widehat{A}\otimes_A-$$를 취하면 [보조정리 3](#lem3)과 [\[호몰로지 대수학\] §Diagram chasing, ⁋명제 1](/ko/math/homological_algebra/diagram_chasing#prop1)에 의해 원하는 결과를 얻는다. 
 
-두 번째 결과는 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)에 의해, 임의의 finitely generated ideal $$\mathfrak{a}$$에 대해 $$\widehat{a} \rightarrow \widehat{A}$$가 injective임을 보이는 것과 같아지고, 이는 다시 [보조정리 3](#lem3)에서 살펴본 completion의 left exactness로부터 자명하다. 
+두 번째 결과는 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)에 의해, 임의의 finitely generated ideal $$\mathfrak{a}$$에 대해 $$\widehat{\mathfrak{a}} \rightarrow \widehat{A}$$가 injective임을 보이는 것과 같아지고, 이는 다시 [보조정리 3](#lem3)에서 살펴본 completion의 left exactness로부터 자명하다. 
 
 </details>
 
@@ -228,7 +228,7 @@ $$f(a)+e^2(r+r^2h(r))=f(a+er)=0=f(a+er')=f(a)+e^2(r'+(r')^2h(r'))$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8 (Cohen structure theorem)**</ins> Complete local noethherian ring $$(A, \mathfrak{m})$$과 residue field $$\kappa$$에 대하여, 만일 $$A$$가 어떠한 field를 포함한다면 $$A\cong\kappa[[\x_1,\ldots, \x_n]]/\mathfrak{a}$$를 만족하는 적당한 $$n$$과 ideal $$\mathfrak{a}$$가 존재한다. 
+<ins id="thm8">**정리 8 (Cohen structure theorem)**</ins> Complete local noetherian ring $$(A, \mathfrak{m})$$과 residue field $$\kappa$$에 대하여, 만일 $$A$$가 어떠한 field를 포함한다면 $$A\cong\kappa[[\x_1,\ldots, \x_n]]/\mathfrak{a}$$를 만족하는 적당한 $$n$$과 ideal $$\mathfrak{a}$$가 존재한다. 
 
 </div>
 

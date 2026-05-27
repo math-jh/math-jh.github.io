@@ -21,7 +21,7 @@ weight: 18
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 위상공간 $$X$$가 *connected space<sub>연결공간</sub>*라는 것은 $$X$$가 두 개의 서로소인 열린집합의 합집합으로 나타날 수 없는 것이다. 더 일반적으로, $$X$$의 부분집합 $$A$$가 connected라는 것은 $$A$$에 subspace topology를 준 것이 connected인 것이다.
+<ins id="def1">**정의 1**</ins> 위상공간 $$X$$가 *connected space<sub>연결공간</sub>*라는 것은 $$X$$가 두 개의 서로소인 비어있지 않은 열린집합의 합집합으로 나타날 수 없는 것이다. 더 일반적으로, $$X$$의 부분집합 $$A$$가 connected라는 것은 $$A$$에 subspace topology를 준 것이 connected인 것이다.
 
 </div>
 
@@ -125,7 +125,7 @@ $$f(x)=\begin{cases}1&\text{if $x\in U$}\\0&\text{if $x\in V$}\end{cases}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> $$X$$의 점 $$x\in X$$를 포함하는 *connected component<sub>연결성분</sub>*는 $$x$$를 포함하는 $$X$$의 connected subset 중 가장 큰 것이다. 만일 $$X$$의 임의의 점 $$x$$를 포함하는 connected componenet가 항상 $$\{x\}$$ 자기자신이라면 $$X$$를 *totally disconnected*라 부른다.
+<ins id="def7">**정의 7**</ins> $$X$$의 점 $$x\in X$$를 포함하는 *connected component<sub>연결성분</sub>*는 $$x$$를 포함하는 $$X$$의 connected subset 중 가장 큰 것이다. 만일 $$X$$의 임의의 점 $$x$$를 포함하는 connected component가 항상 $$\{x\}$$ 자기자신이라면 $$X$$를 *totally disconnected*라 부른다.
 
 </div>
 
@@ -141,7 +141,7 @@ $$X=\bigcup_{i\in I} U_i$$
 
 <ins id="prop8">**명제 8**</ins> 위상공간 $$X$$ 위에 동치관계 $$\sim$$을
 
-$$x\sim y\iff \text{$x$ and $y$ lies in the same component}$$
+$$x\sim y\iff \text{$x$ and $y$ lie in the same component}$$
 
 로 정의하자. 그럼 $$X/{\sim}$$은 totally disconnected이다.
 
@@ -161,7 +161,7 @@ $$x\sim y\iff \text{$x$ and $y$ lies in the same component}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> $$X$$가 locally connected인 것과, $$X$$의 열린집합을 포함하는 임의의 component가 항상 open인 것이 동치이다. 
+<ins id="prop10">**명제 10**</ins> $$X$$가 locally connected인 것과, $$X$$의 각 열린집합의 component가 항상 open인 것이 동치이다. 
 
 </div>
 

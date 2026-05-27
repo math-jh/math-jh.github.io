@@ -88,7 +88,7 @@ We have defined all topological properties in terms of neighborhoods up to now, 
 
 Since $$A$$ is a neighborhood of $$x$$ in $$A$$, one direction is trivial.
 
-For the converse, let $$U$$ be an arbitrary neighborhood of $$x$$ in $$A$$. Then there exists an open neighborhood $$U'$$ of $$x$$ (in $$A$$) contained in $$U$$. On the other hand, if $$A$$ is a neighborhood of $$x$$ in $$X$$, then there exists an open neighborhood $$V$$ of $$x$$ (in $$X$$) contained in $$A$$. Now $$U'\cap V$$ is a nonempty subset, $$U'\cap V\subseteq V$$, and since $$U'\cap V$$ is an open neighborhood of $$x$$ in $$X$$, it follows that $$V$$ is a neighborhood of $$x$$ in $$X$$.
+For the converse, let $$U$$ be an arbitrary neighborhood of $$x$$ in $$A$$. Then there exists an open neighborhood $$U'$$ of $$x$$ (in $$A$$) contained in $$U$$. On the other hand, if $$A$$ is a neighborhood of $$x$$ in $$X$$, then there exists an open neighborhood $$V$$ of $$x$$ (in $$X$$) contained in $$A$$. Now $$U'\cap V$$ is a nonempty subset, $$U'\cap V\subseteq U$$, and since $$U'\cap V$$ is an open neighborhood of $$x$$ in $$X$$, it follows that $$U$$ is a neighborhood of $$x$$ in $$X$$.
 
 </details>
 
