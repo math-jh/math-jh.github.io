@@ -1950,3 +1950,32 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `The Axiom of Choice.` | multi-word English emphasis — possibly a definition |
 
+## 서수와 정렬집합
+- post: `_posts/Math/Set_Theory/ko/2021-08-23-Ordinals.md`
+- permalink: `/ko/math/set_theory/ordinals`
+- scanned: 2026-05-27T15:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Peano Axioms.` | multi-word English emphasis — possibly a definition |
+| `successor function` | multi-word English emphasis — possibly a definition |
+| `The Axiom of infinity` | multi-word English emphasis — possibly a definition |
+
+## 기수
+- post: `_posts/Math/Set_Theory/ko/2021-09-04-Cardinals.md`
+- permalink: `/ko/math/set_theory/cardinals`
+- scanned: 2026-05-27T16:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `The Axiom of Choice.` | multi-word English emphasis — possibly a definition |
+
+## Grothendieck 군
+- post: `_posts/Math/Algebraic_Structures/ko/2021-09-04-Grothendieck_Groups.md`
+- permalink: `/ko/math/algebraic_structures/Grothendieck_groups`
+- scanned: 2026-05-27T16:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `group homomorphism` | multi-word English emphasis — possibly a definition |
+
