@@ -1,8 +1,8 @@
 {
-  "current_cat_idx": 1,
-  "current_cat": "Math / Set Theory",
+  "current_cat_idx": 3,
+  "current_cat": "Math / Algebraic Structures",
   "cat_start_date": "2026-05-27",
-  "current_note_post": "_posts/Misc/LLM_Workshop/2026-05-27-Marvin_Set_Theory.md",
-  "posts_done_in_cat": ["/ko/math/set_theory/zfc_axioms", "/ko/math/set_theory/ordered_pair", "/ko/math/set_theory/binary_relation", "/ko/math/set_theory/operation_of_binary_relations", "/ko/math/set_theory/functions", "/ko/math/set_theory/operation_of_functions", "/ko/math/set_theory/retraction_and_section", "/ko/math/set_theory/union_and_intersection"],
+  "current_note_post": "_posts/Misc/LLM_Workshop/2026-05-27-Marvin_Algebraic_Structures.md",
+  "posts_done_in_cat": ["/ko/math/algebraic_structures/algebraic_structures", "/ko/math/algebraic_structures/groups", "/ko/math/algebraic_structures/Grothendieck_groups", "/ko/math/algebraic_structures/group_homomorphisms", "/ko/math/algebraic_structures/quotient_groups", "/ko/math/algebraic_structures/isomorphism_theorems", "/ko/math/algebraic_structures/direct_products", "/ko/math/algebraic_structures/restricted_sums"],
   "all_complete": false
 }
