@@ -1,5 +1,4 @@
----
-title: "Interior, Closure, and Boundary"
+---title: "Interior, Closure, and Boundary"
 excerpt: "Basic concepts in topology"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-11-09
 last_modified_at: 2022-11-09
 weight: 3
-translated_at: 2026-05-23T00:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Before we take up continuous functions, sequences, and related notions in earnest, we complete the introduction of the language of topology.

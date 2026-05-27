@@ -1,5 +1,4 @@
----
-title: "Quasi-Projective Varieties"
+---title: "Quasi-Projective Varieties"
 excerpt: "Quasi-projective varieties and regular maps"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-03-15
 last_modified_at: 2026-03-17
 weight: 3
-translated_at: 2026-05-26T03:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties) and [§Projective Varieties](/en/math/algebraic_varieties/projective_varieties) we studied geometric objects defined as subsets of affine space and projective space, respectively. However, the most natural objects in algebraic geometry belong to a larger category that contains both. In this section we define *quasi-projective varieties* and show that they encompass both affine and projective varieties. We also define morphisms between quasi-projective varieties and verify that they agree with the existing notions.

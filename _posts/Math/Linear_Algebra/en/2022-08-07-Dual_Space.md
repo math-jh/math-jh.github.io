@@ -1,5 +1,4 @@
----
-title: "Dual Space"
+---title: "Dual Space"
 excerpt: "Dual spaces, dual maps, and orthogonal complements"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-08-05
 last_modified_at: 2022-08-05
 
 weight: 115
-translated_at: 2026-05-23T07:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Dual Basis

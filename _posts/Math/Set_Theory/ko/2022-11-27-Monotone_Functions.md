@@ -1,6 +1,6 @@
 ---
-
 title: "단조함수"
+description: "부분집합에 대한 원순서관계의 제한과 곱을 정의하고, 이 구조가 순서관계까지 확장되는 과정을 다룬다."
 excerpt: "순서집합의 연산과 단조함수"
 
 categories: [Math / Set Theory]

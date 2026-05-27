@@ -1,5 +1,4 @@
----
-title: "Properties of Completion"
+---title: "Properties of Completion"
 excerpt: "Compatibility of completion with exact sequences, Artin-Rees lemma"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-01-16
 last_modified_at: 2025-01-16
 weight: 15
-translated_at: 2026-05-26T06:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We now examine some additional properties of completion.

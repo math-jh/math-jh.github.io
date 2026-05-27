@@ -1,5 +1,4 @@
----
-title: "Basis"
+---title: "Basis"
 excerpt: "Definition of free modules, basis, and the universal property"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-08-18
 last_modified_at: 2024-09-23
 weight: 3
-translated_at: 2026-05-23T01:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 For an arbitrary set $$X$$, we saw that the free $$A$$-module defined by $$X$$ is given by the formula

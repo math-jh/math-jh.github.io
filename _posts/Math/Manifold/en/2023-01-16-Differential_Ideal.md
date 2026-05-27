@@ -1,5 +1,4 @@
----
-title: "Differential Ideal"
+---title: "Differential Ideal"
 excerpt: "Differential ideals and Frobenius's theorem"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-01-16
 last_modified_at: 2023-01-16
 weight: 15
-translated_at: 2026-05-21T21:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We previously verified that the collection of differential forms constitutes a $$C^\infty(M)$$-algebra. Algebraically, one can consider an ideal of this collection, and moreover, since this collection $$\Omega^\ast(M)$$ is a dg-algebra, it is more natural in the proper context to consider the *differential ideal* that we now define.

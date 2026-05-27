@@ -1,6 +1,6 @@
 ---
 title: "분수체"
-description: "交换的 환에서 곱셈 부분집합을 이용해 분수환을 구성하는 과정을 다루며, 정수환의 분수체인 유리수 체의 구성을 일반화한다."
+description: "정수환의 분수체 구성 과정을 일반화하여, 가환환과 그 곱셈 부분집합으로부터 분수체를 만드는 방법을 다룬다. Grothendieck 군의 construction을 활용해 monoid of fractions 위에 유일한 덧셈구조를 부여하여 가환환을 얻는 과정을 증명한다."
 excerpt: "Localization, ring of fraction, prime ideal"
 
 categories: [Math / Algebraic Structures]

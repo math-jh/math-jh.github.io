@@ -1,5 +1,4 @@
----
-title: "Product Spaces"
+---title: "Product Spaces"
 excerpt: "Properties of product spaces"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-11-21
 last_modified_at: 2022-11-21
 weight: 11
-translated_at: 2026-05-23T03:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definition and Properties of Product Spaces

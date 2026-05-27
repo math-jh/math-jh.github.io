@@ -1,5 +1,4 @@
----
-title: "Derivations"
+---title: "Derivations"
 excerpt: "Differential module"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-12-12
 last_modified_at: 2024-10-16
 weight: 120
-translated_at: 2026-05-26T20:00:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definition

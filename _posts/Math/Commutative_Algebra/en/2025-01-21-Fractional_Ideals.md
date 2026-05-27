@@ -1,5 +1,4 @@
----
-title: "Fractional Ideals"
+---title: "Fractional Ideals"
 excerpt: "Fractional ideals, invertible modules, and the Picard group"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-01-21
 last_modified_at: 2025-01-24
 weight: 19
-translated_at: 2026-05-21T04:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the next post we study regular local rings ([§Dimension, ⁋Definition 9](/en/math/commutative_algebra/Krull_dimension#def9)). Before that, we need to define a few concepts.

@@ -1,5 +1,4 @@
----
-title: "Borel Subgroups and Flag Varieties"
+---title: "Borel Subgroups and Flag Varieties"
 excerpt: "Dynkin diagrams, ADE classification, and flag varieties"
 
 categories: [Math / Lie Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2026-02-28
 last_modified_at: 2026-02-28
 weight: 4
-translated_at: 2026-05-20T23:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Root Systems](/en/math/lie_theory/root_systems) we defined the root system $$\Phi$$ of a semisimple Lie algebra $$\mathfrak{g}$$ and verified that its symmetry is captured by the Weyl group. Also, in [§Torus Action](/en/math/lie_theory/torus_action) we examined the relationship between the maximal torus $$T$$ of a compact Lie group $$G$$ and the Weyl group $$W=N(T)/T$$. In this post we classify Lie algebras via the structure of root systems and introduce the geometric object that arises naturally from this: the flag variety.

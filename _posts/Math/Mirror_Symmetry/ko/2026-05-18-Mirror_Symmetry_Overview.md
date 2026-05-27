@@ -1,5 +1,6 @@
 ---
 title: "거울대칭 개요"
+description: "초끈이론에서 유래한 거울대칭은 칼라비-야우 삼중 곡면의 켈러 구조와 복소 구조를 교환하는 Type IIA와 Type IIB의 이중성으로, 1991년 대수기하학자들이 풀지 못한 곡선 계수 문제를 물리학적 방법으로 해결한 사건을 통해 주목받았다."
 excerpt: "역사적 배경과 Hori-Vafa mirror"
 
 categories: [Math / Mirror Symmetry]

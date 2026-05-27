@@ -1,4 +1,5 @@
----title: "접공간과 매끄러움"
+---
+title: "접공간과 매끄러움"
 description: "미분기하학의 접공간 개념을 대수기하학의 다양체에 일반화하여 Zariski 접공간과 여접공간을 정의하고, 아핀 다양체의 경우 접벡터를 함수의 미분으로 명확히 기술한다."
 excerpt: "Tangent spaces and smoothness of algebraic varieties"
 

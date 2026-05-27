@@ -1,5 +1,4 @@
----
-title: "Polynomial Rings"
+---title: "Polynomial Rings"
 excerpt: "Factorization of polynomial rings over commutative rings and Gauss's lemma"
 
 categories: [Math / Ring Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-05-06
 last_modified_at: 2025-05-06
 weight: 3
-translated_at: 2026-05-22T13:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 <div class="remark" markdown="1">

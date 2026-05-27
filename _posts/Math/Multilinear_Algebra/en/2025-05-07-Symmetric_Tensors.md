@@ -1,5 +1,4 @@
----
-title: "Symmetric Tensors"
+---title: "Symmetric Tensors"
 excerpt: "The action of the symmetric group, symmetric tensors, and symmetric powers"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-05-07
 last_modified_at: 2025-05-07
 weight: 201
-translated_at: 2026-05-22T07:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Given any group $$H$$ and ring $$A$$, we defined the group ring $$AH$$. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5)) Now fix an $$AH$$-module $$M$$, and define $$M^H$$ as the set

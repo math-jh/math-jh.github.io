@@ -1,5 +1,4 @@
----
-title: "Blowup Algebras"
+---title: "Blowup Algebras"
 excerpt: "Rees algebras and associated graded rings constructed from an ideal"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-20
 last_modified_at: 2024-10-20
 weight: 11
-translated_at: 2026-05-26T12:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we fix a ring $$A$$ and an ideal $$\mathfrak{a}$$ of $$A$$, and define two graded $$A$$-algebras arising from it.

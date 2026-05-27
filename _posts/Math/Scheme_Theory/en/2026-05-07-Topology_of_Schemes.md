@@ -1,5 +1,4 @@
----
-title: "Topological Structure of Schemes"
+---title: "Topological Structure of Schemes"
 excerpt: "Generic points, Zariski topology, and irreducible components"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-02-03
 last_modified_at: 2025-02-23
 weight: 5
-translated_at: 2026-05-22T20:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Generic Points

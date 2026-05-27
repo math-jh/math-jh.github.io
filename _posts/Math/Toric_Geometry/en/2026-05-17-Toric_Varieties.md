@@ -1,5 +1,4 @@
----
-title: "Definition of Toric Varieties"
+---title: "Definition of Toric Varieties"
 excerpt: "General toric varieties obtained by gluing affine toric varieties from a fan"
 
 categories: [Math / Toric Geometry]
@@ -15,7 +14,7 @@ sidebar:
 date: 2026-05-17
 last_modified_at: 2026-05-17
 weight: 2
-translated_at: 2026-05-24T12:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 The affine toric variety defined in [§Affine Toric Varieties, ⁋Definition 5](/en/math/toric_geometry/affine_toric_varieties#def5) is the algebraic variety $$U_\tau$$ corresponding to a single strongly convex rational polyhedral cone $$\tau$$. As we saw in [§Affine Toric Varieties, ⁋Example 14](/en/math/toric_geometry/affine_toric_varieties#ex14), this can be thought of as an algebraic variety equipped with a torus action structure, and by its definition it is the $$\Spec$$ of a suitable ring, hence an affine variety.

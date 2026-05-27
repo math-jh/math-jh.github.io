@@ -1,5 +1,4 @@
----
-title: "Tangent Space"
+---title: "Tangent Space"
 excerpt: "Tangent Vectors and Tangent Space"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-06-14
 last_modified_at: 2022-12-09
 weight: 3
-translated_at: 2026-05-21T15:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we define tangent vectors on a manifold and the space they generate, the tangent space.

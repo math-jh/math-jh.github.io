@@ -1,6 +1,7 @@
 ---
 
 title: "몫공간"
+description: "동치관계가 정의된 집합 위에서 몫공간 위상을 도입하는 방법을 다루고, 부분공간의 locally closed 성질과 함께 몫공간의 기본 구조를 정리한다."
 excerpt: "부분공간의 성질들"
 
 categories: [Math / Topology]

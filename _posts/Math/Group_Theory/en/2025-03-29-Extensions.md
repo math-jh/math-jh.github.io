@@ -1,5 +1,4 @@
----
-title: "Group Extensions"
+---title: "Group Extensions"
 excerpt: "Group extensions as short exact sequences, and semidirect products"
 
 categories: [Math / Group Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-03-29
 last_modified_at: 2025-03-29
 weight: 2
-translated_at: 2026-05-20T14:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we discuss extensions of groups.

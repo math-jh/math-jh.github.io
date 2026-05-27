@@ -1,5 +1,4 @@
----
-title: "Properties of Localization"
+---title: "Properties of Localization"
 excerpt: "Compatibility of localization with Hom and tensor, and local properties"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-16
 last_modified_at: 2024-10-16
 weight: 3
-translated_at: 2026-05-26T05:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We now examine additional properties of localization. The first goal of this post is to prove the close relationship between the localization of modules and the localization of rings that we studied in the previous post. Throughout this post, we fix a ring $$A$$, a multiplicative subset $$S$$ of $$A$$, and an $$A$$-module $$M$$.

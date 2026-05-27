@@ -1,5 +1,4 @@
----
-title: "Derived Functors"
+---title: "Derived Functors"
 excerpt: "Definition of right/left derived functors via δ-functors"
 
 categories: [Math / Homological Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-11-03
 last_modified_at: 2024-11-03
 weight: 5
-translated_at: 2026-05-20T18:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## $$\delta$$-functor

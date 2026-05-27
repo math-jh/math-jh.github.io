@@ -1,5 +1,4 @@
----
-title: "Isomorphisms"
+---title: "Isomorphisms"
 excerpt: "Equivalent vector spaces"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-08-02
 last_modified_at: 2022-08-01
 
 weight: 8
-translated_at: 2026-05-21T05:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In mathematics, after defining certain objects we usually proceed to group and classify them according to whether they are <em>the same</em>. For example, when dealing with sets, two sets $$A,B$$ of the same size are regarded as the same, which by definition means there exists a bijection between $$A$$ and $$B$$.

@@ -1,5 +1,4 @@
----
-title: "Gaussian Elimination"
+---title: "Gaussian Elimination"
 excerpt: "Gaussian elimination and inverse matrices"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-08-19
 last_modified_at: 2022-08-19
 
 weight: 12
-translated_at: 2026-05-23T11:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post, we saw that linear maps between vector spaces are essentially identical to matrices. From this viewpoint, if two $$m\times n$$ matrices $$A, B$$ satisfy the following equation for suitable invertible matrices $$P, Q$$

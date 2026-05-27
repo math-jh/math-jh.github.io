@@ -1,6 +1,6 @@
 ---
-
 title: "자연수와 무한집합"
+description: "기수의 개념을 통해 유한한 cardinal을 자연수로 정의하고, 자연수 집합의 well-ordered 성질과 귀납법의 토대를 살펴본 뒤 자연수 사이의 대소관계를 분석한다."
 excerpt: "자연수의 정의와 무한집합의 성질들"
 
 categories: [Math / Set Theory]

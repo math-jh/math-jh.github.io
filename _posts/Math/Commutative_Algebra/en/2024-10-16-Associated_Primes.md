@@ -1,5 +1,4 @@
----
-title: "Associated Primes"
+---title: "Associated Primes"
 excerpt: "The prime avoidance lemma and the definition and properties of associated primes"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-16
 last_modified_at: 2024-10-16
 weight: 6
-translated_at: 2026-05-19T17:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Prime avoidance lemma

@@ -1,5 +1,4 @@
----
-title: "Connected Spaces"
+---title: "Connected Spaces"
 excerpt: "Connected spaces, path-connectedness, and connected components"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-12-15
 last_modified_at: 2025-02-08
 weight: 18
-translated_at: 2026-05-23T08:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We now examine connectedness, one of the important concepts in topology.

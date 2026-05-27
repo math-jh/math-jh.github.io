@@ -1,5 +1,4 @@
----
-title: "Differential Modules"
+---title: "Differential Modules"
 excerpt: "Differential modules with derivations on graded algebras"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-04-18
 last_modified_at: 2025-04-18
 weight: 121
-translated_at: 2026-05-22T06:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Now we define differential modules. For this we need a simple lemma; first consider the second case assumed in [§Derivations, ⁋Definition 2](/en/math/multilinear_algebra/derivations#def2). That is, we consider a commutative ring $$A$$, a $$\Delta$$-graded $$A$$-algebra $$E$$, a graded $$A$$-module $$F$$, and an $$\varepsilon$$-derivation $$d:E \rightarrow F$$.

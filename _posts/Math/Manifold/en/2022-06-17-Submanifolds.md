@@ -1,5 +1,4 @@
----
-title: "Submanifolds and the Inverse Function Theorem"
+---title: "Submanifolds and the Inverse Function Theorem"
 excerpt: "Substructures of differentiable manifolds"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-06-17
 last_modified_at: 2022-12-09
 weight: 7
-translated_at: 2026-05-21T16:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definition of Submanifolds

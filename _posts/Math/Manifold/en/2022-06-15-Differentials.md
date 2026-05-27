@@ -1,5 +1,4 @@
----
-title: "Differentials"
+---title: "Differentials"
 excerpt: "The differential between two tangent spaces"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-06-15
 last_modified_at: 2022-06-15
 weight: 5
-translated_at: 2026-05-21T15:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We previously defined the tangent space $$T_pM$$ of a manifold $$M$$, showed that its dimension is the same as that of the original manifold $$M$$, and also defined its natural basis. In this post we define functions between two manifolds and examine how they behave on tangent spaces.

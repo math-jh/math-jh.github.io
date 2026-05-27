@@ -1,5 +1,4 @@
----
-title: "Dimension"
+---title: "Dimension"
 excerpt: "Definitions of covering dimension and Krull dimension for algebraic geometry"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-12-15
 last_modified_at: 2024-12-15
 weight: 19
-translated_at: 2026-05-25T12:00:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we define the dimension of a topological space. First we define the dimension commonly used in general topology, and then we separately define the notion of dimension used in [algebraic geometry](/en/algebraic_varieties/).

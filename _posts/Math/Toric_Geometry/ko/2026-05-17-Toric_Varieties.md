@@ -1,5 +1,6 @@
 ---
 title: "토릭 다양체의 정의"
+description: "강체 볼록 다리뿔뿔 cone에 대응하는 affine 토릭 다양체를 공유하는 face를 통해 붙여 일반적인 토릭 다양체를 구성하는 과정을 다룬다. 조합론적 구조인 fan의 정의와 성질을 함께 살펴본다."
 excerpt: "Fan으로부터 아핀 토릭 다양체들을 이어붙여 얻는 일반적 토릭 다양체"
 
 categories: [Math / Toric Geometry]

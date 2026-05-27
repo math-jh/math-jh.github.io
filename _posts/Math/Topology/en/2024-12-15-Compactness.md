@@ -1,5 +1,4 @@
----
-title: "Compactness"
+---title: "Compactness"
 excerpt: "Tychonoff's theorem, local compactness, and paracompactness"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-12-15
 last_modified_at: 2024-12-15
 weight: 16
-translated_at: 2026-05-23T07:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Now we examine the remaining results related to compactness and variations of this definition.

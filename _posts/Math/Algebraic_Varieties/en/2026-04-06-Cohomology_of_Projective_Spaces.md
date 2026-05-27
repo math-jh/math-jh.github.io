@@ -1,5 +1,4 @@
----
-title: "Cohomology of Projective Space"
+---title: "Cohomology of Projective Space"
 excerpt: "Bott's formula and the cohomology of line bundles on projective space"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-04-06
 last_modified_at: 2026-05-09
 weight: 13
-translated_at: 2026-05-26T01:00:04+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-26T01:00:04+00:00
 ---

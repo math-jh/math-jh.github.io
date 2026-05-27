@@ -1,5 +1,4 @@
----
-title: "Examples of Differentials"
+---title: "Examples of Differentials"
 excerpt: "Examples of smooth functions and differentials"
 
 categories: [Math / Manifold]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-06-16
 last_modified_at: 2022-06-16
 weight: 6
-translated_at: 2026-05-21T16:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the previous post we studied differentials in depth, and now we look at some examples.

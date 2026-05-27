@@ -1,5 +1,4 @@
----
-title: "Classical Mechanics"
+---title: "Classical Mechanics"
 excerpt: "Classical mechanics and phase space"
 
 categories: [Math / Symplectic Geometry]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-12-15
 last_modified_at: 2022-12-15
 weight: 1
-translated_at: 2026-05-22T21:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we examine the historical (physical) background that led to the introduction of symplectic manifolds, which are studied in symplectic geometry. As a mathematician, I have compiled bits and pieces picked up here and there, so there may be some physical inaccuracies.

@@ -1,6 +1,6 @@
 ---
-
 title: "Initial topology와 final topology"
+description: "initial topology는 주어진 함수들을 모두 연속하게 만드는 가장 약한 위상이고, final topology는 반대 방향으로 정의되는 위상 구조다. initial topology의 존재성과 subbase를 통한 구체적 구조를 살펴본다."
 excerpt: "Initial/final topology와 그 예시들"
 
 categories: [Math / Topology]

@@ -1,5 +1,4 @@
----
-title: "Root Systems"
+---title: "Root Systems"
 excerpt: "Root systems obtained from the weight decomposition of the adjoint representation"
 
 categories: [Math / Lie Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-11-12
 last_modified_at: 2026-02-24
 weight: 3
-translated_at: 2026-05-26T15:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Adjoint representation

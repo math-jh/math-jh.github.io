@@ -1,5 +1,4 @@
----
-title: "Projective Schemes"
+---title: "Projective Schemes"
 excerpt: "The Proj construction from a graded ring and projective schemes"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-02-02
 last_modified_at: 2025-02-03
 weight: 13
-translated_at: 2026-05-22T18:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) we glued two affine lines $$\mathbb{A}^1=\Spec \mathbb{K}[\x]$$ together in a suitable way to construct projective space $$\mathbb{P}^1$$. In this post we generalize this to define projective schemes.

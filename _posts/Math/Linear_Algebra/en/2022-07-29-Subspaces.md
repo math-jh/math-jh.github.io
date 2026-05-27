@@ -1,5 +1,4 @@
----
-title: "Subspaces"
+---title: "Subspaces"
 excerpt: "Subspaces of a vector space and linear combinations of vectors"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-07-29
 last_modified_at: 2022-07-29
 
 weight: 3
-translated_at: 2026-05-21T04:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Subspaces

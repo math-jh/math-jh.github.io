@@ -1,5 +1,4 @@
----
-title: "The Long Exact Sequence"
+---title: "The Long Exact Sequence"
 excerpt: "The long exact sequence"
 
 categories: [Math / Homological Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-01-02
 last_modified_at: 2024-10-31
 weight: 3
-translated_at: 2026-05-20T17:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Now we show that a short exact sequence in $$\Ch(\mathcal{A})$$ induces a *long exact sequence*. 
