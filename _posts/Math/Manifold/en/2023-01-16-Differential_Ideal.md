@@ -134,7 +134,7 @@ We briefly sketch the idea.
 
     $$\mu_i:=(d(f\circ\pi_1))^\ast(\omega_i)-(d\pi_2)^\ast(\omega_i)$$
 
-    satisfy $$(d\iota)^\ast(\omega_i)=0$$. This follows from
+    satisfy $$(d\iota)^\ast(\mu_i)=0$$. This follows from
     
     $$(d\iota)^\ast(\mu_i)=(d(\pi_1\circ\iota))^\ast(df)^\ast(\omega_i)-(d(\pi_2\circ\iota))^\ast(\omega_i)=(df)^\ast(\omega_i)-(df)^\ast(\omega_i)=0$$
 

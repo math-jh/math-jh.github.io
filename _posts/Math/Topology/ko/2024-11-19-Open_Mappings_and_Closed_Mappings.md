@@ -49,7 +49,7 @@ weight: 12
     가 성립하므로 $$g(V)$$는 $$Z$$의 열린집합이다. 여기서 $$f(f^{-1}(V))=V$$인 것은 $$f$$가 전사함수임을 이용하였다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)) 한편 마찬가지 방식으로 $$Y$$의 임의의 닫힌집합 $$B$$가 주어졌다 하면 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)에 의하여 위와 동일한 논증을 적용할 수 있다.
 3. 둘째 증명과 마찬가지로 open인 경우만 생각하면 충분하다. $$X$$의 임의의 열린집합 $$U$$에 대하여, $$g\circ f$$가 open이므로 $$g(f(U))$$는 open이고, 따라서 $$g$$가 연속이라는 것과 위의 [\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)을 사용하면 다음 식
     
-    $$g^{-1}(g(f(U))=f(U)$$
+    $$g^{-1}(g(f(U)))=f(U)$$
 
     로부터 $$f(U)$$가 열린집합임을 안다.
 
@@ -96,7 +96,7 @@ $$U_i=U\cap f^{-1}(A_i)$$
 
 <ins id="prop5">**명제 5**</ins> 두 위상공간 $$X,Y$$ 사이의 연속함수 $$f:X \rightarrow Y$$와 $$f$$의 canonical decomposition
 
-$$X \overset{p}{\longrightarrow} X/R \overset{h}{\longrightarrow h} f(X)\overset{i}{\longrightarrow}Y$$
+$$X \overset{p}{\longrightarrow} X/R \overset{h}{\longrightarrow} f(X)\overset{i}{\longrightarrow}Y$$
 
 를 생각하자. 그럼 다음이 모두 동치이다.
 

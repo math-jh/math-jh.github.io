@@ -2473,17 +2473,17 @@
     },
     "_posts/Math/Topology/ko/2024-11-19-Presheaves.md": {
       "status": "done",
-      "last_attempt_ts": 1779690827.7334847,
+      "last_attempt_ts": 1779851498.3148544,
       "en_path": "_posts/Math/Topology/en/2024-11-19-Presheaves.md",
-      "ko_git_commit_ts": 1779145204.0,
-      "translated_at": "2026-05-25T06:30:01+00:00",
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-27T02:30:04+00:00",
       "in_chars": 14017,
-      "out_chars": 14784,
-      "reason": "pending",
+      "out_chars": 14326,
+      "reason": "drift",
       "warnings": [
-        "math block count mismatch: ko=187, en=188"
+        "math block count mismatch: ko=187, en=186"
       ],
-      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=187 en=188\nFINDINGS:\n- [<ins id=\"def2\">Definition 2</ins>] SAFE-REPHRASE: EN adds one extra `$$X$$` in \"presheaf of sets on $$X$$\" versus KO's \"defined on $$X$$ ... presheaf\"; the extra \"on X\" is semantically redundant because the presheaf is already defined on X, so no mathematical meaning was added or lost.\n- [Global block-order differences] SAFE-REPHRASE: All remaining pairwise mismatches are block-sequence swaps caused by English rephrasing (e.g., KO \"space X ... presheaf F\" → EN \"presheaf F ... space X\"); every distinct math expression appears the same number of times in both versions.\n- [Set comparison] SAFE-REPHRASE: The multiset of unique math blocks is identical between KO and EN except for the single extra `X` noted above; no symbols, formulas, hypotheses, or conclusions were dropped or invented."
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=187 en=186\nFINDINGS:\n- [ex13/ex14 region] SAFE-REPHRASE: KO has one extra `$$\\Ab$$` block because Korean grammar requires \"`$$\\Ab$$` 위에 정의된\" (defined on `$$\\Ab$$\"), whereas English says \"inherits the monoidal structure\" without repeating `$$\\Ab$$` separately; all three `$$\\Ab$$` instances in KO correspond to two in EN with identical mathematical meaning.\n- [lem1–def10, various anchors] SAFE-REPHRASE: numerous block-order swaps (e.g. KO `$$X$$` then `$$\\mathscr{F}$$` vs EN `$$\\mathscr{F}$$` then `$$X$$`) caused by Korean SOV vs English SVO word order; every symbol is preserved.\n- [def9 stalk definition] SAFE-REPHRASE: KO sequences `$$X$$`, `$$x$$`, `$$\\mathscr{F}$$`, `$$x\\in X$$`, `$$x$$`, `$$\\mathscr{F}_x$$` vs EN `$$X$$`, `$$x$$`, `$$\\mathscr{F}$$`, `$$X$$`, `$$x\\in X$$`, `$$\\mathscr{F}_x$$`, `$$x$$` are the same six symbols reordered by sentence structure.\n- [ex3 projection sentence] SAFE-REPHRASE: KO \"`$$X$$`에서 `$$Y$$`로의 ... presheaf `$$\\mathscr{F}$$`의 모임\" uses four inline blocks where EN \"`$$\\mathscr{F}$$` of continuous sections from `$$X$$` to `$$Y$$\"` uses the same four symbols in different positions.\n- [footnote 1] SAFE-REPHRASE: KO and EN footnotes both contain `$$X=\\mathbb{R}$$`, `$$\\mathbb{R}$$`, `$$x$$`, `$$f$$`, `$$f'(x)$$`; order differs because Korean says \"`$$\\mathbb{R}$$`의 한 점 `$$x$$`\" (a point `$$x$$` of `$$\\mathbb{R}$$`) while English says \"a point `$$x$$` of `$$\\mathbb{R}$$`\".\n- [global] SAFE-REPHRASE: the two versions share exactly 96 unique math expressions; no symbol, formula, or hypothesis was dropped or invented in translation."
     },
     "_posts/Math/Topology/ko/2024-12-11-Filter_Convergence.md": {
       "status": "done",
@@ -2667,8 +2667,8 @@
     }
   },
   "stats": {
-    "total_done": 312,
-    "total_in_chars": 5287844,
-    "total_out_chars": 4589435
+    "total_done": 313,
+    "total_in_chars": 5301861,
+    "total_out_chars": 4603761
   }
 }

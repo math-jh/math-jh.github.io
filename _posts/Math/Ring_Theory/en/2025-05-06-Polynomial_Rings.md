@@ -68,7 +68,7 @@ Then the following proposition holds obviously.
 
 <ins id="prop2">**Proposition 2**</ins> For two polynomials $$u,v$$, the following hold.
 
-1. If $$\deg (u)\neq\deg(v)$$, then $$p+q\neq 0$$ and the equality
+1. If $$\deg (u)\neq\deg(v)$$, then $$u+v\neq 0$$ and the equality
      
     $$\deg(u+v)=\sup(\deg(u), \deg(v))$$
 
@@ -468,7 +468,7 @@ $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$\alpha_\nu$ nee
 
 This is denoted by $$A[[\x_i]]_{i\in I}$$ and called the *ring of formal power series*. For formal power series, similar concepts to those for polynomials can be defined, except for the fact that they are infinite sums of monomials. For example, we can define the degree $$p$$ component $$u_p$$ of a formal power series $$u$$. However, for the (total) degree of $$u$$, since the degree of elements that are not polynomials would be $$+\infty$$, there is no particular reason to use it in $$A[[\x_i]]_{i\in I}$$. Instead, for any formal power series $$u$$, we define the *order* $$\omega(u)$$ of $$u$$ as the smallest $$p$$ such that $$u_p\neq 0$$. Likewise, setting $$\omega(0)=\infty$$, the formula
 
-$$\omega(u+v)\geq \inf(\omega(u),\omega(v)),\quad\text{equality if $\omega(u)\neq\omega(v))$}$$
+$$\omega(u+v)\geq \inf(\omega(u),\omega(v)),\quad\text{equality if $\omega(u)\neq\omega(v)$}$$
 
 and the formula
 
@@ -483,7 +483,7 @@ For degree, the above inequality would have held as an equality if $$A$$ were an
 <ins id="prop19">**Proposition 19**</ins> For an integral domain $$A$$, the following hold.
 
 1. $$A[[x_i]]_{i\in I}$$ is an integral domain.
-2. For two nonzero elements $$u,v\in A[[x_i]]_{i\in I}$$, we have $$\omega(uv)+\omega(u)+\omega(v)$$.
+2. For two nonzero elements $$u,v\in A[[x_i]]_{i\in I}$$, we have $$\omega(uv)=\omega(u)+\omega(v)$$.
 
 </div>
 

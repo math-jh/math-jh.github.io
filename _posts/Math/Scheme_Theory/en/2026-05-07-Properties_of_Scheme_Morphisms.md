@@ -151,7 +151,7 @@ Then it is obvious that the composition of affine morphisms is affine. Moreover,
 
 <ins id="def10">**Definition 10**</ins> A scheme morphism $$\varphi:X \rightarrow Y$$ is *finite* if $$\varphi$$ is affine and, for every affine open subset $$V$$ of $$Y$$, the ring homomorphism
 
-$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}}(V)$$
+$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}(V)}(V)$$
 
 is a finite ring homomorphism. ([[Commutative Algebra] §Integral Extensions, ⁋Definition 3](/en/math/commutative_algebra/integral_extension#def3))
 

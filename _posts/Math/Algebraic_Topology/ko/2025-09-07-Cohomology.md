@@ -220,7 +220,7 @@ $$H^0_\dR(\mathbb{R}^n)=\mathbb{R}$$
 
 이다. 
 
-이러한 방식으로 정의된 de Rham cohomology 또한 [정의 2](#thm2)의 모든 조건들을 만족하며, 따라서 cohomology theory의 유일성 (그리고 임의의 singular chain을 smooth chain으로 근사할 수 있다는 사실)에 의해 $$\mathbb{R}$$ 계수의 singular cohomology와 de Rham cohomology가 같다는 것을 확인할 수 있다. 위의 계산은 그럼 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 계산을 [명제 3](#prop3)을 통해 $$\mathbb{R}$$-valued cohomology로 옮겨온 것에 불과하다. 
+이러한 방식으로 정의된 de Rham cohomology 또한 [정의 2](#def2)의 모든 조건들을 만족하며, 따라서 cohomology theory의 유일성 (그리고 임의의 singular chain을 smooth chain으로 근사할 수 있다는 사실)에 의해 $$\mathbb{R}$$ 계수의 singular cohomology와 de Rham cohomology가 같다는 것을 확인할 수 있다. 위의 계산은 그럼 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 계산을 [명제 3](#prop3)을 통해 $$\mathbb{R}$$-valued cohomology로 옮겨온 것에 불과하다. 
  
 ## (코)호몰로지의 계수
 
@@ -260,7 +260,7 @@ $$H_k(C\otimes_AM)\cong \left(H_k(C)\otimes_AM\right)\oplus \Tor_1^A(H_{k-1}(C),
 
 <div class="proposition" markdown="1">
 
-<ins id="thm65">**정리 5 (Universal coefficient theorem for cohomology, general version)**</ins> Principal ideal domain $$A$$와, free $$A$$-module들의 chain complex $$C_\bullet$$, 그리고 임의의 $$A$$-module $$M$$에 대하여 다음의 short exact sequence
+<ins id="thm5">**정리 5 (Universal coefficient theorem for cohomology, general version)**</ins> Principal ideal domain $$A$$와, free $$A$$-module들의 chain complex $$C_\bullet$$, 그리고 임의의 $$A$$-module $$M$$에 대하여 다음의 short exact sequence
 
 $$0\rightarrow\Ext_A^1(H_{k-1}(C), M)\rightarrow H_k(\Hom_A(C,M))\rightarrow \Hom_A(H_k(C),M)\rightarrow 0$$
 
@@ -274,7 +274,7 @@ $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 ## 메이어-피토리스 열
 
-한편 [정의 2](#thm2)의 공리들 중 excision axiom은 우리가 작은 공간들의 코호몰로지로부터 큰 공간의 코호몰로지를 계산할 수 있게 해 준다. 다음 명제는 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)의 코호몰로지 버전이며, 그 증명은 [\[대수적 위상수학\] §호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)로부터 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)를 얻어낸 과정을, [정의 2](#thm2)에서 시작하여 반복하면 된다.
+한편 [정의 2](#def2)의 공리들 중 excision axiom은 우리가 작은 공간들의 코호몰로지로부터 큰 공간의 코호몰로지를 계산할 수 있게 해 준다. 다음 명제는 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)의 코호몰로지 버전이며, 그 증명은 [\[대수적 위상수학\] §호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)로부터 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)를 얻어낸 과정을, [정의 2](#def2)에서 시작하여 반복하면 된다.
 
 <div class="proposition" markdown="1">
 

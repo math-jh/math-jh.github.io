@@ -49,7 +49,7 @@ We have already learned many ways to construct new spaces from given ones in top
 
 $$\mathcal{B}_U=\left\{B\cap U\mid B\in \mathcal{B}\right\}$$
 
-is a base for $$U$$, so $$U$$ is second-countable; a subspace of a Hausdorff space is always Hausdorff ([\[Topology\] §Hausdorff Spaces, §§Subspaces and Products of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#하우스도르프-공간의-부분공간과-곱)); and if $$x\in U$$ is given arbitrarily, then by the assumption that $$M$$ is locally Euclidean we can choose an open neighborhood $$V$$ of $$x$$ in $$M$$ such that $$V$$ is homeomorphic to an open subset of $$\mathbb{R}^m$$, whence $$U\cap V$$ is an open neighborhood of $$x$$ in $$U$$ homeomorphic to an open subset of $$\mathbb{R}^m$$.
+is a base for $$U$$, so $$U$$ is second-countable; a subspace of a Hausdorff space is always Hausdorff ([\[Topology\] §Hausdorff Spaces, §§Subspaces and Products of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#subspaces-and-products-of-hausdorff-spaces)); and if $$x\in U$$ is given arbitrarily, then by the assumption that $$M$$ is locally Euclidean we can choose an open neighborhood $$V$$ of $$x$$ in $$M$$ such that $$V$$ is homeomorphic to an open subset of $$\mathbb{R}^m$$, whence $$U\cap V$$ is an open neighborhood of $$x$$ in $$U$$ homeomorphic to an open subset of $$\mathbb{R}^m$$.
 
 </div>
 

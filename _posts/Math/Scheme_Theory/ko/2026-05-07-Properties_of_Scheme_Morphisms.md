@@ -152,7 +152,7 @@ $$(\varphi\vert_U)^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr
 
 <ins id="def10">**정의 10**</ins> Scheme morphism $$\varphi:X \rightarrow Y$$가 *finite<sub>유한</sub>*인 것은 $$\varphi$$가 affine이고, $$Y$$의 임의의 affine open subset $$V$$에 대하여, ring homomorphism
 
-$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}}(V)$$
+$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}(V)}(V)$$
 
 이 finite ring homomorphism인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3))
 

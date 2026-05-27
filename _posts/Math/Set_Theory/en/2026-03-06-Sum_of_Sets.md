@@ -163,7 +163,7 @@ We mentioned earlier that the set $$\sum A_i$$ is not well-defined in the strict
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let two sums $$S$$ and $$S'$$ be given, and let $$\iota_i$$ and $$\iota_i'$$ be the injections from $$A_i$$ into $$S$$ and $$S'$$ respectively. First, for the functions $$\iota_i':A_i\rightarrow Y$$, applying the universal property of $$S$$ yields a unique $$\phi':S\rightarrow S'$$ such that $$\iota_i'=\phi'\circ\iota_i$$. Similarly, applying the universal property of $$S'$$ to the functions $$\iota_i$$ yields a unique $$\phi:S'\rightarrow S$$ such that $$\iota_i=\phi\circ\iota_i'$$. Then
+Let two sums $$S$$ and $$S'$$ be given, and let $$\iota_i$$ and $$\iota_i'$$ be the injections from $$A_i$$ into $$S$$ and $$S'$$ respectively. First, for the functions $$\iota_i':A_i\rightarrow S'$$, applying the universal property of $$S$$ yields a unique $$\phi':S\rightarrow S'$$ such that $$\iota_i'=\phi'\circ\iota_i$$. Similarly, applying the universal property of $$S'$$ to the functions $$\iota_i$$ yields a unique $$\phi:S'\rightarrow S$$ such that $$\iota_i=\phi\circ\iota_i'$$. Then
 
 $$\iota_i'=\phi'\circ\iota_i=\phi'\circ(\phi\circ\iota_i')=(\phi'\circ\phi)\circ\iota_i'$$
 
