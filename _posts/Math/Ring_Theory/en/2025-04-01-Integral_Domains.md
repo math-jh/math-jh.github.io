@@ -1,5 +1,4 @@
----
-title: "Integral Domains"
+---title: "Integral Domains"
 excerpt: "Definitions of Euclidean domains, PIDs, and UFDs, and their inclusion relationships"
 
 categories: [Math / Ring Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-04-01
 last_modified_at: 2025-04-01
 weight: 1
-translated_at: 2026-05-23T12:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the posts in this category, we examine properties of rings in a bit more detail. The first topic we cover is integral domains. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5)) 

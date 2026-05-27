@@ -1,5 +1,4 @@
----
-title: "Localization of Graded Rings"
+---title: "Localization of Graded Rings"
 excerpt: "Homogeneous localization of graded rings and graded modules"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-10-23
 last_modified_at: 2024-10-23
 weight: 4
-translated_at: 2026-05-19T22:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 We investigate how to localize an arbitrary graded ring, and more generally, an arbitrary graded module. In this post, unless stated otherwise, we assume that every graded ring is $$\mathbb{N}_{\geq 0}$$-graded, and fix $$A=\bigoplus A_i$$ and $$M=\bigoplus M_i$$. Then for any $$n$$, the module $$M(n)$$ defined by

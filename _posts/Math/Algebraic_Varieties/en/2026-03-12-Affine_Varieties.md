@@ -1,5 +1,4 @@
----
-title: "Affine Varieties"
+---title: "Affine Varieties"
 excerpt: "Affine varieties and their basic properties"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-03-12
 last_modified_at: 2026-03-18
 weight: 1
-translated_at: 2026-05-25T19:00:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-25T19:00:03+00:00
 ---

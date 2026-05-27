@@ -1,5 +1,4 @@
----
-title: "Riemannian Metric"
+---title: "Riemannian Metric"
 excerpt: "The Riemannian metric as a positive-definite symmetric 2-tensor on the tangent bundle"
 
 categories: [Math / Riemannian Geometry]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-12-16
 last_modified_at: 2022-12-16
 weight: 1
-translated_at: 2026-05-22T11:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Riemannian Metric

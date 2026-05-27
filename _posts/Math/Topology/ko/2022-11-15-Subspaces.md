@@ -1,6 +1,6 @@
 ---
-
 title: "부분공간"
+description: "위상공간의 부분집합에 유도되는 부분위상의 정의를 소개하고, 부분공간에서의 열린집합과 닫힌집합의 성질을 살펴본다."
 excerpt: "부분공간의 성질들"
 
 categories: [Math / Topology]

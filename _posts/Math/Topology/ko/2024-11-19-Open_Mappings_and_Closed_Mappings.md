@@ -1,6 +1,6 @@
 ---
-
 title: "열린사상과 닫힌사상"
+description: "위상공간 사이 함수의 열린사상과 닫힌사상을 정의하고, 합성·전사·단사 함수에 대한 기본 성질을 다룬다. 열린사상 및 닫힌사상의 판별 조건도 함께 살펴본다."
 excerpt: "Open map과 closed map의 정의 및 quotient map과의 관계"
 
 categories: [Math / Topology]

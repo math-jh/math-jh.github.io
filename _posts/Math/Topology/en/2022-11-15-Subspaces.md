@@ -1,5 +1,4 @@
----
-title: "Subspaces"
+---title: "Subspaces"
 excerpt: "Properties of subspaces"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2022-11-15
 last_modified_at: 2022-11-15
 weight: 7
-translated_at: 2026-05-23T02:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Definition of Subspaces

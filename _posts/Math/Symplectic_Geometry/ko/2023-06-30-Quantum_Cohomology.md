@@ -1,6 +1,6 @@
 ---
-
 title: "양자 코호몰로지"
+description: "3점 Gromov-Witten 불변량을 구조상수로 양자곱을 정의하고, 양자곱이 등급 교환 결합환을 이룬다는 사실을 증명하며, 노비코프 환의 도입과 구체적 환 구조 계산을 다룬다."
 excerpt: "GW invariant를 구조상수로 하는 cup product의 deformation"
 
 categories: [Math / Symplectic Geometry]

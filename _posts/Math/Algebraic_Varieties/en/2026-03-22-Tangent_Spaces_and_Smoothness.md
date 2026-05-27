@@ -1,5 +1,4 @@
----
-title: "Tangent Spaces and Smoothness"
+---title: "Tangent Spaces and Smoothness"
 excerpt: "Tangent spaces and smoothness of algebraic varieties"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-03-22
 last_modified_at: 2026-03-22
 weight: 6
-translated_at: 2026-05-25T21:30:04+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-25T21:30:04+00:00
 ---

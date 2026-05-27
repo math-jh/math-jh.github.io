@@ -1,6 +1,6 @@
 ---
 title: "Grothendieck 군"
-description: "交换的 半群からアーベル群を構成するグロタンディーク群の普遍写像問題による導出過程を、ボアキの論に沿って解説する。"
+description: "가환 준군에서 아벨 군을 구성하는 그로텐디에크 군의 정의와 보편 사상 문제를 통한 존재성과 유일성 증명을 다룬다."
 excerpt: "Grothendieck group과 정수의 정의"
 
 categories: [Math / Algebraic Structures]

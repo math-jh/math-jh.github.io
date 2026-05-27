@@ -1,5 +1,4 @@
----
-title: "Matrices and Linear Maps"
+---title: "Matrices and Linear Maps"
 excerpt: "Matrix representations of linear maps between free modules and coordinate systems"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-09-05
 last_modified_at: 2024-09-19
 weight: 7
-translated_at: 2026-05-22T03:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Coordinate Representation

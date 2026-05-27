@@ -1,6 +1,6 @@
 ---
-
 title: "특성다항식"
+description: "행렬과 linear map의 특성다항식을 정의하고, 이를 통해 고윳값과 spectrum의 개념을 도입한다. 또한 닮은 행렬의 특성다항식이 같음을 이용해 linear map의 특성다항식이 basis 선택과 무관함을 보인다."
 excerpt: "행렬의 특성다항식"
 
 categories: [Math / Linear Algebra]

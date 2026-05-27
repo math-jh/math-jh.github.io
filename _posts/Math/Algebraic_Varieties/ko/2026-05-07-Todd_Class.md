@@ -1,4 +1,5 @@
----title: "Todd Class"
+---
+title: "Todd Class"
 description: "히르체브루히-리만-로흐 정리에 등장하는 천 캐릭터와 토드 클래스를 정의하고, 기본 성질 및 저차원에서의 명시적 계산을 다룬다."
 permalink: /ko/math/algebraic_varieties/todd_class
 excerpt: "Todd class와 Chern character, HRR 정리의 좌변"

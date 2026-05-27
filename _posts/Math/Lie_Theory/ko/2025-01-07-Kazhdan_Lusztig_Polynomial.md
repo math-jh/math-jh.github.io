@@ -1,4 +1,5 @@
----title: "Kazhdan–Lusztig polynomial"
+---
+title: "Kazhdan–Lusztig polynomial"
 description: "Kazhdan-Lusztig polynomial은 Hecke algebra 위에서 정의되며, Schubert variety의 교차 코호몰로지 차원을 조합적으로 인코딩하는 다항식이다. 이 글에서는 이 다항식의 정의, 기본 성질, 그리고 Schubert variety와의 관계를 정리한다."
 excerpt: "Hecke algebra의 KL basis를 통해 정의되는 polynomial로, Schubert variety의 특이점과 깊이 관련된다."
 

@@ -1,5 +1,4 @@
----
-title: "Integral Extensions and Ideals"
+---title: "Integral Extensions and Ideals"
 excerpt: "The lying over and going up theorems for integral extensions and prime ideals"
 
 categories: [Math / Commutative Algebra]
@@ -15,7 +14,7 @@ last_modified_at: 2024-10-20
 weight: 9
 
 toc: false
-translated_at: 2026-05-19T20:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Lying over, going up

@@ -1,5 +1,4 @@
----
-title: "Hom and the Tensor Product"
+---title: "Hom and the Tensor Product"
 excerpt: "Adjunction and exactness of the Hom functor and the tensor product"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-08-30
 last_modified_at: 2024-09-23
 weight: 5
-translated_at: 2026-05-22T02:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post we take a closer look at $$\Hom$$ and the tensor product.

@@ -1,5 +1,4 @@
----
-title: "Dimension of Vector Spaces"
+---title: "Dimension of Vector Spaces"
 excerpt: "Bases and Dimension of Vector Spaces"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-07-31
 last_modified_at: 2022-07-31
 
 weight: 5
-translated_at: 2026-05-21T05:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Dimension of Vector Spaces

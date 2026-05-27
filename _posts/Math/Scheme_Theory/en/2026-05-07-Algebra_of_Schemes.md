@@ -1,5 +1,4 @@
----
-title: "Algebra of Schemes"
+---title: "Algebra of Schemes"
 excerpt: "Definitions and properties of reduced schemes and integral schemes"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-02-05
 last_modified_at: 2025-02-11
 weight: 6
-translated_at: 2026-05-25T10:30:03+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 A scheme is a geometric and algebraic object at the same time, so to understand it well, we need to consider not only the topological structure of schemes that we studied in previous posts but also their algebraic structure simultaneously, and we briefly saw how this philosophy is reflected in previous posts. In this post, we develop this philosophy further.

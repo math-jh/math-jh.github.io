@@ -1,5 +1,4 @@
----
-title: "Categories"
+---title: "Categories"
 excerpt: "Definitions and basic concepts of category theory"
 
 categories: [Math / Category Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-05-22
 last_modified_at: 2023-05-28
 weight: 1
-translated_at: 2026-05-26T11:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Whenever a subject is a branch of mathematics, there are certain notions it naturally possesses. The *objects* we wish to study, and the *morphisms* between these objects, are such examples. Since category theory is the study of this structure in the abstract, specific theorems from each field can serve as examples in category theory. However, this does not mean we must study all these fields before learning category theory; our goal is to study category theory as dryly as possible, leaving most examples to be examined separately when studying the corresponding fields.

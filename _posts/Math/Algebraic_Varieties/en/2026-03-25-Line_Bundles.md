@@ -1,5 +1,4 @@
----
-title: "Line Bundles and Vector Bundles"
+---title: "Line Bundles and Vector Bundles"
 excerpt: "Line bundles, invertible sheaves, and the Picard group"
 
 categories: [Math / Algebraic Varieties]
@@ -14,7 +13,7 @@ header:
 date: 2026-03-25
 last_modified_at: 2026-04-08
 weight: 9
-translated_at: 2026-05-26T04:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In previous posts we defined divisors on a variety $X$ and saw that their linear equivalence classes form $\Cl(X)$. However, not every divisor arises as the zero/pole locus of some rational function. For example, since $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$ ([§Divisors, ⁋Example 11](/en/math/algebraic_varieties/divisors#ex11)), a general divisor $dH$ on $$\mathbb{P}^n$$ is the zero set of a function only when $d \ge 0$.

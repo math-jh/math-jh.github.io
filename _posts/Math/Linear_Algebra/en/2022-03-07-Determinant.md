@@ -1,5 +1,4 @@
----
-title: "Determinant"
+---title: "Determinant"
 excerpt: "The definition and geometric meaning of the determinant"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2022-03-07
 last_modified_at: 2022-08-07
 
 weight: 13
-translated_at: 2026-05-21T02:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Our central question is, given a matrix $$A$$, what information obtainable from $$A$$ determines $$A$$ uniquely up to $$\sim$$, that is, as a linear operator. The answer to this lies (almost entirely) in the eigenvalues and eigenvectors of the matrix, and to define these we must first define the determinant.

@@ -1,5 +1,4 @@
----
-title: "Morphisms of Schemes"
+---title: "Morphisms of Schemes"
 excerpt: "Four perspectives on scheme morphisms as morphisms of locally ringed spaces"
 
 categories: [Math / Scheme Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-02-19
 last_modified_at: 2025-02-19
 weight: 7
-translated_at: 2026-05-22T18:00:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 By definition, $$\Sch$$ is a full subcategory of $$\LRS$$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $$X,Y$$, a scheme morphism from $$X$$ to $$Y$$ is given by a continuous map $$\varphi: X \rightarrow Y$$ and a morphism of structure sheaves $$\varphi^\sharp: \mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$, where $$\varphi^\sharp$$ must become a local homomorphism when restricted to each stalk. ([§Affine Schemes, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2)) 

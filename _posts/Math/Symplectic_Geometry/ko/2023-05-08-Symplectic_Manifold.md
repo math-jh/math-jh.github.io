@@ -1,6 +1,6 @@
 ---
-
 title: "사교다양체"
+description: "다양체 위에 정의된 사교형식의 개념을 통해 사교다양체의 정의를 다룬다. 짝수차원에서만 존재하는 사교다양체의 기본 성질과 구조를 소개한다."
 excerpt: "Symplectic manifold의 정의와 성질들"
 
 categories: [Math / Symplectic Geometry]

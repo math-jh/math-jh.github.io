@@ -1,6 +1,6 @@
 ---
-
 title: "차원"
+description: "열린집합 covering의 차수를 이용해 위상공간의 차원을 정의하고, compact space의 covering dimension 및 유한차원 위상공간의 성질을 다룬다."
 excerpt: "Covering dimension과 대수기하용 Krull dimension의 정의"
 
 categories: [Math / Topology]

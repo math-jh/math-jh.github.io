@@ -1,4 +1,5 @@
----title: "곡면에서의 리만-로흐 정리"
+---
+title: "곡면에서의 리만-로흐 정리"
 description: "곡선에서의 리만-로흐 정리를 곡면으로 일반화하는 과정에서 교차수를 정의하고, 호지 지표 정리와 복수 생성자에 대한 부등식을 증명하며, 교차 형식의 기하학적 의미를 살펴본다."
 excerpt: "Intersection theory on surfaces and its applications"
 

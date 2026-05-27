@@ -1,5 +1,4 @@
----
-title: "Exact Sequences"
+---title: "Exact Sequences"
 excerpt: "Exact sequences of modules, and short/long exact sequences"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-09-17
 last_modified_at: 2024-09-19
 weight: 1
-translated_at: 2026-05-22T04:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In the [[Multilinear Algebra]](/en/multilinear_algebra/) category we study the properties of modules. Although we did examine the properties of modules in [[Algebraic Structures]](/en/algebraic_structures/), the difference is that while that category focused on what can be commonly defined and proved in general algebraic structures, this category focuses more on properties that only modules possess.

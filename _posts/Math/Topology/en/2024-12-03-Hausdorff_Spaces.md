@@ -1,5 +1,4 @@
----
-title: "Hausdorff Spaces"
+---title: "Hausdorff Spaces"
 excerpt: "Convergence of sequences and the Hausdorff axiom"
 
 categories: [Math / Topology]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-12-03
 last_modified_at: 2024-12-03
 weight: 13
-translated_at: 2026-05-23T06:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Now we define Hausdorff spaces. Before that, we first define the following.

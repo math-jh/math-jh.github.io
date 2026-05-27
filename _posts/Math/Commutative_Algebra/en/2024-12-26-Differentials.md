@@ -1,5 +1,4 @@
----
-title: "Differentials"
+---title: "Differentials"
 excerpt: "The algebraic definition of the Kähler differential module and its universal property"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-12-26
 last_modified_at: 2024-12-26
 weight: 100
-translated_at: 2026-05-20T00:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 The goal of this post is to define differentials algebraically.

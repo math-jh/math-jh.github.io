@@ -1,6 +1,6 @@
 ---
-
 title: "고유함수"
+description: "보편닫힌사상의 정의와 성질을 다룬다. 연속 단사함수의 경우 보편닫힌사상, 닫힌사상, 위상동형사상 간의 동치 조건을 증명하고, 부분집합과 덮개에 대한 보편닫힌사상의 성질을 살펴본다."
 excerpt: "Universally closed map으로서의 proper map과 compactness와의 관계"
 
 categories: [Math / Topology]

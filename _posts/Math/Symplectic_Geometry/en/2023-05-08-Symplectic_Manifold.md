@@ -1,5 +1,4 @@
----
-title: "Symplectic Manifolds"
+---title: "Symplectic Manifolds"
 excerpt: "Definitions and properties of symplectic manifolds"
 
 categories: [Math / Symplectic Geometry]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-05-08
 last_modified_at: 2023-05-08
 weight: 3
-translated_at: 2026-05-22T22:30:02+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In **[MS]**, symplectic vector spaces are introduced, after which more time is spent on the Maslov class, among other topics. We will introduce these later when they are needed for Floer theory, and for now follow **[Cd]** to first define symplectic manifolds.

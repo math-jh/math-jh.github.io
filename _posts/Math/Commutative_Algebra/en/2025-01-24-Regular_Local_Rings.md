@@ -1,5 +1,4 @@
----
-title: "Regular Local Rings"
+---title: "Regular Local Rings"
 excerpt: "Characterizations of regular systems of parameters and regular local rings"
 
 categories: [Math / Commutative Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2025-01-24
 last_modified_at: 2025-01-24
 weight: 18
-translated_at: 2026-05-20T04:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Regular Local Rings

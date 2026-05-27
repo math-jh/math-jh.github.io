@@ -1,5 +1,4 @@
----
-title: "Representable Functors"
+---title: "Representable Functors"
 excerpt: "Initial object, terminal object, representable functor"
 
 categories: [Math / Category Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-06-22
 last_modified_at: 2023-06-22
 weight: 5
-translated_at: 2026-05-19T15:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 ## Yoneda lemma

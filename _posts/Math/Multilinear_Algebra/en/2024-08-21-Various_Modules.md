@@ -1,5 +1,4 @@
----
-title: "Projective, Injective, and Flat Modules"
+---title: "Projective, Injective, and Flat Modules"
 excerpt: "Definitions and equivalent conditions for projective, injective, and flat modules"
 
 categories: [Math / Multilinear Algebra]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-08-21
 last_modified_at: 2024-09-23
 weight: 2
-translated_at: 2026-05-22T01:00:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In [\[Algebraic Structures\]](/en/algebraic_structures/) we defined $$A$$-modules over an arbitrary ring $$A$$ and examined their basic properties. In this post we study further properties of (left) $$A$$-modules.

@@ -1,5 +1,4 @@
----
-title: "Lie Groups"
+---title: "Lie Groups"
 excerpt: "Definition and properties of Lie groups"
 
 categories: [Math / Lie Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2023-01-23
 last_modified_at: 2025-11-06
 weight: 1
-translated_at: 2026-05-25T04:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this category of posts, we cover Lie groups and Lie algebras. The definition of a Lie group is very simple.

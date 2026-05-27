@@ -1,5 +1,4 @@
----
-title: "Linear Maps"
+---title: "Linear Maps"
 excerpt: "The definition and examples of linear maps"
 
 categories: [Math / Linear Algebra]
@@ -15,7 +14,7 @@ date: 2021-10-13
 last_modified_at: 2022-08-01
 
 weight: 7
-translated_at: 2026-05-21T00:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 In this post, we define functions between vector spaces, that is, *linear maps*.

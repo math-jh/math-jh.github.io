@@ -1,5 +1,4 @@
----
-title: "Monoidal Categories"
+---title: "Monoidal Categories"
 excerpt: "The definition of monoidal categories and coherence conditions"
 
 categories: [Math / Category Theory]
@@ -13,7 +12,7 @@ sidebar:
 date: 2024-06-12
 last_modified_at: 2024-06-12
 weight: 7
-translated_at: 2026-05-19T15:30:01+00:00
+translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
 Posts in the category theory category are basically written so that they can be understood by reading only the posts in the [\[Set Theory\]](/en/set_theory/) category, and although the monoidal categories covered in this post could have been written in that way as well, the first part of this post in particular draws on posts from the [\[Algebraic Structures\]](/en/algebraic_structures) category to aid understanding.

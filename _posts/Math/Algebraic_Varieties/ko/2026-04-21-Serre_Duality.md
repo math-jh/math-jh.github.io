@@ -1,5 +1,6 @@
 ---
 title: "세르 쌍대성"
+description: "사영공간 위의 선다발과 코호몰로지 사이의 자연스러운 쌍대성을 다루며, 큐프 곱과 세르 쌍대성의 구성 과정을 살펴본다."
 excerpt: "Serre duality theorem and its applications"
 
 categories: [Math / Algebraic Varieties]

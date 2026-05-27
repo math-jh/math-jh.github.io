@@ -1,5 +1,6 @@
 ---
 title: "Morse 이론과 stationary phase 근사"
+description: "진동적분의 점근행동을 분석하는 데 핵심적인 Morse 보조법, stationary phase 공식, Lefschetz thimble의 구성과 응용을 정리한다."
 excerpt: "Morse function의 critical point와 oscillating integral의 점근전개"
 
 categories: [Math / Symplectic Geometry]
