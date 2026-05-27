@@ -2021,3 +2021,51 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `lower adjoint` | multi-word English emphasis — possibly a definition |
 | `upward closed set` | multi-word English emphasis — possibly a definition |
 
+## 미분다양체
+- post: `_posts/Math/Manifold/ko/2022-06-06-Smooth_Manifolds.md`
+- permalink: `/ko/math/manifold/smooth_manifolds`
+- scanned: 2026-05-27T19:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `라 부르고, 이 때 $$M$$을` | mixed-script emphasis — possibly a definition |
+| `maximal` | looks like emphasis (no <sub> partner) |
+
+## 미분다양체의 예시들
+- post: `_posts/Math/Manifold/ko/2022-06-09-Examples_of_Manifolds.md`
+- permalink: `/ko/math/manifold/examples_of_manifolds`
+- scanned: 2026-05-27T19:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `그래프` | looks like emphasis (no <sub> partner) |
+| `level set` | multi-word English emphasis — possibly a definition |
+| `Jacobian matrix` | multi-word English emphasis — possibly a definition |
+
+## 접공간
+- post: `_posts/Math/Manifold/ko/2022-06-14-Tangent_Space.md`
+- permalink: `/ko/math/manifold/tangent_space`
+- scanned: 2026-05-27T20:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `evaluation map` | multi-word English emphasis — possibly a definition |
+
+## 미분사상의 예시들
+- post: `_posts/Math/Manifold/ko/2022-06-16-Examples_of_Differentials.md`
+- permalink: `/ko/math/manifold/examples_of_differentials`
+- scanned: 2026-05-27T20:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `tangent covector` | multi-word English emphasis — possibly a definition |
+
+## 부분다양체와 역함수 정리
+- post: `_posts/Math/Manifold/ko/2022-06-17-Submanifolds.md`
+- permalink: `/ko/math/manifold/submanifolds`
+- scanned: 2026-05-27T21:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `embedded` | looks like emphasis (no <sub> partner) |
+
