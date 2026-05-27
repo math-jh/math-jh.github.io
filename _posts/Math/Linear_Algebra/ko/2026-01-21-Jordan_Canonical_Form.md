@@ -1,6 +1,6 @@
 ---
-
 title: "조르당 표준형"
+description: "대각화할 수 없는 선형 연산자에 대해 일반화된 고유공간의 개념을 도입하고, 여과를 통해 고유공간의 차원 부족을 보완하여 조르당 표준형을 구하는 방법을 다룬다."
 excerpt: "일반화된 고유공간 분해를 통한 Jordan 표준형의 구성"
 
 categories: [Math / Linear Algebra]

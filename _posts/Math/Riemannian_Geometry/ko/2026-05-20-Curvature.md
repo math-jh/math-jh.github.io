@@ -1,6 +1,6 @@
 ---
-
 title: "리만 곡률"
+description: "평행 운반의 경로 의존성을 점별로 측정하는 리만 곡률 텐서를 정의하고, 구면 위 측지 삼각형 예시를 통해 곡률 텐서가 홀로노미를 어떻게 지배하는지 살펴본다."
 excerpt: "Parallel transport의 path-dependence를 측정하는 Riemann 곡률 텐서"
 
 categories: [Math / Riemannian Geometry]

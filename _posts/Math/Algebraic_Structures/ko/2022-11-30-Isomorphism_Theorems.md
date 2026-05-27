@@ -1,6 +1,6 @@
 ---
-
 title: "군 동형사상"
+description: "군의 동형사상과 그 정리를 다룬다. 첫 번째 동형 사상 정리와 두 번째 동형 사상 정리를 증명하고, 정상 부분군과 몫군의 성질을 살펴본다."
 excerpt: "동형사상 정리들"
 
 categories: [Math / Algebraic Structures]

@@ -1,6 +1,6 @@
 ---
-
 title: "푸앵카레 쌍대성"
+description: "connected 위상다양체에서 호몰로지와 코호몰로지 사이의 기하학적 쌍대성인 푸앵카레 쌍대성을 방향층을 통해 정의하고 그 구조를 살펴본다."
 excerpt: "방향층과 fundamental class를 통한 호몰로지와 코호몰로지의 쌍대성"
 
 categories: [Math / Algebraic Topology]

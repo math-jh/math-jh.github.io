@@ -1,6 +1,6 @@
 ---
-
 title: "군의 작용"
+description: "모노이드와 군이 집합 위에서 어떻게 작용하는지를 살펴보며, 왼쪽 작용과 오른쪽 작용의 정의를 다루고 반대 마그마를 통해 두 작용의 관계를 설명한다."
 excerpt: "Group action"
 
 categories: [Math / Algebraic Structures]

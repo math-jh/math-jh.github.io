@@ -1,6 +1,6 @@
 ---
-
 title: "함수"
+description: "이항관계를 함수로 정의하고, 정의역과 함숫값의 개념을 설명하며, 상수함수와 family 표기까지 다룬다."
 excerpt: "함수의 기본 정의"
 
 categories: [Math / Set Theory]

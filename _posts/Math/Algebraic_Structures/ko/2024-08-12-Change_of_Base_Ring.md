@@ -1,6 +1,6 @@
 ---
-
 title: "스칼라의 변환"
+description: "환 준동형을 통해 한 환 위의 가군을 다른 환 위의 가군으로 바꾸는 스칼라의 제한과 스칼라의 확장, 두 펑터를 정의하고 그 성질을 살펴본다."
 excerpt: "Ring homomorphism을 통한 restriction과 extension of scalars"
 
 categories: [Math / Algebraic Structures]

@@ -1,6 +1,6 @@
 ---
-
 title: "사영가군, 단사가군, 평탄가군"
+description: "사영가군, 단사가군, 평탄가군의 정의와 성질을 다룬다. Hom 함자와 텐서곱 함자의 수반 관계를 통해 가군의 핵, 여핵, 직접곱, 직합을 살펴본다."
 excerpt: "Projective, injective, flat module의 정의와 동치조건"
 
 categories: [Math / Multilinear Algebra]

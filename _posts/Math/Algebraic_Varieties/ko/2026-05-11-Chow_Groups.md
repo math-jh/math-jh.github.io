@@ -1,5 +1,5 @@
----
-title: "저우 군"
+---title: "저우 군"
+description: "다양체 위에서 divisor class group을 일반화한 Chow group을 정의하고, algebraic cycle과 rational equivalence의 개념을 통해 교차수를 임의의 다양체로 확장하는 방법을 다룬다."
 excerpt: "Chow groups and the cycle class map"
 
 categories: [Math / Algebraic Varieties]

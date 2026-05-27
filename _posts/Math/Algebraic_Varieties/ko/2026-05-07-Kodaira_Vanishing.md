@@ -1,5 +1,5 @@
----
-title: "고다이라 소멸정리"
+---title: "고다이라 소멸정리"
+description: "세르 소멸정리가 충분히 큰 차수에서만 코호몰로지 소멸을 보장하는 반면, 고다이라 소멸정리는 표준선다발과 충분한 선다발의 텐서 곱에 대해 모든 차수에서 높은 코호몰로지가 항상 사라짐을 보여준다. 대수기하학에서의 활용과 응용을 함께 살펴본다."
 permalink: /ko/math/algebraic_varieties/kodaira_vanishing
 excerpt: "Kodaira vanishing theorem과 그 응용"
 categories: [Math / Algebraic Varieties]

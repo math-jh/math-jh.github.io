@@ -1,6 +1,6 @@
 ---
-
 title: "쌍대공간"
+description: "쌍대공간과 쌍대기저의 정의를 시작으로, 유한차원과 무한차원에서의 차원 관계를 비교하고, 이중쌍대공간으로의 자연스러운 단사 사상을 다룬다. bilinear map과 non-degenerate pairing의 개념도 함께 살펴본다."
 excerpt: "쌍대공간, 쌍대사상, 그리고 직교여공간"
 
 categories: [Math / Linear Algebra]

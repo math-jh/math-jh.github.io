@@ -1,6 +1,6 @@
 ---
-
 title: "으뜸분해"
+description: "가환대수학에서 뇌터 환 위의 유한 생성 가군에 대한 으뜸분해를 다룬다. 으뜸부분가군과 쌍대으뜸부분가군의 정의 및 성질을 증명과 함께 설명한다."
 excerpt: "Noetherian ring 위 가군의 primary decomposition과 유일성"
 
 categories: [Math / Commutative Algebra]

@@ -1,6 +1,6 @@
 ---
-
 title: "동반소아이디얼"
+description: "가환환에서 소아이디얼의 동반소아이디얼 개념을 정의하고, prime avoidance lemma을 포함한 동반소아이디얼의 주요 성질들을 살펴본다."
 excerpt: "Prime avoidance와 associated prime의 정의 및 성질"
 
 categories: [Math / Commutative Algebra]

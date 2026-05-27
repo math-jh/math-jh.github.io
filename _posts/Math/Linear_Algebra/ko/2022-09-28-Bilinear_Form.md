@@ -1,6 +1,6 @@
 ---
-
 title: "쌍선형형식"
+description: "유한차원 벡터공간의 쌍대공간과 자연스러운 동형사상을 복습하고, 쌍선형형식의 정의·대칭성·교대성·비퇴화 조건을 정리한다."
 excerpt: "쌍선형형식과 쌍대공간"
 
 categories: [Math / Linear Algebra]

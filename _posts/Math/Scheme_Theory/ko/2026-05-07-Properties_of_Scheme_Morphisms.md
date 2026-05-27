@@ -1,6 +1,6 @@
 ---
-
 title: "스킴 사상의 성질들"
+description: "스킴 사상의 주요 성질들을 정의하고, 준옹골사상과 준분리사상의 개념 및 기본 성질을 소개한다."
 excerpt: "Affine, finite, finite type 등 scheme morphism의 기본 성질"
 
 categories: [Math / Scheme Theory]

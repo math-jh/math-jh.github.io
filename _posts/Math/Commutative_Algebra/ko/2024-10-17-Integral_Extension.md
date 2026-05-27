@@ -1,6 +1,6 @@
 ---
-
 title: "정수적 확장"
+description: "정수적 확장의 성질을 일반화된 케일리-해밀턴 정리를 바탕으로 살펴보고, 단위원 다항식과의 관계를 통해 가환대수학의 기본 결과를 정리한다."
 excerpt: "Cayley-Hamilton 정리와 integral element, integral extension"
 
 categories: [Math / Commutative Algebra]

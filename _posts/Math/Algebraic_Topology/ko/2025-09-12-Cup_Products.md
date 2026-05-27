@@ -1,6 +1,6 @@
 ---
-
 title: "합곱"
+description: "코호몰로지 위에 정의되는 cup product의 정의와 성질을 다룬다. contravariant functor이기에 나타나는 곱셈구조를 통해 코호몰로지 ring을 구성하는 방법을 살펴본다."
 excerpt: "코호몰로지의 외적과 cup product의 정의, 그리고 ring 구조"
 
 categories: [Math / Algebraic Topology]

@@ -1,6 +1,6 @@
 ---
-
 title: "몫군"
+description: "군의 정규부분군과 동치관계를 이용해 몫군을 구성하는 과정을 다룬다. 동치관계가 군 연산과 compatible할 때 몫집합 위에 자연스러운 군 구조가 주어짐을 보인다."
 excerpt: "정규부분군과 몫군"
 
 categories: [Math / Algebraic Structures]

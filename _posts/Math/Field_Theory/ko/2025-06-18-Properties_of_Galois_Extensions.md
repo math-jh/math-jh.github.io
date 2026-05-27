@@ -1,6 +1,6 @@
 ---
-
 title: "갈루아 군의 성질들"
+description: "갈루아 군에 위상구조를 부여하는 방법을 다루며, 부분군 격자와 부분확장 격자 사이의 대응을 설명한다."
 excerpt: "Krull 위상을 갖는 무한 Galois group의 구조"
 
 categories: [Math / Field Theory]

@@ -1,6 +1,6 @@
 ---
-
 title: "대수의 직접곱, 직합, 텐서곱"
+description: "가환환 위의 대수들의 직접곱, 직합, 텐서곱에 자연스럽게 부여되는 대수 구조와 그 성질을 다룬다."
 excerpt: "Algebra의 product, direct sum, tensor product 구조"
 
 categories: [Math / Algebraic Structures]

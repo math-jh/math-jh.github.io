@@ -1,6 +1,6 @@
 ---
-
 title: "특성류"
+description: "covering space의 성질을 일반화한 fiber bundle의 개념을 정의하고, 벡터다발을 다루며 특성류의 기초를 다룬다."
 excerpt: "Fiber bundle의 특성류 정의와 분류공간을 통한 해석"
 
 categories: [Math / Algebraic Topology]

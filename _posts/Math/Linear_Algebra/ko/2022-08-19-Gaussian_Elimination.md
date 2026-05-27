@@ -1,6 +1,6 @@
 ---
-
 title: "가우스 소거법"
+description: "가우스 소거법을 이용해 행렬의 역행렬을 구하는 과정을 살펴보고, 가역행렬의 동치 조건을 증명한다. 행렬과 선형사상의 관계를 바탕으로 rank가 결정하는 동치관계를 분석한다."
 excerpt: "가우스 소거법과 역행렬"
 
 categories: [Math / Linear Algebra]

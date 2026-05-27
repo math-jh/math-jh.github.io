@@ -1,5 +1,5 @@
----
-title: "대수적 군"
+---title: "대수적 군"
+description: "대수적 variety 위의 group 구조와 morphism 조건을 정의하고, 일반선형군·affine algebraic group 등 주요 예시를 살펴본 뒤, algebraic variety 위로의 작용을 다룬다."
 excerpt: "Algebraic group action"
 
 categories: [Math / Scheme Theory]

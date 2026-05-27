@@ -1,6 +1,6 @@
 ---
-
 title: "분수아이디얼"
+description: "정칙국소환의 성질을 이해하기 위해 분수아이디얼의 정의와 가역가군과의 관계를 살펴본다. 뇌터환에서 분수아이디얼이 가역가군이 되는 조건을 다룬다."
 excerpt: "Fractional ideal과 invertible module, Picard group"
 
 categories: [Math / Commutative Algebra]

@@ -1,6 +1,6 @@
 ---
-
 title: "등급환"
+description: "등급환의 정의와 동차원소의 성질을 다루고, 등급환 준동형사상과 동차아이디얼에 의한 몫환의 구조를 살펴본다."
 excerpt: "Monoid로 index된 graded ring의 정의와 기본 성질"
 
 categories: [Math / Algebraic Structures]

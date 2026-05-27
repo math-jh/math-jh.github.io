@@ -1,6 +1,6 @@
 ---
-
 title: "ZFC 공리계"
+description: "칸토어의 소박한 집합론이 러셀의 역설 같은 모순을 유발하는 과정을 살피고, 이를 해결하기 위해 제안된 ZFC 공리계의 존재 공리, 외연 공리 등 핵심 공리들을 소개한다."
 excerpt: "집합론의 공리들"
 
 categories: [Math / Set Theory]

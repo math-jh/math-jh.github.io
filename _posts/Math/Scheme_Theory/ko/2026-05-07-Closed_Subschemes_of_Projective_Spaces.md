@@ -1,6 +1,6 @@
 ---
-
 title: "사영공간의 닫힌 부분스킴"
+description: "사영공간의 닫힌 부분스킴은 동차 다항식들의 영점집합으로 표현할 수 있으며, 이 성질 덕분에 아핀 스킴과 거의 비슷한 방식으로 다룰 수 있다."
 excerpt: "Projective space의 closed subscheme과 homogeneous ideal의 대응"
 
 categories: [Math / Scheme Theory]

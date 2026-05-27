@@ -1,5 +1,5 @@
----
-title: "Noether Formula"
+---title: "Noether Formula"
+description: "매끄러운 사영 곡면의 자기교차수, 위상 오일러 특성, 구조 다발의 오일러 특성을 연결하는 노이더 공식을 히르체브뤼히-리만-로크 정리로부터 유도하고, 기하학적 의미와 구체적 예시를 통해 검증한다."
 permalink: /ko/math/algebraic_varieties/noether_formula
 excerpt: "Noether formula와 그 응용들"
 categories: [Math / Algebraic Varieties]

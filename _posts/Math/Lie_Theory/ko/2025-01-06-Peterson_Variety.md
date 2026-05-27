@@ -1,5 +1,5 @@
----
-title: "Peterson Variety"
+---title: "Peterson Variety"
+description: "복소 반단순 대수군의 nilpotent cone과 flag variety를 잇는 Peterson variety는 정칙 멱영 원소가 결정하는 특수한 부분다양체로, 그 정의와 차원, 기본적 계층화를 다룬다."
 excerpt: "Regular nilpotent element를 이용하여 정의되는 flag variety의 부분다양체 Peterson variety의 정의와 기본적인 기하학적 성질"
 
 categories: [Math / Lie Theory]

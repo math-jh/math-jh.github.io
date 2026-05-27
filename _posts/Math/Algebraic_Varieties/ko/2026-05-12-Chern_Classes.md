@@ -1,5 +1,5 @@
----
-title: "천 특성류"
+---title: "천 특성류"
+description: "복소 벡터다발의 뒤틀림을 측정하는 위상 불변량인 천 특성류를 공리적으로 정의하고, 분할 원리와 구체적 예시를 통해 계산 방법 및 기하학적 성질을 다룬다."
 excerpt: "벡터다발의 Chern classes와 그 성질들"
 
 categories: [Math / Algebraic Varieties]

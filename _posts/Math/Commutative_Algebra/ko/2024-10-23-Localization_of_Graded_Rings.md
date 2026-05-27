@@ -1,6 +1,6 @@
 ---
-
 title: "등급환의 국소화"
+description: "등급환과 등급 가군의 국소화를 다루며, 몫아이디얼의 정의와 동차아이디얼의 성질을 함께 살펴본다."
 excerpt: "Graded ring과 graded module의 homogeneous localization"
 
 categories: [Math / Commutative Algebra]
