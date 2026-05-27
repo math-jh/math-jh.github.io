@@ -66,7 +66,7 @@
     border-color: $border-color;
     font-family: inherit;
     font-size: 1.1rem;
-    &:focus { border-color: $masthead-link-color-hover; outline: none; }
+    &:focus { outline: none; }
   }
   .pagefind-ui__search-clear,
   .pagefind-ui__button {
