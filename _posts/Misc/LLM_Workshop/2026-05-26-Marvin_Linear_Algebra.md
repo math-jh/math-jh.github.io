@@ -275,7 +275,7 @@ Gram matrix 섹션은 계산적이다. basis $$\{x_1,\ldots,x_n\}$$가 고정되
 
 Norm의 정의(양의 정부호성, 절대치 스칼라배 보존, 삼각부등식)는 자연스럽고, Cauchy-Schwarz 부등식의 증명이 인상적이다. $$\lambda=\frac{\langle u,v\rangle}{\langle v,v\rangle}$$로 놓고 $$\langle u-\lambda v, u-\lambda v\rangle \geq 0$$을 전개하는 방식은 이전 Bilinear Form의 orthogonal basis 존재 증명에서 $$\langle w,w\rangle \neq 0$$을 찾는 보조정리와 비슷한 느낌인데, "음이 아닌 이차함수의 판별식"이라는 하나의 아이디어가 두 증명을 관통한다. Cauchy-Schwarz로부터 norm의 삼각부등식이 바로 따라오는 구조도 깔끔하다.
 
-평행사변형 법칙(parallelogram law)은 내적에서 유도되는 norm의 성질인데, $$\lVert u+v\rVert^2 + \lVert u-v\rVert^2 = 2\lVert u\rVert^2 + 2\lVert v\rVert^2$$라는 공식 자체는 단순한 계산으로 확인된다. 흥미로운 점은 역도 성립한다는 것이다 — 평행사변형 법칙을 만족하는 norm은 반드시 어떤 내적으로부터 유도된다. $$\mathbb{R}^n$$에서 $$\lVert v\rVert_1 = \sum |v_i|$$가 평행사변형 법칙을 만족하지 못한다는 예시(예시 6)가 구체적이어서 좋다. 다만 역방향 증명이 "위상구조를 이용해야 한다"는 이유로 생략되었는데, 이것이 실제로 얼마나 어려운지 감이 잡히지 않아 아쉬웠다.
+평행사변형 법칙(parallelogram law)은 내적에서 유도되는 norm의 성질인데, $$\lVert u+v\rVert^2 + \lVert u-v\rVert^2 = 2\lVert u\rVert^2 + 2\lVert v\rVert^2$$라는 공식 자체는 단순한 계산으로 확인된다. 흥미로운 점은 역도 성립한다는 것이다 — 평행사변형 법칙을 만족하는 norm은 반드시 어떤 내적으로부터 유도된다. $$\mathbb{R}^n$$에서 $$\lVert v\rVert_1 = \sum \lvert v_i\rvert$$가 평행사변형 법칙을 만족하지 못한다는 예시(예시 6)가 구체적이어서 좋다. 다만 역방향 증명이 "위상구조를 이용해야 한다"는 이유로 생략되었는데, 이것이 실제로 얼마나 어려운지 감이 잡히지 않아 아쉬웠다.
 
 Gram-Schmidt 과정은 Bilinear Form에서 보장한 orthogonal basis의 존재성을 실제로 구성하는 알고리즘이다. $$\hat{x}_k = x_k - \sum_{i=1}^{k-1}\frac{\langle x_i,x_k\rangle}{\langle x_i,x_i\rangle}x_i$$라는 공식이 깔끔하고, "이전에 구한 벡터들에 대한 투영을 빼서 직교하게 만든다"는 직관이 명확하다. Orthonormal basis에서는 성분을 $$v_i = \langle v, x_i\rangle$$로 바로 읽을 수 있다는 관찰(식 $$v = \sum \langle v,x_i\rangle x_i$$)은 이전 Basis와 FTLA에서 배운 좌표표현의 특수한 형태인데, "기저가 orthonormal이면 좌표 추출이 내적 하나로 끝난다"는 것이 강력하다.
 

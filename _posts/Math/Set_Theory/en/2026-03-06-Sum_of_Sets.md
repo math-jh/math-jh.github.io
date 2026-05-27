@@ -1,7 +1,6 @@
 ---
-
 title: "Sum of Sets"
-excerpt: "Sum of Sets (Disjoint Union)"
+excerpt: "Sum (disjoint union) of a family of sets"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/sum_of_sets
@@ -11,58 +10,55 @@ header:
 sidebar: 
     nav: "set_theory-en"
 
-date: 2026-03-06
-last_modified_at: 2026-03-06
+date: 2021-08-15
+last_modified_at: 2022-11-25
 weight: 9
-
-translated_at: 2026-05-19T21:30:02+00:00
+translated_at: 2026-05-27T00:00:03+00:00
 translation_source: kimi-cli
 ---
-
 ## Covering
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A family $$(A_i)_{i\in I}$$ is a *covering* of a set $$A$$ if $$A=\bigcup_{i\in I} A_i$$. Given two coverings $$(A_i)_{i\in I}$$ and $$(A'_j)_{j\in J}$$ of $$A$$, the covering $$(A'_j)_{j\in J}$$ is *finer* than $$(A_i)_{i\in I}$$ if for every $$j\in J$$, there exists $$i\in I$$ such that $$A'_j\subseteq A_i$$.
+<ins id="def1">**Definition 1**</ins> A family $$(A_i)_{i\in I}$$ is a *covering* of a set $$A$$ if $$A=\bigcup_{i\in I} A_i$$. For two coverings $$(A_i)_{i\in I}$$ and $$(A'_j)_{j\in J}$$ of $$A$$, we say that $$(A'_j)_{j\in J}$$ is *finer* than $$(A_i)_{i\in I}$$ if for every $$j\in J$$, there exists $$i\in I$$ such that $$A'_j\subseteq A_i$$.
 
 </div>
 
-Let $$(A_i)_{i\in I}$$ be a covering of a set $$A$$. For any function $$f:B \rightarrow A$$, the family $$(f^{-1}(A_i))_{i\in I}$$ of subsets of $$B$$ is a covering of $$B$$. This is called the *preimage* of $$(A_i)$$ under $$f$$. For any function $$g:A\rightarrow C$$, the family $$(g(A_i))_{i\in I}$$ of subsets of $$C$$ need not be a covering of $$C$$, but if $$g$$ is surjective, then these sets cover $$C$$. This is called the *image* of $$(A_i)$$ under the surjection $$g$$.
-
+Suppose a covering $$(A_i)_{i\in I}$$ of a set $$A$$ is given. Then for any function $$f:B \rightarrow A$$, the family $$(f^{-1}(A_i))_{i\in I}$$ of subsets of $$B$$ is a covering of $$B$$. We call this the preimage of $$(A_i)$$ under $$f$$. For any function $$g:A\rightarrow C$$, the family $$(g(A_i))_{i\in I}$$ of subsets of $$C$$ need not be a covering of $$C$$, but if $$g$$ is surjective then they do cover $$C$$. We call this the image of $$(A_i)$$ under the surjection $$g$$. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**Proposition 2**</ins>  Let $$A$$ be a set with covering $$(A_i)_{i\in I}$$, and let $$B$$ be any set.
+<ins id="prop2">**Proposition 2**</ins> Consider a set $$A$$ with its covering $$(A_i)_{i\in I}$$, and pick an arbitrary set $$B$$.
 
-1. Suppose functions $$f,g:A\rightarrow B$$ satisfy $$f\vert_{A_i}=g\vert_{A_i}$$ for every $$i\in I$$. Then $$f=g$$.
-2. Let $$(f_i:A_i\rightarrow B)_{i\in I}$$ be a family of functions satisfying the condition
+1. Suppose functions $$f,g:A\rightarrow B$$ satisfy $$f\vert_{A_i}=g\vert_{A_i}$$ for every $$i\in I$$. Then $$f=g$$. 
+2. If a family of functions $$(f_i:A_i\rightarrow B)_{i\in I}$$ satisfies the condition
     
     $$f_i|_{A_i\cap A_j}=f_j|_{A_i\cap A_j}$$
 
-    Then there exists a function $$f:A\rightarrow B$$ extending all $$f_i$$.
+    then there exists a function $$f:A\rightarrow B$$ extending all the $$f_i$$.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-For the first claim, let $$x\in A$$ be given. Since $$(A_i)_{i\in I}$$ covers $$A$$, there exists $$i\in I$$ with $$x\in A_i$$. Then
+To prove the first claim, let an arbitrary $$x\in A$$ be given. Since $$(A_i)_{i\in I}$$ covers $$A$$, there exists some $$i\in I$$ such that $$x\in A_i$$. Now
 
 $$f(x)=(f|_{A_i})(x)=(g|_{A_i})(x)=g(x)$$
 
-which establishes the first claim.
+and thus the first claim holds.
 
-For the second claim, using the given functions $$f_i=(F_i,A_i,B)$$, form $$F=\bigcup F_i$$ and consider the triple $$f=(F,A,B)$$. Clearly $$\pr_1F=A$$, so to show that $$f$$ is a function, it suffices to prove that for any $$x\in A$$, there is a unique $$y$$ such that $$(x,y)\in F$$.
+For the second claim, use the given functions $$f_i=(F_i,A_i,B)$$ to form $$F=\bigcup F_i$$, and consider the new triple $$f=(F,A,B)$$. Then $$\pr_1F=A$$ is obvious, so to show that $$f$$ is a function it suffices to prove that for any $$x\in A$$, there is a unique $$y$$ such that $$(x,y)\in F$$.
 
-Let $$y,y'\in B$$ satisfy $$(x,y)\in F$$ and $$(x,y')\in F$$. Then there exist $$i$$ and $$j$$ such that $$(x,y)\in F_i$$ and $$(x,y')\in F_j$$. Now
+Suppose $$y,y'\in B$$ satisfy $$(x,y)\in F$$ and $$(x,y')\in F$$. Then there exist $$i,j$$ such that $$(x,y)\in F_i$$ and $$(x,y')\in F_j$$. Now 
 
 $$y=(f_i)(x)=(f_i|_{A_i\cap A_j})(x)=(f_j|_{A_i\cap A_j})(x)=(f_j)(x)=y'$$
 
-so the second claim is also established.
+and thus the second claim also holds.
 
 </details>
 
-By the first claim, the function $$f$$ satisfying the condition in part 2 is necessarily unique. Moreover, if $$A_i\cap A_j=\emptyset$$ for all $$i,j$$, then the hypothesis of part 2 is automatically satisfied. We make the following definition.
+It is obvious from the first claim that a function $$f$$ satisfying condition 2 of the above proposition is unique. Also, if in particular $$A_i\cap A_j$$ holds for all $$i,j$$, then the hypothesis of the second claim is always satisfied. We define this as follows.
 
 <div class="definition" markdown="1">
 
@@ -76,89 +72,88 @@ By the first claim, the function $$f$$ satisfying the condition in part 2 is nec
 
 </div>
 
-In general, the empty set plays no role among the members of such a family, so when we speak of a partition, we assume that no member is empty.
+In general, since $$\emptyset$$ plays no role among the members of this family, when we speak of a partition we assume that no member is empty.
 
 ## Sum of Sets
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets. Then there exists a set $$S$$ such that:
+<ins id="prop5">**Proposition 5**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets. Then there exists a set $$S$$ such that 
 
-- $$S$$ is the union of a pairwise disjoint family $$(S_i)_{i\in I}$$, and
-- for every $$i\in I$$, there exists a bijection from $$A_i$$ to $$S_i$$.
+- $$S$$ is the union of a pairwise disjoint family $$(S_i)_{i\in I}$$, and 
+- for every $$i\in I$$ there exists a bijection from $$A_i$$ to $$S_i$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let $$S_i$$ be <phrase>the set of all $(x, i)$ satisfying $x\in A_i$</phrase>. Then $$(S_i)_{i\in I}$$ is pairwise disjoint. For each $$i$$, the map $$x\mapsto (x,i)$$ is a bijection from $$A_i$$ to $$S_i$$. Hence $$S=\bigcup_{i\in I} S_i$$ satisfies the required conditions.
+Let $$S_i$$ be the set of all pairs $$(x, i)$$ with $$x\in A_i$$. Then $$(S_i)_{i\in I}$$ is pairwise disjoint. Also, for each $$i$$, the map $$x\mapsto (x,i)$$ is a bijection from $$A_i$$ to $$S_i$$. Therefore $$S=\bigcup_{i\in I} S_i$$ satisfies the required conditions.
 
 </details>
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> A set $$S$$ satisfying the conditions above is called the *sum* of the family $$(A_i)_{i\in I}$$ and is denoted by $$\sum_{i\in I} A_i$$.
+<ins id="def6">**Definition 6**</ins> A set $$S$$ satisfying the above conditions is called the *sum* of the family $$(A_i)_{i\in I}$$, and is denoted by $$\sum_{i\in I} A_i$$.
 
 </div>
 
-This set is often called the *disjoint union* and denoted by $$\bigsqcup_{i\in I} A_i$$. The following proposition shows that this terminology is apt.
+This set is sometimes called the *disjoint union*, and is also written as $$\bigsqcup_{i\in I} A_i$$. The following proposition shows that this name is quite reasonable.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 7**</ins> Let $$(A_i)_{i\in I}$$ be a pairwise disjoint family. If $$A$$ denotes their union and $$S$$ their sum, then there exists a bijection between $$A$$ and $$S$$.
+<ins id="prop7">**Proposition 7**</ins> Consider a pairwise disjoint family $$(A_i)_{i\in I}$$. Let $$A$$ be their union and $$S$$ their sum. Then there exists a bijection between $$A$$ and $$S$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-If $$f_i:A_i\rightarrow S_i$$ are the bijections satisfying the condition of [Proposition 5](#prop5), then by [Proposition 2](#prop2), the family $$(f_i)_{i\in I}$$ extends to a bijection from $$\bigcup_{i\in I} A_i=A$$.
+If $$f_i:A_i\rightarrow S_i$$ are bijections satisfying the conditions of [Proposition 5](#prop5), then by [Proposition 2](#prop2) we can extend $$(f_i)_{i\in I}$$ to $$\bigcup_{i\in I} A_i=A$$.
 
 </details>
 
-The intuition for calling this the sum of sets will emerge later. ([§Operations of Cardinals, ⁋Definition 1](/en/math/set_theory/operation_of_cardinals#def1))
+The intuition for why this is called the sum of sets will appear later. ([§Operations of Cardinals, ⁋Definition 1](/en/math/set_theory/operation_of_cardinals#def1))
 
-## Universal Property
+## Universal property
 
-There is a point we have not yet mentioned regarding [Definition 6](#def6). The sum $$X$$ of a family of sets $$(A_i)$$ is not unique: infinitely many sets satisfy the conditions of [Proposition 5](#prop5). For instance, in the proof of that proposition, we took $$S$$ to be the set of pairs $$(x,i)$$, but we could equally well have taken the set of pairs $$(i,x)$$. Strictly speaking, then, the notation $$\sum A_i$$ for the sum of the $$A_i$$ is not well-defined.
+There is something we did not mention in [Definition 6](#def6). The sum $$X$$ of a family of sets $$(A_i)$$ is not unique. There are infinitely many sets satisfying the conditions of [Proposition 5](#prop5). For example, in the proof of that proposition we took $$S$$ to be the set of pairs $$(x,i)$$, but one can see that taking the set of pairs $$(i,x)$$ also satisfies the definition of sum. Therefore, strictly speaking, writing the sum of the $$A_i$$ as $$\sum A_i$$ is not a well-defined expression.
 
-Let us first examine the *universal property* of the sum.
+First, let us examine the *universal property* of the sum as follows.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**Theorem 8 (Universal property of sum)**</ins> Let $$(A_i)$$ be a family of sets, let $$S$$ be the set defined in [Proposition 5](#prop5), and let $$\iota_i:A_i\rightarrow S$$ be the injections. Given another set $$B$$ and functions $$f_i:A_i\rightarrow B$$, there exists a unique function $$f:S\rightarrow B$$ such that $$f_i=f\circ\iota_i$$.
+<ins id="thm8">**Theorem 8 (Universal property of sum)**</ins> Let a family of sets $$(A_i)$$, a set $$S$$ as defined in [Proposition 5](#prop5), and injections $$\iota_i:A_i\rightarrow S$$ be given. Then, whenever another set $$B$$ and maps $$f_i:A_i\rightarrow B$$ are given, there exists a unique $$f:S\rightarrow B$$ such that $$f_i=f\circ\iota_i$$. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-We first show that such a function $$f$$, if it exists, is unique. It suffices to show that for any $$x\in S$$, the value $$f(x)$$ is uniquely determined. Since $$S$$ is the union of a pairwise disjoint family $$(S_i)$$, there exists a unique $$i\in I$$ with $$x\in S_i$$. As $$\iota_i:A_i\rightarrow S_i$$ is a bijection, there exists a unique $$x_i\in A_i$$ with $$\iota_i(x_i)=x$$. Now
+First, let us show that such a function $$f$$ is unique (if it exists). For this, it suffices to show that for any $$x\in S$$, its function value $$f(x)$$ is always uniquely determined. Since $$S$$ is the union of a pairwise disjoint family $$(S_i)$$, there exists a unique $$i\in I$$ such that $$x\in S_i$$. Then since $$\iota_i:A_i\rightarrow S_i$$ is a bijection, there again exists a unique element $$x_i$$ of $$A_i$$ such that $$\iota_i(x_i)=x$$. Now,
 
 $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 
-so the value $$f(x)$$ at $$x$$ must equal $$f_i(x_i)$$, and hence $$f$$ is uniquely determined.
+so the function value $$f(x)$$ at $$x$$ must equal $$f_i(x_i)$$, and therefore $$f$$ is uniquely determined.
 
-For existence, taking a cue from the uniqueness proof, we *define* $$f(x)$$ to be $$f_i(x_i)$$ as above, and verify that $$f$$ is indeed a function. With this definition, $$f$$ is defined on all elements of $$S$$, and each $$x$$ is assigned exactly one value, as argued above.
+Now, taking a hint from the uniqueness proof, let us show the existence of the function $$f$$. Define $$f(x)$$ to be $$f_i(x_i)$$ as in the above equation, and prove that $$f$$ is actually a function. For instance, with this definition $$f$$ will be defined for all elements of $$S$$, and moreover a single $$x$$ is assigned exactly one function value as discussed above.
 
 </details>
 
+In many cases the set $$S$$ appearing in the proof of [Proposition 5](#prop5) is defined to be the sum of the $$A_i$$, but in fact this is putting the cart before the horse. The reason we think of $$S$$ as the sum of the $$A_i$$ in many areas is not because the set $$S$$ itself has any special meaning, but because of notational convenience. The properties of the sum do not come from the set $$S$$, but from the universal property above.
 
-In many contexts, the set $$S$$ from the proof of [Proposition 5](#prop5) is taken as the definition of the sum of the $$A_i$$, but this is actually putting the cart before the horse. The reason we regard $$S$$ as the sum of the $$A_i$$ in many fields is notational convenience, not because the set $$S$$ itself has special significance. The properties of the sum do not derive from the set $$S$$, but from the universal property above.
-
-Thus we might instead adopt the following definition from the start.
+Therefore, we could simply define it as follows from the start.
 
 <div class="definition" markdown="1">
 
-<ins id="def6-1">**Definition 6$$'$$**</ins> The *sum* of a given family of sets $$(A_i)$$ is a set $$\sum A_i$$ together with injections $$\iota_i:A_i\rightarrow \sum A_i$$ satisfying the following condition:
+<ins id="def6-1">**Definition 6$$'$$**</ins> The *sum* of a given family of sets $$(A_i)$$ is a set $$\sum A_i$$ together with maps $$\iota_i:A_i\rightarrow \sum A_i$$ satisfying the following condition:
  
-> For any set $$B$$ and functions $$f_i:A_i\rightarrow B$$, there exists a unique function $$f:\sum A_i\rightarrow B$$ such that $$f_i=f\circ\iota_i$$.
+> Whenever a set $$B$$ and maps $$f_i:A_i\rightarrow B$$ are given, there exists a unique function $$f:\sum A_i\rightarrow B$$ such that $$f_i=f\circ\iota_i$$.
 
 ![universal_property_of_sum](/assets/images/Math/Set_Theory/Sum_of_Sets-1.png){:style="width:12em" class="invert" .align-center}
 
 </div>
 
-To use this as a definition, we must of course show that at least one object satisfying the universal property exists. [Theorem 8](#thm8) provides precisely this.
+Of course, to use this as a definition we must show that at least one object satisfying the universal property exists. And [Theorem 8](#thm8) does exactly that. 
 
-We mentioned earlier that the set $$\sum A_i$$ is not strictly well-defined. However, even though such a set is not uniquely defined, any two such sets are in bijection. We say that such an object is *unique up to bijection*. From [Definition 6$$'$$](#def6-1), we can show that the sum of sets is unique up to bijection.
+We mentioned earlier that the set $$\sum A_i$$ is not well-defined in the strict sense. But even if such a set itself is not well-defined, if several such sets are given then there exists a bijection between them. This situation is called *unique up to bijection*. From [Definition 6$$'$$](#def6-1) one can show that the sum of sets is unique up to bijection. 
 
 <div class="proposition" markdown="1">
 
@@ -168,13 +163,13 @@ We mentioned earlier that the set $$\sum A_i$$ is not strictly well-defined. How
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Suppose two sums $$S$$ and $$S'$$ are given, with injections $$\iota_i$$ and $$\iota_i'$$ from $$A_i$$ to $$S$$ and $$S'$$ respectively. Applying the universal property of $$S$$ to the functions $$\iota_i':A_i\rightarrow Y$$, we obtain a unique $$\phi':S\rightarrow S'$$ such that $$\iota_i'=\phi'\circ\iota_i$$. Similarly, applying the universal property of $$S'$$ to the functions $$\iota_i$$, we obtain a unique $$\phi:S'\rightarrow S$$ such that $$\iota_i=\phi\circ\iota_i'$$. Then
+Let two sums $$S$$ and $$S'$$ be given, and let $$\iota_i$$ and $$\iota_i'$$ be the injections from $$A_i$$ into $$S$$ and $$S'$$ respectively. First, for the functions $$\iota_i':A_i\rightarrow Y$$, applying the universal property of $$S$$ yields a unique $$\phi':S\rightarrow S'$$ such that $$\iota_i'=\phi'\circ\iota_i$$. Similarly, applying the universal property of $$S'$$ to the functions $$\iota_i$$ yields a unique $$\phi:S'\rightarrow S$$ such that $$\iota_i=\phi\circ\iota_i'$$. Then
 
 $$\iota_i'=\phi'\circ\iota_i=\phi'\circ(\phi\circ\iota_i')=(\phi'\circ\phi)\circ\iota_i'$$
 
-Now apply the universal property of $$S'$$ to the functions $$\iota_i':A_i\rightarrow S'$$. There exists a unique function $$\psi:S'\rightarrow S'$$ such that $$\iota_i'=\psi\circ\iota_i'$$. This is of course satisfied by $$\psi=\id_{S'}$$, so by uniqueness, any such $$\psi$$ equals $$\id_{S'}$$. Hence $$\phi'\circ\phi=\id_{S'}$$, and since $$\id_{S'}$$ is a bijection, $$\phi'$$ is surjective and $$\phi$$ is injective. ([§Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3))
+On the other hand, apply the universal property of $$S'$$ to the functions $$\iota_i':A_i\rightarrow S'$$ this time. Then there exists a unique function $$\psi:S'\rightarrow S'$$ satisfying $$\iota_i'=\psi\circ\iota_i'$$. This is obviously satisfied by $$\psi=\id_{S'}$$, so by uniqueness every function $$\psi$$ satisfying this equation equals $$\id_{S'}$$. Therefore $$\phi'\circ\phi=\id_{S'}$$, and since $$\id_{S'}$$ is bijective, $$\phi'$$ is surjective and $$\phi$$ is injective. ([§Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3))
 
-Similarly, we can show that $$\phi\circ\phi'=\id_S$$, from which it follows that $$\phi$$ is surjective and $$\phi'$$ is injective. Thus each is a bijection, and there exists a bijection between $$S$$ and $$S'$$.
+Likewise, one can show that $$\phi\circ\phi'=\id_S$$, which implies that $$\phi$$ is surjective and $$\phi'$$ is injective. Thus they are both bijections, so there exists a bijection between $$S$$ and $$S'$$. 
 
 </details>
 

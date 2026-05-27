@@ -51,6 +51,7 @@ LOCK_PATH   = Path("/tmp/translate-worker.lock")
 
 KIMI_BIN              = shutil.which("kimi") or str(Path.home() / ".local/bin/kimi")
 KIMI_TIMEOUT_SEC      = 1500                 # 25min — large posts (>30KB) often need >15min
+MAX_TRANSLATE_ATTEMPTS = 3                   # re-translate on LOSSY verify verdict, up to N tries
 MIN_KO_BODY_CHARS     = 300                  # skip stubs below this
 FAIL_RETRY_AFTER_SEC  = 24 * 3600
 POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # re-polish only if last polish > 14d ago
@@ -709,12 +710,20 @@ def verify_math_mismatch(
     # 2026-05-25 on Characteristic_Classes, Cohomology_of_Projective_Spaces,
     # Riemann_Roch_Theorem). The verdict format is short bullet list — no
     # reasoning depth needed; the model can still classify SAFE/LOSSY from prose.
-    try:
-        return call_kimi(prompt, thinking=False).strip()
-    except subprocess.TimeoutExpired:
-        return "verify-failed: kimi timeout"
-    except Exception as e:
-        return f"verify-failed: {e!r}"
+    # Retry on timeout up to MAX_ATTEMPTS — verify failure leaves the user with
+    # no signal, so it's worth waiting; bounded to avoid pinning the cron lock
+    # indefinitely (each attempt ≤ KIMI_TIMEOUT_SEC).
+    MAX_ATTEMPTS = 5
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            return call_kimi(prompt, thinking=False).strip()
+        except subprocess.TimeoutExpired:
+            log(f"verify: kimi timeout on attempt {attempt}/{MAX_ATTEMPTS}"
+                + (", retrying" if attempt < MAX_ATTEMPTS else ", giving up"))
+            continue
+        except Exception as e:
+            return f"verify-failed: {e!r}"
+    return f"verify-failed: kimi timeout after {MAX_ATTEMPTS} attempts"
 
 
 # ---------------------------------------------------------------------------
@@ -792,36 +801,80 @@ def main() -> int:
         key = str(ko_path.relative_to(BLOG_ROOT))
         log(f"translating ({reason}): {key} → {en_path.relative_to(BLOG_ROOT)} (ko {ko_path.stat().st_size}B)")
 
-        translated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
-        warnings: list = []
-        try:
-            translated, in_chars, out_chars = translate(
-                ko_path, translated_at, reason=reason, en_path=en_path,
-                warnings=warnings,
-            )
-        except subprocess.TimeoutExpired:
-            state["files"][key] = {
-                "status": "failed",
-                "last_attempt_ts": time.time(),
-                "error": f"timeout after {KIMI_TIMEOUT_SEC}s",
-            }
-            save_state(state)
-            log(f"FAILED: timeout")
-            return 1
-        except Exception as e:
-            state["files"][key] = {
-                "status": "failed",
-                "last_attempt_ts": time.time(),
-                "error": str(e)[:500],
-            }
-            save_state(state)
-            log(f"FAILED: {e!r}")
-            return 1
-
-        # Snapshot pre-polish EN before overwrite — verify needs it for old→new diff.
+        # Snapshot pre-polish EN once — needed across retries (verify diff target,
+        # and translate() reads en_path for the polish prompt on every attempt).
         en_old_snapshot: Optional[str] = None
         if reason == "polish" and en_path.exists():
             en_old_snapshot = en_path.read_text(encoding="utf-8")
+
+        translated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        translated = ""
+        in_chars = out_chars = 0
+        warnings: list = []
+        verdict_text = ""
+        lossy_history: list[tuple[int, str]] = []
+
+        for attempt in range(1, MAX_TRANSLATE_ATTEMPTS + 1):
+            warnings = []
+            try:
+                translated, in_chars, out_chars = translate(
+                    ko_path, translated_at, reason=reason, en_path=en_path,
+                    warnings=warnings,
+                )
+            except subprocess.TimeoutExpired:
+                state["files"][key] = {
+                    "status": "failed",
+                    "last_attempt_ts": time.time(),
+                    "error": f"timeout after {KIMI_TIMEOUT_SEC}s",
+                }
+                save_state(state)
+                log(f"FAILED: timeout (attempt {attempt})")
+                return 1
+            except Exception as e:
+                state["files"][key] = {
+                    "status": "failed",
+                    "last_attempt_ts": time.time(),
+                    "error": str(e)[:500],
+                }
+                save_state(state)
+                log(f"FAILED: {e!r} (attempt {attempt})")
+                return 1
+
+            for w in warnings:
+                log(f"WARN ({key}) attempt {attempt}: {w}")
+
+            math_warn = next(
+                (w for w in warnings if w.startswith("math block count mismatch")),
+                None,
+            )
+            if not math_warn:
+                verdict_text = ""
+                break
+
+            ko_text = ko_path.read_text(encoding="utf-8")
+            ko_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", ko_text)))
+            en_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", translated)))
+            log(f"VERIFY ({key}) attempt {attempt}/{MAX_TRANSLATE_ATTEMPTS}: "
+                f"math mismatch ko={ko_n}/en={en_n}"
+                + (" (with en_old)" if en_old_snapshot else ""))
+            verdict_text = verify_math_mismatch(
+                ko_text, translated, ko_n, en_n, en_old=en_old_snapshot,
+            )
+            for line in verdict_text.splitlines():
+                log(f"VERIFY ({key}) attempt {attempt}: {line}")
+
+            is_lossy = bool(re.search(
+                r"^VERDICT:\s*lossy\b", verdict_text, re.MULTILINE | re.IGNORECASE
+            ))
+            if not is_lossy:
+                break
+
+            lossy_history.append((attempt, verdict_text))
+            if attempt < MAX_TRANSLATE_ATTEMPTS:
+                log(f"LOSSY verdict on attempt {attempt}, re-translating")
+            else:
+                log(f"LOSSY verdict persisted after {MAX_TRANSLATE_ATTEMPTS} attempts — accepting last")
+
         en_path.write_text(translated, encoding="utf-8")
         state["files"][key] = {
             "status": "done",
@@ -834,38 +887,41 @@ def main() -> int:
             "reason": reason,
             "warnings": warnings or None,
         }
+        if lossy_history:
+            state["files"][key]["lossy_retry_count"] = len(lossy_history)
+        if verdict_text:
+            state["files"][key]["verify_verdict"] = verdict_text[:4000]
+
         if warnings:
-            for w in warnings:
-                log(f"WARN ({key}): {w}")
-            # If the math-block count mismatch is the warning, run a Kimi second
-            # opinion to diagnose what changed before notifying — the raw count is
-            # rarely actionable on its own (most mismatches are safe rephrasings).
-            math_warn = next(
-                (w for w in warnings if w.startswith("math block count mismatch")),
-                None,
+            # Suppress telegram on VERDICT: safe — math-count mismatch is the only
+            # current warning source, and "safe" means the divergence is rephrasing.
+            # minor / lossy / verify-failed still notify.
+            verdict_safe = bool(
+                verdict_text
+                and re.search(r"^VERDICT:\s*safe\b",
+                              verdict_text, re.MULTILINE | re.IGNORECASE)
             )
-            verdict_text = ""
-            if math_warn:
-                ko_text = ko_path.read_text(encoding="utf-8")
-                # Reuse the same SUB-strip the validator used so counts agree.
-                ko_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", ko_text)))
-                en_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", translated)))
-                log(f"VERIFY ({key}): running kimi diagnosis for math mismatch ko={ko_n}/en={en_n}"
-                    + (" (with en_old)" if en_old_snapshot else ""))
-                verdict_text = verify_math_mismatch(
-                    ko_text, translated, ko_n, en_n, en_old=en_old_snapshot,
+            if verdict_safe:
+                log(f"VERIFY ({key}): safe verdict — telegram suppressed")
+            else:
+                body_lines = [key, f"→ {en_path.relative_to(BLOG_ROOT)}", ""]
+                body_lines += [f"• {w}" for w in warnings]
+                if lossy_history:
+                    final_lossy = bool(re.search(
+                        r"^VERDICT:\s*lossy\b", verdict_text,
+                        re.MULTILINE | re.IGNORECASE,
+                    ))
+                    body_lines += ["", (
+                        f"LOSSY persisted on all {len(lossy_history)}/{MAX_TRANSLATE_ATTEMPTS} attempts"
+                        if final_lossy else
+                        f"recovered after {len(lossy_history)} lossy attempt(s)"
+                    )]
+                if verdict_text:
+                    body_lines += ["", "--- kimi verify (final) ---", verdict_text]
+                _notify_telegram(
+                    f"[translate-worker] {reason} warnings",
+                    "\n".join(body_lines),
                 )
-                for line in verdict_text.splitlines():
-                    log(f"VERIFY ({key}): {line}")
-                state["files"][key]["verify_verdict"] = verdict_text[:4000]
-            body_lines = [key, f"→ {en_path.relative_to(BLOG_ROOT)}", ""]
-            body_lines += [f"• {w}" for w in warnings]
-            if verdict_text:
-                body_lines += ["", "--- kimi verify ---", verdict_text]
-            _notify_telegram(
-                f"[translate-worker] {reason} warnings",
-                "\n".join(body_lines),
-            )
         stats = state.setdefault("stats", {})
         stats["total_done"]      = stats.get("total_done", 0) + 1
         stats["total_in_chars"]  = stats.get("total_in_chars",  0) + in_chars

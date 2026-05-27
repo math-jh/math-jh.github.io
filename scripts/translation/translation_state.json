@@ -1689,13 +1689,14 @@
     },
     "_posts/Math/Scheme_Theory/ko/2026-05-07-Valuative_Criteria.md": {
       "status": "done",
-      "last_attempt_ts": 1779484016.894538,
+      "last_attempt_ts": 1779836484.1935837,
       "en_path": "_posts/Math/Scheme_Theory/en/2026-05-07-Valuative_Criteria.md",
-      "ko_git_commit_ts": 1779152404.0,
-      "translated_at": "2026-05-22T21:00:01+00:00",
-      "in_chars": 10198,
-      "out_chars": 10180,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-26T23:00:03+00:00",
+      "in_chars": 10622,
+      "out_chars": 10070,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Symplectic_Geometry/ko/2022-12-15-Classical_Mechanics.md": {
       "status": "done",
@@ -1968,13 +1969,17 @@
     },
     "_posts/Math/Set_Theory/ko/2021-08-14-Binary_Relation.md": {
       "status": "done",
-      "last_attempt_ts": 1779556131.3377068,
+      "last_attempt_ts": 1779838257.9781067,
       "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Binary_Relation.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-23T17:00:03+00:00",
-      "in_chars": 6748,
-      "out_chars": 6582,
-      "reason": "drift"
+      "ko_git_commit_ts": 1779764407.0,
+      "translated_at": "2026-05-26T23:30:02+00:00",
+      "in_chars": 7211,
+      "out_chars": 6520,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=84, en=86"
+      ],
+      "verify_verdict": "verify-failed: kimi timeout"
     },
     "_posts/Math/Set_Theory/ko/2021-08-22-Elements_in_Ordered_Set.md": {
       "status": "done",
@@ -2612,11 +2617,39 @@
         "math block count mismatch: ko=485, en=461"
       ],
       "verify_verdict": "verify-failed: kimi timeout"
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-15-Sum_of_Sets.md": {
+      "status": "done",
+      "last_attempt_ts": 1779840103.8581793,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Sum_of_Sets.md",
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-27T00:00:03+00:00",
+      "in_chars": 10684,
+      "out_chars": 10736,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=185, en=187"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=185 en=187\nFINDINGS:\n- [def1] SAFE-REPHRASE: KO splits \"A_i subseteq A_i\" and existence quantifier into two separate math blocks; EN merges them into one block \"A'_j subseteq A_i\" with surrounding text — same mathematical meaning, no content change.\n- [prop2] SAFE-REPHRASE: KO uses inline math for f|_{A_i}=g|_{A_i} in the list item text; EN keeps it inline as well — no block difference here, but overall count shift is distributed.\n- [prop5 proof] SAFE-REPHRASE: KO uses a phrase tag with math inside: \"$x in A_i$를 만족하는 $(x, i)$들\"; EN renders as \"pairs $(x, i)$ with $x in A_i$\" — the two math blocks are reordered and embedded in prose, but identical symbols.\n- [def6-1] SAFE-REPHRASE: KO has a displayed condition block using $$...$$ for the universal property statement; EN converts the same logical condition into a blockquote (>...) with inline math, reducing the number of $$...$$ blocks by one while preserving the exact mathematical content.\n- [thm8 proof] SAFE-REPHRASE: KO has separate math blocks for f(x)=... chain; EN merges the same chain into continuous inline math within one $$...$$ block — exact same formulas, just block boundary change.\n- [cor9 proof] SAFE-REPHRASE: KO uses individual math blocks for each step of the iota' equation chain; EN combines them into a single multi-line $$...$$ block — identical formulas, merged presentation.\n- [Overall] SAFE-REPHRASE: Net difference of +2 EN blocks is due to splitting one merged equation chain in cor9 proof and minor boundary shifts in prop2/thm8; no mathematical content was added, dropped, or altered."
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-15-Union_and_Intersection.md": {
+      "status": "done",
+      "last_attempt_ts": 1779842167.203516,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Union_and_Intersection.md",
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-27T00:30:03+00:00",
+      "in_chars": 11381,
+      "out_chars": 11226,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=184, en=191"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=184 en=191\nFINDINGS:\n- [def1] SAFE-REPHRASE: KO inline math `$A_i$`, `$x$` inside `<phrase>` was rephrased in EN as \"set of all $$x$$ that <phrase>belong to at least one $$A_i$$</phrase>\" — the $$x$$ moved outside the phrase, no content lost.\n- [def2] SAFE-REPHRASE: Same pattern as def1; KO `$A_i$`, `$x$` inline became \"collection of all $$x$$ satisfying … <phrase>belong to every $$A_i$$</phrase>\".\n- [def3] SAFE-REPHRASE: Same pattern; KO `$A$`, `$A_i$`, `$x$` inline became \"set of all $$x$$ that <phrase>are elements of $$A$$ and simultaneously belong to every $$A_i$$</phrase>\".\n- [prop4] SAFE-REPHRASE (KO typo corrected): KO source had a typo `$$\\bigcap_{k\\in K}A_k\\bigcap_{k\\in K}A_{f(k)}$$` (missing `=`); EN correctly renders `$$\\bigcap_{k\\in K}A_k=\\bigcap_{k\\in K}A_{f(k)}$$`. The single equation block count is unchanged.\n- [overall] All 7 extra EN blocks are accounted for by the three `<phrase>` rephrasings above (2+2+3=7), with identical mathematical content."
     }
   },
   "stats": {
-    "total_done": 305,
-    "total_in_chars": 5220707,
-    "total_out_chars": 4524714
+    "total_done": 309,
+    "total_in_chars": 5260605,
+    "total_out_chars": 4563266
   }
 }
