@@ -1,8 +1,8 @@
 {
-  "current_cat_idx": 3,
-  "current_cat": "Math / Algebraic Structures",
+  "current_cat_idx": 6,
+  "current_cat": "Math / Multilinear Algebra",
   "cat_start_date": "2026-05-27",
-  "current_note_post": "_posts/Misc/LLM_Workshop/2026-05-27-Marvin_Algebraic_Structures.md",
-  "posts_done_in_cat": ["/ko/math/algebraic_structures/algebraic_structures", "/ko/math/algebraic_structures/groups", "/ko/math/algebraic_structures/Grothendieck_groups", "/ko/math/algebraic_structures/group_homomorphisms", "/ko/math/algebraic_structures/quotient_groups", "/ko/math/algebraic_structures/isomorphism_theorems", "/ko/math/algebraic_structures/direct_products", "/ko/math/algebraic_structures/restricted_sums"],
+  "current_note_post": "_posts/Misc/LLM_Workshop/2026-05-27-Marvin_Multilinear_Algebra.md",
+  "posts_done_in_cat": ["/ko/math/multilinear_algebra/exact_sequences", "/ko/math/multilinear_algebra/various_modules", "/ko/math/multilinear_algebra/basis_of_free_modules", "/ko/math/multilinear_algebra/dual_spaces", "/ko/math/multilinear_algebra/hom_and_tensor", "/ko/math/multilinear_algebra/matrices", "/ko/math/multilinear_algebra/matrices_and_linear_maps", "/ko/math/multilinear_algebra/change_of_basis", "/ko/math/multilinear_algebra/tensor_product_of_matrices", "/ko/math/multilinear_algebra/tensor_algebras", "/ko/math/multilinear_algebra/determinants"],
   "all_complete": false
 }

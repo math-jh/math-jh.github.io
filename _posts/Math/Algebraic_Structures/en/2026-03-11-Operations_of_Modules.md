@@ -75,7 +75,7 @@ $$\Hom_A(A, M)\cong\Hom_\Set(\ast, U(M))$$
 
 where $$U:\lMod{A} \rightarrow \Set$$ is the forgetful functor. That is, $$A$$ can be said to be a representation of the forgetful functor $$U$$.
 
-On the other hand, since we have verified that $$\lMod{R}$$ has coproducts $$\bigoplus$$, if the left adjoint $$F: \Set \rightarrow \lMod{A}$$ of $$U$$ exists then the formula
+On the other hand, since we have verified that $$\lMod{A}$$ has coproducts $$\bigoplus$$, if the left adjoint $$F: \Set \rightarrow \lMod{A}$$ of $$U$$ exists then the formula
 
 $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong\bigoplus_{x\in X} F(\{x\})$$
 
@@ -147,7 +147,7 @@ and
 
 $$\Hom_{\lMod{A}}\left(M,\prod_{i\in I} N_i\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M, N_i),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong \prod_{i\in I}\Hom_{\lMod{A}}(M_i,N)\tag{2}$$
 
-In the special case where $$A=\mathbb{Z}$$, we recover the contents of [§Abelian Groups, §§Tensor Product](/en/math/algebraic_structures/abelian_groups#텐서곱); the above isomorphisms are ones that were omitted in that post for reasons of length.
+In the special case where $$A=\mathbb{Z}$$, we recover the contents of [§Abelian Groups, §§Tensor Product](/en/math/algebraic_structures/abelian_groups#tensor-products); the above isomorphisms are ones that were omitted in that post for reasons of length.
 
 ## Tensor Products of Modules over Commutative Rings
 

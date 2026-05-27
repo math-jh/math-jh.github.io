@@ -78,7 +78,7 @@ $$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> Finitely generated module $$M$$의 $$\mathfrak{a}$$-stable filtration $$\mathcal{J}$$가 주어졌다 하고, $$\mathcal{J}$$의 모든 항 $$M_k$$가 $$M$$의 finitely generated submodule이라 하자. 그럼 $$\gr_\mathcal{J}A$$는 finitely generated $$\gr_\mathfrak{a}A$$-module이다.
+<ins id="prop4">**명제 4**</ins> Finitely generated module $$M$$의 $$\mathfrak{a}$$-stable filtration $$\mathcal{J}$$가 주어졌다 하고, $$\mathcal{J}$$의 모든 항 $$M_k$$가 $$M$$의 finitely generated submodule이라 하자. 그럼 $$\gr_\mathcal{J}M$$는 finitely generated $$\gr_\mathfrak{a}A$$-module이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -132,7 +132,7 @@ $$\Bl_\mathcal{J}M =M\oplus M_1\oplus\cdots$$
 
 $$\mathcal{J}:\quad M=M_0\supseteq M_1\supseteq\cdots$$
 
-이 $$\mathcal{a}$$-stable filtration이라면 이로부터 유도되는 다음의 filtration
+이 $$\mathfrak{a}$$-stable filtration이라면 이로부터 유도되는 다음의 filtration
 
 $$\mathcal{J}':\quad M'\supseteq M'\cap M_1\supseteq M'\cap M_2\supseteq\cdots$$
 
@@ -217,7 +217,7 @@ $$f(\x,\y)\x^2+g(\x,\y)\y^2$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$A$$에서 $$ab=0$$임을 가정하고, $$a,b=0$$임을 보이면 충분하다. 이제 $$\gr_\mathfrak{a}A$$에서 $$\initial(a)\initial(b)=0$$이 성립해야 하고, 따라서 $$\initial(x)$$ 혹은 $$\initial(y)$$가 $$0$$이어야 한다. 이제 위의 따름정리로부터 $$\bigcap \mathfrak{a}^n=0$$이므로, $$a=0$$이거나 $$b=0$$이어야 한다. 
+$$A$$에서 $$ab=0$$임을 가정하고, $$a,b=0$$임을 보이면 충분하다. 이제 $$\gr_\mathfrak{a}A$$에서 $$\initial(a)\initial(b)=0$$이 성립해야 하고, 따라서 $$\initial(a)$$ 혹은 $$\initial(b)$$가 $$0$$이어야 한다. 이제 위의 따름정리로부터 $$\bigcap \mathfrak{a}^n=0$$이므로, $$a=0$$이거나 $$b=0$$이어야 한다. 
 
 </details>
 

@@ -76,7 +76,7 @@ $$\Hom_A(A, M)\cong\Hom_\Set(\ast, U(M))$$
 
 이 성립한다. 여기서 $$U:\lMod{A} \rightarrow \Set$$은 forgetful functor이다. 즉 $$A$$는 forgetful functor $$U$$의 representation이라 할 수 있다. 
 
-한편 앞서 $$\lMod{R}$$이 coproduct $$\bigoplus$$를 갖는다는 것을 확인하였으므로, $$U$$의 left adjoint $$F: \Set \rightarrow \lMod{A}$$가 존재한다면 다음의 식
+한편 앞서 $$\lMod{A}$$이 coproduct $$\bigoplus$$를 갖는다는 것을 확인하였으므로, $$U$$의 left adjoint $$F: \Set \rightarrow \lMod{A}$$가 존재한다면 다음의 식
 
 $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong\bigoplus_{x\in X} F(\{x\})$$
 

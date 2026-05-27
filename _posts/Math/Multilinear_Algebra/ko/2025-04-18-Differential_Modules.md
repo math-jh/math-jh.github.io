@@ -144,7 +144,7 @@ $$(xy)\otimes 1-1\otimes(xy)=(x\otimes 1-1\otimes x)y+x(y\otimes 1-1\otimes y)$$
 
 이 성립하므로 얻어진다. 이제 일반적으로 $$\mathfrak{I}$$의 임의의 원소 $$\sum_i x_i\otimes y_i$$가 주어졌다 하자. 즉 $$\sum_i x_iy_i=0$$이다. 이제 이로부터 다음의 식
 
-$$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\orimes 1\right)=\sum_i x_i(1\otimes y_i-y_i\otimes 1)$$
+$$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\otimes 1\right)=\sum_i x_i(1\otimes y_i-y_i\otimes 1)$$
 
 이 얻어지므로 둘째 주장도 자명하다. 
 
@@ -334,7 +334,7 @@ $$\Der_{A'}(E', N) \rightarrow \Der_A(E, N);\qquad D\mapsto D\circ u$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> $$E' = E \otimes_AA'$$라고 하고, $$\eta : A \to E'$$, $$u : E \to E'$$를 canonica morphism들이라 하면, $$A'$$-linear map
+<ins id="prop12">**명제 12**</ins> $$E' = E \otimes_AA'$$라고 하고, $$\eta : A \to E'$$, $$u : E \to E'$$를 canonical morphism들이라 하면, $$A'$$-linear map
 
 $$\Omega_0(u) : \Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A'}$$
 
@@ -422,7 +422,7 @@ $$\overline{d}:\mathfrak{I}/\mathfrak{I}^2\rightarrow\Omega_{E/A}\otimes_EE'$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**명제 14**</ins> 위의 상황에서, 다음의 $$E'=\mathfrak{I}/\mathfrak{I}^2$$-linear map들의 sequence
+<ins id="prop14">**명제 14**</ins> 위의 상황에서, 다음의 $$E'$$-linear map들의 sequence
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\longrightarrow0$$
 
@@ -432,7 +432,7 @@ $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-앞선 논증의 표기에서, 우리는 $$\Omega_{E/A}\otimes_EE'$$를 $$\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$$와 identify할 수 있다. 그럼 이 identification 하에서, $$\overline{d)$$의 image는 $$d(\mathfrak{I})\subset\Omega_{E/A}$$의 quotient module $$\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$$에서의 image가 된다. 따라서, $$\Omega_{E/A}$$의 $$A$$-submodule $$I$$를 $$\mathfrak{I}\Omega_{E/A}$$와 $$d(\mathfrak{I})$$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
+앞선 논증의 표기에서, 우리는 $$\Omega_{E/A}\otimes_EE'$$를 $$\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$$와 identify할 수 있다. 그럼 이 identification 하에서, $$\overline{d}$$의 image는 $$d(\mathfrak{I})\subset\Omega_{E/A}$$의 quotient module $$\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$$에서의 image가 된다. 따라서, $$\Omega_{E/A}$$의 $$A$$-submodule $$I$$를 $$\mathfrak{I}\Omega_{E/A}$$와 $$d(\mathfrak{I})$$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
 
 $$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{I}$$
 

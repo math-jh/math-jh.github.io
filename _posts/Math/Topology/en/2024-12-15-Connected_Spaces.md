@@ -140,7 +140,7 @@ Moreover, the following holds.
 
 <ins id="prop8">**Proposition 8**</ins> Define an equivalence relation $$\sim$$ on a topological space $$X$$ by
 
-$$x\sim y\iff \text{$x$ and $y$ lies in the same component}$$
+$$x\sim y\iff \text{$x$ and $y$ lie in the same component}$$
 
 Then $$X/{\sim}$$ is totally disconnected.
 

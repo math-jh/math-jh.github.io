@@ -26,9 +26,7 @@ Changing the order of the above construction slightly, consider the dual $$(A_{(
 
 $$(A_{(\mathbb{L})})^\ast=\Hom_\mathbb{L}(\mathbb{L}\otimes_\mathbb{K}A, \mathbb{L})\cong\Hom_\mathbb{K}(A, \Hom_\mathbb{L}(\mathbb{L}, \mathbb{L}))\cong\Hom_\mathbb{K}(A, \mathbb{L})$$
 
-we have
-$$(A_{(\mathbb{L})})^\ast=\Hom_\mathbb{L}(A_{(\mathbb{L})}, \mathbb{L})\cong\Hom_\mathbb{K}(A,\mathbb{L})\cong A^\ast\otimes_\mathbb{K}\mathbb{L}$$
-and hence obtain an isomorphism of $$\mathbb{L}$$-vector spaces
+we obtain an isomorphism of $$\mathbb{L}$$-vector spaces
 
 $$(A_{(\mathbb{L})})^\ast=\Hom_\mathbb{L}(A_{(\mathbb{L})}, \mathbb{L})\cong\Hom_\mathbb{K}(A,\mathbb{L})\cong A^\ast\otimes_\mathbb{K}\mathbb{L}.$$
 

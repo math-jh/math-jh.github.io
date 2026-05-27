@@ -97,7 +97,7 @@ $$(0)=\sqrt{(0)}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime} \mathfrak{p}$$
 
     을 만족해야 하며, $$E'$$가 integral domain이므로 우리는 일반성을 잃지 않고 $$q_0\neq 0$$이라 가정할 수 있다. 그럼 이제 monic polynomial
 
-    $$\left(\frac{1}{x}\right)^m+\frac{q_1}{1_0}\left(\frac{1}{x}\right)^{m-1}+\cdots+\frac{q_m}{q_0}=0$$
+    $$\left(\frac{1}{x}\right)^m+\frac{q_1}{q_0}\left(\frac{1}{x}\right)^{m-1}+\cdots+\frac{q_m}{q_0}=0$$
 
     으로부터 $$E'[x^{-1}]$$이 integral $$A'[(p_nq_0)^{-1}]$$-algebra임을 안다. 이제 [§정수적 확장과 아이디얼, ⁋따름정리 3](/ko/math/commutative_algebra/lying_over_and_going_up#cor3)으로부터 $$A'[(p_nq_0)^{-1}]$$는 field이고, 가정에 의해 $$A'$$는 Jacobson이므로 [보조정리 3](#lem3)에 의해 $$A'$$는 field이다. 따라서 $$E'$$는 integral $$A'$$-algebra이고 다시 [§정수적 확장과 아이디얼, ⁋따름정리 3](/ko/math/commutative_algebra/lying_over_and_going_up#cor3)으로부터 $$E'$$가 field임을 안다. 
 3. 이제 마지막 경우는 둘째 결과를 사용해 induction을 진행하면 된다. 

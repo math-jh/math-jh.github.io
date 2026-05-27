@@ -140,7 +140,7 @@ From this we obtain the following.
 
 </div>
 
-Just as for [Theorem 9](#thm9), there is also a valuative criterion for proper morphisms.
+Just as for [Theorem 6](#thm6), there is also a valuative criterion for proper morphisms.
 
 <div class="proposition" markdown="1">
 

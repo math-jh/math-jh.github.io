@@ -1790,23 +1790,28 @@
     },
     "_posts/Math/Topology/ko/2022-11-13-Continuous_Functions.md": {
       "status": "done",
-      "last_attempt_ts": 1779500011.5388484,
+      "last_attempt_ts": 1779845833.2051058,
       "en_path": "_posts/Math/Topology/en/2022-11-13-Continuous_Functions.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-23T01:30:01+00:00",
-      "in_chars": 7620,
-      "out_chars": 7537,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-27T01:30:03+00:00",
+      "in_chars": 8107,
+      "out_chars": 7414,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=126, en=127"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=126 en=127\nFINDINGS:\n- [def1] SAFE-REPHRASE: KO splits topological spaces into $$X$$, $$Y$$ separately; EN merges into the function signature $$f:X\\rightarrow Y$$ — same symbols, different sentence structure.\n- [post-def1 paragraph] SAFE-REPHRASE: KO uses $$X,Y$$ as a combined block; EN inlines it in text \"between sets X,Y\" — no math lost.\n- [prop2] SAFE-REPHRASE: KO has explicit $$X,Y$$ block before the function; EN says \"between two topological spaces\" without a separate math block — spaces are still named in $$f:X\\rightarrow Y$$.\n- [thm4 intro] SAFE-REPHRASE: KO uses $$X,Y$$ block; EN inlines in prose \"For two topological spaces X,Y\" — identical symbols, just formatting.\n- [pre-f^T paragraph] SAFE-REPHRASE: KO has one block $$(X,\\mathcal{T}_X), (Y,\\mathcal{T}_Y)$$; EN splits into two blocks $$(X,\\mathcal{T}_X)$$ and $$(Y,\\mathcal{T}_Y)$$ — same content, different block boundaries.\n- [ex5] SAFE-REPHRASE: KO mentions $$\\mathbb{N}$$ once then defines $$X_1$$, $$X_2$$; EN mentions $$\\mathbb{N}$$ twice (once per space definition) — same underlying set referenced, sentence restructuring.\n- [closing paragraph] SAFE-REPHRASE: KO has $$X,Y$$ block in the homeomorphic explanation; EN inlines in prose \"two topological spaces X,Y\" — no content change."
     },
     "_posts/Math/Topology/ko/2022-11-15-Initial_and_Final_Topology.md": {
       "status": "done",
-      "last_attempt_ts": 1779501788.886182,
+      "last_attempt_ts": 1779847285.0861504,
       "en_path": "_posts/Math/Topology/en/2022-11-15-Initial_and_Final_Topology.md",
-      "ko_git_commit_ts": 1776661221.0,
-      "translated_at": "2026-05-23T02:00:01+00:00",
-      "in_chars": 7820,
-      "out_chars": 8031,
-      "reason": "pending"
+      "ko_git_commit_ts": 1779757207.0,
+      "translated_at": "2026-05-27T02:00:03+00:00",
+      "in_chars": 8307,
+      "out_chars": 8065,
+      "reason": "drift",
+      "warnings": null
     },
     "_posts/Math/Topology/ko/2022-11-15-Subspaces.md": {
       "status": "done",
@@ -2645,11 +2650,25 @@
         "math block count mismatch: ko=184, en=191"
       ],
       "verify_verdict": "VERDICT: safe\nCOUNTS: ko=184 en=191\nFINDINGS:\n- [def1] SAFE-REPHRASE: KO inline math `$A_i$`, `$x$` inside `<phrase>` was rephrased in EN as \"set of all $$x$$ that <phrase>belong to at least one $$A_i$$</phrase>\" — the $$x$$ moved outside the phrase, no content lost.\n- [def2] SAFE-REPHRASE: Same pattern as def1; KO `$A_i$`, `$x$` inline became \"collection of all $$x$$ satisfying … <phrase>belong to every $$A_i$$</phrase>\".\n- [def3] SAFE-REPHRASE: Same pattern; KO `$A$`, `$A_i$`, `$x$` inline became \"set of all $$x$$ that <phrase>are elements of $$A$$ and simultaneously belong to every $$A_i$$</phrase>\".\n- [prop4] SAFE-REPHRASE (KO typo corrected): KO source had a typo `$$\\bigcap_{k\\in K}A_k\\bigcap_{k\\in K}A_{f(k)}$$` (missing `=`); EN correctly renders `$$\\bigcap_{k\\in K}A_k=\\bigcap_{k\\in K}A_{f(k)}$$`. The single equation block count is unchanged.\n- [overall] All 7 extra EN blocks are accounted for by the three `<phrase>` rephrasings above (2+2+3=7), with identical mathematical content."
+    },
+    "_posts/Math/Set_Theory/ko/2021-08-23-Well_Ordering.md": {
+      "status": "done",
+      "last_attempt_ts": 1779844533.0060947,
+      "en_path": "_posts/Math/Set_Theory/en/2026-03-06-Well_Ordering.md",
+      "ko_git_commit_ts": 1779764407.0,
+      "translated_at": "2026-05-27T01:00:03+00:00",
+      "in_chars": 10825,
+      "out_chars": 10690,
+      "reason": "drift",
+      "warnings": [
+        "math block count mismatch: ko=200, en=201"
+      ],
+      "verify_verdict": "VERDICT: safe\nCOUNTS: ko=200 en=201\nFINDINGS:\n- [prop3] SAFE-REPHRASE: KO uses two separate `$$\\alpha$$` blocks (\"$$\\alpha$$가 ... $$\\alpha$$의 successor\"), EN merges the second into English text (\"its successor\"), no math lost.\n- [lem5 statement] SAFE-REPHRASE: KO uses inline `$A_j$` and `$A_i$` inside `<phrase>`, EN converts them to display `$$A_j$$` and `$$A_i$$`, adding two blocks but preserving identical symbols.\n- [lem5 statement] SAFE-REPHRASE: KO has a typo `$(A_i)_{i\\in I})$` with extra closing parenthesis, EN corrects it to `$(A_i)_{i\\in I}$`; same block count, just a typo fix.\n- [Overall] SAFE-REPHRASE: Net +1 EN block arises from the lem5 inline→display conversion (+2) minus the prop3 merge (−1); no mathematical content was added, dropped, or altered."
     }
   },
   "stats": {
-    "total_done": 309,
-    "total_in_chars": 5260605,
-    "total_out_chars": 4563266
+    "total_done": 312,
+    "total_in_chars": 5287844,
+    "total_out_chars": 4589435
   }
 }

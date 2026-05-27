@@ -82,7 +82,7 @@ $$x+y=(\epsilon(\alpha\delta)+\epsilon(\beta\gamma))\epsilon(\gamma\delta)^{-1}=
     $$\frac{0}{1}+\frac{\alpha}{\gamma}=\frac{\alpha}{\gamma}$$
 
     이 성립하기 때문이다.
-5. $$+$$에 대한 역원이 항상 존재한다. 임의의 $$x\in \alpha/\gamma\in A_S$$에 대하여, $$(-\alpha)/\gamma$$가 다음 식
+5. $$+$$에 대한 역원이 항상 존재한다. 임의의 $$x=\alpha/\gamma\in A_S$$에 대하여, $$(-\alpha)/\gamma$$가 다음 식
 
     $$\frac{-\alpha}{\gamma}+\frac{\alpha}{\gamma}=\frac{(-\alpha)\gamma+\alpha\gamma}{\gamma^2}=0$$
 

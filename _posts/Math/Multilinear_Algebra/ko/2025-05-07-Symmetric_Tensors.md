@@ -226,7 +226,7 @@ $$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab$$
 
 라 하면 $$N=N_1\oplus N_2$$이다. 
 
-이제 보여야 할 것은 $$N_1=N^H$$이다. 가정에 의해 $$N_1\subset N_H$$는 자명하다. 한편 임의의 $$y\in N^H$$에 대하여, $$y$$를 $$A$$-basis $$B$$의 linear combination $$y=\sum \alpha_b b$$로 나타내면 모든 $$b\in B$$와 모든 $$h\in H$$에 대하여 $$\alpha_{bh}=\alpha_b$$가 성립해야 하는 것을 안다. 이로부터 $$y\in N_1$$이어야 한다. 
+이제 보여야 할 것은 $$N_1=N^H$$이다. 가정에 의해 $$N_1\subset N^H$$는 자명하다. 한편 임의의 $$y\in N^H$$에 대하여, $$y$$를 $$A$$-basis $$B$$의 linear combination $$y=\sum \alpha_b b$$로 나타내면 모든 $$b\in B$$와 모든 $$h\in H$$에 대하여 $$\alpha_{bh}=\alpha_b$$가 성립해야 하는 것을 안다. 이로부터 $$y\in N_1$$이어야 한다. 
 
 </details>
 

@@ -79,7 +79,7 @@ Guided by the uniqueness proof, we define the additive structure on $$A_S$$ by t
     $$\frac{0}{1}+\frac{\alpha}{\gamma}=\frac{\alpha}{\gamma}$$
 
     holds.
-5. Additive inverses always exist. For any $$x\in \alpha/\gamma\in A_S$$, the element $$(-\alpha)/\gamma$$ satisfies
+5. Additive inverses always exist. For any $$x=\alpha/\gamma\in A_S$$, the element $$(-\alpha)/\gamma$$ satisfies
 
     $$\frac{-\alpha}{\gamma}+\frac{\alpha}{\gamma}=\frac{(-\alpha)\gamma+\alpha\gamma}{\gamma^2}=0$$
 

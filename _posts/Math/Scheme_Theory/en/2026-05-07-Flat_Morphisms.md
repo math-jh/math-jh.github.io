@@ -172,7 +172,7 @@ Similarly, the family of nodes
 
 $$\operatorname{Spec} k[t, x, y]/(xy - t) \longrightarrow \mathbb{A}_k^1$$
 
-is also not flat at $$t = 0$$. When $$t \neq 0$$, the fiber is two intersecting lines, but at $$t = 0$$ it becomes the double line $$xy = 0$$, taking on a topologically different form.
+is also not flat at $$t = 0$$. When $$t \neq 0$$, the fiber is two intersecting lines, but at $$t = 0$$ it becomes the node $$xy = 0$$, taking on a topologically different form.
 
 </div>
 

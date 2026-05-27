@@ -34,7 +34,7 @@ In particular, when $$I$$ is a finite set and $$A$$ is commutative, $$\Mat_{n}(A
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-That $$\Mat_n(A)$$ is an associative $$A$$-algebra is obvious from [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#행렬의-곱셈). We can verify that the identity element for multiplication in $$\Mat_n(A)$$ is the identity matrix
+That $$\Mat_n(A)$$ is an associative $$A$$-algebra is obvious from [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication). We can verify that the identity element for multiplication in $$\Mat_n(A)$$ is the identity matrix
 
 $$I_n=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\end{pmatrix}$$
 

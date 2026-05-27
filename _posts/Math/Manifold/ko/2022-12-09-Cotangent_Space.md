@@ -96,7 +96,7 @@ $$\mathbf{f}=\sum_{i=1}^m\frac{\partial(f\circ\varphi^{-1})}{\partial r^i}\bigg|
 
 이 성립한다. $$\mathbf{f}$$는 임의의 원소이므로, $$\mathfrak{m}_p/\mathfrak{m}_p^2$$이 $$\mathbf{x}^i+\mathfrak{m}_p^2$$들로 생성됨을 알 수 있다.
 
-증명을 마무리하기 위해서는 이들 $$n$$개의 원소들 $$\mathbf{x}^i+\mathfrak{m}_p^2$$들이 일차독립임을 보여야 한다. 
+증명을 마무리하기 위해서는 이들 $$m$$개의 원소들 $$\mathbf{x}^i+\mathfrak{m}_p^2$$들이 일차독립임을 보여야 한다. 
 
 $$\sum_{i=1}^m a_i\mathbf{x}^i=0\mod \mathfrak{m}_p^2$$
 

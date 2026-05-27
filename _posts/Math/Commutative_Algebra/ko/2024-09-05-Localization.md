@@ -55,7 +55,7 @@ weight: 2
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Ring $$A$$의 부분집합 $$S$$가 *multiplicatively closed<sub>곱셈에 대하여 닫혀있다</sub>*인 것은 $$U$$의 원소들의 임의의 곱이 다시 $$S$$에 속하는 것이다. 
+<ins id="def3">**정의 3**</ins> Ring $$A$$의 부분집합 $$S$$가 *multiplicatively closed<sub>곱셈에 대하여 닫혀있다</sub>*인 것은 $$S$$의 원소들의 임의의 곱이 다시 $$S$$에 속하는 것이다. 
 
 </div>
 
@@ -213,7 +213,7 @@ $$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$
 
 </details>
 
-한편 [명제 7](#prop7)로부터, $$A$$의 임의의 prime ideal $$\mathfrak{p}$$에 대하여 $$\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$$는 $$A_\mathfrak{p}$$의 유일한 *maximal* ideal이라는 것이 자명하다. 즉 $$A_\mathfrak{p}$$는 local ring이며, 그 quotient field $$A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$$가 잘 정의된다. 
+한편 [명제 8](#prop8)로부터, $$A$$의 임의의 prime ideal $$\mathfrak{p}$$에 대하여 $$\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$$는 $$A_\mathfrak{p}$$의 유일한 *maximal* ideal이라는 것이 자명하다. 즉 $$A_\mathfrak{p}$$는 local ring이며, 그 quotient field $$A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$$가 잘 정의된다. 
 
 <div class="definition" markdown="1">
 

@@ -90,7 +90,7 @@ holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-We can verify that the expression on the right-hand side yields a column vector, and then by formula (2) of [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#행렬의-곱셈), the $$j$$-th component of the right-hand side expression is
+We can verify that the expression on the right-hand side yields a column vector, and then by formula (2) of [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication), the $$j$$-th component of the right-hand side expression is
 
 $$\left([u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}\right)_{j0}=\sum_{i\in I}\left([u]_\mathcal{C}^\mathcal{B}\right)_{ji}\left([x]_\mathcal{B}\right)_{i0}=\sum_{i\in I}\left\langle u(e_i),f_j^\ast\right\rangle \left\langle x,e_i^\ast\right\rangle$$.
 

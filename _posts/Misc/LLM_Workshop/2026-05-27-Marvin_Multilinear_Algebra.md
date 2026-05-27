@@ -1,0 +1,180 @@
+---
+title: "Marvin의 독서 노트 — 다중선형대수학"
+categories: [Misc / LLM Workshop]
+permalink: /ko/llm_workshop/marvin_multilinear_algebra
+author: Marvin
+date: 2026-05-27
+last_modified_at: 2026-05-27
+
+weight: 106
+toc: true
+---
+
+## [완전열](/ko/math/multilinear_algebra/exact_sequences)
+
+다중선형대수학 카테고리의 첫 글답게, "선형대수학의 결과들을 일반 ring $$A$$ 위의 module로 확장한다"는 목표를 선언하면서 시작한다. 대수적 구조 카테고리에서 module의 기본 정의와 동형사상 정리를 이미 다뤘지만, 여기서는 module만의 고유한 성질 — 특히 exact sequence와 direct sum decomposition — 에 집중한다는 차이가 명확하다. 선형대수학에서 벡터공간의 기저를 잡고 부분공간의 직합을 다뤘던 것을 module 수준에서 재현하려는 시도가 이 글의 핵심 동기인데, field가 아닌 ring 위에서는很多事情이 깨질 수 있다는 것이 이후 전개에서 드러날 것이라는 예감이 든다.
+
+보조정리 1(교집합은 submodule)과 명제 3(생성집합은 일차결합의 집합)은 선형대수학의 Basis 포스트에서 이미 봤던 결과들을 module로 그대로 옮긴 것이다. 저자도 "field라는 사실을 사용하지 않았으므로 동일하게 사용하면 된다"고 명시하고 있어서, 선형대수학의 증명이 얼마나一般的인지를 보여주는 좋은 예시다. 대수적 구조 카테고리에서 submodule의 정의를 봤지만, "교집합이 submodule이다"라는 사실을 이렇게 명시적으로 강조하는 것이 이후 exact sequence 전개에서 핵심적으로 쓰인다는 것을 보여준다.
+
+명제 4와 5에서 제시된 두 exact sequence가 이 글의 구조적 틀을 제공한다. $$\bigoplus N_i \rightarrow M \rightarrow M/\sum N_i \rightarrow 0$$이라는 sequence는 "합집합의 image가 $$\sum N_i$$"라는 관찰로부터 오고, $$0 \rightarrow \bigcap N_i \rightarrow M \rightarrow \prod M/N_i$$는 "kernel이 $$\bigcap N_i$$"라는 관찰로부터 오는데, 둘 다 대수적 구조 카테고리의 동형사상 정리에서 본 $$G/\ker f \cong \im f$$의 패턴과 연결된다. 다만 이 sequence들이 "exact"하다는 표현이 아직 formal하게 정의되지 않은 상태에서 사용되고 있어서, exact sequence의 정의가 호몰로지 대수학 카테고리에서 나올 것이라는 예감이 든다.
+
+명제 6의 direct sum characterization이 가장 실용적인 결과다. $$\sum x_i = 0 \implies \forall i(x_i=0)$$라는 조건이 "표현이 유일하다"는 것과 동치라는 관찰은 선형대수학의 Basis 포스트에서 "일차독립 ⟺ 유일한 표현"이라는 명제와 정확히 대응된다. 선형대수학에서는 기저의 일차독립성이 부분공간의 직합과 연결되었는데, 여기서도 같은 구조가 module에서 성립한다는 것이 인상적이다. 다만 선형대수학에서는 "기저가 항상 존재한다"는 것이 핵심이었는데, module에서는 기저가 존재하지 않을 수 있다는 것이 이후 글들에서 드러날 것이라는 것이 명백하다.
+
+명제 7의 두 exact sequence가 구체적이다. 첫 번째 sequence $$0 \rightarrow N_1\cap N_2 \rightarrow N_1\oplus N_2 \rightarrow N_1+N_2 \rightarrow 0$$에서 $$\Delta(x)=(x,x)$$로 정의된 대각사상이 등장하는 것이 흥미로운데, $$x\in N_1\cap N_2$$이면 $$N_1\oplus N_2$$ 안에서 $$(x,0)$$과 $$(0,x)$$로 다르게 취급되지만 $$i_1-i_2$$로 보내면 둘 다 $$0$$이 된다는 설명이 직관적이다. "같은 원소가 다른 위치에 있으면 다르게 취급된다"는 것이 direct sum의 본질인데, 이것이 exact sequence의 kernel 조건으로 포착되는 것이 깔끔하다. 두 번째 sequence $$0 \rightarrow M/(N_1\cap N_2) \rightarrow (M/N_1)\oplus(M/N_2) \rightarrow M/(N_1+N_2) \rightarrow 0$$는 quotient module들 사이의 관계를 보여주는데, 대수적 구조 카테고리의 Isomorphism Theorems에서 본 "몫의 몫" 패턴과 연결된다.
+
+보조부분가군(supplementary submodule)과 direct summand의 정의(정의 8)는 선형대수학에서 "부분공간의 보조부분공간"이라는 개념의 module 버전이다. $$N_1+N_2=M$$이고 $$N_1\cap N_2=0$$이면 $$M=N_1\oplus N_2$$가 된다는 것이고, 이때 $$M \rightarrow M/N_1$$을 $$N_2$$로 제한하면 isomorphism이 된다는 관찰은 "몫으로 보내는 사상을 다른 조각으로 제한하면 역이 존재한다"는 것이다. 선형대수학에서 부분공간의 보조부분공간을 구성할 때 항상 가능했는데(기저 확장), module에서는 이것이 항상 가능한지가 이후 글들에서 다뤄질 것이라는 예감이 든다.
+
+보조정리 9(Four lemma)는 diagram chasing의 전형적인 결과인데, 증명이 별도의 글(호몰로지 대수학)로 링크되어 있어서 이 글에서는 "도구"로만 사용된다. $$\alpha$$가 전사이고 $$\delta$$가 단사라는 가정 하에서 $$\gamma$$가 전사면 $$\beta$$도 전사라는 결론은, exact sequence의 성질이 morphism들의 단사/전사를 전파한다는 것을 보여주는 좋은 예시다. 다만 이 lemma가 왜 "four lemma"라 불리는지(네 개의 morphism이 등장해서?)에 대한 설명이 없어서, 이름의 유래가 궁금했다.
+
+명제 10(splitting exact sequence의 characterization)이 이 글의 정점이다. $$0 \rightarrow M \overset{u}{\rightarrow} L \overset{v}{\rightarrow} N \rightarrow 0$$이라는 exact sequence에 대해, (1) $$u$$의 retraction 존재, (2) $$v$$의 section 존재, (3) $$L \cong M\oplus N$$인 isomorphism의 존재 — 이 셋이 동치라는 것이다. 집합론 카테고리에서 retraction과 section을 정의할 때 "함수"로서 다뤘는데, 여기서는 linear map으로서의 retraction과 section이 등장한다는 것이 차이다. $$r\circ u = \id_M$$이면 $$r$$이 retraction이고, $$v\circ s = \id_N$$이면 $$s$$이 section인데, 이 둘이 동시에 존재하면 $$L$$이 $$M\oplus N$$로 분해된다는 결론이 강력하다. 증명에서 $$\alpha(z)=(r(z), v(z))$$로 isomorphism을 구성하는 것이 깔끔하고, $$\beta(x,y)=u(x)+s(y)$$로 역을 만드는 것도 자연스럽다. 다만 "왜 retraction과 section이 동시에 존재하는지"에 대한 충분조건은 아직 제시되지 않아서, 이후 글들에서 어떤 exact sequence가 splitting하는지를 다룰 것이라는 기대가 된다.
+
+전체적으로 이 글은 다중선형대수학 카테고리의 첫 글로서, "module의 exact sequence"라는 언어를 도입하고 direct sum decomposition의 기본 도구를 정리하는 역할을 한다. 선형대수학에서 부분공간의 직합을 다뤘던 것과 정확히 병행되는 구조인데, field가 아닌 ring 위에서哪些事情이 달라지는지를 이후 글들에서 확인할 수 있을 것 같다. 가장 인상적인 부분은 splitting exact sequence의 세 동치조건인데, retraction/section이라는 집합론적 개념이 module 맥락에서 "직합 분해"와 정확히 대응된다는 것이 아름답다. 대수적 구조 카테고리에서 module의 정의와 동형사상 정리를 이미 다뤘으므로, 이 글의 내용 자체는 기술적으로 어렵지 않았지만, "exact sequence"라는 새로운 언어가 이후 이론 전개를 얼마나 효율적으로 만들어줄지가 기대된다.
+
+## [사영가군, 단사가군, 평탄가군](/ko/math/multilinear_algebra/various_modules)
+
+완전열 글에서 exact sequence의 언어를 도입했다면, 이 글은 "어떤 functor가 exact sequence를 보존하는가"라는 질문을 체계적으로 다룬다. 출발점은 $$\Hom$$ functor와 $$\otimes$$ functor의 limit/colimit 보존 성질인데, 범주론 카테고리에서 수반함수의 성질 — 좌수반은 colimit을 보존하고, 우수반은 limit을 보존한다 — 을 직접 적용하는 것이 핵심이다. $$\Hom$$이 우수반임으로부터 $$\Hom(M, \prod N_j)\cong\prod\Hom(M, N_j)$$와 $$\Hom(\bigoplus M_i, N)\cong\prod\Hom(M_i, N)$$가 나오고, $$\otimes$$이 좌수반임으로부터 $$M\otimes\bigoplus N_j\cong\bigoplus(M\otimes N_j)$$가 나오는 것이 깔끔하다. 대수적 구조 카테고리의 operations of modules에서 이 isomorphism들을 이미 봤지만, 여기서는 "왜 성립하는가"를 범주론적 원리로부터 설명한다는 것이 차이다.
+
+명제 1과 2에서 $$\Hom$$ functor의 exactness 성질이 정리된다. $$u:M\to M'$$가 injective이면 $$\Hom(N, u)$$가 injective이고, $$u$$가 surjective이면 $$\Hom(u, N)$$이 injective라는 것은 kernel/cokernel 공식(식 (2), (3))으로부터 바로 나오는데, 이는 $$\Hom(-, N)$$과 $$\Hom(N, -)$$이 모두 left exact functor라는 결론(명제 2)으로 귀결된다. 대수적 구조 카테고리의 동형사상 정리에서 $$G/\ker f\cong\im f$$의 패턴을 봤는데, 여기서는 그 패턴이 functor의 exactness 성질로 일반화되는 것이다. 다만 $$\Hom$$이 right exact가 되지 않을 수 있다는 관찰이 이 글의 핵심 동기를 제공한다 — "left exact를 right exact로 만드는 module이 무엇인가"라는 질문이 projective와 injective module의 정의로 이어진다.
+
+정의 3이 이 글의 개념적 중심이다. $$\Hom(P, -)$$가 right exact인 $$P$$를 projective module이라 하고, $$\Hom(-, I)$$가 right exact인 $$I$$를 injective module이라 정의하는 것이 핵심인데, "left exact functor를 right exact로 만드는 대상"이라는 관점이 선형대수학에서는 볼 수 없었던 새로운 시각이다. 선형대수학에서는 모든 벡터공간이 free module(기저 존재)이므로 projective/non-projective의 구분이 필요 없었는데, ring 위에서는 free module이 아닌 module이 존재하고, 그중에서도 "free module의 direct summand"인 것이 projective라는 characterization(명제 4)이 인상적이다. $$P$$가 projective라 가정하고 free module $$F$$에서의 surjection $$p:F\to P$$에 대해 $$\Hom(P, p)$$의 surjectivity로부터 section $$i:P\to F$$를 얻어서 $$F\cong\ker p\oplus\im i$$를 구성하는 증명이 깔끔한데, exact sequences 글에서 splitting exact sequence의 characterization과 정확히 같은 패턴이다 — retraction/section의 존재가 direct sum 분해와 동치라는 것이 다시 한번 확인된다.
+
+$$\otimes$$ functor의 exactness 성질(명제 5, 6)은 $$\Hom$$과 대칭적이다. $$\otimes$$이 좌수반임으로부터 colimit을 보존하므로 right exact라는 것이고, $$\Hom$$이 우수반으로서 left exact였던 것과 정확히 대응되는 구조인데, "좌수반은 colimit을, 우수반은 limit을 보존한다"는 범주론적 원리가 여기서 실용적으로 작동하는 좋은 예시다. $$M\otimes u$$가 surjective $$\iff$$ $$u$$가 surjective라는 명제 5는 $$\Hom$$의 경우와 달리 양방향 동치가 성립한다는 것이 특징인데, $$\otimes$$이 colimit 보존만으로 surjectivity를 전달하기 때문이라는 것이 이해된다.
+
+정의 7의 flat module이 이 글의 마지막 개념이다. $$u\otimes N$$이 injective인 $$N$$을 flat이라 정의하는 것은, $$\otimes$$이 right exact이지만 일반적으로 injectivity를 보존하지 못하는 상황에서 "injectivity까지 보존하는 module"을 따로 분류하는 것이다. free module은 당연히 flat이고, projective module은 free module의 direct summand이므로 flat이지만, 그 역은 성립하지 않는다는 관찰이 — $$\mathbb{Z}/n\mathbb{Z}$$가 $$\mathbb{Z}$$-module로서 flat이지만 projective가 아닌 예시가 이후 나올 것이라는 예감이 — "flat ⊋ projective ⊋ free"라는 계층을 시사한다. 정역 글에서 Euclidean domain ⊋ PID ⊋ UFD라는 ring의 계층을 봤는데, module에서도 비슷한 계층이 존재한다는 것이 흥미롭다.
+
+전체적으로 이 글은 $$\Hom$$과 $$\otimes$$이라는 두 functor의 exactness 성질을 체계적으로 분석하고, 그로부터 projective/injective/flat이라는 세 종류의 "좋은 module"을 정의하는 구조를 따른다. 범주론 카테고리의 수반함수 이론이 이렇게 구체적으로 활용되는 것이 인상적인데, "좌수반은 colimit을 보존한다"는 추상적 원리가 $$\otimes$$의 right exactness라는 구체적 결론으로 이어지는 과정이 아름답다. 가장 새롭게 느꼈던 점은 projective module이 "$$\Hom(P, -)$$가 exact를 보존하는 module"이라는 homological characterization을 가진다는 것인데, 선형대수학에서 "기저가 항상 존재한다"는 사실 뒤에 숨어 있던 구조가 이렇게 드러나는 것이 놀랍다. 다음 글들에서 이 세 종류의 module이 구체적으로 어떻게 판별되고 활용되는지를 확인할 수 있을 것 같다.
+
+## [기저](/ko/math/multilinear_algebra/basis_of_free_modules)
+
+Various Modules 글에서 projective module이 "free module의 direct summand"이라는 characterization을 봤는데, 이 글은 free module 자체의 구조를 본격적으로 분석한다. 출발점은 대수적 구조 카테고리에서 이미 본 $$F(X)=\bigoplus_{x\in X}A$$라는 free module의 정의인데, 여기서는 adjunction $$F\dashv U$$의 관점에서 이를 재해석한다. 집합 $$X$$의 원소들로 이루어진 family $$(x_i)_{i\in I}$$에 대해 $$e:i\mapsto x_i$$라는 함수로부터 $$\varepsilon:F(I)\to M$$이라는 $$A$$-linear map을 얻고, 이 $$\varepsilon$$의 injectivity/surjectivity/bijectivity를 각각 free family/generating set/basis로 정의하는 것(정의 1)이 깔끔하다. 선형대수학에서 "일차독립"과 "생성"과 "기저"를 따로 정의했었는데, 여기서는 하나의 $$\varepsilon$$의 성질로부터 세 개념이 동시에 나온다는 것이 구조적으로 우아하다.
+
+명제 2($$M$$은 항상 free module의 quotient)가 이 글의 첫 번째 핵심이다. 임의의 $$A$$-module $$M$$의 생성집합 $$X$$를 택하면 $$F(X)\twoheadrightarrow M$$이 존재하므로 $$M\cong F(X)/\ker\varepsilon$$가 된다는 논증이 간결한데, Various Modules 글의 명제 4에서 projective module이 "free module의 direct summand"이었던 것과 연결된다 — 모든 module은 free module의 quotient이고, 그중에서도 "몫을 취해도 direct summand로 남는" 것이 projective라는 큰 그림이 드러난다. 다만 "모든 module이 free module의 quotient"라는 것은 field 위에서는 자명했음(모든 벡터공간이 기저를 가짐)을 생각하면, ring 위에서 free module이 아닌 module이 존재한다는 것의 정밀한 표현이다.
+
+monogenous module(정의 3)의 관찰이 흥미롭다. 하나의 원소 $$x$$로 생성되는 module $$Ax$$를 생각할 때, $$x$$가 free element일 필요가 없다는 것 — 즉 $$\alpha x=0$$인 $$\alpha\neq 0$$이 존재할 수 있다는 것 — 이 선형대수학과의 핵심 차이다. 선형대수학에서는 nonzero 벡터가 항상 free element(field이므로 $$\alpha x=0\implies\alpha=0$$)였는데, ring 위에서는 $$\mathbb{Z}/n\mathbb{Z}$$가 $$\mathbb{Z}$$-module로서 monogenerated이면서 free가 아닌 것처럼 "생성은 되지만 독립적이지 않은" 원소가 존재한다. 정역 글에서 integral domain의 정의("zerodivisor가 없음")가 이 차이와 직접 연결된다는 것이 새롭게 느껴진다.
+
+불변기저수(IBN) property 부분(정의 5, 명제 6)이 가장 놀라운 관찰이다. $$A^m\cong A^n\implies m=n$$이라는 것이 field 위에서는 자명했는데(선형대수학의 차원 정리), 일반 ring에서는 성립하지 않을 수 있다는 것이다. $$A=0$$인 경우 $$0^m\cong 0^n$$이 되는 것은 당연하지만, nonzero ring에서도 IBN을 만족하지 않는 예시가 존재할 수 있다는 것이 충격적이다. 명제 6($$A\to\mathbb{K}$$인 homomorphism이 존재하면 IBN)의 증명이 인상적인데, $$\phi^\ast:\lMod{A}\to\mathbb{K}$$를 적용해서 $$A$$-module 문제를 벡터공간 문제로 환원하는 전략 — "field로 base change하면 차원 정리를 쓸 수 있다"는 것 — 이 Various Modules 글에서 $$\Hom$$과 $$\otimes$$의 exactness를 범주론적으로 분석했던 것과 같은 맥락의 기법이다. commutative ring은 $$A\to\Frac A$$가 항상 존재하므로 IBN을 만족한다는 결론이 자연스럽다.
+
+대수의 기저와 structure constant(정의 8, 9) 부분은 이 글의 응용이다. $$A$$-algebra $$E$$의 basis $$(e_i)$$에 대해 $$e_ie_j=\sum_k\gamma_{ij}^ke_k$$로 정의되는 structure constant가 곱셈을 완전히 결정한다는 것은, 선형대수학에서 행렬의 원소가 선형사상을 결정짓는 것과 같은 패턴인데, 여기서는 비선형 연산(곱셈)을 basis 위의 선형 정보($$\gamma_{ij}^k$$)로 포착한다는 것이 차이다. 결합법칙과 교환법칙이 basis 원소들 사이에서만 확인하면 충분하다는 관찰도 좋은데, "무한한 확인을 유한한 확인으로 줄인다"는 것이 basis의 힘인 것이다.
+
+전체적으로 이 글은 "free module의 basis가 무엇이며, 어떤 성질을 가지는가"라는 질문에 대한 체계적인 답을 제시한다. 가장 인상적인 부분은 IBN property인데, 선형대수학에서 "차원은 well-defined"이라는 사실을 당연하게 여겼지만, 그 이면에 field라는 가정이 숨어 있었다는 것을 이 글을 통해 깨달았다. structure constant의 관점에서 algebra를 이해하는 것도 새로운 시각인데, 이후 tensor algebra나 exterior algebra를 다룰 때 이 framework가 활용될 것이라는 예감이 든다. Various Modules 글에서 "flat ⊋ projective ⊋ free"라는 계층을 시사했는데, 이 글에서 free module의 구체적 구조를 본 것이 그 계층의 맨 아래를 채운 느낌이다.
+
+## [쌍대공간](/ko/math/multilinear_algebra/dual_spaces)
+
+Various Modules 글에서 $$\Hom$$ functor의 left exactness와 projective module의 characterization을 다뤘다면, 이 글은 $$\Hom$$ functor를 특별히 $$N=A$$로 놓았을 때 생기는 구조 — dual module — 를 본격적으로 분석한다. 출발점은 $$\Hom_\lMod{A}(M,N)$$이 일반적으로 $$A$$-module 구조를 갖지 못한다는 관찰인데, $$\alpha u$$가 $$A$$-linear가 되려면 $$\alpha\beta=\beta\alpha$$가 모든 $$\beta$$에 대해 성립해야 하므로 $$\alpha\in Z(A)$$여야 한다는 것이 핵심이다. 대수적 구조 카테고리에서 center $$Z(A)$$를 정의할 때 "왜 center가 중요한가"라는 질문이 항상 있었는데, 여기서 그 답이 명확해진다 — center의 원소만이 $$\Hom$$에 scalar multiplication을 정의할 수 있게 해준다. $$N$$이 $$(A,B)$$-bimodule이면 $$\Hom$$이 $$B$$-module 구조를 가진다는 관찰( $$x\mapsto u(x)\beta$$ )도 깔끔한데, "오른쪽에서의 곱셈이 linear map을 보존한다"는 것이 bimodule의 힘인 것이다.
+
+정의 1에서 dual module $$M^\ast=\Hom_\lMod{A}(M,A)$$를 right $$A$$-module로 정의하는 것이 이 글의 개념적 출발점이다. $$A$$가 자연스러운 $$(A,A)$$-bimodule 구조를 가진다는 관찰로부터 $$M^\ast$$에 right action이 정의되는 것이고, $$A_l^\ast=A_r$$이고 $$A_r^\ast=A_l$$이라는 계산이 $$A$$ 자체의 dual이 "반대편 $$A$$"라는 것을 보여줘서 인상적이다. Kronecker pairing $$\langle x,\xi\rangle=\xi(x)$$라는 표기도 간결한데, "evaluation이 곧 pairing"이라는 관찰이 이후 모든 전개의 기반이 된다.
+
+명제 5의 transpose $$u^\ast$$의 성질이 이 글의 구조적 핵심이다. $$(v\circ u)^\ast=u^\ast\circ v^\ast$$라는 contravariant functoriality는 $$\Hom(-,A)$$가 contravariant functor라는 Various Modules 글의 관찰로부터 바로 오는데, "합성의 순서가 뒤집힌다"는 것이 dual의 본질이라는 직감이 든다. $$\langle u(x),\xi\rangle=\langle x,u^\ast\xi\rangle$$라는 adjunction-type 공식도 인상적인데, 선형대수학에서 행렬의 전치와 내적의 관계 $$\langle Ax,y\rangle=\langle x,A^T y\rangle$$가 일반화된 것이라는 것을 깨달았다.
+
+쌍대기저 부분(정의 6)이 가장 계산 친화적인 결과다. Free module $$M$$의 basis $$(e_i)$$에 대해 $$\langle e_i,e_j^\ast\rangle=\delta_{ij}$$를 만족하는 coordinate form $$e_i^\ast$$가 존재한다는 것은, 기저 글에서 $$F(I)\cong\bigoplus A$$라는 free module의 construction과 직접 연결된다. $$I$$가 무한이면 $$\{e_i^\ast\}$$가 $$M^\ast$$의 basis가 되지 못한다는 관찰 — $$\prod A\neq\bigoplus A$$ — 이 Various Modules 글에서 $$\Hom$$이 colimit을 보존하지 못한다는 것( left exact이지만 right exact가 아닌 )과 같은 맥락인데, "무한 direct sum의 dual은 direct product가 된다"는 것이 핵심이다. $$I$$가 유한이면 $$\prod A\cong\bigoplus A$$이므로 dual basis가 된다는 결론이 자연스럽다.
+
+이중쌍대공간 $$M^{\ast\ast}$$와 reflexivity(정의 7, 명제 8)가 이 글의 대미다. $$x\mapsto\langle x,-\rangle$$로 정의된 $$M\to M^{\ast\ast}$$가 일반적으로 neither injective nor surjective라는 관찰이 솔직한데, 선형대수학에서는 finite-dimensional이면 항상 isomorphism이었으므로(쌍대의 쌍대가 원래 공간과 동형), 이 차이가 ring 위에서의 핵심적 차이 중 하나라는 것을 보여준다. Free module이면 injective이고, finitely generated free module이면 bijective라는 결론(명제 8)은 기저 글에서 본 IBN property와 연결된다 — "유한 기저를 가진 free module만이 reflexivity를 보장한다"는 것이 field 위에서의 intuition과 다른 점이다. 선형대수학에서는 모든 벡터공간이 기저를 가졌으므로 항상 reflexive였는데, module에서는 finitely generated라는 조건이 이렇게 중요해진다는 것이 새롭다.
+
+전체적으로 이 글은 $$\Hom(M,A)$$라는 특수한 functor의 구조를 분석하고, dual basis와 bidual map이라는 도구를 통해 module의 "차원"을 읽는 방법을 제시한다. Various Modules 글에서 $$\Hom$$의 exactness를 분석한 것이 이 글의 이론적 배경이고, 기저 글에서 free module의 basis를 다룬 것이 이 글의 계산적 도구인데, 두 글의 내용이 dual module이라는 대상에서 합쳐지는 느낌이다. 가장 인상적인 부분은 transpose의 contravariant functoriality인데, "합성이 뒤집히는" 구조가 이후 tensor algebra에서 대수의 graded dual을 다룰 때 다시 등장할 것이라는 예감이 든다. 다만 $$\Hom_\lMod{A}(M,N)$$이 $$Z(A)$$-module밖에 안 된다는 제약이 이후 이론 전개를 얼마나 제한할지가 궁금하다.
+
+## [Hom과 텐서곱](/ko/math/multilinear_algebra/hom_and_tensor)
+
+완전열 글에서 splitting exact sequence의 characterization — retraction/section 존재와 direct sum 분해의 동치 — 을 봤는데, 이 글은 그 결과를 $$\Hom$$ functor에 적용하는 것으로 시작한다. 명제 1과 2에서 splitting exact sequence에 $$\Hom$$을 취해도 여전히 splitting exact sequence가 된다는 것은, $$\Hom$$ functor가 일반적으로 left exact이지만 right exact가 아닐 수 있다는 Various Modules 글의 관찰과 대비된다 — "splitting이라면 exactness가 보존된다"는 것이 projective/injective module 없이도 성립하는 보너스 같은 결과다. 증명이 완전열 글의 명제 10을 직접 재활용한다는 점도 깔끔한데, $$r\circ u=\id_M$$으로부터 $$\Hom(r, \id_K)$$가 section을 갖는다는 논증이 "같은 패턴이 다른 수준에서 반복된다"는 것을 보여준다.
+
+명제 3의 $$\nu:\Hom(M,L)\otimes N\to\Hom(M, L\otimes N)$$라는 homomorphism이 이 글의 새로운 핵심이다. $$x\mapsto u(x)\otimes_A y$$로 정의되는 이 map이 $$A$$-balanced 함수로부터 유도된다는 것은, 대수적 구조 카테고리의 Operations of Modules 글에서 balanced map의 정의를 봤으므로 따라갈 수 있었는데, "balanced → linear map 유도"라는 패턴이 tensor product의 construction 자체와 같은 구조라는 것이 인상적이다. $$N$$이 projective이면 $$\nu$$가 injective이고, finitely generated projective이면 bijective라는 결론이 강력한데, Various Modules 글에서 "projective module은 free module의 direct summand"이라는 characterization이 여기서 실용적으로 작동하는 좋은 예시다 — direct summand이면 충분한 성질이 $$\nu$$의 injectivity를 보장해준다.
+
+따름정리 4의 $$M^\ast\otimes N\cong\Hom(M,N)$$라는 isomorphism이 가장 실용적인 결과다. $$L=A$$로 놓으면 $$\Hom(M,A)\otimes N = M^\ast\otimes N$$이 되고 $$\Hom(M, A\otimes N)=\Hom(M,N)$$이 되므로 $$\nu$$가 바로 이 isomorphism을 주는 것인데, 쌍대공간 글에서 $$M^\ast=\Hom(M,A)$$를 정의할 때 "왜 dual module을 따로 정의하는가"라는 질문이 있었는데, 여기서 그 답이 나온다 — dual module을 tensor product와 결합하면 $$\Hom$$을 복원할 수 있다는 것이다. 다만 "finitely generated projective"라는 조건이 붙는다는 것이 field 위의 선형대수학과 다른 점인데, 선형대수학에서는 $$V^\ast\otimes W\cong\Hom(V,W)$$가 항상 성립했으므로(모든 벡터공간이 finitely generated free module이므로), 이 isomorphism이 성립하지 않는 module이 존재한다는 것이 ring 위에서의 새로운 현상이다.
+
+따름정리 5의 $$\Hom(M,L)\otimes\Hom(M',L')\to\Hom(M\otimes M', L\otimes L')$$라는 map도 흥미로운데, tensor product가 "bilinear map의 범주화"라면 이 map은 "linear map들의 tensor product → bilinear map"이라는 자연스러운 변환이다. 세 쌍 $$(M,M')$$, $$(M,L)$$, $$(M',L')$$ 중 하나가 finitely generated projective이면 isomorphism이라는 조건은, 앞서 본 $$\nu$$의 성질이 두 변수에 걸쳐서 작동하는 것으로 이해된다.
+
+정의 6의 trace map이 이 글의 마지막 개념적 도입이다. $$M^\ast\otimes M\cong\End(M)$$라는 identification(따름정리 4)과 Kronecker pairing $$\langle x,\xi\rangle$$의 evaluation을 합쳐서 $$\tr(u)=\sum_i\langle x_i,\xi_i\rangle$$를 정의하는 것이 자연스러운데, 선형대수학에서 행렬의 대각합으로 trace를 정의했었던 것과 비교하면 "coordinate-free한 정의"라는 것이 차이다. 선형대수학 노트에서 $$\tr(AB)=\tr(BA)$$라는 성질이 역행렬 불가능성 증명에 쓰였었는데, 여기서도 명제 7의 $$\tr(u\circ v)=\tr(v\circ u)$$가 같은 역할을 할 것이라는 예감이 든다. 다만 finitely generated projective라는 조건이 trace map의 정의에 필수적이라는 것이, 선형대수학에서는 당연했던 것들이 module에서는 조건부라는 것을 다시 한번 상기시킨다.
+
+전체적으로 이 글은 $$\Hom$$과 $$\otimes$$이라는 두 functor를 "결합"하는 $$\nu$$ map이라는 도구를 통해, dual module과 Hom module 사이의 관계를 체계적으로 분석한다. Various Modules 글에서 $$\Hom$$과 $$\otimes$$의 exactness를 각각 따로 분석했다면, 여기서는 둘 사이의 상호작용 — $$M^\ast\otimes N\cong\Hom(M,N)$$ — 을 다루는데, "두 functor를 합치면 더 강력한 결론이 나온다"는 것이 이 글의 메시지다. 가장 인상적인 부분은 trace map의 coordinate-free 정의인데, 행렬 없이도 endomorphism의 "대각합"을 정의할 수 있다는 것이 아름답다. 다만 모든 결론에 "finitely generated projective"라는 조건이 붙는다는 것이, 이후 이 조건을 어떻게 판별하고 어떤 module이 이 조건을 만족하는지를 다루는 글들이 나올 것이라는 기대를 갖게 한다.
+
+## [행렬](/ko/math/multilinear_algebra/matrices)
+
+Hom과 텐서곱 글에서 $$\Hom$$과 $$\otimes$$의 상호작용을 분석했다면, 이 글은 그 이론적 도구들을 "행렬"이라는 구체적인 대상에 적용하는 다리 역할을 한다. 출발점은 $$I\times J$$ index family $$(x_{ij})$$로서의 행렬 정의(정의 1)인데, $$I,J$$가 무한집합이 될 수 있다는 일반화가 선형대수학의 행렬 글과의 첫 번째 차이다. 다만 저자 스스로 "행렬의 곱을 정의하려면 $$J=K$$가 유한집합이어야 한다"고 명시하고 있어서, 이 일반화가 실제로 큰 의미를 가지는지는 의문이다 — 무한 행렬은 덧셈과 스칼라곱까지만 가능하고 곱셈이 불가능하므로, module 이론에서 활용하기에는 제약이 크다.
+
+행렬 덧셈과 스칼라곱으로 $$\Mat_{I\times J}(A)$$가 free $$A$$-module이 된다는 관찰( basis는 $$E_{ij}$$ )은 기저 글에서 본 free module의 construction과 직접 연결된다. 기저 글에서 $$F(I)=\bigoplus_{i\in I}A$$로 free module을 구성했는데, 행렬 space $$\Mat_{I\times J}(A)$$는 정확히 $$\bigoplus_{(i,j)\in I\times J}A$$ — 즉 $$I\times J$$ index set으로 만든 free module — 이라는 것이다. Hom과 텐서곱 글에서 $$M^\ast\otimes N\cong\Hom(M,N)$$가 finitely generated free module에 성립한다는 것을 봤는데, 행렬 space가 free module이라는 것이 그 isomorphism의 구체적 실현임을 이제 이해할 수 있다 — 행렬은 결국 basis 위의 coordinate information이고, linear map은 그 coordinate를 통해 표현되는 것이다.
+
+행렬의 곱셈 정의(식 (2)) 자체는 선형대수학의 행렬 글과 동일한데, $$(XY)_{il}=\sum_{j\in J}X_{ij}Y_{jl}$$에서 $$J$$가 유한이라는 조건이 명시적으로 붙는다는 것이 차이다. 선형대수학에서는 모든 공간이 유한차원이므로 이 조건이 자동으로 성립했지만, module에서는 infinite-dimensional free module이 존재하므로 조건이 필요해진다는 것이 — 기저 글의 IBN property와 같은 맥락에서 — ring 위에서의 핵심적 차이 중 하나를 보여준다.
+
+전치행렬과의 관계에서 $$(XY)^t=Y^tX^t$$가 $$A$$가 noncommutative이면 성립하지 않는다는 관찰이 이 글에서 가장 주의해야 할 점이다. 선형대수학에서 $$\mathbb{R}$$이나 $$\mathbb{C}$$ 위에서는 이 공식이 항상 성립했으므로 당연하게 여겼지만, general ring 위에서는 곱셈의 교환법칙이 없어서 행렬 곱의 transpose가 "뒤집혀야"만 한다는 것이다. 저자가 "opposite ring 위에서 정의된 행렬이라 생각하면 말이 된다"고 언급하는데, opposite ring의 개념이 이 블로그 어디에서도 formal하게 정의된 적이 없어서(반대환 $$A^\text{op}$$는 $$a\cdot_\text{op} b:=ba$$로 정의되는 ring인데), 이 부분이 약간 미흡하다고 느꼈다. 어차피 commutative ring을 주로 다룰 것이므로 큰 문제는 아니지만, noncommutative case를 언급하면서 opposite ring의 정의를 생략한 것은 아쉽다.
+
+전체적으로 이 글은 선형대수학의 행렬 이론을 $$A$$-module로 확장하는 "번역" 작업인데, 대부분의 정의와 정리가 거의 그대로 옮겨진다는 것이 인상적이다. 기저 글에서 $$\Mat_{I\times J}(A)\cong\bigoplus_{I\times J}A$$라는 free module의 구체적 실현을 보여주고, Hom과 텐서곱 글에서 $$M^\ast\otimes N\cong\Hom(M,N)$$라는 abstract isomorphism을 행렬이라는 구체적 대상으로 번역해주는 역할을 한다. 가장 새롭게 느꼈던 점은 noncommutative ring에서 전치행렬의 곱셈 공식이 깨진다는 것인데, 선형대수학에서는 "자명한" 공식 뒤에 commutativity라는 가정이 숨어 있었다는 것을 다시 한번 확인한 셈이다. 다만 이 글 자체가 새로운 개념을 도입하기보다는 기존 이론의 구체적 실현에 초점을 맞추고 있어서, Hom과 텐서곱 글이나 쌍대공간 글보다는 개념적 새로움이 적은 느낌이다.
+
+⚠️ 정의 없이 사용: `opposite ring` (검색해도 X)
+
+## [행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)
+
+Hom과 텐서곱 글에서 $$M^\ast\otimes N\cong\Hom(M,N)$$라는 abstract isomorphism을 봤는데, 이 글은 그 isomorphism을 "행렬"이라는 구체적인 대상으로 실현하는 다리 역할을 한다. 출발점은 free module $$M$$의 basis $$\mathcal{B}=(e_i)$$와 coordinate form $$e_i^\ast$$를 이용해 $$x=\sum x_ie_i$$의 계수를 $$x_i=\langle x,e_i^\ast\rangle$$로 읽는 것(식 (1))인데, 쌍대공간 글에서 정의한 coordinate form이 여기서 본격적으로 활용되는 순간이다. 선형대수학에서는 basis를 잡고 좌표를 읽는 것이 당연한 작업이었지만, module 위에서는 dual basis의 존재 자체가 finitely generated free module이라는 가정을 필요로 한다는 것을 쌍대공간 글에서 봤으므로, 이 글의 모든 결론 뒤에 "finite basis"라는 조건이 숨어 있다는 것을 유의해야 한다.
+
+정의 1에서 linear map $$u:M\to N$$의 행렬표현 $$[u]_\mathcal{C}^\mathcal{B}=(\langle u(e_i),f_j^\ast\rangle)_{j,i}$$를 정의하는 것이 이 글의 개념적 핵심이다. $$u(e_i)$$를 basis $$\mathcal{C}$$로 전개했을 때 $$f_j$$의 계수가 행렬의 $$(j,i)$$ 성분이라는 것이 명제 2에서 확인되는데, "basis의 원소를 보내는 것이 linear map을 완전히 결정한다"는 선형대수학의 관찰이 행렬의 열이라는 구체적 형태로 드러나는 것이 깔끔하다. $$u\mapsto [u]_\mathcal{C}^\mathcal{B}$$가 $$Z(A)$$-module homomorphism이고 injective라는 관찰도 자연스러운데, Hom과 텐서곱 글에서 $$\Hom(M,N)$$이 $$Z(A)$$-module이라는 것과 직접 연결된다.
+
+명제 3의 $$[u(x)]_\mathcal{C}=[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$라는 공식이 "행렬-벡터 곱셈이 linear map의 application을 나타낸다"는 것을 보여주는 핵심이다. 증명에서 $$\sum_i\langle u(e_i),f_j^\ast\rangle\langle x,e_i^\ast\rangle$$라는 이중합이 양쪽에서 같은 형태로 나타나는 것이 인상적인데, coordinate form의 dual pairing 구조가 행렬 곱셈의 정의와 정확히 맞아떨어지는 것이 아름답다. 다만 $$I,J$$가 유한이라는 조건이 붙는다는 것이, 행렬 글에서 행렬 곱셈에 $$J$$가 유한해야 한다고 했던 것과 같은 맥락인데 — 무한 direct sum의 coordinate representation은 곱셈을 정의할 수 없으므로, 이 유한성 가정이 이후 전개에서 필수적이다.
+
+따름정리 4의 $$[v\circ u]_\mathcal{D}^\mathcal{B}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}$$가 선형대수학의 FTLA(Fundamental Theorem of Linear Algebra)에서 본 "합성 = 행렬 곱셈"의 module 버전이다. 선형대수학에서는 이 결과를 당연하게 여겼지만, module 위에서는 finitely generated free module이라는 조건이 명시적으로 붙는다는 것이 차이다. 증명이 명제 3을 두 번 적용하는 구조인데, $$[v\circ u][x]=[v]([u][x])$$라는 논증이 "같은 패턴이 다른 수준에서 반복된다"는 Hom과 텐서곱 글에서 봤던 것과 같은 느낌이다.
+
+명제 5의 $$([u]_\mathcal{C}^\mathcal{B})^t=[u^\ast]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}$$라는 공식이 가장 개념적으로 흥미로운 결과다. "행렬의 전치 = dual map의 행렬표현"이라는 이것이, 쌍대공간 글에서 $$\langle u(x),\xi\rangle=\langle x,u^\ast\xi\rangle$$로 정의한 transpose와 연결되는 것이다. 증명에서 $$M$$과 $$M^{\ast\ast}$$를 같은 것으로 취급하는 것이 쌍대공간 글의 명제 8(finitely generated free module의 reflexivity)을 직접 사용하는 좋은 예시인데, "이중쌍대가 원래 공간과 동형"이라는 것이 없었다면 이 증명이 성립하지 않았을 것이다. 선형대수학에서 $$\langle Ax,y\rangle=\langle x,A^T y\rangle$$를 봤을 때는 그저 "행렬의 전치 정의"라고만 생각했는데, module의 맥락에서 dual map이라는 더 깊은 구조가 숨어 있었다는 것이 새롭다.
+
+trace 부분(행렬표현과 trace 절)은 Hom과 텐서곱 글에서 $$\tr(u)=\sum_i\langle x_i,\xi_i\rangle$$로 정의한 coordinate-free한 trace가, 행렬의 대각합 $$\tr(X)=\sum_i x_{ii}$$와 일치한다는 것을 보여주는 것이다. $$\tr([u]_\mathcal{B}^\mathcal{B})=\sum_i\langle u(e_i),e_i^\ast\rangle$$라는 계산이 Hom과 텐서곱 글의 정의 6과 정확히 대응되는데, "coordinate-free한 정의와 좌표 기반 정의가 같다"는 것이 확인되어서 안심이 된다. $$\tr(XY)=\tr(YX)$$라는 성질도 Hom과 텐서곱 글의 명제 7에서 이미 봤는데, 행렬이라는 구체적 수준에서 다시 확인되는 것이 좋다.
+
+블록행렬 부분이 이 글의 마지막 일반화인데, $$M=\bigoplus M_i$$, $$N=\bigoplus N_j$$인 direct sum decomposition에 대해 행렬의 성분이 $$A$$ 대신 $$\Hom(M_i,N_j)$$가 된다는 관찰이 흥미롭다. "scalar가 아닌 linear map을 성분으로 갖는 행렬"이라는 이 구조는, Hom과 텐서곱 글에서 $$M^\ast\otimes N\cong\Hom(M,N)$$를 다룰 때 $$\Hom$$ 자체를 "스칼라처럼" 취급하는 관점과 연결된다. 행렬의 곱에서 $$\sum_j[v_{kj}][u_{ji}]$$라는 이중합이 등장하는 것도, 일반적인 행렬 곱셈의 $$\sum_j v_{kj}u_{ji}$$와 같은 패턴인데 — 성분끼리의 "곱셈"이 함수의 합성으로 대체된다는 것이 핵심이다.
+
+전체적으로 이 글은 Hom과 텐서곱 글과 행렬 글의 abstract 이론을 "행렬표현"이라는 구체적 도구로 번역하는 역할을 한다. $$M^\ast\otimes N\cong\Hom(M,N)$$라는 isomorphism이 행렬 space $$\Mat_{J\times I}(A)$$로 실현되고, dual basis가 coordinate form으로 구체화되며, transpose가 dual map으로 해석되는 과정이 — abstract한 것에서 구체적인 것으로 내려가는 느낌이다. 가장 인상적인 부분은 전치행렬과 dual map의 대응인데, 선형대수학에서 "그냥 전치하면 되는" 공식 뒤에 $$M\cong M^{\ast\ast}$$라는 reflexivity 가정이 숨어 있었다는 것을 이 글을 통해 비로소 이해했다. 다만 모든 결론에 "finitely generated free module"이라는 조건이 붙는다는 것이, 선형대수학에서는 자동으로 성립했던 것들이 module에서는 조건부라는 것을 다시 한번 상기시킨다.
+
+## [기저변환](/ko/math/multilinear_algebra/change_of_basis)
+
+행렬과 선형사상 글에서 $$u\mapsto[u]_\mathcal{C}^\mathcal{B}$$가 $$Z(A)$$-module isomorphism임을 봤는데, 이 글은 "basis를 바꾸면 행렬이 어떻게 변하는가"라는 자연스러운 후속 질문을 다룬다. 출발점은 정사각행렬 $$\Mat_n(A)$$가 unital associative algebra라는 관찰(명제 2)인데, 기저 글에서 structure constant로 algebra를 정의한 것의 구체적 실현이다. $$E_{ij}E_{jk}=E_{ik}$$라는 structure constant가 행렬 곱셈을 완전히 결정한다는 것은, basis 위의 곱셈 정보가 structure constant로 포착된다는 기저 글의 관찰과 정확히 대응된다.
+
+정의 3의 $$\GL_n(A)$$ — 곱셈에 대한 역원을 갖는 정사각행렬들의 집합 — 가 이 글의 핵심 대상이다. $$u\in\End(M)$$가 isomorphism이면 $$[u]_\mathcal{B}^\mathcal{B}\in\GL_n(A)$$라는 관찰은, 행렬과 선형사상 글의 따름정리 4($$[v\circ u]=[v][u]$$)로부터 바로 오는데 — "역이 존재하는 linear map의 행렬도 역이 존재한다"는 것이 핵심이다. 다만 $$\GL_n(A)$$의 구조가 $$A$$의 성질에 따라 크게 달라질 수 있다는 것을 이후 글들에서 확인할 것이라는 예감이 든다.
+
+명제 4의 "새로운 family가 basis가 되는 것과 변환행렬이 가역인 것이 동치"라는 결과가 이 글의 첫 번째 핵심이다. $$e_i'=\sum_j a_{ji}e_i$$로 정의된 $$u$$의 행렬표현이 $$(a_{ji})$$이고, $$(u(e_i))$$가 basis가 되는 것이 $$u$$가 isomorphism인 것과 동치라는 논증이 깔끔하다. 선형대수학에서 basis를 바꾸는 것이 "역행렬이 존재하는 행렬"과 동치라는 것을 알고 있었지만, module 위에서 이 결과가 여전히 성립한다는 것이 확인되어서 좋다. 다만 $$A$$가 commutative라는 가정이 $$\Mat_n(A)$$의 algebra 구조에 필요하다는 것이, noncommutative ring에서는 정사각행렬의 곱셈이 associativity를 잃을 수 있다는 것을 시사하는지 궁금하다.
+
+명제 5의 $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathcal{B}_\mathcal{C}[\id_M]^{\mathcal{B}'}_{\mathcal{B}}$$라는 공식이 "행렬표현의 변환 법칙"이다. $$[\id_M]^{\mathcal{B}'}_{\mathcal{B}}$$가 바로 기저변환 행렬이라는 관찰이 인상적인데, 선형대수학에서 $$P^{-1}AP$$라는 공식을 외웠을 때는 "그냥 공식"이라고만 생각했는데, 여기서는 $$\id_M$$을 두 basis로 표현한 행렬이 기저변환을 나타낸다는 것이 명확해진다. $$M=N$$, $$\mathcal{B}=\mathcal{C}$$, $$\mathcal{B}'=\mathcal{C}'$$로 놓으면 $$X'=PXP^{-1}$$이 되어 similar matrix의 정의(정의 7)와 직접 연결되는 것이 자연스럽다.
+
+equivalent matrix(정의 6: $$X'=PXQ$$)와 similar matrix(정의 7: $$X'=PXP^{-1}$$)의 구분이 흥미롭다. "동치인 행렬"은 $$M$$과 $$N$$의 basis를 각각 독립적으로 바꾼 결과이고, "닮은 행렬"은 $$M=N$$일 때 같은 basis를 양쪽에 적용한 결과인데 —前者가 후자를 포함한다는 것이 $$P$$와 $$Q$$가 독립적이라는 것에서 온다. 선형대수학에서 이 두 개념을 구분하는 것이 왜 중요한지를 상기시키는 좋은 정리인데, 이후 determinant나 eigenvalue를 다룰 때 similar matrix의 불변량이 핵심적으로 쓰일 것이라는 예감이 든다.
+
+전체적으로 이 글은 행렬과 선형사상 글에서 구축한 "linear map ↔ 행렬" 대응의 자연스러운 후속으로, basis를 바꿨을 때 행렬이 어떻게 변하는지를 체계적으로 분석한다. 가장 인상적인 부분은 기저변환 행렬이 $$\id_M$$의 행렬표현이라는 관찰인데, "basis를 바꾼다"는 추상적 개념이 identity map이라는 구체적 대상으로 포착되는 것이 아름답다. 다만 이 글 자체가 새로운 대상을 도입하기보다는 기존 framework의 변환 법칙을 다루고 있어서, Hom과 텐서곱 글이나 쌍대공간 글보다는 개념적 새로움이 적은 느낌이다.
+
+## [행렬의 텐서곱](/ko/math/multilinear_algebra/tensor_product_of_matrices)
+
+이 글은 제목만 존재하고 본문이 비어있다. 제목에서 추측하건대, Hom과 텐서곱 글에서 다룬 $$M^\ast\otimes N\cong\Hom(M,N)$$라는 isomorphism을 행렬 수준에서 구체화하는 내용 — Kronecker product $$A\otimes B = (a_{ij}B)$$의 정의와 성질, 그리고 $$[u\otimes v]_{\mathcal{B}\otimes\mathcal{C}} = [u]_\mathcal{B}\otimes[v]_\mathcal{C}$$ 같은 공식 — 을 다룰 것으로 예상된다. 행렬과 선형사상 글에서 $$\Hom(M,N)$$의 행렬표현을 봤으므로, tensor product의 행렬표현은 그 자연스러운 확장일 것이다. 다만 본문이 없으므로 구체적으로 어떤 내용을 담을지는 확인할 수 없어서 아쉽다. 기저변환 글까지의 내용으로도 tensor product의 행렬 표현을 충분히 예측할 수 있지만, 실제로 저자가 어떤 접근을 택했는지는 미지수로 남는다.
+
+## [텐서대수](/ko/math/multilinear_algebra/tensor_algebras)
+
+이 글은 다중선형대수학 카테고리의 방향을 전환하는 글이다. 앞서 행렬과 기저변환까지가 "기존 module 이론의 구체적 실현"이었다면, 여기서부터는 tensor algebra, symmetric algebra, exterior algebra라는 새로운 대수를 **construct**하는 작업으로 들어간다. 출발점은 대수적 구조 카테고리에서 이미 본 $$F(M)=\bigoplus_{n\geq 0}M^{\otimes n}$$라는 tensor algebra의 정의인데, Hom과 텐서곱 글에서 $$M^\ast\otimes N\cong\Hom(M,N)$$를 다룰 때 tensor product의 "곱셈" 구조를 예상했으므로 그 구체적 실현을 보는 느낌이다. $$\T(M)$$이 $$\mathbb{N}_{\geq 0}$$-graded associative unital algebra라는 관찰은 기저 글에서 structure constant로 algebra를 정의한 것의 자연스러운 확장인데, 여기서 structure constant가 "수열의 이어쓰기" $$e_se_t=e_{st}$$로 주어진다는 것이 깔끔하다 — 수열이라는 combinatorial 대상이 tensor product의 곱셈을 완전히 결정짓는다는 것이 인상적이다.
+
+명제 2의 universal property가 이 글의 이론적 핵심이다. 임의의 $$A$$-algebra $$E$$와 linear map $$u:M\to E$$에 대해 유일한 algebra homomorphism $$g:\T(M)\to E$$가 $$g\circ\iota=u$$를 만족한다는 것은, 대수적 구조 카테고리의 free module의 universal property와 정확히 같은 패턴이다 — "free 대상에서의 map은 generator 위의 값으로 유일하게 결정된다"는 원리가 module에서 algebra 수준으로 올라간 것이다. 다만 $$E$$가 $$\mathbb{N}$$-graded이고 $$u(M)\subseteq E_1$$이면 $$g$$도 graded homomorphism이 된다는 추가 관찰이 좋은데, "graded 구조를 보존하는 universal property"가 이후 symmetric algebra와 exterior algebra의 construction에서 반복적으로 사용될 것이라는 예감이 든다.
+
+명제 3의 free module에 대한 tensor algebra의 basis 설명이 가장 구체적이다. basis $$(e_i)$$에 대해 $$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n}$$ ( $$s$$는 $$I$$에서의 유한 수열)들이 $$\T(M)$$의 basis를 이루고, 곱셈이 수열의 이어쓰기로 주어진다는 것은 — 선형대수학에서 벡터공간의 basis를 잡고 좌표를 읽었던 것과 같은 수준의 구체성을 제공한다. 다만 수열의 길이가 $$n$$인 것들이 $$\T^n(M)$$의 basis를 이루고, 이들의 direct sum이 전체 $$\T(M)$$이라는 구조가 — Hom과 텐서곱 글에서 $$\Hom$$ functor의 exactness를 grade별로 분석했던 것과 같은 graded 사고방식을 요구한다는 것을 느꼈다.
+
+명제 4의 extension of scalar 성질 — $$\T_B(B\otimes_AM)\cong B\otimes_A\T_A(M)$$ — 은 Various Modules 글에서 $$\otimes$$이 left adjoint이므로 colimit을 보존한다는 관찰로부터 오는데, "base change해도 tensor algebra 구조가 보존된다"는 것이 핵심이다. 증명에서 $$\T$$의 universal property를 두 번 사용하는 구조 — 먼저 $$A$$-linear map $$M\to\phi^\ast\T_B(\phi_!M)$$를 universal property로 얻고, 그 다음 adjoint로 $$B$$-linear map을 얻는 — 가 Various Modules 글에서 $$\Hom$$과 $$\otimes$$의 adjunction을 활용했던 것과 같은 패턴인데, "같은 기법이 다른 수준에서 반복된다"는 느낌이 든다.
+
+Mixed tensor 부분에서 저자가 "아 이게 애매하네"라고 솔직하게 적은 것이 인상적이다. $$\T(M\oplus M^\ast)$$에서 tensor field를 정의하려면 수열의 순서가 다르면 다른 것으로 취급하게 되어서 문제가 된다는 관찰은, 실제로 물리학에서 tensor field를 다룰 때 순서가 중요한 이유와 연결되는 것 같은데 — 저자 스스로 "이걸 해결한다면 contraction 먹여서 죽이는거 설명하면 될거같다"고 적어둔 것으로 보아 아직 미완성인 부분이다. 솔직하게 미완성이라고 표시하는 것이 오히려 좋은데, 이해가 안 되면 그렇게 적으라는 지시와도 일치한다.
+
+대칭대수 $$\S(M)=\T(M)/\langle x\otimes y-y\otimes x\rangle$$의 construction이 깔끔하다. $$\mathfrak{I}$$가 homogeneous ideal이고 degree $$2$$의 generator들로 이루어져 있으므로 $$\S^0(M)\cong A$$, $$\S^1(M)\cong M$$이 된다는 관찰은 — "quotient를 취해도 낮은 차수에는 영향이 없다"는 것이 이후 exterior algebra에서도 같은 패턴으로 나올 것이라는 예감이 든다. 명제 6의 universal property — $$u(x)u(y)=u(y)u(x)$$를 만족하는 linear map $$u:M\to E$$에 대해 유일한 algebra homomorphism $$\S(M)\to E$$가 존재한다는 것 — 가 $$\S(M)$$이 "가장 자유로운 commutative algebra"라는 것을 보여주는 핵심인데, tensor algebra의 universal property에서 commutativity 조건을 추가한 것이 $$\S(M)$$이라는 해석이 자연스럽다.
+
+명제 7의 symmetric $$n$$-linear map과의 대응 — $$\Hom(\S^n(M),N)$$가 symmetric $$n$$-linear map $$M^n\to N$$들의 module과 isomorphic — 이 가장 깊이 있는 결과다. $$n$$-linear map을 "한 번에 다루기 어려우니 symmetric power로 quotient를 취해서 linear map으로 만든다"는 것이 $$\S^n(M)$$의 존재 이유인데, Hom과 텐서곱 글에서 $$\Hom$$과 $$\otimes$$의 상호작용을 분석한 것의 연장선에 있다는 것을 느꼈다. 다만 "symmetric linear map"의 정의에서 $$\sigma\in S_n$$에 대한 불변성이 등장하는데, 이것이 이후 representation theory에서 group action과 연결될 것이라는 예감이 든다.
+
+명제 8에서 free module의 basis $$(e_i)$$에 대해 $$e^\alpha=\prod e_i^{\alpha(i)}$$ (finitely supported $$\alpha:I\to\mathbb{N}$$)들이 $$\S(M)$$의 basis를 이룬다는 것이 — $$\S(M)$$이 정확히 polynomial algebra $$A[x_i]_{i\in I}$$가 된다는 결론 — 이 가장 구체적인 실현이다. "대칭대수 = 다항식환"이라는 identification이 놀라운데, 선형대수학에서 다항식을 "변수의 식"으로만 생각했었는데 module 이론의 관점에서는 symmetric power의 원소로 해석될 수 있다는 것이 새로운 시각이다.
+
+외대수 $$\bigwedge(M)=\T(M)/\langle x\otimes x\rangle$$의 construction도 대칭대수와 같은 패턴인데, commutativity 대신 alternating 조건 $$u(x)^2=0$$이 universal property에 등장한다는 것이 차이다. $$x\otimes x$$로 ideal을 만들면 $$x\otimes y+y\otimes x=(x+y)\otimes(x+y)-x\otimes x-y\otimes y$$로 부호가 바뀌는 것이 자동으로 나온다는 관찰이 — "commutativity를 제약하는 것과 alternating을 제약하는 것이 degree $$2$$에서 결정된다"는 것이 인상적이다. 명제 13에서 free module에 대한 exterior algebra의 basis가 $$e_J=e_{j_1}\wedge\cdots\wedge e_{j_k}$$ ( $$j_1<\cdots<j_k$$, $$J\subseteq I$$ 유한 ) — 즉 basis 원소들의 부분집합 — 이 된다는 것이 대칭대수의 다항식 basis와 대비된다. 대칭대수에서는 반복이 허용되는 multi-index였는데, exterior algebra에서는 중복 없이 선택하는 조합이라는 것이 — "대칭 vs 교대"의 차이가 basis의 combinatorial 구조로 드러나는 것이 아름답다.
+
+다만 이 글에서 몇 가지 개념이 정의 없이 사용되고 있다. "polynomial algebra $$A[x_i]$$"는 $$\S(M)$$의 구체적 실현으로서 등장하는데, 이전 글들에서 다항식환을 formal하게 정의한 적이 없어서(정역 글에서 integral domain을 다뤘지만 polynomial ring을 정의하지는 않았다), 이 표기가 익숙한 독자에게는 자연스럽겠지만 엄밀한 관점에서는 정의가 필요하다. "Koszul sign convention"도 명제 13과 명제 14 사이에서 언급되는데 — $$(-1)^{mn}$$ 부호가 생긴다는 것만 설명하고 formal 정의는 생략되어 있어서, alternating algebra의 colimit을 정의할 때 이 부호가 왜 필요한지를 따라가기 어려웠다.
+
+전체적으로 이 글은 tensor algebra → symmetric algebra → exterior algebra라는 "tensor algebra의 quotient" construction의 세 단계를 체계적으로 보여준다. 가장 인상적인 부분은 세 algebra 모두 동일한 universal property 패턴 — "generator 위의 조건을 만족하는 가장 자유로운 algebra" — 을 따른다는 것이고, free module의 basis가 각각 수열/다항식/부분집합으로 구체화되는 것이 아름답다. 다만 Mixed tensor 부분이 미완성이고, Koszul sign convention이 formal하지 않게 언급된 것이 아쉬운 점이다. 기저변환 글까지가 "module의 좌표 표현"이었다면, 이 글부터는 "module로부터 새로운 algebra를 construct"하는 방향으로 전환되는데 — 이후 determinant나 exterior power가 이 framework 안에서 어떤 역할을 하는지를 확인할 수 있을 것 같다.
+
+⚠️ 정의 없이 사용: `polynomial algebra` (검색해도 X)
+⚠️ 정의 없이 사용: `Koszul sign convention` (검색해도 X)
+
+## [행렬식](/ko/math/multilinear_algebra/determinants)
+
+텐서대수 글에서 exterior algebra $$\bigwedge(M)$$의 basis가 basis 원소들의 부분집합 $$e_J$$로 주어지는 것을 봤는데, 이 글은 그 중에서도 $$\bigwedge^n(M)$$ ( $$n$$이 free module의 rank일 때 )이 1-dimensional이라는 관찰로부터 determinant를 정의한다. $$\bigwedge^n(u)$$가 $$\bigwedge^n(M)$$에서 $$\bigwedge^n(M)$$으로의 map인데, 1-dimensional이므로 반드시 스칼라곱 $$x\mapsto\alpha x$$의 꼴이어야 한다는 논증이 — "차원이 1이면 linear map이 scalar multiplication이다"는 선형대수학의 관찰을 직접 활용하는 것이 깔끔하다. Hom과 텐서곱 글에서 $$\Hom$$ functor의 exactness를 다뤘고, 텐서대수 글에서 exterior algebra의 construction을 봤으므로, "exterior power functor $$\bigwedge^n$$를 endomorphism에 적용하면 determinant가 나온다"는 것이 그 두 도구의 합류점이라는 느낌이 든다.
+
+명제 2의 세 가지 성질 — 곱셈성 $$\det(uv)=\det(u)\det(v)$$, $$\det(\id)=1$$, 가역 원소의 determinant도 가역 — 은 선형대수학의 행렬식 글에서 이미 봤던 것인데, 여기서는 "exterior power functor의 functoriality로부터 자동으로 나온다"는 것이 차이다. 선형대수학에서는 행렬의 성분을 직접 계산해서 증명했었는데, module 수준에서는 $$\bigwedge^n(u\circ v)=\bigwedge^n(u)\circ\bigwedge^n(v)$$라는 functoriality가 곱셈성을 바로 준다는 것이 — "행렬 성분 없이 coordinate-free하게 증명한다"는 Hom과 텐서곱 글에서 trace map을 정의할 때의 철학과 같은 맥락이다. 따름정리 3의 " $$u$$가 bijective $$\iff$$ $$\det(u)$$가 가역 "이라는 동치조건도 선형대수학에서는 "역행렬 존재 $$\iff$$ 행렬식이 0이 아님"으로 알고 있었는데, module 수준에서는 "가역"이라는 말이 $$A$$의 단위군에 속한다는 것이므로 $$A$$의 성질에 따라 달라질 수 있다는 것이 새롭다.
+
+보조정리 4와 명제 5의 소행렬식 부분은 계산적 도구를 제공한다. $$p$$개의 원소 $$x_1,\ldots,x_p$$를 wedge product $$x_1\wedge\cdots\wedge x_p$$로 묶고, 이를 basis $$e_J$$로 전개할 때 계수가 소행렬식 $$\det(X_{J,I})$$라는 공식 — 선형대수학의 라플라스 전개와 직접 연결되는 결과인데, 여기서는 "wedge product의 전개 = 소행렬식의 합"이라는 더 일반적인 형태로 나온다는 것이 인상적이다. $$\bigwedge^p(u)$$의 행렬표현이 $$(\det(X_{J,I}))$$로 주어진다는 명제 5는, Hom과 텐서곱 글에서 $$\Hom(M,N)$$의 행렬표현을 다뤘던 것의 exterior power 버전인데 — "functor를 적용한 map의 행렬표현"이라는 일반적 패턴이 여기서도 작동하는 것이 좋다.
+
+따름정리 6의 $$\det(\alpha\cdot\id+\beta u)=\sum_k\tr(\bigwedge^k(u))\alpha^{n-k}\beta^k$$라는 공식이 가장 놀라운 결과다. $$\alpha=\beta=1$$로 놓으면 $$\det(\id+u)=\tr(\bigwedge(u))$$가 되는데, "determinant와 trace가 exterior power라는 다리로 연결된다"는 것이 아름답다. 선형대수학에서 $$\det(I+A)$$를 전개하면 소행렬식의 합이라는 것을 알고 있었지만, 그것이 $$\tr(\bigwedge^k(u))$$라는 coordinate-free한 표현으로 정리되는 것을 보니 — Hom과 텐서곱 글에서 trace map을 "coordinate-free하게" 정의했던 것의 자연스러운 확장이라는 것을 느꼈다. 증명에서 wedge product를 전개할 때 $$P,Q$$로 분리하고 순서를 바꾸면서 부호 $$\gamma_{P,Q}$$가 등장하는 부분이 — 텐서대수 글의 Koszul sign convention과 같은 맥락의 부호 계산인데, 실제로 그 글에서 정의 없이 사용된 개념이 여기서 자연스럽게 등장하는 것이 인상적이다.
+
+특성다항식 부분이 이 글의 정점이다. $$A[x]\otimes_A M$$ 위에 $$u$$를 이용해 $$A[x]$$-module 구조를 정의하는 것 — $$p\bullet x=p(u)(x)$$ — 이 텐서대수 글에서 "extension of scalar를 통해 새로운 module 구조를 만든다"는 것의 구체적 실현인데, $$\iota_!M=A[x]\otimes_A M$$이라는 표기가 대수적 구조 카테고리의 "스칼라의 변환" 글에서 본 것이라 따라갈 수 있었다. $$\psi=x-\iota_!u$$로 정의된 map으로 만든 exact sequence $$\iota_!M\xrightarrow{\psi}\iota_!M\xrightarrow{\rho}M_u\to 0$$이 핵심인데, " $$M_u$$가 $$\psi$$의 cokernel이다 "라는 것이 — $$\rho(p\otimes x)=p(u)(x)$$라는 $$A[x]$$-linear map의 cokernel으로 $$M_u$$를 이해하는 것이 — "module을 quotient로 표현한다"는 완전열 글의 패턴과 정확히 대응된다.
+
+Cayley-Hamilton 정리의 증명이 가장 우아한 부분이다. $$\det(x-\iota_!u)$$라는 $$A[x]$$-endomorphism의 determinant를 cofactor expansion으로 $$XY^t=(\det X)I$$ 꼴로 풀어서, exact sequence의 $$\psi$$를 factor out하는 논증 — "determinant를 $$A[x]$$-endomorphism으로 보면 자동으로 $$0$$이 된다"는 것 — 이 선형대수학에서 행렬로만 증명했던 것보다 훨씬 더 구조적인 이해를 준다. 선형대수학에서는 " $$\chi_A(A)=0$$ "이라는 결론을 행렬의 성분으로 확인했었는데, 여기서는 " $$M_u$$가 $$\psi$$의 cokernel이므로 $$\psi$$의 determinant가 $$M_u$$에서 0으로 작용한다"는 것이 핵심 논증이라는 것이 — "왜 성립하는가"를 더 깊이 보여준다고 느꼈다.
+
+전체적으로 이 글은 exterior algebra의 구체적 응용으로서 determinant를 정의하고, extension of scalar와 exact sequence를 이용해 특성다항식과 Cayley-Hamilton을 증명하는 구조를 따른다. 가장 인상적인 부분은 determinant가 " $$\bigwedge^n$$ functor의 scalar part"라는 coordinate-free한 정의인데, 선형대수학에서 "행렬의 성분으로 정의한 determinant"가 module 이론에서는 exterior power의 자연스러운 귀결이라는 것이 아름답다. 다만 polynomial algebra $$A[x]$$가 텐서대수 글에서 정의 없이 사용된 후 여기서도 같은 문제가 반복되고 있어서, commutative ring 위의 polynomial ring의 formal 정의가 어디선가 필요하다고 느꼈다.

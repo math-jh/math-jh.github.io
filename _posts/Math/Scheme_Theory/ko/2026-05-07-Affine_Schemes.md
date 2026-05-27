@@ -276,7 +276,7 @@ $$A_\mathfrak{p}\cong \mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scri
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§스펙트럼, ⁋보조정리 11](/ko/math/topology/topological_bases#lem11)에 의하여 $$D(f)$$들이 $$\Spec A$$의 base이므로, [\[위상수학\] §위상공간의 기저, ⁋명제 5](/ko/math/topology/topological_bases#prop5)에 의하여 
+[\[위상수학\] §위상공간의 기저, ⁋보조정리 11](/ko/math/topology/topological_bases#lem11)에 의하여 $$D(f)$$들이 $$\Spec A$$의 base이므로, [\[위상수학\] §위상공간의 기저, ⁋명제 5](/ko/math/topology/topological_bases#prop5)에 의하여 
 
 $$\mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathscr{O}_{\Spec A}(D(f))$$
 
@@ -332,7 +332,7 @@ $$A \overset{\phi}{\longrightarrow}B \overset{\epsilon}{\longrightarrow} B_{\phi
 
 $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathscr{O}_{\Spec A, (\Spec \phi)(\mathfrak{q})} \rightarrow\mathscr{O}_{\Spec B, \mathfrak{q}}$$
 
-이 local homomorphism이면 된다. 그런데 $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$$이고, 따라서 [보조정리 7](#lem7)에 의하여 $$(\Spec\phi)^\sharp_\mathfrak{q}$$는 $$A_{\phi^{-1}(\mathfrak{q})}$$에서 $$B_{\mathfrak{q}}$$로의 ring homomorphism이며 이는 $$A_{\phi^{-1}(\mathfrak{p})}$$의 유일한 maximal ideal $$\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$$를 $$B_\mathfrak{p}$$의 유일한 maximal ideal $$\mathfrak{q}B_\mathfrak{q}$$로 보낸다. 
+이 local homomorphism이면 된다. 그런데 $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$$이고, 따라서 [보조정리 8](#lem8)에 의하여 $$(\Spec\phi)^\sharp_\mathfrak{q}$$는 $$A_{\phi^{-1}(\mathfrak{q})}$$에서 $$B_{\mathfrak{q}}$$로의 ring homomorphism이며 이는 $$A_{\phi^{-1}(\mathfrak{p})}$$의 유일한 maximal ideal $$\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$$를 $$B_\mathfrak{p}$$의 유일한 maximal ideal $$\mathfrak{q}B_\mathfrak{q}$$로 보낸다. 
 
 </details>
 
@@ -340,7 +340,7 @@ $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathscr{O}_{\Spec A, (\Spec \phi)(\mathfrak{q
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> [명제 8](#prop8)의 functor $$\Spec:\cRing^\op \rightarrow \LRS$$의 essential image를 *affine scheme<sub>아핀스킴</sub>*으로 정의한다. 
+<ins id="def10">**정의 10**</ins> [명제 9](#prop9)의 functor $$\Spec:\cRing^\op \rightarrow \LRS$$의 essential image를 *affine scheme<sub>아핀스킴</sub>*으로 정의한다. 
 
 </div>
 
@@ -396,7 +396,7 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 $$\mathscr{O}_{\Spec A}(A)=\mathscr{O}_{\Spec A}(D(1))\cong A$$
 
-임을 안다. 만일 locally ringed space $$(X, \mathscr{O}_X)$$가 affine scheme이었다면, 마찬가지 방식으로 $$\mathscr{O}_X(X)$$를 살펴보아 $$(X, \mathscr{O}_X)$$가 어떠한 ring의 spectrum과 isomorphic한지 알 수 있다. 즉, affine scheme $$(X, \mathscr{O}_X)$$에 대하여 $$A=\\mathscr{O}_X(X)$$라 하면 $$(X, \mathscr{O}_X)\cong (\Spec A, \mathscr{O}_{\Spec A})$$가 성립한다. 더 일반적으로 다음을 정의한다.
+임을 안다. 만일 locally ringed space $$(X, \mathscr{O}_X)$$가 affine scheme이었다면, 마찬가지 방식으로 $$\mathscr{O}_X(X)$$를 살펴보아 $$(X, \mathscr{O}_X)$$가 어떠한 ring의 spectrum과 isomorphic한지 알 수 있다. 즉, affine scheme $$(X, \mathscr{O}_X)$$에 대하여 $$A=\mathscr{O}_X(X)$$라 하면 $$(X, \mathscr{O}_X)\cong (\Spec A, \mathscr{O}_{\Spec A})$$가 성립한다. 더 일반적으로 다음을 정의한다.
 
 <div class="definition" markdown="1">
 

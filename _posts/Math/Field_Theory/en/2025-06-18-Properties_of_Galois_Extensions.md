@@ -112,7 +112,7 @@ holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let any $$\sigma\in \Gal(\mathbb{L}/\mathbb{K})$$ be given. If $$\sigma\neq\id_\mathbb{L}$$, then there exists $$x\in \mathbb{L}$$ such that $$\sigma(x)\neq x$$. Then taking $$\mathbb{M}\mathbb{K}(x)$$, we have $$\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$$. Now, as we saw earlier, since $$\Lambda'$$ is a cofinal subset of $$\Lambda$$, we obtain the desired result.
+Let any $$\sigma\in \Gal(\mathbb{L}/\mathbb{K})$$ be given. If $$\sigma\neq\id_\mathbb{L}$$, then there exists $$x\in \mathbb{L}$$ such that $$\sigma(x)\neq x$$. Then taking $$\mathbb{M}=\mathbb{K}(x)$$, we have $$\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$$. Now, as we saw earlier, since $$\Lambda'$$ is a cofinal subset of $$\Lambda$$, we obtain the desired result.
 
 </details>
 
@@ -172,7 +172,7 @@ these satisfy $$\lambda_i=\rho_{ij}\circ\lambda_j$$, so there exists a continuou
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-By [Proposition 3](#prop3), $$\Gal(\mathbb{L}_i/\mathbb{K})$$ is Hausdorff, and since products and subspaces of Hausdorff spaces are again Hausdorff, their inverse limit $$\varprojlim \Gal9\mathbb{L}_i/\mathbb{K})$$ is also Hausdorff. Meanwhile, since $$\Gal(\mathbb{L}/\mathbb{K})$$ is compact by [Proposition 4](#prop4), by [\[Topology\] §Compact Spaces, ⁋Proposition 9](/en/math/topology/compact_spaces#prop9) it suffices to show that $$\lambda$$ is bijective, which is almost obvious from $$\mathbb{L}= \bigcup \mathbb{L}_i$$.
+By [Proposition 3](#prop3), $$\Gal(\mathbb{L}_i/\mathbb{K})$$ is Hausdorff, and since products and subspaces of Hausdorff spaces are again Hausdorff, their inverse limit $$\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})$$ is also Hausdorff. Meanwhile, since $$\Gal(\mathbb{L}/\mathbb{K})$$ is compact by [Proposition 4](#prop4), by [\[Topology\] §Compact Spaces, ⁋Proposition 9](/en/math/topology/compact_spaces#prop9) it suffices to show that $$\lambda$$ is bijective, which is almost obvious from $$\mathbb{L}= \bigcup \mathbb{L}_i$$.
 
 </details>
 

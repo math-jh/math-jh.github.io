@@ -87,7 +87,7 @@ $$\bigcup_{k\in K}A_{f(k)}=\bigcup_{i\in I}A_i,\qquad \bigcap_{k\in K}A_{f(k)}=\
 
 특별히 $$(A_k)_{k\in K}$$가 임의의 $$k,k'\in K$$에 대하여 $$A_k=A_{k'}$$를 만족한다고 하자. 임의의 $$k_0\in K$$를 하나 택하여 $$I=\{k_0\}$$라 하고, 전사함수 $$f:K\rightarrow I$$에 위의 명제를 적용하면, 모든 $$k$$에 대해 $$A_k=A_{k_0}=A_{f(k)}$$이므로
 
-$$\bigcup_{k\in K} A_k=\bigcup_{k\in K} A_{f(k)}=\bigcup_{i\in I}A_i=A_{k_0},\qquad \bigcap_{k\in K}A_k\bigcap_{k\in K}A_{f(k)}=\bigcap_{i\in I}A_i=A_{k_0}$$
+$$\bigcup_{k\in K} A_k=\bigcup_{k\in K} A_{f(k)}=\bigcup_{i\in I}A_i=A_{k_0},\qquad \bigcap_{k\in K}A_k=\bigcap_{k\in K}A_{f(k)}=\bigcap_{i\in I}A_i=A_{k_0}$$
 
 가 성립한다.
 
