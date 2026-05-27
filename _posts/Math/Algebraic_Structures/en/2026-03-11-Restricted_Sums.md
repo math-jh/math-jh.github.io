@@ -150,7 +150,7 @@ $$a=\prod_{i\in I} h_i=\prod_{i\in I}\iota_i(h_i),\qquad\text{$\supp(h_i)$ finit
 
 Setting $$h=\prod_{i\in I} \iota_i(h_i)\in\prod^w H_i$$, we have
 
-$$a=\prod_{i\in I}\iota_i(h_i)=\iota_i\left(\prod_{i\in I}h_i\right)=\iota_i(h)$$
+$$a=\prod_{i\in I}\iota_i(h_i)=\iota\left(\prod_{i\in I}\iota_i(h_i)\right)=\iota(h)$$
 
 so $$\iota$$ is surjective.
 

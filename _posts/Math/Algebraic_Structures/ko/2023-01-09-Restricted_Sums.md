@@ -154,7 +154,7 @@ $$a=\prod_{i\in I} h_i=\prod_{i\in I}\iota_i(h_i),\qquad\text{$\supp(h_i)$ finit
 
 로 적을 수 있다. $$h=\prod_{i\in I} \iota_i(h_i)\in\prod^w H_i$$라 하면, 
 
-$$a=\prod_{i\in I}\iota_i(h_i)=\iota_i\left(\prod_{i\in I}h_i\right)=\iota_i(h)$$
+$$a=\prod_{i\in I}\iota_i(h_i)=\iota\left(\prod_{i\in I}\iota_i(h_i)\right)=\iota(h)$$
 
 이므로 $$\iota$$는 surjective이다.
 

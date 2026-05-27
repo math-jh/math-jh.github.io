@@ -34,7 +34,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 </div>
 
-If we regard $$G$$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be thought of as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1). Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Concepts in Representation Theory](/en/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들) can be carried over to Lie groups.
+If we regard $$G$$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be thought of as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1). Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Concepts of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-concepts-of-representation-theory) can be carried over to Lie groups.
 
 A crucial fact that played an important role so far was that $$G$$ is a finite group. For example, the idea of averaging over all elements of $$G$$ relied on this fact. To generalize this to Lie groups, we need to impose some kind of finiteness condition on $$G$$.
 

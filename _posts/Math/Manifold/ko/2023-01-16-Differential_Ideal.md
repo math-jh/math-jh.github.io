@@ -136,7 +136,7 @@ $$\Omega^\ast(M)$$는 differential graded algebra이므로, ideal들 또한 diff
 
     $$\mu_i:=(d(f\circ\pi_1))^\ast(\omega_i)-(d\pi_2)^\ast(\omega_i)$$
 
-    이 $$(d\iota)^\ast(\omega_i)=0$$을 만족한다는 것을 보여야 한다. 이는
+    이 $$(d\iota)^\ast(\mu_i)=0$$을 만족한다는 것을 보여야 한다. 이는
     
     $$(d\iota)^\ast(\mu_i)=(d(\pi_1\circ\iota))^\ast(df)^\ast(\omega_i)-(d(\pi_2\circ\iota))^\ast(\omega_i)=(df)^\ast(\omega_i)-(df)^\ast(\omega_i)=0$$
 

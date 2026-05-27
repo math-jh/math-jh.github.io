@@ -48,7 +48,7 @@ Then the following holds.
     holds, so $$g(V)$$ is an open set of $$Z$$. Here we used that $$f(f^{-1}(V))=V$$ since $$f$$ is a surjection. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2)) On the other hand, if $$B$$ is an arbitrary closed set of $$Y$$, then by [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4) we can apply the same argument as above.
 3. As in the second proof, it suffices to consider the open case. For any open set $$U$$ of $$X$$, since $$g\circ f$$ is open, $$g(f(U))$$ is open, and thus using that $$g$$ is continuous and the above [\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2), from the following formula
     
-    $$g^{-1}(g(f(U))=f(U)$$
+    $$g^{-1}(g(f(U)))=f(U)$$
 
     we see that $$f(U)$$ is an open set.
 
@@ -95,7 +95,7 @@ Then the following can be easily shown.
 
 <ins id="prop5">**Proposition 5**</ins> Consider a continuous function $$f:X \rightarrow Y$$ between two topological spaces and its canonical decomposition
 
-$$X \overset{p}{\longrightarrow} X/R \overset{h}{\longrightarrow h} f(X)\overset{i}{\longrightarrow}Y$$
+$$X \overset{p}{\longrightarrow} X/R \overset{h}{\longrightarrow} f(X)\overset{i}{\longrightarrow}Y$$
 
 Then the following are all equivalent.
 

@@ -206,7 +206,7 @@ and for $k=0$, the functions whose derivative is $0$ are exactly the constant fu
 
 $$H^0_\dR(\mathbb{R}^n)=\mathbb{R}$$
 
-The de Rham cohomology defined in this way also satisfies all the conditions of [Definition 2](#thm2), and therefore by the uniqueness of cohomology theories (and the fact that any singular chain can be approximated by a smooth chain), we can verify that singular cohomology with $\mathbb{R}$ coefficients and de Rham cohomology coincide. The computation above is then nothing more than translating the computation of [\[Algebraic Topology\] §Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) into $\mathbb{R}$-valued cohomology via [Proposition 3](#prop3).
+The de Rham cohomology defined in this way also satisfies all the conditions of [Definition 2](#def2), and therefore by the uniqueness of cohomology theories (and the fact that any singular chain can be approximated by a smooth chain), we can verify that singular cohomology with $\mathbb{R}$ coefficients and de Rham cohomology coincide. The computation above is then nothing more than translating the computation of [\[Algebraic Topology\] §Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) into $\mathbb{R}$-valued cohomology via [Proposition 3](#prop3).
  
 ## Coefficients of (Co)homology
 
@@ -242,7 +242,7 @@ $$H_k(C\otimes_AM)\cong \left(H_k(C)\otimes_AM\right)\oplus \Tor_1^A(H_{k-1}(C),
 
 <div class="proposition" markdown="1">
 
-<ins id="thm65">**Theorem 5 (Universal coefficient theorem for cohomology, general version)**</ins> For a principal ideal domain $A$, a chain complex $C_\bullet$ of free $A$-modules, and any $A$-module $M$, there exists a short exact sequence
+<ins id="thm5">**Theorem 5 (Universal coefficient theorem for cohomology, general version)**</ins> For a principal ideal domain $A$, a chain complex $C_\bullet$ of free $A$-modules, and any $A$-module $M$, there exists a short exact sequence
 
 $$0\rightarrow\Ext_A^1(H_{k-1}(C), M)\rightarrow H_k(\Hom_A(C,M))\rightarrow \Hom_A(H_k(C),M)\rightarrow 0$$
 
@@ -254,7 +254,7 @@ $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 ## The Mayer–Vietoris Sequence
 
-Among the axioms of [Definition 2](#thm2), the excision axiom allows us to compute the cohomology of a large space from that of smaller spaces. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7), and its proof is obtained by repeating the process from [\[Algebraic Topology\] §Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6) to [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7), starting from [Definition 2](#thm2).
+Among the axioms of [Definition 2](#def2), the excision axiom allows us to compute the cohomology of a large space from that of smaller spaces. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7), and its proof is obtained by repeating the process from [\[Algebraic Topology\] §Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6) to [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7), starting from [Definition 2](#def2).
 
 <div class="proposition" markdown="1">
 
