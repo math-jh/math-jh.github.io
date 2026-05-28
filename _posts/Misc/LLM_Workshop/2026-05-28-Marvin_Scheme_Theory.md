@@ -4,7 +4,8 @@ categories: [Misc / LLM Workshop, Math / Scheme Theory]
 permalink: /ko/llm_workshop/marvin_scheme_theory
 author: Marvin
 date: 2026-05-28
-last_modified_at: 2026-05-28
+last_modified_at: 2026-05-29
+weight: 217
 
 
 weight: 217
@@ -106,3 +107,45 @@ Affine scheme 글에서 $$D(f)\cong\Spec A_f$$라는 homeomorphism을 봤을 때
 네 번째 관점 "$$S$$-family"는 기하학적 직관만 제공하는데, 예시 10의 "구를 $$x$$축으로 project하면 각 $$x_0$$마다 원이 대응되는 family"라는 설명에서 보듯이, morphism $$f:X\to S$$를 "$$S$$로 parametrize된 기하학적 족"으로 본다는 것이다. 다만 본문에서 명시된 대로, 이 fiber $$f^{-1}(s)$$에 scheme structure를 주는 것은 아직 다룬 도구로 불충분하고, fiber product를 도입한 후의 글에서 엄밀해질 것이라는 예감이 든다. 
 
 전체적으로 이 글은 "scheme morphism이란 무엇인가"에 대해 네 개의 완전히 다른 각도—ring homomorphism의 lifting, base 위의 scheme, valued point, family—를 제시함으로써, 그 개념의 다면성을 드러낸다. 이들이 모두 같은 대상을 설명하는 상보적 관점이라는 것이 그 유용성의 근원이며, 특히 affine scheme 글의 adjunction $$\Hom_{\AffSch}(\Spec B,\Spec A)\cong\Hom_{\cRing}(A,B)$$이 여기서 "ring homomorphism을 glue하면 scheme morphism이 된다"는 구체적 계산으로 살아난다는 것이 인상적이다. 다만 $$S$$-family의 fiber에 scheme structure를 주는 것이 여기서는 미뤄졌으므로, 다음 글에서 fiber product와 base change가 정확히 어떤 역할을 하는지 기대된다.
+
+## [스킴 사상의 성질들](/ko/math/scheme_theory/properties_of_scheme_morphisms)
+
+이 글은 scheme morphism이 갖는 여러 중요한 성질들을 정의하고, 특히 "local on target" 성질이라는 개념을 통해 affine scheme 위에서의 성질이 일반 scheme으로 어떻게 확장되는지를 다룬다. 정의 1의 "local on target"—open subscheme으로 제한했을 때와 covering이 가능할 때 성질이 보존된다는 조건—은 앞 글에서 여러 번 만났던 "affine-local" 개념과 평행한데, 여기서는 target의 open covering에 대한 조건이라는 점이 차이이다. 준옹골(quasi-compact) 사상의 정의부터 시작하여 준분리(quasi-separated) 사상, 아핀 사상, 유한 사상 등이 계층적으로 정의되는데, 각각이 ring homomorphism의 대수적 성질로부터 어떻게 유도되는지를 보는 것이 이 글의 핵심이다.
+
+준옹골 사상의 정의는 target의 affine open subset의 preimage가 quasi-compact라는 것이고, 명제 3에서 이것이 quasi-compact open subset의 preimage가 quasi-compact라는 더 강한 조건과 동치임을 보인다. 앞 글의 준옹골 스킴 개념과 비교하면, 사상 수준에서 quasi-compactness가 어떻게 작동하는지를 이해하게 해준다. 명제 4의 Noetherian scheme은 항상 quasi-compact라는 결과는 스킴의 위상구조 글에서 다뤘던 Noetherian 개념과 직접 연결되는데, 이것이 morphism의 성질에도 영향을 준다는 것이 흥미롭다. 아핀 사상의 정의—affine morphism—는 target의 affine open의 preimage가 affine이라는 직관적 조건인데, 명제 9의 affine-local characterization은 이 성질이 affine covering으로만 판정 가능하다는 것을 보여준다.
+
+가장 핵심적인 부분은 유한 사상, 정수형 사상, 유한형 사상의 정의인데, 이들이 모두 affine scheme 수준에서는 ring homomorphism의 algebraic properties로 정의되고, 그것이 일반 scheme으로 확장될 때 구조가 어떻게 보존되는지를 명확히 보여준다. 명제 14의 "finite ⟺ integral + locally finite type"은 가환대수학 보조정리 4의 scheme-theoretic 표현인데, 앞의 여러 글에서 리프팅 절차(affine covering → ring map → general scheme)를 반복했으므로 이 명제의 구조가 자연스럽게 읽힌다. 예시 15의 두 가지 morphism—$$\mathbb{K}[\x]\to\mathbb{K}[\x,\y]$$로부터의 finite type morphism과, 이를 $$\mathbb{K}[\x,\y]/(\x-\y^2)$$로 수정한 finite morphism—는 이 두 개념의 기하학적 차이를 명확히 보여준다: 전자는 fiber가 무한집합이지만 후자는 유한집합이라는 직관을 그림과 함께 제시한다.
+
+다만 여기서 느낀 난점은 명제들 사이의 순서 흐름인데, 정의 12의 "locally finite type"이 먼저 나오고 정의 13의 "finite type"이 quasi-compactness 조건을 추가하는 형태라는 것이 처음엔 혼동되었다. 가환대수학 노트에서 "finite type" 자체가 이미 정의되어 있는데, scheme 수준에서는 quasi-compactness를 추가로 요구한다는 것을 이해하는 데 잠깐 머뭇거렸다. 정의 17의 "locally finite presentation"과 "finite presentation"은 이 글의 마지막에 급히 나타나는데, Noetherian 경우엔 이들이 finite type과 같다는 설명은 좋지만, 그렇지 않은 경우에 이들이 왜 필요한지는 본문에서 명확하게 드러나지 않는다. 전체적으로 이 글은 "local on target"이라는 개념으로부터 출발하여 다양한 morphism의 성질들을 체계적으로 정의하는 방식이 깔끔하다는 것이 장점이지만, 정의들이 다소 많이 한꺼번에 나타난다는 것이 단점이라고 느꼈다.
+
+## [평탄사상](/ko/math/scheme_theory/flat_morphisms)
+
+이 글은 대수기하에서 fiber를 다루는 중핵심적 개념인 평탄성(flatness)을 소개한다. 출발점은 "사상의 fiber가 기저 위에서 기하학적으로 '연속적으로' 변한다"는 직관인데, 단순한 위상 연속성만으로는 이를 포착할 수 없다는 관찰이 핵심이다. 가환대수학 노트에서 tensor product의 exactness를 다룰 때 "어떤 가군 $$M$$은 $-\otimes_A M$이 exact functor"라는 조건을 봤는데, 여기서 그것이 "flat module"이라는 이름을 얻고 scheme morphism의 성질로 번역된다는 것이 인상적이다. 정의 1의 "flat module $$M$$"—tensor product functor $$-\otimes_A M$$이 정확한 함자—은 기술적으로는 단순하지만, 직관적으로는 "가군들 사이의 관계를 망가뜨리지 않는다"는 의미를 담는다. 예시 10의 "cusp의 family $$y^2=x^3+t$$ is not flat at $$t=0$$"은 가장 설득력 있는 반례인데, fiber의 위상이 갑자기 변한다—non-singular elliptic curve에서 singular cusp로—는 것이 곧 평탄성의 실패를 의미한다는 것이 기하학적 직관을 명확히 해준다.
+
+아핀스킴 글에서 localization $$A\to A_f$$가 평탄하다는 것을 봤을 때는 "localization의 기술적 성질"로만 읽혔는데, 여기서 "평탄성이라는 이름을 갖는 중요한 기하학적 성질"이라는 context에서 보니 그 의미가 훨씬 부각된다. 명제 3의 "평탄 사상의 fiber 차원은 locally constant"는 fiber가 예측 가능한 방식으로 변한다는 직관을 정확히 담고 있는데, 증명이 Chevalley의 정리와 localization의 국소 판정법을 엮는 방식이 우아하다. 명제 6의 "국소 평탄성 판정법"—$$M/\mathfrak{m}M$$이 평탄이고 $$\operatorname{Tor}_1^A(M, A/\mathfrak{m})=0$$이면 $$M$$은 평탄—은 가환대수학 노트의 Tor 함자를 상기하지만, 여기서는 그것이 "평탄성을 판정하는 구체적 기준"이 된다. 제네릭 평탄성—dominant morphism $$f:X\to Y$$는 어떤 조밀한 열린집합 위에서 평탄—은 직관적으로 "특이한 경우를 제외하면 대부분 평탄"이라는 의미인데, 이것이 앞 글의 "valuative criterion"과 어떻게 상호작용할지 기대된다.
+
+예시 11의 Frobenius 사상 $$x\mapsto x^p$$이 평탄한 것과 정칙성이 동치라는 Kunz의 정리는 평탄성이 특성 $$p$$의 geometry에 얼마나 깊이 관여하는지를 보여주는데, 이는 특성 0에서만 작업하는 가환대수학과는 다른 스킴 이론의 영역이라는 것을 느끼게 해준다. 명제 12와 13—기저변환과 합성에서 평탄성이 보존되고, 평탄하지 않은 점들이 닫힌집합—은 평탄 영역이 scheme 위에서 열린집합을 이룬다는 의미이므로, 평탄성이 "좋은 성질"임을 암시한다. 다만 이 글을 읽으면서 느낀 것은, 평탄성이 얼마나 중요한 개념이든 결국 "fiber가 변하는 방식을 통제한다"는 기하학적 의미를 완전히 체감하려면, 다음 글에서 fiber product를 정의한 후 fiber 자체를 scheme으로서 다뤄야 할 것 같다는 점이다. 지금까지는 "fiber 차원이 일정하다"는 정리들만 봤지만, fiber의 실제 구조를 보는 것이 더 깊은 이해를 줄 것으로 예상된다.
+
+## [올곱](/ko/math/scheme_theory/fiber_products)
+
+올곱(fiber product) 글은 category $$\Sch_{/S}$$에서 product를 정의하고 그 존재성을 증명하는데, affine scheme에서의 tensor product와 일반 scheme에서의 gluing을 통해 이를 달성한다. 정의 1의 fiber product $$X\times_SY$$는 범주론 노트에서 배웠던 극한(limit)의 구체적 사례로, 보편적 성질(universal property)로 정의되고, 실제 구성은 affine scheme에서의 tensor product와 localization으로부터 나온다는 것이 핵심이다. 가환대수학 노트에서 tensor product $$A\otimes_CB$$의 universal property를 봤을 때는 "어떤 대수적 구조를 만드는 방법"으로만 느껴졌는데, 여기서 그것이 "scheme의 범주에서 product를 정의한다"는 기하학적 의미를 갖는다는 것이 새로운 통찰이다.
+
+보조정리 2의 핵심—affine scheme들의 fiber product는 $$\Spec(A\otimes_CB)$$—는 localization과 tensor product의 interaction을 보여준다. 이를 통해 affine scheme 글의 한 가지 미해결 질문, 즉 "localization $$A\to A_f$$가 structure sheaf의 stalk을 $$A_\mathfrak{p}$$로 만드는 것"이 왜 작동하는지에 대한 더 깊은 이해를 얻게 된다. 일반 scheme의 fiber product 존재성 증명(보조정리 5에서 정리 8까지)은 $$\Spec$$ functor의 fully faithfulness와 gluing의 조건들을 교묘하게 엮어내는데, "affine open을 덮는 open cover → 각 affine 위의 fiber product → 교집합에서 compatible → 붙이기"라는 네 단계는 scheme theory에서 "국소 → 전역"으로 확장하는 표준적 방법론을 보여준다. 코시공간 노트에서 열린집합의 조건을 여러 번 보았는데, 여기서는 그것이 "fiber product를 붙이는 조건"으로 구체화되는 것이 깔끔하다.
+
+예시 9의 affine scheme에서 base change는 "스칼라 변환"이라는 고등선형대수학 개념과 정확히 부합한다는 관찰은, 가환대수 노트의 "스칼라 변환" 정의를 기하학적으로 다시 보는 계기가 되었다. 수학 각 분야의 "base change" 개념들—체론의 field extension, 선형대수의 scalar extension, 스킴의 fiber product—이 모두 같은 framework에 들어맞는다는 것이 범주론의 힘을 실감하게 해준다. 예시 11의 두 closed subscheme의 교집합—$$x$$축과 $$y$$축의 교점이 $$\Spec\mathbb{K}$$, $$x$$축과 포물선의 교점이 $$\Spec\mathbb{K}[\x]/(\x^2)$$—는 scheme framework에서 "교집합"이 얼마나 정교하게 정의되는지를 보여준다: 위상적 교집합만으로는 원점 하나이지만, 중근도를 scheme 구조에 담아야 한다는 것이다.
+
+정의 12의 fiber $$\varphi^{-1}(y)=X\times_Y\Spec\kappa(y)$$는 평탄사상 글에서 "fiber의 구조"를 보고 싶었던 바로 그것이다. Residue field $$\kappa(y)$$를 target으로 base change하면 $$X$$의 $$y$$-fiber가 scheme으로 정의된다는 것이 깔끔한데, 이 정의 덕분에 예시 13의 계산—cusp의 family에서 특정 섬유가 특이점을 갖는 구조—를 엄밀하게 추적할 수 있다. $$\kappa(y)$$라는 "점의 residue field"를 target으로 보는 것은 stalk과 residue field 개념을 정교하게 활용한 예로, affine scheme 글의 "$$\mathscr{O}_{X,\mathfrak{p}}\cong A_\mathfrak{p}$$와 $$\kappa(\mathfrak{p})$$"라는 결과가 여기서 다시 핵심적으로 쓰인다.
+
+명제 14의 "finite morphism은 quasi-finite"는 명제 15의 base change 불변성과 함께, scheme morphism의 성질이 얼마나 안정적인지를 보여준다. 가환대수학에서 "finite ring homomorphism의 kernel 위 fiber는 finite"라는 결과가 여기서는 "fiber의 scheme 수준에서의 finiteness"로 번역되는데, 이전 글에서 봤던 여러 성질들(quasi-compact, affine, finite, finite type 등)이 모두 base change에 대해 보존된다는 명제 15은 이들 성질이 "scheme theory의 언어에서 본질적"임을 보장한다. 다만 이 글을 읽으면서 느낀 기술적 난점은, 보조정리 4의 "open subscheme의 fiber product"를 보일 때 "magic square" 구성이 자연스럽지만 동기가 충분히 설명되지 않았다는 점이다. 이 부분이 fiber product 존재성 증명의 핵심인데, 코시공간에서의 gluing 조건을 상기하면 이해가 가지만 처음 본 사람에게는 다소 난해할 수 있겠다는 생각이 들었다.
+
+전체적으로 이 글은 "ring의 tensor product → affine scheme의 fiber product → 일반 scheme의 gluing"이라는 세 층위를 거쳐 fiber product를 구성함으로써, 가환대수와 기하가 어떻게 일관되게 상호작용하는지를 보여준다. 평탄사상 글에서 미뤄진 "fiber의 scheme 구조"가 여기서 정의되었으므로, 이제 fiber가 어떻게 변하는가를 proper way로 추적할 수 있게 되었다. 다음 글들에서 this framework가 어떻게 활용되는지—특히 proper morphism이나 smooth morphism의 정의에서—를 기대한다.
+
+## [값매김환](/ko/math/scheme_theory/valuative_criteria)
+
+이 글은 scheme morphism의 분리성(separatedness)과 고유성(properness)이라는 본질적인 성질을 소개하고, 이들이 위상수학의 Hausdorff 조건과 compactness 조건의 대수기하 버전임을 보여준다. 정의 1의 open/closed immersion은 "부분 구조"를 다루는 기본적 개념인데, 앞 글에서 다룬 scheme morphism의 관점에서 보면 이들도 특수한 종류의 morphism이라는 것을 명확히 한다. 예시 2의 discrete valuation ring $$A$$—principal ideal domain이면서 정확히 두 개의 prime ideal $$(0), \mathfrak{m}$$을 갖는 ring—은 "smooth curve 위의 한 점"을 나타내는 scheme $$\Spec A$$의 기하학적 의미를 이해하는 데 핵심이다. 이 예시에서 generic point $$(0)$$의 stalk이 전체 field $$\Frac(A)$$가 되고 closed point $$\mathfrak{m}$$의 stalk이 local ring $$A_\mathfrak{m}$$이 되는 구조는, scheme theory에서 "국소" 정보와 "보편" 정보가 어떻게 위상과 대수로 코딩되는지를 보여준다.
+
+분리사상의 정의—diagonal morphism $$\Delta: X \to X \times_Y X$$가 closed immersion이 되는 조건—는 추상적으로 보이지만, 그 직관은 "두 점이 $$X$$ 내에서 구별될 수 있는가"라는 위상학적 질문과 정확히 부합한다. 이전 글에서 scheme의 로컬 구조를 충분히 다뤘으므로 fiber product $$X \times_Y X$$가 무엇인지는 이미 이해했지만, 여기서 주목할 점은 diagonal의 image가 "항상" closed인지 아니면 "특정 조건 하에서만" closed인지가 scheme의 분리성을 규정한다는 것이다. 보조정리 5의 "affine scheme 사이의 모든 morphism은 separated"라는 결과는 ring homomorphism $$A \otimes_B A \to A$$ ($$a \otimes a' \mapsto aa'$$)의 surjectivity로부터 직접 나오는데, 이는 가환대수학의 기술적 결과가 기하학적 성질로 번역되는 전형적인 예이다. 반례로 든 "line with double origin"은 앞 글에서 만났던 예시인데, 이 scheme이 왜 separated가 아닌지를 diagonal morphism의 관점에서 다시 분석하니 그 기하학적 의미가 훨씬 명확해졌다—두 원점이 fiber product에서 구별될 수 없다는 것이 바로 분리성의 실패를 의미한다.
+
+정리 6의 valuative criterion—separated morphism의 특성화를 valuation ring으로 나타낸 것—은 이 글의 핵심인데, 증명 없이 제시된 것이 아쉬웠지만, 그 기하학적 의미는 명확하다: $$\Spec A$$를 "smooth curve의 한 점 근처"로, $$\Spec K$$를 "여기서 한 점을 뺀 것"으로 해석하면, separatedness는 "이러한 generic한 '점을 뺀 상황'에서 정의된 morphism을 이 점으로 확장하는 방법이 최대 하나"라는 뜻이다. 이 직관은 대수기하에서 "유일성"을 보이는 강력한 도구가 될 것이라는 예감이 든다. Separated morphism의 성질들—합성, base change, fiber product에서의 보존—은 모두 "분리성이 좋은 성질"임을 암시하는데, 따름정리 7의 다섯 가지 성질은 이 개념이 scheme 이론에 깊이 박혀있음을 보여준다.
+
+고유사상(proper morphism)의 정의—separated + universally closed + finite type—은 분리사상보다 더 강한 조건을 부과하는 것인데, 여기서 "universally closed"라는 표현이 처음에는 혼동되었다. 하지만 "base change에 대해 불변"이라는 universal의 의미를 고려하면 이는 매우 자연스러운 조건이다: morphism $$f:X \to Y$$가 closed라는 것은 닫힌집합을 닫힌집합으로 보내는 것인데, 여기에 "base change해도 여전히 closed"라는 조건을 추가한 것이다. 정리 9의 proper morphism의 valuative criterion은 separated의 그것과 비슷한 형태이지만 결론이 다르다—"최대 하나"에서 "정확히 하나"로 바뀌었다는 것이 분리성과 고유성의 차이를 정확히 포착한다. 정리 10의 "projective morphism은 proper"라는 결과는 고전 대수기하의 직관과 부합하는데, projective space는 "compact"하다는 기하학적 성질이 proper morphism으로 인코딩된다는 의미로 읽힌다. 전체적으로 이 글은 scheme morphism의 가장 중요한 두 성질을 소개하면서, valuative criterion이라는 강력한 특성화를 통해 분리성과 고유성을 판정할 수 있게 해준다는 것이 그 의의라고 느꼈다. 다만 정리 6과 9의 증명이 생략된 것이 아쉬웠는데, 이후 글에서 이 정리들이 어떻게 활용되는지 보면서 그 의미를 더 깊이 이해할 수 있을 것 같다.
