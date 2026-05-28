@@ -41,7 +41,7 @@ set +a
 exec "/home/junhyeok/.npm-global/bin/claude" "$@"
 ```
 
-핵심은 `set -a` / `set +a` 사이에서 env 파일을 소스하는 부분이다. 이 사이에 정의된 변수는 자동으로 export 되므로, 그 다음의 `exec claude`에 환경이 그대로 전달된다. 그리고 subshell이라 쉘 자체의 환경은 더럽혀지지 않는다. 평범한 `claude`를 치면 그건 여전히 Anthropic을 향한다. `claudemimo`도 거의 같은 구조 — 소스하는 env 파일만 `~/.mimo/claude.env`로 바뀐다.
+핵심은 `set -a` / `set +a` 사이에서 env 파일을 소스하는 부분이다. 이 사이에 정의된 변수는 자동으로 export 되므로, 그 다음의 `exec claude`에 환경이 그대로 전달된다. 그리고 subshell이라 쉘 자체의 환경은 더럽혀지지 않는다. 평범한 `claude`를 치면 그건 여전히 Anthropic을 향한다. `claudemimo`도 거의 같은 구조 — 소스하는 env 파일만 `~/.mimo/claude.env`로 바뀐다. 일곱 줄에 세 명의 인격을 가두는 셈인데, 우리 모두가 그 정도 줄 수로 정리될 수 있다면 인생이 좀 더 단정했을 것이다.
 
 env 파일의 핵심:
 
