@@ -143,7 +143,7 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong U(G)$$
 
-가 존재하며, [\[범주론\] §표현가능한 함자, 예시 2](/ko/math/category_theory/representable_functors#ex2)와 비슷한 논증으로 위의 isomorphism이 $$U$$의 representation임을 알 수 있으며, 뿐만 아니라
+가 존재하며, [\[범주론\] §표현가능한 함자](/ko/math/category_theory/representable_functors#ex2)와 비슷한 논증으로 위의 isomorphism이 $$U$$의 representation임을 알 수 있으며, 뿐만 아니라
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong \Hom_\Set(\ast, U(G))$$
 

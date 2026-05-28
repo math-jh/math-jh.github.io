@@ -159,7 +159,7 @@ is split exact. From this,
 
 $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \rightarrow 0$$
 
-is also a short exact sequence ([\[Multilinear Algebra\] §Hom and Tensor Products, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1)), and considering the homology sequence here, we obtain the desired connecting maps and the long exact sequence of left derived functors
+is also a short exact sequence ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1)), and considering the homology sequence here, we obtain the desired connecting maps and the long exact sequence of left derived functors
 
 $$\cdots\overset{\partial}{\longrightarrow}L_iF(A')\longrightarrow L_iF(A)\longrightarrow L_iF(A'')\overset{\partial}{\longrightarrow}L_{i-1}F(A')\longrightarrow L_{i-1}F(A)\longrightarrow L_iF(A'')\overset{\partial}{\longrightarrow}\cdots$$
 

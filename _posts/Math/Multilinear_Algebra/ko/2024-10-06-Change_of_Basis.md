@@ -113,7 +113,7 @@ $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathc
 
 </div>
 
-[\[기초선형대수학\] §기저변환, ⁋정의 2](/ko/math/multilinear_algebra/change_of_basis#def2) 이전의 논의와 같은 맥락에서, equivalent matrix보다는 더 세밀한 다음의 동치관계를 생각하는 것이 좋다.
+[§기저변환, ⁋정의 6](/ko/math/multilinear_algebra/change_of_basis#def6) 이전의 논의와 같은 맥락에서, equivalent matrix보다는 더 세밀한 다음의 동치관계를 생각하는 것이 좋다.
 
 <div class="definition" markdown="1">
 

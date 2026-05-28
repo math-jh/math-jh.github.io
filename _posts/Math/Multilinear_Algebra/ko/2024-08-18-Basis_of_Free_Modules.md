@@ -21,7 +21,7 @@ weight: 3
 
 $$F(X)=\bigoplus_{x\in X} A$$
 
-으로 주어지는 것을 살펴보았다. ([\[대수적 구조\] §가군의 작접곱과 직합, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_modules#prop3)) 이번 글에서 우리는 free $$A$$-module의 성질을 조금 더 자세히 살펴본다. 
+으로 주어지는 것을 살펴보았다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_modules#prop3)) 이번 글에서 우리는 free $$A$$-module의 성질을 조금 더 자세히 살펴본다. 
 
 ## 기저
 

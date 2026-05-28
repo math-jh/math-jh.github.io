@@ -306,7 +306,7 @@ $$\lvert G\cdot x\rvert=[G:\Stab(x)]$$
 
 </details>
 
-따라서, 만일 $$G$$가 finite이라면 [§몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups)에 의하여 다음의 식
+따라서, 만일 $$G$$가 finite이라면 [§몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의하여 다음의 식
 
 $$\lvert G\cdot x\rvert=\frac{\lvert G\rvert}{\lvert\Stab(x)\rvert}\tag{$\ast\ast$}$$
 

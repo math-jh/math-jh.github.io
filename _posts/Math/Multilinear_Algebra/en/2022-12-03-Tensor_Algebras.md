@@ -13,10 +13,10 @@ sidebar:
 date: 2022-12-03
 last_modified_at: 2022-12-03
 weight: 10
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
-We now define the determinant, and to this end we first define tensor algebras, symmetric algebras, and exterior algebras. Throughout this process, we always assume that $$A$$ is a commutative ring. In particular, then, $$A$$ has the IBN property. ([§Bases, ⁋Proposition 6](/en/math/multilinear_algebra/basis_of_free_modules#prop6))
+We now define the determinant, and to this end we first define tensor algebras, symmetric algebras, and exterior algebras. Throughout this process, we always assume that $$A$$ is a commutative ring. In particular, then, $$A$$ has the IBN property. ([§Basis, ⁋Proposition 6](/en/math/multilinear_algebra/basis_of_free_modules#prop6))
 
 ## Definition of Tensor Algebras
 
@@ -80,7 +80,7 @@ $$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n},\qquad\text{$s$ a finite sequence $(i_
 
 </div>
 
-This is because each $$\T^n(M)$$ has as its basis the $$e_s$$ defined using finite sequences $$s$$ of length $$n$$, and their direct sum is $$\T(M)$$. On the other hand, we know that using the structure constants from [§Bases, ⁋Definition 9](/en/math/multilinear_algebra/basis_of_free_modules#def9), we can describe the multiplication in $$\T(M)$$; according to the above description, this is nothing other than concatenation of sequences. That is, for two sequences
+This is because each $$\T^n(M)$$ has as its basis the $$e_s$$ defined using finite sequences $$s$$ of length $$n$$, and their direct sum is $$\T(M)$$. On the other hand, we know that using the structure constants from [§Basis, ⁋Definition 9](/en/math/multilinear_algebra/basis_of_free_modules#def9), we can describe the multiplication in $$\T(M)$$; according to the above description, this is nothing other than concatenation of sequences. That is, for two sequences
 
 $$s=(i_1,\ldots, i_m),\qquad t=(j_1,\ldots, j_n)$$
 
@@ -287,4 +287,4 @@ For example, $$e_1\wedge e_2\wedge e_3$$ and $$e_1\wedge e_3\wedge e_2$$ become 
 
 ---
 
-[^1]: Recall that the coproduct in the category $$\Ring$$ was defined in a manner similar to the free product. ([§Products, Coproducts, and Tensor Products of Rings, ⁋Proposition 3](/en/math/algebraic_structures/operations_of_rings)) On the other hand, in the same post we also verified that the coproduct in the category $$\cRing$$ is given by the tensor product $$\otimes$$.
+[^1]: Recall that the coproduct in the category $$\Ring$$ was defined in a manner similar to the free product. ([§Products, Coproducts, and Tensor Products of Rings, ⁋Proposition 3](/en/math/algebraic_structures/operations_of_rings#prop3)) On the other hand, in the same post we also verified that the coproduct in the category $$\cRing$$ is given by the tensor product $$\otimes$$.

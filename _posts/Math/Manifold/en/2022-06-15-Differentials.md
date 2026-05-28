@@ -52,7 +52,7 @@ is continuous as a composition of continuous functions.
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**Example 3**</ins> $$\id_M:M\rightarrow M$$ is obviously a $$C^\infty$$ function. More generally, if we give any open subset $$U\subseteq M$$ the open submanifold structure ([§Examples of Manifolds, ⁋Definition 3](/en/math/manifold/examples_of_manifolds#def3)), the inclusion map $$U\hookrightarrow M$$ is a $$C^\infty$$ function.
+<ins id="ex3">**Example 3**</ins> $$\id_M:M\rightarrow M$$ is obviously a $$C^\infty$$ function. More generally, if we give any open subset $$U\subseteq M$$ the open submanifold structure ([§Examples of Differentiable Manifolds, ⁋Definition 3](/en/math/manifold/examples_of_manifolds#def3)), the inclusion map $$U\hookrightarrow M$$ is a $$C^\infty$$ function.
 
 </div>
 

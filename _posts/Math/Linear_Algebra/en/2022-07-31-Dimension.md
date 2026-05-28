@@ -20,7 +20,7 @@ translation_source: kimi-cli
 ---
 ## Dimension of Vector Spaces
 
-From [§Bases of Vector Spaces, ⁋Example 9](/en/math/linear_algebra/basis#ex9) and [§Bases of Vector Spaces, ⁋Example 11](/en/math/linear_algebra/basis#ex11), we see that a basis of a vector space $$V$$ need not be unique. However, looking at these examples, we can also verify that the number of elements in each basis remains the same. This is not a coincidence.
+From [§Basis of a Vector Space, ⁋Example 9](/en/math/linear_algebra/basis#ex9) and [§Basis of a Vector Space, ⁋Example 11](/en/math/linear_algebra/basis#ex11), we see that a basis of a vector space $$V$$ need not be unique. However, looking at these examples, we can also verify that the number of elements in each basis remains the same. This is not a coincidence.
 
 <div class="proposition" markdown="1">
 
@@ -34,7 +34,7 @@ This theorem also includes the case where $$\mathcal{B}_1$$, $$\mathcal{B}_2$$ a
 2. Therefore, if any basis of $$V$$ is finite, then all other bases must also be finite.
 3. Finally, if two finite bases of $$V$$ are given, then the number of elements in these two bases is the same.
 
-Of course, there is nothing preventing us from proving this theorem now, but like [§Bases of Vector Spaces, ⁋Theorem 10](/en/math/linear_algebra/basis#thm10), proving it requires a bit of set-theoretic knowledge, so we separate it into another post. However, the last step can be proved without much background knowledge.
+Of course, there is nothing preventing us from proving this theorem now, but like [§Basis of a Vector Space, ⁋Theorem 10](/en/math/linear_algebra/basis#thm10), proving it requires a bit of set-theoretic knowledge, so we separate it into another post. However, the last step can be proved without much background knowledge.
 
 <div class="proposition" markdown="1">
 
@@ -46,7 +46,7 @@ Of course, there is nothing preventing us from proving this theorem now, but lik
 
 Let $$\mathcal{B}_1=\{x_1,x_2,\ldots, x_m\}$$, and $$\mathcal{B}_2=\{y_1,y_2,\ldots, y_n\}$$; we must show $$m=n$$. Suppose for contradiction that $$m>n$$.
 
-First, since $$x_1\in V$$, we can express $$x_1$$ as a linear combination of $$y_1$$, $$y_2$$, $$\ldots$$, $$y_n$$. Thus, by [§Bases of Vector Spaces, ⁋Proposition 6](/en/math/linear_algebra/basis#prop6), the set $$\{x_1,y_1,y_2,\ldots, y_n\}$$ is linearly dependent. That is, there exist scalars $$\beta_1$$, $$\alpha_1$$, $$\alpha_2$$, $$\ldots$$, $$\alpha_n$$, not all zero, such that
+First, since $$x_1\in V$$, we can express $$x_1$$ as a linear combination of $$y_1$$, $$y_2$$, $$\ldots$$, $$y_n$$. Thus, by [§Basis of a Vector Space, ⁋Proposition 6](/en/math/linear_algebra/basis#prop6), the set $$\{x_1,y_1,y_2,\ldots, y_n\}$$ is linearly dependent. That is, there exist scalars $$\beta_1$$, $$\alpha_1$$, $$\alpha_2$$, $$\ldots$$, $$\alpha_n$$, not all zero, such that
 
 $$\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_n y_n=0\tag{1}$$
 
@@ -162,11 +162,11 @@ Let $$S_0=\emptyset$$. Then $$\langle S\rangle_0=\{0\}$$. Now choose an element 
 
 The sets $$S_i$$ obtained in this way are linearly independent subsets by construction, and as long as $$\langle S\rangle_i$$ is not equal to $$S$$, the number of elements in $$S_{i+1}$$ is always one more than in $$S_i$$. Therefore it suffices to show that $$S\setminus\langle S\rangle_i$$ is nonempty for all $$i < n = \dim V$$. 
 
-Choose a natural number $$m$$ such that $$S\setminus\langle S\rangle_m=\emptyset$$. That is, $$S\subseteq\langle S\rangle_m$$. Now from [§Bases of Vector Spaces, ⁋Lemma 4](/en/math/linear_algebra/basis#lem4), taking the $$\span$$ preserves inclusion relations between sets, so
+Choose a natural number $$m$$ such that $$S\setminus\langle S\rangle_m=\emptyset$$. That is, $$S\subseteq\langle S\rangle_m$$. Now from [§Basis of a Vector Space, ⁋Lemma 4](/en/math/linear_algebra/basis#lem4), taking the $$\span$$ preserves inclusion relations between sets, so
 
 $$\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)$$
 
-holds, and since $$\langle S\rangle_m$$ on the right-hand side is already a subspace of $$V$$, from [§Bases of Vector Spaces, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3) we know that $$\span\bigl(\langle S\rangle\bigr)=\langle S\rangle_m$$. Therefore
+holds, and since $$\langle S\rangle_m$$ on the right-hand side is already a subspace of $$V$$, from [§Basis of a Vector Space, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3) we know that $$\span\bigl(\langle S\rangle\bigr)=\langle S\rangle_m$$. Therefore
 
 $$V=\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)=\langle S\rangle_m$$
 

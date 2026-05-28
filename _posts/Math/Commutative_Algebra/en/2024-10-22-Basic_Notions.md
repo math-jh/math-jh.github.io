@@ -224,7 +224,7 @@ Finally, we need the notion of a *prime ideal* defined in [\[Algebraic Structure
 
 </div>
 
-Then we can refine the fourth result of [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3) to obtain the following.
+Then we can refine the fourth result of [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3) to obtain the following.
 
 <div class="proposition" markdown="1">
 
@@ -234,7 +234,7 @@ Then we can refine the fourth result of [\[Algebraic Structures\] §Quotient Rin
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-By the third result of [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), for $$\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$$ we have
+By the third result of [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), for $$\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$$ we have
 
 $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 

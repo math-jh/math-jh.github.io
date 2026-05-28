@@ -81,7 +81,7 @@ module LinkNormalizer
         @title_by_url[url] = title unless title.empty?
 
         body = doc.content.to_s
-        body.scan(/<ins\s+id="([^"]+)">\s*\*\*([^*]+?)\*\*\s*<\/ins>/) do |id, label|
+        body.scan(/<ins\b[^>]*?\bid="([^"]+)"[^>]*>\s*\*\*([^*]+?)\*\*\s*<\/ins>/) do |id, label|
           @label_by_anchor["#{url}##{id}"] = label.strip
         end
         body.scan(H2_RE) do |h2|
@@ -141,7 +141,7 @@ module LinkNormalizer
   #   cosmetic | title-drift | anchor-dropped
   module Triage
     CAT_RE   = /\A\\\[([^\]]+)\\\]\s*(.*)\z/
-    TAIL_RE  = /,\s*([⁋§]{1,2}.*)\z/
+    TAIL_RE  = /,\s*([⁋§]{1,2}.*|footnote\b.*|각주\b.*)\z/i
 
     module_function
 

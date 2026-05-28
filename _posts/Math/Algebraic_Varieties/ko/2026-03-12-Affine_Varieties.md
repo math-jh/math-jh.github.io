@@ -223,7 +223,7 @@ $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a
 
 </details>
 
-즉, $$Z$$와 $$I$$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서 두 operator의 합성 $$ZI$$와 $$IZ$$ 각각은 closure operator를 정의한다. $$ZI$$의 경우, 이 closure는 실제로 Zariski topology에서의 closure가 된다. 이는 만일 $$X \subseteq Y = Z(J)$$이면 $$I(Z(J)) \subseteq I(X)$$이고, [명제 9](#prop9)의 5번 조건에서 $$J \subseteq I(Z(J))$$이므로 $$ZI(X) \subseteq Z(J) = Y$$가 되어, $$ZI(X)$$가 $$X$$를 포함하는 Zariski closed set 중 가장 작은 것이 되기 때문이다. $$IZ$$의 경우에는 바로 보이지 않는데, 이를 위해서는 ideal의 radical 개념이 필요하다. ([\[가환대수학\] §국소화의 성질들, ⁋정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8))
+즉, $$Z$$와 $$I$$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서 두 operator의 합성 $$ZI$$와 $$IZ$$ 각각은 closure operator를 정의한다. $$ZI$$의 경우, 이 closure는 실제로 Zariski topology에서의 closure가 된다. 이는 만일 $$X \subseteq Y = Z(J)$$이면 $$I(Z(J)) \subseteq I(X)$$이고, [명제 9](#prop9)의 5번 조건에서 $$J \subseteq I(Z(J))$$이므로 $$ZI(X) \subseteq Z(J) = Y$$가 되어, $$ZI(X)$$가 $$X$$를 포함하는 Zariski closed set 중 가장 작은 것이 되기 때문이다. $$IZ$$의 경우에는 바로 보이지 않는데, 이를 위해서는 ideal의 radical 개념이 필요하다. ([\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8))
 
 <div class="proposition" markdown="1">
 

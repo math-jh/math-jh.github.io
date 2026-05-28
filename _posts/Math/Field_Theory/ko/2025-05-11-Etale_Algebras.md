@@ -90,7 +90,7 @@ $$\lvert\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})\rvert\leq \dim_\mathbb{L}\Hom_\ma
 
 Monoid algebra $$A=L\Gamma$$를 생각하고, canonical basis $$(e_\gamma)_{\gamma\in\Gamma}$$를 생각하자. 
 
-그럼 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras)의 일반화를 통해 $$X$$와 $$\Hom_\mathbb{L}(A,\mathbb{L})$$ 사이의 bijection이 존재하므로 주장은 [정리 1](#thm1)로부터 바로 따라나온다. 
+그럼 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6)의 일반화를 통해 $$X$$와 $$\Hom_\mathbb{L}(A,\mathbb{L})$$ 사이의 bijection이 존재하므로 주장은 [정리 1](#thm1)로부터 바로 따라나온다. 
 
 </details>
 

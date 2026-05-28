@@ -80,7 +80,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§선형사상, ⁋에시 14](/ko/math/linear_algebra/linear_map#ex14)는 임의의 $$n$$차원 $$\mathbb{K}$$-벡터공간 $$V$$가 $$V\cong \mathbb{K}^n$$을 만족한다는 뜻이다. 또 다른 $$n$$차원 $$\mathbb{K}$$-벡터공간 $$W$$에 대하여도 $$W\cong \mathbb{K}^n$$이므로, $$\cong$$가 동치관계라는 것으로부터 $$V\cong W$$임을 안다.
+[§선형사상, ⁋예시 14](/ko/math/linear_algebra/linear_map#ex14)는 임의의 $$n$$차원 $$\mathbb{K}$$-벡터공간 $$V$$가 $$V\cong \mathbb{K}^n$$을 만족한다는 뜻이다. 또 다른 $$n$$차원 $$\mathbb{K}$$-벡터공간 $$W$$에 대하여도 $$W\cong \mathbb{K}^n$$이므로, $$\cong$$가 동치관계라는 것으로부터 $$V\cong W$$임을 안다.
 
 </details>
 

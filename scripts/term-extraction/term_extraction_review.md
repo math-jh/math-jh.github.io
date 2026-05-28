@@ -2130,3 +2130,43 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `가우스 소거법` | looks like emphasis (no <sub> partner) |
 | `첨가행렬` | looks like emphasis (no <sub> partner) |
 
+## 미분다양체의 예시들
+- post: `_posts/Math/Manifold/ko/2022-06-09-Examples_of_Manifolds.md`
+- permalink: `/ko/math/manifold/examples_of_manifolds`
+- scanned: 2026-05-28T02:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `그래프` | looks like emphasis (no <sub> partner) |
+| `level set` | multi-word English emphasis — possibly a definition |
+| `Jacobian matrix` | multi-word English emphasis — possibly a definition |
+
+## 부분다양체와 역함수 정리
+- post: `_posts/Math/Manifold/ko/2022-06-17-Submanifolds.md`
+- permalink: `/ko/math/manifold/submanifolds`
+- scanned: 2026-05-28T02:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `embedded` | looks like emphasis (no <sub> partner) |
+
+## 접다발과 여접다발
+- post: `_posts/Math/Manifold/ko/2022-06-19-Tangent_and_Cotangent_Bundles.md`
+- permalink: `/ko/math/manifold/tangent_and_cotangent_bundles`
+- scanned: 2026-05-28T02:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Total space` | multi-word English emphasis — possibly a definition |
+| `base space` | multi-word English emphasis — possibly a definition |
+
+## 벡터공간
+- post: `_posts/Math/Linear_Algebra/ko/2022-07-28-Vector_Spaces.md`
+- permalink: `/ko/math/linear_algebra/vector_spaces`
+- scanned: 2026-05-28T03:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `, 혹은 간단히` | looks like emphasis (no <sub> partner) |
+| `스칼라곱` | looks like emphasis (no <sub> partner) |
+

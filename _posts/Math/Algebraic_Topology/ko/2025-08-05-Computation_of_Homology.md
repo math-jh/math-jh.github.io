@@ -53,7 +53,7 @@ $$\cdots \rightarrow H_k(A) \rightarrow H_k(X) \rightarrow H_k(X,A)\rightarrow H
 
 ![relative_homology](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-1.png){:style="width:12em" class="invert" .align-center}
 
-이 commute한다는 것으로부터 chain map $$C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$$ 또한 유도된다. 즉, 이러한 조건을 만족하는 $$f:(X,A) \rightarrow (Y,B)$$는 homology에서의 map $$H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$$ 또한 유도한다. 그럼 [§호모토피, ⁋명제 6](/ko/math/algebraic_topology/homotopy#prop6)을 $$X$$와 $$A$$ 각각에 적용하고 [\[호몰로지 대수학\] §Digram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)를 사용하면 이 조건을 만족하는 homotopic한 연속함수들 $$f,g$$가 호몰로지에서 같은 함수를 유도하는 것을 안다. 
+이 commute한다는 것으로부터 chain map $$C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$$ 또한 유도된다. 즉, 이러한 조건을 만족하는 $$f:(X,A) \rightarrow (Y,B)$$는 homology에서의 map $$H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$$ 또한 유도한다. 그럼 [§호모토피, ⁋명제 6](/ko/math/algebraic_topology/homotopy#prop6)을 $$X$$와 $$A$$ 각각에 적용하고 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2 (The five lemma)](/ko/math/homological_algebra/diagram_chasing#cor2)를 사용하면 이 조건을 만족하는 homotopic한 연속함수들 $$f,g$$가 호몰로지에서 같은 함수를 유도하는 것을 안다. 
 
 ## Excision theorem
 
@@ -127,7 +127,7 @@ $$H_k(X,A)\cong H_k(X/A,[A])\tag{2}$$
 
 을 얻는다. 
 
-한편, [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)와 [\[호몰로지 대수학\] §Digram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)에 의해, 임의의 공간 $$X$$와 한 점 $$x\in X$$에 대하여 다음의 long exact sequence
+한편, [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)와 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2 (The five lemma)](/ko/math/homological_algebra/diagram_chasing#cor2)에 의해, 임의의 공간 $$X$$와 한 점 $$x\in X$$에 대하여 다음의 long exact sequence
 
 $$\begin{aligned}\cdots &\rightarrow H_k(x)\rightarrow H_k(X)\rightarrow H_k(X,x) \rightarrow H_{k-1}(x)\rightarrow\cdots \\\cdots&\rightarrow H_1(x)\rightarrow H_1(X) \rightarrow H_1(X,x) \rightarrow H_0(x) \rightarrow H_0(X)\rightarrow H_0(X,x)\rightarrow 0\end{aligned}$$
 

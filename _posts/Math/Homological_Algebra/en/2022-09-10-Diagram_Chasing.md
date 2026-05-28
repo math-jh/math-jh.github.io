@@ -13,10 +13,10 @@ sidebar:
 date: 2022-09-10
 last_modified_at: 2024-10-31
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
-Homological algebra is, literally speaking, the study of the properties of chain complexes using their homology. ([\[Category Theory\] §Abelian Categories, ⁋Definition 4](/en/math/category_theory/abelian_categories#def4)) Chain complexes are defined in any abelian category, but by the Freyd-Mitchell embedding theorem they can all be embedded as a full subcategory of some $$\lMod{A}$$. ([\[Category Theory\] §Abelian Categories, ⁋Theorem 9](/en/math/category_theory/abelian_categories#thm9)) 
+Homological algebra is, literally speaking, the study of the properties of chain complexes using their homology. ([\[Category Theory\] §Abelian Categories, ⁋Definition 4](/en/math/category_theory/abelian_categories#def4)) Chain complexes are defined in any abelian category, but by the Freyd-Mitchell embedding theorem they can all be embedded as a full subcategory of some $$\lMod{A}$$. ([\[Category Theory\] §Abelian Categories, ⁋Theorem 8 (Freyd-Mitchell embedding theorem)](/en/math/category_theory/abelian_categories#thm8)) 
 
 In this post we prove the five lemma and the snake lemma, which are essential lemmas in homological algebra. It is possible to prove them using the universal properties of kernels and cokernels, but this can make the proofs unnecessarily long, so we carry out all proofs in $$\lMod{A}$$. This means in particular that we can pick elements from each object. Such proofs are called diagram chasing, and working in $$\lMod{A}$$ instead of an arbitrary abelian category is justified by the Freyd-Mitchell embedding theorem mentioned above.
 

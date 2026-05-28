@@ -104,7 +104,7 @@ One of our goals in this post is to prove that every $$A$$-module always has a p
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-This is obvious by [\[Multilinear Algebra\] §Bases, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) and [\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Proposition 4](/en/math/multilinear_algebra/various_modules#prop4).
+This is obvious by [\[Multilinear Algebra\] §Basis, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) and [\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Proposition 4](/en/math/multilinear_algebra/various_modules#prop4).
 
 </details>
 
@@ -118,7 +118,7 @@ However, since we know nothing about $$\lMod{A}^\op$$, the fact that $$\lMod{A}$
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-It is not difficult to show that a right adjoint preserves injective objects. Then the coextension of scalars $$\Ab \rightarrow \lMod{A}$$ obtained from the ring homomorphism $$\mathbb{Z}\rightarrow A$$ is the right adjoint of restriction of scalars, so an injective object in $$\Ab$$ becomes an injective object in $$\lMod{A}$$. ([\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6)) Thus, for the desired proof it suffices to prove that $$\Ab$$ has enough injectives. For any $$A\in\Ab$$, this is done by defining
+It is not difficult to show that a right adjoint preserves injective objects. Then the coextension of scalars $$\Ab \rightarrow \lMod{A}$$ obtained from the ring homomorphism $$\mathbb{Z}\rightarrow A$$ is the right adjoint of restriction of scalars, so an injective object in $$\Ab$$ becomes an injective object in $$\lMod{A}$$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6)) Thus, for the desired proof it suffices to prove that $$\Ab$$ has enough injectives. For any $$A\in\Ab$$, this is done by defining
 
 $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 

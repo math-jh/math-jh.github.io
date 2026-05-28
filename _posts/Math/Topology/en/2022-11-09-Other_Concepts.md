@@ -42,7 +42,7 @@ Then there exists a unique topology $$\mathcal{T}$$ having the complements of th
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-This is obvious from the following De Morgan laws ([\[Set Theory\] §Unions and Intersections, ⁋Proposition 8](/en/math/set_theory/union_and_intersection#prop8))
+This is obvious from the following De Morgan laws ([\[Set Theory\] §Union and Intersection, ⁋Proposition 8 (De Morgan's law)](/en/math/set_theory/union_and_intersection#prop8))
 
 $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 

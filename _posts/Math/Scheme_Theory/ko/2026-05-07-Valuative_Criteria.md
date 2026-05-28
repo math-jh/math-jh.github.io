@@ -107,7 +107,7 @@ $$A\otimes_BA \rightarrow A;\quad a\otimes a'\mapsto aa'$$
 
 </details>
 
-Separated가 아닌 scheme의 예시는 [§스킴, ⁋예시 6](/ko/math/scheme_theory/schemes#ex6)에서 만든 line with double origin이 있다. 편의상 이 scheme을 $X$라 하자. 그럼 $X\times X$는 축 바깥에서는 일반적인 좌표평면과 똑같을 것이지만 좌표축, 특히 원점을 보면 네 개의 원점이 들어가게 된다. 직관적으로는 $\Delta$가 
+Separated가 아닌 scheme의 예시는 [§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)에서 만든 line with double origin이 있다. 편의상 이 scheme을 $X$라 하자. 그럼 $X\times X$는 축 바깥에서는 일반적인 좌표평면과 똑같을 것이지만 좌표축, 특히 원점을 보면 네 개의 원점이 들어가게 된다. 직관적으로는 $\Delta$가 
 $X\times X$에 어떻게 들어갈지를 생각해보면 좌표축 바깥에서는 일반적인 대각선 모양이 될 것이지만, $X$의 두 원점이 $\Delta$를 통해 $X\times X$로 옮겨졌을 때, 이 네 원점 중 어느 두 개에 들어갈지를 알 수 없다. 실제로 이 네 원점은 모두 $\Delta(X)$의 closure에 들어가므로 separated가 아닌 것을 알 수 있다. 역시, 위상수학에서 이 공간은 Hausdorff가 아닌 공간의 예시였다. 
 
 <div class="proposition" markdown="1">

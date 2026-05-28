@@ -65,7 +65,7 @@ $$\rchi_V=a_1\rchi_{V_1}+\cdots+a_r\rchi_{V_r}$$
 
 $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g)$$
 
-가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5)), 우리는 이로부터 $$\rchi_\rho$$가 $$G$$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
+가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋따름정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5)), 우리는 이로부터 $$\rchi_\rho$$가 $$G$$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
 
 <div class="definition" markdown="1">
 
@@ -157,7 +157,7 @@ $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
 ## Regular representation
 
-이 섹션에서 우리는 지난 글에서 고려했던 Artin-Wedderburn decomposition ([§유한군의 표현론, 식 (1)](/ko/math/representation_theory/representations_of_finite_groups#cor7))을 character를 이용해 얻어낸다. 이를 위해, 우선 $$\mathbb{C}[G]$$는 자기자신 위에 정의된 left $$\mathbb{C}[G]$$-module이고 따라서 categorical equivalence
+이 섹션에서 우리는 지난 글에서 고려했던 Artin-Wedderburn decomposition ([§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups#cor7))을 character를 이용해 얻어낸다. 이를 위해, 우선 $$\mathbb{C}[G]$$는 자기자신 위에 정의된 left $$\mathbb{C}[G]$$-module이고 따라서 categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 

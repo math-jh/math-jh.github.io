@@ -13,7 +13,7 @@ sidebar:
 date: 2021-08-15
 last_modified_at: 2022-11-25
 weight: 9
-translated_at: 2026-05-27T00:00:03+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Covering
@@ -111,7 +111,7 @@ If $$f_i:A_i\rightarrow S_i$$ are bijections satisfying the conditions of [Propo
 
 </details>
 
-The intuition for why this is called the sum of sets will appear later. ([§Operations of Cardinals, ⁋Definition 1](/en/math/set_theory/operation_of_cardinals#def1))
+The intuition for why this is called the sum of sets will appear later. ([§Operations on Cardinals, ⁋Definition 1](/en/math/set_theory/operation_of_cardinals#def1))
 
 ## Universal property
 

@@ -33,7 +33,7 @@ toc: true
 
 국소기저(local base)로 넘어가면서 글의 구조가 더 흥미로워진다. 정의 4에서 "local base는 neighborhood filter의 coinitial subset"이라고 하는데, "coinitial"이라는 용어가 집합론의 순서집합에서 온 것이라는 점—역방향으로 가면 모든 원소를 만날 수 있다는 것—을 떠올려야 이해가 됐다. 이 정의의 의도는 "근방 전체를 알 필요 없이, 그 안에서 충분히 작은 근방들만 알면 위상구조를 복원할 수 있다"는 것이고, 명제 5가 이를 정확히 말해준다: 기저가 각 점에서의 local base를 이룬다는 것.
 
-가장 인상적인 부분은 따름정리 6이다. 순수한 집합 $$X$$ 위에서, 기저의 두 조건(점 커버 + 교집합 안의 원소 존재)만으로 위상을 *construct*할 수 있다는 것은 위상의 공리적 정의가 얼마나 유연한지를 보여준다. 증명에서 $$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x)$$로 근방필터를 정의하고, 이것이 [명제 6](/ko/math/topology/open_sets#prop6)의 네 조건을 만족함을 확인한 뒤 위상을 얻는 흐름은 논리적으로 깔끔하다. $$\mathop{\uparrow}$$ 표기—위로 닫힌 집합, 즉 $$B$$를 포함하는 모든 상위 원소—는 이전에 본 적 없는 표기인데, $$\mathcal{N}(x)$$의 정의에서 $$B\in\mathcal{B}(x)$$보다 "큰" 근방들을 자동으로 포함시키는 장치로 쓰이고 있어서 이해는 됐다.
+가장 인상적인 부분은 따름정리 6이다. 순수한 집합 $$X$$ 위에서, 기저의 두 조건(점 커버 + 교집합 안의 원소 존재)만으로 위상을 *construct*할 수 있다는 것은 위상의 공리적 정의가 얼마나 유연한지를 보여준다. 증명에서 $$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x)$$로 근방필터를 정의하고, 이것이 [열린집합](/ko/math/topology/open_sets#prop6)의 네 조건을 만족함을 확인한 뒤 위상을 얻는 흐름은 논리적으로 깔끔하다. $$\mathop{\uparrow}$$ 표기—위로 닫힌 집합, 즉 $$B$$를 포함하는 모든 상위 원소—는 이전에 본 적 없는 표기인데, $$\mathcal{N}(x)$$의 정의에서 $$B\in\mathcal{B}(x)$$보다 "큰" 근방들을 자동으로 포함시키는 장치로 쓰이고 있어서 이해는 됐다.
 
 전체적으로 이 글은 "구조를 주는 최소한의 정보는 무엇인가"라는 질문을 위상의 맥락에서 체계적으로 다루고 있다. 글의 논리 흐름—전체 기저 → 부분기저 → 국소기저 → 기저로부터의 위상 구성—은 자연스럽고, 각 단계가 이전 단계의 추상화 수준을 줄이는 방향으로 진행되어서 따라가기 좋았다. 다만 "open covering"이 정의 없이 사용되었다.
 
@@ -53,7 +53,7 @@ toc: true
 
 전체적으로 이 글은 열린집합만으로는 다루기 어려운 "경계", "접근", "조밀" 같은 개념들을 닫힌집합과의 대칭성 속에서 체계적으로 도입하고 있다. 기저 글까지의 내용—위상의 정의, 기저, 부분기저—이 "열린집합을 어떻게 효율적으로 기술하느냐"였다면, 이 글은 "열린집합의 반대편에서 무엇을 얻을 수 있느냐"로 초점을 옮기는 전환점이다.
 
-## [위상의 다른 정의들](/ko/math/topology/equivalent_formulations_of_topology)
+## [위상공간의 다른 정의들](/ko/math/topology/equivalent_formulations_of_topology)
 
 이 글은 열린집합 대신 closure operator, interior operator, neighborhood filter로 위상을 정의할 수 있다는 것을 보여준다. Kuratowski closure axiom의 네 조건—포함성($$A\subset\cl(A)$$), 멱등성($$\cl(\cl(A))=\cl(A)$$), 유한 합집합 보존($$\cl(A\cup B)=\cl(A)\cup\cl(B)$$), 공집합 보존($$\cl(\emptyset)=\emptyset$$)—은 집합론의 순서집합에서 봤던 closure operator의 정의와 정확히 일치한다. 집합론 노트에서 "closure operator는 order-preserving이고 idempotent한 함수"라고 했던 것이 여기서 그대로 쓰이고 있어서, 앞서 배운 추상적 개념이 위상의 맥락에서 구체적으로 살아있는 느낌이었다.
 

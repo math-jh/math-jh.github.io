@@ -96,7 +96,7 @@ Tangent cone의 정의—initial term으로 구성된 homogeneous ideal의 zero 
 
 전체적으로 이 글은 미분기하학의 접공간 이론을 대수기하학으로 가져오면서도, 다항식이라는 특수한 구조 덕분에 Jacobian criterion이나 tangent cone처럼 미분기하학에서는 볼 수 없었던 도구를 추가로 제공한다. 가환대수학의 local ring, 매개계, 국소화 등이 기하학적 맥락에서 살아있는 것을 보는 것이 가장 큰수확이다.
 
-## [그라스만다양체](/ko/math/algebraic_varieties/grassmannians)
+## [그라스만 다양체](/ko/math/algebraic_varieties/grassmannians)
 
 그라스만다양체 글은 projective space $$\mathbb{P}^n = \Gr(1, n+1)$$를 일반화하여, $$k$$차원 부분공간들의 공간 $$\Gr(k, V)$$를 variety로 만든다. 사영다양체 글에서 $$\mathbb{P}^n$$이 "직선들의 공간"이었는데, 이를 "$$k$$-plane들의 공간"으로 확장한다는 발상 자체는 자연스럽다. Affine cover $$U_I$$를 정의하는 방식—$$I$$에 해당하는 $$k$$개의 column으로 만든 $$k\times k$$ minor가 invertible인 부분공간들을 모은 것—은 사영다양체 글의 standard affine cover $$U_i$$를 직접적으로 일반화한 것이다. 명제 4의 $$U_I \cong \mathbb{A}^{k(n-k)}$$에서, $$k\times n$$ 행렬의 좌측 $$k\times k$$ 블록을 identity로 고정하고 나머지 $$k\times (n-k)$$ 블록이 자유롭게 변한다는 것이 명제 5의 $$\dim \Gr(k,V) = k(n-k)$$ 공식의 직관을 준다. 이전 글들에서 variety 구조를 "affine cover + transition map의 정칙성"으로 주는 패턴을 반복해서 봤는데, Grassmannian에서도 같은 프로그램이 작동한다.
 

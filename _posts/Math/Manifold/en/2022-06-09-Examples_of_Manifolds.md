@@ -14,7 +14,7 @@ date: 2022-06-09
 last_modified_at: 2022-06-09
 weight: 2
 toc: false
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 In the previous post we saw two different ways of giving a manifold structure on $$\mathbb{R}$$. In this post we examine various examples of topological spaces equipped with manifold structures.
@@ -148,11 +148,11 @@ For each $$i=1,\ldots, n+1$$, consider the open subset
 
 $$\tilde{U}_i=\{(x^1,\ldots, x^{n+1})\mid x^i\neq 0\}$$
 
-of $$\mathbb{R}^{n+1}\setminus\{0\}$$. Then $$\tilde{U}_i$$ is a saturated open set, so by [\[Topology\] §Quotient Spaces, ⁋Proposition 8](/en/math/topology/quotient_spaces#prop8) the quotient map $$\pi$$ restricts well to $$\tilde{U}_i$$. Therefore, if we define the function $$\varphi_i:U_i\rightarrow\mathbb{R}^n$$ by
+of $$\mathbb{R}^{n+1}\setminus\{0\}$$. Then $$\tilde{U}_i$$ is a saturated open set, so by [\[Topology\] §Quotient Spaces, ⁋Proposition 7](/en/math/topology/quotient_spaces#prop7) the quotient map $$\pi$$ restricts well to $$\tilde{U}_i$$. Therefore, if we define the function $$\varphi_i:U_i\rightarrow\mathbb{R}^n$$ by
 
 $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i},\frac{x^{i+1}}{x^i},\ldots, \frac{x^{n+1}}{x^i}\right)$$
 
-[^1] the function $$\varphi_i\circ\pi\vert_{\tilde{U}_i}$$ is continuous, and hence by [\[Topology\] §Quotient Spaces, ⁋Proposition 9](/en/math/topology/quotient_spaces#prop9) $$\varphi_i$$ is also continuous. 
+[^1] the function $$\varphi_i\circ\pi\vert_{\tilde{U}_i}$$ is continuous, and hence by [\[Topology\] §Quotient Spaces, ⁋Proposition 4](/en/math/topology/quotient_spaces#prop4) $$\varphi_i$$ is also continuous. 
 
 ![quotient_map](/assets/images/Math/Manifold/Examples_of_Manifolds-2.png){:style="width:8em" class="invert" .align-center}
 

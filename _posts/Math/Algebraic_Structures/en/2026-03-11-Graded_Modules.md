@@ -13,7 +13,7 @@ sidebar:
 date: 2024-08-12
 last_modified_at: 2024-08-12
 weight: 204
-translated_at: 2026-05-26T08:30:01+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 Now we define the notion of a graded module.
@@ -66,7 +66,7 @@ This kind of generalization is treated in more detail in homological algebra.
 
 </div>
 
-This proposition is a generalization of [§Graded Rings, §Proposition 6](/en/math/algebraic_structures/graded_rings#prop6), and its proof is also the same. Submodules satisfying this equivalent condition are called *graded submodules*. The following proposition is also a generalization of [§Graded Rings, §Proposition 7](/en/math/algebraic_structures/graded_rings#prop7).
+This proposition is a generalization of [§Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6), and its proof is also the same. Submodules satisfying this equivalent condition are called *graded submodules*. The following proposition is also a generalization of [§Graded Rings, ⁋Proposition 7](/en/math/algebraic_structures/graded_rings#prop7).
 
 <div class="proposition" markdown="1">
 

@@ -47,7 +47,7 @@ and this quotient is a 2-dimensional $$\mathbb{K}$$-vector space with basis $$\{
 
 </div>
 
-The above is an example of two 1-dimensional subvarieties meeting in dimension 2, which we already introduced briefly in [§Riemann–Roch for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1). In that post we introduced the notion of a transversal intersection, so let us define it formally.
+The above is an example of two 1-dimensional subvarieties meeting in dimension 2, which we already introduced briefly in [§The Riemann–Roch Theorem for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1). In that post we introduced the notion of a transversal intersection, so let us define it formally.
 
 <div class="definition" markdown="1">
 
@@ -55,7 +55,7 @@ The above is an example of two 1-dimensional subvarieties meeting in dimension 2
 
 </div>
 
-Then the following proposition is a natural generalization of [§Riemann–Roch for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
+Then the following proposition is a natural generalization of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
 
 <div class="proposition" markdown="1">
 
@@ -63,7 +63,7 @@ Then the following proposition is a natural generalization of [§Riemann–Roch 
 
 1. For any $$p$$ and $$V, W$$, we always have $$0 \leq i_p(V,W) < \infty$$, and $$i_p(V,W)=0$$ holds precisely when $$p \notin V \cap W$$.
 2. $$V$$ and $$W$$ intersect transversely at $$p$$ if and only if $$i_p(V,W)=1$$.
-3. $$i_p$$ satisfies all the conditions of [§Riemann–Roch for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
+3. $$i_p$$ satisfies all the conditions of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
 
 </div>
 

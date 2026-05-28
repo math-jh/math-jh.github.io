@@ -20,7 +20,7 @@ Now we examine the remaining results related to compactness and variations of th
 
 ## Tychonoff's Theorem
 
-An arbitrary product of compact spaces is again a compact space. If the product is finite, this result can be shown in a more intuitive way, but if the product is infinite, the following lemma is needed for this. This is a generalization of [§Compactness and Convergence of Filters, ⁋Proposition 5](/en/math/topology/filter_convergence#prop5) in the language of filters.
+An arbitrary product of compact spaces is again a compact space. If the product is finite, this result can be shown in a more intuitive way, but if the product is infinite, the following lemma is needed for this. This is a generalization of [§Compactness and Filter Convergence, ⁋Proposition 5](/en/math/topology/filter_convergence#prop5) in the language of filters.
 
 <div class="proposition" markdown="1">
 
@@ -111,7 +111,7 @@ Now, to show that $$X'$$ is Hausdorff, let $$x,y\in X'$$ be any two points of $$
 
 ## Topological Manifolds
 
-Now let us weaken the finiteness required by compactness somewhat. For example, we can consider the situation where any open covering of a topological space $$X$$ has a *locally* finite open subcover. ([§Interior, Closure, and Boundary of Sets, ⁋Definition 3](/en/math/topology/other_concepts#def3)) However, by a slight play on words, one can show that this condition is in fact equivalent to the compactness of $$X$$, so this alone does not yield a new definition. Now, for two open covers $$(U_i)_{i\in I}$$ and $$(V_j)_{j\in J}$$ of a topological space, if there always exists a $$U_i$$ that entirely contains any $$V_j$$, we call $$(V_j)_{j\in J}$$ an *(open) refinement* of $$(U_i)_{i\in I}$$.
+Now let us weaken the finiteness required by compactness somewhat. For example, we can consider the situation where any open covering of a topological space $$X$$ has a *locally* finite open subcover. ([§Interior, Closure, and Boundary, ⁋Definition 3](/en/math/topology/other_concepts#def3)) However, by a slight play on words, one can show that this condition is in fact equivalent to the compactness of $$X$$, so this alone does not yield a new definition. Now, for two open covers $$(U_i)_{i\in I}$$ and $$(V_j)_{j\in J}$$ of a topological space, if there always exists a $$U_i$$ that entirely contains any $$V_j$$, we call $$(V_j)_{j\in J}$$ an *(open) refinement* of $$(U_i)_{i\in I}$$.
 
 <div class="definition" markdown="1">
 

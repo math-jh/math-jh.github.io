@@ -21,7 +21,7 @@ translation_source: kimi-cli
 
 ## An Alternative Definition of Natural Numbers
 
-We now construct natural numbers using the cardinals we have already defined, rather than following the approach in [§Ordinals and Well-ordered Sets](/en/math/set_theory/ordinals). We then explore the structure of natural numbers using the operations and order relations previously defined on cardinal numbers.
+We now construct natural numbers using the cardinals we have already defined, rather than following the approach in [§Ordinals and Well-Ordered Sets](/en/math/set_theory/ordinals). We then explore the structure of natural numbers using the operations and order relations previously defined on cardinal numbers.
 
 <div class="definition" markdown="1">
 
@@ -29,7 +29,7 @@ We now construct natural numbers using the cardinals we have already defined, ra
 
 </div>
 
-Since natural numbers form a subset of the set of cardinals, they are well-ordered. ([§Cardinals, ⁋Theorem 5](/en/math/set_theory/cardinals#thm5)) Thus, we can use induction on natural numbers. ([§Properties of Well-ordered Sets, ⁋Lemma 7](/en/math/set_theory/well_ordering#lem7))
+Since natural numbers form a subset of the set of cardinals, they are well-ordered. ([§Cardinals, ⁋Theorem 5](/en/math/set_theory/cardinals#thm5)) Thus, we can use induction on natural numbers. ([§Properties of Well-Ordered Sets, ⁋Lemma 7 (Transfinite Induction)](/en/math/set_theory/well_ordering#lem7))
 
 <div class="proposition" markdown="1">
 

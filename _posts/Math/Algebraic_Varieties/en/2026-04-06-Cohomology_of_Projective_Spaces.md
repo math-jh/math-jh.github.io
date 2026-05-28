@@ -14,7 +14,7 @@ header:
 date: 2026-04-06
 last_modified_at: 2026-05-09
 weight: 13
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-26T01:00:04+00:00
 ---
@@ -220,7 +220,7 @@ holds. Since $$X$$ and $$\mathbb{P}^N$$ are separated schemes ([\[Algebraic Vari
 
 $$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{G}) = H^i(\mathbb{P}^N, i_*\mathcal{G}).$$ Therefore it suffices to show the following: for a coherent sheaf $$\mathcal{G}$$ on $$\mathbb{P}^N$$, for sufficiently large $$n$$ we have $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$$ ($$i > 0$$). Here $$\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$$.
 
-**Key Lemma**. We show that $$\mathcal{G}(n)$$ is globally generated for sufficiently large $$n$$. (See [⁋Definition 6](#def6) below.)
+**Key Lemma**. We show that $$\mathcal{G}(n)$$ is globally generated for sufficiently large $$n$$. (See [Definition 6](#def6) below.)
 
 Let $$S = \mathbb{K}[\x_0, \ldots, \x_N]$$, and let $$M = \bigoplus_{n \in \mathbb{Z}} \Gamma(\mathbb{P}^N, \mathcal{G}(n))$$ be the associated graded $$S$$-module. On each standard affine open set $$D_+(\x_j)$$, the sections $$\Gamma(D_+(\x_j), \mathcal{G})$$ are the degree-$$0$$ localization $$M_{(\x_j)}$$, which is a finitely generated module over $$S_{(\x_j)}$$. Choose generators $$\bar{m}_1, \ldots, \bar{m}_{r_j} \in M_{(\x_j)}$$. Each $$\bar{m}_k$$ can be written in the form $$m_k / \x_j^{d_k}$$, where $$m_k \in M$$ is a homogeneous element. Letting $$d_0 = \max_j \max_k d_k$$, we multiply each generator by $$\x_j^{d_0 - d_k}$$ to obtain homogeneous elements $$m_k \cdot \x_j^{d_0 - d_k} \in M_{d_0}$$. These are elements of $$\Gamma(\mathbb{P}^N, \mathcal{G}(d_0))$$, and one can check that they generate the stalk of $$\mathcal{G}$$ on $$D_+(\x_j)$$. Taking the maximum over $$j$$, we obtain that $$\mathcal{G}(d_0)$$ is globally generated.
 

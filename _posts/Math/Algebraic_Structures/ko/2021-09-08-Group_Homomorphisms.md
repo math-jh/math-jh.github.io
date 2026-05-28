@@ -19,7 +19,7 @@ weight: 4
 
 당분간 우리는 group의 성질들을 탐구한다. 따라서 group들 사이의 group homomorphism도 간단히 homomorphism이라고만 칭하기로 한다.
 
-[§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 4](/ko/math/set_theory/operation_of_functions#prop4)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
+[§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#prop5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
 
 <div class="proposition" markdown="1">
 

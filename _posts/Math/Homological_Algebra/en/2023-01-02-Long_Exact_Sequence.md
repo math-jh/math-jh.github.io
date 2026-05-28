@@ -30,7 +30,7 @@ $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 is a short exact sequence for all $$n$$. 
 
-The main theorem of this post is [Theorem 1](#thm1). In its proof the snake lemma plays an important role, and because the proof is easily completed using the explicitly obtained connecting map when the category is $$\lMod{A}$$, we make active use of the Freyd–Mitchell embedding theorem to prove the following theorem in $$\lMod{A}$$, just as in [§Diagram Chasing](/en/math/homological_algebra/diagram_chasing).
+The main theorem of this post is [Theorem 1](#thm1). In its proof the snake lemma plays an important role, and because the proof is easily completed using the explicitly obtained connecting map when the category is $$\lMod{A}$$, we make active use of the Freyd–Mitchell embedding theorem to prove the following theorem in $$\lMod{A}$$, just as in [§Diagram chasing](/en/math/homological_algebra/diagram_chasing).
 
 <div class="proposition" markdown="1">
 
@@ -56,7 +56,7 @@ Therefore, once we show that the top and bottom rows are both exact, the desired
 
 ![long_exact_sequence_exactness](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-2.png){:style="width:21.4em" class="invert" .align-center}
 
-Applying the snake lemma once more to this diagram (more precisely, [§Diagram Chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5)), we obtain the two exact sequences
+Applying the snake lemma once more to this diagram (more precisely, [§Diagram chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5)), we obtain the two exact sequences
 
 $$0\rightarrow \ker(d_n^A)\rightarrow \ker(d_n^B)\rightarrow \ker(d_n^C)$$
 

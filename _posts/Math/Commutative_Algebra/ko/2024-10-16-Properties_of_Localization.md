@@ -21,7 +21,7 @@ weight: 3
 
 ## 국소화와 Hom, tensor
 
-우선 보조정리 하나를 증명하며 시작한다. $$A$$-module homomorphism $$S^{-1}A\times_A M \rightarrow  S^{-1}M$$을 $$(r/u, x)\mapsto rx/u$$으로 정의하면 이는 $$A$$-bilinear map이고, 따라서 $$A$$-linear map $$S^{-1}A\otimes_A M \rightarrow S^{-1}M$$을 유도한다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 5](/ko/math/algebraic_structures/operations_of_modules#def5)) 
+우선 보조정리 하나를 증명하며 시작한다. $$A$$-module homomorphism $$S^{-1}A\times_A M \rightarrow  S^{-1}M$$을 $$(r/u, x)\mapsto rx/u$$으로 정의하면 이는 $$A$$-bilinear map이고, 따라서 $$A$$-linear map $$S^{-1}A\otimes_A M \rightarrow S^{-1}M$$을 유도한다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 5](/ko/math/algebraic_structures/operations_of_modules#thm5)) 
 
 <div class="proposition" markdown="1">
 

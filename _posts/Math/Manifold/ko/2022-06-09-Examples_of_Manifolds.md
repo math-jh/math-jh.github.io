@@ -153,11 +153,11 @@ $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 
 $$\tilde{U}_i=\{(x^1,\ldots, x^{n+1})\mid x^i\neq 0\}$$
 
-을 생각하자. 그럼 $$\tilde{U}_i$$는 saturated인 열린집합이므로, [\[위상수학\] §몫공간, ⁋명제 8](/ko/math/topology/quotient_spaces#prop8)에 의하여 quotient map $$\pi$$가 $$\tilde{U}_i$$로 잘 제한된다. 따라서, 함수 $$\varphi_i:U_i\rightarrow\mathbb{R}^n$$을
+을 생각하자. 그럼 $$\tilde{U}_i$$는 saturated인 열린집합이므로, [\[위상수학\] §몫공간, ⁋명제 7](/ko/math/topology/quotient_spaces#prop7)에 의하여 quotient map $$\pi$$가 $$\tilde{U}_i$$로 잘 제한된다. 따라서, 함수 $$\varphi_i:U_i\rightarrow\mathbb{R}^n$$을
 
 $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i},\frac{x^{i+1}}{x^i},\ldots, \frac{x^{n+1}}{x^i}\right)$$
 
-으로 정의하면[^1] 함수 $$\varphi_i\circ\pi\vert_{\tilde{U}_i}$$가 연속이고 따라서 [\[위상수학\] §몫공간, ⁋명제 9](/ko/math/topology/quotient_spaces#prop9)에 의해 $$\varphi_i$$ 또한 연속이다. 
+으로 정의하면[^1] 함수 $$\varphi_i\circ\pi\vert_{\tilde{U}_i}$$가 연속이고 따라서 [\[위상수학\] §몫공간, ⁋명제 4](/ko/math/topology/quotient_spaces#prop4)에 의해 $$\varphi_i$$ 또한 연속이다. 
 
 ![quotient_map](/assets/images/Math/Manifold/Examples_of_Manifolds-2.png){:style="width:8em" class="invert" .align-center}
 

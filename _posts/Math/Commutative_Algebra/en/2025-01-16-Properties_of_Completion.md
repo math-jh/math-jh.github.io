@@ -37,7 +37,7 @@ For the second result, we again use [§Completion, ⁋Proposition 7](/en/math/co
 
 </details>
 
-The following lemma can be proved easily by examining the topological structure and base of the completion discussed in [§Completion, §§$$\mathfrak{a}$$-adic topology](/en/math/commutative_algebra/completion#mathfraka진-위상), and using [\[Topology\] §Bases of Topological Spaces, ⁋Proposition 2](/en/math/topology/topological_bases#prop2) to determine when two bases define the same topology.
+The following lemma can be proved easily by examining the topological structure and base of the completion discussed in [§Completion, §§The $$\mathfrak{a}$$-adic Topology](/en/math/commutative_algebra/completion#the-mathfraka-adic-topology), and using [\[Topology\] §Bases of a Topological Space, ⁋Proposition 2](/en/math/topology/topological_bases#prop2) to determine when two bases define the same topology.
 
 <div class="proposition" markdown="1">
 
@@ -107,7 +107,7 @@ Since both $$\varprojlim$$ and $$\otimes$$ commute with finite direct sums, the 
 
 $$F \rightarrow G \rightarrow M \rightarrow 0$$
 
-yields the desired result by [Lemma 3](#lem3) and [\[Homological Algebra\] §Diagram Chasing, ⁋Proposition 1](/en/math/homological_algebra/diagram_chasing#prop1).
+yields the desired result by [Lemma 3](#lem3) and [\[Homological Algebra\] §Diagram chasing, ⁋Proposition 1 (The four lemma)](/en/math/homological_algebra/diagram_chasing#prop1).
 
 For the second result, by [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1) it suffices to show that $$\widehat{\mathfrak{a}} \rightarrow \widehat{A}$$ is injective for any finitely generated ideal $$\mathfrak{a}$$, and this is obvious from the left exactness of completion examined in [Lemma 3](#lem3).
 

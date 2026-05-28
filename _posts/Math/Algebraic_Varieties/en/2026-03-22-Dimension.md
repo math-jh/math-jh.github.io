@@ -14,7 +14,7 @@ header:
 date: 2026-03-22
 last_modified_at: 2026-03-22
 weight: 5
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-25T21:00:04+00:00
 ---
@@ -57,7 +57,7 @@ By [§Affine Varieties, ⁋Proposition 12](/en/math/algebraic_varieties/affine_v
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-[\[Commutative Algebra\] §System of Parameters, ⁋Theorem 10](/en/math/commutative_algebra/system_of_parameters#cor10)
+[\[Commutative Algebra\] §System of Parameters, ⁋Corollary 10](/en/math/commutative_algebra/system_of_parameters#cor10)
 
 </details>
 

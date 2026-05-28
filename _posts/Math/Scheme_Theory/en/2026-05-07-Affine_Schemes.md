@@ -13,7 +13,7 @@ sidebar:
 date: 2025-01-27
 last_modified_at: 2025-01-27
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 The most basic example of a sheaf defined on a topological space is the collection of continuous functions on that space, and the $$\mathscr{O}_{\Spec A}$$ we will define is similar. However, if $$\mathscr{O}_{\Spec A}$$ were merely the sheaf of continuous functions on $$\Spec A$$, there would be no need to give it a new name. For the simplest example, since the only prime ideal of any field $$\mathbb{K}$$ is $$(0)$$, the topological space $$\Spec \mathbb{K}$$ is always a singleton, and there is only one way to put a topology on it. In other words, if we want to distinguish the spectra of two non-isomorphic fields, that information must be contained in the structure sheaf of $$\Spec \mathbb{K}$$. To ensure that the spectrum carries enough algebraic information, we will define $$\mathscr{O}_{\Spec A}$$ as the sheaf of algebraic functions on $$A$$.
@@ -40,7 +40,7 @@ A morphism between two locally ringed spaces $$(X, \mathscr{O}_X)$$ and $$(Y, \m
 
 ## Algebraic Functions on $$\Spec A$$
 
-Now we must define $$\mathscr{O}_{\Spec A}$$. As mentioned at the beginning of this post, it is the sheaf of algebraic functions on $$\Spec A$$, and we saw in [§Spectra, §§Classical Algebraic Geometry](/en/math/scheme_theory/spectrums#고전적인-대수기하학) that when $$A=\mathbb{K}[\x_1,\ldots, \x_n]$$, these are functions that can be represented in the form of rational functions on a suitable neighborhood. What played an important role in this process was that elements of $$A$$, i.e., polynomials, could be treated as functions on $$\mathbb{A}_\mathbb{K}^n=\mSpec A$$; however, in the general case, elements of $$A$$ are not polynomials, and moreover we cannot evaluate points of $$\Spec A$$ at elements of $$A$$.
+Now we must define $$\mathscr{O}_{\Spec A}$$. As mentioned at the beginning of this post, it is the sheaf of algebraic functions on $$\Spec A$$, and we saw in [§Spectra, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry) that when $$A=\mathbb{K}[\x_1,\ldots, \x_n]$$, these are functions that can be represented in the form of rational functions on a suitable neighborhood. What played an important role in this process was that elements of $$A$$, i.e., polynomials, could be treated as functions on $$\mathbb{A}_\mathbb{K}^n=\mSpec A$$; however, in the general case, elements of $$A$$ are not polynomials, and moreover we cannot evaluate points of $$\Spec A$$ at elements of $$A$$.
 
 Therefore, to generalize this discussion, let us think as follows. First, we think of an element of $$A$$ as a function $$f$$, just as in the previous example. Then the *function value* of $$f$$ at a point $$\mathfrak{p}\in\Spec A$$ is the image of $$f$$ under the canonical projection $$\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$$. Then in particular, the condition that $$f$$ vanishes at the point $$\mathfrak{p}$$ is
 
@@ -48,7 +48,7 @@ $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
 That is, $$Z(f)$$ can be understood as the set of points where $$f=0$$, and its complement, the principal open set $$D(f)$$, can be understood as the set of points where $$f\neq 0$$.
 
-From this perspective, we can describe what the *algebraic functions* on $$\Spec A$$ are. As in [§Spectra, §§Classical Algebraic Geometry](/en/math/scheme_theory/spectrums#고전적인-대수기하학), these are defined as functions that can be represented in the form of rational functions whose denominators are functions that do not vanish on the given open set.
+From this perspective, we can describe what the *algebraic functions* on $$\Spec A$$ are. As in [§Spectra, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry), these are defined as functions that can be represented in the form of rational functions whose denominators are functions that do not vanish on the given open set.
 
 Now suppose a principal open set $$D(f)$$ is given. Then by definition, when an algebraic function on $$D(f)$$ is represented as a rational function $$g/h$$, the functions $$h$$ that can appear in the denominator must satisfy $$D(f)\subseteq D(h)$$.
 
@@ -184,7 +184,7 @@ we can regard ($$\ast$$) as an element of $$S(f_i)^{-1}(A)$$.
 
 We now prove the two conditions of [[Topology] §Sheaves, ⁋Proposition 8](/en/math/topology/sheaves#prop8). For notational convenience, since $$D(f)=\Spec A_f$$, it suffices to consider the case $$f=1$$ after replacing $$A$$ by $$A_f$$. Fix elements $$f_i\in A$$ satisfying $$\Spec A=\bigcup_{i\in I}D(f_i)$$.
 
-First, to show the first condition, suppose an element $$s\in A$$ satisfies $$s=0$$ in $$S(f_i)^{-1}A$$ for all $$i\in I$$, and let us show that $$s$$ is also $$0$$ as an element of $$A$$. Then by [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums) we can choose $$f_1,\ldots, f_n$$ among the $$f_i$$ such that $$\Spec A=\bigcup_{i=1}^n D(f_i)$$, and by assumption there exist integers $$m_i$$ satisfying
+First, to show the first condition, suppose an element $$s\in A$$ satisfies $$s=0$$ in $$S(f_i)^{-1}A$$ for all $$i\in I$$, and let us show that $$s$$ is also $$0$$ as an element of $$A$$. Then by [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12) we can choose $$f_1,\ldots, f_n$$ among the $$f_i$$ such that $$\Spec A=\bigcup_{i=1}^n D(f_i)$$, and by assumption there exist integers $$m_i$$ satisfying
 
 $$f_i^{m_i}s=0$$
 

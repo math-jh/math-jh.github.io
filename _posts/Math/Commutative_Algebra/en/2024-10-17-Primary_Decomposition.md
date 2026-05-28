@@ -13,7 +13,7 @@ sidebar:
 date: 2024-10-17
 last_modified_at: 2024-10-17
 weight: 7
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 <div class="remark" markdown="1">
@@ -122,7 +122,7 @@ First, to prove the first result, suppose a primary decomposition of the zero su
 
 $$0=\bigcap_{k=1}^n M_k$$
 
-Then from a generalization of the exact sequence of [\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 7](/en/math/multilinear_algebra/exact_sequences#prop7#prop7),
+Then from a generalization of the exact sequence of [\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 7](/en/math/multilinear_algebra/exact_sequences#prop7),
 
 $$M\subseteq \bigoplus_{k=1}^n M/M_k$$
 
