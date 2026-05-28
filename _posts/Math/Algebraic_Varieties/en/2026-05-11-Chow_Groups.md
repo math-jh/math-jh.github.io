@@ -57,7 +57,7 @@ We denote this by $$Z_1 \sim_{\text{rat}} Z_2$$.
 
 </div>
 
-That is, just as when defining the divisor class group, we regard two divisors as the same if they differ by a principal divisor. This equivalence relation can be thought of, in the same spirit as the intuition explained right after [\[Algebraic Varieties\] §Divisors, ⁋Definition 9](/en/math/algebraic_varieties/divisors#def9), as translating the notion of homotopy into algebraic geometry.
+That is, just as when defining the divisor class group, we regard two divisors as the same if they differ by a principal divisor. This equivalence relation can be thought of, in the same spirit as the intuition explained right after [§Divisors, ⁋Definition 9](/en/math/algebraic_varieties/divisors#def9), as translating the notion of homotopy into algebraic geometry.
 
 Then the following proposition holds.
 

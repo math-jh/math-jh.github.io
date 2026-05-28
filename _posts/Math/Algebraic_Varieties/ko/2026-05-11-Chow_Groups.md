@@ -57,7 +57,7 @@ $$Z_1 - Z_2 = \sum_j \divisor(f_j)$$
 
 </div>
 
-즉, divisor class group을 정의할 때와 마찬가지로 우리는 principal divisor만큼의 차이만 나는 divisor를 같은 것으로 볼 것이다. 이 동치관계는 이전 [\[대수다양체\] §인자, ⁋정의 9](/ko/math/algebraic_varieties/divisors#def9) 직후에 설명한 직관과 동일하게, homotopy의 개념을 대수기하학으로 옮겨온 것으로 생각할 수 있다.
+즉, divisor class group을 정의할 때와 마찬가지로 우리는 principal divisor만큼의 차이만 나는 divisor를 같은 것으로 볼 것이다. 이 동치관계는 이전 [§인자, ⁋정의 9](/ko/math/algebraic_varieties/divisors#def9) 직후에 설명한 직관과 동일하게, homotopy의 개념을 대수기하학으로 옮겨온 것으로 생각할 수 있다.
 
 그럼 다음 명제가 성립한다. 
 

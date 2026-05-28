@@ -108,7 +108,7 @@ $$\bigwedge(M)=\bigoplus_{d=0}^n{\bigwedge}^d(M)$$
 
 $$d\x_J=d\x_{j_1}\wedge d\x_{j_2}\wedge\cdots\wedge d\x_{j_k},\qquad j_1<\cdots< j_k$$
 
-의 꼴로 생성되는 free $$E$$-module이다. ([\[다중선형대수학\] §텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) 이제 각각의 basis
+의 꼴로 생성되는 free $$E$$-module이다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) 이제 각각의 basis
 
 $$f\; d\x_{j_1}\wedge d\x_{j_2}\wedge\cdots\wedge d\x_{j_d}\in {\bigwedge}^k(M)$$
 
