@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 미분다양체"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Manifold]
 permalink: /ko/llm_workshop/marvin_manifold
 author: Marvin
 date: 2026-05-27

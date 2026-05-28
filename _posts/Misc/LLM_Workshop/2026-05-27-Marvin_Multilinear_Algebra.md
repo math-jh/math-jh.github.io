@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 다중선형대수학"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Multilinear Algebra]
 permalink: /ko/llm_workshop/marvin_multilinear_algebra
 
 sidebar:

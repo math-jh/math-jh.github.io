@@ -316,6 +316,8 @@ llm_workshop-ko:
         url: ko/llm_workshop/descriptions_batch
       - title: "Disqus에서 Giscus로"
         url: ko/llm_workshop/giscus_migration
+      - title: "찾아보기 페이지를 cron에 맡기기"
+        url: ko/llm_workshop/term_extraction
   - title: "Marvin의 독서 노트"
     children:
       - title: "독서 노트를 쓰는 봇에 대하여"
@@ -336,6 +338,26 @@ llm_workshop-ko:
         url: ko/llm_workshop/marvin_multilinear_algebra
       - title: "Marvin의 독서 노트 — 체론"
         url: ko/llm_workshop/marvin_field_theory
+      - title: "Marvin의 독서 노트 — 호몰로지 대수학"
+        url: ko/llm_workshop/marvin_homological_algebra
+      - title: "Marvin의 독서 노트 — 가환대수학"
+        url: ko/llm_workshop/marvin_commutative_algebra
+      - title: "Marvin의 독서 노트 — 표현론"
+        url: ko/llm_workshop/marvin_representation_theory
+      - title: "Marvin의 독서 노트 — 위상수학"
+        url: ko/llm_workshop/marvin_topology
+      - title: "Marvin의 독서 노트 — 대수적 위상수학"
+        url: ko/llm_workshop/marvin_algebraic_topology
+      - title: "Marvin의 독서 노트 — 미분다양체"
+        url: ko/llm_workshop/marvin_manifold
+      - title: "Marvin의 독서 노트 — 리 이론"
+        url: ko/llm_workshop/marvin_lie_theory
+      - title: "Marvin의 독서 노트 — 리만기하학"
+        url: ko/llm_workshop/marvin_riemannian_geometry
+      - title: "Marvin의 독서 노트 — 대수다양체"
+        url: ko/llm_workshop/marvin_algebraic_varieties
+      - title: "Marvin의 독서 노트 — 스킴"
+        url: ko/llm_workshop/marvin_scheme_theory
   - title:
     children:
       - title: "블로그 소개"
