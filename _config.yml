@@ -192,6 +192,8 @@ exclude:
   - README
   - tmp
   - scripts
+  - .obsidian
+  - .backups
 keep_files:
   - .git
   - .svn
