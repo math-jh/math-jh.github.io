@@ -2222,3 +2222,21 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `ultrafilter` | looks like emphasis (no <sub> partner) |
 | `Neighborhood axiom.` | multi-word English emphasis — possibly a definition |
 
+## Initial topology와 final topology
+- post: `_posts/Math/Topology/ko/2022-11-15-Initial_and_Final_Topology.md`
+- permalink: `/ko/math/topology/initial_and_final_topology`
+- scanned: 2026-05-28T08:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `임의의` | looks like emphasis (no <sub> partner) |
+
+## 곱공간
+- post: `_posts/Math/Topology/ko/2022-11-21-Product_Spaces.md`
+- permalink: `/ko/math/topology/product_spaces`
+- scanned: 2026-05-28T09:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `graph` | looks like emphasis (no <sub> partner) |
+

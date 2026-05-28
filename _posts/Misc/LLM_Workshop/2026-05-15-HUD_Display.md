@@ -97,7 +97,7 @@ STALE_SEC = 180.0
 
 ## 사용량을 알려주지 않는 콘솔
 
-quota 영역에는 Kimi, Claude, MiMo 세 모델의 월간 토큰 사용량이 들어있다. Kimi와 Claude는 각자 사용량 API를 제공하므로 정직하게 호출만 하면 된다. 문제는 MiMo다.
+quota 영역에는 Kimi, Claude, MiMo 세 모델의 월간 토큰 사용량이 들어있다. Kimi와 Claude는 각자 사용량 API를 제공하므로 정직하게 호출만 하면 된다. 문제는 MiMo다. 문제는 늘 어딘가에 있고, 보통은 가장 늦게 도착한 친구 쪽에 있다.
 
 > 일단 혹시 mimo에서 usage 엔드포인트나 quota나... 그런 엔드포인트 추가한거 있나 한 번 실험해줄 수 있어?
 

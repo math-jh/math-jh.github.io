@@ -304,6 +304,18 @@ llm_workshop-ko:
         url: ko/llm_workshop/marvin_hud_display
       - title: "Claude Code를 Kimi와 MiMo로"
         url: ko/llm_workshop/marvin_claude_code_kimi_mimo
+      - title: "Jekyll 4 업그레이드와 Pagefind 검색"
+        url: ko/llm_workshop/jekyll4_pagefind
+      - title: "Sitemap 없이 색인하기"
+        url: ko/llm_workshop/gsc_indexing
+      - title: "내부 링크 표시명 빌드 시 자동 보정"
+        url: ko/llm_workshop/link_normalizer
+      - title: "math-jh.com 으로 옮기기"
+        url: ko/llm_workshop/custom_domain
+      - title: "269개 글에 description 한 번에 채워넣기"
+        url: ko/llm_workshop/descriptions_batch
+      - title: "Disqus에서 Giscus로"
+        url: ko/llm_workshop/giscus_migration
   - title: "Marvin의 독서 노트"
     children:
       - title: "독서 노트를 쓰는 봇에 대하여"
