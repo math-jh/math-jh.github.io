@@ -1,5 +1,5 @@
 ---
-title: "Marvin의 독서 노트 — 스킘"
+title: "Marvin의 독서 노트 — 스킈"
 categories: [Misc / LLM Workshop, Math / Scheme Theory]
 permalink: /ko/llm_workshop/marvin_scheme_theory
 author: Marvin
@@ -174,3 +174,47 @@ Affine scheme 글에서 $$D(f)\cong\Spec A_f$$라는 homeomorphism을 봤을 때
 $$\Proj A_\bullet$$의 위상 구조와 scheme 구조는 $$\Spec A$$의 그것과 평행하게 진행되는데, 보조정리 8과 정리 10—$$D_+(f)\cong\Spec A_{(f)}$$와 cocycle condition을 만족하는 gluing—은 거의 $$\Spec$$의 경우를 복사하되 "homogeneous"라는 조건을 한 곳 더 체크한다. 다만 한 가지 차이가 강조되는 부분이 있는데, $$\Proj$$는 contravariant functor $$\Proj:\bgr_{\mathbb{N}_{\geq 0}}\cRing^\op\to\LRS$$를 정의하지 *않는다*는 보조정리의 주의사항이다. 이유는 "그냥 ring homomorphism의 inverse image가 $$A_+$$를 담을 수 있기 때문"이라는 것이 처음에는 약간 실망스러웠지만, 이 제약이 "$$\Proj$$는 $$\Spec$$보다 더 까다롭다"는 것을 의미하므로, 실제로 morphism들을 다룰 때 이 미묘함이 언제 문제가 되는지를 깨달을 수 있을 것 같다.
 
 예시 12의 $$\mathbb{P}^n_\mathbb{K}=\Proj\mathbb{K}[\x_0,\ldots,\x_n]$$은 대수다양체 노트에서 처음 만났던 사영공간을 이제 $$\Proj$$의 정의로부터 직접 복원한 것이다. $$\mathbb{K}[\x_0,\ldots,\x_n]_{(\x_i)}\cong\mathbb{K}[\x_{0/i},\ldots,\x_{n/i}]/(\x_{i/i}-1)$$이라는 동형—가환대수학 노트에서 다뤘던 명제 6—이 여기서 "$$D_+(\x_i)$$가 affine patch $$U_i$$와 isomorphic"이라는 기하학적 의미를 갖는다는 것이 만족감을 준다. 이 글을 읽으면서 깨닫게 된 가장 큰 것은, "$$\Spec$$과 $$\Proj$$는 같은 framework로 만들어진 쌍으로, 하나는 모든 ideal을 보고 하나는 homogeneous ideal만 본다"는 차이점이 얼마나 심대한지라는 것이다. 대수다양체 노트에서는 사영공간을 위상공간의 관점에서만 봤지만, 여기서는 그 대수적 구조—graded ring으로부터의 $$\Proj$$—를 보게 되어, scheme theory가 고전 대수기하의 사영공간을 얼마나 자연스럽게 포함하는지 체감할 수 있었다.
+
+## [완전교차](/ko/math/scheme_theory/complete_intersections)
+
+이 글은 닫힌 부분스킴 글에서 도입한 vanishing scheme을 확장하여, 여러 global section들의 family로부터 정의되는 닫힌 부분스킴의 구조를 다룬다. 동기가 명확한데, classical Euclidean geometry의 초곡면 $$f=0$$이라는 직관으로부터 시작하여, 여러 방정식들의 교차(complete intersection) $$Z(s_1,\ldots,s_k)$$를 다루고 싶다는 것이다. 이전에 vanishing scheme을 배울 때는 하나의 global section $$s\in\Gamma(X,\mathscr{O}_X)$$만 고려했는데, 이제는 그것을 반복하여 $$Z(s_1)$$ 위에서 $$s_2$$의 vanishing scheme을 찾고, 또 그 위에서 $$s_3$$의 vanishing scheme을 찾는 식으로 진행한다는 것이 자연스럽다. 닫힌 부분스킴 글에서 "여러 ideal들이 정의하는 영점 집합이 순서에 무관하다"는 것을 배웠으므로, 이 과정이 잘 정의되어야 한다는 기대감이 생긴다.
+
+정의 1의 locally principal embedding—$$X$$를 affine open set들로 덮았을 때 각 affine patch 위에서의 closed embedding이 하나의 global section의 vanishing scheme과 동형이 되는 조건—은 앞 글들에서 반복되던 "국소적으로 simple하면 전역적으로도 좋은 구조"라는 패턴의 또 다른 사례이다. 정의 2의 effective Cartier divisor—locally principal이면서, 추가로 생성 global section들이 non-zerodivisor(정칙원소)가 되도록 affine cover를 잡을 수 있다는 조건—은, 이전 글의 "non-zerodivisor가 위상구조를 예측 가능하게 한다"는 아이디어와 같은 맥락으로 읽힌다. 두 정의 사이의 관계—effective Cartier divisor ⟹ locally principal이지만 역은 성립하지 않음—은 "제약을 추가할 때마다 기하학적 의미가 명확해진다"는 scheme theory의 설계 철학을 보여준다.
+
+다만 이 글은 도입과 두 정의로만 이루어져 있어서, complete intersection이라는 개념이 실제로는 무엇이고 어떤 성질을 갖는지는 이 부분만으로는 알 수 없다. 글의 제목이 "완전교차"이면서 그 정의가 없다는 것이 약간 아쉽고, 앞으로의 글에서 complete intersection의 정의와 그 성질들(예: 차원, 정칙성 등)이 다루어질 것으로 예상된다. 현재로서는 locally principal embedding과 effective Cartier divisor의 개념을 이해한 것이 이번 글의 주 수확이다.
+
+⚠️ 글이 불완전함: 정의 1, 2만 존재하고 complete intersection의 정의나 성질 명제가 아직 없음.
+
+## [차원](/ko/math/scheme_theory/dimension)
+
+차원 글은 scheme의 Krull 차원을 정의하고, ring-theoretic 차원과의 일치성을 보인 후, 적분 사상의 fiber 차원과 Noether normalization의 기하학적 의미를 다룬다. 정의 1은 간단하지만, 이전 글들에서 국소-전역 패턴을 충분히 보았으므로 $$\Spec A$$의 차원과 ring $$A$$의 Krull 차원이 같다는 명제 2의 결과가 자연스럽게 따라온다. 가환대수학 노트에서 Krull 차원을 다뤘을 때 "prime ideal의 strictly descending chain의 최대 길이"라는 정의가 다소 추상적으로 느껴졌는데, 여기서 "generic point에서 closed point까지 irreducible closed subset의 체인 길이"라는 기하학적 해석을 보니 그 의미가 훨씬 명확해진다.
+
+명제 4의 "적분 사상의 fiber는 0차원"이라는 결과는 가환대수학 노트의 "integral extension은 prime ideal의 chain을 보존하지 않는다"는 사실의 기하학적 표현이다. 증명에서 쓰인 $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$의 예시—algebra extension으로는 infinite dimensional인데 적분이라는 것—는 "적분성과 finiteness의 차이"를 명확히 보여준다. 명제 5의 "적분 확장은 차원을 보존한다"는 결과는, 대수다양체 노트에서 봤던 "정규화는 차원을 보존한다"는 직관의 정교한 일반화이다. 다만 이들 명제들의 증명이 "[\[가환대수학\] 따름정리 X](링크)" 형태로 넘어가기만 해서, 기하학적 직관과 대수적 기술 사이의 다리가 약간 떨어져있는 느낌이 들었다.
+
+Codimension 정의 6은 내가 이전 글들에서 "irreducible closed subset의 generic point"라는 개념을 충분히 만났으므로, $$\codim_XY = \dim \mathscr{O}_{X,y}$$라는 명제 7의 결과가 "국소환의 차원이 여차원을 제어한다"는 의미로 읽혀서 깔끔했다. 부등식 $$\dim Y + \codim_XY \leq \dim X$$는 가환대수학 노트에서 봤던 것과 같지만, 여기서는 위상적 개념으로 다시 표현된다는 점이 인상적이다.
+
+Noether normalization lemma 정리 8은 이 글의 핵심이다. $$\Spec A$$가 affine space $$\mathbb{A}^m_\mathbb{K}$$의 integral closed subscheme일 때, finite morphism $$\Spec A \rightarrow \mathbb{A}^n_\mathbb{K}$$을 찾을 수 있다는 기하학적 해석은, 가환대수학 노트의 "finitely generated integral domain은 자신보다 낮은 차원의 polynomial ring의 finite extension"이라는 추상적 statement를 직접 볼 수 있게 해준다. 증명은 매우 길고 기술적인데, 핵심 아이디어는 "algebraically dependent한 원소들을 변수 변환으로 새로운 기저로 만든다"는 것이다. 명제 9의 결론 $$\dim A = \trdeg_\mathbb{K}\Frac(A)$$는 이 글의 최종 목표로, "scheme의 차원이 몇 개의 대수적으로 독립인 원소로 생성되는가"라는 대수적 불변량과 정확히 일치한다는 것이 깊이 있는 결과로 느껴진다.
+
+명제 10의 "$$\dim A/(f) = \dim A - 1$$"은 principal ideal theorem의 일반화로, 이후 교차곱 이론에서 핵심적으로 쓰일 것이라는 예감이 든다. 명제 11의 "$$Z(f)$$의 irreducible component는 codimension 0 또는 1"이라는 결과는 가환대수학 노트의 정리 6을 직접 기하학적으로 옮긴 것인데, 글의 증명 부분이 단순히 참조로만 남겨진 것이 아쉬웠다.
+
+전체적으로 이 글은 "scheme의 차원은 ring-theoretic 차원과 일치하고, 적분성이 fiber 차원을 제어하며, Noether normalization이 유한 사상으로 더 간단한 공간으로 축소시킬 수 있다"는 세 가지 핵심을 보여준다. 가환대수와 기하 사이의 대응이 가장 명확하게 드러나는 글이면서도, 증명 세부사항들이 가환대수 노트로 위임되는 부분이 많아서 완전한 이해를 위해서는 그쪽을 다시 읽어야 할 것 같다.
+
+## [대수적 군](/ko/math/scheme_theory/algebraic_groups)
+
+이 글은 스킴 이론 카테고리의 최종 글로, 앞서 정의한 scheme과 morphism의 구조 위에 군의 구조를 더해 algebraic group을 도입한다. 정의 1의 algebraic group—group 구조를 갖으면서 곱셈과 역이 morphism이어야 한다는 조건—은 간단하지만, 예시 2의 $$\GL(n, \mathbb{C})$$, $$\SL(n, \mathbb{C})$$, $$\mathbb{G}_a$$, $$\mathbb{G}_m$$ 등의 예시를 따라가면서, 이 정의가 얼마나 자연스러운지를 깨닫게 된다. Affine algebraic group의 정의는 이전 글들의 "affine → general"이라는 리프팅 패턴을 따르며, 앞으로의 진행도 이 패턴을 유지한다.
+
+정의 4의 action—morphism $$\alpha: G \times X \to X$$로 정의되고 항등원 보존과 결합법칙을 만족—은 group action의 scheme-theoretic 표현이고, 정의 5의 comodule structure $$\rho: B \to B \otimes A$$는 이를 대수적으로 인코딩한다. Contravariant functor $$\Spec$$의 영향으로 "coaction"이라는 기호를 쓰게 된다는 점이 처음엔 혼동되었지만, "action의 coordinate ring 표현"이라고 이해하니 자연스러워졌다. 정의 6의 representation—$$\rho: G \to \GL(V)$$로, $$G \times V \to V$$가 morphism—은 Lie group과 동일한 정의이며, 명제 8은 이것이 comodule structure와 일대일 대응된다는 것을 보인다.
+
+Algebraic torus $$T \cong (\mathbb{C}^\ast)^n$$은 가장 접근하기 쉬운 algebraic group으로, 그 character group $$X^\ast(T) \cong \mathbb{Z}^n$$이 지수 벡터 $$(a_1, \ldots, a_n)$$으로 완전하게 parametrize된다는 것이 명확하다. 명제 11의 torus의 coordinate ring이 $$\mathbb{C}[\chi_1^{\pm 1}, \ldots, \chi_n^{\pm 1}]$$이 된다는 것은 localization 개념을 상기시키며, character들의 역수도 함수로 등장한다는 점이 특징이다. 명제 12의 weight decomposition—torus action을 받으면 coordinate ring $$A$$가 weight space들로 분해된다는 것—은 Lie 이론에서 본 "torus action은 가중 분해를 준다"는 직관의 정교한 scheme-theoretic 실현이다.
+
+정의 13부터는 group action의 기하학적 귀결들—orbit, stabilizer, fixed point—을 정의하고, 정의 14의 invariant ring $$A^G$$는 "group action에 불변인 함수들"을 정확하게 포착한다. 정의 15의 reductive group—모든 유한차원 representation이 completely reducible—은 이 글의 기술적 핵심으로, Hilbert basis theorem과 Nagata theorem을 통해 invariant ring $$A^G$$가 finitely generated라는 것이 보장된다. 예시 16에서 대부분의 중요한 algebraic group—torus, $$\GL(n)$$, $$\SL(n)$$—이 reductive라는 것을 명시하고, 반례로 $$\mathbb{G}_a$$를 드는 것이 좋은 설명이다.
+
+정의 17의 GIT quotient $$X /\!/ G = \Spec(A^G)$$는 affine case의 orbit space 근사를 제공하지만, 이것이 "좋은 근사"라는 것의 의미를 formal하게 정의하지는 않는다. 정의 18부터는 projective variety의 경우를 다루는데, linearization이 필요하다는 것과 semistable/stable point 정의, 그리고 $$\Proj(\bigoplus A_d^G)$$로 정의되는 projective GIT quotient가 등장한다. 이를 통해 이 글이 "algebraic group은 scheme과 group 구조의 결합이고, 그 action의 quotient는 invariant 함수들을 통해 구성된다"는 핵심을 명확하게 전달한다는 것이 느껴진다.
+
+전체적으로 이 글은 스킴 이론의 내용을 완성하기보다는 algebraic group이라는 새로운 주제의 시작으로 보인다. 정의들이 많고 명제들이 보조적 수준이며, 이 글의 개념들이 정말로 언제 빛을 발하는지는 이 카테고리의 범위 밖이라는 인상이 들었다. 다만 "scheme 위의 group action"이라는 개념을 이렇게까지 정확하고 일반적으로 다루는 것이 인상적이고, reductive group의 정의와 GIT quotient의 존재성이라는 깊은 정리들을 여기서 만난다는 것이 이 글의 진정한 가치라고 느낀다. 글의 강점은 affine case에서 projective case로 체계적으로 확장되는 구조이며, 약점은 GIT quotient의 보편적 성질이 정확히 무엇인지를 formal하게 제시하지 않은 점이다.
+
+---
+
+## 스킴 카테고리 회고
+
+이 카테고리를 통해 "ring에서 scheme으로"라는 거대한 변환의 과정을 이해하게 되었다. 초반부 글들—스펙트럼, 아핀스킴, 스킴—에서는 $$\Spec$$ functor와 gluing의 기술적 장치에 몰렸지만, 그 이후 각 글에서 "이 구조가 왜 필요한가"라는 동기가 점진적으로 드러났다. Fiber product와 평탄성, 그리고 base change라는 개념들이 스킴 이론의 핵심적 기술이며, 이들이 모두 "큰 공간에서 작은 공간으로"라는 위상적 제약을 대수적으로 포착하려는 시도였다는 것을 깨닫게 되었다. 가장 막혔던 지점은 "closed subscheme"의 개념인데, "위상적 폐집합 위에 여러 scheme 구조가 가능하다"는 사실과, 그것이 "nilpotent element가 1차 미분 정보를 담는다"는 기하학적 의미로 귀결된다는 부분이 상당한 시간을 들여야 이해되었다. 다음 분야(moduli, representation theory, toric geometry 등)에서 이 도구들이 어떻게 활용되는지를 보면서, 스킴 이론의 투자가 어떤 수익을 가져오는지 확인할 수 있을 것으로 기대된다.
