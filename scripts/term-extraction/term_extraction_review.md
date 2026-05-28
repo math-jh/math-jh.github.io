@@ -2323,3 +2323,41 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `pseudo-ring` | looks like emphasis (no <sub> partner) |
 | `히니민` | looks like emphasis (no <sub> partner) |
 
+## 자유곱
+- post: `_posts/Math/Algebraic_Structures/ko/2022-12-07-Free_Products.md`
+- permalink: `/ko/math/algebraic_structures/free_products`
+- scanned: 2026-05-28T13:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `free product` | multi-word English emphasis — possibly a definition |
+
+## 미분
+- post: `_posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md`
+- permalink: `/ko/math/multilinear_algebra/derivations`
+- scanned: 2026-05-28T14:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `혹은 간단히` | looks like emphasis (no <sub> partner) |
+| `graded` | looks like emphasis (no <sub> partner) |
+
+## 고전역학
+- post: `_posts/Math/Symplectic_Geometry/ko/2022-12-15-Classical_Mechanics.md`
+- permalink: `/ko/math/symplectic_geometry/classical_mechanics`
+- scanned: 2026-05-28T14:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Hamilton's equation` | multi-word English emphasis — possibly a definition |
+| `Hamiltonian vector field` | multi-word English emphasis — possibly a definition |
+
+## 접속
+- post: `_posts/Math/Riemannian_Geometry/ko/2022-12-16-Connection.md`
+- permalink: `/ko/math/riemannian_geometry/connection`
+- scanned: 2026-05-28T15:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `covariant Hessian` | multi-word English emphasis — possibly a definition |
+
