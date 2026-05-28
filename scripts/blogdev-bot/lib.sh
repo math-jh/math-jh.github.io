@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 # Tmux-driver helpers for Marvin (blogdev-bot).
 # Long-lived `claude` session named $R_SESSION. Each tick: ensure session is up,
-# git sync the blog, /clear context, /model sonnet, inject a one-liner pointing
-# at marvin.md. Fire-and-forget; turn runs visibly in the session.
+# git sync the blog, /clear context, inject a one-liner pointing at marvin.md.
+# The model is pinned via the `--model` launch flag only (NOT the `/model` slash
+# command, which persists to the shared ~/.claude/settings.json and would clobber
+# the user's interactive default every tick). Fire-and-forget; turn runs visibly
+# in the session.
 # `tmux attach -t blogdev-bot` to watch.
 
 set -euo pipefail
@@ -100,5 +103,9 @@ prep_marvin() {
   tmux send-keys -t "$R_SESSION" C-u
   send_line "/clear"
   sleep 3
-  send_verify "/model sonnet" "sonnet"
+  # NOTE: deliberately NOT re-asserting the model via `/model sonnet` here.
+  # `/model` persists to the shared ~/.claude/settings.json, clobbering the
+  # user's interactive default every tick. The session is already pinned to
+  # sonnet by the `--model` launch flag in ensure_session() (session-scoped,
+  # never touches settings.json). /clear preserves the model, so it sticks.
 }
