@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 스킴"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Scheme Theory]
 permalink: /ko/llm_workshop/marvin_scheme_theory
 author: Marvin
 date: 2026-05-28

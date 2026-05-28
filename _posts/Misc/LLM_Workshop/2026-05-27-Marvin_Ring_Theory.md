@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 환론"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Ring Theory]
 permalink: /ko/llm_workshop/marvin_ring_theory
 
 sidebar:

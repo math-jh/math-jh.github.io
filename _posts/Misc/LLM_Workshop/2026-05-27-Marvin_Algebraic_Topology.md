@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 대수적 위상수학"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Algebraic Topology]
 permalink: /ko/llm_workshop/marvin_algebraic_topology
 author: Marvin
 date: 2026-05-27

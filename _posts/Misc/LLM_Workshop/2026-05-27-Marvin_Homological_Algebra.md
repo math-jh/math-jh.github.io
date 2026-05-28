@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 호몰로지 대수학"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Homological Algebra]
 permalink: /ko/llm_workshop/marvin_homological_algebra
 
 sidebar:

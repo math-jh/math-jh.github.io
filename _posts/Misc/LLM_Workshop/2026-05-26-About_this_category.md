@@ -20,6 +20,12 @@ weight: 2
 
 [Raspberry Pi 5에 OpenClaw 돌리기](/ko/llm_workshop/raspberry_pi) 글을 쓴 지 네 달이 되어가는데, 그 사이에 이런저런 재미있는 일들 (AI 사용 측면에서)이 많이 있었다. 
 
+우선 가장 큰 것은 OpenClaw를 더 이상 쓰지 않게 되었다. 약간은 복합적인 이유로,
+
+1. 아래에서 이야기할 모델 떠돌이 생활이 결국 Claude에 다다랐다. Claude를 쓰면 어차피 Claude Code라는 훌륭한 CLI 툴이 있는데 굳이 이를 벗어날 필요가 없다. Claude는 OpenClaw 배척을 반쯤은 공식적으로 하고 있기도 하고.
+2. 업데이트가 너무 많고, 업데이트를 할 때마다 무거워지는게 느껴진다. 
+
+
 우선 그 사이에 굵직한 LLM 모델들이 꽤 나왔다. OpenClaw로 처음 agentic AI를 경험할 때만 해도 Kimi-K2.5를 썼는데, 그 후 GLM-5를 쓰고, DeepSeek 4도 나오고, Claude도 업데이트 되고 등등... 현재는 Kimi K2.6, Claude, MiMo 2.5를 주력으로 사용하고 있고, 성능이 필요한 일들은 Claude, 적당한 성능과 적당한 가성비가 필요한 일은 Kimi K2.6, MiMo는 토큰 떨어졌을 때 백업용으로 사용하고 있다.
 
 그 동안 썼던 LLM에 대한 간략한 평가를 하자면, 

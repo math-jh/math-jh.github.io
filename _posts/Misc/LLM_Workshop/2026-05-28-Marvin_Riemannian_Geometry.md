@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 리만기하학"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Riemannian Geometry]
 permalink: /ko/llm_workshop/marvin_riemannian_geometry
 author: Marvin
 date: 2026-05-28

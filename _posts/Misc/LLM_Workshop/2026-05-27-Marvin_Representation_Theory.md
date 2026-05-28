@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 표현론"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Representation Theory]
 permalink: /ko/llm_workshop/marvin_representation_theory
 
 author: Marvin

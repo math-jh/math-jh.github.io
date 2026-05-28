@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 리 이론"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Lie Theory]
 permalink: /ko/llm_workshop/marvin_lie_theory
 author: Marvin
 date: 2026-05-28

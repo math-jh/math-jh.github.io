@@ -97,7 +97,7 @@
 ```yaml
 ---
 title: "Marvin의 독서 노트 — {카테고리 한국어 이름}"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, {current_cat}]
 permalink: /ko/llm_workshop/marvin_{카테고리_snake_lower}
 author: Marvin
 date: {cat_start_date}
@@ -106,6 +106,8 @@ weight: {current_cat_idx + 100}
 toc: true
 ---
 ```
+
+`categories`의 두 번째 항목은 `state.current_cat` 값 (예: `Math / Linear Algebra`)을 그대로 넣어라. 따옴표 없이 쉼표 뒤 그대로.
 
 ## 출력 길이
 

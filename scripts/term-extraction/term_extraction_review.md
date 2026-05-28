@@ -2263,3 +2263,63 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `cofinal` | looks like emphasis (no <sub> partner) |
 | `coinitial` | looks like emphasis (no <sub> partner) |
 
+## 반군, 모노이드, 군
+- post: `_posts/Math/Algebraic_Structures/ko/2022-11-29-Groups.md`
+- permalink: `/ko/math/algebraic_structures/groups`
+- scanned: 2026-05-28T11:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `반드시` | looks like emphasis (no <sub> partner) |
+| `magma homomorphism` | multi-word English emphasis — possibly a definition |
+
+## 기수들 사이의 연산
+- post: `_posts/Math/Set_Theory/ko/2022-11-29-Operation_of_Cardinals.md`
+- permalink: `/ko/math/set_theory/operation_of_cardinals`
+- scanned: 2026-05-28T11:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `cardinal product` | multi-word English emphasis — possibly a definition |
+| `cardinal sum` | multi-word English emphasis — possibly a definition |
+| `연속체 가설` | looks like emphasis (no <sub> partner) |
+| `continuum hypothesis` | multi-word English emphasis — possibly a definition |
+
+## 서수들 사이의 순서관계
+- post: `_posts/Math/Set_Theory/ko/2022-11-29-Order_Relations_Between_Ordinals.md`
+- permalink: `/ko/math/set_theory/order_relations_between_ordinals`
+- scanned: 2026-05-28T12:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `The Axiom schema of Replacement.` | multi-word English emphasis — possibly a definition |
+
+## 군 동형사상
+- post: `_posts/Math/Algebraic_Structures/ko/2022-11-30-Isomorphism_Theorems.md`
+- permalink: `/ko/math/algebraic_structures/isomorphism_theorems`
+- scanned: 2026-05-28T12:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$G/N$$의 subgroup들의 집합` | mixed-script emphasis — possibly a definition |
+| `normal closure` | multi-word English emphasis — possibly a definition |
+
+## 몫군
+- post: `_posts/Math/Algebraic_Structures/ko/2022-11-30-Quotient_Groups.md`
+- permalink: `/ko/math/algebraic_structures/quotient_groups`
+- scanned: 2026-05-28T12:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `index` | looks like emphasis (no <sub> partner) |
+
+## 환의 정의
+- post: `_posts/Math/Algebraic_Structures/ko/2022-12-01-Rings.md`
+- permalink: `/ko/math/algebraic_structures/rings`
+- scanned: 2026-05-28T13:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `pseudo-ring` | looks like emphasis (no <sub> partner) |
+| `히니민` | looks like emphasis (no <sub> partner) |
+
