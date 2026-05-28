@@ -2170,3 +2170,23 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `, 혹은 간단히` | looks like emphasis (no <sub> partner) |
 | `스칼라곱` | looks like emphasis (no <sub> partner) |
 
+## 가우스 소거법
+- post: `_posts/Math/Linear_Algebra/ko/2022-08-19-Gaussian_Elimination.md`
+- permalink: `/ko/math/linear_algebra/Gaussian_elimination`
+- scanned: 2026-05-28T03:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `가우스 소거법` | looks like emphasis (no <sub> partner) |
+| `첨가행렬` | looks like emphasis (no <sub> partner) |
+
+## 호몰로지
+- post: `_posts/Math/Homological_Algebra/ko/2022-09-10-Homology.md`
+- permalink: `/ko/math/homological_algebra/homology`
+- scanned: 2026-05-28T04:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `total complex` | multi-word English emphasis — possibly a definition |
+| `$$p$$-th translation` | multi-word English emphasis — possibly a definition |
+

@@ -211,7 +211,7 @@ $$\mathcal{I}^a_p(q, z) \;:=\; \langle e_a,\,[\Gamma_p]\rangle \;=\; \int_{\Gamm
 
 <div class="proposition" markdown="1">
 
-<ins id="thm7">**정리 7 (Fundamental solution matrix)**</ins> 위의 setup에서 $$\Jac(W_q)$$ 안의 multiplication 행렬을
+<ins id="prop7">**명제 7 (Fundamental solution matrix)**</ins> 위의 setup에서 $$\Jac(W_q)$$ 안의 multiplication 행렬을
 
 $$T_a\cdot \partial_{q_i}W_q = \sum_b (M_i)^a_b\, T_b,\qquad T_a\cdot W_q = \sum_b E^a_b\, T_b\quad\text{in}\;\Jac(W_q)$$
 
@@ -223,82 +223,55 @@ $$z\,\partial_{q_i}\mathcal{I}^a_p = \sum_b (M_i)^a_b\,\mathcal{I}^b_p,\qquad z^
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
-**닫힌 ODE.** 각 $$a, p$$에 대해 ($$\ast$$)와 동일한 적분 미분 교환을 적용하면
-
-$$z\,\partial_{q_i}\mathcal{I}^a_p = \int_{\Gamma_p}T_a\cdot\partial_{q_i}W_q\cdot e^{W_q/z}\omega,\qquad z^2\,\partial_z\mathcal{I}^a_p = -\int_{\Gamma_p}T_a\cdot W_q\cdot e^{W_q/z}\omega$$
-
-가 된다. 앞서 확립한 isomorphism $$\Jac(W_q)\xrightarrow{\sim}\mathcal{H}_{(q,z)}$$ 하에서 cohomology class $$[T_a\cdot\partial_{q_i}W_q\cdot e^{W_q/z}\omega]$$는 $$T_a\cdot\partial_{q_i}W_q$$를 $$\Jac(W_q)$$ 안에서 reduce한 결과 $$\sum_b (M_i)^a_b\,T_b$$에 대응하므로
-
-$$[T_a\cdot\partial_{q_i}W_q\cdot e^{W_q/z}\omega] = \sum_b (M_i)^a_b\,[T_b\,e^{W_q/z}\omega] \in \mathcal{H}_{(q,z)}$$
-
-이고, period pairing은 cohomology class에만 의존하므로 양변을 $$\Gamma_p$$ 위에서 적분하면
-
-$$\int_{\Gamma_p}T_a\cdot\partial_{q_i}W_q\cdot e^{W_q/z}\omega = \sum_b (M_i)^a_b\,\mathcal{I}^b_p$$
-
-가 따른다. $$z$$-방향도 $$T_a\cdot W_q = \sum_b E^a_b\,T_b$$로 동일한 논의를 거치면 된다.
-
-**Invertibility와 fundamental solution matrix 해석.** $$\{[\Gamma_p]\}$$의 *dual basis* $$\{f^p\}\subset\mathcal{H}_{(q,z)}$$ (즉 $$\langle f^p, [\Gamma_{p'}]\rangle = \delta^p_{p'}$$를 만족하는 $$\mathcal{H}$$의 원소들)를 생각하자. [정의 4](#def4)에 의해 $$\{[\Gamma_p]\}$$가 dual bundle $$\mathcal{H}^\vee$$의 *flat* basis이므로 그 dual인 $$\{f^p\}$$는 $$\nabla^z_B$$의 *horizontal sections*이고, $$\mathcal{H}$$ 안에서 non-flat frame $$\{e_a\}$$와 flat frame $$\{f^p\}$$ 사이의 change-of-basis는 정확히 period matrix $$\mathcal{I}$$이다:
+구체적으로, $$\{[\Gamma_p]\}$$의 dual basis $$\{f^p\}\subset\mathcal{H}_{(q,z)}$$는 [정의 4](#def4)에 의해 $$\nabla^z_B$$의 *horizontal sections*이고, $$\mathcal{H}$$ 안에서 non-flat frame $$\{e_a\}$$와 flat frame $$\{f^p\}$$ 사이의 change-of-basis가 정확히
 
 $$e_a = \sum_p \mathcal{I}^a_p\,f^p,\qquad f^p = \sum_a (\mathcal{I}^{-1})^p_a\,e_a$$
 
-(이는 $$\langle e_a,[\Gamma_{p'}]\rangle = \sum_p \mathcal{I}^a_p\,\delta^p_{p'} = \mathcal{I}^a_{p'}$$임을 직접 검증하면 된다; $$\{[\Gamma_p]\}$$가 각 fiber에서 basis이므로 pairing이 non-degenerate, 즉 $$\mathcal{I}$$가 invertible). 즉 $$\mathcal{I}^{-1}$$의 column들이 frame $$\{e_a\}$$로 본 $$\nabla^z_B$$의 horizontal sections이고, $$\mathcal{I}$$ 자체가 B-model connection의 모든 정보를 인코딩한다는 의미에서 *fundamental solution matrix*라 부른다.
-
-</details>
-
-이 fundamental solution matrix $$\mathcal{I}$$가 A-side quantum cohomology $$D$$-module의 fundamental solution($$J$$-function)과 일치한다는 mirror theorem은 [§Givental J-function과 Mirror Theorem, ⁋명제 3](/ko/math/mirror_symmetry/givental_j_function#prop3)에서 다룬다.
+이다. 따라서 $$\mathcal{I}^{-1}$$의 column들이 frame $$\{e_a\}$$로 표현한 $$\nabla^z_B$$의 horizontal sections이며, $$\mathcal{I}$$ 자체가 $$\nabla^z_B$$의 모든 데이터를 인코딩하게 되는 것이다. 이 fundamental solution matrix $$\mathcal{I}$$가 A-side에서는 quantum cohomology $$D$$-module의 fundamental solution($$J$$-function)과 일치한다는 것이 mirror theorem의 주장이며, 이는 다음 글에서 다룬다. 
 
 ## 예시: $$\mathbb{P}^n$$의 oscillating integral
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8** ($$X = \mathbb{P}^n$$)</ins> $$\mathbb{P}^n$$의 Hori-Vafa mirror는 [§거울대칭 개요, ⁋정의 4](/ko/math/mirror_symmetry/overview#def4)의 처방을 그대로 따라 ($$\mathbb{P}^1$$의 경우 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5), $$\mathbb{P}^2$$의 경우 [§거울대칭 개요, ⁋예시 6](/ko/math/mirror_symmetry/overview#ex6) 참조)
+<ins id="ex8">**예시 8** ($$X = \mathbb{P}^n$$)</ins> 우리는 앞서 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서 $$\mathbb{P}^n$$의 Hori-Vafa mirror는
 
-$$\check{X} = (\mathbb{C}^\ast)^n,\qquad W_q = x_1 + \cdots + x_n + \frac{q}{x_1 \cdots x_n},\qquad \omega = \frac{dx_1 \wedge \cdots \wedge dx_n}{x_1 \cdots x_n}$$
+$$\check{X} = (\mathbb{C}^\ast)^n,\qquad W_q = \x_1 + \cdots + \x_n + \frac{q}{\x_1 \cdots \x_n},\qquad \omega = \frac{d\x_1 \wedge \cdots \wedge d\x_n}{\x_1 \cdots \x_n}$$
 
-이다. $$W_q$$의 critical equation $$\partial_{x_i}W_q = 1 - q/(x_i\,x_1\cdots x_n) = 0$$로부터 $$x_1 = \cdots = x_n =: x$$이고 $$x^{n+1} = q$$를 만족하는 $$n+1$$개의 점들 $$x_\zeta = \zeta\,q^{1/(n+1)}$$ ($$\zeta$$는 $$(n+1)$$-th root of unity)를 얻는다.
+형태로 주어지는 것을 확인했다. 이 때, critical point를 계산하기 위해 미분을 해 보면
 
-**Jacobi ring과 multiplication 행렬.** 위 critical equation을 $$\Jac(W_q)$$의 relation으로 보면 모든 $$x_i$$가 동일해지고 $$x^{n+1} = q$$가 성립하므로
+$$\partial_{\x_i}W_q =1 - \frac{1}{\x_i}\frac{q}{\x_1\cdots x_n} = 0$$
 
-$$\Jac(W_q) \;\cong\; \mathbb{C}[x, x^{-1}]\,/\,(x^{n+1} - q)$$
+이고, 이것이 모든 $$i$$에 대해 성립해야 하므로 $$x_i=\zeta^kq^{1/(n+1)}$$을 만족하는 $$x$$들이 critical point들이다. Jacobi ring 관점에서는 위의 critical point들의 방정식이
 
-이며, $$\mathbb{C}$$-basis $$\{T_a := x^a\}_{a=0,\ldots,n}$$ ($$\mu = n+1 = \dim_\mathbb{C} H^\ast(\mathbb{P}^n;\mathbb{C})$$)을 갖는다. 이 basis에서 $$\partial_qW_q = (x_1\cdots x_n)^{-1} = x^{-n}$$이 $$\Jac$$ 안에서 $$x^{n+1} = q$$ relation으로 $$x^{-n} = x/q$$로 reduce되므로
+$$\Jac(W_q) \;\cong\; \mathbb{C}[\x, \x^{-1}]\,/\,(\x^{n+1} - q)$$
 
-$$T_a\cdot \partial_qW_q = T_a\cdot \frac{x}{q} = \frac{x^{a+1}}{q} = \begin{cases}\dfrac{1}{q}\,T_{a+1} & (a < n),\\[0.4em] T_0 & (a = n)\end{cases}$$
+을 주고, 위의 $$x$$의 계산으로부터 $$\Jac(W_q)$$의 basis를 $$\x^a$$들로 택할 수 있다. 한편 Jacobi ring 안에서 
 
-이다 (마지막은 $$x^{n+1}/q = q/q = 1$$). 즉 multiplication matrix $$M_q$$는 cyclic shift 형태
+$$\partial_qW_q = \x^{-n} = \x/q,\qquad W_q = n\x + q\cdot\x/q = (n+1)\x$$
 
-$$M_q = \begin{pmatrix} 0 & \tfrac{1}{q} & & & \\ & 0 & \tfrac{1}{q} & & \\ & & \ddots & \ddots & \\ & & & 0 & \tfrac{1}{q} \\ 1 & & & & 0\end{pmatrix}$$
+이므로 multiplication matrices는
 
-이고, 한편 $$W_q = nx + q\cdot x^{-n} = nx + q\cdot x/q = (n+1)x$$이므로 $$E = (n+1)q\,M_q$$이다.
+$$M_q = \begin{pmatrix} 0 & 1/q & & & \\ & 0 & 1/q & & \\ & & \ddots & \ddots & \\ & & & 0 & 1/q \\ 1 & & & & 0\end{pmatrix},\qquad E = (n+1)qM_q$$
 
-**닫힌 행렬 ODE.** [정리 7](#thm7)에 따라 period matrix
+이다. 이제 [명제 7](#prop7)에 따라 period matrix $$\mathcal{I}^a_p(q,z)$$는 
 
-$$\mathcal{I}^a_p(q, z) := \int_{\Gamma_p} x^a\,\exp\!\left(\frac{x_1 + \cdots + x_n + q/(x_1\cdots x_n)}{z}\right)\,\frac{dx_1\cdots dx_n}{x_1\cdots x_n}$$
+$$z\partial_q\mathcal{I}^a_p = \sum_b (M_q)^a_b\mathcal{I}^b_p$$
 
-($$p$$는 thimble basis $$\{\Gamma_{x_\zeta}\}$$의 index)는 닫힌 ODE
+를 만족하므로,
 
-$$z\,\partial_q\mathcal{I}^a_p = \sum_b (M_q)^a_b\,\mathcal{I}^b_p$$
-
-를 만족한다. 한 column ($$p$$ 고정)에 대해 풀어쓰면 $$\mathcal{I}^{a+1}_p = qz\,\partial_q\mathcal{I}^a_p$$ ($$a < n$$)와 $$z\,\partial_q\mathcal{I}^n_p = \mathcal{I}^0_p$$로부터 $$\mathcal{I}^0_p$$가 $$(n+1)$$-차 ODE
+한다. Column별로 $$\mathcal{I}^{a+1}_p = qz\partial_q\mathcal{I}^a_p$$ ($$a<n$$)와 $$z\partial_q\mathcal{I}^n_p = \mathcal{I}^0_p$$를 결합하면 $$\mathcal{I}^0_p$$가 만족하는 $$(n+1)$$-차 ODE
 
 $$(z\partial_q)\bigl(qz\partial_q\bigr)^n\,\mathcal{I}^0_p = \mathcal{I}^0_p$$
 
-를 만족한다. 이것이 곧 $$\mathbb{P}^n$$의 *quantum differential equation*으로, A-side에서 $$J$$-function이 만족하는 hypergeometric ODE와 동일하다.
+가 곧 $$\mathbb{P}^n$$의 *quantum differential equation*으로, A-side $$J$$-function이 만족하는 hypergeometric ODE와 동일하다.
 
-**Stationary phase asymptotic.** 한편 $$z\to 0^+$$에서 각 critical point의 contribution은 [명제 3](#prop3)으로 직접 계산할 수 있다. $$x_\zeta = \zeta\,q^{1/(n+1)}$$에서 $$\partial_i\partial_j W_q$$는 대각 성분 $$2/x_\zeta$$, 비대각 성분 $$1/x_\zeta$$인 행렬
+**Stationary phase.** $$x_\zeta$$에서 $$\partial_i\partial_j W_q$$는 대각 $$2/x_\zeta$$, 비대각 $$1/x_\zeta$$ ($$\mathbf{1} := (1,\ldots,1)^\top$$)이므로
 
-$$\Hess_{x_\zeta}(W_q) = \tfrac{1}{x_\zeta}\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr)$$
+$$\Hess_{x_\zeta}(W_q) = \tfrac{1}{x_\zeta}\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr),\qquad \det \Hess_{x_\zeta}(W_q) = (n+1)\,(\zeta\,q^{1/(n+1)})^{-n}$$
 
-이고 ($$\mathbf{1}$$은 모든 성분이 $$1$$인 vector), $$\det(I_n + \mathbf{1}\mathbf{1}^\top) = n+1$$이므로
+이고 critical value $$W_q(x_\zeta) = (n+1)\,\zeta\,q^{1/(n+1)}$$이므로 [명제 3](#prop3)에 의해
 
-$$\det \Hess_{x_\zeta}(W_q) = (n+1)\,(\zeta\,q^{1/(n+1)})^{-n}$$
-
-이며, critical value $$W_q(x_\zeta) = (n+1)\,\zeta\,q^{1/(n+1)}$$로부터 stationary phase asymptotic
-
-$$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1)\,\zeta\,q^{1/(n+1)}/z\bigr)}{\sqrt{\det \Hess_{x_\zeta}(W_q)}}\,(1 + O(z))$$
+$$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1)\,\zeta\,q^{1/(n+1)}/z\bigr)}{\sqrt{(n+1)(\zeta\,q^{1/(n+1)})^{-n}}}\,(1 + O(z))$$
 
 가 따른다.
 
