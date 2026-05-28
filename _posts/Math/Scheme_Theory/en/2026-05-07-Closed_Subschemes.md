@@ -13,7 +13,7 @@ sidebar:
 date: 2025-02-18
 last_modified_at: 2025-02-18
 weight: 12
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 In [§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2) we saw that, for an affine scheme $$\Spec A$$, any element $$f$$ defines an open affine subscheme $$D(f)\cong \Spec A_f$$; in particular, to compare the two structure sheaves, we applied [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) to the morphism
@@ -26,7 +26,7 @@ $$(\Spec\epsilon \vert^{D(f)})^\sharp: \mathscr{O}_{D(f)} \rightarrow (\Spec\eps
 
 and, from the fact that $$\Spec A_f$$ is an open subset of $$\Spec A$$, we could conclude that this is an isomorphism.
 
-On the other hand, by the second result of [§Spectrums, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9), given an affine scheme $$\Spec A$$ and an ideal $$\mathfrak{a}$$ of $$A$$, the $$\Spec$$ functor gives
+On the other hand, by the second result of [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9), given an affine scheme $$\Spec A$$ and an ideal $$\mathfrak{a}$$ of $$A$$, the $$\Spec$$ functor gives
 
 $$\Spec\pi: \Spec A/\mathfrak{a}\rightarrow \Spec A$$
 
@@ -77,7 +77,7 @@ The most important property of the ring homomorphism $$\pi: A \rightarrow A/\mat
 
 $$B=\im\phi\cong A/\ker\phi$$
 
-so this property characterizes $$\pi$$ exactly. Furthermore, by [\[Commutative Algebra\] §Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), the surjectivity of $$\pi$$ can be checked by looking at whether the localization $$\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$$ at each prime ideal $$\mathfrak{p}$$ is surjective. Geometrically, this is the same as looking at the stalk at each point $$\mathfrak{p}$$ of the affine scheme $$\Spec A$$, and so by [\[Topology\] §Sheaves, ⁋Proposition 14](/en/math/topology/sheaves#prop14) it is equivalent to $$(\Spec\pi)^\sharp$$ being surjective. 
+so this property characterizes $$\pi$$ exactly. Furthermore, by [\[Commutative Algebra\] §Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), the surjectivity of $$\pi$$ can be checked by looking at whether the localization $$\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$$ at each prime ideal $$\mathfrak{p}$$ is surjective. Geometrically, this is the same as looking at the stalk at each point $$\mathfrak{p}$$ of the affine scheme $$\Spec A$$, and so by [\[Topology\] §Sheaves, ⁋Proposition 15](/en/math/topology/sheaves#prop15) it is equivalent to $$(\Spec\pi)^\sharp$$ being surjective. 
 
 <div class="definition" markdown="1">
 
@@ -147,7 +147,7 @@ Right after [Proposition 3](#prop3) we saw that closed subschemes of an affine s
 First cover $$X$$ by affine open subsets $$\{\Spec A_i\}$$. Then what we need to show is that for any $$i,j$$, the closed subscheme of $$\Spec A_i$$ defined by the ideal $$\mathscr{I}(A_i)$$ and the closed subscheme of $$\Spec A_j$$ defined by the ideal $$\mathscr{I}(A_j)$$ define the same closed subscheme on the intersection of $$\Spec A_i$$ and $$\Spec A_j$$. 
 
 
-First, by [§Topology of Schemes, ⁋Lemma 11](/en/math/scheme_theory/topology_of_schemes) we can cover the intersection of $$\Spec A_i$$ and $$\Spec A_j$$ by principal open subsets 
+First, by [§Topological Structure of Schemes, ⁋Lemma 11 (Nike)](/en/math/scheme_theory/topology_of_schemes#lem11) we can cover the intersection of $$\Spec A_i$$ and $$\Spec A_j$$ by principal open subsets 
 
 $$\Spec (A_i)_{f_i}\cong\Spec (A_j)_{f_j}$$
 
@@ -255,7 +255,7 @@ However, the scheme-theoretic image of the scheme morphism $$\varphi:X \rightarr
 
 At the beginning of this article, we were able to define two structure sheaves on any closed set $$Z(\mathfrak{a})$$ of an affine scheme $$\Spec A$$: $$(\Spec\pi)_\ast \mathscr{O}_{\Spec A/\mathfrak{a}}$$ and $$\iota^{-1} \mathscr{O}_{\Spec A}$$. Of these, we chose $$(\Spec\pi)_\ast \mathscr{O}_{\Spec A/ \mathfrak{a}}$$ as the correct scheme structure on $$Z(\mathfrak{a})$$. We now examine $$\iota^{-1} \mathscr{O}_{\Spec A}$$.
 
-More generally, consider an arbitrary scheme $$Y$$ and a closed set $$X$$ of $$Y$$. Then for any open set $$\Spec B$$ of $$Y$$, the closed set $$X\cap \Spec B$$ of $$\Spec B$$ can be written in the form $$Z(\mathfrak{b})$$ for some radical ideal $$\mathfrak{b}$$ of $$B$$, by [§Spectrums, ⁋Theorem 15](/en/math/scheme_theory/spectrums#thm15). 
+More generally, consider an arbitrary scheme $$Y$$ and a closed set $$X$$ of $$Y$$. Then for any open set $$\Spec B$$ of $$Y$$, the closed set $$X\cap \Spec B$$ of $$\Spec B$$ can be written in the form $$Z(\mathfrak{b})$$ for some radical ideal $$\mathfrak{b}$$ of $$B$$, by [§Spectra, ⁋Theorem 15](/en/math/scheme_theory/spectrums#thm15). 
 Moreover, since $$\mathfrak{b}$$ is by definition the largest among the ideals of $$B$$ satisfying $$X\cap \Spec B= Z(\mathfrak{b}')$$, by [Lemma 9](#lem9) it is the smallest closed subscheme structure that can be given to $$X\cap \Spec B$$.
 
 <div class="definition" markdown="1">

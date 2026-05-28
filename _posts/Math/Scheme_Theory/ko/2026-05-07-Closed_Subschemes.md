@@ -78,7 +78,7 @@ $$(\Spec \pi, (\Spec\pi)^\sharp): \Spec A/\mathfrak{a} \rightarrow\Spec A$$
 
 $$B=\im\phi\cong A/\ker\phi$$
 
-이므로 이 성질이 $$\pi$$를 정확하게 characterize한다. 한편 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 생각하면, $$\pi$$의 surjectivity는 임의의 prime ideal $$\mathfrak{p}$$에서의 localization $$\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$$이 surjective인지를 살펴보아 확인할 수 있으며 이는 기하적으로는 affine scheme $$\Spec A$$에서의 임의의 점 $$\mathfrak{p}$$에서의 stalk을 살펴보는 것과 같고, 따라서 [\[위상수학\] §층, ⁋명제 14](/ko/math/topology/sheaves#prop14)에 의해 $$(\Spec\pi)^\sharp$$이 surjective인 것과 같다. 
+이므로 이 성질이 $$\pi$$를 정확하게 characterize한다. 한편 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 생각하면, $$\pi$$의 surjectivity는 임의의 prime ideal $$\mathfrak{p}$$에서의 localization $$\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$$이 surjective인지를 살펴보아 확인할 수 있으며 이는 기하적으로는 affine scheme $$\Spec A$$에서의 임의의 점 $$\mathfrak{p}$$에서의 stalk을 살펴보는 것과 같고, 따라서 [\[위상수학\] §층, ⁋명제 15](/ko/math/topology/sheaves#prop15)에 의해 $$(\Spec\pi)^\sharp$$이 surjective인 것과 같다. 
 
 <div class="definition" markdown="1">
 
@@ -148,7 +148,7 @@ $$0 \rightarrow \mathscr{I}_{Z/X}(U) \rightarrow \mathscr{O}_X(U)\cong A \righta
 우선 $$X$$를 affine open subset들 $$\{\Spec A_i\}$$들로 덮자. 그럼 우리가 보여야 할 것은 임의의 $$i,j$$에 대하여, $$\Spec A_i$$에서 ideal $$\mathscr{I}(A_i)$$에 의해 정의되는 closed subscheme과 $$\Spec A_j$$에서 ideal $$\mathscr{I}(A_j)$$에 의해 정의되는 closed subscheme이 $$\Spec A_i$$와 $$\Spec A_j$$의 교집합에서 같은 closed subscheme을 정의한다는 것이다. 
 
 
-우선 [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes)로부터 우리는 $$\Spec A_i$$와 $$\Spec A_j$$의 교집합을 principal open subset들 
+우선 [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)로부터 우리는 $$\Spec A_i$$와 $$\Spec A_j$$의 교집합을 principal open subset들 
 
 $$\Spec (A_i)_{f_i}\cong\Spec (A_j)_{f_j}$$
 

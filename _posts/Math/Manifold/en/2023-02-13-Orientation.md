@@ -13,7 +13,7 @@ sidebar:
 date: 2023-02-13
 last_modified_at: 2023-02-13
 weight: 19
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Orientation in Euclidean Space

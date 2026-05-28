@@ -38,7 +38,7 @@ $$d+1=\dim A=\codim \mathfrak{m}=\codim \mathfrak{p}_i=0$$
 
 a contradiction. Hence there must exist some $$a\in \mathfrak{m}$$ such that $$a\not\in \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$$.
 
-Now set $$A'=A/(a)$$ and consider the maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$ of $$A'$$. By the choice of $$a$$, none of the prime ideals of $$A'$$ corresponds to any $$\mathfrak{p}_i$$, so we must have $$\dim A'<\dim A$$; combining this with [§Systems of Parameters, ⁋Corollary 6](/en/math/commutative_algebra/system_of_parameters#cor6) we see that $$\dim A'=d-1$$. Thus from the identity
+Now set $$A'=A/(a)$$ and consider the maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$ of $$A'$$. By the choice of $$a$$, none of the prime ideals of $$A'$$ corresponds to any $$\mathfrak{p}_i$$, so we must have $$\dim A'<\dim A$$; combining this with [§System of Parameters, ⁋Corollary 6](/en/math/commutative_algebra/system_of_parameters#cor6) we see that $$\dim A'=d-1$$. Thus from the identity
 
 $$\mathfrak{m}'/(\mathfrak{m}')^2=\mathfrak{m}/(\mathfrak{m}^2+(a))$$
 
@@ -82,7 +82,7 @@ holds.
 
 By [[Commutative Algebra] §Dimension, ⁋Theorem 5](/en/math/commutative_algebra/Krull_dimension#thm5) we generally have $$\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$$. Thus it suffices to prove the reverse inequality.
 
-Set $$d = \dim A$$ and $$h = \codim \mathfrak{p}$$. Choose a regular system of parameters $$x_1, \ldots, x_d$$ of the regular local ring $$(A, \mathfrak{m})$$. By [[Commutative Algebra] §Systems of Parameters, ⁋Proposition 9](/en/math/commutative_algebra/system_of_parameters#prop9), for suitable indices $$1 \le i_1 < \cdots < i_h \le d$$ the ideal $$\mathfrak{p}$$ is a minimal prime ideal over $$(x_{i_1}, \ldots, x_{i_h})$$. By [Corollary 3](#cor3), the elements $$x_{i_1}, \ldots, x_{i_h}$$ form an $$A$$-sequence, so by [§Systems of Parameters, ⁋Corollary 6](/en/math/commutative_algebra/system_of_parameters#cor6) we have $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$.
+Set $$d = \dim A$$ and $$h = \codim \mathfrak{p}$$. Choose a regular system of parameters $$x_1, \ldots, x_d$$ of the regular local ring $$(A, \mathfrak{m})$$. By [[Commutative Algebra] §Systems of Parameters, ⁋Proposition 9](/en/math/commutative_algebra/system_of_parameters#prop9), for suitable indices $$1 \le i_1 < \cdots < i_h \le d$$ the ideal $$\mathfrak{p}$$ is a minimal prime ideal over $$(x_{i_1}, \ldots, x_{i_h})$$. By [Corollary 3](#cor3), the elements $$x_{i_1}, \ldots, x_{i_h}$$ form an $$A$$-sequence, so by [§System of Parameters, ⁋Corollary 6](/en/math/commutative_algebra/system_of_parameters#cor6) we have $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$.
 
 On the other hand, in $$A/(x_{i_1}, \ldots, x_{i_h})$$ the ideal $$\overline{\mathfrak{p}} = \mathfrak{p}/(x_{i_1}, \ldots, x_{i_h})$$ is a minimal prime ideal, and by [Corollary 1](#cor1) the quotient $$A/(x_{i_1}, \ldots, x_{i_h})$$ is an integral domain, so $$\overline{\mathfrak{p}} = 0$$. Hence $$\mathfrak{p} = (x_{i_1}, \ldots, x_{i_h})$$ and $$A/\mathfrak{p} = A/(x_{i_1}, \ldots, x_{i_h})$$. Therefore
 
@@ -104,7 +104,7 @@ By [§Properties of Completion, ⁋Theorem 8](/en/math/commutative_algebra/prope
 
 $$d=\dim A=\dim \im(\phi)=\dim \kappa[[\x_1,\ldots,\x_d]]/\ker\phi\leq \dim \kappa[[\x_1,\ldots, \x_d]]-\codim \ker\phi=d-\codim\ker\phi$$
 
-and for this to hold we must have $$\codim\ker\phi=0$$. But $$\kappa[[\x_1,\ldots, \x_d]]$$ is an integral domain by [§Systems of Parameters, ⁋Corollary 10](/en/math/commutative_algebra/system_of_parameters#cor10), so this means $$\ker\phi=0$$.
+and for this to hold we must have $$\codim\ker\phi=0$$. But $$\kappa[[\x_1,\ldots, \x_d]]$$ is an integral domain by [§System of Parameters, ⁋Corollary 10](/en/math/commutative_algebra/system_of_parameters#cor10), so this means $$\ker\phi=0$$.
 
 </details>
 
@@ -262,7 +262,7 @@ Conversely, assume that (R1) and (S2) hold. Then first of all $$R$$ is a reduced
 
 $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 
-is a minimal primary decomposition of $$0$$, then the primes $$\mathfrak{p}_i$$ appearing here are all codimension $$0$$ ideals by condition (S2), and by (R1) the localization at each is a field. Hence we can apply [Proposition 7](#prop7), and applying [§Jordan–Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5) yields the desired result.
+is a minimal primary decomposition of $$0$$, then the primes $$\mathfrak{p}_i$$ appearing here are all codimension $$0$$ ideals by condition (S2), and by (R1) the localization at each is a field. Hence we can apply [Proposition 7](#prop7), and applying [§The Jordan-Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5) yields the desired result.
 
 </details>
 

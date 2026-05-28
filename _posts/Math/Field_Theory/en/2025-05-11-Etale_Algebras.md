@@ -13,14 +13,14 @@ sidebar:
 date: 2025-05-11
 last_modified_at: 2025-05-11
 weight: 5
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 Fix a $$\mathbb{K}$$-algebra $$A$$ and a field extension $$\mathbb{L}/\mathbb{K}$$. Then the collection $$\Hom_\mathbb{K}(A, \mathbb{L})$$ of $$\mathbb{K}$$-linear maps between $$\mathbb{K}$$-vector spaces is a $$\mathbb{K}$$-vector space, and via the isomorphism
 
 $$\Hom_\mathbb{K}(A,\mathbb{L})\cong\Hom_\mathbb{K}(A, \mathbb{K}\otimes_\mathbb{K}\mathbb{L})\cong\Hom_\mathbb{K}(A, \mathbb{K})\otimes_\mathbb{K}\mathbb{L}=A^\ast\otimes_\mathbb{K}\mathbb{L}$$
 
-it can also be regarded as an $$\mathbb{L}$$-vector space. ([\[Multilinear Algebra\] §Hom and Tensor Products, ⁋Proposition 3](/en/math/multilinear_algebra/hom_and_tensor#prop3)) 
+it can also be regarded as an $$\mathbb{L}$$-vector space. ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 3](/en/math/multilinear_algebra/hom_and_tensor#prop3)) 
 
 Changing the order of the above construction slightly, consider the dual $$(A_{(\mathbb{L})})^\ast$$ of $$A_{(\mathbb{L})}=\mathbb{L}\otimes_\mathbb{K}A$$ (as an $$\mathbb{L}$$-vector space). Then by the Hom-tensor adjunction
 
@@ -89,7 +89,7 @@ In particular we obtain the following two corollaries.
 
 Consider the monoid algebra $$A=L\Gamma$$ and its canonical basis $$(e_\gamma)_{\gamma\in\Gamma}$$. 
 
-Then by a generalization of [\[Algebraic Structures\] §Algebras, ⁋Proposition 6](/en/math/algebraic_structures/algebras) there is a bijection between $$X$$ and $$\Hom_\mathbb{L}(A,\mathbb{L})$$, so the claim follows immediately from [Theorem 1](#thm1). 
+Then by a generalization of [\[Algebraic Structures\] §Algebras, ⁋Proposition 6](/en/math/algebraic_structures/algebras#prop6) there is a bijection between $$X$$ and $$\Hom_\mathbb{L}(A,\mathbb{L})$$, so the claim follows immediately from [Theorem 1](#thm1). 
 
 </details>
 

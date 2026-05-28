@@ -92,7 +92,7 @@ holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-By the adjunction formula ([§The Canonical Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9)),
+By the adjunction formula ([§Canonical Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9)),
 
 $$\omega_D \cong (\omega_S \otimes \mathcal{O}_S(D))\vert_D$$
 
@@ -149,7 +149,7 @@ $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}D \cdot (D - K_S)$
 
 is obtained.
 
-We now need to generalize this to an arbitrary divisor $$D$$. First fix an ample divisor $$H$$ on $$S$$. Then by Serre vanishing ([§Cohomology of Projective Spaces, ⁋Proposition 4](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)), for sufficiently large $$n$$,
+We now need to generalize this to an arbitrary divisor $$D$$. First fix an ample divisor $$H$$ on $$S$$. Then by Serre vanishing ([§Cohomology of Projective Space, ⁋Proposition 4 (Serre Vanishing)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)), for sufficiently large $$n$$,
 
 $$H^1(S, \mathcal{O}_S(D + nH)) = H^2(S, \mathcal{O}_S(D + nH)) = 0$$
 
@@ -173,17 +173,17 @@ As in the case of curves, if $$D$$ is sufficiently "positive" then $$h^1$$ and $
 
 $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
-([§The Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7), [§Cohomology of Projective Spaces, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)). Since any two lines in $$\mathbb{P}^2$$ generally meet at one point, the self-intersection number of $$H$$ is $$1$$, and thus for an arbitrary divisor $$D = dH$$,
+([§Canonical Bundle, ⁋Proposition 7 (Euler Exact Sequence)](/en/math/algebraic_varieties/canonical_bundle#prop7), [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)). Since any two lines in $$\mathbb{P}^2$$ generally meet at one point, the self-intersection number of $$H$$ is $$1$$, and thus for an arbitrary divisor $$D = dH$$,
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
 
-holds. That this actually holds is the result of [§Cohomology of Projective Spaces, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3). In particular, for $$d \ge 0$$ we know $$h^0 = \binom{d+2}{2}$$ and $$h^1 = h^2 = 0$$, so this provides a direct example of the vanishing of $$h^1, h^2$$ mentioned above.
+holds. That this actually holds is the result of [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3). In particular, for $$d \ge 0$$ we know $$h^0 = \binom{d+2}{2}$$ and $$h^1 = h^2 = 0$$, so this provides a direct example of the vanishing of $$h^1, h^2$$ mentioned above.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**Example 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> We now consider the blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$ of $$\mathbb{P}^2$$ at a point $$p$$. By [§The Canonical Bundle, ⁋Proposition 12](/en/math/algebraic_varieties/canonical_bundle#prop12), the canonical bundle is given by the formula
+<ins id="ex6">**Example 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> We now consider the blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$ of $$\mathbb{P}^2$$ at a point $$p$$. By [§Canonical Bundle, ⁋Proposition 12 (Canonical Bundle of a Blow-up)](/en/math/algebraic_varieties/canonical_bundle#prop12), the canonical bundle is given by the formula
 
 $$K_{\widetilde{\mathbb{P}}^2} = \pi^\ast K_{\mathbb{P}^2} + E = -3H + E$$
 
@@ -264,7 +264,7 @@ On the other hand, the ample divisor $$H$$ corresponding to an ample line bundle
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First assume $$D^2 > 0$$. Using [§Cohomology of Projective Spaces, ⁋Proposition 10](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop10), we can arrange that $$H_n = D + nH$$ is very ample. Then
+First assume $$D^2 > 0$$. Using [§Cohomology of Projective Space, ⁋Proposition 10](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop10), we can arrange that $$H_n = D + nH$$ is very ample. Then
 
 $$D \cdot H_n = D^2 + n(D \cdot H) = D^2 > 0$$
 
@@ -327,7 +327,7 @@ $$P_m(S) = h^0(S, \omega_S^{\otimes m})$$
 
 </div>
 
-Here $$\omega_S$$ is the canonical bundle defined in ([§The Canonical Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5)). In particular, for $$m = 1$$, $$P_1(S) = h^0(\omega_S) = p_g(S)$$ is the geometric genus, and the sequence of plurigenera $$\{P_m(S)\}_{m \ge 1}$$ can be said to extend this in some sense. This is an important invariant that determines the birational equivalence class of the surface.
+Here $$\omega_S$$ is the canonical bundle defined in ([§Canonical Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5)). In particular, for $$m = 1$$, $$P_1(S) = h^0(\omega_S) = p_g(S)$$ is the geometric genus, and the sequence of plurigenera $$\{P_m(S)\}_{m \ge 1}$$ can be said to extend this in some sense. This is an important invariant that determines the birational equivalence class of the surface.
 
 In the next post we treat the Kodaira vanishing theorem and examine how this theorem is utilized in the computation of plurigenera and the classification of surfaces.
 

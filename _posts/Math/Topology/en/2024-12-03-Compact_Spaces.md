@@ -13,7 +13,7 @@ sidebar:
 date: 2024-12-03
 last_modified_at: 2024-12-03
 weight: 14
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 In this post we define the notion of compactness.
@@ -174,7 +174,7 @@ is nonempty.
 
 </div>
 
-Then in particular $$\emptyset\not\in \mathcal{A}$$ holds. Also, if a family $$\mathcal{A}$$ satisfying this condition is given, we can add all finite intersections of elements of $$\mathcal{A}$$ to obtain a filter base $$\mathcal{B}$$ on $$X$$. ([§Equivalent Formulations of Topology, ⁋Definition 6](/en/math/topology/equivalent_formulations_of_topology#def6)) For this reason $$\mathcal{A}$$ is sometimes called a *subbase* of $$\uparrow \mathcal{B}$$.
+Then in particular $$\emptyset\not\in \mathcal{A}$$ holds. Also, if a family $$\mathcal{A}$$ satisfying this condition is given, we can add all finite intersections of elements of $$\mathcal{A}$$ to obtain a filter base $$\mathcal{B}$$ on $$X$$. ([§Other Definitions of Topological Spaces, ⁋Definition 5](/en/math/topology/equivalent_formulations_of_topology#def5)) For this reason $$\mathcal{A}$$ is sometimes called a *subbase* of $$\uparrow \mathcal{B}$$.
 
 Then the following proposition is an alternative formulation of compactness.
 

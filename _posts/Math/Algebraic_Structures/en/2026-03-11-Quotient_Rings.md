@@ -13,7 +13,7 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 102
-translated_at: 2026-05-24T18:00:04+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-24T18:00:04+00:00
 ---
@@ -51,7 +51,7 @@ Then the following holds.
 <summary>Proof</summary>
 
 1. That $$\pi$$ is an abelian group homomorphism with respect to addition follows immediately from the results of [§Quotient Groups](/en/math/algebraic_structures/quotient_groups). That $$\pi$$ preserves multiplication is likewise clear from the above discussion, and one easily verifies that $$1+\mathfrak{a}$$ is the multiplicative identity in $$A/\mathfrak{a}$$.
-2. First, regard $$\phi$$ as an abelian group homomorphism. Then the subgroup $$\mathfrak{a}$$ of $$A$$ is contained in $$\ker \phi$$ by the given condition, so there exists a unique *group* homomorphism $$\bar{\phi}:A/\mathfrak{a}\rightarrow B$$ such that $$\phi=\bar{\phi}\circ\pi$$. ([§Isomorphisms, ⁋Proposition 3](/en/math/algebraic_structures/isomorphism_theorems#prop3]))
+2. First, regard $$\phi$$ as an abelian group homomorphism. Then the subgroup $$\mathfrak{a}$$ of $$A$$ is contained in $$\ker \phi$$ by the given condition, so there exists a unique *group* homomorphism $$\bar{\phi}:A/\mathfrak{a}\rightarrow B$$ such that $$\phi=\bar{\phi}\circ\pi$$. ([§Isomorphism Theorems, ⁋Proposition 3](/en/math/algebraic_structures/isomorphism_theorems#prop3))
     Now take any two elements $$\alpha+\mathfrak{a}, \beta+\mathfrak{a}$$ in $$A/\mathfrak{a}$$. Then
 
     $$(\alpha+\mathfrak{a})(\beta+\mathfrak{a})=\alpha\beta+\mathfrak{a}=\pi(\alpha\beta)$$
@@ -64,7 +64,7 @@ Then the following holds.
 
 </details>
 
-The following theorem may be regarded as the ring-homomorphism version of [§Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems).
+The following theorem may be regarded as the ring-homomorphism version of [§Isomorphism Theorems](/en/math/algebraic_structures/isomorphism_theorems).
 
 <div class="proposition" markdown="1">
 
@@ -77,7 +77,7 @@ The following theorem may be regarded as the ring-homomorphism version of [§Iso
 
 </div>
 
-As with [Proposition 2](#prop2), the proof proceeds almost exactly as in [§Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems); the only additional step is to verify that the resulting group homomorphisms are indeed ring homomorphisms.
+As with [Proposition 2](#prop2), the proof proceeds almost exactly as in [§Isomorphism Theorems](/en/math/algebraic_structures/isomorphism_theorems); the only additional step is to verify that the resulting group homomorphisms are indeed ring homomorphisms.
 
 ---
 

@@ -99,7 +99,7 @@ That is, for homogeneous elements $$\alpha\in H^p(X;A),\beta\in H^q(X;A),\gamma\
 - (Associativity) $$(\alpha\smile\beta)\smile\gamma=\alpha\smile(\beta\smile\gamma)$$
 - (Graded commutativity) $$\alpha\smile\beta=(-1)^{pq}\beta\smile\alpha$$
 
-To prove this, we naturally apply [§Acyclic models theorem, ¶Theorem 3](/en/math/algebraic_topology/acyclic_models_theorem#thm3) to functors from $$\Top^2$$ (or $$\Top^3$$) to $$\Ch_{\geq 0}(\lMod{A})$$.
+To prove this, we naturally apply [§Acyclic models theorem](/en/math/algebraic_topology/acyclic_models_theorem#thm3) to functors from $$\Top^2$$ (or $$\Top^3$$) to $$\Ch_{\geq 0}(\lMod{A})$$.
 
 ## Functoriality of the Cup Product
 
@@ -151,7 +151,7 @@ commutes, and it remains only to apply the cohomology functor to the following d
 
 ## Cap Product
 
-In what follows we prepare the ground for discussing the duality between homology and cohomology. Of course, we have already observed this duality in forms such as [\[Algebraic Topology\] §Cohomology, ¶Proposition 3](/en/math/algebraic_topology/cohomology#prop3), but what we now examine is somewhat more subtle.
+In what follows we prepare the ground for discussing the duality between homology and cohomology. Of course, we have already observed this duality in forms such as [§Cohomology](/en/math/algebraic_topology/cohomology#prop3), but what we now examine is somewhat more subtle.
 
 Our task is to define an action of the graded ring $$H^\bullet(X;A)$$ on the homology module $$H_\bullet(X;A)$$. Writing this as
 
@@ -183,7 +183,7 @@ is called the *cap product*.
 
 </div>
 
-Thus $$\frown$$ takes a homology chain of degree $$p+q$$ and a cohomology class of degree $$p$$, pairs the degree $$p$$ part of the homology chain with the cohomology class via the Kronecker pairing, and then multiplies the resulting scalar with the remaining degree $$q$$ homology chain. Although this definition may appear contrived at first, the uniqueness in [§Acyclic models theorem, ¶Theorem 3](/en/math/algebraic_topology/acyclic_models_theorem#thm3) guarantees that it is the only definition that behaves coherently. Moreover, from this description one recognizes that the cap product is precisely the operation corresponding to the interior product.
+Thus $$\frown$$ takes a homology chain of degree $$p+q$$ and a cohomology class of degree $$p$$, pairs the degree $$p$$ part of the homology chain with the cohomology class via the Kronecker pairing, and then multiplies the resulting scalar with the remaining degree $$q$$ homology chain. Although this definition may appear contrived at first, the uniqueness in [§Acyclic models theorem](/en/math/algebraic_topology/acyclic_models_theorem#thm3) guarantees that it is the only definition that behaves coherently. Moreover, from this description one recognizes that the cap product is precisely the operation corresponding to the interior product.
 
 The following then holds.
 

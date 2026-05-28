@@ -14,7 +14,7 @@ header:
 date: 2026-04-05
 last_modified_at: 2026-04-20
 weight: 12
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 We have seen that line bundles can be used to construct various invariants. For example, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles) we defined the global section space $$\Gamma(X, \mathcal{L})$$ of a line bundle $$\mathcal{L}$$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9) we saw that the dimension of this space plays a key role in determining the dimension of the complete linear system, and hence the projective embedding of the variety.
@@ -429,7 +429,7 @@ $$0 \to \mathcal{I}^n \to C(f)^n \to \mathcal{A}^{n+1} \to 0$$
 
 the two end terms are $$\Gamma(X, -)$$-acyclic, so from the long exact sequence we see that $$C(f)^n$$ is also $$\Gamma(X, -)$$-acyclic.
 
-On the other hand, since $$f$$ is a quasi-isomorphism, $$C(f)^\bullet$$ is an exact complex ([\[Homological Algebra\] §Long Exact Sequences, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9)). Moreover, as we saw above, $$C(f)^\bullet$$ is $$\Gamma(X,-)$$-acyclic, so applying $$\Gamma(X,-)$$ yields the exact complex $$\Gamma(X, C(f)^\bullet)$$, and applying [\[Homological Algebra\] §Long Exact Sequences, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9) again converts this to the condition that the chain map
+On the other hand, since $$f$$ is a quasi-isomorphism, $$C(f)^\bullet$$ is an exact complex ([\[Homological Algebra\] §The Long Exact Sequence, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9)). Moreover, as we saw above, $$C(f)^\bullet$$ is $$\Gamma(X,-)$$-acyclic, so applying $$\Gamma(X,-)$$ yields the exact complex $$\Gamma(X, C(f)^\bullet)$$, and applying [\[Homological Algebra\] §The Long Exact Sequence, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9) again converts this to the condition that the chain map
 
 $$\Gamma(X, f)\colon \Gamma(X, \mathcal{A}^\bullet) \to \Gamma(X, \mathcal{I}^\bullet)$$
 
@@ -445,7 +445,7 @@ $$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) 
 
 One of the most powerful applications of sheaf cohomology is the computation of cohomology via spectral sequences. In this section we conclude this post with concrete computations. The propositions we introduce now hold in a general topological setting, but since we mainly have in mind applications to varieties and quasi-coherent sheaves, we have placed them in this category.
 
-Fix a continuous map $$f : X \to Y$$ and a sheaf $$\mathcal{F}$$. Then from [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) and [\[Category Theory\] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9), we know that the direct image functor $$f_\ast: \Sh(X)\rightarrow \Sh(Y)$$ is a left exact functor. Thus, just as in [\[Homological Algebra\] §Derived Functor](/en/math/homological_algebra/derived_functors), we can define the right derived functor of $$f_\ast$$ by
+Fix a continuous map $$f : X \to Y$$ and a sheaf $$\mathcal{F}$$. Then from [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) and [\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9), we know that the direct image functor $$f_\ast: \Sh(X)\rightarrow \Sh(Y)$$ is a left exact functor. Thus, just as in [\[Homological Algebra\] §Derived Functors](/en/math/homological_algebra/derived_functors), we can define the right derived functor of $$f_\ast$$ by
 
 $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 
@@ -633,7 +633,7 @@ Conversely, any line bundle $$\mathcal{L}$$ is represented by transition functio
 
 </details>
 
-This proposition shows that the classification of line bundles reduces to a cohomology computation. That is, the problem of classifying elements of $$\Pic(X)$$ now becomes the problem of classifying $$\mathcal{O}_X^\ast$$-valued Čech 1-cocycles, which is encouraging in that explicit computation is possible. In the next post, [§Cohomology of Projective Spaces](/en/math/algebraic_varieties/cohomology_of_projective_spaces), we compute the cohomology of the line bundle $$\mathcal{O}(d)$$ on $$\mathbb{P}^n$$.
+This proposition shows that the classification of line bundles reduces to a cohomology computation. That is, the problem of classifying elements of $$\Pic(X)$$ now becomes the problem of classifying $$\mathcal{O}_X^\ast$$-valued Čech 1-cocycles, which is encouraging in that explicit computation is possible. In the next post, [§Cohomology of Projective Space](/en/math/algebraic_varieties/cohomology_of_projective_spaces), we compute the cohomology of the line bundle $$\mathcal{O}(d)$$ on $$\mathbb{P}^n$$.
 
 ---
 
@@ -646,4 +646,4 @@ This proposition shows that the classification of line bundles reduces to a coho
 
 ---
 
-[^1]: More generally, as we saw in [\[Topology\] §Sheaves, §The Abelian Category of Sheaves](/en/math/topology/sheaves#sheaves-abelian-category), the category $$\Sh(X)$$ of sheaves defined on an arbitrary topological space $$X$$ forms an abelian category.
+[^1]: More generally, as we saw in [\[Topology\] §Sheaves, §§The Abelian Category of Sheaves](/en/math/topology/sheaves#the-abelian-category-of-sheaves), the category $$\Sh(X)$$ of sheaves defined on an arbitrary topological space $$X$$ forms an abelian category.

@@ -13,7 +13,7 @@ sidebar:
 date: 2025-02-19
 last_modified_at: 2025-02-19
 weight: 7
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 By definition, $$\Sch$$ is a full subcategory of $$\LRS$$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $$X,Y$$, a scheme morphism from $$X$$ to $$Y$$ is given by a continuous map $$\varphi: X \rightarrow Y$$ and a morphism of structure sheaves $$\varphi^\sharp: \mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$, where $$\varphi^\sharp$$ must become a local homomorphism when restricted to each stalk. ([§Affine Schemes, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2)) 
@@ -40,7 +40,7 @@ One direction is merely a new version of the assertion that $$\AffSch$$ is a ful
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-that first appeared for motivation in [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#사영공간). This formula was traditionally used to construct projective space, but it did not appear in [§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes) when translating the classical projective space into the language of algebraic geometry. Of course this morphism satisfies the formula $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$, but the points of $$\mathbb{A}^{n+1}_\mathbb{K}$$ are not only of this form, and moreover this formula carries no information about the structure sheaf, so it would be inappropriate to call it a scheme morphism.
+that first appeared for motivation in [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space). This formula was traditionally used to construct projective space, but it did not appear in [§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12) when translating the classical projective space into the language of algebraic geometry. Of course this morphism satisfies the formula $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$, but the points of $$\mathbb{A}^{n+1}_\mathbb{K}$$ are not only of this form, and moreover this formula carries no information about the structure sheaf, so it would be inappropriate to call it a scheme morphism.
 
 Now, to define $$\varphi$$ as a scheme morphism, consider the affine open subscheme of $$\mathbb{P}^n_{\mathbb{K}}$$
 
@@ -58,7 +58,7 @@ and $$D(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{\x_i}$$. Now for each $$
 
 $$\phi_i:\mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{K}[\x_0,\ldots, \x_n]_{\x_i};\qquad \x_{k/i}\mapsto  \frac{\x_k}{\x_i}$$
 
-becomes the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1) can also be checked by a short calculation. Now, borrowing the notation from [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#사영공간), on each $$D(\x_i)$$ they are given by the formula
+becomes the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1) can also be checked by a short calculation. Now, borrowing the notation from [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space), on each $$D(\x_i)$$ they are given by the formula
 
 $$(x_0,\ldots, x_n) \rightarrow \left[\frac{x_0}{x_i}:\cdots:\frac{x_{i-1}}{x_i}:1:\frac{x_{i+1}}{x_i}:\cdots:\frac{x_n}{x_i} \right]$$
 

@@ -30,7 +30,7 @@ We first make the following definition.
 
 For a prime ideal $$\mathfrak{p}$$ and a maximal ideal $$\mathfrak{m}$$ containing $$\mathfrak{p}$$, if $$A_\mathfrak{m}\cong M_\mathfrak{m}$$ then $$A_\mathfrak{p}\cong M_\mathfrak{p}$$, so it suffices to check the above condition only for maximal ideals.
 
-Now define $$M^\ast=\Hom_A(M,A)$$. Since $$A$$ is commutative, $$\Hom_A(M, A)$$ is also an $$A$$-module, and furthermore the trace map $$M^\ast\otimes M \rightarrow A$$ exists. ([\[Multilinear Algebra\] §Hom and Tensor Products, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6))
+Now define $$M^\ast=\Hom_A(M,A)$$. Since $$A$$ is commutative, $$\Hom_A(M, A)$$ is also an $$A$$-module, and furthermore the trace map $$M^\ast\otimes M \rightarrow A$$ exists. ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6))
 
 <div class="definition" markdown="1">
 

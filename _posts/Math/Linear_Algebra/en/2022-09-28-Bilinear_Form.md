@@ -58,7 +58,7 @@ holds for all $$v,w\in V$$, we say that this form is *alternating*.
 
 ## Non-Degenerate Bilinear Forms
 
-Let a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ be given, and consider the canonical pairing $$\langle-,-\rangle:V\times V^\ast\rightarrow \mathbb{K}$$ mentioned above. If a non-degenerate pairing $$\langle -,-\rangle:V\times V\rightarrow \mathbb{K}$$ is given on $$V$$, then from [§Dual Spaces, ⁋Corollary 5](/en/math/linear_algebra/dual_space#cor5) we know that $$\langle -,-\rangle$$ defines an isomorphism
+Let a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ be given, and consider the canonical pairing $$\langle-,-\rangle:V\times V^\ast\rightarrow \mathbb{K}$$ mentioned above. If a non-degenerate pairing $$\langle -,-\rangle:V\times V\rightarrow \mathbb{K}$$ is given on $$V$$, then from [§Dual Space, ⁋Corollary 5](/en/math/linear_algebra/dual_space#cor5) we know that $$\langle -,-\rangle$$ defines an isomorphism
 
 $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
@@ -88,7 +88,7 @@ as the orthogonal complement of $$S$$.
 
 Of course, even if $$\langle -,-\rangle$$ were not symmetric, we could make the same definition, and in fact, once we choose whether to send $$v$$ to $$\langle -,v\rangle$$ or to $$\langle v,-\rangle$$ and stick to this choice consistently, we obtain the same result. In any case, to avoid possible confusion we maintain the condition that $$\langle -,-\rangle$$ is symmetric.
 
-The vector $$w\in V$$ uniquely determines $$f\in V^\ast$$ by [Corollary 3](#cor3), and the above definition means that if $$f$$ obtained in this way is the orthogonal complement of $$v$$ in the sense of [§Dual Spaces, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7), then we think of $$w$$ as being orthogonal to $$v$$, and regard the collection of such $$w$$ as the orthogonal complement. Through this process, we can bring all the results of [§Dual Spaces](/en/math/linear_algebra/dual_space) into $$V$$. In the remainder of this post, we examine this process in detail.
+The vector $$w\in V$$ uniquely determines $$f\in V^\ast$$ by [Corollary 3](#cor3), and the above definition means that if $$f$$ obtained in this way is the orthogonal complement of $$v$$ in the sense of [§Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7), then we think of $$w$$ as being orthogonal to $$v$$, and regard the collection of such $$w$$ as the orthogonal complement. Through this process, we can bring all the results of [§Dual Space](/en/math/linear_algebra/dual_space) into $$V$$. In the remainder of this post, we examine this process in detail.
 
 First, suppose symmetric non-degenerate bilinear forms $$\langle -,-\rangle_V$$ and $$\langle -,-\rangle_W$$ are given on two finite-dimensional $$\mathbb{K}$$-vector spaces $$V$$ and $$W$$. Also, for convenience of discussion, let us denote the isomorphisms determined by these bilinear forms as
 
@@ -128,7 +128,7 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 
 We call such an $$L'$$ satisfying this equation the *adjoint* of the linear map $$L$$, and with a slight abuse of notation, also write it as $$L^\ast$$.
 
-The results of [§Dual Spaces, §§Orthogonal Complements](/en/math/linear_algebra/dual_space#orthogonal-complement) were all obtained from the equation $$(Lv,f)=(v,L^\ast f)$$ for the canonical pairing. Therefore, replacing this with equation (2) for the non-degenerate bilinear forms $$\langle -,-\rangle$$ obtained above, we get the following results.
+The results of [§Dual Space, §§Orthogonal Complement](/en/math/linear_algebra/dual_space#orthogonal-complement) were all obtained from the equation $$(Lv,f)=(v,L^\ast f)$$ for the canonical pairing. Therefore, replacing this with equation (2) for the non-degenerate bilinear forms $$\langle -,-\rangle$$ obtained above, we get the following results.
 
 <div class="proposition" markdown="1">
 

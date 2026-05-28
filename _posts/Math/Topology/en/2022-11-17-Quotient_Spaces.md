@@ -13,7 +13,7 @@ sidebar:
 date: 2022-11-17
 last_modified_at: 2022-11-17
 weight: 10
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 Now we examine how to define a topology on a quotient set. ([[Set Theory] §Equivalence Relations, ⁋Definition 6](/en/math/set_theory/equivalence_relations#def6))

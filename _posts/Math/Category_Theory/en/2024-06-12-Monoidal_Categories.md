@@ -22,7 +22,7 @@ In this post and the next, we examine monoidal categories and monoidal objects d
 
 ## Monoid
 
-We decided to call an associative unital magma a *monoid*. ([\[Algebraic Structures\] §Semigroups, Monoids, Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3)) Unpacking this, the statement that $$M$$ is a monoid means the following.
+We decided to call an associative unital magma a *monoid*. ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3)) Unpacking this, the statement that $$M$$ is a monoid means the following.
 
 > There exists a binary operation $$\mu:M\times M \rightarrow M$$ defined on $$M$$, and an element $$e\in M$$ of $$M$$, such that
 >

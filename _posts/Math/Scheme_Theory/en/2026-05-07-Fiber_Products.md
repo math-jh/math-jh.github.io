@@ -13,7 +13,7 @@ sidebar:
 date: 2025-03-08
 last_modified_at: 2025-03-08
 weight: 11
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Definition and Existence of Fiber Products
@@ -146,7 +146,7 @@ Now, using the above lemma, for arbitrary $$X,Y,Z$$ and scheme morphisms $$\varp
 
 Just as there are various ways to interpret a scheme morphism, there are various ways to understand the fiber product.
 
-Earlier, we agreed to think of a scheme morphism $$X \rightarrow S$$ as a family parametrized by $$S$$ ([§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes)), and from this perspective $$S$$ can be thought of as the base of the family $$X$$. Now, given an arbitrary $$S$$-family $$X \rightarrow S$$ and a scheme morphism $$S' \rightarrow S$$, through the fiber product we obtain a new $$S'$$-family $$X\times_SS' \rightarrow S'$$. From this perspective, we often call the fiber product a *base change*.
+Earlier, we agreed to think of a scheme morphism $$X \rightarrow S$$ as a family parametrized by $$S$$ ([§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes#ex10)), and from this perspective $$S$$ can be thought of as the base of the family $$X$$. Now, given an arbitrary $$S$$-family $$X \rightarrow S$$ and a scheme morphism $$S' \rightarrow S$$, through the fiber product we obtain a new $$S'$$-family $$X\times_SS' \rightarrow S'$$. From this perspective, we often call the fiber product a *base change*.
 
 <div class="example" markdown="1">
 
@@ -264,7 +264,7 @@ $$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mat
 
 </div>
 
-The above example is what we already examined in [§Properties of Scheme Morphisms, ⁋Example 15](/en/math/scheme_theory/morphism_of_schemes). In that example, we claimed that a finite morphism is always quasi-finite, and now we can prove this.
+The above example is what we already examined in [§Properties of Scheme Morphisms, ⁋Example 15](/en/math/scheme_theory/properties_of_scheme_morphisms#ex15). In that example, we claimed that a finite morphism is always quasi-finite, and now we can prove this.
 
 <div class="proposition" markdown="1">
 

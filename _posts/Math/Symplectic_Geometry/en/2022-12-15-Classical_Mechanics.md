@@ -112,7 +112,7 @@ Therefore, finding the path along which the object actually moves in phase space
 
 $$X_H=-J_0\nabla H(z)$$
 
-, and we know that this is always possible. ([\[Differential Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6))
+, and we know that this is always possible. ([\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6))
 
 ## Symplectic Form
 

@@ -13,12 +13,12 @@ sidebar:
 date: 2025-03-08
 last_modified_at: 2025-03-08
 weight: 15
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 From dimension
 
-An important example of closed subschemes is the vanishing scheme defined in [§Closed Subschemes, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes); the motivation for this is naturally the hypersurface $$f=0$$ in Euclidean space $$\mathbb{R}^n$$ defined by $$f^{-1}(0)$$ for a function $$f: \mathbb{R}^n \rightarrow \mathbb{R}$$.
+An important example of closed subschemes is the vanishing scheme defined in [§Closed Subschemes, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes#def7); the motivation for this is naturally the hypersurface $$f=0$$ in Euclidean space $$\mathbb{R}^n$$ defined by $$f^{-1}(0)$$ for a function $$f: \mathbb{R}^n \rightarrow \mathbb{R}$$.
 
 Meanwhile, we are also interested more generally in the vanishing scheme $$Z(s_1,\ldots, s_k)$$ defined by a (finite) family of global sections $$s_1,\ldots, s_k\in \Gamma(X, \mathscr{O}_X)$$. Intuitively, this is obtained by first considering the vanishing scheme $$\iota_1:Z(s_1)\hookrightarrow X$$ using the global section $$s_1$$ on $$X$$, then iterating the process of finding the vanishing scheme of $$s_2\vert_{Z(s_1)}$$ on $$Z(s_1)$$ through the global section
 

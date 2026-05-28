@@ -37,7 +37,7 @@ then the function $$f:X \rightarrow Y$$ obtained by extending them is continuous
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, the function $$f$$ is obtained from [\[Set Theory\] §Sums of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2). Its continuity follows from [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8).
+First, the function $$f$$ is obtained from [\[Set Theory\] §Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2). Its continuity follows from [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8).
 
 </details>
 
@@ -68,7 +68,7 @@ Then $$\mathscr{F}$$ is a presheaf.
 
 </div>
 
-In particular, this definition can be applied when a projection $$p:Y \rightarrow X$$ is given, by considering the presheaf $$\mathscr{F}$$ of continuous sections from $$X$$ to $$Y$$ ([\[Set Theory\] §Retractions and Sections, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2)). Generalizing this, we make the following definition.
+In particular, this definition can be applied when a projection $$p:Y \rightarrow X$$ is given, by considering the presheaf $$\mathscr{F}$$ of continuous sections from $$X$$ to $$Y$$ ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2)). Generalizing this, we make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -176,7 +176,7 @@ Meanwhile, by the universal property of the limit cone, the following propositio
 
 </div>
 
-The following examples should have appeared under [Examples of Presheaves](#examples-of-presheaves) above, but were postponed because we had not yet defined presheaf morphisms.
+The following examples should have appeared under [Examples of presheaves](#examples-of-presheaves) above, but were postponed because we had not yet defined presheaf morphisms.
 
 <div class="example" markdown="1">
 

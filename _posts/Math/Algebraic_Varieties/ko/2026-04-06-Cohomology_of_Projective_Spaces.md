@@ -227,7 +227,7 @@ $$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{F}
 
 $$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{G}) = H^i(\mathbb{P}^N, i_*\mathcal{G})$$ 따라서 다음을 보이면 충분하다: $$\mathbb{P}^N$$ 위의 coherent sheaf $$\mathcal{G}$$에 대해, 충분히 큰 $$n$$에 대해 $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$$ ($$i > 0$$). 여기서 $$\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$$이다.
 
-**핵심 보조정리**. $$\mathcal{G}(n)$$이 충분히 큰 $$n$$에 대해 globally generated임을 보인다. (아래 [⁋정의 6](#def6) 참조.)
+**핵심 보조정리**. $$\mathcal{G}(n)$$이 충분히 큰 $$n$$에 대해 globally generated임을 보인다. (아래 [정의 6](#def6) 참조.)
 
 $$S = \mathbb{K}[\x_0, \ldots, \x_N]$$로 하고, $$M = \bigoplus_{n \in \mathbb{Z}} \Gamma(\mathbb{P}^N, \mathcal{G}(n))$$을 연결 graded $$S$$-module이라 하자. 각 표준 affine 열린집합 $$D_+(\x_j)$$ 위에서, $$\Gamma(D_+(\x_j), \mathcal{G})$$는 degree-0 localisation $$M_{(\x_j)}$$이고, 이는 $$S_{(\x_j)}$$ 위의 finitely generated module이다. Generator들 $$\bar{m}_1, \ldots, \bar{m}_{r_j} \in M_{(\x_j)}$$을 택하자. 각 $$\bar{m}_k$$는 $$m_k / \x_j^{d_k}$$ 꼴로 쓸 수 있으며, 여기서 $$m_k \in M$$은 homogeneous element이다. $$d_0 = \max_j \max_k d_k$$로 하면, 각 generator에 $$\x_j^{d_0 - d_k}$$를 곱하여 homogeneous element $$m_k \cdot \x_j^{d_0 - d_k} \in M_{d_0}$$를 얻는다. 이는 $$\Gamma(\mathbb{P}^N, \mathcal{G}(d_0))$$의 원소이며, $$D_+(\x_j)$$ 위에서 $$\mathcal{G}$$의 stalk를 생성함을 알 수 있다. $$j$$에 대한 최대값을 취하면, $$\mathcal{G}(d_0)$$이 globally generated임을 얻는다.
 

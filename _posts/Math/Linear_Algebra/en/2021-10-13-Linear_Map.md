@@ -237,7 +237,7 @@ is a linear map. In this case, $$\im\iota=W$$ and $$\ker \iota=\{0\}$$. That is,
 
 </div>
 
-In the above example, in the special case where $$W=V$$, the map $$\iota$$ becomes the identity function $$\id_V$$. ([\[Set Theory\] §Operations Between Functions, ⁋Example 3](/en/math/set_theory/operation_of_functions#ex3)) 
+In the above example, in the special case where $$W=V$$, the map $$\iota$$ becomes the identity function $$\id_V$$. ([\[Set Theory\] §Operations on Functions, ⁋Example 3](/en/math/set_theory/operation_of_functions#ex3)) 
 
 <div class="example" markdown="1">
 

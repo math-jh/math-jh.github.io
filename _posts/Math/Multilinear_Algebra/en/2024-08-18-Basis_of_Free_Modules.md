@@ -13,14 +13,14 @@ sidebar:
 date: 2024-08-18
 last_modified_at: 2024-09-23
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 For an arbitrary set $$X$$, we saw that the free $$A$$-module defined by $$X$$ is given by the formula
 
 $$F(X)=\bigoplus_{x\in X} A$$
 
-([\[Algebraic Structures\] §Direct Products and Direct Sums of Modules, Tensor Products, ⁋Proposition 3](/en/math/algebraic_structures/operations_of_modules#prop3)). In this post we examine the properties of free $$A$$-modules in a bit more detail.
+([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 3](/en/math/algebraic_structures/operations_of_modules#prop3)). In this post we examine the properties of free $$A$$-modules in a bit more detail.
 
 ## Basis
 
@@ -38,7 +38,7 @@ A family that is not a free family is called a *related family*.
 
 </div>
 
-A free family generalizes the notion of linear independence in vector spaces. That is, if $$A$$ is a field and $$M$$ is a vector space defined over $$A$$, then a family $$(x_i)_{i\in I}$$ of elements of $$M$$ being a free family is equivalent to the $$x_i$$ being linearly independent. ([\[Linear Algebra\] §Bases of Vector Spaces, ⁋Definition 5](/en/math/linear_algebra/basis#def5)) From this perspective, the elements of a related family are said to be *linearly dependent* with one another.
+A free family generalizes the notion of linear independence in vector spaces. That is, if $$A$$ is a field and $$M$$ is a vector space defined over $$A$$, then a family $$(x_i)_{i\in I}$$ of elements of $$M$$ being a free family is equivalent to the $$x_i$$ being linearly independent. ([\[Linear Algebra\] §Basis of a Vector Space, ⁋Definition 5](/en/math/linear_algebra/basis#def5)) From this perspective, the elements of a related family are said to be *linearly dependent* with one another.
 
 On the other hand, any $$A$$-module $$M$$ always has a generating set. This is because at least the collection of all elements of $$M$$ generates $$M$$. From this we obtain the following.
 

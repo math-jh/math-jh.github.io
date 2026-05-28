@@ -13,7 +13,7 @@ sidebar:
 date: 2022-06-17
 last_modified_at: 2022-12-09
 weight: 7
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Definition of Submanifolds
@@ -124,7 +124,7 @@ Obtaining the following two corollaries from the above corollary is essentially 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let a coordinate system $$(U,\varphi)$$, $$\varphi=(x^i)_{i=1}^{m}$$, about the point $$p_0$$ be given. Then the $$dx^i$$ form a basis of $$T_{p_0}^\ast M$$. Now, just as in the proof of [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#cor2), we insert the $$dy^i$$ one by one and remove the $$dx^j$$ one by one, adjusting the indices appropriately.
+Let a coordinate system $$(U,\varphi)$$, $$\varphi=(x^i)_{i=1}^{m}$$, about the point $$p_0$$ be given. Then the $$dx^i$$ form a basis of $$T_{p_0}^\ast M$$. Now, just as in the proof of [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2), we insert the $$dy^i$$ one by one and remove the $$dx^j$$ one by one, adjusting the indices appropriately.
 
 </details>
 

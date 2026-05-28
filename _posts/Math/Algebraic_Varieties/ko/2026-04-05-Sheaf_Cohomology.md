@@ -458,7 +458,7 @@ $$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) 
 
 Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 통한 cohomology의 계산이다. 우리는 이번 섹션에서 구체적인 계산으로 이 글을 마무리하기로 한다. 지금 소개하는 명제들은 일반적인 위상수학적 설정에서 성립하지만, 우리는 주로 variety와 quasi-coherent sheaf에의 적용을 염두에 둘 것이므로 이 카테고리에 담았다.
 
-연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$를 고정하자. 그럼 [\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11)와 [\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)로부터 direct image functor $$f_\ast: \Sh(X)\rightarrow \Sh(Y)$$는 left exact functor임을 안다. 따라서 우리는 [\[호몰로지 대수학\] §Derived Functor](/ko/math/homological_algebra/derived_functors)에서와 마찬가지로 $$f_\ast$$의 right derived functor를
+연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$를 고정하자. 그럼 [\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11)와 [\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)로부터 direct image functor $$f_\ast: \Sh(X)\rightarrow \Sh(Y)$$는 left exact functor임을 안다. 따라서 우리는 [\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors)에서와 마찬가지로 $$f_\ast$$의 right derived functor를
 
 $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 
@@ -663,4 +663,4 @@ $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_
 
 ---
 
-[^1]: 더 일반적으로, [[\[위상수학\] §층, §층들의 가환범주](/ko/math/topology/sheaves#층들의-가환범주)에서 살펴보았듯 임의의 위상공간 $$X$$ 위에 정의된 sheaf들의 category $$\Sh(X)$$는 abelian category를 이룬다.
+[^1]: 더 일반적으로, [[\[위상수학\] §층, §§층들의 가환범주](/ko/math/topology/sheaves#층들의-가환범주)에서 살펴보았듯 임의의 위상공간 $$X$$ 위에 정의된 sheaf들의 category $$\Sh(X)$$는 abelian category를 이룬다.

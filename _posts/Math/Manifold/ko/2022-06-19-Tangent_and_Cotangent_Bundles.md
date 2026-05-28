@@ -141,9 +141,9 @@ $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 다음은 모두 smooth functor의 예시들이다.
 
 - Dual functor $$(-)^\ast$$ ([\[선형대수학\] §쌍대공간](/ko/math/linear_algebra/dual_space)),
-- $$k$$-th tensor functor $$\mathcal{T}^k(-)$$ ([\[다중선형대수\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
-- $$k$$-th symmetric functor $$\mathcal{S}^k(-)$$ ([\[다중선형대수\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
-- $$k$$-th exterior functor $$\bigwedge\nolimits^k(-)$$ ([\[다중선형대수\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
+- $$k$$-th tensor functor $$\mathcal{T}^k(-)$$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
+- $$k$$-th symmetric functor $$\mathcal{S}^k(-)$$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
+- $$k$$-th exterior functor $$\bigwedge\nolimits^k(-)$$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
 - Tensor product $$-\otimes -$$,
 - Direct sum $$-\oplus-$$.
 

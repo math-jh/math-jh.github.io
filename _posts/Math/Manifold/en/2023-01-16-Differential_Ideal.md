@@ -120,7 +120,7 @@ The following theorem is an important tool for exploring the relationship betwee
 
 We briefly sketch the idea.
 
-1. First, following [§Examples of Manifolds, ⁋Example 5](/en/math/manifold/examples_of_manifolds#ex5), we show that the set
+1. First, following [§Examples of Differentiable Manifolds, ⁋Example 5](/en/math/manifold/examples_of_manifolds#ex5), we show that the set
     
     $$\graph(f)=\{(p,q)\mid f(p)=q\}$$
     

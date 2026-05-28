@@ -34,11 +34,11 @@ To show the converse, we likewise use [§Flatness, ⁋Proposition 1](/en/math/co
 
 $$\mathfrak{m}^n(\mathfrak{a}\otimes_AM )\subseteq \mathfrak{n}^n(\mathfrak{a}\otimes_AM)$$	 
 
-holds. On the other hand, since these are finitely generated $$E$$-modules, [§Blowup Algebra, ⁋Corollary 8](/en/math/commutative_algebra/blowup_algebra#cor8) gives
+holds. On the other hand, since these are finitely generated $$E$$-modules, [§Blowup Algebras, ⁋Corollary 8 (Krull intersection theorem)](/en/math/commutative_algebra/blowup_algebra#cor8) gives
 
 $$\bigcap \mathfrak{m}^n(\mathfrak{a}\otimes_AM)=\bigcap \mathfrak{n}^n(\mathfrak{a}\otimes_AM)=0$$
 
-Therefore, to show $$x=0$$ it suffices to show that $$x\in \mathfrak{m}^n(\mathfrak{a}\otimes_AM)$$ holds for all $$n$$. On the other hand, $$\mathfrak{m}^n(\mathfrak{a}\otimes_AM)$$ can be identified with $$(\mathfrak{m}^n \mathfrak{a})\otimes_AM$$, and applying [§Blowup Algebra, ⁋Lemma 7](/en/math/commutative_algebra/blowup_algebra#lem7) to the following $$\mathfrak{m}$$-stable filtration
+Therefore, to show $$x=0$$ it suffices to show that $$x\in \mathfrak{m}^n(\mathfrak{a}\otimes_AM)$$ holds for all $$n$$. On the other hand, $$\mathfrak{m}^n(\mathfrak{a}\otimes_AM)$$ can be identified with $$(\mathfrak{m}^n \mathfrak{a})\otimes_AM$$, and applying [§Blowup Algebras, ⁋Lemma 7 (Artin-Rees)](/en/math/commutative_algebra/blowup_algebra#lem7) to the following $$\mathfrak{m}$$-stable filtration
 
 $$\mathfrak{m}\supseteq \mathfrak{m}^2\supseteq\cdots$$
 
@@ -88,7 +88,7 @@ what we must show is $$\Tor_1^A(A/(\mathfrak{a}+\mathfrak{m}^t), M)=0$$.
 
 Now $$A/(\mathfrak{a}+\mathfrak{m}^t)$$ is annihilated by $$\mathfrak{m}^t$$, and since $$\mathfrak{m}^t$$ is finitely generated, through this we know that $$A/(\mathfrak{a}+\mathfrak{m}^t)$$ has finite length. Therefore, if we show more generally that $$\Tor_1^A(N, M)=0$$ holds whenever any $$A$$-module $$N$$ of finite length is given, we obtain what we want.
 
-We proceed by induction. If $$N$$ has length $$1$$ then by the discussion after [§Jordan-Hölder Theorem, ⁋Definition 1](/en/math/commutative_algebra/Jordan-Holder_theorem#def1) we must have $$N=A/\mathfrak{m}$$, and thus $$\Tor_1^A(N, M)=0$$ coincides exactly with the hypothesis of the theorem. Choose an $$A$$-module $$N$$ of finite length and any proper submodule $$N'$$ of $$N$$. Then applying the $$\Tor$$ long exact sequence to the exact sequence
+We proceed by induction. If $$N$$ has length $$1$$ then by the discussion after [§The Jordan-Hölder Theorem, ⁋Definition 1](/en/math/commutative_algebra/Jordan-Holder_theorem#def1) we must have $$N=A/\mathfrak{m}$$, and thus $$\Tor_1^A(N, M)=0$$ coincides exactly with the hypothesis of the theorem. Choose an $$A$$-module $$N$$ of finite length and any proper submodule $$N'$$ of $$N$$. Then applying the $$\Tor$$ long exact sequence to the exact sequence
 
 $$0 \rightarrow N' \rightarrow N \rightarrow N/N' \rightarrow 0$$
 

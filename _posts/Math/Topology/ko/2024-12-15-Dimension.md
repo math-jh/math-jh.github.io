@@ -17,7 +17,7 @@ weight: 19
 
 ---
 
-이번 글에서 우리는 위상공간의 차원을 정의한다. 우선 우리는 일반적으로 사용하는 차원을 정의한 후, [대수기하학](/ko/algebraic_varieties/)에서 사용할 차원의 개념을 따로 정의한다. 
+이번 글에서 우리는 위상공간의 차원을 정의한다. 우선 우리는 일반적으로 사용하는 차원을 정의한 후, [대수다양체](/ko/algebraic_varieties/)에서 사용할 차원의 개념을 따로 정의한다. 
 
 ## Covering dimension
 
@@ -148,7 +148,7 @@ Connected component와 비슷하게 다음을 정의할 수 있다.
 
 </div>
 
-그럼 [§연결공간, ⁋명제 2](/ko/math/topology/connected_spaces)과 비슷한 논증에 의하여, irreducible set의 closure는 irreducible인 것을 보일 수 있으므로 irreducible component는 반드시 closed subset이다. 
+그럼 [§연결공간, ⁋명제 2](/ko/math/topology/connected_spaces#prop2)과 비슷한 논증에 의하여, irreducible set의 closure는 irreducible인 것을 보일 수 있으므로 irreducible component는 반드시 closed subset이다. 
 
 <div class="definition" markdown="1">
 

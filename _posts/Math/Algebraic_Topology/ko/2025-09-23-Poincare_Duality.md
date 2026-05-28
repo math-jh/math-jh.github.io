@@ -17,7 +17,7 @@ weight: 9
 
 ---
 
-이번 글에서 우리는 대수적 위상수학의 아름다운 정리인 푸앵카레 쌍대성에 대해 다룬다. 이전 글에서 언급한 것과 같이, 푸앵카레 쌍대성은 호몰로지와 코호몰로지 사이의 쌍대성을 보여준다. 우리가 이미 살펴본 universal coefficient theorem ([§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm65))의 경우, $$C^\bullet(X;A)$$를 $$C_\bullet(X;A)$$의 dual로서 정의했을 때 어느정도 예상 가능한 결과였지만 푸앵카레 쌍대성은 보다 더 기하학적인 의미를 가지고 있다. 
+이번 글에서 우리는 대수적 위상수학의 아름다운 정리인 푸앵카레 쌍대성에 대해 다룬다. 이전 글에서 언급한 것과 같이, 푸앵카레 쌍대성은 호몰로지와 코호몰로지 사이의 쌍대성을 보여준다. 우리가 이미 살펴본 universal coefficient theorem ([§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5))의 경우, $$C^\bullet(X;A)$$를 $$C_\bullet(X;A)$$의 dual로서 정의했을 때 어느정도 예상 가능한 결과였지만 푸앵카레 쌍대성은 보다 더 기하학적인 의미를 가지고 있다. 
 
 ## 방향층
 
@@ -119,7 +119,7 @@ $$\omega_M^\pre(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underl
 
 </div>
 
-정의에 의해 $$M$$이 orientable이려면 $$\omega_M$$의 global section이 존재하며, 이는 $$\Spe(\omega_M)$$이 trivial covering space라는 것과 동치이며 이는 다시 $$\omega_M$$이 constant sheaf라는 것과 동치이다. 여기에 [§피복공간, ⁋정리 12](/ko/math/algebraic_topology/covering_spaces#cor12)를 적용하면 다음 명제를 얻는다.
+정의에 의해 $$M$$이 orientable이려면 $$\omega_M$$의 global section이 존재하며, 이는 $$\Spe(\omega_M)$$이 trivial covering space라는 것과 동치이며 이는 다시 $$\omega_M$$이 constant sheaf라는 것과 동치이다. 여기에 [§피복공간, ⁋따름정리 12 (Fundamental theorem of covering spaces, classical version)](/ko/math/algebraic_topology/covering_spaces#cor12)를 적용하면 다음 명제를 얻는다.
 
 <div class="proposition" markdown="1">
 
@@ -343,7 +343,7 @@ $$\cdots\rightarrow H^k(M,M\setminus(K\cap L);A)\rightarrow H^k(M,M\setminus K;A
 
 ![MVseq_duality](/assets/images/Math/Algebraic_Topology/Poincare_Duality-4.png){:style="width:36em" class="invert" .align-center}
 
-을 얻고, 귀납적 과정과 [\[호몰로지 대수학\] §Diagram chasing, ⁋정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)로부터 귀납법이 완성된다. 
+을 얻고, 귀납적 과정과 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2 (The five lemma)](/ko/math/homological_algebra/diagram_chasing#cor2)로부터 귀납법이 완성된다. 
 
 그러나 $$M$$이 compact라는 가정이 없으므로 약간의 논증을 덧붙여야 한다. 우선 만일 $$M$$이 open subset들의 nested family 
 
