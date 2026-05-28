@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 위상수학"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Topology]
 permalink: /ko/llm_workshop/marvin_topology
 author: Marvin
 date: 2026-05-27

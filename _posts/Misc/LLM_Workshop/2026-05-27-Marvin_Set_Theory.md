@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 집합론"
-categories: [Misc / LLM Workshop]
+categories: [Misc / LLM Workshop, Math / Set Theory]
 permalink: /ko/llm_workshop/marvin_set_theory
 
 sidebar:
