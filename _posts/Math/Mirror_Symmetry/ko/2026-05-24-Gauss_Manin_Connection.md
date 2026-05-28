@@ -257,15 +257,21 @@ $$M_q = \begin{pmatrix} 0 & 1/q & & & \\ & 0 & 1/q & & \\ & & \ddots & \ddots & 
 
 $$z\partial_q\mathcal{I}^a_p = \sum_b (M_q)^a_b\mathcal{I}^b_p$$
 
-를 만족하므로,
+를 만족하므로, $$a<n$$인 $$a$$에 대해서는
 
-한다. Column별로 $$\mathcal{I}^{a+1}_p = qz\partial_q\mathcal{I}^a_p$$ ($$a<n$$)와 $$z\partial_q\mathcal{I}^n_p = \mathcal{I}^0_p$$를 결합하면 $$\mathcal{I}^0_p$$가 만족하는 $$(n+1)$$-차 ODE
+$$z\partial_q\mathcal{I}_p^a=\frac{1}{q}\mathcal{I}_p^{a+1}$$
+
+이 성립하므로 이로부터 $$\mathcal{I}_p^n=(qz\partial_q)^n \mathcal{I}_p^0$$이고, 첫째 column으로부터 얻어지는 식
+
+$$z\partial_q\mathcal{I}_p^n=\mathcal{I}_p^0$$
+
+과 이를 결합하면 우리는 $$\mathcal{I}_p^0$$이 만족하는 $$(n+1)$$-차 ODE
 
 $$(z\partial_q)\bigl(qz\partial_q\bigr)^n\,\mathcal{I}^0_p = \mathcal{I}^0_p$$
 
-가 곧 $$\mathbb{P}^n$$의 *quantum differential equation*으로, A-side $$J$$-function이 만족하는 hypergeometric ODE와 동일하다.
+를 얻으며, 이것이 곧 $$\mathbb{P}^n$$의 quantum differential equation이다. 
 
-**Stationary phase.** $$x_\zeta$$에서 $$\partial_i\partial_j W_q$$는 대각 $$2/x_\zeta$$, 비대각 $$1/x_\zeta$$ ($$\mathbf{1} := (1,\ldots,1)^\top$$)이므로
+으로, A-side $$J$$-function이 만족하는 hypergeometric ODE와 동일하다. State phase asymptotic의 경우, $$x_\zeta$$에서 $$\partial_i\partial_j W_q$$는 대각 $$2/x_\zeta$$, 비대각 $$1/x_\zeta$$ ($$\mathbf{1} := (1,\ldots,1)^\top$$)이므로
 
 $$\Hess_{x_\zeta}(W_q) = \tfrac{1}{x_\zeta}\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr),\qquad \det \Hess_{x_\zeta}(W_q) = (n+1)\,(\zeta\,q^{1/(n+1)})^{-n}$$
 
@@ -277,23 +283,13 @@ $$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1
 
 </div>
 
-위에서 유도한 $$\mathbb{P}^n$$의 quantum differential equation과 A-side $$J$$-function의 일치, 그리고 그 explicit한 hypergeometric 형태 ($$J_{\mathbb{P}^n}(q, z) = e^{H\ln q/z}\sum_{d\geq 0} q^d/\prod_{j=1}^d(H+jz)^{n+1}$$ 등)는 [§Givental J-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function)에서 mirror theorem의 진술과 함께 다룬다.
-
-A-model과 B-model 양측의 connection-level 데이터를 이렇게 정리해두면, 이어지는 [§Jacobi Ring과 Quantum Cohomology의 동형](/ko/math/mirror_symmetry/jacobi_ring)에서 두 측면의 *ring-level* 골조에 해당하는 Jacobi ring과 quantum cohomology 사이의 isomorphism, 즉 $$z\to 0$$ 극한으로 볼 때 oscillating integral의 critical-point 분해와 Gromov-Witten 계산이 만나는 지점을 정밀하게 다룬다.
-
 ---
 
 **참고문헌**
 
-**[Giv96]** A. Givental, *Equivariant Gromov-Witten invariants*, Internat. Math. Res. Notices **1996**, no. 13, 613--663.
+**[CK]** D. A. Cox, S. Katz, *Mirror Symmetry and Algebraic Geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.
 
-**[Pha11]** F. Pham, *Singularities of integrals*, Universitext, Springer, 2011.
-
-**[Sab08]** C. Sabbah, *Isomonodromic deformations and Frobenius manifolds*, Springer, 2008.
-
-**[CK]** D. A. Cox, S. Katz, *Mirror symmetry and algebraic geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.
-
-**[Iri]** H. Iritani, *An integral structure in quantum cohomology and mirror symmetry for toric orbifolds*, Adv. Math. **222** (2009), no. 3, 1016--1079.
+**[MS]** K. Hori, S. Katz, A. Klemm, R. Pandharipande, R. Thomas, C. Vafa, R. Vakil, E. Zaslow, *Mirror Symmetry*, Clay Mathematics Monographs **1**, AMS, 2003.
 
 ---
 

@@ -390,10 +390,6 @@ $$\Lie_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 
 
 **참고문헌**
 
-**[Dub]** B. Dubrovin, *Geometry of $$2$$D topological field theories*, Integrable systems and quantum groups (Montecatini Terme, 1993), Lecture Notes in Math. **1620**, Springer, 1996, 120--348.
+**[CK]** D. A. Cox, S. Katz, *Mirror Symmetry and Algebraic Geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.
 
-**[Her]** C. Hertling, *Frobenius Manifolds and Moduli Spaces for Singularities*, Cambridge Tracts in Mathematics **151**, Cambridge University Press, 2002.
-
-**[Man]** Yu. I. Manin, *Frobenius Manifolds, Quantum Cohomology, and Moduli Spaces*, American Mathematical Society Colloquium Publications **47**, AMS, 1999.
-
-**[HM]** C. Hertling, Yu. Manin, *Weak Frobenius manifolds*, Internat. Math. Res. Notices **1999**, no. 6, 277--286.
+**[MS]** K. Hori, S. Katz, A. Klemm, R. Pandharipande, R. Thomas, C. Vafa, R. Vakil, E. Zaslow, *Mirror Symmetry*, Clay Mathematics Monographs **1**, AMS, 2003.

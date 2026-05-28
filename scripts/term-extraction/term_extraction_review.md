@@ -2190,3 +2190,35 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `total complex` | multi-word English emphasis — possibly a definition |
 | `$$p$$-th translation` | multi-word English emphasis — possibly a definition |
 
+## 내적공간
+- post: `_posts/Math/Linear_Algebra/ko/2022-10-02-Inner_Product_Spaces.md`
+- permalink: `/ko/math/linear_algebra/inner_product_spaces`
+- scanned: 2026-05-28T05:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `dot product` | multi-word English emphasis — possibly a definition |
+
+## 최소제곱법
+- post: `_posts/Math/Linear_Algebra/ko/2022-10-09-Least_Squares_Method.md`
+- permalink: `/ko/math/linear_algebra/least_squares_method`
+- scanned: 2026-05-28T06:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `full row rank` | multi-word English emphasis — possibly a definition |
+| `오른쪽 역행렬` | looks like emphasis (no <sub> partner) |
+| `full column rank` | multi-word English emphasis — possibly a definition |
+
+## 위상공간의 다른 정의들
+- post: `_posts/Math/Topology/ko/2022-11-09-Equivalent_Formulations_of_Topology.md`
+- permalink: `/ko/math/topology/equivalent_formulations_of_topology`
+- scanned: 2026-05-28T07:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Interior axiom.` | multi-word English emphasis — possibly a definition |
+| `neighborhood filter` | multi-word English emphasis — possibly a definition |
+| `ultrafilter` | looks like emphasis (no <sub> partner) |
+| `Neighborhood axiom.` | multi-word English emphasis — possibly a definition |
+
