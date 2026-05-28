@@ -237,7 +237,7 @@ $$\rchi(\mathcal{O}(D)) = 1 + \frac{1}{2}(2ab + 2a + 2b) = (a+1)(b+1)$$
 
 ## 호지 지표 정리
 
-고정된 smooth variety $$X$$에 대하여, 우리는 $$X$$의 divisor들의 모임 $$\Pic(X)$$이 $$1$$차원의 cohomology에 해당하는 것을 안다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 22](/ko/math/algebraic_varieties/sheaf_cohomology#prop22)) 한편 cohomology 위에 정의된 cup product는 일반적으로 intersection product의 dual이므로 ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋예시 15](/ko/math/algebraic_topology/Poincare_duality#ex15)) cohomology를 algebra로서 이해하기 위해서는 intersection product를 이해하면 충분하다. 그런데 우리는 곡면의 경우를 탐구하고 있으므로, nontrivial한 원소가 등장하는 것은 오직 세 개의 차원 $$H^0, H^1, H^2$$에서 뿐이며, cup product는 graded multiplication이므로 이들의 곱이 nontrivial하게 의미가 있는 것은 $$1$$차원의 원소들을 서로 곱할 때, 즉 divisor들의 intersection product에 해당하는 경우뿐이다.
+고정된 smooth variety $$X$$에 대하여, 우리는 $$X$$의 divisor들의 모임 $$\Pic(X)$$이 $$1$$차원의 cohomology에 해당하는 것을 안다. ([§층 코호몰로지, ⁋명제 22](/ko/math/algebraic_varieties/sheaf_cohomology#prop22)) 한편 cohomology 위에 정의된 cup product는 일반적으로 intersection product의 dual이므로 ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋예시 15](/ko/math/algebraic_topology/Poincare_duality#ex15)) cohomology를 algebra로서 이해하기 위해서는 intersection product를 이해하면 충분하다. 그런데 우리는 곡면의 경우를 탐구하고 있으므로, nontrivial한 원소가 등장하는 것은 오직 세 개의 차원 $$H^0, H^1, H^2$$에서 뿐이며, cup product는 graded multiplication이므로 이들의 곱이 nontrivial하게 의미가 있는 것은 $$1$$차원의 원소들을 서로 곱할 때, 즉 divisor들의 intersection product에 해당하는 경우뿐이다.
 
 따라서 우리는 divisor들을 모아두고, 이들의 intersection product가 무엇인지 살펴보아 cohomology ring의 곱셈구조를 살펴볼 수 있다. 이를 위해 우선 다음을 정의한다. 
 

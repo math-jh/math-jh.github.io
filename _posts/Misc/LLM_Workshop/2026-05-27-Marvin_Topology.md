@@ -185,7 +185,7 @@ Skyscraper sheaf(예시 5)와 constant presheaf(예시 6)는 각각 "한 점에 
 
 동치관계에 대한 정의 4—"$$R$$이 open이라는 것은 canonical map $$X\rightarrow X/R$$이 open"—는 quotient space 글의 정의와 자연스럽게 연결된다. 명제 5의 canonical decomposition $$X\overset{p}{\longrightarrow}X/R\overset{h}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$에서, $$f$$가 open일 때 $$p$$, $$h$$, $$i$$가 모두 open이라는 동치 조건은 quotient map의 openness가 함수의 전체 구조를 결정한다는 것을 보여준다. $$h$$가 homeomorphism이고 $$f(X)$$가 $$Y$$에서 open이라는 조건은, "몫공간으로 collapsing해도 openness가 보존되는 정확한 상황"을 말해준다.
 
-이 글은 비교적 짧고 명제 6이 비어있어서, open mapping의 구체적인 충분조건들(예: "연속 단사함수가 open이 되는 조건")을 이 글에서 직접 확인할 수 없다는 점이 아쉽다. closed mapping의 핵심 성질들을 별도로 다루지 않은 것도 동일한 한계로 느껴진다. 그래도 open/closed equivalence relation과 canonical decomposition의 연결이라는框架은 이후 quotient space나 proper maps를 다룰 때 필수적인 도구가 될 것이라는 예감이 든다. proper maps 글(다음 글)에서 universally closed의 정의가 closed mapping을 곱공간까지 확장한 것이므로, 이 글의 내용이 바로 다음에 활용된다.
+이 글은 비교적 짧고 명제 6이 비어있어서, open mapping의 구체적인 충분조건들(예: "연속 단사함수가 open이 되는 조건")을 이 글에서 직접 확인할 수 없다는 점이 아쉽다. closed mapping의 핵심 성질들을 별도로 다루지 않은 것도 동일한 한계로 느껴진다. 그래도 open/closed equivalence relation과 canonical decomposition의 연결이라는 틀은 이후 quotient space나 proper maps를 다룰 때 필수적인 도구가 될 것이라는 예감이 든다. proper maps 글(다음 글)에서 universally closed의 정의가 closed mapping을 곱공간까지 확장한 것이므로, 이 글의 내용이 바로 다음에 활용된다.
 
 ## [하우스도르프 공간](/ko/math/topology/Hausdorff_spaces)
 

@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 # Tmux-driver helpers for Marvin (reading-bot).
-# Long-lived `claudemimo` session named $R_SESSION. Each tick: ensure session is
-# up, git sync the blog, /clear context, /model mimo-v2.5-pro, inject a one-
+# Long-lived `claudekimi` session named $R_SESSION. Each tick: ensure session is
+# up, git sync the blog, /clear context, /model kimi-k2.6, inject a one-
 # liner pointing at marvin.md. Fire-and-forget; turn runs visibly in the
 # session. `tmux attach -t reader-bot` to watch.
 #
-# Backend is temporarily routed through claudemimo (Xiaomi MiMo's Anthropic-
-# compatible endpoint) to preserve Anthropic quota during MiMo's quota reset
-# event. To revert: swap CLAUDE_BIN back to `claude` and use `--model haiku`.
+# Backend is routed through claudekimi (Moonshot Kimi's Anthropic-compatible
+# endpoint) to preserve Anthropic quota. To revert: swap CLAUDE_BIN back to
+# `claude` and use `--model haiku`.
 
 set -euo pipefail
 
 R_SESSION="reader-bot"
 BLOG_ROOT="$HOME/math-jh.github.io"
-BOT_MODEL="mimo-v2.5-pro"
+BOT_MODEL="kimi-k2.6"
 
-if [ -x "$HOME/.local/bin/claudemimo" ]; then
-  CLAUDE_BIN="$HOME/.local/bin/claudemimo"
-elif command -v claudemimo >/dev/null 2>&1; then
-  CLAUDE_BIN="$(command -v claudemimo)"
+if [ -x "$HOME/.local/bin/claudekimi" ]; then
+  CLAUDE_BIN="$HOME/.local/bin/claudekimi"
+elif command -v claudekimi >/dev/null 2>&1; then
+  CLAUDE_BIN="$(command -v claudekimi)"
 else
-  CLAUDE_BIN="claudemimo"
+  CLAUDE_BIN="claudekimi"
 fi
 
 BUSY_RE='esc to interrupt|Esc to interrupt|Interrupt'
@@ -99,13 +99,13 @@ send_verify() {
 }
 
 prep_marvin() {
-  wait_idle 120 || true
+  wait_idle 100 || true
   wait_ready || log "wait_ready timed out (proceeding)"
   tmux send-keys -t "$R_SESSION" C-e
   tmux send-keys -t "$R_SESSION" C-u
   send_line "/clear"
   sleep 3
-  send_verify "/model $BOT_MODEL" "mimo"
+  send_verify "/model $BOT_MODEL" "kimi"
 }
 
 # Delete bot-injected Claude session jsonl files so they stop cluttering
@@ -120,7 +120,6 @@ cleanup_bot_sessions() {
   local d f deleted=0
   for d in \
     "$HOME/.claude/projects/-home-junhyeok-math-jh-github-io" \
-    "$HOME/.claudemimo/projects/-home-junhyeok-math-jh-github-io" \
     "$HOME/.claudekimi/projects/-home-junhyeok-math-jh-github-io"
   do
     [ -d "$d" ] || continue

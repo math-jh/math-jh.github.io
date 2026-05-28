@@ -107,7 +107,7 @@ where $$\bigwedge^0(M)=A$$ and for each $$k$$, $$\bigwedge^k(M)$$ is the free $$
 
 $$d\x_J=d\x_{j_1}\wedge d\x_{j_2}\wedge\cdots\wedge d\x_{j_k},\qquad j_1<\cdots< j_k$$
 
-([\[Multilinear Algebra\] §Tensor Algebras, ⁋Proposition 13](/en/math/multilinear_algebra/tensor_algebras#prop13)). Now for each basis element
+([§Tensor Algebras, ⁋Proposition 13](/en/math/multilinear_algebra/tensor_algebras#prop13)). Now for each basis element
 
 $$f\; d\x_{j_1}\wedge d\x_{j_2}\wedge\cdots\wedge d\x_{j_d}\in {\bigwedge}^k(M)$$
 
