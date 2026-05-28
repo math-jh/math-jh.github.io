@@ -2240,3 +2240,26 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `graph` | looks like emphasis (no <sub> partner) |
 
+## 함수들 사이의 연산
+- post: `_posts/Math/Set_Theory/ko/2022-11-23-Operation_of_Functions.md`
+- permalink: `/ko/math/set_theory/operation_of_functions`
+- scanned: 2026-05-28T09:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `one-to-one` | looks like emphasis (no <sub> partner) |
+| `onto` | looks like emphasis (no <sub> partner) |
+| `one-to-one and onto` | multi-word English emphasis — possibly a definition |
+| `일대일함수` | looks like emphasis (no <sub> partner) |
+| `일대일대응` | looks like emphasis (no <sub> partner) |
+
+## 유향집합
+- post: `_posts/Math/Set_Theory/ko/2022-11-27-Directed_Set.md`
+- permalink: `/ko/math/set_theory/directed_set`
+- scanned: 2026-05-28T10:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `cofinal` | looks like emphasis (no <sub> partner) |
+| `coinitial` | looks like emphasis (no <sub> partner) |
+
