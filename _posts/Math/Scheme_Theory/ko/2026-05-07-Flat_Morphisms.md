@@ -57,7 +57,7 @@ $$\mathbb{Z}/2\mathbb{Z} \xrightarrow{\times 2} \mathbb{Z}/2\mathbb{Z}$$
 
 ## 기하학적 성질
 
-평탄 사상의 가장 기하학적으로 직관적인 특징은 fiber의 [§차원 (스킴)](/ko/math/scheme_theory/dimension)이 기저 위에서 locally constant하다는 점이다. 일반적인 morphism의 경우 Chevalley의 정리에 의해 fiber 차원은 위로 반연속(upper semi-continuous)이지만, 평탄성이 주어지면 이 반연속성이 양방향이 되어 fiber 차원이 일정해진다.
+평탄 사상의 가장 기하학적으로 직관적인 특징은 fiber의 [§차원](/ko/math/scheme_theory/dimension)이 기저 위에서 locally constant하다는 점이다. 일반적인 morphism의 경우 Chevalley의 정리에 의해 fiber 차원은 위로 반연속(upper semi-continuous)이지만, 평탄성이 주어지면 이 반연속성이 양방향이 되어 fiber 차원이 일정해진다.
 
 <div class="proposition" markdown="1">
 

@@ -28,7 +28,30 @@
 #
 # Every override is logged to `scripts/audit/link-overrides.log` (gitignored,
 # truncated at the start of each build). Each entry is a single-line JSON
-# object: {source, url, original, canonical}.
+# object: {source, url, original, canonical, bucket}.
+#
+# Buckets:
+#   cosmetic/label-enrich  — plugin added a descriptive parenthetical to the
+#                            label from the target's `<ins>` content
+#                            (e.g. "예시 1" → "예시 1 (러셀의 역설)"). Source
+#                            is fine; this is the plugin doing its job.
+#   cosmetic/label-trim    — author's text had an extra parenthetical
+#                            (e.g. `Proposition 6 (1)` referring to part 1
+#                            of a multi-part statement) that the plugin
+#                            stripped. Source carries human-added context
+#                            that's lost in canonical — worth a glance.
+#   cosmetic/same-cat-omit — source/target are in the same category so the
+#                            plugin dropped the `\[Cat\]` bracket. Author
+#                            could remove the bracket from source, but it's
+#                            harmless either way.
+#   title-drift            — target page title, category name, or section
+#                            name changed; source displays stale text.
+#                            Worth fixing in source.
+#   anchor-dropped         — target anchor (#prop8 etc.) no longer exists;
+#                            the `⁋Label N` tail was stripped. Source has
+#                            a broken anchor.
+#
+# At end of build a final SUMMARY line is appended with bucket counts.
 
 require "json"
 require "fileutils"
@@ -114,8 +137,85 @@ module LinkNormalizer
     end
   end
 
+  # Classify an (original, canonical) pair into one of:
+  #   cosmetic | title-drift | anchor-dropped
+  module Triage
+    CAT_RE   = /\A\\\[([^\]]+)\\\]\s*(.*)\z/
+    TAIL_RE  = /,\s*([⁋§]{1,2}.*)\z/
+
+    module_function
+
+    def classify(original, canonical)
+      o_cat, o_rest = split_cat(original)
+      c_cat, c_rest = split_cat(canonical)
+
+      if o_cat && c_cat && o_cat != c_cat
+        return "title-drift/category-renamed"
+      end
+
+      # Same-category [Cat] bracket dropped by the plugin while rest is
+      # otherwise identical → cosmetic/same-cat-omit.
+      if o_cat && c_cat.nil? && o_rest == c_rest
+        return "cosmetic/same-cat-omit"
+      end
+
+      o_sec, o_tail = split_tail(o_rest)
+      c_sec, c_tail = split_tail(c_rest)
+
+      if o_tail && c_tail.nil?
+        # Footnote / 각주 references look like an anchor-drop but really
+        # the plugin just doesn't track footnote anchors (#fn:N). Tag them
+        # separately so they're not confused with broken anchors.
+        return "title-drift/footnote-stripped" if o_tail =~ /\A(footnote|각주)\b/i
+        return "anchor-dropped"
+      end
+
+      if o_sec != c_sec
+        return paren_subbucket(o_sec, c_sec) if paren_add?(o_sec, c_sec)
+        return "title-drift/section-renamed"
+      end
+
+      if o_tail != c_tail
+        ot = strip_marker(o_tail.to_s)
+        ct = strip_marker(c_tail.to_s)
+        return paren_subbucket(ot, ct) if paren_add?(ot, ct)
+        return "title-drift/label-renamed"
+      end
+
+      "cosmetic"
+    end
+
+    # Which direction was the parenthetical added?
+    #   label-enrich: canonical has the extra `(…)` → plugin enriched
+    #   label-trim:   original had the extra `(…)` → plugin stripped
+    def paren_subbucket(a, b)
+      return "cosmetic/label-enrich" if b.length > a.length
+      "cosmetic/label-trim"
+    end
+
+    def split_cat(s)
+      m = s.match(CAT_RE)
+      m ? [m[1], m[2]] : [nil, s]
+    end
+
+    def split_tail(s)
+      m = s.match(TAIL_RE)
+      m ? [s[0...m.begin(0)].strip, m[1].strip] : [s.strip, nil]
+    end
+
+    def strip_marker(t)
+      t.sub(/\A[⁋§]{1,2}\s*/, "")
+    end
+
+    def paren_add?(a, b)
+      return true if !a.empty? && b.start_with?(a) && b =~ /\A#{Regexp.escape(a)}\s*\(.*\)\z/
+      return true if !b.empty? && a.start_with?(b) && a =~ /\A#{Regexp.escape(b)}\s*\(.*\)\z/
+      false
+    end
+  end
+
   class << self
-    attr_accessor :maps, :tracker_io
+    attr_accessor :maps, :tracker_io, :bucket_counts
 
     def category_slug_from_url(url)
       m = url.to_s.match(%r{\A/(?:ko|en)/(?:math/)?([A-Za-z0-9_]+)(?:/|$|#)})
@@ -137,6 +237,7 @@ module LinkNormalizer
             "url" => url,
             "original" => display,
             "canonical" => canonical,
+            "bucket" => Triage.classify(display, canonical),
           }
           "[#{canonical}](#{url})"
         else
@@ -214,14 +315,21 @@ module LinkNormalizer
 end
 
 Jekyll::Hooks.register :site, :pre_render do |site|
+  # Skip during local livereload serve — only run on production CI builds.
+  # Avoids overhead on every save and prevents the daemon's stale-plugin
+  # rebuilds from clobbering the tracker log.
+  next unless Jekyll.env == "production"
+
   LinkNormalizer.maps = LinkNormalizer::Maps.new(site)
 
   tracker_path = File.join(site.source, LinkNormalizer::TRACKER_REL)
   FileUtils.mkdir_p(File.dirname(tracker_path))
   LinkNormalizer.tracker_io = File.open(tracker_path, "w")
+  LinkNormalizer.bucket_counts = Hash.new(0)
 end
 
 Jekyll::Hooks.register :documents, :pre_render do |doc|
+  next unless Jekyll.env == "production"
   next unless doc.url =~ %r{\A/(ko|en)/}
   next unless doc.content.is_a?(String)
   new_content, diffs = LinkNormalizer.normalize(doc.content, doc.relative_path, doc.url)
@@ -229,11 +337,33 @@ Jekyll::Hooks.register :documents, :pre_render do |doc|
   # posts; setting the ivar directly is the reliable mutation path.
   doc.instance_variable_set(:@content, new_content) unless diffs.empty?
   diffs.each do |d|
+    LinkNormalizer.bucket_counts[d["bucket"]] += 1
     LinkNormalizer.tracker_io.puts JSON.generate(d) rescue nil
   end
 end
 
 Jekyll::Hooks.register :site, :post_write do |_site|
-  LinkNormalizer.tracker_io&.close
+  next unless Jekyll.env == "production"
+  io = LinkNormalizer.tracker_io
+  counts = LinkNormalizer.bucket_counts || {}
+  if io
+    total = counts.values.sum
+    summary = { "summary" => true, "total" => total }
+    %w[
+      cosmetic
+      cosmetic/label-enrich
+      cosmetic/label-trim
+      cosmetic/same-cat-omit
+      title-drift
+      title-drift/section-renamed
+      title-drift/category-renamed
+      title-drift/label-renamed
+      title-drift/footnote-stripped
+      anchor-dropped
+    ].each { |k| summary[k] = counts[k] || 0 }
+    io.puts JSON.generate(summary) rescue nil
+    io.close
+  end
   LinkNormalizer.tracker_io = nil
+  LinkNormalizer.bucket_counts = nil
 end

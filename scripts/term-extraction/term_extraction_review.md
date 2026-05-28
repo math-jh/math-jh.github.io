@@ -2069,3 +2069,64 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `embedded` | looks like emphasis (no <sub> partner) |
 
+## 접다발과 여접다발
+- post: `_posts/Math/Manifold/ko/2022-06-19-Tangent_and_Cotangent_Bundles.md`
+- permalink: `/ko/math/manifold/tangent_and_cotangent_bundles`
+- scanned: 2026-05-27T21:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Total space` | multi-word English emphasis — possibly a definition |
+| `base space` | multi-word English emphasis — possibly a definition |
+
+## 미분형식
+- post: `_posts/Math/Manifold/ko/2022-06-21-Differential_Forms.md`
+- permalink: `/ko/math/manifold/differential_forms`
+- scanned: 2026-05-27T22:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$(r,s)$$-tensor bundle` | multi-word English emphasis — possibly a definition |
+| `exterior algebra bundle` | multi-word English emphasis — possibly a definition |
+| `differential graded algebra` | multi-word English emphasis — possibly a definition |
+
+## 벡터공간
+- post: `_posts/Math/Linear_Algebra/ko/2022-07-28-Vector_Spaces.md`
+- permalink: `/ko/math/linear_algebra/vector_spaces`
+- scanned: 2026-05-27T22:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `, 혹은 간단히` | looks like emphasis (no <sub> partner) |
+| `스칼라곱` | looks like emphasis (no <sub> partner) |
+
+## 벡터공간의 차원
+- post: `_posts/Math/Linear_Algebra/ko/2022-07-31-Dimension.md`
+- permalink: `/ko/math/linear_algebra/dimension`
+- scanned: 2026-05-27T23:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `어떤` | looks like emphasis (no <sub> partner) |
+| `유한차원` | looks like emphasis (no <sub> partner) |
+| `무한차원` | looks like emphasis (no <sub> partner) |
+
+## 선형사상들의 공간
+- post: `_posts/Math/Linear_Algebra/ko/2022-08-05-Space_of_Linear_Maps.md`
+- permalink: `/ko/math/linear_algebra/space_of_linear_maps`
+- scanned: 2026-05-28T00:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `이라 부르고 $$V^\` | mixed-script emphasis — possibly a definition |
+
+## 가우스 소거법
+- post: `_posts/Math/Linear_Algebra/ko/2022-08-19-Gaussian_Elimination.md`
+- permalink: `/ko/math/linear_algebra/Gaussian_elimination`
+- scanned: 2026-05-28T01:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `가우스 소거법` | looks like emphasis (no <sub> partner) |
+| `첨가행렬` | looks like emphasis (no <sub> partner) |
+

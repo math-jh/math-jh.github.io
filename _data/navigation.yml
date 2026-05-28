@@ -1346,7 +1346,7 @@ category-en:
       #   url: ko/functional_analysis/
   - title: "Topology and geometry"
     children:
-      - title: "Point-Set Topology"
+      - title: "Topology"
         url: en/topology/
       - title: "Algebraic Topology"
         url: en/algebraic_topology/
@@ -1372,7 +1372,7 @@ category-en:
         url: en/about
 
 topology-en:
-  - title: <a href="/en/topology/" class="sidebar_title">Point-Set Topology</a>
+  - title: <a href="/en/topology/" class="sidebar_title">Topology</a>
     children:
       - title: "Open Sets"
         url: en/math/topology/open_sets

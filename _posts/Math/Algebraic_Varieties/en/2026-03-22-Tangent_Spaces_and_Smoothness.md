@@ -114,7 +114,7 @@ In differential geometry, the dimension of the tangent space at any point always
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-We prove only the affine case. Let $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$ be irreducible with $$\dim X = d$$. Consider the local ring $$\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$$ at the point $$x \in X$$. Localization preserves dimension, so $$\dim \mathcal{O}_{X,x} = \dim X = d$$. ([\[Algebraic Varieties\] §Dimension, ⁋Proposition 2](/en/math/algebraic_varieties/dimension#prop2))
+We prove only the affine case. Let $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$ be irreducible with $$\dim X = d$$. Consider the local ring $$\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$$ at the point $$x \in X$$. Localization preserves dimension, so $$\dim \mathcal{O}_{X,x} = \dim X = d$$. ([§Dimension, ⁋Proposition 2](/en/math/algebraic_varieties/dimension#prop2))
 
 In general, for a Noetherian local ring $$(R, \mathfrak{m})$$ one has $$\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$$. ([\[Commutative Algebra\] §Systems of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2)) Therefore
 

@@ -56,7 +56,7 @@ Flatness is one of the most important algebraic properties of [§Morphisms of Sc
 
 ## Geometric Properties
 
-The most geometrically intuitive feature of a flat morphism is that the [§Dimension (Schemes)](/en/math/scheme_theory/dimension) of its fibers is locally constant over the base. For a general morphism, Chevalley's theorem implies that the fiber dimension is upper semi-continuous, but given flatness, this semi-continuity becomes two-sided, so the fiber dimension becomes constant.
+The most geometrically intuitive feature of a flat morphism is that the [§Dimension](/en/math/scheme_theory/dimension) of its fibers is locally constant over the base. For a general morphism, Chevalley's theorem implies that the fiber dimension is upper semi-continuous, but given flatness, this semi-continuity becomes two-sided, so the fiber dimension becomes constant.
 
 <div class="proposition" markdown="1">
 

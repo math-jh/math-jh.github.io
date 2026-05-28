@@ -120,7 +120,7 @@ $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Affine case만 보인다. $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이 irreducible하고 $$\dim X = d$$라 하자. 점 $$x \in X$$에서의 local ring $$\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$$를 생각하자. Localization은 차원을 보존하므로 $$\dim \mathcal{O}_{X,x} = \dim X = d$$이다. ([\[대수기하학\] §차원, ⁋명제 2](/ko/math/algebraic_varieties/dimension#prop2))
+Affine case만 보인다. $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이 irreducible하고 $$\dim X = d$$라 하자. 점 $$x \in X$$에서의 local ring $$\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$$를 생각하자. Localization은 차원을 보존하므로 $$\dim \mathcal{O}_{X,x} = \dim X = d$$이다. ([§차원, ⁋명제 2](/ko/math/algebraic_varieties/dimension#prop2))
 
 일반적으로 Noetherian local ring $$(R, \mathfrak{m})$$에 대하여 $$\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$$이다. ([\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)) 따라서
 
