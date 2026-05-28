@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 # Tmux-driver helpers for Marvin (reading-bot).
 # Long-lived `claude` session named $R_SESSION. Each tick: ensure session is
-# up, git sync the blog, /clear context, /model haiku, inject a one-
-# liner pointing at marvin.md. Fire-and-forget; turn runs visibly in the
-# session. `tmux attach -t reader-bot` to watch.
+# up, git sync the blog, /clear context, inject a one-liner pointing at
+# marvin.md. The model is pinned via the `--model` launch flag only (NOT the
+# `/model` slash command, which persists to the *shared* ~/.claude/settings.json
+# and would clobber the user's interactive default every tick). Fire-and-forget;
+# turn runs visibly in the session. `tmux attach -t reader-bot` to watch.
 
 set -euo pipefail
 
@@ -101,7 +103,13 @@ prep_marvin() {
   tmux send-keys -t "$R_SESSION" C-u
   send_line "/clear"
   sleep 3
-  send_verify "/model $BOT_MODEL" "haiku"
+  # NOTE: deliberately NOT re-asserting the model via `/model $BOT_MODEL` here.
+  # The `/model` slash command persists the choice to the shared
+  # ~/.claude/settings.json, clobbering the user's interactive default (opus)
+  # on every tick. The session is already pinned to $BOT_MODEL by the
+  # `--model` launch flag in ensure_session(), which is session-scoped and
+  # never touches settings.json. /clear does not reset the model, so haiku
+  # persists for the session's lifetime without re-asserting it.
 }
 
 # Delete bot-injected Claude session jsonl files so they stop cluttering
