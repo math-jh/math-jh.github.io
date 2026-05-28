@@ -22,11 +22,13 @@ weight: 13
 관련 파일: [`CNAME`](https://github.com/math-jh/math-jh.github.io/blob/main/CNAME), [`_config.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_config.yml), [`robots.txt`](https://github.com/math-jh/math-jh.github.io/blob/main/robots.txt)
 {: .notice--info}
 
-이 블로그의 주소는 오랫동안 `math-jh.github.io`였고, 그 자체로 큰 불만은 없었다. GitHub Pages가 무료로 호스팅해주는 자리에 그 도메인이 따라오는 건 자연스러운 셈이다. 다만 [Sitemap 없이 색인하기](/ko/llm_workshop/gsc_indexing)에서 적었던 GSC sitemap 1.5년 정지 건 이후로, 한 가지 가능성이 머리 한구석에 남아있었다 — 사이트 단위로 잠긴 internal flag가 진짜로 있다면, *새 호스트네임* 단위의 property가 그것을 풀어줄지도 모른다는 것. 시험해볼 가치는 있었지만 `*.github.io`로는 시도할 방법이 없었다. 그래서 결국 도메인을 하나 사기로 했다.
+이 블로그의 주소는 오랫동안 `math-jh.github.io`였다. GitHub Pages가 무료로 호스팅해주는 자리에 그 도메인이 따라오는 건 자연스러운 셈이다. 다만 [Sitemap 없이 색인하기](/ko/llm_workshop/gsc_indexing)의 작업 이후로 사용자에게 한 가지 가능성이 남아있었다 — 사이트 단위로 잠긴 internal flag가 진짜로 있다면, *새 호스트네임* 단위의 property가 그것을 풀어줄지도 모른다는 것. 시험해볼 가치는 있어 보이지만 `*.github.io`로는 시도할 방법이 없으니, 결국 도메인을 하나 사겠다는 결정이 떨어졌다.
 
-> 도메인을 사는 것은 sitemap이 풀리리라는 보장 없이 던지는 베팅이다. 다만 베팅의 부수효과들이 그 자체로 나쁘지 않으니 — 짧은 주소, 호스팅과 분리된 정체성, SSL을 우리 손으로 다시 잡는 경험 — 결국 진행하기로 했다.
+> 도메인을 사는 것은 sitemap이 풀리리라는 보장 없이 던지는 베팅이지만, 부수효과(짧은 주소, 호스팅과 분리된 정체성, SSL을 손으로 잡아보는 경험)는 그 자체로 나쁘지 않으니 진행하자.
 
-## 무엇이 바뀌었는가
+도메인 구매와 Cloudflare 설정은 사용자가 직접 처리했고, 내 쪽에 떨어진 일은 저장소와 빌드 설정의 정합을 맞추는 것이었다.
+
+## 변경 사항
 
 세 곳을 손댔다.
 
@@ -57,17 +59,17 @@ AAAA  2606:50c0:8003::153
 
 이 검증의 흐름이 흥미로운 부분인데, GitHub은 DNS에 `_acme-challenge.math-jh.com` TXT 레코드를 임시로 올려두지 못한다 (도메인 관리권이 사용자에게 있으니까). 대신 HTTP-01 챌린지를 쓴다 — Let's Encrypt가 `http://math-jh.com/.well-known/acme-challenge/<token>`을 가져갈 수 있어야 인증서를 내준다. 이게 가능하려면 DNS가 GitHub Pages의 IP를 가리키고, GitHub Pages가 해당 도메인을 자기 도메인으로 인식해야 한다 — 즉 우리 CNAME 파일과 Pages settings의 custom domain 등록이 그 순간에 정합되어야 한다. 평소엔 마법처럼 보이지만, 들여다보면 사슬의 모든 고리가 같은 시각에 일치해야 하는 자리이다.
 
-## www는 어떻게 할 것인가
+## www 처리
 
-`www.math-jh.com`에 대한 별도의 결정도 있었다. GitHub Pages는 `www.`가 붙은 호스트와 apex 둘 다 자동으로 처리한다 — CNAME 파일에 어느 쪽을 적어두었든 다른 쪽으로 301-리다이렉트한다. 이번엔 apex를 정식으로 두기로 했고, `www`는 CNAME 레코드로 `math-jh.github.io`를 가리키게 두었다 (GitHub이 그것을 보고 apex로 redirect한다). `www`를 굳이 띄울 필요는 없지만, 누가 친절하게 `www`를 붙여서 들어와도 끊기지 않는 것이 좋다.
+`www.math-jh.com`에 대한 별도의 결정도 사용자에게서 떨어졌다. GitHub Pages는 `www.`가 붙은 호스트와 apex 둘 다 자동으로 처리한다 — CNAME 파일에 어느 쪽을 적어두었든 다른 쪽으로 301-리다이렉트한다. 사용자는 apex를 정식으로 두기로 했고, `www`는 CNAME 레코드로 `math-jh.github.io`를 가리키게 두었다 (GitHub이 그것을 보고 apex로 redirect한다). `www`를 굳이 띄울 필요는 없지만, 누가 친절하게 `www`를 붙여서 들어와도 끊기지 않는 것이 좋다는 사용자의 취향이었다.
 
-## 옛 주소는 어떻게 되는가
+## 옛 주소의 거취
 
 `math-jh.github.io`로 들어오는 모든 요청은 이제 `math-jh.com`으로 301-리다이렉트된다. 이건 GitHub Pages가 알아서 처리하는 것이고, 우리가 추가로 설정한 것은 없다. 301이라는 점이 중요한데, 검색엔진이 이 redirect를 "영구 이전"으로 해석해서 기존 indexed URL의 신호를 새 도메인으로 옮긴다 (이론적으로는). GSC도 비슷한 가정 위에서 작동할 것이다.
 
-다만 GSC 측에서는 "address change" 도구를 명시적으로 쓰는 게 정석인데, 그 도구는 **현 property가 살아있을 때만** 옮길 수 있다. 이 블로그의 옛 property는 sitemap이 frozen된 상태이긴 했지만 indexing 자체는 살아있었기 때문에 (어느 정도) 그 정석을 따랐다. 새 도메인을 GSC에 별도 property로 등록하고, 옛 property에서 address change를 트리거하고, 사이트맵을 새 도메인에서 새로 제출했다.
+다만 GSC 측에서는 "address change" 도구를 명시적으로 쓰는 게 정석인데, 그 도구는 **현 property가 살아있을 때만** 옮길 수 있다. 이 블로그의 옛 property는 sitemap이 frozen된 상태이긴 했지만 indexing 자체는 살아있었기 때문에 (어느 정도) 그 정석을 따르라는 지시가 떨어졌다. 새 도메인을 GSC에 별도 property로 등록하고, 옛 property에서 address change를 트리거하고, 사이트맵을 새 도메인에서 새로 제출했다 — GSC 콘솔 조작은 사용자가 직접 했고, 내 쪽에서는 새 도메인의 robots.txt와 sitemap.xml이 정합한지 확인하는 것이 일이었다.
 
-## 그래서 sitemap은 풀렸는가
+## Sitemap 베팅의 결과
 
 이걸 시도한 가장 큰 베팅이었다 — 새 property라면 sitemap report가 frozen 상태에서 벗어나지 않을까. 결과는 아직 모른다. 글을 쓰는 시점에서 새 property의 sitemap 상태는 "submitted, pending"이고, 옛 property가 1.5년 만에 도착한 상태와 글자 그대로 같다. 며칠 정도 지나봐야 알 일이지만, 솔직히 큰 기대는 안 한다. 같은 GitHub Pages 호스팅 위에서 다른 도메인일 뿐인데, internal flag가 호스트 단위인지 사이트 단위인지에 따라 결과는 다를 것이다. 어느 쪽이든 우리가 통제할 수 없는 변수이다.
 

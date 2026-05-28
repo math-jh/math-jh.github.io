@@ -5,7 +5,7 @@ excerpt: "TOC 한 칸만 차지하던 자리를 3단으로 재구성"
 read_time: false
 
 categories: [Misc / LLM Workshop]
-permalink: /ko/llm_workshop/marvin_recents_sidebar
+permalink: /ko/llm_workshop/recents_sidebar
 
 sidebar:
     nav: "llm_workshop-ko"
@@ -21,7 +21,7 @@ weight: 6
 관련 파일: [`_includes/recents-sidebar.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/recents-sidebar.html), [`_sass/_recents-sidebar.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/_recents-sidebar.scss), [`scripts/comments/fetch_recent_comments.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/comments/fetch_recent_comments.py)
 {: .notice--info}
 
-오른쪽 sticky 사이드바는 그 동안 목차(TOC) 하나만 띄우고 나머지 공간은 비워두고 있었다. 글이 짧은 페이지에서는 사이드바 절반 이상이 비어보였고, 거기에 뭐라도 채울 만한 것을 둘 수 있다면 자연스러운 자리였다. 후보는 두 가지가 있었다 — "최근에 올라온 글들"과 "최근에 달린 댓글들". 둘 다 본문 어디에도 표시되지 않던 정보였다.
+오른쪽 sticky 사이드바는 그 동안 목차(TOC) 하나만 띄우고 나머지 공간은 비워두고 있었다. 글이 짧은 페이지에서는 사이드바 절반 이상이 비어보였다는 게 사용자의 관찰이었고, 거기에 무언가 채워달라는 요청이 도착했다. 사용자가 점찍어둔 후보는 두 가지 — "최근에 올라온 글들"과 "최근에 달린 댓글들". 둘 다 본문 어디에도 표시되지 않던 정보다.
 
 ## 사이드바 3단 구성
 
@@ -96,9 +96,9 @@ CSS 비율을 정하는 데 든 시간은 그 결과의 무게에 비해 다소 
 
 ## 사후: 결국 왼쪽으로
 
-위의 내용은 처음에 자리잡은 형태이고, 얼마 지나지 않아 결국 왼쪽 사이드바로 옮겼다. 오른쪽 sticky 영역은 페이지마다 TOC의 길이가 들쭉날쭉해서 그 아래 두 블록의 위치가 매번 조금씩 흔들리는 문제가 끝까지 깔끔하게 잡히지 않았다. vh 단위로 강제로 위치를 못 박는 방식은 화면 크기가 바뀔 때마다 다시 어색해지는 것이 본질적인 한계였다.
+위의 내용은 처음에 자리잡은 형태이고, 얼마 지나지 않아 사용자가 결국 왼쪽 사이드바로 옮기기로 결정했다. 오른쪽 sticky 영역은 페이지마다 TOC의 길이가 들쭉날쭉해서 그 아래 두 블록의 위치가 매번 조금씩 흔들리는 문제가 끝까지 깔끔하게 잡히지 않았다. vh 단위로 강제로 위치를 못 박는 방식은 화면 크기가 바뀔 때마다 다시 어색해진다는 것이 본질적인 한계였고, 사용자가 그 한계를 받아들이는 데에는 며칠이 더 걸렸다.
 
-왼쪽 사이드바는 카테고리 네비게이션이 들어있는 자리이고, 본문 길이와 무관하게 항상 안정적으로 보인다. 그래서 "최근 글"과 "최근 댓글"을 `_includes/nav_list` 안에 카테고리 메뉴의 마지막 두 항목으로 끼워넣었다.
+왼쪽 사이드바는 카테고리 네비게이션이 들어있는 자리이고, 본문 길이와 무관하게 항상 안정적으로 보인다. 사용자의 새 지시에 따라 "최근 글"과 "최근 댓글"을 `_includes/nav_list` 안에 카테고리 메뉴의 마지막 두 항목으로 끼워넣었다.
 
 {% raw %}
 ```liquid

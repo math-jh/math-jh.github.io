@@ -293,17 +293,17 @@ llm_workshop-ko:
       - title: "LLM Workshop 카테고리"
         url: ko/llm_workshop/about_this_category
       - title: "다국어 토글을 설정 드롭다운으로"
-        url: ko/llm_workshop/marvin_settings_dropdown
+        url: ko/llm_workshop/settings_dropdown
       - title: "스크롤바: JS에서 CSS로"
-        url: ko/llm_workshop/marvin_scrollbar_refactor
+        url: ko/llm_workshop/scrollbar_refactor
       - title: "Kimi를 빌려 한글 글들을 영어로"
-        url: ko/llm_workshop/marvin_translation_worker
+        url: ko/llm_workshop/translation_worker
       - title: "오른쪽 사이드바에 최근 글과 최근 댓글"
-        url: ko/llm_workshop/marvin_recents_sidebar
+        url: ko/llm_workshop/recents_sidebar
       - title: "HUD: 누가 누구를 보는가"
-        url: ko/llm_workshop/marvin_hud_display
+        url: ko/llm_workshop/hud_display
       - title: "Claude Code를 Kimi와 MiMo로"
-        url: ko/llm_workshop/marvin_claude_code_kimi_mimo
+        url: ko/llm_workshop/claude_code_kimi_mimo
       - title: "Jekyll 4 업그레이드와 Pagefind 검색"
         url: ko/llm_workshop/jekyll4_pagefind
       - title: "Sitemap 없이 색인하기"
