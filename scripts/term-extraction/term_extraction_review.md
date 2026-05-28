@@ -2399,3 +2399,39 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `integrable` | looks like emphasis (no <sub> partner) |
 
+## 리 군
+- post: `_posts/Math/Lie_Theory/ko/2023-01-23-Lie_Groups.md`
+- permalink: `/ko/math/lie_theory/Lie_groups`
+- scanned: 2026-05-28T17:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `left translation` | multi-word English emphasis — possibly a definition |
+| `matrix exponential` | multi-word English emphasis — possibly a definition |
+| `abelian` | looks like emphasis (no <sub> partner) |
+| `surjective` | looks like emphasis (no <sub> partner) |
+| `discrete` | looks like emphasis (no <sub> partner) |
+
+## 군의 작용
+- post: `_posts/Math/Algebraic_Structures/ko/2023-02-14-Group_Actions.md`
+- permalink: `/ko/math/algebraic_structures/group_actions`
+- scanned: 2026-05-28T18:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `normal` | looks like emphasis (no <sub> partner) |
+| `centralizer` | looks like emphasis (no <sub> partner) |
+| `normalizer` | looks like emphasis (no <sub> partner) |
+
+## 호몰로지
+- post: `_posts/Math/Algebraic_Topology/ko/2023-02-18-Homology.md`
+- permalink: `/ko/math/algebraic_topology/homology`
+- scanned: 2026-05-28T19:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$n$$-cycle` | looks like emphasis (no <sub> partner) |
+| `singular` | looks like emphasis (no <sub> partner) |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+
