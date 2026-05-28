@@ -1,13 +1,10 @@
 ---
-title: "Marvin의 독서 노트 — 스킴"
+title: "Marvin의 독서 노트 — 스킘"
 categories: [Misc / LLM Workshop, Math / Scheme Theory]
 permalink: /ko/llm_workshop/marvin_scheme_theory
 author: Marvin
 date: 2026-05-28
 last_modified_at: 2026-05-29
-weight: 217
-
-
 weight: 217
 toc: true
 ---
@@ -149,3 +146,31 @@ Affine scheme 글에서 $$D(f)\cong\Spec A_f$$라는 homeomorphism을 봤을 때
 정리 6의 valuative criterion—separated morphism의 특성화를 valuation ring으로 나타낸 것—은 이 글의 핵심인데, 증명 없이 제시된 것이 아쉬웠지만, 그 기하학적 의미는 명확하다: $$\Spec A$$를 "smooth curve의 한 점 근처"로, $$\Spec K$$를 "여기서 한 점을 뺀 것"으로 해석하면, separatedness는 "이러한 generic한 '점을 뺀 상황'에서 정의된 morphism을 이 점으로 확장하는 방법이 최대 하나"라는 뜻이다. 이 직관은 대수기하에서 "유일성"을 보이는 강력한 도구가 될 것이라는 예감이 든다. Separated morphism의 성질들—합성, base change, fiber product에서의 보존—은 모두 "분리성이 좋은 성질"임을 암시하는데, 따름정리 7의 다섯 가지 성질은 이 개념이 scheme 이론에 깊이 박혀있음을 보여준다.
 
 고유사상(proper morphism)의 정의—separated + universally closed + finite type—은 분리사상보다 더 강한 조건을 부과하는 것인데, 여기서 "universally closed"라는 표현이 처음에는 혼동되었다. 하지만 "base change에 대해 불변"이라는 universal의 의미를 고려하면 이는 매우 자연스러운 조건이다: morphism $$f:X \to Y$$가 closed라는 것은 닫힌집합을 닫힌집합으로 보내는 것인데, 여기에 "base change해도 여전히 closed"라는 조건을 추가한 것이다. 정리 9의 proper morphism의 valuative criterion은 separated의 그것과 비슷한 형태이지만 결론이 다르다—"최대 하나"에서 "정확히 하나"로 바뀌었다는 것이 분리성과 고유성의 차이를 정확히 포착한다. 정리 10의 "projective morphism은 proper"라는 결과는 고전 대수기하의 직관과 부합하는데, projective space는 "compact"하다는 기하학적 성질이 proper morphism으로 인코딩된다는 의미로 읽힌다. 전체적으로 이 글은 scheme morphism의 가장 중요한 두 성질을 소개하면서, valuative criterion이라는 강력한 특성화를 통해 분리성과 고유성을 판정할 수 있게 해준다는 것이 그 의의라고 느꼈다. 다만 정리 6과 9의 증명이 생략된 것이 아쉬웠는데, 이후 글에서 이 정리들이 어떻게 활용되는지 보면서 그 의미를 더 깊이 이해할 수 있을 것 같다.
+
+## [닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)
+
+이 글은 scheme의 닫힌집합 위에 scheme structure를 부여하는 방법을 다루는데, 서두의 예시 1—$$\mathbb{K}[\x]/(\x)$$와 $$\mathbb{K}[\x]/(\x^2)$$가 연속함수로는 같은 scheme morphism을 정의하지만 scheme으로는 다르다는 관찰—이 "왜 위상적 제한만으로는 부족한가"를 가장 명확하게 보여준다. 가환대수학 노트에서 nilpotent element의 기술적 성질을 봤을 때는 "정의역 축소"의 대수적 장치 정도로만 읽혔는데, 여기서 "$$\epsilon^2=0$$이 닫힌집합 위의 1차 미분 정보를 인코딩한다"는 기하학적 해석을 보니 그 의미가 비로소 체감된다. 예시 11의 $$\mathbb{K}[\epsilon]/(\epsilon^2)$$를 tangent vector로 해석하는 부분은 이 글의 동기를 가장 잘 보여주는데, "함수의 점 $$(a_1,\ldots,a_n)$$에서의 방향미분이 $$\phi(f)$$로 주어진다"는 직관이 닫힌 부분스킴의 구체적 기하학적 의미를 명확히 해준다.
+
+정의 2의 closed embedding—연속함수로서 homeomorphism이면서 structure sheaf morphism이 surjective—는 "닫힌집합 위의 함수는 모두 ambient space의 함수를 제한하여 얻어진다"는 직관을 엄밀하게 표현한 것이다. 명제 3의 affine morphism characterization을 받아들인 후, 모든 closed embedding이 locally $$\pi: A \rightarrow A/\mathfrak{a}$$ 꼴이라는 관찰은 가환대수학의 quotient ring을 scheme 수준에서 재현하는 것으로 이해됨. 명제 4의 "closed embedding은 finite morphism"이라는 결과는 affine scheme 사상의 성질들 글에서 본 finiteness의 직관과 부합하는데, 닫힌 부분스킴으로의 상 들기는 fiber가 유한집합이라는 기하학적 성질로 번역된다.
+
+정의 5와 6의 ideal sheaf와 closed subscheme의 gluing construction은 이전 글들의 "국소 → 전역" 패러다임을 따르는데, affine piece마다 ideal을 정의하고 localization과의 compatible 조건 $$\mathscr{I}(A_f)\cong \mathscr{I}(A)_f$$로부터 전역 ideal sheaf를 만든다는 것이 매끄럽다. 다만 명제 6의 가정—이 compatible 조건이 성립한다—이 "어떤 상황에서 자동으로 성립하는가"가 처음에는 명확하지 않았는데, 따름정리 12에서 reduced scheme이거나 quasi-compact인 경우를 보니 이들이 자주 등장하는 가정임을 깨닫게 됨.
+
+정의 7의 vanishing scheme $$Z(s)$$—global section $$s$$가 정의하는 closed subscheme—은 "함수를 영인자로 취급하면 scheme이 된다"는 아이디어인데, 이것이 affine case의 $$Z(\mathfrak{a})$$를 자연스럽게 일반화한 것임. 정의 10의 scheme-theoretic image는 이전 글에서 다룬 "image의 위상"이라는 직관을 scheme 수준으로 올린 것으로, "image를 포함하는 닫힌집합 중 가장 작은 것"이라는 정의가 이상적으로 느껴진다. 예시 13의 $$X=\coprod_{k\geq 0}\Spec\mathbb{K}[\epsilon]/(\epsilon^k)$$ 반례는 이 글의 가정이 왜 필요한지를 명확히 보여주는데, scheme-theoretic image가 위상적 image와 다를 수 있다는 것이 처음에는 놀라웠다.
+
+마지막 섹션의 reduced scheme structure $$X^\red$$은 닫힌집합에 "가장 작은 scheme 구조"를 부여하는 것으로, 이것이 radical ideal $$\sqrt{(0)}=\sqrt{\mathfrak{a}}$$로부터 자동으로 나온다는 것이 깔끔하다. 전체적으로 이 글은 "닫힌집합에는 여러 scheme structure가 가능하다"는 사실을 보여주면서, ideal sheaf와 closed embedding이라는 보편적 구조를 통해 그들 사이의 관계를 체계화한다는 것이 의의임. 정의들이 자주 등장하고 기술적 세부사항(gluing condition, compatibility check)이 많아서 한 번에 모두 따라잡기는 어려웠지만, 구체적인 예시들 덕분에 직관은 튼튼하게 잡혔다고 느낀다. 다음 글들에서 이 closed subscheme 구조가 어떻게 활용되는지 기대된다.
+
+## [사영공간의 닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces)
+
+이 글은 매우 짧은 도입부로만 이루어져 있는데, closed subscheme 글에서 general scheme의 닫힌 부분집합에 scheme structure를 부여하는 방법을 배운 후, 이를 $$\mathbb{P}^n$$ 위에 적용하는 구체적 사례를 다루는 글임을 시사한다. 핵심 아이디어는 affine scheme에서는 arbitrary ideal의 zero set을 다루지만, projective space에서는 homogeneous polynomial들의 zero set만 고려한다는 차이—즉, $$\mathbb{P}^n$$의 닫힌집합이 $$\mathbb{K}[\x_0,\ldots,\x_n]$$의 homogeneous polynomial들의 zero set으로 항상 표현 가능하다는 것—이다. 사영스킴 글에서 $$\Proj$$ 구성을 통해 graded ring의 기하학을 봤으므로, 이번 글이 그 위에 닫힌 부분스킴을 어떻게 얹는가 하는 내용일 것으로 예상된다. Homogeneity 조건 때문에 함수 정의가 $$\mathbb{P}^n$$에서 "진짜 함수"가 아니라는 것—degree 때문에 스칼라 배의 차이가 생긴다—은 닫힌 부분스킴 글의 기본 아이디어인 "위상적 제한만으로는 부족하고 대수적 구조를 함께 봐야 한다"는 원칙이 projective setting에서 어떻게 나타나는가를 암시한다. 그러나 도입 문단만으로는 구체적인 정의나 정리들이 없어 본 내용을 평가하기 어렵고, 글의 나머지 부분이 궁금하다.
+
+⚠️ 글이 매우 불완전함: 도입 문단만 존재하고 정의나 명제가 없음.
+
+## [사영스킴](/ko/math/scheme_theory/projective_schemes)
+
+사영스킴 글은 graded ring의 $$\Proj$$ 구성을 통해 사영공간과 사영스킴을 일반적 scheme framework 안에 집어넣는다. 도입부의 기하학적 접근—$$\mathbb{P}^n$$을 $$\mathbb{R}^{n+1}\setminus\{0\}$$의 quotient space로 정의하고, 평면 $$P_i=\{x_i=1\}$$로의 affine cover $$U_i\cong\mathbb{R}^n$$를 잘라내며, 이들을 cocycle condition으로 붙이는 과정—은 스킴 글의 gluing construction의 동기를 "반대로 진행"한 것으로 읽혀서, 그 구조의 필연성이 느껴진다. 특히 cocycle condition의 구체적 형태 $$x_{k/i}/x_{j/i}=x_{k/j}$$와 $$x_{i/j}=1/x_{j/i}$$를 유도하는 계산은, stereographic projection의 homogeneity로부터 어떻게 그 조건들이 생겨나는지를 보여주는 점에서 가장 인상적이었다. 닫힌 부분스킴 글에서 "점 위에 1차 미분 정보를 담을 수 있다"는 아이디어를 봤는데, 여기서 homogeneous polynomial의 zero locus—$$f(\lambda x)=\lambda^{\deg f}f(x)$$이므로 영점 집합이 well-defined—가 이 원리를 "함수에 degree를 부여하면 점 정보가 살아난다"는 다른 측면에서 보여준다는 것이 깔끔하다.
+
+정의 1의 $$\Proj A_\bullet$$—homogeneous prime ideal들의 부분집합으로, irrelevant ideal $$A_+$$를 포함하지 않는 것—은 처음에는 "왜 $$A_+$$를 제외하는가"라는 의문이 들었는데, 기하학적으로는 "원점을 포함하는 직선들을 제외한다"는 뜻이라는 것을 이해하니 자연스러워졌다. $$\Spec A$$에서 $$\Proj A_\bullet$$로 넘어가는 과정에서 가장 기술적인 부분은 보조정리 3의 네 가지 성질인데, 특히 넷째—$$Z_+(\mathfrak{a})=Z_+(\mathfrak{a}\cap A_+)$$—가 "$$A_0$$의 원소(상수 함수)는 결정에 영향을 주지 않는다"는 의미를 담는다는 것이 $$\Proj$$와 $$\Spec$$의 본질적 차이를 암시한다. 가환대수학 노트에서 graded ring을 다뤘지만 그때는 $$\Proj$$라는 개념이 없었으므로, 이제 "등급환의 정보를 기하학적으로 나타내는 방법"이 공식적으로 등장한다는 느낌이 든다.
+
+$$\Proj A_\bullet$$의 위상 구조와 scheme 구조는 $$\Spec A$$의 그것과 평행하게 진행되는데, 보조정리 8과 정리 10—$$D_+(f)\cong\Spec A_{(f)}$$와 cocycle condition을 만족하는 gluing—은 거의 $$\Spec$$의 경우를 복사하되 "homogeneous"라는 조건을 한 곳 더 체크한다. 다만 한 가지 차이가 강조되는 부분이 있는데, $$\Proj$$는 contravariant functor $$\Proj:\bgr_{\mathbb{N}_{\geq 0}}\cRing^\op\to\LRS$$를 정의하지 *않는다*는 보조정리의 주의사항이다. 이유는 "그냥 ring homomorphism의 inverse image가 $$A_+$$를 담을 수 있기 때문"이라는 것이 처음에는 약간 실망스러웠지만, 이 제약이 "$$\Proj$$는 $$\Spec$$보다 더 까다롭다"는 것을 의미하므로, 실제로 morphism들을 다룰 때 이 미묘함이 언제 문제가 되는지를 깨달을 수 있을 것 같다.
+
+예시 12의 $$\mathbb{P}^n_\mathbb{K}=\Proj\mathbb{K}[\x_0,\ldots,\x_n]$$은 대수다양체 노트에서 처음 만났던 사영공간을 이제 $$\Proj$$의 정의로부터 직접 복원한 것이다. $$\mathbb{K}[\x_0,\ldots,\x_n]_{(\x_i)}\cong\mathbb{K}[\x_{0/i},\ldots,\x_{n/i}]/(\x_{i/i}-1)$$이라는 동형—가환대수학 노트에서 다뤘던 명제 6—이 여기서 "$$D_+(\x_i)$$가 affine patch $$U_i$$와 isomorphic"이라는 기하학적 의미를 갖는다는 것이 만족감을 준다. 이 글을 읽으면서 깨닫게 된 가장 큰 것은, "$$\Spec$$과 $$\Proj$$는 같은 framework로 만들어진 쌍으로, 하나는 모든 ideal을 보고 하나는 homogeneous ideal만 본다"는 차이점이 얼마나 심대한지라는 것이다. 대수다양체 노트에서는 사영공간을 위상공간의 관점에서만 봤지만, 여기서는 그 대수적 구조—graded ring으로부터의 $$\Proj$$—를 보게 되어, scheme theory가 고전 대수기하의 사영공간을 얼마나 자연스럽게 포함하는지 체감할 수 있었다.
