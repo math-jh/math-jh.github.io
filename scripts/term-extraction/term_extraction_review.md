@@ -2361,3 +2361,41 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `covariant Hessian` | multi-word English emphasis — possibly a definition |
 
+## 리 미분
+- post: `_posts/Math/Manifold/ko/2022-12-16-Lie_Derivative.md`
+- permalink: `/ko/math/manifold/Lie_derivative`
+- scanned: 2026-05-28T15:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Lie derivative` | multi-word English emphasis — possibly a definition |
+
+## 긴 완전열
+- post: `_posts/Math/Homological_Algebra/ko/2023-01-02-Long_Exact_Sequence.md`
+- permalink: `/ko/math/homological_algebra/long_exact_sequence`
+- scanned: 2026-05-28T16:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `long exact sequence` | multi-word English emphasis — possibly a definition |
+| `homotopy category` | multi-word English emphasis — possibly a definition |
+| `mapping cone` | multi-word English emphasis — possibly a definition |
+
+## 제한합
+- post: `_posts/Math/Algebraic_Structures/ko/2023-01-09-Restricted_Sums.md`
+- permalink: `/ko/math/algebraic_structures/restricted_sums`
+- scanned: 2026-05-28T16:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유한한` | looks like emphasis (no <sub> partner) |
+
+## Distribution
+- post: `_posts/Math/Manifold/ko/2023-01-12-Distribution.md`
+- permalink: `/ko/math/manifold/distribution`
+- scanned: 2026-05-28T16:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `integrable` | looks like emphasis (no <sub> partner) |
+
