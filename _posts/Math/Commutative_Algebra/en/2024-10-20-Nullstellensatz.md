@@ -30,7 +30,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $
 
 </div>
 
-Thus, the above observation says in short that any prime ideal is radical. The proof of this observation is somewhat trivial, but if we had considered the intersection of *maximal* ideals containing $$\mathfrak{p}$$ instead of prime ideals containing $$\mathfrak{p}$$, in a manner similar to [§Integral Extension, §§Nakayama's Lemma](/en/math/commutative_algebra/integral_extension#nakayamas-lemma), then this observation would not have been so obvious, and in fact it would not hold. For example, any local ring containing a prime ideal that is not maximal, such as $$\mathbb{Z}_{(2)}$$, is a counterexample.
+Thus, the above observation says in short that any prime ideal is radical. The proof of this observation is somewhat trivial, but if we had considered the intersection of *maximal* ideals containing $$\mathfrak{p}$$ instead of prime ideals containing $$\mathfrak{p}$$, in a manner similar to [§Integral Extensions, §§Nakayama's Lemma](/en/math/commutative_algebra/integral_extension#nakayamas-lemma), then this observation would not have been so obvious, and in fact it would not hold. For example, any local ring containing a prime ideal that is not maximal, such as $$\mathbb{Z}_{(2)}$$, is a counterexample.
 
 <div class="definition" markdown="1">
 

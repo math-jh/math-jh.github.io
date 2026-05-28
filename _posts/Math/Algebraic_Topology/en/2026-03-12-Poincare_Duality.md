@@ -13,11 +13,11 @@ sidebar:
 date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 9
-translated_at: 2026-05-25T18:00:04+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-25T18:00:04+00:00
 ---
-In this post we discuss Poincaré duality, one of the most beautiful theorems of algebraic topology. As mentioned previously, Poincaré duality reveals a duality between homology and cohomology. The universal coefficient theorem ([§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm65)) gave a result that was more or less expected once we defined $$C^\bullet(X;A)$$ as the dual of $$C_\bullet(X;A)$$; Poincaré duality, by contrast, carries a far more geometric meaning.
+In this post we discuss Poincaré duality, one of the most beautiful theorems of algebraic topology. As mentioned previously, Poincaré duality reveals a duality between homology and cohomology. The universal coefficient theorem ([§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm5)) gave a result that was more or less expected once we defined $$C^\bullet(X;A)$$ as the dual of $$C_\bullet(X;A)$$; Poincaré duality, by contrast, carries a far more geometric meaning.
 
 ## Orientation Sheaf
 
@@ -311,7 +311,7 @@ are compatible with the direct system, and therefore define a homomorphism $$H_c
 
 $$i^\ast\alpha\frown s_{K'}=\alpha\frown i_\ast s_{K'}$$
 
-by the projection formula ([§Cup Products, ⁋Proposition 6](/en/math/algebraic_topology/cup_products#prop6)), and uniqueness in [Lemma 8](#lem8) gives $$i_\ast s_{K'}=s_K$$. Hence we obtain a well-defined homomorphism $$H_c^p(M;A)\rightarrow H_{m-p}(M;A)$$.
+by the projection formula ([§Cup Product, ⁋Proposition 6 (Projection formula)](/en/math/algebraic_topology/cup_products#prop6)), and uniqueness in [Lemma 8](#lem8) gives $$i_\ast s_{K'}=s_K$$. Hence we obtain a well-defined homomorphism $$H_c^p(M;A)\rightarrow H_{m-p}(M;A)$$.
 
 We claim that this homomorphism $$D_M:H_c^p(M;A)\rightarrow H_{m-p}(M;A)$$ is an isomorphism. The proof again uses induction via the Mayer–Vietoris sequence, as in [Lemma 8](#lem8).
 
@@ -337,7 +337,7 @@ After excision and passage to the limit we obtain the commutative diagram
 
 ![MVseq_duality](/assets/images/Math/Algebraic_Topology/Poincare_Duality-4.png){:style="width:36em" class="invert" .align-center}
 
-and the induction is completed by the inductive hypothesis and [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2).
+and the induction is completed by the inductive hypothesis and [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2).
 
 Since $$M$$ need not be compact, an additional argument is required. Suppose $$M$$ is the union of a nested family of open subsets
 

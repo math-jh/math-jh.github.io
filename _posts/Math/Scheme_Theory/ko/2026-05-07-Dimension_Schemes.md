@@ -43,7 +43,7 @@ weight: 16
 
 <ins id="ex3">**예시 3**</ins> 예를 들어 $$\mathbb{Q}$$의 algebraic closure $$\overline{\mathbb{Q}}$$를 생각하자. 그럼 $$\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$$는 integral이므로 scheme morphism $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$는 integral이다. 
 
-한편 [§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products)에 의하여 integral morphism은 base change에 의해 보존되므로, 이를 $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$를 통해 base change를 한 $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$도 integral이다. 그러나 $$\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$의 prime ideal은 $$\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$$와 일대일로 대응되므로 $$\Spec\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$은 무한집합이고, 따라서 $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$는 quasi-finite morphism이 아니므로 finite morphism도 아니다. 
+한편 [§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15)에 의하여 integral morphism은 base change에 의해 보존되므로, 이를 $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$를 통해 base change를 한 $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$도 integral이다. 그러나 $$\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$의 prime ideal은 $$\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$$와 일대일로 대응되므로 $$\Spec\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$은 무한집합이고, 따라서 $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$는 quasi-finite morphism이 아니므로 finite morphism도 아니다. 
 
 </div>
 
@@ -69,11 +69,11 @@ $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y) \rightarrow \Spec \kappa(y)$$
 
 $$\mathfrak{q}_1\subsetneq \mathfrak{q}_2$$
 
-이 존재할 수 없음을 보여야 한다. 이는 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#lem4)의 결과이다. 
+이 존재할 수 없음을 보여야 한다. 이는 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)의 결과이다. 
 
 </details>
 
-위의 명제의 증명에서 사용한 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#lem4)는 임의의 integral extension $$A\hookrightarrow B$$에 대해서도 성립하므로, 더 일반적으로 다음이 성립한다.
+위의 명제의 증명에서 사용한 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)는 임의의 integral extension $$A\hookrightarrow B$$에 대해서도 성립하므로, 더 일반적으로 다음이 성립한다.
 
 <div class="proposition" markdown="1">
 

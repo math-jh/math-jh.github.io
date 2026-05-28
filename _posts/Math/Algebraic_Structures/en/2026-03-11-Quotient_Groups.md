@@ -16,7 +16,7 @@ weight: 5
 translated_at: 2026-05-26T03:30:02+00:00
 translation_source: kimi-cli
 ---
-Previously, in [§Algebraic Structures, §§Quotient Structures](/en/math/algebraic_structures/algebraic_structures#몫구조), we proved that when an equivalence relation $$R$$ is compatible with the operation of a magma $$A$$, the quotient set $$A/R$$ can be given a magma structure in a natural way. Moreover, at the end of [§Semigroups, Monoids, Groups](/en/math/algebraic_structures/groups), we saw that when $$A$$ is a group, the magma $$A/R$$ constructed in this way is also a group. This group $$A/R$$ is called a *quotient group*.
+Previously, in [§Algebraic Structures, §§Quotient Structures](/en/math/algebraic_structures/algebraic_structures#quotient-structures), we proved that when an equivalence relation $$R$$ is compatible with the operation of a magma $$A$$, the quotient set $$A/R$$ can be given a magma structure in a natural way. Moreover, at the end of [§Semigroups, Monoids, and Groups](/en/math/algebraic_structures/groups), we saw that when $$A$$ is a group, the magma $$A/R$$ constructed in this way is also a group. This group $$A/R$$ is called a *quotient group*.
 
 ## Normal Subgroups
 
@@ -37,7 +37,7 @@ First, assume that $$R$$ is compatible with the operation of $$G$$. Then each el
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let $$a,b\in [e]$$. That is, $$a\sim e\sim b$$. Now since $$R$$ is compatible with the operation of $$G$$, multiplying both sides of $$a\sim b$$ on the right by $$b^{-1}$$ yields $$ab^{-1}\sim e$$. Thus $$ab^{-1}\in[e]$$, and by [§Semigroups, Monoids, Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), we know that $$[e]$$ is a subgroup.
+Let $$a,b\in [e]$$. That is, $$a\sim e\sim b$$. Now since $$R$$ is compatible with the operation of $$G$$, multiplying both sides of $$a\sim b$$ on the right by $$b^{-1}$$ yields $$ab^{-1}\sim e$$. Thus $$ab^{-1}\in[e]$$, and by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), we know that $$[e]$$ is a subgroup.
 
 </details>
 

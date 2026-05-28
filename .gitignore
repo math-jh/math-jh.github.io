@@ -53,3 +53,4 @@ scripts/audit/audit-report.md
 
 # Link normalizer build-time tracker
 scripts/audit/link-overrides.log
+scripts/audit/link_normalizer.log

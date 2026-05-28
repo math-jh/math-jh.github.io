@@ -217,7 +217,7 @@ $$p_A(\x)=\prod_{\lambda\in\sigma(A)}(\x-\lambda)^{d_\lambda}$$
 
 $$p_A(\x)=\prod_{\lambda\in\sigma(A)} p_{G_\lambda(A)}(\x)$$
 
-을 얻는다. ([§행렬식의 존재성과 유일성, ⁋정리 11](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#cor11)) 우리는 [보조정리 5](#lem5)에서 $$G_\lambda(A)$$로 $$A$$를 제한했을 때 고유값은 오직 $$\lambda$$ 뿐인 것을 확인하였으므로 각각의 $$p_{G_\lambda(A)}(\x)$$는 오직 $$\x-\lambda$$만을 인수로 가져야한다. 따라서, 위의 두 식이 같기 위해서는 $$p_{G_\lambda(A)}(\x)$$가 정확히 $$d_\lambda$$차 다항식 
+을 얻는다. ([§행렬식의 존재성과 유일성, ⁋따름정리 11](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#cor11)) 우리는 [보조정리 5](#lem5)에서 $$G_\lambda(A)$$로 $$A$$를 제한했을 때 고유값은 오직 $$\lambda$$ 뿐인 것을 확인하였으므로 각각의 $$p_{G_\lambda(A)}(\x)$$는 오직 $$\x-\lambda$$만을 인수로 가져야한다. 따라서, 위의 두 식이 같기 위해서는 $$p_{G_\lambda(A)}(\x)$$가 정확히 $$d_\lambda$$차 다항식 
 
 $$p_{G_\lambda(A)}(\x)=(\x-\lambda)^{d_\lambda}$$
 

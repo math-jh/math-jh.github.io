@@ -20,7 +20,7 @@ We first define the following.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A topological space $$X$$ is called *limit point compact* if every infinite subset of $$X$$ has a limit point. ([§Interior, Closure, and Boundary of Sets, ⁋Definition 8](/en/math/topology/other_concepts#def8))
+<ins id="def1">**Definition 1**</ins> A topological space $$X$$ is called *limit point compact* if every infinite subset of $$X$$ has a limit point. ([§Interior, Closure, and Boundary, ⁋Definition 8](/en/math/topology/other_concepts#def8))
 
 </div>
 
@@ -34,7 +34,7 @@ In general, the following holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Suppose for contradiction that $$X$$ is a compact space that is not limit point compact. Then there exists an infinite subset $$A$$ with no limit point, and thus by the argument following [§Interior, Closure, and Boundary of Sets, ⁋Definition 8](/en/math/topology/other_concepts#def8), we must have $$\cl(A)\setminus A=\emptyset$$. That is, $$A$$ is closed and therefore compact. On the other hand, since each $$a\in A$$ is not a limit point of $$A$$, there exists an open neighborhood $$U_a$$ of $$a$$ such that $$A\cap U_a=\{a\}$$. Then $$(U_a)_{a\in A}$$ is an open cover of $$A$$ with no finite subcover, which is a contradiction.
+Suppose for contradiction that $$X$$ is a compact space that is not limit point compact. Then there exists an infinite subset $$A$$ with no limit point, and thus by the argument following [§Interior, Closure, and Boundary, ⁋Definition 8](/en/math/topology/other_concepts#def8), we must have $$\cl(A)\setminus A=\emptyset$$. That is, $$A$$ is closed and therefore compact. On the other hand, since each $$a\in A$$ is not a limit point of $$A$$, there exists an open neighborhood $$U_a$$ of $$a$$ such that $$A\cap U_a=\{a\}$$. Then $$(U_a)_{a\in A}$$ is an open cover of $$A$$ with no finite subcover, which is a contradiction.
 
 </details>
 
@@ -76,7 +76,7 @@ On the other hand, the converse of [Proposition 5](#prop5) does not hold either.
 
 $$\mathcal{B}=\{(a,\infty)\mid a\in \mathbb{R}\}$$
 
-This collection satisfies the conditions of [§Bases of Topological Spaces, ⁋Corollary 6](/en/math/topology/topological_bases#cor6), and thus defines a topology on $$\mathbb{R}$$.
+This collection satisfies the conditions of [§Bases of a Topological Space, ⁋Corollary 6](/en/math/topology/topological_bases#cor6), and thus defines a topology on $$\mathbb{R}$$.
 
 Consider the sequence $$(x_n)_{n\geq 1}$$ in this topological space $$\mathbb{R}$$ defined by
 
@@ -86,7 +86,7 @@ Then $$(x_n)$$ has no convergent subsequence. On the other hand, $$A=\{x_n\mid n
 
 </div>
 
-The above example shows that convergence of sequences is not a very good concept for checking limit points. On the other hand, by [§Interior, Closure, and Boundary of Sets, ⁋Proposition 6](/en/math/topology/other_concepts#prop6), any limit point of a set $$A$$ belongs to the closure of $$A$$.
+The above example shows that convergence of sequences is not a very good concept for checking limit points. On the other hand, by [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6), any limit point of a set $$A$$ belongs to the closure of $$A$$.
 
 <div class="proposition" markdown="1">
 
@@ -177,7 +177,7 @@ and by first countability, for any given open set $$U$$, we can arrange that $$B
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**Definition 12**</ins> Consider a topological space $$X$$ and a filter $$\mathcal{F}$$ defined on it. ([§Equivalent Formulations of Topological Spaces, ⁋Definition 3](/en/math/topology/equivalent_formulations_of_topology#def3)) Then $$\mathcal{F}$$ is said to *converge* to $$x\in X$$ if $$\mathcal{N}(x)\subseteq \mathcal{F}$$. ([§Open Sets, §§Neighborhood filter](/en/math/topology/open_sets#neighborhood-filter)) In this case, $$x$$ is called a *limit point* of $$\mathcal{F}$$.
+<ins id="def12">**Definition 12**</ins> Consider a topological space $$X$$ and a filter $$\mathcal{F}$$ defined on it. ([§Other Definitions of Topological Spaces, ⁋Definition 3](/en/math/topology/equivalent_formulations_of_topology#def3)) Then $$\mathcal{F}$$ is said to *converge* to $$x\in X$$ if $$\mathcal{N}(x)\subseteq \mathcal{F}$$. ([§Open Sets, §§Neighborhood filter](/en/math/topology/open_sets#neighborhood-filter)) In this case, $$x$$ is called a *limit point* of $$\mathcal{F}$$.
 
 </div>
 
@@ -185,7 +185,7 @@ and by first countability, for any given open set $$U$$, we can arrange that $$B
 
 <div class="definition" markdown="1">
 
-<ins id="def13">**Definition 13**</ins> Let a filter $$\mathcal{F}$$ be defined on a set $$X$$, and let $$X$$ be a topological space. For a function $$f:X \rightarrow Y$$, we say that $$y\in Y$$ is a *limit point* of $$f$$ with respect to $$\mathcal{F}$$ if $$y$$ is a limit point of the filter $${\uparrow}f(\mathcal{F})$$. ([§Equivalent Formulations of Topological Spaces, ⁋Proposition 7](/en/math/topology/equivalent_formulations_of_topology#prop7))
+<ins id="def13">**Definition 13**</ins> Let a filter $$\mathcal{F}$$ be defined on a set $$X$$, and let $$X$$ be a topological space. For a function $$f:X \rightarrow Y$$, we say that $$y\in Y$$ is a *limit point* of $$f$$ with respect to $$\mathcal{F}$$ if $$y$$ is a limit point of the filter $${\uparrow}f(\mathcal{F})$$. ([§Other Definitions of Topological Spaces, ⁋Proposition 7](/en/math/topology/equivalent_formulations_of_topology#prop7))
 
 </div>
 
@@ -193,7 +193,7 @@ Then by definition, $$y\in Y$$ is a limit point of $$f$$ with respect to $$\math
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**Proposition 14**</ins> For a sequence $$(x_n)_{n\geq 1}$$ in a topological space $$X$$, the sequence converges to $$x\in X$$ if and only if the filter generated by the image of the Fréchet filter $$\mathcal{F}$$ on $$\mathbb{N}$$ under the map $$n\mapsto x_n$$ converges to $$x$$. ([§Equivalent Formulations of Topological Spaces, ⁋Example 4](/en/math/topology/equivalent_formulations_of_topology#ex4))
+<ins id="prop14">**Proposition 14**</ins> For a sequence $$(x_n)_{n\geq 1}$$ in a topological space $$X$$, the sequence converges to $$x\in X$$ if and only if the filter generated by the image of the Fréchet filter $$\mathcal{F}$$ on $$\mathbb{N}$$ under the map $$n\mapsto x_n$$ converges to $$x$$. ([§Other Definitions of Topological Spaces, ⁋Example 4](/en/math/topology/equivalent_formulations_of_topology#ex4))
 
 </div>
 

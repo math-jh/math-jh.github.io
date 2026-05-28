@@ -174,7 +174,7 @@ $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\rho_{ji}$$들이 restriction map의 조건([\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#ㅇef2))을 만족하는 것은 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 universal property로부터 자명하다. 여기에서 $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$는, [보조정리 5](#lem5)에 의하여, 단순히 $$S(f_j)^{-1}(A)$$의 원소를 다음의 꼴
+$$\rho_{ji}$$들이 restriction map의 조건([\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#def2))을 만족하는 것은 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 universal property로부터 자명하다. 여기에서 $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$는, [보조정리 5](#lem5)에 의하여, 단순히 $$S(f_j)^{-1}(A)$$의 원소를 다음의 꼴
 
 $$g/h,\qquad\text{where $h\in S(f_j)$}\tag{$\ast$}$$
 
@@ -186,7 +186,7 @@ $$h\in S(f_j)\iff D(f_j)\subseteq D(h)\implies D(f_i)\subseteq D(h)\iff h\in S(f
 
 이제 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8)의 두 조건을 증명한다. 표기의 편의를 위해 $$D(f)=\Spec A_f$$이므로, $$A$$를 $$A_f$$로 바꾸고 나면 $$f=1$$인 경우만 생각하면 충분하다. $$\Spec A=\bigcup_{i\in I}D(f_i)$$를 만족하는 $$f_i\in A$$들을 고정하자. 
 
-우선 첫째 조건을 보이기 위해, 원소 $$s\in A$$가 모든 $$i\in I$$에 대해 $$S(f_i)^{-1}A$$에서 $$s=0$$를 만족한다 하고, $$s$$가 $$A$$의 원소로서도 $$0$$이 됨을 보이자. 그럼 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums)에 의해 $$(f_i)$$의 원소들 중 $$\Spec A=\bigcup_{i=1}^n D(f_i)$$이도록 하는 $$f_1,\ldots, f_n$$을 택할 수 있고, 가정에 의해 모든 $$i=1,\ldots, n$$에 대해 다음의 식
+우선 첫째 조건을 보이기 위해, 원소 $$s\in A$$가 모든 $$i\in I$$에 대해 $$S(f_i)^{-1}A$$에서 $$s=0$$를 만족한다 하고, $$s$$가 $$A$$의 원소로서도 $$0$$이 됨을 보이자. 그럼 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 $$(f_i)$$의 원소들 중 $$\Spec A=\bigcup_{i=1}^n D(f_i)$$이도록 하는 $$f_1,\ldots, f_n$$을 택할 수 있고, 가정에 의해 모든 $$i=1,\ldots, n$$에 대해 다음의 식
 
 $$f_i^{m_i}s=0$$
 
@@ -276,7 +276,7 @@ $$A_\mathfrak{p}\cong \mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scri
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[\[위상수학\] §위상공간의 기저, ⁋보조정리 11](/ko/math/topology/topological_bases#lem11)에 의하여 $$D(f)$$들이 $$\Spec A$$의 base이므로, [\[위상수학\] §위상공간의 기저, ⁋명제 5](/ko/math/topology/topological_bases#prop5)에 의하여 
+[\[위상수학\] §위상공간의 기저, ⁋명제 2](/ko/math/topology/topological_bases#prop2)에 의하여 $$D(f)$$들이 $$\Spec A$$의 base이므로, [\[위상수학\] §위상공간의 기저, ⁋명제 5](/ko/math/topology/topological_bases#prop5)에 의하여 
 
 $$\mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathscr{O}_{\Spec A}(D(f))$$
 

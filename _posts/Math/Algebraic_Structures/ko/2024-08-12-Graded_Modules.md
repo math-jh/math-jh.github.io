@@ -67,7 +67,7 @@ $$u(M_{i+j})\subseteq M_j',\qquad u(M_j)=0\text{ if $j-i\not\in I$}$$
 
 </div>
 
-이 명제는 [§등급환, §명제 6](/ko/math/algebraic_structures/graded_rings#prop6)의 일반화이며, 그 증명 또한 동일하다. 이 동치조건을 만족하는 submodule들을 *graded submodule<sub>등급부분가군</sub>*이라 부른다. 다음 명제 또한 [§등급환, §명제 7](/ko/math/algebraic_structures/graded_rings#prop7)의 일반화이다.
+이 명제는 [§등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)의 일반화이며, 그 증명 또한 동일하다. 이 동치조건을 만족하는 submodule들을 *graded submodule<sub>등급부분가군</sub>*이라 부른다. 다음 명제 또한 [§등급환, ⁋명제 7](/ko/math/algebraic_structures/graded_rings#prop7)의 일반화이다.
 
 <div class="proposition" markdown="1">
 

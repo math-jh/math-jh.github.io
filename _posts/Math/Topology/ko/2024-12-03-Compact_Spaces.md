@@ -175,7 +175,7 @@ $$A_1\cap\cdots\cap A_n$$
 
 </div>
 
-그럼 특히 $$\emptyset\not\in \mathcal{A}$$가 성립한다. 또, 이 조건을 만족하는 family $$\mathcal{A}$$가 주어진다면, $$\mathcal{A}$$의 유한한 교집합들을 모두 추가하여 $$X$$의 filter base $$\mathcal{B}$$를 만들 수 있다. ([§위상공간의 다른 정의들, ⁋정의 6](/ko/math/topology/equivalent_formulations_of_topology#def6)) 이러한 이유로 $$\mathcal{A}$$를 $$\uparrow \mathcal{B}$$의 *subbase*라 부르기도 한다.
+그럼 특히 $$\emptyset\not\in \mathcal{A}$$가 성립한다. 또, 이 조건을 만족하는 family $$\mathcal{A}$$가 주어진다면, $$\mathcal{A}$$의 유한한 교집합들을 모두 추가하여 $$X$$의 filter base $$\mathcal{B}$$를 만들 수 있다. ([§위상공간의 다른 정의들, ⁋정의 5](/ko/math/topology/equivalent_formulations_of_topology#def5)) 이러한 이유로 $$\mathcal{A}$$를 $$\uparrow \mathcal{B}$$의 *subbase*라 부르기도 한다.
 
 그럼 다음 명제는 compactness를 다른 방식으로 서술한 것이다.
 

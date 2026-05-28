@@ -13,7 +13,7 @@ sidebar:
 date: 2024-10-07
 last_modified_at: 2024-10-07
 weight: 11
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Determinant
@@ -67,7 +67,7 @@ Fixing a free $$A$$-module $$M$$ and its basis $$e_1,\ldots, e_n$$, for any elem
 
 $$x_1\wedge \cdots\wedge x_n=\alpha e_1\wedge\cdots\wedge e_n,$$
 
-and we write this as $$\det(x_1,\ldots, x_n)$$. To actually compute this value, one expresses each $$x_i$$ as a linear combination of $$e_1,\ldots, e_n$$ and then rearranges everything using $$e_i\wedge e_i=0$$ and $$e_i\wedge e_j=-e_j\wedge e_i$$. In the case $$A=\mathbb{K}$$, this was already examined in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant, Equation (2)](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). To explain in a bit more detail, for any $$X\in\Mat_n(A)$$, writing $$X=(x_1,\ldots, x_n)$$ using column vectors, there is a unique $$u\in\End_\rMod{A}(M)$$ satisfying $$u(e_i)=x_i$$, and $$\det(u)$$ is well-defined; comparing this with the expression appearing in the proof of [Corollary 3](#cor3), we see that $$\det (x_1,\ldots, x_n)=\det(u)$$. From this we can formulate a matrix version of [Proposition 2](#prop2), and the process of computing it is exactly [\[Linear Algebra\] §Existence and Uniqueness of the Determinant, Equation (2)](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). In particular, we obtain $$\det(u^\ast)=\det(u)$$.
+and we write this as $$\det(x_1,\ldots, x_n)$$. To actually compute this value, one expresses each $$x_i$$ as a linear combination of $$e_1,\ldots, e_n$$ and then rearranges everything using $$e_i\wedge e_i=0$$ and $$e_i\wedge e_j=-e_j\wedge e_i$$. In the case $$A=\mathbb{K}$$, this was already examined in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). To explain in a bit more detail, for any $$X\in\Mat_n(A)$$, writing $$X=(x_1,\ldots, x_n)$$ using column vectors, there is a unique $$u\in\End_\rMod{A}(M)$$ satisfying $$u(e_i)=x_i$$, and $$\det(u)$$ is well-defined; comparing this with the expression appearing in the proof of [Corollary 3](#cor3), we see that $$\det (x_1,\ldots, x_n)=\det(u)$$. From this we can formulate a matrix version of [Proposition 2](#prop2), and the process of computing it is exactly [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). In particular, we obtain $$\det(u^\ast)=\det(u)$$.
 
 ## Minors of a Matrix
 

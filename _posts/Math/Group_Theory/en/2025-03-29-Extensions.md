@@ -78,7 +78,7 @@ Then the following holds.
 
 </div>
 
-Of course, here retraction and section mean group homomorphisms, not merely functions. ([\[Set Theory\] §Retractions and Sections, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2))
+Of course, here retraction and section mean group homomorphisms, not merely functions. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2))
 
 <details class="proof--alone" markdown="1">
 <summary>Proof of Proposition 4</summary>

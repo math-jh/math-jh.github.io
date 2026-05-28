@@ -13,7 +13,7 @@ sidebar:
 date: 2024-09-05
 last_modified_at: 2024-09-19
 weight: 7
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Coordinate Representation
@@ -150,7 +150,7 @@ so we obtain the desired result.
 
 ## Matrix Representations and Trace
 
-Previously we defined the trace of a linear map in [§Hom and Tensor Products, ⁋Definition 4](/en/math/multilinear_algebra/hom_and_tensor#def6). This time, for any $$n\times n$$ matrix $$X$$, let us define the trace of $$X$$ by the following formula
+Previously we defined the trace of a linear map in [§Hom and the Tensor Product, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6). This time, for any $$n\times n$$ matrix $$X$$, let us define the trace of $$X$$ by the following formula
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$.
 

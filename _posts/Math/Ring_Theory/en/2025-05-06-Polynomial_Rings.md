@@ -13,7 +13,7 @@ sidebar:
 date: 2025-05-06
 last_modified_at: 2025-05-06
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 <div class="remark" markdown="1">
@@ -438,7 +438,7 @@ and one can verify that this is well defined. As with polynomials, we define $$\
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-It suffices to consider only the case where $$r, s \ne 0$$. Thus let $$r =u/v$$ and $$s = w/z$$ where $$u, v, w, z$$ are all nonzero polynomials. In any case, the idea is to first compute the given expression and then apply [§Proposition 2](#prop2) and [§Lemma 3](#lem3).
+It suffices to consider only the case where $$r, s \ne 0$$. Thus let $$r =u/v$$ and $$s = w/z$$ where $$u, v, w, z$$ are all nonzero polynomials. In any case, the idea is to first compute the given expression and then apply [Proposition 2](#prop2) and [Lemma 3](#lem3).
 
 1. We have $$r + s = (uz+vw)/(vz)$$. First suppose $$\deg r \ne \deg s$$, that is, $$\deg u + \deg z \ne \deg w + \deg v$$. Then $$uz + vw \ne 0$$, and
     

@@ -13,7 +13,7 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 9
-translated_at: 2026-05-25T02:04:55+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-24T14:30:03+00:00
 ---
@@ -141,7 +141,7 @@ On the other hand, for any group $$G$$, a group homomorphism $$\mathbb{Z}\righta
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong U(G)$$
 
-and by an argument similar to [\[Category Theory\] §Representable Functors, Example 2](/en/math/category_theory/representable_functors#ex2), we see that this isomorphism gives a representation of $$U$$. Moreover, viewing it as
+and by an argument similar to [\[Category Theory\] §Representable Functors](/en/math/category_theory/representable_functors#ex2), we see that this isomorphism gives a representation of $$U$$. Moreover, viewing it as
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong \Hom_\Set(\ast, U(G))$$
 

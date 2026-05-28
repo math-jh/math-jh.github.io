@@ -40,7 +40,7 @@ Then we can show the following equivalence.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First assume (1). Let $$a\in A$$ be an arbitrary non-unit. Then $$(a)$$ is an ideal of $$A$$, so by [\[Algebraic Structures\] §Definition of Rings, ⁋Theorem 9](/en/math/algebraic_structures/rings#thm9) it is contained in some maximal ideal. But since $$A$$ has a unique maximal ideal $$\mathfrak{m}$$, we must have $$(a)\subseteq \mathfrak{m}$$, and therefore $$a\in \mathfrak{m}$$.
+First assume (1). Let $$a\in A$$ be an arbitrary non-unit. Then $$(a)$$ is an ideal of $$A$$, so by [\[Algebraic Structures\] §Definition of a Ring, ⁋Theorem 9 (Krull)](/en/math/algebraic_structures/rings#thm9) it is contained in some maximal ideal. But since $$A$$ has a unique maximal ideal $$\mathfrak{m}$$, we must have $$(a)\subseteq \mathfrak{m}$$, and therefore $$a\in \mathfrak{m}$$.
 
 Now assume (2) and prove (3). For this, it suffices to show that the set of all non-units of $$A$$ is closed under addition. First, from $$\mathfrak{m}\neq A$$ we know that $$\mathfrak{m}$$ does not contain any unit of $$A$$. From this we know that the set of all non-units of $$A$$ must be exactly equal to $$\mathfrak{m}$$.
 

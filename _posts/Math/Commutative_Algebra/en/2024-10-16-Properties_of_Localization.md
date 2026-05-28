@@ -13,14 +13,14 @@ sidebar:
 date: 2024-10-16
 last_modified_at: 2024-10-16
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 We now examine additional properties of localization. The first goal of this post is to prove the close relationship between the localization of modules and the localization of rings that we studied in the previous post. Throughout this post, we fix a ring $$A$$, a multiplicative subset $$S$$ of $$A$$, and an $$A$$-module $$M$$.
 
 ## Localization and Hom, Tensor
 
-We begin by proving a lemma. Defining an $$A$$-module homomorphism $$S^{-1}A\times_A M \rightarrow  S^{-1}M$$ by $$(r/u, x)\mapsto rx/u$$ gives an $$A$$-bilinear map, and therefore induces an $$A$$-linear map $$S^{-1}A\otimes_A M \rightarrow S^{-1}M$$. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 5](/en/math/algebraic_structures/operations_of_modules#def5))
+We begin by proving a lemma. Defining an $$A$$-module homomorphism $$S^{-1}A\times_A M \rightarrow  S^{-1}M$$ by $$(r/u, x)\mapsto rx/u$$ gives an $$A$$-bilinear map, and therefore induces an $$A$$-linear map $$S^{-1}A\otimes_A M \rightarrow S^{-1}M$$. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 5](/en/math/algebraic_structures/operations_of_modules#thm5))
 
 <div class="proposition" markdown="1">
 
@@ -142,7 +142,7 @@ is given. Then this exact sequence is a splitting exact sequence if and only if 
 
 $$0 \rightarrow \Hom_\rMod{A}(K,M) \rightarrow \Hom_\rMod{A}(K,L)\rightarrow \Hom_\rMod{A}(K,N) \rightarrow 0$$
 
-is a splitting exact sequence, and looking at the proof of [\[Multilinear Algebra\] §Hom and Tensor Products, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1), in fact if the above sequence is exact when $$K=N$$, that is, if
+is a splitting exact sequence, and looking at the proof of [\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1), in fact if the above sequence is exact when $$K=N$$, that is, if
 
 $$\Hom_\rMod{A}(N,L) \rightarrow \Hom_\rMod{A}(N,N) \rightarrow 0$$
 

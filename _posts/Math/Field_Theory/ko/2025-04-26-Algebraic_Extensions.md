@@ -23,7 +23,7 @@ weight: 2
 
 우리는 field morphism 중 injective인 것을 *field extension*이라 부른다. 그럼 고정된 field $$\mathbb{K}\in\Field$$에 대하여, $$\mathbb{K}$$의 under category는 $$\mathbb{K}$$의 extension들의 category가 된다. 
 
-[\[범주론\] §범주, ⁋예시 13](/ko/math/category_theory/categories)의 표기법과는 다소 차이가 있으나, 우리는 field extension $$\mathbb{K}\rightarrow \mathbb{L}$$을 종종 $$\mathbb{L}/\mathbb{K}$$와 같이 표기한다. 그럼 field extension $$\mathbb{L}/\mathbb{K}$$가 주어질 때마다 우리는 injective map $$\mathbb{K}\hookrightarrow\mathbb{L}$$을 통해 $$\mathbb{K}$$를 $$\mathbb{L}$$의 subfield와 identify할 수 있다. 그러나, 만일 $$\mathbb{L}=\mathbb{K}$$이고 $$\mathbb{K}\hookrightarrow\mathbb{L}=\mathbb{K}$$이 endomorphism인 경우, 이러한 identification은 혼동의 여지가 있으므로 이 경우에는 $$\mathbb{K}$$와 $$\mathbb{L}$$의 subfield를 identify하지 않는다.  
+[\[범주론\] §범주, ⁋예시 13](/ko/math/category_theory/categories#ex13)의 표기법과는 다소 차이가 있으나, 우리는 field extension $$\mathbb{K}\rightarrow \mathbb{L}$$을 종종 $$\mathbb{L}/\mathbb{K}$$와 같이 표기한다. 그럼 field extension $$\mathbb{L}/\mathbb{K}$$가 주어질 때마다 우리는 injective map $$\mathbb{K}\hookrightarrow\mathbb{L}$$을 통해 $$\mathbb{K}$$를 $$\mathbb{L}$$의 subfield와 identify할 수 있다. 그러나, 만일 $$\mathbb{L}=\mathbb{K}$$이고 $$\mathbb{K}\hookrightarrow\mathbb{L}=\mathbb{K}$$이 endomorphism인 경우, 이러한 identification은 혼동의 여지가 있으므로 이 경우에는 $$\mathbb{K}$$와 $$\mathbb{L}$$의 subfield를 identify하지 않는다.  
 
 정의에 의하여, 두 extension $$\mathbb{K} \rightarrow \mathbb{L}_1$$과 $$\mathbb{K} \rightarrow \mathbb{L}_2$$가 주어졌다 하면, 다음 commutative diagram
 

@@ -204,7 +204,7 @@ $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmat
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda I_k&B\\ 0&C\end{pmatrix}\end{aligned}$$
 
-이 된다. 따라서 $$A$$의 특성다항식을 $$p_A(\mathbf{x})$$라 적으면, [§특성다항식, ⁋정리 4](/ko/math/linear_algebra/characteristic_polynomial#cor4)으로부터 $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})$$이고 따라서
+이 된다. 따라서 $$A$$의 특성다항식을 $$p_A(\mathbf{x})$$라 적으면, [§특성다항식, ⁋따름정리 4](/ko/math/linear_algebra/characteristic_polynomial#cor4)으로부터 $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})$$이고 따라서
 
 $$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 

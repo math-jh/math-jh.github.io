@@ -14,10 +14,10 @@ header:
 date: 2026-03-15
 last_modified_at: 2026-03-15
 weight: 4
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
-In [§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7) we defined regular maps between quasi-projective varieties. Above all, these are functions defined at every point of the domain; even if they are written in rational form on $$D(f)$$ as in [§Affine Varieties, ⁋Definition 13](/en/math/algebraic_varieties/affine_varieties#def14), the only denominators allowed are powers of $$f$$, so they are defined everywhere.
+In [§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7) we defined regular maps between quasi-projective varieties. Above all, these are functions defined at every point of the domain; even if they are written in rational form on $$D(f)$$ as in [§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14), the only denominators allowed are powers of $$f$$, so they are defined everywhere.
 
 Nevertheless, many kinds of functions are given in forms that are not regular maps. For example, $$(x, y) \mapsto [x : y]$$ is not a regular map because it is undefined at the origin, yet it looks like a perfectly natural function. In this post we study *rational maps*, which are functions defined at *most* points.
 
@@ -31,7 +31,7 @@ Just as when we defined regular maps, we first define the notion of a rational f
 
 </div>
 
-The intuition is as follows. In the Zariski topology closed sets are small and open sets are large. Thus a rational function is a function that fails to be defined on a small set but is defined at most of the remaining points. For instance, one may essentially think of open sets in the Zariski topology as being of the form $$D(g)$$, and the regular functions $$f/g$$ defined on them are now regarded as functions. ([§Affine Varieties, ⁋Definition 13](/en/math/algebraic_varieties/affine_varieties#def14)) Of course this function is undefined where $$g=0$$, but that is precisely why we consider functions defined on an open set $$U$$, and in any case the points where $$g=0$$ are small when viewed in the whole space.
+The intuition is as follows. In the Zariski topology closed sets are small and open sets are large. Thus a rational function is a function that fails to be defined on a small set but is defined at most of the remaining points. For instance, one may essentially think of open sets in the Zariski topology as being of the form $$D(g)$$, and the regular functions $$f/g$$ defined on them are now regarded as functions. ([§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14)) Of course this function is undefined where $$g=0$$, but that is precisely why we consider functions defined on an open set $$U$$, and in any case the points where $$g=0$$ are small when viewed in the whole space.
 
 We denote the set of all rational functions on $$X$$ by $$\mathbb{K}(X)$$. The sum and product of two rational functions are defined on the intersection of their domains of definition, and the inverse of a nonzero rational function is defined at the points where that function is nonzero. Hence $$\mathbb{K}(X)$$ is a field, which we call the *function field*.
 

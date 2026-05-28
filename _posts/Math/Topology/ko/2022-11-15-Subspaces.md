@@ -147,7 +147,7 @@ $$X\setminus B\cap A_i=A_i\setminus (B\cap A_i)$$
 
 ## 부분공간과 연속함수
 
-위상공간 $$X,Y$$와 함수 $$f:X\rightarrow Y$$가 주어졌다 하자. 그럼 $$f(X)\subseteq B\subseteq Y$$를 만족하는 집합 $$Y$$에 대하여, $$f$$의 공역을 $$B$$로 제한하여 얻어진 함수는 연속이다. 이는 [정의 1](#def1)과 [§Initial topology와 final topology<sup>†</sup>, ⁋명제 3](/ko/math/topology/initial_and_final_topology#prop3)에 의하여 자명하다.
+위상공간 $$X,Y$$와 함수 $$f:X\rightarrow Y$$가 주어졌다 하자. 그럼 $$f(X)\subseteq B\subseteq Y$$를 만족하는 집합 $$Y$$에 대하여, $$f$$의 공역을 $$B$$로 제한하여 얻어진 함수는 연속이다. 이는 [정의 1](#def1)과 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#prop3)에 의하여 자명하다.
 
 이번에는 위와 같은 상황에서, $$X$$의 부분집합 $$A$$가 주어졌다 하자. 그럼 $$f:X\rightarrow Y$$를 $$A$$로 제한한 함수 $$f\vert_A$$는 $$\iota:A\hookrightarrow X$$에 대하여 $$f\circ\iota$$와 같다. 이는 연속함수 둘의 합성이므로 자명하게 $$f\vert_A$$ 또한 연속임을 확인할 수 있다. 그러나 일반적으로 그 역은 성립하지 않는다. 
 

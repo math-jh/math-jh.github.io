@@ -101,13 +101,13 @@ $$\mathscr{O}_X(U_1\cup U_2)=\mathscr{O}_X(U_1)\times \mathscr{O}_X(U_2)$$
 거꾸로 irreducible reduced scheme $$X$$가 주어졌다 하고, $$X$$가 integral scheme임을 보이자. 즉, $$X$$의 임의의 열린집합 $$U$$가 주어졌을 때, $$\mathscr{O}_X(U)$$가 integral domain임을 보여야 한다. 우선 다음 주장을 보이자.
 
 **주장** 임의의 affine open subset $$\Spec A\cong V\subseteq X$$에 대하여, $$\mathscr{O}_X(V)\cong A$$는 항상 integral domain이다. 
-> $$X$$가 reduced라는 가정으로부터 $$A$$가 reduced ring이어야 하는 것을 안다. 한편, $$X$$는 $$X$$의 irreducible closed subset이므로 $$V$$도 irreducible이고 ([\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop14)) 따라서 [보조정리 3](#lem3)으로부터 $$\mathfrak{N}(A)=0$$는 prime ideal이 되어 $$A$$가 integral domain이다. 
+> $$X$$가 reduced라는 가정으로부터 $$A$$가 reduced ring이어야 하는 것을 안다. 한편, $$X$$는 $$X$$의 irreducible closed subset이므로 $$V$$도 irreducible이고 ([\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)) 따라서 [보조정리 3](#lem3)으로부터 $$\mathfrak{N}(A)=0$$는 prime ideal이 되어 $$A$$가 integral domain이다. 
 
 이제 일반적으로 $$X$$의 임의의 열린집합 $$U$$에 대하여 $$\mathscr{O}_X(U)$$가 integral domain임을 보인다. 이를 위해 두 원소 $$f,g\in \mathscr{O}_X(U)$$가 $$fg=0$$을 만족한다고 하자. 그럼 $$U$$의 두 열린집합
 
 $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x\not\in \mathfrak{m}_x\}$$
 
-와 이들의 여집합 $$Z_U(f), Z_U(g)$$에 대하여 $$U=Z_U(f)\cup Z_U(g)$$가 성립한다. 이제 $$X$$가 irreducible이므로, [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop14)으로부터 그 열린집합 $$U$$ 또한 마찬가지라는 것을 알고 따라서 $$Z_U(f)=U$$이거나 $$Z_U(g)=U$$여야 한다. 일반성을 잃지 않고 $$Z_U(f)=U$$라 하자. 그럼 $$U$$의 임의의 open affine subset $$V$$에 대하여, $$V$$에서
+와 이들의 여집합 $$Z_U(f), Z_U(g)$$에 대하여 $$U=Z_U(f)\cup Z_U(g)$$가 성립한다. 이제 $$X$$가 irreducible이므로, [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)으로부터 그 열린집합 $$U$$ 또한 마찬가지라는 것을 알고 따라서 $$Z_U(f)=U$$이거나 $$Z_U(g)=U$$여야 한다. 일반성을 잃지 않고 $$Z_U(f)=U$$라 하자. 그럼 $$U$$의 임의의 open affine subset $$V$$에 대하여, $$V$$에서
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
@@ -132,7 +132,7 @@ $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
 반대쪽 방향의 경우, scheme $$X$$가 reduced인 것은 임의의 integral domain이 reduced이고, reducedness가 stalk-local property이기 때문에 자명하다. 따라서 주어진 조건을 사용하여 $$X$$가 irreducible이라는 것을 보이면 나머지는 [명제 4](#prop4)로부터 자명하다.
 
-우선 $$X$$가 noetherian scheme이므로 적당한 noetherian ring들 $$A_1,\ldots, A_r$$이 존재하여 $$X=\bigcup \Spec A_i$$라 할 수 있다. 또, $$X$$는 위상공간으로서 noetherian이고, 따라서 [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop13)에 의하여 $$X$$는 유한히 많은 irreducible component를 갖는다. 이제
+우선 $$X$$가 noetherian scheme이므로 적당한 noetherian ring들 $$A_1,\ldots, A_r$$이 존재하여 $$X=\bigcup \Spec A_i$$라 할 수 있다. 또, $$X$$는 위상공간으로서 noetherian이고, 따라서 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)에 의하여 $$X$$는 유한히 많은 irreducible component를 갖는다. 이제
 
 $$X=\bigcup_{j=1}^s X_j\tag{$\ast$}$$
 
@@ -256,7 +256,7 @@ $$\supp(f)=Z(\ann(f))$$
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11**</ins> Affine scheme $$X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$$를 생각하자. 그럼 [§스펙트럼, ⁋보조정리 6](/ko/math/scheme_theory/spectrums)과 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여, 집합으로서 
+<ins id="ex11">**예시 11**</ins> Affine scheme $$X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$$를 생각하자. 그럼 [§스펙트럼, ⁋보조정리 6](/ko/math/scheme_theory/spectrums#lem6)과 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여, 집합으로서 
 
 $$X= Z(\x_2^2,\x_1\x_2)=Z(\x_2^2)\cap Z(\x_1\x_2)=\{(0,0)\}$$
 

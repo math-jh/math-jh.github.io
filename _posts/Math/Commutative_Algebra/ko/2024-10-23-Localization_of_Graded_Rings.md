@@ -25,7 +25,7 @@ $$M(n)_k=M_{n+k}\qquad\text{for all $k$}$$
 
 ## 몫아이디얼
 
-우선 임의의 ring $$A$$와 $$A$$의 두 ideal $$\mathfrak{a}, \mathfrak{b}$$에 대하여, ideal quotient의 정의를 기억하자. ([§기본개념들, ⁋정의 1](/ko/math/commutative_algebra/basic_notions#def1))
+우선 임의의 ring $$A$$와 $$A$$의 두 ideal $$\mathfrak{a}, \mathfrak{b}$$에 대하여, ideal quotient의 정의를 기억하자. ([§기본 개념들, ⁋정의 1](/ko/math/commutative_algebra/basic_notions#def1))
 
 <div class="definition" markdown="1">
 

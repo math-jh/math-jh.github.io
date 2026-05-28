@@ -93,11 +93,11 @@ In general, commutativity does not imply associativity, nor does associativity i
 
 $$\prod_{i\in I} (A_i\times A_i)\cong\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$
 
-([\[Set Theory\] §Properties of Product Sets, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3)), we may regard the function
+([\[Set Theory\] §Properties of Products, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3)), we may regard the function
 
 $$\prod_{i\in I}\star_i:\prod_{i\in I} (A_i\times A_i) \rightarrow \prod_{i\in I} A_i$$
 
-as a function from $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$ to $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$. ([\[Set Theory\] §Properties of Product Sets, ⁋Definition 4](/en/math/set_theory/property_of_products#def4)) Thus $$\prod A_i$$ carries a magma structure with respect to $$\star=\prod\star_i$$. The magma $$(\prod A_i, \star)$$ obtained in this way is called the *product magma*.
+as a function from $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$ to $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$. ([\[Set Theory\] §Properties of Products, ⁋Definition 4](/en/math/set_theory/property_of_products#def4)) Thus $$\prod A_i$$ carries a magma structure with respect to $$\star=\prod\star_i$$. The magma $$(\prod A_i, \star)$$ obtained in this way is called the *product magma*.
 
 Taking the product of the two diagrams above over all $$i\in I$$, we see that if all $$\star_i$$ are commutative, or if all are associative, then $$\star$$ inherits the same property.
 

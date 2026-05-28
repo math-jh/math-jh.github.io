@@ -98,7 +98,7 @@ weight: 13
 1. 만일 $$(A_i)_{i\in I}$$가 $$R$$-saturated인 부분집합들의 family라면, $$\bigcup_{i\in I} A_i$$와 $$\bigcap_{i\in I} A_i$$도 마찬가지다.
 2. $$X\subseteq A$$가 $$R$$-saturated라면 $$A\setminus X$$도 그러하다..
 
-이번에는 canonical projection $$p:A\rightarrow A/R$$와 $$X\subseteq A$$를 생각하자. [§이항관계의 연산, ⁋명제 7](/ko/math/set_theory/operation_of_binary_relations#prop7)에 의하여 
+이번에는 canonical projection $$p:A\rightarrow A/R$$와 $$X\subseteq A$$를 생각하자. [§이항관계들 사이의 연산, ⁋명제 7](/ko/math/set_theory/operation_of_binary_relations#prop7)에 의하여 
 
 $$p^{-1}(p(X))\supseteq X$$
 

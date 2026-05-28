@@ -13,14 +13,14 @@ sidebar:
 date: 2023-01-09
 last_modified_at: 2023-01-09
 weight: 8
-translated_at: 2026-05-27T04:30:01+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
-Previously, we verified in [§Direct Products of Groups](/en/math/algebraic_structures/direct_products) that arbitrary products exist in $$\Grp$$, and in [§Group Homomorphisms, ⁋Proposition 2](/en/math/algebraic_structures/group_homomorphisms) that every morphism in $$\Grp$$ has an equalizer. Therefore, by the argument following [\[Category Theory\] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $$\Grp$$ is a complete category.
+Previously, we verified in [§Direct Product of Groups](/en/math/algebraic_structures/direct_products) that arbitrary products exist in $$\Grp$$, and in [§Group Homomorphisms, ⁋Proposition 2](/en/math/algebraic_structures/group_homomorphisms#prop2) that every morphism in $$\Grp$$ has an equalizer. Therefore, by the argument following [\[Category Theory\] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $$\Grp$$ is a complete category.
 
 On the other hand, every morphism in $$\Grp$$ has a coequalizer. ([§Isomorphism Theorems, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8)) Thus, if $$\Grp$$ has arbitrary coproducts, then $$\Grp$$ would be a cocomplete category and hence a bicomplete category.
 
-However, as in [§Direct Products of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1), it seems difficult to find an obvious way to put a group structure on the coproduct $$\coprod G_i$$ in $$\Set$$. ([\[Set Theory\], §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5))
+However, as in [§Direct Product of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1), it seems difficult to find an obvious way to put a group structure on the coproduct $$\coprod G_i$$ in $$\Set$$. ([\[Set Theory\] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5))
 
 In this post, we first show that the category of abelian groups has coproducts. In the next post, we will show, through a different approach from this one, that for *arbitrary* groups there also exists a group satisfying the universal property of coproducts.
 

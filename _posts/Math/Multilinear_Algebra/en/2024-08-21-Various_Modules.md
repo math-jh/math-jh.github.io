@@ -34,7 +34,7 @@ In a similar vein we can revisit properties of the $$\Hom$$ and $$\otimes$$ func
 
 ## Direct Products and Direct Sums
 
-To see how to use the above adjunction, we consider the most basic example. First, let us examine the relationship between $$\Hom$$, $$\bigoplus$$, and $$\prod$$. To this end we fix left $$A$$-modules $$M,N$$ and families of left $$A$$-modules $$(M_i)_{i\in I}$$, $$(N_j)_{j\in J}$$. Then since $$\Hom$$ is a right adjoint, it preserves limits. ([\[Category Theory\] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)) Therefore, by [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10) we obtain isomorphisms of abelian groups
+To see how to use the above adjunction, we consider the most basic example. First, let us examine the relationship between $$\Hom$$, $$\bigoplus$$, and $$\prod$$. To this end we fix left $$A$$-modules $$M,N$$ and families of left $$A$$-modules $$(M_i)_{i\in I}$$, $$(N_j)_{j\in J}$$. Then since $$\Hom$$ is a right adjoint, it preserves limits. ([\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)) Therefore, by [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10) we obtain isomorphisms of abelian groups
 
 $$\Hom_{\lMod{A}}\left(M, \prod_{j\in J} N_j \right)\cong\prod_{j\in J} \Hom_{\lMod{A}}(M, N_j),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M_i, N)$$
 
@@ -132,7 +132,7 @@ is an isomorphism, we see that $$A$$ itself is projective, and hence any free mo
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-That any direct summand of a free module is projective is clear from the above argument. Thus assume that $$P$$ is projective. By [§Bases, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) we can choose a free $$A$$-module $$F$$ and a surjection $$p:F \rightarrow P$$. On the other hand, $$P$$ being projective means that the map
+That any direct summand of a free module is projective is clear from the above argument. Thus assume that $$P$$ is projective. By [§Basis, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) we can choose a free $$A$$-module $$F$$ and a surjection $$p:F \rightarrow P$$. On the other hand, $$P$$ being projective means that the map
 
 $$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
 

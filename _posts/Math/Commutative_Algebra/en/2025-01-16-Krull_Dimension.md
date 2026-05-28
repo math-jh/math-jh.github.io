@@ -64,7 +64,7 @@ On the other hand, for a local ring $$(A, \mathfrak{m})$$, we can always insert 
 
 In general, when dealing with dimension, we mainly treat the case where the ring $$A$$ is noetherian. One of the main reasons is that [Theorem 7](#thm7) holds only for noetherian rings. Before computing dimensions in earnest, let us first look at a simple example.
 
-First, through the equivalence between the first and third conditions of [§Jordan-Hölder Theorem, ⁋Theorem 4](/en/math/commutative_algebra/Jordan-Holder_theorem#thm4), we know exactly what $$0$$-dimensional noetherian rings are.
+First, through the equivalence between the first and third conditions of [§The Jordan-Hölder Theorem, ⁋Theorem 4](/en/math/commutative_algebra/Jordan-Holder_theorem#thm4), we know exactly what $$0$$-dimensional noetherian rings are.
 
 <div class="proposition" markdown="1">
 
@@ -117,7 +117,7 @@ Now in $$A_\mathfrak{p}$$, $$\mathfrak{p}A_\mathfrak{p}$$ is the unique maximal 
 
 $$\mathfrak{a}A_\mathfrak{p}\subseteq (\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p},\qquad \mathfrak{q}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$$
 
-On the other hand, since $$\mathfrak{p}A_\mathfrak{p}$$ is minimal among prime ideals containing $$\mathfrak{a}A_\mathfrak{p}$$, by [§Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8), $$A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$$ is artinian. From this we know that the descending chain of symbolic powers
+On the other hand, since $$\mathfrak{p}A_\mathfrak{p}$$ is minimal among prime ideals containing $$\mathfrak{a}A_\mathfrak{p}$$, by [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8), $$A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$$ is artinian. From this we know that the descending chain of symbolic powers
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(1)}+\mathfrak{a}A_\mathfrak{p}\supseteq (\mathfrak{q}A_\mathfrak{p})^{(2)}+\mathfrak{a}A_\mathfrak{p}\supseteq\cdots $$
 
@@ -141,7 +141,7 @@ and since $$a\in \mathfrak{p}A_\mathfrak{p}=J(A_\mathfrak{p})$$, by [§Integral 
 
 $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 
-and since $$\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$$, we have $$(\mathfrak{q}A_\mathfrak{q})^{n}=0$$. Now from the equivalence of the second and third conditions of [§Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8), $$A_\mathfrak{q}=A_\mathfrak{q}/(0)$$ is artinian, and therefore by [Corollary 3](#cor3) we know that $$\dim A_\mathfrak{q}=0$$.
+and since $$\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$$, we have $$(\mathfrak{q}A_\mathfrak{q})^{n}=0$$. Now from the equivalence of the second and third conditions of [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8), $$A_\mathfrak{q}=A_\mathfrak{q}/(0)$$ is artinian, and therefore by [Corollary 3](#cor3) we know that $$\dim A_\mathfrak{q}=0$$.
 
 </details>
 

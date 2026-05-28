@@ -13,7 +13,7 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 11
-translated_at: 2026-05-24T17:30:03+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-24T17:30:03+00:00
 ---
@@ -303,7 +303,7 @@ Define a function $$p:G \rightarrow G\cdot x$$ by $$g\mapsto g\cdot x$$. By defi
 
 </details>
 
-Therefore, if $$G$$ is finite, then by [§Quotient Groups, ⁋Proposition 5](/en/math/algebraic_structures/quotient_groups) we obtain
+Therefore, if $$G$$ is finite, then by [§Quotient Groups, ⁋Proposition 5](/en/math/algebraic_structures/quotient_groups#prop5) we obtain
 
 $$\lvert G\cdot x\rvert=\frac{\lvert G\rvert}{\lvert\Stab(x)\rvert}\tag{$\ast\ast$}$$
 

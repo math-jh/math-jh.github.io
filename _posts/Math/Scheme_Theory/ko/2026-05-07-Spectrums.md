@@ -376,13 +376,13 @@ $$Z(S)=\{(x_1,\ldots, x_n)\mid \text{$f(x_1,\ldots, x_n)=0$ for all $f\in S$}\}$
 
 $$I(T)=\{f\in A\mid \text{$f(x_1,\ldots, x_n)=0$ for all $x\in T$}\}$$
 
-라 하면, [정리 14](#thm14)에서 그러하듯이 $$I$$와 $$Z$$가 antitone Galois connection을 정의하는 것을 안다. $$\mSpec A$$에서의 [명제 13](#prop13)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋명제 4](/ko/math/commutative_algebra/nullstellensatz#prop4)로부터 $$\mathbb{K}[\x_1,\ldots, \x_n]$$이 Jacobson이기 때문에 얻어진다. 
+라 하면, [정리 14](#thm14)에서 그러하듯이 $$I$$와 $$Z$$가 antitone Galois connection을 정의하는 것을 안다. $$\mSpec A$$에서의 [명제 13](#prop13)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)로부터 $$\mathbb{K}[\x_1,\ldots, \x_n]$$이 Jacobson이기 때문에 얻어진다. 
 
 앞서 우리는 $$A$$의 원소들, 즉 다항식이 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$ 위의 함수처럼 행동한다는 것을 보았다. 더 일반적으로, principal open set $$D(g)$$ 위에서는 $$f/g$$ 또한 잘 정의되며, 대수기하학에서는 이러한 함수에 관심이 있다. 이러한 형태의 함수는 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$ 전체에서는 잘 정의되지 않으며, 때문에 우리는 모든 점에서, 적당한 근방을 잡아 $$f/g$$의 꼴로 나타낼 수 있는 함수들에 대해 살펴볼 것이다. 
 
 ## 환과 스펙트럼 사이의 관계
 
-이상의 논의를 종합하면 다음과 같이 정리할 수 있다. 마지막 줄들은 [§§고전적인 대수기하학](#고전적인-대수기하학)의 결과로, 아직은 일반적인 ring의 spectrum에서 이들이 어떻게 행동하는지를 살펴보지 않았지만 이는 곧 다음 글에서 확인하게 될 것이다. 
+이상의 논의를 종합하면 다음과 같이 정리할 수 있다. 마지막 줄들은 [고전적인 대수기하학](#고전적인-대수기하학)의 결과로, 아직은 일반적인 ring의 spectrum에서 이들이 어떻게 행동하는지를 살펴보지 않았지만 이는 곧 다음 글에서 확인하게 될 것이다. 
 
 <table class="ag"><thead>
   <tr>

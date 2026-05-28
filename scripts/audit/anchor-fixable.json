@@ -1,0 +1,66 @@
+[
+  {
+    "source": "_posts/Math/Manifold/en/2022-06-17-Submanifolds.md",
+    "url": "/en/math/linear_algebra/dimension#cor2",
+    "original": "\\[Linear Algebra\\] §Dimension of Vector Spaces, ⁋Lemma 2",
+    "canonical": "\\[Linear Algebra\\] §Dimension of Vector Spaces",
+    "bucket": "anchor-dropped",
+    "new_url": "/en/math/linear_algebra/dimension#lem2"
+  },
+  {
+    "source": "_posts/Math/Manifold/ko/2022-06-17-Submanifolds.md",
+    "url": "/ko/math/linear_algebra/dimension#cor2",
+    "original": "\\[선형대수학\\] §백터공간의 차원, ⁋보조정리 2",
+    "canonical": "\\[선형대수학\\] §벡터공간의 차원",
+    "bucket": "anchor-dropped",
+    "new_url": "/ko/math/linear_algebra/dimension#lem2"
+  },
+  {
+    "source": "_posts/Math/Commutative_Algebra/en/2024-10-16-Properties_of_Localization.md",
+    "url": "/en/math/algebraic_structures/operations_of_modules#def5",
+    "original": "\\[Algebraic Structures\\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 5",
+    "canonical": "\\[Algebraic Structures\\] §Direct Products, Direct Sums, and Tensor Products of Modules",
+    "bucket": "anchor-dropped",
+    "new_url": "/en/math/algebraic_structures/operations_of_modules#thm5"
+  },
+  {
+    "source": "_posts/Math/Commutative_Algebra/ko/2024-10-16-Properties_of_Localization.md",
+    "url": "/ko/math/algebraic_structures/operations_of_modules#def5",
+    "original": "\\[대수적 구조\\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 5",
+    "canonical": "\\[대수적 구조\\] §가군의 직접곱과 직합, 텐서곱",
+    "bucket": "anchor-dropped",
+    "new_url": "/ko/math/algebraic_structures/operations_of_modules#thm5"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Dimension_Schemes.md",
+    "url": "/en/math/commutative_algebra/lying_over_and_going_up#lem4",
+    "original": "\\[Commutative Algebra\\] §Integral Extensions and Ideals, ⁋Corollary 4",
+    "canonical": "\\[Commutative Algebra\\] §Integral Extensions and Ideals",
+    "bucket": "anchor-dropped",
+    "new_url": "/en/math/commutative_algebra/lying_over_and_going_up#cor4"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Dimension_Schemes.md",
+    "url": "/ko/math/commutative_algebra/lying_over_and_going_up#lem4",
+    "original": "\\[가환대수학\\] §정수적 확장과 아이디얼, ⁋따름정리 4",
+    "canonical": "\\[가환대수학\\] §정수적 확장과 아이디얼",
+    "bucket": "anchor-dropped",
+    "new_url": "/ko/math/commutative_algebra/lying_over_and_going_up#cor4"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Topology/ko/2025-09-23-Poincare_Duality.md",
+    "url": "/ko/math/algebraic_topology/cohomology#thm65",
+    "original": "§코호몰로지, ⁋정리 5",
+    "canonical": "§코호몰로지",
+    "bucket": "anchor-dropped",
+    "new_url": "/ko/math/algebraic_topology/cohomology#thm5"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Topology/en/2026-03-12-Poincare_Duality.md",
+    "url": "/en/math/algebraic_topology/cohomology#thm65",
+    "original": "§Cohomology, ⁋Theorem 5",
+    "canonical": "§Cohomology",
+    "bucket": "anchor-dropped",
+    "new_url": "/en/math/algebraic_topology/cohomology#thm5"
+  }
+]

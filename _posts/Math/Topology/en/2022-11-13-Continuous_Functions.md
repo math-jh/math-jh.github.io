@@ -13,7 +13,7 @@ sidebar:
 date: 2022-11-13
 last_modified_at: 2022-11-13
 weight: 5
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Continuous Functions
@@ -40,7 +40,7 @@ holds. Therefore, to prove that a function $$f:X\rightarrow Y$$ between two topo
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Choose any neighborhood $$V$$ of $$f(x)\in Y$$. Then $$f^{-1}(V)$$ is a neighborhood of $$x$$, so $$f^{-1}(V)\cap A\neq\emptyset$$ ([§Interior, Closure, Boundary of Sets, ⁋Proposition 6](/en/math/topology/other_concepts#prop6)). If we let $$x'\in f^{-1}(V)\cap A$$, then $$f(x')\in V\cap f(A)$$. In particular, $$V\cap f(A)\neq\emptyset$$, so applying [§Interior, Closure, Boundary of Sets, ⁋Proposition 6](/en/math/topology/other_concepts#prop6) again, we see that $$f(x)\in\cl(f(A))$$.
+Choose any neighborhood $$V$$ of $$f(x)\in Y$$. Then $$f^{-1}(V)$$ is a neighborhood of $$x$$, so $$f^{-1}(V)\cap A\neq\emptyset$$ ([§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6)). If we let $$x'\in f^{-1}(V)\cap A$$, then $$f(x')\in V\cap f(A)$$. In particular, $$V\cap f(A)\neq\emptyset$$, so applying [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6) again, we see that $$f(x)\in\cl(f(A))$$.
 
 </details>
 
@@ -51,7 +51,7 @@ Choose any neighborhood $$V$$ of $$f(x)\in Y$$. Then $$f^{-1}(V)$$ is a neighbor
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Choose any neighborhood $$W$$ of $$(g\circ f)(x)$$. Since $$g$$ is continuous at $$f(x)$$, the set $$g^{-1}(W)$$ is a neighborhood of $$f(x)$$. Since $$f$$ is continuous at $$x$$, the set $$f^{-1}(g^{-1}(W))$$ is a neighborhood of $$x$$. ([\[Set Theory\] §Operations on Binary Relations, ⁋Proposition 13](/en/math/set_theory/operation_of_binary_relations#prop6))
+Choose any neighborhood $$W$$ of $$(g\circ f)(x)$$. Since $$g$$ is continuous at $$f(x)$$, the set $$g^{-1}(W)$$ is a neighborhood of $$f(x)$$. Since $$f$$ is continuous at $$x$$, the set $$f^{-1}(g^{-1}(W))$$ is a neighborhood of $$x$$. ([\[Set Theory\] §Operations on Binary Relations, ⁋Proposition 6](/en/math/set_theory/operation_of_binary_relations#prop6))
 
 </details>
 

@@ -20,13 +20,13 @@ translation_source: kimi-cli
 ---
 ## Dual Basis
 
-Let $$V$$ be a finite-dimensional $$\mathbb{K}$$-vector space. From [§Spaces of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5), taking $$W=\mathbb{K}$$, we know that $$V^\ast=\Hom(V,\mathbb{K})$$ has the same dimension as $$V$$. In particular, if $$\mathcal{B}=\{x_1,\ldots, x_n\}$$ is a basis of $$V$$, then the collection of linear maps $$\xi^i$$ that send only $$x_i$$ to 1 and the remaining $$x_j$$ to 0
+Let $$V$$ be a finite-dimensional $$\mathbb{K}$$-vector space. From [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5), taking $$W=\mathbb{K}$$, we know that $$V^\ast=\Hom(V,\mathbb{K})$$ has the same dimension as $$V$$. In particular, if $$\mathcal{B}=\{x_1,\ldots, x_n\}$$ is a basis of $$V$$, then the collection of linear maps $$\xi^i$$ that send only $$x_i$$ to 1 and the remaining $$x_j$$ to 0
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\}$$
 
 forms a basis of $$V^\ast$$. We call this the *dual basis* of $$\mathcal{B}$$.
 
-Even if $$V$$ is infinite-dimensional, for a basis $$\mathcal{B}$$, the linear independence of the set $$\mathcal{B}^\ast$$ defined as above can be shown using exactly the same proof as in [§Spaces of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5), without any modification. Thus $$\dim V\leq\dim V^\ast$$ always holds, and in fact, if $$V$$ is infinite-dimensional then $$\dim V<\dim V^\ast$$ necessarily holds. To see this, it suffices to check that the function obtained by extending the map sending every element of an arbitrary $$\mathcal{B}$$ to $$1$$ cannot be expressed as a linear combination of elements of $$\mathcal{B}^\ast$$.
+Even if $$V$$ is infinite-dimensional, for a basis $$\mathcal{B}$$, the linear independence of the set $$\mathcal{B}^\ast$$ defined as above can be shown using exactly the same proof as in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5), without any modification. Thus $$\dim V\leq\dim V^\ast$$ always holds, and in fact, if $$V$$ is infinite-dimensional then $$\dim V<\dim V^\ast$$ necessarily holds. To see this, it suffices to check that the function obtained by extending the map sending every element of an arbitrary $$\mathcal{B}$$ to $$1$$ cannot be expressed as a linear combination of elements of $$\mathcal{B}^\ast$$.
 
 ## Double Dual Space
 
@@ -156,7 +156,7 @@ In particular, suppose $$V,W$$ are both finite-dimensional $$\mathbb{K}$$-vector
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots,\xi^n\},\qquad\mathcal{C}^\ast=\{\upsilon^1,\ldots,\upsilon^m\}$$
 
-respectively. By [§The Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla), every linear map can be represented as a matrix once a choice of basis is given, so we can represent $$L^\ast$$ as a matrix with respect to the two bases $$\mathcal{C}^\ast$$ and $$\mathcal{B}^\ast$$.
+respectively. By [§Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla), every linear map can be represented as a matrix once a choice of basis is given, so we can represent $$L^\ast$$ as a matrix with respect to the two bases $$\mathcal{C}^\ast$$ and $$\mathcal{B}^\ast$$.
 
 First, suppose $$L$$ is represented by the following matrix with respect to the bases $$\mathcal{B},\mathcal{C}$$:
 
@@ -199,7 +199,7 @@ First, the following proposition holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Both claims are obvious by [§Spaces of Linear Maps, ⁋Corollary 2](/en/math/linear_algebra/space_of_linear_maps#cor2).
+Both claims are obvious by [§Space of Linear Maps, ⁋Corollary 2](/en/math/linear_algebra/space_of_linear_maps#cor2).
 
 1. If $$L$$ is injective, then there exists $$R:W\rightarrow V$$ satisfying $$R\circ L=\id_V$$. Thus for any $$f\in V^\ast$$, $$f\circ R$$ is a function from $$W$$ to $$\mathbb{K}$$, that is, an element of $$W^\ast$$, and
 
@@ -230,7 +230,7 @@ That $$v^\perp$$ is a subspace of $$V^\ast$$ for any $$v\in V$$ is obvious from 
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
-and [§Bases of Vector Spaces, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3), we see that $$S^\perp$$ is a subspace of $$V^\ast$$. Similarly, for any $$T\subseteq V^\ast$$, $$T^\perp$$ is a subspace of $$V$$.
+and [§Basis of a Vector Space, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3), we see that $$S^\perp$$ is a subspace of $$V^\ast$$. Similarly, for any $$T\subseteq V^\ast$$, $$T^\perp$$ is a subspace of $$V$$.
 
 <div class="proposition" markdown="1">
 

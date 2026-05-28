@@ -13,7 +13,7 @@ sidebar:
 date: 2022-11-15
 last_modified_at: 2022-11-15
 weight: 7
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Definition of Subspaces
@@ -34,7 +34,7 @@ and for any finite family of open sets $$(U_i)_{i\in I}$$,
 
 $$\iota^{-1}\left(\bigcap_{i\in I} U_i\right)=\left(\bigcap_{i\in I} U_i\right)\cap A=\bigcap_{i\in I} (U_i\cap A)=\bigcap_{i\in I} \iota^{-1}(U)$$
 
-hold, so by [§Initial and Final Topologies, ⁋Proposition 2](/en/math/topology/initial_and_final_topology#prop2) we see that the subspace topology $$\mathcal{T}_A$$ is given by the formula
+hold, so by [§Initial and Final Topology, ⁋Proposition 2](/en/math/topology/initial_and_final_topology#prop2) we see that the subspace topology $$\mathcal{T}_A$$ is given by the formula
 
 $$\mathcal{T}_A=\{U\cap A\mid U\in\mathcal{T}\}$$
 
@@ -144,7 +144,7 @@ it suffices to prove the proposition for either open sets or closed sets. Also, 
 
 ## Subspaces and Continuous Functions
 
-Let $$X$$ and $$Y$$ be topological spaces and let $$f:X\rightarrow Y$$ be a map. Then for a set $$Y$$ satisfying $$f(X)\subseteq B\subseteq Y$$, the function obtained by restricting the codomain of $$f$$ to $$B$$ is continuous. This is trivial by [Definition 1](#def1) and [§Initial and Final Topologies<sup>†</sup>, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3).
+Let $$X$$ and $$Y$$ be topological spaces and let $$f:X\rightarrow Y$$ be a map. Then for a set $$Y$$ satisfying $$f(X)\subseteq B\subseteq Y$$, the function obtained by restricting the codomain of $$f$$ to $$B$$ is continuous. This is trivial by [Definition 1](#def1) and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3).
 
 Now, in the same situation, suppose a subset $$A$$ of $$X$$ is given. Then the function $$f:X\rightarrow Y$$ restricted to $$A$$, denoted $$f\vert_A$$, equals $$f\circ\iota$$ for the inclusion $$\iota:A\hookrightarrow X$$. Since this is a composition of two continuous functions, we immediately see that $$f\vert_A$$ is also continuous. However, the converse does not hold in general.
 

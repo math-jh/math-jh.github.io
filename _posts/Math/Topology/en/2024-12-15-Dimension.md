@@ -13,10 +13,10 @@ sidebar:
 date: 2024-12-15
 last_modified_at: 2024-12-15
 weight: 19
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
-In this post we define the dimension of a topological space. First we define the dimension commonly used in general topology, and then we separately define the notion of dimension used in [algebraic geometry](/en/algebraic_varieties/).
+In this post we define the dimension of a topological space. First we define the dimension commonly used in general topology, and then we separately define the notion of dimension used in [Algebraic Varieties](/en/algebraic_varieties/).
 
 ## Covering dimension
 
@@ -147,7 +147,7 @@ Similarly to connected components, we can define the following.
 
 </div>
 
-Then by an argument similar to [§Connected Spaces, ⁋Proposition 2](/en/math/topology/connected_spaces), we can show that the closure of an irreducible set is irreducible, so an irreducible component must be a closed subset.
+Then by an argument similar to [§Connected Spaces, ⁋Proposition 2](/en/math/topology/connected_spaces#prop2), we can show that the closure of an irreducible set is irreducible, so an irreducible component must be a closed subset.
 
 <div class="definition" markdown="1">
 

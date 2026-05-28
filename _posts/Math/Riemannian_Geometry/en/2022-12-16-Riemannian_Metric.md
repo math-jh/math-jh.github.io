@@ -13,7 +13,7 @@ sidebar:
 date: 2022-12-16
 last_modified_at: 2022-12-16
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Riemannian Metric
@@ -22,9 +22,9 @@ We defined the exterior algebra bundle
 
 $$\bigwedge\nolimits(T^\ast M)\cong\bigoplus_{k=0}^n\bigwedge\nolimits^k(T^\ast M)$$
 
-using exterior algebra in [\[Differentiable Manifolds\] §Differential Forms](/en/math/manifold/differential_forms), and defined a smooth section of this bundle as a differential form. We can do something similar using the symmetric algebra, and unlike the exterior algebra, the case $$k=2$$ is of interest. This is because the elements of $$\mathcal{S}^2(T^\ast M)$$ arising when $$k=2$$ define symmetric bilinear forms on $$TM$$.
+using exterior algebra in [\[Manifolds\] §Differential Forms](/en/math/manifold/differential_forms), and defined a smooth section of this bundle as a differential form. We can do something similar using the symmetric algebra, and unlike the exterior algebra, the case $$k=2$$ is of interest. This is because the elements of $$\mathcal{S}^2(T^\ast M)$$ arising when $$k=2$$ define symmetric bilinear forms on $$TM$$.
 
-Fix a point $$p\in M$$. Then $$g_p$$ is an element of $$\mathcal{S}^2(T^\ast_pM)$$. Now, by the same argument we checked after [\[Differentiable Manifolds\] §Differential Forms, ⁋Definition 1](/en/math/manifold/differential_forms#def1), we can see that $$\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$$, and by [\[Multilinear Algebra\] §Tensor Algebras, ⁋Proposition 11](/en/math/multilinear_algebra/tensor_algebras#prop11), we can think of $$g_p$$ as a symmetric multilinear map from $$T_pM\times T_pM$$ to $$\mathbb{R}$$. Therefore, if we only impose an appropriate non-degeneracy condition on $$g_p$$, we can regard it as an inner product defined on $$T_pM$$. ([\[Linear Algebra\] §Inner Product Spaces, ⁋Definition 1](/en/math/linear_algebra/inner_product_spaces))
+Fix a point $$p\in M$$. Then $$g_p$$ is an element of $$\mathcal{S}^2(T^\ast_pM)$$. Now, by the same argument we checked after [\[Manifolds\] §Differential Forms, ⁋Definition 1](/en/math/manifold/differential_forms#def1), we can see that $$\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$$, and by [\[Multilinear Algebra\] §Tensor Algebras, ⁋Proposition 11](/en/math/multilinear_algebra/tensor_algebras#prop11), we can think of $$g_p$$ as a symmetric multilinear map from $$T_pM\times T_pM$$ to $$\mathbb{R}$$. Therefore, if we only impose an appropriate non-degeneracy condition on $$g_p$$, we can regard it as an inner product defined on $$T_pM$$. ([\[Linear Algebra\] §Inner Product Spaces, ⁋Definition 1](/en/math/linear_algebra/inner_product_spaces#def1))
 
 <div class="definition" markdown="1">
 
@@ -52,7 +52,7 @@ is also an inner product. Also, if $$g$$ is an inner product, then $$\alpha g$$,
 
 ## Musical Isomorphism
 
-From an algebraic point of view, one of the best consequences of a non-degenerate pairing is that this pairing induces an isomorphism between $$V$$ and its dual space $$V^\ast$$. ([\[Linear Algebra\] §Bilinear Forms, §§Nondegenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms)) Likewise, if a Riemannian metric $$g$$ is given, then $$g$$ induces an isomorphism between the two bundles $$TM$$ and $$T^\ast M$$ through the formula
+From an algebraic point of view, one of the best consequences of a non-degenerate pairing is that this pairing induces an isomorphism between $$V$$ and its dual space $$V^\ast$$. ([\[Linear Algebra\] §Bilinear Forms, §§Non-Degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms)) Likewise, if a Riemannian metric $$g$$ is given, then $$g$$ induces an isomorphism between the two bundles $$TM$$ and $$T^\ast M$$ through the formula
 
 $$\tilde{g}:T_pM\rightarrow T_p^\ast M;\qquad(p,v)\mapsto (p,\langle v,-\rangle)\tag{1}$$
 

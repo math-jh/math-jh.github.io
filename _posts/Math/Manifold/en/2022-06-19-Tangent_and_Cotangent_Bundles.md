@@ -13,7 +13,7 @@ sidebar:
 date: 2022-06-19
 last_modified_at: 2022-12-11
 weight: 10
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Vector Bundles
@@ -117,7 +117,7 @@ Hence a functor $F$ from $\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{is
 
 </div>
 
-If $f\in\Hom(V,V'), g\in\Hom(W,W')$, then $F(f,g)\in\Hom(F(V,W),F(V',W'))$. Since these are all vector spaces, they carry differential structures as in [§Examples of Manifolds, ⁋Example 2](/en/math/manifold/examples_of_manifolds#ex2), and through this the above definition can be applied. Also, it is not difficult to extend this definition to a general $k$-fold product
+If $f\in\Hom(V,V'), g\in\Hom(W,W')$, then $F(f,g)\in\Hom(F(V,W),F(V',W'))$. Since these are all vector spaces, they carry differential structures as in [§Examples of Differentiable Manifolds, ⁋Example 2](/en/math/manifold/examples_of_manifolds#ex2), and through this the above definition can be applied. Also, it is not difficult to extend this definition to a general $k$-fold product
 
 $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$
 

@@ -15,7 +15,7 @@ date: 2022-09-18
 last_modified_at: 2022-09-18
 
 weight: 16
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Sums of Spaces
@@ -205,7 +205,7 @@ $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmat
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda I_k&B\\ 0&C\end{pmatrix}\end{aligned}$$
 
-Therefore, writing the characteristic polynomial of $$A$$ as $$p_A(\mathbf{x})$$, from [§Characteristic Polynomial, ⁋Theorem 4](/en/math/linear_algebra/characteristic_polynomial#cor4) we have $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})$$, and hence we know
+Therefore, writing the characteristic polynomial of $$A$$ as $$p_A(\mathbf{x})$$, from [§Characteristic Polynomial, ⁋Corollary 4](/en/math/linear_algebra/characteristic_polynomial#cor4) we have $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})$$, and hence we know
 
 $$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
@@ -316,7 +316,7 @@ holds. ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector
 
 $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
-we have $$\ker (A-I)\cap \im(A-I)\neq \{0\}$$. Yet if only $$\ker L\cap \im L=\{0\}$$ holds, then from [§Dimension, ⁋Example 8](/en/math/linear_algebra/dimension#ex8) and [Proposition 2](#prop2) we know that necessarily $$V=\ker L\oplus \im L$$. The following lemma gives a condition equivalent to this one.
+we have $$\ker (A-I)\cap \im(A-I)\neq \{0\}$$. Yet if only $$\ker L\cap \im L=\{0\}$$ holds, then from [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8) and [Proposition 2](#prop2) we know that necessarily $$V=\ker L\oplus \im L$$. The following lemma gives a condition equivalent to this one.
 
 <div class="proposition" markdown="1">
 

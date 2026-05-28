@@ -294,4 +294,4 @@ $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \
 
 ---
 
-[^1]: Category $$\Ring$$에서의 coproduct는 free product와 비슷한 식으로 정의되었던 것을 기억하자. ([§환의 곱, 쌍대곱, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_rings)) 반면, 같은 글에서 우리는 category $$\cRing$$의 coproduct는 tensor product $$\otimes$$로 주어진다는 것 또한 확인하였다.
+[^1]: Category $$\Ring$$에서의 coproduct는 free product와 비슷한 식으로 정의되었던 것을 기억하자. ([§환의 곱, 쌍대곱, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_rings#prop3)) 반면, 같은 글에서 우리는 category $$\cRing$$의 coproduct는 tensor product $$\otimes$$로 주어진다는 것 또한 확인하였다.

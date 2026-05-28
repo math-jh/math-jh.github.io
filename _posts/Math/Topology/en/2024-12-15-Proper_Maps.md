@@ -40,7 +40,7 @@ Taking $$Z=\{\ast\}$$, one can show that any universally closed map is a closed 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-By the above argument, it is obvious that if the first condition holds then the second condition holds. On the other hand, since $$f$$ is injective, considering the canonical decomposition of $$f$$, we know that it becomes a homeomorphism between $$X$$ and $$f(X)$$. ([§Open and Closed Mappings, ⁋Proposition 5](/en/math/topology/open_mappings_and_closed_mappings#prop5)) Now assuming the third condition holds, for any $$Z$$, since $$f\times\id_Z$$ is a homeomorphism from $$X\times Z$$ onto the closed subset $$f(X)\times Z$$ of $$Y\times Z$$, we obtain the desired result.
+By the above argument, it is obvious that if the first condition holds then the second condition holds. On the other hand, since $$f$$ is injective, considering the canonical decomposition of $$f$$, we know that it becomes a homeomorphism between $$X$$ and $$f(X)$$. ([§Open Mappings and Closed Mappings, ⁋Proposition 5](/en/math/topology/open_mappings_and_closed_mappings#prop5)) Now assuming the third condition holds, for any $$Z$$, since $$f\times\id_Z$$ is a homeomorphism from $$X\times Z$$ onto the closed subset $$f(X)\times Z$$ of $$Y\times Z$$, we obtain the desired result.
 
 </details>
 
@@ -67,7 +67,7 @@ Now let us prove the second result. If $$(A_i)$$ satisfying the given condition 
 
 $$(f\times\id_Z)\vert_{f^{-1}(A_i\times Z)}$$
 
-are closed, and thus $$f\times\id_Z$$ is also so. ([§Open and Closed Mappings, ⁋Proposition 3](/en/math/topology/open_mappings_and_closed_mappings#prop3))
+are closed, and thus $$f\times\id_Z$$ is also so. ([§Open Mappings and Closed Mappings, ⁋Proposition 3](/en/math/topology/open_mappings_and_closed_mappings#prop3))
 
 </details>
 
@@ -90,7 +90,7 @@ The first three results are all obvious from the following formula
 
 $$(g\circ f)\times\id_Z=(g\times\id_Z)\circ(f\times\id_Z)$$
 
-and the results of [§Open and Closed Mappings, ⁋Proposition 2](/en/math/topology/open_mappings_and_closed_mappings#prop2).
+and the results of [§Open Mappings and Closed Mappings, ⁋Proposition 2](/en/math/topology/open_mappings_and_closed_mappings#prop2).
 
 For the last result, define two functions $$\Gamma_f: X \rightarrow X\times Y$$ and $$\Gamma_g: Y \rightarrow Z\times Y$$ respectively by
 

@@ -42,7 +42,7 @@ we define
 
 $$(\omega,u)=\alpha^1(u_1)\alpha^2(u_2)\cdots \alpha^{r+s}(u_{r+s}).$$
 
-Then $$(-,-)$$ is a non-degenerate pairing, so $$\mathcal{T}^{r,s}(T_p^\ast M)\cong\mathcal{T}^{r,s}(T_pM)^\ast$$ holds. ([\[Linear Algebra\] §Dual Spaces, ⁋Corollary 5](/en/math/linear_algebra/dual_space#cor5))
+Then $$(-,-)$$ is a non-degenerate pairing, so $$\mathcal{T}^{r,s}(T_p^\ast M)\cong\mathcal{T}^{r,s}(T_pM)^\ast$$ holds. ([\[Linear Algebra\] §Dual Space, ⁋Corollary 5](/en/math/linear_algebra/dual_space#cor5))
 
 Similarly, for two elements
 

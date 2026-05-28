@@ -13,7 +13,7 @@ sidebar:
 date: 2023-04-28
 last_modified_at: 2023-04-28
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 Since momentum is treated as a covector in physics, it is natural to consider the cotangent bundle $$T^\ast M$$ of a manifold $$M$$ when describing phase space mathematically.
@@ -120,9 +120,9 @@ $$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $w\in W$}\}$$
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-1. Since $$\omega$$ is a non-degenerate pairing, the map $$v\mapsto \omega(v,-)$$ defines an isomorphism from $$V$$ to $$V^\ast$$. ([\[Linear Algebra\], §Dual Spaces, ⁋Proposition 4](/en/math/linear_algebra/dual_space#prop4))
+1. Since $$\omega$$ is a non-degenerate pairing, the map $$v\mapsto \omega(v,-)$$ defines an isomorphism from $$V$$ to $$V^\ast$$. ([\[Linear Algebra\] §Dual Space, ⁋Proposition 4](/en/math/linear_algebra/dual_space#prop4))
     
-    Let $$W^\perp\subseteq V^\ast$$ be the annihilator of $$W$$. ([\[Linear Algebra\], §Dual Spaces, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7)) For any $$u\in W^\omega$$,
+    Let $$W^\perp\subseteq V^\ast$$ be the annihilator of $$W$$. ([\[Linear Algebra\] §Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7)) For any $$u\in W^\omega$$,
     
     $$\omega(u,w)=0\qquad\text{for all $w\in W$}$$
     

@@ -83,7 +83,7 @@ is a basis for $$M_1\times M_2$$, so $$M_1\times M_2$$ is second countable; the 
 
 </div>
 
-The last general construction we examine is the quotient space. However, as we saw in [\[Topology\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#하우스도르프-공간의-몫공간), an arbitrary quotient of a Hausdorff space need not be Hausdorff. Moreover, there is no guarantee that the quotient of a Euclidean space is Euclidean, so to show that a quotient space is a topological manifold one must verify the Hausdorff and locally Euclidean conditions separately. On the other hand, second countability follows from the locally Euclidean condition.
+The last general construction we examine is the quotient space. However, as we saw in [\[Topology\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#quotient-spaces-of-hausdorff-spaces), an arbitrary quotient of a Hausdorff space need not be Hausdorff. Moreover, there is no guarantee that the quotient of a Euclidean space is Euclidean, so to show that a quotient space is a topological manifold one must verify the Hausdorff and locally Euclidean conditions separately. On the other hand, second countability follows from the locally Euclidean condition.
 
 <div class="proposition" markdown="1">
 
@@ -93,7 +93,7 @@ The last general construction we examine is the quotient space. However, as we s
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$X/R$$ is locally Euclidean, we can cover $$X/R$$ by Euclidean neighborhoods $$(U_i)_{i\in I}$$, and the collection of their preimages $$(\pi^{-1}(U_i))_{i\in I}$$ covers $$X$$. Now any second-countable space is Lindelöf ([§Compactness and Convergence of Filters, ⁋Definition 10](/en/math/topology/filter_convergence#def10)), so there exists a countable subset $$J\subset I$$ such that $$(\pi^{-1}(U_i))_{i\in J}$$ is a countable open cover of $$X$$; hence the corresponding $$(U_i)_{i\in J}$$ form a countable cover of $$X/R$$. But each of these is a Euclidean neighborhood and therefore has a countable base, so the union of all of them constitutes a countable base for $$X/R$$.
+Since $$X/R$$ is locally Euclidean, we can cover $$X/R$$ by Euclidean neighborhoods $$(U_i)_{i\in I}$$, and the collection of their preimages $$(\pi^{-1}(U_i))_{i\in I}$$ covers $$X$$. Now any second-countable space is Lindelöf ([§Compactness and Filter Convergence, ⁋Definition 10](/en/math/topology/filter_convergence#def10)), so there exists a countable subset $$J\subset I$$ such that $$(\pi^{-1}(U_i))_{i\in J}$$ is a countable open cover of $$X$$; hence the corresponding $$(U_i)_{i\in J}$$ form a countable cover of $$X/R$$. But each of these is a Euclidean neighborhood and therefore has a countable base, so the union of all of them constitutes a countable base for $$X/R$$.
 
 </details>
 

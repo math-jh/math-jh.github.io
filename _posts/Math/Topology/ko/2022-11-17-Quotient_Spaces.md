@@ -18,7 +18,7 @@ weight: 10
 
 ---
 
-이제 우리는 몫집합 위에 위상을 정의하는 방법을 살펴본다. ([\[집합론\] §동치관계, ⁋정의 6](/ko/math/set_theory/equivalence_relations#def6))
+이제 우리는 몫집합 위에 위상을 정의하는 방법을 살펴본다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4))
 
 ## Locally closed subspace
 
@@ -90,7 +90,7 @@ $$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
 
 </details>
 
-한편 위상공간 $$X,Y$$와 연속함수 $$f:X\rightarrow Y$$가 주어졌다 하고, $$f$$에 의해 정의된 동치관계 $$R$$을 생각하자. ([\[집합론\] §동치관계, ⁋정의 5](/ko/math/set_theory/equivalence_relations#def5)) 그럼 $$f$$의 canonical decomposition 
+한편 위상공간 $$X,Y$$와 연속함수 $$f:X\rightarrow Y$$가 주어졌다 하고, $$f$$에 의해 정의된 동치관계 $$R$$을 생각하자. ([\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations)) 그럼 $$f$$의 canonical decomposition 
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 

@@ -13,7 +13,7 @@ sidebar:
 date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 5
-translated_at: 2026-05-25T16:00:04+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-25T16:00:04+00:00
 ---
@@ -43,7 +43,7 @@ Now consider the short exact sequence in $$\Ch_{\geq 0}(\Ab)$$
 
 $$0 \rightarrow C_\bullet(A) \rightarrow C_\bullet(X) \rightarrow C_\bullet(X,A) \rightarrow 0$$ 
 
-By [\[Homological Algebra\] §Long Exact Sequences, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1), we obtain the long exact sequence
+By [\[Homological Algebra\] §The Long Exact Sequence, ⁋Theorem 1 (The long exact sequence)](/en/math/homological_algebra/long_exact_sequence#thm1), we obtain the long exact sequence
 
 $$\cdots \rightarrow H_k(A) \rightarrow H_k(X) \rightarrow H_k(X,A)\rightarrow H_{k-1}(A) \rightarrow \cdots$$
 
@@ -51,7 +51,7 @@ Here the connecting map $$H_k(X,A) \rightarrow H_{k-1}(A)$$ is nothing more than
 
 ![relative_homology](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-1.png){:style="width:12em" class="invert" .align-center}
 
-we obtain an induced chain map $$C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$$. Thus any $$f:(X,A) \rightarrow (Y,B)$$ satisfying these conditions induces a map $$H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$$ in homology. Applying [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6) to $$X$$ and $$A$$ separately and using [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2), we see that homotopic continuous maps $$f,g$$ satisfying this condition induce the same map in homology.
+we obtain an induced chain map $$C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$$. Thus any $$f:(X,A) \rightarrow (Y,B)$$ satisfying these conditions induces a map $$H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$$ in homology. Applying [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6) to $$X$$ and $$A$$ separately and using [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2), we see that homotopic continuous maps $$f,g$$ satisfying this condition induce the same map in homology.
 
 ## Excision theorem
 
@@ -83,7 +83,7 @@ Let $$(X,A)$$ be a good pair, and let $$U$$ be an open set satisfying the hypoth
 
 ![3*3_diagram](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-2.png){:style="width:26em" class="invert" .align-center}
 
-each row is exact and the first two columns are exact as well; hence by [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 7](/en/math/homological_algebra/diagram_chasing#cor7) we obtain a short exact sequence of chain complexes
+each row is exact and the first two columns are exact as well; hence by [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 7 (The 3×3 lemma)](/en/math/homological_algebra/diagram_chasing#cor7) we obtain a short exact sequence of chain complexes
 
 $$0\rightarrow C_\bullet(U,A)\rightarrow C_\bullet(X,A)\rightarrow C_\bullet(X,U)\rightarrow 0$$
 
@@ -121,7 +121,7 @@ where the left-hand vertical map $$H_k(X\setminus A, U\setminus A)\rightarrow H_
 
 $$H_k(X,A)\cong H_k(X/A,[A])\tag{2}$$
 
-On the other hand, by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) and [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2), for any space $$X$$ and a point $$x\in X$$ the long exact sequence
+On the other hand, by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) and [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2), for any space $$X$$ and a point $$x\in X$$ the long exact sequence
 
 $$\begin{aligned}\cdots &\rightarrow H_k(x)\rightarrow H_k(X)\rightarrow H_k(X,x) \rightarrow H_{k-1}(x)\rightarrow\cdots \\\cdots&\rightarrow H_1(x)\rightarrow H_1(X) \rightarrow H_1(X,x) \rightarrow H_0(x) \rightarrow H_0(X)\rightarrow H_0(X,x)\rightarrow 0\end{aligned}$$
 
@@ -165,7 +165,7 @@ and similarly we have canonical homomorphisms
 
 $$H_\bullet^\Delta(A)\rightarrow H_\bullet^\Delta(A),\qquad H_\bullet^\Delta(X,A)\rightarrow H_\bullet(X,A)$$
 
-By [\[Homological Algebra\] §Long Exact Sequences, ⁋Proposition 2](/en/math/homological_algebra/long_exact_sequence#prop2), these fit into the commutative diagram
+By [\[Homological Algebra\] §The Long Exact Sequence, ⁋Proposition 2](/en/math/homological_algebra/long_exact_sequence#prop2), these fit into the commutative diagram
 
 ![functoriality](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-5.png){:style="width:48em" class="invert" .align-center}
 
@@ -183,7 +183,7 @@ We sketch the overall strategy. Using the commutative diagram above, consider th
 
 $$X_0\subset X_1\subset\cdots\subset X_l=X$$
 
-defined by the $$\Delta$$-complex structure on $$X$$, and apply [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2) to the diagram
+defined by the $$\Delta$$-complex structure on $$X$$, and apply [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2) to the diagram
 
 ![induction](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-6.png){:style="width:56em" class="invert" .align-center}
 
@@ -191,7 +191,7 @@ to run an induction. For the induction step, it suffices to show that for every 
 
 $$H_n^\Delta(X^k, X^{k-1})\rightarrow H_n(X^k, X^{k-1})$$
 
-is an isomorphism. Once this is assumed, [§Homology, ⁋Proposition 10](/en/math/algebraic_topology/homology#prop10) gives $$H_n^\Delta(X^0)\cong H_n(X^0)$$ for all $$n$$ when $$k=1$$; then by [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2) we obtain $$H_n^\Delta(X^1)\cong H_n(X^1)$$, and inductively we construct the desired isomorphism for larger $$k$$.
+is an isomorphism. Once this is assumed, [§Homology, ⁋Proposition 10](/en/math/algebraic_topology/homology#prop10) gives $$H_n^\Delta(X^0)\cong H_n(X^0)$$ for all $$n$$ when $$k=1$$; then by [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2) we obtain $$H_n^\Delta(X^1)\cong H_n(X^1)$$, and inductively we construct the desired isomorphism for larger $$k$$.
 
 First, by definition $$C_\bullet^\Delta(X^k, X^{k-1})$$ is nontrivial only when $$n=k$$; hence $$H_n^\Delta(X^k, X^{k-1})$$ is a nontrivial free abelian group (generated by the $$k$$-simplices) only when $$n=k$$, and is trivial otherwise.
 

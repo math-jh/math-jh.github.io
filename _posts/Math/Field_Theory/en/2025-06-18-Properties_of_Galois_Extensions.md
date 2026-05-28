@@ -30,7 +30,7 @@ and so, if we give $$\Gal(\mathbb{L}/\mathbb{K})$$ the subspace topology, we kno
 
 $$U_{x_1,\ldots,x_n}=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \text{$\tau(x_i)=\sigma(x_i)$ for all $i$}\right\}$$
 
-constitutes a local base at $$\sigma$$. ([\[Topology\] §Bases of Topological Spaces, ⁋Definition 4](/en/math/topology/topological_bases#def4))
+constitutes a local base at $$\sigma$$. ([\[Topology\] §Bases of a Topological Space, ⁋Definition 4](/en/math/topology/topological_bases#def4))
 
 Meanwhile, the functions satisfying the above condition are those that agree with $$\sigma$$ when restricted to a finite subextension $$\mathbb{M}=\mathbb{L}(x_1,\ldots,x_n )$$ of $$\mathbb{L}$$, and conversely any finite subextension $$\mathbb{M}/\mathbb{K}$$ defines an element of the local base at $$\sigma$$ in this manner. That is, letting $$\Lambda$$ be the collection of *finite* subextensions of $$\mathbb{L}/\mathbb{K}$$, and for any $$\mathbb{M}/\mathbb{K}\in \Lambda$$ and any $$\sigma\in \Gal(\mathbb{L}/\mathbb{K})$$, defining the subset $$U_\mathbb{M}(\sigma)$$ of $$\Gal(\mathbb{L}/\mathbb{K})$$ by the formula
 

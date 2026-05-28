@@ -60,7 +60,7 @@ This proposition exhibits the symmetry of reflexive polytopes. Although $$\Delta
 
 ## Fano Varieties
 
-In algebraic geometry, a *Fano variety* is a normal projective variety $$X$$ whose anticanonical divisor $$-K_X$$ is ample. Here the canonical divisor $$K_X$$ is the divisor class corresponding to the canonical bundle ([\[Algebraic Varieties\] §Canonical Bundles, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6)), and $$-K_X$$ is its inverse. If $$-K_X$$ is additionally a Cartier divisor, then $$X$$ is called a *Gorenstein Fano variety*. In the context of toric varieties, this condition translates into a very explicit combinatorial condition.
+In algebraic geometry, a *Fano variety* is a normal projective variety $$X$$ whose anticanonical divisor $$-K_X$$ is ample. Here the canonical divisor $$K_X$$ is the divisor class corresponding to the canonical bundle ([\[Algebraic Varieties\] §Canonical Bundle, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6)), and $$-K_X$$ is its inverse. If $$-K_X$$ is additionally a Cartier divisor, then $$X$$ is called a *Gorenstein Fano variety*. In the context of toric varieties, this condition translates into a very explicit combinatorial condition.
 
 As we saw in [§Definition of Toric Varieties, ⁋Proposition 8](/en/math/toric_geometry/toric_varieties#prop8), given a lattice polytope $$P \subset M_{\mathbb{R}}$$, we can construct the projective toric variety $$X_P = X_{\Sigma_P}$$ via the normal fan $$\Sigma_P$$ it defines. Now assume that $$P = \Delta$$ is a reflexive polytope.
 
@@ -77,7 +77,7 @@ Here $$\Sigma(1)$$ is the set of 1-dimensional cones of $$\Sigma$$, and each $$D
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-In [\[Algebraic Varieties\] §Canonical Bundles, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6), the canonical divisor $$K_X$$ was defined as the divisor class corresponding to the canonical bundle $$\omega_X = \det \Omega^1_X$$. We show that $$K_{X_\Sigma} = -\sum_\rho D_\rho$$, so that its inverse takes the form above.
+In [\[Algebraic Varieties\] §Canonical Bundle, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6), the canonical divisor $$K_X$$ was defined as the divisor class corresponding to the canonical bundle $$\omega_X = \det \Omega^1_X$$. We show that $$K_{X_\Sigma} = -\sum_\rho D_\rho$$, so that its inverse takes the form above.
 
 On the open dense torus $$T_N = \operatorname{Spec} \mathbb{C}[M] \subset X_\Sigma$$, if we choose a basis $$m_1, \ldots, m_n$$ of $$M$$, then the characters $$\chi^{m_i}$$ become coordinates on the torus, and the top form
 
@@ -192,7 +192,7 @@ A natural question is whether there is a geometric relationship between these tw
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-We use the adjunction formula $$K_V = (K_X + V)\vert_V$$ from [\[Algebraic Varieties\] §Canonical Bundles](/en/math/algebraic_varieties/canonical_bundle). Since $$V \in \lvert -K_X \rvert$$, we have $$V \sim -K_X$$, and therefore
+We use the adjunction formula $$K_V = (K_X + V)\vert_V$$ from [\[Algebraic Varieties\] §Canonical Bundle](/en/math/algebraic_varieties/canonical_bundle). Since $$V \in \lvert -K_X \rvert$$, we have $$V \sim -K_X$$, and therefore
 
 $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 

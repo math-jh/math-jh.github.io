@@ -32,7 +32,7 @@ and call them the *$$\Ext$$ groups*.
 
 </div>
 
-$$\Hom_\lMod{A}(-,N)$$ is an exact functor if and only if $$N$$ is an injective object. ([\[Multilinear Algebra\] §Projective Modules, Injective Modules, Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3)) From the viewpoint of derived functors, if $$N$$ were an injective module then $$0 \rightarrow N \rightarrow N \rightarrow 0$$ would be an injective resolution, so we know that $$\Ext_A^1(M,N)=0$$ holds for all $$M$$. Then taking $$\Hom_\lMod{A}(-,N)$$ on any short exact sequence
+$$\Hom_\lMod{A}(-,N)$$ is an exact functor if and only if $$N$$ is an injective object. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3)) From the viewpoint of derived functors, if $$N$$ were an injective module then $$0 \rightarrow N \rightarrow N \rightarrow 0$$ would be an injective resolution, so we know that $$\Ext_A^1(M,N)=0$$ holds for all $$M$$. Then taking $$\Hom_\lMod{A}(-,N)$$ on any short exact sequence
 
 $$0 \rightarrow M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
@@ -104,7 +104,7 @@ To verify this, let us first check that the cohomologies of the rows $$K^{\bulle
 
 $$H^q(K^{p, \bullet}) = \begin{cases} \Hom_\lMod{A}(M, I^p) & q = 0 \\ 0 & q > 0, \end{cases}\qquad H^p(K^{\bullet, q}) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}\tag{$\ast$}$$
 
-Here, the vanishing cohomologies are due to the definitions of projective and injective modules. ([\[Multilinear Algebra\] §Projective Modules, Injective Modules, Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3))
+Here, the vanishing cohomologies are due to the definitions of projective and injective modules. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3))
 
 As in the computation carried out right after [§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5), computing the cohomology of the total complex requires some care because the differentials mix the terms. For this we use a *filtration*.
 
@@ -162,7 +162,7 @@ we obtain $$H^n(\Tot(K)^\bullet) = H^n(\Hom_\lMod{A}(P_\bullet, N))$$, and from 
 
 </details>
 
-In a similar way one can prove balancing for $$\Tor$$. The proof structure is the same; the only difference is that projective modules are flat modules ([\[Multilinear Algebra\] §Projective Modules, Injective Modules, Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7)), and this is used to handle the computation. We omit the detailed proof.
+In a similar way one can prove balancing for $$\Tor$$. The proof structure is the same; the only difference is that projective modules are flat modules ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7)), and this is used to handle the computation. We omit the detailed proof.
 
 <div class="proposition" markdown="1">
 

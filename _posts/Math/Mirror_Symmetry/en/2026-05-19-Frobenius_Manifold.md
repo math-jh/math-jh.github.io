@@ -17,7 +17,7 @@ weight: 3
 translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
-In [§Mirror Symmetry Overview](/en/math/mirror_symmetry/overview) we saw that the mirror symmetry of a toric Fano variety $$X_\Sigma$$ is summarized by an isomorphism
+In [§Overview of Mirror Symmetry](/en/math/mirror_symmetry/overview) we saw that the mirror symmetry of a toric Fano variety $$X_\Sigma$$ is summarized by an isomorphism
 
 $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 
@@ -61,7 +61,7 @@ holds for all $$\alpha,\beta,\gamma$$, which follows from the associativity of t
 
 </div>
 
-Meanwhile, in the examples of [§Mirror Symmetry Overview](/en/math/mirror_symmetry/overview) we introduced the Landau–Ginzburg model, which consists of a holomorphic function $$W$$ on a given manifold $$\check{X}$$; the Jacobi ring containing the critical points of $$W$$ carried the information of the B-model. Locally this is written as follows.
+Meanwhile, in the examples of [§Overview of Mirror Symmetry](/en/math/mirror_symmetry/overview) we introduced the Landau–Ginzburg model, which consists of a holomorphic function $$W$$ on a given manifold $$\check{X}$$; the Jacobi ring containing the critical points of $$W$$ carried the information of the B-model. Locally this is written as follows.
 
 <div class="definition" markdown="1">
 
@@ -100,7 +100,7 @@ $$\Jac(f)=\bigoplus_{p\in \Crit(f)}\mathbb{C},$$
 
 and with respect to this basis the residue pairing is diagonalized as $$\operatorname{diag}(1/\det \Hess_p(f))$$ in the critical-point basis.
 
-As a special example, consider the Hori–Vafa superpotential of $$\mathbb{P}^1$$ seen in [§Mirror Symmetry Overview, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5):
+As a special example, consider the Hori–Vafa superpotential of $$\mathbb{P}^1$$ seen in [§Overview of Mirror Symmetry, ⁋Example 5 ($$\mathbb{P}^1$$ case)](/en/math/mirror_symmetry/overview#ex5):
 
 $$W_q = \x + \frac{q}{\x}.$$
 
@@ -124,7 +124,7 @@ $$\eta(1, 1) = \frac{1}{2\sqrt{q}} + \frac{1}{-2\sqrt{q}} = 0, \qquad \eta(1, \x
 
 so the matrix representation of $$\eta$$ in this basis is $$\begin{pmatrix}0&1\\1&0\end{pmatrix}$$. This exactly coincides with the classical Poincaré pairing of $$\mathbb{P}^1$$, showing that the ring isomorphism $$\Jac(W_q) \cong QH^\ast(\mathbb{P}^1)$$ was in fact a Frobenius algebra isomorphism.
 
-In the same way, consider the Hori–Vafa superpotential of $$\mathbb{P}^2$$ seen in [§Mirror Symmetry Overview, ⁋Example 6](/en/math/mirror_symmetry/overview#ex6):
+In the same way, consider the Hori–Vafa superpotential of $$\mathbb{P}^2$$ seen in [§Overview of Mirror Symmetry, ⁋Example 6 ($$\mathbb{P}^2$$ case)](/en/math/mirror_symmetry/overview#ex6):
 
 $$W_q = \z_1 + \z_2 + \frac{q}{\z_1 \z_2}.$$
 
@@ -347,7 +347,7 @@ The Gromov–Witten potential of $$\mathbb{P}^1$$ is now given by
 
 $$F(t^0, t^1) = \frac{1}{2}(t^0)^2 t^1 + e^{t^1}.$$ ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12))
 
-Here the first term is the contribution from the classical cup product, and the second term can be thought of as the contribution $$\langle H, H, H\rangle_{0,3,1} = 1$$ from the degree-$$1$$ rational curve of [§Mirror Symmetry Overview, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5), accumulated exponentially along the $$H^2$$ direction coordinate $$t^1$$ (via the Euler vector field). The metric was already computed in [Example 4](#ex4), and computing the third partial derivatives of $$F$$ from the above formula gives
+Here the first term is the contribution from the classical cup product, and the second term can be thought of as the contribution $$\langle H, H, H\rangle_{0,3,1} = 1$$ from the degree-$$1$$ rational curve of [§Overview of Mirror Symmetry, ⁋Example 5 ($$\mathbb{P}^1$$ case)](/en/math/mirror_symmetry/overview#ex5), accumulated exponentially along the $$H^2$$ direction coordinate $$t^1$$ (via the Euler vector field). The metric was already computed in [Example 4](#ex4), and computing the third partial derivatives of $$F$$ from the above formula gives
 
 $$\partial_{t^0}^3 F = 0,\qquad \partial_{t^0}^2\partial_{t^1} F = 1,\qquad \partial_{t^0}\partial_{t^1}^2 F = 0,\qquad \partial_{t^1}^3 F = e^{t^1}.$$
 
@@ -377,7 +377,7 @@ $$\Lie_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 
 
 so $$\Lie_E(\circ) = \circ$$.
 
-Now setting the Novikov variable to $$q = e^{t^1}$$, the second equation becomes $$\partial_{t^1} \circ \partial_{t^1} = qe$$, which translates back into cohomology language as $$H \star H = q \cdot 1$$, recovering the small quantum ring of [§Mirror Symmetry Overview, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5). Moreover, this isomorphism is now parametrized by the variation of $$q=e^{t^1}$$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
+Now setting the Novikov variable to $$q = e^{t^1}$$, the second equation becomes $$\partial_{t^1} \circ \partial_{t^1} = qe$$, which translates back into cohomology language as $$H \star H = q \cdot 1$$, recovering the small quantum ring of [§Overview of Mirror Symmetry, ⁋Example 5 ($$\mathbb{P}^1$$ case)](/en/math/mirror_symmetry/overview#ex5). Moreover, this isomorphism is now parametrized by the variation of $$q=e^{t^1}$$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
 
 </div>
 

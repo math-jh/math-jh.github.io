@@ -17,7 +17,7 @@ weight: 1
 
 ---
 
-호몰로지 대수학은 말 그대로 chain complex들이 주어졌을 때 이들의 호몰로지를 이용하여 그 성질을 살펴보는 학문이다. ([\[범주론\] §아벨 카테고리, ⁋정의 4](/ko/math/category_theory/abelian_categories#def4)) Chain complex는 임의의 abelian category에서 정의되지만, Freyd-Mitchell embedding theorem에 의해 이들은 모두 적당한 $$\lMod{A}$$의 full subcategory로 embed될 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정리 9](/ko/math/category_theory/abelian_categories#thm9)) 
+호몰로지 대수학은 말 그대로 chain complex들이 주어졌을 때 이들의 호몰로지를 이용하여 그 성질을 살펴보는 학문이다. ([\[범주론\] §아벨 카테고리, ⁋정의 4](/ko/math/category_theory/abelian_categories#def4)) Chain complex는 임의의 abelian category에서 정의되지만, Freyd-Mitchell embedding theorem에 의해 이들은 모두 적당한 $$\lMod{A}$$의 full subcategory로 embed될 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정리 8 (Freyd-Mitchell embedding theorem)](/ko/math/category_theory/abelian_categories#thm8)) 
 
 이번 글에서는 호몰로지 대수를 할 때 필수적인 보조정리인 5항 보조정리와 뱀 보조정리를 증명한다. 이들의 증명은 kernel과 cokernel의 universal property를 사용하여 하는 것이 가능하지만, 이는 증명을 불필요하게 길게 만들 수 있으므로 우리는 모든 증명을 $$\lMod{A}$$에서 진행한다. 이는 특히 각 대상들에서 원소를 뽑아올 수 있음을 의미한다. 이와 같은 증명을 diagram chasing이라 부르며, 임의의 abelian category 대신 $$\lMod{A}$$에서 증명을 진행하는 것은 위에서 언급한 Freyd-Mitchell embedding theorem에 의해 정당화될 수 있다.
 

@@ -13,7 +13,7 @@ sidebar:
 date: 2025-03-14
 last_modified_at: 2025-03-14
 weight: 16
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Dimension of Schemes
@@ -42,7 +42,7 @@ On the other hand, in [§Properties of Scheme Morphisms, ⁋Proposition 14](/en/
 
 <ins id="ex3">**Example 3**</ins> For example, consider the algebraic closure $$\overline{\mathbb{Q}}$$ of $$\mathbb{Q}$$. Then $$\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$$ is integral, so the scheme morphism $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$ is integral.
 
-On the other hand, by [§Fiber Products, ⁋Proposition 15](/en/math/scheme_theory/fiber_products) integral morphisms are preserved under base change, so the base change of this via $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$, namely $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$, is also integral. However, the prime ideals of $$\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$ correspond bijectively with $$\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$$, so $$\Spec\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$ is an infinite set, and therefore $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$ is not a quasi-finite morphism, hence not a finite morphism either.
+On the other hand, by [§Fiber Products, ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15) integral morphisms are preserved under base change, so the base change of this via $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$, namely $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$, is also integral. However, the prime ideals of $$\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$ correspond bijectively with $$\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$$, so $$\Spec\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$ is an infinite set, and therefore $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$ is not a quasi-finite morphism, hence not a finite morphism either.
 
 </div>
 
@@ -68,11 +68,11 @@ is an integral morphism, and since an integral morphism is by definition an affi
 
 $$\mathfrak{q}_1\subsetneq \mathfrak{q}_2$$
 
-for any integral extension $$\mathbb{K} \rightarrow B$$. This is a consequence of [\[Commutative Algebra\] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#lem4).
+for any integral extension $$\mathbb{K} \rightarrow B$$. This is a consequence of [\[Commutative Algebra\] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4).
 
 </details>
 
-Since [\[Commutative Algebra\] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#lem4) used in the proof above also holds for any integral extension $$A\hookrightarrow B$$, more generally the following holds.
+Since [\[Commutative Algebra\] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4) used in the proof above also holds for any integral extension $$A\hookrightarrow B$$, more generally the following holds.
 
 <div class="proposition" markdown="1">
 

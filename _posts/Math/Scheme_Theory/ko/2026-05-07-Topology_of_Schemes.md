@@ -249,13 +249,13 @@ $$V=\bigcup_{i\in I} V\cap U_i=\bigcup_{i\in I} \bigcup_{j\in J_i} \Spec (A_i)_{
 
 [정의 8](#def8)의 두 조건을 증명해야 한다. 
 
-첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어지며, 혹은 [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop13)의 첫쨰 결과를 사용해도 충분하다.
+첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어지며, 혹은 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫쨰 결과를 사용해도 충분하다.
 
 둘쨰 조건을 보자. 만일 $$A=(f_1,\ldots, f_r)$$이라 하면, 우리는 $$D(f_i)$$들이 $$\Spec A$$의 open covering이라는 것을 알고, 따라서 $$\mathscr{O}_{\Spec A}$$가 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 첫째 조건을 만족하는 것으로부터 다음의 inclusion
 
 $$A \cong \mathscr{O}_{\Spec A}(\Spec A) \hookrightarrow \prod_{i=1}^r \mathscr{O}_{\Spec A}(D(f_i))\cong\prod_{i=1}^r A_{f_i}$$
 
-을 얻는다. 이제 만일 $$A_{f_i}$$들이 모두 noetherian이라면, 그들의 (유한한) 곱 $$\prod A_{f_i}$$ 또한 noetherian이고 따라서 $$A$$는 noetherian ring의 subring이므로 [\[가환대수학\] §기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thme)에 의하여 noetherian이다.
+을 얻는다. 이제 만일 $$A_{f_i}$$들이 모두 noetherian이라면, 그들의 (유한한) 곱 $$\prod A_{f_i}$$ 또한 noetherian이고 따라서 $$A$$는 noetherian ring의 subring이므로 [\[가환대수학\] §기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3)에 의하여 noetherian이다.
 
 </details>
 

@@ -34,7 +34,7 @@ $$\Hom_{K(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}(A^\bulle
 
 </div>
 
-We can verify that $$K(\mathcal{A})$$ is an additive category. On the other hand, we already observed in [§Long Exact Sequences, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4) that a quasi-isomorphism is generally not an isomorphism in $$K(\mathcal{A})$$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly introduce inverses for quasi-isomorphisms.
+We can verify that $$K(\mathcal{A})$$ is an additive category. On the other hand, we already observed in [§The Long Exact Sequence, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4) that a quasi-isomorphism is generally not an isomorphism in $$K(\mathcal{A})$$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly introduce inverses for quasi-isomorphisms.
 
 <div class="definition" markdown="1">
 
@@ -215,7 +215,7 @@ $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C \overset{h}{\rightarro
 
 </div>
 
-The intuition behind a distinguished triangle is that it is the "derived version" of a short exact sequence. In an abelian category, given a short exact sequence $$0 \rightarrow A' \overset{f}{\longrightarrow} A \overset{g}{\longrightarrow} A'' \rightarrow 0$$, we can view $$f$$ as a map of complexes $$A'[0] \rightarrow A[0]$$, and then the mapping cone $$C(f)$$ is quasi-isomorphic to $$A''[0]$$. ([§Long Exact Sequences, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8)) In other words, a short exact sequence becomes a distinguished triangle in the derived category
+The intuition behind a distinguished triangle is that it is the "derived version" of a short exact sequence. In an abelian category, given a short exact sequence $$0 \rightarrow A' \overset{f}{\longrightarrow} A \overset{g}{\longrightarrow} A'' \rightarrow 0$$, we can view $$f$$ as a map of complexes $$A'[0] \rightarrow A[0]$$, and then the mapping cone $$C(f)$$ is quasi-isomorphic to $$A''[0]$$. ([§The Long Exact Sequence, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8)) In other words, a short exact sequence becomes a distinguished triangle in the derived category
 
 $$A'[0] \overset{f}{\rightarrow} A[0] \rightarrow A''[0] \rightarrow A'[1]$$
 

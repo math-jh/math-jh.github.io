@@ -13,7 +13,7 @@ sidebar:
 date: 2026-01-21
 last_modified_at: 2026-01-21
 weight: 17
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Generalized Eigenspaces
@@ -206,7 +206,7 @@ Here $$d_\lambda$$ is the algebraic multiplicity of $$\lambda$$, and $$\sum d_\l
 
 $$p_A(\x)=\prod_{\lambda\in\sigma(A)} p_{G_\lambda(A)}(\x)$$
 
-([§Existence and Uniqueness of the Determinant, ⁋Theorem 11](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#cor11)) We verified in [Lemma 5](#lem5) that when $$A$$ is restricted to $$G_\lambda(A)$$, the only eigenvalue is $$\lambda$$, so each $$p_{G_\lambda(A)}(\x)$$ must have only $$\x-\lambda$$ as a factor. Therefore, for the two equations above to be equal, we know that $$p_{G_\lambda(A)}(\x)$$ must be a polynomial of degree exactly $$d_\lambda$$,
+([§Existence and Uniqueness of the Determinant, ⁋Corollary 11](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#cor11)) We verified in [Lemma 5](#lem5) that when $$A$$ is restricted to $$G_\lambda(A)$$, the only eigenvalue is $$\lambda$$, so each $$p_{G_\lambda(A)}(\x)$$ must have only $$\x-\lambda$$ as a factor. Therefore, for the two equations above to be equal, we know that $$p_{G_\lambda(A)}(\x)$$ must be a polynomial of degree exactly $$d_\lambda$$,
 
 $$p_{G_\lambda(A)}(\x)=(\x-\lambda)^{d_\lambda}$$
 

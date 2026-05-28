@@ -14,7 +14,7 @@ header:
 date: 2026-03-12
 last_modified_at: 2026-03-18
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-25T19:00:03+00:00
 ---
@@ -101,7 +101,7 @@ Finally, suppose $$x\in Z(\mathfrak{a}\mathfrak{b})$$. If, contrary to the concl
 
 First, the last result of the above proposition shows that for $$Z(\mathfrak{a}\mathfrak{b})$$ to be an algebraic variety, we must have $$\mathfrak{a}=(1)$$ or $$\mathfrak{b}=(1)$$. This provides one useful piece of intuition for understanding algebraically what an algebraic variety is.
 
-More importantly, the above proposition implies that if we declare the affine algebraic sets in $$\mathbb{A}^n$$ to be the closed sets, then the conditions of [\[Topology\] §Interior, Closure, and Boundary of Sets, ⁋Proposition 2](/en/math/topology/other_concepts#prop2) are all satisfied, and hence a topology on $$\mathbb{A}^n$$ is uniquely determined. This is called the *Zariski topology*. By definition, any affine variety $$X$$ is a closed subset of some affine space $$\mathbb{A}^n$$, and we define the topology on $$X$$ as the subspace topology inherited from $$\mathbb{A}^n$$.
+More importantly, the above proposition implies that if we declare the affine algebraic sets in $$\mathbb{A}^n$$ to be the closed sets, then the conditions of [\[Topology\] §Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2) are all satisfied, and hence a topology on $$\mathbb{A}^n$$ is uniquely determined. This is called the *Zariski topology*. By definition, any affine variety $$X$$ is a closed subset of some affine space $$\mathbb{A}^n$$, and we define the topology on $$X$$ as the subspace topology inherited from $$\mathbb{A}^n$$.
 
 As a concrete example, consider the Zariski topology on $$\mathbb{A}^1$$. Any element of $$\mathbb{K}$$ is the zero set of the linear polynomial $$\x-x$$, so every singleton is closed, and therefore every finite set is closed. However, any nonzero element of $$\mathbb{K}[\x]$$ has at most finitely many roots, so in this topology (provided $$\mathbb{K}$$ is infinite) the only infinite closed set is $$\mathbb{K}$$ itself. That is, the Zariski topology on $$\mathbb{A}^1$$ is the cofinite topology, from which we observe that the Zariski topology need not be Hausdorff. More generally, an irreducible space cannot be Hausdorff, and since affine varieties are irreducible by our definition, no affine variety is a Hausdorff space. ([\[Topology\] §Dimension, ⁋Proposition 7](/en/math/topology/dimension#prop7))
 
@@ -115,7 +115,7 @@ $$D(f) = \{x\in \mathbb{A}^n \mid f(x) \ne 0\} = \mathbb{A}^n \setminus Z(f)$$
 
 </div>
 
-The next proposition shows that principal open sets form a basis for an affine variety. ([\[Topology\] §Bases of Topological Spaces, ⁋Definition 1](/en/math/topology/topological_bases#def1))
+The next proposition shows that principal open sets form a basis for an affine variety. ([\[Topology\] §Bases of a Topological Space, ⁋Definition 1](/en/math/topology/topological_bases#def1))
 
 <div class="proposition" markdown="1">
 
@@ -217,7 +217,7 @@ It is obvious that for any subset $$X$$, the set $$I(X)$$ is an ideal of $$\math
 
 </details>
 
-Thus, $$Z$$ and $$I$$ define an antitone Galois connection. ([\[Set Theory\] §Filters and Ideals, Galois Correspondence, ⁋Definition 6](/en/math/set_theory/filter_and_ideal#def6)) Therefore, the compositions $$ZI$$ and $$IZ$$ of the two operators are each closure operators. In the case of $$ZI$$, this closure is precisely the closure in the Zariski topology. Indeed, if $$X \subseteq Y = Z(J)$$, then $$I(Z(J)) \subseteq I(X)$$, and by condition 5 of [Proposition 9](#prop9) we have $$J \subseteq I(Z(J))$$, so $$ZI(X) \subseteq Z(J) = Y$$, making $$ZI(X)$$ the smallest Zariski closed set containing $$X$$. In the case of $$IZ$$, this is not immediately obvious; to see it, we need the notion of the radical of an ideal. ([\[Commutative Algebra\] §Properties of Localization, ⁋Theorem 8](/en/math/commutative_algebra/properties_of_localization#cor8))
+Thus, $$Z$$ and $$I$$ define an antitone Galois connection. ([\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 6](/en/math/set_theory/filter_and_ideal#def6)) Therefore, the compositions $$ZI$$ and $$IZ$$ of the two operators are each closure operators. In the case of $$ZI$$, this closure is precisely the closure in the Zariski topology. Indeed, if $$X \subseteq Y = Z(J)$$, then $$I(Z(J)) \subseteq I(X)$$, and by condition 5 of [Proposition 9](#prop9) we have $$J \subseteq I(Z(J))$$, so $$ZI(X) \subseteq Z(J) = Y$$, making $$ZI(X)$$ the smallest Zariski closed set containing $$X$$. In the case of $$IZ$$, this is not immediately obvious; to see it, we need the notion of the radical of an ideal. ([\[Commutative Algebra\] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8))
 
 <div class="proposition" markdown="1">
 

@@ -51,7 +51,7 @@ $$(\alpha+x)(\alpha'+x')=\alpha\alpha'+x\alpha'+\alpha x'+xx'$$
 <summary>증명</summary>
 
 1. $$\pi$$가 덧셈에 대해 abelian group homomorphism을 정의한다는 것은 [§몫군](/ko/math/algebraic_structures/quotient_groups)의 결과로부터 자명하다. $$\pi$$가 곱셈을 보존하는 것 또한 위의 논의로부터 자명하며, 따라서 $$1+\mathfrak{a}$$가 $$A/\mathfrak{a}$$의 $$1$$이 되는 것을 확인할 수 있다.
-2. 우선 $$\phi$$를 abelian group homomorphism으로 생각하자. 그럼 주어진 조건에 의하여 $$A$$의 subgroup $$\mathfrak{a}$$가 $$\ker \phi$$에 포함되므로, $$A/\mathfrak{a}$$에서 $$B$$로 가는 유일한 *group* homomorphism $$\bar{\phi}:A/\mathfrak{a}\rightarrow B$$가 존재하여 $$\phi=\bar{\phi}\circ\pi$$가 성립한다. ([§동형사상, ⁋명제 3](/ko/math/algebraic_structures/isomorphism_theorems#prop3]))  
+2. 우선 $$\phi$$를 abelian group homomorphism으로 생각하자. 그럼 주어진 조건에 의하여 $$A$$의 subgroup $$\mathfrak{a}$$가 $$\ker \phi$$에 포함되므로, $$A/\mathfrak{a}$$에서 $$B$$로 가는 유일한 *group* homomorphism $$\bar{\phi}:A/\mathfrak{a}\rightarrow B$$가 존재하여 $$\phi=\bar{\phi}\circ\pi$$가 성립한다. ([§군 동형사상, ⁋명제 3](/ko/math/algebraic_structures/isomorphism_theorems#prop3))  
     이제 $$A/\mathfrak{a}$$의 두 원소 $$\alpha+\mathfrak{a}, \beta+\mathfrak{a}$$를 임의로 택하자. 그럼
 
     $$(\alpha+\mathfrak{a})(\beta+\mathfrak{a})=\alpha\beta+\mathfrak{a}=\pi(\alpha\beta)$$
@@ -64,7 +64,7 @@ $$(\alpha+x)(\alpha'+x')=\alpha\alpha'+x\alpha'+\alpha x'+xx'$$
 
 </details>
 
-다음 정리는 [§동형사상](/ko/math/algebraic_structures/isomorphism_theorems)의 ring homomorphism 버전이라 할 수 있다.
+다음 정리는 [§군 동형사상](/ko/math/algebraic_structures/isomorphism_theorems)의 ring homomorphism 버전이라 할 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -77,7 +77,7 @@ $$(\alpha+x)(\alpha'+x')=\alpha\alpha'+x\alpha'+\alpha x'+xx'$$
 
 </div>
 
-이에 대한 증명은 앞선 [명제 2](#prop2)와 마찬가지로 [§동형사상](/ko/math/algebraic_structures/isomorphism_theorems)에서 다루었던 것과 거의 동일하게 진행하되, 얻어지는 group homomorphism이 실제로 ring homomorphism 또한 된다는 것만 보이면 된다. 
+이에 대한 증명은 앞선 [명제 2](#prop2)와 마찬가지로 [§군 동형사상](/ko/math/algebraic_structures/isomorphism_theorems)에서 다루었던 것과 거의 동일하게 진행하되, 얻어지는 group homomorphism이 실제로 ring homomorphism 또한 된다는 것만 보이면 된다. 
 
 ---
 

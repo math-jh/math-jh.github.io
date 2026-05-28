@@ -13,7 +13,7 @@ sidebar:
 date: 2025-04-03
 last_modified_at: 2025-04-03
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 ## Commutators
@@ -34,7 +34,7 @@ We collect results for this kind of computation in [Lemma 1](#lem1). Before that
 
 $$\rho_{g^{-1}}(x)=x^g$$
 
-Then by [\[Algebraic Structures\] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions), for any $$g_1,g_2\in G$$ and $$x\in G$$,
+Then by [\[Algebraic Structures\] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9), for any $$g_1,g_2\in G$$ and $$x\in G$$,
 
 $$(x^{g_1})^{g_2}=x^{g_1g_2}$$
 
@@ -337,4 +337,4 @@ Then if $$G$$ has a composition series, we know that the length of any compositi
 
 $$\length(G)=\length(G/N)+\length(N)$$
 
-is a consequence of [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Theorem 7](/en/math/algebraic_structures/isomorphism_theorems) and [Theorem 16](#thm16).
+is a consequence of [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Theorem 7](/en/math/algebraic_structures/isomorphism_theorems#thm7) and [Theorem 16](#thm16).

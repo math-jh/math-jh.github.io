@@ -17,7 +17,7 @@ weight: 17
 translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
-[§Cohomology of Projective Spaces, ⁋Proposition 4](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4), the Serre vanishing theorem guarantees that for an ample line bundle $$\mathcal{L}$$ and a coherent sheaf $$\mathcal{F}$$ on a projective variety, $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$) holds for sufficiently large $$m$$. However, this result is merely an asymptotic property and gives no information about exactly which $$m$$ the vanishing begins at.
+[§Cohomology of Projective Space, ⁋Proposition 4 (Serre Vanishing)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4), the Serre vanishing theorem guarantees that for an ample line bundle $$\mathcal{L}$$ and a coherent sheaf $$\mathcal{F}$$ on a projective variety, $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$) holds for sufficiently large $$m$$. However, this result is merely an asymptotic property and gives no information about exactly which $$m$$ the vanishing begins at.
 
 The Kodaira vanishing theorem is a far more refined result, guaranteeing that higher cohomology *always* vanishes for the tensor product $$\omega_X \otimes \mathcal{L}$$ of the canonical bundle $$\omega_X$$ and an ample line bundle $$\mathcal{L}$$. In this post we examine the Kodaira vanishing theorem, its applications, and how this theorem is used in algebraic geometry.
 
@@ -80,7 +80,7 @@ $$H^p(\mathbb{P}^n, \mathcal{O}(d - n - 1)) = 0$$
 
 holds for all $$d>0$$ and all $$i>0$$.
 
-Since we know the cohomology of every line bundle from [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), we can verify this directly. According to this,
+Since we know the cohomology of every line bundle from [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), we can verify this directly. According to this,
 
 $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 \mathbb{K}[\x_0, \ldots, \x_n]_k & q = 0, k \geq 0 \\
@@ -98,7 +98,7 @@ Now, as previewed earlier, we examine applications of the Kodaira vanishing theo
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
-([§Riemann-Roch for Surfaces, ⁋Proposition 4](/en/math/algebraic_varieties/riemann_roch_surfaces#prop4)). The power of this formula lies in the fact that $$\rchi$$ can be computed purely from algebraic and topological data, but the problem is that $$\rchi$$ is the alternating sum of $$h^0, h^1, h^2$$. Thus, when we simply want to know $$h^0(S, \mathcal{O}_S(D))$$, we must determine the values of the higher cohomology groups separately, so the Riemann-Roch formula alone does not yield a direct answer.
+([§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 4 (Riemann–Roch for surfaces)](/en/math/algebraic_varieties/riemann_roch_surfaces#prop4)). The power of this formula lies in the fact that $$\rchi$$ can be computed purely from algebraic and topological data, but the problem is that $$\rchi$$ is the alternating sum of $$h^0, h^1, h^2$$. Thus, when we simply want to know $$h^0(S, \mathcal{O}_S(D))$$, we must determine the values of the higher cohomology groups separately, so the Riemann-Roch formula alone does not yield a direct answer.
 
 To use the Kodaira vanishing theorem in this situation, suppose $$\mathcal{L}\cong \mathcal{O}_S(L)$$ is an ample line bundle. We know that
 
@@ -110,11 +110,11 @@ $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$
 
 and therefore computing only the right-hand side of the Riemann-Roch formula immediately yields $$h^0(S, \omega_S \otimes \mathcal{L})$$.
 
-Another application is the computation of plurigenera. The plurigenus $$P_m(X)$$ of a smooth projective variety $$X$$ is a generalization of the geometric genus $$p_g(X)$$ and is a birational invariant of surfaces. ([§Riemann-Roch for Surfaces, ⁋Definition 12](/en/math/algebraic_varieties/riemann_roch_surfaces#def12)) Kodaira vanishing can be used directly in computing these invariants.
+Another application is the computation of plurigenera. The plurigenus $$P_m(X)$$ of a smooth projective variety $$X$$ is a generalization of the geometric genus $$p_g(X)$$ and is a birational invariant of surfaces. ([§The Riemann–Roch Theorem for Surfaces, ⁋Definition 12](/en/math/algebraic_varieties/riemann_roch_surfaces#def12)) Kodaira vanishing can be used directly in computing these invariants.
 
 For example, in the case of a curve $$C$$, we know that its birational class is determined by the genus, and the plurigenus $$P_m(g)$$ is given as a function of $$g$$ (and $$m$$). That is, for a curve $$C$$, the plurigenus is not essentially an interesting invariant. This becomes interesting in higher dimensions such as surfaces, where birational invariants are not determined by a single number and all plurigenera become genuinely necessary.
 
-As seen in [§Riemann-Roch for Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces), for a divisor $$D$$ on a surface $$S$$ the Riemann-Roch formula is given by
+As seen in [§The Riemann–Roch Theorem for Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces), for a divisor $$D$$ on a surface $$S$$ the Riemann-Roch formula is given by
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 

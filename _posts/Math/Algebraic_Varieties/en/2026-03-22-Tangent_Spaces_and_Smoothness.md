@@ -30,7 +30,7 @@ is a maximal ideal. We then proved that the tangent space can be identified with
 
 $$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast$$
 
-([\[Differentiable Manifolds\] §Cotangent Spaces, ⁋Lemma 1](/en/math/manifold/cotangent_space#lem1)). This construction is usually not emphasized in differential geometry, yet it is extremely helpful for generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what functions on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7)), and we also know that the set of all functions vanishing at $$x\in X$$ corresponds to the maximal ideal of $$\mathbb{K}[X]$$ at this point. Therefore we define
+([\[Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifold/cotangent_space#lem1)). This construction is usually not emphasized in differential geometry, yet it is extremely helpful for generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what functions on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7)), and we also know that the set of all functions vanishing at $$x\in X$$ corresponds to the maximal ideal of $$\mathbb{K}[X]$$ at this point. Therefore we define
 
 $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 
@@ -116,7 +116,7 @@ In differential geometry, the dimension of the tangent space at any point always
 
 We prove only the affine case. Let $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$ be irreducible with $$\dim X = d$$. Consider the local ring $$\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$$ at the point $$x \in X$$. Localization preserves dimension, so $$\dim \mathcal{O}_{X,x} = \dim X = d$$. ([§Dimension, ⁋Proposition 2](/en/math/algebraic_varieties/dimension#prop2))
 
-In general, for a Noetherian local ring $$(R, \mathfrak{m})$$ one has $$\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$$. ([\[Commutative Algebra\] §Systems of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2)) Therefore
+In general, for a Noetherian local ring $$(R, \mathfrak{m})$$ one has $$\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$$. ([\[Commutative Algebra\] §System of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2)) Therefore
 
 $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \mathcal{O}_{X,x} = d = \dim X$$
 
@@ -210,7 +210,7 @@ $$X_\sm = \{x \in X \mid \operatorname{rank}(J_x) = n - d\}$$
 
 We show that this set is a dense open subset. First, that $$X_\sm$$ is open is relatively clear. Having rank exactly $$n-d$$ means that two conditions hold simultaneously. First, having rank *at least* $$n-d$$ is equivalent to some $$(n-d) \times (n-d)$$ minor being nonzero, which is an open condition in the Zariski topology. Second, having rank *at most* $$n-d$$ is equivalent to every $$(n-d+1) \times (n-d+1)$$ minor vanishing, which is a closed condition. Hence the set of points where the rank is exactly $$n-d$$ is an open subset of $$X$$.
 
-Showing that $$X_\sm$$ is nonempty is somewhat technical. The idea is that a generic point should be smooth, so we consider the generic point $$\eta$$ of $$X$$. Passing to the localization at $$\eta$$, the local ring $$\mathcal{O}_{X,\eta} = \mathbb{K}(X)$$ is a field, hence a regular local ring. By [\[Commutative Algebra\] §Systems of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2),
+Showing that $$X_\sm$$ is nonempty is somewhat technical. The idea is that a generic point should be smooth, so we consider the generic point $$\eta$$ of $$X$$. Passing to the localization at $$\eta$$, the local ring $$\mathcal{O}_{X,\eta} = \mathbb{K}(X)$$ is a field, hence a regular local ring. By [\[Commutative Algebra\] §System of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2),
 
 $$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d$$
 

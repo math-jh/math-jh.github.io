@@ -48,7 +48,7 @@ we can define the property of a scheme morphism $$X \rightarrow \Spec B$$ throug
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since any affine scheme is quasi-compact ([§Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12)), it is obvious that the given condition implies the condition of [Definition 2](#def2).
+Since any affine scheme is quasi-compact ([§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12)), it is obvious that the given condition implies the condition of [Definition 2](#def2).
 
 Conversely, suppose a quasi-compact morphism $$\varphi: X \rightarrow Y$$ is given. Now if any quasi-compact open subset $$V$$ of $$Y$$ is given, there exists a covering $$\{V_j\}$$ of $$V$$ by finitely many affine open subsets, and their preimages $$\varphi^{-1}(V_j)$$ are all quasi-compact. Now
 
@@ -92,11 +92,11 @@ Then the following holds.
 
 Suppose any two affine open subsets $$V_1=\Spec B_1, V_2=\Spec B_2$$ of a locally Noetherian scheme $$X$$ are given; we must show that $$V_1\cap V_2$$ is quasi-compact.
 
-First, since $$X$$ is locally Noetherian, we can cover $$X$$ by spectra $$\Spec A_i$$ of Noetherian rings. Now for each $$i$$, by [§Topology of Schemes, ⁋Lemma 11](/en/math/scheme_theory/topology_of_schemes#lem11) we can cover $$U_i\cap V_1$$ by spectra $$\Spec (A_i)_g$$ of Noetherian rings. Collecting all of these, we can cover $$V_1$$ by spectra of Noetherian rings, and by [§Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12), $$V_1=\Spec B_1$$ is covered by finitely many spectra of Noetherian rings. Therefore by [§Topology of Schemes, ⁋Lemma 13](/en/math/scheme_theory/topology_of_schemes#lem13), $$B_1$$ is a Noetherian ring and hence $$V_1=\Spec B_1$$ is Noetherian. Again by the first result of [[Topology] §Dimension, ⁋Proposition 12](/en/math/topology/dimension#prop12) and [[Topology] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13), any subspace of a Noetherian topological space is quasi-compact, so in particular $$V_1\cap V_2$$ is also quasi-compact.
+First, since $$X$$ is locally Noetherian, we can cover $$X$$ by spectra $$\Spec A_i$$ of Noetherian rings. Now for each $$i$$, by [§Topological Structure of Schemes, ⁋Lemma 11 (Nike)](/en/math/scheme_theory/topology_of_schemes#lem11) we can cover $$U_i\cap V_1$$ by spectra $$\Spec (A_i)_g$$ of Noetherian rings. Collecting all of these, we can cover $$V_1$$ by spectra of Noetherian rings, and by [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12), $$V_1=\Spec B_1$$ is covered by finitely many spectra of Noetherian rings. Therefore by [§Topological Structure of Schemes, ⁋Lemma 13](/en/math/scheme_theory/topology_of_schemes#lem13), $$B_1$$ is a Noetherian ring and hence $$V_1=\Spec B_1$$ is Noetherian. Again by the first result of [[Topology] §Dimension, ⁋Proposition 12](/en/math/topology/dimension#prop12) and [[Topology] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13), any subspace of a Noetherian topological space is quasi-compact, so in particular $$V_1\cap V_2$$ is also quasi-compact.
 
 </details>
 
-Then quasi-compactness and quasi-separatedness not only satisfy the property of [Definition 1](#def1), but are also *affine-local on target*, as we verify in the following proposition. ([§Topology of Schemes, ⁋Definition 9](/en/math/scheme_theory/topology_of_schemes#def9))
+Then quasi-compactness and quasi-separatedness not only satisfy the property of [Definition 1](#def1), but are also *affine-local on target*, as we verify in the following proposition. ([§Topological Structure of Schemes, ⁋Definition 9](/en/math/scheme_theory/topology_of_schemes#def9))
 
 <div class="proposition" markdown="1">
 
@@ -109,9 +109,9 @@ Then quasi-compactness and quasi-separatedness not only satisfy the property of 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-1. Suppose any affine open subset $$V$$ of $$Y$$ is given. Then by [§Topology of Schemes, ⁋Lemma 11](/en/math/scheme_theory/topology_of_schemes#lem11), we can cover $$V\cap V_j$$ by open subsets that are principal open in both $$V$$ and $$V_j$$, and considering this for all $$j$$ and using the quasi-compactness of $$V$$, we can choose only finitely many of these. Write this as $$V=\bigcup W_l$$.   
-    On the other hand, for each $$j$$, since $$\varphi^{-1}(V_j)$$ is quasi-compact, we can cover it by finitely many affine open subsets $$U_{jk}$$, and now $$\varphi^{-1}(W_l)\cap U_{jk}$$ is a principal open subset of $$U_{jk}$$ by [§Spectrums, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8), so each $$\varphi^{-1}(W_l)$$ can be expressed as a finite union of affine open sets, and therefore $$\varphi^{-1}(V)$$ can also be expressed as a finite union of affine open sets. Since a finite union of quasi-compact spaces is quasi-compact, we obtain the desired result.
-2. This can also be proved in the same way as the first result, using [§Topology of Schemes, ⁋Lemma 11](/en/math/scheme_theory/topology_of_schemes#lem11) to cover an arbitrary affine open subset $$V=\Spec B$$ by principal open subsets whose preimages are quasi-separated.
+1. Suppose any affine open subset $$V$$ of $$Y$$ is given. Then by [§Topological Structure of Schemes, ⁋Lemma 11 (Nike)](/en/math/scheme_theory/topology_of_schemes#lem11), we can cover $$V\cap V_j$$ by open subsets that are principal open in both $$V$$ and $$V_j$$, and considering this for all $$j$$ and using the quasi-compactness of $$V$$, we can choose only finitely many of these. Write this as $$V=\bigcup W_l$$.   
+    On the other hand, for each $$j$$, since $$\varphi^{-1}(V_j)$$ is quasi-compact, we can cover it by finitely many affine open subsets $$U_{jk}$$, and now $$\varphi^{-1}(W_l)\cap U_{jk}$$ is a principal open subset of $$U_{jk}$$ by [§Spectra, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8), so each $$\varphi^{-1}(W_l)$$ can be expressed as a finite union of affine open sets, and therefore $$\varphi^{-1}(V)$$ can also be expressed as a finite union of affine open sets. Since a finite union of quasi-compact spaces is quasi-compact, we obtain the desired result.
+2. This can also be proved in the same way as the first result, using [§Topological Structure of Schemes, ⁋Lemma 11 (Nike)](/en/math/scheme_theory/topology_of_schemes#lem11) to cover an arbitrary affine open subset $$V=\Spec B$$ by principal open subsets whose preimages are quasi-separated.
 
 </details>
 
@@ -207,7 +207,7 @@ One direction is obvious. For the converse, first from the assumption that $$\va
 
 </details>
 
-In the above proposition, since $$\varphi$$ is an integral morphism it is an affine morphism, and hence a quasi-compact morphism ([§Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12)), so whether $$\varphi$$ is of finite type or locally of finite type becomes the same assumption.
+In the above proposition, since $$\varphi$$ is an integral morphism it is an affine morphism, and hence a quasi-compact morphism ([§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12)), so whether $$\varphi$$ is of finite type or locally of finite type becomes the same assumption.
 
 <div class="example" markdown="1">
 

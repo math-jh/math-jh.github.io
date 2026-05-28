@@ -13,7 +13,7 @@ sidebar:
 date: 2024-05-24
 last_modified_at: 2024-05-24
 weight: 9
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 In this post we define separated morphisms and proper morphisms. It is helpful to think of them as the algebraic geometry analogues of the Hausdorff and compactness conditions in topology.
@@ -46,13 +46,13 @@ the only nontrivial open subset of $\Spec A$ is
 
 $$D(\mathfrak{m})=\{(0)\}.$$
 
-On the other hand, if $\mathfrak{m}=(\pi)$, then by [§Spectrums, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5),
+On the other hand, if $\mathfrak{m}=(\pi)$, then by [§Spectra, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5),
 
 $$\mathscr{O}(D(\mathfrak{m}))=\mathscr{O}(D(\pi))\cong A_\pi\cong \Frac(A).$$
 
 Of course $\mathscr{O}(\Spec A)\cong A$.
 
-Meanwhile, the two points of $\Spec A$ can be viewed geometrically as follows: each point is determined by a ring homomorphism from $A$ to its residue field, namely $\kappa((0))$ and $\kappa(\mathfrak{m})$. Using [§Spectrums, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5) again,
+Meanwhile, the two points of $\Spec A$ can be viewed geometrically as follows: each point is determined by a ring homomorphism from $A$ to its residue field, namely $\kappa((0))$ and $\kappa(\mathfrak{m})$. Using [§Spectra, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5) again,
 
 $$\mathscr{O}_{(0)}\cong A_{(0)}\cong \Frac(A),\qquad \mathscr{O}_\mathfrak{m}\cong A_\mathfrak{m}$$
 
@@ -104,7 +104,7 @@ and this is surjective, so it is obvious.
 
 </details>
 
-An example of a non-separated scheme is the line with double origin constructed in [§Schemes, ⁋Example 6](/en/math/scheme_theory/schemes#ex6). For convenience, let us call this scheme $X$. Then $X\times X$ will look like the ordinary coordinate plane away from the axes, but on the coordinate axes, especially at the origin, four origins will appear. Intuitively, if we think about how $\Delta$ sits inside $X\times X$, away from the coordinate axes it will take the shape of an ordinary diagonal line, but when the two origins of $X$ are mapped into $X\times X$ via $\Delta$, it is unclear which two of these four origins they land in. In fact, all four of these origins lie in the closure of $\Delta(X)$, so we see that it is not separated. Again, in topology this space was an example of a non-Hausdorff space.
+An example of a non-separated scheme is the line with double origin constructed in [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10). For convenience, let us call this scheme $X$. Then $X\times X$ will look like the ordinary coordinate plane away from the axes, but on the coordinate axes, especially at the origin, four origins will appear. Intuitively, if we think about how $\Delta$ sits inside $X\times X$, away from the coordinate axes it will take the shape of an ordinary diagonal line, but when the two origins of $X$ are mapped into $X\times X$ via $\Delta$, it is unclear which two of these four origins they land in. In fact, all four of these origins lie in the closure of $\Delta(X)$, so we see that it is not separated. Again, in topology this space was an example of a non-Hausdorff space.
 
 <div class="proposition" markdown="1">
 

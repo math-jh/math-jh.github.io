@@ -41,7 +41,7 @@ weight: 7
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes)에서 전통적인 projective space를 대수기하의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$을 만족하지만, $$\mathbb{A}^{n+1}_\mathbb{K}$$의 점들이 이러한 꼴만 있는 것은 아니고, 또 이 식은 structure sheaf에 대한 정보를 하나도 담고 있지 않으므로 scheme morphism이라 칭하기는 부적절할 것이다.
+이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)에서 전통적인 projective space를 대수기하의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$을 만족하지만, $$\mathbb{A}^{n+1}_\mathbb{K}$$의 점들이 이러한 꼴만 있는 것은 아니고, 또 이 식은 structure sheaf에 대한 정보를 하나도 담고 있지 않으므로 scheme morphism이라 칭하기는 부적절할 것이다.
 
 이제 scheme morphism으로서 $$\varphi$$를 정의하기 위해 $$\mathbb{P}^n_{\mathbb{K}}$$의 affine open subscheme 
 

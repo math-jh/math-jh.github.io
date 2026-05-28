@@ -18,13 +18,13 @@ weight: 11
 translated_at: 2026-05-28T11:36:15+00:00
 translation_source: kimi-cli
 ---
-In the previous post, we saw that for two $\mathbb{K}$-vector spaces $V,W$ of dimensions $n$ and $m$ respectively, $\Hom(V,W)$ is an $mn$-dimensional $\mathbb{K}$-vector space. Also, the space $\Mat_{m\times n}(\mathbb{K})$ of $m\times n$ matrices is an $mn$-dimensional $\mathbb{K}$-vector space. Thus, from [§Isomorphic Vector Spaces, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4) we know that these two vector spaces are isomorphic.
+In the previous post, we saw that for two $\mathbb{K}$-vector spaces $V,W$ of dimensions $n$ and $m$ respectively, $\Hom(V,W)$ is an $mn$-dimensional $\mathbb{K}$-vector space. Also, the space $\Mat_{m\times n}(\mathbb{K})$ of $m\times n$ matrices is an $mn$-dimensional $\mathbb{K}$-vector space. Thus, from [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4) we know that these two vector spaces are isomorphic.
 
 The fundamental theorem of linear algebra[^1] that we will prove in this post shows not only that they are isomorphic simply because they are vector spaces of the same dimension, but that there exists a *natural* isomorphism between them, proving that these two are essentially the same space.
 
 ## Fundamental Theorem: Euclidean Space
 
-In [§The Space of Linear Maps](/en/math/linear_algebra/space_of_linear_maps) we understood a linear map $L$ satisfying the following equations
+In [§Space of Linear Maps](/en/math/linear_algebra/space_of_linear_maps) we understood a linear map $L$ satisfying the following equations
 
 $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(x_2)&=\alpha_{12}y_1+\alpha_{22}y_2+\cdots+\alpha_{m2}y_m\\&\phantom{a}\vdots\\L(x_n)&=\alpha_{1n}y_1+\alpha_{2n}y_2+\cdots+\alpha_{mn}y_m\end{aligned}$$
 
@@ -198,7 +198,7 @@ Since we already checked that the $i$-th column of $[L_2\circ L_1]^{\mathcal{B}_
 
 </details>
 
-[Theorem 4](#thm4) above shows that once we choose bases for $V,W$, we can regard $\Hom(V,W)$ and $\Mat_{m\times n}(\mathbb{K})$ as the same. For example, the $mn$ basis elements of $\Mat_{m\times n}(\mathbb{K})$ correspond to the $mn$ basis elements we examined in [§The Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5). The following corollary is also a consequence of the fundamental theorem.
+[Theorem 4](#thm4) above shows that once we choose bases for $V,W$, we can regard $\Hom(V,W)$ and $\Mat_{m\times n}(\mathbb{K})$ as the same. For example, the $mn$ basis elements of $\Mat_{m\times n}(\mathbb{K})$ correspond to the $mn$ basis elements we examined in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5). The following corollary is also a consequence of the fundamental theorem.
 
 <div class="proposition" markdown="1">
 

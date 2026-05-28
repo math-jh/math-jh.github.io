@@ -13,7 +13,7 @@ sidebar:
 date: 2025-02-05
 last_modified_at: 2025-02-11
 weight: 6
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 A scheme is a geometric and algebraic object at the same time, so to understand it well, we need to consider not only the topological structure of schemes that we studied in previous posts but also their algebraic structure simultaneously, and we briefly saw how this philosophy is reflected in previous posts. In this post, we develop this philosophy further.
@@ -50,7 +50,7 @@ we can verify that $$\mathscr{O}_X(U)$$ is reduced.
 
 </details>
 
-From this we see that reducedness is a stalk-local property. ([§Topology of Schemes, ⁋Proposition 16](/en/math/scheme_theory/topology_of_schemes#prop16)) Also, since it is easy to show that if a ring $$A$$ is reduced then so is any localization of it, we can show that the spectrum of a reduced ring is reduced.
+From this we see that reducedness is a stalk-local property. ([§Topological Structure of Schemes, ⁋Proposition 16](/en/math/scheme_theory/topology_of_schemes#prop16)) Also, since it is easy to show that if a ring $$A$$ is reduced then so is any localization of it, we can show that the spectrum of a reduced ring is reduced.
 
 Similarly, the spectrum of an integral domain is an integral scheme. This is not difficult to prove directly, but in [Proposition 4](#prop4) we prove that a scheme $$X$$ is integral if and only if $$X$$ is irreducible and reduced. Then the spectrum $$\Spec A$$ of an integral domain $$A$$ is
 
@@ -98,13 +98,13 @@ and the right-hand side is not an integral domain, which contradicts the assumpt
 Conversely, suppose we are given an irreducible reduced scheme $$X$$, and let us show that $$X$$ is an integral scheme. That is, given any open subset $$U$$ of $$X$$, we must show that $$\mathscr{O}_X(U)$$ is an integral domain. First we prove the following claim.
 
 **Claim** For any affine open subset $$\Spec A\cong V\subseteq X$$, $$\mathscr{O}_X(V)\cong A$$ is always an integral domain.
-> From the assumption that $$X$$ is reduced, we know that $$A$$ must be a reduced ring. On the other hand, since $$X$$ is an irreducible closed subset of $$X$$, $$V$$ is also irreducible, and ([\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop14)) therefore by [Lemma 3](#lem3), $$\mathfrak{N}(A)=0$$ is a prime ideal, so $$A$$ is an integral domain.
+> From the assumption that $$X$$ is reduced, we know that $$A$$ must be a reduced ring. On the other hand, since $$X$$ is an irreducible closed subset of $$X$$, $$V$$ is also irreducible, and ([\[Topology\] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14)) therefore by [Lemma 3](#lem3), $$\mathfrak{N}(A)=0$$ is a prime ideal, so $$A$$ is an integral domain.
 
 Now we show that for a general open subset $$U$$ of $$X$$, $$\mathscr{O}_X(U)$$ is an integral domain. To this end, suppose two elements $$f,g\in \mathscr{O}_X(U)$$ satisfy $$fg=0$$. Then for the two open subsets of $$U$$
 
 $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x\not\in \mathfrak{m}_x\}$$
 
-and their complements $$Z_U(f), Z_U(g)$$, we have $$U=Z_U(f)\cup Z_U(g)$$. Since $$X$$ is irreducible, by ([\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop14)) we know that its open subset $$U$$ is likewise, and therefore either $$Z_U(f)=U$$ or $$Z_U(g)=U$$ must hold. Without loss of generality, suppose $$Z_U(f)=U$$. Then for any open affine subset $$V$$ of $$U$$, defining
+and their complements $$Z_U(f), Z_U(g)$$, we have $$U=Z_U(f)\cup Z_U(g)$$. Since $$X$$ is irreducible, by ([\[Topology\] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14)) we know that its open subset $$U$$ is likewise, and therefore either $$Z_U(f)=U$$ or $$Z_U(g)=U$$ must hold. Without loss of generality, suppose $$Z_U(f)=U$$. Then for any open affine subset $$V$$ of $$U$$, defining
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
@@ -112,7 +112,7 @@ in $$V$$, we have $$D_V(f)=D_U(f)\cap V=D(f\vert_{U\cap D_U(f)})\subseteq V$$, a
 
 </details>
 
-On the other hand, looking at [§Topology of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), we know that the irreducibility of an arbitrary scheme $$X$$ cannot be determined by looking at stalks alone. For example, $$Z(\x(\x-1))$$ splits into two components, so points in each component know nothing about points in the other component. Therefore, integrality also cannot be determined by looking at stalks alone.
+On the other hand, looking at [§Topological Structure of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), we know that the irreducibility of an arbitrary scheme $$X$$ cannot be determined by looking at stalks alone. For example, $$Z(\x(\x-1))$$ splits into two components, so points in each component know nothing about points in the other component. Therefore, integrality also cannot be determined by looking at stalks alone.
 
 However, if $$X$$ were a *connected* scheme, the irreducible components would necessarily meet at some point, and by looking at the stalk at this point we might be able to determine irreducibility. The following proposition makes this idea precise.
 
@@ -128,7 +128,7 @@ First, if $$X$$ is integral then $$X$$ is irreducible and hence connected, and s
 
 For the opposite direction, that $$X$$ is reduced is obvious because any integral domain is reduced and reducedness is a stalk-local property. Thus, using the given conditions, it suffices to show that $$X$$ is irreducible; the rest follows from [Proposition 4](#prop4).
 
-First, since $$X$$ is a Noetherian scheme, there exist suitable Noetherian rings $$A_1,\ldots, A_r$$ such that $$X=\bigcup \Spec A_i$$. Also, $$X$$ is Noetherian as a topological space, and therefore by ([\[Topology\] §Dimension, ⁋Proposition 12](/en/math/topology/dimension#prop13)) $$X$$ has finitely many irreducible components. Now, letting
+First, since $$X$$ is a Noetherian scheme, there exist suitable Noetherian rings $$A_1,\ldots, A_r$$ such that $$X=\bigcup \Spec A_i$$. Also, $$X$$ is Noetherian as a topological space, and therefore by ([\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13)) $$X$$ has finitely many irreducible components. Now, letting
 
 $$X=\bigcup_{j=1}^s X_j\tag{$\ast$}$$
 
@@ -250,7 +250,7 @@ More generally, if $$A$$ is not an integral domain, there exist cases where $$\a
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**Example 11**</ins> Consider the affine scheme $$X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$$. Then by [§Spectra, ⁋Lemma 6](/en/math/scheme_theory/spectrums) and [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9), as a set
+<ins id="ex11">**Example 11**</ins> Consider the affine scheme $$X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$$. Then by [§Spectra, ⁋Lemma 6](/en/math/scheme_theory/spectrums#lem6) and [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9), as a set
 
 $$X= Z(\x_2^2,\x_1\x_2)=Z(\x_2^2)\cap Z(\x_1\x_2)=\{(0,0)\}.$$
 

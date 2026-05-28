@@ -180,7 +180,7 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 
 </div>
 
-어렵지 않게 $$\End(A)$$와 $$\Aut(A)$$가 대수적으로 정의된 monoid와 group의 조건을 만족하는 것을 알 수 있다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)과 [⁋정의 11](/ko/math/algebraic_structures/groups#def11)) 범주론에서는 monoid와 group을 다음과 같이 정의할 수 있다.
+어렵지 않게 $$\End(A)$$와 $$\Aut(A)$$가 대수적으로 정의된 monoid와 group의 조건을 만족하는 것을 알 수 있다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)과 [반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11)) 범주론에서는 monoid와 group을 다음과 같이 정의할 수 있다.
 
 <div class="definition" markdown="1">
 

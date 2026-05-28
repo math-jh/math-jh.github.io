@@ -13,13 +13,13 @@ sidebar:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 4
-translated_at: 2026-05-24T08:00:03+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-24T08:00:03+00:00
 ---
 For the time being, we explore properties of groups. Thus, we will simply refer to group homomorphisms between groups as homomorphisms.
 
-From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6), we can also define (group) isomorphisms, and from this definition and [\[Set Theory\] §Operations on Functions, ⁋Proposition 4](/en/math/set_theory/operation_of_functions#prop4), it is clear that any isomorphism must be a bijection. In many cases, the converse also holds.
+From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6), we can also define (group) isomorphisms, and from this definition and [\[Set Theory\] §Operations on Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5), it is clear that any isomorphism must be a bijection. In many cases, the converse also holds.
 
 <div class="proposition" markdown="1">
 
@@ -68,7 +68,7 @@ If $$x,y\in \Eq(f,g)$$, then
 
 $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
-so $$xy^{-1}\in\Eq(f,g)$$. Therefore, by [§Semigroups, Monoids, Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), we obtain the desired result.
+so $$xy^{-1}\in\Eq(f,g)$$. Therefore, by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), we obtain the desired result.
 
 </details>
 
@@ -134,7 +134,7 @@ On the other hand, we verified that for any magma homomorphism $$f:A\rightarrow 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-We already know that $$\im f$$ is a submagma of $$G'$$, so by [§Semigroups, Monoids, Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), it suffices to show that $$\im f$$ is closed under taking inverses. Let $$y\in\im f$$ and suppose $$x\in G$$ satisfies $$f(x)=y$$. Then
+We already know that $$\im f$$ is a submagma of $$G'$$, so by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), it suffices to show that $$\im f$$ is closed under taking inverses. Let $$y\in\im f$$ and suppose $$x\in G$$ satisfies $$f(x)=y$$. Then
 
 $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 

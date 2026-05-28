@@ -206,7 +206,7 @@ $$\sk(\Fun(\Pi_1(X),\Set))\simeq\Fun(\sk(\Pi_1(X)), \Set)$$
 
 so, using again that $$X$$ is path-connected, we obtain a categorical equivalence between isomorphism classes of covering spaces and $$\pi_1(X,x)$$-sets.
 
-Now recall [\[*Algebraic Structures* §Group Actions, ⁋Theorem 14*](/en/math/algebraic_structures/group_actions#thm14) and its proof: given any $$G$$-set $$E$$, we may decompose $$E$$ into $$G$$-orbits, and the restriction of the action to each orbit is transitive; moreover, each such orbit is isomorphic to $$G/N$$ for some normal subgroup $$N$$ of $$G$$, equipped with the canonical $$G$$-action. Hence, if we restrict attention to transitive group actions, the definition of the monodromy functor tells us that on the target side this corresponds to considering only *connected* covers. We thus obtain an equivalence
+Now recall [\[Algebraic Structures\] §Group Actions, ⁋Theorem 14 (Orbit-stabilizer theorem)](/en/math/algebraic_structures/group_actions#thm14) and its proof: given any $$G$$-set $$E$$, we may decompose $$E$$ into $$G$$-orbits, and the restriction of the action to each orbit is transitive; moreover, each such orbit is isomorphic to $$G/N$$ for some normal subgroup $$N$$ of $$G$$, equipped with the canonical $$G$$-action. Hence, if we restrict attention to transitive group actions, the definition of the monodromy functor tells us that on the target side this corresponds to considering only *connected* covers. We thus obtain an equivalence
 
 $$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \left\{\text{transitive $\pi_1(B,x)$-sets}\right\}$$
 
@@ -214,7 +214,7 @@ Passing to the skeleton category classifying transitive $$\pi_1(B,x)$$-sets up t
 
 $$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \left\{\text{conjugacy classes of subgroups of $\pi_1(B,x)$}\right\}$$
 
-Examining each of these categories, we find that they are simply partially ordered sets ([\[*Category Theory* §Categories, ⁋Example 3*](/en/math/category_theory/categories#ex3)), and the equivalence is an isomorphism of posets. This gives the following classical statement.
+Examining each of these categories, we find that they are simply partially ordered sets ([\[Category Theory\] §Categories, ⁋Example 3](/en/math/category_theory/categories#ex3)), and the equivalence is an isomorphism of posets. This gives the following classical statement.
 
 <div class="proposition" markdown="1">
 
@@ -238,11 +238,11 @@ Now, the poset of conjugacy classes of subgroups of $$\pi_1(B,x)$$ possesses a m
 
 For well-behaved spaces, one can in principle compute the fundamental group or homology directly from the definitions, but in most cases such a computation is prohibitively complicated or essentially impossible. Our strategy is to compute the fundamental group of a large space by decomposing it into smaller pieces.
 
-The simplest such decomposition is a union of two open sets: $$X=U\cup V$$. By [\[*Topology* §Presheaves, ⁋Lemma 1*](/en/math/topology/presheaves#lem1), the diagram
+The simplest such decomposition is a union of two open sets: $$X=U\cup V$$. By [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1), the diagram
 
 ![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-3.png){:style="width:8em" class="invert" .align-center}
 
-is a colimit diagram. Our goal is to apply the fundamental groupoid functor $$\Pi_1$$ to this diagram and express $$\Pi_1(X)$$ in terms of $$\Pi_1(U)$$, $$\Pi_1(V)$$, and $$\Pi_1(U\cap V)$$. More generally, [\[*Topology* §Presheaves, ⁋Lemma 1*](/en/math/topology/presheaves#lem1) implies that for any open cover $$(U_i)$$, the diagram
+is a colimit diagram. Our goal is to apply the fundamental groupoid functor $$\Pi_1$$ to this diagram and express $$\Pi_1(X)$$ in terms of $$\Pi_1(U)$$, $$\Pi_1(V)$$, and $$\Pi_1(U\cap V)$$. More generally, [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) implies that for any open cover $$(U_i)$$, the diagram
 
 ![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-4.png){:style="width:8em" class="invert" .align-center}
 

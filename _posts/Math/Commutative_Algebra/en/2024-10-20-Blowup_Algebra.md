@@ -13,7 +13,7 @@ sidebar:
 date: 2024-10-20
 last_modified_at: 2024-10-20
 weight: 11
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 In this post we fix a ring $$A$$ and an ideal $$\mathfrak{a}$$ of $$A$$, and define two graded $$A$$-algebras arising from it.
@@ -130,7 +130,7 @@ is also $$\mathfrak{a}$$-stable.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$\mathcal{J}$$ is $$\mathfrak{a}$$-stable, $$\Bl_\mathcal{J}M$$ is finitely generated as a $$\Bl_\mathfrak{a}A$$-module. On the other hand, $$\Bl_\mathfrak{a}A$$ is a finitely generated $$A$$-algebra and $$A$$ is Noetherian, so by [§Basic Notions, §§Finiteness Condition](/en/math/commutative_algebra/basic_notions#finiteness-condition) the algebra $$\Bl_\mathfrak{a}A$$ is also Noetherian. Hence the submodule $$\Bl_{\mathcal{J}'}M'$$ of $$\Bl_\mathcal{J}M$$ is also finitely generated, and applying [Proposition 6](#prop6) again yields the desired result.
+Since $$\mathcal{J}$$ is $$\mathfrak{a}$$-stable, $$\Bl_\mathcal{J}M$$ is finitely generated as a $$\Bl_\mathfrak{a}A$$-module. On the other hand, $$\Bl_\mathfrak{a}A$$ is a finitely generated $$A$$-algebra and $$A$$ is Noetherian, so by [§Basic Notions, §§Finiteness condition](/en/math/commutative_algebra/basic_notions#finiteness-condition) the algebra $$\Bl_\mathfrak{a}A$$ is also Noetherian. Hence the submodule $$\Bl_{\mathcal{J}'}M'$$ of $$\Bl_\mathcal{J}M$$ is also finitely generated, and applying [Proposition 6](#prop6) again yields the desired result.
 
 </details>
 

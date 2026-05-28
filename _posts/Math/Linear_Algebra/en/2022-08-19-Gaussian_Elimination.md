@@ -15,7 +15,7 @@ date: 2022-08-19
 last_modified_at: 2022-08-19
 
 weight: 12
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 In the previous post, we saw that linear maps between vector spaces are essentially identical to matrices. From this viewpoint, if two $$m\times n$$ matrices $$A, B$$ satisfy the following equation for suitable invertible matrices $$P, Q$$
@@ -24,7 +24,7 @@ $$B=PAQ\tag{1}$$
 
 one might want to think of these matrices $$A, B$$ as essentially the same matrix. However, if we allow complete freedom in choosing the bases of the two vector spaces $$V, W$$ on which these matrices $$L_A, L_B: V\rightarrow W$$ act, we saw that two matrices of the same rank must all be treated as the same matrix. Therefore, in [§Fundamental Theorem of Linear Algebra, ⁋Definition 8](/en/math/linear_algebra/ftla#def8) we had to define a finer equivalence relation. Roughly speaking, if the only information contained in matrix $$A$$ in equation (1) is its rank, then the remaining information is contained in the matrices $$P, Q$$, i.e., in the *linear operators* from $$V$$ to $$V$$ or from $$W$$ to $$W$$. If we fix a basis of $$V$$ (or $$W$$) to examine these, this equivalence relation is not so unnatural. Thus, for the time being, our discussion will proceed with a fixed vector space $$V$$ and basis $$\mathcal{B}$$. In other words, we will examine $$n\times n$$ matrices. A powerful tool for this is the determinant, which we will define in the next post.
 
-Meanwhile, we proved that for any matrix $$A$$ to be invertible it must be a square matrix, using the trace of a matrix ([§Matrices, ⁋Definition 7](/en/math/linear_algebra/matrices#def7)). Now that we know matrices and linear maps are the same, this result is obvious from [§Isomorphic Vector Spaces, ⁋Theorem 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4). However, we have not yet examined how to compute this inverse matrix. Since this method is simple, we could have examined it right after [§Matrices](/en/math/linear_algebra/matrices), but now that we have begun to seriously study $$n\times n$$ matrices, we briefly introduce this procedure.
+Meanwhile, we proved that for any matrix $$A$$ to be invertible it must be a square matrix, using the trace of a matrix ([§Matrices, ⁋Definition 7](/en/math/linear_algebra/matrices#def7)). Now that we know matrices and linear maps are the same, this result is obvious from [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4). However, we have not yet examined how to compute this inverse matrix. Since this method is simple, we could have examined it right after [§Matrices](/en/math/linear_algebra/matrices), but now that we have begun to seriously study $$n\times n$$ matrices, we briefly introduce this procedure.
 
 First, let us prove the following simple lemma.
 
@@ -48,7 +48,7 @@ First, assume there exists a suitable $$B\in\Mat_n(\mathbb{K})$$ such that $$AB=
 
 $$L_A\circ L_B=\id_{\mathbb{K}^n}$$
 
-holds. Now, since $$\id_{\mathbb{K}^n}$$ is a bijection, we know that $$L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$$ is surjective. ([\[Set Theory\] §Retractions and Sections, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3)) Therefore, from the following equation ([§Isomorphic Vector Spaces, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7))
+holds. Now, since $$\id_{\mathbb{K}^n}$$ is a bijection, we know that $$L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$$ is surjective. ([\[Set Theory\] §Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3)) Therefore, from the following equation ([§Isomorphisms, ⁋Theorem 7 (Rank-nullity theorem)](/en/math/linear_algebra/isomorphic_vector_spaces#thm7))
 
 $$\rank L_A+\nullity L_A=\dim \mathbb{K}^n=n$$
 

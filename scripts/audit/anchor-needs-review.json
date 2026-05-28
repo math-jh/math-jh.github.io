@@ -1,0 +1,639 @@
+[
+  {
+    "source": "_posts/Math/Algebraic_Structures/ko/2021-09-08-Group_Homomorphisms.md",
+    "url": "/ko/math/set_theory/operation_of_functions#prop4",
+    "original": "\\[집합론\\] §함수들 사이의 연산, ⁋명제 4",
+    "canonical": "\\[집합론\\] §함수들 사이의 연산",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Manifold/en/2022-06-09-Examples_of_Manifolds.md",
+    "url": "/en/math/topology/quotient_spaces#prop8",
+    "original": "\\[Topology\\] §Quotient Spaces, ⁋Proposition 8",
+    "canonical": "\\[Topology\\] §Quotient Spaces",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Manifold/en/2022-06-09-Examples_of_Manifolds.md",
+    "url": "/en/math/topology/quotient_spaces#prop9",
+    "original": "\\[Topology\\] §Quotient Spaces, ⁋Proposition 9",
+    "canonical": "\\[Topology\\] §Quotient Spaces",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Manifold/ko/2022-06-09-Examples_of_Manifolds.md",
+    "url": "/ko/math/topology/quotient_spaces#prop8",
+    "original": "\\[위상수학\\] §몫공간, ⁋명제 8",
+    "canonical": "\\[위상수학\\] §몫공간",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Manifold/ko/2022-06-09-Examples_of_Manifolds.md",
+    "url": "/ko/math/topology/quotient_spaces#prop9",
+    "original": "\\[위상수학\\] §몫공간, ⁋명제 9",
+    "canonical": "\\[위상수학\\] §몫공간",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Linear_Algebra/en/2022-07-28-Vector_Spaces.md",
+    "url": "/en/math/linear_algebra/fields",
+    "original": "§Abelian Groups and Fields, ⁋Corollary 3",
+    "canonical": "§Abelian Groups and Fields",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Linear_Algebra/ko/2022-07-28-Vector_Spaces.md",
+    "url": "/ko/math/linear_algebra/fields",
+    "original": "§가환군과 체, ⁋따름정리 3",
+    "canonical": "§가환군과 체",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Homological_Algebra/en/2022-09-10-Diagram_Chasing.md",
+    "url": "/en/math/category_theory/abelian_categories#thm9",
+    "original": "\\[Category Theory\\] §Abelian Categories, ⁋Theorem 9",
+    "canonical": "\\[Category Theory\\] §Abelian Categories",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Homological_Algebra/ko/2022-09-10-Diagram_Chasing.md",
+    "url": "/ko/math/category_theory/abelian_categories#thm9",
+    "original": "\\[범주론\\] §아벨 카테고리, ⁋정리 9",
+    "canonical": "\\[범주론\\] §아벨 카테고리",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/ko/2022-11-17-Quotient_Spaces.md",
+    "url": "/ko/math/set_theory/equivalence_relations#def6",
+    "original": "\\[집합론\\] §동치관계, ⁋정의 6",
+    "canonical": "\\[집합론\\] §동치관계",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/ko/2022-11-17-Quotient_Spaces.md",
+    "url": "/ko/math/set_theory/equivalence_relations#def5",
+    "original": "\\[집합론\\] §동치관계, ⁋정의 5",
+    "canonical": "\\[집합론\\] §동치관계",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Structures/en/2026-03-11-Quotient_Groups.md",
+    "url": "/en/math/algebraic_structures/algebraic_structures#몫구조",
+    "original": "§Algebraic Structures, §§Quotient Structures",
+    "canonical": "§Algebraic Structures",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Multilinear_Algebra/en/2022-12-03-Tensor_Algebras.md",
+    "url": "/en/math/algebraic_structures/operations_of_rings",
+    "original": "§Products, Coproducts, and Tensor Products of Rings, ⁋Proposition 3",
+    "canonical": "§Products, Coproducts, and Tensor Products of Rings",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Multilinear_Algebra/ko/2022-12-03-Tensor_Algebras.md",
+    "url": "/ko/math/algebraic_structures/operations_of_rings",
+    "original": "§환의 곱, 쌍대곱, 텐서곱, ⁋명제 3",
+    "canonical": "§환의 곱, 쌍대곱, 텐서곱",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Riemannian_Geometry/en/2022-12-16-Riemannian_Metric.md",
+    "url": "/en/math/linear_algebra/inner_product_spaces",
+    "original": "\\[Linear Algebra\\] §Inner Product Spaces, ⁋Definition 1",
+    "canonical": "\\[Linear Algebra\\] §Inner Product Spaces",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Riemannian_Geometry/ko/2022-12-16-Riemannian_Metric.md",
+    "url": "/ko/math/linear_algebra/inner_product_spaces",
+    "original": "\\[선형대수학\\] §내적공간, ⁋정의 1",
+    "canonical": "\\[선형대수학\\] §내적공간",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Structures/en/2026-03-11-Restricted_Sums.md",
+    "url": "/en/math/algebraic_structures/group_homomorphisms",
+    "original": "§Group Homomorphisms, ⁋Proposition 2",
+    "canonical": "§Group Homomorphisms",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Structures/ko/2023-01-09-Restricted_Sums.md",
+    "url": "/ko/math/algebraic_structures/group_homomorphisms",
+    "original": "§군 준동형사상, ⁋명제 2",
+    "canonical": "§군 준동형사상",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Structures/ko/2023-02-14-Group_Actions.md",
+    "url": "/ko/math/algebraic_structures/quotient_groups",
+    "original": "§몫군, ⁋명제 5",
+    "canonical": "§몫군",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/en/2023-11-01-Sheaves.md",
+    "url": "/en/math/topology/subspaces#lem2",
+    "original": "\\[Subspaces\\] §Subspaces, ⁋Lemma 2",
+    "canonical": "§Subspaces",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/ko/2023-11-01-Sheaves.md",
+    "url": "/ko/math/topology/subspaces#lem2",
+    "original": "§부분공간, ⁋보조정리 2",
+    "canonical": "§부분공간",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Structures/en/2026-03-11-Operations_of_Modules.md",
+    "url": "/en/math/algebraic_structures/abelian_groups#텐서곱",
+    "original": "§Abelian Groups, §§Tensor Product",
+    "canonical": "§Abelian Groups",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Valuative_Criteria.md",
+    "url": "/en/math/scheme_theory/schemes#ex6",
+    "original": "§Schemes, ⁋Example 6",
+    "canonical": "§Schemes",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Valuative_Criteria.md",
+    "url": "/ko/math/scheme_theory/schemes#ex6",
+    "original": "§스킴, ⁋예시 6",
+    "canonical": "§스킴",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Structures/en/2024-08-30-Algebras.md",
+    "url": "/en/math/algebraic_structures/operations_of_rings#tensor-products-of-modules-over-commutative-rings",
+    "original": "§Direct Products, Direct Sums, and Tensor Products of Modules, §§Tensor Products of Modules over Commutative Rings",
+    "canonical": "§Products, Coproducts, and Tensor Products of Rings",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Structures/ko/2024-08-30-Algebras.md",
+    "url": "/ko/math/algebraic_structures/operations_of_rings#가환환-위에서-정의된-가군의-텐서곱",
+    "original": "§가군의 직접곱과 직합, 텐서곱, §§가환환 위에서 정의된 가군의 텐서곱",
+    "canonical": "§환의 곱, 쌍대곱, 텐서곱",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Multilinear_Algebra/ko/2024-10-06-Change_of_Basis.md",
+    "url": "/ko/math/multilinear_algebra/change_of_basis#def2",
+    "original": "\\[기초선형대수학\\] §기저변환, ⁋정의 2",
+    "canonical": "§기저변환",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Commutative_Algebra/en/2024-10-17-Primary_Decomposition.md",
+    "url": "/en/math/multilinear_algebra/exact_sequences#prop7#prop7",
+    "original": "\\[Multilinear Algebra\\] §Exact Sequences, ⁋Proposition 7",
+    "canonical": "\\[Multilinear Algebra\\] §Exact Sequences",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Commutative_Algebra/ko/2024-10-17-Primary_Decomposition.md",
+    "url": "/ko/math/multilinear_algebra/exact_sequences#prop7#prop7",
+    "original": "\\[다중선형대수학\\] §완전열, ⁋명제 7",
+    "canonical": "\\[다중선형대수학\\] §완전열",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/en/2024-11-19-Presheaves.md",
+    "url": "/en/math/topology/subspaces#lem2",
+    "original": "§Subspaces, ⁋Lemma 2",
+    "canonical": "§Subspaces",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/ko/2024-11-19-Presheaves.md",
+    "url": "/ko/math/topology/subspaces#lem2",
+    "original": "§부분공간, ⁋보조정리 2",
+    "canonical": "§부분공간",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/en/2024-12-03-Compact_Spaces.md",
+    "url": "/en/math/topology/equivalent_formulations_of_topology#def6",
+    "original": "§Equivalent Formulations of Topology, ⁋Definition 6",
+    "canonical": "§Other Definitions of Topological Spaces",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/ko/2024-12-03-Compact_Spaces.md",
+    "url": "/ko/math/topology/equivalent_formulations_of_topology#def6",
+    "original": "§위상공간의 다른 정의들, ⁋정의 6",
+    "canonical": "§위상공간의 다른 정의들",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/en/2024-12-15-Compactness.md",
+    "url": "/en/math/topology/subspaces#lem2",
+    "original": "§Subspaces, ⁋Lemma 2",
+    "canonical": "§Subspaces",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/en/2024-12-15-Dimension.md",
+    "url": "/en/math/topology/connected_spaces",
+    "original": "§Connected Spaces, ⁋Proposition 2",
+    "canonical": "§Connected Spaces",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/ko/2024-12-15-Compactness.md",
+    "url": "/ko/math/topology/subspaces#lem2",
+    "original": "§부분공간, ⁋보조정리 2",
+    "canonical": "§부분공간",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Topology/ko/2024-12-15-Dimension.md",
+    "url": "/ko/math/topology/connected_spaces",
+    "original": "§연결공간, ⁋명제 2",
+    "canonical": "§연결공간",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Commutative_Algebra/en/2025-01-16-Properties_of_Completion.md",
+    "url": "/en/math/commutative_algebra/completion#mathfraka진-위상",
+    "original": "§Completion, §§$$\\mathfrak{a}$$-adic topology",
+    "canonical": "§Completion",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Commutative_Algebra/ko/2025-01-24-Regular_Local_Rings.md",
+    "url": "/ko/math/commutative_algebra/Krull_dimension#thm5",
+    "original": "\\[가환대수학\\] §차원, ⁋정리 5",
+    "canonical": "§차원",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Commutative_Algebra/ko/2025-01-24-Regular_Local_Rings.md",
+    "url": "/ko/math/commutative_algebra/system_of_parameters#prop9",
+    "original": "\\[가환대수학\\] §매개계, ⁋명제 9",
+    "canonical": "§매개계",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Affine_Schemes.md",
+    "url": "/en/math/scheme_theory/spectrums#고전적인-대수기하학",
+    "original": "§Spectra, §§Classical Algebraic Geometry",
+    "canonical": "§Spectra",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Affine_Schemes.md",
+    "url": "/en/math/scheme_theory/spectrums",
+    "original": "§Spectra, ⁋Lemma 12",
+    "canonical": "§Spectra",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Affine_Schemes.md",
+    "url": "/ko/math/topology/presheaves#ㅇef2",
+    "original": "\\[위상수학\\] §준층, ⁋정의 2",
+    "canonical": "\\[위상수학\\] §준층",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Affine_Schemes.md",
+    "url": "/ko/math/scheme_theory/spectrums",
+    "original": "§스펙트럼, ⁋보조정리 12",
+    "canonical": "§스펙트럼",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Affine_Schemes.md",
+    "url": "/ko/math/topology/topological_bases#lem11",
+    "original": "\\[위상수학\\] §위상공간의 기저, ⁋보조정리 11",
+    "canonical": "\\[위상수학\\] §위상공간의 기저",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Spectrums.md",
+    "url": "/ko/math/commutative_algebra/nullstellensatz#prop4",
+    "original": "\\[가환대수학\\] §영점정리, ⁋명제 4",
+    "canonical": "\\[가환대수학\\] §영점정리",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Schemes.md",
+    "url": "/en/math/scheme_theory/affine_schemes#spec-a-위에-정의된-대수적인-함수들",
+    "original": "§Affine Schemes, §§Algebraic Functions Defined on Spec A",
+    "canonical": "§Affine Schemes",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Schemes.md",
+    "url": "/en/math/scheme_theory/spectrums#고전적인-대수기하학",
+    "original": "§Spectra, §§Classical Algebraic Geometry",
+    "canonical": "§Spectra",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Topology_of_Schemes.md",
+    "url": "/en/math/commutative_algebra/basic_notions#thme",
+    "original": "\\[Commutative Algebra\\] §Basic Notions, ⁋Theorem 3",
+    "canonical": "\\[Commutative Algebra\\] §Basic Notions",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Topology_of_Schemes.md",
+    "url": "/ko/math/commutative_algebra/basic_notions#thme",
+    "original": "\\[가환대수학\\] §기본 개념들, ⁋정리 3",
+    "canonical": "\\[가환대수학\\] §기본 개념들",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Algebra_of_Schemes.md",
+    "url": "/en/math/scheme_theory/spectrums",
+    "original": "§Spectra, ⁋Lemma 6",
+    "canonical": "§Spectra",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Algebra_of_Schemes.md",
+    "url": "/ko/math/scheme_theory/spectrums",
+    "original": "§스펙트럼, ⁋보조정리 6",
+    "canonical": "§스펙트럼",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Closed_Subschemes.md",
+    "url": "/en/math/topology/sheaves#prop14",
+    "original": "\\[Topology\\] §Sheaves, ⁋Proposition 14",
+    "canonical": "\\[Topology\\] §Sheaves",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Closed_Subschemes.md",
+    "url": "/en/math/scheme_theory/topology_of_schemes",
+    "original": "§Topology of Schemes, ⁋Lemma 11",
+    "canonical": "§Topological Structure of Schemes",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Closed_Subschemes.md",
+    "url": "/ko/math/topology/sheaves#prop14",
+    "original": "\\[위상수학\\] §층, ⁋명제 14",
+    "canonical": "\\[위상수학\\] §층",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Closed_Subschemes.md",
+    "url": "/ko/math/scheme_theory/topology_of_schemes",
+    "original": "§스킴의 위상구조, ⁋보조정리 11",
+    "canonical": "§스킴의 위상구조",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Morphism_of_Schemes.md",
+    "url": "/en/math/scheme_theory/projective_schemes#사영공간",
+    "original": "§Projective Schemes, §§Projective Space",
+    "canonical": "§Projective Schemes",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Morphism_of_Schemes.md",
+    "url": "/en/math/scheme_theory/projective_schemes",
+    "original": "§Projective Schemes, ⁋Example 12",
+    "canonical": "§Projective Schemes",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Morphism_of_Schemes.md",
+    "url": "/ko/math/scheme_theory/projective_schemes",
+    "original": "§사영스킴, ⁋예시 12",
+    "canonical": "§사영스킴",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Closed_Subschemes_of_Projective_Spaces.md",
+    "url": "/en/math/scheme_theory/projective_schemes",
+    "original": "§Projective Schemes, ⁋Definition 4",
+    "canonical": "§Projective Schemes",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Complete_Intersections.md",
+    "url": "/en/math/scheme_theory/closed_subschemes",
+    "original": "§Closed Subschemes, ⁋Definition 7",
+    "canonical": "§Closed Subschemes",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Fiber_Products.md",
+    "url": "/en/math/scheme_theory/morphism_of_schemes",
+    "original": "§Morphisms of Schemes, ⁋Example 10",
+    "canonical": "§Morphisms of Schemes",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Fiber_Products.md",
+    "url": "/en/math/scheme_theory/morphism_of_schemes",
+    "original": "§Properties of Scheme Morphisms, ⁋Example 15",
+    "canonical": "§Morphisms of Schemes",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Closed_Subschemes_of_Projective_Spaces.md",
+    "url": "/ko/math/scheme_theory/projective_schemes",
+    "original": "§사영스킴, ⁋정의 4",
+    "canonical": "§사영스킴",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Complete_Intersections.md",
+    "url": "/ko/math/scheme_theory/closed_subschemes",
+    "original": "§닫힌 부분스킴, ⁋정의 7",
+    "canonical": "§닫힌 부분스킴",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Fiber_Products.md",
+    "url": "/ko/math/scheme_theory/morphism_of_schemes",
+    "original": "§스킴 사이의 사상, ⁋예시 10",
+    "canonical": "§스킴 사이의 사상",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Fiber_Products.md",
+    "url": "/ko/math/scheme_theory/morphism_of_schemes",
+    "original": "§스킴 사상의 성질들, ⁋예시 15",
+    "canonical": "§스킴 사이의 사상",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/en/2026-05-07-Dimension_Schemes.md",
+    "url": "/en/math/scheme_theory/fiber_products",
+    "original": "§Fiber Products, ⁋Proposition 15",
+    "canonical": "§Fiber Products",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Scheme_Theory/ko/2026-05-07-Dimension_Schemes.md",
+    "url": "/ko/math/scheme_theory/fiber_products",
+    "original": "§올곱, ⁋명제 15",
+    "canonical": "§올곱",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Group_Theory/en/2025-04-03-Series_of_Groups.md",
+    "url": "/en/math/algebraic_structures/group_actions",
+    "original": "\\[Algebraic Structures\\] §Group Actions, ⁋Proposition 9",
+    "canonical": "\\[Algebraic Structures\\] §Group Actions",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Group_Theory/en/2025-04-03-Series_of_Groups.md",
+    "url": "/en/math/algebraic_structures/isomorphism_theorems",
+    "original": "\\[Algebraic Structures\\] §Isomorphism Theorems, ⁋Theorem 7",
+    "canonical": "\\[Algebraic Structures\\] §Isomorphism Theorems",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Group_Theory/ko/2025-04-03-Series_of_Groups.md",
+    "url": "/ko/math/algebraic_structures/group_actions",
+    "original": "\\[대수적 구조\\] §군의 작용, ⁋명제 9",
+    "canonical": "\\[대수적 구조\\] §군의 작용",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Group_Theory/ko/2025-04-03-Series_of_Groups.md",
+    "url": "/ko/math/algebraic_structures/isomorphism_theorems",
+    "original": "\\[대수적 구조\\] §군 동형사상, ⁋정리 7",
+    "canonical": "\\[대수적 구조\\] §군 동형사상",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Group_Theory/en/2025-04-07-Sylow_Theorems.md",
+    "url": "/en/math/group_theory/series_of_groups",
+    "original": "§Series of Groups, ⁋Proposition 8",
+    "canonical": "§Series of Groups",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Group_Theory/ko/2025-04-07-Sylow_Theorems.md",
+    "url": "/ko/math/group_theory/series_of_groups",
+    "original": "§군의 열, ⁋명제 8",
+    "canonical": "§군의 열",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Field_Theory/en/2025-04-26-Algebraic_Extensions.md",
+    "url": "/en/math/category_theory/categories",
+    "original": "§Categories, ⁋Example 13",
+    "canonical": "§Categories",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Field_Theory/ko/2025-04-26-Algebraic_Extensions.md",
+    "url": "/ko/math/category_theory/categories",
+    "original": "\\[범주론\\] §범주, ⁋예시 13",
+    "canonical": "\\[범주론\\] §범주",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Field_Theory/en/2025-05-11-Etale_Algebras.md",
+    "url": "/en/math/algebraic_structures/algebras",
+    "original": "\\[Algebraic Structures\\] §Algebras, ⁋Proposition 6",
+    "canonical": "\\[Algebraic Structures\\] §Algebras",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Field_Theory/ko/2025-05-11-Etale_Algebras.md",
+    "url": "/ko/math/algebraic_structures/algebras",
+    "original": "\\[대수적 구조\\] §대수, ⁋명제 6",
+    "canonical": "\\[대수적 구조\\] §대수",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Topology/en/2026-03-12-Topological_Manifolds.md",
+    "url": "/en/math/topology/Hausdorff_spaces#하우스도르프-공간의-몫공간",
+    "original": "\\[Topology\\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces",
+    "canonical": "\\[Topology\\] §Hausdorff Spaces",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Lie_Theory/en/2025-11-12-Root_Systems.md",
+    "url": "/en/math/lie_theory/torus_action#maximal-torus",
+    "original": "§Torus Actions, §§Maximal Tori",
+    "canonical": "§Torus Actions",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Structures/en/2026-03-11-Group_Actions.md",
+    "url": "/en/math/algebraic_structures/quotient_groups",
+    "original": "§Quotient Groups, ⁋Proposition 5",
+    "canonical": "§Quotient Groups",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Structures/en/2026-03-11-Group_Homomorphisms.md",
+    "url": "/en/math/set_theory/operation_of_functions#prop4",
+    "original": "\\[Set Theory\\] §Operations on Functions, ⁋Proposition 4",
+    "canonical": "\\[Set Theory\\] §Operations on Functions",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Topology/en/2026-03-12-Homotopy.md",
+    "url": "/en/math/homological_algebra/long_exact_sequence#def5",
+    "original": "Homological Algebra, §Homology, ¶Definition 5",
+    "canonical": "§The Long Exact Sequence",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Topology/en/2026-03-12-Homotopy.md",
+    "url": "/en/math/homological_algebra/long_exact_sequence#prop6",
+    "original": "Homological Algebra, §Homology, ¶Proposition 6",
+    "canonical": "§The Long Exact Sequence",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Topology/en/2026-03-12-Homotopy.md",
+    "url": "/en/math/set_theory/retraction_and_section#def2",
+    "original": "Set Theory, §Retraction and Section, ¶Definition 2",
+    "canonical": "§Retraction and Section",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Topology/en/2026-03-12-Homotopy.md",
+    "url": "/en/math/category_theory/categories#def11",
+    "original": "Category Theory, §Categories, ¶Definition 11",
+    "canonical": "§Categories",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Topology/en/2026-03-12-Homotopy.md",
+    "url": "/en/math/category_theory/natural_transformations#def1",
+    "original": "Category Theory, §Natural Transformations, ¶Definition 1",
+    "canonical": "§Natural Transformations",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Topology/en/2026-03-12-Homotopy.md",
+    "url": "/en/math/category_theory/natural_transformations#def4",
+    "original": "Category Theory, §Natural Transformations, ¶Definition 4",
+    "canonical": "§Natural Transformations",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Varieties/en/2026-04-05-Sheaf_Cohomology.md",
+    "url": "/en/math/topology/sheaves#sheaves-abelian-category",
+    "original": "\\[Topology\\] §Sheaves, §The Abelian Category of Sheaves",
+    "canonical": "\\[Topology\\] §Sheaves",
+    "bucket": "anchor-dropped"
+  },
+  {
+    "source": "_posts/Math/Algebraic_Varieties/ko/2026-04-05-Sheaf_Cohomology.md",
+    "url": "/ko/math/topology/sheaves#층들의-가환범주",
+    "original": "\\[위상수학\\] §층, §층들의 가환범주",
+    "canonical": "\\[위상수학\\] §층",
+    "bucket": "anchor-dropped"
+  }
+]

@@ -42,7 +42,7 @@ weight: 2
 
 스칼라곱도 마찬가지로 $$\alpha\cdot u$$와 같은 표기 대신 $$\alpha u$$와 같이 적기로 한다. 이 경우 유일한 걱정은 $$\alpha\beta u$$라고 쓸 때 이것이 $$(\alpha\beta)u$$인지, $$\alpha(\beta u)$$인지 헷갈릴 수 있다는 것인데, 위 정의의 첫 번째 조건에 의해 어떤 것을 선택하더라도 그 값은 동일하므로 이는 걱정할 필요가 없다.  
 
-벡터공간은 abelian group $$V$$ 위에 추가적인 구조인 $$\mathbb{K}$$-스칼라곱이 정의된 형태이다. 때문에 $$V$$는 abelian group이 갖는 성질을 모두 갖는다. ([§가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#prop2) 그리고 [§가환군과 체, ⁋따름정리 3](/ko/math/linear_algebra/fields))
+벡터공간은 abelian group $$V$$ 위에 추가적인 구조인 $$\mathbb{K}$$-스칼라곱이 정의된 형태이다. 때문에 $$V$$는 abelian group이 갖는 성질을 모두 갖는다. ([§가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#prop2) 그리고 [§가환군과 체, ⁋따름정리 3](/ko/math/linear_algebra/fields#cor3))
 
 다음 성질들은 $$\mathbb{K}$$-스칼라곱에 의해 결정되는 추가적인 성질들이다.
 

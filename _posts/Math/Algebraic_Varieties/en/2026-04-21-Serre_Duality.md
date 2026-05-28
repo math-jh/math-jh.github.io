@@ -27,7 +27,7 @@ In this post, we study Serre duality, the algebraic geometry version of duality.
 
 ## Serre Duality on Projective Space
 
-We first examine the case $$X=\mathbb{P}^n$$ rigorously. We know that every line bundle defined on $$\mathbb{P}^n$$ is of the form $$\mathcal{O}(d)$$, and in particular we saw in [§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that this is $$\mathcal{O}(-n-1)$$. Then from [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
+We first examine the case $$X=\mathbb{P}^n$$ rigorously. We know that every line bundle defined on $$\mathbb{P}^n$$ is of the form $$\mathcal{O}(d)$$, and in particular we saw in [§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that this is $$\mathcal{O}(-n-1)$$. Then from [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
 
 <div class="proposition" markdown="1">
 
@@ -57,7 +57,7 @@ then, using the isomorphism $$\mathcal{E}\otimes \mathcal{E}^\vee\rightarrow \ma
 
 $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n}\otimes\mathcal{E}^\vee)\rightarrow \mathbb{K}$$
 
-For the case of $$\mathcal{O}(d)$$, we show non-degeneracy by direct computation in [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), and then use the syzygy theorem to extend this non-degeneracy to a general locally free sheaf $$\mathcal{E}$$.
+For the case of $$\mathcal{O}(d)$$, we show non-degeneracy by direct computation in [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), and then use the syzygy theorem to extend this non-degeneracy to a general locally free sheaf $$\mathcal{E}$$.
 
 From the discussion so far, we obtain the following.
 
@@ -83,7 +83,7 @@ $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
 <ins id="ex3">**Example 3**</ins> Let us examine [Proposition 2](#prop2) concretely on $$\mathbb{P}^2$$. Here $$\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$$, so Serre duality asserts the isomorphism $$H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$$.
 
-First, for $$d=0$$, by [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)
+First, for $$d=0$$, by [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)
 
 $$H^0(\mathbb{P}^2, \mathcal{O}) = \mathbb{K},\qquad H^1(\mathbb{P}^2, \mathcal{O}) = 0, \qquad H^2(\mathbb{P}^2, \mathcal{O}) = 0$$
 
@@ -95,7 +95,7 @@ so we can see that Serre duality holds. Similarly, for $$d=1$$, the only nonzero
 
 $$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}^3$$
 
-and by Serre duality we must have $$H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$$, so $$\dim H^2(\mathcal{O}(-4))$$ should equal $$3$$. Applying [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) again, the $$H^2$$ of $$\mathcal{O}(-4)$$ is actually
+and by Serre duality we must have $$H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$$, so $$\dim H^2(\mathcal{O}(-4))$$ should equal $$3$$. Applying [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) again, the $$H^2$$ of $$\mathcal{O}(-4)$$ is actually
 
 $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 

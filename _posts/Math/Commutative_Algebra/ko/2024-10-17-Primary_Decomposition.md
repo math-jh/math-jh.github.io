@@ -123,7 +123,7 @@ $$M'=\bigcap_{k=1}^n M_k,\qquad \text{$M_k$ irreducible}$$
 
 $$0=\bigcap_{k=1}^n M_k$$
 
-이 주어졌다 하자. 그럼 [\[다중선형대수학\] §완전열, ⁋명제 7](/ko/math/multilinear_algebra/exact_sequences#prop7#prop7)의 exact sequence를 일반화한 것으로부터 
+이 주어졌다 하자. 그럼 [\[다중선형대수학\] §완전열, ⁋명제 7](/ko/math/multilinear_algebra/exact_sequences#prop7)의 exact sequence를 일반화한 것으로부터 
 
 $$M\subseteq \bigoplus_{k=1}^n M/M_k$$
 

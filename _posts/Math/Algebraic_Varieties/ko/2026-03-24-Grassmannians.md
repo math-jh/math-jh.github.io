@@ -97,7 +97,7 @@ $$A = \begin{pmatrix} I_k & B \end{pmatrix}$$
 
 $$\iota(W) = [v_1 \wedge v_2 \wedge \cdots \wedge v_k]$$
 
-를 대응시키는 함수이다. ([\[다중선형대수힉\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10))
+를 대응시키는 함수이다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10))
 
 </div>
 

@@ -15,7 +15,7 @@ date: 2022-07-28
 last_modified_at: 2022-07-28
 
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 As we mentioned in the introduction to the previous post, the *vector space* is the central object of study in linear algebra, generalizing the coordinate spaces learned in high school. To prepare for this, we defined abelian groups and fields in the last post.
@@ -41,7 +41,7 @@ As in the definition above, to avoid confusion we will write elements of the fie
 
 Similarly, we will write $$\alpha u$$ instead of $$\alpha\cdot u$$. The only concern is that $$\alpha\beta u$$ could be read as either $$(\alpha\beta)u$$ or $$\alpha(\beta u)$$, but by the first condition of the definition both choices yield the same value, so this is not a problem.
 
-A vector space is an abelian group $$V$$ equipped with the additional structure of $$\mathbb{K}$$-scalar multiplication. Therefore $$V$$ possesses all the properties of an abelian group. ([§Abelian Groups and Fields, ⁋Proposition 2](/en/math/linear_algebra/fields#prop2) and [§Abelian Groups and Fields, ⁋Corollary 3](/en/math/linear_algebra/fields))
+A vector space is an abelian group $$V$$ equipped with the additional structure of $$\mathbb{K}$$-scalar multiplication. Therefore $$V$$ possesses all the properties of an abelian group. ([§Abelian Groups and Fields, ⁋Proposition 2](/en/math/linear_algebra/fields#prop2) and [§Abelian Groups and Fields, ⁋Corollary 3](/en/math/linear_algebra/fields#cor3))
 
 The following properties are additional ones determined by the $$\mathbb{K}$$-scalar multiplication.
 
@@ -138,7 +138,7 @@ Moreover, various subsets of $$\Fun(I,\mathbb{R})$$ are also $$\mathbb{R}$$-vect
 
 </div>
 
-If we think of $$\Fun(I,\mathbb{R})$$ as the product set $$\mathbb{R}^I$$, then [Example 6](#ex6) can be viewed as a natural generalization of [Example 5](#ex5). ([\[Set Theory\] §Products of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1))
+If we think of $$\Fun(I,\mathbb{R})$$ as the product set $$\mathbb{R}^I$$, then [Example 6](#ex6) can be viewed as a natural generalization of [Example 5](#ex5). ([\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1))
 
 ---
 

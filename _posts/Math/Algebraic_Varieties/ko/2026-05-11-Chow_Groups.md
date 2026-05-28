@@ -193,7 +193,7 @@ $$\cl: \CH_k(X) \to H^{\text{BM}}_{2k}(X, \mathbb{Z})$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> Smooth variety $$X$$에 대해 $$\CH^\ast(X) = \bigoplus_k \CH^k(X)$$는 intersection product에 대해 graded ring을 이룬다. ([§Intersection Product](/ko/math/algebraic_varieties/intersection_product))
+<ins id="prop13">**명제 13**</ins> Smooth variety $$X$$에 대해 $$\CH^\ast(X) = \bigoplus_k \CH^k(X)$$는 intersection product에 대해 graded ring을 이룬다. ([§교차곱](/ko/math/algebraic_varieties/intersection_product))
 
 </div>
  

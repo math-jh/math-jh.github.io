@@ -13,7 +13,7 @@ sidebar:
 date: 2023-05-22
 last_modified_at: 2023-05-28
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 Whenever a subject is a branch of mathematics, there are certain notions it naturally possesses. The *objects* we wish to study, and the *morphisms* between these objects, are such examples. Since category theory is the study of this structure in the abstract, specific theorems from each field can serve as examples in category theory. However, this does not mean we must study all these fields before learning category theory; our goal is to study category theory as dryly as possible, leaving most examples to be examined separately when studying the corresponding fields.
@@ -179,7 +179,7 @@ On the other hand, for a fixed $$A\in\obj(\mathcal{A})$$, the elements of $$\Hom
 
 </div>
 
-It is not difficult to see that $$\End(A)$$ and $$\Aut(A)$$ satisfy the conditions of the algebraically defined monoid and group. ([[Algebraic Structures] §Semigroups, Monoids, Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3) and [⁋Definition 11](/en/math/algebraic_structures/groups#def11)) In category theory, monoids and groups can be defined as follows.
+It is not difficult to see that $$\End(A)$$ and $$\Aut(A)$$ satisfy the conditions of the algebraically defined monoid and group. ([[Algebraic Structures] §Semigroups, Monoids, Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3) and [Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11)) In category theory, monoids and groups can be defined as follows.
 
 <div class="definition" markdown="1">
 

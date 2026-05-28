@@ -33,7 +33,7 @@ By [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other
 - $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 - $$\cl(\emptyset)=\emptyset$$
 
-A function satisfying these conditions is called a *closure operator*. ([\[Set Theory\] §Filters, Ideals, and Galois Correspondence, ⁋Definition 8](/en/math/set_theory/filter_and_ideal#def8))
+A function satisfying these conditions is called a *closure operator*. ([\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 8](/en/math/set_theory/filter_and_ideal#def8))
 
 </div>
 
@@ -98,7 +98,7 @@ We verified in [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6
 
 </div>
 
-Thinking of the ordered set $$(\mathcal{P}(X),\subseteq)$$, the above definition can be thought of as the same as that defined in [\[Set Theory\] §Filters, Ideals, and Galois Correspondence, ⁋Definition 1](/en/math/set_theory/filter_and_ideal#def1), except with the additional condition $$\emptyset\not\in\mathcal{F}$$. Similarly, an *ultrafilter* defined on $$X$$ is also thought of as a maximal filter not containing $$\emptyset$$.
+Thinking of the ordered set $$(\mathcal{P}(X),\subseteq)$$, the above definition can be thought of as the same as that defined in [\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 1](/en/math/set_theory/filter_and_ideal#def1), except with the additional condition $$\emptyset\not\in\mathcal{F}$$. Similarly, an *ultrafilter* defined on $$X$$ is also thought of as a maximal filter not containing $$\emptyset$$.
 
 Then among the four conditions that $$\mathcal{N}(x)$$ must satisfy, the first three can be summarized as $$\mathcal{N}(x)$$ having a filter structure for every $$x$$. The fourth condition has a separate name.
 
@@ -108,7 +108,7 @@ Then among the four conditions that $$\mathcal{N}(x)$$ must satisfy, the first t
 
 </div>
 
-Moreover, thinking of $$\mathcal{N}(x)$$ as playing a role similar to a local base, we were able to show that a topological space can also be defined through a base $$\mathcal{B}$$. ([§Topological Bases, ⁋Corollary 6](/en/math/topology/topological_bases#cor6))
+Moreover, thinking of $$\mathcal{N}(x)$$ as playing a role similar to a local base, we were able to show that a topological space can also be defined through a base $$\mathcal{B}$$. ([§Bases of a Topological Space, ⁋Corollary 6](/en/math/topology/topological_bases#cor6))
 
 Meanwhile, one can define the base of a filter more generally.
 

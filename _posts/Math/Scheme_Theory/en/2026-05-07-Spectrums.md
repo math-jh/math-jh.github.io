@@ -13,7 +13,7 @@ sidebar:
 date: 2025-01-27
 last_modified_at: 2025-01-27
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-29T02:00:58+00:00
 translation_source: kimi-cli
 ---
 <div class="remark" markdown="1">
@@ -372,7 +372,7 @@ Earlier we saw that the elements of $$A$$, i.e., polynomials, behave like functi
 
 ## The relationship between rings and spectra
 
-Summarizing the above discussion, we can organize it as follows. The last few rows are results from [§§Classical Algebraic Geometry](#classical-algebraic-geometry), and although we have not yet examined how these behave in the spectrum of a general ring, we will verify this in the next post.
+Summarizing the above discussion, we can organize it as follows. The last few rows are results from [Classical algebraic geometry](#classical-algebraic-geometry), and although we have not yet examined how these behave in the spectrum of a general ring, we will verify this in the next post.
 
 <table class="ag"><thead>
   <tr>
