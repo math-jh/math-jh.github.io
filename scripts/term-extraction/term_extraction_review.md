@@ -2664,3 +2664,52 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `uniform하게` | mixed-script emphasis — possibly a definition |
 
+## 정칙국소환
+- post: `_posts/Math/Commutative_Algebra/ko/2025-01-24-Regular_Local_Rings.md`
+- permalink: `/ko/math/commutative_algebra/regular_local_rings`
+- scanned: 2026-05-29T17:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$A$$-regular sequence` | multi-word English emphasis — possibly a definition |
+| `regular parameter` | multi-word English emphasis — possibly a definition |
+
+## 군의 확장
+- post: `_posts/Math/Group_Theory/ko/2025-03-29-Extensions.md`
+- permalink: `/ko/math/group_theory/extensions`
+- scanned: 2026-05-29T18:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `normal` | looks like emphasis (no <sub> partner) |
+
+## 대칭군
+- post: `_posts/Math/Group_Theory/ko/2025-03-29-Symmetric_Groups.md`
+- permalink: `/ko/math/group_theory/symmetric_groups`
+- scanned: 2026-05-29T18:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `left translation map` | multi-word English emphasis — possibly a definition |
+| `Vandermonde polynomial` | multi-word English emphasis — possibly a definition |
+| `alternating group` | multi-word English emphasis — possibly a definition |
+| `Reference` | looks like emphasis (no <sub> partner) |
+
+## 정역
+- post: `_posts/Math/Ring_Theory/ko/2025-04-01-Integral_Domains.md`
+- permalink: `/ko/math/ring_theory/integral_domains`
+- scanned: 2026-05-29T18:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `associate` | looks like emphasis (no <sub> partner) |
+
+## 군의 열
+- post: `_posts/Math/Group_Theory/ko/2025-04-03-Series_of_Groups.md`
+- permalink: `/ko/math/group_theory/series_of_groups`
+- scanned: 2026-05-29T19:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `normal` | looks like emphasis (no <sub> partner) |
+
