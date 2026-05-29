@@ -33,17 +33,9 @@ $$\psi_i := c_1(\mathbb{L}_i) \in H^2(\overline{\mathcal{M}}_{0, n+1}(X, \beta))
 
 를 *$$\psi$$-class*라 부른다. 
 
-Moduli space를 다루며 언어에 약간의 업그레이드가 있기는 하지만, 본질적으로 stack의 Chern class도 직관적인 의미는 일반적인 line bundle의 Chern class와 같다. 즉, $$\mathbb{L}_i$$가 moduli space 위에서 얼마나 꼬여있는지를 측정한 양이다. 더 구체적으로, moduli base의 $$2$$-cycle $$\Sigma$$가 주어졌다 하면 $$\psi_i$$가 이 cycle과 pairing을 통해 주는 양
-
-$$\int_\Sigma \psi_i\in \mathbb{Z}$$
-
-은 $$\Sigma$$를 따라 $$\mathbb{L}_i$$를 한 바퀴 돌리면 이것이 얼마만큼 꼬여서 원래의 fiber와 붙는지, 즉 monodromy action을 보는 것과 같다. 가장 단순한 경우 이 값이 $$1$$인 것은 $$\Sigma$$ 위로 restrict한 $$\mathbb{L}_i$$의 degree가 $$1$$이라는 의미이며, 더 직관적으로 우리는 $$\Sigma$$ 위의 가상의 한 점을 지날 때마다 phase factor, 즉 monodromy가 그 한 점에 응축된 것으로 해석할 수 있다. 물론 이 한 점을 택하는 것은 자유도가 있지만, 이는 정확히 $$\psi_i$$의 cohomology class의 representative를 택하는 것에서 나오는 것이며 따라서 더 일반적으로 $$\int_\Sigma\psi_i$$가 $$n$$이라는 것은 이러한 $$n$$개의 점을 배치해두는 것과 같다. 
-
-이제 위의 setup으로 *descendant Gromov-Witten invariant*를 다음과 같이 정의한다.
-
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1** (Descendant Gromov-Witten invariant)</ins> 임의의 cohomology class $$\gamma_i \in H^\ast(X)$$와 $$k_i \geq 0$$에 대해 *descendant Gromov-Witten invariant*는
+<ins id="def1">**정의 1 (Descendant Gromov-Witten invariant)**</ins> 임의의 cohomology class $$\gamma_i \in H^\ast(X)$$와 $$k_i \geq 0$$에 대해 *descendant Gromov-Witten invariant*는
 
 $$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\rangle_{0, n+1, \beta} := \int_{[\overline{\mathcal{M}}_{0, n+1}(X, \beta)]^{\mathrm{vir}}} \prod_{i=1}^{n+1} \psi_i^{k_i} \smile \ev_i^\ast \gamma_i$$
 
@@ -51,13 +43,17 @@ $$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\
 
 </div>
 
-위에서 살펴본 것과 같이, $$\psi_i^{k_i}$$ 성분들이 source curve의 degeneration을, $$\ev_i^\ast\gamma_i$$가 target의 incidence condition을 각각 결정한다는 것은 자명하다. 특히 나중 조건은 $$i$$번째 marked point $$p_i$$의 image가 $$\gamma_i$$를 지난다는 조건이다. 그러나 첫째 조건은 다소 덜 직관적이므로 이 의미를 풀어 살펴보자. 
+Moduli space를 다루며 언어에 약간의 업그레이드가 있기는 하지만, 본질적으로 stack의 Chern class도 직관적인 의미는 일반적인 line bundle의 Chern class와 같다. 즉, $$\mathbb{L}_i$$가 moduli space 위에서 얼마나 꼬여있는지를 측정한 양이다. 더 구체적으로, moduli base의 $$2$$-cycle $$\Sigma$$가 주어졌다 하면 $$\psi_i$$가 이 cycle과 pairing을 통해 주는 양
 
-먼저 $$\psi_i$$의 boundary divisor 측 picture를 정리한다.
+$$\int_\Sigma \psi_i\in \mathbb{Z}$$
 
-<div class="proposition" markdown="1">
+은 $$\Sigma$$를 따라 $$\mathbb{L}_i$$를 한 바퀴 돌리면 이것이 얼마만큼 꼬여서 원래의 fiber와 붙는지, 즉 monodromy action을 보는 것과 같다. 가장 단순한 경우 이 값이 $$1$$인 것은 $$\Sigma$$ 위로 restrict한 $$\mathbb{L}_i$$의 degree가 $$1$$이라는 의미이며, 더 직관적으로 우리는 $$\Sigma$$ 위의 가상의 한 점을 지날 때마다 phase factor, 즉 monodromy가 그 한 점에 응축된 것으로 해석할 수 있다. 물론 이 한 점을 택하는 것은 자유도가 있지만, 이는 정확히 $$\psi_i$$의 cohomology class의 representative를 택하는 것에서 나오는 것이며 따라서 더 일반적으로 $$\int_\Sigma\psi_i$$가 $$n$$이라는 것은 이러한 $$n$$개의 점을 배치해두는 것과 같다. 
 
-<ins id="prop2">**명제 2** (Topological recursion relation)</ins> 잘 알려진 사실은 이들 $$n$$개의 점이 사실은 moduli space의 boundary divisor, 즉 source curve의 degeneration이 일어나는 곳들과 $$\Sigma$$의 intersection이 일어나는 곳으로 생각할 수 있다는 것이며, 이로써 $$\psi_i$$는 source curve의 degeneration에 대한 정보를 담고 있는 것으로 생각할 수 있다.
+잘 알려진 사실은 이들 $$n$$개의 점이 사실은 moduli space의 boundary divisor, 즉 source curve의 degeneration이 일어나는 곳들과 $$\Sigma$$의 intersection이 일어나는 곳으로 생각할 수 있다는 것이며, 이로써 $$\psi_i$$는 source curve의 degeneration에 대한 정보를 담고 있는 것으로 생각할 수 있다.
+
+그럼 [정의 1](#def1)의 $$\psi_i^{k_i}$$ 성분들이 source curve의 degeneration을, $$\ev_i^\ast\gamma_i$$가 target의 incidence condition을 각각 결정한다는 것은 자명하다. 특히 나중 조건은 $$i$$번째 marked point $$p_i$$의 image가 $$\gamma_i$$를 지난다는 조건이다. 그러나 첫째 조건은 다소 덜 직관적이므로 이 의미를 풀어 살펴보자. 
+
+우리는 앞서 $$\psi_i$$가 본질적으로는 source curve의 degeneration들의 합으로 나타날 수 있음을 보았다. 더 구체적으로, source curve가 marked point $$1,\ldots, n$$을 두 개의 component $$S$$, $$S^c$$로 쪼개며 degenerate한다 하고, 이에 대응되는 boundary divisor를 $$D_S$$라 하자. 여기서 우리는 $$i\in S$$인 것으로 두며, $$\mathbb{P}^1$$을 fix하기 위해서는 세 점이 필요하므로 $$S$$와 $$S^c$$ 모두 두 점 이상이어야 한다. 직관적으로 $$\psi_i$$는 이러한 방식으로 생기는 boundary divisor들의 합 $$\sum_{i\in S} D_S$$처럼 생각할 수 있지만, 이대로 두면 같은 cohomology class가 여러 번 세게 되므로 redundancy를 제거하는 reference choice가 필요하다. 즉, $$j,k$$를 고정하고, $$S^c$$에 해당하는 component를 $$j,k$$와 nodal point로 이쪽 $$\mathbb{P}^1$$의 automorphism을 죽여주어야 한다. 그럼 
 
 조금 더 구체적으로, marked point가 여러 개 있을 때 $$p_i$$가 어떤 tail로 떨어지는 방법은 한 가지가 아니다 — $$p_i$$와 함께 어떤 다른 marked point들이 같은 tail에 머무를지에 따라 다양한 boundary divisor $$D_S$$ (여기서 $$S \ni i$$이고, $$D_S$$는 source curve가 marked points $$S, S^c$$로 분배되는 nodal degeneration의 codim-1 stratum)가 가능하다. $$\psi_i$$의 boundary representative는 이 *모든 가능한 split의 합*으로 적힌다. 다만 그냥 $$\sum_{S \ni i} D_S$$로 두면 같은 cohomology class를 여러 번 세게 되므로 redundancy를 제거하는 reference choice가 필요한데, 예를 들어 target 없는 $$\overline{\mathcal{M}}_{0, n}$$에서 $$i$$ 외의 두 reference index $$j, k$$를 잡으면
 
@@ -67,21 +63,33 @@ $$\psi_i \;=\; \sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S,\; j, k \no
 
 이 boundary divisor decomposition이 *topological recursion relation* (TRR)이며, $$\psi_i$$의 cup product가 들어간 descendant integral을 위 식으로 풀어쓰면 적분이 boundary stratum 위의 적분의 합으로 분해되고, 각 boundary stratum이 *더 작은 두 moduli space의 product*로 인식되므로 (degeneration의 양쪽 컴포넌트가 각자 별도의 stable map moduli를 이룸) descendant invariant가 *lower-marked-point invariant들의 곱의 합*으로 환원된다.
 
+<div class="proposition" markdown="1">
+
+<ins id="prop2">**명제 2 (Genus 0 Topological Recursion Relation)**</ins> $$\{1, \ldots, n\}$$ ($$n\geq 4$$)의 고정된 세 index $$i,j,k$$에 대하여, $$\psi$$-class $$\psi_i$$는 다음 boundary divisor들의 합
+
+$$\psi_i=\sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S,\; j, k \notin S, \lvert S\rvert \geq 2}} D_S \in H^2(\overline{\mathcal{M}}_{0, n})$$
+
+으로 나타난다.
+
 </div>
 
-이로써 $$\psi_i^{k_i}$$의 의미가 더 명확해진다. $$\psi_i$$가 "$$p_i$$가 어떤 tail bubble로 떨어져 나간" degeneration cycle을 representing하므로, 그 $$k_i$$-fold 자기교차 $$\psi_i^{k_i}$$는 codim-$$k_i$$의 deeper boundary stratum을 보게 되고, 이 stratum의 stable map들은 *$$p_i$$가 $$k_i$$-층으로 nested된 tail/bubble 트리의 가장 깊은 끝단에 놓인* configuration들이다. 즉 $$k_i = 1$$이면 $$p_i$$가 단 하나의 tail bubble로 분리되고, $$k_i = 2$$이면 그 tail이 한 번 더 degenerate해서 $$p_i$$가 더 안쪽 bubble 위로 가는 식으로, 일반적으로 $$\psi_i$$ factor 하나가 degeneration을 한 층씩 더 깊이 끌고 들어간다.
+그럼 target $$X$$가 주어진 stable map의 moduli space $$\overline{\mathcal{M}}_{0, n}(X, \beta)$$에서도 forgetful morphism $$\overline{\mathcal{M}}_{0, n}(X, \beta) \to \overline{\mathcal{M}}_{0, n}$$의 pullback을 통해 위의 공식을 옮겨줄 수 있다. 
 
-여기서 "tail"임이 핵심이다. $$\psi_i$$는 $$p_i$$가 *leaf component*로 떨어지는 degeneration만 보고 (boundary divisor representative에서도 $$D_S$$가 marked points의 split이고 $$p_i$$가 한쪽에 분리되어 있다는 statement이므로), $$p_i$$가 두 컴포넌트를 잇는 *bridge* 위에 있는 상황은 보지 않는다 (bridge degeneration은 $$\psi$$가 아닌 다른 cohomology class가 검출). 따라서 $$k_i$$는 정확히 "$$p_i$$가 source curve의 degeneration 트리에서 얼마나 깊은 tail에 사는지"의 깊이를 정해주는 양이다.
+이제 $$\psi_i^{k_i}$$를 더 명확하게 이해할 수 있다. 위의 관점에 따르면, $$\psi_i^{k_i}$$는 단지 marked point $$p_i$$에 해당하는 부분이 $$k_i$$번 degenerate해서 tail에 속하는 degenerate cycle을 의미하는 것으로, 이를 종합하면 descendant GW invariant는 *target incidence*와, *source의 depth-$$k_i$$ tail degeneration*의 두 조건을 동시에 만족하는 stable map의 virtual counting으로 생각할 수 있다. 
 
-종합하면 descendant GW invariant는 *target incidence* + *source의 깊이-$$k_i$$ tail degeneration*의 두 조건을 동시에 만족하는 stable map의 virtual 개수이다.
+이제 이러한 gravitational invariant들을 한 번에 고려하기 위해 우리는 formal한 geometric series
 
-$$J$$-function의 정의에 등장하는 기호 $$\langle \cdots, \frac{1}{z - \psi}\rangle$$는 마지막 marked point에 모든 차수의 $$\psi$$-거듭제곱을 한꺼번에 끼우는 generating function 표기이다.
+$$\frac{1}{z - \psi} \;=\; \frac{1}{z}\cdot\frac{1}{1 - \psi/z} \;=\; \sum_{k \geq 0} z^{-k-1}\psi^k$$
 
-$$\left\langle \gamma_1, \ldots, \gamma_n, \frac{\gamma_{n+1}}{z - \psi}\right\rangle_{0, n+1, \beta} = \sum_{k \geq 0} z^{-k-1} \left\langle \gamma_1, \ldots, \gamma_n, \tau_k(\gamma_{n+1})\right\rangle_{0, n+1, \beta}$$
+를 생각한다. 가령, $$\psi$$ class를 마지막 factor에만 끼워넣으면
 
-## J-function의 도입
+$$\begin{aligned}\left\langle \gamma_1, \ldots, \gamma_n, \frac{\gamma_{n+1}}{z - \psi}\right\rangle_{0, n+1, \beta}&=\left\langle \gamma_1, \ldots, \gamma_n, \sum_{k \geq 0} z^{-k-1}\psi^k\gamma_{n+1}\right\rangle_{0, n+1, \beta}=\sum_{k\geq 0}z^{-k-1}\left\langle \gamma_1, \ldots, \gamma_n, \psi^k\gamma_{n+1}\right\rangle_{0, n+1, \beta}\\&\sum_{k \geq 0} z^{-k-1} \left\langle \gamma_1, \ldots, \gamma_n, \tau_k(\gamma_{n+1})\right\rangle_{0, n+1, \beta}\end{aligned}$$
 
-Smooth projective variety $$X$$, $$H^\ast(X, \mathbb{C})$$의 homogeneous basis $$\{ T_a \}_{a=0,\ldots,s}$$ ($$T_0 = 1$$), 그리고 이들이 주는 Poincaré dual basis $$\{ T^a \}$$를 생각하자. 이 중 $$H^2$$ 성분을 차지하는 부분을 (notation 단순화를 위해) $$\{ T_a \}_{a=1,\ldots,r}$$로 잡으면, [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 도입한 flat coordinate $$t^a$$와 Novikov variable $$q_a := e^{t^a}$$ ($$a = 1, \ldots, r$$)가 정의된다. 편의상 
+으로, 각 depth $$k$$의 descendant invariant가 $$z^{-k-1}$$ coefficient로 분리되어 한 번에 잡힌다. 일차적으로 이는 우변의 무한합을 담는 것이지만, 다음 절에서 $$J$$-function을 도입하면 우변의 $$z$$까지도 특정한 의미를 담게 되는 것을 확인할 수 있다. 
+
+## $$J$$-function의 도입
+
+이제 앞서 살펴본 gravitational invariant들을 사용하여 $$J$$-function을 도입한다. Smooth projective variety $$X$$, $$H^\ast(X, \mathbb{C})$$의 homogeneous basis $$\{ T_a \}_{a=0,\ldots,s}$$ ($$T_0 = 1$$), 그리고 이들이 주는 Poincaré dual basis $$\{ T^a \}$$를 생각하자. 이 중 $$H^2$$ 성분을 차지하는 부분을 (notation 단순화를 위해) $$\{ T_a \}_{a=1,\ldots,r}$$로 잡으면, [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 도입한 flat coordinate $$t^a$$와 Novikov variable $$q_a := e^{t^a}$$ ($$a = 1, \ldots, r$$)가 정의된다. 편의상 
 
 $$t_{(2)} := \sum_{b=1}^r t^b T_b$$
 
@@ -143,19 +151,37 @@ $$\partial_{t^a}\bigl((t_{(2)})^2/2\bigr) = \partial_{t^a}\!\left(\frac{1}{2}\su
 
 로 직접 확인된다. Quantum 부분의 antiderivative는 $$q^\beta = e^{t_{(2)}\cdot \beta}$$로부터 오는 관계 $$q_a\partial_{q_a} q^\beta = (T_a \cdot \beta) q^\beta$$을 이용해 $$\beta$$별로 풀어내면, 각 $$\beta$$에 대해 $$q^\beta$$ 인자와 *primary* GW invariant ($$\psi$$-class 삽입 없는 descendant invariant) $$\langle T_a, T^c\rangle_{0, 2, \beta}$$로 결정되는 $$H^\ast(X)$$-valued correction으로 정리되며, 따라서 $$s_2$$는 classical $$(t_{(2)})^2/2$$와 이 quantum correction의 합이 된다. 더 높은 $$z^{-k}$$ ($$k \geq 2$$) 차수에서는 같은 recursion을 따라 $$\tau_{k-1}(T_a)$$ 형태의 *gravitational descendant*가 차례로 누적되며, $$J$$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
 
-## J-function의 정의
-
 <div class="definition" markdown="1">
 
 <ins id="def3">**정의 3**</ins> $$X$$의 (small) *Givental $$J$$-function<sub>Givental J-함수</sub>* $$J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \to H^\ast(X)$$는 다음으로 정의된다.
 
 $$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X) \\ \beta \neq 0}} \sum_{a=0}^s q^\beta\, \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
 
-여기서 $$\frac{1}{z(z-\psi)}$$는 한 marked point에 $$\sum_{k \geq 0} z^{-k-2} \psi^k$$ 형태로 끼워 모든 차수의 descendant를 모은다는 의미이다 (위 ⁋Descendant Gromov-Witten invariant 절 참고). 지수 인자 $$e^{t_{(2)}/z}$$는 $$H^2$$ 방향의 divisor equation을 흡수하는 normalization이며, 합 안에는 $$\beta \neq 0$$ 항만 남아 있다.
-
 </div>
 
-위 정의의 각 성분이 담고 있는 정보는 다음과 같이 읽힌다. $$z \to \infty$$의 leading term $$1$$은 모든 quantum 보정을 끈 *classical* limit이다. $$z^{-1}$$의 계수는 (괄호 안 GW sum의 insertion $$T_a/(z(z-\psi))$$이 $$z^{-2}$$ 차수부터 시작하므로) 순전히 $$e^{t_{(2)}/z}$$ prefactor에서 오는 $$t_{(2)} = \sum_b t^b T_b$$이며, GW invariant는 여기까지 끼어들지 않는다. $$z^{-2}$$의 계수에서 처음으로 $$(t_{(2)})^2/2$$ (prefactor)와 함께 *primary* GW invariant $$\sum_\beta q^\beta \sum_a \langle T_a\rangle_{0,1,\beta}\,T^a$$가 나타나며, 이는 $$\psi$$ 없이 단 한 점에 $$T_a$$의 pullback만 적분한 enumerative 수이다. 일반적으로 $$z^{-k}$$ ($$k \geq 2$$)의 계수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle \tau_{k-2}(T_a)\rangle_{0,1,\beta}$$이 들어 있다. 즉 $$J$$-function은 모든 차수의 descendant invariant를 하나의 $$z$$-급수로 묶어 둔 *master* 생성함수이며, 그 묶음 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 내용이다.
+이 식이 왜 *generating function*인지, 그리고 각 부분이 어떻게 모든 descendant invariant를 한꺼번에 packaging하는지를 풀어보자.
+
+**Packaging되는 데이터.** [정의 3](#def3)의 식이 한 객체에 담는 데이터는 모든 *single-marked-point descendant invariant*
+
+$$\bigl\{\langle\tau_k(T_a)\rangle_{0, 1, \beta}\bigr\}_{\substack{\beta \in \mathrm{NE}(X) \setminus \{0\} \\ a = 0, \ldots, s \\ k \geq 0}}$$
+
+이며, 세 인덱스 ($$\beta, a, k$$)를 각각 Novikov variable $$q^\beta$$, Poincaré dual basis 원소 $$T^a$$, spectral parameter의 거듭제곱 $$z^{-k-2}$$로 매개해서 하나의 $$H^\ast(X)$$-값 함수에 모은다. [정의 3](#def3)의 식을 *완전히 풀어 적으면*
+
+$$J_X(q, z) \;=\; e^{t_{(2)}/z}\left(\mathbf{1} + \sum_{\substack{\beta \in \mathrm{NE}(X) \\ \beta \neq 0}}\sum_{a = 0}^s \sum_{k \geq 0} q^\beta\, z^{-k-2}\, \langle\tau_k(T_a)\rangle_{0, 1, \beta}\, T^a\right)$$
+
+가 되어, 임의의 invariant $$\langle\tau_k(T_a)\rangle_{0, 1, \beta}$$가 J의 *$$T^a$$ 방향 $$q^\beta\,z^{-k-2}$$ coefficient*로 한 번에 추출된다. 거꾸로 J 자체가 모든 invariant를 동시에 결정하는 *master 데이터*인 셈이며, 이게 "$$J$$-function이 generating function"의 정확한 의미.
+
+**$$\frac{1}{z(z-\psi)}$$의 packaging trick.** 위 풀이형에서 *$$k$$-sum을 한 bracket 안에 흡수*한 형태가 [정의 3](#def3) 본문의 $$\langle T_a/(z(z-\psi))\rangle$$이다. 구체적으로 $$\frac{1}{z(z-\psi)} = \sum_{k \geq 0}z^{-k-2}\psi^k$$ generating series를 한 marked point에 끼우면 ([정의 1](#def1)의 $$\tau_k$$ 표기 컨벤션에 의해)
+
+$$\left\langle T_a\cdot\frac{1}{z(z-\psi)}\right\rangle_{0, 1, \beta} \;=\; \sum_{k \geq 0} z^{-k-2}\,\langle\tau_k(T_a)\rangle_{0, 1, \beta}$$
+
+이 되어 $$k$$에 대한 sum이 sum 기호 없이 $$\frac{1}{z(z-\psi)}$$ 안에 흡수된다. 위 ⁋Descendant Gromov-Witten invariant 절에서 본 $$\frac{1}{z-\psi}$$ trick과 본질적으로 같은 packaging이며, 다만 J-function의 normalization을 위해 $$z^{-1}$$이 하나 더 붙어 $$\sum z^{-k-1}\psi^k$$ 대신 $$\sum z^{-k-2}\psi^k$$ 형태로 정리된 것.
+
+**Prefactor $$e^{t_{(2)}/z}$$와 single-marked-point 형태.** Generic descendant invariant는 multi-marked-point ($$\overline{\mathcal{M}}_{0, n+1}(X, \beta)$$, $$n + 1 \geq 1$$)인데 J에선 $$n + 1 = 1$$만 등장한다. 그 이유는 *$$H^2$$ 방향의 추가 insertion이 divisor equation으로 $$q^\beta$$ 인자에 흡수*되기 때문이며, 그 흡수의 generating function 형태가 prefactor $$e^{t_{(2)}/z}$$이다. 따라서 J는 "$$H^2$$ 방향의 직접 의존성은 prefactor가 담당, 나머지 GW 정보는 single-marked-point invariant" 구조로 깔끔히 정리된다. (Multi-marked-point 형태를 보존한 *big* J-function 버전은 §§Big quantum cohomology로의 확장에서 다룬다.)
+
+**$$\beta \neq 0$$ 제한의 이유.** $$\overline{\mathcal{M}}_{0, 1}(X, \beta)$$는 $$\beta = 0$$일 때 비어 있다 — genus-$$0$$, $$1$$-marked smooth curve는 $$\geq 3$$ special point 조건을 만족하지 않아 stable이 아니기 때문. $$\beta \neq 0$$에서는 *map의 non-constancy*가 stability를 보장하므로 moduli가 well-defined하고, 그래서 inner sum이 자연스럽게 $$\beta \neq 0$$로 제한된다.
+
+**$$z^{-1}$$ 멱급수로의 풀이.** 위 모든 packaging을 풀어서 J를 $$z^{-1}$$의 멱급수로 정리하면 prefactor $$e^{t_{(2)}/z} = \sum_k(t_{(2)})^k/(k!\,z^k)$$가 각 차수에 $$(t_{(2)})^k/k!$$를 기여하고, inner sum이 $$z^{-k-2}$$ 차수에 $$\sum_a\langle\tau_k(T_a)\rangle_{0,1,\beta} T^a$$ 항을 기여하여 합쳐진다. 구체적으로 $$z^0$$ 차수는 classical leading $$\mathbf{1}$$만 남고, $$z^{-1}$$ 차수는 prefactor에서만 오는 $$t_{(2)}$$이며 GW invariant는 여기까지 끼어들지 않는다 (inner sum이 $$z^{-2}$$부터 시작하므로). $$z^{-2}$$ 차수에서 처음으로 prefactor의 $$(t_{(2)})^2/2$$와 함께 *primary* GW invariant $$\sum_{\beta \neq 0}q^\beta\sum_a\langle T_a\rangle_{0, 1, \beta}T^a$$가 등장하고, 일반적으로 $$z^{-k}$$ ($$k \geq 2$$) 차수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle\tau_{k-2}(T_a)\rangle_{0, 1, \beta}$$이 함께 나타난다. 즉 J는 모든 차수의 descendant GW invariant를 한 $$(q, z)$$-함수에 모은 *master 생성함수*이며, 이 packaging 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 명제 4의 내용이다.
 
 ## QDE의 fundamental solution
 

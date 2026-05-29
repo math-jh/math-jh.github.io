@@ -2605,3 +2605,33 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `universal` | looks like emphasis (no <sub> partner) |
 | `cohomological` | looks like emphasis (no <sub> partner) |
 
+## Ext와 Tor
+- post: `_posts/Math/Homological_Algebra/ko/2024-11-06-Ext_and_Tor.md`
+- permalink: `/ko/math/homological_algebra/ext_and_tor`
+- scanned: 2026-05-29T11:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Koszul complex` | multi-word English emphasis — possibly a definition |
+
+## 준층
+- post: `_posts/Math/Topology/ko/2024-11-19-Presheaves.md`
+- permalink: `/ko/math/topology/presheaves`
+- scanned: 2026-05-29T12:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `presheaf cokernel` | multi-word English emphasis — possibly a definition |
+| `presheaf image` | multi-word English emphasis — possibly a definition |
+| `presheaf coimage` | multi-word English emphasis — possibly a definition |
+| `presheaf quotient` | multi-word English emphasis — possibly a definition |
+
+## 옹골성과 필터의 수렴
+- post: `_posts/Math/Topology/ko/2024-12-11-Filter_Convergence.md`
+- permalink: `/ko/math/topology/filter_convergence`
+- scanned: 2026-05-29T13:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `sequential closure` | multi-word English emphasis — possibly a definition |
+
