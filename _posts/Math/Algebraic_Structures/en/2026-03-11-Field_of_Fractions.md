@@ -1,5 +1,6 @@
 ---
 title: "Field of Fractions"
+description: "This post generalizes the construction of the fraction field of an integral domain, presenting a method to create a ring of fractions from a commutative ring and its multiplicative subset. It proves the existence of a unique addition structure on the monoid of fractions using the Grothendieck group construction, yielding a commutative ring."
 excerpt: "Localization, ring of fractions, prime ideal"
 
 categories: [Math / Algebraic Structures]
@@ -13,16 +14,17 @@ sidebar:
 date: 2024-05-08
 last_modified_at: 2024-05-08
 weight: 105
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-05-29T19:00:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-29T19:00:05+00:00
 ---
 ## Ring of Fractions
 
-In [\[Set Theory\] §Natural Numbers and Infinite Sets](/en/math/set_theory/natural_numbers), we defined the monoid $$\mathbb{N}$$ of natural numbers, which (apart from some technical issues) could be written in the language of set theory. Then $$\mathbb{Z}$$ was defined as the Grothendieck group of the commutative monoid $$\mathbb{N}$$. Thinking back to the number systems we learned in middle school, the next object we need to define is the set of rational numbers $$\mathbb{Q}$$.
+In [\[Set Theory\] §Natural Numbers and Infinite Sets](/en/math/set_theory/natural_numbers), we defined the monoid $$\mathbb{N}$$ of natural numbers, which (apart from some technical issues) could be expressed in the language of set theory. Then $$\mathbb{Z}$$ was defined as the Grothendieck group of the commutative monoid $$\mathbb{N}$$. Thinking back to the number systems we learned in middle school, the next object we need to define is the set of rational numbers $$\mathbb{Q}$$.
 
 If we forget the additive structure of $$\mathbb{Z}$$ and remember only its multiplicative structure, then $$(\mathbb{Z},\cdot,1)$$ is a commutative monoid. What we need to do is adjoin inverses, and since $$1/0$$ is undefined, we set $$S=\mathbb{Z}\setminus\{0\}$$ and consider the monoid of fractions from [§Grothendieck Groups, ⁋Definition 7](/en/math/algebraic_structures/Grothendieck_groups#def7) to obtain the multiplicative group $$\mathbb{Q}$$.
 
-In general, this process is possible through the following theorem.
+In general, this process is made possible by the following theorem.
 
 <div class="proposition" markdown="1">
 
@@ -107,7 +109,7 @@ $$\epsilon(\alpha+\beta)=(\alpha+\beta)/1=\alpha/1+\beta/1=\epsilon(\alpha)+\eps
 
 </div>
 
-If $$S$$ was the set of cancellable elements of $$A$$, then it is obvious that $$\epsilon$$ is an injection, and thus we can think of $$A$$ as a subring of $$S^{-1}A$$. In this case, $$S^{-1}A$$ is called the *total ring of fractions* of $$A$$.
+If $$S$$ was the set of cancellable elements of $$A$$, then it is obvious that $$\epsilon$$ is an injection, and thus we can regard $$A$$ as a subring of $$S^{-1}A$$. In this case, $$S^{-1}A$$ is called the *total ring of fractions* of $$A$$.
 
 ## Fields
 
