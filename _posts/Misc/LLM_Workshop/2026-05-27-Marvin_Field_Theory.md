@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 체론"
-categories: [Misc / LLM Workshop, Math / Field Theory]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_field_theory
 
 sidebar:

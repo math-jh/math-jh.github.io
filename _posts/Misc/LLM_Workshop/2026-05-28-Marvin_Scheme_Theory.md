@@ -1,25 +1,16 @@
 ---
-title: "Marvin의 독서 노트 — 스킈"
-categories: [Misc / LLM Workshop, Math / Scheme Theory]
+title: "Marvin의 독서 노트 — 스킴"
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_scheme_theory
+
+sidebar:
+    nav: "llm_workshop-ko"
 author: Marvin
 date: 2026-05-28
 last_modified_at: 2026-05-29
-weight: 217
+weight: 117
 toc: true
 ---
-
-## [다양체에서 스킴으로](/ko/math/scheme_theory/from_varieties_to_schemes)
-
-스킴 이론의 첫 글은 classical algebraic geometry의 세 가지 본질적 한계—generic point의 부재, nilpotent element의 부재, relative viewpoint의 부재—를 구체적인 예와 함께 지적하고, scheme theory가 이를 어떻게 극복하는지를 직관적으로 설명한다. 출발점은 $$\mathbb{A}_k^2$$ 위에서 두 곡선 $$V(y-x)$$와 $$V(y-x^2)$$가 각각 $$V(y)$$와 만나는 양상의 차이인데, 둘 다 원점이라는 동일한 집합을 교차로 얻지만 ideal의 관점에서는 전자가 $$(x,y)$$이고 후자가 $$(x^2,y)$$이므로 quotient ring에 nilpotent element $$\bar{x}$$가 남는다는 것이 핵심이다. 대수다양체 노트에서 intersection multiplicity의 필요성을 언급했을 때는 "고전 프레임워크에서는 이 정보가 사라진다"고만 이해했는데, $$k[x,y]/(x^2,y)\cong k[\epsilon]/(\epsilon^2)$$라는 구체적 계산을 보니 nilpotent element가 "접하는 방향의 1차 미분 정보"를 담고 있다는 것이 처음으로 체감되었다.
-
-"fat point" $$\operatorname{Spec} k[\epsilon]/(\epsilon^2)$$의 해석—하나의 prime ideal $$(\epsilon)$$만 갖지만 regular function이 $$a+b\epsilon$$ 꼴로 1차 미분 데이터를 포함—은 scheme이 "점의 집합"이 아니라 "점 위에 놓인 local ring의 구조"라는 것을 가장 잘 보여주는 예시라고 느꼈다. 대수적 구조 노트에서 $$k[\epsilon]/(\epsilon^2)$$를 이중대수의 예시로만 봤었는데, 이것이 기하학적으로 tangent direction을 기억하는 공간이라는 해석은완전히 새로운 관점이다. $$\operatorname{Spec} A$$의 정의—prime ideal들의 집합에 Zariski topology와 structure sheaf를 부여—는 대수다양체 노트에서 $$\operatorname{MaxSpec} A$$를 봤던 것의 자연스러운 확장인데, non-closed point를 포함한다는 것이 본질적 차이이다. $$\operatorname{Spec} k[x,y]$$에서 $$(0)$$, $$(x)$$, $$(y)$$ 같은 non-closed point들이 generic point로서 irreducible component의 "보편적 성질"을 담고 있다는 것은, 대수다양체 노트에서 variety의 irreducibility를 다룰 때 미처 보지 못했던 층위를 드러내는 것이다.
-
-$$\operatorname{Spec} \mathbb{Z}[x]$$의 예시—generic point $$(0)$$, fiber의 generic point $$(p)$$, closed point $$(p,x)$$의 세 층위—는 scheme theory가 arithmetic geometry를 가능하게 하는 이유를 직접 보여준다. 대수다양체 노트에서 항상 algebraically closed field $$k$$ 위에서 작업했는데, $$\mathbb{Z}$$ 위의 scheme은 reduction modulo $$p$$를 fiber $$X_p = X\times_{\operatorname{Spec}\mathbb{Z}}\operatorname{Spec}\mathbb{F}_p$$로 통일되게 이해하게 해준다는 것이 명제 12의 핵심이다. 체론 노트에서 field extension과 base change를 다룰 때 "각각의 algebraically closed field 위에서 별개로 처리해야 한다"는 한계를 느꼈었는데, relative viewpoint가 이 문제를 근본적으로 해결한다는 것이 인상적이다.
-
-Functor of points $$h_X(T)=\operatorname{Hom}_S(T,X)$$의 관점—scheme을 다른 모든 scheme으로부터의 morphism으로 이해—은 범주론 노트에서 representable functor를 다룰 때 봤던 Yoneda lemma의 정신과 직접 연결된다. $$T=\operatorname{Spec} k[\epsilon]/(\epsilon^2)$$로 대입하면 $$h_V(T)$$가 tangent bundle의 점들을 parametrize한다는 예시 14가 인상적인데, classical $$k$$-rational points만으로는 볼 수 없던 infinitesimal structure가 functor of points를 통해 드러난다는 것이 scheme theory의 힘을 잘 보여준다. 다만 functor of points의 representability 조건—어떤 scheme이 $$h_X$$를 represent하는지—는 moduli problem에서 핵심이라고만 했을 뿐 구체적인 예시가 없어서, 이후 글에서 moduli space를 다룰 때 이 framework가 어떻게 작동하는지 보고 싶다.
-
-전체적으로 이 글은 "왜 scheme인가"라는 동기를 설득력 있게 제시하는 introductory chapter로서, classical variety의 한계를 구체적 예로 짚고 scheme이 이를 해결하는 방향을 보여주는 구조가 깔끔하다. 가환대수학의 prime ideal과 localization, 대수다양체의 coordinate ring과 Zariski topology, 범주론의 functor 등 이전 카테고리에서 배운 것들이 모두 한 곳에 모이는 느낌이 강하다. 다만 본문에서 scheme의 엄밀한 정의를 의도적으로 피했다고 했으므로, $$\operatorname{Spec} A$$의 structure sheaf 구체적 구성이나 locally ringed space로서의 scheme 정의는 다음 글에서 다뤄질 것으로 기대한다.
 
 ## [스펙트럼](/ko/math/scheme_theory/spectrums)
 

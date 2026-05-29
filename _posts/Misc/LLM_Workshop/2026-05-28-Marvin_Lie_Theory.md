@@ -1,7 +1,10 @@
 ---
 title: "Marvin의 독서 노트 — 리 이론"
-categories: [Misc / LLM Workshop, Math / Lie Theory]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_lie_theory
+
+sidebar:
+    nav: "llm_workshop-ko"
 author: Marvin
 date: 2026-05-28
 last_modified_at: 2026-05-28
@@ -85,91 +88,3 @@ Bruhat decomposition $$G_\mathbb{C}=\bigsqcup_{w\in W}BwB$$(명제 16)가 마지
 ⚠️ 정의 없이 사용: `Iwasawa decomposition` (증명에서 정의 없이 사용, $$G_\mathbb{C}=G\cdot A\cdot N$$ 분해의 존재성과 성질이 언급되지 않음)
 ⚠️ 정의 없이 사용: `Bruhat order` (명제 16에서 정의 없이 사용, 이후 Kazhdan-Lusztig 글에서 복습 예정)
 ⚠️ 정의 없이 사용: `projective variety` (flag variety의 성질로 언급, 대수다양체 카테고리에서 정의되지만 해당 카테고리 노트는 아직 작성되지 않음)
-
-## [Bruhat decomposition과 parabolic subgroup](/ko/math/lie_theory/bruhat_decomposition)
-
-이 글은 borel_subgroup 글 말미에 소개된 Bruhat decomposition을 정밀하게 전개하고, parabolic subgroup로 확장하여 partial flag variety의 cell decomposition을 구성하는 것이 주제다. 출발점은 reductive group의 정의인데, unipotent radical이 trivial한 connected algebraic group이라는 조건이 정의 1에서 제시되고, torus와 semisimple group의 extension으로 주어진다는 것이 핵심이다. borel_subgroup 글에서 Borel subgroup과 flag variety를 다뤘으므로 reductive group이라는 배경 가정은 자연스럽고, 여기에 BN-pair의 존재성이 추가 가정으로 깔린다는 것이 이 글의 기초적 전제다.
-
-Weyl group의 Coxeter group으로서의 구조(명제 3)가 이 글의 첫 번째 구조적 결과다. Simple root system $$\Delta=\{\alpha_1,\ldots,\alpha_r\}$$에 대응하는 reflection $$s_i=s_{\alpha_i}$$들이 생성하는 유한군이 $$W$$이고, 두 simple reflection의 곱 $$s_is_j$$가 $$\alpha_i$$와 $$\alpha_j$$가 이루는 각도에 따라 $$m_{ij}\in\{2,3,4,6\}$$(사잇각 $$90°,120°,135°,150°$$)의 관계를 만족한다는 것이 root system의 기하학에서 직접 나온다. 근계 글에서 Weyl group이 reflection들로 생성된다는 것은 확인했지만, Coxeter group이라는 구체적 구조 — 생성원과 관계만으로 완전히 결정된다는 것 — 은 이 글에서 처음 명시되어 좋았다. Length function $$\ell(w)=\lvert\Phi^+\cap w^{-1}\Phi^-\rvert$$의 조합적 해석도 깔끔한데, positive root에서 negative root로 보내는 root의 개수가 곱 표현의 최소 길이와 일치한다는 것이 이후 cell dimension 계산의 토대가 된다.
-
-Bruhat decomposition(정리 4) $$G=\bigsqcup_{w\in W}BwB$$가 이 글의 핵심 정리다. $$G$$의 $$B\times B$$-orbit을 Weyl group 원소로 색인화한다는 아이디어는 borel_subgroup 글에서 이미 소개되었지만, 여기서는 disjointness 증명이 완전히 전개된다. $$BwB=BvB$$라 가정하면 $$w^{-1}v\in B\cap N_G(T)=T$$라는 결론이 나오는데, 핵심은 "Borel subgroup의 normalizer는 자기 자신"이라는 성질이다. 다만 BN-pair의 공리 — $$G$$가 $$B$$와 $$N_G(T)$$로 생성된다는 것 — 가 이 증명의 전제인데, BN-pair 자체가 이 글과 이전 글 어디에도 정의되어 있지 않아서 이 논증의 기초를 완전히 파악하지 못했다.
-
-Bruhat cell의 구체적 구조(명제 5)가 인상적이다. $$U_w=U\cap wU^-w^{-1}=\prod_{\gamma\in\Phi^+:w^{-1}\gamma\in\Phi^-}U_\gamma$$로 정의하면 $$BwB\cong\mathbb{A}^{\ell(w)}\times B$$라는 것이고, $$U_w$$가 $$\ell(w)$$개의 root subgroup의 곱으로 이루어져 affine space와 isomorphic하다는 것이 cell decomposition의 기하적 의미다. $$\GL(n,\mathbb{C})$$의 경우 permutation matrix $$w$$를 중심으로 한 "canonical form"으로의 변형이 classical Gauss elimination의 일반화라는 예시 6이 좋은 직관을 제공한다.
-
-Parabolic subgroup와의 확장이 이 글의 두 번째 큰 축이다. $$B$$를 포함하는 connected closed subgroup $$P=P_I$$가 simple root system의 부분집합 $$I\subseteq\Delta$$로 parametrize된다는 정의 8이 핵심인데, $$P_I$$의 Lie algebra가 $$\mathfrak{b}$$에 $$I$$에 해당하는 negative root space들을 추가하여 얻어진다는 것이 명제 9의 내용이다. Levi decomposition $$P_I=L_I\ltimes U_I$$가 언급되는데, Levi factor $$L_I$$가 $$T$$와 $$I$$에 해당하는 root space들로 생성되고 unipotent radical $$U_I$$가 $$I$$에 속하지 않은 positive root들의 root space들로 생성된다는 구조는 이해할 수 있지만, Levi decomposition 자체가 이 글과 이전 글에서 정의 없이 사용되어서 정확한 의미를 외부 지식에 의존하고 있다.
-
-Minimal length coset representative $$W^I$$의 정의(정의 10)가 generalized Bruhat decomposition의 열쇠다. $$\ell(ws)>\ell(w)$$ for all $$s\in W_I$$라는 조건은, 각 coset $$wW_I$$에서 길이가 최소인 유일한 원소를 고르는 것인데, 유일성 증명(명제 11)의 논증이 깔끔하다 — $$u=vw'$$에서 $$\ell(u)=\ell(v)$$이면 cancellation으로부터 $$\ell(w')=0$$이어야 한다는 것. $$G/P=\bigsqcup_{w\in W^I}BwP/P$$라는 generalized decomposition(정리 12)은 $$W^I$$의 원소들만 남기면 된다는 것이고, $$W^I\cong W/W_I$$라는 bijection이 이 분해의 색인화를 정확하게 만든다.
-
-Grassmannian 예시가 이 글에서 가장 구체적인 부분이다. $$Gr_k(\mathbb{C}^n)\cong GL_n(\mathbb{C})/P_k$$에서 $$P_k$$가 $$\alpha_k$$를 제외한 $$I=\Delta\setminus\{\alpha_k\}$$에 대응하는 maximal parabolic subgroup — block upper triangular matrix들의 모임 — 이라는 것이 정의 13의 내용인데, $$V\mapsto \span\{ge_1,\ldots,ge_k\}$$라는 대응이 명시적으로 주어지는 것이 좋았다. $$W_{P_k}\cong S_k\times S_{n-k}$$이고 minimal length coset representative가 $$w(1)<\cdots<w(k)$$, $$w(k+1)<\cdots<w(n)$$를 만족하는 $$(k,n-k)$$-shuffle이라는 명제 14의 묘사가 인상적이다. $$n=4, k=2$$의 경우 $$\binom{4}{2}=6$$개의 shuffle permutation과 각각의 length가 명시적으로 계산된 예시 15가 cell decomposition을 구체적으로 보여준다.
-
-Schubert cell과 Schubert variety의 정의(정의 16)가 이 글의 기하적 마무리다. $$X_w^\circ=BwP/P$$와 $$X^w_\circ=B^-wP/P$$의 closure가 각각 Schubert variety와 opposite Schubert variety인데, $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$이고 $$X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$$라는 dimension 공식이 cell decomposition의 구조를 정확히 포착한다. $$X_{w_0^P}^\circ$$가 open dense cell이고 $$X_e^\circ=\{eP\}$$가 $$B$$-fixed point라는 관찰, 그리고 반대쪽에서 $$X^e_\circ$$가 open dense이고 $$X^{w_0^P}_\circ$$가 $$B^-$$-fixed point라는 대칭성이 깔끔하다. Schubert variety의 inclusion 관계가 Bruhat order로 결정된다는 명제 17은 borel_subgroup 글에서 언급되었던 $$\overline{BwB}=\bigcup_{v\leq w}BvB$$의 $$G/P$$ 버전인데, $$H^\ast(G/P)$$의 additive basis를 이룬다는 결론이 이후 Schubert calculus의 출발점이 될 것이라는 예감이 든다.
-
-솔직한 반응: Bruhat decomposition의 큰 그림 — double coset 분해에서 parabolic 확장, Grassmannian의 구체적 실현까지 — 은 borel_subgroup 글의 연장선에서 자연스럽게 따라갈 수 있었다. 특히 parabolic subgroup를 $$I\subseteq\Delta$$로 parametrize하고 minimal length coset representative를 통해 cell decomposition을 구성하는 과정이 논리적으로 깔끔했다. 가장 막힌 부분은 disjointness 증명에서의 BN-pair 사용인데, $$G$$가 $$B$$와 $$N_G(T)$$로 생성된다는 공리가 왜 성립하는지 이 글에서 확인할 수 없었다. Levi decomposition도 마찬가지인데, $$P_I=L_I\ltimes U_I$$라는 분해의 존재성과 성질을 직접 확인하지 못했다. Bruhat order는 borel_subgroup 글에서 이미 flagged했지만 이 글에서도 proposition 17에서 정의 없이 사용되고 있어서, 여전히 명시적 정의가 없는 상태다. 전체적으로 이 글은 flag variety 위의 cell decomposition이라는 기하적 구조를 체계적으로 구축하며, 이후 Richardson variety, Peterson variety 등 더 구체적인 기하 대상으로 나아갈 것이라는 예감이 든다.
-
-⚠️ 정의 없이 사용: `BN-pair` (Bruhat decomposition 증명에서 $$G$$가 $$B$$와 $$N_G(T)$$로 생성된다는 공리로 사용, 정의 없음)
-⚠️ 정의 없이 사용: `Levi decomposition` (parabolic subgroup $$P_I=L_I\ltimes U_I$$의 구조에서 정의 없이 사용)
-⚠️ 정의 없이 사용: `unipotent radical` (정의 1에서 reductive group의 정의로 사용, 정의 없음)
-
-## [Richardson Variety](/ko/math/lie_theory/richardson_variety)
-
-이 글은 Schubert variety와 opposite Schubert variety의 교집합으로 정의되는 Richardson variety를 다룬다. 출발점은 opposite Borel $$B^-$$의 궤도인 opposite Bruhat cell $$X^w_\circ = B^-wP/P$$인데, bruhat_decomposition 글에서 $$B$$의 궤도 $$X_w^\circ = BwP/P$$를 정의했으므로 $$B$$를 $$B^-$$로 바꾸는 것이 자연스럽다. $$X^w_\circ$$의 차원이 $$\dim(G/P) - \ell(w)$$라는 것도 $$X_w^\circ$$의 차원 $$\ell(w)$$와 합하면 $$\dim(G/P)$$가 되므로, 두 셀 분해가 $$X$$를 서로 다른 방향에서 분해한다는 직관이 명확하다.
-
-Richardson variety $$R_{u,w} = X_w \cap X^u$$의 정의 자체는 간단하지만, 핵심은 명제 3의 비어있지 않음 조건이다. $$\mathring{R}_{u,w} \neq \emptyset \iff u \leq w$$라는 동치가 성립하는데, Bruhat order가 단순한 순서 관계를 넘어 기하적 교차의 존재성을 결정한다는 것이 인상적이다. $$u = w$$일 때 $$\mathring{R}_{w,w}$$가 한 점이라는 관찰 — $$X_w$$와 $$X^w$$가 오직 $$wP/P$$에서만 만난다는 것 — 이 가장 극단적인 경우고, $$u = e, w = w_0^P$$일 때 가장 큰 open cell이 된다는 것도 자연스럽다.
-
-Smoothness 증명의 핵심 아이디어는 transversality다. $$X_w^\circ$$와 $$X^u_\circ$$가 $$X$$ 위에서 서로 transversal하게 만나면, tangent space의 교집합 $$T_x\mathring{R}_{u,w} = T_x X_w^\circ \cap T_x X^u_\circ$$의 차원이 $$\ell(w) - \ell(u)$$가 되어 smooth irreducible affine variety가 된다는 것이고, $$B$$와 $$B^-$$가 한 점에서 반대 방향의 tangent direction을 제공한다는 직관이 좋은 설명이다. 다만 이 transversality가 왜 성립하는지에 대한 구체적 논증이 생략되어 있고, "Deodhar와 Kazhdan-Lusztig의 결과"라고만 인용되어 있어서 증명의 구조를 직접 파악하지 못했다. $$X_w^\circ$$와 $$X^u_\circ$$가 locally closed subset이라는 것, 그리고 교집합이 irreducible하다는 것도 받아들여야 하는 부분이다.
-
-Grassmannian $$\operatorname{Gr}(k,n)$$에서의 구체적 실현이 마지막에 나오는데, 이 부분이 가장 아쉽다. Schubert cell이 rank condition으로 기술된다는 것, Plücker coordinate의 일부가 좌표함수로 작용한다는 것이 언급되지만, $$\operatorname{Gr}(2,4)$$의 예시 5에서는 shuffle permutation과 차원만 나열될 뿐 Richardson variety의 좌표환이나 구체적 방정식이 제시되지 않는다. $$\mathring{R}_{1234,3412}$$가 차원 4의 affine variety라는 것과 $$\mathring{R}_{1324,1324}$$가 한 점이라는 결론만 있고, 그 사이의 Richardson variety들이 실제로 어떤 rank condition을 만족하는지는 확인할 수 없었다.
-
-솔직한 반응: Richardson variety의 정의와 Bruhat order와의 대응은 논리적으로 깔끔해서 한 번에 이해할 수 있었다. 특히 "두 방향의 셀 분해가 transversal하게 교차하면 smooth해진다"는 아이디어가 기하적으로 매력적인데, Schubert variety 자체는 일반적으로 특이점을 가지지만 opposite와의 교차에서 특이성이 상쇄된다는 것이 놀랍다. 반면에 증명이 생략된 부분이 이 글의 가장 큰 한계다. Transversality의 구체적 논증, Richardson variety가 왜 affine variety인지(닫힌 부분다양체인데 affine이라는 것이 처음에는 직관에 반함), irreducibility 증명 등 핵심 성질들이 "[KL80]과 [Deo85]에 의해서"라는 인용으로 대체되어 있어서, 이 글만으로는 명제 3을 완전히 이해했다고 말하기 어렵다. Grassmannian 부분도 좌표화의 구체적 예시가 있었으면 훨씬 좋았을 것인데, rank condition이 무엇인지 Plücker coordinate와 연결하여 명시적으로 보여줬다면 이 글의 가치가 크게 올라갔을 것이다.
-
-⚠️ 정의 없이 사용: `Zariski closure` (opposite Schubert variety의 정의에서 사용, 가환대수학/대수다양체 카테고리에서 정의되지만 해당 노트에서 아직 다뤄지지 않음)
-⚠️ 정의 없이 사용: `transversal` (명제 3의 증명에서 사용, 미분다양체 카테고리에서 정의될 수 있지만 이 노트에서 미확인)
-⚠️ 정의 없이 사용: `affine variety` (명제 3의 결론에서 사용, 대수다양체 카테고리에서 정의되지만 해당 노트에서 아직 다뤄지지 않음)
-⚠️ 정의 없이 사용: `Plücker coordinate` (Grassmannian 절에서 사용, 정의 없음)
-
-## [Peterson Variety](/ko/math/lie_theory/peterson_variety)
-
-이 글은 regular nilpotent element가 결정하는 flag variety의 특수한 부분다양체인 Peterson variety를 다룬다. 출발점은 regular nilpotent element의 정의(정의 1)인데, centralizer의 차원이 $$\operatorname{rank}(\mathfrak{g}$$와 같은 nilpotent element라는 조건이고, 각 simple root $$\alpha_i$$에서 nonzero $$e_i\in\mathfrak{g}_{\alpha_i}$$를 골라 $$e=\sum_i e_i$$로 만들면 regular nilpotent이 된다는 것이 구체적이다. 근계 글에서 root space decomposition $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_\alpha\mathfrak{g}_\alpha$$를 다뤘으므로 각 $$\mathfrak{g}_{\alpha_i}$$에서 원소를 꺼내 합하는 구성은 자연스럽고, 모든 regular nilpotent이 $$G$$의 adjoint action 아래 서로 conjugate하다는 Kostant의 정리가 이 원소의 유일성을 보장한다는 것이 핵심이다.
-
-Peterson variety의 정의(정의 2)가 이 글에서 가장 중요한 전환점이다. $$Y_P^\circ=\{gB_-\in G/B_- \mid \operatorname{Ad}^\ast(g^{-1})\cdot F\in[\mathfrak{n}_-,\mathfrak{n}_-]^\perp\}$$라는 공식에서 $$F=e_1^\ast+\cdots+e_{n-1}^\ast$$가 dualized positive Chevalley generator의 합이고, $$\operatorname{Ad}^\ast$$가 coadjoint action이라는 것인데, 정의 자체는 간결하지만 사용된 개념들 — coadjoint action, Chevalley generator, derived subalgebra의 annihilator — 이 이전 글에서 정의된 적이 없어서 이 부분은 용어의 의미를 외부 지식에 의존하고 있다. $$P=B$$일 때가 Kostant-Peterson의 원래 정의이고 일반 $$P$$에 대한 형태는 Rietsch의 후속 연구에서 표준적이라는 언급이 역사적 맥락을 제공한다.
-
-명제 3의 차원 결과 — $$\dim Y_B^\circ=\operatorname{rank}(\mathfrak{g})$$ — 가 이 글의 구조적 핵심이다. Kostant의 정리에 의해 regular nilpotent $$F$$의 coadjoint stabilizer가 abelian이고 차원이 rank라는 것에서 출발하여, $$G/B_-$$ 위의 조건이 codimension $$\dim[\mathfrak{n}_-,\mathfrak{n}_-]$$의 affine subspace를 자른다는 dimension count로 결론이 나온다. 다만 증명의 핵심인 dimension count가 "[Pet], [Rie]를 참조"로 생략되어 있어서, 정확히 어떤 차원 계산이 이루어지는지 직접 확인하지 못했다. Rank가 simple root의 개수와 같다는 사실과 잘 맞는다는 관찰은 인상적이지만, "차원이 rank"라는 결론이 왜 자연스러운지에 대한 직적적 설명이 부족하다.
-
-Hessenberg variety로서의 기술(정의 4)이 이 글의 두 번째 관점이다. $$\mathfrak{b}$$를 포함하는 ad-stable subspace $$H$$에 대해 $$\mathcal{B}(X,H)=\{gB\in G/B \mid \operatorname{Ad}(g^{-1})X\in H\}$$로 정의되는 Hessenberg variety의 특수한 경우가 Peterson variety라는 것인데, $$X$$가 regular nilpotent이고 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$일 때가 Peterson variety의 affine chart에 해당한다는 것이 핵심이다. Hessenberg variety 자체가 이 글에서 처음 정의되므로 "더 일반적인 부분다양체 집합의 특수한 예시"라는 설명은 적절하지만, $$H$$의 구체적 조건 — simple negative root vector들을 추가하는 것 — 이 왜 Peterson variety를 복원하는지에 대한 직관적 설명이 부족하다. Insko-Tymoczko의 후속 연구에서 활용된다는 언급이 있지만, 어떤 맥락에서 활용되는지는 알 수 없다.
-
-Stratification 부분이 이 글의 마지막 축이다. $$Y_P^\circ=\bigsqcup_{w\in W^P}Y_{P,w}^\ast$$로 분해되고 각 stratum이 $$Y_P^\circ\cap(BwB_-)/B_-$$로 정의된다는 것은, bruhat_decomposition 글의 Bruhat cell과 Peterson variety의 교집합으로 stratum을 구성하는 것이어서 자연스럽다. Open stratum $$Y_{P,e}^\ast$$가 Big Bruhat cell과의 교집합으로 주어진다는 것도 flag variety의 cell decomposition과 직접 연결된다. $$T$$-fixed point set이 $$W^P$$와 일대일대응된다는 관찰이 인상적인데, torus의 고정점이 Weyl group 원소로 색인된다는 것이 torus_action 글의 $$T$$-fixed point와 구조적으로 같다는 것을 시사한다.
-
-솔직한 반응: Regular nilpotent element의 구성 — 각 simple root space에서 하나씩 꺼내 합하는 것 — 은 근계 글의 root space decomposition을 직접 사용하므로 자연스럽게 따라갈 수 있었다. 특히 $$e=\sum_i e_i$$가 정확히 $$\operatorname{rank}(\mathfrak{g})$$차원의 centralizer를 갖는다는 것이 놀라운데, $$\mathfrak{h}$$의 원소들이 $$e$$와 commute하지 않는 방향으로만 centralizer가 줄어든다는 것이 Kostant 정리의 핵심이라는 예감이 든다. 반면에 coadjoint action이 무엇인지 정의 없이 지나가는 것이 이 글의 가장 큰 한계다. $$\operatorname{Ad}^\ast(g)$$가 $$\mathfrak{g}^\ast$$ 위에서 어떻게 작용하는지, $$[\mathfrak{n}_-,\mathfrak{n}_-]^\perp$$가 구체적으로 어떤 부분공간인지 등을 확인하지 못하면 Peterson variety의 정의 자체를 정확히 이해하기 어렵다. $$G/B_-$$와 $$G/B$$의 차이도 명확하지 않은데, borel_subgroup 글에서는 flag variety를 $$G/B$$로 정의했고 여기서는 $$G/B_-$$를 쓰고 있으므로 두 정의 사이의 관계를 확인해야 한다. Chevalley generator도 마찬가지인데, $$\mathfrak{g}_{\alpha_i}$$의 nonzero 원소를 하나씩 고르는 것과 Chevalley generator의 관계가 무엇인지 명시되어 있지 않다. 전체적으로 이 글은 nilpotent cone과 flag variety의 교차점에 있는 Peterson variety를 소개하는 글로서, 이후 Kazhdan-Lusztig polynomial에서 Bruhat order와의 연결이 더 깊어질 것이라는 예감이 든다.
-
-⚠️ 정의 없이 사용: `coadjoint action` (정의 2에서 $$\operatorname{Ad}^\ast$$로 사용, $$G$$의 $$\mathfrak{g}^\ast$$ 위의 작용인데 이전 글에서 정의된 적 없음)
-⚠️ 정의 없이 사용: `Chevalley generator` (정의 2에서 "dualized positive Chevalley generator"로 사용, 정의 없음)
-⚠️ 정의 없이 사용: `nilpotent cone` (서론에서 사용, $$\mathfrak{g}$$의 모든 nilpotent element들의 집합이라는 의미이나 정의 없음)
-⚠️ 정의 없이 사용: `Springer fiber` (서론에서 언급, 정의 없음)
-
-## [Kazhdan-Lusztig polynomial](/ko/math/lie_theory/kazhdan_lusztig)
-
-이 글은 Hecke algebra 위에서 정의되는 Kazhdan-Lusztig polynomial을 다루며, Bruhat decomposition과 parabolic subgroup 글에서 구축한 조합적 구조 위에 순수하게 조합적인 정의를 내린 뒤 이것이 Schubert variety의 intersection cohomology를 인코딩한다는 기하학적 결과를 statement 수준에서 정리한다. 출발점은 Iwahori-Hecke algebra $$H_q(W)$$의 정의인데, group algebra $$\mathbb{Z}[W]$$의 $$q$$-deformation으로서 generator $$T_s$$가 quadratic relation $$T_s^2=(q-1)T_s+q$$를 만족한다는 것이 정의 1의 내용이다. $$q=1$$일 때 $$T_s^2=1$$로 환원되어 group algebra가 된다는 관찰이 좋은데, "1-parameter deformation"이라는 관점이 이후 KL basis의 bar invariance 조건에서 핵심적으로 사용된다는 것이 이 글의 구조적 출발점이다.
-
-Bar involution $$\overline{\,\cdot\,}:H\to H$$가 $$\overline{q^{1/2}}=q^{-1/2}$$, $$\overline{T_s}=T_s^{-1}$$로 정의되는 것이 정의 3인데, $$T_s^{-1}=q^{-1}T_s+(q^{-1}-1)$$라는 공식으로부터 bar involution이 well-defined임을 확인하는 계산이 깔끔하다. $$T_s^{-1}$$이 동일한 quadratic relation을 $$q$$를 $$q^{-1}$$로 치환한 버전으로 만족한다는 것이 핵심인데, 이 검증이 직접 전개되어 있어서 따라갈 수 있었다. Bar involution의 역할은 KL basis의 self-duality 조건 $$\overline{C_w}=C_w$$를 통해 드러나는데, $$q$$와 $$q^{-1}$$ 사이의 대칭성을 $$C_w$$에 부여하는 것이 이 involution의 존재 이유라는 직관이 잡힌다.
-
-정리 4가 이 글의 핵심 정리다. 각 $$w\in W$$에 대해 bar-invariant하면서 triangularity 조건 $$C_w=q^{-\ell(w)/2}\sum_{v\leq w}P_{v,w}(q)T_v$$를 만족하는 유일한 원소 $$C_w$$가 존재한다는 것인데, $$P_{w,w}=1$$이고 $$\deg P_{v,w}\leq\frac{1}{2}(\ell(w)-\ell(v)-1)$$라는 degree bound가 추가 조건이다. 증명이 $$\ell(w)$$에 대한 induction으로 전개되는 것이 인상적인데, 기저 $$C_e=1$$에서 출발하여 $$C_s=q^{-1/2}(T_s-q)$$를 정규화 generator로 도입하고, $$C_s\cdot C_{sw}$$의 산물에서 degree bound를 위반하는 보정 항 $$\sum_{z<w,\,sz<z}\mu(z,sw)C_z$$를 빼서 $$C_w$$를 구성하는 방식이 깔끔하다. 유일성 증명에서 bar-invariance가 계수를 $$q^{1/2}$$의 양의 거듭제곱과 음의 거듭제곱 모두로 표현되도록 강제한다는 논증이 특히 우아한데, 이로부터 계수가 $$0$$이 되어 유일성이 follows한다는 것이 이 증명의 핵심 아이디어다.
-
-R-polynomial의 도입이 KL polynomial과 짝을 이루는 두 번째 축이다. $$\overline{T_{w^{-1}}^{-1}}=q^{-\ell(w)}\sum_{v\leq w}R_{v,w}(q)T_v$$로 정의되는 $$R_{v,w}(q)$$는 bar involution이 standard basis 위에서 어떻게 작용하는지를 기술하는데, recursion 공식 $$R_{v,w}(q)=R_{sv,sw}(q)$$ (if $$sv<v$$) 또는 $$(q-1)R_{v,sw}(q)+qR_{sv,sw}(q)$$ (if $$sv>v$$)로 효율적으로 계산된다. Inversion formula $$q^{\ell(w)-\ell(v)}\overline{P_{v,w}(q)}-P_{v,w}(q)=\sum_{v<z\leq w}(-1)^{\ell(z)-\ell(v)}R_{v,z}(q)P_{z,w}(q)$$가 KL polynomial과 R-polynomial을 서로 결정한다는 것이 명제 7의 내용인데, 증명의 개략에서 $$\overline{C_w}=C_w$$를 standard basis 표현에 대입하고 계수를 비교하는 방식이 제시되어 있지만 전체 계산은 [BB, Theorem 5.1.4]를 참조하라고만 되어 있어서 inversion formula의 구체적 유도를 직접 확인하지 못했다.
-
-정리 8이 이 글에서 가장 깊은 결과다. Schubert variety $$X_w\subseteq G/B$$의 intersection cohomology sheaf $$\operatorname{IC}_{X_w}$$의 stalk cohomology의 Poincaré 다항식이 KL polynomial로 주어진다는 것 — $$\sum_{i\geq 0}\dim\mathcal{H}^i(\operatorname{IC}_{X_w})_{vB/B}\cdot q^{i/2}=P_{v,w}(q)$$ — 인데, 이 "Kazhdan-Lusztig 추측"이 Beilinson-Bernstein과 Brylinski-Kashiwara에 의해 독립적으로 증명되었다는 것이 언급된다. 증명의 개략이 세 단계로 요약되어 있는데, Beilinson-Bernstein localization으로 flag variety 위의 $$D$$-module category와 category $$\mathcal{O}$$의 동치를 보이고, Riemann-Hilbert correspondence로 $$D$$-module과 perverse sheaf를 연결하고, KL basis $$C_w$$가 $$[\operatorname{IC}_{X_w}]$$의 Grothendieck class로 실현됨을 보이는 구조가 큰 그림으로는 이해할 수 있었다. 다만 이 세 단계 각각이 상당히 깊은 결과를 전제로 하기 때문에, 이 글만으로는 증명의 구체적 내용을 파악할 수 없었다.
-
-$$S_3$$과 $$S_4$$의 예시가 감을 잡기 좋다. $$S_3$$의 경우 모든 $$P_{v,w}(q)=1$$이므로 $$GL_3/B$$의 모든 Schubert variety가 매끄럽다는 결론이 나오고, $$S_4$$에서 처음으로 $$P_{e,3412}(q)=1+q$$라는 비자명한 polynomial이 등장한다는 것이 예시 11의 내용이다. $$3412$$와 $$4231$$이라는 두 permutation이 type $$A_3$$에서 매끄러움이 깨지는 유일한 reduced situation이라는 것이 Lakshmibai-Sandhya의 pattern avoidance 정리와 직접 연결된다는 관찰이 인상적이다. KL positivity conjecture가 Elias-Williamson의 Soergel bimodule 이론으로 일반적으로 증명되었다는 언급도 좋은데, finite type을 벗어난 경우까지 확장되는 이 결과의 깊이를 이 글만으로는 따라갈 수 없다.
-
-솔직한 반응: Hecke algebra와 bar involution까지의 전개는 논리적으로 깔끔해서 따라갈 수 있었다. 특히 bar-invariant 원소의 존재성과 유일성을 induction으로 보이는 증명이 — 보정 항 $$\mu(z,sw)$$를 명시적으로 구성하는 방식 — 이 글에서 가장 우아한 부분이다. 반면에 정리 8의 기하학적 해석은 이 글의 가장 큰 한계다. Intersection cohomology sheaf가 무엇인지, $$D$$-module이 무엇인지, Riemann-Hilbert correspondence가 무엇인지 등의 배경 지식이 없으면 "KL polynomial이 Schubert variety의 특이점을 인코딩한다"는 statement를 받아들일 수밖에 없고, 그 의미를 실제로 이해하기 어렵다. Inversion formula의 전체 유도도 생략되어 있어서 $$P_{v,w}$$와 $$R_{v,w}$$ 사이의 관계를 직접 확인하지 못했다. 전체적으로 이 글은 조합적 정의(Hecke algebra, KL basis)와 기하학적 해석(IC sheaf)을 statement 수준에서 연결하는 다리 역할을 하며, 리 이론 카테고리의 마지막 글로서 Bruhat decomposition, Schubert variety 등 이전 글들의 조합적/기하적 구조가 집약된 결과를 보여준다.
-
-⚠️ 정의 없이 사용: `intersection cohomology` (정리 8에서 사용, 대수적 위상수학/호몰로지 대수학 카테고리에서 정의된 적 없음)
-⚠️ 정의 없이 사용: `perverse sheaf` (정리 8에서 사용, 정의 없음)
-⚠️ 정의 없이 사용: `D-module` (증명 개략에서 사용, 정의 없음)
-⚠️ 정의 없이 사용: `Riemann-Hilbert correspondence` (증명 개략에서 사용, 정의 없음)
-⚠️ 정의 없이 사용: `Grothendieck group` (증명 개략에서 사용, 대수적 구조 카테고리에서 정의될 수 있으나 이 노트에서 미확인)
-⚠️ 정의 없이 사용: `category $$\mathcal{O}$$` (증명 개략에서 사용, 정의 없음)
-⚠️ 정의 없이 사용: `Soergel bimodule` (KL positivity conjecture 증명에서 언급, 정의 없음)
-
-## 카테고리 회고
-
-리 이론 카테고리는 Lie group의 정의에서 출발하여 Lie algebra, 원환면의 작용, 근계, Borel subgroup, Bruhat decomposition, Richardson variety, Peterson variety, Kazhdan-Lusztig polynomial까지 일관된 흐름으로 전개되었다. 큰 그림은 "Lie group의 대칭을 infinitesimal 구조(Lie algebra)로 환원하고, 그 조합적/기하적 구조(root system, Weyl group)를 이용해 flag variety 위의 세포 분해를 구성한 뒤, 그 위에 정의되는 특수한 부분다양체(Richardson, Peterson)와 조합적 불변량(KL polynomial)을 연구한다"는 것이다. 가장 막혔던 부분은 intersection cohomology, $$D$$-module, Riemann-Hilbert correspondence 등 homological algebra와 대수적 위상수학의 깊은 결과를 전제로 하는 Kazhdan-Lusztig polynomial의 기하학적 해석이었는데, 이 배경 지식 없이는 "KL polynomial이 Schubert variety의 특이점을 인코딩한다"는 statement의 의미를 완전히 파악하기 어려웠다.
