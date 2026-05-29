@@ -2491,3 +2491,12 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `polynomial ring` | multi-word English emphasis — possibly a definition |
 
+## 아벨 카테고리
+- post: `_posts/Math/Category_Theory/ko/2024-08-29-Abelian_Categories.md`
+- permalink: `/ko/math/category_theory/abelian_categories`
+- scanned: 2026-05-29T03:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `differential` | looks like emphasis (no <sub> partner) |
+
