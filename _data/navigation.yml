@@ -668,8 +668,6 @@ mirror_symmetry-ko:
         url: ko/math/mirror_symmetry/gauss-manin_connection
       - title: "Givental J-function과 Mirror Theorem"
         url: ko/math/mirror_symmetry/givental_j_function
-      - title: "Jacobi ring과 Quantum cohomology의 동형"
-        url: ko/math/mirror_symmetry/jacobi_ring
       - title: "── Marsh-Rietsch stream ──"
         url: ko/math/mirror_symmetry/overview
       - title: "Postnikov diagram과 plabic graph"

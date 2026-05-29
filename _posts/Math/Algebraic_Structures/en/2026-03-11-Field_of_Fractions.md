@@ -13,7 +13,7 @@ sidebar:
 date: 2024-05-08
 last_modified_at: 2024-05-08
 weight: 105
-translated_at: 2026-05-27T03:30:01+00:00
+translated_at: 2026-05-29T16:03:58+00:00
 translation_source: kimi-cli
 ---
 ## Ring of Fractions
