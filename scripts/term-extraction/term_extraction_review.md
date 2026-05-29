@@ -2635,3 +2635,12 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `sequential closure` | multi-word English emphasis — possibly a definition |
 
+## 옹골성
+- post: `_posts/Math/Topology/ko/2024-12-15-Compactness.md`
+- permalink: `/ko/math/topology/compactness`
+- scanned: 2026-05-29T13:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `locally` | looks like emphasis (no <sub> partner) |
+
