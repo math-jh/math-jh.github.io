@@ -2713,3 +2713,30 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `normal` | looks like emphasis (no <sub> partner) |
 
+## 실로우 정리
+- post: `_posts/Math/Group_Theory/ko/2025-04-07-Sylow_Theorems.md`
+- permalink: `/ko/math/group_theory/Sylow_theorems`
+- scanned: 2026-05-29T19:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유일한` | looks like emphasis (no <sub> partner) |
+
+## 체
+- post: `_posts/Math/Field_Theory/ko/2025-04-11-Fields.md`
+- permalink: `/ko/math/field_theory/fields`
+- scanned: 2026-05-29T20:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `characteristic` | looks like emphasis (no <sub> partner) |
+
+## 미분가군
+- post: `_posts/Math/Multilinear_Algebra/ko/2025-04-18-Differential_Modules.md`
+- permalink: `/ko/math/multilinear_algebra/differential_modules`
+- scanned: 2026-05-29T20:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `commutative` | looks like emphasis (no <sub> partner) |
+
