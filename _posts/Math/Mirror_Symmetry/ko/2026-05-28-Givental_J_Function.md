@@ -39,11 +39,27 @@ $$\nabla^{z, \vee} := -\nabla^{-z} = \partial - z^{-1}\mathcal{C}$$
 
 $$z\, q_a\partial_{q_a} s = T_a \qtimes s \qquad (a = 1, \ldots, r)\tag{$\ast$}$$
 
-을 고려하기로 한다. 그럼 이 방정식의 해를 구하기 위해 우선 $$z\rightarrow \infty$$인 상황을 생각해보자. 이는 
+을 고려하기로 한다. 
 
+이 방정식의 해를 구하기 위해 우선 $$z\rightarrow \infty$$인 상황을 보자. 그럼 $$z\rightarrow\infty$$일 때 $$z^{-1}\mathcal{C}$$ 항이 사라지면서 standard differential $$\partial$$로 degenerate하며, 따라서 ($$\ast$$)의 leading-order horizontal section은 $$\partial$$의 horizontal section, 즉 $$q$$에 무관한 constant section이 된다. 더 일반적으로, $$z\rightarrow \infty$$인 limit에서 사라지는 solution은
 
+$$s=s_0+\frac{s_1}{z}+\frac{s_2}{z^2}+\cdots$$
 
-이제 ($$\ast$$)의 해를 만들기 위해, 우변에 quantum product이 있어 모든 $$\beta \in \mathrm{NE}(X)$$의 GW 보정을 끌어모은다는 사실을 받아들이고, $$z\rightarrow \infty$$의 ansatz로 풀어보자. $$z\to \infty$$일 때 $$z\cdot q_a\partial_{q_a} s\rightarrow 0$$이려면 leading term $$s_0$$이 $$q$$에 무관해야 하므로 자연스러운 normalization은 $$s_0 = 1\in H^0(X)$$이다. 그 다음 차수에서 $$s = 1 + s_1/z + s_2/z^2 + \cdots$$를 ($$\ast$$)에 대입해 $$z^0$$ 계수를 보면 $$q_a\partial_{q_a} s_1 = T_a \cup s_0 = T_a$$ (classical cup product의 항)이므로 $$s_1$$의 linear part는 $$t_{(2)} = \sum_a t^a T_a$$ 자체이고 그 보정은 *primary* GW invariant들의 생성함수가 된다. 더 높은 $$z^{-k}$$ 차수에서는 quantum product의 $$q$$-의존성 자체에서 오는 정보, 즉 *gravitational descendant*가 차례로 끌려나온다. $$J$$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
+의 꼴일 것이며, 위의 계산에서 $$0$$차항 $$s_0$$은 constant section으로 두면 된다는 것을 보았으므로 다음 꼴
+
+$$s=1+\frac{s_1}{z}+\frac{s_2}{z^2}+\cdots$$
+
+을 ($$\ast$$)에 직접 대입하면 recursive하게 $$s_i$$들을 구할 수 있다. 구체적으로, ($$\ast$$)의 양변을 $$z$$의 거듭제곱별로 정리하면, 좌변은 $$s_0$$이 상수이므로
+
+$$z \cdot \sum_k z^{-k} q_a\partial_{q_a} s_k = \sum_k z^{-k} q_a\partial_{q_a} s_{k+1}$$
+
+이고, 우변은 $$\sum_k z^{-k}\, T_a\qtimes s_k$$이므로 각각의 $$z^{-k}$$ 계수를 비교하여 일반적인 recursion
+
+$$q_a\partial_{q_a} s_{k+1} = T_a \qtimes s_k \qquad (a = 1, \ldots, r,\; k \geq 0)$$
+
+을 얻는다. 
+
+Recursion의 첫 단계에 해당하는ㅣ $$k = 0$$에서는 $$T_a \qtimes 1 = T_a$$이므로, 별다른 quantum correction 없이 $$q_a\partial_{q_a} s_1 = T_a$$이고, large radius limit $$q \to 0$$에서 vanish하도록 적분상수를 잡으면 $$s_1 = t_{(2)} = \sum_a t^a T_a$$가 강제된다. 두 번째 단계 $$k = 1$$에서는 $$q_a\partial_{q_a} s_2 = T_a \qtimes t_{(2)}$$이고, 우변에 classical $$T_a \cup t_{(2)}$$ 외에 $$\sum_{\beta \neq 0} q^\beta \sum_b t^b\, \langle T_a, T_b, T^c\rangle_{0, 3, \beta}\, T_c$$ 꼴의 quantum 보정이 처음 등장한다. 여기서 $$T_b \in H^2$$이므로 divisor equation $$\langle T_a, T_b, T^c\rangle_{0, 3, \beta} = (T_b\cdot\beta)\langle T_a, T^c\rangle_{0, 2, \beta}$$이 적용되어 quantum 보정이 *primary* GW invariant $$\langle T_a, T^c\rangle_{0, 2, \beta}$$의 생성함수 형태로 풀리고, 이를 적분하면 $$s_2$$가 classical $$(t_{(2)})^2/2$$와 primary GW 부분의 합이 된다. 더 높은 $$z^{-k}$$ ($$k \geq 2$$) 차수에서는 같은 recursion을 따라 $$\tau_{k-1}(T_a)$$ 형태의 *gravitational descendant*가 차례로 누적되며, $$J$$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
 
 ### Descendant Gromov-Witten invariant
 
@@ -77,7 +93,7 @@ $$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X) 
 
 </div>
 
-위 정의의 각 성분이 담고 있는 정보는 다음과 같이 읽힌다. $$z \to \infty$$의 leading term $$1$$은 모든 $$\beta \neq 0$$ 보정을 끄고 $$\psi$$ 거듭제곱을 끄면 남는 *classical* limit이고, $$z^{-1}$$의 계수에 들어 있는 $$\langle T_a\rangle_{0,1,\beta}$$는 $$\psi$$ 없이 단 한 점에 $$T_a$$의 pullback만 적분한 *primary* GW invariant이다. $$z^{-2}$$의 계수에는 $$\psi^1$$이 한 번 끼인 *gravitational descendant* $$\langle \tau_1(T_a)\rangle_{0,1,\beta}$$이 나타나고, 일반적으로 $$z^{-k-2}$$의 계수는 $$\tau_k(T_a)$$의 $$\beta$$별 합이다. 즉 $$J$$-function은 모든 차수의 descendant invariant를 하나의 $$z$$-급수로 묶어 둔 *master* 생성함수이며, 그 묶음 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 내용이다.
+위 정의의 각 성분이 담고 있는 정보는 다음과 같이 읽힌다. $$z \to \infty$$의 leading term $$1$$은 모든 quantum 보정을 끈 *classical* limit이다. $$z^{-1}$$의 계수는 (괄호 안 GW sum의 insertion $$T_a/(z(z-\psi))$$이 $$z^{-2}$$ 차수부터 시작하므로) 순전히 $$e^{t_{(2)}/z}$$ prefactor에서 오는 $$t_{(2)} = \sum_a t^a T_a$$이며, GW invariant는 여기까지 끼어들지 않는다. $$z^{-2}$$의 계수에서 처음으로 $$(t_{(2)})^2/2$$ (prefactor)와 함께 *primary* GW invariant $$\sum_\beta q^\beta \sum_a \langle T_a\rangle_{0,1,\beta}\,T^a$$가 나타나며, 이는 $$\psi$$ 없이 단 한 점에 $$T_a$$의 pullback만 적분한 enumerative 수이다. 일반적으로 $$z^{-k}$$ ($$k \geq 2$$)의 계수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle \tau_{k-2}(T_a)\rangle_{0,1,\beta}$$이 들어 있다. 즉 $$J$$-function은 모든 차수의 descendant invariant를 하나의 $$z$$-급수로 묶어 둔 *master* 생성함수이며, 그 묶음 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 내용이다.
 
 ## QDE의 fundamental solution
 
