@@ -2567,3 +2567,41 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `maximal` | looks like emphasis (no <sub> partner) |
 
+## 등급환의 국소화
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-23-Localization_of_Graded_Rings.md`
+- permalink: `/ko/math/commutative_algebra/localization_of_graded_rings`
+- scanned: 2026-05-29T10:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `homogeneous` | looks like emphasis (no <sub> partner) |
+
+## 평탄성
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-30-Flatness.md`
+- permalink: `/ko/math/commutative_algebra/flatness`
+- scanned: 2026-05-29T10:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `free presentation` | multi-word English emphasis — possibly a definition |
+
+## 분해
+- post: `_posts/Math/Homological_Algebra/ko/2024-11-01-Resolutions.md`
+- permalink: `/ko/math/homological_algebra/resolutions`
+- scanned: 2026-05-29T10:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `augmentation map` | multi-word English emphasis — possibly a definition |
+
+## 유도함자
+- post: `_posts/Math/Homological_Algebra/ko/2024-11-03-Derived_Functors.md`
+- permalink: `/ko/math/homological_algebra/derived_functors`
+- scanned: 2026-05-29T11:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `morphism` | looks like emphasis (no <sub> partner) |
+| `universal` | looks like emphasis (no <sub> partner) |
+| `cohomological` | looks like emphasis (no <sub> partner) |
+
