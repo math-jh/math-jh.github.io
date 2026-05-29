@@ -25,7 +25,7 @@ published: false
 
 Smooth projective variety $$X$$, $$H^\ast(X, \mathbb{C})$$의 homogeneous basis $$\{ T_a \}_{a=0,\ldots,s}$$ ($$T_0 = 1$$), 그리고 이들이 주는 Poincaré dual basis $$\{ T^a \}$$를 생각하자. 이 중 $$H^2$$ 성분을 차지하는 부분을 (notation 단순화를 위해) $$\{ T_a \}_{a=1,\ldots,r}$$로 잡으면, [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 도입한 flat coordinate $$t^a$$와 Novikov variable $$q_a := e^{t^a}$$ ($$a = 1, \ldots, r$$)가 정의된다. 편의상 
 
-$$t_{(2)} := \sum_{a=1}^r t^a T_a$$
+$$t_{(2)} := \sum_{b=1}^r t^b T_b$$
 
 라 두면 $$q^\beta = e^{t_{(2)} \cdot \beta}$$이다. 한편 Dubrovin connection은 다음의 식
 
@@ -59,21 +59,43 @@ $$q_a\partial_{q_a} s_{k+1} = T_a \qtimes s_k \qquad (a = 1, \ldots, r,\; k \geq
 
 을 얻는다. 
 
-Recursion의 첫 단계에 해당하는ㅣ $$k = 0$$에서는 $$T_a \qtimes 1 = T_a$$이므로, 별다른 quantum correction 없이 $$q_a\partial_{q_a} s_1 = T_a$$이고, large radius limit $$q \to 0$$에서 vanish하도록 적분상수를 잡으면 $$s_1 = t_{(2)} = \sum_a t^a T_a$$가 강제된다. 두 번째 단계 $$k = 1$$에서는 $$q_a\partial_{q_a} s_2 = T_a \qtimes t_{(2)}$$이고, 우변에 classical $$T_a \cup t_{(2)}$$ 외에 $$\sum_{\beta \neq 0} q^\beta \sum_b t^b\, \langle T_a, T_b, T^c\rangle_{0, 3, \beta}\, T_c$$ 꼴의 quantum 보정이 처음 등장한다. 여기서 $$T_b \in H^2$$이므로 divisor equation $$\langle T_a, T_b, T^c\rangle_{0, 3, \beta} = (T_b\cdot\beta)\langle T_a, T^c\rangle_{0, 2, \beta}$$이 적용되어 quantum 보정이 *primary* GW invariant $$\langle T_a, T^c\rangle_{0, 2, \beta}$$의 생성함수 형태로 풀리고, 이를 적분하면 $$s_2$$가 classical $$(t_{(2)})^2/2$$와 primary GW 부분의 합이 된다. 더 높은 $$z^{-k}$$ ($$k \geq 2$$) 차수에서는 같은 recursion을 따라 $$\tau_{k-1}(T_a)$$ 형태의 *gravitational descendant*가 차례로 누적되며, $$J$$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
+Recursion의 첫 단계에 해당하는 $$k = 0$$에서는 $$T_a \qtimes 1 = T_a$$이므로, 별다른 quantum correction 없이 $$q_a\partial_{q_a} s_1 = T_a$$이 성립한다. 이제 양변을 $$q_a$$에 대해 적분하면
 
-### Descendant Gromov-Witten invariant
+$$s_1=t_{(2)} + C_1,\qquad C_1\in H^\ast(X)$$
 
-위 ansatz에서 등장하는 *descendant* invariant를 짧게 정리해 두자. Genus-$$0$$, $$(n+1)$$-marked, class $$\beta$$의 stable map의 moduli space 
+가 된다. 흥미로운 부분은 quantum correction이 처음 등장하는 $$k=1$$인데, recursion formula
+
+$$q_a\partial_{q_a} s_2 = T_a \qtimes t_{(2)}=T_a\qtimes \left(\sum_{b=1}^r t^b T_b\right)$$
+
+를 생각하면 이제 우변은 classical cup product $$T_a\smile t_{(2)}$$에 추가적으로 quantum correction
+
+$$\sum_{\beta \neq 0} q^\beta \sum_c \left(\sum_{b=1}^r t^b\, \langle T_a, T_b, T^c\rangle_{0, 3, \beta}\right) T_c$$
+
+부분을 갖는다. 한편 $$T_b \in H^2$$이므로 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)의 결과
+
+$$\langle T_a, T_b, T^c\rangle_{0, 3, \beta} = (T_b \cdot \beta)\langle T_a, T^c\rangle_{0, 2, \beta}$$
+
+을 적용하면 다음의 식
+
+$$T_a \qtimes t_{(2)} = T_a \smile t_{(2)} + \sum_{\beta \neq 0} q^\beta\, (t_{(2)} \cdot \beta) \sum_c \langle T_a, T^c\rangle_{0, 2, \beta}\, T_c$$
+
+을 얻는다. 이제 이를 $$q_a$$에 대해 적분하자. Classical 부분 $$T_a \smile t_{(2)}$$의 antiderivative는 $$(t_{(2)})^2/2$$인데, 이는 $$q_a\partial_{q_a} = \partial_{t^a}$$임을 이용하여
+
+$$\partial_{t^a}\bigl((t_{(2)})^2/2\bigr) = \partial_{t^a}\!\left(\frac{1}{2}\sum_{b, c} t^b t^c\, T_b \smile T_c\right) = \sum_c t^c\, T_a \smile T_c = T_a \smile t_{(2)}$$
+
+로 직접 확인된다. Quantum 부분의 antiderivative는 $$q^\beta = e^{t_{(2)}\cdot \beta}$$로부터 오는 관계 $$q_a\partial_{q_a} q^\beta = (T_a \cdot \beta) q^\beta$$을 이용해 $$\beta$$별로 풀어내면, 각 $$\beta$$에 대해 $$q^\beta$$ 인자와 *primary* GW invariant ($$\psi$$-class 삽입 없는 descendant invariant $$\langle T_a, T^c\rangle_{0, 2, \beta}$$로 결정되는 $$H^\ast(X)$$-valued correction으로 정리되며, 따라서 $$s_2$$는 classical $$(t_{(2)})^2/2$$와 이 quantum correction의 합이 된다. 더 높은 $$z^{-k}$$ ($$k \geq 2$$) 차수에서는 같은 recursion을 따라 $$\tau_{k-1}(T_a)$$ 형태의 *gravitational descendant*가 차례로 누적되며, $$J$$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
+
+본격적인 정의를 시작하기 전에, 위의 계산에서 등장하는 *descendant* invariant ([\[사교기하학\] §Gromov-Witten 불변량, ⁋정의 2](/ko/math/symplectic_geometry/gromov_witten#def2))를 본 글의 표기에 맞춰 짧게 정리해 두자. Genus $$0$$, $$(n+1)$$-marked, class $$\beta$$의 stable map의 moduli space 
 
 $$\overline{\mathcal{M}}_{0, n+1}(X, \beta)$$
 
-위에는 각 marked point $$i$$에서의 evaluation map $$\mathrm{ev}_i: \overline{\mathcal{M}}_{0, n+1}(X, \beta) \to X$$와 universal cotangent line bundle $$\mathbb{L}_i$$가 정의된다. 후자의 first Chern class
+위에는 각 marked point $$i$$에서의 evaluation map $$\ev_i: \overline{\mathcal{M}}_{0, n+1}(X, \beta) \to X$$와 universal cotangent line bundle $$\mathbb{L}_i$$가 정의된다. 직관적으로 $$\mathbb{L}_i$$는 $$i$$번째 marked point들에서의 cotangent space를 moduli space 위에서 붙여준 것이며, 이 때 이 universal cotangent line bundle의 first Chern class
 
 $$\psi_i := c_1(\mathbb{L}_i) \in H^2(\overline{\mathcal{M}}_{0, n+1}(X, \beta))$$
 
-를 *psi-class*라 부른다. 임의의 cohomology class $$\gamma_i \in H^\ast(X)$$와 $$k_i \geq 0$$에 대해 *descendant GW invariant*는
+를 *$$\psi$$-class*라 부른다. 임의의 cohomology class $$\gamma_i \in H^\ast(X)$$와 $$k_i \geq 0$$에 대해 *descendant GW invariant*는
 
-$$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\rangle_{0, n+1, \beta} := \int_{[\overline{\mathcal{M}}_{0, n+1}(X, \beta)]^{\mathrm{vir}}} \prod_{i=1}^{n+1} \psi_i^{k_i} \cup \mathrm{ev}_i^\ast \gamma_i$$
+$$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\rangle_{0, n+1, \beta} := \int_{[\overline{\mathcal{M}}_{0, n+1}(X, \beta)]^{\mathrm{vir}}} \prod_{i=1}^{n+1} \psi_i^{k_i} \smile \mathrm{ev}_i^\ast \gamma_i$$
 
 로 정의된다. $$k_i = 0$$인 경우 *primary* invariant, 적어도 하나의 $$k_i \geq 1$$이면 *gravitational descendant*이다. 직관적으로 $$\psi_i$$는 marked point에서 곡선의 "접선 자유도"를 측정하며, 그 거듭제곱은 marked point에 jet 조건을 부여하는 효과를 갖는다.
 
@@ -93,7 +115,7 @@ $$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X) 
 
 </div>
 
-위 정의의 각 성분이 담고 있는 정보는 다음과 같이 읽힌다. $$z \to \infty$$의 leading term $$1$$은 모든 quantum 보정을 끈 *classical* limit이다. $$z^{-1}$$의 계수는 (괄호 안 GW sum의 insertion $$T_a/(z(z-\psi))$$이 $$z^{-2}$$ 차수부터 시작하므로) 순전히 $$e^{t_{(2)}/z}$$ prefactor에서 오는 $$t_{(2)} = \sum_a t^a T_a$$이며, GW invariant는 여기까지 끼어들지 않는다. $$z^{-2}$$의 계수에서 처음으로 $$(t_{(2)})^2/2$$ (prefactor)와 함께 *primary* GW invariant $$\sum_\beta q^\beta \sum_a \langle T_a\rangle_{0,1,\beta}\,T^a$$가 나타나며, 이는 $$\psi$$ 없이 단 한 점에 $$T_a$$의 pullback만 적분한 enumerative 수이다. 일반적으로 $$z^{-k}$$ ($$k \geq 2$$)의 계수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle \tau_{k-2}(T_a)\rangle_{0,1,\beta}$$이 들어 있다. 즉 $$J$$-function은 모든 차수의 descendant invariant를 하나의 $$z$$-급수로 묶어 둔 *master* 생성함수이며, 그 묶음 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 내용이다.
+위 정의의 각 성분이 담고 있는 정보는 다음과 같이 읽힌다. $$z \to \infty$$의 leading term $$1$$은 모든 quantum 보정을 끈 *classical* limit이다. $$z^{-1}$$의 계수는 (괄호 안 GW sum의 insertion $$T_a/(z(z-\psi))$$이 $$z^{-2}$$ 차수부터 시작하므로) 순전히 $$e^{t_{(2)}/z}$$ prefactor에서 오는 $$t_{(2)} = \sum_b t^b T_b$$이며, GW invariant는 여기까지 끼어들지 않는다. $$z^{-2}$$의 계수에서 처음으로 $$(t_{(2)})^2/2$$ (prefactor)와 함께 *primary* GW invariant $$\sum_\beta q^\beta \sum_a \langle T_a\rangle_{0,1,\beta}\,T^a$$가 나타나며, 이는 $$\psi$$ 없이 단 한 점에 $$T_a$$의 pullback만 적분한 enumerative 수이다. 일반적으로 $$z^{-k}$$ ($$k \geq 2$$)의 계수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle \tau_{k-2}(T_a)\rangle_{0,1,\beta}$$이 들어 있다. 즉 $$J$$-function은 모든 차수의 descendant invariant를 하나의 $$z$$-급수로 묶어 둔 *master* 생성함수이며, 그 묶음 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 내용이다.
 
 ## QDE의 fundamental solution
 
