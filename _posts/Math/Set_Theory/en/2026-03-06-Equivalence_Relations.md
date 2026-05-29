@@ -13,7 +13,7 @@ sidebar:
 date: 2021-08-22
 last_modified_at: 2022-11-26
 weight: 12
-translated_at: 2026-05-23T18:00:02+00:00
+translated_at: 2026-05-29T16:03:58+00:00
 translation_source: kimi-cli
 ---
 Now we look at equivalence relations.

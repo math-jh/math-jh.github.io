@@ -13,7 +13,7 @@ sidebar:
 date: 2025-09-07
 last_modified_at: 2025-09-07
 weight: 6
-translated_at: 2026-05-27T08:30:02+00:00
+translated_at: 2026-05-29T16:03:58+00:00
 translation_source: kimi-cli
 ---
 Cohomology, as its name suggests, can be regarded as the dual concept to homology. However, if the $k$th cohomology $H^k(X)$ of a space $X$ were simply the dual of the $k$th homology $H_k(X)$, there would be no need to consider it separately.

@@ -16,7 +16,7 @@ date: 2021-08-14
 last_modified_at: 2022-11-22
 
 weight: 3
-translated_at: 2026-05-26T23:30:02+00:00
+translated_at: 2026-05-29T16:03:58+00:00
 translation_source: kimi-cli
 ---
 ## Binary Relations
