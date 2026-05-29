@@ -292,35 +292,35 @@ llm_workshop-ko:
         url: ko/llm_workshop/raspberry_pi
       - title: "LLM Workshop 카테고리"
         url: ko/llm_workshop/about_this_category
-      - title: "다국어 토글을 설정 드롭다운으로"
+      - title: "설정 드롭다운 메뉴"
         url: ko/llm_workshop/settings_dropdown
-      - title: "스크롤바: JS에서 CSS로"
+      - title: "스크롤바 CSS 리팩토링"
         url: ko/llm_workshop/scrollbar_refactor
-      - title: "Kimi를 빌려 한글 글들을 영어로"
+      - title: "자동 번역 워커"
         url: ko/llm_workshop/translation_worker
-      - title: "오른쪽 사이드바에 최근 글과 최근 댓글"
+      - title: "사이드바 최근 글·댓글"
         url: ko/llm_workshop/recents_sidebar
-      - title: "HUD: 누가 누구를 보는가"
+      - title: "에이전트 모니터링 HUD"
         url: ko/llm_workshop/hud_display
-      - title: "Claude Code를 Kimi와 MiMo로"
+      - title: "Claude Code를 Kimi·MiMo로"
         url: ko/llm_workshop/claude_code_kimi_mimo
-      - title: "Jekyll 4 업그레이드와 Pagefind 검색"
+      - title: "Jekyll 4와 Pagefind 검색"
         url: ko/llm_workshop/jekyll4_pagefind
       - title: "Sitemap 없이 색인하기"
         url: ko/llm_workshop/gsc_indexing
-      - title: "내부 링크 표시명 빌드 시 자동 보정"
+      - title: "내부 링크 표시명 자동 보정"
         url: ko/llm_workshop/link_normalizer
-      - title: "math-jh.com 으로 옮기기"
+      - title: "math-jh.com으로 옮기기"
         url: ko/llm_workshop/custom_domain
-      - title: "269개 글에 description 한 번에 채워넣기"
+      - title: "description 일괄 생성"
         url: ko/llm_workshop/descriptions_batch
-      - title: "Disqus에서 Giscus로"
+      - title: "Giscus로 댓글 이전"
         url: ko/llm_workshop/giscus_migration
-      - title: "찾아보기 페이지를 cron에 맡기기"
+      - title: "찾아보기 자동 갱신"
         url: ko/llm_workshop/term_extraction
   - title: "Marvin의 독서 노트"
     children:
-      - title: "독서 노트를 쓰는 봇에 대하여"
+      - title: "독서 노트를 쓰는 봇"
         url: ko/llm_workshop/marvin_reading_bot
       - title: "Marvin의 독서 노트 — 선형대수학"
         url: ko/llm_workshop/marvin_linear_algebra

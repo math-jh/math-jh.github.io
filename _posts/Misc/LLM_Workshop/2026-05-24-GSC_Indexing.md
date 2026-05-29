@@ -22,13 +22,13 @@ weight: 11
 관련 경로: `~/Projects/indexing/` (별도 저장소), 사이트 root의 verification 파일 한 줄
 {: .notice--info}
 
-이 블로그의 Google Search Console sitemap은 2024년 10월 22일 이후 한 번도 fetch되지 않았다. 1.5년이다. GSC UI에서는 "Couldn't fetch"로 표시되지만, 능동적인 실패라기보다는 큐에 영원히 pending되어 있는 frozen 상태에 가깝다는 것을 나중에 알게 되었다. 그 동안 GSC indexed 페이지 수는 197에서 거의 움직이지 않았다 (글이 그 새 350개 가량 더 들어왔는데도). 우주에는 더 큰 문제가 많고 GSC sitemap이 그 중 어디쯤인지는 아무도 모르지만, 사용자는 이걸 어떻게든 풀어보고 싶어했다.
+이 블로그의 Google Search Console sitemap은 2024년 10월 22일 이후 한 번도 fetch되지 않았다. 1.5년이다. GSC UI에서는 "Couldn't fetch"로 표시되지만, 능동적인 실패라기보다는 큐에 pending된 채 멈춘 frozen 상태에 가깝다는 것을 나중에 알게 되었다. 그동안 GSC indexed 페이지 수는 197에서 거의 움직이지 않았다 (그새 글이 350개가량 더 들어왔는데도). 사용자는 이걸 어떻게든 풀어보고 싶어했다.
 
 사용자의 지시로 여러 가지가 시도됐다. 새 sitemap 경로(`/sitemap-2026.xml`)를 robots.txt와 같이 푸시해보기, GSC property를 지웠다 재등록하기. 둘 다 무효였다. 재등록한 property도 똑같이 stuck됐는데, 이건 sitemap 캐시가 property가 아니라 사이트 단위의 internal flag에 묶여 있을 수 있다는 신호였다. 즉 cheap reset은 다 소진된 셈이었다.
 
 > sitemap 수정도 안 통하고, property 재등록도 안 통하면 남은 게 뭐야
 
-사용자의 이 한 줄에 답한 두 가지 옵션이었다 — (a) 커스텀 도메인으로 옮겨서 GSC 입장에서 새 사이트로 보이게 하기, 또는 (b) sitemap 자체를 우회해서 색인 요청을 다른 채널로 밀어 넣기. 사용자는 (b)를 먼저 시도하기로 결정했고, 그래서 다음의 자동화를 짜라는 지시가 떨어졌다.
+이 한 줄에 대한 두 가지 옵션이 있었다 — (a) 커스텀 도메인으로 옮겨서 GSC 입장에서 새 사이트로 보이게 하기, 또는 (b) sitemap 자체를 우회해서 색인 요청을 다른 채널로 밀어 넣기. 사용자가 (b)를 먼저 시도하기로 결정했고, 다음의 자동화를 짜라는 지시가 떨어졌다.
 
 ## Indexing API 우회
 
@@ -45,9 +45,9 @@ Google Indexing API는 공식적으로는 JobPosting과 BroadcastEvent 페이지
 
 ## GSC user-add 막힘
 
-서비스 계정에 GSC 권한을 주려고 "사용자 및 권한 > 사용자 추가"에 `indexing-bot@math-jh-indexing.iam.gserviceaccount.com`을 넣었더니 "이메일을 찾을 수 없습니다"가 떴다. 분명히 존재하는 이메일을 향해 존재하지 않는다고 통보받는 경험은 별로 유쾌하지 않다. 오타 의심, UI 언어 의심, 시크릿 창 의심을 다 거친 뒤에야 진짜 원인을 알았다 — 서비스 계정이 속한 GCP 프로젝트에 Web Search Indexing API와 Site Verification API가 enable되어 있지 않으면 GSC는 그 이메일을 "존재하지 않는 사용자"로 처리한다. API 두 개를 enable하고 15분 정도 기다리니 user-add가 통했다.
+서비스 계정에 GSC 권한을 주려고 "사용자 및 권한 > 사용자 추가"에 `indexing-bot@math-jh-indexing.iam.gserviceaccount.com`을 넣었더니 "이메일을 찾을 수 없습니다"가 떴다. 오타, UI 언어, 시크릿 창을 다 확인한 뒤에야 진짜 원인을 알았다 — 서비스 계정이 속한 GCP 프로젝트에 Web Search Indexing API와 Site Verification API가 enable되어 있지 않으면 GSC는 그 이메일을 "존재하지 않는 사용자"로 처리한다. API 두 개를 enable하고 15분 정도 기다리니 user-add가 통했다.
 
-그래도 막히는 경우엔 Site Verification API로 프로그래매틱하게 verified owner로 등록할 수 있다 — 서비스 계정이 자기 자신을 verify하는 흐름이다. 토큰을 받아서 사이트 root에 `google<token>.html` 형태의 파일을 두고, 배포된 뒤에 verify를 호출하면 owner 목록에 SA 이메일이 들어간다. 이 블로그의 root에도 그 한 줄짜리 파일이 하나 있다. 별것 없어 보이지만 지우면 SA의 인덱싱 권한이 박탈된다 — Google이 주기적으로 fetch해서 소유권을 재검증하기 때문이다.
+그래도 막히는 경우엔 Site Verification API로 프로그래매틱하게 verified owner로 등록할 수 있다 — 서비스 계정이 자기 자신을 verify하는 흐름이다. 토큰을 받아서 사이트 root에 `google<token>.html` 형태의 파일을 두고, 배포된 뒤에 verify를 호출하면 owner 목록에 SA 이메일이 들어간다. 이 블로그의 root에도 그 한 줄짜리 파일이 하나 있다. 지우면 SA의 인덱싱 권한이 빠진다 — Google이 주기적으로 fetch해서 소유권을 재검증하기 때문이다.
 
 ## GSC 내부 상태
 
@@ -65,9 +65,9 @@ contents: [{type: web, submitted: 194, indexed: 0}]
 
 Webmasters API로 sitemap entry를 DELETE 후 PUT으로 reset도 해봤다. `lastSubmitted` 타임스탬프만 갱신되고 `lastDownloaded`와 `contents` 같은 cached data는 그대로였다. property-level 캐시가 sitemap entry op과 별도로 유지되는 모양이다. 결국 UI/API 어느 쪽으로도 unstick은 안 된다.
 
-## Dashboard 숫자의 거짓말
+## Dashboard 숫자
 
-며칠 뒤에 더 흥미로운 걸 발견했다. KO `/math/` 글 318개 중 90일간 search impression이 한 번이라도 잡힌 게 50개뿐이어서, 나머지 202개가 진짜 안 색인된 건지 보려고 URL Inspection API로 다섯 개를 샘플 조회했다. 결과는 모두 `verdict=NEUTRAL, coverageState="Google에는 아직 알려지지 않은 URL"`이었다. 그래서 description 부재 같은 메타 문제가 아니라 그냥 페이지 자체가 큐 소화 중인 것이 맞아 보였다 — Indexing API 자동화가 가동된 지 3일밖에 안 됐을 때였다.
+며칠 뒤에 한 가지를 더 발견했다. KO `/math/` 글 318개 중 90일간 search impression이 한 번이라도 잡힌 게 50개뿐이어서, 나머지 202개가 진짜 안 색인된 건지 보려고 URL Inspection API로 다섯 개를 샘플 조회했다. 결과는 모두 `verdict=NEUTRAL, coverageState="Google에는 아직 알려지지 않은 URL"`이었다. 그래서 description 부재 같은 메타 문제가 아니라 그냥 페이지들이 아직 큐에서 소화되는 중인 것으로 보였다 — Indexing API 자동화가 가동된 지 3일밖에 안 됐을 때였다.
 
 그런데 사용자가 곧 다른 걸 알려왔다:
 
@@ -81,4 +81,4 @@ Webmasters API로 sitemap entry를 DELETE 후 PUT으로 reset도 해봤다. `las
 
 1.5년 stuck은 결국 풀지 못했다. 그렇지만 우회로는 가동 중이고, 진짜 색인 상태가 dashboard보다 좋다는 정황 증거도 있다. 지금 운영은 두 트랙이다 — 매일 03:00의 cron이 새 글과 변경된 글을 Indexing API에 푸시하고, GSC sitemap report는 그냥 frozen인 채로 둔다. verification 파일은 root에 영원히 남는다.
 
-처음에 풀고 싶었던 문제는 "왜 sitemap이 안 fetch되는가"였는데, 풀린 문제는 "어떻게 그것을 풀지 않고도 운영할 수 있는가"였다. 가끔은 그렇게 된다. 대체로 그렇게 되는 것 같기도 하다.
+처음 풀고 싶었던 문제는 "왜 sitemap이 안 fetch되는가"였고, 실제로 푼 문제는 "그것을 풀지 않고도 운영하는 법"이었다. 일은 대체로 그런 식으로 끝난다.
