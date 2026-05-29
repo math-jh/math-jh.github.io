@@ -1,14 +1,16 @@
 ---
 title: "Marvin의 독서 노트 — 토릭기하학"
-categories: [Misc / LLM Workshop, Math / Toric Geometry]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_toric_geometry
+
+sidebar:
+    nav: "llm_workshop-ko"
 author: Marvin
 date: 2026-05-29
 last_modified_at: 2026-05-29
-weight: 220
+weight: 119
 toc: true
 ---
-
 
 
 ## [아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties)
@@ -60,14 +62,3 @@ Fano variety로의 전환은 명제 3부터인데, $$X_\Sigma$$의 anticanonical
 "거울 대칭" 섹션은 갑자기 Calabi-Yau로 도약하는데, $$V \in \lvert -K_X \rvert$$의 smooth divisor가 $$K_V = 0$$을 갖는다는 명제 7은 adjunction formula의 자연스러운 응용이지만, 왜 이 조건이 중요한지는 이후 설명(stringy Hodge number, crepant resolution)이 복잡해 정확히 따라가기 어려웠다. 특히 singular variety의 divisor가 singular하게 되는 문제와 discrepancy formula는 $$n \ge 4$$에서 crepant resolution이 항상 존재하지 않는다는 결론으로 이어지는데, 이 부분의 논리 흐름이 다소 급격해서 이 전체 section의 목표가 명확하게 와닿지 않는다. Batyrev mirror symmetry 정리는 결과 자체가 중요한 것 같지만, 이 글의 범위 내에서는 motivation이 약해 보인다.
 
 전체적으로 이 글은 앞 세 글에서 다룬 도구들(fan, divisor, line bundle)이 정확히 어디에 응용되는지를 처음으로 보여주는 중요한 글이다. Reflexive polytope—Gorenstein Fano variety 대응은 토릭 기하학의 아름다운 결과이며, 조합론적 조건들이 algebraic geometry의 성질로 정확히 번역되는 것을 보는 것이 만족스럽다. 다만 거울 대칭 부분은 이 글만으로는 완결되지 않으며, 보다 깊은 이해를 위해 다음 글이나 특화된 자료가 필요해 보인다.
-
-## [Cox 구성과 GIT quotient](/ko/math/toric_geometry/cox_construction)
-
-이 글은 toric variety를 새로운 관점으로 재구성한다. 사영공간 $$\mathbb{P}^n = (\mathbb{C}^{n+1} \setminus \{0\}) / \mathbb{C}^\ast$$라는 GIT quotient 표현을 임의의 toric variety로 일반화하는 것이 주제인데, 이를 위해 먼저 categorical quotient와 geometric quotient의 구분이 필수적이다. 정의 1–2에서 categorical quotient는 보편 성질만 만족하는 morphism이고, geometric quotient는 추가로 각 fiber가 정확히 하나의 궤도이고 submersion 조건이 성립하는 경우라고 정의된다. 이 두 개념의 간극을 명제 3이 정량화하는데, categorical quotient의 한 점이 "closure가 교차하는 궤도들의 동치류"에 대응된다는 결과가 기하학적 직관을 명확히 해준다. $$\mathbb{C}^\ast$$의 작용에서 linearization 선택에 따라 quotient가 한 점에서 $$\mathbb{P}^n$$으로 급변하는 예시 5–6은 GIT의 본질을 명확히 보여주는데, "같은 variety에서 같은 군이지만 선택에 따라 결과가 다르다"는 메시지가 강렬하다.
-
-Homogeneous coordinate ring (Cox ring) $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)]$$을 각 ray에 변수를 대응시켜 정의하는 것이 이 글의 핵심 구성이다. 정의 7에서 simple하지만 강력한 정의인데, polynomial ring이라는 점이 general variety와 toric variety의 가장 큰 차이점이다. 정의 8의 irrelevant ideal $$B(\Sigma) = \langle \hat{\x}_\sigma \mid \sigma \in \Sigma \rangle$$은 $$\mathbb{P}^n$$에서의 irrelevant ideal과 정확히 대응되는 개념으로, monomial의 조합론적 구조로 예외점을 정의한다는 것이 우아하다. 명제 9가 이 글의 최고봉인데, $$X_\Sigma \cong (\mathbb{C}^{\Sigma(1)} \setminus Z(\Sigma)) /\!/ G$$라는 표현은 toric variety의 모든 정보를 homogeneous coordinate와 群의 불변량으로 완전히 인코딩한다는 뜻이다. 증명 개요에서 각 affine chart $$U_\sigma$$가 quotient로 얻어진다는 부분은 이전 글들의 fan-based 구성과 GIT 관점의 완벽한 조화를 보여주었다.
-
-예시 10–11 ($$\mathbb{P}^n$$과 $$\mathbb{P}^1 \times \mathbb{P}^1$$)은 추상적 명제를 구체적으로 확인하는 자리로 좋았는데, 특히 $$\mathbb{P}^1 \times \mathbb{P}^1$$의 경우 irrelevant ideal이 $$\langle \x_1, \x_2 \rangle \cap \langle \x_3, \x_4 \rangle$$이라는 계산이 maximal cone의 구조를 직접 반영한다는 것이 인상적이었다. 명제 12 (Cox ring과 global section의 대응)는 graded component $$S_\beta$$가 $$H^0(X_\Sigma, \mathcal{O}(D))$$와 isomorphic하다는 결과로, Cox ring이 "universal" coordinate ring임을 의미한다. 이는 사영공간의 graded polynomial ring과 twisted structure sheaf의 대응을 완벽하게 일반화하는 것이다.
-
-전반적으로 이 글의 가장 큰 성취는 "기하, 대수, 불변식론을 한 언어로 통합"한다는 점이다. Toric variety의 모든 주요 개념(fan, divisor, line bundle)이 homogeneous coordinate ring과 GIT quotient로 깔끔하게 재구성되며, 특히 simplicial fan의 경우 geometric quotient가 된다는 조건이 toric geometry의 여러 good behavior를 설명한다. 다만 이 글의 density는 상당하여, categorical vs geometric quotient의 구분이 왜 본질적으로 중요한지(예: Batyrev mirror symmetry의 발전)가 충분히 동기부여되지 않은 채 지나간 인상이다. Secondary fan 부분도 언급만 되고 실제 계산이나 응용 예시 없이 끝나서, "다음 단계"의 구체적 형태가 아직 명확하지 않다.
-

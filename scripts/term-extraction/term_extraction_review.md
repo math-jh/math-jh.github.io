@@ -2500,3 +2500,32 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `differential` | looks like emphasis (no <sub> partner) |
 
+## 대수
+- post: `_posts/Math/Algebraic_Structures/ko/2024-08-30-Algebras.md`
+- permalink: `/ko/math/algebraic_structures/algebras`
+- scanned: 2026-05-29T03:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `polynomial algebra` | multi-word English emphasis — possibly a definition |
+
+## Hom과 텐서곱
+- post: `_posts/Math/Multilinear_Algebra/ko/2024-08-30-Hom_and_Tensor.md`
+- permalink: `/ko/math/multilinear_algebra/hom_and_tensor`
+- scanned: 2026-05-29T03:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `projective` | looks like emphasis (no <sub> partner) |
+| `injective` | looks like emphasis (no <sub> partner) |
+| `splitting` | looks like emphasis (no <sub> partner) |
+
+## 국소화
+- post: `_posts/Math/Commutative_Algebra/ko/2024-09-05-Localization.md`
+- permalink: `/ko/math/commutative_algebra/localization`
+- scanned: 2026-05-29T04:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `maximal` | looks like emphasis (no <sub> partner) |
+

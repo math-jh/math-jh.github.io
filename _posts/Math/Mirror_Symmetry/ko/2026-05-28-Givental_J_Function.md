@@ -23,19 +23,27 @@ published: false
 
 ## J-function의 정의
 
-Smooth projective variety $$X$$, $$H^\ast(X, \mathbb{C})$$의 homogeneous basis $$\{ T_a \}_{a=0,\ldots,s}$$, 그리고 이들이 주는 Poincaré dual basis $$\{ T^a \}$$를 생각하자. 각각의 $$T_a$$에 대응되는 flat coordinate를 $$t^a$$라 하면, 임의의 $$t\in H^\ast(X, \mathbb{C})$$가 주어졌을 때 그 $$H^2$$ 방향 성분을
+Smooth projective variety $$X$$, $$H^\ast(X, \mathbb{C})$$의 homogeneous basis $$\{ T_a \}_{a=0,\ldots,s}$$ ($$T_0 = 1$$), 그리고 이들이 주는 Poincaré dual basis $$\{ T^a \}$$를 생각하자. 이 중 $$H^2$$ 성분을 차지하는 부분을 (notation 단순화를 위해) $$\{ T_a \}_{a=1,\ldots,r}$$로 잡으면, [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 도입한 flat coordinate $$t^a$$와 Novikov variable $$q_a := e^{t^a}$$ ($$a = 1, \ldots, r$$)가 정의된다. 편의상 
 
-$$t_{(2)}=\sum_{\deg(T_a)=2}t^aT_a$$
+$$t_{(2)} := \sum_{a=1}^r t^a T_a$$
 
-으로 표기할 수 있다. [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 도입한 Novikov 변수 $$q = e^{t_{(2)}}$$를 다시 사용할 것이며, 그 글에서는 $$H^2$$ 방향만 본 small QDE를 적었으므로 index의 범위가 $$1, \ldots, r$$이었지만, 여기서는 모든 deformation 방향을 한꺼번에 보는 big QDE까지 다루므로 index가 $$0, 1, \ldots, s$$로 확장된다 (small은 $$t = t_{(2)}$$로 specialize해서 얻는다).
+라 두면 $$q^\beta = e^{t_{(2)} \cdot \beta}$$이다. 한편 Dubrovin connection은 다음의 식
 
-$$J$$-function의 형태가 어디서 오는지를 먼저 들여다보자. [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)의 QDE는 부호 컨벤션 $$\nabla^z = \partial + z^{-1}\mathcal{C}$$를 따라 $$z\,\partial_a s + T_a \star_t s = 0$$의 형태였다. 한편 우리는 J-function이 만족할 ODE를 oscillating integral 측과 부호를 맞춰 쓰기 위해 (그래야 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 $$z\,\partial_{q_i}\mathcal{I} = M_i\mathcal{I}$$ 형태와 직접 맞춘다), 부호를 뒤집어 *dual* Dubrovin connection $$\nabla^{z, \vee} := -\nabla^{-z} = \partial - z^{-1}\mathcal{C}$$의 horizontal section equation
+$$\nabla^z = \partial + z^{-1}\mathcal{C}$$
 
-$$z\, \partial_a s = T_a \star_t s\qquad (a = 0, \ldots, s)\tag{$\ast$}$$
+으로 정의되었는데, 이번 글에서 우리는 oscillating integral 쪽과 부호를 맞추기 위해 그 *dual Dubrovin connection*
 
-으로 쓴다. 어느 쪽이든 $$z \mapsto -z$$ 치환으로 서로 옮겨가므로 본질적으로 같은 D-module이다. 
+$$\nabla^{z, \vee} := -\nabla^{-z} = \partial - z^{-1}\mathcal{C}$$
 
-이제 ($$\ast$$)의 해를 만들기 위해, 우변에 quantum product이 있어 모든 $$\beta \in \mathrm{NE}(X)$$의 GW 보정을 끌어모은다는 사실을 받아들이고, $$z\rightarrow \infty$$의 ansatz로 풀어보자. $$z\to \infty$$일 때 $$z\cdot \partial_a s\rightarrow 0$$이려면 leading term $$s_0$$이 $$t$$에 무관해야 하므로 자연스러운 normalization은 $$s_0 = 1\in H^0(X)$$이다. 그 다음 차수에서 $$s = 1 + s_1/z + s_2/z^2 + \cdots$$를 ($$\ast$$)에 대입해 $$z^0$$ 계수를 보면 $$\partial_a s_1 = T_a$$가 되므로 $$s_1$$의 linear part는 $$t$$ 자체이고 그 보정은 모든 *primary* GW invariant들의 생성함수가 된다. 더 높은 $$z^{-k}$$ 차수에서는 quantum product의 $$t$$-의존성 자체에서 오는 정보, 즉 *gravitational descendant*가 차례로 끌려나온다. $$J$$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
+과 이 connection의 horizontal section equation
+
+$$z\, q_a\partial_{q_a} s = T_a \qtimes s \qquad (a = 1, \ldots, r)\tag{$\ast$}$$
+
+을 고려하기로 한다. 그럼 이 방정식의 해를 구하기 위해 우선 $$z\rightarrow \infty$$인 상황을 생각해보자. 이는 
+
+
+
+이제 ($$\ast$$)의 해를 만들기 위해, 우변에 quantum product이 있어 모든 $$\beta \in \mathrm{NE}(X)$$의 GW 보정을 끌어모은다는 사실을 받아들이고, $$z\rightarrow \infty$$의 ansatz로 풀어보자. $$z\to \infty$$일 때 $$z\cdot q_a\partial_{q_a} s\rightarrow 0$$이려면 leading term $$s_0$$이 $$q$$에 무관해야 하므로 자연스러운 normalization은 $$s_0 = 1\in H^0(X)$$이다. 그 다음 차수에서 $$s = 1 + s_1/z + s_2/z^2 + \cdots$$를 ($$\ast$$)에 대입해 $$z^0$$ 계수를 보면 $$q_a\partial_{q_a} s_1 = T_a \cup s_0 = T_a$$ (classical cup product의 항)이므로 $$s_1$$의 linear part는 $$t_{(2)} = \sum_a t^a T_a$$ 자체이고 그 보정은 *primary* GW invariant들의 생성함수가 된다. 더 높은 $$z^{-k}$$ 차수에서는 quantum product의 $$q$$-의존성 자체에서 오는 정보, 즉 *gravitational descendant*가 차례로 끌려나온다. $$J$$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
 
 ### Descendant Gromov-Witten invariant
 
@@ -61,67 +69,52 @@ $$\left\langle \gamma_1, \ldots, \gamma_n, \frac{\gamma_{n+1}}{z - \psi}\right\r
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$X$$의 *Givental $$J$$-function* $$J_X: H^\ast(X) \times \mathbb{C}^\ast \to H^\ast(X)$$는 다음으로 정의된다.
+<ins id="def1">**정의 1**</ins> $$X$$의 (small) *Givental $$J$$-function<sub>Givental J-함수</sub>* $$J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \to H^\ast(X)$$는 다음으로 정의된다.
 
-$$J_X(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X) \\ (\beta, n) \neq (0, 0)}} \sum_{a=0}^s \frac{q^\beta}{n!}\, \left\langle T_a, t, \ldots, t, \frac{1}{z - \psi} \right\rangle_{0, n+1, \beta} T^a \right)$$
+$$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X) \\ \beta \neq 0}} \sum_{a=0}^s q^\beta\, \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
 
-여기서 $$\frac{1}{z-\psi}$$는 마지막 marked point에 $$\sum_{k \geq 0} z^{-k-1} \psi^k$$ 형태로 끼워 모든 차수의 descendant를 모은다는 의미이다 (위 ⁋Descendant Gromov-Witten invariant 절 참고). 지수 인자 $$e^{t_{(2)}/z}$$는 $$H^2$$ 방향의 divisor equation을 흡수하는 normalization이다.
-
-$$t = t_{(2)}$$만 켠 *small* $$J$$-function은
-
-$$J_X(q, z) = 1 + \sum_{\beta \neq 0} \sum_{a} q^\beta\, \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a$$
-
-의 형태를 가진다.
+여기서 $$\frac{1}{z(z-\psi)}$$는 한 marked point에 $$\sum_{k \geq 0} z^{-k-2} \psi^k$$ 형태로 끼워 모든 차수의 descendant를 모은다는 의미이다 (위 ⁋Descendant Gromov-Witten invariant 절 참고). 지수 인자 $$e^{t_{(2)}/z}$$는 $$H^2$$ 방향의 divisor equation을 흡수하는 normalization이며, 합 안에는 $$\beta \neq 0$$ 항만 남아 있다.
 
 </div>
 
-Small form의 환원은 다음과 같다. $$t = t_{(2)} \in H^2(X)$$로 specialize하면 $$\langle T_a, t, \ldots, t, \tfrac{1}{z-\psi}\rangle_{0, n+1, \beta}$$의 $$t$$ 자리에 들어가는 class가 모두 $$H^2$$ class이고, [§양자 코호몰로지](/ko/math/symplectic_geometry/quantum_cohomology)에서 본 *divisor equation* $$\langle t, \gamma_1, \ldots, \gamma_n\rangle_{0, n+1, \beta} = (t \cdot \beta)\langle \gamma_1, \ldots, \gamma_n\rangle_{0, n, \beta}$$ ($$t \in H^2$$) 를 $$n$$번 적용하면 $$t$$ 삽입들이 $$(t\cdot \beta)^n/n!$$로 빠져나오고, 이것이 $$\sum_n (t\cdot \beta)^n/n! = e^{t\cdot \beta} = q^\beta$$로 정확히 합산되어 앞의 $$e^{t_{(2)}/z}$$와 결합한다. 결과적으로 marked point 수가 $$1$$로 줄어든 형태가 위의 small J이며, 본 글에서는 주로 이 형태를 사용한다.
-
-위 정의의 각 성분이 무엇을 담고 있는지 항별로 정리하면 다음과 같다.
-
-- $$z \to \infty$$ leading term $$1$$은 *classical* limit (모든 $$\beta \neq 0$$ 보정을 끄고, $$\psi$$ 거듭제곱을 끄면 남는 부분).
-- $$z^{-1}$$의 계수는 *primary* GW invariant $$\langle T_a\rangle_{0,1,\beta}$$ 즉 $$\psi$$ 없이 단 한 점에서 $$T_a$$의 pull-back만 적분한 enumerative 수.
-- $$z^{-2}$$의 계수는 *gravitational descendant* $$\langle \tau_1(T_a)\rangle_{0,1,\beta}$$ 즉 $$\psi^1$$이 한 번 끼인 적분.
-- 일반적으로 $$z^{-k-1}$$의 계수는 $$\tau_k(T_a)$$의 $$\beta$$별 합.
-
-즉 $$J$$-function은 모든 차수의 descendant invariant를 하나의 $$z$$-급수로 묶어 둔 *master* 생성함수이며, 그 묶음 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 내용이다.
+위 정의의 각 성분이 담고 있는 정보는 다음과 같이 읽힌다. $$z \to \infty$$의 leading term $$1$$은 모든 $$\beta \neq 0$$ 보정을 끄고 $$\psi$$ 거듭제곱을 끄면 남는 *classical* limit이고, $$z^{-1}$$의 계수에 들어 있는 $$\langle T_a\rangle_{0,1,\beta}$$는 $$\psi$$ 없이 단 한 점에 $$T_a$$의 pullback만 적분한 *primary* GW invariant이다. $$z^{-2}$$의 계수에는 $$\psi^1$$이 한 번 끼인 *gravitational descendant* $$\langle \tau_1(T_a)\rangle_{0,1,\beta}$$이 나타나고, 일반적으로 $$z^{-k-2}$$의 계수는 $$\tau_k(T_a)$$의 $$\beta$$별 합이다. 즉 $$J$$-function은 모든 차수의 descendant invariant를 하나의 $$z$$-급수로 묶어 둔 *master* 생성함수이며, 그 묶음 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 내용이다.
 
 ## QDE의 fundamental solution
 
-위 ⁋동기에서 본 ansatz는 ($$\ast$$)의 해의 형태가 "leading 1 + GW descendant 보정"의 꼴로 강제됨을 시사했고, [정의 1](#def1)의 $$J$$-function은 그 정확한 표현이다. 이를 명제로 정리하자. 
+위 ⁋동기에서 본 ansatz는 ($$\ast$$)의 해의 형태가 "leading 1 + GW descendant 보정"의 꼴로 강제됨을 시사했고, [정의 1](#def1)의 $$J$$-function은 그 정확한 표현이다. 이를 명제로 정리하자.
 
-[§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서 B-side의 fundamental solution matrix는 cohomology basis $$\{e_a\}$$와 thimble basis $$\{[\Gamma_p]\}$$ 사이의 period $$\mathcal{I}^a_p$$로 적힌 행렬이었다. A-side에서 그에 정확히 대응하는 행렬은 *Givental의 $$S$$-matrix*로 알려진 endomorphism-값 함수이며, $$J$$-function은 그 한 column이다.
+[§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서 B-side의 fundamental solution은 cohomology basis $$\{e_a\}$$와 thimble basis $$\{[\Gamma_p]\}$$ 사이의 period $$\mathcal{I}^a_p$$로 적힌 행렬이었다. A-side에서 그에 대응하는 행렬은 *Givental의 $$S$$-matrix*로 알려진 endomorphism-값 함수이며, $$J$$-function은 그 한 column이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2** ($$J$$-function as fundamental solution column)</ins> Endomorphism $$S(t, z) \in \End(H^\ast(X))$$를 다음의 matrix element
+<ins id="prop2">**명제 2** ($$J$$-function as fundamental solution column)</ins> Endomorphism $$S(q, z) \in \End(H^\ast(X))$$를 다음의 matrix element
 
-$$\eta\bigl(S(t,z)\,T_a,\, T_b\bigr) := \eta(T_a, T_b) + \sum_{\substack{\beta \in \mathrm{NE}(X), n \geq 0 \\ (\beta, n) \neq (0, 0)}} \frac{1}{n!} \left\langle T_a, t, \ldots, t, \frac{T_b}{z - \psi} \right\rangle_{0, n+2, \beta}$$
+$$\eta\bigl(S(q,z)\,T_a,\, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta \left\langle \frac{T_a}{z - \psi},\, T_b \right\rangle_{0, 2, \beta}$$
 
 으로 정의하자 ($$\eta$$는 Poincaré pairing). 그러면
 
-1. *(Flat section property)* $$S(t, z)$$의 각 column $$S(t, z) T_b$$는 dual Dubrovin connection $$\nabla^{z, \vee}$$의 horizontal section이다. 즉
+1. *(Flat section property)* $$S(q, z)$$의 각 column $$S(q, z) T_b$$는 dual small Dubrovin connection $$\nabla^{z, \vee}$$의 horizontal section이다. 즉
+   
+   $$z\, q_a\partial_{q_a} \bigl(S(q,z)T_b\bigr) = T_a \qtimes \bigl(S(q,z)T_b\bigr)\qquad (a = 1, \ldots, r).$$
 
-$$z\, \partial_a \bigl(S(t,z)T_b\bigr) = T_a \star_t \bigl(S(t,z)T_b\bigr).$$
-
-2. *($$J$$ = $$T_0$$ column)* $$J_X(t, z) = e^{t_{(2)}/z}\, S(t, z)\, T_0$$가 성립한다. 특히 $$J$$ 자체도 ($$\ast$$)의 horizontal section이고,
-
-$$z\, \partial_a J_X = T_a \star_t J_X \qquad (a = 0, 1, \ldots, s).$$
+2. *($$J$$ = $$T_0$$ column)* $$J_X(q, z) = e^{t_{(2)}/z}\, S(q, z)\, T_0$$가 성립한다. 특히 $$J$$ 자체도 ($$\ast$$)의 horizontal section이고,
+   
+   $$z\, q_a\partial_{q_a} J_X = T_a \qtimes J_X \qquad (a = 1, \ldots, r).$$
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명 개요</summary>
 
-핵심은 두 가지 GW 공리, 즉 *string equation* (marked point에 $$T_0 = 1$$을 끼울 때의 reduction)과 *divisor equation* ($$H^2$$ class를 끼울 때의 $$T_a \cdot \beta$$ 인자), 그리고 *topological recursion relation* ($$\psi$$-class를 boundary divisor로 분해하는 $$\overline{M}_{0, n+1}$$ 위의 관계식)을 정합적으로 활용하는 것이다. 
+핵심은 두 가지 GW 공리, 즉 *string equation* (marked point에 $$T_0 = 1$$을 끼울 때의 reduction)과 *divisor equation* ($$H^2$$ class를 끼울 때의 $$T_a \cdot \beta$$ 인자)을 정합적으로 활용하는 것이다. 
 
-(2)는 $$T_b = T_0 = 1$$을 대입하면 string equation을 통해 $$1$$ 삽입이 다른 marked point의 $$\psi$$-차수를 한 단계 낮추는 형태로 reduce되고, 그 후 적절히 항을 재배열하면 [정의 1](#def1)의 big J가 그대로 복원됨을 확인하면 된다. (1)의 flat section property는 $$\partial_a$$ 미분이 marked point의 추가와 등가임을 사용하면 $$z\partial_a$$의 작용이 marked point에 $$T_a$$를 추가로 끼우는 효과로 정리되고, 그 후 한 marked point를 $$\frac{T_b}{z-\psi}$$와 분리하는 *topological recursion relation* ($$\overline{M}_{0, n+1}$$의 $$\psi$$-class를 boundary divisor의 합으로 분해하는 관계식)을 통해 우변의 $$T_a \star_t$$ 작용과 같아짐을 보인다. 자세한 계산은 [CK, Theorem 10.3.1] 또는 [MS, Chapter 28-29] 참조.
+(2)는 $$T_b = T_0 = 1$$을 대입했을 때 string equation $$\langle \tau_k(T_a), 1\rangle_{0,2,\beta} = \langle \tau_{k-1}(T_a)\rangle_{0,1,\beta}$$ ($$k \geq 1$$, $$\beta \neq 0$$, $$k = 0$$인 항은 vanishing)으로 marked point 하나가 사라지면서 $$z^{-1}\langle T_a/(z-\psi)\rangle$$로 정리되고, 이것이 정확히 [정의 1](#def1)의 small J 식 안에 들어 있는 $$\langle T_a/(z(z-\psi))\rangle$$이 됨을 확인하면 된다. (1)의 flat section property는 $$q_a\partial_{q_a}$$의 작용이 marked point에 $$T_a$$를 추가로 끼우는 효과 (divisor equation을 거꾸로 푼 것)임을 사용하면 $$z\, q_a\partial_{q_a}$$가 $$T_a$$ 삽입 + $$z$$-shift를 주고, 그 후 한 marked point를 $$T_b/(z-\psi)$$와 분리하는 *topological recursion relation* ($$\overline{M}_{0, n+1}$$의 $$\psi$$-class를 boundary divisor의 합으로 분해하는 관계식)을 통해 우변의 $$T_a \qtimes$$ 작용과 같아짐을 보인다. 자세한 계산은 [CK, Theorem 10.3.1] 또는 [MS, Chapter 28–29] 참조.
 
 </details>
 
-[명제 2](#prop2)는 $$J$$-function이 단순한 enumerative 데이터의 묶음을 넘어, A-model 측 fundamental solution matrix $$S$$의 *한 열 (구체적으로 normalization element $$T_0 = 1$$에 해당하는 열)*을 이룸을 보여준다. 다른 열들은 $$J$$를 미분하여 복원할 수 있고 ($$z\partial_a J = T_a\star_t J$$의 우변이 곧 $$T_a$$-column에 해당), 결국 $$J$$ 한 줄이 전체 $$S$$ 행렬을, 따라서 quantum $$D$$-module의 모든 데이터를 인코딩한다. 
+[명제 2](#prop2)는 $$J$$-function이 단순한 enumerative 데이터의 묶음을 넘어, A-model 측 fundamental solution matrix $$S$$의 한 열 (구체적으로 normalization element $$T_0 = 1$$에 해당하는 열)을 이룸을 보여준다. 다른 열들도 $$S$$의 정의식에 다른 $$T_b$$를 넣으면 직접 얻을 수 있으므로, 결국 small QDE의 모든 flat section은 GW invariant의 generating function으로 표현된다. 
 
-이 점에서 $$S$$ (혹은 그 표현인 $$J$$)는 B-side의 period matrix $$\mathcal{I}^a_p$$ ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))와 정확히 짝을 이룬다. 각 column이 한 flat section을 나타낸다는 의미에서 두 행렬은 같은 역할을 하는 객체이며, 이들이 서로 일치한다는 것이 다음 절의 mirror theorem의 기하학적 내용이다.
+특히 $$S$$ (혹은 그 한 열인 $$J$$)는 B-side의 period matrix $$\mathcal{I}^a_p$$ ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))와 정확히 짝을 이룬다. 각 column이 한 flat section을 나타낸다는 의미에서 두 행렬은 같은 역할을 하는 객체이며, 이들이 서로 일치한다는 것이 다음 절의 mirror theorem의 기하학적 내용이다.
 
 ## Mirror theorem (B-model의 oscillating integral과의 대응)
 
@@ -226,6 +219,30 @@ $$(z\partial_q)(qz\partial_q)^n\Phi_0 = \sum_{d \geq 1}\frac{d^{n+1}\,q^{d-1}}{(
 </div>
 
 이 예시는 mirror symmetry가 추상적인 동형이 아니라 *구체적인 hypergeometric 함수의 일치*로 실현됨을 보여준다. 일반적인 toric Fano variety의 경우 비슷한 명시적 계산이 charge matrix로부터 진행되며, 그 모든 사례에서 [명제 5](#prop5)의 $$I = J$$ 정리가 mirror symmetry의 실용적인 검증을 제공한다.
+
+## Big quantum cohomology로의 확장
+
+지금까지 다룬 small $$J$$-function은 [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)의 $$H^2$$ 방향만의 deformation을 base로 한 small quantum $$D$$-module에 대한 fundamental solution이었다. 같은 글의 앞부분에서 본 것처럼 Dubrovin connection 자체는 사실 $$H^\ast(X)$$ 전체 deformation을 base로 한 big quantum cohomology 위에서 정의되었으며, $$H^2$$ 방향만 본 small 버전은 이를 specialize한 것이었다. 같은 격상이 $$J$$-function에 대해서도 가능하며, 그것이 *big $$J$$-function*이다. 
+
+Big 버전의 setup으로 가려면 $$H^\ast(X)$$의 일반적인 deformation parameter $$t = \sum_{a=0}^s t^a T_a$$를 도입해야 한다. 임의의 $$t \in H^\ast(X)$$에 대한 big quantum product $$\star_t$$는 [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 본 대로 $$\mathcal{C}_\alpha = T_\alpha \star_t -$$로 Dubrovin connection의 connection $$1$$-form을 결정한다. 그 dual horizontal section equation은
+
+$$z\,\partial_a s = T_a \star_t s\qquad (a = 0, 1, \ldots, s)$$
+
+이며, 이것이 small case의 ($$\ast$$)를 $$H^\ast$$ 전체 방향으로 확장한 *big QDE*이다. 
+
+<div class="definition" markdown="1">
+
+<ins id="def7">**정의 7** (Big $$J$$-function)</ins> $$X$$의 *big Givental $$J$$-function* $$J_X^{\mathrm{big}}: H^\ast(X) \times \mathbb{C}^\ast \to H^\ast(X)$$는 다음으로 정의된다.
+
+$$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X),\, n \geq 0 \\ (\beta, n) \neq (0, 0)}} \sum_{a=0}^s \frac{q^\beta}{n!}\, \left\langle \frac{T_a}{z - \psi}, t, \ldots, t \right\rangle_{0, n+1, \beta} T^a \right)$$
+
+여기서 첫 marked point에 $$T_a/(z-\psi)$$가 (즉 $$T_a$$의 pullback에 모든 차수의 $$\psi^k$$가 generating function 형태로) 끼이고, 나머지 $$n$$개 marked point에 모두 $$t \in H^\ast(X)$$가 삽입되어 총 $$n+1$$개 marked point를 이룬다.
+
+</div>
+
+Big J가 big QDE의 horizontal section을 이룬다는 사실은 [명제 2](#prop2)의 small 버전과 같은 논증 — $$\partial_a$$를 marked point 추가, $$\psi$$-class를 topological recursion relation으로 분해 — 을 모든 $$a = 0, \ldots, s$$에 대해 적용하면 그대로 따른다. 그리고 small J는 big J의 $$t = t_{(2)} \in H^2(X)$$ specialization으로 복원되는데, $$H^2$$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $$n$$번 적용하면 $$t_{(2)}$$ 삽입들이 $$(t_{(2)} \cdot \beta)^n$$ 인자와 $$\psi$$-shift 보정으로 빠져나오고, 이들이 $$\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$$로 합산되며 $$\psi$$-shift 보정이 추가 $$z^{-1}$$ 인자를 만들어내어, 결과적으로 marked point가 $$1$$개로 줄어든 [정의 1](#def1)의 small J 형태가 그대로 복원된다. 
+
+Big J-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 mirror theorem ([명제 3](#prop3))도 big 버전으로 격상되어 *전체* $$S$$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $$I = J$$ ([명제 5](#prop5))도 mirror map $$\tau(q)$$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다 (예시: Calabi-Yau hypersurface). 한편 우리의 주된 응용 대상인 toric Fano variety (특히 Fano index $$\geq 2$$) 와 partial flag variety 의 경우 mirror map이 trivial하거나 small 정보로 충분하여, 본 글의 main thread는 small case로 일관되게 진행하였다.
 
 ---
 

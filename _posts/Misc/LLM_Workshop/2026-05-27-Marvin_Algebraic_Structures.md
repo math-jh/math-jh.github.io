@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 대수적 구조"
-categories: [Misc / LLM Workshop, Math / Algebraic Structures]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_algebraic_structures
 
 sidebar:

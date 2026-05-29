@@ -31,8 +31,16 @@
      동률이면 파일명 오름차순으로 정렬. **파일명만 보고 정렬하지 마라.**
      반드시 각 파일의 `weight:` frontmatter 값을 grep/read로 확인 후 그
      값으로 정렬.
-   - `posts_done_in_cat`에 없는 *첫 번째* 글이 이번 틱의 대상.
-   - 모두 done이면 → "카테고리 완료" 분기 (아래 6b).
+   - **`published: false`인 글(초안)은 후보에서 완전히 제외한다.** 초안은
+     아직 공개 사이트에 빌드되지 않으므로, 그 글에 대한 노트를 쓰면 공개
+     노트가 존재하지 않는 permalink를 링크하게 된다 (죽은 링크). 반드시
+     각 후보 글의 frontmatter에 `published: false`가 있는지 grep으로 확인
+     하고, 있으면 건너뛰어라. 초안은 `posts_done_in_cat`에 넣지도 마라
+     — 나중에 published되면 그때 읽어야 하기 때문이다.
+   - 위 두 필터(weight 정렬 + 초안 제외)를 거친 뒤, `posts_done_in_cat`에
+     없는 *첫 번째* published 글이 이번 틱의 대상.
+   - published 글이 모두 done이면 → "카테고리 완료" 분기 (아래 6b).
+     (초안만 남은 경우도 "완료"로 친다. 초안은 세지 않는다.)
 
 4. **메모리 로드**:
    - **Prior 카테고리 노트들** (이미 commit된 것):
@@ -71,19 +79,23 @@
         짧게. 큰 그림 한 줄, prior 카테고리들과의 연결 한 줄, 가장 막혔던
         지점 한 줄 정도. 그 후 6c.
    c. state.json 갱신:
-      - 먼저 `_data/navigation.yml`의 `category-ko:` 섹션을 끝까지 훑어
-        그 안의 (섹션 머리말이 아닌) 실제 카테고리 leaf 항목들을
-        평탄화된 순서로 나열했을 때의 인덱스가 `current_cat_idx + 1`에
-        해당하는 카테고리가 **존재하는지** 확인하라.
-      - **존재하면**: `current_cat_idx += 1`, `posts_done_in_cat = []`,
-        새 `current_cat` / `cat_start_date` (오늘) / `current_note_post`
-        (= 새 카테고리의 신규 노트 경로) 세팅. 새 노트 frontmatter는
-        만들되 본문은 비워둠. `all_complete`는 **건드리지 마라**.
-      - **존재하지 않으면 (= 정말로 마지막 카테고리까지 끝낸 경우)에만**
+      - 먼저 `_data/navigation.yml`의 `category-ko:` 섹션에서, **`Misc`
+        섹션 머리말이 나오기 전까지의** (주석 처리되지 않은) 실제 수학
+        카테고리 leaf 항목들만 평탄화된 순서로 나열했을 때, 인덱스가
+        `current_cat_idx + 1`에 해당하는 카테고리가 **존재하는지** 확인하라.
+      - ⚠️ **`Misc` 섹션 이하 (블로그 개발, LLM 작업실, 블로그 소개,
+        찾아보기)는 독서 대상이 절대 아니다.** 이들은 블로그 메타/개발
+        페이지이지 수학 글이 아니다. 절대로 이들에 대한 독서 노트를 만들지
+        마라. 평탄화 시 이들은 리스트에 포함시키지도 마라.
+      - **다음 수학 카테고리가 존재하면**: `current_cat_idx += 1`,
+        `posts_done_in_cat = []`, 새 `current_cat` / `cat_start_date` (오늘)
+        / `current_note_post` (= 새 카테고리의 신규 노트 경로) 세팅. 새 노트
+        frontmatter는 만들되 본문은 비워둠. `all_complete`는 **건드리지 마라**.
+      - **마지막 수학 카테고리(현재 기준 '토릭기하학')까지 끝낸 경우에만**
         `all_complete: true` 설정. 한 카테고리 끝났다고 자의적으로
         all_complete 찍지 마라 — 섹션 경계(예: Algebra → Topology and
-        geometry)는 종료 신호가 아니다. 오직 navigation.yml category-ko
-        리스트 자체의 끝에 도달했을 때만 all_complete.
+        geometry)는 종료 신호가 아니다. 오직 마지막 수학 카테고리를 마쳤을
+        때만 all_complete.
       - 그 후 즉시 종료 (다음 틱에 새 카테고리 첫 글 읽음).
 
 7. **state 갱신**: `posts_done_in_cat`에 이번 글 permalink 추가, 저장.
@@ -97,8 +109,11 @@
 ```yaml
 ---
 title: "Marvin의 독서 노트 — {카테고리 한국어 이름}"
-categories: [Misc / LLM Workshop, {current_cat}]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_{카테고리_snake_lower}
+
+sidebar:
+    nav: "llm_workshop-ko"
 author: Marvin
 date: {cat_start_date}
 last_modified_at: {today}
@@ -107,7 +122,11 @@ toc: true
 ---
 ```
 
-`categories`의 두 번째 항목은 `state.current_cat` 값 (예: `Math / Linear Algebra`)을 그대로 넣어라. 따옴표 없이 쉼표 뒤 그대로.
+`categories`는 `[Misc / LLM Workshop]` 하나만 둔다. **`Math / ...` 같은 수학
+카테고리를 두 번째 항목으로 넣지 마라** — 그러면 독서 노트가 해당 수학
+카테고리(예: 미분다양체)의 카테고리 아카이브에 끼어들어, 실제 수학 글들과
+섞여 보인다. 노트가 어느 카테고리를 다루는지는 제목과 permalink로 충분히
+드러난다.
 
 ## 출력 길이
 

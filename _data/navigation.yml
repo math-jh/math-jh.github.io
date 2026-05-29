@@ -358,6 +358,10 @@ llm_workshop-ko:
         url: ko/llm_workshop/marvin_algebraic_varieties
       - title: "Marvin의 독서 노트 — 스킴"
         url: ko/llm_workshop/marvin_scheme_theory
+      - title: "Marvin의 독서 노트 — 사교기하학"
+        url: ko/llm_workshop/marvin_symplectic_geometry
+      - title: "Marvin의 독서 노트 — 토릭기하학"
+        url: ko/llm_workshop/marvin_toric_geometry
   - title:
     children:
       - title: "블로그 소개"

@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 범주론"
-categories: [Misc / LLM Workshop, Math / Category Theory]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_category_theory
 
 sidebar:
