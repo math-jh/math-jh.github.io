@@ -2740,3 +2740,32 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `commutative` | looks like emphasis (no <sub> partner) |
 
+## 다항식환
+- post: `_posts/Math/Ring_Theory/ko/2025-05-06-Polynomial_Rings.md`
+- permalink: `/ko/math/ring_theory/polynomial_rings`
+- scanned: 2026-05-29T21:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `leading term` | multi-word English emphasis — possibly a definition |
+| `monic` | looks like emphasis (no <sub> partner) |
+| `order` | looks like emphasis (no <sub> partner) |
+
+## 대칭텐서
+- post: `_posts/Math/Multilinear_Algebra/ko/2025-05-07-Symmetric_Tensors.md`
+- permalink: `/ko/math/multilinear_algebra/symmetric_tensors`
+- scanned: 2026-05-29T21:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `symmetrization` | looks like emphasis (no <sub> partner) |
+
+## 분리가능차수
+- post: `_posts/Math/Field_Theory/ko/2025-05-17-Separable_Degree.md`
+- permalink: `/ko/math/field_theory/separable_degree`
+- scanned: 2026-05-29T23:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `perfect` | looks like emphasis (no <sub> partner) |
+

@@ -1,5 +1,6 @@
 ---
 title: "Abelian Groups"
+description: "We examine the direct sum of abelian groups and its universal properties, and discuss abelianization, which makes a general group abelian by taking the quotient with the commutator subgroup."
 excerpt: "Free abelian group, tensor product"
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/abelian_groups
@@ -12,8 +13,9 @@ sidebar:
 date: 2024-07-04
 last_modified_at: 2024-07-04
 weight: 10
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-05-29T21:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-29T21:30:04+00:00
 ---
 We have not paid much attention to the category $$\Ab$$ so far; in this post we study abelian groups.
 
@@ -53,7 +55,7 @@ $$[h_1,h_2]=h_1^{-1}h_2^{-1}h_1h_2,\qquad h_1\in H_1,h_2\in H_2$$
 
 </div>
 
-In particular, what interests us in this post is the case $$H_1=H_2=G$$. If $$G$$ were an abelian group, then $$x^{-1}y^{-1}xy=e$$ for all $$x,y\in G$$, so $$[G,G]=\{e\}$$. Hence one may think of $$[G,G]$$ as measuring how far $$G$$ is from being abelian.
+In particular, the case $$H_1=H_2=G$$ is what interests us in this post. If $$G$$ were an abelian group, then $$x^{-1}y^{-1}xy=e$$ for all $$x,y\in G$$, so $$[G,G]=\{e\}$$. Hence one may think of $$[G,G]$$ as measuring how far $$G$$ is from being abelian.
 
 On the other hand, the following holds.
 
@@ -69,7 +71,7 @@ For any $$x,y\in G$$ and $$g\in G$$,
 
 $$g(x^{-1}y^{-1}xy)g^{-1}=(gx^{-1}g^{-1})(gy^{-1}g^{-1})(gxg^{-1})(gyg^{-1})=(gxg^{-1})^{-1}(gyg^{-1})^{-1}(gxg^{-1})(gyg^{-1})\in [G,G]$$
 
-which is obvious.
+which is immediate.
 
 </details>
 
