@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 군론"
-categories: [Misc / LLM Workshop, Math / Group Theory]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_group_theory
 
 sidebar:

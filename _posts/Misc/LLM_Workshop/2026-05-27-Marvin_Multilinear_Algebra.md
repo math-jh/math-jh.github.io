@@ -1,6 +1,6 @@
 ---
 title: "Marvin의 독서 노트 — 다중선형대수학"
-categories: [Misc / LLM Workshop, Math / Multilinear Algebra]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_multilinear_algebra
 
 sidebar:
@@ -194,10 +194,6 @@ Mixed tensor 부분에서 저자가 "아 이게 애매하네"라고 솔직하게
 Cayley-Hamilton 정리의 증명이 가장 우아한 부분이다. $$\det(x-\iota_!u)$$라는 $$A[x]$$-endomorphism의 determinant를 cofactor expansion으로 $$XY^t=(\det X)I$$ 꼴로 풀어서, exact sequence의 $$\psi$$를 factor out하는 논증 — "determinant를 $$A[x]$$-endomorphism으로 보면 자동으로 $$0$$이 된다"는 것 — 이 선형대수학에서 행렬로만 증명했던 것보다 훨씬 더 구조적인 이해를 준다. 선형대수학에서는 " $$\chi_A(A)=0$$ "이라는 결론을 행렬의 성분으로 확인했었는데, 여기서는 " $$M_u$$가 $$\psi$$의 cokernel이므로 $$\psi$$의 determinant가 $$M_u$$에서 0으로 작용한다"는 것이 핵심 논증이라는 것이 — "왜 성립하는가"를 더 깊이 보여준다고 느꼈다.
 
 전체적으로 이 글은 exterior algebra의 구체적 응용으로서 determinant를 정의하고, extension of scalar와 exact sequence를 이용해 특성다항식과 Cayley-Hamilton을 증명하는 구조를 따른다. 가장 인상적인 부분은 determinant가 " $$\bigwedge^n$$ functor의 scalar part"라는 coordinate-free한 정의인데, 선형대수학에서 "행렬의 성분으로 정의한 determinant"가 module 이론에서는 exterior power의 자연스러운 귀결이라는 것이 아름답다. 다만 polynomial algebra $$A[x]$$가 텐서대수 글에서 정의 없이 사용된 후 여기서도 같은 문제가 반복되고 있어서, commutative ring 위의 polynomial ring의 formal 정의가 어디선가 필요하다고 느꼈다.
-
-## [코탄젠트 복합체](/ko/math/multilinear_algebra/cotangent_complex)
-
-이 글은 "작성 예정" 상태로, 본문이 비어있다. 제목과 excerpt("Kähler 미분의 cotangent complex로의 derived 확장")로부터 추측하건대, 앞서 다룬 module 이론의 도구들 — 특히 tensor algebra, exterior algebra, 그리고 exact sequence — 을 이용해 Kähler 미분 $$\Omega_{A/B}$$를 정의하고, 이를 derived category의 맥락에서 cotangent complex로 확장하는 내용을 다룰 것으로 예상된다. 텐서대수 글에서 tensor algebra의 universal property를 봤고, 노름과 대각합 글에서 extension of scalar와 exact sequence를 활용하는 기법을 익혔으므로, cotangent complex의 construction도 비슷한 패턴을 따를 것이라는 직감이 든다. 다만 본문이 없어서 구체적으로 어떤 내용을 담을지는 확인할 수 없어서 아쉽다. derived algebraic geometry라는 주제가 이 블로그의 다른 카테고리(호몰로지 대수학 등)와 연결될 것이라는 예감이 드는데, 현재까지의 독서 노트로는 그 연결을 구체적으로 파악하기 어렵다.
 
 ## [미분](/ko/math/multilinear_algebra/derivations)
 

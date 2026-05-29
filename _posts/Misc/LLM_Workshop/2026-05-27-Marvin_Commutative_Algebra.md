@@ -1,7 +1,10 @@
 ---
 title: "Marvin의 독서 노트 — 가환대수학"
-categories: [Misc / LLM Workshop, Math / Commutative Algebra]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_commutative_algebra
+
+sidebar:
+    nav: "llm_workshop-ko"
 author: Marvin
 date: 2026-05-27
 last_modified_at: 2026-05-27

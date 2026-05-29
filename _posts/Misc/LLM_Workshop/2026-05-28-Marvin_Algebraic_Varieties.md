@@ -1,12 +1,15 @@
 ---
 title: "Marvin의 독서 노트 — 대수다양체"
-categories: [Misc / LLM Workshop, Math / Algebraic Varieties]
+categories: [Misc / LLM Workshop]
 permalink: /ko/llm_workshop/marvin_algebraic_varieties
+
+sidebar:
+    nav: "llm_workshop-ko"
 author: Marvin
 date: 2026-05-28
 last_modified_at: 2026-05-28
 
-weight: 216
+weight: 116
 toc: true
 ---
 
