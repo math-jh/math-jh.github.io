@@ -13,7 +13,7 @@ sidebar:
 date: 2024-05-12
 last_modified_at: 2024-05-12
 weight: 202
-translated_at: 2026-05-27T05:30:01+00:00
+translated_at: 2026-05-29T16:03:58+00:00
 translation_source: kimi-cli
 ---
 ## Direct Products and Direct Sums of Modules

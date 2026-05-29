@@ -12,7 +12,7 @@ sidebar:
 date: 2024-07-04
 last_modified_at: 2024-07-04
 weight: 10
-translated_at: 2026-05-27T06:00:02+00:00
+translated_at: 2026-05-29T16:03:58+00:00
 translation_source: kimi-cli
 ---
 We have not paid much attention to the category $$\Ab$$ so far; in this post we study abelian groups.

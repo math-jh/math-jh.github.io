@@ -13,7 +13,7 @@ sidebar:
 date: 2021-08-15
 last_modified_at: 2022-11-24
 weight: 8
-translated_at: 2026-05-27T00:30:03+00:00
+translated_at: 2026-05-29T16:03:58+00:00
 translation_source: kimi-cli
 ---
 ## Family of sets
