@@ -2540,3 +2540,30 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `norm` | looks like emphasis (no <sub> partner) |
 | `& \cdots &` | multi-word English emphasis — possibly a definition |
 
+## 정수적 확장
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-17-Integral_Extension.md`
+- permalink: `/ko/math/commutative_algebra/integral_extension`
+- scanned: 2026-05-29T07:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `혹은` | looks like emphasis (no <sub> partner) |
+
+## 부풀림 대수
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-20-Blowup_Algebra.md`
+- permalink: `/ko/math/commutative_algebra/blowup_algebra`
+- scanned: 2026-05-29T08:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `initial form` | multi-word English emphasis — possibly a definition |
+
+## 영점정리
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-20-Nullstellensatz.md`
+- permalink: `/ko/math/commutative_algebra/nullstellensatz`
+- scanned: 2026-05-29T09:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `maximal` | looks like emphasis (no <sub> partner) |
+
