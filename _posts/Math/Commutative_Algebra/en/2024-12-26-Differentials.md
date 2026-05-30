@@ -1,5 +1,6 @@
 ---
 title: "Differentials"
+description: "This post covers the core of algebraic differentiation theory, starting from the definition of derivations satisfying the Leibniz rule through to the structure of Kahler differentials and their representable property."
 excerpt: "The algebraic definition of the Kähler differential module and its universal property"
 
 categories: [Math / Commutative Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2024-12-26
 last_modified_at: 2024-12-26
 weight: 100
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T22:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T22:30:04+00:00
 ---
 The goal of this post is to define differentials algebraically.
 
