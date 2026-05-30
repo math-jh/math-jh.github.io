@@ -1,5 +1,6 @@
 ---
 title: "Intersection Product"
+description: "This post covers the definition and properties of the Chow ring. It defines the intersection product on Chow groups and explores concrete calculation examples through intersection multiplicities and the Tor formula."
 excerpt: "The intersection product on Chow groups"
 
 categories: [Math / Algebraic Varieties]
@@ -14,12 +15,13 @@ header:
 date: 2026-05-11
 last_modified_at: 2026-05-12
 weight: 19
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T06:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T06:30:04+00:00
 ---
-In [§Chow Groups](/en/math/algebraic_varieties/chow_groups) we defined the Chow group $$\CH^\ast(X)$$. At the end of that post we claimed that one can define an intersection product on it to give it a ring structure; in this post we define this and examine its properties.
+In [§Chow Groups](/en/math/algebraic_varieties/chow_groups) we defined the Chow group $$\CH^\ast(X)$$. At the end of that post we claimed that one can define an intersection product on it to give it a ring structure; in this post we define this product and examine its properties.
 
-The following definition shows what the intersection of two varieties $$V, W$$ near a point $$p$$ is. By definition this is a local matter near $$p$$, so it suffices to pick an affine chart and take the ambient space to be $$\mathbb{A}^n$$.
+The following definition shows what the intersection of two varieties $$V, W$$ near a point $$p$$ is. By definition this is a local matter at $$p$$, so it suffices to pick an affine chart and take the ambient space to be $$\mathbb{A}^n$$.
 
 <div class="definition" markdown="1">
 
@@ -29,13 +31,13 @@ $$i_p(V, W) = \dim_{\mathbb{K}} \mathcal{O}_{\mathbb{A}^n, p} / (I(V) + I(W))$$
 
 </div>
 
-By definition, $$V$$ and $$W$$ are represented near $$p$$ as the common zero set of the elements of $$I(V)$$ and $$I(W)$$ respectively. Then for $$p$$ to lie on both subvarieties it must be a zero of all elements of both $$I(V)$$ and $$I(W)$$, which leads us to consider the ideal sum $$I(V)+I(W)$$. In general, if $$V$$ and $$W$$ are too small relative to the ambient space they will generally not meet, so the above formula is not well defined. That is, we only use the formula when $$\dim V+\dim W=n$$. In general, when two arbitrary subvarieties meet, the expected dimension of their intersection is $$\dim V + \dim W - n$$, and we know that this can be a point only if $$\dim V+\dim W=n$$.
+By definition, near $$p$$ the varieties $$V$$ and $$W$$ are cut out by the elements of $$I(V)$$ and $$I(W)$$ respectively. Thus for $$p$$ to lie on both subvarieties it must be a common zero of all elements of both ideals, which leads us to consider the ideal sum $$I(V)+I(W)$$. In general, if $$V$$ and $$W$$ are too small relative to the ambient space they will not meet, so the above formula is not well defined. Hence we only use it when $$\dim V+\dim W=n$$. In general, when two arbitrary subvarieties meet, the expected dimension of their intersection is $$\dim V + \dim W - n$$, and this can be a point only if $$\dim V+\dim W=n$$.
 
-In general this definition applies in the case of a local complete intersection, and in singular situations the following *Tor formula*
+In general this definition applies in the local complete intersection case, and in singular situations the following *Tor formula*
 
 $$i_p(V, W) = \sum_{i \ge 0} (-1)^i \dim_{\mathbb{K}} \Tor_i^{R}\bigl(R/I(V),\ R/I(W)\bigr)$$
 
-gives the definition. The previous formula corresponds to the $$i = 0$$ term. In this post we only look at simple cases, so [Definition 1](#def1) above suffices.
+gives the definition. The preceding formula corresponds to the $$i = 0$$ term. In this post we only consider simple cases, so [Definition 1](#def1) above suffices.
 
 <div class="example" markdown="1">
 
@@ -55,11 +57,11 @@ The above is an example of two 1-dimensional subvarieties meeting in dimension 2
 
 </div>
 
-Then the following proposition is a natural generalization of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
+Then the following two propositions are natural generalizations of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> The intersection multiplicity satisfies the following properties.
+<ins id="prop4">**Proposition 4**</ins> Intersection multiplicity satisfies the following properties.
 
 1. For any $$p$$ and $$V, W$$, we always have $$0 \leq i_p(V,W) < \infty$$, and $$i_p(V,W)=0$$ holds precisely when $$p \notin V \cap W$$.
 2. $$V$$ and $$W$$ intersect transversely at $$p$$ if and only if $$i_p(V,W)=1$$.
@@ -69,11 +71,11 @@ Then the following proposition is a natural generalization of [§The Riemann–R
 
 ## Definition of the Intersection Product
 
-Strictly speaking, the definitions given so far do not allow us to use all the properties of the intersection product on the Chow group. For example, in 3-dimensional space two planes generally meet in a line, but we have only treated the case where the intersection of the two subspaces is 0-dimensional, so we cannot explain this. Therefore we first make the following definition.
+Strictly speaking, the definitions given so far do not yet allow us to use all the properties of the intersection product on the Chow group. For example, in 3-dimensional space two planes generally meet in a line, but we have only treated the case where the intersection of two subspaces is 0-dimensional, so we cannot account for this. Therefore we first make the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> For two subvarieties $$V, W$$ of a variety $$X$$, if the formula
+<ins id="def5">**Definition 5**</ins> For two subvarieties $$V, W$$ of a variety $$X$$, if the equality
 
 $$\codim(V \cap W) = \codim V + \codim W$$
 
@@ -81,11 +83,11 @@ holds, then we say that $$V$$ and $$W$$ *intersect properly*.
 
 </div>
 
-In particular, [Definition 1](#def1) is the special case where $$\codim(V \cap W) = n$$. Now, if the above equality holds for every component of $$V$$ and $$W$$, then we can use it to define the formula
+In particular, [Definition 1](#def1) is the special case where $$\codim(V \cap W) = n$$. Now, if the above equality holds for every component of $$V \cap W$$, then we can use it to define
 
 $$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) \, [T]$$
 
-Here $$i_T(V, W)$$ is the intersection multiplicity along the component $$T$$, obtained by extending the multiplicity at a point in [Definition 1](#def1) naturally to the component $$T$$. If $$T$$ is a point $$p$$, then $$i_T(V, W) = i_p(V, W)$$; in general it is the number measuring how the two varieties meet at a general point of $$T$$, and can be defined rigorously as the intersection multiplicity at the generic point. Then the following proposition collects the properties of intersection multiplicity lifted to the intersection product.
+Here $$i_T(V, W)$$ is the intersection multiplicity along the component $$T$$, obtained by naturally extending the pointwise multiplicity of [Definition 1](#def1) to the component $$T$$. If $$T$$ is a point $$p$$, then $$i_T(V, W) = i_p(V, W)$$; in general it is the number measuring how the two varieties meet at a general point of $$T$$, and can be defined rigorously as the intersection multiplicity at the generic point. The following proposition lifts the properties of intersection multiplicity to the intersection product.
 
 <div class="proposition" markdown="1">
 
@@ -111,7 +113,7 @@ Then the following definition has been anticipated since the previous post.
 
 ## Moving Lemma
 
-Now our only problem is that, given two arbitrary classes, even if they satisfy the dimension condition we do not know whether the two cycles actually meet nicely. For example, in the present state we cannot define the self-intersection of a given class. To remedy this, we must more generally be able to move one of two arbitrary cycles within its rational equivalence so that it intersects $$W$$ properly. The theorem guaranteeing this is the following *moving lemma*.
+Now our only problem is that, given two arbitrary classes, even if they satisfy the dimension condition we do not know whether the two cycles actually meet nicely. For example, in the present state we cannot define the self-intersection of a given class. To remedy this, we must more generally be able to move one of two arbitrary cycles within its rational equivalence class so that it intersects $$W$$ properly. The theorem guaranteeing this is the following *moving lemma*.
 
 <div class="proposition" markdown="1">
 
@@ -119,9 +121,9 @@ Now our only problem is that, given two arbitrary classes, even if they satisfy 
 
 </div>
 
-The key idea is as follows. For each irreducible component $$V_i$$ of $$Z$$, cut it by a sufficiently "general" hypersurface $$H_i$$ containing $$V_i$$, and take a cycle of the form $$V_i \cap H_1 \cap \cdots \cap H_s$$. Here "general" means that $$H_i$$ is chosen so as to meet $$W$$ in a generic position; then the dimension drops appropriately to achieve a proper intersection. As we saw in [§Linear Systems, ⁋Definition 5](/en/math/algebraic_varieties/linear_systems#def5), using a basepoint-free linear system one can realize such a "general" move by a regular map, and the heart of the proof is to show that this process preserves rational equivalence.
+The key idea is as follows. For each irreducible component $$V_i$$ of $$Z$$, cut it by a sufficiently "general" hypersurface $$H_i$$ containing $$V_i$$, and take a cycle of the form $$V_i \cap H_1 \cap \cdots \cap H_s$$. Here "general" means that $$H_i$$ is chosen so as to meet $$W$$ in generic position; then the dimension drops appropriately to achieve a proper intersection. As we saw in [§Linear Systems, ⁋Definition 5](/en/math/algebraic_varieties/linear_systems#def5), using a basepoint-free linear system one can realize such a "general" move by a regular map, and the heart of the proof is to show that this process preserves rational equivalence.
 
-Then, using the above lemma to move $$Z$$ to $$Z'$$, we define the intersection by the formula
+Then, using the above lemma to move $$Z$$ to $$Z'$$, we define the intersection by
 
 $$Z \cdot W := Z' \cdot W = \sum_{T \subset Z' \cap W} i_T(Z', W) [T]$$
 
