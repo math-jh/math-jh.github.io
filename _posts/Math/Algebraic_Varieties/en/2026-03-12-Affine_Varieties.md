@@ -28,7 +28,7 @@ These are the sets of roots of a polynomial $$f$$ in $$\mathbb{K}^n$$. We usuall
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> The *affine $n$-space* $$\mathbb{A}^n_\mathbb{K}$$ over a field $$\mathbb{K}$$ is the $$n$$-dimensional vector space $$\mathbb{K}^n$$.
+<ins id="def1">**Definition 1**</ins> The *affine $$n$$-space* $$\mathbb{A}^n_\mathbb{K}$$ over a field $$\mathbb{K}$$ is the $$n$$-dimensional vector space $$\mathbb{K}^n$$.
 
 </div>
 
@@ -36,7 +36,7 @@ When $$\mathbb{K}$$ is understood from the context, we write simply $$\mathbb{A}
 
 $$\mathbb{A}^n=\{(x_1,\ldots, x_n)\mid x_i\in \mathbb{K}\}$$
 
-*points*, and each coordinate $$x_i$$ the *$i$-th coordinate*. As mentioned above, the geometric objects we shall study are those represented by the zero set $$Z(f)$$ of a polynomial $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$.
+*points*, and each coordinate $$x_i$$ the *$$i$$-th coordinate*. As mentioned above, the geometric objects we shall study are those represented by the zero set $$Z(f)$$ of a polynomial $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$.
 
 <div class="definition" markdown="1">
 

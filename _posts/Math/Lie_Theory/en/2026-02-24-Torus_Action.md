@@ -108,7 +108,7 @@ At this point, the trace $$e^{4\pi i t}+e^{-2\pi i t}$$ of this matrix is precis
 
 The weight spaces of this action are obviously $$\span(e_1), \span(e_2)$$, and for example the weight corresponding to $$\span(e_1)$$ is given by the linear functional $$\lambda_1:\mathfrak{t}\rightarrow \mathbb{C}$$ satisfying
 
-$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $X\in \mathfrak{t}$}$$
+$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $$X\in \mathfrak{t}$$}$$
 
 This is of course defined by $$\lambda_1(t)=2t$$, which sends $$1\in \mathbb{R}$$ to $$2$$, and thus the weight corresponding to this weight space can be said to be $$2$$ (with a slight abuse of notation). For $$\lambda$$ to satisfy the above formula, since $$e^{2\pi i}=1$$, we must have $$\lambda(1)\in \mathbb{\mathbb{Z}}$$.
 
@@ -134,7 +134,7 @@ then this time $$T$$ acts on the two-dimensional space $$\mathbb{C}^2$$ as if it
 
 <ins id="def4">**Definition 4**</ins> Let a torus $$T$$ and a complex $$T$$-module $$V$$ be given. For an irreducible character $$\rchi_\lambda: T \rightarrow S^1$$ and the corresponding linear functional $$\lambda:\mathfrak{t}\rightarrow\mathbb{C}$$, we say that $$\lambda$$ is a *weight* of $$V$$ if the set
 
-$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
+$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $$t\in T$$}\right\}$$
 
 is nontrivial. In this case, we call $$V_\lambda$$ the *weight space* of $$\lambda$$, and the decomposition
 

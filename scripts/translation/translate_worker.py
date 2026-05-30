@@ -24,6 +24,7 @@ Cron suggestion:
 from __future__ import annotations
 
 import argparse
+import difflib
 import json
 import os
 import re
@@ -803,111 +804,201 @@ def _notify_telegram(subject: str, body: str) -> None:
 
 _SUB_STRIP_RE = re.compile(r"<sub>.*?</sub>", re.DOTALL)
 
-VERIFY_INSTRUCTIONS_FRESH = """You audit a Korean→English math blog translation for content fidelity.
+# A KO/EN `$$`-count mismatch is almost always a `$$display$$`→`$inline$`
+# downgrade (the LaTeX survives, only the delimiter changed) or a harmless
+# merge/split — not lost content. We localize the real divergences mechanically
+# and only ask Kimi about the few regions where math genuinely went missing.
+#
+# Key fact: the LaTeX inside `$$...$$` is identical in KO and EN (math isn't
+# translated). So a KO block "survives" iff its whitespace-normalized LaTeX
+# appears anywhere in EN's math — display OR inline. Blocks that pass that check
+# are benign by construction (no model needed); only blocks whose content is
+# absent from EN entirely are suspect, and Kimi sees just those `<ins>` regions
+# — and is never told about `$$`/counts, so it can't loop on counting.
 
-The validator flagged that the COUNT of `$$...$$` math blocks differs between KO and EN. Your job is to decide whether any actual mathematical content was lost, altered, or added, OR whether the difference is just a rephrasing that merges/splits blocks while preserving meaning.
+_DISPLAY_RE = re.compile(r"\$\$(.*?)\$\$", re.DOTALL)
+_INS_RE     = re.compile(r'<ins id="([^"]+)"')
+_INLINE_RE  = re.compile(r"\$([^$\n]+?)\$")
+_PREAMBLE   = "__preamble__"
+_VERIFY_MAX_REGIONS = 12
 
-Method:
-1. Walk both versions in parallel, anchoring by `<ins id="...">` labels.
-2. For each anchor region where the math-block count differs, identify the specific block(s) involved.
-3. Classify each difference:
-   - SAFE-REPHRASE: blocks merged/split or variable inlined, no math content lost (e.g. KO `$$A$$ + $$S$$` → EN `$$S \\subseteq A$$`).
-   - LOSSY: a mathematical statement, hypothesis, conclusion, or symbol that carries meaning was dropped, or content was added that does not exist in KO.
-   - QUESTIONABLE: cannot tell from surrounding context alone.
 
-Output format (strict, terse, no preamble, no closing remarks):
+def _norm_math(s: str) -> str:
+    """Whitespace-insensitive key for matching LaTeX across KO/EN."""
+    return re.sub(r"\s+", "", s)
 
-VERDICT: <safe | minor | lossy>
-COUNTS: ko=<N> en=<M>
+
+def _en_math_inventory(en: str) -> set:
+    """Every math fragment in EN — `$$display$$` AND `$inline$` (the downgrade
+    target) — normalized, so we can ask 'does this KO block survive anywhere?'."""
+    body = _SUB_STRIP_RE.sub("", en)
+    disp = _DISPLAY_RE.findall(body)
+    inline = _INLINE_RE.findall(_DISPLAY_RE.sub("", body))
+    return {_norm_math(x) for x in (*disp, *inline)}
+
+
+def _ins_anchors(text: str):
+    """[(id, line_index), ...] for each `<ins id>`, in document order."""
+    return [(m.group(1), text.count("\n", 0, m.start())) for m in _INS_RE.finditer(text)]
+
+
+def _ins_regions(text: str) -> dict:
+    """id -> region text (its `<ins>` line up to the next anchor). Text before
+    the first anchor is filed under _PREAMBLE."""
+    lines = text.split("\n")
+    anchors = _ins_anchors(text)
+    out = {}
+    first = anchors[0][1] if anchors else len(lines)
+    out[_PREAMBLE] = "\n".join(lines[:first])
+    for i, (aid, ln) in enumerate(anchors):
+        end = anchors[i + 1][1] if i + 1 < len(anchors) else len(lines)
+        out[aid] = "\n".join(lines[ln:end])
+    return out
+
+
+def _locate_divergences(ko: str, en: str):
+    """(benign_count, suspect_region_ids).
+
+    benign_count — KO blocks missing from EN's `$$` sequence whose LaTeX still
+                   survives somewhere in EN (pure `$$`→`$` downgrade / rephrase).
+    suspect_ids  — ordered `<ins>` ids (or _PREAMBLE) whose region holds a KO
+                   block whose LaTeX is absent from EN entirely.
+
+    `<ins>` anchors are the alignment unit because they survive the `$$`→`$`
+    downgrade 1:1, whereas matched `$$` blocks go sparse exactly in the
+    downgrade-heavy posts we care about (EN keeps ~20% of KO's `$$`), which
+    misaligns any block-bracketed window."""
+    ko_body, en_body = _SUB_STRIP_RE.sub("", ko), _SUB_STRIP_RE.sub("", en)
+    ko_iter = list(_DISPLAY_RE.finditer(ko_body))
+    ko_blocks = [_norm_math(m.group(1)) for m in ko_iter]
+    ko_lines = [ko_body.count("\n", 0, m.start()) for m in ko_iter]
+    en_blocks = [_norm_math(m.group(1)) for m in _DISPLAY_RE.finditer(en_body)]
+    inventory = _en_math_inventory(en)
+
+    sm = difflib.SequenceMatcher(None, ko_blocks, en_blocks, autojunk=False)
+    missing = []
+    for tag, i1, i2, _j1, _j2 in sm.get_opcodes():
+        if tag in ("delete", "replace"):
+            missing.extend(range(i1, i2))
+
+    anchors = _ins_anchors(ko_body)
+
+    def enclosing(line: int) -> str:
+        cur = _PREAMBLE
+        for aid, ln in anchors:
+            if ln <= line:
+                cur = aid
+            else:
+                break
+        return cur
+
+    benign = 0
+    suspect_ids: list = []
+    for idx in missing:
+        if idx >= len(ko_blocks):
+            continue
+        if ko_blocks[idx] in inventory:
+            benign += 1
+            continue
+        rid = enclosing(ko_lines[idx])
+        if rid not in suspect_ids:
+            suspect_ids.append(rid)
+    return benign, suspect_ids
+
+
+def _cap_region(text: str, limit: int = 4500) -> str:
+    """Trim a region to ~limit chars, ending on a line boundary when possible.
+
+    A truncation marker is appended so the semantic check never mistakes an
+    end-truncated passage for dropped content (regions rarely exceed the cap;
+    the marker only matters for the occasional very long proof)."""
+    if len(text) <= limit:
+        return text
+    cut = text.rfind("\n", 0, limit)
+    return text[: cut if cut > limit // 2 else limit] + "\n…[passage truncated here — ignore any apparent missing content past this point]"
+
+
+def _finalize_verdict(out: str) -> str:
+    """Keep only from the LAST `VERDICT:` line. Even in thinking mode the model
+    can occasionally restate a first-impression verdict before its final one;
+    main() parses the verdict with a MULTILINE `^VERDICT:` search that would
+    otherwise latch onto the premature one. The last verdict is the decision."""
+    starts = [m.start() for m in re.finditer(r"(?m)^VERDICT:", out)]
+    return out[starts[-1]:] if starts else out
+
+
+VERIFY_SEM_INSTRUCTIONS = """You compare passages from a Korean math blog post against their English translation, to catch any loss of meaning.
+
+For each numbered pair below, decide whether the English conveys the SAME mathematical content as the Korean: is any statement, hypothesis, conclusion, definition, formula, or symbol dropped, added, or changed in meaning? Pure rewording, reordering, or different notation/formatting is NOT a problem — only a change in mathematical meaning is.
+
+Set the overall VERDICT to lossy if ANY pair is LOSSY, otherwise safe.
+
+Output (terse, no preamble, no closing remarks):
+
+VERDICT: <safe | lossy>
 FINDINGS:
-- [<anchor or section>] <SAFE-REPHRASE | LOSSY | QUESTIONABLE>: <one short sentence on what changed>
-- ...
-(Limit to at most 8 findings. If more, summarize the rest in one closing bullet.)
+- [pair N] <SAFE | LOSSY>: <one short sentence; for LOSSY, name exactly what meaning differs>
 """
-
-VERIFY_INSTRUCTIONS_POLISH = """You audit a polish pass on an English translation of a Korean math blog post for content fidelity.
-
-Three inputs:
-- KO SOURCE: the Korean original (ground truth for mathematical content).
-- EN OLD: the previous English translation, already validated — treat as the trusted baseline.
-- EN NEW: the polished output. The validator flagged that EN NEW's `$$...$$` block count diverges from KO.
-
-Since EN OLD was previously validated against KO, the most likely cause of the new mismatch is that POLISH changed something. Focus your analysis on EN OLD → EN NEW: what did polish add, drop, merge, or split that produced the divergence?
-
-Method:
-1. Walk EN OLD and EN NEW in parallel, anchoring by `<ins id="...">` labels.
-2. For each anchor region where math-block count or content differs, identify the specific block(s) polish modified.
-3. Cross-check against KO to judge whether the change preserves meaning.
-4. Classify each difference:
-   - SAFE-REPHRASE: polish merged/split blocks or inlined a variable, no math content lost vs KO.
-   - LOSSY: polish dropped a hypothesis/conclusion/symbol that exists in KO, or introduced something not in KO.
-   - QUESTIONABLE: cannot tell from surrounding context alone.
-
-Output format (strict, terse, no preamble, no closing remarks):
-
-VERDICT: <safe | minor | lossy>
-COUNTS: ko=<N> en_old=<O> en_new=<M>
-POLISH CHANGED:
-- [<anchor>] <SAFE-REPHRASE | LOSSY | QUESTIONABLE>: <what polish did, one short sentence>
-- ...
-(Limit to at most 8 findings. If more, summarize the rest in one closing bullet.)
-"""
-
-
-def build_verify_prompt(
-    ko_content: str, en_new: str, ko_count: int, en_count: int,
-    *, en_old: Optional[str] = None,
-) -> str:
-    if en_old is not None:
-        en_old_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", en_old)))
-        return (
-            VERIFY_INSTRUCTIONS_POLISH
-            + f"\n\nFlagged counts: ko={ko_count}, en_old={en_old_n}, en_new={en_count}\n"
-            + "\n--- KO SOURCE ---\n"   + ko_content + "\n--- END KO SOURCE ---\n"
-            + "\n--- EN OLD ---\n"      + en_old     + "\n--- END EN OLD ---\n"
-            + "\n--- EN NEW ---\n"      + en_new     + "\n--- END EN NEW ---\n"
-        )
-    return (
-        VERIFY_INSTRUCTIONS_FRESH
-        + f"\n\nFlagged counts: ko={ko_count}, en={en_count}\n"
-        + "\n--- KO SOURCE ---\n"  + ko_content + "\n--- END KO SOURCE ---\n"
-        + "\n--- EN TRANSLATION ---\n" + en_new + "\n--- END EN TRANSLATION ---\n"
-    )
 
 
 def verify_math_mismatch(
     ko_content: str, en_new: str, ko_count: int, en_count: int,
-    *, en_old: Optional[str] = None,
+    *, en_old: Optional[str] = None,   # unused; kept for call-site compatibility
 ) -> str:
-    """Run a separate Kimi call to diagnose a math-count mismatch.
+    """Decide whether a KO/EN `$$`-count mismatch lost any mathematical meaning.
 
-    For polish, pass `en_old` (the pre-polish EN content) so the model can focus
-    on what polish changed rather than re-deriving the whole KO↔EN alignment.
-
-    Returns the assistant's terse verdict text. On failure, returns a short
-    error string starting with 'verify-failed:' so caller can still notify.
+    Two stages:
+      1. Mechanical — a KO block is benign iff its whitespace-normalized LaTeX
+         appears anywhere in EN (display or inline), since math is identical
+         across languages. Most mismatches are pure `$$display$$`→`$inline$`
+         downgrades and resolve here with NO model call.
+      2. Semantic — only the `<ins>` regions holding a genuinely-absent KO block
+         go to Kimi (no-tools agent), which judges meaning preservation WITHOUT
+         being told anything about `$$`/counts. `<ins>` is the alignment unit
+         because it survives the downgrade 1:1 (matched `$$` blocks go sparse in
+         downgrade-heavy posts and misalign). Returns a terse VERDICT string;
+         'verify-failed: …' on error.
     """
-    prompt = build_verify_prompt(ko_content, en_new, ko_count, en_count, en_old=en_old)
-    # Thinking OFF: with 400+ math blocks the model burns the 32K output budget on
-    # internal reasoning and times out before producing the verdict (observed
-    # 2026-05-25 on Characteristic_Classes, Cohomology_of_Projective_Spaces,
-    # Riemann_Roch_Theorem). The verdict format is short bullet list — no
-    # reasoning depth needed; the model can still classify SAFE/LOSSY from prose.
-    # Retry on timeout up to MAX_ATTEMPTS — verify failure leaves the user with
-    # no signal, so it's worth waiting; bounded to avoid pinning the cron lock
-    # indefinitely (each attempt ≤ KIMI_TIMEOUT_SEC).
-    MAX_ATTEMPTS = 5
+    benign, suspect_ids = _locate_divergences(ko_content, en_new)
+    if not suspect_ids:
+        return (f"VERDICT: safe\nCOUNTS: ko={ko_count} en={en_count}\n"
+                f"- mechanical: all {benign} differing block(s) survive in EN as "
+                f"inline/text (`$$`→`$` downgrade or rephrase); no content missing.")
+
+    omitted = max(0, len(suspect_ids) - _VERIFY_MAX_REGIONS)
+    ko_reg, en_reg = _ins_regions(ko_content), _ins_regions(en_new)
+    pairs = []
+    for rid in suspect_ids[:_VERIFY_MAX_REGIONS]:
+        kr, er = _cap_region(ko_reg.get(rid, "")), _cap_region(en_reg.get(rid, ""))
+        if kr.strip() and er.strip():
+            pairs.append((rid, kr, er))
+    if not pairs:
+        return (f"VERDICT: lossy\nCOUNTS: ko={ko_count} en={en_count}\n"
+                f"- {len(suspect_ids)} KO block(s) absent from EN with no comparable "
+                f"region found — needs manual check.")
+
+    prompt = VERIFY_SEM_INSTRUCTIONS + "\n"
+    for i, (rid, kr, er) in enumerate(pairs, 1):
+        prompt += f"\n=== PAIR {i} [{rid}] ===\n[KOREAN]\n{kr}\n[ENGLISH]\n{er}\n"
+    if omitted:
+        prompt += f"\n(Note: {omitted} further suspect region(s) omitted for length.)\n"
+
+    MAX_ATTEMPTS = 3
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
-            # Single-shot: read the inlined KO/EN texts, emit the terse verdict.
-            # The no-tools agent stops the agentic re-read loop that made this
-            # audit ~96% of all Kimi cron tokens (see call_kimi docstring, 2026-05).
-            return call_kimi(
-                prompt, thinking=False,
-                agent_file=VERIFY_AGENT_FILE, mcp_config_file=VERIFY_MCP_FILE,
-            ).strip()
+            # thinking OFF: thinking mode didn't suppress the model's tendency to
+            # "think out loud" in the visible message on dense posts (and was
+            # slower). We instead make correctness immune to it: _finalize_verdict
+            # keeps only the model's LAST verdict, so any premature first-impression
+            # verdict it emits before revising is ignored.
+            out = call_kimi(prompt, thinking=False,
+                            agent_file=VERIFY_AGENT_FILE,
+                            mcp_config_file=VERIFY_MCP_FILE).strip()
+            note = (f"\n(benign downgrades: {benign}; semantic-checked regions: "
+                    f"{len(pairs)}" + (f"; {omitted} omitted" if omitted else "") + ")")
+            return _finalize_verdict(out) + note
         except subprocess.TimeoutExpired:
-            log(f"verify: kimi timeout on attempt {attempt}/{MAX_ATTEMPTS}"
+            log(f"verify: kimi timeout {attempt}/{MAX_ATTEMPTS}"
                 + (", retrying" if attempt < MAX_ATTEMPTS else ", giving up"))
             continue
         except Exception as e:

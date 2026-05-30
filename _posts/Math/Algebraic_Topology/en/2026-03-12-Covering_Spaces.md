@@ -224,7 +224,7 @@ Examining each of these categories, we find that they are simply partially order
 
 Explicitly, a covering space $$p:E \rightarrow B$$ determines a subgroup via $$\pi_1(p):\pi_1(E)\rightarrow \pi_1(B)$$, and two transitive $$G$$-sets $$X\cong G/H$$ and $$Y\cong G/K$$ are isomorphic if and only if $$H$$ and $$K$$ are conjugate, whence the result. On the other hand, if one wishes to work with specific subgroups of $$\pi_1(B,x)$$ rather than their conjugacy classes, this amounts to selecting a representative from each isomorphism class of covering spaces; equivalently, it is the same as fixing a basepoint in $$B$$ and considering *pointed* covering maps $$p:(E, y)\rightarrow (B,x)$, examining their isomorphism classes individually. Thus we have a Galois correspondence
 
-$$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $B$}\right\}\simeq \left\{\text{subgroups of $\pi_1(B,x)$}\right\}$$
+$$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $$B$$}\right\}\simeq \left\{\text{subgroups of $$\pi_1(B,x)$$}\right\}$$
 
 To put this in a more familiar form, for any $$H\leq \pi_1(B,x)$$ we may construct the corresponding covering space $$E_H$$, and the automorphism group $$\Aut(E_H/B)$$ of $$E_H$$ over $$B$$ satisfies
 

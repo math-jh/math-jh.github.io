@@ -1,5 +1,6 @@
 ---
 title: "Chow Groups"
+description: "This post defines the Chow group, which generalizes the divisor class group on arbitrary varieties, and explains how to extend intersection numbers to any variety using algebraic cycles and rational equivalence."
 excerpt: "Chow groups and the cycle class map"
 
 categories: [Math / Algebraic Varieties]
@@ -14,14 +15,15 @@ header:
 date: 2026-05-11
 last_modified_at: 2026-05-11
 weight: 18
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-30T06:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T06:00:03+00:00
 ---
-Previously, in [§The Riemann–Roch Theorem for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1), we defined the intersection number of two divisors. This is naturally a very interesting concept, and in this post we define the *Chow group* in order to generalize this notion to arbitrary varieties.
+Previously, in [§The Riemann–Roch Theorem for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1), we defined the intersection number of two divisors. This is a very interesting notion, and in this post we define the *Chow group* in order to generalize it to arbitrary varieties.
 
 ## Chow Groups
 
-In [§Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1), we defined a (Weil) divisor as a formal sum of codimension 1 closed irreducible subvarieties, and collected these up to linear equivalence to define the divisor class group $$\Cl(X)$$. Similarly, the Chow group is the collection of formal sums of $$k$$-dimensional closed irreducible subvarieties up to rational equivalence.
+In [§Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1), we defined a (Weil) divisor as a formal sum of codimension 1 closed irreducible subvarieties, and collected these up to linear equivalence to obtain the divisor class group $$\Cl(X)$$. Similarly, the Chow group is obtained by taking formal sums of $$k$$-dimensional closed irreducible subvarieties up to rational equivalence.
 
 <div class="definition" markdown="1">
 
@@ -29,23 +31,23 @@ In [§Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1), we
 
 $$Z = \sum_{i} n_i V_i$$
 
-of $$k$$-dimensional closed irreducible subvarieties of $$X$$. Here $$V_i \subset X$$ is a $$k$$-dimensional closed irreducible subvariety and $$n_i \in \mathbb{Z}$$. We denote the free abelian group of $$k$$-cycles by $$Z_k(X)$$.
+of $$k$$-dimensional closed irreducible subvarieties of $$X$$. Here each $$V_i \subset X$$ is a $$k$$-dimensional closed irreducible subvariety and $$n_i \in \mathbb{Z}$$. We write $$Z_k(X)$$ for the free abelian group of $$k$$-cycles.
 
 </div>
 
-By definition, an algebraic $$k$$-cycle is close to homology. When we need to interpret this from the cohomology perspective (via duality), we denote a *codimension $$k$$ cycle* by $$Z^k(X) = Z_{n-k}(X)$$ (where $$n = \dim X$$). As mentioned above, the Chow group is obtained by taking a particular equivalence relation on these $$Z_k(X)$$.
+By definition, an algebraic $$k$$$-cycle is close to homology. When we need to interpret this from the cohomology perspective (via duality), we denote a *codimension $$k$$ cycle* by $$Z^k(X) = Z_{n-k}(X)$$ (where $$n = \dim X$$). As mentioned above, the Chow group is obtained by imposing a specific equivalence relation on these $$Z_k(X)$$.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> For a variety $$X$$, a $$(k+1)$$-dimensional closed irreducible subvariety $$Y \subset X$$, and a rational function $$f \in \mathbb{K}(Y)^\ast$$ on it, we define the *principal cycle* $$\divisor(f) \in Z_k(X)$$ by the formula
+<ins id="def2">**Definition 2**</ins> Let $$X$$ be a variety, $$Y \subset X$$ a $$(k+1)$$-dimensional closed irreducible subvariety, and $$f \in \mathbb{K}(Y)^\ast$$ a rational function on $$Y$$. The *principal cycle* $$\divisor(f) \in Z_k(X)$$ is defined by the formula
 
 $$\divisor(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
 
-Here $$v_V(f)$$ is the valuation of $$f$$ at $$V$$.
+where $$v_V(f)$$ is the valuation of $$f$$ at $$V$$.
 
 </div>
 
-Intuitively, this definition is nothing more than repeating [§Divisors, ⁋Definition 3](/en/math/algebraic_varieties/divisors#def3) with $$Y$$ as the ambient variety, and is thus a natural generalization of that definition. A somewhat subtle point is the normality mentioned in the introduction of that post: even if $$X$$ is a nice (e.g., normal) variety, an arbitrary subvariety of $$X$$ need not inherit this property, so in this case normalization becomes somewhat more essential. Keeping this in mind, we make the following definition.
+Intuitively, this definition is nothing more than repeating [§Divisors, ⁋Definition 3](/en/math/algebraic_varieties/divisors#def3) with $$Y$$ as the ambient variety, and is thus the natural generalization of that definition. A somewhat subtle point is the normality mentioned in the introduction of that post: even if $$X$$ is a nice (e.g., normal) variety, an arbitrary subvariety of $$X$$ need not inherit this property, so in this case normalization becomes somewhat more essential. Keeping this in mind, we make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -83,7 +85,7 @@ The codimension $$k$$ Chow group is defined by $$\CH^k(X) = \CH_{n-k}(X)$$, and 
 
 In algebraic topology, homology and cohomology are functorial for arbitrary continuous maps, but Chow groups are not. Chow groups have pushforward functoriality only for **proper morphisms**, and pullback functoriality only for **flat morphisms**.
 
-First, a morphism $$f: X \to Y$$ between two varieties being a *proper morphism* is roughly the algebraic-geometric analogue of a compact map. ([\[Scheme Theory\] §Valuation Rings, ⁋Definition 8](/en/math/scheme_theory/valuative_criteria#def8)) Something to be careful about is that compactness does not work well in algebraic geometry, so we cannot translate it directly. The intuition is that, just as the fiber and image of a compact map do not leak out to infinity, the same holds for a proper morphism; in particular, what is important is that only finitely many additional coordinates are needed to describe this fiber. ([\[Scheme Theory\] §Properties of Scheme Morphisms, ⁋Example 15](/en/math/scheme_theory/properties_of_scheme_morphisms#ex15)) The number of coordinates needed is computed by the extension degree of function fields $$[\mathbb{K}(V):\mathbb{K}(f(V))]$$, which is defined when $$V$$ and $$f(V)$$ have the same dimension. For convenience, writing
+First, a morphism $$f: X \to Y$$ between two varieties being a *proper morphism* is roughly the algebraic-geometric analogue of a compact map. ([\[Scheme Theory\] §Valuation Rings, ⁋Definition 8](/en/math/scheme_theory/valuative_criteria#def8)) One must be careful, however: compactness does not work well in algebraic geometry, so we cannot translate it directly. The intuition is that, just as the fibers and image of a compact map do not escape to infinity, the same holds for a proper morphism; in particular, what matters is that only finitely many additional coordinates are needed to describe each fiber. ([\[Scheme Theory\] §Properties of Scheme Morphisms, ⁋Example 15](/en/math/scheme_theory/properties_of_scheme_morphisms#ex15)) The number of coordinates needed is computed by the extension degree of function fields $$[\mathbb{K}(V):\mathbb{K}(f(V))]$$, which is defined when $$V$$ and $$f(V)$$ have the same dimension. For convenience, writing
 
 $$\deg(V/f(V))=\begin{cases}[\mathbb{K}(V):\mathbb{K}(f(V))]&\text{if $\dim f(V)=\dim V$,}\\ 0&\text{if $\dim f(V)<\dim V$}\end{cases}$$
 
@@ -101,7 +103,7 @@ holds.
 
 That is, intuitively, if an algebraic cycle $$[V]$$ is mapped to $$[f(V)]$$ with degree $$d$$ via a proper morphism $$f$$, then $$f_\ast[V]$$ captures precisely this degree.
 
-Now we examine pullback. Since this is closer to the cohomology convention than the homology convention, we consider the codimension $$k$$ Chow group. The pullback $$f^\ast: \CH^k(Y)\rightarrow \CH^k(X)$$ can be thought of intuitively as taking a cycle on the target $$Y$$ and stretching it in the fiber direction to give a cycle on the source. For this to be well-defined, the dimension of the fiber over each point of $$Y$$ must be constant, and moreover the structure of the fiber must not change abruptly as we vary the parameter over each point of $$Y$$. A *flat morphism* is precisely the morphism reflecting these properties, and in this case we obtain the following proposition.
+Now we examine pullback. Since this is closer to the cohomology convention than the homology convention, we consider the codimension $$k$$ Chow group. The pullback $$f^\ast: \CH^k(Y)\rightarrow \CH^k(X)$$ can be thought of intuitively as taking a cycle on the target $$Y$$ and stretching it in the fiber direction to give a cycle on the source. For this to be well defined, the dimension of the fiber over each point of $$Y$$ must be constant, and moreover the structure of the fiber must not change abruptly as the parameter varies over $$Y$$. A *flat morphism* is precisely the morphism reflecting these properties, and in this case we obtain the following proposition.
 
 <div class="proposition" markdown="1">
 
@@ -183,7 +185,7 @@ This is a map that interprets algebraic cycles topologically, and if $$X$$ is sm
 
 </div>
 
-Here $$H^{\text{BM}}$$ on the right-hand side is Borel-Moore homology, which unlike singular homology allows us to view a closed oriented submanifold (in the non-compact situation) as a class in Borel-Moore homology. From this perspective, we can see that Borel-Moore homology is a slightly better analogue of our Chow group than singular cohomology. Also, since $$X$$ is a complex variety, the dimension on the right-hand side doubles to become $$2k$$, which is worth noting.
+Here $$H^{\text{BM}}$$ on the right-hand side is Borel–Moore homology, which unlike singular homology allows us to view a closed oriented submanifold (in the non-compact situation) as a class in Borel–Moore homology. From this perspective, we can see that Borel–Moore homology is a slightly better analogue of our Chow group than singular cohomology. Also, since $$X$$ is a complex variety, the dimension on the right-hand side doubles to become $$2k$$, which is worth noting.
 
 ## Chow Ring
 
@@ -199,7 +201,7 @@ This ring structure also matches the cohomology ring structure we already knew, 
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**Example 14 ($\mathbb{P}^n$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
+<ins id="ex14">**Example 14 ($$\mathbb{P}^n$$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 
 Here $$H$$ is the hyperplane class. $$H^k$$ represents a $$k$$-codimensional linear subspace.
 
