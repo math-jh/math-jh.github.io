@@ -1,5 +1,6 @@
 ---
 title: "Basic Notions"
+description: "Introduces the basic theory of commutative rings and modules over them. Examines the definitions of annihilators and ideal quotients, the structure of related exact sequences, and finiteness conditions for modules."
 excerpt: "Basic conventions and definitions for rings and algebras used in commutative algebra"
 
 categories: [Math / Commutative Algebra]
@@ -13,10 +14,11 @@ sidebar:
 date: 2024-10-22
 last_modified_at: 2025-02-23
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T20:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T20:00:03+00:00
 ---
-In every post in this category, a ring means a commutative ring. Also, an arbitrary $$A$$-algebra is always understood to be a commutative associative unital $$A$$-algebra. In particular, since we saw after [\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1) that an associative unital $$A$$-algebra $$E$$ and a ring homomorphism $$A\rightarrow Z(E)$$ are the same thing, it suffices to think of an $$A$$-algebra in what follows as a ring homomorphism $$A\rightarrow E$$.
+In every post in this category, a ring means a commutative ring. Also, an arbitrary $$A$$-algebra is always understood to be a commutative associative unital $$A$$-algebra. In particular, since we observed after [\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1) that an associative unital $$A$$-algebra $$E$$ is the same thing as a ring homomorphism $$A\rightarrow Z(E)$, it suffices in what follows to think of an $$A$$-algebra as a ring homomorphism $$A\rightarrow E$$.
 
 ## Basic Definitions
 
@@ -102,7 +104,7 @@ $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
 is given and let $$M'=\bigcup M_k$$. Then $$M'$$ is finitely generated, so write $$M'=\langle x_1,\ldots, x_n\rangle$$. For each $$i$$, we can choose $$k_i$$ such that $$x_i\in M_{k_i}$$, and then for the largest of these $$k_i$$ we have $$M_{k_i}=M'$$.
 
-Now we show that condition 1 and condition 3 are equivalent. First, if condition 1 is satisfied, then for any collection of submodules of $$M$$ the hypothesis of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4) is satisfied by ACC, so 3 is obvious. Conversely, if condition 3 is satisfied, then when an ascending chain of submodules of $$M$$
+Now we show that condition 1 and condition 3 are equivalent. First, if condition 1 is satisfied, then for any collection of submodules of $$M$$ the hypothesis of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4) is satisfied by the ACC, so 3 follows immediately. Conversely, if condition 3 is satisfied, then when an ascending chain of submodules of $$M$$
 
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
