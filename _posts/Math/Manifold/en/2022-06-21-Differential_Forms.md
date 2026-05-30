@@ -26,11 +26,11 @@ Using [§Tangent and Cotangent Bundles, ⁋Example 5](/en/math/manifold/tangent_
 
 $$\mathcal{T}^{r,s}(M)=\mathcal{T}^{r,s}(TM),\quad \bigwedge\nolimits^\ast(M)=\bigwedge(T^\ast M),\quad \bigwedge\nolimits^k(M)=\bigwedge\nolimits^k(T^\ast M)$$
 
-the *$(r,s)$-tensor bundle*, *exterior algebra bundle*, and *exterior $k$-bundle* on $$M$$, respectively. The smooth sections of these bundles,
+the *$$(r,s)$$-tensor bundle*, *exterior algebra bundle*, and *exterior $$k$$-bundle* on $$M$$, respectively. The smooth sections of these bundles,
 
 $$\Gamma\left(\mathcal{T}^{r,s}(M)\right),\quad\Omega^\ast(M):=\Gamma\left(\bigwedge\nolimits^\ast(M)\right),\quad\Omega^k(M):=\Gamma\left(\bigwedge\nolimits^k(M)\right)$$
 
-are called *tensor fields*, *differential forms*, and *differential $k$-forms*, respectively.
+are called *tensor fields*, *differential forms*, and *differential $$k$$-forms*, respectively.
 
 </div>
 

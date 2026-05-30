@@ -278,7 +278,7 @@ $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6 (Mayer-Vietoris sequence)**</ins> 위상공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cap V$$로 나타난다 하고, 이 위에 정의된 cohomology theory $$H$$를 생각하자. 그럼 long exact sequence
+<ins id="prop6">**명제 6 (Mayer-Vietoris sequence)**</ins> 위상공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cup V$$로 나타난다 하고, 이 위에 정의된 cohomology theory $$H$$를 생각하자. 그럼 long exact sequence
 
 $$\cdots \to H^{n}(X) \xrightarrow{(i^*, j^*)} H^{n}(U) \oplus H^{n}(V) \xrightarrow{k^* - l^*} H^{n}(U \cap V) \xrightarrow{\delta} H^{n+1}(X) \to \cdots$$
 
