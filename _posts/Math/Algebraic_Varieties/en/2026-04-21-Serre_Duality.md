@@ -1,5 +1,6 @@
 ---
 title: "Serre Duality"
+description: "We explore the natural duality between line bundles and cohomology on projective space, and examine the construction of the cup product and Serre duality."
 excerpt: "Serre duality theorem and its applications"
 
 categories: [Math / Algebraic Varieties]
@@ -14,8 +15,9 @@ header:
 date: 2026-04-21
 last_modified_at: 2026-04-22
 weight: 14
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T04:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T04:30:03+00:00
 ---
 In geometrically nice situations, there is a natural duality between cohomology in dimension $$k$$ and cohomology in codimension $$k$$. To prove this, we used a perfect pairing
 

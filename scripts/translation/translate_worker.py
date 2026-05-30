@@ -50,6 +50,9 @@ LOCK_PATH   = Path("/tmp/translate-worker.lock")
 # ---------------------------------------------------------------------------
 
 KIMI_BIN              = shutil.which("kimi") or str(Path.home() / ".local/bin/kimi")
+# No-tools agent + empty MCP for the single-shot verify/audit call (see call_kimi).
+VERIFY_AGENT_FILE     = str(SCRIPT_DIR / "verify-agent.yaml")
+VERIFY_MCP_FILE       = str(SCRIPT_DIR / "verify-mcp.json")
 KIMI_TIMEOUT_SEC      = 1500                 # 25min — large posts (>30KB) often need >15min
 MAX_TRANSLATE_ATTEMPTS = 3                   # re-translate on LOSSY verify verdict, up to N tries
 MIN_KO_BODY_CHARS     = 300                  # skip stubs below this
@@ -433,7 +436,9 @@ INSTRUCTIONS = """You translate the BODY of a Korean math blog post (Jekyll mark
 
 Conversion rules for the body:
 
-1. Math content: preserve every `$$...$$` block VERBATIM. Do not translate variable names or LaTeX commands. Same count and order as the KO source.
+1. Math content: preserve every `$$...$$` block VERBATIM — same LaTeX, same count, same order, AND the SAME DELIMITER. A KO `$$...$$` display block MUST remain a `$$...$$` display block in EN; never downgrade a display block into inline `$...$`. Likewise keep inline `$...$` inline. Do not translate variable names or LaTeX commands.
+   - WRONG: KO `... 사상 $$f\\colon X \\to Y$$ 가 주어지면 ...` → EN `... given a map $f\\colon X \\to Y$, ...` (display block collapsed into inline — FORBIDDEN).
+   - RIGHT: EN `... given a map $$f\\colon X \\to Y$$, ...` (delimiter preserved).
 
 2. Cross-reference links:
    - Path: `/ko/...` → `/en/...` (slug stays the same).
@@ -461,7 +466,7 @@ Conversion rules for the body:
 
 # Self-check before responding (must all pass)
 
-- Same number of `$$...$$` blocks as the KO body — no math added, dropped, split, or merged.
+- Same number of `$$...$$` blocks as the KO body — count the `$$` markers: EN must have exactly as many `$$...$$` display blocks as KO, none silently downgraded to inline `$...$`, none added/dropped/split/merged.
 - Every `<ins id="...">` from KO appears with the same id and same number N.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
 - The body ends at the final content line — do not truncate mid-sentence.
@@ -490,7 +495,7 @@ Given the Korean source body (for meaning reference) and the current English tra
 
 # What to preserve VERBATIM — mathematical fidelity is non-negotiable
 
-1. **Math blocks `$$...$$`** — byte-for-byte: LaTeX commands, variable names, spacing, ordering. The COUNT and ORDER of math blocks in the output MUST match the KO source exactly. Easiest rule: never touch what is inside `$$...$$`.
+1. **Math blocks `$$...$$`** — byte-for-byte: LaTeX commands, variable names, spacing, ordering, AND delimiter. The COUNT and ORDER of `$$...$$` display blocks MUST match the KO source exactly. NEVER downgrade a `$$...$$` display block into inline `$...$` (and never promote inline into display). Easiest rule: never touch what is inside `$$...$$`, and never change a `$$` delimiter into `$`.
 2. **`<ins id="...">**Label N**</ins>` numbering** — every `<ins>` id (e.g. `def1`, `prop2`) and the integer N MUST appear with the same id and N, in the same order as in the KO source.
 3. Cross-reference **paths** (`/en/math/...`) and **anchors** (`#def1`, `#prop2`) — unchanged. Visible labels may be lightly refined only if materially clearer.
    - **Verification rule**: do NOT change an anchor target or invent a new `[display](url)` pairing unless you have actually seen the target with that exact form. If unsure, leave the existing form untouched.
@@ -501,7 +506,7 @@ Given the Korean source body (for meaning reference) and the current English tra
 
 # Self-check before responding
 
-- Same number of `$$...$$` blocks as the KO body.
+- Same number of `$$...$$` blocks as the KO body — none downgraded to inline `$...$`.
 - Every `<ins id="...">**Label N**</ins>` from KO present with identical id and N.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
 - Output is body only — no frontmatter or `---` lines.
@@ -636,16 +641,35 @@ def validate_translation(
     return None
 
 
-def call_kimi(prompt: str, *, thinking: bool = False) -> str:
+def call_kimi(prompt: str, *, thinking: bool = False,
+              agent_file: Optional[str] = None,
+              mcp_config_file: Optional[str] = None) -> str:
     """Invoke `kimi --quiet` with prompt on stdin, return final assistant message.
 
     Thinking is OFF by default — it shares the 32K output-token budget with the
     actual response, and on large posts (e.g. Modules.md 2026-05-25) the model
     can burn the entire budget on internal reasoning and then truncate the
     visible output. Callers that need analytical depth (e.g. verify) opt in.
+
+    agent_file / mcp_config_file override the agent spec and MCP config. The
+    default kimi agent is agentic with a full toolset (Shell, Grep, ReadFile,
+    SearchWeb, …); on a single-shot analysis prompt (everything inlined, no
+    files to read) the model still reaches for Shell/Grep to "count the blocks"
+    and loops dozens of tool-call steps, re-reading the whole context as
+    cache_read each step. The verify audit did exactly this — median 18, up to
+    177 steps/turn, ~96% of ALL Kimi cron tokens (2026-05). Pointing the verify
+    call at a no-tools agent (verify-agent.yaml, allowed_tools: []) + an empty
+    MCP config forces a direct one-step answer (validated: complete, correctly
+    formatted verdict, exit 0, ~50K tokens/post vs millions before). A step cap
+    is NOT a safe substitute — the model spends step 1 on the tool call, so any
+    low cap truncates before the verdict and exits non-zero on big posts.
     """
     args = [KIMI_BIN, "--quiet", "--print", "--final-message-only",
             "--thinking" if thinking else "--no-thinking"]
+    if agent_file is not None:
+        args += ["--agent-file", agent_file]
+    if mcp_config_file is not None:
+        args += ["--mcp-config-file", mcp_config_file]
     proc = subprocess.run(
         args,
         input=prompt,
@@ -875,7 +899,13 @@ def verify_math_mismatch(
     MAX_ATTEMPTS = 5
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
-            return call_kimi(prompt, thinking=False).strip()
+            # Single-shot: read the inlined KO/EN texts, emit the terse verdict.
+            # The no-tools agent stops the agentic re-read loop that made this
+            # audit ~96% of all Kimi cron tokens (see call_kimi docstring, 2026-05).
+            return call_kimi(
+                prompt, thinking=False,
+                agent_file=VERIFY_AGENT_FILE, mcp_config_file=VERIFY_MCP_FILE,
+            ).strip()
         except subprocess.TimeoutExpired:
             log(f"verify: kimi timeout on attempt {attempt}/{MAX_ATTEMPTS}"
                 + (", retrying" if attempt < MAX_ATTEMPTS else ", giving up"))
