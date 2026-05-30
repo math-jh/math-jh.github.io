@@ -2823,3 +2823,75 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
 | `Topology` | looks like emphasis (no <sub> partner) |
 
+## 호몰로지의 계산
+- post: `_posts/Math/Algebraic_Topology/ko/2025-08-05-Computation_of_Homology.md`
+- permalink: `/ko/math/algebraic_topology/computation_of_homology`
+- scanned: 2026-05-30T01:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `reduced homology` | multi-word English emphasis — possibly a definition |
+| `coefficient group` | multi-word English emphasis — possibly a definition |
+| `CW complex` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+
+## 코호몰로지
+- post: `_posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md`
+- permalink: `/ko/math/algebraic_topology/cohomology`
+- scanned: 2026-05-30T01:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `, j^` | multi-word English emphasis — possibly a definition |
+| `- l^` | multi-word English emphasis — possibly a definition |
+| `tensor product` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+
+## 합곱
+- post: `_posts/Math/Algebraic_Topology/ko/2025-09-12-Cup_Products.md`
+- permalink: `/ko/math/algebraic_topology/cup_products`
+- scanned: 2026-05-30T02:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `grade` | looks like emphasis (no <sub> partner) |
+| `(X;A)\otimes_A H^` | multi-word English emphasis — possibly a definition |
+| `adjunction formula` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+
+## Acyclic models theorem
+- post: `_posts/Math/Algebraic_Topology/ko/2025-09-17-Acyclic_Models_Theorem.md`
+- permalink: `/ko/math/algebraic_topology/acyclic_models_theorem`
+- scanned: 2026-05-30T02:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `model들` | mixed-script emphasis — possibly a definition |
+
+## 푸앵카레 쌍대성
+- post: `_posts/Math/Algebraic_Topology/ko/2025-09-23-Poincare_Duality.md`
+- permalink: `/ko/math/algebraic_topology/Poincare_duality`
+- scanned: 2026-05-30T02:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Godement resolution` | multi-word English emphasis — possibly a definition |
+| `무엇인지` | looks like emphasis (no <sub> partner) |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+
+## 특성류
+- post: `_posts/Math/Algebraic_Topology/ko/2025-10-07-Characteristic_Classes.md`
+- permalink: `/ko/math/algebraic_topology/characteristic_classes`
+- scanned: 2026-05-30T03:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `base space` | multi-word English emphasis — possibly a definition |
+| `total space` | multi-word English emphasis — possibly a definition |
+| `infinite Grassmannian` | multi-word English emphasis — possibly a definition |
+| `Schubert symbol` | multi-word English emphasis — possibly a definition |
+| `polynomial algebra로서` | mixed-script emphasis — possibly a definition |
+

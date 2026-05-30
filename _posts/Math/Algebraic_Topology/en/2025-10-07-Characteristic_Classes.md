@@ -1,5 +1,6 @@
 ---
 title: "Characteristic Classes"
+description: "We define the notion of fiber bundles, which generalize the properties of covering spaces, and discuss vector bundles along with the basics of characteristic classes."
 excerpt: "The definition of characteristic classes of fiber bundles and their interpretation via classifying spaces"
 
 categories: [Math / Algebraic Topology]
@@ -13,10 +14,11 @@ sidebar:
 date: 2025-10-07
 last_modified_at: 2025-10-07
 weight: 10
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T01:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T01:30:03+00:00
 ---
-In the previous post, the map $$p:\Spe(\or_M^A)\rightarrow M$$ played an important role as a covering space, and these had the following properties.
+In the previous post, the map $$p:\Spe(\or_M^A)\rightarrow M$$ played an important role as a covering space, and it had the following properties.
 
 1. For any $$x\in M$$, we have $$p^{-1}(x)\cong \{x\}\times A^\times$$.
 2. Moreover, for any $$x\in M$$, there exists a suitable open set $$U$$ such that $$p^{-1}(U)\cong U\times A^\times$$.
