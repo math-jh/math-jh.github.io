@@ -1,5 +1,6 @@
 ---
 title: "Associated Primes"
+description: "We define the notion of comaximal ideals in a commutative ring and examine their main properties, including the prime avoidance lemma."
 excerpt: "The prime avoidance lemma and the definition and properties of associated primes"
 
 categories: [Math / Commutative Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2024-10-16
 last_modified_at: 2024-10-16
 weight: 6
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T16:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T16:30:04+00:00
 ---
 ## Prime avoidance lemma
 
