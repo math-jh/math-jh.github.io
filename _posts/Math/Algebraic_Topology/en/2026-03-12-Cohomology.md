@@ -1,5 +1,6 @@
 ---
 title: "Cohomology"
+description: "Cohomology is defined as the dual of homology, and through the cohomology ring with its natural product structure, we show that spaces with the same homology can still be topologically distinct."
 excerpt: "The definition of cohomology and the universal coefficient theorem"
 
 categories: [Math / Algebraic Topology]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-09-07
 last_modified_at: 2025-09-07
 weight: 6
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-05-30T00:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T00:00:03+00:00
 ---
 Cohomology, as its name suggests, can be regarded as the dual concept to homology. However, if the $k$th cohomology $H^k(X)$ of a space $X$ were simply the dual of the $k$th homology $H_k(X)$, there would be no need to consider it separately.
 
@@ -22,7 +24,7 @@ In fact, cohomology provides a more refined invariant than homology: for instanc
 
 ## Universal Coefficient Theorem for Homology
 
-Before beginning our discussion in earnest, we first review homology with coefficients, which we treated after [§Computation of Homology, ⁋Definition 6 (Eilenberg–Steenrod axioms)](/en/math/algebraic_topology/computation_of_homology#def6). We saw that when defining simplicial homology or singular homology, by taking the tensor product with an abelian group $A$ instead of the chain groups $C_\bullet(X)$ or $C_\bullet^\Delta(X)$, we obtain chain complexes
+Before beginning our discussion in earnest, we first review homology with coefficients, which we treated after [§Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6). We saw that when defining simplicial homology or singular homology, by taking the tensor product with an abelian group $A$ instead of the chain groups $C_\bullet(X)$ or $C_\bullet^\Delta(X)$, we obtain chain complexes
 
 $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=C_\bullet^\Delta(X)\otimes_\mathbb{Z}A$$
 
@@ -46,7 +48,7 @@ is also a splitting short exact sequence. ([##ref](splitting_tensor_splits)) Wri
 
 ![snake_lemma](/assets/images/Math/Algebraic_Topology/Cohomology-1.png){:style="width:32em" class="invert" .align-center}
 
-and thus by [\[Homological Algebra\] §The Long Exact Sequence, ⁋Theorem 1 (The long exact sequence)](/en/math/homological_algebra/long_exact_sequence#thm1) we obtain the long exact sequence
+and thus by [\[Homological Algebra\] §The Long Exact Sequence, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1) we obtain the long exact sequence
 
 $$\cdots B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow}Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C\otimes A)\rightarrow B_{k-1}\otimes_\mathbb{Z}A\overset{\delta_{k-1}}{\longrightarrow} Z_{k-1}\otimes_\mathbb{Z}A\rightarrow\cdots\tag{2}$$
 
@@ -83,7 +85,7 @@ $$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H
 
 ## Definition of Cohomology and Universal Coefficient Theorem
 
-Just as in [§Computation of Homology, ⁋Definition 6 (Eilenberg–Steenrod axioms)](/en/math/algebraic_topology/computation_of_homology#def6), we define the Eilenberg-Steenrod axioms for cohomology, and a contravariant functor with connecting morphisms satisfying them can be called a cohomology theory. Writing this out explicitly gives the following.
+Just as in [§Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6), we define the Eilenberg-Steenrod axioms for cohomology, and a contravariant functor with connecting morphisms satisfying them can be called a cohomology theory. Writing this out explicitly gives the following.
 
 <div class="definition" markdown="1">
 
@@ -94,7 +96,7 @@ $$\delta: H^k(X) \rightarrow H^{k+1}(X,A)$$
 the *Eilenberg-Steenrod axioms* are the following conditions.
 
 - (Homotopy) If two maps $(X,A) \rightarrow (Y,B)$ are homotopic, then the two induced homomorphisms $H^k(Y,B) \rightarrow H^k(X,A)$ are equal.
-- (Excision) For $(X,A,Z)$ satisfying the conditions of [§Computation of Homology, ⁋Theorem 2 (Excision theorem)](/en/math/algebraic_topology/computation_of_homology#thm2), the inclusion $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$ induces an isomorphism.
+- (Excision) For $(X,A,Z)$ satisfying the conditions of [§Computation of Homology, ⁋Theorem 2](/en/math/algebraic_topology/computation_of_homology#thm2), the inclusion $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$ induces an isomorphism.
 - (Dimension) For the one-point space $\ast$, $H^k(\ast)=0$ for all $k>0$.
 - (Additivity) If $X=\coprod X_\alpha$, then $H^k(X)\cong\bigoplus H^k(X_\alpha)$.
 - (Exactness) For each pair $(X,A)$, the two inclusions $(A,\emptyset) \hookrightarrow (X,\emptyset)$ and $(X,\emptyset)\hookrightarrow (X,A)$ fit into the long exact sequence

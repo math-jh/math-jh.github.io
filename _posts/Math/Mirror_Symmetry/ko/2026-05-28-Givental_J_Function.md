@@ -53,21 +53,15 @@ $$\int_\Sigma \psi_i\in \mathbb{Z}$$
 
 그럼 [정의 1](#def1)의 $$\psi_i^{k_i}$$ 성분들이 source curve의 degeneration을, $$\ev_i^\ast\gamma_i$$가 target의 incidence condition을 각각 결정한다는 것은 자명하다. 특히 나중 조건은 $$i$$번째 marked point $$p_i$$의 image가 $$\gamma_i$$를 지난다는 조건이다. 그러나 첫째 조건은 다소 덜 직관적이므로 이 의미를 풀어 살펴보자. 
 
-우리는 앞서 $$\psi_i$$가 본질적으로는 source curve의 degeneration들의 합으로 나타날 수 있음을 보았다. 더 구체적으로, source curve가 marked point $$1,\ldots, n$$을 두 개의 component $$S$$, $$S^c$$로 쪼개며 degenerate한다 하고, 이에 대응되는 boundary divisor를 $$D_S$$라 하자. 여기서 우리는 $$i\in S$$인 것으로 두며, $$\mathbb{P}^1$$을 fix하기 위해서는 세 점이 필요하므로 $$S$$와 $$S^c$$ 모두 두 점 이상이어야 한다. 직관적으로 $$\psi_i$$는 이러한 방식으로 생기는 boundary divisor들의 합 $$\sum_{i\in S} D_S$$처럼 생각할 수 있지만, 이대로 두면 같은 cohomology class가 여러 번 세게 되므로 redundancy를 제거하는 reference choice가 필요하다. 즉, $$j,k$$를 고정하고, $$S^c$$에 해당하는 component를 $$j,k$$와 nodal point로 이쪽 $$\mathbb{P}^1$$의 automorphism을 죽여주어야 한다. 그럼 
+우리는 앞서 $$\psi_i$$가 본질적으로는 source curve의 degeneration들의 합으로 나타날 수 있음을 보았다. 더 구체적으로, source curve가 marked point $$1,\ldots, n$$을 두 개의 component $$S$$, $$S^c$$로 쪼개며 degenerate한다 하고, 이에 대응되는 boundary divisor를 $$D_S$$라 하자. 여기서 우리는 $$i\in S$$인 것으로 두며, $$i$$가 속한 component를 *tail*이라 부른다. 이 때, $$\mathbb{P}^1$$을 stable하게 만들기 위해서는 세 점이 필요하므로 $$S$$와 $$S^c$$ 모두 두 점 이상이어야 한다. 
 
-조금 더 구체적으로, marked point가 여러 개 있을 때 $$p_i$$가 어떤 tail로 떨어지는 방법은 한 가지가 아니다 — $$p_i$$와 함께 어떤 다른 marked point들이 같은 tail에 머무를지에 따라 다양한 boundary divisor $$D_S$$ (여기서 $$S \ni i$$이고, $$D_S$$는 source curve가 marked points $$S, S^c$$로 분배되는 nodal degeneration의 codim-1 stratum)가 가능하다. $$\psi_i$$의 boundary representative는 이 *모든 가능한 split의 합*으로 적힌다. 다만 그냥 $$\sum_{S \ni i} D_S$$로 두면 같은 cohomology class를 여러 번 세게 되므로 redundancy를 제거하는 reference choice가 필요한데, 예를 들어 target 없는 $$\overline{\mathcal{M}}_{0, n}$$에서 $$i$$ 외의 두 reference index $$j, k$$를 잡으면
-
-$$\psi_i \;=\; \sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S,\; j, k \notin S}} D_S$$
-
-라는 식으로 정리된다 ($$j, k$$의 다른 선택은 또 다른 cohomologically equivalent representative를 주고, 합의 index 조건은 그 선택이 만들어내는 specific normalization). 합의 각 항 $$D_S$$가 곧 "$$p_i$$가 $$S \setminus \{i\}$$의 marked points와 함께 같은 tail로 떨어진" 하나의 degeneration 방법에 해당하므로, $$\psi_i$$가 이러한 모든 splitting을 한꺼번에 packaging한 것임을 알 수 있다.
-
-이 boundary divisor decomposition이 *topological recursion relation* (TRR)이며, $$\psi_i$$의 cup product가 들어간 descendant integral을 위 식으로 풀어쓰면 적분이 boundary stratum 위의 적분의 합으로 분해되고, 각 boundary stratum이 *더 작은 두 moduli space의 product*로 인식되므로 (degeneration의 양쪽 컴포넌트가 각자 별도의 stable map moduli를 이룸) descendant invariant가 *lower-marked-point invariant들의 곱의 합*으로 환원된다.
+직관적으로 $$\psi_i$$는 이러한 방식으로 생기는 boundary divisor들의 합 $$\sum_{i\in S} D_S$$처럼 생각할 수 있지만, 이대로 두면 같은 cohomology class가 여러 번 세게 되므로 redundancy를 제거하는 reference choice가 필요하다. 즉, $$j,k$$를 고정하고, $$S^c$$에 해당하는 component를 $$j,k$$와 nodal point로 이쪽 $$\mathbb{P}^1$$의 automorphism을 죽여주어야 한다. 
 
 <div class="proposition" markdown="1">
 
 <ins id="prop2">**명제 2 (Genus 0 Topological Recursion Relation)**</ins> $$\{1, \ldots, n\}$$ ($$n\geq 4$$)의 고정된 세 index $$i,j,k$$에 대하여, $$\psi$$-class $$\psi_i$$는 다음 boundary divisor들의 합
 
-$$\psi_i=\sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S,\; j, k \notin S, \lvert S\rvert \geq 2}} D_S \in H^2(\overline{\mathcal{M}}_{0, n})$$
+$$\psi_i=\sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S, j, k \notin S, \lvert S\rvert \geq 2}} D_S \in H^2(\overline{\mathcal{M}}_{0, n})$$
 
 으로 나타난다.
 
@@ -79,11 +73,11 @@ $$\psi_i=\sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S,\; j, k \notin S,
 
 이제 이러한 gravitational invariant들을 한 번에 고려하기 위해 우리는 formal한 geometric series
 
-$$\frac{1}{z - \psi} \;=\; \frac{1}{z}\cdot\frac{1}{1 - \psi/z} \;=\; \sum_{k \geq 0} z^{-k-1}\psi^k$$
+$$\frac{1}{z - \psi} = \frac{1}{z}\cdot\frac{1}{1 - \psi/z} = \sum_{k \geq 0} z^{-k-1}\psi^k$$
 
 를 생각한다. 가령, $$\psi$$ class를 마지막 factor에만 끼워넣으면
 
-$$\begin{aligned}\left\langle \gamma_1, \ldots, \gamma_n, \frac{\gamma_{n+1}}{z - \psi}\right\rangle_{0, n+1, \beta}&=\left\langle \gamma_1, \ldots, \gamma_n, \sum_{k \geq 0} z^{-k-1}\psi^k\gamma_{n+1}\right\rangle_{0, n+1, \beta}=\sum_{k\geq 0}z^{-k-1}\left\langle \gamma_1, \ldots, \gamma_n, \psi^k\gamma_{n+1}\right\rangle_{0, n+1, \beta}\\&\sum_{k \geq 0} z^{-k-1} \left\langle \gamma_1, \ldots, \gamma_n, \tau_k(\gamma_{n+1})\right\rangle_{0, n+1, \beta}\end{aligned}$$
+$$\begin{aligned}\left\langle \gamma_1, \ldots, \gamma_n, \frac{\gamma_{n+1}}{z - \psi}\right\rangle_{0, n+1, \beta}&=\left\langle \gamma_1, \ldots, \gamma_n, \sum_{k \geq 0} z^{-k-1}\psi^k\gamma_{n+1}\right\rangle_{0, n+1, \beta}=\sum_{k\geq 0}z^{-k-1}\left\langle \gamma_1, \ldots, \gamma_n, \psi^k\gamma_{n+1}\right\rangle_{0, n+1, \beta}\\&=\sum_{k \geq 0} z^{-k-1} \left\langle \gamma_1, \ldots, \gamma_n, \tau_k(\gamma_{n+1})\right\rangle_{0, n+1, \beta}\end{aligned}$$
 
 으로, 각 depth $$k$$의 descendant invariant가 $$z^{-k-1}$$ coefficient로 분리되어 한 번에 잡힌다. 일차적으로 이는 우변의 무한합을 담는 것이지만, 다음 절에서 $$J$$-function을 도입하면 우변의 $$z$$까지도 특정한 의미를 담게 되는 것을 확인할 수 있다. 
 
@@ -103,7 +97,7 @@ $$\nabla^{z, \vee} := -\nabla^{-z} = \partial - z^{-1}\mathcal{C}$$
 
 과 이 connection의 horizontal section equation
 
-$$z\, q_a\partial_{q_a} s = T_a \qtimes s \qquad (a = 1, \ldots, r)\tag{$\ast$}$$
+$$z q_a\partial_{q_a} s = T_a \qtimes s \qquad (a = 1, \ldots, r)\tag{$\ast$}$$
 
 을 고려하기로 한다. 
 
@@ -119,9 +113,9 @@ $$s=1+\frac{s_1}{z}+\frac{s_2}{z^2}+\cdots$$
 
 $$z \cdot \sum_k z^{-k} q_a\partial_{q_a} s_k = \sum_k z^{-k} q_a\partial_{q_a} s_{k+1}$$
 
-이고, 우변은 $$\sum_k z^{-k}\, T_a\qtimes s_k$$이므로 각각의 $$z^{-k}$$ 계수를 비교하여 일반적인 recursion
+이고, 우변은 $$\sum_k z^{-k} T_a\qtimes s_k$$이므로 각각의 $$z^{-k}$$ 계수를 비교하여 일반적인 recursion
 
-$$q_a\partial_{q_a} s_{k+1} = T_a \qtimes s_k \qquad (a = 1, \ldots, r,\; k \geq 0)$$
+$$q_a\partial_{q_a} s_{k+1} = T_a \qtimes s_k \qquad (a = 1, \ldots, r, k \geq 0)$$
 
 을 얻는다. 
 
@@ -135,7 +129,7 @@ $$q_a\partial_{q_a} s_2 = T_a \qtimes t_{(2)}=T_a\qtimes \left(\sum_{b=1}^r t^b 
 
 를 생각하면 이제 우변은 classical cup product $$T_a\smile t_{(2)}$$에 추가적으로 quantum correction
 
-$$\sum_{\beta \neq 0} q^\beta \sum_c \left(\sum_{b=1}^r t^b\, \langle T_a, T_b, T^c\rangle_{0, 3, \beta}\right) T_c$$
+$$\sum_{\beta \neq 0} q^\beta \sum_c \left(\sum_{b=1}^r t^b \langle T_a, T_b, T^c\rangle_{0, 3, \beta}\right) T_c$$
 
 부분을 갖는다. 한편 $$T_b \in H^2$$이므로 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)의 결과
 
@@ -143,11 +137,11 @@ $$\langle T_a, T_b, T^c\rangle_{0, 3, \beta} = (T_b \cdot \beta)\langle T_a, T^c
 
 을 적용하면 다음의 식
 
-$$T_a \qtimes t_{(2)} = T_a \smile t_{(2)} + \sum_{\beta \neq 0} q^\beta\, (t_{(2)} \cdot \beta) \sum_c \langle T_a, T^c\rangle_{0, 2, \beta}\, T_c$$
+$$T_a \qtimes t_{(2)} = T_a \smile t_{(2)} + \sum_{\beta \neq 0} q^\beta (t_{(2)} \cdot \beta) \sum_c \langle T_a, T^c\rangle_{0, 2, \beta} T_c$$
 
 을 얻는다. 이제 이를 $$q_a$$에 대해 적분하자. Classical 부분 $$T_a \smile t_{(2)}$$의 antiderivative는 $$(t_{(2)})^2/2$$인데, 이는 $$q_a\partial_{q_a} = \partial_{t^a}$$임을 이용하여
 
-$$\partial_{t^a}\bigl((t_{(2)})^2/2\bigr) = \partial_{t^a}\!\left(\frac{1}{2}\sum_{b, c} t^b t^c\, T_b \smile T_c\right) = \sum_c t^c\, T_a \smile T_c = T_a \smile t_{(2)}$$
+$$\partial_{t^a}\bigl((t_{(2)})^2/2\bigr) = \partial_{t^a}\!\left(\frac{1}{2}\sum_{b, c} t^b t^c T_b \smile T_c\right) = \sum_c t^c T_a \smile T_c = T_a \smile t_{(2)}$$
 
 로 직접 확인된다. Quantum 부분의 antiderivative는 $$q^\beta = e^{t_{(2)}\cdot \beta}$$로부터 오는 관계 $$q_a\partial_{q_a} q^\beta = (T_a \cdot \beta) q^\beta$$을 이용해 $$\beta$$별로 풀어내면, 각 $$\beta$$에 대해 $$q^\beta$$ 인자와 *primary* GW invariant ($$\psi$$-class 삽입 없는 descendant invariant) $$\langle T_a, T^c\rangle_{0, 2, \beta}$$로 결정되는 $$H^\ast(X)$$-valued correction으로 정리되며, 따라서 $$s_2$$는 classical $$(t_{(2)})^2/2$$와 이 quantum correction의 합이 된다. 더 높은 $$z^{-k}$$ ($$k \geq 2$$) 차수에서는 같은 recursion을 따라 $$\tau_{k-1}(T_a)$$ 형태의 *gravitational descendant*가 차례로 누적되며, $$J$$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
 
@@ -155,9 +149,14 @@ $$\partial_{t^a}\bigl((t_{(2)})^2/2\bigr) = \partial_{t^a}\!\left(\frac{1}{2}\su
 
 <ins id="def3">**정의 3**</ins> $$X$$의 (small) *Givental $$J$$-function<sub>Givental J-함수</sub>* $$J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \to H^\ast(X)$$는 다음으로 정의된다.
 
-$$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X) \\ \beta \neq 0}} \sum_{a=0}^s q^\beta\, \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
+$$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X) \\ \beta \neq 0}} \sum_{a=0}^s q^\beta \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
 
 </div>
+
+앞서 우리는 다음의 식
+
+$$$$
+
 
 이 식이 왜 *generating function*인지, 그리고 각 부분이 어떻게 모든 descendant invariant를 한꺼번에 packaging하는지를 풀어보자.
 
@@ -167,13 +166,13 @@ $$\bigl\{\langle\tau_k(T_a)\rangle_{0, 1, \beta}\bigr\}_{\substack{\beta \in \ma
 
 이며, 세 인덱스 ($$\beta, a, k$$)를 각각 Novikov variable $$q^\beta$$, Poincaré dual basis 원소 $$T^a$$, spectral parameter의 거듭제곱 $$z^{-k-2}$$로 매개해서 하나의 $$H^\ast(X)$$-값 함수에 모은다. [정의 3](#def3)의 식을 *완전히 풀어 적으면*
 
-$$J_X(q, z) \;=\; e^{t_{(2)}/z}\left(\mathbf{1} + \sum_{\substack{\beta \in \mathrm{NE}(X) \\ \beta \neq 0}}\sum_{a = 0}^s \sum_{k \geq 0} q^\beta\, z^{-k-2}\, \langle\tau_k(T_a)\rangle_{0, 1, \beta}\, T^a\right)$$
+$$J_X(q, z) = e^{t_{(2)}/z}\left(\mathbf{1} + \sum_{\substack{\beta \in \mathrm{NE}(X) \\ \beta \neq 0}}\sum_{a = 0}^s \sum_{k \geq 0} q^\beta z^{-k-2} \langle\tau_k(T_a)\rangle_{0, 1, \beta} T^a\right)$$
 
-가 되어, 임의의 invariant $$\langle\tau_k(T_a)\rangle_{0, 1, \beta}$$가 J의 *$$T^a$$ 방향 $$q^\beta\,z^{-k-2}$$ coefficient*로 한 번에 추출된다. 거꾸로 J 자체가 모든 invariant를 동시에 결정하는 *master 데이터*인 셈이며, 이게 "$$J$$-function이 generating function"의 정확한 의미.
+가 되어, 임의의 invariant $$\langle\tau_k(T_a)\rangle_{0, 1, \beta}$$가 J의 *$$T^a$$ 방향 $$q^\betaz^{-k-2}$$ coefficient*로 한 번에 추출된다. 거꾸로 J 자체가 모든 invariant를 동시에 결정하는 *master 데이터*인 셈이며, 이게 "$$J$$-function이 generating function"의 정확한 의미.
 
 **$$\frac{1}{z(z-\psi)}$$의 packaging trick.** 위 풀이형에서 *$$k$$-sum을 한 bracket 안에 흡수*한 형태가 [정의 3](#def3) 본문의 $$\langle T_a/(z(z-\psi))\rangle$$이다. 구체적으로 $$\frac{1}{z(z-\psi)} = \sum_{k \geq 0}z^{-k-2}\psi^k$$ generating series를 한 marked point에 끼우면 ([정의 1](#def1)의 $$\tau_k$$ 표기 컨벤션에 의해)
 
-$$\left\langle T_a\cdot\frac{1}{z(z-\psi)}\right\rangle_{0, 1, \beta} \;=\; \sum_{k \geq 0} z^{-k-2}\,\langle\tau_k(T_a)\rangle_{0, 1, \beta}$$
+$$\left\langle T_a\cdot\frac{1}{z(z-\psi)}\right\rangle_{0, 1, \beta} = \sum_{k \geq 0} z^{-k-2}\langle\tau_k(T_a)\rangle_{0, 1, \beta}$$
 
 이 되어 $$k$$에 대한 sum이 sum 기호 없이 $$\frac{1}{z(z-\psi)}$$ 안에 흡수된다. 위 ⁋Descendant Gromov-Witten invariant 절에서 본 $$\frac{1}{z-\psi}$$ trick과 본질적으로 같은 packaging이며, 다만 J-function의 normalization을 위해 $$z^{-1}$$이 하나 더 붙어 $$\sum z^{-k-1}\psi^k$$ 대신 $$\sum z^{-k-2}\psi^k$$ 형태로 정리된 것.
 
@@ -181,7 +180,7 @@ $$\left\langle T_a\cdot\frac{1}{z(z-\psi)}\right\rangle_{0, 1, \beta} \;=\; \sum
 
 **$$\beta \neq 0$$ 제한의 이유.** $$\overline{\mathcal{M}}_{0, 1}(X, \beta)$$는 $$\beta = 0$$일 때 비어 있다 — genus-$$0$$, $$1$$-marked smooth curve는 $$\geq 3$$ special point 조건을 만족하지 않아 stable이 아니기 때문. $$\beta \neq 0$$에서는 *map의 non-constancy*가 stability를 보장하므로 moduli가 well-defined하고, 그래서 inner sum이 자연스럽게 $$\beta \neq 0$$로 제한된다.
 
-**$$z^{-1}$$ 멱급수로의 풀이.** 위 모든 packaging을 풀어서 J를 $$z^{-1}$$의 멱급수로 정리하면 prefactor $$e^{t_{(2)}/z} = \sum_k(t_{(2)})^k/(k!\,z^k)$$가 각 차수에 $$(t_{(2)})^k/k!$$를 기여하고, inner sum이 $$z^{-k-2}$$ 차수에 $$\sum_a\langle\tau_k(T_a)\rangle_{0,1,\beta} T^a$$ 항을 기여하여 합쳐진다. 구체적으로 $$z^0$$ 차수는 classical leading $$\mathbf{1}$$만 남고, $$z^{-1}$$ 차수는 prefactor에서만 오는 $$t_{(2)}$$이며 GW invariant는 여기까지 끼어들지 않는다 (inner sum이 $$z^{-2}$$부터 시작하므로). $$z^{-2}$$ 차수에서 처음으로 prefactor의 $$(t_{(2)})^2/2$$와 함께 *primary* GW invariant $$\sum_{\beta \neq 0}q^\beta\sum_a\langle T_a\rangle_{0, 1, \beta}T^a$$가 등장하고, 일반적으로 $$z^{-k}$$ ($$k \geq 2$$) 차수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle\tau_{k-2}(T_a)\rangle_{0, 1, \beta}$$이 함께 나타난다. 즉 J는 모든 차수의 descendant GW invariant를 한 $$(q, z)$$-함수에 모은 *master 생성함수*이며, 이 packaging 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 명제 4의 내용이다.
+**$$z^{-1}$$ 멱급수로의 풀이.** 위 모든 packaging을 풀어서 J를 $$z^{-1}$$의 멱급수로 정리하면 prefactor $$e^{t_{(2)}/z} = \sum_k(t_{(2)})^k/(k!z^k)$$가 각 차수에 $$(t_{(2)})^k/k!$$를 기여하고, inner sum이 $$z^{-k-2}$$ 차수에 $$\sum_a\langle\tau_k(T_a)\rangle_{0,1,\beta} T^a$$ 항을 기여하여 합쳐진다. 구체적으로 $$z^0$$ 차수는 classical leading $$\mathbf{1}$$만 남고, $$z^{-1}$$ 차수는 prefactor에서만 오는 $$t_{(2)}$$이며 GW invariant는 여기까지 끼어들지 않는다 (inner sum이 $$z^{-2}$$부터 시작하므로). $$z^{-2}$$ 차수에서 처음으로 prefactor의 $$(t_{(2)})^2/2$$와 함께 *primary* GW invariant $$\sum_{\beta \neq 0}q^\beta\sum_a\langle T_a\rangle_{0, 1, \beta}T^a$$가 등장하고, 일반적으로 $$z^{-k}$$ ($$k \geq 2$$) 차수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle\tau_{k-2}(T_a)\rangle_{0, 1, \beta}$$이 함께 나타난다. 즉 J는 모든 차수의 descendant GW invariant를 한 $$(q, z)$$-함수에 모은 *master 생성함수*이며, 이 packaging 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 명제 4의 내용이다.
 
 ## QDE의 fundamental solution
 
@@ -193,17 +192,17 @@ $$\left\langle T_a\cdot\frac{1}{z(z-\psi)}\right\rangle_{0, 1, \beta} \;=\; \sum
 
 <ins id="prop4">**명제 4** ($$J$$-function as fundamental solution column)</ins> Endomorphism $$S(q, z) \in \End(H^\ast(X))$$를 다음의 matrix element
 
-$$\eta\bigl(S(q,z)\,T_a,\, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta \left\langle \frac{T_a}{z - \psi},\, T_b \right\rangle_{0, 2, \beta}$$
+$$\eta\bigl(S(q,z)T_a, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta \left\langle \frac{T_a}{z - \psi}, T_b \right\rangle_{0, 2, \beta}$$
 
 으로 정의하자 ($$\eta$$는 Poincaré pairing). 그러면
 
 1. *(Flat section property)* $$S(q, z)$$의 각 column $$S(q, z) T_b$$는 dual small Dubrovin connection $$\nabla^{z, \vee}$$의 horizontal section이다. 즉
    
-   $$z\, q_a\partial_{q_a} \bigl(S(q,z)T_b\bigr) = T_a \qtimes \bigl(S(q,z)T_b\bigr)\qquad (a = 1, \ldots, r).$$
+   $$z q_a\partial_{q_a} \bigl(S(q,z)T_b\bigr) = T_a \qtimes \bigl(S(q,z)T_b\bigr)\qquad (a = 1, \ldots, r).$$
 
-2. *($$J$$ = $$T_0$$ column)* $$J_X(q, z) = e^{t_{(2)}/z}\, S(q, z)\, T_0$$가 성립한다. 특히 $$J$$ 자체도 ($$\ast$$)의 horizontal section이고,
+2. *($$J$$ = $$T_0$$ column)* $$J_X(q, z) = e^{t_{(2)}/z} S(q, z) T_0$$가 성립한다. 특히 $$J$$ 자체도 ($$\ast$$)의 horizontal section이고,
    
-   $$z\, q_a\partial_{q_a} J_X = T_a \qtimes J_X \qquad (a = 1, \ldots, r).$$
+   $$z q_a\partial_{q_a} J_X = T_a \qtimes J_X \qquad (a = 1, \ldots, r).$$
 
 </div>
 
@@ -212,7 +211,7 @@ $$\eta\bigl(S(q,z)\,T_a,\, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\
 
 핵심은 두 가지 GW 공리, 즉 *string equation* (marked point에 $$T_0 = 1$$을 끼울 때의 reduction)과 *divisor equation* ($$H^2$$ class를 끼울 때의 $$T_a \cdot \beta$$ 인자)을 정합적으로 활용하는 것이다. 
 
-(2)는 $$T_b = T_0 = 1$$을 대입했을 때 string equation $$\langle \tau_k(T_a), 1\rangle_{0,2,\beta} = \langle \tau_{k-1}(T_a)\rangle_{0,1,\beta}$$ ($$k \geq 1$$, $$\beta \neq 0$$, $$k = 0$$인 항은 vanishing)으로 marked point 하나가 사라지면서 $$z^{-1}\langle T_a/(z-\psi)\rangle$$로 정리되고, 이것이 정확히 [정의 3](#def3)의 small J 식 안에 들어 있는 $$\langle T_a/(z(z-\psi))\rangle$$이 됨을 확인하면 된다. (1)의 flat section property는 $$q_a\partial_{q_a}$$의 작용이 marked point에 $$T_a$$를 추가로 끼우는 효과 (divisor equation을 거꾸로 푼 것)임을 사용하면 $$z\, q_a\partial_{q_a}$$가 $$T_a$$ 삽입 + $$z$$-shift를 주고, 그 후 한 marked point를 $$T_b/(z-\psi)$$와 분리하는 *topological recursion relation* ($$\overline{M}_{0, n+1}$$의 $$\psi$$-class를 boundary divisor의 합으로 분해하는 관계식)을 통해 우변의 $$T_a \qtimes$$ 작용과 같아짐을 보인다. 자세한 계산은 [CK, Theorem 10.3.1] 또는 [MS, Chapter 28–29] 참조.
+(2)는 $$T_b = T_0 = 1$$을 대입했을 때 string equation $$\langle \tau_k(T_a), 1\rangle_{0,2,\beta} = \langle \tau_{k-1}(T_a)\rangle_{0,1,\beta}$$ ($$k \geq 1$$, $$\beta \neq 0$$, $$k = 0$$인 항은 vanishing)으로 marked point 하나가 사라지면서 $$z^{-1}\langle T_a/(z-\psi)\rangle$$로 정리되고, 이것이 정확히 [정의 3](#def3)의 small J 식 안에 들어 있는 $$\langle T_a/(z(z-\psi))\rangle$$이 됨을 확인하면 된다. (1)의 flat section property는 $$q_a\partial_{q_a}$$의 작용이 marked point에 $$T_a$$를 추가로 끼우는 효과 (divisor equation을 거꾸로 푼 것)임을 사용하면 $$z q_a\partial_{q_a}$$가 $$T_a$$ 삽입 + $$z$$-shift를 주고, 그 후 한 marked point를 $$T_b/(z-\psi)$$와 분리하는 *topological recursion relation* ($$\overline{M}_{0, n+1}$$의 $$\psi$$-class를 boundary divisor의 합으로 분해하는 관계식)을 통해 우변의 $$T_a \qtimes$$ 작용과 같아짐을 보인다. 자세한 계산은 [CK, Theorem 10.3.1] 또는 [MS, Chapter 28–29] 참조.
 
 </details>
 
@@ -228,7 +227,7 @@ $$\eta\bigl(S(q,z)\,T_a,\, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\
 
 <ins id="prop5">**명제 5** (Mirror theorem, $$J$$-function form)</ins> Mirror pair $$(X, \check{X})$$에 대해, $$X$$의 $$J$$-function은 $$T_0 = 1$$ normalization에 대응하는 특정 Lefschetz thimble $$\Gamma_0$$ (large radius limit 근방에서 결정되는 *distinguished* thimble)에 대한 oscillating integral의 cohomology basis $$\{T^a\}$$ 성분들로 적힌다. 즉
 
-$$J_X(q, z) \;=\; \sum_a J^a(q, z)\, T^a,\qquad J^a(q, z) \;=\; \frac{1}{(2\pi i z)^N}\int_{\Gamma_0} T_a\, e^{W_q/z}\,\omega$$
+$$J_X(q, z) = \sum_a J^a(q, z) T^a,\qquad J^a(q, z) = \frac{1}{(2\pi i z)^N}\int_{\Gamma_0} T_a e^{W_q/z}\omega$$
 
 가 (normalization을 흡수하고 나면) 성립한다. 여기서 $$\Phi$$ 아래 $$T_a$$는 [§가우스-마닌 접속](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 basis $$\{e_a\}$$로 매핑된 것이다. 특히 $$z \to 0$$ stationary phase asymptotic ([§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3))은 $$W_q$$의 critical point들에 의한 합으로 풀어지며, 그 leading order의 critical value들 $$\{W_q(p)\}$$가 quantum cohomology의 canonical coordinate들을 복원한다 ([§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$의 직접적 격상).
 
@@ -292,7 +291,7 @@ $$I_{\mathbb{P}^n}(q, z) = e^{H \ln q /z} \sum_{d \geq 0} \frac{q^d}{\prod_{j=1}
 
 이 된다. $$H^{n+1} = 0$$이므로 분모의 $$(H + jz)^{-(n+1)}$$를 $$z^{-1}$$의 멱으로 전개하면 첫 몇 차수가 명시적으로 풀린다.
 
-$$I_{\mathbb{P}^n}(q, z) = 1 + \frac{H \ln q}{z} + \frac{(H \ln q)^2}{2 z^2} + \cdots + q\, \frac{1}{(H+z)^{n+1}} + \cdots$$
+$$I_{\mathbb{P}^n}(q, z) = 1 + \frac{H \ln q}{z} + \frac{(H \ln q)^2}{2 z^2} + \cdots + q \frac{1}{(H+z)^{n+1}} + \cdots$$
 
 $$\mathbb{P}^n$$은 $$-K_{\mathbb{P}^n} = (n+1) H$$이므로 Fano index가 $$n+1 \geq 2$$이고, 따라서 [명제 7](#prop7)에 의해 $$I_{\mathbb{P}^n} = 1 + O(z^{-1})$$이 되어 mirror map은 trivial하고
 
@@ -302,23 +301,23 @@ $$J_{\mathbb{P}^n}(q, z) = I_{\mathbb{P}^n}(q, z)$$
 
 B-side와의 직접 짝맞춤은 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 이미 절반이 끝나있다. 그 예시에서 우리는 period matrix의 첫 column $$\mathcal{I}^0_p$$가 만족하는 ODE
 
-$$(z\partial_q)(qz\partial_q)^n\,\mathcal{I}^0_p \;=\; \mathcal{I}^0_p \tag{$\dagger$}$$
+$$(z\partial_q)(qz\partial_q)^n\mathcal{I}^0_p = \mathcal{I}^0_p \tag{$\dagger$}$$
 
 를 도출했다. [명제 5](#prop5)의 mirror theorem이 옳다면 $$I_{\mathbb{P}^n}$$의 $$H^0$$-coefficient
 
-$$\Phi_0(q, z) \;:=\; \sum_{d \geq 0} \frac{q^d}{(d!)^{n+1}\,z^{(n+1)d}}$$
+$$\Phi_0(q, z) := \sum_{d \geq 0} \frac{q^d}{(d!)^{n+1}z^{(n+1)d}}$$
 
 (위의 hypergeometric 곱 식에서 $$H = 0$$으로 specialize한 것) 또한 ($$\dagger$$)를 만족해야 한다. 직접 계산하면 $$qz\partial_q$$의 작용은 항별로 $$d$$를 끌어내고 $$z^{-1}$$ 인자를 붙이므로
 
-$$(qz\partial_q)^n\Phi_0 = \sum_{d\geq 0}\frac{d^n\, q^d}{(d!)^{n+1}\,z^{(n+1)d - n}},$$
+$$(qz\partial_q)^n\Phi_0 = \sum_{d\geq 0}\frac{d^n q^d}{(d!)^{n+1}z^{(n+1)d - n}},$$
 
 이고 다시 $$z\partial_q$$를 작용시키면 $$d$$를 한번 더 끌어내고 $$d$$를 $$d - 1$$로 shift시켜
 
-$$(z\partial_q)(qz\partial_q)^n\Phi_0 = \sum_{d \geq 1}\frac{d^{n+1}\,q^{d-1}}{(d!)^{n+1}\,z^{(n+1)d - n - 1}} = \sum_{d' \geq 0}\frac{(d'+1)^{n+1}\,q^{d'}}{((d'+1)!)^{n+1}\,z^{(n+1)d'}} = \Phi_0$$
+$$(z\partial_q)(qz\partial_q)^n\Phi_0 = \sum_{d \geq 1}\frac{d^{n+1}q^{d-1}}{(d!)^{n+1}z^{(n+1)d - n - 1}} = \sum_{d' \geq 0}\frac{(d'+1)^{n+1}q^{d'}}{((d'+1)!)^{n+1}z^{(n+1)d'}} = \Phi_0$$
 
 가 정확히 성립한다. 따라서 $$I_{\mathbb{P}^n}$$이 만족하는 hypergeometric ODE와 B-side의 Gauss-Manin ODE가 동일하며, 두 fundamental solution이 $$z \to \infty$$에서 같은 normalization $$1 + O(z^{-1})$$을 가지므로 $$J_{\mathbb{P}^n} = I_{\mathbb{P}^n}$$이 곧 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)의 oscillating integral과 일치한다는 의미가 된다. 
 
-[명제 5](#prop5)의 stationary phase 측면 또한 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 이미 계산해 두었다. 즉 $$W_q$$의 $$n+1$$개 critical point $$x_\zeta = \zeta\, q^{1/(n+1)}$$에서의 critical value $$(n+1)\zeta q^{1/(n+1)}$$과 Hessian determinant $$(n+1)(\zeta q^{1/(n+1)})^{-n}$$이 [§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3)의 stationary phase formula에 대입되어 oscillating integral의 $$z\to 0^+$$ asymptotic을 주며, 이것이 $$I_{\mathbb{P}^n}(q, z)$$의 $$z \to 0$$ asymptotic과도 일치한다 ([CK, §11.2]).
+[명제 5](#prop5)의 stationary phase 측면 또한 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 이미 계산해 두었다. 즉 $$W_q$$의 $$n+1$$개 critical point $$x_\zeta = \zeta q^{1/(n+1)}$$에서의 critical value $$(n+1)\zeta q^{1/(n+1)}$$과 Hessian determinant $$(n+1)(\zeta q^{1/(n+1)})^{-n}$$이 [§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3)의 stationary phase formula에 대입되어 oscillating integral의 $$z\to 0^+$$ asymptotic을 주며, 이것이 $$I_{\mathbb{P}^n}(q, z)$$의 $$z \to 0$$ asymptotic과도 일치한다 ([CK, §11.2]).
 
 </div>
 
@@ -330,7 +329,7 @@ $$(z\partial_q)(qz\partial_q)^n\Phi_0 = \sum_{d \geq 1}\frac{d^{n+1}\,q^{d-1}}{(
 
 Big 버전의 setup으로 가려면 $$H^\ast(X)$$의 일반적인 deformation parameter $$t = \sum_{a=0}^s t^a T_a$$를 도입해야 한다. 임의의 $$t \in H^\ast(X)$$에 대한 big quantum product $$\star_t$$는 [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 본 대로 $$\mathcal{C}_\alpha = T_\alpha \star_t -$$로 Dubrovin connection의 connection $$1$$-form을 결정한다. 그 dual horizontal section equation은
 
-$$z\,\partial_a s = T_a \star_t s\qquad (a = 0, 1, \ldots, s)$$
+$$z\partial_a s = T_a \star_t s\qquad (a = 0, 1, \ldots, s)$$
 
 이며, 이것이 small case의 ($$\ast$$)를 $$H^\ast$$ 전체 방향으로 확장한 *big QDE*이다. 
 
@@ -338,7 +337,7 @@ $$z\,\partial_a s = T_a \star_t s\qquad (a = 0, 1, \ldots, s)$$
 
 <ins id="def9">**정의 9** (Big $$J$$-function)</ins> $$X$$의 *big Givental $$J$$-function* $$J_X^{\mathrm{big}}: H^\ast(X) \times \mathbb{C}^\ast \to H^\ast(X)$$는 다음으로 정의된다.
 
-$$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X),\, n \geq 0 \\ (\beta, n) \neq (0, 0)}} \sum_{a=0}^s \frac{q^\beta}{n!}\, \left\langle \frac{T_a}{z - \psi}, t, \ldots, t \right\rangle_{0, n+1, \beta} T^a \right)$$
+$$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X), n \geq 0 \\ (\beta, n) \neq (0, 0)}} \sum_{a=0}^s \frac{q^\beta}{n!} \left\langle \frac{T_a}{z - \psi}, t, \ldots, t \right\rangle_{0, n+1, \beta} T^a \right)$$
 
 여기서 첫 marked point에 $$T_a/(z-\psi)$$가 (즉 $$T_a$$의 pullback에 모든 차수의 $$\psi^k$$가 generating function 형태로) 끼이고, 나머지 $$n$$개 marked point에 모두 $$t \in H^\ast(X)$$가 삽입되어 총 $$n+1$$개 marked point를 이룬다.
 

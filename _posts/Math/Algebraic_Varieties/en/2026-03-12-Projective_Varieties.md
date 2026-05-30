@@ -1,5 +1,6 @@
 ---
 title: "Projective Varieties"
+description: "Starting from the definitions of projective space and homogeneous coordinates, we define projective algebraic sets and projective varieties through the zero sets of homogeneous polynomials."
 excerpt: "Projective varieties and homogeneous coordinates"
 
 categories: [Math / Algebraic Varieties]
@@ -14,8 +15,9 @@ header:
 date: 2026-03-12
 last_modified_at: 2026-03-12
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T02:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T02:00:04+00:00
 ---
 ## Definition of Projective Space
 
@@ -35,21 +37,21 @@ We write $$\mathbb{P}^n$$ when there is no risk of confusion.
 
 </div>
 
-The equivalence class $$[(x_0, \ldots, x_n)]$$ is usually denoted by $$[x_0 : \cdots : x_n]$$, and these are called *homogeneous coordinates*. The elements $$x_0, \ldots, x_n$$ are called *coordinates*, and at least one of them must be nonzero. The key feature of homogeneous coordinates is that they determine only *ratios*. That is, for all $$\lambda\in \mathbb{K}^\ast$$ we have $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$.
+The equivalence class $$[(x_0, \ldots, x_n)]$$ is usually denoted $$[x_0 : \cdots : x_n]$$, and these are called *homogeneous coordinates*. The elements $$x_0, \ldots, x_n$$ are called *coordinates*, and at least one of them must be nonzero. The key feature of homogeneous coordinates is that they determine only *ratios*: for every $$\lambda \in \mathbb{K}^\ast$$ we have $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$.
 
 ## Homogeneous Polynomials and Projective Space
 
-Just as in the affine case, we must equip $$\mathbb{P}^n$$ with a topology. In projective space, we will again define closed sets as zero sets of polynomials, but we must be careful: since $$\mathbb{P}^n$$ is defined as a quotient set, a polynomial does not generally define a function on $$\mathbb{P}^n$$. That is, for arbitrary $$F \in \mathbb{K}[x_0, \ldots, x_n]$$, although $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$, in general
+Just as in the affine case, we must equip $$\mathbb{P}^n$$ with a topology. In projective space we again define closed sets as zero sets of polynomials, but we must be careful: since $$\mathbb{P}^n$$ is defined as a quotient, a polynomial does not generally define a function on $$\mathbb{P}^n$$. That is, for arbitrary $$F \in \mathbb{K}[x_0, \ldots, x_n]$$, although $$[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$$, in general
 
-$$F(x_0, \ldots, x_n)\neq F(\lambda x_0, \ldots, \lambda x_n)$$
+$$F(x_0, \ldots, x_n) \neq F(\lambda x_0, \ldots, \lambda x_n),$$
 
-and the only polynomials for which evaluation is well-defined at every point of $$\mathbb{P}^n$$ regardless of the representative are the constant polynomials. However, if we are only interested in the zero set defined by a polynomial, this problem is resolved. For a homogeneous polynomial $$F$$ of degree $$d$$,
+and the only polynomials whose evaluation at every point of $$\mathbb{P}^n$$ is independent of the representative are the constant polynomials. However, if we are only interested in the zero set defined by a polynomial, this problem is resolved. For a homogeneous polynomial $$F$$ of degree $$d$$,
 
-$$F(\lambda x_0, \ldots, \lambda x_n) = \lambda^d F(x_0, \ldots, x_n)$$
+$$F(\lambda x_0, \ldots, \lambda x_n) = \lambda^d F(x_0, \ldots, x_n),$$
 
 so
 
-$$F(\lambda x_0, \ldots, \lambda x_n) = 0 \iff F(x_0, \ldots, x_n) = 0$$
+$$F(\lambda x_0, \ldots, \lambda x_n) = 0 \iff F(x_0, \ldots, x_n) = 0.$$
 
 Thus the zero set of a homogeneous polynomial is well-defined in projective space.
 
@@ -57,7 +59,7 @@ Thus the zero set of a homogeneous polynomial is well-defined in projective spac
 
 <ins id="def2">**Definition 2**</ins> A polynomial $$F \in \mathbb{K}[\x_0, \ldots, \x_n]$$ is *homogeneous of degree $$d$$* if for all $$\lambda \in \mathbb{K}$$,
 
-$$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n)$$
+$$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n).$$
 
 </div>
 
@@ -67,7 +69,7 @@ Although the definition is written in a complicated way, it essentially says tha
 
 <ins id="def3">**Definition 3**</ins> For homogeneous polynomials $$F_1, \ldots, F_k \in \mathbb{K}[\x_0, \ldots, \x_n]$$, the *projective algebraic set* $$Z(F_1, \ldots, F_k)$$ is defined by
 
-$$Z(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \cdots = F_k(x) = 0\}$$
+$$Z(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \cdots = F_k(x) = 0\}.$$
 
 Among projective algebraic sets, those that cannot be expressed as a union of strictly smaller projective algebraic sets are called *projective varieties*.
 
@@ -90,7 +92,7 @@ For a homogeneous ideal $$\mathfrak{a}$$, if we define its zero set $$Z(\mathfra
 <ins id="prop5">**Proposition 5**</ins> The following hold.
 
 1. $$Z(0) = \mathbb{P}^n$$, $$Z(1) = \emptyset$$,
-2. $$\bigcap_iZ(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$$,
+2. $$\bigcap_i Z(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$$,
 3. $$Z(\mathfrak{a}) \cup Z(\mathfrak{b}) = Z(\mathfrak{a} \cap \mathfrak{b}) = Z(\mathfrak{a}\mathfrak{b})$$.
 
 </div>
@@ -98,11 +100,11 @@ For a homogeneous ideal $$\mathfrak{a}$$, if we define its zero set $$Z(\mathfra
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The only difference from the affine case is that the polynomials here are all homogeneous, but the proof logic itself is identical, so we omit the proof.
+The only difference from the affine case is that the polynomials here are all homogeneous, but the proof itself is identical, so we omit it.
 
 </details>
 
-Just as in the affine case, this shows that there exists a topology on projective space $$\mathbb{P}^n$$ whose closed sets are the projective algebraic sets, and we can give each projective variety the subspace topology induced from this. We likewise call this topology the *Zariski topology*. (We first examined the Zariski topology in the affine case in [[Algebraic Varieties] §Definition of Affine Varieties](/en/math/algebraic_varieties/affine_varieties).)
+Just as in the affine case, this shows that there exists a topology on projective space $$\mathbb{P}^n$$ whose closed sets are the projective algebraic sets, and we can give each projective variety the subspace topology induced from this. We likewise call this topology the *Zariski topology*. (We first examined the Zariski topology in the affine case in [[Affine Varieties] §Definition of Affine Varieties](/en/math/algebraic_varieties/affine_varieties).)
 
 ## Projective Nullstellensatz
 
@@ -110,7 +112,7 @@ Just as in the affine case, this shows that there exists a topology on projectiv
 
 <ins id="def6">**Definition 6**</ins> The *homogeneous ideal* $$I(X)$$ of a subset $$X \subseteq \mathbb{P}^n$$ is defined by
 
-$$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}$$
+$$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}.$$
 
 </div>
 
@@ -133,7 +135,7 @@ Projective space $$\mathbb{P}^n$$ can be covered by $$n+1$$ copies of affine spa
 
 <ins id="def8">**Definition 8**</ins> For $$i = 0, 1, \ldots, n$$, the *$$i$$-th standard open set* $$U_i$$ is defined by
 
-$$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}$$
+$$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}.$$
 
 </div>
 
@@ -148,19 +150,19 @@ Give each $$U_i$$ the subspace topology inherited from $$\mathbb{P}^n$$. Then th
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-For notational convenience we prove the case $$i=0$$. For $$U_0$$, define the map $$\varphi_0: U_0 \to \mathbb{A}^n$$ by
+For notational convenience we prove the case $$i=0$$. Define the map $$\varphi_0: U_0 \to \mathbb{A}^n$$ by
 
-$$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$
+$$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right).$$
 
 The inverse map $$\psi_0: \mathbb{A}^n \to U_0$$ is
 
-$$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$
+$$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n].$$
 
 That these are inverses of each other is obvious from the definitions. We now show that both $$\varphi_0$$ and $$\psi_0$$ are continuous.
 
 First, to show continuity of $$\varphi_0$$, consider a closed set $$Z(f)$$ in $$\mathbb{A}^n$$. Then
 
-$$\varphi_0^{-1}(Z(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \mid f\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) = 0\right\}$$
+$$\varphi_0^{-1}(Z(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \;\middle|\; f\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) = 0\right\}.$$
 
 Now if $$f$$ is a polynomial of degree $$d$$, then
 
@@ -170,19 +172,19 @@ is a homogeneous polynomial and $$\varphi_0^{-1}(Z(f)) = Z(F) \cap U_0$$. This i
 
 Now we show continuity of the inverse map $$\psi_0$$. Consider a closed set $$Z(F) \cap U_0$$ in $$U_0$$, where $$F$$ is a homogeneous polynomial of degree $$d$$. Then
 
-$$\psi_0^{-1}(Z(F) \cap U_0) = \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid F(1, x_1, \ldots, x_n) = 0\}$$
+$$\psi_0^{-1}(Z(F) \cap U_0) = \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid F(1, x_1, \ldots, x_n) = 0\}.$$
 
 Since $$F(1, \x_1, \ldots, \x_n)$$ is a polynomial in $$\mathbb{K}[\x_1, \ldots, \x_n]$$, the set $$\psi_0^{-1}(Z(F) \cap U_0)$$ is closed in $$\mathbb{A}^n$$.
 
-Therefore, since $$\varphi_0$$ and $$\psi_0$$ are inverses of each other and both are continuous, $$\varphi_0$$ is a homeomorphism.
+Therefore $$\varphi_0$$ and $$\psi_0$$ are mutually inverse continuous maps, so $$\varphi_0$$ is a homeomorphism.
 
 </details>
 
-Intuitively, we can think of $$U_i$$ as the set of points where the coordinate $$x_i$$ is not at infinity. Also, $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$, and by the above proposition each $$U_i \cong \mathbb{A}^n$$. Since the key ingredient in the proof of the above proposition was the following statement, we separate it out.
+Intuitively, we may think of $$U_i$$ as the set of points where the coordinate $$x_i$$ is not at infinity. Also, $$\mathbb{P}^n = U_0 \cup \cdots \cup U_n$$, and by the above proposition each $$U_i \cong \mathbb{A}^n$$. Since the key ingredient in the proof of the above proposition was the following statement, we separate it out.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**Proposition 10**</ins> For a projective variety $$X \subseteq \mathbb{P}^n$$ and a standard open set $$U_i$$, the intersection $$X \cap U_i$$ is an affine variety on $$U_i \cong \mathbb{A}^n$$.
+<ins id="prop10">**Proposition 10**</ins> For a projective variety $$X \subseteq \mathbb{P}^n$$ and a standard open set $$U_i$$, the intersection $$X \cap U_i$$ is an affine variety in $$U_i \cong \mathbb{A}^n$$.
 
 </div>
 
@@ -191,11 +193,11 @@ Intuitively, we can think of $$U_i$$ as the set of points where the coordinate $
 
 For $$U_0$$, let $$X = Z(F_1, \ldots, F_k)$$ with each $$F_j$$ homogeneous of degree $$d_j$$. Then $$X \cap U_0$$ consists of the points in $$\mathbb{A}^n$$ satisfying
 
-$$F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = 0, \quad j = 1, \ldots, k$$
+$$F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = 0, \quad j = 1, \ldots, k.$$
 
 Multiplying both sides by $$\x_0^{d_j}$$ gives
 
-$$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F_j(\x_0, \x_1, \ldots, \x_n) = 0$$
+$$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F_j(\x_0, \x_1, \ldots, \x_n) = 0.$$
 
 Now setting $$f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$$, we have $$X \cap U_0 = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$.
 
@@ -205,12 +207,12 @@ Now setting $$f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$$, we have $$
 
 <ins id="ex11">**Example 11**</ins> To interpret the above proposition geometrically, let $$\mathbb{K}=\mathbb{R}$$ and consider the conic $$X = Z(\x_0^2 + \x_1^2 - \x_2^2)$$ in $$\mathbb{P}^2$$.
 
-This conic is the cone $$\x_0^2 + \x_1^2 = \x_2^2$$ in $$\mathbb{A}^3$$ expressed in homogeneous coordinates. Then [Proposition 10](#prop10) tells us how $$X$$ looks in the standard open sets. That is, to see what $$X$$ looks like in $$U_i$$, we simply substitute $$1$$ for $$\x_i$$ and regard the remaining $$n$$ variables as coordinates on $$\mathbb{A}^n$$. In particular we obtain the following.
+This conic is the cone $$\x_0^2 + \x_1^2 = \x_2^2$$ in $$\mathbb{A}^3$$ expressed in homogeneous coordinates. Then [Proposition 10](#prop10) tells us how $$X$$ looks in the standard open sets: to see what $$X$$ looks like in $$U_i$$, we simply substitute $$1$$ for $$\x_i$$ and regard the remaining $$n$$ variables as coordinates on $$\mathbb{A}^n$$. In particular we obtain the following.
 
-1. In $$U_0, U_1$$, the curve $$X$$ is the hyperbola $$1+y^2-z^2=0$$, $$x^2+1-z^2=0$$.
+1. In $$U_0$$ and $$U_1$$, the curve $$X$$ is the hyperbola $$1+y^2-z^2=0$$ and $$x^2+1-z^2=0$$, respectively.
 2. In $$U_2$$, the curve $$X$$ is the circle $$x^2+y^2=1$$.
 
-This happens because the equation $$\x_0^2 + \x_1^2 = \x_2^2$$ in $$\mathbb{A}^3$$ defines a cone, and intersecting it with the planes $$\x_0=1, \x_1=1, \x_2=1$$ yields hyperbolas and a circle.
+This happens because the equation $$\x_0^2 + \x_1^2 = \x_2^2$$ in $$\mathbb{A}^3$$ defines a cone, and intersecting it with the planes $$\x_0=1$$, $$\x_1=1$$, and $$\x_2=1$$ yields hyperbolas and a circle, respectively.
 
 On the other hand, we can also interpret this directly in $$\mathbb{P}^2$$. To do so, we construct $$\mathbb{P}^2$$ as follows. For points with $$\x_2\neq 0$$, radially project onto the upper hemisphere satisfying $$\x_2>0$$; for points with $$\x_2=0$$, identify antipodal points. Through this construction, $$\mathbb{P}^2$$ can be thought of as the plane $$\mathbb{A}^2$$ corresponding to the surface of the upper hemisphere, together with the "line at infinity" $$\mathbb{P}^1$$. Then the given cone first becomes a circle contained in the upper hemisphere via the first radial projection, and from this we know that $$X$$ appears as a circle in $$\mathbb{P}^2$$.
 
@@ -230,7 +232,7 @@ The preceding example shows how to view a curve in projective space within each 
 
 <ins id="def12">**Definition 12**</ins> The *affine cone* $$C(X) \subseteq \mathbb{A}^{n+1}$$ of a projective variety $$X \subseteq \mathbb{P}^n$$ is defined as follows:
 
-$$C(X) = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 : \cdots : x_n] \in X\} \cup \{0\}$$
+$$C(X) = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 : \cdots : x_n] \in X\} \cup \{0\}.$$
 
 That is, $$C(X)$$ is the union of all points in $$\mathbb{A}^{n+1}$$ that appear when the points of $$X$$ are expressed in homogeneous coordinates, together with the origin.
 
@@ -274,7 +276,7 @@ and for all $$x \in X$$, the $$F_i(x)$$ are not simultaneously zero.
 
 If $$F_0, \ldots, F_m$$ are all homogeneous polynomials of the same degree $$d$$, then since $$F_i(\lambda x) = \lambda^d F_i(x)$$, we have
 
-$$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
+$$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)],$$
 
 so well-definedness is guaranteed. The following examples are representative morphisms.
 
