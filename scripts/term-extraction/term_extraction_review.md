@@ -2965,3 +2965,53 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `Borel subgroup` | multi-word English emphasis — possibly a definition |
 | `length` | looks like emphasis (no <sub> partner) |
 
+## 아핀 토릭 다양체
+- post: `_posts/Math/Toric_Geometry/ko/2026-03-05-Affine_Toric_Varieties.md`
+- permalink: `/ko/math/toric_geometry/affine_toric_varieties`
+- scanned: 2026-05-30T05:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `lattice들` | mixed-script emphasis — possibly a definition |
+| `semigroup algebra` | multi-word English emphasis — possibly a definition |
+| `Gordan's lemma` | multi-word English emphasis — possibly a definition |
+| `regular` | looks like emphasis (no <sub> partner) |
+| `nonsingular` | looks like emphasis (no <sub> partner) |
+| `character group` | multi-word English emphasis — possibly a definition |
+| `pullback` | looks like emphasis (no <sub> partner) |
+
+## 아핀다양체
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-12-Affine_Varieties.md`
+- permalink: `/ko/math/algebraic_varieties/affine_varieties`
+- scanned: 2026-05-30T05:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `이라 부르고, 각각의 좌표 $$x_i$$를` | mixed-script emphasis — possibly a definition |
+| `principal open set` | multi-word English emphasis — possibly a definition |
+
+## 사영다양체
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-12-Projective_Varieties.md`
+- permalink: `/ko/math/algebraic_varieties/projective_varieties`
+- scanned: 2026-05-30T06:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `homogeneous ideal` | multi-word English emphasis — possibly a definition |
+| `irrelevant ideal` | multi-word English emphasis — possibly a definition |
+| `$$i$$번째 standard open set` | mixed-script emphasis — possibly a definition |
+| `Veronese embedding` | multi-word English emphasis — possibly a definition |
+
+## 코호몰로지
+- post: `_posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md`
+- permalink: `/ko/math/algebraic_topology/cohomology`
+- scanned: 2026-05-30T07:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `, j^` | multi-word English emphasis — possibly a definition |
+| `- l^` | multi-word English emphasis — possibly a definition |
+| `tensor product` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+
