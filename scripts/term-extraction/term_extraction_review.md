@@ -3097,3 +3097,62 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `exceptional divisor` | multi-word English emphasis — possibly a definition |
 | `relative` | looks like emphasis (no <sub> partner) |
 
+## 선형계
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-29-Linear_Systems.md`
+- permalink: `/ko/math/algebraic_varieties/linear_systems`
+- scanned: 2026-05-30T09:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `effective` | looks like emphasis (no <sub> partner) |
+| `base locus` | multi-word English emphasis — possibly a definition |
+| `closed` | looks like emphasis (no <sub> partner) |
+
+## 층 코호몰로지
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-04-05-Sheaf_Cohomology.md`
+- permalink: `/ko/math/algebraic_varieties/sheaf_cohomology`
+- scanned: 2026-05-30T09:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `sheaf cohomology` | multi-word English emphasis — possibly a definition |
+| `coboundary map` | multi-word English emphasis — possibly a definition |
+| `non-alternating` | looks like emphasis (no <sub> partner) |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `separated` | looks like emphasis (no <sub> partner) |
+| `Godement sheaf` | multi-word English emphasis — possibly a definition |
+| `mapping cone` | multi-word English emphasis — possibly a definition |
+
+## 사영공간의 코호몰로지
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-04-06-Cohomology_of_Projective_Spaces.md`
+- permalink: `/ko/math/algebraic_varieties/cohomology_of_projective_spaces`
+- scanned: 2026-05-30T10:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `핵심 보조정리` | looks like emphasis (no <sub> partner) |
+| `Vanishing` | looks like emphasis (no <sub> partner) |
+
+## 유도카테고리
+- post: `_posts/Math/Homological_Algebra/ko/2026-04-13-Derived_Categories.md`
+- permalink: `/ko/math/homological_algebra/derived_categories`
+- scanned: 2026-05-30T10:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `homotopy category` | multi-word English emphasis — possibly a definition |
+| `derived category` | multi-word English emphasis — possibly a definition |
+| `shift functor` | multi-word English emphasis — possibly a definition |
+| `Shift functor` | multi-word English emphasis — possibly a definition |
+
+## 세르 쌍대성
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-04-21-Serre_Duality.md`
+- permalink: `/ko/math/algebraic_varieties/serre_duality`
+- scanned: 2026-05-30T11:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `trace map` | multi-word English emphasis — possibly a definition |
+| `relative dualizing sheaf` | multi-word English emphasis — possibly a definition |
+| `exceptional inverse image` | multi-word English emphasis — possibly a definition |
+
