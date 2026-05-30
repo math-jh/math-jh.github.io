@@ -1,5 +1,6 @@
 ---
 title: "Blowup Algebras"
+description: "From the children of a ring, we construct the associated graded ring and associated graded module, and analyze the structure of finitely generated modules via filtrations and stable filtrations."
 excerpt: "Rees algebras and associated graded rings constructed from an ideal"
 
 categories: [Math / Commutative Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2024-10-20
 last_modified_at: 2024-10-20
 weight: 11
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-30T18:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T18:30:04+00:00
 ---
 In this post we fix a ring $$A$$ and an ideal $$\mathfrak{a}$$ of $$A$$, and define two graded $$A$$-algebras arising from it.
 
@@ -28,7 +30,7 @@ $$\gr_\mathfrak{a}A= A/\mathfrak{a}\oplus \mathfrak{a}/\mathfrak{a}^2\oplus\cdot
 
 </div>
 
-In the above definition, the multiplication in $$\gr_\mathfrak{a}A$$ is given as follows: for any $$a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$$ and $$b\in \mathfrak{a}^l/\mathfrak{a}^{l+1}$$, their product $$ab$$ is obtained by first computing the product $$\tilde{a}\tilde{b}$$ of representatives $$\tilde{a}\in \mathfrak{a}^k$$ and $$\tilde{b}\in \mathfrak{a}^l$$, and then restricting it to $$\mathfrak{a}^{k+l}/\mathfrak{a}^{k+l+1}$$.
+In the definition above, multiplication in $$\gr_\mathfrak{a}A$$ is defined as follows. Given $$a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$$ and $$b\in \mathfrak{a}^l/\mathfrak{a}^{l+1}$$, their product $$ab$$ is obtained by first choosing representatives $$\tilde{a}\in \mathfrak{a}^k$$ and $$\tilde{b}\in \mathfrak{a}^l$$, computing the product $$\tilde{a}\tilde{b}$$, and then taking its image in $$\mathfrak{a}^{k+l}/\mathfrak{a}^{k+l+1}$$.
 
 <div class="proposition" markdown="1">
 
@@ -50,7 +52,7 @@ To generalize this to an $$A$$-module, we make the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> For a ring $$A$$, an arbitrary ideal $$\mathfrak{a}$$ of $$A$$, and an $$A$$-module $$M$$, a filtration
+<ins id="def3">**Definition 3**</ins> Let $$A$$ be a ring, $$\mathfrak{a}$$ an ideal of $$A$$, and $$M$$ an $$A$$-module. A filtration
 
 $$M=M_0\supseteq M_1\supseteq\cdots$$
 
@@ -66,9 +68,9 @@ $$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 
 </div>
 
-In the above definition, $$\gr_\mathcal{J}M$$ carries a $$\gr_\mathfrak{a}A$$-module structure, which is given by choosing representatives $$\tilde{a}\in \mathfrak{a}^k$$ and $$\tilde{x}\in M_l$$ for arbitrary $$a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$$ and $$x\in M_l/M_{l+1}$$, and then restricting $$\tilde{a}\tilde{x}$$ to $$M_{k+l}/M_{k+l+1}$$; a computation similar to [Lemma 2](#lem2) shows that this is well-defined. In the special case where $$M=A$$ and the $$M_i$$ are ideals of $$A$$, the module $$\gr_\mathcal{J}A$$ also has a ring structure, just as in [Definition 1](#def1), and it is also called the associated graded ring with respect to the filtration $$\mathcal{J}$$.
+In the definition above, $$\gr_\mathcal{J}M$$ carries a $$\gr_\mathfrak{a}A$$-module structure defined as follows. For arbitrary $$a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$$ and $$x\in M_l/M_{l+1}$$, choose representatives $$\tilde{a}\in \mathfrak{a}^k$$ and $$\tilde{x}\in M_l$$, and take the image of $$\tilde{a}\tilde{x}$$ in $$M_{k+l}/M_{k+l+1}$$; a computation similar to [Lemma 2](#lem2) shows that this is well-defined. In the special case where $$M=A$$ and the $$M_i$$ are ideals of $$A$$, the module $$\gr_\mathcal{J}A$$ also acquires a ring structure, just as in [Definition 1](#def1), and is again called the associated graded ring with respect to the filtration $$\mathcal{J}$$.
 
-The following now holds.
+We now have the following.
 
 <div class="proposition" markdown="1">
 
@@ -78,7 +80,7 @@ The following now holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$\mathcal{J}$$ is an $$\mathfrak{a}$$-stable filtration, there exists a suitable $$n$$ such that $$\mathfrak{a}M_k=M_{k+1}$$ holds for all $$k>n$$. Hence for such $$k$$ we have $$(\mathfrak{a}/\mathfrak{a}^2)(M_k/M_{k+1})=M_{k+1}/M_{k+2}$$. Therefore, collecting generators for the components
+Since $$\mathcal{J}$$ is $$\mathfrak{a}$$-stable, there exists a suitable $$n$$ such that $$\mathfrak{a}M_k=M_{k+1}$$ holds for all $$k>n$$. Hence for such $$k$$ we have $$(\mathfrak{a}/\mathfrak{a}^2)(M_k/M_{k+1})=M_{k+1}/M_{k+2}$$. Therefore, collecting generators for the finitely many components
 
 $$M_0/M_1, M_1/M_2,\ldots, M_{n+1}/M_{n+2}$$
 
@@ -96,7 +98,7 @@ $$\Bl_\mathfrak{a}A=A\oplus \mathfrak{a}\oplus \mathfrak{a}^2\oplus\cdots\cong A
 
 </div>
 
-Then it is obvious that $$\Bl_\mathfrak{a}A/\mathfrak{a}\Bl_\mathfrak{a}A=\gr_\mathfrak{a}A$$. More generally, for any $$A$$-module $$M$$ and any $$\mathfrak{a}$$-filtration $$\mathcal{J}: M_0\supseteq M_1\supseteq\cdots$$, the module $$\Bl_\mathcal{J}M =M\oplus M_1\oplus\cdots$$ defined by the above formula is easily seen to be a graded $$\Bl_\mathfrak{a}A$$-module. The following now holds.
+Then $$\Bl_\mathfrak{a}A/\mathfrak{a}\Bl_\mathfrak{a}A=\gr_\mathfrak{a}A$$ is immediate. More generally, for any $$A$$-module $$M$$ and any $$\mathfrak{a}$$-filtration $$\mathcal{J}: M_0\supseteq M_1\supseteq\cdots$$, the module $$\Bl_\mathcal{J}M =M\oplus M_1\oplus\cdots$$ defined by the formula above is easily seen to be a graded $$\Bl_\mathfrak{a}A$$-module. We now have the following.
 
 <div class="proposition" markdown="1">
 
@@ -167,7 +169,7 @@ To prove the second result, set $$M=A$$. For the element $$a$$ obtained from the
 
 </details>
 
-Finally, we define the following.
+Finally, we make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -175,7 +177,7 @@ Finally, we define the following.
 
 $$\mathcal{J}:\qquad M=M_0\supseteq M_1\supseteq\cdots$$
 
-be given on an $$A$$-module $$M$$, with associated graded module $$\gr_\mathcal{J}M$$. For any $$x\in M$$, the *initial form* $$\initial(x)$$ of $$x$$ is defined by the formula
+be given on an $$A$$-module $$M$$, with associated graded module $$\gr_\mathcal{J}M$$. For any $$x\in M$$, the *initial form* $$\initial(x)$$ of $$x$$ is defined by
 
 $$\initial(x)=x+M_{k+1}\quad\text{in $M_k/M_{k+1}$,}\qquad\text{where $k$ is the greatest integer satisfying $x\in M_k$}$$
 
@@ -185,7 +187,7 @@ In the above situation, suppose an arbitrary $$A$$-submodule $$M'\subseteq M$$ i
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**Example 10**</ins> Let $$A=\mathbb{K}[\x,\y]$$ and $$\mathfrak{a}=(\x,\y)$$. Then $$\gr_\mathfrak{a}A$$ is a graded ring whose grading is determined by the degree of polynomials. Now set $$M=A$$, and consider the $$A$$-submodule (that is, the ideal of $$A$$) $$\mathfrak{b}=(\x^2, \y^2)$$. Since any element of $$\mathfrak{b}$$ has the form
+<ins id="ex10">**Example 10**</ins> Let $$A=\mathbb{K}[\x,\y]$$ and $$\mathfrak{a}=(\x,\y)$$. Then $$\gr_\mathfrak{a}A$$ is a graded ring whose grading is determined by polynomial degree. Now set $$M=A$$, and consider the $$A$$-submodule (that is, the ideal of $$A$$) $$\mathfrak{b}=(\x^2, \y^2)$$. Since any element of $$\mathfrak{b}$$ has the form
 
 $$f(\x,\y)\x^2+g(\x,\y)\y^2$$
 
