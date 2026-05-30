@@ -155,32 +155,25 @@ $$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in \mathrm{NE}(X) 
 
 앞서 우리는 다음의 식
 
-$$$$
+$$\left\langle \gamma_1, \ldots, \gamma_n, \frac{\gamma_{n+1}}{z - \psi}\right\rangle_{0, n+1, \beta}=\sum_{k \geq 0} z^{-k-1} \left\langle \gamma_1, \ldots, \gamma_n, \tau_k(\gamma_{n+1})\right\rangle_{0, n+1, \beta}$$
 
-
-이 식이 왜 *generating function*인지, 그리고 각 부분이 어떻게 모든 descendant invariant를 한꺼번에 packaging하는지를 풀어보자.
-
-**Packaging되는 데이터.** [정의 3](#def3)의 식이 한 객체에 담는 데이터는 모든 *single-marked-point descendant invariant*
-
-$$\bigl\{\langle\tau_k(T_a)\rangle_{0, 1, \beta}\bigr\}_{\substack{\beta \in \mathrm{NE}(X) \setminus \{0\} \\ a = 0, \ldots, s \\ k \geq 0}}$$
-
-이며, 세 인덱스 ($$\beta, a, k$$)를 각각 Novikov variable $$q^\beta$$, Poincaré dual basis 원소 $$T^a$$, spectral parameter의 거듭제곱 $$z^{-k-2}$$로 매개해서 하나의 $$H^\ast(X)$$-값 함수에 모은다. [정의 3](#def3)의 식을 *완전히 풀어 적으면*
+을 이미 검증했으므로, 위의 $$J$$-function은 다음의 꼴
 
 $$J_X(q, z) = e^{t_{(2)}/z}\left(\mathbf{1} + \sum_{\substack{\beta \in \mathrm{NE}(X) \\ \beta \neq 0}}\sum_{a = 0}^s \sum_{k \geq 0} q^\beta z^{-k-2} \langle\tau_k(T_a)\rangle_{0, 1, \beta} T^a\right)$$
 
-가 되어, 임의의 invariant $$\langle\tau_k(T_a)\rangle_{0, 1, \beta}$$가 J의 *$$T^a$$ 방향 $$q^\betaz^{-k-2}$$ coefficient*로 한 번에 추출된다. 거꾸로 J 자체가 모든 invariant를 동시에 결정하는 *master 데이터*인 셈이며, 이게 "$$J$$-function이 generating function"의 정확한 의미.
+로 풀어 적을 수 있다. 따라서, 이 함수는 본질적으로 single marked point descendant invariant
 
-**$$\frac{1}{z(z-\psi)}$$의 packaging trick.** 위 풀이형에서 *$$k$$-sum을 한 bracket 안에 흡수*한 형태가 [정의 3](#def3) 본문의 $$\langle T_a/(z(z-\psi))\rangle$$이다. 구체적으로 $$\frac{1}{z(z-\psi)} = \sum_{k \geq 0}z^{-k-2}\psi^k$$ generating series를 한 marked point에 끼우면 ([정의 1](#def1)의 $$\tau_k$$ 표기 컨벤션에 의해)
+$$\bigl\{\langle\tau_k(T_a)\rangle_{0, 1, \beta}\bigr\}_{\beta \in \mathrm{NE}(X) \setminus \{0\}, a = 0, \ldots, s, k \geq 0}$$
 
-$$\left\langle T_a\cdot\frac{1}{z(z-\psi)}\right\rangle_{0, 1, \beta} = \sum_{k \geq 0} z^{-k-2}\langle\tau_k(T_a)\rangle_{0, 1, \beta}$$
+들을 Novikov parameter $$q^\beta$$, spectral parameter $$z^{-k-2}$$와 cohomology의 basis element들 $$T^a$$에 붙여서 만든 generating function으로 생각할 수 있다. 
 
-이 되어 $$k$$에 대한 sum이 sum 기호 없이 $$\frac{1}{z(z-\psi)}$$ 안에 흡수된다. 위 ⁋Descendant Gromov-Witten invariant 절에서 본 $$\frac{1}{z-\psi}$$ trick과 본질적으로 같은 packaging이며, 다만 J-function의 normalization을 위해 $$z^{-1}$$이 하나 더 붙어 $$\sum z^{-k-1}\psi^k$$ 대신 $$\sum z^{-k-2}\psi^k$$ 형태로 정리된 것.
+일반적으로 우리가 위에서 정의한 descendant invariant들은 multi-marked point
 
-**Prefactor $$e^{t_{(2)}/z}$$와 single-marked-point 형태.** Generic descendant invariant는 multi-marked-point ($$\overline{\mathcal{M}}_{0, n+1}(X, \beta)$$, $$n + 1 \geq 1$$)인데 J에선 $$n + 1 = 1$$만 등장한다. 그 이유는 *$$H^2$$ 방향의 추가 insertion이 divisor equation으로 $$q^\beta$$ 인자에 흡수*되기 때문이며, 그 흡수의 generating function 형태가 prefactor $$e^{t_{(2)}/z}$$이다. 따라서 J는 "$$H^2$$ 방향의 직접 의존성은 prefactor가 담당, 나머지 GW 정보는 single-marked-point invariant" 구조로 깔끔히 정리된다. (Multi-marked-point 형태를 보존한 *big* J-function 버전은 §§Big quantum cohomology로의 확장에서 다룬다.)
+$$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\rangle_{0, n+1, \beta}$$
 
-**$$\beta \neq 0$$ 제한의 이유.** $$\overline{\mathcal{M}}_{0, 1}(X, \beta)$$는 $$\beta = 0$$일 때 비어 있다 — genus-$$0$$, $$1$$-marked smooth curve는 $$\geq 3$$ special point 조건을 만족하지 않아 stable이 아니기 때문. $$\beta \neq 0$$에서는 *map의 non-constancy*가 stability를 보장하므로 moduli가 well-defined하고, 그래서 inner sum이 자연스럽게 $$\beta \neq 0$$로 제한된다.
+의 형태이지만, 위에서 우리는 single marked point들만 식에 넣었음을 유의하자. 이것이 가능한 이유는 $$\beta\neq 0$$이므로 source의 stability와 관계없이 target이 충분히 크므로 stability가 보장되기 때문이며, 이들만 보는 것으로 충분한 이유는 본질적으로 우리가 $$H^2$$ 방향 deformation, 즉 small quantum cohomology를 우선적으로 생각하기 때문이다. 더 구체적으로, [정의 1](#def1)의 일반적인 descendant invariant는 marked point를 여럿 가질 수 있지만, 우리가 켜는 deformation이 $$H^2$$ 방향의 $$t_{(2)}$$로 제한되는 한 그 추가 insertion들은 divisor equation ([\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4))으로 하나씩 떼어낼 수 있다. 각 $$H^2$$ insertion은 교차수 $$t_{(2)} \cdot \beta$$라는 인자만을 남기고 (descendant의 경우 여기에 $$\psi$$를 한 단계 낮추는 $$z^{-1}$$ 보정이 더해진다), insertion의 개수에 대해 합하면 이들이 지수함수로 접혀 하나의 닫힌 인자로 빠져나온다. 다시 말해 $$H^2$$ 방향은 오직 지수함수의 꼴로만 이론에 들어온다. Primary 수준에서 이는 $$H^2$$ 방향을 켜는 것이 Novikov 변수를 $$q^\beta \mapsto e^{t_{(2)} \cdot \beta} q^\beta$$로 재매개화하는 것, 즉 $$q^\beta = e^{t_{(2)} \cdot \beta}$$로 $$H^2$$ 좌표를 지수화하는 것에 지나지 않는다는 사실과 같으며 ([\[사교기하학\] §양자 코호몰로지, §§큰 양자 코호몰로지와 고전 극한](/ko/math/symplectic_geometry/quantum_cohomology#큰-양자-코호몰로지와-고전-극한)에서 보았듯, 이런 의미에서 $$q_a = e^{t^a}$$로 둔다), $$J$$-function 차원에서는 여기에 $$\psi$$-보정이 더해진 형태가 정의의 맨 앞에 떼어 둔 prefactor $$e^{t_{(2)}/z}$$로 나타난다. 따라서 $$H^2$$ 방향의 의존성은 모두 prefactor와 Novikov 변수가 짊어지고, 정작 새로운 Gromov-Witten 정보는 남은 하나의 marked point에 응축되므로, single marked point invariant만 보아도 충분하다. (임의의 cohomology class를 끼운 multi-marked-point 형태를 그대로 보존한 *big* $$J$$-function은 §§Big quantum cohomology로의 확장에서 다룬다.)
 
-**$$z^{-1}$$ 멱급수로의 풀이.** 위 모든 packaging을 풀어서 J를 $$z^{-1}$$의 멱급수로 정리하면 prefactor $$e^{t_{(2)}/z} = \sum_k(t_{(2)})^k/(k!z^k)$$가 각 차수에 $$(t_{(2)})^k/k!$$를 기여하고, inner sum이 $$z^{-k-2}$$ 차수에 $$\sum_a\langle\tau_k(T_a)\rangle_{0,1,\beta} T^a$$ 항을 기여하여 합쳐진다. 구체적으로 $$z^0$$ 차수는 classical leading $$\mathbf{1}$$만 남고, $$z^{-1}$$ 차수는 prefactor에서만 오는 $$t_{(2)}$$이며 GW invariant는 여기까지 끼어들지 않는다 (inner sum이 $$z^{-2}$$부터 시작하므로). $$z^{-2}$$ 차수에서 처음으로 prefactor의 $$(t_{(2)})^2/2$$와 함께 *primary* GW invariant $$\sum_{\beta \neq 0}q^\beta\sum_a\langle T_a\rangle_{0, 1, \beta}T^a$$가 등장하고, 일반적으로 $$z^{-k}$$ ($$k \geq 2$$) 차수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle\tau_{k-2}(T_a)\rangle_{0, 1, \beta}$$이 함께 나타난다. 즉 J는 모든 차수의 descendant GW invariant를 한 $$(q, z)$$-함수에 모은 *master 생성함수*이며, 이 packaging 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 명제 4의 내용이다.
+한편 이 모든 packaging을 풀어 $$J$$를 직접 $$z^{-1}$$의 멱급수로 정리하면 prefactor $$e^{t_{(2)}/z} = \sum_k(t_{(2)})^k/(k!z^k)$$가 각 차수에 $$(t_{(2)})^k/k!$$를 기여하고, inner sum이 $$z^{-k-2}$$ 차수에 $$\sum_a\langle\tau_k(T_a)\rangle_{0,1,\beta} T^a$$ 항을 기여하여 합쳐진다. 구체적으로 $$z^0$$ 차수는 classical leading $$\mathbf{1}$$만 남고, $$z^{-1}$$ 차수는 prefactor에서만 오는 $$t_{(2)}$$이며 GW invariant는 여기까지 끼어들지 않는다 (inner sum이 $$z^{-2}$$부터 시작하므로). $$z^{-2}$$ 차수에서 처음으로 prefactor의 $$(t_{(2)})^2/2$$와 함께 *primary* GW invariant $$\sum_{\beta \neq 0}q^\beta\sum_a\langle T_a\rangle_{0, 1, \beta}T^a$$가 등장하고, 일반적으로 $$z^{-k}$$ ($$k \geq 2$$) 차수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle\tau_{k-2}(T_a)\rangle_{0, 1, \beta}$$이 함께 나타난다. 즉 J는 모든 차수의 descendant GW invariant를 한 $$(q, z)$$-함수에 모은 *master 생성함수*이며, 이 packaging 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 명제 4의 내용이다.
 
 ## QDE의 fundamental solution
 
