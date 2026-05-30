@@ -1,5 +1,6 @@
 ---
 title: "Localization"
+description: "We explore the localization of rings and the properties of local rings with unique maximal ideals, extending these concepts to the localization of modules and multiplicatively closed subsets."
 excerpt: "The localization of rings and modules, and the construction of local rings"
 
 categories: [Math / Commutative Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2024-09-05
 last_modified_at: 2025-02-02
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T16:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T16:00:04+00:00
 ---
 ## Local Rings
 
@@ -33,14 +35,14 @@ Then we can show the following equivalence.
 <ins id="prop2">**Proposition 2**</ins> For a ring $$A$$, the following are equivalent.
 
 1. $$A$$ is a local ring.
-2. Every non-unit of $$A$$ belongs to a proper ideal $$\mathfrak{m}\subsetneq A$$.
+2. Every non-unit of $$A$$ belongs to some proper ideal $$\mathfrak{m}\subsetneq A$$.
 3. The set of all non-units of $$A$$ forms an ideal.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First assume (1). Let $$a\in A$$ be an arbitrary non-unit. Then $$(a)$$ is an ideal of $$A$$, so by [\[Algebraic Structures\] §Definition of a Ring, ⁋Theorem 9 (Krull)](/en/math/algebraic_structures/rings#thm9) it is contained in some maximal ideal. But since $$A$$ has a unique maximal ideal $$\mathfrak{m}$$, we must have $$(a)\subseteq \mathfrak{m}$$, and therefore $$a\in \mathfrak{m}$$.
+First assume (1), and let $$a\in A$$ be an arbitrary non-unit. Then $$(a)$$ is an ideal of $$A$$, so by [\[Algebraic Structures\] §Definition of a Ring, ⁋Theorem 9 (Krull)](/en/math/algebraic_structures/rings#thm9) it is contained in some maximal ideal. But since $$A$$ has a unique maximal ideal $$\mathfrak{m}$$, we must have $$(a)\subseteq \mathfrak{m}$$, and therefore $$a\in \mathfrak{m}$$.
 
 Now assume (2) and prove (3). For this, it suffices to show that the set of all non-units of $$A$$ is closed under addition. First, from $$\mathfrak{m}\neq A$$ we know that $$\mathfrak{m}$$ does not contain any unit of $$A$$. From this we know that the set of all non-units of $$A$$ must be exactly equal to $$\mathfrak{m}$$.
 
@@ -64,7 +66,7 @@ In particular, since $$1$$ can be thought of as the product of a family indexed 
 
 <ins id="def4">**Definition 4**</ins> For a ring $$A$$, an $$A$$-module $$M$$, and a multiplicative subset $$S$$ of $$A$$, the *localization* of $$M$$ at $$S$$ is the $$A$$-module $$S^{-1}M$$ defined as follows.
 
-1. As a set, $$S^{-1}M$$ is the quotient set of $$M\times S$$ by the following equivalence relation:
+1. As a set, $$S^{-1}M$$ is the quotient of $$M\times S$$ by the following equivalence relation:
     
     $$(x,s)\sim (x',s')\iff \text{there exists $t\in S$ such that $t(s'x-sx')=0$}$$
   
@@ -89,7 +91,7 @@ $$\frac{0}{s'}+\frac{x}{s}=\frac{x}{s}+\frac{0}{s'}=\frac{0s+s'x}{ss'}=\frac{s'x
 
 we see that this is the additive identity in $$S^{-1}M$$. By a similar calculation, the inverse of any $$x/s$$ is $$(-x)/s$$.
 
-These calculations are no different from the addition and multiplication of fractions we have done since middle school. Taking this as intuition, we can define the canonical map $$\epsilon: M \rightarrow S^{-1}M$$ by $$x\mapsto x/1$$. Unfortunately, $$\epsilon$$ need not be an inclusion in general; the reason is obvious if you think about it, and is captured in the following proposition.
+These calculations are no different from the addition and multiplication of fractions we have done since middle school. Taking this as intuition, we define the canonical map $$\epsilon: M \rightarrow S^{-1}M$$ by $$x\mapsto x/1$$. Unfortunately, $$\epsilon$$ need not be an inclusion in general; the reason is obvious if you think about it, and is captured in the following proposition.
 
 <div class="proposition" markdown="1">
 
@@ -115,7 +117,7 @@ holds. The converse also holds by the same logic.
 
 The simplest example of localization is the ring of fractions examined in [\[Algebraic Structures\] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2). There we took $$M=A$$. In particular, we also saw that if $$A$$ is an integral domain, then its ring of fractions $$\Frac(A)$$ is a field. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 6](/en/math/algebraic_structures/field_of_fractions#prop6))
 
-As another example, again taking $$M=A$$ and letting $$S=A\setminus \mathfrak{p}$$ for a prime ideal $$\mathfrak{p}$$ of $$A$$, we could consider $$A_\mathfrak{p}=S^{-1}A$$. Using [Definition 4](#def4), this can be applied to any $$A$$-module $$M$$ as well, and the resulting $$A$$-module is denoted $$M_\mathfrak{p}$$.
+As another example, again taking $$M=A$$ and letting $$S=A\setminus \mathfrak{p}$$ for a prime ideal $$\mathfrak{p}$$ of $$A$$, we could consider $$A_\mathfrak{p}=S^{-1}A$$. Using [Definition 1](#def1), this can be applied to any $$A$$-module $$M$$ as well, and the resulting $$A$$-module is denoted $$M_\mathfrak{p}$$.
 
 Both of the above examples carry a multiplication structure in addition to the additive structure and the $$A$$-scalar multiplication defined in [Definition 4](#def4). Explicitly, this structure is given by
 
@@ -191,7 +193,7 @@ The following is obvious from the above proposition.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor9">**Corollary 9**</ins> The localization of a Noetherian ring is noetherian.
+<ins id="cor9">**Corollary 9**</ins> The localization of a Noetherian ring is Noetherian.
 
 </div>
 <details class="proof" markdown="1">
@@ -205,7 +207,7 @@ the chain
 
 $$\mathfrak{b}_0^c\subseteq \mathfrak{b}_1^c\subseteq\cdots$$
 
-is an ascending chain of ideals in the noetherian ring $$A$$, so there exists $$N$$ such that for every $$n>N$$ we have $$\mathfrak{b}_n^c=\mathfrak{b}_{n+1}^c$$. Now for such $$n$$,
+is an ascending chain of ideals in the Noetherian ring $$A$$, so there exists $$N$$ such that for every $$n>N$$ we have $$\mathfrak{b}_n^c=\mathfrak{b}_{n+1}^c$$. Now for such $$n$$,
 
 $$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$$
 
