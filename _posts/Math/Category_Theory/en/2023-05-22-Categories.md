@@ -1,5 +1,6 @@
 ---
 title: "Categories"
+description: "We introduce the definition of a category in terms of objects, morphisms, and composition, and examine the conditions of associativity and identity morphisms. Through concrete examples including the category of sets, we show how diverse mathematical structures are described in the language of categories."
 excerpt: "Definitions and basic concepts of category theory"
 
 categories: [Math / Category Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2023-05-22
 last_modified_at: 2023-05-28
 weight: 1
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-30T11:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T11:30:04+00:00
 ---
 Whenever a subject is a branch of mathematics, there are certain notions it naturally possesses. The *objects* we wish to study, and the *morphisms* between these objects, are such examples. Since category theory is the study of this structure in the abstract, specific theorems from each field can serve as examples in category theory. However, this does not mean we must study all these fields before learning category theory; our goal is to study category theory as dryly as possible, leaving most examples to be examined separately when studying the corresponding fields.
 

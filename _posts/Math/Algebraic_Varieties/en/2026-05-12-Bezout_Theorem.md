@@ -1,5 +1,6 @@
 ---
 title: "Bézout's Theorem"
+description: "Bezout's theorem in algebraic geometry states that in projective space over an algebraically closed field, two curves with no common component intersect in a number of points equal to the product of their degrees. Taking multiplicity into account, two conics meet in exactly four points."
 excerpt: "Bézout's theorem and its applications"
 
 categories: [Math / Algebraic Varieties]
@@ -14,10 +15,11 @@ header:
 date: 2026-03-15
 last_modified_at: 2026-04-02
 weight: 20
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T11:00:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T11:00:05+00:00
 ---
-In this post we introduce Bézout's theorem, a classical result in algebraic geometry. Intuitively, given two curves $$C,D$$ in the plane, the number of their intersection points depends on their degrees: for instance, the quadratic curve $$\y=x^2$$ and a line in the plane generally meet at two points. Bézout's theorem is a generalization of this observation.
+In this post we introduce Bézout's theorem, a classical result in algebraic geometry. Intuitively, given two curves $$C,D$$ in the plane, the number of their intersection points depends on their degrees: for instance, the parabola $$\y=x^2$$ and a line in the plane generally meet at two points. Bézout's theorem generalizes this observation.
 
 <div class="proposition" markdown="1">
 
@@ -29,7 +31,7 @@ holds. Here the intersection is taken with multiplicity.
 
 </div>
 
-In particular, two curves of degrees $$m,n$$ in $$\mathbb{P}^2$$ meet at $$mn$$ points. One must be careful that they must not have a common component; for instance, two identical curves cannot be counted in this way.
+In particular, two curves of degrees $$m,n$$ in $$\mathbb{P}^2$$ meet at $$mn$$ points. Care must be taken that they share no common component; for instance, two identical curves cannot be analyzed in this way.
 
 <div class="example" markdown="1">
 
@@ -37,13 +39,13 @@ In particular, two curves of degrees $$m,n$$ in $$\mathbb{P}^2$$ meet at $$mn$$ 
 
 $$C_1 = Z(\x_0^2 + \x_1^2 - \x_2^2),\qquad C_2 = Z(\x_0\x_1)$$
 
-$$C_1$$ is the projectivization of a cone, and $$C_2$$ is the union of the two lines $$Z(\x_0)$$ and $$Z(\x_1)$$. These two curves have no common component, so by Bézout's theorem they should have $$2 \times 2 = 4$$ intersection points. Indeed, computing the intersection, when $$\x_0 = 0$$ we get $$\x_1^2 = \x_2^2$$, yielding $$[0:1:1]$$ and $$[0:1:-1]$$, and when $$\x_1 = 0$$ we get $$\x_0^2 = \x_2^2$$, yielding $$[1:0:1]$$ and $$[1:0:-1]$$, so we verify that they meet at exactly 4 points.
+$$C_1$$ is the projectivization of a cone, and $$C_2$$ is the union of the two lines $$Z(\x_0)$$ and $$Z(\x_1)$$. These two curves have no common component, so by Bézout's theorem they should have $$2 \times 2 = 4$$ intersection points. Indeed, computing the intersection: when $$\x_0 = 0$$ we obtain $$\x_1^2 = \x_2^2$$, yielding $$[0:1:1]$$ and $$[0:1:-1]$$; when $$\x_1 = 0$$ we obtain $$\x_0^2 = \x_2^2$$, yielding $$[1:0:1]$$ and $$[1:0:-1]$$. Thus they meet at exactly four points.
 
 </div>
 
 ## Proof
 
-Rather than proving the general case, we prove Bézout's theorem only in $$\mathbb{P}^2$$. For this we use the following lemma.
+Rather than proving the general case, we prove Bézout's theorem in $$\mathbb{P}^2$$. For this we use the following lemma.
 
 <div class="proposition" markdown="1">
 
@@ -57,12 +59,12 @@ Here the degree of $$P_C$$ is $$1$$, the dimension of $$C$$; the leading coeffic
 
 </div>
 
-The Hilbert function $$H(t)$$ counts the number of independent elements remaining after removing those homogeneous polynomials of degree $$t$$ that vanish on $$C$$—in other words, the number of homogeneous polynomials that act as distinct functions on $$C$$. As $$t$$ grows, this number grows like a polynomial; its degree equals $$1$$, the dimension of $$C$$; its leading coefficient is proportional to the degree $$d$$; and its constant term equals the arithmetic genus $$1 - \frac{(d-1)(d-2)}{2}$$.
+The Hilbert function $$H(t)$$ counts the number of independent homogeneous polynomials of degree $$t$$ that do not vanish identically on $$C$$—in other words, the number of homogeneous polynomials that act as distinct functions on $$C$$. As $$t$$ grows, this number grows polynomially; its degree equals $$1$$, the dimension of $$C$$; its leading coefficient is proportional to the degree $$d$$; and its constant term equals the arithmetic genus $$1 - \frac{(d-1)(d-2)}{2}$$.
 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let $$S = \mathbb{K}[\x_0, \x_1, \x_2]$$. The dimension of $$(S/(F))_t$$ equals the dimension of the space obtained from $$S_t$$ by removing the multiples of $$F$$. Since multiplication by $$F$$, $$\cdot F: S(-d) \to S$$, is injective, we obtain the following short exact sequence:
+Let $$S = \mathbb{K}[\x_0, \x_1, \x_2]$$. The dimension of $$(S/(F))_t$$ equals the dimension of the space obtained from $$S_t$$ by removing the multiples of $$F$$. Since multiplication by $$F$$, $$\cdot F: S(-d) \to S$$, is injective, we obtain the short exact sequence
 
 $$0 \to S(-d) \xrightarrow{\cdot F} S \to S/(F) \to 0$$
 
@@ -74,7 +76,7 @@ Expanding this,
 
 $$\frac{(t+2)(t+1)}{2} - \frac{(t-d+2)(t-d+1)}{2} = dt + \frac{d(3-d)}{2}$$
 
-we obtain the result.
+which yields the claim.
 
 </details>
 
@@ -86,7 +88,7 @@ This result is used crucially in the proof of [Proposition 5](#prop5) below.
 
 </div>
 
-This proposition is the simplest special case of Bézout's theorem. It provides the geometric intuition that a curve of degree $$d$$ meets a general line in $$d$$ points.
+This proposition is the simplest special case of Bézout's theorem. It captures the geometric intuition that a curve of degree $$d$$ meets a general line in $$d$$ points.
 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
@@ -108,7 +110,7 @@ We now prove Proposition 1. The argument has two main parts. First we show that 
 
 We divide the proof into two steps.
 
-**Step 1.** We first show the following equality:
+**Step 1.** We first establish the equality
 
 > $$\sum_{p \in C \cap D} i_p(C, D) = \dim_\mathbb{K} (\mathbb{K}[\x_0, \x_1, \x_2]/(F, G))_t \qquad (t \gg 0)$$
 
@@ -122,7 +124,7 @@ $$\mathbb{K}[\x, \y]/(f, g) \cong \prod_{p \in V(f,g)} \mathcal{O}_{\mathbb{A}^2
 
 Therefore $$\dim_\mathbb{K} \mathbb{K}[\x, \y]/(f, g) = \sum_p i_p(C, D)$$.
 
-On the other hand, the Hilbert function $$H(t) = \dim_\mathbb{K} R_t$$ of the quotient $$R = S/(F, G)$$ of $$S = \mathbb{K}[\x_0, \x_1, \x_2]$$ becomes constant for $$t \gg 0$$ (proved in Step 2), and this constant value equals $$\dim_\mathbb{K} \mathbb{K}[\x, \y]/(f, g)$$. Indeed, for $$t \gg 0$$ there exist polynomials of degree $$t$$ that can be adjusted independently at each intersection point, so the evaluation map $$R_t \to \mathbb{K}^{\lvert V(F,G) \rvert}$$ is surjective.
+On the other hand, the Hilbert function $$H(t) = \dim_\mathbb{K} R_t$$ of the quotient $$R = S/(F, G)$$ of $$S = \mathbb{K}[\x_0, \x_1, \x_2]$$ becomes constant for $$t \gg 0$$ (proved in Step 2), and this constant equals $$\dim_\mathbb{K} \mathbb{K}[\x, \y]/(f, g)$$. Indeed, for $$t \gg 0$$ there exist polynomials of degree $$t$$ that can be adjusted independently at each intersection point, so the evaluation map $$R_t \to \mathbb{K}^{\lvert V(F,G) \rvert}$$ is surjective.
 
 **Step 2.** We now show that $$\dim_\mathbb{K} (\mathbb{K}[\x_0, \x_1, \x_2]/(F, G))_t = mn$$ for $$t \gg 0$$. Write $$S = \mathbb{K}[\x_0, \x_1, \x_2]$$. Since $$F, G$$ have no common irreducible factor, the multiplication maps $$\cdot F: S(-m) \to S$$ and $$\cdot G: S/(F)(-n) \to S/(F)$$ are both injective, yielding the two short exact sequences
 
@@ -139,7 +141,7 @@ Hence for $$t \gg 0$$ the dimension of $$(S/(F, G))_t$$ is the constant $$mn$$, 
 
 ## Generalization
 
-So far we have proved Bézout's theorem only for curves in $$\mathbb{P}^2$$. To extend this to arbitrary projective spaces and general projective varieties, one needs the Chow ring. The key fact is
+So far we have proved Bézout's theorem only for curves in $$\mathbb{P}^2$$. To extend it to arbitrary projective spaces and general projective varieties, one needs the Chow ring. The key fact is
 
 $$\operatorname{CH}^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H]/(H^{n+1})$$
 
@@ -182,7 +184,7 @@ The proof of Proposition 6 relies on the general theory of intersection theory v
 
 Assume that the two cubic curves $$C_1, C_2$$ meet in nine distinct points $$p_1, \ldots, p_9$$ as a proper intersection. The space $$\mathbb{K}[\x_0, \x_1, \x_2]_3$$ of homogeneous polynomials of degree 3 on $$\mathbb{P}^2$$ has dimension $$\binom{3+2}{2} = 10$$, and the condition of passing through each point $$p_i$$ imposes one linear condition. Hence the subspace $$V = \{F \in \mathbb{K}[\x_0, \x_1, \x_2]_3 : F(p_i) = 0 \text{ for } i = 1, \ldots, 8\}$$ has dimension $$\dim V \ge 10 - 8 = 2$$. On the other hand, $$F_1, F_2 \in V$$, and since $$C_1 \neq C_2$$, the polynomials $$F_1, F_2$$ are linearly independent. If the eight points are in general position, then $$\dim V = 2$$ and $$F_1, F_2$$ form a basis of $$V$$. Therefore, for any $$F_3 \in V$$ there exist constants $$\alpha, \beta$$ such that $$F_3 = \alpha F_1 + \beta F_2$$. Evaluating both sides at $$p_9$$ gives $$F_3(p_9) = \alpha F_1(p_9) + \beta F_2(p_9) = 0$$, so $$C_3$$ passes through $$p_9$$ as well.</details>
 
-The intuition behind this result is as follows. The condition of passing through eight of the nine intersection points of two cubics imposes eight linear constraints on the space of cubics (which is 10-dimensional), leaving a 1-dimensional space whose elements all pass through the ninth point as well. This shows that the outcome $$3 \times 3 = 9$$ of Bézout's theorem is no accident.
+The intuition behind this result is as follows. The condition of passing through eight of the nine intersection points of two cubics imposes eight linear constraints on the space of cubics (which is 10-dimensional), leaving a 1-dimensional space whose elements all pass through the ninth point as well. This shows that the outcome $$3 \times 3 = 9$$ from Bézout's theorem is no accident.
 
 ### Pascal's Theorem
 
