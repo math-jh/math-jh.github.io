@@ -2895,3 +2895,73 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `Schubert symbol` | multi-word English emphasis — possibly a definition |
 | `polynomial algebra로서` | mixed-script emphasis — possibly a definition |
 
+## 근계
+- post: `_posts/Math/Lie_Theory/ko/2025-11-12-Root_Systems.md`
+- permalink: `/ko/math/lie_theory/root_systems`
+- scanned: 2026-05-30T03:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `traceless` | looks like emphasis (no <sub> partner) |
+| `raising operator` | multi-word English emphasis — possibly a definition |
+| `real` | looks like emphasis (no <sub> partner) |
+
+## 조르당 표준형
+- post: `_posts/Math/Linear_Algebra/ko/2026-01-21-Jordan_Canonical_Form.md`
+- permalink: `/ko/math/linear_algebra/Jordan_canonical_form`
+- scanned: 2026-05-30T03:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$T$$-invariant` | looks like emphasis (no <sub> partner) |
+| `Jordan block` | multi-word English emphasis — possibly a definition |
+
+## 유한군의 표현론
+- post: `_posts/Math/Representation_Theory/ko/2026-02-13-Representations_of_Finite_Groups.md`
+- permalink: `/ko/math/representation_theory/representations_of_finite_groups`
+- scanned: 2026-05-30T04:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유한차원` | looks like emphasis (no <sub> partner) |
+| `dual representation` | multi-word English emphasis — possibly a definition |
+| `conjugate representation` | multi-word English emphasis — possibly a definition |
+| `simple` | looks like emphasis (no <sub> partner) |
+| `semisimple` | looks like emphasis (no <sub> partner) |
+
+## 표현의 지표
+- post: `_posts/Math/Representation_Theory/ko/2026-02-14-Character_Theory.md`
+- permalink: `/ko/math/representation_theory/character_theory`
+- scanned: 2026-05-30T04:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `abelian` | looks like emphasis (no <sub> partner) |
+
+## 원환면의 작용
+- post: `_posts/Math/Lie_Theory/ko/2026-02-24-Torus_Action.md`
+- permalink: `/ko/math/lie_theory/torus_action`
+- scanned: 2026-05-30T04:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `compact` | looks like emphasis (no <sub> partner) |
+| `weight space decomposition` | multi-word English emphasis — possibly a definition |
+| `Regular:` | looks like emphasis (no <sub> partner) |
+| `Singular:` | looks like emphasis (no <sub> partner) |
+
+## Borel subgroup과 flag variety
+- post: `_posts/Math/Lie_Theory/ko/2026-02-28-Borel_Subgroup.md`
+- permalink: `/ko/math/lie_theory/borel_subgroup`
+- scanned: 2026-05-30T05:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Classical types:` | multi-word English emphasis — possibly a definition |
+| `Exceptional types:` | multi-word English emphasis — possibly a definition |
+| `Cycle이 없으므로` | mixed-script emphasis — possibly a definition |
+| `Branching이 제한적이므로` | mixed-script emphasis — possibly a definition |
+| `Edge 개수의 제약으로부터` | mixed-script emphasis — possibly a definition |
+| `Borel subgroup` | multi-word English emphasis — possibly a definition |
+| `length` | looks like emphasis (no <sub> partner) |
+

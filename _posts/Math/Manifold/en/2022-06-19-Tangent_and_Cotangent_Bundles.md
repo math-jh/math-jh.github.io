@@ -1,6 +1,7 @@
 ---
 title: "Tangent and Cotangent Bundles"
-excerpt: "The definition of vector bundles and the tangent and cotangent bundles"
+description: "We define vector bundles over a topological space and examine the structure of the tangent bundle as a representative example."
+excerpt: "Definition of vector bundles and tangent, cotangent bundles"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/tangent_and_cotangent_bundles
@@ -13,134 +14,134 @@ sidebar:
 date: 2022-06-19
 last_modified_at: 2022-12-11
 weight: 10
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-30T04:12:23+00:00
 translation_source: kimi-cli
 ---
 ## Vector Bundles
 
-Now we need to define vector fields, but in order to define notions such as $C^\infty$ vector fields it is better to first define the concept of a vector bundle. Let us first define a vector bundle over a topological space.
+Now we need to define vector fields, and to define concepts such as $$C^\infty$$ vector fields, it is better to first define the notion of a vector bundle. Let us first define a vector bundle over a topological space.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A *vector bundle* over a topological space $B$ is an object $\pi:E \rightarrow B$ defined as follows.
+<ins id="def1">**Definition 1**</ins> A *vector bundle* over a topological space $$B$$ is an object $$\pi:E \rightarrow B$$ defined as follows.
 
-- The *total space* $E$ and the *base space* $B$ are both topological spaces, and $\pi:E \rightarrow B$ is a continuous surjection.
-- For each $b\in B$, the fiber $E_b=\pi^{-1}(b)$ carries the structure of a $k$-dimensional vector space.
-- For each $b_0\in B$ there exist a suitable open neighborhood $U\subseteq B$ and a homeomorphism $h:U\times\mathbb{R}^k \rightarrow\pi^{-1}(U)$ such that for every $b\in U$, the map $x\mapsto h(b,x)$ is an isomorphism.
+- The *total space* $$E$$ and the *base space* $$B$$ are both topological spaces, and $$\pi:E \rightarrow B$$ is a continuous surjection.
+- For each $$b\in B$$, the fiber $$E_b=\pi^{-1}(b)$$ has the structure of a $$k$$-dimensional vector space.
+- For each $$b_0\in B$$ there exists a suitable open neighborhood $$U\subseteq B$$ and a homeomorphism $$h:U\times\mathbb{R}^k \rightarrow\pi^{-1}(U)$$ such that for every $$b\in U$$, the map $$x\mapsto h(b,x)$$ is an isomorphism.
 
-We call $k$ the *rank* of the vector bundle $E\rightarrow B$. We call the homomorphism $h$ in the third condition a *local trivialization*, and if we can take $U=B$, we call $E$ a *trivial vector bundle*.
+In this case, we call $$k$$ the *rank* of the vector bundle $$E\rightarrow B$$. The homomorphism $$h$$ in the third condition is called a *local trivialization*, and if we can take $$U=B$$, then we call $$E$$ a *trivial vector bundle*.
 
 </div>
 
-Similarly, we can define a vector bundle over a manifold. To do this, we change both $E$ and $B$ to manifolds, change $\pi$ to a $C^\infty$ surjection, and replace the third condition with
+Similarly, we can define a vector bundle over a manifold. To do this, we change both $$E$$ and $$B$$ to manifolds, change $$\pi$$ to a $$C^\infty$$ surjection, and replace the third condition with
 
-> For each $b_0\in B$ there exist a suitable coordinate system $U\subseteq B$ and a diffeomorphism $h:U\times\mathbb{R}^k\rightarrow\pi^{-1}(U)$ such that for every $b\in U$, the map $x\mapsto h(b,x)$ is an isomorphism.
+> For each $$b_0\in B$$ there exists a suitable coordinate system $$U\subseteq B$$ and a diffeomorphism $$h:U\times\mathbb{R}^k\rightarrow\pi^{-1}(U)$$ such that for every $$b\in U$$, the map $$x\mapsto h(b,x)$$ is an isomorphism.
 
-## Tangent Bundles
+## Tangent Bundle
 
 A typical example of a vector bundle is the tangent bundle.
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**Example 2 (Tangent bundle)**</ins> Define the set $TM$ by
+<ins id="ex2">**Example 2 (Tangent bundle)**</ins> Define the set $$TM$$ by
 
 $$TM=\bigsqcup_{p\in M} T_pM$$
 
-Then there is a natural projection map $\pi:TM\rightarrow M$. To regard $TM$ as a vector bundle we must endow it with a manifold structure.
+Then there is a natural projection map $$\pi:TM\rightarrow M$$. To regard $$TM$$ as a vector bundle, we must give it a manifold structure.
 
-First, let us define a coordinate system on $TM$. For an arbitrary coordinate system $(U,\varphi)$, define a function $\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^m\times\mathbb{R}^m$ by the formula
+First, let us define a coordinate system on $$TM$$. For an arbitrary coordinate system $$(U,\varphi)$$, define the map $$\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^m\times\mathbb{R}^m$$ by the formula
 
 $$\tilde{\varphi}(v)=\bigl(x^1(\pi(v)), \ldots, x^m(\pi(v)), dx^1(v),\ldots, dx^m(v)\bigr)$$
 
-Then $\tilde{\varphi}$ is a bijection from $\pi^{-1}(U)$ onto the open subset $\varphi(U)\times\mathbb{R}^m$ of $\mathbb{R}^{2m}$.
+Then $$\tilde{\varphi}$$ is a bijection from $$\pi^{-1}(U)$$ onto the open subset $$\varphi(U)\times\mathbb{R}^m$$ of $$\mathbb{R}^{2m}$$.
 
-These are $C^\infty$-compatible. Given another coordinate system $(V,\psi)$, $\psi=(y^j)_{j=1}^m$, define $\tilde{\psi}$ as above. Then on $\pi^{-1}(U)\cap\pi^{-1}(V)=\pi^{-1}(U\cap V)$ we have
+These are $$C^\infty$$-compatible. Suppose another coordinate system $$(V,\psi)$$, $$\psi=(y^j)_{j=1}^m$$ is given, and define $$\tilde{\psi}$$ as above. Then on $$\pi^{-1}(U)\cap\pi^{-1}(V)=\pi^{-1}(U\cap V)$$ we have
 
 $$\begin{aligned}(\tilde{\psi}\circ\tilde{\varphi}^{-1})(p^1, \ldots, p^m, v^1, \ldots, v^m)&=\tilde{\psi}\left(\varphi^{-1}(p), \sum v^i\frac{\partial}{\partial x^i}\bigg|_{\varphi^{-1}(p)}\right)\end{aligned}$$
 
-Here, letting $v=\sum v^i\frac{\partial}{\partial x^i}$, the right-hand side can simply be written as
+Writing $$v=\sum v^i\frac{\partial}{\partial x^i}$$ here, the right-hand side can simply be written as
 
 $$\left((\psi\circ\varphi^{-1})(p), dy^1(v), \ldots, dy^m(v)\right)$$
 
-Now for arbitrary $j$ we have
+Now for arbitrary $$j$$ we have
 
 $$dy^j\left(\sum v^i\frac{\partial}{\partial x^i}\bigg|_{\varphi^{-1}(p)}\right)=\sum_{i=1}^m v^i\frac{\partial y^j}{\partial x^i}\bigg|_{\varphi^{-1}(p)}$$
 
-Therefore, since each component of the transition map $\tilde{\psi}\circ\tilde{\varphi}^{-1}$ above is $C^\infty$, the map $\tilde{\psi}\circ\tilde{\varphi}^{-1}$ is also $C^\infty$.
+Therefore, since each component of the transition map $$\tilde{\psi}\circ\tilde{\varphi}^{-1}$$ above is $$C^\infty$$, the map $$\tilde{\psi}\circ\tilde{\varphi}^{-1}$$ itself is also $$C^\infty$$.
 
-Meanwhile, the topology on $TM$ is obtained by taking the collection
+Meanwhile, the topology on $$TM$$ is obtained by taking the sets
 
 $$\{\tilde{\varphi}^{-1}(W)\mid \text{$W$ open in $\mathbb{R}^{2m}$, $(U,\varphi)\in\mathcal{A}$}\}$$
 
-as a basis. Taking $W=\mathbb{R}^{m}$, one can check that the $\pi^{-1}(U)$ are all open in the topology generated by the above sets, and one can also verify that this topology yields a $2m$-dimensional topological manifold.
+as a basis. Taking $$W=\mathbb{R}^{m}$$, we can check that the $$\pi^{-1}(U)$$ are all open sets in the topology generated by the above collection, and we can also verify that this topology makes a $$2m$$-dimensional topological manifold.
 
-All that remains is the local trivialization on $TM$. For an arbitrary coordinate system $(U,\varphi)$, define $\phi:\pi^{-1}(U)\rightarrow U\times\mathbb{R}^m$ this time by the formula
+What remains is the local trivialization on $$TM$$. For an arbitrary coordinate system $$(U,\varphi)$$, define $$\phi:\pi^{-1}(U)\rightarrow U\times\mathbb{R}^m$$ this time by the formula
 
 $$v|_p\mapsto (p, dx^1(v),\ldots, dx^m(v))$$
 
-That is all that is needed. That $\phi$ is a vector-space isomorphism on each fixed $\pi^{-1}(p)$ is obvious, and it is also obvious that $(\pi\circ\phi)(x,v)=x$ for any $v_x$. That $\phi$ is a diffeomorphism follows from
+That $$\phi$$ is an isomorphism between vector spaces on each fixed fiber $$\pi^{-1}(p)$$ is obvious, and it is also obvious that for any $$v_x$$ we have $$(\pi\circ\phi)(x,v)=x$$. That $$\phi$$ is a diffeomorphism follows from
 
 $$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
-and the fact that the two functions other than $\phi$ in this formula are both diffeomorphisms.
+since in this formula the two functions other than $$\phi$$ are both diffeomorphisms.
 
 </div>
 
-In particular, if $TM$ is a trivial bundle, we call $M$ a *parallelizable manifold*.
+In particular, if $$TM$$ is a trivial bundle, we call $$M$$ a *parallelizable manifold*.
 
 ## Smooth Functors
 
-The reason the tangent bundle $TM$ is important is that most vector bundles defined over a manifold are defined from $TM$. For example, the cotangent bundle $T^\ast M$ is the vector bundle with the cotangent space $T_p^\ast M$, the dual space of the tangent space, attached at each $p\in M$. Similarly, various vector bundles are defined by applying operations from linear algebra ([Example 5](#ex5)) at each point $p$.
+The reason the tangent bundle $$TM$$ is important is that most vector bundles defined over a manifold are defined from $$TM$$. For example, the cotangent bundle $$T^\ast M$$ is the vector bundle with the cotangent space $$T_p^\ast M$$, which is the dual space of the tangent space, attached at each $$p\in M$$. Similarly, various vector bundles are defined by algebraic operations at each point $$p$$ ([Example 5](#ex5)).
 
-Ordinarily, whenever we define these we would have to verify that they satisfy the conditions of a vector bundle, but **[Mil]** presents a more fundamental approach.
+Originally, each time we define these we would have to show that they satisfy the conditions of a vector bundle, but **[Mil]** presents a more fundamental approach.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> Let two vector bundles $E\rightarrow B$, $E'\rightarrow B'$ be given. Then a *bundle map* from $E \rightarrow B$ to $E' \rightarrow B'$ is, among pairs $E\rightarrow E', B \rightarrow B'$ making the diagram
+<ins id="def3">**Definition 3**</ins> Suppose two vector bundles $$E\rightarrow B$$, $$E'\rightarrow B'$$ are given. Then a *bundle map* from $$E \rightarrow B$$ to $$E' \rightarrow B'$$ means, among pairs $$E\rightarrow E', B \rightarrow B'$$ making the diagram
 
 ![bundle_map](/assets/images/Math/Manifold/Tangent_and_Cotangent_Bundles-1.png){:style="width:6em" class="invert" .align-center}
 
-commute, one for which $E_b\rightarrow E'_{b'}$ is an isomorphism.
+commute, those for which $$E_b\rightarrow E'_{b'}$$ is an isomorphism.
 
 </div>
 
-Now consider the category $\mathbf{FVect}_\text{iso}$ of finite-dimensional $\mathbb{R}$-vector spaces whose morphisms are isomorphisms. Then $\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$ is the category whose
+Now consider the category $$\mathbf{FVect}_\text{iso}$$ of finite-dimensional $$\mathbb{R}$$-vector spaces whose morphisms are isomorphisms. Then $$\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$$ is the category whose
 
-- objects are pairs $(V,W)$ of finite-dimensional vector spaces,
-- morphisms are pairs $(V,W)\overset{(f,g)}{\longrightarrow}(V',W')$ of isomorphisms between finite-dimensional vector spaces.
+- objects are pairs $$(V,W)$$ of finite-dimensional vector spaces,
+- morphisms are pairs $$(V,W)\overset{(f,g)}{\longrightarrow}(V',W')$$ of isomorphisms between finite-dimensional vector spaces.
 
-Hence a functor $F$ from $\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$ to $\mathbf{FVect}_\text{iso}$ must take $(V,W)$ to an $\mathbb{R}$-vector space $F(V,W)$ and $(f,g)$ to an isomorphism $F(f,g)$.
+Thus a functor $$F$$ from $$\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$$ to $$\mathbf{FVect}_\text{iso}$$ must take $$(V,W)$$ to an $$\mathbb{R}$$-vector space $$F(V,W)$$ and $$(f,g)$$ to an isomorphism $$F(f,g)$$.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> A functor $F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$ is called a *smooth functor* if $F(f,g)$ depends smoothly on $f,g$.
+<ins id="def4">**Definition 4**</ins> A functor $$F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$ is called a *smooth functor* if $$F(f,g)$$ depends smoothly on $$f,g$$.
 
 </div>
 
-If $f\in\Hom(V,V'), g\in\Hom(W,W')$, then $F(f,g)\in\Hom(F(V,W),F(V',W'))$. Since these are all vector spaces, they carry differential structures as in [§Examples of Differentiable Manifolds, ⁋Example 2](/en/math/manifold/examples_of_manifolds#ex2), and through this the above definition can be applied. Also, it is not difficult to extend this definition to a general $k$-fold product
+If $$f\in\Hom(V,V'), g\in\Hom(W,W')$$, then $$F(f,g)\in\Hom(F(V,W),F(V',W'))$$. Since these are all vector spaces, they are given a smooth structure as in [§Examples of Manifolds, ⁋Example 2](/en/math/manifold/examples_of_manifolds#ex2), and through this we can apply the above definition. Also, it is not difficult to extend this definition to a general $$k$$-fold product
 
 $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**Example 5**</ins> $\Hom(-,-)$ is a smooth functor. Let two isomorphisms $f:V\rightarrow V'$, $g:W\rightarrow W'$ be given. Then $\Hom(f,g)$ is a functor from $\Hom(V,W)$ to $\Hom(V',W')$ and makes the diagram below
+<ins id="ex5">**Example 5**</ins> $$\Hom(-,-)$$ is a smooth functor. Suppose arbitrary isomorphisms $$f:V\rightarrow V'$$, $$g:W\rightarrow W'$$ are given. Then $$\Hom(f,g)$$ is a functor from $$\Hom(V,W)$$ to $$\Hom(V',W')$$ making the diagram below
 
 ![Hom_functor](/assets/images/Math/Manifold/Tangent_and_Cotangent_Bundles-2.png){:style="width:7em" class="invert" .align-center}
 
-commute. Writing this as a formula, we can say $\Hom(f,g)(u)=g\circ u\circ f^{-1}$. That $\Hom(f,g)$ depends smoothly on $g$ can be easily verified. Consider the correspondence $g\mapsto \Hom(f,g)$. Then for a basis $w_i^j$ of $\Hom(W,W')$,
+commute. In formula, we can write $$\Hom(f,g)(u)=g\circ u\circ f^{-1}$$. We can easily check that $$\Hom(f,g)$$ depends smoothly on $$g$$. Consider the correspondence $$g\mapsto \Hom(f,g)$$. Then for a basis $$w_i^j$$ of $$\Hom(W,W')$$,
 
 $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 
-holds for all $u$, so the directional derivative of this correspondence in the $w_i^j$-direction is $u\mapsto w_i^j\circ u\circ f^{-1}$, which is continuous. Moreover, this argument remains valid no matter what linear map is substituted in place of $g$, so from this we know that arbitrary higher-order directional derivatives of $g\mapsto\Hom(f,g)$ are always continuous. That is, $g\mapsto\Hom(f,g)$ is $C^\infty$. That this correspondence also depends smoothly on $f$ is somewhat more tedious than for $g$, but because $f$ is an isomorphism we can choose $t$ sufficiently small so that $f+tw_i^j$ is invertible, and then repeat the argument above.
+holds for all $$u$$, so the directional derivative of this correspondence in the $$w_i^j$$-direction is $$u\mapsto w_i^j\circ u\circ f^{-1}$$, which is continuous. Moreover, this argument works even if we insert any linear map in place of $$g$$, so from this we know that all higher directional derivatives of $$g\mapsto\Hom(f,g)$$ are always continuous. That is, $$g\mapsto\Hom(f,g)$$ is $$C^\infty$$. That this correspondence also depends smoothly on $$f$$ is somewhat more tedious than for $$g$$, but since $$f$$ is an isomorphism we can choose $$t$$ sufficiently small so that $$f+tw_i^j$$ is invertible, and then repeat the above argument.
 
 The following are all examples of smooth functors.
 
-- Dual functor $(-)^\ast$ ([\[Linear Algebra\] §Dual Space](/en/math/linear_algebra/dual_space)),
-- $k$-th tensor functor $\mathcal{T}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebras](/en/math/multilinear_algebra/tensor_algebras)),
-- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebras](/en/math/multilinear_algebra/tensor_algebras)),
-- $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebras](/en/math/multilinear_algebra/tensor_algebras)),
-- Tensor product $-\otimes -$,
-- Direct sum $-\oplus-$.
+- Dual functor $$(-)^\ast$$ ([\[Linear Algebra\] §Dual Space](/en/math/linear_algebra/dual_space)),
+- $$k$$-th tensor functor $$\mathcal{T}^k(-)$$ ([\[Multilinear Algebra\] §Tensor Algebras](/en/math/multilinear_algebra/tensor_algebras)),
+- $$k$$-th symmetric functor $$\mathcal{S}^k(-)$$ ([\[Multilinear Algebra\] §Tensor Algebras](/en/math/multilinear_algebra/tensor_algebras)),
+- $$k$$-th exterior functor $$\bigwedge\nolimits^k(-)$$ ([\[Multilinear Algebra\] §Tensor Algebras](/en/math/multilinear_algebra/tensor_algebras)),
+- Tensor product $$-\otimes -$$,
+- Direct sum $$-\oplus-$$.
 
 </div>
 
@@ -148,25 +149,25 @@ The proof of the following theorem can be found in Theorem 3.6 of **[MS]**.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**Theorem 6**</ins> Let an arbitrary smooth functor $F:(\mathbf{FVect}_\text{iso})^n\rightarrow \mathbf{FVect}_\text{iso}$ and $n$ vector bundles $E_i\rightarrow B$ with a common base space $B$ be given. Then there exists a vector bundle $E\rightarrow B$ whose fiber at each $b\in B$ is given by
+<ins id="thm6">**Theorem 6**</ins> Let an arbitrary smooth functor $$F:(\mathbf{FVect}_\text{iso})^n\rightarrow \mathbf{FVect}_\text{iso}$$ and $$n$$ vector bundles $$E_i\rightarrow B$$ with a common base space $$B$$ be given. Then there exists a vector bundle $$E\rightarrow B$$ whose fiber at each $$b\in B$$ is given by
 
 $$E_b=F((E_1)_b,\ldots,(E_n)_b)$$
 
 </div>
 
-The vector bundle $E$ obtained by the above process is simply denoted by $F(E_1,\ldots, E_n)$.
+We denote the vector bundle $$E$$ obtained by the above process simply as $$F(E_1,\ldots, E_n)$$.
 
-## Cotangent Bundles
+## Cotangent Bundle
 
-Applying [Theorem 6](#thm6) above to an arbitrary manifold $M$, the tangent bundle $E=TM\rightarrow M$, and the dual functor $(-)^\ast$, we obtain the following.
+Applying [Theorem 6](#thm6) to an arbitrary manifold $$M$$, the tangent bundle $$E=TM\rightarrow M$$, and the dual functor $$(-)^\ast$$, we obtain the following.
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> The *cotangent bundle* over a manifold $M$ means the vector bundle $(TM)^\ast$ obtained by [Theorem 6](#thm6). In keeping with the notation $T_p^\ast M$ for the cotangent space, we denote this by $T^\ast M$.
+<ins id="def7">**Definition 7**</ins> The *cotangent bundle* defined over a manifold $$M$$ means the vector bundle $$(TM)^\ast$$ obtained by [Theorem 6](#thm6). Following the notation for cotangent space $$T_p^\ast M$$, we denote this by $$T^\ast M$$.
 
 </div>
 
-$T^\ast M$ is the space with the vector space $T_p^\ast M$ attached at each point $p$. Here $T_p^\ast M$ is the dual space of the vector space $T_pM$, that is, the space of linear maps that take a vector of $T_pM$ and output a real number. We will revisit vector bundles obtained by applying other smooth functors before long.
+$$T^\ast M$$ is the space with the vector space $$T_p^\ast M$$ attached at each point $$p$$. Here $$T_p^\ast M$$ is the dual space of the vector space $$T_pM$$, that is, the space of linear maps that take a vector of $$T_pM$$ and output a real number. We will revisit vector bundles obtained by applying other smooth functors before long.
 
 ---
 
@@ -176,4 +177,4 @@ $T^\ast M$ is the space with the vector space $T_p^\ast M$ attached at each poin
 
 ---
 
-[^1]: We call this $\phi$ a *local trivialization*.
+[^1]: The $$\phi$$ here is called a *local trivialization*.

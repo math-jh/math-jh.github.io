@@ -1,5 +1,6 @@
 ---
 title: "Rational Maps"
+description: "A rational map generalizes a regular map to handle functions defined at most points on an algebraic variety. We examine the definition of rational functions as equivalence classes and the structure of function fields."
 excerpt: "Rational maps and birational equivalence"
 
 categories: [Math / Algebraic Varieties]
@@ -14,8 +15,9 @@ header:
 date: 2026-03-15
 last_modified_at: 2026-03-15
 weight: 4
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-30T03:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T03:00:04+00:00
 ---
 In [§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7) we defined regular maps between quasi-projective varieties. Above all, these are functions defined at every point of the domain; even if they are written in rational form on $$D(f)$$ as in [§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14), the only denominators allowed are powers of $$f$$, so they are defined everywhere.
 

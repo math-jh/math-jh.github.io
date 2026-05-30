@@ -1,5 +1,6 @@
 ---
 title: "Sheaf Cohomology"
+description: "To capture the information of a sheaf more precisely beyond global sections of a line bundle, we define sheaf cohomology as a derived functor and explore its properties."
 excerpt: "Sheaf cohomology and its applications"
 
 categories: [Math / Algebraic Varieties]
@@ -14,18 +15,19 @@ header:
 date: 2026-04-05
 last_modified_at: 2026-04-20
 weight: 12
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-30T04:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T04:00:03+00:00
 ---
 We have seen that line bundles can be used to construct various invariants. For example, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles) we defined the global section space $$\Gamma(X, \mathcal{L})$$ of a line bundle $$\mathcal{L}$$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9) we saw that the dimension of this space plays a key role in determining the dimension of the complete linear system, and hence the projective embedding of the variety.
 
-We have mainly used the language of line bundles for geometric intuition, but as we saw right after [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), thinking in terms of the section sheaf of a line bundle means this can fundamentally be rephrased in the language of sheaves. In this post we define the notion of sheaf cohomology.
+We have mainly used the language of line bundles for geometric intuition, but as we observed right after [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), passing to the section sheaf of a line bundle allows us to rephrase everything fundamentally in the language of sheaves. In this post we define the notion of sheaf cohomology.
 
 ## Definition as a Derived Functor
 
-Although sheaves are a powerful tool for systematically describing all the information of a topological space, sheaves have only appeared front and center in our discussion once before: in [§Linear Systems](/en/math/algebraic_varieties/linear_systems), when we saw that the global section space $$\Gamma(X, \mathcal{L})$$ determines the projective embedding of the complete linear system.
+Although sheaves are a powerful tool for systematically describing all the information of a topological space, they have appeared front and center in our discussion only once before: in [§Linear Systems](/en/math/algebraic_varieties/linear_systems), when we saw that the global section space $$\Gamma(X, \mathcal{L})$$ determines the projective embedding of the complete linear system.
 
-However, if global sections were our only concern, there would be no need to think about sheaves at all; we could have simply considered the global section functor. In fact, the global section functor does not capture all the information contained in a sheaf. For example, consider the global section functor
+However, if global sections were our only concern, there would be no need to think about sheaves at all; we could simply have considered the global section functor. In fact, the global section functor does not capture all the information contained in a sheaf. For example, consider the global section functor
 
 $$\Gamma(X, -): \QCoh(X) \to \Vect_\mathbb{K}; \qquad \mathcal{F} \mapsto \mathcal{F}(X).$$
 
@@ -35,7 +37,7 @@ If $$\Gamma(X,-)$$ lost no information whatsoever, this functor would have to be
 
 $$0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0$$
 
-applying $$\Gamma(X,-)$$ should again yield a short exact sequence. However, this functor is only left exact. In other words, the exactness of
+applying $$\Gamma(X,-)$$ should again yield a short exact sequence. However, this functor is only left exact. In other words, exactness of
 
 $$0 \to \Gamma(X, \mathcal{F}') \to \Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'')$$
 
@@ -43,7 +45,7 @@ is guaranteed, but the surjection
 
 $$\Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{F}'') \to 0$$
 
-is not guaranteed in general. For a concrete example, consider the Euler sequence
+fails in general. For a concrete example, consider the Euler sequence
 
 $$0 \to \Omega^1_{\mathbb{P}^n} \to \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n} \to 0$$
 
@@ -51,13 +53,13 @@ $$0 \to \Omega^1_{\mathbb{P}^n} \to \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}
 
 $$0 \to \Gamma(\mathbb{P}^n, \Omega^1_{\mathbb{P}^n}) \to \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) \to \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}).$$
 
-However, as we saw in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16), the global sections of $$\mathcal{O}_{\mathbb{P}^n}(-1)$$ are zero, so
+However, as we saw in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16), the global sections of $$\mathcal{O}_{\mathbb{P}^n}(-1)$$ vanish, so
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0,$$
 
-while $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$$, so surjectivity on the right cannot hold.
+while $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$$; hence surjectivity on the right cannot hold.
 
-The standard way to resolve this is to consider the right derived functor ([\[Homological Algebra\] §Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, since $$\lMod{A}$$ has enough injectives, one can show that $$\QCoh(X)$$ also has enough injective objects, so any quasi-coherent sheaf $$\mathcal{F}$$ always has an injective resolution $$\mathcal{I}^\bullet$$, and from the resulting
+The standard way to resolve this is to consider the right derived functor ([\[Homological Algebra\] §Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, since $$\lMod{A}$$ has enough injectives, one can show that $$\QCoh(X)$$ also has enough injective objects; thus any quasi-coherent sheaf $$\mathcal{F}$$ admits an injective resolution $$\mathcal{I}^\bullet$$, and from the resulting complex
 
 $$0 \to \Gamma(X, \mathcal{I}^0) \to \Gamma(X, \mathcal{I}^1) \to \Gamma(X, \mathcal{I}^2) \to \cdots$$
 
@@ -117,7 +119,7 @@ where $$\hat{i_k}$$ means omitting the index $$i_k$$.
 
 As with sheaf cohomology, this definition makes sense for arbitrary sheaves, but we are mainly concerned with $$\QCoh(X)$$.
 
-For this definition to be well-defined—that is, for $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$ to actually be a complex—the coboundary map must actually be a coboundary map: we need $$d^2=0$$. This can be verified directly by expanding the above formula and checking the sign cancellations. Consequently, $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$ is a cochain complex, and thus we can define the following.
+For this definition to be well-defined—that is, for $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$ to actually be a complex—the coboundary map must satisfy $$d^2=0$$. This can be verified directly by expanding the above formula and checking the sign cancellations. Consequently, $$\check{C}^\bullet(\mathcal{U}, \mathcal{F})$$ is a cochain complex, and thus we can define the following.
 
 <div class="definition" markdown="1">
 
@@ -167,7 +169,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 </div>
 
-To put the above argument more simply, the meaning is that we take open covers that are progressively finer, combine all the additional cohomology data that appears, and define this as $$\check{H}(X, \mathcal{F})$$.
+To put the above argument more simply: we take open covers that are progressively finer, combine all the additional cohomology data that appears, and define this as $$\check{H}(X, \mathcal{F})$$.
 
 In general, it is not guaranteed that the $$\check{H}^p(X, \mathcal{F})$$ of [Definition 7](#def7) is isomorphic to the $$H^p(X, \mathcal{F})$$ of [Definition 1](#def1), but fortunately for most sheaves that appear in algebraic geometry, the two agree. Showing this requires some technical machinery.
 

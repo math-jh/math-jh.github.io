@@ -1,0 +1,12 @@
+# No-tools agent for the math-count verify/audit pass (translate_worker.py).
+#
+# The audit is single-shot analysis: read the inlined KO/EN-OLD/EN-NEW texts and
+# emit a terse VERDICT. With the default toolset the model reaches for Shell/Grep
+# to count $$ blocks and loops 18–177 tool-call steps, re-reading the whole 35–60K
+# token context each step — ~96% of all Kimi cron tokens (2026-05). Stripping all
+# tools (allowed_tools: []) forces a direct one-step answer.
+version: 1
+agent:
+  extend: default
+  name: verify-notools
+  allowed_tools: []
