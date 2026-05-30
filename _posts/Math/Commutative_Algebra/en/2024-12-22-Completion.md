@@ -1,5 +1,6 @@
 ---
 title: "Completion"
+description: "The completion of a ring is a construction that turns a ring into a complete ring via a given ideal filtration. It includes the definitions of adic completion and local complete rings, and satisfies a universal property as a categorical limit."
 excerpt: "Completion of rings and modules defined by a filtration"
 
 categories: [Math / Commutative Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2024-12-22
 last_modified_at: 2024-12-22
 weight: 14
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T22:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T22:00:04+00:00
 ---
 ## Definition of Completion
 
@@ -22,7 +24,7 @@ Given an abelian group $$G$$ and a decreasing sequence of its subgroups
 
 $$\mathcal{J}:\qquad G=H_0\supseteq H_1\supseteq\cdots$$
 
-the maps $$G/ H_{i+1} \rightarrow G/H_{i}$$ are well-defined, and more generally by composing them appropriately we obtain maps $$\rho_{ji}:G/H_j \rightarrow G/H_i$$ for all $$j>i$$. From these data we obtain the inverse limit
+the quotient maps $$G/ H_{i+1} \rightarrow G/H_{i}$$ are well-defined, and more generally, by composing them appropriately, we obtain maps $$\rho_{ji}:G/H_j \rightarrow G/H_i$$ for all $$j>i$$. From these data we form the inverse limit
 
 $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i\,\middle\vert\,\text{$\rho_{ji}(g_j)=g_i$ for all $j>i$}\right\}$$
 
@@ -36,7 +38,7 @@ These can be viewed as categorical limits, as we saw in [\[Category Theory\] §L
 > 
 > commute.
 
-If $$G$$ is equipped with a ring structure and the $$H_i$$ are ideals, then $$\widehat{G}$$ naturally inherits a ring structure as well. The situation we will study is the following.
+If $$G$$ is equipped with a ring structure and the $$H_i$$ are ideals, then $$\widehat{G}$$ naturally inherits a ring structure as well. The situation we shall study is the following.
 
 <div class="definition" markdown="1">
 
@@ -82,7 +84,7 @@ $$\gr_\mathcal{J}A\cong\gr_{\widehat{\mathcal{J}}}\widehat{A}.$$
 
 ## The $$\mathfrak{a}$$-adic Topology
 
-On the other hand, the process of constructing $$\widehat{A}$$ from $$A$$ can also be understood by endowing $$A$$ with a special kind of topology. First, suppose a topological abelian group $$G$$ is given. Fixing an element $$g\in G$$, the translation map $$T_g$$ defined using it is continuous, so the neighborhood filter at each point of $$G$$ is completely determined by the neighborhood filter at $$0\in G$$. This process can of course be reversed.
+On the other hand, the process of constructing $$\widehat{A}$$ from $$A$$ can also be understood by endowing $$A$$ with a special kind of topology. First, suppose a topological abelian group $$G$$ is given. Fixing an element $$g\in G$$, the translation map $$T_g$$ defined by it is continuous, so the neighborhood filter at each point of $$G$$ is completely determined by the neighborhood filter at $$0\in G$$. This process can, of course, be reversed.
 
 As in the previous section, suppose a decreasing sequence of subgroups of $$G$$
 
@@ -92,7 +94,7 @@ is given. Then defining
 
 $$\mathcal{N}(0)=\{U\subseteq G\mid\text{$G_n\subseteq U$ for some $n$}\}$$
 
-we know that this satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6). Now for arbitrary $$g\in G$$ and $$U\in \mathcal{N}(0)$$, setting $$g+U\in \mathcal{N}(g)$$ gives a topology on $$G$$.
+we know that this satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6). Now for arbitrary $$g\in G$$ and $$U\in \mathcal{N}(0)$$, declaring $$g+U\in \mathcal{N}(g)$$ gives a topology on $$G$$.
 
 In particular, applying this to the situation of [Definition 1](#def1), the topology defined by the above process is called the *$$\mathfrak{a}$$-adic topology*. In this case, $$0\in A$$ has the countable local base
 
@@ -112,7 +114,7 @@ holds.
 
 </div>
 
-Then, just as in [##ref##]() where completion was defined as the set of equivalence classes of Cauchy filters, we can define when two Cauchy sequences $$(x_m)$$ and $$(y_n)$$ are regarded as the same, and through that define the (topological) completion. However, what we are interested in is the first countable topological group $$A$$ defined by the filtration (2) above, and since a first countable space is sequential, for convenience in the following definition we assume $$G$$ is a first countable space and use Cauchy sequences instead of Cauchy filters.
+Then, just as in [##ref##]() where completion was defined as the set of equivalence classes of Cauchy filters, we can define when two Cauchy sequences $$(x_m)$$ and $$(y_n)$$ are regarded as the same, and through that define the (topological) completion. However, the object of our interest is the first countable topological group $$A$$ defined by the filtration (2) above, and since a first countable space is sequential, for convenience in the following definition we assume $$G$$ is a first countable space and use Cauchy sequences in place of Cauchy filters.
 
 <div class="definition" markdown="1">
 
@@ -120,7 +122,7 @@ Then, just as in [##ref##]() where completion was defined as the set of equivale
 
 $$m,n>N \implies x_m-y_n\in U$$
 
-holds. We call the set obtained by giving this equivalence relation on the set of all Cauchy sequences of a first countable topological group $$G$$ the *completion* of $$G$$, and denote it by $$\widehat{G}$$.
+holds. We call the set of equivalence classes of all Cauchy sequences of a first countable topological group $$G$$, equipped with this equivalence relation, the *completion* of $$G$$, and denote it by $$\widehat{G}$$.
 
 </div>
 
@@ -128,7 +130,7 @@ Now for an open neighborhood $$U$$ of $$0\in G$$, define
 
 $$\widehat{U}=\{[(x_n)]\in \widehat{G}:\text{for any $(y_n)\in [(x_n)]$, $y_n\in U$ for all but finitely many $n$}\}.$$
 
-Then by a short calculation, one can verify that the collection $$\mathcal{N}(0)$$ of subsets of $$\widehat{G}$$ having the $$\widehat{H}_i$$ as a coinitial subset satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6), and therefore we can define a topology on $$\widehat{G}$$. By definition $$\widehat{G}$$ is also first countable, and the function $$G \rightarrow \widehat{G}$$ sending $$x\in G$$ to the constant sequence $$(x_i=x)$$ is continuous. Moreover, this function is exactly the same as the $$G \rightarrow \widehat{G}$$ defined in the previous section.
+Then by a short calculation, one can verify that the collection $$\mathcal{N}(0)$$ of subsets of $$\widehat{G}$$ having the $$\widehat{H}_i$$ as a coinitial subset satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6), and therefore we can define a topology on $$\widehat{G}$$. By definition $$\widehat{G}$$ is also first countable, and the function $$G \rightarrow \widehat{G}$$ sending $$x\in G$$ to the constant sequence $$(x_i=x)$$ is continuous. Moreover, this function coincides exactly with the $$G \rightarrow \widehat{G}$$ defined in the previous section.
 
 ## Basic Properties of Completion
 
@@ -140,7 +142,7 @@ the sequence $$(a_i)$$ is a Cauchy sequence in $$\widehat{A}$$, and therefore th
 
 $$\sum_{j=1}^\infty b_j$$
 
-defines an element of $$\widehat{A}$$. Conversely, given any element $$(a_n')$$ of $$\widehat{A}$$, using the local base (2) of $$0$$ we can find a Cauchy sequence equivalent to this element having the form (3).
+defines an element of $$\widehat{A}$$. Conversely, given any element $$(a_n')$$ of $$\widehat{A}$$, using the local base (2) of $$0$$ we can find a Cauchy sequence equivalent to this element and having the form (3).
 
 <div class="example" markdown="1">
 
@@ -148,15 +150,15 @@ defines an element of $$\widehat{A}$$. Conversely, given any element $$(a_n')$$ 
 
 </div>
 
-The ring $$\mathbb{K}[[\x]]$$ is a discrete valuation ring with unique nonzero prime ideal $$\mathfrak{m}=(\x)$$. That is, any element not in $$(\x)$$ is a unit, which essentially comes from the formula
+The ring $$\mathbb{K}[[\x]]$$ is a discrete valuation ring with unique nonzero prime ideal $$\mathfrak{m}=(\x)$$. That is, any element not in $$(\x)$$ is a unit, which essentially follows from the identity
 
 $$\frac{1}{1+\x}=1-\x+\x^2-\cdots$$
 
-The above equality, or the equivalent equality
+This equality, or equivalently
 
 $$(1+\x)(1-\x+\x^2-\cdots)=1$$
 
-is obtained, as in the above discussion, from the fact that for the partial sum of $$1-\x+\x^2-\cdots$$ up to degree $$i$$
+is obtained, as in the discussion above, by observing that for the partial sum of $$1-\x+\x^2-\cdots$$ up to degree $$i$$
 
 $$1-\x+\x^2-\cdots+(-1)^i\x^i$$
 
