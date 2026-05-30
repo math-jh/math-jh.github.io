@@ -20,7 +20,7 @@ translation_source: kimi-cli
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let $(X_i)_{i\in I}$ be a family of topological spaces. Their *product* is the topological space given by the product set $$X=\prod_{i\in I}X_i$$ equipped with the initial topology with respect to the functions $$\pr_i:X\rightarrow X_i$$.
+<ins id="def1">**Definition 1**</ins> Let $$(X_i)_{i\in I}$$ be a family of topological spaces. Their *product* is the topological space given by the product set $$X=\prod_{i\in I}X_i$$ equipped with the initial topology with respect to the functions $$\pr_i:X\rightarrow X_i$$.
 
 </div>
 

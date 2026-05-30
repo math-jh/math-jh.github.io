@@ -36,7 +36,7 @@ Meanwhile, the functions satisfying the above condition are those that agree wit
 
 $$U_\mathbb{M}(\sigma)=\left\{\tau\in \Gal(\mathbb{L}/\mathbb{K})\mid \sigma\vert_\mathbb{M}=\tau\vert_\mathbb{M}\right\}$$
 
-this set becomes an element of the local base at $$\sigma$$, and the collection $(U_\mathbb{M}(\sigma))_{\sigma\in\Lambda}$ is exactly the local base at $$\sigma$$.
+this set becomes an element of the local base at $$\sigma$$, and the collection $$(U_\mathbb{M}(\sigma))_{\sigma\in\Lambda}$$ is exactly the local base at $$\sigma$$.
   
 <div class="example" markdown="1">
 
@@ -94,7 +94,7 @@ $$U_\mathbb{M}(\id_\mathbb{L})=\Gal(\mathbb{L}/\mathbb{M})$$
 
 The inclusion on the right is simply obtained by viewing an $$\mathbb{M}$$-automorphism as a $$\mathbb{K}$$-automorphism, and moreover we know that the topological structure defined on $$\Gal(\mathbb{L}/\mathbb{M})$$ is exactly the same as that of $$U_\mathbb{M}(\id_\mathbb{L})$$.
 
-Now, considering the collection $$\Lambda'$$ of finite degree *Galois* extensions, by [§Galois Extensions, ⁋Proposition 11](/en/math/field_theory/galois_extension#prop11) we know that this is a cofinal subset of $$\Lambda$$. That is, $(U_\mathbb{M}(\id_\mathbb{L}))_{\mathbb{M}\in\Lambda}$ is also a local base at $$\id_\mathbb{L}$$. Then for any $$\mathbb{M}\in \Lambda'$$, considering the restriction homomorphism $$\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$$ examined in [§Galois Extensions, ⁋Proposition 13](/en/math/field_theory/galois_extension#prop13), since any finite degree subextension of $$\mathbb{M}$$ is also a finite degree extension of $$\mathbb{L}$$, this restriction homomorphism is continuous with respect to the topological structure defined above. In this situation, since $$\rho$$ is a continuous function from $$\Gal(\mathbb{L}/\mathbb{K})$$ to the finite discrete space $$\Gal(\mathbb{M}/\mathbb{K})$$ ([Example 1](#ex1)), $$\ker\rho$$ is a closed subgroup of $$\Gal(\mathbb{L}/\mathbb{K})$$. However, by definition
+Now, considering the collection $$\Lambda'$$ of finite degree *Galois* extensions, by [§Galois Extensions, ⁋Proposition 11](/en/math/field_theory/galois_extension#prop11) we know that this is a cofinal subset of $$\Lambda$$. That is, $$(U_\mathbb{M}(\id_\mathbb{L}))_{\mathbb{M}\in\Lambda}$$ is also a local base at $$\id_\mathbb{L}$$. Then for any $$\mathbb{M}\in \Lambda'$$, considering the restriction homomorphism $$\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$$ examined in [§Galois Extensions, ⁋Proposition 13](/en/math/field_theory/galois_extension#prop13), since any finite degree subextension of $$\mathbb{M}$$ is also a finite degree extension of $$\mathbb{L}$$, this restriction homomorphism is continuous with respect to the topological structure defined above. In this situation, since $$\rho$$ is a continuous function from $$\Gal(\mathbb{L}/\mathbb{K})$$ to the finite discrete space $$\Gal(\mathbb{M}/\mathbb{K})$$ ([Example 1](#ex1)), $$\ker\rho$$ is a closed subgroup of $$\Gal(\mathbb{L}/\mathbb{K})$$. However, by definition
 
 $$\sigma\in\ker\rho\iff \sigma\vert_\mathbb{M}=\id\vert_\mathbb{M}\iff\sigma\in U_\mathbb{M}(\id_\mathbb{L})$$
 
