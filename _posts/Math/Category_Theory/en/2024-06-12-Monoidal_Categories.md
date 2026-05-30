@@ -1,5 +1,6 @@
 ---
 title: "Monoidal Categories"
+description: "We review the definition of an algebraic monoid and translate it into the language of category theory, expressing associativity and identity as commutative diagrams, and introduce the concepts of the monoid category and monoid objects."
 excerpt: "The definition of monoidal categories and coherence conditions"
 
 categories: [Math / Category Theory]
@@ -13,12 +14,13 @@ sidebar:
 date: 2024-06-12
 last_modified_at: 2024-06-12
 weight: 7
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-30T14:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-30T14:30:04+00:00
 ---
-Posts in the category theory category are basically written so that they can be understood by reading only the posts in the [\[Set Theory\]](/en/set_theory/) category, and although the monoidal categories covered in this post could have been written in that way as well, the first part of this post in particular draws on posts from the [\[Algebraic Structures\]](/en/algebraic_structures) category to aid understanding.
+Posts in the category theory category are written so that they can basically be understood by reading only the posts in the [\[Set Theory\]](/en/set_theory/) category, and although the monoidal categories covered in this post could have been written in that way as well, the first part of this post in particular draws on posts from the [\[Algebraic Structures\]](/en/algebraic_structures) category to aid understanding.
 
-In this post and the next, we examine monoidal categories and monoidal objects defined within them. Roughly speaking, a monoid object is an object in some category that has properties similar to the algebraically defined monoid; to say that it has properties similar to a monoid, this category must be a monoidal category. Therefore, we first briefly review what a monoid was algebraically, and then consider how this story can be rewritten in the language of categories.
+In this post and the next, we examine monoidal categories and monoidal objects defined within them. Roughly speaking, a monoid object is an object in some category that has properties similar to those of an algebraically defined monoid; to say that it has properties similar to a monoid, that category must be a monoidal category. Therefore, we first briefly review what a monoid was algebraically, and then consider how this story can be rewritten in the language of categories.
 
 ## Monoid
 
@@ -29,7 +31,7 @@ We decided to call an associative unital magma a *monoid*. ([\[Algebraic Structu
 > 1. (Associativity) For any $$a,b,c\in M$$, $$\mu(\mu(a,b),c)=\mu(a,\mu(b, c))$$ holds.
 > 2. (Unit element) $$e\in M$$ satisfies $$a\cdot e=e\cdot a=a$$ for any $$a\in M$$.
 
-However, these conditions can each be expressed as commutative diagrams. First, for associativity, the following diagram commuting means the same thing.
+However, each of these conditions can be expressed as a commutative diagram. First, for associativity, the following diagram commuting means the same thing.
 
 ![Associativity](/assets/images/Math/Category_Theory/Monoidal_Categories-1.png){:style="width:12.6em" class="invert" .align-center}
 
@@ -49,7 +51,7 @@ Similarly, for the identity element $$e$$, using the set $$I=\{e\}$$ and the inc
 
 can be written as commuting.
 
-In category theory, it is impossible to extract elements from an object. Therefore, the definition of a monoid examined at the very beginning is unsuitable for explanation using category theory. However, if everything is represented as diagrams as above, this can be lifted appropriately into the language of categories. To do this, we must first define what the $$M\times M$$ we used naturally is.[^1]
+In category theory, it is impossible to extract elements from an object. Therefore, the definition of a monoid examined at the very beginning is unsuitable for explanation using category theory. However, if everything is represented as diagrams as above, this can be lifted appropriately into the language of categories. To do this, we must first define what the $$M\times M$$ we used naturally was.[^1]
 
 ## Monoidal Categories
 
