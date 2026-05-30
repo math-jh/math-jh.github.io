@@ -3369,3 +3369,65 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `Kähler cone` | multi-word English emphasis — possibly a definition |
 | `quantum cohomology` | multi-word English emphasis — possibly a definition |
 
+## 파노 다양체
+- post: `_posts/Math/Toric_Geometry/ko/2026-05-18-Reflexive_Polytope_and_Fano_Variety.md`
+- permalink: `/ko/math/toric_geometry/reflexive_polytope_fano`
+- scanned: 2026-05-30T19:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `lattice polytope` | multi-word English emphasis — possibly a definition |
+| `dual polytope` | multi-word English emphasis — possibly a definition |
+| `ample` | looks like emphasis (no <sub> partner) |
+| `singular` | looks like emphasis (no <sub> partner) |
+| `discrepancy formula` | multi-word English emphasis — possibly a definition |
+| `보존하는` | looks like emphasis (no <sub> partner) |
+| `경계` | looks like emphasis (no <sub> partner) |
+| `stringy` | looks like emphasis (no <sub> partner) |
+
+## 토러스 인자와 선다발
+- post: `_posts/Math/Toric_Geometry/ko/2026-05-18-Toric_Divisors_and_Line_Bundles.md`
+- permalink: `/ko/math/toric_geometry/toric_divisors`
+- scanned: 2026-05-30T19:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `boundary` | looks like emphasis (no <sub> partner) |
+| `torus-invariant` | looks like emphasis (no <sub> partner) |
+| `ray` | looks like emphasis (no <sub> partner) |
+| `character` | looks like emphasis (no <sub> partner) |
+| `support` | looks like emphasis (no <sub> partner) |
+| `locally` | looks like emphasis (no <sub> partner) |
+| `rational` | looks like emphasis (no <sub> partner) |
+
+## 프로베니우스 다양체
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-19-Frobenius_Manifold.md`
+- permalink: `/ko/math/mirror_symmetry/frobenius_manifold`
+- scanned: 2026-05-30T20:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Jacobi ring` | multi-word English emphasis — possibly a definition |
+| `residue pairing` | multi-word English emphasis — possibly a definition |
+| `Euler vector field` | multi-word English emphasis — possibly a definition |
+| `affine` | looks like emphasis (no <sub> partner) |
+| `splitting axiom` | multi-word English emphasis — possibly a definition |
+| `semisimple` | looks like emphasis (no <sub> partner) |
+
+## 두브로빈 접속
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-21-Dubrovin_Connection.md`
+- permalink: `/ko/math/mirror_symmetry/dubrovin_connection`
+- scanned: 2026-05-30T20:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Dubrovin connection` | multi-word English emphasis — possibly a definition |
+| `potentiality` | looks like emphasis (no <sub> partner) |
+| `associativity` | looks like emphasis (no <sub> partner) |
+| `정확하게` | looks like emphasis (no <sub> partner) |
+| `Potentiality:` | looks like emphasis (no <sub> partner) |
+| `Associativity (WDVV):` | multi-word English emphasis — possibly a definition |
+| `Gauss-Manin connection` | multi-word English emphasis — possibly a definition |
+| `주장 4 (Mirror theorem, $$D$$-module form)` | mixed-script emphasis — possibly a definition |
+| `mirror isomorphism` | multi-word English emphasis — possibly a definition |
+
