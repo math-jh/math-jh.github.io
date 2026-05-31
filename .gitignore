@@ -55,3 +55,6 @@ scripts/audit/audit-report.md
 # Link normalizer build-time tracker
 scripts/audit/link-overrides.log
 scripts/audit/link_normalizer.log
+
+# Indexation monitor — local-only: holds GSC OAuth token + state + logs
+scripts/index-monitor/

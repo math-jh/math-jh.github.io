@@ -1,5 +1,6 @@
 ---
 title: "The Long Exact Sequence"
+description: "This post explains how a short exact sequence induces a long exact sequence in homology, including a proof using the snake lemma and diagram chasing."
 excerpt: "The long exact sequence"
 
 categories: [Math / Homological Algebra]
@@ -13,32 +14,33 @@ sidebar:
 date: 2023-01-02
 last_modified_at: 2024-10-31
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T13:00:06+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T13:00:06+00:00
 ---
 Now we show that a short exact sequence in $$\Ch(\mathcal{A})$$ induces a *long exact sequence*. 
 
 ## The Long Exact Sequence
 
-We have already seen that the image and kernel of a chain map $$f_\bullet$$ form chain complexes consisting of the images and kernels of each $$f_n$$, respectively. Therefore, one can verify that the statement that
+We have already seen that the image and kernel of a chain map $$f_\bullet$$ form chain complexes consisting of the images and kernels of each $$f_n$$, respectively. Therefore, one can verify that
 
 $$0\rightarrow A_\bullet\rightarrow B_\bullet\rightarrow C_\bullet\rightarrow 0$$
 
-is a *short exact sequence* is equivalent to the statement that
+is a *short exact sequence* if and only if
 
 $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
-is a short exact sequence for all $$n$$. 
+is a short exact sequence for every $$n$$. 
 
-The main theorem of this post is [Theorem 1](#thm1). In its proof the snake lemma plays an important role, and because the proof is easily completed using the explicitly obtained connecting map when the category is $$\lMod{A}$$, we make active use of the Freyd–Mitchell embedding theorem to prove the following theorem in $$\lMod{A}$$, just as in [§Diagram chasing](/en/math/homological_algebra/diagram_chasing).
+The main theorem of this post is [Theorem 1](#thm1). In its proof the snake lemma plays an important role, and because the proof is easily completed using the explicitly obtained connecting map when the category is $$\lMod{A}$$, we actively use the Freyd–Mitchell embedding theorem to prove the following theorem in $$\lMod{A}$$, just as in [§Diagram chasing](/en/math/homological_algebra/diagram_chasing).
 
 <div class="proposition" markdown="1">
 
-<ins id="thm1">**Theorem 1 (The long exact sequence)**</ins> Suppose a short exact sequence
+<ins id="thm1">**Theorem 1 (The long exact sequence)**</ins> Given a short exact sequence
 
 $$0\rightarrow A_\bullet\rightarrow B_\bullet\rightarrow C_\bullet\rightarrow 0$$
 
-is given. Then there exists a *long exact sequence* of homology groups
+there exists a *long exact sequence* of homology groups
 
 $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1}(A)\rightarrow \cdots$$
 
@@ -50,13 +52,13 @@ It suffices to consider the following diagram:
 
 ![long_exact_sequence](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-1.png){:style="width:30em" class="invert" .align-center}
 
-Here the maps $$\partial$$ are all defined by formulas such as $$\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$$. Then one can easily verify that in the above diagram $$\ker\partial^A$$ coincides with $$H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$$ and $$\coker\partial^A$$ coincides with $$H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$$. 
+Here the maps $$\partial$$ are all defined by formulas such as $$\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$$. Then one easily verifies that in the above diagram $$\ker\partial^A$$ coincides with $$H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$$ and $$\coker\partial^A$$ coincides with $$H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$$. 
 
 Therefore, once we show that the top and bottom rows are both exact, the desired long exact sequence follows readily from the snake lemma. To see this, consider again the following diagram:
 
 ![long_exact_sequence_exactness](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-2.png){:style="width:21.4em" class="invert" .align-center}
 
-Applying the snake lemma once more to this diagram (more precisely, [§Diagram chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5)), we obtain the two exact sequences
+Applying the snake lemma once more to this diagram (more precisely, [§Diagram chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5)), we obtain two exact sequences
 
 $$0\rightarrow \ker(d_n^A)\rightarrow \ker(d_n^B)\rightarrow \ker(d_n^C)$$
 
@@ -92,7 +94,7 @@ How to define an isomorphism between the chain complexes we have examined so far
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> Let two chain complexes $$C_\bullet$$, $$D_\bullet$$ be given. Then $$C_\bullet$$ and $$D_\bullet$$ are said to be *isomorphic* if there exist two chain maps $$f:C_\bullet\rightarrow D_\bullet$$, $$g:D_\bullet\rightarrow C_\bullet$$ such that $$fg=\id_D$$ and $$gf=\id_C$$. In this case, we call $$f,g$$ *isomorphisms* between the two chain complexes.
+<ins id="def3">**Definition 3**</ins> Let two chain complexes $$C_\bullet$$, $$D_\bullet$$ be given. Then $$C_\bullet$$ and $$D_\bullet$$ are said to be *isomorphic* if there exist chain maps $$f:C_\bullet\rightarrow D_\bullet$$ and $$g:D_\bullet\rightarrow C_\bullet$$ such that $$fg=\id_D$$ and $$gf=\id_C$$. In this case we call $$f,g$$ *isomorphisms* between the two chain complexes.
 
 </div>
 
@@ -110,11 +112,11 @@ By definition, two isomorphic chain complexes are also quasi-isomorphic. However
 
 $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 
-with all terms zero is itself, but any exact sequence always has all homology modules equal to zero.
+with all terms zero is itself, yet any exact sequence always has all homology modules equal to zero.
 
 ## Chain Homotopy
 
-Meanwhile, if we weaken the equivalence relation between two chain complexes to a quasi-isomorphism as above, then by the same logic it would be somewhat more reasonable to regard two chain maps as the same whenever they induce the same map on each homology. For this purpose we make the following definition.
+Meanwhile, if we weaken the equivalence relation between two chain complexes to quasi-isomorphism as above, then by the same logic it would be somewhat more reasonable to regard two chain maps as the same whenever they induce the same map on each homology. For this purpose we make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -126,7 +128,7 @@ satisfying $$f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$$. If a chain homotopy between $$
 
 </div>
 
-If for a chain map $$f$$ there exists an $$h$$ satisfying $$f=dh+hd$$, we can regard $$h$$ as a chain homotopy between $$f$$ and $$0$$. Therefore, if such an $$h$$ exists, we say that $$f$$ is *null homotopic*. 
+If for a chain map $$f$$ there exists an $$h$$ satisfying $$f=dh+hd$$, we can regard $$h$$ as a chain homotopy between $$f$$ and $$0$$. Hence, if such an $$h$$ exists, we say that $$f$$ is *null homotopic*. 
 
 <div class="proposition" markdown="1">
 
@@ -138,19 +140,19 @@ If for a chain map $$f$$ there exists an $$h$$ satisfying $$f=dh+hd$$, we can re
 
 Choose an arbitrary $$[a]\in H_n(C)=\ker(d^C_{n})/\im(d^C_{n+1})$$, and let $$a\in\ker(d_{n}^C)$$ be a representative. We must show that
 
-$$f_n(a)-g_n(b)\in\im(d_{n+1}^D)$$
+$$f_n(a)-g_n(a)\in\im(d_{n+1}^D)$$
 
-holds. But from the equation
+holds. From the equation
 
 $$(d_{n+1}^D\circ h_n)(a)+(h_{n-1}\circ d_n^C)(a)=f_n(a)-g_n(a)$$
 
 and the fact that $$a\in \ker(d_n^C)$$, we obtain
 
-$$f_n(a)-g_n(a)=d_{n+1}^D)(h_n(a))\in\im(d_{n+1}^D)$$
+$$f_n(a)-g_n(a)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
 
 </details>
 
-If for a chain map $$f:C\rightarrow D$$ there exists a suitable chain map $$g:D\rightarrow C$$ such that $$gf$$ is homotopic to $$\id_C$$ and $$fg$$ is homotopic to $$\id_D$$, we call $$f$$ a *chain homotopy equivalence*. 
+If for a chain map $$f:C\rightarrow D$$ there exists a chain map $$g:D\rightarrow C$$ such that $$gf$$ is homotopic to $$\id_C$$ and $$fg$$ is homotopic to $$\id_D$$, we call $$f$$ a *chain homotopy equivalence*. 
 
 ## The Homotopy Category
 
@@ -174,7 +176,7 @@ we have
 
 $$\begin{aligned}v_nf_nu_n-v_ng_nu_n&=v_n(f_n-g_n)u_n\\&=v_n(d_{n+1}h_n+h_{n-1}d_n)u_n\\&=d_{n+1}v_{n+1}h_nu_n+v_nh_{n-1}u_{n-1}d_n\end{aligned}$$
 
-so that we see a chain homotopy
+so that a chain homotopy
 
 $$(h'_n=v_{n+1}h_nu_n)_{n\in\mathbb{Z}}$$
 
