@@ -1,5 +1,6 @@
 ---
 title: "Regular Local Rings"
+description: "This post covers the definition and basic properties of regular local rings, and proves that a regular local ring is an integral domain by induction on dimension. The concept of a regular sequence is also introduced."
 excerpt: "Characterizations of regular systems of parameters and regular local rings"
 
 categories: [Math / Commutative Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-01-24
 last_modified_at: 2025-01-24
 weight: 18
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T02:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T02:30:04+00:00
 ---
 ## Regular Local Rings
 
