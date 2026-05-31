@@ -1,5 +1,6 @@
 ---
 title: "Torus Actions"
+description: "Representation theory of Lie groups is compared with that of finite groups, and finite-dimensional representations of compact Lie groups are discussed via Haar measure and irreducible decomposition."
 excerpt: "Actions of a torus and weight space decomposition"
 
 categories: [Math / Lie Theory]
@@ -13,14 +14,15 @@ sidebar:
 date: 2026-02-24
 last_modified_at: 2026-02-24
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T17:00:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T17:00:05+00:00
 ---
-Given an arbitrary finite group $$G$$, one of the best ways to study it is through its finite-dimensional representation
+Given an arbitrary finite group $$G$$, one way to examine it closely is through its finite-dimensional representation
 
 $$\rho:G\rightarrow \Aut(V)$$
 
-Once we choose a basis for $$V$$, analyzing the image of $$G$$ under $$\rho$$ becomes a matter of linear algebra, allowing us to understand the structure of $$G$$ much more easily.
+Once we choose a basis for $$V$$, analyzing the image of $$G$$ under $$\rho$$ becomes purely a matter of linear algebra, allowing us to discern the structure of $$G$$ much more easily.
 
 For Lie groups, this representation-theoretic perspective is even more useful, because Lie groups inherently act on other objects such as $$\GL(n;\mathbb{R})$$ or $$\Diff(M)$$.
 
@@ -28,21 +30,21 @@ However, as in [\[Representation Theory\] §Representation Theory of Finite Grou
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> For a Lie group $$G$$, a *representation* of $$G$$ is a finite-dimensional vector space $$V$$ together with a smooth map
+<ins id="def1">**Definition 1**</ins> For a Lie group $$G$$, a *representation* of $$G$$ consists of a finite-dimensional vector space $$V$$ together with a smooth map
 
 $$\rho:G\rightarrow \Aut(V)$$
 
 </div>
 
-If we regard $$G$$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be thought of as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1). Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Concepts of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-concepts-of-representation-theory) can be carried over to Lie groups.
+If we regard $$G$$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be viewed as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1). Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Concepts of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-concepts-of-representation-theory) can be carried over to Lie groups.
 
-A crucial fact that played an important role so far was that $$G$$ is a finite group. For example, the idea of averaging over all elements of $$G$$ relied on this fact. To generalize this to Lie groups, we need to impose some kind of finiteness condition on $$G$$.
+What played a crucial role in the preceding discussion was the fact that $$G$$ is a finite group. For instance, the idea of averaging over all elements of $$G$$ relied on this. To generalize this to Lie groups, we must impose some kind of finiteness condition on $$G$$.
 
-Therefore, we often consider the case where $$G$$ is a *compact* Lie group. In this case, as a locally compact Hausdorff space, $$G$$ admits a Haar measure, and thus we can replace sums over elements of $$G$$ with integrals over all of $$G$$. Of course, this requires properly defining $$\delta_x$$ functions and generalizing function spaces appropriately, but we omit these details as they are not our current objective. What matters is that the representation theory of Lie groups can be approached by the same methodology as that of finite groups. In particular, any finite-dimensional representation decomposes as a direct sum of irreducible representations.
+Therefore, we often consider the case where $$G$$ is a *compact* Lie group. In this case, as a locally compact Hausdorff space, $$G$$ admits a Haar measure, and thus we can replace sums over elements of $$G$$ with integrals over all of $$G$$. Of course, this requires properly defining $$\delta_x$$ functions and generalizing function spaces appropriately, but we omit these details as they are not our present objective. What matters is that the representation theory of Lie groups can be approached by the same methodology as that of finite groups. In particular, any finite-dimensional representation decomposes as a direct sum of irreducible representations.
 
-On the other hand, given a finite-dimensional representation $$G\rightarrow\Aut(V)$$, the best thing about it is that we can think of the images $$\rho(g)$$ as matrices (via a choice of basis). Hence we can investigate them using our tools for matrices and linear maps.
+On the other hand, given a finite-dimensional representation $$G\rightarrow\Aut(V)$$, the greatest advantage is that we can regard the images $$\rho(g)$$ as matrices (via a choice of basis). Hence we can investigate them using our tools for matrices and linear maps.
 
-One of the most important tools in linear algebra is diagonalization. Thus, for a given Lie group action $$\rho:G \rightarrow \Aut(V)$$, we are interested in choosing a basis of $$V$$ so that the matrix representation of each $$\rho(g)$$ becomes a diagonal matrix. If $$G$$ were finite, we could find such a basis for each $$g$$ individually, but since $$G$$ is now infinite, this is difficult. Therefore, we naturally become interested in elements that are simultaneously diagonalizable. Now, [\[Linear Algebra\] §Eigenspace Decomposition, ⁋Proposition 10](/en/math/linear_algebra/eigenspace_decomposition#prop10) tells us that two diagonalizable matrices are simultaneously diagonalizable if and only if they commute, so the following definition is appropriate.
+One of the most important tools in linear algebra is diagonalization. Thus, for a given Lie group action $$\rho:G \rightarrow \Aut(V)$$, we are interested in choosing a basis of $$V$$ so that the matrix representation of each $$\rho(g)$$ becomes diagonal. If $$G$$ were finite, we could find such a basis for each $$g$$ individually, but since $$G$$ is now infinite, this is difficult. Therefore, we naturally become interested in elements that are simultaneously diagonalizable. Now, [\[Linear Algebra\] §Eigenspace Decomposition, ⁋Proposition 10](/en/math/linear_algebra/eigenspace_decomposition#prop10) tells us that two diagonalizable matrices are simultaneously diagonalizable if and only if they commute, so the following definition is appropriate.
 
 <div class="definition" markdown="1">
 
@@ -70,27 +72,27 @@ Writing these out in more detail, first from the fact that $$\rho\vert_T$$ is a 
 
 $$V=\bigoplus_i V_i$$
 
-Here each $$V_\lambda$$ is an irreducible $$T$$-representation. On the other hand, since $$T$$ is abelian, for any $$t\in T$$, $$\rho(t)$$ commutes with the $$T$$-action, and thus the restriction of $$\rho(t)$$ to each $$V_i$$ is a $$T$$-automorphism. Now by the second result of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8), $$\rho(t)$$ is given by a scalar multiple
+Here each $$V_i$$ is an irreducible $$T$$-representation. On the other hand, since $$T$$ is abelian, for any $$t\in T$$, $$\rho(t)$$ commutes with the $$T$$-action, and thus the restriction of $$\rho(t)$$ to each $$V_i$$ is a $$T$$-automorphism. Now by the second result of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8), $$\rho(t)$$ acts by a scalar multiple
 
 $$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
 
 But now if $$T$$ acts on $$V_i$$ by scalar multiples, then any subspace of $$V_i$$ would be $$T$$-invariant, and therefore for $$V_i$$ to be irreducible we must have $$\dim V_i=1$$.
 
-Now since $$\dim V_i=1$$, we have $$\Aut(V_i)\cong \mathbb{C}^\times$$, and we see that the above $$\lambda_i: T\rightarrow \mathbb{C}^\times$$ corresponds exactly to the character of $$\rho$$, so the irreducible decomposition can be thought of as being directly parametrized by characters $$\lambda_i$$. That is, consider the irreducible decomposition given by the formula
+Now since $$\dim V_i=1$$, we have $$\Aut(V_i)\cong \mathbb{C}^\times$$, and we see that the above $$\lambda_i: T\rightarrow \mathbb{C}^\times$$ corresponds exactly to a character of $$\rho$$, so the irreducible decomposition can be thought of as being directly parametrized by characters $$\lambda_i$$. That is, consider the irreducible decomposition given by the formula
 
 $$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{t\cdot v=\lambda(t)v\text{ for all $t\in T$}\}$$
 
-Then for each $$t\in T$$, $$\rho(t)$$ is diagonalized by this decomposition, and the eigenvalue corresponding to each eigenspace $$V_\lambda$$ is $$\lambda(t)$$. A different choice of $$t$$ leaves the above decomposition unchanged and only changes the eigenvalue corresponding to each eigenspace $$V_\lambda$$.
+Then for each $$t\in T$$, $$\rho(t)$$ is diagonalized by this decomposition, and the eigenvalue corresponding to each eigenspace $$V_\lambda$$ is $$\lambda(t)$$. A different choice of $$t$$ leaves the above decomposition unchanged and only changes the eigenvalue assigned to each eigenspace $$V_\lambda$$.
 
-Intuitively, we can think of $$t\mapsto e^{2\pi i\lambda_i(X)}$$ as a rotational motion with angular velocity $$\lambda_i(X)$$, and adopting this perspective, we know that for each $$X\in \mathfrak{t}$$, we can describe this torus action by the angular velocity $$\lambda_i(X)$) in this direction. Each of these $$\lambda_i$$ is called a *weight*. Then for each weight $$\lambda_i$$, there exists an appropriate $$V_i$$ on which the torus action operates as $$t\cdot v=\rchi_{\lambda_i}(t)v$$. Such a $$V_i$$ is called a *weight space*.
+Intuitively, we can think of $$t\mapsto e^{2\pi i\lambda_i(X)}$$ as a rotational motion with angular velocity $$\lambda_i(X)$$, and adopting this perspective, we know that for each $$X\in \mathfrak{t}$$, we can describe this torus action by the angular velocity $$\lambda_i(X)$$ in this direction. Each of these $$\lambda_i$$ is called a *weight*. Then for each weight $$\lambda_i$$, there exists an appropriate $$V_i$$ on which the torus action operates as $$t\cdot v=\rchi_{\lambda_i}(t)v$$. Such a $$V_i$$ is called a *weight space*.
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**Example 3**</ins> As a special example, consider the one-dimensional torus
+<ins id="ex3">**Example 3**</ins> As a concrete example, consider the one-dimensional torus
 
 $$S^1\cong T \cong \mathbb{R}/\mathbb{Z}$$
 
-Then $$S^1$$ can be thought of as the set
+Then $$S^1$$ can be identified with the set
 
 $$S^1=\left\{e^{2\pi i t}\mid t\in \mathbb{R}/\mathbb{Z}\right\}$$
 
@@ -100,7 +102,7 @@ $$e^{2\pi i t}\cdot (z_1,z_2)=(e^{4\pi i t}z_1, e^{-2\pi i t}z_2)$$
 
 This action may look artificial, but as we saw above, given any torus $$T$$ and any representation $$V$$, if we consider the irreducible decomposition of $$V$$ and choose bases $$e_i$$ for each irreducible component, then every torus action can be written in this form (by an appropriate choice of basis).
 
-Writing this as a matrix, the above action can be represented by the element (family of elements) of $$\GL(2;\mathbb{C})$$
+Writing this as a matrix, the above action is represented by the element (family of elements) of $$\GL(2;\mathbb{C})$$
 
 $$\begin{pmatrix}e^{4\pi i t}&0\\0&e^{-2\pi i t}\end{pmatrix}$$
 
@@ -108,7 +110,7 @@ At this point, the trace $$e^{4\pi i t}+e^{-2\pi i t}$$ of this matrix is precis
 
 The weight spaces of this action are obviously $$\span(e_1), \span(e_2)$$, and for example the weight corresponding to $$\span(e_1)$$ is given by the linear functional $$\lambda_1:\mathfrak{t}\rightarrow \mathbb{C}$$ satisfying
 
-$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $$X\in \mathfrak{t}$$}$$
+$$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $X\in \mathfrak{t}$}$$
 
 This is of course defined by $$\lambda_1(t)=2t$$, which sends $$1\in \mathbb{R}$$ to $$2$$, and thus the weight corresponding to this weight space can be said to be $$2$$ (with a slight abuse of notation). For $$\lambda$$ to satisfy the above formula, since $$e^{2\pi i}=1$$, we must have $$\lambda(1)\in \mathbb{\mathbb{Z}}$$.
 
@@ -134,7 +136,7 @@ then this time $$T$$ acts on the two-dimensional space $$\mathbb{C}^2$$ as if it
 
 <ins id="def4">**Definition 4**</ins> Let a torus $$T$$ and a complex $$T$$-module $$V$$ be given. For an irreducible character $$\rchi_\lambda: T \rightarrow S^1$$ and the corresponding linear functional $$\lambda:\mathfrak{t}\rightarrow\mathbb{C}$$, we say that $$\lambda$$ is a *weight* of $$V$$ if the set
 
-$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $$t\in T$$}\right\}$$
+$$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
 is nontrivial. In this case, we call $$V_\lambda$$ the *weight space* of $$\lambda$$, and the decomposition
 
@@ -180,7 +182,7 @@ By definition, $$N$$ acts on $$T$$ by conjugation
 
 $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
-However, $$\Aut(T)$$ is determined by where the lattice of the torus $$T=\mathbb{R}^k/\mathbb{Z}^k$$ is sent, and this is embedded in $$\GL(k;\mathbb{Z})$$ via $$\Ad(n)$$. That is, this action can be thought of as a continuous function from $$N$$ to $$\GL(k;\mathbb{Z})$$. But since $$\GL(k;\mathbb{Z})$$ is discrete, considering the identity component $$N_0$$ of $$N$$, $$N_0$$ must all be sent to the identity matrix. That is, $$N_0$$ acts trivially on $$T$$.
+However, $$\Aut(T)$$ is determined by where the lattice of the torus $$T=\mathbb{R}^k/\mathbb{Z}^k$$ is sent, and this is embedded in $$\GL(k;\mathbb{Z})$$ via $$\Ad(n)$$. That is, this action can be thought of as a continuous map from $$N$$ to $$\GL(k;\mathbb{Z})$$. But since $$\GL(k;\mathbb{Z})$$ is discrete, considering the identity component $$N_0$$ of $$N$$, $$N_0$$ must all be sent to the identity matrix. That is, $$N_0$$ acts trivially on $$T$$.
 
 Now for an arbitrary one-parameter subgroup $$\alpha:\mathbb{R}\rightarrow N_0$$, we must have $$\alpha(\mathbb{R})\cdot T=T$$, and from this we know that $$\alpha(\mathbb{R})\subset T$$. But by [\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6), these cover some open neighborhood of the identity in $$N_0$$, and therefore generate $$N_0$$. That is, $$N_0=T$$.
 
@@ -192,7 +194,7 @@ Now our claim is as follows.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem7">**Lemma 7**</ins> For a compact, connected Lie group $$G$$, a maximal torus $$T$$, and the function
+<ins id="lem7">**Lemma 7**</ins> For a compact, connected Lie group $$G$$, a maximal torus $$T$$, and the map
 
 $$q:G/T\times T\rightarrow G;\qquad (gT, s)\mapsto gsg^{-1}$$
 
@@ -279,7 +281,7 @@ As mentioned above, the core content of this section follows immediately from th
 
 </div>
 
-Therefore, for any compact connected Lie group $$G$$ and maximal torus $$T$$, we obtain the following decomposition
+Therefore, for any compact connected Lie group $$G$$ and maximal torus $$T$$, we obtain the decomposition
 
 $$G=\bigcup_{g\in G}gTg^{-1}$$
 
@@ -339,7 +341,7 @@ Under this one-to-one correspondence, the conjugation action on $$G$$ acts trivi
 
 ## Decomposition of the conjugation action
 
-Now let us examine the situation where $$G$$ acts on itself by conjugation. For this, for each $$g'\in G$$, define the conjugation map
+Now let us examine the situation where $$G$$ acts on itself by conjugation. For this, for each $$h\in G$$, define the conjugation map
 
 $$c_{h}:G\rightarrow G;\qquad g\mapsto hgh^{-1}$$
 
