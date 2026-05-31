@@ -1,5 +1,6 @@
 ---
 title: "Diagram chasing"
+description: "This post proves the five lemma and snake lemma, two fundamental results in homological algebra, using diagram chasing techniques, and discusses their generalization via the Freyd-Mitchell embedding theorem."
 excerpt: "Five lemma, snake lemma"
 
 categories: [Math / Homological Algebra]
@@ -13,12 +14,13 @@ sidebar:
 date: 2022-09-10
 last_modified_at: 2024-10-31
 weight: 1
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-31T12:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T12:00:04+00:00
 ---
-Homological algebra is, literally speaking, the study of the properties of chain complexes using their homology. ([\[Category Theory\] §Abelian Categories, ⁋Definition 4](/en/math/category_theory/abelian_categories#def4)) Chain complexes are defined in any abelian category, but by the Freyd-Mitchell embedding theorem they can all be embedded as a full subcategory of some $$\lMod{A}$$. ([\[Category Theory\] §Abelian Categories, ⁋Theorem 8 (Freyd-Mitchell embedding theorem)](/en/math/category_theory/abelian_categories#thm8)) 
+Homological algebra is, literally, the study of the properties of chain complexes via their homology. ([\[Category Theory\] §Abelian Categories, ⁋Definition 4](/en/math/category_theory/abelian_categories#def4)) Chain complexes are defined in any abelian category, but by the Freyd-Mitchell embedding theorem they can all be embedded as a full subcategory of some $$\lMod{A}$$. ([\[Category Theory\] §Abelian Categories, ⁋Theorem 8 (Freyd-Mitchell embedding theorem)](/en/math/category_theory/abelian_categories#thm8))
 
-In this post we prove the five lemma and the snake lemma, which are essential lemmas in homological algebra. It is possible to prove them using the universal properties of kernels and cokernels, but this can make the proofs unnecessarily long, so we carry out all proofs in $$\lMod{A}$$. This means in particular that we can pick elements from each object. Such proofs are called diagram chasing, and working in $$\lMod{A}$$ instead of an arbitrary abelian category is justified by the Freyd-Mitchell embedding theorem mentioned above.
+In this post we prove the five lemma and the snake lemma, two essential lemmas in homological algebra. Their proofs can be carried out using the universal properties of kernels and cokernels, but this would make the arguments unnecessarily long, so we work throughout in $$\lMod{A}$$. In particular, this means we may pick elements from each object. Such arguments are called diagram chasing, and the passage from an arbitrary abelian category to $$\lMod{A}$$ is justified by the Freyd-Mitchell embedding theorem mentioned above.
 
 ## The Five Lemma
 
@@ -37,28 +39,28 @@ and assume that $$\alpha$$ is surjective and $$\delta$$ is injective. Then
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-1. Pick any $$b'\in B'$$. We must show that there exists some $$b\in B$$ such that $$\beta(b)=b'$$. Since $$\gamma$$ is surjective by assumption, there exists some $$c\in C$$ such that $$\gamma(c)=g'(b')\in C'$$. Now
+1. Pick any $$b'\in B'$$. We must show that there exists some $$b\in B$$ with $$\beta(b)=b'$$. Since $$\gamma$$ is surjective by assumption, there exists some $$c\in C$$ such that $$\gamma(c)=g'(b')\in C'$$. Now
   
     $$\delta(h(c))=h'(\gamma(c))=h'(g'(b'))=0$$
 
-    so $$h(c)\in\ker\delta$$, and since $$\delta$$ is injective we have $$h(c)=0$$. That is, $$c\in\ker(h)=\im(g)$$, so there exists some $$b_0\in B$$ such that $$g(b_0)=c$$. Now for such a $$b_0$$, consider $$b'-\beta(b_0)\in B'$$. Then
+    so $$h(c)\in\ker\delta$$, and since $$\delta$$ is injective we have $$h(c)=0$$. Thus $$c\in\ker(h)=\im(g)$$, so there exists some $$b_0\in B$$ such that $$g(b_0)=c$$. For this $$b_0$$, consider $$b'-\beta(b_0)\in B'$$. Then
 
     $$g'(b'-\beta(b_0))=g'(b')-g'(\beta(b_0))=\gamma(c)-\gamma(g(b_0))=\gamma(c)-\gamma(c)=0$$
 
-    so $$b'-\beta(b_0)\in\ker(g')=\im(f')$$. Thus there exists some $$a'\in A'$$ such that $$f'(a')=b'-\beta(b_0)$$. Since $$\alpha$$ is surjective, there exists $$a\in A$$ satisfying $$\alpha(a)=a'$$. Then
+    so $$b'-\beta(b_0)\in\ker(g')=\im(f')$$. Hence there exists some $$a'\in A'$$ such that $$f'(a')=b'-\beta(b_0)$$. Since $$\alpha$$ is surjective, there exists $$a\in A$$ satisfying $$\alpha(a)=a'$$. Then
 
     $$\beta(f(a))=f'(\alpha(a))=f'(a')=b'-\beta(b_0)$$
 
-    and so setting $$b=b_0+f(a)$$ we can verify that $$\beta(b)=b'$$.
-2. Suppose some $$c\in C$$ satisfies $$\gamma(c)=0$$. We must show that $$c=0$$. First
+    and setting $$b=b_0+f(a)$$ we obtain $$\beta(b)=b'$$.
+2. Suppose some $$c\in C$$ satisfies $$\gamma(c)=0$$. We must show that $$c=0$$. First,
 
     $$0=h'(0)=h'(\gamma(c))=\delta(h(c))$$
 
-    and since $$\delta$$ is injective we know that $$h(c)=0$$. That is, $$c\in\ker(h)=\im(g)$$, so there exists some $$b_0\in B$$ such that $$g(b_0)=c$$. Now considering the element $$\beta(b_0)\in B'$$,
+    and since $$\delta$$ is injective we know that $$h(c)=0$$. Thus $$c\in\ker(h)=\im(g)$$, so there exists some $$b_0\in B$$ such that $$g(b_0)=c$$. Now consider the element $$\beta(b_0)\in B'$$:
 
     $$g'(\beta(b_0))=\gamma(g(b_0))=\gamma(c)=0$$
 
-    so $$\beta(b_0)\in\ker(g')=\im(f')$$. Thus there exists some $$a'\in A'$$ such that $$f'(a')=\beta(b_0)$$, and since $$\alpha$$ is surjective there also exists $$a\in A$$ satisfying $$\alpha(a)=a'$$. Now set $$b=b_0-f(a)$$. Then
+    so $$\beta(b_0)\in\ker(g')=\im(f')$$. Hence there exists some $$a'\in A'$$ such that $$f'(a')=\beta(b_0)$$, and since $$\alpha$$ is surjective there also exists $$a\in A$$ satisfying $$\alpha(a)=a'$$. Set $$b=b_0-f(a)$$. Then
 
     $$g(b)=g(b_0-f(a))=g(b_0)-g(f(a))=g(b_0)=c$$
 
@@ -70,7 +72,7 @@ and assume that $$\alpha$$ is surjective and $$\delta$$ is injective. Then
 
 </details>
 
-The above proposition has the following two obvious corollaries.
+The above proposition has the following two immediate corollaries.
 
 <div class="proposition" markdown="1">
 
@@ -106,21 +108,21 @@ is given. Then $$\xi$$ sends $$\ker(h)$$ to $$\ker(h')$$ and $$\eta$$ sends $$\i
 
 $$\xi^\sharp:\ker(h)\rightarrow\ker(h'),\quad \eta^\sharp:\im(h)\rightarrow\im(h'),\quad\xi^\ast:X/\ker(h)\rightarrow X'/\ker(h'),\quad \eta^\ast:\coker(h)\rightarrow\coker(h')$$
 
-are well-defined. 
+are well-defined.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Consider the composition $$\xi\circ i:\ker h\rightarrow X'$$ of $$i:\ker(h)\rightarrow X$$ and $$\xi$$. Then 
+Consider the composition $$\xi\circ i:\ker h\rightarrow X'$$ of $$i:\ker(h)\rightarrow X$$ and $$\xi$$. Then
 
 $$h'\circ(\xi\circ i)=(\eta\circ h)\circ i=\eta\circ 0=0$$
 
-so from the universal property of the kernel we know that there exists a unique $$\xi^\sharp:\ker(h)\rightarrow\ker(h')$$. 
+so by the universal property of the kernel there exists a unique $$\xi^\sharp:\ker(h)\rightarrow\ker(h')$$.
 
 ![induced_morphism_kernel](/assets/images/Math/Homological_Algebra/Diagram_Chasing-5.png){:style="width:13em" class="invert" .align-center}
 
-Similarly from $$p'\circ\eta:Y\rightarrow \coker (h')$$,
+Similarly, from $$p'\circ\eta:Y\rightarrow \coker (h')$$,
 
 $$(p'\circ\eta)\circ h=p'\circ(h'\circ\xi)=(p'\circ h')\circ\xi=0\circ\xi=0$$
 
@@ -128,7 +130,7 @@ and we can define $$\eta^\ast$$ from the universal property of $$\coker(h)$$.
 
 ![induced_morphism_cokernel](/assets/images/Math/Homological_Algebra/Diagram_Chasing-6.png){:style="width:13.6em" class="invert" .align-center}
 
-By definition $$\coker(h)=Y/\im(h)$$ and $$\coker(h')=Y'/\im(h')$$, so since $$\eta^\ast$$ sends $$0$$ to $$0$$, $$\eta^\sharp$$ is also well-defined. Finally for $$\xi^\ast$$, considering $$p:X'\rightarrow X'/\ker(h')$$ we have
+By definition $$\coker(h)=Y/\im(h)$$ and $$\coker(h')=Y'/\im(h')$$, so since $$\eta^\ast$$ sends $$0$$ to $$0$$, $$\eta^\sharp$$ is also well-defined. Finally, for $$\xi^\ast$$, consider $$p:X'\rightarrow X'/\ker(h')$$; then
 
 $$\ker(h)\subseteq\ker(p\circ\xi)$$
 
@@ -148,7 +150,7 @@ is given. Then $$f,g$$ and $$f',g'$$ induce the two columns
 
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma),\qquad \coker(\alpha)\rightarrow\coker(\beta)\rightarrow\coker(\gamma)$$
 
-Moreover, if $$f':A'\rightarrow B'$$ is injective then the first column becomes exact, and if $$g:B\rightarrow C$$ is surjective then the second column becomes exact.
+Moreover, if $$f':A'\rightarrow B'$$ is injective then the first column is exact, and if $$g:B\rightarrow C$$ is surjective then the second column is exact.
 
 </div>
 <details class="proof" markdown="1">
@@ -162,17 +164,17 @@ is a consequence of [Lemma 4](#lem4). Moreover, letting $$i_A, i_B, i_C$$ be the
 
 $$i_C\circ g^\sharp\circ f^\sharp=g\circ i_B\circ f^\sharp=g\circ f\circ i_A=0$$
 
-and since $$i_C$$ is injective we can verify that $$g^\sharp\circ f^\sharp=0$$. Similarly letting $$p_A,p_B,p_C$$ be the canonical maps from $$A,B,C$$ to the cokernels respectively,
+and since $$i_C$$ is injective we verify that $$g^\sharp\circ f^\sharp=0$$. Similarly, letting $$p_A,p_B,p_C$$ be the canonical maps from $$A,B,C$$ to the cokernels respectively,
 
 $$(g')^\ast\circ(f')^\ast\circ p_C=(g')^\ast\circ p_B\circ f=p_A\circ g'\circ f'=0$$
 
-and since $$p_C$$ is surjective we can verify that $$(g')^\ast\circ(f')^\ast=0$$. Therefore to prove the given statement it suffices to show that if $$f':A'\rightarrow B'$$ is injective then $$\ker(g^\sharp)\subset\im(f^\sharp)$$, and if $$g:B\rightarrow C$$ is surjective then $$\ker((g')^\ast)\subset\im((f')^\ast)$$.
+and since $$p_C$$ is surjective we verify that $$(g')^\ast\circ(f')^\ast=0$$. Therefore, to prove the statement it suffices to show that if $$f':A'\rightarrow B'$$ is injective then $$\ker(g^\sharp)\subset\im(f^\sharp)$$, and if $$g:B\rightarrow C$$ is surjective then $$\ker((g')^\ast)\subset\im((f')^\ast)$$.
 
 First assume that $$f'$$ is injective. If $$g^\sharp(b)=0$$ for some $$b\in\ker(\beta)$$, then by the definition of $$g^\sharp$$ we have $$g(b)=0$$ and therefore $$b\in\ker(g)=\im(f)$$. Thus there exists some $$a\in A$$ such that $$f(a)=b$$. But
 
 $$(f'\circ\alpha)(a)=(\beta\circ f)(a)=\beta(f(a))=\beta(b)=0$$
 
-and since $$f'$$ is injective we have $$a\in\ker(\alpha)$$, and from $$f(a)=f^\sharp(a)=b$$ we get $$b\in\im(f^\sharp)$$.
+and since $$f'$$ is injective we have $$a\in\ker(\alpha)$$, and from $$f(a)=f^\sharp(a)=b$$ we obtain $$b\in\im(f^\sharp)$$.
 
 Now assume that $$g$$ is surjective. Let $$b'\in\coker(\beta)$$ be an element of $$\ker((g')^\ast)$$. That is, $$((g')^\ast)(b')=g'(b')+\im(\gamma)=0$$. But $$g'(b')\in\im(\gamma)$$, so there exists some $$c\in C$$ such that $$\gamma(c)=g'(b')$$, and since $$g$$ is surjective there exists some $$b\in B$$ such that $$g(b)=c$$. Then
 
@@ -190,7 +192,7 @@ holds.
 
 </details>
 
-Now we can finally prove the snake lemma. 
+Now we can finally prove the snake lemma.
 
 <div class="proposition" markdown="1">
 
@@ -202,23 +204,23 @@ Here the top and bottom rows are each exact. Then there exists a map $$\delta:\k
 
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma),\qquad \coker(\alpha)\rightarrow\coker(\beta)\rightarrow\coker(\gamma)$$
 
-so that the following column joined through it
+so that the following column, joined through it,
 
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma)\rightarrow\coker(\alpha)\rightarrow\coker(\beta)\rightarrow\coker(\gamma)$$
 
-forms an exact sequence. 
+forms an exact sequence.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-To prove this it suffices to construct a $$\delta$$ and then show that the above column is exact at $$\ker(\gamma)$$ and $$\coker(\alpha)$$.
+To prove this it suffices to construct $$\delta$$ and then show that the above column is exact at $$\ker(\gamma)$$ and $$\coker(\alpha)$$.
 
-First pick some $$c\in\ker(\gamma)$$. Since $$g$$ is surjective, there exists some $$b\in B$$ such that $$g(b)=c$$, and this $$b$$ satisfies the equation
+First pick some $$c\in\ker(\gamma)$$. Since $$g$$ is surjective, there exists some $$b\in B$$ such that $$g(b)=c$$, and this $$b$$ satisfies
 
 $$0=\gamma(c)=\gamma(g(b))=(\gamma\circ g)(b)=(g'\circ\beta)(b)=g'(\beta(b))$$
 
-That is, $$\beta(b)\in\ker(g')=\im(f')$$. Therefore there exists a unique $$a'$$ such that $$f'(a')=\beta(b)$$. For such an $$a'$$, set $$\delta(c)=a'+\im(\alpha)\in \coker(\alpha)$$.
+That is, $$\beta(b)\in\ker(g')=\im(f')$$. Hence there exists a unique $$a'$$ such that $$f'(a')=\beta(b)$$. For this $$a'$$, set $$\delta(c)=a'+\im(\alpha)\in \coker(\alpha)$$.
 
 For the map $$\delta$$ to be well-defined, the above value must not depend on the choice of $$b$$. Pick another $$b_1\in B$$ satisfying $$g(b_1)=c$$, and in the same way pick $$a_1'\in A'$$ satisfying $$f'(a_1')=\beta(b_1)$$. Then
 
@@ -232,9 +234,9 @@ and since $$f'$$ is injective, $$\alpha(a)=a_1'-a'$$ holds. That is, $$a_1'\equi
 
 We must show that this $$\delta$$ makes the following column
 
-$$\ker(\beta)\rightarrow\ker(\gamma)\rightarrow\coker(\alpha)\rightarrow\coker(\beta)$$ 
+$$\ker(\beta)\rightarrow\ker(\gamma)\rightarrow\coker(\alpha)\rightarrow\coker(\beta)$$
 
-into an exact sequence. First let $$b\in \ker(\beta)$$. If we write $$\delta(g^\sharp(b))=a'+\im(\alpha)$$, then $$a'$$ is determined by the equation $$f'(a')=\beta(b)$$; since $$b\in\ker(\beta)$$ we have $$f'(a')=0$$, and since $$f'$$ is injective we must have $$a'=0$$. That is $$\delta\circ g^\sharp=0$$. Similarly, for any $$c\in\ker(\gamma)$$ if we write $$\delta(c)=a'+\im(\alpha)$$, then
+into an exact sequence. First let $$b\in \ker(\beta)$$. If we write $$\delta(g^\sharp(b))=a'+\im(\alpha)$$, then $$a'$$ is determined by the equation $$f'(a')=\beta(b)$$; since $$b\in\ker(\beta)$$ we have $$f'(a')=0$$, and since $$f'$$ is injective we must have $$a'=0$$. Thus $$\delta\circ g^\sharp=0$$. Similarly, for any $$c\in\ker(\gamma)$$ if we write $$\delta(c)=a'+\im(\alpha)$$, then
 
 $$((f')^\ast)(a'+\im(\alpha))=f'(a')+\im(\beta)=\beta(b)+\im(\beta)=0$$
 
