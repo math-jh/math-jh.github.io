@@ -171,23 +171,19 @@ $$\bigl\{\langle\tau_k(T_a)\rangle_{0, 1, \beta}\bigr\}_{\beta \in \mathrm{NE}(X
 
 $$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\rangle_{0, n+1, \beta}$$
 
-의 형태이지만, 위에서 우리는 single marked point들만 식에 넣었음을 유의하자. 이것이 가능한 이유는 $$\beta\neq 0$$이므로 source의 stability와 관계없이 target이 충분히 크므로 stability가 보장되기 때문이며, 이들만 보는 것으로 충분한 이유는 본질적으로 우리가 $$H^2$$ 방향 deformation, 즉 small quantum cohomology를 우선적으로 생각하기 때문이다. 더 구체적으로, [정의 1](#def1)의 일반적인 descendant invariant는 marked point를 여럿 가질 수 있지만, 우리가 켜는 deformation이 $$H^2$$ 방향의 $$t_{(2)}$$로 제한되는 한 그 추가 insertion들은 divisor equation ([\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4))으로 하나씩 떼어낼 수 있다. 각 $$H^2$$ insertion은 교차수 $$t_{(2)} \cdot \beta$$라는 인자만을 남기고 (descendant의 경우 여기에 $$\psi$$를 한 단계 낮추는 $$z^{-1}$$ 보정이 더해진다), insertion의 개수에 대해 합하면 이들이 지수함수로 접혀 하나의 닫힌 인자로 빠져나온다. 다시 말해 $$H^2$$ 방향은 오직 지수함수의 꼴로만 이론에 들어온다. Primary 수준에서 이는 $$H^2$$ 방향을 켜는 것이 Novikov 변수를 $$q^\beta \mapsto e^{t_{(2)} \cdot \beta} q^\beta$$로 재매개화하는 것, 즉 $$q^\beta = e^{t_{(2)} \cdot \beta}$$로 $$H^2$$ 좌표를 지수화하는 것에 지나지 않는다는 사실과 같으며 ([\[사교기하학\] §양자 코호몰로지, §§큰 양자 코호몰로지와 고전 극한](/ko/math/symplectic_geometry/quantum_cohomology#큰-양자-코호몰로지와-고전-극한)에서 보았듯, 이런 의미에서 $$q_a = e^{t^a}$$로 둔다), $$J$$-function 차원에서는 여기에 $$\psi$$-보정이 더해진 형태가 정의의 맨 앞에 떼어 둔 prefactor $$e^{t_{(2)}/z}$$로 나타난다. 따라서 $$H^2$$ 방향의 의존성은 모두 prefactor와 Novikov 변수가 짊어지고, 정작 새로운 Gromov-Witten 정보는 남은 하나의 marked point에 응축되므로, single marked point invariant만 보아도 충분하다. (임의의 cohomology class를 끼운 multi-marked-point 형태를 그대로 보존한 *big* $$J$$-function은 §§Big quantum cohomology로의 확장에서 다룬다.)
+의 형태이지만, 위에서 우리는 single marked point들만 식에 넣었음을 유의하자. 이것이 가능한 이유는 $$\beta\neq 0$$이므로 source의 stability와 관계없이 target이 충분히 크므로 stability가 보장되기 때문이며, 이들만 보는 것으로 충분한 이유는 본질적으로 우리가 $$H^2$$ 방향 deformation, 즉 small quantum cohomology를 우선적으로 생각하기 때문이다. 
 
-한편 이 모든 packaging을 풀어 $$J$$를 직접 $$z^{-1}$$의 멱급수로 정리하면 prefactor $$e^{t_{(2)}/z} = \sum_k(t_{(2)})^k/(k!z^k)$$가 각 차수에 $$(t_{(2)})^k/k!$$를 기여하고, inner sum이 $$z^{-k-2}$$ 차수에 $$\sum_a\langle\tau_k(T_a)\rangle_{0,1,\beta} T^a$$ 항을 기여하여 합쳐진다. 구체적으로 $$z^0$$ 차수는 classical leading $$\mathbf{1}$$만 남고, $$z^{-1}$$ 차수는 prefactor에서만 오는 $$t_{(2)}$$이며 GW invariant는 여기까지 끼어들지 않는다 (inner sum이 $$z^{-2}$$부터 시작하므로). $$z^{-2}$$ 차수에서 처음으로 prefactor의 $$(t_{(2)})^2/2$$와 함께 *primary* GW invariant $$\sum_{\beta \neq 0}q^\beta\sum_a\langle T_a\rangle_{0, 1, \beta}T^a$$가 등장하고, 일반적으로 $$z^{-k}$$ ($$k \geq 2$$) 차수에는 prefactor의 $$(t_{(2)})^k/k!$$와 더불어 $$\psi^{k-2}$$가 끼인 *gravitational descendant* $$\langle\tau_{k-2}(T_a)\rangle_{0, 1, \beta}$$이 함께 나타난다. 즉 J는 모든 차수의 descendant GW invariant를 한 $$(q, z)$$-함수에 모은 *master 생성함수*이며, 이 packaging 자체가 ($$\ast$$)의 자연스러운 fundamental solution을 이룬다는 것이 다음 절의 명제 4의 내용이다.
+더 구체적으로, 우리는 이미 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)로부터 Gromov-Witten invariant에 divisor $$D\in H^2(X)$$를 insert하는 것이 $$D\cdot \beta$$를 곱하는 효과로 나타남을 보았고, 이를 power series로 전개하면 결국 $$H^2$$ 방향을 보는 것은 $$e^{t_{(2)}\cdot \beta}$$를 앞에 곱하는 것, 즉 Novikov variable을 $$q^\beta \mapsto e^{t_{(2)}\cdot \beta}q^\beta$$로 재매개화하는 것에 지나지 않는다는 것을 살펴보았다. [정의 3](#def3)에서 우리는 여기에 더해 $$T_a/(z-\psi)$$ 항에 $$z^{-1}$$을 한 번 더 곱해주었으므로, 이 $$z$$-shift까지 반영하면 $$J$$-function 앞에 전체적으로 붙는 factor는 $$e^{t_{(2)}/z}$$가 된다. 이렇게 $$H^2$$ 방향의 의존성을 전부 $$e^{t_{(2)}/z}$$와 Novikov variable에 넣고 나면 Gromov-Witten 정보는 남은 하나의 marked point에 응축되므로, single marked point invariant만 보아도 충분하다. 
 
-## QDE의 fundamental solution
-
-위 ⁋동기에서 본 ansatz는 ($$\ast$$)의 해의 형태가 "leading 1 + GW descendant 보정"의 꼴로 강제됨을 시사했고, [정의 3](#def3)의 $$J$$-function은 그 정확한 표현이다. 이를 명제로 정리하자.
-
-[§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서 B-side의 fundamental solution은 cohomology basis $$\{e_a\}$$와 thimble basis $$\{[\Gamma_p]\}$$ 사이의 period $$\mathcal{I}^a_p$$로 적힌 행렬이었다. A-side에서 그에 대응하는 행렬은 *Givental의 $$S$$-matrix*로 알려진 endomorphism-값 함수이며, $$J$$-function은 그 한 column이다.
+한편 $$J$$-function을 도입한 우리의 동기는 QDE ($$\ast$$)의 fundamental solution을 구하기 위함이었다는 것을 기억하자. [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 우리는 A-model $$D$$-module이 base $$M_A = (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast_z$$의 각 점 $$(q, z)$$마다 fiber로 $$H^\ast(X)$$를 얹은 bundle이고, 그 위의 connection 1-form $$\mathcal{C}_a = T_a \qtimes -$$ 또한 이 fiber 위의 endomorphism이었음을 보았다. 그러므로 fiber 위의 endomorphism $$S(q, z) \in \End(H^\ast(X))$$를 도입하여 그 각 column이 ($$\ast$$)의 horizontal section이 되도록 하는 것이 자연스러우며, 다음 명제는 이렇게 얻은 $$S$$-matrix가 B-side의 period matrix ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))에 대응하는 A-side의 fundamental solution을 이룸을 보인다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4** ($$J$$-function as fundamental solution column)</ins> Endomorphism $$S(q, z) \in \End(H^\ast(X))$$를 다음의 matrix element
+<ins id="prop4">**명제 4 (A-side fundamental solution matrix)**</ins> Endomorphism $$S(q, z) \in \End(H^\ast(X))$$를 다음의 matrix element
 
 $$\eta\bigl(S(q,z)T_a, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta \left\langle \frac{T_a}{z - \psi}, T_b \right\rangle_{0, 2, \beta}$$
 
-으로 정의하자 ($$\eta$$는 Poincaré pairing). 그러면
+으로 정의하자 ($$\eta$$는 Poincaré pairing). 이 $$S(q, z)$$는 $$q \to 0$$에서 모든 $$q^\beta$$ ($$\beta \neq 0$$) 항이 사라져 $$S \to \operatorname{id}$$로 normalize되며, 이는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 period matrix $$\mathcal{I}$$가 frame $$\{e_a\}$$로 trivialize한 $$\nabla^z_B$$의 fundamental solution matrix를 이루었던 것과 평행한, A-side의 fundamental solution matrix이다. 구체적으로,
 
 1. *(Flat section property)* $$S(q, z)$$의 각 column $$S(q, z) T_b$$는 dual small Dubrovin connection $$\nabla^{z, \vee}$$의 horizontal section이다. 즉
    
@@ -202,13 +198,17 @@ $$\eta\bigl(S(q,z)T_a, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta
 <details class="proof" markdown="1">
 <summary>증명 개요</summary>
 
-핵심은 두 가지 GW 공리, 즉 *string equation* (marked point에 $$T_0 = 1$$을 끼울 때의 reduction)과 *divisor equation* ($$H^2$$ class를 끼울 때의 $$T_a \cdot \beta$$ 인자)을 정합적으로 활용하는 것이다. 
+핵심은 GW invariant의 두 공리 — *string equation* (marked point에 $$T_0 = 1$$을 끼울 때 한 점이 줄어드는 reduction)과 *divisor equation* ($$H^2$$ class를 끼울 때 $$T_a \cdot \beta$$ 인자가 빠지는 관계) — 과 [명제 2](#prop2)의 topological recursion relation을 정합적으로 결합하는 것이다. 
 
-(2)는 $$T_b = T_0 = 1$$을 대입했을 때 string equation $$\langle \tau_k(T_a), 1\rangle_{0,2,\beta} = \langle \tau_{k-1}(T_a)\rangle_{0,1,\beta}$$ ($$k \geq 1$$, $$\beta \neq 0$$, $$k = 0$$인 항은 vanishing)으로 marked point 하나가 사라지면서 $$z^{-1}\langle T_a/(z-\psi)\rangle$$로 정리되고, 이것이 정확히 [정의 3](#def3)의 small J 식 안에 들어 있는 $$\langle T_a/(z(z-\psi))\rangle$$이 됨을 확인하면 된다. (1)의 flat section property는 $$q_a\partial_{q_a}$$의 작용이 marked point에 $$T_a$$를 추가로 끼우는 효과 (divisor equation을 거꾸로 푼 것)임을 사용하면 $$z q_a\partial_{q_a}$$가 $$T_a$$ 삽입 + $$z$$-shift를 주고, 그 후 한 marked point를 $$T_b/(z-\psi)$$와 분리하는 *topological recursion relation* ($$\overline{M}_{0, n+1}$$의 $$\psi$$-class를 boundary divisor의 합으로 분해하는 관계식)을 통해 우변의 $$T_a \qtimes$$ 작용과 같아짐을 보인다. 자세한 계산은 [CK, Theorem 10.3.1] 또는 [MS, Chapter 28–29] 참조.
+(2) $$J = T_0$$ column은 $$T_b = T_0 = 1$$을 대입하여 얻는다. 이때 $$S(q,z)T_0$$의 matrix element에 들어 있는 2-point descendant에 string equation $$\langle \tau_k(T_a), 1\rangle_{0,2,\beta} = \langle \tau_{k-1}(T_a)\rangle_{0,1,\beta}$$ ($$k \geq 1$$, $$\beta \neq 0$$; $$k = 0$$ 항은 vanishing)을 적용하면 marked point 하나가 줄며 $$z^{-1}\langle T_a/(z-\psi)\rangle_{0,1,\beta}$$로 정리되고, prefactor $$e^{t_{(2)}/z}$$를 곱하면 정확히 [정의 3](#def3)의 small $$J$$ 식 안에 들어 있는 $$\langle T_a/(z(z-\psi))\rangle_{0,1,\beta}$$ 항이 된다.
+
+(1) flat section property는 $$z q_a\partial_{q_a}$$를 column $$S(q,z)T_b$$에 작용시켜 확인한다. $$q_a\partial_{q_a}$$는 divisor equation을 거꾸로 읽어 correlator에 $$H^2$$ class $$T_a$$를 한 점 더 삽입하는 효과를 주고, 곱해진 $$z$$는 distinguished marked point의 $$1/(z-\psi)$$에서 $$\psi$$ 한 차수를 끌어내린다. 이 $$\psi$$를 [명제 2](#prop2)의 topological recursion relation (forgetful morphism으로 stable map의 moduli $$\overline{\mathcal{M}}_{0, n+1}(X, \beta)$$에 끌어올린 형태)으로 boundary divisor들의 합으로 분해하면, 각 boundary divisor 위에서 source curve가 두 component로 갈라지며 한 쪽은 새로 삽입한 $$T_a$$가 주는 quantum product $$T_a \qtimes$$의 structure constant를, 다른 쪽은 원래의 $$S(q,z)T_b$$를 복원한다. 두 기여의 곱이 정확히 우변 $$T_a \qtimes \bigl(S(q,z)T_b\bigr)$$이다. 자세한 계산은 [CK, Theorem 10.3.1] 또는 [MS, Chapter 28–29] 참조.
 
 </details>
 
-[명제 4](#prop4)는 $$J$$-function이 단순한 enumerative 데이터의 묶음을 넘어, A-model 측 fundamental solution matrix $$S$$의 한 열 (구체적으로 normalization element $$T_0 = 1$$에 해당하는 열)을 이룸을 보여준다. 다른 열들도 $$S$$의 정의식에 다른 $$T_b$$를 넣으면 직접 얻을 수 있으므로, 결국 small QDE의 모든 flat section은 GW invariant의 generating function으로 표현된다. 
+[명제 4](#prop4)는 $$J$$-function이 단순한 enumerative 데이터의 묶음을 넘어, A-model 측 fundamental solution matrix $$S$$의 한 열 (구체적으로 normalization element $$T_0 = 1$$에 해당하는 열)을 이룸을 보여준다. 다른 열들도 $$S$$의 정의식에 다른 $$T_b$$를 넣으면 직접 얻을 수 있으므로, 결국 small QDE의 모든 flat section은 GW invariant의 generating function으로 표현된다.
+
+이 normalization은 앞서 ($$\ast$$)를 $$z^{-1}$$의 멱급수로 풀 때 등장한 적분상수의 처리와 직결된다. Recursion $$q_a\partial_{q_a} s_{k+1} = T_a \qtimes s_k$$의 각 단계에서 $$s_{k+1}$$은 $$q_a$$에 대한 적분으로 결정되었고, 그 과정에서 $$q$$에 무관한 적분상수 $$C_{k+1} \in H^\ast(X)$$만큼의 자유도가 남았다 (가령 $$s_1 = t_{(2)} + C_1$$). [명제 4](#prop4)의 $$S$$는 이 적분상수를 모든 차수에서 $$0$$으로 버린 해, 즉 $$t_{(2)}$$에서 비롯하는 $$\log q$$ 성장을 prefactor $$e^{t_{(2)}/z}$$로 따로 떼어내고 나면 남는 모든 보정이 $$\beta \neq 0$$의 instanton 차수 $$q^\beta$$만을 갖도록 ($$q \to 0$$에서 $$S \to \operatorname{id}$$가 되도록) 강제한 표준해이다. 
 
 특히 $$S$$ (혹은 그 한 열인 $$J$$)는 B-side의 period matrix $$\mathcal{I}^a_p$$ ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))와 정확히 짝을 이룬다. 각 column이 한 flat section을 나타낸다는 의미에서 두 행렬은 같은 역할을 하는 객체이며, 이들이 서로 일치한다는 것이 다음 절의 mirror theorem의 기하학적 내용이다.
 
