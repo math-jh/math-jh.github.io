@@ -1,5 +1,6 @@
 ---
 title: "Symmetric Groups"
+description: "We examine the definition of the symmetric group on a set, cycle notation, composition of cycles, and the concept of disjoint cycles."
 excerpt: "Cycle decomposition and sign of the symmetric group, and the alternating group"
 
 categories: [Math / Group Theory]
@@ -13,14 +14,15 @@ sidebar:
 date: 2025-03-29
 last_modified_at: 2025-03-29
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T10:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T10:00:04+00:00
 ---
-In the [Algebraic Structures](/en/algebraic_structures) category we were interested in the common properties shared by various algebraic structures; however, while this approach is good for surveying how algebraic theories develop from an overall perspective, it is not good for examining details such as actually computing a specific group. Therefore, in the posts in this category we study properties of groups not covered in the [Algebraic Structures](/en/algebraic_structures) category.
+In the [Algebraic Structures](/en/algebraic_structures) category we were interested in the common properties shared by various algebraic structures; however, while this approach is good for surveying how algebraic theories develop from an overall perspective, it is ill suited for examining details such as computing a specific group. Therefore, in the posts in this category we study properties of groups not covered in the [Algebraic Structures](/en/algebraic_structures) category.
 
 ## Symmetric Groups
 
-The first objects we study in the [Group Theory](/en/group_theory) category are specific groups.
+The first objects we examine in the [Group Theory](/en/group_theory) category are specific groups.
 
 <div class="definition" markdown="1">
 
@@ -34,15 +36,15 @@ Given a permutation $$\sigma: [n] \rightarrow [n]$$, consider the $$n+1$$ elemen
 
 $$1=\sigma^0(1), \quad\sigma(1)=\sigma^1(1),\quad\sigma^2(1),\quad\cdots, \quad\sigma^n(1)\tag{$\ast$}$$
 
-By the pigeonhole principle there exist two distinct integers $$0\leq k_1,k_2\leq n$$ such that $$\sigma^{k_1}(1)=\sigma^{k_2}(1)$$, and assuming $$k_1< k_2$$ for convenience, we know from this that $$\sigma^{k_2-k_1}(1)=0$$. Moreover, letting $$k$$ be the smallest positive integer satisfying $$\sigma^k(1)=1$$, from the above result we have $$k\leq n$$, and based on this we can consider the notation
+By the pigeonhole principle there exist two distinct integers $$0\leq k_1,k_2\leq n$$ such that $$\sigma^{k_1}(1)=\sigma^{k_2}(1)$$, and assuming $$k_1< k_2$$ for convenience, we know from this that $$\sigma^{k_2-k_1}(1)=1$$. Moreover, letting $$k$$ be the smallest positive integer satisfying $$\sigma^k(1)=1$$, from the above result we have $$k\leq n$$, and based on this we can consider the notation
 
-$$(1\quad \sigma(1)\quad \sigma(1)\quad\cdots\quad\sigma^{k-1}(1))$$
+$$(1\quad \sigma(1)\quad \sigma^2(1)\quad\cdots\quad\sigma^{k-1}(1))$$
 
 By definition this notation means the function sending $$1$$ to $$\sigma(1)$$, $$\sigma(1)$$ to $$\sigma^2(1)$$, $$\ldots$$, $$\sigma^{k-2}(1)$$ to $$\sigma^{k-1}(1)$$, and $$\sigma^{k-1}(1)$$ to $$\sigma^k(1)=1$$; and more generally
 
 $$(a_1\quad a_2\quad\cdots\quad a_{k})$$
 
-means the function sending $$a_1$$ to $$a_2$$, $$\ldots$$, $$a_{k-1}$$ to $$a_{k}$$, and $$a_k$$ to $$a_1$$ while leaving the remaining elements unchanged, and we call this a *cycle* of length $$k$$. Then for two cycles $$\sigma$$, $$\tau$$, the product $$\sigma\tau$$ means the composition $$\sigma\circ\tau$$ of the functions $$\sigma$$ and $$\tau$$.
+means the function sending $$a_1$$ to $$a_2$$, $$\ldots$$, $$a_{k-1}$$ to $$a_{k}$$, and $$a_k$$ to $$a_1$$ while leaving the remaining elements unchanged. We call this a *cycle* of length $$k$$. Then for two cycles $$\sigma$$, $$\tau$$, the product $$\sigma\tau$$ means the composition $$\sigma\circ\tau$$ of the functions $$\sigma$$ and $$\tau$$.
 
 <div class="example" markdown="1">
 
@@ -50,7 +52,7 @@ means the function sending $$a_1$$ to $$a_2$$, $$\ldots$$, $$a_{k-1}$$ to $$a_{k
 
 $$\tau_1\tau_2=(2\;3)(1\;3)$$
 
-Then first, under $$\tau_2$$, $$1$$ is moved to $$3$$, $$2$$ stays $$2$$, and $$3$$ is moved to $$1$$. Afterwards, under $$\tau_1$$, $$3$$ (which was originally $$1$$) is moved to $$2$$, and $$2$$ is moved to $$3$$, so $$\tau_1\tau_2$$ sends $$1$$ to $$2$$, $$2$$ to $$3$$, and $$3$$ to $$1$$. That is, as functions $$\sigma=\tau_1\tau_2$$. On the other hand, if we consider the composition
+Then first, under $$\tau_2$$, $$1$$ is moved to $$3$$, $$2$$ stays at $$2$$, and $$3$$ is moved to $$1$$. Afterwards, under $$\tau_1$$, $$3$$ (which was originally $$1$$) is moved to $$2$$, and $$2$$ is moved to $$3$$, so $$\tau_1\tau_2$$ sends $$1$$ to $$2$$, $$2$$ to $$3$$, and $$3$$ to $$1$$. That is, as functions $$\sigma=\tau_1\tau_2$$. On the other hand, if we consider the composition
 
 $$\tau_2\tau_1=(1\;3)(2\;3)$$
 
@@ -58,7 +60,7 @@ we see that $$1$$ is moved to $$3$$, $$2$$ to $$1$$, and $$3$$ to $$2$$. Hence $
 
 </div>
 
-The composition of elements of $$S_n$$ is composition of functions, and since composition of functions is generally not commutative, the above example is what we expected. However, in special cases certain two functions may commute.
+The composition of elements of $$S_n$$ is composition of functions, and since composition of functions is generally not commutative, the above example is what we expected. However, in special cases two functions may commute.
 
 <div class="definition" markdown="1">
 
@@ -117,7 +119,7 @@ Meanwhile, to represent all elements of $$S_n$$, just two elements suffice.
 <ins id="prop6">**Proposition 6**</ins> Every element of $$S_n$$ can be written as a product of $$(1\;2)$$ and $$(1\;2\;\cdots\;n)$$.
 
 </div>
-      
+
 To prove this we first examine the following.
 
 <div class="proposition" markdown="1">
@@ -172,7 +174,7 @@ $$x=g(g^{-1}x)=L_g(g^{-1}x)$$
 
 so $$L_g$$ is also a surjective homomorphism. That is, $$L_g$$ becomes an automorphism defined on $$G$$. Let $$\lvert G\rvert=n$$. Then an automorphism defined on $$G$$ is also a bijection defined on the set $$G$$, so the $$L_g$$ may all be regarded as elements of $$S_n$$. Now define $$T:G\rightarrow S_n$$ by the formula
 
-$$T(g)=L_g$$ 
+$$T(g)=L_g$$
 
 Then for any $$x\in G$$,
 
@@ -220,7 +222,7 @@ Moreover, since $$\sigma$$ is a bijection, if we rewrite all terms in this way w
 
 From the definition, it is obvious that if $$\sigma$$ is a transposition then $$\sgn(\sigma)=-1$$. Therefore, if we can only show that $$\sgn$$ is multiplicative,
 
-$$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of permutation}$$ 
+$$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of permutations}$$
 
 will hold, so we will obtain the desired result. Let two permutations $$\sigma$$, $$\tau$$ be given. We must compute the value of $$\sgn(\sigma\tau)$$. Suppose $$\tau$$ has $$k$$ inversions. That is, $$\sgn(\tau)=(-1)^k$$, and these $$k$$ copies of $$-1$$ all come from factors in equation (1). To compute the value of $$\sgn(\sigma\tau)$$ we first multiply both sides of
 

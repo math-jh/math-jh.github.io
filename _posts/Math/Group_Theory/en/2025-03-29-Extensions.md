@@ -1,5 +1,6 @@
 ---
 title: "Group Extensions"
+description: "Group extensions classify the extension structures between two given groups, and cover the equivalence conditions for trivial extensions and the morphisms between extensions."
 excerpt: "Group extensions as short exact sequences, and semidirect products"
 
 categories: [Math / Group Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-03-29
 last_modified_at: 2025-03-29
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T09:00:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T09:00:05+00:00
 ---
 In this post we discuss extensions of groups.
 
@@ -22,27 +24,29 @@ In this post we discuss extensions of groups.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> For two groups $$G, F$$, an *extension* $$\mathcal{E}$$ of $$G$$ by $$F$$ is the following pair satisfying the condition $$\ker p=\im i$$:
+<ins id="def1">**Definition 1**</ins> For two groups $$G, F$$, an *extension* $$\mathcal{E}$$ of $$G$$ by $$F$$ is a pair
 
 $$\mathcal{E}: F\overset{i}{\hookrightarrow}E\overset{p}{\twoheadrightarrow}G$$
 
+satisfying the condition $$\ker p=\im i$$.
+
 </div>
 
-The intuition for this is the pair
+The intuition is provided by the pair
 
 $$\mathcal{E}_0: F \rightarrow F\oplus G \rightarrow G$$
 
-and we call this the *trivial extension*. However, in general, although the first isomorphism theorem gives the formula
+which we call the *trivial extension*. However, although the first isomorphism theorem gives
 
 $$G\cong E/\ker p=E/\im i$$
 
-one should be careful that this does not imply
+in general one must be careful that this does not imply
 
-$$E\cong (E/i(F))\oplus i(F)$$
+$$E\cong (E/i(F))\oplus i(F).$$
 
-holds. In any case, from this computation we know that $$E$$ being an extension of $$G$$ by $$F$$ is equivalent to the existence of a suitable normal subgroup $$F'$$ of $$E$$ such that $$F'$$ is isomorphic to $$F$$ and $$E/F'$$ is isomorphic to $$G$$.
+In any case, from this computation we see that $$E$$ being an extension of $$G$$ by $$F$$ is equivalent to the existence of a suitable normal subgroup $$F'$$ of $$E$$ such that $$F'$$ is isomorphic to $$F$$ and $$E/F'$$ is isomorphic to $$G$$.
 
-Now, for fixed $$G$$ and $$F$$, the collection of all extensions of $$G$$ by $$F$$ forms a category. The morphisms in this category are given as follows.
+Now, for fixed $$G$$ and $$F$$, the collection of all extensions of $$G$$ by $$F$$ forms a category. Its morphisms are given as follows.
 
 <div class="definition" markdown="1">
 
@@ -52,9 +56,9 @@ Now, for fixed $$G$$ and $$F$$, the collection of all extensions of $$G$$ by $$F
 
 </div>
 
-Then if $$u:E_1 \rightarrow E_2$$ is an isomorphism as a group homomorphism, the inverse $$u^{-1}: E_2 \rightarrow E_1$$ of $$u$$ also satisfies the condition of [Definition 2](#def2), and hence $$u$$ is an isomorphism of extensions.
+Then if $$u:E_1 \rightarrow E_2$$ is an isomorphism of groups, its inverse $$u^{-1}: E_2 \rightarrow E_1$$ also satisfies the condition of [Definition 2](#def2), and hence $$u$$ is an isomorphism of extensions.
 
-Extending the previous definition, we define the following.
+Extending the previous definition, we give the following.
 
 <div class="definition" markdown="1">
 
@@ -74,7 +78,7 @@ Then the following holds.
 
 1. $$\mathcal{E}$$ is a trivial extension.
 2. A retraction $$r: E \rightarrow F$$ exists.
-3. A section $$s: G \rightarrow E$$ exists such that $$s(G)$$ can be made to be contained in the centralizer of $$i(F)$$.
+3. A section $$s: G \rightarrow E$$ exists such that $$s(G)$$ can be chosen to lie in the centralizer of $$i(F)$$.
 
 </div>
 
@@ -89,7 +93,7 @@ First, assume the first condition and consider the following diagram:
 
 Then we define the retraction $$r:E \rightarrow F$$ as $$\pr_1\circ u$$, and $$s:G \rightarrow E$$ as $$u^{-1}\circ\iota_2$$.
 
-Conversely, assume that the second condition holds. Then $$(r,p): E \rightarrow F\oplus G$$ becomes an isomorphism between the given extension and $$F \rightarrow F\oplus G \rightarrow G$$. Similarly, assume the third condition. Then since $$s(G)$$ is contained in the centralizer of $$i(F)$$, we can construct a morphism from $$F\oplus G$$ to $$E$$ by taking the weak direct product of $$F$$ and $$G$$.
+Conversely, assume that the second condition holds. Then $$(r,p): E \rightarrow F\oplus G$$ is an isomorphism between the given extension and $$F \rightarrow F\oplus G \rightarrow G$$. Similarly, assume the third condition. Then since $$s(G)$$ is contained in the centralizer of $$i(F)$$, we can construct a morphism from $$F\oplus G$$ to $$E$$ by taking the weak direct product of $$F$$ and $$G$$.
 
 </details>
 
@@ -103,7 +107,7 @@ If $$i(F)$$ is contained in the center $$C(E)$$ of $$E$$, then in the third cond
 
 ## Semidirect Products of Groups
 
-On the other hand, the reason that nontrivial extensions exist is that, as we saw above, for any normal subgroup $$N$$ of a group $$G$$, the formula
+On the other hand, the reason nontrivial extensions exist is that, as we saw above, for any normal subgroup $$N$$ of a group $$G$$, the formula
 
 $$G\cong (G/N)\oplus N$$
 
