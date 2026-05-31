@@ -1,5 +1,6 @@
 ---
 title: "Subspaces"
+description: "A subset of a vector space is defined as a subspace if it is closed under addition and scalar multiplication. The concept of linear combinations is also discussed."
 excerpt: "Subspaces of a vector space and linear combinations of vectors"
 
 categories: [Math / Linear Algebra]
@@ -15,12 +16,13 @@ date: 2022-07-29
 last_modified_at: 2022-07-29
 
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T21:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T21:30:04+00:00
 ---
 ## Subspaces
 
-Looking at [§Vector Spaces, ⁋Example 6](/en/math/linear_algebra/vector_spaces#ex6), we can see that a subset of a vector space often itself forms a vector space. Let us define this as follows.
+Looking at [§Vector Spaces, ⁋Example 6](/en/math/linear_algebra/vector_spaces#ex6), we see that a subset of a vector space often itself forms a vector space. Let us define this as follows.
 
 <div class="definition" markdown="1">
 
@@ -30,19 +32,19 @@ Looking at [§Vector Spaces, ⁋Example 6](/en/math/linear_algebra/vector_spaces
 
 By definition, $$C^k(I)$$ is a subspace of $$C(I)$$, and $$C(I)$$ is a subspace of $$\Fun(I,\mathbb{R})$$.
 
-To check whether an arbitrary subset $$W$$ of $$V$$ is a subspace using the definition directly, we would have to verify whether addition forms an abelian group, whether scalar multiplication satisfies all the conditions of [§Vector Spaces, ⁋Definition 1](/en/math/linear_algebra/vector_spaces#def1), and so on. However, since the addition and scalar multiplication to be defined on $$W$$ are inherited from $$V$$, there are several properties that we do not need to check separately.
+To check whether an arbitrary subset $$W$$ of $$V$$ is a subspace using the definition directly, we would have to verify whether addition forms an abelian group, whether scalar multiplication satisfies all the conditions of [§Vector Spaces, ⁋Definition 1](/en/math/linear_algebra/vector_spaces#def1), and so on. However, since the addition and scalar multiplication on $$W$$ are inherited from $$V$$, several properties need not be checked separately.
 
 For example, for arbitrary $$w_1,w_2\in W$$, we do not need to verify whether
 
 $$w_1+w_2=w_2+w_1$$
 
-holds. The two elements $$w_1,w_2$$ are elements of $$V$$ before they are elements of $$W$$, and the addition $$+$$ in $$W$$ is just the addition in $$V$$ restricted to $$W$$. Based on this, the properties we need to check are as follows.
+holds. The two elements $$w_1,w_2$$ are elements of $$V$$ as well as elements of $$W$$, and the addition $$+$$ in $$W$$ is just the addition in $$V$$ restricted to $$W$$. Based on this, the properties we need to check are as follows.
 
 1. We must separately check whether $$W$$ is closed under addition.
-2. Similarly, we must check whether $$W$$ has an identity element and inverses for addition. Of course $$V$$ contains $$0$$ and $$-w$$, but there is no guarantee that these lie in $$W$$.
+2. Similarly, we must check whether $$W$$ contains the identity element and additive inverses. Of course $$V$$ contains $$0$$ and $$-w$$, but there is no guarantee that these lie in $$W$$.
 3. Also, for any scalar $$\alpha\in\mathbb{K}$$ and $$w\in W$$, we must check whether $$\alpha w\in W$$.
 
-But we can simplify the conditions a little further. If $$W$$ is closed under scalar multiplication, then by [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2) and [Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3), the second condition can be omitted entirely. Since $$W$$ is closed under scalar multiplication, $$0w\in W$$ and $$(-1)w\in W$$ must hold, and these are $$0$$ and $$-w$$ respectively. Thus we have just proved the following proposition.
+But we can simplify the conditions further. If $$W$$ is closed under scalar multiplication, then by [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2) and [Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3), the second condition can be omitted entirely. Since $$W$$ is closed under scalar multiplication, $$0w\in W$$ and $$(-1)w\in W$$ must hold, and these are $$0$$ and $$-w$$ respectively. Thus we have just proved the following proposition.
 
 <div class="proposition" markdown="1">
 
@@ -50,11 +52,11 @@ But we can simplify the conditions a little further. If $$W$$ is closed under sc
 
 </div>
 
-However, to show that $$W$$ is not empty, showing that $$0\in W$$ is the easiest, so in practice there is little difference in utility between the three conditions presented earlier and the preceding proposition.
+However, to show that $$W$$ is nonempty, showing that $$0\in W$$ is the easiest, so in practice there is little difference in utility between the three conditions presented earlier and the preceding proposition.
 
 ## Linear Combinations
 
-Consider a $$\mathbb{K}$$-vector space $$V$$ and its subspace $$W$$. Since the sum of any two elements of $$W$$ is again an element of $$W$$, by induction finite sums are again elements of $$W$$. More generally, the following holds.
+Consider a $$\mathbb{K}$$-vector space $$V$$ and its subspace $$W$$. Since the sum of any two elements of $$W$$ is again an element of $$W$$, by induction a *finite* sum is again an element of $$W$$. More generally, the following holds.
 
 <div class="proposition" markdown="1">
 
@@ -126,7 +128,7 @@ $$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha
 
 It is not difficult to verify that these definitions give $$\mathbb{K}[\x]$$ the structure of a $$\mathbb{K}$$-vector space.
 
-Now we can verify that the set $$\mathbb{K}[\x]_\text{degree\scriptsize$\leq n$}$$ of polynomials of degree at most $$n$$ is a subspace of $$\mathbb{K}[\x]$$. On the other hand, the set of polynomials of *exactly* degree $$n$$ is not a subspace because it does not contain $$0$$, but if we adjoin $$0$$ it becomes a subspace.
+Now we can verify that the set $$\mathbb{K}[\x]_\text{degree\scriptsize$\leq n$}$$ of polynomials of degree at most $$n$$ is a subspace of $$\mathbb{K}[\x]$$. On the other hand, the set of polynomials of *exactly* degree $$n$$ is not a subspace because it does not contain $$0$$, but adjoining $$0$$ makes it a subspace.
 
 </div>
 

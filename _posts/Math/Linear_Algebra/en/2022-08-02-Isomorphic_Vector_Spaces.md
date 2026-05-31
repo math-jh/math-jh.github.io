@@ -1,5 +1,6 @@
 ---
 title: "Isomorphisms"
+description: "An isomorphism between vector spaces is defined as a bijective linear map that preserves structure, and it is shown that its inverse is also linear, proving that isomorphism is an equivalence relation."
 excerpt: "Equivalent vector spaces"
 
 categories: [Math / Linear Algebra]
@@ -15,12 +16,13 @@ date: 2022-08-02
 last_modified_at: 2022-08-01
 
 weight: 8
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-31T22:30:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T22:30:05+00:00
 ---
 In mathematics, after defining certain objects we usually proceed to group and classify them according to whether they are <em>the same</em>. For example, when dealing with sets, two sets $$A,B$$ of the same size are regarded as the same, which by definition means there exists a bijection between $$A$$ and $$B$$.
 
-Of course, we cannot simply carry this over to vector spaces. If we were to regard two vector spaces of the same set-theoretic size as the same, then by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Corollary 15](/en/math/set_theory/natural_numbers#cor15), all finite-dimensional vector spaces over an infinite field $$\mathbb{K}$$ would have to be regarded as the same. Moreover, since functions in general do not preserve the addition and scalar multiplication of a vector space, this is clearly inappropriate for studying vector spaces.
+Of course, we cannot simply carry this over to vector spaces. If we were to regard two vector spaces of the same set-theoretic size as the same, then by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Corollary 15](/en/math/set_theory/natural_numbers#cor15), all finite-dimensional vector spaces over an infinite field $$\mathbb{K}$$ would have to be regarded as identical. Moreover, since functions in general do not preserve the addition and scalar multiplication of a vector space, this is clearly unsuitable for studying vector spaces.
 
 ## Isomorphic Vector Spaces
 
@@ -70,7 +72,7 @@ We must show that the relation $$\cong$$ is reflexive, symmetric, and transitive
 
 </details>
 
-Although this proposition may seem obvious, it proves the less obvious part of the task of classifying all finite-dimensional $$\mathbb{K}$$-vector spaces.
+Although this proposition may seem obvious, it establishes the less obvious part of the classification of all finite-dimensional $$\mathbb{K}$$-vector spaces.
 
 <div class="proposition" markdown="1">
 
@@ -88,7 +90,7 @@ Of course the converse also holds, and therefore we see that the only invariant 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> Let two isomorphic $$\mathbb{K}$$-vector spaces $$V,W$$ and an isomorphism $$L:V\rightarrow W$$ be given. If $$\mathcal{B}$$ is a basis of $$V$$, then $$L(\mathcal{B})$$ is also a basis of $$V$$.
+<ins id="prop5">**Proposition 5**</ins> Let two isomorphic $$\mathbb{K}$$-vector spaces $$V,W$$ and an isomorphism $$L:V\rightarrow W$$ be given. If $$\mathcal{B}$$ is a basis of $$V$$, then $$L(\mathcal{B})$$ is also a basis of $$W$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -111,7 +113,7 @@ Meanwhile, for a given linear map $$L$$, the spaces $$\ker L$$ and $$\im L$$ mea
 
 </div>
 
-The following two statements are hardly worth giving new numbers.
+The following two statements are hardly worth numbering separately.
 
 1. $$L$$ is injective if and only if $$\nullity L=0$$.
 2. $$L$$ is surjective if and only if $$\rank L=\dim W$$.
@@ -153,7 +155,7 @@ Since $$\left\{x_1,x_2,\ldots,x_k,x_{k+1},\ldots,x_n\right\}$$ is linearly indep
 
 Also, this set spans $$\im L$$. Let any $$w\in \im L$$ be given. Then there exists $$v\in V$$ with $$L(v)=w$$. Writing $$v=\sum_{i=1}^n \alpha_ix_i$$, we have
 
-$$u=L\left(\sum_{i=1}^n\alpha_ix_i\right)=L\left(\sum_{i=1}^k\alpha_ix_i\right)+L\left(\sum_{i=k+1}^n\alpha_i x_i\right)=\sum_{i=k+1}^n\alpha_i L(x_i)$$
+$$w=L\left(\sum_{i=1}^n\alpha_ix_i\right)=L\left(\sum_{i=1}^k\alpha_ix_i\right)+L\left(\sum_{i=k+1}^n\alpha_i x_i\right)=\sum_{i=k+1}^n\alpha_i L(x_i)$$
 
 because $$\sum_{i=1}^k\alpha_ix_i\in\ker L$$.
 
