@@ -1,5 +1,6 @@
 ---
 title: "Resolutions"
+description: "This post defines projective and injective objects in an Abelian category, and explains the concepts of left and right resolutions, including projective and injective resolutions."
 excerpt: "Projective and injective resolutions in an abelian category"
 
 categories: [Math / Homological Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2024-11-01
 last_modified_at: 2024-11-01
 weight: 4
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T13:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T13:30:03+00:00
 ---
 ## Projective and Injective Resolutions
 
@@ -64,7 +66,7 @@ We also make the following definition.
 
 </div>
 
-A projective object in $$\mathcal{A}$$ is an injective object in $$\mathcal{A}^\op$$. Likewise, if $$\mathcal{A}$$ has enough projectives then $$\mathcal{A}^\op$$ has enough injectives. Moreover, a projective resolution of $$M$$ in $$\mathcal{A}$$ is the same as an injective resolution of $$M$$ in $$\mathcal{A}^\op$$. Therefore, it suffices to prove the following proposition only for projective resolutions.
+A projective object in $$\mathcal{A}$$ is an injective object in $$\mathcal{A}^\op$$. Likewise, if $$\mathcal{A}$$ has enough projectives then $$\mathcal{A}^\op$$ has enough injectives. Moreover, a projective resolution of $$M$$ in $$\mathcal{A}$$ coincides with an injective resolution of $$M$$ in $$\mathcal{A}^\op$$. Therefore, it suffices to prove the following proposition only for projective resolutions.
 
 <div class="proposition" markdown="1">
 
@@ -104,7 +106,7 @@ One of our goals in this post is to prove that every $$A$$-module always has a p
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-This is obvious by [\[Multilinear Algebra\] §Basis, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) and [\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Proposition 4](/en/math/multilinear_algebra/various_modules#prop4).
+This is obvious by [\[Multilinear Algebra\] §Bases, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) and [\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Proposition 4](/en/math/multilinear_algebra/various_modules#prop4).
 
 </details>
 
@@ -171,7 +173,7 @@ First, drawing the given situation as a diagram, we obtain the following.
 
 ![horseshoe-initial](/assets/images/Math/Homological_Algebra/Resolutions-9.png){:style="width:18.4em" class="invert" .align-center}
 
-Now from the condition that $$P_0''$$ is projective, we can define $$P_0'' \rightarrow A$$. On the other hand, $$P_0' \rightarrow A$$ is already given as the composite of $$i_A$$ and $$\epsilon'$$, so considering their direct sum we obtain $$\epsilon:P_0 \rightarrow A$$. Now from [§Diagram chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5) we obtain the following diagram
+Now from the condition that $$P_0''$$ is projective, we can define $$P_0'' \rightarrow A$$. On the other hand, $$P_0' \rightarrow A$$ is already given as the composite of $$i_A$$ and $$\epsilon'$$, so considering their direct sum we obtain $$\epsilon:P_0 \rightarrow A$$. Now from [§Diagram Chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5) we obtain the following diagram
 
 ![horseshoe-induction](/assets/images/Math/Homological_Algebra/Resolutions-10.png){:style="width:19.8em" class="invert" .align-center}
 
