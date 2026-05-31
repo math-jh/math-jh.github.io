@@ -1,5 +1,6 @@
 ---
 title: "System of Parameters"
+description: "The Krull dimension of a Noetherian local ring is defined as the number of elements in a system of parameters, and the existence and properties of such a system are discussed."
 excerpt: "The relationship between the system of parameters of a local ring and dimension"
 
 categories: [Math / Commutative Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-01-19
 last_modified_at: 2025-01-19
 weight: 17
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T01:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T01:00:04+00:00
 ---
 ## System of parameters
 
@@ -22,9 +24,7 @@ Combining [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimensi
 
 <div class="proposition" markdown="1">
 
-<ins id="cor1">**Corollary 1**</ins> Let $$(A, \mathfrak{m})$$ be a Noetherian local ring. Then $$\dim A$$ is the smallest $$d$$ for which the following condition holds:
-
-> There exist $$d$$ elements $$a_1,\ldots, a\in \mathfrak{m}$$ such that $$\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$$ for all sufficiently large $$n$$.
+<ins id="cor1">**Corollary 1**</ins> Let $$(A, \mathfrak{m})$$ be a Noetherian local ring. Then $$\dim A$$ is the smallest $$d$$ for which there exist $$d$$ elements $$a_1,\ldots, a_d\in \mathfrak{m}$$ such that $$\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$$ for all sufficiently large $$n$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -59,7 +59,7 @@ We now make the following definition.
 <ins id="prop-def3">**Proposition--Definition 3**</ins> Let $$(A,\mathfrak{m})$$ be a local Noetherian ring of Krull dimension $$d$$. Then for a family of elements $$a_1,\ldots, a_d$$ of $$A$$ and $$\mathfrak{a}=(a_1,\ldots, a_d)$$, the following are all equivalent.
 
 1. $$\mathfrak{m}$$ is minimal among prime ideals containing $$\mathfrak{a}$$.
-2. $$\mathfrak{m}=\sqrt{\mathfrak{a}}$$ holds.
+2. $$\mathfrak{m}=\sqrt{\mathfrak{a}}$$.
 3. Some power of $$\mathfrak{m}$$ is contained in $$\mathfrak{a}$$.
 4. $$\mathfrak{a}$$ is an $$\mathfrak{m}$$-primary ideal.
 
@@ -179,7 +179,7 @@ has finite length, $$(a,a_1,\ldots, a_d)$$ becomes a parameter ideal of $$M$$. T
 
 ## Flat Morphisms and Dimension
 
-By the definition of dimension, to compare the dimensions of $$A$$ and $$B$$ via a ring homomorphism $$\phi: A \rightarrow B$$, [§Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1) is essential. The following lemma is also used for a similar purpose, but in the opposite direction for producing prime ideals.
+By the definition of dimension, to compare the dimensions of $$A$$ and $$B$$ via a ring homomorphism $$\phi: A \rightarrow B$$, [§Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1) is essential. The following lemma is also used for a similar purpose, but produces prime ideals in the opposite direction.
 
 <div class="proposition" markdown="1">
 
@@ -199,7 +199,7 @@ Meanwhile, by [[Set Theory] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory
 
 </details>
 
-Keeping $$B/\mathfrak{p}_2B$$ as in the above proof, we see that when choosing $$\mathfrak{q}_2$$, it suffices to choose a minimal prime ideal among those contained in $$\mathfrak{q}_1$$ and containing $$\mathfrak{p}_2 B$$.
+Keeping $$B/\mathfrak{p}_2B$$ as in the above proof, we see that when choosing $$\mathfrak{q}_2$$, it suffices to take a minimal prime ideal among those contained in $$\mathfrak{q}_1$$ and containing $$\mathfrak{p}_2 B$$.
 
 Then the following holds.
 

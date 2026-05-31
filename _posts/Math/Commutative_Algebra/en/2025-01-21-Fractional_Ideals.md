@@ -1,5 +1,6 @@
 ---
 title: "Fractional Ideals"
+description: "We examine the definition of fractional ideals and their relationship to invertible modules in order to understand the properties of regular local rings. We also discuss the conditions under which a fractional ideal becomes an invertible module over a Noetherian ring."
 excerpt: "Fractional ideals, invertible modules, and the Picard group"
 
 categories: [Math / Commutative Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-01-21
 last_modified_at: 2025-01-24
 weight: 19
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T01:30:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T01:30:05+00:00
 ---
 In the next post we study regular local rings ([§Dimension, ⁋Definition 9](/en/math/commutative_algebra/Krull_dimension#def9)). Before that, we need to define a few concepts.
 
@@ -28,13 +30,13 @@ We first make the following definition.
 
 </div>
 
-For a prime ideal $$\mathfrak{p}$$ and a maximal ideal $$\mathfrak{m}$$ containing $$\mathfrak{p}$$, if $$A_\mathfrak{m}\cong M_\mathfrak{m}$$ then $$A_\mathfrak{p}\cong M_\mathfrak{p}$$, so it suffices to check the above condition only for maximal ideals.
+For a prime ideal $$\mathfrak{p}$$ and a maximal ideal $$\mathfrak{m}$$ containing $$\mathfrak{p}$$, if $$A_\mathfrak{m}\cong M_\mathfrak{m}$$ then $$A_\mathfrak{p}\cong M_\mathfrak{p}$$, so it suffices to verify the above condition only for maximal ideals.
 
 Now define $$M^\ast=\Hom_A(M,A)$$. Since $$A$$ is commutative, $$\Hom_A(M, A)$$ is also an $$A$$-module, and furthermore the trace map $$M^\ast\otimes M \rightarrow A$$ exists. ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6))
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> Let $$A$$ be a ring and let $$K$$ be its total ring of fractions. Then an $$A$$-submodule $$\mathfrak{A}$$ of $$K$$ is called a *fractional ideal* of $$A$$ if there exists a non-zero element $$a\in A$$ such that $$a \mathfrak{A}\subseteq A$$.
+<ins id="def2">**Definition 2**</ins> Let $$A$$ be a ring and let $$K$$ be its total ring of fractions. Then an $$A$$-submodule $$\mathfrak{A}$$ of $$K$$ is called a *fractional ideal* of $$A$$ if there exists a nonzero element $$a\in A$$ such that $$a \mathfrak{A}\subseteq A$$.
 
 </div>
 
@@ -105,7 +107,7 @@ and by the above intuition this can be thought of roughly as the collection of d
     which is injective because the elements of $$S$$ (i.e. the non-zerodivisors of $$A$$) are non-zerodivisors in $$A_\mathfrak{m}$$.  
     Now let a fractional ideal $$\mathfrak{A}$$ be given, and suppose $$\mathfrak{A}\cap A$$ consists only of zerodivisors. Since $$\mathfrak{A}$$ is a (finitely generated) fractional ideal, we can find a common denominator $$a$$ so that $$a \mathfrak{A}\subseteq A$$ is an ideal of $$A$$, and applying [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) we see that $$a\mathfrak{A}$$ is an ideal of $$A$$ consisting only of non-zerodivisors; hence it lies in the union of the associated prime ideals, and applying [§Associated Primes, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2) thereto we find that $$a\mathfrak{A}$$ is annihilated by some $$b\in A$$. Thus $$ab$$ annihilates $$\mathfrak{A}$$, and localizing at a prime ideal $$\mathfrak{p}$$ containing $$\ann(ab)$$ we see that $$M_\mathfrak{p}\not\cong A_\mathfrak{p}$$.
 3. Let $$M,N$$ be two invertible modules. Then by the second result we may regard them as fractional ideals inside $$K$$, and the maps given in the statement are defined in this way. Since the given morphisms can be shown to be isomorphisms through [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), we may assume from the outset that $$A$$ is local; then by the argument in the second result and the definition of an invertible module, both $$M$$ and $$N$$ are isomorphic to $$A$$. Now let $$s,t$$ be non-zerodivisors in $$K$$ generating $$M,N$$ respectively. The first morphism is an epimorphism from the start; moreover, viewing $$M\otimes_A N$$ as $$A\cong As\otimes_AAt$$, the map $$M\otimes N \rightarrow MN$$ sends $$1\otimes1$$ to $$st$$, and since $$st$$ is a non-zerodivisor this is also a monomorphism.
-  For the second morphism, first, by the second result we can choose a non-zerodivisor $$a\in A\cap M$$. Then for any non-zero $$t\in M^{-1}N$$ we have $$ta\neq 0$$, so $$u_t$$ is not the zero morphism; hence the morphism in the statement is a monomorphism. That it is an epimorphism follows because for any $$u\in \Hom_A(M,N)$$, writing $$u(x)=y$$ we have $$u=u_{y/x}$$. Setting $$N=A$$ in particular gives the last claim.
+  For the second morphism, first, by the second result we can choose a non-zerodivisor $$a\in A\cap M$$. Then for any nonzero $$t\in M^{-1}N$$ we have $$ta\neq 0$$, so $$u_t$$ is not the zero morphism; hence the morphism in the statement is a monomorphism. That it is an epimorphism follows because for any $$u\in \Hom_A(M,N)$$, writing $$u(x)=y$$ we have $$u=u_{y/x}$$. Setting $$N=A$$ in particular gives the last claim.
 4. First, if $$M$$ is invertible then by part 3 we may identify $$M^{-1}\otimes M \rightarrow M^{-1}M$$ with the trace map $$M^\ast\otimes M \rightarrow A$$. Conversely, if an arbitrary $$A$$-submodule $$M$$ of $$K$$ satisfies $$M^{-1}M=A$$, then just as above we may assume by localization that $$(A,\mathfrak{m})$$ is a local ring and show that $$M\cong A$$. But by the condition $$M^{-1}M=A$$, we can choose $$y\in M^{-1}$$ so that $$yM\not\subseteq \mathfrak{m}$$; then by the maximality of $$\mathfrak{m}$$ we must have $$yM=A$$, and from this we obtain the isomorphism $$y-$$ between $$M$$ and $$A$$.
 
 </details>
@@ -120,7 +122,7 @@ and by the above intuition this can be thought of roughly as the collection of d
 
 Let $$R$$ be a UFD and let $$I$$ be an invertible fractional ideal of $$R$$. For sufficiency we assume $$I \subseteq R$$ (otherwise choose a suitable $$s\in R$$ so that $$sI\subseteq R$$; then if $$I$$ is principal, so is $$sI$$).
 
-Since $$I$$ is invertible, $$I^{-1}I = R$$, and by [Definition 1](#def1) we have $$I_\mathfrak{p} \cong R_\mathfrak{p}$$ at every prime $$\mathfrak{p}$$. Therefore $$I$$ is **locally principal**: for any height 1 prime $$\mathfrak{p}$$, the localization $$R_\mathfrak{p}$$ is a DVR (since $$R$$ is a UFD, $$R_\mathfrak{p}$$ is a regular local ring of dimension 1), and in a DVR every non-zero fractional ideal is principal, so for a suitable $$v_\mathfrak{p}(I) \in \mathbb{Z}$$ we have $$I_\mathfrak{p} = (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)})$$. Here $$\pi_\mathfrak{p}$$ is a uniformizer of $$R_\mathfrak{p}$$ and $$v_\mathfrak{p}$$ is the normalized valuation of $$R_\mathfrak{p}$$. Since $$I \subseteq R$$, we have $$v_\mathfrak{p}(I) \ge 0$$.
+Since $$I$$ is invertible, $$I^{-1}I = R$$, and by [Definition 1](#def1) we have $$I_\mathfrak{p} \cong R_\mathfrak{p}$$ at every prime $$\mathfrak{p}$$. Therefore $$I$$ is **locally principal**: for any height 1 prime $$\mathfrak{p}$$, the localization $$R_\mathfrak{p}$$ is a DVR (since $$R$$ is a UFD, $$R_\mathfrak{p}$$ is a regular local ring of dimension 1), and in a DVR every nonzero fractional ideal is principal, so for a suitable $$v_\mathfrak{p}(I) \in \mathbb{Z}$$ we have $$I_\mathfrak{p} = (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)})$$. Here $$\pi_\mathfrak{p}$$ is a uniformizer of $$R_\mathfrak{p}$$ and $$v_\mathfrak{p}$$ is the normalized valuation of $$R_\mathfrak{p}$$. Since $$I \subseteq R$$, we have $$v_\mathfrak{p}(I) \ge 0$$.
 
 Only finitely many $$\mathfrak{p}$$ satisfy $$v_\mathfrak{p}(I) > 0$$ (since $$I$$ is finitely generated). Set $$a = \prod \pi_\mathfrak{p}^{v_\mathfrak{p}(I)}$$. Then
 
