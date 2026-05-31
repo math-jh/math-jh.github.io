@@ -1,5 +1,6 @@
 ---
 title: "Root Systems"
+description: "This post characterizes simple and semisimple Lie algebras through the properties of the Killing form defined on the adjoint representation, and covers the foundations of root systems."
 excerpt: "Root systems obtained from the weight decomposition of the adjoint representation"
 
 categories: [Math / Lie Theory]
@@ -13,20 +14,21 @@ sidebar:
 date: 2025-11-12
 last_modified_at: 2026-02-24
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T16:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T16:30:04+00:00
 ---
 ## Adjoint representation
 
-Every Lie group has a natural (finite-dimensional) representation $$\Ad: G \rightarrow \Aut(\mathfrak{g})$$. ([§Lie Groups, ⁋Definition 19](/en/math/lie_theory/Lie_groups#def19)) This is the differential at $$h=e$$ of the conjugation $$h\mapsto ghg^{-1}$$ defined by each $$g\in G$$, and if we regard both $$G$$ and $$\Aut(\mathfrak{g})$$ as Lie groups and differentiate this map, we obtain a representation of $$\mathfrak{g}$$
+Every Lie group carries a natural (finite-dimensional) representation $$\Ad: G \rightarrow \Aut(\mathfrak{g})$$. ([§Lie Groups, ⁋Definition 19](/en/math/lie_theory/Lie_groups#def19)) This is the differential at $$h=e$$ of the conjugation $$h\mapsto ghg^{-1}$$ defined by each $$g\in G$$, and if we regard both $$G$$ and $$\Aut(\mathfrak{g})$$ as Lie groups and differentiate this map, we obtain a representation of $$\mathfrak{g}$$
 
 $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
-and by [§Lie Groups, ⁋Theorem 15](/en/math/lie_theory/Lie_groups#thm15) we may essentially think that all the information contained in $$\Ad$$ is already encoded here. Since considering the Lie algebra of a vector space is the same as considering the space itself, we may regard $$\mathfrak{g}$$ as a representation space for itself, and in this case $$\ad$$ is given explicitly by
+and by [§Lie Groups, ⁋Theorem 15](/en/math/lie_theory/Lie_groups#thm15) we may essentially regard all the information encoded in $$\Ad$$ as already captured here. Since taking the Lie algebra of a vector space is the same as considering the space itself, we may view $$\mathfrak{g}$$ as a representation space for itself, and in this case $$\ad$$ is given explicitly by
 
 $$\ad(X)Y=[X,Y].$$
 
-What was important in using the results of representation theory was that every finite-dimensional representation is always unitary. The logic used to prove this result was that we can choose a $$G$$-invariant inner product on $$V$$; to be precise, since we are interested in orthogonal complements, it suffices to have a non-degenerate symmetric form. And there is a natural bilinear form on a Lie algebra.
+What was important in applying the results of representation theory was that every finite-dimensional representation is unitary. The argument used to prove this was that we can choose a $$G$$-invariant inner product on $$V$$; to be precise, since we are interested in orthogonal complements, it suffices to have a non-degenerate symmetric form. And there is a natural bilinear form on any Lie algebra.
 
 <div class="definition" markdown="1">
 
@@ -38,7 +40,7 @@ is called the *Killing form*.
 
 </div>
 
-That the Killing form is symmetric and $$\mathbb{C}$$-bilinear is obvious from the definition. Moreover, this Killing form is already invariant under the adjoint action of $$G$$ without any further manipulation. That is, the identity
+That the Killing form is symmetric and $$\mathbb{C}$$-bilinear is obvious from the definition. Moreover, the Killing form is already invariant under the adjoint action of $$G$$ without any further manipulation. That is, the identity
 
 $$K(\Ad_g(X), \Ad_g(Y))=K(X,Y)$$
 
@@ -46,11 +48,11 @@ holds, and differentiating this at $$g=e$$ in the direction of $$Z$$ yields the 
 
 $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+K(X,[Z,Y]).$$
 
-What remains is the condition for this to be non-degenerate.
+What remains is the condition for this form to be non-degenerate.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> A Lie algebra $$\mathfrak{g}$$ is called *simple* if $$\mathfrak{g}$$ is a non-abelian Lie algebra and the only ideals of $$\mathfrak{g}$$ are $$0$$ and itself. A Lie algebra that can be written as a direct sum of simple Lie algebras is called *semisimple*.
+<ins id="def2">**Definition 2**</ins> A Lie algebra $$\mathfrak{g}$$ is called *simple* if it is non-abelian and its only ideals are $$0$$ and itself. A Lie algebra that can be written as a direct sum of simple Lie algebras is called *semisimple*.
 
 </div>
 
@@ -68,11 +70,11 @@ Then the following holds.
 
 </div>
 
-We will skip the proof of this since it is not immediately important.
+We will skip the proof, as it is not immediately needed.
 
 ## Cartan subalgebra
 
-One of the most powerful tools in linear algebra was diagonalization, and in Lie groups we captured this through weight decomposition. ([§Torus Actions, ⁋Definition 4](/en/math/lie_theory/torus_action#def4)) The corresponding notion for Lie algebras is as follows.
+One of the most powerful tools in linear algebra was diagonalization, and in the theory of Lie groups we captured this through weight decomposition. ([§Torus Actions, ⁋Definition 4](/en/math/lie_theory/torus_action#def4)) The corresponding notion for Lie algebras is as follows.
 
 <div class="definition" markdown="1">
 
@@ -80,11 +82,11 @@ One of the most powerful tools in linear algebra was diagonalization, and in Lie
 
 </div>
 
-Since two diagonalizable operators $$A,B$$ are simultaneously diagonalizable if and only if they commute, by definition all elements of $$\mathfrak{h}$$ are simultaneously diagonalizable. Let us now decompose $$\mathfrak{g}$$ using the family of simultaneously diagonalizable operators $$\{H\in \mathfrak{h}\}$$. If a <em>finite</em> family of simultaneously diagonalizable operators $$A_1,\ldots, A_n$$ is given, decomposing the space into simultaneous eigenspaces takes the form
+Since two diagonalizable operators $$A,B$$ are simultaneously diagonalizable if and only if they commute, all elements of $$\mathfrak{h}$$ are simultaneously diagonalizable by definition. Let us now decompose $$\mathfrak{g}$$ using the family of simultaneously diagonalizable operators $$\{H\in \mathfrak{h}\}$$. If a <em>finite</em> family of simultaneously diagonalizable operators $$A_1,\ldots, A_n$$ is given, decomposing the space into simultaneous eigenspaces takes the form
 
 $$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v_\alpha\in V$ for all $i$}$$
 
-but in our present situation, since $$\mathfrak{h}$$ is a vector space, it is better to choose a linear functional $$\alpha: \mathfrak{h}\rightarrow \mathbb{C}$$ and let $$\alpha(H)$$ play the role of the eigenvalue for each $$H$$. Thus we define as follows.
+but in our present situation, since $$\mathfrak{h}$$ is a vector space, it is better to choose a linear functional $$\alpha: \mathfrak{h}\rightarrow \mathbb{C}$$ and let $$\alpha(H)$$ play the role of the eigenvalue for each $$H$$. Thus we make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -131,8 +133,8 @@ and let $$K(-,-)$$ be the Killing form on $$\mathfrak{g}$$. The following hold.
     
     $$0=K([H,X],Y)+K(X,[H,Y])=K(\alpha(H),X)+K(X,\beta(H)Y)=(\alpha+\beta)(H)K(X,Y).$$
 
-    If $$\alpha+\beta\neq 0$$, then for this identity to always hold we must have $$K(X,Y)=0$$ always.
-3. Since the Killing form is non-degenerate on $$\mathfrak{g}$$, for any given $$X\in \mathfrak{g}_\alpha$$ there exists $$Z\in \mathfrak{g}$$ such that $$K(X,Z)\neq 0$$. What we need to show is that we can choose $$Z\in \mathfrak{g}_{-\alpha}$$. This is obvious because if we decompose $$Z$$ according to the root decomposition, then by the second result the components corresponding to roots other than $$-\alpha$$ pair with $$X$$ to give $$0$$ anyway.
+    If $$\alpha+\beta\neq 0$$, then for this identity to hold for all $$H$$ we must have $$K(X,Y)=0$$.
+3. Since the Killing form is non-degenerate on $$\mathfrak{g}$$, for any given $$X\in \mathfrak{g}_\alpha$$ there exists $$Z\in \mathfrak{g}$$ such that $$K(X,Z)\neq 0$$. What we need to show is that we can choose $$Z\in \mathfrak{g}_{-\alpha}$$. This is clear because if we decompose $$Z$$ according to the root decomposition, then by the second result the components corresponding to roots other than $$-\alpha$$ pair trivially with $$X$$ anyway.
 
 </details>
 
@@ -156,9 +158,9 @@ Then by the commutation relations examined above,
 
 $$E\cdot V_\lambda\subset V_{\lambda+2},\qquad F\cdot V_\lambda\subset V_{\lambda-2}$$
 
-hold. For this reason we also call $$E$$ and $$F$$ the *raising operator* and *lowering operator*, respectively. On the other hand, since $$V$$ is finite-dimensional, considering the weight decomposition
+hold. For this reason we also call $$E$$ and $$F$$ the *raising operator* and *lowering operator*, respectively. On the other hand, since $$V$$ is finite-dimensional, in the weight decomposition
 
-$$V=\bigoplus_{\lambda} V_\lambda,$$
+$$V=\bigoplus_{\lambda} V_\lambda$$
 
 there exists $$\mu$$ such that $$V_\mu\neq 0$$ but $$V_{\mu+2}=0$$. Such a $$\mu$$ is called the *highest weight*, and an element of $$V_\mu$$ is called a *highest weight vector*. Then for a highest weight vector $$v$$ we know that the following two identities hold:
 
@@ -194,7 +196,7 @@ Since $$V$$ is finite-dimensional, there exists a smallest integer $$m$$ such th
 
 $$0=E\cdot v_{m+1}=(\mu-m)v_m$$
 
-and by the minimality of $$m$$ we see that $$\mu=m$$ must hold. That is, the highest weight must be a positive integer.
+and by the minimality of $$m$$ we see that $$\mu=m$$ must hold. That is, the highest weight must be a non-negative integer.
 
 <div class="definition" markdown="1">
 
@@ -265,7 +267,7 @@ Since the Killing form defined on $$\mathfrak{g}$$ is also non-degenerate on $$\
 
 $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -).$$
 
-Then $$\Phi\subseteq \mathfrak{h}^\ast$$ is a spanning set of $$\mathfrak{h}^\ast$$. If there were an element of $$\mathfrak{h}^\ast$$ not expressible as a linear combination of elements of $$\Phi$$, the corresponding element of $$\mathfrak{h}$$ would have to satisfy $$\alpha(H)$$ for all $$\alpha\in H$$. Now for any root space $$\mathfrak{g}_\alpha$$, $$H$$ acts by
+Then $$\Phi\subseteq \mathfrak{h}^\ast$$ is a spanning set of $$\mathfrak{h}^\ast$$. If there were an element of $$\mathfrak{h}^\ast$$ not expressible as a linear combination of elements of $$\Phi$$, the corresponding element of $$\mathfrak{h}$$ would have to satisfy $$\alpha(H)=0$$ for all $$\alpha\in \Phi$$. Now for any root space $$\mathfrak{g}_\alpha$$, $$H$$ acts by
 
 $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
@@ -365,7 +367,7 @@ Now let us examine the following examples.
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**Example 13**</ins> First consider the standard Euclidean space $$\mathbb{R}^{n+1}$$ and the subspace of $$\mathbb{R}^{n+1}$$
+<ins id="ex13">**Example 13**</ins> First consider the standard Euclidean space $$\mathbb{R}^{n+1}$$ and the subspace
 
 $$V_n=\left\{(x_1,\ldots, x_{n+1}\mid x_1+\cdots+x_{n+1}=0\right\}.$$
 

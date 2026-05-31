@@ -1,5 +1,6 @@
 ---
 title: "Lie Groups"
+description: "A Lie group is a group whose multiplication and inversion operations are both smooth, defined on a smooth manifold. Examples include vector spaces, tori, and general linear groups."
 excerpt: "Definition and properties of Lie groups"
 
 categories: [Math / Lie Theory]
@@ -13,10 +14,11 @@ sidebar:
 date: 2023-01-23
 last_modified_at: 2025-11-06
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T16:00:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T16:00:05+00:00
 ---
-In this category of posts, we cover Lie groups and Lie algebras. The definition of a Lie group is very simple.
+In this series of posts, we cover Lie groups and Lie algebras. The definition of a Lie group is very simple.
 
 <div class="definition" markdown="1">
 
@@ -28,9 +30,9 @@ is $$C^\infty$$.
 
 </div>
 
-That is, a Lie group is itself a group, and at the same time a smooth manifold equipped with a differentiable structure that makes the two operations defining the group—multiplication and inversion—smooth. More generally, a topological space in which the group operations are continuous is called a *topological group*, but we do not need this generalization right now.
+That is, a Lie group is simultaneously a group and a smooth manifold equipped with a differentiable structure that makes the two operations defining the group—multiplication and inversion—smooth. More generally, a topological space in which the group operations are continuous is called a *topological group*, but we do not need this generalization for the moment.
 
-A morphism between two Lie groups $$G, H$$ is then a smooth map $$f:G \rightarrow H$$ that is simultaneously a group homomorphism. These data define the category $$\LieGrp$$, and the notion of isomorphism here is obvious.
+A morphism between two Lie groups $$G, H$$ is then a smooth map $$f:G \rightarrow H$$ that is also a group homomorphism. These data define the category $$\LieGrp$$, and the notion of isomorphism here is obvious.
 
 Here are some examples of Lie groups.
 
@@ -54,7 +56,7 @@ More generally, for any Lie groups $$G, H$$, the product $$G\times H$$ is also e
 
 $$T^n=(S^1)^n$$
 
-is a Lie group. For example, $$T^2$$ behaves like a vector space with one point serving as the identity and the great circles passing through that point in the equatorial direction and in the perpendicular direction as *axes*, which arises from the isomorphism
+is a Lie group. For example, $$T^2$$ behaves like a vector space with one point serving as the identity and the great circles passing through that point in the equatorial direction and in the perpendicular direction as *axes*; this arises from the isomorphism
 
 $$\mathbb{R}/\mathbb{Z}\rightarrow S^1;\quad t\mapsto e^{2\pi i t}$$
 
@@ -64,17 +66,17 @@ A slightly more complicated and widely used example than the two above is the fo
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**Example 4**</ins> The space $$\Mat_{n\times k}(\mathbb{R})$$ of arbitrary $$n\times k$$ matrices is an $$nk$$-dimensional vector space and at the same time a smooth manifold. Now, considering specifically the space of $$n\times n$$ matrices, the smooth function $$\det:\Mat_{n\times n}(\mathbb{R})\rightarrow \mathbb{R}$$ defined on these matrices determines the following open submanifold:
+<ins id="ex4">**Example 4**</ins> The space $$\Mat_{n\times k}(\mathbb{R})$$ of arbitrary $$n\times k$$ matrices is an $$nk$$-dimensional vector space and simultaneously a smooth manifold. Now, considering specifically the space of $$n\times n$$ matrices, the smooth function $$\det:\Mat_{n\times n}(\mathbb{R})\rightarrow \mathbb{R}$$ defined on these matrices determines the following open submanifold:
 
 $$\GL(n; \mathbb{R}) =\left\{A\in \Mat_{n\times n}(\mathbb{R})\mid \det(A)\neq 0\right\}$$
 
-On this, matrix multiplication and inversion are well defined; matrix multiplication is merely a polynomial function, and inversion is merely a rational function whose denominator does not vanish. That is, $$\GL(n; \mathbb{R})$$ is a Lie group under multiplication, and since the original manifold $$\Mat_{n\times n}(\mathbb{R})$$ is $$n^2$$-dimensional, so is $$\GL(n; \mathbb{R})$$.
+On this, matrix multiplication and inversion are well defined; matrix multiplication is merely a polynomial function, and inversion is merely a rational function whose denominator does not vanish. Thus $$\GL(n; \mathbb{R})$$ is a Lie group under multiplication, and since the original manifold $$\Mat_{n\times n}(\mathbb{R})$$ is $$n^2$$-dimensional, so is $$\GL(n; \mathbb{R})$$.
 
-Now, considering again $$\det:\GL(n; \mathbb{R})\rightarrow \mathbb{R}^\times$$, we can define the subset $$\SL(n; \mathbb{R})$$ of $$\GL(n;\mathbb{R})$$ through the formula
+Now, considering again $$\det:\GL(n; \mathbb{R})\rightarrow \mathbb{R}^\times$$, we can define the subset $$\SL(n; \mathbb{R})$$ of $$\GL(n;\mathbb{R})$$ by the formula
 
 $$\SL(n;\mathbb{R})=\left\{A\in \GL(n; \mathbb{R})\mid \det(A)=1\right\}$$
 
-This function is a polynomial in the entries of the matrix, hence smooth, and a short calculation shows that it is regular at every point. From [[Differential Manifolds] §Implicit Function Theorem, ⁋Corollary 4](/en/math/manifold/implicit_function_theorem#cor4), $$\SL(n;\mathbb{R})$$ becomes an $$n^2-1$$-dimensional manifold. The multiplication and inversion of $$\GL(n;\mathbb{R})$$ also restrict well to $$\SL(n;\mathbb{R})$$, and therefore $$\SL(n; \mathbb{R})$$ is also a Lie group.
+This function is a polynomial in the entries of the matrix, hence smooth, and a short calculation shows that it is regular at every point. By [[Differential Manifolds] §Implicit Function Theorem, ⁋Corollary 4](/en/math/manifold/implicit_function_theorem#cor4), $$\SL(n;\mathbb{R})$$ becomes an $$n^2-1$$-dimensional manifold. The multiplication and inversion of $$\GL(n;\mathbb{R})$$ also restrict well to $$\SL(n;\mathbb{R})$$, and therefore $$\SL(n; \mathbb{R})$$ is also a Lie group.
 
 In a similar way, one can verify that classical matrix groups such as $$\Omat(n)$$, $$\SO(n)$$, $$\Umat(n)$$, $$\SU(n)$$, etc., also carry Lie group structures. More generally, [Theorem 5](#thm5) below shows that any closed subgroup of $$\GL(n;\mathbb{R})$$ is automatically a Lie group.
 
@@ -90,7 +92,7 @@ On the other hand, even without knowing what the determinant looks like, informa
 
 ## Lie Algebras
 
-As mentioned above, the concept of a Lie group itself is quite simple. Then the interesting properties of Lie groups concern how they interact with each other. One of the simplest results is that for a Lie group, it is easy to find nontrivial diffeomorphisms from the group to itself.
+As mentioned above, the concept of a Lie group itself is quite simple. The interesting properties of Lie groups then concern how they interact with one another. One of the simplest results is that for a Lie group, it is easy to find nontrivial diffeomorphisms from the group to itself.
 
 <div class="definition" markdown="1">
 
@@ -181,7 +183,7 @@ Then the following proposition holds.
 
 The Lie algebra $$\mathfrak{g}$$ obtained through the above process is called the *Lie algebra of $$G$$*. In general, when a Lie group is written as $$G$$, it is customary to denote its Lie algebra by the corresponding Fraktur lowercase $$\mathfrak{g}$$.
 
-As a special example, consider the group $$\Diff(M)$$ of diffeomorphisms from a manifold $$M$$ to itself; this can be thought of as an infinite-dimensional Lie group. The tangent space at the identity $$\id_M$$ of this Lie group is a suitable equivalence class of curves in $$\Diff(M)$$ passing through $$\id_M$$, and thinking of [[Differential Manifolds] §Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6), this information is exactly contained in $$\mathfrak{X}(M)$$. In this way, the Lie algebra $$\mathfrak{g}$$ of a Lie group $$G$$ defines the infinitesimal action when $$G$$ acts on itself.
+As a special example, consider the group $$\Diff(M)$$ of diffeomorphisms from a manifold $$M$$ to itself; this can be thought of as an infinite-dimensional Lie group. The tangent space at the identity $$\id_M$$ of this Lie group is a suitable equivalence class of curves in $$\Diff(M)$$ passing through $$\id_M$$, and by [[Differential Manifolds] §Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6), this information is exactly contained in $$\mathfrak{X}(M)$$. In this way, the Lie algebra $$\mathfrak{g}$$ of a Lie group $$G$$ defines the infinitesimal action when $$G$$ acts on itself.
 
 <div class="example" markdown="1">
 
@@ -189,7 +191,7 @@ As a special example, consider the group $$\Diff(M)$$ of diffeomorphisms from a 
 
 </div>
 
-However, to find the Lie algebra of $$\SL(n;\mathbb{R})$$ requires a slightly more complicated calculation. Specifically, we need to know the differential of the determinant map $$\GL(n; \mathbb{R})\rightarrow \mathbb{R}$$.
+However, finding the Lie algebra of $$\SL(n;\mathbb{R})$$ requires a slightly more complicated calculation. Specifically, we need to know the differential of the determinant map $$\GL(n; \mathbb{R})\rightarrow \mathbb{R}$$.
 
 ## Matrix Exponential
 
