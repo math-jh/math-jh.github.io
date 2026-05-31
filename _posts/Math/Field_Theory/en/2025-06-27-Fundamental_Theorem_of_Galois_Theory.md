@@ -1,5 +1,6 @@
 ---
 title: "The Fundamental Theorem of Galois Theory"
+description: "We prove the fundamental theorem of Galois theory, which establishes a correspondence between intermediate fields of a Galois extension and closed subgroups of its Galois group."
 excerpt: "The Galois correspondence between subgroups and intermediate fields"
 
 categories: [Math / Field Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-06-27
 last_modified_at: 2025-06-27
 weight: 10
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T08:30:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T08:30:05+00:00
 ---
 We can now finally prove the fundamental theorem of Galois theory.
 
