@@ -1,5 +1,6 @@
 ---
 title: "Vector Spaces"
+description: "A vector space generalizes the notion of coordinate space by adding scalar multiplication to an abelian group. This post covers fundamental properties and notation conventions, then proves additional properties derived from scalar multiplication."
 excerpt: "The definition of vector spaces, simple properties, and examples"
 
 categories: [Math / Linear Algebra]
@@ -15,8 +16,9 @@ date: 2022-07-28
 last_modified_at: 2022-07-28
 
 weight: 2
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-31T21:00:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T21:00:05+00:00
 ---
 As we mentioned in the introduction to the previous post, the *vector space* is the central object of study in linear algebra, generalizing the coordinate spaces learned in high school. To prepare for this, we defined abelian groups and fields in the last post.
 
