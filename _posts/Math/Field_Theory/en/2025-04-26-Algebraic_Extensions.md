@@ -1,5 +1,6 @@
 ---
 title: "Algebraic Extensions"
+description: "We cover the definition of field extensions and the perspective of interpreting a field extension as an associative algebra."
 excerpt: "The definition and degree of algebraic extensions of fields"
 
 categories: [Math / Field Theory]
@@ -13,12 +14,13 @@ sidebar:
 date: 2025-04-26
 last_modified_at: 2025-04-26
 weight: 2
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-05-31T04:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T04:00:04+00:00
 ---
 ## Field Extensions
 
-We saw in [§Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2) that a morphism between fields is either injective or the zero map. In this post we consider the former case.
+We saw in [§Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2) that a morphism between fields is either injective or the zero map. In this post we examine the former case.
 
 We call an injective field morphism a *field extension*. Then, for a fixed field $$\mathbb{K}\in\Field$$, the under category of $$\mathbb{K}$$ becomes the category of extensions of $$\mathbb{K}$$.
 
@@ -28,13 +30,13 @@ By definition, given two extensions $$\mathbb{K} \rightarrow \mathbb{L}_1$$ and 
 
 ![morphism_of_field_extensions](/assets/images/Math/Field_Theory/Algebraic_Extensions-1.png){:style="width:10em" class="invert" .align-center}
 
-becomes a morphism between them. Here, since both $$\mathbb{L}_1$$ and $$\mathbb{L}_2$$ are fields, the morphism $$\mathbb{L}_1 \rightarrow \mathbb{L}_2$$ must be injective. Subject to the caution above, in this case we call $$\mathbb{L}_1$$ a *subextension* of $$\mathbb{L}_2$$.
+is a morphism between them. Here, since both $$\mathbb{L}_1$$ and $$\mathbb{L}_2$$ are fields, the morphism $$\mathbb{L}_1 \rightarrow \mathbb{L}_2$$ must be injective. Subject to the caution above, in this case we call $$\mathbb{L}_1$$ a *subextension* of $$\mathbb{L}_2$$.
 
 Thus any field extension $$\mathbb{L}/\mathbb{K}$$ can be regarded as an associative unital $$\mathbb{K}$$-algebra (which is itself a field).
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> We consider $$\mathbb{K}$$-algebras and homomorphisms between them in order to treat situations similar to the above; henceforth in our posts the category $$\Alg{\mathbb{K}}$$ will always be the category of unital associative $$\mathbb{K}$$-algebras. That is, by a $$\mathbb{K}$$-algebra we shall always mean a unital associative $$\mathbb{K}$$-algebra, and by a $$\mathbb{K}$$-algebra homomorphism we shall mean a unital $$\mathbb{K}$$-algebra homomorpihsm.
+<ins id="rmk1">**Remark**</ins> We consider $$\mathbb{K}$$-algebras and homomorphisms between them in order to treat situations similar to the above; henceforth in our posts the category $$\Alg{\mathbb{K}}$$ will always be the category of unital associative $$\mathbb{K}$$-algebras. That is, by a $$\mathbb{K}$$-algebra we shall always mean a unital associative $$\mathbb{K}$$-algebra, and by a $$\mathbb{K}$$-algebra homomorphism we shall always mean a unital $$\mathbb{K}$$-algebra homomorpihsm.
 
 </div>
 
@@ -64,17 +66,17 @@ More generally, for a field $$\mathbb{K}$$ and any $$\mathbb{K}$$-algebra $$E$$,
 <details class="proof">
 <summary>Proof</summary>
 
-By assumption $$E$$ is a finite-dimensional $$\mathbb{K}$$-algebra, and since $$x$$ is a non-zerodivisor in $$E$$, the following function
+By assumption $$E$$ is a finite-dimensional $$\mathbb{K}$$-algebra, and since $$x$$ is a non-zerodivisor in $$E$$, the map
 
 $$E \rightarrow E;\qquad y\mapsto xy$$
 
-is injective. Since $$E$$ is finite-dimensional, the above linear map being injective is equivalent to it being surjective, and hence there exists $$y\in E$$ such that $$xy=1$$, from which we obtain the desired result.
+is injective. Since $$E$$ is finite-dimensional, for this linear map injectivity is equivalent to surjectivity; hence there exists $$y\in E$$ such that $$xy=1$$, yielding the desired result.
 
 </details>
 
 In particular, if a finite-dimensional $$\mathbb{K}$$-algebra $$E$$ is an integral domain, then $$E$$ is necessarily a field.
 
-Meanwhile, for any ring $$A$$, we have denoted by $$A[\x]$$ the polynomial ring in the variable $$\x$$ with coefficients in $$A$$, which can be thought of as the smallest algebra containing $$A$$ and the variable $$\x$$. In a similar way, to adjoin an element $$\x$$ to a field $$\mathbb{K}$$, we must also adjoin its inverses this time.
+Meanwhile, for any ring $$A$$, we have denoted by $$A[\x]$$ the polynomial ring in the variable $$\x$$ with coefficients in $$A$$, which can be thought of as the smallest algebra containing $$A$$ and the variable $$\x$$. Similarly, to adjoin an element $$\x$$ to a field $$\mathbb{K}$$, we must also adjoin its inverses.
 
 <div class="definition" markdown="1">
 
@@ -104,7 +106,7 @@ Meanwhile, to obtain the field $$\mathbb{K}(A)$$ of [Definition 4](#def4), one c
 
 </div>
 
-If there exists a finite set $$A$$ such that $$\mathbb{L}=\mathbb{K}(A)$$, we call the extension $$\mathbb{L}/\mathbb{K}$$ a *finite extension*. Then in particular a finite degree field extension is a finite extension, because a basis of $$\mathbb{L}$$ as a $$\mathbb{K}$$-vector space will serve as a generator of $$\mathbb{L}$$ as a field.
+If there exists a finite set $$A$$ such that $$\mathbb{L}=\mathbb{K}(A)$$, we call the extension $$\mathbb{L}/\mathbb{K}$$ a *finite extension*. Then in particular a finite degree field extension is a finite extension, because a basis of $$\mathbb{L}$$ as a $$\mathbb{K}$$-vector space will serve as a set of generators of $$\mathbb{L}$$ as a field.
 
 Now let two $$\mathbb{K}$$-extensions $$\mathbb{L}_1/\mathbb{K}$$, $$\mathbb{L}_2/\mathbb{L}$$ be given. Then we can consider the smallest extension containing both $$\mathbb{L}_1$$ and $$\mathbb{L}_2$$.
 
