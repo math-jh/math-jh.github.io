@@ -1,5 +1,6 @@
 ---
 title: "Separable Extensions"
+description: "This post defines the notion of separable field extensions based on the properties of étale algebras, and discusses the differential characterization of étale algebras through lemmas in algebraically closed fields."
 excerpt: "Characterization of separable extensions through étale algebras"
 
 categories: [Math / Field Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-05-15
 last_modified_at: 2025-05-15
 weight: 6
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T06:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T06:30:04+00:00
 ---
 ## Properties of Étale Algebras
 

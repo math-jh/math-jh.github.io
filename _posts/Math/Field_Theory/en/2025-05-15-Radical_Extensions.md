@@ -1,5 +1,6 @@
 ---
 title: "Radical Extensions"
+description: "This post introduces the basic ideas of Galois theory through the example of quadratic extension fields. It covers the process of defining the Galois group as the action that permutes the roots of polynomials in well-behaved field extensions."
 excerpt: "The definition of radical extensions and their role in Galois theory"
 
 categories: [Math / Field Theory]
@@ -13,18 +14,19 @@ sidebar:
 date: 2025-05-15
 last_modified_at: 2025-05-15
 weight: 4
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T05:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T05:30:03+00:00
 ---
 Let us look at the broad theme of Galois theory we will study through a very simple example. Consider the degree $$4$$ extension $$\mathbb{Q}(\sqrt{2}, \sqrt{3})$$ of $$\mathbb{Q}$$. The newly adjoined elements $$\sqrt{2}$$ and $$\sqrt{3}$$ arise from the minimal polynomials with rational coefficients
 
 $$\x^2-2,\qquad \x^2-3$$
 
-However, if we look at each of these polynomials, they each have two roots $$\pm \sqrt{2}$$, $$\pm\sqrt{3}$$, and there is no algebraic way to distinguish these roots within $$\mathbb{Q}$$. Therefore, if we consider the action that interchanges these roots (or equivalently, the $$\mathbb{Q}$$-automorphisms of $$\mathbb{Q}(\sqrt{2},\sqrt{3})$$), that is, if we consider the permutation group $$S_2\times S_2$$, this is a subgroup of $$S_4$$.
+However, each of these polynomials has two roots $$\pm \sqrt{2}$$ and $$\pm\sqrt{3}$$, and there is no algebraic way to distinguish these roots over $$\mathbb{Q}$$. Therefore, if we consider the action that interchanges these roots—or equivalently, the $$\mathbb{Q}$$-automorphisms of $$\mathbb{Q}(\sqrt{2},\sqrt{3})$$—that is, if we consider the permutation group $$S_2\times S_2$$, this is a subgroup of $$S_4$$.
 
 In this way, whenever a polynomial is given we can define an appropriate Galois group, and the philosophy of Galois theory is that studying these groups allows us to classify extensions of $$\mathbb{Q}$$.
 
-However, thinking along these lines, if a minimal polynomial has a repeated root, defining a permutation action becomes quite awkward. This is a false alarm over $$\mathbb{Q}$$, but in some cases such a thing can actually happen.
+However, if we pursue this philosophy, defining a permutation action becomes quite awkward when a minimal polynomial has a repeated root. This is a false alarm over $$\mathbb{Q}$$, but in some cases such a thing can actually happen.
 
 <div class="remark" markdown="1">
 
