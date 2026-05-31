@@ -16,12 +16,13 @@ date: 2021-10-16
 last_modified_at: 2022-08-07
 
 weight: 11
-translated_at: 2026-05-30T04:13:26+00:00
+translated_at: 2026-05-31T20:00:06+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T20:00:06+00:00
 ---
-In the previous post, we saw that for two $$\mathbb{K}$$-vector spaces $$V,W$$ of dimensions $$n$$ and $$m$$ respectively, $$\Hom(V,W)$$ is an $$mn$$-dimensional $$\mathbb{K}$$-vector space. Also, the space of $$m\times n$$ matrices $$\Mat_{m\times n}(\mathbb{K})$$ is an $$mn$$-dimensional $$\mathbb{K}$$-vector space as well. Then from [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4), we know that these two vector spaces are isomorphic.
+In the previous post, we saw that for two $$\mathbb{K}$$-vector spaces $$V,W$$ of dimensions $$n$$ and $$m$$ respectively, $$\Hom(V,W)$$ is an $$mn$$-dimensional $$\mathbb{K}$$-vector space. The space $$\Mat_{m\times n}(\mathbb{K})$$ of $$m\times n$$ matrices is also an $$mn$$-dimensional $$\mathbb{K}$$-vector space. Thus, by [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4), these two vector spaces are isomorphic.
 
-The fundamental theorem of linear algebra that we will prove in this post shows not only that they are isomorphic simply because they are vector spaces of the same dimension, but that there exists a *natural* isomorphism between them, so that they are in fact the same space.
+The fundamental theorem of linear algebra that we prove in this post shows not only that they are isomorphic merely because they have the same dimension, but that a *natural* isomorphism exists between them, so that they are in fact the same space.
 
 ## Fundamental Theorem: Euclidean Spaces
 
@@ -37,7 +38,7 @@ In particular, if $$V=\mathbb{K}^n$$, $$W=\mathbb{K}^m$$, and each is equipped w
 
 $$\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}\quad\mapsto\quad\begin{pmatrix}\sum_{i=1}^n\alpha_{1i}v_i\\\sum_{i=1}^n\alpha_{2i}v_i\\\vdots\\\sum_{i=1}^n\alpha_{mi}v_i\end{pmatrix}$$
 
-But the right-hand side is exactly the same as the matrix-vector product
+But the right-hand side is exactly the matrix-vector product
 
 $$\begin{pmatrix}\alpha_{11}&\alpha_{12}&\cdots&\alpha_{1n}\\\alpha_{21}&\alpha_{22}&\cdots&\alpha_{2n}\\\vdots&\vdots&\ddots&\vdots\\\alpha_{m1}&\alpha_{m2}&\cdots&\alpha_{mn}\end{pmatrix}\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}\tag{2}$$
 
@@ -61,7 +62,7 @@ $$\{\text{linear maps from $\mathbb{K}^n$ to $\mathbb{K}^m$}\}\longleftrightarro
   
 More precisely, the maps $$L\mapsto [L]^{\mathcal{E}_n}_{\mathcal{E}_m}$$ and $$A\mapsto L_A$$ (the definition from [Example 1](#ex1)) are bijections that are inverses of each other.
 
-But since the set on the left is just $$\Hom(\mathbb{K}^n, \mathbb{K}^m)$$, we can check whether this correspondence is a bijective linear map, that is, an isomorphism. The answer is yes, and together with [Theorem 3](#thm3) below, we call this result the fundamental theorem of linear algebra.
+Since the set on the left is precisely $$\Hom(\mathbb{K}^n, \mathbb{K}^m)$$, we can ask whether this correspondence is a bijective linear map, that is, an isomorphism. The answer is yes, and together with [Theorem 3](#thm3) below, we call this result the fundamental theorem of linear algebra.
 
 <div class="proposition" markdown="1">
 
@@ -125,7 +126,7 @@ The fundamental theorem we proved above applies only to Euclidean spaces, but wi
 
 ![FTLA](/assets/images/Math/Linear_Algebra/Fundamental_Theorem_of_Linear_Algebra-1.png){:style="width:14em" class="invert" .align-center} 
 
-For any finite-dimensional $$\mathbb{K}$$-vector space $$V$$ and a basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$ defined on it, the *coordinate representation* is the following isomorphism
+For any finite-dimensional $$\mathbb{K}$$-vector space $$V$$ and a basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$, the *coordinate representation* is the following isomorphism
 
 $$v=\sum_{i=1}^n v_ix_i\mapsto [v]_\mathcal{B}=\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}\in\mathbb{K}^n$$
 

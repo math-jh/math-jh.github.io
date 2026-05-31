@@ -1,5 +1,6 @@
 ---
 title: "Linear Maps"
+description: "Defines linear maps as functions between vector spaces that preserve addition and scalar multiplication, and covers their composition and basic properties."
 excerpt: "The definition and examples of linear maps"
 
 categories: [Math / Linear Algebra]
@@ -15,14 +16,15 @@ date: 2021-10-13
 last_modified_at: 2022-08-01
 
 weight: 7
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T19:00:06+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T19:00:06+00:00
 ---
-In this post, we define functions between vector spaces, that is, *linear maps*.
+In this post, we define functions between vector spaces, namely *linear maps*.
 
 ## Linear Maps
 
-Since a vector space is essentially a set, a function between two vector spaces $$V,W$$ exists simply as a function between sets. However, unlike an ordinary set, a vector space has an addition of elements and a scalar multiplication by elements of $$\mathbb{K}$$ defined on it, so we are only interested in those functions between vector spaces (as sets) that preserve these operations.
+Since a vector space is at its core a set, a function between two vector spaces $$V,W$$ exists simply as a function between sets. However, unlike an ordinary set, a vector space comes equipped with addition of elements and scalar multiplication by elements of $$\mathbb{K}$$, so we are only interested in those functions between vector spaces (as sets) that preserve these operations.
 
 <div class="definition" markdown="1">
 
@@ -47,7 +49,7 @@ In the special case where $$V=W$$, we call these *linear operators*. The followi
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since a linear map preserves scalar multiplication, the first and second claims follow respectively from [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2) and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3). Now, using the fact that a linear map preserves addition of vectors and the second claim, we have
+Since a linear map preserves scalar multiplication, the first and second claims follow respectively from [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2) and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3). Now, using the fact that a linear map preserves vector addition together with the second claim, we have
 
 $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
@@ -57,7 +59,7 @@ so the third claim also holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**Proposition 3**</ins> For two $$\mathbb{K}$$-vector spaces $$V,W$$ and a linear map $$L:V\rightarrow W$$, and scalars $$\alpha_1,\ldots,\alpha_n$$ and vectors $$v_1,\ldots, v_n$$ in $$V$$,
+<ins id="prop3">**Proposition 3**</ins> For two $$\mathbb{K}$$-vector spaces $$V,W$$, a linear map $$L:V\rightarrow W$$, scalars $$\alpha_1,\ldots,\alpha_n$$, and vectors $$v_1,\ldots, v_n$$ in $$V$$,
 
 $$L\left(\sum_{i=1}^k\alpha_i v_i\right)=\sum_{i=1}^kL(\alpha_iv_i)$$
 
@@ -81,7 +83,7 @@ Just as the composition of functions is a function, the composition of linear ma
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-For any $$\alpha\in\mathbb{K}$$, $$u\in U$$,
+For any $$\alpha\in\mathbb{K}$$ and $$u\in U$$,
 
 $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(u)))=\alpha(L_2\circ L_1)(u)$$
 
@@ -97,11 +99,11 @@ Now let us define the following.
 <ins id="def5">**Definition 5**</ins> For two $$\mathbb{K}$$-vector spaces $$V,W$$ and a linear map $$L:V\rightarrow W$$,
 
 1. if $$v_1=v_2$$ whenever $$L(v_1)=L(v_2)$$, then $$L$$ is said to be *injective*.
-2. if for every $$w\in W$$ there exists $$v\in L$$ satisfying $$L(v)=w$$, then $$L$$ is said to be *surjective*. 
+2. if for every $$w\in W$$ there exists $$v\in V$$ satisfying $$L(v)=w$$, then $$L$$ is said to be *surjective*. 
 
 </div>
 
-In general, the definitions above are almost the only tools available when dealing with injective or surjective functions. However, when the objects under consideration are not mere sets but are equipped with some operations, as in the present situation, algebraic tools can also be used.
+In general, the definitions above are almost the only tools available when dealing with injective or surjective functions. However, when the objects under consideration are not mere sets but are equipped with some operations, as in the present situation, algebraic tools can also be brought to bear.
 
 <div class="definition" markdown="1">
 
@@ -125,7 +127,7 @@ The following can be checked without difficulty.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, $$\ker L$$ is a subspace of $$V$$. For any $$\alpha\in\mathbb{K}$$, $$v\in\ker L$$,
+First, $$\ker L$$ is a subspace of $$V$$. For any $$\alpha\in\mathbb{K}$$ and $$v\in\ker L$$,
 
 $$L(\alpha v)=\alpha L(v)=\alpha\cdot 0=0$$
 
