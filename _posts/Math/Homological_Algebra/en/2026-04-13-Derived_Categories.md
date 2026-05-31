@@ -1,5 +1,6 @@
 ---
 title: "Derived Categories"
+description: "We discuss the structure of the derived category, which is defined by formally inverting quasi-isomorphisms and identifying chain homotopic maps in the homotopy category."
 excerpt: "Construction of derived categories via chain complexes and quasi-isomorphisms"
 
 categories: [Math / Homological Algebra]
@@ -13,16 +14,17 @@ sidebar:
 date: 2026-04-13
 last_modified_at: 2026-04-13
 weight: 8
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-05-31T15:30:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-05-31T15:30:05+00:00
 ---
-In [§Derived Functors](/en/math/homological_algebra/derived_functors) we saw how to address the issue when a functor is not exact. Specifically, when given a left (resp. right) exact functor $$F$$, we chose an injective (resp. projective) resolution of an object $$A$$ and took the cohomology (resp. homology) of that resolution to define the right (resp. left) derived functor.
+In [§Derived Functors](/en/math/homological_algebra/derived_functors) we saw how to address the issue when a functor is not exact. Specifically, given a left (resp. right) exact functor $$F$$, we chose an injective (resp. projective) resolution of an object $$A$$ and took the cohomology (resp. homology) of that resolution to define the right (resp. left) derived functor.
 
-What deserves attention is that while the choice of injective or projective resolution does not affect the (co)homology level, at the concrete chain complex level these choices are not natural. Now we refine the language to conceptually remedy this. Specifically, we take chain complexes as our objects and regard quasi-isomorphic chain complexes as identical from the outset, thereby resolving this issue. That is, the category $$\Ch(\mathcal{A})$$ of chain complexes in $$\mathcal{A}$$, rather than the abelian category $$\mathcal{A}$$ itself, becomes our primary object of study.
+What deserves attention is that while the choice of injective or projective resolution does not affect the (co)homology, at the level of concrete chain complexes these choices are not natural. We now refine the framework conceptually. Specifically, we take chain complexes as our objects and regard quasi-isomorphic chain complexes as identical from the outset, thereby resolving this issue. That is, the category $$\Ch(\mathcal{A})$$ of chain complexes in $$\mathcal{A}$$, rather than the abelian category $$\mathcal{A}$$ itself, becomes our primary object of study.
 
 ## Definition of the Derived Category
 
-However, $$\Ch(\mathcal{A})$$ itself is not our ultimate object of interest. As explained above, we must regard all quasi-isomorphisms in $$\Ch(\mathcal{A})$$ as identical, so we also need to consider a quotient with respect to them. Moreover, since chain maps that are chain homotopic are already identified, we make the following definition.
+However, $$\Ch(\mathcal{A})$$ itself is not our ultimate object of interest. As explained above, we must regard all quasi-isomorphisms in $$\Ch(\mathcal{A})$$ as identical, so we must also take the corresponding quotient. Moreover, since chain maps that are chain homotopic are already identified, we make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -34,7 +36,7 @@ $$\Hom_{K(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}(A^\bulle
 
 </div>
 
-We can verify that $$K(\mathcal{A})$$ is an additive category. On the other hand, we already observed in [§The Long Exact Sequence, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4) that a quasi-isomorphism is generally not an isomorphism in $$K(\mathcal{A})$$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly introduce inverses for quasi-isomorphisms.
+We can verify that $$K(\mathcal{A})$$ is an additive category. On the other hand, we already observed in [§The Long Exact Sequence, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4) that a quasi-isomorphism is generally not an isomorphism in $$K(\mathcal{A})$$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly adjoin inverses for quasi-isomorphisms.
 
 <div class="definition" markdown="1">
 
@@ -48,9 +50,9 @@ More concretely, when describing morphisms in $$D(\mathcal{A})$$ we often use ro
 
 $$X\overset{s}{\longleftarrow} X'\overset{f}{\longrightarrow}Y$$
 
-where $$s$$ is a quasi-isomorphism and $$f$$ is a chain map. In other words, inside $$D(\mathcal{A})$$, a map from $$X$$ to $$Y$$ is not an actual map but rather a chain map (up to chain homotopy, precisely) from some $$X'$$ belonging to the quasi-isomorphism class of $$X$$ to $$Y$$. In this process we adjoin $$s^{-1}$$, which may not exist as an actual chain map, thereby producing the "localization" analogue described above.
+where $$s$$ is a quasi-isomorphism and $$f$$ is a chain map. In other words, inside $$D(\mathcal{A})$$, a map from $$X$$ to $$Y$$ is not an actual map but rather a chain map (precisely, up to chain homotopy) from some $$X'$$ in the quasi-isomorphism class of $$X$$ to $$Y$$. In this process we adjoin $$s^{-1}$$, which may not exist as an actual chain map, thereby producing the "localization" analogue described above.
 
-From this perspective, we can also examine which roofs define equivalent ones. In the localization setup this is expressed by an equivalence of the form
+From this perspective, we can also examine when two roofs define equivalent ones. In the localization setup this is expressed by an equivalence of the form
 
 $$\frac{a}{b}=\frac{ca}{cb}$$
 
@@ -66,7 +68,7 @@ such that
 
 $$su=th,\qquad fu=gh$$
 
-holds and $$su=th$$ is a quasi-isomorphism. In a similar way one can define the composition of two roofs (on the level of roof diagrams this corresponds to finding a common roof), and thus one can fully understand the morphisms in $$D(\mathcal{A})$$.
+hold and $$su=th$$ is a quasi-isomorphism. In a similar way one can define the composition of two roofs (on the level of roof diagrams this corresponds to finding a common roof), and thus one can fully understand the morphisms in $$D(\mathcal{A})$$.
 
 To see how this language furnishes a good framework, let an object $$A$$ of $$\mathcal{A}$$ be given. Then we consider the chain complex
 
@@ -88,15 +90,15 @@ On the other hand, since injective and projective resolutions point in opposite 
 
 The range of indices in which a given complex has non-zero (co)homology is often called its *amplitude*. As mentioned above, $$D^+(\mathcal{A})$$ is the natural setting for working with injective resolutions, and $$D^-(\mathcal{A})$$ is natural for projective resolutions. In most applications the bounded derived category $$D^b(\mathcal{A})$$ is the main stage.
 
-We also make the following definition formal.
+We also formally make the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> The *shift functor* $$[n]: D(\mathcal{A}) \rightarrow D(\mathcal{A})$$ on $$D(\mathcal{A})$$ shifts a complex $$A^\bullet$$ by $$n$$ places. Specifically, $$(A[n])^i = A^{i+n}$$, and the differential map is defined by $$(d_{A[n]})^i = (-1)^n d_A^{i+n}$$.
+<ins id="def4">**Definition 4**</ins> The *shift functor* $$[n]: D(\mathcal{A}) \rightarrow D(\mathcal{A})$$ on $$D(\mathcal{A})$$ shifts a complex $$A^\bullet$$ by $$n$$ places. Specifically, $$(A[n])^i = A^{i+n}$$, and the differential is defined by $$(d_{A[n]})^i = (-1)^n d_A^{i+n}$$.
 
 </div>
 
-The sign convention for the differential has already been explained after [§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5). However, the changed sign does not affect the (co)homology at all, so for example we have
+The sign convention for the differential has already been explained after [§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5). However, the sign change does not affect the (co)homology at all, so for example we have
 
 $$H^i(A[n]) = H^{i+n}(A)$$
 
