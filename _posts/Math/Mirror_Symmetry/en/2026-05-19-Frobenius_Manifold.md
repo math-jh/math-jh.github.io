@@ -1,5 +1,6 @@
 ---
 title: "Frobenius Manifolds"
+description: "Starting from the definition of a Frobenius algebra, this post explores the notion of Frobenius manifolds, which carry a Frobenius algebra structure at each point, examines the WDVV equations, and discusses connections to mirror symmetry, quantum cohomology, and Jacobi rings."
 excerpt: "Frobenius manifolds and the WDVV equation"
 
 categories: [Math / Mirror Symmetry]
@@ -14,14 +15,15 @@ header:
 date: 2026-05-19
 last_modified_at: 2026-05-19
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T12:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T12:30:04+00:00
 ---
 In [§Overview of Mirror Symmetry](/en/math/mirror_symmetry/overview) we saw that the mirror symmetry of a toric Fano variety $$X_\Sigma$$ is summarized by an isomorphism
 
 $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 
-between the Jacobi ring and quantum cohomology. However, as we also saw in that post, quantum cohomology carries more structure than what this ring isomorphism captures, because the product itself deforms as the Novikov parameter $$q$$ varies. The structure that encodes this deformation is Frobenius; in this post we first review the definition of a finite-dimensional Frobenius algebra, and then examine Dubrovin's notion of a Frobenius manifold and the WDVV equation.
+between the Jacobi ring and quantum cohomology. However, as we also observed in that post, quantum cohomology carries more structure than this ring isomorphism captures, because the product itself deforms as the Novikov parameter $$q$$ varies. The structure encoding this deformation is Frobenius; in this post we first review the definition of a finite-dimensional Frobenius algebra, then examine Dubrovin's notion of a Frobenius manifold and the WDVV equation in turn.
 
 ## Frobenius Algebras
 
@@ -29,7 +31,7 @@ Intuitively, a Frobenius manifold is a manifold whose tangent space at each poin
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let $$A$$ be a finite-dimensional commutative, associative $$\mathbb{C}$$-algebra equipped with a non-degenerate symmetric bilinear form $$\eta: A \otimes A \to \mathbb{C}$$. If for all elements $$x,y,z\in A$$ the equality
+<ins id="def1">**Definition 1**</ins> Let $$A$$ be a finite-dimensional commutative, associative $$\mathbb{C}$$-algebra equipped with a non-degenerate symmetric bilinear form $$\eta: A \otimes A \to \mathbb{C}$$. If for all elements $$x,y,z\in A$$ the identity
 
 $$\eta(x \cdot y,z) = \eta(x,y \cdot z)$$
 
@@ -37,7 +39,7 @@ holds, then the pair $$(A, \eta)$$ is called a *Frobenius algebra*.
 
 </div>
 
-This condition means that the multiplication $$\cdot : A \otimes A \to A$$ on $$A$$ and the bilinear form $$\eta$$ are compatible, defining a trilinear form $$c(x,y,z) := \eta(x \cdot y,z)$$ that is symmetric in all three arguments. Indeed, commutativity gives
+This condition means that the multiplication $$\cdot : A \otimes A \to A$$ and the bilinear form $$\eta$$ are compatible, defining a trilinear form $$c(x,y,z) := \eta(x \cdot y,z)$$ that is symmetric in all three arguments. Indeed, commutativity gives
 
 $$c(x,y,z) = \eta(x \cdot y,z) = \eta(y \cdot x,z) = c(y,x,z)$$
 
@@ -45,7 +47,7 @@ and the Frobenius condition yields
 
 $$c(x,y,z) = \eta(x,y \cdot z) = \eta(y \cdot z, x) = c(y,z,x).$$
 
-Hence $$c$$ is completely symmetric in the three variables, and this trilinear form encodes all the information of the Frobenius structure.
+Hence $$c$$ is completely symmetric in its three variables, and this trilinear form encodes all the information of the Frobenius structure.
 
 <div class="example" markdown="1">
 
@@ -100,7 +102,7 @@ $$\Jac(f)=\bigoplus_{p\in \Crit(f)}\mathbb{C},$$
 
 and with respect to this basis the residue pairing is diagonalized as $$\operatorname{diag}(1/\det \Hess_p(f))$$ in the critical-point basis.
 
-As a special example, consider the Hori–Vafa superpotential of $$\mathbb{P}^1$$ seen in [§Overview of Mirror Symmetry, ⁋Example 5 ($$\mathbb{P}^1$$ case)](/en/math/mirror_symmetry/overview#ex5):
+As a special example, consider the Hori–Vafa superpotential of $$\mathbb{P}^1$$ seen in [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5):
 
 $$W_q = \x + \frac{q}{\x}.$$
 
@@ -124,7 +126,7 @@ $$\eta(1, 1) = \frac{1}{2\sqrt{q}} + \frac{1}{-2\sqrt{q}} = 0, \qquad \eta(1, \x
 
 so the matrix representation of $$\eta$$ in this basis is $$\begin{pmatrix}0&1\\1&0\end{pmatrix}$$. This exactly coincides with the classical Poincaré pairing of $$\mathbb{P}^1$$, showing that the ring isomorphism $$\Jac(W_q) \cong QH^\ast(\mathbb{P}^1)$$ was in fact a Frobenius algebra isomorphism.
 
-In the same way, consider the Hori–Vafa superpotential of $$\mathbb{P}^2$$ seen in [§Overview of Mirror Symmetry, ⁋Example 6 ($$\mathbb{P}^2$$ case)](/en/math/mirror_symmetry/overview#ex6):
+In the same way, consider the Hori–Vafa superpotential of $$\mathbb{P}^2$$ seen in [§Overview of Mirror Symmetry, ⁋Example 6](/en/math/mirror_symmetry/overview#ex6):
 
 $$W_q = \z_1 + \z_2 + \frac{q}{\z_1 \z_2}.$$
 
@@ -166,15 +168,15 @@ In the previous section we defined Frobenius algebras and verified that they upg
 
 $$\Jac(W_q)\cong QH^\ast(X)$$
 
-has still not been stated in its full strength: the naturality of mirror symmetry lies in the fact that this isomorphism possesses a certain naturality. That is, this isomorphism defines a family of isomorphisms that deform smoothly as $$q$$ varies, and to realize this we must first consider the situation in which a Frobenius algebra is parametrized by a specific variable ($$q$$).
+has still not been stated in its full strength: the power of mirror symmetry lies in the fact that this isomorphism possesses a certain naturality. That is, it defines a family of isomorphisms that deform smoothly as $$q$$ varies, and to realize this we must first consider the situation in which a Frobenius algebra is parametrized by a specific variable ($$q$$).
 
-For this purpose we define the notion of a Frobenius manifold. Of course a Frobenius manifold is a manifold whose tangent space at each point is a Frobenius algebra, but that is not the whole story; naturally this structure must move smoothly along the base manifold.
+To this end we define the notion of a Frobenius manifold. A Frobenius manifold is, of course, a manifold whose tangent space at each point is a Frobenius algebra, but that is not the whole story; this structure must also vary smoothly over the base manifold.
 
 First, for the tangent bundle $$TM$$ over a Frobenius manifold $$M$$, since each fiber of $$TM$$ must be a Frobenius algebra, at each point $$p\in M$$ the space $$T_pM$$ needs a multiplication $$\circ$$ as an algebra, a unit element $$e$$ for this multiplication, and the Frobenius algebra pairing $$\eta$$. For these to constitute a smooth structure, $$\circ$$ must vary smoothly with $$p$$, i.e., $$\circ_p:T_pM\otimes T_pM\rightarrow T_pM$$, and $$\eta$$ must be a smooth non-degenerate bilinear form. Moreover, the unit must be a (smooth) section of $$TM$$, i.e., a vector field.
 
 In differential geometry it is a connection that allows us to compare different tangent spaces. ([[Riemannian Geometry] §Connections, ⁋Definition 1](/en/math/riemannian_geometry/connection#def1)) Since every pseudo-Riemannian manifold $$M$$ always admits a compatible Levi-Civita connection $$\nabla$$ ([[Riemannian Geometry] §Levi-Civita Connection, ⁋Theorem 4](/en/math/riemannian_geometry/Levi-Civita_connection#thm4)), it suffices to use this.
 
-Moreover, given any connection $$\nabla$$, there exists *parallel transport* along a curve $$\gamma$$ on $$M$$ joining the starting point $$x_0$$ to the endpoint $$x_1$$. ([[Riemannian Geometry] §Levi-Civita Connection, ⁋Definition 7](/en/math/riemannian_geometry/Levi-Civita_connection#def7)) To deform a Frobenius algebra as we vary the point of the manifold, we must use this parallel transport; if the deformation depended on the curve used to move from one point to another, this would be unsatisfactory. ([[Riemannian Geometry] §Riemann Curvature, ⁋Example 1](/en/math/riemannian_geometry/curvature#ex1)) Hence we wish this $$\nabla$$ to be *flat*. ([[Riemannian Geometry] §Riemann Curvature, ⁋Definition 6](/en/math/riemannian_geometry/curvature#def6))
+Moreover, given any connection $$\nabla$$, there exists *parallel transport* along a curve $$\gamma$$ on $$M$$ joining the starting point $$x_0$$ to the endpoint $$x_1$$. ([[Riemannian Geometry] §Levi-Civita Connection, ⁋Definition 7](/en/math/riemannian_geometry/Levi-Civita_connection#def7)) To deform a Frobenius algebra as we vary the point of the manifold, we must use this parallel transport; if the deformation depended on the curve used to move from one point to another, this would be unsatisfactory. ([[Riemannian Geometry] §Riemann Curvature, ⁋Example 1](/en/math/riemannian_geometry/curvature#ex1)) Hence we require this $$\nabla$$ to be *flat*. ([[Riemannian Geometry] §Riemann Curvature, ⁋Definition 6](/en/math/riemannian_geometry/curvature#def6))
 
 Finally, since $$QH^\ast(X)$$ already carries a grading, additional data are needed to reflect this. Recall that the grading on $$QH^\ast(X)$$ was obtained by adding to the classical cohomology grading $$H^\ast(X)$$ the grading coming from the Novikov ring. That is, writing $$QH^\ast(X) = H^\ast(X) \otimes_\mathbb{C} \Lambda$$, the degree of any generator $$T_\alpha \otimes q^\beta$$ was given by $$\deg(T_\alpha \otimes q^\beta) = p_\alpha + 2\, c_1 \cdot \beta$$. ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 2](/en/math/symplectic_geometry/quantum_cohomology#def2))
 
@@ -347,7 +349,7 @@ The Gromov–Witten potential of $$\mathbb{P}^1$$ is now given by
 
 $$F(t^0, t^1) = \frac{1}{2}(t^0)^2 t^1 + e^{t^1}.$$ ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12))
 
-Here the first term is the contribution from the classical cup product, and the second term can be thought of as the contribution $$\langle H, H, H\rangle_{0,3,1} = 1$$ from the degree-$$1$$ rational curve of [§Overview of Mirror Symmetry, ⁋Example 5 ($$\mathbb{P}^1$$ case)](/en/math/mirror_symmetry/overview#ex5), accumulated exponentially along the $$H^2$$ direction coordinate $$t^1$$ (via the Euler vector field). The metric was already computed in [Example 4](#ex4), and computing the third partial derivatives of $$F$$ from the above formula gives
+Here the first term is the contribution from the classical cup product, and the second term can be thought of as the contribution $$\langle H, H, H\rangle_{0,3,1} = 1$$ from the degree-$$1$$ rational curve of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5), accumulated exponentially along the $$H^2$$ direction coordinate $$t^1$$ (via the Euler vector field). The metric was already computed in [Example 4](#ex4), and computing the third partial derivatives of $$F$$ from the above formula gives
 
 $$\partial_{t^0}^3 F = 0,\qquad \partial_{t^0}^2\partial_{t^1} F = 1,\qquad \partial_{t^0}\partial_{t^1}^2 F = 0,\qquad \partial_{t^1}^3 F = e^{t^1}.$$
 
@@ -377,7 +379,7 @@ $$\Lie_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 
 
 so $$\Lie_E(\circ) = \circ$$.
 
-Now setting the Novikov variable to $$q = e^{t^1}$$, the second equation becomes $$\partial_{t^1} \circ \partial_{t^1} = qe$$, which translates back into cohomology language as $$H \star H = q \cdot 1$$, recovering the small quantum ring of [§Overview of Mirror Symmetry, ⁋Example 5 ($$\mathbb{P}^1$$ case)](/en/math/mirror_symmetry/overview#ex5). Moreover, this isomorphism is now parametrized by the variation of $$q=e^{t^1}$$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
+Now setting the Novikov variable to $$q = e^{t^1}$$, the second equation becomes $$\partial_{t^1} \circ \partial_{t^1} = qe$$, which translates back into cohomology language as $$H \star H = q \cdot 1$$, recovering the small quantum ring of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5). Moreover, this isomorphism is now parametrized by the variation of $$q=e^{t^1}$$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
 
 </div>
 
@@ -387,10 +389,6 @@ Thus a Frobenius manifold provides the stage on which the ring structure of quan
 
 **References**
 
-**[Dub]** B. Dubrovin, *Geometry of $$2$$D topological field theories*, Integrable systems and quantum groups (Montecatini Terme, 1993), Lecture Notes in Math. **1620**, Springer, 1996, 120--348.
+**[CK]** D. A. Cox, S. Katz, *Mirror Symmetry and Algebraic Geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.
 
-**[Her]** C. Hertling, *Frobenius Manifolds and Moduli Spaces for Singularities*, Cambridge Tracts in Mathematics **151**, Cambridge University Press, 2002.
-
-**[Man]** Yu. I. Manin, *Frobenius Manifolds, Quantum Cohomology, and Moduli Spaces*, American Mathematical Society Colloquium Publications **47**, AMS, 1999.
-
-**[HM]** C. Hertling, Yu. Manin, *Weak Frobenius manifolds*, Internat. Math. Res. Notices **1999**, no. 6, 277--286.
+**[MS]** K. Hori, S. Katz, A. Klemm, R. Pandharipande, R. Thomas, C. Vafa, R. Vakil, E. Zaslow, *Mirror Symmetry*, Clay Mathematics Monographs **1**, AMS, 2003.
