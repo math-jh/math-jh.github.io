@@ -1,5 +1,6 @@
 ---
 title: "Hom and the Tensor Product"
+description: "We examine the behavior of Hom and tensor products over split exact sequences, and cover the fundamental properties of Hom and tensor product operations for modules over a commutative ring."
 excerpt: "Adjunction and exactness of the Hom functor and the tensor product"
 
 categories: [Math / Multilinear Algebra]
@@ -13,14 +14,15 @@ sidebar:
 date: 2024-08-30
 last_modified_at: 2024-09-23
 weight: 5
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T16:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T16:00:04+00:00
 ---
 In this post we take a closer look at $$\Hom$$ and the tensor product.
 
 ## Hom functor
 
-Previously we saw that $$\Hom_{\lMod{A}}(-,N)$$ and $$\Hom_\lMod{A}(M,-)$$ are left exact functors, and we called the modules $$M$$ and $$N$$ that make them exact functors *projective* and *injective* modules, respectively. The following two propositions go in a somewhat different direction, showing that any *splitting* exact sequence remains an exact sequence after applying $$\Hom$$.
+Previously we saw that $$\Hom_{\lMod{A}}(-,N)$$ and $$\Hom_\lMod{A}(M,-)$$ are left exact functors, and we called the modules $$M$$ and $$N$$ that make them exact functors *projective* and *injective* modules, respectively. The following two propositions go in a somewhat different direction, showing that any *splitting* exact sequence remains exact after applying $$\Hom$$.
 
 <div class="proposition" markdown="1">
 
@@ -32,7 +34,7 @@ and any $$A$$-module $$K$$, the induced sequence
 
 $$0 \rightarrow \Hom_\lMod{A}(N,K) \rightarrow\Hom_\lMod{A}(L,K) \rightarrow\Hom_\lMod{A}(M,K) \rightarrow 0$$
 
-is a splitting exact sequence. Conversely, if the above sequence is exact for any $$K$$, then the original exact sequence is a splitting exact sequence.
+is a splitting exact sequence. Conversely, if the above sequence is exact for every $$K$$, then the original exact sequence is a splitting exact sequence.
 
 </div>
 <details class="proof" markdown="1">
@@ -48,7 +50,7 @@ For the converse, set $$K=M$$ and consider the short exact sequence
 
 $$0 \rightarrow \Hom_\lMod{A}(N,M) \rightarrow \Hom_\lMod{A}(L,M) \rightarrow\Hom_\lMod{A}(M,M) \rightarrow 0$$
 
-Then there exists a suitable $$f\in\Hom_\lMod{A}(L,M)$$ such that $$f\circ u=\id_M$$, so applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10) again completes the proof.
+Then there exists a suitable $$f\in\Hom_\lMod{A}(L,M)$$ with $$f\circ u=\id_M$$, so applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10) again completes the proof.
 
 </details>
 
@@ -64,7 +66,7 @@ and any $$A$$-module $$K$$, the induced sequence
 
 $$0 \rightarrow \Hom_\lMod{A}(K,M) \rightarrow\Hom_\lMod{A}(K,L) \rightarrow\Hom_\lMod{A}(K,N) \rightarrow 0$$
 
-is a splitting exact sequence. Conversely, if the above sequence is exact for any $$K$$, then the original exact sequence is a splitting exact sequence.
+is a splitting exact sequence. Conversely, if the above sequence is exact for every $$K$$, then the original exact sequence is a splitting exact sequence.
 
 </div>
 
@@ -84,13 +86,13 @@ First, for any $$u\in\Hom_{\rMod{A}}(M,L)$$ and any $$y\in N$$, the formula
 
 $$x\mapsto u(x)\otimes_Ay$$
 
-defines an $$A$$-linear map from $$M$$ to $$L\otimes_AN$$, and then we can see that the above function sending $$(u,y)\in\Hom_{\rMod{A}}(M,L)\times N$$ to an element of $$\Hom_{\rMod{A}}(M, L\otimes_AB)$$ is $$A$$-balanced. Therefore the above $$A$$-linear map $$\nu$$ is induced.
+defines an $$A$$-linear map from $$M$$ to $$L\otimes_AN$$. Then one checks that the above function sending $$(u,y)\in\Hom_{\rMod{A}}(M,L)\times N$$ to an element of $$\Hom_{\rMod{A}}(M, L\otimes_AB)$$ is $$A$$-balanced. Therefore it induces the $$A$$-linear map $$\nu$$.
 
 <div class="proposition" markdown="1">
 
 <ins id="prop3">**Proposition 3**</ins> For $$\nu$$ defined as above, the following hold.
 
-1. If $$N$$ is a projective $$A$$-module, then $$\nu$$ is injective. Also, if $$N$$ is finitely generated projective, then $$\nu$$ is bijective.
+1. If $$N$$ is a projective $$A$$-module, then $$\nu$$ is injective. Moreover, if $$N$$ is finitely generated projective, then $$\nu$$ is bijective.
 2. If $$M$$ is a finitely generated projective $$A$$-module, then $$\nu$$ is bijective.
 
 </div>
@@ -127,7 +129,7 @@ We still assume that $$A$$ is a commutative ring. Then for any $$A$$-module $$M$
 
 $$M^\ast\times M \rightarrow A;\qquad (\xi,x) \mapsto \langle x, \xi\rangle$$
 
-is $$A$$-balanced. Therefore this function induces the following $$A$$-linear map
+is $$A$$-balanced. Therefore this function satisfies the following $$A$$-linear map
 
 $$\tau: M^\ast\otimes_A M \rightarrow A$$
 
@@ -135,11 +137,11 @@ Now if $$M$$ is a finitely generated projective $$A$$-module, then by [Corollary
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> The map defined as above is called the *trace map* and is denoted by $$\tr$$.
+<ins id="def6">**Definition 6**</ins> The map defined above is called the *trace map* and is denoted by $$\tr$$.
 
 </div>
 
-Let an arbitrary $$u\in\End_\rMod{A}(M)$$ be given. After identifying $$\End_\rMod{A}(M)$$ with $$M^\ast\otimes_AM$$, we can choose finitely many $$\xi_i\in M^\ast, x_i\in M$$ and write this as the sum
+Let an arbitrary $$u\in\End_\rMod{A}(M)$$ be given. After identifying $$\End_\rMod{A}(M)$$ with $$M^\ast\otimes_AM$$, we can choose finitely many $$\xi_i\in M^\ast, x_i\in M$$ and write it as the sum
 
 $$\sum_i \xi_i\otimes_A x_i\tag{1}$$
 
