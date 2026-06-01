@@ -1,5 +1,6 @@
 ---
 title: "Inner Product Spaces"
+description: "We define inner products and norms on vector spaces, prove the Cauchy-Schwarz inequality, and examine the properties of the norm induced by an inner product."
 excerpt: "Properties of inner products defined over the real numbers"
 
 categories: [Math / Linear Algebra]
@@ -15,8 +16,9 @@ date: 2022-10-02
 last_modified_at: 2022-10-02
 
 weight: 117
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T02:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T02:30:04+00:00
 ---
 ## Inner Products and Norms
 
@@ -28,7 +30,7 @@ We now consider a more special case.
 
 </div>
 
-Looking at the definition, we see that the condition $$\langle v,v\rangle\geq 0$$ in the definition of an inner product requires the field $$\mathbb{K}$$ to have an ordering, so it is not well defined for a general field $$\mathbb{K}$$. Therefore, we develop the theory only over $$\mathbb{R}$$, where an ordering is well defined, and in the next post we use this to define inner products over $$\mathbb{C}$$ as well. To avoid confusion, from now on we write an inner product space defined over the real numbers as an $$\mathbb{R}$$-inner product space.
+Examining the definition, we see that the condition $$\langle v,v\rangle\geq 0$$ in the definition of an inner product requires the field $$\mathbb{K}$$ to possess an ordering, so it is not well defined for a general field $$\mathbb{K}$$. Therefore, we develop the theory only over $$\mathbb{R}$$, where an ordering is well defined, and in the next post we use this to define inner products over $$\mathbb{C}$$ as well. To avoid confusion, from now on we write an inner product space defined over the real numbers as an $$\mathbb{R}$$-inner product space.
 
 A representative example of an inner product is the *dot product* defined on $$\mathbb{R}^n$$:
 
@@ -44,19 +46,19 @@ Meanwhile, if an inner product is defined on an $$\mathbb{R}$$-vector space, one
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> A *norm* defined on an $$\mathbb{R}$$-vector space $$V$$ is a function $$\lVert -\rVert:V\rightarrow\mathbb{R}$$ satisfying the following conditions.
+<ins id="def2">**Definition 2**</ins> A *norm* on an $$\mathbb{R}$$-vector space $$V$$ is a function $$\lVert -\rVert:V\rightarrow\mathbb{R}$$ satisfying the following conditions.
 
 1. $$\lVert v\rVert\geq 0$$ for all $$v$$, with equality holding only when $$v=0$$.
-2. For any $$\alpha\in\mathbb{R}$$ and $$v\in V$$, $$\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$$ holds.
-3. (Triangle inequality) For any $$u,v\in V$$, $$\lVert u+v\rVert\leq\lVert u\rVert+\lVert v\rVert$$ holds.
+2. For any $$\alpha\in\mathbb{R}$$ and $$v\in V$$, $$\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$$.
+3. (Triangle inequality) For any $$u,v\in V$$, $$\lVert u+v\rVert\leq\lVert u\rVert+\lVert v\rVert$$.
 
 </div>
 
-The following proposition is something we have been familiar with since high school.
+The following proposition is one we have been familiar with since high school.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**Proposition 3 (Cauchy-Schwarz)**</ins> For any vectors $$v,w$$ in an $$\mathbb{R}$$-inner product space $$V$$, the inequality
+<ins id="prop3">**Proposition 3 (Cauchy–Schwarz)**</ins> For any vectors $$v,w$$ in an $$\mathbb{R}$$-inner product space $$V$$, the inequality
 
 $$\lvert \langle v,w\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
 
@@ -101,7 +103,7 @@ The first and second conditions for a norm are obvious, so it suffices to show o
 
 $$\lVert u+v\rVert=\sqrt{\langle u+v,u+v\rangle}=\sqrt{\langle u,u\rangle+2\langle u,v\rangle+\langle v,v\rangle}$$
 
-and applying the Cauchy-Schwarz inequality,
+and applying the Cauchy–Schwarz inequality,
 
 $$\langle u,u\rangle+2\langle u,v\rangle+\langle v,v\rangle\leq \lVert u\rVert^2+2\lVert u\rVert\lVert v\rVert+\lVert v\rVert^2=(\lVert u\rVert+\lVert v\rVert)^2$$
 
@@ -159,7 +161,7 @@ Then define
 
 $$\hat{x}_k:=x_k-\sum_{i=1}^{k-1}\frac{\langle x_i,x_k\rangle}{\langle x_i,x_i\rangle}x_i$$
 
-One can check that the set $$\{\hat{x}_1,\ldots, \hat{x}_n\}$$ obtained at the end of this process is an orthogonal basis. This method of obtaining an orthogonal basis from an arbitrary basis is called the *Gram-Schmidt process*. Sometimes we also want each element of the basis thus obtained to have size 1, and to achieve this we simply divide each vector by its own magnitude. A basis satisfying this property is called an *orthonormal basis*. If $$\mathcal{B}=\{x_1, \ldots, x_n\}$$ is an orthonormal basis, then for any $$v\in V$$, the components $$v_i$$ of
+One can check that the set $$\{\hat{x}_1,\ldots, \hat{x}_n\}$$ obtained at the end of this process is an orthogonal basis. This method of obtaining an orthogonal basis from an arbitrary basis is called the *Gram–Schmidt process*. Sometimes we also want each element of the basis thus obtained to have size 1, and to achieve this we simply divide each vector by its own magnitude. A basis satisfying this property is called an *orthonormal basis*. If $$\mathcal{B}=\{x_1, \ldots, x_n\}$$ is an orthonormal basis, then for any $$v\in V$$, the components $$v_i$$ of
 
 $$v=v_1x_1+\cdots+v_nx_n$$
 
@@ -209,7 +211,7 @@ so, from the condition that $$\langle-,-\rangle$$ is symmetric, we can verify th
 
 ## Projection Theorem
 
-Now let $$V$$ be an $$\mathbb{R}$$-inner product space, and let $$U\subseteq V$$ be a subspace. If $$U\neq \{0\}$$, then for any $$u\in U$$ with $$u\neq 0$$, we have $$\langle u,u\rangle>0$$, so in particular the restriction of the inner product $$\langle -,-\rangle$$ of $$V$$ to $$U$$ is non-degenerate and thus defines a bilinear form on $$U$$. That this bilinear form has the properties of an inner product is almost obvious, so any subspace of an $$\mathbb{R}$$-inner product space always has a natural $$\mathbb{R}$$-inner product space structure. Therefore, there exists an orthonormal basis $$\mathcal{B}=\{x_1,\ldots, x_k\}$$ of $$U$$. Moreover, if we choose a basis of $$V$$ containing $$\mathcal{B}$$ and then apply the Gram-Schmidt process starting from $$x_1,\ldots, x_k$$, we can also verify that there exists an orthonormal basis of $$V$$ containing $$\mathcal{B}$$.
+Now let $$V$$ be an $$\mathbb{R}$$-inner product space, and let $$U\subseteq V$$ be a subspace. If $$U\neq \{0\}$$, then for any $$u\in U$$ with $$u\neq 0$$, we have $$\langle u,u\rangle>0$$, so in particular the restriction of the inner product $$\langle -,-\rangle$$ of $$V$$ to $$U$$ is non-degenerate and thus defines a bilinear form on $$U$$. That this bilinear form has the properties of an inner product is almost obvious, so any subspace of an $$\mathbb{R}$$-inner product space always has a natural $$\mathbb{R}$$-inner product space structure. Therefore, there exists an orthonormal basis $$\mathcal{B}=\{x_1,\ldots, x_k\}$$ of $$U$$. Moreover, if we choose a basis of $$V$$ containing $$\mathcal{B}$$ and then apply the Gram–Schmidt process starting from $$x_1,\ldots, x_k$$, we can also verify that there exists an orthonormal basis of $$V$$ containing $$\mathcal{B}$$.
 
 Now for any $$v\in V$$, define the *projection* $$\proj_U v$$ of $$v$$ onto $$U$$ by the formula
 

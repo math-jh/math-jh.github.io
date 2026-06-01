@@ -1,5 +1,6 @@
 ---
 title: "Characteristic Polynomial"
+description: "We define the characteristic polynomial of matrices and linear maps, and use it to introduce the concepts of eigenvalues and spectrum. We also show that the characteristic polynomial of a linear map is independent of the choice of basis, by using the fact that similar matrices have the same characteristic polynomial."
 excerpt: "The characteristic polynomial of a matrix"
 
 categories: [Math / Linear Algebra]
@@ -15,10 +16,11 @@ date: 2022-08-28
 last_modified_at: 2022-08-29
 
 weight: 15
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T01:00:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T01:00:05+00:00
 ---
-Now we examine the characteristic polynomial of a matrix and a linear map, and through it we define eigenvalues.
+Now we examine the characteristic polynomial of a matrix and of a linear map, and through it define eigenvalues.
 
 ## Characteristic Polynomial and Eigenvalues
 
@@ -32,13 +34,13 @@ From the formula
 
 $$\det(\x I-A)=\sum_{\tau\in S_n}\sgn(\tau)(\x I-A)_{\tau(1),1}\cdots(\x I-A)_{\tau(n),n}\tag{1}$$
 
-we see that the degree of the characteristic polynomial of $$A$$ is at most $$n$$. Each summand on the right-hand side is a product of $$n$$ terms, and each factor $$(\x I-A)_{\tau(k),k}$$ is linear in $$x$$ only when $$\tau(k)=k$$, and is constant otherwise. Hence, if the characteristic polynomial is actually of degree $$n$$, the degree-$$n$$ term must appear only for the permutation $$\tau$$ satisfying $$\tau(k)=k$$ for all $$k$$, that is, for $$\tau=\id_{S_n}$$. In this case, the corresponding term is
+we see that the degree of the characteristic polynomial of $$A$$ is at most $$n$$. Each summand on the right-hand side is a product of $$n$$ factors, and each factor $$(\x I-A)_{\tau(k),k}$$ is linear in $$x$$ only when $$\tau(k)=k$$ and constant otherwise. Hence, if the characteristic polynomial actually has degree $$n$$, the degree-$$n$$ term must appear only for the permutation $$\tau$$ satisfying $$\tau(k)=k$$ for all $$k$$, that is, for $$\tau=\id_{S_n}$$. In this case, the corresponding term is
 
 $$(\x I-A)_{1,1}\cdots(\x I-A)_{n,n}=(\x-A_{11})\cdots(\x-A_{nn})\tag{2}$$
 
-and expanding this shows that the coefficient of $$\x$$ is $$1$$; thus the characteristic polynomial always has degree $$n$$.
+and expanding this shows that the coefficient of $$\x^n$$ is $$1$$; thus the characteristic polynomial always has degree $$n$$.
 
-If there exists some $$i$$ with $$\tau(i)\neq i$$, then by the pigeonhole principle there must also be another $$j$$ with $$\tau(j)\neq j$$. From this we see that no term of degree $$n-1$$ appears on the right-hand side of (1). That is, the degree-($$n-1$$) term of the characteristic polynomial arises solely from (2), and its coefficient is
+If there exists some $$i$$ with $$\tau(i)\neq i$$, then by the pigeonhole principle there must also exist another $$j$$ with $$\tau(j)\neq j$$. From this we see that no term of degree $$n-1$$ appears on the right-hand side of (1). That is, the degree-($$n-1$$) term of the characteristic polynomial arises solely from (2), and its coefficient is
 
 $$-(A_{1,1}+\cdots+A_{n,n}).$$
 
@@ -80,7 +82,7 @@ That is, we must show that the characteristic polynomial of $$L$$ does not chang
 
 </details>
 
-For convenience, all subsequent discussion will be unified in terms of matrices, but by the above corollary we can prove the same results for any linear map $$L$$ as well.
+For convenience, all subsequent discussion will be phrased in terms of matrices, but by the above corollary we can prove the same results for any linear map $$L$$ as well.
 
 <div class="proposition" markdown="1">
 
@@ -94,7 +96,7 @@ From the preceding argument we know that $$A$$ and $$B$$ have the same character
 
 </details>
 
-In particular, when any linear map $$L:V\rightarrow V$$ is given, by decomposing $$[L]_\mathcal{B}^\mathcal{B}$$ via diagonalization, which we will cover in the next post, we can decompose $$V$$ into eigenspaces of $$L$$.
+In particular, given any linear map $$L:V\rightarrow V$$, by decomposing $$[L]_\mathcal{B}^\mathcal{B}$$ via diagonalization—which we will cover in the next post—we can decompose $$V$$ into the eigenspaces of $$L$$.
 
 ## Algebraic Multiplicity
 
@@ -120,7 +122,7 @@ Then the characteristic polynomial of $$J$$ is $$\x^2+1$$, which has no roots in
 
 </div>
 
-A field in which this does not happen is called an *algebraically closed field*. The following *Fundamental Theorem of Algebra* can be proved algebraically or analytically, but any approach is beyond our current level, so we accept it as a fact and move on.
+A field in which this does not happen is called an *algebraically closed field*. The following *Fundamental Theorem of Algebra* can be proved algebraically or analytically, but any approach is beyond our current level, so we accept it as fact and move on.
 
 <div class="proposition" markdown="1">
 

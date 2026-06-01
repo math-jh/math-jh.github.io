@@ -1,5 +1,6 @@
 ---
 title: "Eigenspace Decomposition"
+description: "This post covers the conditions for decomposing a vector space into a direct sum of eigenspaces through definitions and propositions. It also explains the necessary and sufficient conditions for a direct sum of subspaces and the role of a basis."
 excerpt: "Eigenspace decomposition of a vector space"
 
 categories: [Math / Linear Algebra]
@@ -15,8 +16,9 @@ date: 2022-09-18
 last_modified_at: 2022-09-18
 
 weight: 16
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-01T01:30:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T01:30:05+00:00
 ---
 ## Sums of Spaces
 
@@ -24,13 +26,13 @@ Consider an $$n\times n$$ matrix $$A$$ and an eigenvalue $$\lambda$$. By definit
 
 $$Av=\lambda v$$
 
-Therefore, when restricted to $$E_\lambda$$, $$A$$ becomes the very simple map $$v\mapsto \lambda v$$.
+Therefore, when restricted to $$E_\lambda$$, the map $$A$$ becomes the very simple operator $$v\mapsto \lambda v$$.
 
-More generally, think of $$A$$ as a linear map from $$\mathbb{K}^n$$ to $$\mathbb{K}^n$$, and assume that the domain $$\mathbb{K}^n$$ can be covered by the eigenspaces $$E_\lambda$$. That is, suppose
+More generally, regard $$A$$ as a linear map from $$\mathbb{K}^n$$ to $$\mathbb{K}^n$$, and assume that the domain $$\mathbb{K}^n$$ can be covered by the eigenspaces $$E_\lambda$$. That is, suppose
 
 $$\mathbb{K}^n=\span\left(\bigcup_{\lambda\in\sigma(A)}E_\lambda\right)$$
 
-Then for any $$v\in\mathbb{K}^n$$, there exist $$v_\lambda\in E_\lambda$$ such that we can write
+Then for any $$v\in\mathbb{K}^n$$, there exist $$v_\lambda\in E_\lambda$$ such that
 
 $$v=\sum_{\lambda\in\sigma(A)}v_\lambda$$
 
@@ -38,11 +40,11 @@ and therefore
 
 $$Av=A\left(\sum_{\lambda\in\sigma(A)}v_\lambda\right)=\sum_{\lambda\in\sigma(A)}Av_\lambda$$
 
-and by the argument above $$Av_\lambda=\lambda v_\lambda$$, so we obtain the equation
+By the argument above, $$Av_\lambda=\lambda v_\lambda$$, so we obtain
 
 $$Av=\sum_{\lambda\in\sigma(A)}\lambda v_\lambda$$
 
-Of course, for this calculation to make sense, the way of expressing $$v$$ as a sum of $$v_\lambda$$ must be unique. We define this as follows.
+Of course, for this calculation to make sense, the expression of $$v$$ as a sum of the $$v_\lambda$$ must be unique. We define this as follows.
 
 <div class="definition" markdown="1">
 
@@ -54,7 +56,7 @@ holds.[^1] We write this as $$V=\bigoplus_{i\in I}W_i$$.
 
 </div>
 
-The easiest nontrivial case is when $$I$$ is a two-element set.
+The easiest nontrivial case is when $$I$$ has two elements.
 
 <div class="proposition" markdown="1">
 
@@ -64,31 +66,31 @@ The easiest nontrivial case is when $$I$$ is a two-element set.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First assume $$V=W_1\oplus W_2$$. It is obvious from the definition that $$W_1+W_2\subseteq V$$. Conversely, pick any $$v\in V$$; then there exist $$w_i\in W_i$$ such that $$v=w_1+w_2$$, so $$V\subseteq W_1+W_2$$ also holds. Hence we know $$V=W_1+W_2$$. On the other hand, if $$W_1\cap W_2\neq \{0\}$$, then for a nonzero $$w\in W_1+W_2$$ we have
+First assume $$V=W_1\oplus W_2$$. That $$W_1+W_2\subseteq V$$ is obvious from the definition. Conversely, pick any $$v\in V$$; then there exist $$w_i\in W_i$$ with $$v=w_1+w_2$$, so $$V\subseteq W_1+W_2$$ also holds. Hence $$V=W_1+W_2$$. On the other hand, if $$W_1\cap W_2\neq \{0\}$$, then for a nonzero $$w\in W_1\cap W_2$$ we have
 
 $$w=0+w=w+0$$
 
 which contradicts the uniqueness in [Definition 1](#def1).
 
-Conversely, suppose $$V=W_1+W_2$$ and $$W_1\cap W_2=\{0\}$$. For any $$v\in V$$, since $$V=W_1+W_2$$, there must exist $$w_1\in W_i$$ such that $$v=w_1+w_2$$. Moreover, this expression is unique. If
+Conversely, suppose $$V=W_1+W_2$$ and $$W_1\cap W_2=\{0\}$$. For any $$v\in V$$, since $$V=W_1+W_2$$, there exist $$w_i\in W_i$$ with $$v=w_1+w_2$$. Moreover, this expression is unique: if
 
 $$v=w_1+w_2=w_1'+w_2'$$
 
-then from
+then
 
 $$w_1-w_1'=w_2-w_2'$$
 
-the left-hand side is an element of $$W_1$$ and the right-hand side is an element of $$W_2$$, so the condition $$W_1\cap W_2=\{0\}$$ implies $$w_1-w_1'=w_2-w_2'=0$$.
+The left-hand side lies in $$W_1$$ and the right-hand side lies in $$W_2$$, so the condition $$W_1\cap W_2=\{0\}$$ implies $$w_1-w_1'=w_2-w_2'=0$$.
 
 </details>
 
-One direction of the above proposition still holds when $$I$$ has three or more elements. That is, if $$V=\bigoplus_{i\in I}W_i$$, then $$V=\sum_{i\in I}W_i$$ and $$W_i\cap W_j=\{0\}$$ whenever $$i\neq j$$, and the proof is the same as above. However, the converse does not hold in general.
+One direction of the above proposition still holds when $$I$$ has three or more elements. That is, if $$V=\bigoplus_{i\in I}W_i$$, then $$V=\sum_{i\in I}W_i$$ and $$W_i\cap W_j=\{0\}$$ whenever $$i\neq j$$; the proof is the same as above. However, the converse does not hold in general.
 
-For example, let $$V=\mathbb{R}^2$$ and take the two standard basis vectors $$e_1,e_2$$ of $$V$$. Set $$W_1=\mathbb{R}e_1$$, $$W_2=\mathbb{R}e_2$$, $$W_3=\mathbb{R}(e_1+e_2)$$. Then $$V=W_1+W_2+W_3$$, and $$W_i\cap W_j$$ whenever $$i\neq j$$, but $$V\neq W_1\oplus W_2\oplus W_3$$.
+For example, let $$V=\mathbb{R}^2$$ and take the standard basis vectors $$e_1,e_2$$. Set $$W_1=\mathbb{R}e_1$$, $$W_2=\mathbb{R}e_2$$, and $$W_3=\mathbb{R}(e_1+e_2)$$. Then $$V=W_1+W_2+W_3$$, and $$W_i\cap W_j=\{0\}$$ whenever $$i\neq j$$, but $$V\neq W_1\oplus W_2\oplus W_3$$:
 
 $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
-because the way of representing $$e_1+e_2\in V$$ is not unique, as above.
+because the representation of $$e_1+e_2\in V$$ is not unique.
 
 As another example, pick a basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$ of $$V$$. If we set $$W_i=\mathbb{K}x_i$$, then the condition that $$\mathcal{B}$$ is a basis coincides exactly with the condition that $$V$$ is the direct sum of the $$W_i$$. More generally, the following holds.
 
@@ -100,7 +102,7 @@ As another example, pick a basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$ of $$V$$. I
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First assume $$V=\bigoplus W_i$$ and pick bases $$\mathcal{B}_i$$ of the $$W_i$$. If $$\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$$, then $$W_i\cap W_j\neq\emptyset$$, contradicting the discussion after [Proposition 2](#prop2); hence we must have $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$. For any $$v\in V$$, since $$V=\bigoplus W_i$$, there exist unique $$w_i$$ satisfying the equation
+First assume $$V=\bigoplus W_i$$ and pick bases $$\mathcal{B}_i$$ of the $$W_i$$. If $$\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$$, then $$W_i\cap W_j\neq\{0\}$$, contradicting the discussion after [Proposition 2](#prop2); hence we must have $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$. For any $$v\in V$$, since $$V=\bigoplus W_i$$, there exist unique $$w_i$$ satisfying
 
 $$v=\sum_{i\in I} w_i$$
 
@@ -110,15 +112,15 @@ Reversing this argument shows the converse as well.
 
 </details>
 
-Therefore we see that $$\dim V=\sum_{i\in I}\dim W_i$$.
+Therefore $$\dim V=\sum_{i\in I}\dim W_i$$.
 
 ## Diagonalization
 
-Now we examine how to decompose $$\mathbb{K}^n$$ into eigenspaces. From the preceding [Proposition 3](#prop3) we know that decomposing the vector space $$\mathbb{K}^n$$ into eigenspaces $$E_\lambda$$ is the same as collecting bases of the $$E_\lambda$$ to obtain a basis of $$\mathbb{K}^n$$. Also, if a nonzero vector $$x_1$$ is an eigenvector corresponding to the eigenvalue $$\lambda_1$$, then for another eigenvalue $$\lambda_2$$ we have
+Now we examine how to decompose $$\mathbb{K}^n$$ into eigenspaces. From [Proposition 3](#prop3) we know that decomposing the vector space $$\mathbb{K}^n$$ into eigenspaces $$E_\lambda$$ is the same as collecting bases of the $$E_\lambda$$ to obtain a basis of $$\mathbb{K}^n$$. Also, if a nonzero vector $$x_1$$ is an eigenvector corresponding to an eigenvalue $$\lambda_1$$, then for another eigenvalue $$\lambda_2$$ we have
 
 $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
-so we know $$x_1\not\in E_{\lambda_2}$$. Therefore, however we choose bases of the $$E_\lambda$$, the bases of $$E_{\lambda_1}$$ and $$E_{\lambda_2}$$ never overlap for distinct $$\lambda_1,\lambda_2$$. Moreover, the following holds.
+so $$x_1\not\in E_{\lambda_2}$$. Therefore, however we choose bases of the $$E_\lambda$$, the bases of $$E_{\lambda_1}$$ and $$E_{\lambda_2}$$ never overlap for distinct $$\lambda_1,\lambda_2$$. Moreover, the following holds.
 
 <div class="proposition" markdown="1">
 
@@ -128,12 +130,12 @@ so we know $$x_1\not\in E_{\lambda_2}$$. Therefore, however we choose bases of t
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Suppose for contradiction that the set $$\{x_1,x_2,\ldots, x_m\}$$ is linearly dependent. That is, there exist scalars $$\alpha_i$$, not all zero, satisfying the following equation
+Suppose for contradiction that the set $$\{x_1,x_2,\ldots, x_m\}$$ is linearly dependent. That is, there exist scalars $$\alpha_i$$, not all zero, satisfying
 
 
 $$\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_mx_m=0\tag{1}$$
 
-Now among the families $$(\alpha_i)_{1\leq i\leq m}$$ satisfying this, choose one with minimal support, and denote it by $$(\beta_i)_{1\leq i\leq m}$$. In other words, if the number of indices $$i$$ with $$\beta_i\neq0$$ is $$k$$, then no family $$(\alpha_i)_{1\leq i\leq m}$$ with fewer than $$k$$ nonzero $$\alpha_i$$ satisfies equation (1) above.
+Among the families $$(\alpha_i)_{1\leq i\leq m}$$ satisfying this, choose one with minimal support, and denote it by $$(\beta_i)_{1\leq i\leq m}$$. In other words, if the number of indices $$i$$ with $$\beta_i\neq0$$ is $$k$$, then no family $$(\alpha_i)_{1\leq i\leq m}$$ with fewer than $$k$$ nonzero entries satisfies equation (1).
 
 Since at least two of the $$\beta_i$$ are nonzero, we may assume without loss of generality that $$\beta_m\neq 0$$. Then
 
@@ -143,7 +145,7 @@ For convenience write this as $$x_m=\sum_{i=1}^{m-1}\beta'_ix_i$$. Multiplying b
 
 $$Ax_m=\sum_{i=1}^{m-1}\beta'_i(Ax_i)$$
 
-and since these are eigenvectors,
+and since the $$x_i$$ are eigenvectors,
 
 $$\lambda_mx_m=\sum_{i=1}^{m-1}\beta'_i\lambda_i x_i$$
 
@@ -159,7 +161,7 @@ and since $$\beta_i'=-(\beta_i/\beta_m)$$, multiplying both sides by $$\beta_m$$
 
 $$0=\sum_{i=1}^{m-1}\beta_i(\lambda_i-\lambda_m)x_i$$
 
-If we define $$(\beta''_i)_{1\leq i\leq n}$$ by the following formula
+If we define $$(\beta''_i)_{1\leq i\leq n}$$ by
 
 $$\beta_i''=\begin{cases}\beta_i(\lambda_i-\lambda_m)&1\leq i\leq m-1\\0&i=m\end{cases}$$
 
@@ -173,7 +175,7 @@ By assumption $$\lambda_i-\lambda_m\neq 0$$, so for $$1\leq i\leq m-1$$ the cond
 
 From this we know that for any matrix $$A$$ with eigenvalues $$\lambda\in\sigma(A)$$ and corresponding eigenspaces $$E_\lambda$$, if we denote their bases by $$\mathcal{B}_\lambda$$, then $$\mathcal{B}=\bigcup_{\lambda\in\sigma(A)}\mathcal{B}_\lambda$$ is a linearly independent subset of $$\mathbb{K}^n$$. However, in general there is no reason for $$\mathcal{B}$$ to be a basis of $$\mathbb{K}^n$$. For example, in [§Characteristic Polynomial, ⁋Example 7](/en/math/linear_algebra/characteristic_polynomial#ex7), when $$\mathbb{K}=\mathbb{R}$$ we have $$\sigma(J)=\emptyset$$, so $$\mathcal{B}=\emptyset$$.
 
-Moreover, even assuming that the characteristic polynomial of $$A$$ has exactly $$n$$ roots counting multiplicity, a similar problem can arise: for example, for the matrix
+Moreover, even if we assume that the characteristic polynomial of $$A$$ has exactly $$n$$ roots counting multiplicity, a similar problem can arise. For the matrix
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -189,15 +191,15 @@ The next proposition shows that the geometric multiplicity of an eigenvalue of a
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let the geometric multiplicity of $$\lambda$$ be $$k$$, and consider $$k$$ linearly independent vectors $$x_1,\ldots, x_k$$ spanning $$E_\lambda(A)$$. To these we can add $$(n-k)$$ vectors $$x_{k+1},\ldots, x_k$$ to form a new basis $$\{x_1,\ldots, x_n\}$$ of $$\mathbb{K}^n$$. Now if we define the matrix $$X$$ as
+Let the geometric multiplicity of $$\lambda$$ be $$k$$, and consider $$k$$ linearly independent vectors $$x_1,\ldots, x_k$$ spanning $$E_\lambda(A)$$. To these we can add $$(n-k)$$ vectors $$x_{k+1},\ldots, x_n$$ to form a new basis $$\{x_1,\ldots, x_n\}$$ of $$\mathbb{K}^n$$. Now define the matrix $$X$$ as
 
 $$X=(x_1|x_2|\cdots|x_n)$$
 
-then the columns of $$X$$ are linearly independent, so $$X^{-1}$$ exists. Let the rows of $$X^{-1}$$ be $$y_i$$. From the equation $$X^{-1}X=XX^{-1}=I$$ we obtain
+Since the columns of $$X$$ are linearly independent, $$X^{-1}$$ exists. Let the rows of $$X^{-1}$$ be $$y_i$$. From the equation $$X^{-1}X=XX^{-1}=I$$ we obtain
 
 $$y_i\cdot x_j=\begin{cases}1&i=j\\ 0&i\neq j\end{cases}$$
 
-Therefore, setting $$A'=X^{-1}AX$$, we obtain
+Therefore, setting $$A'=X^{-1}AX$$, we have
 
 $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmatrix}(Ax_1|Ax_2|\cdots|Ax_n)\\
 &=\begin{pmatrix}y_1\cdot Ax_1&y_1\cdot Ax_2&\cdots& y_1\cdot Ax_k&\cdots&y_1\cdot Ax_n\\ y_2\cdot Ax_1&y_2\cdot Ax_2&\cdots &y_2\cdot Ax_k&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot Ax_1&y_k\cdot Ax_2&\cdots&y_k\cdot Ax_k&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot Ax_1&y_n\cdot Ax_2&\cdots &y_n\cdot Ax_k&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
@@ -205,15 +207,15 @@ $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmat
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda I_k&B\\ 0&C\end{pmatrix}\end{aligned}$$
 
-Therefore, writing the characteristic polynomial of $$A$$ as $$p_A(\mathbf{x})$$, from [§Characteristic Polynomial, ⁋Corollary 4](/en/math/linear_algebra/characteristic_polynomial#cor4) we have $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})$$, and hence we know
+Writing the characteristic polynomial of $$A$$ as $$p_A(\mathbf{x})$$, from [§Characteristic Polynomial, ⁋Corollary 4](/en/math/linear_algebra/characteristic_polynomial#cor4) we have $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})$$, and hence
 
-$$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
+$$p_A(\mathbf{x})=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
-In other words, the algebraic multiplicity of $$\lambda$$ in $$p_A$$ is at least $$k$$.
+Thus the algebraic multiplicity of $$\lambda$$ in $$p_A$$ is at least $$k$$.
 
 </details>
 
-Given an $$n\times n$$ matrix $$A$$, let $$p_A$$ be its characteristic polynomial. Then the sum of the algebraic multiplicities of the eigenvalues $$\lambda$$ cannot exceed $$n$$, the degree of $$p_A$$. Also, for a fixed eigenvalue $$\lambda$$, the above proposition shows that the geometric multiplicity of $$\lambda$$ cannot exceed its algebraic multiplicity. Finally, from the argument after [Proposition 4](#prop4) we see that in order to decompose $$\mathbb{K}^n$$ into eigenspaces, the sum of the geometric multiplicities of the $$\lambda$$ must be equal to $$n$$. Combining all of this yields the following proposition.
+Given an $$n\times n$$ matrix $$A$$, let $$p_A$$ be its characteristic polynomial. The sum of the algebraic multiplicities of the eigenvalues $$\lambda$$ cannot exceed $$n$$, the degree of $$p_A$$. Also, for a fixed eigenvalue $$\lambda$$, the above proposition shows that the geometric multiplicity of $$\lambda$$ cannot exceed its algebraic multiplicity. Finally, from the argument after [Proposition 4](#prop4) we see that in order to decompose $$\mathbb{K}^n$$ into eigenspaces, the sum of the geometric multiplicities of the $$\lambda$$ must equal $$n$$. Combining all of this yields the following proposition.
 
 <div class="proposition" markdown="1">
 
@@ -230,7 +232,7 @@ Throughout our discussion of matrix diagonalization we assume that the field $$\
 
 ## Diagonalization of Matrices
 
-Earlier we examined how to decompose $$\mathbb{R}^n$$ through the eigenvalues and eigenspaces of $$A$$, and from [Proposition 6](#prop6) we also learned when such a decomposition is possible. Let us revisit the proof of [Proposition 5](#prop5) that we used to show this. We added $$n-k$$ arbitrary vectors to a basis $$x_1,\ldots, x_k$$ of $$E_\lambda$$, defined the matrix $$X=(x_1\mid\cdots\mid x_n)$$ using these, and computed that the upper-left $$k\times k$$ block of
+Earlier we examined how to decompose $$\mathbb{R}^n$$ through the eigenvalues and eigenspaces of $$A$$, and from [Proposition 6](#prop6) we also learned when such a decomposition is possible. Let us revisit the proof of [Proposition 5](#prop5) that we used to establish this. We added $$n-k$$ arbitrary vectors to a basis $$x_1,\ldots, x_k$$ of $$E_\lambda$$, defined the matrix $$X=(x_1\mid\cdots\mid x_n)$$ using these, and computed that the upper-left $$k\times k$$ block of
 
 $$XAX^{-1}=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
 
@@ -278,7 +280,7 @@ and since the product of diagonal matrices is merely the diagonal matrix consist
 
 </div>
 
-If two matrices $$A,B$$ are simultaneously diagonalizable by a fixed matrix $$X$$, then from the following equation
+If two matrices $$A,B$$ are simultaneously diagonalizable by a fixed matrix $$X$$, then from the equation
 
 $$AB=XD_AX^{-1}XD_BX^{-1}=XD_AD_BX^{-1}=XD_BD_AX^{-1}=BA$$
 
@@ -292,15 +294,15 @@ we know that the two matrices $$A, B$$ commute. The next proposition shows that 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Essentially, it suffices to show that the two matrices $$A,B$$ give the same eigenspace decomposition. Consider the eigenspace decomposition using $$A$$:
+Essentially, it suffices to show that the two matrices $$A,B$$ admit the same eigenspace decomposition. Consider the eigenspace decomposition using $$A$$:
 
 $$V=\bigoplus_{\lambda}E_\lambda(A)$$
 
-Then for any $$v\in E_\lambda(A)$$, from the following equation
+Then for any $$v\in E_\lambda(A)$$, from the equation
 
 $$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
 
-we know that $$Bv\in E_\lambda(A)$$. Now regarding $$B$$ as a linear operator on the vector space $$E_\lambda(A)$$, since the original linear operator $$B$$ was diagonalizable, $$B$$ is also diagonalizable on $$E_\lambda(A)$$, and hence there exists a basis of $$E_\lambda(A)$$ consisting of eigenvectors of $$B$$. Now every element of $$E_\lambda(A)$$ is an eigenvector of $$A$$ (corresponding to eigenvalue $$\lambda$$), so these are also eigenvectors of $$A$$.
+we know that $$Bv\in E_\lambda(A)$$. Now regarding $$B$$ as a linear operator on the vector space $$E_\lambda(A)$$, since the original linear operator $$B$$ was diagonalizable, $$B$$ is also diagonalizable on $$E_\lambda(A)$$, and hence there exists a basis of $$E_\lambda(A)$$ consisting of eigenvectors of $$B$$. Every element of $$E_\lambda(A)$$ is an eigenvector of $$A$$ (corresponding to eigenvalue $$\lambda$$), so these are also eigenvectors of $$A$$.
 
 </details>
 
@@ -308,11 +310,11 @@ we know that $$Bv\in E_\lambda(A)$$. Now regarding $$B$$ as a linear operator on
 
 So far we have examined the process of diagonalizing a given matrix, and basically this is the same as decomposing a vector space into eigenspaces when a (diagonalizable) linear operator is given. For the proof of this we actively used bases of the eigenspaces. Describing this without choosing bases will be helpful when we examine the Jordan canonical form, which will be covered in the next post.
 
-For a finite-dimensional vector space $$V$$ and a linear operator $$L:V\rightarrow V$$, we have seen that the following equation
+For a finite-dimensional vector space $$V$$ and a linear operator $$L:V\rightarrow V$$, we have seen that
 
 $$\rank L +\nullity L=\dim V$$
 
-holds. ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7)) Here $$\rank L=\dim\im L$$ and $$\nullity L=\dim\ker L$$. However, this does not mean that we can immediately write $$V$$ as the direct sum of $$\im L$$ and $$\ker L$$. For example, for the matrix $$A$$ that was an example of a non-diagonalizable matrix after [Proposition 4](#def4), considering the operator defined by
+holds. ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7)) Here $$\rank L=\dim\im L$$ and $$\nullity L=\dim\ker L$$. However, this does not mean that we can immediately write $$V$$ as the direct sum of $$\im L$$ and $$\ker L$$. For example, for the matrix $$A$$ that was an example of a non-diagonalizable matrix after [Proposition 4](#prop4), considering the operator defined by
 
 $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
@@ -326,7 +328,7 @@ we have $$\ker (A-I)\cap \im(A-I)\neq \{0\}$$. Yet if only $$\ker L\cap \im L=\{
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-With a little thought, we see that $$\ker L^2=\ker L$$ is equivalent to $$\ker L^2\subset \ker L$$. Therefore what we must show is the following equivalence
+With a little thought, we see that $$\ker L^2=\ker L$$ is equivalent to $$\ker L^2\subset \ker L$$. Therefore what we must show is the equivalence
 
 $$\ker L\cap \im L=\{0\}\iff \ker L^2\subset\ker L$$
 
@@ -338,7 +340,7 @@ so $$w\in \ker L$$. Hence $$v=Lw=0$$.
 
 </details>
 
-Returning to the original story, we are especially curious about the case where $$L$$ is of the form $$A-\lambda I$$ for some linear operator and its eigenvalue. The following proposition characterizes diagonalizability concisely using [Lemma 10](#lem10).
+Returning to the original story, we are especially interested in the case where $$L$$ is of the form $$A-\lambda I$$ for some linear operator and its eigenvalue. The following proposition characterizes diagonalizability concisely using [Lemma 10](#lem10).
 
 <div class="proposition" markdown="1">
 
