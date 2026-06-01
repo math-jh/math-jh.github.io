@@ -688,6 +688,36 @@ mirror_symmetry-ko:
         url: ko/math/mirror_symmetry/newton_okounkov
       - title: "Schubert variety의 거울과 head-over-tails superpotential"
         url: ko/math/mirror_symmetry/schubert_variety_mirror
+      - title: "Partial flag variety의 Plücker 좌표 거울"
+        url: ko/math/mirror_symmetry/partial_flag_mirror
+      - title: "── 연구 노트 (frontier) ──"
+        url: ko/math/mirror_symmetry/overview
+      - title: "Quantum K-theory와 K-이론적 I-function"
+        url: ko/math/mirror_symmetry/quantum_k_theory
+      - title: "Level structure와 Dong-Wen mirror"
+        url: ko/math/mirror_symmetry/level_structure
+      - title: "Partial flag의 quantum K-theory"
+        url: ko/math/mirror_symmetry/quantum_k_partial_flag
+      - title: "Matrix factorization과 LG B-model 범주"
+        url: ko/math/mirror_symmetry/matrix_factorization
+      - title: "Schubert matrix factorization"
+        url: ko/math/mirror_symmetry/schubert_mf
+      - title: "K-이론적 Lagrangian class"
+        url: ko/math/mirror_symmetry/k_lagrangian_class
+      - title: "Joyce-Safronov 검증 프로그램"
+        url: ko/math/mirror_symmetry/joyce_safronov
+      - title: "Perverse Schober와 spherical functor"
+        url: ko/math/mirror_symmetry/perverse_schober
+      - title: "Cluster 범주화와 quantum dilogarithm"
+        url: ko/math/mirror_symmetry/cluster_categorification
+      - title: "Quantum Serre duality의 범주적 형식"
+        url: ko/math/mirror_symmetry/quantum_serre
+      - title: "Bethe ansatz와 quantum cohomology"
+        url: ko/math/mirror_symmetry/bethe_ansatz
+      - title: "K-이론적 Coulomb branch"
+        url: ko/math/mirror_symmetry/coulomb_branch
+      - title: "3d mirror symmetry와 Seiberg duality"
+        url: ko/math/mirror_symmetry/three_d_mirror
   - title:
     children:
       - title: "블로그 소개"

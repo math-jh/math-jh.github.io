@@ -7,7 +7,7 @@
 \usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing}
 \begin{document}
 
-%% placeholder (no diagram compiled yet)
+%% placeholder (다음 컴파일할 코드를 여기에 둔다)
 \begin{tikzpicture}
 \node {};
 \end{tikzpicture}
@@ -16,7 +16,102 @@
 
 %% ====================================================================
 %% 보관 영역 (\end{document} 이후) — 컴파일된 코드 누적 보관.
-%% 컴파일 시: 위 \begin{document}...\end{document} 사이에 코드 하나만 두고
+%% 컴파일: 위 \begin{document}...\end{document} 사이에 코드 하나만 두고
 %%   cd assets/diagrams/Math/Mirror_Symmetry && latex -shell-escape Mirror_Symmetry.tex
 %% 생성된 png를 assets/images/Math/Mirror_Symmetry/{글제목}-n.png 로 이동.
 %% ====================================================================
+
+%% 고전 Pieri: (1)에 2 box를 horizontal strip으로 추가 → (3), (2,1) (Quantum_Pieri_Rule-1.png)
+\begin{tikzpicture}[scale=0.5]
+  \begin{scope}[shift={(0,0)}]
+    \fill[gray!25] (0,0) rectangle (1,1);
+    \draw (0,0) grid (1,1);
+    \node at (0.5,-1) {$\lambda=(1)$};
+  \end{scope}
+  \node at (3.2,0.5) {$\xrightarrow{\;\smile\,\sigma_2\;}$};
+  \begin{scope}[shift={(5,0)}]
+    \fill[gray!25] (0,0) rectangle (1,1);
+    \fill[blue!30] (1,0) rectangle (3,1);
+    \draw (0,0) grid (3,1);
+    \node at (1.5,-1) {$\mu=(3)$};
+  \end{scope}
+  \node at (9.3,0.5) {$+$};
+  \begin{scope}[shift={(10.5,0)}]
+    \fill[gray!25] (0,0) rectangle (1,1);
+    \fill[blue!30] (1,0) rectangle (2,1);
+    \fill[blue!30] (0,-1) rectangle (1,0);
+    \draw (0,0) grid (2,1);
+    \draw (0,-1) grid (1,1);
+    \node at (1,-2) {$\mu=(2,1)$};
+  \end{scope}
+\end{tikzpicture}
+
+%% rim hook: Gr(2,4)에서 직사각형(2x2) 밖 (3,1)의 4-rim hook 제거 → ∅, +q (Quantum_Pieri_Rule-2.png)
+\begin{tikzpicture}[scale=0.5]
+  \begin{scope}[shift={(0,0)}]
+    \fill[red!20] (0,0) rectangle (3,1);
+    \fill[red!20] (0,-1) rectangle (1,0);
+    \draw (0,0) grid (3,1);
+    \draw (0,-1) grid (1,0);
+    \draw[blue, very thick, dashed] (0,-2) rectangle (2,0);
+    \node at (1.5,-2.8) {$\mu=(3,1)$};
+  \end{scope}
+  \node at (5.8,-0.5) {$\xrightarrow{\;4\text{-rim hook}\ \text{제거}\;}$};
+  \node at (9.8,-0.5) {$q\,\sigma_\emptyset = q$};
+\end{tikzpicture}
+
+%% cohook: box (i,j)의 cohook = 행 왼쪽 + 열 위쪽 (Cluster_Monomial_Basis-1.png)
+\begin{tikzpicture}[scale=0.55]
+  \draw[gray!50, very thick, dashed] (0,0) rectangle (3,-3);
+  \fill[gray!20] (0,0) rectangle (3,-2);
+  \draw (0,0) grid (3,-2);
+  \fill[blue!25] (0,-1) rectangle (1,-2);
+  \fill[orange!30] (1,0) rectangle (2,-1);
+  \draw[very thick] (1,-1) rectangle (2,-2);
+  \draw (0,0) grid (3,-2);
+  \node at (1.5,-1.5) {\scriptsize $(i,j)$};
+  \node[blue!60!black] at (0.5,-2.6) {\scriptsize row 왼쪽};
+  \node[orange!70!black] at (2.7,0.5) {\scriptsize col 위쪽};
+  \node at (1.5,-3.7) {\scriptsize $\lambda=(n\!-\!k)^a$의 cohook};
+\end{tikzpicture}
+
+%% Gr(2,4) Gelfand-Tsetlin pattern: interlacing (Newton_Okounkov_Body-1.png)
+\begin{tikzpicture}[scale=1.0, >=Stealth]
+  \node (a) at (0,0) {$a$};
+  \node (b) at (2,0) {$b$};
+  \node (c) at (1,-1) {$c$};
+  \node (d) at (3,-1) {$d$};
+  \node (e) at (2,-2) {$e$};
+  \draw[->, gray] (a)--(c); \draw[->, gray] (c)--(b);
+  \draw[->, gray] (c)--(e); \draw[->, gray] (e)--(d);
+  \draw[->, gray] (b)--(d);
+  \node[font=\scriptsize, gray!70!black] at (0.4,-0.55) {$\geq$};
+  \node[font=\scriptsize, gray!70!black] at (1.6,-0.55) {$\geq$};
+  \node[font=\scriptsize, gray!70!black] at (1.4,-1.55) {$\geq$};
+  \node[font=\scriptsize, gray!70!black] at (2.6,-1.55) {$\geq$};
+  \node[font=\footnotesize] at (4.8,-1) {$a\geq c\geq b,$};
+  \node[font=\footnotesize] at (4.85,-1.55) {$c\geq e\geq d$};
+  \node[font=\scriptsize] at (1,-2.8) {$Gr(2,4)$의 GT pattern};
+\end{tikzpicture}
+
+%% quiver Q^lambda for lambda=(4,4,2): head-over-tails (Schubert_Variety_Mirror-1.png)
+\begin{tikzpicture}[scale=1.15, >=Stealth,
+   v/.style={circle, draw, inner sep=1.2pt, font=\scriptsize},
+   q/.style={circle, draw, fill=red!15, inner sep=1.2pt, font=\scriptsize}]
+  \foreach \i/\jmax in {1/4, 2/4, 3/2}{
+    \foreach \j in {1,...,\jmax}{
+      \node[v] (n\i\j) at (\j,-\i) {$\scriptstyle \i\!\times\!\j$};
+    }
+  }
+  \node[v] (v0) at (0,0) {$1$};
+  \draw[->] (v0) -- (n11);
+  \draw[->] (n11)--(n12); \draw[->] (n12)--(n13); \draw[->] (n13)--(n14);
+  \draw[->] (n21)--(n22); \draw[->] (n22)--(n23); \draw[->] (n23)--(n24);
+  \draw[->] (n31)--(n32);
+  \draw[->] (n11)--(n21); \draw[->] (n12)--(n22); \draw[->] (n13)--(n23); \draw[->] (n14)--(n24);
+  \draw[->] (n21)--(n31); \draw[->] (n22)--(n32);
+  \node[q] (q1) at (5,-2) {$q_1$};
+  \node[q] (q2) at (3,-3) {$q_2$};
+  \draw[->] (n24) -- (q1);
+  \draw[->] (n32) -- (q2);
+\end{tikzpicture}
