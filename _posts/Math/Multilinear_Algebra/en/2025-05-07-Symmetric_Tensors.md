@@ -1,5 +1,6 @@
 ---
 title: "Symmetric Tensors"
+description: "We define symmetric tensors and symmetric powers via group actions on modules over group rings, and discuss the properties of relative traces and the invariance of tensor products under subgroup actions."
 excerpt: "The action of the symmetric group, symmetric tensors, and symmetric powers"
 
 categories: [Math / Multilinear Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-05-07
 last_modified_at: 2025-05-07
 weight: 201
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T20:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T20:00:02+00:00
 ---
 Given any group $$H$$ and ring $$A$$, we defined the group ring $$AH$$. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5)) Now fix an $$AH$$-module $$M$$, and define $$M^H$$ as the set
 
@@ -59,7 +61,7 @@ Then the following holds.
 <ins id="prop2">**Proposition 2**</ins> The following hold.
 
 1. For any $$x\in M^G$$ and $$h\in H$$, we have $$hx\in M^{hGh^{-1}}$$ and the formula $$\tr_{H/hGh^{-1}}(hx)=\tr_{H/G}(x)$$ holds.
-2. For subgroups $$F\leq G\leq H$$, we have $$\tr_{H/G}\circ\tr_{G/F}=tr_{H/F}$$.
+2. For subgroups $$F\leq G\leq H$$, we have $$\tr_{H/G}\circ\tr_{G/F}=\tr_{H/F}$$.
 3. For any $$x\in M^H$$, we have $$\tr_{H/G}(x)=[H:G].x$$.
 
 </div>
@@ -100,7 +102,7 @@ $$xy=\tr_{S_{p+q}/S_p\times S_q}(x\otimes y)$$
 
 we have $$xy\in M^{S_{p+q}}$$ and its value is
 
-$$\sum_{S_{p+q}/(S_p\times S_q)} \bar{\sigma}(x\otimes y)$$
+$$\sum_{\bar{\sigma}\in S_{p+q}/(S_p\times S_q)} \bar{\sigma}(x\otimes y)$$
 
 . On the other hand, let $$S_{p,q}$$ be the subset of $$S_{p+q}$$ consisting of those $$\sigma$$ satisfying
 
@@ -173,7 +175,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
 
 <ins id="cor5">**Corollary 5**</ins> The following hold.
 
-1. The product $$x^k$$ of $$x$$ defined in [Proposition 4](#prop4) equals $$p!\gamma_k(x)$$. 
+1. The product $$x^k$$ of $$x$$ defined in [Proposition 4](#prop4) equals $$k!\gamma_k(x)$$. 
 2. For any $$x_1,\ldots, x_n\in M$$,
     
     $$\gamma_p(x_1+\cdots+x_n)=\sum_{p_1+\cdots+p_n=p}\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)$$
@@ -185,7 +187,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
 
     and for each $$P\in\mathscr{P}$$ defining a function $$\phi:\{1,\ldots, p\} \rightarrow \{1,\ldots, n\}$$ such that $$i\in P_{\phi(i)}$$, we have
 
-    $$\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)=\sum_{P\in \mathscr{P}}x_{\phi(1)}\otimes \cdots x_{\phi(p)}$$
+    $$\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)=\sum_{P\in \mathscr{P}}x_{\phi(1)}\otimes \cdots \otimes x_{\phi(p)}$$
 
     . 
 4. For any $$x\in M$$ and natural numbers $$p,q$$, the formula
@@ -193,7 +195,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
     $$\gamma_p(x)\gamma_q(x)=\frac{(p+q)!}{p!q!}\gamma_{p+q}(x)$$
 
     holds.
-5. Let $$x_1,\ldots, x_n\in M$$ be given, and for any subset $$H\subseteq \{1,\ldots, n\}$$ let $$x_H+\sum_{i\in H}x_i$$. Then the formula
+5. Let $$x_1,\ldots, x_n\in M$$ be given, and for any subset $$H\subseteq \{1,\ldots, n\}$$ let $$x_H=\sum_{i\in H}x_i$$. Then the formula
     
     $$(-1)^nx_1x_2\cdots x_n=\sum_{H\subset\{1,\ldots, n\}}(-1)^{\lvert H\rvert}\gamma_n(x_H)$$
 
@@ -216,7 +218,7 @@ As in the general tensor algebra, we are particularly interested in the case whe
 
 First, gathering all the $$y_\omega$$ and the elements of $$B'$$ merely replaces one element $$z_\omega$$ from each $$\omega$$ with $$y_\omega$$, so by elementary linear algebra we know that this is an $$A$$-basis of $$N$$. That is, defining
 
-$$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab$$
+$$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab'$$
 
 we have $$N=N_1\oplus N_2$$.
 
@@ -260,7 +262,7 @@ sends $$x\otimes y$$ to $$xy$$.
 
 ## Symmetric Algebra and Symmetric Tensors
 
-Consider the canonical injection $$i: M \rightarrow \T(M)$$ and $$j: M \rightarrow \Sym(M)$$. Then by [§Tensor Algebras, ⁋Proposition 2](/en/math/multilinear_algebra/tensor_algebras#prop2), there exists a unique $$\mathbb{N}$$-graded $$A$$-algebra homomorphism $$s: \T(M)\mapsto \Sym(M)$$ such that $$j=s\circ i$$. Then this is the identity on $$\T^0(M)=\Sym^0(M)$$, and considering how multiplication is defined in $$\T(M)$$ and $$\Sym(M)$$, we see that $$s:\T(M) \rightarrow \Sym(M)$$ is exactly the *symmetrization*
+Consider the canonical injections $$i: M \rightarrow \T(M)$$ and $$j: M \rightarrow \Sym(M)$$. Then by [§Tensor Algebras, ⁋Proposition 2](/en/math/multilinear_algebra/tensor_algebras#prop2), there exists a unique $$\mathbb{N}$$-graded $$A$$-algebra homomorphism $$s: \T(M)\rightarrow \Sym(M)$$ such that $$j=s\circ i$$. Then this is the identity on $$\T^0(M)=\Sym^0(M)$$, and considering how multiplication is defined in $$\T(M)$$ and $$\Sym(M)$$, we see that $$s:\T(M) \rightarrow \Sym(M)$$ is exactly the *symmetrization*
 
 $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x$$
 
@@ -315,7 +317,7 @@ On the other hand, the symmetric algebra $$\S(M)$$ could be thought of as a repr
 2. There exists a linear map $$w: \Sym(M) \rightarrow N$$ satisfying $$u(x)=w(\gamma_n(x))$$.
 3. There exist a basis $$(e_i)_{i\in I}$$ of $$M$$ and an $$(\mathbb{N}^{(I)})_n$$-indexed family $$(y_\nu)$$ such that
     
-    $$u\left(\sum_{i\in I}\lambda_i e_i\right)=\sum_{\nu\in\mathbb{N}^{(I)})_n}\lambda^\nu y_\nu$$
+    $$u\left(\sum_{i\in I}\lambda_i e_i\right)=\sum_{\nu\in(\mathbb{N}^{(I)})_n}\lambda^\nu y_\nu$$
 
     . 
 4. For every basis $$(e_i)_{i\in I}$$ of $$M$$, one can find a family $$(y_\nu)$$ satisfying the formula in condition 3.
@@ -338,13 +340,13 @@ It is not hard to show that the composition of two polynomial mappings is again 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**Proposition 11**</ins> Assume all the conditions of [Proposition 9](#prop9) and additionally assume that $$y\mapsto n!.y$$ is an automorphism of $$N$$. Then for any $$u\in\Poly^n(M,N)$$, there exists a <em>unique</em> symmetric $$n$$-linear map $$v:M^n \rightarrow N$$ satisfying
+<ins id="prop11">**Proposition 11**</ins> Assume all the conditions of [Proposition 9](#prop9) and additionally assume that $$y\mapsto n!.y$$ is an automorphism of $$N$$. Then for any $$u\in\Poly^n(M,N)$$, there exists a *unique* symmetric $$n$$-linear map $$v:M^n \rightarrow N$$ satisfying
 
 $$u(x)=v(x,\ldots, x)$$
 
 . Moreover, for any $$x_1,\ldots, x_n\in M$$, explicitly
 
-$$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H\rvert}u\left(\sum_{i\in I} x_i\right)$$
+$$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H\rvert}u\left(\sum_{i\in H} x_i\right)$$
 
 holds.
 
@@ -371,17 +373,17 @@ $$\x_i\mapsto \x_{\sigma(i)}$$
 
 . Then the set of invariants for this action
 
-$$A[\x_1,\ldots, \x_n]^{S_n}=\{p\in A[x_1,\ldots, \x_n]\mid \sigma\cdot p=p\}$$
+$$A[\x_1,\ldots, \x_n]^{S_n}=\{p\in A[\x_1,\ldots, \x_n]\mid \sigma\cdot p=p\}$$
 
 can be considered. First we can check that they are generated as an $$A$$-algebra by the elements
 
-$$s_k=\sum_{\substack{H\subset \{1,\ldots, n\}\\\lvert H\rvert=k}}\prod_{i\in H} x_i$$
+$$s_k=\sum_{\substack{H\subset \{1,\ldots, n\}\\\lvert H\rvert=k}}\prod_{i\in H} \x_i$$
 
 . Explicitly,
 
 $$s_0=1,\quad s_1=\sum_{i=1}^n \x_i,\quad s_2=\sum_{1\leq i< j\leq n} \x_i\x_j,\quad \cdots \quad s_n=\x_1\cdots\x_n$$
 
-. Then by induction we can show that the $$s_i$$ are algebraically independent over $$A$$. That is, there is no $$u\in A[\x_0,\ldots, \x_n]$$ satisfying
+. Then by induction we can show that the $$s_i$$ are algebraically independent over $$A$$. That is, there is no nonzero $$u\in A[\x_0,\ldots, \x_n]$$ satisfying
 
 $$u(s_0,\ldots, s_n)=0$$
 
@@ -391,11 +393,11 @@ $$\x^\nu=\x_1^{\nu(1)}\cdots\x_n^{\nu(n)},\qquad 0\leq\nu(i)< i$$
 
 generate $$A[\x_1,\ldots, \x_n]$$ as an $$A[\x_1,\ldots, \x_n]^{S_n}$$-module. A useful formula in this process is the following identity in the polynomial ring $$A[\x_1,\ldots, \x_n, T_1, T_2]$$:
 
-$$\prod_{i=1}^n(T_1+\x_iT_2)=\sum_{k=0}^n T_1^{n-k}T_2\x_k$$
+$$\prod_{i=1}^n(T_1+\x_iT_2)=\sum_{k=0}^n T_1^{n-k}T_2^k s_k$$
 
 , which in particular gives the two formulas
 
-$$\prod_{i=1}^n(1+\x_iT)=\sum_{k=0}^n s_kT^k,\qquad \prod_{i=1}(\x-\x_i)=\sum_{k=0}^n(-1)^{n-k}s_{n-k}\x^k$$
+$$\prod_{i=1}^n(1+\x_iT)=\sum_{k=0}^n s_kT^k,\qquad \prod_{i=1}^n(\x-\x_i)=\sum_{k=0}^n(-1)^{n-k}s_{n-k}\x^k$$
 
 . Thinking of the second formula as a property similar to the relation between roots and coefficients, for any polynomial
 
@@ -413,6 +415,6 @@ $$E_f=A[\x_1,\ldots,\x_n]/\mathfrak{a},\qquad \mathfrak{a}=(s_k+(-1)^{k+1}a_k)$$
 
 $$\rho(f)(\x)=\prod_{i=1}^n (\x-\xi_i)$$
 
-holds, then there exists a unique ring homomorphism $$u: E_f \rightarrow B$$ such that $$\rho(a)=u(a.1)$$ and $$u(\x_i)=\xi_i$$.
+holds, then there exists a unique ring homomorphism $$u: E_f \rightarrow B$$ such that $$\rho(a)=u(a\cdot 1)$$ and $$u(\x_i)=\xi_i$$.
 
 </div>

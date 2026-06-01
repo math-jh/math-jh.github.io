@@ -143,7 +143,7 @@ $$i_k: N_k \rightarrow N_1+N_2,\qquad p_k:M/N_k \rightarrow M/(N_1+N_2)$$
 
 이며 $$\Delta, \Delta'$$는 각각 다음의 식
 
-$$\Delta(x)=(x,x),\qquad \Delta'(x+(N_1+N_2))=(x+N_1,x+N_2)$$
+$$\Delta(x)=(x,x),\qquad \Delta'(x+(N_1\cap N_2))=(x+N_1,x+N_2)$$
 
 으로 정의된 morphism들이다. 
 

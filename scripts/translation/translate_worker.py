@@ -58,8 +58,8 @@ KIMI_TIMEOUT_SEC      = 1500                 # 25min — large posts (>30KB) oft
 MAX_TRANSLATE_ATTEMPTS = 3                   # re-translate on LOSSY verify verdict, up to N tries
 MIN_KO_BODY_CHARS     = 300                  # skip stubs below this
 FAIL_RETRY_AFTER_SEC  = 24 * 3600
-POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # re-polish only if last polish > 14d ago
-GIT_DRIFT_MARGIN_SEC  = 60                   # ignore drift within this window of translation time
+POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # (unused) polish is now one-time; see Phase 3
+GIT_DRIFT_MARGIN_SEC  = 60                   # (unused) drift is now opt-in via `drift_needed: true`
 TRUNCATION_RATIO      = 0.60                 # min output/reference body length; below → fail
 
 # Local helper (label fix/audit)
@@ -167,6 +167,42 @@ def is_draft(ko_path: Path) -> bool:
             value = s.split(":", 1)[1].strip().strip('"').strip("'").lower()
             return value == "false"
     return False
+
+
+def ko_wants_drift(ko_path: Path) -> bool:
+    """True if KO frontmatter has `drift_needed: true`.
+
+    This is the explicit, opt-in signal that the author edited the KO source
+    and wants the EN re-translated. The author sets it by hand; the worker
+    clears it after a successful drift translation (see clear_drift_flag).
+    Replaces the old timestamp heuristic, which re-translated on *any* KO
+    commit and so clobbered manual post-translation fixes (typo corrections,
+    fidelity edits) with a fresh machine translation.
+    """
+    for line in _read_frontmatter(ko_path).splitlines():
+        s = line.strip()
+        if s.startswith("drift_needed"):
+            value = s.split(":", 1)[1].strip().strip('"').strip("'").lower()
+            return value == "true"
+    return False
+
+
+def clear_drift_flag(ko_path: Path) -> None:
+    """Strip the `drift_needed:` line from KO frontmatter after a drift run.
+
+    Consumes the opt-in flag so the post is not re-translated on every tick.
+    Only the frontmatter block is rewritten; the body is left byte-for-byte
+    intact. Because drift is now flag-driven (not timestamp-driven), the
+    resulting KO commit does not re-trigger drift.
+    """
+    text = ko_path.read_text(encoding="utf-8")
+    m = _FRONTMATTER_RE.match(text)
+    if not m:
+        return
+    fm_block, body = text[:m.end()], text[m.end():]
+    new_fm = re.sub(r"^drift_needed\s*:.*\n?", "", fm_block, flags=re.MULTILINE)
+    if new_fm != fm_block:
+        ko_path.write_text(new_fm + body, encoding="utf-8")
 
 
 TRANSLATION_SOURCE_TAG = "kimi-cli"
@@ -389,7 +425,7 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
         if find_en_counterpart(ko) is None:
             return ko, en_path_for_new_translation(ko), "pending"
 
-    # --- Phase 2: drift (git history says ko updated since our last translate) -
+    # --- Phase 2: drift (explicit opt-in via `drift_needed: true` in KO) ------
     for ko in ko_files:
         if is_draft(ko):
             continue
@@ -398,14 +434,14 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
             continue
         if not is_our_translation(existing_en):    # manual translation — leave alone
             continue
-        ko_commit_ts = git_last_commit_ts(ko)
-        if ko_commit_ts is None:
-            continue
-        translated_ts = _iso_to_ts(en_translation_meta(existing_en).get("translated_at", ""))
-        if ko_commit_ts > translated_ts + GIT_DRIFT_MARGIN_SEC:
+        if ko_wants_drift(ko):
             return ko, existing_en, "drift"
 
-    # --- Phase 3: polish (never-polished first, then oldest last_polished_at > 14d) ---
+    # --- Phase 3: polish (one-time; never-polished posts only) -----------
+    # A post is polished at most once. Once last_polished_at is set the post
+    # is terminal and is never re-polished, so manual post-polish corrections
+    # (KO source fixes, EN fidelity edits) are never clobbered by a later
+    # pass. Drift (Phase 2) still re-translates if the KO genuinely changes.
     polish_candidates = []
     for ko in ko_files:
         if is_draft(ko):
@@ -417,8 +453,8 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
             continue
         meta = en_translation_meta(existing_en)
         last_polished = _iso_to_ts(meta.get("last_polished_at", ""))
-        if last_polished > 0 and now - last_polished < POLISH_INTERVAL_SEC:
-            continue
+        if last_polished > 0:
+            continue                       # already polished → terminal, skip
         polish_candidates.append((last_polished, ko, existing_en))
 
     if polish_candidates:
@@ -1156,6 +1192,8 @@ def main() -> int:
                 log(f"LOSSY verdict persisted after {MAX_TRANSLATE_ATTEMPTS} attempts — accepting last")
 
         en_path.write_text(translated, encoding="utf-8")
+        if reason == "drift":
+            clear_drift_flag(ko_path)   # consume the opt-in flag; don't re-drift
         state["files"][key] = {
             "status": "done",
             "last_attempt_ts": time.time(),

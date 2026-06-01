@@ -170,14 +170,5 @@ Meanwhile, mirror symmetry takes many forms besides this $$\mathcal{D}$$-module 
 
 **References**
 
-**[Dub]** B. Dubrovin, *Geometry of $$2$$D topological field theories*, Integrable systems and quantum groups (Montecatini Terme, 1993), Lecture Notes in Math. **1620**, Springer, 1996, 120--348.  
-**[Giv]** A. Givental, *Equivariant Gromov-Witten invariants*, Internat. Math. Res. Notices **1996**, no. 13, 613--663.  
-**[Iri]** H. Iritani, *An integral structure in quantum cohomology and mirror symmetry for toric orbifolds*, Adv. Math. **222** (2009), no. 3, 1016--1079.  
-**[EHX]** T. Eguchi, K. Hori, C.-S. Xiong, *Gravitational quantum cohomology*, Internat. J. Modern Phys. A **12** (1997), no. 9, 1743--1782.  
-**[Rie]** K. Rietsch, *A mirror symmetric construction of $$qH^\ast_T(G/P)_{(q)}$$*, Adv. Math. **217** (2008), no. 6, 2401--2442.  
-**[MR]** R. Marsh, K. Rietsch, *The B-model connection and mirror symmetry for Grassmannians*, Adv. Math. **366** (2020), 107027.  
-**[LT]** T. Lam, N. Templier, *The mirror conjecture for minuscule flag varieties*, Duke Math. J. **173** (2024), no. 1, 75--175.  
-**[CCIT]** T. Coates, A. Corti, H. Iritani, H.-H. Tseng, *A mirror theorem for toric stacks*, Compos. Math. **151** (2015), no. 10, 1878--1912.  
-**[Kon]** M. Kontsevich, *Homological algebra of mirror symmetry*, Proc. Int. Congr. Math. (Zürich, 1994), vol. 1, Birkhäuser, 1995, 120--139.  
-**[SYZ]** A. Strominger, S.-T. Yau, E. Zaslow, *Mirror symmetry is $$T$$-duality*, Nuclear Phys. B **479** (1996), no. 1--2, 243--259.  
-**[CK]** D. A. Cox, S. Katz, *Mirror symmetry and algebraic geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.
+**[CK]** D. A. Cox, S. Katz, *Mirror symmetry and algebraic geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.  
+**[MS]** K. Hori, S. Katz, A. Klemm, R. Pandharipande, R. Thomas, C. Vafa, R. Vakil, E. Zaslow, *Mirror symmetry*, Clay Mathematics Monographs **1**, AMS, 2003.
