@@ -1,5 +1,6 @@
 ---
 title: "Existence and Uniqueness of the Determinant"
+description: "We classify permutations in the symmetric group as even or odd, and use properties of alternating multilinear maps to prove that the determinant exists uniquely."
 excerpt: "Existence and uniqueness proof of the determinant, and methods for computing it"
 
 categories: [Math / Linear Algebra]
@@ -15,10 +16,11 @@ date: 2022-08-12
 last_modified_at: 2022-08-12
 
 weight: 14
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T00:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T00:00:03+00:00
 ---
-In this post we show that the determinant exists uniquely, and examine methods for computing it.
+In this post we show that the determinant exists uniquely and examine methods for computing it.
 
 ## The Symmetric Group
 
@@ -99,7 +101,7 @@ and then show that $$D$$ is actually an alternating multilinear map. This is sim
 
 </details>
 
-Thus the determinant is well-defined, and we write it as $$\det$$. From the proof of the above proposition, we obtained an explicit formula for the determinant $$\det A$$. That is, denoting the $$i$$-th column vector of a matrix $$A$$ by $$A_i$$, the $$j$$-th component of $$A_i$$ is $$A_{ji}$$, and therefore
+Thus the determinant is well defined, and we write it as $$\det$$. From the proof of the above proposition, we obtained an explicit formula for the determinant $$\det A$$. That is, denoting the $$i$$-th column vector of a matrix $$A$$ by $$A_i$$, the $$j$$-th component of $$A_i$$ is $$A_{ji}$$, and therefore
 
 $$\det A=\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(n)n}\tag{2}$$
 
