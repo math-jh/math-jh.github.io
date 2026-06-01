@@ -1,5 +1,6 @@
 ---
 title: "Examples of Differentiable Manifolds"
+description: "This post explores various examples of differentiable manifolds defined on different topological spaces. It examines the standard smooth structure on Euclidean space, manifold structures on vector and matrix spaces, and open submanifolds."
 excerpt: "Various examples of differentiable manifolds"
 
 categories: [Math / Manifold]
@@ -14,10 +15,11 @@ date: 2022-06-09
 last_modified_at: 2022-06-09
 weight: 2
 toc: false
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-01T04:30:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T04:30:05+00:00
 ---
-In the previous post we saw two different ways of giving a manifold structure on $$\mathbb{R}$$. In this post we examine various examples of topological spaces equipped with manifold structures.
+In the previous post we examined two different ways of endowing $$\mathbb{R}$$ with a manifold structure. In this post we consider various examples of more general topological spaces equipped with manifold structures.
 
 Since a manifold is a structure that locally resembles $$\mathbb{R}^m$$, the simplest example is of course $$\mathbb{R}^m$$ itself.
 
@@ -27,32 +29,32 @@ Since a manifold is a structure that locally resembles $$\mathbb{R}^m$$, the sim
 
 </div>
 
-As in the examples from the previous post, it is also possible to give different differentiable structures on $$\mathbb{R}^m$$. 
+As in the examples from the previous post, it is also possible to equip $$\mathbb{R}^m$$ with different differentiable structures. 
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**Example 2**</ins> More generally, let $$V$$ be an $$m$$-dimensional $$\mathbb{R}$$-vector space. Choose a basis $$\mathcal{B}$$ of $$V$$, and consider the coordinate representation $$\varphi_\mathcal{B}:v\mapsto [v]_{\mathcal{B}}$$ with respect to $$\mathcal{B}$$. This linear map is an isomorphism, hence a bijection, and therefore we can transfer both the topology and the differentiable structure of $$\mathbb{R}^m$$ to $$V$$ via it. Transferring the differentiable structure of $$\mathbb{R}^m$$ to $$V$$ via $$\varphi_\mathcal{B}$$ is the same as defining a differentiable structure on $$(V,\mathcal{B})$$ through a single coordinate system $$(V,\varphi_{\mathcal{B}})$$. 
+<ins id="ex2">**Example 2**</ins> More generally, let $$V$$ be an $$m$$-dimensional $$\mathbb{R}$$-vector space. Choose a basis $$\mathcal{B}$$ of $$V$$, and consider the coordinate representation $$\varphi_\mathcal{B}:v\mapsto [v]_{\mathcal{B}}$$ with respect to $$\mathcal{B}$$. This linear map is an isomorphism, hence a bijection, and therefore we can transfer both the topology and the differentiable structure of $$\mathbb{R}^m$$ to $$V$$ via it. Transferring the differentiable structure of $$\mathbb{R}^m$$ to $$V$$ via $$\varphi_\mathcal{B}$$ is the same as defining a differentiable structure on $$(V,\mathcal{B})$$ through the single coordinate system $$(V,\varphi_{\mathcal{B}})$$. 
 
-Of course, these functions themselves depend on the choice of basis, but the topology and differentiable structure defined in this way are independent of the choice of basis.  
+Of course, these functions themselves depend on the choice of basis, but the topology and differentiable structure defined in this way are independent of that choice.  
 
-First, a norm on $$V$$ defined in this manner gives an equivalent metric structure regardless of the choice of basis, so the vector spaces $$(V,\mathcal{B})$$ and $$(V,\mathcal{C})$$ with different bases $$\mathcal{B}$$ and $$\mathcal{C}$$ have the same topological structure. 
+First, any norm on $$V$$ defined in this manner yields an equivalent metric structure regardless of the choice of basis, so the vector spaces $$(V,\mathcal{B})$$ and $$(V,\mathcal{C})$$ with different bases $$\mathcal{B}$$ and $$\mathcal{C}$$ have the same topological structure. 
 Moreover, they also have the same differentiable structure. To see this, it suffices to show that the transition maps $$\varphi_\mathcal{B}\circ\varphi_\mathcal{C}^{-1}$$ and $$\varphi_\mathcal{C}\circ\varphi_\mathcal{B}^{-1}$$ for $$(V,\varphi_\mathcal{B})$$ and $$(V,\varphi_\mathcal{C})$$ are both $$C^\infty$$; but these are in fact matrices, and hence polynomials, so they are obviously $$C^\infty$$.
 
-As special cases of this, 
+As special cases of this construction, 
 
-1. The set $$\Mat_n(\mathbb{R})$$ of $$n\times n$$ matrices is an $$n^2$$-dimensional vector space, so it has a differentiable structure.
-2. $$\mathbb{C}^n$$ can be regarded as a $$2n$$-dimensional $$\mathbb{R}$$-vector space, so it also has a differentiable structure.
+1. the set $$\Mat_n(\mathbb{R})$$ of $$n\times n$$ matrices is an $$n^2$$-dimensional vector space, so it carries a differentiable structure;
+2. $$\mathbb{C}^n$$ can be regarded as a $$2n$$-dimensional $$\mathbb{R}$$-vector space, so it also carries a differentiable structure.
 
 </div>
 
-To give further examples, we first need to define the following.
+To give further examples, we first need the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> Let $$M$$ be a manifold. Give an open subset $$V$$ of $$M$$ the following two structures
+<ins id="def3">**Definition 3**</ins> Let $$M$$ be a manifold. Give an open subset $$V$$ of $$M$$ the following two structures:
 
 1. the subspace topology inherited from the topology of $$M$$,
-2. for the differentiable structure $$\mathcal{A}$$ defined on $$M$$, 
+2. for the differentiable structure $$\mathcal{A}$$ on $$M$$, 
     
     $$\mathcal{A}_V=\{(U_\alpha\cap V,\varphi_\alpha|_{U_\alpha\cap V})\mid(U_\alpha,\varphi_\alpha)\in\mathcal{A}\}$$
 
@@ -60,11 +62,11 @@ then $$V$$ becomes a manifold of the same dimension as $$M$$. We call such a man
 
 </div>
 
-Of course, for this definition to be well defined, the subspace topology must satisfy the locally Euclidean, second countable, and Hausdorff conditions, and the elements of $$\mathcal{A}_V$$ must be pairwise $$C^\infty$$-compatible. However, the Hausdorff and second countability properties are both preserved under the subspace topology, and the locally Euclidean property also follows from the fact that $$V$$ is an open set. Moreover, the transition maps between elements of $$\mathcal{A}_V$$ are restrictions of $$C^\infty$$ functions, so they are also $$C^\infty$$.
+Of course, for this definition to be well defined, the subspace topology must satisfy the locally Euclidean, second countable, and Hausdorff conditions, and the elements of $$\mathcal{A}_V$$ must be pairwise $$C^\infty$$-compatible. However, the Hausdorff and second countability properties are both preserved by the subspace topology, and the locally Euclidean property also follows from the fact that $$V$$ is an open set. Moreover, the transition maps between elements of $$\mathcal{A}_V$$ are restrictions of $$C^\infty$$ functions, so they are also $$C^\infty$$.
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**Example 4**</ins> Among the elements of $$\Mat_{n}(\mathbb{R})$$, the set $$\GL(n,\mathbb{R})$$ of invertible $$n\times n$$ matrices is the collection of matrices satisfying $$\det(A)\neq 0$$. Regarding the determinant $$\det$$ as a function from $$\Mat_n(\mathbb{R})$$ to $$\mathbb{R}$$, this function is a polynomial, hence continuous, and therefore $$\GL(n,\mathbb{R})$$, being the preimage of the open set $$\mathbb{R}\setminus\{0\}$$, is also an open subset of $$\Mat_n(\mathbb{R})$$. Thus $$\GL(n,\mathbb{R})$$ is an $$n^2$$-dimensional manifold. 
+<ins id="ex4">**Example 4**</ins> Among the elements of $$\Mat_{n}(\mathbb{R})$$, the set $$\GL(n,\mathbb{R})$$ of invertible $$n\times n$$ matrices consists of those satisfying $$\det(A)\neq 0$$. Regarding the determinant $$\det$$ as a function from $$\Mat_n(\mathbb{R})$$ to $$\mathbb{R}$$, this function is a polynomial, hence continuous, and therefore $$\GL(n,\mathbb{R})$$, being the preimage of the open set $$\mathbb{R}\setminus\{0\}$$, is also an open subset of $$\Mat_n(\mathbb{R})$$. Thus $$\GL(n,\mathbb{R})$$ is an $$n^2$$-dimensional manifold. 
 
 On the other hand, $$\GL(n,\mathbb{R})$$ is the disjoint union of the matrices with $$\det A>0$$ and those with $$\det A<0$$, and each of these sets is open for the same reason as above, so $$\GL(n,\mathbb{R})$$ is not connected.
 
@@ -72,7 +74,7 @@ On the other hand, $$\GL(n,\mathbb{R})$$ is the disjoint union of the matrices w
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**Example 5**</ins> For an open set $$U\subset\mathbb{R}^m$$ and a $$C^\infty$$ function $$f:U\rightarrow\mathbb{R}^n$$, define the *graph* $$\graph(f)$$ of $$f$$ to be the following set
+<ins id="ex5">**Example 5**</ins> For an open set $$U\subset\mathbb{R}^m$$ and a $$C^\infty$$ function $$f:U\rightarrow\mathbb{R}^n$$, define the *graph* $$\graph(f)$$ of $$f$$ to be the set
 
 $$\graph(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n\mid \text{$x\in U$, $y=f(x)$}\}$$
 
@@ -80,11 +82,11 @@ Then $$f:U\rightarrow\graph(f)$$ and the projection $$\pr:\graph(f)\rightarrow U
 
 </div>
 
-In all the examples so far we have given the differentiable structure via an atlas consisting of a single chart, which means that the manifold resembles $$\mathbb{R}^m$$ not only locally but also globally, so this is not a very interesting situation. 
+In all the examples so far we have specified the differentiable structure via an atlas consisting of a single chart, which means that the manifold resembles $$\mathbb{R}^m$$ not only locally but also globally; this is therefore not a particularly interesting situation. 
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**Example 6**</ins> Consider the $$n$$-dimensional sphere $$S^n$$ in $$\mathbb{R}^{n+1}$$. If we give $$S^n$$ the subspace topology, the Hausdorff and second countability conditions are both satisfied. However, since $$S^n$$ is not an open set, showing the locally Euclidean condition is more difficult than in the case of an open submanifold. 
+<ins id="ex6">**Example 6**</ins> Consider the $$n$$-dimensional sphere $$S^n$$ in $$\mathbb{R}^{n+1}$$. Endowing $$S^n$$ with the subspace topology, the Hausdorff and second countability conditions are both satisfied. However, since $$S^n$$ is not an open set, verifying the locally Euclidean condition is more involved than in the case of an open submanifold. 
 
 Pick any $$p\in S^n$$. Since $$0\not\in S^n$$, some coordinate of $$p$$ must be nonzero. Without loss of generality, let this coordinate be the $$(n+1)$$-st coordinate, and assume it is positive. That is, $$p$$ belongs to the set
 
@@ -96,7 +98,7 @@ From the picture it is almost obvious that $$U_{n+1}^+$$ and $$D^n$$ are homeomo
 <cap markdown="1">[Lee], p.6. Fig. 1.3.</cap>
 
 
-To write this down rigorously with formulas, define a function $$f:D^n\rightarrow\mathbb{R}$$ for each point $$x=(x^1,\ldots, x^n)$$ in $$D^n$$ by the formula
+To write this down rigorously, define a function $$f:D^n\rightarrow\mathbb{R}$$ for each point $$x=(x^1,\ldots, x^n)$$ in $$D^n$$ by
 
 $$f(x)=\sqrt{1-\lvert x\rvert^2}$$
 
@@ -114,11 +116,11 @@ and subsequently under $$\varphi_j^\pm$$,
 
 $$(x^1, x^2, \ldots, x^{i-1}, \pm \sqrt{1-\lvert x\rvert^2}, x^i, \ldots, x^n)\mapsto (x^1, x^2, \ldots, \hat{x}^j, \ldots, x^{i-1},  \pm \sqrt{1-\lvert x\rvert^2}, x^i, \ldots, x^n)$$
 
-Here $$\hat{x}^j$$ means that the $$j$$-th component is omitted. In this case, since each component of the right-hand side is a $$C^\infty$$ function of the $$x^i$$'s, the composition $$(\varphi_j^{\pm})\circ(\varphi_i^\pm)^{-1}$$ is $$C^\infty$$, and similarly one can check that $$(\varphi_i^{\pm})\circ(\varphi_j^\pm)^{-1}$$ is also $$C^\infty$$. Therefore the above collection $$\mathcal{A}$$ defines a differentiable structure on $$S^n$$.
+Here $$\hat{x}^j$$ means that the $$j$$-th component is omitted. Since each component of the right-hand side is a $$C^\infty$$ function of the $$x^i$$'s, the composition $$(\varphi_j^{\pm})\circ(\varphi_i^\pm)^{-1}$$ is $$C^\infty$$, and similarly one can check that $$(\varphi_i^{\pm})\circ(\varphi_j^\pm)^{-1}$$ is also $$C^\infty$$. Therefore the above collection $$\mathcal{A}$$ defines a differentiable structure on $$S^n$$.
 
 </div>
 
-The differentiable structure defined on $$S^n$$ is a typical example of a manifold. The next example gives the (same) differentiable structure on $$S^n$$ by a method different from the above, using the differential, and this example can be further generalized to give a manifold structure. 
+The differentiable structure defined on $$S^n$$ is a typical example of a manifold. The next example endows $$S^n$$ with the (same) differentiable structure by a different method, using the differential, and this construction can be further generalized to yield manifold structures. 
 
 <div class="example" markdown="1">
 
@@ -130,7 +132,7 @@ is never zero; that is, for each point $$a\in M$$ there exists some $$i$$ such t
 
 $$x^i=f(x^1,\ldots, \hat{x}^i,\ldots, x^n)$$
 
-Now, just as in [Example 6](#ex6), if we give $$M$$ the subspace topology and construct charts using the $$(U, f)$$ just made, we can verify that $$M$$ becomes an $$(n-1)$$-dimensional manifold.
+Now, just as in [Example 6](#ex6), if we give $$M$$ the subspace topology and construct charts using the $$(U, f)$$ just obtained, we can verify that $$M$$ becomes an $$(n-1)$$-dimensional manifold.
 
 </div>
 
