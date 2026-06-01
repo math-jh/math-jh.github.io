@@ -1,5 +1,6 @@
 ---
 title: "Basis"
+description: "We extend the notions of linear independence and basis from vector spaces to modules, and show that every module is isomorphic to a quotient of a free module."
 excerpt: "Definition of free modules, basis, and the universal property"
 
 categories: [Math / Multilinear Algebra]
@@ -13,18 +14,19 @@ sidebar:
 date: 2024-08-18
 last_modified_at: 2024-09-23
 weight: 3
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-01T14:30:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T14:30:05+00:00
 ---
 For an arbitrary set $$X$$, we saw that the free $$A$$-module defined by $$X$$ is given by the formula
 
 $$F(X)=\bigoplus_{x\in X} A$$
 
-([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 3](/en/math/algebraic_structures/operations_of_modules#prop3)). In this post we examine the properties of free $$A$$-modules in a bit more detail.
+([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 3](/en/math/algebraic_structures/operations_of_modules#prop3)). In this post we examine the properties of free $$A$$-modules in more detail.
 
 ## Basis
 
-Now let an arbitrary $$A$$-module $$M$$ be given, and let a family $$(x_i)_{i\in I}$$ of elements of $$M$$ be given. If we define a function $$e:I \rightarrow M$$ by $$e(i)=x_i$$, then by the adjunction $$F\dashv U$$ there exists a unique $$A$$-linear map $$\varepsilon:F(I) \rightarrow M$$. If $$(x_i)_{i\in I}$$ is a generating set of $$M$$, then $$\varepsilon$$ must be surjective, and the converse also holds. In a similar context we define the following.
+Now let an arbitrary $$A$$-module $$M$$ be given, and let a family $$(x_i)_{i\in I}$$ of elements of $$M$$ be given. If we define a function $$e:I \rightarrow M$$ by $$e(i)=x_i$$, then by the adjunction $$F\dashv U$$ there exists a unique $$A$$-linear map $$\varepsilon:F(I) \rightarrow M$$. If $$(x_i)_{i\in I}$$ is a generating set of $$M$$, then $$\varepsilon$$ must be surjective, and the converse also holds. In this spirit we make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -38,9 +40,9 @@ A family that is not a free family is called a *related family*.
 
 </div>
 
-A free family generalizes the notion of linear independence in vector spaces. That is, if $$A$$ is a field and $$M$$ is a vector space defined over $$A$$, then a family $$(x_i)_{i\in I}$$ of elements of $$M$$ being a free family is equivalent to the $$x_i$$ being linearly independent. ([\[Linear Algebra\] §Basis of a Vector Space, ⁋Definition 5](/en/math/linear_algebra/basis#def5)) From this perspective, the elements of a related family are said to be *linearly dependent* with one another.
+A free family generalizes the notion of linear independence in vector spaces. That is, if $$A$$ is a field and $$M$$ is a vector space over $$A$$, then a family $$(x_i)_{i\in I}$$ of elements of $$M$$ being a free family is equivalent to the $$x_i$$ being linearly independent. ([\[Linear Algebra\] §Basis of a Vector Space, ⁋Definition 5](/en/math/linear_algebra/basis#def5)) From this perspective, the elements of a related family are said to be *linearly dependent*.
 
-On the other hand, any $$A$$-module $$M$$ always has a generating set. This is because at least the collection of all elements of $$M$$ generates $$M$$. From this we obtain the following.
+On the other hand, any $$A$$-module $$M$$ always has a generating set, since at minimum the collection of all elements of $$M$$ generates $$M$$. From this we obtain the following.
 
 <div class="proposition" markdown="1">
 
@@ -50,11 +52,11 @@ On the other hand, any $$A$$-module $$M$$ always has a generating set. This is b
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-For an arbitrary $$A$$-module $$M$$, let $$X$$ be a generating set of $$M$$. Then there exists a surjective $$A$$-linear map $$\varepsilon:F(X) \rightarrow M$$ between $$F(X)$$ and $$M$$. In this case, since the kernel of $$\varepsilon$$ is an $$A$$-module, we have $$M\cong F(X)/\ker\varepsilon$$.
+For an arbitrary $$A$$-module $$M$$, let $$X$$ be a generating set of $$M$$. Then there exists a surjective $$A$$-linear map $$\varepsilon:F(X) \rightarrow M$$. Since the kernel of $$\varepsilon$$ is an $$A$$-module, we have $$M\cong F(X)/\ker\varepsilon$$.
 
 </details>
 
-$$M$$ being a finitely generated $$A$$-module is equivalent to being able to choose such a family to be finite, and in this case the free $$A$$-module in the above proof can also be chosen to have a finite basis. As a more special case we define the following.
+That $$M$$ is a finitely generated $$A$$-module is equivalent to being able to choose such a family to be finite, and in this case the free $$A$$-module in the above proof can also be chosen to have a finite basis. As a more special case we define the following.
 
 <div class="definition" markdown="1">
 
@@ -70,7 +72,7 @@ First we prove the following general proposition.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> Let $$M=\bigoplus_{i\in I} N_i$$, and let $$I$$ be an infinite set and $$N_i\neq 0$$. Then for any generating set $$X$$ of $$E$$, we have $$\card X\geq \card I$$.
+<ins id="prop4">**Proposition 4**</ins> Let $$M=\bigoplus_{i\in I} N_i$$, let $$I$$ be an infinite set, and let $$N_i\neq 0$$. Then for any generating set $$X$$ of $$M$$, we have $$\card X\geq \card I$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -85,7 +87,7 @@ In the situation of [Definition 3](#def3), any element of $$M$$ can be written i
 - $$(x_i)_{i\in I}$$ being a generating family of $$M$$ is equivalent to $$M=\sum_{i\in I}Ax_i$$.
 - $$(x_i)_{i\in I}$$ being a basis of $$M$$ is equivalent to the above sum $$\sum_{i\in I}Ax_i$$ being a direct sum and each $$x_i$$ being a free element.
 
-Restricting [Proposition 4](#prop4) to the case where each $$N_i$$ is monogenous and a free element, we see that if a free $$A$$-module $$M$$ has an infinite basis, then all bases have the same cardinality. However, this does not always hold when $$M$$ has a finite basis.
+Restricting [Proposition 4](#prop4) to the case where each $$N_i$$ is monogenous and a free element, we see that if a free $$A$$-module $$M$$ has an infinite basis, then all bases of $$M$$ have the same cardinality. However, this need not hold when $$M$$ has a finite basis.
 
 <div class="definition" markdown="1">
 
@@ -99,7 +101,7 @@ By [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> Let a ring $$A$$ be such that there exist a suitable field $$\mathbb{K}$$ and a homomorphism $$\phi: A \rightarrow \mathbb{K}$$. Then $$A$$ has the IBN property.
+<ins id="prop6">**Proposition 6**</ins> Let $$A$$ be a ring for which there exist a suitable field $$\mathbb{K}$$ and a homomorphism $$\phi: A \rightarrow \mathbb{K}$$. Then $$A$$ has the IBN property.
 
 </div>
 <details class="proof" markdown="1">
@@ -117,7 +119,7 @@ holds. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/m
 
 </details>
 
-In [\[Linear Algebra\] §Infinite-Dimensional Vector Spaces<sup>†</sup>, ⁋Theorem 4](/en/math/linear_algebra/infinite_dimensional_vector_space#thm4) we did not use the property that $$\mathbb{K}$$ is commutative, so the above proposition also holds more generally if we replace $$\mathbb{K}$$ by a division ring $$D$$. On the other hand, any commutative ring admits $$A \rightarrow \Frac A$$, so it always has the IBN property.
+In [\[Linear Algebra\] §Infinite-Dimensional Vector Spaces<sup>†</sup>, ⁋Theorem 4](/en/math/linear_algebra/infinite_dimensional_vector_space#thm4) we did not use the property that $$\mathbb{K}$$ is commutative, so the above proposition also holds more generally if we replace $$\mathbb{K}$$ by a division ring $$D$$. On the other hand, any commutative ring admits the canonical map $$A \rightarrow \Frac A$$, so it always has the IBN property.
 
 <div class="definition" markdown="1">
 
@@ -125,13 +127,13 @@ In [\[Linear Algebra\] §Infinite-Dimensional Vector Spaces<sup>†</sup>, ⁋Th
 
 </div>
 
-For convenience, when a basis $$(x_i)_{i\in I}$$ of $$M$$ is given, we denote the free module $$F(I)$$ obtained from it by $$A^{\oplus I}$$, and especially if $$I$$ is a finite set we also denote it by $$A^m$$. These notations present a notational problem if used when there is no guarantee that $$A$$ has the IBN property, but we overlook this with a slight abuse of notation.
+For convenience, when a basis $$(x_i)_{i\in I}$$ of $$M$$ is given, we denote the free module $$F(I)$$ obtained from it by $$A^{\oplus I}$$, and in particular if $$I$$ is a finite set we also denote it by $$A^m$$. These notations present a notational problem if used when there is no guarantee that $$A$$ has the IBN property, but we overlook this with a slight abuse of notation.
 
-One of the important properties of a basis is that the values of a function at the elements of a basis completely determine the linear map. To verify this, fix a free $$A$$-module $$M$$ and let $$(x_i)_{i\in I}$$ be a basis of $$M$$. That is, the function $$e_i: i\mapsto x_i$$ between sets induces an $$A$$-module isomorphism $$\varepsilon:F(I)\cong M$$. On the other hand, let another $$A$$-module $$N$$ be given, and if a family $$(y_i)_{i\in I}$$ of elements of $$N$$ is given, then the functions $$e_i': i\mapsto y_i$$ induce $$\varepsilon': F(I) \rightarrow N$$. Then there exists a unique $$A$$-linear map $$u:M \rightarrow N$$ satisfying $$u(x_i)=y_i$$, and explicitly this can be written as $$u=\varepsilon'\circ\varepsilon^{-1}$$.
+One of the important properties of a basis is that the values of a linear map at the elements of a basis completely determine the map. To verify this, fix a free $$A$$-module $$M$$ and let $$(x_i)_{i\in I}$$ be a basis of $$M$$. That is, the function $$e: i\mapsto x_i$$ between sets induces an $$A$$-module isomorphism $$\varepsilon:F(I)\cong M$$. On the other hand, let another $$A$$-module $$N$$ be given, and suppose a family $$(y_i)_{i\in I}$$ of elements of $$N$$ is given. Then the function $$e': i\mapsto y_i$$ induces $$\varepsilon': F(I) \rightarrow N$$. Hence there exists a unique $$A$$-linear map $$u:M \rightarrow N$$ satisfying $$u(x_i)=y_i$$, and explicitly this is given by $$u=\varepsilon'\circ\varepsilon^{-1}$$.
 
 ## Basis of an Algebra
 
-Now let us look at the basis of an algebra. In the [Linear Algebra](/en/linear_algebra) category our main interest is in $$A$$-modules, but when we examine the endomorphism algebra of a fixed $$A$$-module we are led to consider $$A$$-algebras.
+Now let us look at bases of algebras. In the [Linear Algebra](/en/linear_algebra) category our main interest is in $$A$$-modules, but when we examine the endomorphism algebra of a fixed $$A$$-module we are led to consider $$A$$-algebras.
 
 Recall that when we discussed $$A$$-algebras earlier, we always assumed that $$A$$ is commutative.
 
@@ -143,7 +145,7 @@ Recall that when we discussed $$A$$-algebras earlier, we always assumed that $$A
 
 It should be noted that while a basis of $$E$$ is minimal when generating $$E$$ as an $$A$$-module, a smaller set may suffice to generate it as an $$A$$-algebra. For example, to generate the polynomial algebra $$A[\x]$$ as an $$A$$-module we need the elements $$1,\x,\x^2,\cdots$$, but to generate it as an $$A$$-algebra it is enough to have only $$1$$ and $$\x$$.
 
-In any case, a basis $$(e_i)_{i\in I}$$ of $$E$$ still contains all the information about $$E$$; in particular, the information about the multiplication defined on $$E$$ can be described using the basis elements. For any $$i,j\in I$$, since $$e_ie_j$$ is also an element of $$E$$, it can be expressed as the sum
+In any case, a basis $$(e_i)_{i\in I}$$ of $$E$$ still contains all the information about $$E$$; in particular, the multiplication defined on $$E$$ can be described using the basis elements. For any $$i,j\in I$$, since $$e_ie_j$$ is also an element of $$E$$, it can be expressed as the sum
 
 $$e_ie_j=\sum_{k\in I} \gamma_{ij}^k e_k$$
 

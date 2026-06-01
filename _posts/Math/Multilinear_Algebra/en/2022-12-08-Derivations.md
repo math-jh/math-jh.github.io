@@ -1,5 +1,6 @@
 ---
 title: "Derivations"
+description: "This post introduces the notion of a differential defined over a graded algebra, developing the sign rule via a commutation factor and the Leibniz rule for products."
 excerpt: "Differential module"
 
 categories: [Math / Multilinear Algebra]
@@ -13,8 +14,9 @@ sidebar:
 date: 2022-12-12
 last_modified_at: 2024-10-16
 weight: 120
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T14:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T14:00:04+00:00
 ---
 ## Definition
 
