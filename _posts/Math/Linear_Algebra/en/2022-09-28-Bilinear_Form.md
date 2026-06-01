@@ -1,5 +1,6 @@
 ---
 title: "Bilinear Forms"
+description: "We review the dual space of a finite-dimensional vector space and the natural isomorphism, then summarize the definition of bilinear forms along with symmetry, alternativity, and nondegeneracy conditions."
 excerpt: "Bilinear forms and dual spaces"
 
 categories: [Math / Linear Algebra]
@@ -15,24 +16,25 @@ date: 2022-09-28
 last_modified_at: 2022-09-28
 
 weight: 116
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T02:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T02:00:04+00:00
 ---
 In the previous post, we defined the dual space $$V^\ast$$ of a vector space $$V$$, and saw that if $$V$$ is finite-dimensional, then $$V$$ is isomorphic to $$V^{\ast\ast}$$, the double dual of $$V^\ast$$. The key fact used in this process was that a non-degenerate pairing $$\langle -,-\rangle:V\times W \rightarrow \mathbb{K}$$ defines injective linear maps from $$V$$ to $$W^\ast$$ and from $$W$$ to $$V^\ast$$. We applied this fact to the canonical pairing
 
 $$\langle -,-\rangle:V\times V^\ast\rightarrow \mathbb{K};\quad (v,f)\mapsto f(v)$$
 
-and, considering dimensions, saw that $$V$$ and $$V^{\ast\ast}$$ are isomorphic. To describe this induced map $$V\rightarrow V^{\ast\ast}$$, we did not need to choose a basis of $$V$$.
+and, comparing dimensions, saw that $$V$$ and $$V^{\ast\ast}$$ are isomorphic. To describe this induced map $$V\rightarrow V^{\ast\ast}$$, no choice of basis for $$V$$ was necessary.
 
-Meanwhile, we mentioned at the beginning of the previous post that $$V$$ and $$V^\ast$$ also have the same dimension, but unlike the natural isomorphism $$V\rightarrow V^{\ast\ast}$$ above, this requires choosing a specific basis $$\{x_1,\ldots, x_n\}$$ of $$V$$, then taking its dual basis $$\{\xi^1,\ldots, \xi^n\}$$, and defining the map via $$x_i\mapsto \xi^i$$.
+Meanwhile, we mentioned at the beginning of the previous post that $$V$$ and $$V^\ast$$ also have the same dimension; unlike the natural isomorphism $$V\rightarrow V^{\ast\ast}$$ above, however, this requires choosing a specific basis $$\{x_1,\ldots, x_n\}$$ of $$V$$, then taking its dual basis $$\{\xi^1,\ldots, \xi^n\}$$, and defining the map via $$x_i\mapsto \xi^i$$.
 
 ## Bilinear Forms
 
-Now we focus on the case $$V=W$$.
+We now focus on the case $$V=W$$.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> For any pairing $$\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$$, if $$W=V$$, we call this pairing a *bilinear form* defined on $$V$$. We say that $$\langle -,-\rangle$$ is a *non-degenerate bilinear form* if it is non-degenerate as a pairing.
+<ins id="def1">**Definition 1**</ins> For any pairing $$\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$$, if $$W=V$$, we call this pairing a *bilinear form* on $$V$$. We say that $$\langle -,-\rangle$$ is a *non-degenerate bilinear form* if it is non-degenerate as a pairing.
 
 </div>
 
@@ -40,7 +42,7 @@ Suppose a bilinear form on $$V$$ is given. Then by the same argument as above, w
 
 $$v\mapsto \langle v,-\rangle,\qquad v\mapsto \langle -,v\rangle$$
 
-In general these two need not be equal, but we can make the following definition.
+In general these two need not coincide, but we can make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -62,7 +64,7 @@ Let a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ be given, and conside
 
 $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
-For convenience, we henceforth assume that $$\langle -,-\rangle$$ is a symmetric non-degenerate bilinear form from the outset. Then $$\langle -,-\rangle$$ has the isomorphism defined by equation (1), which can be written as follows.
+For convenience, we henceforth assume that $$\langle -,-\rangle$$ is a symmetric non-degenerate bilinear form from the outset. Then $$\langle -,-\rangle$$ yields the isomorphism defined by equation (1), which can be expressed as follows.
 
 <div class="proposition" markdown="1">
 
@@ -70,15 +72,13 @@ For convenience, we henceforth assume that $$\langle -,-\rangle$$ is a symmetric
 
 $$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 
-holds.
-
 </div>
 
-Then in particular we can bring the notion of orthogonal complement defined in the previous post into $$V$$. That is, we define as follows.
+In particular, we can now import the notion of orthogonal complement from the previous post into $$V$$. That is, we define as follows.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> Consider a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-degenerate bilinear form $$\langle -,-\rangle$$. For any $$v\in V$$, the set of all $$w\in V$$ satisfying $$\langle w,v\rangle=0$$ is called the *orthogonal complement* of $$v$$, denoted $$v^\perp$$. More generally, for any set $$S$$, we define the set
+<ins id="def4">**Definition 4**</ins> Consider a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-degenerate bilinear form $$\langle -,-\rangle$$. For any $$v\in V$$, the set of all $$w\in V$$ satisfying $$\langle w,v\rangle=0$$ is called the *orthogonal complement* of $$v$$, denoted $$v^\perp$$. More generally, for any set $$S$$, we define
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
@@ -86,9 +86,9 @@ as the orthogonal complement of $$S$$.
 
 </div>
 
-Of course, even if $$\langle -,-\rangle$$ were not symmetric, we could make the same definition, and in fact, once we choose whether to send $$v$$ to $$\langle -,v\rangle$$ or to $$\langle v,-\rangle$$ and stick to this choice consistently, we obtain the same result. In any case, to avoid possible confusion we maintain the condition that $$\langle -,-\rangle$$ is symmetric.
+Of course, even if $$\langle -,-\rangle$$ were not symmetric, we could adopt the same definition; in fact, once we choose whether to send $$v$$ to $$\langle -,v\rangle$$ or to $$\langle v,-\rangle$$ and consistently maintain that choice, we obtain the same result. In any case, to avoid possible confusion we retain the assumption that $$\langle -,-\rangle$$ is symmetric.
 
-The vector $$w\in V$$ uniquely determines $$f\in V^\ast$$ by [Corollary 3](#cor3), and the above definition means that if $$f$$ obtained in this way is the orthogonal complement of $$v$$ in the sense of [§Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7), then we think of $$w$$ as being orthogonal to $$v$$, and regard the collection of such $$w$$ as the orthogonal complement. Through this process, we can bring all the results of [§Dual Space](/en/math/linear_algebra/dual_space) into $$V$$. In the remainder of this post, we examine this process in detail.
+By [Corollary 3](#cor3), a vector $$w\in V$$ uniquely determines $$f\in V^\ast$$, and the above definition means that if the $$f$$ so obtained is the orthogonal complement of $$v$$ in the sense of [§Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7), then we regard $$w$$ as orthogonal to $$v$$, and we regard the collection of such $$w$$ as the orthogonal complement. Through this process, we can bring all the results of [§Dual Space](/en/math/linear_algebra/dual_space) into $$V$$. In the remainder of this post, we examine this process in detail.
 
 First, suppose symmetric non-degenerate bilinear forms $$\langle -,-\rangle_V$$ and $$\langle -,-\rangle_W$$ are given on two finite-dimensional $$\mathbb{K}$$-vector spaces $$V$$ and $$W$$. Also, for convenience of discussion, let us denote the isomorphisms determined by these bilinear forms as
 
@@ -145,7 +145,7 @@ In particular, the subspaces
 
 $$\ker L, \quad(\ker L)^\perp, \quad\im L,\quad(\im L)^\perp$$
 
-of $$V$$ and $$W$$ obtained from 3 and 4 are sometimes called the *four fundamental subspaces* determined by $$L$$. In particular, they satisfy
+of $$V$$ and $$W$$ obtained from 3 and 4 are sometimes called the *four fundamental subspaces* determined by $$L$$. They satisfy
 
 $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
@@ -159,11 +159,11 @@ Now consider a $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-d
 
 $$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
 
-then we say that the *characteristic* of $$\mathbb{K}$$ is $$p$$, and write $$\ch \mathbb{K}=p$$. If there is no natural number $$p$$ satisfying the above formula, we consider $$\mathbb{K}$$ to have characteristic 0.
+then we say that the *characteristic* of $$\mathbb{K}$$ is $$p$$, and write $$\ch \mathbb{K}=p$$. If no natural number $$p$$ satisfies the above formula, we consider $$\mathbb{K}$$ to have characteristic 0.
 
 </div>
 
-For example, $$\mathbb{R}$$ has characteristic 0. If we define addition and multiplication on $$\mathbb{F}_2=\{0,1\}$$ by the formulas
+For example, $$\mathbb{R}$$ has characteristic 0. If we define addition and multiplication on $$\mathbb{F}_2=\{0,1\}$$ by
 
 $$0+0=0,\quad 0+1=1,\quad 1+0=1,\quad 1+1=2$$
 
@@ -181,15 +181,15 @@ respectively, then we can verify that $$\mathbb{F}_2$$ satisfies the field axiom
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, we prove a simple lemma. For an arbitrarily fixed $$v\in V$$, there exists $$u\in V$$ such that $$\langle u,v\rangle\neq 0$$. Then
+First, we prove a simple lemma. For any fixed $$v\in V$$, there exists $$u\in V$$ such that $$\langle u,v\rangle\neq 0$$. Then
 
 $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rangle$$
 
-and by the two conditions $$\langle u,v\rangle\neq 0$$ and $$\ch \mathbb{K}\neq 2$$, the left-hand side is nonzero. Therefore, at least one of the three terms $$\langle u+v,u+v\rangle$$, $$\langle u,u\rangle$$, $$\langle v,v\rangle$$ on the right-hand side is nonzero. Thus,
+and since $$\langle u,v\rangle\neq 0$$ and $$\ch \mathbb{K}\neq 2$$, the left-hand side is nonzero. Therefore, at least one of the three terms $$\langle u+v,u+v\rangle$$, $$\langle u,u\rangle$$, $$\langle v,v\rangle$$ on the right-hand side is nonzero. Thus,
 
 > In any $$\mathbb{K}$$-vector space equipped with a non-degenerate symmetric bilinear form, there necessarily exists a vector $$w$$ satisfying $$\langle w,w\rangle\neq 0$$.
 
-We prove the original proposition by induction on the dimension of $$V$$. There is nothing to prove when $$\dim V=0$$. Now assume the proof is complete for the case $$\dim V=k$$. Then for any vector space $$V$$ with $$\dim V=k+1$$, there exists a vector $$w$$ satisfying $$\langle w,w\rangle\neq 0$$.
+We prove the original proposition by induction on the dimension of $$V$$. There is nothing to prove when $$\dim V=0$$. Now assume the statement holds for $$\dim V=k$$. Then for any vector space $$V$$ with $$\dim V=k+1$$, there exists a vector $$w$$ satisfying $$\langle w,w\rangle\neq 0$$.
 
 Now let $$W=\span w$$ and consider $$W^\perp$$. Then for any $$v\in V$$, from the formula
 
@@ -199,7 +199,7 @@ we know that any element of $$V$$ can be expressed as a sum of elements from $$W
 
 $$k+1=\dim V=\dim(W+W^\perp)=\dim W+\dim W^\perp-\dim(W\cap W^\perp)$$
 
-from which we know that $$\dim W^\perp=k$$. Moreover, for any $$v\in W^\perp$$, for $$u$$ satisfying $$\langle u,v\rangle\neq 0$$,
+from which we see that $$\dim W^\perp=k$$. Moreover, for any $$v\in W^\perp$$ and any $$u$$ satisfying $$\langle u,v\rangle\neq 0$$,
 
 $$u'=u-\frac{\langle u,w\rangle}{\langle w,w\rangle}w\in W^\perp$$
 
