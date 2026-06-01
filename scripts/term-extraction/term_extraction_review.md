@@ -3459,3 +3459,43 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `homogeneous` | looks like emphasis (no <sub> partner) |
 
+## 대칭군
+- post: `_posts/Math/Group_Theory/ko/2025-03-29-Symmetric_Groups.md`
+- permalink: `/ko/math/group_theory/symmetric_groups`
+- scanned: 2026-06-01T21:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `left translation map` | multi-word English emphasis — possibly a definition |
+| `Vandermonde polynomial` | multi-word English emphasis — possibly a definition |
+| `alternating group` | multi-word English emphasis — possibly a definition |
+| `Reference` | looks like emphasis (no <sub> partner) |
+
+## 군의 열
+- post: `_posts/Math/Group_Theory/ko/2025-04-03-Series_of_Groups.md`
+- permalink: `/ko/math/group_theory/series_of_groups`
+- scanned: 2026-06-01T21:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `normal` | looks like emphasis (no <sub> partner) |
+
+## 실로우 정리
+- post: `_posts/Math/Group_Theory/ko/2025-04-07-Sylow_Theorems.md`
+- permalink: `/ko/math/group_theory/Sylow_theorems`
+- scanned: 2026-06-01T21:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유일한` | looks like emphasis (no <sub> partner) |
+
+## 갈루아 군의 성질들
+- post: `_posts/Math/Field_Theory/ko/2025-06-18-Properties_of_Galois_Extensions.md`
+- permalink: `/ko/math/field_theory/properties_of_galois_extensions`
+- scanned: 2026-06-01T22:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `finite` | looks like emphasis (no <sub> partner) |
+| `Galois` | looks like emphasis (no <sub> partner) |
+

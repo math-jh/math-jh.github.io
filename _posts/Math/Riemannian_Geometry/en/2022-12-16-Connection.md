@@ -1,5 +1,6 @@
 ---
 title: "Connection"
+description: "We define a connection on a vector bundle to introduce covariant differentiation, and discuss the key properties of covariant differentiation that depend on the Leibniz rule and local properties of vector fields."
 excerpt: "Differentiation on a vector bundle"
 
 categories: [Math / Riemannian Geometry]
@@ -13,49 +14,50 @@ sidebar:
 date: 2022-12-16
 last_modified_at: 2022-12-16
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T21:30:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T21:30:01+00:00
 ---
 ## Connections and Covariant Differentiation
 
-Using the Lie derivative, we can differentiate vector fields or differential forms, but it is impossible to extend this concept to sections $$\Gamma(E)$$ of an arbitrary vector bundle $$\pi:E\rightarrow M$$. On the tangent bundle $$TM$$, given two points $$p,q$$ on an integral flow $$\phi$$, there exists a natural isomorphism $$d\phi^{-t}$$ connecting the two tangent spaces $$T_pM$$ and $$T_qM$$, but no such map exists between two fibers $$E_p$$ and $$E_q$$ of an arbitrary vector bundle $$E$$. Therefore, we additionally define a *connection* joining these fibers.
+Using the Lie derivative, we can differentiate vector fields or differential forms, but it is impossible to extend this concept to sections $$\Gamma(E)$$ of an arbitrary vector bundle $$\pi:E\rightarrow M$$. On the tangent bundle $$TM$$, given two points $$p,q$$ on an integral flow $$\phi$$, there exists a natural isomorphism $$d\phi^{-t}$$ connecting the two tangent spaces $$T_pM$$ and $$T_qM$$; however, no such map exists between two fibers $$E_p$$ and $$E_q$$ of an arbitrary vector bundle $$E$$. Therefore, we additionally define a *connection* that joins these fibers.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Given a vector bundle $$E\rightarrow M$$ defined over a manifold $$M$$, a *connection* $$\nabla:\mathfrak{X}(M)\times\Gamma(E)\rightarrow\Gamma(E)$$ defined on $$E$$ is a map satisfying the following conditions.
+<ins id="def1">**Definition 1**</ins> Given a vector bundle $$E\rightarrow M$$ over a manifold $$M$$, a *connection* $$\nabla:\mathfrak{X}(M)\times\Gamma(E)\rightarrow\Gamma(E)$$ on $$E$$ is a map satisfying the following conditions.
 
 1. (Tensoriality) $$\nabla_XY$$ is $$C^\infty$$-linear in the first argument.
 2. (Linearity) $$\nabla_XY$$ is $$\mathbb{R}$$-linear in the second argument.
-3. For any $$f\in C^\infty(M)$$, $$\nabla$$ satisfies the following Leibniz rule:
+3. For any $$f\in C^\infty(M)$$, $$\nabla$$ satisfies the Leibniz rule
     
     $$\nabla_X(fY)=f\nabla_XY+(Xf)Y$$
 
 </div>
 
-In this case, $$\nabla_XY$$ is also called the *covariant derivative* of $$Y$$ in the direction of $$X$$. The following proposition shows that to compute $$(\nabla_XY)_p$$, it suffices to know $$X$$ and $$Y$$ in a neighborhood of $$p$$.
+Here, $$\nabla_XY$$ is also called the *covariant derivative* of $$Y$$ in the direction of $$X$$. The following proposition shows that to compute $$(\nabla_XY)_p$$, it suffices to know $$X$$ and $$Y$$ in a neighborhood of $$p$$.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**Proposition 2**</ins> Let a manifold $$M$$ be given, and let $$X\in\mathfrak{X}(M)$$ and $$Y\in\Gamma(E)$$. For any point $$p\in M$$, $$(\nabla_XY)_p$$ depends only on
+<ins id="prop2">**Proposition 2**</ins> Let $$M$$ be a manifold, and let $$X\in\mathfrak{X}(M)$$ and $$Y\in\Gamma(E)$$. For any point $$p\in M$$, $$(\nabla_XY)_p$$ depends only on
 
-1. the value $$X_p$$ of the vector field $$X$$ at the point $$p$$,
-2. the vector field $$Y\vert_U$$ in an open neighborhood $$U$$ of the point $$p$$.
+1. the value $$X_p$$ of the vector field $$X$$ at $$p$$,
+2. the restriction $$Y\vert_U$$ of the vector field $$Y$$ to an open neighborhood $$U$$ of $$p$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, we show that $$(\nabla_XY)_p$$ depends only on the vector field in an open neighborhood $$U$$ of $$p$$. To show that $$(\nabla_XY_1)_p=(\nabla_XY_2)_p$$ whenever two vector fields $$Y_1,Y_2$$ agree on an open neighborhood $$U$$ of $$p$$, it suffices to show that if a vector field $$Y$$ is identically zero on all points of an open neighborhood $$U$$, then $$(\nabla_XY)_p=0$$. Let $$\varphi$$ be a bump function satisfying $$\supp(\varphi)\subseteq U$$ and $$\varphi(p)=1$$; then the vector field $$\varphi Y$$ is identically zero on all of $$M$$. Therefore, by the second condition of [Definition 1](#def1), $$\nabla_X(\varphi Y)=0$$. On the other hand, by the Leibniz rule,
+First, we show that $$(\nabla_XY)_p$$ depends only on the vector field in an open neighborhood $$U$$ of $$p$$. To show that $$(\nabla_XY_1)_p=(\nabla_XY_2)_p$$ whenever two vector fields $$Y_1,Y_2$$ agree on an open neighborhood $$U$$ of $$p$$, it suffices to show that if a vector field $$Y$$ is identically zero on an open neighborhood $$U$$, then $$(\nabla_XY)_p=0$$. Let $$\varphi$$ be a bump function satisfying $$\supp(\varphi)\subseteq U$$ and $$\varphi(p)=1$$; then the vector field $$\varphi Y$$ is identically zero on all of $$M$$. Therefore, by the second condition of [Definition 1](#def1), $$\nabla_X(\varphi Y)=0$$. On the other hand, by the Leibniz rule,
 
 $$0=\nabla_X(\varphi Y)=\varphi\nabla_XY+(X\varphi)Y$$
 
-and evaluating the right-hand side at the point $$p$$ yields
+and evaluating the right-hand side at $$p$$ yields
 
 $$\varphi(p)(\nabla_XY)_p+(X\varphi)(p)Y_p=(\nabla_XY)_p$$
 
 so $$(\nabla_XY)_p=0$$.
 
-Now we show that $$\nabla_XY$$ depends only on the vector $$X_p$$ at the point $$p$$. As above, it suffices to assume $$X_p=0$$ and show that $$(\nabla_XY)_p=0$$. Take a coordinate chart $$(U,(x^i))$$ in a neighborhood of $$p$$, and write $$X$$ with respect to this coordinate system as
+Now we show that $$\nabla_XY$$ depends only on the vector $$X_p$$ at $$p$$. As above, it suffices to assume $$X_p=0$$ and show that $$(\nabla_XY)_p=0$$. Take a coordinate chart $$(U,(x^i))$$ in a neighborhood of $$p$$, and write $$X$$ with respect to this coordinate system as
 
 $$X=X^1\frac{\partial}{\partial x^1}+\cdots+X^n\frac{\partial}{\partial x^n}$$
 
@@ -69,17 +71,17 @@ and since $$X^i(p)=0$$ for all $$i$$, we obtain the desired result.
 
 ## Covariant Differentiation on the Tangent Bundle
 
-In particular, let us examine a connection defined on the tangent bundle $$TM\rightarrow M$$. Then $$\nabla$$ is a map from $$\mathfrak{X}(M)\times\mathfrak{X}(M)$$ to $$\mathfrak{X}(M)$$. It should be noted that although the Lie derivative and the connection are both concepts for thinking about differentiation, they produce different results. For instance, for the Lie derivative
+In particular, let us examine a connection defined on the tangent bundle $$TM\rightarrow M$$. Then $$\nabla$$ is a map from $$\mathfrak{X}(M)\times\mathfrak{X}(M)$$ to $$\mathfrak{X}(M)$$. It should be noted that although the Lie derivative and a connection are both concepts devised to formalize differentiation, they yield different results. For instance, for the Lie derivative
 
 $$\mathcal{L}_{fX}Y=[fX,Y]=fX(Y)-Y(fX)=fX(Y)-(Yf)X-fY(X)=f[X,Y]-(Yf)X=f\mathcal{L}_XY-(Yf)X$$
 
-but, by definition,
+whereas, by definition,
 
 $$\nabla_{fX}Y=f\nabla_XY$$
 
-so it is always possible to choose $$Y$$ and $$f$$ appropriately such that $$\nabla_{fX}Y\neq\mathcal{L}_{fX}Y$$.
+so one can always choose $$Y$$ and $$f$$ appropriately such that $$\nabla_{fX}Y\neq\mathcal{L}_{fX}Y$$.
 
-Anyway, considering a connection defined on $$TM$$, by [Proposition 2](#prop2), the value of $$\nabla_XY$$ at a point $$p$$ is completely determined by local frames $$(E_i)$$ in a neighborhood of $$p$$. This is because
+Now, considering a connection defined on $$TM$$, [Proposition 2](#prop2) implies that the value of $$\nabla_XY$$ at a point $$p$$ is completely determined by local frames $$(E_i)$$ in a neighborhood of $$p$$. This is because
 
 $$(\nabla_XY)_p=\nabla_{\sum X^i(p)E_i(p)}\left(\sum Y^i(p)E_i(p)\right)$$
 
@@ -87,7 +89,7 @@ holds. On the other hand,
 
 $$\nabla_X\left(\sum_{j=1}^n Y^jE_j\right)=\sum_{j=1}^n \nabla_X(Y^jE_j)=\sum_{j=1}^n\left(Y^j\nabla_XE_j+X(Y^j)E_j\right)=\sum_{i,j=1}^nX^iY^j\nabla_{E_i}E_j+\sum_{j=1}^n X(Y^j)E_j\tag{1}$$
 
-so $$\nabla_XY$$ is completely determined by the $$n^2$$ vector fields $$\nabla_{E_i}E_j$$. Writing the vector field $$\nabla_{E_i}E_j$$ again as a linear combination of the $$E_k$$'s,
+so $$\nabla_XY$$ is completely determined by the $$n^2$$ vector fields $$\nabla_{E_i}E_j$$. Writing each vector field $$\nabla_{E_i}E_j$$ as a linear combination of the $$E_k$$'s,
 
 $$\nabla_{E_i}E_j=\Gamma_{ij}^k E_k$$
 
@@ -101,7 +103,7 @@ $$\nabla_XY=\sum_{k=1}^n\left(\sum_{i,j=1}^nX(Y^k)+X^iY^j\Gamma_{ij}^k\right)E_k
 
 </div>
 
-On the other hand, the tangent bundle over any manifold $$M$$ always admits a connection. To verify this, just as with the Riemannian metric, one can take the connection on Euclidean space
+On the other hand, the tangent bundle over any manifold $$M$$ always admits a connection. To verify this, just as with a Riemannian metric, one can take the connection on Euclidean space
 
 $$\nabla_vY:=v(Y^1)\frac{\partial}{\partial x^i}+\cdots+v(Y^n)\frac{\partial}{\partial x^n}$$
 
@@ -113,19 +115,19 @@ We show that a connection $$\nabla$$ defined on the tangent bundle $$TM$$ extend
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> Let a manifold $$M$$ and a connection $$\nabla$$ on the tangent bundle $$TM$$ be given. Define a map $$\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$$ by the formula
+<ins id="prop4">**Proposition 4**</ins> Let $$M$$ be a manifold and let $$\nabla$$ be a connection on the tangent bundle $$TM$$. Define a map $$\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$$ by the formula
 
 $$(\nabla_X^\ast\alpha)_p(Y)=X\bigl(\alpha(Y)\bigr)-\alpha_p\bigl(\nabla_XY\bigr)_p$$
 
-Then $$\nabla^\ast$$ becomes a connection on $$T^\ast M$$.
+Then $$\nabla^\ast$$ is a connection on $$T^\ast M$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, since we can show that $$\nabla^\ast\alpha$$ defined by the right-hand side expression is a $$1$$-form, the codomain of $$\nabla^\ast$$ is unproblematic.
+First, one can show that $$\nabla^\ast\alpha$$ defined by the expression on the right-hand side is a $$1$$-form, so the codomain of $$\nabla^\ast$$ is unproblematic.
 
-That $$\nabla^\ast$$ actually satisfies the conditions of a connection is obvious except for the Leibniz rule. In fact, the Leibniz rule also follows obviously from
+That $$\nabla^\ast$$ actually satisfies the conditions for a connection is obvious except for the Leibniz rule. In fact, the Leibniz rule also follows immediately from
 
 $$\begin{aligned}(\nabla_X^\ast f\alpha)_pY&=X(f\cdot\alpha(Y))-(f\alpha)_p(\nabla_XY)_p\\&=(Xf)(\alpha(Y))+f(p)\bigl(X(\alpha(Y))-\alpha_p(\nabla_XY)_p\bigr)\\&=\bigl((Xf)\alpha+f\nabla_X\alpha\bigr)Y\end{aligned}$$
 
@@ -139,7 +141,7 @@ Now we can finally extend the connection on $$TM$$ to $$(r,s)$$-tensor fields $$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> Let a connection $$\nabla$$ defined on the tangent bundle $$TM\rightarrow M$$ be given. Then $$\nabla$$ can be extended to all tensor fields $$\mathcal{T}^{r,s}(M)$$ satisfying the following two conditions
+<ins id="prop5">**Proposition 5**</ins> Let $$\nabla$$ be a connection on the tangent bundle $$TM\rightarrow M$$. Then $$\nabla$$ can be extended to all tensor fields $$\mathcal{T}^{r,s}(M)$$ satisfying the following two conditions
 
 $$\nabla_X(F\otimes G)=(\nabla_X F)\otimes G+F\otimes(\nabla_XG),\qquad\nabla_X(F+G)=\nabla_XF+\nabla_XG$$
 
