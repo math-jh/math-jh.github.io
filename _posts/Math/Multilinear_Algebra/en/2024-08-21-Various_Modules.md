@@ -1,5 +1,6 @@
 ---
 title: "Projective, Injective, and Flat Modules"
+description: "This post covers the definitions and properties of projective, injective, and flat modules. It examines kernels, cokernels, direct products, and direct sums of modules through the adjunction between the Hom functor and the tensor product functor."
 excerpt: "Definitions and equivalent conditions for projective, injective, and flat modules"
 
 categories: [Math / Multilinear Algebra]
@@ -13,28 +14,29 @@ sidebar:
 date: 2024-08-21
 last_modified_at: 2024-09-23
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T15:00:06+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T15:00:06+00:00
 ---
 In [\[Algebraic Structures\]](/en/algebraic_structures/) we defined $$A$$-modules over an arbitrary ring $$A$$ and examined their basic properties. In this post we study further properties of (left) $$A$$-modules.
 
 ## Kernel and Cokernel
 
-For any $$A$$-linear map $$u:M \rightarrow N$$, $$u$$ being injective is equivalent to $$\ker u=0$$, and $$u$$ being surjective is equivalent to $$\coker u=0$$. On the other hand, the category $$\lMod{A}$$ is a bicomplete category, and in this case the product of a family of $$A$$-modules is given by the direct product, and the coproduct by the direct sum. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 1](/en/math/algebraic_structures/operations_of_modules#thm1)) Therefore, by [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10) we have
+For any $$A$$-linear map $$u:M \rightarrow N$$, injectivity of $$u$$ is equivalent to $$\ker u=0$$, and surjectivity of $$u$$ is equivalent to $$\coker u=0$$. On the other hand, the category $$\lMod{A}$$ is bicomplete; the product of a family of $$A$$-modules is the direct product, and the coproduct is the direct sum. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 1](/en/math/algebraic_structures/operations_of_modules#thm1)) Therefore, by [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10),
 
 $$\ker \prod u_i=\prod \ker u_i,\qquad \coker \bigoplus u_i=\bigoplus \coker u_i $$
 
-and rewriting [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 2](/en/math/algebraic_structures/operations_of_modules#prop2) through the above discussion gives the two equations
+and applying the same reasoning to rewrite [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 2](/en/math/algebraic_structures/operations_of_modules#prop2) yields the two further identities
 
 $$\ker \bigoplus u_i=\bigoplus \ker u_i,\qquad \coker \prod u_i=\prod \coker u_i$$
 
 as well.
 
-In a similar vein we can revisit properties of the $$\Hom$$ and $$\otimes$$ functors, and here we will use the adjunction between $$\Hom$$ and $$\otimes$$. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 6](/en/math/algebraic_structures/operations_of_modules#thm6) and [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 9](/en/math/algebraic_structures/operations_of_modules#thm9))
+In a similar vein we revisit properties of the $$\Hom$$ and $$\otimes$$ functors, making use of the adjunction between them. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 6](/en/math/algebraic_structures/operations_of_modules#thm6) and [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 9](/en/math/algebraic_structures/operations_of_modules#thm9))
 
 ## Direct Products and Direct Sums
 
-To see how to use the above adjunction, we consider the most basic example. First, let us examine the relationship between $$\Hom$$, $$\bigoplus$$, and $$\prod$$. To this end we fix left $$A$$-modules $$M,N$$ and families of left $$A$$-modules $$(M_i)_{i\in I}$$, $$(N_j)_{j\in J}$$. Then since $$\Hom$$ is a right adjoint, it preserves limits. ([\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)) Therefore, by [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10) we obtain isomorphisms of abelian groups
+To see how the above adjunction is used, we begin with the most basic example. First, consider the relationship between $$\Hom$$, $$\bigoplus$$, and $$\prod$$. Fix left $$A$$-modules $$M,N$$ and families of left $$A$$-modules $$(M_i)_{i\in I}$$, $$(N_j)_{j\in J}$$. Since $$\Hom$$ is a right adjoint, it preserves limits. ([\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)) Hence, by [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10), we obtain isomorphisms of abelian groups
 
 $$\Hom_{\lMod{A}}\left(M, \prod_{j\in J} N_j \right)\cong\prod_{j\in J} \Hom_{\lMod{A}}(M, N_j),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M_i, N)$$
 
@@ -42,7 +44,7 @@ Applying [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_the
 
 $$\Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, \prod_{j\in J} N_j\right)\cong\prod_{(i,j)\in I\times J}\Hom_{\lMod{A}}(M_i, N_j)\tag{1}$$
 
-Similarly, let us examine the relationship between $$\otimes$$ and $$\bigoplus$$. This time we consider a right $$A$$-module $$M$$, a family of right $$A$$-modules $$(M_i)_{i\in I}$$, a left $$A$$-module $$N$$, and a family of left $$A$$-modules $$(N_j)_{j\in J}$$. Then since $$\otimes$$ preserves colimits, we have abelian group isomorphisms
+Similarly, consider the relationship between $$\otimes$$ and $$\bigoplus$$. This time we take a right $$A$$-module $$M$$, a family of right $$A$$-modules $$(M_i)_{i\in I}$$, a left $$A$$-module $$N$$, and a family of left $$A$$-modules $$(N_j)_{j\in J}$$. Since $$\otimes$$ preserves colimits, we have abelian group isomorphisms
 
 $$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes_AN_j),\qquad \left(\bigoplus_{i\in I} M_i\right)\otimes_A N\cong \bigoplus_{i\in I} M_i\otimes_AN)$$
 
@@ -54,7 +56,7 @@ If $$A$$ were a commutative ring, we could use [\[Algebraic Structures\] §Direc
 
 ## Projective and Injective Modules
 
-Now suppose we are given an arbitrary $$A$$-linear map $$u:M \rightarrow M'$$ and an $$A$$-module $$N$$. Then we have the abelian group homomorphism
+Now let an arbitrary $$A$$-linear map $$u:M \rightarrow M'$$ and an $$A$$-module $$N$$ be given. Then we have the abelian group homomorphism
 
 $$\Hom_{\lMod{A}}(u,N):\Hom_{\lMod{A}}(M', N) \rightarrow \Hom_{\lMod{A}}(M,N)$$
 
@@ -62,7 +64,7 @@ and since $$\Hom$$ is a right adjoint,
 
 $$\ker(\Hom_{\lMod{A}}(u,N))\cong\Hom_{\lMod{A}}(\coker u, N)\tag{2}$$
 
-holds. Similarly, for the abelian group homomorphism
+holds. Likewise, for the abelian group homomorphism
 
 $$\Hom_{\lMod{A}}(N, u):\Hom_{\lMod{A}}(M, N) \rightarrow\Hom_{\lMod{A}}(M', N)$$
 
@@ -74,20 +76,20 @@ Therefore the following holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**Proposition 1**</ins> Suppose an $$A$$-linear map $$u:M \rightarrow M'$$ is given.
+<ins id="prop1">**Proposition 1**</ins> Let an $$A$$-linear map $$u:M \rightarrow M'$$ be given.
 
-1. $$u$$ being injective is equivalent to $$\Hom(N, u)$$ being injective for every $$A$$-module $$N$$.
-2. $$u$$ being surjective is equivalent to $$\Hom(u, N)$$ being injective for every $$A$$-module $$N$$.
+1. $$u$$ is injective if and only if $$\Hom(N, u)$$ is injective for every $$A$$-module $$N$$.
+2. $$u$$ is surjective if and only if $$\Hom(u, N)$$ is injective for every $$A$$-module $$N$$.
 
 </div>
 
-However, in general even if $$u$$ is surjective, $$\Hom(u, N)$$ need not be surjective, and even if $$u$$ is injective, $$\Hom(N, u)$$ need not be surjective.
+However, in general, even if $$u$$ is surjective, $$\Hom(u, N)$$ need not be surjective; and even if $$u$$ is injective, $$\Hom(N, u)$$ need not be surjective.
 
 On the other hand, since $$\lMod{A}$$ is an abelian category, the isomorphism (2) is essentially the statement that when a short exact sequence
 
 $$M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
-is given, the sequence obtained by applying the (contravariant) additive functor $$\Hom_{\lMod{A}}(-, N):\lMod{A} \rightarrow\lMod{\mathbb{Z}}$$ to it,
+is given, the sequence obtained by applying the (contravariant) additive functor $$\Hom_{\lMod{A}}(-, N):\lMod{A} \rightarrow\lMod{\mathbb{Z}}$$,
 
 $$0 \rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N)\rightarrow\Hom_\lMod{A}(M_1,A)$$
 
@@ -126,13 +128,13 @@ is an isomorphism, we see that $$A$$ itself is projective, and hence any free mo
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> A left $$A$$-module $$P$$ is projective if and only if it is a direct summand of a free $$A$$-module.
+<ins id="prop4">**Proposition 4**</ins> A left $$A$$-module is projective if and only if it is a direct summand of a free $$A$$-module.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-That any direct summand of a free module is projective is clear from the above argument. Thus assume that $$P$$ is projective. By [§Basis, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) we can choose a free $$A$$-module $$F$$ and a surjection $$p:F \rightarrow P$$. On the other hand, $$P$$ being projective means that the map
+That any direct summand of a free module is projective is clear from the argument above. Thus assume that $$P$$ is projective. By [§Bases, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) we can choose a free $$A$$-module $$F$$ and a surjection $$p:F \rightarrow P$$. Now $$P$$ being projective means that the map
 
 $$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
 
@@ -140,13 +142,13 @@ is surjective, so there exists $$i\in \Hom_{\lMod{A}}(P,F)$$ such that
 
 $$\id_P=\Hom_{\lMod{A}}(P,p)(i)=p\circ i$$
 
-This equation shows that $$i$$ is injective, so we may identify $$P$$ with $$\im i$$, and then one can verify that $$F\cong\ker p\oplus\im i$$.
+This equation shows that $$i$$ is injective, so we may identify $$P$$ with $$\im i$$, and then one verifies that $$F\cong\ker p\oplus\im i$$.
 
 </details>
 
 ## Flat Modules
 
-Now suppose we are given a right $$A$$-module $$M$$ and an $$A$$-linear map $$v:N \rightarrow N'$$ between left $$A$$-modules. Then there is the abelian group homomorphism
+Now let a right $$A$$-module $$M$$ and an $$A$$-linear map $$v:N \rightarrow N'$$ between left $$A$$-modules be given. Then there is the abelian group homomorphism
 
 $$M\otimes_A v:M\otimes_AN \rightarrow M\otimes_AN'$$
 
@@ -154,7 +156,7 @@ Since $$\otimes$$ is a left adjoint, it preserves colimits, and therefore there 
 
 $$\coker(M\otimes_Av)\cong M\otimes_A(\coker v)$$
 
-Similarly, for an $$A$$-linear map $$u:M \rightarrow M'$$ between right $$A$$-modules and a fixed left $$A$$-module $$N$$, there is an isomorphism
+Likewise, for an $$A$$-linear map $$u:M \rightarrow M'$$ between right $$A$$-modules and a fixed left $$A$$-module $$N$$, there is an isomorphism
 
 $$\coker(u\otimes_AN)\cong (\coker u)\otimes_A N$$
 
@@ -195,8 +197,8 @@ Then, in the same spirit as [Definition 3](#def3), we can make the following def
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> A left $$A$$-module $$N$$ is called a *flat module* if for every injective $$A$$-linear map $$u:M \rightarrow M'$$ between right $$A$$-modules, $$u\otimes_A N$$ is injective. Similarly one can define flat right $$A$$-modules.
+<ins id="def7">**Definition 7**</ins> A left $$A$$-module $$N$$ is called a *flat module* if for every injective $$A$$-linear map $$u:M \rightarrow M'$$ between right $$A$$-modules, $$u\otimes_A N$$ is injective. Similarly one defines flat right $$A$$-modules.
 
 </div>
 
-Any free module is flat. Also, it is obvious that a direct sum of modules is flat if and only if each summand is flat. Therefore by [Proposition 4](#prop4), every projective module is flat. However, the converse does not always hold.
+Any free module is flat. Also, it is obvious that a direct sum of modules is flat if and only if each summand is flat. Therefore, by [Proposition 4](#prop4), every projective module is flat. However, the converse does not hold in general.
