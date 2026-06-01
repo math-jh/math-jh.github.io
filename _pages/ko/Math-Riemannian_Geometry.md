@@ -1,6 +1,7 @@
 ---
 title: "리만기하학"
 layout: archive_custom
+regenerate: true
 permalink: /ko/riemannian_geometry/
 ---
 {% assign lang = site.locale %}

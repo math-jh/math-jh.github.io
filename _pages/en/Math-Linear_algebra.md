@@ -1,6 +1,7 @@
 ---
 title: "Linear Algebra"
 layout: archive_custom
+regenerate: true
 permalink: /en/linear_algebra/
 ---
 {% assign lang = site.locale %}

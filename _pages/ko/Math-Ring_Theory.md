@@ -1,6 +1,7 @@
 ---
 title: "환론"
 layout: archive_custom
+regenerate: true
 permalink: /ko/ring_theory/
 ---
 {% assign lang = site.locale %}

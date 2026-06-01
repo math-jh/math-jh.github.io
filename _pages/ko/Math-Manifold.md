@@ -1,6 +1,7 @@
 ---
 title: "미분다양체"
 layout: archive_custom
+regenerate: true
 permalink: /ko/manifold/
 ---
 {% assign lang = site.locale %}

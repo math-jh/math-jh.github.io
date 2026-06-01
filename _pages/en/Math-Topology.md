@@ -1,6 +1,7 @@
 ---
 title: "Topology"
 layout: archive_custom
+regenerate: true
 permalink: /en/topology/
 ---
 {% assign lang = site.locale %}

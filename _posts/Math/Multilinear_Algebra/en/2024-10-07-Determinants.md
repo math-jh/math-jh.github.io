@@ -1,5 +1,6 @@
 ---
 title: "Determinants"
+description: "We define the determinant over a free commutative group and prove its basic properties. We cover the multiplicative formula, invertibility, and the relationship with the invertibility of linear maps on finite-dimensional free commutative groups."
 excerpt: "The determinant of an endomorphism of a free module and its basic properties"
 
 categories: [Math / Multilinear Algebra]
@@ -13,18 +14,19 @@ sidebar:
 date: 2024-10-07
 last_modified_at: 2024-10-07
 weight: 11
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-01T18:30:06+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T18:30:06+00:00
 ---
 ## Determinant
 
-In the previous post, we verified that for any free $$A$$-module $$M$$, if $$M$$ has a basis $$(e_i)_{i\in I}$$, then the elements $$e_J$$ expressed in the form
+In the previous post, we verified that for any free $$A$$-module $$M$$ with a basis $$(e_i)_{i\in I}$$, the elements $$e_J$$ of the form
 
 $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \quad J=\{j_1,\ldots, j_k\}$$
 
-constitute a basis of $$\bigwedge(M)$$. In particular, collecting all $$J$$ satisfying $$\lvert J\rvert=n$$ gives a basis of $$\bigwedge^n(M)$$.
+constitute a basis of $$\bigwedge(M)$$. In particular, collecting all $$J$$ with $$\lvert J\rvert=n$$ yields a basis of $$\bigwedge^n(M)$$.
 
-Now suppose $$M$$ has a finite basis $$e_1,\ldots, e_n$$. Then $$\bigwedge^n(M)$$ has a basis consisting of the single element $$e_1\wedge\cdots\wedge e_n$$. On the other hand, for any $$u\in\End_\rMod{A}(M)$$, the functoriality of $$\bigwedge$$ induces $$\bigwedge^n(u):\bigwedge^n(M)\rightarrow\bigwedge^n(M)$$, and by the above discussion this linear map must be of the form $$x\mapsto \alpha x$$.
+Now suppose $$M$$ has a finite basis $$e_1,\ldots, e_n$$. Then $$\bigwedge^n(M)$$ has a basis consisting of the single element $$e_1\wedge\cdots\wedge e_n$$. On the other hand, for any $$u\in\End_\rMod{A}(M)$$, the functoriality of $$\bigwedge$$ induces $$\bigwedge^n(u):\bigwedge^n(M)\rightarrow\bigwedge^n(M)$$, and by the discussion above this linear map must be of the form $$x\mapsto \alpha x$$.
 
 <div class="definition" markdown="1">
 
@@ -32,7 +34,7 @@ Now suppose $$M$$ has a finite basis $$e_1,\ldots, e_n$$. Then $$\bigwedge^n(M)$
 
 </div>
 
-Then the following proposition is obvious from the definition.
+The following proposition is then immediate from the definition.
 
 <div class="proposition" markdown="1">
 
@@ -40,7 +42,7 @@ Then the following proposition is obvious from the definition.
 
 1. For any $$u,v\in\End_\rMod{A}(M)$$, we have $$\det(u\circ v)=(\det u)(\det v)$$.
 2. $$\det(\id_M)=1$$.
-3. For any $$u\in\Aut_\rMod{A}(M)$$, $$\det u$$ is invertible in $$A$$ and satisfies $$\det(u)^{-1}=\det(u^{-1})$$.
+3. For any $$u\in\Aut_\rMod{A}(M)$$, the element $$\det u$$ is invertible in $$A$$ and satisfies $$\det(u)^{-1}=\det(u^{-1})$$.
 
 </div>
 
@@ -59,7 +61,7 @@ It suffices to show that condition 2 implies condition 1. To do this, define $$x
 
 $$x_1\wedge \cdots\wedge x_n=\det(u) e_1\wedge\cdots\wedge e_n,$$
 
-then multiply both sides by $$\det(u)^{-1}$$ and consider the change of basis obtained from this equation.
+then multiply both sides by $$\det(u)^{-1}$$ and consider the change of basis arising from this equation.
 
 </details>
 
@@ -67,7 +69,7 @@ Fixing a free $$A$$-module $$M$$ and its basis $$e_1,\ldots, e_n$$, for any elem
 
 $$x_1\wedge \cdots\wedge x_n=\alpha e_1\wedge\cdots\wedge e_n,$$
 
-and we write this as $$\det(x_1,\ldots, x_n)$$. To actually compute this value, one expresses each $$x_i$$ as a linear combination of $$e_1,\ldots, e_n$$ and then rearranges everything using $$e_i\wedge e_i=0$$ and $$e_i\wedge e_j=-e_j\wedge e_i$$. In the case $$A=\mathbb{K}$$, this was already examined in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). To explain in a bit more detail, for any $$X\in\Mat_n(A)$$, writing $$X=(x_1,\ldots, x_n)$$ using column vectors, there is a unique $$u\in\End_\rMod{A}(M)$$ satisfying $$u(e_i)=x_i$$, and $$\det(u)$$ is well-defined; comparing this with the expression appearing in the proof of [Corollary 3](#cor3), we see that $$\det (x_1,\ldots, x_n)=\det(u)$$. From this we can formulate a matrix version of [Proposition 2](#prop2), and the process of computing it is exactly [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). In particular, we obtain $$\det(u^\ast)=\det(u)$$.
+and we write this as $$\det(x_1,\ldots, x_n)$$. To compute this value explicitly, one expresses each $$x_i$$ as a linear combination of $$e_1,\ldots, e_n$$ and then simplifies using $$e_i\wedge e_i=0$$ and $$e_i\wedge e_j=-e_j\wedge e_i$$. In the case $$A=\mathbb{K}$$, this was already examined in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). More precisely, for any $$X\in\Mat_n(A)$$, writing $$X=(x_1,\ldots, x_n)$$ using column vectors, there is a unique $$u\in\End_\rMod{A}(M)$$ satisfying $$u(e_i)=x_i$$, and $$\det(u)$$ is well-defined; comparing this with the expression appearing in the proof of [Corollary 3](#cor3), we see that $$\det (x_1,\ldots, x_n)=\det(u)$$. From this we obtain a matrix version of [Proposition 2](#prop2), and the process of computing it is exactly [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). In particular, we obtain $$\det(u^\ast)=\det(u)$$.
 
 ## Minors of a Matrix
 
@@ -119,11 +121,11 @@ $$\det(\alpha\cdot\id_M+\beta u)=\sum_{k\geq 0}\tr\left({\bigwedge}^k(u)\right)\
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The left-hand side arises from turning the wedge product
+The left-hand side arises from expressing the wedge product
 
 $$(\alpha e_1+\beta u(e_1))\wedge\cdots\wedge(\alpha e_n+\beta u(e_n))$$
 
-into a multiple of $$e_1\wedge\cdots\wedge e_n$$. Expanding the above expression completely, it equals the sum of the terms $$\alpha^{n-p}\beta^p x_P$$ over integers $$p$$ with $$0\leq p\leq n$$ and subsets $$P\subseteq\{1,\ldots, n\}$$ with $$\lvert P\rvert=p$$, where $$x_P=x_1\wedge\cdots\wedge x_n$$ is the element of $$\bigwedge^n(M)$$ defined by the elements
+as a multiple of $$e_1\wedge\cdots\wedge e_n$$. Expanding the above expression completely, it equals the sum of the terms $$\alpha^{n-p}\beta^p x_P$$ over integers $$p$$ with $$0\leq p\leq n$$ and subsets $$P\subseteq\{1,\ldots, n\}$$ with $$\lvert P\rvert=p$$, where $$x_P=x_1\wedge\cdots\wedge x_n$$ is the element of $$\bigwedge^n(M)$$ defined by
 
 $$x_i=\begin{cases}u(e_i)&\text{if $i\in P$}\\e_i&\text{otherwise.}\end{cases}$$
 
@@ -131,11 +133,11 @@ To simplify $$x_P$$ of the above form, put $$\{1,\ldots, n\}\setminus P=Q$$ and 
 
 $$P=\{i_1< i_2<\cdots< i_p\},\qquad Q=\{j_1< j_2<\cdots < j_{n-p}\}.$$
 
-Then by reordering the elements of $$P$$ and $$Q$$ we can write
+Then by reordering the factors we can write
 
 $$x_P=\gamma_{P,Q}e_{j_1}\wedge\cdots\wedge e_{j_{n-p}}\wedge u(e_{i_1})\wedge\cdots u(e_{i_{n-p}}).$$
 
-Here $$\gamma_{P,Q}$$ is the sign arising from reordering these factors, specifically given by the formula
+Here $$\gamma_{P,Q}$$ is the sign arising from this reordering, given concretely by the formula
 
 $$\gamma_{P,Q}=(-1)^{\lvert A\rvert},\qquad A=\{(p,q)\in P\times Q\mid p>q\}.$$
 
@@ -145,13 +147,13 @@ $$u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})=\sum_{\lvert I\rvert=p}\det(X_{I,Q})e_
 
 and substituting this gives
 
-$$x_P=\gamma_{P,Q}\sum_{\lvert I\rvert=p}\det X_{I,P} e_Q\wedge e_I$$
+$$x_P=\gamma_{P,Q}\sum_{\lvert I\rvert=p}\det X_{I,P} e_Q\wedge e_I.$$
 
-is obtained. However, since $$\lvert I\rvert=p$$ and $$\lvert Q\rvert=n-p$$, unless $$I=P$$ they always share a common $$e_i$$, and therefore the above expression can be written as
+However, since $$\lvert I\rvert=p$$ and $$\lvert Q\rvert=n-p$$, unless $$I=P$$ they always share a common $$e_i$$, and therefore the above expression reduces to
 
 $$x_P=\det (X_{P,P} )e_1\wedge e_2\wedge\cdots\wedge e_n.$$
 
-By [Proposition 5](#prop5), for a fixed $$p$$, the sum of $$\det(X_{p,p})$$ over all $$p$$ satisfying $$\lvert P\rvert=p$$ equals $$\tr\left(\bigwedge^k(u)\right)$$, and thus the proof is complete.
+By [Proposition 5](#prop5), for a fixed $$p$$, the sum of $$\det(X_{p,p})$$ over all $$P$$ satisfying $$\lvert P\rvert=p$$ equals $$\tr\left(\bigwedge^k(u)\right)$$, and thus the proof is complete.
 
 </details>
 
@@ -161,7 +163,7 @@ In particular, setting $$\alpha=\beta=1$$ gives $$\tr(\bigwedge(u))=\det(\id_M+u
 
 We now define the characteristic polynomial.
 
-Considering the polynomial algebra $$A[\x]$$ and the canonical inclusion $$\iota: A \hookrightarrow A[\x]$$, the extension of scalars defines an $$A[\x]$$-module structure on $$\iota_!M=A[\x]\otimes_A M$$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Definition 3](/en/math/algebraic_structures/change_of_base_ring#def3)) Moreover, whenever $$u\in\End_\rMod{A}(M)$$ is given, $$\iota_!u\in\End_\rMod{A[\x]}(\iota_!M)$$ is also defined.
+Consider the polynomial algebra $$A[\x]$$ and the canonical inclusion $$\iota: A \hookrightarrow A[\x]$$. By extension of scalars, this defines an $$A[\x]$$-module structure on $$\iota_!M=A[\x]\otimes_A M$$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Definition 3](/en/math/algebraic_structures/change_of_base_ring#def3)) Moreover, whenever $$u\in\End_\rMod{A}(M)$$ is given, $$\iota_!u\in\End_\rMod{A[\x]}(\iota_!M)$$ is also defined.
 
 For any $$u\in\End_\rMod{A}(M)$$, let us introduce the notation
 
@@ -179,9 +181,7 @@ gives $$M$$ an $$A[\x]$$-module structure. That is, via the scalar multiplicatio
 
 $$\rho: A[\x]\otimes_A M \rightarrow M;\qquad p\otimes_A x\mapsto p\bullet x\tag{1}$$
 
-is defined and is $$A$$-linear.
-
-Moreover, $$\rho$$ is an $$A[\x]$$-linear map, because for any $$p\in A[\x]$$ and $$q\otimes x\in \iota_!M$$,
+is defined and is $$A$$-linear. Moreover, $$\rho$$ is an $$A[\x]$$-linear map, because for any $$p\in A[\x]$$ and $$q\otimes x\in \iota_!M$$,
 
 $$\rho(p(q\otimes_Ax))=\rho((pq)\otimes_Ax)=(pq)\bullet x=(pq)(u)(x)=p(u)(q(u)x)=p\bullet\rho(q\otimes_Ax).$$
 
@@ -217,7 +217,7 @@ $$z=\sum_k \x^k\otimes_A x_k,\qquad x_k\in M.$$
 
 Then the condition $$z\in\ker\rho$$ yields
 
-$$\rho(z)=\sum_k u^k(\x_k)=0.$$
+$$\rho(z)=\sum_k u^k(x_k)=0.$$
 
 Now since $$\sum 1\otimes u^k(x_k)=0$$, we obtain
 

@@ -1,6 +1,7 @@
 ---
 title: "Algebraic Varieties"
 layout: archive_custom
+regenerate: true
 permalink: /en/algebraic_varieties/
 ---
 {% assign lang = site.locale %}

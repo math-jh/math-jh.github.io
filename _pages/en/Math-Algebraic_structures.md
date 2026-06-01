@@ -1,6 +1,7 @@
 ---
 title: "Algebraic Structures"
 layout: archive_custom
+regenerate: true
 permalink: /en/algebraic_structures/
 ---
 {% assign lang = site.locale %}

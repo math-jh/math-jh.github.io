@@ -1,6 +1,7 @@
 ---
 title: "기타"
 layout: archive_custom
+regenerate: true
 permalink: /ko/misc/
 author_profile: true
 ---

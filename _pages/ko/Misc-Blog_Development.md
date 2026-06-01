@@ -1,6 +1,7 @@
 ---
 title: "블로그 개발"
 layout: archive_custom
+regenerate: true
 permalink: /ko/blog_development/
 ---
 {% assign lang = site.locale %}

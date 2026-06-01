@@ -1,6 +1,7 @@
 ---
 title: "Representation Theory"
 layout: archive_custom
+regenerate: true
 permalink: /en/representation_theory/
 ---
 {% assign lang = site.locale %}
