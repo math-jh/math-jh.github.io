@@ -1,5 +1,6 @@
 ---
 title: "Least Squares Method"
+description: "This post derives the least squares method via normal equations in Euclidean and inner product spaces, and covers line fitting for points on a plane as well as the pseudoinverse."
 excerpt: "Orthogonal Projection and Least Squares Method"
 
 categories: [Math / Linear Algebra]
@@ -15,8 +16,9 @@ date: 2022-10-09
 last_modified_at: 2022-10-09
 
 weight: 118
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T03:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T03:00:04+00:00
 ---
 ## Least Squares Method
 
