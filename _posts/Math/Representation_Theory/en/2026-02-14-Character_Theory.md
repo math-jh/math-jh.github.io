@@ -1,5 +1,6 @@
 ---
 title: "Characters"
+description: "This post defines the character of a group representation and studies its additive and multiplicative properties. It introduces class functions and an inner product to show that the character is constant on conjugacy classes and serves as the key tool for distinguishing irreducible representations."
 excerpt: "Definition of character functions and orthogonality relations"
 
 categories: [Math / Representation Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2026-02-14
 last_modified_at: 2026-02-14
 weight: 2
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-01T21:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T21:00:02+00:00
 ---
 In this post we define character functions and examine their properties. They will be of great help in our goal of classifying representations.
 
@@ -30,15 +32,15 @@ $$\rchi_\rho(g)=\tr(\rho(g))$$
 
 </div>
 
-In other words, this function takes each $$g\in G$$ and returns the trace of the linear map $$\rho(g):V\rightarrow V$$ it defines. As we shall see, this function plays a major role in describing representations of $$G$$. For instance, we can immediately see that this function encodes the dimension of $$V$$.
+In other words, this function takes each $$g\in G$$ and returns the trace of the linear map $$\rho(g):V\rightarrow V$$ it defines. As we shall see, this function plays a major role in describing representations of $$G$$. For instance, we can immediately see that it encodes the dimension of $$V$$:
 
 $$\rchi_\rho(e)=\tr(\rho(e))=\tr(\id_V)=\dim V.$$
 
-Similarly, when two linear maps
+Similarly, given two linear maps
 
 $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 
-are given, we know how their direct sum $$L_V\oplus L_W: V\oplus W\rightarrow V\oplus W$$, their tensor product $$L_V\otimes L_W: V\otimes W \rightarrow V\otimes W$$, and so on are defined, and we also know what their traces are (for instance, by computing with matrices). From this we obtain the following proposition.
+we know how their direct sum $$L_V\oplus L_W: V\oplus W\rightarrow V\oplus W$$ and their tensor product $$L_V\otimes L_W: V\otimes W \rightarrow V\otimes W$$ are defined, and we also know what their traces are (for instance, by computing with matrices). From this we obtain the following proposition.
 
 <div class="proposition" markdown="1">
 
@@ -64,7 +66,7 @@ On the other hand, by definition,
 
 $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g)$$
 
-holds, so ([\[Linear Algebra\] §Characteristic Polynomial, ⁋Corollary 5](/en/math/linear_algebra/characteristic_polynomial#cor5)), we see that $$\rchi_\rho$$ is constant on the *conjugacy classes* of $$G$$. Such functions also have a name.
+holds, so ([\[Linear Algebra\] §Characteristic Polynomial, ⁋Corollary 5](/en/math/linear_algebra/characteristic_polynomial#cor5)) we see that $$\rchi_\rho$$ is constant on the *conjugacy classes* of $$G$$. Such functions also have a name.
 
 <div class="definition" markdown="1">
 
@@ -104,7 +106,7 @@ exists, and in this case
 
 $$p:U\rightarrow U^G;\qquad u\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot u$$
 
-defines a $$G$$-invariant projection from $$U$$ to $$U$$, and its image is $$U^G$$. By its definition, the subrepresentation defined on $$U^G$$ is precisely the trivial representation
+defines a $$G$$-invariant projection from $$U$$ to $$U$$ whose image is $$U^G$$. By its definition, the subrepresentation defined on $$U^G$$ is precisely the trivial representation
 
 $$G\rightarrow \Aut(U^G);\quad g\mapsto \id_{U_G}$$
 
@@ -168,7 +170,7 @@ In this section we obtain the Artin–Wedderburn decomposition considered in the
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-it is also a representation of $$G$$. This is obtained simply by restricting the module structure on $$\mathbb{C}[G]$$, that is, its multiplication structure as a ring, to $$G$$. Explicitly, using the image $$\delta_g=\sum_{x\in X}\delta_g(x)x$$ of any $$g\in G$$ in $$\mathbb{C}[G]$$, we can write
+it is also a representation of $$G$$. This is obtained simply by restricting the module structure on $$\mathbb{C}[G]$$—that is, its multiplication structure as a ring—to $$G$$. Explicitly, using the image $$\delta_g=\sum_{x\in X}\delta_g(x)x$$ of any $$g\in G$$ in $$\mathbb{C}[G]$$, we can write
 
 $$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in X}\delta_g(x)x\right)\left(\sum_{y\in G}\phi(y)y\right)=\sum_{z\in G}\left(\sum_{x\in G}\delta_g(x)\phi(x^{-1}z)\right)z=\sum_{z\in G}\phi(g^{-1}z)z=\sum_{z\in G}\phi(z)(gz)$$
 
