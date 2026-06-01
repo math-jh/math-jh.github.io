@@ -233,24 +233,24 @@ $$\sum_{k \geq 1} z^{-k-1}\langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta} = \sum_{m
 
 우리는 앞서 A-side의 fundamental solution matrix $$S$$ ([명제 4](#prop4))와 B-side의 period matrix $$\mathcal{I}$$ ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))를 각각 독립적으로 구성하였다. 두 행렬이 실제로 일치한다는 것이 바로 mirror theorem의 통찰 중 하나이다. 
 
-앞서 우리는 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)에서 $$D$$-module isomorphism $$\Phi: H_A \rightarrow H_B$$를 가정하였다. 우리의 추가적인 주장은 이것이 두 fundamental matrix들을 동일시해준다는 것으로, 
+앞서 우리는 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)에서 $$D$$-module isomorphism $$\Phi: H_A \rightarrow H_B$$를 가정하였다. 우리의 추가적인 주장은 이것이 두 fundamental matrix들을 동일시해준다는 것으로, 이 주장 또한 ([§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)을 가정하더라도) 각 mirror pair에 대해 보여야 하는 것으로 자명한 것이 아니다. 
 
 
- $$S$$를 $$\mathcal{I}$$로 보낸다는 것은 그 자체로 증명을 요하는 깊은 주장이다. 그 가장 핵심이 되는 한 조각은 $$S$$의 distinguished 열인 $$J$$-function이 $$\mathcal{I}$$의 대응하는 열, 즉 normalization $$T_0 = 1$$에 짝지어지는 distinguished thimble $$\Gamma_0$$ 위의 oscillating integral과 일치한다는 것이다.
+$$S$$를 $$\mathcal{I}$$로 보낸다는 것은 그 자체로 증명을 요하는 깊은 주장이다. 그 가장 핵심이 되는 한 조각은 $$S$$의 distinguished 열인 $$J$$-function이 $$\mathcal{I}$$의 대응하는 열, 즉 normalization $$T_0 = 1$$에 짝지어지는 distinguished thimble $$\Gamma_0$$ 위의 oscillating integral과 일치한다는 것이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="conj5">**주장 5** (Mirror theorem, $$J$$-function form)</ins> Mirror pair $$(X, \check{X})$$에 대해, $$X$$의 $$J$$-function은 $$T_0 = 1$$ normalization에 대응하는 특정 Lefschetz thimble $$\Gamma_0$$ (large radius limit 근방에서 결정되는 *distinguished* thimble)에 대한 oscillating integral의 cohomology basis $$\{T^a\}$$ 성분들로 적힌다. 즉
+<ins id="conj5">**주장 5 (Mirror theorem, $$J$$-function form)**</ins> Mirror pair $$(X, \check{X})$$에 대하여, $$X$$의 $$J$$-function은 $$T_0 = 1$$ normalization에 대응하는 특정 Lefschetz thimble $$\Gamma_0$$ (large radius limit 근방에서 결정되는 *distinguished* thimble)에 대한 oscillating integral의 cohomology basis $$\{T^a\}$$ 성분들로 적힌다. 즉
 
 $$J_X(q, z) = \sum_a J^a(q, z) T^a,\qquad J^a(q, z) \;\propto\; \mathcal{I}^a_{\Gamma_0}(q, z) = \int_{\Gamma_0} T_a\, e^{W_q/z}\,\omega$$
 
-가 (양변의 normalization 차이를 흡수하고 나면) 성립한다. 우변은 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서 도입한 period matrix $$\mathcal{I}^a_p$$의 $$p = \Gamma_0$$ 열이며, $$\Phi$$ 아래 $$T_a$$는 그 글의 basis $$\{e_a\}$$로 매핑된 것이다. 특히 $$z \to 0$$ stationary phase asymptotic ([§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3))은 $$W_q$$의 critical point들에 의한 합으로 풀어지며, 그 leading order의 critical value들 $$\{W_q(p)\}$$가 quantum cohomology의 canonical coordinate들을 복원한다 ([§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 ring isomorphism $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$의 직접적 격상).
+가 up to normalization으로 성립한다. 여기서 우변은 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서 도입한 period matrix $$\mathcal{I}^a_p$$의 $$p = \Gamma_0$$ 열이다. 
 
 </div>
 
-[주장 5](#conj5)는 mirror symmetry의 *가장 강한 표현*으로, A-model에서 정의되는 descendant GW invariant 전체가 B-model의 period 적분으로 복원된다는 주장이다. [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 다룬 *ring*-level mirror symmetry $$QH^\ast(X) \cong \Jac(W_q)$$는 이 statement의 $$z \to 0$$ leading order에 해당하고, 주장 5는 이를 $$z \in \mathbb{C}^\ast$$ 전체로 확장한 것이다.
+위의 [주장 5](#conj5)는 mirror symmetry의 가장 강한 표현 중 하나로, A-side의 descendant Gromov-Witten invariant 전체가 B-side에서 period integral으로 복원된다는 것이다. 그럼 특히 classical한 버전의 ring-level mirror symmetry $$QH^\ast(X) \cong \Jac(W_q)$$은 $$z\rightarrow 0$$일 때의 leading order로 복원된다. 특히 $$z \to 0$$ stationary phase asymptotic ([§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3))은 $$W_q$$의 critical point들에 의한 합으로 풀어지며, 그 leading order의 critical value들 $$\{W_q(p)\}$$가 quantum cohomology의 canonical coordinate들을 복원한다.
 
-이를 명제가 아닌 주장으로 둔 것은, [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)와 마찬가지로 이것이 mirror pair마다 별도로 증명되어야 하는 정리이기 때문이다. 한 가지 강조해 둘 것은, 설령 주장 4의 $$D$$-module 동형 $$\Phi$$를 가정하더라도 주장 5가 곧바로 따라오지는 않는다는 점이다. $$\Phi$$가 connection을 보존하므로 A-side의 flat section $$J$$는 B-side의 flat section, 즉 thimble period들의 *어떤* 선형결합으로 가지만, $$\Phi$$ 자체에 monodromy-invariant 상수배만큼의 자유도가 있어 그 선형결합이 하필 단 하나의 distinguished thimble $$\Gamma_0$$의 period라는 것 — 즉 어느 flat section이 어느 thimble에 대응하는지 — 은 추가로 고정해야 하는 데이터이다. 이 matching을 고정하는 것이 바로 $$T_0 = 1$$ normalization을 $$\Gamma_0$$에 못박는 점근 조건으로, 구체적으로는 $$z \to 0$$ 극한에서 $$\Gamma_0$$가 가장 작은 $$e^{W_q(p)/z}$$ 점근을 주는 (large radius limit의) thimble로 지목됨을 통해 이루어진다. 따라서 증명의 일반적인 전략은 $$J$$-function이 만족하는 QDE ([명제 4](#prop4))와 period matrix가 만족하는 Picard-Fuchs 시스템 ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))이 동일한 $$D$$-module을 정의함을 보이는 것 (주장 4에 해당) 에 더해, 위의 thimble matching을 $$z \to 0$$ 점근으로 확인하는 두 단계로 이루어진다. Calabi-Yau hypersurface in toric variety의 경우 Givental과 Lian-Liu-Yau가 이를 증명하였으며, 우리의 주된 관심 대상인 toric Fano variety의 경우 다음 절의 *$$I = J$$* 정리가 이 주장의 explicit하고 계산 가능한 형태를 제공한다.
+한 가지 강조해 둘 것은, 설령 주장 4의 $$D$$-module 동형 $$\Phi$$를 가정하더라도 주장 5가 곧바로 따라오지는 않는다는 점이다. $$\Phi$$가 connection을 보존하므로 A-side의 flat section $$J$$는 B-side의 flat section, 즉 thimble period들의 *어떤* 선형결합으로 가지만, $$\Phi$$ 자체에 monodromy-invariant 상수배만큼의 자유도가 있어 그 선형결합이 하필 단 하나의 distinguished thimble $$\Gamma_0$$의 period라는 것 — 즉 어느 flat section이 어느 thimble에 대응하는지 — 은 추가로 고정해야 하는 데이터이다. 이 matching을 고정하는 것이 바로 $$T_0 = 1$$ normalization을 $$\Gamma_0$$에 못박는 점근 조건으로, 구체적으로는 $$z \to 0$$ 극한에서 $$\Gamma_0$$가 가장 작은 $$e^{W_q(p)/z}$$ 점근을 주는 (large radius limit의) thimble로 지목됨을 통해 이루어진다. 따라서 증명의 일반적인 전략은 $$J$$-function이 만족하는 QDE ([명제 4](#prop4))와 period matrix가 만족하는 Picard-Fuchs 시스템 ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))이 동일한 $$D$$-module을 정의함을 보이는 것 (주장 4에 해당) 에 더해, 위의 thimble matching을 $$z \to 0$$ 점근으로 확인하는 두 단계로 이루어진다. Calabi-Yau hypersurface in toric variety의 경우 Givental과 Lian-Liu-Yau가 이를 증명하였으며, 우리의 주된 관심 대상인 toric Fano variety의 경우 다음 절의 *$$I = J$$* 정리가 이 주장의 explicit하고 계산 가능한 형태를 제공한다.
 
 ## Toric Fano variety: $$I$$-function과 $$I = J$$ 정리
 
@@ -258,19 +258,19 @@ Toric Fano variety의 경우 B-model 측의 oscillating integral은 명시적인
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6** (Givental의 $$I$$-function)</ins> $$X$$를 smooth projective toric Fano variety, $$D_1, \ldots, D_N$$을 toric divisor, $$\beta \in H_2(X, \mathbb{Z})$$를 effective curve class라 하자. $$X$$의 *$$I$$-function*은 다음으로 정의된다.
+<ins id="def6">**정의 6 (Givental의 $$I$$-function)**</ins> $$X$$를 smooth projective toric Fano variety, $$D_1, \ldots, D_N$$을 toric divisor, $$\beta \in H_2(X, \mathbb{Z})$$를 effective curve class라 하자. $$X$$의 *$$I$$-function*은 다음으로 정의된다.
 
 $$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in \mathrm{NE}(X)} q^\beta \prod_{i=1}^N \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$$
 
-여기서 형식상 등장하는 $$-\infty$$로의 무한곱은 분자와 분모에서 정확히 상쇄되어 실제로는 $$D_i \cdot \beta$$의 부호에 따라 유한곱 (혹은 그 역수)으로 환원된다. $$I_X(q, z)$$는 $$X$$의 Hori-Vafa mirror $$\check{X}$$ 위의 oscillating integral을 charge (GKZ) 데이터로 직접 전개해 얻어진다.
-
 </div>
 
-[정의 6](#def6)의 식은 외관상 복잡하지만, 정해진 charge 데이터로부터 *손으로* 적을 수 있다는 점이 핵심이다 (다음 절 예시 참조). 이제 $$I$$-function과 $$J$$-function의 관계를 진술한다.
+여기서 형식상 등장하는 $$-\infty$$로의 무한곱은 분자와 분모에서 정확히 상쇄되어 실제로는 $$D_i \cdot \beta$$의 부호에 따라 유한곱 (혹은 그 역수)으로 환원된다. $$I_X(q, z)$$는 $$X$$의 Hori-Vafa mirror $$\check{X}$$ 위의 oscillating integral을 charge (GKZ) 데이터로 직접 전개해 얻어진다.
+
+[정의 6](#def6)의 식은 외관상 복잡하지만, 정해진 charge 데이터로부터 *손으로* 적을 수 있다는 점이 핵심이다. 자세한 내용은 [예시 8](#ex8)로 미뤄두고, 우선 위의 명제를 $$I$$-function과 $$J$$-function에 대한 주장으로 번역하자.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7** (Givental의 mirror theorem)</ins> $$X$$가 smooth projective toric Fano variety일 때, $$X$$의 $$I$$-function과 $$J$$-function은 다음 관계를 만족한다.
+<ins id="prop7">**명제 7 (Givental's mirror theorem)**</ins> $$X$$가 smooth projective toric Fano variety일 때, $$X$$의 $$I$$-function과 $$J$$-function은 다음 관계를 만족한다.
 
 $$J_X(\tau(q), z) = I_X(q, z)$$
 

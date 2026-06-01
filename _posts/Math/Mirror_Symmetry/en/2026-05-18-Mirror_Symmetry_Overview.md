@@ -1,5 +1,6 @@
 ---
 title: "Overview of Mirror Symmetry"
+description: "Mirror symmetry, originating from string theory, exchanges the Kaehler structure and complex structure of Calabi-Yau threefolds as a duality between Type IIA and Type IIB, and it gained attention through the event where physicists solved the curve counting problem that algebraic geometers could not solve in 1991 using physical methods."
 excerpt: "Historical background and the Hori-Vafa mirror"
 
 categories: [Math / Mirror Symmetry]
@@ -14,26 +15,27 @@ header:
 date: 2026-05-18
 last_modified_at: 2026-05-23
 weight: 1
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-01T12:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T12:00:04+00:00
 ---
 ## Historical Background
 
-Mirror symmetry is not a field that arose naturally within the mathematical framework, but rather is grounded in string theory. According to string theory, the world we live in starts from a single assumption: its fundamental degrees of freedom are not *point particles* but *one-dimensional strings*. Then the trajectory in spacetime of a particle moving along the time axis is no longer a $$1$$-dimensional worldline but a $$2$$-dimensional worldsheet, and its equation of motion is determined as a specific action-minimizing solution, just as in [\[Symplectic Geometry\] §Classical Mechanics, §§Principle of Least Action](/en/math/symplectic_geometry/classical_mechanics#principle-of-least-action). To reconcile this description with the framework of existing quantum mechanics, spacetime is forced to be $$10$$-dimensional; thus physicists think of this 10-dimensional spacetime as the product of $$4$$-dimensional Minkowski spacetime and a compact manifold $$M$$ that accounts for the remaining $$6$$ dimensions. Writing out the conditions that this space $$X$$ must satisfy physically, one finds that $$X$$ must be a *Calabi-Yau threefold*.
+Mirror symmetry is not a field that arose naturally within the mathematical framework, but is grounded in string theory. According to string theory, the world we live in rests on a single assumption: its fundamental degrees of freedom are not *point particles* but *one-dimensional strings*. Then the trajectory in spacetime of a particle moving along the time axis is no longer a $$1$$-dimensional worldline but a $$2$$-dimensional worldsheet, and its equation of motion is determined as a specific action-minimizing solution, just as in [\[Symplectic Geometry\] §Classical Mechanics, §§Principle of Least Action](/en/math/symplectic_geometry/classical_mechanics#principle-of-least-action). To reconcile this description with the framework of existing quantum mechanics, spacetime is forced to be $$10$$-dimensional; thus physicists regard this 10-dimensional spacetime as the product of $$4$$-dimensional Minkowski spacetime and a compact manifold $$M$$ that accounts for the remaining $$6$$ dimensions. Writing out the conditions that this space $$X$$ must satisfy physically, one finds that $$X$$ must be a *Calabi-Yau threefold*.
 
-Meanwhile, 10-dimensional superstring theory is divided into five types according to the choice of boundary conditions and quantum conditions that the worldsheet must satisfy. Among these, the direct stage for mirror symmetry is Type IIA and Type IIB superstring theory, which, as their names suggest, are closely related to each other. Type IIA string theory gives a Kähler structure and a complex structure on a Calabi-Yau threefold $$X$$, while Type IIB string theory interchanges these two structures and defines a new Calabi-Yau threefold $$\check{X}$$. 
+Meanwhile, 10-dimensional superstring theory is divided into five types according to the choice of boundary conditions and quantum conditions that the worldsheet must satisfy. Among these, the direct stage for mirror symmetry is Type IIA and Type IIB superstring theory, which, as their names suggest, are closely related to each other. Type IIA string theory furnishes a Kähler structure and a complex structure on a Calabi-Yau threefold $$X$$, while Type IIB string theory interchanges these two structures and defines a new Calabi-Yau threefold $$\check{X}$$. 
 
-Therefore, if two distinct Calabi-Yau threefolds $$X$$ and $$\check{X}$$ appear as the Type IIA and Type IIB manifestations of a single theory, they will yield a relation between the Kähler structure of $$X$$ and the complex structure of $$\check{X}$$. We call such a pair $$(X, \check{X})$$ a *mirror pair*, and the symmetry between them *mirror symmetry*.
+Therefore, if two distinct Calabi-Yau threefolds $$X$$ and $$\check{X}$$ appear as the Type IIA and Type IIB manifestations of a single theory, they yield a relation between the Kähler structure of $$X$$ and the complex structure of $$\check{X}$$. We call such a pair $$(X, \check{X})$$ a *mirror pair*, and the symmetry between them *mirror symmetry*.
 
-This relationship was supported almost entirely by the intuition of physicists and had not been formulated in mathematical language, so in the early days it was not a particularly interesting problem for mathematicians other than mathematical physicists. The situation changed at a mirror symmetry workshop held at MSRI in May 1991, where Candelas, de la Ossa, Green, and Parkes carried out the computation of the number of degree $$d$$ rational curves on a quintic Calabi-Yau threefold by transferring it to a calculation on $$\check{X}$$ via the mirror symmetry assumption. There is an interesting anecdote here: at first, the values predicted by algebraic geometers through intersection theory differed from those predicted by physicists using this method. Later, a bug was found in the algebraic geometers' code, and after correcting it and recalculating, the physicists' computation turned out to be correct, causing mirror symmetry to emerge as a core research area in mathematics as well. 
+This relationship was supported almost entirely by physicists' intuition and had not been formulated in mathematical language, so in the early days it was not a particularly interesting problem for mathematicians outside mathematical physics. The situation changed at a mirror symmetry workshop held at MSRI in May 1991, where Candelas, de la Ossa, Green, and Parkes computed the number of degree $$d$$ rational curves on a quintic Calabi-Yau threefold by transferring the calculation to $$\check{X}$$ via the mirror symmetry assumption. There is an interesting anecdote here: initially, the values predicted by algebraic geometers through intersection theory differed from those predicted by physicists using this method. Later, a bug was found in the algebraic geometers' code, and after correcting it and recalculating, the physicists' computation turned out to be correct, causing mirror symmetry to emerge as a core research area in mathematics as well. 
 
-However, because physicists' intuition fundamentally came from quantum mechanical results, it was impossible to formalize it mathematically as such, and bringing it into mathematics required an appropriate formalism. The canonical framework that mathematicians generally accept is the Givental formalism; briefly put, it states that if one packages the Gromov-Witten invariants—the invariants of the A-model—into data called the $$J$$-function, and similarly packages the oscillating integrals—the invariants of the B-model—into the $$I$$-function, then these are equal to each other through an appropriate change of variables.
+However, because physicists' intuition fundamentally derived from quantum mechanical results, it was impossible to formalize it mathematically as such, and bringing it into mathematics required an appropriate formalism. The canonical framework that mathematicians generally accept is the Givental formalism; briefly put, it states that if one packages the Gromov–Witten invariants—the invariants of the A-model—into data called the $$J$$-function, and similarly packages the oscillating integrals—the invariants of the B-model—into the $$I$$-function, then these are equal to each other through an appropriate change of variables.
 
-In the posts in this category we will explain these A-model and B-model separately, and based on this we will explore topics in mirror symmetry. In the remainder of this post, as motivation for this, we will examine duality in toric varieties. 
+In the posts in this category we will explain these A-model and B-model separately, and based on this we will explore topics in mirror symmetry. In the remainder of this post, as motivation, we examine duality in toric varieties. 
 
 ## Hori-Vafa Mirror Construction
 
-In the case of toric varieties ([\[Toric Geometry\] §Definition of Toric Varieties, ⁋Definition 3](/en/math/toric_geometry/toric_varieties#def3)), mirror symmetry takes a very concrete form, so before starting the main discussion we will examine how mirror symmetry works in this setting. 
+In the case of toric varieties ([\[Toric Geometry\] §Definition of Toric Varieties, ⁋Definition 3](/en/math/toric_geometry/toric_varieties#def3)), mirror symmetry takes a very concrete form, so before starting the main discussion we examine how mirror symmetry works in this setting. 
 
 Let $$\Sigma$$ be the fan of a smooth projective toric variety $$X=X_\Sigma$$, and let $$v_1, \ldots, v_N \in N \cong \mathbb{Z}^n$$ be the primitive generators of its one-dimensional cones. If $$\Sigma$$ is a complete fan, the $$v_i$$ span $$N_\mathbb{R}$$. However, since $$N>n$$, they are $$\mathbb{Z}$$-linearly dependent, and thus there exist $$r=N-n$$ integral relations among them. 
 
@@ -65,7 +67,7 @@ There is a unique relation $$v_0 + v_1 + \cdots + v_n = 0$$ among them, and henc
 
 $$Q = (1,\, 1,\, \ldots,\, 1) \in \Mat_{1 \times (n+1)}(\mathbb{Z}).$$
 
-According to the explanation above, this encodes the information of the standard scaling action of the torus defined on $$\mathbb{P}^n$$,
+According to the explanation above, this encodes the standard scaling action of the torus on $$\mathbb{P}^n$$,
 
 $$t\cdot(\x_0,\ldots, \x_n)=(t \x_0, \ldots, t \x_n).$$
 
@@ -85,7 +87,7 @@ From the viewpoint of mirror symmetry, the charge matrix encodes the data of the
 
 </div>
 
-The purpose of this post is to examine this phenomenon through light calculations before formally defining the concepts of mirror symmetry. Therefore, instead of explaining the data on both sides precisely, we will replace this with brief ideas and intuition. First, from the $$B$$-model side, the charge matrix defines the *Jacobi ring* $$\Jac(W_q)$$, which can be viewed as the classical limit of the oscillating integral mentioned earlier. For a given Landau-Ginzburg model $$(\check{X}, W)$$, its Jacobi ring is given by definition as
+The purpose of this post is to examine this phenomenon through light calculations before formally defining the concepts of mirror symmetry. Therefore, instead of explaining the data on both sides precisely, we replace this with brief ideas and intuition. First, from the $$B$$-model side, the charge matrix defines the *Jacobi ring* $$\Jac(W_q)$$, which can be viewed as the classical limit of the oscillating integral mentioned earlier. For a given Landau-Ginzburg model $$(\check{X}, W)$$, its Jacobi ring is given by definition as
 
 $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}.$$
 
@@ -105,7 +107,7 @@ Here $$\x_1, \ldots, \x_n$$ are local coordinates on $$\check{X}$$, and the $$\p
 
 </div>
 
-Here $$q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$$ is the variable carrying the complex structure of the mirror LG model. The complex structure of the mirror domain $$\check{X}$$ itself is always the same affine torus $$(\mathbb{C}^\ast)^n$$, but the superpotential $$W_q$$ placed on top of it is determined by $$q$$. In other words, for each value of $$q$$ a unique LG model $$(\check{X}, W_q)$$ is determined, and it is more accurate to say that the whole family $$\{(\check{X}, W_q)\}_q$$ appears as the mirror of $$X_\Sigma$$. At this point, the complex structure $$q$$ appears as the Novikov parameter $$q$$ in the A-model.
+Here $$q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$$ is the variable carrying the complex structure of the mirror LG model. The complex structure of the mirror domain $$\check{X}$$ itself is always the same affine torus $$(\mathbb{C}^\ast)^n$$, but the superpotential $$W_q$$ placed on it is determined by $$q$$. In other words, for each value of $$q$$ a unique LG model $$(\check{X}, W_q)$$ is determined, and it is more accurate to say that the whole family $$\{(\check{X}, W_q)\}_q$$ appears as the mirror of $$X_\Sigma$$. At this point, the complex structure $$q$$ appears as the Novikov parameter $$q$$ in the A-model.
 
 We previously described mirror symmetry as a symmetry between complex structure and symplectic structure, and the Novikov parameter explained above carries precisely the symplectic structure. Specifically, given a compact Kähler manifold $$X$$, we define its *Kähler form* $$\omega\in H^2(X, \mathbb{R})$$ as the symplectic form of $$X$$. Since this is a real form and considering the moduli space is somewhat cumbersome, we choose $$B\in H^2(X, \mathbb{R})$$ to form the *complexified Kähler class*
 
@@ -115,7 +117,7 @@ Intuitively, this fills in the Kähler form $$\omega$$ in the complex direction 
 
 $$q^{\beta_0} = e^{2\pi i \int_{\beta_0} t} = e^{2\pi i \int_{\beta_0} B}\, e^{-2\pi \int_{\beta_0} \omega}.$$
 
-Then the magnitude $$\lvert q^{\beta_0}\rvert = e^{-2\pi \int_{\beta_0} \omega}$$ of $$q^{\beta_0}$$ encodes the *symplectic volume* $$\int_{\beta_0} \omega$$ of the curve class $$\beta_0$$, and the phase $$\arg q^{\beta_0} = 2\pi \int_{\beta_0} B$$ encodes the $$B$$-field. Therefore, in the situation where the symplectic volume goes to $$0$$, the magnitude of $$q$$ goes to $$1$$ and quantum effects appear in full; conversely, when the symplectic volume goes to infinity, the magnitude of $$q$$ goes to $$0$$ and quantum effects disappear. 
+Then the magnitude $$\lvert q^{\beta_0}\rvert = e^{-2\pi \int_{\beta_0} \omega}$$ of $$q^{\beta_0}$$ encodes the *symplectic volume* $$\int_{\beta_0} \omega$$ of the curve class $$\beta_0$$, and the phase $$\arg q^{\beta_0} = 2\pi \int_{\beta_0} B$$ encodes the $$B$$-field. Therefore, when the symplectic volume goes to $$0$$, the magnitude of $$q$$ goes to $$1$$ and quantum effects appear in full; conversely, when the symplectic volume goes to infinity, the magnitude of $$q$$ goes to $$0$$ and quantum effects disappear. 
 
 Now, from the above calculation, specifying a single $$q$$ amounts to determining the complexified Kähler class $$t$$, that is, specifying the $$B$$-field and $$\omega$$ respectively. Then from the above formula, $$B$$ has period $$2\pi$$, and $$\omega$$ determines the radius in the direction fixed by $$B$$, so the moduli space of $$q$$ (or of $$t$$) is the algebraic torus $$(\mathbb{C}^\ast)^r$$ of dimension $$r=\dim_\mathbb{R} H^2(X, \mathbb{R})$$. However, since $$\omega$$ is a Kähler form it must lie inside the *Kähler cone* (for an effective curve class $$\beta_0$$ we have $$\int_{\beta_0} \omega > 0$$, i.e. $$\lvert q^{\beta_0}\rvert < 1$$), so strictly speaking the moduli are not the whole torus but an open region near the large volume limit where $$q = 0$$, and $$(\mathbb{C}^\ast)^r$$ is the ambient algebraic torus containing it. 
 
@@ -181,7 +183,7 @@ and their solutions are given by the three points satisfying $$\z_1=\z_2$$ and $
 
 $$\Jac(W_q) = \mathbb{C}[\z_1^\pm, \z_2^\pm, q^\pm] \big/ (\partial_{\z_1} W_q, \partial_{\z_2} W_q) \;\cong\; \mathbb{C}[H, q^\pm]/(H^3 - q).$$
 
-Meanwhile, to compute the quantum cohomology in the A-model one uses the following Gromov-Witten invariant:
+Meanwhile, to compute the quantum cohomology in the A-model one uses the following Gromov–Witten invariant:
 
 $$\langle H, H^2, H^2 \rangle_{0,3,1}^{\mathbb{P}^2} = 1.$$
 
@@ -199,5 +201,6 @@ More generally, the above two examples hold for an arbitrary smooth projective t
 
 **References**
 
-**[CK]** D. A. Cox, S. Katz, *Mirror symmetry and algebraic geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.  
-**[HV]** K. Hori, C. Vafa, *Mirror symmetry*, arXiv:hep-th/0002222.
+**[CK]** D. A. Cox, S. Katz, *Mirror Symmetry and Algebraic Geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.
+
+**[MS]** K. Hori, S. Katz, A. Klemm, R. Pandharipande, R. Thomas, C. Vafa, R. Vakil, E. Zaslow, *Mirror Symmetry*, Clay Mathematics Monographs **1**, AMS, 2003.
