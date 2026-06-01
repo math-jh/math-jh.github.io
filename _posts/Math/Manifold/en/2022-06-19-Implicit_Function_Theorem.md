@@ -1,5 +1,6 @@
 ---
 title: "Implicit Function Theorem"
+description: "This post covers the implicit function theorem extended to differentiable manifolds, shows that every immersed submanifold is locally embedded, and derives the submersion level set theorem."
 excerpt: "The implicit function theorem on differentiable manifolds and its consequences"
 
 categories: [Math / Manifold]
@@ -13,8 +14,9 @@ sidebar:
 date: 2022-06-19
 last_modified_at: 2022-12-10
 weight: 9
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T07:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T07:00:04+00:00
 ---
 First, let us define the following.
 
@@ -40,21 +42,21 @@ The manifold obtained by endowing $$S$$ with the subspace topology and the coord
 
 </details>
 
-In the lemma above, one must take care to note that for an open set $$U$$ in $$M$$, $$F(U)$$ is a slice of $$(V,\varphi)$$. For example, $$F(M)\cap V$$ is generally not a slice, and the same is true even when $$F$$ is a submanifold.
+In the above lemma, one must take care to observe that for an open set $$U$$ in $$M$$, the statement concerns $$F(U)$$ being a slice of $$(V,\varphi)$$. For example, $$F(M)\cap V$$ is generally not a slice, and the same holds even when $$F$$ is a submanifold.
 
 ![counterexample](/assets/images/Math/Manifold/Implicit_Function_Theorem-1.png){:style="width:200px" class="invert" .align-center}
 
-But if $$M$$ is an embedding, we may choose $$(V,\varphi)$$ appropriately so that $$F(M)\cap V$$ is a slice of $$V$$. From this perspective, the above lemma can be summarized as
+However, if $$M$$ is embedded, we may choose $$(V,\varphi)$$ appropriately so that $$F(M)\cap V$$ is a slice of $$V$$. From this perspective, the above lemma can be summarized as
 
 > An immersed submanifold is locally embedded.
 
 ## The Implicit Function Theorem and Its Consequences
 
-Now we are ready to extend the implicit function theorem to differentiable manifolds.
+We are now ready to extend the implicit function theorem to differentiable manifolds.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm3">**Theorem 3 (Implicit Function Theorem)**</ins> Let $$U\subset\mathbb{R}^{m-n}\times\mathbb{R}^n$$ be an open set, and to distinguish, denote the coordinates of $$\mathbb{R}^{m-n}$$ by $$r^1,\ldots, r^{m-n}$$ and the coordinates of $$\mathbb{R}^n$$ by $$s^1,\ldots, s^n$$. Also, let $$f:U\rightarrow\mathbb{R}^n$$ be $$C^\infty$$, and for some point $$(x_0, y_0)\in U$$ let $$f(x_0,y_0)$$. If at the point $$(x_0,y_0)$$ the $$n\times n$$ submatrix
+<ins id="thm3">**Theorem 3 (Implicit Function Theorem)**</ins> Let $$U\subset\mathbb{R}^{m-n}\times\mathbb{R}^n$$ be an open set, and to distinguish the two factors, denote the coordinates of $$\mathbb{R}^{m-n}$$ by $$r^1,\ldots, r^{m-n}$$ and the coordinates of $$\mathbb{R}^n$$ by $$s^1,\ldots, s^n$$. Let $$f:U\rightarrow\mathbb{R}^n$$ be $$C^\infty$$, and suppose $$f(x_0,y_0)=0$$ for some point $$(x_0, y_0)\in U$$. If at the point $$(x_0,y_0)$$ the $$n\times n$$ submatrix
 
 $$\begin{pmatrix}\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^n\\\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^n\\\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^n\end{pmatrix}$$
 
@@ -72,7 +74,7 @@ holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor4">**Corollary 4 (Submersion Level Set Theorem)**</ins> Let $$F:M\rightarrow N$$ be $$C^\infty$$, fix $$q\in F(M)$$ and let $$P=F^{-1}(q)$$. If for every $$p\in P$$ the differential $$dF_p:T_pM\rightarrow T_{F(p)}N$$ is surjective, then there exists a unique manifold structure on $$P$$ such that the canonical injection $$\iota:P\hookrightarrow M$$ is a submanifold.
+<ins id="cor4">**Corollary 4 (Submersion Level Set Theorem)**</ins> Let $$F:M\rightarrow N$$ be $$C^\infty$$, fix $$q\in F(M)$$, and let $$P=F^{-1}(q)$$. If for every $$p\in P$$ the differential $$dF_p:T_pM\rightarrow T_{F(p)}N$$ is surjective, then there exists a unique manifold structure on $$P$$ such that the canonical injection $$\iota:P\hookrightarrow M$$ is a submanifold.
 
 Moreover, in this case $$\iota$$ is an embedding and the codimension $$\dim M-\dim P$$ of $$P$$ equals $$\dim N$$.
 
@@ -84,7 +86,7 @@ Moreover, in this case $$\iota$$ is an embedding and the codimension $$\dim M-\d
 
 </details>
 
-The hypothesis of the next corollary is weaker than that of the preceding one, so it is more useful.
+The hypothesis of the next corollary is weaker than that of the preceding one, so it is more widely applicable.
 
 <div class="proposition" markdown="1">
 
