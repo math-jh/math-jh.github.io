@@ -1,5 +1,6 @@
 ---
 title: "Dual Spaces"
+description: "This post covers the definition of dual modules over a given ring, Kronecker pairs, and the interplay between submodules."
 excerpt: "Hom of modules, dual modules, and the bidual map"
 
 categories: [Math / Multilinear Algebra]
@@ -13,12 +14,13 @@ sidebar:
 date: 2024-08-23
 last_modified_at: 2024-09-19
 weight: 4
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T15:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T15:30:03+00:00
 ---
 ## Module $$\Hom_\lMod{A}(M,N)$$
 
-Let $$M$$ and $$N$$ be arbitrary left $$A$$-modules. Then $$\Hom_\lMod{A}(M,N)$$ is an abelian group, but it does not generally carry the structure of a left $$A$$-module. That is, in general, for arbitrary $$\alpha\in A$$ and $$u\in\Hom_\lMod{A}(M,N)$$, the map
+Fix arbitrary left $$A$$-modules $$M$$ and $$N$$. Then $$\Hom_\lMod{A}(M,N)$$ is an abelian group, but it does not generally carry the structure of a left $$A$$-module. That is, for arbitrary $$\alpha\in A$$ and $$u\in\Hom_\lMod{A}(M,N)$$, the map
 
 $$x\mapsto \alpha u(x)$$
 
