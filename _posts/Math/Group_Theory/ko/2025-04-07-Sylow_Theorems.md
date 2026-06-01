@@ -99,7 +99,7 @@ $$G$$의 Sylow $$p$$-subgroup들의 모임을 $$\Syl_p(G)$$로 적는다.
 
 </div>
 
-즉, $$G$$의 크기가 $$p^r m$$ ($$p\not\mid p$$)으로 주어질 때, Sylow $$p$$-group $$P$$는 정확히 order $$p^r$$를 갖는 $$G$$의 subgroup이다. 앞으로 남은 글에서 $$G$$의 크기 $$n=p^rm$$은 항상 $$p\not\mid m$$을 만족하는 것으로 가정하자. 
+즉, $$G$$의 크기가 $$p^r m$$ ($$p\nmid m$$)으로 주어질 때, Sylow $$p$$-group $$P$$는 정확히 order $$p^r$$를 갖는 $$G$$의 subgroup이다. 앞으로 남은 글에서 $$G$$의 크기 $$n=p^rm$$은 항상 $$p\not\mid m$$을 만족하는 것으로 가정하자. 
 
 실로우 정리는 임의의 finite group의 Sylow $$p$$-subgroup에 대한 정리들로서, finite group을 분류하는 데에 도움을 준다. 첫 번째 결과는 Sylow $$p$$-subgroup의 존재성에 대한 것으로, 이를 위해서는 우선 다음의 보조정리가 필요하다.
 

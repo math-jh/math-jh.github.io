@@ -1,5 +1,6 @@
 ---
 title: "Differential Modules"
+description: "This post examines derivations on graded algebras and their functorial properties, and explores the structure of related exact sequences in the context of differential graded modules."
 excerpt: "Differential modules with derivations on graded algebras"
 
 categories: [Math / Multilinear Algebra]
@@ -13,25 +14,26 @@ sidebar:
 date: 2025-04-18
 last_modified_at: 2025-04-18
 weight: 121
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T19:30:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T19:30:01+00:00
 ---
 Now we define differential modules. For this we need a simple lemma; first consider the second case assumed in [§Derivations, ⁋Definition 2](/en/math/multilinear_algebra/derivations#def2). That is, we consider a commutative ring $$A$$, a $$\Delta$$-graded $$A$$-algebra $$E$$, a graded $$A$$-module $$F$$, and an $$\varepsilon$$-derivation $$d:E \rightarrow F$$.
 
 ## Functoriality of Derivations
 
-In addition to the above assumptions, we assume that every algebra appearing in this section is unital associative, and all algebra homomorphisms are unital.
+In addition to the above assumptions, we assume that every algebra appearing in this section is unital associative, and that all algebra homomorphisms are unital.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**Proposition 1**</ins> Let two associative unital graded $$A$$-algebras $$E,F$$ be given, let $$M$$ be an $$(E,E)$$-bimodule, and let $$N$$ be a graded $$(F,F)$$-bimodule. Then for a graded $$A$$-algebra homomorphism $$\rho: E \rightarrow F$$ and a degree $$0$$ graded $$E$$-homomorphism $$\theta: M \rightarrow N$$ of $$E$$-bimodules defined by $$\rho$$, the following hold.
+<ins id="prop1">**Proposition 1**</ins> Let $$E$$ and $$F$$ be two associative unital graded $$A$$-algebras, let $$M$$ be an $$(E,E)$$-bimodule, and let $$N$$ be a graded $$(F,F)$$-bimodule. Then for a graded $$A$$-algebra homomorphism $$\rho: E \rightarrow F$$ and a degree $$0$$ graded $$E$$-homomorphism $$\theta: M \rightarrow N$$ of $$E$$-bimodules defined via $$\rho$$, the following hold:
 
 1. For any $$\varepsilon$$-derivation $$d': F \rightarrow N$$, the composition $$d'\circ\rho: E \rightarrow \rho^\ast N$$ is also an $$\varepsilon$$-derivation of the same degree.
 2. For any $$\varepsilon$$-derivation $$d: E \rightarrow M$$, the composition $$\theta\circ d: E \rightarrow \rho^\ast N$$ is also an $$\varepsilon$$-derivation of the same degree.
 
 </div>
 
-The proof of this is immediate from the definition of $$\rho^\ast$$. Meanwhile, in this situation we can also give $$F$$ an $$(E,E)$$-bimodule structure. Then it is natural to ask when $$d':F \rightarrow N$$ is also (left/right) $$E$$-linear.
+The proof is immediate from the definition of $$\rho^\ast$$. Meanwhile, in this situation we can also endow $$F$$ with an $$(E,E)$$-bimodule structure. It is then natural to ask when $$d':F \rightarrow N$$ is also (left/right) $$E$$-linear.
 
 <div class="proposition" markdown="1">
 
@@ -39,13 +41,13 @@ The proof of this is immediate from the definition of $$\rho^\ast$$. Meanwhile, 
 
 </div>
 
-Now define $$\Der_A(F, N)$$ to be the set of $$A$$-derivations from $$F$$ to $$N$$. Then the set of derivations satisfying the condition of [Proposition 2](#prop2) and becoming $$E$$-linear is the same as the set of derivations vanishing identically on $$\rho(E)$$, so this set forms an $$A$$-submodule of $$\Der_A(F, N)$$. We denote this by $$\Der_E(F,N)$$.
+Now define $$\Der_A(F, N)$$ to be the set of $$A$$-derivations from $$F$$ to $$N$$. Then the subset of derivations satisfying the condition of [Proposition 2](#prop2) — that is, those that become $$E$$-linear — coincides with the set of derivations vanishing identically on $$\rho(E)$$; hence this subset forms an $$A$$-submodule of $$\Der_A(F, N)$$. We denote it by $$\Der_E(F,N)$$.
 
-In addition, let three graded $$A$$-algebras $$E,F,G$$ be given, and let graded $$A$$-algebra homomorphisms $$\rho: A \rightarrow B$$, $$\sigma: B \rightarrow C$$ be given. Then for any graded $$A$$-algebra $$H$$, the sequence
+Furthermore, let three graded $$A$$-algebras $$E,F,G$$ be given, and let graded $$A$$-algebra homomorphisms $$\rho: A \rightarrow B$$, $$\sigma: B \rightarrow C$$ be given. Then for any graded $$A$$-algebra $$H$$, the sequence
 
 $$0 \rightarrow \Der_F(G, H) \rightarrow \Der_E(G,H) \rightarrow \Der_E(F, H)$$
 
-is exact for the following three $$A$$-modules
+is exact for the three $$A$$-modules
 
 $$\Der_E(F, \rho_\ast H),\qquad \Der_F(G,H),\qquad\Der_E(G, H).$$
 
@@ -53,13 +55,13 @@ For any $$\Delta$$-graded $$A$$-module $$M$$ and any $$\delta\in \Delta$$, defin
 
 $$(M[\delta])_\mu=M_{\delta+\mu}$$
 
-Since the $$\Delta$$-graded $$A$$-algebra $$E\oplus M[\delta]$$ exists, we can now give $$E\oplus M[\delta]$$ a graded $$A$$-algebra structure using the following formula for homogeneous elements $$x\in E$$ and the resulting elements $$(x,y), (x',y')$$ of $$E\oplus M[\delta]$$:
+Since the $$\Delta$$-graded $$A$$-algebra $$E\oplus M[\delta]$$ exists, we can now endow $$E\oplus M[\delta]$$ with a graded $$A$$-algebra structure using the following formula for homogeneous elements $$x\in E$$ and the resulting elements $$(x,y), (x',y')$$ of $$E\oplus M[\delta]$$:
 
 $$(x,y)(x',y')=(xx', xy+\varepsilon(\delta, \deg x)xy')$$
 
 In this case, we call the projection map $$\epsilon: E\oplus M[\delta] \rightarrow E$$ the *augmentation map*, and we know that this is a graded $$A$$-algebra homomorphism.
 
-Now if a degree $$0$$ graded $$A$$-linear map $$g:E \rightarrow E\oplus M[\delta]$$ satisfies $$\epsilon\circ g=\id_A$$, then by definition we know that it must be of the form $$x\mapsto (x,f(x))$$ for some degree $$\delta$$ graded $$A$$-linear map $$f:E \rightarrow M$$, and conversely any degree $$\delta$$ $$A$$-linear map $$f$$ defines a $$g$$ satisfying the above condition.
+Now if a degree $$0$$ graded $$A$$-linear map $$g:E \rightarrow E\oplus M[\delta]$$ satisfies $$\epsilon\circ g=\id_A$$, then by definition it must be of the form $$x\mapsto (x,f(x))$$ for some degree $$\delta$$ graded $$A$$-linear map $$f:E \rightarrow M$$, and conversely any degree $$\delta$$ $$A$$-linear map $$f$$ defines a $$g$$ satisfying the above condition.
 
 Then the following proposition is also a consequence of a simple calculation.
 
@@ -117,13 +119,13 @@ holds, so $$h_1$$ is an $$A$$-linear map from $$M$$ to $$B$$. Therefore, using t
 
 ## Universal Property
 
-In this section we assume that every algebra is associative unital, and all algebra homomorphisms are unital.
+In this section we assume that every algebra is associative unital, and that all algebra homomorphisms are unital.
 
-For any $$A$$-algebra $$E$$, the tensor product $$E\otimes_AE$$ has an $$(E,E)$$-bimodule structure by multiplying elements of $$E$$ on both sides. Considering the multiplication map
+For any $$A$$-algebra $$E$$, the tensor product $$E\otimes_AE$$ carries an $$(E,E)$$-bimodule structure given by multiplication by elements of $$E$$ on both sides. Considering the multiplication map
 
 $$m: E\otimes_AE \rightarrow E$$
 
-of $$E$$, it is obvious that $$m$$ preserves this $$(E,E)$$-bimodule structure. Therefore we can consider the kernel $$\mathfrak{I}$$ of $$m$$, which is a sub-$$(E,E)$$-bimodule of $$E\otimes_AE$$. Then the following lemma is a simple calculation.
+of $$E$$, it is obvious that $$m$$ preserves this $$(E,E)$$-bimodule structure. Therefore we can consider the kernel $$\mathfrak{I}$$ of $$m$$, which is a sub-$$(E,E)$$-bimodule of $$E\otimes_AE$$. The following lemma is then a simple calculation.
 
 <div class="proposition" markdown="1">
 
@@ -193,7 +195,7 @@ Now let us assume a better situation. That is, suppose now that $$E$$ is a *comm
 
 $$(E\otimes_AE)/\mathfrak{I}\cong E.$$
 
-Meanwhile, any $$E$$-module $$M$$ can be regarded as an $$(E,E)$$-bimodule by viewing its action as both a left and a right action. On the other hand, if we view the $$E$$-module $$M$$ as an $$E\otimes_AE$$-module $$M$$ via the multiplication map $$m:E\otimes_AE \rightarrow E$$, then from the adjunction
+Meanwhile, any $$E$$-module $$M$$ can be regarded as an $$(E,E)$$-bimodule by viewing its action as both a left and a right action. On the other hand, if we view the $$E$$-module $$M$$ as an $$E\otimes_AE$$-module via the multiplication map $$m:E\otimes_AE \rightarrow E$$, then from the adjunction
 
 $$\Hom_{(E,E)}(\mathfrak{I}, M) \rightarrow \Hom_{E\otimes_AE}(\mathfrak{I}, M)$$
 
@@ -217,7 +219,7 @@ we obtain the desired claim. That is, the following holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**Proposition 8**</ins> Consider a commutative $$A$$-algebra $$E$$, the multiplication map $$m:E\otimes_AE \rightarrow E$$, and the kernel $$\mathfrak{I}$$ of $$m$$. Then give $$\mathfrak{I}/\mathfrak{I}^2$$ an $$E$$-module structure via the canonical isomorphism
+<ins id="prop8">**Proposition 8**</ins> Consider a commutative $$A$$-algebra $$E$$, the multiplication map $$m:E\otimes_AE \rightarrow E$$, and the kernel $$\mathfrak{I}$$ of $$m$$. Then endow $$\mathfrak{I}/\mathfrak{I}^2$$ with an $$E$$-module structure via the canonical isomorphism
 
 $$(E\otimes_AE)/\mathfrak{I}\cong E.$$
 
@@ -289,7 +291,7 @@ making the following diagram commute:
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The proof of this is nothing but an appropriate use of the other universal properties employed in proving [Proposition 8](#prop8).
+The proof is nothing but an appropriate use of the other universal properties employed in proving [Proposition 8](#prop8).
 
 </details>
 
@@ -391,7 +393,7 @@ and we showed immediately after [Proposition 2](#prop2) that this is exact.
 
 </details>
 
-Now consider in particular the case where $$u:E \rightarrow E'$$ is surjective, so that for $$\mathfrak{I}=\ker u$$ we have an isomorphism $$E'\cong E/\mathfrak{I}$$. Denote by $$d'$$ the restriction of the canonical derivation $$d=d_{E/A}$$ to $$\mathfrak{I}$$,
+Now consider in particular the case where $$u:E \rightarrow E'$$ is surjective, so that for $$\mathfrak{I}=\ker u$$ we have an isomorphism $$E'\cong E/\mathfrak{I}$$. Denote by $$d'$$ the composition of the restriction of the canonical derivation $$d=d_{E/A}$$ to $$\mathfrak{I}$$ with $$i_E$$:
 
 $$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\longrightarrow}\Omega_{E/A}\overset{i_E}{\longrightarrow}\Omega_{E/A}\otimes_EE'.$$
 

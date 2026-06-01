@@ -3441,3 +3441,21 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `, 혹은 간단히` | looks like emphasis (no <sub> partner) |
 | `스칼라곱` | looks like emphasis (no <sub> partner) |
 
+## 부분다양체와 역함수 정리
+- post: `_posts/Math/Manifold/ko/2022-06-17-Submanifolds.md`
+- permalink: `/ko/math/manifold/submanifolds`
+- scanned: 2026-06-01T19:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `embedded` | looks like emphasis (no <sub> partner) |
+
+## 등급환의 국소화
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-23-Localization_of_Graded_Rings.md`
+- permalink: `/ko/math/commutative_algebra/localization_of_graded_rings`
+- scanned: 2026-06-01T20:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `homogeneous` | looks like emphasis (no <sub> partner) |
+

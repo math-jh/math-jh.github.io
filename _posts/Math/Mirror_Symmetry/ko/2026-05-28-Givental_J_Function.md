@@ -263,7 +263,15 @@ $$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} 
 
 </div>
 
-여기서 형식상 등장하는 $$-\infty$$로의 무한곱은 분자와 분모에서 정확히 상쇄되어 실제로는 $$D_i \cdot \beta$$의 부호에 따라 유한곱 (혹은 그 역수)으로 환원되므로, $$I_X$$는 정해진 charge 데이터로부터 *손으로* 적어 내려갈 수 있는 명시적 hypergeometric 함수이다. 이 식의 기원은 $$X$$의 Hori-Vafa mirror $$\check{X}$$ 위의 oscillating integral로, 좀 더 정확히는 그 적분을 [주장 5](#conj5)의 distinguished thimble $$\Gamma_0$$에 대해 charge 데이터로 전개한 것이 정확히 $$I_X$$이다. 즉 $$I_X$$는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 period matrix $$\mathcal{I}$$의 distinguished 열을 명시적으로 적은 것에 다름 아니다. 자세한 전개는 [예시 8](#ex8)로 미루고, 우선 이를 $$J$$-function에 대한 주장으로 번역하자.
+여기서 형식상 등장하는 $$-\infty$$로의 무한곱은 분자와 분모에서 정확히 상쇄되어 실제로는 $$D_i \cdot \beta$$의 부호에 따라 유한곱 (혹은 그 역수)으로 환원되는 잘 정의된 식이다. 이 곱을 결정하는 데이터는 toric divisor $$D_i$$와 그 intersection number $$D_i \cdot \beta$$뿐이며, 이 둘이 바로 $$X$$의 *charge 데이터*, 곧 [§거울대칭 개요, ⁋정의 1](/ko/math/mirror_symmetry/overview#def1)에서 도입한 *charge matrix* $$Q = (Q_{ji}) \in \Mat_{r \times N}(\mathbb{Z})$$가 담은 정보이다.
+
+이 둘이 charge matrix에 담겨 있는 이유는, toric variety에서 curve class가 곧 ray들 사이의 관계식이기 때문이다. $$X$$가 smooth projective toric variety이면 완전열
+
+$$0 \longrightarrow H_2(X, \mathbb{Z}) \xrightarrow{\ \iota\ } \mathbb{Z}^N \xrightarrow{\ e_i \mapsto v_i\ } \mathbb{Z}^n \longrightarrow 0$$
+
+이 성립하는데 (가운데 $$\mathbb{Z}^N$$은 $$N$$개의 ray에, 오른쪽 $$\mathbb{Z}^n \cong N$$은 cocharacter lattice에 대응), 이로부터 $$H_2(X, \mathbb{Z})$$는 ray 관계식이 이루는 lattice $$\{(a_i)_i \in \mathbb{Z}^N : \sum_i a_i v_i = 0\}$$와 동일시된다. Charge matrix의 각 행 $$(Q_{j1}, \ldots, Q_{jN})$$이 바로 그러한 관계식 $$\sum_i Q_{ji} v_i = 0$$이므로 이들이 $$H_2(X, \mathbb{Z})$$의 basis $$\{\beta_j\}$$를 이루며, 이 동일시 아래에서 toric divisor $$D_i$$와의 intersection은 $$\beta = (a_i)_i$$의 $$i$$번째 좌표를 읽는 것에 불과해 $$D_i \cdot \beta_j = Q_{ji}$$가 된다. 따라서 [정의 6](#def6)의 곱에 들어가는 $$D_i \cdot \beta$$가 전부 charge matrix $$Q$$의 성분으로 환원되어, $$I_X$$를 $$Q$$만으로 손으로 적을 수 있다.
+
+이 식의 기원은 $$X$$의 Hori-Vafa mirror $$\check{X}$$ 위의 oscillating integral로, 좀 더 정확히는 그 적분을 [주장 5](#conj5)의 distinguished thimble $$\Gamma_0$$에 대해 charge 데이터로 전개한 것이 정확히 $$I_X$$이다. 즉 $$I_X$$는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 period matrix $$\mathcal{I}$$의 distinguished 열을 명시적으로 적은 것에 불과하다. 이에 대한 자세한 전개는 [예시 8](#ex8)로 미루고, 우선 이를 $$J$$-function에 대한 주장으로 번역하자.
 
 <div class="proposition" markdown="1">
 
@@ -282,9 +290,11 @@ $$I_X(q, z) = 1 + \tau(q)/z + O(z^{-2})$$
 <details class="proof" markdown="1">
 <summary>증명 개요</summary>
 
-[정의 6](#def6) 직후 보았듯 $$I_X$$는 B-side period matrix $$\mathcal{I}$$의 distinguished 열 ($$\Gamma_0$$ 위의 oscillating integral) 을 명시적으로 적은 것이므로, [명제 7](#prop7)은 본질적으로 [주장 5](#conj5)를 그 distinguished 열로 제한하여 toric Fano case에서 명시화한 것이다. 따라서 보여야 할 핵심은 이 명시적 hypergeometric 함수 $$I_X$$가 $$J$$-function과 동일한 flat section, 즉 [명제 4](#prop4)의 QDE의 해라는 점이다. 실제로 $$I_X$$의 hypergeometric 곱이 만족하는 미분방정식은 small QDE ($$\ast$$)와 일치하며, 이 일치를 $$\mathbb{P}^n$$에 대해 ODE ($$\dagger$$)의 형태로 직접 계산하는 것이 [예시 8](#ex8)이다. 두 해가 모두 $$z \to \infty$$에서 $$1 + O(z^{-1})$$의 점근을 가지므로 $$z^{-1}$$ 계수로 정의되는 mirror map $$\tau(q)$$를 통한 좌표변환 후 일치하며, 일반 toric Fano에 대한 완전한 증명은 [CK, §11], [MS, Chapter 29] 참조.
+$$J_X$$는 [명제 4](#prop4)에서 본 대로 small QDE ($$\ast$$)의 fundamental solution이고, $$I_X$$는 [정의 6](#def6)에서 charge 데이터로 명시적으로 주어진 hypergeometric 함수이다. 증명의 핵심은 이 명시적 $$I_X$$ 또한 $$J_X$$와 같은 $$D$$-module의 해임을, 즉 같은 QDE ($$\ast$$)를 만족함을 직접 확인하는 데 있다. $$X$$가 toric Fano이면 $$H^\ast(X)$$가 $$H^2(X)$$로 생성되므로 ($$\ast$$)는 $$I_X$$의 한 성분에 대한 scalar 미분방정식으로 환원되고, $$I_X$$의 hypergeometric 곱에 $$z q_a\partial_{q_a}$$를 작용시키면 곱의 각 인자가 항별로 이 방정식을 만족함이 확인된다. 한편 $$I_X$$와 $$J_X$$는 모두 $$z \to \infty$$에서 $$1 + O(z^{-1})$$의 normalization을 가지는데, QDE의 해는 이 leading asymptotic으로부터 ($$H^2$$ 방향의 reparametrization, 곧 mirror map $$\tau(q)$$를 제하면) 유일하게 결정되므로 $$J_X(\tau(q), z) = I_X(q, z)$$를 얻는다. $$X = \mathbb{P}^n$$에 대해 이 미분방정식의 일치를 끝까지 손으로 계산하는 것이 [예시 8](#ex8)이며, 일반 toric Fano에 대한 완전한 증명은 [CK, §11], [MS, Chapter 29]를 참조하라.
 
 </details>
+
+[명제 7](#prop7)은 앞 절의 [주장 5](#conj5)와도 자연스럽게 맞물린다. [정의 6](#def6) 직후 보았듯 toric Fano의 $$I_X$$는 B-side period matrix $$\mathcal{I}$$의 distinguished 열 ($$\Gamma_0$$ 위의 oscillating integral)을 명시적으로 적은 것이므로, [명제 7](#prop7)은 [주장 5](#conj5)를 바로 이 distinguished 열로 제한한 특수한 경우에 해당한다. 바꾸어 말하면 [주장 5](#conj5)는 toric Fano를 넘어 일반 mirror pair로 확장한 [명제 7](#prop7)의 일반화이다. 다만 [주장 5](#conj5)는 아직 증명된 명제가 아니므로 이 관계가 [명제 7](#prop7)의 증명을 대신하지는 않으며, 위 증명 개요는 그와 독립적으로 $$I_X$$가 $$J$$-function과 같은 $$D$$-module의 해임을 직접 확인한 것이다.
 
 이로써 [명제 7](#prop7)은 mirror symmetry를 *계산 가능한* tool로 바꾼다. $$J$$-function의 추상적인 Gromov-Witten 정의로부터는 직접 계산이 어렵지만, $$I$$-function의 hypergeometric 형태는 charge matrix로부터 손으로 적을 수 있어, 다음 절에서 보듯 $$\mathbb{P}^n$$과 같은 구체적인 경우에 양변을 직접 맞대어 볼 수 있기 때문이다.
 

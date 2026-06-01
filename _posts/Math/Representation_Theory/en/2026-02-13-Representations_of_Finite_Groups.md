@@ -1,5 +1,6 @@
 ---
 title: "Representation Theory of Finite Groups"
+description: "This post introduces the notion of a representation of a finite group on a vector space and covers fundamental concepts in representation theory such as invariant subspaces and irreducible representations."
 excerpt: "Definition of representations of finite groups and irreducible decomposition"
 
 categories: [Math / Representation Theory]
@@ -13,10 +14,11 @@ sidebar:
 date: 2026-02-13
 last_modified_at: 2026-02-13
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T20:30:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T20:30:01+00:00
 ---
-One good strategy for dealing with a mathematical object whose structure is complicated is to see how it acts on other, simpler objects. In this category we study representation theory, and in particular the representation theory of finite groups.
+One good strategy for dealing with a mathematical object whose structure is complicated is to see how it acts on other, simpler objects. In this post we study representation theory, and in particular the representation theory of finite groups.
 
 ## Basic Concepts of Representation Theory
 
@@ -40,7 +42,7 @@ Fix a finite group $$G$$, and suppose two representations $$V,W$$ are given. The
 
 ![G-equivariant_maps](/assets/images/Math/Representation_Theory/Representations_of_Finite_Groups-1.png){:style="width:10em" class="invert" .align-center}
 
-In formula, this can simply be written as
+In formulas, this can simply be written as
 
 $$L(g\cdot v)=g\cdot L(v)\qquad\text{for all $g\in G$ and $v\in V$}$$
 
@@ -102,7 +104,7 @@ For any $$G$$-representation $$\rho:G\rightarrow \Aut(V)$$, the formula
 
 $$\widetilde{\rho}\left(\sum_{x\in G} \phi_x x, v\right)= \sum_{x\in G} \phi_x\rho(x)v$$
 
-gives a $$\mathbb{C}[G]$$-module structure on $$V$$. Conversely, given any $$\mathbb{C}[G]$$-module $$V$$, we can obtain a $$G$$-representation by the way each $$x\in G$$ acts on $$V$$.
+gives a $$\mathbb{C}[G]$$-module structure on $$V$$. Conversely, given any $$\mathbb{C}[G]$$-module $$V$$, we can obtain a $$G$$-representation from the action of each $$x\in G$$ on $$V$$.
 
 <div class="proposition" markdown="1">
 
@@ -136,7 +138,7 @@ This space is the space of vectors fixed by the $$G$$-action; although it is als
 
 $$p: V\rightarrow V^G;\qquad v\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot v$$
 
-exists. In particular, the idea contained in this projection map — namely, the idea of averaging over all actions of $$G$$ to obtain a $$G$$-invariant object — is used importantly.
+exists. In particular, the idea contained in this projection map — namely, the idea of averaging over all actions of $$G$$ to obtain a $$G$$-invariant object — is of central importance.
 
 <div class="definition" markdown="1">
 
@@ -154,11 +156,11 @@ $$\langle v,w\rangle=\langle \rho(g) v,\rho(g) w\rangle=\langle \rho(g)^\dagger 
 
 holds for all $$v,w\in V$$.
 
-On the other hand, a finite-dimensional $$G$$-module $$V$$ admits a $$G$$-invariant inner product. This can be proved using the idea mentioned above.
+On the other hand, every finite-dimensional $$G$$-module $$V$$ admits a $$G$$-invariant inner product. This can be proved using the idea mentioned above.
 
 <div class="proposition" markdown="1">
  
-<ins id="prop6">**Proposition 6**</ins> Every representation $$V$$ admits a $$G$$-invariant inner product. That is, every representation is a unitary representation.
+<ins id="prop6">**Proposition 6**</ins> Every representation $$V$$ admits a $$G$$-invariant inner product. That is, every representation is unitary.
  
 </div>
 <details class="proof" markdown="1">
@@ -194,7 +196,7 @@ Earlier we examined the categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-Then what [Corollary 7](#cor7) asserts is that any finite-dimensional $$G$$-representation $$V$$ is always a *semisimple* $$\mathbb{C}[G]$$-module. Therefore $$\mathbb{C}[G]$$ itself becomes an Artinian semisimple ring ([semisimple](##ref##)), and hence by the Artin-Wedderburn theorem ([artin-wedderburn](##ref##)) we know that a decomposition into simple modules
+Then what [Corollary 7](#cor7) asserts is that any finite-dimensional $$G$$-representation $$V$$ is always a *semisimple* $$\mathbb{C}[G]$$-module. Therefore $$\mathbb{C}[G]$$ itself becomes an Artinian semisimple ring ([semisimple](##ref##)), and hence by the Artin–Wedderburn theorem ([artin-wedderburn](##ref##)) we know that a decomposition into simple modules
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 

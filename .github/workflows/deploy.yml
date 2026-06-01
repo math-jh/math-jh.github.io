@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so jekyll-last-modified-at reads real commit dates
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

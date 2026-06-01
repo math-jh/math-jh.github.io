@@ -247,7 +247,7 @@ $$L(U)^\perp=(L^\ast)^{-1}(U^\perp)$$
 
 Dual map $$L^\ast$$를 canonical pairing을 통해 정의한 식 (1)을 사용하면, 임의의 $$\upsilon\in W^\ast$$에 대하여
 
-$$\upsilon\in L(U)^\perp\iff (L(u),\upsilon)=0\text{ for all $u\in U$}\iff (u, L^\ast(\upsilon))\text{ for all $u\in U$}\iff L^\ast(\upsilon)\in U^\perp$$
+$$\upsilon\in L(U)^\perp\iff (L(u),\upsilon)=0\text{ for all $u\in U$}\iff (u, L^\ast(\upsilon))=0\text{ for all $u\in U$}\iff L^\ast(\upsilon)\in U^\perp$$
 
 이 성립한다. 
 

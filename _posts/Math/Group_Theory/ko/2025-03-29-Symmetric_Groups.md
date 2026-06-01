@@ -37,7 +37,7 @@ $$1=\sigma^0(1), \quad\sigma(1)=\sigma^1(1),\quad\sigma^2(1),\quad\cdots, \quad\
 
 을 생각하자. 비둘기집 원리에 의하여 서로 다른 적당한 두 정수 $$0\leq k_1,k_2\leq n$$가 존재하여 $$\sigma^{k_1}(1)=\sigma^{k_2}(1)$$이 성립하고, 편의상 $$k_1< k_2$$라 하면 이로부터 $$\sigma^{k_2-k_1}(1)=0$$임을 안다. 뿐만 아니라, $$\sigma^k(1)=1$$을 만족하는 가장 작은 자연수 $$k$$를 생각하면, 위의 결과로부터 $$k\leq n$$이며, 이를 바탕으로 다음의 표기
 
-$$(1\quad \sigma(1)\quad \sigma(1)\quad\cdots\quad\sigma^{k-1}(1))$$
+$$(1\quad \sigma(1)\quad \sigma^2(1)\quad\cdots\quad\sigma^{k-1}(1))$$
 
 를 생각할 수 있다. 정의에 의해 이 표기는 $$1$$을 $$\sigma(1)$$로, $$\sigma(1)$$을 $$\sigma^2(1)$$로, $$\ldots$$, $$\sigma^{k-2}(1)$$을 $$\sigma^{k-1}(1)$$로, 그리고 $$\sigma^{k-1}(1)$$을 $$\sigma^k(1)=1$$로 보내는 함수를 의미하며, 더 일반적으로
 
