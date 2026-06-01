@@ -1,5 +1,6 @@
 ---
 title: "Gaussian Elimination"
+description: "We explore how to compute the inverse of a matrix using Gaussian elimination and prove the equivalent conditions for an invertible matrix. Based on the relationship between matrices and linear transformations, we analyze the equivalence relation determined by rank."
 excerpt: "Gaussian elimination and inverse matrices"
 
 categories: [Math / Linear Algebra]
@@ -15,236 +16,231 @@ date: 2022-08-19
 last_modified_at: 2022-08-19
 
 weight: 12
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-01T00:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T00:30:04+00:00
 ---
-In the previous post, we saw that linear maps between vector spaces are essentially identical to matrices. From this viewpoint, if two $$m\times n$$ matrices $$A, B$$ satisfy the following equation for suitable invertible matrices $$P, Q$$
+In the previous post, we saw that linear maps between vector spaces are essentially the same as matrices. From this perspective, if two $$m\times n$$ matrices $$A, B$$ satisfy
 
 $$B=PAQ\tag{1}$$
 
-one might want to think of these matrices $$A, B$$ as essentially the same matrix. However, if we allow complete freedom in choosing the bases of the two vector spaces $$V, W$$ on which these matrices $$L_A, L_B: V\rightarrow W$$ act, we saw that two matrices of the same rank must all be treated as the same matrix. Therefore, in [§Fundamental Theorem of Linear Algebra, ⁋Definition 8](/en/math/linear_algebra/ftla#def8) we had to define a finer equivalence relation. Roughly speaking, if the only information contained in matrix $$A$$ in equation (1) is its rank, then the remaining information is contained in the matrices $$P, Q$$, i.e., in the *linear operators* from $$V$$ to $$V$$ or from $$W$$ to $$W$$. If we fix a basis of $$V$$ (or $$W$$) to examine these, this equivalence relation is not so unnatural. Thus, for the time being, our discussion will proceed with a fixed vector space $$V$$ and basis $$\mathcal{B}$$. In other words, we will examine $$n\times n$$ matrices. A powerful tool for this is the determinant, which we will define in the next post.
+for suitable invertible matrices $$P, Q$$, one might be tempted to regard $$A$$ and $$B$$ as essentially the same matrix. Yet if we allow complete freedom in choosing bases for the vector spaces $$V, W$$ on which $$L_A, L_B: V\rightarrow W$$ act, we saw that any two matrices of the same rank must be treated as identical. This is why in [§Fundamental Theorem of Linear Algebra, ⁋Definition 8](/en/math/linear_algebra/ftla#def8) we were forced to define a finer equivalence relation. Roughly speaking, if the only information retained in matrix $$A$$ in equation (1) is its rank, then the remaining information is encoded in $$P$$ and $$Q$$—that is, in the *linear operators* from $$V$$ to $$V$$ and from $$W$$ to $$W$$. Fixing a basis of $$V$$ (or $$W$$) to examine these operators makes the equivalence relation quite natural. Henceforth, our discussion proceeds with a fixed vector space $$V$$ and basis $$\mathcal{B}$$; in other words, we focus on $$n\times n$$ matrices. A powerful tool for this purpose is the determinant, which we shall define in the next post.
 
-Meanwhile, we proved that for any matrix $$A$$ to be invertible it must be a square matrix, using the trace of a matrix ([§Matrices, ⁋Definition 7](/en/math/linear_algebra/matrices#def7)). Now that we know matrices and linear maps are the same, this result is obvious from [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4). However, we have not yet examined how to compute this inverse matrix. Since this method is simple, we could have examined it right after [§Matrices](/en/math/linear_algebra/matrices), but now that we have begun to seriously study $$n\times n$$ matrices, we briefly introduce this procedure.
+Meanwhile, we proved that any invertible matrix must be square, using the trace ([§Matrices, ⁋Definition 7](/en/math/linear_algebra/matrices#def7)). Now that we know matrices and linear maps are the same, this result is immediate from [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4). However, we have not yet examined how to compute an inverse matrix. The method is simple enough that we could have presented it right after [§Matrices](/en/math/linear_algebra/matrices), but now that we have begun a serious study of $$n\times n$$ matrices, we briefly introduce it here.
 
-First, let us prove the following simple lemma.
+First, we prove a simple lemma.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem1">**Lemma 1**</ins> For a matrix $$A\in\Mat_n(\mathbb{K})$$, the following three conditions are all equivalent.
+<ins id="lem1">**Lemma 1**</ins> For a matrix $$A\in\Mat_n(\mathbb{K})$$, the following three conditions are equivalent.
 
 1. $$A$$ is invertible.
-2. There exists a suitable $$B\in\Mat_n(\mathbb{K})$$ such that $$AB=I$$.
-3. There exists a suitable $$B\in\Mat_n(\mathbb{K})$$ such that $$BA=I$$.
+2. There exists $$B\in\Mat_n(\mathbb{K})$$ such that $$AB=I$$.
+3. There exists $$B\in\Mat_n(\mathbb{K})$$ such that $$BA=I$$.
 
-Moreover, if the second or third condition holds, then $$B=A^{-1}$$.
+Moreover, if either (2) or (3) holds, then $$B=A^{-1}$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-That the first condition implies each of the second and third is obvious, so it suffices to show the converse.
+That (1) implies each of (2) and (3) is obvious, so it suffices to prove the converses.
 
-First, assume there exists a suitable $$B\in\Mat_n(\mathbb{K})$$ such that $$AB=I$$ holds. Then by the fundamental theorem of linear algebra
+First, assume there exists $$B\in\Mat_n(\mathbb{K})$$ with $$AB=I$$. By the fundamental theorem of linear algebra,
 
 $$L_A\circ L_B=\id_{\mathbb{K}^n}$$
 
-holds. Now, since $$\id_{\mathbb{K}^n}$$ is a bijection, we know that $$L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$$ is surjective. ([\[Set Theory\] §Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3)) Therefore, from the following equation ([§Isomorphisms, ⁋Theorem 7 (Rank-nullity theorem)](/en/math/linear_algebra/isomorphic_vector_spaces#thm7))
+Since $$\id_{\mathbb{K}^n}$$ is bijective, $$L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$$ is surjective. ([\[Set Theory\] §Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3)) Therefore, from the rank-nullity theorem ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7))
 
 $$\rank L_A+\nullity L_A=\dim \mathbb{K}^n=n$$
 
-we know that $$\nullity L_A=0$$. That is, $$L_A$$ is also injective, and thus $$L_A$$ is bijective and the matrix $$A$$ is invertible. Now, multiplying both sides of the equation $$AB=I$$ on the left by $$A^{-1}$$, we obtain $$B=A^{-1}$$.
+we obtain $$\nullity L_A=0$$. Thus $$L_A$$ is injective as well, hence bijective, and so $$A$$ is invertible. Multiplying both sides of $$AB=I$$ on the left by $$A^{-1}$$ yields $$B=A^{-1}$$.
 
-Similarly, one can prove that the third condition implies the first.
+The implication from (3) to (1) is proved similarly.
 
 </details>
 
-Of course, thinking again that matrices and linear maps are the same, this is obvious because the inverse function satisfies the same property.
+Of course, regarding matrices and linear maps as identical, this is obvious because the inverse function satisfies the same property.
 
-Now suppose an arbitrary invertible $$n\times n$$ matrix $$B$$ is given. Thinking of $$B$$ as a linear map from $$\mathbb{K}^n$$ to $$\mathbb{K}^n$$, $$B$$ is completely determined by where it sends the basis $$e_1,\ldots, e_n$$ of $$\mathbb{K}^n$$. Therefore, to compute the matrix $$A^{-1}$$, it suffices to know where $$A^{-1}$$ sends each basis vector $$e_i$$. Let this vector be $$v_i$$; then the matrix $$A^{-1}$$ is given by $$(v_1\mid v_2\mid\cdots\mid v_n)$$, where each $$v_i$$ is defined by the following equation
+Now let an arbitrary invertible $$n\times n$$ matrix $$B$$ be given. Regarding $$B$$ as a linear map $$\mathbb{K}^n\rightarrow\mathbb{K}^n$$, it is completely determined by where it sends the basis $$e_1,\ldots, e_n$$ of $$\mathbb{K}^n$$. Consequently, to compute $$A^{-1}$$ it suffices to know where $$A^{-1}$$ sends each basis vector $$e_i$$. Denoting this vector by $$v_i$$, the matrix $$A^{-1}$$ is given by $$(v_1\mid v_2\mid\cdots\mid v_n)$$, where each $$v_i$$ satisfies
 
 $$v_i=A^{-1}e_i\iff Av_i=e_i\tag{2}$$
 
-## Gaussian-Jordan Elimination
+## Gauss–Jordan Elimination
 
-Now consider the following system of linear equations
+Consider the system of linear equations
 
 $$\begin{aligned}a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\hspace{10pt}\vdots&\\a_{mn}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}\tag{3}$$
 
-Then by [§Matrices, ⁋Definition 2](/en/math/linear_algebra/matrices#def2), the above equation can be written using the following matrices
+By [§Matrices, ⁋Definition 2](/en/math/linear_algebra/matrices#def2), this system can be written using the matrices
 
 $$A=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix},\quad x=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix},\quad b=\begin{pmatrix}b_1\\b_2\\\vdots\\b_m\end{pmatrix}$$
 
-as $$Ax=b$$. If $$m=n$$ and the inverse of matrix $$A$$ exists, then the solution of this system of equations is uniquely determined by the following equation
+as $$Ax=b$$. If $$m=n$$ and $$A$$ is invertible, the solution is uniquely determined by
 
 $$x=A^{-1}b\iff Ax=b$$
 
-and this is exactly the equation we need to find the inverse matrix. If $$m\neq n$$ or the inverse of $$A$$ does not exist, the above system of linear equations may have no solution, or infinitely many solutions. We examine *Gaussian elimination*, which is useful even in this case.
+which is precisely the equation we need for computing the inverse. If $$m\neq n$$ or $$A$$ is not invertible, the system may have no solution or infinitely many. We now examine *Gaussian elimination*, which remains useful in these cases.
 
-Assume there exists an integer $$1\leq i\leq n$$ such that $$a_{ji}=0$$ holds for all $$j$$ among the coefficients of equation (3). In this case, if
+Suppose there exists an integer $$1\leq i\leq n$$ such that $$a_{ji}=0$$ for all $$j$$ among the coefficients of (3). Then if
 
 $$x_1=c_1,\quad x_2=c_2,\quad \ldots,\quad x_i=c_i,\quad\ldots,\quad x_n=c_n$$
 
-is one solution of equation (3), then the following tuple obtained by changing the value of $$x_i$$ to an arbitrary $$d_i$$
+is one solution of (3), the tuple obtained by replacing $$x_i$$ with an arbitrary $$d_i$$,
 
 $$x_1=c_1,\quad x_2=c_2,\quad\ldots,\quad x_i=d_i,\quad\ldots,\quad x_n=c_n$$
 
-is also a solution of equation (3). Therefore, if all $$a_{ij}$$ are $$0$$, then if $$b$$ is the zero vector, equation (3) has every tuple in $$\mathbb{K}^n$$ as a solution; otherwise, no solution exists. To avoid such trivial cases, we assume that at least one $$a_{ij}$$ is not zero.
+is also a solution. Hence if all $$a_{ij}$$ are zero, then (3) has every vector in $$\mathbb{K}^n$$ as a solution when $$b$$ is the zero vector, and no solution otherwise. To exclude such trivial cases, we assume that at least one $$a_{ij}$$ is nonzero.
 
-Now define the integer $$k$$ to be <phrase>the smallest integer among those for which there exists $1\leq j\leq m$ such that $a_{jk}\neq 0$</phrase>, and for this fixed $$k$$, choose the smallest integer $$j$$ satisfying $$a_{jk}\neq 0$$. Now the $$j$$-th equation
-
-$$a_{j1}x_1+a_{j2}x_2+\cdots+a_{jk}x_k+\cdots+a_{nk}x_n=b_j$$
-
-is moved to the very top of the system
+Define $$k$$ to be <phrase>the smallest integer for which there exists $$1\leq j\leq m$$ with $$a_{jk}\neq 0$$</phrase>, and for this fixed $$k$$ choose the smallest $$j$$ satisfying $$a_{jk}\neq 0$$. Moving the $$j$$-th equation to the top,
 
 $$\begin{aligned}a_{j1}x_{1}+a_{j2}x_2+\cdots+a_{jn}x_n&=b_j\\a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\\hspace{10pt}\vdots&\\a_{mn}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}$$
 
-then by the definition of $$a_{jk}$$, the coefficients $$a_{j1},a_{j2},\ldots, a_{j,(k-1)}$$ and those below them must all be $$0$$. Now for each equation
+the definition of $$a_{jk}$$ ensures that $$a_{j1},a_{j2},\ldots, a_{j,(k-1)}$$ and all coefficients below them are zero. For each equation
 
 $$a_{i1}x_1+a_{i2}x_2+\cdots+a_{in}x_n=b_i$$
 
-we multiply the first equation by $$-a_{ik}/a_{jk}$$ and add it to obtain
+multiply the first equation by $$-a_{ik}/a_{jk}$$ and add:
 
 $$\left(a_{i1}-\frac{a_{ik}}{a_{jk}}a_{j1}\right)x_1+\left(a_{i2}-\frac{a_{ik}}{a_{jk}}a_{j2}\right)x_2+\cdots+\left(a_{ik}-\frac{a_{ik}}{a_{jk}}a_{jk}\right)x_k+\cdots+\left(a_{in}-\frac{a_{ik}}{a_{jk}}a_{jn}\right)x_n=b_i-\frac{a_{ik}}{a_{jk}}b_k$$
 
-In the above equation, the coefficients of $$x_1,\ldots, x_{k-1}$$ were already all zero, and through the operation just performed, the coefficient of $$x_k$$ also becomes zero. That is, after this process, the coefficients of $$x_1,\ldots, x_{k-1}$$ are all zero, and among the coefficients of $$x_k$$, the only nonzero one lies in the first row.
+The coefficients of $$x_1,\ldots, x_{k-1}$$ were already zero, and this operation makes the coefficient of $$x_k$$ zero as well. Thus after this process, the coefficients of $$x_1,\ldots, x_{k-1}$$ are all zero, and among the coefficients of $$x_k$$ only the first row has a nonzero entry.
 
-Now repeat this process for the $$n-1$$ equations from the second row to the last row, and again for the $$n-2$$ equations from the third row to the last row. Continuing this until we reach the last row, equation (3) finally satisfies the following two conditions (\*).
+Repeating this process for the $$n-1$$ equations from the second row to the last, then for the $$n-2$$ equations from the third row to the last, and so on until the last row, we arrive at a system satisfying the following two conditions (*).
 
-1. If there is an equation all of whose coefficients are zero, it is located at the very bottom of the system.
-2. For any equation not all of whose coefficients are zero, the first nonzero coefficient in that equation appears to the right of the first nonzero coefficient in the equation above it.
+1. Any equation all of whose coefficients are zero appears at the very bottom.
+2. For any equation not identically zero, its first nonzero coefficient lies strictly to the right of the first nonzero coefficient in the equation above it.
 
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**Example 2**</ins> The following system of equations satisfies the two conditions above.
+<ins id="ex2">**Example 2**</ins> The following system satisfies the two conditions above.
 
 $$\begin{aligned}x_1+2x_2+4x_3+3x_4&=2\\\phantom{x_1+}3x_2\phantom{+2x_3}+6x_4&=3\\\phantom{x_1+2x_2+}x_3+5x_4&=1\end{aligned}$$
 
-With a little additional manipulation, we can immediately obtain the solution of the system from this equation. Let us call the first nonzero coefficient in each equation the *leading coefficient*. For example, in the above system, the leading coefficient of the first equation is the coefficient of $$x_1$$, which is 1; the leading coefficient of the second equation is the coefficient of $$x_2$$, which is 3; and the leading coefficient of the last equation is the coefficient of $$x_3$$, which is 1.
+With a little further manipulation we can read off the solution immediately. Call the first nonzero coefficient in each equation the *leading coefficient*. In the system above, the leading coefficients are 1 (coefficient of $$x_1$$ in the first equation), 3 (coefficient of $$x_2$$ in the second), and 1 (coefficient of $$x_3$$ in the third).
 
-Now eliminate all the coefficients above the leading coefficient in each row. That is, we must eliminate the term $$4x_3$$ above the leading coefficient of the last equation, and the term $$2x_2$$ above the leading coefficient of the second equation. To do this, we multiply the last equation by 4 and subtract it from the first equation, and multiply the second equation by $$2/3$$ and subtract it from the first equation. Also, multiplying both sides of the second equation by $$1/3$$ to simplify, we obtain the following result.
+Now eliminate all coefficients above each leading coefficient. That is, we must eliminate $$4x_3$$ above the leading coefficient of the last equation, and $$2x_2$$ above that of the second. To do this, multiply the last equation by 4 and subtract from the first, and multiply the second equation by $$2/3$$ and subtract from the first. Multiplying the second equation by $$1/3$$ to simplify, we obtain
 
 $$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2x_3}+\phantom{1}2x_4&=1\\\phantom{x_1+2x_2+}x_3+\phantom{1}5x_4&=1\end{aligned}$$
 
-From this, the general solution of the above system of equations is
+From this, the general solution of the system is
 
 $$x_1=-4+21x_4,\quad x_2=1-2x_4,\quad x_3=1-5x_4$$
 
-as can be seen.
-
 </div>
 
-The method of solving a system of equations through the procedure described above is called *Gaussian elimination* or *Gauss-Jordan elimination*.
+The procedure described above for solving systems of linear equations is called *Gaussian elimination* or *Gauss–Jordan elimination*.
 
 ## Elementary Row Operations and Gaussian Elimination
 
-The system of equations (3) given at the beginning could be simply expressed as $$Ax=b$$ using matrices. Gaussian elimination shows that this matrix $$A$$ and $$b$$ can be suitably transformed so that the system can be written as $$A'x=b'$$, where the matrix $$A'$$ can be chosen to satisfy the two conditions (\*). 
+The system (3) could be expressed compactly as $$Ax=b$$. Gaussian elimination shows that $$A$$ and $$b$$ can be transformed so that the system becomes $$A'x=b'$$, where $$A'$$ satisfies conditions (*).
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> For a given matrix $$A$$, an *elementary row operation* refers to the following three operations.
+<ins id="def3">**Definition 3**</ins> For a given matrix $$A$$, an *elementary row operation* is one of the following three operations.
 
-1. exchanging two rows,
-2. multiplying a row by a nonzero constant,
-3. adding a multiple of one row to another row.
+1. Interchanging two rows,
+2. Multiplying a row by a nonzero constant,
+3. Adding a multiple of one row to another row.
 
 </div>
 
-[Example 2](#ex2), which we examined concretely, concerned manipulating a system of linear equations to satisfy conditions (\*) and then writing it in a specific form; however, it should be noted that the calculations examined before that were also essentially obtained from elementary row operations (the corresponding manipulations of equations).
+[Example 2](#ex2), which we examined in detail, concerned manipulating a system to satisfy (*) and then writing it in a specific form; however, it should be noted that the calculations examined earlier were also essentially obtained from elementary row operations (the corresponding equation manipulations).
 
-We also define the following.
+We also make the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> Let an $$m\times n$$ matrix $$A$$ be given. If for arbitrary $$1\leq i\leq m$$ the integer $$j_0(i)=\min\{j\leq n\mid a_{ij}\neq 0\}$$ is well-defined, we call $$a_{i,j_0(i)}$$ the *leading coefficient* of the $$i$$-th row. Additionally, if the following two conditions
+<ins id="def4">**Definition 4**</ins> Let an $$m\times n$$ matrix $$A$$ be given. If for each $$1\leq i\leq m$$ the integer $$j_0(i)=\min\{j\leq n\mid a_{ij}\neq 0\}$$ is well defined, we call $$a_{i,j_0(i)}$$ the *leading coefficient* of the $$i$$-th row. If furthermore
 
-1. If $$a_{i1}, a_{i2},\ldots, a_{in}=0$$, then for all $$k$$ satisfying $$i < k$$, we have $$a_{k1}, a_{k2},\ldots, a_{kn}=0$$.
-2. If $$i < i'$$ and both integers $$j_0(i), j_0(i')$$ are well-defined, then necessarily $$j_0(i) < j_0(i')$$.
+1. whenever $$a_{i1}=a_{i2}=\cdots=a_{in}=0$$, we have $$a_{k1}=a_{k2}=\cdots=a_{kn}=0$$ for all $$k>i$$;
+2. whenever $$i<i'$$ and both $$j_0(i), j_0(i')$$ are well defined, we have $$j_0(i)<j_0(i')$$;
 
-are satisfied, the matrix $$A$$ is called a *row echelon matrix* (REF). If additionally
+then $$A$$ is called a *row echelon matrix* (REF). If in addition
 
-1. $$a_{i, j_0(i)}$$ is always 1, and 
-2. for all $$i'\neq i$$, $$M_{i', j_0(i)}=0$$
+1. $$a_{i, j_0(i)}=1$$ for all $$i$$, and
+2. $$a_{i', j_0(i)}=0$$ for all $$i'\neq i$$,
 
 then $$A$$ is called a *reduced row echelon matrix* (RREF).
 
 </div>
 
-Therefore, summarizing the discussion in the previous section, Gaussian elimination can be said to be the process of making a row echelon matrix, or further a reduced row echelon matrix, from a matrix $$A$$ through elementary row operations. In general, the row echelon form obtained from a given matrix $$A$$ may not be unique, but it is well known that the reduced row echelon form is uniquely determined. We will not prove this uniqueness since we will have no occasion to use it.
+Summarizing the discussion of the preceding section, Gaussian elimination is the process of transforming a matrix $$A$$ into row echelon form, or further into reduced row echelon form, by elementary row operations. In general, the row echelon form of a given matrix need not be unique, but the reduced row echelon form is uniquely determined. We omit the proof of this uniqueness, as we shall have no occasion to use it.
 
-Let us return to the system of equations (3). Changing the order of equations, multiplying both sides of an equation by a constant, or adding a multiple of one equation to another are familiar techniques from the first encounter with systems of equations, so they are not strange. However, if we write the same system as $$Ax=b$$ using matrices, it is not clear why the elementary row operations applied to $$A$$ affect $$b$$ in the same way. Now suppose an arbitrary $$m\times n$$ matrix is given, and consider several $$m\times m$$ matrices.
+Returning to the system (3): interchanging equations, multiplying both sides by a constant, or adding a multiple of one equation to another are familiar operations from the very first encounter with linear systems. Yet when the same system is written as $$Ax=b$$, it is not immediately obvious why elementary row operations applied to $$A$$ affect $$b$$ in the same way. Let an arbitrary $$m\times n$$ matrix be given, and consider several $$m\times m$$ matrices.
 
-First, $$E_{i,j}$$ is the matrix obtained from the $$m\times m$$ identity matrix $$I$$ by exchanging the $$i$$-th and $$j$$-th rows. For example, $$E_{1,2}$$ is the following matrix
+First, $$E_{i,j}$$ is the matrix obtained from the $$m\times m$$ identity matrix $$I$$ by interchanging the $$i$$-th and $$j$$-th rows. For example, $$E_{1,2}$$ is
 
 $$E_{1,2}=\begin{pmatrix}0&1&0&\cdots&0\\1&0&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\vdots\\ 0&0&0&\cdots&1\end{pmatrix}$$
 
-Meanwhile, $$E'_{i,r}$$ is the matrix obtained by multiplying the $$i$$-th row of the $$m\times m$$ identity matrix $$I$$ by $$r$$. For example, $$E'_{1,r}$$ is the following matrix
+Next, $$E'_{i,r}$$ is the matrix obtained by multiplying the $$i$$-th row of $$I$$ by $$r$$. For example, $$E'_{1,r}$$ is
 
 $$E'_{1,r}=\begin{pmatrix}r&0&0&\cdots&0\\0&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\vdots\\ 0&0&0&\cdots&1\end{pmatrix}$$
 
-Finally, $$E''_{i,j,r}$$ is the matrix obtained by changing the $$(j,i)$$-entry of the $$m\times m$$ identity matrix $$I$$ to $$r$$. For example, $$E''_{1,2,r}$$ is the following matrix
+Finally, $$E''_{i,j,r}$$ is the matrix obtained by replacing the $$(j,i)$$-entry of $$I$$ with $$r$$. For example, $$E''_{1,2,r}$$ is
 
 $$E''_{1,2,r}=\begin{pmatrix}1&0&0&\cdots&0\\r&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\vdots\\ 0&0&0&\cdots&1\end{pmatrix}$$
 
-These are collectively called *elementary matrices*. Now, computing $$E_{ij}A$$, $$E'_{i,r}A$$, and $$E''_{i,j,r}A$$ respectively, 
+These are collectively called *elementary matrices*. Computing $$E_{ij}A$$, $$E'_{i,r}A$$, and $$E''_{i,j,r}A$$, one easily verifies that
 
-1. $$E_{ij}A$$ is the matrix obtained by exchanging the $$i$$-th and $$j$$-th rows of $$A$$,
-2. $$E'_{i,r}A$$ is the matrix obtained by multiplying the $$i$$-th row of $$A$$ by the constant $$r$$,
-3. $$E''_{i,j,r}A$$ is the matrix obtained by adding ($$i$$-th row)$$\times r$$ to the $$j$$-th row of $$A$$
+1. $$E_{ij}A$$ is the matrix obtained by interchanging the $$i$$-th and $$j$$-th rows of $$A$$;
+2. $$E'_{i,r}A$$ is the matrix obtained by multiplying the $$i$$-th row of $$A$$ by $$r$$;
+3. $$E''_{i,j,r}A$$ is the matrix obtained by adding $$r$$ times the $$i$$-th row to the $$j$$-th row of $$A$$.
 
-can be easily verified. That is, performing an elementary row operation on matrix $$A$$ is the same as multiplying by one of the matrices $$E_{ij}$$, $$E_{i,r}'$$, or $$E_{i,j,r}''$$ defined above; and applying the above manipulation to the system of equations $$Ax=b$$ is the same as multiplying both sides on the left by the corresponding elementary matrix $$E$$ to obtain $$(EA)x=(Eb)$$. 
+Thus performing an elementary row operation on $$A$$ is equivalent to multiplying on the left by the corresponding elementary matrix $$E$$; and applying this manipulation to the system $$Ax=b$$ yields $$(EA)x=(Eb)$$.
 
-The elementary matrices $$E$$ are all invertible. This is obvious from the fact that by applying another elementary row operation to a matrix on which an elementary row operation corresponding to an elementary matrix has been performed, we can recover the original matrix.
+All elementary matrices are invertible. This is clear because applying the "inverse" elementary row operation to a matrix recovers the original matrix.
 
 ## Augmented Matrix
 
-Now, when an arbitrary system of linear equations is given, we can manipulate the system to find its solution. As we saw at the beginning of this post, finding the inverse of an arbitrary invertible $$n\times n$$ matrix is nothing more than solving $$n$$ systems of linear equations, so by repeating the method introduced above $$n$$ times for equation (1) needed to find the inverse matrix, we can also obtain the inverse matrix. The augmented matrix introduced from now on is needed only for notational convenience and the resulting computational convenience.
+Given an arbitrary system of linear equations, we can manipulate it to find its solution. As observed at the beginning of this post, finding the inverse of an invertible $$n\times n$$ matrix amounts to solving $$n$$ systems of linear equations, so by repeating the above method $$n$$ times for equation (2), we can obtain the inverse matrix. The augmented matrix, introduced next, serves purely for notational and computational convenience.
 
-The basic idea is that when performing Gaussian elimination, the columns do not mix with each other; this may be said to be obvious from the definition of matrix multiplication if we think of elementary row operations as multiplication by the elementary matrices examined above. Moreover, when performing Gaussian elimination, the right-hand side containing the constants undergoes the same operations as the left-hand side, so we can add the components of the right-hand side to the matrix and compute everything at once.
+The basic idea is that during Gaussian elimination the columns never mix; this is obvious from the definition of matrix multiplication once elementary row operations are viewed as multiplication by elementary matrices. Moreover, since the right-hand side undergoes exactly the same operations as the left-hand side, we can append the constants to the matrix and perform all computations at once.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**Example 5**</ins> Using the system of equations given in [Example 2](#ex2)
+<ins id="ex5">**Example 5**</ins> Take the system from [Example 2](#ex2):
 
 $$\begin{aligned}x_1+2x_2+4x_3+3x_4&=2\\\phantom{x_1+}3x_2\phantom{+2x_3}+6x_4&=3\\\phantom{x_1+2x_2+}x_3+5x_4&=1\end{aligned}$$
 
-as is. From this system of equations we consider the following *augmented matrix*
+From this system we form the *augmented matrix*
 
 $$\begin{pmatrix} 1&2&4&3&2\\ 0&3&0&6&3\\ 0&0&1&5&1\end{pmatrix}$$
 
-The rightmost column of this matrix corresponds to the right-hand side of the system of equations, and the rest correspond to the coefficients of the variables. Now let us apply the operations from [Example 2](#ex2) to this matrix as they are. First, subtracting 4 times the last row from the first row gives the following matrix
+The rightmost column corresponds to the right-hand side, and the remaining columns to the coefficients. Applying the operations from [Example 2](#ex2): first, subtract 4 times the last row from the first:
 
 $$\begin{pmatrix}1&2&0&-17&-2\\ 0&3&0&6&3\\0&0&1&5&1\end{pmatrix}$$
 
-Now, multiplying the second row by $$2/3$$ and subtracting it from the first row gives the following matrix 
+Next, multiply the second row by $$2/3$$ and subtract from the first:
 
 $$\begin{pmatrix}1&0&0&-21&-4\\0&3&0&6&3\\0&0&1&5&1\end{pmatrix}$$
 
-we obtain, and multiplying the second row by $$1/3$$,
+Finally, multiply the second row by $$1/3$$:
 
 $$\begin{pmatrix}1&0&0&-21&-4\\0&1&0&2&1\\0&0&1&5&1\end{pmatrix}$$
 
-is obtained. Restoring the system of equations from this augmented matrix, we see that this is exactly what we obtained in [Example 2](#ex2):
+Restoring the system from this augmented matrix yields exactly what we obtained in [Example 2](#ex2):
 
 $$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2x_3}+\phantom{1}2x_4&=1\\\phantom{x_1+2x_2+}x_3+\phantom{1}5x_4&=1\end{aligned}$$
 
 </div>
 
-The example just examined is essentially no different from the calculation in [Example 2](#ex2) (even in terms of convenience). A meaningful difference is obtained when finding the inverse matrix by using the augmented matrix. For this, consider the case where the matrix $$A$$ defining the system of equations (3) is an invertible $$n\times n$$ matrix. First, the following lemma is obvious.
+The example just examined is essentially no different from the calculation in [Example 2](#ex2), even in convenience. A meaningful difference arises when the augmented matrix is used to find an inverse. For this, consider the case where the matrix $$A$$ defining (3) is an invertible $$n\times n$$ matrix. First, the following lemma is obvious.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem6">**Lemma 6**</ins> Any $$n\times n$$ reduced row echelon matrix is either the identity matrix or has a column consisting entirely of zeros. 
+<ins id="lem6">**Lemma 6**</ins> Every $$n\times n$$ reduced row echelon matrix is either the identity matrix or has a column of all zeros.
 
 </div>
 
-As mentioned earlier, elementary matrices are all invertible, and we can recover the original matrix by multiplying the reduced row echelon form of a given matrix by the inverses of the elementary row operations we performed, in order. That is, if some $$n\times n$$ matrix has a column consisting entirely of zeros, then this matrix is not invertible, and therefore the original matrix cannot be invertible. In other words, the reduced row echelon form of an $$n\times n$$ matrix is the identity matrix.
+As noted earlier, elementary matrices are all invertible, and we can recover the original matrix from its reduced row echelon form by multiplying, in order, by the inverses of the elementary matrices used. Hence if an $$n\times n$$ matrix has a column of all zeros, it is not invertible, and neither was the original matrix. Equivalently, the reduced row echelon form of an invertible $$n\times n$$ matrix is the identity matrix.
 
-Now, given an arbitrary invertible $$n\times n$$ matrix, we can solve the $$n$$ systems of equations $$Av_i=e_i$$ at once using the augmented matrix. That is, augmenting $$e_1,\ldots, e_n$$ all at once to form the $$2n\times n$$ matrix $$(A\mid I_n)$$, and then converting this to reduced row echelon form, the rear $$n\times n$$ matrix will become the inverse of the original matrix.
+Now, given an arbitrary invertible $$n\times n$$ matrix, we can solve the $$n$$ systems $$Av_i=e_i$$ simultaneously using the augmented matrix. Augmenting $$e_1,\ldots, e_n$$ all at once gives the $$n\times 2n$$ matrix $$(A\mid I_n)$$; converting this to reduced row echelon form makes the right-hand $$n\times n$$ block the inverse of the original matrix.
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**Example 7**</ins> Let us find the inverse of the following matrix 
+<ins id="ex7">**Example 7**</ins> Let us find the inverse of
 
 $$A=\begin{pmatrix}1&2&4\\ 0&3&0\\ 0&0&1\end{pmatrix}$$
 
@@ -252,25 +248,25 @@ The augmented matrix is
 
 $$(A\mid I_3)=\begin{pmatrix}1&2&4&1&0&0\\0&3&0&0&1&0\\ 0&0&1&0&0&1\end{pmatrix}$$
 
-and first, subtracting 4 times the last row from the first row gives the following matrix
+Subtracting 4 times the last row from the first:
 
 $$\begin{pmatrix}1&2&0&1&0&-4\\ 0&3&0&0&1&0\\0&0&1&0&0&1\end{pmatrix}$$
 
-Now, multiplying the second row by $$2/3$$ and subtracting it from the first row gives the following matrix 
+Multiplying the second row by $$2/3$$ and subtracting from the first:
 
 $$\begin{pmatrix}1&0&0&1&-2/3&-4\\0&3&0&0&1&0\\0&0&1&0&0&1\end{pmatrix}$$
 
-we obtain, and finally multiplying the second row by $$1/3$$,
+Finally, multiplying the second row by $$1/3$$:
 
 $$\begin{pmatrix}1&0&0&1&-2/3&-4\\0&1&0&0&1/3&0\\0&0&1&0&0&1\end{pmatrix}$$
 
-is obtained. Thus the inverse of the given matrix $$A$$ is
+Thus the inverse of $$A$$ is
 
 $$A^{-1}=\begin{pmatrix}1&-2/3&-4\\0&1/3&0\\0&0&1\end{pmatrix}$$
 
 </div>
 
-However, applying Gaussian elimination every time to determine whether a matrix is invertible (especially for small matrices) can sometimes be inefficient. The determinant, which we will examine in the next post, tells us whether a given $$n\times n$$ matrix is invertible or not. However, (especially for complicated matrices) one of the easiest ways to compute the determinant is still Gaussian elimination. ([§Existence and Uniqueness of the Determinant, ⁋Proposition 9](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#prop9))
+However, applying Gaussian elimination every time to test invertibility—especially for small matrices—can be inefficient. The determinant, which we shall examine in the next post, provides a criterion for invertibility. Yet even for determinants, one of the easiest computational methods—especially for complicated matrices—remains Gaussian elimination. ([§Existence and Uniqueness of the Determinant, ⁋Proposition 9](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#prop9))
 
 ---
 
