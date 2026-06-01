@@ -231,7 +231,12 @@ $$\sum_{k \geq 1} z^{-k-1}\langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta} = \sum_{m
 
 ## Mirror theorem
 
-우리는 앞서 A-side의 fundamental solution matrix $$S$$ ([명제 4](#prop4))와 B-side의 period matrix $$\mathcal{I}$$ ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))를 각각 독립적으로 구성하였다. 두 행렬이 실제로 일치한다는 것이 바로 mirror theorem의 통찰 중 하나이다. 즉 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 $$D$$-module isomorphism $$\Phi: H_A \xrightarrow{\sim} H_B$$가 $$S$$를 $$\mathcal{I}$$로 보낸다는 것은 그 자체로 증명을 요하는 깊은 주장이다. 그 가장 핵심이 되는 한 조각은 $$S$$의 distinguished 열인 $$J$$-function이 $$\mathcal{I}$$의 대응하는 열, 즉 normalization $$T_0 = 1$$에 짝지어지는 distinguished thimble $$\Gamma_0$$ 위의 oscillating integral과 일치한다는 것이다.
+우리는 앞서 A-side의 fundamental solution matrix $$S$$ ([명제 4](#prop4))와 B-side의 period matrix $$\mathcal{I}$$ ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))를 각각 독립적으로 구성하였다. 두 행렬이 실제로 일치한다는 것이 바로 mirror theorem의 통찰 중 하나이다. 
+
+앞서 우리는 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)에서 $$D$$-module isomorphism $$\Phi: H_A \rightarrow H_B$$를 가정하였다. 우리의 추가적인 주장은 이것이 두 fundamental matrix들을 동일시해준다는 것으로, 
+
+
+ $$S$$를 $$\mathcal{I}$$로 보낸다는 것은 그 자체로 증명을 요하는 깊은 주장이다. 그 가장 핵심이 되는 한 조각은 $$S$$의 distinguished 열인 $$J$$-function이 $$\mathcal{I}$$의 대응하는 열, 즉 normalization $$T_0 = 1$$에 짝지어지는 distinguished thimble $$\Gamma_0$$ 위의 oscillating integral과 일치한다는 것이다.
 
 <div class="proposition" markdown="1">
 

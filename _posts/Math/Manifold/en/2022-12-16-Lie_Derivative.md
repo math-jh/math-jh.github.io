@@ -1,5 +1,6 @@
 ---
 title: "Lie Derivative"
+description: "We define the Lie derivative of functions, vector fields, and differential forms on a manifold, and explain its geometric meaning through the directional derivative along curves."
 excerpt: "Lie derivative and Lie bracket"
 
 categories: [Math / Manifold]
@@ -13,22 +14,23 @@ sidebar:
 date: 2022-12-16
 last_modified_at: 2022-12-16
 weight: 14
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T09:30:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T09:30:04+00:00
 ---
 ## Directional Derivative of a Function and the Lie Derivative
 
-Consider a function $$f$$ defined on a manifold $$M$$. By definition, the directional derivative of $$f$$ at a point $$p\in M$$ in the direction of $$v\in T_pM$$ is equal to $$v(f)$$. The main reason we cannot use the usual differential
+Consider a function $$f$$ defined on a manifold $$M$$. By definition, the directional derivative of $$f$$ at a point $$p\in M$$ in the direction of $$v\in T_pM$$ is $$v(f)$$. The chief reason we cannot use the usual difference quotient
 
 $$\lim_{t \rightarrow0}\frac{f(p+tv)-f(p)}{t}$$
 
-on $$M$$ is that $$p+tv$$ is not defined. However, if an appropriate $$C^\infty$$ curve $$\gamma$$ on $$M$$ is given with $$\gamma(0)=p$$ and $$\gamma'(0)=v$$, then we know that the value of the directional derivative can be computed by the formula
+on $$M$$ is that $$p+tv$$ is not defined. However, if a suitable $$C^\infty$$ curve $$\gamma$$ on $$M$$ is given with $$\gamma(0)=p$$ and $$\gamma'(0)=v$$, then we know that the directional derivative can be computed by the formula
 
 $$\lim_{h\rightarrow 0}\frac{f(\gamma(h))-f(p)}{h}\tag{1}$$
 
 ([§Examples of Differentials, ⁋Definition 1](/en/math/manifold/examples_of_differentials#def1)) 
 
-Now suppose a vector field $$X$$ on $$M$$ is given, and consider the problem of finding the directional derivative $$X_pf$$ at each point $$p$$ in the direction of $$X_p$$. Geometrically, this is equivalent to choosing, for each point $$p$$, a curve $$\gamma_p$$ satisfying $$\gamma(0)=p$$ and $$\gamma'(0)=X_p$$, and applying formula (1) above. But we know that such a curve satisfying this property always exists. ([§Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6))
+Now suppose a vector field $$X$$ on $$M$$ is given, and consider the problem of finding the directional derivative $$X_pf$$ at each point $$p$$ in the direction of $$X_p$$. Geometrically, this amounts to choosing, for every point $$p$$, a curve $$\gamma_p$$ satisfying $$\gamma(0)=p$$ and $$\gamma'(0)=X_p$$, and applying formula (1) above. But we know that such a curve always exists. ([§Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6))
 
 <div class="definition" markdown="1">
  
@@ -38,13 +40,13 @@ $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\
 
 </div> 
 
-Of course, by the preceding argument this is none other than the directional derivative $$X_pf$$. However, the $$\phi^t$$ used here provides not merely a way to differentiate functions, but a way to differentiate everything else defined on $$M$$.
+Of course, by the preceding argument this is nothing other than the directional derivative $$X_pf$$. However, the flow $$\phi^t$$ used here furnishes not merely a way to differentiate functions, but a way to differentiate every other object defined on $$M$$.
 
 ## Lie Derivative of Vector Fields
 
-The simplest example is the derivative of a vector field. Since a vector field $$Y$$ is a map from $$M$$ to $$TM$$, one might attempt to differentiate it using a method similar to [Definition 1](#def1) above, but this is no trivial matter. There is a more fundamental issue here than for functions: $$Y(\phi^t(p))$$ is an element of $$T_{\phi^t(p)}$$, whereas $$Y(p)$$ is an element of $$T_pM$$, so there is no way to compute their difference $$Y_{\phi^t(p)}-Y_p$$ to begin with. 
+The simplest example is the derivative of a vector field. Since a vector field $$Y$$ is a map from $$M$$ to $$TM$$, one might attempt to differentiate it by a method similar to [Definition 1](#def1) above, but this is far from straightforward. The obstacle here is more fundamental than for functions: $$Y(\phi^t(p))$$ is an element of $$T_{\phi^t(p)}$$, whereas $$Y(p)$$ is an element of $$T_pM$$, so there is no way even to form their difference $$Y_{\phi^t(p)}-Y_p$$. 
 
-Nevertheless, it is possible to differentiate it in our situation. Recalling [§Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6), since $$\phi^t$$ is a diffeomorphism, $$d\phi^t$$ induces an isomorphism from $$T_pM$$ to $$T_{\phi^t(p)}$$. Moreover, from the same theorem we also know that the inverse of this isomorphism is $$d\phi^{-t}$$. Therefore, by pulling $$Y_{\phi^t(p)}$$ back to $$T_pM$$ via $$d\phi^{-t}$$, we can define it as follows.
+Nevertheless, differentiation is still possible in our setting. Recalling [§Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6), since $$\phi^t$$ is a diffeomorphism, $$d\phi^t$$ induces an isomorphism from $$T_pM$$ to $$T_{\phi^t(p)}$$. Moreover, the same theorem tells us that the inverse of this isomorphism is $$d\phi^{-t}$$. Therefore, by pulling $$Y_{\phi^t(p)}$$ back to $$T_pM$$ via $$d\phi^{-t}$$, we can make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -56,7 +58,7 @@ $$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi
 
 ## Lie Derivative of Differential Forms
 
-Of course, we can continue defining derivatives in this manner. For example, the following is the method for differentiating a differential form with respect to a vector field $$X$$.
+Naturally, we can continue defining derivatives in this manner. For example, the following gives the method for differentiating a differential form along a vector field $$X$$.
 
 <div class="definition" markdown="1">
 
@@ -66,9 +68,9 @@ $$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg|_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)
 
 </div>
 
-Moreover, it is not difficult to extend this definition to arbitrary tensor fields. Since this is not something we will use right away, we skip it.
+Moreover, it is not difficult to extend this definition to arbitrary tensor fields. Since we will not need this immediately, we omit it.
 
-Some parts of the following proposition have already been proved, and some are new, but we omit the proofs as writing them all out would be too lengthy.
+Some parts of the following proposition have already been proved, and some are new, but we omit all proofs as they would be too lengthy to write out in full.
 
 <div class="proposition" markdown="1">
 
@@ -90,15 +92,15 @@ In 5 and 6, the hat indicates that the corresponding entry is omitted.
 
 </div>
 
-The first result of this proposition is something we have already verified. The bracket $$[-,-]$$ appearing in the second and sixth results is an operation between vector fields called the *Lie bracket*; we will only briefly touch upon it in this post and cover the details in the next post. In any case, the key point of the second, fifth, and sixth results is that when computing $$\mathcal{L}_X$$, one can obtain the Lie derivative through relatively simple algebraic computations instead of following the original definition. The fourth result is known as Cartan's formula.
+The first statement of this proposition is something we have already verified. The bracket $$[-,-]$$ appearing in the second and sixth results is an operation between vector fields called the *Lie bracket*; we will only touch upon it briefly here and treat it in detail in the next post. At any rate, the key point of the second, fifth, and sixth results is that when computing $$\mathcal{L}_X$$, one can obtain the Lie derivative through comparatively simple algebraic manipulations rather than appealing to the original definition. The fourth result is known as Cartan's formula.
 
 ## Lie Bracket
 
-$$\mathfrak{X}(M)$$ is not a $$C^\infty(M)$$-algebra in general. Computing $$(XY)(fg)$$ directly, we find that
+$$\mathfrak{X}(M)$$ is not a $$C^\infty(M)$$-algebra in general. Computing $$(XY)(fg)$$ directly, we obtain
 
 $$(XY)(fg)=X(f(Yg)+g(Yf))=(Xf)(Yg)+f(XY)g+(Xg)(Yf)+g(XY)f\tag{2}$$
 
-In other words, the two terms $$(Xf)(Yg)$$ and $$(Xg)(Yf)$$ are what prevent $$XY$$ from satisfying the Leibniz rule, and therefore we define the following.
+In other words, the two terms $$(Xf)(Yg)$$ and $$(Xg)(Yf)$$ are precisely what prevent $$XY$$ from satisfying the Leibniz rule, and so we make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -108,15 +110,15 @@ $$[X,Y]f=X(Yf)-Y(Xf)$$
 
 </div>
 
-Of course, for this definition to make sense we must verify that the right-hand side actually gives an element of $$\mathfrak{X}(M)$$, but this can be done by swapping the roles of $$X$$ and $$Y$$ in formula (2) above to obtain $$(YX)(fg)$$, and then subtracting. Since this definition was designed from the outset to cancel the two problematic terms, the Leibniz rule will naturally hold.
+Of course, for this definition to make sense we must verify that the right-hand side actually yields an element of $$\mathfrak{X}(M)$$, but this can be done by interchanging the roles of $$X$$ and $$Y$$ in formula (2) above to obtain $$(YX)(fg)$$, and then subtracting. Since this definition was designed from the outset to cancel the two problematic terms, the Leibniz rule will hold automatically.
 
-The vector field $$[X,Y]$$ defined in this way is called the *Lie bracket* of $$X$$ and $$Y$$. Since this definition will be very important later, it seems worthwhile to collect a few results in advance.
+The vector field $$[X,Y]$$ defined in this way is called the *Lie bracket* of $$X$$ and $$Y$$. Since this definition will be of great importance later, it seems worthwhile to collect a few results in advance.
 
-Suppose a $$C^\infty$$ map $$F:M\rightarrow N$$ between two manifolds $$M$$ and $$N$$ is given. Then $$dF_p:T_pM\rightarrow T_{F(p)}N$$ is the map that sends a tangent vector $$v$$ defined at a point $$p$$ of $$M$$ to the tangent vector $$dF_p(v)$$ defined at the point $$F(p)$$ of $$N$$. However, this is not generally possible for vector fields. That is, even if a vector field $$X$$ defined on $$M$$ is given, we cannot use $$dF_p$$, etc., to create a vector field defined on $$N$$.
+Suppose a $$C^\infty$$ map $$F:M\rightarrow N$$ between two manifolds $$M$$ and $$N$$ is given. Then $$dF_p:T_pM\rightarrow T_{F(p)}N$$ is the map that sends a tangent vector $$v$$ at a point $$p$$ of $$M$$ to the tangent vector $$dF_p(v)$$ at the point $$F(p)$$ of $$N$$. In general, however, this cannot be done for vector fields: even if a vector field $$X$$ on $$M$$ is given, we cannot use $$dF_p$$ to produce a vector field on $$N$$.
 
-For example, if $$F$$ is not surjective, there is no natural way to assign a tangent vector at a point $$q\in N$$ that does not belong to the image of $$F$$. Even if we resolve this by restricting the codomain, for instance, if $$F$$ is not injective and $$F(p_1)=F(p_2)=q\in N$$, we would also have to decide which of $$dF_{p_1} v_1$$ and $$dF_{p_2} v_2$$ to choose as the tangent vector at this common point $$q$$.
+For instance, if $$F$$ is not surjective, there is no natural way to assign a tangent vector at a point $$q\in N$$ lying outside the image of $$F$$. Even if we resolve this by restricting the codomain, should $$F$$ fail to be injective and satisfy $$F(p_1)=F(p_2)=q\in N$$, we would still have to decide which of $$dF_{p_1} v_1$$ and $$dF_{p_2} v_2$$ to take as the tangent vector at the common point $$q$$.
 
-Therefore, rather than trying to push $$X\in\mathfrak{X}(M)$$ forward through $$F$$, it is wiser to look for an already given $$Y\in\mathfrak{X}(N)$$ that satisfies the desired property.
+Therefore, rather than attempting to push $$X\in\mathfrak{X}(M)$$ forward through $$F$$, it is wiser to examine the case in which a vector field $$Y\in\mathfrak{X}(N)$$ already given satisfies the desired property.
 
 <div class="definition" markdown="1">
 
@@ -132,11 +134,11 @@ In other words, $$X$$ and $$Y$$ being $$F$$-related means that the following dia
 
 ![F-related](/assets/images/Math/Manifold/Lie_Derivative-1.png){:style="width:7.4em" class="invert" .align-center}
 
-As we can see by applying the fact that $$X$$ is $$C^\infty$$ (from [Proposition 2](#prop2)) to each function $$f$$, whether $$X$$ and $$Y$$ are $$F$$-related can also be determined by applying them to each function.
+As we can see by applying the fact that $$X$$ is $$C^\infty$$ (from [Proposition 2](#prop2)) to each function $$f$$, whether $$X$$ and $$Y$$ are $$F$$-related can also be tested by applying them to each function.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 7**</ins> Let $$F:M\rightarrow N$$ be a $$C^\infty$$ map, and let $$X\in\mathfrak{X}(M)$$ and $$Y\in\mathfrak{X}(N)$$. Then $$X$$ and $$Y$$ are $$F$$-related if and only if for any $$f$$,
+<ins id="prop7">**Proposition 7**</ins> Let $$F:M\rightarrow N$$ be a $$C^\infty$$ map, and let $$X\in\mathfrak{X}(M)$$ and $$Y\in\mathfrak{X}(N)$$. Then $$X$$ and $$Y$$ are $$F$$-related if and only if for every $$f$$,
 
 $$X(f\circ F)=(Yf)\circ F$$
 
@@ -152,11 +154,11 @@ and
 
 $$((Yf)\circ F)(p)=(Yf)(F(p))=Y_{F(p)}f$$
 
-Therefore the two given conditions are equivalent.
+Hence the two given conditions are equivalent.
 
 </details>
 
-At first we pointed out that if $$F$$ is neither surjective nor injective, it is not natural to find a $$Y\in\mathfrak{X}(N)$$ that is $$F$$-related to a given $$X\in\mathfrak{X}(M)$$ through $$F$$; however, if $$F$$ is a diffeomorphism, then the following natural choice exists.
+At first we pointed out that if $$F$$ is neither surjective nor injective, it is not natural to seek a $$Y\in\mathfrak{X}(N)$$ that is $$F$$-related to a given $$X\in\mathfrak{X}(M)$$ through $$F$$; however, if $$F$$ is a diffeomorphism, then the following natural choice exists.
 
 <div class="proposition" markdown="1">
 

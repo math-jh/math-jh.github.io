@@ -37,8 +37,20 @@ node_modules/
 .claude/
 CLAUDE.md
 
-# Preprint dependent — local only
+# Mirror Symmetry frontier 연구 노트 — local only (프론티어/추측, 공개 안 함)
 _posts/Math/Mirror_Symmetry/ko/2025-01-15-Quantum_K_Theory.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-20-Level_Structure.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-21-Quantum_K_Partial_Flag.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-22-Matrix_Factorization.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-23-Schubert_MF.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-24-K_Lagrangian_Class.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-25-Joyce_Safronov.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-26-Perverse_Schober.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-27-Cluster_Categorification.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-28-Quantum_Serre.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-29-Bethe_Ansatz.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-30-Coulomb_Branch.md
+_posts/Math/Mirror_Symmetry/ko/2025-01-31-Three_D_Mirror.md
 
 # Local-only term harvester
 scripts/term-extraction/extract_terms.py
