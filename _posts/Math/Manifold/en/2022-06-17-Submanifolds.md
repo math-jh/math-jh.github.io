@@ -1,5 +1,6 @@
 ---
 title: "Submanifolds and the Inverse Function Theorem"
+description: "This post explains the definition of submanifolds through immersions and submersions, and explores the difference between immersed and embedded submanifolds from the perspective of subspace topology with illustrative examples."
 excerpt: "Substructures of differentiable manifolds"
 
 categories: [Math / Manifold]
@@ -13,8 +14,9 @@ sidebar:
 date: 2022-06-17
 last_modified_at: 2022-12-09
 weight: 7
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-01T06:30:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T06:30:05+00:00
 ---
 ## Definition of Submanifolds
 
@@ -23,29 +25,29 @@ translation_source: kimi-cli
 <ins id="def1">**Definition 1**</ins> Let two manifolds $$M,N$$ and a $$C^\infty$$ function $$F:N\rightarrow M$$ be given.
 
 1. We say that $$F$$ is an *immersion* if $$dF_p$$ is injective for every $$p\in N$$; similarly, we say that $$F$$ is a *submersion* if $$dF_p$$ is surjective for every $$p\in N$$.
-2. If $$F$$ is an immersion and also an injective function, we call $$F$$ a *submanifold* of $$M$$.
-3. If $$F$$ is not only a submanifold of $$M$$ but also defines a homeomorphism between $$N$$ and $$F(N)\subseteq M$$ equipped with the subspace topology, we call $$F$$ an *embedding*, or to match the definition in 2, an *embedded submanifold*.
+2. If $$F$$ is an immersion and also injective, we call $$F$$ a *submanifold* of $$M$$.
+3. If $$F$$ is not only a submanifold of $$M$$ but also defines a homeomorphism between $$N$$ and $$F(N)\subseteq M$$ when the latter is equipped with the subspace topology, we call $$F$$ an *embedding*, or, to match the definition in 2, an *embedded submanifold*.
 
 </div>
 
-To distinguish it more clearly from the embedded submanifold in 3, item 2 is sometimes called an *immersed submanifold*. Following the definition above, we use the unqualified term submanifold to mean an immersed manifold, and we use embedded submanifold in full without abbreviation.
+To distinguish it more clearly from the embedded submanifold in 3, item 2 is sometimes called an *immersed submanifold*. We adhere to the definition above: the unqualified term submanifold means an immersed submanifold, and we always write embedded submanifold in full.
 
-Intuitively, saying that a function $$F:N\rightarrow M$$ is a submanifold means that $$F$$ plays the role of the inclusion $$N\hookrightarrow M$$. In this case, there are two ways to give a topological structure to the image $$F(N)\subseteq M$$: one is to transport the topology of $$N$$ via the bijection $$F:N\rightarrow F(N)$$, and the other is to induce it from the topology on $$M$$ via the subspace topology. If these two topologies are identical, we call $$F$$ an *embedded* submanifold; otherwise, we simply call it a submanifold.
+Intuitively, to say that a function $$F:N\rightarrow M$$ is a submanifold means that $$F$$ plays the role of the inclusion $$N\hookrightarrow M$$. There are then two ways to topologize the image $$F(N)\subseteq M$$: one is to transport the topology of $$N$$ via the bijection $$F:N\rightarrow F(N)$$, and the other is to induce it from the topology on $$M$$ via the subspace topology. If these two topologies agree, we call $$F$$ an *embedded* submanifold; otherwise, we simply call it a submanifold.
 
 ![Immersion, submanifold, immersion](/assets/images/Math/Manifold/Submanifolds-1.png){:style="width:500px" class="invert" .align-center}
 
-For example, in the figure above, $$N=\mathbb{R}$$, $$M=\mathbb{R}^2$$, (a) is an immersion but not a submanifold, (b) is a submanifold but not an embedded submanifold, and (c) is an embedded submanifold. For convenience, in (b), if we denote by $$F(0)$$ the point that $$F(t)$$ approaches as $$t\rightarrow\infty$$, then $$(-1,1)$$ is an open set in $$\mathbb{R}$$, but in the subspace topology $$F\bigl((-1,1)\bigr)$$ cannot be an open set.
+For example, in the figure above, $$N=\mathbb{R}$$, $$M=\mathbb{R}^2$$, (a) is an immersion but not a submanifold, (b) is a submanifold but not an embedded submanifold, and (c) is an embedded submanifold. For convenience, in (b), let $$F(0)$$ denote the point that $$F(t)$$ approaches as $$t\rightarrow\infty$$; then $$(-1,1)$$ is open in $$\mathbb{R}$$, but $$F\bigl((-1,1)\bigr)$$ cannot be open in the subspace topology on $$N$$.
 
 
 <div class="example" markdown="1">
 
-<ins id="ex2">**Example 2**</ins> For a manifold $$M$$ and its open submanifold $$U$$, the inclusion $$\iota:U\hookrightarrow M$$ is an embedded submanifold of $$M$$. That $$d\iota_p$$ is injective for every $$p\in U$$ follows from the fact that $$T_pU$$ and $$T_{\iota(p)}M$$ are isomorphic, and by the definition of an open submanifold, $$\iota(U)$$ is equipped with the subspace topology.
+<ins id="ex2">**Example 2**</ins> For a manifold $$M$$ and its open submanifold $$U$$, the inclusion $$\iota:U\hookrightarrow M$$ is an embedded submanifold of $$M$$. That $$d\iota_p$$ is injective for every $$p\in U$$ is clear from the fact that $$T_pU$$ and $$T_{\iota(p)}M$$ are isomorphic, and by the definition of an open submanifold, $$\iota(U)$$ carries the subspace topology.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**Example 3**</ins> Consider two manifolds $$M,N$$ and their product $$M\times N$$. Then for any $$q\in N$$, the subset $$M\times\{q\}$$ is an embedded submanifold of $$M\times N$$ diffeomorphic to $$M$$; similarly, for any $$p\in M$$, the subset $$\{p\}\times N$$ is an embedded submanifold diffeomorphic to $$N$$. The embeddings are given by $$x\mapsto (x,q)$$ and $$y\mapsto (p,y)$$ respectively.
+<ins id="ex3">**Example 3**</ins> Consider two manifolds $$M,N$$ and their product $$M\times N$$. Then for any $$q\in N$$, the subset $$M\times\{q\}$$ is an embedded submanifold of $$M\times N$$ diffeomorphic to $$M$$; similarly, for any $$p\in M$$, the subset $$\{p\}\times N$$ is an embedded submanifold diffeomorphic to $$N$$. The embeddings are given by $$x\mapsto (x,q)$$ and $$y\mapsto (p,y)$$, respectively.
 
 More generally, let two manifolds $$M,N$$ and a $$C^\infty$$ function $$f:U\rightarrow N$$ defined on an open submanifold $$U\subseteq M$$ be given. Then the graph of $$f$$
 
@@ -58,43 +60,43 @@ is also an embedded submanifold, and the embedding is of course given by $$x\map
 
 ## The Inverse Function Theorem and Its Consequences
 
-Now we will lift the inverse function theorem and the implicit function theorem from Euclidean spaces to the setting of manifolds. First, the inverse function theorem in Euclidean space is as follows.
+We now lift the inverse function theorem and the implicit function theorem from Euclidean space to the setting of manifolds. First, the inverse function theorem in Euclidean space is as follows.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm4">**Theorem 4 (Inverse Function Theorem)**</ins> Let $$U\subset\mathbb{R}^m$$ be an open set and let $$f:U\rightarrow\mathbb{R}^m$$ be a $$C^\infty$$ function. If the following Jacobian matrix at an arbitrary point $$p_0\in U$$
+<ins id="thm4">**Theorem 4 (Inverse Function Theorem)**</ins> Let $$U\subset\mathbb{R}^m$$ be an open set and let $$f:U\rightarrow\mathbb{R}^m$$ be a $$C^\infty$$ function. If the Jacobian matrix
 
 $$\begin{pmatrix}\partial(r^1\circ f)/\partial r^1&\partial(r^1\circ f)/\partial r^2&\cdots&\partial(r^1\circ f)/\partial r^m\\\partial(r^2\circ f)/\partial r^1&\partial(r^2\circ f)/\partial r^2&\cdots&\partial(r^2\circ f)/\partial r^m\\\vdots&\vdots&\ddots&\vdots\\\partial(r^m\circ f)/\partial r^1&\partial(r^m\circ f)/\partial r^2&\cdots&\partial(r^m\circ f)/\partial r^m\end{pmatrix}$$
 
-is nonsingular, then there exists a suitable open set $$V$$ satisfying $$p_0\in V\subseteq U$$ such that $$f\vert_V$$ defines a diffeomorphism between $$V$$ and $$f(V)$$.
+at a point $$p_0\in U$$ is nonsingular, then there exists a suitable open set $$V$$ with $$p_0\in V\subseteq U$$ such that $$f\vert_V$$ defines a diffeomorphism between $$V$$ and $$f(V)$$.
 
 </div>
 
-Using this, we can prove theorems for functions between general manifolds. 
+Using this, we can prove theorems for functions between general manifolds.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor5">**Corollary 5**</ins> Let $$F:M\rightarrow N$$ be a $$C^\infty$$ function between manifolds and let $$p\in M$$. If $$dF_p:T_pM\rightarrow T_{F(p)}N$$ is an isomorphism, then there exists a suitable open set $$U\subseteq M$$ such that $$p\in U$$ and $$F\vert_U:U\rightarrow F(U)$$ defines a diffeomorphism between $$U$$ and $$F(U)$$.
+<ins id="cor5">**Corollary 5**</ins> Let $$F:M\rightarrow N$$ be a $$C^\infty$$ function between manifolds and let $$p\in M$$. If $$dF_p:T_pM\rightarrow T_{F(p)}N$$ is an isomorphism, then there exists a suitable open set $$U\subseteq M$$ with $$p\in U$$ such that $$F\vert_U:U\rightarrow F(U)$$ defines a diffeomorphism between $$U$$ and $$F(U)$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, from the fact that $$dF_p$$ is an isomorphism, we obtain $$\dim M=\dim T_pM=\dim T_{F(p)}N=\dim N$$. Now take a coordinate system $$(W,\tau)$$ containing the point $$F(p)$$, and a coordinate system $$(V,\varphi)$$ containing $$p$$ such that $$F(V)\subseteq W$$. Then the function $$(\tau\circ F\circ\varphi^{-1})\vert_{\varphi(V)}$$ is a map between Euclidean spaces of the same dimension, and since $$dF_p$$ is an isomorphism, we know that the Jacobian matrix of this function at the point $$\varphi(p)$$ is nonsingular. 
+First, from the fact that $$dF_p$$ is an isomorphism we obtain $$\dim M=\dim T_pM=\dim T_{F(p)}N=\dim N$$. Now take a coordinate system $$(W,\tau)$$ containing the point $$F(p)$$, and a coordinate system $$(V,\varphi)$$ containing $$p$$ such that $$F(V)\subseteq W$$. Then the function $$(\tau\circ F\circ\varphi^{-1})\vert_{\varphi(V)}$$ is a map between Euclidean spaces of the same dimension, and since $$dF_p$$ is an isomorphism, the Jacobian matrix of this function at the point $$\varphi(p)$$ is nonsingular.
 
-Therefore, by the inverse function theorem, there exists an open set $$U'$$ satisfying $$\varphi(p)\in U'\subset\varphi(V)$$ such that $$(\tau\circ F\circ\varphi^{-1})\vert_{U'}$$ defines a diffeomorphism between $$U'$$ and $$\tau\circ F\circ\varphi^{-1}(U')$$. Now setting $$U=\varphi^{-1}(U)$$, the function
+Therefore, by the inverse function theorem, there exists an open set $$U'$$ with $$\varphi(p)\in U'\subset\varphi(V)$$ such that $$(\tau\circ F\circ\varphi^{-1})\vert_{U'}$$ defines a diffeomorphism between $$U'$$ and $$\tau\circ F\circ\varphi^{-1}(U')$$. Setting $$U=\varphi^{-1}(U')$$, the function
 
 $$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})|_{U'}\bigr)\circ\varphi$$
 
-defines a diffeomorphism between $$U$$ and $$F(U)$$. 
+defines a diffeomorphism between $$U$$ and $$F(U)$$.
 
 </details>
 
-Let elements $$y^1, \ldots, y^k$$ of $$C_p^\infty(M)$$ be given for a manifold $$M$$ and $$p\in M$$. If their differentials $$dy^i$$ form a linearly independent subset of $$T_p^\ast M$$, then we call them functions independent at the point $$p$$. 
+Let elements $$y^1, \ldots, y^k$$ of $$C_p^\infty(M)$$ be given for a manifold $$M$$ and $$p\in M$$. If their differentials $$dy^i$$ form a linearly independent subset of $$T_p^\ast M$$, we call them functions independent at the point $$p$$.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor6">**Corollary 6**</ins> Consider an $$m$$-dimensional manifold $$M$$. If $$y^1, \ldots, y^m$$ are independent at a point $$p_0\in M$$, then $$(y^1, \ldots, y^m)$$ forms a coordinate system in a neighborhood of $$p$$.
+<ins id="cor6">**Corollary 6**</ins> Consider an $$m$$-dimensional manifold $$M$$. If $$y^1, \ldots, y^m$$ are independent at a point $$p_0\in M$$, then $$(y^1, \ldots, y^m)$$ forms a coordinate system in a neighborhood of $$p_0$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -110,11 +112,11 @@ Then since each component function $$y^i$$ is $$C^\infty$$, $$\varphi$$ is also 
 
 $$d\varphi_{p_0}\left(dr^i|_{\varphi(p_0)}\right)=\left(dr^i|_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i|_{p_0}$$
 
-Thus the basis elements $$dr^i\vert_{\varphi(p_0)}$$ of $$T_{\varphi(p_0)}^\ast\mathbb{R}^m$$ are mapped to a basis of $$T_{p_0}^\ast M$$, and therefore $$(d\varphi_{p_0})^\ast$$ is an isomorphism. Hence $$d\varphi_{p_0}$$ is also an isomorphism, and thus applying [Corollary 5](#cor5), we see that there exists a suitable $$V$$ satisfying $$p_0\in V\subseteq U$$ such that $$\varphi\vert_V:V\rightarrow\varphi(V)$$ is a coordinate system.
+Thus the basis elements $$dr^i\vert_{\varphi(p_0)}$$ of $$T_{\varphi(p_0)}^\ast\mathbb{R}^m$$ are mapped to a basis of $$T_{p_0}^\ast M$$, and therefore $$(d\varphi_{p_0})^\ast$$ is an isomorphism. Hence $$d\varphi_{p_0}$$ is also an isomorphism, and applying [Corollary 5](#cor5), we see that there exists a suitable $$V$$ with $$p_0\in V\subseteq U$$ such that $$\varphi\vert_V:V\rightarrow\varphi(V)$$ is a coordinate system.
 
 </details>
 
-Obtaining the following two corollaries from the above corollary is essentially an exercise in undergraduate linear algebra.
+Obtaining the following two corollaries from the corollary above is essentially an exercise in undergraduate linear algebra.
 
 <div class="proposition" markdown="1">
 
@@ -130,7 +132,7 @@ Let a coordinate system $$(U,\varphi)$$, $$\varphi=(x^i)_{i=1}^{m}$$, about the 
 
 <div class="proposition" markdown="1">
 
-<ins id="cor8">**Corollary 8**</ins> Let elements $$y^1,\ldots, y^k$$ of $$\mathcal{C}_{M,p_0}^\infty$$ be given for an $$m$$-dimensional manifold $$M$$ and a point $$p_0\in M$$. If the $$dy^i$$ span $$T_{p_0}^\ast M$$, then a suitable subset of $$\{y_1,\ldots, y_k\}$$ forms a coordinate system in a neighborhood of $$p_0$$.
+<ins id="cor8">**Corollary 8**</ins> Let elements $$y^1,\ldots, y^k$$ of $$\mathcal{C}_{M,p_0}^\infty$$ be given for an $$m$$-dimensional manifold $$M$$ and a point $$p_0\in M$$. If the $$dy^i$$ span $$T_{p_0}^\ast M$$, then a suitable subset of $$\{y^1,\ldots, y^k\}$$ forms a coordinate system in a neighborhood of $$p_0$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -140,7 +142,7 @@ If we find a suitable subset of $$\{dy^1,\ldots, dy^k\}$$ that forms a basis of 
 
 </details>
 
-The following two corollaries will be used frequently hereafter under the name *rank theorem*. 
+The following two corollaries will be used frequently hereafter under the name *rank theorem*.
 
 <div class="proposition" markdown="1">
 
@@ -158,7 +160,7 @@ Since $$dF_p$$ is surjective, its dual $$(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow 
 
 $$(dF_p)^\ast(dy^i|_{F(p)})=dy^i|_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j|_p$$
 
-are linearly independent in $$T_p^\ast M$$. Therefore, we obtain the desired result by [Corollary 7](#cor7). 
+are linearly independent in $$T_p^\ast M$$. Therefore, we obtain the desired result by [Corollary 7](#cor7).
 
 </details>
 
@@ -178,7 +180,7 @@ Since $$dF_p$$ is injective, its dual $$(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T
 
 $$(dF_p)^\ast(dy^i|_{F(p)})=dy^i|_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j|_p$$
 
-must span $$T_p^\ast M$$, and therefore by [Corollary 8](#cor8) a subset of the given set forms a coordinate system of $$M$$ in a neighborhood of $$p$$. 
+must span $$T_p^\ast M$$, and therefore by [Corollary 8](#cor8) a subset of the given set forms a coordinate system of $$M$$ in a neighborhood of $$p$$.
 
 </details>
 
