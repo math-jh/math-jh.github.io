@@ -183,15 +183,18 @@ $$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\
 
 $$\eta\bigl(S(q,z)T_a, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta \left\langle \frac{T_a}{z - \psi}, T_b \right\rangle_{0, 2, \beta}$$
 
-으로 정의하자 ($$\eta$$는 Poincaré pairing). 이 $$S(q, z)$$는 $$q \to 0$$에서 모든 $$q^\beta$$ ($$\beta \neq 0$$) 항이 사라져 $$S \to \operatorname{id}$$로 normalize되며, 이는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 period matrix $$\mathcal{I}$$가 frame $$\{e_a\}$$로 trivialize한 $$\nabla^z_B$$의 fundamental solution matrix를 이루었던 것과 평행한, A-side의 fundamental solution matrix이다. 구체적으로,
+으로 정의하자. 여기서 $$\eta$$는 Poincaré pairing이다. 그럼 $$S$$는 다음을 만족한다. 
 
 1. *(Flat section property)* $$S(q, z)$$의 각 column $$S(q, z) T_b$$는 dual small Dubrovin connection $$\nabla^{z, \vee}$$의 horizontal section이다. 즉
    
-   $$z q_a\partial_{q_a} \bigl(S(q,z)T_b\bigr) = T_a \qtimes \bigl(S(q,z)T_b\bigr)\qquad (a = 1, \ldots, r).$$
+   $$z q_a\partial_{q_a} \bigl(S(q,z)T_b\bigr) = T_a \qtimes \bigl(S(q,z)T_b\bigr)\qquad (a = 1, \ldots, r)$$
 
+   이다.
 2. *($$J$$ = $$T_0$$ column)* $$J_X(q, z) = e^{t_{(2)}/z} S(q, z) T_0$$가 성립한다. 특히 $$J$$ 자체도 ($$\ast$$)의 horizontal section이고,
    
-   $$z q_a\partial_{q_a} J_X = T_a \qtimes J_X \qquad (a = 1, \ldots, r).$$
+   $$z q_a\partial_{q_a} J_X = T_a \qtimes J_X \qquad (a = 1, \ldots, r)$$
+
+   이다.
 
 </div>
 
@@ -200,13 +203,27 @@ $$\eta\bigl(S(q,z)T_a, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta
 
 핵심은 GW invariant의 두 공리 — *string equation* (marked point에 $$T_0 = 1$$을 끼울 때 한 점이 줄어드는 reduction)과 *divisor equation* ($$H^2$$ class를 끼울 때 $$T_a \cdot \beta$$ 인자가 빠지는 관계) — 과 [명제 2](#prop2)의 topological recursion relation을 정합적으로 결합하는 것이다. 
 
-(2) $$J = T_0$$ column은 $$T_b = T_0 = 1$$을 대입하여 얻는다. 이때 $$S(q,z)T_0$$의 matrix element에 들어 있는 2-point descendant에 string equation $$\langle \tau_k(T_a), 1\rangle_{0,2,\beta} = \langle \tau_{k-1}(T_a)\rangle_{0,1,\beta}$$ ($$k \geq 1$$, $$\beta \neq 0$$; $$k = 0$$ 항은 vanishing)을 적용하면 marked point 하나가 줄며 $$z^{-1}\langle T_a/(z-\psi)\rangle_{0,1,\beta}$$로 정리되고, prefactor $$e^{t_{(2)}/z}$$를 곱하면 정확히 [정의 3](#def3)의 small $$J$$ 식 안에 들어 있는 $$\langle T_a/(z(z-\psi))\rangle_{0,1,\beta}$$ 항이 된다.
+(2) $$J = T_0$$ column은 $$S$$의 정의식에서 둘째 자리에 $$T_b = T_0 = 1$$을 대입하여 얻는다. 그러면 정의에 들어 있는 2-point descendant는 $$T_0 = 1$$이 끼인 형태이고, 이를 geometric series로 풀면
 
-(1) flat section property는 $$z q_a\partial_{q_a}$$를 column $$S(q,z)T_b$$에 작용시켜 확인한다. $$q_a\partial_{q_a}$$는 divisor equation을 거꾸로 읽어 correlator에 $$H^2$$ class $$T_a$$를 한 점 더 삽입하는 효과를 주고, 곱해진 $$z$$는 distinguished marked point의 $$1/(z-\psi)$$에서 $$\psi$$ 한 차수를 끌어내린다. 이 $$\psi$$를 [명제 2](#prop2)의 topological recursion relation (forgetful morphism으로 stable map의 moduli $$\overline{\mathcal{M}}_{0, n+1}(X, \beta)$$에 끌어올린 형태)으로 boundary divisor들의 합으로 분해하면, 각 boundary divisor 위에서 source curve가 두 component로 갈라지며 한 쪽은 새로 삽입한 $$T_a$$가 주는 quantum product $$T_a \qtimes$$의 structure constant를, 다른 쪽은 원래의 $$S(q,z)T_b$$를 복원한다. 두 기여의 곱이 정확히 우변 $$T_a \qtimes \bigl(S(q,z)T_b\bigr)$$이다. 자세한 계산은 [CK, Theorem 10.3.1] 또는 [MS, Chapter 28–29] 참조.
+$$\left\langle \frac{T_a}{z - \psi}, 1\right\rangle_{0, 2, \beta} = \sum_{k \geq 0} z^{-k-1}\langle \tau_k(T_a), 1\rangle_{0, 2, \beta}$$
+
+이다. 각 항에 string equation $$\langle \tau_k(T_a), 1\rangle_{0, 2, \beta} = \langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta}$$ ($$k \geq 1$$; $$k = 0$$ 항은 $$\psi$$를 더 내릴 수 없어 $$\beta \neq 0$$에서 vanishing)을 적용하면 index가 $$k$$에서 $$k - 1$$로 한 칸 밀리고, 이에 따라 멱급수의 차수도 한 단계 더 내려가
+
+$$\sum_{k \geq 1} z^{-k-1}\langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta} = \sum_{m \geq 0} z^{-m-2}\langle \tau_m(T_a)\rangle_{0, 1, \beta} = \left\langle \frac{T_a}{z(z - \psi)}\right\rangle_{0, 1, \beta}$$
+
+가 된다. 이것이 정확히 [정의 3](#def3)의 small $$J$$ 식 안에 들어 있는 항이며, 여기에 prefactor $$e^{t_{(2)}/z}$$를 곱한 것이 $$J_X = e^{t_{(2)}/z} S(q, z) T_0$$이다. small $$J$$가 $$1/(z - \psi)$$ 대신 한 단계 더 붙은 $$1/(z(z - \psi))$$를 갖는 이유, 즉 추가된 $$z^{-1}$$ 인자가 바로 이 string equation의 index shift에서 비롯한 것임을 알 수 있다.
+
+(1) flat section property는 $$z q_a\partial_{q_a}$$를 각 column $$S(q, z) T_b$$에 작용시켜 확인한다. $$S(q, z) T_b$$는 $$\beta$$마다 $$q^\beta$$를 인자로 갖는 항들의 합인데, 앞서 ansatz를 전개할 때 쓴 관계 $$q_a\partial_{q_a} q^\beta = (T_a \cdot \beta) q^\beta$$에 의해 이 미분은 각 항에 교차수 $$T_a \cdot \beta$$를 곱한다. 한편 divisor equation을 거꾸로 읽으면 이 $$(T_a \cdot \beta)$$ 인자는 (lower-order $$\psi$$ 보정을 무시할 때) correlator에 $$H^2$$ class $$T_a$$를 marked point 하나로 추가 삽입한 것과 같으므로, $$z q_a\partial_{q_a}$$는 결국 $$T_a$$를 한 점 삽입하면서 곱해진 $$z$$로 distinguished marked point의 $$1/(z - \psi)$$에서 $$\psi$$를 한 차수 끌어내리는 효과를 준다.
+
+이제 이렇게 끌어내려진 $$\psi$$를 [명제 2](#prop2)의 topological recursion relation (forgetful morphism $$\overline{\mathcal{M}}_{0, n+1}(X, \beta) \to \overline{\mathcal{M}}_{0, n+1}$$의 pullback으로 옮긴 형태)으로 boundary divisor들의 합 $$\sum_S D_S$$로 분해한다. 각 $$D_S$$ 위에서 source curve는 effective class가 $$\beta = \beta_1 + \beta_2$$로 쪼개진 두 component로 갈라지고, 그 사이의 node에서는 diagonal class의 Künneth 분해 $$\sum_c T_c \otimes T^c$$가 끼어든다. 새로 삽입한 $$T_a$$가 모이는 component는 3-point invariant $$\langle T_a, T_c, T_d\rangle_{0, 3, \beta_1}$$ — 곧 quantum product $$T_a \qtimes$$를 basis로 표현한 structure constant — 를 주고, 나머지 component는 $$T^c$$를 node로 갖는 $$S(q, z) T_b$$의 더 낮은 차수 ($$\beta_2$$) 조각을 복원한다. 따라서 모든 $$c$$와 분해 $$\beta = \beta_1 + \beta_2$$에 대해 합하면 $$T_a \qtimes$$를 벡터 $$S(q, z) T_b$$에 적용한 것, 곧 우변 $$T_a \qtimes \bigl(S(q, z) T_b\bigr)$$가 정확히 복원된다. 자세한 계산은 [CK, Theorem 10.3.1] 또는 [MS, Chapter 28–29] 참조.
 
 </details>
 
-[명제 4](#prop4)는 $$J$$-function이 단순한 enumerative 데이터의 묶음을 넘어, A-model 측 fundamental solution matrix $$S$$의 한 열 (구체적으로 normalization element $$T_0 = 1$$에 해당하는 열)을 이룸을 보여준다. 다른 열들도 $$S$$의 정의식에 다른 $$T_b$$를 넣으면 직접 얻을 수 있으므로, 결국 small QDE의 모든 flat section은 GW invariant의 generating function으로 표현된다.
+따라서 $$q\rightarrow 0$$일 때 모든 $$q^\beta$$항이 사라지므로, $$S$$의 classical limit은 $$\id$$이다. 이는 A-side에서는 quantum cup product의 classical limit이 ordinary cup product라는 것의 결과로 생각할 수 있다. ormalize되며, 던 것과 평행한, A-side의 fundamental solution matrix이다. 구체적으로,
+
+[명제 4](#prop4)는 $$J$$-function이 단순한 enumerative 데이터의 묶음을 넘어, A-model 측 fundamental solution matrix $$S$$의 한 열 (구체적으로 normalization element $$T_0 = 1$$에 해당하는 열)을 이룸을 보여준다. 이는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 period matrix $$\mathcal{I}$$가 frame $$\{e_a\}$$로 trivialize한 $$\nabla^z_B$$의 fundamental solution matrix를 이루었던 것과 정확히 
+
+다른 열들도 $$S$$의 정의식에 다른 $$T_b$$를 넣으면 직접 얻을 수 있으므로, 결국 small QDE의 모든 flat section은 GW invariant의 generating function으로 표현된다.
 
 이 normalization은 앞서 ($$\ast$$)를 $$z^{-1}$$의 멱급수로 풀 때 등장한 적분상수의 처리와 직결된다. Recursion $$q_a\partial_{q_a} s_{k+1} = T_a \qtimes s_k$$의 각 단계에서 $$s_{k+1}$$은 $$q_a$$에 대한 적분으로 결정되었고, 그 과정에서 $$q$$에 무관한 적분상수 $$C_{k+1} \in H^\ast(X)$$만큼의 자유도가 남았다 (가령 $$s_1 = t_{(2)} + C_1$$). [명제 4](#prop4)의 $$S$$는 이 적분상수를 모든 차수에서 $$0$$으로 버린 해, 즉 $$t_{(2)}$$에서 비롯하는 $$\log q$$ 성장을 prefactor $$e^{t_{(2)}/z}$$로 따로 떼어내고 나면 남는 모든 보정이 $$\beta \neq 0$$의 instanton 차수 $$q^\beta$$만을 갖도록 ($$q \to 0$$에서 $$S \to \operatorname{id}$$가 되도록) 강제한 표준해이다. 
 

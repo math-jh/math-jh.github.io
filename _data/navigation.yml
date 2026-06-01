@@ -318,6 +318,8 @@ llm_workshop-ko:
         url: ko/llm_workshop/giscus_migration
       - title: "찾아보기 자동 갱신"
         url: ko/llm_workshop/term_extraction
+      - title: "math-jh.com에 로컬 서비스 붙이기"
+        url: ko/llm_workshop/local_services
   - title: "Marvin의 독서 노트"
     children:
       - title: "독서 노트를 쓰는 봇"
