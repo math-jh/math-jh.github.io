@@ -676,6 +676,8 @@ mirror_symmetry-ko:
         url: ko/math/mirror_symmetry/postnikov_plabic
       - title: "Cluster algebra와 W_q의 Laurent expansion"
         url: ko/math/mirror_symmetry/cluster_algebra
+      - title: "Grassmannian의 양자 코호몰로지와 quantum Pieri 규칙"
+        url: ko/math/mirror_symmetry/quantum_pieri
       - title: "Marsh–Rietsch의 Plücker coordinate superpotential"
         url: ko/math/mirror_symmetry/marsh_rietsch_superpotential
       - title: "Marsh-Rietsch Mirror Theorem"
@@ -684,6 +686,8 @@ mirror_symmetry-ko:
         url: ko/math/mirror_symmetry/cluster_monomial_basis
       - title: "Newton–Okounkov body와 cluster duality"
         url: ko/math/mirror_symmetry/newton_okounkov
+      - title: "Schubert variety의 거울과 head-over-tails superpotential"
+        url: ko/math/mirror_symmetry/schubert_variety_mirror
   - title:
     children:
       - title: "블로그 소개"
