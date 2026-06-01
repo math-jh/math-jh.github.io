@@ -1,6 +1,7 @@
 ---
 title: "Commutative Algebra"
 layout: archive_custom
+regenerate: true
 permalink: /en/commutative_algebra/
 ---
 {% assign lang = site.locale %}

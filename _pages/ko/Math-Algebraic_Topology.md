@@ -1,6 +1,7 @@
 ---
 title: "대수적 위상수학"
 layout: archive_custom
+regenerate: true
 permalink: /ko/algebraic_topology/
 ---
 {% assign lang = site.locale %}

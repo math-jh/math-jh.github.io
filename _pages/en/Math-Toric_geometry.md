@@ -1,6 +1,7 @@
 ---
 title: "Toric Geometry"
 layout: archive_custom
+regenerate: true
 permalink: /en/toric_geometry/
 ---
 {% assign lang = site.locale %}

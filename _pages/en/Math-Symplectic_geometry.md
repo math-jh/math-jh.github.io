@@ -1,6 +1,7 @@
 ---
 title: "Symplectic Geometry"
 layout: archive_custom
+regenerate: true
 permalink: /en/symplectic_geometry/
 ---
 {% assign lang = site.locale %}

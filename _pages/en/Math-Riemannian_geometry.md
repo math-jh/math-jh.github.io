@@ -1,6 +1,7 @@
 ---
 title: "Riemannian Geometry"
 layout: archive_custom
+regenerate: true
 permalink: /en/riemannian_geometry/
 ---
 {% assign lang = site.locale %}

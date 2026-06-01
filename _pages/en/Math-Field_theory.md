@@ -1,6 +1,7 @@
 ---
 title: "Field Theory"
 layout: archive_custom
+regenerate: true
 permalink: /en/field_theory/
 ---
 {% assign lang = site.locale %}

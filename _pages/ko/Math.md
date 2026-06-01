@@ -1,6 +1,7 @@
 ---
 title: "수학"
 layout: archive_custom
+regenerate: true
 permalink: /ko/math/
 author_profile: true
 ---

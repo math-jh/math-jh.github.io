@@ -1,6 +1,7 @@
 ---
 title: "표현론"
 layout: archive_custom
+regenerate: true
 permalink: /ko/representation_theory/
 ---
 {% assign lang = site.locale %}

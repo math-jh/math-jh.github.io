@@ -1,6 +1,7 @@
 ---
 title: "Algebraic Topology"
 layout: archive_custom
+regenerate: true
 permalink: /en/algebraic_topology/
 ---
 {% assign lang = site.locale %}

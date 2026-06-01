@@ -1,6 +1,7 @@
 ---
 title: "Category Theory"
 layout: archive_custom
+regenerate: true
 permalink: /en/category_theory/
 ---
 {% assign lang = site.locale %}

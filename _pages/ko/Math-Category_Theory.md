@@ -1,6 +1,7 @@
 ---
 title: "범주론"
 layout: archive_custom
+regenerate: true
 permalink: /ko/category_theory/
 ---
 {% assign lang = site.locale %}

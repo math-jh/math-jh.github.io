@@ -1,6 +1,7 @@
 ---
 title: "Recent posts"
 layout: recent
+regenerate: true
 permalink: /en/recent/
 author_profile: true
 limit: 50

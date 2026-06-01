@@ -1,6 +1,7 @@
 ---
 title: "Group Theory"
 layout: archive_custom
+regenerate: true
 permalink: /en/group_theory/
 ---
 {% assign lang = site.locale %}

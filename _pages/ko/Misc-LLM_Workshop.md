@@ -1,6 +1,7 @@
 ---
 title: "LLM 작업실"
 layout: archive_custom
+regenerate: true
 permalink: /ko/llm_workshop/
 ---
 {% assign lang = site.locale %}

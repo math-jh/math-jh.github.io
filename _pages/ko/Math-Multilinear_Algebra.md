@@ -1,6 +1,7 @@
 ---
 title: "다중선형대수학"
 layout: archive_custom
+regenerate: true
 permalink: /ko/multilinear_algebra/
 ---
 {% assign lang = site.locale %}

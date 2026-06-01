@@ -1,6 +1,7 @@
 ---
 title: "체론"
 layout: archive_custom
+regenerate: true
 permalink: /ko/field_theory/
 ---
 {% assign lang = site.locale %}

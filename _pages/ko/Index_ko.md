@@ -1,6 +1,7 @@
 ---
 title: "찾아보기"
 layout: archive_custom
+regenerate: true
 permalink: /ko/misc/index_ko
 ---
 

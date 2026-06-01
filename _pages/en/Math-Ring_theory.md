@@ -1,6 +1,7 @@
 ---
 title: "Ring Theory"
 layout: archive_custom
+regenerate: true
 permalink: /en/ring_theory/
 ---
 {% assign lang = site.locale %}

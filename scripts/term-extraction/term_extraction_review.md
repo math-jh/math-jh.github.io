@@ -3431,3 +3431,13 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `주장 4 (Mirror theorem, $$D$$-module form)` | mixed-script emphasis — possibly a definition |
 | `mirror isomorphism` | multi-word English emphasis — possibly a definition |
 
+## 벡터공간
+- post: `_posts/Math/Linear_Algebra/ko/2022-07-28-Vector_Spaces.md`
+- permalink: `/ko/math/linear_algebra/vector_spaces`
+- scanned: 2026-06-01T18:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `, 혹은 간단히` | looks like emphasis (no <sub> partner) |
+| `스칼라곱` | looks like emphasis (no <sub> partner) |
+

@@ -1,6 +1,7 @@
 ---
 title: "키보드"
 layout: archive_custom
+regenerate: true
 permalink: /ko/keyboards
 ---
 {% assign lang = site.locale %}

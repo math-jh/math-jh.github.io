@@ -1,6 +1,7 @@
 ---
 title: "선형대수학"
 layout: archive_custom
+regenerate: true
 permalink: /ko/linear_algebra/
 ---
 {% assign lang = site.locale %}

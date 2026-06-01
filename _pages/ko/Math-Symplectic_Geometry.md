@@ -1,6 +1,7 @@
 ---
 title: "사교기하학"
 layout: archive_custom
+regenerate: true
 permalink: /ko/symplectic_geometry/
 ---
 {% assign lang = site.locale %}

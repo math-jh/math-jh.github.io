@@ -1,6 +1,7 @@
 ---
 title: "리 이론"
 layout: archive_custom
+regenerate: true
 permalink: /ko/lie_theory/
 ---
 {% assign lang = site.locale %}

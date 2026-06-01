@@ -1,6 +1,7 @@
 ---
 title: "Mathematics"
 layout: archive_custom
+regenerate: true
 permalink: /en/math/
 author_profile: true
 ---

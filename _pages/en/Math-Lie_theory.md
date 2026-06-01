@@ -1,6 +1,7 @@
 ---
 title: "Lie Theory"
 layout: archive_custom
+regenerate: true
 permalink: /en/lie_theory/
 ---
 {% assign lang = site.locale %}

@@ -1,6 +1,7 @@
 ---
 title: "토릭 기하학"
 layout: archive_custom
+regenerate: true
 permalink: /ko/toric_geometry/
 ---
 {% assign lang = site.locale %}

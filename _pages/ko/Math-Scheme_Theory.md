@@ -1,6 +1,7 @@
 ---
 title: "스킴"
 layout: archive_custom
+regenerate: true
 permalink: /ko/scheme_theory/
 ---
 {% assign lang = site.locale %}

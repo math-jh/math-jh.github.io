@@ -1,6 +1,7 @@
 ---
 title: "도구"
 layout: archive_custom
+regenerate: true
 permalink: /ko/tools
 ---
 {% assign lang = site.locale %}

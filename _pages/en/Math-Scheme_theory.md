@@ -1,6 +1,7 @@
 ---
 title: "Scheme Theory"
 layout: archive_custom
+regenerate: true
 permalink: /en/scheme_theory/
 ---
 {% assign lang = site.locale %}
