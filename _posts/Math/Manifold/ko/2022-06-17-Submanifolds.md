@@ -83,7 +83,7 @@ $$\begin{pmatrix}\partial(r^1\circ f)/\partial r^1&\partial(r^1\circ f)/\partial
 
 우선 $$dF_p$$가 isomorphism인 것으로부터 $$\dim M=\dim T_pM=\dim T_{F(p)}N=\dim N$$을 얻는다. 이제 점 $$F(p)$$를 포함하는 coordinate system $$(W,\tau)$$를 잡고, $$F(V)\subseteq W$$를 만족하도록 $$p$$를 포함하는 coordinate system $$(V,\varphi)$$를 잡자. 그럼 함수 $$(\tau\circ F\circ\varphi^{-1})\vert_{\varphi(V)}$$는 같은 차원을 갖는 유클리드 공간 사이의 함수이며, 또 $$dF_p$$가 isomorphism인 것으로부터 이 함수의 점 $$\varphi(p)$$에서의 Jacobian matrix가 nonsingular라는 것을 안다. 
 
-따라서 역함수정리에 의해, $$\varphi(p)\in U'\subset\varphi(V)$$를 만족하는 열린집합 $$U'$$가 존재하여 $$(\tau\circ F\circ\varphi^{-1})\vert_{U'}$$이 $$U'$$와 $$\tau\circ F\circ\varphi^{-1}(U')$$ 사이의 diffeomorphism을 정의한다. 이제 $$U=\varphi^{-1}(U)$$로 잡으면 함수
+따라서 역함수정리에 의해, $$\varphi(p)\in U'\subset\varphi(V)$$를 만족하는 열린집합 $$U'$$가 존재하여 $$(\tau\circ F\circ\varphi^{-1})\vert_{U'}$$이 $$U'$$와 $$\tau\circ F\circ\varphi^{-1}(U')$$ 사이의 diffeomorphism을 정의한다. 이제 $$U=\varphi^{-1}(U')$$로 잡으면 함수
 
 $$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})|_{U'}\bigr)\circ\varphi$$
 
