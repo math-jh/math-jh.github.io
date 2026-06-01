@@ -1,5 +1,6 @@
 ---
 title: "Distribution"
+description: "This post defines distributions on manifolds and the concept of integral submanifolds, then explains how Frobenius's theorem characterizes integrable distributions through the involutivity condition."
 excerpt: "The definition of a distribution and the Frobenius theorem"
 
 categories: [Math / Manifold]
@@ -13,8 +14,9 @@ sidebar:
 date: 2023-01-12
 last_modified_at: 2023-01-12
 weight: 14
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-01T10:00:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T10:00:04+00:00
 ---
 ## Distribution and Integral Flow
 
@@ -24,7 +26,7 @@ $$\sigma'(t)=X(\sigma(t)),\qquad \sigma(0)=p\tag{1}$$
 
 The image $$S$$ of such a curve $$\sigma$$ in $$M$$ can be viewed as a submanifold of $$M$$ containing the point $$p$$.
 
-On the other hand, equation (1) determines not only the image of $$\sigma$$, but also the way it is parameterized. In contrast, the submanifold $$S$$ is determined independently of the parameterization of $$\sigma$$, so it is determined solely by the 1-dimensional subspace $$\span(X_p)$$ of $$T_pM$$, rather than by the vector $$X_p$$ itself.
+On the other hand, equation (1) determines not only the image of $$\sigma$$ but also its parametrization. In contrast, the submanifold $$S$$ is determined independently of the parametrization of $$\sigma$$, so it is determined solely by the 1-dimensional subspace $$\span(X_p)$$ of $$T_pM$$, rather than by the vector $$X_p$$ itself.
 
 <div class="definition" markdown="1">
 
