@@ -1,6 +1,7 @@
 ---
 title: "대수다양체"
 layout: archive_custom
+regenerate: true
 permalink: /ko/algebraic_varieties/
 ---
 {% assign lang = site.locale %}

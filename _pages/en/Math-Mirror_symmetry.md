@@ -1,6 +1,7 @@
 ---
 title: "Mirror Symmetry"
 layout: archive_custom
+regenerate: true
 permalink: /en/mirror_symmetry/
 ---
 {% assign lang = site.locale %}

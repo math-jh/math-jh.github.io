@@ -1,6 +1,7 @@
 ---
 title: "주변기기"
 layout: archive_custom
+regenerate: true
 permalink: /ko/peripherals
 ---
 {% assign lang = site.locale %}

@@ -1,6 +1,7 @@
 ---
 title: "거울대칭"
 layout: archive_custom
+regenerate: true
 permalink: /ko/mirror_symmetry/
 ---
 {% assign lang = site.locale %}

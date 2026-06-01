@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 # Refresh scripts/audit/link-overrides.log by doing a one-shot production
-# Jekyll build. Output goes to /tmp so the livereload daemon's _site is
-# untouched. The tracker log itself lives in the source tree and gets
-# rewritten by the link_normalizer plugin during this build.
+# Jekyll build. Output goes to a disk-backed throwaway dir (NOT /tmp, which is
+# tmpfs/RAM on this Pi — a full _site is ~700M and would spike memory) so the
+# livereload daemon's _site is untouched. The tracker log itself lives in the
+# source tree and gets rewritten by the link_normalizer plugin during this build.
 
 set -euo pipefail
 
 BLOG=/home/junhyeok/math-jh.github.io
-DEST="/tmp/jekyll-link-audit-$$"
+DEST="/var/tmp/jekyll-link-audit-$$"
 
 cd "$BLOG"
 

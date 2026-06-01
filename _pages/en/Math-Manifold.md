@@ -1,6 +1,7 @@
 ---
 title: "Manifolds"
 layout: archive_custom
+regenerate: true
 permalink: /en/manifold/
 ---
 {% assign lang = site.locale %}

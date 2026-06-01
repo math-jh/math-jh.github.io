@@ -1,6 +1,7 @@
 ---
 title: "Set Theory"
 layout: archive_custom
+regenerate: true
 permalink: /en/set_theory/
 ---
 {% assign lang = site.locale %}

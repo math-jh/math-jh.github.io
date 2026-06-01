@@ -1,6 +1,7 @@
 ---
 title: "군론"
 layout: archive_custom
+regenerate: true
 permalink: /ko/group_theory/
 ---
 {% assign lang = site.locale %}

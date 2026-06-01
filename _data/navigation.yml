@@ -670,54 +670,17 @@ mirror_symmetry-ko:
         url: ko/math/mirror_symmetry/gauss-manin_connection
       - title: "Givental J-function과 Mirror Theorem"
         url: ko/math/mirror_symmetry/givental_j_function
-      - title: "── Marsh-Rietsch stream ──"
-        url: ko/math/mirror_symmetry/overview
-      - title: "Postnikov diagram과 plabic graph"
-        url: ko/math/mirror_symmetry/postnikov_plabic
-      - title: "Cluster algebra와 W_q의 Laurent expansion"
-        url: ko/math/mirror_symmetry/cluster_algebra
-      - title: "Grassmannian의 양자 코호몰로지와 quantum Pieri 규칙"
-        url: ko/math/mirror_symmetry/quantum_pieri
-      - title: "Marsh–Rietsch의 Plücker coordinate superpotential"
-        url: ko/math/mirror_symmetry/marsh_rietsch_superpotential
-      - title: "Marsh-Rietsch Mirror Theorem"
-        url: ko/math/mirror_symmetry/mr_mirror_theorem
-      - title: "Cluster monomial basis와 Schubert correspondence"
-        url: ko/math/mirror_symmetry/cluster_monomial_basis
-      - title: "Newton–Okounkov body와 cluster duality"
-        url: ko/math/mirror_symmetry/newton_okounkov
-      - title: "Schubert variety의 거울과 head-over-tails superpotential"
-        url: ko/math/mirror_symmetry/schubert_variety_mirror
-      - title: "Partial flag variety의 Plücker 좌표 거울"
-        url: ko/math/mirror_symmetry/partial_flag_mirror
-      - title: "── 연구 노트 (frontier) ──"
-        url: ko/math/mirror_symmetry/overview
-      - title: "Quantum K-theory와 K-이론적 I-function"
-        url: ko/math/mirror_symmetry/quantum_k_theory
-      - title: "Level structure와 Dong-Wen mirror"
-        url: ko/math/mirror_symmetry/level_structure
-      - title: "Partial flag의 quantum K-theory"
-        url: ko/math/mirror_symmetry/quantum_k_partial_flag
-      - title: "Matrix factorization과 LG B-model 범주"
-        url: ko/math/mirror_symmetry/matrix_factorization
-      - title: "Schubert matrix factorization"
-        url: ko/math/mirror_symmetry/schubert_mf
-      - title: "K-이론적 Lagrangian class"
-        url: ko/math/mirror_symmetry/k_lagrangian_class
-      - title: "Joyce-Safronov 검증 프로그램"
-        url: ko/math/mirror_symmetry/joyce_safronov
-      - title: "Perverse Schober와 spherical functor"
-        url: ko/math/mirror_symmetry/perverse_schober
-      - title: "Cluster 범주화와 quantum dilogarithm"
-        url: ko/math/mirror_symmetry/cluster_categorification
-      - title: "Quantum Serre duality의 범주적 형식"
-        url: ko/math/mirror_symmetry/quantum_serre
-      - title: "Bethe ansatz와 quantum cohomology"
-        url: ko/math/mirror_symmetry/bethe_ansatz
-      - title: "K-이론적 Coulomb branch"
-        url: ko/math/mirror_symmetry/coulomb_branch
-      - title: "3d mirror symmetry와 Seiberg duality"
-        url: ko/math/mirror_symmetry/three_d_mirror
+      # ────────────────────────────────────────────────────────────────
+      # Marsh-Rietsch stream + 연구 노트(frontier) 글은 .gitignore 처리되어
+      # 로컬에만 존재하며 (published: false + 미추적) 라이브에 공개하지 않는다.
+      # 라이브 sidebar에는 위 orthodox stream만 노출한다.
+      # → 이 글들을 편집하더라도 여기 nav 항목을 다시 추가하지 말 것.
+      #   (추가하면 라이브에 빌드되지 않은 페이지로의 깨진 링크가 노출됨.)
+      # MR stream: postnikov_plabic, cluster_algebra, quantum_pieri,
+      #   marsh_rietsch_superpotential, mr_mirror_theorem, cluster_monomial_basis,
+      #   newton_okounkov, schubert_variety_mirror, partial_flag_mirror
+      # frontier: quantum_k_theory … three_d_mirror (2025-01-15 이후 분)
+      # ────────────────────────────────────────────────────────────────
   - title:
     children:
       - title: "블로그 소개"

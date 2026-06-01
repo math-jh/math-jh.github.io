@@ -1,6 +1,7 @@
 ---
 title: "Multilinear Algebra"
 layout: archive_custom
+regenerate: true
 permalink: /en/multilinear_algebra/
 ---
 {% assign lang = site.locale %}

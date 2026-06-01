@@ -1,6 +1,7 @@
 ---
 title: "위상수학"
 layout: archive_custom
+regenerate: true
 permalink: /ko/topology/
 ---
 {% assign lang = site.locale %}
