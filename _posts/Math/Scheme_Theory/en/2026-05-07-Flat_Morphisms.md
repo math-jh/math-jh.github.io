@@ -1,5 +1,6 @@
 ---
 title: "Flat Morphisms"
+description: "Flatness in commutative algebra is introduced through flat modules, then extended to morphisms of schemes. The concept ensures that fibers preserve uniform algebraic and geometric properties over the base, and criteria and examples are discussed."
 excerpt: "Flat morphisms in algebraic geometry"
 
 categories: [Math / Scheme Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-02-21
 last_modified_at: 2025-02-21
 weight: 10
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-02T04:30:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T04:30:01+00:00
 ---
 When dealing with families of varieties in algebraic geometry, we expect the fibers to vary "continuously" as the point in the base changes. However, mere continuity of the morphism is insufficient to capture this intuition. For example, the dimension of a fiber may suddenly jump at a point of the base, or the number of singularities may change, leading to discontinuous behavior. The notion that excludes such phenomena and ensures that the fibers maintain constant algebraic and geometric properties is precisely **flatness**. In this post, we first define flat modules in the context of commutative algebra, and then introduce flat morphisms between [§Schemes](/en/math/scheme_theory/schemes) and examine their geometric meaning, criteria, and examples.
 
@@ -114,7 +116,7 @@ Since verifying flatness directly can be difficult, several criteria have been d
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-To show that $$M$$ is $$A$$-flat for the ideal $$I$$, we show that $$\operatorname{Tor}_1^A(M, N) = 0$$ for every finitely generated $$A$$-module $$N$$. Using a filtration on $$N$$, it suffices inductively to check the case $$N = A/\mathfrak{p}$$ for a prime ideal $$\mathfrak{p}$$. The standard proof of the local criterion uses $$I$$-adic completion and the Artin-Rees lemma to show that the completion of $$M$$ is flat, and from this derives the flatness of $$M$$ itself. For details, see [\[Commutative Algebra\] §Flatness and Localization, ⁋Definition 4](/en/math/commutative_algebra/local_criterion_for_flatness#def4).
+To show that $$M$$ is $$A$$-flat for the ideal $$I$$, we show that $$\operatorname{Tor}_1^A(M, N) = 0$$ for every finitely generated $$A$$-module $$N$$. Using a filtration on $$N$$, it suffices inductively to check the case $$N = A/\mathfrak{p}$$ for a prime ideal $$\mathfrak{p}$$. The standard proof of the local criterion uses $$I$$-adic completion and the Artin–Rees lemma to show that the completion of $$M$$ is flat, and from this derives the flatness of $$M$$ itself. For details, see [\[Commutative Algebra\] §Flatness and Localization, ⁋Definition 4](/en/math/commutative_algebra/local_criterion_for_flatness#def4).
 
 </details>
 
