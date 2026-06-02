@@ -221,7 +221,7 @@ $$\rho(z)=\sum_k u^k(x_k)=0.$$
 
 Now since $$\sum 1\otimes u^k(x_k)=0$$, we obtain
 
-$$z=\sum_k (\x^k\otimes_A x_k-1\otimes_A u^k(x_k))=\sum_k (\x^k-\iota_!u^k))(1\otimes x_k),$$
+$$z=\sum_k (\x^k\otimes_A x_k-1\otimes_A u^k(x_k))=\sum_k (\x^k-\iota_!u^k)(1\otimes x_k),$$
 
 and since in $$\iota_!M=A[\x]\otimes_A M$$ the element $$\x$$ acts on the $$A[\x]$$ factor and $$\iota_!u$$ acts on $$M$$, these multiplications commute. That is, the above expression can be written as
 
@@ -233,11 +233,11 @@ which completes the proof.
 
 On the other hand, considering the determinant of $$\psi$$, from [Corollary 6](#cor6) we obtain
 
-$$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^j(\iota_!u)\right)\x^{n-k}.$$
+$$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\iota_!u)\right)\x^{n-k}.$$
 
 Moreover, the matrix representation $$[u]_\mathcal{B}^\mathcal{B}$$ of $$u$$ equals the matrix representation $$[\iota_!u]_{\mathcal{B}'}^{\mathcal{B}''}$$ of $$\iota_!u$$ with respect to the $$A[\x]$$-basis $$\mathcal{B}'=(1\otimes e_i)_{1\leq i\leq n}$$ of $$M[\x]$$, so the above formula can be written as
 
-$$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^j(u)\right)\x^{n-k}.$$
+$$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(u)\right)\x^{n-k}.$$
 
 <div class="definition" markdown="1">
 
