@@ -1,5 +1,6 @@
 ---
 title: "Affine Schemes"
+description: "We define the structure sheaf on the spectrum of a ring to construct an affine scheme, and discuss locally ringed spaces and their morphisms."
 excerpt: "Affine schemes defined by the structure sheaf on the spectrum of a ring"
 
 categories: [Math / Scheme Theory]
@@ -13,26 +14,27 @@ sidebar:
 date: 2025-01-27
 last_modified_at: 2025-01-27
 weight: 3
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-02T00:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T00:00:02+00:00
 ---
-The most basic example of a sheaf defined on a topological space is the collection of continuous functions on that space, and the $$\mathscr{O}_{\Spec A}$$ we will define is similar. However, if $$\mathscr{O}_{\Spec A}$$ were merely the sheaf of continuous functions on $$\Spec A$$, there would be no need to give it a new name. For the simplest example, since the only prime ideal of any field $$\mathbb{K}$$ is $$(0)$$, the topological space $$\Spec \mathbb{K}$$ is always a singleton, and there is only one way to put a topology on it. In other words, if we want to distinguish the spectra of two non-isomorphic fields, that information must be contained in the structure sheaf of $$\Spec \mathbb{K}$$. To ensure that the spectrum carries enough algebraic information, we will define $$\mathscr{O}_{\Spec A}$$ as the sheaf of algebraic functions on $$A$$.
+The most basic example of a sheaf on a topological space is the collection of continuous functions on that space, and the $$\mathscr{O}_{\Spec A}$$ we are about to define is similar. However, if $$\mathscr{O}_{\Spec A}$$ were merely the sheaf of continuous functions on $$\Spec A$$, there would be no need to give it a new name. For the simplest example, since the only prime ideal of any field $$\mathbb{K}$$ is $$(0)$$, the topological space $$\Spec \mathbb{K}$$ is always a singleton, and there is only one topology on it. In other words, if we wish to distinguish the spectra of two non-isomorphic fields, that information must be encoded in the structure sheaf of $$\Spec \mathbb{K}$$. To ensure that the spectrum carries enough algebraic information, we define $$\mathscr{O}_{\Spec A}$$ as the sheaf of algebraic functions on $$A$$.
 
 ## Locally ringed space
 
-We have already covered sheaves defined on a topological space in [[Topology] §Sheaves](/en/math/topology/sheaves), but the definitions there are insufficient to describe the structure sheaf we will define on $$\Spec A$$.
+We have already treated sheaves on a topological space in [[Topology] §Sheaves](/en/math/topology/sheaves), but the definitions given there are insufficient to describe the structure sheaf we will define on $$\Spec A$$.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A pair $$(X,\mathscr{O}_X)$$ of a topological space $$X$$ and a $$\cRing$$-valued sheaf $$\mathscr{O}_X$$ on it is called a *ringed space*. If for every point $$x$$ of $$X$$, the stalk $$\mathscr{O}_{X,x}$$ at $$x$$ is always a local ring, then this pair $$(X, \mathscr{O}_X)$$ is called a *locally ringed space*.
+<ins id="def1">**Definition 1**</ins> A pair $$(X,\mathscr{O}_X)$$ consisting of a topological space $$X$$ and a $$\cRing$$-valued sheaf $$\mathscr{O}_X$$ on it is called a *ringed space*. If for every point $$x$$ of $$X$$, the stalk $$\mathscr{O}_{X,x}$$ at $$x$$ is always a local ring, then this pair $$(X, \mathscr{O}_X)$$ is called a *locally ringed space*.
 
 </div>
 
-Our claim is that we can define a suitable structure sheaf $$\mathscr{O}_{\Spec A}$$ on $$\Spec A$$ to make $$(\Spec A, \mathscr{O}_{\Spec A})$$ a locally ringed space, and that this $$\Spec$$ defined in this way has the same functoriality as in [§Spectra, ⁋Proposition 2](/en/math/scheme_theory/spectrums#prop2) or [§Spectra, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8). To write this down mathematically, we must first define morphisms between locally ringed spaces.
+Our claim is that we can define a suitable structure sheaf $$\mathscr{O}_{\Spec A}$$ on $$\Spec A$$ to make $$(\Spec A, \mathscr{O}_{\Spec A})$$ a locally ringed space, and that $$\Spec$$ defined in this way enjoys the same functoriality as in [§Spectra, ⁋Proposition 2](/en/math/scheme_theory/spectrums#prop2) or [§Spectra, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8). To write this down mathematically, we must first define morphisms between locally ringed spaces.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> For two ringed spaces $$(X, \mathscr{O}_X)$$ and $$(Y, \mathscr{O}_Y)$$, a morphism between them means a pair of a continuous map $$\varphi:X \rightarrow Y$$ and a morphism $$\varphi^\sharp:\mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$ in $$\Sh(Y,\cRing)$$.
+<ins id="def2">**Definition 2**</ins> For two ringed spaces $$(X, \mathscr{O}_X)$$ and $$(Y, \mathscr{O}_Y)$$, a morphism between them is a pair consisting of a continuous map $$\varphi:X \rightarrow Y$$ and a morphism $$\varphi^\sharp:\mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$ in $$\Sh(Y,\cRing)$$.
 
 A morphism between two locally ringed spaces $$(X, \mathscr{O}_X)$$ and $$(Y, \mathscr{O}_Y)$$ is a morphism $$(\varphi,\varphi^\sharp)$$ of ringed spaces that additionally induces a local homomorphism $$\varphi_x^\sharp:\mathscr{O}_{Y,\varphi(x)} \rightarrow \mathscr{O}_{X,x}$$ for each $$x\in X$$.
 
@@ -40,15 +42,15 @@ A morphism between two locally ringed spaces $$(X, \mathscr{O}_X)$$ and $$(Y, \m
 
 ## Algebraic Functions on $$\Spec A$$
 
-Now we must define $$\mathscr{O}_{\Spec A}$$. As mentioned at the beginning of this post, it is the sheaf of algebraic functions on $$\Spec A$$, and we saw in [§Spectra, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry) that when $$A=\mathbb{K}[\x_1,\ldots, \x_n]$$, these are functions that can be represented in the form of rational functions on a suitable neighborhood. What played an important role in this process was that elements of $$A$$, i.e., polynomials, could be treated as functions on $$\mathbb{A}_\mathbb{K}^n=\mSpec A$$; however, in the general case, elements of $$A$$ are not polynomials, and moreover we cannot evaluate points of $$\Spec A$$ at elements of $$A$$.
+Now we must define $$\mathscr{O}_{\Spec A}$$. As mentioned at the beginning of this post, it is the sheaf of algebraic functions on $$\Spec A$$, and we saw in [§Spectra, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry) that when $$A=\mathbb{K}[\x_1,\ldots, \x_n]$$, these are functions that can be represented as rational functions on a suitable neighborhood. What played an important role in this process was that elements of $$A$$, i.e., polynomials, could be treated as functions on $$\mathbb{A}_\mathbb{K}^n=\mSpec A$$; however, in the general case, elements of $$A$$ are not polynomials, and moreover we cannot evaluate points of $$\Spec A$$ at elements of $$A$$.
 
-Therefore, to generalize this discussion, let us think as follows. First, we think of an element of $$A$$ as a function $$f$$, just as in the previous example. Then the *function value* of $$f$$ at a point $$\mathfrak{p}\in\Spec A$$ is the image of $$f$$ under the canonical projection $$\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$$. Then in particular, the condition that $$f$$ vanishes at the point $$\mathfrak{p}$$ is
+Therefore, to generalize this discussion, we argue as follows. First, we regard an element of $$A$$ as a function $$f$$, just as in the preceding example. Then the *function value* of $$f$$ at a point $$\mathfrak{p}\in\Spec A$$ is the image of $$f$$ under the canonical projection $$\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$$. In particular, the condition that $$f$$ vanishes at the point $$\mathfrak{p}$$ is
 
 $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
-That is, $$Z(f)$$ can be understood as the set of points where $$f=0$$, and its complement, the principal open set $$D(f)$$, can be understood as the set of points where $$f\neq 0$$.
+That is, $$Z(f)$$ can be understood as the set of points where $$f=0$$, and its complement, the principal open set $$D(f)$$, as the set of points where $$f\neq 0$$.
 
-From this perspective, we can describe what the *algebraic functions* on $$\Spec A$$ are. As in [§Spectra, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry), these are defined as functions that can be represented in the form of rational functions whose denominators are functions that do not vanish on the given open set.
+From this perspective, we can describe what the *algebraic functions* on $$\Spec A$$ are. As in [§Spectra, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry), these are defined as functions that can be represented as rational functions whose denominators are functions not vanishing on the given open set.
 
 Now suppose a principal open set $$D(f)$$ is given. Then by definition, when an algebraic function on $$D(f)$$ is represented as a rational function $$g/h$$, the functions $$h$$ that can appear in the denominator must satisfy $$D(f)\subseteq D(h)$$.
 
@@ -72,7 +74,7 @@ we know that $$D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$$. This equality is not
 
 </details>
 
-It is intuitive that we should define the collection of algebraic functions on the subset $$D(f)$$ of $$\Spec A$$ as $$S(f)^{-1}A$$, and indeed we will define it this way. Before that, we prove the following lemma.
+It is intuitive that the collection of algebraic functions on the subset $$D(f)$$ of $$\Spec A$$ should be defined as $$S(f)^{-1}A$$, and indeed we will define it this way. Before doing so, we prove the following lemma.
 
 <div class="proposition" markdown="1">
 
@@ -84,7 +86,7 @@ It is intuitive that we should define the collection of algebraic functions on t
 
 That $$D(f)\subseteq D(h)$$ is equivalent to $$Z(h)\subseteq Z(f)$$, which by the third result of [§Spectra, ⁋Lemma 6](/en/math/scheme_theory/spectrums#lem6) is equivalent to $$\sqrt{(f)}\subseteq \sqrt{(h)}$$.
 
-If $$\sqrt{(f)}\subseteq \sqrt{(h)}$$, then from $$(f)\subseteq \sqrt{(f)}\subseteq \sqrt{(h)}$$ we get $$f\in \sqrt{(h)}$$, and thus there must exist an integer $$n\geq 1$$ such that $$f^n\in (h)$$. Conversely, if there exists an integer $$n\geq 1$$ such that $$f^n\in (h)$$, then from $$f\in \sqrt{(h)}$$ we get $$(f)\subseteq \sqrt{(h)}$$, and therefore
+If $$\sqrt{(f)}\subseteq \sqrt{(h)}$$, then from $$(f)\subseteq \sqrt{(f)}\subseteq \sqrt{(h)}$$ we get $$f\in \sqrt{(h)}$$, and thus there exists an integer $$n\geq 1$$ such that $$f^n\in (h)$$. Conversely, if there exists an integer $$n\geq 1$$ such that $$f^n\in (h)$$, then from $$f\in \sqrt{(h)}$$ we get $$(f)\subseteq \sqrt{(h)}$$, and therefore
 
 $$\sqrt{(f)}\subseteq\sqrt{\sqrt{(h)}}=\sqrt{(h)}$$
 
@@ -154,7 +156,7 @@ we know that $$\epsilon_f$$ sends elements of $$S(g)$$ to units in $$S_f^{-1}A$$
 
 </details>
 
-Therefore, it suffices to think of algebraic functions on $$D(f)$$ as elements of $$S_f^{-1}A$$. In the previous post we agreed to write $$S_f^{-1}A$$ as $$A_f$$ for convenience.
+Therefore, it suffices to regard algebraic functions on $$D(f)$$ as elements of $$S_f^{-1}A$$. In the previous post we agreed to write $$S_f^{-1}A$$ as $$A_f$$ for convenience.
 
 <div class="proposition" markdown="1">
 
@@ -172,7 +174,7 @@ as the map obtained by applying [[Commutative Algebra] §Localization, ⁋Propos
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-That the $$\rho_{ji}$$ satisfy the conditions for restriction maps ([[Topology] §Presheaves, ⁋Definition 2](/en/math/topology/presheaves#ㅇef2)) is obvious from the universal property of [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6). Here, by [Lemma 5](#lem5), the map $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$ simply takes an element of $$S(f_j)^{-1}(A)$$, written in the form
+That the $$\rho_{ji}$$ satisfy the conditions for restriction maps ([[Topology] §Presheaves, ⁋Definition 2](/en/math/topology/presheaves#def2)) is obvious from the universal property of [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6). Here, by [Lemma 5](#lem5), the map $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$ simply takes an element of $$S(f_j)^{-1}(A)$$, written in the form
 
 $$g/h,\qquad\text{where $h\in S(f_j)$}\tag{$\ast$}$$
 
@@ -274,7 +276,7 @@ commutes.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since the $$D(f)$$ form a base for $$\Spec A$$ by [[Topology] §Bases of Topological Spaces, ⁋Lemma 11](/en/math/topology/topological_bases#lem11), we have
+Since the $$D(f)$$ form a base for $$\Spec A$$ by [[Topology] §Bases of Topological Spaces, ⁋Proposition 2](/en/math/topology/topological_bases#prop2), we have
 
 $$\mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathscr{O}_{\Spec A}(D(f))$$
 
@@ -330,7 +332,7 @@ From the above we know that $$(\Spec\phi, (\Spec\phi)^\sharp): (\Spec B, \mathsc
 
 $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathscr{O}_{\Spec A, (\Spec \phi)(\mathfrak{q})} \rightarrow\mathscr{O}_{\Spec B, \mathfrak{q}}$$
 
-is a local homomorphism. But $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$$, and therefore by [Lemma 8](#lem8) the map $$(\Spec\phi)^\sharp_\mathfrak{q}$$ is a ring homomorphism from $$A_{\phi^{-1}(\mathfrak{q})}$$ to $$B_{\mathfrak{q}}$$ that sends the unique maximal ideal $$\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$$ of $$A_{\phi^{-1}(\mathfrak{p})}$$ to the unique maximal ideal $$\mathfrak{q}B_\mathfrak{q}$$ of $$B_\mathfrak{p}$$.
+is a local homomorphism. But $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$$, and therefore by [Lemma 8](#lem8) the map $$(\Spec\phi)^\sharp_\mathfrak{q}$$ is a ring homomorphism from $$A_{\phi^{-1}(\mathfrak{q})}$$ to $$B_{\mathfrak{q}}$$ that sends the unique maximal ideal $$\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$$ of $$A_{\phi^{-1}(\mathfrak{q})}$$ to the unique maximal ideal $$\mathfrak{q}B_\mathfrak{q}$$ of $$B_{\mathfrak{q}}$$.
 
 </details>
 
