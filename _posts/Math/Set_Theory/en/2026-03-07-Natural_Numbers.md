@@ -1,6 +1,6 @@
 ---
-
 title: "Natural Numbers and Infinite Sets"
+description: "We define finite cardinals as natural numbers through the concept of cardinality, examine the well-ordered property of the natural numbers and the foundation of induction, and analyze the order relation between natural numbers."
 excerpt: "Definition of natural numbers and properties of infinite sets"
 
 categories: [Math / Set Theory]
@@ -11,17 +11,16 @@ header:
 sidebar: 
     nav: "set_theory-en"
 
-date: 2026-03-07
-last_modified_at: 2026-03-07
+date: 2021-09-04
+last_modified_at: 2022-11-29
 weight: 26
-
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T17:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T17:30:02+00:00
 ---
-
 ## An Alternative Definition of Natural Numbers
 
-We now construct natural numbers using the cardinals we have already defined, rather than following the approach in [§Ordinals and Well-Ordered Sets](/en/math/set_theory/ordinals). We then explore the structure of natural numbers using the operations and order relations previously defined on cardinal numbers.
+We now construct natural numbers using the cardinals we have already defined, rather than following the approach of [§Ordinals and Well-Ordered Sets](/en/math/set_theory/ordinals). We then explore the structure of natural numbers using the operations and order relations previously defined on cardinal numbers.
 
 <div class="definition" markdown="1">
 
