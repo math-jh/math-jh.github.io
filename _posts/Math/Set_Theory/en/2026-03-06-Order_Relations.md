@@ -1,5 +1,6 @@
 ---
 title: "Definition of Order Relations"
+description: "An order relation is defined as a binary relation satisfying reflexivity, transitivity, and antisymmetry. We examine ordered sets equipped with such relations and the concept of order isomorphism."
 excerpt: "Definitions and properties of order relations"
 
 categories: [Math / Set Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2021-08-22
 last_modified_at: 2022-11-27
 weight: 14
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T14:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T14:30:02+00:00
 ---
 ## Order Relations
 
@@ -34,19 +36,19 @@ Then order relations are defined as follows.
 
 </div>
 
-In this case, we say that $$A$$ is ordered by $$R$$, and we often call $$A$$ an *ordered set*. Also, as with equivalence relations, we write $$x\mathrel{R}y$$ as $$x\leq_{\tiny R}y$$.
+In this case, we say that $$A$$ is *ordered by* $$R$$, and we often call $$A$$ an *ordered set*. Also, as with equivalence relations, we write $$x\mathrel{R}y$$ as $$x\leq_{\tiny R}y$$.
 
 <ins id="ex3">**Example 3**</ins> The binary relation <phrase>$x=y$</phrase> is an order relation. The relation <phrase>$x\subseteq y$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2) and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3))
 {: .example}
 
-Since an ordered set is a set with an additional relation $$\leq$$, when we consider functions between them we usually think of functions that also preserve $$\leq$$. In particular, we define the following.
+Since an ordered set is a set equipped with an additional relation $$\leq$$, when we consider functions between such sets we usually focus on those that also preserve $$\leq$$. In particular, we define the following.
 
 <ins id="def4">**Definition 4**</ins> If for two order relations $$(R, A, A)$$ and $$(R', A',A')$$ there exists a bijection $$f$$ such that $$x\leq_{\tiny R}y$$ is equivalent to $$f(x)\leq_{\tiny R'}f(y)$$, then we call $$f$$ an *order isomorphism*.
 {: .definition}
 
-Henceforth, when we say isomorphism between ordered sets, we shall always understand it to mean an order isomorphism.
+Henceforth, when we speak of an isomorphism between ordered sets, we shall always mean an order isomorphism.
 
-We can do something similar for order relations as we did in [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3).
+We can do for order relations something analogous to [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3).
 
 <div class="proposition" markdown="1">
 
@@ -80,9 +82,9 @@ Therefore, we drop the antisymmetry condition and define the following.
 <ins id="def7">**Definition 7**</ins> A reflexive and transitive relation $$R$$ is called a *preorder relation*.
 {: .definition}
 
-If $$R$$ is a preorder relation we sometimes write it as $$\preceq_{\tiny R}$$, but in many cases preorders share properties similar to order relations, so the same symbol $$\leq_{\tiny R}$$ as for order relations is also used. We too shall use $$\leq_{\tiny R}$$ unless there is a special reason not to.
+If $$R$$ is a preorder relation we sometimes write it as $$\preceq_{\tiny R}$$, but since preorders share many properties with order relations, the same symbol $$\leq_{\tiny R}$$ is also commonly used. We too shall use $$\leq_{\tiny R}$$ unless there is a special reason not to.
 
-To understand the properties of preorder relations, we need to examine antisymmetry more closely: it is a property of order relations but not of preorders. If the relation $$R$$ were an order relation, antisymmetry would mean $$(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\implies x=y$$. We have seen that this does not hold for preorders, but in this case a generalized equality, that is, an equivalence relation, provides the same property by the following proposition.
+To understand the properties of preorder relations, we must examine more closely the property of antisymmetry: it holds for order relations but fails for preorders. If a relation $$R$$ were an order relation, antisymmetry would mean $$(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\implies x=y$$. We have seen that this fails for preorders, but the following proposition shows that a *generalized equality*—namely, an equivalence relation—plays the same role instead.
 
 <div class="proposition" markdown="1">
 
@@ -91,7 +93,7 @@ To understand the properties of preorder relations, we need to examine antisymme
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
-Let the above relation be $$S$$. We must show that $$S$$ is reflexive, symmetric, and transitive. First, it is obvious that this relation is reflexive, because $$R$$ being a preorder means $$x\mathrel{R}x$$ always holds for any $$x$$. On the other hand, let $$x\mathrel{S}y$$ for arbitrary $$x$$, $$y$$. Then
+Let the above relation be $$S$$. We must show that $$S$$ is reflexive, symmetric, and transitive. First, reflexivity is obvious: since $$R$$ is a preorder, $$x\mathrel{R}x$$ holds for every $$x$$. Next, for arbitrary $$x$$, $$y$$, suppose $$x\mathrel{S}y$$. Then
 
 $$x\mathrel{S}y\iff(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\iff(y\leq_{\tiny R}x)\wedge(x\leq_{\tiny R}y)\iff y\mathrel{S}x$$
 
@@ -105,12 +107,12 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\leq_{\tiny R}y)\
   &\iff x\mathrel{S}z
 \end{aligned}$$
 
-so $$S$$ is transitive, and therefore $$S$$ becomes an equivalence relation.
+so $$S$$ is transitive, and therefore $$S$$ is an equivalence relation.
 </details>
 
 ## Strict Orders
 
-Given an order relation $$\leq$$, let $$<$$ be the relation defined by <phrase>$x\leq y$ and $x\neq y$</phrase>. Then $$<$$ cannot be an order relation because it does not satisfy antisymmetry, nor can it be a preorder because it is not reflexive. Instead, we define the following.
+Given an order relation $$\leq$$, let $$<$$ be the relation defined by <phrase>$x\leq y$ and $x\neq y$</phrase>. Then $$<$$ cannot be an order relation because it is not antisymmetric, nor can it be a preorder because it is not reflexive. Instead, we define the following.
 
 <ins id="def9">**Definition 9**</ins> A relation $$R$$ is said to be *asymmetric* if $$x\mathrel{R}y$$ implies $$y\not\mathrel{R}x$$. An asymmetric, transitive relation is called a *strict order*.
 {: .definition}
@@ -155,7 +157,7 @@ $$\begin{aligned}
   &\iff x\mathrel{R}z
 \end{aligned}$$
 
-so $$R$$ is transitive. Therefore $$R$$ becomes an order relation.
+so $$R$$ is transitive. Therefore $$R$$ is an order relation.
 </details>
 
 Henceforth, we shall write the strict order obtained from an order relation $$R$$ as $$<_{\tiny R}$$, and the order relation obtained from a strict order $$S$$ as $$\leq_{\tiny S}$$.

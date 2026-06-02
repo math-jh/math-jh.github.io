@@ -72,6 +72,16 @@ _posts/Math/Mirror_Symmetry/ko/2025-01-17-Marsh_Rietsch_Mirror_Theorem.md
 _posts/Math/Mirror_Symmetry/ko/2025-01-18-Schubert_Variety_Mirror.md
 _posts/Math/Mirror_Symmetry/ko/2025-01-19-Partial_Flag_Mirror.md
 
+# Classical-math category landing pages — sealed until posts publish.
+# The posts (Analysis/Calculus/Number_Theory) are published:false, so in
+# production these categories are empty and the page's `sort: 'weight'` over a
+# nil category crashes the build. Local serve uses --unpublished so the posts
+# show and the page renders fine; keep these local-only until the streams go
+# live, then un-ignore.
+_pages/ko/Math-Analysis.md
+_pages/ko/Math-Calculus.md
+_pages/ko/Math-Number_Theory.md
+
 # Local-only term harvester
 scripts/term-extraction/extract_terms.py
 

@@ -320,6 +320,8 @@ llm_workshop-ko:
         url: ko/llm_workshop/term_extraction
       - title: "math-jh.com에 로컬 서비스 붙이기"
         url: ko/llm_workshop/local_services
+      - title: "last_modified_at을 git에 맡기기"
+        url: ko/llm_workshop/last_modified_git
   - title: "Marvin의 독서 노트"
     children:
       - title: "독서 노트를 쓰는 봇"

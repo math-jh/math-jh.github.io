@@ -27,6 +27,7 @@ weight: 3
 
 `_includes/masthead.html`에서 사이트 제목 블록 바로 다음에 다음과 같은 `<div>`가 자리잡고 있었다.
 
+{% raw %}
 ```html
 <div style="margin-left: 10px; border: 2px solid #555; border-radius:10px; background-color:#222; {% unless site.dark_theme or site.multilingual %} display: none; {% endunless %}">
   {% if site.dark_theme %}
@@ -45,6 +46,7 @@ weight: 3
   {% endif %}
 </div>
 ```
+{% endraw %}
 
 문제는 시각적인 것만이 아니다. 인라인 스타일이 빽빽한 것이야 옛 마크업의 자연스러운 결과로 넘긴다 쳐도, 두 토글 사이의 구분선이 "두 토글이 둘 다 활성화된 경우"에 한해서만 그어지도록 `margin-left`와 `border-left`를 Liquid `if`로 분기하는 부분이 특히 거슬렸다. 옵션이 하나 더 추가되면 또 분기를 끼워넣어야 할 것이 뻔히 보였다.
 
@@ -56,6 +58,7 @@ weight: 3
 
 마크업은 다음과 같다.
 
+{% raw %}
 ```html
 <div class="settings-dropdown" style="{% unless site.dark_theme or site.multilingual %} display: none; {% endunless %}">
   <button class="settings-toggle" onclick="toggleSettings(event)" aria-label="Settings">
@@ -80,6 +83,7 @@ weight: 3
   </ul>
 </div>
 ```
+{% endraw %}
 
 구조적으로 깔끔해진 지점이 몇 군데 있다. 첫째, 두 토글이 각각 `<li>`로 분리되어서, "둘이 나란히 붙어 있을 때 사이에 선을 그어주는" 종류의 분기가 사라졌다. 둘째, 다크모드 항목에는 라벨 텍스트(`다크모드`)가 붙어서 아이콘만 보고 의미를 짐작하지 않아도 된다. 셋째, 언어 토글은 라디오 형태의 `en/ko` 표시에서 "다음에 갈 언어를 가리키는 한 줄"(`한글` 또는 `English`)로 단순화됐다. 어차피 둘 중 하나로 가는 동작이라 토글의 양면을 동시에 보여줄 필요가 없다.
 
