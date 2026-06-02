@@ -1,5 +1,6 @@
 ---
 title: "Cardinals"
+description: "After reviewing the axiom of choice and the well-ordering theorem, we compare the sizes of sets using equipotence, then define the concept of cardinality and cardinal arithmetic."
 excerpt: "Definition of Cardinal number"
 
 categories: [Math / Set Theory]
@@ -10,11 +11,12 @@ header:
 sidebar: 
     nav: "set_theory-en"
 
-date: 2026-03-06
-last_modified_at: 2026-03-06
+date: 2021-09-04
+last_modified_at: 2022-11-29
 weight: 24
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T17:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T17:00:01+00:00
 ---
 ## Review
 
@@ -96,7 +98,7 @@ Of course, we have not yet verified that this relation is indeed an order relati
 
 <div class="proposition" markdown="1">
 
-<ins id="lem4">**Lemma 4 (Cantor-Bernstein)**</ins> The relation $$\leq$$ defined above is antisymmetric.
+<ins id="lem4">**Lemma 4 (Cantor–Bernstein)**</ins> The relation $$\leq$$ defined above is antisymmetric.
 
 </div>
 <details class="proof" markdown="1">

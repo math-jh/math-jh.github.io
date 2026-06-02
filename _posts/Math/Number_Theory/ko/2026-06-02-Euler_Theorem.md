@@ -85,8 +85,118 @@ $$\varphi(n) = n\prod_{p \mid n}\left(1 - \frac1p\right)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> $$\varphi(360)$$을 구하자. $$360 = 2^3\cdot 3^2\cdot 5$$이므로 $$\varphi(360) = 360\left(1 - \tfrac12\right)\left(1 - \tfrac13\right)\left(1 - \tfrac15\right) = 360\cdot\tfrac12\cdot\tfrac23\cdot\tfrac45 = 96$$이다.
+<ins id="ex4">**예시 4**</ins> $$\varphi(360)$$을 구하자. $$360 = 2^3\cdot 3^2\cdot 5$$이므로 공식에 대입하면
+
+$$\begin{aligned}
+\varphi(360) &= 360\left(1 - \tfrac12\right)\left(1 - \tfrac13\right)\left(1 - \tfrac15\right) \\
+&= 360\cdot\tfrac12\cdot\tfrac23\cdot\tfrac45 \\
+&= 96
+\end{aligned}$$
+
+이다. 같은 값을 곱셈성으로도 확인할 수 있다. $$\varphi(8) = 4$$, $$\varphi(9) = 6$$, $$\varphi(5) = 4$$이고 $$8, 9, 5$$가 쌍마다 서로소이므로 $$\varphi(360) = 4\cdot 6\cdot 4 = 96$$이다.
 
 </div>
 
-$$\varphi$$는 곱셈적 함수의 대표적인 예이며, 약수의 개수나 합 같은 다른 곱셈적 함수들과 함께 다음 글 [§산술적 함수와 뫼비우스 반전](/ko/math/number_theory/arithmetic_functions)에서 일반론으로 다루어진다. 한편 $$\mathbb{Z}/n\mathbb{Z}$$의 가역원들이 이루는 곱셈군의 구조 — 특히 그것이 언제 순환군인가 — 는 [§원시근](/ko/math/number_theory/primitive_roots)의 주제이다.
+## 응용: 거듭제곱과 역원
+
+오일러 정리의 실질적 위력은 합성수 법에서 큰 거듭제곱을 계산할 때 드러난다. $$\gcd(a, n) = 1$$이면 $$a^{\varphi(n)} \equiv 1 \pmod n$$이므로, 지수를 $$\varphi(n)$$으로 나눈 나머지만 보면 충분하다. 즉 지수에 대한 산술은 법 $$\varphi(n)$$에서 이루어진다. 페르마 소정리가 소수 법에서 지수를 $$p - 1$$로 줄여 주었듯, 오일러 정리는 임의의 법에서 지수를 $$\varphi(n)$$으로 줄여 준다.
+
+<div class="example" markdown="1">
+
+<ins id="ex5">**예시 5 (합성수 법의 거듭제곱)**</ins> $$7^{222}$$을 $$10$$으로 나눈 나머지를 구하자. $$\gcd(7, 10) = 1$$이고 $$\varphi(10) = 4$$이므로 오일러 정리에 의해 $$7^4 \equiv 1 \pmod{10}$$이다. 지수 $$222$$를 $$4$$로 나누면 $$222 = 4\cdot 55 + 2$$이므로
+
+$$7^{222} = (7^4)^{55}\cdot 7^2 \equiv 1^{55}\cdot 49 \equiv 9 \pmod{10}$$
+
+이다. 즉 $$7^{222}$$의 일의 자리는 $$9$$이다. 직접 $$7$$의 거듭제곱을 보면 일의 자리가 $$7, 9, 3, 1$$로 주기 $$4$$를 이루는 것과 일치한다.
+
+</div>
+
+지수가 다시 거듭제곱으로 주어질 때에는 이 환원을 두 단계로 반복한다. 바깥 법에서는 지수를 법 $$\varphi(n)$$으로 줄이고, 그 지수를 계산할 때 다시 안쪽 법 $$\varphi(n)$$에서 오일러 정리를 적용하는 식이다.
+
+<div class="example" markdown="1">
+
+<ins id="ex6">**예시 6 (지수가 거듭제곱일 때)**</ins> $$3^{3^{100}}$$을 $$100$$으로 나눈 나머지를 구하자. $$\gcd(3, 100) = 1$$이고 $$\varphi(100) = 100\left(1 - \tfrac12\right)\left(1 - \tfrac15\right) = 40$$이므로 $$3^{40} \equiv 1 \pmod{100}$$이다. 따라서 지수 $$3^{100}$$을 법 $$40$$으로 줄여야 한다. 다시 $$\gcd(3, 40) = 1$$이고 $$\varphi(40) = 40\left(1 - \tfrac12\right)\left(1 - \tfrac15\right) = 16$$이므로
+
+$$3^{100} = 3^{16\cdot 6 + 4} \equiv (3^{16})^6\cdot 3^4 \equiv 3^4 = 81 \equiv 1 \pmod{40}$$
+
+이다. 그러므로 $$3^{3^{100}} \equiv 3^{1} = 3 \pmod{100}$$이며, $$3^{3^{100}}$$의 마지막 두 자리는 $$03$$이다.
+
+</div>
+
+오일러 정리는 역원을 명시적으로 적는 데에도 쓰인다. 페르마 소정리에서 소수 법의 역원이 $$a^{p-2}$$로 주어졌듯이 ([§페르마 소정리, ⁋명제 8](/ko/math/number_theory/fermat_little_theorem#prop8)), 임의의 법에서는 지수를 $$\varphi(n)$$ 기준으로 한 칸 내린 거듭제곱이 역원이 된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7 (거듭제곱에 의한 역원)**</ins> $$\gcd(a, n) = 1$$이면 $$a$$의 법 $$n$$에 대한 곱셈 역원은 $$a^{\varphi(n) - 1}$$이다. 즉
+
+$$a^{-1} \equiv a^{\varphi(n) - 1} \pmod n$$
+
+이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+오일러 정리 (정리 2) 에 의해 $$a^{\varphi(n)} \equiv 1 \pmod n$$이다. $$\varphi(n) \geq 1$$이므로 좌변을 $$a\cdot a^{\varphi(n) - 1}$$로 쪼개면
+
+$$a\cdot a^{\varphi(n) - 1} \equiv 1 \pmod n$$
+
+이고, 이는 정확히 $$a^{\varphi(n) - 1}$$이 $$a$$의 곱셈 역원임을 뜻한다.
+
+</details>
+
+<div class="example" markdown="1">
+
+<ins id="ex8">**예시 8 (거듭제곱으로 역원 구하기)**</ins> 법 $$10$$에 대한 $$3$$의 역원을 구하자. $$\gcd(3, 10) = 1$$이고 $$\varphi(10) = 4$$이므로 명제 7에 의해
+
+$$3^{-1} \equiv 3^{\varphi(10) - 1} = 3^{3} = 27 \equiv 7 \pmod{10}$$
+
+이다. 실제로 $$3\cdot 7 = 21 \equiv 1 \pmod{10}$$이므로 옳다.
+
+</div>
+
+## φ 값의 합
+
+$$\varphi$$의 곱셈성과 공식은 개별 값을 계산하게 해 주지만, $$\varphi$$ 자체가 만족하는 항등식도 있다. 가장 기본적인 것은 한 수의 모든 약수에 대한 $$\varphi$$ 값을 더하면 그 수 자신이 된다는 사실이다. 이는 다음 글의 뫼비우스 반전으로 이어지는 출발점이기도 하다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9 (약수에 대한 합)**</ins> 모든 양의 정수 $$n$$에 대하여
+
+$$\sum_{d \mid n} \varphi(d) = n$$
+
+이다. 여기서 합은 $$n$$의 모든 양의 약수 $$d$$에 걸친다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$1$$부터 $$n$$까지의 정수를 분모를 $$n$$으로 한 분수 $$\frac{1}{n}, \frac{2}{n}, \ldots, \frac{n}{n}$$로 보고, 각 분수를 기약분수로 약분하자. 약분된 분모는 모두 $$n$$의 약수이고, 분모가 $$d$$인 기약분수 $$\frac{a}{d}$$는 $$1 \leq a \leq d$$이면서 $$\gcd(a, d) = 1$$인 것이므로 정확히 $$\varphi(d)$$개이다. 따라서
+
+$$\begin{aligned}
+n &= \#\left\{\tfrac{1}{n}, \tfrac{2}{n}, \ldots, \tfrac{n}{n}\right\} \\
+&= \sum_{d \mid n} \#\left\{\tfrac{a}{d} : 1 \leq a \leq d,\ \gcd(a, d) = 1\right\} \\
+&= \sum_{d \mid n} \varphi(d)
+\end{aligned}$$
+
+를 얻는다. 둘째 줄에서 우리는 $$n$$개의 분수를 약분 후 분모에 따라 분류했으며, 같은 기약분수가 두 번 세어지지 않으므로 분할이 옳다.
+
+</details>
+
+<div class="example" markdown="1">
+
+<ins id="ex10">**예시 10 (합 항등식의 확인)**</ins> $$n = 12$$에서 명제 9를 확인하자. $$12$$의 약수는 $$1, 2, 3, 4, 6, 12$$이고 각각의 $$\varphi$$ 값은
+
+$$\varphi(1) = 1,\quad \varphi(2) = 1,\quad \varphi(3) = 2,\quad \varphi(4) = 2,\quad \varphi(6) = 2,\quad \varphi(12) = 4$$
+
+이다. 이들을 더하면
+
+$$\sum_{d \mid 12} \varphi(d) = 1 + 1 + 2 + 2 + 2 + 4 = 12$$
+
+로 과연 $$n = 12$$와 같다.
+
+</div>
+
+$$\varphi$$는 곱셈적 함수의 대표적인 예이며, 약수의 개수나 합 같은 다른 곱셈적 함수들과 함께 다음 글 [§산술적 함수와 뫼비우스 반전](/ko/math/number_theory/arithmetic_functions)에서 일반론으로 다루어진다. 특히 명제 9의 항등식은 그곳에서 뫼비우스 반전을 통해 $$\varphi(n) = \sum_{d \mid n} \mu(d)\,\frac{n}{d}$$라는 형태로 뒤집힌다. 한편 $$\mathbb{Z}/n\mathbb{Z}$$의 가역원들이 이루는 곱셈군의 구조 — 특히 그것이 언제 순환군인가 — 는 [§원시근](/ko/math/number_theory/primitive_roots)의 주제이며, 거기서 한 원소의 위수가 언제나 $$\varphi(n)$$을 나눈다는 사실이 오일러 정리를 군론적으로 다시 설명한다.
