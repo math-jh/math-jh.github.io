@@ -1,5 +1,6 @@
 ---
 title: "Binary Relations"
+description: "Defines a binary relation as a set of ordered pairs, and discusses the existence conditions of the two sets that constitute the relation along with the concepts of projection, source, and target."
 excerpt: "The definition of binary relations"
 
 categories: [Math / Set Theory]
@@ -16,8 +17,9 @@ date: 2021-08-14
 last_modified_at: 2022-11-22
 
 weight: 3
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T10:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T10:30:02+00:00
 ---
 ## Binary Relations
 
@@ -29,7 +31,7 @@ We begin with the definition. The following definition is nothing special; it me
 
 </div>
 
-Thus, the equality ($$=$$) defined between all sets is no longer a binary relation, as shown below.
+Thus, equality ($$=$$) defined between all sets can no longer be called a binary relation.
 
 <div class="example" markdown="1">
 
@@ -74,7 +76,7 @@ we obtain the set $$B$$.
 
 As in [§Ordered Pairs, ⁋Definition 7](/en/math/set_theory/ordered_pair#def7), we call these the first and second *projections* of $$R$$, and write them as $$\pr_1R$$ and $$\pr_2R$$.
 
-Occasionally, we need to make explicit which sets the first and second components of a binary relation belong to. For this purpose, given two sets $$A,B$$ and a binary relation $$R$$ with $$\pr_1R\subseteq A$$ and $$\pr_2R\subseteq B$$, we sometimes think of $$R$$ as the triple $$(R,A,B)$$. In this case, we call $$A$$ the *source* of $$R$$ and $$B$$ the *target* of $$R$$, and in this situation we regard $$(R,A,B)$$ and $$(R,A',B')$$ as different even for the same set $$R$$.
+Occasionally, we need to specify which sets the first and second components of a binary relation belong to. For this purpose, given two sets $$A,B$$ and a binary relation $$R$$ with $$\pr_1R\subseteq A$$ and $$\pr_2R\subseteq B$$, we sometimes regard $$R$$ as the triple $$(R,A,B)$$. In this case, we call $$A$$ the *source* of $$R$$ and $$B$$ the *target* of $$R$$, and under this convention we regard $$(R,A,B)$$ and $$(R,A',B')$$ as distinct even for the same set $$R$$.
 
 <div class="remark" markdown="1">
 
