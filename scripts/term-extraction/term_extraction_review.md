@@ -3601,3 +3601,20 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `big Givental $$J$$-function` | multi-word English emphasis — possibly a definition |
 | `전체` | looks like emphasis (no <sub> partner) |
 
+## 두브로빈 접속
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-21-Dubrovin_Connection.md`
+- permalink: `/ko/math/mirror_symmetry/dubrovin_connection`
+- scanned: 2026-06-02T10:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Dubrovin connection` | multi-word English emphasis — possibly a definition |
+| `potentiality` | looks like emphasis (no <sub> partner) |
+| `associativity` | looks like emphasis (no <sub> partner) |
+| `정확하게` | looks like emphasis (no <sub> partner) |
+| `Potentiality` | looks like emphasis (no <sub> partner) |
+| `Associativity (WDVV)` | multi-word English emphasis — possibly a definition |
+| `Gauss-Manin connection` | multi-word English emphasis — possibly a definition |
+| `주장 4 (Mirror theorem, $$D$$-module form)` | mixed-script emphasis — possibly a definition |
+| `mirror isomorphism` | multi-word English emphasis — possibly a definition |
+

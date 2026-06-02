@@ -1,5 +1,6 @@
 ---
 title: "Valuation Rings"
+description: "We define separated and proper morphisms, and examine how they generalize the topological notions of Hausdorff and compact conditions in algebraic geometry. The structure of discrete valuation rings is also discussed."
 excerpt: "Valuative criteria for separatedness and properness"
 
 categories: [Math / Scheme Theory]
@@ -13,10 +14,11 @@ sidebar:
 date: 2024-05-24
 last_modified_at: 2024-05-24
 weight: 9
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-02T09:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T09:00:01+00:00
 ---
-In this post we define separated morphisms and proper morphisms. It is helpful to think of them as the algebraic geometry analogues of the Hausdorff and compactness conditions in topology.
+In this post we define separated morphisms and proper morphisms. It is helpful to think of them as the algebraic-geometry analogues of the Hausdorff and compactness conditions in topology.
 
 <div class="definition" markdown="1">
 
