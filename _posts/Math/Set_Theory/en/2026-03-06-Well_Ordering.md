@@ -1,5 +1,6 @@
 ---
 title: "Properties of Well-Ordered Sets"
+description: "We analyze the segment structure of well-ordered sets and rigorously construct ordinals via von Neumann's definition. We prove properties from natural numbers to general ordinals and that successor ordinals are ordinals."
 excerpt: "Definition of ordinals and properties of well-ordered sets"
 
 categories: [Math / Set Theory]
@@ -13,12 +14,13 @@ sidebar:
 date: 2021-08-23
 last_modified_at: 2022-11-29
 weight: 20
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T16:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T16:30:02+00:00
 ---
 ## The Rigorous Definition of Ordinals
 
-In the previous post we briefly introduced ordinals, but postponed their definition until after we had defined well-ordered sets. We are now ready to define ordinal numbers rigorously.
+In the previous post we briefly introduced ordinals, but postponed defining them until after we had defined well-ordered sets. We are now ready to define ordinal numbers rigorously.
 
 <div class="proposition" markdown="1">
 
@@ -70,7 +72,7 @@ The next proposition shows a way to construct *larger* ordinals that is even mor
 
 </div>
 
-Rather than directly proving the existence and uniqueness of the desired order relation, let us show a more general result under a weaker condition.
+Rather than directly proving the existence and uniqueness of the desired order relation, we show a more general result under a weaker condition.
 
 <div class="proposition" markdown="1">
 

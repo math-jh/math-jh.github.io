@@ -21,6 +21,8 @@ published: false
 
 [§부분수열과 Bolzano–Weierstrass 정리](/ko/math/analysis/bolzano_weierstrass)는 유계수열에서 수렴하는 부분수열을 뽑았다. 이 "부분수열을 추출하여 극한을 얻는" 능력을 집합의 성질로 추상화한 것이 컴팩트성이며, 해석학의 존재 정리들을 떠받치는 가장 중요한 위상적 개념이다.
 
+해석학에서 어떤 점의 존재를 보이는 표준 전략은 다음과 같다. 먼저 원하는 성질에 점점 가까워지는 점열 $$(x_m)$$을 구성하고, 그 점열에서 수렴하는 부분수열을 뽑은 뒤, 극한점이 원하는 성질을 가짐을 보이는 것이다. 이 전략이 작동하려면 두 가지가 필요하다. 점열에서 수렴하는 부분수열을 언제나 뽑을 수 있어야 하고, 그 극한이 우리가 다루는 집합 안에 남아 있어야 한다. 바로 이 두 요구를 한 단어로 묶은 것이 점렬컴팩트성이다. 따라서 컴팩트집합은 "극한을 향한 추출"이 막힘없이 이루어지는 무대이며, 최대·최소 정리나 균등연속성 같은 결과가 이 무대 위에서 자연스럽게 따라 나온다.
+
 ## 점렬컴팩트성
 
 <div class="definition" markdown="1">
@@ -29,7 +31,7 @@ published: false
 
 </div>
 
-극한이 다시 $$K$$ 안에 있어야 한다는 조건에 유의한다. 유클리드 공간에서는 이 추상적 성질이 친숙한 두 조건으로 완전히 특징지어진다.
+극한이 다시 $$K$$ 안에 있어야 한다는 조건에 유의한다. 단순히 부분수열이 수렴한다는 것만으로는 충분하지 않다. 가령 개구간 $$K = (0, 1)$$에서 점열 $$x_m = 1/m$$을 잡으면 이는 $$0$$으로 수렴하고 그 모든 부분수열도 $$0$$으로 수렴하므로, $$K$$ 안의 점으로 수렴하는 부분수열이 하나도 없다. 따라서 $$(0,1)$$은 점렬컴팩트가 아니다. 이 예가 보여 주듯, 점렬컴팩트성은 "극한을 가둘 수 있는가"라는 닫힘의 성격과 "극한이 무한으로 달아나지 않는가"라는 유계의 성격을 동시에 요구한다. 유클리드 공간에서는 이 추상적 성질이 친숙한 두 조건으로 완전히 특징지어진다.
 
 ## 하이네–보렐 정리
 
@@ -42,9 +44,25 @@ published: false
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-($$\Leftarrow$$) $$K$$가 닫혀 있고 유계라 하자. $$K$$의 점열 $$(x_m)$$은 유계이므로, 각 좌표가 유계인 실수열이다. 첫 좌표에 Bolzano–Weierstrass 정리 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4))를 적용해 수렴하는 부분수열을 뽑고, 그 부분수열에서 둘째 좌표에 다시 적용하는 식으로 $$n$$개의 좌표를 차례로 처리하면, 모든 좌표가 수렴하는 부분수열을 얻는다. 그 극한 $$x$$로 부분수열이 수렴하며, $$K$$가 닫혀 있으므로 ([§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)) $$x \in K$$이다.
+($$\Leftarrow$$) $$K$$가 닫혀 있고 유계라 하자. $$K$$의 점열 $$(x_m)$$을 좌표로 적으면
 
-($$\Rightarrow$$) $$K$$가 점렬컴팩트라 하자. $$K$$가 유계가 아니면 $$\lVert x_m\rVert \to \infty$$인 점열을 잡을 수 있는데, 이는 수렴하는 부분수열을 가질 수 없어 모순이다. $$K$$가 닫혀 있지 않으면, $$K$$의 점열 $$x_m \to x$$이면서 $$x \notin K$$인 경우가 있는데 ([§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)), 그 부분수열은 모두 $$x$$로 수렴하므로 $$K$$ 안의 점으로 수렴하는 부분수열이 없어 모순이다.
+$$x_m = (x_m^{(1)}, x_m^{(2)}, \ldots, x_m^{(n)}) \in \mathbb{R}^n$$
+
+이고, $$K$$가 유계이므로 각 좌표열 $$(x_m^{(j)})_m$$도 유계인 실수열이다. 먼저 첫 좌표열 $$(x_m^{(1)})$$에 Bolzano–Weierstrass 정리 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4))를 적용하여 수렴하는 부분수열의 첨자 집합 $$S_1 \subseteq \mathbb{N}$$을 얻는다. 그 부분수열 위에서 둘째 좌표열은 여전히 유계이므로 다시 Bolzano–Weierstrass를 적용하여 $$S_2 \subseteq S_1$$을 얻고, 이를 반복하면
+
+$$S_1 \supseteq S_2 \supseteq \cdots \supseteq S_n, \qquad x_m^{(j)} \xrightarrow[\,m \in S_j\,]{} \xi_j \ (1 \leq j \leq n)$$
+
+이 되는 첨자 집합들의 내림차순 사슬을 얻는다. 가장 작은 $$S_n$$을 따라가면 모든 좌표가 동시에 수렴하므로, 그 부분수열은 점
+
+$$x = (\xi_1, \xi_2, \ldots, \xi_n) \in \mathbb{R}^n$$
+
+으로 수렴한다. $$K$$가 닫혀 있으므로 ([§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)) 극한 $$x$$는 다시 $$K$$에 속한다. 따라서 임의의 점열에서 $$K$$ 안의 점으로 수렴하는 부분수열을 뽑았으므로 $$K$$는 점렬컴팩트이다.
+
+($$\Rightarrow$$) 대우를 보인다. 먼저 $$K$$가 유계가 아니라 하자. 그러면 각 $$m$$에 대해
+
+$$\lVert x_m \rVert > m$$
+
+인 점 $$x_m \in K$$을 고를 수 있고, 이 점열의 임의의 부분수열도 노름이 무한대로 발산하므로 수렴할 수 없다. 따라서 $$K$$는 점렬컴팩트가 아니다. 다음으로 $$K$$가 닫혀 있지 않다 하자. 명제 4 ([§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4))에 의해 $$K$$의 점열 $$x_m \to x$$이면서 $$x \notin K$$인 경우가 존재한다. 이때 $$(x_m)$$의 모든 부분수열은 같은 극한 $$x$$로 수렴하는데 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋명제 2](/ko/math/analysis/bolzano_weierstrass#prop2)) $$x \notin K$$이므로, $$K$$ 안의 점으로 수렴하는 부분수열이 하나도 없다. 따라서 $$K$$는 점렬컴팩트가 아니다. 두 경우를 종합하면, $$K$$가 점렬컴팩트이면 $$K$$는 닫혀 있고 유계이다.
 
 </details>
 
@@ -66,4 +84,127 @@ published: false
 
 </div>
 
-컴팩트성의 위력은 다음 글 [§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 드러난다. 연속함수가 컴팩트집합을 컴팩트집합으로 보낸다는 사실 하나에서 최대·최소 정리와 균등연속성이 한꺼번에 따라 나온다.
+## 예시와 계산
+
+하이네–보렐 정리는 $$\mathbb{R}^n$$에서 점렬컴팩트성을 판정하는 일을 두 가지 단순한 점검으로 환원한다. 닫혀 있는가와 유계인가를 확인하면 되며, 둘 중 하나라도 어긋나면 점렬컴팩트가 아니다. 몇 가지 전형적인 경우를 직접 따져 보자.
+
+<div class="example" markdown="1">
+
+<ins id="ex5">**예시 5 (기본적인 판정)**</ins> $$\mathbb{R}$$의 부분집합을 살펴보면, 닫힌구간 $$[a, b]$$는 닫혀 있고 유계이므로 점렬컴팩트이다. 반면 다음 집합들은 모두 점렬컴팩트가 아니다.
+
+$$(0, 1) \ (\text{닫혀 있지 않음}), \qquad [0, \infty) \ (\text{유계가 아님}), \qquad \mathbb{Z} \ (\text{유계가 아님}).$$
+
+각각에서 반례가 되는 점열을 명시할 수 있다. $$(0,1)$$에서는 $$x_m = 1/m \to 0 \notin (0,1)$$, $$[0,\infty)$$에서는 $$x_m = m \to \infty$$, $$\mathbb{Z}$$에서는 $$x_m = m$$이 그러한 점열이며, 어느 것도 집합 안의 점으로 수렴하는 부분수열을 갖지 않는다.
+
+</div>
+
+유계성과 닫힘 가운데 하나만으로는 점렬컴팩트성을 보장하지 못한다는 점을 강조해 둔다. 다음 예시는 두 조건이 서로 독립임을 보여 준다.
+
+<div class="example" markdown="1">
+
+<ins id="ex6">**예시 6 (수렴점열과 그 극한)**</ins> 집합
+
+$$A = \Bigl\{\, \tfrac{1}{m} : m \in \mathbb{N} \,\Bigr\}$$
+
+는 유계이지만 닫혀 있지 않다. 점열 $$x_m = 1/m$$이 $$A$$ 안에 있으면서 $$0 \notin A$$로 수렴하기 때문이다. 따라서 $$A$$는 점렬컴팩트가 아니다. 그러나 여기에 극한점 $$0$$을 더한
+
+$$A \cup \{0\} = \Bigl\{\, 0, 1, \tfrac12, \tfrac13, \ldots \,\Bigr\}$$
+
+은 닫혀 있고 유계이므로 점렬컴팩트가 된다. 실제로 이 집합의 임의의 점열은 무한히 많은 항이 어떤 한 값 $$1/k$$와 같거나, 아니면 $$0$$으로 수렴하는 부분수열을 가지며, 두 경우 모두 극한이 집합 안에 있다.
+
+</div>
+
+좌표별 Bolzano–Weierstrass 논증은 $$\mathbb{R}^n$$의 곱 구조를 직접 활용한다. 컴팩트집합들의 곱이 다시 컴팩트가 됨을 이 논증으로 확인할 수 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7**</ins> $$K \subseteq \mathbb{R}^m$$과 $$L \subseteq \mathbb{R}^n$$이 점렬컴팩트이면, 곱집합 $$K \times L \subseteq \mathbb{R}^{m+n}$$도 점렬컴팩트이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$K \times L$$의 점열 $$z_k = (x_k, y_k)$$를 잡자. $$K$$가 점렬컴팩트이므로 첨자 집합 $$S \subseteq \mathbb{N}$$을 따라
+
+$$x_k \xrightarrow[\,k \in S\,]{} x \in K$$
+
+인 부분수열이 있다. 이 $$S$$ 위에서 $$(y_k)_{k \in S}$$는 점렬컴팩트집합 $$L$$의 점열이므로, 다시 $$T \subseteq S$$를 따라
+
+$$y_k \xrightarrow[\,k \in T\,]{} y \in L$$
+
+인 부분수열을 뽑을 수 있다. $$T \subseteq S$$이므로 $$T$$ 위에서는 두 좌표가 동시에 수렴하여
+
+$$z_k = (x_k, y_k) \xrightarrow[\,k \in T\,]{} (x, y) \in K \times L$$
+
+이다. 따라서 $$K \times L$$의 임의의 점열에서 $$K \times L$$ 안의 점으로 수렴하는 부분수열을 뽑았으므로, $$K \times L$$은 점렬컴팩트이다.
+
+</details>
+
+이 명제를 닫힌구간에 거듭 적용하면, 닫힌 직육면체 $$[a_1, b_1] \times \cdots \times [a_n, b_n]$$이 점렬컴팩트임을 곧바로 얻는다. 하이네–보렐 정리의 ($$\Leftarrow$$) 방향은 임의의 닫힌 유계집합을 이러한 직육면체 안에 가두는 것으로 볼 수도 있다.
+
+## 응용
+
+컴팩트성은 그 자체로 흥미로운 성질이라기보다, 다른 결과를 끌어내는 도구로서 진가를 발휘한다. 점렬컴팩트집합의 닫힌 부분집합이 다시 점렬컴팩트라는 다음 명제는 그 가운데 가장 기본적이며, 자주 쓰인다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop8">**명제 8**</ins> $$K$$가 점렬컴팩트이고 $$F \subseteq K$$가 ($$K$$에서) 닫힌집합이면, $$F$$도 점렬컴팩트이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$F$$의 점열 $$(x_m)$$을 잡자. 이는 $$K$$의 점열이기도 하므로, $$K$$의 점렬컴팩트성에 의해 어떤 부분수열이
+
+$$x_{m_k} \to x \in K$$
+
+로 수렴한다. 그런데 $$(x_{m_k})$$는 $$F$$의 점들로 이루어진 수렴하는 점열이고 $$F$$가 닫혀 있으므로, 그 극한 $$x$$는 다시 $$F$$에 속한다 ([§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)). 따라서 $$F$$의 임의의 점열이 $$F$$ 안의 점으로 수렴하는 부분수열을 가지므로, $$F$$는 점렬컴팩트이다.
+
+</details>
+
+수렴하는 점열 자체도 그 극한과 함께라면 점렬컴팩트집합을 이룬다. 이는 예시 6을 일반화한 것으로, 컴팩트성이 "유한집합에 한 점을 더한 것처럼 행동하는" 작은 무한집합까지 포착함을 보여 준다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop9">**명제 9**</ins> $$\mathbb{R}^n$$에서 $$x_m \to x$$이면, 집합
+
+$$C = \{x\} \cup \{x_m : m \in \mathbb{N}\}$$
+
+은 점렬컴팩트이다.
+
+</div>
+
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+하이네–보렐 정리에 따라 $$C$$가 닫혀 있고 유계임을 보이면 충분하다. 수렴하는 수열은 유계이고 ([§수열의 수렴, ⁋명제 4](/ko/math/analysis/convergence_of_sequences#prop4)) 거기에 극한점 하나를 더해도 유계이므로, $$C$$는 유계이다. 닫혀 있음을 보이기 위해 $$C$$의 점열 $$y_k \to y$$를 잡자. 두 경우로 나눈다.
+
+$$\text{(i) 어떤 값 } a \in C \text{가 무한히 자주 나타나는 경우}, \qquad \text{(ii) 그렇지 않은 경우}.$$
+
+(i)이면 그 상수 부분수열이 $$a$$로 수렴하므로 극한의 유일성에 의해 $$y = a \in C$$이다. (ii)이면 각 값이 유한 번만 나타나므로 $$y_k$$ 자체가 $$x_m$$들을 무한히 훑고, 그 부분수열이 $$x$$로 수렴하여 $$y = x \in C$$이다. 어느 경우든 $$y \in C$$이므로 $$C$$는 닫혀 있다.
+
+</details>
+
+마지막으로, 컴팩트집합은 자기 자신 위에서의 거리함수가 최솟값을 가진다는, 자주 인용되는 사실을 짚어 둔다. 이는 다음 글에서 증명할 최대·최소 정리의 한 특수한 형태이다.
+
+<div class="example" markdown="1">
+
+<ins id="ex10">**예시 10 (한 점에서 컴팩트집합까지의 거리)**</ins> $$K \subseteq \mathbb{R}^n$$이 비어 있지 않은 점렬컴팩트집합이고 $$p \in \mathbb{R}^n$$이라 하자. 거리
+
+$$d(p, K) = \inf_{y \in K} \lVert p - y \rVert$$
+
+는 실제로 $$K$$의 어떤 점에서 달성된다. 즉 $$\lVert p - y_0 \rVert = d(p, K)$$인 $$y_0 \in K$$가 존재한다. 실제로 하한의 정의에 의해
+
+$$\lVert p - y_m \rVert \to d(p, K) \qquad (y_m \in K)$$
+
+인 점열 $$(y_m)$$을 잡을 수 있고, $$K$$가 점렬컴팩트이므로 $$y_{m_k} \to y_0 \in K$$인 부분수열을 뽑는다. 노름이 연속이므로
+
+$$\lVert p - y_0 \rVert = \lim_k \lVert p - y_{m_k} \rVert = d(p, K)$$
+
+이 되어, 하한이 $$y_0 \in K$$에서 달성된다. $$K$$가 닫혀 있지 않으면 이 결론이 깨질 수 있다. 가령 $$K = (0, 1)$$, $$p = 0$$이면 $$d(p, K) = 0$$이지만 이를 달성하는 점이 $$K$$ 안에 없다.
+
+</div>
+
+컴팩트성의 위력은 다음 글 [§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 본격적으로 드러난다. 연속함수가 컴팩트집합을 컴팩트집합으로 보낸다는 사실 ([§연속함수의 성질, ⁋정리 1](/ko/math/analysis/continuous_functions#thm1)) 하나에서 최대·최소 정리 ([§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2))와 균등연속성 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4))이 한꺼번에 따라 나온다.
