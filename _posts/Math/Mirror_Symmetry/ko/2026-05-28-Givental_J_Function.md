@@ -295,35 +295,49 @@ $$I_X(q, z) = 1 + \tau(q)/z + O(z^{-2})$$
 
 여기서 mirror map이 잘 정의되는 것은 $$X$$의 Fano 성질 덕분임에 유의하자. $$X$$가 Fano이면 영이 아닌 모든 effective curve class $$\beta$$에 대해 $$-K_X \cdot \beta > 0$$이므로 $$q^\beta$$ 보정이 전부 $$z^{-1}$$ 이하 차수에만 나타나고, 따라서 $$I_X$$의 $$z^0$$ 항이 정확히 $$1$$이 되어 ($$I_X = 1 + O(z^{-1})$$) $$z^{-1}$$ 계수로 $$\tau(q)$$를 읽어낼 수 있다. 더 일반적으로 $$-K_X$$가 nef이기만 한 *semi-positive* 경우에는 $$-K_X \cdot \beta = 0$$인 방향이 $$z^0$$ 차수에 보정 $$I_0(q) \neq 1$$을 만들어 관계식이 $$J_X(\tau(q), z) = I_X(q, z)/I_0(q)$$로 수정된다. 
 
-비슷한 결에서, 만일 Fano index가 $$2$$ 이상이면 모든 $$-K_X \cdot \beta \geq 2$$여서 $$q$$에 의존하는 보정이 전부 $$z^{-2}$$ 이하 차수로 밀려나고, 그 결과 mirror map $$\tau(q)$$에 $$q$$-보정이 남지 않게 된다. 즉, 이 경우는 $$J_X(q, z) = I_X(q, z)$$가 좌표변환 없이 그대로 성립하며, 다음 [예시 8](#ex8)의 $$\mathbb{P}^n$$ ($$-K = (n+1)H$$, Fano index $$n+1 \geq 2$$)이 이 경우이다.
+비슷한 결에서, $$X$$의 Fano index가 $$2$$ 이상인 경우를 보자. 여기서 *Fano index* $$r_X$$란 $$-K_X = r_X H$$를 만족하는 $$H \in \Pic(X)$$가 존재하는 가장 큰 양의 정수이다. 그럼 이 경우 $$H = -K_X / r_X$$도 ample이므로, 영이 아닌 effective curve class $$\beta$$에 대해 $$H \cdot \beta \geq 1$$이고, 따라서 
 
-## 예시: $$\mathbb{P}^n$$
+$$-K_X \cdot \beta = r_X (H \cdot \beta) \geq 2$$
+
+가 되어 $$q$$에 의존하는 보정이 전부 $$z^{-2}$$ 이하 차수로 밀려난다. 그 결과 mirror map $$\tau(q)$$에 $$q$$-보정이 남지 않으며, 이 경우 $$J_X(q, z) = I_X(q, z)$$가 좌표변환 없이 그대로 성립한다. 다음 [예시 8](#ex8)의 $$\mathbb{P}^n$$ ($$-K = (n+1)H$$, Fano index $$n+1 \geq 2$$)이 이 경우이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8** ($$X = \mathbb{P}^n$$)</ins> $$\mathbb{P}^n$$의 fan은 [\[토릭 기하학\] §토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 본 standard simplex의 normal fan으로, $$n+1$$개의 ray $$v_i = e_i$$ ($$i = 1, \ldots, n$$)와 $$v_0 = -e_1 - \cdots - e_n$$을 갖는다. Cohomology ring은 $$H^\ast(\mathbb{P}^n) = \mathbb{C}[H]/(H^{n+1})$$로, hyperplane class $$H \in H^2(\mathbb{P}^n)$$ 하나가 ring 전체를 생성하며, 특히 $$H$$는 $$H^2(\mathbb{P}^n) \cong \mathbb{Z}$$ (곧 $$\Pic(\mathbb{P}^n) = \mathbb{Z} H$$) 를 생성한다. Effective curve class는 그 dual인 line class $$H^\vee$$의 음이 아닌 배수 $$d H^\vee$$ ($$d \geq 0$$)로 매개되며, 각 toric divisor에 대해 $$D_i \cdot d H^\vee = d$$이므로 $$I$$-function 공식은
+<ins id="ex8">**예시 8** ($$X = \mathbb{P}^n$$)</ins> $$\mathbb{P}^n$$의 fan은 standard simplex의 normal fan으로, $$n+1$$개의 ray 
+
+$$v_0 = -e_1 - \cdots - e_n,\qquad v_i = e_i\quad (i = 1, \ldots, n)$$
+
+을 갖는다. ([\[토릭 기하학\] §토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)) 이 때 toric divisor들은 각각의 coordinate hyperplane에 해당하는 $$D_0, \ldots, D_n$$이며, 이들은 모두 linearly equivalent하므로 단일한 hyperplane class $$H\in H^2(\mathbb{P}^n)$$을 정의했다. 뿐만 아니라 $$\mathbb{P}^n$$의 cohomology 계산은 이 hyperplane class가 $$\mathbb{P}^n$$ 전체의 cohomology를 생성하는 것을 알려주었다. 
+
+이제 [정의 6](#def6)의 $$I$$-function 공식에 들어가는 데이터를 $$\mathbb{P}^n$$에 맞춰 풀어 보자. 우선 $$H^2(\mathbb{P}^n)$$이 $$H$$ 하나로 생성되므로 $$t_{(2)} = tH$$이며, Novikov variable이 $$q = e^t$$로 주어진다. 즉, $$t = \ln q$$이므로 $$e^{t_{(2)}/z} = e^{H \ln q / z}$$로 쓸 수 있다. 
+
+다음으로 effective curve class는 line class $$H^\vee$$의 음이 아닌 배수 $$\beta = d H^\vee$$ ($$d \geq 0$$)로 매개되므로 $$q^\beta = q^d$$이고, $$\mathbb{P}^n$$의 $$n+1$$개 toric divisor $$D_0, \ldots, D_n$$ ([\[토릭 기하학\] §토러스 인자와 선다발, ⁋예시 11](/ko/math/toric_geometry/toric_divisors#ex11))은 모두 $$D_i \cdot \beta = H \cdot d H^\vee = d$$을 만족하므로, 이를 대입하면 각 인자는 $$-\infty$$로의 무한곱이 상쇄되어
+
+$$\frac{\prod_{k=-\infty}^{0}(D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)} = \frac{\prod_{k=-\infty}^{0}(H + kz)}{\prod_{k=-\infty}^{d}(H + kz)} = \frac{1}{\prod_{j=1}^{d}(H + jz)}$$
+
+로 환원되고, toric divisor마다 이러한 인자가 $$n+1$$개 있므로 이를 $$n+1$$제곱하면 $$I$$-function은
 
 $$I_{\mathbb{P}^n}(q, z) = e^{H \ln q /z} \sum_{d \geq 0} \frac{q^d}{\prod_{j=1}^d (H + jz)^{n+1}}$$
 
-이 된다. $$H^{n+1} = 0$$이므로 분모의 $$(H + jz)^{-(n+1)}$$를 $$z^{-1}$$의 멱으로 전개하면 첫 몇 차수가 명시적으로 풀린다.
+이 된다. $$H^{n+1} = 0$$이므로, 분모의 $$(H + jz)^{-(n+1)}$$를 $$z^{-1}$$의 멱급수로 전개하고, $$e^{H\ln q/z}$$를 테일러전개한 후 차수별로 묶으면 다음의 전개식을 얻는다.
 
 $$I_{\mathbb{P}^n}(q, z) = 1 + \frac{H \ln q}{z} + \frac{(H \ln q)^2}{2 z^2} + \cdots + q \frac{1}{(H+z)^{n+1}} + \cdots$$
 
-$$\mathbb{P}^n$$은 $$-K_{\mathbb{P}^n} = (n+1) H$$이므로 Fano index가 $$n+1 \geq 2$$이고, 따라서 [명제 7](#prop7)에 의해 $$I_{\mathbb{P}^n} = 1 + O(z^{-1})$$이 되어 mirror map은 trivial하고
+이제 $$\mathbb{P}^n$$의 Fano index는 $$-K_{\mathbb{P}^n} = (n+1) H$$로부터 $$n+1 \geq 2$$이다. 위 전개에서 $$q$$에 의존하는 보정 ($$d \geq 1$$의 $$q^d$$ 항)은 $$z^{-(n+1)}$$ 이하 차수에만 나타나므로 $$I_{\mathbb{P}^n}$$의 $$z^{-1}$$ 계수는 prefactor에서 오는 $$H \ln q$$ (곧 $$t_{(2)}$$)뿐이다. 따라서 [명제 7](#prop7) 직후 논의대로 mirror map은 identity이고
 
 $$J_{\mathbb{P}^n}(q, z) = I_{\mathbb{P}^n}(q, z)$$
 
-이다.
+이어야 한다. 이를 직접 확인해보자. 
 
-B-side와의 직접 짝맞춤은 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 이미 절반이 끝나있다. 그 예시에서 우리는 period matrix의 첫 column $$\mathcal{I}^0_p$$가 만족하는 ODE
+B-side의 계산은 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 어느정도 끝나있다. 그에 따르면, 우리는 period matrix의 첫 column $$\mathcal{I}^0_p$$가 다음의 ODE
 
 $$(z\partial_q)(qz\partial_q)^n\mathcal{I}^0_p = \mathcal{I}^0_p \tag{$\ast\ast$}$$
 
-를 도출했다. [주장 5](#conj5)의 mirror theorem이 옳다면 $$I_{\mathbb{P}^n}$$의 $$H^0$$-coefficient
+를 만족해야 한다는 것을 안다. [주장 5](#conj5)의 mirror theorem이 옳다면 A-side의 $$I_{\mathbb{P}^n}$$도 같은 ODE를 만족해야 한다. 다만 $$\mathcal{I}^0_p$$는 scalar인 반면 $$I_{\mathbb{P}^n}$$은 $$H^\ast(\mathbb{P}^n) = \mathbb{C}[H]/(H^{n+1})$$-값이므로, 맞대어 보려면 같은 scalar 성분을 꺼내야 한다. $$H$$에 대한 다항식으로 보아 $$H = 0$$을 대입하면 상수항인 $$H^0$$-coefficient만 남는데, [정의 6](#def6)의 곱 식에서 prefactor는 $$e^0 = 1$$, 각 인자는 $$(H + jz) \mapsto jz$$가 되므로 ($$\prod_{j=1}^d jz = d!\,z^d$$)
 
-$$\Phi_0(q, z) := \sum_{d \geq 0} \frac{q^d}{(d!)^{n+1}z^{(n+1)d}}$$
+$$\Phi_0(q, z) := I_{\mathbb{P}^n}(q, z)\big|_{H=0} = \sum_{d \geq 0} \frac{q^d}{(d!)^{n+1}z^{(n+1)d}}$$
 
-(위의 hypergeometric 곱 식에서 $$H = 0$$으로 specialize한 것) 또한 ($$\ast\ast$$)를 만족해야 한다. 직접 계산하면 $$qz\partial_q$$의 작용은 항별로 $$d$$를 끌어내고 $$z^{-1}$$ 인자를 붙이므로
+를 얻는다. 이 $$\Phi_0$$가 ($$\ast\ast$$)를 만족함을 직접 확인하자. 직접 계산하면 $$qz\partial_q$$의 작용은 항별로 $$d$$를 끌어내고 $$z^{-1}$$ 인자를 붙이므로
 
 $$(qz\partial_q)^n\Phi_0 = \sum_{d\geq 0}\frac{d^n q^d}{(d!)^{n+1}z^{(n+1)d - n}},$$
 
@@ -331,7 +345,11 @@ $$(qz\partial_q)^n\Phi_0 = \sum_{d\geq 0}\frac{d^n q^d}{(d!)^{n+1}z^{(n+1)d - n}
 
 $$(z\partial_q)(qz\partial_q)^n\Phi_0 = \sum_{d \geq 1}\frac{d^{n+1}q^{d-1}}{(d!)^{n+1}z^{(n+1)d - n - 1}} = \sum_{d' \geq 0}\frac{(d'+1)^{n+1}q^{d'}}{((d'+1)!)^{n+1}z^{(n+1)d'}} = \Phi_0$$
 
-가 정확히 성립한다. 따라서 $$I_{\mathbb{P}^n}$$이 만족하는 hypergeometric ODE와 B-side의 Gauss-Manin ODE가 동일하며, 두 fundamental solution이 $$z \to \infty$$에서 같은 normalization $$1 + O(z^{-1})$$을 가지므로 $$J_{\mathbb{P}^n} = I_{\mathbb{P}^n}$$이 곧 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)의 oscillating integral과 일치한다는 의미가 된다. 
+가 정확히 성립한다. 이로써 $$\Phi_0$$와 B-side의 period $$\mathcal{I}^0_p$$는 같은 ($$n+1$$)-계 선형 ODE ($$\ast\ast$$)의 해이다. 두 해가 *같은* 함수임은 다음에서 나온다. ($$\ast\ast$$)를 $$q$$-멱급수 $$\Phi = \sum_{d \geq 0} a_d q^d$$에 적용하면 위 계산이 그대로 계수 점화식
+
+$$a_d = \frac{a_{d-1}}{d^{n+1} z^{n+1}} \qquad (d \geq 1)$$
+
+을 주므로, $$q$$에서 정칙인 ($$\ast\ast$$)의 해는 상수항 $$a_0$$ 하나로 완전히 결정된다 (나머지 해들은 $$\ln q$$를 포함한다). $$\Phi_0$$와 $$\mathcal{I}^0_p$$는 모두 $$z \to \infty$$에서 $$1$$로 normalize되어 ($$a_0 = 1$$, 곧 $$q^0$$ 항이 $$1$$) 있으므로 이 점화식을 따라 나머지 계수가 전부 일치하여 $$\Phi_0 = \mathcal{I}^0_p$$이다. 끝으로 $$H^\ast(\mathbb{P}^n)$$이 $$H$$로 cyclic하게 생성되므로 ([명제 4](#prop4) 직후 논의) 나머지 $$H$$-성분도 ($$\ast$$)의 $$z q\partial_q$$-미분으로 $$\Phi_0$$에서 복원되어, $$J_{\mathbb{P}^n} = I_{\mathbb{P}^n}$$ 전체가 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)의 oscillating integral과 일치한다. 
 
 [주장 5](#conj5)의 stationary phase 측면 또한 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 이미 계산해 두었다. 즉 $$W_q$$의 $$n+1$$개 critical point $$x_\zeta = \zeta q^{1/(n+1)}$$에서의 critical value $$(n+1)\zeta q^{1/(n+1)}$$과 Hessian determinant $$(n+1)(\zeta q^{1/(n+1)})^{-n}$$이 [§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3)의 stationary phase formula에 대입되어 oscillating integral의 $$z\to 0^+$$ asymptotic을 주며, 이것이 $$I_{\mathbb{P}^n}(q, z)$$의 $$z \to 0$$ asymptotic과도 일치한다 ([CK, §11.2]).
 

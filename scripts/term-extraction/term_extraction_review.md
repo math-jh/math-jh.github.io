@@ -3564,3 +3564,18 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `Kähler cone` | multi-word English emphasis — possibly a definition |
 | `quantum cohomology` | multi-word English emphasis — possibly a definition |
 
+## 토러스 인자와 선다발
+- post: `_posts/Math/Toric_Geometry/ko/2026-05-18-Toric_Divisors_and_Line_Bundles.md`
+- permalink: `/ko/math/toric_geometry/toric_divisors`
+- scanned: 2026-06-02T06:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `boundary` | looks like emphasis (no <sub> partner) |
+| `torus-invariant` | looks like emphasis (no <sub> partner) |
+| `ray` | looks like emphasis (no <sub> partner) |
+| `character` | looks like emphasis (no <sub> partner) |
+| `support` | looks like emphasis (no <sub> partner) |
+| `locally` | looks like emphasis (no <sub> partner) |
+| `rational` | looks like emphasis (no <sub> partner) |
+
