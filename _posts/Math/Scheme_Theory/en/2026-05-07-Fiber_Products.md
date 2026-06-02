@@ -1,5 +1,6 @@
 ---
 title: "Fiber Products"
+description: "This post covers the definition and universal property of fiber products of schemes, and proves the existence of fiber products for affine schemes."
 excerpt: "Definition and existence of fiber products in the category of S-schemes"
 
 categories: [Math / Scheme Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-03-08
 last_modified_at: 2025-03-08
 weight: 11
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-02T04:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T04:00:02+00:00
 ---
 ## Definition and Existence of Fiber Products
 
