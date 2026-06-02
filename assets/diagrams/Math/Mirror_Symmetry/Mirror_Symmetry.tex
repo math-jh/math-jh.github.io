@@ -115,3 +115,27 @@
   \draw[->] (n24) -- (q1);
   \draw[->] (n32) -- (q2);
 \end{tikzpicture}
+
+%% 3항 Plücker 관계식: 원 위 S(회색)와 a<b<c<d, 대각선(ac,bd 교차)·변(비교차) (Postnikov_Diagram_and_Plabic_Graph-1.png)
+\begin{tikzpicture}[scale=1.15]
+  \def\R{2}
+  \draw[gray!55, thick] (0,0) circle (\R);
+  \coordinate (a) at (125:\R);
+  \coordinate (b) at (55:\R);
+  \coordinate (c) at (315:\R);
+  \coordinate (d) at (215:\R);
+  \draw[black!70, thick] (a)--(b)--(c)--(d)--cycle;        % 변 (비교차 현)
+  \draw[violet!70, very thick, dashed] (a)--(c);           % 대각선 (교차 현)
+  \draw[violet!70, very thick, dashed] (b)--(d);
+  \foreach \ang in {90, 20, 340, 268, 170}{                % S에 해당하는 회색 점
+    \fill[gray!60] (\ang:\R) circle (1.15pt);
+  }
+  \fill[red!80!black]    (a) circle (1.5pt);
+  \fill[orange!90!black] (b) circle (1.5pt);
+  \fill[green!55!black]  (c) circle (1.5pt);
+  \fill[blue!70!black]   (d) circle (1.5pt);
+  \node[red!80!black]    at (125:{\R+0.34}) {$a$};
+  \node[orange!90!black] at (55:{\R+0.34})  {$b$};
+  \node[green!55!black]  at (315:{\R+0.34}) {$c$};
+  \node[blue!70!black]   at (215:{\R+0.34}) {$d$};
+\end{tikzpicture}
