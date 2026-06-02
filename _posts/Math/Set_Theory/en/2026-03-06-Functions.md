@@ -1,5 +1,6 @@
 ---
 title: "Functions"
+description: "This post defines a binary relation as a function, explains the concepts of domain and function values, and covers constant functions and family notation."
 excerpt: "Basic Definition of Functions"
 
 categories: [Math / Set Theory]
@@ -10,11 +11,12 @@ header:
 sidebar: 
     nav: "set_theory-en"
 
-date: 2026-03-06
-last_modified_at: 2026-03-06
+date: 2021-08-15
+last_modified_at: 2022-11-23
 weight: 5
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T11:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T11:00:03+00:00
 ---
 In previous posts, we defined binary relations. Under this definition, the binary relation $$<$$ defined on the set of natural numbers $$\mathbb{N}$$ is the set
 

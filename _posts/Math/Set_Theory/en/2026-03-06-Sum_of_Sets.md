@@ -1,5 +1,6 @@
 ---
 title: "Sum of Sets"
+description: "This post defines the concepts of covers and partitions of a set, and discusses the refinement relation of covers, images under surjective functions, and the existence conditions for partitions."
 excerpt: "Sum (disjoint union) of a family of sets"
 
 categories: [Math / Set Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2021-08-15
 last_modified_at: 2022-11-25
 weight: 9
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-02T12:30:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T12:30:01+00:00
 ---
 ## Covering
 
@@ -24,7 +26,7 @@ translation_source: kimi-cli
 
 </div>
 
-Suppose a covering $$(A_i)_{i\in I}$$ of a set $$A$$ is given. Then for any function $$f:B \rightarrow A$$, the family $$(f^{-1}(A_i))_{i\in I}$$ of subsets of $$B$$ is a covering of $$B$$. We call this the preimage of $$(A_i)$$ under $$f$$. For any function $$g:A\rightarrow C$$, the family $$(g(A_i))_{i\in I}$$ of subsets of $$C$$ need not be a covering of $$C$$, but if $$g$$ is surjective then they do cover $$C$$. We call this the image of $$(A_i)$$ under the surjection $$g$$. 
+Let a covering $$(A_i)_{i\in I}$$ of a set $$A$$ be given. Then for any function $$f:B \rightarrow A$$, the family $$(f^{-1}(A_i))_{i\in I}$$ of subsets of $$B$$ is a covering of $$B$$. We call this the preimage of $$(A_i)$$ under $$f$$. For any function $$g:A\rightarrow C$$, the family $$(g(A_i))_{i\in I}$$ of subsets of $$C$$ need not be a covering of $$C$$, but if $$g$$ is surjective then these sets do cover $$C$$. We call this the image of $$(A_i)$$ under the surjection $$g$$. 
 
 <div class="proposition" markdown="1">
 
@@ -58,7 +60,7 @@ and thus the second claim also holds.
 
 </details>
 
-It is obvious from the first claim that a function $$f$$ satisfying condition 2 of the above proposition is unique. Also, if in particular $$A_i\cap A_j$$ holds for all $$i,j$$, then the hypothesis of the second claim is always satisfied. We define this as follows.
+It is obvious from the first claim that a function $$f$$ satisfying condition 2 of the above proposition is unique. Also, if in particular $$A_i\cap A_j=\emptyset$$ for all $$i,j$$, then the hypothesis of the second claim is always satisfied. We define this as follows.
 
 <div class="definition" markdown="1">
 
@@ -87,7 +89,7 @@ In general, since $$\emptyset$$ plays no role among the members of this family, 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let $$S_i$$ be the set of all pairs $$(x, i)$$ with $$x\in A_i$$. Then $$(S_i)_{i\in I}$$ is pairwise disjoint. Also, for each $$i$$, the map $$x\mapsto (x,i)$$ is a bijection from $$A_i$$ to $$S_i$$. Therefore $$S=\bigcup_{i\in I} S_i$$ satisfies the required conditions.
+For each $$i\in I$$, let $$S_i$$ be the set of all pairs $$(x, i)$$ with $$x\in A_i$$. Then $$(S_i)_{i\in I}$$ is pairwise disjoint. Also, for each $$i$$, the map $$x\mapsto (x,i)$$ is a bijection from $$A_i$$ to $$S_i$$. Therefore $$S=\bigcup_{i\in I} S_i$$ satisfies the required conditions.
 
 </details>
 
