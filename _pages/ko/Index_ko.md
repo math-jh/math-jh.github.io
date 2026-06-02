@@ -354,6 +354,7 @@ permalink: /ko/misc/index_ko
 | <selected id="generic_point">generic point &#9745;</selected> | <unselected>일반점</unselected> | [\[대수기하학\] §접공간과 매끄러움](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness)<br/>[\[스킴 이론\] §스킴의 위상구조](/ko/math/scheme_theory/topology_of_schemes) |  |
 | <unselected id="geometric_multiplicity">geometric multiplicity</unselected> | <selected> 기하적 중복도 &#9745;</selected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
 | <selected id="germ">germ &#9745;</selected> | <unselected>싹</unselected> | [\[위상수학\] §준층](/ko/math/topology/presheaves) |  |
+| <selected id="givental_j_-function">givental $$j$$-function &#9745;</selected> | <unselected>Givental J-함수</unselected> | [\[거울대칭\] §Givental J-function과 Mirror Theorem](/ko/math/mirror_symmetry/givental_j_function) |  |
 | <selected id="global_orientation">global orientation &#9745;</selected> | <unselected>전역 방향</unselected> | [\[대수적 위상수학\] §푸앵카레 쌍대성](/ko/math/algebraic_topology/Poincare_duality) |  |
 | <selected id="global_section">global section &#9745;</selected> | <unselected>대역 단면</unselected> | [\[대수기하학\] §Sheaf Cohomology](/ko/math/algebraic_varieties/sheaf_cohomology) | |
 | <selected id="graded_homomorphism">graded homomorphism &#9745;</selected> | <unselected>등급준동형사상</unselected> | [\[대수적 구조\] §등급환](/ko/math/algebraic_structures/graded_rings) |  |
