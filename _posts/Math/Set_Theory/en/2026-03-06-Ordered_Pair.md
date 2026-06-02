@@ -1,5 +1,6 @@
 ---
 title: "Ordered Pairs"
+description: "We examine set inclusion as a binary relation, then define ordered pairs as sets and prove their existence and uniqueness."
 excerpt: "Subset relations and the definition of ordered pairs"
 
 categories: [Math / Set Theory]
@@ -16,8 +17,9 @@ date: 2021-08-09
 last_modified_at: 2022-11-21
 
 weight: 2
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T10:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T10:00:02+00:00
 ---
 ## Subset Relations
 
@@ -57,7 +59,7 @@ From the two propositions above, we see that $$\subseteq$$ is an order relation 
 
 ## Ordered Pairs
 
-Virtually the only tool we use in set theory is a binary relation, and the language expressing it is the ordered pair. For example, the binary relation $$\subseteq$$ examined above can be thought of as the “set”
+Virtually the only tool we use in set theory is a binary relation, and the language expressing it is the ordered pair. For example, the binary relation $$\subseteq$$ examined above can be thought of as the "set"
 
 $$\subseteq=\{(A,B),(B,C),\cdots\}$$
 
@@ -197,5 +199,5 @@ Conversely, assume $$A$$ or $$B$$ is empty. Once again, if we deny the conclusio
 
 ---
 
-[^1]: Of course this “set” is not a set. ([§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4))
+[^1]: Of course this "set" is not a set. ([§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4))
 [^2]: From the end of the proof of this lemma onward, we no longer mention the axioms used in the proof process.
