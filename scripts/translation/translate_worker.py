@@ -396,7 +396,7 @@ def _iso_to_ts(iso: str) -> float:
 
 
 def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
-    """Three-phase priority: pending → drift → polish.
+    """Four-phase priority: pending → drift → polish → verify.
 
     Returns (ko_path, en_path_to_write, reason) or None.
     """
@@ -437,12 +437,11 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
         if ko_wants_drift(ko):
             return ko, existing_en, "drift"
 
-    # --- Phase 3: polish (one-time; never-polished posts only) -----------
-    # A post is polished at most once. Once last_polished_at is set the post
-    # is terminal and is never re-polished, so manual post-polish corrections
-    # (KO source fixes, EN fidelity edits) are never clobbered by a later
-    # pass. Drift (Phase 2) still re-translates if the KO genuinely changes.
-    polish_candidates = []
+    # --- Phase 3: polish (one-time; never-polished posts) ----------------
+    # Polish improves the EN prose. It runs at most once per post: once
+    # last_polished_at is set the post is not re-polished (so a single pass is
+    # not compounded). A single pass can still introduce errors — Phase 4 then
+    # verifies the polished result and surfaces any such damage.
     for ko in ko_files:
         if is_draft(ko):
             continue
@@ -451,16 +450,29 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
             continue
         if not is_our_translation(existing_en):
             continue
-        meta = en_translation_meta(existing_en)
-        last_polished = _iso_to_ts(meta.get("last_polished_at", ""))
-        if last_polished > 0:
-            continue                       # already polished → terminal, skip
-        polish_candidates.append((last_polished, ko, existing_en))
+        if _iso_to_ts(en_translation_meta(existing_en).get("last_polished_at", "")) > 0:
+            continue                       # already polished → don't re-polish
+        return ko, existing_en, "polish"
 
-    if polish_candidates:
-        polish_candidates.sort()      # 0.0 (never polished) first, then oldest
-        _, ko, en = polish_candidates[0]
-        return ko, en, "polish"
+    # --- Phase 4: verify (read-only, one-time; polished posts only) ------
+    # Runs ONLY on posts that have been polished (last_polished_at set) but not
+    # yet verified. Lints + semantically checks the polished EN against the KO
+    # and surfaces problems the polish pass may have introduced (log + telegram).
+    # The EN file is never modified. One-time: a recorded `verified_at` retires
+    # the post.
+    for ko in ko_files:
+        if is_draft(ko):
+            continue
+        existing_en = find_en_counterpart(ko)
+        if existing_en is None:
+            continue
+        if not is_our_translation(existing_en):
+            continue
+        if _iso_to_ts(en_translation_meta(existing_en).get("last_polished_at", "")) <= 0:
+            continue                       # not polished yet → verify comes later
+        if state["files"].get(str(ko.relative_to(BLOG_ROOT)), {}).get("verified_at"):
+            continue                       # already verified → done
+        return ko, existing_en, "verify"
 
     return None
 
@@ -1081,6 +1093,81 @@ def cmd_dry_run(state: dict) -> int:
     return 0
 
 
+_LINT_RULES = [
+    (re.compile(r"\^\{\^"), "doubled superscript `^{^` (e.g. `^{^{-1}}`)"),
+    (re.compile(
+        r"(?<!\\)\\\\(?!\\)(math[a-z]*|frac|operatorname|begin|end|left|right|cdot|cdots|"
+        r"ldots|circ|in|subseteq|subset|cap|cup|wedge|otimes|oplus|nabla|partial|"
+        r"sum|prod|int|varphi|psi|phi|alpha|beta|gamma|lambda|sigma|tau|mu|nu|"
+        r"rho|theta|Gamma|Delta|Omega|langle|rangle|lvert|rvert|mid)\b"),
+     "double backslash before a macro (e.g. `\\\\mathfrak`) \u2014 LaTeX corruption"),
+]
+
+
+def lint_latex(text: str) -> list:
+    """Cheap, high-precision regex lints for the LaTeX-corruption classes the
+    old polish pass used to introduce. Read-only; returns human-readable findings
+    with surrounding context for manual fixing."""
+    out = []
+    for rx, desc in _LINT_RULES:
+        for m in rx.finditer(text):
+            ctx = text[max(0, m.start() - 24): m.start() + 24].replace("\n", " ")
+            out.append(f"{desc}: \u2026{ctx}\u2026")
+    return out
+
+
+def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
+    """Read-only verification of an existing EN translation against KO.
+
+    Deterministic LaTeX-corruption lints + the math-block semantic check (Kimi
+    only when block counts genuinely diverge). Records the outcome in state and
+    notifies on problems. NEVER modifies the EN file. Marks `verified_at` so the
+    post is checked at most once.
+    """
+    ko_text = ko_path.read_text(encoding="utf-8")
+    en_text = en_path.read_text(encoding="utf-8")
+    ko_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", ko_text)))
+    en_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", en_text)))
+    lints = lint_latex(en_text)
+    verdict_text = ""
+    if ko_n != en_n:
+        verdict_text = verify_math_mismatch(ko_text, en_text, ko_n, en_n)
+    verdict_safe = bool(re.search(r"^VERDICT:\s*safe\b", verdict_text, re.M | re.I))
+    clean = (not lints) and (ko_n == en_n or verdict_safe)
+
+    entry = state["files"].get(key, {})
+    entry["verified_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    entry["verify_math_counts"] = [ko_n, en_n]
+    entry["verify_lints"] = lints[:20] or None
+    if verdict_text:
+        entry["verify_verdict"] = verdict_text[:4000]
+    state["files"][key] = entry
+    save_state(state)
+
+    if clean:
+        log(f"VERIFY ({key}): clean (math ko={ko_n} en={en_n})")
+        return 0
+
+    head = []
+    if lints:
+        head.append(f"{len(lints)} latex-lint")
+    if verdict_text and not verdict_safe:
+        head.append(verdict_text.splitlines()[0])
+    log(f"VERIFY ({key}): FLAGGED \u2014 {'; '.join(head)}")
+    for ln in lints:
+        log(f"  LINT ({key}): {ln}")
+    for ln in verdict_text.splitlines():
+        log(f"  VERIFY ({key}): {ln}")
+    body = ""
+    if verdict_text and not verdict_safe:
+        body += verdict_text + "\n"
+    if lints:
+        body += "LINTS:\n" + "\n".join(lints)
+    _notify_telegram(f"translation verify flagged: {key}", body[:1500])
+    return 0
+
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -1115,6 +1202,10 @@ def main() -> int:
         ko_path, en_path, reason = target
         en_path.parent.mkdir(parents=True, exist_ok=True)
         key = str(ko_path.relative_to(BLOG_ROOT))
+
+        if reason == "verify":
+            return run_verify(state, ko_path, en_path, key)
+
         log(f"translating ({reason}): {key} → {en_path.relative_to(BLOG_ROOT)} (ko {ko_path.stat().st_size}B)")
 
         # Snapshot pre-polish EN once — needed across retries (verify diff target,

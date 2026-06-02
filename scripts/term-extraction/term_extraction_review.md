@@ -3499,3 +3499,52 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `finite` | looks like emphasis (no <sub> partner) |
 | `Galois` | looks like emphasis (no <sub> partner) |
 
+## 호몰로지의 계산
+- post: `_posts/Math/Algebraic_Topology/ko/2025-08-05-Computation_of_Homology.md`
+- permalink: `/ko/math/algebraic_topology/computation_of_homology`
+- scanned: 2026-06-02T01:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `reduced homology` | multi-word English emphasis — possibly a definition |
+| `coefficient group` | multi-word English emphasis — possibly a definition |
+| `CW complex` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+
+## Grothendieck 군
+- post: `_posts/Math/Algebraic_Structures/ko/2021-09-04-Grothendieck_Groups.md`
+- permalink: `/ko/math/algebraic_structures/Grothendieck_groups`
+- scanned: 2026-06-02T01:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `group homomorphism` | multi-word English emphasis — possibly a definition |
+
+## 정역
+- post: `_posts/Math/Ring_Theory/ko/2025-04-01-Integral_Domains.md`
+- permalink: `/ko/math/ring_theory/integral_domains`
+- scanned: 2026-06-02T02:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `associate` | looks like emphasis (no <sub> partner) |
+
+## 미분가군
+- post: `_posts/Math/Multilinear_Algebra/ko/2025-04-18-Differential_Modules.md`
+- permalink: `/ko/math/multilinear_algebra/differential_modules`
+- scanned: 2026-06-02T02:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `commutative` | looks like emphasis (no <sub> partner) |
+
+## 대칭텐서
+- post: `_posts/Math/Multilinear_Algebra/ko/2025-05-07-Symmetric_Tensors.md`
+- permalink: `/ko/math/multilinear_algebra/symmetric_tensors`
+- scanned: 2026-06-02T03:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `symmetrization` | looks like emphasis (no <sub> partner) |
+
