@@ -1,5 +1,6 @@
 ---
 title: "Equivalence Relations"
+description: "This post covers the definition and basic properties of equivalence relations that satisfy symmetry, transitivity, and reflexivity. It examines examples of equivalence relations on sets and proves the three conditions required for a binary relation to become an equivalence relation."
 excerpt: "The definition and properties of equivalence relations"
 
 categories: [Math / Set Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2021-08-22
 last_modified_at: 2022-11-26
 weight: 12
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T14:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T14:00:01+00:00
 ---
 Now we look at equivalence relations.
 
@@ -22,7 +24,7 @@ Now we look at equivalence relations.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A binary relation $$(R,A,A)$$ is called *symmetric* if $$x\mathrel{R}y$$ implies $$y\mathrel{R}x$$. If 
+<ins id="def1">**Definition 1**</ins> A binary relation $$(R,A,A)$$ is called *symmetric* if $$x\mathrel{R}y$$ implies $$y\mathrel{R}x$$. If
 
 $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 
@@ -54,11 +56,11 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 First, assume that $$R$$ is an equivalence relation.  
 - Since $$(x,x)\in R$$ for all $$x\in A$$, we have $$\pr_1R=A$$.  
 - Also, since $$R$$ is symmetric, $$x\sim_\tiny{R} y\iff y\sim_\tiny{R}x$$ holds, and therefore
-    
+
     $$(x,y)\in R\iff (y,x)\in R\iff (x,y)\in R^{-1}\tag{1}$$
 
     from which $$R=R^{-1}$$ follows. 
-- Finally, we must show that $$R\circ R=R$$. First, let $$(x,y)\in R$$ be given. Since $$R$$ is reflexive, $$(x,x)\in R$$, and thus from $$(x,x)\in R$$ and $$(x,y)\in R$$ we know that $$(x,y)\in R\circ R$$ holds. Conversely, let $$(x,y)\in R\circ R$$ be given. Then there exists some $$z\in A$$ such that $$(x,z)\in R$$ and $$(z,y)\in R$$. By the transitivity of $$R$$, we have $$(x,y)\in R$$.
+- Finally, we show that $$R\circ R=R$$. First, let $$(x,y)\in R$$ be given. Since $$R$$ is reflexive, $$(x,x)\in R$$, and thus from $$(x,x)\in R$$ and $$(x,y)\in R$$ we know that $$(x,y)\in R\circ R$$ holds. Conversely, let $$(x,y)\in R\circ R$$ be given. Then there exists some $$z\in A$$ such that $$(x,z)\in R$$ and $$(z,y)\in R$$. By the transitivity of $$R$$, we have $$(x,y)\in R$$.
 
 Now suppose that $$R$$ is a binary relation satisfying the three given conditions.
 
@@ -122,7 +124,7 @@ The following proposition shows that the converse also holds.
 
 > there exists some $$i$$ such that $$x,y\in A_i$$
 
-is an equivalence relation.
+is an equivalence relation on $$A$$.
 </div>
 
 <details class="proof" markdown="1">

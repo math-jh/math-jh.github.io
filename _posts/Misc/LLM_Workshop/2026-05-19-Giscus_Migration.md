@@ -50,6 +50,7 @@ comments:
 
 `_includes/comments-providers/giscus.html`은 minimal-mistakes 테마가 이미 들고 있어서 손볼 일이 거의 없었다. 한 가지만 손봤다 — Giscus의 UI 언어가 페이지 언어를 따라가도록 URL prefix에서 `ko/en`을 뽑아 `data-lang`에 넘기는 로직이다.
 
+{% raw %}
 ```liquid
 {%- assign _giscus_lang = site.locale | slice: 0, 2 -%}
 {%- assign _giscus_prefix = page.url | truncate: 3, "" -%}
@@ -57,6 +58,7 @@ comments:
   {%- assign _giscus_lang = _giscus_prefix | remove_first: "/" -%}
 {%- endif -%}
 ```
+{% endraw %}
 
 한국어 페이지에는 한국어 UI의 Giscus 댓글창이 떠야 한다. 영어 UI가 떠 있으면 페이지 언어와 어긋난다.
 

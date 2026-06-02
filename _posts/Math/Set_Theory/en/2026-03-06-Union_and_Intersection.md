@@ -1,5 +1,6 @@
 ---
 title: "Union and Intersection"
+description: "This post rigorously defines the union and intersection of a family of sets within the ZFC axiomatic system, and proves a property of the intersection using surjective functions."
 excerpt: "Union and intersection of sets"
 
 categories: [Math / Set Theory]
@@ -13,14 +14,15 @@ sidebar:
 date: 2021-08-15
 last_modified_at: 2022-11-24
 weight: 8
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T13:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T13:00:03+00:00
 ---
 ## Family of sets
 
-Let an index set $$I$$ and a set of sets $$\mathcal{S}$$ be given. Then a function $$f=(F,I,\mathcal{S})$$ from $$I$$ to $$\mathcal{S}$$ assigns to each $$i\in I$$ an element of $$\mathcal{S}$$, i.e., a set. Previously we agreed to write this as $$(f_i)_{i\in I}$$, but to maintain the convention of writing sets with capital letters, we shall write it as $$(F_i)_{i\in I}$$.
+Let an index set $$I$$ and a set of sets $$\mathcal{S}$$ be given. Then a function $$f=(F,I,\mathcal{S})$$ from $$I$$ to $$\mathcal{S}$$ assigns to each $$i\in I$$ an element of $$\mathcal{S}$$, i.e., a set. We previously agreed to write this as $$(f_i)_{i\in I}$$, but to maintain the convention of writing sets with capital letters, we shall write it as $$(F_i)_{i\in I}$$.
 
-Suppose every set in the family $$(A_i)_{i\in I}$$ is a subset of some set $$A$$. Then we may take the target $$\mathcal{S}$$ of this function to be $$\mathcal{P}(A)$$. When we wish to regard the sets $$A_i$$ as subsets of $$A$$ in this way, we say that $$(A_i)_{i\in I}$$ is a *family of subsets of the set $$A$$*.
+Suppose every set in a family $$(A_i)_{i\in I}$$ is a subset of some set $$A$$. Then we may take the target $$\mathcal{S}$$ of this function to be $$\mathcal{P}(A)$$. When we wish to regard the sets $$A_i$$ as subsets of $$A$$ in this way, we say that $$(A_i)_{i\in I}$$ is a *family of subsets of the set $$A$$*.
 
 ## Union and intersection
 
