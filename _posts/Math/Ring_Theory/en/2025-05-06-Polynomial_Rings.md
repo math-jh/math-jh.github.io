@@ -1,5 +1,6 @@
 ---
 title: "Polynomial Rings"
+description: "We define the polynomial ring over a commutative ring and examine the degree of a polynomial and homogeneous polynomials. We also cover the representation of polynomials via monomials, properties of degree, the leading term, and monic polynomials."
 excerpt: "Factorization of polynomial rings over commutative rings and Gauss's lemma"
 
 categories: [Math / Ring Theory]
@@ -13,8 +14,9 @@ sidebar:
 date: 2025-05-06
 last_modified_at: 2025-05-06
 weight: 3
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-01T23:30:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-01T23:30:01+00:00
 ---
 <div class="remark" markdown="1">
 
@@ -22,35 +24,35 @@ translation_source: kimi-cli
 
 </div>
 
-In [\[Algebraic Structures\] §Algebras, ⁋Definition 7](/en/math/algebraic_structures/algebras#def7), we defined the polynomial algebra $$A[\x_i]_{i\in I}$$ for an arbitrary (commutative) ring $$A$$. It has an $$A$$-algebra structure, but the scalar multiplication of $$A$$ defined on $$A[\x_i]_{i\in I}$$ comes from the inclusion $$A\hookrightarrow A[\x_i]_{i\in I}$$ when we view $$A[\x_i]_{i\in I}$$ as a ring; thus, to study the properties of $$A[\x_i]_{i\in I}$$, it suffices to regard it simply as a ring.
+In [\[Algebraic Structures\] §Algebras, ⁋Definition 7](/en/math/algebraic_structures/algebras#def7), we defined the polynomial algebra $$A[\x_i]_{i\in I}$$ for an arbitrary (commutative) ring $$A$$. It carries an $$A$$-algebra structure, but the scalar multiplication of $$A$$ on $$A[\x_i]_{i\in I}$$ arises from the inclusion $$A\hookrightarrow A[\x_i]_{i\in I}$$ when we view $$A[\x_i]_{i\in I}$$ as a ring; thus, to study the properties of $$A[\x_i]_{i\in I}$$, it suffices to regard it simply as a ring.
 
 ## Degree of Polynomials
 
-Before dealing with polynomials in earnest, let us first define the tools for handling them. First, *polynomials* defined over $$A$$ mean the elements of the polynomial ring $$P=A[\x_i]_{i\in I}$$. At this time, let us define $$\mathbb{N}^{(I)}$$ as the set of finitely supported functions from $$I$$ to $$\mathbb{N}$$
+Before dealing with polynomials in earnest, let us first define the tools for handling them. By a *polynomial* defined over $$A$$, we mean an element of the polynomial ring $$P=A[\x_i]_{i\in I}$$. Let $$\mathbb{N}^{(I)}$$ denote the set of finitely supported functions from $$I$$ to $$\mathbb{N}$$:
 
 $$\mathbb{N}^{(I)}=\{\nu:I \rightarrow \mathbb{N}\mid\text{$f(i)=0$ for all but finitely many $i\in I$}\}$$
 
-Then for any $$\nu\in \mathbb{N}^{(I)}$$, if we set
+Then for any $$\nu\in \mathbb{N}^{(I)}$$, setting
 
 $$\x^\nu=\prod_{i\in I} \x_i^{\nu_i}$$
 
-then $$\x^\nu$$ is an element of $$P$$. We call elements of the form
+makes $$\x^\nu$$ an element of $$P$$. We call elements of the form
 
 $$a\x^\nu$$
 
-*monomials*. Then any polynomial $$u$$ can be expressed as a finite sum of monomials
+*monomials*. Any polynomial $$u$$ can then be expressed as a finite sum of monomials
 
 $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu=0$ for all but finitely many $\nu$}$$
 
-On the other hand, for any $$\nu\in \mathbb{N}^{(I)}$$, if we define
+On the other hand, for any $$\nu\in \mathbb{N}^{(I)}$$, defining
 
 $$\lvert\nu\rvert=\sum_{i\in I} \nu_i$$
 
-then we may regard $$P=A[\x_i]_{i\in I}$$ as an $$\mathbb{N}$$-graded ring
+allows us to regard $$P=A[\x_i]_{i\in I}$$ as an $$\mathbb{N}$$-graded ring
 
 $$P=\bigoplus_{n\in \mathbb{N}}\bigoplus_{\lvert\nu\rvert=n}(A[\x_i]_{i\in I})_\nu=\bigoplus_{n\in \mathbb{N}} P_n$$
 
-Here, for each $$n$$, the elements of $$P_n$$ are called *homogeneous polynomials* of degree $$n$$. Also, for any polynomial $$u\in P$$, the component of $$u$$ of degree $$n$$ in this homogeneous decomposition is sometimes written as $$u_n$$.
+For each $$n$$, the elements of $$P_n$$ are called *homogeneous polynomials* of degree $$n$$. For any polynomial $$u\in P$$, the component of $$u$$ of degree $$n$$ in this homogeneous decomposition is sometimes written as $$u_n$$.
 
 <div class="definition" markdown="1">
 
@@ -103,7 +105,7 @@ and thus the coefficient of the highest-degree term is $$a_nb_m$$. However, if $
 
 </div>
 
-Now let us return to the general case. Given any two polynomials $$u,v\in A[\x_i]_{i\in I}$$, the indeterminates appearing in them are finite anyway, so when computing $$uv$$, it suffices to choose a finite subset $$J\subset I$$ and regard them in $$A[\x_j]_{j\in J}$$ instead of $$A[\x_i]_{i\in I}$$. Then the fact that $$A[\x_j]_{j\in J}$$ is an integral domain follows from [Lemma 3](#lem3) and the isomorphism
+Now let us return to the general case. Given any two polynomials $$u,v\in A[\x_i]_{i\in I}$$, only finitely many indeterminates appear in them, so when computing $$uv$$, it suffices to choose a finite subset $$J\subset I$$ and work in $$A[\x_j]_{j\in J}$$ instead of $$A[\x_i]_{i\in I}$$. Then the fact that $$A[\x_j]_{j\in J}$$ is an integral domain follows from [Lemma 3](#lem3) and the isomorphism
 
 $$A[\x_1,\x_2]\cong (A[\x_1])[\x_2]$$
 
