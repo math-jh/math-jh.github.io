@@ -13,10 +13,9 @@ header:
     overlay_filter: 0.5
 
 date: 2026-05-28
-last_modified_at: 2026-05-28
+last_modified_at: 2026-06-02
 weight: 6
 
-published: false
 ---
 
 [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 우리는 quantum cohomology 측의 quantum differential equation (QDE)이 해 공간으로 $$\dim_\mathbb{C} H^\ast(X)$$ 차원의 flat section을 가짐을 보였고, 그 fundamental solution을 명시적으로 적은 것이 *Givental의 $$J$$-function*이라 예고했었다. 한편 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서는 B-side에서 period matrix $$\mathcal{I}^a_p$$가 B-model connection $$\nabla^z_B$$의 fundamental solution matrix를 이루는 것을 살펴보았다. 우리가 예고했던 mirror theorem은 결국 A-side의 $$J$$-function과 B-side의 period matrix가 동일한 $$D$$-module의 fundamental solution이라는 statement로 구체화될 것이며, 이번 글이 그 주장에서 비어있는 A-side 자리를 채울 것이다.
@@ -291,7 +290,7 @@ $$I_X(q, z) = 1 + \tau(q)/z + O(z^{-2})$$
 
 </div>
 
-증명을 위해 양 변을 각각 살펴보면, $$J_X$$는 [명제 4](#prop4)에서 본 대로 small QDE ($$\ast$$)의 fundamental solution이고, $$I_X$$는 [정의 6](#def6)에서 charge 데이터로 명시적으로 주어진 hypergeometric 함수이다. 증명의 핵심은 이 명시적 $$I_X$$ 또한 $$J_X$$와 같은 $$D$$-module의 해, 즉 같은 QDE ($$\ast$$)의 해임을 직접 확인하는 데 있다. 만일 $$X$$가 toric Fano이면 $$H^\ast(X)$$가 $$H^2(X)$$로 생성되므로, ($$\ast$$)는 $$I_X$$의 한 성분에 대한 미분방정식으로 귀결되고, 이 때 $$I_X$$의 hypergeometric 곱에 $$z q_a\partial_{q_a}$$를 직접 먹이면 곱의 각 인자가 항별로 이 방정식을 만족함이 확인된다. 한편 $$I_X$$와 $$J_X$$는 모두 $$z \to \infty$$에서 $$1 + O(z^{-1})$$의 normalization을 가지는데, QDE의 해는 이 leading asymptotic으로부터 유일하게 결정되므로 $$J_X(\tau(q), z) = I_X(q, z)$$를 얻는다. 이에 대한 구체적인 계산은 $$X = \mathbb{P}^n$$에서 확인해보기로 한다. ([예시 8](#ex8))
+증명을 위해 양 변을 각각 살펴보면, $$J_X$$는 [명제 4](#prop4)에서 본 대로 small QDE ($$\ast$$)의 fundamental solution이고, $$I_X$$는 [정의 6](#def6)에서 charge 데이터로 명시적으로 주어진 hypergeometric 함수이다. 증명의 핵심은 이 명시적 $$I_X$$ 또한 $$J_X$$와 같은 $$D$$-module의 해, 즉 같은 QDE ($$\ast$$)의 해임을 직접 확인하는 데 있다. 만일 $$X$$가 toric Fano이면 $$H^\ast(X)$$가 $$H^2(X)$$로 생성되므로, ($$\ast$$)는 $$I_X$$의 한 성분에 대한 미분방정식으로 귀결되고, 이 때 $$I_X$$의 hypergeometric 곱에 $$z q_a\partial_{q_a}$$를 직접 먹이면 곱의 각 인자가 항별로 이 방정식을 만족함이 확인된다. 한편 $$I_X$$와 $$J_X$$는 모두 $$z \to \infty$$에서 $$1 + O(z^{-1})$$의 normalization을 가지는데, QDE의 해는 $$a_0$$이 결정되면 나머지는 이 leading asymptotic으로부터 점화식 형태로 유일하게 결정되므로 $$J_X(\tau(q), z) = I_X(q, z)$$를 얻는다. 이에 대한 구체적인 계산은 $$X = \mathbb{P}^n$$에서 확인해보기로 한다. ([예시 8](#ex8))
 
 여기서 mirror map이 잘 정의되는 것은 $$X$$의 Fano 성질 덕분임에 유의하자. $$X$$가 Fano이면 영이 아닌 모든 effective curve class $$\beta$$에 대해 $$-K_X \cdot \beta > 0$$이므로 $$q^\beta$$ 보정이 전부 $$z^{-1}$$ 이하 차수에만 나타나고, 따라서 $$I_X$$의 $$z^0$$ 항이 정확히 $$1$$이 되어 ($$I_X = 1 + O(z^{-1})$$) $$z^{-1}$$ 계수로 $$\tau(q)$$를 읽어낼 수 있다. 더 일반적으로 $$-K_X$$가 nef이기만 한 *semi-positive* 경우에는 $$-K_X \cdot \beta = 0$$인 방향이 $$z^0$$ 차수에 보정 $$I_0(q) \neq 1$$을 만들어 관계식이 $$J_X(\tau(q), z) = I_X(q, z)/I_0(q)$$로 수정된다. 
 
@@ -329,13 +328,15 @@ $$J_{\mathbb{P}^n}(q, z) = I_{\mathbb{P}^n}(q, z)$$
 
 이어야 한다. 이를 직접 확인해보자. 
 
-B-side의 계산은 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 어느정도 끝나있다. 그에 따르면, 우리는 period matrix의 첫 column $$\mathcal{I}^0_p$$가 다음의 ODE
+B-side의 계산은 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 어느정도 끝나있다. 그에 따르면, $$\mathbb{P}^n$$의 fundamental solution matrix $$\mathcal{I}_p^a(q,z)$$에 대하여, Lefschetz thimble base $$\Gamma_p$$에 해당하는 vector의 첫째 성분 $$\mathcal{I}_p^0(q,z)$$가 다음의 식
 
-$$(z\partial_q)(qz\partial_q)^n\mathcal{I}^0_p = \mathcal{I}^0_p \tag{$\ast\ast$}$$
+$$(z\partial_q)(qz\partial_q)^n\mathcal{I}_p^0=\mathcal{I}_p^0 \tag{$\ast\ast$}$$
 
-를 만족해야 한다는 것을 안다. [주장 5](#conj5)의 mirror theorem이 옳다면 A-side의 $$I_{\mathbb{P}^n}$$도 같은 ODE를 만족해야 한다. 다만 $$\mathcal{I}^0_p$$는 scalar인 반면 $$I_{\mathbb{P}^n}$$은 $$H^\ast(\mathbb{P}^n) = \mathbb{C}[H]/(H^{n+1})$$-값이므로, 맞대어 보려면 같은 scalar 성분을 꺼내야 한다. $$H$$에 대한 다항식으로 보아 $$H = 0$$을 대입하면 상수항인 $$H^0$$-coefficient만 남는데, [정의 6](#def6)의 곱 식에서 prefactor는 $$e^0 = 1$$, 각 인자는 $$(H + jz) \mapsto jz$$가 되므로 ($$\prod_{j=1}^d jz = d!\,z^d$$)
+을 만족해야 한다. 이제 우리는 위의 $$I$$-function에서 $$H=0$$으로 둔 것이 이 식을 만족함을 보인다. ($$\ast$$)에 따르면 $$qz\partial_q$$를 취하는 것은 $$H$$와의 quantum product를 취하는 것과 같고, 이는 B-side에서 $$\mathcal{I}_p^0$$으로부터 귀납적으로 $$\mathcal{I}_p^a$$들을 계산하는 것과 정확히 같으며, 따라서 $$H=0$$일 때의 이들이 같은 ODE의 해라는 것을 보이는 것으로 [명제 7](#prop7)의 검증이 완료된다. 
 
-$$\Phi_0(q, z) := I_{\mathbb{P}^n}(q, z)\big|_{H=0} = \sum_{d \geq 0} \frac{q^d}{(d!)^{n+1}z^{(n+1)d}}$$
+그럼 [정의 6](#def6)의 곱 식에서 prefactor는 $$e^0 = 1$$, 각 인자는 $$(H + jz) \mapsto jz$$가 되므로 우리는 다음의 식
+
+$$\Phi_0(q, z) := I_{\mathbb{P}^n}(q, z)\big\vert_{H=0} = \sum_{d \geq 0} \frac{q^d}{(d!)^{n+1}z^{(n+1)d}}$$
 
 를 얻는다. 이 $$\Phi_0$$가 ($$\ast\ast$$)를 만족함을 직접 확인하자. 직접 계산하면 $$qz\partial_q$$의 작용은 항별로 $$d$$를 끌어내고 $$z^{-1}$$ 인자를 붙이므로
 
@@ -345,17 +346,13 @@ $$(qz\partial_q)^n\Phi_0 = \sum_{d\geq 0}\frac{d^n q^d}{(d!)^{n+1}z^{(n+1)d - n}
 
 $$(z\partial_q)(qz\partial_q)^n\Phi_0 = \sum_{d \geq 1}\frac{d^{n+1}q^{d-1}}{(d!)^{n+1}z^{(n+1)d - n - 1}} = \sum_{d' \geq 0}\frac{(d'+1)^{n+1}q^{d'}}{((d'+1)!)^{n+1}z^{(n+1)d'}} = \Phi_0$$
 
-가 정확히 성립한다. 이로써 $$\Phi_0$$와 B-side의 period $$\mathcal{I}^0_p$$는 같은 ($$n+1$$)-계 선형 ODE ($$\ast\ast$$)의 해이다. 두 해가 *같은* 함수임은 다음에서 나온다. ($$\ast\ast$$)를 $$q$$-멱급수 $$\Phi = \sum_{d \geq 0} a_d q^d$$에 적용하면 위 계산이 그대로 계수 점화식
+가 정확히 성립하는 것을 확인할 수 있다. 
 
-$$a_d = \frac{a_{d-1}}{d^{n+1} z^{n+1}} \qquad (d \geq 1)$$
-
-을 주므로, $$q$$에서 정칙인 ($$\ast\ast$$)의 해는 상수항 $$a_0$$ 하나로 완전히 결정된다 (나머지 해들은 $$\ln q$$를 포함한다). $$\Phi_0$$와 $$\mathcal{I}^0_p$$는 모두 $$z \to \infty$$에서 $$1$$로 normalize되어 ($$a_0 = 1$$, 곧 $$q^0$$ 항이 $$1$$) 있으므로 이 점화식을 따라 나머지 계수가 전부 일치하여 $$\Phi_0 = \mathcal{I}^0_p$$이다. 끝으로 $$H^\ast(\mathbb{P}^n)$$이 $$H$$로 cyclic하게 생성되므로 ([명제 4](#prop4) 직후 논의) 나머지 $$H$$-성분도 ($$\ast$$)의 $$z q\partial_q$$-미분으로 $$\Phi_0$$에서 복원되어, $$J_{\mathbb{P}^n} = I_{\mathbb{P}^n}$$ 전체가 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)의 oscillating integral과 일치한다. 
-
-[주장 5](#conj5)의 stationary phase 측면 또한 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 이미 계산해 두었다. 즉 $$W_q$$의 $$n+1$$개 critical point $$x_\zeta = \zeta q^{1/(n+1)}$$에서의 critical value $$(n+1)\zeta q^{1/(n+1)}$$과 Hessian determinant $$(n+1)(\zeta q^{1/(n+1)})^{-n}$$이 [§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3)의 stationary phase formula에 대입되어 oscillating integral의 $$z\to 0^+$$ asymptotic을 주며, 이것이 $$I_{\mathbb{P}^n}(q, z)$$의 $$z \to 0$$ asymptotic과도 일치한다 ([CK, §11.2]).
+[주장 5](#conj5)의 stationary phase 측면 또한 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 이미 계산해 두었으나, 이는 이번 글에서 우리의 핵심적인 관심사에서는 약간 벗어나있으므로 생략하기로 한다. 
 
 </div>
 
-이 예시는 mirror symmetry가 추상적인 동형이 아니라 *구체적인 hypergeometric 함수의 일치*로 실현됨을 보여준다. 일반적인 toric Fano variety의 경우 비슷한 명시적 계산이 charge matrix로부터 진행되며, 그 모든 사례에서 [명제 7](#prop7)의 $$I = J$$ 정리가 mirror symmetry의 실용적인 검증을 제공한다.
+이 예시는 mirror symmetry가 추상적인 동형이 아니라 구체적인 두 hypergeometric series의 일치로 실현됨을 보여준다. 일반적인 toric Fano variety의 경우 비슷한 명시적 계산이 charge matrix로부터 진행되며, 그 모든 사례에서 [명제 7](#prop7)의 $$I = J$$ 정리가 mirror symmetry의 실용적인 검증을 제공한다.
 
 ## Big quantum cohomology로의 확장
 
@@ -363,13 +360,13 @@ $$a_d = \frac{a_{d-1}}{d^{n+1} z^{n+1}} \qquad (d \geq 1)$$
 
 Big 버전의 setup으로 가려면 $$H^\ast(X)$$의 일반적인 deformation parameter $$t = \sum_{a=0}^s t^a T_a$$를 도입해야 한다. 임의의 $$t \in H^\ast(X)$$에 대한 big quantum product $$\star_t$$는 [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 본 대로 $$\mathcal{C}_\alpha = T_\alpha \star_t -$$로 Dubrovin connection의 connection $$1$$-form을 결정한다. 그 dual horizontal section equation은
 
-$$z\partial_a s = T_a \star_t s\qquad (a = 0, 1, \ldots, s)$$
+$$z\partial_{t^a} s = T_a \star_t s\qquad (a = 0, 1, \ldots, \dim_\mathbb{C} H^\ast(X) - 1)$$
 
 이며, 이것이 small case의 ($$\ast$$)를 $$H^\ast$$ 전체 방향으로 확장한 *big QDE*이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9** (Big $$J$$-function)</ins> $$X$$의 *big Givental $$J$$-function* $$J_X^{\mathrm{big}}: H^\ast(X) \times \mathbb{C}^\ast \to H^\ast(X)$$는 다음으로 정의된다.
+<ins id="def9">**정의 9 (Big $$J$$-function)**</ins> $$X$$의 *big Givental $$J$$-function* $$J_X^{\mathrm{big}}: H^\ast(X) \times \mathbb{C}^\ast \to H^\ast(X)$$는 다음으로 정의된다.
 
 $$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}, n \geq 0 \\ (\beta, n) \neq (0, 0)}} \sum_{a=0}^s \frac{q^\beta}{n!} \left\langle \frac{T_a}{z - \psi}, t, \ldots, t \right\rangle_{0, n+1, \beta} T^a \right)$$
 
@@ -377,9 +374,9 @@ $$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in 
 
 </div>
 
-Big J가 big QDE의 horizontal section을 이룬다는 사실은 [명제 4](#prop4)의 small 버전과 같은 논증 — $$\partial_a$$를 marked point 추가, $$\psi$$-class를 topological recursion relation으로 분해 — 을 모든 $$a = 0, \ldots, s$$에 대해 적용하면 그대로 따른다. 그리고 small J는 big J의 $$t = t_{(2)} \in H^2(X)$$ specialization으로 복원되는데, $$H^2$$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $$n$$번 적용하면 $$t_{(2)}$$ 삽입들이 $$(t_{(2)} \cdot \beta)^n$$ 인자와 $$\psi$$-shift 보정으로 빠져나오고, 이들이 $$\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$$로 합산되며 $$\psi$$-shift 보정이 추가 $$z^{-1}$$ 인자를 만들어내어, 결과적으로 marked point가 $$1$$개로 줄어든 [정의 3](#def3)의 small J 형태가 그대로 복원된다. 
+Big $$J$$-function이 big QDE의 horizontal section을 이룬다는 사실은 [명제 4](#prop4)의 small 버전과 같은 논증을 따르면 된다. Small $$J$$-function은 big $$J$$-function의 $$t = t_{(2)} \in H^2(X)$$ specialization으로 복원되는데, $$H^2$$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $$n$$번 적용하면 $$t_{(2)}$$ 삽입들이 $$(t_{(2)} \cdot \beta)^n$$ 인자와 $$\psi$$-shift 보정으로 빠져나오고, 이들이 $$\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$$로 합산되며 $$\psi$$-shift 보정이 추가 $$z^{-1}$$ 인자를 만들어내어, 결과적으로 marked point가 $$1$$개로 줄어든 [정의 3](#def3)의 small $$J$$-function 형태가 그대로 복원된다. 
 
-Big J-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 mirror theorem ([주장 5](#conj5))도 big 버전으로 격상되어 *전체* $$S$$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $$I = J$$ ([명제 7](#prop7))도 mirror map $$\tau(q)$$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다 (예시: Calabi-Yau hypersurface). 한편 우리의 주된 응용 대상인 toric Fano variety (특히 Fano index $$\geq 2$$) 와 partial flag variety 의 경우 mirror map이 trivial하거나 small 정보로 충분하여, 본 글의 main thread는 small case로 일관되게 진행하였다.
+Big $$J$$-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 mirror theorem ([주장 5](#conj5))도 big 버전으로 격상되어 *전체* $$S$$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $$I = J$$ ([명제 7](#prop7))도 mirror map $$\tau(q)$$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다. 
 
 ---
 
