@@ -604,7 +604,147 @@ linear_algebra-ko:
         url: ko/math/linear_algebra/inner_product_spaces
       - title: "최소제곱법"
         url: ko/math/linear_algebra/least_squares_method
-  - title: 
+  - title:
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
+calculus-ko:
+  - title: <a href="/ko/calculus/" class="sidebar_title">미적분학</a>
+    children:
+      - title: "함수와 극한"
+        url: ko/math/calculus/functions_and_limits
+      - title: "연속함수"
+        url: ko/math/calculus/continuity
+      - title: "미분과 도함수"
+        url: ko/math/calculus/derivatives
+      - title: "미분법"
+        url: ko/math/calculus/differentiation_rules
+      - title: "평균값 정리"
+        url: ko/math/calculus/mean_value_theorem
+      - title: "도함수의 응용"
+        url: ko/math/calculus/applications_of_derivatives
+      - title: "테일러 정리"
+        url: ko/math/calculus/taylor_theorem
+      - title: "부정적분"
+        url: ko/math/calculus/antiderivatives
+      - title: "정적분"
+        url: ko/math/calculus/definite_integral
+      - title: "미적분의 기본정리"
+        url: ko/math/calculus/fundamental_theorem_of_calculus
+      - title: "적분법"
+        url: ko/math/calculus/integration_techniques
+      - title: "이상적분"
+        url: ko/math/calculus/improper_integrals
+      - title: "수열의 극한"
+        url: ko/math/calculus/sequences
+      - title: "무한급수"
+        url: ko/math/calculus/series
+      - title: "멱급수"
+        url: ko/math/calculus/power_series
+      - title: "다변수함수와 편미분"
+        url: ko/math/calculus/partial_derivatives
+      - title: "다중적분"
+        url: ko/math/calculus/multiple_integrals
+  - title:
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
+analysis-ko:
+  - title: <a href="/ko/analysis/" class="sidebar_title">해석학</a>
+    children:
+      - title: "실수의 완비성"
+        url: ko/math/analysis/completeness_of_reals
+      - title: "수열의 수렴"
+        url: ko/math/analysis/convergence_of_sequences
+      - title: "Cauchy 수열과 완비성"
+        url: ko/math/analysis/cauchy_sequences
+      - title: "부분수열과 Bolzano–Weierstrass 정리"
+        url: ko/math/analysis/bolzano_weierstrass
+      - title: "무한급수"
+        url: ko/math/analysis/series
+      - title: "거리공간"
+        url: ko/math/analysis/metric_spaces
+      - title: "열린집합과 닫힌집합"
+        url: ko/math/analysis/open_and_closed_sets
+      - title: "함수의 극한과 연속"
+        url: ko/math/analysis/limits_and_continuity
+      - title: "컴팩트성"
+        url: ko/math/analysis/compactness
+      - title: "연속함수의 성질"
+        url: ko/math/analysis/continuous_functions
+      - title: "연결성과 중간값 정리"
+        url: ko/math/analysis/connectedness
+      - title: "미분"
+        url: ko/math/analysis/differentiation
+      - title: "평균값 정리와 테일러 정리"
+        url: ko/math/analysis/mean_value_theorem
+      - title: "Riemann 적분"
+        url: ko/math/analysis/riemann_integral
+      - title: "미적분의 기본정리"
+        url: ko/math/analysis/fundamental_theorem_of_calculus
+      - title: "함수열과 점별수렴"
+        url: ko/math/analysis/sequences_of_functions
+      - title: "균등수렴"
+        url: ko/math/analysis/uniform_convergence
+      - title: "멱급수와 해석함수"
+        url: ko/math/analysis/power_series
+      - title: "다변수 미분"
+        url: ko/math/analysis/multivariable_differentiation
+      - title: "역함수 정리와 음함수 정리"
+        url: ko/math/analysis/inverse_function_theorem
+      - title: "미분방정식의 존재성과 유일성"
+        url: ko/math/analysis/existence_uniqueness_ode
+      - title: "선형 미분방정식계"
+        url: ko/math/analysis/linear_ode
+  - title:
+    children:
+      - title: "블로그 소개"
+        url: ko/about
+      - title: "찾아보기"
+        url: ko/misc/index_ko
+
+number_theory-ko:
+  - title: <a href="/ko/number_theory/" class="sidebar_title">정수론</a>
+    children:
+      - title: "나눗셈과 최대공약수"
+        url: ko/math/number_theory/divisibility
+      - title: "유클리드 호제법과 Bézout 항등식"
+        url: ko/math/number_theory/euclidean_algorithm
+      - title: "소수와 산술의 기본정리"
+        url: ko/math/number_theory/primes
+      - title: "소수의 무한성과 분포"
+        url: ko/math/number_theory/distribution_of_primes
+      - title: "합동식"
+        url: ko/math/number_theory/congruences
+      - title: "일차 합동식"
+        url: ko/math/number_theory/linear_congruences
+      - title: "중국인의 나머지 정리"
+        url: ko/math/number_theory/chinese_remainder_theorem
+      - title: "페르마 소정리"
+        url: ko/math/number_theory/fermat_little_theorem
+      - title: "오일러 정리와 phi 함수"
+        url: ko/math/number_theory/euler_theorem
+      - title: "산술적 함수와 뫼비우스 반전"
+        url: ko/math/number_theory/arithmetic_functions
+      - title: "원시근"
+        url: ko/math/number_theory/primitive_roots
+      - title: "이차 잉여"
+        url: ko/math/number_theory/quadratic_residues
+      - title: "이차 상호법칙"
+        url: ko/math/number_theory/quadratic_reciprocity
+      - title: "가우스 정수와 두 제곱수의 합"
+        url: ko/math/number_theory/gaussian_integers
+      - title: "연분수"
+        url: ko/math/number_theory/continued_fractions
+      - title: "펠 방정식"
+        url: ko/math/number_theory/pell_equation
+  - title:
     children:
       - title: "블로그 소개"
         url: ko/about
@@ -747,7 +887,21 @@ mirror_symmetry-ko-research:
         url: ko/math/mirror_symmetry/coulomb_branch
       - title: "3d mirror symmetry와 Seiberg duality"
         url: ko/math/mirror_symmetry/three_d_mirror
-  - title: 
+      - title: "Cominuscule 거울: Lagrangian과 orthogonal Grassmannian"
+        url: ko/math/mirror_symmetry/cominuscule_mirror
+      - title: "Wild character variety의 cluster 구조와 isomonodromic deformation"
+        url: ko/math/mirror_symmetry/wild_character_variety
+      - title: "Exotic 양자 차분 방정식의 범주적 lift"
+        url: ko/math/mirror_symmetry/exotic_qde
+      - title: "Balancing operator와 cotangent bundle의 vertex function"
+        url: ko/math/mirror_symmetry/balancing_operator
+      - title: "Higher genus 확장: all-genus MF-CohFT와 quantum Serre duality"
+        url: ko/math/mirror_symmetry/higher_genus
+      - title: "Cohomological Hall algebra와 BPS Lie 대수"
+        url: ko/math/mirror_symmetry/cohomological_hall
+      - title: "DT 불변량의 K-이론적 flop 공식"
+        url: ko/math/mirror_symmetry/flop_formula
+  - title:
     children:
       - title: "블로그 소개"
         url: ko/about

@@ -1,6 +1,6 @@
 ---
-
 title: "Product of Sets"
+description: "This post defines the product of sets from the perspective of functions, and explores the structure of products through component functions as a generalization of ordered pairs. It also examines the conditions for induced maps to be injective or surjective."
 excerpt: "Product of Sets"
 
 categories: [Math / Set Theory]
@@ -11,19 +11,18 @@ header:
 sidebar: 
     nav: "set_theory-en"
 
-date: 2026-03-06
-last_modified_at: 2026-03-06
+date: 2021-08-15
+last_modified_at: 2022-11-25
 weight: 10
-
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T11:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T11:30:02+00:00
 ---
-
 ## Product of Sets
 
-The most natural generalization of an ordered pair is a function. For instance, an $$n$$-tuple may be regarded as a function with domain $$I=\{1,2,\cdots, n\}$$ that returns the $$i$$-th component when given $$i$$ as input.
+The most natural generalization of an ordered pair is a function. For instance, an $$n$$-tuple may be regarded as a function with domain $$I=\{1,2,\cdots, n\}$$ that returns the $$i$$-th component when given $$i$$.
 
-Consider sets $$A_1$$ and $$A_2$$. The product $$A_1\times A_2$$ is the collection of ordered pairs $$(x_1,x_2)$$. Viewing ordered pairs as functions as above, $$A_1\times A_2$$ is the *collection of functions* with domain $$\{1,2\}$$, where each function $$f$$ satisfies $$f(1)=x_1\in A_1$$ and $$f(2)=x_2\in A_2$$.
+For example, given sets $$A_1$$ and $$A_2$$, the product $$A_1\times A_2$$ is the collection of ordered pairs $$(x_1,x_2)$$. Viewing ordered pairs as functions as above, $$A_1\times A_2$$ is the *collection of functions* with domain $$\{1,2\}$$, where each function $$f$$ satisfies $$f(1)=x_1\in A_1$$ and $$f(2)=x_2\in A_2$$.
 
 It is then natural to define the product of a general family as follows.
 
@@ -35,11 +34,11 @@ As with the notation for families of sets, elements of $$P$$ are written as $$(x
 
 </div>
 
-Thus to consider the product of sets is to consider a *set of functions*.
+Thus, to consider the product of sets is to consider a *set of functions*.
 
-Let sets $$A$$ and $$B$$ be given. A function from $$A$$ to $$B$$ is an element of $$\mathcal{P}(A\times B)$$, so the collection of all such functions is a subset of $$\mathcal{P}(A\times B)$$. We denote this set by $$B^A$$. Let $$\Fun(A,B)$$ denote the set of all functions from $$A$$ to $$B$$. For any $$F\in B^A$$, the triple $$f=(F,A,B)$$ is a function from $$A$$ to $$B$$, and the assignment $$F\mapsto f$$ is a function from $$B^A$$ to $$\Fun(A,B)$$.
+Let sets $$A$$ and $$B$$ be given. A function from $$A$$ to $$B$$ is an element of $$\mathcal{P}(A\times B)$$, so the collection of all such functions is a subset of $$\mathcal{P}(A\times B)$$. We denote this set by $$B^A$$. Let $$\Fun(A,B)$$ denote the set of all functions from $$A$$ to $$B$$. Then for any $$F\in B^A$$, the triple $$f=(F,A,B)$$ is a function from $$A$$ to $$B$$, and the assignment $$F\mapsto f$$ is a function from $$B^A$$ to $$\Fun(A,B)$$.
 
-Conversely, for any function $$f=(F,A,B)$$, the correspondence sending $$f$$ to the element $$F\in B^A$$ is not only a function but also the inverse of the correspondence defined above. Hence there exists a natural bijection between $$B^A$$ and $$\Fun(A,B)$$, and these two sets may be identified.
+Conversely, for any function $$f=(F,A,B)$$, the correspondence sending $$f$$ to the element $$F\in B^A$$ is not only a function but also the inverse of the correspondence defined above. Hence there exists a natural bijection between $$B^A$$ and $$\Fun(A,B)$$, and we may identify these two sets.
 
 Let functions $$u:A'\rightarrow A$$ and $$v:B\rightarrow B'$$ be given, and consider the following diagram.
 
@@ -55,7 +54,7 @@ In this diagram, whenever a function $$f:A\rightarrow B$$ is given, we can assoc
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First suppose $$u$$ and $$v$$ are surjective and injective respectively. To show that $$f\mapsto\tilde{f}$$ is injective, we must prove that $$\tilde{f}=\tilde{g}$$ implies $$f=g$$. Let $$s$$ and $$r$$ be a section and retraction corresponding to $$u$$ and $$v$$ respectively. If $$\tilde{f}=\tilde{g}$$, then
+First suppose $$u$$ is surjective and $$v$$ is injective. To show that $$f\mapsto\tilde{f}$$ is injective, we must prove that $$\tilde{f}=\tilde{g}$$ implies $$f=g$$. Let $$s$$ and $$r$$ be a section and retraction corresponding to $$u$$ and $$v$$ respectively. If $$\tilde{f}=\tilde{g}$$, then
 
 $$\begin{aligned}
   f&=\id_B\circ f\circ\id_A=(r\circ v)\circ f\circ(u\circ s)=r\circ(v\circ f\circ u)\circ s\\
@@ -65,7 +64,7 @@ $$\begin{aligned}
 
 so $$f=g$$. Hence the given function is injective.
 
-Similarly, suppose $$u$$ and $$v$$ are injective and surjective respectively. We must show that for any $$f'\in\Fun(A',B')$$, there exists $$f\in\Fun(A,B)$$ with $$\tilde{f}=f'$$. Let $$r'$$ and $$s'$$ be a retraction and section for $$u$$ and $$v$$ respectively. Then
+Similarly, suppose $$u$$ is injective and $$v$$ is surjective. We must show that for any $$f'\in\Fun(A',B')$$, there exists $$f\in\Fun(A,B)$$ with $$\tilde{f}=f'$$. Let $$r'$$ and $$s'$$ be a retraction and section for $$u$$ and $$v$$ respectively. Then
 
 $$f'=\id_{B'}\circ f'\circ\id_{A'}=(v\circ s')\circ f'\circ(r'\circ u)=v\circ(s'\circ f'\circ r')\circ u$$
 
@@ -75,7 +74,7 @@ so $$f=s'\circ f'\circ r'$$ is an element of $$\Fun(A,B)$$ satisfying $$f'=\tild
 
 In particular, if both $$u$$ and $$v$$ are bijections, then $$f\mapsto \tilde{f}$$ is also a bijection.
 
-Earlier we saw that the sum of sets satisfies a universal property. Similarly, the product satisfies an analogous universal property.
+Earlier we saw that the sum of sets satisfies a universal property. Likewise, the product satisfies an analogous universal property.
 
 <div class="proposition" markdown="1">
 
@@ -168,4 +167,3 @@ Here $$v$$ is the bijection sending $$(x_i)_{i\in I}$$ to $$(x_{u(k)})_{k\in K}$
 **[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
 
 ---
-

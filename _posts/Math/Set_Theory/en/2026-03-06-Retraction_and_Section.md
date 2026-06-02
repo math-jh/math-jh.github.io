@@ -1,6 +1,6 @@
 ---
-
 title: "Retraction and Section"
+description: "We discuss the definitions of retractions for injective functions and sections for surjective functions, and show that these are respectively surjective and injective."
 excerpt: "Properties of Surjective and Injective Functions"
 
 categories: [Math / Set Theory]
@@ -14,14 +14,13 @@ sidebar:
 toc: false
 toc_sticky: false
 
-date: 2026-03-06
-last_modified_at: 2026-03-06
+date: 2021-08-15
+last_modified_at: 2022-11-24
 weight: 7
-
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-02T12:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T12:00:01+00:00
 ---
-
 The end of the previous post enables us to give new characterizations of injective and surjective functions. ([§Operations on Functions, ⁋Remark](/en/math/set_theory/operation_of_functions#rmk1))
 
 <div class="proposition" markdown="1">
@@ -58,8 +57,7 @@ commute. Such $$r$$ and $$s$$ have names.
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> Let $$f$$ be an injective function from $$A$$ to $$B$$. A function $$r:B\rightarrow A$$ satisfying $$r\circ f=\id_A$$ is called a *retraction* of $$f$$.
-
+<ins id="def2">**Definition 2**</ins> Let $$f$$ be an injective function from $$A$$ to $$B$$. A function $$r:B\rightarrow A$$ satisfying $$r\circ f=\id_A$$ is called a *retraction* of $$f$$.  
 If $$f$$ is a surjective function from $$A$$ to $$B$$, a function $$s:B\rightarrow A$$ satisfying $$f\circ s=\id_B$$ is called a *section* of $$f$$.
 
 </div>
@@ -97,7 +95,7 @@ so the above inclusions become equalities. The following proposition is straight
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-1. Suppose $$f''(a_1)=f''(a_2)$$. Then $$f'(f(a_1))=f'(f(a_2))$$, and since $$f'$$ and $$f$$ are injective in succession, we obtain $$a_1=a_2$$. Hence $$f''$$ is injective.
+1. Suppose $$f''(a_1)=f''(a_2)$$. Then $$f'(f(a_1))=f'(f(a_2))$$, and applying the injectivity of $$f'$$ and then that of $$f$$, we obtain $$a_1=a_2$$. Hence $$f''$$ is injective.
     Now let $$r$$ and $$r'$$ be retractions of $$f$$ and $$f'$$ respectively, i.e., $$r\circ f=\id_A$$ and $$r'\circ f'=\id_B$$. Then for any $$a\in A$$,
 
       $$((r\circ r')\circ(f'\circ f))(a)=(r\circ\id_{B}\circ f)(a)=(r\circ f)(a)=\id_{A}(a)=a$$
@@ -116,7 +114,7 @@ so the above inclusions become equalities. The following proposition is straight
 
     so $$r''\circ f'$$ is a retraction of $$f$$.
 
-4. Since $$f''$$ is surjective, for any $$c\in C$$ there exists $$a\in A$$ with $$f''(a)=c$$. Thus $$f'(f(a))=c$$, so $$f(a)=b\in B$$ satisfies $$f'(b)=c$$. Moreover, for any $$c\in C$$,
+4. Since $$f''$$ is surjective, for any $$c\in C$$ there exists $$a\in A$$ with $$f''(a)=c$$. Thus $$f'(f(a))=c$$, so taking $$b=f(a)\in B$$ gives $$f'(b)=c$$. Moreover, for any $$c\in C$$,
 
      $$(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\id_C(c)=c.$$  
 
@@ -170,7 +168,7 @@ commute.
 
     so by hypothesis $$f(s(g(x)))=f(x)$$. Hence $$h(g(x))=f(x)$$, and such an $$h$$ exists.
 
-2. Suppose $$f=g\circ h$$. For any $$y\in f(C)$$, write $$y=f(x)$$; then $$y=f(x)=g(h(x))\in g(A)$$, so $$f(C)\subseteq g(A)$$ is immediate. As in part 1, we first establish uniqueness of $$h$$. Since $$h$$ is defined by the condition $$f=g\circ h$$, to show that $$h$$ has a uniquely determined value at each $$y\in G$$, it suffices to show that the right-hand side of
+2. Suppose $$f=g\circ h$$. For any $$y\in f(C)$$, write $$y=f(x)$$; then $$y=f(x)=g(h(x))\in g(A)$$, so $$f(C)\subseteq g(A)$$ is immediate. As in part 1, we first establish uniqueness of $$h$$. Since $$h$$ is defined by the condition $$f=g\circ h$$, to show that $$h$$ has a uniquely determined value at each $$y\in C$$, it suffices to show that the right-hand side of
 
     $$h(y)=(\id_A\circ h)(y)=((r\circ g)\circ h)(y)=(r \circ f)(y)$$
 

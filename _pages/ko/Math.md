@@ -14,6 +14,7 @@ author_profile: true
 ## 교양수학
 
 - [선형대수학](/ko/linear_algebra/)
+- [미적분학](/ko/calculus/)
 
 ## 수학기초론
 
@@ -29,6 +30,15 @@ author_profile: true
 - [체론](/ko/field_theory/)
 - [호몰로지 대수학](/ko/homological_algebra/)
 - [가환대수학](/ko/commutative_algebra/)
+
+## 해석학
+
+- [미적분학](/ko/calculus/)
+- [해석학](/ko/analysis/)
+
+## 정수론
+
+- [정수론](/ko/number_theory/)
 
 ## 기하학 및 위상수학
 
