@@ -1,6 +1,6 @@
 ---
-
 title: "Examples of Equivalence Relations"
+description: "This post explores examples of equivalence relations naturally defined from functions, and covers saturation of equivalence relations along with isomorphism theorems."
 excerpt: "Examples of equivalence relations, saturation of equivalence relations, isomorphism theorems"
 
 categories: [Math / Set Theory]
@@ -11,15 +11,14 @@ header:
 sidebar: 
     nav: "set_theory-en"
 
-date: 2026-03-07
-last_modified_at: 2026-03-07
+date: 2021-08-22
+last_modified_at: 2022-11-26
 weight: 13
-
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-02T20:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T20:30:02+00:00
 ---
-
-In this article, we explore examples of equivalence relations that arise in various contexts.
+In this article, we examine examples of equivalence relations that arise in various contexts.
 
 ## Equivalence Relations Defined by Functions
 
@@ -33,13 +32,13 @@ In the previous article, we saw that from an equivalence relation $$(R,A,A)$$, a
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-It is obvious that the given relation is reflexive on $$A$$. Moreover, if $$f(x)=f(y)$$, then $$f(y)=f(x)$$, and if $$f(x)=f(y)$$ and $$f(y)=f(z)$$, then $$f(x)=f(z)$$, so this relation is also symmetric and transitive.
+That the given relation is reflexive on $$A$$ is obvious. Moreover, if $$f(x)=f(y)$$, then $$f(y)=f(x)$$, and if $$f(x)=f(y)$$ and $$f(y)=f(z)$$, then $$f(x)=f(z)$$, so this relation is also symmetric and transitive.
 
 </details>
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> The equivalence relation defined in the previous proposition is called the *equivalence relation defined by $$f$$*.
+<ins id="def2">**Definition 2**</ins> The equivalence relation defined in the preceding proposition is called the *equivalence relation defined by $$f$$*.
 
 </div>
 
@@ -61,7 +60,7 @@ is compatible with the equivalence relation
 
 > $$x-y$$ is a multiple of 4
 
-Rewriting the definition above from the perspective of equivalence classes, we have the following.
+Rewriting the above definition from the perspective of equivalence classes, we obtain the following.
 
 <div class="proposition" markdown="1">
 
@@ -86,7 +85,7 @@ The reverse direction is obvious. Suppose for some $$t\in A/R$$ there exists $$a
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> Let $$R$$ be an equivalence relation on $$A$$ and $$X$$ be a subset of $$A$$. $$X$$ is *saturated* with respect to $$R$$ if the unary relation $$x\in A$$ is compatible with $$R$$.
+<ins id="def5">**Definition 5**</ins> Let $$R$$ be an equivalence relation on $$A$$ and let $$X$$ be a subset of $$A$$. Then $$X$$ is *saturated* with respect to $$R$$ if the unary relation $$x\in A$$ is compatible with $$R$$.
 
 </div>
 
@@ -109,7 +108,7 @@ $$p^{-1}(p(X))=\bigcup_{x\in X}p^{-1}(\left\{p(x)\right\})\subseteq X$$
 
 holds.
 
-On the other hand, even if $$X$$ is not $$R$$-saturated, the set $$p^{-1}(p(X))$$ becomes $$R$$-saturated. To see this, choose $$x\in p^{-1}(p(X))$$ arbitrarily, and let any $$x'$$ satisfying $$x\sim_{\tiny R} x'$$ be given. Then
+On the other hand, even if $$X$$ is not $$R$$-saturated, the set $$p^{-1}(p(X))$$ is $$R$$-saturated. To see this, choose $$x\in p^{-1}(p(X))$$ arbitrarily, and let any $$x'$$ satisfying $$x\sim_{\tiny R} x'$$ be given. Then
 
 $$x\sim_{\tiny R} x'\iff p(x)=p(x')$$
 
@@ -123,11 +122,11 @@ so $$p^{-1}(p(X))$$ is the smallest $$R$$-saturated subset containing $$X$$. Thi
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> For an equivalence relation $$(R,A,A)$$ and a function $$f$$ with domain $$A$$, $$f$$ is *compatible* with $$R$$ if the unary relation $$y=f(x)$$ with respect to $$x$$ is compatible with $$R$$.
+<ins id="def6">**Definition 6**</ins> For an equivalence relation $$(R,A,A)$$ and a function $$f$$ with domain $$A$$, we say that $$f$$ is *compatible* with $$R$$ if the unary relation $$y=f(x)$$ in $$x$$ is compatible with $$R$$.
 
 </div>
 
-That is, for $$f$$ to be compatible with $$R$$, $$f$$ must be a constant function when restricted to each equivalence class. Now applying [§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4), we obtain the following.
+That is, for $$f$$ to be compatible with $$R$$, the restriction of $$f$$ to each equivalence class must be constant. Now applying [§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4), we obtain the following.
 
 <div class="proposition" markdown="1">
 
@@ -171,7 +170,7 @@ The following definition was already mentioned in [§Equivalence Relations, ⁋E
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**Definition 8**</ins> For two equivalence relations $$R$$ and $$S$$ defined on a set $$A$$, $$S$$ is *finer* than $$R$$ if $$x\sim_{\tiny S}y\implies x\sim_{\tiny R}y$$ always holds.
+<ins id="def8">**Definition 8**</ins> For two equivalence relations $$R$$ and $$S$$ defined on a set $$A$$, we say that $$S$$ is *finer* than $$R$$ if $$x\sim_{\tiny S}y\implies x\sim_{\tiny R}y$$ always holds.
 
 </div>
 
@@ -179,7 +178,7 @@ Let two equivalence relations $$R$$ and $$S$$ defined on a set $$A$$ be given, a
 
 ![third_iso_1](/assets/images/Math/Set_Theory/Examples_of_Equivalence-6.png){:style="width:8em"  class="invert" .align-center}
 
-Then the function $$p_S$$ is surjective, and $$p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$$ always holds. Therefore, there exists a unique $$h:A/S \rightarrow A/R$$ such that $$p_R=h\circ p_S$$. ([§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4)) In this case, $$h$$ is called the *quotient* of $$R$$ by $$S$$ defined on $$A/S$$, and is written as $$R/S$$. The canonical decomposition gives:
+Then the function $$p_S$$ is surjective, and $$p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$$ always holds. Therefore, there exists a unique $$h:A/S \rightarrow A/R$$ such that $$p_R=h\circ p_S$$. ([§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4)) In this case, $$h$$ is called the *quotient* of $$R$$ by $$S$$ defined on $$A/S$$, and is written as $$R/S$$. Passing through the canonical decomposition, we have:
 
 ![third_iso_2](/assets/images/Math/Set_Theory/Examples_of_Equivalence-7.png){:style="width:16.6em"  class="invert" .align-center}
 
