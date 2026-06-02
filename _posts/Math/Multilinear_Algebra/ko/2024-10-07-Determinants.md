@@ -226,7 +226,7 @@ $$\rho(z)=\sum_k u^k(\x_k)=0$$
 
 을 얻는다. 이제 $$\sum 1\otimes u^k(x_k)=0$$이므로, 이로부터
 
-$$z=\sum_k (\x^k\otimes_A x_k-1\otimes_A u^k(x_k))=\sum_k (\x^k-\iota_!u^k))(1\otimes x_k)$$
+$$z=\sum_k (\x^k\otimes_A x_k-1\otimes_A u^k(x_k))=\sum_k (\x^k-\iota_!u^k)(1\otimes x_k)$$
 
 인데, 어차피 $$\iota_!M=A[\x]\otimes_A M$$에서 $$\x$$는 $$A[\x]$$ 부분에 작용하고, $$\iota_!u$$는 $$M$$에 작용하므로 이들의 곱셈은 순서를 바꿀 수 있다. 즉 위의 식을
 
@@ -238,11 +238,11 @@ $$\sum_k (\x-\iota_!u)\circ\left(\sum_{j=0}^{k-1} \x^j (\iota_!u)^{k-j-1}\right)
 
 한편, $$\psi$$의 행렬식을 생각하면 [따름정리 6](#cor6)으로부터 
 
-$$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^j(\iota_!u)\right)\x^{n-k}$$
+$$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\iota_!u)\right)\x^{n-k}$$
 
 을 얻는다. 한편 $$u$$의 행렬표현 $$[u]_\mathcal{B}^\mathcal{B}$$는, $$M[\x]$$의 $$A[\x]$$-basis $$\mathcal{B}'=(1\otimes e_i)_{1\leq i\leq n}$$에 대한 $$\iota_!u$$의 행렬표현 $$[\iota_!u]_{\mathcal{B}'}^{\mathcal{B}''}$$와 같으므로 위의 식은
 
-$$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^j(u)\right)\x^{n-k}$$
+$$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(u)\right)\x^{n-k}$$
 
 으로 쓸 수 있다. 
 

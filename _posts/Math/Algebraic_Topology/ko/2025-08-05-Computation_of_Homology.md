@@ -279,7 +279,7 @@ $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\rightarrow H_{n+1}(X)\rightarro
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7 (Mayer-Vietoris sequence)**</ins> 위상공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cap V$$로 나타난다 하고, 이 위에 정의된 homology theory $$H$$를 생각하자. 그럼 long exact sequence
+<ins id="prop7">**명제 7 (Mayer-Vietoris sequence)**</ins> 위상공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cup V$$로 나타난다 하고, 이 위에 정의된 homology theory $$H$$를 생각하자. 그럼 long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\overset{\Psi}{\longrightarrow} H_{n+1}(X)\overset{\partial}{\longrightarrow} H_n(U\cap V)\overset{\Phi}{\longrightarrow} H_n(U)\oplus H_n(V)\rightarrow\cdots$$
 

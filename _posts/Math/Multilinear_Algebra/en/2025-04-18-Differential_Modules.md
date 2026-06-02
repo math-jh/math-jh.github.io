@@ -43,7 +43,7 @@ The proof is immediate from the definition of $$\rho^\ast$$. Meanwhile, in this 
 
 Now define $$\Der_A(F, N)$$ to be the set of $$A$$-derivations from $$F$$ to $$N$$. Then the subset of derivations satisfying the condition of [Proposition 2](#prop2) — that is, those that become $$E$$-linear — coincides with the set of derivations vanishing identically on $$\rho(E)$$; hence this subset forms an $$A$$-submodule of $$\Der_A(F, N)$$. We denote it by $$\Der_E(F,N)$$.
 
-Furthermore, let three graded $$A$$-algebras $$E,F,G$$ be given, and let graded $$A$$-algebra homomorphisms $$\rho: A \rightarrow B$$, $$\sigma: B \rightarrow C$$ be given. Then for any graded $$A$$-algebra $$H$$, the sequence
+Furthermore, let three graded $$A$$-algebras $$E,F,G$$ be given, and let graded $$A$$-algebra homomorphisms $$\rho: E \rightarrow F$$, $$\sigma: F \rightarrow G$$ be given. Then for any graded $$A$$-algebra $$H$$, the sequence
 
 $$0 \rightarrow \Der_F(G, H) \rightarrow \Der_E(G,H) \rightarrow \Der_E(F, H)$$
 

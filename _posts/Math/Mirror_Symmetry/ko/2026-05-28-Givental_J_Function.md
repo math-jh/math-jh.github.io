@@ -257,46 +257,45 @@ Toric Fano variety의 경우 B-side의 oscillating integral이 명시적인 *hyp
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6 (Givental의 $$I$$-function)**</ins> $$X$$를 smooth projective toric Fano variety, $$D_1, \ldots, D_N$$을 toric divisor, $$\beta \in H_2(X, \mathbb{Z})$$를 effective curve class라 하자. $$X$$의 *$$I$$-function*은 다음으로 정의된다.
+<ins id="def6">**정의 6 (Givental의 $$I$$-function)**</ins> $$X$$를 smooth projective toric Fano variety, $$D_1, \ldots, D_m$$을 toric divisor, $$\beta \in H_2(X, \mathbb{Z})$$를 effective curve class라 하자. $$X$$의 *$$I$$-function*은 다음으로 정의된다.
 
-$$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} q^\beta \prod_{i=1}^N \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$$
+$$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} q^\beta \prod_{i=1}^m \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$$
 
 </div>
 
-여기서 형식상 등장하는 $$-\infty$$로의 무한곱은 분자와 분모에서 정확히 상쇄되어 실제로는 $$D_i \cdot \beta$$의 부호에 따라 유한곱 (혹은 그 역수)으로 환원되는 잘 정의된 식이다. 이 곱을 결정하는 데이터는 toric divisor $$D_i$$와 그 intersection number $$D_i \cdot \beta$$뿐이며, 이 둘이 바로 $$X$$의 *charge 데이터*, 곧 [§거울대칭 개요, ⁋정의 1](/ko/math/mirror_symmetry/overview#def1)에서 도입한 *charge matrix* $$Q = (Q_{ji}) \in \Mat_{r \times N}(\mathbb{Z})$$가 담은 정보이다.
+여기서 형식상 등장하는 $$-\infty$$로의 무한곱은 분자와 분모에서 정확히 상쇄되어 실제로는 $$D_i \cdot \beta$$의 부호에 따라 유한곱 (혹은 그 역수)으로 환원되는 잘 정의된 식이다. 이 곱을 결정하는 데이터는 toric divisor $$D_i$$와 그 intersection number $$D_i \cdot \beta$$뿐이며, 이 둘이 담고 있는 정보는 $$X$$의 [§거울대칭 개요, ⁋정의 1](/ko/math/mirror_symmetry/overview#def1)에서 도입한 *charge matrix* $$Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$$가 담은 정보와 같다. 
 
-이 둘이 charge matrix에 담겨 있는 이유는, toric variety에서 curve class가 곧 ray들 사이의 관계식이기 때문이다. $$X$$가 smooth projective toric variety이면 완전열
+$$X$$가 smooth projective toric variety라 하자. 그럼 다음 short exact sequence
 
-$$0 \longrightarrow H_2(X, \mathbb{Z}) \xrightarrow{\ \iota\ } \mathbb{Z}^N \xrightarrow{\ e_i \mapsto v_i\ } \mathbb{Z}^n \longrightarrow 0$$
+$$0 \longrightarrow H_2(X, \mathbb{Z}) \xrightarrow{\ \iota\ } \mathbb{Z}^m \xrightarrow{\ e_i \mapsto v_i\ } \mathbb{Z}^n \longrightarrow 0$$
 
-이 성립하는데 (가운데 $$\mathbb{Z}^N$$은 $$N$$개의 ray에, 오른쪽 $$\mathbb{Z}^n \cong N$$은 cocharacter lattice에 대응), 이로부터 $$H_2(X, \mathbb{Z})$$는 ray 관계식이 이루는 lattice $$\{(a_i)_i \in \mathbb{Z}^N : \sum_i a_i v_i = 0\}$$와 동일시된다. Charge matrix의 각 행 $$(Q_{j1}, \ldots, Q_{jN})$$이 바로 그러한 관계식 $$\sum_i Q_{ji} v_i = 0$$이므로 이들이 $$H_2(X, \mathbb{Z})$$의 basis $$\{\beta_j\}$$를 이루며, 이 동일시 아래에서 toric divisor $$D_i$$와의 intersection은 $$\beta = (a_i)_i$$의 $$i$$번째 좌표를 읽는 것에 불과해 $$D_i \cdot \beta_j = Q_{ji}$$가 된다. 따라서 [정의 6](#def6)의 곱에 들어가는 $$D_i \cdot \beta$$가 전부 charge matrix $$Q$$의 성분으로 환원되어, $$I_X$$를 $$Q$$만으로 손으로 적을 수 있다.
+를 생각할 수 있다. 여기서 $$m$$은 ray의 개수이며, $$\mathbb{Z}^n$$은 cocharacter lattice이다. 즉, $$H_2$$는 ray의 관계식들이 이루는 집합
+
+$$\{(a_i)_i \in \mathbb{Z}^m : \sum_i a_i v_i = 0\}$$
+
+과 동일하다. 이 때 charge matrix는 정의상 이 $$r$$개의 관계식을 행으로 모은 것이며, 따라서 $$H_2(X, \mathbb{Z})$$의 basis에 대한 정보를 정확하게 가제가 있다. 즉, $$\mathbb{Z}^m$$의 각 행 $$(Q_{j\bullet})$$의 preimage $$\beta_j=\iota^{-1}(Q_{j\bullet})$$이 $$H_2(X, \mathbb{Z})$$의 basis를 이루며, 이 세팅에서 toric divisor D_i와의 intersection은 $$\beta=(a_i)_i$$의 $$i$$번째 좌표를 읽는 것에 불과하므로 $$D_i\cdots\beta_j=Q_{ji}$$이다. 
 
 이 식의 기원은 $$X$$의 Hori-Vafa mirror $$\check{X}$$ 위의 oscillating integral로, 좀 더 정확히는 그 적분을 [주장 5](#conj5)의 distinguished thimble $$\Gamma_0$$에 대해 charge 데이터로 전개한 것이 정확히 $$I_X$$이다. 즉 $$I_X$$는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 period matrix $$\mathcal{I}$$의 distinguished 열을 명시적으로 적은 것에 불과하다. 이에 대한 자세한 전개는 [예시 8](#ex8)로 미루고, 우선 이를 $$J$$-function에 대한 주장으로 번역하자.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7 (Givental's mirror theorem)**</ins> $$X$$가 smooth projective toric Fano variety일 때, $$X$$의 $$I$$-function과 $$J$$-function은 다음 관계를 만족한다.
+<ins id="prop7">**명제 7 (Givental's mirror theorem)**</ins> $$X$$가 smooth projective toric Fano variety일 때, $$X$$의 $$I$$-function과 $$J$$-function은
 
 $$J_X(\tau(q), z) = I_X(q, z)$$
 
-여기서 $$\tau(q)$$는 $$I$$-function의 asymptotic expansion
+의 관계를 만족한다. 여기서 $$\tau(q)$$는 $$I$$-function의 asymptotic expansion
 
 $$I_X(q, z) = 1 + \tau(q)/z + O(z^{-2})$$
 
-으로부터 정의되는 **mirror map**이다. $$X$$가 **semi-positive** (즉, $$-K_X \cdot \beta \geq 0$$이 모든 effective curve class $$\beta$$에 대해 성립)이면 $$I_X$$와 $$J_X$$는 이 (일반적으로 비자명한) mirror map을 통한 좌표변환으로 일치한다. 나아가 $$I_X = 1 + O(z^{-1})$$, 즉 $$z^0$$ 차수에 leading $$1$$ 외의 보정항이 없으면 mirror map은 trivial하여 $$J_X(q, z) = I_X(q, z)$$가 성립하는데, 이는 특히 Fano index가 $$2$$ 이상인 경우에 해당한다.
+으로부터 정의되는 mirror map이다.
 
 </div>
 
-<details class="proof" markdown="1">
-<summary>증명 개요</summary>
+증명을 위해 양 변을 각각 살펴보면, $$J_X$$는 [명제 4](#prop4)에서 본 대로 small QDE ($$\ast$$)의 fundamental solution이고, $$I_X$$는 [정의 6](#def6)에서 charge 데이터로 명시적으로 주어진 hypergeometric 함수이다. 증명의 핵심은 이 명시적 $$I_X$$ 또한 $$J_X$$와 같은 $$D$$-module의 해, 즉 같은 QDE ($$\ast$$)의 해임을 직접 확인하는 데 있다. 만일 $$X$$가 toric Fano이면 $$H^\ast(X)$$가 $$H^2(X)$$로 생성되므로, ($$\ast$$)는 $$I_X$$의 한 성분에 대한 미분방정식으로 귀결되고, 이 때 $$I_X$$의 hypergeometric 곱에 $$z q_a\partial_{q_a}$$를 직접 먹이면 곱의 각 인자가 항별로 이 방정식을 만족함이 확인된다. 한편 $$I_X$$와 $$J_X$$는 모두 $$z \to \infty$$에서 $$1 + O(z^{-1})$$의 normalization을 가지는데, QDE의 해는 이 leading asymptotic으로부터 유일하게 결정되므로 $$J_X(\tau(q), z) = I_X(q, z)$$를 얻는다. 이에 대한 구체적인 계산은 $$X = \mathbb{P}^n$$에서 확인해보기로 한다. ([예시 8](#ex8))
 
-$$J_X$$는 [명제 4](#prop4)에서 본 대로 small QDE ($$\ast$$)의 fundamental solution이고, $$I_X$$는 [정의 6](#def6)에서 charge 데이터로 명시적으로 주어진 hypergeometric 함수이다. 증명의 핵심은 이 명시적 $$I_X$$ 또한 $$J_X$$와 같은 $$D$$-module의 해임을, 즉 같은 QDE ($$\ast$$)를 만족함을 직접 확인하는 데 있다. $$X$$가 toric Fano이면 $$H^\ast(X)$$가 $$H^2(X)$$로 생성되므로 ($$\ast$$)는 $$I_X$$의 한 성분에 대한 scalar 미분방정식으로 환원되고, $$I_X$$의 hypergeometric 곱에 $$z q_a\partial_{q_a}$$를 작용시키면 곱의 각 인자가 항별로 이 방정식을 만족함이 확인된다. 한편 $$I_X$$와 $$J_X$$는 모두 $$z \to \infty$$에서 $$1 + O(z^{-1})$$의 normalization을 가지는데, QDE의 해는 이 leading asymptotic으로부터 ($$H^2$$ 방향의 reparametrization, 곧 mirror map $$\tau(q)$$를 제하면) 유일하게 결정되므로 $$J_X(\tau(q), z) = I_X(q, z)$$를 얻는다. $$X = \mathbb{P}^n$$에 대해 이 미분방정식의 일치를 끝까지 손으로 계산하는 것이 [예시 8](#ex8)이며, 일반 toric Fano에 대한 완전한 증명은 [CK, §11], [MS, Chapter 29]를 참조하라.
+여기서 mirror map이 잘 정의되는 것은 $$X$$의 Fano 성질 덕분임에 유의하자. $$X$$가 Fano이면 영이 아닌 모든 effective curve class $$\beta$$에 대해 $$-K_X \cdot \beta > 0$$이므로 $$q^\beta$$ 보정이 전부 $$z^{-1}$$ 이하 차수에만 나타나고, 따라서 $$I_X$$의 $$z^0$$ 항이 정확히 $$1$$이 되어 ($$I_X = 1 + O(z^{-1})$$) $$z^{-1}$$ 계수로 $$\tau(q)$$를 읽어낼 수 있다. 더 일반적으로 $$-K_X$$가 nef이기만 한 *semi-positive* 경우에는 $$-K_X \cdot \beta = 0$$인 방향이 $$z^0$$ 차수에 보정 $$I_0(q) \neq 1$$을 만들어 관계식이 $$J_X(\tau(q), z) = I_X(q, z)/I_0(q)$$로 수정된다. 
 
-</details>
-
-[명제 7](#prop7)은 앞 절의 [주장 5](#conj5)와도 자연스럽게 맞물린다. [정의 6](#def6) 직후 보았듯 toric Fano의 $$I_X$$는 B-side period matrix $$\mathcal{I}$$의 distinguished 열 ($$\Gamma_0$$ 위의 oscillating integral)을 명시적으로 적은 것이므로, [명제 7](#prop7)은 [주장 5](#conj5)를 바로 이 distinguished 열로 제한한 특수한 경우에 해당한다. 바꾸어 말하면 [주장 5](#conj5)는 toric Fano를 넘어 일반 mirror pair로 확장한 [명제 7](#prop7)의 일반화이다. 다만 [주장 5](#conj5)는 아직 증명된 명제가 아니므로 이 관계가 [명제 7](#prop7)의 증명을 대신하지는 않으며, 위 증명 개요는 그와 독립적으로 $$I_X$$가 $$J$$-function과 같은 $$D$$-module의 해임을 직접 확인한 것이다.
-
-이로써 [명제 7](#prop7)은 mirror symmetry를 *계산 가능한* tool로 바꾼다. $$J$$-function의 추상적인 Gromov-Witten 정의로부터는 직접 계산이 어렵지만, $$I$$-function의 hypergeometric 형태는 charge matrix로부터 손으로 적을 수 있어, 다음 절에서 보듯 $$\mathbb{P}^n$$과 같은 구체적인 경우에 양변을 직접 맞대어 볼 수 있기 때문이다.
+비슷한 결에서, 만일 Fano index가 $$2$$ 이상이면 모든 $$-K_X \cdot \beta \geq 2$$여서 $$q$$에 의존하는 보정이 전부 $$z^{-2}$$ 이하 차수로 밀려나고, 그 결과 mirror map $$\tau(q)$$에 $$q$$-보정이 남지 않게 된다. 즉, 이 경우는 $$J_X(q, z) = I_X(q, z)$$가 좌표변환 없이 그대로 성립하며, 다음 [예시 8](#ex8)의 $$\mathbb{P}^n$$ ($$-K = (n+1)H$$, Fano index $$n+1 \geq 2$$)이 이 경우이다.
 
 ## 예시: $$\mathbb{P}^n$$
 
@@ -318,13 +317,13 @@ $$J_{\mathbb{P}^n}(q, z) = I_{\mathbb{P}^n}(q, z)$$
 
 B-side와의 직접 짝맞춤은 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 이미 절반이 끝나있다. 그 예시에서 우리는 period matrix의 첫 column $$\mathcal{I}^0_p$$가 만족하는 ODE
 
-$$(z\partial_q)(qz\partial_q)^n\mathcal{I}^0_p = \mathcal{I}^0_p \tag{$\dagger$}$$
+$$(z\partial_q)(qz\partial_q)^n\mathcal{I}^0_p = \mathcal{I}^0_p \tag{$\ast\ast$}$$
 
 를 도출했다. [주장 5](#conj5)의 mirror theorem이 옳다면 $$I_{\mathbb{P}^n}$$의 $$H^0$$-coefficient
 
 $$\Phi_0(q, z) := \sum_{d \geq 0} \frac{q^d}{(d!)^{n+1}z^{(n+1)d}}$$
 
-(위의 hypergeometric 곱 식에서 $$H = 0$$으로 specialize한 것) 또한 ($$\dagger$$)를 만족해야 한다. 직접 계산하면 $$qz\partial_q$$의 작용은 항별로 $$d$$를 끌어내고 $$z^{-1}$$ 인자를 붙이므로
+(위의 hypergeometric 곱 식에서 $$H = 0$$으로 specialize한 것) 또한 ($$\ast\ast$$)를 만족해야 한다. 직접 계산하면 $$qz\partial_q$$의 작용은 항별로 $$d$$를 끌어내고 $$z^{-1}$$ 인자를 붙이므로
 
 $$(qz\partial_q)^n\Phi_0 = \sum_{d\geq 0}\frac{d^n q^d}{(d!)^{n+1}z^{(n+1)d - n}},$$
 

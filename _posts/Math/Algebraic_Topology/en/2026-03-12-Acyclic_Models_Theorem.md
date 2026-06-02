@@ -69,7 +69,7 @@ there exists a natural transformation
 
 $$f_\bullet(-):F_\bullet(-) \rightarrow G_\bullet(-)$$
 
-such that $$H_0(f)=f_0$$, and such a natural transformation is unique up to natural chain homotopy.
+such that $$H_0(f)=f_0$$, and such a natural transformation $$f$$ is unique up to natural chain homotopy.
 
 </div>
 

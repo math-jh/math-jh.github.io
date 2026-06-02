@@ -42,7 +42,7 @@ weight: 121
 
 이제 $$\Der_A(F, N)$$을 $$F$$에서 $$N$$으로 가는 $$A$$-derivation들의 모임으로 정의하자. 그럼 [명제 2](#prop2)의 조건을 만족하여 $$E$$-linear가 되는 derivation들의 모임은 $$\rho(E)$$에서 identically zero인 derivation들의 모임과 같으므로 이들 모임은 $$\Der_A(F, N)$$의 $$A$$-submodule이 된다. 이를 $$\Der_E(F,N)$$으로 적자. 
 
-추가로 세 개의 graded $$A$$-algebra들 $$E,F,G$$가 주어졌다 하고, graded $$A$$-algebra homomorphism들 $$\rho: A \rightarrow B$$, $$\sigma: B \rightarrow C$$가 주어졌다 하자. 그럼 임의의 graded $$A$$-algebra $$H$$에 대하여, 다음의 세 $$A$$-module
+추가로 세 개의 graded $$A$$-algebra들 $$E,F,G$$가 주어졌다 하고, graded $$A$$-algebra homomorphism들 $$\rho: E \rightarrow F$$, $$\sigma: F \rightarrow G$$가 주어졌다 하자. 그럼 임의의 graded $$A$$-algebra $$H$$에 대하여, 다음의 세 $$A$$-module
 
 $$\Der_E(F, \rho_\ast H),\qquad \Der_F(G,H),\qquad\Der_E(G, H)$$
 

@@ -179,7 +179,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
 
 <ins id="cor5">**따름정리 5**</ins> 다음이 성립한다. 
 
-1. [명제 4](#prop4)에서 정의한 $$x$$의 곱 $$x^k$$는 $$p!\gamma_k(x)$$와 같다. 
+1. [명제 4](#prop4)에서 정의한 $$x$$의 곱 $$x^k$$는 $$k!\gamma_k(x)$$와 같다. 
 2. 임의의 $$x_1,\ldots, x_n\in M$$에 대하여,
     
     $$\gamma_p(x_1+\cdots+x_n)=\sum_{p_1+\cdots+p_n=p}\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)$$
@@ -350,7 +350,7 @@ $$u(x)=v(x,\ldots, x)$$
 
 을 만족하는 <em-ko>유일한</em-ko> symmetric $$n$$-linear map $$v:M^n \rightarrow N$$이 존재한다. 뿐만 아니라, 임의의 $$x_1,\ldots, x_n\in M$$에 대하여, 명시적으로
 
-$$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H\rvert}u\left(\sum_{i\in I} x_i\right)$$
+$$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H\rvert}u\left(\sum_{i\in H} x_i\right)$$
 
 이 성립한다. 
 

@@ -1,5 +1,6 @@
 ---
 title: "Algebraic Groups"
+description: "We define group structures and morphism conditions on algebraic varieties, examine key examples such as general linear groups and affine algebraic groups, and then discuss actions on algebraic varieties."
 excerpt: "Algebraic group action"
 
 categories: [Math / Scheme Theory]
@@ -14,12 +15,13 @@ header:
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 17
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-02T01:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T01:00:02+00:00
 ---
 ## Algebraic Groups
 
-We know many examples of mathematical objects acting on other objects. Algebraically, the most important example is perhaps a group acting on a vector space; geometrically, there are Lie group actions. Since algebraic geometry endows algebraic objects with geometric meaning, the action of an algebraic group appears as a form that unifies these two perspectives well. In this post, for convenience we set $$\mathbb{k}=\mathbb{C}$$ throughout.
+We know many examples of mathematical objects acting on other objects. Algebraically, the most important instance is perhaps a group acting on a vector space; geometrically, there are Lie group actions. Since algebraic geometry endows algebraic objects with geometric meaning, the action of an algebraic group naturally integrates these two perspectives. In this post, for convenience we set $$\mathbb{k}=\mathbb{C}$$ throughout.
 
 First, the following definition is obvious.
 
@@ -27,7 +29,7 @@ First, the following definition is obvious.
 
 <ins id="def1">**Definition 1**</ins> An *algebraic group* $$G$$ is an algebraic variety satisfying the following conditions:
 
-1. $$G$$ has a group structure.
+1. $$G$$ carries a group structure.
 2. Multiplication $$m: G \times G \to G$$ and inverse $$i: G \to G$$ are both morphisms of varieties.
 
 </div>
@@ -69,7 +71,7 @@ satisfying the following conditions:
 
 </div>
 
-In principle, an algebraic group action is obtained by examining how an affine algebraic group acts on an affine variety and then gluing these together appropriately. To examine this case more closely, consider an affine algebraic group $$G = \Spec(A)$$ acting on an affine variety $$X = \Spec(B)$$. Since $$\Spec$$ is a contravariant functor, the action $$G \times X \to X$$ translates into a structure on the coordinate ring. Specifically, it provides the following data.
+In principle, an algebraic group action is built by examining how affine algebraic groups act on affine varieties and then gluing these local pictures together. To look more closely at this case, consider an affine algebraic group $$G = \Spec(A)$$ acting on an affine variety $$X = \Spec(B)$$. Since $$\Spec$$ is a contravariant functor, the action $$G \times X \to X$$ translates into a structure on the coordinate ring. Specifically, it yields the following data.
 
 <div class="definition" markdown="1">
 
@@ -92,15 +94,15 @@ Just as with Lie groups, algebraic groups can be better understood through repre
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> A *representation* of an algebraic group $$G$$ is a finite-dimensional vector space $$V$$ and a group homomorphism
+<ins id="def6">**Definition 6**</ins> A *representation* of an algebraic group $$G$$ is a finite-dimensional vector space $$V$$ together with a group homomorphism
 
 $$\rho: G \to \GL(V)$$
 
-such that $$G \times V \to V$$ is a morphism.
+such that the induced map $$G \times V \to V$$ is a morphism.
 
 </div>
 
-Then the following definition is also the same as in Lie groups.
+Then the following definition is also the same as for Lie groups.
 
 <div class="definition" markdown="1">
 
@@ -110,7 +112,7 @@ $$\chi_\rho(g) = \tr(\rho(g))$$
 
 </div>
 
-Moreover, as we see in the following proposition, representations of algebraic groups also possess both algebraic and geometric natures simultaneously.
+Moreover, as the following proposition shows, representations of algebraic groups simultaneously carry both algebraic and geometric natures.
 
 <div class="proposition" markdown="1">
 
@@ -121,7 +123,7 @@ Moreover, as we see in the following proposition, representations of algebraic g
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Given a representation $$\rho: G \to \GL(V)$$, this induces $$G \times V \to V$$, and by the contravariance of $$\Spec$$ we obtain $$V^\ast \to V^\ast \otimes A$$.
+Given a representation $$\rho: G \to \GL(V)$$, this induces a map $$G \times V \to V$$, and by the contravariance of $$\Spec$$ we obtain $$V^\ast \to V^\ast \otimes A$$.
 
 Conversely, given a comodule structure $$V \to V \otimes A$$, for each $$g \in G$$ we obtain $$V \to V \otimes \mathbb{C} \cong V$$ via the evaluation map $$\operatorname{ev}_g: A \to \mathbb{C}$$, and this defines a representation.
 
@@ -129,19 +131,17 @@ Conversely, given a comodule structure $$V \to V \otimes A$$, for each $$g \in G
 
 ## Algebraic Tori and Weight Decomposition
 
-Among algebraic groups, one of the objects we encounter most frequently is a torus $$T$$. We have already examined one-dimensional tori. ([Example 2](#ex2))
+Among algebraic groups, one of the objects we encounter most frequently is a torus $$T$$. We have already examined the one-dimensional torus. ([Example 2](#ex2))
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**Definition 9**</ins> An *algebraic torus* is an algebraic group isomorphic to a finite direct sum of $$\mathbb{G}_m = \mathbb{C}^\ast$$. That is, there exists an algebraic group satisfying
+<ins id="def9">**Definition 9**</ins> An *algebraic torus* is an algebraic group isomorphic to a finite direct sum of copies of $$\mathbb{G}_m = \mathbb{C}^\ast$$. That is, there exists $$n \ge 1$$ such that
 
 $$T \cong (\mathbb{C}^\ast)^n$$
 
-for some $$n \ge 1$$.
-
 </div>
 
-In Lie groups, we saw that a torus decomposes into one-dimensional representations and that the information about each of these is encoded in characters. Let us do the same here.
+In the theory of Lie groups, we saw that a torus decomposes into one-dimensional representations and that the information about each of these is encoded in its characters. Let us carry out the same program here.
 
 <div class="definition" markdown="1">
 
@@ -161,9 +161,9 @@ This corresponds to addition in $$\mathbb{Z}^n$$
 
 $$a + b = (a_1 + b_1, \ldots, a_n + b_n)$$
 
-The set of characters $$X^\ast(T) = \{\rchi^a \mid a \in \mathbb{Z}^n\}$$ forms an abelian group under this product, and is called the *character group* of the torus $$T$$.
+The set of characters $$X^\ast(T) = \{\rchi^a \mid a \in \mathbb{Z}^n\}$$ forms an abelian group under this product; it is called the *character group* of the torus $$T$$.
 
-It is not hard to show that $$\rchi: T \to \mathbb{C}^\ast$$ is a group homomorphism.
+It is not difficult to show that $$\rchi: T \to \mathbb{C}^\ast$$ is a group homomorphism.
 
 <div class="proposition" markdown="1">
 
@@ -174,9 +174,9 @@ It is not hard to show that $$\rchi: T \to \mathbb{C}^\ast$$ is a group homomorp
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since the torus $$T = (\mathbb{C}^\ast)^n$$ is the direct product of $$n$$ copies of $$\mathbb{C}^\ast$$, its coordinate ring is the tensor product of the coordinate rings of each $$\mathbb{C}^\ast$$. We know that the coordinate ring of $$\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$$ is $$\mathbb{C}[x, x^{-1}]$$. ([§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10))
+Since the torus $$T = (\mathbb{C}^\ast)^n$$ is the direct product of $$n$$ copies of $$\mathbb{C}^\ast$$, its coordinate ring is the tensor product of the coordinate rings of each factor. We know that the coordinate ring of $$\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$$ is $$\mathbb{C}[x, x^{-1}]$$. ([§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10))
 
-Therefore the coordinate ring of $$T$$ is
+Hence the coordinate ring of $$T$$ is
 
 $$\mathbb{C}[x_1, x_1^{-1}] \otimes \cdots \otimes \mathbb{C}[x_n, x_n^{-1}] \cong \mathbb{C}[x_1, x_1^{-1}, \ldots, x_n, x_n^{-1}]$$
 
@@ -209,7 +209,7 @@ Given a torus action $$T \times X \to X$$, we can define an action on the coordi
 
 ## Quotient Varieties
 
-On an algebraic variety with a given action, we often wish to construct a *quotient variety*. However, such objects are well defined primarily in algebraic settings; even for topological spaces, the simplest geometric objects, this is not always well defined. The same is true in the world of algebraic varieties.
+On an algebraic variety with a given action, we often wish to construct a *quotient variety*. However, such objects are well defined primarily in algebraic settings; even for topological spaces, the simplest geometric objects, this is not always well defined. The same holds in the world of algebraic varieties.
 
 <div class="definition" markdown="1">
 
@@ -233,7 +233,7 @@ This is a subalgebra of $$A$$.
 
 </div>
 
-The elements of the invariant ring capture the symmetries that are unchanged by the group action. If we regard elements of the coordinate ring $$A$$ as functions on $$\Spec A$$, then geometrically the elements of $$A^G$$ become constant functions on each orbit. Therefore the space $$\Spec(A^G)$$ constructed from them can be thought of as a good approximation to the orbit space $$X/G$$. However, the problem is that $$A^G$$ may not behave well algebraically.
+The elements of the invariant ring capture the symmetries that are unchanged by the group action. Regarding elements of the coordinate ring $$A$$ as functions on $$\Spec A$$, the elements of $$A^G$$ become constant on each orbit. Therefore the space $$\Spec(A^G)$$ constructed from them can be regarded as a good approximation to the orbit space $$X/G$$. The difficulty, however, is that $$A^G$$ need not behave well algebraically.
 
 <div class="definition" markdown="1">
 
@@ -241,7 +241,7 @@ The elements of the invariant ring capture the symmetries that are unchanged by 
 
 </div>
 
-If $$G$$ is a reductive group, then by the Hilbert basis theorem and Nagata's theorem one can show that the invariant ring $$A^G$$ is always finitely generated, and hence $$\Spec(A^G)$$ becomes a well-defined affine variety.
+If $$G$$ is a reductive group, then by the Hilbert basis theorem and Nagata's theorem one can show that the invariant ring $$A^G$$ is always finitely generated, and hence $$\Spec(A^G)$$ is a well-defined affine variety.
 
 <div class="example" markdown="1">
 
@@ -256,7 +256,7 @@ By contrast, $$\mathbb{G}_a = \mathbb{C}$$ is not reductive.
 
 </div>
 
-The content regarding the finite generation of $$A^G$$ mentioned after [Definition 15](#def15) is usually discussed in Geometric Invariant Theory (GIT), and through this we can define the quotient for a reductive group action.
+The content regarding the finite generation of $$A^G$$ mentioned after [Definition 15](#def15) is usually treated in Geometric Invariant Theory (GIT), and through this theory we can define the quotient for a reductive group action.
 
 <div class="definition" markdown="1">
 
@@ -266,15 +266,15 @@ $$X /\!/ G = \Spec(A^G)$$
 
 </div>
 
-As examined above, the GIT quotient $$X /\!/ G$$ is geometrically a good approximation to the orbit space $$X/G$$; this means that the GIT quotient satisfies the universal property that a quotient should satisfy.
+As discussed above, the GIT quotient $$X /\!/ G$$ is geometrically a good approximation to the orbit space $$X/G$$; this means that the GIT quotient satisfies the universal property expected of a quotient.
 
-The discussion so far has been for affine varieties, and the situation is more complicated for projective varieties. For example, suppose $$\mathbb{C}^\ast$$ acts on $$\mathbb{P}^1 = \{[x:y]\}$$ by
+The discussion so far has concerned affine varieties; the situation is more complicated for projective varieties. For example, suppose $$\mathbb{C}^\ast$$ acts on $$\mathbb{P}^1 = \{[x:y]\}$$ by
 
 $$t \cdot [x:y] = [tx:y]$$
 
-In the homogeneous coordinate ring $$\mathbb{C}[x,y]$$, if $$t$$ acts by scaling $$x$$ by $$t$$ and $$y$$ by $$1$$, then in the degree $$d$$ component $$\mathbb{C}_d[x,y]$$ the monomial $$x^a y^{d-a}$$ is acted on by $$t$$ as $$t^a$$. That is, each monomial has a different weight.
+In the homogeneous coordinate ring $$\mathbb{C}[x,y]$$, if $$t$$ acts by scaling $$x$$ by $$t$$ and $$y$$ by $$1$$, then in the degree $$d$$ component $$\mathbb{C}_d[x,y]$$ the monomial $$x^a y^{d-a}$$ is acted on by $$t$$ as $$t^a$$. That is, each monomial carries a different weight.
 
-In this case the only $$G$$-invariant subspace of $$\mathbb{C}_d[x,y]$$ is $$y^d$$, and $$A_d^G = \mathbb{C} \cdot y^d$$ is well defined. However, for an action on a general projective variety, if the action does not extend to all of $$\mathbb{P}^n$$, the grading and the action may not be compatible and $$A_d^G$$ may not be well defined.
+In this case the only $$G$$-invariant subspace of $$\mathbb{C}_d[x,y]$$ is spanned by $$y^d$$, and $$A_d^G = \mathbb{C} \cdot y^d$$ is well defined. However, for an action on a general projective variety, if the action does not extend to all of $$\mathbb{P}^n$$, the grading and the action may fail to be compatible and $$A_d^G$$ may not be well defined.
 
 <div class="definition" markdown="1">
 
@@ -285,7 +285,7 @@ In this case the only $$G$$-invariant subspace of $$\mathbb{C}_d[x,y]$$ is $$y^d
 
 </div>
 
-Linearization resolves this problem. A linear action preserves each degree $$d$$ component $$A_d$$ of the homogeneous coordinate ring, so $$G$$ acts well on $$A_d$$ and therefore we can form $$A_d^G$$. In the example above, the action is already linear, $$A_d^G = \mathbb{C} \cdot y^d$$, and we can construct the quotient as
+Linearization resolves this problem. A linear action preserves each degree $$d$$ component $$A_d$$ of the homogeneous coordinate ring, so $$G$$ acts on $$A_d$$ in a well-behaved manner and we can form $$A_d^G$$. In the example above, the action is already linear, $$A_d^G = \mathbb{C} \cdot y^d$$, and we can construct the quotient as
 
 $$\mathbb{P}^1 /\!/ \mathbb{C}^\ast = \Proj\left(\bigoplus_{d \ge 0} \mathbb{C} \cdot y^d\right) = \{[1]\} \cong \mathrm{pt}$$
 
@@ -299,7 +299,7 @@ Once a linearization is given, we can define *stable* and *semistable* points.
 - A point $$x \in X$$ is *stable* if it satisfies the following conditions:
   1. $$x$$ is semistable
   2. $$G_x$$ is a finite group
-  3. The orbit $$G \cdot x$$ is a closed set
+  3. The orbit $$G \cdot x$$ is closed
 
 We denote the set of semistable points by $$X^{\mathrm{ss}}$$ and the set of stable points by $$X^{\mathrm{s}}$$.
 
