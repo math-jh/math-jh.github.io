@@ -1,5 +1,6 @@
 ---
 title: "Morphisms of Schemes"
+description: "A scheme morphism is defined as a continuous map together with a morphism of structure sheaves, and morphisms between affine schemes correspond to ring homomorphisms. General scheme morphisms can be understood by gluing together local morphisms over an affine open cover."
 excerpt: "Four perspectives on scheme morphisms as morphisms of locally ringed spaces"
 
 categories: [Math / Scheme Theory]
@@ -13,12 +14,13 @@ sidebar:
 date: 2025-02-19
 last_modified_at: 2025-02-19
 weight: 7
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-02T05:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T05:00:02+00:00
 ---
-By definition, $$\Sch$$ is a full subcategory of $$\LRS$$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $$X,Y$$, a scheme morphism from $$X$$ to $$Y$$ is given by a continuous map $$\varphi: X \rightarrow Y$$ and a morphism of structure sheaves $$\varphi^\sharp: \mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$, where $$\varphi^\sharp$$ must become a local homomorphism when restricted to each stalk. ([§Affine Schemes, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2)) 
+By definition, $$\Sch$$ is a full subcategory of $$\LRS$$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $$X,Y$$, a scheme morphism from $$X$$ to $$Y$$ is given by a continuous map $$\varphi: X \rightarrow Y$$ together with a morphism of structure sheaves $$\varphi^\sharp: \mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$, where $$\varphi^\sharp$$ must restrict to a local homomorphism on each stalk. ([§Affine Schemes, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2)) 
 
-As above, a scheme morphism $$f:X \rightarrow Y$$ is essentially an object we have already defined. In the next post we will examine the properties of scheme morphisms, but before that we present four ways to understand scheme morphisms. 
+Thus, a scheme morphism $$f:X \rightarrow Y$$ is fundamentally an object we have already defined. In the next post we will examine properties of scheme morphisms; before doing so, we present four perspectives for understanding them. 
 
 ## Gluing Ring Homomorphisms
 
@@ -26,7 +28,7 @@ The first perspective is a fairly natural one. A scheme is essentially construct
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**Proposition 1**</ins> Let a scheme morphism $$\varphi: X \rightarrow Y$$ be given. Then if $$X$$ has an affine open subset $$U\cong\Spec A$$ and $$Y$$ has an affine open subset $$V\cong\Spec B$$ satisfying $$\varphi(U)\subseteq V$$, the restriction $$\varphi\vert_U: U \rightarrow V$$ is a morphism of affine schemes. 
+<ins id="prop1">**Proposition 1**</ins> Let a scheme morphism $$\varphi: X \rightarrow Y$$ be given. If $$X$$ has an affine open subset $$U\cong\Spec A$$ and $$Y$$ has an affine open subset $$V\cong\Spec B$$ satisfying $$\varphi(U)\subseteq V$$, then the restriction $$\varphi\vert_U: U \rightarrow V$$ is a morphism of affine schemes. 
 
 Conversely, let two affine open coverings $$\{U_i\}$$ of $$X$$ and $$\{V_j\}$$ of $$Y$$ be given, and let morphisms of affine schemes $$\varphi_{ij}: U_i \rightarrow V_j$$ be given. If these satisfy the gluing condition on each intersection and are thereby well defined, then the $$\varphi_{ij}$$ define a scheme morphism $$\varphi: X \rightarrow Y$$. 
 
@@ -40,9 +42,9 @@ One direction is merely a new version of the assertion that $$\AffSch$$ is a ful
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-that first appeared for motivation in [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space). This formula was traditionally used to construct projective space, but it did not appear in [§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12) when translating the classical projective space into the language of algebraic geometry. Of course this morphism satisfies the formula $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$, but the points of $$\mathbb{A}^{n+1}_\mathbb{K}$$ are not only of this form, and moreover this formula carries no information about the structure sheaf, so it would be inappropriate to call it a scheme morphism.
+that first appeared for motivation in [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space). This formula was traditionally used to construct projective space, but it did not appear in [§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12) when translating classical projective space into the language of algebraic geometry. Of course this morphism satisfies the formula $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$, but the points of $$\mathbb{A}^{n+1}_\mathbb{K}$$ are not merely of this form, and moreover this formula carries no information about the structure sheaf, so it would be inappropriate to call it a scheme morphism.
 
-Now, to define $$\varphi$$ as a scheme morphism, consider the affine open subscheme of $$\mathbb{P}^n_{\mathbb{K}}$$
+To define $$\varphi$$ as a scheme morphism, consider the affine open subscheme of $$\mathbb{P}^n_{\mathbb{K}}$$
 
 $$D_+(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{(\x_i)}\cong \Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)$$
 
@@ -54,11 +56,11 @@ Then
 
 $$\mathbb{A}^{n+1}_\mathbb{K}\setminus \{0\}=\bigcup_{i=0}^n D(\x_i)$$
 
-and $$D(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{\x_i}$$. Now for each $$i$$, the map $$\varphi_i: D(\x_i) \rightarrow D_+(\x_i)$$ is a morphism of affine schemes, hence corresponds to a ring homomorphism. Then the affine scheme morphism $$\varphi_i$$ obtained by applying the first isomorphism theorem to the formula
+and $$D(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{\x_i}$$. For each $$i$$, the map $$\varphi_i: D(\x_i) \rightarrow D_+(\x_i)$$ is a morphism of affine schemes, hence corresponds to a ring homomorphism. Then the affine scheme morphism $$\varphi_i$$ obtained by applying the first isomorphism theorem to the formula
 
 $$\phi_i:\mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{K}[\x_0,\ldots, \x_n]_{\x_i};\qquad \x_{k/i}\mapsto  \frac{\x_k}{\x_i}$$
 
-becomes the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1) can also be checked by a short calculation. Now, borrowing the notation from [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space), on each $$D(\x_i)$$ they are given by the formula
+is the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1) can also be checked by a short calculation. Now, borrowing the notation from [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space), on each $$D(\x_i)$$ they are given by the formula
 
 $$(x_0,\ldots, x_n) \rightarrow \left[\frac{x_0}{x_i}:\cdots:\frac{x_{i-1}}{x_i}:1:\frac{x_{i+1}}{x_i}:\cdots:\frac{x_n}{x_i} \right]$$
 

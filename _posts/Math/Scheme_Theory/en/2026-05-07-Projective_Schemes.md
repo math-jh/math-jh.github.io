@@ -1,5 +1,6 @@
 ---
 title: "Projective Schemes"
+description: "We construct projective space by gluing affine lines in a suitable way, and generalize this to define projective schemes. We understand projective spaces from a topological viewpoint and examine how to glue affine lines via stereographic projection and the cocycle condition."
 excerpt: "The Proj construction from a graded ring and projective schemes"
 
 categories: [Math / Scheme Theory]
@@ -13,32 +14,33 @@ sidebar:
 date: 2025-02-02
 last_modified_at: 2025-02-03
 weight: 13
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-02T05:30:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T05:30:01+00:00
 ---
-In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) we glued two affine lines $$\mathbb{A}^1=\Spec \mathbb{K}[\x]$$ together in a suitable way to construct projective space $$\mathbb{P}^1$$. In this post we generalize this to define projective schemes.
+In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) we glued two affine lines $$\mathbb{A}^1=\Spec \mathbb{K}[\x]$$ together in a suitable way to construct the projective space $$\mathbb{P}^1$$. In this post we generalize this construction to define projective schemes.
 
 ## Projective Space
 
 Generalizing [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) directly, it is not difficult to define $$\mathbb{P}^n$$ as a scheme. However, in order to generalize this to define projective schemes, it helps to understand $$\mathbb{P}^n$$ intuitively, so let us unpack it more carefully.
 
-First we briefly review the projective space defined in topology. To construct the topological space $$\mathbb{P}^n$$, we considered the topological space $$\mathbb{R}^{n+1}\setminus \{0\}$$. Then on this we define the following equivalence relation
+First we briefly review the projective space defined in topology. To construct the topological space $$\mathbb{P}^n$$, we considered the topological space $$\mathbb{R}^{n+1}\setminus \{0\}$$. On this we define the following equivalence relation:
 
 $$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}$$
 
-projective space $$\mathbb{P}^n$$ is defined as the quotient space $$(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$$, and the equivalence class containing $$(x_0,\ldots, x_n)$$ is denoted by $$[x_0:x_1:\cdots:x_n]$$ for notational convenience.
+Then projective space $$\mathbb{P}^n$$ is defined as the quotient space $$(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$$, and the equivalence class containing $$(x_0,\ldots, x_n)$$ is denoted $$[x_0:x_1:\cdots:x_n]$$ for notational convenience.
 
-Now consider the canonical projection $$\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$$. Then the fiber over a point $$[x_0:x_1:\cdots:x_n]$$ in $$\mathbb{P}^n$$ is by definition
+Now consider the canonical projection $$\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$$. The fiber over a point $$[x_0:x_1:\cdots:x_n]$$ in $$\mathbb{P}^n$$ is by definition
 
 $$\{(y_0,\ldots, y_n)\mid\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}\}$$
 
-that is, the set of points on the line passing through the origin and $$(x_0,\ldots, x_n)$$, excluding the origin. For this reason, $$\mathbb{P}^n$$ is often thought of as the space of lines in $$\mathbb{R}^{n+1}$$.
+that is, the set of points on the line through the origin and $$(x_0,\ldots, x_n)$$, excluding the origin itself. For this reason, $$\mathbb{P}^n$$ is often thought of as the space of lines in $$\mathbb{R}^{n+1}$$.
 
 Meanwhile, in $$\mathbb{R}^{n+1}$$, any plane $$P$$ and any line not parallel to $$P$$ must meet at a single point. Thus, defining the plane $$P_i$$ as
 
 $$P_i=\{\x_i=1\}=\{(x_0,\ldots, x_n)\mid x_i=1\}$$
 
-then, excluding the points in $$\mathbb{P}^n$$ corresponding to lines perpendicular to the $$\x_i$$-axis, all remaining points are in one-to-one correspondence with points of $$P_i$$, the remaining points are lines in the $$\x_0\x_1\cdots\x_{i-1}\x_{i+1}\cdots\x_n$$-plane, i.e., lines in $$\mathbb{R}^n$$, so we obtain the decomposition
+the points of $$\mathbb{P}^n$$ excluding those corresponding to lines perpendicular to the $$\x_i$$-axis are in one-to-one correspondence with points of $$P_i$$, while the remaining points are lines in the $$\x_0\x_1\cdots\x_{i-1}\x_{i+1}\cdots\x_n$$-plane, i.e., lines in $$\mathbb{R}^n$$, so we obtain the decomposition
 
 $$\mathbb{P}^n=\mathbb{R}^n\coprod \mathbb{P}^{n-1}$$
 
@@ -46,7 +48,7 @@ This process is illustrated in the following figure for the case $$n=2$$.
 
 ![stereographic_projection](/assets/images/Math/Algebraic_Varieties/Projective_schemes-1.png){:style="width:25em" class="invert" .align-center}
 
-Writing this as a formula, for a point $$[x_0:\cdots:x_n]$$ in $$\mathbb{P}^n$$, if $$x_i\neq 0$$ then within the equivalence class of $$[x_0:\cdots:x_n]$$ we can (uniquely) find the point whose $$i$$-th coordinate is $$1$$; regarding this point as a point of $$P_i$$, we can identify the subset
+Writing this in formulas, for a point $$[x_0:\cdots:x_n]$$ in $$\mathbb{P}^n$$, if $$x_i\neq 0$$ then within the equivalence class of $$[x_0:\cdots:x_n]$$ we can (uniquely) find the point whose $$i$$-th coordinate is $$1$$; regarding this point as a point of $$P_i$$, we can identify the subset
 
 $$U_i=\{[x_0:\cdots:x_n]\in \mathbb{P}^n\mid x_i\neq 0\}$$
 
@@ -56,11 +58,11 @@ Explicitly, the above identification $$U_i\cong P_i$$ is expressed by the formul
 
 $$[x_0:\cdots:x_n]\text{ in $U_i\subseteq \mathbb{P}^n$}\leftrightarrow\left(\frac{x_0}{x_i},\ldots, \frac{x_{i-1}}{x_i},1,\frac{x_{i+1}}{x_i},\ldots, \frac{x_n}{x_i}\right)\text{ in $P_i\subseteq \mathbb{R}^{n+1}$}$$
 
-Meanwhile, the procedure of [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) reverses this process. That is, we are first given $$n+1$$ copies of $$n$$-dimensional planes $$P_0,\ldots, P_n$$ and we glue them via isomorphisms satisfying the cocycle condition. Then how the cocycle condition should be written is obtained by examining how a point of $$\mathbb{P}^n$$ is written in different $$P_i$$ and $$P_j$$ under the above identification. Let us examine this. First, arbitrary points of $$P_i$$ and $$P_j$$ can be written in the form
+Meanwhile, the procedure of [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) reverses this process. That is, we are first given $$n+1$$ copies of $$n$$-dimensional planes $$P_0,\ldots, P_n$$ and we glue them via isomorphisms satisfying the cocycle condition. How the cocycle condition should be written is obtained by examining how a point of $$\mathbb{P}^n$$ is written in different $$P_i$$ and $$P_j$$ under the above identification. Let us examine this. First, arbitrary points of $$P_i$$ and $$P_j$$ can be written in the form
 
 $$(x_{0/i},\ldots, x_{(i-1)/i}, 1, x_{(i+1)/i}, \ldots, x_{n/i})\in P_i,\qquad (x_{0/j},\ldots, x_{(j-1)/j}, 1, x_{(j+1)/j}, \ldots, x_{n/j})\in P_j$$
 
-Now, if we assume that these points come from some point of $$\mathbb{P}^n$$, then that point must lie in $$U_i\cap U_j$$, and in this set we must have $$x_i,x_j\neq 0$$, hence $$x_{j/i}, x_{i/j}\neq 0$$. For notational convenience assume $$j>i$$; using this fact,
+Now, if we assume that these points come from some point of $$\mathbb{P}^n$$, then that point must lie in $$U_i\cap U_j$$, and in this set we must have $$x_i,x_j\neq 0$$, hence $$x_{j/i}, x_{i/j}\neq 0$$. For notational convenience assume $$j>i$$; using this,
 
 $$[x_{0/i}:\ldots: x_{(i-1)/i}: 1: x_{(i+1)/i}: \ldots: x_{j/i}:\ldots, x_{n/i}]=\left[\frac{x_{0/i}}{x_{j/i}}:\ldots: \frac{x_{(i-1)/i}}{x_{j/i}}: \frac{1}{x_{j/i}}: \frac{x_{(i+1)/i}}{x_{j/i}}: \ldots: 1:\ldots, \frac{x_{n/i}}{x_{j/i}}\right]$$
 
@@ -68,7 +70,7 @@ Therefore, for the point on the right-hand side to equal
 
 $$[x_{0/j}:\ldots: x_{(j-1)/j}: 1: x_{(j+1)/j}: \ldots: x_{n/j}]$$
 
-the following formula
+the following formulas
 
 $$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad x_{i/j}=1/x_{j/i}$$
 
@@ -78,15 +80,15 @@ Now let us generalize [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#
 
 $$P_i=\Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
 
-Then for the open subschemes $$P_{ij}=D(\x_{j/i})=(A^i)_{\x_{j/i}}$$ of $$P_i$$ and the following ring homomorphism
+Then the isomorphisms $$\varphi_{ij}:P_{ij} \rightarrow P_{ji}$$ defined via the open subschemes $$P_{ij}=D(\x_{j/i})=(A^i)_{\x_{j/i}}$$ of $$P_i$$ and the ring homomorphism
 
 $$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/\x_{i/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad \x_{j/i}\mapsto 1/\x_{i/j}$$
 
-the isomorphisms $$\varphi_{ij}:P_{ij} \rightarrow P_{ji}$$ defined through it almost trivially satisfy the cocycle condition of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), and therefore a unique scheme $$\mathbb{P}^n$$ is defined, and if we write elements of $$\mathbb{P}^n$$ in the form $$[x_0:\ldots:x_n]$$, then $$U_i$$ is exactly the set of points satisfying $$x_i\neq 0$$.
+almost trivially satisfy the cocycle condition of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), and therefore define a unique scheme $$\mathbb{P}^n$$; if we write elements of $$\mathbb{P}^n$$ in the form $$[x_0:\ldots:x_n]$$, then $$U_i$$ is exactly the set of points satisfying $$x_i\neq 0$$.
 
 ## Projective Schemes
 
-As it stands, the above explanation has some incomplete parts. For example, that the $$U_i$$ are open subschemes of $$\mathbb{P}^n$$ is a consequence of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), but by its very definition it seems that it should be an open set because it is the set where the function $$\x_i$$ is nonzero. However, the problem is that $$\x_i$$ is not a function on $$\mathbb{P}^n$$. Indeed, even in the case $$n=1$$ we have checked that $$\mathscr{O}_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$$. This can also be verified purely by the topological construction: the function $$\x_i: \mathbb{R}^{n+1}\setminus\{0\} \rightarrow \mathbb{R}$$ that takes a point $$(x_0,\ldots, x_n)$$ of $$\mathbb{R}^{n+1}\setminus \{0\}$$ and returns $$x_i$$ is not compatible with $$\sim$$, and therefore does not define a function on $$\mathbb{P}^n$$. As another example, if a function $$f: \mathbb{R}^2\setminus\{0\} \rightarrow \mathbb{R}$$ defined on $$\mathbb{R}^2\setminus\{0\}$$ is given by the formula
+As it stands, the above explanation has some incomplete parts. For example, that the $$U_i$$ are open subschemes of $$\mathbb{P}^n$$ is a consequence of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), but by its very definition it seems that it should be an open set because it is the set where the function $$\x_i$$ is nonzero. However, the problem is that $$\x_i$$ is not a function on $$\mathbb{P}^n$$. Indeed, even in the case $$n=1$$ we have checked that $$\mathscr{O}_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$$. This can also be verified purely from the topological construction: the function $$\x_i: \mathbb{R}^{n+1}\setminus\{0\} \rightarrow \mathbb{R}$$ that takes a point $$(x_0,\ldots, x_n)$$ of $$\mathbb{R}^{n+1}\setminus \{0\}$$ and returns $$x_i$$ is not compatible with $$\sim$$, and therefore does not define a function on $$\mathbb{P}^n$$. As another example, if a function $$f: \mathbb{R}^2\setminus\{0\} \rightarrow \mathbb{R}$$ defined on $$\mathbb{R}^2\setminus\{0\}$$ is given by the formula
 
 $$f(x_0,x_1)=x_0^2-x_1$$
 
