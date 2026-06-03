@@ -1,5 +1,6 @@
 ---
 title: "Open Mappings and Closed Mappings"
+description: "This post defines open maps and closed maps between topological spaces, and examines their basic properties under composition, surjection, and injection. It also discusses criteria for determining when a map is open or closed."
 excerpt: "Definitions of open maps and closed maps, and their relationship to quotient maps"
 
 categories: [Math / Topology]
@@ -13,8 +14,9 @@ sidebar:
 date: 2024-11-19
 last_modified_at: 2024-11-19
 weight: 12
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-03T06:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T06:00:02+00:00
 ---
 ## Definitions and Basic Properties
 
@@ -22,8 +24,8 @@ translation_source: kimi-cli
 
 <ins id="def1">**Definition 1**</ins> For any two topological spaces $$X,Y$$ and a function $$f:X \rightarrow Y$$, we define the following. 
 
-1. If for any open set $$U$$ of $$X$$, $$f(U)$$ is always an open set of $$Y$$, then we call $$f$$ an *open mapping*. 
-2. If for any closed set $$A$$ of $$X$$, $$f(A)$$ is always a closed set of $$Y$$, then we call $$f$$ a *closed mapping*. 
+1. If for every open set $$U$$ of $$X$$, the image $$f(U)$$ is always an open set of $$Y$$, then we call $$f$$ an *open mapping*. 
+2. If for every closed set $$A$$ of $$X$$, the image $$f(A)$$ is always a closed set of $$Y$$, then we call $$f$$ a *closed mapping*. 
 
 </div>
 
@@ -107,7 +109,7 @@ Then the following are all equivalent.
 
 ## Properties of Open Mappings
 
-Now we examine the properties that open mappings and closed mappings respectively possess. We begin with the case of open mappings. 
+We now examine the properties possessed by open mappings and closed mappings, respectively. We begin with the case of open mappings. 
 
 <div class="proposition" markdown="1">
 
