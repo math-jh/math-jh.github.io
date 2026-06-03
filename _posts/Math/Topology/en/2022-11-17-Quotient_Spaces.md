@@ -1,5 +1,6 @@
 ---
 title: "Quotient Spaces"
+description: "This post explains how to introduce the quotient space topology on a set equipped with an equivalence relation, and summarizes the basic structure of quotient spaces along with the locally closed property of subspaces."
 excerpt: "Properties of Subspaces"
 
 categories: [Math / Topology]
@@ -13,8 +14,9 @@ sidebar:
 date: 2022-11-17
 last_modified_at: 2022-11-17
 weight: 10
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-03T04:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T04:30:02+00:00
 ---
 Now we examine how to define a topology on a quotient set. ([[Set Theory] §Equivalence Relations, ⁋Definition 6](/en/math/set_theory/equivalence_relations#def6))
 
@@ -22,7 +24,7 @@ Now we examine how to define a topology on a quotient set. ([[Set Theory] §Equi
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let $$X$$ be a topological space. A subset $$A$$ is called *locally closed* at $$x\in A$$ if there exists a neighborhood $$V$$ of $$x$$ in $$X$$ such that $$A\cap V$$ is a closed set in $$V$$. If $$A$$ is locally closed at every $$x\in A$$, then we call $$A$$ itself locally closed.
+<ins id="def1">**Definition 1**</ins> Let $$X$$ be a topological space. A subset $$A$$ is called *locally closed* at $$x\in A$$ if there exists a neighborhood $$V$$ of $$x$$ in $$X$$ such that $$A\cap V$$ is closed in $$V$$. If $$A$$ is locally closed at every $$x\in A$$, then we call $$A$$ itself locally closed.
 
 </div>
 
@@ -38,15 +40,15 @@ Now we examine how to define a topology on a quotient set. ([[Set Theory] §Equi
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, suppose $$A$$ is locally closed, and for each $$x\in A$$ let $$V_x$$ be an open neighborhood of $$x$$ in $$X$$ satisfying the condition of [Definition 1](#def1). Then $$U=\bigcup_{x\in A} V_x$$ is an open set. Also, by applying [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6), we see that $$A$$ is a closed set in $$U$$. Thus $$A=U\cap C$$ for some closed set $$C$$ in $$X$$, so the second condition holds.
+First, suppose $$A$$ is locally closed, and for each $$x\in A$$ let $$V_x$$ be an open neighborhood of $$x$$ in $$X$$ satisfying the condition of [Definition 1](#def1). Then $$U=\bigcup_{x\in A} V_x$$ is an open set. Also, by applying [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6), we see that $$A$$ is closed in $$U$$. Thus $$A=U\cap C$$ for some closed set $$C$$ in $$X$$, so the second condition holds.
 
 Now suppose $$A=U\cap C$$ holds for an open set $$U$$ and a closed set $$C$$ in $$X$$. Then $$\cl A\subseteq C$$, so
 
 $$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 
-holds, and in particular $$A=U\cap\cl A$$. From this we see that $$A$$ is an open set in $$\cl A$$.
+holds, and in particular $$A=U\cap\cl A$$. From this we see that $$A$$ is open in $$\cl A$$.
 
-Finally, if there exists an open set $$U$$ in $$X$$ satisfying $$A=U\cap\cl A$$, then $$A$$ is a closed set in $$U$$ and hence locally closed.
+Finally, if there exists an open set $$U$$ in $$X$$ satisfying $$A=U\cap\cl A$$, then $$A$$ is closed in $$U$$ and hence locally closed.
 
 </details>
 
@@ -88,19 +90,19 @@ so it is continuous.
 
 </details>
 
-Meanwhile, let topological spaces $$X,Y$$ and a continuous function $$f:X\rightarrow Y$$ be given, and consider the equivalence relation $$R$$ defined by $$f$$. ([[Set Theory] §Equivalence Relations, ⁋Definition 5](/en/math/set_theory/equivalence_relations#def5)) Then the canonical decomposition of $$f$$
+Meanwhile, let topological spaces $$X,Y$$ and a continuous function $$f:X\rightarrow Y$$ be given, and consider the equivalence relation $$R$$ defined by $$f$$. ([[Set Theory] §Equivalence Relations, ⁋Definition 5](/en/math/set_theory/equivalence_relations#def5)) Then we may consider the canonical decomposition of $$f$$
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 
-can be considered. Now if we give $$f(X)$$ the subspace topology, it is obvious that $$\bar{f}$$ is continuous by [Proposition 4](#prop4) and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3). Also, by the definition of the canonical decomposition, $$\bar{f}$$ is a bijection. In general $$\bar{f}$$ need not be a homeomorphism ([§Continuous Functions, ⁋Example 5](/en/math/topology/continuous_functions#ex5)), but the following holds.
+Now if we give $$f(X)$$ the subspace topology, it is immediate from [Proposition 4](#prop4) and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3) that $$\bar{f}$$ is continuous. Also, by the definition of the canonical decomposition, $$\bar{f}$$ is a bijection. In general $$\bar{f}$$ need not be a homeomorphism ([§Continuous Functions, ⁋Example 5](/en/math/topology/continuous_functions#ex5)), but the following holds.
 
 <div class="proposition" markdown="1">
 
 <ins id="prop6">**Proposition 6**</ins> For the above diagram, the following are equivalent.
 
 1. $$\bar{f}$$ is a homeomorphism from $$X/R$$ onto $$f(X)$$.
-2. For an open set $$U\subseteq X$$ saturated with respect to $$R$$, $$f(U)$$ is an open set in $$f(X)$$.
-3. For a closed set $$C\subseteq X$$ saturated with respect to $$R$$, $$f(C)$$ is a closed set in $$f(X)$$.
+2. For an open set $$U\subseteq X$$ saturated with respect to $$R$$, $$f(U)$$ is open in $$f(X)$$.
+3. For a closed set $$C\subseteq X$$ saturated with respect to $$R$$, $$f(C)$$ is closed in $$f(X)$$.
 
 </div>
 
@@ -110,7 +112,7 @@ Meanwhile, in the same situation as above, suppose there exists a *continuous* s
 
 $$\bar{f}\circ(p\circ s)=f\circ s=\id_Y$$
 
-and composing $$\bar{f}^{-1}$$ on the left side and $$\bar{f}$$ on the right side of the above equation, respectively, we obtain
+and composing $$\bar{f}^{-1}$$ on the left and $$\bar{f}$$ on the right of the above equation, respectively, we obtain
 
 $$(p\circ s)\circ\bar{f}=\id_{X/R}$$
 

@@ -1,5 +1,6 @@
 ---
 title: "Subspaces"
+description: "This post introduces the definition of the subspace topology induced on a subset of a topological space and examines the properties of open and closed sets within a subspace."
 excerpt: "Properties of subspaces"
 
 categories: [Math / Topology]
@@ -13,16 +14,17 @@ sidebar:
 date: 2022-11-15
 last_modified_at: 2022-11-15
 weight: 7
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-03T04:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T04:00:01+00:00
 ---
 ## Definition of Subspaces
 
-Just as when dealing with algebraic structures, after equipping a set $$X$$ with a topological structure it is natural to examine how this structure is restricted to a subset $$A\subseteq X$$. The first thought that comes to mind is to select, among the open sets of $$X$$, only those contained in $$A$$ and define them to be the open sets of the topological space $$A$$. However, this attempt is bound to fail, because if $$A$$ is not an open set in $$X$$ then the whole set $$A$$ itself does not belong to this collection.
+Just as when dealing with algebraic structures, after equipping a set $$X$$ with a topological structure it is natural to examine how this structure restricts to a subset $$A\subseteq X$$. The first idea that comes to mind is to select, among the open sets of $$X$$, only those contained in $$A$$ and declare them to be the open sets of the topological space $$A$$. However, this attempt is bound to fail: if $$A$$ is not an open set in $$X$$, then the whole set $$A$$ itself does not belong to this collection.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let a topological space $$(X,\mathcal{T})$$ and a subset $$A$$ of $$X$$ be given. Then the initial topology on $$A$$ defined by the inclusion $$\iota:A\hookrightarrow X$$ is called *the subspace topology on $$A$$*.
+<ins id="def1">**Definition 1**</ins> Let a topological space $$(X,\mathcal{T})$$ and a subset $$A$$ of $$X$$ be given. Then the initial topology on $$A$$ defined by the inclusion $$\iota:A\hookrightarrow X$$ is called the *subspace topology on $$A$$*.
 
 </div>
 
@@ -144,9 +146,9 @@ it suffices to prove the proposition for either open sets or closed sets. Also, 
 
 ## Subspaces and Continuous Functions
 
-Let $$X$$ and $$Y$$ be topological spaces and let $$f:X\rightarrow Y$$ be a map. Then for a set $$Y$$ satisfying $$f(X)\subseteq B\subseteq Y$$, the function obtained by restricting the codomain of $$f$$ to $$B$$ is continuous. This is trivial by [Definition 1](#def1) and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3).
+Let topological spaces $$X,Y$$ and a function $$f:X\rightarrow Y$$ be given. Then for any set $$B$$ with $$f(X)\subseteq B\subseteq Y$$, the function obtained by restricting the codomain of $$f$$ to $$B$$ is continuous. This is trivial by [Definition 1](#def1) and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3).
 
-Now, in the same situation, suppose a subset $$A$$ of $$X$$ is given. Then the function $$f:X\rightarrow Y$$ restricted to $$A$$, denoted $$f\vert_A$$, equals $$f\circ\iota$$ for the inclusion $$\iota:A\hookrightarrow X$$. Since this is a composition of two continuous functions, we immediately see that $$f\vert_A$$ is also continuous. However, the converse does not hold in general.
+Now suppose, in the same setting, that a subset $$A$$ of $$X$$ is given. Then the restriction of $$f:X\rightarrow Y$$ to $$A$$, denoted $$f\vert_A$$, equals $$f\circ\iota$$ for the inclusion $$\iota:A\hookrightarrow X$$. Since this is a composition of two continuous functions, we immediately see that $$f\vert_A$$ is also continuous. However, the converse does not hold in general.
 
 <div class="example" markdown="1">
 
