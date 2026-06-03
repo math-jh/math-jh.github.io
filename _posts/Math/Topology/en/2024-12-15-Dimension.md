@@ -1,5 +1,6 @@
 ---
 title: "Dimension"
+description: "This post defines the dimension of a topological space using the order of open-set covers, and discusses the covering dimension of compact spaces along with properties of finite-dimensional topological spaces."
 excerpt: "Definitions of covering dimension and Krull dimension for algebraic geometry"
 
 categories: [Math / Topology]
@@ -13,8 +14,9 @@ sidebar:
 date: 2024-12-15
 last_modified_at: 2024-12-15
 weight: 19
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-03T09:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T09:30:02+00:00
 ---
 In this post we define the dimension of a topological space. First we define the dimension commonly used in general topology, and then we separately define the notion of dimension used in [Algebraic Varieties](/en/algebraic_varieties/).
 
@@ -90,7 +92,7 @@ On the other hand, we will define the notion of dimension used in algebraic geom
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> A topological space $$X$$ is *irreducible* if there do not exist nontrivial closed subsets of $$X$$ such that $$X=A\cup B$$.
+<ins id="def6">**Definition 6**</ins> A topological space $$X$$ is *irreducible* if there do not exist nontrivial closed subsets $$A,B$$ of $$X$$ such that $$X=A\cup B$$.
 
 </div>
 
