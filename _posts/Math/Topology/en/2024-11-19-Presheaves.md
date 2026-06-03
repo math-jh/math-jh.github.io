@@ -1,5 +1,6 @@
 ---
 title: "Presheaves"
+description: "This post introduces the notion of a sheaf as a contravariant functor assigning continuous functions on open sets of a topological space, and discusses the conditions for extending continuous functions on a family of subsets to the whole space via the gluing lemma."
 excerpt: "The gluing lemma and the definition of a presheaf"
 
 categories: [Math / Topology]
@@ -13,12 +14,13 @@ sidebar:
 date: 2024-11-19
 last_modified_at: 2025-02-18
 weight: 8
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-03T06:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T06:30:02+00:00
 ---
 ## Gluing lemma
 
-As we saw in [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8), given a continuous function $$f:X \rightarrow Y$$, restricting it to a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6) yields a continuous map. In particular, these conditions correspond to the following two cases:
+As we saw in [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8), given a continuous function $$f:X \rightarrow Y$$, restricting it to a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6) yields a continuous map. Specifically, these conditions correspond to the following two cases:
 
 1. $$(A_i)$$ is an open covering of $$X$$, or
 2. $$(A_i)$$ is a locally finite closed covering of $$X$$.
@@ -31,7 +33,7 @@ Conversely, given such a family $$(A_i)$$ and continuous functions $$f_i$$ defin
 
 $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
-then the function $$f:X \rightarrow Y$$ obtained by extending them is continuous.
+then the function $$f:X \rightarrow Y$$ obtained by gluing them together is continuous.
 
 </div>
 <details class="proof" markdown="1">
@@ -53,7 +55,7 @@ Define the category $$\Open(X)$$ as the category associated to the ordered set $
 
 </div>
 
-By the way, presheaves are commonly denoted by $$\mathcal{F}$$ or $$\mathscr{F}$$; between these, the calligraphic $$\mathcal{F}$$ is slightly more natural. However, since we are already using this font for topological structures, we adopt the script font for the topology category.
+By convention, presheaves are commonly denoted by $$\mathcal{F}$$ or $$\mathscr{F}$$; between these, the calligraphic $$\mathcal{F}$$ is slightly more natural. However, since we are already using this font for topological structures, we adopt the script font in the topology category.
 
 Since $$\mathscr{F}$$ is contravariant, each inclusion $$U\hookrightarrow V$$ of open sets yields a morphism $$\rho_{VU}: \mathscr{F}(V)\rightarrow \mathscr{F}(U)$$, and because $$\mathscr{F}$$ preserves composition, whenever $$U\hookrightarrow V\hookrightarrow W$$ we must have $$\rho_{WU}=\rho_{VU}\circ\rho_{WV}$$.
 
