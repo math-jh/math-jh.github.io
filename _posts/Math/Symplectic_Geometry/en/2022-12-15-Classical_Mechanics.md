@@ -1,5 +1,6 @@
 ---
 title: "Classical Mechanics"
+description: "This post explores the physical background of symplectic geometry through the law of conservation of energy and phase space. It summarizes how symplectic manifolds emerged from nineteenth-century physics."
 excerpt: "Classical mechanics and phase space"
 
 categories: [Math / Symplectic Geometry]
@@ -13,42 +14,43 @@ sidebar:
 date: 2022-12-15
 last_modified_at: 2022-12-15
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-02T23:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T23:00:02+00:00
 ---
-In this post we examine the historical (physical) background that led to the introduction of symplectic manifolds, which are studied in symplectic geometry. As a mathematician, I have compiled bits and pieces picked up here and there, so there may be some physical inaccuracies.
+In this post we examine the historical (physical) background that led to the introduction of symplectic manifolds in symplectic geometry. As mathematicians compiling bits and pieces picked up here and there, we may have introduced some physical inaccuracies.
 
 ## Conservation of Energy
 
-Physics, and especially mechanics, has various formulas describing the motion of objects. For example, Newton's law of motion $$F=ma$$ is a formula that even those who have not studied physics would know.
+Physics, and especially mechanics, provides various formulas describing the motion of objects. Newton's law of motion $$F=ma$$, for example, is familiar even to those who have never studied physics.
 
-One fact that became clear to physicists in the 19th century is that rather than such formulas determining the motion of an object, a single function determines the motion. In a sense, this fact is somewhat related to the *law of energy conservation* as well.
+One fact that became clear to physicists in the 19th century is that it is not these individual formulas but a single function that determines the motion of an object. In a sense, this fact is also somewhat related to the *law of conservation of energy*.
 
-To examine this, consider a *phase space* with one axis representing the position of an object and the other representing its momentum. For example, the phase space corresponding to a 1-dimensional space is a 2-dimensional space consisting of one position axis and one momentum axis, and in general, the phase space of an $$n$$-dimensional space is a $$2n$$-dimensional space consisting of $$n$$-dimensional position coordinates and $$n$$-dimensional momentum coordinates.
+To see this, consider a *phase space* with one axis representing the position of an object and the other representing its momentum. For example, the phase space corresponding to a 1-dimensional space is a 2-dimensional space consisting of one position axis and one momentum axis; in general, the phase space of an $$n$$-dimensional space is a $$2n$$-dimensional space consisting of $$n$$-dimensional position coordinates and $$n$$-dimensional momentum coordinates.
 
 ![phase_space](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-1.png){:style="width:268.8px" class="invert" .align-center}
 
-In this situation, kinetic energy $$K=\frac{1}{2}mv^2$$ or potential energy $$P=mgh$$, etc., are physical quantities that can be described by position and velocity coordinates, excluding the constants $$m$$, $$g$$. That is, these energies are functions from phase space to $$\mathbb{R}$$. Then the law of conservation of energy means that when the motion of an object is described in phase space, its trajectory must be completely contained in a level surface of the energy function.
+In this setting, kinetic energy $$K=\frac{1}{2}mv^2$$ or potential energy $$P=mgh$$, once the constants $$m$$ and $$g$$ are fixed, are physical quantities described by position and velocity coordinates. That is, these energies are functions from phase space to $$\mathbb{R}$$. The law of conservation of energy then means that when the motion of an object is described in phase space, its trajectory must lie entirely within a level set of the energy function.
 
-For example, consider the motion of an object in one dimension with no force acting on it. That is, since the energy of this object consists only of kinetic energy, we may consider the energy function $$E:\mathbb{R}^2\rightarrow\mathbb{R}$$ as $$E(x,v)=v^2$$. Then the level surfaces of $$E$$ are line segments drawn parallel to the position axis.
+For example, consider the motion of an object in one dimension subject to no force. Since the energy of this object consists only of kinetic energy, we may take the energy function $$E:\mathbb{R}^2\rightarrow\mathbb{R}$$ to be $$E(x,v)=v^2$$. Then the level sets of $$E$$ are line segments parallel to the position axis.
 
 ![kinetic_energy](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-2.png){:style="width:268.8px" class="invert" .align-center}
 
-By the law of conservation of energy, an object starting at a point in phase space cannot leave this level surface no matter how much time passes. Interpreting this physically, when no external force acts on the object, its acceleration is zero.
+By the law of conservation of energy, an object starting at a point in phase space cannot leave this level set, no matter how much time elapses. Physically, this means that when no external force acts on the object, its acceleration is zero.
 
-The law of conservation of mechanical energy that we learn in high school generally means that the sum of kinetic energy and potential energy does not change. If we draw a similar picture as above, the level surfaces of the energy function are roughly as follows.
+The law of conservation of mechanical energy taught in high school states that the sum of kinetic and potential energy remains constant. Drawing a similar picture, the level sets of the energy function look roughly as follows.
 
 ![mechanical_energy](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-3.png){:style="width:240.3px" class="invert" .align-center}
 
-Likewise, by the law of conservation of energy, the motion of the object must always lie on the level surface of this energy.
+Again, by the law of conservation of energy, the motion of the object must always remain on this level set of energy.
 
-Finally, consider the motion of an object attached to a spring. By Hooke's law, the potential energy imparted to the object by the spring is given by $$\frac{1}{2}kx^2$$. Since the kinetic energy of the object is $$\frac{1}{2}mv^2$$, we define the energy function $$E$$ as $$E(x,v)=\frac{1}{2}kx^2+\frac{1}{2}mv^2$$. If we plot this in phase space, an elliptical shape appears as follows.
+Finally, consider the motion of an object attached to a spring. By Hooke's law, the potential energy imparted to the object by the spring is given by $$\frac{1}{2}kx^2$$. Since the kinetic energy of the object is $$\frac{1}{2}mv^2$$, we define the energy function $$E$$ by $$E(x,v)=\frac{1}{2}kx^2+\frac{1}{2}mv^2$$. Plotting this in phase space yields an ellipse, as shown below.
 
 ![harmonic_oscillator](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-4.png){:style="width:391.35px" class="invert" .align-center}
 
 This suggests that the motion of the object will be periodic.
 
-The above picture makes sense when the dimension in which the object moves is 1, but even if the object moves in 2 dimensions, the phase space becomes 4-dimensional, and thus the energy level surface becomes 3-dimensional, so additional tools are needed to explain which curve the object actually follows within it.
+The pictures above are adequate when the object moves in one dimension, but as soon as the object moves in two dimensions the phase space becomes 4-dimensional, and the energy level set becomes 3-dimensional. Consequently, additional tools are needed to describe the actual curve the object follows within it.
 
 ## Principle of Least Action
 
@@ -58,7 +60,7 @@ What plays an important role in this process is the following *principle of leas
 > 
 > $$\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle y,\dot{x}\rangle-H(z)\mathop{dt}$$
 
-In this formula, the newly introduced $$H$$ denotes the *Hamiltonian*, and in what follows we may simply think of it as energy. This principle holds locally even when $$H$$ depends on time, in which case we simply write $$H_t$$ instead of $$H$$. It is very well known how such problems are treated mathematically.
+In this formula, the newly introduced $$H$$ denotes the *Hamiltonian*, and for our purposes we may simply regard it as the energy. This principle holds locally even when $$H$$ depends on time; in that case one merely replaces $$H$$ by $$H_t$$. The mathematical treatment of such problems is very well known.
 
 <div class="proposition" markdown="1">
 
@@ -70,19 +72,19 @@ $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\pa
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-To prove this, suppose we are given a 1-parameter family of paths $$(z_s)=(x_s,y_s)$$ satisfying the boundary conditions $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$, and let $$z_0=z$$. Then
+To prove this, suppose a 1-parameter family of paths $$(z_s)=(x_s,y_s)$$ satisfying the boundary conditions $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$ is given, and let $$z_0=z$$. Then
 
 $$\begin{aligned}\frac{\partial}{\partial s}\bigg|_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg|_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg|_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s|_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}|_0\bigr\rangle-\bigl\langle\partial_sx_s|_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s|_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
 
-. Now integration by parts
+Now consider integration by parts:
 
 $$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s|_0\rangle\mathop{dt}=\bigl[\langle y,\partial_sx_s|_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s|_0\rangle\mathop{dt}$$
 
-gives that the first term on the right-hand side vanishes by the boundary conditions $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$. Substituting this into the previous equation and rearranging,
+The first term on the right-hand side vanishes by the boundary conditions $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$. Substituting this into the preceding equation and rearranging, we obtain
 
 $$\frac{\partial}{\partial s}\bigg|_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s|_0,\dot{x}-\partial_yH_t\rangle\mathop{dt}-\int_{t_0}^{t_1}\langle\partial_sx_s|_0,\dot{y}+\partial_xH_t\rangle\mathop{dt}$$
 
-and since $$\partial_sx_s\vert_0$$ and $$\partial_sy_s\vert_0$$ can vary arbitrarily, $$z$$ being an extremum of $$\mathcal{A}_H$$ is equivalent to the two equations
+Since $$\partial_sx_s\vert_0$$ and $$\partial_sy_s\vert_0$$ can vary arbitrarily, $$z$$ being an extremum of $$\mathcal{A}_H$$ is equivalent to the two equations
 
 $$\dot{x}-\partial_yH_t=0,\qquad\dot{y}+\partial_xH_t=0$$
 
@@ -90,61 +92,59 @@ holding.
 
 </details>
 
-Consider the (linear) complex structure[^1] $$J_0\in\End(\mathbb{R}^{2n})$$ defined on the vector space $$\mathbb{R}^{2n}$$. With respect to the basis $$\{x_1,\ldots, x_n,y_1,\ldots, y_n\}$$, this linear map is given by the following matrix
+Consider the (linear) complex structure[^1] $$J_0\in\End(\mathbb{R}^{2n})$$ defined on the vector space $$\mathbb{R}^{2n}$$. With respect to the basis $$\{x_1,\ldots, x_n,y_1,\ldots, y_n\}$$, this linear map is given by the matrix
 
 $$J_0=\begin{pmatrix}0&-I\\I&0\end{pmatrix}$$
 
-. This means multiplication by the imaginary unit $$i$$ when we identify $$\mathbb{R}^{2n}$$ with $$\mathbb{C}^n$$ via $$z_j:=x_j+iy_j$$. If we think of $$\mathbb{R}^{2n}$$ as a manifold and $$T_p\mathbb{R}^{2n}\cong\mathbb{R}^{2n}$$ as the tangent space at each point $$p\in\mathbb{R}^{2n}$$, then $$J_0$$ can be regarded as an element of $$\End(T\mathbb{R}^{2n})$$ defined by the formulas
+This represents multiplication by the imaginary unit $$i$$ when we identify $$\mathbb{R}^{2n}$$ with $$\mathbb{C}^n$$ via $$z_j:=x_j+iy_j$$. Regarding $$\mathbb{R}^{2n}$$ as a manifold and $$T_p\mathbb{R}^{2n}\cong\mathbb{R}^{2n}$$ as the tangent space at each point $$p\in\mathbb{R}^{2n}$$, we may view $$J_0$$ as an element of $$\End(T\mathbb{R}^{2n})$$ defined by the formulas
 
 $$J_0\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\frac{\partial}{\partial y^j}\bigg|_p,\qquad J_0\left(\frac{\partial}{\partial y^j}\bigg|_p\right)=-\frac{\partial}{\partial x^j}\bigg|_p\tag{1}$$
 
-. Now
+Now
 
 $$\nabla H=\begin{pmatrix}\partial H/\partial x\\ \partial H/\partial y\end{pmatrix}$$
 
-, so Hamilton's equations can be written simply as
+so Hamilton's equations can be written compactly as
 
 $$\dot{z}=-J_0\nabla H(z)$$
 
-. Intuitively, the gradient $$\nabla H$$ points in the direction of greatest change of $$H$$, that is, in the direction perpendicular to the level surfaces of $$H$$, so we can think of $$\dot{z}$$ as being obtained by rotating this again by 90 degrees via $$J_0$$ to make it parallel to the level surfaces of $$H$$.
+Intuitively, the gradient $$\nabla H$$ points in the direction of greatest increase of $$H$$, that is, in the direction normal to the level sets of $$H$$; applying $$J_0$$ rotates this direction by 90 degrees, making it tangent to the level sets of $$H$$, and this is precisely $$\dot{z}$$.
 
-Therefore, finding the path along which the object actually moves in phase space, that is, finding $$z$$, is exactly the same as finding the integral flow of the following *Hamiltonian vector field*
+Therefore, finding the actual trajectory of the object in phase space—that is, finding $$z$$—is exactly the problem of finding the integral flow of the following *Hamiltonian vector field*
 
 $$X_H=-J_0\nabla H(z)$$
 
-, and we know that this is always possible. ([\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6))
+and we know that this is always possible. ([\[Differential Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6))
 
 ## Symplectic Form
 
-To summarize the above process, the Hamiltonian $$H$$ describes the motion of the object through the formula
+To summarize the discussion above, the Hamiltonian $$H$$ describes the motion of the object through the formula
 
 $$dH=\langle-J_0\nabla H(z), -\rangle$$
 
-. Now define a $$2$$-form on $$\mathbb{R}^{2n}$$ by
+Now define a $$2$$-form on $$\mathbb{R}^{2n}$$ by
 
 $$\omega_0(-,-):=\langle J_0-, -\rangle$$
 
-. Then the above formula can be written, analogously to the definition of the gradient of a function $$f$$ via $$df=\langle\nabla f,-\rangle$$, as
+Then the above formula can be written, by analogy with the definition of the gradient of a function $$f$$ via $$df=\langle\nabla f,-\rangle$$, as
 
 $$dH=\omega_0(X_H, -)$$
 
-. We call $$\omega_0$$ the *canonical symplectic form* defined on $$\mathbb{R}^{2n}$$, and from this point of view $$X_H$$ is sometimes called the *symplectic gradient*.
+We call $$\omega_0$$ the *canonical symplectic form* on $$\mathbb{R}^{2n}$$, and from this point of view $$X_H$$ is sometimes called the *symplectic gradient*.
 
-In the standard coordinate system of $$\mathbb{R}^{2n}$$,
+In the standard coordinate system on $$\mathbb{R}^{2n}$$,
 
 $$\langle-,-\rangle=\sum_{j=1}^n dx^j\otimes dx^j+\sum_{j=1}^n dy^j\otimes dy^j$$
 
-so using equation (1) we can compute $$\omega_0$$ on the basis vectors $$\partial/\partial x^j,\partial/\partial y^j$$. For example,
+so using equation (1) we can compute $$\omega_0$$ on the basis vectors $$\partial/\partial x^j,\partial/\partial y^j$$. For instance,
 
 $$(\omega_0)_p\left(\frac{\partial}{\partial x^j}\bigg|_p,\frac{\partial}{\partial y^k}\bigg|_p\right)=\left\langle\frac{\partial}{\partial y^j}\bigg|_p,\frac{\partial}{\partial y^k}\bigg|_p\right\rangle_p=\delta_{jk}$$
 
-, and computing the remaining basis vectors as well, we find that $$\omega_0$$ is expressed in standard coordinates as
+and carrying out the remaining computations, we find that $$\omega_0$$ is expressed in standard coordinates as
 
 $$\omega_0=\sum_{j=1}^n dx^j\wedge dy^j$$
 
-. 
-
-Before long we will see that the above discussion remains valid when we replace $$\mathbb{R}^{2n}$$ with an arbitrary manifold $$M$$ and cotangent bundle $$T^\ast M$$, Riemannian metric $$g$$, and almost complex structure $$J$$.
+Before long we shall see that the entire discussion above remains valid when $$\mathbb{R}^{2n}$$ is replaced by an arbitrary manifold $$M$$, its cotangent bundle $$T^\ast M$$, a Riemannian metric $$g$$, and an almost complex structure $$J$$.
 
 ---
 
@@ -154,4 +154,4 @@ Before long we will see that the above discussion remains valid when we replace 
 
 ---
 
-[^1]: A *linear complex structure* defined on a vector space $$V$$ means an endomorphism $$J\in\End(V)$$ satisfying $$J^2=-\id$$. When such a $$J$$ is given, one can verify that $$V$$ acquires the structure of a $$\mathbb{C}$$-vector space via the formula $$(a+bi)\cdot v:=av+bJv$$.
+[^1]: A *linear complex structure* on a vector space $$V$$ is an endomorphism $$J\in\End(V)$$ satisfying $$J^2=-\id$$. When such a $$J$$ is given, one can verify that $$V$$ acquires the structure of a $$\mathbb{C}$$-vector space via the formula $$(a+bi)\cdot v:=av+bJv$$.
