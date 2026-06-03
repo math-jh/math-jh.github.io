@@ -4,7 +4,7 @@
 \usepackage{ytableau}
 \usepackage{../../.preamble/quiver}
 \usepackage{../../.preamble/Operators}
-\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, decorations.markings}
+\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, decorations.markings, intersections}
 \begin{document}
 
 %% placeholder (다음 컴파일할 코드를 여기에 둔다)
@@ -206,4 +206,301 @@
        \node[bv] at (\p) {}; \node[\pos=1pt, font=\small] at (\p) {$\lab$}; }
     \node[font=\small] at (0,-\R-0.55) {$\Gamma'$};
   \end{scope}
+\end{tikzpicture}
+
+%% def5 예시: n=4, 빈 원 internal vertex 둘, 점선 boundary (invert용) (Postnikov_Diagram_and_Plabic_Graph-2.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth,
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3.2pt}]
+  \def\R{2}
+  \draw[gray!60, thick, densely dashed] (0,0) circle (\R);
+  \node[wv] (W1) at (-0.75,0) {};
+  \node[wv] (W2) at (0.75,0) {};
+  \coordinate (b1) at (135:\R); \coordinate (b2) at (225:\R);
+  \coordinate (b3) at (315:\R); \coordinate (b4) at (45:\R);
+  \draw[black!80, thick] (W1)--(b1) (W1)--(b2) (W1)--(W2) (W2)--(b3) (W2)--(b4);
+  \foreach \p/\lab/\pos in {b1/1/{above left}, b2/2/{below left}, b3/3/{below right}, b4/4/{above right}}{
+     \fill[black] (\p) circle (2.4pt); \node[\pos=1pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% ex7: G(빈 원 2개) --수축--> G'(빈 원 1개), trip 2->3 굵게 (invert용) (Postnikov_Diagram_and_Plabic_Graph-3.png)
+\begin{tikzpicture}[scale=1.0, >=Stealth,
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3pt},
+   trip/.style={violet!75, line width=1.8pt, postaction={decorate,
+      decoration={markings, mark=at position #1 with {\arrow{Stealth[length=3mm]}}}}}]
+  \begin{scope}[shift={(-3,0)}]
+    \def\R{1.7}
+    \draw[gray!60, thick, densely dashed] (0,0) circle (\R);
+    \node[wv] (W1) at (-0.62,0) {}; \node[wv] (W2) at (0.62,0) {};
+    \coordinate (b1) at (135:\R); \coordinate (b2) at (225:\R);
+    \coordinate (b3) at (315:\R); \coordinate (b4) at (45:\R);
+    \draw[black!80, thick] (W1)--(b1) (W2)--(b4);
+    \draw[trip=0.52] (b2)--(W1)--(W2)--(b3);
+    \foreach \p/\lab/\pos in {b1/1/{above left}, b2/2/{below left}, b3/3/{below right}, b4/4/{above right}}{
+       \fill[black] (\p) circle (1.7pt); \node[\pos=1pt, font=\small] at (\p) {$\lab$}; }
+    \node[font=\small] at (0,-\R-0.55) {$\Gamma$};
+  \end{scope}
+  \draw[-{Stealth[length=3mm]}, line width=1pt] (-1.0,0)--(1.0,0);
+  \node[font=\small] at (0,0.34) {수축};
+  \begin{scope}[shift={(3,0)}]
+    \def\R{1.7}
+    \draw[gray!60, thick, densely dashed] (0,0) circle (\R);
+    \node[wv] (W) at (0,0) {};
+    \coordinate (b1) at (135:\R); \coordinate (b2) at (225:\R);
+    \coordinate (b3) at (315:\R); \coordinate (b4) at (45:\R);
+    \draw[black!80, thick] (W)--(b1) (W)--(b4);
+    \draw[trip=0.62] (b2)--(W)--(b3);
+    \foreach \p/\lab/\pos in {b1/1/{above left}, b2/2/{below left}, b3/3/{below right}, b4/4/{above right}}{
+       \fill[black] (\p) circle (1.7pt); \node[\pos=1pt, font=\small] at (\p) {$\lab$}; }
+    \node[font=\small] at (0,-\R-0.55) {$\Gamma'$};
+  \end{scope}
+\end{tikzpicture}
+
+%% ex7: Γ (빈 원 2개), trip 2->3 굵게 (Postnikov_Diagram_and_Plabic_Graph-3.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth,
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3.2pt},
+   trip/.style={violet!75, line width=1.9pt, postaction={decorate,
+      decoration={markings, mark=at position #1 with {\arrow{Stealth[length=3.2mm]}}}}}]
+  \def\R{2}
+  \draw[gray!60, thick, densely dashed] (0,0) circle (\R);
+  \node[wv] (W1) at (-0.75,0) {}; \node[wv] (W2) at (0.75,0) {};
+  \coordinate (b1) at (135:\R); \coordinate (b2) at (225:\R);
+  \coordinate (b3) at (315:\R); \coordinate (b4) at (45:\R);
+  \draw[black!80, thick] (W1)--(b1) (W2)--(b4);
+  \draw[trip=0.52] (b2)--(W1)--(W2)--(b3);
+  \foreach \p/\lab/\pos in {b1/1/{above left}, b2/2/{below left}, b3/3/{below right}, b4/4/{above right}}{
+     \fill[black] (\p) circle (2.4pt); \node[\pos=1pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% ex7: Γ' (빈 원 1개, 수축 결과), trip 2->3 굵게 (Postnikov_Diagram_and_Plabic_Graph-4.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth,
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3.2pt},
+   trip/.style={violet!75, line width=1.9pt, postaction={decorate,
+      decoration={markings, mark=at position #1 with {\arrow{Stealth[length=3.2mm]}}}}}]
+  \def\R{2}
+  \draw[gray!60, thick, densely dashed] (0,0) circle (\R);
+  \node[wv] (W) at (0,0) {};
+  \coordinate (b1) at (135:\R); \coordinate (b2) at (225:\R);
+  \coordinate (b3) at (315:\R); \coordinate (b4) at (45:\R);
+  \draw[black!80, thick] (W)--(b1) (W)--(b4);
+  \draw[trip=0.6] (b2)--(W)--(b3);
+  \foreach \p/\lab/\pos in {b1/1/{above left}, b2/2/{below left}, b3/3/{below right}, b4/4/{above right}}{
+     \fill[black] (\p) circle (2.4pt); \node[\pos=1pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def10: Gr(2,4) Postnikov diagram, 4 strands i->i+2 (Postnikov_Diagram_and_Plabic_Graph-5.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth,
+   bdot/.style={fill=black, circle, inner sep=1.7pt},
+   strand/.style={line width=1.4pt, postaction={decorate,
+      decoration={markings, mark=at position 0.5 with {\arrow{Stealth[length=3mm]}}}}}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[strand, red!75!black]    (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
+  \draw[strand, blue!70!black]   (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
+  \draw[strand, green!55!black]  (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
+  \draw[strand, orange!90!black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def12: Gr(2,4) plabic graph(square) + face labels (Postnikov_Diagram_and_Plabic_Graph-6.png)
+\begin{tikzpicture}[scale=1.5, >=Stealth,
+   bdot/.style={fill=black, circle, inner sep=1.7pt},
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3pt},
+   bv/.style={draw=black, very thick, fill=black, circle, inner sep=3pt}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \node[wv] (N) at (0,0.72) {}; \node[bv] (E) at (0.72,0) {};
+  \node[wv] (S) at (0,-0.72) {}; \node[bv] (W) at (-0.72,0) {};
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[black!80, thick] (N)--(E)--(S)--(W)--(N);
+  \draw[black!80, thick] (N)--(b1) (W)--(b2) (S)--(b3) (E)--(b4);
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
+  \node[font=\small] at (0,0) {$\{1,3\}$};
+  \node[font=\small] at (1.05,1.05) {$\{1,2\}$};
+  \node[font=\small] at (-1.05,1.05) {$\{2,3\}$};
+  \node[font=\small] at (-1.05,-1.05) {$\{3,4\}$};
+  \node[font=\small] at (1.05,-1.05) {$\{1,4\}$};
+\end{tikzpicture}
+
+%% def10: Gr(2,4) Postnikov diagram, 4 strands i->i+2, over/under alternating (Postnikov_Diagram_and_Plabic_Graph-5.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth,
+   strand/.style={line width=1.5pt, postaction={decorate,
+      decoration={markings, mark=at position 0.5 with {\arrow{Stealth[length=3mm]}}}}},
+   bare/.style={line width=1.5pt}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[strand, red!75!black,    name path=sR] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
+  \draw[strand, blue!70!black,   name path=sB] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
+  \draw[strand, green!55!black,  name path=sG] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
+  \draw[strand, orange!90!black, name path=sO] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
+  \path[name intersections={of=sR and sB, name=cNW}];
+  \path[name intersections={of=sB and sG, name=cNE}];
+  \path[name intersections={of=sG and sO, name=cSE}];
+  \path[name intersections={of=sO and sR, name=cSW}];
+  % over: NW red, NE blue, SE green, SW orange
+  \fill[white] (cNW-1) circle (4pt);
+  \begin{scope}\clip (cNW-1) circle (5pt);\draw[bare, red!75!black] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);\end{scope}
+  \fill[white] (cNE-1) circle (4pt);
+  \begin{scope}\clip (cNE-1) circle (5pt);\draw[bare, blue!70!black] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);\end{scope}
+  \fill[white] (cSE-1) circle (4pt);
+  \begin{scope}\clip (cSE-1) circle (5pt);\draw[bare, green!55!black] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);\end{scope}
+  \fill[white] (cSW-1) circle (4pt);
+  \begin{scope}\clip (cSW-1) circle (5pt);\draw[bare, orange!90!black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);\end{scope}
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def10: Gr(2,4) Postnikov diagram, i->i+2, over/under via transparent gaps (Postnikov_Diagram_and_Plabic_Graph-5.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth,
+   strand/.style={line width=1.5pt, postaction={decorate,
+      decoration={markings, mark=at position 0.5 with {\arrow{Stealth[length=3mm]}}}}}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \path[name path=sR] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
+  \path[name path=sB] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
+  \path[name path=sG] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
+  \path[name path=sO] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
+  \path[name intersections={of=sR and sB, name=cNW}];
+  \path[name intersections={of=sB and sG, name=cNE}];
+  \path[name intersections={of=sG and sO, name=cSE}];
+  \path[name intersections={of=sO and sR, name=cSW}];
+  % each strand: transparent gap at its UNDER crossing (red@SW, blue@NW, green@NE, orange@SE)
+  \begin{scope}\clip[even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cSW-1) circle (4pt);
+    \draw[strand, red!75!black] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);\end{scope}
+  \begin{scope}\clip[even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cNW-1) circle (4pt);
+    \draw[strand, blue!70!black] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);\end{scope}
+  \begin{scope}\clip[even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cNE-1) circle (4pt);
+    \draw[strand, green!55!black] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);\end{scope}
+  \begin{scope}\clip[even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cSE-1) circle (4pt);
+    \draw[strand, orange!90!black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);\end{scope}
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def10: Gr(2,4) Postnikov diagram, i->i+2, over/under via transparent gaps (Postnikov_Diagram_and_Plabic_Graph-5.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth, every path/.append style={line width=1.5pt}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \path[name path=sR] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
+  \path[name path=sB] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
+  \path[name path=sG] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
+  \path[name path=sO] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
+  \path[name intersections={of=sR and sB, name=cNW}];
+  \path[name intersections={of=sB and sG, name=cNE}];
+  \path[name intersections={of=sG and sO, name=cSE}];
+  \path[name intersections={of=sO and sR, name=cSW}];
+  \begin{scope}\clip[even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cSW-1) circle (4pt);
+    \draw[red!75!black] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);\end{scope}
+  \begin{scope}\clip[even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cNW-1) circle (4pt);
+    \draw[blue!70!black] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);\end{scope}
+  \begin{scope}\clip[even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cNE-1) circle (4pt);
+    \draw[green!55!black] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);\end{scope}
+  \begin{scope}\clip[even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cSE-1) circle (4pt);
+    \draw[orange!90!black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);\end{scope}
+  % direction arrows at bulges (unclipped, away from crossings)
+  \draw[red!75!black,-{Stealth[length=3mm]}]    (-1.012,0.22)--(-1.012,-0.22);
+  \draw[blue!70!black,-{Stealth[length=3mm]}]   (-0.22,1.012)--(0.22,1.012);
+  \draw[green!55!black,-{Stealth[length=3mm]}]  (1.012,-0.22)--(1.012,0.22);
+  \draw[orange!90!black,-{Stealth[length=3mm]}] (0.22,-1.012)--(-0.22,-1.012);
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def10: Gr(2,4) Postnikov diagram, i->i+2, over/under via transparent gaps (Postnikov_Diagram_and_Plabic_Graph-5.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth, every path/.append style={line width=1.5pt}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \path[name path=sR] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
+  \path[name path=sB] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
+  \path[name path=sG] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
+  \path[name path=sO] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
+  \path[name intersections={of=sR and sB, name=cNW}];
+  \path[name intersections={of=sB and sG, name=cNE}];
+  \path[name intersections={of=sG and sO, name=cSE}];
+  \path[name intersections={of=sO and sR, name=cSW}];
+  \begin{scope}\path[clip, even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cSW-1) circle (4pt);
+    \draw[red!75!black] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);\end{scope}
+  \begin{scope}\path[clip, even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cNW-1) circle (4pt);
+    \draw[blue!70!black] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);\end{scope}
+  \begin{scope}\path[clip, even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cNE-1) circle (4pt);
+    \draw[green!55!black] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);\end{scope}
+  \begin{scope}\path[clip, even odd rule] (-2.7,-2.7) rectangle (2.7,2.7) (cSE-1) circle (4pt);
+    \draw[orange!90!black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);\end{scope}
+  \draw[red!75!black,-{Stealth[length=3mm]}]    (-1.012,0.22)--(-1.012,-0.22);
+  \draw[blue!70!black,-{Stealth[length=3mm]}]   (-0.22,1.012)--(0.22,1.012);
+  \draw[green!55!black,-{Stealth[length=3mm]}]  (1.012,-0.22)--(1.012,0.22);
+  \draw[orange!90!black,-{Stealth[length=3mm]}] (0.22,-1.012)--(-0.22,-1.012);
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def10: Gr(2,4) Postnikov diagram, i->i+2, over/under via transparent gaps (Postnikov_Diagram_and_Plabic_Graph-5.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth, every path/.append style={line width=1.5pt}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \path[name path=sR] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
+  \path[name path=sB] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
+  \path[name path=sG] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
+  \path[name path=sO] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
+  \path[name intersections={of=sR and sB, name=cNW}];
+  \path[name intersections={of=sB and sG, name=cNE}];
+  \path[name intersections={of=sG and sO, name=cSE}];
+  \path[name intersections={of=sO and sR, name=cSW}];
+  \begin{scope}[even odd rule]\clip (-2.7,-2.7) rectangle (2.7,2.7) (cSW-1) circle (4pt);
+    \draw[red!75!black] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);\end{scope}
+  \begin{scope}[even odd rule]\clip (-2.7,-2.7) rectangle (2.7,2.7) (cNW-1) circle (4pt);
+    \draw[blue!70!black] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);\end{scope}
+  \begin{scope}[even odd rule]\clip (-2.7,-2.7) rectangle (2.7,2.7) (cNE-1) circle (4pt);
+    \draw[green!55!black] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);\end{scope}
+  \begin{scope}[even odd rule]\clip (-2.7,-2.7) rectangle (2.7,2.7) (cSE-1) circle (4pt);
+    \draw[orange!90!black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);\end{scope}
+  \draw[red!75!black,-{Stealth[length=3mm]}]    (-1.012,0.22)--(-1.012,-0.22);
+  \draw[blue!70!black,-{Stealth[length=3mm]}]   (-0.22,1.012)--(0.22,1.012);
+  \draw[green!55!black,-{Stealth[length=3mm]}]  (1.012,-0.22)--(1.012,0.22);
+  \draw[orange!90!black,-{Stealth[length=3mm]}] (0.22,-1.012)--(-0.22,-1.012);
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def10: Gr(2,4) Postnikov diagram, i->i+2, over/under (white gaps -> post-process transparent) (Postnikov_Diagram_and_Plabic_Graph-5.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth,
+   strand/.style={line width=1.5pt, postaction={decorate,
+      decoration={markings, mark=at position 0.5 with {\arrow{Stealth[length=3mm]}}}}},
+   bare/.style={line width=1.5pt}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[strand, red!75!black,    name path=sR] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
+  \draw[strand, blue!70!black,   name path=sB] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
+  \draw[strand, green!55!black,  name path=sG] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
+  \draw[strand, orange!90!black, name path=sO] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
+  \path[name intersections={of=sR and sB, name=cNW}];
+  \path[name intersections={of=sB and sG, name=cNE}];
+  \path[name intersections={of=sG and sO, name=cSE}];
+  \path[name intersections={of=sO and sR, name=cSW}];
+  \fill[white] (cNW-1) circle (4pt);
+  \begin{scope}\clip (cNW-1) circle (5.5pt);\draw[bare, red!75!black] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);\end{scope}
+  \fill[white] (cNE-1) circle (4pt);
+  \begin{scope}\clip (cNE-1) circle (5.5pt);\draw[bare, blue!70!black] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);\end{scope}
+  \fill[white] (cSE-1) circle (4pt);
+  \begin{scope}\clip (cSE-1) circle (5.5pt);\draw[bare, green!55!black] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);\end{scope}
+  \fill[white] (cSW-1) circle (4pt);
+  \begin{scope}\clip (cSW-1) circle (5.5pt);\draw[bare, orange!90!black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);\end{scope}
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
 \end{tikzpicture}
