@@ -7,35 +7,9 @@
 \usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, decorations.markings, intersections}
 \begin{document}
 
-%% prop11: triangle move in Postnikov diagram (3 strands, triangle flips across the crossing) (Postnikov_Diagram_and_Plabic_Graph-7.png)
-\begin{tikzpicture}[scale=1.0, >=Stealth,
-   str/.style={line width=1.4pt, postaction={decorate,
-      decoration={markings, mark=at position 0.58 with {\arrow{Stealth[length=2.6mm]}}}}}]
-  \begin{scope}[shift={(-2.6,0)}]
-    \path[name path=A] (-1,-1.5) -- (1,1.5);
-    \path[name path=B] (1,-1.5) -- (-1,1.5);
-    \path[name path=C] (0,-1.5) .. controls (-0.95,-0.5) and (-0.95,0.5) .. (0,1.5);
-    \path[name intersections={of=A and B, name=iAB}];
-    \path[name intersections={of=A and C, name=iAC}];
-    \path[name intersections={of=B and C, name=iBC}];
-    \fill[orange!25] (iAB-1)--(iAC-1)--(iBC-1)--cycle;
-    \draw[str, red!75!black]   (-1,-1.5) -- (1,1.5);
-    \draw[str, blue!70!black]  (1,-1.5) -- (-1,1.5);
-    \draw[str, green!55!black] (0,-1.5) .. controls (-0.95,-0.5) and (-0.95,0.5) .. (0,1.5);
-  \end{scope}
-  \node at (0,0) {$\longleftrightarrow$};
-  \begin{scope}[shift={(2.6,0)}]
-    \path[name path=A2] (-1,-1.5) -- (1,1.5);
-    \path[name path=B2] (1,-1.5) -- (-1,1.5);
-    \path[name path=C2] (0,-1.5) .. controls (0.95,-0.5) and (0.95,0.5) .. (0,1.5);
-    \path[name intersections={of=A2 and B2, name=jAB}];
-    \path[name intersections={of=A2 and C2, name=jAC}];
-    \path[name intersections={of=B2 and C2, name=jBC}];
-    \fill[orange!25] (jAB-1)--(jAC-1)--(jBC-1)--cycle;
-    \draw[str, red!75!black]   (-1,-1.5) -- (1,1.5);
-    \draw[str, blue!70!black]  (1,-1.5) -- (-1,1.5);
-    \draw[str, green!55!black] (0,-1.5) .. controls (0.95,-0.5) and (0.95,0.5) .. (0,1.5);
-  \end{scope}
+%% placeholder (다음 컴파일할 코드를 여기에 둔다)
+\begin{tikzpicture}
+\node {};
 \end{tikzpicture}
 
 \end{document}
@@ -347,7 +321,38 @@
      \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
 \end{tikzpicture}
 
-%% def12: Gr(2,4) plabic graph(square) + face labels (Postnikov_Diagram_and_Plabic_Graph-7.png)
+%% prop11: triangle move in Postnikov diagram (3 strands, triangle flips across the crossing) (Postnikov_Diagram_and_Plabic_Graph-7.png)
+\begin{tikzpicture}[scale=1.0, >=Stealth,
+   str/.style={line width=1.4pt, postaction={decorate,
+      decoration={markings, mark=at position 0.58 with {\arrow{Stealth[length=2.6mm]}}}}}]
+  \begin{scope}[shift={(-2.6,0)}]
+    \path[name path=A] (-1,-1.5) -- (1,1.5);
+    \path[name path=B] (1,-1.5) -- (-1,1.5);
+    \path[name path=C] (0,-1.5) .. controls (-0.95,-0.5) and (-0.95,0.5) .. (0,1.5);
+    \path[name intersections={of=A and B, name=iAB}];
+    \path[name intersections={of=A and C, name=iAC}];
+    \path[name intersections={of=B and C, name=iBC}];
+    \fill[orange!25] (iAB-1)--(iAC-1)--(iBC-1)--cycle;
+    \draw[str, red!75!black]   (-1,-1.5) -- (1,1.5);
+    \draw[str, blue!70!black]  (1,-1.5) -- (-1,1.5);
+    \draw[str, green!55!black] (0,-1.5) .. controls (-0.95,-0.5) and (-0.95,0.5) .. (0,1.5);
+  \end{scope}
+  \node at (0,0) {$\longleftrightarrow$};
+  \begin{scope}[shift={(2.6,0)}]
+    \path[name path=A2] (-1,-1.5) -- (1,1.5);
+    \path[name path=B2] (1,-1.5) -- (-1,1.5);
+    \path[name path=C2] (0,-1.5) .. controls (0.95,-0.5) and (0.95,0.5) .. (0,1.5);
+    \path[name intersections={of=A2 and B2, name=jAB}];
+    \path[name intersections={of=A2 and C2, name=jAC}];
+    \path[name intersections={of=B2 and C2, name=jBC}];
+    \fill[orange!25] (jAB-1)--(jAC-1)--(jBC-1)--cycle;
+    \draw[str, red!75!black]   (-1,-1.5) -- (1,1.5);
+    \draw[str, blue!70!black]  (1,-1.5) -- (-1,1.5);
+    \draw[str, green!55!black] (0,-1.5) .. controls (0.95,-0.5) and (0.95,0.5) .. (0,1.5);
+  \end{scope}
+\end{tikzpicture}
+
+%% def12: Gr(2,4) plabic graph(square) + face labels (Postnikov_Diagram_and_Plabic_Graph-8.png)
 \begin{tikzpicture}[scale=1.5, >=Stealth,
    bdot/.style={fill=black, circle, inner sep=1.7pt},
    wv/.style={draw=black, very thick, fill=none, circle, inner sep=3pt},
