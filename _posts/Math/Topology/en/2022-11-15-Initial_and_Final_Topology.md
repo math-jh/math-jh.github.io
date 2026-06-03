@@ -1,5 +1,6 @@
 ---
 title: "Initial and Final Topology"
+description: "The initial topology is the weakest topology that makes given functions continuous, while the final topology is defined in the opposite direction. We examine the existence of the initial topology and its concrete structure via a subbase."
 excerpt: "Initial/final topology and their examples"
 
 categories: [Math / Topology]
@@ -13,20 +14,21 @@ sidebar:
 date: 2022-11-15
 last_modified_at: 2022-11-15
 weight: 6
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-03T03:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T03:30:02+00:00
 ---
-In [§Continuous Functions](/en/math/topology/continuous_functions) we defined, for a continuous function $$f:X \rightarrow Y$$, the function $$f^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$ through the formula
+In [§Continuous Functions](/en/math/topology/continuous_functions) we defined, for a continuous function $$f:X \rightarrow Y$$, the function $$f^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$$ by the formula
 
 $$f^\mathcal{T}(V)=f^{-1}(V)$$
 
-However, thinking in the opposite direction, for *any* function $$f:X\rightarrow Y$$, the function taking an arbitrary subset of $$Y$$ and returning its preimage under $$f$$,
+Conversely, for *any* function $$f:X\rightarrow Y$$, the map taking an arbitrary subset of $$Y$$ to its preimage under $$f$$,
 
 $$f^\text{pre}:\mathcal{P}(Y)\rightarrow\mathcal{P}(X); \qquad V\mapsto f^{-1}(V)$$
 
-is always well-defined, and restricting this to the subset $$\mathcal{T}_Y$$ of $$\mathcal{P}(Y)$$ gives exactly $$f^\mathcal{T}$$. In this case, the condition that the image of $$f^\text{pre}\vert_{\mathcal{T}(Y)}$$ lies in $$\mathcal{T}_X\subseteq \mathcal{P}(X)$$ is precisely the condition that $$f$$ is continuous.
+is always well defined, and restricting this to the subset $$\mathcal{T}_Y$$ of $$\mathcal{P}(Y)$$ yields exactly $$f^\mathcal{T}$$. In this case, the condition that the image of $$f^\text{pre}\vert_{\mathcal{T}(Y)}$$ lies in $$\mathcal{T}_X\subseteq \mathcal{P}(X)$$ is precisely the condition that $$f$$ is continuous.
 
-In particular, fixing an arbitrary set $$X$$ with the discrete topology $$\mathcal{T}_1$$ and the trivial topology $$\mathcal{T}_2$$ defined on it, any function from the topological space $$(X, \mathcal{T}_1)$$ to an arbitrary topological space $$(Y, \mathcal{T})$$ is continuous, and any function from an arbitrary topological space $$(Y,\mathcal{T})$$ to $$(X, \mathcal{T}_2)$$ is always continuous.
+In particular, fixing an arbitrary set $$X$$ with the discrete topology $$\mathcal{T}_1$$ and the trivial topology $$\mathcal{T}_2$$ on it, any function from the topological space $$(X, \mathcal{T}_1)$$ to an arbitrary topological space $$(Y, \mathcal{T})$$ is continuous, and any function from an arbitrary topological space $$(Y,\mathcal{T})$$ to $$(X, \mathcal{T}_2)$$ is always continuous.
 
 ## Initial topology
 
@@ -34,17 +36,17 @@ In this post we examine topological structures defined by similar properties.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let a set $$X$$ and a family of topological spaces $$(Y_i,\mathcal{T}_i)_{i\in I}$$ be given, and suppose that for each $$i$$ a function $$f_i:X\rightarrow Y_i$$ is given. The weakest topology on the set $$X$$ making all the functions $$f_i$$ continuous is called the *initial topology defined by the $$f_i$$*.
+<ins id="def1">**Definition 1**</ins> Let a set $$X$$ and a family of topological spaces $$(Y_i,\mathcal{T}_i)_{i\in I}$$ be given, and suppose that for each $$i$$ a function $$f_i:X\rightarrow Y_i$$ is given. The weakest topology on $$X$$ making all the functions $$f_i$$ continuous is called the *initial topology defined by the $$f_i$$*.
 
 </div>
 
-For topologies $$(\mathcal{T}_j)_{j\in J}$$ defined on $$X$$, suppose that the functions $$f_i$$ from the topological space $$(X, \mathcal{T}_j)$$ to $$(Y_i,\mathcal{T}_i)$$ are all continuous. Then $$\mathcal{T}=\bigcap_{j\in J}\mathcal{T}_j$$ defines a topology on $$X$$, and one can show that the functions $$f_i$$ from this topological space $$(X,\mathcal{T})$$ to $$(Y_i,\mathcal{T}_i)$$ are all continuous. Moreover, since any function with the discrete topology as its domain is always continuous, such a topology always exists, and therefore the existence of the initial topology is trivial. As is always the case with this kind of argument, this is an impeccable proof of the existence of the initial topology, but it is of little help in seeing what the initial topology actually looks like. Hence we need to examine the situation a bit more concretely.
+For topologies $$(\mathcal{T}_j)_{j\in J}$$ on $$X$$, suppose that the functions $$f_i$$ from the topological space $$(X, \mathcal{T}_j)$$ to $$(Y_i,\mathcal{T}_i)$$ are all continuous. Then $$\mathcal{T}=\bigcap_{j\in J}\mathcal{T}_j$$ defines a topology on $$X$$, and one can show that the functions $$f_i$$ from this topological space $$(X,\mathcal{T})$$ to $$(Y_i,\mathcal{T}_i)$$ are all continuous. Moreover, since any function whose domain carries the discrete topology is always continuous, such a topology always exists, and therefore the existence of the initial topology is trivial. As is always the case with this kind of argument, this is an impeccable proof of the existence of the initial topology, but it is of little help in seeing what the initial topology actually looks like. Hence we need to examine the situation somewhat more concretely.
 
-For the function $$f_i$$ to be continuous, $$f_i^{-1}(U_i)$$ must be an open set in $$X$$ for any open set $$U_i$$ of $$Y_i$$, so the initial topology we define must contain all elements of the form $$f_i^{-1}(U_i)$$. On the other hand, a topological space containing these elements must also contain their finite intersections and arbitrary unions. Therefore we can prove the following proposition.
+For each function $$f_i$$ to be continuous, $$f_i^{-1}(U_i)$$ must be an open set in $$X$$ for every open set $$U_i$$ of $$Y_i$$, so the initial topology we define must contain all elements of the form $$f_i^{-1}(U_i)$$. On the other hand, a topology containing these elements must also contain their finite intersections and arbitrary unions. Therefore we can prove the following proposition.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**Proposition 2**</ins> The initial topology of [Definition 1](#def1) is exactly the topology generated by taking the following set
+<ins id="prop2">**Proposition 2**</ins> The initial topology of [Definition 1](#def1) is exactly the topology generated by taking the set
 
 $$\mathcal{S}=\{f_i^{-1}(U_i)\mid \text{$U_i$ open in $Y_i$}\}$$
 
@@ -58,7 +60,7 @@ Let us write the initial topology as $$\mathcal{T}_\ini$$, and the topology gene
 
 </details>
 
-Then the initial topology has the following kind of universal property.
+Then the initial topology has the following universal property.
 
 <div class="proposition" markdown="1">
 
@@ -78,7 +80,7 @@ holds. Therefore
 
 $$g^{-1}(U)=g^{-1}\left(\bigcap f_j^{-1}(U_j)\right)=\bigcap_{j=1}^n(f_j\circ g)^{-1}(U_j)$$
 
-and by assumption $$(f_j\circ g)^{-1}(U_j)$$ is an open set, so $$g^{-1}(U)$$ must also be an open set. That is, $$g$$ is continuous.
+and by assumption each $$(f_j\circ g)^{-1}(U_j)$$ is an open set, so $$g^{-1}(U)$$ must also be an open set. That is, $$g$$ is continuous.
 
 </details>
 
@@ -87,7 +89,7 @@ and by assumption $$(f_j\circ g)^{-1}(U_j)$$ is an open set, so $$g^{-1}(U)$$ mu
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> Let a set $$X$$ and a family of topological spaces $$(Y_i,\mathcal{T}_i)_{i\in I}$$ be given, and suppose that for each $$i$$ a function $$f_i:Y_i\rightarrow X$$ is given. The strongest topology on $$X$$ making all the $$f_i$$ continuous is called the *final topology* defined by the $$f_i$$.
+<ins id="def4">**Definition 4**</ins> Let a set $$X$$ and a family of topological spaces $$(Y_i,\mathcal{T}_i)_{i\in I}$$ be given, and suppose that for each $$i$$ a function $$f_i:Y_i\rightarrow X$$ is given. The strongest topology on $$X$$ making all the $$f_i$$ continuous is called the *final topology defined by the $$f_i$$*.
 
 </div>
 
@@ -95,7 +97,7 @@ If the trivial topology is given on $$X$$, then any function into $$X$$ is alway
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> The topology of [Definition 4](#def4) is defined by the following set
+<ins id="prop5">**Proposition 5**</ins> The topology of [Definition 4](#def4) is defined by the set
 
 $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
 
@@ -103,13 +105,13 @@ $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-That the given topology $$\mathcal{T}_\fin$$ is actually a topology is easily verified. Thus it suffices to show that $$\mathcal{T}_\fin$$ satisfies all the conditions of [Definition 4](#def4).
+That the given set $$\mathcal{T}_\fin$$ is actually a topology is easily verified. Thus it suffices to show that $$\mathcal{T}_\fin$$ satisfies all the conditions of [Definition 4](#def4).
 
-First, for arbitrary $$U\in\mathcal{T}_\fin$$ and arbitrary $$i$$, that $$f_i^{-1}(U)$$ is open in $$Y_i$$ is clear from the definition of $$\mathcal{T}_\fin$$. On the other hand, suppose another topology $$\mathcal{T}$$ on $$X$$ satisfying the given condition is given. Then for arbitrary $$U\in\mathcal{T}$$, $$f^{-1}_i(U)$$ must be open in $$Y_i$$. Therefore, by the definition of $$\mathcal{T}_\fin$$, we have $$U\in\mathcal{T}_\fin$$, and thus $$\mathcal{T}_\fin$$ is stronger than $$\mathcal{T}$$.
+First, for arbitrary $$U\in\mathcal{T}_\fin$$ and arbitrary $$i$$, that $$f_i^{-1}(U)$$ is open in $$Y_i$$ is clear from the definition of $$\mathcal{T}_\fin$$. On the other hand, suppose another topology $$\mathcal{T}$$ on $$X$$ satisfying the given condition is given. Then for arbitrary $$U\in\mathcal{T}$$, each $$f^{-1}_i(U)$$ must be open in $$Y_i$$. Therefore, by the definition of $$\mathcal{T}_\fin$$, we have $$U\in\mathcal{T}_\fin$$, and thus $$\mathcal{T}_\fin$$ is stronger than $$\mathcal{T}$$.
 
 </details>
 
-Likewise, the final topology also satisfies the following universal property, similar to that of the initial topology.
+Likewise, the final topology satisfies the following universal property, similar to that of the initial topology.
 
 <div class="proposition" markdown="1">
 

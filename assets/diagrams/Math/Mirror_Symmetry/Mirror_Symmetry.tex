@@ -7,9 +7,35 @@
 \usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, decorations.markings, intersections}
 \begin{document}
 
-%% placeholder (다음 컴파일할 코드를 여기에 둔다)
-\begin{tikzpicture}
-\node {};
+%% prop11: triangle move in Postnikov diagram (3 strands, triangle flips across the crossing) (Postnikov_Diagram_and_Plabic_Graph-7.png)
+\begin{tikzpicture}[scale=1.0, >=Stealth,
+   str/.style={line width=1.4pt, postaction={decorate,
+      decoration={markings, mark=at position 0.58 with {\arrow{Stealth[length=2.6mm]}}}}}]
+  \begin{scope}[shift={(-2.6,0)}]
+    \path[name path=A] (-1,-1.5) -- (1,1.5);
+    \path[name path=B] (1,-1.5) -- (-1,1.5);
+    \path[name path=C] (0,-1.5) .. controls (-0.95,-0.5) and (-0.95,0.5) .. (0,1.5);
+    \path[name intersections={of=A and B, name=iAB}];
+    \path[name intersections={of=A and C, name=iAC}];
+    \path[name intersections={of=B and C, name=iBC}];
+    \fill[orange!25] (iAB-1)--(iAC-1)--(iBC-1)--cycle;
+    \draw[str, red!75!black]   (-1,-1.5) -- (1,1.5);
+    \draw[str, blue!70!black]  (1,-1.5) -- (-1,1.5);
+    \draw[str, green!55!black] (0,-1.5) .. controls (-0.95,-0.5) and (-0.95,0.5) .. (0,1.5);
+  \end{scope}
+  \node at (0,0) {$\longleftrightarrow$};
+  \begin{scope}[shift={(2.6,0)}]
+    \path[name path=A2] (-1,-1.5) -- (1,1.5);
+    \path[name path=B2] (1,-1.5) -- (-1,1.5);
+    \path[name path=C2] (0,-1.5) .. controls (0.95,-0.5) and (0.95,0.5) .. (0,1.5);
+    \path[name intersections={of=A2 and B2, name=jAB}];
+    \path[name intersections={of=A2 and C2, name=jAC}];
+    \path[name intersections={of=B2 and C2, name=jBC}];
+    \fill[orange!25] (jAB-1)--(jAC-1)--(jBC-1)--cycle;
+    \draw[str, red!75!black]   (-1,-1.5) -- (1,1.5);
+    \draw[str, blue!70!black]  (1,-1.5) -- (-1,1.5);
+    \draw[str, green!55!black] (0,-1.5) .. controls (0.95,-0.5) and (0.95,0.5) .. (0,1.5);
+  \end{scope}
 \end{tikzpicture}
 
 \end{document}
@@ -304,7 +330,24 @@
      \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
 \end{tikzpicture}
 
-%% def12: Gr(2,4) plabic graph(square) + face labels (Postnikov_Diagram_and_Plabic_Graph-6.png)
+%% prop11: Gr(2,4) plabic graph(square), face label 없는 plain 버전 (Postnikov_Diagram_and_Plabic_Graph-6.png)
+\begin{tikzpicture}[scale=1.5, >=Stealth,
+   bdot/.style={fill=black, circle, inner sep=1.7pt},
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3pt},
+   bv/.style={draw=black, very thick, fill=black, circle, inner sep=3pt}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \node[wv] (N) at (0,0.72) {}; \node[bv] (E) at (0.72,0) {};
+  \node[wv] (S) at (0,-0.72) {}; \node[bv] (W) at (-0.72,0) {};
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[black!80, thick] (N)--(E)--(S)--(W)--(N);
+  \draw[black!80, thick] (N)--(b1) (W)--(b2) (S)--(b3) (E)--(b4);
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def12: Gr(2,4) plabic graph(square) + face labels (Postnikov_Diagram_and_Plabic_Graph-7.png)
 \begin{tikzpicture}[scale=1.5, >=Stealth,
    bdot/.style={fill=black, circle, inner sep=1.7pt},
    wv/.style={draw=black, very thick, fill=none, circle, inner sep=3pt},
@@ -476,7 +519,23 @@
      \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
 \end{tikzpicture}
 
-%% def10: Gr(2,4) Postnikov diagram, i->i+2, over/under (white gaps -> post-process transparent) (Postnikov_Diagram_and_Plabic_Graph-5.png)
+%% def10 (CURRENT): Gr(2,4) Postnikov diagram, i->i+2, plain transversal crossings (over/under 제거) (Postnikov_Diagram_and_Plabic_Graph-5.png)
+\begin{tikzpicture}[scale=1.3, >=Stealth,
+   strand/.style={line width=1.5pt, postaction={decorate,
+      decoration={markings, mark=at position 0.5 with {\arrow{Stealth[length=3mm]}}}}}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[strand, red!75!black]    (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
+  \draw[strand, blue!70!black]   (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
+  \draw[strand, green!55!black]  (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
+  \draw[strand, orange!90!black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def10 (구버전, 폐기): Gr(2,4) Postnikov diagram, i->i+2, over/under (white gaps -> post-process transparent) (Postnikov_Diagram_and_Plabic_Graph-5.png)
 \begin{tikzpicture}[scale=1.3, >=Stealth,
    strand/.style={line width=1.5pt, postaction={decorate,
       decoration={markings, mark=at position 0.5 with {\arrow{Stealth[length=3mm]}}}}},

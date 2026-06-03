@@ -1,5 +1,6 @@
 ---
 title: "Continuous Functions"
+description: "We define the notion of continuous functions on a topological space, show that the composition of two continuous functions is continuous, and discuss equivalent characterizations of continuity using open and closed sets."
 excerpt: "Properties of continuous functions"
 
 categories: [Math / Topology]
@@ -13,12 +14,13 @@ sidebar:
 date: 2022-11-13
 last_modified_at: 2022-11-13
 weight: 5
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-03T03:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T03:00:01+00:00
 ---
 ## Continuous Functions
 
-Now we define the notion of a continuous function. Intuitively, this can be thought of as a map that preserves topological structure, just as a homomorphism does in an algebraic setting.
+We now define the notion of a continuous function. Intuitively, this can be thought of as a map that preserves topological structure, just as a homomorphism does in an algebraic setting.
 
 <div class="definition" markdown="1">
 
@@ -40,7 +42,7 @@ holds. Therefore, to prove that a function $$f:X\rightarrow Y$$ between two topo
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Choose any neighborhood $$V$$ of $$f(x)\in Y$$. Then $$f^{-1}(V)$$ is a neighborhood of $$x$$, so $$f^{-1}(V)\cap A\neq\emptyset$$ ([§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6)). If we let $$x'\in f^{-1}(V)\cap A$$, then $$f(x')\in V\cap f(A)$$. In particular, $$V\cap f(A)\neq\emptyset$$, so applying [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6) again, we see that $$f(x)\in\cl(f(A))$$.
+Choose any neighborhood $$V$$ of $$f(x)\in Y$$. Then $$f^{-1}(V)$$ is a neighborhood of $$x$$, so $$f^{-1}(V)\cap A\neq\emptyset$$ ([§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6)). Taking $$x'\in f^{-1}(V)\cap A$$, we have $$f(x')\in V\cap f(A)$$. In particular, $$V\cap f(A)\neq\emptyset$$, so applying [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6) again yields $$f(x)\in\cl(f(A))$$.
 
 </details>
 
@@ -55,7 +57,7 @@ Choose any neighborhood $$W$$ of $$(g\circ f)(x)$$. Since $$g$$ is continuous at
 
 </details>
 
-If $$f$$ is continuous at every point of $$X$$, we call $$f$$ a *continuous function*. The following theorem presents several equivalent ways to define a continuous function.
+If $$f$$ is continuous at every point of $$X$$, we call $$f$$ a *continuous function*. The following theorem presents several equivalent characterizations of continuity.
 
 <div class="proposition" markdown="1">
 
