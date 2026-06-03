@@ -1,5 +1,6 @@
 ---
 title: "Torus-Invariant Divisors and Line Bundles"
+description: "On an algebraic torus, all Weil divisors are principal, so nontrivial divisor information is concentrated on the boundary. Each ray of the fan defines a torus-invariant prime divisor, and through this the divisor theory on toric varieties is developed."
 excerpt: "Torus-invariant divisors and line bundles arising from the rays of a fan"
 
 categories: [Math / Toric Geometry]
@@ -15,14 +16,15 @@ sidebar:
 date: 2026-05-18
 last_modified_at: 2026-05-18
 weight: 3
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-03T12:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T12:00:01+00:00
 ---
 In the previous post we studied toric varieties, and in doing so we already saw that the combinatorial data of the fan defining a toric variety determines many of its properties. In this post we focus in particular on (torus-invariant) divisors defined on a toric variety.
 
 ## Torus-Invariant Weil Divisors
 
-We already know that a toric variety $$X_\Sigma$$ contains the algebraic torus $$T_N \cong (\mathbb{C}^\ast)^n$$ as an open dense subset. However, divisor theory on this torus is trivial: considering the coordinate ring of $$T_N$$, it is the Laurent polynomial ring
+We already know that a toric variety $$X_\Sigma$$ contains the algebraic torus $$T_N \cong (\mathbb{C}^\ast)^n$$ as an open dense subset. Divisor theory on this torus is trivial: its coordinate ring is the Laurent polynomial ring
 
 $$\mathbb{C}[M] = \mathbb{C}[t_1^{\pm 1}, \ldots, t_n^{\pm 1}]$$
 
@@ -38,7 +40,7 @@ For each 1-dimensional cone of the fan $$\Sigma$$, i.e. each *ray* $$\rho \in \S
 
 </div>
 
-This definition arises naturally from the orbit structure of a toric variety. As we saw in [§Definition of Toric Varieties, ⁋Proposition 5](/en/math/toric_geometry/toric_varieties#prop5), a $$d$$-dimensional cone corresponds to a torus orbit of dimension $$n-d$$, so a 1-dimensional cone $$\rho$$ corresponds to an orbit of dimension $$n-1$$, i.e. a codimension-1 torus-invariant subvariety. The Zariski closure of this orbit naturally becomes a divisor.
+This definition arises naturally from the orbit structure of a toric variety. As we saw in [§Definition of Toric Varieties, ⁋Proposition 5](/en/math/toric_geometry/toric_varieties#prop5), a $$d$$-dimensional cone corresponds to a torus orbit of dimension $$n-d$$, so a 1-dimensional cone $$\rho$$ corresponds to an orbit of dimension $$n-1$$, i.e. a codimension-1 torus-invariant subvariety. The Zariski closure of this orbit is naturally a divisor.
 
 <div class="definition" markdown="1">
 
@@ -46,11 +48,11 @@ This definition arises naturally from the orbit structure of a toric variety. As
 
 $$\Div_T(X_\Sigma) = \bigoplus_{\rho \in \Sigma(1)} \mathbb{Z} \cdot D_\rho.$$
 
-Any torus-invariant Weil divisor is uniquely expressed in the form $$D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$$.
+Every torus-invariant Weil divisor is uniquely expressed in the form $$D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$$.
 
 </div>
 
-We saw above that the divisor theory on $$T_N$$ is trivial, and using this we can see that studying divisors on a toric variety reduces to studying torus-invariant divisors. Restricting an arbitrary divisor $$D \in \Div(X_\Sigma)$$ to the open dense subset $$T_N$$ gives a divisor $$D \cap T_N$$ on $$T_N$$, which is principal of the form $$\divisor(f)$$; hence the support of $$D - \divisor(f)$$ lies in the boundary $$X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$$ and is therefore torus-invariant. From this, $$D$$ is linearly equivalent to some torus-invariant divisor, and more formally we can verify that
+We saw above that divisor theory on $$T_N$$ is trivial, and using this we can see that studying divisors on a toric variety reduces to studying torus-invariant divisors. Restricting an arbitrary divisor $$D \in \Div(X_\Sigma)$$ to the open dense subset $$T_N$$ gives a divisor $$D \cap T_N$$ on $$T_N$$, which is principal of the form $$\divisor(f)$$; hence the support of $$D - \divisor(f)$$ lies in the boundary $$X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$$ and is therefore torus-invariant. Consequently $$D$$ is linearly equivalent to some torus-invariant divisor, and more formally we can verify that
 
 $$\Div_T(X_\Sigma) \hookrightarrow \Div(X_\Sigma) \twoheadrightarrow \Cl(X_\Sigma)\tag{1}$$
 
@@ -159,13 +161,13 @@ Now that we have examined Cartier divisors to some extent, we will use them to s
 
 $$\mathcal{O}_{X_\Sigma}(D)(U) = \{f \in \mathbb{C}(X_\Sigma)^\times \mid \divisor(f)\rvert_U + D\rvert_U \ge 0\} \cup \{0\},$$
 
-which intuitively means that $$\mathcal{O}_{X_\Sigma}(D)$$ is the sheaf of rational functions on $$U$$ that are allowed to have poles along $$D$$ up to order $$D$$. Even when $$D$$ is a general Weil divisor that is not Cartier, the same formula on the right-hand side defines a well-defined $$\mathcal{O}_X$$-module sheaf (though not a line bundle, but a rank-$$1$$ sheaf), and we shall adopt this formula as the definition of $$\mathcal{O}_{X_\Sigma}(D)$$ below.
+which intuitively means that $$\mathcal{O}_{X_\Sigma}(D)$$ is the sheaf of rational functions on $$U$$ allowed to have poles along $$D$$ up to order $$D$$. Even when $$D$$ is a general Weil divisor that is not Cartier, the same formula on the right-hand side defines a well-defined $$\mathcal{O}_X$$-module sheaf (though not a line bundle, but rather a rank-$$1$$ sheaf), and we shall adopt this formula as the definition of $$\mathcal{O}_{X_\Sigma}(D)$$ below.
 
 In the case of a toric variety, the global sections of this sheaf have an explicit basis given by characters $$\rchi^m$$, and the condition is completely described by combinatorial data on the lattice $$M$$.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 7**</ins> For a torus-invariant Weil divisor $$D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$$, the global section space of the sheaf $$\mathcal{O}_{X_\Sigma}(D)$$ is given by:
+<ins id="prop7">**Proposition 7**</ins> For a torus-invariant Weil divisor $$D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$$, the space of global sections of the sheaf $$\mathcal{O}_{X_\Sigma}(D)$$ is given by:
 
 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{\substack{m \in M \\ \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho}} \mathbb{C} \cdot \rchi^m.$$
 
@@ -178,7 +180,7 @@ Since $$D$$ is $$T_N$$-invariant, $$T_N$$ acts naturally on the sheaf $$\mathcal
 
 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{m \in M} H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))_m.$$
 
-Here the weight-$$m$$ component consists of sections that are multiplied by $$\rchi^m(t)$$ under the action of $$t \in T_N$$. Such sections are exactly of the form $$c \cdot \rchi^m$$ ($$c \in \mathbb{C}$$). Indeed, if $$s \in H^0(\mathcal{O}_{X_\Sigma}(D))_m$$, then $$s/\rchi^m$$ is a $$T$$-invariant rational function on $$X_\Sigma$$, and since $$T_N$$ is open dense in $$X_\Sigma$$ we have $$\mathbb{C}(X_\Sigma)^{T_N} = \mathbb{C}(T_N)^{T_N} = \Frac(\mathbb{C}[M])^{T_N} = \mathbb{C}$$, so $$s = c \cdot \rchi^m$$. That is, each weight space is 1-dimensional spanned by $$\rchi^m$$ (for those $$m$$ that give sections).
+Here the weight-$$m$$ component consists of sections that are multiplied by $$\rchi^m(t)$$ under the action of $$t \in T_N$$. Such sections are exactly of the form $$c \cdot \rchi^m$$ ($$c \in \mathbb{C}$$). Indeed, if $$s \in H^0(\mathcal{O}_{X_\Sigma}(D))_m$$, then $$s/\rchi^m$$ is a $$T$$-invariant rational function on $$X_\Sigma$$, and since $$T_N$$ is open dense in $$X_\Sigma$$ we have $$\mathbb{C}(X_\Sigma)^{T_N} = \mathbb{C}(T_N)^{T_N} = \Frac(\mathbb{C}[M])^{T_N} = \mathbb{C}$$, so $$s = c \cdot \rchi^m$$. That is, each weight space is 1-dimensional, spanned by $$\rchi^m$$ (for those $$m$$ that give sections).
 
 Now the condition for $$c \cdot \rchi^m$$ to be a section is $$\divisor(\rchi^m) + D \ge 0$$. By [Proposition 3](#prop3),
 
@@ -265,7 +267,7 @@ Finally, let us apply the tools we have developed so far to the most familiar to
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**Example 11**</ins> The rays of the fan defining $$\mathbb{P}^n$$ are $$\rho_0, \rho_1, \ldots, \rho_n$$ generated by $$v_0 = -e_1 - \cdots - e_n$$ and $$v_i = e_i$$ ($$1 \le i \le n$$), and each maximal cone $$\sigma_i$$ is the $$n$$-dimensional cone generated by all but $$\rho_i$$, corresponding to the standard affine chart $$U_{\sigma_i} = \{\x_i \neq 0\}$$ of $$\mathbb{P}^n$$ ([§Definition of Toric Varieties, ⁋Example 10](/en/math/toric_geometry/toric_varieties#ex10)). Each torus-invariant prime divisor $$D_i = D_{\rho_i}$$ corresponds in homogeneous coordinate representation to the coordinate hyperplane
+<ins id="ex11">**Example 11**</ins> The rays of the fan defining $$\mathbb{P}^n$$ are $$\rho_0, \rho_1, \ldots, \rho_n$$ generated by $$v_0 = -e_1 - \cdots - e_n$$ and $$v_i = e_i$$ ($$1 \le i \le n$$), and each maximal cone $$\sigma_i$$ is the $$n$$-dimensional cone generated by all but $$\rho_i$$, corresponding to the standard affine chart $$U_{\sigma_i} = \{\x_i \neq 0\}$$ of $$\mathbb{P}^n$$ ([§Definition of Toric Varieties, ⁋Example 10](/en/math/toric_geometry/toric_varieties#ex10)). Each torus-invariant prime divisor $$D_i = D_{\rho_i}$$ corresponds in homogeneous coordinates to the coordinate hyperplane
 
 $$D_0 = \{\x_0 = 0\}, \quad D_1 = \{\x_1 = 0\}, \quad \ldots, \quad D_n = \{\x_n = 0\}.$$
 
