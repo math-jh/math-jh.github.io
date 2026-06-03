@@ -66,6 +66,13 @@ $$\psi_i=\sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S, j, k \notin S, \
 
 </div>
 
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$n = 4$$일 때 $$\overline{\mathcal{M}}_{0,4} \cong \mathbb{P}^1$$이고 $$\psi_i$$는 차수 $$1$$의 점 class인데, 이는 $$i$$를 $$j, k$$로부터 가르는 유일한 boundary divisor $$D_{\{i, l\}}$$ ($$l$$은 넷째 index) 와 선형동치이므로 $$n = 4$$에서 우변과 일치한다. 일반 $$n$$은 $$i, j, k$$와 한 점만 남기는 forgetful morphism $$\pi: \overline{\mathcal{M}}_{0,n} \to \overline{\mathcal{M}}_{0,4}$$에 대해 cotangent line class를 비교하면 $$\psi_i$$가 $$\pi^\ast \psi_i$$와 $$i$$가 $$j, k$$로부터 갈리는 boundary 만큼 차이남을 얻고, 이를 반복 적용하면 우변의 boundary 합이 나온다. 이는 $$\overline{\mathcal{M}}_{0,n}$$의 표준적 사실이다 ([CK, §10]).
+
+</details>
+
 그럼 target $$X$$가 주어진 stable map의 moduli space $$\overline{\mathcal{M}}_{0, n}(X, \beta)$$에서도 forgetful morphism $$\overline{\mathcal{M}}_{0, n}(X, \beta) \to \overline{\mathcal{M}}_{0, n}$$의 pullback을 통해 위의 공식을 옮겨줄 수 있다. 
 
 이제 $$\psi_i^{k_i}$$를 더 명확하게 이해할 수 있다. 위의 관점에 따르면, $$\psi_i^{k_i}$$는 단지 marked point $$p_i$$에 해당하는 부분이 $$k_i$$번 degenerate해서 tail에 속하는 degenerate cycle을 의미하는 것으로, 이를 종합하면 descendant GW invariant는 *target incidence*와, *source의 depth-$$k_i$$ tail degeneration*의 두 조건을 동시에 만족하는 stable map의 virtual counting으로 생각할 수 있다. 

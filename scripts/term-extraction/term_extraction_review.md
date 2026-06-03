@@ -3618,3 +3618,25 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `주장 4 (Mirror theorem, $$D$$-module form)` | mixed-script emphasis — possibly a definition |
 | `mirror isomorphism` | multi-word English emphasis — possibly a definition |
 
+## Givental J-function과 Mirror Theorem
+- post: `_posts/Math/Mirror_Symmetry/ko/2026-05-28-Givental_J_Function.md`
+- permalink: `/ko/math/mirror_symmetry/givental_j_function`
+- scanned: 2026-06-03T07:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `descendant` | looks like emphasis (no <sub> partner) |
+| `primary` | looks like emphasis (no <sub> partner) |
+| `dual Dubrovin connection` | multi-word English emphasis — possibly a definition |
+| `(Flat section property)` | multi-word English emphasis — possibly a definition |
+| `($$J$$ = $$T_0$$ column)` | multi-word English emphasis — possibly a definition |
+| `주장 5 (Mirror theorem, $$J$$-function form)` | mixed-script emphasis — possibly a definition |
+| `distinguished` | looks like emphasis (no <sub> partner) |
+| `$$I = J$$` | multi-word English emphasis — possibly a definition |
+| `hypergeometric` | looks like emphasis (no <sub> partner) |
+| `charge matrix` | multi-word English emphasis — possibly a definition |
+| `semi-positive` | looks like emphasis (no <sub> partner) |
+| `Fano index` | multi-word English emphasis — possibly a definition |
+| `big Givental $$J$$-function` | multi-word English emphasis — possibly a definition |
+| `전체` | looks like emphasis (no <sub> partner) |
+

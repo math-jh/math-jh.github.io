@@ -1,5 +1,6 @@
 ---
 title: "Compactness and Filter Convergence"
+description: "This post covers the definitions of extremal compactness, compactness, and sequential compactness in topological spaces, along with the inclusion relationships among them."
 excerpt: "A characterization of compactness through filter convergence"
 
 categories: [Math / Topology]
@@ -13,8 +14,9 @@ sidebar:
 date: 2024-12-11
 last_modified_at: 2024-12-11
 weight: 15
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-03T08:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T08:00:03+00:00
 ---
 We first define the following.
 
@@ -62,13 +64,13 @@ We also define the following.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Let $$X$$ be a sequentially compact space, and suppose there exists an infinite subset $$A$$ with no limit point. Then we can choose a suitable countable subset $$A'$$ of $$A$$ and enumerate it as a sequence $$(x_n)_{n\geq k}$$. Since $$X$$ is sequentially compact, this sequence has a convergent subsequence; if this subsequence converges to $$x$$, then one can verify that $$x$$ is a limit point of $$A'$$ and hence of $$A$$.
+Let $$X$$ be a sequentially compact space, and suppose there exists an infinite subset $$A$$ with no limit point. Then we may choose a suitable countable subset $$A'$$ of $$A$$ and enumerate it as a sequence $$(x_n)_{n\geq k}$$. Since $$X$$ is sequentially compact, this sequence has a convergent subsequence; if this subsequence converges to $$x$$, then one verifies that $$x$$ is a limit point of $$A'$$ and hence of $$A$$.
 
 </details>
 
 ## Convergence of Sequences
 
-On the other hand, the converse of [Proposition 5](#prop5) does not hold either. This may seem somewhat surprising, because given any sequence $$(x_n)$$ in a limit point compact space, the set $$A=\{x_n\mid n\geq 1\}$$ is either finite, in which case it trivially has a convergent subsequence, or infinite, in which case it has a limit point. The problem is that there may not exist a subsequence converging to a limit point of $$A$$.
+On the other hand, the converse of [Proposition 5](#prop5) does not hold either. This may seem somewhat surprising, because given any sequence $$(x_n)$$ in a limit point compact space, the set $$A=\{x_n\mid n\geq 1\}$$ is either finite, in which case it trivially has a convergent subsequence, or infinite, in which case it has a limit point. The problem is that there may not exist a subsequence converging to any limit point of $$A$$.
 
 <div class="example" markdown="1">
 
