@@ -1,5 +1,6 @@
 ---
 title: "Symplectic Vector Spaces"
+description: "This post defines symplectic vector spaces and symplectic forms, the foundations of symplectic geometry, and proves that every symplectic vector space has even dimension using antisymmetry and nondegeneracy conditions."
 excerpt: "Definition of symplectic forms"
 
 categories: [Math / Symplectic Geometry]
@@ -13,12 +14,13 @@ sidebar:
 date: 2023-04-28
 last_modified_at: 2023-04-28
 weight: 2
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-06-02T23:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-02T23:30:02+00:00
 ---
 Since momentum is treated as a covector in physics, it is natural to consider the cotangent bundle $$T^\ast M$$ of a manifold $$M$$ when describing phase space mathematically.
 
-Even aside from physical reasons, $$T^\ast M$$ is far more natural than the tangent bundle $$TM$$ when describing a symplectic manifold, because $$T^\ast M$$ carries a natural symplectic form. Before examining what a symplectic form is, we first study symplectic geometry in a linear algebra setting.
+Even aside from physical reasons, $$T^\ast M$$ is far more natural than the tangent bundle $$TM$$ when describing a symplectic manifold, because $$T^\ast M$$ carries a natural symplectic form. Before examining what a symplectic form is, we first study symplectic geometry in the linear algebra setting.
 
 ## Symplectic form
 
@@ -53,7 +55,7 @@ $$\{u\in V\mid \omega(u,v)=0\text{ for all $v\in V$}\}$$
 
 is a subspace of $$V$$. Thus, choosing a basis of this subspace, we obtain $$u_1,\ldots, u_k$$. Now, write $$V=U\oplus W$$. Then we can find a basis $$e_1,\ldots, e_n,f_1,\ldots, f_n$$ of $$W$$ as follows.
 
-Choose an arbitrary vector $$e_1\in W$$. Since $$\omega$$ is non-degenerate on $$W$$, there exists $$f_1\in W$$ such that $$\omega(e_1,f_1)\neq 0$$, and by an appropriate scalar multiplication we may assume $$\omega(e_1,f_1)=1$$. Since $$\omega$$ is skew-symmetric, it is obvious that $$\omega(e_1,e_1)=\omega(f_1,f_1)=0$$.
+Choose an arbitrary vector $$e_1\in W$$. Since $$\omega$$ is non-degenerate on $$W$$, there exists $$f_1\in W$$ such that $$\omega(e_1,f_1)\neq 0$$, and by scaling we may assume $$\omega(e_1,f_1)=1$$. Since $$\omega$$ is skew-symmetric, it is immediate that $$\omega(e_1,e_1)=\omega(f_1,f_1)=0$$.
 
 Repeating this process, suppose vectors $$e_1,\ldots, e_k, f_1,\ldots, f_k\in W$$ satisfying the two conditions
 
