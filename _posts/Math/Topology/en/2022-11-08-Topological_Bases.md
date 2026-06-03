@@ -1,5 +1,6 @@
 ---
 title: "Bases of a Topological Space"
+description: "This post introduces the definition of a basis and subbasis for a topological space, proves three equivalent conditions for a collection to be a basis, and explains how to construct a topology from a basis on an arbitrary set."
 excerpt: "Bases, subbases, and local bases of a topological space"
 
 categories: [Math / Topology]
@@ -13,12 +14,13 @@ sidebar:
 date: 2022-11-08
 last_modified_at: 2022-11-08
 weight: 2
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-03T01:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T01:00:02+00:00
 ---
 ## Bases and Subbases of a Topological Space
 
-The most straightforward way to specify a topological space is to list all open sets and give the topology $$\mathcal{T}$$, but the entire collection $$\mathcal{T}$$ is not needed for this. For instance, if an open set $$U=\bigcup U_i$$ is given, and for every $$i$$ we have $$U\neq U_i$$ and $$U_i\in\mathcal{T}$$, then the information that $$U\in\mathcal{T}$$ may be regarded as redundantly repetitive.
+The most straightforward way to specify a topological space is to list all open sets and thereby give the topology $$\mathcal{T}$$, but the entire collection $$\mathcal{T}$$ is not needed for this. For instance, if an open set $$U=\bigcup U_i$$ is given, and for every $$i$$ we have $$U\neq U_i$$ and $$U_i\in\mathcal{T}$$, then the information that $$U\in\mathcal{T}$$ may be regarded as redundant.
 
 <div class="definition" markdown="1">
 
@@ -42,9 +44,9 @@ In particular, since $$X\in\mathcal{T}$$, the collection $$\mathcal{B}$$ is also
 
 First, assume that $$\mathcal{B}$$ is a base for $$\mathcal{T}$$. Then $$\mathcal{B}$$ is an open covering of $$X$$, so condition 1 is trivially satisfied.
 
-On the other hand, if $$B_1$$ and $$B_2$$ are given as in condition 2, then $$B_1\cap B_2$$ is also an open set, so there exists a family $$(B_i)_{i\in I}$$ of elements of $$\mathcal{B}$$ such that $$B_1\cap B_2=\bigcup_{i\in I} B_i$$. In this case, $$(B_i)_{i\in I}$$ is an open covering of $$B_1\cap B_2$$, so condition 2 is also trivially satisfied, just as condition 1. Replacing $$B_1\cap B_2$$ with an arbitrary open set $$U$$ yields condition 3.
+On the other hand, if $$B_1$$ and $$B_2$$ are given as in condition 2, then $$B_1\cap B_2$$ is also an open set, so there exists a family $$(B_i)_{i\in I}$$ of elements of $$\mathcal{B}$$ such that $$B_1\cap B_2=\bigcup_{i\in I} B_i$$. Since $$(B_i)_{i\in I}$$ is an open covering of $$B_1\cap B_2$$, condition 2 is also trivially satisfied, just as condition 1. Replacing $$B_1\cap B_2$$ with an arbitrary open set $$U$$ yields condition 3.
 
-Conversely, assume that the three conditions are satisfied and pick an arbitrary open set $$U$$. Then for $$x\in U$$, condition 3 implies that there exists $$B_x\in\mathcal{B}$$ such that $$x\in B_x\subseteq U$$. Now $$U=\bigcup_{x\in U} B_x$$, which completes the proof.
+Conversely, assume that the three conditions are satisfied and pick an arbitrary open set $$U$$. Then for each $$x\in U$$, condition 3 implies that there exists $$B_x\in\mathcal{B}$$ such that $$x\in B_x\subseteq U$$. Now $$U=\bigcup_{x\in U} B_x$$, which completes the proof.
 
 </details>
 
@@ -52,9 +54,9 @@ From the above proposition, the following question arises naturally.
 
 > Let $$X$$ be an arbitrary set, and let $$\mathcal{B}$$ be a subset of $$\mathcal{P}(X)$$ satisfying the above conditions. Can we endow $$X$$ with a topology $$\mathcal{T}$$ so that $$(X,\mathcal{T})$$ is a topological space having $$\mathcal{B}$$ as a base?
 
-The answer to this question is affirmative. **[Mun]** gives a direct proof of this, but we will define a local base first and then prove it in a simpler way.
+The answer to this question is affirmative. **[Mun]** gives a direct proof of this, but we will first define a local base and then prove it in a simpler way.
 
-Meanwhile, refining [Definition 1](#def1), we can define a *subbase* as follows.
+Meanwhile, by refining [Definition 1](#def1), we can define a *subbase* as follows.
 
 <div class="definition" markdown="1">
 
@@ -62,7 +64,7 @@ Meanwhile, refining [Definition 1](#def1), we can define a *subbase* as follows.
 
 </div>
 
-Collecting all finite intersections of elements of $$\mathcal{S}$$, we obtain a new collection $$\mathcal{B}$$. To check whether this collection is a base, we only need condition 2, but since the elements of $$\mathcal{B}$$ are obtained as finite intersections of elements of $$\mathcal{S}$$, the intersection $$B_1\cap B_2$$ is again a finite intersection of elements of $$\mathcal{S}$$; hence $$\mathcal{B}$$ is a base.
+Collecting all finite intersections of elements of $$\mathcal{S}$$, we obtain a new collection $$\mathcal{B}$$. To check whether this collection is a base, we only need condition 2; but since the elements of $$\mathcal{B}$$ are obtained as finite intersections of elements of $$\mathcal{S}$$, the intersection $$B_1\cap B_2$$ is again a finite intersection of elements of $$\mathcal{S}$$, and hence $$\mathcal{B}$$ is a base.
 
 ## Local Bases of a Topological Space
 
