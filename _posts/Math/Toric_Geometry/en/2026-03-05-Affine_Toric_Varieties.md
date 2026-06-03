@@ -1,5 +1,6 @@
 ---
 title: "Affine Toric Varieties"
+description: "We define affine toric varieties through the structure of lattices and strongly convex rational polyhedral cones, and cover the foundations for understanding algebraic varieties from a combinatorial perspective."
 excerpt: "Construction of affine toric varieties from strongly convex rational polyhedral cones"
 
 categories: [Math / Toric Geometry]
@@ -15,8 +16,9 @@ sidebar:
 date: 2026-03-05
 last_modified_at: 2026-03-05
 weight: 1
-translated_at: 2026-05-28T11:36:15+00:00
+translated_at: 2026-06-03T10:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-03T10:30:02+00:00
 ---
 Toric geometry is, quite literally, the study of a special class of algebraic varieties called toric varieties. The advantage they hold over general algebraic varieties is that toric varieties are built essentially out of combinatorial data, making concrete computations far more tractable. In this post we begin by examining the simplest toric varieties, namely affine toric varieties.
 
