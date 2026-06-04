@@ -5,9 +5,6 @@ excerpt: "Definitions and properties of symplectic manifolds"
 
 categories: [Math / Symplectic Geometry]
 permalink: /en/math/symplectic_geometry/symplectic_manifold
-header:
-    overlay_image: /assets/images/Math/Symplectic_Geometry/Symplectic_Manifold.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "symplectic_geometry-en"
 

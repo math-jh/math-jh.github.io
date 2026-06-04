@@ -4,9 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/algebraic_structures/
 header:
-  overlay_image: /assets/images/Math/Algebraic_Structures/Algebraic_Structures.png
-  overlay_filter: 0.5
-excerpt: "대수적 구조는 군·환·가군처럼 연산이 주어진 집합들을 통합적으로 공부하는 분야이다. 준동형사상과 몫구조를 중심으로 이후의 모든 대수 분야가 공유하는 기초를 세운다."
+  overlay_color: "transparent"
+hero_hue: 204
+excerpt: "대수적 구조는 군·환·가군과 같이 연산이 주어진 집합들을 통합적으로 공부하는 분야이다. 준동형사상과 몫구조를 중심으로, 대부분의 대수구조들이 공유하는 기초를 세운다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

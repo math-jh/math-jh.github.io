@@ -5,9 +5,6 @@ excerpt: "미분다양체의 부분구조"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/submanifolds
-header:
-    overlay_image: /assets/images/Math/Manifold/Submanifolds.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

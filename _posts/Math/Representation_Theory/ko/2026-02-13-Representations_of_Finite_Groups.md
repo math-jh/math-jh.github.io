@@ -5,9 +5,6 @@ excerpt: "유한군의 representation 정의와 기약분해"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/representations_of_finite_groups
-header:
-    overlay_image: /assets/images/Math/Representation_Theory/Representations_of_Finite_Groups.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "representation_theory-ko"
 

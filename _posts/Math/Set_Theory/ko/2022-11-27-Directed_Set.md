@@ -5,9 +5,6 @@ excerpt: "유향집합과 lattice"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/directed_set
-header: 
-    overlay_image: /assets/images/Math/Set_Theory/Directed_Set.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
 

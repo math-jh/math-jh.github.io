@@ -5,9 +5,6 @@ excerpt: "Convergence of sequences and the Hausdorff axiom"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/Hausdorff_spaces
-header:
-    overlay_image: /assets/images/Math/Topology/Hausdorff_Spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

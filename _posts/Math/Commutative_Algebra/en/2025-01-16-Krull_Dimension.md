@@ -5,9 +5,6 @@ excerpt: "Krull dimension, defined by prime chains, and its basic properties"
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/Krull_dimension
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Krull_Dimension.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

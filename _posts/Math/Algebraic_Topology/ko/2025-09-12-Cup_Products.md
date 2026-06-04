@@ -5,9 +5,6 @@ excerpt: "코호몰로지의 외적과 cup product의 정의, 그리고 ring 구
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/cup_products
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Cup_Products.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-ko"
 

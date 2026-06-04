@@ -5,9 +5,6 @@ excerpt: "Exact sequences of modules, and short/long exact sequences"
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/exact_sequences
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Exact_Sequences.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-en"
 

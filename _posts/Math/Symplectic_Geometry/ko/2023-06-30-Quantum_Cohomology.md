@@ -5,9 +5,6 @@ excerpt: "GW invariant를 구조상수로 하는 cup product의 deformation"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/quantum_cohomology
-header:
-    overlay_image: /assets/images/Math/Symplectic_Geometry/Quantum_Cohomology.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "symplectic_geometry-ko"
 

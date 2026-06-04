@@ -5,9 +5,6 @@ excerpt: "Filtration으로 정의되는 ring과 module의 completion"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/completion
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Completion.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"
 

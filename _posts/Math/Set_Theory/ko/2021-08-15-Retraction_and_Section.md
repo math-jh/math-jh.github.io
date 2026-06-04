@@ -5,9 +5,6 @@ excerpt: "전사함수와 단사함수의 성질들"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/retraction_and_section
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Retraction_and_Section.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
 

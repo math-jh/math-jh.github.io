@@ -1,10 +1,18 @@
 {% comment %}
-  Subject-home card grid. `include.posts` = posts (already filtered by language
-  + sorted by weight). `include.minimal` = true → drop the order number and the
-  excerpt (used for Misc categories, which want a clean title+date card).
+  Subject-home card grid.
+    include.posts      — posts (filtered by language + sorted by weight).
+    include.minimal    — true → drop the order number and excerpt (Misc).
+    include.splitweight — insert a subtle row break before the first post whose
+                          weight >= this value (e.g. 99 separates the LLM
+                          Workshop dev notes from the reading notes).
 {% endcomment %}
+{% assign _split_done = false %}
 <div class="subject-cards{% if include.minimal %} subject-cards--minimal{% endif %}">
   {% for post in include.posts %}
+    {% if include.splitweight and _split_done == false and post.weight >= include.splitweight %}
+      <div class="subject-cards__break" aria-hidden="true"></div>
+      {% assign _split_done = true %}
+    {% endif %}
     <a class="subject-card" href="{{ post.url | relative_url }}">
       {% unless include.minimal %}<span class="subject-card__num">{{ forloop.index }}</span>{% endunless %}
       <span class="subject-card__title">{{ post.title | markdownify | strip_html }}</span>

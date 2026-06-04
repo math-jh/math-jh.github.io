@@ -5,9 +5,6 @@ excerpt: "Matrix representations of linear maps between free modules and coordin
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/matrices_and_linear_maps
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Matrices_and_Linear_Maps.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-en"
 

@@ -8,10 +8,6 @@ permalink: /ko/math/scheme_theory/algebraic_groups
 sidebar: 
     nav: "scheme_theory-ko"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Algebraic_Groups.png
-    overlay_filter: 0.5
-
 date: 2026-03-11
 last_modified_at: 2026-03-11
 weight: 17

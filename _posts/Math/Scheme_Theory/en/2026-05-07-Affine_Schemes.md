@@ -5,9 +5,6 @@ excerpt: "Affine schemes defined by the structure sheaf on the spectrum of a rin
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/affine_schemes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Affine_schemes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-en"
 

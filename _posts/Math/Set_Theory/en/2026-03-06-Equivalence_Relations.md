@@ -5,9 +5,6 @@ excerpt: "The definition and properties of equivalence relations"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/equivalence_relations
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Equivalence_Relations.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

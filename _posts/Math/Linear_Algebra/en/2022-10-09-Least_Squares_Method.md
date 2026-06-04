@@ -8,9 +8,6 @@ permalink: /en/math/linear_algebra/least_squares_method
 sidebar: 
     nav: "linear_algebra-en"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Least_Squares_Method.png
-    overlay_filter: 0.5
 
 date: 2022-10-09
 last_modified_at: 2022-10-09

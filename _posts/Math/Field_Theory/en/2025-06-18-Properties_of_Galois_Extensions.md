@@ -5,9 +5,6 @@ excerpt: "The structure of infinite Galois groups with the Krull topology"
 
 categories: [Math / Field Theory]
 permalink: /en/math/field_theory/properties_of_galois_extensions
-header:
-    overlay_image: /assets/images/Math/Field_Theory/Properties_of_Galois_Extensions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-en"
 

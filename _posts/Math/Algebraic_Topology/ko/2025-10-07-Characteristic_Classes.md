@@ -5,9 +5,6 @@ excerpt: "Fiber bundle의 특성류 정의와 분류공간을 통한 해석"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/characteristic_classes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Characteristic_Classes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-ko"
 

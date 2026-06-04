@@ -8,9 +8,6 @@ permalink: /en/math/linear_algebra/linear_map
 sidebar: 
     nav: "linear_algebra-en"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Linear_Map.png
-    overlay_filter: 0.5
 
 date: 2021-10-13
 last_modified_at: 2022-08-01

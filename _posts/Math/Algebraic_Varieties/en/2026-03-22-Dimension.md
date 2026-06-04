@@ -7,9 +7,6 @@ permalink: /en/math/algebraic_varieties/dimension
 sidebar: 
     nav: "algebraic_varieties-en"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Dimension.png
-    overlay_filter: 0.5
 
 date: 2026-03-22
 last_modified_at: 2026-03-22

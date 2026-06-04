@@ -5,9 +5,6 @@ excerpt: "Open map과 closed map의 정의 및 quotient map과의 관계"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/open_mappings_and_closed_mappings
-header:
-    overlay_image: /assets/images/Math/Topology/Open_Mappings_and_Closed_Mappings.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
 

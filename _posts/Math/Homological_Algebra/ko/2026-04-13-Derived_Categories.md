@@ -5,9 +5,6 @@ excerpt: "Chain complex와 quasi-isomorphism을 통한 derived category 구성"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/derived_categories
-header:
-    overlay_image: /assets/images/Math/Homological_Algebra/Derived_Categories.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
 

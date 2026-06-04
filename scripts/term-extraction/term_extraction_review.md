@@ -3720,3 +3720,27 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `라 하고, 각각의 $$x_i$$들을 $$x$$의` | mixed-script emphasis — possibly a definition |
 | `모든` | looks like emphasis (no <sub> partner) |
 
+## 리 군
+- post: `_posts/Math/Lie_Theory/ko/2023-01-23-Lie_Groups.md`
+- permalink: `/ko/math/lie_theory/Lie_groups`
+- scanned: 2026-06-04T18:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `left translation` | multi-word English emphasis — possibly a definition |
+| `matrix exponential` | multi-word English emphasis — possibly a definition |
+| `abelian` | looks like emphasis (no <sub> partner) |
+| `surjective` | looks like emphasis (no <sub> partner) |
+| `discrete` | looks like emphasis (no <sub> partner) |
+
+## ZFC 공리계
+- post: `_posts/Math/Set_Theory/ko/2021-08-07-ZFC_Axioms.md`
+- permalink: `/ko/math/set_theory/zfc_axioms`
+- scanned: 2026-06-04T19:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `schema` | looks like emphasis (no <sub> partner) |
+| `멱집합` | looks like emphasis (no <sub> partner) |
+

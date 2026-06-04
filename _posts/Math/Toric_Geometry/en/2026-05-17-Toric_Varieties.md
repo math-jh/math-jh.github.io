@@ -6,10 +6,6 @@ excerpt: "General toric varieties obtained by gluing affine toric varieties from
 categories: [Math / Toric Geometry]
 permalink: /en/math/toric_geometry/toric_varieties
 
-header:
-    overlay_image: /assets/images/Math/Toric_Geometry/Toric_Varieties.png
-    overlay_filter: 0.5
-
 sidebar:
     nav: "toric_geometry-en"
 

@@ -5,9 +5,6 @@ excerpt: "Localization과 Hom, tensor의 호환성 및 local 성질"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/properties_of_localization
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Properties_of_Localization.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"
 

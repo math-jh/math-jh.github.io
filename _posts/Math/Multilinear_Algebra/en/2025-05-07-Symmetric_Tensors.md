@@ -5,9 +5,6 @@ excerpt: "The action of the symmetric group, symmetric tensors, and symmetric po
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/symmetric_tensors
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Symmetric_Tensors.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-en"
 

@@ -6,10 +6,6 @@ excerpt: "Construction of affine toric varieties from strongly convex rational p
 categories: [Math / Toric Geometry]
 permalink: /en/math/toric_geometry/affine_toric_varieties
 
-header:
-    overlay_image: /assets/images/Math/Toric_Geometry/Affine_Toric_Varieties.png
-    overlay_filter: 0.5
-
 sidebar:
     nav: "toric_geometry-en"
 

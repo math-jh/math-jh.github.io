@@ -5,9 +5,6 @@ excerpt: "미분다양체의 다양한 예시들"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/examples_of_manifolds
-header:
-    overlay_image: /assets/images/Math/Manifold/Examples_of_Manifolds.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

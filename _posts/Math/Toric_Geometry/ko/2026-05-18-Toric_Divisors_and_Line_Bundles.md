@@ -6,10 +6,6 @@ excerpt: "Fan의 ray로부터 얻어지는 torus-invariant divisor와 line bundl
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/toric_divisors
 
-header:
-    overlay_image: /assets/images/Math/Toric_Geometry/Toric_Divisors_and_Line_Bundles.png
-    overlay_filter: 0.5
-
 sidebar:
     nav: "toric_geometry-ko"
 

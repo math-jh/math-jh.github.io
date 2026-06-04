@@ -5,9 +5,6 @@ excerpt: "The correspondence between closed subschemes of projective space and h
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/closed_subschemes_of_projective_spaces
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Closed_subschemes_of_projective_spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-en"
 

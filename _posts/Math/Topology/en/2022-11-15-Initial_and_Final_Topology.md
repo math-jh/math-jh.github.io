@@ -5,9 +5,6 @@ excerpt: "Initial/final topology and their examples"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/initial_and_final_topology
-header:
-    overlay_image: /assets/images/Math/Topology/Initial_and_Final_Topology.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

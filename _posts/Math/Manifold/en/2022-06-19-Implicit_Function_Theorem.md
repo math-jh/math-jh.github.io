@@ -5,9 +5,6 @@ excerpt: "The implicit function theorem on differentiable manifolds and its cons
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/implicit_function_theorem
-header:
-    overlay_image: /assets/images/Math/Manifold/Implicit_Function_Theorem.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

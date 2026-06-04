@@ -5,9 +5,6 @@ excerpt: "Definitions and basic concepts of category theory"
 
 categories: [Math / Category Theory]
 permalink: /en/math/category_theory/categories
-header:
-    overlay_image: /assets/images/Math/Category_Theory/Categories.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-en"
 

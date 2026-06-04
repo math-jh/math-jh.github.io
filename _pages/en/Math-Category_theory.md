@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/category_theory/
 header:
-  overlay_image: /assets/images/Math/Category_Theory/Category_Theory.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 306
+excerpt: "Category theory treats mathematical structures abstractly through objects, morphisms, and the universal properties between them. Functors, natural transformations, limits, and adjunctions let it connect disparate fields in a single language."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

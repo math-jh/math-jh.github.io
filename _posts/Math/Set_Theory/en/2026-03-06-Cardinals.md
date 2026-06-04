@@ -5,9 +5,6 @@ excerpt: "Definition of Cardinal number"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/cardinals
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Cardinals.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

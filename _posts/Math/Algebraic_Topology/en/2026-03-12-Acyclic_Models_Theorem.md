@@ -4,9 +4,6 @@ excerpt: "The acyclic models theorem for categories with models and its applicat
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/acyclic_models_theorem
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-en"
 

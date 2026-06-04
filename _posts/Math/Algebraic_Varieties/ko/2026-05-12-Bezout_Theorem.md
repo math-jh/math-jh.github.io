@@ -8,10 +8,6 @@ permalink: /ko/math/algebraic_varieties/bezout_theorem
 sidebar: 
     nav: "algebraic_varieties-ko"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Bezout_Theorem.png
-    overlay_filter: 0.5
-
 date: 2026-03-15
 last_modified_at: 2026-04-02
 weight: 20

@@ -5,9 +5,6 @@ excerpt: "Operations on ordered sets and monotone functions"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/monotone_functions
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Monotone_Functions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

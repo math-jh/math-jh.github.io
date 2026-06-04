@@ -5,9 +5,6 @@ excerpt: "Primary decomposition and uniqueness for modules over Noetherian rings
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/primary_decomposition
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Primary_Decomposition.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

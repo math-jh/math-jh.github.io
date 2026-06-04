@@ -8,10 +8,6 @@ permalink: /ko/llm_workshop/raspberry_pi
 
 sidebar:
     nav: "llm_workshop-ko"
-header:
-    overlay_image: /assets/images/Misc/LLM_Workshop/Raspberry_Pi.jpeg
-    overlay_filter: 0.5
-
 toc: false
 date: 2026-02-05
 last_modified_at: 2026-02-05

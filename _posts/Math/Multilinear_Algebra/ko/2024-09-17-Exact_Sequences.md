@@ -5,9 +5,6 @@ excerpt: "Module의 exact sequence와 short/long exact sequence"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/exact_sequences
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Exact_Sequences.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"
 

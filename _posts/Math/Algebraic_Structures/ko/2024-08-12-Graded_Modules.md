@@ -5,9 +5,6 @@ excerpt: "Graded ring 위에 정의되는 graded module의 정의"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/graded_modules
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Graded_Modules.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 

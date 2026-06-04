@@ -6,9 +6,6 @@ excerpt: "The definition of binary relations"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/binary_relation
 
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Binary_Relation.png
-    overlay_filter: 0.5
 
 sidebar: 
     nav: "set_theory-en"

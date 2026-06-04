@@ -5,9 +5,6 @@ excerpt: "Stable map moduli로부터의 GW invariant 정의와 quantum cohomolog
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/gromov_witten
-header:
-    overlay_image: /assets/images/Math/Symplectic_Geometry/Gromov_Witten.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "symplectic_geometry-ko"
 

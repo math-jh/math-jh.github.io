@@ -5,9 +5,6 @@ excerpt: "The axioms of set theory"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/zfc_axioms
-header:
-    overlay_image: /assets/images/Math/Set_Theory/ZFC_Axioms.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

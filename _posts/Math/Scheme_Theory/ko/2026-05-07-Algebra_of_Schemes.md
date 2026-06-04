@@ -5,9 +5,6 @@ excerpt: "Reduced scheme과 integral scheme의 정의와 성질"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/algebra_of_schemes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Algebra_of_schemes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"
 

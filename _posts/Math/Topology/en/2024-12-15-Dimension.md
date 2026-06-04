@@ -5,9 +5,6 @@ excerpt: "Definitions of covering dimension and Krull dimension for algebraic ge
 
 categories: [Math / Topology]
 permalink: /en/math/topology/dimension
-header:
-    overlay_image: /assets/images/Math/Topology/Dimension.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

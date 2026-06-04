@@ -5,9 +5,6 @@ excerpt: "Hom과 tensor의 derived functor인 Ext, Tor의 정의와 성질"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/ext_and_tor
-header:
-    overlay_image: /assets/images/Math/Homological_Algebra/Ext_and_Tor.png
-    overlay_filter: 0.5
 sidebar:
     nav: "homological_algebra-ko"
 

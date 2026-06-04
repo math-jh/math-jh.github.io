@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/topology/
 header:
-  overlay_image: /assets/images/Math/Topology/Topology.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 124
+excerpt: "Topology studies the properties of spaces using only the notions of continuity and neighborhood. Through connectedness, compactness, and the separation axioms, it lays the foundation for analysis and geometry."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

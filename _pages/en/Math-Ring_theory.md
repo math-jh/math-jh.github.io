@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/ring_theory/
 header:
-  overlay_image: /assets/images/Math/Ring_Theory/Ring_Theory.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 213
+excerpt: "Ring theory studies rings, which carry both addition and multiplication, along with their ideals. Through domains and fields, factorization, and modules, it becomes the foundation of commutative algebra and algebraic geometry."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

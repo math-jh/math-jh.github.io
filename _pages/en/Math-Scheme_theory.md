@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/scheme_theory/
 header:
-  overlay_image: /assets/images/Math/Scheme_Theory/Scheme_Theory.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 25
+excerpt: "Scheme theory is Grothendieck's language for viewing commutative rings as geometric spaces. Through spectra, structure sheaves, and morphisms, it rebuilds algebraic geometry on a modern foundation."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

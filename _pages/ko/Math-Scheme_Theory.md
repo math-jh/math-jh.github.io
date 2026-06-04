@@ -4,9 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/scheme_theory/
 header:
-  overlay_image: /assets/images/Math/Scheme_Theory/Scheme_Theory.png
-  overlay_filter: 0.5
-excerpt: "스킴 이론은 가환환을 기하적 공간으로 바라보는 그로텐디크의 언어이다. 스펙트럼과 구조층, 사상을 통해 대수기하를 현대적 토대 위에 다시 세운다."
+  overlay_color: "transparent"
+hero_hue: 25
+excerpt: "스킴 이론은 가환환을 기하적 공간으로 바라보는 그로텐디크의 언어이다. 스펙트럼과 구조층, 사상을 통해 대수적 다양체를 현대적 언어로 다시 번역한다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

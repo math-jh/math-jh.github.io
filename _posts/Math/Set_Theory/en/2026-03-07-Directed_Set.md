@@ -5,9 +5,6 @@ excerpt: "Directed sets and lattices"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/directed_set
-header: 
-    overlay_image: /assets/images/Math/Set_Theory/Directed_Set.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

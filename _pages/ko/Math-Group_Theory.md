@@ -4,9 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/group_theory/
 header:
-  overlay_image: /assets/images/Math/Group_Theory/Group_Theory.png
-  overlay_filter: 0.5
-excerpt: "군론은 대칭을 대수적으로 포착하는 군과 그 작용을 공부하는 분야이다. 부분군과 정규부분군, 군의 작용과 실로우 정리를 거쳐 구조의 분류로 나아간다."
+  overlay_color: "transparent"
+hero_hue: 209
+excerpt: "군론은 대칭을 대수적으로 포착하는 군과 그 작용을 공부하는 분야이다. 부분군과 정규부분군, 군의 작용과 실로우 정리를 거쳐 유한군의 분류 문제를 살펴본다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

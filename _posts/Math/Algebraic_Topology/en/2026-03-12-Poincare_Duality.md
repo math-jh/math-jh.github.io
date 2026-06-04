@@ -4,9 +4,6 @@ excerpt: "Duality between homology and cohomology via orientation sheaves and fu
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/Poincare_duality
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Poincare_Duality.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-en"
 

@@ -8,10 +8,6 @@ permalink: /ko/math/analysis/completeness_of_reals
 sidebar: 
     nav: "analysis-ko"
 
-header:
-    overlay_image: /assets/images/Math/Analysis/Completeness_of_Reals.png
-    overlay_filter: 0.5
-
 date: 2026-06-02
 last_modified_at: 2026-06-02
 weight: 1

@@ -5,9 +5,6 @@ excerpt: "Definition of free modules, basis, and the universal property"
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/basis_of_free_modules
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Basis_of_Free_Modules.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-en"
 

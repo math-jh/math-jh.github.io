@@ -8,10 +8,6 @@ permalink: /ko/math/mirror_symmetry/overview
 sidebar: 
     nav: "mirror_symmetry-ko"
 
-header:
-    overlay_image: /assets/images/Math/Mirror_Symmetry/Overview.png
-    overlay_filter: 0.5
-
 date: 2026-05-18
 last_modified_at: 2026-05-23
 weight: 1

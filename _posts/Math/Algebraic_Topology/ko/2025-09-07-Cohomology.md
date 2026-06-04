@@ -5,9 +5,6 @@ excerpt: "코호몰로지의 정의와 universal coefficient theorem"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/cohomology
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Cohomology.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-ko"
 

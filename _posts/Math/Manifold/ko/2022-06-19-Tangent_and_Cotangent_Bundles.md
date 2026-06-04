@@ -5,9 +5,6 @@ excerpt: "Vector bundle의 정의와 tangent, cotangent bundle"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/tangent_and_cotangent_bundles
-header:
-    overlay_image: /assets/images/Math/Manifold/Tangent_and_Cotangent_Bundles.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

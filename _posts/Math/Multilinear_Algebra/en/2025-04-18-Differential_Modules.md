@@ -5,9 +5,6 @@ excerpt: "Differential modules with derivations on graded algebras"
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/differential_modules
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Differential_Modules.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-en"
 

@@ -5,9 +5,6 @@ excerpt: "Definition of cohomology and the universal coefficient theorem"
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/cohomology
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Cohomology.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-en"
 

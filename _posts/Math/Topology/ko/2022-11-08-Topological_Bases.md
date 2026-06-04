@@ -5,9 +5,6 @@ excerpt: "위상공간의 기저와 부분기저, 국소기저"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/topological_bases
-header:
-    overlay_image: /assets/images/Math/Topology/Topological_Bases.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
 

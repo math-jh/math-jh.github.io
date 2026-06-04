@@ -5,9 +5,6 @@ excerpt: "Definition of natural numbers and properties of infinite sets"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/natural_numbers
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Natural_Numbers.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

@@ -5,9 +5,6 @@ excerpt: "Abelian category에서의 projective와 injective resolution"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/resolutions
-header:
-    overlay_image: /assets/images/Math/Homological_Algebra/Resolutions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
 

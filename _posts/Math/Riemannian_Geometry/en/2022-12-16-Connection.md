@@ -5,9 +5,6 @@ excerpt: "Differentiation on a vector bundle"
 
 categories: [Math / Riemannian Geometry]
 permalink: /en/math/riemannian_geometry/connection
-header:
-    overlay_image: /assets/images/Math/Riemannian_Geometry/Connection.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "riemannian_geometry-en"
 

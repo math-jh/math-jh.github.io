@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/algebraic_varieties/
 header:
-  overlay_image: /assets/images/Math/Algebraic_Varieties/Algebraic_Varieties.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 9
+excerpt: "The theory of algebraic varieties studies geometric objects defined as the zero sets of polynomials. Through projective varieties, dimension, smoothness, and divisors, it connects algebra and geometry."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
