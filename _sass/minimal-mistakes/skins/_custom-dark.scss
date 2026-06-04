@@ -17,14 +17,16 @@ $highlight-color: #6090e9;                                        //  Lighten #0
 $notice-background-mix: 0%;
 $highlight-background-mix: 20%;
 
-/* Personal notice colors */
-$definition-color: #00796b !default;                              //  Teal 700
-$proposition-color: #303f9f !default;                             //  Indigo 700
-$proof-color: #455a64 !default;                                   //  Blue Grey 700
-$example-color: #2e7d32 !default;                                 //  Green 800
-$remark-color: #880e4f !default;                                  //  Pink 900
-$misc-color: #795548 !default;                                    //  Grey 700
-$spoiler-color: #ff4301 !default;
+/* Math notice accents (dark) — lighter 300-level so the border/text reads on
+   the dark bg; the box is a faint rgba tint of this + a 4px left border. */
+$definition-color: #4db6ac !default;                              //  Teal 300
+$proposition-color: #7986cb !default;                             //  Indigo 300
+$proof-color: #90a4ae !default;                                   //  Blue Grey 300
+$details-color: #90a4ae !default;                                 //  Blue Grey 300 (collapsible)
+$example-color: #81c784 !default;                                 //  Green 300
+$remark-color: #f06292 !default;                                  //  Pink 300
+$misc-color: #a1887f !default;                                    //  Brown 300
+$spoiler-color: #ff8a65 !default;                                 //  Deep Orange 300
 
 $lang-color: #174bab !default;
 $lang-list-color: #113a83 !default;
@@ -125,6 +127,53 @@ body[data-lang="en"] .masthead__menu-item[data-lang="en"] {
 
 .settings-item:hover {
   background-color: #333;
+}
+
+/* Theme picker submenu (auto / light / dark) — nested under "테마" */
+.theme-caret {
+  transition: transform 0.2s;
+}
+
+.settings-parent.expanded .theme-caret {
+  transform: rotate(90deg);
+}
+
+.settings-submenu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.settings-submenu.show {
+  display: block;
+}
+
+.settings-subitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px 8px 28px;
+  cursor: pointer;
+  color: #bbb; // dropdown bg is dark in both modes; don't inherit body text color
+  transition: background-color 0.2s;
+}
+
+.settings-subitem:hover {
+  background-color: #333;
+}
+
+.settings-subitem.active {
+  color: #fff;
+}
+
+.settings-subitem .theme-check {
+  visibility: hidden;
+}
+
+.settings-subitem.active .theme-check {
+  visibility: visible;
 }
 
 /* Scrollbar (dark mode) */

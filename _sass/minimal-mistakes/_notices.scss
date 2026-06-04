@@ -17,9 +17,14 @@
   font-family: $global-font-family;
   font-size: $type-size-5 !important;
   text-indent: initial; /* override*/
-  background-color: mix($background-color, $notice-color, $notice-background-mix);
+  /* Admonition style: faint tint + 4px accent left border (instead of a solid
+     fill). $notice-color is now a mid-strength accent in BOTH skins, so the
+     tint stays subtle and the border carries the colour — readable and
+     consistently toned in light and dark. */
+  background-color: rgba($notice-color, 0.16);
+  border-left: 4px solid $notice-color;
   border-radius: $border-radius;
-  box-shadow: 0 1px 1px rgba($notice-color, 0.25);
+  box-shadow: none;
 
   h4 {
     margin-top: 0 !important; /* override*/
@@ -141,8 +146,32 @@
   @include notice($proof-color);
 }
 
+/* Generic collapsible admonition: <details class="details"><summary>…</summary> */
+.details {
+  @include notice($details-color);
+}
+
+/* Themed disclosure caret for proof / details summaries (replaces the native
+   triangle), rotates 90° when open. */
 summary {
   cursor: pointer;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::before {
+    content: "\25B8"; /* ▸ */
+    display: inline-block;
+    margin-right: 0.45em;
+    font-style: normal;
+    transition: transform 0.2s ease;
+  }
+}
+
+details[open] > summary::before {
+  transform: rotate(90deg);
 }
 
 .example {
