@@ -125,19 +125,19 @@
   \coordinate (c) at (315:\R);
   \coordinate (d) at (215:\R);
   \draw[black!70, thick] (a)--(b)--(c)--(d)--cycle;        % 변 (비교차 현)
-  \draw[violet!70, very thick, dashed] (a)--(c);           % 대각선 (교차 현)
-  \draw[violet!70, very thick, dashed] (b)--(d);
+  \draw[black, very thick, dashed] (a)--(c);               % 대각선 (교차 현)
+  \draw[black, very thick, dashed] (b)--(d);
   \foreach \ang in {90, 20, 340, 268, 170}{                % S에 해당하는 회색 점
     \fill[gray!60] (\ang:\R) circle (1.15pt);
   }
-  \fill[red!80!black]    (a) circle (1.5pt);
-  \fill[orange!90!black] (b) circle (1.5pt);
-  \fill[green!55!black]  (c) circle (1.5pt);
-  \fill[blue!70!black]   (d) circle (1.5pt);
-  \node[red!80!black]    at (125:{\R+0.34}) {$a$};
-  \node[orange!90!black] at (55:{\R+0.34})  {$b$};
-  \node[green!55!black]  at (315:{\R+0.34}) {$c$};
-  \node[blue!70!black]   at (215:{\R+0.34}) {$d$};
+  \fill[black] (a) circle (1.5pt);
+  \fill[black] (b) circle (1.5pt);
+  \fill[black] (c) circle (1.5pt);
+  \fill[black] (d) circle (1.5pt);
+  \node at (125:{\R+0.34}) {$a$};
+  \node at (55:{\R+0.34})  {$b$};
+  \node at (315:{\R+0.34}) {$c$};
+  \node at (215:{\R+0.34}) {$d$};
 \end{tikzpicture}
 
 %% plabic graph 예시: Gr(1,4) white star, trip permutation i->i+1 (Postnikov_Diagram_and_Plabic_Graph-2.png)
@@ -258,7 +258,7 @@
 %% ex7: Γ (빈 원 2개), trip 2->3 굵게 (Postnikov_Diagram_and_Plabic_Graph-3.png)
 \begin{tikzpicture}[scale=1.3, >=Stealth,
    wv/.style={draw=black, very thick, fill=none, circle, inner sep=3.2pt},
-   trip/.style={violet!75, line width=1.9pt, postaction={decorate,
+   trip/.style={red, line width=1.9pt, postaction={decorate,
       decoration={markings, mark=at position #1 with {\arrow{Stealth[length=3.2mm]}}}}}]
   \def\R{2}
   \draw[gray!60, thick, densely dashed] (0,0) circle (\R);
@@ -274,7 +274,7 @@
 %% ex7: Γ' (빈 원 1개, 수축 결과), trip 2->3 굵게 (Postnikov_Diagram_and_Plabic_Graph-4.png)
 \begin{tikzpicture}[scale=1.3, >=Stealth,
    wv/.style={draw=black, very thick, fill=none, circle, inner sep=3.2pt},
-   trip/.style={violet!75, line width=1.9pt, postaction={decorate,
+   trip/.style={red, line width=1.9pt, postaction={decorate,
       decoration={markings, mark=at position #1 with {\arrow{Stealth[length=3.2mm]}}}}}]
   \def\R{2}
   \draw[gray!60, thick, densely dashed] (0,0) circle (\R);
@@ -321,34 +321,28 @@
      \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
 \end{tikzpicture}
 
-%% prop11: triangle move in Postnikov diagram (3 strands, triangle flips across the crossing) (Postnikov_Diagram_and_Plabic_Graph-7.png)
+%% prop11: triangle move (moving strand red, two stationary strands black; triangle red!40 with red arc as one side) (Postnikov_Diagram_and_Plabic_Graph-7.png)
 \begin{tikzpicture}[scale=1.0, >=Stealth,
    str/.style={line width=1.4pt, postaction={decorate,
       decoration={markings, mark=at position 0.58 with {\arrow{Stealth[length=2.6mm]}}}}}]
+  %% left: moving strand bulges left, triangle PQR sits on the left (Q,R on the two black strands)
   \begin{scope}[shift={(-2.6,0)}]
-    \path[name path=A] (-1,-1.5) -- (1,1.5);
-    \path[name path=B] (1,-1.5) -- (-1,1.5);
-    \path[name path=C] (0,-1.5) .. controls (-0.95,-0.5) and (-0.95,0.5) .. (0,1.5);
-    \path[name intersections={of=A and B, name=iAB}];
-    \path[name intersections={of=A and C, name=iAC}];
-    \path[name intersections={of=B and C, name=iBC}];
-    \fill[orange!25] (iAB-1)--(iAC-1)--(iBC-1)--cycle;
-    \draw[str, red!75!black]   (-1,-1.5) -- (1,1.5);
-    \draw[str, blue!70!black]  (1,-1.5) -- (-1,1.5);
-    \draw[str, green!55!black] (0,-1.5) .. controls (-0.95,-0.5) and (-0.95,0.5) .. (0,1.5);
+    \fill[red!10] (0,0) -- (-0.5,-0.7)
+        .. controls (-0.72,-0.25) and (-0.72,0.25) .. (-0.5,0.7) -- cycle;   % 정직한 삼각형, 한 변=빨간 strand arc
+    \draw[str, black] (-1,-1.4) -- (1,1.4);                                 % 멈춰있는 strand
+    \draw[str, black] (1,-1.4) -- (-1,1.4);                                 % 멈춰있는 strand
+    \draw[str, red]   (0,-1.4) -- (-0.5,-0.7)                               % 움직이는 strand (위, 빨강)
+        .. controls (-0.72,-0.25) and (-0.72,0.25) .. (-0.5,0.7) -- (0,1.4);
   \end{scope}
   \node at (0,0) {$\longleftrightarrow$};
+  %% right: moving strand bulges right (mirror image)
   \begin{scope}[shift={(2.6,0)}]
-    \path[name path=A2] (-1,-1.5) -- (1,1.5);
-    \path[name path=B2] (1,-1.5) -- (-1,1.5);
-    \path[name path=C2] (0,-1.5) .. controls (0.95,-0.5) and (0.95,0.5) .. (0,1.5);
-    \path[name intersections={of=A2 and B2, name=jAB}];
-    \path[name intersections={of=A2 and C2, name=jAC}];
-    \path[name intersections={of=B2 and C2, name=jBC}];
-    \fill[orange!25] (jAB-1)--(jAC-1)--(jBC-1)--cycle;
-    \draw[str, red!75!black]   (-1,-1.5) -- (1,1.5);
-    \draw[str, blue!70!black]  (1,-1.5) -- (-1,1.5);
-    \draw[str, green!55!black] (0,-1.5) .. controls (0.95,-0.5) and (0.95,0.5) .. (0,1.5);
+    \fill[red!10] (0,0) -- (0.5,-0.7)
+        .. controls (0.72,-0.25) and (0.72,0.25) .. (0.5,0.7) -- cycle;
+    \draw[str, black] (1,-1.4) -- (-1,1.4);
+    \draw[str, black] (-1,-1.4) -- (1,1.4);
+    \draw[str, red]   (0,-1.4) -- (0.5,-0.7)
+        .. controls (0.72,-0.25) and (0.72,0.25) .. (0.5,0.7) -- (0,1.4);
   \end{scope}
 \end{tikzpicture}
 
@@ -532,10 +526,10 @@
   \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
   \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
   \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
-  \draw[strand, red!75!black]    (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
-  \draw[strand, blue!70!black]   (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
-  \draw[strand, green!55!black]  (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
-  \draw[strand, orange!90!black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
+  \draw[strand, black] (b1) .. controls (-1.35,0.85) and (-1.35,-0.85) .. (b3);
+  \draw[strand, black] (b2) .. controls (-0.85,1.35) and (0.85,1.35) .. (b4);
+  \draw[strand, black] (b3) .. controls (1.35,-0.85) and (1.35,0.85) .. (b1);
+  \draw[strand, black] (b4) .. controls (0.85,-1.35) and (-0.85,-1.35) .. (b2);
   \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
      \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
 \end{tikzpicture}
