@@ -324,13 +324,13 @@
 %% prop11: triangle move (moving strand red, two stationary strands black; triangle red!40 with red arc as one side) (Postnikov_Diagram_and_Plabic_Graph-7.png)
 \begin{tikzpicture}[scale=1.0, >=Stealth,
    str/.style={line width=1.4pt, postaction={decorate,
-      decoration={markings, mark=at position 0.58 with {\arrow{Stealth[length=2.6mm]}}}}}]
+      decoration={markings, mark=at position #1 with {\arrow{Stealth[length=2.6mm]}}}}}, str/.default=0.58]
   %% left: moving strand bulges left, triangle PQR sits on the left (Q,R on the two black strands)
   \begin{scope}[shift={(-2.6,0)}]
     \fill[red!10] (0,0) -- (-0.5,-0.7)
         .. controls (-0.72,-0.25) and (-0.72,0.25) .. (-0.5,0.7) -- cycle;   % 정직한 삼각형, 한 변=빨간 strand arc
-    \draw[str, black] (-1,-1.4) -- (1,1.4);                                 % 멈춰있는 strand
-    \draw[str, black] (1,-1.4) -- (-1,1.4);                                 % 멈춰있는 strand
+    \draw[str=0.70, black] (-1,-1.4) -- (1,1.4);                                 % 멈춰있는 strand
+    \draw[str=0.70, black] (1,-1.4) -- (-1,1.4);                                 % 멈춰있는 strand
     \draw[str, red]   (0,-1.4) -- (-0.5,-0.7)                               % 움직이는 strand (위, 빨강)
         .. controls (-0.72,-0.25) and (-0.72,0.25) .. (-0.5,0.7) -- (0,1.4);
   \end{scope}
@@ -339,8 +339,8 @@
   \begin{scope}[shift={(2.6,0)}]
     \fill[red!10] (0,0) -- (0.5,-0.7)
         .. controls (0.72,-0.25) and (0.72,0.25) .. (0.5,0.7) -- cycle;
-    \draw[str, black] (1,-1.4) -- (-1,1.4);
-    \draw[str, black] (-1,-1.4) -- (1,1.4);
+    \draw[str=0.70, black] (1,-1.4) -- (-1,1.4);
+    \draw[str=0.70, black] (-1,-1.4) -- (1,1.4);
     \draw[str, red]   (0,-1.4) -- (0.5,-0.7)
         .. controls (0.72,-0.25) and (0.72,0.25) .. (0.5,0.7) -- (0,1.4);
   \end{scope}
