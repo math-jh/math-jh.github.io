@@ -22,7 +22,7 @@ To overcome this restriction we introduce the notion of a *line bundle*. A line 
 
 ## Definition of a Line Bundle
 
-Line bundles, and more generally vector bundles which we define later in this post, are defined in the same way as in differential geometry and other fields. ([\[Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifold/tangent_and_cotangent_bundles#def1) or [\[Algebraic Topology\] §Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/characteristic_classes#def2), etc.)
+Line bundles, and more generally vector bundles which we define later in this post, are defined in the same way as in differential geometry and other fields. ([\[Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1) or [\[Algebraic Topology\] §Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/characteristic_classes#def2), etc.)
 
 <div class="definition" markdown="1">
 

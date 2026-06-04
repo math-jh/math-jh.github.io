@@ -112,7 +112,7 @@ $$\dot{z}=-J_0\nabla H(z)$$
 
 $$X_H=-J_0\nabla H(z)$$
 
-의 integral flow를 찾는 문제와 정확하게 같아지며, 우리는 이것이 항상 가능하다는 것을 알고 있다. ([\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifold/vector_fields#thm6))
+의 integral flow를 찾는 문제와 정확하게 같아지며, 우리는 이것이 항상 가능하다는 것을 알고 있다. ([\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6))
 
 ## Symplectic form
 

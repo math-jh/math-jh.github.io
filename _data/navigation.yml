@@ -322,6 +322,8 @@ llm_workshop-ko:
         url: ko/llm_workshop/local_services
       - title: "last_modified_at을 git에 맡기기"
         url: ko/llm_workshop/last_modified_git
+      - title: "블로그 테마 개편"
+        url: ko/llm_workshop/theme_overhaul
   - title: "Marvin의 독서 노트"
     children:
       - title: "독서 노트를 쓰는 봇"
@@ -753,43 +755,43 @@ number_theory-ko:
       - title: "찾아보기"
         url: ko/misc/index_ko
 
-manifold-ko:
-  - title: <a href="/ko/manifold/" class="sidebar_title">미분다양체</a>
+manifolds-ko:
+  - title: <a href="/ko/manifolds/" class="sidebar_title">미분다양체</a>
     children:
       - title: "미분다양체"
-        url: ko/math/manifold/smooth_manifolds
+        url: ko/math/manifolds/smooth_manifolds
       - title: "미분다양체의 예시들"
-        url: ko/math/manifold/examples_of_manifolds
+        url: ko/math/manifolds/examples_of_manifolds
       - title: "접공간"
-        url: ko/math/manifold/tangent_space
+        url: ko/math/manifolds/tangent_space
       - title: "여접공간"
-        url: ko/math/manifold/cotangent_space
+        url: ko/math/manifolds/cotangent_space
       - title: "미분사상"
-        url: ko/math/manifold/differentials
+        url: ko/math/manifolds/differentials
       - title: "미분사상의 예시들"
-        url: ko/math/manifold/examples_of_differentials
+        url: ko/math/manifolds/examples_of_differentials
       - title: "부분다양체와 역함수 정리"
-        url: ko/math/manifold/submanifolds
+        url: ko/math/manifolds/submanifolds
       - title: "부분다양체의 유일성"
-        url: ko/math/manifold/uniqueness_of_submanifold
+        url: ko/math/manifolds/uniqueness_of_submanifold
       - title: "음함수 정리"
-        url: ko/math/manifold/implicit_function_theorem
+        url: ko/math/manifolds/implicit_function_theorem
       - title: "접다발과 여접다발"
-        url: ko/math/manifold/tangent_and_cotangent_bundles
+        url: ko/math/manifolds/tangent_and_cotangent_bundles
       - title: "벡터장"
-        url: ko/math/manifold/vector_fields
+        url: ko/math/manifolds/vector_fields
       - title: "미분형식"
-        url: ko/math/manifold/differential_forms
+        url: ko/math/manifolds/differential_forms
       - title: "리 미분"
-        url: ko/math/manifold/Lie_derivative
+        url: ko/math/manifolds/Lie_derivative
       - title: "Distribution"
-        url: ko/math/manifold/distribution
+        url: ko/math/manifolds/distribution
       - title: "미분 아이디얼"
-        url: ko/math/manifold/differential_ideal
+        url: ko/math/manifolds/differential_ideal
       - title: "향"
-        url: ko/math/manifold/orientation
+        url: ko/math/manifolds/orientation
       - title: "적분"
-        url: ko/math/manifold/integration
+        url: ko/math/manifolds/integration
   - title: 
     children:
       - title: "블로그 소개"
@@ -1540,7 +1542,7 @@ category-ko:
   - title: "Differential Geometry"
     children:
       - title: "미분다양체"
-        url: ko/manifold/
+        url: ko/manifolds/
       - title: "리 이론"
         url: ko/lie_theory/
       - title: "리만기하학"
@@ -1626,7 +1628,7 @@ category-en:
       - title: "Algebraic Topology"
         url: en/algebraic_topology/
       - title: "Manifolds"
-        url: en/manifold/
+        url: en/manifolds/
       # - title: "복소다양체"
       #   url: ko/complex_manifold/
       - title: "Lie Theory"
@@ -1692,41 +1694,41 @@ topology-en:
       - title: "About This Site"
         url: en/about
 
-manifold-en:
-  - title: <a href="/en/manifold/" class="sidebar_title">Manifolds</a>
+manifolds-en:
+  - title: <a href="/en/manifolds/" class="sidebar_title">Manifolds</a>
     children:
       - title: "Differentiable Manifolds"
-        url: en/math/manifold/smooth_manifolds
+        url: en/math/manifolds/smooth_manifolds
       - title: "Examples of Differentiable Manifolds"
-        url: en/math/manifold/examples_of_manifolds
+        url: en/math/manifolds/examples_of_manifolds
       - title: "Tangent Space"
-        url: en/math/manifold/tangent_space
+        url: en/math/manifolds/tangent_space
       - title: "Cotangent Space"
-        url: en/math/manifold/cotangent_space
+        url: en/math/manifolds/cotangent_space
       - title: "Differentials"
-        url: en/math/manifold/differentials
+        url: en/math/manifolds/differentials
       - title: "Examples of Differentials"
-        url: en/math/manifold/examples_of_differentials
+        url: en/math/manifolds/examples_of_differentials
       - title: "Submanifolds and the Inverse Function Theorem"
-        url: en/math/manifold/submanifolds
+        url: en/math/manifolds/submanifolds
       - title: "Uniqueness of Submanifolds"
-        url: en/math/manifold/uniqueness_of_submanifold
+        url: en/math/manifolds/uniqueness_of_submanifold
       - title: "Implicit Function Theorem"
-        url: en/math/manifold/implicit_function_theorem
+        url: en/math/manifolds/implicit_function_theorem
       - title: "Tangent and Cotangent Bundles"
-        url: en/math/manifold/tangent_and_cotangent_bundles
+        url: en/math/manifolds/tangent_and_cotangent_bundles
       - title: "Vector Fields"
-        url: en/math/manifold/vector_fields
+        url: en/math/manifolds/vector_fields
       - title: "Differential Forms"
-        url: en/math/manifold/differential_forms
+        url: en/math/manifolds/differential_forms
       - title: "Lie Derivative"
-        url: en/math/manifold/Lie_derivative
+        url: en/math/manifolds/Lie_derivative
       - title: "Distribution"
-        url: en/math/manifold/distribution
+        url: en/math/manifolds/distribution
       - title: "Differential Ideal"
-        url: en/math/manifold/differential_ideal
+        url: en/math/manifolds/differential_ideal
       - title: "Orientation"
-        url: en/math/manifold/orientation
+        url: en/math/manifolds/orientation
   - title:
     children:
       - title: "About This Site"

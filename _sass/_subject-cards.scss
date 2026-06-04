@@ -40,20 +40,26 @@
 }
 
 .subject-card {
+  --card-l: 26;                        // fallback; set inline per card by position
   display: block;
   position: relative;
   padding: 1rem 1.1rem;
-  background: mix($background-color, $text-color, 94%); // subtle off-bg surface
-  border: 1px solid $border-color;
+  // Gradient in the subject's colour: hue/sat inherited from the page body
+  // (--hero-hue/--hero-sat); lightness (--card-l) fades smoothly by the card's
+  // position in the list (set inline in subject-cards.html), so the grid is one
+  // hue gently descending in tone — ordered, not a random jumble.
+  background: linear-gradient(135deg,
+    hsl(var(--hero-hue, 220), var(--hero-sat, 42%), calc(var(--card-l) * 1%)),
+    hsl(var(--hero-hue, 220), var(--hero-sat, 42%), calc((var(--card-l) - 13) * 1%)));
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 8px;
-  color: $text-color !important;       // override link colour (card is an <a>)
+  color: #fff !important;              // override link colour (card is an <a>)
   text-decoration: none !important;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-    border-color: $masthead-link-color-hover; // gold edge on hover
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
   }
 }
 
@@ -63,7 +69,7 @@
   font-size: 0.7em;
   font-weight: bold;
   letter-spacing: 0.05em;
-  color: $muted-text-color;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 0.3em;
 }
 
@@ -79,7 +85,7 @@
   display: block;
   font-size: 0.85em;
   line-height: 1.5;
-  color: $muted-text-color;
+  color: rgba(255, 255, 255, 0.82);
   margin-bottom: 0.5em;
 }
 
@@ -87,5 +93,20 @@
   display: block;
   font-family: $sans-serif;
   font-size: 0.7em;
-  color: $muted-text-color;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Home (splash) subject groups: the section heading already separates each
+   group, so drop the feature_row divider line the theme adds under each row. */
+.layout--splash .feature__wrapper {
+  border-bottom: 0;
+}
+
+/* Group/section headings on the home (the `## …` h2s, not the per-card
+   `.archive__item-title` which are also h2s) — larger so they read as the
+   dividers between subject groups. */
+.layout--splash h2:not(.archive__item-title) {
+  font-size: 2.25em;
+  font-weight: 700;
+  margin: 1.4em 0 0.5em;
 }

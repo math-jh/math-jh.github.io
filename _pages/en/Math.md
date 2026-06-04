@@ -33,7 +33,7 @@ author_profile: true
 ## Geometry & Topology
 
 - [Topology](/en/topology/)
-- [Manifolds](/en/manifold/)
+- [Manifolds](/en/manifolds/)
 - [Riemannian Geometry](/en/riemannian_geometry/)
 - [Algebraic Topology](/en/algebraic_topology/)
 - [Algebraic Varieties](/en/algebraic_varieties/)

@@ -111,7 +111,7 @@ Therefore, finding the actual trajectory of the object in phase space—that is,
 
 $$X_H=-J_0\nabla H(z)$$
 
-and we know that this is always possible. ([\[Differential Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6))
+and we know that this is always possible. ([\[Differential Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6))
 
 ## Symplectic Form
 

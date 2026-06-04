@@ -21,7 +21,7 @@ weight: 9
 
 ## Line Bundle의 정의
 
-Line bundle, 더 나아가 이 글의 뒷부분에서 정의할 vector bundle은 미분기하 등등의 다른 분야에서와 마찬가지 방식으로 정의된다. ([\[미분다양체\] §접다발과 여접다발, ⁋정의 1](/ko/math/manifold/tangent_and_cotangent_bundles#def1) 혹은 [\[대수적 위상수학\] §특성류, ⁋정의 2](/ko/math/algebraic_topology/characteristic_classes#def2) 등등)
+Line bundle, 더 나아가 이 글의 뒷부분에서 정의할 vector bundle은 미분기하 등등의 다른 분야에서와 마찬가지 방식으로 정의된다. ([\[미분다양체\] §접다발과 여접다발, ⁋정의 1](/ko/math/manifolds/tangent_and_cotangent_bundles#def1) 혹은 [\[대수적 위상수학\] §특성류, ⁋정의 2](/ko/math/algebraic_topology/characteristic_classes#def2) 등등)
 
 <div class="definition" markdown="1">
 

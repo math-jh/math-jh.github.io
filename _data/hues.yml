@@ -27,7 +27,7 @@
 "Math / Category Theory":        { hue: 306, sat: "42%" }
 
 # --- Geometry / Topology (greens) ---
-"Math / Manifold":               { hue: 84,  sat: "42%" }
+"Math / Manifolds":               { hue: 84,  sat: "42%" }
 "Math / Lie Theory":             { hue: 100, sat: "42%" }
 "Math / Riemannian Geometry":    { hue: 116, sat: "42%" }
 "Math / Topology":               { hue: 124, sat: "42%" }

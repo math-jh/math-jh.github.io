@@ -31,7 +31,7 @@ SUBJECTS = [
     ("Group_Theory",         "Group Theory",         209, 42),
     ("Homological_Algebra",  "Homological Algebra",  227, 42),
     ("Linear_Algebra",       "Linear Algebra",       249, 42),
-    ("Manifold",             "Manifolds",            84,  42),
+    ("Manifolds",            "Manifolds",            84,  42),
     ("Multilinear_Algebra",  "Multilinear Algebra",  218, 42),
     ("Riemannian_Geometry",  "Riemannian Geometry",  116, 42),
     ("Ring_Theory",          "Ring Theory",          213, 42),
@@ -61,40 +61,50 @@ def gradient(hue, sat):
     return Image.fromarray(np.clip(arr, 0, 255).astype("uint8"), "RGB")
 
 
-def fit_font(draw, lines, max_w, max_h):
-    """Largest Roboto-Bold size where every line fits max_w and the block fits max_h."""
-    size = 320
-    while size > 20:
-        font = ImageFont.truetype(FONT, size)
-        line_h = font.getbbox("Hg")[3] - font.getbbox("Hg")[1]
-        gap = int(line_h * 0.18)
-        widths = [draw.textlength(ln, font=font) for ln in lines]
-        block_h = line_h * len(lines) + gap * (len(lines) - 1)
-        if max(widths) <= max_w and block_h <= max_h:
-            return font, line_h, gap
-        size -= 4
-    return ImageFont.truetype(FONT, 20), 24, 4
+# Title on a SINGLE line, one UNIFORM size across every tile (sized to the
+# most-constraining/longest title) so the row reads consistently.
+FIT_W = int(W * 0.90)   # title ≤ 90% of width
+FIT_H = int(H * 0.55)
 
 
 def render(title):
-    # 1 word → 1 line; 2+ words → one word per line (visually balanced on 16:9)
-    words = title.split()
-    return words if len(words) >= 2 else [title]
+    return [title]   # always one line, no wrapping
+
+
+def max_size_for(draw, lines):
+    """Largest Roboto-Bold size where this title fits FIT_W × FIT_H."""
+    size = 320
+    while size > 16:
+        font = ImageFont.truetype(FONT, size)
+        line_h = font.getbbox("Hg")[3] - font.getbbox("Hg")[1]
+        gap = int(line_h * 0.20)
+        block_h = line_h * len(lines) + gap * (len(lines) - 1)
+        widest = max(draw.textlength(ln, font=font) for ln in lines)
+        if widest <= FIT_W and block_h <= FIT_H:
+            return size
+        size -= 2
+    return 16
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
+    probe = ImageDraw.Draw(Image.new("RGB", (W, H)))
+    # one global size = the smallest that any single title demands, dialled to 80%
+    size = min(max_size_for(probe, render(t)) for _, t, _, _ in SUBJECTS)
+    size = int(size * 0.8)
+    font = ImageFont.truetype(FONT, size)
+    line_h = font.getbbox("Hg")[3] - font.getbbox("Hg")[1]
+    gap = int(line_h * 0.20)
+    print(f"uniform font size = {size}px")
     for fname, title, hue, sat in SUBJECTS:
         img = gradient(hue, sat)
         draw = ImageDraw.Draw(img)
         lines = render(title)
-        font, line_h, gap = fit_font(draw, lines, int(W * 0.80), int(H * 0.62))
         block_h = line_h * len(lines) + gap * (len(lines) - 1)
         y = (H - block_h) / 2
         for ln in lines:
             tw = draw.textlength(ln, font=font)
-            # subtle shadow for legibility on the gradient, then white text
-            draw.text(((W - tw) / 2 + 3, y + 3), ln, font=font, fill=(0, 0, 0, 90))
+            draw.text(((W - tw) / 2 + 2, y + 2), ln, font=font, fill=(0, 0, 0))  # subtle shadow
             draw.text(((W - tw) / 2, y), ln, font=font, fill=(245, 245, 245))
             y += line_h + gap
         path = os.path.join(OUT, fname + ".jpeg")

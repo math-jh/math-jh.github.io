@@ -6,14 +6,22 @@
                           weight >= this value (e.g. 99 separates the LLM
                           Workshop dev notes from the reading notes).
 {% endcomment %}
+{% comment %}
+  Card lightness fades smoothly by POSITION in the sorted list (not by the raw
+  weight value, whose gaps would scatter the brightness): first card L=31 →
+  last card L=22, a gentle monotonic tonal descent. Hue/sat come from the page.
+{% endcomment %}
 {% assign _split_done = false %}
+{% assign _n = include.posts | size %}
+{% if _n > 1 %}{% assign _span = _n | minus: 1 %}{% endif %}
 <div class="subject-cards{% if include.minimal %} subject-cards--minimal{% endif %}">
   {% for post in include.posts %}
     {% if include.splitweight and _split_done == false and post.weight >= include.splitweight %}
       <div class="subject-cards__break" aria-hidden="true"></div>
       {% assign _split_done = true %}
     {% endif %}
-    <a class="subject-card" href="{{ post.url | relative_url }}">
+    {% if _span %}{% assign _drop = forloop.index0 | times: 9 | divided_by: _span %}{% assign card_l = 31 | minus: _drop %}{% else %}{% assign card_l = 26 %}{% endif %}
+    <a class="subject-card" href="{{ post.url | relative_url }}" style="--card-l: {{ card_l }};">
       {% unless include.minimal %}<span class="subject-card__num">{{ forloop.index }}</span>{% endunless %}
       <span class="subject-card__title">{{ post.title | markdownify | strip_html }}</span>
       {% unless include.minimal %}{% if post.excerpt %}<span class="subject-card__excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 110 }}</span>{% endif %}{% endunless %}
