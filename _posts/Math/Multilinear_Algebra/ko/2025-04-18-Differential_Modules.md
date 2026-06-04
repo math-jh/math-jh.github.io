@@ -260,7 +260,7 @@ $$D=g\circ d_{\S(M)/A}$$
 
 이 성립하도록 하는 $$A$$-linear map $$g:\Omega_{\S(M)/A}\rightarrow N$$이 유일하게 존재한다. 
 
-한편, 우리는 임의의 $$A$$-derivation $$D:\S(M)\rightarrow L$$이 주어졌을 때, 이를 $$M$$으로 제한한 $$D\vert_M$$이 $$M$$에서 $$L$$로의 $$A$$-module homomorphism이며, 이 대응 $$D\mapsto D\vert_M$$이 실은 $$\S(M)$$-module isomorphism이라는 것을 [명제 5](#prop5)를 통해 확인할 쑤 있다. 한편 $$L$$은 $$\S(M)$$-module이므로 [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)에 의하여 
+한편, 우리는 임의의 $$A$$-derivation $$D:\S(M)\rightarrow L$$이 주어졌을 때, 이를 $$M$$으로 제한한 $$D\vert_M$$이 $$M$$에서 $$L$$로의 $$A$$-module homomorphism이며, 이 대응 $$D\mapsto D\vert_M$$이 실은 $$\S(M)$$-module isomorphism이라는 것을 [명제 5](#prop5)를 통해 확인할 수 있다. 한편 $$L$$은 $$\S(M)$$-module이므로 [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)에 의하여 
 
 $$\Hom_{\S(M)}(M\otimes_A\S(M),L)\cong\Hom_A(M,L)$$
 

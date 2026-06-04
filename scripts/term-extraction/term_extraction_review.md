@@ -3640,3 +3640,12 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `big Givental $$J$$-function` | multi-word English emphasis — possibly a definition |
 | `전체` | looks like emphasis (no <sub> partner) |
 
+## 이항관계
+- post: `_posts/Math/Set_Theory/ko/2021-08-14-Binary_Relation.md`
+- permalink: `/ko/math/set_theory/binary_relation`
+- scanned: 2026-06-04T08:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `source` | looks like emphasis (no <sub> partner) |
+

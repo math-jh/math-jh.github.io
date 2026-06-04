@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import difflib
+import hashlib
 import json
 import os
 import re
@@ -56,6 +57,18 @@ VERIFY_AGENT_FILE     = str(SCRIPT_DIR / "verify-agent.yaml")
 VERIFY_MCP_FILE       = str(SCRIPT_DIR / "verify-mcp.json")
 KIMI_TIMEOUT_SEC      = 1500                 # 25min — large posts (>30KB) often need >15min
 MAX_TRANSLATE_ATTEMPTS = 3                   # re-translate on LOSSY verify verdict, up to N tries
+
+# Claude verify session. The semantic verify runs through a long-lived
+# interactive `claude --model haiku` tmux session ("translation-verify"), NOT
+# `claude -p`: on this machine `claude -p` bills the pay-as-you-go API credit
+# (the rate-limit safety net) before the subscription, while an interactive
+# session bills the subscription. The worker writes the prompt to a file, asks
+# the session (verify_session.sh) to process it, and polls for the `.done`
+# sentinel the session creates after writing its verdict.
+CLAUDE_VERIFY_SCRIPT       = str(SCRIPT_DIR / "verify_session.sh")
+CLAUDE_VERIFY_DIR          = Path("/tmp/translation-verify")
+CLAUDE_VERIFY_SEND_TIMEOUT = 120             # cold launch (spawn + wait_ready) headroom
+CLAUDE_VERIFY_DONE_TIMEOUT = 240             # max wait for the session to write `.done`
 MIN_KO_BODY_CHARS     = 300                  # skip stubs below this
 FAIL_RETRY_AFTER_SEC  = 24 * 3600
 POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # (unused) polish is now one-time; see Phase 3
@@ -979,6 +992,13 @@ VERIFY_SEM_INSTRUCTIONS = """You compare passages from a Korean math blog post a
 
 For each numbered pair below, decide whether the English conveys the SAME mathematical content as the Korean: is any statement, hypothesis, conclusion, definition, formula, or symbol dropped, added, or changed in meaning? Pure rewording, reordering, or different notation/formatting is NOT a problem — only a change in mathematical meaning is.
 
+Mark a pair SAFE (NOT lossy) in these common cases:
+- The English renders a Korean math-mode symbol as English prose, or omits a repeated variable that English grammar does not need (e.g. Korean "임의의 $$W$$에 대하여 $$W$$를 포함하는" → English "every $$W$$ lies in"). The meaning is unchanged.
+- The English corrects an evident typo or error in the Korean source (a missing "=0", a duplicated/garbled symbol, a wrong index, a non-existent anchor). A more-correct English rendering is NOT a loss.
+- The same equation appears with different surrounding text, or two adjacent blocks are merged or split.
+
+Only mark a pair LOSSY when you are CONFIDENT that a mathematical statement, hypothesis, conclusion, or symbol is genuinely ABSENT from the English or is mathematically WRONG in the English. When uncertain, choose SAFE. First confirm the two passages describe the same spot — never judge a mismatched pair as lossy.
+
 Set the overall VERDICT to lossy if ANY pair is LOSSY, otherwise safe.
 
 Output (terse, no preamble, no closing remarks):
@@ -987,6 +1007,66 @@ VERDICT: <safe | lossy>
 FINDINGS:
 - [pair N] <SAFE | LOSSY>: <one short sentence; for LOSSY, name exactly what meaning differs>
 """
+
+
+def call_claude_verify(prompt: str) -> str:
+    """Run one verify task through the subscription-billed `translation-verify`
+    claude session and return its verdict text.
+
+    Writes `prompt` (plus file-output directives) to an input file, asks the
+    session via verify_session.sh to process it, then polls for the `.done`
+    sentinel the session creates after writing its verdict to `<token>.txt`.
+    Raises subprocess.TimeoutExpired if `.done` never appears, RuntimeError on
+    an empty verdict. `claude -p` is deliberately avoided — it bills the
+    pay-as-you-go API safety net, not the subscription (see constants above).
+    """
+    in_dir, out_dir = CLAUDE_VERIFY_DIR / "in", CLAUDE_VERIFY_DIR / "out"
+    in_dir.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    token    = hashlib.sha1(f"{time.time()}:{len(prompt)}".encode()).hexdigest()[:16]
+    in_md    = in_dir / f"{token}.md"
+    out_txt  = out_dir / f"{token}.txt"
+    out_done = out_dir / f"{token}.done"
+
+    full = prompt + (
+        "\n\n---\n"
+        "Write ONLY the verdict block (the lines beginning `VERDICT:` and "
+        "`FINDINGS:` — no preamble, no explanation, no code fence) to this exact "
+        f"file:\n  {out_txt}\n"
+        "After that file is written, create an empty marker file:\n"
+        f"  {out_done}\n"
+        "Do not read or write any other file.\n"
+    )
+    in_md.write_text(full, encoding="utf-8")
+
+    try:
+        proc = subprocess.run(
+            ["bash", CLAUDE_VERIFY_SCRIPT, str(in_md)],
+            capture_output=True, text=True, timeout=CLAUDE_VERIFY_SEND_TIMEOUT,
+        )
+        if proc.returncode != 0:
+            raise RuntimeError(
+                f"verify_session.sh exited {proc.returncode}: "
+                f"{proc.stderr.strip()[:300]!r}"
+            )
+        waited = 0.0
+        while waited < CLAUDE_VERIFY_DONE_TIMEOUT:
+            if out_done.exists():
+                out = out_txt.read_text(encoding="utf-8") if out_txt.exists() else ""
+                out = _FENCE_RE.sub("", out).strip()
+                if not out:
+                    raise RuntimeError("verify session produced empty verdict")
+                return out
+            time.sleep(3)
+            waited += 3
+        raise subprocess.TimeoutExpired(CLAUDE_VERIFY_SCRIPT, CLAUDE_VERIFY_DONE_TIMEOUT)
+    finally:
+        for p in (in_md, out_txt, out_done):
+            try:
+                p.unlink()
+            except FileNotFoundError:
+                pass
 
 
 def verify_math_mismatch(
@@ -1031,27 +1111,23 @@ def verify_math_mismatch(
     if omitted:
         prompt += f"\n(Note: {omitted} further suspect region(s) omitted for length.)\n"
 
-    MAX_ATTEMPTS = 3
+    MAX_ATTEMPTS = 2
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
-            # thinking OFF: thinking mode didn't suppress the model's tendency to
-            # "think out loud" in the visible message on dense posts (and was
-            # slower). We instead make correctness immune to it: _finalize_verdict
-            # keeps only the model's LAST verdict, so any premature first-impression
-            # verdict it emits before revising is ignored.
-            out = call_kimi(prompt, thinking=False,
-                            agent_file=VERIFY_AGENT_FILE,
-                            mcp_config_file=VERIFY_MCP_FILE).strip()
+            # Verdict comes back via a file the claude session writes (see
+            # call_claude_verify). _finalize_verdict keeps only the LAST verdict
+            # line, so any premature first-impression verdict is ignored.
+            out = call_claude_verify(prompt)
             note = (f"\n(benign downgrades: {benign}; semantic-checked regions: "
                     f"{len(pairs)}" + (f"; {omitted} omitted" if omitted else "") + ")")
             return _finalize_verdict(out) + note
         except subprocess.TimeoutExpired:
-            log(f"verify: kimi timeout {attempt}/{MAX_ATTEMPTS}"
+            log(f"verify: claude session timeout {attempt}/{MAX_ATTEMPTS}"
                 + (", retrying" if attempt < MAX_ATTEMPTS else ", giving up"))
             continue
         except Exception as e:
             return f"verify-failed: {e!r}"
-    return f"verify-failed: kimi timeout after {MAX_ATTEMPTS} attempts"
+    return f"verify-failed: claude session timeout after {MAX_ATTEMPTS} attempts"
 
 
 # ---------------------------------------------------------------------------
@@ -1158,8 +1234,23 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
         log(f"  LINT ({key}): {ln}")
     for ln in verdict_text.splitlines():
         log(f"  VERIFY ({key}): {ln}")
+
+    # Telegram policy: deterministic latex-lints are reliable and always alert.
+    # The semantic "lossy" verdict is extremely false-positive-prone (2026-06-04
+    # audit: 0 real losses across 30 manually source-checked flags — the model
+    # hallucinates diffs, misaligns pairs, and mistakes typo-correction or
+    # math-mode→prose rephrasing for loss). So a semantic-lossy verdict alerts
+    # ONLY when the math-block gap is large; a small gap is virtually always
+    # benign rephrasing and is logged + recorded (above) for optional review,
+    # not pushed.
+    gap = abs(ko_n - en_n)
+    semantic_flag = bool(verdict_text) and not verdict_safe
+    big_gap = ko_n > 0 and gap / ko_n >= 0.15
+    if not (lints or (semantic_flag and big_gap)):
+        return 0
+
     body = ""
-    if verdict_text and not verdict_safe:
+    if semantic_flag:
         body += verdict_text + "\n"
     if lints:
         body += "LINTS:\n" + "\n".join(lints)

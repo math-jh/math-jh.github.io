@@ -116,7 +116,7 @@ $$\{y\mid(x,y)\in R\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$y\in R(X)$$라 하자. 그럼 어떤 $$x\in X$$가 존재하여 $$(x,y)\in R(X)$$이다. 이제 $$X\subseteq A$$로부터 $$x\in A$$이므로, $$y\in R(A)$$이다.
+$$y\in R(X)$$라 하자. 그럼 어떤 $$x\in X$$가 존재하여 $$(x,y)\in R$$이다. 이제 $$X\subseteq A$$로부터 $$x\in A$$이므로, $$y\in R(A)$$이다.
 
 </details>
 

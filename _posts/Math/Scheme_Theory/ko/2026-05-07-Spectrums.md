@@ -328,7 +328,7 @@ $$\sqrt{\mathfrak{a}\cap \mathfrak{b}}\supseteq \mathfrak{a}\cap \mathfrak{b}\su
 
 이므로 위의 두 식을 종합하면 $$\mathfrak{p}\supseteq \mathfrak{a}$$ 혹은 $$\mathfrak{p}\supseteq \mathfrak{b}$$가 성립해야 하는 것을 알고 따라서 $$Z(\mathfrak{p})=Z(\mathfrak{a})$$ 혹은 $$Z(\mathfrak{p})=Z(\mathfrak{b})$$가 되어 모순이다.
 
-거꾸로 임의의 irreducible closed subset $$Y$$에 대하여, $$I(Y)$$가 prime ideal이라는 것을 보여야 한다. 우선 $$Y$$가 닫힌집합이므로 [명제 15](#prop15)와 [명제 5](#prop5)에 의하여 $$Y=V(\mathfrak{a})$$이도록 하는 radical ideal $$\mathfrak{a}$$가 존재한다. 그럼 $$\mathfrak{a}=IZ(\mathfrak{a})=I(Y)$$가 prime인 것을 보이면 충분하다. 
+거꾸로 임의의 irreducible closed subset $$Y$$에 대하여, $$I(Y)$$가 prime ideal이라는 것을 보여야 한다. 우선 $$Y$$가 닫힌집합이므로 [정리 15](#thm15)와 [명제 5](#prop5)에 의하여 $$Y=Z(\mathfrak{a})$$이도록 하는 radical ideal $$\mathfrak{a}$$가 존재한다. 그럼 $$\mathfrak{a}=IZ(\mathfrak{a})=I(Y)$$가 prime인 것을 보이면 충분하다. 
 
 이를 위해 $$fg\in \mathfrak{a}$$라 하고, 동시에 공집합은 아닌 $$\Spec A$$의 두 열린집합 $$D(f), D(g)$$를 생각하면 
 
