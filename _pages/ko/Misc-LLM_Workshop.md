@@ -3,6 +3,9 @@ title: "LLM 작업실"
 layout: archive_custom
 regenerate: true
 permalink: /ko/llm_workshop/
+header:
+  overlay_image: /assets/images/Misc/LLM_Workshop/LLM_Workshop.png
+  overlay_filter: 0.5
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -11,4 +14,4 @@ permalink: /ko/llm_workshop/
 {% endif %}
 
 {% assign posts = site.categories['Misc / LLM Workshop'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% include subject-cards.html posts=posts minimal=true %}

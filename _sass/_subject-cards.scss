@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Subject-home card grid — per-category landing pages render their posts as
+   text cards (no per-post images). Card order = reading order (weight).
+   ========================================================================== */
+
+/* Subject-home hero: taller banner (height like About's header image) but with
+   the dark overlay. Scoped to archive_custom so the home/splash hero is
+   unaffected; the title is vertically centred. */
+.layout--archive_custom .page__hero--overlay {
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+
+  .wrapper { width: 100%; }
+  .page__lead { max-width: none; } // full-width description (overrides the 768px cap)
+}
+
+.subject-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.5em 0;
+}
+
+.subject-card {
+  display: block;
+  position: relative;
+  padding: 1rem 1.1rem;
+  background: mix($background-color, $text-color, 94%); // subtle off-bg surface
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  color: $text-color !important;       // override link colour (card is an <a>)
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    border-color: $masthead-link-color-hover; // gold edge on hover
+  }
+}
+
+.subject-card__num {
+  display: block;
+  font-family: $sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: $muted-text-color;
+  margin-bottom: 0.3em;
+}
+
+.subject-card__title {
+  display: block;
+  font-size: 1.05em;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 0.35em;
+}
+
+.subject-card__excerpt {
+  display: block;
+  font-size: 0.85em;
+  line-height: 1.5;
+  color: $muted-text-color;
+  margin-bottom: 0.5em;
+}
+
+.subject-card__date {
+  display: block;
+  font-family: $sans-serif;
+  font-size: 0.7em;
+  color: $muted-text-color;
+}

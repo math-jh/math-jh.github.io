@@ -3,6 +3,10 @@ title: "리 이론"
 layout: archive_custom
 regenerate: true
 permalink: /ko/lie_theory/
+header:
+  overlay_image: /assets/images/Math/Lie_Theory/Lie_Theory.png
+  overlay_filter: 0.5
+excerpt: "리 이론은 연속적 대칭을 담는 리 군과 그 무한소 구조인 리 대수를 공부하는 분야이다. 지수사상과 근계·가중치를 통해 기하와 표현론을 잇는다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -11,7 +15,5 @@ permalink: /ko/lie_theory/
 {% endif %}
 
 {% assign posts = site.categories['Math / Lie Theory'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% include subject-cards.html posts=posts %}
 
-[<span class="material-icons md-18" style="vertical-align:-.1em;">&#xE5C4;</span> Back to [Math] directory]({{ lang_prefix }}/math/)
-{: style="text-align: right;"}
