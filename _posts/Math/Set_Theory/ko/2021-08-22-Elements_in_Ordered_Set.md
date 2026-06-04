@@ -131,13 +131,13 @@ $$x\in X'$$를 임의로 택하자. $$X'\subseteq X$$이므로, $$x\in X$$이다
 임의의 $$i\in I$$에 대하여, $$x_i\leq y_i$$이고 $$y_i\leq \sup y_i$$이므로 모든 $$i$$에 대해 $$x_i\leq \sup y_i$$이고 따라서 $$\sup x_i$$의 minimality에 의해 $$\sup x_i\leq\sup y_i$$이다.
 </details>
 
-<ins id="prop10">**명제 10**</ins>  Ordered set $$A$$와 index set $$I$$, 그리고 $$I$$의 covering $$(J_k)_{i\in I}$$에 대하여, $$(x_i)_{i\in J_k}$$가 $$A$$에서 supremum을 갖는다 하자. 그럼 $$\sup_{i\in I} x_i$$가 존재하는 것은 $$\sup_{k\in K}(\sup_{j\in J_k}x_j)$$가 존재하는 것과 동치이며 두 값은 같다.
+<ins id="prop10">**명제 10**</ins>  Ordered set $$A$$와 index set $$I$$, 그리고 $$I$$의 covering $$(J_k)_{k\in K}$$에 대하여, $$(x_i)_{i\in J_k}$$가 $$A$$에서 supremum을 갖는다 하자. 그럼 $$\sup_{i\in I} x_i$$가 존재하는 것은 $$\sup_{k\in K}(\sup_{j\in J_k}x_j)$$가 존재하는 것과 동치이며 두 값은 같다.
 {: .proposition}
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$b_k=\sup_{i\in J_k} x_i$$라 적자. 우선 $$(x_i)_{i\in I}$$가 supremum을 갖는다고 하고, 이를 $$a$$라 하자. 그럼 $$a\leq b_k$$가 모든 $$k$$에 대해 성립한다. 또, 만약 $$c\geq b_k$$가 모든 $$k$$에 대해 성립한다면, 임의의 $$x_i$$에 대해서 $$i\in J_{k'}$$인 $$k'$$는 $$b_{k'}\geq x_i$$를 만족하고, 따라서 어떠한 $$i$$에 대해서도 $$c\geq x_i$$이다. 이제 $$a$$의 최소성에 의해 $$c\geq a$$이어야 하고, 따라서 $$a$$가 supremum이며 $$\sup_{i\in I}x_i=\sup_{k\in K}(\sup_{i\in J_k} x_j)$$이다.  
+$$b_k=\sup_{i\in J_k} x_i$$라 적자. 우선 $$(x_i)_{i\in I}$$가 supremum을 갖는다고 하고, 이를 $$a$$라 하자. 그럼 $$a\leq b_k$$가 모든 $$k$$에 대해 성립한다. 또, 만약 $$c\geq b_k$$가 모든 $$k$$에 대해 성립한다면, 임의의 $$x_i$$에 대해서 $$i\in J_{k'}$$인 $$k'$$는 $$b_{k'}\geq x_i$$를 만족하고, 따라서 어떠한 $$i$$에 대해서도 $$c\geq x_i$$이다. 이제 $$a$$의 최소성에 의해 $$c\geq a$$이어야 하고, 따라서 $$a$$가 supremum이며 $$\sup_{i\in I}x_i=\sup_{k\in K}(\sup_{j\in J_k} x_j)$$이다.  
 
 반대로 $$(b_k)_{k\in K}$$가 supremum $$a'$$를 갖는다 해도 위와 같은 방법으로 증명을 완료할 수 있다.
 
@@ -159,7 +159,7 @@ $$b_k=\sup_{i\in J_k} x_i$$라 적자. 우선 $$(x_i)_{i\in I}$$가 supremum을 
 <ins id="rmk4">**참고**</ins>  Ordered set $$A$$와 $$X'\subseteq X\subseteq A$$에 대해서, $$\sup_AX'$$와 $$\sup_XX'$$ 중 하나만 존재할 수도 있고, 둘 다 존재하지만 값이 다를 수도 있다. 예컨대 $$X'=\{x\in\mathbb{Q}\mid x < \sqrt{2}\}$$를 각각의 집합들에서 비교해보자. 
 
 1. $$X_1=\mathbb{Q}$$의 부분집합으로써, 이 집합의 supremum은 존재하지 않으나 $$A=\mathbb{R}$$에서는 존재한다. 즉 $$\sup_AX'$$가 존재하더라도 $$\sup_{X_1}X'$$는 존재하지 않을 수도 있다.
-2. 한편 집합 $$X_2=X'\cup \left\{2\right\}$$를 생각하자. 그럼 $$X'\subseteq X_2\subseteq X_1$$이고 $$\sup_{X_2}X'=2$$이지만 $$\sup_{X_1}A$$는 존재하지 않는다.
+2. 한편 집합 $$X_2=X'\cup \left\{2\right\}$$를 생각하자. 그럼 $$X'\subseteq X_2\subseteq X_1$$이고 $$\sup_{X_2}X'=2$$이지만 $$\sup_{X_1}X'$$는 존재하지 않는다.
 3. 마지막으로 $$X'\subseteq X_2\subseteq A$$에서, $$\sup_{X_2}X'$$와 $$\sup_AX'$$는 각각 존재하지만 두 값은 다르다.   
 
 </div>
