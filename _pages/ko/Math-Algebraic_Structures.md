@@ -3,6 +3,10 @@ title: "대수적 구조"
 layout: archive_custom
 regenerate: true
 permalink: /ko/algebraic_structures/
+header:
+  overlay_image: /assets/images/Math/Algebraic_Structures/Algebraic_Structures.png
+  overlay_filter: 0.5
+excerpt: "대수적 구조는 군·환·가군처럼 연산이 주어진 집합들을 통합적으로 공부하는 분야이다. 준동형사상과 몫구조를 중심으로 이후의 모든 대수 분야가 공유하는 기초를 세운다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -11,7 +15,5 @@ permalink: /ko/algebraic_structures/
 {% endif %}
 
 {% assign posts = site.categories['Math / Algebraic Structures'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% include subject-cards.html posts=posts %}
 
-[<span class="material-icons md-18" style="vertical-align:-.1em;">&#xE5C4;</span> Back to [Math] directory]({{ lang_prefix }}/math/)
-{: style="text-align: right;"}

@@ -364,3 +364,4 @@ head_scripts:
   - /assets/js/custom/Comments.js
   - /assets/js/custom/Citation.js
   - /assets/js/custom/Multilingual.js
+  - /assets/js/custom/Recent_overlay.js

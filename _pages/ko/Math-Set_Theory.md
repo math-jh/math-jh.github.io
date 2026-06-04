@@ -3,6 +3,10 @@ title: "집합론"
 layout: archive_custom
 regenerate: true
 permalink: /ko/set_theory/
+header:
+  overlay_image: /assets/images/Math/Set_Theory/Set_Theory.png
+  overlay_filter: 0.5
+excerpt: "집합론은 집합과 그 위의 연산, 그리고 무한을 다루는 수학의 토대이다. 관계와 함수, 순서수와 기수, 선택공리를 거치며 이후 모든 분야가 딛고 설 언어를 마련한다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -11,7 +15,5 @@ permalink: /ko/set_theory/
 {% endif %}
 
 {% assign posts = site.categories['Math / Set Theory'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% include subject-cards.html posts=posts %}
 
-[<span class="material-icons md-18" style="vertical-align:-.1em;">&#xE5C4;</span> Back to [Math] directory]({{ lang_prefix }}/math/)
-{: style="text-align: right;"}

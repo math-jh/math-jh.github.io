@@ -3,6 +3,10 @@ title: "가환대수학"
 layout: archive_custom
 regenerate: true
 permalink: /ko/commutative_algebra/
+header:
+  overlay_image: /assets/images/Math/Commutative_Algebra/Commutative_Algebra.png
+  overlay_filter: 0.5
+excerpt: "가환대수학은 가환환과 그 위의 가군을 공부하는 분야이다. 국소화와 준소분해, 차원 이론을 통해 대수기하의 국소적 토대를 제공한다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -11,7 +15,5 @@ permalink: /ko/commutative_algebra/
 {% endif %}
 
 {% assign posts = site.categories['Math / Commutative Algebra'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% include subject-cards.html posts=posts %}
 
-[<span class="material-icons md-18" style="vertical-align:-.1em;">&#xE5C4;</span> Back to [Math] directory]({{ lang_prefix }}/math/)
-{: style="text-align: right;"}

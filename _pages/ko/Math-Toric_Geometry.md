@@ -3,6 +3,10 @@ title: "토릭 기하학"
 layout: archive_custom
 regenerate: true
 permalink: /ko/toric_geometry/
+header:
+  overlay_image: /assets/images/Math/Toric_Geometry/Toric_Geometry.png
+  overlay_filter: 0.5
+excerpt: "토릭기하학은 부채(fan)와 같은 조합적 자료로 기술되는 토릭다양체를 공부하는 분야이다. 격자와 콘의 조합론을 통해 대수기하의 풍부한 예시를 제공한다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -11,7 +15,5 @@ permalink: /ko/toric_geometry/
 {% endif %}
 
 {% assign posts = site.categories['Math / Toric Geometry'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% include subject-cards.html posts=posts %}
 
-[<span class="material-icons md-18" style="vertical-align:-.1em;">&#xE5C4;</span> Back to [Math] directory]({{ lang_prefix }}/math/)
-{: style="text-align: right;"}
