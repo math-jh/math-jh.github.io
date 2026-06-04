@@ -163,11 +163,11 @@ $$\begin{aligned}
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-만일 그러한 쌍이 존재한다면 $$Q$$는 $$a<b(q+1)$$를 만족하는 가장 작은 자연수여야 한다. 그렇지 않으면
+만일 그러한 쌍이 존재한다면 $$q$$는 $$a<b(q+1)$$를 만족하는 가장 작은 자연수여야 한다. 그렇지 않으면
 
 $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
-이 되기 때문이다. 존재성을 보이기 위해, $$a<a+1<b(a+1)$$라 하자. 그럼 $$a<bp$$를 만족하는 $$p$$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $$m$$이 존재하므로 $$m=q+1$$라 하면 $$Q$$가 주어진 조건을 만족한다.
+이 되기 때문이다. 존재성을 보이기 위해, $$a<a+1<b(a+1)$$라 하자. 그럼 $$a<bp$$를 만족하는 $$p$$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $$m$$이 존재하므로 $$m=q+1$$라 하면 $$q$$가 주어진 조건을 만족한다.
 
 </details>
 
@@ -175,7 +175,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor11">**따름정리 11 (Bézout's lemma)**</ins> 임의의 두 정수 $$a$$, $$b$$가 최대공약수 $$d$$를 갖는다고 하자. 그럼 적당한 두 정수 $$x$$와 $$b$$가 존재하여 $$ax+by$$이도록 할 수 있다. 
+<ins id="cor11">**따름정리 11 (Bézout's lemma)**</ins> 임의의 두 정수 $$a$$, $$b$$가 최대공약수 $$d$$를 갖는다고 하자. 그럼 적당한 두 정수 $$x$$와 $$y$$가 존재하여 $$ax+by=d$$이도록 할 수 있다. 
 
 </div>
 

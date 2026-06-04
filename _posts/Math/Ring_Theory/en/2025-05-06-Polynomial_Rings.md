@@ -144,7 +144,7 @@ $$v(\x)=\sum_{j=0}^n b_j\x^j$$
 
 then there exists a polynomial $$u_1\in A[\x]$$ of degree less than $$m$$ such that we can write
 
-$$b_n^k u(\x)=b_n^{k-1}a_m\x^{m-n}v(\x)+b_n^{k-1}v_1(\x)$$
+$$b_n^k u(\x)=b_n^{k-1}a_m\x^{m-n}v(\x)+b_n^{k-1}u_1(\x)$$
 
 This equation is nothing but multiplying $$v(\x)$$ by $$a_m\x^{m-n}$$ to match the leading term with that of $$b_n u$$, obtaining
 

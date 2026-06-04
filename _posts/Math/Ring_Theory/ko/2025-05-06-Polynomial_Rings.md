@@ -147,7 +147,7 @@ $$v(\x)=\sum_{j=0}^n b_j\x^j$$
 
 라면, 적당한 $$m$$차 미만의 다항식 $$u_1\in A[\x]$$이 존재하여 
 
-$$b_n^k u(\x)=b_n^{k-1}a_m\x^{m-n}v(\x)+b_n^{k-1}v_1(\x)$$
+$$b_n^k u(\x)=b_n^{k-1}a_m\x^{m-n}v(\x)+b_n^{k-1}u_1(\x)$$
 
 이라 쓸 수 있다. 이 식은 $$v(\x)$$에 $$a_m\x^{m-n}$$을 곱하여 leading term을 $$b_n u$$의 leading term과 같게 맞춰주어
 
