@@ -55,7 +55,10 @@
       hue/sat  — from the subject. Subject-home pages bake `hero_hue`; posts
                  read it AUTOMATICALLY from their category via _data/hues.yml,
                  so adding a post needs no colour frontmatter.
-      lightness (--hero-l) — per-post 2nd axis, derived from `weight`.
+      lightness (--hero-l) — per-post 2nd axis. Driven by the post's POSITION
+        in its (language-filtered, weight-sorted) category, NOT the raw weight
+        value — identical to the subject-card grid, so a post's card and its
+        hero share one tone. weight only orders; position sets the shade.
     Consumed by .page__hero--overlay in _sass/_subject-cards.scss.
   {%- endcomment -%}
   {%- if page.hero_hue -%}
@@ -68,8 +71,20 @@
     {%- if hue_data -%}
       {%- assign hero_hue = hue_data.hue -%}
       {%- assign hero_sat = hue_data.sat | default: '42%' -%}
-      {%- if page.weight -%}
-        {%- assign hero_l = page.weight | abs | modulo: 13 | plus: 20 -%}
+      {%- assign hero_lang = page.url | slice: 0, 4 -%}
+      {%- assign hero_sibs = site.categories[post_category] | where_exp: "p", "p.permalink contains hero_lang" | sort: 'weight' -%}
+      {%- assign hero_total = hero_sibs | size -%}
+      {%- if hero_total > 1 -%}
+        {%- assign hero_span = hero_total | minus: 1 -%}
+        {%- for p in hero_sibs -%}
+          {%- if p.url == page.url -%}
+            {%- assign hero_drop = forloop.index0 | times: 9 | divided_by: hero_span -%}
+            {%- assign hero_l = 31 | minus: hero_drop -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+        {%- assign hero_l = 26 -%}
       {%- endif -%}
     {%- endif -%}
   {%- endif -%}

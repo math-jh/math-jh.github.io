@@ -43,7 +43,7 @@ author_profile: true
 ## 기하학 및 위상수학
 
 - [위상수학](/ko/topology/)
-- [미분다양체](/ko/manifold/)
+- [미분다양체](/ko/manifolds/)
 - [리만기하학](/ko/riemannian_geometry/)
 - [대수적 위상수학](/ko/algebraic_topology/)
 - [대수다양체](/ko/algebraic_varieties/)

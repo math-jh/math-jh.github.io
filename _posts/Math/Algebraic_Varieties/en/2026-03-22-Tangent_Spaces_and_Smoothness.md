@@ -26,7 +26,7 @@ is a maximal ideal. We then proved that the tangent space can be identified with
 
 $$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast$$
 
-([\[Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifold/cotangent_space#lem1)). This construction is usually not emphasized in differential geometry, yet it is extremely helpful for generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what functions on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7)), and we also know that the set of all functions vanishing at $$x\in X$$ corresponds to the maximal ideal of $$\mathbb{K}[X]$$ at this point. Therefore we define
+([\[Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1)). This construction is usually not emphasized in differential geometry, yet it is extremely helpful for generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what functions on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7)), and we also know that the set of all functions vanishing at $$x\in X$$ corresponds to the maximal ideal of $$\mathbb{K}[X]$$ at this point. Therefore we define
 
 $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 

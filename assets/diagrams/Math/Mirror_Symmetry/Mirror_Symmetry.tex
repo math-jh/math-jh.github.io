@@ -475,6 +475,44 @@
   }
 \end{tikzpicture}
 
+%% ex19: Gr(3,6) {135}-seed & {246}-seed reduced plabic graphs, top cell (Postnikov_Diagram_and_Plabic_Graph-14.png)
+\begin{tikzpicture}[scale=0.9, >=Stealth,
+   wv/.style={draw=black, thick, fill=white, circle, inner sep=1.7pt},
+   bv/.style={draw=black, thick, fill=black, circle, inner sep=1.7pt},
+   bdot/.style={fill=black, circle, inner sep=1.4pt},
+   ge/.style={black!75, thick},
+   fl/.style={font=\scriptsize},
+   fc/.style={draw=black, rounded corners, inner sep=2pt, font=\small}]
+  % ---------- LEFT: {135}-seed ----------
+  \begin{scope}[shift={(-4.1,0)}]
+    \foreach \nm/\ang/\rad in {W1/30/0.85,B3/90/0.85,W3/150/0.85,B2/210/0.85,W2/270/0.85,B1/330/0.85,W4/90/1.7,B4/150/1.7,W5/210/1.7,B5/270/1.7,W6/330/1.7,B6/30/1.7}{ \coordinate (\nm) at (\ang:\rad); }
+    \foreach \i in {1,2,3,4,5,6}{ \coordinate (v\i) at ({90+(\i-1)*60}:2.65); }
+    \foreach \a/\b in {W1/B3,B3/W3,W3/B2,B2/W2,W2/B1,B1/W1,W1/B6,B3/W4,W3/B4,B2/W5,W2/B5,B1/W6,W4/B4,W5/B5,W6/B6}{ \draw[ge] (\a)--(\b); }
+    \foreach \a/\v in {W4/v1,B4/v2,W5/v3,B5/v4,W6/v5,B6/v6}{ \draw[ge] (\a)--(\v); }
+    \foreach \nm in {W1,W2,W3,W4,W5,W6}{ \node[wv] at (\nm){}; }
+    \foreach \nm in {B1,B2,B3,B4,B5,B6}{ \node[bv] at (\nm){}; }
+    \foreach \i/\lab in {1/1,2/2,3/3,4/4,5/5,6/6}{ \node[bdot] at (v\i){}; \node[font=\footnotesize] at ({90+(\i-1)*60}:3.02){$\lab$}; }
+    \node[fl] at (60:2.05){$123$}; \node[fl] at (120:2.05){$234$}; \node[fl] at (180:2.05){$345$};
+    \node[fl] at (240:2.05){$456$}; \node[fl] at (300:2.05){$156$}; \node[fl] at (0:2.05){$126$};
+    \node[fl] at (120:1.28){$235$}; \node[fl] at (240:1.28){$145$}; \node[fl] at (0:1.28){$136$};
+    \node[fc] at (0,0){$135$};
+  \end{scope}
+  % ---------- RIGHT: {246}-seed (i -> i+1) ----------
+  \begin{scope}[shift={(4.1,0)}]
+    \foreach \nm/\ang/\rad in {W1/30/0.85,B3/90/0.85,W3/150/0.85,B2/210/0.85,W2/270/0.85,B1/330/0.85,W4/90/1.7,B4/150/1.7,W5/210/1.7,B5/270/1.7,W6/330/1.7,B6/30/1.7}{ \coordinate (\nm) at (\ang:\rad); }
+    \foreach \i in {1,2,3,4,5,6}{ \coordinate (v\i) at ({90+(\i-1)*60}:2.65); }
+    \foreach \a/\b in {W1/B3,B3/W3,W3/B2,B2/W2,W2/B1,B1/W1,W1/B6,B3/W4,W3/B4,B2/W5,W2/B5,B1/W6,W4/B4,W5/B5,W6/B6}{ \draw[ge] (\a)--(\b); }
+    \foreach \a/\v in {W4/v1,B4/v2,W5/v3,B5/v4,W6/v5,B6/v6}{ \draw[ge] (\a)--(\v); }
+    \foreach \nm in {W1,W2,W3,W4,W5,W6}{ \node[wv] at (\nm){}; }
+    \foreach \nm in {B1,B2,B3,B4,B5,B6}{ \node[bv] at (\nm){}; }
+    \foreach \i/\lab in {1/2,2/3,3/4,4/5,5/6,6/1}{ \node[bdot] at (v\i){}; \node[font=\footnotesize] at ({90+(\i-1)*60}:3.02){$\lab$}; }
+    \node[fl] at (60:2.05){$234$}; \node[fl] at (120:2.05){$345$}; \node[fl] at (180:2.05){$456$};
+    \node[fl] at (240:2.05){$156$}; \node[fl] at (300:2.05){$126$}; \node[fl] at (0:2.05){$123$};
+    \node[fl] at (120:1.28){$346$}; \node[fl] at (240:1.28){$256$}; \node[fl] at (0:1.28){$124$};
+    \node[fc] at (0,0){$246$};
+  \end{scope}
+\end{tikzpicture}
+
 %% def10: Gr(2,4) Postnikov diagram, 4 strands i->i+2, over/under alternating (Postnikov_Diagram_and_Plabic_Graph-5.png)
 \begin{tikzpicture}[scale=1.3, >=Stealth,
    strand/.style={line width=1.5pt, postaction={decorate,
