@@ -1,47 +1,90 @@
-function darkmode(){
-    var defaultTheme = [...document.styleSheets].find(style => /(main.css)$/.test(style.href))
-    var darkTheme = [...document.styleSheets].find(style => /(main_dark.css)$/.test(style.href))
-
-    if (darkTheme) {
-        const darkModeCookie = document.cookie
-            .split('; ')
-            .find(co => co.startsWith('MDARK='))
-        if (darkModeCookie !== undefined) {
-            const dmodeValue = darkModeCookie.split('=')[1]
-            darkTheme.disabled = dmodeValue !== 'Y'
-            defaultTheme.disabled = dmodeValue === 'Y'
-        } else {
-            if (matchMedia('(prefers-color-scheme: dark)').matches) {
-                darkTheme.disabled = false
-                defaultTheme.disabled = true
-            } else {
-                darkTheme.disabled = true
-                defaultTheme.disabled = false
-            }
-            document.cookie = `MDARK=${darkTheme.disabled ? 'N' : 'Y'}; path=/;`
-        }
-
-        let toggleThemeBtn = document.getElementById("toggle_dark_theme")
-        if (toggleThemeBtn) {
-            toggleThemeBtn.checked = defaultTheme.disabled
-        }
+/* Theme controller — 3-state: auto | light | dark.
+ *
+ * Dark/light is a stylesheet swap (main.css <-> main_dark.css), toggled by
+ * disabling one <link> (ids: theme-light / theme-dark).
+ *
+ *  - auto : follow the OS (prefers-color-scheme), live (matchMedia listener).
+ *  - light/dark : pinned, ignores the OS.
+ *
+ * Choice persists in the MTHEME cookie (legacy MDARK Y/N is migrated on read).
+ * This file is a head_script, so it runs before paint; a tiny inline twin in
+ * head.html applies the stylesheet even earlier to fully kill FOUC.
+ */
+(function () {
+  function getCookie(name) {
+    var parts = document.cookie.split('; ');
+    for (var i = 0; i < parts.length; i++) {
+      if (parts[i].indexOf(name + '=') === 0) return parts[i].slice(name.length + 1);
     }
-}
+    return null;
+  }
 
-function toggleDarkTheme() {
-    var defaultTheme = [...document.styleSheets].find(style => /(main.css)$/.test(style.href))
-    var darkTheme = [...document.styleSheets].find(style => /(main_dark.css)$/.test(style.href))
+  function getTheme() {
+    var v = getCookie('MTHEME');
+    if (v === 'light' || v === 'dark' || v === 'auto') return v;
+    var legacy = getCookie('MDARK'); // migrate old 2-state cookie
+    if (legacy === 'Y') return 'dark';
+    if (legacy === 'N') return 'light';
+    return 'auto';
+  }
 
-    if (darkTheme) {
-        darkTheme.disabled = !darkTheme.disabled
-        defaultTheme.disabled = !defaultTheme.disabled
-        document.cookie = `MDARK=${darkTheme.disabled ? 'N' : 'Y'}; path=/;`
-        
-        // 체크박스 상태 동기화
-        let toggleThemeBtn = document.getElementById("toggle_dark_theme")
-        if (toggleThemeBtn) {
-            toggleThemeBtn.checked = defaultTheme.disabled
-        }
-        
+  function systemPrefersDark() {
+    return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }
+
+  function effective(mode) {
+    if (mode === 'dark') return 'dark';
+    if (mode === 'light') return 'light';
+    return systemPrefersDark() ? 'dark' : 'light';
+  }
+
+  function apply(mode) {
+    var darkLink = document.getElementById('theme-dark');
+    if (!darkLink) return; // dark theme disabled site-wide
+    var lightLink = document.getElementById('theme-light');
+    var dark = effective(mode) === 'dark';
+    darkLink.disabled = !dark;
+    if (lightLink) lightLink.disabled = dark;
+    syncUI(mode);
+  }
+
+  function syncUI(mode) {
+    var items = document.querySelectorAll('.settings-subitem');
+    for (var i = 0; i < items.length; i++) {
+      items[i].classList.toggle('active', items[i].getAttribute('data-theme-mode') === mode);
     }
-}
+  }
+
+  // ---- public (called from masthead markup) ----
+
+  window.setTheme = function (mode, ev) {
+    if (ev) ev.stopPropagation();
+    document.cookie = 'MTHEME=' + mode + '; path=/; max-age=31536000';
+    apply(mode);
+  };
+
+  window.toggleThemeSubmenu = function (ev) {
+    if (ev) ev.stopPropagation();
+    var sub = document.getElementById('theme-submenu');
+    var parent = document.getElementById('theme-parent');
+    if (sub) sub.classList.toggle('show');
+    if (parent) parent.classList.toggle('expanded');
+  };
+
+  // Back-compat: body onload still calls darkmode(); now idempotent.
+  window.darkmode = function () { apply(getTheme()); };
+
+  // Apply immediately (head-time) so the swap is correct before paint.
+  apply(getTheme());
+
+  // Follow the OS live while in auto mode.
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    var onChange = function () { if (getTheme() === 'auto') apply('auto'); };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+    else if (mq.addListener) mq.addListener(onChange); // older Safari
+  }
+
+  // Re-sync the menu highlight once the masthead exists.
+  document.addEventListener('DOMContentLoaded', function () { apply(getTheme()); });
+})();
