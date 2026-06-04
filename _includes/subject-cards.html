@@ -1,0 +1,15 @@
+{% comment %}
+  Subject-home card grid. `include.posts` = posts (already filtered by language
+  + sorted by weight). `include.minimal` = true → drop the order number and the
+  excerpt (used for Misc categories, which want a clean title+date card).
+{% endcomment %}
+<div class="subject-cards{% if include.minimal %} subject-cards--minimal{% endif %}">
+  {% for post in include.posts %}
+    <a class="subject-card" href="{{ post.url | relative_url }}">
+      {% unless include.minimal %}<span class="subject-card__num">{{ forloop.index }}</span>{% endunless %}
+      <span class="subject-card__title">{{ post.title | markdownify | strip_html }}</span>
+      {% unless include.minimal %}{% if post.excerpt %}<span class="subject-card__excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 110 }}</span>{% endif %}{% endunless %}
+      <span class="subject-card__date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></span>
+    </a>
+  {% endfor %}
+</div>

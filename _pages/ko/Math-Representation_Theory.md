@@ -3,6 +3,10 @@ title: "표현론"
 layout: archive_custom
 regenerate: true
 permalink: /ko/representation_theory/
+header:
+  overlay_image: /assets/images/Math/Representation_Theory/Representation_Theory.png
+  overlay_filter: 0.5
+excerpt: "표현론은 군과 대수의 원소를 선형변환으로 실현하여 그 구조를 공부하는 분야이다. 기약표현과 지표, 가중치를 통해 대칭을 선형대수의 언어로 분석한다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -11,7 +15,5 @@ permalink: /ko/representation_theory/
 {% endif %}
 
 {% assign posts = site.categories['Math / Representation Theory'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% include subject-cards.html posts=posts %}
 
-[<span class="material-icons md-18" style="vertical-align:-.1em;">&#xE5C4;</span> Back to [Math] directory]({{ lang_prefix }}/math/)
-{: style="text-align: right;"}

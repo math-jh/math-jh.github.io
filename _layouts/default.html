@@ -27,18 +27,25 @@
       body::-webkit-scrollbar{width: 16px;}
       body::-webkit-scrollbar-track {background-color:#071734;}
       body::-webkit-scrollbar-thumb:hover {background: #a9874a; background-clip: padding-box; border: 2px solid transparent}
-      .sidebar.sticky::-webkit-scrollbar{width: 6px}
-      .sidebar.sticky::-webkit-scrollbar-track{display: none}
-      .sidebar.sticky::-webkit-scrollbar-thumb:hover {background: #071734; background-clip: padding-box; border: 1px solid transparent}
-      .toc__menu::-webkit-scrollbar{width: 6px}
-      .toc__menu::-webkit-scrollbar-track{display: none}
-      .toc__menu::-webkit-scrollbar-thumb:hover {background: #071734; background-clip: padding-box; border: 1px solid transparent}
-      .sidebar__right.sticky > .toc::-webkit-scrollbar{width: 6px}
-      .sidebar__right.sticky > .toc::-webkit-scrollbar-track{display: none}
-      .sidebar__right.sticky > .toc::-webkit-scrollbar-thumb:hover {background: #071734; background-clip: padding-box; border: 1px solid transparent}
+      /* Left nav + right TOC: hover-reveal. The 6px gutter is always reserved
+         (no layout shift) but the thumb is transparent at rest and only gets a
+         colour on hover. The hover colour is mode-adaptive — see the skins. */
+      .sidebar.sticky, .toc__menu, .sidebar__right.sticky > .toc {
+        scrollbar-width: thin;      /* Firefox */
+        -ms-overflow-style: none;
+      }
+      .sidebar.sticky::-webkit-scrollbar,
+      .toc__menu::-webkit-scrollbar,
+      .sidebar__right.sticky > .toc::-webkit-scrollbar { width: 6px; }
+      .sidebar.sticky::-webkit-scrollbar-track,
+      .toc__menu::-webkit-scrollbar-track,
+      .sidebar__right.sticky > .toc::-webkit-scrollbar-track { display: none; }
+      .sidebar.sticky::-webkit-scrollbar-thumb,
+      .toc__menu::-webkit-scrollbar-thumb,
+      .sidebar__right.sticky > .toc::-webkit-scrollbar-thumb { background: transparent; }
       pre::-webkit-scrollbar{height: 8px}
       pre::-webkit-scrollbar-track{display: none}
-      pre::-webkit-scrollbar-thumb:hover {background: #071734; background-clip: padding-box; border: 1px solid transparent}
+      pre::-webkit-scrollbar-thumb:hover {background: #a9874a; background-clip: padding-box; border: 1px solid transparent}
     </style>
     
   </head>
@@ -56,6 +63,16 @@
         {% include_cached search/search_form.html %}
       </div>
     {% endif %}
+
+    <!-- Recent-posts overlay: the /xx/recent/ page loaded into a popup (like
+         search) by Recent_overlay.js. The page still works standalone for
+         no-JS / direct access. -->
+    <div class="recent-content" id="recent-overlay" aria-hidden="true">
+      <div class="recent-content__inner-wrap">
+        <button class="recent-content__close" type="button" aria-label="Close"><i class="material-icons">close</i></button>
+        <div class="recent-content__body" id="recent-overlay-body"></div>
+      </div>
+    </div>
 
     <div id="footer" class="page__footer">
       <aside class="sidebar__top">

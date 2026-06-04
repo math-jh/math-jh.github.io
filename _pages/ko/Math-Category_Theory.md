@@ -3,6 +3,10 @@ title: "범주론"
 layout: archive_custom
 regenerate: true
 permalink: /ko/category_theory/
+header:
+  overlay_image: /assets/images/Math/Category_Theory/Category_Theory.png
+  overlay_filter: 0.5
+excerpt: "범주론은 대상과 사상, 그리고 그 사이의 보편성질을 통해 수학적 구조를 추상적으로 다루는 분야이다. 함자와 자연변환, 극한과 수반을 통해 서로 다른 분야를 하나의 언어로 잇는다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -11,7 +15,5 @@ permalink: /ko/category_theory/
 {% endif %}
 
 {% assign posts = site.categories['Math / Category Theory'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% include subject-cards.html posts=posts %}
 
-[<span class="material-icons md-18" style="vertical-align:-.1em;">&#xE5C4;</span> Back to [Math] directory]({{ lang_prefix }}/math/)
-{: style="text-align: right;"}

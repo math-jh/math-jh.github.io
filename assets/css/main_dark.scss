@@ -9,6 +9,8 @@
 @import "recents-sidebar"; // custom: recent posts / comments in the right sidebar
 @import "pagefind-overrides"; // Pagefind UI styling wired to theme vars
 @import "search-overlay"; // backdrop-style search popup
+@import "recent-overlay"; // backdrop-style recent-posts popup
+@import "subject-cards"; // subject-home card grid
 
 img.invert {
   filter: invert(1);
