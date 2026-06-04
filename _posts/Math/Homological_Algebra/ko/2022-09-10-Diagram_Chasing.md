@@ -5,9 +5,6 @@ excerpt: "Five lemma, snake lemma"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/diagram_chasing
-header:
-    overlay_image: /assets/images/Math/Homological_Algebra/Diagram_Chasing.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
 

@@ -5,9 +5,6 @@ excerpt: "Open cover의 finite subcover로 정의되는 compact space"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/compact_spaces
-header:
-    overlay_image: /assets/images/Math/Topology/Compact_Spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
 

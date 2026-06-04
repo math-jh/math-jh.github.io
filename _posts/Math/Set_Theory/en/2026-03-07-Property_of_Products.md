@@ -6,9 +6,6 @@ excerpt: "Partial products, associativity and distributivity"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/property_of_products
 
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Property_of_Products.png
-    overlay_filter: 0.5
 
 sidebar: 
     nav: "set_theory-en"

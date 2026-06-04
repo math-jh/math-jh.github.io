@@ -5,9 +5,6 @@ excerpt: "The prime avoidance lemma and the definition and properties of associa
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/associated_primes
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Associated_Primes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

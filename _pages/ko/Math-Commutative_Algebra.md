@@ -4,9 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/commutative_algebra/
 header:
-  overlay_image: /assets/images/Math/Commutative_Algebra/Commutative_Algebra.png
-  overlay_filter: 0.5
-excerpt: "가환대수학은 가환환과 그 위의 가군을 공부하는 분야이다. 국소화와 준소분해, 차원 이론을 통해 대수기하의 국소적 토대를 제공한다."
+  overlay_color: "transparent"
+hero_hue: 231
+excerpt: "가환대수학은 가환환과 그 위의 가군을 공부하는 분야이다. 국소화와 준소분해, 차원 이론을 통해 대수기하학의 국소적 토대를 제공한다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

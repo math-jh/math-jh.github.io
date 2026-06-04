@@ -1519,42 +1519,60 @@ category-ko:
         url: ko/representation_theory/
   # - title: "Analysis"
   #   children:
-      # - title: "해석학"
-      #   url: ko/analysis/
-      # - title: "복소해석학"
-      #   url: ko/complex_analysis/
-      # - title: "측도론"
-      #   url: ko/measure_theory/
-      # - title: "함수해석학"
-      #   url: ko/functional_analysis/
-  - title: "Topology and geometry"
+  #     - title: "해석학"
+  #       url: ko/analysis/
+  #     - title: "복소해석학"
+  #       url: ko/complex_analysis/
+  #     - title: "측도론"
+  #       url: ko/measure_theory/
+  #     - title: "함수해석학"
+  #       url: ko/functional_analysis/
+  # - title: "Number Theory"
+  #   children:
+  #     - title: "정수론"
+  #       url: ko/number_theory/
+  - title: "Topology"
     children:
       - title: "위상수학"
         url: ko/topology/
       - title: "대수적 위상수학"
         url: ko/algebraic_topology/
+  - title: "Differential Geometry"
+    children:
       - title: "미분다양체"
         url: ko/manifold/
-      # - title: "복소다양체"
-      #   url: ko/complex_manifold/
       - title: "리 이론"
         url: ko/lie_theory/
       - title: "리만기하학"
         url: ko/riemannian_geometry/
+      # - title: "복소다양체"
+      #   url: ko/complex_manifold/
+  - title: "Algebraic Geometry"
+    children:
       - title: "대수다양체"
         url: ko/algebraic_varieties/
       - title: "스킴"
         url: ko/scheme_theory/
-      - title: "사교기하학"
-        url: ko/symplectic_geometry/
       - title: "토릭기하학"
         url: ko/toric_geometry/
+  - title: "Mirror Symmetry"
+    children:
+      - title: "거울대칭"
+        url: ko/mirror_symmetry/
+      - title: "사교기하학"
+        url: ko/symplectic_geometry/
+  # - title: "Applied"
+  #   children:
+  #     - title: "조합론"
+  #       url: ko/combinatorics/
   - title: "Misc"
     children:
       - title: "블로그 개발"
         url: ko/blog_development/
       - title: "LLM 작업실"
         url: ko/llm_workshop/
+      - title: "주변기기"
+        url: ko/peripherals
       - title: "블로그 소개"
         url: ko/about
       - title: "찾아보기"

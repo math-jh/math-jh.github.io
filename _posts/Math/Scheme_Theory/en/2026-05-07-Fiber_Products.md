@@ -5,9 +5,6 @@ excerpt: "Definition and existence of fiber products in the category of S-scheme
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/fiber_products
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Fiber_products.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-en"
 

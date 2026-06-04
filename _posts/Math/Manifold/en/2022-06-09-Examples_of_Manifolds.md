@@ -5,9 +5,6 @@ excerpt: "Various examples of differentiable manifolds"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/examples_of_manifolds
-header:
-    overlay_image: /assets/images/Math/Manifold/Examples_of_Manifolds.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

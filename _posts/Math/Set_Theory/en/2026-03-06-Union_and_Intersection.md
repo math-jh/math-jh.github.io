@@ -5,9 +5,6 @@ excerpt: "Union and intersection of sets"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/union_and_intersection
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Union_and_Intersection.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

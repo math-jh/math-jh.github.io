@@ -6,9 +6,6 @@ excerpt: "Subset relations and the definition of ordered pairs"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/ordered_pair
 
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Ordered_Pair.png
-    overlay_filter: 0.5
 
 sidebar: 
     nav: "set_theory-en"

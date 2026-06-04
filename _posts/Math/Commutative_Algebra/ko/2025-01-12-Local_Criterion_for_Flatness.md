@@ -5,9 +5,6 @@ excerpt: "Maximal ideal에서의 점검을 통한 flatness의 local criterion"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/local_criterion_for_flatness
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"
 

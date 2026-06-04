@@ -8,10 +8,6 @@ permalink: /ko/math/lie_theory/bruhat_decomposition
 sidebar: 
     nav: "Lie_theory-ko"
 
-header:
-    overlay_image: /assets/images/Math/Lie_Theory/Bruhat_Decomposition.png
-    overlay_filter: 0.5
-
 date: 2025-01-04
 last_modified_at: 2025-01-04
 weight: 5

@@ -442,6 +442,39 @@
      \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
 \end{tikzpicture}
 
+%% ex18: Gr(2,4) dim-3 cell (Delta34=0, N-E 변 죽인 결과), 2-vertex reduced graph (Postnikov_Diagram_and_Plabic_Graph-12.png)
+\begin{tikzpicture}[scale=1.5, >=Stealth,
+   bdot/.style={fill=black, circle, inner sep=1.7pt},
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3pt},
+   bv/.style={draw=black, very thick, fill=black, circle, inner sep=3pt}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \node[bv] (W) at (-0.6,0.6) {};
+  \node[wv] (S) at (0.6,-0.6) {};
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[black!80, thick] (W)--(S);
+  \draw[black!80, thick] (W)--(b1) (W)--(b2) (S)--(b3) (S)--(b4);
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% ex19: {1,3,5}와 {2,4,6}이 원 위에서 얽힘 = weakly separated 아님 (Postnikov_Diagram_and_Plabic_Graph-13.png)
+\begin{tikzpicture}[scale=1.15,
+   bv/.style={draw=black, very thick, fill=black, circle, inner sep=2.4pt},
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=2.4pt}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \node[bv] (p1) at (90:\R) {};  \node[wv] (p2) at (150:\R) {};
+  \node[bv] (p3) at (210:\R) {}; \node[wv] (p4) at (270:\R) {};
+  \node[bv] (p5) at (330:\R) {}; \node[wv] (p6) at (30:\R) {};
+  \draw[black, thick] (p1)--(p3) (p3)--(p5) (p5)--(p1);
+  \draw[black, thick, densely dashed] (p2)--(p4) (p4)--(p6) (p6)--(p2);
+  \foreach \ang/\lab in {90/1, 150/2, 210/3, 270/4, 330/5, 30/6}{
+    \node at (\ang:{\R+0.36}) {$\lab$};
+  }
+\end{tikzpicture}
+
 %% def10: Gr(2,4) Postnikov diagram, 4 strands i->i+2, over/under alternating (Postnikov_Diagram_and_Plabic_Graph-5.png)
 \begin{tikzpicture}[scale=1.3, >=Stealth,
    strand/.style={line width=1.5pt, postaction={decorate,

@@ -5,9 +5,6 @@ excerpt: "Classical mechanics and phase space"
 
 categories: [Math / Symplectic Geometry]
 permalink: /en/math/symplectic_geometry/classical_mechanics
-header:
-    overlay_image: /assets/images/Math/Symplectic_Geometry/Classical_Mechanics.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "symplectic_geometry-en"
 

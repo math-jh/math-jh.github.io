@@ -8,10 +8,6 @@ permalink: /en/math/mirror_symmetry/dubrovin_connection
 sidebar: 
     nav: "mirror_symmetry-en"
 
-header:
-    overlay_image: /assets/images/Math/Mirror_Symmetry/Dubrovin_Connection.png
-    overlay_filter: 0.5
-
 date: 2026-05-21
 last_modified_at: 2026-05-21
 weight: 4

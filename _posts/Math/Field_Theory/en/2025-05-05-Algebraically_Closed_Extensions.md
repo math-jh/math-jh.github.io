@@ -5,9 +5,6 @@ excerpt: "The existence of algebraically closed fields and algebraic closures"
 
 categories: [Math / Field Theory]
 permalink: /en/math/field_theory/algebraically_closed_extensions
-header:
-    overlay_image: /assets/images/Math/Field_Theory/Algebraically_Closed_Extensions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-en"
 

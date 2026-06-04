@@ -5,9 +5,6 @@ excerpt: "Distribution의 정의와 Frobenius theorem"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/distribution
-header:
-    overlay_image: /assets/images/Math/Manifold/Distribution.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

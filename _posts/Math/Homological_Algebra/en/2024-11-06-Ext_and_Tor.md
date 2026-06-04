@@ -5,9 +5,6 @@ excerpt: "Definitions and properties of Ext and Tor, the derived functors of Hom
 
 categories: [Math / Homological Algebra]
 permalink: /en/math/homological_algebra/ext_and_tor
-header:
-    overlay_image: /assets/images/Math/Homological_Algebra/Ext_and_Tor.png
-    overlay_filter: 0.5
 sidebar:
     nav: "homological_algebra-en"
 

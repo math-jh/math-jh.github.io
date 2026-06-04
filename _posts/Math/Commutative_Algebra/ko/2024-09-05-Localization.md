@@ -5,9 +5,6 @@ excerpt: "환과 가군의 localization과 local ring 구성"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/localization
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Localization.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"
 

@@ -5,9 +5,6 @@ excerpt: "The relationship between proper maps as universally closed maps and co
 
 categories: [Math / Topology]
 permalink: /en/math/topology/proper_maps
-header:
-    overlay_image: /assets/images/Math/Topology/Proper_Maps.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

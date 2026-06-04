@@ -5,9 +5,6 @@ excerpt: "Lie group의 정의와 성질"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/Lie_groups
-header:
-    overlay_image: /assets/images/Math/Lie_Theory/Lie_Groups.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "Lie_theory-ko"
 

@@ -8,10 +8,6 @@ permalink: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
 sidebar:
     nav: "algebraic_varieties-ko"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Tangent_Spaces.png
-    overlay_filter: 0.5
-
 date: 2026-03-22
 last_modified_at: 2026-03-22
 weight: 6

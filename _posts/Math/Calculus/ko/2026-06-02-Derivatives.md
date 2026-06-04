@@ -8,10 +8,6 @@ permalink: /ko/math/calculus/derivatives
 sidebar: 
     nav: "calculus-ko"
 
-header:
-    overlay_image: /assets/images/Math/Calculus/Derivatives.png
-    overlay_filter: 0.5
-
 date: 2026-06-02
 last_modified_at: 2026-06-02
 weight: 3

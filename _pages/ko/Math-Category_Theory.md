@@ -4,9 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/category_theory/
 header:
-  overlay_image: /assets/images/Math/Category_Theory/Category_Theory.png
-  overlay_filter: 0.5
-excerpt: "범주론은 대상과 사상, 그리고 그 사이의 보편성질을 통해 수학적 구조를 추상적으로 다루는 분야이다. 함자와 자연변환, 극한과 수반을 통해 서로 다른 분야를 하나의 언어로 잇는다."
+  overlay_color: "transparent"
+hero_hue: 306
+excerpt: "범주론은 대상과 사상, 그리고 그 사이의 보편성질을 통해 수학적 구조를 추상적으로 다루는 분야이다. 함자와 자연변환, 극한과 수반을 통해 서로 다른 분야를 하나의 언어로 통합한다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

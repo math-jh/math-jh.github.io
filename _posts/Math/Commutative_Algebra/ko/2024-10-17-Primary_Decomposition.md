@@ -5,9 +5,6 @@ excerpt: "Noetherian ring 위 가군의 primary decomposition과 유일성"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/primary_decomposition
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Primary_Decomposition.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"
 

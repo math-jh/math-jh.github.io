@@ -5,9 +5,6 @@ excerpt: "Basic conventions and definitions for rings and algebras used in commu
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/basic_notions
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Basic_Notions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

@@ -5,9 +5,6 @@ excerpt: "Basic concepts in topology"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/other_concepts
-header:
-    overlay_image: /assets/images/Math/Topology/Other_Concepts.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

@@ -5,9 +5,6 @@ excerpt: "A local criterion for flatness via checking at the maximal ideal"
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/local_criterion_for_flatness
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

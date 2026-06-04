@@ -6,9 +6,6 @@ excerpt: "함수의 역과 합성, 전사함수와 단사함수"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/operation_of_functions
 
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Operation_of_Functions.png
-    overlay_filter: 0.5
 
 sidebar: 
     nav: "set_theory-ko"

@@ -5,9 +5,6 @@ excerpt: "Monoid objects in a monoidal category and their examples"
 
 categories: [Math / Category Theory]
 permalink: /en/math/category_theory/monoid_objects
-header:
-    overlay_image: /assets/images/Math/Category_Theory/Monoid_Objects.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-en"
 

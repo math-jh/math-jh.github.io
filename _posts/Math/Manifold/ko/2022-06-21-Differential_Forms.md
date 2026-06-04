@@ -5,9 +5,6 @@ excerpt: "Differential form"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/differential_forms
-header:
-    overlay_image: /assets/images/Math/Manifold/Differential_Forms.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

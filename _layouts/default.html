@@ -50,7 +50,30 @@
     
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" data-lang="{% assign lang_prefix = page.url | slice: 1, 2 %}{% if lang_prefix == 'ko' %}ko{% elsif lang_prefix == 'en' %}en{% endif %}" onload="darkmode()">
+  {%- comment -%}
+    Generative gradient hero colour (no image files). Two independent axes:
+      hue/sat  — from the subject. Subject-home pages bake `hero_hue`; posts
+                 read it AUTOMATICALLY from their category via _data/hues.yml,
+                 so adding a post needs no colour frontmatter.
+      lightness (--hero-l) — per-post 2nd axis, derived from `weight`.
+    Consumed by .page__hero--overlay in _sass/_subject-cards.scss.
+  {%- endcomment -%}
+  {%- if page.hero_hue -%}
+    {%- assign hero_hue = page.hero_hue -%}
+    {%- assign hero_sat = page.hero_sat | default: '42%' -%}
+    {%- assign hero_l = page.hero_l -%}
+  {%- elsif page.categories and page.categories.size > 0 -%}
+    {%- assign post_category = page.categories[0] -%}
+    {%- assign hue_data = site.data.hues[post_category] -%}
+    {%- if hue_data -%}
+      {%- assign hero_hue = hue_data.hue -%}
+      {%- assign hero_sat = hue_data.sat | default: '42%' -%}
+      {%- if page.weight -%}
+        {%- assign hero_l = page.weight | abs | modulo: 13 | plus: 20 -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" data-lang="{% assign lang_prefix = page.url | slice: 1, 2 %}{% if lang_prefix == 'ko' %}ko{% elsif lang_prefix == 'en' %}en{% endif %}"{% if hero_hue %} style="--hero-hue: {{ hero_hue }}; --hero-sat: {{ hero_sat }};{% if hero_l %} --hero-l: {{ hero_l }};{% endif %}"{% endif %} onload="darkmode()">
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
 

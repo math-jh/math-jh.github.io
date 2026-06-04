@@ -5,9 +5,6 @@ excerpt: "Definitions of Euclidean domains, PIDs, and UFDs, and their inclusion 
 
 categories: [Math / Ring Theory]
 permalink: /en/math/ring_theory/integral_domains
-header:
-    overlay_image: /assets/images/Math/Ring_Theory/Integral_Domains.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "ring_theory-en"
 

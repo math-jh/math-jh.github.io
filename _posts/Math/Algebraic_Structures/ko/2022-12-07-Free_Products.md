@@ -5,9 +5,6 @@ excerpt: "Free product와 universal property"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/free_products
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Free_Products.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 

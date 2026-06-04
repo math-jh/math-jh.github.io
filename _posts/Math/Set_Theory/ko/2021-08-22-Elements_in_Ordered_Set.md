@@ -5,9 +5,6 @@ excerpt: "순서집합의 최대, 최소, 극대, 극소 원소들"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/elements_in_ordered_set
-header: 
-    overlay_image: /assets/images/Math/Set_Theory/Elements_in_Ordered_Set.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
 

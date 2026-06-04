@@ -8,10 +8,6 @@ permalink: /ko/math/toric_geometry/logarithmic_differentials
 sidebar:
     nav: "toric_geometry-ko"
 
-header:
-    overlay_image: /assets/images/Math/Toric_Geometry/Logarithmic_Differentials.png
-    overlay_filter: 0.5
-
 date: 2026-05-20
 last_modified_at: 2026-05-20
 weight: 6

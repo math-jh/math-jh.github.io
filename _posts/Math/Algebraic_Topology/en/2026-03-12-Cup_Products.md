@@ -4,9 +4,6 @@ excerpt: "The exterior product in cohomology, the definition of cup product, and
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/cup_products
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Cup_Products.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-en"
 

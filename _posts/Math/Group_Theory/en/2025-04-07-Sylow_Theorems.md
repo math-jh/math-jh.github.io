@@ -5,9 +5,6 @@ excerpt: "p-subgroups of finite groups and the three Sylow theorems"
 
 categories: [Math / Group Theory]
 permalink: /en/math/group_theory/Sylow_theorems
-header:
-    overlay_image: /assets/images/Math/Group_Theory/Sylow_Theorems.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "group_theory-en"
 

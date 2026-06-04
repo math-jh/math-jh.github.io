@@ -5,9 +5,6 @@ excerpt: "Scheme의 dimension 정의와 local ring의 Krull dimension과의 관�
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/dimension
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Dimension.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"
 

@@ -6,10 +6,6 @@ excerpt: "Torus-invariant divisors and line bundles arising from the rays of a f
 categories: [Math / Toric Geometry]
 permalink: /en/math/toric_geometry/toric_divisors
 
-header:
-    overlay_image: /assets/images/Math/Toric_Geometry/Toric_Divisors_and_Line_Bundles.png
-    overlay_filter: 0.5
-
 sidebar:
     nav: "toric_geometry-en"
 

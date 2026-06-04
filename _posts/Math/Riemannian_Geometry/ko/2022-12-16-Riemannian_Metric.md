@@ -5,9 +5,6 @@ excerpt: "Tangent bundle 위의 양의 정부호 symmetric 2-텐서로서의 Rie
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/Riemannian_metric
-header:
-    overlay_image: /assets/images/Math/Riemannian_Geometry/Riemannian_Metric.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "riemannian_geometry-ko"
 

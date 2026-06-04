@@ -6,9 +6,6 @@ excerpt: "부분곱, 결합법칙과 결합법칙"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/property_of_products
 
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Property_of_Products.png
-    overlay_filter: 0.5
 
 sidebar: 
     nav: "set_theory-ko"

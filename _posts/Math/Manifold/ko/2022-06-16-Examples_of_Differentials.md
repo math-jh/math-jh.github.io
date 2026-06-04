@@ -5,9 +5,6 @@ excerpt: "매끈한 함수와 미분사상의 예시들"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/examples_of_differentials
-header:
-    overlay_image: /assets/images/Math/Manifold/Examples_of_Differentials.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

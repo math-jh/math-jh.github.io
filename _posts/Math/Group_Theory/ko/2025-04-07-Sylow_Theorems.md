@@ -5,9 +5,6 @@ excerpt: "유한군의 p-부분군과 Sylow의 세 정리"
 
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/Sylow_theorems
-header:
-    overlay_image: /assets/images/Math/Group_Theory/Sylow_Theorems.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "group_theory-ko"
 

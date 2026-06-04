@@ -5,9 +5,6 @@ excerpt: "Localization, ring of fractions, prime ideal"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/field_of_fractions
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Field_of_Fractions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-en"
 

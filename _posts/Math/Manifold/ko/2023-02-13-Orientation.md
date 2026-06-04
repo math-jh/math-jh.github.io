@@ -5,9 +5,6 @@ excerpt: "Manifold 위의 orientation"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/orientation
-header:
-    overlay_image: /assets/images/Math/Manifold/Orientation.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

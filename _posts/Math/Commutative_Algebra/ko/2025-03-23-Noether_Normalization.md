@@ -5,9 +5,6 @@ excerpt: "유한생성 algebra의 Noether normalization 정리와 응용"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/noether_normalization
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Noether_Normalization.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"
 

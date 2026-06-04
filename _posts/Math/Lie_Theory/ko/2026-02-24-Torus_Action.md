@@ -5,9 +5,6 @@ excerpt: "Torus의 작용과 weight space decomposition"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/torus_action
-header:
-    overlay_image: /assets/images/Math/Lie_Theory/Torus_Action.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "Lie_theory-ko"
 

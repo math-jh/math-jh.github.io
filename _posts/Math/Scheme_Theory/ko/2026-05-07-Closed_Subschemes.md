@@ -5,9 +5,6 @@ excerpt: "Ideal sheaf로부터 정의되는 closed subscheme과 vanishing scheme
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/closed_subschemes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Closed_subschemes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"
 

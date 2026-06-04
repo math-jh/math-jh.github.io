@@ -5,9 +5,6 @@ excerpt: "Definitions and properties of reduced schemes and integral schemes"
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/algebra_of_schemes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Algebra_of_schemes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-en"
 

@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/mirror_symmetry/
 header:
-  overlay_image: /assets/images/Math/Mirror_Symmetry/Mirror_Symmetry.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 329
+excerpt: "Mirror symmetry studies the phenomenon that the symplectic geometry of one Calabi-Yau manifold corresponds to the complex geometry of another. Arising from string theory, it links enumerative geometry and homological algebra."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

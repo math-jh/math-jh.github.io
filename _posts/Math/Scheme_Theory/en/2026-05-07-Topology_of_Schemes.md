@@ -5,9 +5,6 @@ excerpt: "Generic points, Zariski topology, and irreducible components"
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/topology_of_schemes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Topology_of_schemes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-en"
 

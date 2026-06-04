@@ -5,9 +5,6 @@ excerpt: "Construction of the Jordan canonical form through generalized eigenspa
 
 categories: [Math / Linear Algebra]
 permalink: /en/math/linear_algebra/Jordan_canonical_form
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Primary_Decomposition_Theorem.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "linear_algebra-en"
 

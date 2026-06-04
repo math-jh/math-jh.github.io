@@ -5,9 +5,6 @@ excerpt: "군 준동형사상의 정의와 성질들, 군 준동형사상의 핵
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/group_homomorphisms
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Group_Homomorphisms.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
     

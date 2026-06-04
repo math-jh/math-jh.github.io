@@ -5,9 +5,6 @@ excerpt: "Monoidal category 내부의 monoid object와 그 예시들"
 
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/monoid_objects
-header:
-    overlay_image: /assets/images/Math/Category_Theory/Monoid_Objects.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-ko"
 

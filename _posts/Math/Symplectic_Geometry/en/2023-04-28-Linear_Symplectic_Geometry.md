@@ -5,9 +5,6 @@ excerpt: "Definition of symplectic forms"
 
 categories: [Math / Symplectic Geometry]
 permalink: /en/math/symplectic_geometry/linear_symplectic_geometry
-header:
-    overlay_image: /assets/images/Math/Symplectic_Geometry/Linear_Symplectic_Geometry.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "symplectic_geometry-en"
 

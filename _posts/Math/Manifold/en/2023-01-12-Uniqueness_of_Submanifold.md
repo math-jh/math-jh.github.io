@@ -5,9 +5,6 @@ excerpt: "The topological structure of immersed submanifolds and the factorizati
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/uniqueness_of_submanifold
-header:
-    overlay_image: /assets/images/Math/Manifold/Uniqueness_of_Submanifold.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

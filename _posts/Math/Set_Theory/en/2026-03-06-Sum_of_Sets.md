@@ -5,9 +5,6 @@ excerpt: "Sum (disjoint union) of a family of sets"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/sum_of_sets
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Sum_of_Sets.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

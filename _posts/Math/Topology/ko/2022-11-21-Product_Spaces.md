@@ -5,9 +5,6 @@ excerpt: "곱공간의 성질들"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/product_spaces
-header:
-    overlay_image: /assets/images/Math/Topology/Product_Spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
 

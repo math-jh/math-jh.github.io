@@ -8,10 +8,6 @@ permalink: /ko/math/analysis/existence_uniqueness_ode
 sidebar: 
     nav: "analysis-ko"
 
-header:
-    overlay_image: /assets/images/Math/Analysis/Existence_Uniqueness_ODE.png
-    overlay_filter: 0.5
-
 date: 2026-06-02
 last_modified_at: 2026-06-02
 weight: 21

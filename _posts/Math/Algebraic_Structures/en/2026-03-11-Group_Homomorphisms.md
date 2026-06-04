@@ -4,9 +4,6 @@ excerpt: "Definition and properties of group homomorphisms, kernels and images"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/group_homomorphisms
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Group_Homomorphisms.png
-    overlay_filter: 0.5
 sidebar:
     nav: "algebraic_structures-en"
 

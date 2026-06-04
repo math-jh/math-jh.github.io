@@ -5,9 +5,6 @@ excerpt: "텐서대수, 대칭대수, 외대수"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/tensor_algebras
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Tensor_Algebras.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"
 

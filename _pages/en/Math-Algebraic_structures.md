@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/algebraic_structures/
 header:
-  overlay_image: /assets/images/Math/Algebraic_Structures/Algebraic_Structures.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 204
+excerpt: "Algebraic structures studies sets equipped with operations, such as groups, rings, and modules, in a unified way. Centered on homomorphisms and quotient structures, it lays the groundwork shared by every later algebraic field."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

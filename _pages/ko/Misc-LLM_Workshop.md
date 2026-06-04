@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/llm_workshop/
 header:
-  overlay_image: /assets/images/Misc/LLM_Workshop/LLM_Workshop.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 0
+hero_sat: "0%"
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -14,4 +15,4 @@ header:
 {% endif %}
 
 {% assign posts = site.categories['Misc / LLM Workshop'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% include subject-cards.html posts=posts minimal=true %}
+{% include subject-cards.html posts=posts minimal=true splitweight=99 %}

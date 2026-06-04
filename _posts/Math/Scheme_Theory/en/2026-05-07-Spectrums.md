@@ -5,9 +5,6 @@ excerpt: "The prime spectrum of a commutative ring and the Zariski topology"
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/spectrums
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Spectrums.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-en"
 

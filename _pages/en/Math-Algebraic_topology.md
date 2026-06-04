@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/algebraic_topology/
 header:
-  overlay_image: /assets/images/Math/Algebraic_Topology/Algebraic_Topology.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 156
+excerpt: "Algebraic topology distinguishes the shape of spaces by assigning algebraic invariants such as groups and rings. Through homotopy, homology, and cohomology, it translates topological information into algebra."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

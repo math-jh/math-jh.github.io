@@ -5,9 +5,6 @@ excerpt: "Algebra의 product, direct sum, tensor product 구조"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/operations_of_algebras
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Operations_of_Algebras.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 

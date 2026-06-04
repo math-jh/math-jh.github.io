@@ -5,9 +5,6 @@ excerpt: "Module category의 product, coproduct, tensor product"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/operations_of_modules
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Operations_of_Modules.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 

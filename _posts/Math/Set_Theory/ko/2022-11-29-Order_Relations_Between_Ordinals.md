@@ -5,9 +5,6 @@ excerpt: "서수들의 순서관계와 기수의 엄밀한 정의"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/order_relations_between_ordinals
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Order_Relations_Between_Ordinals.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
 

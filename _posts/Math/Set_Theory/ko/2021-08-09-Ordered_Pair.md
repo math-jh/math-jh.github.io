@@ -6,9 +6,6 @@ excerpt: "집합의 포함관계와 순서쌍의 정의"
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/ordered_pair
 
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Ordered_Pair.png
-    overlay_filter: 0.5
 
 sidebar: 
     nav: "set_theory-ko"

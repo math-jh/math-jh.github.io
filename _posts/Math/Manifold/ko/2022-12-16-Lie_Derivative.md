@@ -5,9 +5,6 @@ excerpt: "리 미분과 리 브라켓"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/Lie_derivative
-header:
-    overlay_image: /assets/images/Math/Manifold/Lie_Derivative.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

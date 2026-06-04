@@ -5,9 +5,6 @@ excerpt: "Definition of right/left derived functors via δ-functors"
 
 categories: [Math / Homological Algebra]
 permalink: /en/math/homological_algebra/derived_functors
-header:
-    overlay_image: /assets/images/Math/Homological_Algebra/Derived_Functors.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-en"
 

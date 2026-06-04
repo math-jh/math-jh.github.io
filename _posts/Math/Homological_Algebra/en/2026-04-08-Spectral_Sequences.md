@@ -5,9 +5,6 @@ excerpt: "Spectral sequences that approximate the cohomology of a filtered compl
 
 categories: [Math / Homological Algebra]
 permalink: /en/math/homological_algebra/spectral_sequences
-header:
-    overlay_image: /assets/images/Math/Homological_Algebra/Spectral_Sequences.png
-    overlay_filter: 0.5
 sidebar:
     nav: "homological_algebra-en"
 

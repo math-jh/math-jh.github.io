@@ -8,9 +8,6 @@ permalink: /en/math/linear_algebra/vector_spaces
 sidebar: 
     nav: "linear_algebra-en"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Vector_Spaces.png
-    overlay_filter: 0.5
 
 date: 2022-07-28
 last_modified_at: 2022-07-28

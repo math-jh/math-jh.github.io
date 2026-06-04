@@ -8,10 +8,6 @@ permalink: /ko/math/mirror_symmetry/frobenius_manifold
 sidebar:
     nav: "mirror_symmetry-ko"
 
-header:
-    overlay_image: /assets/images/Math/Mirror_Symmetry/frobenius_manifold.png
-    overlay_filter: 0.5
-
 date: 2026-05-19
 last_modified_at: 2026-05-19
 weight: 3

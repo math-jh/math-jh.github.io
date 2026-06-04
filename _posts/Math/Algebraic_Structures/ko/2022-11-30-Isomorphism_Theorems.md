@@ -5,9 +5,6 @@ excerpt: "동형사상 정리들"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/isomorphism_theorems
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Isomorphism_Theorems.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 

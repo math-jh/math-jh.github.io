@@ -8,10 +8,6 @@ permalink: /ko/math/algebraic_varieties/riemann_roch_surfaces
 sidebar: 
     nav: "algebraic_varieties-ko"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Riemann_Roch_Surfaces.png
-    overlay_filter: 0.5
-
 date: 2026-05-04
 last_modified_at: 2026-05-09
 weight: 16

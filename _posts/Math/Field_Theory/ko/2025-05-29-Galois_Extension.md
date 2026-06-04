@@ -5,9 +5,6 @@ excerpt: "Normal과 separable을 모두 만족하는 Galois extension의 정의"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/galois_extension
-header:
-    overlay_image: /assets/images/Math/Field_Theory/Galois_Extension.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-ko"
 

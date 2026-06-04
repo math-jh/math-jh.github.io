@@ -5,9 +5,6 @@ excerpt: "Affine, finite, finite type 등 scheme morphism의 기본 성질"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/properties_of_scheme_morphisms
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Properties_of_scheme_morphisms.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"
 

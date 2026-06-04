@@ -5,9 +5,6 @@ excerpt: "Compatibility of localization with Hom and tensor, and local propertie
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/properties_of_localization
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Properties_of_Localization.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

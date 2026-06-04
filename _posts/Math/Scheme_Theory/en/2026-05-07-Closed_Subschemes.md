@@ -5,9 +5,6 @@ excerpt: "Closed subschemes and vanishing schemes defined by ideal sheaves"
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/closed_subschemes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Closed_subschemes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-en"
 

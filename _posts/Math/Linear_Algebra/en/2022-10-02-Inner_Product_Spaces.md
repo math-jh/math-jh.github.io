@@ -8,9 +8,6 @@ permalink: /en/math/linear_algebra/inner_product_spaces
 sidebar: 
     nav: "linear_algebra-en"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Inner_Product_Spaces.png
-    overlay_filter: 0.5
 
 date: 2022-10-02
 last_modified_at: 2022-10-02

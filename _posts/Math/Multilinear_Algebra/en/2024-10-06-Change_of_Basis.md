@@ -5,9 +5,6 @@ excerpt: "Square matrices and invertible matrices, transformation of matrices un
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/change_of_basis
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Change_of_Basis.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-en"
 

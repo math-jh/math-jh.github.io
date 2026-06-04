@@ -5,9 +5,6 @@ excerpt: "The definition of a distribution and the Frobenius theorem"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/distribution
-header:
-    overlay_image: /assets/images/Math/Manifold/Distribution.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

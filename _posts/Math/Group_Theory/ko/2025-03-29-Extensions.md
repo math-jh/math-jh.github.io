@@ -5,9 +5,6 @@ excerpt: "Short exact sequence로서의 group extension과 semidirect product"
 
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/extensions
-header:
-    overlay_image: /assets/images/Math/Group_Theory/Extensions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "group_theory-ko"
 

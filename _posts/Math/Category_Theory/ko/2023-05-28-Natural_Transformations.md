@@ -5,9 +5,6 @@ excerpt: "Natural transformation과 category들 사이의 equivalence"
 
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/natural_transformations
-header:
-    overlay_image: /assets/images/Math/Category_Theory/Natural_Transformations.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-ko"
 

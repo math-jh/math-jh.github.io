@@ -5,9 +5,6 @@ excerpt: "Monoidal category의 정의와 coherence 조건"
 
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/monoidal_categories
-header:
-    overlay_image: /assets/images/Math/Category_Theory/Monoidal_Categories.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-ko"
 

@@ -355,6 +355,13 @@ defaults:
       toc_sticky: true
       comments: true
       share: true
+      # Auto-trigger the generative gradient hero. A post needs NO colour
+      # frontmatter: this makes the hero render (single.html keys on
+      # header.overlay_color) and the actual hue/sat/lightness come from the
+      # post's category via _data/hues.yml + weight (see _layouts/default.html).
+      # "transparent" lets the CSS gradient (.page__hero--overlay) show through.
+      header:
+        overlay_color: "transparent"
 
 # Head scripts
 head_scripts:   

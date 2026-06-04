@@ -5,9 +5,6 @@ excerpt: "Tychonoff 정리와 local compactness, paracompactness"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/compactness
-header:
-    overlay_image: /assets/images/Math/Topology/Compactness.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-ko"
 

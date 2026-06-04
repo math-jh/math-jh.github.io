@@ -5,9 +5,6 @@ excerpt: "Examples of smooth functions and differentials"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/examples_of_differentials
-header:
-    overlay_image: /assets/images/Math/Manifold/Examples_of_Differentials.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

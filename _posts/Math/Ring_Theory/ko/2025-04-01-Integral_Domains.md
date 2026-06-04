@@ -5,9 +5,6 @@ excerpt: "Euclidean domain, PID, UFD의 정의와 포함관계"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/integral_domains
-header:
-    overlay_image: /assets/images/Math/Ring_Theory/Integral_Domains.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "ring_theory-ko"
 

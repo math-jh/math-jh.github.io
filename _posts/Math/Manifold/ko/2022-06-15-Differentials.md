@@ -5,9 +5,6 @@ excerpt: "두 접공간 사이의 미분사상"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/differentials
-header:
-    overlay_image: /assets/images/Math/Manifold/Differentials.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

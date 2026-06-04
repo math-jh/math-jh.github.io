@@ -5,9 +5,6 @@ excerpt: "Definitions of topology using closed sets, closure, and neighborhood f
 
 categories: [Math / Topology]
 permalink: /en/math/topology/equivalent_formulations_of_topology
-header:
-    overlay_image: /assets/images/Math/Topology/Equivalent_Formulations_of_Topology.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

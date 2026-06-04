@@ -5,9 +5,6 @@ excerpt: "Free module 사이의 linear map의 행렬표현과 좌표계"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/matrices_and_linear_maps
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Matrices_and_Linear_Maps.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"
 

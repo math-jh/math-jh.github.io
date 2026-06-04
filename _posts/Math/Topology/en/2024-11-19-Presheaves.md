@@ -5,9 +5,6 @@ excerpt: "The gluing lemma and the definition of a presheaf"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/presheaves
-header:
-    overlay_image: /assets/images/Math/Topology/Presheaves.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

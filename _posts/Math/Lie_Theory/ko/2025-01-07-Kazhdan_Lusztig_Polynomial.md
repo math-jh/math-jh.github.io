@@ -8,10 +8,6 @@ permalink: /ko/math/lie_theory/kazhdan_lusztig
 sidebar:
     nav: "Lie_theory-ko"
 
-header:
-    overlay_image: /assets/images/Math/Lie_Theory/kazhdan_lusztig.png
-    overlay_filter: 0.5
-
 date: 2025-01-07
 last_modified_at: 2025-01-07
 weight: 8

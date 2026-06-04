@@ -1,0 +1,50 @@
+# Per-category hero colour map (HSL hue + saturation).
+#
+# Drives the generative gradient hero (no image files). Looked up by
+# _layouts/default.html via page.categories[0] so posts get their colour
+# AUTOMATICALLY from their category — adding a new post needs no per-post
+# colour frontmatter. The post's lightness (2nd axis) is computed from its
+# weight at build time; only hue/sat live here.
+#
+# Keys must match the post `categories:` string exactly ("Big / Subject").
+# Math subjects: sat 42%. Misc: achromatic (sat 0%, 1-axis lightness only).
+#
+# These values mirror what the subject-home pages bake in `hero_hue`; keep
+# the two in sync (subject homes are hand-curated, posts read from here).
+
+# --- Foundation / Algebra (blues → violets) ---
+"Math / Algebraic Structures":   { hue: 204, sat: "42%" }
+"Math / Group Theory":           { hue: 209, sat: "42%" }
+"Math / Ring Theory":            { hue: 213, sat: "42%" }
+"Math / Multilinear Algebra":    { hue: 218, sat: "42%" }
+"Math / Field Theory":           { hue: 222, sat: "42%" }
+"Math / Homological Algebra":    { hue: 227, sat: "42%" }
+"Math / Commutative Algebra":    { hue: 231, sat: "42%" }
+"Math / Representation Theory":  { hue: 236, sat: "42%" }
+"Math / Linear Algebra":         { hue: 249, sat: "42%" }
+"Math / Set Theory":             { hue: 274, sat: "42%" }
+"Math / Calculus":               { hue: 281, sat: "42%" }
+"Math / Category Theory":        { hue: 306, sat: "42%" }
+
+# --- Geometry / Topology (greens) ---
+"Math / Manifold":               { hue: 84,  sat: "42%" }
+"Math / Lie Theory":             { hue: 100, sat: "42%" }
+"Math / Riemannian Geometry":    { hue: 116, sat: "42%" }
+"Math / Topology":               { hue: 124, sat: "42%" }
+"Math / Algebraic Topology":     { hue: 156, sat: "42%" }
+
+# --- Algebraic / arithmetic geometry (reds → oranges, + magenta mirror) ---
+"Math / Symplectic Geometry":    { hue: 1,   sat: "42%" }
+"Math / Algebraic Varieties":    { hue: 9,   sat: "42%" }
+"Math / Scheme Theory":          { hue: 25,  sat: "42%" }
+"Math / Toric Geometry":         { hue: 41,  sat: "42%" }
+"Math / Mirror Symmetry":        { hue: 329, sat: "42%" }
+
+# --- Analysis / Number theory ---
+"Math / Number Theory":          { hue: 165, sat: "42%" }
+"Math / Analysis":               { hue: 190, sat: "42%" }
+
+# --- Misc (achromatic) ---
+"Misc / Blog Development":       { hue: 0, sat: "0%" }
+"Misc / LLM Workshop":           { hue: 0, sat: "0%" }
+"Misc / Peripherals":            { hue: 0, sat: "0%" }

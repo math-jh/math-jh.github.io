@@ -5,9 +5,6 @@ excerpt: "Definitions of open maps and closed maps, and their relationship to qu
 
 categories: [Math / Topology]
 permalink: /en/math/topology/open_mappings_and_closed_mappings
-header:
-    overlay_image: /assets/images/Math/Topology/Open_Mappings_and_Closed_Mappings.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

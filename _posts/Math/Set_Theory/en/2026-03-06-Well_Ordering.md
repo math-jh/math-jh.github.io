@@ -5,9 +5,6 @@ excerpt: "Definition of ordinals and properties of well-ordered sets"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/well_ordering
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Well_Ordering.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

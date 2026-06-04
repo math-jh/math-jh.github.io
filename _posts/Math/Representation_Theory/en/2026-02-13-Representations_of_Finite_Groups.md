@@ -5,9 +5,6 @@ excerpt: "Definition of representations of finite groups and irreducible decompo
 
 categories: [Math / Representation Theory]
 permalink: /en/math/representation_theory/representations_of_finite_groups
-header:
-    overlay_image: /assets/images/Math/Representation_Theory/Representations_of_Finite_Groups.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "representation_theory-en"
 

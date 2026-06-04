@@ -5,9 +5,6 @@ excerpt: "Prime avoidance와 associated prime의 정의 및 성질"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/associated_primes
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Associated_Primes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"
 

@@ -6,6 +6,16 @@
 /* Subject-home hero: taller banner (height like About's header image) but with
    the dark overlay. Scoped to archive_custom so the home/splash hero is
    unaffected; the title is vertically centred. */
+/* Generative gradient hero (subject homes + posts) from per-page hue/sat/light
+   set on <body> (no image files). axis1 = hue (family + subject), axis2 =
+   --hero-l lightness (posts vary by weight). A real header.overlay_image sets
+   an inline background-image that overrides this, so image pages are unaffected. */
+.page__hero--overlay {
+  background-image: linear-gradient(135deg,
+    hsl(var(--hero-hue, 220), var(--hero-sat, 42%), calc(var(--hero-l, 26) * 1%)),
+    hsl(var(--hero-hue, 220), var(--hero-sat, 42%), calc((var(--hero-l, 26) - 13) * 1%)));
+}
+
 .layout--archive_custom .page__hero--overlay {
   min-height: 340px;
   display: flex;
@@ -20,6 +30,13 @@
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
   margin: 1.5em 0;
+}
+
+/* Subtle break between weight groups (e.g. LLM Workshop dev notes vs reading
+   notes): forces a new row + a little extra gap, without a divider line. */
+.subject-cards__break {
+  grid-column: 1 / -1;
+  height: 0.4rem;
 }
 
 .subject-card {

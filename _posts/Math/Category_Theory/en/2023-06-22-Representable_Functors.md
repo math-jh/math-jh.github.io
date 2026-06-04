@@ -5,9 +5,6 @@ excerpt: "Initial object, terminal object, representable functor"
 
 categories: [Math / Category Theory]
 permalink: /en/math/category_theory/representable_functors
-header:
-    overlay_image: /assets/images/Math/Category_Theory/Representable_Functors.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-en"
 

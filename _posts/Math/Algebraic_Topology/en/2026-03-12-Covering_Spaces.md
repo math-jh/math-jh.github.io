@@ -4,9 +4,6 @@ excerpt: "Equivalent conditions for simply connected, covering spaces, and the S
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/covering_spaces
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Covering_Spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-en"
 

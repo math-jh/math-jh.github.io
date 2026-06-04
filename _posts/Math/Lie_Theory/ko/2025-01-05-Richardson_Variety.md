@@ -8,10 +8,6 @@ permalink: /ko/math/lie_theory/richardson_variety
 sidebar:
     nav: "Lie_theory-ko"
 
-header:
-    overlay_image: /assets/images/Math/Lie_Theory/Richardson_Variety.png
-    overlay_filter: 0.5
-
 date: 2025-01-05
 last_modified_at: 2025-01-05
 weight: 6

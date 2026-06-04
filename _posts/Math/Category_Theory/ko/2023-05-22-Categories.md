@@ -5,9 +5,6 @@ excerpt: "카테고리의 정의와 기본개념들"
 
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/categories
-header:
-    overlay_image: /assets/images/Math/Category_Theory/Categories.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-ko"
 

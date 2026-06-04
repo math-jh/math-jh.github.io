@@ -5,9 +5,6 @@ excerpt: "Monoid로 index된 graded ring의 정의와 기본 성질"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/graded_rings
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Graded_Rings.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 

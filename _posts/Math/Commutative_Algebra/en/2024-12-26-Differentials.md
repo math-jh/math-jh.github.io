@@ -5,9 +5,6 @@ excerpt: "The algebraic definition of the Kähler differential module and its un
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/differentials
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Differentials.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

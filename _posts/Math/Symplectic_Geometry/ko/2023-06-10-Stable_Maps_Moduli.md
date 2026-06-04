@@ -5,9 +5,6 @@ excerpt: "Stable map의 정의와 moduli space의 compactness, virtual fundament
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/stable_maps
-header:
-    overlay_image: /assets/images/Math/Symplectic_Geometry/Stable_Maps_Moduli.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "symplectic_geometry-ko"
 

@@ -5,9 +5,6 @@ excerpt: "Differential ideals and Frobenius's theorem"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/differential_ideal
-header:
-    overlay_image: /assets/images/Math/Manifold/Differential_Ideal.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

@@ -8,10 +8,6 @@ categories: [Math / Algebraic Varieties]
 sidebar:
     nav: "algebraic_varieties-ko"
     
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Kodaira_Vanishing.png
-    overlay_filter: 0.5
-
 date: 2026-05-07
 last_modified_at: 2026-05-09
 weight: 17

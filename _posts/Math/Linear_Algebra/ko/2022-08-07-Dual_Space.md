@@ -8,9 +8,6 @@ permalink: /ko/math/linear_algebra/dual_space
 sidebar: 
     nav: "linear_algebra-ko"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Dual_Space.png
-    overlay_filter: 0.5
 
 date: 2022-08-05
 last_modified_at: 2022-08-05

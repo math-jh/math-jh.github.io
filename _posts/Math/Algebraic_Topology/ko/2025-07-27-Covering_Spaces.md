@@ -5,9 +5,6 @@ excerpt: "Simply connected의 동치조건과 covering space, Seifert-van Kampen
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/covering_spaces
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Covering_Spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-ko"
 

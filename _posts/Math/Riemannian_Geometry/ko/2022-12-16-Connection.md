@@ -5,9 +5,6 @@ excerpt: "Vector bundle 위에서 정의된 미분"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/connection
-header:
-    overlay_image: /assets/images/Math/Riemannian_Geometry/Connection.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "riemannian_geometry-ko"
 

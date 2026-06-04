@@ -5,9 +5,6 @@ excerpt: "Properties of Surjective and Injective Functions"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/retraction_and_section
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Retraction_and_Section.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

@@ -8,9 +8,6 @@ permalink: /ko/math/linear_algebra/Gaussian_elimination
 sidebar: 
     nav: "linear_algebra-ko"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Gaussian_Elimination.png
-    overlay_filter: 0.5
 
 date: 2022-08-19
 last_modified_at: 2022-08-19

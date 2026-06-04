@@ -5,9 +5,6 @@ excerpt: "Completion of rings and modules defined by a filtration"
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/completion
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Completion.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

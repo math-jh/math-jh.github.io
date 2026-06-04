@@ -5,9 +5,6 @@ excerpt: "Characterizations of regular systems of parameters and regular local r
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/regular_local_rings
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Regular_Local_Rings.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

@@ -5,9 +5,6 @@ excerpt: "Definitions and equivalent conditions for projective, injective, and f
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/various_modules
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Various_Modules.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-en"
 

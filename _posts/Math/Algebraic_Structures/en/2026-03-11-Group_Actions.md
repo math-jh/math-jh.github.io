@@ -4,9 +4,6 @@ excerpt: "Group action"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/group_actions
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Group_Actions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-en"
 

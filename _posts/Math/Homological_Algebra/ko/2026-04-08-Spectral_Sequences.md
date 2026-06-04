@@ -5,9 +5,6 @@ excerpt: "Filtered complex의 cohomology를 page 단위로 근사하는 spectral
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/spectral_sequences
-header:
-    overlay_image: /assets/images/Math/Homological_Algebra/Spectral_Sequences.png
-    overlay_filter: 0.5
 sidebar:
     nav: "homological_algebra-ko"
 

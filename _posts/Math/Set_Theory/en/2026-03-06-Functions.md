@@ -5,9 +5,6 @@ excerpt: "Basic Definition of Functions"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/functions
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Functions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

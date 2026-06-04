@@ -4,9 +4,6 @@ excerpt: "Isomorphism theorems"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/isomorphism_theorems
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Isomorphism_Theorems.png
-    overlay_filter: 0.5
 sidebar:
     nav: "algebraic_structures-en"
 

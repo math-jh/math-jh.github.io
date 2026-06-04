@@ -5,9 +5,6 @@ excerpt: "The localization of rings and modules, and the construction of local r
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/localization
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Localization.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

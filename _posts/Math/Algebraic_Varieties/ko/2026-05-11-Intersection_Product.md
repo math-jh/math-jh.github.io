@@ -8,10 +8,6 @@ permalink: /ko/math/algebraic_varieties/intersection_product
 sidebar: 
     nav: "algebraic_varieties-ko"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Intersection_Product.png
-    overlay_filter: 0.5
-
 date: 2026-05-11
 last_modified_at: 2026-05-12
 weight: 19

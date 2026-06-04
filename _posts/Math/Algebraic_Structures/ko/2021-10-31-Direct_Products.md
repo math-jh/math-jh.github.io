@@ -5,9 +5,6 @@ excerpt: "Direct product of groups"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/direct_products
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Direct_Products.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 

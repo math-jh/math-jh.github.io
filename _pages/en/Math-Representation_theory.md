@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/representation_theory/
 header:
-  overlay_image: /assets/images/Math/Representation_Theory/Representation_Theory.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 236
+excerpt: "Representation theory studies the structure of groups and algebras by realizing their elements as linear transformations. Through irreducible representations, characters, and weights, it analyzes symmetry in the language of linear algebra."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

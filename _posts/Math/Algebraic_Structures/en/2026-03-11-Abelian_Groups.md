@@ -4,9 +4,6 @@ description: "We examine the direct sum of abelian groups and its universal prop
 excerpt: "Free abelian group, tensor product"
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/abelian_groups
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Abelian_Groups.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-en"
 

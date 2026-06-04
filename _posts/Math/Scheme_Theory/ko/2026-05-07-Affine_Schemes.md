@@ -5,9 +5,6 @@ excerpt: "Ring의 spectrum 위 structure sheaf로 정의되는 affine scheme"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/affine_schemes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Affine_schemes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"
 

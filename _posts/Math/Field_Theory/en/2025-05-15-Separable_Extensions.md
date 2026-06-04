@@ -5,9 +5,6 @@ excerpt: "Characterization of separable extensions through étale algebras"
 
 categories: [Math / Field Theory]
 permalink: /en/math/field_theory/separable_extensions
-header:
-    overlay_image: /assets/images/Math/Field_Theory/Separable_Extensions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-en"
 

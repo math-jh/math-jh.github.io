@@ -5,9 +5,6 @@ excerpt: "The definition of monoidal categories and coherence conditions"
 
 categories: [Math / Category Theory]
 permalink: /en/math/category_theory/monoidal_categories
-header:
-    overlay_image: /assets/images/Math/Category_Theory/Monoidal_Categories.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-en"
 

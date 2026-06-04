@@ -8,10 +8,6 @@ permalink: /ko/math/algebraic_varieties/sheaf_cohomology
 sidebar:
     nav: "algebraic_varieties-ko"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology.png
-    overlay_filter: 0.5
-
 date: 2026-04-05
 last_modified_at: 2026-04-20
 weight: 12

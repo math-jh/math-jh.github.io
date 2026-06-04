@@ -8,10 +8,6 @@ permalink: /ko/math/analysis/sequences_of_functions
 sidebar: 
     nav: "analysis-ko"
 
-header:
-    overlay_image: /assets/images/Math/Analysis/Sequences_of_Functions.png
-    overlay_filter: 0.5
-
 date: 2026-06-02
 last_modified_at: 2026-06-02
 weight: 16

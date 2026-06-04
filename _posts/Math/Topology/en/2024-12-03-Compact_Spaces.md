@@ -5,9 +5,6 @@ excerpt: "Compact spaces, defined by the existence of a finite subcover for ever
 
 categories: [Math / Topology]
 permalink: /en/math/topology/compact_spaces
-header:
-    overlay_image: /assets/images/Math/Topology/Compact_Spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

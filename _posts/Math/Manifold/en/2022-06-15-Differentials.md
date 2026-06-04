@@ -5,9 +5,6 @@ excerpt: "The differential between two tangent spaces"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/differentials
-header:
-    overlay_image: /assets/images/Math/Manifold/Differentials.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

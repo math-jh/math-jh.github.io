@@ -5,9 +5,6 @@ excerpt: "Rees algebras and associated graded rings constructed from an ideal"
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/blowup_algebra
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Blowup_Algebra.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-en"
 

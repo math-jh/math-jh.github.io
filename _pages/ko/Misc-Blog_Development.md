@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/blog_development/
 header:
-  overlay_image: /assets/images/Misc/Blog_Development/Blog_Development.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 0
+hero_sat: "0%"
 excerpt: "블로그를 만들고 다듬으며 마주친 문제와 해결 과정을 기록합니다. Jekyll 설정부터 디자인과 자동화까지, 개발일지 형태로 남깁니다."
 ---
 {% assign lang = site.locale %}

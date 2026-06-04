@@ -5,9 +5,6 @@ excerpt: "Factorization of polynomial rings over commutative rings and Gauss's l
 
 categories: [Math / Ring Theory]
 permalink: /en/math/ring_theory/polynomial_rings
-header:
-    overlay_image: /assets/images/Math/Ring_Theory/Polynomial_Rings.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "ring_theory-en"
 

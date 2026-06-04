@@ -5,9 +5,6 @@ excerpt: "Properties of subspaces"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/subspaces
-header:
-    overlay_image: /assets/images/Math/Topology/Subspaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

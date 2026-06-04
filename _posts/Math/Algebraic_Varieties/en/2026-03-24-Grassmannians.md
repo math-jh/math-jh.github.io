@@ -7,10 +7,6 @@ permalink: /en/math/algebraic_varieties/grassmannians
 sidebar: 
     nav: "algebraic_varieties-en"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Grassmannians.png
-    overlay_filter: 0.5
-
 date: 2026-03-24
 last_modified_at: 2026-03-24
 weight: 7

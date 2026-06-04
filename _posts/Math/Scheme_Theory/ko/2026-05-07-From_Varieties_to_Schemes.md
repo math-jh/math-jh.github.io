@@ -6,9 +6,6 @@ categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/from_varieties_to_schemes
 sidebar: 
     nav: "scheme_theory-ko"
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/From_Varieties_to_Schemes.png
-    overlay_filter: 0.5
 date: 2026-05-07
 last_modified_at: 2026-05-07
 weight: 1

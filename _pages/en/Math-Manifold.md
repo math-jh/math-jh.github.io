@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/manifold/
 header:
-  overlay_image: /assets/images/Math/Manifold/Manifold.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 84
+excerpt: "The theory of differentiable manifolds develops calculus on spaces that locally look like Euclidean space. Through tangent spaces, vector fields, and differential forms, it sets the stage for geometry and physics."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

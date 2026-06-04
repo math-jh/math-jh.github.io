@@ -5,9 +5,6 @@ excerpt: "Vanishing scheme의 codimension과 complete intersection"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/complete_intersections
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Complete_intersections.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-ko"
 

@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/peripherals
 header:
-  overlay_image: /assets/images/Misc/Peripherals/Peripherals.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 0
+hero_sat: "0%"
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
@@ -13,5 +14,10 @@ header:
   {% assign lang = lang_prefix | append: "/" %}
 {% endif %}
 
-## [키보드](/ko/keyboards)
-## [키맵](ko/keymaps)
+## 키보드
+{% assign kb = site.categories['Misc / Peripherals'] | where_exp: "post", "post.permalink contains lang" | where_exp: "post", "post.permalink contains '/keyboards/'" | sort: 'weight' %}
+{% include subject-cards.html posts=kb minimal=true %}
+
+## 도구
+{% assign tl = site.categories['Misc / Peripherals'] | where_exp: "post", "post.permalink contains lang" | where_exp: "post", "post.permalink contains '/tools/'" | sort: 'weight' %}
+{% include subject-cards.html posts=tl minimal=true %}

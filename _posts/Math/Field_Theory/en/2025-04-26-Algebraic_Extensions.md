@@ -5,9 +5,6 @@ excerpt: "The definition and degree of algebraic extensions of fields"
 
 categories: [Math / Field Theory]
 permalink: /en/math/field_theory/algebraic_extensions
-header:
-    overlay_image: /assets/images/Math/Field_Theory/Algebraic_Extensions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-en"
 

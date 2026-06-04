@@ -8,10 +8,6 @@ permalink: /ko/math/mirror_symmetry/gauss-manin_connection
 sidebar: 
     nav: "mirror_symmetry-ko"
 
-header:
-    overlay_image: /assets/images/Math/Mirror_Symmetry/Oscillating_Integral.png
-    overlay_filter: 0.5
-
 date: 2026-05-24
 last_modified_at: 2026-05-26
 weight: 5

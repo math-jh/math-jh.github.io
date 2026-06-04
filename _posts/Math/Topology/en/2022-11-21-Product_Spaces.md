@@ -5,9 +5,6 @@ excerpt: "Properties of product spaces"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/product_spaces
-header:
-    overlay_image: /assets/images/Math/Topology/Product_Spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

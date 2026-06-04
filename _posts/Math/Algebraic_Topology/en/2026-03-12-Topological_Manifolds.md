@@ -4,9 +4,6 @@ excerpt: "The definition and properties of topological manifolds as locally Eucl
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/topological_manifolds
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Topological_Manifolds.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-en"
 
