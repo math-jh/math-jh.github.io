@@ -25,9 +25,9 @@ In this post we define separated morphisms and proper morphisms. It is helpful t
 <ins id="def1">**Definition 1**</ins> Let an arbitrary scheme $X$ be given.
 
 1. For an open subset $U$ of $X$, we call the scheme $(U, \mathcal{O}\_X\vert\_U)$ an *open subscheme* of $X$. If $f:X \rightarrow Y$ induces an isomorphism between open subschemes of $X$ and $Y$, we call $f$ an *open immersion*.
-2. A scheme morphism $f:Y \rightarrow X$ is called a *closed immersion* if $\lvert Y\rvert$ defines a homeomorphism onto a closed subset of $\lvert X\rvert$ via $f$, and $f^\sharp: \mathcal{O}\_X \rightarrow f\_\ast \mathcal{O}_Y$ is surjective.  
-If for two closed immersions $f:Y \rightarrow X$ and $f': Y' \rightarrow X$, there exists an isomorphism $i:Y' \rightarrow Y$ such that $f'=f\circ i$, then we regard $f$ and $f'$ as equivalent closed immersions, and define the equivalence class as a *closed subscheme*. When such a closed subscheme is given, we call the kernel $\mathcal{I}_Y$ of $f^\sharp$ the *ideal sheaf*.
-3. $f:X \rightarrow Y$ is called *projective* if for a suitable $n$, $f$ can be decomposed as a composition of a closed immersion and a projection in the form $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$.
+2. A scheme morphism $f:Y \rightarrow X$ is called a *closed immersion* if $\lvert Y\rvert$ defines a homeomorphism onto a closed subset of $\lvert X\rvert$ via $f$, and $$f^\sharp: \mathcal{O}_X \rightarrow f_\ast \mathcal{O}_Y$$ is surjective.  
+If for two closed immersions $f:Y \rightarrow X$ and $f': Y' \rightarrow X$, there exists an isomorphism $i:Y' \rightarrow Y$ such that $f'=f\circ i$, then we regard $f$ and $f'$ as equivalent closed immersions, and define the equivalence class as a *closed subscheme*. When such a closed subscheme is given, we call the kernel $$\mathcal{I}_Y$$ of $f^\sharp$ the *ideal sheaf*.
+3. $f:X \rightarrow Y$ is called *projective* if for a suitable $n$, $f$ can be decomposed as a composition of a closed immersion and a projection in the form $$X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$$.
 4. $f:X \rightarrow Y$ is called *quasi-projective* if it can be decomposed as a composition of a suitable open immersion $X \rightarrow X'$ and a projective morphism $X' \rightarrow Y$.
 
 </div>
@@ -68,7 +68,7 @@ $$\kappa((0))=\Frac(A), \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> For a scheme morphism $f:X \rightarrow Y$, we define the *diagonal morphism* as $\Delta: X \rightarrow X \times_Y X$.
+<ins id="def3">**Definition 3**</ins> For a scheme morphism $f:X \rightarrow Y$, we define the *diagonal morphism* as $$\Delta: X \rightarrow X \times_Y X$$.
 
 ![diagonal_morphism](/assets/images/Math/Algebraic_Varieties/Valuative_criteria-1.png){:style="width:12em" class="invert" .align-center}
 
@@ -80,13 +80,13 @@ In algebraic geometry, separatedness is regarded as the property replacing Hausd
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> For $f:X \rightarrow Y$, $f$ being separated is equivalent to the image of $X$ under the diagonal morphism $\Delta: X \rightarrow X\times_YX$ being a closed set.
+<ins id="prop4">**Proposition 4**</ins> For $f:X \rightarrow Y$, $f$ being separated is equivalent to the image of $X$ under the diagonal morphism $$\Delta: X \rightarrow X\times_YX$$ being a closed set.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-By definition, if $f$ is separated then it is obvious that $\Delta(X)$ is closed. Thus we assume $\Delta(X)$ is closed and show that $\Delta$ is a closed immersion. It is obvious that $\Delta(X)$ becomes a closed subset of $X\times_YX$, so it suffices to show that $\mathcal{O}\_{X\times\_YX} \rightarrow \Delta_\ast \mathcal{O}_X$ is surjective. On the other hand, surjectivity of a sheaf morphism can be checked on stalks. Choose an arbitrary $p\in X$. Then we can first choose an open affine subset $U$ of $p$, and if necessary restrict $U$ so that $f(U)$ lies in some open affine subset $V$ of $Y$. Then $U\times_VU$ is an open neighborhood of $\Delta(p)$, and on this $\Delta: U \rightarrow U\times_VU$ is a closed immersion by the following [Lemma 5](#lem5), and the proof is complete.
+By definition, if $f$ is separated then it is obvious that $\Delta(X)$ is closed. Thus we assume $\Delta(X)$ is closed and show that $\Delta$ is a closed immersion. It is obvious that $\Delta(X)$ becomes a closed subset of $$X\times_YX$$, so it suffices to show that $$\mathcal{O}_{X\times_YX} \rightarrow \Delta_\ast \mathcal{O}_X$$ is surjective. On the other hand, surjectivity of a sheaf morphism can be checked on stalks. Choose an arbitrary $p\in X$. Then we can first choose an open affine subset $U$ of $p$, and if necessary restrict $U$ so that $f(U)$ lies in some open affine subset $V$ of $Y$. Then $$U\times_VU$$ is an open neighborhood of $\Delta(p)$, and on this $$\Delta: U \rightarrow U\times_VU$$ is a closed immersion by the following [Lemma 5](#lem5), and the proof is complete.
 
 </details>
 
@@ -138,7 +138,7 @@ From this we obtain the following.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**Definition 8**</ins> $f:X \rightarrow Y$ is called *universally closed* if $f$ is a closed map and for any $Y' \rightarrow Y$, the morphism $X\times_Y Y' \rightarrow Y'$ is also closed. A finite type morphism that is separated and universally closed is called a *proper morphism*.
+<ins id="def8">**Definition 8**</ins> $f:X \rightarrow Y$ is called *universally closed* if $f$ is a closed map and for any $Y' \rightarrow Y$, the morphism $$X\times_Y Y' \rightarrow Y'$$ is also closed. A finite type morphism that is separated and universally closed is called a *proper morphism*.
 
 </div>
 

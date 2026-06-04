@@ -19,9 +19,9 @@ translated_at: 2026-05-30T03:45:31+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-30T03:45:31+00:00
 ---
-In previous posts we defined divisors on a variety $$X$$ and saw that their linear equivalence classes form $\Cl(X)$. However, not every divisor arises as the zero or pole locus of a rational function. For example, since $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$ ([§Divisors, ⁋Example 11](/en/math/algebraic_varieties/divisors#ex11)), a general divisor $dH$ on $$\mathbb{P}^n$$ is the zero set of a function only when $d \ge 0$.
+In previous posts we defined divisors on a variety $$X$$ and saw that their linear equivalence classes form $$\Cl(X)$$. However, not every divisor arises as the zero or pole locus of a rational function. For example, since $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$ ([§Divisors, ⁋Example 11](/en/math/algebraic_varieties/divisors#ex11)), a general divisor $$dH$$ on $$\mathbb{P}^n$$ is the zero set of a function only when $$d \ge 0$$.
 
-To overcome this restriction we introduce the notion of a *line bundle*. A line bundle $$\mathcal{L}$$ is a geometric object that assigns a one-dimensional vector space to each point $$p \in X$$, and a section $$s$$ of $$\mathcal{L}$$ naturally defines a divisor $\divisor(s)$. From this viewpoint, for any divisor $$D$$ we can construct a line bundle $$\mathcal{O}_X(D)$$ whose sections correspond to divisors greater than or equal to $$D$$. In other words, line bundles let us treat divisors independently of the constraint that they be zeros or poles of functions.
+To overcome this restriction we introduce the notion of a *line bundle*. A line bundle $$\mathcal{L}$$ is a geometric object that assigns a one-dimensional vector space to each point $$p \in X$$, and a section $$s$$ of $$\mathcal{L}$$ naturally defines a divisor $$\divisor(s)$$. From this viewpoint, for any divisor $$D$$ we can construct a line bundle $$\mathcal{O}_X(D)$$ whose sections correspond to divisors greater than or equal to $$D$$. In other words, line bundles let us treat divisors independently of the constraint that they be zeros or poles of functions.
 
 ## Definition of a Line Bundle
 
@@ -40,7 +40,7 @@ Line bundles, and more generally vector bundles which we define later in this po
 
 </div>
 
-A *morphism* $\varphi \colon \mathcal{L} \to \mathcal{M}$ between two line bundles $\mathcal{L}, \mathcal{M} \to X$ defines a $$\mathbb{K}$$-linear map $\varphi_p \colon \mathcal{L}_p \to \mathcal{M}_p$ on each fiber, and over a suitable open cover $\{U_k\}$ it can be expressed as an $\mathcal{O}_X(U_k)$-module homomorphism
+A *morphism* $$\varphi \colon \mathcal{L} \to \mathcal{M}$$ between two line bundles $$\mathcal{L}, \mathcal{M} \to X$$ defines a $$\mathbb{K}$$-linear map $$\varphi_p \colon \mathcal{L}_p \to \mathcal{M}_p$$ on each fiber, and over a suitable open cover $$\{U_k\}$$ it can be expressed as an $$\mathcal{O}_X(U_k)$$-module homomorphism
 
 $$\varphi_k \colon \mathcal{O}_{U_k} \to \mathcal{O}_{U_k}$$
 
@@ -48,7 +48,7 @@ satisfying
 
 $$g^{\mathcal{M}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{L}}_{kl}.$$
 
-Since the fiber of a line bundle is one-dimensional, each $\varphi_k$ is given by multiplication by some $h_k \in \mathcal{O}_X(U_k)$, i.e. $s \mapsto h_k s$. When $$\varphi$$ is bijective on every fiber, we call it an *isomorphism* and write $\mathcal{L} \cong \mathcal{M}$. Because the fiber is one-dimensional, this is equivalent to giving a nonzero scalar at each point, i.e. to choosing $h_k \in \mathcal{O}_X(U_k)^\ast$ compatibly.
+Since the fiber of a line bundle is one-dimensional, each $$\varphi_k$$ is given by multiplication by some $$h_k \in \mathcal{O}_X(U_k)$$, i.e. $$s \mapsto h_k s$$. When $$\varphi$$ is bijective on every fiber, we call it an *isomorphism* and write $$\mathcal{L} \cong \mathcal{M}$$. Because the fiber is one-dimensional, this is equivalent to giving a nonzero scalar at each point, i.e. to choosing $$h_k \in \mathcal{O}_X(U_k)^\ast$$ compatibly.
 
 The following proposition follows directly from the definition of the cocycle condition.
 
@@ -268,7 +268,7 @@ Another common notation for the space of global sections is $$H^0(X, \mathcal{L}
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)) = 0.$$
 
-To verify this, by [Example 12](#ex12) we have $$\mathcal{O}(-1)(U_i) = \x_i^{-1} \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$, and the trivialization is given by $$\phi_i(s) = s \cdot \x_i$$. Hence the trivialized section $\phi_i(s)$ lies in $\mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$, and on $$U_i \cap U_j$$ the cocycle condition requires
+To verify this, by [Example 12](#ex12) we have $$\mathcal{O}(-1)(U_i) = \x_i^{-1} \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$, and the trivialization is given by $$\phi_i(s) = s \cdot \x_i$$. Hence the trivialized section $$\phi_i(s)$$ lies in $$\mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$$, and on $$U_i \cap U_j$$ the cocycle condition requires
 
 $$\phi_j(s) = (\x_j/\x_i)\, \phi_i(s).$$
 
@@ -392,7 +392,7 @@ Therefore $$\{g_{ij} \circ \varphi\}$$ satisfies the cocycle condition.
 
 Since $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast \mathcal{L} \otimes \varphi^\ast \mathcal{M}$$ and $$\varphi^\ast \mathcal{O}_Y \cong \mathcal{O}_X$$, pullback is a group homomorphism.
 
-To verify this from the transition function viewpoint, the transition function of $$\mathcal{L} \otimes \mathcal{M}$$ is $$g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}$$, so the transition function of $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M})$$ is $$(g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}) \circ \varphi = (g_{ij}^{\mathcal{L}} \circ \varphi)(g_{ij}^{\mathcal{M}} \circ \varphi)$$. These are precisely the transition functions of $$\varphi^\ast\mathcal{L}$$ and $\varphi^\ast\mathcal{M}$ respectively, so we obtain $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast\mathcal{L} \otimes \varphi^\ast\mathcal{M}$$. Moreover, the transition functions of $$\mathcal{O}_Y$$ are all $$1$$, so the transition functions of $$\varphi^\ast\mathcal{O}_Y$$ are also $$1$$, i.e. $$\varphi^\ast\mathcal{O}_Y \cong \mathcal{O}_X$$.
+To verify this from the transition function viewpoint, the transition function of $$\mathcal{L} \otimes \mathcal{M}$$ is $$g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}$$, so the transition function of $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M})$$ is $$(g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}) \circ \varphi = (g_{ij}^{\mathcal{L}} \circ \varphi)(g_{ij}^{\mathcal{M}} \circ \varphi)$$. These are precisely the transition functions of $$\varphi^\ast\mathcal{L}$$ and $$\varphi^\ast\mathcal{M}$$ respectively, so we obtain $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast\mathcal{L} \otimes \varphi^\ast\mathcal{M}$$. Moreover, the transition functions of $$\mathcal{O}_Y$$ are all $$1$$, so the transition functions of $$\varphi^\ast\mathcal{O}_Y$$ are also $$1$$, i.e. $$\varphi^\ast\mathcal{O}_Y \cong \mathcal{O}_X$$.
 
 </details>
 
@@ -446,7 +446,7 @@ The tautological bundle $$\mathcal{O}_{\mathbb{P}^n}(-1)$$ on $$\mathbb{P}^n$$ d
 1. *Tautological bundle* $$S$$: a rank-$$k$$ vector bundle assigning to each point $$[V] \in \Gr(k, n)$$ (where $$V \subseteq \mathbb{A}^n$$ is a $$k$$-dimensional subspace) the subspace $$V$$ itself as fiber.
    $$S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$$
 
-2. *Quotient bundle* $$Q$$: a rank-$(n-k)$ vector bundle assigning to each point $$[V]$$ the quotient space $$\mathbb{A}^n / V$$ as fiber.
+2. *Quotient bundle* $$Q$$: a rank-$$(n-k)$$ vector bundle assigning to each point $$[V]$$ the quotient space $$\mathbb{A}^n / V$$ as fiber.
    $$Q = \{([V], [w]) \in \Gr(k, n) \times (\mathbb{A}^n / S) \mid [w] \in \mathbb{A}^n / V\}$$
 
 </div>
@@ -455,7 +455,7 @@ There is a natural short exact sequence between them.
 
 $$0 \to S \to \mathcal{O}_{\Gr(k,n)}^{\oplus n} \to Q \to 0$$
 
-Here the middle term is $$\Gr(k, n) \times \mathbb{A}^n$$, the trivial bundle of rank $$n$$. The first map is the inclusion $([V], v) \in S \mapsto ([V], v) \in \mathcal{O}^{\oplus n}$, and the second map is the quotient map sending $$([V], w) \in \mathcal{O}^{\oplus n}$$ to $$([V], [w]) \in Q$$.
+Here the middle term is $$\Gr(k, n) \times \mathbb{A}^n$$, the trivial bundle of rank $$n$$. The first map is the inclusion $$([V], v) \in S \mapsto ([V], v) \in \mathcal{O}^{\oplus n}$$, and the second map is the quotient map sending $$([V], w) \in \mathcal{O}^{\oplus n}$$ to $$([V], [w]) \in Q$$.
 
 <div class="proposition" markdown="1">
 

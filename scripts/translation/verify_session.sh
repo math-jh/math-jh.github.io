@@ -21,13 +21,22 @@ set -euo pipefail
 SESSION="translation-verify"
 MODEL="haiku"
 LAUNCH_CWD="/home/junhyeok/math-jh.github.io"   # already-trusted dir (avoids trust dialog)
-PROMPT_FILE="${1:?usage: verify_session.sh <prompt_file>}"
 
 # cron's PATH is minimal — resolve binaries explicitly.
 if command -v claude >/dev/null 2>&1; then CLAUDE_BIN="$(command -v claude)"
 elif [ -x "$HOME/.local/bin/claude" ]; then CLAUDE_BIN="$HOME/.local/bin/claude"
 else CLAUDE_BIN="claude"; fi
 if command -v tmux >/dev/null 2>&1; then TMUX_BIN="$(command -v tmux)"; else TMUX_BIN="tmux"; fi
+
+# `--kill`: tear down the session. The worker calls this at the end of every run
+# so the session never lingers idle between cron ticks (it is re-created lazily on
+# the next verify). No-op if the session doesn't exist.
+if [ "${1:-}" = "--kill" ]; then
+  "$TMUX_BIN" kill-session -t "$SESSION" 2>/dev/null || true
+  exit 0
+fi
+
+PROMPT_FILE="${1:?usage: verify_session.sh <prompt_file> | --kill}"
 
 # claude's TUI shows an interrupt hint while a turn runs (busy). wait_idle also
 # falls back to output-stability, so a wrong marker degrades gracefully.

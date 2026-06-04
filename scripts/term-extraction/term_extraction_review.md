@@ -3708,3 +3708,15 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `principal Cartier divisor` | multi-word English emphasis — possibly a definition |
 
+## 스펙트럼
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Spectrums.md`
+- permalink: `/ko/math/scheme_theory/spectrums`
+- scanned: 2026-06-04T11:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `ideal` | looks like emphasis (no <sub> partner) |
+| `minimal` | looks like emphasis (no <sub> partner) |
+| `라 하고, 각각의 $$x_i$$들을 $$x$$의` | mixed-script emphasis — possibly a definition |
+| `모든` | looks like emphasis (no <sub> partner) |
+

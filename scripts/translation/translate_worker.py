@@ -69,6 +69,20 @@ CLAUDE_VERIFY_SCRIPT       = str(SCRIPT_DIR / "verify_session.sh")
 CLAUDE_VERIFY_DIR          = Path("/tmp/translation-verify")
 CLAUDE_VERIFY_SEND_TIMEOUT = 120             # cold launch (spawn + wait_ready) headroom
 CLAUDE_VERIFY_DONE_TIMEOUT = 240             # max wait for the session to write `.done`
+
+# Set True once a verify session is used in a run; main() tears the session down
+# at the end of the run (it is reused across calls *within* a run, then killed so
+# it never lingers idle between cron ticks — re-created lazily on the next verify).
+_verify_session_used = False
+
+
+def kill_verify_session() -> None:
+    """Kill the translation-verify tmux session (no-op if absent)."""
+    try:
+        subprocess.run(["bash", CLAUDE_VERIFY_SCRIPT, "--kill"],
+                       capture_output=True, timeout=15)
+    except Exception:
+        pass
 MIN_KO_BODY_CHARS     = 300                  # skip stubs below this
 FAIL_RETRY_AFTER_SEC  = 24 * 3600
 POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # (unused) polish is now one-time; see Phase 3
@@ -501,6 +515,7 @@ Conversion rules for the body:
 1. Math content: preserve every `$$...$$` block VERBATIM — same LaTeX, same count, same order, AND the SAME DELIMITER. A KO `$$...$$` display block MUST remain a `$$...$$` display block in EN; never downgrade a display block into inline `$...$`. Likewise keep inline `$...$` inline. Do not translate variable names or LaTeX commands.
    - WRONG: KO `... 사상 $$f\\colon X \\to Y$$ 가 주어지면 ...` → EN `... given a map $f\\colon X \\to Y$, ...` (display block collapsed into inline — FORBIDDEN).
    - RIGHT: EN `... given a map $$f\\colon X \\to Y$$, ...` (delimiter preserved).
+   - Single `$...$` is correct ONLY inside `\\text{...}`/`\\tag{...}` (within a `$$` block) or inside inline HTML tags (`<cap>`, `<phrase>`, `<em>`, `<em-ko>`); preserve those. A top-level single `$...$` whose content has an unescaped `_` or `*` is broken (kramdown parses it as emphasis) — put such math in `$$...$$`.
 
 2. Cross-reference links:
    - Path: `/ko/...` → `/en/...` (slug stays the same).
@@ -557,7 +572,7 @@ Given the Korean source body (for meaning reference) and the current English tra
 
 # What to preserve VERBATIM — mathematical fidelity is non-negotiable
 
-1. **Math blocks `$$...$$`** — byte-for-byte: LaTeX commands, variable names, spacing, ordering, AND delimiter. The COUNT and ORDER of `$$...$$` display blocks MUST match the KO source exactly. NEVER downgrade a `$$...$$` display block into inline `$...$` (and never promote inline into display). Easiest rule: never touch what is inside `$$...$$`, and never change a `$$` delimiter into `$`.
+1. **Math blocks `$$...$$`** — byte-for-byte: LaTeX commands, variable names, spacing, ordering, AND delimiter. The COUNT and ORDER of `$$...$$` display blocks MUST match the KO source exactly. NEVER downgrade a `$$...$$` display block into inline `$...$` (and never promote inline into display). Easiest rule: never touch what is inside `$$...$$`, and never change a `$$` delimiter into `$`. Single `$...$` is legitimate ONLY inside `\\text{...}`/`\\tag{...}` or inside inline HTML tags (`<cap>`, `<phrase>`, `<em>`, `<em-ko>`); preserve it there and use `$$...$$` everywhere else.
 2. **`<ins id="...">**Label N**</ins>` numbering** — every `<ins>` id (e.g. `def1`, `prop2`) and the integer N MUST appear with the same id and N, in the same order as in the KO source.
 3. Cross-reference **paths** (`/en/math/...`) and **anchors** (`#def1`, `#prop2`) — unchanged. Visible labels may be lightly refined only if materially clearer.
    - **Verification rule**: do NOT change an anchor target or invent a new `[display](url)` pairing unless you have actually seen the target with that exact form. If unsure, leave the existing form untouched.
@@ -1020,6 +1035,8 @@ def call_claude_verify(prompt: str) -> str:
     an empty verdict. `claude -p` is deliberately avoided — it bills the
     pay-as-you-go API safety net, not the subscription (see constants above).
     """
+    global _verify_session_used
+    _verify_session_used = True
     in_dir, out_dir = CLAUDE_VERIFY_DIR / "in", CLAUDE_VERIFY_DIR / "out"
     in_dir.mkdir(parents=True, exist_ok=True)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -1431,6 +1448,8 @@ def main() -> int:
         return 0
     finally:
         release_lock()
+        if _verify_session_used:
+            kill_verify_session()
 
 
 if __name__ == "__main__":

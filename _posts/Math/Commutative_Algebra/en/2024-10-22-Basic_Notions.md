@@ -18,7 +18,7 @@ translated_at: 2026-05-30T20:00:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-30T20:00:03+00:00
 ---
-In every post in this category, a ring means a commutative ring. Also, an arbitrary $$A$$-algebra is always understood to be a commutative associative unital $$A$$-algebra. In particular, since we observed after [\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1) that an associative unital $$A$$-algebra $$E$$ is the same thing as a ring homomorphism $$A\rightarrow Z(E)$, it suffices in what follows to think of an $$A$$-algebra as a ring homomorphism $$A\rightarrow E$$.
+In every post in this category, a ring means a commutative ring. Also, an arbitrary $$A$$-algebra is always understood to be a commutative associative unital $$A$$-algebra. In particular, since we observed after [\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1) that an associative unital $$A$$-algebra $$E$$ is the same thing as a ring homomorphism $$A\rightarrow Z(E)$$, it suffices in what follows to think of an $$A$$-algebra as a ring homomorphism $$A\rightarrow E$$.
 
 ## Basic Definitions
 
