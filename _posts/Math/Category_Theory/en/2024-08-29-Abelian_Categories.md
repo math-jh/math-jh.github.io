@@ -5,9 +5,6 @@ excerpt: "Abelian Categories"
 
 categories: [Math / Category Theory]
 permalink: /en/math/category_theory/abelian_categories
-header:
-    overlay_image: /assets/images/Math/Category_Theory/Abelian_Categories.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "category_theory-en"
 

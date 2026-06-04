@@ -5,9 +5,6 @@ excerpt: "Étale algebra를 통한 separable extension의 특성화"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/separable_extensions
-header:
-    overlay_image: /assets/images/Math/Field_Theory/Separable_Extensions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-ko"
 

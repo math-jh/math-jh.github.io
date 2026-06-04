@@ -5,9 +5,6 @@ excerpt: "Connected spaces, path-connectedness, and connected components"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/connected_spaces
-header:
-    overlay_image: /assets/images/Math/Topology/Connected_Spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

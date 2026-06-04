@@ -5,9 +5,6 @@ excerpt: "리만 다양체 위의 metric-compatible torsion-free connection"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/Levi-Civita_connection
-header:
-    overlay_image: /assets/images/Math/Riemannian_Geometry/Levi-Civita_Connection.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "riemannian_geometry-ko"
 

@@ -6,10 +6,6 @@ excerpt: "Reflexive polytope과 그에 대응하는 Gorenstein Fano 토릭 다�
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/reflexive_polytope_fano
 
-header:
-    overlay_image: /assets/images/Math/Toric_Geometry/Reflexive_Polytope_and_Fano_Variety.png
-    overlay_filter: 0.5
-
 sidebar:
     nav: "toric_geometry-ko"
 

@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/lie_theory/
 header:
-  overlay_image: /assets/images/Math/Lie_Theory/Lie_Theory.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 100
+excerpt: "Lie theory studies Lie groups, which carry continuous symmetry, and their infinitesimal counterparts, Lie algebras. Through the exponential map, root systems, and weights, it connects geometry and representation theory."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

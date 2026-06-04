@@ -5,9 +5,6 @@ excerpt: "Four perspectives on scheme morphisms as morphisms of locally ringed s
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/morphism_of_schemes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Morphism_of_schemes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-en"
 

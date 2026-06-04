@@ -5,9 +5,6 @@ excerpt: "Ideal의 곱과 comaximal ideal에 대한 중국인의 나머지정리
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/chinese_remainder_theorem
-header:
-    overlay_image: /assets/images/Math/Ring_Theory/Chinese_Remainder_Theorem.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "ring_theory-ko"
 

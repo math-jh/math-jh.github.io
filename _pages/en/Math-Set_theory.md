@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/set_theory/
 header:
-  overlay_image: /assets/images/Math/Set_Theory/Set_Theory.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 274
+excerpt: "Set theory is the foundation of mathematics, concerned with sets, their operations, and the infinite. Through relations and functions, ordinals and cardinals, and the axiom of choice, it supplies the language every later field rests on."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

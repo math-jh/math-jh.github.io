@@ -5,9 +5,6 @@ excerpt: "Graded algebra 위 derivation을 갖는 differential module"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/differential_modules
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Differential_Modules.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"
 

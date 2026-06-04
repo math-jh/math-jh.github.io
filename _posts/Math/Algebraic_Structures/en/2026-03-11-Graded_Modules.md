@@ -5,9 +5,6 @@ excerpt: "The definition of graded modules over a graded ring"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/graded_modules
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Graded_Modules.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-en"
 

@@ -5,9 +5,6 @@ excerpt: "The Proj construction from a graded ring and projective schemes"
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/projective_schemes
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Projective_schemes.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "scheme_theory-en"
 

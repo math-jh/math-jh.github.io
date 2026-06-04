@@ -8,9 +8,6 @@ permalink: /ko/math/linear_algebra/eigenspace_decomposition
 sidebar: 
     nav: "linear_algebra-ko"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Eigenspace_Decomposition.png
-    overlay_filter: 0.5
 
 date: 2022-09-18
 last_modified_at: 2022-09-18

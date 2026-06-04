@@ -8,10 +8,6 @@ permalink: /ko/math/algebraic_varieties/chern_classes
 sidebar: 
     nav: "algebraic_varieties-ko"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Chern_classes.png
-    overlay_filter: 0.5
-
 date: 2026-05-12
 last_modified_at: 2026-05-12
 weight: 22

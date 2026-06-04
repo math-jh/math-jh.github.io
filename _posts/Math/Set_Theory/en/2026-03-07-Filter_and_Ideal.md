@@ -5,9 +5,6 @@ excerpt: "Filter and ideal"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/filter_and_ideal
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Filter_and_Ideal.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

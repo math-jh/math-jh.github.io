@@ -5,9 +5,6 @@ excerpt: "Dynkin diagrams, ADE classification, and flag varieties"
 
 categories: [Math / Lie Theory]
 permalink: /en/math/lie_theory/borel_subgroup
-header:
-    overlay_image: /assets/images/Math/Lie_Theory/Borel_Subgroup.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "Lie_theory-en"
 

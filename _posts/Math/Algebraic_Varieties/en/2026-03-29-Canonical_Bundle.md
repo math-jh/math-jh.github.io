@@ -7,10 +7,6 @@ permalink: /en/math/algebraic_varieties/canonical_bundle
 sidebar:
     nav: "algebraic_varieties-en"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Canonical_Bundle.png
-    overlay_filter: 0.5
-
 date: 2026-03-29
 last_modified_at: 2026-04-22
 weight: 11

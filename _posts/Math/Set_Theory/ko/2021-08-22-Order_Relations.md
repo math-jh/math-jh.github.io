@@ -5,9 +5,6 @@ excerpt: "순서관계의 정의와 성질들"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/order_relations
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Order_Relations.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
 

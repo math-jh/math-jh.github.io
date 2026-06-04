@@ -5,9 +5,6 @@ excerpt: "Jacobson ring과 Hilbert Nullstellensatz의 증명"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/nullstellensatz
-header:
-    overlay_image: /assets/images/Math/Commutative_Algebra/Nullstellensatz.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "commutative_algebra-ko"
 

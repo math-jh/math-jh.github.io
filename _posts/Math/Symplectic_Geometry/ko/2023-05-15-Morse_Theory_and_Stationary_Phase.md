@@ -5,9 +5,6 @@ excerpt: "Morse function의 critical point와 oscillating integral의 점근전�
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/morse_stationary_phase
-header:
-    overlay_image: /assets/images/Math/Symplectic_Geometry/morse_stationary_phase.png
-    overlay_filter: 0.5
 sidebar:
     nav: "symplectic_geometry-ko"
 

@@ -5,9 +5,6 @@ excerpt: "긴 완전열"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/long_exact_sequence
-header:
-    overlay_image: /assets/images/Math/Homological_Algebra/Long_Exact_Sequence.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "homological_algebra-ko"
 

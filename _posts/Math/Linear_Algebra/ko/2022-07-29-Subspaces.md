@@ -8,9 +8,6 @@ permalink: /ko/math/linear_algebra/subspaces
 sidebar: 
     nav: "linear_algebra-ko"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Subspaces.png
-    overlay_filter: 0.5
 
 date: 2022-07-29
 last_modified_at: 2022-07-29

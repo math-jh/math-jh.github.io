@@ -5,9 +5,6 @@ excerpt: "Ring homomorphism을 통한 restriction과 extension of scalars"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/change_of_base_ring
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Change_of_Base_Ring.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 

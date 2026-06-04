@@ -8,9 +8,6 @@ permalink: /en/math/linear_algebra/existence_and_uniqueness_of_determinant
 sidebar: 
     nav: "linear_algebra-en"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Existence_and_Uniqueness_of_Determinant.png
-    overlay_filter: 0.5
 
 date: 2022-08-12
 last_modified_at: 2022-08-12

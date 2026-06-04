@@ -4,9 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/set_theory/
 header:
-  overlay_image: /assets/images/Math/Set_Theory/Set_Theory.png
-  overlay_filter: 0.5
-excerpt: "집합론은 집합과 그 위의 연산, 그리고 무한을 다루는 수학의 토대이다. 관계와 함수, 순서수와 기수, 선택공리를 거치며 이후 모든 분야가 딛고 설 언어를 마련한다."
+  overlay_color: "transparent"
+hero_hue: 274
+excerpt: "집합론은 집합과 그 위의 연산, 그리고 무한을 다루는 수학의 토대이다. 관계와 함수, 순서수와 기수, 선택공리를 거치며 이후 모든 분야가 딛고 설 근간이 된다."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

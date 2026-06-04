@@ -5,9 +5,6 @@ excerpt: ""
 
 categories: [Misc / Peripherals]
 permalink: /ko/misc/peripherals/tools/automator
-header:
-    overlay_image: 
-    overlay_filter: 0.5
 toc: false
 date: 2025-07-04
 last_modified_at: 2025-07-04

@@ -5,9 +5,6 @@ excerpt: "Examples of equivalence relations, saturation of equivalence relations
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/examples_of_equivalence
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Examples_of_Equivalence.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

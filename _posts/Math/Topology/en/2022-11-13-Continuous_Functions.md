@@ -5,9 +5,6 @@ excerpt: "Properties of continuous functions"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/continuous_functions
-header:
-    overlay_image: /assets/images/Math/Topology/Continuous_Functions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

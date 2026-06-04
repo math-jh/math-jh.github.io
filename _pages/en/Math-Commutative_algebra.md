@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/commutative_algebra/
 header:
-  overlay_image: /assets/images/Math/Commutative_Algebra/Commutative_Algebra.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 231
+excerpt: "Commutative algebra studies commutative rings and the modules over them. Through localization, primary decomposition, and dimension theory, it provides the local foundation of algebraic geometry."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

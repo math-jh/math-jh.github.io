@@ -5,9 +5,6 @@ excerpt: "The definition of étale algebras over a field and a characterization 
 
 categories: [Math / Field Theory]
 permalink: /en/math/field_theory/etale_algebras
-header:
-    overlay_image: /assets/images/Math/Field_Theory/Etale_Algebras.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-en"
 

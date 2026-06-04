@@ -5,9 +5,6 @@ excerpt: "The definition of a Galois extension satisfying both normal and separa
 
 categories: [Math / Field Theory]
 permalink: /en/math/field_theory/galois_extension
-header:
-    overlay_image: /assets/images/Math/Field_Theory/Galois_Extension.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-en"
 

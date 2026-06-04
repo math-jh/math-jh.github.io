@@ -5,9 +5,6 @@ excerpt: "The Galois correspondence between subgroups and intermediate fields"
 
 categories: [Math / Field Theory]
 permalink: /en/math/field_theory/fundamental_theorem_of_galois_theory
-header:
-    overlay_image: /assets/images/Math/Field_Theory/Fundamental_Theorem_of_Galois_Theory.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "field_theory-en"
 

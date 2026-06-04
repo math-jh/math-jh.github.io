@@ -6,9 +6,6 @@ excerpt: "Inverse and Composition of Binary Relations"
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/operation_of_binary_relations
 
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Operation_of_Binary_Relations.png
-    overlay_filter: 0.5
 
 sidebar: 
     nav: "set_theory-en"

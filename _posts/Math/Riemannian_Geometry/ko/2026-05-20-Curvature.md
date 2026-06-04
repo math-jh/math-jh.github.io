@@ -5,9 +5,6 @@ excerpt: "Parallel transport의 path-dependence를 측정하는 Riemann 곡률 �
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/curvature
-header:
-    overlay_image: /assets/images/Math/Riemannian_Geometry/Curvature.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "riemannian_geometry-ko"
 

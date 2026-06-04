@@ -5,9 +5,6 @@ excerpt: "Bases, subbases, and local bases of a topological space"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/topological_bases
-header:
-    overlay_image: /assets/images/Math/Topology/Topological_Bases.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

@@ -8,10 +8,6 @@ permalink: /ko/math/calculus/applications_of_derivatives
 sidebar: 
     nav: "calculus-ko"
 
-header:
-    overlay_image: /assets/images/Math/Calculus/Applications_of_Derivatives.png
-    overlay_filter: 0.5
-
 date: 2026-06-02
 last_modified_at: 2026-06-02
 weight: 6

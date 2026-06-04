@@ -5,9 +5,6 @@ excerpt: "Definition of character functions and orthogonality relations"
 
 categories: [Math / Representation Theory]
 permalink: /en/math/representation_theory/character_theory
-header:
-    overlay_image: /assets/images/Math/Representation_Theory/Character_Theory.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "representation_theory-en"
 

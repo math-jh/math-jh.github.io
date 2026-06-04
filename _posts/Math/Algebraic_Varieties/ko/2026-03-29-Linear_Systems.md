@@ -8,10 +8,6 @@ permalink: /ko/math/algebraic_varieties/linear_systems
 sidebar:
     nav: "algebraic_varieties-ko"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Linear_Systems.png
-    overlay_filter: 0.5
-
 date: 2026-03-29
 last_modified_at: 2026-05-04
 weight: 10

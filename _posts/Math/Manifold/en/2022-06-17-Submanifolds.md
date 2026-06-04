@@ -5,9 +5,6 @@ excerpt: "Substructures of differentiable manifolds"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/submanifolds
-header:
-    overlay_image: /assets/images/Math/Manifold/Submanifolds.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

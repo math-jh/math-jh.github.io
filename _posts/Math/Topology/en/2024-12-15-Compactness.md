@@ -5,9 +5,6 @@ excerpt: "Tychonoff's theorem, local compactness, and paracompactness"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/compactness
-header:
-    overlay_image: /assets/images/Math/Topology/Compactness.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 

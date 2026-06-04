@@ -5,9 +5,6 @@ excerpt: "Vector fields"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/vector_fields
-header:
-    overlay_image: /assets/images/Math/Manifold/Vector_Fields.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

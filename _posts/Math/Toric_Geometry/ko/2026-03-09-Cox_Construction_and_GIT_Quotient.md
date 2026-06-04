@@ -6,10 +6,6 @@ excerpt: "토릭 다양체의 homogeneous coordinate ring과 GIT quotient 표현
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/cox_construction
 
-header:
-    overlay_image: /assets/images/Math/Toric_Geometry/cox_construction.png
-    overlay_filter: 0.5
-
 sidebar:
     nav: "toric_geometry-ko"
 

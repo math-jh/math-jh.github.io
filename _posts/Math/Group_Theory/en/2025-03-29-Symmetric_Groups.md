@@ -5,9 +5,6 @@ excerpt: "Cycle decomposition and sign of the symmetric group, and the alternati
 
 categories: [Math / Group Theory]
 permalink: /en/math/group_theory/symmetric_groups
-header:
-    overlay_image: /assets/images/Math/Group_Theory/Symmetric_Groups.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "group_theory-en"
 

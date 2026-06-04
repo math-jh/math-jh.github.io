@@ -5,9 +5,6 @@ excerpt: "Orientation on a manifold"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/orientation
-header:
-    overlay_image: /assets/images/Math/Manifold/Orientation.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

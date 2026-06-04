@@ -5,9 +5,6 @@ excerpt: "Greatest, least, maximal, and minimal elements of ordered sets"
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/elements_in_ordered_set
-header: 
-    overlay_image: /assets/images/Math/Set_Theory/Elements_in_Ordered_Set.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-en"
 

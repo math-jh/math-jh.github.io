@@ -5,9 +5,6 @@ excerpt: "Group extensions as short exact sequences, and semidirect products"
 
 categories: [Math / Group Theory]
 permalink: /en/math/group_theory/extensions
-header:
-    overlay_image: /assets/images/Math/Group_Theory/Extensions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "group_theory-en"
 

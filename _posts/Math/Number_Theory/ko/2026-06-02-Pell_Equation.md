@@ -8,10 +8,6 @@ permalink: /ko/math/number_theory/pell_equation
 sidebar: 
     nav: "number_theory-ko"
 
-header:
-    overlay_image: /assets/images/Math/Number_Theory/Pell_Equation.png
-    overlay_filter: 0.5
-
 date: 2026-06-02
 last_modified_at: 2026-06-02
 weight: 16

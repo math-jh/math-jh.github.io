@@ -8,9 +8,6 @@ permalink: /en/math/linear_algebra/determinant
 sidebar: 
     nav: "linear_algebra-en"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Determinant.png
-    overlay_filter: 0.5
 
 date: 2022-03-07
 last_modified_at: 2022-08-07

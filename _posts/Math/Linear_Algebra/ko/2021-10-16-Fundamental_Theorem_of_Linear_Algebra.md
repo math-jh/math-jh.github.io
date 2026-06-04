@@ -8,9 +8,6 @@ permalink: /ko/math/linear_algebra/ftla
 sidebar: 
     nav: "linear_algebra-ko"
 
-header:
-    overlay_image: /assets/images/Math/Linear_Algebra/Fundamental_Theorem_of_Linear_Algebra-categorical_Viewpoint.png
-    overlay_filter: 0.5
 
 date: 2021-10-16
 last_modified_at: 2022-08-07

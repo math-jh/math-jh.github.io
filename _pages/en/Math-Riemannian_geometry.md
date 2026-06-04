@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/riemannian_geometry/
 header:
-  overlay_image: /assets/images/Math/Riemannian_Geometry/Riemannian_Geometry.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 116
+excerpt: "Riemannian geometry equips manifolds with a metric measuring length and angle, and studies their curvature. Through geodesics and the curvature tensor, it handles the geometry of curved spaces."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

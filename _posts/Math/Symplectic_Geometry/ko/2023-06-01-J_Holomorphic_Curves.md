@@ -5,9 +5,6 @@ excerpt: "Almost complex structure에 대한 holomorphic curve와 Gromov compact
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/j_holomorphic_curves
-header:
-    overlay_image: /assets/images/Math/Symplectic_Geometry/J_Holomorphic_Curves.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "symplectic_geometry-ko"
 

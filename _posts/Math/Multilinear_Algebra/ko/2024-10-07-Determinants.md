@@ -5,9 +5,6 @@ excerpt: "Free module 자기사상의 determinant와 기본 성질"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/determinants
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Determinants.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-ko"
 

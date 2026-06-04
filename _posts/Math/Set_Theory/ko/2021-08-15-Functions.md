@@ -5,9 +5,6 @@ excerpt: "함수의 기본 정의"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/functions
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Functions.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
 

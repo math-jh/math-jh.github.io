@@ -5,9 +5,6 @@ excerpt: "Tensor algebras, symmetric algebras, exterior algebras"
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/tensor_algebras
-header:
-    overlay_image: /assets/images/Math/Multilinear_Algebra/Tensor_Algebras.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "multilinear_algebra-en"
 

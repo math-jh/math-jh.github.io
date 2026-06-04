@@ -5,9 +5,6 @@ excerpt: "집합들 사이의 합 (분리합집합)"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/sum_of_sets
-header:
-    overlay_image: /assets/images/Math/Set_Theory/Sum_of_Sets.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "set_theory-ko"
 

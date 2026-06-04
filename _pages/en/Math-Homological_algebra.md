@@ -4,8 +4,9 @@ layout: archive_custom
 regenerate: true
 permalink: /en/homological_algebra/
 header:
-  overlay_image: /assets/images/Math/Homological_Algebra/Homological_Algebra.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 227
+excerpt: "Homological algebra measures the properties of algebraic structures through chain complexes and their homology. Via exact sequences, derived functors, and Ext and Tor, it links topology, geometry, and algebra."
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}

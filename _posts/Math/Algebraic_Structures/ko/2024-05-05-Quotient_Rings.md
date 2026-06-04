@@ -5,9 +5,6 @@ excerpt: "Quotient ring과 ring isomorphism theorems"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/quotient_rings
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Quotient_Rings.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_structures-ko"
 

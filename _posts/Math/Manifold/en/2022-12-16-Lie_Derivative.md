@@ -5,9 +5,6 @@ excerpt: "Lie derivative and Lie bracket"
 
 categories: [Math / Manifold]
 permalink: /en/math/manifold/Lie_derivative
-header:
-    overlay_image: /assets/images/Math/Manifold/Lie_Derivative.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-en"
 

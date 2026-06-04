@@ -4,9 +4,6 @@ excerpt: "Practical computation of homology via relative homology and Mayer–Vi
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/computation_of_homology
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Computation_of_Homology.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-en"
 

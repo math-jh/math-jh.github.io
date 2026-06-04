@@ -8,10 +8,6 @@ permalink: /ko/math/mirror_symmetry/givental_j_function
 sidebar: 
     nav: "mirror_symmetry-ko"
 
-header:
-    overlay_image: /assets/images/Math/Mirror_Symmetry/Givental_J_Function.png
-    overlay_filter: 0.5
-
 date: 2026-05-28
 last_modified_at: 2026-06-02
 weight: 6

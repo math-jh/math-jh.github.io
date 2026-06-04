@@ -5,9 +5,6 @@ excerpt: "Smooth manifold의 정의"
 
 categories: [Math / Manifold]
 permalink: /ko/math/manifold/smooth_manifolds
-header:
-    overlay_image: /assets/images/Math/Manifold/Smooth_Manifolds.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "manifold-ko"
 

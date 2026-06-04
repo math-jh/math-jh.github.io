@@ -4,8 +4,8 @@ layout: archive_custom
 regenerate: true
 permalink: /ko/linear_algebra/
 header:
-  overlay_image: /assets/images/Math/Linear_Algebra/Linear_Algebra.png
-  overlay_filter: 0.5
+  overlay_color: "transparent"
+hero_hue: 249
 excerpt: "선형대수학은 벡터공간과 선형사상을 공부하는 분야이다. 기저와 차원에서 시작해 행렬 표현·고유공간 분해·쌍대공간으로 이어지며, 이후 거의 모든 수학에서 쓰이는 기본 언어를 다진다."
 ---
 {% assign lang = site.locale %}

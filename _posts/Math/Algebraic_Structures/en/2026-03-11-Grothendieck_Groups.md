@@ -4,9 +4,6 @@ excerpt: "The Grothendieck group and the definition of integers"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/Grothendieck_groups
-header:
-    overlay_image: /assets/images/Math/Algebraic_Structures/Grothendieck_Groups.png
-    overlay_filter: 0.5
 sidebar:
     nav: "algebraic_structures-en"
 

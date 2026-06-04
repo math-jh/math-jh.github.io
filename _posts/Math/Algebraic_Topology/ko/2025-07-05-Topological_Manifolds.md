@@ -5,9 +5,6 @@ excerpt: "Locally Euclidean 공간으로서의 topological manifold 정의와 �
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/topological_manifolds
-header:
-    overlay_image: /assets/images/Math/Algebraic_Topology/Topological_Manifolds.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "algebraic_topology-ko"
 

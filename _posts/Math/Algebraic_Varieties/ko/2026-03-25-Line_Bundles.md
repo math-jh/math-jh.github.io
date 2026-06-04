@@ -8,9 +8,6 @@ permalink: /ko/math/algebraic_varieties/line_bundles
 sidebar:
     nav: "algebraic_varieties-ko"
 
-header:
-    overlay_image: /assets/images/Math/Algebraic_Varieties/Line_Bundles.png
-    overlay_filter: 0.5
 
 date: 2026-03-25
 last_modified_at: 2026-04-08

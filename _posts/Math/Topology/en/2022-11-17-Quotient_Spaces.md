@@ -5,9 +5,6 @@ excerpt: "Properties of Subspaces"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/quotient_spaces
-header:
-    overlay_image: /assets/images/Math/Topology/Quotient_Spaces.png
-    overlay_filter: 0.5
 sidebar: 
     nav: "topology-en"
 
