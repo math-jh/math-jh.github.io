@@ -3649,3 +3649,62 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `source` | looks like emphasis (no <sub> partner) |
 
+## 등급환
+- post: `_posts/Math/Algebraic_Structures/ko/2024-08-11-Graded_Rings.md`
+- permalink: `/ko/math/algebraic_structures/graded_rings`
+- scanned: 2026-06-04T09:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `polynomial ring` | multi-word English emphasis — possibly a definition |
+
+## 실로우 정리
+- post: `_posts/Math/Group_Theory/ko/2025-04-07-Sylow_Theorems.md`
+- permalink: `/ko/math/group_theory/Sylow_theorems`
+- scanned: 2026-06-04T09:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유일한` | looks like emphasis (no <sub> partner) |
+
+## 미분가군
+- post: `_posts/Math/Multilinear_Algebra/ko/2025-04-18-Differential_Modules.md`
+- permalink: `/ko/math/multilinear_algebra/differential_modules`
+- scanned: 2026-06-04T10:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `commutative` | looks like emphasis (no <sub> partner) |
+
+## 다항식환
+- post: `_posts/Math/Ring_Theory/ko/2025-05-06-Polynomial_Rings.md`
+- permalink: `/ko/math/ring_theory/polynomial_rings`
+- scanned: 2026-06-04T10:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `leading term` | multi-word English emphasis — possibly a definition |
+| `monic` | looks like emphasis (no <sub> partner) |
+| `order` | looks like emphasis (no <sub> partner) |
+
+## 푸앵카레 쌍대성
+- post: `_posts/Math/Algebraic_Topology/ko/2025-09-23-Poincare_Duality.md`
+- permalink: `/ko/math/algebraic_topology/Poincare_duality`
+- scanned: 2026-06-04T10:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Godement resolution` | multi-word English emphasis — possibly a definition |
+| `무엇인지` | looks like emphasis (no <sub> partner) |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+
+## 인자
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-25-Divisors.md`
+- permalink: `/ko/math/algebraic_varieties/divisors`
+- scanned: 2026-06-04T11:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `principal Cartier divisor` | multi-word English emphasis — possibly a definition |
+

@@ -101,7 +101,7 @@ $$\omega_M^\pre(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underl
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> 예를 들어 $$S^1$$의 orientation double cover $$p:\Spe(\omega_{S^1})\rightarrow S^1$$을 생각하자. 임의의 점 $$x\in S^1$$의 $$p$$에 의한 preimage $$p^{-1}(x)$$는 두 개의 점 $$(p,+)$$와 $$(p,-)$$로 이루어져 있으며, 이는 $$x$$를 포함하는 chart $$U$$에 대해서도 마찬가지가 되어 $$p^{-1}(U)$$가 두 개의 open subset $$U^+,U^-$$로 나뉘게 된다. 
+<ins id="ex5">**예시 5**</ins> 예를 들어 $$S^1$$의 orientation double cover $$p:\Spe(\omega_{S^1})\rightarrow S^1$$을 생각하자. 임의의 점 $$x\in S^1$$의 $$p$$에 의한 preimage $$p^{-1}(x)$$는 두 개의 점 $$(x,+)$$와 $$(x,-)$$로 이루어져 있으며, 이는 $$x$$를 포함하는 chart $$U$$에 대해서도 마찬가지가 되어 $$p^{-1}(U)$$가 두 개의 open subset $$U^+,U^-$$로 나뉘게 된다. 
 
 ![Orientation_cover_of_S1](/assets/images/Math/Algebraic_Topology/Poincare_Duality-1.png){:style="width:45%" class="invert" .align-center}
 

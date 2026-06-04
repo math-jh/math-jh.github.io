@@ -127,7 +127,7 @@ $$x=\sum_{j\in J}\sum_{k\in K_j}\alpha_{jk}x_j,\qquad \text{$(\alpha_{jk})_{j\in
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Homogeneous ideal $$\mathfrak{a}$$에 대하여, $$A/\mathfrak{a}$$가 graded ideal이며, 그 decomposition이 다음 식
+<ins id="prop7">**명제 7**</ins> Homogeneous ideal $$\mathfrak{a}$$에 대하여, $$A/\mathfrak{a}$$가 graded ring이며, 그 decomposition이 다음 식
 
 $$A/\mathfrak{a}=\bigoplus_{i\in I}A_i/(\mathfrak{a}\cap A_i)$$
 

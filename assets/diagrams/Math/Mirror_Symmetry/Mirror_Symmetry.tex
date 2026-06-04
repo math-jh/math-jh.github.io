@@ -368,6 +368,80 @@
   \node[font=\small] at (1.05,-1.05) {$\{1,4\}$};
 \end{tikzpicture}
 
+%% def13: Gr(2,4) plabic graph의 한 perfect orientation, source {1,3}/sink {2,4} (Postnikov_Diagram_and_Plabic_Graph-9.png)
+\begin{tikzpicture}[scale=1.5, >=Stealth,
+   bdot/.style={fill=black, circle, inner sep=1.7pt},
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3pt},
+   bv/.style={draw=black, very thick, fill=black, circle, inner sep=3pt},
+   dedge/.style={black!80, thick, postaction={decorate,
+      decoration={markings, mark=at position 0.56 with {\arrow{Stealth[length=2.4mm]}}}}}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \node[wv] (N) at (0,0.72) {}; \node[bv] (E) at (0.72,0) {};
+  \node[wv] (S) at (0,-0.72) {}; \node[bv] (W) at (-0.72,0) {};
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[dedge] (N)--(E); \draw[dedge] (N)--(W);
+  \draw[dedge] (S)--(E); \draw[dedge] (S)--(W);
+  \draw[dedge] (b1)--(N); \draw[dedge] (b3)--(S);
+  \draw[dedge] (E)--(b4); \draw[dedge] (W)--(b2);
+  \node[wv] at (N) {}; \node[bv] at (E) {}; \node[wv] at (S) {}; \node[bv] at (W) {};
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def13: Gr(2,4) plabic graph의 또 다른 perfect orientation, source {2,4}/sink {1,3} (안쪽 사각형이 유향 cycle) (Postnikov_Diagram_and_Plabic_Graph-10.png)
+\begin{tikzpicture}[scale=1.5, >=Stealth,
+   bdot/.style={fill=black, circle, inner sep=1.7pt},
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3pt},
+   bv/.style={draw=black, very thick, fill=black, circle, inner sep=3pt},
+   dedge/.style={black!80, thick, postaction={decorate,
+      decoration={markings, mark=at position 0.56 with {\arrow{Stealth[length=2.4mm]}}}}}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \node[wv] (N) at (0,0.72) {}; \node[bv] (E) at (0.72,0) {};
+  \node[wv] (S) at (0,-0.72) {}; \node[bv] (W) at (-0.72,0) {};
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[dedge] (W)--(N); \draw[dedge] (N)--(E);
+  \draw[dedge] (E)--(S); \draw[dedge] (S)--(W);
+  \draw[dedge] (b2)--(W); \draw[dedge] (b4)--(E);
+  \draw[dedge] (N)--(b1); \draw[dedge] (S)--(b3);
+  \node[wv] at (N) {}; \node[bv] at (E) {}; \node[wv] at (S) {}; \node[bv] at (W) {};
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
+%% def14: Gr(2,4) perfect orientation (source {1,3}) + 안쪽 변 weight a,b,c,d (Postnikov_Diagram_and_Plabic_Graph-11.png)
+\begin{tikzpicture}[scale=1.5, >=Stealth,
+   bdot/.style={fill=black, circle, inner sep=1.7pt},
+   wv/.style={draw=black, very thick, fill=none, circle, inner sep=3pt},
+   bv/.style={draw=black, very thick, fill=black, circle, inner sep=3pt},
+   dedge/.style={black!80, thick, postaction={decorate,
+      decoration={markings, mark=at position 0.56 with {\arrow{Stealth[length=2.4mm]}}}}}]
+  \def\R{2}
+  \draw[gray!55, thick, densely dashed] (0,0) circle (\R);
+  \node[wv] (N) at (0,0.72) {}; \node[bv] (E) at (0.72,0) {};
+  \node[wv] (S) at (0,-0.72) {}; \node[bv] (W) at (-0.72,0) {};
+  \coordinate (b1) at (90:\R); \coordinate (b2) at (180:\R);
+  \coordinate (b3) at (270:\R); \coordinate (b4) at (0:\R);
+  \draw[dedge] (N)--(E); \draw[dedge] (N)--(W);
+  \draw[dedge] (S)--(E); \draw[dedge] (S)--(W);
+  \draw[dedge] (b1)--(N); \draw[dedge] (b3)--(S);
+  \draw[dedge] (E)--(b4); \draw[dedge] (W)--(b2);
+  \node[wv] at (N) {}; \node[bv] at (E) {}; \node[wv] at (S) {}; \node[bv] at (W) {};
+  \node[font=\small] at (0.55,0.55) {$a$};
+  \node[font=\small] at (-0.55,0.55) {$b$};
+  \node[font=\small] at (0.55,-0.55) {$c$};
+  \node[font=\small] at (-0.55,-0.55) {$d$};
+  \node[gray!70, font=\scriptsize] at (0.22,1.45) {$1$};
+  \node[gray!70, font=\scriptsize] at (0.22,-1.45) {$1$};
+  \node[gray!70, font=\scriptsize] at (1.45,0.2) {$1$};
+  \node[gray!70, font=\scriptsize] at (-1.45,0.2) {$1$};
+  \foreach \p/\lab/\pos in {b1/1/{above}, b2/2/{left}, b3/3/{below}, b4/4/{right}}{
+     \node[bdot] at (\p) {}; \node[\pos=2pt] at (\p) {$\lab$}; }
+\end{tikzpicture}
+
 %% def10: Gr(2,4) Postnikov diagram, 4 strands i->i+2, over/under alternating (Postnikov_Diagram_and_Plabic_Graph-5.png)
 \begin{tikzpicture}[scale=1.3, >=Stealth,
    strand/.style={line width=1.5pt, postaction={decorate,
