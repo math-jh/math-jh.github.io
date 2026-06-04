@@ -40,86 +40,92 @@
         </button>
         {% endif %}
         <div class="settings-dropdown" style="{% unless site.dark_theme or site.multilingual %} display: none; {% endunless %}">
+          <script>
+          /* UI strings for the settings menu, all languages baked in (the
+             masthead is include_cached so it must stay language-agnostic);
+             Multilingual.js picks by page language at runtime. Sourced from
+             _data/ui-text.yml. */
+          window.__ui = window.__ui || {
+            ko: {
+              theme_label: {{ site.data.ui-text.ko.theme_label | default: "테마" | jsonify }},
+              theme_auto: {{ site.data.ui-text.ko.theme_auto | default: "자동" | jsonify }},
+              theme_light: {{ site.data.ui-text.ko.theme_light | default: "라이트" | jsonify }},
+              theme_dark: {{ site.data.ui-text.ko.theme_dark | default: "다크" | jsonify }},
+              language_label: {{ site.data.ui-text.ko.language_label | default: "언어" | jsonify }}
+            },
+            en: {
+              theme_label: {{ site.data.ui-text.en.theme_label | default: "Theme" | jsonify }},
+              theme_auto: {{ site.data.ui-text.en.theme_auto | default: "Auto" | jsonify }},
+              theme_light: {{ site.data.ui-text.en.theme_light | default: "Light" | jsonify }},
+              theme_dark: {{ site.data.ui-text.en.theme_dark | default: "Dark" | jsonify }},
+              language_label: {{ site.data.ui-text.en.language_label | default: "Language" | jsonify }}
+            }
+          };
+          </script>
           <button class="settings-toggle" onclick="toggleSettings(event)" aria-label="Settings">
             <i class="material-icons md-24" style="vertical-align:-.2em;">tune</i>
             <i class="material-icons md-18 dropdown-arrow" style="vertical-align:-.1em;">arrow_drop_down</i>
           </button>
           <ul class="settings-menu" id="settings-menu">
             {% if site.dark_theme %}
-            <li class="settings-item" onclick="toggleDarkTheme()">
+            <li class="settings-item settings-parent" id="theme-parent" onclick="toggleThemeSubmenu(event)">
               <span style="color:#bbb" id="theme-label">테마</span>
-              <label class="switch" for="toggle_dark_theme" style="display:inline; margin:0; pointer-events:none">
-                <input type="checkbox" id="toggle_dark_theme" style="pointer-events:none"/>
-                <span class="material-icons md-16 unchecked" style="color:#ffbb9a">&#xE518;</span>
-                <span class="material-icons md-16 checked" style="color:#ffeabc">&#xE51C;</span>
-              </label>
+              <i class="material-icons md-18 theme-caret" style="color:#a9874a; vertical-align:-.2em;">chevron_right</i>
             </li>
-            <script>
-            function toggleDarkTheme() {
-                var defaultTheme = [...document.styleSheets].find(style => /(main.css)$/.test(style.href))
-                var darkTheme = [...document.styleSheets].find(style => /(main_dark.css)$/.test(style.href))
-                if (darkTheme) {
-                    darkTheme.disabled = !darkTheme.disabled
-                    defaultTheme.disabled = !defaultTheme.disabled
-                    document.cookie = `MDARK=${darkTheme.disabled ? 'N' : 'Y'}; path=/;`
-                    var toggleThemeBtn = document.getElementById("toggle_dark_theme")
-                    if (toggleThemeBtn) {
-                        toggleThemeBtn.checked = defaultTheme.disabled
-                    }
-                }
-            }
-            </script>
+            <ul class="settings-submenu" id="theme-submenu">
+              <li class="settings-subitem" data-theme-mode="auto" onclick="setTheme('auto', event)">
+                <span>자동</span><i class="material-icons md-16 theme-check" style="color:#a9874a">done</i>
+              </li>
+              <li class="settings-subitem" data-theme-mode="light" onclick="setTheme('light', event)">
+                <span>라이트</span><i class="material-icons md-16 theme-check" style="color:#a9874a">done</i>
+              </li>
+              <li class="settings-subitem" data-theme-mode="dark" onclick="setTheme('dark', event)">
+                <span>다크</span><i class="material-icons md-16 theme-check" style="color:#a9874a">done</i>
+              </li>
+            </ul>
             {% endif %}
             {% if site.multilingual %}
-            <li class="settings-item" id="lang-switcher" onclick="lang_select(); toggleSettings(event);">
-              <span style="color:#bbb" id="lang-label">한글</span>
-              <i class="material-icons md-16" style="color:#a9874a">language</i>
+            <li class="settings-item settings-parent" id="lang-parent" onclick="toggleLangSubmenu(event)">
+              <span style="color:#bbb" id="lang-label">언어</span>
+              <i class="material-icons md-18 theme-caret" style="color:#a9874a; vertical-align:-.2em;">chevron_right</i>
             </li>
+            <ul class="settings-submenu" id="lang-submenu">
+              <li class="settings-subitem" data-lang-target="ko" onclick="goLang('ko', event)">
+                <span>한글</span><i class="material-icons md-16 theme-check" style="color:#a9874a">done</i>
+              </li>
+              <li class="settings-subitem" data-lang-target="en" onclick="goLang('en', event)">
+                <span>English</span><i class="material-icons md-16 theme-check" style="color:#a9874a">done</i>
+              </li>
+            </ul>
             <script>
-            // 모든 페이지 URL 수집
+            // 모든 페이지 URL 수집 (다른 언어 버전 존재 여부 판별용)
             var allPages = [
               {%- for page in site.pages -%}"{{ page.url | relative_url }}",{%- endfor -%}
               {%- for post in site.posts -%}"{{ post.url | relative_url }}",{%- endfor -%}
             ];
-            
-            // 현재 페이지의 다른 언어 버전이 있는지 확인
+
+            // 현재 페이지의 다른 언어 버전이 없으면 언어 메뉴 전체를 숨김
             function checkLanguageAvailability() {
               var pathname = window.location.pathname;
-              var langItem = document.getElementById('lang-switcher');
-              
-              if (!langItem) return;
-              
-              // 홈페이지나 언어 접두사가 없는 경우
-              if (!pathname.startsWith('/ko/') && !pathname.startsWith('/en/')) {
-                langItem.style.display = 'flex';
-                return;
+              var parent = document.getElementById('lang-parent');
+              var submenu = document.getElementById('lang-submenu');
+              if (!parent) return;
+              function show(visible) {
+                parent.style.display = visible ? 'flex' : 'none';
+                if (submenu && !visible) submenu.classList.remove('show');
               }
-              
-              var otherLang, otherPath;
-              if (pathname.startsWith('/ko/')) {
-                otherPath = '/en/' + pathname.substring(4);
-              } else {
-                otherPath = '/ko/' + pathname.substring(4);
-              }
-              
-              // 다른 언어 버전이 있는지 확인
-              var hasOtherLang = allPages.some(function(url) {
-                return url === otherPath || url === otherPath.replace(/\/$/, '') || 
+              if (!pathname.startsWith('/ko/') && !pathname.startsWith('/en/')) { show(true); return; }
+              var otherPath = pathname.startsWith('/ko/')
+                ? '/en/' + pathname.substring(4)
+                : '/ko/' + pathname.substring(4);
+              var hasOther = allPages.some(function (url) {
+                return url === otherPath || url === otherPath.replace(/\/$/, '') ||
                        url === otherPath + '/' || url.replace(/\/$/, '') === otherPath.replace(/\/$/, '');
               });
-              
-              if (!hasOtherLang) {
-                langItem.style.display = 'none';
-              } else {
-                langItem.style.display = 'flex';
-              }
+              show(hasOther);
             }
-            
-            // 페이지 로드 시 실행
-            document.addEventListener('DOMContentLoaded', function() {
-              checkLanguageAvailability();
-              updateLangLabel();
-            });
+
+            document.addEventListener('DOMContentLoaded', checkLanguageAvailability);
             </script>
             {% endif %}
           </ul>

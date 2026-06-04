@@ -145,7 +145,7 @@ body {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     font-size: 0.8em;
-    background: mix($background-color, $text-color, 90%);
+    background: mix($background-color, $text-color, 82%); // more distinct from page bg (esp. dark)
     border-radius: $border-radius;
     color: $text-color;
 
