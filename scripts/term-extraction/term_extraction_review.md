@@ -3744,3 +3744,31 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `schema` | looks like emphasis (no <sub> partner) |
 | `멱집합` | looks like emphasis (no <sub> partner) |
 
+## 순서쌍
+- post: `_posts/Math/Set_Theory/ko/2021-08-09-Ordered_Pair.md`
+- permalink: `/ko/math/set_theory/ordered_pair`
+- scanned: 2026-06-04T19:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `동치관계` | looks like emphasis (no <sub> partner) |
+| `첫 번째 성분` | looks like emphasis (no <sub> partner) |
+
+## 이항관계
+- post: `_posts/Math/Set_Theory/ko/2021-08-14-Binary_Relation.md`
+- permalink: `/ko/math/set_theory/binary_relation`
+- scanned: 2026-06-04T19:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `source` | looks like emphasis (no <sub> partner) |
+
+## 함수
+- post: `_posts/Math/Set_Theory/ko/2021-08-15-Functions.md`
+- permalink: `/ko/math/set_theory/functions`
+- scanned: 2026-06-04T20:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `항등함수` | looks like emphasis (no <sub> partner) |
+

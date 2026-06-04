@@ -181,7 +181,7 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 However, $$\Aut(T)$$ is determined by where the lattice of the torus $$T=\mathbb{R}^k/\mathbb{Z}^k$$ is sent, and this is embedded in $$\GL(k;\mathbb{Z})$$ via $$\Ad(n)$$. That is, this action can be thought of as a continuous map from $$N$$ to $$\GL(k;\mathbb{Z})$$. But since $$\GL(k;\mathbb{Z})$$ is discrete, considering the identity component $$N_0$$ of $$N$$, $$N_0$$ must all be sent to the identity matrix. That is, $$N_0$$ acts trivially on $$T$$.
 
-Now for an arbitrary one-parameter subgroup $$\alpha:\mathbb{R}\rightarrow N_0$$, we must have $$\alpha(\mathbb{R})\cdot T=T$$, and from this we know that $$\alpha(\mathbb{R})\subset T$$. But by [\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifold/vector_fields#thm6), these cover some open neighborhood of the identity in $$N_0$$, and therefore generate $$N_0$$. That is, $$N_0=T$$.
+Now for an arbitrary one-parameter subgroup $$\alpha:\mathbb{R}\rightarrow N_0$$, we must have $$\alpha(\mathbb{R})\cdot T=T$$, and from this we know that $$\alpha(\mathbb{R})\subset T$$. But by [\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), these cover some open neighborhood of the identity in $$N_0$$, and therefore generate $$N_0$$. That is, $$N_0=T$$.
 
 Therefore $$N/T$$ is exactly the number of connected components of $$N$$, and since $$N$$ is a closed subspace of the compact Lie group $$G$$, it is likewise compact, so this cannot be infinite.
 
