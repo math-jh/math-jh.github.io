@@ -155,25 +155,8 @@ row_mirror:
     btn_class: "btn--primary"
     btn_label: "Read more"
 
-row_misc:
-  - image_path: /assets/images/Pages/Thumbnails/Files/Blog_Development.jpeg
-    alt: "blog_development"
-    title: "Blog Development"
-    url: "/en/blog_development"
-    btn_class: "btn--primary"
-    btn_label: "Read more"
-  - image_path: /assets/images/Pages/Thumbnails/Files/LLM_Workshop.jpeg
-    alt: "llm_workshop"
-    title: "LLM Workshop"
-    url: "/en/llm_workshop"
-    btn_class: "btn--primary"
-    btn_label: "Read more"
-  - image_path: /assets/images/Pages/Thumbnails/Files/Peripherals.jpeg
-    alt: "peripherals"
-    title: "Peripherals"
-    url: "/en/peripherals"
-    btn_class: "btn--primary"
-    btn_label: "Read more"
+# Misc (Blog Development / LLM Workshop / Peripherals) is Korean-only content —
+# no English landings — so the en home intentionally omits a Misc section.
 ---
 
 ## Basics
@@ -196,6 +179,3 @@ row_misc:
 
 ## Mirror Symmetry
 {% include feature_row id="row_mirror" %}
-
-## Misc
-{% include feature_row id="row_misc" %}

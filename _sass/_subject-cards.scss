@@ -110,3 +110,40 @@
   font-weight: 700;
   margin: 1.4em 0 0.5em;
 }
+
+/* Listing titles (recent overlay, category/tag archives, search results):
+   default to body colour, revealing the link colour + underline only on hover.
+   A column of identical blue title-links reads dated; this is calmer/modern.
+   Targets only `.archive__item-title a`, so home feature_row titles (plain
+   text, no <a>) and subject-cards (.subject-card__title) are untouched. */
+.archive__item-title a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:visited { color: $text-color; }
+
+  &:hover {
+    color: $link-color;
+    text-decoration: underline;
+  }
+}
+
+/* /xx/categories/ — tie the archive to the per-subject colour system (hue/sat
+   from _data/hues.yml via inline --cat-hue/--cat-sat). Top jump-index = a left
+   colour bar per entry; section headers = a colour dot to the RIGHT of the
+   title. Achromatic Misc (sat 0%) renders a neutral grey, as elsewhere. */
+.taxonomy__index a {
+  border-left: 4px solid hsl(var(--cat-hue, 220), var(--cat-sat, 42%), 50%);
+  padding-left: 0.5em;
+}
+
+.taxonomy__section > .archive__subtitle::after {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.45em;
+  border-radius: 50%;
+  background: hsl(var(--cat-hue, 220), var(--cat-sat, 42%), 50%);
+  vertical-align: middle;
+}
