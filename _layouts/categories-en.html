@@ -13,9 +13,10 @@ layout: archive
 <ul class="taxonomy__index">
 {% for ordered_cat in site.categories-en_order %}
   {% assign posts=site.categories[ordered_cat] | where_exp: "post", "post.permalink contains lang_full" %}
+  {% assign hue_data = site.data.hues[ordered_cat] %}
   <li>
-    <a href="#{{ ordered_cat | slugify }}">
-      <strong>{{ ordered_cat }}</strong> <span class="taxonomy__count">{{ posts.size }}</span>
+    <a href="#{{ ordered_cat | slugify }}" style="--cat-hue: {{ hue_data.hue | default: 220 }}; --cat-sat: {{ hue_data.sat | default: '42%' }};">
+      <strong>{{ ordered_cat | split: " / " | last }}</strong> <span class="taxonomy__count">{{ posts.size }}</span>
     </a>
   </li>
 {% endfor %}
@@ -24,8 +25,9 @@ layout: archive
 {% assign entries_layout = page.entries_layout | default: 'list'%}
 {% for ordered_cat in site.categories-en_order %}
   {% assign posts=site.categories[ordered_cat] | where_exp: "post", "post.permalink contains lang_full"  | sort: 'weight' | reverse %}
+   {% assign hue_data = site.data.hues[ordered_cat] %}
    <section id="{{ ordered_cat | slugify }}" class="taxonomy__section">
-     <h2 class="archive__subtitle">{{ ordered_cat }}</h2>
+     <h2 class="archive__subtitle" style="--cat-hue: {{ hue_data.hue | default: 220 }}; --cat-sat: {{ hue_data.sat | default: '42%' }};">{{ ordered_cat | split: " / " | last }}</h2>
      <div class="entries-{{ entries_layout }}">
        {% for post in posts reversed %}
          {% include archive-single.html type=entries_layout %}
