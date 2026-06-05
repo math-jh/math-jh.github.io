@@ -176,26 +176,26 @@ row_misc:
     btn_label: "Read more"
 ---
 
-## Basics
+## 교양수학
 {% include feature_row id="row_basics" %}
 
-## Foundation
+## 수학기초론
 {% include feature_row id="row_foundation" %}
 
-## Algebra
+## 대수학
 {% include feature_row id="row_algebra" %}
 
-## Topology
+## 위상수학
 {% include feature_row id="row_topology" %}
 
-## Differential Geometry
+## 미분기하학
 {% include feature_row id="row_diffgeo" %}
 
-## Algebraic Geometry
+## 대수기하학
 {% include feature_row id="row_alggeo" %}
 
-## Mirror Symmetry
+## 거울대칭
 {% include feature_row id="row_mirror" %}
 
-## Misc
+## 기타
 {% include feature_row id="row_misc" %}
