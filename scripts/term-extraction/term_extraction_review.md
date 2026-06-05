@@ -3781,3 +3781,43 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `The Axiom of Choice.` | multi-word English emphasis — possibly a definition |
 
+## 서수와 정렬집합
+- post: `_posts/Math/Set_Theory/ko/2021-08-23-Ordinals.md`
+- permalink: `/ko/math/set_theory/ordinals`
+- scanned: 2026-06-04T23:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Peano Axioms.` | multi-word English emphasis — possibly a definition |
+| `successor function` | multi-word English emphasis — possibly a definition |
+| `The Axiom of infinity` | multi-word English emphasis — possibly a definition |
+
+## 대수적 구조
+- post: `_posts/Math/Algebraic_Structures/ko/2021-09-02-Algebraic_Structures.md`
+- permalink: `/ko/math/algebraic_structures/algebraic_structures`
+- scanned: 2026-06-04T23:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `몫집합` | looks like emphasis (no <sub> partner) |
+| `right` | looks like emphasis (no <sub> partner) |
+| `left` | looks like emphasis (no <sub> partner) |
+
+## 기수
+- post: `_posts/Math/Set_Theory/ko/2021-09-04-Cardinals.md`
+- permalink: `/ko/math/set_theory/cardinals`
+- scanned: 2026-06-05T00:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `The Axiom of Choice.` | multi-word English emphasis — possibly a definition |
+
+## Grothendieck 군
+- post: `_posts/Math/Algebraic_Structures/ko/2021-09-04-Grothendieck_Groups.md`
+- permalink: `/ko/math/algebraic_structures/Grothendieck_groups`
+- scanned: 2026-06-05T00:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `group homomorphism` | multi-word English emphasis — possibly a definition |
+
