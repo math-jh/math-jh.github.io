@@ -21,6 +21,68 @@
 %% 생성된 png를 assets/images/Math/Mirror_Symmetry/{글제목}-n.png 로 이동.
 %% ====================================================================
 
+%% ex5: A_2 (오각형) 5 triangulation flip 사이클(주기 5); 오각형 black, flip 대각선 red·유지 blue, very thick (Cluster_Algebra-1.png)
+\begin{tikzpicture}[scale=1.0, >=Stealth, font=\small]
+  \def\R{3.4}
+  \def\rr{0.95}
+  % T0 (90): {x1,x2}, red 13, blue 14
+  \begin{scope}[shift={(90:\R)}]
+    \foreach \k in {1,...,5} \coordinate (v\k) at ({90+72*(\k-1)}:\rr);
+    \draw[black] (v1)--(v2)--(v3)--(v4)--(v5)--cycle;
+    \foreach \k in {1,...,5} \fill[black] (v\k) circle (1.0pt);
+    \draw[red, very thick] (v1)--(v3);
+    \draw[blue!70, very thick] (v1)--(v4);
+  \end{scope}
+  \node at (90:{\R+1.5}) {$\{x_1,x_2\}$};
+  % T1 (18): {x2,x3}, red 14, blue 24
+  \begin{scope}[shift={(18:\R)}]
+    \foreach \k in {1,...,5} \coordinate (v\k) at ({90+72*(\k-1)}:\rr);
+    \draw[black] (v1)--(v2)--(v3)--(v4)--(v5)--cycle;
+    \foreach \k in {1,...,5} \fill[black] (v\k) circle (1.0pt);
+    \draw[red, very thick] (v1)--(v4);
+    \draw[blue!70, very thick] (v2)--(v4);
+  \end{scope}
+  \node at (18:{\R+1.7}) {$\{x_2,x_3\}$};
+  % T2 (-54): {x3,x4}, red 24, blue 25
+  \begin{scope}[shift={(-54:\R)}]
+    \foreach \k in {1,...,5} \coordinate (v\k) at ({90+72*(\k-1)}:\rr);
+    \draw[black] (v1)--(v2)--(v3)--(v4)--(v5)--cycle;
+    \foreach \k in {1,...,5} \fill[black] (v\k) circle (1.0pt);
+    \draw[red, very thick] (v2)--(v4);
+    \draw[blue!70, very thick] (v2)--(v5);
+  \end{scope}
+  \node at (-54:{\R+1.7}) {$\{x_3,x_4\}$};
+  % T3 (-126): {x4,x5}, red 25, blue 35
+  \begin{scope}[shift={(-126:\R)}]
+    \foreach \k in {1,...,5} \coordinate (v\k) at ({90+72*(\k-1)}:\rr);
+    \draw[black] (v1)--(v2)--(v3)--(v4)--(v5)--cycle;
+    \foreach \k in {1,...,5} \fill[black] (v\k) circle (1.0pt);
+    \draw[red, very thick] (v2)--(v5);
+    \draw[blue!70, very thick] (v3)--(v5);
+  \end{scope}
+  \node at (-126:{\R+1.7}) {$\{x_4,x_5\}$};
+  % T4 (162): {x5,x1}, red 35, blue 13
+  \begin{scope}[shift={(162:\R)}]
+    \foreach \k in {1,...,5} \coordinate (v\k) at ({90+72*(\k-1)}:\rr);
+    \draw[black] (v1)--(v2)--(v3)--(v4)--(v5)--cycle;
+    \foreach \k in {1,...,5} \fill[black] (v\k) circle (1.0pt);
+    \draw[red, very thick] (v3)--(v5);
+    \draw[blue!70, very thick] (v1)--(v3);
+  \end{scope}
+  \node at (162:{\R+1.7}) {$\{x_5,x_1\}$};
+  % clockwise mutation arrows
+  \draw[->, black!70, thick] (70:\R) arc (70:38:\R);
+  \draw[->, black!70, thick] (-2:\R) arc (-2:-34:\R);
+  \draw[->, black!70, thick] (-74:\R) arc (-74:-106:\R);
+  \draw[->, black!70, thick] (-146:\R) arc (-146:-178:\R);
+  \draw[->, black!70, thick] (142:\R) arc (142:110:\R);
+  \node at (54:{\R-0.5}) {$\mu$};
+  \node at (-18:{\R-0.5}) {$\mu$};
+  \node at (-90:{\R-0.5}) {$\mu$};
+  \node at (-162:{\R-0.5}) {$\mu$};
+  \node at (126:{\R-0.5}) {$\mu$};
+\end{tikzpicture}
+
 %% 고전 Pieri: (1)에 2 box를 horizontal strip으로 추가 → (3), (2,1) (Quantum_Pieri_Rule-1.png)
 \begin{tikzpicture}[scale=0.5]
   \begin{scope}[shift={(0,0)}]

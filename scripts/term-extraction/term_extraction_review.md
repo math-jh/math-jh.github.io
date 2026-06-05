@@ -3902,3 +3902,31 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `evaluation map` | multi-word English emphasis — possibly a definition |
 
+## 미분사상의 예시들
+- post: `_posts/Math/Manifolds/ko/2022-06-16-Examples_of_Differentials.md`
+- permalink: `/ko/math/manifolds/examples_of_differentials`
+- scanned: 2026-06-05T05:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `tangent covector` | multi-word English emphasis — possibly a definition |
+
+## 부분다양체와 역함수 정리
+- post: `_posts/Math/Manifolds/ko/2022-06-17-Submanifolds.md`
+- permalink: `/ko/math/manifolds/submanifolds`
+- scanned: 2026-06-05T06:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `embedded` | looks like emphasis (no <sub> partner) |
+
+## 접다발과 여접다발
+- post: `_posts/Math/Manifolds/ko/2022-06-19-Tangent_and_Cotangent_Bundles.md`
+- permalink: `/ko/math/manifolds/tangent_and_cotangent_bundles`
+- scanned: 2026-06-05T06:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Total space` | multi-word English emphasis — possibly a definition |
+| `base space` | multi-word English emphasis — possibly a definition |
+

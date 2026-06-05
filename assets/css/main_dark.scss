@@ -13,5 +13,8 @@
 @import "subject-cards"; // subject-home card grid
 
 img.invert {
-  filter: invert(1);
+  // invert(1)로 명암(검정↔흰색)을 뒤집되, hue-rotate(180deg)로 색상은 제자리에 돌려
+  // 둔다. 흑백 선화(채도 0)는 hue-rotate에 불변이라 그대로이고, 컬러 도형만 다크모드에서
+  // hue를 보존한다. (CSS hue-rotate는 근사 회전이라 채도 높은 색은 약간 어긋날 수 있음.)
+  filter: invert(1) hue-rotate(180deg);
 }
