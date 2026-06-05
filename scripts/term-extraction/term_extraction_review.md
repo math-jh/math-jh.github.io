@@ -3821,3 +3821,32 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `group homomorphism` | multi-word English emphasis — possibly a definition |
 
+## 벡터공간의 기저
+- post: `_posts/Math/Linear_Algebra/ko/2021-10-10-Basis.md`
+- permalink: `/ko/math/linear_algebra/basis`
+- scanned: 2026-06-05T01:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `모든` | looks like emphasis (no <sub> partner) |
+
+## 행렬
+- post: `_posts/Math/Linear_Algebra/ko/2021-10-14-Matrices.md`
+- permalink: `/ko/math/linear_algebra/matrices`
+- scanned: 2026-06-05T02:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `row` | looks like emphasis (no <sub> partner) |
+| `column` | looks like emphasis (no <sub> partner) |
+| `행공간` | looks like emphasis (no <sub> partner) |
+
+## 선형대수학의 기본정리
+- post: `_posts/Math/Linear_Algebra/ko/2021-10-16-Fundamental_Theorem_of_Linear_Algebra.md`
+- permalink: `/ko/math/linear_algebra/ftla`
+- scanned: 2026-06-05T02:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `행렬표현` | looks like emphasis (no <sub> partner) |
+
