@@ -11,10 +11,11 @@ header:
       url: "/en/about"
 excerpt:
 
-# Subject tiles, grouped by big category (mirrors category-en in navigation.yml).
-# Each group is rendered as its own feature_row below; the include's bordered
-# wrapper separates the sections — no blank spacer tiles needed.
-row_general:
+# Subject tiles grouped by big category, mirroring category-en in
+# navigation.yml (Basics / Foundation / Algebra / Topology / Differential
+# Geometry / Algebraic Geometry / Mirror Symmetry / Misc). Each group is its
+# own feature_row; the bordered-off wrapper + heading separate the sections.
+row_basics:
   - image_path: /assets/images/Pages/Thumbnails/Files/Linear_Algebra.jpeg
     alt: "linear_algebra"
     title: "Linear Algebra"
@@ -22,7 +23,7 @@ row_general:
     btn_class: "btn--primary"
     btn_label: "Read more"
 
-row_foundations:
+row_foundation:
   - image_path: /assets/images/Pages/Thumbnails/Files/Set_Theory.jpeg
     alt: "set_theory"
     title: "Set Theory"
@@ -79,8 +80,14 @@ row_algebra:
     url: "/en/commutative_algebra"
     btn_class: "btn--primary"
     btn_label: "Read more"
+  - image_path: /assets/images/Pages/Thumbnails/Files/Representation_Theory.jpeg
+    alt: "representation_theory"
+    title: "Representation Theory"
+    url: "/en/representation_theory"
+    btn_class: "btn--primary"
+    btn_label: "Read more"
 
-row_geometry:
+row_topology:
   - image_path: /assets/images/Pages/Thumbnails/Files/Topology.jpeg
     alt: "topology"
     title: "Topology"
@@ -93,10 +100,18 @@ row_geometry:
     url: "/en/algebraic_topology"
     btn_class: "btn--primary"
     btn_label: "Read more"
+
+row_diffgeo:
   - image_path: /assets/images/Pages/Thumbnails/Files/Manifolds.jpeg
     alt: "manifolds"
     title: "Manifolds"
     url: "/en/manifolds"
+    btn_class: "btn--primary"
+    btn_label: "Read more"
+  - image_path: /assets/images/Pages/Thumbnails/Files/Lie_Theory.jpeg
+    alt: "lie_theory"
+    title: "Lie Theory"
+    url: "/en/lie_theory"
     btn_class: "btn--primary"
     btn_label: "Read more"
   - image_path: /assets/images/Pages/Thumbnails/Files/Riemannian_Geometry.jpeg
@@ -105,10 +120,32 @@ row_geometry:
     url: "/en/riemannian_geometry"
     btn_class: "btn--primary"
     btn_label: "Read more"
+
+row_alggeo:
   - image_path: /assets/images/Pages/Thumbnails/Files/Algebraic_Geometry.jpeg
     alt: "algebraic_geometry"
     title: "Algebraic Geometry"
     url: "/en/algebraic_varieties"
+    btn_class: "btn--primary"
+    btn_label: "Read more"
+  - image_path: /assets/images/Pages/Thumbnails/Files/Scheme_Theory.jpeg
+    alt: "scheme_theory"
+    title: "Scheme Theory"
+    url: "/en/scheme_theory"
+    btn_class: "btn--primary"
+    btn_label: "Read more"
+  - image_path: /assets/images/Pages/Thumbnails/Files/Toric_Geometry.jpeg
+    alt: "toric_geometry"
+    title: "Toric Geometry"
+    url: "/en/toric_geometry"
+    btn_class: "btn--primary"
+    btn_label: "Read more"
+
+row_mirror:
+  - image_path: /assets/images/Pages/Thumbnails/Files/Mirror_Symmetry.jpeg
+    alt: "mirror_symmetry"
+    title: "Mirror Symmetry"
+    url: "/en/mirror_symmetry"
     btn_class: "btn--primary"
     btn_label: "Read more"
   - image_path: /assets/images/Pages/Thumbnails/Files/Symplectic_Geometry.jpeg
@@ -125,6 +162,12 @@ row_misc:
     url: "/en/blog_development"
     btn_class: "btn--primary"
     btn_label: "Read more"
+  - image_path: /assets/images/Pages/Thumbnails/Files/LLM_Workshop.jpeg
+    alt: "llm_workshop"
+    title: "LLM Workshop"
+    url: "/en/llm_workshop"
+    btn_class: "btn--primary"
+    btn_label: "Read more"
   - image_path: /assets/images/Pages/Thumbnails/Files/Peripherals.jpeg
     alt: "peripherals"
     title: "Peripherals"
@@ -133,17 +176,26 @@ row_misc:
     btn_label: "Read more"
 ---
 
-## General Mathematics
-{% include feature_row id="row_general" %}
+## Basics
+{% include feature_row id="row_basics" %}
 
-## Mathematical Foundations
-{% include feature_row id="row_foundations" %}
+## Foundation
+{% include feature_row id="row_foundation" %}
 
 ## Algebra
 {% include feature_row id="row_algebra" %}
 
-## Geometry & Topology
-{% include feature_row id="row_geometry" %}
+## Topology
+{% include feature_row id="row_topology" %}
 
-## Miscellaneous
+## Differential Geometry
+{% include feature_row id="row_diffgeo" %}
+
+## Algebraic Geometry
+{% include feature_row id="row_alggeo" %}
+
+## Mirror Symmetry
+{% include feature_row id="row_mirror" %}
+
+## Misc
 {% include feature_row id="row_misc" %}
