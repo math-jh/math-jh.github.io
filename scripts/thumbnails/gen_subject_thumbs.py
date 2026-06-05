@@ -33,12 +33,18 @@ SUBJECTS = [
     ("Linear_Algebra",       "Linear Algebra",       249, 42),
     ("Manifolds",            "Manifolds",            84,  42),
     ("Multilinear_Algebra",  "Multilinear Algebra",  218, 42),
+    ("Representation_Theory", "Representation Theory", 236, 42),
     ("Riemannian_Geometry",  "Riemannian Geometry",  116, 42),
     ("Ring_Theory",          "Ring Theory",          213, 42),
     ("Set_Theory",           "Set Theory",           274, 42),
     ("Symplectic_Geometry",  "Symplectic Geometry",  1,   42),
     ("Topology",             "Topology",             124, 42),
+    ("Lie_Theory",           "Lie Theory",           100, 42),
+    ("Scheme_Theory",        "Scheme Theory",        25,  42),
+    ("Toric_Geometry",       "Toric Geometry",       41,  42),
+    ("Mirror_Symmetry",      "Mirror Symmetry",      329, 42),
     ("Blog_Development",     "Blog Development",      0,   0),
+    ("LLM_Workshop",         "LLM Workshop",         0,   0),
     ("Peripherals",          "Peripherals",          0,   0),
 ]
 

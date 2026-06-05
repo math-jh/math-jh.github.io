@@ -3850,3 +3850,55 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `행렬표현` | looks like emphasis (no <sub> partner) |
 
+## 극한
+- post: `_posts/Math/Set_Theory/ko/2022-02-20-Limits.md`
+- permalink: `/ko/math/set_theory/limits`
+- scanned: 2026-06-05T03:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `inverse system` | multi-word English emphasis — possibly a definition |
+
+## 필터와 아이디얼, 갈루아 대응
+- post: `_posts/Math/Set_Theory/ko/2022-05-01-Filter_and_Ideal.md`
+- permalink: `/ko/math/set_theory/filter_and_ideal`
+- scanned: 2026-06-05T04:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `ideal` | looks like emphasis (no <sub> partner) |
+| `downward closure` | multi-word English emphasis — possibly a definition |
+| `upward closure` | multi-word English emphasis — possibly a definition |
+| `lower adjoint` | multi-word English emphasis — possibly a definition |
+| `upward closed set` | multi-word English emphasis — possibly a definition |
+
+## 미분다양체
+- post: `_posts/Math/Manifolds/ko/2022-06-06-Smooth_Manifolds.md`
+- permalink: `/ko/math/manifolds/smooth_manifolds`
+- scanned: 2026-06-05T04:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `라 부르고, 이 때 $$M$$을` | mixed-script emphasis — possibly a definition |
+| `maximal` | looks like emphasis (no <sub> partner) |
+
+## 미분다양체의 예시들
+- post: `_posts/Math/Manifolds/ko/2022-06-09-Examples_of_Manifolds.md`
+- permalink: `/ko/math/manifolds/examples_of_manifolds`
+- scanned: 2026-06-05T04:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `그래프` | looks like emphasis (no <sub> partner) |
+| `level set` | multi-word English emphasis — possibly a definition |
+| `Jacobian matrix` | multi-word English emphasis — possibly a definition |
+
+## 접공간
+- post: `_posts/Math/Manifolds/ko/2022-06-14-Tangent_Space.md`
+- permalink: `/ko/math/manifolds/tangent_space`
+- scanned: 2026-06-05T05:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `evaluation map` | multi-word English emphasis — possibly a definition |
+
