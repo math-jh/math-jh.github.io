@@ -7,10 +7,13 @@
 \usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, decorations.markings, intersections}
 \begin{document}
 
-%% placeholder (다음 컴파일할 코드를 여기에 둔다)
-\begin{tikzpicture}
-\node {};
-\end{tikzpicture}
+%% Young diagram: 3x3 직사각형(=Gr(3,6)) 안 λ=(2,1) 회색, horizontal strip μ/λ=(3,2)/(2,1) 빨강 (Quantum_Pieri_Rule-1.png)
+\ytableausetup{boxsize=2em, centertableaux}
+\begin{ytableau}
+*(gray!45) & *(gray!45) & *(red!75) \\
+*(gray!45) & *(red!75) & {} \\
+{} & {} & {}
+\end{ytableau}
 
 \end{document}
 
