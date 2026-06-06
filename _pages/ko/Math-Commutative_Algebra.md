@@ -3,6 +3,7 @@ title: "가환대수학"
 layout: archive_custom
 regenerate: true
 permalink: /ko/commutative_algebra/
+eyebrow: "대수학"
 header:
   overlay_color: "transparent"
 hero_hue: 231

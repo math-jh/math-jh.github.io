@@ -71,6 +71,7 @@ logo                     : # path of logo image to display in the masthead, e.g.
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 ...
 ```
+{: data-filename="_config.yml"}
 
 이 밑에도 breadcrumb나 댓글 등등 수정할 것이 있는데 우선은 이를 적절히 수정해준다. 
 
@@ -89,6 +90,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 ``` 
+{: data-filename="_config.yml"}
 
 밑으로 쭉 내려가서 `# Site Author`의 항목을 수정하자. 
 
@@ -101,6 +103,7 @@ author:
   location         : "Somewhere"
   email            :
 ```
+{: data-filename="_config.yml"}
 
 `avatar`를 사용하기 위해서는 아바타로 사용할 이미지를 넣은 후, 해당 이미지의 경로를 입력하면 된다. 
 
@@ -115,6 +118,7 @@ author:
   location         : "Seoul, Korea"
   email            : "kujuburi@icloud.com"
 ```
+{: data-filename="_config.yml"}
 
 로컬에서 작업할 때, `_config.yml`의 수정사항은 `--livereload` 키를 사용하고 있더라도 실시간으로 반영되지 않으므로, 이것이 잘 적용되었나 확인하기 위해서는 잠시 서버를 내렸다가 다시 열어야 한다. 
 
@@ -132,6 +136,7 @@ main:
   - title: "Categories"
     url: /categories
 ```
+{: data-filename="_data/navigation.yml"}
 만 남겨두었다. 이 링크는 아직까지 어떠한 것도 할당되어 있지 않으므로, `_pages/category-archive.md`를
 ```yml
 ---
@@ -141,6 +146,7 @@ permalink: /categories
 author_profile: true
 ---
 ```
+{: data-filename="_pages/category-archive.md"}
 만 적어서 생성했다. 
 
 ## 첫 글 작성하기
@@ -204,6 +210,7 @@ defaults:
       share: true
       related: true
 ```
+{: data-filename="_config.yml"}
 
 예를 들어 이 글은 `layout`이 지정되지 않아서 원래대로라면 아무런 형식 없는 페이지가 되어야 하겠지만, 여기에서 `layout: single`이 기본값으로 지정되어 있어 `single` 레이아웃을 따라 포스팅이 예쁘게 보인다. `author-profile`, `comments`는 굳이 설명하지 않아도 될 것 같고, `read-time`은 이 페이지 맨 위에 있는 `4분 소요`를 표시할지, `share`는 공유 버튼을 활성화시킬지, `related`는 맨 밑에 관련글을 표시할지 아닐지의 여부를 나타낸다. 나는 이 기능이 마음에 들지 않아 default에서 빼 버렸다. `comments`의 경우, 추가적으로 설정할 것이 많아 지금은 `true`로 해 봤자 적용되지 않는다.
 

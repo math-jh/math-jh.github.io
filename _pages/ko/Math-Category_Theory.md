@@ -3,6 +3,7 @@ title: "범주론"
 layout: archive_custom
 regenerate: true
 permalink: /ko/category_theory/
+eyebrow: "수학기초론"
 header:
   overlay_color: "transparent"
 hero_hue: 306

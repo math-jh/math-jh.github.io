@@ -67,6 +67,7 @@ module Jekyll
   end
 end
 ```
+{: data-filename="_plugins/last_modified_git.rb"}
 
 `:post_read`에서 한 번에 처리하는 데에는 이유가 있다. 개별 글뿐 아니라 최근 글 목록 같은 집계 페이지도 같은 값을 봐야 하는데, 그 페이지들은 렌더 시점에 다른 글들의 `last_modified_at`을 읽는다. 모두가 읽히기 전에 값을 고쳐두면 집계 쪽도 자동으로 맞는다.
 
@@ -83,6 +84,7 @@ end
   with:
     fetch-depth: 0   # 전체 히스토리: last-modified-at이 진짜 커밋 날짜를 읽도록
 ```
+{: data-filename=".github/workflows/deploy.yml"}
 
 애초에 이런 커스텀 `_plugins/*.rb`가 빌드에서 도는 것 자체가, 빌드를 [GitHub Actions로 옮긴](/ko/llm_workshop/jekyll4_pagefind) 덕이다. GitHub Pages의 기본 빌드는 임의 플러그인을 허용하지 않으니, 이 훅도 그 이전이었다면 존재할 수 없었다.
 

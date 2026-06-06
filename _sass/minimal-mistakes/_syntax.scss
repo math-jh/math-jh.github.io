@@ -20,6 +20,23 @@ figure.highlight {
   }
 }
 
+/* Optional filename bar — add `{: data-filename="src/quota.py"}` on the line
+   right after a fenced code block (kramdown IAL); the bar renders automatically. */
+div.highlighter-rouge[data-filename]::before,
+figure.highlight[data-filename]::before {
+  content: attr(data-filename);
+  display: block;
+  font-family: $monospace;
+  font-size: 0.78em;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: $base04;
+  background: $base01;
+  padding: 0.6em 1em;
+  border-bottom: 1px solid $base02;
+  border-radius: $border-radius $border-radius 0 0;
+}
+
 .highlight table {
   margin-bottom: 0;
   font-size: 1em;

@@ -322,7 +322,7 @@ $$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(2,0,\cdots,0),\qquad \lambda_k=(k,0
 
 을 생각하자. 그럼 이들은 위의 논증에 의하여 $$\Gr_k(\mathbb{R}^\infty)$$의 homology class들이 되어 다음의 함수
 
-$$w_i: H_\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$w_i(\Omega_{\lambda_i}(F_\bullet))=1$ and is 0$ otherwise}$$
+$$w_i: H_\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$w_i(\Omega_{\lambda_i}(F_\bullet))=1$ and is $0$ otherwise}$$
 
 들이 $$i$$번째 cohomology class $$H^i(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$$에 있으며, 따라서 우리는 
 

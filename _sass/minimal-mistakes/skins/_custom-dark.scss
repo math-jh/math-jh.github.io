@@ -3,19 +3,40 @@
    ========================================================================== */
 
 /* Colors */
-$text-color: #e0e0e0 !default;                                    //  Grey 50
-$background-color: #212121 !default;
-$muted-text-color: mix($background-color, $text-color, 20%) !default;
-$primary-color: #020715 !default;
-$footer-background-color: #020715 !default;
-$link-color: #80d8ff !default;                                    //  Indigo A700
-$masthead-link-color: #f5f5f5 !default;                           //  Grey 100
-$masthead-link-color-hover: #a9874a !default;
+/* Mockup palette (dark): deep navy paper + warm off-white ink + brass.
+   Everything else derives from these. */
+$text-color: #e7e3d8 !default;                                    //  warm off-white
+$background-color: #14171f !default;                             //  near-black, faint cool tint (was navy #0e1726 — too blue)
+$muted-text-color: #aeb6c6 !default;                             //  secondary text
+$primary-color: #05080f !default;                                //  masthead/footer navy
+$footer-background-color: #05080f !default;
+$link-color: #82c8ff !default;
+$masthead-link-color: #f3f1ea !default;
+$masthead-link-color-hover: #e3b562 !default;                    //  brass (bright)
 $navicon-link-color-hover: mix($background-color, $text-color, 80%) !default;
-$border-color: mix($text-color, $background-color, 40%) !default;
-$highlight-color: #6090e9;                                        //  Lighten #071734 30
+$border-color: #2b313d !default;                                 //  desaturated hairline (less blue)
+$highlight-color: #d2a24e;                                       //  brass accent
 $notice-background-mix: 0%;
 $highlight-background-mix: 20%;
+
+/* Code highlighting (dark) — Tokyo Night Storm: navy-purple block, one step
+   lighter than the page so it lifts off it. Consumed by _syntax.scss (base16). */
+$base00: #24283b !default;   // code background (Tokyo Night Storm)
+$base01: #1f2335 !default;   // filename bar / line-highlight
+$base02: #2e3450 !default;   // selection / rule
+$base03: #565f89 !default;   // comments
+$base04: #737aa2 !default;   // gutter / punctuation-muted
+$base05: #a9b1d6 !default;   // default text
+$base06: #c0caf5 !default;
+$base07: #d5d6db !default;
+$base08: #f7768e !default;   // variables / tags
+$base09: #ff9e64 !default;   // numbers / constants
+$base0a: #e0af68 !default;   // classes / attrs
+$base0b: #9ece6a !default;   // strings
+$base0c: #2ac3de !default;   // regex / escapes
+$base0d: #7aa2f7 !default;   // functions / names
+$base0e: #bb9af7 !default;   // keywords
+$base0f: #ff9e64 !default;
 
 /* Math notice accents (dark) — lighter 300-level so the border/text reads on
    the dark bg; the box is a faint rgba tint of this + a 4px left border. */

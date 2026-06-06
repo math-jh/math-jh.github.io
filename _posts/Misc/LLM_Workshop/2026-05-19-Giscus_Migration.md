@@ -43,6 +43,7 @@ comments:
     category_id: "DIC_kwDOHqXFrM4C9YLq"
     discussion_term: "pathname"
 ```
+{: data-filename="_config.yml"}
 
 `pathname`을 mapping으로 쓰면 `/ko/math/.../groups`라는 URL이 그 글의 discussion 제목이 된다. 그래서 `/ko/`와 `/en/`은 자동으로 별개의 thread를 갖는다 — 한국어 글에 단 댓글이 영어판 페이지에 나타나지 않는다.
 
@@ -58,6 +59,7 @@ comments:
   {%- assign _giscus_lang = _giscus_prefix | remove_first: "/" -%}
 {%- endif -%}
 ```
+{: data-filename="_includes/comments-providers/giscus.html"}
 {% endraw %}
 
 한국어 페이지에는 한국어 UI의 Giscus 댓글창이 떠야 한다. 영어 UI가 떠 있으면 페이지 언어와 어긋난다.
@@ -86,6 +88,7 @@ query($owner: String!, $name: String!, $first: Int!) {
   }
 }
 ```
+{: data-filename="scripts/comments/fetch_recent_comments.py"}
 
 언어 분리는 discussion 제목 (즉 글의 URL) 앞 세 글자로 한다 — `/ko/`로 시작하면 한국어, `/en/`로 시작하면 영어. 사이드바의 Liquid 쪽도 같은 규칙으로 필터링한다. 데이터 단계에서 한 번, 렌더링 단계에서 한 번 거르므로 한쪽이 빠져도 다른 쪽이 잡는다.
 
