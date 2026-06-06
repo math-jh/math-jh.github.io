@@ -4254,3 +4254,32 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `group` | looks like emphasis (no <sub> partner) |
 
+## 가군의 직접곱과 직합, 텐서곱
+- post: `_posts/Math/Algebraic_Structures/ko/2024-05-12-Operations_of_Modules.md`
+- permalink: `/ko/math/algebraic_structures/operations_of_modules`
+- scanned: 2026-06-06T14:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$A$$-module` | looks like emphasis (no <sub> partner) |
+
+## 모노이드 범주
+- post: `_posts/Math/Category_Theory/ko/2024-06-12-Monoidal_Categories.md`
+- permalink: `/ko/math/category_theory/monoidal_categories`
+- scanned: 2026-06-06T14:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `symmetor` | looks like emphasis (no <sub> partner) |
+
+## 모노이드 대상
+- post: `_posts/Math/Category_Theory/ko/2024-06-14-Monoid_Objects.md`
+- permalink: `/ko/math/category_theory/monoid_objects`
+- scanned: 2026-06-06T14:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `multiplication` | looks like emphasis (no <sub> partner) |
+| `unit` | looks like emphasis (no <sub> partner) |
+| `inverse` | looks like emphasis (no <sub> partner) |
+

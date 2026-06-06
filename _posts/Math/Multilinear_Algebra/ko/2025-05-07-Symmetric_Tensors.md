@@ -420,3 +420,49 @@ $$\rho(f)(\x)=\prod_{i=1}^n (\x-\xi_i)$$
 이 성립한다면, 유일한 ring homomorphism $$u: E_f \rightarrow B$$가 존재하여 $$\rho(a)=u(a.1)$$이고 $$u(\x_i)=\xi_i$$이도록 할 수 있다. 
 
 </div>
+
+지금까지 생성원으로 다룬 $$s_k$$는 표준적으로 *elementary symmetric polynomial<sub>기본대칭다항식</sub>* $$e_k$$라 부른다. 이와 짝을 이루는 다른 대칭다항식들을 함께 정의해 두면 대칭함수 환의 구조가 한결 선명해지고, 이들은 Grassmannian의 Schubert calculus 등에서 핵심적으로 쓰인다.
+
+<div class="definition" markdown="1">
+
+<ins id="def14">**정의 14**</ins> 자연수 $$k$$에 대하여, $$k$$차 *complete homogeneous symmetric polynomial<sub>완전동차대칭다항식</sub>* $$h_k$$를
+
+$$h_k = \sum_{1 \leq i_1 \leq i_2 \leq \cdots \leq i_k \leq n} \x_{i_1} \x_{i_2} \cdots \x_{i_k}$$
+
+로 정의한다. 즉 $$h_k$$는 $$k$$차 monomial 전체의 합이며, $$h_0 = 1$$, 그리고 $$k < 0$$이면 $$h_k = 0$$으로 약속한다.
+
+</div>
+
+elementary symmetric polynomial이 $$\prod_{i=1}^n (1 + \x_i T) = \sum_{k=0}^n e_k T^k$$로 생성되는 것과 짝을 이루어, complete homogeneous는 생성함수
+
+$$\prod_{i=1}^n \frac{1}{1 - \x_i T} = \sum_{k \geq 0} h_k T^k$$
+
+로 나타난다. 두 생성함수의 곱이 $$1$$이라는 사실에서 $$e$$와 $$h$$를 잇는 관계 $$\sum_{j=0}^k (-1)^j e_j\, h_{k-j} = 0$$ ($$k \geq 1$$) 이 따라오며, $$h_1, \ldots, h_n$$ 또한 $$e_1, \ldots, e_n$$과 마찬가지로 대칭다항식 환 $$A[\x_1, \ldots, \x_n]^{S_n}$$을 생성한다.
+
+<div class="definition" markdown="1">
+
+<ins id="def15">**정의 15**</ins> 약감소하는 음 아닌 정수열 $$\lambda = (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n \geq 0)$$ — 이를 *partition<sub>분할</sub>*이라 한다 — 에 대하여, *Schur polynomial<sub>슈어 다항식</sub>* $$s_\lambda$$를 두 교대다항식의 비
+
+$$s_\lambda(\x_1, \ldots, \x_n) = \frac{\det\bigl(\x_i^{\lambda_j + n - j}\bigr)_{1 \leq i, j \leq n}}{\det\bigl(\x_i^{n - j}\bigr)_{1 \leq i, j \leq n}}$$
+
+로 정의한다. 분모는 Vandermonde 행렬식 $$\prod_{i < j} (\x_i - \x_j)$$이고 분자도 같은 인자들로 나누어떨어지므로, $$s_\lambda$$는 잘 정의된 다항식이며 변수의 치환에 불변인 대칭다항식이다.
+
+</div>
+
+예를 들어 $$\lambda = (0, \ldots, 0)$$이면 $$s_\lambda = 1$$이고, 변수가 $$n = 2$$개일 때 $$\lambda = (2,1)$$이면 분자 $$\det\begin{pmatrix} \x_1^3 & \x_1 \\ \x_2^3 & \x_2 \end{pmatrix} = \x_1 \x_2 (\x_1^2 - \x_2^2)$$를 Vandermonde $$\x_1 - \x_2$$로 나누어 $$s_{(2,1)} = \x_1 \x_2 (\x_1 + \x_2)$$를 얻는다.
+
+<div class="remark" markdown="1">
+
+<ins id="rmk16">**참고 16**</ins> Schur polynomial은 여러 동치인 방식으로 기술된다. 첫째, [정의 14](#def14)의 $$h_k$$를 이용한 *Jacobi–Trudi 항등식*
+
+$$s_\lambda = \det\bigl(h_{\lambda_i - i + j}\bigr)_{1 \leq i, j \leq \ell}$$
+
+($$\ell$$은 $$\lambda$$의 $$0$$이 아닌 항의 개수) 으로 적힌다. 둘째, $$\lambda$$를 $$i$$번째 행에 칸 $$\lambda_i$$개를 왼쪽 정렬로 쌓은 *Young diagram*으로 보고, 그 칸들을 $$\{1, \ldots, n\}$$의 값으로 각 행을 따라 weakly increasing, 각 열을 따라 strictly increasing 하도록 채운 *semistandard Young tableau* $$T$$ 전체에 대해
+
+$$s_\lambda = \sum_T \x_1^{m_1(T)} \cdots \x_n^{m_n(T)}$$
+
+로도 쓴다 (여기서 $$m_i(T)$$는 $$T$$에 채워진 값 $$i$$의 개수이다). 특수한 경우로 한 행짜리 $$\lambda = (k)$$이면 $$s_{(k)} = h_k$$, 한 열짜리 $$\lambda = (1^k)$$이면 $$s_{(1^k)} = e_k$$이다. 나아가 $$\ell(\lambda) \leq n$$인 $$s_\lambda$$ 전체가 대칭다항식 환의 $$A$$-기저를 이루며, 그 곱을 이 기저로 전개한 구조상수
+
+$$s_\lambda\, s_\mu = \sum_\nu c_{\lambda\mu}^\nu\, s_\nu$$
+
+의 $$c_{\lambda\mu}^\nu$$를 *Littlewood–Richardson 수*라 부른다. 이 동치성들과 기저·곱셈 규칙의 증명은 Macdonald, *Symmetric Functions and Hall Polynomials* (I장) 또는 Fulton, *Young Tableaux* 를 참조하라.
