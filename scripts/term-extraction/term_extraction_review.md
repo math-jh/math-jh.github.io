@@ -4283,3 +4283,26 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `unit` | looks like emphasis (no <sub> partner) |
 | `inverse` | looks like emphasis (no <sub> partner) |
 
+## 등급환
+- post: `_posts/Math/Algebraic_Structures/ko/2024-08-11-Graded_Rings.md`
+- permalink: `/ko/math/algebraic_structures/graded_rings`
+- scanned: 2026-06-06T15:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `polynomial ring` | multi-word English emphasis — possibly a definition |
+
+## 리 군
+- post: `_posts/Math/Lie_Theory/ko/2023-01-23-Lie_Groups.md`
+- permalink: `/ko/math/lie_theory/Lie_groups`
+- scanned: 2026-06-06T16:00:03+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `left translation` | multi-word English emphasis — possibly a definition |
+| `matrix exponential` | multi-word English emphasis — possibly a definition |
+| `abelian` | looks like emphasis (no <sub> partner) |
+| `surjective` | looks like emphasis (no <sub> partner) |
+| `discrete` | looks like emphasis (no <sub> partner) |
+
