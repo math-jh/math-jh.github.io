@@ -21,13 +21,27 @@
 %% 생성된 png를 assets/images/Math/Mirror_Symmetry/{글제목}-n.png 로 이동.
 %% ====================================================================
 
-%% Young diagram: 3x3 직사각형(=Gr(3,6)) 안 λ=(2,1) 회색, horizontal strip μ/λ=(3,2)/(2,1) 빨강 (Quantum_Pieri_Rule-1.png)
+%% Young diagram: 3x3 직사각형(=Gr(3,6)) 안 λ=(2,1)만 회색 (Quantum_Pieri_Rule-1.png)
 \ytableausetup{boxsize=2em, centertableaux}
 \begin{ytableau}
-*(gray!45) & *(gray!45) & *(red!75) \\
-*(gray!45) & *(red!75) & {} \\
+*(gray!45) & *(gray!45) & {} \\
+*(gray!45) & {} & {} \\
 {} & {} & {}
 \end{ytableau}
+
+%% 예시4: σ_(2,1)⌣σ_(1,1)=σ_(3,2)+σ_(3,1,1)+σ_(2,2,1); λ=(2,1) 회색 + skew 빨강 (Quantum_Pieri_Rule-2.png)
+\ytableausetup{boxsize=1.5em, centertableaux}
+\begin{tikzpicture}
+\node (eq) at (0,0) {$\sigma_{(2,1)} \smile \sigma_{(1,1)} \;=$};
+\node (a) at (3.3,0) {\begin{ytableau} *(gray!45) & *(gray!45) & *(red!75) \\ *(gray!45) & *(red!75) \end{ytableau}};
+\node at (4.7,0) {$+$};
+\node (b) at (6.0,0) {\begin{ytableau} *(gray!45) & *(gray!45) & *(red!75) \\ *(gray!45) \\ *(red!75) \end{ytableau}};
+\node at (7.1,0) {$+$};
+\node (c) at (8.4,0) {\begin{ytableau} *(gray!45) & *(gray!45) \\ *(gray!45) & *(red!75) \\ *(red!75) \end{ytableau}};
+\node at (3.3,-1.6) {\scriptsize $\sigma_{(3,2)}$};
+\node at (6.0,-1.6) {\scriptsize $\sigma_{(3,1,1)}$};
+\node at (8.4,-1.6) {\scriptsize $\sigma_{(2,2,1)}$};
+\end{tikzpicture}
 
 %% ex5: A_2 (오각형) 5 triangulation flip 사이클(주기 5); 오각형 black, flip 대각선 red·유지 blue, very thick (Cluster_Algebra-1.png)
 \begin{tikzpicture}[scale=1.0, >=Stealth, font=\small]
@@ -117,7 +131,16 @@
   \end{scope}
 \end{tikzpicture}
 
-%% 고전 Pieri: (1)에 2 box를 horizontal strip으로 추가 → (3), (2,1) (Quantum_Pieri_Rule-1.png)
+%% 예시11: Gr(2,5) σ_3⋆σ_(2)=σ_(3,2)+q; λ=(2) 회색 + horizontal strip 빨강, 초과분이 q (Quantum_Pieri_Rule-4.png)
+\ytableausetup{boxsize=1.6em, centertableaux}
+\begin{tikzpicture}
+\node (eq) at (0,0) {$\sigma_3 \star \sigma_{(2)} \;=$};
+\node (a) at (2.7,0) {\begin{ytableau} *(gray!45) & *(gray!45) & *(red!75) \\ *(red!75) & *(red!75) \end{ytableau}};
+\node at (4.3,0) {$+\; q$};
+\node at (2.7,-1.4) {\scriptsize $\sigma_{(3,2)}$};
+\end{tikzpicture}
+
+%% 고전 Pieri: (1)에 2 box를 horizontal strip으로 추가 → (3), (2,1) (Quantum_Pieri_Rule-3.png)
 \begin{tikzpicture}[scale=0.5]
   \begin{scope}[shift={(0,0)}]
     \fill[gray!25] (0,0) rectangle (1,1);
@@ -142,7 +165,7 @@
   \end{scope}
 \end{tikzpicture}
 
-%% rim hook: Gr(2,4)에서 직사각형(2x2) 밖 (3,1)의 4-rim hook 제거 → ∅, +q (Quantum_Pieri_Rule-2.png)
+%% rim hook: Gr(2,4)에서 직사각형(2x2) 밖 (3,1)의 4-rim hook 제거 → ∅, +q (Quantum_Pieri_Rule-5.png)
 \begin{tikzpicture}[scale=0.5]
   \begin{scope}[shift={(0,0)}]
     \fill[red!20] (0,0) rectangle (3,1);
