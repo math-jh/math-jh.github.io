@@ -4191,3 +4191,37 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `유한한` | looks like emphasis (no <sub> partner) |
 
+## Distribution
+- post: `_posts/Math/Manifolds/ko/2023-01-12-Distribution.md`
+- permalink: `/ko/math/manifolds/distribution`
+- scanned: 2026-06-06T07:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `integrable` | looks like emphasis (no <sub> partner) |
+
+## 리 군
+- post: `_posts/Math/Lie_Theory/ko/2023-01-23-Lie_Groups.md`
+- permalink: `/ko/math/lie_theory/Lie_groups`
+- scanned: 2026-06-06T08:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `left translation` | multi-word English emphasis — possibly a definition |
+| `matrix exponential` | multi-word English emphasis — possibly a definition |
+| `abelian` | looks like emphasis (no <sub> partner) |
+| `surjective` | looks like emphasis (no <sub> partner) |
+| `discrete` | looks like emphasis (no <sub> partner) |
+
+## 군의 작용
+- post: `_posts/Math/Algebraic_Structures/ko/2023-02-14-Group_Actions.md`
+- permalink: `/ko/math/algebraic_structures/group_actions`
+- scanned: 2026-06-06T09:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `normal` | looks like emphasis (no <sub> partner) |
+| `centralizer` | looks like emphasis (no <sub> partner) |
+| `normalizer` | looks like emphasis (no <sub> partner) |
+
