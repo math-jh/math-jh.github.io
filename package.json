@@ -1,11 +1,14 @@
 {
   "name": "math-jh-blog",
   "private": true,
-  "description": "Build-time tooling for math-jh.github.io (Pagefind search indexing).",
+  "description": "Build-time tooling for math-jh.github.io (Pagefind search indexing + subject-tile thumbnail generation).",
   "scripts": {
-    "pagefind": "pagefind --site _site"
+    "pagefind": "pagefind --site _site",
+    "thumbnails": "node scripts/generate-thumbnails.js"
   },
   "devDependencies": {
+    "canvas": "^3.1.0",
+    "js-yaml": "^4.1.0",
     "pagefind": "^1.4.0"
   }
 }
