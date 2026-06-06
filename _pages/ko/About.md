@@ -142,7 +142,7 @@ sidebar:
 | <selected class="indented" id="antisymmetric">antisymmetric &#9745;</selected> | <unselected>반대칭적</unselected> | [\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations) | [Relation](#relation), [Order relation](#order_relation) |
 | <selected class="indented" id="asymmetric">asymmetric &#9745;</selected> | <unselected>비대칭적</unselected> | [\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations) | [Order relation](#order_relation) |
 
-처럼 비슷한 용어들 위주로 뭉쳐놓을 생각이지만 언제가 될지는 잘 모르겠습니다.
+처럼 비슷한 용어들 위주로 뭉쳐놓을 생각이지만, 글을 하나 쓸 때 이걸 미리미리 만들어두지 않으니 상당히 추가하기가 애매해졌습니다. 다행히 이것 또한 AI로 어느정도 커버가 가능해서, 우선은 제가 적은 글들을 탐색하며 용어를 정리해주는 봇을 만들었습니다. 다만 이 역시 AI 툴을 100% 믿을 수는 없는 것이라, 참고용으로만 생각하면 될 듯 합니다. 
 
 ### 기타
 

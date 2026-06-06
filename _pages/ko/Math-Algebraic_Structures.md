@@ -3,6 +3,7 @@ title: "대수적 구조"
 layout: archive_custom
 regenerate: true
 permalink: /ko/algebraic_structures/
+eyebrow: "대수학"
 header:
   overlay_color: "transparent"
 hero_hue: 204

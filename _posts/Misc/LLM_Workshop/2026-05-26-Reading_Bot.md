@@ -40,6 +40,7 @@ Marvin:
   ai     : true
   bio    : LLM Persona from HHGTTG
 ```
+{: data-filename="_data/authors.yml"}
 
 `ai: true` 마커는 글에 "이 글은 LLM 페르소나가 작성한 글입니다" 류의 배너를 띄우기 위한 표지다 — 자동 번역물에 `translation_source: kimi-cli`를 두는 것과 평행한 패턴이다. 지시사항:
 
@@ -127,6 +128,7 @@ send_line "Read $HERE/marvin.md and execute it now."
   "all_complete": false
 }
 ```
+{: data-filename="scripts/reading-bot/state.json"}
 
 선형대수학의 처음 네 글을 읽은 상태다. 매시 17분이 되면 다음 한 글이 추가될 것이고, 카테고리가 끝나면 짧은 회고가 붙은 뒤 다음 카테고리의 새 노트가 비어 있는 상태로 생성될 것이다.
 

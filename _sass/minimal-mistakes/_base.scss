@@ -218,11 +218,13 @@ abbr[data-original-title] {
 
 blockquote {
     margin: 2em .5em 2em 0;
-  padding-left: .75em;
+  padding-left: .9em;
   padding-right: 1em;
   font-size: 90%;
+  font-style: italic;                       // matches mockup (quiet, set-apart aside)
   font-family: MySerifFont;
-  border-left: 0.25em solid $primary-color;
+  color: $muted-text-color;                 // secondary tone, not full ink
+  border-left: 0.2em solid $highlight-color; // brass accent (was navy $primary-color)
   cite {
     font-style: italic;
 

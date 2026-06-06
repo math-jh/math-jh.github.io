@@ -20,6 +20,7 @@ $indent-var: 1.3em !default;
   src: url('fonts/MaruBuri-Regular.woff') format('woff'),
        url('fonts/MaruBuri-Regular.woff2') format('woff2');
   font-display: swap;
+  size-adjust: 111%; // enlarge Korean to meet Latin size on mixed lines (Latin stays 100% → EN-only site unaffected)
   unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
 }
 
@@ -38,6 +39,7 @@ $indent-var: 1.3em !default;
   src: url('fonts/Hahmlet-Medium.woff') format('woff'),
        url('fonts/Hahmlet-Medium.woff2') format('woff2');
   font-display: swap;
+  size-adjust: 111%; // italic Korean enlarged to match italic Latin
   unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
 }
 
@@ -65,6 +67,7 @@ $indent-var: 1.3em !default;
   src: url('fonts/MaruBuri-Bold.woff') format('woff'),
        url('fonts/MaruBuri-Bold.woff2') format('woff2');
   font-display: swap;
+  size-adjust: 111%; // match bold Latin
   unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
 }
 

@@ -3,6 +3,7 @@ title: "거울대칭"
 layout: archive_custom
 regenerate: true
 permalink: /ko/mirror_symmetry/
+eyebrow: "거울대칭"
 header:
   overlay_color: "transparent"
 hero_hue: 329

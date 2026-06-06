@@ -3,6 +3,7 @@ title: "토릭 기하학"
 layout: archive_custom
 regenerate: true
 permalink: /ko/toric_geometry/
+eyebrow: "대수기하학"
 header:
   overlay_color: "transparent"
 hero_hue: 41

@@ -3971,3 +3971,175 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `이라 부르고 $$V^\` | mixed-script emphasis — possibly a definition |
 
+## 가우스 소거법
+- post: `_posts/Math/Linear_Algebra/ko/2022-08-19-Gaussian_Elimination.md`
+- permalink: `/ko/math/linear_algebra/Gaussian_elimination`
+- scanned: 2026-06-05T18:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `가우스 소거법` | looks like emphasis (no <sub> partner) |
+| `첨가행렬` | looks like emphasis (no <sub> partner) |
+
+## 호몰로지
+- post: `_posts/Math/Homological_Algebra/ko/2022-09-10-Homology.md`
+- permalink: `/ko/math/homological_algebra/homology`
+- scanned: 2026-06-05T19:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `total complex` | multi-word English emphasis — possibly a definition |
+| `$$p$$-th translation` | multi-word English emphasis — possibly a definition |
+
+## 내적공간
+- post: `_posts/Math/Linear_Algebra/ko/2022-10-02-Inner_Product_Spaces.md`
+- permalink: `/ko/math/linear_algebra/inner_product_spaces`
+- scanned: 2026-06-05T20:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `dot product` | multi-word English emphasis — possibly a definition |
+
+## 최소제곱법
+- post: `_posts/Math/Linear_Algebra/ko/2022-10-09-Least_Squares_Method.md`
+- permalink: `/ko/math/linear_algebra/least_squares_method`
+- scanned: 2026-06-05T20:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `full row rank` | multi-word English emphasis — possibly a definition |
+| `오른쪽 역행렬` | looks like emphasis (no <sub> partner) |
+| `full column rank` | multi-word English emphasis — possibly a definition |
+
+## 위상공간의 다른 정의들
+- post: `_posts/Math/Topology/ko/2022-11-09-Equivalent_Formulations_of_Topology.md`
+- permalink: `/ko/math/topology/equivalent_formulations_of_topology`
+- scanned: 2026-06-05T21:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Interior axiom.` | multi-word English emphasis — possibly a definition |
+| `neighborhood filter` | multi-word English emphasis — possibly a definition |
+| `ultrafilter` | looks like emphasis (no <sub> partner) |
+| `Neighborhood axiom.` | multi-word English emphasis — possibly a definition |
+
+## Initial topology와 final topology
+- post: `_posts/Math/Topology/ko/2022-11-15-Initial_and_Final_Topology.md`
+- permalink: `/ko/math/topology/initial_and_final_topology`
+- scanned: 2026-06-05T22:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `임의의` | looks like emphasis (no <sub> partner) |
+
+## 곱공간
+- post: `_posts/Math/Topology/ko/2022-11-21-Product_Spaces.md`
+- permalink: `/ko/math/topology/product_spaces`
+- scanned: 2026-06-05T23:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `graph` | looks like emphasis (no <sub> partner) |
+
+## 함수들 사이의 연산
+- post: `_posts/Math/Set_Theory/ko/2022-11-23-Operation_of_Functions.md`
+- permalink: `/ko/math/set_theory/operation_of_functions`
+- scanned: 2026-06-06T00:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `one-to-one` | looks like emphasis (no <sub> partner) |
+| `onto` | looks like emphasis (no <sub> partner) |
+| `one-to-one and onto` | multi-word English emphasis — possibly a definition |
+| `일대일함수` | looks like emphasis (no <sub> partner) |
+| `일대일대응` | looks like emphasis (no <sub> partner) |
+
+## 유향집합
+- post: `_posts/Math/Set_Theory/ko/2022-11-27-Directed_Set.md`
+- permalink: `/ko/math/set_theory/directed_set`
+- scanned: 2026-06-06T01:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `cofinal` | looks like emphasis (no <sub> partner) |
+| `coinitial` | looks like emphasis (no <sub> partner) |
+
+## 반군, 모노이드, 군
+- post: `_posts/Math/Algebraic_Structures/ko/2022-11-29-Groups.md`
+- permalink: `/ko/math/algebraic_structures/groups`
+- scanned: 2026-06-06T02:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `반드시` | looks like emphasis (no <sub> partner) |
+| `magma homomorphism` | multi-word English emphasis — possibly a definition |
+
+## 기수들 사이의 연산
+- post: `_posts/Math/Set_Theory/ko/2022-11-29-Operation_of_Cardinals.md`
+- permalink: `/ko/math/set_theory/operation_of_cardinals`
+- scanned: 2026-06-06T02:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `cardinal product` | multi-word English emphasis — possibly a definition |
+| `cardinal sum` | multi-word English emphasis — possibly a definition |
+| `연속체 가설` | looks like emphasis (no <sub> partner) |
+| `continuum hypothesis` | multi-word English emphasis — possibly a definition |
+
+## 서수들 사이의 순서관계
+- post: `_posts/Math/Set_Theory/ko/2022-11-29-Order_Relations_Between_Ordinals.md`
+- permalink: `/ko/math/set_theory/order_relations_between_ordinals`
+- scanned: 2026-06-06T02:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `The Axiom schema of Replacement.` | multi-word English emphasis — possibly a definition |
+
+## 군 동형사상
+- post: `_posts/Math/Algebraic_Structures/ko/2022-11-30-Isomorphism_Theorems.md`
+- permalink: `/ko/math/algebraic_structures/isomorphism_theorems`
+- scanned: 2026-06-06T03:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$G/N$$의 subgroup들의 집합` | mixed-script emphasis — possibly a definition |
+| `normal closure` | multi-word English emphasis — possibly a definition |
+
+## 몫군
+- post: `_posts/Math/Algebraic_Structures/ko/2022-11-30-Quotient_Groups.md`
+- permalink: `/ko/math/algebraic_structures/quotient_groups`
+- scanned: 2026-06-06T03:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `index` | looks like emphasis (no <sub> partner) |
+
+## 환의 정의
+- post: `_posts/Math/Algebraic_Structures/ko/2022-12-01-Rings.md`
+- permalink: `/ko/math/algebraic_structures/rings`
+- scanned: 2026-06-06T03:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `pseudo-ring` | looks like emphasis (no <sub> partner) |
+| `히니민` | looks like emphasis (no <sub> partner) |
+
+## 자유곱
+- post: `_posts/Math/Algebraic_Structures/ko/2022-12-07-Free_Products.md`
+- permalink: `/ko/math/algebraic_structures/free_products`
+- scanned: 2026-06-06T04:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `free product` | multi-word English emphasis — possibly a definition |
+
+## 미분
+- post: `_posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md`
+- permalink: `/ko/math/multilinear_algebra/derivations`
+- scanned: 2026-06-06T04:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `혹은 간단히` | looks like emphasis (no <sub> partner) |
+| `graded` | looks like emphasis (no <sub> partner) |
+

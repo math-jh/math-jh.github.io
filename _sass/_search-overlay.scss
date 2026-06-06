@@ -24,6 +24,9 @@
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     overflow-y: auto;
+    scrollbar-width: none;          // hide scrollbar (keep scrolling) — Firefox
+    -ms-overflow-style: none;       // old Edge/IE
+    &::-webkit-scrollbar { width: 0; height: 0; display: none; } // WebKit
 
     // Override decorative pseudo-elements the theme injects.
     &::after  { content: none !important; }
@@ -44,6 +47,8 @@
     border-radius: 8px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
     transition: border-color 0.15s ease;
+    overflow-wrap: break-word;        // break very long words/URLs inside the popup
+    word-break: break-word;
     // Gold accent moves to the card border when any descendant (the search
     // input) is focused. The input itself stays borderless.
     &:focus-within { border-color: $masthead-link-color-hover; }

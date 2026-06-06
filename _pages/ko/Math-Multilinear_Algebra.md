@@ -3,6 +3,7 @@ title: "다중선형대수학"
 layout: archive_custom
 regenerate: true
 permalink: /ko/multilinear_algebra/
+eyebrow: "대수학"
 header:
   overlay_color: "transparent"
 hero_hue: 218

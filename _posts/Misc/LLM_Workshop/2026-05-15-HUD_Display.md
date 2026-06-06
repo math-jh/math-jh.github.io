@@ -111,6 +111,7 @@ COOKIES_FILE = PROJECT_ROOT / "config" / "mimo_cookies.json"
 STATE_FILE = PROJECT_ROOT / "state" / "mimo_quota.json"
 TARGET_URL = "https://platform.xiaomimimo.com/console/plan-manage"
 ```
+{: data-filename="scripts/mimo_scraper.py"}
 
 쿠키는 사용자가 Mac 위 Vivaldi에서 Cookie-Editor 확장으로 export해서 RPi로 옮긴 JSON 파일이다. 핵심 항목은 `api-platform_serviceToken`(httpOnly), `api-platform_ph`, `api-platform_slh`. 이 셋이 유효한 동안만 콘솔이 응답을 돌려준다.
 

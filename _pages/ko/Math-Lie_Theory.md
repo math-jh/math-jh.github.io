@@ -3,6 +3,7 @@ title: "리 이론"
 layout: archive_custom
 regenerate: true
 permalink: /ko/lie_theory/
+eyebrow: "미분기하학"
 header:
   overlay_color: "transparent"
 hero_hue: 100

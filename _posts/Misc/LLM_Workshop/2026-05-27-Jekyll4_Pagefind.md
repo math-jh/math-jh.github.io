@@ -50,6 +50,7 @@ set -euo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 "$HOME/.cargo/bin/pagefind" --site "$REPO/_site" --quiet
 ```
+{: data-filename="scripts/reindex-pagefind.sh"}
 
 ## 검색 오버레이
 

@@ -3,6 +3,7 @@ title: "대수다양체"
 layout: archive_custom
 regenerate: true
 permalink: /ko/algebraic_varieties/
+eyebrow: "대수기하학"
 header:
   overlay_color: "transparent"
 hero_hue: 9

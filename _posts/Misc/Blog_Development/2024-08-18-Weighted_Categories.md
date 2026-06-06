@@ -38,6 +38,7 @@ sidebar:
     nav: "category-ko"
 ---
 ```
+{: data-filename="_pages/category-archive.md"}
 
 이는 이 페이지에서 카테고리를 정렬하는 것이 `_layouts/categories.html`에서[^1] 이루어지기 때문이다. 
 
@@ -52,6 +53,7 @@ sidebar:
     {% assign categories_max = category[1].size %}
   {% endif %}
 ```
+{: data-filename="_layouts/categories.html"}
 {% endraw %}
 
 우선 위의 블럭에서는 변수 `categories_max`를 정의한다. 셋째 줄의 `lang_full` 태그가 있는 라인에서의 조건 `where_exp` 부분은 이전에 [다국어 지원](/ko/misc/blog_development/multilingual)에서 추가된 것이다. 이는 `site.categories` 안에 들어있는 모든 카테고리들에 대해서, 각 카테고리들에 속하는 포스트의 개수를 다 세서 가장 큰 것을 저장하게 되어있다.
@@ -73,6 +75,7 @@ sidebar:
     {% endfor %}
   {% endfor %}
 ```
+{: data-filename="_layouts/categories.html"}
 {% endraw %}
 
 역시 `lang_full` 태그가 있는 라인의 조건은 이전에 [다국어 지원](/ko/misc/blog_development/multilingual) 그리고 [포스트 순서 정렬하기](/ko/misc/blog_development/weight)에서 추가된 것들이다. 카테고리별 글 목록 페이지를 보면, 각 카테고리에 해당하는 글 목록의 나열이 있고, 이들을 카테고리별로 볼 때 쉽게 이동할 수 있도록 맨 위에 목록이 있는데, 이 블럭은 해당 목록에 관한 것이다. 
@@ -104,6 +107,7 @@ sidebar:
   {% endfor %}
 {% endfor %}
 ```
+{: data-filename="_layouts/categories.html"}
 {% endraw %}
 
 여기에서는 앞서 언급했듯이, 각각의 카테고리별로 글 목록을 나타내고 있으며, 마찬가지로 포스트 수에 대해 `for`문을 돌리고 있다. 
@@ -159,6 +163,7 @@ categories_order:
   - Math / Category Theory
   ...
 ```
+{: data-filename="_config.yml"}
 
 이 목록은 Liquid 변수 `site.categories_order`에 저장된다. 그럼 이제 다음 코드들
 
@@ -175,6 +180,7 @@ categories_order:
 {% endfor %}
 </ul>
 ```
+{: data-filename="_layouts/categories.html"}
 {% endraw %}
 
 그리고
@@ -195,6 +201,7 @@ categories_order:
    </section>
 {% endfor %}
 ```
+{: data-filename="_layouts/categories.html"}
 {% endraw %}
 
 을 통해 `for`문을 돌리면 원하는 결과를 얻는다. 

@@ -32,12 +32,14 @@ weight: 4
 
 </style>
 ```
+{: data-filename="_layouts/default.html"}
 
 내용이 없는 태그가 마크업 안에 자리만 차지하고 있었는데, 그 이유는 같은 페이지 아래쪽 `<body>` 태그에 있었다.
 
 ```html
 <body ... onload="darkmode(), scrollbar()">
 ```
+{: data-filename="_layouts/default.html"}
 
 `onload`에서 `scrollbar()` 함수가 호출되고, 이 함수가 위의 빈 `<style>`을 채우는 구조였다. 함수 본문은 `assets/js/custom/Color_scheme.js`에 있었다.
 
@@ -57,6 +59,7 @@ function scrollbar() {
     `
 }
 ```
+{: data-filename="assets/js/custom/Color_scheme.js"}
 
 다크 모드의 체크 상태를 보고 그에 맞는 CSS 문자열을 만들어서 `innerHTML`에 넣는다. 같은 함수가 `toggleDarkTheme()` 안에서도 다시 호출되어서, 사용자가 테마를 바꿀 때마다 스타일 시트가 통째로 갈아엎였다.
 
@@ -74,6 +77,7 @@ body::-webkit-scrollbar-thumb {background-color:#cfd8dc; border-radius: 3px; bac
 .sidebar.sticky::-webkit-scrollbar-thumb {background-color:#eaeaf2; border-radius: 3px; background-clip: padding-box; border:1px solid transparent}
 .toc__menu::-webkit-scrollbar-thumb {background-color:#eaeaf2; border-radius: 3px; background-clip: padding-box; border:1px solid transparent}
 ```
+{: data-filename="_sass/minimal-mistakes/skins/_custom.scss"}
 
 `_custom-dark.scss`에는 동일한 선택자에 다크 색상을 두면 된다.
 
@@ -83,6 +87,7 @@ body::-webkit-scrollbar-thumb {background-color:#455a64; ...}
 .sidebar.sticky::-webkit-scrollbar-thumb {background-color:#282828; ...}
 .toc__menu::-webkit-scrollbar-thumb {background-color:#282828; ...}
 ```
+{: data-filename="_sass/minimal-mistakes/skins/_custom-dark.scss"}
 
 이 두 SCSS 파일은 활성화된 스킨에 따라 자동으로 선택되므로, 테마가 바뀌면 같은 선택자에 대해 다른 규칙이 적용된다. JS가 개입할 일이 없다.
 
@@ -93,6 +98,7 @@ body::-webkit-scrollbar-thumb {background-color:#455a64; ...}
 ```html
 <body ... onload="darkmode()">
 ```
+{: data-filename="_layouts/default.html"}
 
 `_includes/masthead.html` 안에서도 같은 함수를 한 번 더 호출하는 곳이 있어 같이 지운다(테마 토글 직후 호출하던 곳이다). 마지막으로 `assets/js/custom/Color_scheme.js`에서는 `toggleDarkTheme()` 안의 `scrollbar()` 호출과 `scrollbar()` 함수 정의 자체를 모두 제거한다.
 
@@ -108,6 +114,7 @@ body::-webkit-scrollbar-thumb {background-color:#455a64; ...}
 .bundle/
 *.backup_*
 ```
+{: data-filename=".gitignore"}
 
 이미 추적되고 있던 14개 파일들은 별도로 `git rm --cached`로 추적 해제했다. 구체적으로는:
 

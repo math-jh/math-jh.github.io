@@ -1,0 +1,51 @@
+{%- comment -%}
+  Home subject-card grid. Param: lang ("ko"/"en").
+  Sections + order come from _data/home_sections.yml (config order). The number
+  (01, 02, …) is a running counter over every subject, so it is stable per
+  subject and ascends down the page. On /en/, subjects missing from
+  categories-en_order are hidden (their number is simply skipped).
+{%- endcomment -%}
+{%- if include.lang == 'en' -%}{%- assign order_list = site['categories-en_order'] -%}{%- else -%}{%- assign order_list = site['categories-ko_order'] -%}{%- endif -%}
+{%- assign counter = 0 -%}
+
+<div class="subj-grid">
+{%- for sec in site.data.home_sections -%}
+  {%- comment -%} how many subjects in this section are visible for this lang {%- endcomment -%}
+  {%- assign sec_count = 0 -%}
+  {%- for subj in sec.subjects -%}
+    {%- assign vis = true -%}
+    {%- if include.lang == 'en' and order_list -%}{%- unless order_list contains subj -%}{%- assign vis = false -%}{%- endunless -%}{%- endif -%}
+    {%- if vis -%}{%- assign sec_count = sec_count | plus: 1 -%}{%- endif -%}
+  {%- endfor -%}
+
+  {%- if sec_count > 0 -%}
+  <section class="subj-section">
+    <div class="subj-section__head">
+      <h2>{% if include.lang == 'en' %}{{ sec.en }}{% else %}{{ sec.ko }}{% endif %}</h2>
+      <span class="subj-section__count">{{ sec_count }} subject{% if sec_count != 1 %}s{% endif %}</span>
+    </div>
+    <div class="subj-cards">
+    {%- for subj in sec.subjects -%}
+      {%- assign counter = counter | plus: 1 -%}
+      {%- assign vis = true -%}
+      {%- if include.lang == 'en' and order_list -%}{%- unless order_list contains subj -%}{%- assign vis = false -%}{%- endunless -%}{%- endif -%}
+      {%- if vis -%}
+        {%- assign en = subj | split: ' / ' | last -%}
+        {%- assign ko = site.data.category_labels[subj] | default: en -%}
+        {%- assign slug = en | downcase | replace: ' ', '_' -%}
+        {%- assign file = en | replace: ' ', '_' -%}
+      <a class="subj-card" href="/{{ include.lang }}/{{ slug }}/" style="background-image: url('/assets/images/Pages/Thumbnails/Files/{{ file }}.jpeg');">
+        <span class="subj-card__en">{{ en }}</span>
+        <span class="subj-card__ko">{{ ko }}</span>
+        <span class="subj-card__go">Read more <i class="material-icons" aria-hidden="true">&#xE5C8;</i></span>
+      </a>
+      {%- endif -%}
+    {%- endfor -%}
+    </div>
+  </section>
+  {%- else -%}
+    {%- comment -%} still advance the counter for hidden subjects so numbers stay stable {%- endcomment -%}
+    {%- for subj in sec.subjects -%}{%- assign counter = counter | plus: 1 -%}{%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}
+</div>

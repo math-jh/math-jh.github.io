@@ -83,6 +83,59 @@ body {
   }
 }
 
+/* Inline post header (no hero band) — matches the post-math.html mockup:
+   category eyebrow + hue dot, serif title, italic subtitle. The hue comes from
+   --hero-hue/--hero-sat on <body> (set in default.html from the category). */
+.page__header--lead {
+  margin-bottom: 1.6em;
+
+  .page__eyebrow {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0 0 0.55em;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: $type-size-6;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: hsl(var(--hero-hue, 220), var(--hero-sat, 42%), 43%);
+
+    .hue-dot {
+      display: inline-block;
+      width: 0.62em;
+      height: 0.62em;
+      margin-right: 0.55em;
+      border-radius: 50%;
+      background: hsl(var(--hero-hue, 220), var(--hero-sat, 42%), 50%);
+    }
+  }
+
+  .page__title {
+    font-family: $global-font-family;   // serif title, matches mockup
+    font-weight: bold;
+    font-size: clamp(1.85rem, 2.8vw, 2.45rem);  // display title (Korean size-adjust 111% already inflates this)
+    line-height: 1.16;
+    letter-spacing: normal;             // negative tracking looks cramped on Hangul
+    word-break: keep-all;               // KO: break only at spaces, never mid-word
+    text-wrap: pretty;
+  }
+
+  .page__subtitle {
+    margin: 0.45em 0 0;
+    font-family: $global-font-family;
+    font-style: italic;
+    font-size: $type-size-4;
+    line-height: 1.4;
+    color: $muted-text-color;
+  }
+
+  .page__meta {
+    margin-top: 0.9em;
+  }
+}
+
 .page__lead {
   font-family: $global-font-family;
   font-size: $type-size-4;
@@ -115,7 +168,7 @@ body {
   li,
   dl {
     font-size: 1em;
-    line-height: 1.7;
+    line-height: 1.8; // slightly more open leading (was 1.7) to match the mockup
   }
 
   /* paragraph indents */
@@ -142,18 +195,9 @@ body {
   }
 
   :not(pre) > code {
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
-    font-size: 0.8em;
-    background: mix($background-color, $text-color, 82%); // more distinct from page bg (esp. dark)
-    border-radius: $border-radius;
-    color: $text-color;
-
-    &::before,
-    &::after {
-      letter-spacing: -0.2em;
-      content: "\00a0"; /* non-breaking space*/
-    }
+    font-size: 0.86em;
+    font-weight: 600;
+    color: $highlight-color;   // brass, no box — keeps the reading line uninterrupted
   }
 
   dt {
@@ -224,6 +268,33 @@ body {
 
     .page__lead {
       max-width: $medium;
+    }
+
+    /* category eyebrow above the hero title (brass, matches mockup) */
+    .page__hero-eyebrow {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      gap: 0.7em;
+      margin: 0 0 0.5em;
+      font-family: $sans-serif;
+      font-weight: 700;
+      font-size: $type-size-6;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: hsl(var(--hero-hue, 220), calc(var(--hero-sat, 42%) + 30%), 76%);  // hue-tinted
+      text-shadow: 1px 1px 4px rgba(#000, 0.4);
+
+      &::after {                       // trailing accent line beside the eyebrow (mockup)
+        content: "";
+        -webkit-box-flex: 1;
+        flex: 1 1 auto;
+        max-width: 200px;
+        height: 2px;
+        background: linear-gradient(90deg, currentColor, transparent);
+        opacity: 0.7;
+      }
     }
 
     .page__title {
