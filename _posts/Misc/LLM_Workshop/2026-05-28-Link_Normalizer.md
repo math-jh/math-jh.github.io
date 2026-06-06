@@ -106,6 +106,7 @@ def kramdown_slug(text)
   s
 end
 ```
+{: data-filename="_plugins/link_normalizer.rb"}
 
 이 규칙으로 모든 post를 한 번 더 훑어서 `## ...` 라인을 슬러그→텍스트 맵에 넣는다. 링크 표시가 `§§잘못된이름`이면 canonical로 교체하고, 슬러그가 일치하면 항상 본문 헤더의 정확한 텍스트로 덮어쓴다.
 

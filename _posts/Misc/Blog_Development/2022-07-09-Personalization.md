@@ -51,6 +51,7 @@ a {
   }
 }
 ```
+{: data-filename="_sass/minimal-mistakes/_base.scss"}
 이 코드에 `text-decoration: none;`을 추가하여 링크마다 밑줄을 치지 않도록 해 준다. 
 ```scss
 /* links */
@@ -72,6 +73,7 @@ a {
   }
 }
 ```
+{: data-filename="_sass/minimal-mistakes/_base.scss"}
 원래는 아래 그림과 같이 각 링크마다 밑줄이 적혀있었는데,
 
 ![Before_hyperlink](/assets/images/Misc/Blog_Development/Personalization-1.png){:width="500px" .align-center}
@@ -93,6 +95,7 @@ $$right-sidebar-width-narrow: 200px !default;
 $$right-sidebar-width: 300px !default;
 $$right-sidebar-width-wide: 400px !default;
 ```
+{: data-filename="_sass/minimal-mistakes/_variables.scss"}
 
 부분을
 
@@ -105,6 +108,7 @@ $$right-sidebar-width-narrow: 150px !default;
 $$right-sidebar-width: 200px !default;
 $$right-sidebar-width-wide: 250px !default;
 ```
+{: data-filename="_sass/minimal-mistakes/_variables.scss"}
 
 으로 수정해주면 된다. 그럼 위의 그림과 같던 본문의 너비가 
 
@@ -171,6 +175,7 @@ Minimal-mistakes 테마는 사이트의 각 아이콘을 [Font Awesome](https://
     .material-icons.md-light { color: rgba(255, 255, 255, 1); }
     .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
     ````
+    {: data-filename="_sass/minimal-mistakes/_base.scss"}
 3. 이후 사이트에서 font awesome 폰트를 사용하는 곳을 모두 찾아 적절한 아이콘으로 바꿔준다. 
 
 

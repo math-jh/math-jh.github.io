@@ -1,0 +1,81 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so jekyll-last-modified-at reads real commit dates
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # node-canvas needs native libs; fonts-liberation gives Arial-compatible
+      # metrics so the baked-in tile titles render the same as locally.
+      - name: Install canvas system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential libcairo2-dev libpango1.0-dev \
+            libjpeg-dev libgif-dev librsvg2-dev pkg-config \
+            fonts-liberation
+
+      - name: Install Node deps
+        run: npm ci
+
+      # Regenerate home subject tiles from _data/hues.yml BEFORE Jekyll builds,
+      # so _site picks them up. (Tiles no longer need to live in the repo.)
+      - name: Generate subject thumbnails
+        run: node scripts/generate-thumbnails.js
+
+      - name: Jekyll build
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Run Pagefind indexing
+        run: npx pagefind --site _site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

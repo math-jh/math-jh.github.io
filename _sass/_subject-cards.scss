@@ -23,6 +23,11 @@
 
   .wrapper { width: 100%; }
   .page__lead { max-width: none; } // full-width description (overrides the 768px cap)
+
+  /* subject title — break only at spaces (KO), never mid-word */
+  .page__title {
+    word-break: keep-all;
+  }
 }
 
 .subject-cards {
@@ -66,10 +71,11 @@
 .subject-card__num {
   display: block;
   font-family: $sans-serif;
-  font-size: 0.7em;
+  font-size: 0.72em;
   font-weight: bold;
-  letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.06em;
+  // hue-tinted bright number (was flat rgba white) — keyed to the card's colour
+  color: hsl(var(--hero-hue, 220), calc(var(--hero-sat, 42%) + 22%), 80%);
   margin-bottom: 0.3em;
 }
 
@@ -128,22 +134,272 @@
   }
 }
 
-/* /xx/categories/ — tie the archive to the per-subject colour system (hue/sat
-   from _data/hues.yml via inline --cat-hue/--cat-sat). Top jump-index = a left
-   colour bar per entry; section headers = a colour dot to the RIGHT of the
-   title. Achromatic Misc (sat 0%) renders a neutral grey, as elsewhere. */
-.taxonomy__index a {
-  border-left: 4px solid hsl(var(--cat-hue, 220), var(--cat-sat, 42%), 50%);
-  padding-left: 0.5em;
+/* /xx/categories/ — match the mockup: a "spectrum" jump-index of filled
+   chips (faint fill + left colour bar), section headers with a colour dot to
+   the LEFT + a colour underline bar, and clean title/date/excerpt rows.
+   All scoped to .taxonomy__* so other archive pages are untouched.
+   Colour comes from _data/hues.yml via inline --cat-hue/--cat-sat/--cat-l. */
+
+// jump-index → spectrum chips
+.taxonomy__index {
+  a {
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0.45em 0.7em;
+    border: 0;
+    border-left: 4px solid hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) * 1%));
+    border-radius: 6px;
+    background: rgba(#808080, 0.06);
+    transition: background 0.14s ease, transform 0.14s ease;
+
+    &:hover {
+      background: rgba(#808080, 0.13);
+      -webkit-transform: translateX(2px);
+      transform: translateX(2px);
+    }
+
+    strong { font-weight: bold; }
+  }
 }
 
-.taxonomy__section > .archive__subtitle::after {
-  content: "";
-  display: inline-block;
-  width: 0.6em;
-  height: 0.6em;
-  margin-left: 0.45em;
-  border-radius: 50%;
-  background: hsl(var(--cat-hue, 220), var(--cat-sat, 42%), 50%);
-  vertical-align: middle;
+// section header: colour dot LEFT + colour underline bar
+.taxonomy__section > .archive__subtitle {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 0.2em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) * 1%));
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0.62em;
+    height: 0.62em;
+    margin-right: 0.5em;
+    border-radius: 50%;
+    background: hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) * 1%));
+    vertical-align: middle;
+  }
 }
+
+// clean post rows
+.taxonomy__section {
+  .archive__item {
+    padding: 0.85em 0;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .archive__item-title {
+    margin: 0 0 0.15em;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  .page__meta,
+  .archive__item-excerpt {
+    margin: 0.2em 0 0;
+  }
+
+  // drop the redundant section divider that printed a line under "back to top"
+  &:not(:last-child) { border-bottom: 0; }
+
+  // and the hairline under the very last row of a section
+  .entries-list .list__item:last-child .archive__item,
+  .entries-grid .grid__item:last-child .archive__item {
+    border-bottom: 0;
+  }
+}
+
+/* ==========================================================================
+   Home subject-card grid (_includes/subject-grid.html) — mockup cards:
+   gradient tile in the subject hue + number + EN name + KO name + Read more.
+   Grouped by big category with a section header (name · count · filling line).
+   Colour from --hue/--sat/--lit (set inline from _data/hues.yml).
+   ========================================================================== */
+.subj-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+.subj-section {
+  margin: 2.6em 0 0;
+
+  &__head {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: baseline;
+    align-items: baseline;        // KO title + count share a baseline
+    gap: 0.7em;
+    margin-bottom: 0.9em;
+
+    h2 {
+      margin: 0;
+      padding: 0;                    // kill the theme's default h2 underline
+      border-bottom: 0;
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 1.5em;
+      letter-spacing: -0.01em;
+      color: $text-color;
+    }
+
+    // the line that fills the rest of the row
+    &::after {
+      content: "";
+      -webkit-box-flex: 1;
+      flex: 1 1 auto;
+      height: 1px;
+      background: $border-color;
+      -ms-flex-item-align: center;
+      // sit at the COUNT's vertical centre while the text stays on the baseline
+      align-self: baseline;
+      -webkit-transform: translateY(-0.28em);
+      transform: translateY(-0.28em);
+    }
+  }
+
+  &__count {
+    font-family: $sans-serif;
+    font-size: 0.8em;
+    color: $muted-text-color;
+    white-space: nowrap;
+  }
+}
+
+.subj-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   // 3 columns at normal width
+  gap: 16px;
+
+  @media (max-width: 800px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 520px) { grid-template-columns: 1fr; }
+}
+
+.subj-grid .subj-card {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-height: 172px;
+  padding: 18px 20px 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: #fff;
+  background-color: #1a2233;
+  background-size: cover;
+  background-position: center bottom;
+  box-shadow: 0 1px 2px rgba(#000, 0.18);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+
+  // legibility scrim so the white text reads over the tile (number sits behind)
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(#0a0f1a, 0.55) 0%, rgba(#0a0f1a, 0.12) 60%, rgba(#0a0f1a, 0) 100%);
+    pointer-events: none;
+  }
+
+  > * { position: relative; z-index: 1; }
+
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  .subj-card__en,
+  .subj-card__ko,
+  .subj-card__go { color: #fff; }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(#000, 0.34);
+  }
+
+  &__en {
+    font-family: $global-font-family;     // serif title (Merriweather / MaruBuri)
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.16;
+    letter-spacing: -0.005em;
+    text-shadow: 0 1px 3px rgba(#000, 0.35);
+  }
+
+  &__ko {
+    margin-top: 0.2em;
+    font-family: $global-font-family;
+    font-size: 0.95em;
+    color: rgba(#fff, 0.86);
+    text-shadow: 0 1px 3px rgba(#000, 0.35);
+  }
+
+  &__go {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 0.35em;
+    margin-top: auto;
+    padding-top: 0.9em;
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: rgba(#fff, 0.82);
+
+    .material-icons { font-size: 1.15em; transition: transform 0.16s ease; }
+  }
+
+  &:hover .subj-card__go .material-icons { transform: translateX(3px); }
+}
+
+/* Home hero (splash) — bigger “About” band with eyebrow; overlay image kept. */
+.layout--splash {
+  .page__hero--overlay {
+    min-height: 44vh;
+    padding: 3em 0;
+    -webkit-box-align: center;
+    align-items: center;
+
+    .page__hero-eyebrow {
+      color: #e3b562;                       // brass on the dark overlay
+      font-size: 0.9em;
+      &::after { background: linear-gradient(90deg, #e3b562, transparent); opacity: 0.7; }
+    }
+
+    .page__title {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      line-height: 1.06;
+      margin-bottom: 0.3em;
+    }
+
+    .page__lead { font-size: 1.08em; }
+
+    .btn--light-outline { font-size: 0.95em; padding: 0.6em 1.3em; }
+  }
+}
+
+/* AI-author notice — smart_toy icon + text (mockup look) */
+.ai-author-notice {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 0.7em;
+
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 1.5rem;
+    color: $warning-color;
+    opacity: 0.9;
+  }
+
+  &__text { min-width: 0; }
+  &__text > :first-child { margin-top: 0; }
+  &__text > :last-child { margin-bottom: 0; }
+}
+

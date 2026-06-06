@@ -142,6 +142,7 @@ layout: archive
   {% endfor %}
 {% endfor %}
 ```
+{: data-filename="_layouts/categories.html"}
 {% endraw %}
 
 이제 `category` 레이아웃이 적용된 페이지를 보면, 날짜에 관계 없이 `weight`이 작은 순으로 정렬된 것을 확인할 수 있다.
@@ -184,6 +185,7 @@ layout: archive
   </nav>
 {% endif %}
 ```
+{: data-filename="_includes/post_pagination.html"}
 {% endraw %}
 
 이렇게 수정하면 포스트 하단에서 이전 글/다음 글 버튼을 눌렀을 때 같은 카테고리 내에서, `weight`기준으로 정렬된 상태를 바탕으로 이동하는 것을 확인할 수 있다.

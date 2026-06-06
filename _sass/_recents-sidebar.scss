@@ -104,7 +104,7 @@
   &__item a {
     display: block;
     padding: 0.2rem 0.75rem;
-    color: mix($gray, $background-color, 20%);
+    color: $muted-text-color;   // was mix($gray,$background,20%) — nearly invisible
     font-weight: 600;
     line-height: 1.35;
     text-decoration: none;

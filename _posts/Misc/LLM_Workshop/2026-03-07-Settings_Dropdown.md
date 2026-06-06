@@ -46,6 +46,7 @@ weight: 3
   {% endif %}
 </div>
 ```
+{: data-filename="_includes/masthead.html"}
 {% endraw %}
 
 문제는 시각적인 것만이 아니다. 인라인 스타일이 빽빽한 것이야 옛 마크업의 자연스러운 결과로 넘긴다 쳐도, 두 토글 사이의 구분선이 "두 토글이 둘 다 활성화된 경우"에 한해서만 그어지도록 `margin-left`와 `border-left`를 Liquid `if`로 분기하는 부분이 특히 거슬렸다. 옵션이 하나 더 추가되면 또 분기를 끼워넣어야 할 것이 뻔히 보였다.
@@ -83,6 +84,7 @@ weight: 3
   </ul>
 </div>
 ```
+{: data-filename="_includes/masthead.html"}
 {% endraw %}
 
 구조적으로 깔끔해진 지점이 몇 군데 있다. 첫째, 두 토글이 각각 `<li>`로 분리되어서, "둘이 나란히 붙어 있을 때 사이에 선을 그어주는" 종류의 분기가 사라졌다. 둘째, 다크모드 항목에는 라벨 텍스트(`다크모드`)가 붙어서 아이콘만 보고 의미를 짐작하지 않아도 된다. 셋째, 언어 토글은 라디오 형태의 `en/ko` 표시에서 "다음에 갈 언어를 가리키는 한 줄"(`한글` 또는 `English`)로 단순화됐다. 어차피 둘 중 하나로 가는 동작이라 토글의 양면을 동시에 보여줄 필요가 없다.
@@ -135,6 +137,7 @@ CSS는 `_sass/minimal-mistakes/skins/_custom.scss`와 `_custom-dark.scss` 양쪽
   transition: background-color 0.2s;
 }
 ```
+{: data-filename="_sass/minimal-mistakes/skins/_custom.scss"}
 
 `.settings-menu`는 기본적으로 `display: none`이고, `.show` 클래스가 토글되면 보인다. `position: absolute`와 `right: 0`으로 마스트헤드의 오른쪽 끝에 붙는다. 다크/라이트 두 스킨 파일에 들어간 내용이 사실상 동일한데, 이 메뉴는 어차피 두 테마에서 같은 색으로 뜨기 때문이다. 공용 SCSS로 옮기는 편이 깔끔하겠지만, 이번 변경의 범위는 일단 여기까지였다.
 
@@ -168,6 +171,7 @@ function updateLangLabel() {
     }
 }
 ```
+{: data-filename="assets/js/custom/Multilingual.js"}
 
 세 조각이 각자 한 가지 일을 한다.
 

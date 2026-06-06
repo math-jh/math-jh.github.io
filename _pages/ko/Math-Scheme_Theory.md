@@ -3,6 +3,7 @@ title: "스킴"
 layout: archive_custom
 regenerate: true
 permalink: /ko/scheme_theory/
+eyebrow: "대수학"
 header:
   overlay_color: "transparent"
 hero_hue: 25

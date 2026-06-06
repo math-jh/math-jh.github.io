@@ -51,26 +51,22 @@
   </head>
 
   {%- comment -%}
-    Generative gradient hero colour (no image files). Two independent axes:
-      hue/sat  — from the subject. Subject-home pages bake `hero_hue`; posts
-                 read it AUTOMATICALLY from their category via _data/hues.yml,
-                 so adding a post needs no colour frontmatter.
-      lightness (--hero-l) — per-post 2nd axis. Driven by the post's POSITION
-        in its (language-filtered, weight-sorted) category, NOT the raw weight
-        value — identical to the subject-card grid, so a post's card and its
-        hero share one tone. weight only orders; position sets the shade.
-    Consumed by .page__hero--overlay in _sass/_subject-cards.scss.
+    Generative gradient hero colour (no image files), SINGLE SOURCE = _data/hues.yml.
+      • posts          → look up page.categories[0] in hues.yml (+ per-post lightness)
+      • subject homes  → match the page permalink to a hues.yml key (slug = the
+                         EN subject name), so the subject home, its post cards,
+                         the /categories anchors+headers and the home thumbnails
+                         all share ONE hue per subject. No per-page hue needed.
+      • page.hero_hue  → manual fallback only for pages absent from hues.yml.
+    lightness (--hero-l) is the per-post 2nd axis (position in the weight-sorted
+    category); subject homes use a single tone.
   {%- endcomment -%}
-  {%- if page.hero_hue -%}
-    {%- assign hero_hue = page.hero_hue -%}
-    {%- assign hero_sat = page.hero_sat | default: '42%' -%}
-    {%- assign hero_l = page.hero_l -%}
-  {%- elsif page.categories and page.categories.size > 0 -%}
+  {%- if page.categories and page.categories.size > 0 -%}
     {%- assign post_category = page.categories[0] -%}
     {%- assign hue_data = site.data.hues[post_category] -%}
     {%- if hue_data -%}
       {%- assign hero_hue = hue_data.hue -%}
-      {%- assign hero_sat = hue_data.sat | default: '42%' -%}
+      {%- assign hero_sat = hue_data.sat | default: '24%' -%}
       {%- assign hero_lang = page.url | slice: 0, 4 -%}
       {%- assign hero_sibs = site.categories[post_category] | where_exp: "p", "p.permalink contains hero_lang" | sort: 'weight' -%}
       {%- assign hero_total = hero_sibs | size -%}
@@ -87,7 +83,26 @@
         {%- assign hero_l = 26 -%}
       {%- endif -%}
     {%- endif -%}
+  {%- else -%}
+    {%- comment -%} subject home: find the hues.yml key whose slug is this permalink {%- endcomment -%}
+    {%- for pair in site.data.hues -%}
+      {%- assign _slug = pair[0] | split: ' / ' | last | downcase | replace: ' ', '_' -%}
+      {%- capture _seg -%}/{{ _slug }}/{%- endcapture -%}
+      {%- if page.url contains _seg -%}
+        {%- assign hero_hue = pair[1].hue -%}
+        {%- assign hero_sat = pair[1].sat | default: '24%' -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
   {%- endif -%}
+  {%- comment -%} manual fallback for pages not covered by hues.yml {%- endcomment -%}
+  {%- unless hero_hue -%}
+    {%- if page.hero_hue -%}
+      {%- assign hero_hue = page.hero_hue -%}
+      {%- assign hero_sat = page.hero_sat | default: '24%' -%}
+      {%- assign hero_l = page.hero_l -%}
+    {%- endif -%}
+  {%- endunless -%}
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" data-lang="{% assign lang_prefix = page.url | slice: 1, 2 %}{% if lang_prefix == 'ko' %}ko{% elsif lang_prefix == 'en' %}en{% endif %}"{% if hero_hue %} style="--hero-hue: {{ hero_hue }}; --hero-sat: {{ hero_sat }};{% if hero_l %} --hero-l: {{ hero_l }};{% endif %}"{% endif %} onload="darkmode()">
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}

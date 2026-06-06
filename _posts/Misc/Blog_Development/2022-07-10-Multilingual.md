@@ -143,6 +143,7 @@ function lang_home() {
   })
 {% endif %} 
 ````
+{: data-filename="_includes/head.html"}
 {% endraw %}
 
 이 코드는 path의 맨 앞이 `/ko/` 혹은 `/en/`으로 시작하지 않는다면 이 체크박스를 숨기고, 또 path가 `/ko/` 혹은 `/en/`으로 시작하더라도 다른 언어의 페이지가 존재하지 않는다면 마찬가지로 체크박스를 숨기는 기능 또한 겸하고 있다.
@@ -198,6 +199,7 @@ function lang_home() {
   </nav>
 {% endif %}
 ```
+{: data-filename="_includes/post_pagination.html"}
 {% endraw %}
 
 이에 따르면 `/ko/` 혹은 `/en/`로 시작하는 포스트는 자신과 같은 카테고리를 갖고 자신과 동일한 언어를 사용하는 포스트들 가운데에서 이전 글과 다음 글을 찾을 것이다. 반면 permalink가 이들 둘로 시작하지 않는 포스트의 경우, 자신과 동일한 카테고리의 포스트들 가운데 permalink가 `/ko-KR/`를 포함하는 (`site.locale`이 `ko-KR`이기 때문이다) 포스트들을 늘어두고 이전 글/다음 글을 결졍하게 된다. 

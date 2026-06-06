@@ -1,0 +1,39 @@
+# Home subject grid — big-category groups in _config.yml order.
+# TOP-LEVEL LIST so `site.data.home_sections` is the array itself.
+# Drives _includes/subject-grid.html. Numbers (01, 02, …) come from each
+# subject's running position here (kept identical to categories-*_order).
+# EN name = key after " / "; KO name = _data/category_labels.yml;
+# colour = _data/hues.yml; url = /{lang}/{en→snake}.
+- { ko: "교양수학",   en: "Liberal Arts",          subjects: ["Math / Linear Algebra"] }
+- { ko: "수학기초론", en: "Foundations",           subjects: ["Math / Set Theory", "Math / Category Theory"] }
+- ko: "대수학"
+  en: "Algebra"
+  subjects:
+    - Math / Algebraic Structures
+    - Math / Group Theory
+    - Math / Ring Theory
+    - Math / Multilinear Algebra
+    - Math / Field Theory
+    - Math / Homological Algebra
+    - Math / Commutative Algebra
+    - Math / Representation Theory
+- { ko: "위상수학",   en: "Topology",              subjects: ["Math / Topology", "Math / Algebraic Topology"] }
+- ko: "미분기하학"
+  en: "Differential Geometry"
+  subjects:
+    - Math / Manifolds
+    - Math / Lie Theory
+    - Math / Riemannian Geometry
+- ko: "대수기하학"
+  en: "Algebraic Geometry"
+  subjects:
+    - Math / Algebraic Varieties
+    - Math / Scheme Theory
+    - Math / Toric Geometry
+- { ko: "거울대칭",   en: "Mirror Symmetry",       subjects: ["Math / Symplectic Geometry", "Math / Mirror Symmetry"] }
+- ko: "기타"
+  en: "Misc"
+  subjects:
+    - Misc / Blog Development
+    - Misc / Peripherals
+    - Misc / LLM Workshop

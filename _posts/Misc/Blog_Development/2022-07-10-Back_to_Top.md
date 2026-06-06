@@ -36,6 +36,7 @@ weight: 9
   z-index: 10;
 }
 ```
+{: data-filename="_sass/minimal-mistakes/_sidebar.scss"}
 
 그리고 `_layouts/default.html`에 가서, 맨 밑에 있는 `<div id="footer" class="page__footer">`의 안쪽에 다음 코드를 삽입한다.
 ```html
@@ -45,6 +46,7 @@ weight: 9
     </div>
 </aside>
 ```
+{: data-filename="_layouts/default.html"}
 
 ## 읽은 퍼센트 표시하기
 
@@ -59,6 +61,7 @@ weight: 9
     </div>
 </aside>
 ```
+{: data-filename="_layouts/default.html"}
 이후 Javascript를 통해 스크롤이 일어날 때마다 얼마나 읽었는지를 계산하고, 이 값을 바탕으로 `<span>` 안에 있는 숫자를 바꿔준다. 이 스크립트는 `_includes/scripts.html`에 저장하였다.
 ```html
 <script language="javascript">
@@ -74,6 +77,7 @@ weight: 9
   });
 </script>
 ```
+{: data-filename="_includes/scripts.html"}
 
 ## 맨 위로 버튼 숨기기
 
@@ -108,12 +112,14 @@ $$(window).on('mousemove', function(){
   timer = setTimeout(toggle, 3000)
 });
 ```
+{: data-filename="assets/js/custom/HiddenTopButton.js"}
 그리고 맨 위에서 `_sidebar.scss` 파일에 추가한 코드 바로 밑에 다음 코드를 추가한다.
 ```scss
 .top_button { opacity: 1;
   transition: opacity 0.5s ease-in-out; }
 .hide {opacity: 0.1; }
 ```
+{: data-filename="_sass/minimal-mistakes/_sidebar.scss"}
 위의 스크립트는 주석에도 설명되어 있듯, 3초를 기다리면 `.top_button` 버튼에 `hide`클래스를 추가하여 `.top_button hide`를 만들고, 따라서 맨 위로 버튼이 `opacity:0.1` 속성을 갖게 된다. 만약 마우스 움직임이 감지되면 다시 `hide` 클래스가 사라져서 맨 위로 버튼에서 `opacity:0.1` 속성이 사라지고 따라서 다시 보이게 된다. 
 
 위의 Javascript를 구동시키기 위해서는 jQuery가 필요하다. 또, 위의 스크립트 또한 불러와야 하므로, 이 두 파일을 `_config.yml`에서 불러와야 한다. jQuery의 경우, `/assets/js/vendor/jquery/` 내에 `jquery-3.6.0.js`가 들어있지만 `_config.yml`의 `# Reading Files`에서 `exclude: assets/js/vendor`를 통해 해당 디렉터리를 무시하도록 되어있어 이를 불러오는 것이 불가능하다. 
@@ -127,6 +133,7 @@ exclude:
   ...
   -assets/js/vendor/jquery/jquery-3.6.0.js
 ```
+{: data-filename="_config.yml"}
 로 바꾸어 내가 저장한 `jquery-3.6.0.min.js`는 문제없이 `head_scripts`에서 불러올 수 있도록 했다. 
 
 마지막으로 `_config.yml` 파일의 맨 밑에 다음의 코드
@@ -135,6 +142,7 @@ head_scripts:
   - /assets/js/vendor/jquery-min/jquery-3.6.0.min.js
   - /assets/js/custom/HiddenTopButton.js
 ```
+{: data-filename="_config.yml"}
 를 추가하여, 사이트가 로드될 때 이 두 javascript가 같이 로드되도록 설정해준다.
 
 이렇게 하면 jQuery가 `head_scripts`에서 한 번, `main.min.js`에서 다시 한 번 불러져서 쓸데없이 두 번 불러진다는 문제가 있지만 `minimal-mistakes`의 어떤 부분에서 jQuery가 필요한지를 모두 아는 게 아니다보니 이 방법이 가장 안전하다고 생각했다.

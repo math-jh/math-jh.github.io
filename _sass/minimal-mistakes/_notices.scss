@@ -26,6 +26,20 @@
   border-radius: $border-radius;
   box-shadow: none;
 
+  /* Inline theorem label: <ins>정의 1 (…)</ins> — bold sans in the box's accent
+     colour, no underline. Overrides the global <ins> (which has a border-bottom
+     + wide right margin). Matches the post-math.html mockup. */
+  ins {
+    border-bottom: 0;
+    margin-right: 0.3em;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: $sans-serif;
+    font-weight: bold;
+    color: mix($notice-color, $text-color, 70%);
+    a { color: inherit; }
+  }
+
   h4 {
     margin-top: 0 !important; /* override*/
     margin-bottom: 0.75em;

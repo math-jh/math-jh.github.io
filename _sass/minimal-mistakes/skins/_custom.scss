@@ -3,19 +3,40 @@
    ========================================================================== */
 
 /* Colors */
-$text-color: #212121 !default;                                    //  Grey 900
-$background-color: #e0e0e0 !default;
-$muted-text-color: mix($background-color, $text-color, 20%) !default;
-$primary-color: #020715 !default;
-$footer-background-color: #020715 !default;
-$link-color: #2962ff !default;                                    //  Indigo A700
-$masthead-link-color: #f5f5f5 !default;                           //  Grey 100
-$masthead-link-color-hover: #a9874a !default;
+/* Mockup palette (light): warm paper + navy ink + brass accent.
+   Everything else (code bg, notice tints, borders) derives from these. */
+$text-color: #1a2233 !default;                                    //  navy ink
+$background-color: #edeae1 !default;                              //  warm paper
+$muted-text-color: #5a6276 !default;                             //  secondary text
+$primary-color: #0a1120 !default;                                //  masthead/footer navy
+$footer-background-color: #0a1120 !default;
+$link-color: #1f4fd0 !default;                                    //  link blue
+$masthead-link-color: #f3f1ea !default;
+$masthead-link-color-hover: #c89441 !default;                    //  brass (bright)
 $navicon-link-color-hover: mix($background-color, $text-color, 80%) !default;
-$border-color: mix($text-color, $background-color, 40%) !default;
-$highlight-color: #1c5dd2;                                        //  Lighten #071734 40
+$border-color: #d7d2c5 !default;                                 //  warm hairline
+$highlight-color: #ad7a2e;                                       //  brass accent
 $notice-background-mix: 0%;
 $highlight-background-mix: 8%;
+
+/* Code highlighting (light) — GitHub Light: white block (with a warm filename
+   bar + border via _syntax.scss) so it clearly lifts off the paper. base16. */
+$base00: #ffffff !default;   // code background (white)
+$base01: #f4f1ea !default;   // filename bar / line-highlight (warm, ties to paper)
+$base02: #e6e3d9 !default;   // selection / rule
+$base03: #6e7781 !default;   // comments
+$base04: #57606a !default;   // gutter / punctuation-muted
+$base05: #24292f !default;   // default text
+$base06: #1f2328 !default;
+$base07: #0e1116 !default;
+$base08: #953800 !default;   // variables / tags
+$base09: #0550ae !default;   // numbers / constants
+$base0a: #6f42c1 !default;   // classes / attrs
+$base0b: #0a3069 !default;   // strings
+$base0c: #1b7c83 !default;   // regex / escapes
+$base0d: #8250df !default;   // functions / names
+$base0e: #cf222e !default;   // keywords
+$base0f: #953800 !default;
 
 /* Math notice accents (light) — mid-strength 600-level; the box renders as a
    faint rgba tint of this + a 4px left border of this (see _notices.scss). */

@@ -3,6 +3,7 @@ title: "주변기기"
 layout: archive_custom
 regenerate: true
 permalink: /ko/peripherals
+eyebrow: "기타"
 header:
   overlay_color: "transparent"
 hero_hue: 0

@@ -100,3 +100,6 @@ scripts/audit/link_normalizer.log
 
 # Indexation monitor — local-only: holds GSC OAuth token + state + logs
 scripts/index-monitor/
+
+# Thumbnails (GitHub action으로 자동생성)
+assets/images/Pages/Thumbnails/Files/*.jpeg

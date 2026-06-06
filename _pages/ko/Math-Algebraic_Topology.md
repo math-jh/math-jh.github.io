@@ -3,6 +3,7 @@ title: "대수적 위상수학"
 layout: archive_custom
 regenerate: true
 permalink: /ko/algebraic_topology/
+eyebrow: "위상수학"
 header:
   overlay_color: "transparent"
 hero_hue: 156

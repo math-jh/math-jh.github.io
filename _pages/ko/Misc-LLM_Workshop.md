@@ -3,6 +3,7 @@ title: "LLM 작업실"
 layout: archive_custom
 regenerate: true
 permalink: /ko/llm_workshop/
+eyebrow: "기타"
 header:
   overlay_color: "transparent"
 hero_hue: 0

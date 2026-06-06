@@ -3,6 +3,7 @@ title: "집합론"
 layout: archive_custom
 regenerate: true
 permalink: /ko/set_theory/
+eyebrow: "수학기초론"
 header:
   overlay_color: "transparent"
 hero_hue: 274

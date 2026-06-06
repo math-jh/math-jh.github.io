@@ -33,7 +33,7 @@ repository               : "math-jh/math-jh.github.io" # GitHub username/repo-na
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : true # true, false (default)
+breadcrumbs              : false # true, false (default)
 words_per_minute         : 250
 comments:
   provider               : "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -355,13 +355,13 @@ defaults:
       toc_sticky: true
       comments: true
       share: true
-      # Auto-trigger the generative gradient hero. A post needs NO colour
-      # frontmatter: this makes the hero render (single.html keys on
-      # header.overlay_color) and the actual hue/sat/lightness come from the
-      # post's category via _data/hues.yml + weight (see _layouts/default.html).
-      # "transparent" lets the CSS gradient (.page__hero--overlay) show through.
-      header:
-        overlay_color: "transparent"
+      # NOTE: posts no longer force the generative gradient hero band. The title
+      # now renders inline at the top of the content column (see single.html's
+      # .page__header--lead) with a category eyebrow + hue dot. The category
+      # hue/sat is still computed on <body> (--hero-hue) from _data/hues.yml,
+      # so the colour cue stays — just as an accent, not a full banner.
+      # (Subject-home / category pages set their own overlay in frontmatter and
+      # keep their hero.)
 
 # Head scripts
 head_scripts:   

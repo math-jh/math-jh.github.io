@@ -3,6 +3,7 @@ title: "호몰로지 대수학"
 layout: archive_custom
 regenerate: true
 permalink: /ko/homological_algebra/
+eyebrow: "대수학"
 header:
   overlay_color: "transparent"
 hero_hue: 227

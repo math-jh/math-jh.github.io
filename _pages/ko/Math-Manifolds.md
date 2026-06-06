@@ -3,6 +3,7 @@ title: "미분다양체"
 layout: archive_custom
 regenerate: true
 permalink: /ko/manifolds/
+eyebrow: "미분기하학"
 header:
   overlay_color: "transparent"
 hero_hue: 84

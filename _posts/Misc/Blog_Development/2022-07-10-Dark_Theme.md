@@ -29,6 +29,7 @@ weight: 10
 dark_theme                : true
 dark_skin                 : "custom-dark"
 ```
+{: data-filename="_config.yml"}
 그리고 `assets/css/` 디렉터리로 들어가, 다음과 같이 `main_dark.scss`를 추가한다.
 ```scss
 ---
@@ -41,6 +42,7 @@ dark_skin                 : "custom-dark"
 @import "minimal-mistakes"; // main partials
 
 ```
+{: data-filename="assets/css/main_dark.scss"}
 그 후 `_includes/head.html`로 들어가서, 위에서 지정한 `dark_theme`이 참이라면 방금 만든 `main_dark.scss`를 로드하도록 한다.
 {% raw %}
 ```html
@@ -48,6 +50,7 @@ dark_skin                 : "custom-dark"
   <link rel="stylesheet" href="/assets/css/main_dark.css">
 {% endif %}
 ```
+{: data-filename="_includes/head.html"}
 {% endraw %}
 
 그리고 `_layouts/default.html`의 `<head>` 태그 내부에 다음의 코드를 붙여넣는다.
@@ -75,6 +78,7 @@ dark_skin                 : "custom-dark"
     }
 </style>
 ```
+{: data-filename="_layouts/default.html"}
 마지막으로 `_includes/masthead.html`에서 `<a class="site-title">`과 `<ul class="visible-links">` 사이에 다음 코드를 넣어준다.
 {% raw %}
 ```html
@@ -88,6 +92,7 @@ dark_skin                 : "custom-dark"
 </div>
 {% endif %}
 ```
+{: data-filename="_includes/masthead.html"}
 {% endraw %}
 그럼 masthead에 버튼이 추가되었을 것이며, 이 버튼은 누를 때마다 해와 달이 번갈아 나온다. 하지만 아직 이 버튼의 행동을 지정하지 않았기 때문에 유의미한 변화는 어떤 것도 일어나지 않는다.
 `assets/js/custom` 폴더에 (물론 `_config.yml`에서 제대로 불러오기만 한다면 어디에 놓든 상관은 없다) 다음의 Javascript
@@ -149,6 +154,7 @@ img.invert {
   filter: invert(1);
 }
 ```
+{: data-filename="assets/css/main_dark.scss"}
 를 추가해주었다. 
 
 ![octahedral axiom](/assets/images/Pages/Profile/Octahedral.png){:width="500px" class="invert" .align-center}
@@ -171,6 +177,7 @@ img.invert {
     }
   }
 ```
+{: data-filename="_sass/minimal-mistakes/_pages.scss"}
 이렇게 되어 있던 코드를
 ```scss
   :not(pre) > code {
@@ -188,6 +195,7 @@ img.invert {
     }
   }
 ```
+{: data-filename="_sass/minimal-mistakes/_pages.scss"}
 이렇게 수정했다. 
 
 ## 스크롤바 꾸미기
@@ -200,6 +208,7 @@ body::-webkit-scrollbar{width: 16px;}
 body::-webkit-scrollbar-track {background-color:#071734;}
 body::-webkit-scrollbar-thumb:hover {background: #a9874a; background-clip: padding-box; border: 2px solid transparent}
 ```
+{: data-filename="_layouts/default.html"}
 를 추가한다. 또, 좌측 사이드바와 페이지 목차 또한 간혹 스크롤바가 생길 정도로 길어질 때가 있어서, 약간의 시행착오 끝에 다음을 추가하면 된다는 것을 알아냈다.
 ```css
 .sidebar.sticky::-webkit-scrollbar{width: 6px}
@@ -210,12 +219,14 @@ body::-webkit-scrollbar-thumb:hover {background: #a9874a; background-clip: paddi
 .toc__menu::-webkit-scrollbar-track{display: none}
 .toc__menu::-webkit-scrollbar-thumb:hover {background: #071734; background-clip: padding-box; border: 1px solid transparent}
 ```
+{: data-filename="_layouts/default.html"}
 의도적으로 `-webkit-scrollbar-thumb`을 비워뒀기 때문에 아직까지는 스크롤바 트랙 위에 스크롤바가 보이지 않는다. 이제 `<style>`태그가 끝난 직후에 `<style>` 태그를 하나 더 만들고, `id`를 `scrollbar-color`로 바꿔준다. 즉 다음 코드를 `</style>` 직후에 추가한다.
 ```html
 <style id="scrollbar-color">
 
 </style>
 ```
+{: data-filename="_layouts/default.html"}
 이 태그 안에는 아무것도 없지만, Javascript를 이용하면 사이트가 로드될 때 이 태그 안의 내용물을 color scheme에 맞도록 해줄 수 있다. 다음 js를 `assets/js/custom/` 안에 넣는다.
 ```javascript
 function scrollbar() {

@@ -51,6 +51,8 @@
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
+  font-size: 1.5em;        // larger wordmark (was inheriting base)
+  letter-spacing: 0.01em;
   // z-index: 20;
 }
 

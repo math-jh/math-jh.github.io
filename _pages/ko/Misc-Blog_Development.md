@@ -3,6 +3,7 @@ title: "블로그 개발"
 layout: archive_custom
 regenerate: true
 permalink: /ko/blog_development/
+eyebrow: "기타"
 header:
   overlay_color: "transparent"
 hero_hue: 0

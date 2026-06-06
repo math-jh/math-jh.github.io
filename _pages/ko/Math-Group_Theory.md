@@ -3,6 +3,7 @@ title: "군론"
 layout: archive_custom
 regenerate: true
 permalink: /ko/group_theory/
+eyebrow: "대수학"
 header:
   overlay_color: "transparent"
 hero_hue: 209

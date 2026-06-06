@@ -3,6 +3,7 @@ title: "사교기하학"
 layout: archive_custom
 regenerate: true
 permalink: /ko/symplectic_geometry/
+eyebrow: "거울대칭"
 header:
   overlay_color: "transparent"
 hero_hue: 1

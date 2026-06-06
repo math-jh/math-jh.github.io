@@ -444,14 +444,14 @@
   color: mix($primary-color, #fff, 40%);
 
   a {
-    color: mix($link-color, $background-color, 60%);
+    color: $muted-text-color;   // neutral (was washed link-blue) — not distracting
     font-size: 0.95em;
   }
 
   a:hover {
-    color: $link-color;
+    color: $text-color;          // darken + underline on hover = clearly clickable
     font-size: 0.95em;
-    font-weight: bold;
+    text-decoration: underline;
   }
 
   .active {
@@ -544,7 +544,8 @@
 
   // Scrollspy marks toc items as .active when they are in focus
   .active a {
-    @include yiq-contrasted($background-color);
+    color: $highlight-color;            // brass current-section (matches mockup)
+    border-left-color: $highlight-color;
   }
 }
 
@@ -562,12 +563,14 @@
   a {
     display: block;
     padding: 0.25rem 0.75rem;
-    color: mix($gray, $background-color, 20%);
+    color: $muted-text-color;   // was mix($gray,$background,20%) — nearly invisible; use readable secondary
     font-weight: bold;
     line-height: 1.5;
+    border-left: 2px solid $border-color;   // TOC rail; turns brass on the active (scroll-spy) item
 
     &:hover {
       color: $text-color;
+      border-left-color: mix($highlight-color, $border-color, 50%);
     }
   }
 
