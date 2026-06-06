@@ -4225,3 +4225,14 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `centralizer` | looks like emphasis (no <sub> partner) |
 | `normalizer` | looks like emphasis (no <sub> partner) |
 
+## 호몰로지
+- post: `_posts/Math/Algebraic_Topology/ko/2023-02-18-Homology.md`
+- permalink: `/ko/math/algebraic_topology/homology`
+- scanned: 2026-06-06T09:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$n$$-cycle` | looks like emphasis (no <sub> partner) |
+| `singular` | looks like emphasis (no <sub> partner) |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+

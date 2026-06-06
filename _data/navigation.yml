@@ -1377,7 +1377,7 @@ linear_algebra-en:
     children:
       - title: "About This Site"
         url: en/about
-lie_theory-en:
+Lie_theory-en:
   - title: <a href="/en/lie_theory/" class="sidebar_title">Lie Theory</a>
     children:
       - title: "Torus Action"
