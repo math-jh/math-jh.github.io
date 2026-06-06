@@ -4344,3 +4344,23 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `maximal` | looks like emphasis (no <sub> partner) |
 
+## 노름과 대각합
+- post: `_posts/Math/Multilinear_Algebra/ko/2024-10-13-Norms_and_Traces.md`
+- permalink: `/ko/math/multilinear_algebra/norms_and_traces`
+- scanned: 2026-06-06T21:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `trace` | looks like emphasis (no <sub> partner) |
+| `norm` | looks like emphasis (no <sub> partner) |
+| `& \cdots &` | multi-word English emphasis — possibly a definition |
+
+## 정수적 확장
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-17-Integral_Extension.md`
+- permalink: `/ko/math/commutative_algebra/integral_extension`
+- scanned: 2026-06-06T22:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `혹은` | looks like emphasis (no <sub> partner) |
+
