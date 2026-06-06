@@ -4335,3 +4335,12 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `injective` | looks like emphasis (no <sub> partner) |
 | `splitting` | looks like emphasis (no <sub> partner) |
 
+## 국소화
+- post: `_posts/Math/Commutative_Algebra/ko/2024-09-05-Localization.md`
+- permalink: `/ko/math/commutative_algebra/localization`
+- scanned: 2026-06-06T19:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `maximal` | looks like emphasis (no <sub> partner) |
+
