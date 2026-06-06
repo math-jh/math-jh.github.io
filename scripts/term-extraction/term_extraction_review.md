@@ -4306,3 +4306,32 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `surjective` | looks like emphasis (no <sub> partner) |
 | `discrete` | looks like emphasis (no <sub> partner) |
 
+## 아벨 카테고리
+- post: `_posts/Math/Category_Theory/ko/2024-08-29-Abelian_Categories.md`
+- permalink: `/ko/math/category_theory/abelian_categories`
+- scanned: 2026-06-06T18:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `differential` | looks like emphasis (no <sub> partner) |
+
+## 대수
+- post: `_posts/Math/Algebraic_Structures/ko/2024-08-30-Algebras.md`
+- permalink: `/ko/math/algebraic_structures/algebras`
+- scanned: 2026-06-06T18:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `polynomial algebra` | multi-word English emphasis — possibly a definition |
+
+## Hom과 텐서곱
+- post: `_posts/Math/Multilinear_Algebra/ko/2024-08-30-Hom_and_Tensor.md`
+- permalink: `/ko/math/multilinear_algebra/hom_and_tensor`
+- scanned: 2026-06-06T18:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `projective` | looks like emphasis (no <sub> partner) |
+| `injective` | looks like emphasis (no <sub> partner) |
+| `splitting` | looks like emphasis (no <sub> partner) |
+
