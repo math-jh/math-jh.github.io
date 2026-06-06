@@ -4236,3 +4236,21 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `singular` | looks like emphasis (no <sub> partner) |
 | `Algebraic Topology` | multi-word English emphasis — possibly a definition |
 
+## 층
+- post: `_posts/Math/Topology/ko/2023-11-01-Sheaves.md`
+- permalink: `/ko/math/topology/sheaves`
+- scanned: 2026-06-06T12:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `정확히` | looks like emphasis (no <sub> partner) |
+
+## 몫환, 환 동형사상
+- post: `_posts/Math/Algebraic_Structures/ko/2024-05-05-Quotient_Rings.md`
+- permalink: `/ko/math/algebraic_structures/quotient_rings`
+- scanned: 2026-06-06T13:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `group` | looks like emphasis (no <sub> partner) |
+
