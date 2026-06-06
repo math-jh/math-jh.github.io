@@ -4143,3 +4143,51 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `혹은 간단히` | looks like emphasis (no <sub> partner) |
 | `graded` | looks like emphasis (no <sub> partner) |
 
+## 고전역학
+- post: `_posts/Math/Symplectic_Geometry/ko/2022-12-15-Classical_Mechanics.md`
+- permalink: `/ko/math/symplectic_geometry/classical_mechanics`
+- scanned: 2026-06-06T05:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Hamilton's equation` | multi-word English emphasis — possibly a definition |
+| `Hamiltonian vector field` | multi-word English emphasis — possibly a definition |
+
+## 접속
+- post: `_posts/Math/Riemannian_Geometry/ko/2022-12-16-Connection.md`
+- permalink: `/ko/math/riemannian_geometry/connection`
+- scanned: 2026-06-06T05:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `covariant Hessian` | multi-word English emphasis — possibly a definition |
+
+## 리 미분
+- post: `_posts/Math/Manifolds/ko/2022-12-16-Lie_Derivative.md`
+- permalink: `/ko/math/manifolds/Lie_derivative`
+- scanned: 2026-06-06T06:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Lie derivative` | multi-word English emphasis — possibly a definition |
+
+## 긴 완전열
+- post: `_posts/Math/Homological_Algebra/ko/2023-01-02-Long_Exact_Sequence.md`
+- permalink: `/ko/math/homological_algebra/long_exact_sequence`
+- scanned: 2026-06-06T06:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `long exact sequence` | multi-word English emphasis — possibly a definition |
+| `homotopy category` | multi-word English emphasis — possibly a definition |
+| `mapping cone` | multi-word English emphasis — possibly a definition |
+
+## 제한합
+- post: `_posts/Math/Algebraic_Structures/ko/2023-01-09-Restricted_Sums.md`
+- permalink: `/ko/math/algebraic_structures/restricted_sums`
+- scanned: 2026-06-06T07:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유한한` | looks like emphasis (no <sub> partner) |
+
