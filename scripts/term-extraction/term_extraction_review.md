@@ -4607,3 +4607,76 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `closed` | looks like emphasis (no <sub> partner) |
 
+## 위상다양체
+- post: `_posts/Math/Algebraic_Topology/ko/2025-07-05-Topological_Manifolds.md`
+- permalink: `/ko/math/algebraic_topology/topological_manifolds`
+- scanned: 2026-06-07T15:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `half-space` | looks like emphasis (no <sub> partner) |
+
+## 호모토피
+- post: `_posts/Math/Algebraic_Topology/ko/2025-07-09-Homotopy.md`
+- permalink: `/ko/math/algebraic_topology/homotopy`
+- scanned: 2026-06-07T15:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `Topology` | looks like emphasis (no <sub> partner) |
+
+## 피복공간
+- post: `_posts/Math/Algebraic_Topology/ko/2025-07-27-Covering_Spaces.md`
+- permalink: `/ko/math/algebraic_topology/covering_spaces`
+- scanned: 2026-06-07T16:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$B$$에서` | mixed-script emphasis — possibly a definition |
+| `connected` | looks like emphasis (no <sub> partner) |
+| `pointed` | looks like emphasis (no <sub> partner) |
+| `universal cover` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+| `Topology` | looks like emphasis (no <sub> partner) |
+
+## 호몰로지의 계산
+- post: `_posts/Math/Algebraic_Topology/ko/2025-08-05-Computation_of_Homology.md`
+- permalink: `/ko/math/algebraic_topology/computation_of_homology`
+- scanned: 2026-06-07T16:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `reduced homology` | multi-word English emphasis — possibly a definition |
+| `coefficient group` | multi-word English emphasis — possibly a definition |
+| `CW complex` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+
+## 코호몰로지
+- post: `_posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md`
+- permalink: `/ko/math/algebraic_topology/cohomology`
+- scanned: 2026-06-07T16:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `, j^` | multi-word English emphasis — possibly a definition |
+| `- l^` | multi-word English emphasis — possibly a definition |
+| `tensor product` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+| `A concise course in algebraic topology` | multi-word English emphasis — possibly a definition |
+
+## 합곱
+- post: `_posts/Math/Algebraic_Topology/ko/2025-09-12-Cup_Products.md`
+- permalink: `/ko/math/algebraic_topology/cup_products`
+- scanned: 2026-06-07T17:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `grade` | looks like emphasis (no <sub> partner) |
+| `(X;A)\otimes_A H^` | multi-word English emphasis — possibly a definition |
+| `adjunction formula` | multi-word English emphasis — possibly a definition |
+| `Algebraic Topology` | multi-word English emphasis — possibly a definition |
+
