@@ -4459,3 +4459,14 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `locally` | looks like emphasis (no <sub> partner) |
 
+## 차원
+- post: `_posts/Math/Commutative_Algebra/ko/2025-01-16-Krull_Dimension.md`
+- permalink: `/ko/math/commutative_algebra/Krull_dimension`
+- scanned: 2026-06-07T06:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `$$n$$th symbolic power` | multi-word English emphasis — possibly a definition |
+| `non-zerodivisor` | looks like emphasis (no <sub> partner) |
+| `homogenization` | looks like emphasis (no <sub> partner) |
+
