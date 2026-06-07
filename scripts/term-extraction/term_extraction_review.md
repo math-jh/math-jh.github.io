@@ -4821,3 +4821,49 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `$$i$$번째 standard open set` | mixed-script emphasis — possibly a definition |
 | `Veronese embedding` | multi-word English emphasis — possibly a definition |
 
+## 차원
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-22-Dimension.md`
+- permalink: `/ko/math/algebraic_varieties/dimension`
+- scanned: 2026-06-07T22:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `affine` | looks like emphasis (no <sub> partner) |
+| `affine cone` | multi-word English emphasis — possibly a definition |
+
+## 접공간과 매끄러움
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-22-Tangent_Spaces_and_Smoothness.md`
+- permalink: `/ko/math/algebraic_varieties/tangent_spaces_and_smoothness`
+- scanned: 2026-06-07T22:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Zariski cotangent space` | multi-word English emphasis — possibly a definition |
+| `nonsingular point` | multi-word English emphasis — possibly a definition |
+| `smooth` | looks like emphasis (no <sub> partner) |
+| `nonsingular` | looks like emphasis (no <sub> partner) |
+| `initial term` | multi-word English emphasis — possibly a definition |
+| `initial ideal` | multi-word English emphasis — possibly a definition |
+
+## 그라스만 다양체
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-24-Grassmannians.md`
+- permalink: `/ko/math/algebraic_varieties/grassmannians`
+- scanned: 2026-06-07T22:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Plücker embedding` | multi-word English emphasis — possibly a definition |
+| `closed` | looks like emphasis (no <sub> partner) |
+| `decomposable` | looks like emphasis (no <sub> partner) |
+| `Plücker relations` | multi-word English emphasis — possibly a definition |
+| `Schubert cell` | multi-word English emphasis — possibly a definition |
+
+## 인자
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-03-25-Divisors.md`
+- permalink: `/ko/math/algebraic_varieties/divisors`
+- scanned: 2026-06-07T23:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `principal Cartier divisor` | multi-word English emphasis — possibly a definition |
+
