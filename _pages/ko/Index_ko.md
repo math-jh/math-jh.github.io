@@ -155,6 +155,7 @@ permalink: /ko/misc/index_ko
 | <unselected id="complement_set">complement set</unselected> | <selected> 여집합 &#9745;</selected> | [\[집합론\] §ZFC 공리계](/ko/math/set_theory/zfc_axioms) |  |
 | <selected id="complete">complete &#9745;</selected> | <unselected>완전</unselected> | [\[집합론\] §유향집합](/ko/math/set_theory/directed_set) (lattice)<br/>  [\[미분다양체\] §벡터장](/ko/math/manifolds/vector_fields) (벡터장)<br/>[\[Toric 기하학\] §토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties) |  |
 | <selected id="complete_category">complete category &#9745;</selected> | <unselected>완비범주</unselected> | [\[범주론\] §극한](/ko/math/category_theory/limits) |  |
+| <selected id="complete_homogeneous_symmetric_polynomial">complete homogeneous symmetric polynomial &#9745;</selected> | <unselected>완전동차대칭다항식</unselected> | [\[다중선형대수학\] §대칭텐서](/ko/math/multilinear_algebra/symmetric_tensors) |  |
 | <selected id="complete_local_ring">complete local ring &#9745;</selected> | <unselected>국소완비환</unselected> | [\[가환대수학\] §완비화](/ko/math/commutative_algebra/completion) |  |
 | <selected id="complete_ring">complete ring &#9745;</selected> | <unselected>완비환</unselected> | [\[가환대수학\] §완비화](/ko/math/commutative_algebra/completion) |  |
 | <selected id="completely_t_2_-space">completely $t_2$-space &#9745;</selected> | <unselected>완전 $T_2$-공간</unselected> | [\[위상수학\] §하우스도르프 공간](/ko/math/topology/Hausdorff_spaces) |  |
@@ -268,6 +269,7 @@ permalink: /ko/misc/index_ko
 | <unselected id="eigenvector">eigenvalue</unselected> | <selected> 고유벡터 &#9745;</selected> | [\[선형대수학\] §특성다항식](/ko/math/linear_algebra/characteristic_polynomial) |  |
 | <unselected id="elementary_row_operation">elementary row operation</unselected> | <selected>기본행연산 &#9745;</selected> | [\[선형대수학\] §가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination) |  |
 | <unselected id="elementary_row_operation_ero">elementary row operation, ero</unselected> | <selected>기본행연산 &#9745;</selected> | [\[선형대수학\] §가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination) |  |
+| <selected id="elementary_symmetric_polynomial">elementary symmetric polynomial &#9745;</selected> | <unselected>기본대칭다항식</unselected> | [\[다중선형대수학\] §대칭텐서](/ko/math/multilinear_algebra/symmetric_tensors) |  |
 | <selected id="embedding">embedding &#9745;</selected> | <unselected>매장</unselected> | [\[미분다양체\] §부분다양체와 역함수 정리](/ko/math/manifolds/submanifolds) |
 | <unselected id="empty set">empty set</unselected> | <selected> 공집합 &#9745;</selected> | [\[집합론\] §ZFC 공리계](/ko/math/set_theory/zfc_axioms) |  |
 | <selected id="endomorphism_monoid">endomorphism monoid &#9745;</selected> | <unselected>자기준동형사상 모노이드</unselected> | [\[범주론\] §범주](/ko/math/category_theory/categories) |  |
@@ -645,7 +647,7 @@ permalink: /ko/misc/index_ko
 | <selected id="parallelizable">parallelizable &#9745;</selected> | <unselected>평행적</unselected> | [\[미분다양체\] §접다발과 여접다발](/ko/math/manifolds/tangent_and_cotangent_bundles) |
 | <unselected id="parallelogram_law">parallelogram law</unselected> | <selected> 평행사변형 법칙 &#9745;</selected> |[\[선형대수학\] §내적공간](/ko/math/linear_algebra/inner_product_spaces) |  |
 | <unselected id="partial_product">partial product</unselected> | <selected>부분곱 &#9745;</selected> | [\[집합론\] §곱집합의 성질](/ko/math/set_theory/property_of_products) |  |
-| <unselected id="partition">partition</unselected> | <selected>분할 &#9745;</selected> | [\[집합론\] §집합의 합](/ko/math/set_theory/sum_of_sets)<br/>[\[대수기하학\] §그라스만 다양체](/ko/math/algebraic_varieties/grassmannians) |  |
+| <unselected id="partition">partition</unselected> | <selected>분할 &#9745;</selected> | [\[집합론\] §집합의 합](/ko/math/set_theory/sum_of_sets)<br/>[\[대수기하학\] §그라스만 다양체](/ko/math/algebraic_varieties/grassmannians)<br/>[\[다중선형대수학\] §대칭텐서](/ko/math/multilinear_algebra/symmetric_tensors) |  |
 | <selected id="partition_of_unity">partition of unity &#9745;</selected> | <unselected>단위분할</unselected> | [\[미분다양체\] §미분다양체](/ko/math/manifolds/smooth_manifolds)<br/>[\[위상수학\] §옹골성](/ko/math/topology/compactness) |
 | <unselected id="Peano_axiom">Peano axiom</unselected> | <selected> 페아노 공리 &#9745;</selected> | [\[집합론\] §서수와 정렬집합](/ko/math/set_theory/ordinals)|  |
 | <selected id="perfect_field">perfect field &#9745;</selected> | <unselected>완전체</unselected> | [\[체론\] §체](/ko/math/field_theory/fields) |  |
@@ -768,6 +770,7 @@ permalink: /ko/misc/index_ko
 | <unselected id="scalar">scalar</unselected> | <selected>스칼라 &#9745;</selected> |[\[선형대수학\] §벡터공간](/ko/math/linear_algebra/vector_spaces) |  |
 | <selected id="scheme">scheme &#9745;</selected> | <unselected>스킴</unselected> | [\[스킴 이론\] §스킴](/ko/math/scheme_theory/schemes) |  |
 | <selected id="schubert_variety">Schubert variety &#9745;</selected> | <unselected>슈베르트 다양체</unselected> | [\[대수기하학\] §그라스만 다양체](/ko/math/algebraic_varieties/grassmannians) |  |
+| <selected id="schur_polynomial">schur polynomial &#9745;</selected> | <unselected>슈어 다항식</unselected> | [\[다중선형대수학\] §대칭텐서](/ko/math/multilinear_algebra/symmetric_tensors) |  |
 | <selected id="second_covariant_derivative">second covariant derivative &#9745;</selected> | <unselected>이계 공변미분</unselected> | [\[리만기하학\] §접속](/ko/math/riemannian_geometry/connection) |  |
 | <selected id="section">section &#9745;</selected> | <unselected>단면</unselected> | [\[집합론\] §이항관계](/ko/math/set_theory/binary_relation) <br/> [\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section) <br/> [\[미분다양체\] §벡터장](/ko/math/manifolds/vector_fields) | [Retraction](#retraction) |
 | <selected id="segment">segment &#9745;</selected> | <unselected>절편</unselected> | [\[집합론\] §서수와 정렬집합](/ko/math/set_theory/ordinals)|  |
