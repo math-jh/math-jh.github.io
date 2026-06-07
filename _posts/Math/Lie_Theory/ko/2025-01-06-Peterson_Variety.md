@@ -85,7 +85,7 @@ $$X$$가 regular nilpotent이고 $$H = \mathfrak{b} \oplus \bigoplus_i \mathbb{C
 
 ## Stratification
 
-Peterson variety는 자연스러운 stratification을 갖는다. $$Y_P^\circ$$의 각 stratum $$Y_{P,w}^\ast$$는 Weyl group element $$w$$에 의해 인덱싱되며, 이는 [§Bruhat decomposition과 parabolic subgroup, ⁋정리 12](/ko/math/lie_theory/bruhat_decomposition#thm12)의 Bruhat decomposition을 $$G/B_-$$로 옮긴 형태와 호환된다. 구체적으로
+Peterson variety는 자연스러운 stratification을 갖는다. $$Y_P^\circ$$의 각 stratum $$Y_{P,w}^\ast$$는 Weyl group element $$w$$에 의해 인덱싱되며, 이는 [§Bruhat decomposition과 parabolic subgroup, ⁋정리 14](/ko/math/lie_theory/bruhat_decomposition#thm14)의 Bruhat decomposition을 $$G/B_-$$로 옮긴 형태와 호환된다. 구체적으로
 
 $$Y_P^\circ = \bigsqcup_{w \in W^P} Y_{P,w}^\ast,\qquad Y_{P,w}^\ast = Y_P^\circ \cap (B w B_-)/B_-$$
 
