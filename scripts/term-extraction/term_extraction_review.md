@@ -4498,3 +4498,51 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `normal` | looks like emphasis (no <sub> partner) |
 
+## 대칭군
+- post: `_posts/Math/Group_Theory/ko/2025-03-29-Symmetric_Groups.md`
+- permalink: `/ko/math/group_theory/symmetric_groups`
+- scanned: 2026-06-07T09:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `left translation map` | multi-word English emphasis — possibly a definition |
+| `Vandermonde polynomial` | multi-word English emphasis — possibly a definition |
+| `alternating group` | multi-word English emphasis — possibly a definition |
+| `Reference` | looks like emphasis (no <sub> partner) |
+
+## 정역
+- post: `_posts/Math/Ring_Theory/ko/2025-04-01-Integral_Domains.md`
+- permalink: `/ko/math/ring_theory/integral_domains`
+- scanned: 2026-06-07T09:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `associate` | looks like emphasis (no <sub> partner) |
+
+## 군의 열
+- post: `_posts/Math/Group_Theory/ko/2025-04-03-Series_of_Groups.md`
+- permalink: `/ko/math/group_theory/series_of_groups`
+- scanned: 2026-06-07T10:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `normal` | looks like emphasis (no <sub> partner) |
+
+## 실로우 정리
+- post: `_posts/Math/Group_Theory/ko/2025-04-07-Sylow_Theorems.md`
+- permalink: `/ko/math/group_theory/Sylow_theorems`
+- scanned: 2026-06-07T10:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `유일한` | looks like emphasis (no <sub> partner) |
+
+## 체
+- post: `_posts/Math/Field_Theory/ko/2025-04-11-Fields.md`
+- permalink: `/ko/math/field_theory/fields`
+- scanned: 2026-06-07T11:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `characteristic` | looks like emphasis (no <sub> partner) |
+
