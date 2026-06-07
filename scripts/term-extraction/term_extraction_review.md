@@ -4441,3 +4441,21 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `presheaf coimage` | multi-word English emphasis — possibly a definition |
 | `presheaf quotient` | multi-word English emphasis — possibly a definition |
 
+## 옹골성과 필터의 수렴
+- post: `_posts/Math/Topology/ko/2024-12-11-Filter_Convergence.md`
+- permalink: `/ko/math/topology/filter_convergence`
+- scanned: 2026-06-07T04:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `sequential closure` | multi-word English emphasis — possibly a definition |
+
+## 옹골성
+- post: `_posts/Math/Topology/ko/2024-12-15-Compactness.md`
+- permalink: `/ko/math/topology/compactness`
+- scanned: 2026-06-07T04:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `locally` | looks like emphasis (no <sub> partner) |
+
