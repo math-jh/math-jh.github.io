@@ -4364,3 +4364,30 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `혹은` | looks like emphasis (no <sub> partner) |
 
+## 부풀림 대수
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-20-Blowup_Algebra.md`
+- permalink: `/ko/math/commutative_algebra/blowup_algebra`
+- scanned: 2026-06-06T23:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `initial form` | multi-word English emphasis — possibly a definition |
+
+## 영점정리
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-20-Nullstellensatz.md`
+- permalink: `/ko/math/commutative_algebra/nullstellensatz`
+- scanned: 2026-06-07T00:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `maximal` | looks like emphasis (no <sub> partner) |
+
+## 등급환의 국소화
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-23-Localization_of_Graded_Rings.md`
+- permalink: `/ko/math/commutative_algebra/localization_of_graded_rings`
+- scanned: 2026-06-07T01:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `homogeneous` | looks like emphasis (no <sub> partner) |
+
