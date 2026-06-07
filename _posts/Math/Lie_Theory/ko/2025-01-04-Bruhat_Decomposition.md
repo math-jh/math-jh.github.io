@@ -15,7 +15,12 @@ published: false
 
 ---
 
-우리는 앞선 글에서 Bruhat decomposition을 정의했다. ([§Borel subgroup과 flag variety, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)) 이번 글의 목표는 이 분해가 *무엇을 하는지*를 이해하는 것이다. 한 마디로 말하면 Bruhat decomposition은 flag variety $$G/B$$라는 기하적 대상을 Weyl group $$W$$의 조합론으로 번역한다. 각 $$w\in W$$가 affine space $$\mathbb{A}^{\ell(w)}$$ 하나에 대응하고, 이 affine cell들이 $$G/B$$를 빈틈없이 덮으면서, $$G/B$$의 위상은 전적으로 $$W$$ 위의 길이함수와 순서구조에 의해 결정된다. 이 글에서 우리는 먼저 이 cell 구조를 명확히 한 뒤, Borel subgroup $$B$$를 포함하는 더 큰 parabolic subgroup $$P\supseteq B$$로 일반화하여 partial flag variety $$G/P$$의 cell decomposition을 얻는다. 특히 Grassmannian $$Gr_{n-k}(\mathbb{C}^n)$$을 $$GL_n/P_k$$로 실현하는 구체적인 대응과, 그 위에서 정의되는 Schubert cell 및 Schubert variety를 소개한다.
+일반적으로 기하학적 대상이 주어졌을 때 그 구조를 이해하기 위해 우리는 이 대상을 잘게 분해한다. 가령 
+
+우리는 앞선 글에서 Bruhat decomposition을 정의했다. ([§Borel subgroup과 flag variety, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16))
+
+
+이번 글의 목표는 이 분해가 *무엇을 하는지*를 이해하는 것이다. 한 마디로 말하면 Bruhat decomposition은 flag variety $$G/B$$라는 기하적 대상을 Weyl group $$W$$의 조합론으로 번역한다. 각 $$w\in W$$가 affine space $$\mathbb{A}^{\ell(w)}$$ 하나에 대응하고, 이 affine cell들이 $$G/B$$를 빈틈없이 덮으면서, $$G/B$$의 위상은 전적으로 $$W$$ 위의 길이함수와 순서구조에 의해 결정된다. 이 글에서 우리는 먼저 이 cell 구조를 명확히 한 뒤, Borel subgroup $$B$$를 포함하는 더 큰 parabolic subgroup $$P\supseteq B$$로 일반화하여 partial flag variety $$G/P$$의 cell decomposition을 얻는다. 특히 Grassmannian $$Gr_{n-k}(\mathbb{C}^n)$$을 $$GL_n/P_k$$로 실현하는 구체적인 대응과, 그 위에서 정의되는 Schubert cell 및 Schubert variety를 소개한다.
 
 ## Reductive group과 Weyl group
 
