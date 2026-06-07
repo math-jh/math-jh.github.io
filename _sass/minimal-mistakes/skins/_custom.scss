@@ -38,16 +38,23 @@ $base0d: #8250df !default;   // functions / names
 $base0e: #cf222e !default;   // keywords
 $base0f: #953800 !default;
 
-/* Math notice accents (light) — mid-strength 600-level; the box renders as a
-   faint rgba tint of this + a 4px left border of this (see _notices.scss). */
-$definition-color: #00897b !default;                              //  Teal 600
-$proposition-color: #3949ab !default;                             //  Indigo 600
-$proof-color: #546e7a !default;                                   //  Blue Grey 600
-$details-color: #546e7a !default;                                 //  Blue Grey 600 (collapsible)
-$example-color: #43a047 !default;                                 //  Green 600
-$remark-color: #d81b60 !default;                                  //  Pink 600
-$misc-color: #6d4c41 !default;                                    //  Brown 600
-$spoiler-color: #f4511e !default;                                 //  Deep Orange 600
+/* Math notice accents (light) — one harmonised family: uniform oklch lightness
+   (L .52) + chroma, hue varies. Reads as a single system on warm paper instead
+   of a Material rainbow, while staying 6-way distinct. Box = faint rgba tint +
+   4px left border + sans label (see _notices.scss). */
+$definition-color: #4d6c8c !default;                              //  oklch(.52 .062 250) blue
+$proposition-color: #69638a !default;                             //  oklch(.52 .062 292) indigo
+$proof-color: #646972 !default;                                   //  oklch(.52 .015 260) neutral grey
+$details-color: #646972 !default;                                 //  = proof (collapsible)
+$example-color: #4a745a !default;                                 //  oklch(.52 .062 156) green
+$remark-color: #895a5b !default;                                  //  oklch(.52 .062 18)  rose
+$misc-color: #7a654d !default;                                    //  oklch(.52 .045 70)  ochre
+$spoiler-color: #f4511e !default;                                 //  Deep Orange 600 (unchanged)
+
+/* LLM / AI-author notice — caution accent, deliberately lifted OFF the brass
+   brand colour so it reads as a real warning, not the everyday accent. Drives
+   .notice--warning (box tint + 4px bar + smart_toy icon, see ai-author-notice). */
+$warning-color: #cd4b31 !default;                                 //  oklch(.585 .17 33) vivid vermilion
 
 $lang-color: #afc7f4 !default;
 $lang-list-color: #d7e3f9 !default;
@@ -199,11 +206,11 @@ body[data-lang="en"] .masthead__menu-item[data-lang="en"] {
 
 /* Scrollbar (light mode) */
 body::-webkit-scrollbar-thumb {background-color:#cfd8dc; border-radius: 3px; background-clip: padding-box; border:2px solid transparent}
-pre::-webkit-scrollbar-thumb {background-color:#cfd8dc; border-radius: 3px; background-clip: padding-box; border:1px solid transparent}
+pre::-webkit-scrollbar-thumb {background-color:#bfa46a; border-radius: 3px; background-clip: padding-box; border:1px solid transparent}
 /* Left nav + right TOC: hover-reveal thumb (transparent at rest in default.html) */
 .sidebar.sticky:hover::-webkit-scrollbar-thumb,
 .toc__menu:hover::-webkit-scrollbar-thumb,
-.sidebar__right.sticky > .toc:hover::-webkit-scrollbar-thumb {background-color:#cfd8dc; border-radius: 3px; background-clip: padding-box; border:1px solid transparent}
+.sidebar__right.sticky > .toc:hover::-webkit-scrollbar-thumb {background-color:#bfa46a; border-radius: 3px; background-clip: padding-box; border:1px solid transparent}
 .sidebar.sticky, .toc__menu, .sidebar__right.sticky > .toc {scrollbar-color: transparent transparent}
-.sidebar.sticky:hover, .toc__menu:hover, .sidebar__right.sticky > .toc:hover {scrollbar-color: #cfd8dc transparent}
+.sidebar.sticky:hover, .toc__menu:hover, .sidebar__right.sticky > .toc:hover {scrollbar-color: #bfa46a transparent}
 
