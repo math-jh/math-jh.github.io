@@ -109,6 +109,7 @@ window.KATEX_MACROS = {
     "\\Fix":"\\operatorname{Fix}",
     "\\Frac":"\\operatorname{Frac}",
     "\\Frob":"\\operatorname{Frob}",
+    "\\Fl":"\\operatorname{Fl}",
     "\\Fun":"\\operatorname{Fun}",
     "\\fun":"\\operatorname{fun}",
     "\\Gal":"\\operatorname{Gal}",
