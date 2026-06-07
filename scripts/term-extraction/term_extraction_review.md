@@ -4391,3 +4391,53 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `homogeneous` | looks like emphasis (no <sub> partner) |
 
+## 평탄성
+- post: `_posts/Math/Commutative_Algebra/ko/2024-10-30-Flatness.md`
+- permalink: `/ko/math/commutative_algebra/flatness`
+- scanned: 2026-06-07T01:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `free presentation` | multi-word English emphasis — possibly a definition |
+
+## 분해
+- post: `_posts/Math/Homological_Algebra/ko/2024-11-01-Resolutions.md`
+- permalink: `/ko/math/homological_algebra/resolutions`
+- scanned: 2026-06-07T01:40:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `augmentation map` | multi-word English emphasis — possibly a definition |
+
+## 유도함자
+- post: `_posts/Math/Homological_Algebra/ko/2024-11-03-Derived_Functors.md`
+- permalink: `/ko/math/homological_algebra/derived_functors`
+- scanned: 2026-06-07T02:00:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `morphism` | looks like emphasis (no <sub> partner) |
+| `universal` | looks like emphasis (no <sub> partner) |
+| `cohomological` | looks like emphasis (no <sub> partner) |
+
+## Ext와 Tor
+- post: `_posts/Math/Homological_Algebra/ko/2024-11-06-Ext_and_Tor.md`
+- permalink: `/ko/math/homological_algebra/ext_and_tor`
+- scanned: 2026-06-07T02:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Koszul complex` | multi-word English emphasis — possibly a definition |
+
+## 준층
+- post: `_posts/Math/Topology/ko/2024-11-19-Presheaves.md`
+- permalink: `/ko/math/topology/presheaves`
+- scanned: 2026-06-07T03:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `presheaf cokernel` | multi-word English emphasis — possibly a definition |
+| `presheaf image` | multi-word English emphasis — possibly a definition |
+| `presheaf coimage` | multi-word English emphasis — possibly a definition |
+| `presheaf quotient` | multi-word English emphasis — possibly a definition |
+
