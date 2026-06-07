@@ -4546,3 +4546,36 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | --- | --- |
 | `characteristic` | looks like emphasis (no <sub> partner) |
 
+## 미분가군
+- post: `_posts/Math/Multilinear_Algebra/ko/2025-04-18-Differential_Modules.md`
+- permalink: `/ko/math/multilinear_algebra/differential_modules`
+- scanned: 2026-06-07T11:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `commutative` | looks like emphasis (no <sub> partner) |
+
+## 다항식환
+- post: `_posts/Math/Ring_Theory/ko/2025-05-06-Polynomial_Rings.md`
+- permalink: `/ko/math/ring_theory/polynomial_rings`
+- scanned: 2026-06-07T12:20:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `leading term` | multi-word English emphasis — possibly a definition |
+| `monic` | looks like emphasis (no <sub> partner) |
+| `order` | looks like emphasis (no <sub> partner) |
+
+## 대칭텐서
+- post: `_posts/Math/Multilinear_Algebra/ko/2025-05-07-Symmetric_Tensors.md`
+- permalink: `/ko/math/multilinear_algebra/symmetric_tensors`
+- scanned: 2026-06-07T12:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `symmetrization` | looks like emphasis (no <sub> partner) |
+| `Jacobi–Trudi 항등식` | mixed-script emphasis — possibly a definition |
+| `semistandard Young tableau` | multi-word English emphasis — possibly a definition |
+| `Symmetric Functions and Hall Polynomials` | multi-word English emphasis — possibly a definition |
+| `Young Tableaux` | multi-word English emphasis — possibly a definition |
+

@@ -82,6 +82,12 @@ $$0 \to \mathbb{Z} \to \mathcal{O}_X \to \mathcal{O}_X^\ast \to 0$$
 
 로부터 유도되는 connecting homomorphism $$H^1(X, \mathcal{O}_X^\ast) \to H^2(X, \mathbb{Z})$$를 통해 이루어진다. Line bundle은 $$\mathcal{O}_X^\ast$$의 cocycle으로 주어지며, 이에 대응하는 cohomology class가 바로 $$c_1(\mathcal{L})$$이다. 동시에 divisor $$D$$는 $$\CH^1(X)$$의 원소로, 이 두 가지 관점이 Poincaré duality를 통해 일치함을 확인할 수 있다.
 
+[명제 4](#prop4)는 일반적인 Chern class의 기하학적인 의미 또한 보여준다. 이에 따르면, $$c_1$$은 section의 divisor, 즉 section의 zero locus이다. 더 높은 임의의 rank $$r$$ (globally generated) vector bundle $$\mathcal{E}$$에 대해서는, generic section $$s$$의 zero locus $$Z(s)$$는 codimension $$r$$이고, 그 class가 top Chern class $$c_r(\mathcal{E})$$로 나오는 것이 알려져 있다. 가장 일반적으로는 generic section들 $$s_1, \dots, s_{r-p+1}$$을 택하면, 이들이 fiber $$\mathcal{E}(x)$$에서 일차종속이 되는 점들의 자리인 *degeneracy locus* $$D_p$$는 codimension $$p$$의 cycle이며
+
+$$[D_p] = c_p(\mathcal{E}) \in H^{2p}(X)$$
+
+가 성립한다는 것이 바로 Chern class의 일반적인 해석이다. 
+
 우리는 Picard group에서 $$\otimes$$와 $$(-)^\vee$$가 어떠한 식으로 연산을 주는지 보았는데, 이 또한 다음과 같이 잘 연결된다. 
 
 <div class="proposition" markdown="1">
