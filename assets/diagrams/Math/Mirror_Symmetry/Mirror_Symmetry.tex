@@ -21,7 +21,7 @@
 %% 생성된 png를 assets/images/Math/Mirror_Symmetry/{글제목}-n.png 로 이동.
 %% ====================================================================
 
-%% Young diagram: 3x3 직사각형(=Gr(3,6)) 안 λ=(2,1)만 회색 (Quantum_Pieri_Rule-1.png)
+%% Young diagram: 3x3 직사각형(=Gr(3,6)) 안 λ=(2,1)만 회색 (Quantum_Cohomology_of_Grassmannians-1.png)
 \ytableausetup{boxsize=2em, centertableaux}
 \begin{ytableau}
 *(gray!45) & *(gray!45) & {} \\
@@ -29,7 +29,7 @@
 {} & {} & {}
 \end{ytableau}
 
-%% 예시4: σ_(2,1)⌣σ_(1,1)=σ_(3,2)+σ_(3,1,1)+σ_(2,2,1); λ=(2,1) 회색 + skew 빨강 (Quantum_Pieri_Rule-2.png)
+%% 예시4: σ_(2,1)⌣σ_(1,1)=σ_(3,2)+σ_(3,1,1)+σ_(2,2,1); λ=(2,1) 회색 + skew 빨강 (Quantum_Cohomology_of_Grassmannians-2.png)
 \ytableausetup{boxsize=1.5em, centertableaux}
 \begin{tikzpicture}
 \node (eq) at (0,0) {$\sigma_{(2,1)} \smile \sigma_{(1,1)} \;=$};
@@ -131,7 +131,7 @@
   \end{scope}
 \end{tikzpicture}
 
-%% 예시11 첫째 계산 후보: Gr(2,5) σ_3⋆σ_2 classical 후보 (5),(4,1),(3,2); λ=(2) 회색 + horizontal 3-strip 빨강, 점선 2x3, (3,2)만 초록 (Quantum_Pieri_Rule-4.png)
+%% 예시11 첫째 계산 후보: Gr(2,5) σ_3⋆σ_2 classical 후보 (5),(4,1),(3,2); λ=(2) 회색 + horizontal 3-strip 빨강, 점선 2x3, (3,2)만 초록 (Quantum_Cohomology_of_Grassmannians-4.png)
 \begin{tikzpicture}[scale=0.5]
   %% C1 (5): 1행이 점선 박스 오른쪽으로 초과
   \begin{scope}[shift={(0,0)}]
@@ -164,7 +164,7 @@
   \end{scope}
 \end{tikzpicture}
 
-%% 예시11 후보: Gr(2,5) σ_2⋆σ_(2,1) classical 후보 (4,1),(3,1,1),(2,2,1),(3,2); (2,1) 회색 + strip 빨강, 점선 2x3, (3,2)만 초록 (Quantum_Pieri_Rule-5.png)
+%% 예시11 후보: Gr(2,5) σ_2⋆σ_(2,1) classical 후보 (4,1),(3,1,1),(2,2,1),(3,2); (2,1) 회색 + strip 빨강, 점선 2x3, (3,2)만 초록 (Quantum_Cohomology_of_Grassmannians-5.png)
 \begin{tikzpicture}[scale=0.5]
   %% C1 (4,1): 4번째 열이 점선 박스 오른쪽으로 초과
   \begin{scope}[shift={(0,0)}]
@@ -214,7 +214,7 @@
   \end{scope}
 \end{tikzpicture}
 
-%% 예시11 결과: Gr(2,5) σ_2⋆σ_(2,1)=σ_(3,2)+q; λ=(2,1) 회색 + horizontal 2-strip 빨강, 초과분이 q (Quantum_Pieri_Rule-6.png)
+%% 예시11 결과: Gr(2,5) σ_2⋆σ_(2,1)=σ_(3,2)+q; λ=(2,1) 회색 + horizontal 2-strip 빨강, 초과분이 q (Quantum_Cohomology_of_Grassmannians-6.png)
 \ytableausetup{boxsize=1.6em, centertableaux}
 \begin{tikzpicture}
 \node (eq) at (0,0) {$\sigma_2 \star \sigma_{(2,1)} \;=$};
@@ -223,7 +223,7 @@
 \node at (3.0,-1.5) {\scriptsize $\sigma_{(3,2)}$};
 \end{tikzpicture}
 
-%% 고전 Pieri: (1)에 2 box를 horizontal strip으로 추가 → (3), (2,1) (Quantum_Pieri_Rule-3.png)
+%% 고전 Pieri: (1)에 2 box를 horizontal strip으로 추가 → (3), (2,1) (Quantum_Cohomology_of_Grassmannians-3.png)
 \begin{tikzpicture}[scale=0.5]
   \begin{scope}[shift={(0,0)}]
     \fill[gray!25] (0,0) rectangle (1,1);
@@ -910,7 +910,7 @@
      \fill[black] (\p) circle (1.7pt); \node[\pos=2pt] at (\p) {$\lab$}; }
 \end{tikzpicture}
 
-%% rim hook: Gr(2,5) σ_2⋆σ_(2,1)에서 직사각형(2x3) 밖 (4,1)의 5-rim hook(=도형 전체) 제거 → ∅, +q (Quantum_Pieri_Rule-8.png)
+%% rim hook: Gr(2,5) σ_2⋆σ_(2,1)에서 직사각형(2x3) 밖 (4,1)의 5-rim hook(=도형 전체) 제거 → ∅, +q (Quantum_Cohomology_of_Grassmannians-8.png)
 \begin{tikzpicture}[scale=0.5]
   \begin{scope}[shift={(0,0)}]
     \fill[red!20] (0,0) rectangle (4,1);
@@ -924,7 +924,7 @@
   \node at (11.6,-0.5) {$q\,\sigma_\emptyset = q$};
 \end{tikzpicture}
 
-%% rim hook 개념: partition (5,4,4,2)의 바깥 테두리 rim hook(주황) + box 중점 경로(빨강); 안쪽은 회색 (Quantum_Pieri_Rule-7.png)
+%% rim hook 개념: partition (5,4,4,2)의 바깥 테두리 rim hook(주황) + box 중점 경로(빨강); 안쪽은 회색 (Quantum_Cohomology_of_Grassmannians-7.png)
 \begin{tikzpicture}[scale=0.6]
   % 안쪽 box (회색)
   \foreach \i/\j in {1/1,1/2,1/3,2/1,2/2,2/3,3/1} {\fill[gray!25] (\j-1,-\i) rectangle (\j,-\i+1);}
