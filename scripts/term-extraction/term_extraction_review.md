@@ -4939,3 +4939,68 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `핵심 보조정리` | looks like emphasis (no <sub> partner) |
 | `Vanishing` | looks like emphasis (no <sub> partner) |
 
+## 유도카테고리
+- post: `_posts/Math/Homological_Algebra/ko/2026-04-13-Derived_Categories.md`
+- permalink: `/ko/math/homological_algebra/derived_categories`
+- scanned: 2026-06-08T01:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `homotopy category` | multi-word English emphasis — possibly a definition |
+| `derived category` | multi-word English emphasis — possibly a definition |
+| `shift functor` | multi-word English emphasis — possibly a definition |
+| `Shift functor` | multi-word English emphasis — possibly a definition |
+
+## 세르 쌍대성
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-04-21-Serre_Duality.md`
+- permalink: `/ko/math/algebraic_varieties/serre_duality`
+- scanned: 2026-06-08T01:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `trace map` | multi-word English emphasis — possibly a definition |
+| `relative dualizing sheaf` | multi-word English emphasis — possibly a definition |
+| `exceptional inverse image` | multi-word English emphasis — possibly a definition |
+
+## 곡선에서의 리만-로흐 정리
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-04-22-Riemann_Roch_Theorem.md`
+- permalink: `/ko/math/algebraic_varieties/riemann_roch_theorem`
+- scanned: 2026-06-08T02:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `complete linear system` | multi-word English emphasis — possibly a definition |
+| `infinite` | looks like emphasis (no <sub> partner) |
+
+## 곡면에서의 리만-로흐 정리
+- post: `_posts/Math/Algebraic_Varieties/ko/2026-05-04-Riemann_Roch_Surfaces.md`
+- permalink: `/ko/math/algebraic_varieties/riemann_roch_surfaces`
+- scanned: 2026-06-08T02:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `Symmetry.` | looks like emphasis (no <sub> partner) |
+| `Bilinearity.` | looks like emphasis (no <sub> partner) |
+| `Linear invariance.` | multi-word English emphasis — possibly a definition |
+
+## 아핀스킴
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Affine_Schemes.md`
+- permalink: `/ko/math/scheme_theory/affine_schemes`
+- scanned: 2026-06-08T02:40:02+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `global section functor` | multi-word English emphasis — possibly a definition |
+
+## 스킴의 대수구조
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Algebra_of_Schemes.md`
+- permalink: `/ko/math/scheme_theory/algebra_of_schemes`
+- scanned: 2026-06-08T03:00:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `주장` | looks like emphasis (no <sub> partner) |
+| `connected` | looks like emphasis (no <sub> partner) |
+| `정의역` | looks like emphasis (no <sub> partner) |
+| `total quotient ring` | multi-word English emphasis — possibly a definition |
+
