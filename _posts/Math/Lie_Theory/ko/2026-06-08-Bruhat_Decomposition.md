@@ -165,13 +165,19 @@ $$G/B=\bigsqcup_{w\in W}X_w^\circ,\qquad X_w^\circ\cong\mathbb{A}^{\ell(w)}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> $$G=\GL_n(\mathbb{C})$$의 경우를 끝까지 따라가 보자. 여기서 $$B$$는 invertible upper triangular matrix, $$T$$는 invertible diagonal matrix들의 group이고, Weyl group은 $$W=N_G(T)/T\cong S_n$$으로, $$w\in S_n$$은 $$we_k=e_{w(k)}$$로 작용하는 permutation matrix와 동일하게 취급된다. 이 표기 아래 Bruhat decomposition $$\GL_n=\bigsqcup_{w\in S_n}BwB$$은 *Gauss elimination*의 좌표불변 버전이라 생각할 수 있다. 가역행렬 $$g$$에 왼쪽에서 upper unipotent matrix를 곱하는 것과 오른쪽에서 upper triangular matrix를 곱하는 것만으로 줄여 나가면, 마지막에 남는 것은 각 행과 열에 $$1$$이 정확히 하나씩 있는 permutation matrix $$w$$ 하나뿐이기 때문이다. 이 $$w$$가 유일하게 결정된다는 것이 곧 정리 5의 disjointness이며, 그 $$w$$가 $$g$$의 Bruhat cell $$BwB$$를 가른다.
+<ins id="ex7">**예시 7**</ins> $$G=\GL_n(\mathbb{C})$$의 경우를 끝까지 따라가 보자. 여기서 $$B$$는 invertible upper triangular matrix, $$T$$는 invertible diagonal matrix들의 group이고, Weyl group은 $$W=N_G(T)/T\cong S_n$$으로, $$w\in S_n$$은 $$we_k=e_{w(k)}$$로 작용하는 permutation matrix와 동일하게 취급된다. 이 표기 아래 Bruhat decomposition $$\GL_n=\bigsqcup_{w\in S_n}BwB$$은 *Gauss elimination*의 좌표불변 버전이라 생각할 수 있다. 가역행렬 $$g$$에 왼쪽에서 upper unipotent matrix를 곱하는 것과 오른쪽에서 upper triangular matrix를 곱하는 것만으로 줄여 나가면, 마지막에 남는 것은 각 행과 열에 $$1$$이 정확히 하나씩 있는 permutation matrix $$w$$ 하나뿐이기 때문이다. 이 $$w$$가 유일하게 결정된다는 것이 곧 [정리 5](#thm5)의 disjointness이며, 그 $$w$$가 $$g$$의 Bruhat cell $$BwB$$를 가른다.
 
-$$n=2$$를 명시적으로 보자. $$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\GL_2$$에서 $$c=0$$이면 $$g$$는 이미 upper triangular, 즉 $$g\in B=BeB$$이다. 반면 $$c\neq0$$이면
+$$n=2$$의 경우를 명시적으로 보자. 그럼 $$G$$의 임의의 원소는 
 
-$$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\underbrace{\begin{pmatrix}1&a/c\\0&1\end{pmatrix}}_{\in\,U_s}\underbrace{\begin{pmatrix}0&1\\1&0\end{pmatrix}}_{=\,s}\underbrace{\begin{pmatrix}c&d\\0&\tfrac{bc-ad}{c}\end{pmatrix}}_{\in\,B}$$
+$$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\GL_2$$
 
-로 유일하게 분해되며, 이 때 $$g$$의 invertibility $$ad-bc\neq0$$이 마지막 인자의 가역성을 보장한다. 이 분해는 [명제 6](#prop6)의 isomorphism 
+의 형태이며, 여기서 $$c=0$$이면 $$g$$는 이미 upper triangular이므로 $$g\in B=BeB$$, 즉 $$g$$는 identity에 해당하는 cell에 들어간다. 다른 원소를 살펴보자. 만일 $$c\neq 0$$이면
+
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}c&d\\0&\tfrac{bc-ad}{c}\end{pmatrix}\in BsB$$
+
+이고, 따라서 $$\GL_2$$의 cell은 upper triangle matrix들과 그렇지 않은 부분으로 나뉘게 된다. 
+
+이제 [명제 6](#prop6)을 따라 이들을 $$\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$$으로 내리자. 위에서 보았듯 $$c=0$$에 해당하는 부분은 $$B$$ 그 자체이므로 이들은 한 점으로 떨어지며, 이는 명제의 $$\ell(w)=0$$에 해당하는 부분이다. 
 
 $$U_w\times B\rightarrow BwB;\qquad (u,b)\mapsto uwb$$
 
@@ -186,6 +192,8 @@ $$c=0$$인 cell $$BeB$$에서는 $$V_1=[a:0]=[1:0]=E_1$$, 곧 $$B$$가 고정하
 $$gB\in BwB/B\iff d_{ij}=\#\{k\leq i\mid w(k)\leq j\}\quad(\forall\,i,j)$$
 
 Gauss elimination이 보존하는 양이 정확히 이 $$d_{ij}$$들이다. 이 cell의 차원은 [예시 4](#ex4)에서 본 $$\ell(w)=\operatorname{inv}(w)$$이고, 가장 큰 cell은 역순 permutation $$w_0$$에 대응하는 차원 $$\binom{n}{2}$$의 big cell이다.
+
+이 때 차원은 두 층위를 구분해야 한다. group $$G$$ 안의 double coset $$BwB$$는 [명제 6](#prop6)의 $$BwB\cong\mathbb{A}^{\ell(w)}\times B$$에 의해 차원 $$\dim B+\ell(w)$$인 반면, flag variety로 내린 cell $$X_w^\circ=BwB/B$$는 $$\dim B$$가 빠진 차원 $$\ell(w)$$이다. 가령 $$\GL_2$$ ($$\dim B=3$$)에서 $$BeB=B$$와 $$BsB$$는 각각 $$3,4$$차원이지만 ($$BsB$$는 $$\GL_2$$에서 open dense), $$\mathbb{P}^1$$로 내리면 차원 $$0,1$$의 cell이 된다.
 
 </div>
 
