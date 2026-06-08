@@ -236,7 +236,7 @@ $$P_{e, w}(q) = 1 + q$$
 
 위의 예시 [예시 11](#ex11)에서 처음으로 등장한 다항식 $$1 + q$$는 매우 단순한 형태이지만, 일반적인 Weyl group에서는 KL polynomial이 매우 복잡한 형태를 가질 수 있다. 사실 KL polynomial의 계수가 항상 비음 (non-negative) 이라는 추측 (KL positivity conjecture) 은 [정리 8](#thm8)의 기하학적 해석에서 곧장 따라오지만, 일반 Coxeter group, 특히 finite type을 벗어난 경우에는 매우 어려운 문제이며 Elias–Williamson의 Soergel bimodule 이론을 통해 비로소 일반적으로 증명되었다.
 
-KL polynomial은 본 시리즈의 다른 글들과도 직접적으로 연결된다. [§Richardson variety](/ko/math/lie_theory/richardson_variety)에서 정의한 Richardson variety는 두 Schubert variety의 transversal한 교차로서, 그 stalk intersection cohomology가 KL polynomial의 차이로 기술되는 자연스러운 기하학적 무대이다.
+KL polynomial은 본 시리즈의 다른 글들과도 직접적으로 연결된다. [§Richardson variety와 Peterson variety](/ko/math/lie_theory/richardson_peterson_variety)에서 정의한 Richardson variety는 두 Schubert variety의 transversal한 교차로서, 그 stalk intersection cohomology가 KL polynomial의 차이로 기술되는 자연스러운 기하학적 무대이다.
 
 ---
 
