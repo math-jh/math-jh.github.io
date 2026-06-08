@@ -331,6 +331,16 @@ $$\ell(1234)=0,\quad\ell(1324)=1,\quad\ell(1423)=\ell(2314)=2,\quad\ell(2413)=3,
 
 이므로, $$\Gr_2(\mathbb{C}^4)$$은 차원 $$0,1,2,2,3,4$$의 여섯 Schubert cell로 paving된다. 이는 $$\dim \Gr_2(\mathbb{C}^4)=2\cdot 2=4$$와 정합적이며, cell의 총 개수는 $$\binom{4}{2}=6$$, 복소 차원별로는 $$0,1,2,3,4$$차에 각각 $$1,1,2,1,1$$개가 놓인다. 각 cell은 Young diagram(즉 $$2\times 2$$ 상자 안에 들어가는 partition)으로도 색인되며, $$\ell(w)$$가 그 partition의 상자 수에 해당한다.
 
+이 여섯 cell이 $$\Gr_2(\mathbb{C}^4)$$에서 구체적으로 무엇인지는 행렬로 곧장 드러난다. $$2$$-plane $$V$$를 그 기저를 행으로 갖는 $$2\times4$$ 행렬로 적고, 각 행의 pivot($$=1$$)을 가장 오른쪽 nonzero 성분 — 곧 $$\dim(V\cap E_j)$$가 뛰는 자리 — 으로 두면, pivot은 정확히 column $$\{w(1),w(2)\}$$에 놓이고 그 왼쪽의 non-pivot column 자리만 자유 좌표 $$\ast$$로 남는다. $$W^{P_2}=\{1234,1324,1423,2314,2413,3412\}$$ 순서대로
+
+$$\begin{pmatrix}1&0&0&0\\0&1&0&0\end{pmatrix},\quad\begin{pmatrix}1&0&0&0\\0&\ast&1&0\end{pmatrix},\quad\begin{pmatrix}1&0&0&0\\0&\ast&\ast&1\end{pmatrix},$$
+
+$$\begin{pmatrix}\ast&1&0&0\\\ast&0&1&0\end{pmatrix},\quad\begin{pmatrix}\ast&1&0&0\\\ast&0&\ast&1\end{pmatrix},\quad\begin{pmatrix}\ast&\ast&1&0\\\ast&\ast&0&1\end{pmatrix}$$
+
+이다. 자유 좌표 $$\ast$$의 개수 $$0,1,2,2,3,4$$가 정확히 위에서 센 $$\ell(w)$$이고, 이것이 $$BwP/P\cong\mathbb{A}^{\ell(w)}$$의 명시적 좌표화다. 양 끝을 보면 $$\{1,2\}$$은 $$V=E_2$$ 한 점이고, $$\{3,4\}$$은 $$E_2$$와 transverse한 ($$\dim(V\cap E_2)=0$$) generic $$2$$-plane들의 big cell이다.
+
+각 cell의 closure가 Grassmannian의 Schubert variety로, $$\dim(V\cap E_{w(a)})\ge a$$ ($$1\le a\le k$$)라는 rank 조건으로 잘린다. 위 $$2\times2$$ Young diagram이 그 조건을 담는다.
+
 </div>
 
 ## Schubert cell과 Schubert variety
@@ -380,6 +390,14 @@ $$1234\leq 1324\leq 1423\leq 2413\leq 3412$$
 $$1234\leq 1324\leq 2314\leq 2413\leq 3412$$
 
 으로 그려진다. 즉 $$1324$$ 아래에는 $$1234$$만 있고, 길이가 같은 $$1423$$과 $$2314$$는 서로 비교 불가능하며 둘 다 $$1324$$ 위·$$2413$$ 아래에 놓인다. 이 Hasse diagram은 두 갈래로 갈라졌다 다시 만나는 마름모꼴로, $$\Gr_2(\mathbb{C}^4)$$의 Schubert class들 사이의 포함관계를 그대로 보여준다. 가령 Schubert variety $$X_{2413}$$은 $$X_{1423}^\circ$$, $$X_{2314}^\circ$$, $$X_{1324}^\circ$$, $$X_{1234}^\circ$$를 모두 포함하는 차원 $$3$$의 subvariety이다.
+
+이 순서는 [예시 15](#ex15)의 jump set으로 곧장 읽힌다. $$w$$를 그 jump set $$\{w(1)<w(2)\}$$으로 보면 Bruhat order는 성분별 순서, 즉 $$v\le w\iff v(1)\le w(1)$$이고 $$v(2)\le w(2)$$이다. 그래서 두 maximal chain은 $$\{1,2\}\le\{1,3\}\le\{1,4\}\le\{2,4\}\le\{3,4\}$$와 $$\{1,2\}\le\{1,3\}\le\{2,3\}\le\{2,4\}\le\{3,4\}$$이고, $$1423\leftrightarrow\{1,4\}$$와 $$2314\leftrightarrow\{2,3\}$$이 비교 불가능한 것은 $$4\not\le3$$이면서 $$2\not\le1$$이기 때문이다.
+
+포함관계도 rank 조건으로 손에 잡힌다. $$X_{2413}$$의 조건 $$\dim(V\cap E_2)\ge1$$, $$\dim(V\cap E_4)\ge2$$ 중 뒤는 $$E_4=\mathbb{C}^4$$이라 자동이므로
+
+$$X_{2413}=\{V\in\Gr_2(\mathbb{C}^4)\mid\dim(V\cap E_2)\ge1\},$$
+
+곧 $$E_2$$와 만나는 $$2$$-plane 전체다. [예시 15](#ex15)의 여섯 cell 중 $$E_2$$와 transverse한 big cell $$3412$$만 이 조건을 어기므로, $$X_{2413}$$은 나머지 다섯 cell을 정확히 머금는다.
 
 </div>
 

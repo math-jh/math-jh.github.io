@@ -552,10 +552,8 @@ Lie_theory-ko:
         url: ko/math/lie_theory/borel_subgroup
       - title: "Bruhat decomposition"
         url: ko/math/lie_theory/bruhat_decomposition
-      - title: "Richardson variety"
-        url: ko/math/lie_theory/richardson_variety
-      - title: "Peterson variety"
-        url: ko/math/lie_theory/peterson_variety
+      - title: "Richardson variety와 Peterson variety"
+        url: ko/math/lie_theory/richardson_peterson_variety
       - title: "Kazhdan-Lusztig polynomial"
         url: ko/math/lie_theory/kazhdan_lusztig
   - title:
