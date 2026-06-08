@@ -177,7 +177,7 @@ $$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\be
 
 이고, 따라서 $$\GL_2$$의 cell은 upper triangle matrix들과 그렇지 않은 부분으로 나뉘게 된다. 
 
-이제 [명제 6](#prop6)을 따라 이들을 $$\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$$으로 내리자. 위에서 보았듯 $$c=0$$에 해당하는 부분은 $$B$$ 그 자체이므로 이들은 한 점으로 떨어지며, 이는 명제의 $$\ell(w)=0$$에 해당하는 부분이다. 
+이제 [명제 6](#prop6)을 따라 이들을 $$\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$$으로 내리자. 위에서 보았듯 $$c=0$$에 해당하는 부분은 $$B$$ 그 자체이므로 이들은 한 점으로 떨어지며, 이는 명제의 $$\ell(w)=0$$에 해당하는 부분이다. 한편 $$c\neq 0$$인 부분에서는 위에서 살펴본 것과 같이 cell 
 
 $$U_w\times B\rightarrow BwB;\qquad (u,b)\mapsto uwb$$
 
