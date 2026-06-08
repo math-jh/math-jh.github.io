@@ -77,7 +77,7 @@ The following axiom is worth remembering in particular because it prevents [Exam
 
 <div class="misc" markdown="1">
 
-**The Axiom Schema of Comprehension.** Given any set $$A$$ and any proposition $$P$$, there exists a set $$B$$ such that <phrase>$$x\in B$$</phrase> and <phrase>$$x\in A$$ and $$P(x)$$</phrase> are equivalent.
+**The Axiom Schema of Comprehension.** Given any set $$A$$ and any proposition $$P$$, there exists a set $$B$$ such that <phrase>$x\in B$</phrase> and <phrase>$x\in A$ and $P(x)$</phrase> are equivalent.
 
 </div>
 
@@ -93,7 +93,7 @@ and thus $$B=B'$$. It is appropriate to denote such a set by $$\{x\in A\mid P(x)
 
 <ins id="ex3">**Example 3**</ins> What created the contradiction in naive set theory was the following assumption:
 
-> Let $$P$$ be a proposition about $$x$$. Then there exists a set $$B$$ such that <phrase>$$x\in B$$</phrase> and <phrase>$$P(x)$$</phrase> are equivalent.
+> Let $$P$$ be a proposition about $$x$$. Then there exists a set $$B$$ such that <phrase>$x\in B$</phrase> and <phrase>$P(x)$</phrase> are equivalent.
 
 Now, according to the comprehension schema introduced above, unlike in [Example 1](#ex1), we cannot directly define $$\mathcal{S}=\{x\mid x\not\in x\}$$; we can only define
 
@@ -142,7 +142,7 @@ If the existence of sets other than the empty set is not guaranteed, the above t
 
 <div class="misc" markdown="1">
 
-**The Axiom of Pair.** For any sets $$A$$ and $$B$$, there exists a set $$C$$ such that <phrase>$$x\in C$$</phrase> and <phrase>$$x=A$$ or $$x=B$$</phrase> are equivalent.
+**The Axiom of Pair.** For any sets $$A$$ and $$B$$, there exists a set $$C$$ such that <phrase>$x\in C$</phrase> and <phrase>$x=A$ or $x=B$</phrase> are equivalent.
 
 </div>
 
@@ -154,15 +154,15 @@ we obtain $$\{\emptyset, \emptyset\}=\{\emptyset\}$$. Also, since $$\emptyset\no
 
 <div class="misc" markdown="1">
 
-**The Axiom of Union.** For any set $$\mathcal{S}$$, there exists a set $$U$$ such that <phrase>$$x\in U$$</phrase> and <phrase>$$x\in A$$ for some $$A\in\mathcal{S}$$</phrase> are equivalent.
+**The Axiom of Union.** For any set $$\mathcal{S}$$, there exists a set $$U$$ such that <phrase>$x\in U$</phrase> and <phrase>$x\in A$ for some $A\in\mathcal{S}$</phrase> are equivalent.
 
 </div>
 
-For example, if $$\mathcal{S}=\{A,B\}$$, then we can verify that $$U$$ becomes the set of <phrase>elements satisfying $$x\in A$$ or $$x\in B$$</phrase>, that is, $$A\cup B$$. This is sometimes written as $$\bigcup\mathcal{S}$$.
+For example, if $$\mathcal{S}=\{A,B\}$$, then we can verify that $$U$$ becomes the set of <phrase>elements satisfying $x\in A$ or $x\in B$</phrase>, that is, $$A\cup B$$. This is sometimes written as $$\bigcup\mathcal{S}$$.
 
 <div class="misc" markdown="1">
 
-**The Axiom of Power Set.** For any set $$S$$, there exists a set $$\mathcal{P}$$ such that <phrase>$$X\in \mathcal{P}$$</phrase> and <phrase>$$X\subseteq S$$</phrase> are equivalent.
+**The Axiom of Power Set.** For any set $$S$$, there exists a set $$\mathcal{P}$$ such that <phrase>$X\in \mathcal{P}$</phrase> and <phrase>$X\subseteq S$</phrase> are equivalent.
 
 </div>
 

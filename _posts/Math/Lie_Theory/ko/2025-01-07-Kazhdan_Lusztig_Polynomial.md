@@ -14,7 +14,7 @@ weight: 8
 published: false
 ---
 
-Schubert variety $$X_w \subseteq G/B$$는 일반적으로 특이점을 갖는 사영다양체이며, 그 특이점의 양상은 단순한 차원 정보만으로는 포착되지 않는다. 1979년 Kazhdan과 Lusztig는 [§Bruhat decomposition과 parabolic subgroup](/ko/math/lie_theory/bruhat_decomposition)의 조합적 구조 위에 정의되는 일군의 정수계수 다항식을 도입하여, $$X_w$$의 local intersection cohomology의 점별 차원이 이 다항식들로 완전히 인코딩됨을 보였다. 이 *Kazhdan-Lusztig polynomial*은 한편으로는 Hecke algebra의 한 특별한 basis로부터 순수히 조합적으로 정의되며, 다른 한편으로는 Schubert variety의 특이점과 infinite-dimensional Lie algebra의 표현론에 대한 직접적인 cohomological 정보를 담는다. 본 글에서는 이 다항식의 정의와 기본 성질을 정리하고, Schubert variety와의 관계를 statement 수준에서 정리한다.
+Schubert variety $$X_w \subseteq G/B$$는 일반적으로 특이점을 갖는 사영다양체이며, 그 특이점의 양상은 단순한 차원 정보만으로는 포착되지 않는다. 1979년 Kazhdan과 Lusztig는 [§Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition)의 조합적 구조 위에 정의되는 일군의 정수계수 다항식을 도입하여, $$X_w$$의 local intersection cohomology의 점별 차원이 이 다항식들로 완전히 인코딩됨을 보였다. 이 *Kazhdan-Lusztig polynomial*은 한편으로는 Hecke algebra의 한 특별한 basis로부터 순수히 조합적으로 정의되며, 다른 한편으로는 Schubert variety의 특이점과 infinite-dimensional Lie algebra의 표현론에 대한 직접적인 cohomological 정보를 담는다. 본 글에서는 이 다항식의 정의와 기본 성질을 정리하고, Schubert variety와의 관계를 statement 수준에서 정리한다.
 
 ## Coxeter group과 Bruhat order 복습
 

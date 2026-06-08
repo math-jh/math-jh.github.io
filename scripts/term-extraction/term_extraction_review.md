@@ -5004,3 +5004,22 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `정의역` | looks like emphasis (no <sub> partner) |
 | `total quotient ring` | multi-word English emphasis — possibly a definition |
 
+## 대수적 군
+- post: `_posts/Math/Scheme_Theory/ko/2026-05-07-Algebraic_Groups.md`
+- permalink: `/ko/math/scheme_theory/algebraic_groups`
+- scanned: 2026-06-08T03:20:01+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `General linear group` | multi-word English emphasis — possibly a definition |
+| `Special linear group` | multi-word English emphasis — possibly a definition |
+| `character` | looks like emphasis (no <sub> partner) |
+| `Orbit` | looks like emphasis (no <sub> partner) |
+| `Stabilizer` | looks like emphasis (no <sub> partner) |
+| `Fixed point set` | multi-word English emphasis — possibly a definition |
+| `invariant ring` | multi-word English emphasis — possibly a definition |
+| `Algebraic torus` | multi-word English emphasis — possibly a definition |
+| `Orthogonal group, Unitary group` | multi-word English emphasis — possibly a definition |
+| `GIT quotient` | multi-word English emphasis — possibly a definition |
+| `semistable` | looks like emphasis (no <sub> partner) |
+

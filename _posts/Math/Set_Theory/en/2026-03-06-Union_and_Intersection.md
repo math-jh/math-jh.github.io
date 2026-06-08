@@ -27,7 +27,7 @@ In [§ZFC Axioms](/en/math/set_theory/zfc_axioms) we accepted as an axiom that u
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets. Then the set of all $$x$$ that <phrase>belong to at least one $$A_i$$</phrase> is called the *union* of this family, and is written $$\bigcup_{i\in I}A_i$$.
+<ins id="def1">**Definition 1**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets. Then the set of all $$x$$ that <phrase>belong to at least one $A_i$</phrase> is called the *union* of this family, and is written $$\bigcup_{i\in I}A_i$$.
 
 </div>
 
@@ -39,7 +39,7 @@ Hence if $$I=\emptyset$$, then $$\bigcup_{i\in I} A_i=\emptyset$$. It is not dif
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets, and suppose $$I$$ is not empty. Then the set of all $$x$$ that <phrase>belong to every $$A_i$$</phrase> is called the *intersection* of this family, and is written $$\bigcap_{i\in I}A_i$$.
+<ins id="def2">**Definition 2**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets, and suppose $$I$$ is not empty. Then the set of all $$x$$ that <phrase>belong to every $A_i$</phrase> is called the *intersection* of this family, and is written $$\bigcap_{i\in I}A_i$$.
 
 </div>
 
@@ -51,7 +51,7 @@ If $$I=\emptyset$$, then $$i\in I$$ is false, so the entire statement is true re
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> Let $$(A_i)_{i\in I}$$ be a family of subsets of a set $$A$$. Then the set of all $$x$$ that <phrase>are elements of $$A$$ and simultaneously belong to every $$A_i$$</phrase> is called the *intersection* of this family, and is written $$\bigcap_{i\in I}A_i$$.
+<ins id="def3">**Definition 3**</ins> Let $$(A_i)_{i\in I}$$ be a family of subsets of a set $$A$$. Then the set of all $$x$$ that <phrase>are elements of $A$ and simultaneously belong to every $A_i$</phrase> is called the *intersection* of this family, and is written $$\bigcap_{i\in I}A_i$$.
 
 </div>
 

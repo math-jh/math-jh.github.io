@@ -89,7 +89,7 @@ $$x_1=c_1,\quad x_2=c_2,\quad\ldots,\quad x_i=d_i,\quad\ldots,\quad x_n=c_n$$
 
 is also a solution. Hence if all $$a_{ij}$$ are zero, then (3) has every vector in $$\mathbb{K}^n$$ as a solution when $$b$$ is the zero vector, and no solution otherwise. To exclude such trivial cases, we assume that at least one $$a_{ij}$$ is nonzero.
 
-Define $$k$$ to be <phrase>the smallest integer for which there exists $$1\leq j\leq m$$ with $$a_{jk}\neq 0$$</phrase>, and for this fixed $$k$$ choose the smallest $$j$$ satisfying $$a_{jk}\neq 0$$. Moving the $$j$$-th equation to the top,
+Define $$k$$ to be <phrase>the smallest integer for which there exists $1\leq j\leq m$ with $a_{jk}\neq 0$</phrase>, and for this fixed $$k$$ choose the smallest $$j$$ satisfying $$a_{jk}\neq 0$$. Moving the $$j$$-th equation to the top,
 
 $$\begin{aligned}a_{j1}x_{1}+a_{j2}x_2+\cdots+a_{jn}x_n&=b_j\\a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\\hspace{10pt}\vdots&\\a_{mn}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}$$
 

@@ -1,5 +1,5 @@
 ---
-title: "Bruhat decomposition과 parabolic subgroup"
+title: "Bruhat decomposition"
 description: "Connected reductive algebraic group의 Bruhat decomposition을 정의하고, parabolic subgroup로 확장하여 partial flag variety의 cell decomposition을 구한다. Grassmannian의 구체적 대응과 Schubert cell·Schubert variety의 구조를 살펴본다."
 excerpt: "Bruhat decomposition을 중심으로 한 homogeneous space의 cell decomposition, parabolic subgroup, 그리고 Grassmannian에서의 Schubert variety"
 
@@ -15,40 +15,31 @@ published: false
 
 ---
 
-일반적으로 기하학적 대상이 주어졌을 때 그 구조를 이해하기 위해 우리는 이 대상을 잘게 분해한다. 가령 
+일반적으로 기하학적 대상이 주어졌을 때 그 구조를 이해하기 위해 우리는 이 대상을 잘게 분해한다. 가령 위상적 공간 중 가장 만만한 것은 CW complex이며, 이를 cell structure로 분해하면 구체적인 계산을 할 수 있다. Lie group 또한 대수적 대상인 동시에 기하적 대상이므로, 이러한 방식을 시도해볼 수 있고, [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 도입한 Bruhat decomposition이 바로 이러한 역할을 해 준다. 
 
-우리는 앞선 글에서 Bruhat decomposition을 정의했다. ([§Borel subgroup과 flag variety, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16))
-
-
-이번 글의 목표는 이 분해가 *무엇을 하는지*를 이해하는 것이다. 한 마디로 말하면 Bruhat decomposition은 flag variety $$G/B$$라는 기하적 대상을 Weyl group $$W$$의 조합론으로 번역한다. 각 $$w\in W$$가 affine space $$\mathbb{A}^{\ell(w)}$$ 하나에 대응하고, 이 affine cell들이 $$G/B$$를 빈틈없이 덮으면서, $$G/B$$의 위상은 전적으로 $$W$$ 위의 길이함수와 순서구조에 의해 결정된다. 이 글에서 우리는 먼저 이 cell 구조를 명확히 한 뒤, Borel subgroup $$B$$를 포함하는 더 큰 parabolic subgroup $$P\supseteq B$$로 일반화하여 partial flag variety $$G/P$$의 cell decomposition을 얻는다. 특히 Grassmannian $$Gr_{n-k}(\mathbb{C}^n)$$을 $$GL_n/P_k$$로 실현하는 구체적인 대응과, 그 위에서 정의되는 Schubert cell 및 Schubert variety를 소개한다.
-
-## Reductive group과 Weyl group
-
-우리는 이 글에서 algebraically closed field 위에서 정의된 connected reductive algebraic group $$G$$를 다룬다. [§리 군](/ko/math/lie_theory/Lie_groups)에서 Lie group의 개념을, [§근계](/ko/math/lie_theory/root_systems)에서 그 Lie algebra와 root system $$\Phi$$의 구조를, [§Borel subgroup과 flag variety](/ko/math/lie_theory/borel_subgroup)에서는 Borel subgroup $$B$$와 flag variety $$G/B$$를 이미 살펴 보았으므로, 여기서는 이후 논의에 필요한 대상들만 간략히 환기하기로 한다.
-
-$$G$$가 *reductive*라는 것은 그 unipotent radical이 trivial한 것으로, 이는 $$G$$가 torus와 semisimple group의 extension으로 주어진다는 것과 같다. 앞선 글들이 주로 다룬 complex semisimple group은 reductive group의 특수한 경우이며, 우리의 주된 예시인 $$GL_n$$은 semisimple은 아니지만 (그 center가 nontrivial한 torus이다) reductive이다. 이 $$G$$의 Borel subgroup $$B$$와 그 안에 포함된 maximal torus $$T$$를 하나 고정하자. Borel subgroup은 $$G$$의 maximal connected solvable subgroup이고, maximal torus $$T$$는 $$B$$의 maximal connected diagonalizable subgroup이며, 이러한 $$B$$와 $$T$$는 모두 conjugation을 무시하면 유일하다.
-
-Weyl group $$W$$는 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)에서 root system $$\Phi$$의 reflection들로, [§원환면의 작용, §§극대 원환면](/ko/math/lie_theory/torus_action#극대-원환면)에서 $$N_G(T)/T$$로 각각 정의되었으며, [§근계, ⁋명제 20](/ko/math/lie_theory/root_systems#prop20)에서 이 두 정의가 일치함을 확인하였다.
-
-$$W=N_G(T)/T$$
-
-Borel subgroup $$B$$가 결정하는 positive root system $$\Phi^+$$와 simple root system $$\Delta=\{\alpha_1,\ldots,\alpha_r\}$$를 고정하면, $$W$$는 각 simple root $$\alpha_i$$에 대응하는 reflection $$s_i=s_{\alpha_i}$$들로 생성된다. 이 simple reflection들의 집합 $$S=\{s_1,\ldots,s_r\}$$이 $$W$$에 부여하는 조합론적 구조 — 그리고 그것이 $$G/B$$의 기하와 맺는 관계 — 가 이 글 전체를 관통하는 주제이다.
+우리는 이번 글에서 Bruhat decomposition을 조금 더 자세히 살펴본 후, Borel subgroup $$B$$를 포함하는 더 큰 parabolic subgroup $$P\supseteq B$$로 일반화하여 partial flag variety $$G/P$$의 cell decomposition을 살펴본다. 
 
 ## Coxeter group과 length function
 
-Weyl group $$W$$는 단순히 추상적인 유한군이 아니다. Simple reflection들 $$S$$를 함께 기억하면 $$(W,S)$$는 *Coxeter system*이라는 특별한 구조를 이루며, Bruhat cell의 차원을 재는 length function과 Schubert variety의 포함관계를 지배하는 Bruhat order가 모두 여기서 흘러나온다. 이 절에서 우리는 이 조합론적 토대를 정리한다.
+Bruhat decomposition이 일반적인 cell decomposition과 다른 점은, cell들이 임의로 붙은 것이 아니라 $$G/B$$ 위 Borel subgroup $$B$$의 작용에서 orbit으로 자연스럽게 나온다는 것이다. 더 중요한 것은, 이 orbit들의 집합 $$B\backslash G/B$$가 정확히 Weyl group $$W$$ ([§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17))로 색인된다는 점이다. 따라서 각 cell의 기하는 전적으로 $$W$$의 조합론으로 환원되며, 바로 여기서 root system이 다시 등장한다. 
+
+이를 위해 우선 Coxeter group을 정의한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 군 $$W$$와 그 생성집합 $$S=\{s_1,\ldots,s_r\}$$의 쌍 $$(W,S)$$가 *Coxeter system<sub>콕세터 계</sub>*라는 것은 $$W$$가 다음의 presentation을 갖는 것이다.
+<ins id="def1">**정의 1**</ins> Group $$W$$와 그 generator들 $$S=\{s_1,\ldots,s_r\}$$의 쌍 $$(W,S)$$가 *Coxeter system<sub>콕세터 계</sub>*라는 것은 $$W$$가 다음의 presentation을 갖는 것이다.
 
 $$W=\left\langle s_1,\ldots,s_r\;\middle|\;(s_is_j)^{m_{ij}}=e\right\rangle$$
 
-여기서 $$m_{ii}=1$$이고, $$i\neq j$$에 대하여 $$m_{ij}=m_{ji}\in\{2,3,\ldots,\infty\}$$이다. 이 때 군 $$W$$ 자체를 *Coxeter group<sub>콕세터 군</sub>*이라 부른다.
+여기서 $$m_{ii}=1$$이고, $$i\neq j$$에 대하여 $$m_{ij}=m_{ji}\in\{2,3,\ldots,\infty\}$$이다. 이 때 group $$W$$ 자체를 *Coxeter group<sub>콕세터 군</sub>*이라 부른다.
 
 </div>
 
-조건 $$m_{ii}=1$$은 각 생성원이 $$s_i^2=e$$를 만족하는 involution임을 뜻하고, $$i\neq j$$에 대한 관계 $$(s_is_j)^{m_{ij}}=e$$는 *braid relation*이라 불린다. 가령 $$m_{ij}=2$$이면 $$s_is_j=s_js_i$$, 즉 두 생성원이 commute하며, $$m_{ij}=3$$이면 $$s_is_js_i=s_js_is_j$$가 된다. $$m_{ij}=\infty$$인 경우는 $$s_i$$와 $$s_j$$ 사이에 아무런 관계도 부과하지 않음을 의미한다. 이 정수들 $$m_{ij}$$를 모은 대칭행렬이 Coxeter system의 모든 정보를 담으며, 유한 reflection group은 정확히 유한 Coxeter group으로 특징지어진다.
+조건 $$m_{ii}=1$$은 각 generator가 $$s_i^2=e$$를 만족하는 involution임을 뜻하고, $$i\neq j$$에 대한 관계 $$(s_is_j)^{m_{ij}}=e$$는 *braid relation*이라 불린다. 가령 $$m_{ij}=2$$이면 $$s_is_j=s_js_i$$, 즉 두 생성원이 commute하며, $$m_{ij}=3$$이면 $$s_is_js_i=s_js_is_j$$가 된다. $$m_{ij}=\infty$$인 경우는 $$s_i$$와 $$s_j$$ 사이에 아무런 관계도 부과하지 않음을 의미한다. 
+
+가장 작은 비자명한 경우는 생성원이 둘인 경우다. $$S=\{s_1,s_2\}$$이고 $$m_{12}=m$$이면 $$(W,S)$$는 정확히 order $$2m$$의 dihedral group ([\[대수적 구조\] §반군, 모노이드, 군, ⁋예시 16](/ko/math/algebraic_structures/groups#ex16))이며, 두 생성원은 정$$m$$각형의 인접한 두 대칭축에 대한 reflection으로, 그 곱 $$s_1s_2$$는 order $$m$$의 회전으로 실현된다. 일반적인 Coxeter group은 이러한 dihedral 조각들을 생성원을 공유하며 이어붙인 것으로 이해할 수 있다. 실제로 임의의 두 generator $$s_i,s_j$$가 만드는 부분군 $$\langle s_i,s_j\rangle$$는 언제나 위수 $$2m_{ij}$$의 dihedral group이고, [정의 1](#def1)의 presentation이 말하는 핵심은 이러한 pairwise relation 외에 셋 이상의 generator가 얽히는 새로운 relation이 없다는 것이다.
+
+이 정수들 $$m_{ij}$$를 모은 대칭행렬이 Coxeter system의 모든 정보를 담으며, 유한 reflection group은 정확히 유한 Coxeter group으로 특징지어진다.
 
 <div class="proposition" markdown="1">
 
@@ -58,11 +49,11 @@ $$W=\left\langle s_1,\ldots,s_r\;\middle|\;(s_is_j)^{m_{ij}}=e\right\rangle$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$W$$가 reflection들로 생성된다는 것은 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)의 정의이다. 두 simple reflection $$s_i,s_j$$의 곱 $$s_is_j$$는 $$\alpha_i$$와 $$\alpha_j$$가 생성하는 2차원 평면 위에서의 rotation이며, 그 rotation 각도는 두 simple root가 이루는 각의 두 배이다. [§근계](/ko/math/lie_theory/root_systems)에서 확인한 것과 같이 서로 다른 두 simple root가 이룰 수 있는 각은 $$90^\circ,120^\circ,135^\circ,150^\circ$$ 중 하나이므로, $$s_is_j$$의 위수 $$m_{ij}$$는 각각 $$2,3,4,6$$이 된다. 이들 braid relation만으로 $$W$$가 완전히 결정된다는 것, 즉 $$(W,S)$$가 Coxeter system이라는 것은 유한 reflection group에 대한 Coxeter의 정리이다. (\[BB\] 참조)
+$$W$$가 reflection들로 생성된다는 것은 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)의 정의이다. 두 simple reflection $$s_i,s_j$$의 곱 $$s_is_j$$는 $$\alpha_i$$와 $$\alpha_j$$가 생성하는 2차원 평면 위에서의 rotation이며, 그 rotation 각도는 두 simple root가 이루는 각의 두 배이다. [§근계](/ko/math/lie_theory/root_systems)에서 확인한 것과 같이 서로 다른 두 simple root가 이룰 수 있는 각은 $$90^\circ,120^\circ,135^\circ,150^\circ$$ 중 하나이므로, $$s_is_j$$의 위수 $$m_{ij}$$는 각각 $$2,3,4,6$$이 된다. 이들 braid relation만으로 $$W$$가 완전히 결정된다는 것이 가장 비자명한 부분으로, 이것이 바로 Coxeter의 정리에 해당하는 부분이다.
 
 </details>
 
-이 정수 $$m_{ij}$$들은 [§Borel subgroup과 flag variety, ⁋정의 1](/ko/math/lie_theory/borel_subgroup#def1)의 Dynkin diagram에서 곧바로 읽힌다. 두 vertex가 연결되지 않았으면 $$m_{ij}=2$$, single edge면 $$3$$, double edge면 $$4$$, triple edge면 $$6$$이다. 예컨대 type $$A_{n-1}$$의 Weyl group $$W=S_n$$에서 인접한 두 simple reflection은 $$m=3$$을 가지므로 익숙한 braid relation $$s_is_{i+1}s_i=s_{i+1}s_is_{i+1}$$을 만족한다.
+우리 경우에 이 정수 $$m_{ij}$$들은 [§Borel subgroup, ⁋정의 1](/ko/math/lie_theory/borel_subgroup#def1)의 Dynkin diagram에서 곧바로 읽힌다. 두 vertex가 연결되지 않았으면 $$m_{ij}=2$$, single edge면 $$3$$, double edge면 $$4$$, triple edge면 $$6$$이다. 예컨대 [§Borel subgroup, ⁋정의 8](/ko/math/lie_theory/borel_subgroup#def8)의 그림에서 type $$A_{n-1}$$의 Weyl group $$W=S_n$$에서 인접한 두 simple reflection은 $$m=3$$을 가지므로 익숙한 braid relation $$s_is_{i+1}s_i=s_{i+1}s_is_{i+1}$$을 만족한다.
 
 Coxeter system $$(W,S)$$가 주어지면 각 원소를 생성원의 곱으로 표현하는 데 드는 "비용"을 잴 수 있다.
 
@@ -102,9 +93,9 @@ $$G=\bigsqcup_{w\in W}BwB$$
 
 </div>
 
-이 정리 자체는 [§Borel subgroup과 flag variety, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 이미 증명하였으므로 여기서 다시 증명하지는 않는다. 그곳에서 본 것처럼, 존재성은 $$G$$가 $$B$$와 $$N_G(T)$$로 생성된다는 사실(BN-pair의 공리)에서, 유일성은 $$B\cap N_G(T)=T$$라는 등식에서 나온다. 표기에서 $$BwB$$는 $$w$$의 임의의 lift $$\dot w\in N_G(T)$$를 택한 $$B\dot wB$$를 뜻하며, $$T\subseteq B$$이므로 lift의 선택과 무관하게 잘 정의된다.
+이 정리 자체는 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 이미 증명하였으므로 여기서 다시 증명하지는 않는다. 그곳에서 본 것처럼, 존재성은 $$G$$가 $$B$$와 $$N_G(T)$$로 생성된다는 사실(BN-pair의 공리)에서, 유일성은 $$B\cap N_G(T)=T$$라는 등식에서 나온다. 표기에서 $$BwB$$는 $$w$$의 임의의 lift $$\dot w\in N_G(T)$$를 택한 $$B\dot wB$$를 뜻하며, $$T\subseteq B$$이므로 lift의 선택과 무관하게 잘 정의된다.
 
-이 분해를 바라보는 가장 직관적인 방법은 $$G$$ 위의 $$B\times B$$-action $$(b_1,b_2)\cdot g=b_1gb_2^{-1}$$을 생각하는 것이다. 이 action의 orbit이 바로 double coset $$BwB$$이고, 정리는 이 orbit들이 $$W$$로 색인된다고 말한다. 한쪽 $$B$$만 quotient하여 $$B\backslash G/B$$ 대신 $$G/B$$를 보면, $$B$$가 flag variety $$G/B$$에 작용할 때 그 orbit들이 $$W$$로 색인되는 것이며, [§Borel subgroup과 flag variety, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13)의 사전을 통해 이는 "$$G/B$$의 한 flag이 standard flag $$E_\bullet$$에 대해 갖는 상대적 위치"라는 이산적 불변량이 정확히 $$W$$의 원소 하나라는 뜻이 된다.
+이 분해를 바라보는 가장 직관적인 방법은 $$G$$ 위의 $$B\times B$$-action $$(b_1,b_2)\cdot g=b_1gb_2^{-1}$$을 생각하는 것이다. 이 action의 orbit이 바로 double coset $$BwB$$이고, 정리는 이 orbit들이 $$W$$로 색인된다고 말한다. 한쪽 $$B$$만 quotient하여 $$B\backslash G/B$$ 대신 $$G/B$$를 보면, $$B$$가 flag variety $$G/B$$에 작용할 때 그 orbit들이 $$W$$로 색인되는 것이며, [§Borel subgroup, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13)의 사전을 통해 이는 "$$G/B$$의 한 flag이 standard flag $$E_\bullet$$에 대해 갖는 상대적 위치"라는 이산적 불변량이 정확히 $$W$$의 원소 하나라는 뜻이 된다.
 
 각 조각 $$BwB$$를 *Bruhat cell*이라 부른다. 이 cell의 내부 구조는 다음과 같이 묘사된다. $$B$$의 unipotent radical을 $$U$$, opposite Borel subgroup $$B^-$$의 unipotent radical을 $$U^-$$라 하고, 각 $$w\in W$$에 대하여
 
@@ -352,7 +343,7 @@ $$X_w=\overline{X_w^\circ},\qquad X^w=\overline{X^w_\circ}$$
 
 정의에 의해 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$이고 $$X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$$이다. 특히 $$X_{w_0^P}^\circ$$ ($$w_0^P$$는 $$W^P$$의 longest element)는 $$\ell(w_0^P)=\dim(G/P)$$인 open dense cell이고, $$X_e^\circ=\{eP\}$$는 $$B$$-fixed point이다. 대칭적으로 opposite 쪽에서는 $$X^e_\circ=B^-P/P$$가 open dense cell, $$X^{w_0^P}_\circ=\{w_0^PP\}$$가 $$B^-$$-fixed point가 된다. 즉 두 cell 구조는 서로 차원을 뒤집은 형태로 맞물린다.
 
-Schubert variety들 사이의 포함관계는 Weyl group 위의 *Bruhat order*가 지배한다. Bruhat order $$\leq$$는 $$v$$의 어떤 reduced expression이 $$w$$의 어떤 reduced expression의 subword로 나타날 때 $$v\leq w$$로 정의되는 순서로, 기하적으로는 [§Borel subgroup과 flag variety, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 본 cell closure $$\overline{BwB}=\bigsqcup_{v\leq w}BvB$$를 통해 드러난다.
+Schubert variety들 사이의 포함관계는 Weyl group 위의 *Bruhat order*가 지배한다. Bruhat order $$\leq$$는 $$v$$의 어떤 reduced expression이 $$w$$의 어떤 reduced expression의 subword로 나타날 때 $$v\leq w$$로 정의되는 순서로, 기하적으로는 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 본 cell closure $$\overline{BwB}=\bigsqcup_{v\leq w}BvB$$를 통해 드러난다.
 
 <div class="proposition" markdown="1">
 

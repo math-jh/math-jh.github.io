@@ -534,4 +534,4 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}$$
 
 이로부터 우리는 두 관점에서의 Weyl group이 본질적으로 같은 대상임을 안다. Lie group 관점에서 $$W=N(T)/T$$는 maximal torus의 conjugation action을 포착하고, Lie algebra 관점에서의 $$W$$는 root system의 대칭성을 포착한다. 두 정의의 일치는 compact Lie group의 구조가 그 Lie algebra의 root system에 의해 완전히 결정된다는 사실의 구체적인 표현이다.
 
-이 두 관점을 통합하여 root system으로부터 자연스럽게 등장하는 기하적 대상인 Borel subgroup과 flag variety는 [§Borel subgroup과 flag variety](/ko/math/lie_theory/borel_subgroup)에서 다룬다.
+이 두 관점을 통합하여 root system으로부터 자연스럽게 등장하는 기하적 대상인 Borel subgroup과 flag variety는 [§Borel subgroup](/ko/math/lie_theory/borel_subgroup)에서 다룬다.
