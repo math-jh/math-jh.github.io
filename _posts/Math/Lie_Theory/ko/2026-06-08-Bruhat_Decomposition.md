@@ -109,9 +109,19 @@ $$G=\bigsqcup_{w\in W}BwB$$
 
 $$(b_1,b_2)\cdot g=b_1gb_2^{-1}$$
 
-을 생각하는 것이다. 이 action의 orbit이 바로 double coset $$BwB$$이며, 위의 정리는 이 orbit이 $$W$$로 index된다는 뜻이다. 그럼 [§Borel subgroup, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13)의 사전을 통해, 이는 "$$G/B$$의 한 flag이 reference flag $$E_\bullet$$에 대해 갖는 상대적 위치"라는 이산적 불변량이 정확히 $$W$$의 원소 하나라는 뜻이 된다.
+을 생각하는 것이다. 이 action의 orbit이 바로 double coset $$BwB$$이며, 위의 정리는 이 orbit이 $$W$$로 index된다는 뜻이다. 
 
-각 조각 $$BwB$$를 *Bruhat cell*이라 부른다. 이 cell의 내부 구조는 다음과 같이 묘사된다. $$B$$의 unipotent radical을 $$U$$, opposite Borel subgroup $$B^-$$의 unipotent radical을 $$U^-$$라 하고, 각 $$w\in W$$에 대하여
+이것이 담고있는 기하학적 의미를 살펴보기 위해 $$G=\GL_n(\mathbb{C})$$에서의 예시를 살펴보자. 여기서 reference flag $$E_i=\operatorname{span}\{e_1,\ldots,e_i\}$$를 고정하면, 임의의 flag $$V_\bullet$$는 $$gB$$에 대응하는 $$V_i=\operatorname{span}\{ge_1,\ldots,ge_i\}$$인 것을 살펴보았다. ([§Borel subgroup, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13)) 일반적으로 reference flag $$E_\bullet$$과 $$V_i$$가 이루는 위치는 다음의 intersection
+
+$$d_{ij}=\dim(V_i\cap E_j)$$
+
+차원에 대한 정보로 나타난다. 그럼 $$G$$ 위의 $$B$$-action은 flag variety 위의 좌표를 upper triangular 행렬로 정리하는 것이므로, 같은 $$B$$-orbit 안의 두 flag는 이 교차 차원들을 공유하며 그 역도 성립한다. 그럼 이제 Bruhat decomposition이 말하는 바는, 임의의 flag $$V_\bullet$$의 교차 차원 $$d_{ij}$$가 정확히 하나의 $$w\in S_n$$에 대하여
+
+$$d_{ij}=\dim(V_i\cap E_j)=\#\{k\leq i\mid w(k)\leq j\}$$
+
+을 만족한다는 것이다. 즉, 이러한 방식으로 $$V_\bullet$$의 상대적인 위치가 $$W$$의 원소와 일대일로 대응되며, $$BwB$$는 상대적 위치가 $$w$$인 모든 $$g$$들의 모임이다. 이 때 각 조각 $$BwB$$를 *Bruhat cell*이라 부른다. 
+
+이는 그 이름 그대로 open cell을 이룬다. 구체적으로, $$B$$의 unipotent radical을 $$U$$, opposite Borel subgroup $$B^-$$의 unipotent radical을 $$U^-$$라 하고, 각 $$w\in W$$에 대하여
 
 $$U_w=U\cap wU^-w^{-1}$$
 
@@ -119,13 +129,15 @@ $$U_w=U\cap wU^-w^{-1}$$
 
 $$U_w=\prod_{\substack{\gamma\in\Phi^+\\ w^{-1}\gamma\in\Phi^-}}U_\gamma$$
 
-곱에 등장하는 root의 개수는 $$\ell(w)$$이므로, $$U_w$$는 affine space $$\mathbb{A}^{\ell(w)}$$와 isomorphic하다. 즉 $$U_w$$는 "$$w$$가 뒤집는 root들"만 모은 unipotent subgroup이며, 그 차원이 곧 length이다.
+곱에 등장하는 root의 개수는 $$\ell(w)$$이므로, $$U_w$$는 affine space $$\mathbb{A}^{\ell(w)}$$와 isomorphic하다. 즉 $$U_w$$는 "$$w^{-1}$$이 음근으로 보내는 양근들"만 모은 unipotent subgroup이며, 그 차원이 곧 length이다 ($$\ell(w^{-1})=\ell(w)$$).
+
+이하에서 $$BwB$$나 곱 $$uwb$$처럼 $$w\in W$$를 행렬로 직접 다룰 때는, $$N_G(T)$$ 안의 대표원 하나를 고른 것으로 본다. 서로 다른 대표원은 $$T\subset B$$만큼만 차이나므로 double coset $$BwB$$와 그 coset $$BwB/B$$는 대표원 선택과 무관하다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> 각 $$w\in W$$에 대하여, 곱 map
+<ins id="prop6">**명제 6**</ins> 각 $$w\in W$$에 대하여, product map
 
-$$U_w\times B\longrightarrow BwB,\qquad (u,b)\longmapsto u\dot{w}b$$
+$$U_w\times B\longrightarrow BwB,\qquad (u,b)\longmapsto uwb$$
 
 은 variety의 isomorphism이다. 따라서 Bruhat cell은 $$BwB\cong\mathbb{A}^{\ell(w)}\times B$$이고, flag variety로 내리면
 
@@ -141,37 +153,35 @@ $$B=U\rtimes T$$이고 $$U$$는 root subgroup들의 곱으로 분해된다. $$U$
 
 $$BwB=UwB=U_w(wU_w'w^{-1})wB=U_wwB$$
 
-이다. 이제 $$u_1\dot wb_1=u_2\dot wb_2$$ ($$u_i\in U_w$$, $$b_i\in B$$)라 하면 $$\dot w^{-1}u_2^{-1}u_1\dot w=b_2b_1^{-1}\in B$$이다. 한편 $$u_2^{-1}u_1\in U_w$$이므로 $$\dot w^{-1}u_2^{-1}u_1\dot w\in U^-$$이고, 따라서 $$\dot w^{-1}u_2^{-1}u_1\dot w\in B\cap U^-=\{e\}$$이다. 이로부터 $$u_1=u_2$$, $$b_1=b_2$$이므로 map은 bijective이며, 실제로 variety의 isomorphism이다. 마지막으로 $$U_w$$는 $$\ell(w)$$개의 root subgroup의 곱이고 각 root subgroup은 $$\mathbb{G}_a$$와 isomorphic하므로 $$U_w\cong\mathbb{A}^{\ell(w)}$$이다.
+이다. 이제 $$u_1wb_1=u_2wb_2$$ ($$u_i\in U_w$$, $$b_i\in B$$)라 하면 $$w^{-1}u_2^{-1}u_1w=b_2b_1^{-1}\in B$$이다. 한편 $$u_2^{-1}u_1\in U_w$$이므로 $$w^{-1}u_2^{-1}u_1w\in U^-$$이고, 따라서 $$w^{-1}u_2^{-1}u_1w\in B\cap U^-=\{e\}$$이다. 이로부터 $$u_1=u_2$$, $$b_1=b_2$$이므로 map은 bijective이며, 실제로 variety의 isomorphism이다. 마지막으로 $$U_w$$는 $$\ell(w)$$개의 root subgroup의 곱이고 각 root subgroup은 $$\mathbb{G}_a$$와 isomorphic하므로 $$U_w\cong\mathbb{A}^{\ell(w)}$$이다.
 
 </details>
 
-이 명제가 말하는 바를 새겨 두는 것이 중요하다. 각 $$B$$-orbit $$X_w^\circ=BwB/B$$는 단순한 locally closed subset이 아니라 *affine space* $$\mathbb{A}^{\ell(w)}$$ 그 자체이다. 그리고 정리 5에 의해 이 affine cell들이 겹침 없이 $$G/B$$ 전체를 덮는다.
+이 명제의 진정한 의미는 각각의 $$B$$-orbit $$X_w^\circ=BwB/B$$들이 단순한 locally closed subset이 아니라 *affine space* $$\mathbb{A}^{\ell(w)}$$ 그 자체이며, 뿐만 아니라 이들이 $$G/B$$ 전체를 겹침 없이 덮는다는 데 있다.
 
 $$G/B=\bigsqcup_{w\in W}X_w^\circ,\qquad X_w^\circ\cong\mathbb{A}^{\ell(w)}$$
 
-즉 flag variety는 affine space들로 *paving*된다. 이러한 affine paving은 CW complex의 cell decomposition보다 강한 구조로, 곧바로 다음의 위상적 귀결을 낳는다. 우선 홀수 차수의 cohomology가 사라지고, $$H^\ast(G/B)$$는 각 cell의 closure가 정의하는 Schubert class들 $$[X_w]$$를 basis로 갖는 free module이 된다. 각 $$X_w^\circ$$가 복소 차원 $$\ell(w)$$이므로 이 basis는 차수 $$2\ell(w)$$에 하나씩 놓이고, 따라서 $$G/B$$의 Poincaré polynomial은
-
-$$\sum_{w\in W}q^{2\ell(w)}$$
-
-로, $$W$$의 원소들을 길이별로 헤아린 것에 불과하다. 차원이 가장 큰 cell은 longest element $$w_0$$에 대응하는 *big cell* $$X_{w_0}^\circ$$로, 이는 $$G/B$$에서 open dense이며 $$\dim X_{w_0}^\circ=\ell(w_0)=\lvert\Phi^+\rvert=\dim G/B$$이다. 반대로 가장 작은 cell은 한 점 $$X_e^\circ=\{eB\}$$로, 이는 $$B$$-fixed point이다. 이렇게 Bruhat decomposition은 flag variety라는 기하적 대상의 위상을 통째로 $$(W,S,\ell)$$의 조합론으로 환원한다.
+각 cell의 closure가 더 낮은 차원의 cell들의 합집합이므로 ([§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)) 이 분해는 $$G/B$$의 *affine paving*을 이루고, cell closure가 정의하는 class $$[X_w]$$들은 Chow ring $$A^\ast(G/B)$$ — 나아가 cohomology $$H^\ast(G/B)$$ — 의 basis를 정의한다. 차원이 가장 큰 cell은 longest element $$w_0$$에 대응하는 *big cell* $$X_{w_0}^\circ$$로, $$G/B$$에서 open dense이며 $$\dim X_{w_0}^\circ=\ell(w_0)=\lvert\Phi^+\rvert=\dim G/B$$이다. 반대로 가장 작은 cell은 한 점 $$X_e^\circ=\{eB\}$$로, $$B$$-fixed point이다. 이렇게 Bruhat decomposition은 flag variety의 기하를 $$(W,S,\ell)$$의 조합론으로 환원한다. 이를 위에서 살펴본 구체적인 예시 $$\GL_n$$에서 살펴보자. 
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> $$G=GL_n(\mathbb{C})$$에서 $$B$$는 upper triangular invertible matrix, $$T$$는 diagonal matrix, $$W\cong S_n$$이고 각 $$w$$는 permutation matrix $$\dot w$$로 대표된다. 이 경우 Bruhat decomposition $$GL_n=\bigsqcup_{w\in S_n}BwB$$은 *Gauss elimination*의 좌표불변 버전에 다름 아니다. 임의의 가역행렬 $$g$$를 왼쪽에서 upper unipotent matrix로 (위쪽 행에 아래쪽 행을 더하는 row operation), 오른쪽에서 upper triangular matrix로 (열 operation) 줄여 나가면 유일한 permutation matrix $$\dot w$$가 남으며, 이 $$w$$가 $$g$$가 속한 Bruhat cell을 결정한다.
+<ins id="ex7">**예시 7**</ins> $$G=\GL_n(\mathbb{C})$$의 경우를 끝까지 따라가 보자. 여기서 $$B$$는 invertible upper triangular matrix, $$T$$는 invertible diagonal matrix들의 group이고, Weyl group은 $$W=N_G(T)/T\cong S_n$$으로, $$w\in S_n$$은 $$we_k=e_{w(k)}$$로 작용하는 permutation matrix와 동일하게 취급된다. 이 표기 아래 Bruhat decomposition $$\GL_n=\bigsqcup_{w\in S_n}BwB$$은 *Gauss elimination*의 좌표불변 버전이라 생각할 수 있다. 가역행렬 $$g$$에 왼쪽에서 upper unipotent matrix를 곱하는 것과 오른쪽에서 upper triangular matrix를 곱하는 것만으로 줄여 나가면, 마지막에 남는 것은 각 행과 열에 $$1$$이 정확히 하나씩 있는 permutation matrix $$w$$ 하나뿐이기 때문이다. 이 $$w$$가 유일하게 결정된다는 것이 곧 정리 5의 disjointness이며, 그 $$w$$가 $$g$$의 Bruhat cell $$BwB$$를 가른다.
 
-가장 작은 경우 $$n=2$$를 끝까지 계산해 보자. $$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in GL_2$$에 대하여, 만일 $$c=0$$이면 $$g$$는 이미 upper triangular, 즉 $$g\in B=BeB$$이다. 반면 $$c\neq 0$$이면 $$g\in BsB$$ ($$s$$는 유일한 simple reflection)이며, 실제로
+$$n=2$$를 명시적으로 보자. $$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\GL_2$$에서 $$c=0$$이면 $$g$$는 이미 upper triangular, 즉 $$g\in B=BeB$$이다. 반면 $$c\neq0$$이면
 
-$$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}c&d\\0&\tfrac{bc-ad}{c}\end{pmatrix}$$
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\underbrace{\begin{pmatrix}1&a/c\\0&1\end{pmatrix}}_{\in\,U_s}\underbrace{\begin{pmatrix}0&1\\1&0\end{pmatrix}}_{=\,s}\underbrace{\begin{pmatrix}c&d\\0&\tfrac{bc-ad}{c}\end{pmatrix}}_{\in\,B}$$
 
-로 쓸 수 있다. 우변의 가운데 인자가 $$\dot s$$이고, $$g$$의 가역성 $$ad-bc\neq 0$$이 마지막 인자의 가역성을 보장한다. 여기서 자유롭게 움직이는 유일한 좌표는 $$t=a/c$$로, 이것이 $$U_s\cong\mathbb{A}^1$$을 매개한다.
+로 유일하게 분해되며, 이 때 $$g$$의 invertibility $$ad-bc\neq0$$이 마지막 인자의 가역성을 보장한다. 이 분해는 [명제 6](#prop6)의 isomorphism 
 
-이 계산은 flag variety $$GL_2/B\cong\mathbb{P}^1$$의 cell 구조를 그대로 재현한다. $$\mathbb{P}^1$$ 위에서 $$X_e^\circ=\{[1:0]\}$$는 한 점($$B$$-fixed point, $$\ell(e)=0$$)이고, $$X_s^\circ=\{[t:1]\mid t\in\mathbb{C}\}\cong\mathbb{A}^1$$은 그 보집합인 big cell($$\ell(s)=1$$)이어서 $$\mathbb{P}^1=\{[1:0]\}\sqcup\mathbb{A}^1$$이 된다.
+$$U_w\times B\rightarrow BwB;\qquad (u,b)\mapsto uwb$$
 
-일반적인 $$n$$에서 cell을 구별하는 이산적 불변량은 flag의 상대적 위치로 깔끔하게 표현된다. $$gB$$에 대응하는 flag을 $$F_i=\langle ge_1,\ldots,ge_i\rangle$$, standard flag을 $$E_j=\langle e_1,\ldots,e_j\rangle$$라 하면
+를 $$w=s$$에서 그대로 실현한 것으로, 자유롭게 움직이는 유일한 좌표 $$t=a/c$$가 isomprhism $$U_s\cong\mathbb{A}^1$$을 보여준다. 이를 flag variety $$\GL_2/B\cong\mathbb{P}^1$$로 내리면 $$\mathbb{P}^1$$의 cell 구조 그 자체가 나온다. $$\mathbb{C}^2$$의 flag은 $$0\subset L\subset\mathbb{C}^2$$ 꼴이라 line $$L$$ 하나로 정해지므로 $$\GL_2/B$$는 line들의 공간 $$\mathbb{P}^1$$과 같고, 이 동일시에서 $$gB$$는 $$V_1=\operatorname{span}\{ge_1\}$$로 보내진다. standard line $$E_1=\operatorname{span}\{e_1\}=[1:0]$$은 $$B$$가 고정하는 점이라 $$0$$차원 cell $$X_e^\circ=\{[1:0]\}$$ ($$\ell(e)=0$$)이고, 나머지 line $$[t:1]$$들이 그 보집합인 big cell $$X_s^\circ\cong\mathbb{A}^1$$ ($$\ell(s)=1$$)을 이루어 $$\mathbb{P}^1=\{[1:0]\}\sqcup\mathbb{A}^1$$이 된다. 위 $$n=2$$ 계산의 좌표 $$t=a/c$$가 바로 이 $$\mathbb{A}^1$$의 좌표다.
 
-$$gB\in BwB/B\iff \dim(F_i\cap E_j)=\lvert\{a\leq i\mid w(a)\leq j\}\rvert\ \text{ for all }i,j$$
+일반적인 $$n$$에서 cell을 가르는 이산 불변량은 본문에서 본 flag의 상대적 위치다. $$gB$$에 대응하는 flag $$V_i=\operatorname{span}\{ge_1,\ldots,ge_i\}$$와 standard flag $$E_j=\operatorname{span}\{e_1,\ldots,e_j\}$$의 교차 차원 $$d_{ij}=\dim(V_i\cap E_j)$$를 모으면, 정리 5는 행렬 $$(d_{ij})$$가 cell의 완전한 불변량임을 말한다.
 
-가 성립한다. Gauss elimination이 보존하는 것이 바로 이 교집합 차원들이며, longest element $$w_0$$ (역순 permutation)에 해당하는 cell이 차원 $$\binom{n}{2}$$의 big cell이 된다.
+$$gB\in BwB/B\iff d_{ij}=\#\{k\leq i\mid w(k)\leq j\}\quad(\forall\,i,j)$$
+
+Gauss elimination이 보존하는 양이 정확히 이 $$d_{ij}$$들이다. 이 cell의 차원은 [예시 4](#ex4)에서 본 $$\ell(w)=\operatorname{inv}(w)$$이고, 가장 큰 cell은 역순 permutation $$w_0$$에 대응하는 차원 $$\binom{n}{2}$$의 big cell이다.
 
 </div>
 
@@ -193,17 +203,17 @@ $$G=\bigsqcup_{w\in W}B^+wB^-$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$B^-=\dot w_0B\dot w_0^{-1}$$이고 $$w_0=w_0^{-1}$$이므로, 정리 5의 양변을 $$\dot w_0$$로 conjugate하면
+$$B^-=w_0Bw_0^{-1}$$이고 $$w_0=w_0^{-1}$$이므로, 정리 5의 양변을 $$w_0$$로 conjugate하면
 
-$$G=\dot w_0G\dot w_0^{-1}=\bigsqcup_{w\in W}(\dot w_0B\dot w_0^{-1})(\dot w_0w\dot w_0^{-1})(\dot w_0B\dot w_0^{-1})=\bigsqcup_{w\in W}B^-(w_0ww_0)B^-$$
+$$G=w_0Gw_0^{-1}=\bigsqcup_{w\in W}(w_0Bw_0^{-1})(w_0ww_0^{-1})(w_0Bw_0^{-1})=\bigsqcup_{w\in W}B^-(w_0ww_0)B^-$$
 
-을 얻는다. $$w\mapsto w_0ww_0$$가 $$W$$의 automorphism이므로 첫 번째 분해가 성립한다. Mixed 분해는 $$B^+=B$$, $$B^-=\dot w_0B\dot w_0^{-1}$$를 대입하여 $$BwB^-=Bw\dot w_0B\dot w_0^{-1}$$로 쓰고 $$w\mapsto ww_0$$로 재색인하면 정리 5로 환원된다.
+을 얻는다. $$w\mapsto w_0ww_0$$가 $$W$$의 automorphism이므로 첫 번째 분해가 성립한다. Mixed 분해는 $$B^+=B$$, $$B^-=w_0Bw_0^{-1}$$를 대입하여 $$BwB^-=Bww_0Bw_0^{-1}$$로 쓰고 $$w\mapsto ww_0$$로 재색인하면 정리 5로 환원된다.
 
 </details>
 
 첫 번째 분해 $$G=\bigsqcup B^-wB^-$$는 그저 opposite Borel에 대한 Bruhat decomposition이므로, standard Bruhat의 거울상이다. 흥미로운 것은 서로 다른 두 Borel을 섞은 mixed 분해 $$G=\bigsqcup B^-wB$$ 쪽이다. 여기서는 $$w=e$$에 해당하는 cell $$B^-\cdot B$$가 open dense, 즉 *generic*하다. Standard Bruhat에서는 generic cell이 longest element $$w_0$$에 놓였던 것과 정반대로, 두 opposite Borel을 섞으면 generic stratum이 항등원으로 옮겨가는 것이다.
 
-이 현상은 $$GL_n$$에서 가장 손에 잡힌다. $$B^-$$를 lower triangular matrix들의 모임이라 하면, cell $$B^-\cdot B$$는 lower triangular와 upper triangular의 곱으로 쓰이는 행렬들, 즉 *LU decomposition* $$g=LU$$를 갖는 행렬들의 집합이다. 선형대수에서 잘 알려져 있듯 이는 모든 leading principal minor가 $$0$$이 아닌 행렬들과 정확히 일치하며, 그러한 행렬들은 $$GL_n$$ 안에서 open dense이다. 앞서 $$n=2$$의 계산을 다시 보면 $$B^-\cdot B$$의 원소는 $$(1,1)$$-성분이 $$0$$이 아닌 행렬들이고, 이는 행 교환 없이 Gauss elimination이 진행되는 generic한 경우에 해당한다. Birkhoff가 원래 다룬 것이 바로 이 분해로, 일반적인 행렬에 대해서는 중간에 permutation이 필요하다는 사실 — 즉 $$g=L\dot wU$$ 꼴의 분해와 그 permutation $$w$$의 유일성 — 이 Birkhoff decomposition의 내용이고, 그 generic stratum $$w=e$$가 LU decomposable한 행렬들이다.
+이 현상은 $$GL_n$$에서 가장 손에 잡힌다. $$B^-$$를 lower triangular matrix들의 모임이라 하면, cell $$B^-\cdot B$$는 lower triangular와 upper triangular의 곱으로 쓰이는 행렬들, 즉 *LU decomposition* $$g=LU$$를 갖는 행렬들의 집합이다. 선형대수에서 잘 알려져 있듯 이는 모든 leading principal minor가 $$0$$이 아닌 행렬들과 정확히 일치하며, 그러한 행렬들은 $$GL_n$$ 안에서 open dense이다. 앞서 $$n=2$$의 계산을 다시 보면 $$B^-\cdot B$$의 원소는 $$(1,1)$$-성분이 $$0$$이 아닌 행렬들이고, 이는 행 교환 없이 Gauss elimination이 진행되는 generic한 경우에 해당한다. Birkhoff가 원래 다룬 것이 바로 이 분해로, 일반적인 행렬에 대해서는 중간에 permutation이 필요하다는 사실 — 즉 $$g=LwU$$ 꼴의 분해와 그 permutation $$w$$의 유일성 — 이 Birkhoff decomposition의 내용이고, 그 generic stratum $$w=e$$가 LU decomposable한 행렬들이다.
 
 <div class="remark" markdown="1">
 
@@ -283,7 +293,7 @@ $$G/P=\bigsqcup_{w\in W^I}BwP/P,\qquad BwP/P\cong\mathbb{A}^{\ell(w)}$$
 
 </details>
 
-각 cell $$BwP/P$$의 closure는 *Schubert variety*를 정의하며, 이는 마지막 절에서 구체적으로 다룬다. $$G/P$$ 역시 affine paving을 가지므로 명제 6에 이어지는 위상적 귀결 — 홀수 cohomology 소멸, Schubert class basis, $$\sum_{w\in W^I}q^{2\ell(w)}$$ 꼴의 Poincaré polynomial — 이 그대로 성립한다.
+각 cell $$BwP/P$$의 closure는 *Schubert variety*를 정의하며, 이는 마지막 절에서 구체적으로 다룬다. $$G/P$$ 역시 affine paving을 가지므로 명제 6에 이어지는 위상적 귀결 — 홀수 cohomology 소멸, Schubert class basis, 그리고 그 class들이 Chow ring의 basis까지 이룬다는 사실 — 이 그대로 성립한다.
 
 ## Grassmannian
 
@@ -333,7 +343,7 @@ $$W^{P_2}=\{1234,\,1324,\,1423,\,2314,\,2413,\,3412\}$$
 
 $$\ell(1234)=0,\quad\ell(1324)=1,\quad\ell(1423)=\ell(2314)=2,\quad\ell(2413)=3,\quad\ell(3412)=4$$
 
-이므로, $$Gr_2(\mathbb{C}^4)$$은 차원 $$0,1,2,2,3,4$$의 여섯 Schubert cell로 paving된다. 이는 $$\dim Gr_2(\mathbb{C}^4)=2\cdot 2=4$$와 정합적이며, cell의 개수 $$6=\binom{4}{2}$$를 길이별로 헤아린 Poincaré polynomial은 $$1+q^2+2q^4+q^6+q^8$$이다. 각 cell은 Young diagram(즉 $$2\times 2$$ 상자 안에 들어가는 partition)으로도 색인되며, $$\ell(w)$$가 그 partition의 상자 수에 해당한다.
+이므로, $$Gr_2(\mathbb{C}^4)$$은 차원 $$0,1,2,2,3,4$$의 여섯 Schubert cell로 paving된다. 이는 $$\dim Gr_2(\mathbb{C}^4)=2\cdot 2=4$$와 정합적이며, cell의 총 개수는 $$\binom{4}{2}=6$$, 복소 차원별로는 $$0,1,2,3,4$$차에 각각 $$1,1,2,1,1$$개가 놓인다. 각 cell은 Young diagram(즉 $$2\times 2$$ 상자 안에 들어가는 partition)으로도 색인되며, $$\ell(w)$$가 그 partition의 상자 수에 해당한다.
 
 </div>
 
