@@ -1,5 +1,5 @@
 ---
-title: "Borel Subgroups and Flag Varieties"
+title: "Borel Subgroups"
 description: "Semisimple Lie algebras are classified by Dynkin diagrams through the structure of root systems, and this classification naturally leads to the geometric properties of flag varieties."
 excerpt: "Dynkin diagrams, ADE classification, and flag varieties"
 

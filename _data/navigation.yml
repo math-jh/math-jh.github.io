@@ -548,9 +548,9 @@ Lie_theory-ko:
         url: ko/math/lie_theory/torus_action
       - title: "근계"
         url: ko/math/lie_theory/root_systems
-      - title: "Borel subgroup과 flag variety"
+      - title: "Borel subgroup"
         url: ko/math/lie_theory/borel_subgroup
-      - title: "Bruhat decomposition과 parabolic subgroup"
+      - title: "Bruhat decomposition"
         url: ko/math/lie_theory/bruhat_decomposition
       - title: "Richardson variety"
         url: ko/math/lie_theory/richardson_variety
@@ -1384,7 +1384,7 @@ Lie_theory-en:
         url: en/math/lie_theory/torus_action
       - title: "Root Systems"
         url: en/math/lie_theory/root_systems
-      - title: "Borel Subgroups and Flag Varieties"
+      - title: "Borel Subgroups"
         url: en/math/lie_theory/borel_subgroup
   - title: 
     children:

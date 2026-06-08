@@ -528,4 +528,4 @@ Finally, let us verify that $$n_\alpha\in N(T)$$. Since $$\Ad(n_\alpha)$$ preser
 
 From this we know that the Weyl groups from the two perspectives are essentially the same object. From the Lie group perspective, $$W=N(T)/T$$ captures the conjugation action on the maximal torus, while from the Lie algebra perspective, $$W$$ captures the symmetry of the root system. The agreement of the two definitions is a concrete expression of the fact that the structure of a compact Lie group is completely determined by the root system of its Lie algebra.
 
-Integrating these two perspectives, the geometric objects that naturally emerge from a root system, namely Borel subgroups and flag varieties, are treated in [§Borel Subgroups and Flag Varieties](/en/math/lie_theory/borel_subgroup).
+Integrating these two perspectives, the geometric objects that naturally emerge from a root system, namely Borel subgroups and flag varieties, are treated in [§Borel Subgroups](/en/math/lie_theory/borel_subgroup).
