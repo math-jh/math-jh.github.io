@@ -67,7 +67,7 @@ Cartan matrix $$A=(a_{ij})$$가 simple root들 사이의 정수값 $$\langle\alp
 ⚠️ 정의 없이 사용: `Coxeter group` (이전 카테고리에서 정의된 적 없음, 이 글에서 Weyl group의 구조로만 언급)
 ⚠️ 정의 없이 사용: `traceless` (정의 없이 $$\tr X=0$$인 행렬이라는 뜻으로 사용)
 
-## [Borel subgroup과 flag variety](/ko/math/lie_theory/borel_subgroup)
+## [Borel subgroup](/ko/math/lie_theory/borel_subgroup)
 
 이 글은 근계의 조합적 구조를 이용해 semisimple Lie algebra를 분류하고, 그로부터 자연스럽게 등장하는 기하적 대상 — Borel subgroup과 flag variety — 을 다룬다. 출발점은 Dynkin diagram인데, simple root들 $$\Delta=\{\alpha_1,\ldots,\alpha_l\}$$ 사이의 $$\lvert\langle\alpha_i,\alpha_j\rangle\rvert$$개의 edge와 길이비에 따른 화살표로 구성된 그래프가 root system의 구조를 완전히 결정한다는 것이 정의 1의 내용이다. Cartan matrix $$A=(a_{ij})$$가 근계 글에서 정의되었으므로 Dynkin diagram은 이를 시각화한 것이라는 관찰이 자연스럽고, 명제 3-5로부터 Dynkin diagram이 tree이고 각 vertex의 branching이 제한된다는 것이 ADE 분류의 토대가 된다.
 

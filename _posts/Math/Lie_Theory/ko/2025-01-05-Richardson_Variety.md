@@ -14,11 +14,11 @@ weight: 6
 published: false
 ---
 
-[§Bruhat decomposition과 parabolic subgroup](/ko/math/lie_theory/bruhat_decomposition)에서 살펴 보았듯이, generalized flag variety $$X = G/P$$는 Bruhat cell들의 불연속합으로 분해된다. 각 Bruhat cell은 Borel subgroup $$B$$의 궤도이며, 그 Zariski closure인 Schubert variety는 $$X$$의 중요한 닫힌 부분다양체를 이룬다. 그러나 한쪽 방향의 궤도만으로는 $$X$$의 교차이론이나 대칭성을 충분히 기술할 수 없으며, 서로 다른 방향에서 오는 두 가지 셀 구조의 교차를 고려해야 할 때가 많다. Richardson variety는 바로 이러한 교차에 해당하는 대상으로, Schubert variety와 opposite Schubert variety의 교집합을 통해 정의된다. 본 글에서는 Richardson variety의 기본적인 정의와 성질, 특히 이것이 smooth affine variety가 되는 이유를 직관적으로 살펴 본 뒤, Grassmannian에서의 구체적인 모습을 다룬다.
+[§Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition)에서 살펴 보았듯이, generalized flag variety $$X = G/P$$는 Bruhat cell들의 불연속합으로 분해된다. 각 Bruhat cell은 Borel subgroup $$B$$의 궤도이며, 그 Zariski closure인 Schubert variety는 $$X$$의 중요한 닫힌 부분다양체를 이룬다. 그러나 한쪽 방향의 궤도만으로는 $$X$$의 교차이론이나 대칭성을 충분히 기술할 수 없으며, 서로 다른 방향에서 오는 두 가지 셀 구조의 교차를 고려해야 할 때가 많다. Richardson variety는 바로 이러한 교차에 해당하는 대상으로, Schubert variety와 opposite Schubert variety의 교집합을 통해 정의된다. 본 글에서는 Richardson variety의 기본적인 정의와 성질, 특히 이것이 smooth affine variety가 되는 이유를 직관적으로 살펴 본 뒤, Grassmannian에서의 구체적인 모습을 다룬다.
 
 ## Opposite Borel과 Opposite Bruhat Cell
 
-우리는 앞으로 복소수체 $$\mathbb{C}$$ 위에서 연결된 반단순 대수군 $$G$$를 고정하고, 그 Borel subgroup을 $$B$$, 최대 토르스를 $$T = B \cap B^-$$로 한다. 여기서 $$B^-$$는 $$B$$와 반대되는 Borel subgroup, 즉 **opposite Borel**이다. 구체적으로 $$B$$가 upper triangular matrices로 주어진다면 $$B^-$$는 lower triangular matrices에 해당하며, $$B \cap B^- = T$$가 성립한다. Weyl군 $$W = N_G(T)/T$$의 원소 $$w$$에 대하여, [§Bruhat Decomposition, ⁋정의 18](/ko/math/lie_theory/bruhat_decomposition#def18)에서 정의한 Bruhat cell은 $$B$$의 궤도
+우리는 앞으로 복소수체 $$\mathbb{C}$$ 위에서 연결된 반단순 대수군 $$G$$를 고정하고, 그 Borel subgroup을 $$B$$, 최대 토르스를 $$T = B \cap B^-$$로 한다. 여기서 $$B^-$$는 $$B$$와 반대되는 Borel subgroup, 즉 **opposite Borel**이다. 구체적으로 $$B$$가 upper triangular matrices로 주어진다면 $$B^-$$는 lower triangular matrices에 해당하며, $$B \cap B^- = T$$가 성립한다. Weyl군 $$W = N_G(T)/T$$의 원소 $$w$$에 대하여, [§Bruhat decomposition, ⁋정의 18](/ko/math/lie_theory/bruhat_decomposition#def18)에서 정의한 Bruhat cell은 $$B$$의 궤도
 
 $$X_w^\circ = BwP/P$$
 
@@ -96,7 +96,7 @@ Grassmannian $$\operatorname{Gr}(k, n)$$ 위에서 open Richardson variety $$\ma
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> $$X = \operatorname{Gr}(2, 4)$$의 경우, $$W^P$$의 원소들은 [§Bruhat decomposition과 parabolic subgroup, ⁋예시 17](/ko/math/lie_theory/bruhat_decomposition#ex17)에서 살펴 본 여섯 개의 $$(2,2)$$-shuffle로 주어진다. 이 중 $$v = 1234$$ (단위원소)와 $$w = 3412$$ (최장원소)에 대한 open Richardson variety $$\mathring{R}_{1234, 3412}$$는 $$\operatorname{Gr}(2,4)$$의 가장 큰 open cell에 해당하며, 차원 $$\ell(3412) - \ell(1234) = 4$$를 갖는 affine variety이다. 반면 $$v = w = 1324$$이라면 $$\mathring{R}_{1324, 1324}$$는 한 점만으로 구성된다.
+<ins id="ex5">**예시 5**</ins> $$X = \operatorname{Gr}(2, 4)$$의 경우, $$W^P$$의 원소들은 [§Bruhat decomposition, ⁋예시 17](/ko/math/lie_theory/bruhat_decomposition#ex17)에서 살펴 본 여섯 개의 $$(2,2)$$-shuffle로 주어진다. 이 중 $$v = 1234$$ (단위원소)와 $$w = 3412$$ (최장원소)에 대한 open Richardson variety $$\mathring{R}_{1234, 3412}$$는 $$\operatorname{Gr}(2,4)$$의 가장 큰 open cell에 해당하며, 차원 $$\ell(3412) - \ell(1234) = 4$$를 갖는 affine variety이다. 반면 $$v = w = 1324$$이라면 $$\mathring{R}_{1324, 1324}$$는 한 점만으로 구성된다.
 
 </div>
 
