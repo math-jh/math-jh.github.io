@@ -175,7 +175,11 @@ $$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\underbrace{\begin{pmatrix}1&a/c\\0&1\end
 
 $$U_w\times B\rightarrow BwB;\qquad (u,b)\mapsto uwb$$
 
-를 $$w=s$$에서 그대로 실현한 것으로, 자유롭게 움직이는 유일한 좌표 $$t=a/c$$가 isomprhism $$U_s\cong\mathbb{A}^1$$을 보여준다. 이를 flag variety $$\GL_2/B\cong\mathbb{P}^1$$로 내리면 $$\mathbb{P}^1$$의 cell 구조 그 자체가 나온다. $$\mathbb{C}^2$$의 flag은 $$0\subset L\subset\mathbb{C}^2$$ 꼴이라 line $$L$$ 하나로 정해지므로 $$\GL_2/B$$는 line들의 공간 $$\mathbb{P}^1$$과 같고, 이 동일시에서 $$gB$$는 $$V_1=\operatorname{span}\{ge_1\}$$로 보내진다. standard line $$E_1=\operatorname{span}\{e_1\}=[1:0]$$은 $$B$$가 고정하는 점이라 $$0$$차원 cell $$X_e^\circ=\{[1:0]\}$$ ($$\ell(e)=0$$)이고, 나머지 line $$[t:1]$$들이 그 보집합인 big cell $$X_s^\circ\cong\mathbb{A}^1$$ ($$\ell(s)=1$$)을 이루어 $$\mathbb{P}^1=\{[1:0]\}\sqcup\mathbb{A}^1$$이 된다. 위 $$n=2$$ 계산의 좌표 $$t=a/c$$가 바로 이 $$\mathbb{A}^1$$의 좌표다.
+를 $$w=s$$에서 그대로 실현한 것으로, 자유롭게 움직이는 유일한 좌표 $$t=a/c$$가 isomorphism $$U_s\cong\mathbb{A}^1$$을 보여준다. 이를 flag variety $$\GL_2/B\cong\mathbb{P}^1$$로 내리면 $$\mathbb{P}^1$$의 cell 구조 그 자체가 나온다. 
+
+$$\mathbb{C}^2$$의 flag은 $$0\subset L\subset\mathbb{C}^2$$ 꼴이라 가운데 line $$L$$ 하나로 정해지므로, $$\GL_2/B$$는 $$\mathbb{C}^2$$의 line들의 공간 $$\mathbb{P}^1$$ 그 자체이고, 이 동일시에서 $$gB$$는 그 line $$V_1=\operatorname{span}\{ge_1\}$$, 즉 $$g$$의 첫 열 $$\begin{pmatrix}a\\c\end{pmatrix}$$이 정하는 점 $$[a:c]\in\mathbb{P}^1$$로 보내진다. 그러면 앞의 두 행렬 cell이 $$\mathbb{P}^1$$의 어느 부분인지 그대로 읽힌다.
+
+$$c=0$$인 cell $$BeB$$에서는 $$V_1=[a:0]=[1:0]=E_1$$, 곧 $$B$$가 고정하는 단 하나의 line이다. 따라서 이 cell 전체가 한 점 $$X_e^\circ=\{[1:0]\}$$로 내려가며, 이것이 $$\mathbb{P}^1$$의 closed point이자 차원 $$0$$의 cell이다 ($$\ell(e)=0$$). 반면 $$c\neq0$$인 cell $$BsB$$에서는 $$V_1=[a:c]=[t:1]$$ ($$t=a/c$$)가 $$E_1$$을 제외한 모든 line을 훑으므로, 이 cell은 그 보집합인 open dense한 big cell $$X_s^\circ=\{[t:1]\mid t\in\mathbb{C}\}\cong\mathbb{A}^1$$이 된다 ($$\ell(s)=1$$). 결국 $$\mathbb{P}^1=\{[1:0]\}\sqcup\mathbb{A}^1$$은 한 점(가장 작은 cell)과 그 보집합인 affine line(big cell)으로 갈라지고, Gauss elimination에서 $$c=0$$이냐 $$c\neq0$$이냐로 갈렸던 분기가 정확히 이 점과 직선의 분기다. 그 $$\mathbb{A}^1$$의 좌표 $$t$$ 역시 행렬 분해에서 자유롭게 움직이던 $$t=a/c$$ 그대로다.
 
 일반적인 $$n$$에서 cell을 가르는 이산 불변량은 본문에서 본 flag의 상대적 위치다. $$gB$$에 대응하는 flag $$V_i=\operatorname{span}\{ge_1,\ldots,ge_i\}$$와 standard flag $$E_j=\operatorname{span}\{e_1,\ldots,e_j\}$$의 교차 차원 $$d_{ij}=\dim(V_i\cap E_j)$$를 모으면, 정리 5는 행렬 $$(d_{ij})$$가 cell의 완전한 불변량임을 말한다.
 
