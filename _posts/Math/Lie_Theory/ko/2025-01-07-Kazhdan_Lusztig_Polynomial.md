@@ -179,7 +179,7 @@ $$q^{-\ell(w)/2} \sum_{v \le w} P_{v, w}(q)\, T_v = \overline{q^{-\ell(w)/2} \su
 
 지금까지 정의한 KL polynomial은 순수히 조합적인 대상이지만, 본 글의 motivation에서 언급한 대로 이는 Schubert variety의 특이점에 대한 깊은 기하학적 정보를 담고 있다. 본 절에서는 그 핵심 statement만을 정리한다.
 
-$$G$$를 complex reductive algebraic group, $$B$$를 그 Borel subgroup, $$W$$를 Weyl group이라 하고, [§Bruhat decomposition, ⁋정의 18](/ko/math/lie_theory/bruhat_decomposition#def18)에서와 같이 Schubert variety $$X_w = \overline{BwB/B} \subseteq G/B$$를 생각한다. $$X_w$$ 위의 *intersection cohomology sheaf* $$\operatorname{IC}_{X_w}$$는 $$X_w$$가 매끄러운 경우에는 상수층 (constant sheaf) 의 shift와 일치하지만, 특이점이 있는 경우에는 이를 적절히 보정하여 Poincaré duality를 회복시키는 derived category $$D^b_c(X_w)$$의 perverse sheaf로 정의된다.
+$$G$$를 complex reductive algebraic group, $$B$$를 그 Borel subgroup, $$W$$를 Weyl group이라 하고, [§Bruhat decomposition, ⁋정의 16](/ko/math/lie_theory/bruhat_decomposition#def16)에서와 같이 Schubert variety $$X_w = \overline{BwB/B} \subseteq G/B$$를 생각한다. $$X_w$$ 위의 *intersection cohomology sheaf* $$\operatorname{IC}_{X_w}$$는 $$X_w$$가 매끄러운 경우에는 상수층 (constant sheaf) 의 shift와 일치하지만, 특이점이 있는 경우에는 이를 적절히 보정하여 Poincaré duality를 회복시키는 derived category $$D^b_c(X_w)$$의 perverse sheaf로 정의된다.
 
 <div class="proposition" markdown="1">
 
