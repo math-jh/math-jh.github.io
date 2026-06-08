@@ -169,37 +169,19 @@ $$G/B=\bigsqcup_{w\in W}X_w^\circ,\qquad X_w^\circ\cong\mathbb{A}^{\ell(w)}$$
 
 $$n=2$$의 경우를 명시적으로 보자. 그럼 $$G$$의 임의의 원소는 
 
-$$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\GL_2$$
+$$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\GL_2(\mathbb{C})$$
 
 의 형태이며, 여기서 $$c=0$$이면 $$g$$는 이미 upper triangular이므로 $$g\in B=BeB$$, 즉 $$g$$는 identity에 해당하는 cell에 들어간다. 다른 원소를 살펴보자. 만일 $$c\neq 0$$이면
 
 $$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}c&d\\0&\tfrac{bc-ad}{c}\end{pmatrix}\in BsB$$
 
-이고, 따라서 $$\GL_2$$의 cell은 upper triangle matrix들과 그렇지 않은 부분으로 나뉘게 된다. 
+이고, 따라서 $$\GL_2(\mathbb{C})$$의 cell은 upper triangle matrix들과 그렇지 않은 부분으로 나뉘게 된다. 
 
-이제 [명제 6](#prop6)을 따라 이들을 $$\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$$으로 내리자. 위에서 보았듯 $$c=0$$에 해당하는 부분은 $$B$$ 그 자체이므로 이들은 한 점으로 떨어지며, 이는 명제의 $$\ell(w)=0$$에 해당하는 부분이다. 한편 $$c\neq 0$$인 부분에서는 위에서 살펴본 것과 같이 cell 
-
-$$U_w\times B\rightarrow BwB;\qquad (u,b)\mapsto uwb$$
-
-를 $$w=s$$에서 그대로 실현한 것으로, 자유롭게 움직이는 유일한 좌표 $$t=a/c$$가 isomorphism $$U_s\cong\mathbb{A}^1$$을 보여준다. 이를 flag variety $$\GL_2/B\cong\mathbb{P}^1$$로 내리면 $$\mathbb{P}^1$$의 cell 구조 그 자체가 나온다. 
-
-$$\mathbb{C}^2$$의 flag은 $$0\subset L\subset\mathbb{C}^2$$ 꼴이라 가운데 line $$L$$ 하나로 정해지므로, $$\GL_2/B$$는 $$\mathbb{C}^2$$의 line들의 공간 $$\mathbb{P}^1$$ 그 자체이고, 이 동일시에서 $$gB$$는 그 line $$V_1=\operatorname{span}\{ge_1\}$$, 즉 $$g$$의 첫 열 $$\begin{pmatrix}a\\c\end{pmatrix}$$이 정하는 점 $$[a:c]\in\mathbb{P}^1$$로 보내진다. 그러면 앞의 두 행렬 cell이 $$\mathbb{P}^1$$의 어느 부분인지 그대로 읽힌다.
-
-$$c=0$$인 cell $$BeB$$에서는 $$V_1=[a:0]=[1:0]=E_1$$, 곧 $$B$$가 고정하는 단 하나의 line이다. 따라서 이 cell 전체가 한 점 $$X_e^\circ=\{[1:0]\}$$로 내려가며, 이것이 $$\mathbb{P}^1$$의 closed point이자 차원 $$0$$의 cell이다 ($$\ell(e)=0$$). 반면 $$c\neq0$$인 cell $$BsB$$에서는 $$V_1=[a:c]=[t:1]$$ ($$t=a/c$$)가 $$E_1$$을 제외한 모든 line을 훑으므로, 이 cell은 그 보집합인 open dense한 big cell $$X_s^\circ=\{[t:1]\mid t\in\mathbb{C}\}\cong\mathbb{A}^1$$이 된다 ($$\ell(s)=1$$). 결국 $$\mathbb{P}^1=\{[1:0]\}\sqcup\mathbb{A}^1$$은 한 점(가장 작은 cell)과 그 보집합인 affine line(big cell)으로 갈라지고, Gauss elimination에서 $$c=0$$이냐 $$c\neq0$$이냐로 갈렸던 분기가 정확히 이 점과 직선의 분기다. 그 $$\mathbb{A}^1$$의 좌표 $$t$$ 역시 행렬 분해에서 자유롭게 움직이던 $$t=a/c$$ 그대로다.
-
-일반적인 $$n$$에서 cell을 가르는 이산 불변량은 본문에서 본 flag의 상대적 위치다. $$gB$$에 대응하는 flag $$V_i=\operatorname{span}\{ge_1,\ldots,ge_i\}$$와 standard flag $$E_j=\operatorname{span}\{e_1,\ldots,e_j\}$$의 교차 차원 $$d_{ij}=\dim(V_i\cap E_j)$$를 모으면, 정리 5는 행렬 $$(d_{ij})$$가 cell의 완전한 불변량임을 말한다.
-
-$$gB\in BwB/B\iff d_{ij}=\#\{k\leq i\mid w(k)\leq j\}\quad(\forall\,i,j)$$
-
-Gauss elimination이 보존하는 양이 정확히 이 $$d_{ij}$$들이다. 이 cell의 차원은 [예시 4](#ex4)에서 본 $$\ell(w)=\operatorname{inv}(w)$$이고, 가장 큰 cell은 역순 permutation $$w_0$$에 대응하는 차원 $$\binom{n}{2}$$의 big cell이다.
-
-이 때 차원은 두 층위를 구분해야 한다. group $$G$$ 안의 double coset $$BwB$$는 [명제 6](#prop6)의 $$BwB\cong\mathbb{A}^{\ell(w)}\times B$$에 의해 차원 $$\dim B+\ell(w)$$인 반면, flag variety로 내린 cell $$X_w^\circ=BwB/B$$는 $$\dim B$$가 빠진 차원 $$\ell(w)$$이다. 가령 $$\GL_2$$ ($$\dim B=3$$)에서 $$BeB=B$$와 $$BsB$$는 각각 $$3,4$$차원이지만 ($$BsB$$는 $$\GL_2$$에서 open dense), $$\mathbb{P}^1$$로 내리면 차원 $$0,1$$의 cell이 된다.
+이제 [명제 6](#prop6)을 따라 이들을 $$\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$$으로 내리자. 위에서 보았듯 $$c=0$$에 해당하는 부분은 $$B$$ 그 자체이므로 이들은 한 점으로 떨어지며, 이는 명제의 $$\ell(w)=0$$에 해당하는 부분이다. 한편 $$c\neq 0$$인 부분에서는 위에서 살펴본 것과 같이 하나의 좌표 $$a/c$$로 매개되는 $$\mathbb{P}^1$$의 점 $$[a:c]\in \mathbb{P}^1$$이 나온다. 즉, $$c=0$$에 해당하는 flag variety의 점은 $$[1:0]$$이며, 나머지는 $$\mathbb{A}^1$$의 형태로 여기에 붙어있는 것이다. 
 
 </div>
 
-## Birkhoff decomposition
-
-Borel subgroup $$B$$ 대신 그 opposite $$B^-$$를 사용하면 거울에 비친 듯한 또 하나의 분해가 얻어진다. 두 분해를 견주는 것은 단순한 대칭놀음이 아니라, 어느 쪽 cell이 "일반적<sub>generic</sub>"인지가 정반대로 뒤집힌다는 점에서 의미가 있다.
+위의 $$\GL_n(\mathbb{C})$$의 Bruhat decomposition에서 우리는 Borel subalgebra $$B$$가 upper triangular matrix라는 것을 활용하여 선형대수학의 언어로 살펴볼 수 있었다. 한편 opposite Bruhat cell은 lower triangular matrix들의 모임이므로, 이들을 활용해도 비슷한 분해를 얻어낼 수 있으며 뿐만 아니라 다음과 같이 mixed decomposition을 생각할 수도 있다.  
 
 <div class="proposition" markdown="1">
 
@@ -223,9 +205,13 @@ $$G=w_0Gw_0^{-1}=\bigsqcup_{w\in W}(w_0Bw_0^{-1})(w_0ww_0^{-1})(w_0Bw_0^{-1})=\b
 
 </details>
 
-첫 번째 분해 $$G=\bigsqcup B^-wB^-$$는 그저 opposite Borel에 대한 Bruhat decomposition이므로, standard Bruhat의 거울상이다. 흥미로운 것은 서로 다른 두 Borel을 섞은 mixed 분해 $$G=\bigsqcup B^-wB$$ 쪽이다. 여기서는 $$w=e$$에 해당하는 cell $$B^-\cdot B$$가 open dense, 즉 *generic*하다. Standard Bruhat에서는 generic cell이 longest element $$w_0$$에 놓였던 것과 정반대로, 두 opposite Borel을 섞으면 generic stratum이 항등원으로 옮겨가는 것이다.
+이는 $$\GL_n(\mathbb{C})$$에서는 그 의미가 명확한데, identity cell $$B^-B$$는 lower triangular matrix와 upper triangular matrix의 곱으로 나타나는 행렬들, 곧 *LU decomposition*을 갖는 행렬들의 모임이다. 선형대수에서 잘 알려져 있듯 이는 모든 leading principal minor가 $$0$$이 아닌 행렬들과 정확히 일치하며, 그러한 행렬들은 $$\GL_n$$ 안에서 open dense이다. 
 
-이 현상은 $$GL_n$$에서 가장 손에 잡힌다. $$B^-$$를 lower triangular matrix들의 모임이라 하면, cell $$B^-\cdot B$$는 lower triangular와 upper triangular의 곱으로 쓰이는 행렬들, 즉 *LU decomposition* $$g=LU$$를 갖는 행렬들의 집합이다. 선형대수에서 잘 알려져 있듯 이는 모든 leading principal minor가 $$0$$이 아닌 행렬들과 정확히 일치하며, 그러한 행렬들은 $$GL_n$$ 안에서 open dense이다. 앞서 $$n=2$$의 계산을 다시 보면 $$B^-\cdot B$$의 원소는 $$(1,1)$$-성분이 $$0$$이 아닌 행렬들이고, 이는 행 교환 없이 Gauss elimination이 진행되는 generic한 경우에 해당한다. Birkhoff가 원래 다룬 것이 바로 이 분해로, 일반적인 행렬에 대해서는 중간에 permutation이 필요하다는 사실 — 즉 $$g=LwU$$ 꼴의 분해와 그 permutation $$w$$의 유일성 — 이 Birkhoff decomposition의 내용이고, 그 generic stratum $$w=e$$가 LU decomposable한 행렬들이다.
+앞서 [예시 7](#ex7)의 $$n=2$$ 상황을 생각하면, $$2\times2$$ 행렬의 leading principal minor는 첫 행 $$g_{11}$$, 그리고 전체 determinant $$\det g$$ 둘이다. 그런데 $$\GL_2(\mathbb{C})$$에서는 $$\det g\neq0$$이 자동이므로 LU 조건은 $$g_{11}\neq0$$ 하나로 줄어들게 되므로, $$B^-B$$의 원소는 정확히 $$(1,1)$$-성분이 $$0$$이 아닌 행렬들이며 이는 정확히 첫 pivot이 살아 있어 행 교환 없이 Gauss elimination이 진행되는 성분들이다. 이와 같이, 일반적으로 leading principal minor들은 Gauss elimination의 pivot에 대응하여, 어느 단계에서 minor가 $$0$$이 되면 그 자리의 pivot이 사라져 행 교환이 불가피해진다. 이 행 교환의 패턴을 기록하는 것이 permutation $$w$$이며, Birkhoff가 보인 것은 임의의 $$g$$가
+
+$$g=LwU\qquad(L\in B^-,\ U\in B,\ w\in W)$$
+
+꼴로 쓰이고 그 $$w$$가 유일하게 결정된다는 사실이다. 이것이 곧 pair $$(B^-,B)$$에 대한 Bruhat decomposition $$G=\bigsqcup_w B^-wB$$이며, $$w$$는 $$g$$가 LU 분해에서 얼마나 벗어났는지를 잰다. 모든 leading minor가 살아 있는 $$w=e$$ stratum이 LU decomposable한 행렬들 — open dense — 이고, minor가 무너질수록 다른 $$w$$의 더 낮은 차원 stratum으로 떨어진다. 가령 $$g=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$은 $$g_{11}=0$$이라 LU가 불가능하며, 그 자체가 permutation matrix $$s$$이므로 $$w=s$$ ($$L=U=I$$)인 stratum $$B^-sB$$에 놓인다.
 
 <div class="remark" markdown="1">
 
@@ -309,7 +295,7 @@ $$G/P=\bigsqcup_{w\in W^I}BwP/P,\qquad BwP/P\cong\mathbb{A}^{\ell(w)}$$
 
 ## Grassmannian
 
-Generalized Bruhat decomposition의 가장 대표적인 예시는 Grassmannian이다. 이 절에서는 $$G=GL_n(\mathbb{C})$$를 고정하고, $$B$$는 upper triangular matrix, $$T$$는 diagonal matrix로 두자. Weyl group은 $$W\cong S_n$$, simple reflection은 adjacent transposition $$s_i=(i\;\,i{+}1)$$ ($$1\leq i\leq n-1$$)이다.
+Generalized Bruhat decomposition의 가장 대표적인 예시는 Grassmannian이다. 이 절에서는 $$G=\GL_n(\mathbb{C})$$를 고정하고, $$B$$는 upper triangular matrix, $$T$$는 diagonal matrix로 두자. Weyl group은 $$W\cong S_n$$, simple reflection은 adjacent transposition $$s_i=(i\;\,i{+}1)$$ ($$1\leq i\leq n-1$$)이다.
 
 <div class="definition" markdown="1">
 
@@ -321,17 +307,17 @@ $$Gr_k(\mathbb{C}^n)=\{V\subseteq\mathbb{C}^n\mid\dim V=k\}$$
 
 Grassmannian을 homogeneous space로 실현하기 위해, simple root system $$\Delta=\{\alpha_1,\ldots,\alpha_{n-1}\}$$에서 $$\alpha_k$$ 하나만 제외한 부분집합 $$I=\Delta\setminus\{\alpha_k\}$$를 택하고, 이에 대응하는 maximal parabolic subgroup을 $$P_k$$라 하자. $$P_k$$는 block upper triangular matrix들의 모임으로
 
-$$P_k=\left\{\begin{pmatrix}A&C\\0&D\end{pmatrix}\in GL_n(\mathbb{C})\;\middle|\;A\in GL_k(\mathbb{C}),\;D\in GL_{n-k}(\mathbb{C})\right\}$$
+$$P_k=\left\{\begin{pmatrix}A&C\\0&D\end{pmatrix}\in \GL_n(\mathbb{C})\;\middle|\;A\in \GL_k(\mathbb{C}),\;D\in \GL_{n-k}(\mathbb{C})\right\}$$
 
-이다. 이 subgroup은 standard $$k$$-plane $$E_k=\operatorname{span}\{e_1,\ldots,e_k\}$$를 고정하므로, $$GL_n(\mathbb{C})$$의 $$Gr_k(\mathbb{C}^n)$$ 위의 작용은 transitive하고 그 isotropy group이 정확히 $$P_k$$이다. 따라서
+이다. 이 subgroup은 standard $$k$$-plane $$E_k=\operatorname{span}\{e_1,\ldots,e_k\}$$를 고정하므로, $$\GL_n(\mathbb{C})$$의 $$Gr_k(\mathbb{C}^n)$$ 위의 작용은 transitive하고 그 isotropy group이 정확히 $$P_k$$이다. 따라서
 
-$$Gr_k(\mathbb{C}^n)\cong GL_n(\mathbb{C})/P_k$$
+$$Gr_k(\mathbb{C}^n)\cong \GL_n(\mathbb{C})/P_k$$
 
-이다. 한편 $$V\mapsto\mathbb{C}^n/V$$ 또는 적절한 내적 하의 $$V\mapsto V^\perp$$에 의해 $$Gr_k(\mathbb{C}^n)$$과 $$Gr_{n-k}(\mathbb{C}^n)$$ 사이에 canonical isomorphism이 있으므로, 같은 $$P_k$$에 대해 $$Gr_{n-k}(\mathbb{C}^n)\cong GL_n(\mathbb{C})/P_k$$로도 볼 수 있다.
+이다. 한편 $$V\mapsto\mathbb{C}^n/V$$ 또는 적절한 내적 하의 $$V\mapsto V^\perp$$에 의해 $$Gr_k(\mathbb{C}^n)$$과 $$Gr_{n-k}(\mathbb{C}^n)$$ 사이에 canonical isomorphism이 있으므로, 같은 $$P_k$$에 대해 $$Gr_{n-k}(\mathbb{C}^n)\cong \GL_n(\mathbb{C})/P_k$$로도 볼 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop16">**명제 16**</ins> $$GL_n(\mathbb{C})/P_k\cong Gr_k(\mathbb{C}^n)$$인 경우, Weyl group $$W=S_n$$의 parabolic subgroup $$W_{P_k}$$는 $$S_k\times S_{n-k}$$과 isomorphic하며, minimal length coset representatives $$W^{P_k}$$는 다음과 같다.
+<ins id="prop16">**명제 16**</ins> $$\GL_n(\mathbb{C})/P_k\cong Gr_k(\mathbb{C}^n)$$인 경우, Weyl group $$W=S_n$$의 parabolic subgroup $$W_{P_k}$$는 $$S_k\times S_{n-k}$$과 isomorphic하며, minimal length coset representatives $$W^{P_k}$$는 다음과 같다.
 
 $$W^{P_k}=\{w\in S_n\mid w(1)<\cdots<w(k),\ w(k+1)<\cdots<w(n)\}$$
 
