@@ -54,17 +54,23 @@ $$\dim(E_i\cap\tilde{E}_j)=\max(0,\,i+j-n)$$
 
 </div>
 
-직관적으로, Bruhat cell $$X_w$$는 낮은 차원에서부터 커지는 방향이고, opposite Bruhat cell $$X^u$$는 큰 차원에서부터 내려가는 방향은 것을 기억하자. 구체적으로 $$\dim X_w=\ell(w)$$이고 $$\dim X^u=\dim (G/P)-\ell(u)$$가 성립한다. 따라서 이들 opposite Bruhat cell이 nontrivial하게 만나기 위해서는 이들 두 variety의 차원의 합이 $$\dim(G/P)$$보다 커야한다. 이 때 교집합의 차원이 명제의
+직관적으로, Bruhat cell $$X_w$$는 낮은 차원에서부터 커지는 방향이고, opposite Bruhat cell $$X^u$$는 큰 차원에서부터 내려가는 방향인 것을 기억하자. 구체적으로 $$\dim X_w=\ell(w)$$이고 $$\dim X^u=\dim (G/P)-\ell(u)$$가 성립한다. 따라서 이들 opposite Bruhat cell이 nontrivial하게 만나기 위해서는 적어도 이들 두 variety의 차원의 합이 $$\dim(G/P)$$보다 커야한다. 이 때 교집합의 기대차원이 명제의
 
 $$\ell(w)+\dim (G/P)-\ell(u)-\dim (G/P)=\ell(w)-\ell(u)$$
 
-이고, 만일 $$u\leq w$$라면 이 값이 $$0$$보다 크거나 같아진다. 
+이고, 만일 $$u\leq w$$라면 이들 variety들이 실제로 만나면 그 차원이 $$0$$보다 크거나 같아진다. 
 
 그럼 명제에서 추가적으로 말해주는 것은 이것이 smooth라는 사실인데, 이는 다음 예시에서 살펴보자. 
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $$\Gr_2(\mathbb{C}^4)$$의 가장 작은 case가 이를 잘 보여준다. codimension $$1$$ Schubert variety $$X_{2413}=\{V\mid\dim(V\cap E_2)\geq1\}$$ ($$E_2=\operatorname{span}\{e_1,e_2\}$$)은 그 자체로는 smooth하지 않다. Plücker 매장 $$\Gr_2(\mathbb{C}^4)\subseteq\mathbb{P}^5$$에서 $$\Gr_2(\mathbb{C}^4)$$ 자체는 smooth quadric이지만, $$X_{2413}$$은 이 quadric을 한 tangent hyperplane으로 자른 section이라 quadric surface 위의 cone, 곧 그 vertex $$[E_2]$$ 한 점에서만 singular한 $$3$$차원 quadric cone이 된다 ([Bri]). 이 vertex는 가장 작은 cell $$X_e^\circ=\{[E_2]\}$$ 그 자체이다.
+<ins id="ex3">**예시 3**</ins> 가장 작은 예시 $$\Gr_2(\mathbb{C}^4)$$를 살펴보자. 여기에서 codimension $$1$$ Schubert variety
+
+$$X_{2413}=\{V\mid\dim(V\cap E_2)\geq1\}$$
+
+를 생각할 수 있다. 
+
+의 가장 작은 case가 이를 잘 보여준다. codimension $$1$$ Schubert variety ($$E_2=\operatorname{span}\{e_1,e_2\}$$)은 그 자체로는 smooth하지 않다. Plücker 매장 $$\Gr_2(\mathbb{C}^4)\subseteq\mathbb{P}^5$$에서 $$\Gr_2(\mathbb{C}^4)$$ 자체는 smooth quadric이지만, $$X_{2413}$$은 이 quadric을 한 tangent hyperplane으로 자른 section이라 quadric surface 위의 cone, 곧 그 vertex $$[E_2]$$ 한 점에서만 singular한 $$3$$차원 quadric cone이 된다 ([Bri]). 이 vertex는 가장 작은 cell $$X_e^\circ=\{[E_2]\}$$ 그 자체이다.
 
 이제 opposite Schubert variety $$X^{1324}=\{V\mid\dim(V\cap\tilde{E}_2)\geq1\}$$ ($$\tilde{E}_2=\operatorname{span}\{e_3,e_4\}$$)과 intersect시키자. singular point $$[E_2]$$는 $$E_2\cap\tilde{E}_2=0$$이라 $$\dim([E_2]\cap\tilde{E}_2)=0<1$$, 곧 $$X^{1324}$$에 들어가지 않는다. 따라서 intersection을 취하는 순간 이 singular point가 잘려 나가고, 남는 Richardson variety $$R_{1324,2413}$$은 smooth하다 (실제로 $$\cong\mathbb{P}^1\times\mathbb{P}^1$$임을 [예시 5](#ex5)에서 좌표로 확인한다). opposite Borel이 주는 generic position이 Schubert variety의 singular locus를 정확히 밀어낸 것이다.
 
