@@ -82,7 +82,7 @@ $$\int_{G/P}[X_w]\cdot[X^u]=\delta_{u,w}$$
 
 </details>
 
-명제 [명제 3](#prop3)은 Schubert basis의 곱셈 structure constant를 Richardson variety의 차수로 환원한다. 세 class의 곱 $$[X_w]\cdot[X^u]\cdot[X_v]$$을 적분하면 세 generic position Schubert variety의 intersection number가 나오는데, 이것이 곧 structure constant이고, Grassmannian의 경우에는 Littlewood–Richardson 계수가 되며, 이로부터 classical Schubert calculus가 전개된다.
+[명제 3](#prop3)은 Schubert basis의 곱셈 structure constant를 Richardson variety의 차수로 환원한다. 세 class의 곱 $$[X_w]\cdot[X^u]\cdot[X_v]$$을 적분하면 세 generic position Schubert variety의 intersection number가 나오는데, 이것이 곧 structure constant이고, Grassmannian의 경우에는 Littlewood–Richardson 계수가 되며, 이로부터 classical Schubert calculus가 전개된다.
 
 역시 가장 손에 잡히는 경우는 $$G/P=\Gr(k,n)\cong\GL_n(\mathbb{C})/P_k$$인 Grassmannian이다. 이때 $$W=S_n$$, $$W_{P_k}=S_k\times S_{n-k}$$이고, minimal length coset representative $$W^{P_k}$$은 [§Bruhat decomposition, ⁋명제 14](/ko/math/lie_theory/bruhat_decomposition#prop14)에서 본 $$(k,n-k)$$-shuffle들이다. Schubert variety $$X_w$$는 표준 flag $$E_\bullet$$에 대한 $$\dim(V\cap E_{w(a)})\geq a$$ 꼴의 rank 조건으로, opposite Schubert variety $$X^u$$는 opposite flag $$\tilde{E}_\bullet$$ ($$\tilde{E}_j=\span\{e_n,\ldots,e_{n-j+1}\}$$)에 대한 대칭적 rank 조건으로 잘린다. Richardson variety는 이 두 조건을 동시에 부과한 것이다.
 
@@ -108,7 +108,7 @@ $$V=\operatorname{rowspan}\begin{pmatrix}1&s&0&0\\0&0&1&t\end{pmatrix}\qquad(s,t
 
 </div>
 
-## Peterson variety의 정의
+## Peterson variety
 
 이제 우리의 관점을 다소 바꾸어 새로운 variety를 정의한다. 우리가 살펴보는 flag variety $$G/B$$의 경우, $$G$$는 자기 자신의 Borel subalgebra들 위에 다음의 conjugation action 
 
@@ -116,57 +116,51 @@ $$g\cdot\mathfrak{b}'=\Ad(g)\,\mathfrak{b}'$$
 
 으로 작용한다 ([§Borel subgroup, ⁋명제 10](/ko/math/lie_theory/borel_subgroup#prop10)). 이 때, 임의의 두 Borel subalgebra는 conjugate이므로, 이 action은 transitive하고, $$\mathfrak{b}$$의 stabilizer는 그 normalizer $$N_G(\mathfrak{b})=B$$이다. 따라서 orbit-stabilizer 정리로 얻어지는 $$gB\mapsto\Ad(g)\mathfrak{b}$$가 $$G/B$$와 Borel subalgebra들의 집합 사이의 일대일 대응을 준다.
 
-이제 이 대응 아래 $$\mathfrak{g}$$의 원소 $$X$$를 고정하면, 각 flag $$gB$$마다 $$\mathfrak{g}$$의 원소 $$\Ad(g^{-1})X$$가 결정된다. 그럼 이 원소가 $$\mathfrak{b}$$를 포함하는 $$\operatorname{ad}(\mathfrak{b})$$-stable subspace $$H\subseteq\mathfrak{g}$$에 속하는지를 묻는 조건 $$\Ad(g^{-1})X\in H$$는 $$g$$의 각 entry에 대한 다항식 조건이므로, 이를 만족하는 $$gB$$들의 집합은 $$G/B$$의 closed subvariety를 이룬다. 
+이제 이 대응 아래 $$\mathfrak{g}$$의 원소 $$X$$를 고정하면, 각 flag $$gB$$마다 $$\mathfrak{g}$$의 원소 $$\Ad(g^{-1})X$$가 결정된다. 그럼 이 원소가 $$\mathfrak{b}$$를 포함하는 $$\operatorname{ad}(\mathfrak{b})$$-stable subspace $$H\subseteq\mathfrak{g}$$에 속하는지를 묻는 조건 $$\Ad(g^{-1})X\in H$$는 $$g$$의 각 entry에 대한 다항식 조건이므로, 이를 만족하는 $$gB$$들의 집합은 $$G/B$$의 closed subvariety를 이룬다.
 
-$$H$$의 크기에 따라 $$H=\mathfrak{b}$$일 때부터 $$H=\mathfrak{g}$$일 때($$G/B$$ 전체)까지 variety들의 family를 얻으며, 이것이 [정의 8](#def8)에서 정의할 *Hessenberg variety*이다. $$X$$로 regular nilpotent를 택하고 $$H=\mathfrak{b}$$로 두면 조건을 만족하는 flag는 유일하게 존재하므로 variety는 한 점이다 ([명제 7](#prop7)). 여기서 $$H$$를 $$\mathfrak{b}$$ 위에 각 simple root 방향마다 자유도를 하나씩 더한 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$로 바꾸면 $$\dim=\rank(\mathfrak{g})$$인 nontrivial variety를 얻는데, 이것이 Peterson variety이다.
-
-$$\mathfrak{g}=\mathfrak{gl}_n$$에서 이것이 구체적으로 어떤 variety인지 보자. Principal nilpotent $$N=\sum_{i=1}^{n-1}E_{i,i+1}$$에 대해 위 Hessenberg 조건 $$\Ad(g^{-1})N\in H$$는 complete flag $$V_\bullet$$의 언어로
-
-$$\Pet_n=\{\,V_\bullet\mid NV_i\subseteq V_{i+1},\quad i=1,\ldots,n-1\,\}$$
-
-으로 쓸 수 있다. $$n=3$$에서 $$N$$은 $$Ne_1=0$$, $$Ne_2=e_1$$, $$Ne_3=e_2$$이고, 마지막 조건 $$NV_2\subseteq V_3=\mathbb{C}^3$$은 자동이므로 조건은 $$NV_1\subseteq V_2$$ 하나뿐이다. $$V_1=\span\{v\}$$를 택하면 $$v\notin\ker N=\span\{e_1\}$$인 한 $$Nv\neq0$$이고 $$V_2=\span\{v,Nv\}$$로 결정된다. 자유 파라미터는 $$V_1\in\mathbb{P}^2$$뿐이므로 $$\dim\Pet_3=2$$이다.
-
-이를 위해 우선 regular nilpotent을 정확히 정의한다.
+우리의 관심의 대상은 이 closed variety이며, 이는 당연히 $$X$$와 $$H$$의 선택에 의존한다. 가령 $$X=0$$이면 위의 조건은 항성 성립할 것이므로 이는 flag variety $$G/B$$ 전체가 된다. 우리가 특히 관심있는 $$X$$의 선택은 다음과 같다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> Nilpotent element $$e\in\mathfrak{g}$$가 *regular*라는 것은 그 centralizer $$\mathfrak{z}_{\mathfrak{g}}(e)=\{X\in\mathfrak{g}\mid[X,e]=0\}$$의 차원이 $$\rank(\mathfrak{g})$$와 같은 것이다.
+<ins id="def5">**정의 5**</ins> Nilpotent element $$X\in\mathfrak{g}$$가 *regular*라는 것은 그 centralizer $$\mathfrak{z}_{\mathfrak{g}}(X)=\{Z\in\mathfrak{g}\mid[Z,X]=0\}$$의 차원이 $$\rank(\mathfrak{g})$$와 같은 것이다.
 
 </div>
 
-각 simple root $$\alpha_i$$마다 $$0\neq e_i\in\mathfrak{g}_{\alpha_i}$$를 골라 $$e=\sum_i e_i$$로 두면 regular nilpotent을 얻는다. type $$A_{n-1}$$의 $$\mathfrak{sl}_n$$에서 이는 superdiagonal이 모두 $$1$$인 principal nilpotent $$N=\sum_{i=1}^{n-1}E_{i,i+1}$$이고, 그 centralizer를 직접 계산하면 $$N$$의 polynomial들
+일반적으로, 각각의 simple root $$\alpha_i$$마다 $$0\neq e_i\in\mathfrak{g}_{\alpha_i}$$를 골라 $$e=\sum_i e_i$$로 두면 regular nilpotent가 된다. 이는 type $$A_{n-1}$$에서는 Jordan block에 대응되는 것으로, 위의 과정을 거쳐 superdiagonal이 모두 $$1$$인 principal nilpotent $$N=\sum_{i=1}^{n-1}E_{i,i+1}$$을 택할 수 있고, 그 centralizer를 직접 계산하면 $$N$$의 polynomial들
 
 $$\mathfrak{z}_{\mathfrak{sl}_n}(N)=\span\{N,N^2,\ldots,N^{n-1}\}$$
 
-로, abelian이며 차원이 $$n-1=\rank(\mathfrak{sl}_n)$$이다 ($$\mathfrak{gl}_n$$에서라면 항등행렬까지 더해 $$\span\{I,N,\ldots,N^{n-1}\}$$, 차원 $$n$$). 모든 regular nilpotent이 $$G$$의 adjoint action으로 서로 conjugate하다는 것, 그리고 그 centralizer가 언제나 abelian이며 차원이 정확히 $$\rank(\mathfrak{g})$$라는 것은 Kostant [Kos]의 고전적 결과이다. 바로 이 centralizer 차원이 아래 [명제 7](#prop7)에서 Peterson variety의 차원을 결정한다.
+이 되는 것을 확인할 수 있다. Jordan block의 수가 많을수록 centralizer가 커지므로, regular element는 nilpotent element 중 centralizer가 가장 작은 것으로 생각할 수 있다. 
 
-위 interpolation 그림을 coadjoint action의 언어로 정밀하게 적으면 다음 정의가 된다.
+모든 regular nilpotent이 $$G$$의 adjoint action으로 서로 conjugate하다는 것, 그리고 그 centralizer가 언제나 abelian이며 차원이 정확히 $$\rank(\mathfrak{g})$$라는 것은 Kostant [Kos]의 고전적 결과이다. 바로 이 centralizer 차원이 아래 [명제 7](#prop7)에서 Peterson variety의 차원을 결정한다.
+
+한편 $$H$$의 선택 또한 위에서 설명한 closed subvariety를 정의하는 데에 중요한 역할을 한다. 가령 $$H=\mathfrak{g}$$인 극단적인 경우 우리는 $$X$$의 값에 상관없이 flag variety 전체를 얻게 된다. 반대쪽 극한으로, 만일 regular nilpotent element $$X$$와 $$H=\mathfrak{b}$$를 택하면 이 조건을 만족하는 flag가 유일하게 존재하므로 variety가 한 점이 된다는 것을 보일 수 있다. 우리가 관심있는 것은 $$\mathfrak{b}$$ 위에 simple root들 방향으로 자유도를 하나씩 더한 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$의 경우로, 그 결과로 얻어지는 것이 바로 *Peterson variety*이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Parabolic subgroup $$P\supseteq B$$에 대응하는 *Peterson variety* $$Y_P^\circ$$는 $$R=G/B^-$$의 부분다양체
+<ins id="def6">**정의 6**</ins> *Peterson variety* $$Y^\circ$$는 $$G/B$$의 closed subvariety
 
-$$Y_P^\circ=\{\,gB^-\in R\;\mid\;\Ad^\ast(g^{-1})\cdot F\in[\mathfrak{n}^-,\mathfrak{n}^-]^\perp\,\}$$
+$$Y^\circ=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 
-로 정의된다. 여기서 $$F=e_1^\ast+e_2^\ast+\cdots+e_{n-1}^\ast\in\mathfrak{g}^\ast$$은 dualize한 positive Chevalley generator들의 합 ($$\mathfrak{g}^\ast$$에서의 regular nilpotent에 해당), $$\Ad^\ast$$은 $$G$$의 coadjoint action, $$\mathfrak{n}^-=[\mathfrak{b}^-,\mathfrak{b}^-]$$는 negative nilpotent subalgebra이고, $$[\mathfrak{n}^-,\mathfrak{n}^-]^\perp\subseteq\mathfrak{g}^\ast$$은 그 derived subalgebra의 annihilator이다.
+로 정의된다. 여기서 $$e=\sum_i e_i$$는 regular nilpotent이고, $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$이며 $$f_i\in\mathfrak{g}_{-\alpha_i}$$는 simple negative root의 root vector이다.
 
 </div>
 
-$$P=B$$일 때가 Kostant–Peterson의 원래 정의 [Pet]이며, 일반의 $$P$$에 대한 위 형태는 Rietsch [Rie]에서 표준적으로 쓰인다. 정의에서 $$F$$가 regular nilpotent라는 점이 핵심으로, 그 coadjoint stabilizer가 $$\rank(\mathfrak{g})$$차원의 abelian subalgebra라는 Kostant의 정리가 $$Y_P^\circ$$의 차원을 곧장 준다.
+이것이 Kostant–Peterson의 원래 정의 [Pet]이다. $$e$$가 regular nilpotent라는 점이 핵심으로, Kostant의 정리([정의 5](#def5) 직후 논의)가 $$Y^\circ$$의 차원을 $$\rank(\mathfrak{g})$$로 결정한다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $$P=B$$인 경우, Peterson variety $$Y_B^\circ\subseteq G/B^-$$의 차원은 $$\rank(\mathfrak{g})$$이다.
+<ins id="prop7">**명제 7**</ins> Peterson variety $$Y^\circ\subseteq G/B$$의 차원은 $$\rank(\mathfrak{g})$$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$F\in\mathfrak{g}^\ast$$을 regular nilpotent로 잡았으므로 Kostant [Kos]의 정리에 의해 그 coadjoint stabilizer $$G_F=\{g\in G\mid\Ad^\ast(g)\cdot F=F\}$$의 connected component는 abelian이고 그 차원은 $$\rank(\mathfrak{g})$$이다. $$G/B^-$$를 $$B^-$$ 위에서의 $$G$$-quotient로 보면, 정의에서 부과한 조건 $$\Ad^\ast(g^{-1})\cdot F\in[\mathfrak{n}^-,\mathfrak{n}^-]^\perp$$은 codimension $$\dim[\mathfrak{n}^-,\mathfrak{n}^-]$$의 affine 조건을 자른다. 두 차원의 차이를 계산하면 정확히 $$\rank(\mathfrak{g})$$가 남는다. 자세한 dimension count는 [Pet], [Rie]를 참조한다.
+$$e$$를 regular nilpotent로 잡았으므로 Kostant [Kos]의 정리에 의해 centralizer $$\mathfrak{z}_\mathfrak{g}(e)$$는 abelian이고 차원이 $$\rank(\mathfrak{g})$$이다. $$G/B$$의 점 $$gB$$에서의 tangent space를 $$\mathfrak{g}/\mathfrak{b}$$와 동일시하면, Hessenberg 조건 $$\Ad(g^{-1})e\in H$$의 접공간은 $$\mathfrak{z}_\mathfrak{g}(e)$$의 상과 직접 연결되며 그 차원이 $$\rank(\mathfrak{g})$$가 된다. 자세한 dimension count는 [Pet]를 참조한다.
 
 </details>
 
-이 결과는 $$\rank(\mathfrak{g})$$가 simple root의 개수와 같다는 사실과 맞물린다. type $$A_{n-1}$$에서는 $$\rank(\mathfrak{sl}_n)=n-1$$이므로 Peterson variety의 차원도 $$n-1$$이며, 이는 아래 Hessenberg 기술의 dimension formula와도 일치한다. 더 일반적인 parabolic $$P$$에 대해서도 비슷한 공식이 성립하여, $$\dim Y_P^\circ$$은 $$G/P$$를 결정하는 maximal parabolic factor의 수와 같다.
+이 결과는 $$\rank(\mathfrak{g})$$가 simple root의 개수와 같다는 사실과 맞물린다. type $$A_{n-1}$$에서는 $$\rank(\mathfrak{sl}_n)=n-1$$이므로 $$\dim Y^\circ=n-1$$이며, 위의 $$\Pet_3$$ 예시에서 확인한 $$\dim\Pet_3=2=3-1$$과 일치한다.
 
 ## Hessenberg variety로서의 기술
 
