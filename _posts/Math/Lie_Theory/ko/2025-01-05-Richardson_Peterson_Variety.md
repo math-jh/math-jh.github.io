@@ -172,7 +172,7 @@ $$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\operatorname{Ad}(g^{-1})X\in H\,\}$$
 
 </div>
 
-$$X$$가 regular nilpotent이고 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$ ($$f_i\in\mathfrak{g}_{-\alpha_i}$$는 simple negative root vector)인 경우의 Hessenberg variety가 바로 Peterson variety이며, 이 관점은 $$Y_B^\circ$$을 $$\mathfrak{n}^-$$의 적절한 아핀 좌표 위에서 명시적인 방정식으로 다룰 수 있게 해 준다 (Insko–Tymoczko [IT]).
+$$X$$가 regular nilpotent이고 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$ ($$f_i\in\mathfrak{g}_{-\alpha_i}$$는 simple negative root vector)인 경우의 Hessenberg variety가 바로 Peterson variety이다. [정의 7](#def7)은 $$G/B^-$$ 위의 coadjoint 조건으로 적었지만, Killing form으로 $$\mathfrak{g}^\ast\cong\mathfrak{g}$$를 동일시하고 $$G/B^-\cong G/B$$를 취하면 그 annihilator 조건이 위 Hessenberg 조건 $$\operatorname{Ad}(g^{-1})X\in H$$로 옮겨지므로, 두 기술은 같은 variety를 가리킨다. 이 Hessenberg 관점은 $$Y_B^\circ$$을 $$\mathfrak{n}^-$$의 적절한 아핀 좌표 위에서 명시적인 방정식으로 다룰 수 있게 해 준다 (Insko–Tymoczko [IT]).
 
 <div class="example" markdown="1">
 
