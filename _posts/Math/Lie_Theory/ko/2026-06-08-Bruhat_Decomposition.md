@@ -161,7 +161,7 @@ $$BwB=UwB=U_w(wU_w'w^{-1})wB=U_wwB$$
 
 $$G/B=\bigsqcup_{w\in W}X_w^\circ,\qquad X_w^\circ\cong\mathbb{A}^{\ell(w)}$$
 
-각 cell의 closure가 더 낮은 차원의 cell들의 합집합이므로 ([§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)) 이 분해는 $$G/B$$의 *affine paving*을 이루고, cell closure가 정의하는 class $$[X_w]$$들은 Chow ring $$A^\ast(G/B)$$ — 나아가 cohomology $$H^\ast(G/B)$$ — 의 basis를 정의한다. 차원이 가장 큰 cell은 longest element $$w_0$$에 대응하는 *big cell* $$X_{w_0}^\circ$$로, $$G/B$$에서 open dense이며 $$\dim X_{w_0}^\circ=\ell(w_0)=\lvert\Phi^+\rvert=\dim G/B$$이다. 반대로 가장 작은 cell은 한 점 $$X_e^\circ=\{eB\}$$로, $$B$$-fixed point이다. 이렇게 Bruhat decomposition은 flag variety의 기하를 $$(W,S,\ell)$$의 조합론으로 환원한다. 이를 위에서 살펴본 구체적인 예시 $$\GL_n$$에서 살펴보자. 
+각 cell의 closure가 더 낮은 차원의 cell들의 합집합이므로 ([§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)) 이 분해는 $$G/B$$의 *affine paving*을 이루고, cell closure가 정의하는 class $$[X_w]$$들은 Chow ring $$A^\ast(G/B)$$(나아가 cohomology $$H^\ast(G/B)$$)의 basis를 정의한다. 차원이 가장 큰 cell은 longest element $$w_0$$에 대응하는 *big cell* $$X_{w_0}^\circ$$로, $$G/B$$에서 open dense이며 $$\dim X_{w_0}^\circ=\ell(w_0)=\lvert\Phi^+\rvert=\dim G/B$$이다. 반대로 가장 작은 cell은 한 점 $$X_e^\circ=\{eB\}$$로, $$B$$-fixed point이다. 이렇게 Bruhat decomposition은 flag variety의 기하를 $$(W,S,\ell)$$의 조합론으로 환원한다. 이를 위에서 살펴본 구체적인 예시 $$\GL_n$$에서 살펴보자. 
 
 <div class="example" markdown="1">
 
@@ -310,14 +310,41 @@ $$W^{P_k}=\{w\in S_n\mid w(1)<\cdots<w(k),\ w(k+1)<\cdots<w(n)\}$$
 이들은 *$$(k,n-k)$$-shuffle*이라 불리며 모두 $$\binom{n}{k}$$개이다.
 
 </div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
 
-$$P_k$$는 simple reflection $$s_1,\ldots,s_{k-1}$$과 $$s_{k+1},\ldots,s_{n-1}$$을 포함하므로 $$W_{P_k}=\langle s_1,\ldots,s_{k-1},s_{k+1},\ldots,s_{n-1}\rangle$$은 처음 $$k$$개와 나머지 $$n-k$$개의 문자를 각각 내부적으로 치환하는 permutation들의 모임이고, 따라서 $$S_k\times S_{n-k}$$와 isomorphic하다. 예시 4에서 $$\ell(w)=\operatorname{inv}(w)$$임을 보았으므로, coset $$wW_{P_k}$$에서 inversion 수가 최소인 원소는 처음 $$k$$개의 값과 나머지 $$n-k$$개의 값을 각각 증가순으로 배열한 것이다. 즉 $$w(1)<\cdots<w(k)$$이고 $$w(k+1)<\cdots<w(n)$$이어야 한다. 이러한 $$w$$는 $$\{1,\ldots,n\}$$에서 앞쪽 $$k$$자리에 놓을 값을 고르는 것으로 결정되므로 $$\binom{n}{k}$$개이며, 이는 $$\lvert W/W_{P_k}\rvert$$과 일치한다.
+이는 결국 Grassmannian이 1-step partial flag variety이므로, 전체 공간 $$\GL_n(\mathbb{C})$$와 그 위에 작용하는 $$S_n$$ 전체 가운데 하나가 <em-ko>끊겨있는</em-ko> $$S_k\times S_{n-k}$$는 같은 것으로 생각할 수 있다는 것이다. 
 
-</details>
+Grassmannian은 구체적인 예시 중 가장 단순하고도 강력한 예시이므로 이 경우의 표기법을 정리해두자. 우선, 임의의 $$w\in S_n$$의 원소들을
 
-명제 14의 최소길이 대표 $$W^{P_k}$$를 $$(k,n-k)$$-*shuffle*이라 부른다. one-line notation에서 앞 $$k$$자리와 뒤 $$n-k$$자리가 각각 증가순이므로, 이는 두 블록의 내부 순서는 고정한 채 $$\{1,\ldots,n\}$$의 값 중 어느 $$k$$개를 앞 블록에 둘지만 정하는 셈이다. 그 $$k$$-부분집합이 하나의 Schubert cell을 색인하므로 cell은 $$\binom{n}{k}$$개다.
+$$w=w(1)w(2)\ldots w(n)$$
+
+과 같이 쓰자. 가령 $$S_4$$의 원소 $$2413$$은 
+
+$$w(1)=2, \quad w(2)=4, \quad w(3)=1,\quad w(4)=3$$
+
+을 만족하는 원소이다. 그럼 우리는 이 원소가 정확히 $$(2,2)$$-shuffle임을 확인할 수 있으며, 예를 들어 $$1342$$는 $$(3,1)$$-shuffle이다. 즉, 이 표기법 상에서 블록들은 숫자가 떨어지는 자릿수에서 새 블록이 시작된다는 규칙을 통해 구분된다. 
+
+한편 우리는 근본적으로 Grassmannian (혹은 더 일반적으로 partial flag variety)가 reference flag에 대한 incidence condition으로 나온다는 것을 기억한다. Flag variety $$\Fl(d_1, d_2, \ldots, d_m; n)$$을 생각하자. 이 variety의 원소는 다음의 flag
+
+$$0\subset V_1\subset \cdots \subset V_m\subset \mathbb{C}^n,\qquad \dim V_k=d_k$$
+
+들로 구성되는 것이며, 이 flag의 위치는 reference flag와의 교차 차원 $$\dim(V_i\cap E_j)$$가 모두 결정하며, 이 정보를 공유하는 대상들이 바로 Bruhat cell이었다. 
+
+이 두 정보를 엮기 위해, 위의 reference flag와의 jump 데이터를 길이 $$n$$의 word $$u_1\cdots u_n$$로 생각하자. 이 때, $$u_j$$는 방향 $$e_j$$가 flag에 처음 들어오는 step의 번호이며, 즉 $$j$$를 고정한 상태로
+
+$$\dim (V_1\cap E_j)\leq \dim (V_2\cap E_j)\leq\cdots$$
+
+을 봤을 때 차원이 뛰는 곳을 의미하며, 만일 최종적으로 $$V_m$$에도 들어가지 않는 방향이 있다면 번호 $$m+1$$을 부여한다. 가령 Grassmannian $$\Gr(2,4)$$의 경우, $$V=\span\{e_1, e_2+e_3\}$$에 대해서는 $$E_j=\span\{e_1,\ldots,e_j\}$$와의 교차 차원이
+
+$$\dim(V\cap E_j)=0,\,1,\,1,\,2,\,2\qquad(j=0,1,2,3,4)$$
+
+이다. 차원이 뛰는 자리는 $$j=1$$ ($$e_1$$이 들어옴)과 $$j=3$$ ($$e_2+e_3$$ 방향이 들어옴)이고 $$j=2,4$$에서는 뛰지 않으므로, 들어오는 자리에 $$1$$, 그렇지 않은 자리에 ($$m=1$$이라) $$m+1=2$$를 주면
+
+$$u=1\,2\,1\,2$$
+
+이다. 관례대로 $$2$$를 $$0$$으로 적으면 $$0/1$$ word $$1010$$이고, 이는 pivot column $$\{1,3\}$$, 곧 $$(2,2)$$-shuffle $$w=1324$$에 대응한다 ($$\ell(w)=1$$). 그 cell은 아래 예시의 둘째 행렬 $$\begin{pmatrix}1&0&0&0\\0&\ast&1&0\end{pmatrix}$$ ($$\ast=1$$)이다. 
+
+
+ 하나로 적으면 깔끔하다. column $$j$$의 방향 $$e_j$$가 flag에 처음 들어오는 step의 번호를 $$u_j$$로 두는 것이다. 곧 $$u_j=c$$는 $$\dim(V_{a_c}\cap E_j)$$는 뛰지만 그 앞 step $$V_{a_{c-1}}$$까지는 안 뛴다는 뜻이고, $$V_{a_m}$$에도 끝내 안 들어오는 자리는 $$u_j=m+1$$로 둔다. 그러면 글자 $$c$$의 개수가 정확히 step 크기 $$a_c-a_{c-1}$$ ($$a_0=0$$, $$a_{m+1}=n$$)이 되고, 이런 word가 minimal coset representative $$W^P$$와 일대일로 대응한다. 거꾸로 word에서 글자 $$c$$가 놓인 자리를 증가순으로 읽으면 $$w$$의 $$c$$번째 블록 $$w(a_{c-1}+1)<\cdots<w(a_c)$$가 복원된다. 가령 $$2$$-step flag $$Fl(a,b;n)$$이면 세 글자 $$\{1,2,3\}$$의 word로, $$1$$이 $$a$$개, $$2$$가 $$b-a$$개, $$3$$이 $$n-b$$개이다. 우리가 다루는 Grassmannian은 step이 하나뿐인 $$m=1$$의 경우라 글자가 둘 ($$V_k$$에 들어오는 자리와 그렇지 않은 자리)뿐이고, 관례상 이를 $$1$$과 $$0$$으로 적어 $$0/1$$ word가 된다. 아래 예시에서 이를 $$\Gr_2(\mathbb{C}^4)$$에 대해 끝까지 따라간다. 
 
 <div class="example" markdown="1">
 
@@ -325,19 +352,25 @@ $$P_k$$는 simple reflection $$s_1,\ldots,s_{k-1}$$과 $$s_{k+1},\ldots,s_{n-1}$
 
 $$W^{P_2}=\{1234,\,1324,\,1423,\,2314,\,2413,\,3412\}$$
 
-의 여섯 개이다. 가령 $$w=1324$$는 $$w(1)=1<w(2)=3$$이고 $$w(3)=2<w(4)=4$$를 만족하는 shuffle이다. 각 대표원소의 길이는 inversion을 세어
+의 여섯 개이다. 가령, 원소 $$w=1324$$는 $$w(1)=1<w(2)=3$$이고 $$w(3)=2<w(4)=4$$를 만족하는 shuffle이다. 각 대표원소의 길이는 inversion을 세어
 
 $$\ell(1234)=0,\quad\ell(1324)=1,\quad\ell(1423)=\ell(2314)=2,\quad\ell(2413)=3,\quad\ell(3412)=4$$
 
 이므로, $$\Gr_2(\mathbb{C}^4)$$은 차원 $$0,1,2,2,3,4$$의 여섯 Schubert cell로 paving된다. 이는 $$\dim \Gr_2(\mathbb{C}^4)=2\cdot 2=4$$와 정합적이며, cell의 총 개수는 $$\binom{4}{2}=6$$, 복소 차원별로는 $$0,1,2,3,4$$차에 각각 $$1,1,2,1,1$$개가 놓인다. 각 cell은 Young diagram(즉 $$2\times 2$$ 상자 안에 들어가는 partition)으로도 색인되며, $$\ell(w)$$가 그 partition의 상자 수에 해당한다.
 
-이 여섯 cell이 $$\Gr_2(\mathbb{C}^4)$$에서 구체적으로 무엇인지는 행렬로 곧장 드러난다. $$2$$-plane $$V$$를 그 기저를 행으로 갖는 $$2\times4$$ 행렬로 적고, 각 행의 pivot($$=1$$)을 가장 오른쪽 nonzero 성분 — 곧 $$\dim(V\cap E_j)$$가 뛰는 자리 — 으로 두면, pivot은 정확히 column $$\{w(1),w(2)\}$$에 놓이고 그 왼쪽의 non-pivot column 자리만 자유 좌표 $$\ast$$로 남는다. $$W^{P_2}=\{1234,1324,1423,2314,2413,3412\}$$ 순서대로
+이 여섯 cell이 $$\Gr_2(\mathbb{C}^4)$$에서 구체적으로 무엇인지는 행렬로 곧장 드러난다. $$2$$-plane $$V$$를 그 기저를 행으로 갖는 $$2\times4$$ 행렬로 적고, 각 행의 pivot($$=1$$)을 가장 오른쪽 nonzero 성분, 곧 $$\dim(V\cap E_j)$$가 뛰는 자리로 두면, pivot은 정확히 column $$\{w(1),w(2)\}$$에 놓이고 그 왼쪽의 non-pivot column 자리만 자유 좌표 $$\ast$$로 남는다. $$W^{P_2}=\{1234,1324,1423,2314,2413,3412\}$$ 순서대로
 
 $$\begin{pmatrix}1&0&0&0\\0&1&0&0\end{pmatrix},\quad\begin{pmatrix}1&0&0&0\\0&\ast&1&0\end{pmatrix},\quad\begin{pmatrix}1&0&0&0\\0&\ast&\ast&1\end{pmatrix},$$
 
 $$\begin{pmatrix}\ast&1&0&0\\\ast&0&1&0\end{pmatrix},\quad\begin{pmatrix}\ast&1&0&0\\\ast&0&\ast&1\end{pmatrix},\quad\begin{pmatrix}\ast&\ast&1&0\\\ast&\ast&0&1\end{pmatrix}$$
 
 이다. 자유 좌표 $$\ast$$의 개수 $$0,1,2,2,3,4$$가 정확히 위에서 센 $$\ell(w)$$이고, 이것이 $$BwP/P\cong\mathbb{A}^{\ell(w)}$$의 명시적 좌표화다. 양 끝을 보면 $$\{1,2\}$$은 $$V=E_2$$ 한 점이고, $$\{3,4\}$$은 $$E_2$$와 transverse한 ($$\dim(V\cap E_2)=0$$) generic $$2$$-plane들의 big cell이다.
+
+이 모든 데이터는 $$01$$-word, 곧 $$k\times(n-k)$$ 직사각형 위의 lattice path 하나로 압축된다. $$w\in W^{P_k}$$에 대해 $$b_j$$를 $$j$$가 pivot column ($$j\in\{w(1),\ldots,w(k)\}$$)이면 $$1$$, free column이면 $$0$$으로 두어 길이 $$n$$의 word $$b_1\cdots b_n$$을 적으면, $$1$$을 $$k$$개 가진 $$0/1$$ 수열이 되고, $$1$$을 세로 step, $$0$$을 가로 step으로 읽으면 직사각형의 한 꼭짓점에서 맞은편으로 가는 lattice path가 된다. 위 여섯 cell은 순서대로
+
+$$1234\leftrightarrow1100,\quad1324\leftrightarrow1010,\quad1423\leftrightarrow1001,\quad2314\leftrightarrow0110,\quad2413\leftrightarrow0101,\quad3412\leftrightarrow0011$$
+
+이다. word에서 $$0$$이 $$1$$보다 앞서는 쌍의 개수가 정확히 $$\ell(w)$$이고 ($$\ast$$ 행렬에서 각 pivot 왼쪽의 free 자리 수와 같다), 각 $$1$$ 앞에 놓인 $$0$$의 개수를 내림차순으로 적은 것이 그 cell의 partition $$\lambda$$, 곧 path가 가두는 Young diagram이다. 가령 $$0101$$은 $$0$$이 앞서는 쌍이 셋이라 $$\ell=3$$, $$\lambda=(2,1)$$에 대응한다. 거꾸로 word(또는 partition) 하나만 주어지면 $$1$$의 자리에서 pivot column $$\{w(1),\ldots,w(k)\}$$을 읽고 그 왼쪽 free 자리를 $$\ast$$로 채워 위 echelon 행렬과 cell을 통째로 복원할 수 있다. 결국 $$0/1$$ 수열, $$(k,n-k)$$-shuffle, partition, $$\ast$$ 행렬, Schubert cell은 한 데이터의 다섯 가지 표현인 셈이다.
 
 각 cell의 closure가 Grassmannian의 Schubert variety로, $$\dim(V\cap E_{w(a)})\ge a$$ ($$1\le a\le k$$)라는 rank 조건으로 잘린다. 위 $$2\times2$$ Young diagram이 그 조건을 담는다.
 
