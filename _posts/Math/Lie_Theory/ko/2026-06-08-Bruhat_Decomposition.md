@@ -291,19 +291,19 @@ $$G/P=\bigsqcup_{w\in W^I}BwP/P,\qquad BwP/P\cong\mathbb{A}^{\ell(w)}$$
 
 ## Grassmannian
 
-Generalized Bruhat decomposition의 가장 대표적인 예시는 Grassmannian $$\Gr_k(\mathbb{C}^n)$$이다. ([\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1)) 이는 그 정의에 의하여 1-step partial flag variety로 생각할 수 있다. 이를 위해 simple root system $$\Delta=\{\alpha_1,\ldots,\alpha_{n-1}\}$$에서 $$\alpha_k$$ 하나만 제외한 부분집합 $$I=\Delta\setminus\{\alpha_k\}$$를 택하고, 이에 대응하는 maximal parabolic subgroup을 $$P_k$$라 하자. $$P_k$$는 block upper triangular matrix들의 모임으로
+Generalized Bruhat decomposition의 가장 대표적인 예시는 Grassmannian $$\Gr(k,n)$$이다. ([\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1)) 이는 그 정의에 의하여 1-step partial flag variety로 생각할 수 있다. 이를 위해 simple root system $$\Delta=\{\alpha_1,\ldots,\alpha_{n-1}\}$$에서 $$\alpha_k$$ 하나만 제외한 부분집합 $$I=\Delta\setminus\{\alpha_k\}$$를 택하고, 이에 대응하는 maximal parabolic subgroup을 $$P_k$$라 하자. $$P_k$$는 block upper triangular matrix들의 모임으로
 
 $$P_k=\left\{\begin{pmatrix}A&C\\0&D\end{pmatrix}\in \GL_n(\mathbb{C})\;\middle|\;A\in \GL_k(\mathbb{C}),\;D\in \GL_{n-k}(\mathbb{C})\right\}$$
 
-이다. 이 subgroup은 standard $$k$$-plane $$E_k=\operatorname{span}\{e_1,\ldots,e_k\}$$를 고정하므로, $$\GL_n(\mathbb{C})$$의 $$\Gr_k(\mathbb{C}^n)$$ 위의 작용은 transitive하고 그 isotropy group이 정확히 $$P_k$$이다. 따라서
+이다. 이 subgroup은 standard $$k$$-plane $$E_k=\operatorname{span}\{e_1,\ldots,e_k\}$$를 고정하므로, $$\GL_n(\mathbb{C})$$의 $$\Gr(k,n)$$ 위의 작용은 transitive하고 그 isotropy group이 정확히 $$P_k$$이다. 따라서
 
-$$\Gr_k(\mathbb{C}^n)\cong \GL_n(\mathbb{C})/P_k$$
+$$\Gr(k,n)\cong \GL_n(\mathbb{C})/P_k$$
 
-이다. 한편 $$V\mapsto\mathbb{C}^n/V$$ 또는 적절한 내적 하의 $$V\mapsto V^\perp$$에 의해 $$\Gr_k(\mathbb{C}^n)$$과 $$\Gr_{n-k}(\mathbb{C}^n)$$ 사이에 canonical isomorphism이 있으므로, 같은 $$P_k$$에 대해 $$\Gr_{n-k}(\mathbb{C}^n)\cong \GL_n(\mathbb{C})/P_k$$로도 볼 수 있다.
+이다. 한편 $$V\mapsto\mathbb{C}^n/V$$ 또는 적절한 내적 하의 $$V\mapsto V^\perp$$에 의해 $$\Gr(k,n)$$과 $$\Gr(n-k,n)$$ 사이에 canonical isomorphism이 있으므로, 같은 $$P_k$$에 대해 $$\Gr(n-k,n)\cong \GL_n(\mathbb{C})/P_k$$로도 볼 수 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**명제 14**</ins> $$\GL_n(\mathbb{C})/P_k\cong \Gr_k(\mathbb{C}^n)$$인 경우, Weyl group $$W=S_n$$의 parabolic subgroup $$W_{P_k}$$는 $$S_k\times S_{n-k}$$과 isomorphic하며, minimal length coset representatives $$W^{P_k}$$는 다음과 같다.
+<ins id="prop14">**명제 14**</ins> $$\GL_n(\mathbb{C})/P_k\cong \Gr(k,n)$$인 경우, Weyl group $$W=S_n$$의 parabolic subgroup $$W_{P_k}$$는 $$S_k\times S_{n-k}$$과 isomorphic하며, minimal length coset representatives $$W^{P_k}$$는 다음과 같다.
 
 $$W^{P_k}=\{w\in S_n\mid w(1)<\cdots<w(k),\ w(k+1)<\cdots<w(n)\}$$
 
@@ -329,50 +329,34 @@ $$0\subset V_1\subset \cdots \subset V_m\subset \mathbb{C}^n,\qquad \dim V_k=d_k
 
 들로 구성되는 것이며, 이 flag의 위치는 reference flag와의 교차 차원 $$\dim(V_i\cap E_j)$$가 모두 결정하며, 이 정보를 공유하는 대상들이 바로 Bruhat cell이었다. 
 
-이 두 정보를 엮기 위해, 위의 reference flag와의 jump 데이터를 길이 $$n$$의 word $$u_1\cdots u_n$$로 생각하자. 이 때, $$u_j$$는 방향 $$e_j$$가 flag에 처음 들어오는 step의 번호이며, 즉 $$j$$를 고정한 상태로
+이 두 정보를 엮기 위해, reference flag와의 jump 데이터를 길이 $$n$$의 word $$u_1\cdots u_n$$으로 적자. 그럼 각각의 $$j$$에 대하여, $$u_j$$는 $$E_{j-1}$$에서 $$E_j$$로 갈 때 새로 생기는 방향이 처음 흡수되는 위치의 번호를 $$0$$부터 부여한 것이다. 가령 Grassmannian $$\Gr(2,4)$$의 경우를 보자. Reference flag를 standard flag $$E_j=\span\{e_1,\ldots,e_j\}$$로 고정하고, 한 점 $$V=\span\{e_1,e_2+e_3\}$$의 위치를 앞선 방식으로 읽으면 다음과 같다. 
 
-$$\dim (V_1\cap E_j)\leq \dim (V_2\cap E_j)\leq\cdots$$
+- $$E_0$$에서 $$E_1$$으로 올라갈 때 생기는 방향은 $$e_1$$ 방향이며, 이 방향은 처음부터 $$V$$에 있는 방향이다. 즉 $$u_1=0$$이다.
+- $$E_1$$에서 $$E_2$$로 올라갈 때 생기는 방향은 $$ae_1+be_2$$ ($$b\neq 0$$) 방향으로, 이 방향은 $$V$$에 속해있지 않다. 즉 $$u_2=1$$이다. 
+- $$E_2$$에서 $$E_3$$으로 올라갈 때 생기는 방향은 $$e_3$$ 성분이 살아있는 $$ae_1+be_2+ce_3$$ ($$c\neq0$$) 꼴인데, 이번에는 $$V$$의 벡터 $$e_2+e_3$$가 바로 이런 방향이라 $$\dim(V\cap E_3)$$이 한 차원 커진다. 즉 이 방향이 $$V$$에 흡수되므로 $$u_3=0$$이다.
+- $$E_3$$에서 $$E_4$$로 올라갈 때 생기는 방향은 $$e_4$$ 방향이지만, 이미 $$V\subset E_3$$이라 새로 흡수될 $$V$$의 벡터가 없다. 즉 $$u_4=1$$이다.
 
-을 봤을 때 차원이 뛰는 곳을 의미하며, 만일 최종적으로 $$V_m$$에도 들어가지 않는 방향이 있다면 번호 $$m+1$$을 부여한다. 가령 Grassmannian $$\Gr(2,4)$$의 경우, $$V=\span\{e_1, e_2+e_3\}$$에 대해서는 $$E_j=\span\{e_1,\ldots,e_j\}$$와의 교차 차원이
+네 성분을 모으면 우리가 만드는 $$u$$ word는 $$u=0101$$이다. 거꾸로 이런 word가 주어졌을 때 jump 데이터를 복원하는 것도 즉각적인데, 가령 이 예시에서 차원이 뛰는 곳은 $$0$$이 있는 첫째, 셋째 자리인 것이다. 더 일반적인 flag variety에 대해서는 $$u$$를 이루는 숫자들이 $$0$$과 $$1$$ 뿐만 아니라 다른 숫자들도 나타나는 것이며, 이들 숫자들이 우리가 flag의 몇 번째 성분을 보는것인지를 알려주고, 이들 숫자들의 위치가 이 성분이 어디서 뛰는지를 알려주는 것이다. 
 
-$$\dim(V\cap E_j)=0,\,1,\,1,\,2,\,2\qquad(j=0,1,2,3,4)$$
-
-이다. 차원이 뛰는 자리는 $$j=1$$ ($$e_1$$이 들어옴)과 $$j=3$$ ($$e_2+e_3$$ 방향이 들어옴)이고 $$j=2,4$$에서는 뛰지 않으므로, 들어오는 자리에 $$1$$, 그렇지 않은 자리에 ($$m=1$$이라) $$m+1=2$$를 주면
-
-$$u=1\,2\,1\,2$$
-
-이다. 관례대로 $$2$$를 $$0$$으로 적으면 $$0/1$$ word $$1010$$이고, 이는 pivot column $$\{1,3\}$$, 곧 $$(2,2)$$-shuffle $$w=1324$$에 대응한다 ($$\ell(w)=1$$). 그 cell은 아래 예시의 둘째 행렬 $$\begin{pmatrix}1&0&0&0\\0&\ast&1&0\end{pmatrix}$$ ($$\ast=1$$)이다. 
-
-
- 하나로 적으면 깔끔하다. column $$j$$의 방향 $$e_j$$가 flag에 처음 들어오는 step의 번호를 $$u_j$$로 두는 것이다. 곧 $$u_j=c$$는 $$\dim(V_{a_c}\cap E_j)$$는 뛰지만 그 앞 step $$V_{a_{c-1}}$$까지는 안 뛴다는 뜻이고, $$V_{a_m}$$에도 끝내 안 들어오는 자리는 $$u_j=m+1$$로 둔다. 그러면 글자 $$c$$의 개수가 정확히 step 크기 $$a_c-a_{c-1}$$ ($$a_0=0$$, $$a_{m+1}=n$$)이 되고, 이런 word가 minimal coset representative $$W^P$$와 일대일로 대응한다. 거꾸로 word에서 글자 $$c$$가 놓인 자리를 증가순으로 읽으면 $$w$$의 $$c$$번째 블록 $$w(a_{c-1}+1)<\cdots<w(a_c)$$가 복원된다. 가령 $$2$$-step flag $$Fl(a,b;n)$$이면 세 글자 $$\{1,2,3\}$$의 word로, $$1$$이 $$a$$개, $$2$$가 $$b-a$$개, $$3$$이 $$n-b$$개이다. 우리가 다루는 Grassmannian은 step이 하나뿐인 $$m=1$$의 경우라 글자가 둘 ($$V_k$$에 들어오는 자리와 그렇지 않은 자리)뿐이고, 관례상 이를 $$1$$과 $$0$$으로 적어 $$0/1$$ word가 된다. 아래 예시에서 이를 $$\Gr_2(\mathbb{C}^4)$$에 대해 끝까지 따라간다. 
+따라서 우리는 이로부터 $$01$$-word (더 일반적으로는 $$012$$-word 등)과 jumping position 사이의 관계를 확립할 수 있다. 그런데 이는 동시에 $$(k, n-k)$$-shuffle을 담고 있는 것이기도 하다. 즉, $$0$$의 위치가 $$1, 3$$번째에 있으므로 이는 shuffle $$1324$$에 해당하며, 예를 들어 $$012$$-word $$1022101$$과 같은 경우는 $$2615734$$가 복원된다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> $$n=4$$, $$k=2$$인 경우 $$W=S_4$$, $$W_{P_2}=S_2\times S_2$$이고, minimal length 대표원소는
+<ins id="ex15">**예시 15**</ins> 이제 $$\Gr(2,4)$$에서 이 예시를 끝까지 밀어붙이자. 이 경우 $$W=S_4$$, $$W_{P_2}=S_2\times S_2$$이고, minimal length representative는 $$(2,2)$$-shuffle들, 곧
 
 $$W^{P_2}=\{1234,\,1324,\,1423,\,2314,\,2413,\,3412\}$$
 
-의 여섯 개이다. 가령, 원소 $$w=1324$$는 $$w(1)=1<w(2)=3$$이고 $$w(3)=2<w(4)=4$$를 만족하는 shuffle이다. 각 대표원소의 길이는 inversion을 세어
+의 여섯 개이다. 각 대표원소의 길이는 [예시 4](#ex4)에서처럼 inversion을 세어
 
 $$\ell(1234)=0,\quad\ell(1324)=1,\quad\ell(1423)=\ell(2314)=2,\quad\ell(2413)=3,\quad\ell(3412)=4$$
 
-이므로, $$\Gr_2(\mathbb{C}^4)$$은 차원 $$0,1,2,2,3,4$$의 여섯 Schubert cell로 paving된다. 이는 $$\dim \Gr_2(\mathbb{C}^4)=2\cdot 2=4$$와 정합적이며, cell의 총 개수는 $$\binom{4}{2}=6$$, 복소 차원별로는 $$0,1,2,3,4$$차에 각각 $$1,1,2,1,1$$개가 놓인다. 각 cell은 Young diagram(즉 $$2\times 2$$ 상자 안에 들어가는 partition)으로도 색인되며, $$\ell(w)$$가 그 partition의 상자 수에 해당한다.
-
-이 여섯 cell이 $$\Gr_2(\mathbb{C}^4)$$에서 구체적으로 무엇인지는 행렬로 곧장 드러난다. $$2$$-plane $$V$$를 그 기저를 행으로 갖는 $$2\times4$$ 행렬로 적고, 각 행의 pivot($$=1$$)을 가장 오른쪽 nonzero 성분, 곧 $$\dim(V\cap E_j)$$가 뛰는 자리로 두면, pivot은 정확히 column $$\{w(1),w(2)\}$$에 놓이고 그 왼쪽의 non-pivot column 자리만 자유 좌표 $$\ast$$로 남는다. $$W^{P_2}=\{1234,1324,1423,2314,2413,3412\}$$ 순서대로
+임을 확인할 수 있다. 따라서 이들은 각각 차원 $$0,1,2,2,3,4$$의 여섯 Schubert cell을 구성한다. 이제 이들을 더 명시적으로 적어보자. 이를 위해 $$2$$-plane $$V$$를 $$2\times4$$ 행렬로 적고, 각 행의 pivot($$=1$$)을 가장 오른쪽 nonzero 성분, 곧 $$\dim(V\cap E_j)$$가 뛰는 자리로 두면, pivot은 정확히 column $$\{w(1),w(2)\}$$에 놓이고 그 왼쪽의 non-pivot column 자리만 자유 좌표 $$\ast$$로 남는다. $$W^{P_2}=\{1234,1324,1423,2314,2413,3412\}$$ 순서대로
 
 $$\begin{pmatrix}1&0&0&0\\0&1&0&0\end{pmatrix},\quad\begin{pmatrix}1&0&0&0\\0&\ast&1&0\end{pmatrix},\quad\begin{pmatrix}1&0&0&0\\0&\ast&\ast&1\end{pmatrix},$$
 
 $$\begin{pmatrix}\ast&1&0&0\\\ast&0&1&0\end{pmatrix},\quad\begin{pmatrix}\ast&1&0&0\\\ast&0&\ast&1\end{pmatrix},\quad\begin{pmatrix}\ast&\ast&1&0\\\ast&\ast&0&1\end{pmatrix}$$
 
 이다. 자유 좌표 $$\ast$$의 개수 $$0,1,2,2,3,4$$가 정확히 위에서 센 $$\ell(w)$$이고, 이것이 $$BwP/P\cong\mathbb{A}^{\ell(w)}$$의 명시적 좌표화다. 양 끝을 보면 $$\{1,2\}$$은 $$V=E_2$$ 한 점이고, $$\{3,4\}$$은 $$E_2$$와 transverse한 ($$\dim(V\cap E_2)=0$$) generic $$2$$-plane들의 big cell이다.
-
-이 모든 데이터는 $$01$$-word, 곧 $$k\times(n-k)$$ 직사각형 위의 lattice path 하나로 압축된다. $$w\in W^{P_k}$$에 대해 $$b_j$$를 $$j$$가 pivot column ($$j\in\{w(1),\ldots,w(k)\}$$)이면 $$1$$, free column이면 $$0$$으로 두어 길이 $$n$$의 word $$b_1\cdots b_n$$을 적으면, $$1$$을 $$k$$개 가진 $$0/1$$ 수열이 되고, $$1$$을 세로 step, $$0$$을 가로 step으로 읽으면 직사각형의 한 꼭짓점에서 맞은편으로 가는 lattice path가 된다. 위 여섯 cell은 순서대로
-
-$$1234\leftrightarrow1100,\quad1324\leftrightarrow1010,\quad1423\leftrightarrow1001,\quad2314\leftrightarrow0110,\quad2413\leftrightarrow0101,\quad3412\leftrightarrow0011$$
-
-이다. word에서 $$0$$이 $$1$$보다 앞서는 쌍의 개수가 정확히 $$\ell(w)$$이고 ($$\ast$$ 행렬에서 각 pivot 왼쪽의 free 자리 수와 같다), 각 $$1$$ 앞에 놓인 $$0$$의 개수를 내림차순으로 적은 것이 그 cell의 partition $$\lambda$$, 곧 path가 가두는 Young diagram이다. 가령 $$0101$$은 $$0$$이 앞서는 쌍이 셋이라 $$\ell=3$$, $$\lambda=(2,1)$$에 대응한다. 거꾸로 word(또는 partition) 하나만 주어지면 $$1$$의 자리에서 pivot column $$\{w(1),\ldots,w(k)\}$$을 읽고 그 왼쪽 free 자리를 $$\ast$$로 채워 위 echelon 행렬과 cell을 통째로 복원할 수 있다. 결국 $$0/1$$ 수열, $$(k,n-k)$$-shuffle, partition, $$\ast$$ 행렬, Schubert cell은 한 데이터의 다섯 가지 표현인 셈이다.
-
-각 cell의 closure가 Grassmannian의 Schubert variety로, $$\dim(V\cap E_{w(a)})\ge a$$ ($$1\le a\le k$$)라는 rank 조건으로 잘린다. 위 $$2\times2$$ Young diagram이 그 조건을 담는다.
 
 </div>
 
@@ -416,19 +400,19 @@ $$X_w=\overline{BwP/P}$$이고 $$B$$는 connected solvable group이므로, $$B$$
 
 <div class="example" markdown="1">
 
-<ins id="ex18">**예시 18**</ins> $$G/P=\Gr_2(\mathbb{C}^4)$$의 경우, $$W^{P_2}$$ 위의 Bruhat order는 두 maximal chain
+<ins id="ex18">**예시 18**</ins> $$G/P=\Gr(2,4)$$의 경우, $$W^{P_2}$$ 위의 Bruhat order는 두 maximal chain
 
 $$1234\leq 1324\leq 1423\leq 2413\leq 3412$$
 
 $$1234\leq 1324\leq 2314\leq 2413\leq 3412$$
 
-으로 그려진다. 즉 $$1324$$ 아래에는 $$1234$$만 있고, 길이가 같은 $$1423$$과 $$2314$$는 서로 비교 불가능하며 둘 다 $$1324$$ 위·$$2413$$ 아래에 놓인다. 이 Hasse diagram은 두 갈래로 갈라졌다 다시 만나는 마름모꼴로, $$\Gr_2(\mathbb{C}^4)$$의 Schubert class들 사이의 포함관계를 그대로 보여준다. 가령 Schubert variety $$X_{2413}$$은 $$X_{1423}^\circ$$, $$X_{2314}^\circ$$, $$X_{1324}^\circ$$, $$X_{1234}^\circ$$를 모두 포함하는 차원 $$3$$의 subvariety이다.
+으로 그려진다. 즉 $$1324$$ 아래에는 $$1234$$만 있고, 길이가 같은 $$1423$$과 $$2314$$는 서로 비교 불가능하며 둘 다 $$1324$$ 위·$$2413$$ 아래에 놓인다. 이 Hasse diagram은 두 갈래로 갈라졌다 다시 만나는 마름모꼴로, $$\Gr(2,4)$$의 Schubert class들 사이의 포함관계를 그대로 보여준다. 가령 Schubert variety $$X_{2413}$$은 $$X_{1423}^\circ$$, $$X_{2314}^\circ$$, $$X_{1324}^\circ$$, $$X_{1234}^\circ$$를 모두 포함하는 차원 $$3$$의 subvariety이다.
 
 이 순서는 [예시 15](#ex15)의 jump set으로 곧장 읽힌다. $$w$$를 그 jump set $$\{w(1)<w(2)\}$$으로 보면 Bruhat order는 성분별 순서, 즉 $$v\le w\iff v(1)\le w(1)$$이고 $$v(2)\le w(2)$$이다. 그래서 두 maximal chain은 $$\{1,2\}\le\{1,3\}\le\{1,4\}\le\{2,4\}\le\{3,4\}$$와 $$\{1,2\}\le\{1,3\}\le\{2,3\}\le\{2,4\}\le\{3,4\}$$이고, $$1423\leftrightarrow\{1,4\}$$와 $$2314\leftrightarrow\{2,3\}$$이 비교 불가능한 것은 $$4\not\le3$$이면서 $$2\not\le1$$이기 때문이다.
 
 포함관계도 rank 조건으로 손에 잡힌다. $$X_{2413}$$의 조건 $$\dim(V\cap E_2)\ge1$$, $$\dim(V\cap E_4)\ge2$$ 중 뒤는 $$E_4=\mathbb{C}^4$$이라 자동이므로
 
-$$X_{2413}=\{V\in\Gr_2(\mathbb{C}^4)\mid\dim(V\cap E_2)\ge1\},$$
+$$X_{2413}=\{V\in\Gr(2,4)\mid\dim(V\cap E_2)\ge1\},$$
 
 곧 $$E_2$$와 만나는 $$2$$-plane 전체다. [예시 15](#ex15)의 여섯 cell 중 $$E_2$$와 transverse한 big cell $$3412$$만 이 조건을 어기므로, $$X_{2413}$$은 나머지 다섯 cell을 정확히 머금는다.
 
