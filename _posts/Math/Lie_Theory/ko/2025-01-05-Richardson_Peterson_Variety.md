@@ -22,7 +22,7 @@ published: false
 
 $$X_w^\circ=BwP/P,\qquad X^w_\circ=B^-wP/P\qquad(w\in W^P)$$
 
-와 그 Zariski closure인 Schubert variety $$X_w=\overline{X_w^\circ}$$, opposite Schubert variety $$X^w=\overline{X^w_\circ}$$를 얻는다. 두 cell은 각각 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$, $$X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$$이므로, 같은 $$w$$에 대해서도 한쪽은 작고 한쪽은 큰, 즉 서로 차원을 뒤집은 두 분해가 $$G/P$$ 위에 동시에 놓이게 된다. Richardson variety는 이 두 방향의 cell의 intersection이다.
+와 그 Zariski closure인 Schubert variety $$X_w=\overline{X_w^\circ}$$, opposite Schubert variety $$X^w=\overline{X^w_\circ}$$를 얻는다. 두 cell은 각각 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$, $$X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$$이며, Richardson variety는 이 두 방향의 cell의 intersection이다.
 
 <div class="definition" markdown="1">
 
@@ -38,7 +38,17 @@ $$\mathring{R}_{u,w}=X_w^\circ\cap X^u_\circ$$
 
 </div>
 
-정의에 의해 $$R_{u,w}$$는 $$G/P$$의 closed subvariety이고, $$\mathring{R}_{u,w}$$는 그 안의 Zariski open subset이다. 이 대상은 Richardson [Ric92]이 algebraic group의 double coset intersection을 연구하면서 처음 다루었다. 두 cell이 각각 $$B$$와 $$B^-$$의 orbit라는 점, 곧 서로 반대 방향에서 오는 분해라는 점이 다음 명제에서 결정적으로 작동한다.
+정의에 의해 $$R_{u,w}$$는 $$G/P$$의 closed subvariety이고, $$\mathring{R}_{u,w}$$는 그 안의 Zariski open subset이다.
+
+이 정의의 유용성은 Grassmannian $$\Gr_k(\mathbb{C}^n)$$ (또는 일반적인 partial flag variety)에서 볼 수 있다. reference flag $$E_\bullet\colon E_1\subset E_2\subset\cdots\subset E_n=\mathbb{C}^n$$를 하나 고정하면, 각 Schubert cell은 그 안의 $$k$$차원 subspace $$V$$가 이 flag와 만나는 방식, 곧 $$\dim(V\cap E_j)$$가 $$j$$를 키울 때 어느 자리에서 뛰는지로 결정된다. 이 jump 패턴은 $$k\times(n-k)$$ 직사각형 안에 들어가는 partition $$\lambda$$ 하나에 압축되어 저장되며 ($$\lvert\lambda\rvert$$은 해당 Schubert variety의 codimension), $$W^P$$의 원소와 partition $$\lambda$$는 일대일로 대응한다. 즉 partition은 "이 cell이 reference flag와 어떻게 만나는가"를 기록하는 조합론적 데이터이다.
+
+Richardson variety는 이런 cell 조건을 두 개 동시에 부과한 것이다. 그런데 두 Schubert variety를 *같은* reference flag $$E_\bullet$$에 대해 잘라 intersect시키면 잘 작동하지 않는다. 두 rank 조건이 같은 flag를 공유하면 서로 독립이 아니어서, intersection이 기대 차원 $$\ell(w)-\ell(u)$$에서 어긋나기 때문이다. 가령 두 조건이 비교가능하면 한 Schubert variety가 다른 것을 통째로 포함해 버린다. 두 조건이 서로 간섭 없이 만나려면 reference flag들을 서로 *generic position* (transversal)에 두어야 한다.
+
+여기서 두 complete flag $$E_\bullet$$, $$\tilde{E}_\bullet$$가 *transversal* (또는 generic position)하다는 것은 모든 $$i,j$$에 대해
+
+$$\dim(E_i\cap\tilde{E}_j)=\max(0,\,i+j-n)$$
+
+이 성립하는 것, 곧 두 flag의 어느 piece 쌍을 잡아도 그 intersection이 가능한 한 작게 만나는 것을 뜻한다. 이런 flag 쌍의 표준적인 예가 바로 basis를 거꾸로 세는 opposite flag $$\tilde{E}_j=\operatorname{span}\{e_n,\ldots,e_{n-j+1}\}$$로, 표준 flag $$E_i=\operatorname{span}\{e_1,\ldots,e_i\}$$에 대해 $$E_i\cap\tilde{E}_j$$가 $$i+j\leq n$$이면 $$0$$, $$i+j>n$$이면 차원 $$i+j-n$$이 되어 위 조건을 정확히 만족한다. Richardson variety의 정의에서 $$X_w$$가 $$B$$가 고정하는 표준 flag에 대한 조건, $$X^u$$가 $$B^-$$가 고정하는 opposite flag에 대한 조건이라는 사실이 바로 이 두 reference flag를 서로 transversal하게 잡는다는 뜻이고, 아래 [명제 2](#prop2)는 그 transversality를 Lie algebra 차원에서 $$\mathfrak{b}+\mathfrak{b}^-=\mathfrak{g}$$로 다시 표현한다.
 
 <div class="proposition" markdown="1">
 
@@ -60,7 +70,11 @@ $$\dim X_w^\circ+\dim X^u_\circ-\dim(G/P)=\ell(w)+\bigl(\dim(G/P)-\ell(u)\bigr)-
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> 두 극단을 보자. $$u=w$$이면 $$\mathring{R}_{w,w}=X_w^\circ\cap X^w_\circ$$은 한 점 $$wP/P$$만으로 이루어진다. 이는 $$X_w$$와 $$X^w$$가 오직 그 한 점에서만 만나기 때문이며, 차원 $$\ell(w)-\ell(w)=0$$과 부합한다. 반대로 $$u=e$$ (identity)이고 $$w=w_0^P$$ ($$W^P$$의 maximal length element)이면, $$X_{w_0^P}=G/P$$이고 $$X^e_\circ$$은 open dense cell이므로 $$\mathring{R}_{e,w_0^P}=X^e_\circ$$은 $$G/P$$의 가장 큰 open cell이 되어, 차원은 $$\ell(w_0^P)-0=\dim(G/P)$$이다.
+<ins id="ex3">**예시 3**</ins> 명제 [명제 2](#prop2)의 singularity 상쇄를 $$\Gr_2(\mathbb{C}^4)$$의 가장 작은 case에서 직접 보자. codimension $$1$$ Schubert variety $$X_{2413}=\{V\mid\dim(V\cap E_2)\geq1\}$$ ($$E_2=\operatorname{span}\{e_1,e_2\}$$)은 smooth하지 않다. Plücker 매장 $$\Gr_2(\mathbb{C}^4)\subseteq\mathbb{P}^5$$에서 $$\Gr_2(\mathbb{C}^4)$$ 자체는 smooth quadric이지만, $$X_{2413}$$은 이 quadric을 한 tangent hyperplane으로 자른 section이라 quadric surface 위의 cone, 곧 그 vertex $$[E_2]$$ 한 점에서만 singular한 $$3$$차원 quadric cone이 된다 ([Bri]). 이 vertex는 가장 작은 cell $$X_e^\circ=\{[E_2]\}$$ 그 자체이다.
+
+이제 opposite Schubert variety $$X^{1324}=\{V\mid\dim(V\cap\tilde{E}_2)\geq1\}$$ ($$\tilde{E}_2=\operatorname{span}\{e_3,e_4\}$$)과 intersect시키자. singular point $$[E_2]$$는 $$E_2\cap\tilde{E}_2=0$$이라 $$\dim([E_2]\cap\tilde{E}_2)=0<1$$, 곧 $$X^{1324}$$에 들어가지 않는다. 따라서 intersection을 취하는 순간 이 singular point가 잘려 나가고, 남는 Richardson variety $$R_{1324,2413}$$은 smooth하다 (실제로 $$\cong\mathbb{P}^1\times\mathbb{P}^1$$임을 [예시 5](#ex5)에서 좌표로 확인한다). opposite Borel이 주는 generic position이 Schubert variety의 singular locus를 정확히 밀어낸 것이다.
+
+두 극단도 짚어두자. $$u=w$$이면 $$\mathring{R}_{w,w}=X_w^\circ\cap X^w_\circ$$은 한 점 $$wP/P$$로, 차원 $$\ell(w)-\ell(w)=0$$과 부합한다. 반대로 $$u=e$$, $$w=w_0^P$$ ($$W^P$$의 maximal length element)이면 $$X_{w_0^P}=G/P$$이고 $$X^e_\circ$$은 open dense cell이므로 $$\mathring{R}_{e,w_0^P}=X^e_\circ$$은 $$G/P$$의 가장 큰 open cell이 되어, 차원은 $$\dim(G/P)$$이다.
 
 </div>
 
@@ -88,7 +102,7 @@ $$\int_{G/P}[X_w]\cdot[X^u]=\delta_{u,w}$$
 
 </details>
 
-명제 [명제 4](#prop4)은 Schubert basis의 곱셈 structure constant를 Richardson variety의 차수로 환원한다. 세 class의 곱 $$[X_w]\cdot[X^u]\cdot[X_v]$$을 적분하면 세 generic position Schubert variety의 intersection number가 나오는데, 이것이 곧 structure constant — Grassmannian의 경우 Littlewood–Richardson 계수 — 이며, 이로부터 classical *Schubert calculus*가 전개된다.
+명제 [명제 4](#prop4)은 Schubert basis의 곱셈 structure constant를 Richardson variety의 차수로 환원한다. 세 class의 곱 $$[X_w]\cdot[X^u]\cdot[X_v]$$을 적분하면 세 generic position Schubert variety의 intersection number가 나오는데, 이것이 곧 structure constant이고, Grassmannian의 경우에는 Littlewood–Richardson 계수가 되며, 이로부터 classical *Schubert calculus*가 전개된다.
 
 ## Grassmannian에서의 Richardson variety
 
@@ -118,9 +132,15 @@ $$V=\operatorname{rowspan}\begin{pmatrix}1&s&0&0\\0&0&1&t\end{pmatrix}\qquad(s,t
 
 이러한 좌표화는 Richardson variety의 coordinate ring을 명시적으로 다룰 수 있게 한다. 특히 maximal length element $$w_0^P$$와 $$u=e$$에 대한 $$\mathring{R}_{e,w_0^P}$$은 모든 Schubert divisor와 opposite Schubert divisor를 제거한 $$G/P$$의 가장 큰 open part로, 두 boundary 분해 어느 쪽에도 닿지 않는 generic flag들의 무대가 된다.
 
-## Regular nilpotent element
+## Peterson variety의 정의
 
-이제 같은 flag variety를 전혀 다른 방식으로 — 한 nilpotent element가 부과하는 조건으로 — 잘라낸 Peterson variety로 넘어간다. complex semisimple Lie algebra $$\mathfrak{g}$$와 그에 대응하는 simply-connected algebraic group $$G$$를 고정하고, Borel subgroup $$B$$, opposite Borel $$B^-$$, 그리고 그 Lie algebra $$\mathfrak{b}$$, $$\mathfrak{b}^-$$를 둔다. $$\mathfrak{n}=[\mathfrak{b},\mathfrak{b}]$$, $$\mathfrak{n}^-=[\mathfrak{b}^-,\mathfrak{b}^-]$$를 각각 positive, negative nilpotent subalgebra라 하고, [§근계](/ko/math/lie_theory/root_systems)의 root space decomposition $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$를 가정한다.
+이제 같은 flag variety를, 두 Bruhat 분해의 intersection이 아니라 한 nilpotent element가 부과하는 조건으로 잘라낸다. complex semisimple Lie algebra $$\mathfrak{g}$$와 그에 대응하는 simply-connected algebraic group $$G$$, Borel subgroup $$B$$와 opposite Borel $$B^-$$, 그 Lie algebra $$\mathfrak{b}$$, $$\mathfrak{b}^-$$를 고정하고, $$\mathfrak{n}=[\mathfrak{b},\mathfrak{b}]$$, $$\mathfrak{n}^-=[\mathfrak{b}^-,\mathfrak{b}^-]$$를 각각 positive, negative nilpotent subalgebra라 한다. [§근계](/ko/math/lie_theory/root_systems)의 root space decomposition $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$도 함께 가정한다.
+
+왜 하필 *nilpotent*로 자르는가? Flag variety $$G/B$$는 $$\mathfrak{b}$$의 conjugate들, 곧 Borel subalgebra들의 variety로 볼 수 있다 ($$gB$$에 대응하는 Borel subalgebra는 $$\operatorname{Ad}(g)\mathfrak{b}$$이다). 한 element $$X\in\mathfrak{g}$$를 고르면, $$X$$를 자신의 Borel subalgebra 안에 품는 flag들, 곧 $$\operatorname{Ad}(g^{-1})X\in\mathfrak{b}$$를 만족하는 $$gB$$들을 모을 수 있다. $$X$$가 nilpotent일 때 이 집합이 바로 $$X$$의 *Springer fiber*이며, 이는 nilpotent cone $$\mathcal{N}$$의 Springer resolution $$\widetilde{\mathcal{N}}=\{(X,\mathfrak{b}')\mid X\in\mathfrak{b}'\}\to\mathcal{N}$$의 $$X$$ 위 fiber이다. 즉 Springer fiber는 nilpotent element에 대해서만 의미를 갖는, flag variety와 nilpotent cone을 잇는 다리이고, "nilpotent으로 자른다"는 것은 이 다리 위에서 flag variety를 들여다본다는 뜻이다.
+
+이 그림에서 regular nilpotent은 가장 깔끔한 극단을 차지한다. regular nilpotent을 자신의 nilradical에 품는 Borel subalgebra는 유일하므로, 그 Springer fiber는 정확히 한 점으로 줄어든다. 이제 조건 $$\operatorname{Ad}(g^{-1})X\in\mathfrak{b}$$를 $$\mathfrak{b}$$보다 큰 $$\operatorname{ad}(\mathfrak{b})$$-stable subspace $$H$$로 느슨하게 풀면, 그 해집합은 이 한 점($$H=\mathfrak{b}$$)에서 시작해 $$G/B$$ 전체($$H=\mathfrak{g}$$)까지 $$H$$를 키우는 만큼 단계적으로 커진다 (아래 [정의 9](#def9)에서 형식화할 Hessenberg variety의 family). Peterson variety는 그 사다리에서 $$\mathfrak{b}$$ 바로 위 한 칸, 곧 각 simple root 방향으로 자유도를 정확히 하나씩만 더한 가장 작은 비자명 단계에 해당하며, 그래서 그 차원이 simple root의 수 $$\operatorname{rank}(\mathfrak{g})$$가 된다.
+
+이를 위해 우선 regular nilpotent을 정확히 정의한다.
 
 <div class="definition" markdown="1">
 
@@ -128,13 +148,13 @@ $$V=\operatorname{rowspan}\begin{pmatrix}1&s&0&0\\0&0&1&t\end{pmatrix}\qquad(s,t
 
 </div>
 
-구체적으로 각 simple root $$\alpha_i$$마다 $$0\neq e_i\in\mathfrak{g}_{\alpha_i}$$를 하나씩 골라 $$e=\sum_i e_i$$으로 두면 이 $$e$$는 regular nilpotent이고, 모든 regular nilpotent는 $$G$$의 adjoint action에 의해 서로 conjugate하다. 이는 Kostant [Kos]의 고전적 결과로, regular nilpotent의 centralizer가 abelian이며 그 차원이 정확히 $$\operatorname{rank}(\mathfrak{g})$$임을 함께 보여 준다. 이 사실이 곧 Peterson variety의 차원을 결정하게 된다.
+각 simple root $$\alpha_i$$마다 $$0\neq e_i\in\mathfrak{g}_{\alpha_i}$$를 골라 $$e=\sum_i e_i$$로 두면 regular nilpotent을 얻는다. type $$A_{n-1}$$의 $$\mathfrak{sl}_n$$에서 이는 superdiagonal이 모두 $$1$$인 principal nilpotent $$N=\sum_{i=1}^{n-1}E_{i,i+1}$$이고, 그 centralizer를 직접 계산하면 $$N$$의 polynomial들
 
-## Peterson variety의 정의
+$$\mathfrak{z}_{\mathfrak{sl}_n}(N)=\operatorname{span}\{N,N^2,\ldots,N^{n-1}\}$$
 
-Peterson variety를 정의하기 전에, 왜 하필 regular *nilpotent*로 flag variety를 자르는지를 먼저 보자. 한 element $$X\in\mathfrak{g}$$가 flag $$gB$$를 "얼마나 보존하는가"는 $$\operatorname{Ad}(g^{-1})X$$가 $$\mathfrak{b}$$에서 얼마나 벗어나는가로 잴 수 있다. $$\operatorname{Ad}(g^{-1})X\in\mathfrak{b}$$이면 $$X$$가 그 flag를 보존하는 것이고, 이런 flag들을 모은 것이 $$X$$의 *Springer fiber*이다. $$X$$를 regular nilpotent로 잡으면 이 Springer fiber는 정확히 한 점 — $$X$$가 보존하는 유일한 flag — 으로 줄어든다. nilpotent 중에서도 regular nilpotent는 이렇게 가장 degenerate한 극단을 차지한다.
+로, abelian이며 차원이 $$n-1=\operatorname{rank}(\mathfrak{sl}_n)$$이다 ($$\mathfrak{gl}_n$$에서라면 항등행렬까지 더해 $$\operatorname{span}\{I,N,\ldots,N^{n-1}\}$$, 차원 $$n$$). 모든 regular nilpotent이 $$G$$의 adjoint action으로 서로 conjugate하다는 것, 그리고 그 centralizer가 언제나 abelian이며 차원이 정확히 $$\operatorname{rank}(\mathfrak{g})$$라는 것은 Kostant [Kos]의 고전적 결과이다. 바로 이 centralizer 차원이 아래 [명제 8](#prop8)에서 Peterson variety의 차원을 결정한다.
 
-이제 조건 $$\operatorname{Ad}(g^{-1})X\in\mathfrak{b}$$를, $$\mathfrak{b}$$보다 큰 $$\operatorname{ad}(\mathfrak{b})$$-stable subspace $$H$$로 느슨하게 풀어 보자. 그 해집합은 $$H=\mathfrak{b}$$의 한 점에서 시작해 $$H=\mathfrak{g}$$의 $$G/B$$ 전체까지 $$H$$를 키우는 만큼 단계적으로 커진다 (아래 [정의 9](#def9)에서 형식화할 Hessenberg variety의 family). Peterson variety는 그 사다리에서 $$\mathfrak{b}$$ 바로 위 단계 — 각 simple root 방향으로 자유도를 정확히 하나씩만 더한 가장 작은 비자명한 enlargement — 에 해당한다. 그래서 그 차원은 정확히 simple root의 수, 곧 $$\operatorname{rank}(\mathfrak{g})$$가 되며, [정의 6](#def6)에서 본 regular nilpotent의 centralizer가 $$\operatorname{rank}(\mathfrak{g})$$차원이라는 사실과 이 차원이 맞물리는 것은 우연이 아니다. 아래 정의는 이 기하를 coadjoint action의 언어로 정밀하게 적은 것이다.
+위 interpolation 그림을 coadjoint action의 언어로 정밀하게 적으면 다음 정의가 된다.
 
 <div class="definition" markdown="1">
 
