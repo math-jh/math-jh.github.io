@@ -81,13 +81,34 @@ holds.
 
 As seen in [§Dimension](/en/math/commutative_algebra/Krull_dimension), we generally have $$\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$$. Thus it suffices to prove the reverse inequality.
 
-Set $$d = \dim A$$ and $$h = \codim \mathfrak{p}$$. Choose a regular system of parameters $$x_1, \ldots, x_d$$ of the regular local ring $$(A, \mathfrak{m})$$. By [[Commutative Algebra] §Systems of Parameters, ⁋Proposition 9](/en/math/commutative_algebra/system_of_parameters#prop9), for suitable indices $$1 \le i_1 < \cdots < i_h \le d$$ the ideal $$\mathfrak{p}$$ is a minimal prime ideal over $$(x_{i_1}, \ldots, x_{i_h})$$. By [Corollary 3](#cor3), the elements $$x_{i_1}, \ldots, x_{i_h}$$ form an $$A$$-sequence, so by [§System of Parameters, ⁋Corollary 7](/en/math/commutative_algebra/system_of_parameters#cor7) we have $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$.
+Set $$d = \dim A$$ and $$h = \codim \mathfrak{p}$$. By [Corollary 3](#cor3), a regular system of parameters $$x_1, \ldots, x_d$$ is an $$A$$-sequence contained in $$\mathfrak{m}$$. In general, a $$d$$-dimensional Noetherian local ring $$(A,\mathfrak{m})$$ admitting an $$A$$-sequence of $$d$$ elements inside $$\mathfrak{m}$$ is called a *Cohen--Macaulay local ring*; hence regular local rings are Cohen--Macaulay local rings. It therefore suffices to prove the following two claims by induction on $$d$$.
 
-On the other hand, in $$A/(x_{i_1}, \ldots, x_{i_h})$$ the ideal $$\overline{\mathfrak{p}} = \mathfrak{p}/(x_{i_1}, \ldots, x_{i_h})$$ is a minimal prime ideal, and by [Corollary 1](#cor1) the quotient $$A/(x_{i_1}, \ldots, x_{i_h})$$ is an integral domain, so $$\overline{\mathfrak{p}} = 0$$. Hence $$\mathfrak{p} = (x_{i_1}, \ldots, x_{i_h})$$ and $$A/\mathfrak{p} = A/(x_{i_1}, \ldots, x_{i_h})$$. Therefore
+1. Every associated prime $$\mathfrak{q}\in \Ass A$$ of a $$d$$-dimensional Cohen--Macaulay local ring $$A$$ satisfies $$\dim A/\mathfrak{q}=d$$.
+2. Every prime ideal $$\mathfrak{p}$$ of a $$d$$-dimensional Cohen--Macaulay local ring $$A$$ satisfies $$\dim A/\mathfrak{p}+\codim \mathfrak{p}=d$$.
 
-$$\dim A/\mathfrak{p} = \dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h = \dim A - \codim \mathfrak{p}$$
+Both claims are trivial when $$d=0$$, so assume $$d\geq 1$$ and that both claims hold for $$(d-1)$$-dimensional Cohen--Macaulay local rings.
 
-.
+For the first claim, write $$\mathfrak{q}=\ann(a)\in\Ass A$$. Since $$x_1$$ is a non-zerodivisor, [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) shows $$x_1\not\in \mathfrak{q}$$. We may assume $$a\not\in x_1A$$. Indeed, if $$a=x_1b$$ then $$\ann(b)=\ann(a)=\mathfrak{q}$$ as $$x_1$$ is a non-zerodivisor, and $$Aa\subsetneq Ab$$: if $$Aa=Ab$$ then $$b=ca=cx_1b$$ gives $$(1-cx_1)b=0$$, where $$1-cx_1$$ is a unit since $$x_1\in\mathfrak{m}$$, so that $$b=0$$ and $$\mathfrak{q}=A$$, a contradiction. Hence the process of replacing $$a$$ by $$b$$ terminates after finitely many steps by the ascending chain condition.
+
+Now write $$\overline{A}=A/x_1A$$. By definition $$\overline{A}$$ has the $$\overline{A}$$-sequence $$\overline{x}_2,\ldots, \overline{x}_d$$ inside its maximal ideal, and $$\dim \overline{A}=d-1$$. Indeed, $$\dim \overline{A}\geq d-1$$ by [§System of Parameters, ⁋Corollary 7](/en/math/commutative_algebra/system_of_parameters#cor7), while the non-zerodivisor $$x_1$$ lies in no minimal prime ideal of $$A$$ by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), so that every prime ideal $$\mathfrak{q}_0$$ containing $$x_1$$ satisfies $$\codim \mathfrak{q}_0\geq 1$$ and thus $$\dim A/\mathfrak{q}_0\leq d-1$$. In particular $$\overline{A}$$ is a $$(d-1)$$-dimensional Cohen--Macaulay local ring.
+
+Since $$a\not\in x_1A$$, the element $$\bar{a}\in \overline{A}$$ is nonzero and $$\ann_{\overline{A}}(\bar a)\supseteq (\mathfrak{q}+x_1A)/x_1A$$. By [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) the set $$\Ass(\overline{A}\bar a)$$ is nonempty and its elements contain $$\ann_{\overline{A}}(\bar a)$$, and $$\Ass(\overline{A}\bar{a})\subseteq \Ass \overline{A}$$ by [§Associated Primes, ⁋Lemma 5](/en/math/commutative_algebra/associated_primes#lem5). Hence there exists $$\overline{\mathfrak{q}}'\in \Ass\overline{A}$$ whose preimage $$\mathfrak{q}'\subseteq A$$ satisfies $$\mathfrak{q}\subsetneq \mathfrak{q}'$$ (as $$x_1\in\mathfrak{q}'\setminus\mathfrak{q}$$). The first claim of the induction hypothesis gives $$\dim \overline{A}/\overline{\mathfrak{q}}'=d-1$$, so
+
+$$\dim A/\mathfrak{q}\geq 1+\dim A/\mathfrak{q}'=1+\dim \overline{A}/\overline{\mathfrak{q}}'=d$$
+
+and the reverse inequality is trivial, proving the first claim.
+
+For the second claim, if $$h=0$$ then $$\mathfrak{p}$$ is a minimal prime ideal, hence $$\mathfrak{p}\in\Ass A$$ by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), and the first claim gives $$\dim A/\mathfrak{p}=d$$. Now suppose $$h\geq 1$$. If $$\mathfrak{p}$$ were contained in some $$\mathfrak{q}\in \Ass A$$, the first claim together with the general inequality would force $$\codim \mathfrak{q}=0$$, whence $$h=0$$ from $$\mathfrak{p}\subseteq\mathfrak{q}$$, a contradiction. Since $$\Ass A$$ is a finite set ([§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)), prime avoidance ([§Associated Primes, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2)) yields $$x\in \mathfrak{p}$$ lying in no associated prime; in particular $$x$$ is a non-zerodivisor.
+
+We now use the fact that $$\overline{A}=A/xA$$ is again a $$(d-1)$$-dimensional Cohen--Macaulay local ring. This is a standard consequence of depth theory — taking the quotient by a non-zerodivisor decreases depth and dimension both by exactly $$1$$ — which we have not yet developed on this blog; we refer to [[Stacks, Lemma 10.104.2]](https://stacks.math.columbia.edu/tag/02JN) for the proof. Applying the second claim of the induction hypothesis to $$\overline{\mathfrak{p}}=\mathfrak{p}/xA$$ gives
+
+$$\dim \overline{A}/\overline{\mathfrak{p}}+\codim \overline{\mathfrak{p}}=d-1$$
+
+Now $$\overline{A}/\overline{\mathfrak{p}}\cong A/\mathfrak{p}$$, while $$\codim \overline{\mathfrak{p}}=\dim \overline{A}_{\overline{\mathfrak{p}}}=\dim A_\mathfrak{p}/xA_\mathfrak{p}$$. The element $$x$$ remains a non-zerodivisor in $$A_\mathfrak{p}$$: if $$(x/1)(b/s)=0$$ then $$uxb=0$$ for some $$u\not\in\mathfrak{p}$$, so $$ub=0$$ and hence $$b/s=0$$. Since $$x/1\in \mathfrak{p}A_\mathfrak{p}$$, applying the same argument as in the proof of $$\dim\overline{A}=d-1$$ to the local ring $$A_\mathfrak{p}$$ gives $$\dim A_\mathfrak{p}/xA_\mathfrak{p}=\dim A_\mathfrak{p}-1=h-1$$. Combining these,
+
+$$\dim A/\mathfrak{p}+(h-1)=d-1$$
+
+which is the desired result.
 
 </details>
 
@@ -270,5 +291,7 @@ is a minimal primary decomposition of $$0$$, then the primes $$\mathfrak{p}_i$$ 
 **References**
 
 **[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995. 
+
+**[Stacks]** The Stacks Project Authors. *The Stacks Project*. [https://stacks.math.columbia.edu](https://stacks.math.columbia.edu). 
 
 ---

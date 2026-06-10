@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Language-select landing (/) — two gradient cards in the subject-card
+   visual language. Cards are white-on-gradient (like .subject-card), so the
+   component is theme-agnostic; surrounding text uses skin variables and
+   adapts to light/dark via the usual stylesheet swap.
+   ========================================================================== */
+
+.lang-hero {
+  min-height: calc(100vh - 340px); // masthead + footer rough offset
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+}
+
+.lang-hero__overline {
+  font-family: $sans-serif;
+  font-size: 0.78em;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: mix($text-color, $background-color, 55%);
+  margin: 0 0 1em;
+}
+
+.lang-hero__title {
+  margin: 0 0 0.3em;
+  font-size: 1.9em;
+  word-break: keep-all;
+}
+
+.lang-hero__sub {
+  margin: 0 0 2.2em;
+  font-size: 1.02em;
+  color: mix($text-color, $background-color, 70%);
+}
+
+.lang-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 300px));
+  gap: 1.1rem;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: 620px) {
+    grid-template-columns: minmax(220px, 320px);
+  }
+}
+
+.lang-card {
+  --lang-hue: 222; // ko: site link-blue family
+  --lang-sat: 45%;
+  display: block;
+  padding: 1.5rem 1.4rem 1.3rem;
+  text-align: left;
+  background: linear-gradient(135deg,
+    hsl(var(--lang-hue), var(--lang-sat), 30%),
+    hsl(var(--lang-hue), var(--lang-sat), 17%));
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 10px;
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  }
+}
+
+.lang-card--en {
+  --lang-hue: 165; // en: deep teal
+  --lang-sat: 38%;
+}
+
+.lang-card__native {
+  display: block;
+  font-family: $sans-serif;
+  font-size: 1.45em;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.lang-card__sub {
+  display: block;
+  margin-top: 0.35em;
+  font-size: 0.86em;
+  color: hsl(var(--lang-hue), calc(var(--lang-sat) + 22%), 82%);
+}
+
+.lang-card__go {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  margin-top: 1.4em;
+  font-family: $sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+
+  .material-icons {
+    font-size: 1.1em;
+    transition: transform 0.15s ease;
+  }
+}
+
+.lang-card:hover .lang-card__go .material-icons {
+  transform: translateX(3px);
+}

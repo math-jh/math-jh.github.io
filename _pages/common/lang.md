@@ -7,17 +7,20 @@ excerpt:
 
 ---
 
-<div class="lang" markdown="1" style="width:min(50vw, 50vh); height: min(14vw, 14vh); position:absolute; left:calc((100vw - min(50vw, 50vh))/2); top:min(15vw, 15vh); display:flex; justify-content: center; margin: 0 0; padding: 0 0;">
-<p style="font-size:min(4vh, 4vw); line-height:calc(min(14vh,14vw) - 4px); margin:0 0; padding: 0 0; border: 0">Select language</p>
+<div class="lang-hero">
+  <p class="lang-hero__overline">Blackbox</p>
+  <h1 class="lang-hero__title">언어를 선택하세요</h1>
+  <p class="lang-hero__sub">Choose your language</p>
+  <nav class="lang-cards" aria-label="Language selection">
+    <a class="lang-card" href="/ko/" hreflang="ko" lang="ko">
+      <span class="lang-card__native">한국어</span>
+      <span class="lang-card__sub">한국어로 읽기</span>
+      <span class="lang-card__go">계속하기 <i class="material-icons" aria-hidden="true">&#xE5C8;</i></span>
+    </a>
+    <a class="lang-card lang-card--en" href="/en/" hreflang="en" lang="en">
+      <span class="lang-card__native">English</span>
+      <span class="lang-card__sub">Read in English</span>
+      <span class="lang-card__go">Continue <i class="material-icons" aria-hidden="true">&#xE5C8;</i></span>
+    </a>
+  </nav>
 </div>
-
-<div class="lang-list" markdown="1" style="text-align:center; width:min(50vw, 50vh); height: min(14vw, 14vh); position:absolute; left:calc((100vw - min(50vw, 50vh))/2); top:calc(min(31vw,31vh)); display:flex; justify-content: center; margin: 0 0; padding: 0 0;">
-<p style="font-size:min(4vh, 4vw); line-height:calc(min(14vh,14vw) - 4px); margin:0 0; padding: 0 0; border: 0"><a href="/ko/" style="margin:0 0; padding: 0 0;">한글</a></p>
-</div>
-<div class="lang-list" markdown="1" style="text-align:center; width:min(50vw, 50vh); height: min(14vw, 14vh); position:absolute; left:calc((100vw - min(50vw, 50vh))/2); top:calc(min(47vw,47vh)); display:flex; justify-content: center; margin: 0 0; padding: 0 0;">
-<p style="font-size:min(4vh, 4vw); line-height:calc(min(14vh,14vw) - 4px); margin:0 0; padding: 0 0; border: 0"><a href="/en/" style="margin:0 0; padding: 0 0;">English</a></p>
-</div>
-
-
-
-

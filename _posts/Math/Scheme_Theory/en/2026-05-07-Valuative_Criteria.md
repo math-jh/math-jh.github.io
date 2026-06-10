@@ -67,7 +67,7 @@ $$\kappa((0))=\Frac(A), \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A
 
 <ins id="def3">**Definition 3**</ins> For a scheme morphism $$f:X \rightarrow Y$$, we define the *diagonal morphism* as $$\Delta: X \rightarrow X \times_Y X$$.
 
-![diagonal_morphism](/assets/images/Math/Algebraic_Varieties/Valuative_criteria-1.png){:style="width:12em" class="invert" .align-center}
+![diagonal_morphism](/assets/images/Math/Scheme_Theory/Valuative_Criteria-1.png){:style="width:12em" class="invert" .align-center}
 
 If $$\Delta$$ is a closed immersion, we call $$f$$ *separated*, and say $$X$$ is *separated* over $$Y$$. If $$X$$ is separated over $$\Spec \mathbb{Z}$$, we simply call $$X$$ a *separated* scheme.
 
@@ -109,7 +109,7 @@ An example of a non-separated scheme is the line with double origin constructed 
 
 <ins id="thm6">**Theorem 6**</ins> For a Noetherian scheme $$X$$ and a scheme morphism $$f:X \rightarrow Y$$, $$f$$ being separated is equivalent to the following: for any valuation ring $$A$$ and its quotient field $$K=\Frac(A)$$, for any scheme morphisms $$\Spec A \rightarrow Y$$, $$\Spec K \rightarrow X$$ and the following commutative diagram
 
-![valuative_criterion_for_separatedness](/assets/images/Math/Algebraic_Varieties/Valuative_criteria-2.png){:style="width:8em" class="invert" .align-center}
+![valuative_criterion_for_separatedness](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.png){:style="width:8em" class="invert" .align-center}
 
 whenever the outer square is given, there is at most one $$\Spec A \rightarrow X$$ making the whole diagram commute.
 
@@ -145,7 +145,7 @@ Just as for [Theorem 6](#thm6), there is also a valuative criterion for proper m
 
 <ins id="thm9">**Theorem 9**</ins> For a Noetherian scheme $$X$$ and a scheme morphism $$f:X \rightarrow Y$$, $$f$$ being proper is equivalent to the following: for any valuation ring $$A$$ and its quotient field $$K=\Frac(A)$$, for any scheme morphisms $$\Spec A \rightarrow Y$$, $$\Spec K \rightarrow X$$ and the following commutative diagram
 
-![valuative_criterion_for_separatedness](/assets/images/Math/Algebraic_Varieties/Valuative_criteria-2.png){:style="width:8em" class="invert" .align-center}
+![valuative_criterion_for_separatedness](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.png){:style="width:8em" class="invert" .align-center}
 
 whenever the outer square is given, there exists exactly one $$\Spec A \rightarrow X$$ making the whole diagram commute.
 

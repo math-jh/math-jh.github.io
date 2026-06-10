@@ -34,7 +34,7 @@ $$\int_S c_2(T_S)=\rchi_{\mathrm{top}}(S)$$
 
 </div>
 
-Poincaré-Hopf theorem의 증명과 직관은 [§Chern Classes, ⁋명제 12](/ko/math/algebraic_varieties/chern_classes#prop12)에서 자세히 다루었으므로 여기서는 생략한다. 이 명제는 $$c_2(S)$$가 단순한 형식적 불변량이 아니라, surface의 위상적 구조를 측정하는 기하학적 양임을 보장한다. 예를 들어 $$\mathbb{P}^2$$의 경우 $$\rchi_{\mathrm{top}}(\mathbb{P}^2)=3$$이며, 이는 $$c_2(T_{\mathbb{P}^2})=3H^2$$의 적분값과 일치함을 [§Chern Classes, ⁋예시 10](/ko/math/algebraic_varieties/chern_classes#ex10)에서 확인하였다.
+이는 [§천 특성류, ⁋명제 10](/ko/math/algebraic_varieties/chern_classes#prop10)의 일반적인 진술을 surface의 경우에 적용한 것이며, 그 증명은 위상적 논증을 필요로 하므로 [BT] 등의 문헌으로 미룬다. 이 명제는 $$c_2(S)$$가 단순한 형식적 불변량이 아니라, surface의 위상적 구조를 측정하는 기하학적 양임을 보장한다. 예를 들어 $$\mathbb{P}^2$$의 경우 $$\rchi_{\mathrm{top}}(\mathbb{P}^2)=3$$이며, 이는 $$c_2(T_{\mathbb{P}^2})=3H^2$$의 적분값과 일치함을 아래 [예시 6](#ex6)에서 확인한다.
 
 <div class="proposition" markdown="1">
 
@@ -141,7 +141,7 @@ $$K_S^2+\rchi_{\mathrm{top}}(S)=12(1-q+p_g)$$
 
 $$K_{\mathbb{P}^2}^2=(-3H)^2=9H^2=9$$
 
-이다. [§Chern Classes, ⁋예시 10](/ko/math/algebraic_varieties/chern_classes#ex10)에 의해 $$c_2(T_{\mathbb{P}^2})=3H^2$$이므로 $$\int_{\mathbb{P}^2}c_2=3$$이다. 한편 [§사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)에 의해 $$h^i(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2})=0$$ for $$i>0$$이므로
+이다. [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)의 Euler exact sequence에 Whitney sum formula ([§천 특성류, ⁋정의 1](/ko/math/algebraic_varieties/chern_classes#def1))를 적용하면 $$c(T_{\mathbb{P}^2})=(1+H)^3=1+3H+3H^2$$이다. 따라서 $$c_2(T_{\mathbb{P}^2})=3H^2$$이므로 $$\int_{\mathbb{P}^2}c_2=3$$이다. 한편 [§사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)에 의해 $$h^i(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2})=0$$ for $$i>0$$이므로
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2})=h^0(\mathcal{O}_{\mathbb{P}^2})=1$$
 
@@ -155,7 +155,7 @@ $$\rchi(\mathcal{O}_{\mathbb{P}^2})=h^0(\mathcal{O}_{\mathbb{P}^2})=1$$
 
 $$K_S^2=(-2H_1-2H_2)^2=4H_1^2+8H_1\cdot H_2+4H_2^2=8$$
 
-이다. [§Chern Classes, ⁋예시 11](/ko/math/algebraic_varieties/chern_classes#ex11)에 의해 $$c_2(T_S)=4H_1H_2$$이므로 $$\int_S c_2=4$$이다. Künneth formula에 의해
+이다. $$T_S=\pi_1^\ast T_{\mathbb{P}^1}\oplus\pi_2^\ast T_{\mathbb{P}^1}$$이고 $$c(T_{\mathbb{P}^1})=1+2H$$이므로, Whitney sum formula에 의해 $$c(T_S)=(1+2H_1)(1+2H_2)=1+2H_1+2H_2+4H_1H_2$$이다. 따라서 $$c_2(T_S)=4H_1H_2$$이므로 $$\int_S c_2=4$$이다. Künneth formula에 의해
 
 $$\rchi(\mathcal{O}_S)=\rchi(\mathcal{O}_{\mathbb{P}^1})\cdot\rchi(\mathcal{O}_{\mathbb{P}^1})=1\cdot 1=1$$
 
