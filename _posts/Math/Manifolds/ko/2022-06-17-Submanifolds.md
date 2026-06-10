@@ -82,7 +82,7 @@ $$\begin{pmatrix}\partial(r^1\circ f)/\partial r^1&\partial(r^1\circ f)/\partial
 
 따라서 역함수정리에 의해, $$\varphi(p)\in U'\subset\varphi(V)$$를 만족하는 열린집합 $$U'$$가 존재하여 $$(\tau\circ F\circ\varphi^{-1})\vert_{U'}$$이 $$U'$$와 $$\tau\circ F\circ\varphi^{-1}(U')$$ 사이의 diffeomorphism을 정의한다. 이제 $$U=\varphi^{-1}(U')$$로 잡으면 함수
 
-$$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})|_{U'}\bigr)\circ\varphi$$
+$$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})\vert_{U'}\bigr)\circ\varphi$$
 
 가 $$U$$와 $$F(U)$$ 사이의 diffeomorphism을 정의한다. 
 
@@ -106,7 +106,7 @@ $$\varphi(p)=(y^1(p),\ldots, y^m(p))$$
 
 으로 정의하면, 각각의 성분함수 $$y^i$$들이 모두 $$C^\infty$$이므로 $$\varphi$$도 $$C^\infty$$이다. 이제 $$(d\varphi_{p_0})^\ast:T_{\varphi(p_0)}^\ast\mathbb{R}^m\rightarrow T_{p_0}^\ast M$$을 생각하자. $$(d\varphi_{p_0})^\ast$$에 $$dr^i\vert_{\varphi(p_0)}$$들을 대입하면, 
 
-$$d\varphi_{p_0}\left(dr^i|_{\varphi(p_0)}\right)=\left(dr^i|_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i|_{p_0}$$
+$$d\varphi_{p_0}\left(dr^i\vert_{\varphi(p_0)}\right)=\left(dr^i\vert_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i\vert_{p_0}$$
 
 이므로, $$T_{\varphi(p_0)}^\ast\mathbb{R}^m$$에서의 basis $$dr^i\vert_{\varphi(p_0)}$$들이 모두 $$T_{p_0}^\ast M$$의 basis로 각각 옮겨지고 따라서 $$(d\varphi_{p_0})^\ast$$는 isomorphism이다. 따라서 $$d\varphi_{p_0}$$도 isomorphism이며, 따라서 [따름정리 5](#cor5)를 적용하면 $$p_0\in V\subseteq U$$를 만족하는 적당한 $$V$$가 존재하여 $$\varphi\vert_V:V\rightarrow\varphi(V)$$가 coordinate system이 된다는 것을 알 수 있다.
 
@@ -154,7 +154,7 @@ $$x^1=y^1\circ F,\quad x^2=y^2\circ F,\quad\ldots,\quad x^n=y^n\circ F,\qquad x^
 
 $$dF_p$$가 surjective이므로, 그 dual $$(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$$은 injective이다. 즉, 다음의 원소들
 
-$$(dF_p)^\ast(dy^i|_{F(p)})=dy^i|_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j|_p$$
+$$(dF_p)^\ast(dy^i\vert_{F(p)})=dy^i\vert_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j\vert_p$$
 
 이 $$T_p^\ast M$$에서 linearly independent하다. 따라서 [따름정리 7](#cor7)에 의하여 원하는 결과를 얻는다. 
 
@@ -174,7 +174,7 @@ $$\{x^j=y^j\circ F\mid j=1,\ldots, n\}$$
 
 $$dF_p$$가 injective이므로, 그 dual $$(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$$은 surjective이다. 즉, 다음의 원소들
 
-$$(dF_p)^\ast(dy^i|_{F(p)})=dy^i|_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j|_p$$
+$$(dF_p)^\ast(dy^i\vert_{F(p)})=dy^i\vert_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j\vert_p$$
 
 들이 $$T_p^\ast M$$을 span해야 하고, 따라서 [따름정리 8](#cor8)에 의해 주어진 집합의 부분집합이 $$p$$ 근방에서 $$M$$의 coordinate system을 이룬다. 
 

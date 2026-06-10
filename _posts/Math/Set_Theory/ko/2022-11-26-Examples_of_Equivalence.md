@@ -190,7 +190,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 로 정의하자. $$u=(x,x'),v=(y,y'),w=(z,z')$$이 $$A\times A'$$의 원소들이라 하면,
 
 - $$u\sim_{\tiny S}u$$가 항상 성립하는 것은 자명하다. $$x\sim_{\tiny R}x$$이고 $$x'\sim_{\tiny R'}x'$$이기 때문이다.
-- $$u\sim_{\tiny S}v$$라면 <phrase>$x\sim_{\tiny R}y$이고 $x'\sim_{\tiny R'}y'$</phrase>이므로 <phrase>$y\sim_{\tiny R}x$이고 $y'\sim_{\tiny R'}x'$</phrase>이고, 따라서 $v\sim_{\tiny S}u$이다.
+- $$u\sim_{\tiny S}v$$라면 <phrase>$x\sim_{\tiny R}y$이고 $x'\sim_{\tiny R'}y'$</phrase>이므로 <phrase>$y\sim_{\tiny R}x$이고 $y'\sim_{\tiny R'}x'$</phrase>이고, 따라서 $$v\sim_{\tiny S}u$$이다.
 - $$u\sim_{\tiny S}v$$이고 $$v\sim_{\tiny S}$$라 하자. 그럼 <phrase>$x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$</phrase>가 각각 성립한다. 이제 $$x\sim_{\tiny R}y$$와 $$y\sim_{\tiny R}z$$로부터 $$x\sim_{\tiny R}z$$이고, $$x'\sim_{\tiny R'}y'$$와 $$y'\sim_{\tiny R'}z'$$로부터 $$x'\sim_{\tiny R'}z'$$이다. 즉 $$u\sim_{\tiny S}w$$가 성립한다.
 
 따라서 $$S$$는 동치관계가 된다. 이 동치관계를 $$R$$과 $$R'$$의 *곱<sub>product</sub>*이라 부르고 $$R\times R'$$로 적는다.

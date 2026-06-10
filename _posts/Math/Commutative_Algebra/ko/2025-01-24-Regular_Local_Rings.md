@@ -36,7 +36,7 @@ $$d+1=\dim A=\codim \mathfrak{m}=\codim \mathfrak{p}_i=0$$
 
 이 되어 모순이므로 우리는 반드시 적당한 $$a\in \mathfrak{m}$$이 존재하여 $$a\not\in \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$$여야 함을 안다. 
 
-이제 $$A'=A/(a)$$라 하고, $$A'$$의 maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$를 생각하자. 그럼 $$a$$의 선택에 의하여, $$A'$$의 prime ideal들 중에는 $$\mathfrak{p}_i$$에 대응되는 것이 없으므로 반드시 $$\dim A'<\dim A$$가 성립하며, 이를 [§매개계, ⁋따름정리 6](/ko/math/commutative_algebra/system_of_parameters#cor6)과 종합하면 $$\dim A'=d-1$$인 것을 안다. 따라서 다음 식
+이제 $$A'=A/(a)$$라 하고, $$A'$$의 maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$를 생각하자. 그럼 $$a$$의 선택에 의하여, $$A'$$의 prime ideal들 중에는 $$\mathfrak{p}_i$$에 대응되는 것이 없으므로 반드시 $$\dim A'<\dim A$$가 성립하며, 이를 [§매개계, ⁋따름정리 7](/ko/math/commutative_algebra/system_of_parameters#cor7)과 종합하면 $$\dim A'=d-1$$인 것을 안다. 따라서 다음 식
 
 $$\mathfrak{m}'/(\mathfrak{m}')^2=\mathfrak{m}/(\mathfrak{m}^2+(a))$$
 
@@ -78,9 +78,9 @@ $$\dim A/\mathfrak{p} + \codim \mathfrak{p} = \dim A$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[\[가환대수학\] §차원, ⁋정리 5](/ko/math/commutative_algebra/Krull_dimension#thm5)에 의하여 일반적으로 $$\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$$이다. 따라서 반대 부등식을 보이면 충분하다.
+[§차원](/ko/math/commutative_algebra/Krull_dimension)에서 살펴본 것처럼 일반적으로 $$\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$$이다. 따라서 반대 부등식을 보이면 충분하다.
 
-$$d = \dim A$$이고 $$h = \codim \mathfrak{p}$$라 하자. Regular local ring $$(A, \mathfrak{m})$$의 regular system of parameters $$x_1, \ldots, x_d$$를 택하자. [\[가환대수학\] §매개계, ⁋명제 9](/ko/math/commutative_algebra/system_of_parameters#prop9)에 의하여, 적당한 인덱스 $$1 \le i_1 < \cdots < i_h \le d$$에 대하여 $$\mathfrak{p}$$는 $$(x_{i_1}, \ldots, x_{i_h})$$를 포함하는 minimal prime ideal이다. [따름정리 3](#cor3)에 의해 $$x_{i_1}, \ldots, x_{i_h}$$은 $$A$$-sequence이므로, [§매개계, ⁋따름정리 6](/ko/math/commutative_algebra/system_of_parameters#cor6)에 의하여 $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$이다.
+$$d = \dim A$$이고 $$h = \codim \mathfrak{p}$$라 하자. Regular local ring $$(A, \mathfrak{m})$$의 regular system of parameters $$x_1, \ldots, x_d$$를 택하자. [\[가환대수학\] §매개계, ⁋명제 9](/ko/math/commutative_algebra/system_of_parameters#prop9)에 의하여, 적당한 인덱스 $$1 \le i_1 < \cdots < i_h \le d$$에 대하여 $$\mathfrak{p}$$는 $$(x_{i_1}, \ldots, x_{i_h})$$를 포함하는 minimal prime ideal이다. [따름정리 3](#cor3)에 의해 $$x_{i_1}, \ldots, x_{i_h}$$은 $$A$$-sequence이므로, [§매개계, ⁋따름정리 7](/ko/math/commutative_algebra/system_of_parameters#cor7)에 의하여 $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$이다.
 
 한편 $$A/(x_{i_1}, \ldots, x_{i_h})$$에서 $$\overline{\mathfrak{p}} = \mathfrak{p}/(x_{i_1}, \ldots, x_{i_h})$$는 minimal prime ideal이고, [따름정리 1](#cor1)에 의해 $$A/(x_{i_1}, \ldots, x_{i_h})$$는 integral domain이므로 $$\overline{\mathfrak{p}} = 0$$이다. 즉, $$\mathfrak{p} = (x_{i_1}, \ldots, x_{i_h})$$이며 $$A/\mathfrak{p} = A/(x_{i_1}, \ldots, x_{i_h})$$이다. 따라서
 
@@ -140,7 +140,7 @@ $$\nu:\Frac(A)^\times \rightarrow \mathbb{Z};\qquad am^k\mapsto k$$
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Integral domain $$A$$와 totally ordered abelian group $$G$$에 대하여, group homomorphism $$\nu:\Frac(A)^\times \rightarrow G$$가 다음 부등식
+<ins id="def7">**정의 7**</ins> Integral domain $$A$$와 totally ordered abelian group $$G$$에 대하여, group homomorphism $$\nu:\Frac(A)^\times \rightarrow G$$가 다음 부등식
 
 $$\nu(x+y)\geq \min(\nu(x), \nu(y))$$
 
@@ -166,7 +166,7 @@ $$am^k+bm^l=(am^{k-\min(k,l)}+bm^{l-\min(k,l)})m^{\min(k,l)}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> Reduced noetherian ring $$A$$와 $$A$$의 total ring of fractions $$K$$가 주어졌다 하자. 그럼 원소 $$x\in K$$가 $$A$$에 속하는 것은 임의의 prime ideal $$\mathfrak{p}$$ associated to a non-zerodivisor에 대하여 $$x$$의 $$K_\mathfrak{p}$$에서의 image가 $$A_\mathfrak{p}$$에 속하는 것과 동치이다. 
+<ins id="prop8">**명제 8**</ins> Reduced noetherian ring $$A$$와 $$A$$의 total ring of fractions $$K$$가 주어졌다 하자. 그럼 원소 $$x\in K$$가 $$A$$에 속하는 것은 임의의 prime ideal $$\mathfrak{p}$$ associated to a non-zerodivisor에 대하여 $$x$$의 $$K_\mathfrak{p}$$에서의 image가 $$A_\mathfrak{p}$$에 속하는 것과 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -188,7 +188,7 @@ $$\epsilon_\mathfrak{p}(a)\in(u)A_\mathfrak{p}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**정리 8**</ins> Noetherian integral domain $$A$$가 normal domain인 것은 다음 조건과 동치이다. 
+<ins id="thm9">**정리 9**</ins> Noetherian integral domain $$A$$가 normal domain인 것은 다음 조건과 동치이다. 
 
 ($$\ast$$) 임의의 prime ideal $$\mathfrak{p}$$ associated to a principal ideal에 대하여, $$\mathfrak{p}A_\mathfrak{p}$$는 $$A_\mathfrak{p}$$의 principal ideal이다. 
 
@@ -200,7 +200,7 @@ $$\epsilon_\mathfrak{p}(a)\in(u)A_\mathfrak{p}$$
 
 $$A=\bigcap_\text{\scriptsize$\mathfrak{p}$ associated to a principal ideal}A_\mathfrak{p}$$
 
-을 보이면 충분하며, 여기서 $$A_\mathfrak{p}$$는 $$A$$의 quotient field $$K$$의 부분집합으로 본 것이다. 이제 보이고자 하는 주장은 [명제 7](#prop7)에서 더 일반적인 경우에 다루었다. 
+을 보이면 충분하며, 여기서 $$A_\mathfrak{p}$$는 $$A$$의 quotient field $$K$$의 부분집합으로 본 것이다. 이제 보이고자 하는 주장은 [명제 8](#prop8)에서 더 일반적인 경우에 다루었다. 
 
 거꾸로 $$A$$가 normal domain이라 하고, $$\mathfrak{p}$$가 principal ideal $$\mathfrak{a}=(a)$$의 associated prime이라 하자. 즉
 
@@ -220,7 +220,7 @@ $$\mathfrak{p}^{-1}=\{x\in K\mid x \mathfrak{p}\subseteq A\}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Ring $$A$$와 $$A$$의 total ring of fractions $$K$$를 고정하자.
+<ins id="def10">**정의 10**</ins> Ring $$A$$와 $$A$$의 total ring of fractions $$K$$를 고정하자.
 
 1. $$A$$가 *normal ring<sub>정규환</sub>*이라는 것은 $$A$$가 reduced이고, $$K$$ 안에서 $$A$$가 integrally closed인 것이다.
 2. Reduced ring $$A$$의 *normalization<sub>정규화</sub>*을 $$K$$에서의 $$A$$의 integral closure로 정의한다.
@@ -231,7 +231,7 @@ $$\mathfrak{p}^{-1}=\{x\in K\mid x \mathfrak{p}\subseteq A\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm10">**정리 10 (Serre)**</ins> Noetherian ring $$A$$가 normal domain들의 (유한한) direct product인 것은 다음의 두 조건이 모두 성립하는 것과 동치이다.
+<ins id="thm11">**정리 11 (Serre)**</ins> Noetherian ring $$A$$가 normal domain들의 (유한한) direct product인 것은 다음의 두 조건이 모두 성립하는 것과 동치이다.
 
 (R1) $$A$$의 codimension $$1$$ prime에서의 localization은 DVR이고, $$A$$의 codimension $$0$$ prime에서의 localization은 field이다.  
 (S2) $$A$$의 non-zerodivisor로 생성되는 principal ideal의 associated prime은 codimension $$1$$이다. 또, $$0$$의 associated prime은 모두 codimension $$0$$이다. 
@@ -254,13 +254,13 @@ $$a=(a_1,\ldots, a_n),\qquad\text{$a_i$ a non-zerodivisor of $A_i$}$$
 
 의 associated prime은 $$\mathfrak{p}_k$$를 $$a_k$$의 associated prime으로 둔 것과 같다. 
 
-이제 주장을 증명하자. 우선 각각의 $$A_i$$가 normal이라면 (S2)조건은 [정리 8](#thm8)의 결과로 얻어지고, (R1) 조건은 $$A$$의 codimension $$c$$짜리 prime ideal $$\mathfrak{p}$$에서의 localization을 위에서의 $$\mathfrak{p}$$의 묘사를 통해 $$A_k$$에서의 codimension $$c$$ prime $$\mathfrak{p}_k$$에서의 localization으로 볼 수 있기 때문에 성립한다.
+이제 주장을 증명하자. 우선 각각의 $$A_i$$가 normal이라면 (S2)조건은 [정리 9](#thm9)의 결과로 얻어지고, (R1) 조건은 $$A$$의 codimension $$c$$짜리 prime ideal $$\mathfrak{p}$$에서의 localization을 위에서의 $$\mathfrak{p}$$의 묘사를 통해 $$A_k$$에서의 codimension $$c$$ prime $$\mathfrak{p}_k$$에서의 localization으로 볼 수 있기 때문에 성립한다.
 
 거꾸로 R1S2 조건이 성립한다 하자. 그럼 우선 $$R$$은 reduced ring이다. 이는 만일
 
 $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 
-가 $$0$$의 minimal primary decomposition이라면 여기에 등장하는 $$\mathfrak{p}_i$$들은 모두 S2 조건에 의해 codimension $$0$$ ideal들이고, R1 조건에 의해 여기에서의 localization이 field임을 안다. 따라서 [명제 7](#prop7)을 적용할 수 있고, 여기에 [§조르단-횔더 정리, ⁋정리 5](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm5)를 적용해주면 원하는 결과를 얻는다. 
+가 $$0$$의 minimal primary decomposition이라면 여기에 등장하는 $$\mathfrak{p}_i$$들은 모두 S2 조건에 의해 codimension $$0$$ ideal들이고, R1 조건에 의해 여기에서의 localization이 field임을 안다. 따라서 [명제 8](#prop8)을 적용할 수 있고, 여기에 [§조르단-횔더 정리, ⁋정리 5](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm5)를 적용해주면 원하는 결과를 얻는다. 
 
 </details>
 

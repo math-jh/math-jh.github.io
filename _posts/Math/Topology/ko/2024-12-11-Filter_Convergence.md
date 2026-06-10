@@ -26,7 +26,7 @@ weight: 15
 
 <div class="proposition" markdown="1">
 
-<ins id="prop22">**명제 2**</ins> Compact space는 limit point compact이다.
+<ins id="prop2">**명제 2**</ins> Compact space는 limit point compact이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -215,7 +215,7 @@ $$\mathcal{N}(x)\vert_A=\{U\cap A\mid U\in \mathcal{N}(x)\}$$
 
 </details>
 
-따라서, [보조정리 8](#lem8) 이후의 논증에 의해 다음 명제도 자명하다.
+따라서, [보조정리 7](#lem7) 이후의 논증에 의해 다음 명제도 자명하다.
 
 <div class="proposition" markdown="1">
 

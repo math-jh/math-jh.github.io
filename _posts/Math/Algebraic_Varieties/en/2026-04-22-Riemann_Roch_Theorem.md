@@ -150,7 +150,7 @@ $$f\mapsto (a_{-n_i}, \ldots, a_{-1})$$
 
 considered simultaneously for all $$p_i$$. Then the dimension of the target of the above linear map is $$\sum n_i = \deg D$$, and the kernel of this map is the global sections without poles, i.e. $$H^0(C, \mathcal{O}_C) = \mathbb{K}$$, from which we obtain $$\ell(D) \leq 1 + \deg D$$. If $$D$$ is not effective but $$\ell(D) > 0$$, then $$D$$ is linearly equivalent to some effective divisor, so the same inequality holds.
 
-In general, for this inequality to become an equality the linear map must be surjective, but this does not always hold. To see this, consider the long exact sequence obtained from the short exact sequence examined in the proof of [Proposition 2](#prop2):
+In general, for this inequality to become an equality the linear map must be surjective, but this does not always hold. To see this, consider the long exact sequence obtained from the short exact sequence examined in the proof of [Proposition 3](#prop3):
 
 $$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\to 0.$$
 

@@ -95,7 +95,7 @@ The condition imposed on the $$f_i$$,
 
 > For any $$i\neq j$$, if $$x\in G_i$$ and $$y\in G_j$$, then $$f_i(x)f_j(y)=f_j(y)f_i(x)$$
 
-is one that necessarily arises, because these are exactly the conditions satisfied by the $$\iota_i$$. Consequently, [Theorem 6](#thm6) answers our question only for abelian groups.
+is one that necessarily arises, because these are exactly the conditions satisfied by the $$\iota_i$$. Consequently, [Theorem 2](#thm2) answers our question only for abelian groups.
 
 Using the universal property of the weak direct product, one can establish several properties analogous to those of the direct product. For instance, the following holds.
 

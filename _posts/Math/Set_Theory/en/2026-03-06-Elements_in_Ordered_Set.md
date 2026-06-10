@@ -154,7 +154,7 @@ Conversely, suppose $$\sup X=(a_i)$$ exists. For all $$i$$, $$a_i$$ is an upper 
 
 <div class="remark" markdown="1">
 
-<ins id="rmk4">**Remark**</ins> For an ordered set $$A$$ and $$X'\subseteq X\subseteq A$$, it may happen that only one of $$\sup_AX'$$ and $$\sup_XX'$$ exists, or that both exist but take different values. For instance, let us compare $$X'=\{x\in\mathbb{Q}\mid x < \sqrt{2}\}$$ in various sets.
+**Remark**</ins> For an ordered set $$A$$ and $$X'\subseteq X\subseteq A$$, it may happen that only one of $$\sup_AX'$$ and $$\sup_XX'$$ exists, or that both exist but take different values. For instance, let us compare $$X'=\{x\in\mathbb{Q}\mid x < \sqrt{2}\}$$ in various sets.
 
 1. As a subset of $$X_1=\mathbb{Q}$$, this set has no supremum, but it does in $$A=\mathbb{R}$$. That is, even if $$\sup_AX'$$ exists, $$\sup_{X_1}X'$$ may not exist.
 2. On the other hand, consider the set $$X_2=X'\cup \left\{2\right\}$$. Then $$X'\subseteq X_2\subseteq X_1$$ and $$\sup_{X_2}X'=2$$, but $$\sup_{X_1}X'$$ does not exist.

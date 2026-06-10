@@ -76,7 +76,7 @@ $$A=\left\{x\mid\left(x\in\bigcup\left(\bigcup R\right)\right)\wedge P(x)\right\
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 위의 조건 $$\pr_1R\subseteq A$$, $$\pr_2R\subseteq B$$를 만족하는 이항관계 $$R$$이 주어졌다 하자. [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#prop9)에 의하여,
+**참고**</ins> 위의 조건 $$\pr_1R\subseteq A$$, $$\pr_2R\subseteq B$$를 만족하는 이항관계 $$R$$이 주어졌다 하자. [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#prop9)에 의하여,
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
@@ -88,7 +88,7 @@ $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 이항관계 $$(R,A,B)$$와 부분집합 $$A'\subseteq A$$를 생각하자. 그럼 <phrase>$R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $$R$$에 의한 $$A'$$의 *image<sub>상</sub>*이라 부르고 , $$R(A')$$로 표기한다.
+<ins id="def4">**정의 4**</ins> 이항관계 $$(R,A,B)$$와 부분집합 $$A'\subseteq A$$를 생각하자. 그럼 <phrase>$R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $$R$$에 의한 $$A'$$의 *image<sub>상</sub>*이라 부르고 , $$R(A')$$로 표기한다.
 
 </div>
 
@@ -106,7 +106,7 @@ $$\{y\mid(x,y)\in R\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> $$R$$이 이항관계라 하고, 임의의 집합 $$A$$와 그 부분집합 $$X$$를 생각하자. 그럼 $$R(X)\subseteq R(A)$$가 성립한다.
+<ins id="prop5">**명제 5**</ins> $$R$$이 이항관계라 하고, 임의의 집합 $$A$$와 그 부분집합 $$X$$를 생각하자. 그럼 $$R(X)\subseteq R(A)$$가 성립한다.
 
 </div>
 
@@ -127,7 +127,7 @@ $$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subset\pr_2R$$
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> 이항관계 $$R$$에 대하여, 집합 $$R(\{x\})$$를 $$x$$에서의 $$R$$의 *section<sub>단면</sub>*이라 부른다.
+<ins id="def6">**정의 6**</ins> 이항관계 $$R$$에 대하여, 집합 $$R(\{x\})$$를 $$x$$에서의 $$R$$의 *section<sub>단면</sub>*이라 부른다.
 
 </div>
 

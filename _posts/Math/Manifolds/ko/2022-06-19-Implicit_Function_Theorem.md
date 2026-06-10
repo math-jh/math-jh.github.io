@@ -102,7 +102,7 @@ $$f(x)=\lvert x\rvert^2=\sum_{i=1}^{n+1} r^i(x)^2$$
 
 를 생각하자. 임의의 점 $$x\in \mathbb{R}^{n+1}$$과 $$v\in T_x\mathbb{R}^{n+1}$$에 대하여,
 
-$$df_x(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg|_{x}=2\sum r^i(x) v^i$$
+$$df_x(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg\vert_{x}=2\sum r^i(x) v^i$$
 
 이 성립하며, 이로부터 $$x$$가 원점이 아니라면 $$v$$를 조절하여 $$df_x(v)$$가 임의의 실수값을 갖도록 할 수 있음을 안다. 즉, $$df_x$$가 원점을 제외하면 항상 surjective이므로, $$f^{-1}(1)$$이 $$\mathbb{R}^{n+1}$$의 submanifold이도록 하는 유일한 manifold 구조가 존재한다. 유일성에 의하여 이 구조는 $$S^n$$에 주어진 manifold 구조와 동일하며, 다시 [따름정리 5](#cor5)에 의해 이 구조는 $$\mathbb{R}^{n+1}$$의 embedded submanifold임을 알 수 있다.
 

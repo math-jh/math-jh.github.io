@@ -200,7 +200,7 @@ $$F: X \longrightarrow X$$
 
 (1) 기저변환은 국소적으로 텐서곱 $$B \otimes_A C$$의 형태를 띤다. $$B$$가 $$A$$-평탄이면, $$-\otimes_A (B \otimes_A C) \cong (-\otimes_A B) \otimes_B (B \otimes_A C)$$이므로 정확성이 보존된다. 따라서 $$B \otimes_A C$$는 $$C$$-평탄이다.
 
-(2) 합성의 경우, $$(g \circ f)^{-1}$$에 대한 구조층의 전진은 $$g_* f_* \mathcal{O}_X$$이다. $$f_* \mathcal{O}_X$$가 $$\mathcal{O}_Y$$-평탄 가군이고, $$g_*$$에 의해 평탄성이 보존되므로, 합성사상 역시 평탄이다. 대수적으로, $$A \to B$$와 $$B \to C$$가 모두 평탄이면 임의의 $$A$$-가군 $$N$$에 대해 $$N \otimes_A C \cong (N \otimes_A B) \otimes_B C$$이며, 각 단계에서 정확성이 보존되어 $$-\otimes_A C$$도 정확하다.
+(2) 합성의 경우, $$(g \circ f)^{-1}$$에 대한 구조층의 전진은 $$g_\ast f_\ast \mathcal{O}_X$$이다. $$f_\ast \mathcal{O}_X$$가 $$\mathcal{O}_Y$$-평탄 가군이고, $$g_\ast$$에 의해 평탄성이 보존되므로, 합성사상 역시 평탄이다. 대수적으로, $$A \to B$$와 $$B \to C$$가 모두 평탄이면 임의의 $$A$$-가군 $$N$$에 대해 $$N \otimes_A C \cong (N \otimes_A B) \otimes_B C$$이며, 각 단계에서 정확성이 보존되어 $$-\otimes_A C$$도 정확하다.
 
 </details>
 

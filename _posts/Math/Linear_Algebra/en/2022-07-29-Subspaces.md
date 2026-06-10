@@ -135,7 +135,7 @@ Now we can verify that the set $$\mathbb{K}[\x]_\text{degree\scriptsize$\leq n$}
 
 >of *formal power series* in $$\x$$ with coefficients in $$\mathbb{K}$$
 
-Defining addition of vectors and scalar multiplication in the same way as in the preceding [Example 7](#ex7), $$\mathbb{K}[[\x]]$$ becomes a $$\mathbb{K}$$-vector space as well.
+Defining addition of vectors and scalar multiplication in the same way as in the preceding [Example 5](#ex5), $$\mathbb{K}[[\x]]$$ becomes a $$\mathbb{K}$$-vector space as well.
 
 </div>
 

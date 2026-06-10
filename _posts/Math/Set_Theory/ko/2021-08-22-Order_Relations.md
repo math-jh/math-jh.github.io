@@ -48,7 +48,7 @@ Ordered set은 $$ \leq $$라는 관계가 추가적으로 정의된 집합이므
 
 <div class="proposition" markdown="1">
 
-<ins id="def5">**명제 5**</ins> 이항관계 $$(R,A,A)$$가 order relation인 것은 다음의 두 조건과 동치이다.
+<ins id="prop5">**명제 5**</ins> 이항관계 $$(R,A,A)$$가 order relation인 것은 다음의 두 조건과 동치이다.
 
 $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 
@@ -158,7 +158,7 @@ $$\begin{aligned}
 
 앞으로 order relation $$R$$에 의해 얻어지는 strict order를 $$<_{\tiny R}$$, 그리고 strict order $$S$$에 의해 얻어지는 order relation을 $$\leq_{\tiny S}$$으로 적기로 한다.
 
-<ins id="rmk1">**참고**</ins> 일반적으로 $$x\not\leq y$$라 하여 $$x>y$$인 것은 아니다. $$S=\left\{a,b\right\}$$라 하고, $$\mathcal{P}(S)$$ 위에 정의된 relation $$\leq$$를 부분집합들 간의 포함관계로 정의하자. 그럼 이는 자명하게 order relation이 된다. 이 때, $$\left\{a\right\}\not\leq \left\{b\right\}$$이지만 $$\left\{a\right\}>\left\{b\right\}$$ 또한 성립하지 않는다.
+<ins id="rmk11">**참고 11**</ins> 일반적으로 $$x\not\leq y$$라 하여 $$x>y$$인 것은 아니다. $$S=\left\{a,b\right\}$$라 하고, $$\mathcal{P}(S)$$ 위에 정의된 relation $$\leq$$를 부분집합들 간의 포함관계로 정의하자. 그럼 이는 자명하게 order relation이 된다. 이 때, $$\left\{a\right\}\not\leq \left\{b\right\}$$이지만 $$\left\{a\right\}>\left\{b\right\}$$ 또한 성립하지 않는다.
 {: .remark}
 
 

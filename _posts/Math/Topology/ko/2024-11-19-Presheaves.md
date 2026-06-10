@@ -16,7 +16,7 @@ weight: 8
 
 ## Gluing lemma
 
-앞서 살펴본 [§부분공간, ⁋명제 8](/ko/math/topology/subspaces#prop8)는 연속함수 $$f:X \rightarrow Y$$가 주어졌다 할 때, 이를 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)의 두 조건 중 하나를 만족하는 부분집합들의 family로 제한한 것이 연속임을 말해준다. 특히 이 조건은 다음 두 조건
+앞서 살펴본 [§부분공간, ⁋명제 7](/ko/math/topology/subspaces#prop7)는 연속함수 $$f:X \rightarrow Y$$가 주어졌다 할 때, 이를 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)의 두 조건 중 하나를 만족하는 부분집합들의 family로 제한한 것이 연속임을 말해준다. 특히 이 조건은 다음 두 조건
 
 1. $$(A_i)$$가 $$X$$의 open covering이거나,
 2. $$(A_i)$$가 $$X$$의 locally finite closed covering인 경우
@@ -25,7 +25,7 @@ weight: 8
 
 <div class="proposition" markdown="1">
 
-<ins id="lem1">**보조정리 1**</ins> 집합 $$X$$와 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)의 두 조건 중 하나를 만족하는 부분집합들의 family $$(A_i)$$가 주어졌다 하자. 만일 연속함수들의 family $$(f_i: A_i \rightarrow Y)$$가 다음 조건
+<ins id="lem1">**보조정리 1**</ins> 집합 $$X$$와 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)의 두 조건 중 하나를 만족하는 부분집합들의 family $$(A_i)$$가 주어졌다 하자. 만일 연속함수들의 family $$(f_i: A_i \rightarrow Y)$$가 다음 조건
 
 $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
@@ -35,7 +35,7 @@ $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 함수 $$f$$는 [\[집합론\] §집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2)에 의해 얻어진다. 이 함수가 연속이라는 것은 [§부분공간, ⁋명제 8](/ko/math/topology/subspaces#prop8)에서 얻어진다.
+우선 함수 $$f$$는 [\[집합론\] §집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2)에 의해 얻어진다. 이 함수가 연속이라는 것은 [§부분공간, ⁋명제 7](/ko/math/topology/subspaces#prop7)에서 얻어진다.
 
 </details>
 

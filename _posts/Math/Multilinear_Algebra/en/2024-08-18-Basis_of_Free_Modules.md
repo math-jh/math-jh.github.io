@@ -112,7 +112,7 @@ and each of the $$x_i$$ is a free element. On the other hand, since $$\phi^\ast:
 
 $$\phi^\ast M\cong\phi^\ast\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{i\in I}\phi^\ast Ax_i$$
 
-holds. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6)) Moreover, from the fact that $$x_i$$ is a free element we have $$Ax_i\cong A$$, and since $$\phi^\ast A\cong \mathbb{K}$$, we obtain $$\phi^\ast M\cong \bigoplus_{i\in I}\mathbb{K}$$. Now applying [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2) gives the desired result.
+holds. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 7](/en/math/algebraic_structures/change_of_base_ring#prop7)) Moreover, from the fact that $$x_i$$ is a free element we have $$Ax_i\cong A$$, and since $$\phi^\ast A\cong \mathbb{K}$$, we obtain $$\phi^\ast M\cong \bigoplus_{i\in I}\mathbb{K}$$. Now applying [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2) gives the desired result.
 
 </details>
 

@@ -118,7 +118,7 @@ $$\im(d_n)=\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})=\ker(\epsilon_{n-1})
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-어렵지 않게 right adjoint는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $$\mathbb{Z}\rightarrow A$$로부터 얻어지는 coextension of scalar $$\Ab \rightarrow \lMod{A}$$는 restriction of scalar의 right adjoint이므로 $$\Ab$$의 injective object는 $$\lMod{A}$$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 따라서 원하는 증명은 $$\Ab$$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $$A\in\Ab$$에 대하여,
+어렵지 않게 right adjoint는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $$\mathbb{Z}\rightarrow A$$로부터 얻어지는 coextension of scalar $$\Ab \rightarrow \lMod{A}$$는 restriction of scalar의 right adjoint이므로 $$\Ab$$의 injective object는 $$\lMod{A}$$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7)) 따라서 원하는 증명은 $$\Ab$$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $$A\in\Ab$$에 대하여,
 
 $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 

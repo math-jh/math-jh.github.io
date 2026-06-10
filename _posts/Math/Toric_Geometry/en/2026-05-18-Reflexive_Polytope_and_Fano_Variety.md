@@ -221,7 +221,7 @@ Therefore the only kind of resolution that *preserves* the Calabi-Yau property i
 
 <ins id="def8">**Definition 8**</ins> A resolution of singularities $$\pi: \tilde{X} \to X$$ of a normal Gorenstein variety $$X$$ — that is, $$\tilde{X}$$ is smooth and $$\pi$$ is a proper birational morphism — satisfying
 
-$$K_{\tilde{X}} = \pi^* K_X$$
+$$K_{\tilde{X}} = \pi^\ast K_X$$
 
 is called a *crepant resolution*.
 

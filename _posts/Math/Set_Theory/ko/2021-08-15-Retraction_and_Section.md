@@ -17,7 +17,7 @@ weight: 7
 
 ---
 
-앞선 글의 말미는 단사함수와 전사함수의 새로운 정의를 내릴 수 있도록 해 준다. ([§함수들 사이의 연산, ⁋참고](/ko/math/set_theory/operation_of_functions#rmk1))
+앞선 글의 말미는 단사함수와 전사함수의 새로운 정의를 내릴 수 있도록 해 준다. ([§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6))
 
 <div class="proposition" markdown="1">
 
@@ -63,11 +63,11 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 $$X\subseteq f^{-1}(f(X)),\qquad f(f^{-1}(Y))\subseteq Y$$
 
-가 성립하며 그 증명 또한 자명하다. 만일 $$f$$가 단사라면, [§함수들 사이의 연산, ⁋참고](/ko/math/set_theory/operation_of_functions#rmk1)와 같이 정의된 $$r$$에 대하여
+가 성립하며 그 증명 또한 자명하다. 만일 $$f$$가 단사라면, [§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6)와 같이 정의된 $$r$$에 대하여
 
 $$f^{-1}(f(X))=r(f(X))=\id_A(X)=X$$
 
-이고, 만일 $$f$$가 전사라면 마찬가지로 [§함수들 사이의 연산, ⁋참고](/ko/math/set_theory/operation_of_functions#rmk1)와 같이 정의된 $$s$$에 대하여
+이고, 만일 $$f$$가 전사라면 마찬가지로 [§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6)와 같이 정의된 $$s$$에 대하여
 
 $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 

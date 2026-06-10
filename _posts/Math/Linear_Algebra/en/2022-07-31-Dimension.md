@@ -143,7 +143,7 @@ if $$\alpha_v\neq 0$$, moving $$\alpha_vv$$ to the other side and multiplying by
 
 If $$\langle S\rangle_1=V$$, the proof is complete; otherwise, we define $$S_2=S_1\cup\{v'\}$$ in the same manner and repeat. We must verify that $$S_2$$ is linearly independent, but since $$v'$$ was chosen from $$V\setminus\langle S\rangle_1$$, this follows by exactly the same argument as above. 
 
-By the preceding [Lemma 3](#lem3), this process terminates in at most $$\dim V$$ steps, and upon termination we obtain the desired basis $$S_n$$.
+By the preceding [Lemma 2](#lem2), this process terminates in at most $$\dim V$$ steps, and upon termination we obtain the desired basis $$S_n$$.
 
 </details>
 
@@ -201,6 +201,7 @@ $$\dim(W_1+W_2)=\dim W_1+\dim W_2-\dim(W_1\cap W_2)$$
 
 holds.
 
+</div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
@@ -234,7 +235,6 @@ $$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\r
 
 </details>
 
-</div>
 
 ---
 

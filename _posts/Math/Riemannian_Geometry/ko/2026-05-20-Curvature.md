@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§레비-치비타 접속, §§평행 운반](/ko/math/riemannian_geometry/Levi-Civita_connection#def7)에서 우리는 Riemannian manifold $$(M, g)$$ 위에서 곡선 $$\gamma$$를 따라 vector를 *상수처럼* 옮기는 parallel transport $$P_\gamma$$를 정의했다. 그러나 일반적으로 같은 두 점 $$p, q$$ 사이를 잇는 두 곡선 $$\gamma_1, \gamma_2$$에 대해 $$P_{\gamma_1} \ne P_{\gamma_2}$$일 수 있다. 즉 어떤 길을 따라 vector를 옮기느냐에 따라 도착한 vector가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *Riemann 곡률 텐서*이다.
+[§레비-치비타 접속, §§평행 운반 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)에서 우리는 Riemannian manifold $$(M, g)$$ 위에서 곡선 $$\gamma$$를 따라 vector를 *상수처럼* 옮기는 parallel transport $$P_\gamma$$를 정의했다. 그러나 일반적으로 같은 두 점 $$p, q$$ 사이를 잇는 두 곡선 $$\gamma_1, \gamma_2$$에 대해 $$P_{\gamma_1} \ne P_{\gamma_2}$$일 수 있다. 즉 어떤 길을 따라 vector를 옮기느냐에 따라 도착한 vector가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *Riemann 곡률 텐서*이다.
 
 ## 평행 운반의 path-dependence
 

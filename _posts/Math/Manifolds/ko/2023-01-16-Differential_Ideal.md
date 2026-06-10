@@ -111,7 +111,7 @@ $$\Omega^\ast(M)$$는 differential graded algebra이므로, ideal들 또한 diff
 
     으로 생성되는 ideal이 differential ideal이라 가정하자. 그럼 임의의 $$q_0\in N,p_0\in M$$이 주어질 때마다, $$q_0$$의 적당한 열린근방 $$U$$와, $$f(q_0)=p_0$$을 만족하는 $$C^\infty$$ 함수 $$f:U\rightarrow M$$이 존재하여
 
-    $$(df)^\ast(\omega_i)=\alpha_i|_U$$
+    $$(df)^\ast(\omega_i)=\alpha_i\vert_U$$
 
     가 성립하도록 할 수 있다.
 

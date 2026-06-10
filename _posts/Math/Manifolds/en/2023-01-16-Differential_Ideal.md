@@ -109,7 +109,7 @@ The following theorem is an important tool for exploring the relationship betwee
 
     is a differential ideal. Then for any $$q_0\in N$$ and $$p_0\in M$$, there exist a suitable open neighborhood $$U$$ of $$q_0$$ and a $$C^\infty$$ function $$f:U\rightarrow M$$ with $$f(q_0)=p_0$$ such that
 
-    $$(df)^\ast(\omega_i)=\alpha_i|_U$$
+    $$(df)^\ast(\omega_i)=\alpha_i\vert_U$$
 
     holds.
 

@@ -213,11 +213,11 @@ Graded ring에서 핵심적인 관찰은 irrelevant ideal $$\mathfrak{m} = \bigo
 
 $$\mathfrak{p}$$가 prime ideal이고 $$\mathfrak{m} \subseteq \mathfrak{p}$$라 하자. $$\mathfrak{p}$$의 *homogenization* 
 
-$$\mathfrak{p}^* = \{x \in \mathfrak{p} \mid x \text{ homogeneous}\}$$
+$$\mathfrak{p}^\ast = \{x \in \mathfrak{p} \mid x \text{ homogeneous}\}$$
 
-를 생각하자. 이것이 graded prime ideal이 되는 것은 정의에 의해 바로 보일 수 있다. 핵심은  $$\mathfrak{p} = \mathfrak{p}^*$$라는 것이다. 우선 $$\mathfrak{m} \subseteq \mathfrak{p}^* \subseteq \mathfrak{p}$$임은 자명하므로, $$x \in \mathfrak{p}$$를 가정하고 $$x\in \mathfrak{p}^\ast$$임을 보이자. 
+를 생각하자. 이것이 graded prime ideal이 되는 것은 정의에 의해 바로 보일 수 있다. 핵심은  $$\mathfrak{p} = \mathfrak{p}^\ast$$라는 것이다. 우선 $$\mathfrak{m} \subseteq \mathfrak{p}^\ast \subseteq \mathfrak{p}$$임은 자명하므로, $$x \in \mathfrak{p}$$를 가정하고 $$x\in \mathfrak{p}^\ast$$임을 보이자. 
 
-$$x$$를 homogeneous decomposition $$x = \sum_{d} x_d$$로 쓰자. $$x_+ = \sum_{d > 0} x_d \in \mathfrak{m} \subseteq \mathfrak{p}$$이므로, $$x_0 = x - x_+ \in \mathfrak{p}$$이다. 이제 $$x' = x - x_0 = x_+ \in \mathfrak{p}$$이고, 같은 방식으로 $$x_1 \in \mathfrak{p}$$임을 보일 수 있다. 귀납적으로 각 $$x_d \in \mathfrak{p}$$이고, 따라서 $$x \in \mathfrak{p}^*$$이다.
+$$x$$를 homogeneous decomposition $$x = \sum_{d} x_d$$로 쓰자. $$x_+ = \sum_{d > 0} x_d \in \mathfrak{m} \subseteq \mathfrak{p}$$이므로, $$x_0 = x - x_+ \in \mathfrak{p}$$이다. 이제 $$x' = x - x_0 = x_+ \in \mathfrak{p}$$이고, 같은 방식으로 $$x_1 \in \mathfrak{p}$$임을 보일 수 있다. 귀납적으로 각 $$x_d \in \mathfrak{p}$$이고, 따라서 $$x \in \mathfrak{p}^\ast$$이다.
 
 </details>
 
@@ -225,7 +225,7 @@ $$x$$를 homogeneous decomposition $$x = \sum_{d} x_d$$로 쓰자. $$x_+ = \sum_
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11 (Graded prime ideal로 refinement)**</ins> Graded ring $$R$$의 임의의 prime ideal chain은 homogeneous prime ideal chain으로 refine할 수 있다. 즉, prime ideal chain $$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s$$에 대하여, homogeneous prime ideal chain $$\mathfrak{p}_0^* \supsetneq \mathfrak{p}_1^* \supsetneq \cdots \supsetneq \mathfrak{p}_s^*$$가 존재한다.
+<ins id="prop11">**명제 11 (Graded prime ideal로 refinement)**</ins> Graded ring $$R$$의 임의의 prime ideal chain은 homogeneous prime ideal chain으로 refine할 수 있다. 즉, prime ideal chain $$\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s$$에 대하여, homogeneous prime ideal chain $$\mathfrak{p}_0^\ast \supsetneq \mathfrak{p}_1^\ast \supsetneq \cdots \supsetneq \mathfrak{p}_s^\ast$$가 존재한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -233,13 +233,13 @@ $$x$$를 homogeneous decomposition $$x = \sum_{d} x_d$$로 쓰자. $$x_+ = \sum_
 
 Prime ideal chain $$\mathfrak{p}_0 \supsetneq \mathfrak{p}_1 \supsetneq \cdots \supsetneq \mathfrak{p}_s$$을 생각하자. 각 $$\mathfrak{p}_i$$에 대하여 그 homogeneous element들로 생성된 ideal
 
-$$\mathfrak{p}_i^* = \langle f \in \mathfrak{p}_i : f \text{는 homogeneous} \rangle$$
+$$\mathfrak{p}_i^\ast = \langle f \in \mathfrak{p}_i : f \text{는 homogeneous} \rangle$$
 
-을 정의하자. 각 $$\mathfrak{p}_i^*$$는 homogeneous prime ideal이다. 또한 $$\mathfrak{p}_i \supsetneq \mathfrak{p}_{i+1}$$이면 $$\mathfrak{p}_i^* \supseteq \mathfrak{p}_{i+1}^*$$이다.
+을 정의하자. 각 $$\mathfrak{p}_i^\ast$$는 homogeneous prime ideal이다. 또한 $$\mathfrak{p}_i \supsetneq \mathfrak{p}_{i+1}$$이면 $$\mathfrak{p}_i^\ast \supseteq \mathfrak{p}_{i+1}^\ast$$이다.
 
-이제 $$\mathfrak{p}_i^* \supseteq \mathfrak{p}_{i+1}^*$$가 strict inclusion임을 보이자. $$\mathfrak{p}_i \supsetneq \mathfrak{p}_{i+1}$$이므로 $$\mathfrak{p}_i \setminus \mathfrak{p}_{i+1}$$에 속하는 원소 $$f$$가 존재한다. $$f$$를 homogeneous component들의 합 $$f = f_{d_1} + \cdots + f_{d_k}$$로 쓰면, 각 $$f_{d_j}$$ 중 적어도 하나는 $$\mathfrak{p}_{i+1}$$에 속하지 않는다 (그렇지 않으면 $$f \in \mathfrak{p}_{i+1}$$). 따라서 이 $$f_{d_j} \in \mathfrak{p}_i^* \setminus \mathfrak{p}_{i+1}^*$$이다.
+이제 $$\mathfrak{p}_i^\ast \supseteq \mathfrak{p}_{i+1}^\ast$$가 strict inclusion임을 보이자. $$\mathfrak{p}_i \supsetneq \mathfrak{p}_{i+1}$$이므로 $$\mathfrak{p}_i \setminus \mathfrak{p}_{i+1}$$에 속하는 원소 $$f$$가 존재한다. $$f$$를 homogeneous component들의 합 $$f = f_{d_1} + \cdots + f_{d_k}$$로 쓰면, 각 $$f_{d_j}$$ 중 적어도 하나는 $$\mathfrak{p}_{i+1}$$에 속하지 않는다 (그렇지 않으면 $$f \in \mathfrak{p}_{i+1}$$). 따라서 이 $$f_{d_j} \in \mathfrak{p}_i^\ast \setminus \mathfrak{p}_{i+1}^\ast$$이다.
 
-결론적으로 $$\mathfrak{p}_0^* \supsetneq \mathfrak{p}_1^* \supsetneq \cdots \supsetneq \mathfrak{p}_s^*$$는 homogeneous prime ideal chain이다.
+결론적으로 $$\mathfrak{p}_0^\ast \supsetneq \mathfrak{p}_1^\ast \supsetneq \cdots \supsetneq \mathfrak{p}_s^\ast$$는 homogeneous prime ideal chain이다.
 
 </details>
 

@@ -19,7 +19,7 @@ last_polished_at: 2026-05-31T22:30:05+00:00
 ---
 In mathematics, after defining certain objects we usually proceed to group and classify them according to whether they are <em>the same</em>. For example, when dealing with sets, two sets $$A,B$$ of the same size are regarded as the same, which by definition means there exists a bijection between $$A$$ and $$B$$.
 
-Of course, we cannot simply carry this over to vector spaces. If we were to regard two vector spaces of the same set-theoretic size as the same, then by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Corollary 15](/en/math/set_theory/natural_numbers#cor15), all finite-dimensional vector spaces over an infinite field $$\mathbb{K}$$ would have to be regarded as identical. Moreover, since functions in general do not preserve the addition and scalar multiplication of a vector space, this is clearly unsuitable for studying vector spaces.
+Of course, we cannot simply carry this over to vector spaces. If we were to regard two vector spaces of the same set-theoretic size as the same, then by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Corollary 16](/en/math/set_theory/natural_numbers#cor16), all finite-dimensional vector spaces over an infinite field $$\mathbb{K}$$ would have to be regarded as identical. Moreover, since functions in general do not preserve the addition and scalar multiplication of a vector space, this is clearly unsuitable for studying vector spaces.
 
 ## Isomorphic Vector Spaces
 

@@ -36,7 +36,7 @@ In particular, a section $$X$$ of the tangent bundle $$\pi:TM\rightarrow M$$ is 
 1. $$X$$ is $$C^\infty$$.
 2. For any coordinate system $$(U,\varphi)$$, $$\varphi=(x^i)_{i=1}^m$$, the functions $$a^i:U\rightarrow\mathbb{R}$$ defined by the formula
 
-    $$(X|_U)_p=\sum_{i=1}^m a^i(p)\frac{\partial}{\partial x^i}\bigg|_p$$
+    $$(X\vert_U)_p=\sum_{i=1}^m a^i(p)\frac{\partial}{\partial x^i}\bigg\vert_p$$
 
     are all $$C^\infty$$ on $$U$$.
 3. For any open set $$V\subseteq M$$ and any $$C^\infty$$ function $$f:V\rightarrow\mathbb{R}$$, the function $$X(f)$$ is also $$C^\infty$$.
@@ -47,23 +47,23 @@ In particular, a section $$X$$ of the tangent bundle $$\pi:TM\rightarrow M$$ is 
 
 First, if $$X$$ is $$C^\infty$$, then clearly $$X\vert_U$$ is $$C^\infty$$. Meanwhile, as functions on $$TM$$, the $$dx^i$$ are component functions of the coordinate system $$\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$$, so they are likewise $$C^\infty$$, and therefore their composition
 
-$$a^i(p)=dx^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg|_p\right)=dx^i|_p\circ(X|_U)_p$$
+$$a^i(p)=dx^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg\vert_p\right)=dx^i\vert_p\circ(X\vert_U)_p$$
 
 is also obviously $$C^\infty$$.
 
 Assume condition 2 holds. To show that $$X(f)$$ is $$C^\infty$$ at any $$p\in V$$, it suffices to show that $$X(f)$$ is $$C^\infty$$ at $$p$$ for some coordinate system $$(U,\varphi)$$ containing $$p$$. By condition 2,
 
-$$(X|_U)_pf=\sum_{i=1}^m a^i(p)\frac{\partial f}{\partial x^i}(p)$$
+$$(X\vert_U)_pf=\sum_{i=1}^m a^i(p)\frac{\partial f}{\partial x^i}(p)$$
 
 and the right-hand side is a $$C^\infty$$ function on $$U$$, so $$X(f)$$ is $$C^\infty$$.
 
 Finally, assume condition 3 and show 1. To show that $$X:M\rightarrow TM$$ is $$C^\infty$$, it suffices to show that for any coordinate system $$(U,\varphi)$$, the map $$X\circ\varphi^{-1}$$ is a $$C^\infty$$ map from $$\varphi(U)$$ to $$TM$$; considering the coordinate system on $$TM$$, this amounts to showing that the functions
 
-$$x^i\circ\pi\circ (X|_U),\quad dx^i\circ(X|_U)$$
+$$x^i\circ\pi\circ (X\vert_U),\quad dx^i\circ(X\vert_U)$$
 
 are $$C^\infty$$. But direct computation gives
 
-$$x^i\circ\pi\circ (X|_U)=x^i\circ\id_U=x^i,\qquad dx^i\circ(X|_U)=X(x^i)$$
+$$x^i\circ\pi\circ (X\vert_U)=x^i\circ\id_U=x^i,\qquad dx^i\circ(X\vert_U)=X(x^i)$$
 
 so they are all $$C^\infty$$.
 

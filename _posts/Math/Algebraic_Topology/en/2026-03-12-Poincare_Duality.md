@@ -388,7 +388,7 @@ $$C_\bullet(M,\mathscr{L})=\bigoplus_{\sigma:\Delta^k\rightarrow M}\mathscr{L}_{
 
 Although $$\mathscr{L}_x\cong L$$ for each $$x$$, the essential feature of this definition is that the copies of $$L$$ at different points may differ by nontrivial automorphisms. The differential of this chain complex is defined, for a singular $$k$$-simplex $$\sigma:\Delta^k \rightarrow M$$ and coefficient $$a\in \mathscr{L}_{\sigma(e_0)}$$, by
 
-$$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^k\mathscr{L}_{\sigma_k}(a) (\sigma|_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
+$$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^k\mathscr{L}_{\sigma_k}(a) (\sigma\vert_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
 
 Here $$\mathscr{L}_{\sigma_k}$$ is obtained by applying the functor $$\Pi_1(M) \rightarrow \Ab$$ to the path in $$M$$ given by the edge joining the first vertex $$\sigma(e_0)$$ of the original simplex to the first vertex of the $$i$$-th face. In favorable situations such as ours, one may instead use the universal cover $$\widetilde{M}$$, the monodromy action (i.e. Deck transformations) upon it, and the monodromy representation $$\pi_1(X)\rightarrow \Aut(A)$$ to form the chain complex
 
@@ -424,7 +424,7 @@ Intuitively, this repeatedly isolates in successive quotients whatever prevents 
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**Definition 14**</ins> For a topological space $$X$$ and a sheaf $$\mathscr{F}$$ on it, the $$k$$-th cohomology of the complex of global sections of the Godement resolution
+<ins id="def15">**Definition 15**</ins> For a topological space $$X$$ and a sheaf $$\mathscr{F}$$ on it, the $$k$$-th cohomology of the complex of global sections of the Godement resolution
 
 $$0 \rightarrow \mathscr{F}(X)\rightarrow \mathscr{G}_0(X)\rightarrow \mathscr{G}_1(X)\rightarrow \cdots$$
 
@@ -436,7 +436,7 @@ and is called the *sheaf cohomology* of $$X$$ with coefficients in $$\mathscr{F}
 
 </div>
 
-Further details can be found in [\[Algebraic Geometry\] §Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_geometry/sheaf_cohomology#def1). Poincaré duality now generalizes to the isomorphism
+Further details can be found in [\[Algebraic Geometry\] §Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1). Poincaré duality now generalizes to the isomorphism
 
 $$H^k(M;\mathscr{L})\cong H_{m-k}(M;\or_M^A\otimes \mathscr{L})$$
 
@@ -458,7 +458,7 @@ To make this statement rigorous would require at least as much effort as we have
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**Example 15**</ins> Consider the torus $$T^2=S^1\times S^1$$. By the Künneth formula, the cohomology of $$T^2$$ is
+<ins id="ex16">**Example 16**</ins> Consider the torus $$T^2=S^1\times S^1$$. By the Künneth formula, the cohomology of $$T^2$$ is
 
 $$H^0(T^2;\mathbb{Z})\cong \mathbb{Z}, \quad H^1(T^2;\mathbb{Z})\cong \mathbb{Z}^2,\quad H^2(T^2;\mathbb{Z})$$
 

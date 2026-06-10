@@ -153,7 +153,7 @@ $$b_k=\sup_{i\in J_k} x_i$$라 적자. 우선 $$(x_i)_{i\in I}$$가 supremum을 
 
 <div class="remark" markdown="1">
 
-<ins id="rmk4">**참고**</ins>  Ordered set $$A$$와 $$X'\subseteq X\subseteq A$$에 대해서, $$\sup_AX'$$와 $$\sup_XX'$$ 중 하나만 존재할 수도 있고, 둘 다 존재하지만 값이 다를 수도 있다. 예컨대 $$X'=\{x\in\mathbb{Q}\mid x < \sqrt{2}\}$$를 각각의 집합들에서 비교해보자. 
+**참고**</ins>  Ordered set $$A$$와 $$X'\subseteq X\subseteq A$$에 대해서, $$\sup_AX'$$와 $$\sup_XX'$$ 중 하나만 존재할 수도 있고, 둘 다 존재하지만 값이 다를 수도 있다. 예컨대 $$X'=\{x\in\mathbb{Q}\mid x < \sqrt{2}\}$$를 각각의 집합들에서 비교해보자. 
 
 1. $$X_1=\mathbb{Q}$$의 부분집합으로써, 이 집합의 supremum은 존재하지 않으나 $$A=\mathbb{R}$$에서는 존재한다. 즉 $$\sup_AX'$$가 존재하더라도 $$\sup_{X_1}X'$$는 존재하지 않을 수도 있다.
 2. 한편 집합 $$X_2=X'\cup \left\{2\right\}$$를 생각하자. 그럼 $$X'\subseteq X_2\subseteq X_1$$이고 $$\sup_{X_2}X'=2$$이지만 $$\sup_{X_1}X'$$는 존재하지 않는다.

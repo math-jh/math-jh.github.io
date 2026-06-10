@@ -89,7 +89,7 @@ Since $$d_{E'/A'}\circ \phi$$ is an $$A$$-derivation, this is immediate from [Le
 
 </details>
 
-On the other hand, since $$\Omega_{E'/A'}$$ is an $$E'$$-module, by [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 5](/en/math/algebraic_structures/change_of_base_ring#prop5) we have
+On the other hand, since $$\Omega_{E'/A'}$$ is an $$E'$$-module, by [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) we have
 
 $$\Hom_{E'}(\varphi_! \Omega_{E/A},\Omega_{E'/A'})\cong\Hom_E(\Omega_{E/A}, \varphi^\ast\Omega_{E'/A'}).$$
 

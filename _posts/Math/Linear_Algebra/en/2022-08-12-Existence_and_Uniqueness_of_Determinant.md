@@ -110,7 +110,7 @@ In general, when $$n$$ is large, directly computing the determinant using this f
 
 <div class="proposition" markdown="1">
 
-<ins id="cor4">**Corollary 4**</ins> For any matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det(A^t)=\det A$$ holds.
+<ins id="cor3">**Corollary 3**</ins> For any matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det(A^t)=\det A$$ holds.
 
 </div>
 <details class="proof" markdown="1">
@@ -128,7 +128,7 @@ Also, from the above formula we can see that the determinant preserves multiplic
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**Lemma 5**</ins> For any matrices $$A,B\in\Mat_n(\mathbb{K})$$, $$\det(AB)=\det(A)\det(B)$$ holds.
+<ins id="lem4">**Lemma 4**</ins> For any matrices $$A,B\in\Mat_n(\mathbb{K})$$, $$\det(AB)=\det(A)\det(B)$$ holds.
 
 </div>
 <details class="proof" markdown="1">
@@ -154,11 +154,11 @@ thus completing the proof.
 
 </details>
 
-In the previous post we explained geometrically that a matrix $$A$$ is invertible if and only if $$\det A\neq 0$$. Using [Lemma 5](#lem5) above, we can prove this rigorously.
+In the previous post we explained geometrically that a matrix $$A$$ is invertible if and only if $$\det A\neq 0$$. Using [Lemma 4](#lem4) above, we can prove this rigorously.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> For any matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det A\neq 0$$ is equivalent to $$A$$ being invertible.
+<ins id="prop5">**Proposition 5**</ins> For any matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det A\neq 0$$ is equivalent to $$A$$ being invertible.
 
 </div>
 <details class="proof" markdown="1">
@@ -178,7 +178,7 @@ From equation (3) appearing in the proof of the above proposition, we obtain the
 
 <div class="proposition" markdown="1">
 
-<ins id="cor7">**Corollary 7**</ins> For an invertible matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det(A^{-1})=(\det A)^{-1}$$ holds.
+<ins id="cor6">**Corollary 6**</ins> For an invertible matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det(A^{-1})=(\det A)^{-1}$$ holds.
 
 </div>
 
@@ -188,7 +188,7 @@ The formula examined above is inefficient because it requires computing $$n!$$ t
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**Definition 8**</ins> A matrix $$A\in\Mat_n(\mathbb{K})$$ is called an *upper triangular matrix* if $$A_{ij}=0$$ whenever $$i>j$$. Similarly, if $$A_{ij}=0$$ whenever $$i < j$$, then $$A$$ is called a *lower triangular matrix*, and upper and lower triangular matrices are collectively called simply *triangular matrices*.
+<ins id="def7">**Definition 7**</ins> A matrix $$A\in\Mat_n(\mathbb{K})$$ is called an *upper triangular matrix* if $$A_{ij}=0$$ whenever $$i>j$$. Similarly, if $$A_{ij}=0$$ whenever $$i < j$$, then $$A$$ is called a *lower triangular matrix*, and upper and lower triangular matrices are collectively called simply *triangular matrices*.
 
 On the other hand, the entries $$A_{ii}$$ of a matrix $$A$$ are called the *diagonal entries*, and if $$A_{ij}=0$$ whenever $$i\neq j$$, then $$A$$ is called a *diagonal matrix*.
 
@@ -199,7 +199,7 @@ In particular, every $$n\times n$$ row echelon matrix is an upper triangular mat
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**Proposition 9**</ins> For any triangular matrix $$A$$, $$\det(A)$$ equals the product of the diagonal entries.
+<ins id="prop8">**Proposition 8**</ins> For any triangular matrix $$A$$, $$\det(A)$$ equals the product of the diagonal entries.
 
 </div>
 <details class="proof" markdown="1">
@@ -233,7 +233,7 @@ On the other hand, using formula (2) for the determinant, we can also find the d
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**Proposition 10**</ins> Let $$A\in\Mat_k(\mathbb{K})$$ and let $$I$$ be the $$l\times l$$ identity matrix. Then the determinant of the block matrix
+<ins id="prop9">**Proposition 9**</ins> Let $$A\in\Mat_k(\mathbb{K})$$ and let $$I$$ be the $$l\times l$$ identity matrix. Then the determinant of the block matrix
 
 $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 
@@ -243,7 +243,7 @@ equals $$\det A$$.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-This is almost identical to the proof of [Proposition 9](#prop9). Computing the determinant of the given matrix using formula (2), we get
+This is almost identical to the proof of [Proposition 8](#prop8). Computing the determinant of the given matrix using formula (2), we get
 
 $$\det \begin{pmatrix}A&O\\O&I\end{pmatrix}=\sum_{\tau\in S_{k+l}}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(k)k}B_{\tau(k+1)(k+1)}\cdots B_{\tau(k+l)(k+l)}$$
 
@@ -257,7 +257,7 @@ the terms summed on the right-hand side are always 0, so we only need to sum ove
 
 <div class="proposition" markdown="1">
 
-<ins id="cor11">**Corollary 11**</ins> For $$A\in\Mat_k(\mathbb{K}),B\in\Mat_l(\mathbb{K}), C\in\Mat_{l\times k}(\mathbb{K})$$, the determinant of the block matrix
+<ins id="cor10">**Corollary 10**</ins> For $$A\in\Mat_k(\mathbb{K}),B\in\Mat_l(\mathbb{K}), C\in\Mat_{l\times k}(\mathbb{K})$$, the determinant of the block matrix
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 
@@ -271,7 +271,7 @@ This follows immediately from the formula
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&E\end{pmatrix}\begin{pmatrix}I&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
 
-and [Proposition 10](#prop10), and [Lemma 5](#lem5). For the last matrix, after $$l$$ row swaps and $$l$$ column swaps, there are $$2l$$ sign changes, so the determinant of the given matrix becomes equal to $$\det B$$.
+and [Proposition 9](#prop9), and [Lemma 4](#lem4). For the last matrix, after $$l$$ row swaps and $$l$$ column swaps, there are $$2l$$ sign changes, so the determinant of the given matrix becomes equal to $$\det B$$.
 
 </details>
 
@@ -292,7 +292,7 @@ When an $$n\times n$$ square matrix $$A$$ is given, one of the easiest ways to f
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**Definition 12**</ins> Let a matrix $$A\in\Mat_n(\mathbb{K})$$ be given. For $$1\leq i,j\leq n$$, $$A^{(i,j)}$$ is the $$(n-1)\times (n-1)$$ square matrix obtained by deleting the $$i$$-th row and $$j$$-th column of $$A$$.
+<ins id="def11">**Definition 11**</ins> Let a matrix $$A\in\Mat_n(\mathbb{K})$$ be given. For $$1\leq i,j\leq n$$, $$A^{(i,j)}$$ is the $$(n-1)\times (n-1)$$ square matrix obtained by deleting the $$i$$-th row and $$j$$-th column of $$A$$.
 
 </div>
 
@@ -300,7 +300,7 @@ The Laplace expansion expresses the determinant of $$A$$ as a formula in terms o
 
 <div class="proposition" markdown="1">
 
-<ins id="thm13">**Theorem 13**</ins> For any matrix $$A\in\Mat_n(\mathbb{K})$$ and any $$1\leq i\leq n$$, the following formula holds:
+<ins id="thm12">**Theorem 12**</ins> For any matrix $$A\in\Mat_n(\mathbb{K})$$ and any $$1\leq i\leq n$$, the following formula holds:
 
 $$\det A=\sum_{j=1}^n(-1)^{i+j}A_{ij}\det (A^{(i,j)})$$
 
@@ -312,7 +312,7 @@ First fix $$i,j$$. Let $$B_j$$ be the matrix obtained from $$A$$ by replacing al
 
 $$B_j'=\begin{pmatrix}A_{ij}&0&\cdots&0\\A_{1j}&&&\\\vdots&&A^{(i,j)}&\\A_{nj}&&&\end{pmatrix}$$
 
-Now by [Proposition 10](#prop10), the determinant of this matrix equals $$A_{ij}\det A^{(i,j)}$$, and therefore
+Now by [Proposition 9](#prop9), the determinant of this matrix equals $$A_{ij}\det A^{(i,j)}$$, and therefore
 
 $$\det B_j=(-1)^{i+j-2}\det B_j'=(-1)^{i+j-2}A_{ij}\det A^{(i,j)}=(-1)^{i+j}A_{ij}\det A^{(i,j)}$$
 

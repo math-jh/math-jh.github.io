@@ -37,7 +37,7 @@ weight: 10
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$A$$가 locally closed라 하고, 임의의 $$x\in A$$에 대하여 [정의 1](#def1)의 조건을 만족하는 $$X$$에서의 $$x$$의 열린근방을 $$V_x$$라 하자. 그럼 $$U=\bigcup_{x\in A} V_x$$는 열린집합이다. 또, [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)을 적용하면 $$A$$는 $$U$$에서 닫힌집합임을 안다. 따라서 $$X$$의 적당한 닫힌집합 $$C$$에 대하여 $$A=U\cap C$$이므로 둘째 조건이 성립한다.
+우선 $$A$$가 locally closed라 하고, 임의의 $$x\in A$$에 대하여 [정의 1](#def1)의 조건을 만족하는 $$X$$에서의 $$x$$의 열린근방을 $$V_x$$라 하자. 그럼 $$U=\bigcup_{x\in A} V_x$$는 열린집합이다. 또, [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)을 적용하면 $$A$$는 $$U$$에서 닫힌집합임을 안다. 따라서 $$X$$의 적당한 닫힌집합 $$C$$에 대하여 $$A=U\cap C$$이므로 둘째 조건이 성립한다.
 
 이제 $$X$$의 열린집합 $$U$$와 닫힌집합 $$C$$에 대하여 $$A=U\cap C$$가 성립한다고 가정하자. 그럼 $$\cl A\subseteq C$$이므로,
 
@@ -119,7 +119,7 @@ $$(p\circ s)\circ\bar{f}=\id_{X/R}$$
 
 이제 위상공간 $$X$$와 부분집합 $$A$$, $$X$$ 위에 주어진 동치관계 $$R$$을 생각하자. $$p:X\rightarrow X/R$$을 canonical projection이라 하면, $$p\vert_A:A\rightarrow X/R$$의 canonical decomposition
 
-$$A\overset{q}{\longrightarrow}A/(R|_A)\overset{\overline{(p|_A)}}{\longrightarrow} f(A)\overset{j}{\longrightarrow}X/R$$
+$$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\longrightarrow} f(A)\overset{j}{\longrightarrow}X/R$$
 
 이 정의되며 위와 동일한 논증에 의해 $$\overline{(p\vert_A)}$$는 연속인 bijection이 된다. 다음 명제 또한 거의 자명하다.
 

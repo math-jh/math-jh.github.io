@@ -257,7 +257,7 @@ $$D=g\circ d_{\S(M)/A}$$
 
 이 성립하도록 하는 $$A$$-linear map $$g:\Omega_{\S(M)/A}\rightarrow N$$이 유일하게 존재한다. 
 
-한편, 우리는 임의의 $$A$$-derivation $$D:\S(M)\rightarrow L$$이 주어졌을 때, 이를 $$M$$으로 제한한 $$D\vert_M$$이 $$M$$에서 $$L$$로의 $$A$$-module homomorphism이며, 이 대응 $$D\mapsto D\vert_M$$이 실은 $$\S(M)$$-module isomorphism이라는 것을 [명제 5](#prop5)를 통해 확인할 수 있다. 한편 $$L$$은 $$\S(M)$$-module이므로 [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)에 의하여 
+한편, 우리는 임의의 $$A$$-derivation $$D:\S(M)\rightarrow L$$이 주어졌을 때, 이를 $$M$$으로 제한한 $$D\vert_M$$이 $$M$$에서 $$L$$로의 $$A$$-module homomorphism이며, 이 대응 $$D\mapsto D\vert_M$$이 실은 $$\S(M)$$-module isomorphism이라는 것을 [명제 5](#prop5)를 통해 확인할 수 있다. 한편 $$L$$은 $$\S(M)$$-module이므로 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)에 의하여 
 
 $$\Hom_{\S(M)}(M\otimes_A\S(M),L)\cong\Hom_A(M,L)$$
 
@@ -305,7 +305,7 @@ $$\nu: \Omega_{E/A} \rightarrow \Omega_{E'/A'}$$
 
 이로부터 $$\Omega$$를 $$A$$-algebra $$A \rightarrow E$$를 받아 그 differential들의 module $$\Omega_A(E)$$를 내놓는 대응으로 본다면, $$\Omega$$는 functoriality 또한 갖는다는 것을 안다. 
 
-한편 $$\Omega_{A'}(E')$$는 $$A'$$-module이므로, [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)에 의하여 우리는 [명제 11](#prop11)로부터 다음의 $$A'$$-linear map
+한편 $$\Omega_{A'}(E')$$는 $$A'$$-module이므로, [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)에 의하여 우리는 [명제 11](#prop11)로부터 다음의 $$A'$$-linear map
 
 $$\Omega_0(u):\Omega_A(E)\otimes_E E'\rightarrow\Omega_{A'}(E')$$
 
@@ -319,7 +319,7 @@ $$\Hom_E(\Omega_A(E), M)\cong\Der_A(E, M)$$
 
 ![change_of_base_ring-3](/assets/images/Math/Multilinear_Algebra/Differential_Modules-3.png){:style="width:28em" class="invert" .align-center}
 
-을 얻는다. 여기서 오른쪽의 수직방향 함수는 위의 isomorphism과 [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)의 isomorphism을 합친
+을 얻는다. 여기서 오른쪽의 수직방향 함수는 위의 isomorphism과 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)의 isomorphism을 합친
 
 $$\Hom_{E'}(\Omega_A(E)\otimes_EE', N) \rightarrow \Hom_E(\Omega_A(E), N)\rightarrow\Der_A(E, N)$$
 

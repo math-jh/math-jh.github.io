@@ -166,7 +166,7 @@ $$\lambda_i:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$
 
 <ins id="prop5">**명제 5**</ins> 위에서 정의한 $$\lambda$$는 topological group들 사이의 isomorphism을 정의한다. 
 
-</div >
+</div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 

@@ -71,7 +71,7 @@ $$F_0$$가 연속이라 가정하고, $$F_0$$이 $$C^\infty$$이기도 하다는
 
 이제 이들을 $$\{z^1\circ\Phi,\ldots,z^p\circ\Phi\}$$라 하자. 일반성을 잃지 않고, $$\gamma=(z^1,\ldots, z^m)$$이 $$\mathbb{R}^m$$으로의 전사함수라 하면, 위의 주장은 projection $$\pi:\mathbb{R}^m\rightarrow\mathbb{R}^p$$를 통해 $$(V,\pi\circ\gamma\circ\Phi)$$가 $$y$$의 coordinate system이 된다는 것과 동일한 말이다. 이제
 
-$$(\pi\circ\gamma\circ\Phi)\circ F_0|_{F_0^{-1}(V)}=\pi\circ\gamma\circ F|_{F_0^{-1}(V)}$$
+$$(\pi\circ\gamma\circ\Phi)\circ F_0\vert_{F_0^{-1}(V)}=\pi\circ\gamma\circ F\vert_{F_0^{-1}(V)}$$
 
 이고, 우변의 식은 $$C^\infty$$ 함수들의 합성이므로 $$C^\infty$$이다.
 
@@ -105,7 +105,7 @@ $$\Phi_2(N_2)=\Phi_1(\theta(N_2))=\Phi_1(N_1)$$
 
 이 성립하므로 $$A$$는 유일하게 결정된다. 한편 이렇게 결정되는 $$M$$의 부분집합 $$A$$와 inclusion $$\iota:A\hookrightarrow M$$이 $$[(N,\Phi)]$$에 속하기 위해서는 $$\iota=\Phi\circ\theta$$를 만족하는 diffeomorphism $$\theta$$가 존재해야 하는데, 양 변의 왼쪽에 $$\bar{\Phi}^{-1}$$을 취해주면 $$\theta=\bar{\Phi}^{-1}$$이므로 $$A$$의 manifold 구조는 <em-ko>반드시</em-ko> 위에서 정의한 것과 동일한 방식으로 정의되어야 한다.
 
-반면 manifold $$M$$의 임의의 부분집합 $$\iota:A\hookrightarrow M$$에 대하여, $$(A,\iota)$$를 submanifold로 만드는 $$A$$의 manifold 구조가 유일하게 존재하는 것은 아니다. 가령 [예시 2](#ex2)와 같이 $$M$$의 두 submanifold $$(N_1,\Phi_1),(N_2,\Phi_2)$$가 서로 diffeomorphic하지 않지만 $$\Phi_1(N_1)=\Phi_2(N_2)$$를 만족한다면, $$[(N_1,\Phi_1)]$$과 $$[(N_2,\Phi_2)]$$에서 위의 과정을 통해 얻어지는 $$(A,\iota)$$ 위의 두 manifold 구조는 서로 달라야 한다. 
+반면 manifold $$M$$의 임의의 부분집합 $$\iota:A\hookrightarrow M$$에 대하여, $$(A,\iota)$$를 submanifold로 만드는 $$A$$의 manifold 구조가 유일하게 존재하는 것은 아니다. 가령 [예시 1](#ex1)와 같이 $$M$$의 두 submanifold $$(N_1,\Phi_1),(N_2,\Phi_2)$$가 서로 diffeomorphic하지 않지만 $$\Phi_1(N_1)=\Phi_2(N_2)$$를 만족한다면, $$[(N_1,\Phi_1)]$$과 $$[(N_2,\Phi_2)]$$에서 위의 과정을 통해 얻어지는 $$(A,\iota)$$ 위의 두 manifold 구조는 서로 달라야 한다. 
 
 그럼에도 불구하고, $$(A,\iota)$$가 만족해야 할 조건이 추가된다면 이 위에 submanifold의 구조가 유일하게 결정될 수도 있다. 다음 글에서 소개할 정리들의 결과는 이러한 유일성까지 만족하며, 이 때 다음의 두 명제를 유용하게 사용할 수 있다.
 

@@ -131,7 +131,7 @@ To see this, we show that $$A$$ has an idempotent other than $$0,1$$. Any ideal 
 
 </details>
 
-Then the claim of [Theorem 9](#thm9) mentioned above is essentially contained in the following lemma.
+Then the claim of [Proposition 9](#prop9) mentioned above is essentially contained in the following lemma.
 
 <div class="proposition" markdown="1">
 
