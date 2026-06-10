@@ -38,7 +38,7 @@ $$\mathring{R}_{u,w}=X_w^\circ\cap X^u_\circ$$
 
 </div>
 
-정의에 의해 $$R_{u,w}$$는 $$G/P$$의 closed subvariety이고, $$\mathring{R}_{u,w}$$는 그 안의 Zariski open subset이다.
+정의에 의해 $$R_{u,w}$$는 $$G/P$$의 closed subvariety이고, $$\mathring{R}_{u,w}$$는 그 안의 Zariski open subset이다. 이 intersection은 Kazhdan–Lusztig [KL80]와 Deodhar [Deo85]의 연구에서 이미 등장했고, 그 일반적인 기하학적 성질을 정리한 Richardson [Ric92]의 이름이 붙었다.
 
 이 정의의 유용성은 Grassmannian $$\Gr(k,n)$$ (또는 일반적인 partial flag variety)에서 볼 수 있다. reference flag $$E_\bullet\colon E_1\subset E_2\subset\cdots\subset E_n=\mathbb{C}^n$$를 하나 고정하면, 각 Schubert cell은 그 안의 $$k$$차원 subspace $$V$$가 이 flag와 만나는 방식, 곧 $$\dim(V\cap E_j)$$가 $$j$$를 키울 때 어느 자리에서 뛰는지로 결정되었던 것을 기억하자. Grassmannian 안에서 두 Schubert cell의 intersection을 계산하는 것은 이들이 동시에 만족하는 incidence condition을 찾는 것이다. 그러나 두 Schubert cell을 같은 reference flag에 대해 정의하면 두 조건이 서로 독립이 아니어서 intersection이 기대 차원에서 어긋나므로, reference flag들을 서로 generic position에 있는 것으로 택해야 한다.
 
@@ -50,7 +50,7 @@ $$\dim(E_i\cap\tilde{E}_j)=\max(0,\,i+j-n)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> Open Richardson variety $$\mathring{R}_{u,w}$$가 비어있지 않을 필요충분조건은 Bruhat order에서 $$u\leq w$$인 것이다. 이 조건이 성립하면 $$\mathring{R}_{u,w}$$는 차원 $$\ell(w)-\ell(u)$$의 irreducible affine variety이다.
+<ins id="prop2">**명제 2 (Richardson [Ric92])**</ins> Open Richardson variety $$\mathring{R}_{u,w}$$가 비어있지 않을 필요충분조건은 Bruhat order에서 $$u\leq w$$인 것이다. 이 조건이 성립하면 $$\mathring{R}_{u,w}$$는 차원 $$\ell(w)-\ell(u)$$의 smooth irreducible affine variety이고, $$R_{u,w}$$는 그 Zariski closure이다.
 
 </div>
 
@@ -78,7 +78,7 @@ $$\int_{G/P}[X_w]\cdot[X^u]=\delta_{u,w}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 2](#prop2)의 증명에서 본 것처럼 $$X_w$$와 $$X^u$$는 $$B$$와 $$B^-$$가 주는 generic position에서 transversal하게 만나므로, 그 intersection class는 두 class의 곱과 같다. 이것이 $$[X_w]\cdot[X^u]=[R_{u,w}]$$이다 (Kleiman generic transversality, [Bri] 참조). $$\ell(u)=\ell(w)$$인 경우 $$R_{u,w}$$의 차원은 $$\ell(w)-\ell(u)=0$$이고, [명제 2](#prop2)에 의해 $$u=w$$이면 reduced point 하나, $$u\neq w$$이면 ($$u\leq w$$가 깨져) 공집합이다. 따라서 그 0차원 class의 차수, 곧 $$\int_{G/P}[X_w]\cdot[X^u]$$은 $$\delta_{u,w}$$이다.
+$$X_w$$와 $$X^u$$는 $$B$$와 $$B^-$$가 주는 generic position에서 transversal하게 만나므로, 그 intersection class는 두 class의 곱과 같다. 이것이 $$[X_w]\cdot[X^u]=[R_{u,w}]$$이다 (Kleiman generic transversality, [Bri] 참조). $$\ell(u)=\ell(w)$$인 경우 $$R_{u,w}$$의 차원은 $$\ell(w)-\ell(u)=0$$이고, [명제 2](#prop2)에 의해 $$u=w$$이면 reduced point 하나, $$u\neq w$$이면 ($$u\leq w$$가 깨져) 공집합이다. 따라서 그 0차원 class의 차수, 곧 $$\int_{G/P}[X_w]\cdot[X^u]$$은 $$\delta_{u,w}$$이다.
 
 </details>
 
@@ -100,7 +100,7 @@ $$R_{1324,2413}=\{V\in\Gr(2,4)\mid V\cap E_2\neq0,\ V\cap\tilde{E}_2\neq0\}$$
 
 $$R_{1324,2413}\cong\mathbb{P}(E_2)\times\mathbb{P}(\tilde{E}_2)\cong\mathbb{P}^1\times\mathbb{P}^1$$
 
-을 준다. 차원 $$2$$의 variety로, 명제 [명제 2](#prop2)의 차원과 정확히 맞는다. 그 open part는 행렬
+을 준다. 차원 $$2$$의 variety로, [명제 2](#prop2)의 차원과 정확히 맞는다. 그 open part는 행렬
 
 $$V=\operatorname{rowspan}\begin{pmatrix}1&s&0&0\\0&0&1&t\end{pmatrix}\qquad(s,t)\in\mathbb{A}^2$$
 
@@ -118,7 +118,7 @@ $$g\cdot\mathfrak{b}'=\Ad(g)\,\mathfrak{b}'$$
 
 이제 이 대응 아래 $$\mathfrak{g}$$의 원소 $$X$$를 고정하면, 각 flag $$gB$$마다 $$\mathfrak{g}$$의 원소 $$\Ad(g^{-1})X$$가 결정된다. 그럼 이 원소가 $$\mathfrak{b}$$를 포함하는 $$\operatorname{ad}(\mathfrak{b})$$-stable subspace $$H\subseteq\mathfrak{g}$$에 속하는지를 묻는 조건 $$\Ad(g^{-1})X\in H$$는 $$g$$의 각 entry에 대한 다항식 조건이므로, 이를 만족하는 $$gB$$들의 집합은 $$G/B$$의 closed subvariety를 이룬다.
 
-우리의 관심의 대상은 이 closed variety이며, 이는 당연히 $$X$$와 $$H$$의 선택에 의존한다. 가령 $$X=0$$이면 위의 조건은 항성 성립할 것이므로 이는 flag variety $$G/B$$ 전체가 된다. 우리가 특히 관심있는 $$X$$의 선택은 다음과 같다. 
+우리의 관심의 대상은 이 closed variety이며, 이는 당연히 $$X$$와 $$H$$의 선택에 의존한다. 가령 $$X=0$$이면 위의 조건은 항상 성립할 것이므로 이는 flag variety $$G/B$$ 전체가 된다. 이 의존성을 정량적으로 가늠하게 해 주는 것이 $$X$$의 centralizer이다. $$X$$를 중앙화하는 $$G$$의 원소 $$z$$는 $$\Ad((zg)^{-1})X=\Ad(g^{-1})X$$에 의해 조건 $$\Ad(g^{-1})X\in H$$를 보존하면서 $$G/B$$에 작용하므로, centralizer가 클수록 잘려나오는 variety도 커지는 경향이 있다. 방금 본 $$X=0$$은 centralizer가 $$G$$ 전체인 극단적인 경우였다. 그런데 centralizer의 차원은 어떤 $$X\in\mathfrak{g}$$를 택해도 $$\rank(\mathfrak{g})$$ 아래로 내려갈 수 없다는 것이 알려져 있으므로, 반대쪽 극단은 이 최솟값을 달성하는 원소들이다. 
 
 <div class="definition" markdown="1">
 
@@ -126,15 +126,15 @@ $$g\cdot\mathfrak{b}'=\Ad(g)\,\mathfrak{b}'$$
 
 </div>
 
-일반적으로, 각각의 simple root $$\alpha_i$$마다 $$0\neq e_i\in\mathfrak{g}_{\alpha_i}$$를 골라 $$e=\sum_i e_i$$로 두면 regular nilpotent가 된다. 이는 type $$A_{n-1}$$에서는 Jordan block에 대응되는 것으로, 위의 과정을 거쳐 superdiagonal이 모두 $$1$$인 principal nilpotent $$N=\sum_{i=1}^{n-1}E_{i,i+1}$$을 택할 수 있고, 그 centralizer를 직접 계산하면 $$N$$의 polynomial들
+Regular nilpotent는 표준적인 구성으로 언제나 존재한다. 각각의 simple root $$\alpha_i$$마다 $$0\neq e_i\in\mathfrak{g}_{\alpha_i}$$를 골라 $$e=\sum_i e_i$$로 두면 regular nilpotent가 된다. type $$A_{n-1}$$에서는 이를 직접 확인할 수 있다. 위의 구성은 superdiagonal이 모두 $$1$$인 principal nilpotent $$N=\sum_{i=1}^{n-1}E_{i,i+1}$$을 주는데, $$[Z,N]=0$$을 성분별로 풀면 centralizer가 $$N$$의 polynomial들
 
 $$\mathfrak{z}_{\mathfrak{sl}_n}(N)=\span\{N,N^2,\ldots,N^{n-1}\}$$
 
-이 되는 것을 확인할 수 있다. Jordan block의 수가 많을수록 centralizer가 커지므로, regular element는 nilpotent element 중 centralizer가 가장 작은 것으로 생각할 수 있다. 
+임을 알 수 있고, 이 공간의 차원이 정확히 $$n-1=\rank(\mathfrak{sl}_n)$$이므로 $$N$$은 regular이다. Jordan 표준형의 관점에서 보면 $$N$$은 Jordan block이 하나뿐인 nilpotent, 곧 partition $$(n)$$에 대응하는 원소이다. Jordan block의 수가 많을수록 centralizer가 커지므로, regular nilpotent는 nilpotent element 가운데 centralizer가 가장 작은 conjugacy class라 생각할 수 있다.
 
-모든 regular nilpotent이 $$G$$의 adjoint action으로 서로 conjugate하다는 것, 그리고 그 centralizer가 언제나 abelian이며 차원이 정확히 $$\rank(\mathfrak{g})$$라는 것은 Kostant [Kos]의 고전적 결과이다. 바로 이 centralizer 차원이 아래 [명제 7](#prop7)에서 Peterson variety의 차원을 결정한다.
+일반적인 type에서 $$e=\sum_i e_i$$가 regular라는 것, 모든 regular nilpotent가 $$G$$의 adjoint action으로 서로 conjugate하다는 것, 그리고 그 centralizer가 언제나 abelian이라는 것은 Kostant [Kos]의 고전적 결과이다.
 
-한편 $$H$$의 선택 또한 위에서 설명한 closed subvariety를 정의하는 데에 중요한 역할을 한다. 가령 $$H=\mathfrak{g}$$인 극단적인 경우 우리는 $$X$$의 값에 상관없이 flag variety 전체를 얻게 된다. 반대쪽 극한으로, 만일 regular nilpotent element $$X$$와 $$H=\mathfrak{b}$$를 택하면 이 조건을 만족하는 flag가 유일하게 존재하므로 variety가 한 점이 된다는 것을 보일 수 있다. 우리가 관심있는 것은 $$\mathfrak{b}$$ 위에 simple root들 방향으로 자유도를 하나씩 더한 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$의 경우로, 그 결과로 얻어지는 것이 바로 *Peterson variety*이다. 
+한편 $$H$$의 선택 또한 위에서 설명한 closed subvariety를 정의하는 데에 중요한 역할을 한다. 가령 $$H=\mathfrak{g}$$인 극단적인 경우 우리는 $$X$$의 값에 상관없이 flag variety 전체를 얻게 된다. 반대쪽 극한은 $$H=\mathfrak{b}$$이다. 이 경우 조건 $$\Ad(g^{-1})X\in\mathfrak{b}$$는 Borel subalgebra $$\Ad(g)\mathfrak{b}$$가 $$X$$를 포함한다는 말과 같은데, regular nilpotent는 정확히 하나의 Borel subalgebra에 속한다는 고전적 사실이 있으므로, regular nilpotent $$X$$에 대해 이 variety는 한 점이 된다. 우리가 관심있는 것은 $$\mathfrak{b}$$에서 딱 한 걸음 더 간 경우로, $$\mathfrak{b}$$ 위에 negative simple root 방향의 자유도를 하나씩 더한 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$를 택하는 것이다. 더한 자유도가 simple root의 개수, 곧 $$\rank(\mathfrak{g})$$개이므로 결과 variety의 차원도 한 점에서 $$\rank(\mathfrak{g})$$만큼 자라리라 기대할 수 있고, 실제로 그렇게 된다는 것이 아래 [명제 7](#prop7)의 내용이다. 그 결과로 얻어지는 것이 바로 *Peterson variety*이다. 
 
 <div class="definition" markdown="1">
 
@@ -146,7 +146,7 @@ $$Y^\circ=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 
 </div>
 
-이것이 Kostant–Peterson의 원래 정의 [Pet]이다. $$e$$가 regular nilpotent라는 점이 핵심으로, Kostant의 정리([정의 5](#def5) 직후 논의)가 $$Y^\circ$$의 차원을 $$\rank(\mathfrak{g})$$로 결정한다.
+이것이 Kostant–Peterson의 원래 정의 [Pet]이다. 정의가 여러 선택에 의존하는 것처럼 보이지만 사실상 유일하다. $$f_i$$의 선택은 $$\mathbb{C}f_i=\mathfrak{g}_{-\alpha_i}$$가 $$1$$차원이므로 $$H$$를 바꾸지 않고, $$e$$를 다른 regular nilpotent로 바꾸는 것은 ([정의 5](#def5) 직후 논의의 conjugacy에 의해) $$Y^\circ$$를 $$G/B$$ 안에서 translate할 뿐이다.
 
 <div class="proposition" markdown="1">
 
@@ -156,19 +156,23 @@ $$Y^\circ=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$e$$를 regular nilpotent로 잡았으므로 Kostant [Kos]의 정리에 의해 centralizer $$\mathfrak{z}_\mathfrak{g}(e)$$는 abelian이고 차원이 $$\rank(\mathfrak{g})$$이다. $$G/B$$의 점 $$gB$$에서의 tangent space를 $$\mathfrak{g}/\mathfrak{b}$$와 동일시하면, Hessenberg 조건 $$\Ad(g^{-1})e\in H$$의 접공간은 $$\mathfrak{z}_\mathfrak{g}(e)$$의 상과 직접 연결되며 그 차원이 $$\rank(\mathfrak{g})$$가 된다. 자세한 dimension count는 [Pet]를 참조한다.
+핵심 도구는 Bruhat cell들과의 교집합이다. Tymoczko [Tym]와 Precup [Pre]은 regular nilpotent Hessenberg variety가 Bruhat 분해와의 교집합 $$Y^\circ\cap BwB/B$$들로 affine paving됨을 보였다. 곧 비어있지 않은 각 조각이 affine space와 동형이고, 따라서 가장 큰 조각의 차원이 $$Y^\circ$$ 전체의 차원이 된다. Peterson variety의 경우 비어있지 않은 조각을 [Tym]의 조합적 조건으로 분류하면, simple root들의 부분집합 $$A\subseteq\Delta$$마다 parabolic Weyl group $$W_A$$의 최장원소 $$w_A$$에 대응하는 cell이 비어있지 않은 조각의 전부이다 ([IT]). 각 조각의 차원은 [Tym]의 공식
+
+$$\dim\bigl(Y^\circ\cap Bw_AB/B\bigr)=\dim\bigl(\mathfrak{b}\cap\Ad(w_A)(\mathfrak{b}^-\cap H)\bigr)-\rank(\mathfrak{g})$$
+
+으로 주어지는데, $$\mathfrak{b}^-\cap H=\mathfrak{h}\oplus\bigoplus_i\mathfrak{g}_{-\alpha_i}$$에서 $$\mathfrak{h}$$는 $$\Ad(w_A)$$에 의해 $$\mathfrak{h}$$로 가고, $$\mathfrak{g}_{-\alpha_i}$$는 ($$w_A$$가 부호를 뒤집는 simple root가 정확히 $$A$$의 원소들이므로) $$\alpha_i\in A$$일 때에만 positive root space로 가서 $$\mathfrak{b}$$와 만난다. 따라서 이 값은 $$\rank(\mathfrak{g})+\lvert A\rvert-\rank(\mathfrak{g})=\lvert A\rvert$$이다. 결국 $$Y^\circ$$는 $$2^{\rank(\mathfrak{g})}$$개의 affine cell로 paving되며, 최대 차원의 cell은 $$A=\Delta$$, 곧 big Bruhat cell과의 교집합 $$Y^\circ\cap Bw_0B/B\cong\mathbb{A}^{\rank(\mathfrak{g})}$$이다.
 
 </details>
 
-이 결과는 $$\rank(\mathfrak{g})$$가 simple root의 개수와 같다는 사실과 맞물린다. type $$A_{n-1}$$에서는 $$\rank(\mathfrak{sl}_n)=n-1$$이므로 $$\dim Y^\circ=n-1$$이며, 위의 $$\Pet_3$$ 예시에서 확인한 $$\dim\Pet_3=2=3-1$$과 일치한다.
+이 증명은 차원 이상의 정보를 준다. $$Y^\circ$$는 simple root들의 부분집합으로 색인되는 $$2^{\rank(\mathfrak{g})}$$개의 cell로 이루어지고, 각 cell은 coordinate flag $$w_AB$$를 지난다. 이 조합론은 아래 [예시 10](#ex10)의 fixed point 목록에서 다시 만난다. type $$A_{n-1}$$에서는 $$\rank(\mathfrak{sl}_n)=n-1$$이므로 $$\dim Y^\circ=n-1$$이며, [예시 10](#ex10)에서 $$\dim\Pet_3=2=3-1$$임을 chart 계산으로 직접 확인한다.
 
 ## Hessenberg variety로서의 기술
 
-위에서 본 interpolation 그림을 형식화하면 Peterson variety는 *Hessenberg variety*라 불리는 더 넓은 부분다양체 집합의 특수한 예가 된다.
+위에서 본 두 극단 $$H=\mathfrak{b}$$와 $$H=\mathfrak{g}$$ 사이의 interpolation을 형식화하면 Peterson variety는 *Hessenberg variety*라 불리는 더 넓은 부분다양체 집합의 특수한 예가 된다.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> $$X\in\mathfrak{g}$$와 $$\mathfrak{b}$$를 포함하는 $$\Ad$$-stable subspace $$H\subseteq\mathfrak{g}$$ (즉 $$[\mathfrak{b},H]\subseteq H$$)에 대하여, *Hessenberg variety*는
+<ins id="def8">**정의 8**</ins> $$X\in\mathfrak{g}$$와 $$\mathfrak{b}$$를 포함하는 $$\operatorname{ad}(\mathfrak{b})$$-stable subspace $$H\subseteq\mathfrak{g}$$ (즉 $$[\mathfrak{b},H]\subseteq H$$)에 대하여, *Hessenberg variety*는
 
 $$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}$$
 
@@ -176,15 +180,21 @@ $$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}$$
 
 </div>
 
-$$H=\mathfrak{b}$$이면 $$\mathcal{B}(X,\mathfrak{b})$$은 $$X$$의 Springer fiber이고, $$H=\mathfrak{g}$$이면 $$\mathcal{B}(X,\mathfrak{g})=G/B$$ 전체이다. 그 사이에서 $$X$$가 regular nilpotent이고 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$ ($$f_i\in\mathfrak{g}_{-\alpha_i}$$는 simple negative root vector)인 경우가 바로 Peterson variety로, 위에서 말한 $$\mathfrak{b}$$ 바로 다음 단계에 해당한다. [정의 6](#def6)은 $$G/B^-$$ 위의 coadjoint 조건으로 적었지만, Killing form으로 $$\mathfrak{g}^\ast\cong\mathfrak{g}$$를 동일시하고 $$G/B^-\cong G/B$$를 취하면 그 annihilator 조건이 위 Hessenberg 조건 $$\Ad(g^{-1})X\in H$$로 옮겨지므로, 두 기술은 같은 variety를 가리킨다. 이 Hessenberg 관점은 $$Y_B^\circ$$을 $$\mathfrak{n}^-$$의 적절한 affine 좌표 위에서 명시적인 방정식으로 다룰 수 있게 해 준다 (Insko–Tymoczko [IT]).
+$$H=\mathfrak{b}$$이면 $$\mathcal{B}(X,\mathfrak{b})$$은 $$X$$의 *Springer fiber*이고, $$H=\mathfrak{g}$$이면 $$\mathcal{B}(X,\mathfrak{g})=G/B$$ 전체이다. 특히 [정의 6](#def6) 직전에 본 "한 점" 현상은 regular nilpotent의 Springer fiber가 한 점이라는 사실의 재진술이다. 그 사이에서 $$X$$가 regular nilpotent이고 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$인 경우가 바로 [정의 6](#def6)의 Peterson variety로, 위에서 말한 $$\mathfrak{b}$$ 바로 다음 단계에 해당한다. 이 Hessenberg 관점은 $$Y^\circ$$을 affine 좌표 위에서 명시적인 방정식으로 다룰 수 있게 해 준다 (Insko–Tymoczko [IT]).
+
+<div class="remark" markdown="1">
+
+<ins id="rmk9">**참고 9**</ins> 거울대칭 문헌, 특히 Rietsch [Rie]와 그를 따르는 글들은 Peterson variety를 (Langlands dual group의) opposite flag variety $$G/B^-$$ 위에서 coadjoint 조건 $$\Ad^\ast(g^{-1})F\in[\mathfrak{n}^-,\mathfrak{n}^-]^\perp$$ ($$F$$는 regular nilpotent)로 정의한다. Killing form으로 $$\mathfrak{g}^\ast\cong\mathfrak{g}$$를 동일시하면 $$[\mathfrak{n}^-,\mathfrak{n}^-]^\perp=\mathfrak{b}^-\oplus\bigoplus_i\mathfrak{g}_{\alpha_i}$$이므로, 이는 [정의 6](#def6)의 Hessenberg 조건에서 $$B$$와 $$B^-$$의 역할을 일괄적으로 맞바꾼 것에 지나지 않는다. 곧 두 기술은 같은 variety를 두 좌표로 적은 것이며, 이 글에서는 일관되게 $$G/B$$ 컨벤션을 쓴다.
+
+</div>
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9**</ins> type $$A_{n-1}$$, 곧 $$G=\GL_n(\mathbb{C})$$에서 보자. Principal nilpotent $$N=\sum_{i=1}^{n-1}E_{i,i+1}$$ (superdiagonal 성분이 $$1$$)은 regular nilpotent이고, 위 Hessenberg 기술에서 Peterson variety는 complete flag variety $$Fl_n=\GL_n(\mathbb{C})/B$$ 안에서
+<ins id="ex10">**예시 10**</ins> type $$A_{n-1}$$, 곧 $$G=\GL_n(\mathbb{C})$$에서 보자. Principal nilpotent $$N=\sum_{i=1}^{n-1}E_{i,i+1}$$ (superdiagonal 성분이 $$1$$)은 regular nilpotent이고, 위 Hessenberg 기술에서 Peterson variety는 complete flag variety $$Fl_n=\GL_n(\mathbb{C})/B$$ 안에서
 
 $$\Pet_n=\{\,V_\bullet\mid NV_i\subseteq V_{i+1},\ i=1,\ldots,n-1\,\}$$
 
-로 주어진다. 이는 Hessenberg 함수 $$h=(2,3,\ldots,n,n)$$에 대응하며, 그 차원은 $$\sum_{j=1}^n\bigl(h(j)-j\bigr)=n-1=\rank(\mathfrak{sl}_n)$$으로 명제 [명제 7](#prop7)과 일치한다.
+로 주어진다. 이는 Hessenberg 함수 $$h=(2,3,\ldots,n,n)$$에 대응하며, 그 차원은 $$\sum_{j=1}^n\bigl(h(j)-j\bigr)=n-1=\rank(\mathfrak{sl}_n)$$으로 [명제 7](#prop7)과 일치한다.
 
 $$n=3$$에서 구체적으로, $$Ne_1=0$$, $$Ne_2=e_1$$, $$Ne_3=e_2$$이고 마지막 조건 $$NV_2\subseteq V_3=\mathbb{C}^3$$은 자동이므로
 
@@ -200,15 +210,33 @@ $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 
 ## Stratification
 
-Peterson variety는 [§Bruhat decomposition, ⁋정리 13](/ko/math/lie_theory/bruhat_decomposition#thm13)의 cell 분해를 $$G/B^-$$로 옮긴 것과 호환되는 자연스러운 stratification을 가진다. 각 stratum은 $$Y_P^\circ$$가 어느 Bruhat cell과 만나는가로 정해지며, Weyl group 원소로 색인된다.
+[명제 7](#prop7)의 증명에서 우리는 $$Y^\circ$$를 $$B$$쪽 Bruhat cell들로 잘라 affine paving을 얻었다. 이번에는 반대쪽, 곧 opposite Borel $$B^-$$의 Bruhat 분해로 $$Y^\circ$$를 잘라 보자. 결과의 성격은 전혀 다르다. 조각들이 더 이상 affine space가 아닌 대신, 각 조각이 그 자체로 의미를 갖는 affine variety가 된다.
 
-$$Y_P^\circ=\bigsqcup_{w\in W^P}Y_{P,w}^\ast,\qquad Y_{P,w}^\ast=Y_P^\circ\cap(BwB^-)/B^-$$
+이번에도 비어있지 않은 조각은 정확히 $$2^{\rank(\mathfrak{g})}$$개이며, simple root들의 부분집합, 곧 standard parabolic subgroup $$P\supseteq B$$들로 색인되어 $$Y^\circ$$의 stratification
 
-특히 중요한 것은 open stratum $$Y_{P,e}^\ast$$로, big Bruhat cell $$BB^-/B^-\subseteq G/B^-$$과의 intersection으로 주어지는 $$Y_P^\circ$$의 Zariski 조밀 open subset이다. 이 open stratum의 coordinate ring이 Peterson variety의 affine 기하를 분석할 때 표준적인 출발점이 되며, stratification 전체는 $$Y_P^\circ$$의 coordinate ring을 $$W^P$$로 색인된 조각들로 분해해 준다.
+$$Y^\circ=\bigsqcup_{P\supseteq B}Y_P^\circ$$
+
+을 이룬다 [Pet]. 여기서 각 stratum $$Y_P^\circ$$는 $$B^-$$쪽 Bruhat cell 하나와의 교집합으로 주어지는 locally closed subvariety이다. 양 극단을 보면 $$P=G$$의 stratum은 한 점 $$\{w_0B\}$$이고, $$P=B$$의 stratum은 opposite big cell과의 교집합
+
+$$Y_B^\circ=Y^\circ\cap B^-B/B$$
+
+으로 주어지는 $$Y^\circ$$의 Zariski 조밀 open subset이다. 일반적으로 $$Y_P^\circ$$의 차원은 $$P$$에 들어있지 않은 simple root의 개수와 같다. 곧 paving의 cell과 stratification의 stratum은 개수가 같으면서 차원은 서로 보완적인 방향으로 자란다.
+
+이 분해가 단순한 기하학적 호기심이 아닌 이유는 Dale Peterson의 다음 정리 때문이다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm11">**정리 11 (Peterson [Pet])**</ins> 각 standard parabolic subgroup $$P\supseteq B$$에 대하여, stratum $$Y_P^\circ$$의 coordinate ring은 partial flag variety $$G/P$$의 small quantum cohomology ring과 동형이다.
+
+$$\mathbb{C}[Y_P^\circ]\cong qH^\ast(G/P)$$
+
+</div>
+
+곧 flag variety 안의 단 하나의 subvariety가 모든 partial flag variety $$G/P$$의 quantum cohomology를 strata에 나누어 담고 있다는 것이다. 이 동형 아래에서 quantum parameter들은 $$Y_P^\circ$$ 위의 명시적인 regular function이 되며, stratum을 big Bruhat cell $$Bw_0B/B$$와 한 번 더 교차시킨 open subset은 quantum parameter들을 invert한 localization에 대응한다. 위 정리는 Peterson의 1997년 MIT 강의 [Pet]에서 발표되었으나 증명이 출판되지 않았고, $$P=B$$의 경우는 quantum Toda lattice를 매개로 한 Kostant [Kos96]의 결과와 동치이며, type A는 Rietsch [Rie]가, 일반형은 최근 Chow [Cho]가 증명을 완성했다. 우리는 이 정리를 ([\[거울대칭\] §Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem))에서 Marsh–Rietsch mirror theorem의 마지막 다리로 사용한다.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk10">**참고 10**</ins> 위 stratification은 Peterson variety의 cohomology를 조합적으로 계산하는 출발점이 된다. Insko–Tymoczko [IT]는 regular nilpotent Hessenberg variety가 affine cell들로 paving됨을 보였고, 그로부터 $$Y_P^\circ$$의 cohomology(나아가 Chow ring)가 각 cell로 색인된 basis를 갖는 free module이 됨이 따른다. 즉 [§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동한다.
+<ins id="rmk12">**참고 12**</ins> [명제 7](#prop7) 증명의 affine paving은 cohomology 계산의 출발점이기도 하다. Paving에 의해 $$Y^\circ$$의 cohomology는 cell들로 색인된 basis를 갖는 free module이고 홀수 차수에서 사라진다. 즉 [§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동하며, Insko–Tymoczko [IT]는 이를 바탕으로 Peterson variety의 intersection theory를 전개하였다.
 
 </div>
 
@@ -226,8 +254,16 @@ $$Y_P^\circ=\bigsqcup_{w\in W^P}Y_{P,w}^\ast,\qquad Y_{P,w}^\ast=Y_P^\circ\cap(B
 
 **[Kos]** B. Kostant, *The principal three-dimensional subgroup and the Betti numbers of a complex simple Lie group*, Amer. J. Math. **81** (1959), 973--1032.
 
+**[Kos96]** B. Kostant, *Flag manifold quantum cohomology, the Toda lattice, and the representation with highest weight $$\rho$$*, Selecta Math. (N.S.) **2** (1996), 43--91.
+
 **[Pet]** D. Peterson, Lecture notes, Massachusetts Institute of Technology, Spring 1997 (unpublished).
 
 **[Rie]** K. Rietsch, *Totally positive Toeplitz matrices and quantum cohomology of partial flag varieties*, J. Amer. Math. Soc. **16** (2003), 363--392.
 
+**[Tym]** J. S. Tymoczko, *Paving Hessenberg varieties by affines*, Selecta Math. (N.S.) **13** (2007), 353--367.
+
+**[Pre]** M. Precup, *Affine pavings of Hessenberg varieties for semisimple groups*, Selecta Math. (N.S.) **19** (2013), 903--922.
+
 **[IT]** E. Insko, J. Tymoczko, *Affine pavings of regular nilpotent Hessenberg varieties and intersection theory of the Peterson variety*, J. Combin. Theory Ser. A **187** (2022), 105572.
+
+**[Cho]** C. H. Chow, *On D. Peterson's presentation of quantum cohomology of $$G/P$$*, arXiv:2210.17382.
