@@ -11,6 +11,7 @@ sidebar:
 date: 2024-11-01
 last_modified_at: 2024-11-01
 weight: 4
+published: false
 
 ---
 
@@ -147,7 +148,23 @@ $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+우선 첫째 주장을 보이자. 두 resolution의 augmentation을 각각 $$\varepsilon:P_0 \rightarrow M$$, $$\varepsilon':Q_0 \rightarrow N$$이라 적자.
 
+**(Chain map의 존재성)** $$f_n$$들을 귀납적으로 만든다. $$\varepsilon'$$이 surjective이고 $$P_0$$가 projective이므로, $$u\circ\varepsilon:P_0 \rightarrow N$$에 대하여 $$\varepsilon'\circ f_0=u\circ \varepsilon$$이도록 하는 $$f_0:P_0 \rightarrow Q_0$$가 존재한다. 이제 $$f_0,\ldots,f_{n-1}$$이 주어진 diagram을 commute하게 하도록 만들어졌다 하고, 합성 $$\varphi=f_{n-1}\circ d_n^P:P_n \rightarrow Q_{n-1}$$을 생각하자. 그럼 $$n\geq 2$$일 때
+
+$$d_{n-1}^Q\circ\varphi=d_{n-1}^Q\circ f_{n-1}\circ d_n^P=f_{n-2}\circ d_{n-1}^P\circ d_n^P=0$$
+
+이고, $$n=1$$일 때도 $$\varepsilon'\circ f_0\circ d_1^P=u\circ\varepsilon\circ d_1^P=0$$이다. 따라서 $$\im\varphi$$는 $$\ker d_{n-1}^Q$$ (혹은 $$n=1$$일 때 $$\ker\varepsilon'$$)에 포함되는데, $$Q_\bullet \rightarrow N$$이 resolution이므로 이는 $$\im d_n^Q$$와 같다. 그럼 $$P_n$$이 projective이고 $$d_n^Q:Q_n \rightarrow \im d_n^Q$$가 surjective이므로, $$d_n^Q\circ f_n=\varphi$$이도록 하는 $$f_n:P_n \rightarrow Q_n$$이 존재한다.
+
+**(Up to homotopy 유일성)** $$f,f'$$이 모두 주어진 diagram을 commute하게 하는 chain map이라 하고 $$g=f-f'$$이라 하자. 그럼 $$g$$는 $$\varepsilon'\circ g_0=u\circ\varepsilon-u\circ\varepsilon=0$$을 만족하는 chain map이다. 우리는 $$g_n=d_{n+1}^Q\circ s_n+s_{n-1}\circ d_n^P$$이 모든 $$n$$에 대해 성립하도록 하는 homotopy $$s_n:P_n \rightarrow Q_{n+1}$$을 귀납적으로 만든다. 여기서 $$s_{-1}=0$$이다.
+
+우선 $$\varepsilon'\circ g_0=0$$으로부터 $$\im g_0\subseteq \ker\varepsilon'=\im d_1^Q$$이므로, $$P_0$$의 projectivity에 의해 $$d_1^Q\circ s_0=g_0$$이도록 하는 $$s_0:P_0 \rightarrow Q_1$$이 존재한다. 이제 $$s_0,\ldots,s_{n-1}$$이 만들어졌다 하고 $$\psi=g_n-s_{n-1}\circ d_n^P$$라 하자. 그럼
+
+$$d_n^Q\circ\psi=d_n^Q\circ g_n-(d_n^Q\circ s_{n-1})\circ d_n^P=g_{n-1}\circ d_n^P-(g_{n-1}-s_{n-2}\circ d_{n-1}^P)\circ d_n^P=s_{n-2}\circ d_{n-1}^P\circ d_n^P=0$$
+
+이므로 $$\im\psi\subseteq\ker d_n^Q=\im d_{n+1}^Q$$이고, 다시 $$P_n$$의 projectivity에 의해 $$d_{n+1}^Q\circ s_n=\psi$$이도록 하는 $$s_n:P_n \rightarrow Q_{n+1}$$이 존재한다. 그럼 정의에 의해 $$g_n=d_{n+1}^Q\circ s_n+s_{n-1}\circ d_n^P$$이다.
+
+이제 둘째 주장을 보이자. 이는 첫째 주장의 증명을 그대로 dualize하면 된다. 두 resolution의 augmentation을 $$\eta:M \rightarrow J^0$$, $$\eta':N \rightarrow I^0$$이라 하자. $$\eta$$가 injective이고 $$I^0$$가 injective object이므로, $$\eta'\circ u:M \rightarrow I^0$$에 대하여 $$f^0\circ\eta=\eta'\circ u$$이도록 하는 $$f^0:J^0 \rightarrow I^0$$가 존재한다. 귀납적으로 $$f^0,\ldots,f^{n-1}$$이 만들어졌다 하고 합성 $$d_I^{n-1}\circ f^{n-1}:J^{n-1} \rightarrow I^n$$을 생각하면, 앞에서와 같은 계산으로 이 map은 $$\im d_J^{n-2}=\ker d_J^{n-1}$$ 위에서 $$0$$이고, 따라서 injective morphism $$J^{n-1}/\ker d_J^{n-1}\hookrightarrow J^n$$을 통해 $$I^n$$으로 가는 morphism을 유도한다. $$I^n$$이 injective object이므로 이를 $$J^n$$ 전체로 확장하여 $$f^n:J^n \rightarrow I^n$$을 얻고, 이 construction에 의해 $$f^n\circ d_J^{n-1}=d_I^{n-1}\circ f^{n-1}$$이 성립한다.
 
 </details>
 

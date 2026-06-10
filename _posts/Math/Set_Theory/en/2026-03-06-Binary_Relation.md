@@ -20,7 +20,7 @@ last_polished_at: 2026-06-02T10:30:02+00:00
 ---
 ## Binary Relations
 
-We begin with the definition. The following definition is nothing special; it merely gives a name to the *set of ordered pairs* that appeared in [§Ordered Pairs](/en/math/set_theory/ordered_pair#ordered_pairs) when we explained the motivation for introducing ordered pairs.
+We begin with the definition. The following definition is nothing special; it merely gives a name to the *set of ordered pairs* that appeared in [§Ordered Pairs](/en/math/set_theory/ordered_pair#ordered-pairs) when we explained the motivation for introducing ordered pairs.
 
 <div class="definition" markdown="1">
 

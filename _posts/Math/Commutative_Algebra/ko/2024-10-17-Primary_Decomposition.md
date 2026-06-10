@@ -11,6 +11,7 @@ sidebar:
 date: 2024-10-17
 last_modified_at: 2024-10-17
 weight: 7
+published: false
 
 ---
 
@@ -171,7 +172,19 @@ $$M_{\mathfrak{p}_k} \rightarrow \left(\bigoplus_{k=1}^n M/M_k\right)_{\mathfrak
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+우선 첫째 주장을 보이자. 가장 먼저 각각의 $$i$$에 대하여 $$(p_i^{e_i})$$가 $$(p_i)$$-primary임을 확인한다. $$(p_i)^{e_i}=(p_i^{e_i})$$가 $$A/(p_i^{e_i})$$를 annihilate하는 것은 자명하므로, [명제 2](#prop2)의 셋째 조건에 의하여 $$(p_i)$$ 바깥의 원소들이 $$A/(p_i^{e_i})$$의 zero divisor가 아니라는 것만 보이면 충분하다. 이를 위해 $$x\not\in (p_i)$$와 $$a\in A$$가 $$xa\in (p_i^{e_i})$$를 만족할 때마다 $$a\in(p_i^{e_i})$$가 성립함을 $$e_i$$에 대한 귀납법으로 보인다. $$e_i=0$$인 경우는 자명하다. $$e_i\geq 1$$이라 하면 $$xa\in(p_i^{e_i})\subseteq (p_i)$$이고 $$(p_i)$$가 prime이며 $$x\not\in(p_i)$$이므로 $$a\in (p_i)$$이다. 즉 $$a=p_ib$$로 쓸 수 있고, $$xa=p_i^{e_i}c$$라 하면 $$p_i(xb-p_i^{e_i-1}c)=0$$인데 $$A$$가 domain이고 $$p_i\neq 0$$이므로 $$xb=p_i^{e_i-1}c\in (p_i^{e_i-1})$$이다. 귀납가정에 의해 $$b\in (p_i^{e_i-1})$$이고 따라서 $$a=p_ib\in(p_i^{e_i})$$이다.
 
+이제 $$(f)=\bigcap_{i=1}^n (p_i^{e_i})$$임을 보인다. 각각의 $$i$$에 대해 $$f\in (p_i^{e_i})$$이므로 한쪽 포함관계는 자명하다. 거꾸로 $$g\in\bigcap_{i=1}^n (p_i^{e_i})$$라 하고, $$g\in (p_1^{e_1}\cdots p_j^{e_j})$$임을 $$j$$에 대한 귀납법으로 보이자. $$j=0$$인 경우는 자명하다. 이제 $$g=p_1^{e_1}\cdots p_j^{e_j}h$$로 쓸 수 있다고 가정하자. 우선 서로 다른 두 index $$i\neq k$$에 대하여 $$p_i\not\in (p_k)$$인 것을 확인하는데, 만일 $$p_i=cp_k$$라면 $$p_i$$가 prime element이므로 irreducible이고 ([\[환론\] §정역, ⁋명제 12](/ko/math/ring_theory/integral_domains#prop12)) $$p_k$$가 unit이 아니므로 $$c$$가 unit이 되어 $$(p_i)=(p_k)$$가 얻어지고, 이는 $$(p_i)$$들이 서로 다르다는 가정에 모순이기 때문이다. 따라서 $$(p_{j+1})$$이 prime이라는 것으로부터 $$p_1^{e_1}\cdots p_j^{e_j}\not\in (p_{j+1})$$이고, $$p_1^{e_1}\cdots p_j^{e_j}h=g\in (p_{j+1}^{e_{j+1}})$$이므로 앞 문단에서 보인 것에 의하여 $$h\in (p_{j+1}^{e_{j+1}})$$이다. 즉 $$g\in (p_1^{e_1}\cdots p_{j+1}^{e_{j+1}})$$이고, 귀납법에 의하여 $$g\in (p_1^{e_1}\cdots p_n^{e_n})=(f)$$를 얻는다. 마지막 등식은 $$u$$가 unit이기 때문에 성립한다.
+
+이 decomposition이 minimal임을 보이기 위해, 우선 어느 한 성분도 생략할 수 없음을 확인하자. 각각의 $$i$$에 대하여 $$\prod_{j\neq i} p_j^{e_j}$$는 $$\bigcap_{j\neq i}(p_j^{e_j})$$에 속하지만 $$(p_i^{e_i})$$에는 속하지 않는다. 만일 속한다면 특히 $$\prod_{j\neq i}p_j^{e_j}\in (p_i)$$이고, $$(p_i)$$가 prime이므로 어떤 $$j\neq i$$에 대해 $$p_j\in (p_i)$$가 되어 앞 문단에서 확인한 것에 모순이기 때문이다. 따라서 [정리 3](#thm3)의 둘째 결과에 의하여 $$\Ass(A/(f))=\{(p_1),\ldots,(p_n)\}$$이고, 특히 이들은 $$n$$개의 서로 다른 prime ideal들이다. 한편 [정리 3](#thm3)의 첫째 결과에 의하여 $$(f)$$의 임의의 primary decomposition은 $$\Ass(A/(f))$$의 모든 원소를 그 prime들 가운데 가져야 하므로 적어도 $$n$$개의 성분을 갖는다. 즉 위의 decomposition은 minimal이다.
+
+이제 둘째 주장을 보이자. 우선 $$A$$가 UFD라 하고, principal ideal $$(f)$$와 $$(f)$$를 포함하는 prime ideal들 중 minimal한 $$\mathfrak{p}$$가 주어졌다 하자. 만일 $$f=0$$이라면 $$A$$가 domain이므로 $$(0)$$이 prime이고 따라서 $$\mathfrak{p}=(0)$$은 principal이다. $$f$$가 unit이라면 $$(f)=A$$를 포함하는 prime ideal이 없으므로 따질 것이 없다. 이제 $$f$$가 nonzero, non-unit이라 하고 $$f=up_1^{e_1}\cdots p_n^{e_n}$$으로 인수분해하자. 그럼 $$f\in\mathfrak{p}$$이고 $$\mathfrak{p}$$가 prime이므로 적당한 $$i$$에 대해 $$p_i\in \mathfrak{p}$$이다. 즉 $$(f)\subseteq (p_i)\subseteq \mathfrak{p}$$인데, $$(p_i)$$가 prime이므로 $$\mathfrak{p}$$의 minimality에 의하여 $$\mathfrak{p}=(p_i)$$는 principal이다.
+
+거꾸로 principal ideal에 대해 minimal한 prime ideal들이 모두 principal이라 가정하자. 우선 $$A$$가 noetherian이므로 임의의 nonzero, non-unit 원소는 irreducible element들의 곱으로 표현된다. 그렇지 않다 가정하면, irreducible element들의 곱으로 표현되지 않는 nonzero, non-unit 원소 $$a$$들이 만드는 principal ideal $$(a)$$들의 모임이 공집합이 아니므로 noetherian 조건에 의해 이 모임의 maximal element $$(a)$$를 택할 수 있다. 그럼 $$a$$는 irreducible이 아니므로 non-unit $$b,c$$에 대해 $$a=bc$$로 쓸 수 있는데, 만일 $$(a)=(b)$$라면 적당한 $$d$$에 대해 $$b=ad$$이고 $$a=adc$$가 되어 $$A$$가 domain이라는 것으로부터 $$c$$가 unit이 되어 모순이므로 $$(a)\subsetneq (b)$$이고, 같은 이유로 $$(a)\subsetneq(c)$$이다. 그럼 $$(a)$$의 maximality에 의해 $$b,c$$는 모두 irreducible element들의 곱으로 표현되고, 따라서 $$a=bc$$도 그러하므로 모순이다.
+
+다음으로 임의의 irreducible element $$p$$가 prime임을 보이자. $$A$$가 noetherian이므로 $$(p)$$를 포함하는 prime ideal들 중 minimal한 것이 존재하며 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)), 이를 $$\mathfrak{p}$$라 하면 가정에 의해 $$\mathfrak{p}=(q)$$는 principal이다. 그럼 $$p\in (q)$$로부터 $$p=qc$$로 쓸 수 있는데, $$p$$가 irreducible이고 $$q$$가 non-unit이므로 $$c$$는 unit이고 따라서 $$(p)=(q)=\mathfrak{p}$$가 prime ideal이다. 즉 $$p$$는 prime element이다.
+
+마지막으로 인수분해의 유일성을 보이자. $$up_1\cdots p_m=vq_1\cdots q_k$$가 irreducible element들의 곱이고 $$u,v$$가 unit이라 하면, $$m$$에 대한 귀납법을 사용한다. $$m=0$$이면 좌변이 unit이므로 $$k=0$$이어야 한다. $$m\geq 1$$이면 $$p_m$$이 prime이므로 적당한 $$j$$에 대하여 $$p_m\mid q_j$$이고, $$q_j$$가 irreducible이며 $$p_m$$이 non-unit이므로 $$q_j=wp_m$$이도록 하는 unit $$w$$가 존재한다. 그럼 $$A$$가 domain이므로 양변에서 $$p_m$$을 소거하여 귀납가정을 적용하면 적절한 재배열 하에서 각 $$p_i$$와 $$q_i$$가 associate임을 얻는다. 따라서 $$A$$는 UFD이다. ([\[환론\] §정역, ⁋정의 16](/ko/math/ring_theory/integral_domains#def16))
 
 </details>
 

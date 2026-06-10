@@ -11,6 +11,7 @@ sidebar:
 date: 2024-12-15
 last_modified_at: 2024-12-15
 weight: 19
+published: false
 
 ---
 
@@ -64,7 +65,27 @@ $$X$$가 $$d$$차원 위상공간이라 하고, $$Y$$의 임의의 open covering
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+$$Y,Z$$가 닫힌 부분공간이므로 [명제 3](#prop3)에 의해 $$\max(\dim Y,\dim Z)\leq \dim X$$이다. 따라서 $$m=\max(\dim Y,\dim Z)$$라 할 때 $$\dim X\leq m$$임을 보이면 충분하다.
 
+우선 다음을 관찰하자. 위상공간 $$T$$가 $$\dim T\leq m$$을 만족하고 $$T$$의 유한한 open covering $$(V_1,\ldots,V_k)$$이 주어졌다면, 각각의 $$i$$마다 $$W_i\subseteq V_i$$이고 order가 $$m+1$$ 이하인 open covering $$(W_1,\ldots,W_k)$$이 존재한다. 여기서 일부 $$W_i$$는 공집합일 수 있다. 실제로 차원의 정의에 의해 $$(V_i)$$의 order $$\leq m+1$$짜리 open refinement $$(O_j)_{j\in J}$$가 존재하고, 각각의 $$j$$마다 $$O_j\subseteq V_{i(j)}$$이도록 하는 index $$i(j)$$를 하나씩 택한 후
+
+$$W_i=\bigcup_{i(j)=i}O_j$$
+
+로 정의하면 된다. $$(W_i)$$가 $$(V_i)$$의 shrinking인 open covering임은 자명하고, 만일 점 $$x$$가 서로 다른 $$W_{i_1},\ldots,W_{i_r}$$들에 속한다면 $$x$$는 $$i(j_1)=i_1,\ldots,i(j_r)=i_r$$이도록 하는 서로 다른 $$O_{j_1},\ldots,O_{j_r}$$들에 속해야 하므로 $$r\leq m+1$$이다.
+
+이제 $$X$$의 임의의 open covering이 주어졌다 하자. $$X$$가 compact이므로 유한한 subcovering $$(U_1,\ldots,U_k)$$을 택할 수 있고, 이것의 order $$\leq m+1$$짜리 open refinement를 찾으면 충분하다.
+
+첫 번째 단계로 $$Y$$를 처리하자. $$(U_i\cap Y)$$는 $$Y$$의 유한한 open covering이고 $$\dim Y\leq m$$이므로, 위의 관찰에 의하여 $$B_i\subseteq U_i\cap Y$$이고 order $$\leq m+1$$이며 $$Y$$를 덮는, $$Y$$에서 열린 집합들 $$(B_i)$$가 존재한다. 각각의 $$i$$마다 $$\tilde{B}_i\cap Y=B_i$$이도록 하는 $$X$$의 열린집합 $$\tilde{B}_i$$를 택하고, 필요하다면 $$U_i$$와 교집합하여 $$\tilde{B}_i\subseteq U_i$$라 가정하자. 이제
+
+$$W_i=\tilde{B}_i\cup (U_i\setminus Y)$$
+
+로 정의하면, $$Y$$가 닫힌집합이므로 $$W_i$$들은 열린집합이고 $$W_i\subseteq U_i$$이다. $$Y$$의 점들은 어떤 $$B_i$$에 속하고 $$Y$$ 바깥의 점들은 어떤 $$U_i\setminus Y$$에 속하므로 $$(W_i)$$는 $$X$$의 open covering이다. 마지막으로 $$y\in Y$$에 대하여 $$W_i\cap Y=\tilde{B}_i\cap Y=B_i$$이므로, $$y$$가 속하는 $$W_i$$들의 개수는 $$y$$가 속하는 $$B_i$$들의 개수와 같아 $$m+1$$ 이하이다.
+
+두 번째 단계로 같은 구성을 $$Z$$와 covering $$(W_i)$$에 적용하자. 즉 $$(W_i\cap Z)$$에 위의 관찰을 적용하여 $$C_i\subseteq W_i\cap Z$$이고 order $$\leq m+1$$이며 $$Z$$를 덮는, $$Z$$에서 열린 집합들 $$(C_i)$$를 얻고, $$\tilde{C}_i\subseteq W_i$$, $$\tilde{C}_i\cap Z=C_i$$이도록 하는 $$X$$의 열린집합들 $$\tilde{C}_i$$를 택한 후
+
+$$V_i=\tilde{C}_i\cup(W_i\setminus Z)$$
+
+로 정의한다. 그럼 첫 번째 단계에서와 마찬가지로 $$(V_i)$$는 $$X$$의 open covering이고 $$V_i\subseteq W_i\subseteq U_i$$이며, $$Z$$의 점들은 많아야 $$m+1$$개의 $$V_i$$들에 속한다. 한편 $$Y$$의 점 $$y$$에 대해서는 $$y\in V_i$$일 때마다 $$y\in W_i$$이므로, $$y$$가 속하는 $$V_i$$들의 개수는 첫 번째 단계에서 통제한 $$W_i$$들의 개수 이하, 즉 $$m+1$$ 이하이다. $$X=Y\cup Z$$이므로 $$(V_i)$$는 주어진 covering의 order $$\leq m+1$$짜리 open refinement이고, 따라서 $$\dim X\leq m$$이다.
 
 </details>
 
@@ -78,7 +99,29 @@ $$X$$가 $$d$$차원 위상공간이라 하고, $$Y$$의 임의의 open covering
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+$$A\subseteq\mathbb{R}^n$$이 compact subspace라 하고, $$A$$의 임의의 open covering이 주어졌다 하자. Compact함에 의해 유한한 subcovering $$(U_1,\ldots,U_k)$$을 택할 수 있다.
 
+우선 적당한 $$\delta>0$$이 존재하여, diameter가 $$\delta$$ 미만인 $$A$$의 임의의 부분집합이 어떤 $$U_i$$에 포함된다는 것을 보이자. 각각의 $$x\in A$$마다 $$x\in U_{i(x)}$$이도록 하는 index $$i(x)$$를 택하고, $$A$$ 안에서의 열린 공이 $$B(x,2r_x)\subseteq U_{i(x)}$$를 만족하도록 하는 $$r_x>0$$을 택하자. 그럼 $$(B(x,r_x))_{x\in A}$$는 $$A$$의 open covering이므로 유한 개의 $$B(x_1,r_{x_1}),\ldots,B(x_l,r_{x_l})$$이 $$A$$를 덮고, $$\delta=\min(r_{x_1},\ldots,r_{x_l})$$로 두면 된다. 실제로 diameter $$<\delta$$인 집합 $$S$$의 한 점 $$y$$가 $$B(x_j,r_{x_j})$$에 속한다면, 삼각부등식에 의해 $$S\subseteq B(x_j,2r_{x_j})\subseteq U_{i(x_j)}$$이기 때문이다.
+
+이제 $$\mathbb{R}^n$$ 전체의 open covering으로서, order가 $$n+1$$ 이하이고 모든 원소의 diameter가 일정한 상수 이하인 것을 만든다. 정수점들을 꼭짓점으로 하는 단위격자를 생각하자. 여기서 *face*란 각각의 성분이 단위구간 $$[k_i,k_i+1]$$ 혹은 한 점 $$\{k_i\}$$ ($$k_i\in\mathbb{Z}$$)인 곱집합을 뜻하고, face의 차원은 성분 중 구간이 사용된 개수이다. $$d$$차원 face들의 모임을 $$\mathcal{F}_d$$라 하고, $$d$$차원 이하의 face들의 합집합을 $$\sk_d$$라 하자. 그럼 $$\sk_n=\mathbb{R}^n$$이다. 각각의 $$d=0,1,\ldots,n$$에 대하여 $$r_d=8^{-(d+1)}$$로 두고, 각각의 $$F\in\mathcal{F}_d$$마다
+
+$$U_F=\left\{x\in\mathbb{R}^n\;\middle\vert\; \operatorname{dist}(x,F)<2r_d,\quad \operatorname{dist}(x,\sk_{d-1})>r_{d-1}\right\}$$
+
+으로 정의하자. $$d=0$$일 때는 둘째 조건을 생략한다. 거리함수들이 연속이므로 $$U_F$$들은 열린집합이다.
+
+이들이 $$\mathbb{R}^n$$을 덮는 것을 보이자. 임의의 $$x$$에 대하여 $$\operatorname{dist}(x,\sk_d)\leq r_d$$를 만족하는 가장 작은 $$d$$를 택하자. $$\operatorname{dist}(x,\sk_n)=0\leq r_n$$이므로 이러한 $$d$$가 존재한다. 그럼 $$d$$의 최소성에 의하여 $$d>0$$인 경우 $$\operatorname{dist}(x,\sk_{d-1})>r_{d-1}$$이고, $$\operatorname{dist}(x,\sk_d)\leq r_d<2r_d$$이므로 $$\operatorname{dist}(x,F)<2r_d$$이도록 하는 $$F\in\mathcal{F}_d$$가 존재한다. 즉 $$x\in U_F$$이다.
+
+다음으로 같은 차원의 서로 다른 두 face $$F\neq F'\in\mathcal{F}_d$$에 대하여 $$U_F\cap U_{F'}=\emptyset$$임을 보이자. $$x\in U_F\cap U_{F'}$$가 존재한다면 $$\lvert x-y\rvert<2r_d$$, $$\lvert x-y'\rvert<2r_d$$이도록 하는 $$y\in F$$, $$y'\in F'$$이 존재하고, 특히 $$\lvert y-y'\rvert<4r_d\leq 1/2$$이다. 우선 $$F\cap F'\neq\emptyset$$인데, 그렇지 않다면 어느 한 성분에서 두 face의 구간들이 서로소이고, 정수 끝점을 갖는 서로소인 구간들 사이의 거리는 $$1$$ 이상이므로 $$\lvert y-y'\rvert\geq 1$$이 되어 모순이기 때문이다. 특히 $$d=0$$인 경우는 이미 모순이 얻어졌으므로, $$d>0$$이라 하자. $$F\cap F'$$는 성분별 교집합으로 주어지는 face이고, 만일 그 차원이 $$d$$라면 구간이 사용된 $$d$$개의 성분에서 두 face의 단위구간이 일치하고 나머지 성분에서도 두 점이 일치하여 $$F=F'$$이 되므로, $$F\cap F'$$의 차원은 $$d-1$$ 이하이다. 즉 $$F\cap F'\subseteq\sk_{d-1}$$이다.
+
+이제 각 성분에서 $$y_i$$에 가장 가까운 $$F_i'$$의 점을 $$z_i$$라 하자. $$y_i\in F_i'$$라면 $$z_i=y_i\in F_i\cap F_i'$$이고, 그렇지 않다면 $$z_i$$는 $$F_i'$$의 끝점인데 $$F_i\cap F_i'$$의 임의의 점이 $$y_i$$와 $$z_i$$를 기준으로 $$z_i$$ 너머에 있으므로 구간 $$F_i$$가 $$y_i$$와 그 점을 모두 포함한다는 것으로부터 $$z_i\in F_i\cap F_i'$$이다. 또 $$y_i'\in F_i'$$이므로 $$\lvert z_i-y_i\rvert=\operatorname{dist}(y_i,F_i')\leq\lvert y_i-y_i'\rvert$$이다. 따라서 $$z=(z_i)\in F\cap F'\subseteq \sk_{d-1}$$이고 $$\lvert y-z\rvert\leq\lvert y-y'\rvert$$이므로
+
+$$\operatorname{dist}(x,\sk_{d-1})\leq \lvert x-y\rvert+\lvert y-z\rvert\leq \lvert x-y\rvert+\lvert y-y'\rvert<2r_d+4r_d=6r_d<8r_d=r_{d-1}$$
+
+이 되어 $$x\in U_F$$의 둘째 조건에 모순이다.
+
+따라서 각각의 점은 차원 $$d$$마다 많아야 하나의 $$U_F$$ ($$F\in\mathcal{F}_d$$)에 속하고, 차원은 $$0$$부터 $$n$$까지이므로 $$(U_F)$$의 order는 $$n+1$$ 이하이다. 또 각각의 $$U_F$$는 $$F$$로부터 거리 $$2r_d$$ 미만의 점들로 이루어져 있으므로 그 diameter는 $$\operatorname{diam}F+4r_d\leq\sqrt{n}+1/2$$ 이하이다.
+
+마지막으로 scaling을 적용하자. $$\lambda=\delta/(\sqrt{n}+1)$$로 두고 위에서 만든 covering을 homeomorphism $$x\mapsto\lambda x$$로 옮기면, order $$\leq n+1$$이고 모든 원소의 diameter가 $$\lambda(\sqrt{n}+1/2)<\delta$$인 $$\mathbb{R}^n$$의 open covering $$\mathcal{W}$$를 얻는다. 그럼 $$(W\cap A)_{W\in\mathcal{W}}$$는 $$A$$의 open covering이고 그 order는 여전히 $$n+1$$ 이하이며, 각각의 원소가 diameter $$<\delta$$를 가지므로 첫 단계에서 찾은 Lebesgue number의 성질에 의해 어떤 $$U_i$$에 포함된다. 즉 이는 주어진 covering의 order $$\leq n+1$$짜리 open refinement이고, 따라서 $$\dim A\leq n$$이다.
 
 </details>
 
