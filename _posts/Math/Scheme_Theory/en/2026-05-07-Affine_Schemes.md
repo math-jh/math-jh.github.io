@@ -101,7 +101,7 @@ $$S(f)^{-1}A\cong S_f^{-1}A$$
 
 Moreover, if $$S(g)\subseteq S(f)$$, then the following diagram
 
-![localizations](/assets/images/Math/Algebraic_Varieties/Affine_schemes-1.png){:style="width:10.4em" class="invert" .align-center}
+![localizations](/assets/images/Math/Scheme_Theory/Affine_Schemes-1.png){:style="width:10.4em" class="invert" .align-center}
 
 commutes.
 
@@ -111,7 +111,7 @@ commutes.
 
 First, let us denote the canonical morphisms by $$\epsilon(f): A \rightarrow S(f)^{-1}A$$ and $$\epsilon_f:A \rightarrow S_f^{-1}A$$. Then since $$D(f)=D(f^n)$$ for any $$n\geq 1$$, we have $$f^n\in S(f)$$, and therefore the image of $$S_f$$ under $$\epsilon(f)$$ consists entirely of units in $$S(f)^{-1}A$$. Hence from [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we obtain the following commutative diagram
 
-![universal_property-1](/assets/images/Math/Algebraic_Varieties/Affine_schemes-2.png){:style="width:8.5em" class="invert" .align-center}
+![universal_property-1](/assets/images/Math/Scheme_Theory/Affine_Schemes-2.png){:style="width:8.5em" class="invert" .align-center}
 
 .
 
@@ -125,21 +125,21 @@ $$\frac{g}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
 
 we know that $$g$$ is a unit in $$S_f^{-1}A$$. Therefore, again from [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we obtain the following commutative diagram
 
-![universal_property-2](/assets/images/Math/Algebraic_Varieties/Affine_schemes-3.png){:style="width:8.5em" class="invert" .align-center}
+![universal_property-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-3.png){:style="width:8.5em" class="invert" .align-center}
 
 That $$\overline{\epsilon(f)}$$ and $$\overline{\epsilon_f}$$ are inverse to each other is obvious from uniqueness.
 
 Now suppose $$S(g)\subseteq S(f)$$. Then $$\widehat{\epsilon(f)}:S(g)^{-1}A \rightarrow S(f)^{-1}A$$ is again obviously defined via [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) by the following diagram
 
-![universal_property-3](/assets/images/Math/Algebraic_Varieties/Affine_schemes-4.png){:style="width:8.5em" class="invert" .align-center}
+![universal_property-3](/assets/images/Math/Scheme_Theory/Affine_Schemes-4.png){:style="width:8.5em" class="invert" .align-center}
 
 and since $$S(g)\subseteq S(f)\iff D(f)\subseteq D(g)$$, from the equivalence ($$\ast$$) above we know that $$g$$ is a unit in $$S_f^{-1}A$$, and therefore so are all $$g^k$$. From this we obtain the following commutative diagram involving $$\widecheck{\epsilon_f}: S_g^{-1}A \rightarrow S_f^{-1}A$$:
 
-![universal_property-4](/assets/images/Math/Algebraic_Varieties/Affine_schemes-5.png){:style="width:8em" class="invert" .align-center}
+![universal_property-4](/assets/images/Math/Scheme_Theory/Affine_Schemes-5.png){:style="width:8em" class="invert" .align-center}
 
 Then that the diagram in question commutes is obvious from considering the following diagram:
 
-![universal_property-5](/assets/images/Math/Algebraic_Varieties/Affine_schemes-6.png){:style="width:17em" class="invert" .align-center}
+![universal_property-5](/assets/images/Math/Scheme_Theory/Affine_Schemes-6.png){:style="width:17em" class="invert" .align-center}
 
 That is, from
 
@@ -265,7 +265,7 @@ $$A_\mathfrak{p}\cong \mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scri
 
 Moreover, for any $$f\in A$$ satisfying $$\mathfrak{p}\in D(f)$$, the following diagram
 
-![stalk_and_localization-1](/assets/images/Math/Algebraic_Varieties/Affine_schemes-7.png){:style="width:13.2em" class="invert" .align-center}
+![stalk_and_localization-1](/assets/images/Math/Scheme_Theory/Affine_Schemes-7.png){:style="width:13.2em" class="invert" .align-center}
 
 commutes.
 
@@ -279,7 +279,7 @@ $$\mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathscr{
 
 by [[Topology] §Bases of Topological Spaces, ⁋Proposition 5](/en/math/topology/topological_bases#prop5). On the other hand, since $$\mathfrak{p}\in D(f)\iff f\not\in \mathfrak{p}$$, we obtain the following diagram
 
-![stalk_and_localization-2](/assets/images/Math/Algebraic_Varieties/Affine_schemes-8.png){:style="width:32em" class="invert" .align-center}
+![stalk_and_localization-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-8.png){:style="width:32em" class="invert" .align-center}
 
 and therefore proving the given isomorphism is the same as proving the following algebraic isomorphism
 
@@ -373,11 +373,11 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 First, putting $$f=1$$ in [Lemma 8](#lem8), we obtain the following diagram
 
-![faithuful](/assets/images/Math/Algebraic_Varieties/Affine_schemes-9.png){:style="width:32em" class="invert" .align-center}
+![faithuful](/assets/images/Math/Scheme_Theory/Affine_Schemes-9.png){:style="width:32em" class="invert" .align-center}
 
 In this diagram, the vertical maps are all isomorphisms, and we know that all faces except the following one
 
-![commuting_square](/assets/images/Math/Algebraic_Varieties/Affine_schemes-10.png){:style="width:11em" class="invert" .align-center}
+![commuting_square](/assets/images/Math/Scheme_Theory/Affine_Schemes-10.png){:style="width:11em" class="invert" .align-center}
 
 are commuting squares. Therefore, in the above diagram the map $$A \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$ is determined equally no matter which path we take, and applying [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) to this map uniquely determines $$A_{\varphi(\mathfrak{q})} \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$. From this we know that *all* faces of the above diagram are commuting squares. That is, $$\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$$ is also a local homomorphism, and therefore $$\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$. Now that $$\phi$$ equals $$\varphi^\sharp$$ on the structure sheaf follows by considering only restriction maps, so the desired claim is proved from the above.
 
@@ -401,7 +401,7 @@ If a locally ringed space $$(X, \mathscr{O}_X)$$ is an affine scheme, then by ex
 
 A notable fact in the proof of [Proposition 11](#prop11) is that the hypothesis that $$(X, \mathscr{O}_X)$$ is an affine scheme is unnecessary. That is, even if we drop the assumption $$(X, \mathscr{O}_X)\cong(\Spec B, \mathscr{O}_{\Spec B})$$ and use the following diagram instead of the diagram in [Proposition 11](#prop11),
 
-![adjoint](/assets/images/Math/Algebraic_Varieties/Affine_schemes-11.png){:style="width:32em" class="invert" .align-center}
+![adjoint](/assets/images/Math/Scheme_Theory/Affine_Schemes-11.png){:style="width:32em" class="invert" .align-center}
 
 we can carry out a similar argument, and in this case the $$B$$ in the conclusion is replaced by $$\Gamma(X, \mathscr{O}_X)$$. Since $$\mathscr{O}_X$$ is data determined by $$X$$ anyway, writing this briefly as $$\Gamma(X)$$, we obtain the following theorem.
 

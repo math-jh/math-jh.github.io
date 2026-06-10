@@ -28,11 +28,11 @@ weight: 11
 
 > 다음의 diagram
 > 
-> ![fiber_diagram](/assets/images/Math/Algebraic_Varieties/Fiber_products-1.png){:style="width:11em" class="invert" .align-center}
+> ![fiber_diagram](/assets/images/Math/Scheme_Theory/Fiber_Products-1.png){:style="width:11em" class="invert" .align-center}
 > 
 > 이 commute한다. 뿐만 아니라, 식 $$\varphi_Y\circ\psi_Y=\varphi_X\circ\psi_X$$를 만족하는 임의의 $$\psi_X:Z \rightarrow X$$, $$\psi_Y:Z \rightarrow Y$$가 주어질 때마다 유일한 $$\psi:Z \rightarrow X\times_SY$$가 존재하여 $$\psi_X=\rho_X\circ\psi$$이고 $$\psi_Y=\rho_Y\circ\psi$$이다.
 > 
-> ![universal_product](/assets/images/Math/Algebraic_Varieties/Fiber_products-2.png){:style="width:16em" class="invert" .align-center}
+> ![universal_product](/assets/images/Math/Scheme_Theory/Fiber_Products-2.png){:style="width:16em" class="invert" .align-center}
 
 따라서, $$X\times_SY$$에서 $$S$$로의 canonical morphism이 존재하며, 이로부터 우리는 $$X\times_SY$$를 $$S$$-scheme으로 볼 수 있다. 뿐만 아니라, 이 관점에서 $$X\times_SY$$는 $$\Sch_{/S}$$에서의 product이기도 하다는 것이 정의로부터 자명하다.
 
@@ -64,7 +64,7 @@ $$\AffSch\cong\cRing^\op$$를 통해 $$\Spec A \rightarrow \Spec C$$, $$\Spec B 
 
 <ins id="lem3">**보조정리 3**</ins> Scheme morphism $$\varphi: Y \rightarrow Z$$와 $$Z$$의 open subscheme $$\iota: U \rightarrow Z$$가 주어졌다 하자. 그럼 다음의 diagram
 
-![open_subscheme](/assets/images/Math/Algebraic_Varieties/Fiber_products-3.png){:style="width:8.4em" class="invert" .align-center}
+![open_subscheme](/assets/images/Math/Scheme_Theory/Fiber_Products-3.png){:style="width:8.4em" class="invert" .align-center}
 
 은 fiber diagram이다.
 
@@ -88,15 +88,15 @@ $$\varphi^{-1}(U)$$가 fiber product의 universal property를 만족한다.
 
 우선 [보조정리 2](#lem2)로부터 다음의 fiber diagram 
 
-![open_fiber_product-1](/assets/images/Math/Algebraic_Varieties/Fiber_products-4.png){:style="width:10.5em" class="invert" .align-center}
+![open_fiber_product-1](/assets/images/Math/Scheme_Theory/Fiber_Products-4.png){:style="width:10.5em" class="invert" .align-center}
 
 이 존재하는 것을 안다. 이제 다음의 데이터
 
-![open_fiber_product-2](/assets/images/Math/Algebraic_Varieties/Fiber_products-5.png){:style="width:9em" class="invert" .align-center}
+![open_fiber_product-2](/assets/images/Math/Scheme_Theory/Fiber_Products-5.png){:style="width:9em" class="invert" .align-center}
 
 를 생각하면, 우리는 [보조정리 3](#lem3)으로부터 $$X\times_SY$$의 open subscheme $$\rho_Y^{-1}(Y')$$가 fiber product가 되는 것을 확인할 수 있다. 이제 일반적으로 다음의 diagram
 
-![magic_square](/assets/images/Math/Algebraic_Varieties/Fiber_products-6.png){:style="width:10.5em" class="invert" .align-center}
+![magic_square](/assets/images/Math/Scheme_Theory/Fiber_Products-6.png){:style="width:10.5em" class="invert" .align-center}
 
 에서 작은 두 사각형이 fiber diagram이라면 외곽의 큰 사각형도 fiber diagram이므로 원하는 결과를 얻는다. 
 
@@ -166,7 +166,7 @@ $$A\otimes_BB[\x_1,\ldots,\x_n]\cong A[\x_1,\ldots, \x_n]$$
 
 이 성립하는 것으로부터 다음의 diagram
 
-![adding_extra_variables](/assets/images/Math/Algebraic_Varieties/Fiber_products-7.png){:style="width:19.4em" class="invert" .align-center}
+![adding_extra_variables](/assets/images/Math/Scheme_Theory/Fiber_Products-7.png){:style="width:19.4em" class="invert" .align-center}
 
 이 fiber diagram인 것을 안다. 
 

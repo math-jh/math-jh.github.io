@@ -96,7 +96,7 @@ $$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 
 이 있으며, 이 scheme의 irreducible component는 $$\Spec\mathbb{K}[\x,\y]/(\x)$$와 $$\Spec \mathbb{K}[\x,\y]/(\y)$$이다. 
 
-![counterexamples](/assets/images/Math/Algebraic_Varieties/Properties_of_schemes-1.png){:style="width:20em" class="invert" .align-center}
+![counterexamples](/assets/images/Math/Scheme_Theory/Properties_of_Schemes-1.png){:style="width:20em" class="invert" .align-center}
 
 </div>
 

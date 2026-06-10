@@ -80,13 +80,34 @@ $$\dim A/\mathfrak{p} + \codim \mathfrak{p} = \dim A$$
 
 [§차원](/ko/math/commutative_algebra/Krull_dimension)에서 살펴본 것처럼 일반적으로 $$\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$$이다. 따라서 반대 부등식을 보이면 충분하다.
 
-$$d = \dim A$$이고 $$h = \codim \mathfrak{p}$$라 하자. Regular local ring $$(A, \mathfrak{m})$$의 regular system of parameters $$x_1, \ldots, x_d$$를 택하자. [\[가환대수학\] §매개계, ⁋명제 9](/ko/math/commutative_algebra/system_of_parameters#prop9)에 의하여, 적당한 인덱스 $$1 \le i_1 < \cdots < i_h \le d$$에 대하여 $$\mathfrak{p}$$는 $$(x_{i_1}, \ldots, x_{i_h})$$를 포함하는 minimal prime ideal이다. [따름정리 3](#cor3)에 의해 $$x_{i_1}, \ldots, x_{i_h}$$은 $$A$$-sequence이므로, [§매개계, ⁋따름정리 7](/ko/math/commutative_algebra/system_of_parameters#cor7)에 의하여 $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$이다.
+$$d = \dim A$$이고 $$h = \codim \mathfrak{p}$$라 하자. [따름정리 3](#cor3)에 의하여 regular system of parameters $$x_1, \ldots, x_d$$는 $$\mathfrak{m}$$에 속하는 $$A$$-sequence이다. 일반적으로 $$d$$차원 Noetherian local ring $$(A,\mathfrak{m})$$이 $$d$$개의 원소로 이루어진 $$A$$-sequence를 $$\mathfrak{m}$$ 안에 가질 때 $$A$$를 *Cohen--Macaulay local ring*이라 부르므로, regular local ring은 Cohen--Macaulay local ring이다. 따라서 다음 두 주장을 $$d$$에 대한 귀납법으로 보이면 충분하다.
 
-한편 $$A/(x_{i_1}, \ldots, x_{i_h})$$에서 $$\overline{\mathfrak{p}} = \mathfrak{p}/(x_{i_1}, \ldots, x_{i_h})$$는 minimal prime ideal이고, [따름정리 1](#cor1)에 의해 $$A/(x_{i_1}, \ldots, x_{i_h})$$는 integral domain이므로 $$\overline{\mathfrak{p}} = 0$$이다. 즉, $$\mathfrak{p} = (x_{i_1}, \ldots, x_{i_h})$$이며 $$A/\mathfrak{p} = A/(x_{i_1}, \ldots, x_{i_h})$$이다. 따라서
+1. $$d$$차원 Cohen--Macaulay local ring $$A$$의 임의의 associated prime $$\mathfrak{q}\in \Ass A$$는 $$\dim A/\mathfrak{q}=d$$를 만족한다.
+2. $$d$$차원 Cohen--Macaulay local ring $$A$$의 임의의 prime ideal $$\mathfrak{p}$$는 $$\dim A/\mathfrak{p}+\codim \mathfrak{p}=d$$를 만족한다.
 
-$$\dim A/\mathfrak{p} = \dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h = \dim A - \codim \mathfrak{p}$$
+$$d=0$$인 경우 두 주장 모두 자명하므로, $$d\geq 1$$이라 하고 두 주장이 $$(d-1)$$차원 Cohen--Macaulay local ring들에 대해 성립한다고 가정하자.
 
-이다.
+첫째 주장을 보이기 위해 $$\mathfrak{q}=\ann(a)\in\Ass A$$라 하자. $$x_1$$은 non-zerodivisor이므로 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의하여 $$x_1\not\in \mathfrak{q}$$이다. 우리는 $$a\not\in x_1A$$이라 가정할 수 있다. 실제로 $$a=x_1b$$라면 $$x_1$$이 non-zerodivisor이므로 $$\ann(b)=\ann(a)=\mathfrak{q}$$이고, 이 때 $$Aa\subsetneq Ab$$이다. 만일 $$Aa=Ab$$라면 $$b=ca=cx_1b$$로부터 $$(1-cx_1)b=0$$인데, $$x_1\in\mathfrak{m}$$이므로 $$1-cx_1$$은 unit이고 따라서 $$b=0$$, 곧 $$\mathfrak{q}=A$$라는 모순을 얻기 때문이다. 그러므로 $$a$$를 $$b$$로 교체하는 과정은 ascending chain condition에 의해 유한 번 안에 끝난다.
+
+이제 $$\overline{A}=A/x_1A$$라 하자. 그럼 $$\overline{A}$$는 정의에 의하여 $$\overline{A}$$-sequence $$\overline{x}_2,\ldots, \overline{x}_d$$를 그 maximal ideal 안에 가지며, $$\dim \overline{A}=d-1$$이다. 실제로 [§매개계, ⁋따름정리 7](/ko/math/commutative_algebra/system_of_parameters#cor7)에 의해 $$\dim \overline{A}\geq d-1$$이고, non-zerodivisor $$x_1$$은 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의해 $$A$$의 어떠한 minimal prime ideal에도 속하지 않으므로, $$x_1$$을 포함하는 임의의 prime ideal $$\mathfrak{q}_0$$는 $$\codim \mathfrak{q}_0\geq 1$$, 따라서 $$\dim A/\mathfrak{q}_0\leq d-1$$을 만족하기 때문이다. 특히 $$\overline{A}$$는 $$(d-1)$$차원 Cohen--Macaulay local ring이다.
+
+$$a\not\in x_1A$$이므로 $$\bar{a}\in \overline{A}$$는 $$0$$이 아니며 $$\ann_{\overline{A}}(\bar a)\supseteq (\mathfrak{q}+x_1A)/x_1A$$이다. [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의해 $$\Ass(\overline{A}\bar a)$$는 공집합이 아니고 그 원소들은 $$\ann_{\overline{A}}(\bar a)$$를 포함하며, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)에 의해 $$\Ass(\overline{A}\bar{a})\subseteq \Ass \overline{A}$$이다. 그러므로 적당한 $$\overline{\mathfrak{q}}'\in \Ass\overline{A}$$가 존재하여, 그 preimage $$\mathfrak{q}'\subseteq A$$는 $$\mathfrak{q}\subsetneq \mathfrak{q}'$$를 만족한다 ($$x_1\in\mathfrak{q}'\setminus\mathfrak{q}$$). 귀납가설의 첫째 주장에 의하여 $$\dim \overline{A}/\overline{\mathfrak{q}}'=d-1$$이므로
+
+$$\dim A/\mathfrak{q}\geq 1+\dim A/\mathfrak{q}'=1+\dim \overline{A}/\overline{\mathfrak{q}}'=d$$
+
+이고, 반대 부등식은 자명하므로 첫째 주장을 얻는다.
+
+둘째 주장을 보이자. 만일 $$h=0$$이라면 $$\mathfrak{p}$$는 minimal prime ideal이고, [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의해 $$\mathfrak{p}\in\Ass A$$이므로 첫째 주장으로부터 $$\dim A/\mathfrak{p}=d$$를 얻는다. 이제 $$h\geq 1$$이라 하자. 만일 $$\mathfrak{p}$$가 어떠한 $$\mathfrak{q}\in \Ass A$$에 포함된다면 첫째 주장과 일반 부등식으로부터 $$\codim \mathfrak{q}=0$$인데, 그럼 $$\mathfrak{p}\subseteq \mathfrak{q}$$로부터 $$h=0$$이 되어 모순이다. $$\Ass A$$는 유한집합이므로 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)), prime avoidance ([§동반소아이디얼, ⁋보조정리 2](/ko/math/commutative_algebra/associated_primes#lem2))에 의하여 어떠한 associated prime에도 속하지 않는 $$x\in \mathfrak{p}$$를 택할 수 있고, 특히 $$x$$는 non-zerodivisor이다.
+
+이제 $$\overline{A}=A/xA$$가 다시 $$(d-1)$$차원 Cohen--Macaulay local ring이라는 사실을 사용한다. 이는 depth 이론의 표준적인 결과 — non-zerodivisor에 대한 quotient는 depth와 dimension을 동시에 정확히 $$1$$씩 줄인다 — 로, 본 블로그에서는 아직 depth 이론을 다루지 않았으므로 그 증명은 [[Stacks, Lemma 10.104.2]](https://stacks.math.columbia.edu/tag/02JN)로 미룬다. $$\overline{\mathfrak{p}}=\mathfrak{p}/xA$$에 귀납가설의 둘째 주장을 적용하면
+
+$$\dim \overline{A}/\overline{\mathfrak{p}}+\codim \overline{\mathfrak{p}}=d-1$$
+
+이다. 그런데 $$\overline{A}/\overline{\mathfrak{p}}\cong A/\mathfrak{p}$$이고, $$\codim \overline{\mathfrak{p}}=\dim \overline{A}_{\overline{\mathfrak{p}}}=\dim A_\mathfrak{p}/xA_\mathfrak{p}$$이다. 한편 $$x$$는 $$A_\mathfrak{p}$$에서도 non-zerodivisor인데, $$(x/1)(b/s)=0$$이라면 적당한 $$u\not\in\mathfrak{p}$$에 대하여 $$uxb=0$$이고 $$x$$가 non-zerodivisor이므로 $$ub=0$$, 곧 $$b/s=0$$이기 때문이다. 그럼 $$x/1\in \mathfrak{p}A_\mathfrak{p}$$이므로, $$\dim\overline{A}=d-1$$의 증명과 동일한 논증을 local ring $$A_\mathfrak{p}$$에 적용하여 $$\dim A_\mathfrak{p}/xA_\mathfrak{p}=\dim A_\mathfrak{p}-1=h-1$$을 얻는다. 종합하면
+
+$$\dim A/\mathfrak{p}+(h-1)=d-1$$
+
+이므로 원하는 결과를 얻는다.
 
 </details>
 
@@ -269,5 +290,7 @@ $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-prima
 **참고문헌**
 
 **[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995. 
+
+**[Stacks]** The Stacks Project Authors. *The Stacks Project*. [https://stacks.math.columbia.edu](https://stacks.math.columbia.edu). 
 
 ---
