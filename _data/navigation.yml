@@ -1,11 +1,14 @@
 ########## 마스트헤드 ##########
+# icon: 을 지우면 글자(title)로 돌아감. 책꽂이 느낌을 원하면 grid_view → library_books 로만 교체.
 main:
   - title: "카테고리"
     url: ko/categories/
     lang: ko
+    icon: grid_view
   - title: "Categories"
     url: en/categories/
     lang: en
+    icon: grid_view
 
 ########## 본문 사이드바 ##########
 

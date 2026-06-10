@@ -8,15 +8,16 @@
           {% unless logo_path == empty %}
             <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
           {% endunless %}
-          <div class="site-title" onclick="lang_home()" style="cursor:pointer; color:#ccc">
-            {{ site.masthead_title | default: site.title }}
+          <div class="site-title" onclick="lang_home()" style="cursor:pointer">
+            <!-- E5 wordmark: tracked serif caps, BOX turns brass on hover (_masthead.scss) -->
+            BLACK<span class="site-title__box">BOX</span>
           </div>
         {% else %}
           {% unless logo_path == empty %}
             <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
           {% endunless %}
           <a class="site-title" href="{{ '/' | relative_url }}">
-            {{ site.masthead_title | default: site.title }}
+            BLACK<span class="site-title__box">BOX</span>
             {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
           </a>
         {% endif %}
@@ -24,11 +25,11 @@
           {%- for link in site.data.navigation.main -%}
             {%- if link.lang -%}
               <li class="masthead__menu-item" data-lang="{{ link.lang }}">
-                <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                <a href="{{ link.url | relative_url }}" title="{{ link.description | default: link.title }}"{% if link.icon %} aria-label="{{ link.title }}"{% endif %}>{% if link.icon %}<i class="material-icons md-24" aria-hidden="true" style="vertical-align:-.2em;">{{ link.icon }}</i>{% else %}{{ link.title }}{% endif %}</a>
               </li>
             {%- else -%}
               <li class="masthead__menu-item">
-                <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                <a href="{{ link.url | relative_url }}" title="{{ link.description | default: link.title }}"{% if link.icon %} aria-label="{{ link.title }}"{% endif %}>{% if link.icon %}<i class="material-icons md-24" aria-hidden="true" style="vertical-align:-.2em;">{{ link.icon }}</i>{% else %}{{ link.title }}{% endif %}</a>
               </li>
             {%- endif -%}
           {%- endfor -%}
