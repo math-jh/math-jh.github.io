@@ -50,10 +50,24 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-  font-weight: bold;
-  font-size: 1.5em;        // larger wordmark (was inheriting base)
-  letter-spacing: 0.01em;
+  /* E5 wordmark — tracked serif caps (matches hero serif voice) */
+  font-family: $serif;
+  font-weight: 400;
+  font-size: 1em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: $masthead-link-color;
   // z-index: 20;
+}
+
+/* "BOX" half of the wordmark — quiet by default, brass on hover */
+.site-title__box {
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.site-title:hover .site-title__box {
+  color: $masthead-link-color-hover;
 }
 
 .site-subtitle {
@@ -94,3 +108,23 @@
     font-weight: 700;
   }
 }
+
+/* ── Right-cluster refinements (structural, applies in light + dark) ───────── */
+
+/* Even spacing among the right-side controls: category icon · search · settings.
+   greedy-nav gives <a> links 1rem side-margins but the search/settings <button>s
+   get none, so category↔search read wider than search↔settings. Normalise. */
+.greedy-nav {
+  .visible-links a   { margin: 0 0.4rem; }
+  .search__toggle    { margin: 0 0.4rem; }
+  .settings-dropdown { margin-left: 0.4rem; }
+}
+
+/* Category is an icon now — drop the growing-underline hover for icon nav links. */
+.greedy-nav .visible-links a:has(i.material-icons)::before { content: none; }
+
+/* The language-selection page (/) is pre-language — hide the category menu there
+   (masthead is include_cached/language-agnostic, so scope by the page's hero).
+   Hide only the item, NOT the .visible-links ul — it's the flex:1 spacer that
+   keeps search/settings pushed to the right edge. */
+body:has(.lang-hero) .greedy-nav .visible-links > li { display: none; }
