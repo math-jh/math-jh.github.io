@@ -11,6 +11,7 @@ sidebar:
 date: 2024-08-18
 last_modified_at: 2024-09-23
 weight: 3
+published: false
 
 ---
 
@@ -74,7 +75,21 @@ $$M$$이 finitely generated $$A$$-module인 것은 이러한 family를 유한하
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+각각의 $$x\in X$$마다, $$x$$를 direct sum의 원소로 나타낼 때 $$0$$이 아닌 성분들의 index들의 집합을 $$S(x)\subseteq I$$라 하자. Direct sum의 정의에 의하여 각각의 $$S(x)$$는 유한집합이다.
 
+우선 $$I=\bigcup_{x\in X}S(x)$$임을 보이자. 만일 어떤 $$i_0\in I$$가 어느 $$S(x)$$에도 속하지 않는다면 $$X$$의 원소들은 모두 $$i_0$$번째 성분이 $$0$$이고, 따라서 $$X$$의 원소들의 임의의 일차결합도 그러하다. 그런데 $$N_{i_0}\neq 0$$이므로 $$i_0$$번째 성분이 $$0$$이 아닌 $$M$$의 원소가 존재하고, 이는 $$X$$가 $$M$$을 생성한다는 가정에 모순이다.
+
+다음으로 $$X$$는 무한집합이어야 한다. 그렇지 않다면 $$I=\bigcup_{x\in X}S(x)$$가 유한집합들의 유한한 합집합이 되어 유한해지므로, $$I$$가 무한하다는 가정에 모순이기 때문이다.
+
+마지막으로 $$\card I\leq\card X$$를 보인다. 각각의 $$i\in I$$마다 $$i\in S(x(i))$$이도록 하는 $$x(i)\in X$$를 하나씩 택하고, 각각의 $$x\in X$$마다 유한집합 $$S(x)$$에서 $$\mathbb{N}$$으로의 injection $$\nu_x$$를 하나씩 택하자. 그럼 함수
+
+$$I \rightarrow X\times\mathbb{N};\qquad i\mapsto \bigl(x(i),\nu_{x(i)}(i)\bigr)$$
+
+는 injection이다. 실제로 $$\bigl(x(i),\nu_{x(i)}(i)\bigr)=\bigl(x(j),\nu_{x(j)}(j)\bigr)$$라면 우선 $$x(i)=x(j)$$이고, 이를 $$x$$라 하면 $$\nu_x(i)=\nu_x(j)$$와 $$\nu_x$$의 injectivity로부터 $$i=j$$이기 때문이다. 따라서
+
+$$\card I\leq \card(X\times\mathbb{N})=\card X\cdot\aleph_0\leq \card X$$
+
+이고, 마지막 부등식은 $$X$$가 무한집합이라는 것과 [\[집합론\] §자연수, ⁋따름정리 16](/ko/math/set_theory/natural_numbers#cor16)에 따른 것이다.
 
 </details>
 

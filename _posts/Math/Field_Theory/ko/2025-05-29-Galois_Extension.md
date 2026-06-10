@@ -107,8 +107,8 @@ $$(1)\implies (5)\implies (3)\iff (4)\implies (2)$$
 
 $$f(\x)=\prod_{i=1}^d (\x- a_i), \qquad a_i\in \overline{\mathbb{K}}$$
 
-으로 표현된다. 이제 각각의 $$a_i$$들은 conjugate이고 따라서 가정에 의해 이들이 모두 $$\mathbb{L}$$에 속해야한다. 
-pf
+으로 표현된다. 이제 각각의 $$a_i$$들은 conjugate이고 따라서 가정에 의해 이들이 모두 $$\mathbb{L}$$에 속해야한다. 즉 $$f$$는 $$\mathbb{L}[\x]$$ 안에서 일차식들의 곱으로 쪼개진다.
+
 </details>
 
 이로부터 다음이 성립한다. 
@@ -140,6 +140,22 @@ pf
 <ins id="prop7">**명제 7**</ins> $$\mathbb{K}$$의 algebraic closure $$\overline{\mathbb{K}}$$ 안에서의 quasi-Galois extension들 $$\mathbb{L}_i$$이 주어졌다 하자. 그럼 $$\bigcap \mathbb{L}_i$$와 $$\mathbb{K}(\bigcup \mathbb{L}_i)$$도 모두 quasi-Galois이다. 
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+두 extension 모두 $$\overline{\mathbb{K}}$$의 subextension이므로 algebraic이고, 따라서 [명제 5](#prop5)의 셋째 조건만 확인하면 충분하다. $$\overline{\mathbb{K}}$$의 임의의 $$\mathbb{K}$$-automorphism $$u$$가 주어졌다 하자. 각각의 $$\mathbb{L}_i$$가 quasi-Galois이므로, 다시 [명제 5](#prop5)에 의하여 $$u(\mathbb{L}_i)=\mathbb{L}_i$$이다.
+
+우선 $$u$$가 bijective이므로
+
+$$u\left(\bigcap_i\mathbb{L}_i\right)=\bigcap_iu(\mathbb{L}_i)=\bigcap_i\mathbb{L}_i$$
+
+이다. 한편 $$u$$는 $$\mathbb{K}$$를 고정하는 field automorphism이므로, 임의의 부분집합 $$S\subseteq\overline{\mathbb{K}}$$에 대하여 $$u(\mathbb{K}(S))=\mathbb{K}(u(S))$$가 성립한다. 이를 $$S=\bigcup_i\mathbb{L}_i$$에 적용하면
+
+$$u\left(\mathbb{K}\left(\bigcup_i\mathbb{L}_i\right)\right)=\mathbb{K}\left(\bigcup_iu(\mathbb{L}_i)\right)=\mathbb{K}\left(\bigcup_i\mathbb{L}_i\right)$$
+
+이므로 원하는 결과를 얻는다.
+
+</details>
 
 특히 $$\overline{\mathbb{K}}$$의 임의의 원소들의 집합 $$S$$에 대하여, 이를 포함하는 quasi-Galois extenson 중 가장 작은 것을 생각할 수 있다. 이는 정의에 의해, $$S$$의 각 원소들의 conjugate들을 모두 모은 후, 이들로 생성되는 $$\mathbb{K}$$의 extension이다. 이를 $$S$$에 의해 생성되는 quasi-Galois extension이라 부른다. 
 
@@ -193,12 +209,28 @@ $$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$S$ the set of comjugates of $x$ in $
 <ins id="prop10">**명제 10**</ins> $$\mathbb{K}$$의 algebraic closure $$\overline{\mathbb{K}}$$ 안에서의 Galois extension들 $$\mathbb{L}_i$$이 주어졌다 하자. 그럼 $$\bigcap \mathbb{L}_i$$와 $$\mathbb{K}(\bigcup \mathbb{L}_i)$$도 모두 Galois이다. 
  
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[정리 8](#thm8)의 둘째 조건에 의하여 Galois extension은 separable quasi-Galois extension과 같은 말이다. 두 extension이 quasi-Galois인 것은 [명제 7](#prop7)에서 보았으므로 separable인 것만 확인하면 된다.
+
+우선 $$\bigcap_i\mathbb{L}_i$$는 separable extension $$\mathbb{L}_{i_0}/\mathbb{K}$$의 subextension이므로 separable이다. ([§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)) 한편 $$\bigcup_i\mathbb{L}_i$$의 원소들은 각각 separable extension의 원소이므로 모두 $$\mathbb{K}$$에 대해 separable element들이고 ([§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)의 첫째 결과), 따라서 $$\mathbb{K}(\bigcup_i\mathbb{L}_i)$$는 separable element들로 생성되는 extension이 되어 같은 명제의 둘째 결과에 의해 separable이다.
+
+</details>
 
 <div class="proposition" markdown="1">
 
 <ins id="prop11">**명제 11**</ins> Galois extension $$\mathbb{L}/\mathbb{K}$$와 finite degree subextension $$\mathbb{M}/\mathbb{K}$$가 주어졌다 하자. 그럼 $$\mathbb{M}$$을 포함하고, finite degree Galois인 $$\mathbb{L}/\mathbb{K}$$의 적당한 subextension $$\mathbb{N}/\mathbb{K}$$이 존재한다.
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\mathbb{M}/\mathbb{K}$$가 finite degree이므로 $$\mathbb{M}=\mathbb{K}(x_1,\ldots,x_n)$$으로 쓸 수 있다. $$S$$를 $$x_1,\ldots,x_n$$들의 ($$\overline{\mathbb{K}}$$에서의) conjugate들을 모두 모아둔 집합이라 하자. 각각의 $$x_i$$는 algebraic이므로 그 conjugate은 유한 개 뿐이고 ([명제 3](#prop3)), $$\mathbb{L}/\mathbb{K}$$가 quasi-Galois이므로 [명제 5](#prop5)의 둘째 조건에 의하여 이들이 모두 $$\mathbb{L}$$에 속한다. 즉 $$S$$는 $$\mathbb{L}$$의 유한 부분집합이고, $$\mathbb{N}=\mathbb{K}(S)$$는 유한히 많은 algebraic element들로 생성되므로 $$\mathbb{M}$$을 포함하는 finite degree subextension이다.
+
+이제 $$\mathbb{N}/\mathbb{K}$$가 Galois임을 보이자. 우선 $$\overline{\mathbb{K}}$$의 임의의 $$\mathbb{K}$$-automorphism $$u$$는 conjugate들을 conjugate들로 보내므로 $$u(S)=S$$이고, 따라서 $$u(\mathbb{N})=\mathbb{K}(u(S))=\mathbb{N}$$이 되어 [명제 5](#prop5)에 의해 $$\mathbb{N}/\mathbb{K}$$는 quasi-Galois이다. 한편 $$\mathbb{N}$$은 separable extension $$\mathbb{L}/\mathbb{K}$$의 subextension이므로 separable이고 ([§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)), 따라서 [정리 8](#thm8)의 둘째 조건에 의해 Galois이다.
+
+</details>
 
 ## 갈루아 군
 
@@ -227,3 +259,11 @@ $$\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K});\qquad \sigm
 은 surjective이다.
 
 </div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 이 함수가 잘 정의되는 것을 확인하자. 임의의 $$\sigma\in\Gal(\mathbb{L}/\mathbb{K})$$에 대하여, [명제 1](#prop1)에 의해 $$\sigma$$를 확장하는 $$\overline{\mathbb{K}}$$의 $$\mathbb{K}$$-automorphism $$v$$가 존재한다. $$\mathbb{M}/\mathbb{K}$$가 quasi-Galois이므로 [명제 5](#prop5)에 의해 $$v(\mathbb{M})=\mathbb{M}$$이고, 따라서 $$\sigma\vert_\mathbb{M}=v\vert_\mathbb{M}$$은 $$\mathbb{M}$$의 $$\mathbb{K}$$-automorphism, 즉 $$\Gal(\mathbb{M}/\mathbb{K})$$의 원소이다.
+
+이제 surjectivity를 보이자. 임의의 $$\tau\in\Gal(\mathbb{M}/\mathbb{K})$$가 주어졌다 하면, $$\tau$$를 $$\mathbb{M}$$에서 $$\overline{\mathbb{K}}$$로의 $$\mathbb{K}$$-homomorphism으로 보고 다시 [명제 1](#prop1)을 적용하여 $$\tau$$를 확장하는 $$\overline{\mathbb{K}}$$의 $$\mathbb{K}$$-automorphism $$u$$를 얻는다. 그럼 $$\mathbb{L}/\mathbb{K}$$가 quasi-Galois이므로 $$u(\mathbb{L})=\mathbb{L}$$이고, $$\sigma=u\vert_\mathbb{L}$$은 $$\Gal(\mathbb{L}/\mathbb{K})$$의 원소이며 $$\sigma\vert_\mathbb{M}=u\vert_\mathbb{M}=\tau$$이다.
+
+</details>

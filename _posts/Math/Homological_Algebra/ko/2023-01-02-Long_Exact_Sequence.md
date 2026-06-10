@@ -11,6 +11,7 @@ sidebar:
 date: 2023-01-02
 last_modified_at: 2024-10-31
 weight: 3
+published: false
 
 ---
 
@@ -86,7 +87,35 @@ $$\coker(d_n^A)\rightarrow\coker(d_n^B)\rightarrow\coker(d_n^C)\rightarrow 0$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+두 short exact sequence를 각각
 
+$$0 \rightarrow A_\bullet\overset{u}{\rightarrow}B_\bullet\overset{v}{\rightarrow}C_\bullet \rightarrow 0,\qquad 0 \rightarrow A_\bullet'\overset{u'}{\rightarrow}B_\bullet'\overset{v'}{\rightarrow}C_\bullet' \rightarrow 0$$
+
+이라 적고, 이들 사이의 chain map들을 $$f:A_\bullet \rightarrow A_\bullet'$$, $$g:B_\bullet \rightarrow B_\bullet'$$, $$h:C_\bullet \rightarrow C_\bullet'$$이라 하자. 즉 $$u'f=gu$$, $$v'g=hv$$가 성립한다.
+
+만들어야 하는 diagram에서 connecting morphism $$\partial$$를 포함하지 않는 사각형들은 homology의 functoriality로부터 바로 commute한다. 가령
+
+$$H_n(g)\circ H_n(u)=H_n(gu)=H_n(u'f)=H_n(u')\circ H_n(f)$$
+
+이고, $$v$$ 쪽 사각형도 마찬가지이다. 따라서 다음의 사각형
+
+$$\begin{aligned}H_n(C)&\overset{\partial}{\longrightarrow} H_{n-1}(A)\\ H_n(h)\downarrow\quad&\qquad\quad\downarrow H_{n-1}(f)\\ H_n(C')&\overset{\partial'}{\longrightarrow}H_{n-1}(A')\end{aligned}$$
+
+이 commute하는 것만 보이면 충분하다. [정리 1](#thm1)의 증명에서의 construction을 따라가면 $$\partial$$는 다음과 같이 계산된다. 임의의 $$[c]\in H_n(C)$$에 대하여, $$v_n$$이 surjective이므로 $$v_n(b)=c$$이도록 하는 $$b\in B_n$$이 존재하고, $$v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$$이므로 exactness에 의해 $$u_{n-1}(a)=d_n^Bb$$이도록 하는 유일한 $$a\in A_{n-1}$$이 존재하며, $$\partial[c]=[a]$$이다. 이 값이 lift $$b$$의 선택에 무관하다는 것도 확인할 수 있는데, $$v_n(b)=v_n(\tilde{b})=c$$라면 $$b-\tilde{b}=u_n(\alpha)$$이도록 하는 $$\alpha\in A_n$$이 존재하고, 그럼 대응되는 두 원소 $$a,\tilde{a}$$가 $$u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$$과 $$u_{n-1}$$의 injectivity로부터 $$a-\tilde{a}=d_n^A\alpha$$를 만족하여 $$[a]=[\tilde{a}]$$이기 때문이다.
+
+이제 $$[c]\in H_n(C)$$와 위의 construction에서 등장하는 $$b,a$$를 고정하자. 그럼 $$h_n(c)\in C_n'$$의 lift로는 $$g_n(b)$$를 택할 수 있다. 실제로
+
+$$v_n'(g_n(b))=h_n(v_n(b))=h_n(c)$$
+
+이다. 그럼
+
+$$d_n^{B'}(g_n(b))=g_{n-1}(d_n^Bb)=g_{n-1}(u_{n-1}(a))=u_{n-1}'(f_{n-1}(a))$$
+
+이므로, $$\partial'$$의 정의에 의하여
+
+$$\partial'[h_n(c)]=[f_{n-1}(a)]=H_{n-1}(f)(\partial[c])$$
+
+이다. 즉 위의 사각형이 commute한다.
 
 </details>
 

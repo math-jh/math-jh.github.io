@@ -11,6 +11,7 @@ sidebar:
 date: 2022-11-21
 last_modified_at: 2022-11-21
 weight: 11
+published: false
 
 ---
 
@@ -124,7 +125,17 @@ $$\prod_{i\in I} \cl A_i=\cl\left(\prod_{i\in I} A_i\right)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
+우선 $$\prod_{i\in I}\cl A_i$$는 닫힌집합이다. 이는 다음의 식
 
+$$\prod_{i\in I}\cl A_i=\bigcap_{i\in I}\pr_i^{-1}(\cl A_i)$$
+
+과, projection들이 연속이므로 각각의 $$\pr_i^{-1}(\cl A_i)$$가 닫힌집합이라는 것, 그리고 닫힌집합들의 임의의 교집합이 닫힌집합이라는 것에 따른 것이다. 그럼 $$\prod A_i\subseteq \prod\cl A_i$$이므로 closure의 최소성에 의하여
+
+$$\cl\left(\prod_{i\in I}A_i\right)\subseteq \prod_{i\in I}\cl A_i$$
+
+이다.
+
+거꾸로 $$x=(x_i)\in\prod_{i\in I}\cl A_i$$가 주어졌다 하고, $$x$$의 임의의 근방 $$V$$를 생각하자. 그럼 product topology의 base를 생각하면, $$x\in\prod U_i\subseteq V$$이고 유한 개의 $$i$$를 제외하면 $$U_i=X_i$$이도록 하는 열린집합들 $$U_i$$가 존재한다. 각각의 $$i$$에 대하여 $$x_i\in \cl A_i$$이고 $$U_i$$가 $$x_i$$의 근방이므로, [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)에 의하여 $$U_i\cap A_i\neq\emptyset$$이고, 원소 $$a_i\in U_i\cap A_i$$를 택할 수 있다. 그럼 $$a=(a_i)$$는 $$V\cap \prod A_i$$의 원소이므로 $$x$$의 임의의 근방이 $$\prod A_i$$와 만나고, 다시 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)에 의하여 $$x\in \cl\left(\prod A_i\right)$$이다.
 
 </details>
 
@@ -141,6 +152,14 @@ $$\prod_{i\in I} \interior A_i=\interior\left(\prod_{i\in I} A_i\right)$$
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
+
+$$I$$가 유한집합이므로 $$\prod_{i\in I}\interior A_i$$는 위에서 살펴본 product topology의 base에 속하는 열린집합이고, $$\prod A_i$$에 포함된다. 따라서 interior의 최대성에 의하여
+
+$$\prod_{i\in I}\interior A_i\subseteq \interior\left(\prod_{i\in I}A_i\right)$$
+
+이다.
+
+거꾸로 $$x=(x_i)\in\interior\left(\prod A_i\right)$$라 하자. 그럼 base를 생각하면 $$x\in \prod U_i\subseteq \prod A_i$$이도록 하는 열린집합들 $$U_i$$가 존재한다. 각각의 $$j\in I$$를 고정하면, 임의의 $$y_j\in U_j$$에 대하여 $$x$$의 $$j$$번째 성분만 $$y_j$$로 바꾼 원소는 여전히 $$\prod U_i$$에 속하고 (다른 성분들은 $$x_i\in U_i$$), 따라서 $$\prod A_i$$에 속한다. 이 원소의 $$j$$번째 성분을 읽으면 $$y_j\in A_j$$이다. 즉 $$U_j\subseteq A_j$$이고, $$U_j$$가 열린집합이므로 $$x_j\in U_j\subseteq \interior A_j$$이다. 이것이 모든 $$j$$에 대해 성립하므로 $$x\in\prod_{i\in I}\interior A_i$$이다.
 
 
 
