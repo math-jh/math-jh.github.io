@@ -128,11 +128,11 @@ $$(A-\lambda I)^{k'}v =0$$
 
 ## 일차분해정리
 
-본격적인 결과를 소개하기 전에 [§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#prop11)의 증명을 간단히 요약해보자. $$A$$의 diagonalizability를 보이기 위해, 우리는 고정된 고유값 $$\lambda$$에 대하여 다음 식
+본격적인 결과를 소개하기 전에 [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12)의 증명을 간단히 요약해보자. $$A$$의 diagonalizability를 보이기 위해, 우리는 고정된 고유값 $$\lambda$$에 대하여 다음 식
 
 $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 
-이 성립하는 것을 가정하고, 그럼 [§고유공간분해, ⁋보조정리 10](/ko/math/linear_algebra/eigenspace_decomposition#lem10)에 의하여 
+이 성립하는 것을 가정하고, 그럼 [§고유공간분해, ⁋보조정리 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)에 의하여 
 
 $$\ker (A-\lambda I)\cap \im (A-\lambda I)=\{0\}$$
 
@@ -146,7 +146,7 @@ $$\ker L^k=\ker L^{k+1}=\cdots$$
 
 $$\ker L^k=\ker L^{2k}$$
 
-이 성립하는 것을 알고있다. 바꿔말하면, $$L^k:V \rightarrow V$$에 대하여 [§고유공간분해, ⁋보조정리 10](/ko/math/linear_algebra/eigenspace_decomposition#lem10)의 전제가 만족되는 것이다. 이를 $$L=A-\lambda I$$에 적용하여 귀납법의 첫 단계----즉, direct sum decomposition $$V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$$를 얻을 수 있다. [§고유공간분해, ⁋명제 11](/ko/math/linear_algebra/eigenspace_decomposition#prop11)의 증명에서와 마찬가지로 이를
+이 성립하는 것을 알고있다. 바꿔말하면, $$L^k:V \rightarrow V$$에 대하여 [§고유공간분해, ⁋보조정리 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)의 전제가 만족되는 것이다. 이를 $$L=A-\lambda I$$에 적용하여 귀납법의 첫 단계----즉, direct sum decomposition $$V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$$를 얻을 수 있다. [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12)의 증명에서와 마찬가지로 이를
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
@@ -214,7 +214,7 @@ $$p_A(\x)=\prod_{\lambda\in\sigma(A)}(\x-\lambda)^{d_\lambda}$$
 
 $$p_A(\x)=\prod_{\lambda\in\sigma(A)} p_{G_\lambda(A)}(\x)$$
 
-을 얻는다. ([§행렬식의 존재성과 유일성, ⁋따름정리 11](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#cor11)) 우리는 [보조정리 5](#lem5)에서 $$G_\lambda(A)$$로 $$A$$를 제한했을 때 고유값은 오직 $$\lambda$$ 뿐인 것을 확인하였으므로 각각의 $$p_{G_\lambda(A)}(\x)$$는 오직 $$\x-\lambda$$만을 인수로 가져야한다. 따라서, 위의 두 식이 같기 위해서는 $$p_{G_\lambda(A)}(\x)$$가 정확히 $$d_\lambda$$차 다항식 
+을 얻는다. ([§행렬식의 존재성과 유일성, ⁋따름정리 10](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#cor10)) 우리는 [보조정리 5](#lem5)에서 $$G_\lambda(A)$$로 $$A$$를 제한했을 때 고유값은 오직 $$\lambda$$ 뿐인 것을 확인하였으므로 각각의 $$p_{G_\lambda(A)}(\x)$$는 오직 $$\x-\lambda$$만을 인수로 가져야한다. 따라서, 위의 두 식이 같기 위해서는 $$p_{G_\lambda(A)}(\x)$$가 정확히 $$d_\lambda$$차 다항식 
 
 $$p_{G_\lambda(A)}(\x)=(\x-\lambda)^{d_\lambda}$$
 
@@ -298,7 +298,7 @@ $$U_2=\span (N^{k-2-1}v_2, \cdots, Nv_2, v_2)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem9">**보조정리 9**</ins> 임의의 벡터공간 $$V$$와 그 위에서 정의된 index $$k$$의 nilpotent operator $$N$$을 생각하고, $$N^{k-1}v\neq 0$$을 만족하는 벡터 $$v$$를 택하자. 그럼 $$v$$가 생성하는 cyclic subspace 
+<ins id="lem10">**보조정리 10**</ins> 임의의 벡터공간 $$V$$와 그 위에서 정의된 index $$k$$의 nilpotent operator $$N$$을 생각하고, $$N^{k-1}v\neq 0$$을 만족하는 벡터 $$v$$를 택하자. 그럼 $$v$$가 생성하는 cyclic subspace 
 
 $$U=\span(v, Nv, \ldots, N^{k-1}v)$$
 
@@ -312,7 +312,7 @@ $$U=\span(v, Nv, \ldots, N^{k-1}v)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> 크기 $$k$$의 *Jordan block* $$J_k(\lambda)$$를 다음의 $$k\times k$$ 행렬
+<ins id="def11">**정의 11**</ins> 크기 $$k$$의 *Jordan block* $$J_k(\lambda)$$를 다음의 $$k\times k$$ 행렬
 
 $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$$
 
@@ -320,11 +320,11 @@ $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots
 
 </div>
 
-그럼 [정리 6](#thm6)과 [정리 8](#thm8)을 합치면 다음의 정리를 얻는다. 
+그럼 [정리 6](#thm6)과 [정리 9](#thm9)을 합치면 다음의 정리를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="thm11">**정리 11 (Jordan canonical form)**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 임의의 linear operator $$A:V\rightarrow V$$에 대하여, $$V$$의 적당한 basis를 선택하면 $$A$$의 행렬 표현이 다음의 형태를 갖는다:
+<ins id="thm12">**정리 12 (Jordan canonical form)**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 임의의 linear operator $$A:V\rightarrow V$$에 대하여, $$V$$의 적당한 basis를 선택하면 $$A$$의 행렬 표현이 다음의 형태를 갖는다:
 
 $$J=\begin{pmatrix}J_{k_1}(\lambda_1)&0&\cdots&0\\0&J_{k_2}(\lambda_2)&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&J_{k_m}(\lambda_m)\end{pmatrix}$$
 
@@ -334,7 +334,7 @@ $$J=\begin{pmatrix}J_{k_1}(\lambda_1)&0&\cdots&0\\0&J_{k_2}(\lambda_2)&\cdots&0\
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> [예시 2](#ex2)의 행렬
+<ins id="ex13">**예시 13**</ins> [예시 2](#ex2)의 행렬
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -348,7 +348,7 @@ $$\ker(A-I)=\span\{(1,0,0)\},\quad \ker(A-I)^2=\span\{(1,0,0),(0,1,0)\},\quad \k
 
 임을 이미 계산하였다. 즉 $$A$$에 [정리 6](#thm6)을 적용한 것은 그냥 $$V=G_1(A)$$이 된다. 
 
-이제 $$G_1(A)$$ 위에서 [정리 8](#thm8)을 적용해야 한다. 앞서 살펴본 것과 같이 $$(A-I)^3=0$$이지만 $$(A-I)^2\neq 0$$이며, 실제로 $$v=(0,0,1)$$이 $$(A-I)^2 v\neq 0$$을 만족하는 것을 안다. 그럼 
+이제 $$G_1(A)$$ 위에서 [정리 9](#thm9)을 적용해야 한다. 앞서 살펴본 것과 같이 $$(A-I)^3=0$$이지만 $$(A-I)^2\neq 0$$이며, 실제로 $$v=(0,0,1)$$이 $$(A-I)^2 v\neq 0$$을 만족하는 것을 안다. 그럼 
 
 $$v_1=(A-I)^2v=(1,0,0),\qquad v_2=(A-I)v=(1,1,0),\qquad v_3=v=(0,0,1)$$
 

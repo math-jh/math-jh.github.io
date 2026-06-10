@@ -15,7 +15,7 @@ translated_at: 2026-06-03T04:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-03T04:30:02+00:00
 ---
-Now we examine how to define a topology on a quotient set. ([[Set Theory] §Equivalence Relations, ⁋Definition 6](/en/math/set_theory/equivalence_relations#def6))
+Now we examine how to define a topology on a quotient set. ([[Set Theory] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4))
 
 ## Locally closed subspace
 
@@ -37,7 +37,7 @@ Now we examine how to define a topology on a quotient set. ([[Set Theory] §Equi
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, suppose $$A$$ is locally closed, and for each $$x\in A$$ let $$V_x$$ be an open neighborhood of $$x$$ in $$X$$ satisfying the condition of [Definition 1](#def1). Then $$U=\bigcup_{x\in A} V_x$$ is an open set. Also, by applying [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6), we see that $$A$$ is closed in $$U$$. Thus $$A=U\cap C$$ for some closed set $$C$$ in $$X$$, so the second condition holds.
+First, suppose $$A$$ is locally closed, and for each $$x\in A$$ let $$V_x$$ be an open neighborhood of $$x$$ in $$X$$ satisfying the condition of [Definition 1](#def1). Then $$U=\bigcup_{x\in A} V_x$$ is an open set. Also, by applying [§Subspaces, ⁋Proposition 5](/en/math/topology/subspaces#prop5), we see that $$A$$ is closed in $$U$$. Thus $$A=U\cap C$$ for some closed set $$C$$ in $$X$$, so the second condition holds.
 
 Now suppose $$A=U\cap C$$ holds for an open set $$U$$ and a closed set $$C$$ in $$X$$. Then $$\cl A\subseteq C$$, so
 
@@ -87,7 +87,7 @@ so it is continuous.
 
 </details>
 
-Meanwhile, let topological spaces $$X,Y$$ and a continuous function $$f:X\rightarrow Y$$ be given, and consider the equivalence relation $$R$$ defined by $$f$$. ([[Set Theory] §Equivalence Relations, ⁋Definition 5](/en/math/set_theory/equivalence_relations#def5)) Then we may consider the canonical decomposition of $$f$$
+Meanwhile, let topological spaces $$X,Y$$ and a continuous function $$f:X\rightarrow Y$$ be given, and consider the equivalence relation $$R$$ defined by $$f$$. ([[Set Theory] §Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2)) Then we may consider the canonical decomposition of $$f$$
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 
@@ -119,7 +119,7 @@ Therefore, in this case $$\bar{f}$$ is a homeomorphism.
 
 Now consider a topological space $$X$$, a subset $$A$$, and an equivalence relation $$R$$ given on $$X$$. Letting $$p:X\rightarrow X/R$$ be the canonical projection, the canonical decomposition of $$p\vert_A:A\rightarrow X/R$$
 
-$$A\overset{q}{\longrightarrow}A/(R|_A)\overset{\overline{(p|_A)}}{\longrightarrow} f(A)\overset{j}{\longrightarrow}X/R$$
+$$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\longrightarrow} f(A)\overset{j}{\longrightarrow}X/R$$
 
 is defined, and by the same argument as above $$\overline{(p\vert_A)}$$ is a continuous bijection. The following proposition is also almost obvious.
 

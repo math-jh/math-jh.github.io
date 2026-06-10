@@ -48,7 +48,7 @@ $$Z(\mathfrak{p})=ZI(\{\mathfrak{p}\})=\cl(\{\mathfrak{p}\})=\{\mathfrak{p}\}$$
 
 특별히 $$X$$가 affine scheme $$\Spec A$$인 경우, 우리는 $$\Spec A$$의 임의의 irreducible closed set은 $$A$$의 적당한 prime ideal $$\mathfrak{p}$$에 대하여 $$Z(\mathfrak{p})$$의 꼴로 나타난다는 것을 확인하였다. 그럼 자명하게 $$\mathfrak{p}\in Z(\mathfrak{p})$$이고, 이 때 $$Z(\mathfrak{p})$$에 속하는 prime ideal들 중 $$\mathfrak{p}$$가 (유일하게) minimal한 것은 자명하므로 $$Z(\mathfrak{p})$$의 (유일한) generic point가 된다.
 
-이를 더욱 기하학적으로 만들기 위해, $$A=\mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$$이라 하자. 그럼 [§스펙트럼, ⁋명제 9](#prop9)에서 우리는 $$\Spec A$$가 $$\mathbb{A}_\mathbb{K}^2=\Spec \mathbb{K}[\x_1,\x_2]$$의 닫힌집합임을 보였다. 이제 우리는 prime ideal $$(\x_2-\x_1^2)\in \Spec \mathbb{K}[\x_1,\x_2]$$이 $$\Spec A\cong Z(\x_2-\x_1^2)$$의 generic point임을 안다. 즉 generic point는 곡선 $$\x_2-\x_1^2$$ 그 자체를 나타내는 것으로 해석할 수 있다. 
+이를 더욱 기하학적으로 만들기 위해, $$A=\mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$$이라 하자. 그럼 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에서 우리는 $$\Spec A$$가 $$\mathbb{A}_\mathbb{K}^2=\Spec \mathbb{K}[\x_1,\x_2]$$의 닫힌집합임을 보였다. 이제 우리는 prime ideal $$(\x_2-\x_1^2)\in \Spec \mathbb{K}[\x_1,\x_2]$$이 $$\Spec A\cong Z(\x_2-\x_1^2)$$의 generic point임을 안다. 즉 generic point는 곡선 $$\x_2-\x_1^2$$ 그 자체를 나타내는 것으로 해석할 수 있다. 
 
 ## 스킴의 위상적 성질들
 

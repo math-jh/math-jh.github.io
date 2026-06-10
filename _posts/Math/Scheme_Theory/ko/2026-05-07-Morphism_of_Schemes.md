@@ -180,7 +180,7 @@ $$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{A}^n_\mathbb{K}$}\
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> $$\mathbb{C}$$-scheme $$X=\Spec\frac{\mathbb{C}[\x_1,\ldots, \x_n]}{(f_1,\ldots, f_r)}$$이 주어졌다 하고, 이 scheme의 $$\mathbb{Q}$$-point를 생각하자. 그럼 [\[가환대수학\] §영점정리, ⁋보조정리 5](/ko/math/commutative_algebra/nullstellensatz#lem5)와 [예시 6](#ex6)의 계산으로부터 우리는 $$X$$의 $$\mathbb{Q}$$-point $$\Spec\phi: \Spec \mathbb{Q}\rightarrow X$$와, 
+<ins id="ex8">**예시 8**</ins> $$\mathbb{C}$$-scheme $$X=\Spec\frac{\mathbb{C}[\x_1,\ldots, \x_n]}{(f_1,\ldots, f_r)}$$이 주어졌다 하고, 이 scheme의 $$\mathbb{Q}$$-point를 생각하자. 그럼 [\[가환대수학\] §영점정리, ⁋보조정리 5](/ko/math/commutative_algebra/nullstellensatz#lem5)와 [예시 7](#ex7)의 계산으로부터 우리는 $$X$$의 $$\mathbb{Q}$$-point $$\Spec\phi: \Spec \mathbb{Q}\rightarrow X$$와, 
 
 $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 

@@ -80,7 +80,7 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 동일한 topological manifold $$M$$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $$\mathcal{A}_1$$, $$\mathcal{A}_2$$를 각각 single chart들 $$(\mathbb{R},\id_\mathbb{R})$$, $$(\mathbb{R}, x\mapsto x^{3})$$을 통해 정의하자. 그럼 $$\mathcal{A}_1$$과 $$\mathcal{A}_2$$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifolds/smooth_manifolds#ex4))  
+**참고**</ins> 동일한 topological manifold $$M$$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $$\mathcal{A}_1$$, $$\mathcal{A}_2$$를 각각 single chart들 $$(\mathbb{R},\id_\mathbb{R})$$, $$(\mathbb{R}, x\mapsto x^{3})$$을 통해 정의하자. 그럼 $$\mathcal{A}_1$$과 $$\mathcal{A}_2$$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifolds/smooth_manifolds#ex4))  
 편의상 $$(M,\mathcal{A}_1)$$을 $$M_1$$, $$(M,\mathcal{A}_2)$$를 $$M_2$$로 이름붙이고, $$\varphi=\id_\mathbb{R}$$, 그리고 $$\psi=(x\mapsto x^3)$$이라 하자. 
 
 이들 두 manifold $$M_1, M_2$$는 서로 diffeomorphic하다. $$M_1$$에서 $$M_2$$로의 함수 $$F$$를 $$x\mapsto x^{1/3}$$으로 정의하자. 그럼 자명하게 $$F^{-1}$$은 $$y\mapsto y^3$$으로 정의된다. 정의에 의해 $$F$$는 $$C^\infty$$이다. 임의의 점 $$p\in M_1$$에 대하여, $$M_1$$과 $$M_2$$ 각각에 정의된 두 coordinate system $$(\mathbb{R},\varphi)$$와 $$(\mathbb{R},\psi)$$을 잡으면 $$p\in\mathbb{R}$$,  $$F(\mathbb{R})\subset\mathbb{R}$$을 만족하는 것은 자명하고, 또 이들이
@@ -166,15 +166,15 @@ $$\iota^\ast$$가 $$\mathcal{C}^\infty_{U,p}$$와 $$\mathcal{C}^\infty_{M,\iota(
 
 $$\mathbb{R}^m$$을 $$m$$차원 manifold로 본다면, 우리가 tangent vector를 정의한 방식은 정확히 $$\mathbb{R}^m$$에서의 방향벡터와 동일하다는 것을 알 수 있다. 이 경우, 임의의 $$p\in\mathbb{R}^m$$에 대하여, 점 $$p$$를 시점으로 하는 $$\mathbb{R}^m$$의 표준적인 $$m$$개의 벡터들이 각자의 방향으로의 방향미분을 정의하며, 우리는 이들을 
 
-$$\frac{\partial}{\partial r^1}\bigg|_p,\cdots,\frac{\partial}{\partial r^m}\bigg|_p$$
+$$\frac{\partial}{\partial r^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial r^m}\bigg\vert_p$$
 
 으로 적기로 하였다. 일반적인 manifold의 경우 우리는 $$p\in M$$을 포함하는 coordinate system $$(U,\varphi)$$를 택한 후, $$\varphi$$의 성분함수 $$x^1,\ldots, x^m$$들을 이용하여 tangent vector들을
 
-$$\frac{\partial}{\partial x^1}\bigg|_p,\cdots,\frac{\partial}{\partial x^m}\bigg|_p$$
+$$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial x^m}\bigg\vert_p$$
 
 들로 표현하였다. 이 때, 임의의 $$f\in C^\infty_p(M)$$에 대하여
 
-$$\frac{\partial}{\partial x^i}\bigg|_pf=\frac{\partial}{\partial r^i}\bigg|_p (f\circ\varphi^{-1})$$
+$$\frac{\partial}{\partial x^i}\bigg\vert_pf=\frac{\partial}{\partial r^i}\bigg\vert_p (f\circ\varphi^{-1})$$
 
 이다. 그런데 [정의 7](#def7)을 염두에 두고 이 식을 다시 살펴보면, 이는 $$\varphi^{-1}:\varphi(U)\rightarrow U$$의 differential과 동일한 모양임을 알 수 있다.[^1] 즉 tangent space의 basis는 다른 것이 아니라, 단지 $$\mathbb{R}^m$$의 tangent space $$T_{\varphi(p)}\mathbb{R}^m$$의 $$m$$개의 basis들을 differential $$d\varphi^{-1}_{\varphi(p)}$$를 통해 옮겨온 것일 뿐이다.
 
@@ -182,19 +182,19 @@ $$\frac{\partial}{\partial x^i}\bigg|_pf=\frac{\partial}{\partial r^i}\bigg|_p (
 
 더 일반적으로, $$M,N$$이 각각 $$m,n$$차원의 manifold이고 $$F:M\rightarrow N$$이 임의의 $$C^\infty$$ 함수라 하자. 그럼 고정된 $$p\in M$$에 대하여, $$p$$를 포함하는 coordinate system $$(U,\varphi)$$, 그리고 $$F(U)$$를 포함하는 coordinate system $$(V,\psi)$$가 존재하여 $$\psi\circ F\circ\varphi^{-1}$$이 $$C^\infty$$이다. 이제 $$\varphi=(x^i)_{i=1}^{m}$$, $$\psi=(y^j)_{j=1}^n$$이라 하자. 그럼 마찬가지로 tangent space $$T_pM$$, $$T_{F(p)}N$$의 basis는 각각
 
-$$\frac{\partial}{\partial x^1}\bigg|_p,\cdots,\frac{\partial}{\partial x^m}\bigg|_p,\quad\text{and}\quad\frac{\partial}{\partial y^1}\bigg|_{F(p)},\cdots\frac{\partial}{\partial y^n}\bigg|_{F(p)}$$
+$$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial x^m}\bigg\vert_p,\quad\text{and}\quad\frac{\partial}{\partial y^1}\bigg\vert_{F(p)},\cdots\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}$$
 
 으로 주어진다. 이제 이들을 통해 $$dF_p$$를 행렬로 나타내보자. 이를 위해서는 각각의 $$\partial/\partial x^i$$들이 $$dF_p$$를 통해 옮겨지는 벡터를 $$\partial/\partial y^j$$들의 일차결합으로 표현하면 된다. 즉 
 
-$$dF_p\left(\frac{\partial}{\partial x^i}\bigg|_p\right)=a_{1i}\frac{\partial}{\partial y^1}\bigg|_{F(p)}+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg|_{F(p)}$$
+$$dF_p\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)=a_{1i}\frac{\partial}{\partial y^1}\bigg\vert_{F(p)}+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}$$
 
 의 각 계수들 $$a_{ji}$$를 구해주면 된다. 그런데 어차피 $$\partial/\partial y^j$$들은 $$\mathfrak{n}/\mathfrak{n}^2$$의 원소들 $$y^j+\mathfrak{n}^2$$의 dual basis이므로, 이를 위해서는 양 변을 함수 $$y^j$$에 적용해주면 된다.[^2] 즉
 
-$$dF_p\left(\frac{\partial}{\partial x^i}\bigg|_p\right)y^j=a_{1i}\frac{\partial}{\partial y^1}\bigg|_{F(p)}y^j+\cdots+a_{ji}\frac{\partial}{\partial y^j}\bigg|_{F(p)}y^j+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg|_{F(p)}y^j$$
+$$dF_p\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)y^j=a_{1i}\frac{\partial}{\partial y^1}\bigg\vert_{F(p)}y^j+\cdots+a_{ji}\frac{\partial}{\partial y^j}\bigg\vert_{F(p)}y^j+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}y^j$$
 
 에서, dual basis의 정의에 의해 우변은 오직 $$a_{ji}$$만 남게 되므로
 
-$$dF_p\left(\frac{\partial}{\partial x^i}\bigg|_p\right)y^j=a_{ji}$$
+$$dF_p\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)y^j=a_{ji}$$
 
 이고 이로부터 $$dF_p$$의 두 basis $$\partial/\partial x^i$$, $$\partial/\partial y^j$$들에 대한 행렬표현이 다음의 행렬
 

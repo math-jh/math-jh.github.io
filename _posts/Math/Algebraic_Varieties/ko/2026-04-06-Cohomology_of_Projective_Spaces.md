@@ -215,13 +215,13 @@ $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0 \quad (i > 0)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathcal{L}$$이 ample이므로, 충분히 큰 $$m_0$$에 대해 $$\mathcal{L}^{\otimes m_0}$$은 very ample이다. 즉, 적당한 embedding $$i \colon X \hookrightarrow \mathbb{P}^N$$이 존재하여 $$\mathcal{L}^{\otimes m_0} = i^*\mathcal{O}(1)$$이 성립한다. $$\mathbb{P}^N$$의 standard affine cover $$\{U_i\}$$를 $$X$$에 restrict하면 affine open cover $$\{X \cap U_i\}$$를 얻는다. Finite intersection $$U_{i_0} \cap \cdots \cap U_{i_p}$$은 affine이므로 $$(X \cap U_{i_0}) \cap \cdots \cap (X \cap U_{i_p}) = X \cap (U_{i_0} \cap \cdots \cap U_{i_p})$$도 affine이다. 따라서 두 Čech complex가 literally 같으므로
+$$\mathcal{L}$$이 ample이므로, 충분히 큰 $$m_0$$에 대해 $$\mathcal{L}^{\otimes m_0}$$은 very ample이다. 즉, 적당한 embedding $$i \colon X \hookrightarrow \mathbb{P}^N$$이 존재하여 $$\mathcal{L}^{\otimes m_0} = i^\ast\mathcal{O}(1)$$이 성립한다. $$\mathbb{P}^N$$의 standard affine cover $$\{U_i\}$$를 $$X$$에 restrict하면 affine open cover $$\{X \cap U_i\}$$를 얻는다. Finite intersection $$U_{i_0} \cap \cdots \cap U_{i_p}$$은 affine이므로 $$(X \cap U_{i_0}) \cap \cdots \cap (X \cap U_{i_p}) = X \cap (U_{i_0} \cap \cdots \cap U_{i_p})$$도 affine이다. 따라서 두 Čech complex가 literally 같으므로
 
-$$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{F})$$
+$$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F})$$
 
 이 성립한다. $$X$$와 $$\mathbb{P}^N$$은 separated scheme이므로 ([§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)), quasi-coherent sheaf에 대해 Čech cohomology = sheaf cohomology:
 
-$$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{G}) = H^i(\mathbb{P}^N, i_*\mathcal{G})$$ 따라서 다음을 보이면 충분하다: $$\mathbb{P}^N$$ 위의 coherent sheaf $$\mathcal{G}$$에 대해, 충분히 큰 $$n$$에 대해 $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$$ ($$i > 0$$). 여기서 $$\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$$이다.
+$$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{G}) = H^i(\mathbb{P}^N, i_\ast\mathcal{G})$$ 따라서 다음을 보이면 충분하다: $$\mathbb{P}^N$$ 위의 coherent sheaf $$\mathcal{G}$$에 대해, 충분히 큰 $$n$$에 대해 $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$$ ($$i > 0$$). 여기서 $$\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$$이다.
 
 **핵심 보조정리**. $$\mathcal{G}(n)$$이 충분히 큰 $$n$$에 대해 globally generated임을 보인다. (아래 [정의 6](#def6) 참조.)
 
@@ -399,15 +399,15 @@ $$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \to H
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathcal{L}$$이 very ample이므로, projective embedding $$i: X \hookrightarrow \mathbb{P}^N$$이 존재하여 $$\mathcal{L} = i^*\mathcal{O}_{\mathbb{P}^N}(1)$$이도록 할 수 있다. 한편, $$\mathcal{M}$$이 globally generated이므로, global section들 $$s_0, \ldots, s_n \in H^0(X, \mathcal{M})$$가 모든 점에서 stalk를 generate하며, 이로부터 morphism $$\phi: X \to \mathbb{P}^n$$를 정의할 수 있다.
+$$\mathcal{L}$$이 very ample이므로, projective embedding $$i: X \hookrightarrow \mathbb{P}^N$$이 존재하여 $$\mathcal{L} = i^\ast\mathcal{O}_{\mathbb{P}^N}(1)$$이도록 할 수 있다. 한편, $$\mathcal{M}$$이 globally generated이므로, global section들 $$s_0, \ldots, s_n \in H^0(X, \mathcal{M})$$가 모든 점에서 stalk를 generate하며, 이로부터 morphism $$\phi: X \to \mathbb{P}^n$$를 정의할 수 있다.
 
 이제 closed embedding $$(i, \phi): X \to \mathbb{P}^N \times \mathbb{P}^n$$을 생각하자. 그럼 여기에 Segre embedding ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 
 
 $$\sigma: \mathbb{P}^N \times \mathbb{P}^n \hookrightarrow \mathbb{P}^{Nn+N+n}$$
 
-을 합성하면 $$\sigma^*\mathcal{O}(1) = \pi_1^*\mathcal{O}(1) \otimes \pi_2^*\mathcal{O}(1)$$이므로,
+을 합성하면 $$\sigma^\ast\mathcal{O}(1) = \pi_1^\ast\mathcal{O}(1) \otimes \pi_2^\ast\mathcal{O}(1)$$이므로,
 
-$$(\sigma \circ (i, \phi))^*\mathcal{O}(1) = i^*\mathcal{O}(1) \otimes \phi^*\mathcal{O}(1) = \mathcal{L} \otimes \mathcal{M}$$
+$$(\sigma \circ (i, \phi))^\ast\mathcal{O}(1) = i^\ast\mathcal{O}(1) \otimes \phi^\ast\mathcal{O}(1) = \mathcal{L} \otimes \mathcal{M}$$
 
 인 것을 안다. 즉 $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
 

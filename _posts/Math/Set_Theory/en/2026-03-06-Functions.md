@@ -21,7 +21,7 @@ $${<}=\{(0,1),(0,2),\ldots, (1,2),(1,3),\ldots, \}$$
 
 ![elements](/assets/images/Math/Set_Theory/Functions-1.png){:style="width:14em" class="invert" .align-center}
 
-Following the notation of [§Binary Relations, ⁋Definition 7](/en/math/set_theory/binary_relation#def7), $${<}(1)$$ is the collection of all $$n\in\mathbb{N}$$ such that $$(1,n)\in\mathbb{N}$$, hence
+Following the notation of [§Binary Relations, ⁋Definition 6](/en/math/set_theory/binary_relation#def6), $${<}(1)$$ is the collection of all $$n\in\mathbb{N}$$ such that $$(1,n)\in\mathbb{N}$$, hence
 
 $${<}(1)=\{2,3,\ldots\}$$
 
@@ -43,7 +43,7 @@ The condition $$A=\pr_1F$$ means that every element $$x$$ of $$A$$ corresponds t
 
 This $$y$$ is called the *function value* of $$f$$ at $$x$$, and the unique element of $$F(\{x\})$$ is denoted by $$f(x)$$. The set $$A=\pr_1F$$ is called the *domain* of $$f$$.
 
-Following this notation, the image of a set $$X\subseteq A$$ under the binary relation $$F$$ is written $$f(X)$$ rather than $$F(X)$$, and the preimage of a set $$Y\subseteq B$$ is written $$f^{-1}(Y)$$ rather than $$F^{-1}(Y)$$. ([§Binary Relations, ⁋Definition 5](/en/math/set_theory/binary_relation#def5) and [§Operations on Binary Relations, ⁋Definition 1](/en/math/set_theory/operation_of_binary_relations#def1)) The triple $$f=(F,A,B)$$ is written more concisely as $$f:A\rightarrow B$$.
+Following this notation, the image of a set $$X\subseteq A$$ under the binary relation $$F$$ is written $$f(X)$$ rather than $$F(X)$$, and the preimage of a set $$Y\subseteq B$$ is written $$f^{-1}(Y)$$ rather than $$F^{-1}(Y)$$. ([§Binary Relations, ⁋Definition 4](/en/math/set_theory/binary_relation#def4) and [§Operations on Binary Relations, ⁋Definition 1](/en/math/set_theory/operation_of_binary_relations#def1)) The triple $$f=(F,A,B)$$ is written more concisely as $$f:A\rightarrow B$$.
 
 The set
 

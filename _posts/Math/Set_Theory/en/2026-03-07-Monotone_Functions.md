@@ -80,7 +80,7 @@ Indeed, $$f<g$$ may hold even if $$f(y)<_{\tiny R} g(y)$$ for only *a single* $$
 <ins id="def4">**Definition 4**</ins> Let $$A$$ and $$A'$$ be sets equipped with preorders $$R$$ and $$R'$$, respectively. A function $$f:A\rightarrow A'$$ is an *increasing function* if $$x\leq_{\tiny R} y\implies f(x)\leq_{\tiny R'} f(y)$$ always holds. If $$x\leq_{\tiny R}y\implies f(y)\leq_{\tiny R'} f(x)$$ always holds, then this function is called a *decreasing function*. Increasing and decreasing functions are collectively called *monotone functions*.
 {: .definition}
 
-<ins id="rmk1">**Remark**</ins> Any constant function is both increasing and decreasing. However, the converse is not true. Let $$A$$ be a set with more than one element, and consider the order relation $$=$$ on it. Then the identity function from $$A$$ to $$A$$ is both increasing and decreasing, but it is not constant.
+**Remark**</ins> Any constant function is both increasing and decreasing. However, the converse is not true. Let $$A$$ be a set with more than one element, and consider the order relation $$=$$ on it. Then the identity function from $$A$$ to $$A$$ is both increasing and decreasing, but it is not constant.
 {: .remark}
 
 Replacing $$\leq$$ with $$<$$ yields the following definition.
@@ -90,14 +90,14 @@ Replacing $$\leq$$ with $$<$$ yields the following definition.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk2">**Remark**</ins> By definition, an injective monotone function is always strictly monotone. However, the converse does not always hold. For example, define a strict order $$\prec$$ on $$\mathbb{N}$$ by
+<ins id="rmk6">**Remark 6**</ins> By definition, an injective monotone function is always strictly monotone. However, the converse does not always hold. For example, define a strict order $$\prec$$ on $$\mathbb{N}$$ by
 
 $$m\prec n\iff ((m-n\text{ is even}) \wedge (m<n))$$
 
 and denote this ordered set by $$A$$. That is, in $$A$$, even numbers can be compared with even numbers and odd numbers with odd numbers, but no comparison is possible between even and odd numbers. Also, let $$B$$ be the ordered set obtained by endowing the set of natural numbers $$\mathbb{N}$$ with the usual strict order $$<$$. Then the function $$m\mapsto \lfloor m/2\rfloor$$ from $$A$$ to $$B$$ is strictly increasing but not injective.
 </div>
 
-<ins id="prop6">**Proposition 6**</ins> Let $$A$$ and $$A'$$ be ordered sets, and let $$u:A\rightarrow A'$$ and $$v:A'\rightarrow A$$ be decreasing functions such that $$v(u(x))\geq x$$ and $$u(v(x'))\geq x'$$ hold for all $$x\in A$$ and $$x'\in A'$$. Then $$u\circ v\circ u=u$$ and $$v\circ u\circ v=v$$.
+<ins id="prop7">**Proposition 7**</ins> Let $$A$$ and $$A'$$ be ordered sets, and let $$u:A\rightarrow A'$$ and $$v:A'\rightarrow A$$ be decreasing functions such that $$v(u(x))\geq x$$ and $$u(v(x'))\geq x'$$ hold for all $$x\in A$$ and $$x'\in A'$$. Then $$u\circ v\circ u=u$$ and $$v\circ u\circ v=v$$.
 {: .proposition}
 
 <details class="proof" markdown="1">

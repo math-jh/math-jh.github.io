@@ -167,7 +167,7 @@ these satisfy $$\lambda_i=\rho_{ij}\circ\lambda_j$$, so there exists a continuou
 
 <ins id="prop5">**Proposition 5**</ins> The $$\lambda$$ defined above is an isomorphism of topological groups. 
 
-</div >
+</div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 

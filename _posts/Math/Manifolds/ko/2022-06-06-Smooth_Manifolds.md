@@ -22,7 +22,7 @@ weight: 1
 
 이제 함수 $$f$$가 $$\mathbb{R}^m$$에서 $$\mathbb{R}$$로의 함수라 하자. 그럼 $$f$$의 $$i$$번째 성분에 대한 편미분을 다음의 식
 
-$$\frac{\partial}{\partial r^i}\bigg|_t f=\frac{\partial f}{\partial r^i}\bigg|_t=\lim_{h\rightarrow 0}\frac{f(t^1,\ldots, t^{i-1}, t^i+h, t^{i+1},\ldots, t^m)-f(t^1,\ldots, t^m)}{h}$$
+$$\frac{\partial}{\partial r^i}\bigg\vert_t f=\frac{\partial f}{\partial r^i}\bigg\vert_t=\lim_{h\rightarrow 0}\frac{f(t^1,\ldots, t^{i-1}, t^i+h, t^{i+1},\ldots, t^m)-f(t^1,\ldots, t^m)}{h}$$
 
 으로 정의하기로 한다. 위의 표기법과 같이, **[Lee]**의 표기를 따라 $$i$$번째 성분을 $$x_i$$ 대신 $$x^i$$로 적기로 한다.
 

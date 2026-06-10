@@ -33,7 +33,7 @@ Our idea is to define this operator, the <em-ko>directional derivative</em-ko>, 
 
 Let $$C^\infty(U)$$ be the collection of $$C^\infty$$ functions defined on an open set $$U$$, and whenever $$V\subseteq U$$ define the map $$\rho_{UV}:C^\infty(U)\rightarrow C^\infty(V)$$ by
 
-$$\rho_{UV}:f\mapsto f|_V$$
+$$\rho_{UV}:f\mapsto f\vert_V$$
 
 Then this structure becomes a sheaf of rings $$\mathcal{C}^\infty_M$$ on $$M$$. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1)) The stalk of $$\mathcal{C}^\infty$$ at any $$p\in M$$ is written $$\mathcal{C}^\infty_{M,p}$$, or simply $$\mathcal{C}^\infty_p$$ when there is no danger of confusion. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9))
 
@@ -47,7 +47,7 @@ Then this structure becomes a sheaf of rings $$\mathcal{C}^\infty_M$$ on $$M$$. 
 
 To show this, it suffices to define operations on $$\mathcal{C}^\infty_p$$. Choose two elements $$\mathbf{f},\mathbf{g}$$ of $$\mathcal{C}^\infty_p$$. Then there exist suitable open neighborhoods $$U,V$$ of $$p$$ such that we may regard $$\mathbf{f}$$ and $$\mathbf{g}$$ as the germs of $$(f,U)$$ and $$(g,V)$$, respectively. Now define $$\mathbf{f}+\mathbf{g}$$ as the equivalence class of the function
 
-$$(f|_{U\cap V}+g|_{U\cap V}, U\cap V)$$
+$$(f\vert_{U\cap V}+g\vert_{U\cap V}, U\cap V)$$
 
 In other words, to compute the sum of two germs $$\mathbf{f}$$ and $$\mathbf{g}$$, we find an open neighborhood of $$p$$ on which both functions $$f,g$$ are defined, and then compute the sum of $$f$$ and $$g$$ on this neighborhood. Of course, it is easy to see that this definition does not depend on the choice of representative.
 
@@ -128,7 +128,7 @@ Moreover, for any tangent vector $$v$$ and the constant function $$\mathbf{c}$$ 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem6">**Lemma 6**</ins> For any tangent vector $$v$$, we have $$v(\mathbf{1})=0$$.
+<ins id="lem5">**Lemma 5**</ins> For any tangent vector $$v$$, we have $$v(\mathbf{1})=0$$.
 
 </div>
 <details class="proof" markdown="1">

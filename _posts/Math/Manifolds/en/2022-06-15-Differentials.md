@@ -81,7 +81,7 @@ Thus, manifolds and smooth functions form the category $$\Man$$.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> One can endow the same topological manifold $$M$$ with distinct smooth structures that are diffeomorphic to each other but not identical. Define two smooth structures $$\mathcal{A}_1$$, $$\mathcal{A}_2$$ by the single charts $$(\mathbb{R},\id_\mathbb{R})$$ and $$(\mathbb{R}, x\mapsto x^{3})$$, respectively. Then $$\mathcal{A}_1$$ and $$\mathcal{A}_2$$ define different smooth structures. ([§Smooth Manifolds, ⁋Example 4](/en/math/manifolds/smooth_manifolds#ex4))  
+**Remark**</ins> One can endow the same topological manifold $$M$$ with distinct smooth structures that are diffeomorphic to each other but not identical. Define two smooth structures $$\mathcal{A}_1$$, $$\mathcal{A}_2$$ by the single charts $$(\mathbb{R},\id_\mathbb{R})$$ and $$(\mathbb{R}, x\mapsto x^{3})$$, respectively. Then $$\mathcal{A}_1$$ and $$\mathcal{A}_2$$ define different smooth structures. ([§Smooth Manifolds, ⁋Example 4](/en/math/manifolds/smooth_manifolds#ex4))  
 For convenience, write $$(M,\mathcal{A}_1)=M_1$$, $$(M,\mathcal{A}_2)=M_2$$, $$\varphi=\id_\mathbb{R}$$, and $$\psi=(x\mapsto x^3)$$.
 
 These two manifolds $$M_1, M_2$$ are diffeomorphic to each other. Define the function $$F:M_1\rightarrow M_2$$ by $$x\mapsto x^{1/3}$$. Then obviously $$F^{-1}$$ is given by $$y\mapsto y^3$$. By definition $$F$$ is $$C^\infty$$. For any point $$p\in M_1$$, taking the coordinate systems $$(\mathbb{R},\varphi)$$ on $$M_1$$ and $$(\mathbb{R},\psi)$$ on $$M_2$$, it is obvious that $$p\in\mathbb{R}$$ and $$F(\mathbb{R})\subset\mathbb{R}$$, and since they satisfy
@@ -165,15 +165,15 @@ This is obvious because $$\iota^\ast$$ induces an isomorphism between $$\mathcal
 
 Regarding $$\mathbb{R}^m$$ as an $$m$$-dimensional manifold, we can see that our definition of tangent vectors coincides exactly with directional vectors in $$\mathbb{R}^m$$. In this case, for any $$p\in\mathbb{R}^m$$, the standard $$m$$ vectors of $$\mathbb{R}^m$$ based at $$p$$ define directional derivatives in their respective directions, and we agreed to write these as
 
-$$\frac{\partial}{\partial r^1}\bigg|_p,\cdots,\frac{\partial}{\partial r^m}\bigg|_p$$
+$$\frac{\partial}{\partial r^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial r^m}\bigg\vert_p$$
 
 For a general manifold, we chose a coordinate system $$(U,\varphi)$$ containing $$p\in M$$, and expressed tangent vectors using the component functions $$x^1,\ldots, x^m$$ of $$\varphi$$ as
 
-$$\frac{\partial}{\partial x^1}\bigg|_p,\cdots,\frac{\partial}{\partial x^m}\bigg|_p$$
+$$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial x^m}\bigg\vert_p$$
 
 Then, for any $$f\in C^\infty_p(M)$$,
 
-$$\frac{\partial}{\partial x^i}\bigg|_pf=\frac{\partial}{\partial r^i}\bigg|_p (f\circ\varphi^{-1})$$
+$$\frac{\partial}{\partial x^i}\bigg\vert_pf=\frac{\partial}{\partial r^i}\bigg\vert_p (f\circ\varphi^{-1})$$
 
 holds. However, keeping [Definition 7](#def7) in mind and examining this formula again, we see that it has exactly the same form as the differential of $$\varphi^{-1}:\varphi(U)\rightarrow U$$.[^1] In other words, the basis of the tangent space is nothing other than the $$m$$ bases of the tangent space $$T_{\varphi(p)}\mathbb{R}^m$$ of $$\mathbb{R}^m$$ pulled back via the differential $$d\varphi^{-1}_{\varphi(p)}$$.
 
@@ -181,19 +181,19 @@ From a more linear-algebraic point of view, if $$\mathcal{B}$$ is the standard b
 
 More generally, let $$M,N$$ be manifolds of dimensions $$m,n$$ respectively, and let $$F:M\rightarrow N$$ be any $$C^\infty$$ function. Then for a fixed $$p\in M$$, there exist a coordinate system $$(U,\varphi)$$ containing $$p$$ and a coordinate system $$(V,\psi)$$ containing $$F(U)$$ such that $$\psi\circ F\circ\varphi^{-1}$$ is $$C^\infty$$. Now let $$\varphi=(x^i)_{i=1}^{m}$$ and $$\psi=(y^j)_{j=1}^n$$. Then the bases of the tangent spaces $$T_pM$$ and $$T_{F(p)}N$$ are given respectively by
 
-$$\frac{\partial}{\partial x^1}\bigg|_p,\cdots,\frac{\partial}{\partial x^m}\bigg|_p,\quad\text{and}\quad\frac{\partial}{\partial y^1}\bigg|_{F(p)},\cdots\frac{\partial}{\partial y^n}\bigg|_{F(p)}$$
+$$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial x^m}\bigg\vert_p,\quad\text{and}\quad\frac{\partial}{\partial y^1}\bigg\vert_{F(p)},\cdots\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}$$
 
 Let us now represent $$dF_p$$ as a matrix with respect to these. To do so, we express the image of each $$\partial/\partial x^i$$ under $$dF_p$$ as a linear combination of the $$\partial/\partial y^j$$. That is, we need only find the coefficients $$a_{ji}$$ in
 
-$$dF_p\left(\frac{\partial}{\partial x^i}\bigg|_p\right)=a_{1i}\frac{\partial}{\partial y^1}\bigg|_{F(p)}+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg|_{F(p)}$$
+$$dF_p\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)=a_{1i}\frac{\partial}{\partial y^1}\bigg\vert_{F(p)}+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}$$
 
 But since the $$\partial/\partial y^j$$ form the dual basis to the elements $$y^j+\mathfrak{n}^2$$ of $$\mathfrak{n}/\mathfrak{n}^2$$, it suffices to apply both sides to the function $$y^j$$.[^2] Namely, from
 
-$$dF_p\left(\frac{\partial}{\partial x^i}\bigg|_p\right)y^j=a_{1i}\frac{\partial}{\partial y^1}\bigg|_{F(p)}y^j+\cdots+a_{ji}\frac{\partial}{\partial y^j}\bigg|_{F(p)}y^j+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg|_{F(p)}y^j$$
+$$dF_p\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)y^j=a_{1i}\frac{\partial}{\partial y^1}\bigg\vert_{F(p)}y^j+\cdots+a_{ji}\frac{\partial}{\partial y^j}\bigg\vert_{F(p)}y^j+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}y^j$$
 
 by the definition of the dual basis the right-hand side reduces to $$a_{ji}$$ alone, so
 
-$$dF_p\left(\frac{\partial}{\partial x^i}\bigg|_p\right)y^j=a_{ji}$$
+$$dF_p\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)y^j=a_{ji}$$
 
 and from this we see that the matrix representation of $$dF_p$$ with respect to the bases $$\partial/\partial x^i$$ and $$\partial/\partial y^j$$ is the matrix
 

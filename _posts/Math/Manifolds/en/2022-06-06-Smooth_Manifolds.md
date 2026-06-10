@@ -23,7 +23,7 @@ Since we will frequently work with coordinate systems of dimension $$m$$, we fix
 
 Now let $$f$$ be a function from $$\mathbb{R}^m$$ to $$\mathbb{R}$$. Then we define the partial derivative of $$f$$ with respect to its $$i$$-th component by the formula
 
-$$\frac{\partial}{\partial r^i}\bigg|_t f=\frac{\partial f}{\partial r^i}\bigg|_t=\lim_{h\rightarrow 0}\frac{f(t^1,\ldots, t^{i-1}, t^i+h, t^{i+1},\ldots, t^m)-f(t^1,\ldots, t^m)}{h}$$
+$$\frac{\partial}{\partial r^i}\bigg\vert_t f=\frac{\partial f}{\partial r^i}\bigg\vert_t=\lim_{h\rightarrow 0}\frac{f(t^1,\ldots, t^{i-1}, t^i+h, t^{i+1},\ldots, t^m)-f(t^1,\ldots, t^m)}{h}$$
 
 As in the notation above, following **[Lee]** we write the $$i$$-th component as $$x^i$$ rather than $$x_i$$.
 

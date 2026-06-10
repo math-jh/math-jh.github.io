@@ -72,15 +72,15 @@ $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\pa
 
 이를 증명하기 위해, 위치조건 $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$을 만족하는 경로들의 1-parameter family $$(z_s)=(x_s,y_s)$$가 주어졌다 하고, $$z_0=z$$라 하자. 그럼
 
-$$\begin{aligned}\frac{\partial}{\partial s}\bigg|_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg|_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg|_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s|_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}|_0\bigr\rangle-\bigl\langle\partial_sx_s|_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s|_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
+$$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
 
 이다. 이제 부분적분
 
-$$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s|_0\rangle\mathop{dt}=\bigl[\langle y,\partial_sx_s|_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s|_0\rangle\mathop{dt}$$
+$$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s\vert_0\rangle\mathop{dt}=\bigl[\langle y,\partial_sx_s\vert_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s\vert_0\rangle\mathop{dt}$$
 
 을 생각하면, 우변의 첫째 항은 위치조건 $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$으로부터 $$0$$이 된다. 이를 앞선 식에 대입한 후 정리하면,
 
-$$\frac{\partial}{\partial s}\bigg|_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s|_0,\dot{x}-\partial_yH_t\rangle\mathop{dt}-\int_{t_0}^{t_1}\langle\partial_sx_s|_0,\dot{y}+\partial_xH_t\rangle\mathop{dt}$$
+$$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s\vert_0,\dot{x}-\partial_yH_t\rangle\mathop{dt}-\int_{t_0}^{t_1}\langle\partial_sx_s\vert_0,\dot{y}+\partial_xH_t\rangle\mathop{dt}$$
 
 이고, $$\partial_sx_s\vert_0$$과 $$\partial_sy_s\vert_0$$은 임의로 변할 수 있으므로 $$z$$가 $$\mathcal{A}_H$$의 극값이 되는 것은 두 식
 
@@ -96,7 +96,7 @@ $$J_0=\begin{pmatrix}0&-I\\I&0\end{pmatrix}$$
 
 로 주어진다. 이는 $$\mathbb{R}^{2n}$$을 $$z_j:=x_j+iy_j$$을 통하여 $$\mathbb{C}^n$$과 identify할 경우 허수단위 $$i$$와의 곱셈을 뜻한다. $$\mathbb{R}^{2n}$$을 manifold로, 그리고 각 점 $$p\in\mathbb{R}^{2n}$$마다 $$T_p\mathbb{R}^{2n}\cong\mathbb{R}^{2n}$$을 tangent space로 생각한다면, $$J_0$$은 다음의 식
 
-$$J_0\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\frac{\partial}{\partial y^j}\bigg|_p,\qquad J_0\left(\frac{\partial}{\partial y^j}\bigg|_p\right)=-\frac{\partial}{\partial x^j}\bigg|_p\tag{1}$$
+$$J_0\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial y^j}\bigg\vert_p,\qquad J_0\left(\frac{\partial}{\partial y^j}\bigg\vert_p\right)=-\frac{\partial}{\partial x^j}\bigg\vert_p\tag{1}$$
 
 으로 정의된 $$\End(T\mathbb{R}^{2n})$$의 원소로 생각할 수 있다. 이제 
 
@@ -136,7 +136,7 @@ $$\langle-,-\rangle=\sum_{j=1}^n dx^j\otimes dx^j+\sum_{j=1}^n dy^j\otimes dy^j$
 
 이므로, 식 (1)을 사용하면 $$\omega_0$$을 각각의 basis들 $$\partial/\partial x^j,\partial/\partial y^j$$에서 계산할 수 있다. 예컨대
 
-$$(\omega_0)_p\left(\frac{\partial}{\partial x^j}\bigg|_p,\frac{\partial}{\partial y^k}\bigg|_p\right)=\left\langle\frac{\partial}{\partial y^j}\bigg|_p,\frac{\partial}{\partial y^k}\bigg|_p\right\rangle_p=\delta_{jk}$$
+$$(\omega_0)_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p,\frac{\partial}{\partial y^k}\bigg\vert_p\right)=\left\langle\frac{\partial}{\partial y^j}\bigg\vert_p,\frac{\partial}{\partial y^k}\bigg\vert_p\right\rangle_p=\delta_{jk}$$
 
 가 되며, 나머지 basis들에 대하여도 계산해보면 $$\omega_0$$이 standard coordinate 상에서는
 

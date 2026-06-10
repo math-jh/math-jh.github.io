@@ -70,7 +70,7 @@ and we write this as $$\det(x_1,\ldots, x_n)$$. To compute this value explicitly
 
 ## Minors of a Matrix
 
-Among methods for computing determinants, there is Laplace expansion, which was discussed in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant, ⁋Theorem 13](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#thm13). We will not repeat that computation since it was already covered, but we can generalize the $$\det A^{(i,j)}$$ that appeared there.
+Among methods for computing determinants, there is Laplace expansion, which was discussed in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant, ⁋Theorem 12](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12). We will not repeat that computation since it was already covered, but we can generalize the $$\det A^{(i,j)}$$ that appeared there.
 
 To this end, suppose we are given an arbitrary $$X=(\xi_{ij})\in\Mat_{I\times J}$$. Fixing a total ordering on $$I$$ and $$J$$, whenever finite subsets $$H\subseteq I$$ and $$K\subseteq J$$ are given, the submatrix $$X_{H,K}=(\xi_{i,j})_{i\in H,j\in K}$$ also inherits a total order on its indices. In particular, consider the case where $$\lvert H\rvert=\lvert K\rvert$$. Then the following lemma is obvious.
 

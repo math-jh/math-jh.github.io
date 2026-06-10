@@ -111,7 +111,7 @@ Thus, the difficult part of the proof of [Theorem 3](#thm3) is the converse dire
 
 <ins id="lem5">**Lemma 5**</ins> Let $$M$$ be an $$m$$-dimensional manifold, $$p\in M$$ a point, and $$X$$ a vector field satisfying $$X_p\neq 0$$. Then there exists a suitable coordinate system $$(U,\varphi)$$ containing $$p$$, with $$\varphi=(x^1,\ldots, x^m)$$, such that
 
-$$X|_U=\frac{\partial}{\partial x^1}\bigg|_U$$
+$$X\vert_U=\frac{\partial}{\partial x^1}\bigg\vert_U$$
 
 holds.
 
@@ -121,7 +121,7 @@ holds.
 
 Choose a coordinate system $$(V,\tau)$$ centered at $$p$$, with $$\tau=(y^1,\ldots, y^m)$$, such that
 
-$$X_p=\frac{\partial}{\partial y^1}\bigg|_p$$
+$$X_p=\frac{\partial}{\partial y^1}\bigg\vert_p$$
 
 holds. Without loss of generality, we may assume that $$V$$ is sufficiently small so that for a suitable $$\epsilon>0$$ the map
 
@@ -137,7 +137,7 @@ $$\sigma: (-\epsilon,\epsilon)\times W;\qquad (t,a^2,\ldots, a^d)\mapsto \phi^t(
 
 is well-defined. Now,
 
-$$d\sigma\left(\frac{\partial}{\partial r^1}\bigg|_0\right)=\frac{\partial}{\partial y^1}\bigg|_p=X_p\neq 0,\qquad d\sigma\left(\frac{\partial}{\partial r^i}\bigg|_0\right)=\frac{\partial}{\partial y^i}\bigg|_p$$
+$$d\sigma\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\partial}{\partial y^1}\bigg\vert_p=X_p\neq 0,\qquad d\sigma\left(\frac{\partial}{\partial r^i}\bigg\vert_0\right)=\frac{\partial}{\partial y^i}\bigg\vert_p$$
 
 so $$\sigma$$ is nonsingular at the origin, and hence $$\sigma^{-1}$$ defines a coordinate map.
 
@@ -148,7 +148,7 @@ so $$\sigma$$ is nonsingular at the origin, and hence $$\sigma^{-1}$$ defines a 
 
 Assume the theorem holds for all $$(k-1)$$-dimensional distributions, and let $$\mathcal{D}$$ be a $$k$$-dimensional distribution. For a point $$p\in M$$, we may assume that $$\mathcal{D}$$ is spanned by $$k$$ vector fields $$X_1,\ldots, X_k$$ in a neighborhood of $$p$$. Now apply [Lemma 5](#lem5) to find a coordinate system $$(V,\tau)$$ centered at $$p$$, with $$\tau=(y^1,\ldots, y^k)$$, such that
 
-$$X_1|_V=\frac{\partial}{\partial y^1}$$
+$$X_1\vert_V=\frac{\partial}{\partial y^1}$$
 
 holds.
 
@@ -160,7 +160,7 @@ Since the $$X_i$$ are independent, so are the $$Y_i$$.
 
 Now let $$S$$ be the slice defined by $$y_1=0$$. Then by restricting $$Y_2,\ldots, Y_k$$ to $$S$$ we obtain vector fields
 
-$$Z_i=Y_i|_S \qquad (i\geq 2).$$
+$$Z_i=Y_i\vert_S \qquad (i\geq 2).$$
 
 Since
 

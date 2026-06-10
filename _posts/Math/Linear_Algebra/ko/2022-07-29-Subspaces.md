@@ -136,7 +136,7 @@ $$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha
 
 >$$\mathbb{K}$$의 원소를 계수로 갖는 $$\x$$에 대한 *formal power series*들의 집합
 
-이라 하자. 앞선 [예시 7](#ex7)와 동일한 방식으로 벡터 사이의 덧셈과 스칼라곱을 정의하면, $$\mathbb{K}[[\x]]$$는 마찬가지로 $$\mathbb{K}$$-벡터공간이 된다.  
+이라 하자. 앞선 [예시 5](#ex5)와 동일한 방식으로 벡터 사이의 덧셈과 스칼라곱을 정의하면, $$\mathbb{K}[[\x]]$$는 마찬가지로 $$\mathbb{K}$$-벡터공간이 된다.  
 
 </div>
 

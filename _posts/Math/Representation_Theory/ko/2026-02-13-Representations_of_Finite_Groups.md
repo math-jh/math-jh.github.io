@@ -168,11 +168,11 @@ $$\langle v,w\rangle=\langle \rho(g) v,\rho(g) w\rangle=\langle \rho(g)^\dagger 
 
 $$V$$ 위의 임의의 Hermitian inner product $$\langle -,- \rangle$$에 대하여, 
 
-$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
+$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
 
 을 통해 새로운 inner product $$\langle\kern-1.5pt\langle-,-\rangle\kern-1.5pt\rangle$$를 정의하면 된다. 그럼 임의의 $$h\in G$$에 대하여
 
-$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
+$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
 
 이므로 이 inner product는 $$G$$-invariant이다.
 

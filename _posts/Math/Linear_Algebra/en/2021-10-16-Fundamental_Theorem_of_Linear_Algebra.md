@@ -113,7 +113,7 @@ Now grouping the above expression by the basis elements $$e_1,\ldots, e_k$$ of $
 
 $$(L_2\circ L_1)(e_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)e_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)e_k.$$
 
-Since the $$i$$-th column of $$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$ is the vector to which $$e_i$$ is mapped by $$L_2\circ L_1$$, the entry in row $$j$$, column $$i$$ of the matrix $$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$ is the $$j$$-th component $$\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$$ of this vector. Now from the calculation immediately following [§Matrices, ⁋Definition 3](/en/math/linear_algebra/matrices#def3), we know that this is the $$(i,j)$$-entry of the product of the two matrices $$[L_2]_{\mathcal{E}_k}^{\mathcal{E}_m}$$ and $$[L_1]_{\mathcal{E}_m}^{\mathcal{E}_n}$$.
+Since the $$i$$-th column of $$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$ is the vector to which $$e_i$$ is mapped by $$L_2\circ L_1$$, the entry in row $$j$$, column $$i$$ of the matrix $$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$ is the $$j$$-th component $$\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$$ of this vector. Now from the calculation immediately following [§Matrices, ⁋Definition 2](/en/math/linear_algebra/matrices#def2), we know that this is the $$(i,j)$$-entry of the product of the two matrices $$[L_2]_{\mathcal{E}_k}^{\mathcal{E}_m}$$ and $$[L_1]_{\mathcal{E}_m}^{\mathcal{E}_n}$$.
 
 </details>
 

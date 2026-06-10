@@ -76,8 +76,8 @@ $$P_i$$의 $$A$$-basis를 $$\mathcal{B}_i'$$라 하자. 이들을 lift하면 $$M
 
 $$e_M \sim
 \begin{pmatrix}
-X_{rr} & * & \cdots & * \\
-0 & X_{r-1,r-1} & \cdots & * \\
+X_{rr} & \ast  & \cdots & \ast  \\
+0 & X_{r-1,r-1} & \cdots & \ast  \\
 \vdots & \ddots & \ddots & \vdots \\
 0 & \cdots & 0 & X_{11}
 \end{pmatrix}$$

@@ -122,7 +122,7 @@ $$x_j=\sum_{i\neq j}(-x_i)$$
 
 ## 보조부분가군
 
-다음 명제는 특별히 $$M$$이 두 개의 submodule $$N_1,N_2$$의 direct sum일 때 [명제 6](#def6)을 조금 더 직관적으로 살펴보도록 도와준다. 
+다음 명제는 특별히 $$M$$이 두 개의 submodule $$N_1,N_2$$의 direct sum일 때 [명제 6](#prop6)을 조금 더 직관적으로 살펴보도록 도와준다. 
 
 <div class="proposition" markdown="1">
 

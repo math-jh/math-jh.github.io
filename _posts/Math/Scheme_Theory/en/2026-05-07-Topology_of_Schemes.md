@@ -49,7 +49,7 @@ Then by definition, if $$x$$ is a generic point of $$C$$, every open subset $$U$
 
 In particular, when $$X$$ is an affine scheme $$\Spec A$$, we have already verified that any irreducible closed subset of $$\Spec A$$ is of the form $$Z(\mathfrak{p})$$ for some prime ideal $$\mathfrak{p}$$ of $$A$$. Then $$\mathfrak{p}\in Z(\mathfrak{p})$$ trivially, and since $$\mathfrak{p}$$ is obviously (uniquely) minimal among the prime ideals belonging to $$Z(\mathfrak{p})$$, it is the (unique) generic point of $$Z(\mathfrak{p})$$.
 
-To make this more geometric, let $$A=\mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$$. Then in [§Spectra, ⁋Proposition 9](#prop9) we showed that $$\Spec A$$ is a closed subset of $$\mathbb{A}_\mathbb{K}^2=\Spec \mathbb{K}[\x_1,\x_2]$$. We now see that the prime ideal $$(\x_2-\x_1^2)\in \Spec \mathbb{K}[\x_1,\x_2]$$ is the generic point of $$\Spec A\cong Z(\x_2-\x_1^2)$$. That is, the generic point can be interpreted as representing the curve $$\x_2-\x_1^2$$ itself.
+To make this more geometric, let $$A=\mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$$. Then in [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9) we showed that $$\Spec A$$ is a closed subset of $$\mathbb{A}_\mathbb{K}^2=\Spec \mathbb{K}[\x_1,\x_2]$$. We now see that the prime ideal $$(\x_2-\x_1^2)\in \Spec \mathbb{K}[\x_1,\x_2]$$ is the generic point of $$\Spec A\cong Z(\x_2-\x_1^2)$$. That is, the generic point can be interpreted as representing the curve $$\x_2-\x_1^2$$ itself.
 
 ## Topological Properties of Schemes
 

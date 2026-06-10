@@ -257,7 +257,7 @@ We call these *Schubert cycles*, and their Poincaré duals $$\sigma_\lambda$$ ar
 
 $$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}.$$
 
-To use our geometric intuition, let us think of this as an intersection of Schubert cycles, as in [§Poincaré Duality, ⁋Example 15](/en/math/algebraic_topology/Poincare_duality#ex15). For this, we need to consider two subspaces in general position representing the homology class of $$\sigma_{(1,0)}$$, which can be achieved by changing the choice of flag.
+To use our geometric intuition, let us think of this as an intersection of Schubert cycles, as in [§Poincaré Duality, ⁋Example 16](/en/math/algebraic_topology/Poincare_duality#ex16). For this, we need to consider two subspaces in general position representing the homology class of $$\sigma_{(1,0)}$$, which can be achieved by changing the choice of flag.
 
 For a fixed flag $$F_\bullet$$, let us explicitly write out what condition the partition $$\lambda=(1,0)$$ represents:
 

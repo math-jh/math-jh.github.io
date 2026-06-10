@@ -55,7 +55,7 @@ $$(ca)(cb)^{-1}=cab^{-1}c^{-1}$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 동치관계 $$\sim_r$$ 대신 다음의 관계
+**참고**</ins> 동치관계 $$\sim_r$$ 대신 다음의 관계
 
 $$a\sim_{\tiny l} b\iff a^{-1}b\in H$$
 

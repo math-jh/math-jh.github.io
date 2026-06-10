@@ -35,7 +35,7 @@ weight: 11
 1. $$X$$가 $$C^\infty$$이다.
 2. 임의의 coordinate system $$(U,\varphi)$$, $$\varphi=(x^i)_{i=1}^m$$에 대하여, 다음의 식
     
-    $$(X|_U)_p=\sum_{i=1}^m a^i(p)\frac{\partial}{\partial x^i}\bigg|_p$$
+    $$(X\vert_U)_p=\sum_{i=1}^m a^i(p)\frac{\partial}{\partial x^i}\bigg\vert_p$$
 
     으로 정의된 함수 $$a^i:U\rightarrow\mathbb{R}$$들이 모두 $$U$$에서 정의된 $$C^\infty$$ 함수들이다. 
 3. 임의의 열린집합 $$V\subseteq M$$과 $$V$$ 위에서 정의된 $$C^\infty$$ 함수 $$f:V\rightarrow\mathbb{R}$$에 대하여, $$X(f)$$ 또한 $$C^\infty$$이다.
@@ -46,23 +46,23 @@ weight: 11
 
 우선 $$X$$가 $$C^\infty$$라면 $$X\vert_U$$가 $$C^\infty$$인 것은 자명하다. 한편, $$TM$$에서 정의된 함수로서 $$dx^i$$들은 coordinate system $$\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$$의 성분함수들이므로 마찬가지로 $$C^\infty$$이고, 따라서 이들의 합성
 
-$$a^i(p)=dx^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg|_p\right)=dx^i|_p\circ(X|_U)_p$$
+$$a^i(p)=dx^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg\vert_p\right)=dx^i\vert_p\circ(X\vert_U)_p$$
 
 또한 $$C^\infty$$인 것이 자명하다. 
 
 2번 조건이 성립한다 가정하자. 임의의 $$p\in V$$에 대하여 $$X(f)$$가 $$p$$에서 $$C^\infty$$인 것을 보여야 하므로, 이를 위해서는 $$p$$를 포함하는 적당한 coordinate system $$(U,\varphi)$$에 대하여 $$X(f)$$가 $$p$$에서 $$C^\infty$$임을 보이면 충분하다. 이제 2번 조건에 의하여 
 
-$$(X|_U)_pf=\sum_{i=1}^m a^i(p)\frac{\partial f}{\partial x^i}(p)$$
+$$(X\vert_U)_pf=\sum_{i=1}^m a^i(p)\frac{\partial f}{\partial x^i}(p)$$
 
 이고, 그럼 우변의 식은 $$U$$ 위에서 정의된 $$C^\infty$$ 함수가 되므로 $$X(f)$$가 $$C^\infty$$ 함수이다.
 
 마지막으로 3번 조건을 가정하고 1번을 보이자. $$X:M\rightarrow TM$$이 $$C^\infty$$임을 보이기 위해서는 임의의 coordinate system $$(U,\varphi)$$에 대하여 $$X\circ\varphi^{-1}$$가 $$\varphi(U)$$에서 $$TM$$으로의 $$C^\infty$$ 함수임을 보이면 되고, 이는 다시 $$TM$$의 coordinate system을 생각하면 다음의 함수들
 
-$$x^i\circ\pi\circ (X|_U),\quad dx^i\circ(X|_U)$$
+$$x^i\circ\pi\circ (X\vert_U),\quad dx^i\circ(X\vert_U)$$
 
 들이 $$C^\infty$$임을 보이면 된다. 그런데 직접 계산을 해 보면
 
-$$x^i\circ\pi\circ (X|_U)=x^i\circ\id_U=x^i,\qquad dx^i\circ(X|_U)=X(x^i)$$
+$$x^i\circ\pi\circ (X\vert_U)=x^i\circ\id_U=x^i,\qquad dx^i\circ(X\vert_U)=X(x^i)$$
 
 가 성립하므로 이들은 모두 $$C^\infty$$가 된다.
 

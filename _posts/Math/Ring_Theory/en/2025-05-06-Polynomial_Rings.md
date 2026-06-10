@@ -326,7 +326,7 @@ has the same cardinality as $$\prod_{i\in J} H_i$$. Now for any element $$(x_i)_
 
 $$w(\x)=\sum_{k=0}^mv_k(x_1,\ldots, x_{n-1})\x_n^k$$
 
-is a nonzero polynomial. On the other hand, from the fact that $$H_n$$ is an infinite set, the argument after [Proposition 9](#prop9), and [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Proposition 12](/en/math/set_theory/natural_numbers#prop12), the set
+is a nonzero polynomial. On the other hand, from the fact that $$H_n$$ is an infinite set, the argument after [Proposition 9](#prop9), and [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Proposition 13](/en/math/set_theory/natural_numbers#prop13), the set
 
 $$\{a\in H_n\mid w(a)\neq 0\}$$
 

@@ -131,7 +131,7 @@ Moreover, any set of cardinals is well-ordered.
 
 Consider the set $$A=\bigcup_{\mathfrak{a}\in E}\mathfrak{a}$$. Then every cardinal $$\mathfrak{a}\in E$$ is a subset of $$A$$.
 
-By the well-ordering principle, there exists a well-ordering on this set; denote it by $$\leq$$. Moreover, every subset of $$A$$ is equipotent to a segment of $$A$$ ([Proposition](#prop0) in Review). Thus for every cardinal $$\mathfrak{a}$$, the set of segments of $$A$$ equipotent to it is non-empty, and by the well-orderedness of $$A^*$$, there exists a least element. Denote this element by $$\varphi(\mathfrak{a})$$.  
+By the well-ordering principle, there exists a well-ordering on this set; denote it by $$\leq$$. Moreover, every subset of $$A$$ is equipotent to a segment of $$A$$ ([Proposition](#prop-0) in Review). Thus for every cardinal $$\mathfrak{a}$$, the set of segments of $$A$$ equipotent to it is non-empty, and by the well-orderedness of $$A^\ast$$, there exists a least element. Denote this element by $$\varphi(\mathfrak{a})$$.  
 If we can show that $$\mathfrak{a}\leq\mathfrak{b}$$ is equivalent to $$\varphi(\mathfrak{a})\subset\varphi(\mathfrak{b})$$, then the proof will be complete by the well-orderedness of $$A$$.
 
 First, the latter condition clearly implies the former. Conversely, suppose $$\mathfrak{a}\leq\mathfrak{b}$$; that is, $$\mathfrak{a}$$ is equipotent to a subset of $$\mathfrak{b}=\varphi(\mathfrak{b})$$ (equality holds as cardinals). If $$\varphi(\mathfrak{b})\subset\varphi(\mathfrak{a})$$ and $$\varphi(\mathfrak{a})\neq\varphi(\mathfrak{b})$$, then some segment of $$\varphi(\mathfrak{b})$$ would be equipotent to $$\mathfrak{a}$$, contradicting the definition of $$\varphi(\mathfrak{b})$$. Therefore the two conditions are equivalent.

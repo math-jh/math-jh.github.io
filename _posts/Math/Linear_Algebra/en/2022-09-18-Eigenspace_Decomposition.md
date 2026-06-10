@@ -190,7 +190,7 @@ The next proposition shows that the geometric multiplicity of an eigenvalue of a
 
 Let the geometric multiplicity of $$\lambda$$ be $$k$$, and consider $$k$$ linearly independent vectors $$x_1,\ldots, x_k$$ spanning $$E_\lambda(A)$$. To these we can add $$(n-k)$$ vectors $$x_{k+1},\ldots, x_n$$ to form a new basis $$\{x_1,\ldots, x_n\}$$ of $$\mathbb{K}^n$$. Now define the matrix $$X$$ as
 
-$$X=(x_1|x_2|\cdots|x_n)$$
+$$X=(x_1\vert x_2\vert \cdots\vert x_n)$$
 
 Since the columns of $$X$$ are linearly independent, $$X^{-1}$$ exists. Let the rows of $$X^{-1}$$ be $$y_i$$. From the equation $$X^{-1}X=XX^{-1}=I$$ we obtain
 
@@ -198,7 +198,7 @@ $$y_i\cdot x_j=\begin{cases}1&i=j\\ 0&i\neq j\end{cases}$$
 
 Therefore, setting $$A'=X^{-1}AX$$, we have
 
-$$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmatrix}(Ax_1|Ax_2|\cdots|Ax_n)\\
+$$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmatrix}(Ax_1\vert Ax_2\vert \cdots\vert Ax_n)\\
 &=\begin{pmatrix}y_1\cdot Ax_1&y_1\cdot Ax_2&\cdots& y_1\cdot Ax_k&\cdots&y_1\cdot Ax_n\\ y_2\cdot Ax_1&y_2\cdot Ax_2&\cdots &y_2\cdot Ax_k&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot Ax_1&y_k\cdot Ax_2&\cdots&y_k\cdot Ax_k&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot Ax_1&y_n\cdot Ax_2&\cdots &y_n\cdot Ax_k&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}y_1\cdot (\lambda x_1)&y_1\cdot (\lambda x_2)&\cdots& y_1\cdot (\lambda x_k)&\cdots&y_1\cdot Ax_n\\ y_2\cdot (\lambda x_1)&y_2\cdot (\lambda x_2)&\cdots &y_2\cdot (\lambda x_k)&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot (\lambda x_1)&y_k\cdot (\lambda x_2)&\cdots&y_k\cdot (\lambda x_k)&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot (\lambda x_1)&y_n\cdot (\lambda x_2)&\cdots &y_n\cdot (\lambda x_k)&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
@@ -319,7 +319,7 @@ we have $$\ker (A-I)\cap \im(A-I)\neq \{0\}$$. Yet if only $$\ker L\cap \im L=\{
 
 <div class="proposition" markdown="1">
 
-<ins id="lem10">**Lemma 10**</ins> In the above situation, $$\ker L\cap \im L=\{0\}$$ is equivalent to $$\ker L^2=\ker L$$.
+<ins id="lem11">**Lemma 11**</ins> In the above situation, $$\ker L\cap \im L=\{0\}$$ is equivalent to $$\ker L^2=\ker L$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -337,11 +337,11 @@ so $$w\in \ker L$$. Hence $$v=Lw=0$$.
 
 </details>
 
-Returning to the original story, we are especially interested in the case where $$L$$ is of the form $$A-\lambda I$$ for some linear operator and its eigenvalue. The following proposition characterizes diagonalizability concisely using [Lemma 10](#lem10).
+Returning to the original story, we are especially interested in the case where $$L$$ is of the form $$A-\lambda I$$ for some linear operator and its eigenvalue. The following proposition characterizes diagonalizability concisely using [Lemma 11](#lem11).
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**Proposition 11**</ins> A linear operator $$A:V\rightarrow V$$ is diagonalizable if and only if for every eigenvalue $$\lambda\in\sigma(A)$$ we have
+<ins id="prop12">**Proposition 12**</ins> A linear operator $$A:V\rightarrow V$$ is diagonalizable if and only if for every eigenvalue $$\lambda\in\sigma(A)$$ we have
 
 $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$
 
@@ -357,7 +357,7 @@ By the uniqueness of the eigenspace decomposition, $$(\mu-\lambda)^2v_\mu=0$$ mu
 
 $$v=v_\lambda\in E_\lambda(A)=\ker(A-\lambda I)$$
 
-Conversely, suppose $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$ for every eigenvalue $$\lambda$$. From [Lemma 10](#lem10) we have
+Conversely, suppose $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$ for every eigenvalue $$\lambda$$. From [Lemma 11](#lem11) we have
 
 $$\ker(A-\lambda I)\cap\im(A-\lambda I)=\{0\}$$
 

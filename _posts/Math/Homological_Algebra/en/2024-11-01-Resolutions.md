@@ -117,7 +117,7 @@ However, since we know nothing about $$\lMod{A}^\op$$, the fact that $$\lMod{A}$
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-It is not difficult to show that a right adjoint preserves injective objects. Then the coextension of scalars $$\Ab \rightarrow \lMod{A}$$ obtained from the ring homomorphism $$\mathbb{Z}\rightarrow A$$ is the right adjoint of restriction of scalars, so an injective object in $$\Ab$$ becomes an injective object in $$\lMod{A}$$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6)) Thus, for the desired proof it suffices to prove that $$\Ab$$ has enough injectives. For any $$A\in\Ab$$, this is done by defining
+It is not difficult to show that a right adjoint preserves injective objects. Then the coextension of scalars $$\Ab \rightarrow \lMod{A}$$ obtained from the ring homomorphism $$\mathbb{Z}\rightarrow A$$ is the right adjoint of restriction of scalars, so an injective object in $$\Ab$$ becomes an injective object in $$\lMod{A}$$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 7](/en/math/algebraic_structures/change_of_base_ring#prop7)) Thus, for the desired proof it suffices to prove that $$\Ab$$ has enough injectives. For any $$A\in\Ab$$, this is done by defining
 
 $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 

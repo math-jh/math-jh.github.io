@@ -37,7 +37,7 @@ In the given situation,
 
 $$\cl_B(A)=B\cap \cl_X(A)=B$$
 
-so $$A$$ is a dense subset of $$B$$. ([§Subspaces, ⁋Proposition 5](/en/math/topology/subspaces#prop5)) Now, toward a contradiction, suppose there exist two disjoint open sets $$U,V$$ in $$B$$ with $$U\cup V=B$$. Since $$A$$ is dense in $$B$$, both $$U\cap A$$ and $$V\cap A$$ are nonempty and $$U\cap V\cap A=\emptyset$$. This contradicts the assumption that $$A$$ is connected.
+so $$A$$ is a dense subset of $$B$$. ([§Subspaces, ⁋Proposition 4](/en/math/topology/subspaces#prop4)) Now, toward a contradiction, suppose there exist two disjoint open sets $$U,V$$ in $$B$$ with $$U\cup V=B$$. Since $$A$$ is dense in $$B$$, both $$U\cap A$$ and $$V\cap A$$ are nonempty and $$U\cap V\cap A=\emptyset$$. This contradicts the assumption that $$A$$ is connected.
 
 </details>
 

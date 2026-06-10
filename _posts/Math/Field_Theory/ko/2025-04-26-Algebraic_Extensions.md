@@ -32,7 +32,7 @@ weight: 2
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 우리가 $$\mathbb{K}$$-algebra와 이들 사이의 homomorpihsm을 생각하는 것은 위와 유사한 경우를 다루기 위해서이므로, 앞으로의 글에서 category $$\Alg{\mathbb{K}}$$는 항상 unital associative $$\mathbb{K}$$-algebra들의 category가 될 것이다. 즉, 앞으로 $$\mathbb{K}$$-algebra라고 함은 항상 unital associative $$\mathbb{K}$$-algebra가 될 것이며, $$\mathbb{K}$$-algebra homomorphism 또한 unital $$\mathbb{K}$$-algebra homomorpihsm을 의미할 것이다. 
+**참고**</ins> 우리가 $$\mathbb{K}$$-algebra와 이들 사이의 homomorpihsm을 생각하는 것은 위와 유사한 경우를 다루기 위해서이므로, 앞으로의 글에서 category $$\Alg{\mathbb{K}}$$는 항상 unital associative $$\mathbb{K}$$-algebra들의 category가 될 것이다. 즉, 앞으로 $$\mathbb{K}$$-algebra라고 함은 항상 unital associative $$\mathbb{K}$$-algebra가 될 것이며, $$\mathbb{K}$$-algebra homomorphism 또한 unital $$\mathbb{K}$$-algebra homomorpihsm을 의미할 것이다. 
 
 </div>
 

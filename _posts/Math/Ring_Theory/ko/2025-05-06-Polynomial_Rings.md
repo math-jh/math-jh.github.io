@@ -337,7 +337,7 @@ $$w(\x)=\sum_{k=0}^mv_k(x_1,\ldots, x_{n-1})\x_n^k$$
 
 $$\{a\in H_n\mid w(a)\neq 0\}$$
 
-은, $$H_n$$이 무한집합이라는 사실과 [명제 9](#prop9) 이후의 논증, 그리고 [\[집합론\] §자연수와 무한집합, ⁋명제 12](/ko/math/set_theory/natural_numbers#prop12)로부터
+은, $$H_n$$이 무한집합이라는 사실과 [명제 9](#prop9) 이후의 논증, 그리고 [\[집합론\] §자연수와 무한집합, ⁋명제 13](/ko/math/set_theory/natural_numbers#prop13)로부터
 
 $$\lvert H\rvert\geq \lvert H_u\rvert\geq \lvert H_{v_m}\rvert\lvert H_n\rvert=\lvert H\rvert$$
 

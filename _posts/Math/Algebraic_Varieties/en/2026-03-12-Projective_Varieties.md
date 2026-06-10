@@ -158,7 +158,7 @@ That these are inverses of each other is obvious from the definitions. We now sh
 
 First, to show continuity of $$\varphi_0$$, consider a closed set $$Z(f)$$ in $$\mathbb{A}^n$$. Then
 
-$$\varphi_0^{-1}(Z(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \;\middle|\; f\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) = 0\right\}.$$
+$$\varphi_0^{-1}(Z(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \;\middle\vert\; f\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) = 0\right\}.$$
 
 Now if $$f$$ is a polynomial of degree $$d$$, then
 

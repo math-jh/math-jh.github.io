@@ -96,7 +96,7 @@ $$f_i$$들에 걸려있는 조건
 
 > 임의의 $$i\neq j$$에 대하여 $$x\in G_i$$이고 $$y\in G_j$$라면, $$f_i(x)f_j(y)=f_j(y)f_i(x)$$
 
-은 필연적으로 나와야 할 조건인데, 이 조건들이 정확히 $$\iota_i$$들이 만족하는 조건이기 때문이다. 이로 인해 [정리 6](#thm6)이 abelian group들에 대해서만 우리의 물음에 대한 답이 된다.
+은 필연적으로 나와야 할 조건인데, 이 조건들이 정확히 $$\iota_i$$들이 만족하는 조건이기 때문이다. 이로 인해 [정리 2](#thm2)이 abelian group들에 대해서만 우리의 물음에 대한 답이 된다.
 
 Weak direct product의 universal property를 이용하면 direct product때와 유사한 몇몇 성질들을 보일 수 있다. 예컨대 다음이 성립한다.
 

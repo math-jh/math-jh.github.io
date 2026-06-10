@@ -77,7 +77,7 @@ Occasionally, we need to specify which sets the first and second components of a
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> Suppose a binary relation $$R$$ satisfying the above conditions $$\pr_1R\subseteq A$$, $$\pr_2R\subseteq B$$ is given. By [§Ordered Pairs, ⁋Proposition 9](/en/math/set_theory/ordered_pair#prop9),
+**Remark**</ins> Suppose a binary relation $$R$$ satisfying the above conditions $$\pr_1R\subseteq A$$, $$\pr_2R\subseteq B$$ is given. By [§Ordered Pairs, ⁋Proposition 9](/en/math/set_theory/ordered_pair#prop9),
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
@@ -89,7 +89,7 @@ so the Cartesian product $$A\times B$$ can be said to be the largest binary rela
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> Consider a binary relation $$(R,A,B)$$ and a subset $$A'\subseteq A$$. Then the set of <phrase>all elements related by $R$ to elements of $A'$</phrase> is called the *image* of $$A'$$ under $$R$$, and is denoted $$R(A')$$.
+<ins id="def4">**Definition 4**</ins> Consider a binary relation $$(R,A,B)$$ and a subset $$A'\subseteq A$$. Then the set of <phrase>all elements related by $R$ to elements of $A'$</phrase> is called the *image* of $$A'$$ under $$R$$, and is denoted $$R(A')$$.
 
 </div>
 
@@ -107,7 +107,7 @@ This kind of issue is something we must always be careful about when studying se
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> Let $$R$$ be a binary relation, and consider any set $$A$$ and its subset $$X$$. Then $$R(X)\subseteq R(A)$$ holds.
+<ins id="prop5">**Proposition 5**</ins> Let $$R$$ be a binary relation, and consider any set $$A$$ and its subset $$X$$. Then $$R(X)\subseteq R(A)$$ holds.
 
 </div>
 
@@ -128,7 +128,7 @@ If for some $$x$$ we have $$A=\{x\}$$, we can think of $$R(A)$$ as something lik
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> For a binary relation $$R$$, the set $$R(\{x\})$$ is called the *section* of $$R$$ at $$x$$.
+<ins id="def6">**Definition 6**</ins> For a binary relation $$R$$, the set $$R(\{x\})$$ is called the *section* of $$R$$ at $$x$$.
 
 </div>
 

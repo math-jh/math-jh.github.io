@@ -535,11 +535,11 @@ $$E_2^{n,0}=H^n(\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))=H^n(X, \mathcal{F})$
 
 <ins id="prop19">**명제 19 (Leray Spectral Sequence)**</ins> 연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, 다음의 $$E_2$$ page를 가지는 spectral sequence가 존재한다.
 
-$$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$$
+$$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$$
 
 </div>
 
-기하학적으로 이는 $$f:X\rightarrow Y$$가 fibration일 때 그 의미가 가장 명확한데, 이 경우 이 spectral sequence가 뜻하는 바는 $$X$$ 위의 cohomology를 계산하기 위해서는 $$Y$$ 위에서의 cohomology를 먼저 계산한 후, 각 점의 fiber 위에서의 cohomology를 higher sheaf $$R^q f_* \mathcal{F}$$로 기억한 뒤, 이들을 $$Y$$ 위에서 합성하면 된다는 것이다.
+기하학적으로 이는 $$f:X\rightarrow Y$$가 fibration일 때 그 의미가 가장 명확한데, 이 경우 이 spectral sequence가 뜻하는 바는 $$X$$ 위의 cohomology를 계산하기 위해서는 $$Y$$ 위에서의 cohomology를 먼저 계산한 후, 각 점의 fiber 위에서의 cohomology를 higher sheaf $$R^q f_\ast \mathcal{F}$$로 기억한 뒤, 이들을 $$Y$$ 위에서 합성하면 된다는 것이다.
 
 이제 Leray spectral sequence의 가장 낮은 차원에서는 다음의 exact sequence를 얻을 수 있다.
 
@@ -547,7 +547,7 @@ $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$$
 
 <ins id="cor20">**따름정리 20 (Five-Term Exact Sequence)**</ins> 연속함수 $$f : X \to Y$$와 sheaf $$\mathcal{F}$$에 대하여, Leray spectral sequence로부터 다음의 exact sequence
 
-$$0 \to H^1(Y, f_* \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_* \mathcal{F}) \overset{d_2}{\to} H^2(Y, f_* \mathcal{F}) \to H^2(X, \mathcal{F})$$
+$$0 \to H^1(Y, f_\ast \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_\ast \mathcal{F}) \overset{d_2}{\to} H^2(Y, f_\ast \mathcal{F}) \to H^2(X, \mathcal{F})$$
 
 를 얻는다.
 
@@ -556,7 +556,7 @@ $$0 \to H^1(Y, f_* \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_* \math
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Leray spectral sequence $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$의 $$E_2$$ page에서 $$p+q \leq 2$$인 항목들을 고려하자. [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5)에 의해 우리는
+Leray spectral sequence $$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$의 $$E_2$$ page에서 $$p+q \leq 2$$인 항목들을 고려하자. [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5)에 의해 우리는
 
 $$E_\infty^{p,q} \cong \gr^p H^{p+q} = F^p H^{p+q}/F^{p+1}H^{p+q}$$
 
@@ -596,7 +596,7 @@ $$E_2^{0,1} \overset{d_2}{\to} E_2^{2,0} \to H^2(X, \mathcal{F})$$
 
 </details>
 
-이 exact sequence는 $$d_2$$-differential의 존재가 cohomology의 계산에 어떤 제약을 주는지를 보여주며, $$H^i(X, \mathcal{F}) \cong H^i(Y, f_* \mathcal{F})$$라는 직관을 좋은 경우에서는 정당화해준다.
+이 exact sequence는 $$d_2$$-differential의 존재가 cohomology의 계산에 어떤 제약을 주는지를 보여주며, $$H^i(X, \mathcal{F}) \cong H^i(Y, f_\ast \mathcal{F})$$라는 직관을 좋은 경우에서는 정당화해준다.
 
 마지막으로 우리는 Čech cohomology와 derived functor cohomology의 관계를 spectral sequence로 기술할 수 있다.
 

@@ -112,7 +112,7 @@ The following propositions hold in the general case as well, but for convenience
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> An adjunction $$\phi_!\dashv\phi^\ast$$ exists.
+<ins id="prop6">**Proposition 6**</ins> An adjunction $$\phi_!\dashv\phi^\ast$$ exists.
 
 </div>
 <details class="proof" markdown="1">
@@ -156,7 +156,7 @@ The following adjoint pair is proved similarly.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> An adjunction $$\phi^\ast\dashv\phi_\ast$$ exists.
+<ins id="prop7">**Proposition 7**</ins> An adjunction $$\phi^\ast\dashv\phi_\ast$$ exists.
 
 </div>
 

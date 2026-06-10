@@ -182,7 +182,7 @@ $$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$S$ the set of comjugates of $x$ in $
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> Algebraic extension $$\mathbb{L}/\mathbb{K}$$이 *Galois<sub>갈루아</sub>*라는 것은 $$\mathbb{L}/\mathbb{K}$$이 [명제 8](#prop8)의 조건을 만족하는 것이다. 
+<ins id="def9">**정의 9**</ins> Algebraic extension $$\mathbb{L}/\mathbb{K}$$이 *Galois<sub>갈루아</sub>*라는 것은 $$\mathbb{L}/\mathbb{K}$$이 [정리 8](#thm8)의 조건을 만족하는 것이다. 
 
 </div>
 

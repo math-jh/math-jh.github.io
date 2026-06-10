@@ -140,7 +140,7 @@ $$\sum_{x\in S_1} \alpha_xx=\sum_{x\in S}\alpha_xx+\alpha_vv=0$$
 
 이제 만일 $$\langle S\rangle_1=V$$라면 다시 증명 끝이고, 그렇지 않다면 똑같은 방식으로 $$S_2=S_1\cup\{v'\}$$을 정의하여 반복할 수 있다. 물론 $$S_2$$가 일차독립이라는 것을 보여야 하지만, $$v'$$를 $$V\setminus\langle S\rangle_1$$에서 뽑아왔기 때문에 이는 위에서 보인 것과 정확하게 같은 논리로 가능하다. 
 
-이 과정은 앞선 [보조정리3](#lem3)에 의해 많아야 $$\dim V$$번째 과정 안에 끝나며, 이 과정이 끝날 때 우리는 원하는 basis $$S_n$$을 얻게 된다.
+이 과정은 앞선 [보조정리 2](#lem2)에 의해 많아야 $$\dim V$$번째 과정 안에 끝나며, 이 과정이 끝날 때 우리는 원하는 basis $$S_n$$을 얻게 된다.
 
 </details>
 
@@ -200,6 +200,7 @@ $$\dim(W_1+W_2)=\dim W_1+\dim W_2-\dim(W_1\cap W_2)$$
 
 이 성립한다.
 
+</div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
@@ -233,7 +234,6 @@ $$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\r
 
 </details>
 
-</div>
 
 ---
 

@@ -72,7 +72,7 @@ Let $$y\in P$$ be given, and choose a coordinate system $$(W,z^1,\ldots, z^m)$$ 
 
 Denote these by $$\{z^1\circ\Phi,\ldots,z^p\circ\Phi\}$$. Without loss of generality, assume $$\gamma=(z^1,\ldots, z^m)$$ is a surjection onto $$\mathbb{R}^m$$; then the above claim is equivalent to saying that $$(V,\pi\circ\gamma\circ\Phi)$$ is a coordinate system at $$y$$ via the projection $$\pi:\mathbb{R}^m\rightarrow\mathbb{R}^p$$. Now
 
-$$(\pi\circ\gamma\circ\Phi)\circ F_0|_{F_0^{-1}(V)}=\pi\circ\gamma\circ F|_{F_0^{-1}(V)}$$
+$$(\pi\circ\gamma\circ\Phi)\circ F_0\vert_{F_0^{-1}(V)}=\pi\circ\gamma\circ F\vert_{F_0^{-1}(V)}$$
 
 and the right-hand side is a composition of $$C^\infty$$ functions, hence $$C^\infty$$.
 
@@ -106,7 +106,7 @@ $$\Phi_2(N_2)=\Phi_1(\theta(N_2))=\Phi_1(N_1)$$
 
 holds, so $$A$$ is uniquely determined. On the other hand, for the subset $$A$$ of $$M$$ thus determined and the inclusion $$\iota:A\hookrightarrow M$$ to belong to $$[(N,\Phi)]$$, there must exist a diffeomorphism $$\theta$$ satisfying $$\iota=\Phi\circ\theta$$; taking $$\bar{\Phi}^{-1}$$ on the left of both sides yields $$\theta=\bar{\Phi}^{-1}$$, so the manifold structure on $$A$$ is *necessarily* the one defined above.
 
-By contrast, given an arbitrary subset $$A\subseteq M$$ with inclusion $$\iota:A\hookrightarrow M$$, a manifold structure on $$A$$ making $$(A,\iota)$$ a submanifold need not be unique. For instance, as in [Example 2](#ex2), if two submanifolds $$(N_1,\Phi_1),(N_2,\Phi_2)$$ of $$M$$ are not diffeomorphic to each other yet satisfy $$\Phi_1(N_1)=\Phi_2(N_2)$$, then the two manifold structures on $$(A,\iota)$$ obtained from $$[(N_1,\Phi_1)]$$ and $$[(N_2,\Phi_2)]$$ via the above process must be distinct.
+By contrast, given an arbitrary subset $$A\subseteq M$$ with inclusion $$\iota:A\hookrightarrow M$$, a manifold structure on $$A$$ making $$(A,\iota)$$ a submanifold need not be unique. For instance, as in [Example 1](#ex1), if two submanifolds $$(N_1,\Phi_1),(N_2,\Phi_2)$$ of $$M$$ are not diffeomorphic to each other yet satisfy $$\Phi_1(N_1)=\Phi_2(N_2)$$, then the two manifold structures on $$(A,\iota)$$ obtained from $$[(N_1,\Phi_1)]$$ and $$[(N_2,\Phi_2)]$$ via the above process must be distinct.
 
 Nevertheless, if additional conditions are imposed on $$(A,\iota)$$, the submanifold structure on it may be determined uniquely. The theorems to be introduced in the next post satisfy even this stronger uniqueness, and for that purpose the following two propositions are useful.
 

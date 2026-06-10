@@ -55,7 +55,7 @@ Then $$\tilde{\varphi}$$ is a bijection from $$\pi^{-1}(U)$$ onto the open subse
 
 These are $$C^\infty$$-compatible. Suppose another coordinate system $$(V,\psi)$$, $$\psi=(y^j)_{j=1}^m$$ is given, and define $$\tilde{\psi}$$ as above. Then on $$\pi^{-1}(U)\cap\pi^{-1}(V)=\pi^{-1}(U\cap V)$$ we have
 
-$$\begin{aligned}(\tilde{\psi}\circ\tilde{\varphi}^{-1})(p^1, \ldots, p^m, v^1, \ldots, v^m)&=\tilde{\psi}\left(\varphi^{-1}(p), \sum v^i\frac{\partial}{\partial x^i}\bigg|_{\varphi^{-1}(p)}\right)\end{aligned}$$
+$$\begin{aligned}(\tilde{\psi}\circ\tilde{\varphi}^{-1})(p^1, \ldots, p^m, v^1, \ldots, v^m)&=\tilde{\psi}\left(\varphi^{-1}(p), \sum v^i\frac{\partial}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}\right)\end{aligned}$$
 
 Writing $$v=\sum v^i\frac{\partial}{\partial x^i}$$ here, the right-hand side can simply be written as
 
@@ -63,7 +63,7 @@ $$\left((\psi\circ\varphi^{-1})(p), dy^1(v), \ldots, dy^m(v)\right)$$
 
 Now for arbitrary $$j$$ we have
 
-$$dy^j\left(\sum v^i\frac{\partial}{\partial x^i}\bigg|_{\varphi^{-1}(p)}\right)=\sum_{i=1}^m v^i\frac{\partial y^j}{\partial x^i}\bigg|_{\varphi^{-1}(p)}$$
+$$dy^j\left(\sum v^i\frac{\partial}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}\right)=\sum_{i=1}^m v^i\frac{\partial y^j}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}$$
 
 Therefore, since each component of the transition map $$\tilde{\psi}\circ\tilde{\varphi}^{-1}$$ above is $$C^\infty$$, the map $$\tilde{\psi}\circ\tilde{\varphi}^{-1}$$ itself is also $$C^\infty$$.
 
@@ -75,7 +75,7 @@ as a basis. Taking $$W=\mathbb{R}^{m}$$, we can check that the $$\pi^{-1}(U)$$ a
 
 What remains is the local trivialization on $$TM$$. For an arbitrary coordinate system $$(U,\varphi)$$, define $$\phi:\pi^{-1}(U)\rightarrow U\times\mathbb{R}^m$$ this time by the formula
 
-$$v|_p\mapsto (p, dx^1(v),\ldots, dx^m(v))$$
+$$v\vert_p\mapsto (p, dx^1(v),\ldots, dx^m(v))$$
 
 That $$\phi$$ is an isomorphism between vector spaces on each fixed fiber $$\pi^{-1}(p)$$ is obvious, and it is also obvious that for any $$v_x$$ we have $$(\pi\circ\phi)(x,v)=x$$. That $$\phi$$ is a diffeomorphism follows from
 

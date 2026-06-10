@@ -111,7 +111,7 @@ $$M\cong \bigoplus_{i\in I} Ax_i$$
 
 $$\phi^\ast M\cong\phi^\ast\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{i\in I}\phi^\ast Ax_i$$
 
-이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 또, $$x_i$$가 free element라는 사실로부터 $$Ax_i\cong A$$이고, $$\phi^\ast A\cong \mathbb{K}$$이므로 $$\phi^\ast M\cong \bigoplus_{i\in I}\mathbb{K}$$이다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)를 적용하면 원하는 결과를 얻는다.
+이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7)) 또, $$x_i$$가 free element라는 사실로부터 $$Ax_i\cong A$$이고, $$\phi^\ast A\cong \mathbb{K}$$이므로 $$\phi^\ast M\cong \bigoplus_{i\in I}\mathbb{K}$$이다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)를 적용하면 원하는 결과를 얻는다.
 
 </details>
 

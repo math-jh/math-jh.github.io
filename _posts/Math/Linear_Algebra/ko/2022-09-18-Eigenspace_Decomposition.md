@@ -187,7 +187,7 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
 $$\lambda$$의 기하적 중복도가 $$k$$라 하고, $$E_\lambda(A)$$를 span하는 $$k$$개의 일차독립인 벡터들 $$x_1,\ldots, x_k$$를 생각하자. 여기에 $$(n-k)$$개의 벡터 $$x_{k+1},\ldots, x_k$$를 추가하여 $$\mathbb{K}^n$$의 새로운 basis $$\{x_1,\ldots, x_n\}$$을 만들 수 있다. 이제 행렬 $$X$$를
 
-$$X=(x_1|x_2|\cdots|x_n)$$
+$$X=(x_1\vert x_2\vert \cdots\vert x_n)$$
 
 으로 정의한다면, $$X$$의 열들이 일차독립이므로 $$X^{-1}$$이 존재한다. $$X^{-1}$$의 각 row들을 $$y_i$$라 하자. 식 $$X^{-1}X=XX^{-1}=I$$에서
 
@@ -195,7 +195,7 @@ $$y_i\cdot x_j=\begin{cases}1&i=j\\ 0&i\neq j\end{cases}$$
 
 이 성립한다. 따라서 $$A'=X^{-1}AX$$라 한다면 
 
-$$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmatrix}(Ax_1|Ax_2|\cdots|Ax_n)\\
+$$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmatrix}(Ax_1\vert Ax_2\vert \cdots\vert Ax_n)\\
 &=\begin{pmatrix}y_1\cdot Ax_1&y_1\cdot Ax_2&\cdots& y_1\cdot Ax_k&\cdots&y_1\cdot Ax_n\\ y_2\cdot Ax_1&y_2\cdot Ax_2&\cdots &y_2\cdot Ax_k&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot Ax_1&y_k\cdot Ax_2&\cdots&y_k\cdot Ax_k&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot Ax_1&y_n\cdot Ax_2&\cdots &y_n\cdot Ax_k&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}y_1\cdot (\lambda x_1)&y_1\cdot (\lambda x_2)&\cdots& y_1\cdot (\lambda x_k)&\cdots&y_1\cdot Ax_n\\ y_2\cdot (\lambda x_1)&y_2\cdot (\lambda x_2)&\cdots &y_2\cdot (\lambda x_k)&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot (\lambda x_1)&y_k\cdot (\lambda x_2)&\cdots&y_k\cdot (\lambda x_k)&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot (\lambda x_1)&y_n\cdot (\lambda x_2)&\cdots &y_n\cdot (\lambda x_k)&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
@@ -308,7 +308,7 @@ $$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
 
 $$\rank L +\nullity L=\dim V$$
 
-이 성립하는 것을 보았다. ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)) 여기서 $$\rank L=\dim\im L$$이고 $$\nullity L=\dim\ker L$$이다. 그러나 이것이 곧 $$V$$를 $$\im L$$과 $$\ker L$$의 direct sum으로 나타낼 수 있다는 뜻은 아니다. 가령, [명제 4](#def4) 이후에 대각화 불가능한 예시였던 행렬 $$A$$에 대하여,
+이 성립하는 것을 보았다. ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)) 여기서 $$\rank L=\dim\im L$$이고 $$\nullity L=\dim\ker L$$이다. 그러나 이것이 곧 $$V$$를 $$\im L$$과 $$\ker L$$의 direct sum으로 나타낼 수 있다는 뜻은 아니다. 가령, [명제 4](#prop4) 이후에 대각화 불가능한 예시였던 행렬 $$A$$에 대하여,
 
 $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
@@ -316,7 +316,7 @@ $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="lem10">**보조정리 10**</ins> 위와 같은 상황에서, $$\ker L\cap \im L=\{0\}$$인 것은 $$\ker L^2=\ker L$$인 것과 동치이다. 
+<ins id="lem11">**보조정리 11**</ins> 위와 같은 상황에서, $$\ker L\cap \im L=\{0\}$$인 것은 $$\ker L^2=\ker L$$인 것과 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -336,11 +336,11 @@ $$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subset \ker L$$
 
 </details>
 
-다시 원래의 이야기로 돌아오면, 우리는 특별히 $$L$$이 어떠한 linear operator와 그 eigenvalue에 대하여 $$A-\lambda I$$의 꼴인 경우가 특별히 궁금하다. 다음 명제는 [보조정리 10](#lem10)을 사용하여 diagonalizability를 간결하게 특징짓는다.
+다시 원래의 이야기로 돌아오면, 우리는 특별히 $$L$$이 어떠한 linear operator와 그 eigenvalue에 대하여 $$A-\lambda I$$의 꼴인 경우가 특별히 궁금하다. 다음 명제는 [보조정리 11](#lem11)을 사용하여 diagonalizability를 간결하게 특징짓는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> Linear operator $$A:V\rightarrow V$$가 diagonalizable인 것은 모든 고윳값 $$\lambda\in\sigma(A)$$에 대하여 
+<ins id="prop12">**명제 12**</ins> Linear operator $$A:V\rightarrow V$$가 diagonalizable인 것은 모든 고윳값 $$\lambda\in\sigma(A)$$에 대하여 
 
 $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$
 
@@ -360,7 +360,7 @@ $$v=v_\lambda\in E_\lambda(A)=\ker(A-\lambda I)$$
 
 이다.
 
-거꾸로 모든 고윳값 $$\lambda$$에 대하여 $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$라 하자. [보조정리 10](#lem10)으로부터 각 $$\lambda$$에 대해 
+거꾸로 모든 고윳값 $$\lambda$$에 대하여 $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$라 하자. [보조정리 11](#lem11)으로부터 각 $$\lambda$$에 대해 
 
 $$\ker(A-\lambda I)\cap\im(A-\lambda I)=\{0\}$$
 

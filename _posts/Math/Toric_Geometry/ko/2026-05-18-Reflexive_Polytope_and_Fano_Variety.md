@@ -221,7 +221,7 @@ $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 
 <ins id="def8">**정의 8**</ins> Normal Gorenstein variety $$X$$의 resolution of singularities $$\pi: \tilde{X} \to X$$ — 즉, $$\tilde{X}$$가 smooth이고 $$\pi$$가 proper birational morphism — 가
 
-$$K_{\tilde{X}} = \pi^* K_X$$
+$$K_{\tilde{X}} = \pi^\ast K_X$$
 
 를 만족할 때, 이를 *crepant resolution<sub>크레펀트 분해</sub>*이라 부른다.
 

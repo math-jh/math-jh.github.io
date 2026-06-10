@@ -184,7 +184,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
     이 성립한다. 
 3. 임의의 $$x_1,\ldots, x_n\in M$$에 대하여, $$p=p_1+\cdots+p_n$$이라 하자. 그럼 $$\{1,\ldots, p\}=P_1\cup\cdots\cup P_n$$이도록 하는 집합 $$\{1,\ldots, p\}$$의 분할들의 순서쌍들의 집합
 
-    $$\mathscr{P}=\left\{(P_1,\ldots, P_n)\bigg| \bigcup_{k=1}^n P_k=\{1,\ldots, p\}, P_i\cap P_j=\emptyset\right\}$$
+    $$\mathscr{P}=\left\{(P_1,\ldots, P_n)\bigg\vert \bigcup_{k=1}^n P_k=\{1,\ldots, p\}, P_i\cap P_j=\emptyset\right\}$$
 
     과, 각각의 $$P\in\mathscr{P}$$마다 정의된 $$i\in P_{\phi(i)}$$이도록 하는 함수 $$\phi:\{1,\ldots, p\} \rightarrow \{1,\ldots, n\}$$에 대하여,
 
@@ -271,7 +271,7 @@ $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 위와 같은 이유로, 몇몇 reference들에는 처음 symmetric product를 정의할 때부터
+<ins id="rmk8">**참고 8**</ins> 위와 같은 이유로, 몇몇 reference들에는 처음 symmetric product를 정의할 때부터
 
 $$xy=\frac{1}{p!q!}\tr_{S_{p+q}/(S_p\times S_q)}(x\otimes y)$$
 
@@ -295,7 +295,7 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> 다음이 성립한다.
+<ins id="prop9">**명제 9**</ins> 다음이 성립한다.
 
 1. 만일 $$x\in \S^n(M)$$이라면, $$(t\circ\bar{s})(x)=n!.x$$이다.
 2. 만일 $$x\in \Sym^n(M)$$이라면, $$(\bar{s}\circ t)(x)=n!.x$$이다. 
@@ -304,15 +304,15 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 이에 대한 증명은 단순한 계산이다. 
 
-위에서의 [참고](#rmk1)에서 살펴본 바와 비슷한 이유로, 만일 $$A$$가 ($$\mathbb{Z}$$-algebra일 뿐만 아니라) $$\mathbb{Q}$$-algebra라면 $$x\mapsto n!.x$$가 bijection이고 따라서 위에서 정의한 $$\bar{s}: \S(M) \rightarrow \Sym(M)$$이 isomorphism이 되는 것을 확인할 수 있다. 
+위에서의 [참고 8](#rmk8)에서 살펴본 바와 비슷한 이유로, 만일 $$A$$가 ($$\mathbb{Z}$$-algebra일 뿐만 아니라) $$\mathbb{Q}$$-algebra라면 $$x\mapsto n!.x$$가 bijection이고 따라서 위에서 정의한 $$\bar{s}: \S(M) \rightarrow \Sym(M)$$이 isomorphism이 되는 것을 확인할 수 있다. 
 
 ## 다항식 사상
 
-한편 symmetric algebra $$\S(M)$$은 symmetric $$n$$-linear map들의 representation으로 생각할 수 있었는데, 위의 [명제 8](#prop8)을 통해 $$\Sym(M)$$을 함께 생각하면 다음의 명제를 얻는다. 
+한편 symmetric algebra $$\S(M)$$은 symmetric $$n$$-linear map들의 representation으로 생각할 수 있었는데, 위의 [명제 9](#prop9)을 통해 $$\Sym(M)$$을 함께 생각하면 다음의 명제를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 두 $$A$$-module $$M,N$$, 자연수 $$n$$과 $$u: M \rightarrow N$$이 주어졌다 하자. 만일 $$M$$이 free $$A$$-module이라면 다음이 모두 동치이다. 
+<ins id="prop10">**명제 10**</ins> 두 $$A$$-module $$M,N$$, 자연수 $$n$$과 $$u: M \rightarrow N$$이 주어졌다 하자. 만일 $$M$$이 free $$A$$-module이라면 다음이 모두 동치이다. 
 
 1. 식 $$u(x)=v(x,\ldots, x)$$를 만족하는 $$n$$-linear map $$v: M^n \rightarrow N$$이 존재한다. 
 2. 식 $$u(x)=w(\gamma_n(x))$$를 만족하는 linear map $$w: \Sym(M) \rightarrow N$$이 존재한다. 
@@ -329,7 +329,7 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> $$A$$-module $$N$$에 대하여, free $$A$$-module $$A^{(I)}$$이 주어졌다 하고 다항식 $$u\in N[\x_i]_{i\in I}$$를 하나 고정하자. 그럼 다음의 식
+<ins id="ex11">**예시 11**</ins> $$A$$-module $$N$$에 대하여, free $$A$$-module $$A^{(I)}$$이 주어졌다 하고 다항식 $$u\in N[\x_i]_{i\in I}$$를 하나 고정하자. 그럼 다음의 식
 
 $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 
@@ -341,7 +341,7 @@ $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11**</ins> [명제 9](#prop9)의 조건을 모두 가정하고, 추가로 $$y\mapsto n!.y$$가 $$N$$의 automorphism이라 가정하자. 그럼 임의의 $$u\in\Poly^n(M,N)$$에 대하여, 식
+<ins id="prop12">**명제 12**</ins> [명제 10](#prop10)의 조건을 모두 가정하고, 추가로 $$y\mapsto n!.y$$가 $$N$$의 automorphism이라 가정하자. 그럼 임의의 $$u\in\Poly^n(M,N)$$에 대하여, 식
 
 $$u(x)=v(x,\ldots, x)$$
 
@@ -353,11 +353,11 @@ $$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H
 
 </div>
 
-이는 [따름정리 5](#cor5)로부터 따라나오는 결과이다. 이제 이것과 [참고](#rmk1)의 관찰을 종합하면 다음의 결과를 얻는다. 
+이는 [따름정리 5](#cor5)로부터 따라나오는 결과이다. 이제 이것과 [참고 8](#rmk8)의 관찰을 종합하면 다음의 결과를 얻는다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12**</ins> [명제 9](#prop9)의 상황을 가정하고, canonical homomorphism $$\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$$을 생각하자. 그럼 다음이 성립한다.
+<ins id="prop13">**명제 13**</ins> [명제 10](#prop10)의 상황을 가정하고, canonical homomorphism $$\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$$을 생각하자. 그럼 다음이 성립한다.
 
 1. 만일 $$A$$가 무한집합인 integral domain이고 $$N$$이 torsion-free라면 이 homomorphism은 isomorphism이다. 
 2. 만일 $$y\mapsto n!.y$$가 $$N$$에서 $$N$$으로의 injective endomorphism이라면 $$u$$는 isomorphism이다. 
@@ -413,7 +413,7 @@ $$E_f=A[\x_1,\ldots,\x_n]/\mathfrak{a},\qquad \mathfrak{a}=(s_k+(-1)^{k+1}a_k)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**명제 13**</ins> 임의의 commutative ring $$A,B$$가 주어졌다 하고, ring homomorphism $$\rho: A \rightarrow B$$와 $$B$$의 원소들 $$\xi_1,\ldots, \xi_n$$을 고정하자. 만일 $$B[\x]$$에서 다음의 식
+<ins id="prop14">**명제 14**</ins> 임의의 commutative ring $$A,B$$가 주어졌다 하고, ring homomorphism $$\rho: A \rightarrow B$$와 $$B$$의 원소들 $$\xi_1,\ldots, \xi_n$$을 고정하자. 만일 $$B[\x]$$에서 다음의 식
 
 $$\rho(f)(\x)=\prod_{i=1}^n (\x-\xi_i)$$
 
@@ -425,7 +425,7 @@ $$\rho(f)(\x)=\prod_{i=1}^n (\x-\xi_i)$$
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**정의 14**</ins> 자연수 $$k$$에 대하여, $$k$$차 *complete homogeneous symmetric polynomial<sub>완전동차대칭다항식</sub>* $$h_k$$를
+<ins id="def15">**정의 15**</ins> 자연수 $$k$$에 대하여, $$k$$차 *complete homogeneous symmetric polynomial<sub>완전동차대칭다항식</sub>* $$h_k$$를
 
 $$h_k = \sum_{1 \leq i_1 \leq i_2 \leq \cdots \leq i_k \leq n} \x_{i_1} \x_{i_2} \cdots \x_{i_k}$$
 
@@ -441,7 +441,7 @@ $$\prod_{i=1}^n \frac{1}{1 - \x_i T} = \sum_{k \geq 0} h_k T^k$$
 
 <div class="definition" markdown="1">
 
-<ins id="def15">**정의 15**</ins> 약감소하는 음 아닌 정수열 $$\lambda = (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n \geq 0)$$ — 이를 *partition<sub>분할</sub>*이라 한다 — 에 대하여, *Schur polynomial<sub>슈어 다항식</sub>* $$s_\lambda$$를 두 교대다항식의 비
+<ins id="def16">**정의 16**</ins> 약감소하는 음 아닌 정수열 $$\lambda = (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n \geq 0)$$ — 이를 *partition<sub>분할</sub>*이라 한다 — 에 대하여, *Schur polynomial<sub>슈어 다항식</sub>* $$s_\lambda$$를 두 교대다항식의 비
 
 $$s_\lambda(\x_1, \ldots, \x_n) = \frac{\det\bigl(\x_i^{\lambda_j + n - j}\bigr)_{1 \leq i, j \leq n}}{\det\bigl(\x_i^{n - j}\bigr)_{1 \leq i, j \leq n}}$$
 
@@ -453,7 +453,7 @@ $$s_\lambda(\x_1, \ldots, \x_n) = \frac{\det\bigl(\x_i^{\lambda_j + n - j}\bigr)
 
 <div class="remark" markdown="1">
 
-<ins id="rmk16">**참고 16**</ins> Schur polynomial은 여러 동치인 방식으로 기술된다. 첫째, [정의 14](#def14)의 $$h_k$$를 이용한 *Jacobi–Trudi 항등식*
+<ins id="rmk17">**참고 17**</ins> Schur polynomial은 여러 동치인 방식으로 기술된다. 첫째, [정의 15](#def15)의 $$h_k$$를 이용한 *Jacobi–Trudi 항등식*
 
 $$s_\lambda = \det\bigl(h_{\lambda_i - i + j}\bigr)_{1 \leq i, j \leq \ell}$$
 
@@ -466,3 +466,5 @@ $$s_\lambda = \sum_T \x_1^{m_1(T)} \cdots \x_n^{m_n(T)}$$
 $$s_\lambda\, s_\mu = \sum_\nu c_{\lambda\mu}^\nu\, s_\nu$$
 
 의 $$c_{\lambda\mu}^\nu$$를 *Littlewood–Richardson 수*라 부른다. 이 동치성들과 기저·곱셈 규칙의 증명은 Macdonald, *Symmetric Functions and Hall Polynomials* (I장) 또는 Fulton, *Young Tableaux* 를 참조하라.
+
+</div>

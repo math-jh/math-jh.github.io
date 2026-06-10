@@ -248,7 +248,7 @@ $$D=g\circ d_{\S(M)/A}$$
 
 holds.
 
-Meanwhile, given any $$A$$-derivation $$D:\S(M)\rightarrow L$$, we can verify through [Proposition 5](#prop5) that its restriction $$D\vert_M$$ to $$M$$ is an $$A$$-module homomorphism from $$M$$ to $$L$$, and that this correspondence $$D\mapsto D\vert_M$$ is in fact an $$\S(M)$$-module isomorphism. On the other hand, since $$L$$ is an $$\S(M)$$-module, by [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 5](/en/math/algebraic_structures/change_of_base_ring#prop5) we have
+Meanwhile, given any $$A$$-derivation $$D:\S(M)\rightarrow L$$, we can verify through [Proposition 5](#prop5) that its restriction $$D\vert_M$$ to $$M$$ is an $$A$$-module homomorphism from $$M$$ to $$L$$, and that this correspondence $$D\mapsto D\vert_M$$ is in fact an $$\S(M)$$-module isomorphism. On the other hand, since $$L$$ is an $$\S(M)$$-module, by [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) we have
 
 $$\Hom_{\S(M)}(M\otimes_A\S(M),L)\cong\Hom_A(M,L),$$
 
@@ -294,7 +294,7 @@ The proof is nothing but an appropriate use of the other universal properties em
 
 From this we see that if we regard $$\Omega$$ as the correspondence taking an $$A$$-algebra $$A \rightarrow E$$ to the module of its differentials $$\Omega_A(E)$$, then $$\Omega$$ also possesses functoriality.
 
-On the other hand, since $$\Omega_{A'}(E')$$ is an $$A'$$-module, by [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 5](/en/math/algebraic_structures/change_of_base_ring#prop5) we obtain from [Proposition 11](#prop11) the following $$A'$$-linear map:
+On the other hand, since $$\Omega_{A'}(E')$$ is an $$A'$$-module, by [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) we obtain from [Proposition 11](#prop11) the following $$A'$$-linear map:
 
 $$\Omega_0(u):\Omega_A(E)\otimes_E E'\rightarrow\Omega_{A'}(E').$$
 
@@ -308,7 +308,7 @@ given by the universal property of [Proposition 8](#prop8), we obtain the follow
 
 ![change_of_base_ring-3](/assets/images/Math/Multilinear_Algebra/Differential_Modules-3.png){:style="width:28em" class="invert" .align-center}
 
-Here the right-hand vertical map is the composite of the above isomorphism and the isomorphism of [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 5](/en/math/algebraic_structures/change_of_base_ring#prop5),
+Here the right-hand vertical map is the composite of the above isomorphism and the isomorphism of [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6),
 
 $$\Hom_{E'}(\Omega_A(E)\otimes_EE', N) \rightarrow \Hom_E(\Omega_A(E), N)\rightarrow\Der_A(E, N),$$
 

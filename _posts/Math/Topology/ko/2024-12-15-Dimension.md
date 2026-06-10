@@ -125,7 +125,7 @@ $$X=\bigcup_{i\in I} U_i$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 두 열린집합 $$V, W$$가 주어졌다 하고, $$V\cap W\neq\emptyset$$임을 보이자. 그럼 주어진 가정으로부터 우선 $$U_i\cap V\neq\emptyset$$ 그리고 $$U_j\cap W\neq\emptyset$$을 만족하는 $$i,j$$가 존재한다. 이제 [명제 7](#prop7)의 셋째 결과와 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)로부터 $$U_i$$도 irreducible이므로, $$U_i$$의 두 nonempty subset $$U_i\cap V$$와 $$U_i\cap U_j$$도 반드시 공집합이 아닌 교집합을 가져야 한다. 즉
+임의의 두 열린집합 $$V, W$$가 주어졌다 하고, $$V\cap W\neq\emptyset$$임을 보이자. 그럼 주어진 가정으로부터 우선 $$U_i\cap V\neq\emptyset$$ 그리고 $$U_j\cap W\neq\emptyset$$을 만족하는 $$i,j$$가 존재한다. 이제 [명제 7](#prop7)의 셋째 결과와 [§부분공간, ⁋명제 4](/ko/math/topology/subspaces#prop4)로부터 $$U_i$$도 irreducible이므로, $$U_i$$의 두 nonempty subset $$U_i\cap V$$와 $$U_i\cap U_j$$도 반드시 공집합이 아닌 교집합을 가져야 한다. 즉
 
 $$(U_i\cap V)\cap (U_i\cap U_j)=U_i\cap U_j\cap V\neq\emptyset$$
 

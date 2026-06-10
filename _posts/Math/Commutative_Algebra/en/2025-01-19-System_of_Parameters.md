@@ -114,7 +114,7 @@ We can then prove the following proposition.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> For a Noetherian local ring $$(A,\mathfrak{m})$$, an ideal $$\mathfrak{a}$$ of $$A$$, and a finitely generated $$A$$-module $$M$$, the following hold.
+<ins id="prop6">**Proposition 6**</ins> For a Noetherian local ring $$(A,\mathfrak{m})$$, an ideal $$\mathfrak{a}$$ of $$A$$, and a finitely generated $$A$$-module $$M$$, the following hold.
 
 1. The following are equivalent.
   - $$\mathfrak{a}$$ is a parameter ideal of $$M$$.
@@ -131,7 +131,7 @@ We can then prove the following proposition.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-1. First, assume that $$\mathfrak{a}$$ is a parameter ideal of $$M$$. Then by the argument examined right after [Proposition--Definition 2](#prop-def2), we know that a sufficiently large power of $$\mathfrak{m}$$ always annihilates $$M/\mathfrak{a}M$$, and combining this with [Lemma 3](#lem3) we obtain
+1. First, assume that $$\mathfrak{a}$$ is a parameter ideal of $$M$$. Then by the argument examined right after [Proposition--Definition 3](#prop-def3), we know that a sufficiently large power of $$\mathfrak{m}$$ always annihilates $$M/\mathfrak{a}M$$, and combining this with [Lemma 4](#lem4) we obtain
     
     $$\mathfrak{m}\subseteq \sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 
@@ -143,7 +143,7 @@ We can then prove the following proposition.
 
     $$\mathfrak{m}\subseteq \sqrt{\mathfrak{a}+\ann(M)}=\sqrt{\ann(M/\mathfrak{a}M)}$$
 
-2. Suppose $$\mathfrak{a}$$ is a parameter ideal of $$M$$. Then by [Lemma 4](#lem4), $$\ann(M)\subseteq \ann(M')\cap \ann(M'')$$, so it is obvious that $$\mathfrak{a}$$ is a parameter ideal of both $$M'$$ and $$M''$$.
+2. Suppose $$\mathfrak{a}$$ is a parameter ideal of $$M$$. Then by [Lemma 5](#lem5), $$\ann(M)\subseteq \ann(M')\cap \ann(M'')$$, so it is obvious that $$\mathfrak{a}$$ is a parameter ideal of both $$M'$$ and $$M''$$.
 
     Conversely, from the exact sequence obtained by applying $$A/\mathfrak{a}\otimes-$$
     
@@ -156,7 +156,7 @@ We can then prove the following proposition.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor6">**Corollary 6**</ins> Let $$(A, \mathfrak{m})$$ be a Noetherian local ring and $$M$$ a finitely generated $$A$$-module. Then for any $$a\in \mathfrak{m}$$,
+<ins id="cor7">**Corollary 7**</ins> Let $$(A, \mathfrak{m})$$ be a Noetherian local ring and $$M$$ a finitely generated $$A$$-module. Then for any $$a\in \mathfrak{m}$$,
 
 $$\dim M/ aM \geq \dim M-1$$
 

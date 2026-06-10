@@ -58,7 +58,7 @@ Before giving the definition, recall that in the two diagrams defining a monoid,
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5 (Monoidal category)**</ins> A *monoidal category* consists of data $$(\mathcal{A},\otimes, I)$$. Here $$\mathcal{A}$$ is a category, $$I\in\obj(\mathcal{A})$$, and $$\otimes:\mathcal{A}\times \mathcal{A}\rightarrow \mathcal{A}$$ is a bifunctor. They satisfy the following conditions.
+<ins id="def1">**Definition 1 (Monoidal category)**</ins> A *monoidal category* consists of data $$(\mathcal{A},\otimes, I)$$. Here $$\mathcal{A}$$ is a category, $$I\in\obj(\mathcal{A})$$, and $$\otimes:\mathcal{A}\times \mathcal{A}\rightarrow \mathcal{A}$$ is a bifunctor. They satisfy the following conditions.
 
 1. There exists a natural isomorphism between the two functors $$-\otimes(-\otimes-)$$ and $$(-\otimes-)\otimes-$$ from $$\mathcal{A}\times \mathcal{A}\times \mathcal{A}$$ to $$\mathcal{A}$$
 
@@ -96,7 +96,7 @@ In any case, thanks to the coherence theorem, we know that the monoidal product 
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**Example 6**</ins> The following are all examples of monoidal categories.
+<ins id="ex2">**Example 2**</ins> The following are all examples of monoidal categories.
 
 - Equipping $$\Set$$ with the usual product ([§Limits, ⁋Example 6](/en/math/category_theory/limits#ex6)) and taking $$I$$ to be any singleton makes $$\Set$$ a symmetric monoidal category.
 - Equipping $$\Grp$$ with the usual product and taking $$I$$ to be the trivial group $$\{e\}$$ makes $$\Grp$$ a symmetric monoidal category.
@@ -106,11 +106,11 @@ In any case, thanks to the coherence theorem, we know that the monoidal product 
 
 </div>
 
-The first two examples of [Example 6](#ex6) can be generalized. Let us first define the following.
+The first two examples of [Example 2](#ex2) can be generalized. Let us first define the following.
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> If every finite family of objects in a category $$\mathcal{A}$$ always has a categorical product, this category is called a *cartesian category*.
+<ins id="def3">**Definition 3**</ins> If every finite family of objects in a category $$\mathcal{A}$$ always has a categorical product, this category is called a *cartesian category*.
 
 </div>
 
@@ -118,7 +118,7 @@ Then in the preceding examples, $$\Set$$ and $$\Grp$$ become cartesian categorie
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**Proposition 8**</ins> Any cartesian category carries the structure of a monoidal category.
+<ins id="prop4">**Proposition 4**</ins> Any cartesian category carries the structure of a monoidal category.
 
 </div>
 

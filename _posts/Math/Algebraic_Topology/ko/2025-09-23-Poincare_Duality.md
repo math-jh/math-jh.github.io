@@ -394,7 +394,7 @@ $$C_\bullet(M,\mathscr{L})=\bigoplus_{\sigma:\Delta^k\rightarrow M}\mathscr{L}_{
 
 으로 정의한다. 어차피 각각의 $$x$$에 대하여 $$\mathscr{L}_x\cong L$$이지만, 이 정의의 핵심은 각각의 점에서의 $$L$$이 nontrivial한 automorphism을 통해 달라질 수 있다는 것이다. 그럼 이 chain complex의 differential map은, singular $$k$$-simplex $$\sigma:\Delta^k \rightarrow M$$과 계수 $$a\in \mathscr{L}_{\sigma(e_0)}$$에 대하여 
 
-$$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^k\mathscr{L}_{\sigma_k}(a) (\sigma|_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
+$$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^k\mathscr{L}_{\sigma_k}(a) (\sigma\vert_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
 
 로 정의된다. 여기서 $$\mathscr{L}_{\sigma_k}$$는 원래 simplex의 첫 번째 vertex $$\sigma(e_0)$$과, $$k$$번째 face의 첫 번째 vertex를 잇는 edge를 $$M$$으로 보내어 얻어진 path에 functor $$\Pi_1(M) \rightarrow \Ab$$를 적용하여 얻어진 것이다. 우리의 상황과 같이 좋은 경우, 우리는 $$M$$의 universal cover $$\widetilde{M}$$과 이 위에 작용하는 monodromy action (즉 Deck transformation), 그리고 monodromy representation $$\pi_1(X)\rightarrow \Aut(A)$$을 사용하여 다음의 chain complex
 
@@ -430,7 +430,7 @@ $$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{G}_1\r
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**정의 14**</ins> 위상공간 $$X$$와 그 위에 정의된 sheaf $$\mathscr{F}$$에 대하여, Godement resolution의 global section들의 sequence
+<ins id="def15">**정의 15**</ins> 위상공간 $$X$$와 그 위에 정의된 sheaf $$\mathscr{F}$$에 대하여, Godement resolution의 global section들의 sequence
 
 $$0 \rightarrow \mathscr{F}(X)\rightarrow \mathscr{G}_0(X)\rightarrow \mathscr{G}_1(X)\rightarrow \cdots$$
 
@@ -442,7 +442,7 @@ $$H^k(X; \mathscr{F})$$
 
 </div>
 
-이에 대한 자세한 내용은 [\[대수기하학\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_geometry/sheaf_cohomology#def1)에서 더 자세히 다룬다. 이제 푸앵카레 쌍대성은 다음의 isomorphism
+이에 대한 자세한 내용은 [\[대수기하학\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)에서 더 자세히 다룬다. 이제 푸앵카레 쌍대성은 다음의 isomorphism
 
 $$H^k(M;\mathscr{L})\cong H_{m-k}(M;\or_M^A\otimes \mathscr{L})$$
 
@@ -466,7 +466,7 @@ $$H^k(M;A)\cong H_{m-k}(M;A)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> Torus $$T^2=S^1\times S^1$$을 생각하자. 그럼 우리는 Kunneth formula로부터 $$T^2$$의 cohomology가
+<ins id="ex16">**예시 16**</ins> Torus $$T^2=S^1\times S^1$$을 생각하자. 그럼 우리는 Kunneth formula로부터 $$T^2$$의 cohomology가
 
 $$H^0(T^2;\mathbb{Z})\cong \mathbb{Z}, \quad H^1(T^2;\mathbb{Z})\cong \mathbb{Z}^2,\quad H^2(T^2;\mathbb{Z})$$
 

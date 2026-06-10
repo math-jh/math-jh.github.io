@@ -100,7 +100,7 @@ $$1+\prod_{a\in \Omega}(\x-a)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Algebraic extension을 할 때는 어차피 다항식의 근만이 중요하므로, 주어진 다항식들 $$f_i$$들이 모두 monic polynomial이라 가정하여도 된다. 각각의 $$f_i$$가 degree $$d_i$$ monic polynomial이라 하자. 그럼 [\[다중선형대수학\] §대칭텐서, ⁋명제 13](/ko/math/multilinear_algebra/symmetric_tensors#prop13)에 의하여, 각각의 $$i$$마다 다음의 두 조건
+Algebraic extension을 할 때는 어차피 다항식의 근만이 중요하므로, 주어진 다항식들 $$f_i$$들이 모두 monic polynomial이라 가정하여도 된다. 각각의 $$f_i$$가 degree $$d_i$$ monic polynomial이라 하자. 그럼 [\[다중선형대수학\] §대칭텐서, ⁋명제 14](/ko/math/multilinear_algebra/symmetric_tensors#prop14)에 의하여, 각각의 $$i$$마다 다음의 두 조건
 
 1. $$A_i$$는 $$\mathbb{K}$$-algebra로서 $$\xi_{i,1},\ldots, \xi_{i, d_i}$$에 의해 생성된다. 
 2. $$A_i[\x]$$에서 $$f_i(\x)=\prod_{k=1}^{d_i} (\x-\xi_{i,k})$$이 성립한다. 

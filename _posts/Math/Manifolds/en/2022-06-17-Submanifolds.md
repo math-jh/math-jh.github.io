@@ -83,7 +83,7 @@ First, from the fact that $$dF_p$$ is an isomorphism we obtain $$\dim M=\dim T_p
 
 Therefore, by the inverse function theorem, there exists an open set $$U'$$ with $$\varphi(p)\in U'\subset\varphi(V)$$ such that $$(\tau\circ F\circ\varphi^{-1})\vert_{U'}$$ defines a diffeomorphism between $$U'$$ and $$\tau\circ F\circ\varphi^{-1}(U')$$. Setting $$U=\varphi^{-1}(U')$$, the function
 
-$$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})|_{U'}\bigr)\circ\varphi$$
+$$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})\vert_{U'}\bigr)\circ\varphi$$
 
 defines a diffeomorphism between $$U$$ and $$F(U)$$.
 
@@ -107,7 +107,7 @@ $$\varphi(p)=(y^1(p),\ldots, y^m(p))$$
 
 Then since each component function $$y^i$$ is $$C^\infty$$, $$\varphi$$ is also $$C^\infty$$. Now consider $$(d\varphi_{p_0})^\ast:T_{\varphi(p_0)}^\ast\mathbb{R}^m\rightarrow T_{p_0}^\ast M$$. Applying $$(d\varphi_{p_0})^\ast$$ to $$dr^i\vert_{\varphi(p_0)}$$, we have
 
-$$d\varphi_{p_0}\left(dr^i|_{\varphi(p_0)}\right)=\left(dr^i|_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i|_{p_0}$$
+$$d\varphi_{p_0}\left(dr^i\vert_{\varphi(p_0)}\right)=\left(dr^i\vert_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i\vert_{p_0}$$
 
 Thus the basis elements $$dr^i\vert_{\varphi(p_0)}$$ of $$T_{\varphi(p_0)}^\ast\mathbb{R}^m$$ are mapped to a basis of $$T_{p_0}^\ast M$$, and therefore $$(d\varphi_{p_0})^\ast$$ is an isomorphism. Hence $$d\varphi_{p_0}$$ is also an isomorphism, and applying [Corollary 5](#cor5), we see that there exists a suitable $$V$$ with $$p_0\in V\subseteq U$$ such that $$\varphi\vert_V:V\rightarrow\varphi(V)$$ is a coordinate system.
 
@@ -155,7 +155,7 @@ form a coordinate system in a neighborhood of $$p$$.
 
 Since $$dF_p$$ is surjective, its dual $$(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$$ is injective. That is, the elements
 
-$$(dF_p)^\ast(dy^i|_{F(p)})=dy^i|_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j|_p$$
+$$(dF_p)^\ast(dy^i\vert_{F(p)})=dy^i\vert_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j\vert_p$$
 
 are linearly independent in $$T_p^\ast M$$. Therefore, we obtain the desired result by [Corollary 7](#cor7).
 
@@ -175,7 +175,7 @@ forms a coordinate system of $$M$$ in a neighborhood of $$p$$.
 
 Since $$dF_p$$ is injective, its dual $$(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$$ is surjective. That is, the elements
 
-$$(dF_p)^\ast(dy^i|_{F(p)})=dy^i|_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j|_p$$
+$$(dF_p)^\ast(dy^i\vert_{F(p)})=dy^i\vert_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j\vert_p$$
 
 must span $$T_p^\ast M$$, and therefore by [Corollary 8](#cor8) a subset of the given set forms a coordinate system of $$M$$ in a neighborhood of $$p$$.
 

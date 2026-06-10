@@ -47,7 +47,7 @@ By the proposition above, to prove that $$Y$$ is compact it suffices to cover $$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**Lemma 3**</ins> A closed subset of a compact space is compact.
+<ins id="lem3">**Lemma 3**</ins> A closed subset of a compact space is compact.
 
 </div>
 <details class="proof" markdown="1">

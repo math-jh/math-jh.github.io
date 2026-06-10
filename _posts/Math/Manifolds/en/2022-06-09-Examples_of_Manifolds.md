@@ -53,7 +53,7 @@ To give further examples, we first need the following definition.
 1. the subspace topology inherited from the topology of $$M$$,
 2. for the differentiable structure $$\mathcal{A}$$ on $$M$$, 
     
-    $$\mathcal{A}_V=\{(U_\alpha\cap V,\varphi_\alpha|_{U_\alpha\cap V})\mid(U_\alpha,\varphi_\alpha)\in\mathcal{A}\}$$
+    $$\mathcal{A}_V=\{(U_\alpha\cap V,\varphi_\alpha\vert_{U_\alpha\cap V})\mid(U_\alpha,\varphi_\alpha)\in\mathcal{A}\}$$
 
 then $$V$$ becomes a manifold of the same dimension as $$M$$. We call such a manifold structure an *open submanifold* of $$M$$. 
 

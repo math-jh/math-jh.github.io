@@ -56,7 +56,7 @@ so $$\sim_{\tiny r}$$ need not be left compatible in general. Yet if $$cxc^{-1}\
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> If instead of the equivalence relation $$\sim_r$$ we define
+**Remark**</ins> If instead of the equivalence relation $$\sim_r$$ we define
 
 $$a\sim_{\tiny l} b\iff a^{-1}b\in H$$
 

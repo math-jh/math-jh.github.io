@@ -22,7 +22,7 @@ $$B=PAQ\tag{1}$$
 
 을 만족한다면 이들 행렬 $$A,B$$가 본질적으로 같은 행렬인 것으로 생각하고 싶을 것이나, 이 행렬들 $$L_A, L_B: V\rightarrow W$$이 작용하는 두 벡터공간 $$V,W$$의 basis를 택할 자유를 완전하게 허용한다면, rank가 같은 두 행렬은 모두 같은 행렬으로 취급해야 한다는 것을 보았다. 이 때문에 우리는 [§선형대수학의 기본정리, ⁋정의 8](/ko/math/linear_algebra/ftla#def8)에서 이보다 더 세밀한 동치관계를 정의해야만 했다. 대략적으로 이야기하여, 위의 식 (1)에서 행렬 $$A$$가 담고 있는 정보가 오직 $$A$$의 rank 뿐이라고 한다면 나머지 정보들은 행렬 $$P,Q$$, 즉 $$V$$에서 $$V$$, 혹은 $$W$$에서 $$W$$로의 *linear operator<sub>선형연산자</sub>*에 담겨있을 것이며 이들을 살펴보기 위해 $$V$$ (혹은 $$W$$)의 basis를 하나 고정한다고 생각하면 이 동치관계가 그리 어색하지 않다. 따라서 당분간 우리의 논의는 벡터공간 $$V$$와 basis $$\mathcal{B}$$를 고정한 상태로 진행할 것이다. 다른 말로 하면, 우리는 $$n\times n$$ 행렬에 대해 살펴볼 것이다. 이를 위한 강력한 도구는 다음 글에서 정의할 행렬식이다. 
 
-한편, 우리는 임의의 행렬 $$A$$가 가역이기 위해서는 반드시 이 행렬은 정사각행렬이어야 한다는 것을 행렬의 대각합을 이용하여 증명하였으며 ([§행렬, ⁋정의 7](/ko/math/linear_algebra/matrices#def7)) 행렬과 선형사상은 같다는 것을 알게 된 지금 이 결과는 [§동형사상, ⁋따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#cor4)에 의하여 자명한 것이다. 그러나 아직 우리는 이 역행렬을 계산하는 방법을 살펴보지 않았다. 이 방법은 단순한 것이므로 [§행렬](/ko/math/linear_algebra/matrices) 직후에 살펴볼 수도 있었겠지만, 본격적으로 $$n\times n$$ 행렬을 살펴보기 시작한 지금 이 과정을 간략히 소개하기로 한다. 
+한편, 우리는 임의의 행렬 $$A$$가 가역이기 위해서는 반드시 이 행렬은 정사각행렬이어야 한다는 것을 행렬의 대각합을 이용하여 증명하였으며 ([§행렬, ⁋정의 6](/ko/math/linear_algebra/matrices#def6)) 행렬과 선형사상은 같다는 것을 알게 된 지금 이 결과는 [§동형사상, ⁋따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#cor4)에 의하여 자명한 것이다. 그러나 아직 우리는 이 역행렬을 계산하는 방법을 살펴보지 않았다. 이 방법은 단순한 것이므로 [§행렬](/ko/math/linear_algebra/matrices) 직후에 살펴볼 수도 있었겠지만, 본격적으로 $$n\times n$$ 행렬을 살펴보기 시작한 지금 이 과정을 간략히 소개하기로 한다. 
 
 우선 다음의 간단한 보조정리를 보이자.
 
@@ -70,7 +70,7 @@ $$v_i=A^{-1}e_i\iff Av_i=e_i\tag{2}$$
 
 $$\begin{aligned}a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\hspace{10pt}\vdots&\\a_{mn}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}\tag{3}$$
 
-이 주어졌다 하자. 그럼 [§행렬, ⁋정의 2](/ko/math/linear_algebra/matrices#def2)에 의해 위의 식은 다음의 행렬들
+이 주어졌다 하자. 그럼 [§행렬, ⁋정의 1](/ko/math/linear_algebra/matrices#def1)에 의해 위의 식은 다음의 행렬들
 
 $$A=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix},\quad x=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix},\quad b=\begin{pmatrix}b_1\\b_2\\\vdots\\b_m\end{pmatrix}$$
 
@@ -274,7 +274,7 @@ $$A^{-1}=\begin{pmatrix}1&-2/3&-4\\0&1/3&0\\0&0&1\end{pmatrix}$$
 
 </div>
 
-그러나, (주로 작은 행렬의 경우) 어떠한 행렬이 가역인지 판단하기 위해 가우스 소거법을 매번 적용하는 것은 때때로 비효율적인 일이 될 수도 있다. 다음 글에서 살펴볼 행렬식은 주어진 $$n\times n$$ 행렬이 가역인지 아닌지를 결정하는 방법을 알려준다. 그러나, (특히 복잡한 행렬의 경우) 행렬식을 가장 쉽게 계산하는 방법 중 하나는 여전히 가우스 소거법이다. ([§행렬식의 존재성과 유일성, ⁋명제 9](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#prop9))
+그러나, (주로 작은 행렬의 경우) 어떠한 행렬이 가역인지 판단하기 위해 가우스 소거법을 매번 적용하는 것은 때때로 비효율적인 일이 될 수도 있다. 다음 글에서 살펴볼 행렬식은 주어진 $$n\times n$$ 행렬이 가역인지 아닌지를 결정하는 방법을 알려준다. 그러나, (특히 복잡한 행렬의 경우) 행렬식을 가장 쉽게 계산하는 방법 중 하나는 여전히 가우스 소거법이다. ([§행렬식의 존재성과 유일성, ⁋명제 8](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8))
 
 ---
 

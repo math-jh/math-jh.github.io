@@ -36,7 +36,7 @@ weight: 18
 
 $$\cl_B(A)=B\cap \cl_X(A)=B$$
 
-이므로 $$A$$는 $$B$$의 dense subset이다. ([§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)) 이제 결론에 반하여 $$B$$의 서로소인 두 열린집합 $$U,V$$가 존재하여 $$U\cup V=B$$라 하자. 그럼 $$A$$는 $$B$$의 dense subset이므로 $$U\cap A, V\cap A$$는 모두 공집합이 아니며 $$U\cap V\cap A=\emptyset$$이다. 이는 $$A$$가 connected라는 가정에 모순이다. 
+이므로 $$A$$는 $$B$$의 dense subset이다. ([§부분공간, ⁋명제 4](/ko/math/topology/subspaces#prop4)) 이제 결론에 반하여 $$B$$의 서로소인 두 열린집합 $$U,V$$가 존재하여 $$U\cup V=B$$라 하자. 그럼 $$A$$는 $$B$$의 dense subset이므로 $$U\cap A, V\cap A$$는 모두 공집합이 아니며 $$U\cap V\cap A=\emptyset$$이다. 이는 $$A$$가 connected라는 가정에 모순이다. 
 
 </details>
 

@@ -119,7 +119,7 @@ $$\Hom(s, P):\Hom_{K(\mathcal{A})}(B, P)\rightarrow\Hom_{K(\mathcal{A})}(A, P)$$
 
 <ins id="def6">**정의 6**</ins> Complex $$I \in K(\mathcal{A})$$가 *$$K$$-injective*라는 것은, 임의의 quasi-isomorphism $$s : A \rightarrow B$$에 대해 유도된 map
 
-$$\Hom_{K(\mathcal{A})}(I, A) \xrightarrow{s_*} \Hom_{K(\mathcal{A})}(I, B)$$
+$$\Hom_{K(\mathcal{A})}(I, A) \xrightarrow{s_\ast} \Hom_{K(\mathcal{A})}(I, B)$$
 
 이 isomorphism인 것이다.
 

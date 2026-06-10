@@ -75,8 +75,8 @@ Let $$\mathcal{B}_i'$$ be an $$A$$-basis of $$P_i$$. Lifting these, we can exten
 
 $$e_M \sim
 \begin{pmatrix}
-X_{rr} & * & \cdots & * \\
-0 & X_{r-1,r-1} & \cdots & * \\
+X_{rr} & \ast  & \cdots & \ast  \\
+0 & X_{r-1,r-1} & \cdots & \ast  \\
 \vdots & \ddots & \ddots & \vdots \\
 0 & \cdots & 0 & X_{11}
 \end{pmatrix}$$

@@ -38,7 +38,7 @@ $$\varepsilon(p,q)=1,\qquad \varepsilon(p,q)=(-1)^{pq}$$
 
 뿐이다. Commutation factor는 degree $$p$$와 degree $$q$$의 원소의 곱을 생각할 때, 이들이 서로 순서를 바꿀 때 생겨나는 부호로써 등장할 것이다. 
 
-이제 commutative ring $$A$$, $$\Delta$$-graded $$A$$-module $$E$$, $$E'$$, $$E''$$, $$F$$, $$F'$$, $F''$$A$-bilinear map들
+이제 commutative ring $$A$$, $$\Delta$$-graded $$A$$-module $$E$$, $$E'$$, $$E''$$, $$F$$, $$F'$$, $$F''$$와 $$A$$-bilinear map들
 
 $$\mu: E \times E' \to E'', \qquad \lambda_1: F \times E' \to F', \qquad \lambda_2: E \times F' \to F''$$
 
@@ -149,7 +149,7 @@ $$[d_1, d_2]_\varepsilon = d_1 \circ d_2 - \varepsilon_{\delta_1, \delta_2} \, d
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**따름정리 4**</ins> $$\Delta = \mathbb{Z}$$라 하자. 이때 다음이 성립한다.
+<ins id="cor4">**따름정리 4**</ins> $$\Delta = \mathbb{Z}$$라 하자. 이때 다음이 성립한다.
 
 1. Antiderivation의 제곱은 derivation이다.  
 2. 두 derivation의 bracket은 derivation이다.  

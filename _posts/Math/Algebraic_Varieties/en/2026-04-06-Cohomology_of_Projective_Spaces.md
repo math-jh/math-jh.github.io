@@ -208,13 +208,13 @@ holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$\mathcal{L}$$ is ample, for sufficiently large $$m_0$$ the sheaf $$\mathcal{L}^{\otimes m_0}$$ is very ample. That is, there exists a suitable embedding $$i \colon X \hookrightarrow \mathbb{P}^N$$ such that $$\mathcal{L}^{\otimes m_0} = i^*\mathcal{O}(1)$$. Restricting the standard affine cover $$\{U_i\}$$ of $$\mathbb{P}^N$$ to $$X$$ gives an affine open cover $$\{X \cap U_i\}$$. Since a finite intersection $$U_{i_0} \cap \cdots \cap U_{i_p}$$ is affine, $$(X \cap U_{i_0}) \cap \cdots \cap (X \cap U_{i_p}) = X \cap (U_{i_0} \cap \cdots \cap U_{i_p})$$ is also affine. Therefore, since the two Čech complexes are literally the same,
+Since $$\mathcal{L}$$ is ample, for sufficiently large $$m_0$$ the sheaf $$\mathcal{L}^{\otimes m_0}$$ is very ample. That is, there exists a suitable embedding $$i \colon X \hookrightarrow \mathbb{P}^N$$ such that $$\mathcal{L}^{\otimes m_0} = i^\ast\mathcal{O}(1)$$. Restricting the standard affine cover $$\{U_i\}$$ of $$\mathbb{P}^N$$ to $$X$$ gives an affine open cover $$\{X \cap U_i\}$$. Since a finite intersection $$U_{i_0} \cap \cdots \cap U_{i_p}$$ is affine, $$(X \cap U_{i_0}) \cap \cdots \cap (X \cap U_{i_p}) = X \cap (U_{i_0} \cap \cdots \cap U_{i_p})$$ is also affine. Therefore, since the two Čech complexes are literally the same,
 
-$$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{F})$$
+$$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F})$$
 
 holds. Since $$X$$ and $$\mathbb{P}^N$$ are separated schemes ([\[Algebraic Varieties\] §Sheaf Cohomology, ⁋Theorem 11](/en/math/algebraic_varieties/sheaf_cohomology#thm11)), for quasi-coherent sheaves Čech cohomology equals sheaf cohomology:
 
-$$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_*\mathcal{G}) = H^i(\mathbb{P}^N, i_*\mathcal{G}).$$ Therefore it suffices to show the following: for a coherent sheaf $$\mathcal{G}$$ on $$\mathbb{P}^N$$, for sufficiently large $$n$$ we have $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$$ ($$i > 0$$). Here $$\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$$.
+$$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{G}) = H^i(\mathbb{P}^N, i_\ast\mathcal{G}).$$ Therefore it suffices to show the following: for a coherent sheaf $$\mathcal{G}$$ on $$\mathbb{P}^N$$, for sufficiently large $$n$$ we have $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$$ ($$i > 0$$). Here $$\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$$.
 
 **Key Lemma**. We show that $$\mathcal{G}(n)$$ is globally generated for sufficiently large $$n$$. (See [Definition 6](#def6) below.)
 
@@ -392,15 +392,15 @@ The above [Proposition 4](#prop4) and [Proposition 7](#prop7) are representative
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$\mathcal{L}$$ is very ample, there exists a projective embedding $$i: X \hookrightarrow \mathbb{P}^N$$ such that $$\mathcal{L} = i^*\mathcal{O}_{\mathbb{P}^N}(1)$$. On the other hand, since $$\mathcal{M}$$ is globally generated, there exist global sections $$s_0, \ldots, s_n \in H^0(X, \mathcal{M})$$ that generate the stalk at every point, and from these we can define a morphism $$\phi: X \to \mathbb{P}^n$$.
+Since $$\mathcal{L}$$ is very ample, there exists a projective embedding $$i: X \hookrightarrow \mathbb{P}^N$$ such that $$\mathcal{L} = i^\ast\mathcal{O}_{\mathbb{P}^N}(1)$$. On the other hand, since $$\mathcal{M}$$ is globally generated, there exist global sections $$s_0, \ldots, s_n \in H^0(X, \mathcal{M})$$ that generate the stalk at every point, and from these we can define a morphism $$\phi: X \to \mathbb{P}^n$$.
 
 Now consider the closed embedding $$(i, \phi): X \to \mathbb{P}^N \times \mathbb{P}^n$$. Composing this with the Segre embedding ([§Projective Varieties, ⁋Example 16](/en/math/algebraic_varieties/projective_varieties#ex16))
 
 $$\sigma: \mathbb{P}^N \times \mathbb{P}^n \hookrightarrow \mathbb{P}^{Nn+N+n}$$
 
-we have $$\sigma^*\mathcal{O}(1) = \pi_1^*\mathcal{O}(1) \otimes \pi_2^*\mathcal{O}(1)$$, and therefore
+we have $$\sigma^\ast\mathcal{O}(1) = \pi_1^\ast\mathcal{O}(1) \otimes \pi_2^\ast\mathcal{O}(1)$$, and therefore
 
-$$(\sigma \circ (i, \phi))^*\mathcal{O}(1) = i^*\mathcal{O}(1) \otimes \phi^*\mathcal{O}(1) = \mathcal{L} \otimes \mathcal{M}.$$
+$$(\sigma \circ (i, \phi))^\ast\mathcal{O}(1) = i^\ast\mathcal{O}(1) \otimes \phi^\ast\mathcal{O}(1) = \mathcal{L} \otimes \mathcal{M}.$$
 
 That is, $$\mathcal{L} \otimes \mathcal{M}$$ is very ample.
 

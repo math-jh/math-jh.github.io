@@ -117,7 +117,7 @@ $$(\alpha\cdot_A y_1,y_2)=(\phi(\alpha)\cdot_B y_1, y_2)\mapsto (\phi(\alpha)\cd
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> Adjoint $$\phi_!\dashv\phi^\ast$$가 존재한다. 
+<ins id="prop6">**명제 6**</ins> Adjoint $$\phi_!\dashv\phi^\ast$$가 존재한다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -159,7 +159,7 @@ $$\Phi(\id_{\phi^\ast B}\otimes_A u(\beta'\cdot_B(\beta\otimes_Ax)))=\Phi((\beta
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> Adjoint $$\phi^\ast\dashv\phi_\ast$$가 존재한다. 
+<ins id="prop7">**명제 7**</ins> Adjoint $$\phi^\ast\dashv\phi_\ast$$가 존재한다. 
 
 </div>
 

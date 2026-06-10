@@ -27,7 +27,7 @@ However, if we pursue this philosophy, defining a permutation action becomes qui
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> Every field appearing in this post has characteristic exponent $$p$$.
+**Remark** Every field appearing in this post has characteristic exponent $$p$$.
 
 </div>
 

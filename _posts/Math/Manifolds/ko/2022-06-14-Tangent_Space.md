@@ -32,7 +32,7 @@ $$\lim_{t\rightarrow 0}\frac{f(p+tv)-f(p)}{t}$$
 
 $$C^\infty(U)$$를 열린집합 $$U$$ 위에서 정의된 $$C^\infty$$ 함수들의 모임, 그리고 $$V\subseteq U$$일 때마다 함수 $$\rho_{UV}:C^\infty(U)\rightarrow C^\infty(V)$$를 
 
-$$\rho_{UV}:f\mapsto f|_V$$
+$$\rho_{UV}:f\mapsto f\vert_V$$
 
 으로 정의하자. 그럼 이 구조는 $$M$$ 위에 정의된 ring들의 sheaf $$\mathcal{C}^\infty_M$$가 된다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 임의의 $$p\in M$$에서의 $$\mathcal{C}^\infty$$의 stalk은 $$\mathcal{C}^\infty_{M,p}$$, 혹은 혼동이 없을 때에는 $$\mathcal{C}^\infty_p$$로 적는다. ([\[위상수학\] §준층, ⁋정의 9](/ko/math/topology/presheaves#def9))
 
@@ -46,7 +46,7 @@ $$\rho_{UV}:f\mapsto f|_V$$
 
 이를 보이기 위해서는 $$\mathcal{C}^\infty_p$$ 위에서의 연산들을 정의해주면 된다. $$\mathcal{C}^\infty_p$$의 두 원소 $$\mathbf{f},\mathbf{g}$$를 택하자. 그럼 $$p$$의 적당한 열린근방 $$U,V$$가 존재하여, $$\mathbf{f}$$와 $$\mathbf{g}$$를 각각 $$(f,U)$$, $$(g,V)$$의 germ이라 생각할 수 있다. 이제 $$\mathbf{f}+\mathbf{g}$$를 다음의 함수
 
-$$(f|_{U\cap V}+g|_{U\cap V}, U\cap V)$$
+$$(f\vert_{U\cap V}+g\vert_{U\cap V}, U\cap V)$$
 
 의 equivalence class로 정의하자. 즉 두 개의 germ $$\mathbf{f}$$와 $$\mathbf{g}$$의 합을 계산하기 위해서는 함수 $$f,g$$가 공통적으로 정의되는 $$p$$의 열린근방을 찾은 후, 이 열린근방에서 $$f$$와 $$g$$의 합을 계산하면 된다. 물론 이 정의가 representative의 선택에 의존하지 않는다는 것을 쉽게 보일 수 있다.
 
@@ -129,7 +129,7 @@ $$\begin{aligned}(v+w)(\mathbf{fg})&=v(\mathbf{fg})+w(\mathbf{fg})=\mathbf{f}(p)
 
 <div class="proposition" markdown="1">
 
-<ins id="lem6">**보조정리 6**</ins> 임의의 tangent vector $$v$$에 대하여 $$v(\mathbf{1})=0$$이다.
+<ins id="lem5">**보조정리 5**</ins> 임의의 tangent vector $$v$$에 대하여 $$v(\mathbf{1})=0$$이다.
 
 </div>
 <details class="proof" markdown="1">

@@ -183,7 +183,7 @@ We may now define the following.
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**Definition 9**</ins> An algebraic extension $$\mathbb{L}/\mathbb{K}$$ is called *Galois* if $$\mathbb{L}/\mathbb{K}$$ satisfies the conditions of [Proposition 8](#prop8).
+<ins id="def9">**Definition 9**</ins> An algebraic extension $$\mathbb{L}/\mathbb{K}$$ is called *Galois* if $$\mathbb{L}/\mathbb{K}$$ satisfies the conditions of [Theorem 8](#thm8).
 
 </div>
 

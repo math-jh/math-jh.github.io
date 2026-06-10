@@ -62,7 +62,7 @@ Meanwhile, for any prime ideal $$\mathfrak{p}\subset \mathbb{K}[\x_1,\ldots, \x_
 
 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
 
-holds. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Proposition 4](/en/math/commutative_algebra/regular_local_rings#prop4)) Here the codimension of $$\mathfrak{p}$$ is defined in [\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2) as the supremum of the lengths of chains of prime ideals contained in $$\mathfrak{p}$$; geometrically it is the supremum of the lengths of chains of closed subvarieties of $$\mathbb{A}^n$$ containing $$X=Z(\mathfrak{p})$$. Since $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$$ is the dimension of $$Z(\mathfrak{p})$$, equation ($\ast$) acquires a geometric meaning.
+holds. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Proposition 4](/en/math/commutative_algebra/regular_local_rings#prop4)) Here the codimension of $$\mathfrak{p}$$ is defined in [\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2) as the supremum of the lengths of chains of prime ideals contained in $$\mathfrak{p}$$; geometrically it is the supremum of the lengths of chains of closed subvarieties of $$\mathbb{A}^n$$ containing $$X=Z(\mathfrak{p})$$. Since $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$$ is the dimension of $$Z(\mathfrak{p})$$, equation ($$\ast$$) acquires a geometric meaning.
 
 ## Dimension of a Projective Variety
 

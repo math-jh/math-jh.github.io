@@ -524,11 +524,11 @@ and therefore we obtain the following.
 
 <ins id="prop19">**Proposition 19 (Leray Spectral Sequence)**</ins> For a continuous map $$f : X \to Y$$ and a sheaf $$\mathcal{F}$$, there exists a spectral sequence with $$E_2$$ page
 
-$$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$$
+$$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$$
 
 </div>
 
-Geometrically, this is most transparent when $$f:X\rightarrow Y$$ is a fibration; in this case what the spectral sequence says is that to compute the cohomology on $$X$$, we first compute the cohomology on $$Y$$, then remember the cohomology on the fiber over each point as the higher sheaf $$R^q f_* \mathcal{F}$$, and finally compose these over $$Y$$.
+Geometrically, this is most transparent when $$f:X\rightarrow Y$$ is a fibration; in this case what the spectral sequence says is that to compute the cohomology on $$X$$, we first compute the cohomology on $$Y$$, then remember the cohomology on the fiber over each point as the higher sheaf $$R^q f_\ast \mathcal{F}$$, and finally compose these over $$Y$$.
 
 In the lowest dimensions of the Leray spectral sequence, we obtain the following exact sequence.
 
@@ -536,14 +536,14 @@ In the lowest dimensions of the Leray spectral sequence, we obtain the following
 
 <ins id="cor20">**Corollary 20 (Five-Term Exact Sequence)**</ins> For a continuous map $$f : X \to Y$$ and a sheaf $$\mathcal{F}$$, from the Leray spectral sequence we obtain the exact sequence
 
-$$0 \to H^1(Y, f_* \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_* \mathcal{F}) \overset{d_2}{\to} H^2(Y, f_* \mathcal{F}) \to H^2(X, \mathcal{F}).$$
+$$0 \to H^1(Y, f_\ast \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_\ast \mathcal{F}) \overset{d_2}{\to} H^2(Y, f_\ast \mathcal{F}) \to H^2(X, \mathcal{F}).$$
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Consider the terms with $$p+q \leq 2$$ on the $$E_2$$ page of the Leray spectral sequence $$E_2^{p,q} = H^p(Y, R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$. By [\[Homological Algebra\] §Spectral Sequences, ⁋Definition 5](/en/math/homological_algebra/spectral_sequences#def5) we know that
+Consider the terms with $$p+q \leq 2$$ on the $$E_2$$ page of the Leray spectral sequence $$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$. By [\[Homological Algebra\] §Spectral Sequences, ⁋Definition 5](/en/math/homological_algebra/spectral_sequences#def5) we know that
 
 $$E_\infty^{p,q} \cong \gr^p H^{p+q} = F^p H^{p+q}/F^{p+1}H^{p+q}$$
 
@@ -581,7 +581,7 @@ is exact. Combining these gives the desired result.
 
 </details>
 
-This exact sequence shows what constraints the existence of the $$d_2$$-differential imposes on cohomology computations, and in favorable cases it justifies the intuition that $$H^i(X, \mathcal{F}) \cong H^i(Y, f_* \mathcal{F})$$.
+This exact sequence shows what constraints the existence of the $$d_2$$-differential imposes on cohomology computations, and in favorable cases it justifies the intuition that $$H^i(X, \mathcal{F}) \cong H^i(Y, f_\ast \mathcal{F})$$.
 
 Finally, we can describe the relationship between Čech cohomology and derived functor cohomology using a spectral sequence.
 

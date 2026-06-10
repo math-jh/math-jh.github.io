@@ -61,7 +61,7 @@ Naturally, we can continue defining derivatives in this manner. For example, the
 
 <ins id="def3">**Definition 3**</ins> Fix a manifold $$M$$ and a vector field $$X$$ defined on it, and suppose a differential form $$\omega\in\Omega^\ast(M)$$ is given. Then the *Lie derivative* $$\mathcal{L}_X\omega$$ of $$\omega$$ is the differential form defined by the formula
 
-$$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg|_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
+$$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
 
 </div>
 
@@ -131,7 +131,7 @@ In other words, $$X$$ and $$Y$$ being $$F$$-related means that the following dia
 
 ![F-related](/assets/images/Math/Manifolds/Lie_Derivative-1.png){:style="width:7.4em" class="invert" .align-center}
 
-As we can see by applying the fact that $$X$$ is $$C^\infty$$ (from [Proposition 2](#prop2)) to each function $$f$$, whether $$X$$ and $$Y$$ are $$F$$-related can also be tested by applying them to each function.
+As we can see by applying the fact that $$X$$ is $$C^\infty$$ (from [§Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2)) to each function $$f$$, whether $$X$$ and $$Y$$ are $$F$$-related can also be tested by applying them to each function.
 
 <div class="proposition" markdown="1">
 

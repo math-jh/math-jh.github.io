@@ -132,7 +132,7 @@ $$f\circ g'=\id_{A_2},\qquad g'\circ f=\id_{A_1}$$
 
 $$g=g\circ\id_{A_2}=g\circ(f\circ g')=(g\circ f)\circ g'=\id_{A_1}\circ g'=g'$$
 
-으로부터 $$g=g'$$임을 안다. 따라서 임의의 $$f\in\Hom_\mathcal{A}(A_1,A_2)$$가 주어졌을 때, [정의 8](#def8)의 두 조건을 만족하는 $$g\in\Hom_\mathcal{A}(A_2,A_1)$$는 존재한다면 유일하고, 따라서 이를 $$g=f^{-1}$$으로 적을 수 있다.
+으로부터 $$g=g'$$임을 안다. 따라서 임의의 $$f\in\Hom_\mathcal{A}(A_1,A_2)$$가 주어졌을 때, [정의 6](#def6)의 두 조건을 만족하는 $$g\in\Hom_\mathcal{A}(A_2,A_1)$$는 존재한다면 유일하고, 따라서 이를 $$g=f^{-1}$$으로 적을 수 있다.
 
 많은 예시에서 isomorphism은 bijective인 morphism과 같은 말이지만, 항상 그런 것은 아니다. ([\[위상수학\] §연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5)) 애초에 임의의 category의 morphism들이 반드시 함수라는 보장도 없으므로 morphism이 bijection이라는 것은 애초부터 말이 되지 않는다. 대신 다음을 정의한다.
 

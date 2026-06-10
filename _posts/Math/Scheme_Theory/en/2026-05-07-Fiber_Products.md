@@ -43,7 +43,7 @@ Since [Definition 1](#def1) does not guarantee anything about the existence of t
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**Lemma 2**</ins> Given morphisms $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow\Spec C$$ between affine schemes, we have
+<ins id="lem2">**Lemma 2**</ins> Given morphisms $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow\Spec C$$ between affine schemes, we have
 
 $$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B).$$
 

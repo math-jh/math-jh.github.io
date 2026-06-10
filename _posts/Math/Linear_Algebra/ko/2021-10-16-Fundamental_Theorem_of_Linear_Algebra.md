@@ -112,7 +112,7 @@ $$\begin{aligned}(L_2\circ L_1)(e_i)&=L_2(\alpha_{1,i}e_1+\cdots+\alpha_{m,i}e_m
 
 $$(L_2\circ L_1)(e_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)e_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)e_k.$$
 
-$$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$의 $$i$$번째 열은 $$e_i$$가 $$L_2\circ L_1$$에 의해 옮겨지는 벡터이므로, 행렬 $$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$의 $$i$$열, $$j$$행은 이 벡터의 $$j$$번째 성분 $$\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$$이 된다. 이제 [§행렬, ⁋정의 3](/ko/math/linear_algebra/matrices#def3) 직후의 계산으로부터 이것이 두 행렬 $$[L_2]_{\mathcal{E}_k}^{\mathcal{E}_m}$$, $$[L_1]_{\mathcal{E}_m}^{\mathcal{E}_n}$$의 곱의 $$(i,j)$$ 성분이라는 것을 안다.
+$$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$의 $$i$$번째 열은 $$e_i$$가 $$L_2\circ L_1$$에 의해 옮겨지는 벡터이므로, 행렬 $$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$의 $$i$$열, $$j$$행은 이 벡터의 $$j$$번째 성분 $$\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$$이 된다. 이제 [§행렬, ⁋정의 2](/ko/math/linear_algebra/matrices#def2) 직후의 계산으로부터 이것이 두 행렬 $$[L_2]_{\mathcal{E}_k}^{\mathcal{E}_m}$$, $$[L_1]_{\mathcal{E}_m}^{\mathcal{E}_n}$$의 곱의 $$(i,j)$$ 성분이라는 것을 안다.
 
 </details>
 

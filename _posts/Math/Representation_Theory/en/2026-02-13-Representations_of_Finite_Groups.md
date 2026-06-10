@@ -165,11 +165,11 @@ On the other hand, every finite-dimensional $$G$$-module $$V$$ admits a $$G$$-in
 
 For any Hermitian inner product $$\langle -,- \rangle$$ on $$V$$, define a new inner product $$\langle\kern-1.5pt\langle-,-\rangle\kern-1.5pt\rangle$$ by
 
-$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
+$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
 
 Then for any $$h\in G$$,
 
-$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{|G|}\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
+$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
 
 so this inner product is $$G$$-invariant.
 

@@ -33,7 +33,7 @@ Thus any field extension $$\mathbb{L}/\mathbb{K}$$ can be regarded as an associa
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> We consider $$\mathbb{K}$$-algebras and homomorphisms between them in order to treat situations similar to the above; henceforth in our posts the category $$\Alg{\mathbb{K}}$$ will always be the category of unital associative $$\mathbb{K}$$-algebras. That is, by a $$\mathbb{K}$$-algebra we shall always mean a unital associative $$\mathbb{K}$$-algebra, and by a $$\mathbb{K}$$-algebra homomorphism we shall always mean a unital $$\mathbb{K}$$-algebra homomorpihsm.
+**Remark**</ins> We consider $$\mathbb{K}$$-algebras and homomorphisms between them in order to treat situations similar to the above; henceforth in our posts the category $$\Alg{\mathbb{K}}$$ will always be the category of unital associative $$\mathbb{K}$$-algebras. That is, by a $$\mathbb{K}$$-algebra we shall always mean a unital associative $$\mathbb{K}$$-algebra, and by a $$\mathbb{K}$$-algebra homomorphism we shall always mean a unital $$\mathbb{K}$$-algebra homomorpihsm.
 
 </div>
 

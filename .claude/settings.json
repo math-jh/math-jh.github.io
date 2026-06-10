@@ -30,9 +30,60 @@
       "Bash(gem *)",
       "Bash(gh *)",
       "Bash(curl *)",
+      "Bash(linepatch *)",
       "Read",
       "Edit",
       "Write"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/bash_guard.py\"",
+            "timeout": 10,
+            "statusMessage": "bash guard"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/edit_preflight.py\"",
+            "timeout": 10,
+            "statusMessage": "edit preflight"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/md_lint.py\"",
+            "timeout": 15,
+            "statusMessage": "md lint"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/session_hint.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
     ]
   }
 }

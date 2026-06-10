@@ -15,9 +15,9 @@ weight: 9
 
 ---
 
-우리는 앞선 글에서 다양체 $X$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $\Cl(X)$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11)), $$\mathbb{P}^n$$에서 일반적인 divisor $dH$는 $d \ge 0$일 때만 어떤 함수의 zero set으로 나온다.
+우리는 앞선 글에서 다양체 $$X$$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $$\Cl(X)$$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11)), $$\mathbb{P}^n$$에서 일반적인 divisor $$dH$$는 $$d \ge 0$$일 때만 어떤 함수의 zero set으로 나온다.
 
-이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $\mathcal{L}$은 각 점 $p \in X$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $\mathcal{L}$의 section $s$는 자연스럽게 divisor $\divisor(s)$를 정의한다. 이 관점에서는 임의의 divisor $D$에 대해 $\mathcal{O}_X(D)$라는 line bundle을 만들 수 있고, 그 section들이 $D$보다 크거나 같은 divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
+이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $$\mathcal{L}$$은 각 점 $$p \in X$$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $$\mathcal{L}$$의 section $$s$$는 자연스럽게 divisor $$\divisor(s)$$를 정의한다. 이 관점에서는 임의의 divisor $$D$$에 대해 $$\mathcal{O}_X(D)$$라는 line bundle을 만들 수 있고, 그 section들이 $$D$$보다 크거나 같은 divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
 
 ## Line Bundle의 정의
 
@@ -36,7 +36,7 @@ Line bundle, 더 나아가 이 글의 뒷부분에서 정의할 vector bundle은
 
 </div>
 
-두 line bundle $\mathcal{L}, \mathcal{M} \to X$ 사이의 *morphism* $\varphi \colon \mathcal{L} \to \mathcal{M}$은 각 점 $p \in X$에서 fiber 사이의 $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \to \mathcal{M}_p$를 정의하며, 적당한 open cover $\{U_k\}$ 위에서 $\mathcal{O}_X(U_k)$-module homomorphism
+두 line bundle $$\mathcal{L}, \mathcal{M} \to X$$ 사이의 *morphism* $$\varphi \colon \mathcal{L} \to \mathcal{M}$$은 각 점 $$p \in X$$에서 fiber 사이의 $$\mathbb{K}$$-linear map $$\varphi_p \colon \mathcal{L}_p \to \mathcal{M}_p$$를 정의하며, 적당한 open cover $$\{U_k\}$$ 위에서 $$\mathcal{O}_X(U_k)$$-module homomorphism
 
 $$\varphi_k \colon \mathcal{O}_{U_k} \to \mathcal{O}_{U_k}$$
 
@@ -44,7 +44,7 @@ $$\varphi_k \colon \mathcal{O}_{U_k} \to \mathcal{O}_{U_k}$$
 
 $$g^{\mathcal{M}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{L}}_{kl}$$
 
-이 성립한다. Line bundle의 fiber는 1차원이므로, 각 $\varphi_k$는 적당한 $h_k \in \mathcal{O}_X(U_k)$에 의한 곱셈 $s \mapsto h_k s$로 주어진다. $\varphi$가 각 fiber에서 bijective일 때, 이를 *isomorphism*이라 부르고 $\mathcal{L} \cong \mathcal{M}$으로 표기한다. Fiber가 1차원이므로 이는 각 점에서 nonzero scalar를 주는 것과 같으며, 즉 compatible하게 $h_k \in \mathcal{O}_X(U_k)^\ast$를 선택하는 것과 동치이다.
+이 성립한다. Line bundle의 fiber는 1차원이므로, 각 $$\varphi_k$$는 적당한 $$h_k \in \mathcal{O}_X(U_k)$$에 의한 곱셈 $$s \mapsto h_k s$$로 주어진다. $$\varphi$$가 각 fiber에서 bijective일 때, 이를 *isomorphism*이라 부르고 $$\mathcal{L} \cong \mathcal{M}$$으로 표기한다. Fiber가 1차원이므로 이는 각 점에서 nonzero scalar를 주는 것과 같으며, 즉 compatible하게 $$h_k \in \mathcal{O}_X(U_k)^\ast$$를 선택하는 것과 동치이다.
 
 그럼 다음 명제는 cocycle condition의 정의로부터 직접 확인된다.
 

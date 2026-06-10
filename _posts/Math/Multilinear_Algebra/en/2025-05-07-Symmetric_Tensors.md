@@ -180,7 +180,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
     holds. 
 3. For any $$x_1,\ldots, x_n\in M$$, let $$p=p_1+\cdots+p_n$$. Then letting $$\mathscr{P}$$ be the set of ordered tuples $$(P_1,\ldots, P_n)$$ of partitions of $$\{1,\ldots, p\}$$ such that
 
-    $$\mathscr{P}=\left\{(P_1,\ldots, P_n)\bigg| \bigcup_{k=1}^n P_k=\{1,\ldots, p\}, P_i\cap P_j=\emptyset\right\}$$
+    $$\mathscr{P}=\left\{(P_1,\ldots, P_n)\bigg\vert \bigcup_{k=1}^n P_k=\{1,\ldots, p\}, P_i\cap P_j=\emptyset\right\}$$
 
     and for each $$P\in\mathscr{P}$$ defining a function $$\phi:\{1,\ldots, p\} \rightarrow \{1,\ldots, n\}$$ such that $$i\in P_{\phi(i)}$$, we have
 
@@ -267,7 +267,7 @@ $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> For the above reason, some references define the symmetric product from the beginning as
+<ins id="rmk8">**Remark 8**</ins> For the above reason, some references define the symmetric product from the beginning as
 
 $$xy=\frac{1}{p!q!}\tr_{S_{p+q}/(S_p\times S_q)}(x\otimes y)$$
 
@@ -291,7 +291,7 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**Proposition 8**</ins> The following hold.
+<ins id="prop9">**Proposition 9**</ins> The following hold.
 
 1. If $$x\in \S^n(M)$$, then $$(t\circ\bar{s})(x)=n!.x$$.
 2. If $$x\in \Sym^n(M)$$, then $$(\bar{s}\circ t)(x)=n!.x$$. 
@@ -300,15 +300,15 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 The proof of this is a simple calculation.
 
-For reasons similar to what we saw in [Remark](#rmk1) above, if $$A$$ is a $$\mathbb{Q}$$-algebra (as well as a $$\mathbb{Z}$$-algebra), then $$x\mapsto n!.x$$ is a bijection, and thus we can check that the $$\bar{s}: \S(M) \rightarrow \Sym(M)$$ defined above is an isomorphism.
+For reasons similar to what we saw in [Remark 8](#rmk8) above, if $$A$$ is a $$\mathbb{Q}$$-algebra (as well as a $$\mathbb{Z}$$-algebra), then $$x\mapsto n!.x$$ is a bijection, and thus we can check that the $$\bar{s}: \S(M) \rightarrow \Sym(M)$$ defined above is an isomorphism.
 
 ## Polynomial Mappings
 
-On the other hand, the symmetric algebra $$\S(M)$$ could be thought of as a representation of symmetric $$n$$-linear maps; considering $$\Sym(M)$$ together with [Proposition 8](#prop8) above, we obtain the following proposition.
+On the other hand, the symmetric algebra $$\S(M)$$ could be thought of as a representation of symmetric $$n$$-linear maps; considering $$\Sym(M)$$ together with [Proposition 9](#prop9) above, we obtain the following proposition.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**Proposition 9**</ins> Let two $$A$$-modules $$M,N$$, a natural number $$n$$, and $$u: M \rightarrow N$$ be given. If $$M$$ is a free $$A$$-module, then the following are all equivalent.
+<ins id="prop10">**Proposition 10**</ins> Let two $$A$$-modules $$M,N$$, a natural number $$n$$, and $$u: M \rightarrow N$$ be given. If $$M$$ is a free $$A$$-module, then the following are all equivalent.
 
 1. There exists an $$n$$-linear map $$v: M^n \rightarrow N$$ satisfying $$u(x)=v(x,\ldots, x)$$.
 2. There exists a linear map $$w: \Sym(M) \rightarrow N$$ satisfying $$u(x)=w(\gamma_n(x))$$.
@@ -325,7 +325,7 @@ Then maps $$u: M \rightarrow N$$ satisfying these equivalent conditions are call
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**Example 10**</ins> Let a free $$A$$-module $$A^{(I)}$$ and a polynomial $$u\in N[\x_i]_{i\in I}$$ be given. Then the formula
+<ins id="ex11">**Example 11**</ins> Let a free $$A$$-module $$A^{(I)}$$ and a polynomial $$u\in N[\x_i]_{i\in I}$$ be given. Then the formula
 
 $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 
@@ -337,7 +337,7 @@ It is not hard to show that the composition of two polynomial mappings is again 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**Proposition 11**</ins> Assume all the conditions of [Proposition 9](#prop9) and additionally assume that $$y\mapsto n!.y$$ is an automorphism of $$N$$. Then for any $$u\in\Poly^n(M,N)$$, there exists a *unique* symmetric $$n$$-linear map $$v:M^n \rightarrow N$$ satisfying
+<ins id="prop12">**Proposition 12**</ins> Assume all the conditions of [Proposition 10](#prop10) and additionally assume that $$y\mapsto n!.y$$ is an automorphism of $$N$$. Then for any $$u\in\Poly^n(M,N)$$, there exists a *unique* symmetric $$n$$-linear map $$v:M^n \rightarrow N$$ satisfying
 
 $$u(x)=v(x,\ldots, x)$$
 
@@ -349,11 +349,11 @@ holds.
 
 </div>
 
-This follows from [Corollary 5](#cor5). Combining this with the observation in [Remark](#rmk1), we obtain the following result.
+This follows from [Corollary 5](#cor5). Combining this with the observation in [Remark 8](#rmk8), we obtain the following result.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**Proposition 12**</ins> Assume the situation of [Proposition 9](#prop9), and consider the canonical homomorphism $$\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$$. Then the following hold.
+<ins id="prop13">**Proposition 13**</ins> Assume the situation of [Proposition 10](#prop10), and consider the canonical homomorphism $$\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$$. Then the following hold.
 
 1. If $$A$$ is an infinite integral domain and $$N$$ is torsion-free, then this homomorphism is an isomorphism.
 2. If $$y\mapsto n!.y$$ is an injective endomorphism from $$N$$ to $$N$$, then this homomorphism is an isomorphism.
@@ -408,7 +408,7 @@ $$E_f=A[\x_1,\ldots,\x_n]/\mathfrak{a},\qquad \mathfrak{a}=(s_k+(-1)^{k+1}a_k)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**Proposition 13**</ins> Let arbitrary commutative rings $$A,B$$ be given, and fix a ring homomorphism $$\rho: A \rightarrow B$$ and elements $$\xi_1,\ldots, \xi_n$$ of $$B$$. If in $$B[\x]$$ the formula
+<ins id="prop14">**Proposition 14**</ins> Let arbitrary commutative rings $$A,B$$ be given, and fix a ring homomorphism $$\rho: A \rightarrow B$$ and elements $$\xi_1,\ldots, \xi_n$$ of $$B$$. If in $$B[\x]$$ the formula
 
 $$\rho(f)(\x)=\prod_{i=1}^n (\x-\xi_i)$$
 

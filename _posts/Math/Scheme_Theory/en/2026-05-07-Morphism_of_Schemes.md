@@ -173,7 +173,7 @@ As above, if $$X$$ is of the form $$\Spec A$$, we simply call it an $$A$$-point.
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**Example 8**</ins> Let a $$\mathbb{C}$$-scheme $$X=\Spec\frac{\mathbb{C}[\x_1,\ldots, \x_n]}{(f_1,\ldots, f_r)}$$ be given, and consider the $$\mathbb{Q}$$-points of this scheme. Then from [[Commutative Algebra] §Nullstellensatz, ⁋Lemma 5](/en/math/commutative_algebra/nullstellensatz#lem5) and the calculation of [Example 6](#ex6), we know that there exists a one-to-one correspondence between the $$\mathbb{Q}$$-points $$\Spec\phi: \Spec \mathbb{Q}\rightarrow X$$ of $$X$$ and the rational solutions of
+<ins id="ex8">**Example 8**</ins> Let a $$\mathbb{C}$$-scheme $$X=\Spec\frac{\mathbb{C}[\x_1,\ldots, \x_n]}{(f_1,\ldots, f_r)}$$ be given, and consider the $$\mathbb{Q}$$-points of this scheme. Then from [[Commutative Algebra] §Nullstellensatz, ⁋Lemma 5](/en/math/commutative_algebra/nullstellensatz#lem5) and the calculation of [Example 7](#ex7), we know that there exists a one-to-one correspondence between the $$\mathbb{Q}$$-points $$\Spec\phi: \Spec \mathbb{Q}\rightarrow X$$ of $$X$$ and the rational solutions of
 
 $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 

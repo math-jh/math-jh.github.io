@@ -22,7 +22,7 @@ weight: 6
 
 <ins id="def1">**정의 1**</ins> Manifold $$M$$에 대하여, $$C^\infty$$ 함수 $$\gamma:(a,b)\rightarrow M$$을 $$M$$ 위에서 정의된 $$C^\infty$$ 곡선이라 부르고, 임의의 $$t\in (a,b)$$에 대하여
 
-$$d\gamma_t\left(\frac{d}{dr}\bigg|_t\right)$$
+$$d\gamma_t\left(\frac{d}{dr}\bigg\vert_t\right)$$
 
 을 점 $$\gamma(t)$$에서 이 곡선의 *속도벡터<sub>velocity vector</sub>*라 부르고, $$\gamma'(t)$$로 표기한다.
 
@@ -30,7 +30,7 @@ $$d\gamma_t\left(\frac{d}{dr}\bigg|_t\right)$$
 
 벡터 $$\gamma'(t)$$는 $$T_{\gamma(t)}M$$의 원소로서 $$\mathcal{C}^\infty_{M,\gamma(t)}$$의 각 원소들 $$f$$에 작용하는데, differential의 정의를 풀어쓰면
 
-$$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg|_t\right)f=\frac{d}{dr}\bigg|_t (f\circ\gamma)=\frac{d(f\circ \gamma)}{dr}(t)=(f\circ\gamma)'(t)$$
+$$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg\vert_t\right)f=\frac{d}{dr}\bigg\vert_t (f\circ\gamma)=\frac{d(f\circ \gamma)}{dr}(t)=(f\circ\gamma)'(t)$$
 
 임을 알 수 있다. 
 
@@ -46,7 +46,7 @@ $$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg|_t\right)f=\frac{d}{dr}\bigg|_t (
 
 점 $$p$$를 중심으로 하고, 다음의 식
 
-$$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg|_0\right)$$
+$$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)$$
 
 을 만족하는 coordinate system $$(U,\varphi)$$를 찾으면 된다. 그럼 $$v$$는 $$C^\infty$$ 곡선 
 
@@ -58,11 +58,11 @@ $$\gamma: t\mapsto \varphi^{-1}(t, 0,\cdots, 0)$$
 
 특별히 $$M=\mathbb{R}^m$$인 경우, $$T_{\gamma(t)}M$$의 basis는
 
-$$\frac{\partial}{\partial r^1}\bigg|_{\gamma(t)},\cdots,\frac{\partial}{\partial r^m}\bigg|_{\gamma(t)}$$
+$$\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)},\cdots,\frac{\partial}{\partial r^m}\bigg\vert_{\gamma(t)}$$
 
 로 주어지므로, 
 
-$$\gamma'(t)=\sum_{i=1}^m\frac{d(r^i\circ \gamma)}{dr}(t)\frac{\partial}{\partial r^i}\bigg|_{\gamma(t)}=\frac{d\gamma^1}{dr}\frac{\partial}{\partial r^1}\bigg|_{\gamma(t)}+\cdots+\frac{d\gamma^m}{dr}\frac{\partial}{\partial r^m}\bigg|_{\gamma(t)}$$
+$$\gamma'(t)=\sum_{i=1}^m\frac{d(r^i\circ \gamma)}{dr}(t)\frac{\partial}{\partial r^i}\bigg\vert_{\gamma(t)}=\frac{d\gamma^1}{dr}\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)}+\cdots+\frac{d\gamma^m}{dr}\frac{\partial}{\partial r^m}\bigg\vert_{\gamma(t)}$$
 
 이고, 유클리드 공간에서는 이들 $$\partial/\partial r^i$$들이 $$i$$번째 standard basis와 같으므로 이를
 
@@ -80,7 +80,7 @@ $$d(F\circ\gamma)_t=dF_{\gamma(t)}\circ d\gamma_t$$
 
 이고, 따라서
 
-$$d(F\circ\gamma)_t\left(\frac{d}{dr}\bigg|_t\right)=(dF_{\gamma(t)}\circ d\gamma_t)\left(\frac{d}{dr}\bigg|_t\right)=dF_{\gamma(t)}(\gamma'(t))$$
+$$d(F\circ\gamma)_t\left(\frac{d}{dr}\bigg\vert_t\right)=(dF_{\gamma(t)}\circ d\gamma_t)\left(\frac{d}{dr}\bigg\vert_t\right)=dF_{\gamma(t)}(\gamma'(t))$$
 
 이다. 좌변을 $$N$$에서의 $$C^\infty$$ 곡선 $$F\circ\gamma$$의 시간 $$t$$에서의 속도벡터로 생각할 수 있으므로, 위의 식은
 
@@ -106,11 +106,11 @@ $$dF_p(v)=(F\circ\gamma)'(0)$$
 
 이는 본질적으로 유클리드 공간에서 $$\mathbb{R}^m$$의 표준벡터들과, $$T_x\mathbb{R}^m$$의 basis들
 
-$$\frac{\partial}{\partial r^1}\bigg|_x,\cdots,\frac{\partial}{\partial r^m}\bigg|_x$$
+$$\frac{\partial}{\partial r^1}\bigg\vert_x,\cdots,\frac{\partial}{\partial r^m}\bigg\vert_x$$
 
 이 동일한 것임을 이용하면 보일 수 있다. 사실 이 isomorphism은 basis의 선택에 의존하지 않는데, 임의의 $$v\in\mathbb{R}^m$$에 대하여
 
-$$D_v|_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
+$$D_v\vert_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 로 정의된 방향미분을 대응시키는 것이 이 isomorphism이기 때문이다. 
 
@@ -126,18 +126,18 @@ $$D_v|_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 첫 번째 부분은 앞서 보인 방향미분의 식
 
-$$(D_v|_x)f=\lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
+$$(D_v\vert_x)f=\lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 을 사용하면 된다. 대응 $$v\mapsto D_v\vert_x$$에 의하여, $$v+w$$는
 
-$$\begin{aligned}(D_{v+w}|_x)f&=\lim_{t\rightarrow 0}\frac{f(x+t(v+w))-f(x)}{t}\\
+$$\begin{aligned}(D_{v+w}\vert_x)f&=\lim_{t\rightarrow 0}\frac{f(x+t(v+w))-f(x)}{t}\\
 &=\lim_{t\rightarrow 0}\left(\frac{f((x+tw)+tv)-f(x+tw)}{t}+\frac{f(x+tv)-f(x)}{t}\right)\\
-&=(D_v|_x)f+(D_w|_x)f
+&=(D_v\vert_x)f+(D_w\vert_x)f
 \end{aligned}$$
 
 로 옮겨지며, 비슷하게 $$\alpha v$$는
 
-$$(D_{\alpha v}|_x)f=\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{t}=\alpha\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{\alpha t}=\alpha(D_v|_x)f$$
+$$(D_{\alpha v}\vert_x)f=\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{t}=\alpha\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{\alpha t}=\alpha(D_v\vert_x)f$$
 
 으로부터 얻어진다. 따라서 $$v\mapsto D_v\vert_x$$는 linear이다. 
 
@@ -145,15 +145,15 @@ $$(D_{\alpha v}|_x)f=\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{t}=\alpha\l
 
 두 번째 부분을 보여야 한다. 임의의 $$v\in V$$는 $$V\rightarrow W\rightarrow T_{L(x)}W$$를 따르면
 
-$$v\mapsto L(v)\mapsto D_{L(v)}|_{L(x)}$$
+$$v\mapsto L(v)\mapsto D_{L(v)}\vert_{L(x)}$$
 
 로 옮겨진다. 한편 $$V\mapsto T_xV\mapsto T_{L(x)}W$$를 따르면 우선 $$V\mapsto T_xV$$에 의하여
 
-$$v\mapsto D_v|_x$$
+$$v\mapsto D_v\vert_x$$
 
 를 얻고, 이후에는 $$\gamma(t)=x+tv$$를 이용해 [명제 3](#prop3)을 사용하면
 
-$$dL_x(D_v|_x)=(L\circ \gamma)'(0)$$
+$$dL_x(D_v\vert_x)=(L\circ \gamma)'(0)$$
 
 을 얻는다. 그런데
 
@@ -161,7 +161,7 @@ $$(L\circ\gamma)(t)=L(x+tv)=L(x)+tL(v)$$
 
 이므로, $$(L\circ\gamma)'(0)$$는 임의의 $$f$$에 대하여
 
-$$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L(v)}|_{L(x)})f$$
+$$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L(v)}\vert_{L(x)})f$$
 
 를 만족한다. 따라서 주어진 diagram이 commute한다.
 
@@ -201,11 +201,11 @@ $$T_pM\overset{df_p}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longright
 
 $$(U,\varphi)$$가 점 $$p$$를 포함하는 coordinate system이라 하고, $$\varphi=(x^i)_{i=1}^m$$이라 하자. 그럼 다음의 $$m$$개의 tangent vector들
 
-$$\frac{\partial}{\partial x^1}\bigg|_p,\cdots\frac{\partial}{\partial x^m}\bigg|_p$$
+$$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots\frac{\partial}{\partial x^m}\bigg\vert_p$$
 
 이 $$T_pM$$의 basis가 된다. 이들의 dual basis를 잠시동안 $$\xi^i \vert_p $$라 표기하자. 즉 $$\xi^i \vert_p $$는 $$T_pM$$에서 $$\mathbb{R}$$로의 linear map이며, 다음의 식
 
-$$(\xi^i |_p)\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\delta_{ij}\tag{1}$$
+$$(\xi^i \vert_p)\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\delta_{ij}\tag{1}$$
 
 을 통해 유일하게 정의된다. 이 때 $$\delta_{ij}$$는 크로네커 델타를 의미한다. 
 
@@ -219,7 +219,7 @@ $$(\xi^i |_p)\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\delta_{ij}\tag{
 
 $$dx^i$$들이 위의 식 (1)을 만족한다는 것을 보이면 충분하다. 정의에 의하여,
 
-$$dx^i|_p\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\frac{\partial}{\partial x^j}\bigg|_p x^i=\delta_{ij}$$
+$$dx^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}$$
 
 가 성립한다. 
 

@@ -26,7 +26,7 @@ $$\x^2-2,\qquad \x^2-3$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**참고**</ins> 이번 글에서 등장하는 모든 field는 characteristic exponent $$p$$를 갖는다.
+**참고** 이번 글에서 등장하는 모든 field는 characteristic exponent $$p$$를 갖는다.
 
 </div>
 

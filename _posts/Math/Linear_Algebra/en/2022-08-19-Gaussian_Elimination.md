@@ -23,7 +23,7 @@ $$B=PAQ\tag{1}$$
 
 for suitable invertible matrices $$P, Q$$, one might be tempted to regard $$A$$ and $$B$$ as essentially the same matrix. Yet if we allow complete freedom in choosing bases for the vector spaces $$V, W$$ on which $$L_A, L_B: V\rightarrow W$$ act, we saw that any two matrices of the same rank must be treated as identical. This is why in [§Fundamental Theorem of Linear Algebra, ⁋Definition 8](/en/math/linear_algebra/ftla#def8) we were forced to define a finer equivalence relation. Roughly speaking, if the only information retained in matrix $$A$$ in equation (1) is its rank, then the remaining information is encoded in $$P$$ and $$Q$$—that is, in the *linear operators* from $$V$$ to $$V$$ and from $$W$$ to $$W$$. Fixing a basis of $$V$$ (or $$W$$) to examine these operators makes the equivalence relation quite natural. Henceforth, our discussion proceeds with a fixed vector space $$V$$ and basis $$\mathcal{B}$$; in other words, we focus on $$n\times n$$ matrices. A powerful tool for this purpose is the determinant, which we shall define in the next post.
 
-Meanwhile, we proved that any invertible matrix must be square, using the trace ([§Matrices, ⁋Definition 7](/en/math/linear_algebra/matrices#def7)). Now that we know matrices and linear maps are the same, this result is immediate from [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4). However, we have not yet examined how to compute an inverse matrix. The method is simple enough that we could have presented it right after [§Matrices](/en/math/linear_algebra/matrices), but now that we have begun a serious study of $$n\times n$$ matrices, we briefly introduce it here.
+Meanwhile, we proved that any invertible matrix must be square, using the trace ([§Matrices, ⁋Definition 6](/en/math/linear_algebra/matrices#def6)). Now that we know matrices and linear maps are the same, this result is immediate from [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4). However, we have not yet examined how to compute an inverse matrix. The method is simple enough that we could have presented it right after [§Matrices](/en/math/linear_algebra/matrices), but now that we have begun a serious study of $$n\times n$$ matrices, we briefly introduce it here.
 
 First, we prove a simple lemma.
 
@@ -69,7 +69,7 @@ Consider the system of linear equations
 
 $$\begin{aligned}a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\hspace{10pt}\vdots&\\a_{mn}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}\tag{3}$$
 
-By [§Matrices, ⁋Definition 2](/en/math/linear_algebra/matrices#def2), this system can be written using the matrices
+By [§Matrices, ⁋Definition 1](/en/math/linear_algebra/matrices#def1), this system can be written using the matrices
 
 $$A=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix},\quad x=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix},\quad b=\begin{pmatrix}b_1\\b_2\\\vdots\\b_m\end{pmatrix}$$
 
@@ -263,7 +263,7 @@ $$A^{-1}=\begin{pmatrix}1&-2/3&-4\\0&1/3&0\\0&0&1\end{pmatrix}$$
 
 </div>
 
-However, applying Gaussian elimination every time to test invertibility—especially for small matrices—can be inefficient. The determinant, which we shall examine in the next post, provides a criterion for invertibility. Yet even for determinants, one of the easiest computational methods—especially for complicated matrices—remains Gaussian elimination. ([§Existence and Uniqueness of the Determinant, ⁋Proposition 9](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#prop9))
+However, applying Gaussian elimination every time to test invertibility—especially for small matrices—can be inefficient. The determinant, which we shall examine in the next post, provides a criterion for invertibility. Yet even for determinants, one of the easiest computational methods—especially for complicated matrices—remains Gaussian elimination. ([§Existence and Uniqueness of the Determinant, ⁋Proposition 8](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8))
 
 ---
 

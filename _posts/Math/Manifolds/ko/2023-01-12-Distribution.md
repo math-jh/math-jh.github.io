@@ -110,7 +110,7 @@ $$[X,Y]_p=d\Phi_s([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
 
 <ins id="lem5">**보조정리 5**</ins> $$m$$차원 manifold $$M$$과 한 점 $$p\in M$$, 그리고 $$X_p\neq 0$$을 만족하는 벡터장 $$X$$가 주어졌다 하자. 그럼 $$p$$를 포함하는 적당한 coordinate system $$(U,\varphi), \varphi=(x^1,\ldots, x^m)$$가 존재하여
 
-$$X|_U=\frac{\partial}{\partial x^1}\bigg|_U$$
+$$X\vert_U=\frac{\partial}{\partial x^1}\bigg\vert_U$$
 
 이도록 할 수 있다.
 
@@ -120,7 +120,7 @@ $$X|_U=\frac{\partial}{\partial x^1}\bigg|_U$$
 
 점 $$p$$를 중심으로 하는 coordinate system $$(V,\tau), \tau=(y^1,\ldots, y^m)$$을 택하여
 
-$$X_p=\frac{\partial}{\partial y^1}\bigg|_p$$
+$$X_p=\frac{\partial}{\partial y^1}\bigg\vert_p$$
 
 이도록 하자. 일반성을 잃지 않고, $$V$$가 충분히 작아서 적당한 $$\epsilon>0$$에 대하여 다음의 함수
 
@@ -136,7 +136,7 @@ $$\sigma: (-\epsilon,\epsilon)\times W;\qquad (t,a^2,\ldots, a^d)\mapsto \phi^t(
 
 가 잘 정의된다. 그런데
 
-$$d\sigma\left(\frac{\partial}{\partial r^1}\bigg|_0\right)=\frac{\partial}{\partial y^1}\bigg|_p=X_p\neq 0,\qquad d\sigma\left(\frac{\partial}{\partial r^i}\bigg|_0\right)=\frac{\partial}{\partial y^i}\bigg|_p$$
+$$d\sigma\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\partial}{\partial y^1}\bigg\vert_p=X_p\neq 0,\qquad d\sigma\left(\frac{\partial}{\partial r^i}\bigg\vert_0\right)=\frac{\partial}{\partial y^i}\bigg\vert_p$$
 
 이므로 $$\sigma$$는 원점에서 nonsingular이고, 따라서 $$\sigma^{-1}$$이 coordinate map을 정의한다.
 
@@ -147,7 +147,7 @@ $$d\sigma\left(\frac{\partial}{\partial r^1}\bigg|_0\right)=\frac{\partial}{\par
 
 정리가 모든 $$k-1$$차원 distribution에 대해 성립한다고 가정하고, $$\mathcal{D}$$가 $$k$$차원 distribution이라 하자. 한 점 $$p\in M$$에 대하여, $$\mathcal{D}$$가 $$p$$ 근방에서는 $$k$$개의 벡터장 $$X_1,\ldots, X_k$$에 의해 span된다고 가정할 수 있다. 이제 [보조정리 5](#lem5)를 적용하여
 
-$$X_1|_V=\frac{\partial}{\partial y^1}$$
+$$X_1\vert_V=\frac{\partial}{\partial y^1}$$
 
 이도록 하는, $$p$$를 중심으로 하는 coordinate system $$(V,\tau),\tau=(y^1,\ldots, y^k)$$을 찾을 수 있다. 
 
@@ -159,7 +159,7 @@ $$Y_1=X_1,\qquad Y_i=X_i-(X_i(y^1))X_1\quad(i\geq 2)$$
 
 이제 $$S$$를 $$y_1=0$$에 의해 정의된 slice라 하자. 그럼 $$Y_2,\ldots, Y_k$$들을 $$S$$로 제한하여 벡터장들
 
-$$Z_i=Y_i|_S \qquad (i\geq 2)$$
+$$Z_i=Y_i\vert_S \qquad (i\geq 2)$$
 
 을 얻을 수 있다. 이 때, 다음의 식
 
