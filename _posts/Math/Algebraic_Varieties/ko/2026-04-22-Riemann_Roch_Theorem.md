@@ -151,7 +151,7 @@ $$f\mapsto (a_{-n_i}, \ldots, a_{-1})$$
 
 를 모든 $$p_i$$에 대해서 한 번에 고려하는 함수이다. 그럼 위의 선형사상의 우변의 차원은 $$\sum n_i = \deg D$$이고, 이 사상의 kernel은 pole을 갖지 않는 global section, 즉 $$H^0(C, \mathcal{O}_C) = \mathbb{K}$$와 같으며 이로부터 $$\ell(D) \leq 1 + \deg D$$를 얻는다. $$D$$가 effective가 아니지만 $$\ell(D) > 0$$이라면, $$D$$는 어떤 effective divisor와 linearly equivalent이므로 동일한 부등식이 성립한다.
 
-일반적으로 이 식이 등식이 되기 위해서는 선형사상이 surjective여야 하지만, 이것이 항상 성립하는 것은 아니다. 이를 확인하기 위해 [명제 2](#prop2)의 증명에서 살펴본 short exact sequence
+일반적으로 이 식이 등식이 되기 위해서는 선형사상이 surjective여야 하지만, 이것이 항상 성립하는 것은 아니다. 이를 확인하기 위해 [명제 3](#prop3)의 증명에서 살펴본 short exact sequence
 
 $$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\overset{p}{\longrightarrow} \mathcal{O}_D\longrightarrow 0$$
 

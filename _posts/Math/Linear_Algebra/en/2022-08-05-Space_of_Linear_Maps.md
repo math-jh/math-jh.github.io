@@ -150,7 +150,7 @@ Thus we may make the following definition.
 
 <ins id="def4">**Definition 4**</ins> For two $$\mathbb{K}$$-vector spaces $$V,W$$, the $$\mathbb{K}$$-vector space obtained by equipping the set of linear maps from $$V$$ to $$W$$ with the operations from [Lemma 3](#lem3) is denoted $$\Hom_\mathbb{K}(V,W)$$, or simply $$\Hom(V,W)$$ when the field $$\mathbb{K}$$ is clear from context.
 
-In particular, when $$W=\mathbb{K}$$, we call $$\Hom(V,\mathbb{K})$$ the *dual space* of $$V$$ and denote it by $$V^\*$$. The elements of $$V^\ast$$ are called *linear functionals*.
+In particular, when $$W=\mathbb{K}$$, we call $$\Hom(V,\mathbb{K})$$ the *dual space* of $$V$$ and denote it by $$V^\ast$$. The elements of $$V^\ast$$ are called *linear functionals*.
 
 </div>
 

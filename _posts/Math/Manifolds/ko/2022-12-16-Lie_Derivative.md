@@ -64,7 +64,7 @@ $$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi
 
 <ins id="def3">**정의 3**</ins> Manifold $$M$$과 그 위에 정의된 벡터장 $$X$$를 고정하고, differential form $$\omega\in\Omega^\ast(M)$$이 주어졌다 하자. 그럼 $$\omega$$의 *Lie derivative* $$\mathcal{L}_X\omega$$는 다음의 식
 
-$$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg|_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
+$$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
 
 으로 정의된 differential form이다.
 
@@ -138,7 +138,7 @@ $$dF_p(X_p)=Y_{F(p)}$$
 
 ![F-related](/assets/images/Math/Manifolds/Lie_Derivative-1.png){:style="width:7.4em" class="invert" .align-center}
 
-[명제 2](#prop2)에서 $$X$$가 $$C^\infty$$임을 각각의 함수 $$f$$에 적용해보아 알 수 있듯, $$X$$와 $$Y$$가 $$F$$-related인지의 여부 또한 마찬가지로 각각의 함수에 적용하여 알아낼 수 있다.
+[§벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2)에서 $$X$$가 $$C^\infty$$임을 각각의 함수 $$f$$에 적용해보아 알 수 있듯, $$X$$와 $$Y$$가 $$F$$-related인지의 여부 또한 마찬가지로 각각의 함수에 적용하여 알아낼 수 있다.
 
 <div class="proposition" markdown="1">
 

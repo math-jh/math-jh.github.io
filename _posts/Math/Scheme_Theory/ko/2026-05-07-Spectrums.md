@@ -251,7 +251,7 @@ $$I(T)=\{f\in A\mid\text{$f\in \mathfrak{p}$ for all $\mathfrak{p}\in T$}\}=\big
 
 그럼 $$I(T)$$는 ideal들의 교집합이므로 ideal이다. 뿐만 아니라, 만일 $$T_1\subseteq T_2$$라면 $$I(T_2)\subseteq I(T_1)$$임이 자명하다. 
 
-이제 [정의 3](#def3)과 [정의 12](#def12)을 종합하면, 우리는 두 ordered set $$\mathcal{P}(A)$$, $$\mathcal{P}(\Spec A)$$ 사이의 두 함수 
+이제 [정의 3](#def3)과 [정의 13](#def13)을 종합하면, 우리는 두 ordered set $$\mathcal{P}(A)$$, $$\mathcal{P}(\Spec A)$$ 사이의 두 함수 
 
 $$Z: \mathcal{P}(A) \rightarrow \mathcal{P}(\Spec A);\quad S\mapsto Z(S),\qquad I: \mathcal{P}(\Spec A) \rightarrow \mathcal{P}(A);\quad T\mapsto I(T)$$
 
@@ -271,8 +271,8 @@ $$Z(I(Z(S)))=Z(S),\qquad I(Z(I(T)))=I(T)$$
 
 <ins id="prop14">**명제 14**</ins> Closure operator $$IZ: \mathcal{P}(A) \rightarrow \mathcal{P}(A)$$, $$ZI: \mathcal{P}(\Spec A) \rightarrow \mathcal{P}(\Spec A)$$에 대하여, 다음이 성립한다.
 
-1. $IZ(S)=\sqrt{(S)}$
-2. $ZI(T)=\cl(T)$
+1. $$IZ(S)=\sqrt{(S)}$$
+2. $$ZI(T)=\cl(T)$$
 
 </div>
 <details class="proof" markdown="1">
@@ -369,11 +369,11 @@ $$Z(S)=\{(x_1,\ldots, x_n)\mid \text{$f(x_1,\ldots, x_n)=0$ for all $f\in S$}\}$
 
 으로 정의하면 $$Z(S)$$는 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$ 위에 정의된 함수들의 모임 $$S$$의 공통근들으로 생각할 수 있으며, [보조정리 6](#lem6)과 비슷한 계산을 통해 $$Z(S)$$들을 닫힌집합으로 갖는 위상구조를 $$\mSpec A$$ 위에 정의할 수 있다. 
 
-한편, [정의 12](#def12)와 마찬가지로 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$의 부분집합 $$T$$에 대하여
+한편, [정의 13](#def13)와 마찬가지로 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$의 부분집합 $$T$$에 대하여
 
 $$I(T)=\{f\in A\mid \text{$f(x_1,\ldots, x_n)=0$ for all $x\in T$}\}$$
 
-라 하면, [정리 14](#thm14)에서 그러하듯이 $$I$$와 $$Z$$가 antitone Galois connection을 정의하는 것을 안다. $$\mSpec A$$에서의 [명제 13](#prop13)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)로부터 $$\mathbb{K}[\x_1,\ldots, \x_n]$$이 Jacobson이기 때문에 얻어진다. 
+라 하면, [정리 15](#thm15)에서 그러하듯이 $$I$$와 $$Z$$가 antitone Galois connection을 정의하는 것을 안다. $$\mSpec A$$에서의 [명제 14](#prop14)에 해당하는 명제는 [\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)로부터 $$\mathbb{K}[\x_1,\ldots, \x_n]$$이 Jacobson이기 때문에 얻어진다. 
 
 앞서 우리는 $$A$$의 원소들, 즉 다항식이 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$ 위의 함수처럼 행동한다는 것을 보았다. 더 일반적으로, principal open set $$D(g)$$ 위에서는 $$f/g$$ 또한 잘 정의되며, 대수기하학에서는 이러한 함수에 관심이 있다. 이러한 형태의 함수는 $$\mathbb{A}_{\mathbb{K},\text{classical}}^n$$ 전체에서는 잘 정의되지 않으며, 때문에 우리는 모든 점에서, 적당한 근방을 잡아 $$f/g$$의 꼴로 나타낼 수 있는 함수들에 대해 살펴볼 것이다. 
 

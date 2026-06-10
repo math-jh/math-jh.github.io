@@ -274,7 +274,7 @@ $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
 $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
-으로 작용하고, $$\mathfrak{h}$$는 abelian이므로 이 위에는 $$0$$으로 작용한다. 즉 $$\mathfrak{g}$$의 root decomposition을 생각하면 $$H$$는 $$\mathfrak{g}$$ 위의 모든 원소에 대하여 $$0$$으로 작용하고, 이로부터 $$H$$는 $$\mathfrak{g}$$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 4](#prop4)에 의하여 $$\mathfrak{g}$$는 nonzero abelian ideal을 가질 수 없고, 특히 $$Z(\mathfrak{g})=0$$이 성립해야 하므로 $$H=0$$이어야 한다. 
+으로 작용하고, $$\mathfrak{h}$$는 abelian이므로 이 위에는 $$0$$으로 작용한다. 즉 $$\mathfrak{g}$$의 root decomposition을 생각하면 $$H$$는 $$\mathfrak{g}$$ 위의 모든 원소에 대하여 $$0$$으로 작용하고, 이로부터 $$H$$는 $$\mathfrak{g}$$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 3](#prop3)에 의하여 $$\mathfrak{g}$$는 nonzero abelian ideal을 가질 수 없고, 특히 $$Z(\mathfrak{g})=0$$이 성립해야 하므로 $$H=0$$이어야 한다. 
 
 이로부터 $$\Phi$$는 $$\mathfrak{h}^\ast$$을 span하는 것을 안다. 그러나 $$\mathfrak{h}^\ast$$는 complex vector space이고, 이 위에 정의된 Killing form 또한 positive definite라는 보장이 없으므로 inner product가 아니다. 이를 해소하기 위해 우리는 $$\Phi$$의 dual element들의 real span을 생각하고 여기로 Killing form을 제한했을 때 positive-definite가 된다는 것을 보인다. 이를 위해서는 root decomposition에 대한 조금 더 자세한 분석이 필요하다. 
 

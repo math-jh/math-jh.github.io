@@ -117,7 +117,7 @@ $$a\in\ann(M)$$이라 하면, 임의의 $$x'\in M'$$에 대하여 $$u(ax')=au(x'
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> Noetherian local ring $$(A,\mathfrak{m})$$과 그 ideal $$\mathfrak{a}$$, 그리고 finitely generated $$A$$-module $$M$$에 대하여 다음이 성립한다.
+<ins id="prop6">**명제 6**</ins> Noetherian local ring $$(A,\mathfrak{m})$$과 그 ideal $$\mathfrak{a}$$, 그리고 finitely generated $$A$$-module $$M$$에 대하여 다음이 성립한다.
 
 1. 다음이 모두 동치이다.
   - $$\mathfrak{a}$$가 $$M$$의 parameter ideal이다. 
@@ -134,7 +134,7 @@ $$a\in\ann(M)$$이라 하면, 임의의 $$x'\in M'$$에 대하여 $$u(ax')=au(x'
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. 우선 $$\mathfrak{a}$$가 $$M$$의 parameter ideal이라 가정하자. 그럼 [명제--정의 2](#prop-def2) 직후에 살펴본 논증에 의하여 $$\mathfrak{m}$$의 충분히 큰 거듭제곱이 항상 $$M/\mathfrak{a}M$$을 annihilate하는 것을 알고, 이와 [보조정리 3](#lem3)을 종합하면
+1. 우선 $$\mathfrak{a}$$가 $$M$$의 parameter ideal이라 가정하자. 그럼 [명제--정의 3](#prop-def3) 직후에 살펴본 논증에 의하여 $$\mathfrak{m}$$의 충분히 큰 거듭제곱이 항상 $$M/\mathfrak{a}M$$을 annihilate하는 것을 알고, 이와 [보조정리 4](#lem4)을 종합하면
     
     $$\mathfrak{m}\subseteq \sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 
@@ -145,7 +145,7 @@ $$a\in\ann(M)$$이라 하면, 임의의 $$x'\in M'$$에 대하여 $$u(ax')=au(x'
     $$\mathfrak{m}\subseteq \sqrt{\mathfrak{a}+\ann(M)}=\sqrt{\ann(M/\mathfrak{a}M)}$$
 
     로부터 자명하다. 
-2. $$\mathfrak{a}$$가 $$M$$의 parameter ideal이라 하자. 그럼 [보조정리 4](#lem4)에 의하여 $$\ann(M)\subseteq \ann(M')\cap \ann(M'')$$이므로 $$\mathfrak{a}$$가 이들의 parameter ideal인 것이 자명하다. 거꾸로 $$A/\mathfrak{a}\otimes-$$를 취해 얻어지는 다음의 exact sequence
+2. $$\mathfrak{a}$$가 $$M$$의 parameter ideal이라 하자. 그럼 [보조정리 5](#lem5)에 의하여 $$\ann(M)\subseteq \ann(M')\cap \ann(M'')$$이므로 $$\mathfrak{a}$$가 이들의 parameter ideal인 것이 자명하다. 거꾸로 $$A/\mathfrak{a}\otimes-$$를 취해 얻어지는 다음의 exact sequence
     
     $$M'/\mathfrak{a}M' \rightarrow M/ \mathfrak{a}M \rightarrow M''/\mathfrak{a}M'' \rightarrow 0$$
 
@@ -156,7 +156,7 @@ $$a\in\ann(M)$$이라 하면, 임의의 $$x'\in M'$$에 대하여 $$u(ax')=au(x'
 
 <div class="proposition" markdown="1">
 
-<ins id="cor6">**따름정리 6**</ins> Noetherian local ring $$(A, \mathfrak{m})$$과 finitely generated $$A$$-module $$M$$이 주어졌다 하자. 그럼 임의의 $$a\in \mathfrak{m}$$에 대하여,
+<ins id="cor7">**따름정리 7**</ins> Noetherian local ring $$(A, \mathfrak{m})$$과 finitely generated $$A$$-module $$M$$이 주어졌다 하자. 그럼 임의의 $$a\in \mathfrak{m}$$에 대하여,
 
 $$\dim M/ aM \geq \dim M-1$$
 

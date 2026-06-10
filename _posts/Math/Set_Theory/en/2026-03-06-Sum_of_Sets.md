@@ -32,7 +32,7 @@ Let a covering $$(A_i)_{i\in I}$$ of a set $$A$$ be given. Then for any function
 1. Suppose functions $$f,g:A\rightarrow B$$ satisfy $$f\vert_{A_i}=g\vert_{A_i}$$ for every $$i\in I$$. Then $$f=g$$. 
 2. If a family of functions $$(f_i:A_i\rightarrow B)_{i\in I}$$ satisfies the condition
     
-    $$f_i|_{A_i\cap A_j}=f_j|_{A_i\cap A_j}$$
+    $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}$$
 
     then there exists a function $$f:A\rightarrow B$$ extending all the $$f_i$$.
 
@@ -43,7 +43,7 @@ Let a covering $$(A_i)_{i\in I}$$ of a set $$A$$ be given. Then for any function
 
 To prove the first claim, let an arbitrary $$x\in A$$ be given. Since $$(A_i)_{i\in I}$$ covers $$A$$, there exists some $$i\in I$$ such that $$x\in A_i$$. Now
 
-$$f(x)=(f|_{A_i})(x)=(g|_{A_i})(x)=g(x)$$
+$$f(x)=(f\vert_{A_i})(x)=(g\vert_{A_i})(x)=g(x)$$
 
 and thus the first claim holds.
 
@@ -51,7 +51,7 @@ For the second claim, use the given functions $$f_i=(F_i,A_i,B)$$ to form $$F=\b
 
 Suppose $$y,y'\in B$$ satisfy $$(x,y)\in F$$ and $$(x,y')\in F$$. Then there exist $$i,j$$ such that $$(x,y)\in F_i$$ and $$(x,y')\in F_j$$. Now 
 
-$$y=(f_i)(x)=(f_i|_{A_i\cap A_j})(x)=(f_j|_{A_i\cap A_j})(x)=(f_j)(x)=y'$$
+$$y=(f_i)(x)=(f_i\vert_{A_i\cap A_j})(x)=(f_j\vert_{A_i\cap A_j})(x)=(f_j)(x)=y'$$
 
 and thus the second claim also holds.
 

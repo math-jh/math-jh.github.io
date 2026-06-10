@@ -23,7 +23,7 @@ In the previous post we studied differentials in depth; now we examine some exam
 
 <ins id="def1">**Definition 1**</ins> For a manifold $$M$$, we call a $$C^\infty$$ function $$\gamma:(a,b)\rightarrow M$$ a $$C^\infty$$ curve on $$M$$, and for any $$t\in (a,b)$$ we call
 
-$$d\gamma_t\left(\frac{d}{dr}\bigg|_t\right)$$
+$$d\gamma_t\left(\frac{d}{dr}\bigg\vert_t\right)$$
 
 the *velocity vector* of this curve at the point $$\gamma(t)$$, denoting it by $$\gamma'(t)$$.
 
@@ -31,7 +31,7 @@ the *velocity vector* of this curve at the point $$\gamma(t)$$, denoting it by $
 
 As an element of $$T_{\gamma(t)}M$$, the vector $$\gamma'(t)$$ acts on each element $$f$$ of $$\mathcal{C}^\infty_{M,\gamma(t)}$$; expanding the definition of the differential yields
 
-$$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg|_t\right)f=\frac{d}{dr}\bigg|_t (f\circ\gamma)=\frac{d(f\circ \gamma)}{dr}(t)=(f\circ\gamma)'(t).$$
+$$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg\vert_t\right)f=\frac{d}{dr}\bigg\vert_t (f\circ\gamma)=\frac{d(f\circ \gamma)}{dr}(t)=(f\circ\gamma)'(t).$$
 
 In fact, when defining $$T_pM$$ we may just as well regard it as the collection of $$C^\infty$$ curves passing through the point $$p$$[^1]. We prove the following proposition, which is part of this claim and will be used frequently.
 
@@ -45,7 +45,7 @@ In fact, when defining $$T_pM$$ we may just as well regard it as the collection 
 
 It suffices to find a coordinate system $$(U,\varphi)$$ centered at $$p$$ satisfying
 
-$$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg|_0\right).$$
+$$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right).$$
 
 Then $$v$$ is the velocity vector at $$t=0$$ of the $$C^\infty$$ curve
 
@@ -57,11 +57,11 @@ Finding such a coordinate system is straightforward: choose an arbitrary coordin
 
 In the special case $$M=\mathbb{R}^m$$, a basis of $$T_{\gamma(t)}M$$ is given by
 
-$$\frac{\partial}{\partial r^1}\bigg|_{\gamma(t)},\cdots,\frac{\partial}{\partial r^m}\bigg|_{\gamma(t)},$$
+$$\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)},\cdots,\frac{\partial}{\partial r^m}\bigg\vert_{\gamma(t)},$$
 
 so
 
-$$\gamma'(t)=\sum_{i=1}^m\frac{d(r^i\circ \gamma)}{dr}(t)\frac{\partial}{\partial r^i}\bigg|_{\gamma(t)}=\frac{d\gamma^1}{dr}\frac{\partial}{\partial r^1}\bigg|_{\gamma(t)}+\cdots+\frac{d\gamma^m}{dr}\frac{\partial}{\partial r^m}\bigg|_{\gamma(t)},$$
+$$\gamma'(t)=\sum_{i=1}^m\frac{d(r^i\circ \gamma)}{dr}(t)\frac{\partial}{\partial r^i}\bigg\vert_{\gamma(t)}=\frac{d\gamma^1}{dr}\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)}+\cdots+\frac{d\gamma^m}{dr}\frac{\partial}{\partial r^m}\bigg\vert_{\gamma(t)},$$
 
 and since in Euclidean space these $$\partial/\partial r^i$$ coincide with the $$i$$th standard basis vectors, we may identify this with
 
@@ -79,7 +79,7 @@ $$d(F\circ\gamma)_t=dF_{\gamma(t)}\circ d\gamma_t,$$
 
 and therefore
 
-$$d(F\circ\gamma)_t\left(\frac{d}{dr}\bigg|_t\right)=(dF_{\gamma(t)}\circ d\gamma_t)\left(\frac{d}{dr}\bigg|_t\right)=dF_{\gamma(t)}(\gamma'(t)).$$
+$$d(F\circ\gamma)_t\left(\frac{d}{dr}\bigg\vert_t\right)=(dF_{\gamma(t)}\circ d\gamma_t)\left(\frac{d}{dr}\bigg\vert_t\right)=dF_{\gamma(t)}(\gamma'(t)).$$
 
 Since the left-hand side is the velocity vector at time $$t$$ of the $$C^\infty$$ curve $$F\circ\gamma$$ in $$N$$, the above equation can be written as
 
@@ -101,11 +101,11 @@ In [§Examples of Differentiable Manifolds, ⁋Example 2](/en/math/manifolds/exa
 
 This can be seen from the fact that in Euclidean space, the standard basis vectors of $$\mathbb{R}^m$$ and the bases
 
-$$\frac{\partial}{\partial r^1}\bigg|_x,\cdots,\frac{\partial}{\partial r^m}\bigg|_x$$
+$$\frac{\partial}{\partial r^1}\bigg\vert_x,\cdots,\frac{\partial}{\partial r^m}\bigg\vert_x$$
 
 of $$T_x\mathbb{R}^m$$ are essentially the same. In fact, this isomorphism does not depend on the choice of basis: for any $$v\in\mathbb{R}^m$$, the correspondence with the directional derivative
 
-$$D_v|_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
+$$D_v\vert_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 gives this isomorphism.
 
@@ -121,18 +121,18 @@ gives this isomorphism.
 
 For the first part, we use the directional derivative formula shown above,
 
-$$(D_v|_x)f=\lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}.$$
+$$(D_v\vert_x)f=\lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}.$$
 
 Under the correspondence $$v\mapsto D_v\vert_x$$, the vector $$v+w$$ is sent to
 
-$$\begin{aligned}(D_{v+w}|_x)f&=\lim_{t\rightarrow 0}\frac{f(x+t(v+w))-f(x)}{t}\\
+$$\begin{aligned}(D_{v+w}\vert_x)f&=\lim_{t\rightarrow 0}\frac{f(x+t(v+w))-f(x)}{t}\\
 &=\lim_{t\rightarrow 0}\left(\frac{f((x+tw)+tv)-f(x+tw)}{t}+\frac{f(x+tv)-f(x)}{t}\right)\\
-&=(D_v|_x)f+(D_w|_x)f,
+&=(D_v\vert_x)f+(D_w\vert_x)f,
 \end{aligned}$$
 
 and similarly $$\alpha v$$ yields
 
-$$(D_{\alpha v}|_x)f=\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{t}=\alpha\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{\alpha t}=\alpha(D_v|_x)f.$$
+$$(D_{\alpha v}\vert_x)f=\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{t}=\alpha\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{\alpha t}=\alpha(D_v\vert_x)f.$$
 
 Thus $$v\mapsto D_v\vert_x$$ is linear.
 
@@ -140,15 +140,15 @@ Injectivity follows by substituting $$x^1,\ldots, x^m$$ for $$f$$, and since the
 
 For the second part, following $$V\rightarrow W\rightarrow T_{L(x)}W$$, any $$v\in V$$ is sent to
 
-$$v\mapsto L(v)\mapsto D_{L(v)}|_{L(x)}.$$
+$$v\mapsto L(v)\mapsto D_{L(v)}\vert_{L(x)}.$$
 
 On the other hand, following $$V\rightarrow T_xV\rightarrow T_{L(x)}W$$, we first obtain
 
-$$v\mapsto D_v|_x$$
+$$v\mapsto D_v\vert_x$$
 
 via $$V\rightarrow T_xV$$, and then using $$\gamma(t)=x+tv$$ and [Proposition 3](#prop3) we get
 
-$$dL_x(D_v|_x)=(L\circ \gamma)'(0).$$
+$$dL_x(D_v\vert_x)=(L\circ \gamma)'(0).$$
 
 But
 
@@ -156,7 +156,7 @@ $$(L\circ\gamma)(t)=L(x+tv)=L(x)+tL(v),$$
 
 so for any $$f$$, $$(L\circ\gamma)'(0)$$ satisfies
 
-$$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L(v)}|_{L(x)})f.$$
+$$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L(v)}\vert_{L(x)})f.$$
 
 Therefore the given diagram commutes.
 
@@ -194,11 +194,11 @@ Meanwhile, $$T_p^\ast M$$ is the dual space of the vector space $$T_pM$$, and si
 
 Let $$(U,\varphi)$$ be a coordinate system containing the point $$p$$, and write $$\varphi=(x^i)_{i=1}^m$$. Then the following $$m$$ tangent vectors
 
-$$\frac{\partial}{\partial x^1}\bigg|_p,\cdots\frac{\partial}{\partial x^m}\bigg|_p$$
+$$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots\frac{\partial}{\partial x^m}\bigg\vert_p$$
 
 form a basis of $$T_pM$$. Let us temporarily denote their dual basis by $$\xi^i \vert_p$$. That is, $$\xi^i \vert_p$$ is a linear map from $$T_pM$$ to $$\mathbb{R}$$, uniquely defined by the formula
 
-$$(\xi^i |_p)\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\delta_{ij}\tag{1}$$
+$$(\xi^i \vert_p)\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\delta_{ij}\tag{1}$$
 
 where $$\delta_{ij}$$ denotes the Kronecker delta.
 
@@ -212,7 +212,7 @@ where $$\delta_{ij}$$ denotes the Kronecker delta.
 
 It suffices to show that the $$dx^i$$ satisfy equation (1). By definition,
 
-$$dx^i|_p\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\frac{\partial}{\partial x^j}\bigg|_p x^i=\delta_{ij}.$$
+$$dx^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}.$$
 
 </details>
 

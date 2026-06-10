@@ -197,7 +197,7 @@ $$\cl: \CH_k(X) \to H^{\text{BM}}_{2k}(X, \mathbb{Z})$$
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**예시 14 ($\mathbb{P}^n$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
+<ins id="ex14">**예시 14 ($$\mathbb{P}^n$$)**</ins> $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 
 여기서 $$H$$는 hyperplane class이다. $$H^k$$는 $$k$$-codimensional linear subspace를 나타낸다.
 

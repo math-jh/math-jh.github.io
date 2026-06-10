@@ -101,7 +101,7 @@ Then we must prove the existence of a splitting extension.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-When dealing with algebraic extensions, only the roots of the polynomials matter anyway, so we may assume that the given polynomials $$f_i$$ are all monic. Suppose each $$f_i$$ is a monic polynomial of degree $$d_i$$. Then by [\[Multilinear Algebra\] §Symmetric Tensors, ⁋Proposition 13](/en/math/multilinear_algebra/symmetric_tensors#prop13), for each $$i$$ we can choose a $$\mathbb{K}$$-algebra $$A_i$$ and elements $$\xi_{i,1},\ldots, \xi_{i, d_i}\in A_i$$ satisfying the following two conditions:
+When dealing with algebraic extensions, only the roots of the polynomials matter anyway, so we may assume that the given polynomials $$f_i$$ are all monic. Suppose each $$f_i$$ is a monic polynomial of degree $$d_i$$. Then by [\[Multilinear Algebra\] §Symmetric Tensors, ⁋Proposition 14](/en/math/multilinear_algebra/symmetric_tensors#prop14), for each $$i$$ we can choose a $$\mathbb{K}$$-algebra $$A_i$$ and elements $$\xi_{i,1},\ldots, \xi_{i, d_i}\in A_i$$ satisfying the following two conditions:
 
 1. $$A_i$$ is generated as a $$\mathbb{K}$$-algebra by $$\xi_{i,1},\ldots, \xi_{i, d_i}$$. 
 2. In $$A_i[\x]$$, the equality $$f_i(\x)=\prod_{k=1}^{d_i} (\x-\xi_{i,k})$$ holds. 

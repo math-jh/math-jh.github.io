@@ -266,8 +266,8 @@ Now consider the two closure operators $$IZ: \mathcal{P}(A) \rightarrow \mathcal
 
 <ins id="prop14">**Proposition 14**</ins> For the closure operators $$IZ: \mathcal{P}(A) \rightarrow \mathcal{P}(A)$$ and $$ZI: \mathcal{P}(\Spec A) \rightarrow \mathcal{P}(\Spec A)$$, the following hold.
 
-1. $IZ(S)=\sqrt{(S)}$
-2. $ZI(T)=\cl(T)$
+1. $$IZ(S)=\sqrt{(S)}$$
+2. $$ZI(T)=\cl(T)$$
 
 </div>
 <details class="proof" markdown="1">

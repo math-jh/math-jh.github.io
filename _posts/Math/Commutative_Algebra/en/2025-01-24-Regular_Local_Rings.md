@@ -37,7 +37,7 @@ $$d+1=\dim A=\codim \mathfrak{m}=\codim \mathfrak{p}_i=0$$
 
 a contradiction. Hence there must exist some $$a\in \mathfrak{m}$$ such that $$a\not\in \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$$.
 
-Now set $$A'=A/(a)$$ and consider the maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$ of $$A'$$. By the choice of $$a$$, none of the prime ideals of $$A'$$ corresponds to any $$\mathfrak{p}_i$$, so we must have $$\dim A'<\dim A$$; combining this with [§System of Parameters, ⁋Corollary 6](/en/math/commutative_algebra/system_of_parameters#cor6) we see that $$\dim A'=d-1$$. Thus from the identity
+Now set $$A'=A/(a)$$ and consider the maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$ of $$A'$$. By the choice of $$a$$, none of the prime ideals of $$A'$$ corresponds to any $$\mathfrak{p}_i$$, so we must have $$\dim A'<\dim A$$; combining this with [§System of Parameters, ⁋Corollary 7](/en/math/commutative_algebra/system_of_parameters#cor7) we see that $$\dim A'=d-1$$. Thus from the identity
 
 $$\mathfrak{m}'/(\mathfrak{m}')^2=\mathfrak{m}/(\mathfrak{m}^2+(a))$$
 
@@ -79,9 +79,9 @@ holds.
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-By [[Commutative Algebra] §Dimension, ⁋Theorem 5](/en/math/commutative_algebra/Krull_dimension#thm5) we generally have $$\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$$. Thus it suffices to prove the reverse inequality.
+As seen in [§Dimension](/en/math/commutative_algebra/Krull_dimension), we generally have $$\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$$. Thus it suffices to prove the reverse inequality.
 
-Set $$d = \dim A$$ and $$h = \codim \mathfrak{p}$$. Choose a regular system of parameters $$x_1, \ldots, x_d$$ of the regular local ring $$(A, \mathfrak{m})$$. By [[Commutative Algebra] §Systems of Parameters, ⁋Proposition 9](/en/math/commutative_algebra/system_of_parameters#prop9), for suitable indices $$1 \le i_1 < \cdots < i_h \le d$$ the ideal $$\mathfrak{p}$$ is a minimal prime ideal over $$(x_{i_1}, \ldots, x_{i_h})$$. By [Corollary 3](#cor3), the elements $$x_{i_1}, \ldots, x_{i_h}$$ form an $$A$$-sequence, so by [§System of Parameters, ⁋Corollary 6](/en/math/commutative_algebra/system_of_parameters#cor6) we have $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$.
+Set $$d = \dim A$$ and $$h = \codim \mathfrak{p}$$. Choose a regular system of parameters $$x_1, \ldots, x_d$$ of the regular local ring $$(A, \mathfrak{m})$$. By [[Commutative Algebra] §Systems of Parameters, ⁋Proposition 9](/en/math/commutative_algebra/system_of_parameters#prop9), for suitable indices $$1 \le i_1 < \cdots < i_h \le d$$ the ideal $$\mathfrak{p}$$ is a minimal prime ideal over $$(x_{i_1}, \ldots, x_{i_h})$$. By [Corollary 3](#cor3), the elements $$x_{i_1}, \ldots, x_{i_h}$$ form an $$A$$-sequence, so by [§System of Parameters, ⁋Corollary 7](/en/math/commutative_algebra/system_of_parameters#cor7) we have $$\dim A/(x_{i_1}, \ldots, x_{i_h}) = d - h$$.
 
 On the other hand, in $$A/(x_{i_1}, \ldots, x_{i_h})$$ the ideal $$\overline{\mathfrak{p}} = \mathfrak{p}/(x_{i_1}, \ldots, x_{i_h})$$ is a minimal prime ideal, and by [Corollary 1](#cor1) the quotient $$A/(x_{i_1}, \ldots, x_{i_h})$$ is an integral domain, so $$\overline{\mathfrak{p}} = 0$$. Hence $$\mathfrak{p} = (x_{i_1}, \ldots, x_{i_h})$$ and $$A/\mathfrak{p} = A/(x_{i_1}, \ldots, x_{i_h})$$. Therefore
 
@@ -141,7 +141,7 @@ $$\nu:\Frac(A)^\times \rightarrow \mathbb{Z};\qquad am^k\mapsto k$$
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> Let $$A$$ be an integral domain and $$G$$ a totally ordered abelian group. A group homomorphism $$\nu:\Frac(A)^\times \rightarrow G$$ satisfying the inequality
+<ins id="def7">**Definition 7**</ins> Let $$A$$ be an integral domain and $$G$$ a totally ordered abelian group. A group homomorphism $$\nu:\Frac(A)^\times \rightarrow G$$ satisfying the inequality
 
 $$\nu(x+y)\geq \min(\nu(x), \nu(y))$$
 
@@ -167,7 +167,7 @@ For convenience, we shall say that an associated prime ideal $$\mathfrak{p}$$ of
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 7**</ins> Let $$A$$ be a reduced Noetherian ring and let $$K$$ be its total ring of fractions. Then an element $$x\in K$$ lies in $$A$$ if and only if for every prime ideal $$\mathfrak{p}$$ associated to a non-zerodivisor, the image of $$x$$ in $$K_\mathfrak{p}$$ lies in $$A_\mathfrak{p}$$.
+<ins id="prop8">**Proposition 8**</ins> Let $$A$$ be a reduced Noetherian ring and let $$K$$ be its total ring of fractions. Then an element $$x\in K$$ lies in $$A$$ if and only if for every prime ideal $$\mathfrak{p}$$ associated to a non-zerodivisor, the image of $$x$$ in $$K_\mathfrak{p}$$ lies in $$A_\mathfrak{p}$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -189,7 +189,7 @@ From this we can prove the following.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**Theorem 8**</ins> A Noetherian integral domain $$A$$ is a normal domain if and only if the following condition holds.
+<ins id="thm9">**Theorem 9**</ins> A Noetherian integral domain $$A$$ is a normal domain if and only if the following condition holds.
 
 ($$\ast$$) For every prime ideal $$\mathfrak{p}$$ associated to a principal ideal, the ideal $$\mathfrak{p}A_\mathfrak{p}$$ is principal in $$A_\mathfrak{p}$$.
 
@@ -201,7 +201,7 @@ First assume ($$\ast$$) and show that $$A$$ is a normal domain. Now if normal do
 
 $$A=\bigcap_\text{\scriptsize$\mathfrak{p}$ associated to a principal ideal}A_\mathfrak{p}$$
 
-, where $$A_\mathfrak{p}$$ is regarded as a subset of the quotient field $$K$$ of $$A$$. The claim we wish to prove was treated in a more general case in [Proposition 7](#prop7).
+, where $$A_\mathfrak{p}$$ is regarded as a subset of the quotient field $$K$$ of $$A$$. The claim we wish to prove was treated in a more general case in [Proposition 8](#prop8).
 
 Conversely, assume that $$A$$ is a normal domain and let $$\mathfrak{p}$$ be an associated prime of a principal ideal $$\mathfrak{a}=(a)$$. That is,
 
@@ -221,7 +221,7 @@ This theorem admits a further generalization. First we make the following defini
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**Definition 9**</ins> Fix a ring $$A$$ and its total ring of fractions $$K$$.
+<ins id="def10">**Definition 10**</ins> Fix a ring $$A$$ and its total ring of fractions $$K$$.
 
 1. A ring $$A$$ is called a *normal ring* if it is reduced and integrally closed in $$K$$.
 2. The *normalization* of a reduced ring $$A$$ is defined to be the integral closure of $$A$$ in $$K$$.
@@ -232,7 +232,7 @@ Then the following holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm10">**Theorem 10 (Serre)**</ins> A Noetherian ring $$A$$ is a (finite) direct product of normal domains if and only if the following two conditions both hold.
+<ins id="thm11">**Theorem 11 (Serre)**</ins> A Noetherian ring $$A$$ is a (finite) direct product of normal domains if and only if the following two conditions both hold.
 
 (R1) The localization of $$A$$ at any codimension $$1$$ prime is a DVR, and the localization at any codimension $$0$$ prime is a field.  
 (S2) Every associated prime of a principal ideal generated by a non-zerodivisor has codimension $$1$$. Moreover, every associated prime of $$0$$ has codimension $$0$$.
@@ -255,13 +255,13 @@ $$a=(a_1,\ldots, a_n),\qquad\text{$a_i$ a non-zerodivisor of $A_i$}$$
 
 of $$A$$ is the same as taking $$\mathfrak{p}_k$$ to be an associated prime of $$a_k$$.
 
-Let us now prove the claim. First, if each $$A_i$$ is normal, then condition (S2) follows from [Theorem 8](#thm8), and condition (R1) holds because localizing $$A$$ at a codimension $$c$$ prime ideal $$\mathfrak{p}$$ can be viewed, via the above description of $$\mathfrak{p}$$, as localizing $$A_k$$ at a codimension $$c$$ prime $$\mathfrak{p}_k$$.
+Let us now prove the claim. First, if each $$A_i$$ is normal, then condition (S2) follows from [Theorem 9](#thm9), and condition (R1) holds because localizing $$A$$ at a codimension $$c$$ prime ideal $$\mathfrak{p}$$ can be viewed, via the above description of $$\mathfrak{p}$$, as localizing $$A_k$$ at a codimension $$c$$ prime $$\mathfrak{p}_k$$.
 
 Conversely, assume that (R1) and (S2) hold. Then first of all $$R$$ is a reduced ring. If
 
 $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 
-is a minimal primary decomposition of $$0$$, then the primes $$\mathfrak{p}_i$$ appearing here are all codimension $$0$$ ideals by condition (S2), and by (R1) the localization at each is a field. Hence we can apply [Proposition 7](#prop7), and applying [§The Jordan-Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5) yields the desired result.
+is a minimal primary decomposition of $$0$$, then the primes $$\mathfrak{p}_i$$ appearing here are all codimension $$0$$ ideals by condition (S2), and by (R1) the localization at each is a field. Hence we can apply [Proposition 8](#prop8), and applying [§The Jordan-Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5) yields the desired result.
 
 </details>
 

@@ -24,7 +24,7 @@ $$Z(f)= \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f(x_1, \ldots, x_n) = 0\},\qq
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Field $$\mathbb{K}$$ 위에 정의된 *affine $n$-space<sub>$n$차원 아핀공간</sub>* $$\mathbb{A}^n_\mathbb{K}$$는 $$n$$차원 벡터공간 $$\mathbb{K}^n$$을 의미한다.
+<ins id="def1">**정의 1**</ins> Field $$\mathbb{K}$$ 위에 정의된 *affine $$n$$-space<sub>$n$차원 아핀공간</sub>* $$\mathbb{A}^n_\mathbb{K}$$는 $$n$$차원 벡터공간 $$\mathbb{K}^n$$을 의미한다.
 
 </div>
 
@@ -32,7 +32,7 @@ $$Z(f)= \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f(x_1, \ldots, x_n) = 0\},\qq
 
 $$\mathbb{A}^n=\{(x_1,\ldots, x_n)\mid x_i\in \mathbb{K}\}$$
 
-의 원소를 *점<sub>point</sub>*이라 부르고, 각각의 좌표 $$x_i$$를 *$i$번째 좌표*라 부른다. 위에서 언급했듯, 우리가 살펴볼 기하적인 대상들은 다항식 $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$의 zero set $$Z(f)$$로 나타나는 대상들이다.
+의 원소를 *점<sub>point</sub>*이라 부르고, 각각의 좌표 $$x_i$$를 *$$i$$번째 좌표*라 부른다. 위에서 언급했듯, 우리가 살펴볼 기하적인 대상들은 다항식 $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$의 zero set $$Z(f)$$로 나타나는 대상들이다.
 
 <div class="definition" markdown="1">
 
@@ -249,7 +249,7 @@ $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
 ## 좌표환과 정칙성
 
-우리는 양방향의 대응 $$Z$$, $$I$$가 담고 있는 철학을 더 확장시킬 수 있다. 구체적으로, $$\mathbb{A}^n$$의 기하학은 그 정의에 의해 $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 원소들이 담고 있다. 역으로, $$\mathbb{A}^n$$의 임의의 점 $$x=(x_1,\ldots, x_n)$$를 받아 $i$번째 좌표를 내놓는 함수를 $$\x_i: x\mapsto x_i$$으로 생각할 수 있으며, 이러한 관점에서 $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 모든 원소들을 $$\mathbb{A}^n$$ 위에 정의된 (다항식) 함수로 볼 수 있다. 
+우리는 양방향의 대응 $$Z$$, $$I$$가 담고 있는 철학을 더 확장시킬 수 있다. 구체적으로, $$\mathbb{A}^n$$의 기하학은 그 정의에 의해 $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 원소들이 담고 있다. 역으로, $$\mathbb{A}^n$$의 임의의 점 $$x=(x_1,\ldots, x_n)$$를 받아 $$i$$번째 좌표를 내놓는 함수를 $$\x_i: x\mapsto x_i$$으로 생각할 수 있으며, 이러한 관점에서 $$\mathbb{K}[\x_1,\ldots, \x_n]$$의 모든 원소들을 $$\mathbb{A}^n$$ 위에 정의된 (다항식) 함수로 볼 수 있다. 
 
 더 일반적으로 다음을 정의한다.
 

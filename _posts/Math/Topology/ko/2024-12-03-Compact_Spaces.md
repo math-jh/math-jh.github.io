@@ -46,7 +46,7 @@ weight: 14
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**보조정리 3**</ins> Compact space의 닫힌집합은 compact이다.
+<ins id="lem3">**보조정리 3**</ins> Compact space의 닫힌집합은 compact이다.
 
 </div>
 <details class="proof" markdown="1">

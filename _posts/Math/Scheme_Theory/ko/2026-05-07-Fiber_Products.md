@@ -42,7 +42,7 @@ weight: 11
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**보조정리 2**</ins> Affine scheme들 사이의 morphism $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow\Spec C$$가 주어졌다 하자. 그럼
+<ins id="lem2">**보조정리 2**</ins> Affine scheme들 사이의 morphism $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow\Spec C$$가 주어졌다 하자. 그럼
 
 $$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B)$$
 

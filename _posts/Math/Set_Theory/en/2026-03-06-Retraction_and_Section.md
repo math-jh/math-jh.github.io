@@ -18,7 +18,7 @@ translated_at: 2026-06-02T12:00:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-02T12:00:01+00:00
 ---
-The end of the previous post enables us to give new characterizations of injective and surjective functions. ([§Operations on Functions, ⁋Remark](/en/math/set_theory/operation_of_functions#rmk1))
+The end of the previous post enables us to give new characterizations of injective and surjective functions. ([§Operations on Functions, ⁋Remark 6](/en/math/set_theory/operation_of_functions#rmk6))
 
 <div class="proposition" markdown="1">
 
@@ -65,11 +65,11 @@ For a function $$f:A \rightarrow B$$ and subsets $$X\subseteq A$$, $$Y\subseteq 
 
 $$X\subseteq f^{-1}(f(X)),\qquad f(f^{-1}(Y))\subseteq Y$$
 
-always hold, and the proofs are immediate. If $$f$$ is injective, then for $$r$$ defined as in [§Operations on Functions, ⁋Remark](/en/math/set_theory/operation_of_functions#rmk1),
+always hold, and the proofs are immediate. If $$f$$ is injective, then for $$r$$ defined as in [§Operations on Functions, ⁋Remark 6](/en/math/set_theory/operation_of_functions#rmk6),
 
 $$f^{-1}(f(X))=r(f(X))=\id_A(X)=X$$
 
-If $$f$$ is surjective, then for $$s$$ defined as in [§Operations on Functions, ⁋Remark](/en/math/set_theory/operation_of_functions#rmk1),
+If $$f$$ is surjective, then for $$s$$ defined as in [§Operations on Functions, ⁋Remark 6](/en/math/set_theory/operation_of_functions#rmk6),
 
 $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 

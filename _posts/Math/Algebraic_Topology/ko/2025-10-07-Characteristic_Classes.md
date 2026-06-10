@@ -264,7 +264,7 @@ $$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr_k(\mathbb{R}^n)$$
 
 $$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}$$
 
-에 대해 살펴볼 것이다. 우리의 기하학적 직관을 활용하기 위해 [§푸앵카레 쌍대성, ⁋예시 15](/ko/math/algebraic_topology/Poincare_duality#ex15)에서와 같이 이를 Schubert cycle들의 intersection으로 생각하자. 우리는 이를 위해 $$\sigma_{(1,0)}$$에 해당하는 homology class 중, general position에 있는 두 부분공간을 생각해야 하며 이는 flag의 선택을 바꾸어줌으로서 가능하다. 
+에 대해 살펴볼 것이다. 우리의 기하학적 직관을 활용하기 위해 [§푸앵카레 쌍대성, ⁋예시 16](/ko/math/algebraic_topology/Poincare_duality#ex16)에서와 같이 이를 Schubert cycle들의 intersection으로 생각하자. 우리는 이를 위해 $$\sigma_{(1,0)}$$에 해당하는 homology class 중, general position에 있는 두 부분공간을 생각해야 하며 이는 flag의 선택을 바꾸어줌으로서 가능하다. 
 
 고정된 flag $$F_\bullet$$에 대해, partition $$\lambda=(1,0)$$이 나타내는 조건이 무엇인지를 명시적으로 나타내면 이는 다음의 조건
 

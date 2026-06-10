@@ -268,7 +268,7 @@ Then $$\Phi\subseteq \mathfrak{h}^\ast$$ is a spanning set of $$\mathfrak{h}^\as
 
 $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
-and since $$\mathfrak{h}$$ is abelian it acts by $$0$$ on itself. That is, considering the root decomposition of $$\mathfrak{g}$$, $$H$$ acts by $$0$$ on every element of $$\mathfrak{g}$$, and from this we know that $$H$$ commutes with every element of $$\mathfrak{g}$$ under the Lie bracket. But by [Proposition 4](#prop4), $$\mathfrak{g}$$ cannot have a nonzero abelian ideal, and in particular $$Z(\mathfrak{g})=0$$ must hold, so $$H=0$$.
+and since $$\mathfrak{h}$$ is abelian it acts by $$0$$ on itself. That is, considering the root decomposition of $$\mathfrak{g}$$, $$H$$ acts by $$0$$ on every element of $$\mathfrak{g}$$, and from this we know that $$H$$ commutes with every element of $$\mathfrak{g}$$ under the Lie bracket. But by [Proposition 3](#prop3), $$\mathfrak{g}$$ cannot have a nonzero abelian ideal, and in particular $$Z(\mathfrak{g})=0$$ must hold, so $$H=0$$.
 
 From this we know that $$\Phi$$ spans $$\mathfrak{h}^\ast$$. However, $$\mathfrak{h}^\ast$$ is a complex vector space, and the Killing form defined on it is not guaranteed to be positive definite, so it is not an inner product. To remedy this, we consider the real span of the dual elements of $$\Phi$$ and show that the restriction of the Killing form to it becomes positive-definite. This requires a somewhat more detailed analysis of the root decomposition.
 

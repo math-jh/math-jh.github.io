@@ -108,7 +108,7 @@ $$(H^\bullet(X;A), {\smile}, 1)$$
 
 <ins id="prop3">**명제 3**</ins> 임의의 위상공간 $$X,Y$$와 commutative ring $$A$$에 대하여, 
 
-$$\times: H^*(X;A)\otimes_A H^*(Y;A) \to H^*(X\times Y;A)$$
+$$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \to H^\ast(X\times Y;A)$$
 
 는 graded $$A$$-algebra homomorphism이다.
 

@@ -90,7 +90,7 @@ $$d_{E'/A'}\circ \phi$$가 $$A$$-derivation이므로 [보조정리 2](#lem2)에 
 
 </details>
 
-한편 $$\Omega_{E'/A'}$$는 $$E'$$-module이므로, [\[대수적 구조\] §스칼라의 변환, ⁋명제 5](/ko/math/algebraic_structures/change_of_base_ring#prop5)에 의하여 
+한편 $$\Omega_{E'/A'}$$는 $$E'$$-module이므로, [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)에 의하여 
 
 $$\Hom_{E'}(\varphi_! \Omega_{E/A},\Omega_{E'/A'})\cong\Hom_E(\Omega_{E/A}, \varphi^\ast\Omega_{E'/A'})$$
 

@@ -150,7 +150,7 @@ Then, restricting to the case $$\Delta=\mathbb{Z}$$, the above proposition yield
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Corollary 4**</ins> Let $$\Delta = \mathbb{Z}$$. Then the following hold.
+<ins id="cor4">**Corollary 4**</ins> Let $$\Delta = \mathbb{Z}$$. Then the following hold.
 
 1. The square of an antiderivation is a derivation.
 2. The bracket of two derivations is a derivation.

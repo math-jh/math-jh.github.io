@@ -32,7 +32,7 @@ weight: 9
 1. 함수 $$f,g:A\rightarrow B$$가 임의의 $$i\in I$$가 주어질 때마다 $$f\vert_{A_i}=g\vert_{A_i}$$를 만족한다 하자. 그럼 $$f=g$$이다. 
 2. 함수들의 family $$(f_i:A_i\rightarrow B)_{i\in I}$$가 다음의 조건
     
-    $$f_i|_{A_i\cap A_j}=f_j|_{A_i\cap A_j}$$
+    $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}$$
 
     를 만족한다면, 모든 $$f_i$$를 확장하는 함수 $$f:A\rightarrow B$$가 존재한다.
 
@@ -43,7 +43,7 @@ weight: 9
 
 우선 첫 번째 주장을 보이기 위해 임의의 $$x\in A$$가 주어졌다고 하자. $$(A_i)_{i\in I}$$가 $$A$$를 덮으므로, 어떤 $$i\in I$$가 존재하여 $$x\in A_i$$이다. 이제
 
-$$f(x)=(f|_{A_i})(x)=(g|_{A_i})(x)=g(x)$$
+$$f(x)=(f\vert_{A_i})(x)=(g\vert_{A_i})(x)=g(x)$$
 
 이므로 첫 번째 주장이 성립한다.
 
@@ -51,7 +51,7 @@ $$f(x)=(f|_{A_i})(x)=(g|_{A_i})(x)=g(x)$$
 
 $$y,y'\in B$$가 $$(x,y)\in F$$, $$(x,y')\in F$$를 만족한다 하자. 그럼 $$(x,y)\in F_i$$, $$(x,y')\in F_j$$이도록 하는 $$i,j$$가 각각 존재한다. 이제 
 
-$$y=(f_i)(x)=(f_i|_{A_i\cap A_j})(x)=(f_j|_{A_i\cap A_j})(x)=(f_j)(x)=y'$$
+$$y=(f_i)(x)=(f_i\vert_{A_i\cap A_j})(x)=(f_j\vert_{A_i\cap A_j})(x)=(f_j)(x)=y'$$
 
 이므로 둘째 주장 또한 성립한다.
 

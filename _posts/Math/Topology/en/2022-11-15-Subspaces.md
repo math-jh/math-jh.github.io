@@ -63,7 +63,7 @@ It is not difficult to see that the closed sets in the subspace $$A$$ are precis
 
 <div class="proposition" markdown="1">
 
-<ins id="lem3">**Lemma 3**</ins> For a subspace $$A$$ of a topological space $$X$$, a necessary and sufficient condition for every closed set of $$A$$ to be closed in $$X$$ is that $$A$$ be a closed set in $$X$$.
+<ins id="lem2">**Lemma 2**</ins> For a subspace $$A$$ of a topological space $$X$$, a necessary and sufficient condition for every closed set of $$A$$ to be closed in $$X$$ is that $$A$$ be a closed set in $$X$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -79,7 +79,7 @@ We have defined all topological properties in terms of neighborhoods up to now, 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem4">**Lemma 4**</ins> For a subspace $$A$$ of a topological space $$X$$ and any point $$x\in A$$, a necessary and sufficient condition for every neighborhood of $$x$$ in $$A$$ to be a neighborhood of $$x$$ in $$X$$ is that $$A$$ be a neighborhood of $$x$$ in $$X$$.
+<ins id="lem3">**Lemma 3**</ins> For a subspace $$A$$ of a topological space $$X$$ and any point $$x\in A$$, a necessary and sufficient condition for every neighborhood of $$x$$ in $$A$$ to be a neighborhood of $$x$$ in $$X$$ is that $$A$$ be a neighborhood of $$x$$ in $$X$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -95,7 +95,7 @@ Using these lemmas, we can restrict the concepts we have examined so far to subs
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> Let $$X$$ be a topological space and let $$A\subseteq B\subseteq X$$ be subsets. Then the closure of $$A$$ in $$B$$, denoted $$\cl_BA$$, is equal to
+<ins id="prop4">**Proposition 4**</ins> Let $$X$$ be a topological space and let $$A\subseteq B\subseteq X$$ be subsets. Then the closure of $$A$$ in $$B$$, denoted $$\cl_BA$$, is equal to
 
 $$\cl_BA=B\cap\cl_XA$$
 
@@ -115,7 +115,7 @@ and from this in turn we see that it is equivalent to $$B\subseteq\cl_XA$$.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**Proposition 6**</ins> Let $$X$$ be a topological space and let $$(A_i)_{i\in I}$$ be a collection of subsets of $$X$$, and suppose that one of the following two conditions holds.
+<ins id="prop5">**Proposition 5**</ins> Let $$X$$ be a topological space and let $$(A_i)_{i\in I}$$ be a collection of subsets of $$X$$, and suppose that one of the following two conditions holds.
 
 1. $$X=\bigcup_{i\in I}\interior(A_i)$$, or
 2. $$(A_i)_{i\in I}$$ is a locally finite closed covering of $$X$$.
@@ -137,7 +137,7 @@ it suffices to prove the proposition for either open sets or closed sets. Also, 
     $$B=B\cap X=B\cap\left(\bigcup_{i\in I} \interior A_i\right)=\bigcup_{i\in I}(B\cap\interior A_i)$$
 
     we see that $$B$$ is open.
-2. Now suppose that $$(A_i)$$ satisfies the second condition. This time we assume that all the $$B\cap A_i$$ are closed in $$A_i$$. Then by [Lemma 3](#lem3), each $$B\cap A_i$$ is a closed set in $$X$$. Now $$(B\cap A_i)$$ is a collection of locally finite closed sets, and since $$B=\bigcup (B\cap A_i)$$, by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4) we conclude that $$B$$ is closed.
+2. Now suppose that $$(A_i)$$ satisfies the second condition. This time we assume that all the $$B\cap A_i$$ are closed in $$A_i$$. Then by [Lemma 2](#lem2), each $$B\cap A_i$$ is a closed set in $$X$$. Now $$(B\cap A_i)$$ is a collection of locally finite closed sets, and since $$B=\bigcup (B\cap A_i)$$, by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4) we conclude that $$B$$ is closed.
 
 </details>
 
@@ -149,20 +149,20 @@ Now suppose, in the same setting, that a subset $$A$$ of $$X$$ is given. Then th
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**Example 7**</ins> Let $$f:X\rightarrow Y$$ be a function between two topological spaces that is not continuous. For any $$x\in X$$, if we set $$A=\{x\}$$, then $$f\vert_A$$ is continuous. This is because for any open set $$U$$ of $$Y$$, the preimage $$f^{-1}(U)$$ is always either empty or $$\{x\}$$.
+<ins id="ex6">**Example 6**</ins> Let $$f:X\rightarrow Y$$ be a function between two topological spaces that is not continuous. For any $$x\in X$$, if we set $$A=\{x\}$$, then $$f\vert_A$$ is continuous. This is because for any open set $$U$$ of $$Y$$, the preimage $$f^{-1}(U)$$ is always either empty or $$\{x\}$$.
 
 </div>
 
-Instead, if the set $$A$$ is a neighborhood of $$x$$, then the continuity of $$f\vert_A$$ at the point $$x\in X$$ implies that $$f$$ is continuous at $$x$$. This is because by [Lemma 4](#lem4), a neighborhood of $$x$$ in $$A$$ can always be viewed as a neighborhood in $$X$$. To use this argument to show that $$f$$ is continuous at every point, one would have to prove that for each $$x\in X$$ there is a neighborhood $$N(x)$$ such that $$f\vert_{N(x)}$$ is continuous; however, by the following proposition we can prove that $$f$$ is continuous using even weaker information.
+Instead, if the set $$A$$ is a neighborhood of $$x$$, then the continuity of $$f\vert_A$$ at the point $$x\in X$$ implies that $$f$$ is continuous at $$x$$. This is because by [Lemma 3](#lem3), a neighborhood of $$x$$ in $$A$$ can always be viewed as a neighborhood in $$X$$. To use this argument to show that $$f$$ is continuous at every point, one would have to prove that for each $$x\in X$$ there is a neighborhood $$N(x)$$ such that $$f\vert_{N(x)}$$ is continuous; however, by the following proposition we can prove that $$f$$ is continuous using even weaker information.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**Proposition 8**</ins> Let $$X$$ be a topological space and let $$(A_i)_{i\in I}$$ be a collection of subsets satisfying one of the conditions of [Proposition 6](#prop6). Then an arbitrary function $$f:X\rightarrow Y$$ into a topological space $$Y$$ is continuous if and only if all the restrictions $$f\vert_{A_i}$$ are continuous.
+<ins id="prop7">**Proposition 7**</ins> Let $$X$$ be a topological space and let $$(A_i)_{i\in I}$$ be a collection of subsets satisfying one of the conditions of [Proposition 5](#prop5). Then an arbitrary function $$f:X\rightarrow Y$$ into a topological space $$Y$$ is continuous if and only if all the restrictions $$f\vert_{A_i}$$ are continuous.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-It suffices to assume that all the $$f\vert_{A_i}$$ are continuous and show that $$f$$ is continuous. Let $$B$$ be an arbitrary closed set of $$Y$$ and set $$A=f^{-1}(B)$$. Since all the $$f\vert_{A_i}$$ are continuous, $$(f\vert_{A_i})^{-1}(B)=A\cap A_i$$ are all closed sets. Applying [Proposition 6](#prop6), we see that $$A$$ is closed, and therefore $$f$$ is continuous.
+It suffices to assume that all the $$f\vert_{A_i}$$ are continuous and show that $$f$$ is continuous. Let $$B$$ be an arbitrary closed set of $$Y$$ and set $$A=f^{-1}(B)$$. Since all the $$f\vert_{A_i}$$ are continuous, $$(f\vert_{A_i})^{-1}(B)=A\cap A_i$$ are all closed sets. Applying [Proposition 5](#prop5), we see that $$A$$ is closed, and therefore $$f$$ is continuous.
 
 </details>

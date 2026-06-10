@@ -69,7 +69,7 @@ $$x_1\wedge \cdots\wedge x_n=\alpha e_1\wedge\cdots\wedge e_n$$
 
 ## 행렬의 소행렬식
 
-한편 행렬식을 계산하는 방법 중, 라플라스 전개를 이용하는 [\[선형대수학\] §행렬식의 존재성과 유일성, ⁋정리 13](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#thm13)이 있었는데, 이 계산 자체는 이미 다루었으므로 반복하지 않지만, 여기에서 등장했던 $$\det A^{(i,j)}$$들을 일반화할 수 있다.
+한편 행렬식을 계산하는 방법 중, 라플라스 전개를 이용하는 [\[선형대수학\] §행렬식의 존재성과 유일성, ⁋정리 12](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12)이 있었는데, 이 계산 자체는 이미 다루었으므로 반복하지 않지만, 여기에서 등장했던 $$\det A^{(i,j)}$$들을 일반화할 수 있다.
 
 이를 위해 임의의 $$X=(\xi_{ij})\in\Mat_{I\times J}$$가 주어졌다 하자. $$I$$와 $$J$$ 위에 정의된 total ordering를 하나 고정하면, 임의의 유한한 부분집합 $$H\subseteq I$$, $$K\subseteq J$$가 주어질 때마다 이들로 만들어진 부분행렬 $$X_{H,K}=(\xi_{i,j})_{i\in H,j\in K}$$의 index에도 total order가 주어진다. 특히 만일 $$\lvert H\rvert=\lvert K\rvert$$인 경우를 생각하자. 그럼 다음의 보조정리는 자명하다.
 

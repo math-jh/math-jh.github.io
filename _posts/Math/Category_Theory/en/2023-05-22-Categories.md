@@ -133,7 +133,7 @@ Then from
 
 $$g=g\circ\id_{A_2}=g\circ(f\circ g')=(g\circ f)\circ g'=\id_{A_1}\circ g'=g'$$
 
-we see that $$g=g'$$. Thus, given any $$f\in\Hom_\mathcal{A}(A_1,A_2)$$, if there exists $$g\in\Hom_\mathcal{A}(A_2,A_1)$$ satisfying the two conditions of [Definition 8](#def8), it is unique, and therefore we may write $$g=f^{-1}$$.
+we see that $$g=g'$$. Thus, given any $$f\in\Hom_\mathcal{A}(A_1,A_2)$$, if there exists $$g\in\Hom_\mathcal{A}(A_2,A_1)$$ satisfying the two conditions of [Definition 6](#def6), it is unique, and therefore we may write $$g=f^{-1}$$.
 
 In many examples, an isomorphism is the same as a bijective morphism, but this is not always the case. ([[Topology] §Continuous Functions, ⁋Example 5](/en/math/topology/continuous_functions#ex5)) After all, there is no guarantee that morphisms in an arbitrary category are functions, so it does not even make sense to say that a morphism is a bijection. Instead, we define the following.
 

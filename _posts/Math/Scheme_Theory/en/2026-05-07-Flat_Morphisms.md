@@ -203,7 +203,7 @@ Flatness behaves well under basic operations.
 
 (1) Base change takes the local form of a tensor product $$B \otimes_A C$$. If $$B$$ is $$A$$-flat, then $$-\otimes_A (B \otimes_A C) \cong (-\otimes_A B) \otimes_B (B \otimes_A C)$$, so exactness is preserved. Hence $$B \otimes_A C$$ is $$C$$-flat.
 
-(2) For the composition, the pushforward of the structure sheaf for $$(g \circ f)^{-1}$$ is $$g_* f_* \mathcal{O}_X$$. Since $$f_* \mathcal{O}_X$$ is a flat $$\mathcal{O}_Y$$-module and flatness is preserved by $$g_*$$, the composite morphism is also flat. Algebraically, if $$A \to B$$ and $$B \to C$$ are both flat, then for any $$A$$-module $$N$$ we have $$N \otimes_A C \cong (N \otimes_A B) \otimes_B C$$, and exactness is preserved at each step, so $$-\otimes_A C$$ is also exact.
+(2) For the composition, the pushforward of the structure sheaf for $$(g \circ f)^{-1}$$ is $$g_\ast f_\ast \mathcal{O}_X$$. Since $$f_\ast \mathcal{O}_X$$ is a flat $$\mathcal{O}_Y$$-module and flatness is preserved by $$g_\ast$$, the composite morphism is also flat. Algebraically, if $$A \to B$$ and $$B \to C$$ are both flat, then for any $$A$$-module $$N$$ we have $$N \otimes_A C \cong (N \otimes_A B) \otimes_B C$$, and exactness is preserved at each step, so $$-\otimes_A C$$ is also exact.
 
 </details>
 

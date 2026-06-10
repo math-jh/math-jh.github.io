@@ -71,15 +71,15 @@ $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\pa
 
 To prove this, suppose a 1-parameter family of paths $$(z_s)=(x_s,y_s)$$ satisfying the boundary conditions $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$ is given, and let $$z_0=z$$. Then
 
-$$\begin{aligned}\frac{\partial}{\partial s}\bigg|_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg|_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg|_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s|_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}|_0\bigr\rangle-\bigl\langle\partial_sx_s|_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s|_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
+$$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
 
 Now consider integration by parts:
 
-$$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s|_0\rangle\mathop{dt}=\bigl[\langle y,\partial_sx_s|_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s|_0\rangle\mathop{dt}$$
+$$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s\vert_0\rangle\mathop{dt}=\bigl[\langle y,\partial_sx_s\vert_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s\vert_0\rangle\mathop{dt}$$
 
 The first term on the right-hand side vanishes by the boundary conditions $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$. Substituting this into the preceding equation and rearranging, we obtain
 
-$$\frac{\partial}{\partial s}\bigg|_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s|_0,\dot{x}-\partial_yH_t\rangle\mathop{dt}-\int_{t_0}^{t_1}\langle\partial_sx_s|_0,\dot{y}+\partial_xH_t\rangle\mathop{dt}$$
+$$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s\vert_0,\dot{x}-\partial_yH_t\rangle\mathop{dt}-\int_{t_0}^{t_1}\langle\partial_sx_s\vert_0,\dot{y}+\partial_xH_t\rangle\mathop{dt}$$
 
 Since $$\partial_sx_s\vert_0$$ and $$\partial_sy_s\vert_0$$ can vary arbitrarily, $$z$$ being an extremum of $$\mathcal{A}_H$$ is equivalent to the two equations
 
@@ -95,7 +95,7 @@ $$J_0=\begin{pmatrix}0&-I\\I&0\end{pmatrix}$$
 
 This represents multiplication by the imaginary unit $$i$$ when we identify $$\mathbb{R}^{2n}$$ with $$\mathbb{C}^n$$ via $$z_j:=x_j+iy_j$$. Regarding $$\mathbb{R}^{2n}$$ as a manifold and $$T_p\mathbb{R}^{2n}\cong\mathbb{R}^{2n}$$ as the tangent space at each point $$p\in\mathbb{R}^{2n}$$, we may view $$J_0$$ as an element of $$\End(T\mathbb{R}^{2n})$$ defined by the formulas
 
-$$J_0\left(\frac{\partial}{\partial x^j}\bigg|_p\right)=\frac{\partial}{\partial y^j}\bigg|_p,\qquad J_0\left(\frac{\partial}{\partial y^j}\bigg|_p\right)=-\frac{\partial}{\partial x^j}\bigg|_p\tag{1}$$
+$$J_0\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial y^j}\bigg\vert_p,\qquad J_0\left(\frac{\partial}{\partial y^j}\bigg\vert_p\right)=-\frac{\partial}{\partial x^j}\bigg\vert_p\tag{1}$$
 
 Now
 
@@ -135,7 +135,7 @@ $$\langle-,-\rangle=\sum_{j=1}^n dx^j\otimes dx^j+\sum_{j=1}^n dy^j\otimes dy^j$
 
 so using equation (1) we can compute $$\omega_0$$ on the basis vectors $$\partial/\partial x^j,\partial/\partial y^j$$. For instance,
 
-$$(\omega_0)_p\left(\frac{\partial}{\partial x^j}\bigg|_p,\frac{\partial}{\partial y^k}\bigg|_p\right)=\left\langle\frac{\partial}{\partial y^j}\bigg|_p,\frac{\partial}{\partial y^k}\bigg|_p\right\rangle_p=\delta_{jk}$$
+$$(\omega_0)_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p,\frac{\partial}{\partial y^k}\bigg\vert_p\right)=\left\langle\frac{\partial}{\partial y^j}\bigg\vert_p,\frac{\partial}{\partial y^k}\bigg\vert_p\right\rangle_p=\delta_{jk}$$
 
 and carrying out the remaining computations, we find that $$\omega_0$$ is expressed in standard coordinates as
 

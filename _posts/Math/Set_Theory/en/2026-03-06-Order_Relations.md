@@ -49,7 +49,7 @@ We can do for order relations something analogous to [Â§Equivalence Relations, â
 
 <div class="proposition" markdown="1">
 
-<ins id="def5">**Proposition 5**</ins> A binary relation $$(R,A,A)$$ is an order relation if and only if the following two conditions hold.
+<ins id="prop5">**Proposition 5**</ins> A binary relation $$(R,A,A)$$ is an order relation if and only if the following two conditions hold.
 
 $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 
@@ -159,7 +159,7 @@ so $$R$$ is transitive. Therefore $$R$$ is an order relation.
 
 Henceforth, we shall write the strict order obtained from an order relation $$R$$ as $$<_{\tiny R}$$, and the order relation obtained from a strict order $$S$$ as $$\leq_{\tiny S}$$.
 
-<ins id="rmk1">**Remark**</ins> In general, $$x\not\leq y$$ does not imply $$x>y$$. Let $$S=\left\{a,b\right\}$$, and define the relation $$\leq$$ on $$\mathcal{P}(S)$$ to be the inclusion relation between subsets. Then this is obviously an order relation. Here, $$\left\{a\right\}\not\leq\left\{b\right\}$$, but $$\left\{a\right\}>\left\{b\right\}$$ does not hold either.
+<ins id="rmk11">**Remark 11**</ins> In general, $$x\not\leq y$$ does not imply $$x>y$$. Let $$S=\left\{a,b\right\}$$, and define the relation $$\leq$$ on $$\mathcal{P}(S)$$ to be the inclusion relation between subsets. Then this is obviously an order relation. Here, $$\left\{a\right\}\not\leq\left\{b\right\}$$, but $$\left\{a\right\}>\left\{b\right\}$$ does not hold either.
 {: .remark}
 
 

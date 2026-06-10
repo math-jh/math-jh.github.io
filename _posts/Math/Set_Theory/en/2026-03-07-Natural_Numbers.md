@@ -178,7 +178,7 @@ As demonstrated in the proof above, we can define concepts such as remainders, m
 
 <div class="definition" markdown="1">
 
-<ins id="def11">**Definition 11**</ins> A set is *infinite* if it is not finite.
+<ins id="def12">**Definition 12**</ins> A set is *infinite* if it is not finite.
 
 </div>
 
@@ -186,7 +186,7 @@ Let us now examine the properties of infinite cardinals. Earlier, we saw that a 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**Proposition 12**</ins> For every infinite cardinal $$\mathfrak{a}$$, we have $$\mathfrak{a}^2=\mathfrak{a}$$.
+<ins id="prop13">**Proposition 13**</ins> For every infinite cardinal $$\mathfrak{a}$$, we have $$\mathfrak{a}^2=\mathfrak{a}$$.
 
 </div>
 
@@ -194,7 +194,7 @@ To prove this, we first need to establish the following lemmas.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem13">**Lemma 13**</ins> Every infinite set $$A$$ contains a subset that is equipotent to $$\mathbb{N}$$.
+<ins id="lem14">**Lemma 14**</ins> Every infinite set $$A$$ contains a subset that is equipotent to $$\mathbb{N}$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -205,7 +205,7 @@ There exists a well-ordering of $$A$$. Since every proper segment of $$\mathbb{N
 </details>
 <div class="proposition" markdown="1">
 
-<ins id="lem14">**Lemma 14**</ins> The set $$\mathbb{N}\times\mathbb{N}$$ is equipotent to $$\mathbb{N}$$.
+<ins id="lem15">**Lemma 15**</ins> The set $$\mathbb{N}\times\mathbb{N}$$ is equipotent to $$\mathbb{N}$$.
 
 </div>
 
@@ -253,7 +253,7 @@ Using this result, the following can be easily established.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor15">**Corollary 15**</ins> If $$\mathfrak{a}$$ is an infinite cardinal, then $$\mathfrak{a}^n=\mathfrak{a}$$ for all $$n\geq 1$$. For a finite family of non-zero cardinals $$(\mathfrak{a}_i)_{i\in I}$$, if the largest cardinal among them is an infinite cardinal $$\mathfrak{a}$$, then both their product and sum equal $$\mathfrak{a}$$.
+<ins id="cor16">**Corollary 16**</ins> If $$\mathfrak{a}$$ is an infinite cardinal, then $$\mathfrak{a}^n=\mathfrak{a}$$ for all $$n\geq 1$$. For a finite family of non-zero cardinals $$(\mathfrak{a}_i)_{i\in I}$$, if the largest cardinal among them is an infinite cardinal $$\mathfrak{a}$$, then both their product and sum equal $$\mathfrak{a}$$.
 
 </div>
 

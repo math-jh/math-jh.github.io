@@ -31,7 +31,7 @@ of $$k$$-dimensional closed irreducible subvarieties of $$X$$. Here each $$V_i \
 
 </div>
 
-By definition, an algebraic $$k$$$-cycle is close to homology. When we need to interpret this from the cohomology perspective (via duality), we denote a *codimension $$k$$ cycle* by $$Z^k(X) = Z_{n-k}(X)$$ (where $$n = \dim X$$). As mentioned above, the Chow group is obtained by imposing a specific equivalence relation on these $$Z_k(X)$$.
+By definition, an algebraic $$k$$-cycle is close to homology. When we need to interpret this from the cohomology perspective (via duality), we denote a *codimension $$k$$ cycle* by $$Z^k(X) = Z_{n-k}(X)$$ (where $$n = \dim X$$). As mentioned above, the Chow group is obtained by imposing a specific equivalence relation on these $$Z_k(X)$$.
 
 <div class="definition" markdown="1">
 

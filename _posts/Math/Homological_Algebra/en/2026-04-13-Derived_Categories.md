@@ -121,7 +121,7 @@ In other words, $$P$$ is a complex that makes the Hom functor $$\Hom(-, P)$$ inv
 
 <ins id="def6">**Definition 6**</ins> A complex $$I \in K(\mathcal{A})$$ is called *$$K$$-injective* if for every quasi-isomorphism $$s : A \rightarrow B$$, the induced map
 
-$$\Hom_{K(\mathcal{A})}(I, A) \xrightarrow{s_*} \Hom_{K(\mathcal{A})}(I, B)$$
+$$\Hom_{K(\mathcal{A})}(I, A) \xrightarrow{s_\ast} \Hom_{K(\mathcal{A})}(I, B)$$
 
 is an isomorphism.
 

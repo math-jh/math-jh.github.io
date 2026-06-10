@@ -68,7 +68,7 @@ and the Korean terms *일대일함수* (one-to-one function) and *일대일대�
 
 For any function $$f:A\rightarrow B$$, subset $$X\subseteq A$$, and canonical injection $$i:X\hookrightarrow A$$, it is easy to verify that
 
-$$f|_X=f\circ i$$
+$$f\vert_X=f\circ i$$
 
 holds. Occasionally the right-hand side is written as $$i_\ast f$$.
 
@@ -104,7 +104,7 @@ The following remark provides important intuition for defining retractions and s
 
 <div class="remark" markdown="1">
 
-<ins id="rmk1">**Remark**</ins> The two equations $$f^{-1}\circ f=\id_A$$ and $$f\circ f^{-1}=\id_B$$ remain partially valid even if $$f$$ is not bijective but merely surjective or injective.
+<ins id="rmk6">**Remark 6**</ins> The two equations $$f^{-1}\circ f=\id_A$$ and $$f\circ f^{-1}=\id_B$$ remain partially valid even if $$f$$ is not bijective but merely surjective or injective.
 
 - If $$f$$ is injective, then $$f$$ is a bijection between $$A$$ and $$f(A)\subseteq B$$, so $$\tilde{f}^{-1}:f(A)\rightarrow A$$ exists. Then $$\tilde{f}^{-1}\circ f=\id_A$$.
 - If $$f$$ is surjective, then for every $$y\in B$$ there exists some $$x$$ such that $$f(x)=y$$. Letting $$\tilde{f}^{-1}$$ be the function that maps each such $$y$$ to a corresponding $$x$$, we have $$f\circ \tilde{f}^{-1}=\id_B$$.
@@ -115,7 +115,7 @@ The following remark provides important intuition for defining retractions and s
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> A *function of two variables* is a function whose domain is a set of ordered pairs.
+<ins id="def7">**Definition 7**</ins> A *function of two variables* is a function whose domain is a set of ordered pairs.
 
 </div>
 
@@ -123,7 +123,7 @@ If $$f$$ is a function of two variables, we write $$f(x,y)$$ instead of $$f((x,y
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> Let $$f:A\rightarrow B$$ be a function of two variables. For every $$y$$, define $$A_y$$ as the set of all $$x$$ such that $$(x,y)\in A$$. Then the function $$x\mapsto f(x,y_0)$$ from $$A_{y_0}$$ to $$B$$ is called the *partial mapping* of $$f$$ at $$y_0$$, and is written as $$f(-,y_0)$$. Similarly, $$f(x_0,-)$$ is also defined.
+<ins id="def8">**Definition 8**</ins> Let $$f:A\rightarrow B$$ be a function of two variables. For every $$y$$, define $$A_y$$ as the set of all $$x$$ such that $$(x,y)\in A$$. Then the function $$x\mapsto f(x,y_0)$$ from $$A_{y_0}$$ to $$B$$ is called the *partial mapping* of $$f$$ at $$y_0$$, and is written as $$f(-,y_0)$$. Similarly, $$f(x_0,-)$$ is also defined.
 
 </div>
 

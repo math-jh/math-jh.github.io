@@ -107,7 +107,7 @@ It suffices to construct an inverse. To do this, first from the adjunction
 
 $$\Hom_\rMod{B}(\phi_!M,\phi_!M)\cong\Hom_\rMod{A}(M, \phi^\ast \phi_!M)$$
 
-let us obtain the $$A$$-linear map $$i: M \rightarrow \phi^\ast\phi_!M$$ corresponding to $$\id_{\phi_!M}$$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 5](/en/math/algebraic_structures/change_of_base_ring#prop5)) Then, viewing the $$A$$-module $$\phi^\ast\phi_!M$$ as the $$B$$-module $$\phi_!M$$ and considering
+let us obtain the $$A$$-linear map $$i: M \rightarrow \phi^\ast\phi_!M$$ corresponding to $$\id_{\phi_!M}$$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6)) Then, viewing the $$A$$-module $$\phi^\ast\phi_!M$$ as the $$B$$-module $$\phi_!M$$ and considering
 
 $$\iota_{\phi_!M}: \phi_!M \rightarrow \T_B(\phi_!M)$$
 
