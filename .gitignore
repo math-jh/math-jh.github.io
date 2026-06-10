@@ -103,3 +103,6 @@ scripts/index-monitor/
 
 # Thumbnails (GitHub action으로 자동생성)
 assets/images/Pages/Thumbnails/Files/*.jpeg
+
+# 인터랙티브 수학 설명용 로컬 노트 (claude lesson notes)
+notes/
