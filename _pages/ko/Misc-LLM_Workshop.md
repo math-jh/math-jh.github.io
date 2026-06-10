@@ -15,5 +15,10 @@ hero_sat: "0%"
   {% assign lang = lang_prefix | append: "/" %}
 {% endif %}
 
-{% assign posts = site.categories['Misc / LLM Workshop'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% assign cat_posts = site.categories['Misc / LLM Workshop'] %}
+{% if cat_posts %}
+{% assign posts = cat_posts | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% else %}
+{% assign posts = "" | split: "" %}
+{% endif %}
 {% include subject-cards.html posts=posts minimal=true splitweight=99 %}

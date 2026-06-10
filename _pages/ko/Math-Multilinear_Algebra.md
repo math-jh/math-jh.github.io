@@ -15,6 +15,11 @@ excerpt: "다중선형대수학은 여러 벡터에 대해 선형인 사상, 즉
   {% assign lang = lang_prefix | append: "/" %}
 {% endif %}
 
-{% assign posts = site.categories['Math / Multilinear Algebra'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% assign cat_posts = site.categories['Math / Multilinear Algebra'] %}
+{% if cat_posts %}
+{% assign posts = cat_posts | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% else %}
+{% assign posts = "" | split: "" %}
+{% endif %}
 {% include subject-cards.html posts=posts %}
 

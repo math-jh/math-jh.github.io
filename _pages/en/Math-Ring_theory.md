@@ -14,6 +14,11 @@ excerpt: "Ring theory studies rings, which carry both addition and multiplicatio
   {% assign lang = lang_prefix | append: "/" %}
 {% endif %}
 
-{% assign posts = site.categories['Math / Ring Theory'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% assign cat_posts = site.categories['Math / Ring Theory'] %}
+{% if cat_posts %}
+{% assign posts = cat_posts | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% else %}
+{% assign posts = "" | split: "" %}
+{% endif %}
 {% include subject-cards.html posts=posts %}
 

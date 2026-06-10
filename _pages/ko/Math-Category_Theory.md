@@ -15,6 +15,11 @@ excerpt: "범주론은 대상과 사상, 그리고 그 사이의 보편성질을
   {% assign lang = lang_prefix | append: "/" %}
 {% endif %}
 
-{% assign posts = site.categories['Math / Category Theory'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% assign cat_posts = site.categories['Math / Category Theory'] %}
+{% if cat_posts %}
+{% assign posts = cat_posts | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% else %}
+{% assign posts = "" | split: "" %}
+{% endif %}
 {% include subject-cards.html posts=posts %}
 

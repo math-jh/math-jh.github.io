@@ -14,6 +14,11 @@ excerpt: "Algebraic topology distinguishes the shape of spaces by assigning alge
   {% assign lang = lang_prefix | append: "/" %}
 {% endif %}
 
-{% assign posts = site.categories['Math / Algebraic Topology'] | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% assign cat_posts = site.categories['Math / Algebraic Topology'] %}
+{% if cat_posts %}
+{% assign posts = cat_posts | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
+{% else %}
+{% assign posts = "" | split: "" %}
+{% endif %}
 {% include subject-cards.html posts=posts %}
 
