@@ -8,7 +8,7 @@ permalink: /ko/math/lie_theory/richardson_peterson_variety
 sidebar:
     nav: "Lie_theory-ko"
 
-date: 2025-01-05
+date: 2026-06-09
 last_modified_at: 2026-06-09
 weight: 6
 published: false
@@ -54,7 +54,7 @@ $$\dim(E_i\cap\tilde{E}_j)=\max(0,\,i+j-n)$$
 
 </div>
 
-직관적으로, Bruhat cell $$X_w$$는 낮은 차원에서부터 커지는 방향이고, opposite Bruhat cell $$X^u$$는 큰 차원에서부터 내려가는 방향인 것을 기억하자. 구체적으로 $$\dim X_w=\ell(w)$$이고 $$\dim X^u=\dim (G/P)-\ell(u)$$가 성립한다. 따라서 이들 opposite Bruhat cell이 nontrivial하게 만나기 위해서는 적어도 이들 두 variety의 차원의 합이 $$\dim(G/P)$$보다 커야한다. 이 때 교집합의 기대차원이 명제의
+직관적으로, Bruhat cell $$X_w$$는 낮은 차원에서부터 커지는 방향이고, opposite Bruhat cell $$X^u$$는 큰 차원에서부터 내려가는 방향인 것을 기억하자. 구체적으로 $$\dim X_w=\ell(w)$$이고 $$\dim X^u=\dim (G/P)-\ell(u)$$가 성립한다. 따라서 이들 opposite Bruhat cell이 nontrivial하게 만나기 위해서는 이들 두 variety의 차원의 합이 $$\dim(G/P)$$ 이상이어야 한다. 이 때 교집합의 기대차원이 명제의
 
 $$\ell(w)+\dim (G/P)-\ell(u)-\dim (G/P)=\ell(w)-\ell(u)$$
 

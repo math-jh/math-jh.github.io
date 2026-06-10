@@ -67,7 +67,7 @@
 }
 
 .site-title:hover .site-title__box {
-  color: $masthead-link-color-hover;
+  color: #a9874a; // masthead signature gold (matches the settings-dropdown accent)
 }
 
 .site-subtitle {
@@ -122,6 +122,11 @@
 
 /* Category is an icon now — drop the growing-underline hover for icon nav links. */
 .greedy-nav .visible-links a:has(i.material-icons)::before { content: none; }
+
+/* Wordmark + category toggle hover use the masthead signature gold #a9874a — NOT
+   the brighter $masthead-link-color-hover, which stays the accent for the search
+   overlay / pagefind / recent overlay. */
+.greedy-nav .visible-links a:hover { color: #a9874a; }
 
 /* The language-selection page (/) is pre-language — hide the category menu there
    (masthead is include_cached/language-agnostic, so scope by the page's hero).
