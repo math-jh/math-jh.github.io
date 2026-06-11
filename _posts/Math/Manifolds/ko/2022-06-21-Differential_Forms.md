@@ -98,7 +98,7 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**정리 2**</ins> Manifold $$M$$에 대하여, degree $$1$$의 anti-derivation $$d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$$가 유일하게 존재하여 다음의 두 조건을 만족한다. ([##ref##]())
+<ins id="thm2">**정리 2**</ins> Manifold $$M$$에 대하여, degree $$1$$의 anti-derivation $$d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$$가 유일하게 존재하여 다음의 두 조건을 만족한다. (증명은 **[War]**를 보라.)
 
 1. $$d^2=0$$,
 2. 임의의 $$f\in\Omega^0(M)$$에 대하여, $$df$$는 위와 같이 $$f$$의 differential과 동일하다.
