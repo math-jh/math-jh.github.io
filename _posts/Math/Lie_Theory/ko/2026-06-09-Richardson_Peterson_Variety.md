@@ -208,39 +208,39 @@ $$\Ad(g^{-1})X\in H_h\iff g^{-1}Xg\in H_h\iff XgE_i\subseteq gE_{h(i)}\iff XV_i\
 
 </div>
 
-[예시 7](#ex7)의 그림은 일반형에서도 그대로 성립한다. staircase가 $$\mathfrak{b}$$ 위로 더 채우는 자리들은 대각선 아래쪽, 곧 negative root 방향이다. 실제로 $$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$는 이미 모든 positive root 방향을 포함하므로, $$H$$를 $$\mathfrak{b}$$보다 키우는 일은 negative root 방향을 더하는 일일 수밖에 없다. 어느 방향이 가능한지는 예시에서처럼 $$\ad(\mathfrak{b})$$-stability가 결정한다. simple이 아닌 positive root $$\alpha=\beta+\gamma$$의 방향은 $$[\mathfrak{g}_\beta,\mathfrak{g}_{-\alpha}]=\mathfrak{g}_{-\gamma}$$를 통해 더 얕은 자리들을 함께 끌고 들어오는 반면, negative simple root 방향은 $$\mathfrak{b}\oplus\mathfrak{g}_{-\alpha_i}$$가 그 자체로 stable하다. 곧 $$\mathfrak{b}$$에서 한 칸씩 늘리는 최소 단위의 확장은 정확히 $$\mathfrak{g}_{-\alpha_i}$$들이고, type $$A$$에서는 위 그림의 subdiagonal 자리들이 이들이다. 이 모든 방향으로 딱 한 걸음씩 간 것이 Peterson variety의 $$H$$이다.
+[예시 7](#ex7)의 그림은 일반적인 경우에서도 그대로 성립한다. 이 경우, 위에서처럼 staircase가 $$\mathfrak{b}$$ 위로 더 채우는 자리들은 대각선 아래쪽, 곧 *negative* root 방향이다. 실제로 $$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$는 이미 모든 positive root 방향을 포함하므로, $$H$$를 $$\mathfrak{b}$$보다 키우는 일은 negative root 방향을 더하는 일일 수밖에 없다. 그러나, $$\ad(\mathfrak{b})$$-stability에 의하여 추가로 simple 조건이 강제되는데, 실제로 simple이 아닌 positive root $$\alpha=\beta+\gamma$$의 방향은 $$[\mathfrak{g}_\beta,\mathfrak{g}_{-\alpha}]=\mathfrak{g}_{-\gamma}$$를 통해 더 얕은 자리들을 함께 끌고 들어오는 반면, negative simple root 방향은 $$\mathfrak{b}\oplus\mathfrak{g}_{-\alpha_i}$$가 그 자체로 stable하다. 즉, $$\mathfrak{b}$$에서 한 칸씩 늘리는 최소 단위의 확장은 정확히 $$\mathfrak{g}_{-\alpha_i}$$들이고, type $$A$$에서는 위 그림의 subdiagonal 자리들이 이들이다. 그럼 $$\mathfrak{b}$$에 이 방향을 추가하여 만들어진 것이 Peterson variety의 $$H$$이다.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> *Peterson variety* $$Y^\circ$$는 $$G/B$$의 closed subvariety
+<ins id="def8">**정의 8**</ins> *Peterson variety* $$\mathcal{Y}$$는 $$G/B$$의 closed subvariety
 
-$$Y^\circ=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
+$$\mathcal{Y}=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 
-로 정의된다. 여기서 $$e=\sum_i e_i$$는 regular nilpotent이고, $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$이며 $$f_i\in\mathfrak{g}_{-\alpha_i}$$는 simple negative root의 root vector이다. 곧 [정의 6](#def6)에서 $$X=e$$를 regular nilpotent로, subspace $$H$$를 $$\mathfrak{b}$$ 바로 위 단계로 택한 특수한 경우이다.
+로 정의된다. 여기서 $$e=\sum_i e_i$$는 regular nilpotent element이고, $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$이며 $$f_i\in\mathfrak{g}_{-\alpha_i}$$는 simple negative root의 root vector이다.
 
 </div>
 
-이것이 Kostant–Peterson의 원래 정의 [Pet]이다. 정의가 여러 선택에 의존하는 것처럼 보이지만 사실상 유일하다. $$f_i$$의 선택은 $$\mathbb{C}f_i=\mathfrak{g}_{-\alpha_i}$$가 $$1$$차원이므로 $$H$$를 바꾸지 않고, $$e$$를 다른 regular nilpotent로 바꾸는 것은 ([정의 5](#def5) 직후 논의의 conjugacy에 의해) $$Y^\circ$$를 $$G/B$$ 안에서 translate할 뿐이다.
+이 정의는 여러 선택에 의존하는 것처럼 보이지만 사실상 유일하다. $$f_i$$의 선택은 $$\mathbb{C}f_i=\mathfrak{g}_{-\alpha_i}$$가 $$1$$차원이므로 $$H$$를 바꾸지 않고, $$e$$를 다른 regular nilpotent로 바꾸는 것은 ([정의 5](#def5) 직후 논의의 conjugacy에 의해) $$\mathcal{Y}$$를 $$G/B$$ 안에서 translate할 뿐이기 따문이다.
 
-$$H$$가 $$\mathfrak{b}$$에 더한 자유도는 simple root마다 하나씩, 총 $$\rank(\mathfrak{g})$$개이다. $$H=\mathfrak{b}$$가 한 점을 주었으므로 ([정의 6](#def6) 직후의 논의), Peterson variety의 차원은 한 점에서 그만큼 자라리라 기대할 수 있다. 실제로 그렇게 된다는 것이 다음 명제의 내용이다.
+위에서 살펴봤듯, $$H$$가 $$\mathfrak{b}$$에 더한 자유도는 simple root마다 하나씩, 총 $$\rank(\mathfrak{g})$$개이다. $$H=\mathfrak{b}$$가 한 점을 주었으므로 ([정의 6](#def6) 직후의 논의), Peterson variety의 차원은 한 점에서 그만큼 자라리라 기대할 수 있다. 실제로 그렇게 된다는 것이 다음 명제의 내용이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> Peterson variety $$Y^\circ\subseteq G/B$$의 차원은 $$\rank(\mathfrak{g})$$이다.
+<ins id="prop9">**명제 9 (Tymoczko [Tym], Precup [Pre], Insko–Tymoczko [IT])**</ins> Peterson variety $$\mathcal{Y}$$는 Bruhat 분해와의 교집합으로 *affine paving*된다. 곧 비어있지 않은 조각 $$\mathcal{Y}\cap BwB/B$$들이 각각 affine space와 동형이고 $$\mathcal{Y}$$는 이들의 disjoint union이다. 이 때 비어있지 않은 조각은 simple root들의 부분집합 $$A\subseteq\Delta$$와 일대일대응되며, $$A$$에 대응하는 조각은 parabolic Weyl group $$W_A$$의 최장원소 $$w_A$$의 Bruhat cell과의 교집합
+
+$$\mathcal{Y}\cap Bw_AB/B\cong\mathbb{A}^{\lvert A\rvert}$$
+
+이다. 특히, 가장 큰 조각 $$A=\Delta$$의 차원이 전체의 차원이 되어
+
+$$\dim \mathcal{Y}=\rank(\mathfrak{g})$$
+
+이다.
 
 </div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
 
-핵심 도구는 Bruhat cell들과의 교집합이다. Tymoczko [Tym]와 Precup [Pre]은 regular nilpotent Hessenberg variety가 Bruhat 분해와의 교집합 $$Y^\circ\cap BwB/B$$들로 affine paving됨을 보였다. 곧 비어있지 않은 각 조각이 affine space와 동형이고, 따라서 가장 큰 조각의 차원이 $$Y^\circ$$ 전체의 차원이 된다. Peterson variety의 경우 비어있지 않은 조각을 [Tym]의 조합적 조건으로 분류하면, simple root들의 부분집합 $$A\subseteq\Delta$$마다 parabolic Weyl group $$W_A$$의 최장원소 $$w_A$$에 대응하는 cell이 비어있지 않은 조각의 전부이다 ([IT]). 각 조각의 차원은 [Tym]의 공식
+이 색인은 [정의 8](#def8)의 구성과 정확히 호응한다. $$H$$를 만들 때 $$\mathfrak{b}$$에 simple root마다 자유도를 하나씩 더했는데, $$A$$-cell은 그 가운데 $$A$$ 방향의 자유도들만 활성화되는 곳이고, 차원 $$\lvert A\rvert$$가 그 개수와 일치한다 ([Tym]의 차원 공식에 $$\mathfrak{b}^-\cap H=\mathfrak{h}\oplus\bigoplus_i\mathfrak{g}_{-\alpha_i}$$를 대입하면, $$\Ad(w_A)$$가 부호를 뒤집는 simple root가 정확히 $$A$$의 원소들이어서 $$\alpha_i\in A$$인 방향만 차원에 기여한다). 양 극단을 보면, $$A=\emptyset$$의 조각은 자유도를 하나도 쓰지 않는 $$0$$-cell로, $$H=\mathfrak{b}$$였다면 유일했을 한 점 (standard flag $$eB$$, $$e\in\mathfrak{b}$$이므로 언제나 $$\mathcal{Y}$$의 점이다)이 그대로 들어앉은 것이다. 반대로 $$A=\Delta$$의 조각은 모든 자유도를 쓰는 big Bruhat cell과의 교집합 $$\mathcal{Y}\cap Bw_0B/B\cong\mathbb{A}^{\rank(\mathfrak{g})}$$으로, 최대 차원의 조각으로서 명제의 차원 $$\rank(\mathfrak{g})$$를 준다.
 
-$$\dim\bigl(Y^\circ\cap Bw_AB/B\bigr)=\dim\bigl(\mathfrak{b}\cap\Ad(w_A)(\mathfrak{b}^-\cap H)\bigr)-\rank(\mathfrak{g})$$
-
-으로 주어지는데, $$\mathfrak{b}^-\cap H=\mathfrak{h}\oplus\bigoplus_i\mathfrak{g}_{-\alpha_i}$$에서 $$\mathfrak{h}$$는 $$\Ad(w_A)$$에 의해 $$\mathfrak{h}$$로 가고, $$\mathfrak{g}_{-\alpha_i}$$는 ($$w_A$$가 부호를 뒤집는 simple root가 정확히 $$A$$의 원소들이므로) $$\alpha_i\in A$$일 때에만 positive root space로 가서 $$\mathfrak{b}$$와 만난다. 따라서 이 값은 $$\rank(\mathfrak{g})+\lvert A\rvert-\rank(\mathfrak{g})=\lvert A\rvert$$이다. 결국 $$Y^\circ$$는 $$2^{\rank(\mathfrak{g})}$$개의 affine cell로 paving되며, 최대 차원의 cell은 $$A=\Delta$$, 곧 big Bruhat cell과의 교집합 $$Y^\circ\cap Bw_0B/B\cong\mathbb{A}^{\rank(\mathfrak{g})}$$이다.
-
-</details>
-
-이 증명은 차원 이상의 정보를 준다. $$Y^\circ$$는 simple root들의 부분집합으로 색인되는 $$2^{\rank(\mathfrak{g})}$$개의 cell로 이루어지고, 각 cell은 coordinate flag $$w_AB$$를 지난다. 이 조합론은 아래 [예시 10](#ex10)의 fixed point 목록에서 다시 만난다. type $$A_{n-1}$$에서는 $$\rank(\mathfrak{sl}_n)=n-1$$이므로 $$\dim Y^\circ=n-1$$이며, [예시 10](#ex10)에서 $$\dim\Pet_3=2=3-1$$임을 chart 계산으로 직접 확인한다.
+결국 $$\mathcal{Y}$$는 simple root들의 부분집합으로 색인되는 $$2^{\rank(\mathfrak{g})}$$개의 affine cell로 이루어지고, 각 cell은 coordinate flag $$w_AB$$를 지난다. 이 조합론은 아래 [예시 10](#ex10)의 fixed point 목록에서 다시 만난다. type $$A_{n-1}$$에서는 $$\rank(\mathfrak{sl}_n)=n-1$$이므로 $$\dim \mathcal{Y}=n-1$$이며, [예시 10](#ex10)에서 $$\dim\Pet_3=2=3-1$$임을 chart 계산으로 직접 확인한다.
 
 <div class="example" markdown="1">
 
@@ -264,33 +264,33 @@ $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 
 ## Stratification
 
-[명제 9](#prop9)의 증명에서 우리는 $$Y^\circ$$를 $$B$$쪽 Bruhat cell들로 잘라 affine paving을 얻었다. 이번에는 반대쪽, 곧 opposite Borel $$B^-$$의 Bruhat 분해로 $$Y^\circ$$를 잘라 보자. 결과의 성격은 전혀 다르다. 조각들이 더 이상 affine space가 아닌 대신, 각 조각이 그 자체로 의미를 갖는 affine variety가 된다.
+[명제 9](#prop9)에서 우리는 $$\mathcal{Y}$$를 $$B$$쪽 Bruhat cell들로 잘라 affine paving을 얻었다. 이번에는 반대쪽, 곧 opposite Borel $$B^-$$의 Bruhat 분해로 $$\mathcal{Y}$$를 잘라 보자. 결과의 성격은 전혀 다르다. 조각들이 더 이상 affine space가 아닌 대신, 각 조각이 그 자체로 의미를 갖는 affine variety가 된다.
 
-이번에도 비어있지 않은 조각은 정확히 $$2^{\rank(\mathfrak{g})}$$개이며, simple root들의 부분집합, 곧 standard parabolic subgroup $$P\supseteq B$$들로 색인되어 $$Y^\circ$$의 stratification
+이번에도 비어있지 않은 조각은 정확히 $$2^{\rank(\mathfrak{g})}$$개이며, simple root들의 부분집합, 곧 standard parabolic subgroup $$P\supseteq B$$들로 색인되어 $$\mathcal{Y}$$의 stratification
 
-$$Y^\circ=\bigsqcup_{P\supseteq B}Y_P^\circ$$
+$$\mathcal{Y}=\bigsqcup_{P\supseteq B}\mathcal{Y}_P$$
 
-을 이룬다 [Pet]. 여기서 각 stratum $$Y_P^\circ$$는 $$B^-$$쪽 Bruhat cell 하나와의 교집합으로 주어지는 locally closed subvariety이다. 양 극단을 보면 $$P=G$$의 stratum은 한 점 $$\{w_0B\}$$이고, $$P=B$$의 stratum은 opposite big cell과의 교집합
+을 이룬다 [Pet]. 여기서 각 stratum $$\mathcal{Y}_P$$는 $$B^-$$쪽 Bruhat cell 하나와의 교집합으로 주어지는 locally closed subvariety이다. 양 극단을 보면 $$P=G$$의 stratum은 한 점 $$\{w_0B\}$$이고, $$P=B$$의 stratum은 opposite big cell과의 교집합
 
-$$Y_B^\circ=Y^\circ\cap B^-B/B$$
+$$\mathcal{Y}_B=\mathcal{Y}\cap B^-B/B$$
 
-으로 주어지는 $$Y^\circ$$의 Zariski 조밀 open subset이다. 일반적으로 $$Y_P^\circ$$의 차원은 $$P$$에 들어있지 않은 simple root의 개수와 같다. 곧 paving의 cell과 stratification의 stratum은 개수가 같으면서 차원은 서로 보완적인 방향으로 자란다.
+으로 주어지는 $$\mathcal{Y}$$의 Zariski 조밀 open subset이다. 일반적으로 $$\mathcal{Y}_P$$의 차원은 $$P$$에 들어있지 않은 simple root의 개수와 같다. 곧 paving의 cell과 stratification의 stratum은 개수가 같으면서 차원은 서로 보완적인 방향으로 자란다.
 
 이 분해가 단순한 기하학적 호기심이 아닌 이유는 Dale Peterson의 다음 정리 때문이다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm11">**정리 11 (Peterson [Pet])**</ins> 각 standard parabolic subgroup $$P\supseteq B$$에 대하여, stratum $$Y_P^\circ$$의 coordinate ring은 partial flag variety $$G/P$$의 small quantum cohomology ring과 동형이다.
+<ins id="thm11">**정리 11 (Peterson [Pet])**</ins> 각 standard parabolic subgroup $$P\supseteq B$$에 대하여, stratum $$\mathcal{Y}_P$$의 coordinate ring은 partial flag variety $$G/P$$의 small quantum cohomology ring과 동형이다.
 
-$$\mathbb{C}[Y_P^\circ]\cong qH^\ast(G/P)$$
+$$\mathbb{C}[\mathcal{Y}_P]\cong QH^\ast(G/P)$$
 
 </div>
 
-곧 flag variety 안의 단 하나의 subvariety가 모든 partial flag variety $$G/P$$의 quantum cohomology를 strata에 나누어 담고 있다는 것이다. 이 동형 아래에서 quantum parameter들은 $$Y_P^\circ$$ 위의 명시적인 regular function이 되며, stratum을 big Bruhat cell $$Bw_0B/B$$와 한 번 더 교차시킨 open subset은 quantum parameter들을 invert한 localization에 대응한다. 위 정리는 Peterson의 1997년 MIT 강의 [Pet]에서 발표되었으나 증명이 출판되지 않았고, $$P=B$$의 경우는 quantum Toda lattice를 매개로 한 Kostant [Kos96]의 결과와 동치이며, type A는 Rietsch [Rie]가, 일반형은 최근 Chow [Cho]가 증명을 완성했다. 우리는 이 정리를 ([\[거울대칭\] §Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem))에서 Marsh–Rietsch mirror theorem의 마지막 다리로 사용한다.
+곧 flag variety 안의 단 하나의 subvariety가 모든 partial flag variety $$G/P$$의 quantum cohomology를 strata에 나누어 담고 있다는 것이다. 이 동형 아래에서 quantum parameter들은 $$\mathcal{Y}_P$$ 위의 명시적인 regular function이 되며, stratum을 big Bruhat cell $$Bw_0B/B$$와 한 번 더 교차시킨 open subset $$\mathcal{Y}_P^\circ=\mathcal{Y}_P\cap Bw_0B/B$$은 quantum parameter들을 invert한 localization $$QH^\ast(G/P)[q^{-1}]$$에 대응한다. 위 정리는 Peterson의 1997년 MIT 강의 [Pet]에서 발표되었으나 증명이 출판되지 않았고, $$P=B$$의 경우는 quantum Toda lattice를 매개로 한 Kostant [Kos96]의 결과와 동치이며, type A는 Rietsch [Rie]가, 일반형은 최근 Chow [Cho]가 증명을 완성했다. 우리는 이 정리를 ([\[거울대칭\] §Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem))에서 Marsh–Rietsch mirror theorem의 마지막 다리로 사용한다.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk12">**참고 12**</ins> [명제 9](#prop9) 증명의 affine paving은 cohomology 계산의 출발점이기도 하다. Paving에 의해 $$Y^\circ$$의 cohomology는 cell들로 색인된 basis를 갖는 free module이고 홀수 차수에서 사라진다. 즉 [§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동하며, Insko–Tymoczko [IT]는 이를 바탕으로 Peterson variety의 intersection theory를 전개하였다.
+<ins id="rmk12">**참고 12**</ins> [명제 9](#prop9)의 affine paving은 cohomology 계산의 출발점이기도 하다. Paving에 의해 $$\mathcal{Y}$$의 cohomology는 cell들로 색인된 basis를 갖는 free module이고 홀수 차수에서 사라진다. 즉 [§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동하며, Insko–Tymoczko [IT]는 이를 바탕으로 Peterson variety의 intersection theory를 전개하였다.
 
 </div>
 
