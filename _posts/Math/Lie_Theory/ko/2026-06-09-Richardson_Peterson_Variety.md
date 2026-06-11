@@ -142,8 +142,7 @@ $$N=\sum_{i=1}^{n-1}E_{i,i+1}=\begin{pmatrix}0&1&&\\&0&\ddots&\\&&\ddots&1\\&&&0
 
 $$\mathfrak{z}_{\mathfrak{sl}_n}(N)=\span\{N,N^2,\ldots,N^{n-1}\}$$
 
-임을 알 수 있고, 이 공간의 차원이 정확히 $$n-1=\rank(\mathfrak{sl}_n)$$이므로 $$N$$은 regular이다. Jordan 표준형의 관점에서 보면 $$N$$은 Jordan block이 하나뿐인 nilpotent, 곧 partition $$(n)$$에 대응하는 원소이다. Jordan block의 수가 많을수록 centralizer가 커지므로, regular nilpotent는 nilpotent element 가운데 centralizer가 가장 작은 conjugacy class라 생각할'
-Mmmmmasdfasdf 수 있다.
+임을 알 수 있고, 이 공간의 차원이 정확히 $$n-1=\rank(\mathfrak{sl}_n)$$이므로 $$N$$은 regular이다. Jordan 표준형의 관점에서 보면 $$N$$은 Jordan block이 하나뿐인 nilpotent, 곧 partition $$(n)$$에 대응하는 원소이다. Jordan block의 수가 많을수록 centralizer가 커지므로, regular nilpotent는 nilpotent element 가운데 centralizer가 가장 작은 conjugacy class라 생각할 수 있다.
 
 일반적인 type에서 $$e=\sum_i e_i$$가 regular라는 것, 모든 regular nilpotent가 $$G$$의 adjoint action으로 서로 conjugate하다는 것, 그리고 그 centralizer가 언제나 abelian이라는 것은 Kostant [Kos]의 고전적 결과이다.
 
@@ -159,9 +158,11 @@ $$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}$$
 
 </div>
 
-위에서 살펴봤듯 
+위에서 살펴봤듯 $$X$$는 그 centralizer를 통해 variety의 크기에 영향을 미치며, 이 subspace $$H$$ 또한 마찬가지이다. 두 극단적인 상황으로, 우리는 $$H=\mathfrak{g}$$인 경우 조건 $$\Ad(g^{-1})X\in\mathfrak{g}$$가 자명하게 성립하여 Hessenberg variety는 $$G/B$$전체이다. 반대쪽 극단 $$H=\mathfrak{b}$$에서는 조건 $$\Ad(g^{-1})X\in\mathfrak{b}$$가 Borel subalgebra $$\Ad(g)\mathfrak{b}$$가 $$X$$를 포함한다는 말과 같다. 만일 $$X$$가 regular nilpotent라면 이 원소는 정확히 하나의 Borel subalgebra에만 속하므로, $$\mathcal{B}(X, \mathfrak{b})$$는 한 점으로 줄어든다. 
 
-$$X$$가 centralizer를 통해 한쪽 자유도를 통제했다면, 이름이 시사하듯 subspace $$H$$를 키우고 줄이는 것이 이 variety의 크기를 직접 통제하는 나머지 자유도이다. 두 극단이 경계를 못박는다. $$H=\mathfrak{g}$$이면 조건 $$\Ad(g^{-1})X\in\mathfrak{g}$$는 항상 성립하므로 $$\mathcal{B}(X,\mathfrak{g})=G/B$$ 전체이다. 반대쪽 극단 $$H=\mathfrak{b}$$에서는 조건 $$\Ad(g^{-1})X\in\mathfrak{b}$$가 Borel subalgebra $$\Ad(g)\mathfrak{b}$$가 $$X$$를 포함한다는 말과 같고, 이렇게 잘리는 $$\mathcal{B}(X,\mathfrak{b})$$를 $$X$$의 *Springer fiber*라 부른다. type $$A$$에서 이 조건은 한층 구체적이다. $$\Ad(g)\mathfrak{b}$$는 flag $$V_\bullet=g\cdot E_\bullet$$를 보존하는 연산자들의 집합이므로, $$\Ad(g^{-1})X\in\mathfrak{b}$$는 $$XV_i\subseteq V_i$$, 곧 "$$X$$가 그 flag를 보존한다"로 읽힌다. 특히 $$X$$가 regular nilpotent이면 $$X$$를 보존하는 complete flag은 단 하나뿐이므로 (동치로, regular nilpotent는 정확히 하나의 Borel subalgebra에 속하므로) Springer fiber $$\mathcal{B}(X,\mathfrak{b})$$는 한 점으로 줄어든다.
+
+
+, 이렇게 잘리는 $$\mathcal{B}(X,\mathfrak{b})$$를 $$X$$의 *Springer fiber*라 부른다. type $$A$$에서 이 조건은 한층 구체적이다. $$\Ad(g)\mathfrak{b}$$는 flag $$V_\bullet=g\cdot E_\bullet$$를 보존하는 연산자들의 집합이므로, $$\Ad(g^{-1})X\in\mathfrak{b}$$는 $$XV_i\subseteq V_i$$, 곧 "$$X$$가 그 flag를 보존한다"로 읽힌다. 특히 $$X$$가 regular nilpotent이면 $$X$$를 보존하는 complete flag은 단 하나뿐이므로 (동치로, regular nilpotent는 정확히 하나의 Borel subalgebra에 속하므로) Springer fiber $$\mathcal{B}(X,\mathfrak{b})$$는 한 점으로 줄어든다.
 
 우리가 관심을 두는 것은 이 두 극단 사이, 정확히는 한 점짜리 $$H=\mathfrak{b}$$에서 딱 한 걸음 더 간 경우이다. $$\mathfrak{b}$$ 위에 negative simple root 방향의 자유도를 하나씩 더한 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$ ($$f_i\in\mathfrak{g}_{-\alpha_i}$$)를 택하고 $$X$$로는 regular nilpotent를 넣자. 더한 자유도가 simple root의 개수, 곧 $$\rank(\mathfrak{g})$$개이므로 한 점에서 차원이 그만큼 자라리라 기대할 수 있고, 실제로 그렇게 된다는 것이 아래 [명제 9](#prop9)의 내용이다. 그 결과로 얻어지는 Hessenberg variety가 바로 *Peterson variety*이다.
 
