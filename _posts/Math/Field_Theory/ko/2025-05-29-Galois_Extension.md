@@ -11,6 +11,7 @@ sidebar:
 date: 2025-05-29
 last_modified_at: 2025-05-29
 weight: 8
+drift_needed: true
 
 ---
 
@@ -27,7 +28,7 @@ weight: 8
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1. 임의의 $$x\in E$$에 대하여, $$x$$의 minimal polynomial $$f$$가 주어졌다 하자. 집합 $$\Phi$$를 $$\mathbb{L}$$ 인에서의 $$f$$의 근들의 모임이라 하면 $$\Phi$$는 유한집합이다. 뿐민 아니라, 만일 $$\alpha\in\Phi$$라 하면 
+1. 임의의 $$x\in E$$에 대하여, $$x$$의 minimal polynomial $$f$$가 주어졌다 하자. 집합 $$\Phi$$를 $$\mathbb{L}$$ 안에서의 $$f$$의 근들의 모임이라 하면 $$\Phi$$는 유한집합이다. 뿐만 아니라, 만일 $$\alpha\in\Phi$$라 하면 
 
     $$0=u(0)=u(f(\alpha))=f(u(\alpha))$$
     
@@ -49,7 +50,7 @@ weight: 8
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> $$\overline{\mathbb{K}}$$의 두 원소 $$x,y$$들 고정하자. 다음이 성립한다. 
+<ins id="prop3">**명제 3**</ins> $$\overline{\mathbb{K}}$$의 두 원소 $$x,y$$를 고정하자. 다음이 성립한다. 
 
 1. $$x,y$$는 conjugate element들이다. 
 2. $$v(x)=y$$를 만족하는 적당한 $$\mathbb{K}$$-isomorphism $$v: \mathbb{K}(x) \rightarrow \mathbb{K}(y)$$이 존재한다. 
@@ -63,7 +64,7 @@ weight: 8
 
 $$f(y)=f(u(x))=u(f(x))=u(0)=0$$
 
-이므로 $$y$$의 minimal polynomial은 $$f$$를 나눈다. 같은 논리로 $$x$$의 minimal polynomial은 $$y$$의 minimal polynomial을 나누고 따라서 이들은 서로 겉다. 
+이므로 $$y$$의 minimal polynomial은 $$f$$를 나눈다. 같은 논리로 $$x$$의 minimal polynomial은 $$y$$의 minimal polynomial을 나누고 따라서 이들은 서로 같다. 
 
 한편 $$x,y$$가 같은 minimal polynomial $$f$$를 갖는다 하면 first isomorphism theorem으로부터 
 
@@ -90,7 +91,7 @@ $$\mathbb{K}(x)\cong \mathbb{K}[\x]/(f)\cong \mathbb{K}(y)$$
 <ins id="prop5">**명제 5**</ins> Algebraic extension $$\mathbb{L}/\mathbb{K}$$에 대하여, 다음이 모두 동치이다. 
 
 1. $$\mathbb{L}/\mathbb{K}$$가 quasi-Galois이다. 
-2. 암의의 $$x\in \mathbb{L}$$에 대하여, $$x$$의 ($$\overline{\mathbb{K}}$$에서의) conjugate들은 모두 $$\mathbb{L}$$에 속한다. 
+2. 임의의 $$x\in \mathbb{L}$$에 대하여, $$x$$의 ($$\overline{\mathbb{K}}$$에서의) conjugate들은 모두 $$\mathbb{L}$$에 속한다. 
 3. $$\overline{\mathbb{K}}$$의 임의의 $$\mathbb{K}$$-automorphism은 $$\mathbb{L}$$을 $$\mathbb{L}$$로 보낸다, 
 4. $$\mathbb{L}$$에서 $$\overline{\mathbb{K}}$$로의 임의의 $$\mathbb{K}$$-homomorphism은 $$\mathbb{L}$$로 들어간다. 
 5. $$\mathbb{L}$$은 어떠한 non-constant polynomial들의 family $$(f_i\in \mathbb{K}[\x])$$의 splitting field이다. 
@@ -133,7 +134,7 @@ $$f(\x)=\prod_{i=1}^d (\x- a_i), \qquad a_i\in \overline{\mathbb{K}}$$
 
 </details>
 
-위의 따름정리의 증명에서 볼 수 있듯 quasi-Galois extension $$\mathbb{L}/\mathbb{K}$$를 특징짓는 가장 중요한 성질은 임의의 $$\mathbb{K}$$-automorphism이 $$\mathbb{L}$$을 $$\mathbb{L}$$로 보년다는 것이다. 다음 명제도 이 사실로부터 자명하다. 
+위의 따름정리의 증명에서 볼 수 있듯 quasi-Galois extension $$\mathbb{L}/\mathbb{K}$$를 특징짓는 가장 중요한 성질은 임의의 $$\mathbb{K}$$-automorphism이 $$\mathbb{L}$$을 $$\mathbb{L}$$로 보낸다는 것이다. 다음 명제도 이 사실로부터 자명하다. 
 
 <div class="proposition" markdown="1">
 
@@ -159,7 +160,7 @@ $$u\left(\mathbb{K}\left(\bigcup_i\mathbb{L}_i\right)\right)=\mathbb{K}\left(\bi
 
 특히 $$\overline{\mathbb{K}}$$의 임의의 원소들의 집합 $$S$$에 대하여, 이를 포함하는 quasi-Galois extenson 중 가장 작은 것을 생각할 수 있다. 이는 정의에 의해, $$S$$의 각 원소들의 conjugate들을 모두 모은 후, 이들로 생성되는 $$\mathbb{K}$$의 extension이다. 이를 $$S$$에 의해 생성되는 quasi-Galois extension이라 부른다. 
 
-[정의 4](#dzef3)에서 우리는 quasi-Galois extension을 정의할 때, irreducible polynomial $$f$$가 일차식들의 곱으로 쪼개질 것을 요구했지만 이들이 서로 다를 필요는 없었다. Galois extension은 여기에 separable 조건을 추가하여 얻어진다. 
+[정의 4](#def4)에서 우리는 quasi-Galois extension을 정의할 때, irreducible polynomial $$f$$가 일차식들의 곱으로 쪼개질 것을 요구했지만 이들이 서로 다를 필요는 없었다. Galois extension은 여기에 separable 조건을 추가하여 얻어진다. 
 
 <div class="proposition" markdown="1">
 
@@ -188,7 +189,7 @@ $$(\sigma\cdot g)(\x)=\prod_{a\in S}(\x-\sigma(a))=\prod_{a\in S}(\x-a)$$
 
 거꾸로 셋째 조건을 가정하고 첫째 조건을 보이자. $$x\in\mathbb{L}$$이 $$\mathbb{K}$$에 속하지 않는다면 $$x$$를 다른 원소로 보내는 $$\sigma\in\Gamma$$가 존재함을 보여야 한다. $$x$$의 minimal polynomial을 $$f$$라 하면, $$x\not\in\mathbb{K}$$인 것으로부터 $$f$$는 2차 이상이고, 가정에 의해 
 
-$$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$S$ the set of comjugates of $x$ in $\overline{\mathbb{K}}$}$$
+$$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$S$ the set of conjugates of $x$ in $\overline{\mathbb{K}}$}$$
 
 로 쪼갤 수 있으며 한편 $$\mathbb{L}/\mathbb{K}$$는 quasi-Galois이므로 $$x$$를 자신과 다른 $$a\in S$$로 보내는 $$\overline{\mathbb{K}}$$의 $$\mathbb{K}$$-automorphism $$u$$가 존재하며 이는 [명제 5](#prop5)에 의해 $$\mathbb{L}$$의 $$\mathbb{K}$$-automorphism이다. 이로부터 원하는 결과를 얻는다.
 
@@ -246,7 +247,7 @@ $$\mathbb{M}/\mathbb{K}$$가 finite degree이므로 $$\mathbb{M}=\mathbb{K}(x_1,
 
 $$\Gal(\mathbb{L}/\mathbb{K})\rightarrow S_A$$
 
-이 유도된다. 일반적으로 이 homomorphism은 surjective일 필요가 없다. 즉 임의의 separable polynomial $$f$$의 근들 가운데 comjugate하지 않은 것들이 있을 수 있으며 이는 [명제 3](#prop3)에 의하여 이들 두 근 $$x,y$$가 서로 다른 minimal polynomial을 갖는 것과 동치이다. 한편 $$x,y$$가 $$f$$의 근이라면 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)로부터 이들의 minimal polynomial들은 각각 $$f$$를 나누며 따라서 $$x$$와 $$y$$는 서로 다른 $$f$$의 irreducible factor의 근이다. 이로부터 우리는 위의 injective homomorphism의 image가 어떻게 생겼는지까지 확인해줄 수 있다.
+이 유도된다. 일반적으로 이 homomorphism은 surjective일 필요가 없다. 즉 임의의 separable polynomial $$f$$의 근들 가운데 conjugate하지 않은 것들이 있을 수 있으며 이는 [명제 3](#prop3)에 의하여 이들 두 근 $$x,y$$가 서로 다른 minimal polynomial을 갖는 것과 동치이다. 한편 $$x,y$$가 $$f$$의 근이라면 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)로부터 이들의 minimal polynomial들은 각각 $$f$$를 나누며 따라서 $$x$$와 $$y$$는 서로 다른 $$f$$의 irreducible factor의 근이다. 이로부터 우리는 위의 injective homomorphism의 image가 어떻게 생겼는지까지 확인해줄 수 있다.
 
 한편 Galois extension $$\mathbb{L}/\mathbb{K}$$와, $$\mathbb{L}$$의 subextension인 또 다른 Galois extension $$\mathbb{M}/\mathbb{K}$$에 대하여, 우리는 [명제 1](#prop1)로부터 다음의 결과를 얻는다.
 
