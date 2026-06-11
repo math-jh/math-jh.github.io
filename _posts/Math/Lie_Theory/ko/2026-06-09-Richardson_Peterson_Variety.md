@@ -62,7 +62,7 @@ $$\ell(w)+\dim (G/P)-\ell(u)-\dim (G/P)=\ell(w)-\ell(u)$$
 
 그러나 차원이 맞는 것만으로 교집합이 비어있지 않다고 결론지을 수는 없다. 가령 [§Bruhat decomposition, ⁋예시 18](/ko/math/lie_theory/bruhat_decomposition#ex18)의 비교 불가능한 쌍 $$u=1423$$, $$w=2314$$를 생각하면, 이들의 길이가 같아 기대차원이 $$0$$차원임에도 불구하고, 이들의 교집합은 점들의 집합이 아니라 공집합이다. 실제로 무슨 일이 일어나는지 $$\Gr(2,4)$$에서 직접 살펴보자. $$X_{2314}$$의 점은 rank 조건 $$\dim(V\cap E_3)\geq2$$, 곧 $$V\subseteq E_3$$을 만족한다. 반면 opposite cell $$X^{1423}_\circ=B^-\cdot\span\{e_1,e_4\}$$의 점은 모두 $$e_4$$를 포함하며 (lower triangular 행렬은 $$e_4$$를 scalar배까지 고정한다), $$e_4\in V$$는 closed 조건이므로 closure $$X^{1423}$$에서도 유지된다. $$e_4\notin E_3$$이므로 두 요구는 양립할 수 없고, 두 variety는 차원이 충분한데도 서로 비껴간다.
 
-이러한 현상은 $$X_w$$와 $$X^u$$가 general position에 있는 임의의 subvariety들이 아니라, 둘 다 maximal torus $$T$$의 작용에 invariant인 특별한 위치의 subvariety들이라는 점에서 기인한다. 이러한 성질 때문에 이들의 교집합 $$X_w\cap X^u$$도 closed $$T$$-stable subvariety인데, 비어있지 않은 closed $$T$$-stable subvariety는 언제나 $$T$$-fixed point를 포함한다는 것이 알려져 있다. 그런데 $$G/P$$의 $$T$$-fixed point는 coordinate point $$vP$$ ($$v\in W^P$$)들 뿐이다. 이는 각 Bruhat cell $$\mathbb{A}^{\ell(v)}$$ 위에서 $$T$$는 nonzero weight들로 linear하게 작용하므로, cell마다 fixed point들이 원점 $$vP$$ 하나뿐이기 때문이다. 한편 $$vP\in X_w$$는 ([§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에 의해) $$v\leq w$$와 동치이고, 대칭적으로 $$vP\in X^u$$는 $$u\leq v$$와 동치이다. 따라서
+이러한 현상은 $$X_w$$와 $$X^u$$가 general position에 있는 임의의 subvariety들이 아니라, 둘 다 maximal torus $$T$$의 작용에 invariant인 특별한 위치의 subvariety들이라는 점에서 기인한다. 이러한 성질 때문에 이들의 교집합 $$X_w\cap X^u$$도 closed $$T$$-stable subvariety인데, 비어있지 않은 closed $$T$$-stable subvariety는 언제나 $$T$$-fixed point를 포함한다는 것이 알려져 있다 (Borel fixed point theorem, [Bri] 참조). 그런데 $$G/P$$의 $$T$$-fixed point는 coordinate point $$vP$$ ($$v\in W^P$$)들 뿐이다. 이는 각 Bruhat cell $$\mathbb{A}^{\ell(v)}$$ 위에서 $$T$$는 nonzero weight들로 linear하게 작용하므로, cell마다 fixed point들이 원점 $$vP$$ 하나뿐이기 때문이다. 한편 $$vP\in X_w$$는 ([§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에 의해) $$v\leq w$$와 동치이고, 대칭적으로 $$vP\in X^u$$는 $$u\leq v$$와 동치이다. 따라서
 
 $$X_w\cap X^u\neq\emptyset\iff\text{$u\leq v\leq w$인 $v\in W^P$가 존재}\iff u\leq w$$
 
@@ -174,15 +174,19 @@ $$H$$를 어느 방향으로 키울 수 있는지는 type $$A$$에서 [정의 6]
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7**</ins> 위에서 살펴본 type $$A_{n-1}$$의 예시를 살펴보자. 이 경우, $$G=\GL_n(\mathbb{C})$$이고 $$\mathfrak{b}$$는 upper triangular 행렬들의 공간이며, $$G$$의 Cartan subalgebra는 대각행렬들의 공간 $$\mathfrak{h}$$이다.[^1]
+<ins id="ex7">**예시 7**</ins> 위에서 살펴본 type $$A_{n-1}$$로 돌아가자. 이 경우, $$G=\GL_n(\mathbb{C})$$이고 $$\mathfrak{b}$$는 upper triangular 행렬들의 공간이며, $$\gl_n$$의 Cartan subalgebra는 대각행렬들의 공간 $$\mathfrak{h}$$이다.[^1]
 
-이제 $$H$$는 $$\ad(\mathfrak{b})$$-stable이므로 $$\ad(\mathfrak{h})$$-stable이기도 해야 한다. 이제 임의의 $$Y\in H$$와 임의의 대각행렬 $$\diag(t_1,\ldots, t_n)$$과의 bracket을 계산해보면 
+이제 $$H$$는 $$\ad(\mathfrak{b})$$-stable이므로 $$\ad(\mathfrak{h})$$-stable이기도 해야 한다. 임의의 $$Y\in H$$와 임의의 대각행렬 $$\diag(t_1,\ldots, t_n)$$과의 bracket을 계산해보면 
 
 $$\ad(\diag(t_1,\ldots, t_n))Y=[\diag(t_1,\ldots, t_n), Y]=((t_j-t_k)Y_{jk})_{1\leq j,k\leq n}$$
 
-이며, $$\ad(\mathfrak{h})$$-stability가 성립하려면 이것이 다시 $$H$$에 속해야 한다. 한편 
+이며, $$\ad(\mathfrak{h})$$-stability가 성립하려면 이것이 다시 $$H$$에 속해야 한다. 
 
- $$\mathfrak{h}$$-weight 분해에 의해 $$H$$는 자신이 포함하는 행렬 성분 자리들로 결정된다. 곧 $$H$$는 대각선 전체($$\mathfrak{h}\subseteq\mathfrak{b}\subseteq H$$)와 자신이 포함하는 elementary matrix $$E_{jk}$$들의 span이다. 어느 자리들이 들어올 수 있는지 보기 위해 upper triangular 방향과의 bracket을 계산하면, $$l\leq j$$와 $$k\leq m$$에 대하여
+한편, 위의 계산은 특히 $$\ad(\diag(t_1,\ldots, t_n))$$를 $$\gl_n$$ 위에서의 linear operator로 보았을 때, 이 linear operator가 $$\gl_n$$의 basis들 $$E_{jk}$$ 모두를 eigenvector들로 가지는 것을 보여준다. 이제 $$t$$를 generic하게 잡으면 eigenvalue $$t_j-t_k$$ ($$j\neq k$$)들이 $$0$$과도 서로와도 모두 달라지고, 따라서 이 operator에 invariant한 subspace $$H$$는 각 eigenspace와의 교집합들로 쪼개져 weight decomposition
+
+$$H=(H\cap \mathfrak{h})\oplus\bigoplus_{j\neq k}(H\cap \mathbb{C}E_{jk})$$
+
+이 성립한다. 따라서 $$H$$는 자신이 포함하는 행렬 성분의 위치들로 결정된다. 즉, $$H$$는 대각선 전체($$\mathfrak{h}\subseteq\mathfrak{b}\subseteq H$$)와 자신이 포함하는 elementary matrix $$E_{jk}$$들의 span이다. 이제 구체적으로 어느 성분들이 $$H$$에 들어올 수 있는지 보기 위해 upper triangular 방향과의 bracket을 계산하면, $$l\leq j$$와 $$k\leq m$$에 대하여
 
 $$[E_{lj},E_{jk}]=E_{lk}-\delta_{kl}E_{jj},\qquad[E_{jk},E_{km}]=E_{jm}-\delta_{jm}E_{kk}$$
 
@@ -190,23 +194,21 @@ $$[E_{lj},E_{jk}]=E_{lk}-\delta_{kl}E_{jj},\qquad[E_{jk},E_{km}]=E_{jm}-\delta_{
 
 $$H_h=\{\,Y\in\mathfrak{gl}_n\;\mid\;YE_i\subseteq E_{h(i)}\ \forall i\,\}=\{\,Y\;\mid\;Y_{jk}=0\ \text{whenever $j>h(k)$}\,\}$$
 
-이다 (역으로 모든 staircase가 $$\ad(\mathfrak{b})$$-stable함은 upper triangular 행렬을 양쪽에 곱하는 것이 staircase 모양을 보존하는 데에서 바로 확인된다). 예컨대 $$n=4$$에서 두 staircase
+이며, 그 역도 쉽게 확인할 수 있다. 예컨대 $$n=4$$에서 두 staircase
 
 $$\mathfrak{b}=H_{(1,2,3,4)}=\begin{pmatrix}\ast&\ast&\ast&\ast\\0&\ast&\ast&\ast\\0&0&\ast&\ast\\0&0&0&\ast\end{pmatrix},\qquad H_{(2,3,4,4)}=\begin{pmatrix}\ast&\ast&\ast&\ast\\\ast&\ast&\ast&\ast\\0&\ast&\ast&\ast\\0&0&\ast&\ast\end{pmatrix}$$
 
-는 각각 $$h(i)=i$$와 $$h(i)=\min(i+1,n)$$의 경우이고, 오른쪽은 수치선형대수에서 말하는 upper Hessenberg 행렬(첫 subdiagonal까지만 nonzero)이다. Hessenberg variety라는 이름이 여기서 왔다.
+는 각각 $$h(i)=i$$와 $$h(i)=\min(i+1,n)$$의 경우이다.
 
-이제 coset $$gB$$에 대응하는 flag를 $$V_\bullet=g\cdot E_\bullet$$ (즉 $$V_i=\span\{ge_1,\ldots,ge_i\}$$)라 하면, 임의의 $$X\in\mathfrak{gl}_n$$에 대하여
+이제 다시 flag variety의 언어로 돌아와서 coset $$gB$$에 대응하는 flag를 $$V_\bullet=g\cdot E_\bullet$$ (즉 $$V_i=\span\{ge_1,\ldots,ge_i\}$$)라 하면, 임의의 $$X\in\mathfrak{gl}_n$$에 대하여
 
 $$\Ad(g^{-1})X\in H_h\iff g^{-1}Xg\in H_h\iff XgE_i\subseteq gE_{h(i)}\iff XV_i\subseteq V_{h(i)}$$
 
-이 성립한다 (가운데 동치는 $$H_h$$의 정의식 양변에 $$g$$를 씌운 것이고, $$gE_i=V_i$$이다). 곧 type $$A$$의 Hessenberg variety는 $$X$$가 flag를 단계마다 $$h$$가 허용하는 만큼만 흘러내리게 한다는 조건으로 잘라낸 flag들의 variety이다.
-
-이 번역으로 두 극단 사이를 다시 보자. $$H_h=\mathfrak{b}$$는 $$h(i)=i$$의 경우로, 조건은 $$XV_i\subseteq V_i$$, 곧 $$X$$가 flag를 보존한다는 것이다. regular nilpotent $$N=\sum_iE_{i,i+1}$$이 보존하는 complete flag는 standard flag $$E_\bullet$$ 하나뿐이므로 ($$NV_i\subseteq V_i$$가 $$V_i=\ker N^i$$를 강제한다) 한 점이 나온다. 이 조건을 푸는 최소한의 방법은 flag가 정확히 한 칸씩만 흘러내리도록 허용하는 것, 곧 $$h(i)=i+1$$ ($$h(n)=n$$)이다. 이 때 $$H_h$$는 $$\mathfrak{b}$$에 subdiagonal 한 줄을 더한 staircase가 되는데, 새로 허용된 $$(i+1,i)$$ 자리는 정확히 root space $$\mathfrak{g}_{-\alpha_i}$$, 곧 negative simple root 방향이다.
+이 성립한다. 곧 type $$A$$의 Hessenberg variety는 $$X$$가 flag를 단계마다 $$h$$가 허용하는 만큼만 흘러내리게 한다는 조건으로 잘라낸 flag들의 variety이다.
 
 </div>
 
-이 그림은 일반적인 type에서도 그대로 성립한다. $$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$는 이미 모든 positive root 방향을 포함하므로, $$H$$를 $$\mathfrak{b}$$보다 키우는 일은 negative root 방향을 더하는 일일 수밖에 없다. 그런데 아무 방향이나 더할 수 있는 것은 아니다. positive root $$\alpha$$에 대해 $$\mathfrak{b}\oplus\mathfrak{g}_{-\alpha}$$가 $$\ad(\mathfrak{b})$$-stable일 필요충분조건은 $$\alpha$$가 simple인 것이기 때문이다. 실제로 $$\alpha$$가 simple이 아니면 positive root 두 개의 합 $$\alpha=\beta+\gamma$$로 쪼개지고, 이 때 $$[\mathfrak{g}_\beta,\mathfrak{g}_{-\alpha}]=\mathfrak{g}_{-\gamma}$$가 $$\mathfrak{b}\oplus\mathfrak{g}_{-\alpha}$$ 밖으로 샌다. 반면 $$\alpha$$가 simple이면 positive root $$\beta\neq\alpha$$에 대해 $$\beta-\alpha$$는 root가 아니거나 positive root이고 ($$\alpha$$는 positive root 두 개의 합으로 쪼개지지 않으므로 negative root일 수 없다), $$\beta=\alpha$$일 때는 $$[\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]\subseteq\mathfrak{h}$$이므로, 모든 bracket이 $$\mathfrak{b}\oplus\mathfrak{g}_{-\alpha}$$ 안에 떨어진다. 따라서 한 점짜리 $$H=\mathfrak{b}$$에서 출발해 키울 수 있는 최소 단위의 자유도는 정확히 negative simple root 방향 $$\mathfrak{g}_{-\alpha_i}$$들이며 (type $$A$$에서는 위의 subdiagonal 성분들), Peterson variety는 이 모든 방향으로 딱 한 걸음씩 간 $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$ ($$f_i\in\mathfrak{g}_{-\alpha_i}$$)를 택한다. 더한 자유도가 simple root의 개수, 곧 $$\rank(\mathfrak{g})$$개이므로 한 점에서 차원이 그만큼 자라리라 기대할 수 있고, 실제로 그렇게 된다는 것이 아래 [명제 9](#prop9)의 내용이다.
+[예시 7](#ex7)의 그림은 일반형에서도 그대로 성립한다. staircase가 $$\mathfrak{b}$$ 위로 더 채우는 자리들은 대각선 아래쪽, 곧 negative root 방향이다. 실제로 $$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$는 이미 모든 positive root 방향을 포함하므로, $$H$$를 $$\mathfrak{b}$$보다 키우는 일은 negative root 방향을 더하는 일일 수밖에 없다. 어느 방향이 가능한지는 예시에서처럼 $$\ad(\mathfrak{b})$$-stability가 결정한다. simple이 아닌 positive root $$\alpha=\beta+\gamma$$의 방향은 $$[\mathfrak{g}_\beta,\mathfrak{g}_{-\alpha}]=\mathfrak{g}_{-\gamma}$$를 통해 더 얕은 자리들을 함께 끌고 들어오는 반면, negative simple root 방향은 $$\mathfrak{b}\oplus\mathfrak{g}_{-\alpha_i}$$가 그 자체로 stable하다. 곧 $$\mathfrak{b}$$에서 한 칸씩 늘리는 최소 단위의 확장은 정확히 $$\mathfrak{g}_{-\alpha_i}$$들이고, type $$A$$에서는 위 그림의 subdiagonal 자리들이 이들이다. 이 모든 방향으로 딱 한 걸음씩 간 것이 Peterson variety의 $$H$$이다.
 
 <div class="definition" markdown="1">
 
@@ -219,6 +221,8 @@ $$Y^\circ=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 </div>
 
 이것이 Kostant–Peterson의 원래 정의 [Pet]이다. 정의가 여러 선택에 의존하는 것처럼 보이지만 사실상 유일하다. $$f_i$$의 선택은 $$\mathbb{C}f_i=\mathfrak{g}_{-\alpha_i}$$가 $$1$$차원이므로 $$H$$를 바꾸지 않고, $$e$$를 다른 regular nilpotent로 바꾸는 것은 ([정의 5](#def5) 직후 논의의 conjugacy에 의해) $$Y^\circ$$를 $$G/B$$ 안에서 translate할 뿐이다.
+
+$$H$$가 $$\mathfrak{b}$$에 더한 자유도는 simple root마다 하나씩, 총 $$\rank(\mathfrak{g})$$개이다. $$H=\mathfrak{b}$$가 한 점을 주었으므로 ([정의 6](#def6) 직후의 논의), Peterson variety의 차원은 한 점에서 그만큼 자라리라 기대할 수 있다. 실제로 그렇게 된다는 것이 다음 명제의 내용이다.
 
 <div class="proposition" markdown="1">
 
