@@ -97,7 +97,7 @@ Earlier we verified that $$\Omega^0(M)=C^\infty(M)$$. For any $$f\in C^\infty(M)
 
 <div class="proposition" markdown="1">
 
-<ins id="thm2">**Theorem 2**</ins> For a manifold $$M$$, there exists a unique degree $$1$$ anti-derivation $$d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$$ satisfying the following two conditions. ([##ref##]())
+<ins id="thm2">**Theorem 2**</ins> For a manifold $$M$$, there exists a unique degree $$1$$ anti-derivation $$d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$$ satisfying the following two conditions. (See **[War]** for a proof.)
 
 1. $$d^2=0$$,
 2. For any $$f\in\Omega^0(M)$$, $$df$$ coincides with the differential of $$f$$ as above.

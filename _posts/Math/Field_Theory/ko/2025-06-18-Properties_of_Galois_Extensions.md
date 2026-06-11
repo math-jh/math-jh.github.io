@@ -178,3 +178,109 @@ $$\lambda_i:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$
 
 ## 갈루아 코호몰로지
 
+Galois group은 단순한 group이 아니라 $$\mathbb{L}$$에, 특히 multiplicative group $$\mathbb{L}^\times$$에 작용하는 group이다. 이 작용이 담고 있는 산술적인 정보를 뽑아내는 표준적인 도구가 *Galois cohomology*인데, 이 글을 마치며 그 출발점에 있는 고전적인 정리인 Hilbert의 정리 90을 살펴본다. 이번 절에서 $$\mathbb{L}/\mathbb{K}$$는 finite degree Galois extension이고 $$G=\Gal(\mathbb{L}/\mathbb{K})$$이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def6">**정의 6**</ins> 함수 $$\varphi:G \rightarrow \mathbb{L}^\times$$가 *1-cocycle<sub>1-코사이클</sub>*이라는 것은 임의의 $$\sigma,\tau\in G$$에 대하여 다음의 식
+
+$$\varphi(\sigma\tau)=\varphi(\sigma)\cdot\sigma\bigl(\varphi(\tau)\bigr)$$
+
+이 성립하는 것이다. 특별히 어떤 $$c\in\mathbb{L}^\times$$에 대하여 $$\varphi(\sigma)=\sigma(c)/c$$의 꼴로 쓰여지는 1-cocycle을 *1-coboundary<sub>1-코바운더리</sub>*라 부른다.
+
+</div>
+
+우선 1-coboundary가 실제로 1-cocycle인 것을 확인하면
+
+$$\varphi(\sigma)\cdot\sigma(\varphi(\tau))=\frac{\sigma(c)}{c}\cdot\sigma\left(\frac{\tau(c)}{c}\right)=\frac{\sigma(c)}{c}\cdot\frac{\sigma\tau(c)}{\sigma(c)}=\frac{\sigma\tau(c)}{c}=\varphi(\sigma\tau)$$
+
+이다. 또, 1-cocycle들은 pointwise 곱셈에 대해 abelian group을 이루고 1-coboundary들은 그 subgroup을 이루므로 quotient group을 생각할 수 있으며, 이를 $$H^1(G,\mathbb{L}^\times)$$로 적는다. Hilbert의 정리 90은 이 group이 아무 정보도 담고 있지 않다는, 다소 김빠지지만 대단히 유용한 정리이다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm7">**정리 7 (Hilbert 90)**</ins> Finite degree Galois extension $$\mathbb{L}/\mathbb{K}$$에 대하여, 임의의 1-cocycle $$\varphi:G \rightarrow \mathbb{L}^\times$$는 1-coboundary이다. 즉 $$H^1(G,\mathbb{L}^\times)$$는 자명하다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$G$$의 원소들은 $$\mathbb{L}$$에서 $$\mathbb{L}$$로의 서로 다른 homomorphism들이므로, [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)의 Dedekind 정리에 의하여 $$\mathbb{L}$$-벡터공간 안에서 일차독립이다. $$\varphi$$의 값들은 모두 $$0$$이 아니므로, 일차결합
+
+$$\sum_{\tau\in G}\varphi(\tau)\,\tau$$
+
+는 zero map이 아니고, 따라서 적당한 $$x\in\mathbb{L}$$에 대하여
+
+$$b=\sum_{\tau\in G}\varphi(\tau)\,\tau(x)\neq0$$
+
+이다. 이제 임의의 $$\sigma\in G$$에 대하여, cocycle 조건을 $$\sigma(\varphi(\tau))=\varphi(\sigma)^{-1}\varphi(\sigma\tau)$$로 적고 계산하면
+
+$$\sigma(b)=\sum_{\tau\in G}\sigma(\varphi(\tau))\,\sigma\tau(x)=\varphi(\sigma)^{-1}\sum_{\tau\in G}\varphi(\sigma\tau)\,\sigma\tau(x)=\varphi(\sigma)^{-1}b$$
+
+이다. 마지막 등식은 $$\tau$$가 $$G$$ 전체를 움직일 때 $$\sigma\tau$$도 $$G$$ 전체를 움직이기 때문이다. 따라서 $$c=b^{-1}$$로 두면
+
+$$\varphi(\sigma)=\frac{b}{\sigma(b)}=\frac{\sigma(c)}{c}$$
+
+이므로 $$\varphi$$는 1-coboundary이다.
+
+</details>
+
+고전적인 형태의 Hilbert 90은 cyclic extension에 대한 것이다. $$G=\langle\sigma\rangle$$가 order $$n$$의 cyclic group이라 하고, $$x\in\mathbb{L}$$의 *norm*을
+
+$$N_{\mathbb{L}/\mathbb{K}}(x)=\prod_{i=0}^{n-1}\sigma^i(x)$$
+
+으로 정의하자. $$\sigma$$를 적용하면 인수들이 자리바꿈만 하므로 $$N_{\mathbb{L}/\mathbb{K}}(x)$$는 $$G$$-invariant이고, $$\mathbb{L}/\mathbb{K}$$가 Galois이므로 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)에 의하여 $$N_{\mathbb{L}/\mathbb{K}}(x)\in\mathbb{K}$$이다.
+
+<div class="proposition" markdown="1">
+
+<ins id="cor8">**따름정리 8**</ins> $$\mathbb{L}/\mathbb{K}$$가 finite degree Galois extension이고 $$G=\Gal(\mathbb{L}/\mathbb{K})=\langle\sigma\rangle$$가 cyclic이라 하자. 그럼 $$x\in\mathbb{L}^\times$$에 대하여 다음이 동치이다.
+
+1. $$N_{\mathbb{L}/\mathbb{K}}(x)=1$$.
+2. 적당한 $$y\in\mathbb{L}^\times$$가 존재하여 $$x=\sigma(y)/y$$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 둘째 조건을 가정하면
+
+$$N_{\mathbb{L}/\mathbb{K}}\bigl(\sigma(y)/y\bigr)=\prod_{i=0}^{n-1}\frac{\sigma^{i+1}(y)}{\sigma^i(y)}=\frac{\sigma^n(y)}{y}=1$$
+
+이다. 가운데 등식은 telescoping이고 마지막 등식은 $$\sigma^n=\id_\mathbb{L}$$ 때문이다.
+
+거꾸로 $$N_{\mathbb{L}/\mathbb{K}}(x)=1$$이라 가정하자. 함수 $$\varphi:G \rightarrow \mathbb{L}^\times$$를
+
+$$\varphi(\sigma^i)=\prod_{k=0}^{i-1}\sigma^k(x)\qquad(0\leq i\leq n-1)$$
+
+으로 정의하자. 여기서 $$i=0$$일 때는 빈 곱으로 $$\varphi(\id)=1$$이다. 이것이 1-cocycle임을 확인하자. $$0\leq a,b\leq n-1$$에 대하여
+
+$$\varphi(\sigma^a)\cdot\sigma^a\bigl(\varphi(\sigma^b)\bigr)=\prod_{k=0}^{a-1}\sigma^k(x)\cdot\prod_{k=0}^{b-1}\sigma^{a+k}(x)=\prod_{k=0}^{a+b-1}\sigma^k(x)$$
+
+이다. 만일 $$a+b\leq n-1$$이라면 이는 정의에 의해 $$\varphi(\sigma^{a+b})=\varphi(\sigma^a\sigma^b)$$이다. 만일 $$a+b\geq n$$이라면 $$\sigma^k=\sigma^{k-n}$$ ($$k\geq n$$)이므로
+
+$$\prod_{k=0}^{a+b-1}\sigma^k(x)=\prod_{k=0}^{n-1}\sigma^k(x)\cdot\prod_{k=n}^{a+b-1}\sigma^k(x)=N_{\mathbb{L}/\mathbb{K}}(x)\cdot\prod_{k=0}^{a+b-n-1}\sigma^k(x)=\varphi(\sigma^{a+b-n})$$
+
+이고, $$\sigma^a\sigma^b=\sigma^{a+b-n}$$이므로 역시 cocycle 조건이 성립한다. 마지막 등식에서 가정 $$N_{\mathbb{L}/\mathbb{K}}(x)=1$$이 사용되었다.
+
+이제 [정리 7](#thm7)에 의하여 $$\varphi$$는 1-coboundary이다. 즉 적당한 $$c\in\mathbb{L}^\times$$에 대하여 $$\varphi(\sigma^i)=\sigma^i(c)/c$$이고, 특히 $$i=1$$에서
+
+$$x=\varphi(\sigma)=\frac{\sigma(c)}{c}$$
+
+이므로 $$y=c$$로 두면 된다.
+
+</details>
+
+<div class="remark" markdown="1">
+
+<ins id="rmk9">**참고 9**</ins> [정의 6](#def6)의 1-cocycle은 [\[호몰로지 대수학\] §군 코호몰로지](/ko/math/homological_algebra/group_cohomology)에서 다루는 crossed homomorphism을 곱셈 표기로 옮긴 것이다. 즉 $$\mathbb{L}^\times$$를 $$G$$-module로 보면 $$H^1(G,\mathbb{L}^\times)$$는 군 코호몰로지의 $$H^1$$이고, [정리 7](#thm7)은 이것이 사라진다는 주장이며, [따름정리 8](#cor8)은 cyclic group의 코호몰로지 계산과 결합한 것이다. 한편 $$\mathbb{L}/\mathbb{K}$$가 infinite degree Galois extension인 경우에는 임의의 cocycle 대신 이 글에서 정의한 Krull topology에 대해 연속인 cocycle들을 사용해야 올바른 이론이 얻어지며, 이것이 이 글에서 위상구조를 공들여 만든 또 하나의 이유이다. 덧셈 버전, 즉 $$\mathbb{L}$$을 덧셈 group으로 보았을 때 $$H^1(G,\mathbb{L})$$이 사라진다는 것도 성립하는데, 이는 normal basis 정리와 관련이 있으므로 추후 필요할 때 다루기로 한다.
+
+</div>
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.  
+**[Ser]** J.-P. Serre. *Local Fields*. Graduate texts in mathematics. Springer, 1979.
+
+---
+
