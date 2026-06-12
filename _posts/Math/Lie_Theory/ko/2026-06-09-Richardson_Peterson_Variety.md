@@ -258,9 +258,7 @@ $$\sum_{j=1}^n\bigl(h(j)-j\bigr)=n-1$$
 
 $$\Pet_3=\{(V_1\subset V_2)\in \Fl_3\mid NV_1\subseteq V_2\}$$
 
-이다. 그럼 위에서 살펴봤듯, $$\dim_\mathbb{C}\Fl_3=3$$에서 조건 하나가 차원을 $$1$$ 깎아 $$\dim\Pet_3=2$$가 된다. 
-
-이제 이 surface가 지나는 coordinate flag $$E^w_\bullet$$ ($$w\in S_3$$, $$V_i=\span\{e_{w(1)},\ldots,e_{w(i)}\}$$)들은 $$Ne_{w(1)}\in\span\{e_{w(1)},e_{w(2)}\}$$을 만족하는 $$w$$, 즉
+이다. 그럼 위에서 살펴봤듯, $$\dim_\mathbb{C}\Fl_3=3$$에서 조건 하나가 차원을 $$1$$ 깎아 $$\dim\Pet_3=2$$가 된다. 그럼 Peterson variety의 차원과 $$\rank(\mathfrak{g})$$가 같으므로, 위의 설명에 따르면 Peterson variety $$\Pet_3$$은 $$2^2=4$개의 조각으로 나뉘어야 한다. 한편 $$\GL_3$$의 Bruhat decomposition을 생각하면, Bruhat cell은 $$w\in S_3$$에 의해 index되는 $$6$$개이다. 즉 $$6$$개의 cell들 가운데 Peterson variety의 affine paving을 정의하지 않는 것이 두 개 있다. 이러한 것이 어떤 것인지 살펴보기 위해 $$\Pet_3$$가 지나는 coordinate flag $$E^w_\bullet$$ ($$w\in S_3$$, $$V_i=\span\{e_{w(1)},\ldots,e_{w(i)}\}$$)들은 $$Ne_{w(1)}\in\span\{e_{w(1)},e_{w(2)}\}$$을 만족하는 $$w$$, 즉
 
 $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 
