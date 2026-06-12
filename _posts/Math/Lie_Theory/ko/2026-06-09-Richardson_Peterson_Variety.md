@@ -62,7 +62,7 @@ $$\ell(w)+\dim (G/P)-\ell(u)-\dim (G/P)=\ell(w)-\ell(u)$$
 
 그러나 차원이 맞는 것만으로 교집합이 비어있지 않다고 결론지을 수는 없다. 가령 [§Bruhat decomposition, ⁋예시 18](/ko/math/lie_theory/bruhat_decomposition#ex18)의 비교 불가능한 쌍 $$u=1423$$, $$w=2314$$를 생각하면, 이들의 길이가 같아 기대차원이 $$0$$차원임에도 불구하고, 이들의 교집합은 점들의 집합이 아니라 공집합이다. 실제로 무슨 일이 일어나는지 $$\Gr(2,4)$$에서 직접 살펴보자. $$X_{2314}$$의 점은 rank 조건 $$\dim(V\cap E_3)\geq2$$, 곧 $$V\subseteq E_3$$을 만족한다. 반면 opposite cell $$X^{1423}_\circ=B^-\cdot\span\{e_1,e_4\}$$의 점은 모두 $$e_4$$를 포함하며 (lower triangular 행렬은 $$e_4$$를 scalar배까지 고정한다), $$e_4\in V$$는 closed 조건이므로 closure $$X^{1423}$$에서도 유지된다. $$e_4\notin E_3$$이므로 두 요구는 양립할 수 없고, 두 variety는 차원이 충분한데도 서로 비껴간다.
 
-이러한 현상은 $$X_w$$와 $$X^u$$가 general position에 있는 임의의 subvariety들이 아니라, 둘 다 maximal torus $$T$$의 작용에 invariant인 특별한 위치의 subvariety들이라는 점에서 기인한다. 이러한 성질 때문에 이들의 교집합 $$X_w\cap X^u$$도 closed $$T$$-stable subvariety인데, 비어있지 않은 closed $$T$$-stable subvariety는 언제나 $$T$$-fixed point를 포함한다는 것이 알려져 있다 (Borel fixed point theorem, [Bri] 참조). 그런데 $$G/P$$의 $$T$$-fixed point는 coordinate point $$vP$$ ($$v\in W^P$$)들 뿐이다. 이는 각 Bruhat cell $$\mathbb{A}^{\ell(v)}$$ 위에서 $$T$$는 nonzero weight들로 linear하게 작용하므로, cell마다 fixed point들이 원점 $$vP$$ 하나뿐이기 때문이다. 한편 $$vP\in X_w$$는 ([§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에 의해) $$v\leq w$$와 동치이고, 대칭적으로 $$vP\in X^u$$는 $$u\leq v$$와 동치이다. 따라서
+이러한 현상은 $$X_w$$와 $$X^u$$가 general position에 있는 임의의 subvariety들이 아니라, 둘 다 maximal torus $$T$$의 작용에 invariant인 특별한 위치의 subvariety들이라는 점에서 기인한다. 이러한 성질 때문에 이들의 교집합 $$X_w\cap X^u$$도 closed $$T$$-stable subvariety인데, 비어있지 않은 closed $$T$$-stable subvariety는 언제나 $$T$$-fixed point를 포함한다는 것이 알려져 있다 (Borel fixed point theorem, [Bri] 참조). 그런데 $$G/P$$의 $$T$$-fixed point는 coordinate point $$vP$$ ($$v\in W^P$$)들 뿐이다 ([§Bruhat decomposition, ⁋명제 19](/ko/math/lie_theory/bruhat_decomposition#prop19)). 한편 $$vP\in X_w$$는 ([§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에 의해) $$v\leq w$$와 동치이고, 대칭적으로 $$vP\in X^u$$는 $$u\leq v$$와 동치이다. 따라서
 
 $$X_w\cap X^u\neq\emptyset\iff\text{$u\leq v\leq w$인 $v\in W^P$가 존재}\iff u\leq w$$
 
@@ -230,39 +230,37 @@ $$\mathcal{Y}=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 
 </div>
 
+이 명제의 증명은 생략하지만, 주장하는 affine paving 구조 자체는 기억할 필요가 있다. 핵심은 이 affine paving이 simple root들의 부분집합 $$\mathcal{P}(\Delta)$$로 index된다는 것으로, 가령 어떤 simple root 방향도 포함하지 않는 부분집합, 즉 공집합의 경우 $$\mathfrak{b}$$에 더해지는 방향이 없으므로 [정의 6](#def6) 이후의 논증에 의하여 이에 해당하는 affine space는 한 점이 된다. 그 위의 affine space들은 $$\Delta$$의 부분집합에 의해 결정되는 것들로, 이는 단순한 analogy가 아니라 이들의 위치관계 또한 실제로 $$\Delta$$의 부분집합이 결정한다. 
 
+정확히 말해, $$A\subseteq\Delta$$에 대응하는 조각은 $$A$$에 해당하는 simple root들이 정의하는 reflection들로 생성되는 Weyl group의 subgroup $$W_A$$에 대하여, $$W_A$$의 longest element $$w_A$$가 정의하는 Bruhat cell과의 교집합
 
+$$\mathcal{Y}\cap Bw_AB/B\cong \mathbb{A}^{\lvert A\rvert}$$
 
+으로, $$H$$가 $$\mathfrak{b}$$에 더한 자유도들 가운데 정확히 $$A$$ 방향의 것들만 활성화되는 조각이다. 뿐만 아니라, 이 index 아래에서 각 조각들의 closure 관계는 $$\Delta$$의 부분집합들이 이루는 Boolean lattice를 그대로 복제한다. 즉
 
-곧 비어있지 않은 조각 $$\mathcal{Y}\cap BwB/B$$들이 각각 affine space와 동형이고 $$\mathcal{Y}$$는 이들의 disjoint union이다. 이 때 비어있지 않은 조각은 simple root들의 부분집합 $$A\subseteq\Delta$$와 일대일대응되며, $$A$$에 대응하는 조각은 parabolic Weyl group $$W_A$$의 최장원소 $$w_A$$의 Bruhat cell과의 교집합
+$$\overline{\mathcal{Y}\cap Bw_AB/B}\;=\;\bigsqcup_{A'\subseteq A}\bigl(\mathcal{Y}\cap Bw_{A'}B/B\bigr)$$
 
-$$\mathcal{Y}\cap Bw_AB/B\cong\mathbb{A}^{\lvert A\rvert}$$
-
-이다. 특히, 가장 큰 조각 $$A=\Delta$$의 차원이 전체의 차원이 되어
-
-$$\dim \mathcal{Y}=\rank(\mathfrak{g})$$
-
-이다.
-
-
-
-이 색인은 [정의 8](#def8)의 구성과 정확히 호응한다. $$H$$를 만들 때 $$\mathfrak{b}$$에 simple root마다 자유도를 하나씩 더했는데, $$A$$-cell은 그 가운데 $$A$$ 방향의 자유도들만 활성화되는 곳이고, 차원 $$\lvert A\rvert$$가 그 개수와 일치한다 ([Tym]의 차원 공식에 $$\mathfrak{b}^-\cap H=\mathfrak{h}\oplus\bigoplus_i\mathfrak{g}_{-\alpha_i}$$를 대입하면, $$\Ad(w_A)$$가 부호를 뒤집는 simple root가 정확히 $$A$$의 원소들이어서 $$\alpha_i\in A$$인 방향만 차원에 기여한다). 양 극단을 보면, $$A=\emptyset$$의 조각은 자유도를 하나도 쓰지 않는 $$0$$-cell로, $$H=\mathfrak{b}$$였다면 유일했을 한 점 (standard flag $$eB$$, $$e\in\mathfrak{b}$$이므로 언제나 $$\mathcal{Y}$$의 점이다)이 그대로 들어앉은 것이다. 반대로 $$A=\Delta$$의 조각은 모든 자유도를 쓰는 big Bruhat cell과의 교집합 $$\mathcal{Y}\cap Bw_0B/B\cong\mathbb{A}^{\rank(\mathfrak{g})}$$으로, 최대 차원의 조각으로서 명제의 차원 $$\rank(\mathfrak{g})$$를 준다.
-
-결국 $$\mathcal{Y}$$는 simple root들의 부분집합으로 색인되는 $$2^{\rank(\mathfrak{g})}$$개의 affine cell로 이루어지고, 각 cell은 coordinate flag $$w_AB$$를 지난다. 이 조합론은 아래 [예시 10](#ex10)의 fixed point 목록에서 다시 만난다. type $$A_{n-1}$$에서는 $$\rank(\mathfrak{sl}_n)=n-1$$이므로 $$\dim \mathcal{Y}=n-1$$이며, [예시 10](#ex10)에서 $$\dim\Pet_3=2=3-1$$임을 chart 계산으로 직접 확인한다.
+이 성립한다. 실제로 이 closure는 $$H$$를 $$A$$ 방향으로만 키운 중간 단계의 Hessenberg variety $$\mathcal{B}(e,\,\mathfrak{b}\oplus\bigoplus_{i\in A}\mathbb{C}f_i)$$와 일치하며, 나아가 $$A$$가 생성하는 Levi subgroup의 Peterson variety와 동형이다 ([IT]). 즉, Peterson variety는 더 작은 Peterson variety들이 부분집합 순서로 포개진 구조를 가지며, 자유도를 하나도 쓰지 않는 한 점 $$B/B$$ ($$A=\emptyset$$)에서 big Bruhat cell과의 교집합인 가장 큰 조각 ($$A=\Delta$$)까지 그 사이의 모든 위치관계를 simple root들의 조합론이 지배한다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> [예시 7](#ex7)의 번역에서 Hessenberg 함수를 $$h=(2,3,\ldots,n,n)$$, 곧 $$h(i)=\min(i+1,n)$$으로 택하면, type $$A_{n-1}$$의 Peterson variety는 complete flag variety $$Fl_n=\GL_n(\mathbb{C})/B$$ 안에서
+<ins id="ex10">**예시 10**</ins> 이 구조를 앞서 살펴본 type $$A$$에서 예시로 살펴보자. [예시 7](#ex7)과 마찬가지로 Hessenberg function을 $$h(i)=\min(i+1, n)$$으로 택하면, $$H$$는 대각선 아래로 정확히 한 칸씩을 내리는 것이 허용되는 행렬들의 모임이며, 이 예시의 마지막 동치관계에서 우리는 Peterson variety가 complete flag variety $$\Fl_n=\GL_n(\mathbb{C})/B$$ 안에서
 
 $$\Pet_n=\{\,V_\bullet\mid NV_i\subseteq V_{i+1},\ i=1,\ldots,n-1\,\}$$
 
-로 주어진다. 그 차원은 $$\sum_{j=1}^n\bigl(h(j)-j\bigr)=n-1=\rank(\mathfrak{sl}_n)$$으로 [명제 9](#prop9)과 일치한다.
+로 주어진다는 것을 안다. 그 차원은 
 
-$$n=3$$에서 구체적으로, $$Ne_1=0$$, $$Ne_2=e_1$$, $$Ne_3=e_2$$이고 마지막 조건 $$NV_2\subseteq V_3=\mathbb{C}^3$$은 자동이므로
+$$\sum_{j=1}^n\bigl(h(j)-j\bigr)=n-1$$
 
-$$\Pet_3=\{(V_1\subset V_2)\in Fl_3\mid NV_1\subseteq V_2\}$$
+이며, 이는 $$\rank(\mathfrak{sl}_n)$$와 같으므로 [명제 9](#prop9)을 다시 확인할 수 있다.
 
-이다. $$\dim_\mathbb{C}Fl_3=3$$에서 조건 하나가 차원을 $$1$$ 깎아 $$\dim\Pet_3=2$$가 된다. 이 surface가 지나는 coordinate flag $$E^w_\bullet$$ ($$w\in S_3$$, $$V_i=\span\{e_{w(1)},\ldots,e_{w(i)}\}$$)들은 $$Ne_{w(1)}\in\span\{e_{w(1)},e_{w(2)}\}$$을 만족하는 $$w$$, 즉
+이제 각각의 cell을 보기 위해 더 구체적으로 $$n=3$$인 경우를 보자. $$Ne_1=0$$, $$Ne_2=e_1$$, $$Ne_3=e_2$$이고 마지막 조건 $$NV_2\subseteq V_3=\mathbb{C}^3$$은 자동이므로 위의 정의를 그대로 사용하면
+
+$$\Pet_3=\{(V_1\subset V_2)\in \Fl_3\mid NV_1\subseteq V_2\}$$
+
+이다. 그럼 위에서 살펴봤듯, $$\dim_\mathbb{C}\Fl_3=3$$에서 조건 하나가 차원을 $$1$$ 깎아 $$\dim\Pet_3=2$$가 된다. 
+
+이제 이 surface가 지나는 coordinate flag $$E^w_\bullet$$ ($$w\in S_3$$, $$V_i=\span\{e_{w(1)},\ldots,e_{w(i)}\}$$)들은 $$Ne_{w(1)}\in\span\{e_{w(1)},e_{w(2)}\}$$을 만족하는 $$w$$, 즉
 
 $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 
@@ -294,7 +292,11 @@ $$\mathbb{C}[\mathcal{Y}_P]\cong QH^\ast(G/P)$$
 
 </div>
 
-곧 flag variety 안의 단 하나의 subvariety가 모든 partial flag variety $$G/P$$의 quantum cohomology를 strata에 나누어 담고 있다는 것이다. 이 동형 아래에서 quantum parameter들은 $$\mathcal{Y}_P$$ 위의 명시적인 regular function이 되며, stratum을 big Bruhat cell $$Bw_0B/B$$와 한 번 더 교차시킨 open subset $$\mathcal{Y}_P^\circ=\mathcal{Y}_P\cap Bw_0B/B$$은 quantum parameter들을 invert한 localization $$QH^\ast(G/P)[q^{-1}]$$에 대응한다. 위 정리는 Peterson의 1997년 MIT 강의 [Pet]에서 발표되었으나 증명이 출판되지 않았고, $$P=B$$의 경우는 quantum Toda lattice를 매개로 한 Kostant [Kos96]의 결과와 동치이며, type A는 Rietsch [Rie]가, 일반형은 최근 Chow [Cho]가 증명을 완성했다. 우리는 이 정리를 ([\[거울대칭\] §Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem))에서 Marsh–Rietsch mirror theorem의 마지막 다리로 사용한다.
+곧 flag variety 안의 단 하나의 subvariety가 모든 partial flag variety $$G/P$$의 quantum cohomology를 strata에 나누어 담고 있다는 것이다. 이 동형 아래에서 quantum parameter들은 $$\mathcal{Y}_P$$ 위의 명시적인 regular function이 되며, stratum을 big Bruhat cell $$Bw_0B/B$$와 한 번 더 교차시킨 open subset $$\mathcal{Y}_P^\circ=\mathcal{Y}_P\cap Bw_0B/B$$은 quantum parameter들을 invert한 localization $$QH^\ast(G/P)[q^{-1}]$$에 대응한다. 우리는 이 정리를 ([\[거울대칭\] §Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem))에서 Marsh–Rietsch mirror theorem의 마지막 다리로 사용한다.
+
+이 동형이 말하는 바는 $$\operatorname{Spec}$$으로 보면 선명해진다. 정리는 stratum $$\mathcal{Y}_P$$가 ring $$QH^\ast(G/P)$$의 기하적 실현이라는 것인데, quantum parameter를 generic한 값 $$q_0\neq0$$에 고정해 보자. $$G/P=\Gr(k,n)$$의 경우 $$QH^\ast(\Gr(k,n))/(q-q_0)$$는 $$\binom{n}{k}$$개의 $$\mathbb{C}$$의 곱으로 분해되는 semisimple ring이고, 그 $$\operatorname{Spec}$$은 $$\binom{n}{k}$$개의 점이다. 정리는 이 점들이 추상적인 대수로만 머무는 것이 아니라 flag variety 안에 실제로 놓여 있다고 말한다. 정확히 stratum의 $$q=q_0$$ fiber가 그 점들이다. 거울대칭의 관점에서 이 점들은 superpotential $$W_{q_0}$$의 critical point들과 동일시되며 ([\[거울대칭\] §Marsh–Rietsch의 Plücker coordinate superpotential, ⁋명제 6](/ko/math/mirror_symmetry/marsh_rietsch_superpotential#prop6)), 이 동일시가 위에서 말한 거울정리의 다리이다.
+
+가장 작은 Grassmannian $$\mathbb{P}^1=\Gr(1,2)$$에서는 이 전부를 손으로 볼 수 있다. $$n=2$$에서는 Peterson 조건 $$NV_1\subseteq V_2=\mathbb{C}^2$$이 공허하여 $$\mathcal{Y}=\Fl_2=\mathbb{P}^1$$ 전체이고, stratum $$\mathcal{Y}_B$$는 opposite big cell과의 교집합 $$\mathbb{P}^1\setminus\{w_0B\}\cong\mathbb{A}^1$$이다. 한편 $$QH^\ast(\mathbb{P}^1)=\mathbb{C}[\sigma,q]/(\sigma^2-q)\cong\mathbb{C}[\sigma]$$ 역시 한 변수 다항식환이라 정리의 동형과 부합하고, 이 동형 아래에서 quantum parameter는 affine 좌표의 제곱 $$q=\sigma^2$$으로 실현된다. generic $$q_0$$의 fiber는 $$\sigma=\pm\sqrt{q_0}$$의 두 점, 곧 $$\binom{2}{1}=2$$개이고, $$q_0=0$$의 fiber는 한 점 $$B/B$$ 위에 길이 $$2$$로 앉은 double point로서 그 좌표환이 classical cohomology $$\mathbb{C}[\sigma]/(\sigma^2)=H^\ast(\mathbb{P}^1)$$이다. 곧 quantum에서 classical로의 퇴화까지 stratum 안에서 기하적으로 일어난다.
 
 <div class="remark" markdown="1">
 
@@ -318,19 +320,13 @@ $$\mathbb{C}[\mathcal{Y}_P]\cong QH^\ast(G/P)$$
 
 **[Kos63]** B. Kostant, *Lie group representations on polynomial rings*, Amer. J. Math. **85** (1963), 327--404.
 
-**[Kos96]** B. Kostant, *Flag manifold quantum cohomology, the Toda lattice, and the representation with highest weight $$\rho$$*, Selecta Math. (N.S.) **2** (1996), 43--91.
-
 **[Pet]** D. Peterson, Lecture notes, Massachusetts Institute of Technology, Spring 1997 (unpublished).
-
-**[Rie]** K. Rietsch, *Totally positive Toeplitz matrices and quantum cohomology of partial flag varieties*, J. Amer. Math. Soc. **16** (2003), 363--392.
 
 **[Tym]** J. S. Tymoczko, *Paving Hessenberg varieties by affines*, Selecta Math. (N.S.) **13** (2007), 353--367.
 
 **[Pre]** M. Precup, *Affine pavings of Hessenberg varieties for semisimple groups*, Selecta Math. (N.S.) **19** (2013), 903--922.
 
 **[IT]** E. Insko, J. Tymoczko, *Affine pavings of regular nilpotent Hessenberg varieties and intersection theory of the Peterson variety*, J. Combin. Theory Ser. A **187** (2022), 105572.
-
-**[Cho]** C. H. Chow, *On D. Peterson's presentation of quantum cohomology of $$G/P$$*, arXiv:2210.17382.
 
 ---
 [^1]: Cartan subalgebra를 나타내는 $$\mathfrak{h}$$는 [§근계, ⁋정의 4](/ko/math/lie_theory/root_systems#def4)에서부터 오는 것으로, 우리 논의에서의 $$H$$와는 <em-ko>무관한</em-ko> 것임을 유의하자. 
