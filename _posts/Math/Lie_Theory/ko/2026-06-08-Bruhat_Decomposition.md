@@ -430,6 +430,22 @@ $$X_{2413}=\{V\in\Gr(2,4)\mid\dim(V\cap E_2)\ge1\},$$
 
 </div>
 
+마지막으로, Bruhat 분해의 직접적인 귀결 하나를 기록해 둔다. Cell 분해는 $$G/P$$ 위 maximal torus $$T$$의 작용의 fixed point들을 완전히 분류해 준다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop19">**명제 19**</ins> Maximal torus $$T\subseteq B$$의 $$G/P$$ 위 작용에 대하여, fixed point는 정확히 coordinate point $$wP$$ ($$w\in W^P$$)들이며, 각 Bruhat cell $$X_w^\circ$$마다 하나씩 들어 있다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+우선 각 coordinate point가 fixed point이다. $$w$$의 대표원소 $$\dot w\in N_G(T)$$에 대하여 $$\dot w^{-1}t\dot w\in T\subseteq P$$이므로 $$t\cdot\dot wP=\dot w(\dot w^{-1}t\dot w)P=\dot wP$$이기 때문이다. 역으로 fixed point $$x$$를 잡으면, Bruhat 분해에 의해 $$x$$는 어떤 cell $$X_w^\circ=BwP/P$$에 속하고, $$T\subseteq B$$이므로 각 cell은 $$T$$-stable이다. 그런데 cell의 좌표화 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$에서 $$T$$는 각 좌표를 nontrivial character로 scale한다. type $$A$$에서는 이를 [예시 15](#ex15)의 행렬 좌표에서 직접 볼 수 있는데, $$t=\operatorname{diag}(t_1,\ldots,t_n)$$는 pivot이 열 $$p$$인 행의 자유 성분 (열 $$b$$ 자리)을 $$t_bt_p^{-1}$$배 한다 (각 행을 $$t$$로 옮긴 뒤 pivot을 다시 $$1$$로 정규화하면 된다). 일반형에서는 cell이 root subgroup들의 곱 $$\prod_\alpha U_\alpha$$로 좌표화되고 $$T$$-conjugation이 각 $$U_\alpha\cong\mathbb{G}_a$$ 위에 root $$\alpha$$로 작용한다 ([Spr] 참조). 어느 쪽이든 모든 character가 nontrivial하므로, 좌표가 모두 $$0$$인 원점, 곧 $$wP$$만이 그 cell의 fixed point이다.
+
+</details>
+
+특히 fixed point의 개수는 $$\lvert W^P\rvert$$로 유한하다. $$\Gr(2,4)$$에서는 [예시 15](#ex15)의 여섯 coordinate flag가 그 전부이며, complete flag variety $$\Fl_n$$에서는 좌표 flag $$E^w_\bullet$$ ($$w\in S_n$$)들 $$n!$$개가 전부이다.
+
 Schubert variety $$X_w\subseteq G/P$$는 일반적으로 singular하며, 그 singular locus 역시 더 작은 Schubert variety들의 union으로 표현된다. 한편 cohomology class $$[X_w]\in H^\ast(G/P)$$들은 명제 6 이후 논의한 대로 $$H^\ast(G/P)$$의 additive basis를 이루며, 이로부터 classical *Schubert calculus*라 불리는 intersection theory가 전개된다. 특히 Grassmannian의 경우 Schubert variety는 Young diagram으로 색인되고, 그들의 intersection number는 Littlewood–Richardson coefficient로 주어진다.
 
 ---
