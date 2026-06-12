@@ -37,40 +37,22 @@ node_modules/
 .claude/
 CLAUDE.md
 
-# Mirror Symmetry frontier 연구 노트 — local only (프론티어/추측, 공개 안 함)
-_posts/Math/Mirror_Symmetry/ko/2025-01-15-Quantum_K_Theory.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-20-Level_Structure.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-21-Quantum_K_Partial_Flag.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-22-Matrix_Factorization.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-23-Schubert_MF.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-24-K_Lagrangian_Class.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-25-Joyce_Safronov.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-26-Perverse_Schober.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-27-Cluster_Categorification.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-28-Quantum_Serre.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-29-Bethe_Ansatz.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-30-Coulomb_Branch.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-31-Three_D_Mirror.md
-
-# Mirror Symmetry frontier 연구 노트 (2026-06 확장분) — local only
-_posts/Math/Mirror_Symmetry/ko/2025-02-01-Cominuscule_Mirror.md
-_posts/Math/Mirror_Symmetry/ko/2025-02-02-Wild_Character_Variety.md
-_posts/Math/Mirror_Symmetry/ko/2025-02-03-Exotic_QDE.md
-_posts/Math/Mirror_Symmetry/ko/2025-02-04-Balancing_Operator.md
-_posts/Math/Mirror_Symmetry/ko/2025-02-05-Higher_Genus.md
-_posts/Math/Mirror_Symmetry/ko/2025-02-06-Cohomological_Hall_Algebra.md
-_posts/Math/Mirror_Symmetry/ko/2025-02-07-Flop_Formula.md
-
-# Mirror Symmetry Marsh-Rietsch stream — local only (라이브는 orthodox stream만 공개)
-_posts/Math/Mirror_Symmetry/ko/2025-01-04-Postnikov_Diagram_and_Plabic_Graph.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-06-Quantum_Pieri_Rule.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-07-Marsh_Rietsch_Superpotential.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-08-Cluster_Algebra.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-10-Cluster_Monomial_Basis.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-16-Newton_Okounkov_Body.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-17-Marsh_Rietsch_Mirror_Theorem.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-18-Schubert_Variety_Mirror.md
-_posts/Math/Mirror_Symmetry/ko/2025-01-19-Partial_Flag_Mirror.md
+# Mirror Symmetry — 연구 스트림(MR·frontier)은 전부 local only.
+# 파일명(날짜) 기반 ignore는 리네임 시 빠져나가는 사고가 있었으므로 (2026-06-13),
+# 디렉토리 전체를 ignore하고 classical(orthodox) 스트림만 명시적으로 whitelist한다.
+# 새 연구 글은 아무것도 안 해도 local only; 공개하려면 여기에 ! 항목을 추가할 것.
+_posts/Math/Mirror_Symmetry/**
+!_posts/Math/Mirror_Symmetry/ko/
+!_posts/Math/Mirror_Symmetry/en/
+!_posts/Math/Mirror_Symmetry/ko/2026-05-18-Mirror_Symmetry_Overview.md
+!_posts/Math/Mirror_Symmetry/ko/2026-05-19-Frobenius_Manifold.md
+!_posts/Math/Mirror_Symmetry/ko/2026-05-21-Dubrovin_Connection.md
+!_posts/Math/Mirror_Symmetry/ko/2026-05-24-Gauss_Manin_Connection.md
+!_posts/Math/Mirror_Symmetry/ko/2026-05-28-Givental_J_Function.md
+!_posts/Math/Mirror_Symmetry/en/2026-05-18-Mirror_Symmetry_Overview.md
+!_posts/Math/Mirror_Symmetry/en/2026-05-19-Frobenius_Manifold.md
+!_posts/Math/Mirror_Symmetry/en/2026-05-21-Dubrovin_Connection.md
+!_posts/Math/Mirror_Symmetry/en/2026-05-28-Givental_J_Function.md
 
 # Classical-math category landing pages — sealed until posts publish.
 # The posts (Analysis/Calculus/Number_Theory) are published:false, so in
