@@ -252,35 +252,43 @@ $$\Pet_n=\{\,V_\bullet\mid NV_i\subseteq V_{i+1},\ i=1,\ldots,n-1\,\}$$
 
 $$\sum_{j=1}^n\bigl(h(j)-j\bigr)=n-1$$
 
-이며, 이는 $$\rank(\mathfrak{sl}_n)$$와 같으므로 [명제 9](#prop9)을 다시 확인할 수 있다.
+이며, 이는 $$\rank(\mathfrak{sl}_n)$$와 같으므로 [명제 9](#prop9)를 다시 확인할 수 있다.
 
 이제 각각의 cell을 보기 위해 더 구체적으로 $$n=3$$인 경우를 보자. $$Ne_1=0$$, $$Ne_2=e_1$$, $$Ne_3=e_2$$이고 마지막 조건 $$NV_2\subseteq V_3=\mathbb{C}^3$$은 자동이므로 위의 정의를 그대로 사용하면
 
 $$\Pet_3=\{(V_1\subset V_2)\in \Fl_3\mid NV_1\subseteq V_2\}$$
 
-이다. 그럼 위에서 살펴봤듯, $$\dim_\mathbb{C}\Fl_3=3$$에서 조건 하나가 차원을 $$1$$ 깎아 $$\dim\Pet_3=2$$가 된다. 그럼 Peterson variety의 차원과 $$\rank(\mathfrak{g})$$가 같으므로, 위의 설명에 따르면 Peterson variety $$\Pet_3$$은 $$2^2=4$개의 조각으로 나뉘어야 한다. 한편 $$\GL_3$$의 Bruhat decomposition을 생각하면, Bruhat cell은 $$w\in S_3$$에 의해 index되는 $$6$$개이다. 즉 $$6$$개의 cell들 가운데 Peterson variety의 affine paving을 정의하지 않는 것이 두 개 있다. 이러한 것이 어떤 것인지 살펴보기 위해 $$\Pet_3$$가 지나는 coordinate flag $$E^w_\bullet$$ ($$w\in S_3$$, $$V_i=\span\{e_{w(1)},\ldots,e_{w(i)}\}$$)들은 $$Ne_{w(1)}\in\span\{e_{w(1)},e_{w(2)}\}$$을 만족하는 $$w$$, 즉
+이다. 그럼 위에서 살펴봤듯, $$\dim_\mathbb{C}\Fl_3=3$$에서 조건 하나가 차원을 $$1$$ 깎아 $$\dim\Pet_3=2$$가 된다. 그럼 Peterson variety의 차원과 $$\rank(\mathfrak{g})$$가 같으므로, 위의 설명에 따르면 Peterson variety $$\Pet_3$$은 $$2^2=4$$개의 조각으로 나뉘어야 한다. 한편 $$\GL_3$$의 Bruhat decomposition을 생각하면, Bruhat cell은 $$w\in S_3$$에 의해 index되는 $$6$$개이다. 즉 $$6$$개의 cell들 가운데 Peterson variety의 affine paving을 정의하지 않는 것이 두 개 있는데, 이들을 identify하기 위해 coordinate flag 
+
+$$E^w_\bullet:\qquad 0\subset \span\{e_{w(1)}\}\subset \span \{e_{w(1)}, e_{w(2)}\}\subset \span\{e_{w(1)}, e_{w(2)},e_{w(3)}\}=\mathbb{C}^3$$
+
+를 생각하면 이것이 $$\Pet_3$$과 속하기 위해서는 $$Ne_{w(1)}\in\span\{e_{w(1)},e_{w(2)}\}$$, 즉
 
 $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 
-의 네 개이다. 이들은 simple root 부분집합 $$A\subseteq\{\alpha_1,\alpha_2\}$$에 그 parabolic의 maximal length element $$w_A$$를 대응시킨 $$2^{n-1}=4$$개의 fixed point로, Peterson variety가 simple root들의 조합론을 기억하고 있음을 보여 준다.
+의 네 개만이 남는 것을 확인할 수 있다. 실제로, 빠진 두 원소 $$231, 312$$에 해당하는 Bruhat cell의 점들을 직접 적어준 후 $$\Pet_3$$과의 교집합을 생각하면 이것이 공집합임을 쉽게 확인할 수 있다. 
+
+위에서 구한 네 개의 flag들은 simple root 부분집합 $$A\subseteq\{\alpha_1,\alpha_2\}$$와, 이들이 정의하는 Weyl group $$W_A$$의 maximal length element $$w_A$$를 대응시킨 $$2^{n-1}=4$$개의 coordinate flag로, Peterson variety가 simple root들의 조합론을 기억하고 있음을 보여준다.
 
 </div>
 
-## Stratification
+한편 [명제 9](#prop9)의 핵심적인 아이디어는 $$G/B$$의 Bruhat decomposition과 $$\mathcal{Y}$$의 교집합을 취하여 $$\mathcal{Y}$$를 분해하는 것이었다. 그런데 우리는 이미 [§Bruhat decomposition, ⁋정리 8](/ko/math/lie_theory/bruhat_decomposition#thm8)에서 opposite Borel subgroup을 통한 decomposit[text](about:blank#blocked)ion을 살펴보았으므로 $$\mathcal{Y}\cap B^-wB/B$$를 통해 $$\mathcal{Y}$$의 성질을 탐구할 수도 있다. 
 
-[명제 9](#prop9)에서 우리는 $$\mathcal{Y}$$를 $$B$$쪽 Bruhat cell들로 잘라 affine paving을 얻었다. 이번에는 반대쪽, 곧 opposite Borel $$B^-$$의 Bruhat 분해로 $$\mathcal{Y}$$를 잘라 보자. 결과의 성격은 전혀 다르다. 조각들이 더 이상 affine space가 아닌 대신, 각 조각이 그 자체로 의미를 갖는 affine variety가 된다.
+결과의 성격은 전혀 다르다. 조각들이 더 이상 affine space가 아닌 대신, 각 조각이 그 자체로 의미를 갖는 affine variety가 된다. 이번에도 비어있지 않은 조각은 정확히 $$2^{\rank(\mathfrak{g})}$$개인데, 그 index마저 paving과 같다. 즉, 비어있지 않은 조각은 각 $$A\subseteq\Delta$$마다 같은 longest element $$w_A$$의 $$B^-$$쪽 Bruhat cell과의 교집합
 
-이번에도 비어있지 않은 조각은 정확히 $$2^{\rank(\mathfrak{g})}$$개이며, simple root들의 부분집합, 곧 standard parabolic subgroup $$P\supseteq B$$들로 색인되어 $$\mathcal{Y}$$의 stratification
+$$\mathcal{Y}\cap B^-w_AB/B$$
+
+로 주어지는 locally closed subvariety들이다 [Pet]. 이 때 부분집합 $$A\subseteq\Delta$$는 $$W_A$$를 Weyl group으로 갖는 standard parabolic subgroup $$B\subseteq P\subseteq G$$와 일대일대응하므로, 우리는 (곧 살펴볼 이유로) 이 조각을 $$\mathcal{Y}_P$$로 적어서 $$\mathcal{Y}$$의 stratification
 
 $$\mathcal{Y}=\bigsqcup_{P\supseteq B}\mathcal{Y}_P$$
 
-을 이룬다 [Pet]. 여기서 각 stratum $$\mathcal{Y}_P$$는 $$B^-$$쪽 Bruhat cell 하나와의 교집합으로 주어지는 locally closed subvariety이다. 양 극단을 보면 $$P=G$$의 stratum은 한 점 $$\{w_0B\}$$이고, $$P=B$$의 stratum은 opposite big cell과의 교집합
+을 얻는다. 양 극단을 보면 $$P=G$$ ($$A=\Delta$$, $$w_A=w_0$$)의 stratum은 한 점 $$\{w_0B\}$$이고, $$P=B$$ ($$A=\emptyset$$, $$w_A=e$$)의 stratum은 opposite big cell과의 교집합
 
 $$\mathcal{Y}_B=\mathcal{Y}\cap B^-B/B$$
 
-으로 주어지는 $$\mathcal{Y}$$의 Zariski 조밀 open subset이다. 일반적으로 $$\mathcal{Y}_P$$의 차원은 $$P$$에 들어있지 않은 simple root의 개수와 같다. 곧 paving의 cell과 stratification의 stratum은 개수가 같으면서 차원은 서로 보완적인 방향으로 자란다.
+으로 주어지는 $$\mathcal{Y}$$의 Zariski dense open subset이다. 일반적으로 $$\mathcal{Y}_P$$의 차원은 $$\lvert\Delta\setminus A\rvert$$, 곧 $$P$$에 들어있지 않은 simple root의 개수와 같다. 즉 paving의 cell과 stratification의 stratum은 같은 $$w_A$$에 매달린 두 조각으로, 개수가 같고 둘 다 점 $$w_AB$$를 담으면서 차원은 $$\lvert A\rvert$$와 $$\lvert\Delta\setminus A\rvert$$로 서로 보완적인 방향으로 자란다.
 
-이 분해가 단순한 기하학적 호기심이 아닌 이유는 Dale Peterson의 다음 정리 때문이다.
+이 분해가 단순히 $$B$$를 $$B^-$$으로 바꾼 것 이상의 의미를 갖는 이유는 다음 정리 때문이다.
 
 <div class="proposition" markdown="1">
 
