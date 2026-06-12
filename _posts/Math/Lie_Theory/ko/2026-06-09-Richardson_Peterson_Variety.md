@@ -226,7 +226,15 @@ $$\mathcal{Y}=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9 (Tymoczko [Tym], Precup [Pre], Insko–Tymoczko [IT])**</ins> Peterson variety $$\mathcal{Y}$$는 Bruhat 분해와의 교집합으로 *affine paving*된다. 곧 비어있지 않은 조각 $$\mathcal{Y}\cap BwB/B$$들이 각각 affine space와 동형이고 $$\mathcal{Y}$$는 이들의 disjoint union이다. 이 때 비어있지 않은 조각은 simple root들의 부분집합 $$A\subseteq\Delta$$와 일대일대응되며, $$A$$에 대응하는 조각은 parabolic Weyl group $$W_A$$의 최장원소 $$w_A$$의 Bruhat cell과의 교집합
+<ins id="prop9">**명제 9 (Tymoczko [Tym], Precup [Pre], Insko–Tymoczko [IT])**</ins> Peterson variety $$\mathcal{Y}$$는 Bruhat 분해와의 교집합으로 affine paving 구조를 이룬다. 즉, 각각의 $$\mathcal{Y}\cap BwB/B$$들이 각각 affine space와 isomorphic하며, $$\mathcal{Y}$$는 이들의 disjoint union이다. 특히, 이 구조 하에서 가장 큰 조각의 차원이 $$\rank(\mathfrak{g})$$가 되어 $$\mathcal{Y}$$의 차원 또한 $$\rank (\mathfrak{g})$$와 같다.
+
+</div>
+
+
+
+
+
+곧 비어있지 않은 조각 $$\mathcal{Y}\cap BwB/B$$들이 각각 affine space와 동형이고 $$\mathcal{Y}$$는 이들의 disjoint union이다. 이 때 비어있지 않은 조각은 simple root들의 부분집합 $$A\subseteq\Delta$$와 일대일대응되며, $$A$$에 대응하는 조각은 parabolic Weyl group $$W_A$$의 최장원소 $$w_A$$의 Bruhat cell과의 교집합
 
 $$\mathcal{Y}\cap Bw_AB/B\cong\mathbb{A}^{\lvert A\rvert}$$
 
@@ -236,7 +244,7 @@ $$\dim \mathcal{Y}=\rank(\mathfrak{g})$$
 
 이다.
 
-</div>
+
 
 이 색인은 [정의 8](#def8)의 구성과 정확히 호응한다. $$H$$를 만들 때 $$\mathfrak{b}$$에 simple root마다 자유도를 하나씩 더했는데, $$A$$-cell은 그 가운데 $$A$$ 방향의 자유도들만 활성화되는 곳이고, 차원 $$\lvert A\rvert$$가 그 개수와 일치한다 ([Tym]의 차원 공식에 $$\mathfrak{b}^-\cap H=\mathfrak{h}\oplus\bigoplus_i\mathfrak{g}_{-\alpha_i}$$를 대입하면, $$\Ad(w_A)$$가 부호를 뒤집는 simple root가 정확히 $$A$$의 원소들이어서 $$\alpha_i\in A$$인 방향만 차원에 기여한다). 양 극단을 보면, $$A=\emptyset$$의 조각은 자유도를 하나도 쓰지 않는 $$0$$-cell로, $$H=\mathfrak{b}$$였다면 유일했을 한 점 (standard flag $$eB$$, $$e\in\mathfrak{b}$$이므로 언제나 $$\mathcal{Y}$$의 점이다)이 그대로 들어앉은 것이다. 반대로 $$A=\Delta$$의 조각은 모든 자유도를 쓰는 big Bruhat cell과의 교집합 $$\mathcal{Y}\cap Bw_0B/B\cong\mathbb{A}^{\rank(\mathfrak{g})}$$으로, 최대 차원의 조각으로서 명제의 차원 $$\rank(\mathfrak{g})$$를 준다.
 
