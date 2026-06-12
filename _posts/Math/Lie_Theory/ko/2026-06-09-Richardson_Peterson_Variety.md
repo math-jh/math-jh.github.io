@@ -272,7 +272,7 @@ $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 
 </div>
 
-한편 [명제 9](#prop9)의 핵심적인 아이디어는 $$G/B$$의 Bruhat decomposition과 $$\mathcal{Y}$$의 교집합을 취하여 $$\mathcal{Y}$$를 분해하는 것이었다. 그런데 우리는 이미 [§Bruhat decomposition, ⁋정리 8](/ko/math/lie_theory/bruhat_decomposition#thm8)에서 opposite Borel subgroup을 통한 decomposit[text](about:blank#blocked)ion을 살펴보았으므로 $$\mathcal{Y}\cap B^-wB/B$$를 통해 $$\mathcal{Y}$$의 성질을 탐구할 수도 있다. 
+한편 [명제 9](#prop9)의 핵심적인 아이디어는 $$G/B$$의 Bruhat decomposition과 $$\mathcal{Y}$$의 교집합을 취하여 $$\mathcal{Y}$$를 분해하는 것이었다. 그런데 우리는 이미 [§Bruhat decomposition, ⁋정리 8](/ko/math/lie_theory/bruhat_decomposition#thm8)에서 opposite Borel subgroup을 통한 decomposition을 살펴보았으므로 $$\mathcal{Y}\cap B^-wB/B$$를 통해 $$\mathcal{Y}$$의 성질을 탐구할 수도 있다. 
 
 결과의 성격은 전혀 다르다. 조각들이 더 이상 affine space가 아닌 대신, 각 조각이 그 자체로 의미를 갖는 affine variety가 된다. 이번에도 비어있지 않은 조각은 정확히 $$2^{\rank(\mathfrak{g})}$$개인데, 그 index마저 paving과 같다. 즉, 비어있지 않은 조각은 각 $$A\subseteq\Delta$$마다 같은 longest element $$w_A$$의 $$B^-$$쪽 Bruhat cell과의 교집합
 
@@ -298,11 +298,13 @@ $$\mathbb{C}[\mathcal{Y}_P]\cong QH^\ast(G/P)$$
 
 </div>
 
-곧 flag variety 안의 단 하나의 subvariety가 모든 partial flag variety $$G/P$$의 quantum cohomology를 strata에 나누어 담고 있다는 것이다. 이 동형 아래에서 quantum parameter들은 $$\mathcal{Y}_P$$ 위의 명시적인 regular function이 되며, stratum을 big Bruhat cell $$Bw_0B/B$$와 한 번 더 교차시킨 open subset $$\mathcal{Y}_P^\circ=\mathcal{Y}_P\cap Bw_0B/B$$은 quantum parameter들을 invert한 localization $$QH^\ast(G/P)[q^{-1}]$$에 대응한다. 우리는 이 정리를 ([\[거울대칭\] §Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem))에서 Marsh–Rietsch mirror theorem의 마지막 다리로 사용한다.
+즉, flag variety 안의 단 하나의 subvariety가 모든 partial flag variety $$G/P$$의 quantum cohomology를 strata에 나누어 담고 있다는 것이다. 이 동형 아래에서 quantum parameter들은 $$\mathcal{Y}_P$$ 위의 명시적인 regular function이 되며, stratum을 big Bruhat cell $$Bw_0B/B$$와 한 번 더 교차시킨 open subset $$\mathcal{Y}_P^\circ=\mathcal{Y}_P\cap Bw_0B/B$$은 quantum parameter들을 invert한 localization $$QH^\ast(G/P)[q^{-1}]$$에 대응한다.
 
-이 동형이 말하는 바는 $$\operatorname{Spec}$$으로 보면 선명해진다. 정리는 stratum $$\mathcal{Y}_P$$가 ring $$QH^\ast(G/P)$$의 기하적 실현이라는 것인데, quantum parameter를 generic한 값 $$q_0\neq0$$에 고정해 보자. $$G/P=\Gr(k,n)$$의 경우 $$QH^\ast(\Gr(k,n))/(q-q_0)$$는 $$\binom{n}{k}$$개의 $$\mathbb{C}$$의 곱으로 분해되는 semisimple ring이고, 그 $$\operatorname{Spec}$$은 $$\binom{n}{k}$$개의 점이다. 정리는 이 점들이 추상적인 대수로만 머무는 것이 아니라 flag variety 안에 실제로 놓여 있다고 말한다. 정확히 stratum의 $$q=q_0$$ fiber가 그 점들이다. 거울대칭의 관점에서 이 점들은 superpotential $$W_{q_0}$$의 critical point들과 동일시되며 ([\[거울대칭\] §Marsh–Rietsch의 Plücker coordinate superpotential, ⁋명제 6](/ko/math/mirror_symmetry/marsh_rietsch_superpotential#prop6)), 이 동일시가 위에서 말한 거울정리의 다리이다.
+이 동형이 말하는 바는 $$\operatorname{Spec}$$으로 보면 선명해진다. $$QH^\ast(G/P)$$는 quantum parameter들의 다항식환 위에서 rank가 $$\dim_\mathbb{C}H^\ast(G/P)$$인 free module이므로, 정리의 동형은 quantum parameter들을 좌표로 하는 유한 사상 $$\mathcal{Y}_P\to\mathbb{A}^k$$ ($$k$$는 quantum parameter의 개수)을 준다. 이 사상의 $$q=q_0$$ fiber의 점 하나는 ring homomorphism $$QH^\ast(G/P)/(q-q_0)\to\mathbb{C}$$, 곧 그 $$q_0$$에서의 모든 quantum 곱셈 연산자에 고유값을 일관되게 배정하는 방법 하나에 해당한다. 즉 정리는 quantum cohomology의 스펙트럼이 추상적인 대수로 머무는 것이 아니라 flag variety 안에 실제 점들로 놓여 있다고 말한다.
 
 가장 작은 Grassmannian $$\mathbb{P}^1=\Gr(1,2)$$에서는 이 전부를 손으로 볼 수 있다. $$n=2$$에서는 Peterson 조건 $$NV_1\subseteq V_2=\mathbb{C}^2$$이 공허하여 $$\mathcal{Y}=\Fl_2=\mathbb{P}^1$$ 전체이고, stratum $$\mathcal{Y}_B$$는 opposite big cell과의 교집합 $$\mathbb{P}^1\setminus\{w_0B\}\cong\mathbb{A}^1$$이다. 한편 $$QH^\ast(\mathbb{P}^1)=\mathbb{C}[\sigma,q]/(\sigma^2-q)\cong\mathbb{C}[\sigma]$$ 역시 한 변수 다항식환이라 정리의 동형과 부합하고, 이 동형 아래에서 quantum parameter는 affine 좌표의 제곱 $$q=\sigma^2$$으로 실현된다. generic $$q_0$$의 fiber는 $$\sigma=\pm\sqrt{q_0}$$의 두 점, 곧 $$\binom{2}{1}=2$$개이고, $$q_0=0$$의 fiber는 한 점 $$B/B$$ 위에 길이 $$2$$로 앉은 double point로서 그 좌표환이 classical cohomology $$\mathbb{C}[\sigma]/(\sigma^2)=H^\ast(\mathbb{P}^1)$$이다. 곧 quantum에서 classical로의 퇴화까지 stratum 안에서 기하적으로 일어난다.
+
+일반적인 $$\Gr(k,n)$$에서도 마찬가지로 generic $$q_0$$의 fiber는 $$\binom{n}{k}$$개의 서로 다른 점으로 이루어진다. 이 유한 개의 점들은 또 하나의 명시적인 모델을 갖는데, 이들이 어떤 Laurent 다항식, 곧 superpotential의 critical point들로 실현된다는 것이 mirror symmetry의 내용 중 하나이며, 일반적인 $$G/P$$에 대해 이 대응을 구성하는 것은 현재도 활발히 연구되는 주제다 ([거울대칭](/ko/mirror_symmetry/) 참조).
 
 <div class="remark" markdown="1">
 
