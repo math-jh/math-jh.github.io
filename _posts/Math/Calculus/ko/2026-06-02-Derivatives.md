@@ -56,7 +56,7 @@ $$\frac{\sqrt{a+h} - \sqrt a}{h} = \frac{1}{\sqrt{a+h} + \sqrt a} \to \frac{1}{2
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$x \neq a$$에서 $$f(x) - f(a) = \dfrac{f(x)-f(a)}{x-a}\cdot(x-a)$$이다. $$x \to a$$일 때 우변의 첫 인자는 $$f'(a)$$로, 둘째 인자는 $$0$$으로 수렴하므로, 극한법칙 ([§함수와 극한, ⁋명제 3](/ko/math/calculus/functions_and_limits#prop3))에 의해 $$\lim_{x\to a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$이다. 따라서 $$\lim_{x\to a} f(x) = f(a)$$, 즉 $$f$$는 $$a$$에서 연속이다.
+$$x \neq a$$에서 $$f(x) - f(a) = \dfrac{f(x)-f(a)}{x-a}\cdot(x-a)$$이다. $$x \to a$$일 때 우변의 첫 인자는 $$f'(a)$$로, 둘째 인자는 $$0$$으로 수렴하므로, 극한법칙 ([§함수와 극한, ⁋명제 4](/ko/math/calculus/functions_and_limits#prop4))에 의해 $$\lim_{x\to a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$이다. 따라서 $$\lim_{x\to a} f(x) = f(a)$$, 즉 $$f$$는 $$a$$에서 연속이다.
 
 </details>
 

@@ -35,7 +35,7 @@ $$\lim_{x \to a} f(x) = f(a)$$
 
 ## 연속함수의 연산
 
-극한법칙 ([§함수와 극한, ⁋명제 3](/ko/math/calculus/functions_and_limits#prop3))에서 곧바로 다음이 따른다.
+극한법칙 ([§함수와 극한, ⁋명제 4](/ko/math/calculus/functions_and_limits#prop4))에서 곧바로 다음이 따른다.
 
 <div class="proposition" markdown="1">
 

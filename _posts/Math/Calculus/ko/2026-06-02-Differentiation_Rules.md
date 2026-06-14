@@ -38,7 +38,7 @@ $$(fg)'(a) = f'(a)\,g(a) + f(a)\,g'(a)$$
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h}\,g(a+h) + f(a)\,\frac{g(a+h)-g(a)}{h}$$
 
-$$h \to 0$$일 때 첫 항의 차분몫은 $$f'(a)$$로, $$g(a+h)$$는 $$g$$의 연속성 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2))에 의해 $$g(a)$$로 수렴한다. 둘째 항의 차분몫은 $$g'(a)$$로 수렴한다. 극한법칙 ([§함수와 극한, ⁋명제 3](/ko/math/calculus/functions_and_limits#prop3))에 의해 합은 $$f'(a)g(a) + f(a)g'(a)$$로 수렴한다.
+$$h \to 0$$일 때 첫 항의 차분몫은 $$f'(a)$$로, $$g(a+h)$$는 $$g$$의 연속성 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2))에 의해 $$g(a)$$로 수렴한다. 둘째 항의 차분몫은 $$g'(a)$$로 수렴한다. 극한법칙 ([§함수와 극한, ⁋명제 4](/ko/math/calculus/functions_and_limits#prop4))에 의해 합은 $$f'(a)g(a) + f(a)g'(a)$$로 수렴한다.
 
 </details>
 
