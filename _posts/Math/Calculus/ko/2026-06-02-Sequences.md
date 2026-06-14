@@ -65,7 +65,7 @@ $$a_n + b_n \to A + B, \qquad a_n b_n \to AB, \qquad \frac{a_n}{b_n} \to \frac{A
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-합만 보인다. 임의의 $$\varepsilon > 0$$에 대해 $$\varepsilon/2$$에 대응하는 $$N_1, N_2$$를 각각 잡고 $$N = \max(N_1, N_2)$$로 두면, $$n \geq N$$일 때 $$\lvert (a_n + b_n) - (A+B)\rvert \leq \lvert a_n - A\rvert + \lvert b_n - B\rvert < \varepsilon$$이다. 곱과 몫은 명제 2의 유계성을 써서 함수극한의 경우 ([§함수와 극한, ⁋명제 3](/ko/math/calculus/functions_and_limits#prop3))와 같은 방식으로 보인다.
+합만 보인다. 임의의 $$\varepsilon > 0$$에 대해 $$\varepsilon/2$$에 대응하는 $$N_1, N_2$$를 각각 잡고 $$N = \max(N_1, N_2)$$로 두면, $$n \geq N$$일 때 $$\lvert (a_n + b_n) - (A+B)\rvert \leq \lvert a_n - A\rvert + \lvert b_n - B\rvert < \varepsilon$$이다. 곱과 몫은 명제 2의 유계성을 써서 함수극한의 경우 ([§함수와 극한, ⁋명제 4](/ko/math/calculus/functions_and_limits#prop4))와 같은 방식으로 보인다.
 
 </details>
 
