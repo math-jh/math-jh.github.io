@@ -6,15 +6,31 @@
 \usetikzlibrary{arrows.meta}
 \begin{document}
 
-%% Spectrum/Peterson 동형: flag y = character = evaluation (Richardson_Peterson_Variety-1.png)
-\begin{tikzcd}[row sep=2.8em, column sep=3.6em]
-\mathbb{C}[q] \arrow[r, hook] \arrow[d, "\operatorname{ev}_{q_0}"'] & QH^\ast(G/P) \arrow[r, "\Phi", "\sim"'] \arrow[d, "\chi_y" description] & \mathbb{C}[\mathcal{Y}^\vee_P] \arrow[d, "\operatorname{ev}_y"] \\
-\mathbb{C} \arrow[r, equal] & \mathbb{C} \arrow[r, equal] & \mathbb{C}
+%% (Richardson_Peterson_Variety-3.png) 앞쪽 commutative square = q_0 위 fiber
+\begin{tikzcd}[row sep=2.6em, column sep=3.4em]
+\mathbb{C}[q] \arrow[r, hook] \arrow[d, "\operatorname{ev}_{q_0}"'] & QH^\ast(G/P) \arrow[d, "\chi_y"] \\
+\mathbb{C} \arrow[r, equal] & \mathbb{C}
 \end{tikzcd}
 
 \end{document}
 
 %% ===== 이전 다이어그램 보관 (archive; \end{document} 이후라 컴파일되지 않음) =====
+%% (Richardson_Peterson_Variety-4.png) Spectrum/Peterson 동형 full 2x3
+%% \begin{tikzcd}[row sep=2.8em, column sep=3.6em]
+%% \mathbb{C}[q] \arrow[r, hook] \arrow[d, "\operatorname{ev}_{q_0}"'] & QH^\ast(G/P) \arrow[r, "\Phi", "\sim"'] \arrow[d, "\chi_y" description] & \mathbb{C}[\mathcal{Y}^\vee_P] \arrow[d, "\operatorname{ev}_y"] \\
+%% \mathbb{C} \arrow[r, equal] & \mathbb{C} \arrow[r, equal] & \mathbb{C}
+%% \end{tikzcd}
+%%
+%% (Richardson_Peterson_Variety-1.png) A,B,C 삼각형
+%% \begin{tikzcd}[row sep=2.6em, column sep=3em]
+%% A \arrow[rr, "\varphi"] & & B \\  & \mathbb{C} \arrow[ul] \arrow[ur] &
+%% \end{tikzcd}
+%%
+%% (Richardson_Peterson_Variety-2.png) 위 삼각형의 Spec 버전
+%% \begin{tikzcd}[row sep=2.6em, column sep=3em]
+%% \operatorname{Spec}A \arrow[dr] & & \operatorname{Spec}B \arrow[ll, "\operatorname{Spec}\varphi"'] \arrow[dl] \\  & \operatorname{Spec}\mathbb{C} &
+%% \end{tikzcd}
+%%
 %% Hasse diagram of Bruhat order for Gr(2,4) (Bruhat_Decomposition-1.png)
 \begin{tikzpicture}[
     scale=1.3,
