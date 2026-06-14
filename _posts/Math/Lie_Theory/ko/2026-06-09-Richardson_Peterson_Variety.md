@@ -302,13 +302,11 @@ $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 어쨌든 핵심적인 것은 Langlands dual flag variety $$G^\vee/B^\vee$$ 안의 하나의 subvariety $$\mathcal{Y}^\vee$$가 모든 partial flag variety $$G/P$$의 quantum cohomology 데이터를 모두 담고 있다는 것이다. 즉, 위의 isomorphism 하에서 quantum parameter들은 $$\mathcal{Y}^\vee_P$$ 위의 명시적인 regular function이며, 뿐만 아니라 이를 big Bruhat cell $$B^\vee w_0B^\vee/B^\vee$$로 잘라내는 것이 $$q$$의 non-vanishing locus를 보는 것과 정확히 같아지게 되며, 따라서 이 영역에서 coordinate ring을 보는 것은 quantum parameter들을 invert한 localization $$QH^\ast(G/P)[q^{-1}]$$을 보는 것과 정확히 같게 된다. 
 
-이러한 기하학적 해석을 더 밀고가기 위해, 우선 $$QH^\ast(G/P)$$는 quantum parameter들의 coordinate ring $$\mathbb{C}[q_1,\ldots, q_k]$$ 위에서 (module로서는) rank $$\dim_\mathbb{C}H^\ast(G/P)$$ free module로 나온다는 점을 기억하자. 그럼 inclusion $$\mathbb{C}[q_1,\ldots, q_k]\hookrightarrow QH^\ast(G/P)$$는 기하적으로는 위의 정리에 의해 $$\mathcal{Y}^\vee_P$$에서 $$\Spec \mathbb{C}[q_1,\ldots, q_k]\cong\mathbb{A}^k$$로의 finite morphism을 주며, 이는 위의 rank $$N=\dim_\mathbb{C}H^\ast(G/P)$$만큼의 finite morphism을 쭈ㅗ 
+이러한 기하학적 해석을 더 밀고가기 위해, 우선 $$QH^\ast(G/P)$$는 quantum parameter들의 coordinate ring $$\mathbb{C}[q]$$ 위에서 (module로서는) rank $$\dim_\mathbb{C}H^\ast(G/P)$$ free module로 나온다는 점을 기억하자. 그럼 inclusion $$\mathbb{C}[q]\hookrightarrow QH^\ast(G/P)$$는 기하적으로는 위의 정리에 의해 $$\mathcal{Y}^\vee_P$$에서 $$\Spec \mathbb{C}[q]\cong\mathbb{A}^k$$로의 finite morphism을 주며, 이는 위의 rank $$N=\dim_\mathbb{C}H^\ast(G/P)$$만큼의 finite morphism을 준다. 따라서 generic한 $$q=q_0$$에서의 fiber는 ring homomorphism
 
-포함 $\mathbb{C}[q]\hookrightarrow QH^\ast(G/P)$가 $\operatorname{Spec}$에서 $\mathcal Y^\vee_P=\operatorname{Spec}QH^\ast \to \operatorname{Spec}\mathbb{C}[q]=\mathbb A^k$ ("그 점에서의 quantum parameter 값 읽기")를 준다. 유한 rank free module이면 module-finite, 곧 finite morphism이고 그 **차수가 rank $N$**이다. 따라서 각 fiber는 길이 $N$:
+$$QH^\ast(G/P)/(q-q_0)\to\mathbb{C},$$
 
-
-
-이므로, 정리의 동형은 quantum parameter들을 좌표로 하는 유한 사상 $$\mathcal{Y}^\vee_P\to\mathbb{A}^k$$ ($$k$$는 quantum parameter의 개수)을 준다. 이 사상의 $$q=q_0$$ fiber의 점 하나는 ring homomorphism $$QH^\ast(G/P)/(q-q_0)\to\mathbb{C}$$, 곧 그 $$q_0$$에서의 모든 quantum 곱셈 연산자에 고유값을 일관되게 배정하는 방법 하나에 해당한다. 즉 정리는 quantum cohomology의 스펙트럼이 추상적인 대수로 머무는 것이 아니라 flag variety 안에 실제 점들로 놓여 있다고 말한다.
+곧 그 $$q_0$$에서의 모든 quantum product operator에 고유값을 일관되게 배정하는 방법 하나에 해당한다. 즉 정리는 quantum cohomology의 스펙트럼이 추상적인 대수로 머무는 것이 아니라 flag variety 안에 실제 점들로 놓여 있다고 말한다.
 
 가장 작은 Grassmannian $$\mathbb{P}^1=\Gr(1,2)$$에서는 이 전부를 손으로 볼 수 있다. $$n=2$$에서는 Peterson 조건 $$NV_1\subseteq V_2=\mathbb{C}^2$$이 공허하여 $$\mathcal{Y}=\Fl_2=\mathbb{P}^1$$ 전체이고, stratum $$\mathcal{Y}_B$$는 opposite big cell과의 교집합 $$\mathbb{P}^1\setminus\{w_0B\}\cong\mathbb{A}^1$$이다. 한편 $$QH^\ast(\mathbb{P}^1)=\mathbb{C}[\sigma,q]/(\sigma^2-q)\cong\mathbb{C}[\sigma]$$ 역시 한 변수 다항식환이라 정리의 동형과 부합하고, 이 동형 아래에서 quantum parameter는 affine 좌표의 제곱 $$q=\sigma^2$$으로 실현된다. generic $$q_0$$의 fiber는 $$\sigma=\pm\sqrt{q_0}$$의 두 점, 곧 $$\binom{2}{1}=2$$개이고, $$q_0=0$$의 fiber는 한 점 $$B/B$$ 위에 길이 $$2$$로 앉은 double point로서 그 좌표환이 classical cohomology $$\mathbb{C}[\sigma]/(\sigma^2)=H^\ast(\mathbb{P}^1)$$이다. 곧 quantum에서 classical로의 퇴화까지 stratum 안에서 기하적으로 일어난다.
 
