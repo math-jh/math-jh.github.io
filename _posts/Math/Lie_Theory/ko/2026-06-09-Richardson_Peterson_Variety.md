@@ -300,13 +300,27 @@ $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 이 정리는 Peterson의 1997년 MIT lecture에서 소개된 것으로, 별도의 출판본은 없지만 [강의노트](https://math.soimeme.org/~arunram/Resources/PetersonGmodBcourse1997.pdf) 등에서 그 증명을 찾아볼 수 있다. 다만 우리가 주로 살펴보던 Grassmannian의 경우, $$\GL_n$$은 Langlands self-dual이므로 $$G\cong G^\vee$$가 되어 이 duality가 잘 보이지는 않는다. 
 
+우리는 [§Borel subgroup, ⁋정의 12](/ko/math/lie_theory/borel_subgroup#def12)에서 flag variety를 도입한 후, 지금까지 대수기하의 언어를 아주 본격적으로 사용하지는 않았지만, 이 정리의 정신을 이해하기 위해서는 이를 더 이상 미룰 수 없다. 핵심적인 것은 대수기하학에서 finitely generated commutative $$\mathbb{C}$$-algebra $$A$$를 그 자체로 $$\mathbb{C}$$ 위의 기하적인 공간 $$\Spec A$$으로, $$A$$는 그 공간 위의 함수들의 ring으로 해석하는 방식이다. 이 사전에서, 공간 $$\Spec A$$의 각 점들은 $$A$$의 maximal ideal에 대응되며, ring homomorphism $$A\rightarrow B$$는 기하적인 함수 $$\Spec B\rightarrow \Spec A$$에 대응된다. 중요한 특수한 케이스는 $$A=\mathbb{C}$$일 때로, 이 경우 $$\Spec \mathbb{C}$$는 한 점이며, 
+
+
+히고, $$A$$는 그 위의 함수들의 환(좌표환)이 된다. 이때 공간의 점들은 $$A$$의 maximal ideal들, 동등하게 $$\mathbb{C}$$로의 $$\mathbb{C}$$-algebra homomorphism $$A\to\mathbb{C}$$들과 일대일대응하며 (한 점은 그 점에서 함수를 evaluate하는 준동형으로 볼 수 있다), $$\mathbb{C}$$-algebra homomorphism $$A\to B$$는 화살표를 뒤집어 morphism $$\operatorname{Spec}B\to\operatorname{Spec}A$$에 대응한다 (반변). $$A$$가 nilpotent을 가지면 고전적 variety를 넘어 affine scheme으로 보아야 하며, 이때 길이를 가진 점이 허용된다. 이 사전의 엄밀한 형태와 증명은 ([\[대수다양체\] §아핀다양체, ⁋정리 10](/ko/math/algebraic_varieties/affine_varieties#thm10), [⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16); scheme으로의 일반화는 [\[스킴\] §스펙트럼](/ko/math/scheme_theory/spectrums)) 으로 미루고, 아래에서는 $$QH^\ast(G/P)$$ 같은 환을 공간 $$\operatorname{Spec}$$으로, 그 원소를 함수로, 준동형을 점·사상으로 읽는 데에만 이 사전을 쓴다.
+
+
 어쨌든 핵심적인 것은 Langlands dual flag variety $$G^\vee/B^\vee$$ 안의 하나의 subvariety $$\mathcal{Y}^\vee$$가 모든 partial flag variety $$G/P$$의 quantum cohomology 데이터를 모두 담고 있다는 것이다. 즉, 위의 isomorphism 하에서 quantum parameter들은 $$\mathcal{Y}^\vee_P$$ 위의 명시적인 regular function이며, 뿐만 아니라 이를 big Bruhat cell $$B^\vee w_0B^\vee/B^\vee$$로 잘라내는 것이 $$q$$의 non-vanishing locus를 보는 것과 정확히 같아지게 되며, 따라서 이 영역에서 coordinate ring을 보는 것은 quantum parameter들을 invert한 localization $$QH^\ast(G/P)[q^{-1}]$$을 보는 것과 정확히 같게 된다. 
 
-이러한 기하학적 해석을 더 밀고가기 위해, 우선 $$QH^\ast(G/P)$$는 quantum parameter들의 coordinate ring $$\mathbb{C}[q]$$ 위에서 (module로서는) rank $$\dim_\mathbb{C}H^\ast(G/P)$$ free module로 나온다는 점을 기억하자. 그럼 inclusion $$\mathbb{C}[q]\hookrightarrow QH^\ast(G/P)$$는 기하적으로는 위의 정리에 의해 $$\mathcal{Y}^\vee_P$$에서 $$\Spec \mathbb{C}[q]\cong\mathbb{A}^k$$로의 finite morphism을 주며, 이는 위의 rank $$N=\dim_\mathbb{C}H^\ast(G/P)$$만큼의 finite morphism을 준다. 따라서 generic한 $$q=q_0$$에서의 fiber는 ring homomorphism
+이러한 기하학적 해석을 더 밀고가기 위해 대수기하학의 언어를 빌려와야 한다. 
 
-$$QH^\ast(G/P)/(q-q_0)\to\mathbb{C},$$
+우선 $$QH^\ast(G/P)$$는 quantum parameter들의 coordinate ring $$\mathbb{C}[q]$$ 위에서 (module로서는) rank $$\dim_\mathbb{C}H^\ast(G/P)$$ free module로 나온다는 점을 기억하자. 그럼 inclusion $$\mathbb{C}[q]\hookrightarrow QH^\ast(G/P)$$는 기하적으로는 위의 정리에 의해 $$\mathcal{Y}^\vee_P$$에서 $$\Spec \mathbb{C}[q]\cong\mathbb{A}^k$$로의 finite morphism을 주며, 이는 위의 rank $$N=\dim_\mathbb{C}H^\ast(G/P)$$만큼의 finite morphism을 준다. 따라서 generic한 $$q=q_0$$에서의 fiber는 $$\mathbb{C}$$로의 $$\mathbb{C}$$-algebra homomorphism (즉 character) 
+$$\rchi:QH^\ast(G/P)/(q-q_0)\to\mathbb{C}$$
 
-곧 그 $$q_0$$에서의 모든 quantum product operator에 고유값을 일관되게 배정하는 방법 하나에 해당한다. 즉 정리는 quantum cohomology의 스펙트럼이 추상적인 대수로 머무는 것이 아니라 flag variety 안에 실제 점들로 놓여 있다고 말한다.
+을 준다. 이는 각각의 $$QH^\ast(G/P)_{q_0}$$에서, multiplication operator $$a\qtimes-$$의 고유값을 $$\qtimes$$와 모순없이 정의하는 것과 같다. 이제 정리의 isomorphism에 따르면, 각각의 $$a\in QH^\ast(G/P)$$는 $$\mathcal{Y}_P^\vee$$ 위의 regular function $$f_a$$에 대응되므로 fiber의 한 점 $$y\in \mathcal{Y}^\vee_P$$, 즉 $$G^\vee/B^\vee$$ 안의 한 flag에서의 character $$\rchi_y$$는 다름 아닌 그 점에서의 evaluation $$\rchi_y(a)=f_a(y)$$이다.
+
+![Peterson 동형이 quantum cohomology의 spectrum을 flag로 실현하는 그림. $$\mathcal{Y}^\vee_P$$의 한 점 $$y$$ (곧 $$G^\vee/B^\vee$$의 flag) 가 주는 evaluation $$\operatorname{ev}_y$$는 Peterson 동형 $$\Phi\colon a\mapsto f_a$$를 통해 character $$\rchi_y=\operatorname{ev}_y\circ\Phi$$ (오른쪽 사각형, $$\rchi_y(a)=f_a(y)$$) 로 끌어올려지고, $$\mathbb{C}[q]$$로 제한하면 $$y$$의 quantum parameter 값 $$q_0$$에서의 evaluation이 된다 (왼쪽 사각형). 곧 $$q_0$$ 위의 fiber 점 $$=$$ $$q_0$$ 위의 character $$=$$ flag.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-1.png){:style="width:24em" class="invert" .align-center}
+
+
+ 이때 동형 $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$ 아래에서 각 class $$a\in QH^\ast(G/P)$$는 $$\mathcal{Y}^\vee_P$$ 위의 regular function $$f_a$$로 대응되므로, fiber의 한 점 $$y\in\mathcal{Y}^\vee_P$$, 곧 고, 이 값 $$f_a(y)$$가 곧 $$y$$에 대응하는 공통 고유벡터 위에서 연산자 $$a\qtimes-$$가 갖는 고유값이다. 따라서 "generic $$q_0$$에서 quantum 곱셈 연산자들에 모순 없이 동시 고유값을 배정하는 방법"과 "$$\mathcal{Y}^\vee_P$$의 한 점, 곧 $$G^\vee/B^\vee$$ 안의 한 flag"은 정확히 같은 것이며, 그 동시 고유값들은 해당 flag에서 좌표함수 $$f_a$$를 읽은 값에 지나지 않는다. 이것이 [정리 11](#thm11)이 quantum cohomology의 스펙트럼을 추상적 대수가 아니라 flag variety $$G^\vee/B^\vee$$ 안의 실제 점들로 실현한다는 말의 정확한 뜻이다.
+
+
 
 가장 작은 Grassmannian $$\mathbb{P}^1=\Gr(1,2)$$에서는 이 전부를 손으로 볼 수 있다. $$n=2$$에서는 Peterson 조건 $$NV_1\subseteq V_2=\mathbb{C}^2$$이 공허하여 $$\mathcal{Y}=\Fl_2=\mathbb{P}^1$$ 전체이고, stratum $$\mathcal{Y}_B$$는 opposite big cell과의 교집합 $$\mathbb{P}^1\setminus\{w_0B\}\cong\mathbb{A}^1$$이다. 한편 $$QH^\ast(\mathbb{P}^1)=\mathbb{C}[\sigma,q]/(\sigma^2-q)\cong\mathbb{C}[\sigma]$$ 역시 한 변수 다항식환이라 정리의 동형과 부합하고, 이 동형 아래에서 quantum parameter는 affine 좌표의 제곱 $$q=\sigma^2$$으로 실현된다. generic $$q_0$$의 fiber는 $$\sigma=\pm\sqrt{q_0}$$의 두 점, 곧 $$\binom{2}{1}=2$$개이고, $$q_0=0$$의 fiber는 한 점 $$B/B$$ 위에 길이 $$2$$로 앉은 double point로서 그 좌표환이 classical cohomology $$\mathbb{C}[\sigma]/(\sigma^2)=H^\ast(\mathbb{P}^1)$$이다. 곧 quantum에서 classical로의 퇴화까지 stratum 안에서 기하적으로 일어난다.
 
