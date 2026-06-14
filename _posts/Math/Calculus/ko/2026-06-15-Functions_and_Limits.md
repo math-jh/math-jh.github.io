@@ -33,21 +33,29 @@ published: false
 
 $$0 < \lvert x - a \rvert < \delta \implies \lvert f(x) - L \rvert < \epsilon$$
 
-이 성립하는 것이다. 이때 $$\displaystyle\lim_{x \to a} f(x) = L$$로 적는다.
+이 성립하는 것이다. 이 때 $$\displaystyle\lim_{x \to a} f(x) = L$$로 적는다.
 
 </div>
 
-정의의 뜻을 풀어 본다. 우리가 $$f(x)$$를 $$L$$에 "$$\epsilon$$만큼 가깝게" 만들고 싶다고 요구하면 ($$\lvert f(x) - L\rvert < \epsilon$$), 그것을 보장해 주는 "$$x$$가 $$a$$에 얼마나 가까워야 하는가"의 기준 $$\delta$$를 항상 찾아낼 수 있다는 것이다. 도전자가 $$\epsilon$$을 아무리 작게 불러도 응답자가 그에 맞는 $$\delta$$를 낼 수 있다는, 일종의 게임으로 이해하면 좋다. 결정적으로 $$\delta$$는 $$\epsilon$$에 의존하여도 좋으며, 보통 $$\epsilon$$이 작아질수록 $$\delta$$도 작아진다.
+우리는 고등학교에서 $$f(x)$$가 $$L$$에 "무한히 가까워진다"는 식으로 극한을 "정의"했었다. 그러나 이것이 실제로 정의가 될 수 없는 이유는 "가깝다"는 개념이 수학적인 개념이 아니기 때문으로, 집합을 처음 배울 때 "키가 작은 사람들의 집합" 등이 정의되지 않는 이유와 동일하다. 즉 누군가에게는 작은 사람이, 누군가에게는 크게 느껴질 수도 있듯, $$f(x)$$가 $$L$$에 <em-ko>얼마나</em-ko> 가까운지도 사람마다 다를 수 있다.
 
-조건 $$0 < \lvert x - a\rvert$$는 $$x = a$$인 경우를 제외하므로, 극한은 $$f$$가 $$a$$에서 어떤 값을 갖는지 (혹은 정의되는지) 와 무관하게 결정된다. 이것이 극한과 함숫값의 본질적 차이이다. 예컨대 $$f(x) = \dfrac{x^2 - 1}{x - 1}$$은 $$x = 1$$에서 정의되지 않지만, $$x \neq 1$$에서 $$f(x) = x + 1$$이므로 $$\displaystyle\lim_{x\to 1} f(x) = 2$$이다. 만일 $$f(1) = 5$$라고 따로 값을 부여하더라도 극한은 여전히 $$2$$이다 — 극한은 $$x = 1$$에서의 값이 아니라 그 *주변*에서의 거동만을 본다.
+따라서 우리는 "가깝다"는 개념을 수학적으로 정의해야 하고, 그 결과물이 위의 [정의 2](#def2)이다. 직관적으로 이는 위에서 살펴본 문제를 해결하기 위해 모든 사람을 대상으로 합의를 만들어내는 과정으로 생각할 수 있다. 즉 우리가 $$f(x)$$를 $$L$$에 "$$\epsilon$$만큼 가깝게" 만들고 싶다고 요구하면 ($$\lvert f(x) - L\rvert < \epsilon$$), 그것을 보장해 주는 "$$x$$가 $$a$$에 얼마나 가까워야 하는가"의 기준 $$\delta$$를 항상 찾아낼 수 있다는 것이다. 이러한 매커니즘이 존재한다면, 그 누가 와서 얼마나 작은 조건을 요구하더라도 항상 이 기준을 맞춰줄 수 있게 된다. 
 
-정의를 직접 적용하는 가장 단순한 예로 일차함수를 보자. $$\displaystyle\lim_{x\to 3}(2x - 1) = 5$$임을 정의로 확인하면, $$\lvert (2x-1) - 5\rvert = 2\lvert x - 3\rvert$$이므로, 주어진 $$\epsilon > 0$$에 대해 $$\delta = \epsilon/2$$로 두면 $$0 < \lvert x - 3\rvert < \delta$$일 때 $$\lvert (2x-1)-5\rvert = 2\lvert x-3\rvert < 2\delta = \epsilon$$이 성립한다. 이처럼 $$\delta$$를 $$\epsilon$$의 식으로 명시적으로 제시하는 것이 ε-δ 논증의 전형이다.
+이를 다음 예시에서 살펴보자.
 
-극한이 존재하면 그 값은 유일하다. 이는 당연해 보이지만, 정의가 잘 작동함을 보증하는 첫 정리이므로 증명해 둔다.
+<div class="example" markdown="1">
+
+<ins id="ex3">**예시 3**</ins>
+
+1. 정의를 직접 적용하는 가장 단순한 예로 일차함수를 보자. $$\displaystyle\lim_{x\to 3}(2x - 1) = 5$$임을 정의로 확인하면, $$\lvert (2x-1) - 5\rvert = 2\lvert x - 3\rvert$$이므로, 주어진 $$\epsilon > 0$$에 대해 $$\delta = \epsilon/2$$로 두면 $$0 < \lvert x - 3\rvert < \delta$$일 때 $$\lvert (2x-1)-5\rvert = 2\lvert x-3\rvert < 2\delta = \epsilon$$이 성립한다. 이처럼 $$\delta$$를 $$\epsilon$$의 식으로 명시적으로 제시하는 것이 ε-δ 논증의 전형이다.
+
+2. 이제 이차함수의 극한을 보이자. $$\displaystyle\lim_{x\to 2} x^2 = 4$$임을 확인하려면, $$\lvert x^2 - 4\rvert = \lvert x+2\rvert\lvert x-2\rvert$$임을 이용한다. 먼저 $$\delta \leq 1$$로 가정하면 $$\lvert x-2\rvert < 1$$에서 $$1 < x < 3$$이므로 $$\lvert x+2\rvert < 5$$이다. 따라서 $$\lvert x^2 - 4\rvert < 5\lvert x-2\rvert$$이고, $$\delta = \min(1, \epsilon/5)$$로 두면 $$0 < \lvert x-2\rvert < \delta$$일 때 $$\lvert x^2 - 4\rvert < 5\delta \leq \epsilon$$이 성립한다.
+
+</div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3 (극한의 유일성)**</ins> $$\displaystyle\lim_{x\to a} f(x) = L$$이고 $$\displaystyle\lim_{x\to a} f(x) = L'$$이면 $$L = L'$$이다.
+<ins id="prop4">**명제 4 (극한의 유일성)**</ins> $$\displaystyle\lim_{x\to a} f(x) = L$$이고 $$\displaystyle\lim_{x\to a} f(x) = L'$$이면 $$L = L'$$이다.
 
 </div>
 
@@ -68,7 +76,7 @@ $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \eps
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4 (극한법칙)**</ins> $$\displaystyle\lim_{x\to a} f(x) = L$$, $$\displaystyle\lim_{x\to a} g(x) = M$$이라 하자. 그러면
+<ins id="prop5">**명제 5 (극한법칙)**</ins> $$\displaystyle\lim_{x\to a} f(x) = L$$, $$\displaystyle\lim_{x\to a} g(x) = M$$이라 하자. 그러면
 
 1. $$\displaystyle\lim_{x\to a} \bigl(f(x) + g(x)\bigr) = L + M$$,
 2. 임의의 상수 $$c$$에 대해 $$\displaystyle\lim_{x\to a} c\,f(x) = cL$$,
@@ -102,13 +110,13 @@ $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rve
 
 </details>
 
-이 법칙들로부터, 다항함수와 유리함수의 극한은 단순히 그 점에서의 함숫값을 대입하여 얻어짐을 알 수 있다 (유리함수의 경우 분모가 $$0$$이 아닐 때). 예를 들어 $$\displaystyle\lim_{x\to 2}(x^2 - 3x + 1) = 4 - 6 + 1 = -1$$이고, $$\displaystyle\lim_{x\to 0}\frac{x+3}{x^2+1} = \frac{3}{1} = 3$$이다. 거듭제곱과 근에 대해서는 [따름정리 5](#cor5)에서 따로 정리한다.
+이 법칙들로부터, 다항함수와 유리함수의 극한은 단순히 그 점에서의 함숫값을 대입하여 얻어짐을 알 수 있다 (유리함수의 경우 분모가 $$0$$이 아닐 때). 예를 들어 $$\displaystyle\lim_{x\to 2}(x^2 - 3x + 1) = 4 - 6 + 1 = -1$$이고, $$\displaystyle\lim_{x\to 0}\frac{x+3}{x^2+1} = \frac{3}{1} = 3$$이다. 거듭제곱과 근에 대해서는 [따름정리 6](#cor6)에서 따로 정리한다.
 
-그러나 극한법칙은 분모와 분자가 모두 $$0$$으로 가는 $$\frac{0}{0}$$ 꼴에는 곧바로 적용되지 않는다. 이런 *부정형<sub>indeterminate form</sub>*은 대수적 변형으로 부정형을 먼저 해소해야 한다. 가령 $$\displaystyle\lim_{x\to 1}\frac{x^2 - 1}{x - 1}$$은 [명제 4](#prop4)의 4를 그대로 쓸 수 없지만, $$x \neq 1$$에서 $$\frac{x^2-1}{x-1} = x + 1$$로 약분되므로 극한은 $$2$$이다. 미분([§미분과 도함수](/ko/math/calculus/derivatives))은 본질적으로 이러한 $$\frac{0}{0}$$ 꼴 극한을 체계적으로 다루는 도구이며, 그 일반적 계산법인 로피탈 정리는 [§도함수의 응용](/ko/math/calculus/applications_of_derivatives)에서 다룬다.
+그러나 극한법칙은 분모와 분자가 모두 $$0$$으로 가는 $$\frac{0}{0}$$ 꼴에는 곧바로 적용되지 않는다. 이런 *부정형<sub>indeterminate form</sub>*은 대수적 변형으로 부정형을 먼저 해소해야 한다. 가령 $$\displaystyle\lim_{x\to 1}\frac{x^2 - 1}{x - 1}$$은 [명제 5](#prop5)의 4를 그대로 쓸 수 없지만, $$x \neq 1$$에서 $$\frac{x^2-1}{x-1} = x + 1$$로 약분되므로 극한은 $$2$$이다. 미분([§미분과 도함수](/ko/math/calculus/derivatives))은 본질적으로 이러한 $$\frac{0}{0}$$ 꼴 극한을 체계적으로 다루는 도구이며, 그 일반적 계산법인 로피탈 정리는 [§도함수의 응용](/ko/math/calculus/applications_of_derivatives)에서 다룬다.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor5">**따름정리 5 (거듭제곱과 근의 극한)**</ins> $$\displaystyle\lim_{x\to a} f(x) = L$$이면
+<ins id="cor6">**따름정리 6 (거듭제곱과 근의 극한)**</ins> $$\displaystyle\lim_{x\to a} f(x) = L$$이면
 
 1. 임의의 양의 정수 $$k$$에 대해 $$\displaystyle\lim_{x\to a} \bigl(f(x)\bigr)^k = L^k$$,
 2. $$L > 0$$이면 임의의 양의 정수 $$k$$에 대해 $$\displaystyle\lim_{x\to a} \sqrt[k]{f(x)} = \sqrt[k]{L}$$
@@ -120,7 +128,7 @@ $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rve
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1은 $$k$$에 대한 귀납법으로, $$k=1$$은 자명하고 귀납 단계에서 [명제 4](#prop4)의 3을 적용하면 된다.
+1은 $$k$$에 대한 귀납법으로, $$k=1$$은 자명하고 귀납 단계에서 [명제 5](#prop5)의 3을 적용하면 된다.
 
 2를 보이자. 먼저 $$f(x) > 0$$이도록 $$a$$의 근방을 잡을 수 있다. $$L > 0$$이므로 $$\epsilon_1 = L/2$$에 대응하는 $$\delta_1 > 0$$을 잡으면 $$0 < \lvert x-a\rvert < \delta_1$$에서 $$\lvert f(x)-L\rvert < L/2$$이어서 $$f(x) > L/2 > 0$$이다. 양의 실수 $$u,v$$에 대해
 
@@ -140,7 +148,7 @@ $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rve
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 (극한법칙의 적용)**</ins> [명제 4](#prop4)과 [따름정리 5](#cor5)를 이용하면 다음과 같이 쉽게 계산한다.
+<ins id="ex7">**예시 7 (극한법칙의 적용)**</ins> [명제 5](#prop5)과 [따름정리 6](#cor6)를 이용하면 다음과 같이 쉽게 계산한다.
 
 $$\lim_{x\to 2}(x^2+1)(x-3) = (2^2+1)(2-3) = -5,$$
 
@@ -148,7 +156,7 @@ $$\lim_{x\to 4}\sqrt{x} = \sqrt{4} = 2,$$
 
 $$\lim_{x\to -1}\frac{x^3+2}{x+2} = \frac{(-1)^3+2}{-1+2} = 1.$$
 
-마지막 예에서 분모는 $$0$$이 아니므로 [명제 4](#prop4)의 4를 바로 쓸 수 있다.
+마지막 예에서 분모는 $$0$$이 아니므로 [명제 5](#prop5)의 4를 바로 쓸 수 있다.
 
 </div>
 
@@ -158,7 +166,7 @@ $$\lim_{x\to -1}\frac{x^3+2}{x+2} = \frac{(-1)^3+2}{-1+2} = 1.$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7 (압착정리)**</ins> $$a$$의 근방에서 ($$a$$ 제외) $$g(x) \leq f(x) \leq h(x)$$이고 $$\displaystyle\lim_{x\to a} g(x) = \lim_{x\to a} h(x) = L$$이면 $$\displaystyle\lim_{x\to a} f(x) = L$$이다.
+<ins id="prop8">**명제 8 (압착정리)**</ins> $$a$$의 근방에서 ($$a$$ 제외) $$g(x) \leq f(x) \leq h(x)$$이고 $$\displaystyle\lim_{x\to a} g(x) = \lim_{x\to a} h(x) = L$$이면 $$\displaystyle\lim_{x\to a} f(x) = L$$이다.
 
 </div>
 
@@ -173,7 +181,7 @@ $$\epsilon > 0$$에 대해, $$g$$와 $$h$$의 극한 정의에서 얻은 $$\delt
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8 (극한의 순서 보존)**</ins> $$a$$의 근방에서 ($$a$$ 제외) $$f(x) \leq g(x)$$이고 두 극한 $$L = \displaystyle\lim_{x\to a}f(x)$$, $$M = \displaystyle\lim_{x\to a}g(x)$$이 존재하면 $$L \leq M$$이다.
+<ins id="prop9">**명제 9 (극한의 순서 보존)**</ins> $$a$$의 근방에서 ($$a$$ 제외) $$f(x) \leq g(x)$$이고 두 극한 $$L = \displaystyle\lim_{x\to a}f(x)$$, $$M = \displaystyle\lim_{x\to a}g(x)$$이 존재하면 $$L \leq M$$이다.
 
 </div>
 
@@ -190,13 +198,13 @@ $$L > M$$이라 가정하고 $$\epsilon = \tfrac{1}{2}(L - M) > 0$$으로 두자
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9**</ins> $$\displaystyle\lim_{x\to 0}\frac{\sin x}{x} = 1$$이다. $$0 < x < \pi/2$$에서 단위원의 넓이를 비교하면 (꼭짓각 $$x$$인 삼각형 $$\subseteq$$ 부채꼴 $$\subseteq$$ 직각삼각형) $$\tfrac{1}{2}\sin x \leq \tfrac{1}{2}x \leq \tfrac{1}{2}\tan x$$, 즉 $$\sin x \leq x \leq \tan x$$를 얻는다. 양변을 $$\sin x > 0$$으로 나누면 $$1 \leq \dfrac{x}{\sin x} \leq \dfrac{1}{\cos x}$$, 역수를 취해 $$\cos x \leq \dfrac{\sin x}{x} \leq 1$$이다. $$\cos x \to 1$$이므로 압착정리에 의해 $$x \to 0^+$$에서 극한이 $$1$$이고, $$\dfrac{\sin x}{x}$$가 우함수이므로 양쪽 극한이 같아 결론을 얻는다.
+<ins id="ex10">**예시 10**</ins> $$\displaystyle\lim_{x\to 0}\frac{\sin x}{x} = 1$$이다. $$0 < x < \pi/2$$에서 단위원의 넓이를 비교하면 (꼭짓각 $$x$$인 삼각형 $$\subseteq$$ 부채꼴 $$\subseteq$$ 직각삼각형) $$\tfrac{1}{2}\sin x \leq \tfrac{1}{2}x \leq \tfrac{1}{2}\tan x$$, 즉 $$\sin x \leq x \leq \tan x$$를 얻는다. 양변을 $$\sin x > 0$$으로 나누면 $$1 \leq \dfrac{x}{\sin x} \leq \dfrac{1}{\cos x}$$, 역수를 취해 $$\cos x \leq \dfrac{\sin x}{x} \leq 1$$이다. $$\cos x \to 1$$이므로 압착정리에 의해 $$x \to 0^+$$에서 극한이 $$1$$이고, $$\dfrac{\sin x}{x}$$가 우함수이므로 양쪽 극한이 같아 결론을 얻는다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10**</ins> $$\displaystyle\lim_{x\to 0} x\sin\frac{1}{x} = 0$$이다. $$\bigl\lvert x\sin\frac{1}{x}\bigr\rvert \leq \lvert x\rvert$$이므로 $$-\lvert x\rvert \leq x\sin\frac1x \leq \lvert x\rvert$$이고, 양 끝이 $$0$$으로 가므로 압착정리가 적용된다. 반면 $$\sin\frac1x$$ 자체는 $$x \to 0$$에서 극한을 갖지 않는데, $$x$$가 $$0$$에 다가가는 동안 $$-1$$과 $$1$$ 사이를 무한히 진동하기 때문이다. 인자 $$x$$가 이 진동을 $$0$$으로 눌러 주는 것이 핵심이다.
+<ins id="ex11">**예시 11**</ins> $$\displaystyle\lim_{x\to 0} x\sin\frac{1}{x} = 0$$이다. $$\bigl\lvert x\sin\frac{1}{x}\bigr\rvert \leq \lvert x\rvert$$이므로 $$-\lvert x\rvert \leq x\sin\frac1x \leq \lvert x\rvert$$이고, 양 끝이 $$0$$으로 가므로 압착정리가 적용된다. 반면 $$\sin\frac1x$$ 자체는 $$x \to 0$$에서 극한을 갖지 않는데, $$x$$가 $$0$$에 다가가는 동안 $$-1$$과 $$1$$ 사이를 무한히 진동하기 때문이다. 인자 $$x$$가 이 진동을 $$0$$으로 눌러 주는 것이 핵심이다.
 
 </div>
 
@@ -212,7 +220,7 @@ $$L > M$$이라 가정하고 $$\epsilon = \tfrac{1}{2}(L - M) > 0$$으로 두자
 
 <div class="remark" markdown="1">
 
-<ins id="rmk11">**참고 11**</ins> 이들을 따로따로 외울 필요 없이, "목표를 향한 근방"과 "출발점 주변의 근방"이라는 한 틀로 통합하는 관점이 해석학의 [\[해석학\] §함수의 극한과 연속](/ko/math/analysis/limits_and_continuity)에서 거리공간의 언어로 정식화된다. 거기서는 $$\lvert x - a\rvert$$가 일반적인 거리가 되어, 같은 정의가 훨씬 넓은 물의 위에서 작동한다.
+<ins id="rmk12">**참고 12**</ins> 이들을 따로따로 외울 필요 없이, "목표를 향한 근방"과 "출발점 주변의 근방"이라는 한 틀로 통합하는 관점이 해석학의 [\[해석학\] §함수의 극한과 연속](/ko/math/analysis/limits_and_continuity)에서 거리공간의 언어로 정식화된다. 거기서는 $$\lvert x - a\rvert$$가 일반적인 거리가 되어, 같은 정의가 훨씬 넓은 물의 위에서 작동한다.
 
 </div>
 
@@ -222,7 +230,7 @@ $$L > M$$이라 가정하고 $$\epsilon = \tfrac{1}{2}(L - M) > 0$$으로 두자
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12 (부정형의 해소)**</ins> 직접 대입이 $$\frac00$$을 주면 대수적 변형으로 부정형을 해소한다. 인수분해로
+<ins id="ex13">**예시 13 (부정형의 해소)**</ins> 직접 대입이 $$\frac00$$을 주면 대수적 변형으로 부정형을 해소한다. 인수분해로
 
 $$\lim_{x\to 2}\frac{x^2 - 4}{x - 2} = \lim_{x\to 2}(x + 2) = 4,$$
 
@@ -230,13 +238,13 @@ $$\lim_{x\to 2}\frac{x^2 - 4}{x - 2} = \lim_{x\to 2}(x + 2) = 4,$$
 
 $$\lim_{x\to 0}\frac{\sqrt{1+x} - 1}{x} = \lim_{x\to 0}\frac{1}{\sqrt{1+x}+1} = \frac12,$$
 
-그리고 [예시 9](#ex9)과 결합하여 $$\displaystyle\lim_{x\to 0}\frac{\sin 3x}{x} = \lim_{x\to 0}3\cdot\frac{\sin 3x}{3x} = 3$$이다.
+그리고 [예시 10](#ex10)과 결합하여 $$\displaystyle\lim_{x\to 0}\frac{\sin 3x}{x} = \lim_{x\to 0}3\cdot\frac{\sin 3x}{3x} = 3$$이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13 (ε-δ 검증)**</ins> $$\displaystyle\lim_{x\to 2} x^2 = 4$$를 정의로 확인하자. $$\lvert x^2 - 4\rvert = \lvert x - 2\rvert\,\lvert x + 2\rvert$$인데, $$\lvert x - 2\rvert < 1$$로 제한하면 $$1 < x < 3$$이라 $$\lvert x + 2\rvert < 5$$이다. 따라서 주어진 $$\epsilon > 0$$에 대해 $$\delta = \min\bigl(1,\ \epsilon/5\bigr)$$로 두면, $$0 < \lvert x - 2\rvert < \delta$$일 때
+<ins id="ex14">**예시 14 (ε-δ 검증)**</ins> $$\displaystyle\lim_{x\to 2} x^2 = 4$$를 정의로 확인하자. $$\lvert x^2 - 4\rvert = \lvert x - 2\rvert\,\lvert x + 2\rvert$$인데, $$\lvert x - 2\rvert < 1$$로 제한하면 $$1 < x < 3$$이라 $$\lvert x + 2\rvert < 5$$이다. 따라서 주어진 $$\epsilon > 0$$에 대해 $$\delta = \min\bigl(1,\ \epsilon/5\bigr)$$로 두면, $$0 < \lvert x - 2\rvert < \delta$$일 때
 
 $$\lvert x^2 - 4\rvert = \lvert x-2\rvert\,\lvert x+2\rvert < \delta \cdot 5 \leq \epsilon$$
 
@@ -250,7 +258,7 @@ $$\lvert x^2 - 4\rvert = \lvert x-2\rvert\,\lvert x+2\rvert < \delta \cdot 5 \le
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**정의 14**</ins> 실수열 $$(a_n)_{n=1}^\infty$$와 실수 $$L$$에 대해, 임의의 $$\epsilon > 0$$에 대하여 어떤 자연수 $$N$$이 존재하여
+<ins id="def15">**정의 15**</ins> 실수열 $$(a_n)_{n=1}^\infty$$와 실수 $$L$$에 대해, 임의의 $$\epsilon > 0$$에 대하여 어떤 자연수 $$N$$이 존재하여
 
 $$n > N \implies \lvert a_n - L \rvert < \epsilon$$
 
@@ -258,17 +266,17 @@ $$n > N \implies \lvert a_n - L \rvert < \epsilon$$
 
 </div>
 
-정의의 뜻은 분명하다. 어떤 오차 허용치 $$\epsilon$$이 주어져도, 그 이후의 모든 항이 $$L$$에서 $$\epsilon$$ 이내에 들어오도록 하는 지점 $$N$$을 찾을 수 있다는 것이다. 고등학교에서 익힌 "$$n$$이 커질수록 $$a_n$$이 $$L$$에 가까워진다"는 말을 정확히 만든 것이 ε-N 정의이며, 이는 [참고 11](#rmk11)에서 본 무한대에서의 함수 극한 정의를 정의역 $$\mathbb{N}$$에 적용한 것에 불과하다.
+정의의 뜻은 분명하다. 어떤 오차 허용치 $$\epsilon$$이 주어져도, 그 이후의 모든 항이 $$L$$에서 $$\epsilon$$ 이내에 들어오도록 하는 지점 $$N$$을 찾을 수 있다는 것이다. 고등학교에서 익힌 "$$n$$이 커질수록 $$a_n$$이 $$L$$에 가까워진다"는 말을 정확히 만든 것이 ε-N 정의이며, 이는 [참고 12](#rmk12)에서 본 무한대에서의 함수 극한 정의를 정의역 $$\mathbb{N}$$에 적용한 것에 불과하다.
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15**</ins> $$\displaystyle\lim_{n\to\infty}\frac{1}{n}=0$$임을 확인하자. 임의의 $$\epsilon > 0$$에 대해 $$N > \frac{1}{\epsilon}$$인 자연수 $$N$$을 택하면, $$n > N$$일 때 $$\frac{1}{n} < \frac{1}{N} < \epsilon$$이므로 $$\bigl\lvert \frac{1}{n}-0\bigr\rvert < \epsilon$$이다.
+<ins id="ex16">**예시 16**</ins> $$\displaystyle\lim_{n\to\infty}\frac{1}{n}=0$$임을 확인하자. 임의의 $$\epsilon > 0$$에 대해 $$N > \frac{1}{\epsilon}$$인 자연수 $$N$$을 택하면, $$n > N$$일 때 $$\frac{1}{n} < \frac{1}{N} < \epsilon$$이므로 $$\bigl\lvert \frac{1}{n}-0\bigr\rvert < \epsilon$$이다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop16">**명제 16 (수열의 극한법칙)**</ins> $$\displaystyle\lim_{n\to\infty} a_n = L$$, $$\displaystyle\lim_{n\to\infty} b_n = M$$이라 하자. 그러면
+<ins id="prop17">**명제 17 (수열의 극한법칙)**</ins> $$\displaystyle\lim_{n\to\infty} a_n = L$$, $$\displaystyle\lim_{n\to\infty} b_n = M$$이라 하자. 그러면
 
 1. $$\displaystyle\lim_{n\to\infty} \bigl(a_n + b_n\bigr) = L + M$$,
 2. 임의의 상수 $$c$$에 대해 $$\displaystyle\lim_{n\to\infty} c\,a_n = cL$$,
@@ -298,7 +306,7 @@ $$\lvert a_nb_n-LM\rvert = \lvert a_n(b_n-M)+M(a_n-L)\rvert \leq \lvert a_n\rver
 
 $$\left\lvert \frac{1}{b_n}-\frac{1}{M}\right\rvert = \frac{\lvert b_n-M\rvert}{\lvert b_n\rvert\,\lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert b_n-M\rvert$$
 
-이므로 $$\lvert b_n-M\rvert$$을 충분히 작게 만들면 된다. 각 단계의 논증은 [명제 4](#prop4)의 함수 극한법칙 증명과 동일한 구조를 따른다.
+이므로 $$\lvert b_n-M\rvert$$을 충분히 작게 만들면 된다. 각 단계의 논증은 [명제 5](#prop5)의 함수 극한법칙 증명과 동일한 구조를 따른다.
 
 </details>
 
