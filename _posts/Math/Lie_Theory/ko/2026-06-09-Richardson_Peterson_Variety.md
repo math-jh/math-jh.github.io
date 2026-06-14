@@ -288,21 +288,27 @@ $$\mathcal{Y}_B=\mathcal{Y}\cap B^-B/B$$
 
 으로 주어지는 $$\mathcal{Y}$$의 Zariski dense open subset이다. 일반적으로 $$\mathcal{Y}_P$$의 차원은 $$\lvert\Delta\setminus A\rvert$$, 곧 $$P$$에 들어있지 않은 simple root의 개수와 같다. 즉 paving의 cell과 stratification의 stratum은 같은 $$w_A$$에 매달린 두 조각으로, 개수가 같고 둘 다 점 $$w_AB$$를 담으면서 차원은 $$\lvert A\rvert$$와 $$\lvert\Delta\setminus A\rvert$$로 서로 보완적인 방향으로 자란다.
 
-이 분해가 단순히 $$B$$를 $$B^-$$으로 바꾼 것 이상의 의미를 갖는 이유는 다음 정리 때문이다. 다만 정리를 적기 전에 한 가지를 반드시 짚어야 한다. Peterson variety를 quantum cohomology와 연결할 때는 이 구성을 $$G$$ 자신이 아니라 그 *Langlands dual group<sub>랭글랜즈 쌍대군</sub>* $$G^\vee$$ (root datum에서 root와 coroot를 맞바꾼 dual group) 에 적용해야 한다. 이는 quantum parameter들이 rational curve의 차수, 곧 $$G$$의 coweight (= coroot) lattice $$=$$ $$G^\vee$$의 root lattice에 색인되는 데에서 비롯한다. $$G^\vee$$에 [정의 8](#def8)을 똑같이 적용하여 얻은 Peterson variety를 $$\mathcal{Y}^\vee\subseteq G^\vee/B^\vee$$로, 그 (같은 방식의) stratification을 $$\mathcal{Y}^\vee=\bigsqcup_P\mathcal{Y}^\vee_P$$로 쓰자. 여기서 stratum은 $$G$$의 standard parabolic $$P\supseteq B$$에 대응하는 $$G^\vee$$의 standard parabolic $$P^\vee\supseteq B^\vee$$로 색인된다.
+이 분해가 단순히 $$B$$를 $$B^-$$으로 바꾼 것 이상의 의미를 갖는 이유는 이것이 quantum cohomology에 대한 정보를 담고 있기 때문이다. 다음 정리에서, Lie gruop $$G$$의 *Langlands dual group<sub>랭글랜즈 쌍대군</sub>* $$G^\vee$$는 root datum에서 root와 coroot를 맞바꾼 dual group으로, 이 상황에서 [정의 8](#def8)을 따라 만든 Peterson variety가 $$\mathcal{Y}^\vee$$이고, $$G$$의 parabolic subgroup $$P$$의 Langlands dual $$P^\vee$$에 해당하는 $$\mathcal{Y}^\vee$$의 stratum을 $$\mathcal{Y}^\vee_P$$으로 쓰자.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm11">**정리 11 (Peterson [Pet], Kostant [Kos96])**</ins> $$G$$의 Langlands dual $$G^\vee$$의 Peterson variety에서, 각 standard parabolic subgroup $$P\supseteq B$$에 대응하는 stratum $$\mathcal{Y}^\vee_P$$의 coordinate ring은 partial flag variety $$G/P$$의 small quantum cohomology ring과 동형이다.
+<ins id="thm11">**정리 11 (Peterson)**</ins> $$G$$의 Langlands dual $$G^\vee$$의 Peterson variety에서, 각 standard parabolic subgroup $$P\supseteq B$$에 대응하는 stratum $$\mathcal{Y}^\vee_P$$의 coordinate ring은 partial flag variety $$G/P$$의 small quantum cohomology ring과 동형이다.
 
 $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 </div>
 
-이 정리의 증명은 Peterson의 unpublished 강의록에 처음 등장하며, Kostant [Kos96] (Toda lattice의 보존량을 통한 접근) 와 Lam–Shimozono [LS] (affine Grassmannian $$\operatorname{Gr}_{G^\vee}$$의 homology와의 동일시) 가 발표된 증명을 제공한다. 한편 $$G$$가 Langlands self-dual인 경우, 특히 모든 type $$A$$ ($$\mathfrak{sl}_n$$이 self-dual이고 $$SL_n/B = PGL_n/B$$) 에서는 $$\mathcal{Y}^\vee = \mathcal{Y}$$이므로 위 [예시 7](#ex7)·[예시 10](#ex10)을 비롯한 아래의 type $$A$$ 계산은 $$\mathcal{Y}$$로 그대로 읽으면 된다. 또한 동등하게, [정의 8](#def8)에서 $$G$$ 자신으로 지은 $$\mathcal{Y}$$의 stratum은 dual의 quantum cohomology $$QH^\ast(G^\vee/P^\vee)$$를 담는다.
+이 정리는 Peterson의 1997년 MIT lecture에서 소개된 것으로, 별도의 출판본은 없지만 [강의노트](https://math.soimeme.org/~arunram/Resources/PetersonGmodBcourse1997.pdf) 등에서 그 증명을 찾아볼 수 있다. 다만 우리가 주로 살펴보던 Grassmannian의 경우, $$\GL_n$$은 Langlands self-dual이므로 $$G\cong G^\vee$$가 되어 이 duality가 잘 보이지는 않는다. 
 
-즉, $$G^\vee/B^\vee$$ 안의 단 하나의 subvariety $$\mathcal{Y}^\vee$$가 모든 partial flag variety $$G/P$$의 quantum cohomology를 strata에 나누어 담고 있다는 것이다. 이 동형 아래에서 quantum parameter들은 $$\mathcal{Y}^\vee_P$$ 위의 명시적인 regular function이 되며, stratum을 big Bruhat cell $$Bw_0B/B$$와 한 번 더 교차시킨 open subset $$(\mathcal{Y}^\vee_P)^\circ=\mathcal{Y}^\vee_P\cap Bw_0B/B$$은 quantum parameter들을 invert한 localization $$QH^\ast(G/P)[q^{-1}]$$에 대응한다.
+어쨌든 핵심적인 것은 Langlands dual flag variety $$G^\vee/B^\vee$$ 안의 하나의 subvariety $$\mathcal{Y}^\vee$$가 모든 partial flag variety $$G/P$$의 quantum cohomology 데이터를 모두 담고 있다는 것이다. 즉, 위의 isomorphism 하에서 quantum parameter들은 $$\mathcal{Y}^\vee_P$$ 위의 명시적인 regular function이며, 뿐만 아니라 이를 big Bruhat cell $$B^\vee w_0B^\vee/B^\vee$$로 잘라내는 것이 $$q$$의 non-vanishing locus를 보는 것과 정확히 같아지게 되며, 따라서 이 영역에서 coordinate ring을 보는 것은 quantum parameter들을 invert한 localization $$QH^\ast(G/P)[q^{-1}]$$을 보는 것과 정확히 같게 된다. 
 
-이 동형이 말하는 바는 $$\operatorname{Spec}$$으로 보면 선명해진다. $$QH^\ast(G/P)$$는 quantum parameter들의 다항식환 위에서 rank가 $$\dim_\mathbb{C}H^\ast(G/P)$$인 free module이므로, 정리의 동형은 quantum parameter들을 좌표로 하는 유한 사상 $$\mathcal{Y}^\vee_P\to\mathbb{A}^k$$ ($$k$$는 quantum parameter의 개수)을 준다. 이 사상의 $$q=q_0$$ fiber의 점 하나는 ring homomorphism $$QH^\ast(G/P)/(q-q_0)\to\mathbb{C}$$, 곧 그 $$q_0$$에서의 모든 quantum 곱셈 연산자에 고유값을 일관되게 배정하는 방법 하나에 해당한다. 즉 정리는 quantum cohomology의 스펙트럼이 추상적인 대수로 머무는 것이 아니라 flag variety 안에 실제 점들로 놓여 있다고 말한다.
+이러한 기하학적 해석을 더 밀고가기 위해, 우선 $$QH^\ast(G/P)$$는 quantum parameter들의 coordinate ring $$\mathbb{C}[q_1,\ldots, q_k]$$ 위에서 (module로서는) rank $$\dim_\mathbb{C}H^\ast(G/P)$$ free module로 나온다는 점을 기억하자. 그럼 inclusion $$\mathbb{C}[q_1,\ldots, q_k]\hookrightarrow QH^\ast(G/P)$$는 기하적으로는 위의 정리에 의해 $$\mathcal{Y}^\vee_P$$에서 $$\Spec \mathbb{C}[q_1,\ldots, q_k]\cong\mathbb{A}^k$$로의 finite morphism을 주며, 이는 위의 rank $$N=\dim_\mathbb{C}H^\ast(G/P)$$만큼의 finite morphism을 쭈ㅗ 
+
+포함 $\mathbb{C}[q]\hookrightarrow QH^\ast(G/P)$가 $\operatorname{Spec}$에서 $\mathcal Y^\vee_P=\operatorname{Spec}QH^\ast \to \operatorname{Spec}\mathbb{C}[q]=\mathbb A^k$ ("그 점에서의 quantum parameter 값 읽기")를 준다. 유한 rank free module이면 module-finite, 곧 finite morphism이고 그 **차수가 rank $N$**이다. 따라서 각 fiber는 길이 $N$:
+
+
+
+이므로, 정리의 동형은 quantum parameter들을 좌표로 하는 유한 사상 $$\mathcal{Y}^\vee_P\to\mathbb{A}^k$$ ($$k$$는 quantum parameter의 개수)을 준다. 이 사상의 $$q=q_0$$ fiber의 점 하나는 ring homomorphism $$QH^\ast(G/P)/(q-q_0)\to\mathbb{C}$$, 곧 그 $$q_0$$에서의 모든 quantum 곱셈 연산자에 고유값을 일관되게 배정하는 방법 하나에 해당한다. 즉 정리는 quantum cohomology의 스펙트럼이 추상적인 대수로 머무는 것이 아니라 flag variety 안에 실제 점들로 놓여 있다고 말한다.
 
 가장 작은 Grassmannian $$\mathbb{P}^1=\Gr(1,2)$$에서는 이 전부를 손으로 볼 수 있다. $$n=2$$에서는 Peterson 조건 $$NV_1\subseteq V_2=\mathbb{C}^2$$이 공허하여 $$\mathcal{Y}=\Fl_2=\mathbb{P}^1$$ 전체이고, stratum $$\mathcal{Y}_B$$는 opposite big cell과의 교집합 $$\mathbb{P}^1\setminus\{w_0B\}\cong\mathbb{A}^1$$이다. 한편 $$QH^\ast(\mathbb{P}^1)=\mathbb{C}[\sigma,q]/(\sigma^2-q)\cong\mathbb{C}[\sigma]$$ 역시 한 변수 다항식환이라 정리의 동형과 부합하고, 이 동형 아래에서 quantum parameter는 affine 좌표의 제곱 $$q=\sigma^2$$으로 실현된다. generic $$q_0$$의 fiber는 $$\sigma=\pm\sqrt{q_0}$$의 두 점, 곧 $$\binom{2}{1}=2$$개이고, $$q_0=0$$의 fiber는 한 점 $$B/B$$ 위에 길이 $$2$$로 앉은 double point로서 그 좌표환이 classical cohomology $$\mathbb{C}[\sigma]/(\sigma^2)=H^\ast(\mathbb{P}^1)$$이다. 곧 quantum에서 classical로의 퇴화까지 stratum 안에서 기하적으로 일어난다.
 

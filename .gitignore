@@ -12,6 +12,10 @@ _site/
 *.dvi
 *.ps
 
+# 외부 reference 자료(PDF 등)는 assets/reference/ 아래에 두고 위 global ignore(*.pdf 등)를 덮어 whitelist한다.
+!assets/reference/
+!assets/reference/**
+
 # Backups
 .backups/
 *.backup_*
