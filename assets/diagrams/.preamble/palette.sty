@@ -1,0 +1,20 @@
+%% Blog diagram accent palette — mono brass ramp (ordered, for use over black ink).
+%% Change colours here and rebuild to recolour every diagram at once.
+%% Usage in diagrams (replaces the old red!45 highlight):
+%%   arrow:  \arrow[r, "f", color=accent1]
+%%   label:  \arrow[r, "f"{color=accent2}]
+%%   node:   |[color=accent1]| X
+%%   fill:   fill=accent1!20   (tint, e.g. for highlighted node backgrounds)
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{palette}[2026/06/15 blog diagram accent palette]
+\RequirePackage{xcolor}
+
+\definecolor{accent1}{RGB}{165,111,20}   % 1 브래스
+\definecolor{accent2}{RGB}{137,82,0}     % 2 앤티크 브래스
+\definecolor{accent3}{RGB}{107,58,0}     % 3 브론즈
+\definecolor{accent4}{RGB}{81,42,2}      % 4 다크 브론즈
+\definecolor{accent5}{RGB}{58,31,11}     % 5 코코아
+
+\colorlet{accent}{accent1}   % primary highlight (use first); replaces old red
+
+\endinput
