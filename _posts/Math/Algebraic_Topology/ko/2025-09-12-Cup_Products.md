@@ -118,7 +118,7 @@ $$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \to H^\ast(X\times Y;A)$$
 
 즉 우리가 보이고 싶은 것은 다음 diagram
 
-![functoriality_of_cup_products](/assets/images/Math/Algebraic_Topology/Cup_Products-1.png){:style="width:40em" class="invert" .align-center}
+![functoriality_of_cup_products](/assets/images/Math/Algebraic_Topology/Cup_Products-1.svg){:style="width:41.10em" class="invert" .align-center}
 
 의 commutativity이다. 이는 임의의 $$\alpha_1,\alpha_2\in H^\ast(X;A)$$와 임의의 $$\beta_1,\beta_2\in H^\ast(Y;A)$$에 대하여, 
 
@@ -142,11 +142,11 @@ $$f^\ast(\alpha\smile\beta)=(f^\ast\alpha)\smile(f^\ast\beta)$$
 
 이 명제의 증명은 앞선 [명제 3](#prop3)에 의해 우리는 다음 diagram
 
-![functoriality_1](/assets/images/Math/Algebraic_Topology/Cup_Products-2.png){:style="width:20em" class="invert" .align-center}
+![functoriality_1](/assets/images/Math/Algebraic_Topology/Cup_Products-2.svg){:style="width:21.22em" class="invert" .align-center}
 
 이 commute하는 것을 알고 있으므로, 여기에 더해 다음 diagram
 
-![diagonals_and_f](/assets/images/Math/Algebraic_Topology/Cup_Products-3.png){:style="width:8em" class="invert" .align-center}
+![diagonals_and_f](/assets/images/Math/Algebraic_Topology/Cup_Products-3.svg){:style="width:8.72em" class="invert" .align-center}
 
 에 cohomology functor를 취해주면 된다. 
 

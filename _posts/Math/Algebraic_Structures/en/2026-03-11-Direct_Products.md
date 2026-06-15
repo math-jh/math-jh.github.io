@@ -64,7 +64,7 @@ In any category, terminal objects are unique up to unique isomorphism.
 
 <ins id="cor3">**Corollary 3**</ins> Let $$(G_i)$$ and $$(H_i)$$ be families of groups indexed by the same set $$I$$, and suppose that for each $$i$$ a group homomorphism $$f_i:G_i\rightarrow H_i$$ is given. Then there exists a unique group homomorphism $$f:\prod G_i\rightarrow\prod H_i$$ making the following diagram
 
-![Product_of_map](/assets/images/Math/Algebraic_Structures/Direct_Products-1.png){:style="width:12em" class="invert" .align-center}
+![Product_of_map](/assets/images/Math/Algebraic_Structures/Direct_Products-1.svg){:style="width:13.07em" class="invert" .align-center}
 
 commute. Moreover, $$\ker f=\prod\ker f_i$$ and $$\im f=\prod\im f_i$$.
 
@@ -94,7 +94,7 @@ so $$\im f=\prod\im f_i$$ also holds.
 
 Apply [Corollary 3](#cor3) to the canonical homomorphisms $$p_i:G_i\rightarrow G_i/H_i$$.
 
-![product_of_normal_subgroups](/assets/images/Math/Algebraic_Structures/Direct_Products-2.png){:style="width:16.4em" class="invert" .align-center}
+![product_of_normal_subgroups](/assets/images/Math/Algebraic_Structures/Direct_Products-2.svg){:style="width:18.32em" class="invert" .align-center}
 
 Each $$p_i\circ\pr_i$$ is surjective as a composition of surjective homomorphisms, so by the previous corollary $$\im p$$ equals $$\prod(G_i/H_i)$$. Furthermore, the kernel of each $$p_i$$ is $$H_i$$. Hence, by the first isomorphism theorem,
 

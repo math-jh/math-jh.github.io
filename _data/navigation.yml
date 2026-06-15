@@ -89,6 +89,10 @@ llm_workshop-ko:
         url: ko/llm_workshop/last_modified_git
       - title: "블로그 테마 개편"
         url: ko/llm_workshop/theme_overhaul
+      - title: "사이드바 카테고리 자동 정렬"
+        url: ko/llm_workshop/auto_sidebar_nav
+      - title: "다이어그램을 SVG로"
+        url: ko/llm_workshop/diagram_svg
   - title: "Marvin의 독서 노트"
     children:
       - title: "독서 노트를 쓰는 봇"

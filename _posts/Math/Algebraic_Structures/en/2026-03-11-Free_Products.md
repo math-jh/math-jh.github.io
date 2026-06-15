@@ -26,7 +26,7 @@ Since the index set $$I=\{1,2\}$$ is finite, the weak direct product of two copi
 
 However, we can see that there is no $$f:\mathbb{Z}\times\mathbb{Z}\rightarrow G$$ making the following diagram
 
-![counterexample](/assets/images/Math/Algebraic_Structures/Free_Products-1.png){:style="width:11.6em" class="invert" .align-center}
+![counterexample](/assets/images/Math/Algebraic_Structures/Free_Products-1.svg){:style="width:11.41em" class="invert" .align-center}
 
 commute. If such an $$f$$ existed, then
 

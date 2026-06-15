@@ -1,0 +1,117 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG Prism (Homotopy-1.svg)
+\begin{tikzpicture}[line join=round, line cap=round]
+  \fill[draw=black!50, fill=black!50, fill opacity=.2] (0,0) -- (2,0) -- (1.5,.5) -- cycle;
+  \path[name path=1] (1.5,.5) -- (1.5,2);
+  \path[name path=2] (1.5,2) -- (0,0);
+  \path[name path=3] (1.5,2) -- (2,0);
+  \path[name path=4] (0,1.5) -- (2,1.5);
+  \path[name intersections={of=1 and 4, by=14}];
+  \draw[black!50, shorten >=1pt] (1.5,.5) -- (14);
+  \draw[black!50, shorten <=1pt] (14) -- (1.5,2);
+  \draw (0,0) -- (2,0) -- (2,1.5) -- (0,1.5) -- cycle;
+  \filldraw[fill=black!50, fill opacity=.4] (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle;
+  \draw (0,0) node[below left, scale=.6]{$v_0$};
+  \draw (2,0) node[below right, scale=.6]{$v_1$};
+  \draw (1.5,.6) node[left, scale=.6, black!50]{$v_2$};
+  \draw (0,1.5) node[left, scale=.6]{$w_0$};
+  \draw (2,1.5) node[right, scale=.6]{$w_1$};
+  \draw (1.5,2) node[above, scale=.6]{$w_2$};
+  \draw[|-|] (3,0) -- (3,1.5);
+  \draw (3,.75) node[right, scale=.6]{$I$};
+  \draw (3.1,0) node[right, scale=.4]{$t=0$};
+  \draw (3.1,1.5) node[right, scale=.4]{$t=1$};
+\end{tikzpicture}
+
+%%FIG Prism_sliced (Homotopy-2.svg)
+\begin{tikzpicture}[line join=round, line cap=round]
+    \begin{scope}[shift={(-4,0)}]
+      \fill[draw=black!50, fill=black!50, fill opacity=.02] (0,0) -- (2,0) -- (1.5,.5) -- cycle;
+      \path[name path=1] (1.5,.5) -- (1.5,2);
+      \path[name path=2] (1.5,2) -- (0,0);
+      \path[name path=3] (1.5,2) -- (2,0);
+      \path[name path=4] (0,1.5) -- (2,1.5);
+      \path[name path=5] (0,0) -- (2,1.5);
+      \path[name intersections={of=1 and 4, by=14}];
+      \path[name intersections={of=1 and 5, by=15}];
+      \path[name intersections={of=2 and 4, by=24}];
+      \path[name intersections={of=3 and 4, by=34}];
+      \path[name intersections={of=3 and 5, by=35}];
+      \draw[black!50, shorten >=1pt] (1.5,.5) -- (15);
+      \draw[black!50, shorten <=1pt, shorten >=1pt] (15) -- (14);
+      \draw[black!50, shorten <=1pt] (14) -- (1.5,2);
+      \draw[black!50, shorten >=1pt] (0,0) -- (24);
+      \draw[black!50, shorten <=1pt] (24) -- (1.5,2);
+      \draw[black!50, shorten >=1pt] (1.5,2) -- (34);
+      \draw[black!50, shorten <=1pt, shorten >=1pt] (34) -- (35);
+      \draw[black!50, shorten <=1pt] (35) -- (2,0);
+      \draw (0,0) -- (2,0) -- (2,1.5) -- (0,1.5) -- cycle;
+      \draw (0,0) -- (2,1.5);
+      \filldraw[fill=black!50, fill opacity=.04] (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle;
+      \draw (0,0) node[below left, scale=.6]{$v_0$};
+      \draw (2,0) node[below right, scale=.6]{$v_1$};
+      \draw (1.5,.6) node[left, scale=.6, black!50]{$v_2$};
+      \draw (0,1.5) node[left, scale=.6]{$w_0$};
+      \draw (2,1.5) node[right, scale=.6]{$w_1$};
+      \draw (1.5,2) node[above, scale=.6]{$w_2$};
+    \end{scope}
+    \draw[->] (-1.75,1) -- (-1.1,1);
+    \begin{scope}[shift={(-.8,.2)}]
+      \path[name path=1] (1.5,.5) -- (1.5,2);
+      \path[name path=2] (1.5,2) -- (0,0);
+      \path[name path=3] (1.5,2) -- (2,0);
+      \path[name path=4] (0,1.5) -- (2,1.5);
+      \path[name path=5] (0,0) -- (2,1.5);
+      \path[name intersections={of=1 and 4, by=14}];
+      \path[name intersections={of=1 and 5, by=15}];
+      \path[name intersections={of=2 and 4, by=24}];
+      \path[name intersections={of=3 and 4, by=34}];
+      \path[name intersections={of=3 and 5, by=35}];
+      \draw[black!50, shorten >=1pt] (0,0) -- (24);
+      \draw[black!50, shorten <=1pt] (24) -- (1.5,2);
+      \fill[accent1, opacity=.2] (0,0) -- (1.5,2) -- (2,1.5) -- cycle;
+      \draw (0,0) -- (0,1.5);
+      \draw (0,0) -- (2,1.5);
+      \draw (0,1.5) -- (2,1.5) -- (1.5,2) -- cycle;
+    \end{scope}
+    \begin{scope}[shift={(.8,-.2)}]
+      \path[name path=1] (1.5,.5) -- (1.5,2);
+      \path[name path=2] (1.5,2) -- (0,0);
+      \path[name path=3] (1.5,2) -- (2,0);
+      \path[name path=4] (0,1.5) -- (2,1.5);
+      \path[name path=5] (0,0) -- (2,1.5);
+      \path[name intersections={of=1 and 4, by=14}];
+      \path[name intersections={of=1 and 5, by=15}];
+      \path[name intersections={of=2 and 4, by=24}];
+      \path[name intersections={of=3 and 4, by=34}];
+      \path[name intersections={of=3 and 5, by=35}];
+      \draw[black!50, shorten >=1pt] (1.5,2) -- (35);
+      \draw[black!50, shorten <=1pt] (35) -- (2,0);
+      \filldraw[fill=accent1, fill opacity=.2] (0,0) -- (1.5,2) -- (2,1.5) -- cycle;
+      \fill[accent2, opacity=.2] (0,0) -- (1.5,2) -- (2,0) --cycle;
+      \draw (0,0) -- (2,0) -- (2,1.5);
+    \end{scope}
+    \begin{scope}[opacity=.4]
+    \draw[black!50] (2,0)-- (1.5,.5) -- (0,0);
+    \draw[black!50] (1.5,2)--(1.5,.5);
+    \draw (0,0) -- (1.5,2) -- (2,0) -- cycle;
+    \fill[black!50, opacity=.2] (0,0) -- (2,0) -- (1.5,.5) -- cycle;
+    \fill[accent2, opacity=.2] (1.5,2) -- (2,0) -- (0,0) --cycle;
+    \end{scope}
+\end{tikzpicture}
+
+%%FIG natural_isomorphism (Homotopy-3.svg)
+\begin{tikzcd}
+  f_0(x_0) \rar["{[f_0\circ\alpha]}"]\dar["f_t(x_0)" left]&[20pt]f_0(x_1)\dar["f_t(x_1)"]\\
+  f_1(x_0) \rar["{[f_1\circ\alpha]}" below]&f_1(x_1)
+\end{tikzcd}
+
+\end{document}
