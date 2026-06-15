@@ -61,11 +61,17 @@ $$0<\lvert x-3\rvert<\delta\implies 0<> 2\lvert x-3\rvert<2\delta=\epsilon$$
 
 $$\lvert g(x)-L\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert\lvert x+2\rvert$$
 
-를 계산한다. 이 계산에서 핵심적인 것은 $$\lvert x+2\rvert$$가 $$2$$ 근방에서는 
+를 계산한다. 이 계산에서 핵심적인 것은 $$\lvert x-2\rvert$$가 $$2$$ 근방에서는 작은 값이지만, $$\lvert x+2\rvert$$는 그렇게까지 커지지는 않는다는 것이다. 즉, $$\delta\leq 1$$인 곳을 생각하면 여기에서는 $$\lvert x+2\rvert<5$$가 되며, $$\delta>1$$인 곳은 애초에 우리의 관심대상이 아니다. 따라서 $$\delta=\min(1,\epsilon/5)$$로 두면 
 
-2. 이제 이차함수의 극한을 보이자. $$\displaystyle\lim_{x\to 2} x^2 = 4$$임을 확인하려면, $$\lvert x^2 - 4\rvert = \lvert x+2\rvert\lvert x-2\rvert$$임을 이용한다. 먼저 $$\delta \leq 1$$로 가정하면 $$\lvert x-2\rvert < 1$$에서 $$1 < x < 3$$이므로 $$\lvert x+2\rvert < 5$$이다. 따라서 $$\lvert x^2 - 4\rvert < 5\lvert x-2\rvert$$이고, $$\delta = \min(1, \epsilon/5)$$로 두면 $$0 < \lvert x-2\rvert < \delta$$일 때 $$\lvert x^2 - 4\rvert < 5\delta \leq \epsilon$$이 성립한다.
+$$0 < \lvert x-2\rvert < \delta \implies \lvert x^2 - 4\rvert < 5\delta \leq \epsilon$$이 성립한다.
 
 </div>
+
+위와 같이, 본질적으로 우리가 $$\epsilon$$을 $$\delta$$에 의해 결정되는 것으로 둘 수 있다는 것이 이 정의의 핵심이다. 
+
+## 극한의 성질들
+
+이제 이를 바탕으로 극한의 성질들을 살펴보자. 우선 첫 번째 성질은 극한이 만일 존재한다면 유일하다는 것이다.
 
 <div class="proposition" markdown="1">
 
@@ -80,13 +86,11 @@ $$L \neq L'$$이라 가정하면 $$\epsilon = \tfrac{1}{2}\lvert L - L'\rvert > 
 
 $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \epsilon + \epsilon = \lvert L - L'\rvert$$
 
-이 되어 모순이다. 따라서 $$L = L'$$이다. (이러한 점 $$x$$가 실제로 존재함은 $$a$$가 극한점이라는 가정에서 보장된다.)
+이 되어 모순이다. 따라서 $$L = L'$$이다.
 
 </details>
 
-## 극한의 사칙연산
-
-극한을 매번 정의로 계산하는 것은 번거롭다. 다행히 극한은 사칙연산과 잘 어울리므로, 복잡한 함수의 극한을 기본 함수들의 극한으로 분해할 수 있다.
+한편, 극한을 매번 정의로 계산하는 것은 번거롭다. 다행히 극한은 사칙연산과 잘 어울리므로, 복잡한 함수의 극한을 기본 함수들의 극한으로 분해할 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -104,7 +108,7 @@ $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \eps
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-1을 보이자. $$\epsilon > 0$$이 주어졌을 때, $$\epsilon/2$$에 대응하는 $$\delta_1, \delta_2 > 0$$을 각각 $$f, g$$의 극한 정의에서 얻고 $$\delta = \min(\delta_1,\delta_2)$$로 두면, $$0 < \lvert x-a\rvert < \delta$$일 때
+모든 성질을 다 증명하는 대신, 예시로 첫째 등식만 보인다. 양수 $$\epsilon > 0$$이 주어졌을 때, $$\epsilon/2$$에 대응하는 $$\delta_1, \delta_2 > 0$$을 각각 $$f, g$$의 극한 정의에서 얻고 $$\delta = \min(\delta_1,\delta_2)$$로 두면, $$0 < \lvert x-a\rvert < \delta$$일 때
 
 $$\lvert (f(x)+g(x)) - (L+M)\rvert \leq \lvert f(x)-L\rvert + \lvert g(x)-M\rvert < \tfrac{\epsilon}{2} + \tfrac{\epsilon}{2} = \epsilon$$
 
@@ -123,10 +127,6 @@ $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rve
 이므로 $$\lvert g(x)-M\rvert$$을 충분히 작게 만들면 된다.
 
 </details>
-
-이 법칙들로부터, 다항함수와 유리함수의 극한은 단순히 그 점에서의 함숫값을 대입하여 얻어짐을 알 수 있다 (유리함수의 경우 분모가 $$0$$이 아닐 때). 예를 들어 $$\displaystyle\lim_{x\to 2}(x^2 - 3x + 1) = 4 - 6 + 1 = -1$$이고, $$\displaystyle\lim_{x\to 0}\frac{x+3}{x^2+1} = \frac{3}{1} = 3$$이다. 거듭제곱과 근에 대해서는 [따름정리 6](#cor6)에서 따로 정리한다.
-
-그러나 극한법칙은 분모와 분자가 모두 $$0$$으로 가는 $$\frac{0}{0}$$ 꼴에는 곧바로 적용되지 않는다. 이런 *부정형<sub>indeterminate form</sub>*은 대수적 변형으로 부정형을 먼저 해소해야 한다. 가령 $$\displaystyle\lim_{x\to 1}\frac{x^2 - 1}{x - 1}$$은 [명제 5](#prop5)의 4를 그대로 쓸 수 없지만, $$x \neq 1$$에서 $$\frac{x^2-1}{x-1} = x + 1$$로 약분되므로 극한은 $$2$$이다. 미분([§미분과 도함수](/ko/math/calculus/derivatives))은 본질적으로 이러한 $$\frac{0}{0}$$ 꼴 극한을 체계적으로 다루는 도구이며, 그 일반적 계산법인 로피탈 정리는 [§도함수의 응용](/ko/math/calculus/applications_of_derivatives)에서 다룬다.
 
 <div class="proposition" markdown="1">
 
@@ -159,6 +159,8 @@ $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rve
 이다. 임의의 $$\epsilon > 0$$에 대해 $$k\,(L/2)^{(k-1)/k}\,\epsilon$$에 대응하는 $$\delta_2 > 0$$을 택하고 $$\delta = \min(\delta_1,\delta_2)$$로 두면, $$0 < \lvert x-a\rvert < \delta$$일 때 우변이 $$\epsilon$$보다 작아진다.
 
 </details>
+
+이 법칙들을 조합하면 다항함수의 극한은 각 항의 극한으로 분리하여 계산할 수 있다. 예를 들어 $$\displaystyle\lim_{x\to 2}(x^2 - 3x + 1) = \lim_{x\to 2}x^2 - 3\lim_{x\to 2}x + \lim_{x\to 2}1 = 4 - 6 + 1 = -1$$이다. 또한 두 다항함수의 비로 이루어진 유리함수의 극한은 분모의 극한이 $$0$$이 아닐 때, 분자와 분모의 극한을 각각 구한 뒤 그 분수로 얻어진다. 예를 들어 $$\displaystyle\lim_{x\to 0}\frac{x+3}{x^2+1} = \frac{\displaystyle\lim_{x\to 0}(x+3)}{\displaystyle\lim_{x\to 0}(x^2+1)} = \frac{3}{1} = 3$$이다.
 
 <div class="example" markdown="1">
 
