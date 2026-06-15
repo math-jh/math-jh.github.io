@@ -28,7 +28,7 @@ $$\Hom_\Ab(K(M), G)\cong\Hom_\cMon(M, U(G))$$
 
 > Abelian group $$K(S)$$와 semigroup homomorphism $$\eta_S:S\rightarrow K(S)$$는 다음과 같은 성질을 만족하는 쌍이다.  
 >
->![universal_property](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-1.png){:style="width:7.4em"  class="invert" .align-center}
+>![universal_property](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-1.svg){:style="width:6.91em"  class="invert" .align-center}
 >     
 >(Universal mapping problem) 임의의 abelian group $$G$$와, 임의의 semigroup homomorphism $$f:S\rightarrow G$$가 주어질 때마다 *group homomorphism* $$\bar{f}:K(S)\rightarrow G$$가 유일하게 존재하여 $$f=\bar{f}\circ\eta_S$$이 성립한다.
 
@@ -46,11 +46,11 @@ $$\Hom_\Ab(K(M), G)\cong\Hom_\cMon(M, U(G))$$
 
 우선 다음 diagram을 살펴보자.
 
-![uniqueness_1](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-2.png){:style="width:7.4em"  class="invert" .align-center}
+![uniqueness_1](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-2.svg){:style="width:6.91em"  class="invert" .align-center}
 
 그럼 universal property에서, $$\eta_S'= \bar{\eta}_S'\circ\eta_S$$이도록 하는 $$\bar{\eta}_S': K(S)\rightarrow H$$가 존재한다. 한편, 다시 다음의 diagram
 
-![uniqueness_2](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-3.png){:style="width:7.4em"  class="invert" .align-center}
+![uniqueness_2](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-3.svg){:style="width:6.91em"  class="invert" .align-center}
 
 에서 $$H$$에 대한 universal property를 사용하면 $$\eta_S=\bar{\eta}_S\circ\eta_S'$$이도록 하는 $$\bar{\eta}_S:H\rightarrow K(S)$$가 존재한다. 그럼
 
@@ -58,7 +58,7 @@ $$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta=\id_
 
 이고, 다시 universal property에 의하여 $$f\circ \eta_S'=\eta_S'$$를 만족하는 $$f$$는 유일하므로 $$f=\id_H=\bar{\eta}_S'\circ \bar{\eta}_S$$이 성립한다. 혹은, diagram의 언어로는, 다음 diagram을 commute하게 만드는 $$H\rightarrow H$$는 유일하므로 $$\id_H=\bar{\eta}_S'\circ \bar{\eta}_S$$여야 한다.
 
-![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-4.png){:style="width:8.8em"  class="invert" .align-center}
+![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-4.svg){:style="width:9.96em"  class="invert" .align-center}
 
 비슷하게 $$\id_{K(S)}=\bar{\eta}_S\circ \bar{\eta}_S'$$가 성립한다는 것도 보일 수 있고, 따라서 $$K(S)\cong H$$가 성립한다.
 </details>

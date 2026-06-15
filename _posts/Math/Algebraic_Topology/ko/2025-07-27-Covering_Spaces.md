@@ -57,7 +57,7 @@ $$\widetilde{f}(\mathrm{x})=\begin{cases}f_{\lvert\mathrm{x}\rvert}(\mathrm{x}/\
 
 정의는 다소 복잡하지만, 본질적으로는 다음의 그림을 염두에 두면 편하다. 
 
-![S1_covering](/assets/images/Math/Algebraic_Topology/Covering_Spaces-1.png){:style="width:26em" class="invert" .align-center}
+![S1_covering](/assets/images/Math/Algebraic_Topology/Covering_Spaces-1.svg){:style="width:26em" class="invert" .align-center}
 
 이는 covering map 
 
@@ -144,7 +144,7 @@ Transport map은 bijective이다. 이는 우선, 임의의 $$y_1\in p^{-1}(x_1)$
 
 고정된 base space $$B$$에 대하여, 우리는 자명한 방식으로 $$B$$의 covering space들의 category $$\Cov(B)$$를 정의한다. 명시적으로 이 category의 object들은 covering map들 $$p:E\rightarrow B$$이고, 이를 사이의 morphism은 다음의 commutative diagram 
 
-![morphism_of_covering_spaces](/assets/images/Math/Algebraic_Topology/Covering_Spaces-2.png){:style="width:8em" class="invert" .align-center}
+![morphism_of_covering_spaces](/assets/images/Math/Algebraic_Topology/Covering_Spaces-2.svg){:style="width:6.75em" class="invert" .align-center}
 
 이다. 이를 통해, 각각의 $$p\in \Cov(B)$$마다 monodromy functor $$M_p$$를 대응시키는 것이 functor
 
@@ -239,11 +239,11 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 
 이러한 방법 중 가장 단순한 것은 공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cap V$$로 나타나는 경우일 것이다. 그럼 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 우리는 다음의 diagram 
 
-![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-3.png){:style="width:8em" class="invert" .align-center}
+![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-3.svg){:style="width:7.54em" class="invert" .align-center}
 
 이 colimit diagram인 것을 안다. 이 경우 우리는 이 diagram에 fundamental groupoid functor $$\Pi_1$$을 취해 $$\Pi_1(X)$$를 $$\Pi_1(U)$$, $$\Pi_1(V)$$, 그리고 $$\Pi_1(U\cap V)$$를 이용하여 나타내는 것을 목표로 할 것이다. 한편 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)는 임의의 open covering $$(U_i)$$에 대하여 다음의 diagram 
   
-![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-4.png){:style="width:8em" class="invert" .align-center}
+![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-4.svg){:style="width:8.27em" class="invert" .align-center}
 
 이 colimit diagram임을 안다. 우리의 주장은 만일 $$(U_i)$$와 이들의 finite intersection들의 fundamental groupoid가 모두 알려져 있다면 이들로부터 $$\Pi_1(X)$$의 fundamental groupoid를 계산할 수 있다는 것이다. 
 
@@ -265,7 +265,7 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 
 <ins id="cor14">**따름정리 14 (Seifert-van Kampen theorem, classical version)**</ins> 위상공간 $$X$$가 두 connected open subset $$U,V$$의 합집합으로 나타난다고 하고, $$U\cap V$$가 connected라 하자. 그럼 다음의 diagram
 
-![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_Spaces-5.png){:style="width:20em" class="invert" .align-center}
+![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_Spaces-5.svg){:style="width:18.89em" class="invert" .align-center}
 
 이 pushout diagram이며 이로부터 나오는 $$\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)\rightarrow \pi_1(X)$$는 isomorphism이다. 
 

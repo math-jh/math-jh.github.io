@@ -43,7 +43,7 @@ $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathb
 
 is also a split short exact sequence. ([##ref](splitting_tensor_splits)) Expanding these out gives a commutative diagram of the form
 
-![snake_lemma](/assets/images/Math/Algebraic_Topology/Cohomology-1.png){:style="width:32em" class="invert" .align-center}
+![snake_lemma](/assets/images/Math/Algebraic_Topology/Cohomology-1.svg){:style="width:31.09em" class="invert" .align-center}
 
 and thus by [[Homological Algebra] §Long Exact Sequences, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1) we obtain the long exact sequence
 

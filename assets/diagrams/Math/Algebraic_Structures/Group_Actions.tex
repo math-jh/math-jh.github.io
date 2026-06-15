@@ -1,0 +1,36 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG left_module (Group_Actions-1.svg)
+\begin{tikzcd}
+	{A\otimes A\otimes E} & {A\otimes E} && {I\otimes E} && {A\otimes E} \\
+	{A\otimes E} & E &&& E
+	\arrow["{\id_A\otimes \rho}", from=1-1, to=1-2]
+	\arrow["{\cdot\otimes \id_E}"', from=1-1, to=2-1]
+	\arrow["\rho", from=1-2, to=2-2]
+	\arrow["{1\otimes\id_E}", from=1-4, to=1-6]
+	\arrow[from=1-4, to=2-5]
+	\arrow["\rho", from=1-6, to=2-5]
+	\arrow["\rho"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG right_module (Group_Actions-2.svg)
+\begin{tikzcd}
+	{E\otimes A\otimes A} & {E\otimes A} && {E\otimes I} && {E\otimes A} \\
+	{E\otimes A} & E &&& E
+	\arrow["{\rho\otimes \id_A}", from=1-1, to=1-2]
+	\arrow["{\id_E\otimes\cdot}"', from=1-1, to=2-1]
+	\arrow["\rho", from=1-2, to=2-2]
+	\arrow["{\id_E\otimes 1}", from=1-4, to=1-6]
+	\arrow[from=1-4, to=2-5]
+	\arrow["\rho", from=1-6, to=2-5]
+	\arrow["\rho"', from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}

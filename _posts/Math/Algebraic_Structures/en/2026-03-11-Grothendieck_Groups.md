@@ -28,7 +28,7 @@ We now show the existence of the left adjoint $$K$$ described above. More genera
 
 > The abelian group $$K(S)$$ and the semigroup homomorphism $$\eta_S:S\rightarrow K(S)$$ constitute a pair satisfying the following property.
 >
->![universal_property](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-1.png){:style="width:7.4em"  class="invert" .align-center}
+>![universal_property](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-1.svg){:style="width:6.91em"  class="invert" .align-center}
 >
 >(Universal mapping problem) Given any abelian group $$G$$ and any semigroup homomorphism $$f:S\rightarrow G$$, there exists a unique *group homomorphism* $$\bar{f}:K(S)\rightarrow G$$ such that $$f=\bar{f}\circ\eta_S$$.
 
@@ -46,11 +46,11 @@ Any $$K(S)$$ satisfying the above property is unique up to isomorphism.
 
 First, consider the following diagram.
 
-![uniqueness_1](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-2.png){:style="width:7.4em"  class="invert" .align-center}
+![uniqueness_1](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-2.svg){:style="width:6.91em"  class="invert" .align-center}
 
 Then by the universal property, there exists a map $$\bar{\eta}_S': K(S)\rightarrow H$$ such that $$\eta_S'= \bar{\eta}_S'\circ\eta_S$$. On the other hand, from the following diagram
 
-![uniqueness_2](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-3.png){:style="width:7.4em"  class="invert" .align-center}
+![uniqueness_2](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-3.svg){:style="width:6.91em"  class="invert" .align-center}
 
 using the universal property for $$H$$, there exists a map $$\bar{\eta}_S:H\rightarrow K(S)$$ such that $$\eta_S=\bar{\eta}_S\circ\eta_S'$$. Then
 
@@ -58,7 +58,7 @@ $$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta=\id_
 
 and by the universal property again, the map $$f$$ satisfying $$f\circ \eta_S'=\eta_S'$$ is unique, so $$f=\id_H=\bar{\eta}_S'\circ \bar{\eta}_S$$. Or, in the language of diagrams, the unique map $$H\rightarrow H$$ making the following diagram commute must be $$\id_H=\bar{\eta}_S'\circ \bar{\eta}_S$$.
 
-![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-4.png){:style="width:8.8em"  class="invert" .align-center}
+![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-4.svg){:style="width:9.96em"  class="invert" .align-center}
 
 Similarly, one can show that $$\id_{K(S)}=\bar{\eta}_S\circ \bar{\eta}_S'$$, and therefore $$K(S)\cong H$$.
 </details>

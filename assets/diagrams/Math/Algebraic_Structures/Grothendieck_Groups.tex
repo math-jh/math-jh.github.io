@@ -1,0 +1,50 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG universal_property (Grothendieck_Groups-1.svg)
+\begin{tikzcd}
+	S & {K(S)} \\
+	& G
+	\arrow["\eta_S", from=1-1, to=1-2]
+	\arrow["{\bar{f}}", dashed, from=1-2, to=2-2]
+	\arrow["f"', from=1-1, to=2-2]
+\end{tikzcd}
+
+%%FIG uniqueness_1 (Grothendieck_Groups-2.svg)
+\begin{tikzcd}
+	S & {K(S)} \\
+	& H
+	\arrow["\eta_S", from=1-1, to=1-2]
+	\arrow["{\bar{\eta}_S'}", dashed, from=1-2, to=2-2]
+	\arrow["\eta_S'"', from=1-1, to=2-2]
+\end{tikzcd}
+
+%%FIG uniqueness_2 (Grothendieck_Groups-3.svg)
+\begin{tikzcd}
+	S & H \\
+	& {K(S)}
+	\arrow["\eta_S'", from=1-1, to=1-2]
+	\arrow["\eta_S"', from=1-1, to=2-2]
+	\arrow["{\bar{\eta}_S}", dashed, from=1-2, to=2-2]
+\end{tikzcd}
+
+%%FIG uniqueness_3 (Grothendieck_Groups-4.svg)
+\begin{tikzcd}
+	S & H \\
+	& {K(S)} \\
+	& H
+	\arrow["\eta_S'", from=1-1, to=1-2]
+	\arrow["\eta_S", from=1-1, to=2-2]
+	\arrow["{\scriptscriptstyle\bar{\eta}_S}", dashed, from=1-2, to=2-2]
+	\arrow["{\scriptscriptstyle\bar{\eta}_S'}", dashed, from=2-2, to=3-2]
+	\arrow["\eta_S'"', from=1-1, to=3-2]
+	\arrow["{\mathrm{id}_H}", curve={height=-30pt}, dashed, from=1-2, to=3-2]
+\end{tikzcd}
+
+\end{document}

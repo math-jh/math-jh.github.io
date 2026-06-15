@@ -1,0 +1,40 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG functoriality_of_cup_products (Cup_Products-1.svg)
+\begin{tikzcd}
+  {H^\ast(X;A)\otimes H^\ast(Y;A)\otimes H^\ast(X;A)\otimes H^\ast(Y;A)} & {H^\ast(X\times Y;A)\otimes H^\ast(X\times Y;A)} \\
+  {H^\ast(X;A)\otimes H^\ast(Y;A)} & {H^\ast(X\times Y;A)}
+  \arrow["{\times\otimes\times}", from=1-1, to=1-2]
+  \arrow["{\smile\otimes\smile}"', from=1-1, to=2-1]
+  \arrow["\smile", from=1-2, to=2-2]
+  \arrow["\times"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG functoriality_1 (Cup_Products-2.svg)
+\begin{tikzcd}
+  {H^\bullet(Y;A)\otimes H^\bullet(Y;A)} & {H^\bullet(Y\times Y;A)} \\
+  {H^\bullet(X;A)\otimes H^\bullet(X;A)} & {H^\bullet(X\times X;A)}
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=1-1, to=2-1]
+  \arrow[from=1-2, to=2-2]
+  \arrow[from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG diagonals_and_f (Cup_Products-3.svg)
+\begin{tikzcd}
+  X & {X\times X} \\
+  Y & {Y\times Y}
+  \arrow["{\Delta_X}", from=1-1, to=1-2]
+  \arrow["f"', from=1-1, to=2-1]
+  \arrow["{(f,f)}", from=1-2, to=2-2]
+  \arrow["{\Delta_Y}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}

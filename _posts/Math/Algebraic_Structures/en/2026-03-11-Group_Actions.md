@@ -22,13 +22,13 @@ When dealing with complex algebraic structures, one effective strategy is to exa
 
 <ins id="def1">**Definition 1**</ins> Fix a monoidal category $$(\mathcal{A},\otimes, I)$$ and a monoid object $$(A,\cdot, 1)$$ in $$\mathcal{A}$$. A morphism $$\rho: A\otimes E\rightarrow E$$ is called a *left action* of $$A$$ on an object $$E\in\obj(\mathcal{A})$$ if the following two diagrams commute.
 
-![left_module](/assets/images/Math/Algebraic_Structures/Modules-1.png){:style="width:30em" class="invert" .align-center}
+![left_module](/assets/images/Math/Algebraic_Structures/Group_Actions-1.svg){:style="width:31.84em" class="invert" .align-center}
 
 Here, $$I\otimes E \rightarrow E$$ is the left unitor. We denote this situation by $$A\circlearrowright E$$.
 
 Similarly, a morphism $$\rho: E\otimes A\rightarrow E$$ is called a *right action* of $$A$$ on an object $$E\in\obj(\mathcal{A})$$ if the following two diagrams commute.
 
-![right_module](/assets/images/Math/Algebraic_Structures/Modules-2.png){:style="width:30em" class="invert" .align-center}
+![right_module](/assets/images/Math/Algebraic_Structures/Group_Actions-2.svg){:style="width:31.84em" class="invert" .align-center}
 
 Again, $$E\otimes I \rightarrow E$$ is the right unitor. We denote this situation by $$E \circlearrowleft A$$.
 

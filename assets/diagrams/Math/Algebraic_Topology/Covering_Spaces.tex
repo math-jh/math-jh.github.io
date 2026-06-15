@@ -1,0 +1,58 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{pgfplots}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG S1_covering (Covering_Spaces-1.svg)
+\begin{tikzpicture}
+   \begin{axis}[view={-20}{-20}, zmax=80, xmax=2, ymax=2, height=12cm, clip=false, hide axis]
+\addplot3+[domain=0:2.5,samples=500,samples y=0,black,no marks,thick] ({sin(deg(x))},{cos(deg(x))},{2+4*x});
+\addplot3+[domain=2.6:2.5+2*pi,samples=500,samples y=0,black,no marks,thick] ({sin(deg(x))},{cos(deg(x))},{2+4*x});
+\addplot3+[domain=2.6+2*pi:2.5+4*pi,samples=500,samples y=0,black,no marks,thick] ({sin(deg(x))},{cos(deg(x))},{2+4*x});
+\addplot3+[domain=2.6+4*pi:8*pi,samples=500,samples y=0,black,no marks,thick] ({sin(deg(x))},{cos(deg(x))},{2+4*x});
+\addplot3+[domain=0:2*pi,samples=500,samples y=0,black,no marks,very thick] ({sin(deg(x))},{cos(deg(x))},-50);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,accent1,no marks,ultra thick,{Parenthesis}-{Parenthesis}] ({sin(deg(x))},{cos(deg(x))},-50);
+\addplot3+[domain=0.5:1,samples=3000,samples y=0,accent1,no marks,very thick,{Parenthesis}-{Parenthesis}] ({sin(deg(x))},{cos(deg(x))},{2+4*x});
+\addplot3+[domain=0.5+2*pi:1+2*pi,samples=3000,samples y=0,accent1,no marks,very thick,{Parenthesis}-{Parenthesis}] ({sin(deg(x))},{cos(deg(x))},{2+4*x});
+\addplot3+[domain=0.5+4*pi:1+4*pi,samples=3000,samples y=0,accent1,no marks,very thick,{Parenthesis}-{Parenthesis}] ({sin(deg(x))},{cos(deg(x))},{2+4*x});
+\addplot3+[domain=0.5+6*pi:1+6*pi,samples=3000,samples y=0,accent1,no marks,very thick,{Parenthesis}-{Parenthesis}] ({sin(deg(x))},{cos(deg(x))},{2+4*x});
+\end{axis}
+\draw (10,5.5) node{$E$};
+\draw (10,3) node{$B$};
+\draw[->] (10,5) -- (10,3.5) node[midway, right]{$p$};
+\end{tikzpicture}
+
+%%FIG morphism_of_covering_spaces (Covering_Spaces-2.svg)
+\begin{tikzcd}
+  E\arrow[rr]\drar&[-15pt]&[-15pt]E'\dlar\\
+  &B
+\end{tikzcd}
+
+%%FIG union_as_colimit (Covering_Spaces-3.svg)
+\begin{tikzcd}
+  U\rar[hook]&X\\
+  U\cap V\uar[hook]\rar[hook]&V\uar[hook]
+\end{tikzcd}
+
+%%FIG general_union_colimit (Covering_Spaces-4.svg)
+\begin{tikzcd}
+  U_i\rar[hook]&X\\
+  U_i\cap U_j\uar[hook]\rar[hook]&U_j\uar[hook]
+\end{tikzcd}
+
+%%FIG van_Kampen (Covering_Spaces-5.svg)
+\begin{tikzcd}
+  {\pi_1(U)} & {\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)} \\
+  {\pi_1(U\cap V)} & {\pi_1(V)}
+  \arrow[from=1-1, to=1-2]
+  \arrow[from=2-1, to=1-1]
+  \arrow[from=2-1, to=2-2]
+  \arrow[from=2-2, to=1-2]
+\end{tikzcd}
+
+\end{document}

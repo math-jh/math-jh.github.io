@@ -72,13 +72,13 @@ such that $$H_0(f)=f_0$$, and such a natural transformation $$f$$ is unique up t
 
 That is, starting from $$f(X)_0: H_0(F(X))\rightarrow H_0(G(X))$$ defined at the homology level, we must construct a chain map $$f_\bullet(X):F_\bullet(X)\rightarrow G_\bullet(X)$$. To this end, let us first define the $$0$$-th component $$f_0(X)$$. Since $$F_0(X)$$ is free, this amounts to specifying the image of each $$u:M\rightarrow X$$. Now the following commutative diagram
 
-![lifting](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-1.png){:style="width:14em" class="invert" .align-center}
+![lifting](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-1.svg){:style="width:13.49em" class="invert" .align-center}
 
 defines the map $$F_0(X)\rightarrow H_0(G(X))$$ in a canonical manner, and since $$p_G$$ is surjective we obtain a lift $$F_0(X)\rightarrow G_0(X)$$.
 
 However, defining $$f_\bullet(X)$$ in higher degrees presents a subtle difficulty. Suppose inductively that the components up to $$f_{n-1}(X)$$ have been defined, and let us define $$f_n(X)$$. That is, we must construct a lift in the diagram
 
-![lifting_general](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-2.png){:style="width:24em" class="invert" .align-center}
+![lifting_general](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-2.svg){:style="width:24.16em" class="invert" .align-center}
 
 but unlike the previous case, we require the newly defined $$f_n(X)$$ to satisfy the commutativity condition
 
@@ -88,11 +88,11 @@ Moreover, even without this condition it is not clear how $$f_n(X)$$ should be d
 
 To resolve this we invoke the hypothesis that $$G$$ is acyclic on $$\mathcal{M}$$. First, since the functor $$F_n$$ is free, it suffices to define $$f_n$$ on the *models* $$M$$. For an arbitrary object $$X$$, a free module $$F_n(X)$$, and a generator $$u:M \rightarrow X$$, the diagram
 
-![reduction_to_models](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-3.png){:style="width:11em" class="invert" .align-center}
+![reduction_to_models](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-3.svg){:style="width:11.47em" class="invert" .align-center}
 
 shows that the element of $$F_n(M)$$ corresponding to $$\id_M$$ becomes $$u$$ in $$F_n(X)$$, so we may send $$u$$ to $$(G_n(u)\circ f_n(M))(\id_M)$$. Having thus reduced our attention to models, what remains is to lift the diagram
 
-![lifting_reduced](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-4.png){:style="width:24em" class="invert" .align-center}
+![lifting_reduced](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-4.svg){:style="width:24.72em" class="invert" .align-center}
 
 But now for any $$x_n\in F_n(M)$$,
 
@@ -126,7 +126,7 @@ $$(X,Y)\mapsto C_\bullet(X\times Y;A),\quad (X,Y)\mapsto C_\bullet(Y\times X;A),
 
 together with the obvious maps between them; lifting these via [Theorem 3](#thm3) yields a commutative diagram in $$\Ch_{\geq0}(\lMod{A})$$
 
-![flip_map](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-5.png){:style="width:24em" class="invert" .align-center}
+![flip_map](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-5.svg){:style="width:23.79em" class="invert" .align-center}
 
 
 --- 
