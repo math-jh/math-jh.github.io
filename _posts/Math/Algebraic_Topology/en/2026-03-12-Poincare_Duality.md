@@ -478,7 +478,7 @@ How then does this geometric picture explain that $$\alpha^2=0$$? A literal comp
 
 Consider curves in $$T^2$$ representing the homology class $$a$$. They can typically be chosen disjoint; if they do meet (excluding tangencies, which violate general position), the intersection looks as follows.
 
-![intersections_on_torus](/assets/images/Math/Algebraic_Topology/Poincare_Duality-6.png){:style="width:40%" class="invert" .align-center}
+![intersections_on_torus](/assets/images/Math/Algebraic_Topology/Poincare_Duality-6.svg){:style="width:40%" class="invert" .align-center}
 
 At first sight there appear to be two intersection points, but their signs are opposite: taking the cross product with the line as first vector and the curve as second, one points outward and the other inward. The two intersections therefore cancel, giving intersection number zero, and hence $$\alpha\smile\alpha=0$$.
 
