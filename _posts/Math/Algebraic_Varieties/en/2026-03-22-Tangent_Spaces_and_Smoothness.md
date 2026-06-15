@@ -141,7 +141,7 @@ To sharpen our intuition, it is helpful to examine when this inequality is stric
 
 1. (Node) Let $$X = Z(\y^2 - \x^2(\x+1)) \subset \mathbb{A}^2$$. This curve splits into two branches at the origin.
 
-    ![nodal_curve](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-1.png){:style="width:20em" class="invert" .align-center}
+    ![nodal_curve](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-1.svg){:style="width:23.17em" class="invert" .align-center}
 
     The Jacobian of this curve is
 
@@ -150,7 +150,7 @@ To sharpen our intuition, it is helpful to examine when this inequality is stric
     so at the origin the Jacobian is $$(0,0)$$, and therefore the origin is a singular point by [Proposition 3](#prop3). Geometrically, the tangent space being two-dimensional means that both tangent directions of the two branches are included. Concretely, since $$\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$$, near the origin the curve looks like the union of the two lines $$\y = \x$$ and $$\y = -\x$$. A node is one of the "mildest" singularities.
 2. (Cusp) Now consider $$Z(\y^2 - \x^3)\subset \mathbb{A}^2$$.
 
-    ![cusp](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.png){:style="width:20em" class="invert" .align-center}
+    ![cusp](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg){:style="width:18.80em" class="invert" .align-center}
 
     In this case the origin of this curve is a singular point. Computing the Jacobian,
 

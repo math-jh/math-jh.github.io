@@ -68,9 +68,12 @@ trap 'rm -rf "$WORK"' EXIT
 export TEXINPUTS="$PRE:$(dirname "$TEX"):"
 
 # Split <Article>.tex into one compilable single-page job per %%FIG chunk.
-NFIG=$(python3 - "$TEX" "$WORK" <<'PY'
+# Also write manifest.tsv: "idx<TAB>outbase<TAB>ext" — the output name/format of
+# each figure, read from its %%FIG "(<name>.<ext>)" comment so one .tex can mix
+# svg and png figures (png = crossing-over diagrams). Missing/odd ext -> default MODE.
+NFIG=$(python3 - "$TEX" "$WORK" "$ART" "$MODE" <<'PY'
 import sys, re
-src, work = sys.argv[1], sys.argv[2]
+src, work, art, mode = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 lines = open(src, encoding='utf-8').read().split('\n')
 pre, body, seen = [], [], False
 for ln in lines:
@@ -81,18 +84,31 @@ for ln in lines:
         if re.match(r'\s*\\end\{document\}', ln): break
         body.append(ln)
 preamble = '\n'.join(pre)
-# split body on %%FIG markers
-chunks, cur = [], []
+# split body on %%FIG markers, remembering each chunk's marker line
+chunks, markers, cur, mk = [], [], [], None
 for ln in body:
     if re.match(r'\s*%%FIG', ln):
-        if any(s.strip() for s in cur): chunks.append(cur)
-        cur = []
+        if any(s.strip() for s in cur): chunks.append(cur); markers.append(mk)
+        cur, mk = [], ln
     else:
         cur.append(ln)
-if any(s.strip() for s in cur): chunks.append(cur)
-for i, ch in enumerate(chunks, 1):
+if any(s.strip() for s in cur): chunks.append(cur); markers.append(mk)
+man = open(f'{work}/manifest.tsv', 'w', encoding='utf-8')
+for i, (ch, mk) in enumerate(zip(chunks, markers), 1):
     doc = preamble + '\n\\begin{document}\n' + '\n'.join(ch) + '\n\\end{document}\n'
     open(f'{work}/fig-{i}.tex', 'w', encoding='utf-8').write(doc)
+    base, ext = f'{art}-{i}', mode
+    m = re.search(r'\(([^)]+)\)\s*$', mk or '')
+    if m:
+        name = m.group(1).strip()
+        if '.' in name:
+            b, e = name.rsplit('.', 1)
+            base = b.strip()
+            if e.strip().lower() in ('svg', 'png'): ext = e.strip().lower()
+        else:
+            base = name
+    man.write(f'{i}\t{base}\t{ext}\n')
+man.close()
 print(len(chunks))
 PY
 )
@@ -102,13 +118,16 @@ emit () { awk -v pt="$1" -v b="$BASEFONT" -v s="$SCALE" 'BEGIN{printf "width:%.2
 echo "# $CAT/$ART  ($NFIG figures)  ->  $OUT"
 
 for i in $(seq 1 "$NFIG"); do
+  row="$(awk -F'\t' -v n="$i" '$1==n{print $2"\t"$3}' "$WORK/manifest.tsv")"
+  NAME="${row%$'\t'*}"; FMT="${row#*$'\t'}"
+  [ -n "$NAME" ] || { NAME="$ART-$i"; FMT="$MODE"; }
   if [ "$LUAMODE" = 1 ]; then ENG=dvilualatex; else ENG=latex; fi
   ( cd "$WORK" && $ENG -interaction=nonstopmode -halt-on-error "fig-$i.tex" >"fig-$i.log" 2>&1 ) \
     || { echo "$ENG FAILED (fig $i):" >&2; tail -20 "$WORK/fig-$i.log" >&2; exit 1; }
-  if [ "$MODE" = svg ]; then
-    dvisvgm --no-fonts --bbox=preview "$WORK/fig-$i.dvi" -o "$OUT/$ART-$i.svg" >/dev/null 2>"$WORK/d-$i.log" \
+  if [ "$FMT" = svg ]; then
+    dvisvgm --no-fonts --bbox=preview "$WORK/fig-$i.dvi" -o "$OUT/$NAME.svg" >/dev/null 2>"$WORK/d-$i.log" \
       || { echo "dvisvgm FAILED (fig $i):" >&2; cat "$WORK/d-$i.log" >&2; exit 1; }
-    f="$OUT/$ART-$i.svg"
+    f="$OUT/$NAME.svg"
     python3 - "$f" "$GLYPH_BOLD" "$STRIP" <<'PY'
 import re, sys
 p, bold, strip = sys.argv[1], sys.argv[2], sys.argv[3]
@@ -126,14 +145,14 @@ if float(bold) > 0:
 open(p, 'w', encoding='utf-8').write(s)
 PY
     ptw="$(grep -oE "width='[0-9.]+pt'|width=\"[0-9.]+pt\"" "$f" | head -1 | grep -oE '[0-9.]+')"
-    printf '  %-30s %s\n' "$ART-$i.svg" "$(emit "$ptw")"
+    printf '  %-30s %s\n' "$NAME.svg" "$(emit "$ptw")"
   else
     ( cd "$WORK" && dvips -q -o "fig-$i.ps" "fig-$i.dvi" 2>/dev/null )
     magick -density "$DENSITY" "$WORK/fig-$i.ps" -background none -alpha on \
-      -fuzz 2% -fill none -opaque white "$OUT/$ART-$i.png" 2>/dev/null \
+      -fuzz 2% -fill none -opaque white "$OUT/$NAME.png" 2>/dev/null \
       || { echo "magick FAILED (fig $i)" >&2; exit 1; }
-    pxw="$(identify -format '%w' "$OUT/$ART-$i.png")"
+    pxw="$(identify -format '%w' "$OUT/$NAME.png")"
     ptw="$(awk -v px="$pxw" -v d="$DENSITY" 'BEGIN{printf "%.3f", px*72/d}')"
-    printf '  %-30s %s\n' "$ART-$i.png" "$(emit "$ptw")"
+    printf '  %-30s %s\n' "$NAME.png" "$(emit "$ptw")"
   fi
 done

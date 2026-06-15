@@ -1,0 +1,29 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG pencil_of_circles (Linear_Systems-1.svg)
+\begin{tikzpicture}
+	\draw[thick, black, -{stealth}] (-8,0) -- (8,0);
+	\draw[thick, black, -{stealth}] (0,-6) -- (0,6);
+	\draw[ultra thick, accent1] (2,0) circle[radius=3];
+	\draw[ultra thick, accent1] (-2,0) circle[radius=3];
+	\begin{scope}
+		\clip (-7.5,-5.5) rectangle (7.5,5.5);
+		\draw[thick, accent1!40] (3,0) circle[radius=sqrt(14)];
+		\draw[thick, accent1!40] (4,0) circle[radius=sqrt(21)];
+		\draw[thick, accent1!40] (5,0) circle[radius=sqrt(30)];
+		\draw[thick, accent1!40] (-3,0) circle[radius=sqrt(14)];
+		\draw[thick, accent1!40] (-4,0) circle[radius=sqrt(21)];
+		\draw[thick, accent1!40] (-5,0) circle[radius=sqrt(30)];
+	\end{scope}
+	\fill[accent2] (0,{sqrt(5)}) circle[radius=3pt];
+	\fill[accent2] (0,{-sqrt(5)}) circle[radius=3pt];
+\end{tikzpicture}
+
+\end{document}

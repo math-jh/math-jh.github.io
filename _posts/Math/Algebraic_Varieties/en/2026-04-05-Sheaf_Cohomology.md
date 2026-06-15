@@ -378,7 +378,7 @@ $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarr
 
 Our claim is that $$\mathcal{Q}$$ is flasque, which can be shown by a diagram chase in the following commutative diagram for arbitrary open sets $$V\subset U$$:
 
-![Commutative diagram](/assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology-1.png){:style="width:20em" class="invert" .align-center}
+![Commutative diagram](/assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg){:style="width:23.07em" class="invert" .align-center}
 
 Here $$\mathcal{F}$$ is flasque by assumption and $$\mathcal{I}$$ is injective and hence flasque. Now for arbitrary $$s\in \mathcal{Q}(V)$$, since $$\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$$ is surjective we can lift $$s$$ to $$t\in \mathcal{I}(V)$$, then use that $$\mathcal{I}$$ is flasque to lift $$t$$ to $$\overline{t}\in\mathcal{I}(U)$$, and map this to $$\mathcal{Q}$$ to define $$\overline{s}\in \mathcal{Q}(U)$$. Now the element $$\overline{s}\vert_V-s$$ in $$\mathcal{Q}(V)$$ comes from an element of $$\mathcal{F}(V)$$, and again by flasqueness of $$\mathcal{F}$$ there exists suitable $$h\in \mathcal{F}(U)$$ with $$h\vert_V=\overline{s}\vert_V-s$$. From this, $$\overline{s}-h$$ restricts exactly to $$s\in \mathcal{Q}(V)$$, yielding the flasqueness of $$\mathcal{Q}$$.
 
