@@ -6,11 +6,38 @@
   {% assign lang = lang_prefix | remove_first: "/" %}
 {% endif %}
 
+{%- comment -%}
+  Auto category sidebar. When _data/navigation.yml has NO block for this nav key,
+  build the list straight from the posts: header name from _data/category_labels.yml,
+  entries = every post in the category (this lang) ordered by its `weight`.
+  Curated/special sidebars (main, category-*, mirror_symmetry-*, *-research,
+  llm_workshop-*, blog_development-*, …) keep their explicit block and take the
+  manual path instead. So a normal category needs ZERO navigation.yml upkeep —
+  add a post (with categories + weight) and it appears automatically.
+{%- endcomment -%}
+{%- unless navigation -%}
+  {%- assign nav_slug = include.nav | remove_first: "-ko" | remove_first: "-en" -%}
+  {%- assign nav_slug_lc = nav_slug | downcase -%}
+  {%- assign auto_cat = nil -%}
+  {%- for pair in site.data.category_labels -%}
+    {%- assign cslug = pair[0] | split: " / " | last | downcase | replace: " ", "_" -%}
+    {%- if cslug == nav_slug_lc -%}{%- assign auto_cat = pair[0] -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+  {%- if auto_cat -%}
+    {%- assign lang_seg = "/" | append: lang | append: "/" -%}
+    {%- assign auto_posts = site.posts | where_exp: "p", "p.categories contains auto_cat" | where_exp: "p", "p.url contains lang_seg" | sort: "weight" -%}
+    {%- assign auto_label = site.data.category_labels[auto_cat] -%}
+    {%- if lang == "en" -%}{%- assign auto_label = auto_cat | split: " / " | last -%}{%- endif -%}
+    {%- assign auto_home = "/" | append: lang | append: "/" | append: nav_slug_lc | append: "/" -%}
+  {%- endif -%}
+{%- endunless -%}
+
 <nav class="nav__list">
   {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[lang].menu_label | default: "Toggle Menu" }}</label>
   <ul class="nav__items">
+    {% if navigation %}
     {% for nav in navigation %}
       <li>
         {% if nav.url %}
@@ -28,6 +55,27 @@
         {% endif %}
       </li>
     {% endfor %}
+    {% elsif auto_cat %}
+      <li>
+        <span class="nav__sub-title"><a href="{{ auto_home | relative_url }}" class="sidebar_title">{{ auto_label }}</a></span>
+        <ul>
+          {% for p in auto_posts %}
+            <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} class="active"{% endif %}>{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        <span class="nav__sub-title"></span>
+        <ul>
+          {% if lang == "en" %}
+            <li><a href="{{ '/en/about' | relative_url }}">About This Site</a></li>
+          {% else %}
+            <li><a href="{{ '/ko/about' | relative_url }}">블로그 소개</a></li>
+            <li><a href="{{ '/ko/misc/index_ko' | relative_url }}">찾아보기</a></li>
+          {% endif %}
+        </ul>
+      </li>
+    {% endif %}
 
     {% assign _lang = lang %}
     {% assign _lang_full = "/" | append: _lang | append: "/" %}

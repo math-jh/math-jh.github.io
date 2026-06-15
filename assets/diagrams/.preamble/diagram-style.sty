@@ -1,0 +1,25 @@
+%% Common style for blog diagrams (shared by every per-article .tex).
+%% Goal: node text renders at the document base size (\normalsize) so that, when
+%% the SVG is placed at width = (intrinsic pt)/10 em, glyphs match the blog body
+%% text exactly. So do NOT downscale picture fonts (avoid [font=\small]).
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{diagram-style}[2026/06/15 blog diagram common style]
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing,
+  decorations.markings, intersections, calc}
+
+%% Lines/arrowheads must stay visible at body-text scale (~1pt intrinsic -> ~1.7px).
+%% Default tikz 0.4pt is too thin; bump to 0.7pt and use a Stealth tip.
+\tikzset{
+  >={Stealth[length=4.5pt, width=3.5pt]},
+  line width=0.7pt,
+}
+
+%% tikz-cd: use tikz arrow tips (so the > setting above applies) and keep arrow
+%% labels at the ambient \normalsize (tikz-cd otherwise leans small).
+\tikzcdset{
+  arrow style=tikz,
+  arrows={line width=0.7pt},
+}
+
+\endinput

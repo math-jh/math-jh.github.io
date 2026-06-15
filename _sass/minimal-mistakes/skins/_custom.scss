@@ -48,7 +48,7 @@ $proof-color: #646972 !default;                                   //  oklch(.52 
 $details-color: #646972 !default;                                 //  = proof (collapsible)
 $example-color: #4a745a !default;                                 //  oklch(.52 .062 156) green
 $remark-color: #895a5b !default;                                  //  oklch(.52 .062 18)  rose
-$misc-color: #7a654d !default;                                    //  oklch(.52 .045 70)  ochre
+$misc-color: #795e7b !default;                                    //  purple (moved off warm ochre — keeps diagram brass accents distinct)
 $spoiler-color: #f4511e !default;                                 //  Deep Orange 600 (unchanged)
 
 /* LLM / AI-author notice — caution accent, deliberately lifted OFF the brass
