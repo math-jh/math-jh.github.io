@@ -87,7 +87,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 force $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, and $$a_{00}=a_{11}$$, so the only free variables are $$a_{00}$$ and $$a_{02}$$. Thus this family of conics forms a $$2$$-dimensional subspace $$V\subseteq\Gamma(X,\mathcal{O}(2))$$, and its projectivization is the $$\mathbb{P}^1$$ parametrized by $$[\lambda:\mu]$$.
 
-![pencil_of_circles](/assets/images/Math/Algebraic_Varieties/Linear_Systems-1.png){:style="width:40em" class="invert" .align-center}
+![pencil_of_circles](/assets/images/Math/Algebraic_Varieties/Linear_Systems-1.svg){:style="width:40em" class="invert" .align-center}
 
 </div>
 

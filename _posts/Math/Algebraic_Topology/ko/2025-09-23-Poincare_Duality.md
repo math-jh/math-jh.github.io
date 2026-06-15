@@ -486,7 +486,7 @@ $$H^2(T^2;\mathbb{Z})=H^1(T^2;\mathbb{Z})\otimes H^1(T^2;\mathbb{Z})\cong \mathb
 
 이제 homology class가 $$a$$인 $$T^2$$의 곡선들을 생각하자. 그럼 이들은 서로 만나지 않을 가능성이 높고, 만약 만난다면 (마찬가지로 general position이 아닌, 접하는 경우를 제외하면) 다음의 모양
 
-![intersections_on_torus](/assets/images/Math/Algebraic_Topology/Poincare_Duality-6.png){:style="width:40%" class="invert" .align-center}
+![intersections_on_torus](/assets/images/Math/Algebraic_Topology/Poincare_Duality-6.svg){:style="width:40%" class="invert" .align-center}
 
 과 같이 만날 것이다. 이는 일견 두 개의 교점이 생기는 것 같지만, 위의 그림에서 양쪽 교점은 그 부호가 다르다, 즉, 가령 직선을 첫 번째 벡터, 곡선을 두 번째 벡터로 두고 외적을 할 경우, 하나는 바깥쪽, 다른 하나는 안쪽으로 들어가는 벡터가 나올 것이며 따라서 부호가 반대이다. 이렇게 두 교점이 상쇄되어 이들의 교집합은 $$0$$이 되고, 따라서 $$\alpha\smile\alpha=0$$이 된다.
 
