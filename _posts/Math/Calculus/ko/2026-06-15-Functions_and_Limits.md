@@ -45,9 +45,23 @@ $$0 < \lvert x - a \rvert < \delta \implies \lvert f(x) - L \rvert < \epsilon$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins>
+<ins id="ex3">**예시 3**</ins> 이 예시에서는 일차함수와 이차함수의 예시에서 극한의 정의를 적용해본다.
 
-1. 정의를 직접 적용하는 가장 단순한 예로 일차함수를 보자. $$\displaystyle\lim_{x\to 3}(2x - 1) = 5$$임을 정의로 확인하면, $$\lvert (2x-1) - 5\rvert = 2\lvert x - 3\rvert$$이므로, 주어진 $$\epsilon > 0$$에 대해 $$\delta = \epsilon/2$$로 두면 $$0 < \lvert x - 3\rvert < \delta$$일 때 $$\lvert (2x-1)-5\rvert = 2\lvert x-3\rvert < 2\delta = \epsilon$$이 성립한다. 이처럼 $$\delta$$를 $$\epsilon$$의 식으로 명시적으로 제시하는 것이 ε-δ 논증의 전형이다.
+우선 일차함수 $$f(x)=2x-1$$을 생각하고, $$x\rightarrow 3$$일 때 이 함수의 극한값이 $$5$$임을 보이자. 그럼
+
+$$\lvert f(x)-L\rvert=\lvert (2x-1)-5\rvert=2\lvert x-3\rvert$$
+
+이므로, 만일 $$\delta=\epsilon/2$$로 택한다면
+
+$$0<\lvert x-3\rvert<\delta\implies 0<> 2\lvert x-3\rvert<2\delta=\epsilon$$
+
+이 된다. 
+
+또 다른 예시로, 이차함수 $$g(x)=x^2$$을 생각하고 $$x\rightarrow 2$$일 때 이 함수의 극한값이 $$4$$임을 보이자. 우선 이를 위해 위와 마찬가지로
+
+$$\lvert g(x)-L\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert\lvert x+2\rvert$$
+
+를 계산한다. 이 계산에서 핵심적인 것은 $$\lvert x+2\rvert$$가 $$2$$ 근방에서는 
 
 2. 이제 이차함수의 극한을 보이자. $$\displaystyle\lim_{x\to 2} x^2 = 4$$임을 확인하려면, $$\lvert x^2 - 4\rvert = \lvert x+2\rvert\lvert x-2\rvert$$임을 이용한다. 먼저 $$\delta \leq 1$$로 가정하면 $$\lvert x-2\rvert < 1$$에서 $$1 < x < 3$$이므로 $$\lvert x+2\rvert < 5$$이다. 따라서 $$\lvert x^2 - 4\rvert < 5\lvert x-2\rvert$$이고, $$\delta = \min(1, \epsilon/5)$$로 두면 $$0 < \lvert x-2\rvert < \delta$$일 때 $$\lvert x^2 - 4\rvert < 5\delta \leq \epsilon$$이 성립한다.
 
