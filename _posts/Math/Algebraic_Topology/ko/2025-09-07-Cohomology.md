@@ -42,7 +42,7 @@ $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathb
 
 또한 spiltting short exact sequence이다. ([##ref](splitting_tensor_splits)) 이 때, 이들을 풀어쓰면 다음의 commutative diagram 
 
-![snake_lemma](/assets/images/Math/Algebraic_Topology/Cohomology-1.png){:style="width:32em" class="invert" .align-center}
+![snake_lemma](/assets/images/Math/Algebraic_Topology/Cohomology-1.svg){:style="width:31.09em" class="invert" .align-center}
 
 과 같은 꼴이고 따라서  [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1)에 의해 다음의 long exact sequence
 

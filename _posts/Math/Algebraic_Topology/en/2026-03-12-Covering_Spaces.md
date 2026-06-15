@@ -57,7 +57,7 @@ For the remainder of this post, we assume all spaces are path-connected for conv
 
 Although the definition appears somewhat involved, it is helpful to keep the following picture in mind.
 
-![S1_covering](/assets/images/Math/Algebraic_Topology/Covering_Spaces-1.png){:style="width:26em" class="invert" .align-center}
+![S1_covering](/assets/images/Math/Algebraic_Topology/Covering_Spaces-1.svg){:style="width:26em" class="invert" .align-center}
 
 This depicts the covering map
 
@@ -144,7 +144,7 @@ The transport map is bijective. Indeed, given any $$y_1\in p^{-1}(x_1)$$, we may
 
 For a fixed base space $$B$$, we define the category $$\Cov(B)$$ of covering spaces over $$B$$ in the evident manner. Explicitly, its objects are covering maps $$p:E\rightarrow B$$, and a morphism from $$p_1:E_1\rightarrow B$$ to $$p_2:E_2\rightarrow B$$ is a continuous map $$f:E_1\rightarrow E_2$$ making the diagram
 
-![morphism_of_covering_spaces](/assets/images/Math/Algebraic_Topology/Covering_Spaces-2.png){:style="width:8em" class="invert" .align-center}
+![morphism_of_covering_spaces](/assets/images/Math/Algebraic_Topology/Covering_Spaces-2.svg){:style="width:6.75em" class="invert" .align-center}
 
 commute. Associating to each $$p\in \Cov(B)$$ its monodromy functor $$M_p$$ then defines a functor
 
@@ -221,7 +221,7 @@ Examining each of these categories, we find that they are simply partially order
 
 Explicitly, a covering space $$p:E \rightarrow B$$ determines a subgroup via $$\pi_1(p):\pi_1(E)\rightarrow \pi_1(B)$$, and two transitive $$G$$-sets $$X\cong G/H$$ and $$Y\cong G/K$$ are isomorphic if and only if $$H$$ and $$K$$ are conjugate, whence the result. On the other hand, if one wishes to work with specific subgroups of $$\pi_1(B,x)$$ rather than their conjugacy classes, this amounts to selecting a representative from each isomorphism class of covering spaces; equivalently, it is the same as fixing a basepoint in $$B$$ and considering *pointed* covering maps $$p:(E, y)\rightarrow (B,x)$$, examining their isomorphism classes individually. Thus we have a Galois correspondence
 
-$$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $$B$$}\right\}\simeq \left\{\text{subgroups of $$\pi_1(B,x)$$}\right\}$$
+$$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $B$}\right\}\simeq \left\{\text{subgroups of $\pi_1(B,x)$}\right\}$$
 
 To put this in a more familiar form, for any $$H\leq \pi_1(B,x)$$ we may construct the corresponding covering space $$E_H$$, and the automorphism group $$\Aut(E_H/B)$$ of $$E_H$$ over $$B$$ satisfies
 
@@ -237,11 +237,11 @@ For well-behaved spaces, one can in principle compute the fundamental group or h
 
 The simplest such decomposition is a union of two open sets: $$X=U\cup V$$. By [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1), the diagram
 
-![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-3.png){:style="width:8em" class="invert" .align-center}
+![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-3.svg){:style="width:7.54em" class="invert" .align-center}
 
 is a colimit diagram. Our goal is to apply the fundamental groupoid functor $$\Pi_1$$ to this diagram and express $$\Pi_1(X)$$ in terms of $$\Pi_1(U)$$, $$\Pi_1(V)$$, and $$\Pi_1(U\cap V)$$. More generally, [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) implies that for any open cover $$(U_i)$$, the diagram
 
-![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-4.png){:style="width:8em" class="invert" .align-center}
+![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-4.svg){:style="width:8.27em" class="invert" .align-center}
 
 is a colimit diagram. Our claim is that if the fundamental groupoids of the $$U_i$$ and of all their finite intersections are known, then the fundamental groupoid of $$\Pi_1(X)$$ can be computed from them.
 
@@ -263,7 +263,7 @@ As in the derivation of [Corollary 12](#cor12), we now apply this theorem at a s
 
 <ins id="cor14">**Corollary 14 (Seifert–van Kampen theorem, classical version)**</ins> Let a topological space $$X$$ be expressed as the union of two connected open subsets $$U,V$$, and suppose $$U\cap V$$ is connected. Then the diagram
 
-![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_Spaces-5.png){:style="width:20em" class="invert" .align-center}
+![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_Spaces-5.svg){:style="width:18.89em" class="invert" .align-center}
 
 is a pushout diagram, and the induced map $$\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)\rightarrow \pi_1(X)$$ is an isomorphism.
 
