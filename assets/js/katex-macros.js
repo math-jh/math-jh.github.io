@@ -157,6 +157,7 @@ window.KATEX_MACROS = {
     "\\qtimes":"\\mathbin{\\star}_q",
     "\\rank":"\\operatorname{rank}",
     "\\Real":"\\mathrm{Re}",
+    "\\rec":"\\mathrm{rec}",
     "\\red":"\\mathrm{red}",
     "\\reg":"\\mathrm{reg}",
     "\\residue":"\\operatorname{res}",

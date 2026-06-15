@@ -21,6 +21,71 @@
 %% 생성된 png를 assets/images/Math/Mirror_Symmetry/{글제목}-n.png 로 이동.
 %% ====================================================================
 
+%% [MR superpotential 명제6·예시5] rectangles cluster 직사각형 그림 4종 (ytableau, frozen=gray!45, mutable=blue!25). 각각 따로 standalone 컴파일. 번호는 본문 등장 순서.
+%% fig (-1): 예시5, Gr(2,4) 2x2 box의 frozen(gray)/mutable(blue) 분류 (Marsh_Rietsch_Superpotential-1.png)
+\ytableausetup{boxsize=1.5em, centertableaux}
+\begin{tikzpicture}[font=\small]
+\node (a) {\begin{ytableau} *(blue!25)&{} \\ {}&{} \end{ytableau}};
+\node (b) [right=1.2cm of a] {\begin{ytableau} *(gray!45)&*(gray!45) \\ {}&{} \end{ytableau}};
+\node (c) [right=1.2cm of b] {\begin{ytableau} *(gray!45)&{} \\ *(gray!45)&{} \end{ytableau}};
+\node (d) [right=1.2cm of c] {\begin{ytableau} *(gray!45)&*(gray!45) \\ *(gray!45)&*(gray!45) \end{ytableau}};
+\node[below=3pt of a] {$p_{(1)}=1\times1$};
+\node[below=3pt of b] {$p_{(2)}=1\times2$};
+\node[below=3pt of c] {$p_{(1,1)}=2\times1$};
+\node[below=3pt of d] {$p_{(2,2)}=2\times2$};
+\end{tikzpicture}
+%% fig (-2): 증명, Gr(3,7) 3x4 box, 직사각형->Plücker 예시 (Marsh_Rietsch_Superpotential-2.png)
+\ytableausetup{boxsize=1.3em, centertableaux}
+\begin{tikzpicture}[font=\small]
+\node (a) {\begin{ytableau} *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node (b) [right=1.4cm of a] {\begin{ytableau} *(gray!45)&{}&{}&{} \\ *(gray!45)&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node (c) [right=1.4cm of b] {\begin{ytableau} *(gray!45)&*(gray!45)&{}&{} \\ {}&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node (d) [right=1.4cm of c] {\begin{ytableau} *(gray!45)&{}&{}&{} \\ {}&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node[below=3pt of a] {$p_{2\times2}$};
+\node[below=3pt of b] {$p_{2\times1}$};
+\node[below=3pt of c] {$p_{1\times2}$};
+\node[below=3pt of d] {$p_{1\times1}$};
+\end{tikzpicture}
+%% fig (-3): 증명, Gr(3,7) frozen = 한 변을 가득 채우는 직사각형 (Marsh_Rietsch_Superpotential-3.png)
+\begin{tikzpicture}[font=\small]
+\node (a) {\begin{ytableau} *(gray!45)&*(gray!45)&*(gray!45)&*(gray!45) \\ {}&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node (b) [right=1.4cm of a] {\begin{ytableau} *(gray!45)&*(gray!45)&*(gray!45)&*(gray!45) \\ *(gray!45)&*(gray!45)&*(gray!45)&*(gray!45) \\ {}&{}&{}&{} \end{ytableau}};
+\node (c) [right=1.4cm of b] {\begin{ytableau} *(gray!45)&{}&{}&{} \\ *(gray!45)&{}&{}&{} \\ *(gray!45)&{}&{}&{} \end{ytableau}};
+\node (d) [right=1.4cm of c] {\begin{ytableau} *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \end{ytableau}};
+\node[below=3pt of a] {$p_{1\times4}$};
+\node[below=3pt of b] {$p_{2\times4}$};
+\node[below=3pt of c] {$p_{3\times1}$};
+\node[below=3pt of d] {$p_{3\times2}$};
+\end{tikzpicture}
+%% fig (-4): 증명, Gr(3,7) cyclic interval에 대응하는 직사각형 lambda(i) (Marsh_Rietsch_Superpotential-4.png)
+\begin{tikzpicture}[font=\small]
+\node (a) {\begin{ytableau} *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \end{ytableau}};
+\node[below=3pt of a] {$\lambda(i)$};
+\end{tikzpicture}
+%% fig (-5, 예시5): Gr(2,4) cyclic interval J_i들의 Young diagram, J1..J4 (Marsh_Rietsch_Superpotential-5.png)  [뒤 초안 정리 후 -1로 재번호 예정]
+\ytableausetup{boxsize=1.5em, centertableaux}
+\begin{tikzpicture}[font=\small]
+\node (a) {\begin{ytableau} *(gray!45)&{} \\ *(gray!45)&{} \end{ytableau}};
+\node (b) [right=1.2cm of a] {\begin{ytableau} *(gray!45)&*(gray!45) \\ *(gray!45)&*(gray!45) \end{ytableau}};
+\node (c) [right=1.2cm of b] {\begin{ytableau} *(gray!45)&*(gray!45) \\ {}&{} \end{ytableau}};
+\node (d) [right=1.2cm of c] {\begin{ytableau} {}&{} \\ {}&{} \end{ytableau}};
+\node[below=3pt of a] {$J_1$};
+\node[below=3pt of b] {$J_2$};
+\node[below=3pt of c] {$J_3$};
+\node[below=3pt of d] {$J_4$};
+\end{tikzpicture}
+%% fig (-6, 예시5): Gr(2,4) Jhat_i들의 Young diagram, J1..J4hat (Marsh_Rietsch_Superpotential-6.png)  [뒤 초안 정리 후 -2로 재번호 예정]
+\begin{tikzpicture}[font=\small]
+\node (a) {\begin{ytableau} *(gray!45)&*(gray!45) \\ *(gray!45)&{} \end{ytableau}};
+\node (b) [right=1.2cm of a] {\begin{ytableau} *(gray!45)&{} \\ {}&{} \end{ytableau}};
+\node (c) [right=1.2cm of b] {\begin{ytableau} *(gray!45)&*(gray!45) \\ *(gray!45)&{} \end{ytableau}};
+\node (d) [right=1.2cm of c] {\begin{ytableau} *(gray!45)&{} \\ {}&{} \end{ytableau}};
+\node[below=3pt of a] {$\widehat{J}_1$};
+\node[below=3pt of b] {$\widehat{J}_2$};
+\node[below=3pt of c] {$\widehat{J}_3$};
+\node[below=3pt of d] {$\widehat{J}_4$};
+\end{tikzpicture}
+
 %% Young diagram: 3x3 직사각형(=Gr(3,6)) 안 λ=(2,1)만 회색 (Quantum_Cohomology_of_Grassmannians-1.png)
 \ytableausetup{boxsize=2em, centertableaux}
 \begin{ytableau}
