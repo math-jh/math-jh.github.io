@@ -21,13 +21,13 @@
 %% 생성된 png를 assets/images/Math/Mirror_Symmetry/{글제목}-n.png 로 이동.
 %% ====================================================================
 
-%% [MR superpotential 명제6·예시5] rectangles cluster 직사각형 그림 5종 (ytableau, frozen=gray!45). 각각 따로 standalone 컴파일. 번호는 본문 등장 순서.
+%% [MR superpotential 명제6·예시5] rectangles cluster 직사각형 그림 5종 (ytableau, fill=red!45). 각각 따로 standalone 컴파일. 번호는 본문 등장 순서.
 %% fig (-1): 예시5, Gr(2,4) cyclic interval J_i들의 Young diagram, J1..J4 (Marsh_Rietsch_Superpotential-1.png)
 \ytableausetup{boxsize=1.5em, centertableaux}
 \begin{tikzpicture}[font=\small]
-\node (a) {\begin{ytableau} *(gray!45)&{} \\ *(gray!45)&{} \end{ytableau}};
-\node (b) [right=1.2cm of a] {\begin{ytableau} *(gray!45)&*(gray!45) \\ *(gray!45)&*(gray!45) \end{ytableau}};
-\node (c) [right=1.2cm of b] {\begin{ytableau} *(gray!45)&*(gray!45) \\ {}&{} \end{ytableau}};
+\node (a) {\begin{ytableau} *(red!45)&{} \\ *(red!45)&{} \end{ytableau}};
+\node (b) [right=1.2cm of a] {\begin{ytableau} *(red!45)&*(red!45) \\ *(red!45)&*(red!45) \end{ytableau}};
+\node (c) [right=1.2cm of b] {\begin{ytableau} *(red!45)&*(red!45) \\ {}&{} \end{ytableau}};
 \node (d) [right=1.2cm of c] {\begin{ytableau} {}&{} \\ {}&{} \end{ytableau}};
 \node[below=3pt of a] {$J_1$};
 \node[below=3pt of b] {$J_2$};
@@ -36,10 +36,10 @@
 \end{tikzpicture}
 %% fig (-2): 예시5, Gr(2,4) Jhat_i들의 Young diagram, J1..J4hat (Marsh_Rietsch_Superpotential-2.png)
 \begin{tikzpicture}[font=\small]
-\node (a) {\begin{ytableau} *(gray!45)&*(gray!45) \\ *(gray!45)&{} \end{ytableau}};
-\node (b) [right=1.2cm of a] {\begin{ytableau} *(gray!45)&{} \\ {}&{} \end{ytableau}};
-\node (c) [right=1.2cm of b] {\begin{ytableau} *(gray!45)&*(gray!45) \\ *(gray!45)&{} \end{ytableau}};
-\node (d) [right=1.2cm of c] {\begin{ytableau} *(gray!45)&{} \\ {}&{} \end{ytableau}};
+\node (a) {\begin{ytableau} *(red!45)&*(red!45) \\ *(red!45)&{} \end{ytableau}};
+\node (b) [right=1.2cm of a] {\begin{ytableau} *(red!45)&{} \\ {}&{} \end{ytableau}};
+\node (c) [right=1.2cm of b] {\begin{ytableau} *(red!45)&*(red!45) \\ *(red!45)&{} \end{ytableau}};
+\node (d) [right=1.2cm of c] {\begin{ytableau} *(red!45)&{} \\ {}&{} \end{ytableau}};
 \node[below=3pt of a] {$\widehat{J}_1$};
 \node[below=3pt of b] {$\widehat{J}_2$};
 \node[below=3pt of c] {$\widehat{J}_3$};
@@ -48,10 +48,10 @@
 %% fig (-3): 증명, Gr(3,7) 3x4 box, 직사각형->Plücker 예시 (Marsh_Rietsch_Superpotential-3.png)
 \ytableausetup{boxsize=1.3em, centertableaux}
 \begin{tikzpicture}[font=\small]
-\node (a) {\begin{ytableau} *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
-\node (b) [right=1.4cm of a] {\begin{ytableau} *(gray!45)&{}&{}&{} \\ *(gray!45)&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
-\node (c) [right=1.4cm of b] {\begin{ytableau} *(gray!45)&*(gray!45)&{}&{} \\ {}&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
-\node (d) [right=1.4cm of c] {\begin{ytableau} *(gray!45)&{}&{}&{} \\ {}&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node (a) {\begin{ytableau} *(red!45)&*(red!45)&{}&{} \\ *(red!45)&*(red!45)&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node (b) [right=1.4cm of a] {\begin{ytableau} *(red!45)&{}&{}&{} \\ *(red!45)&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node (c) [right=1.4cm of b] {\begin{ytableau} *(red!45)&*(red!45)&{}&{} \\ {}&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node (d) [right=1.4cm of c] {\begin{ytableau} *(red!45)&{}&{}&{} \\ {}&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
 \node[below=3pt of a] {$p_{2\times2}$};
 \node[below=3pt of b] {$p_{2\times1}$};
 \node[below=3pt of c] {$p_{1\times2}$};
@@ -59,10 +59,10 @@
 \end{tikzpicture}
 %% fig (-4): 증명, Gr(3,7) frozen = 한 변을 가득 채우는 직사각형 (Marsh_Rietsch_Superpotential-4.png)
 \begin{tikzpicture}[font=\small]
-\node (a) {\begin{ytableau} *(gray!45)&*(gray!45)&*(gray!45)&*(gray!45) \\ {}&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
-\node (b) [right=1.4cm of a] {\begin{ytableau} *(gray!45)&*(gray!45)&*(gray!45)&*(gray!45) \\ *(gray!45)&*(gray!45)&*(gray!45)&*(gray!45) \\ {}&{}&{}&{} \end{ytableau}};
-\node (c) [right=1.4cm of b] {\begin{ytableau} *(gray!45)&{}&{}&{} \\ *(gray!45)&{}&{}&{} \\ *(gray!45)&{}&{}&{} \end{ytableau}};
-\node (d) [right=1.4cm of c] {\begin{ytableau} *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \end{ytableau}};
+\node (a) {\begin{ytableau} *(red!45)&*(red!45)&*(red!45)&*(red!45) \\ {}&{}&{}&{} \\ {}&{}&{}&{} \end{ytableau}};
+\node (b) [right=1.4cm of a] {\begin{ytableau} *(red!45)&*(red!45)&*(red!45)&*(red!45) \\ *(red!45)&*(red!45)&*(red!45)&*(red!45) \\ {}&{}&{}&{} \end{ytableau}};
+\node (c) [right=1.4cm of b] {\begin{ytableau} *(red!45)&{}&{}&{} \\ *(red!45)&{}&{}&{} \\ *(red!45)&{}&{}&{} \end{ytableau}};
+\node (d) [right=1.4cm of c] {\begin{ytableau} *(red!45)&*(red!45)&{}&{} \\ *(red!45)&*(red!45)&{}&{} \\ *(red!45)&*(red!45)&{}&{} \end{ytableau}};
 \node[below=3pt of a] {$p_{1\times4}$};
 \node[below=3pt of b] {$p_{2\times4}$};
 \node[below=3pt of c] {$p_{3\times1}$};
@@ -70,7 +70,7 @@
 \end{tikzpicture}
 %% fig (-5): 증명, Gr(3,7) cyclic interval에 대응하는 직사각형 lambda(i) (Marsh_Rietsch_Superpotential-5.png)
 \begin{tikzpicture}[font=\small]
-\node (a) {\begin{ytableau} *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \\ *(gray!45)&*(gray!45)&{}&{} \end{ytableau}};
+\node (a) {\begin{ytableau} *(red!45)&*(red!45)&{}&{} \\ *(red!45)&*(red!45)&{}&{} \\ *(red!45)&*(red!45)&{}&{} \end{ytableau}};
 \node[below=3pt of a] {$\lambda(i)$};
 \end{tikzpicture}
 
