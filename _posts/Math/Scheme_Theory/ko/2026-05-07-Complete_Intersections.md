@@ -18,9 +18,9 @@ weight: 15
 
 닫힌 부분스킴의 중요한 예시 중 하나는 [§닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes#def7)에서 정의한 vanishing scheme이며, 이에 대한 motivation은 당연히 유클리드 공간 $$\mathbb{R}^n$$과 그 위에서 정의되는 함수 $$f: \mathbb{R}^n \rightarrow \mathbb{R}$$에 대하여 $$f^{-1}(0)$$으로 정의되는 $$\mathbb{R}^n$$의 초곡면 $$f=0$$이다. 
 
-한편 우리는 더 일반적으로 global section들의 (유한한) family $$s_1,\ldots, s_k\in \Gamma(X, \mathscr{O}_X)$$가 주어졌을 때 이들이 정의하는 vanishing scheme $$Z(s_1,\ldots, s_k)$$에도 관심이 있다. 직관적으로 이는 우선 $$X$$에서 global section $$s_1$$을 사용하여 만든 vanishing scheme $$\iota_1:Z(s_1)\hookrightarrow X$$을 생각한 후, $$Z(s_1)$$의 global section 
+한편 우리는 더 일반적으로 global section들의 (유한한) family $$s_1,\ldots, s_k\in \Gamma(X, \mathcal{O}_X)$$가 주어졌을 때 이들이 정의하는 vanishing scheme $$Z(s_1,\ldots, s_k)$$에도 관심이 있다. 직관적으로 이는 우선 $$X$$에서 global section $$s_1$$을 사용하여 만든 vanishing scheme $$\iota_1:Z(s_1)\hookrightarrow X$$을 생각한 후, $$Z(s_1)$$의 global section 
 
-$$s_2\vert_{Z(s_1)}=\iota^\sharp(X)(s_2)\in(\iota_1)_\ast \mathscr{O}_{Z(s_1)}(X)=\Gamma(Z(s_1), \mathscr{O}_{Z(s_1)})$$
+$$s_2\vert_{Z(s_1)}=\iota^\sharp(X)(s_2)\in(\iota_1)_\ast \mathcal{O}_{Z(s_1)}(X)=\Gamma(Z(s_1), \mathcal{O}_{Z(s_1)})$$
 
 을 통해 $$Z(s_1)$$에서 $$s_2\vert_{Z(s_1)}$$의 vanishing scheme을 찾아나가는 것을 반복하여 얻어질 것이며, 물론 이를 위해서는 이 과정이 $$s_1, \ldots, s_k$$의 순서에 무관하게 같은 scheme을 주어야 할 것이다. 
 
@@ -33,7 +33,7 @@ $$s_2\vert_{Z(s_1)}=\iota^\sharp(X)(s_2)\in(\iota_1)_\ast \mathscr{O}_{Z(s_1)}(X
 
 $$\iota\vert^{U_i}: \iota^{-1}(U_i) \rightarrow U_i$$
 
-마다 적당한 $$s_i\in \Gamma(U_i, \mathscr{O}_X)$$가 존재하여 두 closed embedding $$\iota\vert^{U_i}$$와 $$Z(s_i)\hookrightarrow U_i$$가 isomorphic한 것이다. 
+마다 적당한 $$s_i\in \Gamma(U_i, \mathcal{O}_X)$$가 존재하여 두 closed embedding $$\iota\vert^{U_i}$$와 $$Z(s_i)\hookrightarrow U_i$$가 isomorphic한 것이다. 
 
 </div>
 
@@ -45,7 +45,7 @@ $$\iota\vert^{U_i}: \iota^{-1}(U_i) \rightarrow U_i$$
 
 $$\iota\vert^{U_i}:\iota^{-1}(U_i) \rightarrow U_i$$
 
-마다 적당한 non-zerodivisor $$s_i\in A_i=\Gamma(U_i, \mathscr{O}_X)$$가 존재하여 두 closed embedding $$\iota^{U_i}$$와 $$Z(s_i)\hookrightarrow U_i$$가 isomorphic한 것이다.
+마다 적당한 non-zerodivisor $$s_i\in A_i=\Gamma(U_i, \mathcal{O}_X)$$가 존재하여 두 closed embedding $$\iota^{U_i}$$와 $$Z(s_i)\hookrightarrow U_i$$가 isomorphic한 것이다.
 
 </div>
 

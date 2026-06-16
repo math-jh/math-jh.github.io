@@ -97,7 +97,7 @@ Then one can verify that the codimension of a prime ideal $$\mathfrak{p}$$ in a 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**Proposition 7**</ins> For an irreducible closed subset $$Y$$ of $$X$$ and its generic point $$y$$, we have $$\codim Y=\dim \mathscr{O}_{X, y}$$.
+<ins id="prop7">**Proposition 7**</ins> For an irreducible closed subset $$Y$$ of $$X$$ and its generic point $$y$$, we have $$\codim Y=\dim \mathcal{O}_{X, y}$$.
 
 </div>
 <details class="proof" markdown="1">

@@ -26,7 +26,7 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 이 각각의 $$A_1,A_2\in\obj(\mathcal{A})$$마다 다음의 diagram
 
-![natural_transformation](/assets/images/Math/Category_Theory/Natural_Transformations-1.png){:style="width:11em" class="invert" .align-center}
+![natural_transformation](/assets/images/Math/Category_Theory/Natural_Transformations-1.svg){:style="width:10.28em" class="invert" .align-center}
 
 을 commute하도록 한다면, $$\alpha=(\alpha_A)_{A\in\obj(\mathcal{A})}$$를 *natural transformation<sub>자연변환</sub>*이라 부르고 이를 $$\alpha:F\Rightarrow G$$와 같이 표기한다.
 

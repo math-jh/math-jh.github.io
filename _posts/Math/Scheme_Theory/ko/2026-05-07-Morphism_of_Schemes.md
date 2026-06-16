@@ -14,7 +14,7 @@ weight: 7
 
 ---
 
-정의에 의해 $$\Sch$$는 $$\LRS$$의 full subcategory이다. ([§스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 즉 두 scheme $$X,Y$$가 주어졌을 떄, $$X$$에서 $$Y$$로의 scheme morphism은 연속함수 $$\varphi: X \rightarrow Y$$와 structure sheaf 사이의 morphism $$\varphi^\sharp: \mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$으로 주어지며, 이 때 $$\varphi^\sharp$$는 각각의 stalk으로 제한하였을 때 local homomorphism이 되어야 한다. ([§아핀스킴, ⁋정의 2](/ko/math/scheme_theory/affine_schemes#def2)) 
+정의에 의해 $$\Sch$$는 $$\LRS$$의 full subcategory이다. ([§스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 즉 두 scheme $$X,Y$$가 주어졌을 떄, $$X$$에서 $$Y$$로의 scheme morphism은 연속함수 $$\varphi: X \rightarrow Y$$와 structure sheaf 사이의 morphism $$\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$$으로 주어지며, 이 때 $$\varphi^\sharp$$는 각각의 stalk으로 제한하였을 때 local homomorphism이 되어야 한다. ([§아핀스킴, ⁋정의 2](/ko/math/scheme_theory/affine_schemes#def2)) 
 
 위와 같이 scheme morphism $$f:X \rightarrow Y$$은 기본적으로 이미 우리가 정의했던 대상이다. 다음 글에서 우리는 scheme morphism의 성질들에 대해 살펴볼 것인데, 그 전에 우리는 scheme morphism을 이해하는 네 가지 방법을 제시한다. 
 
@@ -102,15 +102,15 @@ $$\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \Spec 
 
 위와 같이 $$S$$가 affine scheme $$S=\Spec A$$인 경우, $$S$$-scheme $$X$$를 약간의 abuse of language를 통해 $$A$$-scheme이라 부르는 것이 일반적이다. 그럼 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여, 임의의 ring $$A$$를 고정하고, scheme $$X$$에 $$A$$-scheme의 구조를 주는 것은 정확하게
 
-$$\Hom_\Sch(X, \Spec A)=\Hom_\LRS(X, \Spec A)\cong \Hom_\cRing(A, \Gamma(X, \mathscr{O}_X))$$
+$$\Hom_\Sch(X, \Spec A)=\Hom_\LRS(X, \Spec A)\cong \Hom_\cRing(A, \Gamma(X, \mathcal{O}_X))$$
 
-와 같다. 즉, scheme $$X$$에 $$A$$-scheme 구조를 주는 것은 대수적으로는 $$\Gamma(X, \mathscr{O}_X)$$에 $$A$$-algebra 구조를 주는 것과 동등하다. 특히 $$A=\mathbb{Z}$$인 경우, $$\mathbb{Z}$$는 $$\cRing$$의 initial object이므로 모든 scheme은 유일한 방식으로 $$\mathbb{Z}$$-scheme으로 생각할 수 있다. 
+와 같다. 즉, scheme $$X$$에 $$A$$-scheme 구조를 주는 것은 대수적으로는 $$\Gamma(X, \mathcal{O}_X)$$에 $$A$$-algebra 구조를 주는 것과 동등하다. 특히 $$A=\mathbb{Z}$$인 경우, $$\mathbb{Z}$$는 $$\cRing$$의 initial object이므로 모든 scheme은 유일한 방식으로 $$\mathbb{Z}$$-scheme으로 생각할 수 있다. 
 
 이제 [예시 2](#ex2)를 더욱 일반화하는 다음의 예시를 보자.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> Ring $$A$$와 $$A$$-scheme $$X$$를 생각하고, $$X$$ 위에 정의된 함수들 $$f_0,\ldots, f_n\in \Gamma(X, \mathscr{O}_X)$$이 주어졌다 하고, $$X$$의 affine open covering $$X=\bigcup U_j$$를 생각하자. 그럼
+<ins id="ex5">**예시 5**</ins> Ring $$A$$와 $$A$$-scheme $$X$$를 생각하고, $$X$$ 위에 정의된 함수들 $$f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$$이 주어졌다 하고, $$X$$의 affine open covering $$X=\bigcup U_j$$를 생각하자. 그럼
 
 $$U_{ij}:=D(f_i)\cap U_j=D(f_i\vert_{U_j})\subseteq U_j$$
 

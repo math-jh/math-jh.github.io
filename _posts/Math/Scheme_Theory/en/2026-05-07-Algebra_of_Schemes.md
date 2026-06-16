@@ -21,7 +21,7 @@ A scheme is simultaneously a geometric and an algebraic object, so to understand
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A scheme $$X$$ is a *reduced scheme* if for every open subset $$U$$, $$\mathscr{O}_X(U)$$ is reduced. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 11](/en/math/algebraic_structures/field_of_fractions#def11)) Similarly, $$X$$ is *integral* if for every open subset $$U$$, $$\mathscr{O}_X(U)$$ is an integral domain. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5))
+<ins id="def1">**Definition 1**</ins> A scheme $$X$$ is a *reduced scheme* if for every open subset $$U$$, $$\mathcal{O}_X(U)$$ is reduced. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 11](/en/math/algebraic_structures/field_of_fractions#def11)) Similarly, $$X$$ is *integral* if for every open subset $$U$$, $$\mathcal{O}_X(U)$$ is an integral domain. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5))
 
 </div>
 
@@ -29,7 +29,7 @@ Then the following holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**Lemma 2**</ins> A scheme $$X$$ is reduced if and only if for every $$x\in X$$, the stalk $$\mathscr{O}_{X, x}$$ is a reduced ring.
+<ins id="lem2">**Lemma 2**</ins> A scheme $$X$$ is reduced if and only if for every $$x\in X$$, the stalk $$\mathcal{O}_{X, x}$$ is a reduced ring.
 
 </div>
 <details class="proof" markdown="1">
@@ -37,15 +37,15 @@ Then the following holds.
 
 First, for any point $$x\in X$$ of a reduced scheme $$X$$, consider an affine open subscheme $$U=\Spec A$$ containing $$x$$. Let $$\mathfrak{p}$$ be the prime ideal corresponding to $$x$$ in $$\Spec A$$; then
 
-$$\mathscr{O}_{X,x}=(\mathscr{O}_X\vert_U)_x\cong \mathscr{O}_{\Spec A, \mathfrak{p}}\cong A_\mathfrak{p}$$
+$$\mathcal{O}_{X,x}=(\mathcal{O}_X\vert_U)_x\cong \mathcal{O}_{\Spec A, \mathfrak{p}}\cong A_\mathfrak{p}$$
 
-and by assumption $$\mathscr{O}_X(U)\cong A$$ is reduced, so $$A_\mathfrak{p}$$ is also reduced.
+and by assumption $$\mathcal{O}_X(U)\cong A$$ is reduced, so $$A_\mathfrak{p}$$ is also reduced.
 
-Conversely, suppose $$\mathscr{O}_{X,x}$$ is reduced for every $$x\in X$$. Then for any open subset $$U$$, the inclusion
+Conversely, suppose $$\mathcal{O}_{X,x}$$ is reduced for every $$x\in X$$. Then for any open subset $$U$$, the inclusion
 
-$$\mathscr{O}_X(U)\hookrightarrow\prod_{x\in U} \mathscr{O}_{X,x}$$
+$$\mathcal{O}_X(U)\hookrightarrow\prod_{x\in U} \mathcal{O}_{X,x}$$
 
-shows that $$\mathscr{O}_X(U)$$ is reduced.
+shows that $$\mathcal{O}_X(U)$$ is reduced.
 
 </details>
 
@@ -90,16 +90,16 @@ Now we obtain the following.
 
 First, suppose $$X$$ is integral. Since every integral domain is reduced, $$X$$ is a reduced scheme. If $$X$$ were not irreducible, there would exist two disjoint nonempty open subsets $$U_1,U_2\neq\emptyset$$. Then for the open subset $$U_1\cup U_2$$,
 
-$$\mathscr{O}_X(U_1\cup U_2)=\mathscr{O}_X(U_1)\times \mathscr{O}_X(U_2)$$
+$$\mathcal{O}_X(U_1\cup U_2)=\mathcal{O}_X(U_1)\times \mathcal{O}_X(U_2)$$
 
 and the right-hand side is not an integral domain, contradicting the assumption that $$X$$ is integral.
 
-Conversely, let an irreducible reduced scheme $$X$$ be given; we show that $$X$$ is integral. That is, for any open subset $$U$$ of $$X$$, we must show that $$\mathscr{O}_X(U)$$ is an integral domain. We first establish the following claim.
+Conversely, let an irreducible reduced scheme $$X$$ be given; we show that $$X$$ is integral. That is, for any open subset $$U$$ of $$X$$, we must show that $$\mathcal{O}_X(U)$$ is an integral domain. We first establish the following claim.
 
-**Claim.** For any affine open subset $$\Spec A\cong V\subseteq X$$, $$\mathscr{O}_X(V)\cong A$$ is always an integral domain.
+**Claim.** For any affine open subset $$\Spec A\cong V\subseteq X$$, $$\mathcal{O}_X(V)\cong A$$ is always an integral domain.
 > From the assumption that $$X$$ is reduced, we know that $$A$$ must be a reduced ring. On the other hand, since $$X$$ is an irreducible closed subset of itself, $$V$$ is also irreducible, and hence by ([\[Topology\] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14)) and [Lemma 3](#lem3), $$\mathfrak{N}(A)=0$$ is a prime ideal, so $$A$$ is an integral domain.
 
-Now we show that for a general open subset $$U$$ of $$X$$, $$\mathscr{O}_X(U)$$ is an integral domain. To this end, suppose two elements $$f,g\in \mathscr{O}_X(U)$$ satisfy $$fg=0$$. Consider the two open subsets of $$U$$
+Now we show that for a general open subset $$U$$ of $$X$$, $$\mathcal{O}_X(U)$$ is an integral domain. To this end, suppose two elements $$f,g\in \mathcal{O}_X(U)$$ satisfy $$fg=0$$. Consider the two open subsets of $$U$$
 
 $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x\not\in \mathfrak{m}_x\}$$
 
@@ -107,7 +107,7 @@ and their complements $$Z_U(f), Z_U(g)$$; then $$U=Z_U(f)\cup Z_U(g)$$. Since $$
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
-in $$V$$, we have $$D_V(f)=D_U(f)\cap V=D(f\vert_{U\cap D_U(f)})\subseteq V$$, and for this to be empty, $$f\vert_{U\cap D_U(f)}$$ must be a nilpotent element of $$\mathscr{O}_X(V)$$. However, by the claim above $$\mathscr{O}_X(V)$$ is an integral domain, so this forces $$f\vert_{U\cap D_U(f)}=0$$, and since this holds for every open affine subset $$V$$ of $$U$$, we must have $$f=0$$.
+in $$V$$, we have $$D_V(f)=D_U(f)\cap V=D(f\vert_{U\cap D_U(f)})\subseteq V$$, and for this to be empty, $$f\vert_{U\cap D_U(f)}$$ must be a nilpotent element of $$\mathcal{O}_X(V)$$. However, by the claim above $$\mathcal{O}_X(V)$$ is an integral domain, so this forces $$f\vert_{U\cap D_U(f)}=0$$, and since this holds for every open affine subset $$V$$ of $$U$$, we must have $$f=0$$.
 
 </details>
 
@@ -117,7 +117,7 @@ However, if $$X$$ is a *connected* scheme, its irreducible components must meet 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> A Noetherian scheme $$X$$ is integral if and only if it is nonempty and connected and each stalk $$\mathscr{O}_{X,x}$$ is an integral domain.
+<ins id="prop5">**Proposition 5**</ins> A Noetherian scheme $$X$$ is integral if and only if it is nonempty and connected and each stalk $$\mathcal{O}_{X,x}$$ is an integral domain.
 
 </div>
 <details class="proof" markdown="1">
@@ -145,7 +145,7 @@ in the irreducible decomposition ($$\ast$$). This is the intersection of two non
 
 $$x\in \Spec A_i\cap X_1\cap X_j=(\Spec A_i\cap X_1)\cap (\Spec A_i\cap X_j).$$
 
-From the preceding argument, $$\Spec A_i\cap X_1$$ has generic point $$\mathfrak{q}_1$$, and $$\Spec A_i\cap X_j$$ has generic point $$\mathfrak{q}_j$$; these are minimal prime ideals of $$A_i$$. Now consider the stalk at $$x$$, $$\mathscr{O}_{X,x}\cong (A_i)_\mathfrak{p}$$. By the minimality of $$\mathfrak{q}_1,\mathfrak{q}_2$$ we have $$\mathfrak{q}_1,\mathfrak{q}_2\subseteq \mathfrak{p}$$, and therefore $$\mathfrak{q}_1 A_i, \mathfrak{q}_2 A_i$$ are minimal prime ideals of $$A_i$$. ([\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)) But an integral domain has a unique minimal prime ideal $$(0)$$, so this contradicts the assumption that $$\mathscr{O}_{X,x}$$ is an integral domain.
+From the preceding argument, $$\Spec A_i\cap X_1$$ has generic point $$\mathfrak{q}_1$$, and $$\Spec A_i\cap X_j$$ has generic point $$\mathfrak{q}_j$$; these are minimal prime ideals of $$A_i$$. Now consider the stalk at $$x$$, $$\mathcal{O}_{X,x}\cong (A_i)_\mathfrak{p}$$. By the minimality of $$\mathfrak{q}_1,\mathfrak{q}_2$$ we have $$\mathfrak{q}_1,\mathfrak{q}_2\subseteq \mathfrak{p}$$, and therefore $$\mathfrak{q}_1 A_i, \mathfrak{q}_2 A_i$$ are minimal prime ideals of $$A_i$$. ([\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)) But an integral domain has a unique minimal prime ideal $$(0)$$, so this contradicts the assumption that $$\mathcal{O}_{X,x}$$ is an integral domain.
 
 </details>
 
@@ -153,7 +153,7 @@ The key logic in the above proof can be summarized as follows:
 
 1. Since $$X$$ is connected, if we decompose $$X$$ into irreducible components then each irreducible component must meet another one[^1]
 2. Let $$x$$ be a point where two irreducible components meet; then any open neighborhood of $$x$$ contains the generic point of each irreducible component ([§Spectra, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16)),
-3. Therefore these generic points survive in the stalk $$\mathscr{O}_{X,x}$$ at $$x$$, but this is impossible since $$\mathscr{O}_{X,x}$$ is an integral domain.
+3. Therefore these generic points survive in the stalk $$\mathcal{O}_{X,x}$$ at $$x$$, but this is impossible since $$\mathcal{O}_{X,x}$$ is an integral domain.
 
 We will examine this property of generic points at the end of this post.
 
@@ -163,7 +163,7 @@ In parallel with integral schemes, we can make the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> A scheme $$X$$ is *normal* if for every $$x\in X$$, the stalk $$\mathscr{O}_{X,x}$$ is a normal domain. ([\[Commutative Algebra\] §Integral Extensions, ⁋Definition 3](/en/math/commutative_algebra/integral_extension#def3))
+<ins id="def6">**Definition 6**</ins> A scheme $$X$$ is *normal* if for every $$x\in X$$, the stalk $$\mathcal{O}_{X,x}$$ is a normal domain. ([\[Commutative Algebra\] §Integral Extensions, ⁋Definition 3](/en/math/commutative_algebra/integral_extension#def3))
 
 </div>
 
@@ -175,7 +175,7 @@ Moreover, we know that a unique factorization domain is always a normal domain. 
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**Definition 7**</ins> A scheme $$X$$ is *factorial* if for every $$x\in X$$, the stalk $$\mathscr{O}_{X,x}$$ is a unique factorization domain.
+<ins id="def7">**Definition 7**</ins> A scheme $$X$$ is *factorial* if for every $$x\in X$$, the stalk $$\mathcal{O}_{X,x}$$ is a unique factorization domain.
 
 </div>
 
@@ -195,7 +195,7 @@ On the other hand, algebraically a minimal prime ideal is always an associated p
 
 This definition does not depend on the choice of $$U$$, and moreover can be expressed stalk-locally. Indeed, for an affine open neighborhood $$\Spec A$$ containing $$x$$, the condition that $$X$$ is locally Noetherian lets us assume that $$A$$ is a Noetherian ring; then from the third condition of ([\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)) we know that there is a one-to-one correspondence between the associated prime ideals of $$A$$ contained in $$\mathfrak{p}_x$$ and the associated prime ideals of $$A_{\mathfrak{p}_x}$$, and via this correspondence [Definition 8](#def8) can be rewritten as:
 
-> For a point $$x$$ of a locally Noetherian scheme $$X$$, we say that $$x$$ is an *associated point* of $$X$$ if $$\mathfrak{m}_x$$ is an associated prime ideal of $$\mathscr{O}_{X,x}$$.
+> For a point $$x$$ of a locally Noetherian scheme $$X$$, we say that $$x$$ is an *associated point* of $$X$$ if $$\mathfrak{m}_x$$ is an associated prime ideal of $$\mathcal{O}_{X,x}$$.
 
 Now the first condition of ([\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)) also guarantees finiteness of associated points when $$X$$ is a quasicompact locally Noetherian scheme, that is, when $$X$$ is a Noetherian scheme.
 
@@ -263,21 +263,21 @@ $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\math
 
 is injective. Therefore for any open subset $$U$$ of a locally Noetherian scheme $$X$$, the map
 
-$$\Gamma(U, \mathscr{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathscr{O}_{X,x}\tag{$\ast$}$$
+$$\Gamma(U, \mathcal{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathcal{O}_{X,x}\tag{$\ast$}$$
 
 is injective.
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**Definition 12**</ins> For a locally Noetherian scheme $$X$$ and an open subset $$U$$ containing all associated points of $$X$$, we call the image of $$\Gamma(U, \mathscr{O}_X)$$ under ($$\ast$$) a *rational function* defined on $$X$$.
+<ins id="def12">**Definition 12**</ins> For a locally Noetherian scheme $$X$$ and an open subset $$U$$ containing all associated points of $$X$$, we call the image of $$\Gamma(U, \mathcal{O}_X)$$ under ($$\ast$$) a *rational function* defined on $$X$$.
 
 </div>
 
-Thus, by definition, a rational function defined on $$X$$ consists of the data of (1) a *domain of definition* $$U$$ containing all associated points of $$X$$, and (2) a function $$f\in \Gamma(U, \mathscr{O}_X)$$ on it, and two such pairs $$(U, f)$$ and $$(U',f')$$ define the same function if $$f$$ and $$f'$$ agree on $$U\cap U'$$.
+Thus, by definition, a rational function defined on $$X$$ consists of the data of (1) a *domain of definition* $$U$$ containing all associated points of $$X$$, and (2) a function $$f\in \Gamma(U, \mathcal{O}_X)$$ on it, and two such pairs $$(U, f)$$ and $$(U',f')$$ define the same function if $$f$$ and $$f'$$ agree on $$U\cap U'$$.
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**Example 13**</ins> Consider the affine scheme $$X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$$. Then $$X$$ has a unique associated prime $$(0)$$, and any open subset of $$X$$ contains this point, so a rational function on $$X$$ consists of any nonempty open subset $$U$$ together with a function $$f\in\Gamma(U, \mathscr{O}_X)$$ on it.
+<ins id="ex13">**Example 13**</ins> Consider the affine scheme $$X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$$. Then $$X$$ has a unique associated prime $$(0)$$, and any open subset of $$X$$ contains this point, so a rational function on $$X$$ consists of any nonempty open subset $$U$$ together with a function $$f\in\Gamma(U, \mathcal{O}_X)$$ on it.
 
 On the other hand, we know that any (nonempty) open subset of an affine scheme $$X=\Spec A$$ is of the form $$\Spec A_f$$ for a suitable nonzero $$f\in A$$, and the functions on it are given by $$A_f$$. For instance, in this example if we choose $$f$$ to be the image of $$\x_1$$ in $$A$$, then by the isomorphism
 

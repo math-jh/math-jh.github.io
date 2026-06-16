@@ -1,0 +1,35 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG diagonal_morphism (Valuative_Criteria-1.svg)
+\begin{tikzcd}
+	{X} \\
+	& {X\times_YX} & X \\
+	& X & Y
+	\arrow[dashed, from=1-1, to=2-2]
+	\arrow[curve={height=-6pt}, Rightarrow, no head, from=1-1, to=2-3]
+	\arrow[curve={height=6pt}, Rightarrow, no head, from=1-1, to=3-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow["f", from=2-3, to=3-3]
+	\arrow["f"', from=3-2, to=3-3]
+\end{tikzcd}
+
+%%FIG valuative_criterion_for_separatedness (Valuative_Criteria-2.svg)
+\begin{tikzcd}
+	{\Spec K} & X \\
+	{\Spec R} & Y
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["f", from=1-2, to=2-2]
+	\arrow[dashed, from=2-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}
