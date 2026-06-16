@@ -225,7 +225,7 @@ $$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(h\cdot v)=\sum_{g\in G
 
 we can write this. Now for this to equal
 
-$$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g)(v))$$
+$$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g)(v)\right)$$
 
 we must have exactly $$\phi(g)=\phi(hgh^{-1})$$, that is, $$\phi$$ must be a class function.
 

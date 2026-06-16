@@ -52,7 +52,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 First, assume that $$R$$ is an equivalence relation.  
 - Since $$(x,x)\in R$$ for all $$x\in A$$, we have $$\pr_1R=A$$.  
-- Also, since $$R$$ is symmetric, $$x\sim_\tiny{R} y\iff y\sim_\tiny{R}x$$ holds, and therefore
+- Also, since $$R$$ is symmetric, $$x\sim_{\tiny R} y\iff y\sim_{\tiny R}x$$ holds, and therefore
 
     $$(x,y)\in R\iff (y,x)\in R\iff (x,y)\in R^{-1}\tag{1}$$
 
