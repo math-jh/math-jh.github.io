@@ -15,7 +15,7 @@ weight: 3
 ---
 
 
-위상공간 위에 정의된 sheaf의 예시 중 가장 기본적인 것은 위상공간 위에 정의된 연속함수들의 모임이며, 우리가 정의할 $$\mathscr{O}_{\Spec A}$$ 또한 비슷하다. 그러나 $$\mathscr{O}_{\Spec A}$$가 $$\Spec A$$ 위에 정의된 연속함수들의 sheaf였다면 여기에 굳이 새로운 이름을 붙일 필요가 없을 것이다. 가장 간단한 예시로, 임의의 field $$\mathbb{K}$$의 유일한 prime ideal은 $$(0)$$이므로, 위상공간으로서 $$\Spec \mathbb{K}$$는 항상 singleton일 것이며 이 위에 위상구조를 주는 방법은 하나 뿐이다. 바꾸어 말하자면, isomorphic하지 않은 두 field의 스펙트럼을 서로 구별하고자 한다면 그 정보는 $$\Spec \mathbb{K}$$의 structure sheaf에 들어있어야 한다. 스펙트럼이 충분히 많은 대수적인 정보를 갖도록 하기 위해, 우리는 $$\mathscr{O}_{\Spec A}$$를 $$A$$ 위에서 정의된 대수적인 함수들의 sheaf로 정의할 것이다.
+위상공간 위에 정의된 sheaf의 예시 중 가장 기본적인 것은 위상공간 위에 정의된 연속함수들의 모임이며, 우리가 정의할 $$\mathcal{O}_{\Spec A}$$ 또한 비슷하다. 그러나 $$\mathcal{O}_{\Spec A}$$가 $$\Spec A$$ 위에 정의된 연속함수들의 sheaf였다면 여기에 굳이 새로운 이름을 붙일 필요가 없을 것이다. 가장 간단한 예시로, 임의의 field $$\mathbb{K}$$의 유일한 prime ideal은 $$(0)$$이므로, 위상공간으로서 $$\Spec \mathbb{K}$$는 항상 singleton일 것이며 이 위에 위상구조를 주는 방법은 하나 뿐이다. 바꾸어 말하자면, isomorphic하지 않은 두 field의 스펙트럼을 서로 구별하고자 한다면 그 정보는 $$\Spec \mathbb{K}$$의 structure sheaf에 들어있어야 한다. 스펙트럼이 충분히 많은 대수적인 정보를 갖도록 하기 위해, 우리는 $$\mathcal{O}_{\Spec A}$$를 $$A$$ 위에서 정의된 대수적인 함수들의 sheaf로 정의할 것이다.
 
 ## Locally ringed space
 
@@ -23,23 +23,23 @@ weight: 3
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 위상공간 $$X$$와, 그 위에 정의된 $$\cRing$$-valued sheaf $$\mathscr{O}_X$$의 pair $$(X,\mathscr{O}_X)$$를 *ringed space<sub>환 달린 공간</sub>*라 부른다. 만일 $$X$$의 임의의 점 $$x$$에 대하여, $$x$$에서의 stalk $$\mathscr{O}_{X,x}$$가 항상 local ring이라면 이 pair $$(X, \mathscr{O}_X)$$를 *locally ringed space<sub>국소적 환 달린 공간</sub>*라 부른다. 
+<ins id="def1">**정의 1**</ins> 위상공간 $$X$$와, 그 위에 정의된 $$\cRing$$-valued sheaf $$\mathcal{O}_X$$의 pair $$(X,\mathcal{O}_X)$$를 *ringed space<sub>환 달린 공간</sub>*라 부른다. 만일 $$X$$의 임의의 점 $$x$$에 대하여, $$x$$에서의 stalk $$\mathcal{O}_{X,x}$$가 항상 local ring이라면 이 pair $$(X, \mathcal{O}_X)$$를 *locally ringed space<sub>국소적 환 달린 공간</sub>*라 부른다. 
 
 </div>
 
-우리의 주장은 $$\Spec A$$에 적당한 structure sheaf $$\mathscr{O}_{\Spec A}$$를 정의하여 $$(\Spec A, \mathscr{O}_{\Spec A})$$를 locally ringed space로 만들 수 있고, 이렇게 정의된 $$\Spec$$은 [§스펙트럼, ⁋명제 2](/ko/math/scheme_theory/spectrums#prop2) 혹은 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)과 같은 functoriality를 갖는다는 것이다. 이를 수학적으로 적기 위해서는 우선 locally ringed space들 사이의 morphism을 정의해야 한다. 
+우리의 주장은 $$\Spec A$$에 적당한 structure sheaf $$\mathcal{O}_{\Spec A}$$를 정의하여 $$(\Spec A, \mathcal{O}_{\Spec A})$$를 locally ringed space로 만들 수 있고, 이렇게 정의된 $$\Spec$$은 [§스펙트럼, ⁋명제 2](/ko/math/scheme_theory/spectrums#prop2) 혹은 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)과 같은 functoriality를 갖는다는 것이다. 이를 수학적으로 적기 위해서는 우선 locally ringed space들 사이의 morphism을 정의해야 한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**정의 2**</ins> 두 ringed space $$(X, \mathscr{O}_X)$$, $$(Y, \mathscr{O}_Y)$$에 대하여, 이들 사이의 morphism은 연속함수 $$\varphi:X \rightarrow Y$$와 $$\Sh(Y,\cRing)$$에서의 morphism $$\varphi^\sharp:\mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$의 pair를 의미한다. 
+<ins id="def2">**정의 2**</ins> 두 ringed space $$(X, \mathcal{O}_X)$$, $$(Y, \mathcal{O}_Y)$$에 대하여, 이들 사이의 morphism은 연속함수 $$\varphi:X \rightarrow Y$$와 $$\Sh(Y,\cRing)$$에서의 morphism $$\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$$의 pair를 의미한다. 
 
-두 locally ringed space $$(X, \mathscr{O}_X)$$, $$(Y, \mathscr{O}_Y)$$ 사이의 morphism은 ringed space로서의 morphism $$(\varphi,\varphi^\sharp)$$이, 추가적으로 각각의 $$x\in X$$에 대하여 local homomorphism $$\varphi_x^\sharp:\mathscr{O}_{Y,\varphi(x)} \rightarrow \mathscr{O}_{X,x}$$를 유도하는 것이다. 
+두 locally ringed space $$(X, \mathcal{O}_X)$$, $$(Y, \mathcal{O}_Y)$$ 사이의 morphism은 ringed space로서의 morphism $$(\varphi,\varphi^\sharp)$$이, 추가적으로 각각의 $$x\in X$$에 대하여 local homomorphism $$\varphi_x^\sharp:\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$$를 유도하는 것이다. 
 
 </div>
 
 ## $$\Spec A$$ 위에 정의된 대수적인 함수들
 
-이제 $$\mathscr{O}_{\Spec A}$$를 정의해야 한다. 이는 이 글의 서두에서 언급한 것과 같이, $$\Spec A$$ 위에 정의된 대수적인 함수들의 sheaf이며, 우리는 [§스펙트럼, §§고전적인 대수기하학](/ko/math/scheme_theory/spectrums#고전적인-대수기하학)에서 $$A=\mathbb{K}[\x_1,\ldots, \x_n]$$일 경우 이들은 적당한 근방을 잡아 유리함수의 꼴로 나타낼 수 있는 함수임을 살펴보았다. 이 과정에서 중요한 역할을 한 것은 $$A$$의 원소, 즉 다항식을 $$\mathbb{A}_\mathbb{K}^n=\mSpec A$$ 위에서의 함수로 취급할 수 있다는 것이었는데, 일반적인 경우에는 $$A$$의 원소는 다항식도 아니고, 또 $$\Spec A$$의 점들을 $$A$$의 원소에 대입할 수도 없다. 
+이제 $$\mathcal{O}_{\Spec A}$$를 정의해야 한다. 이는 이 글의 서두에서 언급한 것과 같이, $$\Spec A$$ 위에 정의된 대수적인 함수들의 sheaf이며, 우리는 [§스펙트럼, §§고전적인 대수기하학](/ko/math/scheme_theory/spectrums#고전적인-대수기하학)에서 $$A=\mathbb{K}[\x_1,\ldots, \x_n]$$일 경우 이들은 적당한 근방을 잡아 유리함수의 꼴로 나타낼 수 있는 함수임을 살펴보았다. 이 과정에서 중요한 역할을 한 것은 $$A$$의 원소, 즉 다항식을 $$\mathbb{A}_\mathbb{K}^n=\mSpec A$$ 위에서의 함수로 취급할 수 있다는 것이었는데, 일반적인 경우에는 $$A$$의 원소는 다항식도 아니고, 또 $$\Spec A$$의 점들을 $$A$$의 원소에 대입할 수도 없다. 
 
 따라서 이 논의를 일반화하기 위해 다음과 같이 생각하자. 우선 $$A$$의 원소는 앞선 예시와 마찬가지로 함수 $$f$$로 생각한다. 그럼 이 때 $$f$$의 점 $$\mathfrak{p}\in\Spec A$$에서의 <em-ko>함숫값</em-ko>은 canonical projection $$\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$$에 의한 $$f$$의 image이다. 그럼 특히 $$f$$가 점 $$\mathfrak{p}$$에서 $$0$$이 된다는 것은
 
@@ -159,13 +159,13 @@ $$\epsilon_f=\overline{\epsilon_f}\circ\epsilon(f)=\overline{\epsilon_f}\circ\wi
 
 <ins id="lem6">**보조정리 6**</ins> $$\Spec A$$의 base $$\{D(f)\}_{f\in A}$$들에 대하여, 각각의 $$f_i\in A$$마다
 
-$$\mathscr{F}(D(f_i))=S(f_i)^{-1}A\cong A_{f_i}$$
+$$\mathcal{F}(D(f_i))=S(f_i)^{-1}A\cong A_{f_i}$$
 
 으로 정의하자. 또, $$D(f_i)\subseteq D(f_j)$$를 만족하는 $$f_i,f_j\in A$$마다 restriction map
 
 $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$
 
-을 canonical morphism $$A\rightarrow S(f_i)^{-1}(A)$$에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)을 적용하여 얻어지는 함수로 정의하자. 그럼 이들 데이터는 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8)의 두 조건을 만족하고, 따라서 $$\mathscr{F}$$를 확장하는 $$\Spec A$$의 ($$\cRing$$-valued) sheaf가 유일하게 결정된다. 
+을 canonical morphism $$A\rightarrow S(f_i)^{-1}(A)$$에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)을 적용하여 얻어지는 함수로 정의하자. 그럼 이들 데이터는 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8)의 두 조건을 만족하고, 따라서 $$\mathcal{F}$$를 확장하는 $$\Spec A$$의 ($$\cRing$$-valued) sheaf가 유일하게 결정된다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -237,11 +237,11 @@ $$\frac{s}{1}=\frac{a_j}{f_j^{m_j}}$$
 
 이다. 이로부터 원하는 $$s$$를 얻는다. 
 
-만일 $$I$$가 무한집합일 경우, $$\Spec A=\bigcup_{j\in J} D(f_j)$$를 만족하는 $$I$$의 유한한 부분집합 $$J=\{1,\ldots, n\}$$을 택하여 위와 같이 반복하여 $$s\in \mathscr{F}(\Spec A)$$를 얻은 후 이것이 $$\alpha\in I\setminus J$$인 $$D(f_\alpha)$$에서도 $$s_\alpha=s\vert_{D(f_\alpha)}$$를 만족함을 보이면 된다. 이를 보이기 위해 유한집합
+만일 $$I$$가 무한집합일 경우, $$\Spec A=\bigcup_{j\in J} D(f_j)$$를 만족하는 $$I$$의 유한한 부분집합 $$J=\{1,\ldots, n\}$$을 택하여 위와 같이 반복하여 $$s\in \mathcal{F}(\Spec A)$$를 얻은 후 이것이 $$\alpha\in I\setminus J$$인 $$D(f_\alpha)$$에서도 $$s_\alpha=s\vert_{D(f_\alpha)}$$를 만족함을 보이면 된다. 이를 보이기 위해 유한집합
 
 $$J\cup\{\alpha\}=\{1,2,\ldots, n,\alpha\}\subseteq I$$
 
-에 대해서도 위와 같은 과정을 반복하여 $$s'\in \mathscr{F}(\Spec A)$$를 얻자. 그럼 $$s$$와 $$s'$$는 정의에 의해 $$i=1,\ldots, n$$마다 $$s\vert_{D(f_i)}=s'\vert_{D(f_i)}$$를 만족하고 $$\Spec A=\bigcup D(f_i)$$이므로, 위에서 보인 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8)의 첫째 조건에 의해 $$s=s'$$임을 알고 이로부터 
+에 대해서도 위와 같은 과정을 반복하여 $$s'\in \mathcal{F}(\Spec A)$$를 얻자. 그럼 $$s$$와 $$s'$$는 정의에 의해 $$i=1,\ldots, n$$마다 $$s\vert_{D(f_i)}=s'\vert_{D(f_i)}$$를 만족하고 $$\Spec A=\bigcup D(f_i)$$이므로, 위에서 보인 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8)의 첫째 조건에 의해 $$s=s'$$임을 알고 이로부터 
 
 $$s\vert_{D(f_\alpha)}=s'\vert_{D(f_\alpha)}=s_\alpha$$
 
@@ -251,21 +251,21 @@ $$s\vert_{D(f_\alpha)}=s'\vert_{D(f_\alpha)}=s_\alpha$$
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> [보조정리 5](#lem5)에 의해 정의되는 $$\Spec A$$ 위의 sheaf를 $$\mathscr{O}_{\Spec A}$$로 쓰고, 이를 *structure sheaf*라 부른다. 
+<ins id="def7">**정의 7**</ins> [보조정리 5](#lem5)에 의해 정의되는 $$\Spec A$$ 위의 sheaf를 $$\mathcal{O}_{\Spec A}$$로 쓰고, 이를 *structure sheaf*라 부른다. 
 
 </div>
 
-그럼 $$(\Spec A,\mathscr{O}_{\Spec A})$$는 locally ringed space 이다. 
+그럼 $$(\Spec A,\mathcal{O}_{\Spec A})$$는 locally ringed space 이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem8">**보조정리 8**</ins> $$(\Spec A,\mathscr{O}_{\Spec A})$$와 임의의 점 $$\mathfrak{p}\in \Spec A$$에 대하여, isomorphism
+<ins id="lem8">**보조정리 8**</ins> $$(\Spec A,\mathcal{O}_{\Spec A})$$와 임의의 점 $$\mathfrak{p}\in \Spec A$$에 대하여, isomorphism
 
-$$A_\mathfrak{p}\cong \mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scriptsize $U\ni\mathfrak{p}$ open} \mathscr{O}_{\Spec A}(U)$$
+$$A_\mathfrak{p}\cong \mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scriptsize $U\ni\mathfrak{p}$ open} \mathcal{O}_{\Spec A}(U)$$
 
 이 존재한다. 뿐만 아니라, $$\mathfrak{p}\in D(f)$$를 만족하는 임의의 $$f\in A$$에 대하여, 다음의 diagram
 
-![stalk_and_localization-1](/assets/images/Math/Scheme_Theory/Affine_Schemes-7.svg){:style="width:14.42em" class="invert" .align-center}
+![stalk_and_localization-1](/assets/images/Math/Scheme_Theory/Affine_Schemes-7.svg){:style="width:14.55em" class="invert" .align-center}
 
 이 commute한다. 
 
@@ -275,11 +275,11 @@ $$A_\mathfrak{p}\cong \mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scri
 
 [\[위상수학\] §위상공간의 기저, ⁋명제 2](/ko/math/topology/topological_bases#prop2)에 의하여 $$D(f)$$들이 $$\Spec A$$의 base이므로, [\[위상수학\] §위상공간의 기저, ⁋명제 5](/ko/math/topology/topological_bases#prop5)에 의하여 
 
-$$\mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathscr{O}_{\Spec A}(D(f))$$
+$$\mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathcal{O}_{\Spec A}(D(f))$$
 
 이 성립한다. 한편 $$\mathfrak{p}\in D(f)\iff f\not\in \mathfrak{p}$$이므로, 우리는 다음의 diagram
 
-![stalk_and_localization-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-8.png){:style="width:38.17em" class="invert" .align-center}
+![stalk_and_localization-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-8.png){:style="width:38.50em" class="invert" .align-center}
 
 을 얻고, 따라서 주어진 isomorphism을 보이는 것은 단순히 다음의 대수적인 isomorphism
 
@@ -293,7 +293,7 @@ $$A_\mathfrak{p}\cong \varinjlim_{\mathfrak{p}\not\ni f} A_f\tag{$\ast\ast$}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 대응 $$A\mapsto (\Spec A, \mathscr{O}_{\Spec A})$$는 contravariant functor $$\Spec: \cRing^\op \rightarrow \LRS$$를 정의한다. 
+<ins id="prop9">**명제 9**</ins> 대응 $$A\mapsto (\Spec A, \mathcal{O}_{\Spec A})$$는 contravariant functor $$\Spec: \cRing^\op \rightarrow \LRS$$를 정의한다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -301,11 +301,11 @@ $$A_\mathfrak{p}\cong \varinjlim_{\mathfrak{p}\not\ni f} A_f\tag{$\ast\ast$}$$
 
 우리는 이미 ring homomorphism $$\phi: A \rightarrow B$$가 연속함수 $$\Spec\phi: \Spec B \rightarrow \Spec A$$를 유도하는 것을 안다. ([§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)) 따라서 
 
-$$(\Spec\phi)^\sharp: \mathscr{O}_{\Spec A} \rightarrow (\Spec\phi)_\ast \mathscr{O}_{\Spec B}$$
+$$(\Spec\phi)^\sharp: \mathcal{O}_{\Spec A} \rightarrow (\Spec\phi)_\ast \mathcal{O}_{\Spec B}$$
 
 를 묘사하면 충분하다. 이를 위해서는 principal open set에서의 함수
 
-$$(\Spec\phi)^\sharp(D(f)): \mathscr{O}_{\Spec A}(D(f)) \rightarrow \mathscr{O}_{\Spec B}((\Spec \phi)^{-1}(D(f)))$$
+$$(\Spec\phi)^\sharp(D(f)): \mathcal{O}_{\Spec A}(D(f)) \rightarrow \mathcal{O}_{\Spec B}((\Spec \phi)^{-1}(D(f)))$$
 
 를 보면 된다. 한편 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)의 증명에서
 
@@ -325,9 +325,9 @@ $$A \overset{\phi}{\longrightarrow}B \overset{\epsilon}{\longrightarrow} B_{\phi
 
 에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)을 적용하여 얻어진다. 물론 이렇게 정의된 $$(\Spec\phi)^\sharp$$이 교집합 $$D(f)\cap D(g)$$에서 같은 함수를 정의함을 보여야 하지만, 이는 $$D(f)\cap D(g)$$임을 이용해서 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 유일성 결과를 사용하면 된다.
 
-이상에서 $$(\Spec\phi, (\Spec\phi)^\sharp): (\Spec B, \mathscr{O}_{\Spec B}) \rightarrow (\Spec A, \mathscr{O}_{\Spec A})$$가 ringed space들 사이의 morphism인 것을 안다. 이제 이것이 locally ringed space들 사이의 morphism임을 보이기 위해서는 임의의 $$\mathfrak{q}\in \Spec B$$에 대하여
+이상에서 $$(\Spec\phi, (\Spec\phi)^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$$가 ringed space들 사이의 morphism인 것을 안다. 이제 이것이 locally ringed space들 사이의 morphism임을 보이기 위해서는 임의의 $$\mathfrak{q}\in \Spec B$$에 대하여
 
-$$(\Spec\phi)^\sharp_\mathfrak{q}:\mathscr{O}_{\Spec A, (\Spec \phi)(\mathfrak{q})} \rightarrow\mathscr{O}_{\Spec B, \mathfrak{q}}$$
+$$(\Spec\phi)^\sharp_\mathfrak{q}:\mathcal{O}_{\Spec A, (\Spec \phi)(\mathfrak{q})} \rightarrow\mathcal{O}_{\Spec B, \mathfrak{q}}$$
 
 이 local homomorphism이면 된다. 그런데 $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$$이고, 따라서 [보조정리 8](#lem8)에 의하여 $$(\Spec\phi)^\sharp_\mathfrak{q}$$는 $$A_{\phi^{-1}(\mathfrak{q})}$$에서 $$B_{\mathfrak{q}}$$로의 ring homomorphism이며 이는 $$A_{\phi^{-1}(\mathfrak{p})}$$의 유일한 maximal ideal $$\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$$를 $$B_\mathfrak{p}$$의 유일한 maximal ideal $$\mathfrak{q}B_\mathfrak{q}$$로 보낸다. 
 
@@ -341,7 +341,7 @@ $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathscr{O}_{\Spec A, (\Spec \phi)(\mathfrak{q
 
 </div>
 
-Affine scheme들의 category를 $$\AffSch$$로 적는다. 그럼 contravariant functor $$\Spec:\cRing^\op \rightarrow \AffSch$$는 그 정의에 의해 essentially surjective이다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 또, 만일 $$(\varphi, \varphi^\sharp): (\Spec B, \mathscr{O}_{\Spec B}) \rightarrow (\Spec A, \mathscr{O}_{\Spec A})$$이 어떠한 ring homomorphism $$\phi$$로부터 유도된 것이라면, [명제 9](#prop9)의 증명에서 $$1=f\in A$$로 잡으면
+Affine scheme들의 category를 $$\AffSch$$로 적는다. 그럼 contravariant functor $$\Spec:\cRing^\op \rightarrow \AffSch$$는 그 정의에 의해 essentially surjective이다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 또, 만일 $$(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$$이 어떠한 ring homomorphism $$\phi$$로부터 유도된 것이라면, [명제 9](#prop9)의 증명에서 $$1=f\in A$$로 잡으면
 
 $$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\longrightarrow} B \overset{\id_B}{\longrightarrow} B_{\phi(1)}=B\bigr)=\phi$$
 
@@ -355,13 +355,13 @@ $$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\longrightarrow} B \overset{\id_B
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
- 임의의 두 affine scheme $$(X, \mathscr{O}_{X})$$, $$(Y, \mathscr{O}_{Y})$$와 이들 사이의 morphism
+ 임의의 두 affine scheme $$(X, \mathcal{O}_{X})$$, $$(Y, \mathcal{O}_{Y})$$와 이들 사이의 morphism
 
-$$(X, \mathscr{O}_{X}) \rightarrow (Y, \mathscr{O}_{Y})$$
+$$(X, \mathcal{O}_{X}) \rightarrow (Y, \mathcal{O}_{Y})$$
 
-이 주어졌다 하면, isomorphism $$(\Spec B, \mathscr{O}_{\Spec B})\cong (X, \mathscr{O}_X)$$, $$(\Spec A, \mathscr{O}_{\Spec A})\cong (Y, \mathscr{O}_Y)$$을 통해 이를 두 spectrum들 사이의 (locally ringed space로서의) morphism 
+이 주어졌다 하면, isomorphism $$(\Spec B, \mathcal{O}_{\Spec B})\cong (X, \mathcal{O}_X)$$, $$(\Spec A, \mathcal{O}_{\Spec A})\cong (Y, \mathcal{O}_Y)$$을 통해 이를 두 spectrum들 사이의 (locally ringed space로서의) morphism 
 
-$$(\varphi, \varphi^\sharp): (\Spec B, \mathscr{O}_{\Spec B}) \rightarrow (\Spec A, \mathscr{O}_{\Spec A})$$
+$$(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$$
 
 으로 볼 수 있다. 따라서 이 locally ringed space들 사이의 morphism이 적당한 ring homomorphism $$\phi$$로부터 나오는 것을 증명하면 충분하다. $$\Spec$$이 faithful이라는 위의 증명에서 힌트를 얻어,
 
@@ -375,13 +375,13 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 임을 보이자. 우선 [보조정리 8](#lem8)에서 $$f=1$$로 두면 우리는 다음의 diagram
 
-![faithful](/assets/images/Math/Scheme_Theory/Affine_Schemes-9.png){:style="width:40.59em" class="invert" .align-center}
+![faithful](/assets/images/Math/Scheme_Theory/Affine_Schemes-9.png){:style="width:40.92em" class="invert" .align-center}
 
 을 얻는다. 이 diagram에서 수직방향 함수들은 모두 isomorphism들이고, 다음의 면
 
-![commuting_square](/assets/images/Math/Scheme_Theory/Affine_Schemes-10.svg){:style="width:13.13em" class="invert" .align-center}
+![commuting_square](/assets/images/Math/Scheme_Theory/Affine_Schemes-10.svg){:style="width:13.26em" class="invert" .align-center}
 
-을 제외한 모든 면들은 commuting square임을 알고 있다. 따라서 위의 diagram에서 $$A \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$는 어떤 함수를 타고 가도 동일하게 결정되며, 이 함수에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)를 적용하면 $$A_{\varphi(\mathfrak{q})} \rightarrow \mathscr{O}_{\Spec B, \mathfrak{q}}$$가 유일하게 결정된다. 이로부터 위의 diagram의 <em-ko>모든</em-ko> 면들이 commuting square인 것을 안다. 즉, $$\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$$도 local homomorphism이고, 따라서 $$\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$임을 안다. 이제 structure sheaf에서 $$\phi$$가 $$\varphi^\sharp$$과 같다는 것은 restriction map만 생각하면 충분하므로, 이상에서 원하는 주장이 증명된다. 
+을 제외한 모든 면들은 commuting square임을 알고 있다. 따라서 위의 diagram에서 $$A \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$$는 어떤 함수를 타고 가도 동일하게 결정되며, 이 함수에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)를 적용하면 $$A_{\varphi(\mathfrak{q})} \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$$가 유일하게 결정된다. 이로부터 위의 diagram의 <em-ko>모든</em-ko> 면들이 commuting square인 것을 안다. 즉, $$\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$$도 local homomorphism이고, 따라서 $$\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$임을 안다. 이제 structure sheaf에서 $$\phi$$가 $$\varphi^\sharp$$과 같다는 것은 restriction map만 생각하면 충분하므로, 이상에서 원하는 주장이 증명된다. 
 
 </details>
 
@@ -389,27 +389,27 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 [\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)에 의해 $$\Spec$$이 full인 것만 보이면 충분하다.
 
-한편 임의의 스펙트럼 $$(\Spec A, \mathscr{O}_{\Spec A})$$에 대하여, 우리는 정의에 의해 
+한편 임의의 스펙트럼 $$(\Spec A, \mathcal{O}_{\Spec A})$$에 대하여, 우리는 정의에 의해 
 
-$$\mathscr{O}_{\Spec A}(A)=\mathscr{O}_{\Spec A}(D(1))\cong A$$
+$$\mathcal{O}_{\Spec A}(A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$
 
-임을 안다. 만일 locally ringed space $$(X, \mathscr{O}_X)$$가 affine scheme이었다면, 마찬가지 방식으로 $$\mathscr{O}_X(X)$$를 살펴보아 $$(X, \mathscr{O}_X)$$가 어떠한 ring의 spectrum과 isomorphic한지 알 수 있다. 즉, affine scheme $$(X, \mathscr{O}_X)$$에 대하여 $$A=\mathscr{O}_X(X)$$라 하면 $$(X, \mathscr{O}_X)\cong (\Spec A, \mathscr{O}_{\Spec A})$$가 성립한다. 더 일반적으로 다음을 정의한다.
+임을 안다. 만일 locally ringed space $$(X, \mathcal{O}_X)$$가 affine scheme이었다면, 마찬가지 방식으로 $$\mathcal{O}_X(X)$$를 살펴보아 $$(X, \mathcal{O}_X)$$가 어떠한 ring의 spectrum과 isomorphic한지 알 수 있다. 즉, affine scheme $$(X, \mathcal{O}_X)$$에 대하여 $$A=\mathcal{O}_X(X)$$라 하면 $$(X, \mathcal{O}_X)\cong (\Spec A, \mathcal{O}_{\Spec A})$$가 성립한다. 더 일반적으로 다음을 정의한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> 임의의 locally ringed space $$(X, \mathscr{O}_X)$$에 대하여, *global section functor* $$\Gamma:\LRS \rightarrow \cRing^\op$$를 $$X\mapsto \Gamma(X, \mathscr{O}_X)=\mathscr{O}_X(X)$$로 정의한다.[^1] 
+<ins id="def12">**정의 12**</ins> 임의의 locally ringed space $$(X, \mathcal{O}_X)$$에 대하여, *global section functor* $$\Gamma:\LRS \rightarrow \cRing^\op$$를 $$X\mapsto \Gamma(X, \mathcal{O}_X)=\mathcal{O}_X(X)$$로 정의한다.[^1] 
 
 </div>
 
-[명제 11](#prop11)의 증명에서 주목할 만한 사실은 $$(X, \mathscr{O}_X)$$가 affine scheme이라는 가정은 필요가 없다는 사실이다. 즉, $$(X, \mathscr{O}_X)\cong(\Spec B, \mathscr{O}_{\Spec B})$$라는 가정을 버리고 [명제 11](#prop11)의 diagram 대신 다음의 diagram
+[명제 11](#prop11)의 증명에서 주목할 만한 사실은 $$(X, \mathcal{O}_X)$$가 affine scheme이라는 가정은 필요가 없다는 사실이다. 즉, $$(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$$라는 가정을 버리고 [명제 11](#prop11)의 diagram 대신 다음의 diagram
 
-![adjoint](/assets/images/Math/Scheme_Theory/Affine_Schemes-11.png){:style="width:36.08em" class="invert" .align-center}
+![adjoint](/assets/images/Math/Scheme_Theory/Affine_Schemes-11.png){:style="width:36.41em" class="invert" .align-center}
 
-을 사용하여도 비슷한 논증을 해 나갈 수 있으며, 이 때 결론의 $$B$$는 $$\Gamma(X, \mathscr{O}_X)$$로 바뀌게 된다. 어차피 $$\mathscr{O}_X$$는 $$X$$에 의해 결정되는 데이터이므로, 이를 간략히 $$\Gamma(X)$$로만 표기하면 이로부터 다음의 정리를 얻는다.
+을 사용하여도 비슷한 논증을 해 나갈 수 있으며, 이 때 결론의 $$B$$는 $$\Gamma(X, \mathcal{O}_X)$$로 바뀌게 된다. 어차피 $$\mathcal{O}_X$$는 $$X$$에 의해 결정되는 데이터이므로, 이를 간략히 $$\Gamma(X)$$로만 표기하면 이로부터 다음의 정리를 얻는다.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm13">**정리 13**</ins> 임의의 locally ringed space $$(X, \mathscr{O}_X)$$와 ring $$A$$에 대하여, 다음의 natural isomorphism
+<ins id="thm13">**정리 13**</ins> 임의의 locally ringed space $$(X, \mathcal{O}_X)$$와 ring $$A$$에 대하여, 다음의 natural isomorphism
 
 $$\Hom_\LRS(X, \Spec A)\cong \Hom_{\cRing^\op}(\Gamma(X), A)=\Hom_{\cRing}(A, \Gamma(X))$$
 
@@ -425,4 +425,4 @@ $$\Hom_\LRS(X, \Spec A)\cong \Hom_{\cRing^\op}(\Gamma(X), A)=\Hom_{\cRing}(A, \G
 
 ---
 
-[^1]: 일반적으로 우리는 임의의 $$X$$ 위의 sheaf $$\mathscr{F}$$에 대해 $$\mathscr{F}(X)$$를 $$\Gamma(X, \mathscr{F})$$로 표기한다. 
+[^1]: 일반적으로 우리는 임의의 $$X$$ 위의 sheaf $$\mathcal{F}$$에 대해 $$\mathcal{F}(X)$$를 $$\Gamma(X, \mathcal{F})$$로 표기한다. 

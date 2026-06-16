@@ -15,7 +15,7 @@ translated_at: 2026-06-02T05:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-02T05:00:02+00:00
 ---
-By definition, $$\Sch$$ is a full subcategory of $$\LRS$$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $$X,Y$$, a scheme morphism from $$X$$ to $$Y$$ is given by a continuous map $$\varphi: X \rightarrow Y$$ together with a morphism of structure sheaves $$\varphi^\sharp: \mathscr{O}_Y \rightarrow \varphi_\ast \mathscr{O}_X$$, where $$\varphi^\sharp$$ must restrict to a local homomorphism on each stalk. ([§Affine Schemes, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2)) 
+By definition, $$\Sch$$ is a full subcategory of $$\LRS$$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $$X,Y$$, a scheme morphism from $$X$$ to $$Y$$ is given by a continuous map $$\varphi: X \rightarrow Y$$ together with a morphism of structure sheaves $$\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$$, where $$\varphi^\sharp$$ must restrict to a local homomorphism on each stalk. ([§Affine Schemes, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2)) 
 
 Thus, a scheme morphism $$f:X \rightarrow Y$$ is fundamentally an object we have already defined. In the next post we will examine properties of scheme morphisms; before doing so, we present four perspectives for understanding them. 
 
@@ -99,15 +99,15 @@ $$\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \Spec 
 
 As above, when $$S$$ is an affine scheme $$S=\Spec A$$, it is common by a slight abuse of language to call an $$S$$-scheme $$X$$ an $$A$$-scheme. Then by [§Affine Schemes, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13), fixing an arbitrary ring $$A$$ and giving an $$A$$-scheme structure on a scheme $$X$$ is precisely the same as
 
-$$\Hom_\Sch(X, \Spec A)=\Hom_\LRS(X, \Spec A)\cong \Hom_\cRing(A, \Gamma(X, \mathscr{O}_X))$$
+$$\Hom_\Sch(X, \Spec A)=\Hom_\LRS(X, \Spec A)\cong \Hom_\cRing(A, \Gamma(X, \mathcal{O}_X))$$
 
-That is, giving an $$A$$-scheme structure on a scheme $$X$$ is algebraically equivalent to giving an $$A$$-algebra structure on $$\Gamma(X, \mathscr{O}_X)$$. In particular, when $$A=\mathbb{Z}$$, since $$\mathbb{Z}$$ is the initial object of $$\cRing$$, every scheme can be regarded as a $$\mathbb{Z}$$-scheme in a unique way. 
+That is, giving an $$A$$-scheme structure on a scheme $$X$$ is algebraically equivalent to giving an $$A$$-algebra structure on $$\Gamma(X, \mathcal{O}_X)$$. In particular, when $$A=\mathbb{Z}$$, since $$\mathbb{Z}$$ is the initial object of $$\cRing$$, every scheme can be regarded as a $$\mathbb{Z}$$-scheme in a unique way. 
 
 Now let us look at the following example, which generalizes [Example 2](#ex2) further.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**Example 5**</ins> Consider a ring $$A$$ and an $$A$$-scheme $$X$$, let functions $$f_0,\ldots, f_n\in \Gamma(X, \mathscr{O}_X)$$ defined on $$X$$ be given, and let $$X=\bigcup U_j$$ be an affine open covering of $$X$$. Then
+<ins id="ex5">**Example 5**</ins> Consider a ring $$A$$ and an $$A$$-scheme $$X$$, let functions $$f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$$ defined on $$X$$ be given, and let $$X=\bigcup U_j$$ be an affine open covering of $$X$$. Then
 
 $$U_{ij}:=D(f_i)\cap U_j=D(f_i\vert_{U_j})\subseteq U_j$$
 

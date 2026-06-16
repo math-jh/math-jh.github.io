@@ -20,7 +20,7 @@ weight: 6
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> Scheme $$X$$가 *reduced scheme<sub>축소스킴</sub>*인 것은 임의의 열린집합 $$U$$에 대하여 $$\mathscr{O}_X(U)$$가 reduced인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 11](/ko/math/algebraic_structures/field_of_fractions#def11)) 비슷하게, $$X$$가 *integral<sub>정역스킴</sub>*인 것은 임의의 열린집합 $$U$$에 대하여 $$\mathscr{O}_X(U)$$가 integral domain인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5))
+<ins id="def1">**정의 1**</ins> Scheme $$X$$가 *reduced scheme<sub>축소스킴</sub>*인 것은 임의의 열린집합 $$U$$에 대하여 $$\mathcal{O}_X(U)$$가 reduced인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 11](/ko/math/algebraic_structures/field_of_fractions#def11)) 비슷하게, $$X$$가 *integral<sub>정역스킴</sub>*인 것은 임의의 열린집합 $$U$$에 대하여 $$\mathcal{O}_X(U)$$가 integral domain인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5))
 
 </div>
 
@@ -28,7 +28,7 @@ weight: 6
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**보조정리 2**</ins> Scheme $$X$$가 reduced scheme인 것은 임의의 $$x\in X$$에 대하여 $$\mathscr{O}_{X, x}$$가 reduced ring인 것과 동치이다.
+<ins id="lem2">**보조정리 2**</ins> Scheme $$X$$가 reduced scheme인 것은 임의의 $$x\in X$$에 대하여 $$\mathcal{O}_{X, x}$$가 reduced ring인 것과 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -36,15 +36,15 @@ weight: 6
 
 우선 reduced scheme $$X$$의 임의의 점 $$x\in X$$에 대하여, $$x$$를 포함하는 affine open subscheme $$U=\Spec A$$를 생각하자. $$\Spec A$$ 안에서 $$x$$에 대응되는 prime ideal을 $$\mathfrak{p}$$라 하면
 
-$$\mathscr{O}_{X,x}=(\mathscr{O}_X\vert_U)_x\cong \mathscr{O}_{\Spec A, \mathfrak{p}}\cong A_\mathfrak{p}$$
+$$\mathcal{O}_{X,x}=(\mathcal{O}_X\vert_U)_x\cong \mathcal{O}_{\Spec A, \mathfrak{p}}\cong A_\mathfrak{p}$$
 
-이고, 가정에 의해 $$\mathscr{O}_X(U)\cong A$$가 reduced이므로 $$A_\mathfrak{p}$$ 또한 reduced이다. 
+이고, 가정에 의해 $$\mathcal{O}_X(U)\cong A$$가 reduced이므로 $$A_\mathfrak{p}$$ 또한 reduced이다. 
 
-거꾸로 임의의 $$x\in X$$에 대하여 $$\mathscr{O}_{X,x}$$가 reduced라 하면, 임의의 열린집합 $$U$$에 대하여 다음 inclusion
+거꾸로 임의의 $$x\in X$$에 대하여 $$\mathcal{O}_{X,x}$$가 reduced라 하면, 임의의 열린집합 $$U$$에 대하여 다음 inclusion
 
-$$\mathscr{O}_X(U)\hookrightarrow\prod_{x\in U} \mathscr{O}_{X,x}$$
+$$\mathcal{O}_X(U)\hookrightarrow\prod_{x\in U} \mathcal{O}_{X,x}$$
 
-을 생각하면 $$\mathscr{O}_X(U)$$가 reduced인 것을 확인할 수 있다. 
+을 생각하면 $$\mathcal{O}_X(U)$$가 reduced인 것을 확인할 수 있다. 
 
 </details>
 
@@ -91,16 +91,16 @@ $$f,g\not\in \mathfrak{N}(A)\implies fg\not\in \mathfrak{N}(A)$$
 
 우선 $$X$$가 integral이라 하자. 임의의 integral domain은 항상 reduced이므로 $$X$$는 reduced scheme이다. 만일 $$X$$가 irreducible scheme이 아니라 하면, 서로소이고 공집합이 아닌 두 열린집합 $$U_1,U_2\neq\emptyset$$가 존재한다. 그럼 열린집합 $$U_1\cup U_2$$에 대하여
 
-$$\mathscr{O}_X(U_1\cup U_2)=\mathscr{O}_X(U_1)\times \mathscr{O}_X(U_2)$$
+$$\mathcal{O}_X(U_1\cup U_2)=\mathcal{O}_X(U_1)\times \mathcal{O}_X(U_2)$$
 
 이고, 우변은 integral domain이 아니므로 이는 $$X$$가 integral이라는 가정에 모순이다.
 
-거꾸로 irreducible reduced scheme $$X$$가 주어졌다 하고, $$X$$가 integral scheme임을 보이자. 즉, $$X$$의 임의의 열린집합 $$U$$가 주어졌을 때, $$\mathscr{O}_X(U)$$가 integral domain임을 보여야 한다. 우선 다음 주장을 보이자.
+거꾸로 irreducible reduced scheme $$X$$가 주어졌다 하고, $$X$$가 integral scheme임을 보이자. 즉, $$X$$의 임의의 열린집합 $$U$$가 주어졌을 때, $$\mathcal{O}_X(U)$$가 integral domain임을 보여야 한다. 우선 다음 주장을 보이자.
 
-**주장** 임의의 affine open subset $$\Spec A\cong V\subseteq X$$에 대하여, $$\mathscr{O}_X(V)\cong A$$는 항상 integral domain이다. 
+**주장** 임의의 affine open subset $$\Spec A\cong V\subseteq X$$에 대하여, $$\mathcal{O}_X(V)\cong A$$는 항상 integral domain이다. 
 > $$X$$가 reduced라는 가정으로부터 $$A$$가 reduced ring이어야 하는 것을 안다. 한편, $$X$$는 $$X$$의 irreducible closed subset이므로 $$V$$도 irreducible이고 ([\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)) 따라서 [보조정리 3](#lem3)으로부터 $$\mathfrak{N}(A)=0$$는 prime ideal이 되어 $$A$$가 integral domain이다. 
 
-이제 일반적으로 $$X$$의 임의의 열린집합 $$U$$에 대하여 $$\mathscr{O}_X(U)$$가 integral domain임을 보인다. 이를 위해 두 원소 $$f,g\in \mathscr{O}_X(U)$$가 $$fg=0$$을 만족한다고 하자. 그럼 $$U$$의 두 열린집합
+이제 일반적으로 $$X$$의 임의의 열린집합 $$U$$에 대하여 $$\mathcal{O}_X(U)$$가 integral domain임을 보인다. 이를 위해 두 원소 $$f,g\in \mathcal{O}_X(U)$$가 $$fg=0$$을 만족한다고 하자. 그럼 $$U$$의 두 열린집합
 
 $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x\not\in \mathfrak{m}_x\}$$
 
@@ -108,7 +108,7 @@ $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
-로 정의하면 $$D_V(f)=D_U(f)\cap V=D(f\vert_{U\cap D_U(f)})\subseteq V$$이고, 이것이 공집합이기 위해서는 $$f\vert_{U\cap D_U(f)}$$가 $$\mathscr{O}_X(V)$$의 nilpotent element이다. 그런데 $$\mathscr{O}_X(V)$$는 위의 주장에 의하여 integral domain이므로, 이로부터 $$f\vert_{U\cap D_U(f)}=0$$이어야 함을 알고, 이것이 $$U$$의 임의의 open affine subset $$V$$에 대해 성립하므로 $$f=0$$이어야 한다. 
+로 정의하면 $$D_V(f)=D_U(f)\cap V=D(f\vert_{U\cap D_U(f)})\subseteq V$$이고, 이것이 공집합이기 위해서는 $$f\vert_{U\cap D_U(f)}$$가 $$\mathcal{O}_X(V)$$의 nilpotent element이다. 그런데 $$\mathcal{O}_X(V)$$는 위의 주장에 의하여 integral domain이므로, 이로부터 $$f\vert_{U\cap D_U(f)}=0$$이어야 함을 알고, 이것이 $$U$$의 임의의 open affine subset $$V$$에 대해 성립하므로 $$f=0$$이어야 한다. 
 
 </details>
 
@@ -119,7 +119,7 @@ $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> Noetherian scheme $$X$$가 integral인 것과, $$X$$가 nonempty, connected이고 각각의 $$\mathscr{O}_{X,x}$$가 integral domain인 것이 동치이다. 
+<ins id="prop5">**명제 5**</ins> Noetherian scheme $$X$$가 integral인 것과, $$X$$가 nonempty, connected이고 각각의 $$\mathcal{O}_{X,x}$$가 integral domain인 것이 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -147,7 +147,7 @@ $$X_1\cap \bigcup_{j=2}^s X_j$$
 
 $$x\in \Spec A_i\cap X_1\cap X_j=(\Spec A_i\cap X_1)\cap (\Spec A_i\cap X_j)$$
 
-이다. 이제 앞선 논증으로부터 $$\Spec A_i\cap X_1$$은 generic point $$\mathfrak{q}_1$$을, $$\Spec A_i\cap X_j$$는 generic point $$\mathfrak{q}_j$$를 가지며, 이들은 $$A_i$$의 minimal prime ideal이다. 이제 $$x$$에서의 stalk $$\mathscr{O}_{X,x}\cong (A_i)_\mathfrak{p}$$를 생각하면, $$\mathfrak{q}_1,\mathfrak{q}_2$$의 minimality로부터 $$\mathfrak{q}_1,\mathfrak{q}_2\subseteq \mathfrak{p}$$이고 따라서 $$\mathfrak{q}_1 A_i, \mathfrak{q}_2 A_i$$는 각각 $$A_i$$의 minimal prime ideal이 된다. ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)) 그런데 integral domain은 유일한 minimal prime ideal $$(0)$$을 가지므로 이는 $$\mathscr{O}_{X,x}$$가 integral domain이라는 가정에 모순이다.
+이다. 이제 앞선 논증으로부터 $$\Spec A_i\cap X_1$$은 generic point $$\mathfrak{q}_1$$을, $$\Spec A_i\cap X_j$$는 generic point $$\mathfrak{q}_j$$를 가지며, 이들은 $$A_i$$의 minimal prime ideal이다. 이제 $$x$$에서의 stalk $$\mathcal{O}_{X,x}\cong (A_i)_\mathfrak{p}$$를 생각하면, $$\mathfrak{q}_1,\mathfrak{q}_2$$의 minimality로부터 $$\mathfrak{q}_1,\mathfrak{q}_2\subseteq \mathfrak{p}$$이고 따라서 $$\mathfrak{q}_1 A_i, \mathfrak{q}_2 A_i$$는 각각 $$A_i$$의 minimal prime ideal이 된다. ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)) 그런데 integral domain은 유일한 minimal prime ideal $$(0)$$을 가지므로 이는 $$\mathcal{O}_{X,x}$$가 integral domain이라는 가정에 모순이다.
 
 </details>
 
@@ -155,7 +155,7 @@ $$x\in \Spec A_i\cap X_1\cap X_j=(\Spec A_i\cap X_1)\cap (\Spec A_i\cap X_j)$$
 
 1. $$X$$가 connected이므로, $$X$$를 irreducible component들로 분해하면 각각의 irreducible component는 다른 irreducible component와 반드시 만나야 하고[^1]
 2. 두 irreducible component가 만나는 점을 $$x$$라 하고 $$x$$의 임의의 열린집합을 잡으면 이 열린집합은 각각의 irreducible component의 generic point를 포함할 것이며 ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)),
-3. 따라서 이들 generic point들은 $$x$$에서의 stalk $$\mathscr{O}_{X,x}$$에서도 살아있지만, 이것은 $$\mathscr{O}_{X,x}$$가 integral domain이므로 불가능하다.
+3. 따라서 이들 generic point들은 $$x$$에서의 stalk $$\mathcal{O}_{X,x}$$에서도 살아있지만, 이것은 $$\mathcal{O}_{X,x}$$가 integral domain이므로 불가능하다.
 
 는 것으로 요약할 수 있다. 이 generic point에 대한 성질은 이 글의 마지막에서 살펴본다. 
 
@@ -165,7 +165,7 @@ Integral scheme과 비슷하게 다음을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> Scheme $$X$$가 *normal<sub>정규스킴</sub>*인 것은 임의의 $$x\in X$$에 대하여 $$\mathscr{O}_{X,x}$$가 normal domain인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3))
+<ins id="def6">**정의 6**</ins> Scheme $$X$$가 *normal<sub>정규스킴</sub>*인 것은 임의의 $$x\in X$$에 대하여 $$\mathcal{O}_{X,x}$$가 normal domain인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3))
 
 </div>
 
@@ -177,7 +177,7 @@ Integral scheme과 비슷하게 다음을 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
-<ins id="def7">**정의 7**</ins> Scheme $$X$$가 *factorial*인 것은 임의의 $$x\in X$$에 대하여 $$\mathscr{O}_{X,x}$$가 unique factorization domain인 것이다.
+<ins id="def7">**정의 7**</ins> Scheme $$X$$가 *factorial*인 것은 임의의 $$x\in X$$에 대하여 $$\mathcal{O}_{X,x}$$가 unique factorization domain인 것이다.
 
 </div>
 
@@ -197,7 +197,7 @@ Integral scheme과 비슷하게 다음을 정의할 수 있다.
 
 그럼 이 정의는 $$U$$의 선택에 의존하지 않으며, 뿐만 아니라 stalk-local하게 쓸 수도 있다. 이는 우선 $$x$$를 포함하는 affine open neighborhood $$\Spec A$$에 대하여, $$X$$가 locally noetherian scheme이라는 조건으로부터 $$A$$가 noetherian ring이라 가정하면 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 셋째 조건으로부터 $$\mathfrak{p}_x$$에 포함된 $$A$$의 associated prime ideal들의 모임과 $$A_{\mathfrak{p}_x}$$의 associated prime ideal들 사이의 일대일대응이 존재하는 것을 알고, 이 일대일대응으로부터 [정의 8](#def8)을
 
-> Locally noetherian scheme $$X$$의 한 점 $$x$$에 대하여, $$x$$가 $$X$$의 *associated point<sub>동반점</sub>*이라는 것은 $$\mathfrak{m}_x$$가 $$\mathscr{O}_{X,x}$$의 associated prime ideal인 것이다.
+> Locally noetherian scheme $$X$$의 한 점 $$x$$에 대하여, $$x$$가 $$X$$의 *associated point<sub>동반점</sub>*이라는 것은 $$\mathfrak{m}_x$$가 $$\mathcal{O}_{X,x}$$의 associated prime ideal인 것이다.
 
 으로 바꾸어 쓸 수 있기 때문이다. 
 
@@ -269,21 +269,21 @@ $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\math
 
 는 injective인 것을 안다. 따라서 locally noetherian scheme $$X$$의 임의의 열린집합 $$U$$에 대하여 다음의 함수
 
-$$\Gamma(U, \mathscr{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathscr{O}_{X,x}\tag{$\ast$}$$
+$$\Gamma(U, \mathcal{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathcal{O}_{X,x}\tag{$\ast$}$$
 
 가 injective이다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> Locally noetherian scheme $$X$$와, $$X$$의 associated point들을 모두 포함하는 열린집합 $$U$$에 대하여, $$\Gamma(U, \mathscr{O}_X)$$의 ($$\ast$$)에 의한 image를 $$X$$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
+<ins id="def12">**정의 12**</ins> Locally noetherian scheme $$X$$와, $$X$$의 associated point들을 모두 포함하는 열린집합 $$U$$에 대하여, $$\Gamma(U, \mathcal{O}_X)$$의 ($$\ast$$)에 의한 image를 $$X$$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
 
 </div>
 
-따라서, 정의에 의해 $$X$$ 위에 정의된 rational function은 (1) $$X$$의 모든 associated point들을 포함하는 *정의역* $$U$$와, (2) 그 위의 함수 $$f\in \Gamma(U, \mathscr{O}_X)$$의 데이터로 이루어지며, 이러한 pair $$(U, f)$$와 $$(U',f')$$는 만일 $$U\cap U'$$에서 $$f$$와 $$f'$$가 같은 함수를 정의하면 같은 함수가 된다. 
+따라서, 정의에 의해 $$X$$ 위에 정의된 rational function은 (1) $$X$$의 모든 associated point들을 포함하는 *정의역* $$U$$와, (2) 그 위의 함수 $$f\in \Gamma(U, \mathcal{O}_X)$$의 데이터로 이루어지며, 이러한 pair $$(U, f)$$와 $$(U',f')$$는 만일 $$U\cap U'$$에서 $$f$$와 $$f'$$가 같은 함수를 정의하면 같은 함수가 된다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13**</ins> Affine scheme $$X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$$을 생각하자. 그럼 $$X$$는 유일한 associated prime $$(0)$$을 가지며, $$X$$의 임의의 열린집합은 이 점을 포함하므로 $$X$$의 rational function은 공집합이 아닌 임의의 열린집합 $$U$$와 그 위에서의 함수 $$f\in\Gamma(U, \mathscr{O}_X)$$로 이루어진다. 
+<ins id="ex13">**예시 13**</ins> Affine scheme $$X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$$을 생각하자. 그럼 $$X$$는 유일한 associated prime $$(0)$$을 가지며, $$X$$의 임의의 열린집합은 이 점을 포함하므로 $$X$$의 rational function은 공집합이 아닌 임의의 열린집합 $$U$$와 그 위에서의 함수 $$f\in\Gamma(U, \mathcal{O}_X)$$로 이루어진다. 
 
 한편, 우리는 affine scheme $$X=\Spec A$$의 임의의 (공집합이 아닌) 열린집합은 적당한 nonzero $$f\in A$$에 대하여 $$\Spec A_f$$의 꼴이며, 이 위에서의 함수는 $$A_f$$로 주어지는 것을 안다. 가령 이 예시에서 $$f$$를 $$\x_1$$(의 $$A$$에서의 image)로 택했다고 하면, isomorphism
 

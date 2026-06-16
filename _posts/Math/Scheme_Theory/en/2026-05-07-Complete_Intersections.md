@@ -19,9 +19,9 @@ From dimension
 
 An important example of a closed subscheme is the vanishing scheme defined in [§Closed Subschemes, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes#def7); the motivation is naturally the hypersurface $$f=0$$ in Euclidean space $$\mathbb{R}^n$$, defined as $$f^{-1}(0)$$ for a function $$f: \mathbb{R}^n \rightarrow \mathbb{R}$$.
 
-More generally, we are also interested in the vanishing scheme $$Z(s_1,\ldots, s_k)$$ defined by a (finite) family of global sections $$s_1,\ldots, s_k\in \Gamma(X, \mathscr{O}_X)$$. Intuitively, this is obtained by first forming the vanishing scheme $$\iota_1:Z(s_1)\hookrightarrow X$$ using the global section $$s_1$$ on $$X$$, then iterating the process of taking the vanishing scheme of $$s_2\vert_{Z(s_1)}$$ on $$Z(s_1)$$ via the global section
+More generally, we are also interested in the vanishing scheme $$Z(s_1,\ldots, s_k)$$ defined by a (finite) family of global sections $$s_1,\ldots, s_k\in \Gamma(X, \mathcal{O}_X)$$. Intuitively, this is obtained by first forming the vanishing scheme $$\iota_1:Z(s_1)\hookrightarrow X$$ using the global section $$s_1$$ on $$X$$, then iterating the process of taking the vanishing scheme of $$s_2\vert_{Z(s_1)}$$ on $$Z(s_1)$$ via the global section
 
-$$s_2\vert_{Z(s_1)}=\iota^\sharp(X)(s_2)\in(\iota_1)_\ast \mathscr{O}_{Z(s_1)}(X)=\Gamma(Z(s_1), \mathscr{O}_{Z(s_1)})$$
+$$s_2\vert_{Z(s_1)}=\iota^\sharp(X)(s_2)\in(\iota_1)_\ast \mathcal{O}_{Z(s_1)}(X)=\Gamma(Z(s_1), \mathcal{O}_{Z(s_1)})$$
 
 ; of course, for this to be well-defined, the process must yield the same scheme regardless of the order of $$s_1, \ldots, s_k$$.
 
@@ -34,7 +34,7 @@ $$s_2\vert_{Z(s_1)}=\iota^\sharp(X)(s_2)\in(\iota_1)_\ast \mathscr{O}_{Z(s_1)}(X
 
 $$\iota\vert^{U_i}: \iota^{-1}(U_i) \rightarrow U_i$$
 
-obtained by restricting the codomain of $$\iota$$ to $$U_i$$, there exists a suitable $$s_i\in \Gamma(U_i, \mathscr{O}_X)$$ such that the two closed embeddings $$\iota\vert^{U_i}$$ and $$Z(s_i)\hookrightarrow U_i$$ are isomorphic.
+obtained by restricting the codomain of $$\iota$$ to $$U_i$$, there exists a suitable $$s_i\in \Gamma(U_i, \mathcal{O}_X)$$ such that the two closed embeddings $$\iota\vert^{U_i}$$ and $$Z(s_i)\hookrightarrow U_i$$ are isomorphic.
 
 </div>
 
@@ -46,7 +46,7 @@ Now if $$\iota: Z\hookrightarrow X$$ is locally principal, then by covering each
 
 $$\iota\vert^{U_i}:\iota^{-1}(U_i) \rightarrow U_i$$
 
-there exists a suitable non-zerodivisor $$s_i\in A_i=\Gamma(U_i, \mathscr{O}_X)$$ such that the two closed embeddings $$\iota^{U_i}$$ and $$Z(s_i)\hookrightarrow U_i$$ are isomorphic.
+there exists a suitable non-zerodivisor $$s_i\in A_i=\Gamma(U_i, \mathcal{O}_X)$$ such that the two closed embeddings $$\iota^{U_i}$$ and $$Z(s_i)\hookrightarrow U_i$$ are isomorphic.
 
 </div>
 

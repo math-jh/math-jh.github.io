@@ -43,7 +43,7 @@ $$\mathbb{P}^n=\mathbb{R}^n\coprod \mathbb{P}^{n-1}$$
 
 This process is illustrated in the following figure for the case $$n=2$$.
 
-![stereographic_projection](/assets/images/Math/Scheme_Theory/Projective_Schemes-1.png){:style="width:25em" class="invert" .align-center}
+![stereographic_projection](/assets/images/Math/Scheme_Theory/Projective_Schemes-1.svg){:style="width:31.18em" class="invert" .align-center}
 
 Writing this in formulas, for a point $$[x_0:\cdots:x_n]$$ in $$\mathbb{P}^n$$, if $$x_i\neq 0$$ then within the equivalence class of $$[x_0:\cdots:x_n]$$ we can (uniquely) find the point whose $$i$$-th coordinate is $$1$$; regarding this point as a point of $$P_i$$, we can identify the subset
 
@@ -85,7 +85,7 @@ almost trivially satisfy the cocycle condition of [§Schemes, ⁋Lemma 9](/en/ma
 
 ## Projective Schemes
 
-As it stands, the above explanation has some incomplete parts. For example, that the $$U_i$$ are open subschemes of $$\mathbb{P}^n$$ is a consequence of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), but by its very definition it seems that it should be an open set because it is the set where the function $$\x_i$$ is nonzero. However, the problem is that $$\x_i$$ is not a function on $$\mathbb{P}^n$$. Indeed, even in the case $$n=1$$ we have checked that $$\mathscr{O}_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$$. This can also be verified purely from the topological construction: the function $$\x_i: \mathbb{R}^{n+1}\setminus\{0\} \rightarrow \mathbb{R}$$ that takes a point $$(x_0,\ldots, x_n)$$ of $$\mathbb{R}^{n+1}\setminus \{0\}$$ and returns $$x_i$$ is not compatible with $$\sim$$, and therefore does not define a function on $$\mathbb{P}^n$$. As another example, if a function $$f: \mathbb{R}^2\setminus\{0\} \rightarrow \mathbb{R}$$ defined on $$\mathbb{R}^2\setminus\{0\}$$ is given by the formula
+As it stands, the above explanation has some incomplete parts. For example, that the $$U_i$$ are open subschemes of $$\mathbb{P}^n$$ is a consequence of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), but by its very definition it seems that it should be an open set because it is the set where the function $$\x_i$$ is nonzero. However, the problem is that $$\x_i$$ is not a function on $$\mathbb{P}^n$$. Indeed, even in the case $$n=1$$ we have checked that $$\mathcal{O}_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$$. This can also be verified purely from the topological construction: the function $$\x_i: \mathbb{R}^{n+1}\setminus\{0\} \rightarrow \mathbb{R}$$ that takes a point $$(x_0,\ldots, x_n)$$ of $$\mathbb{R}^{n+1}\setminus \{0\}$$ and returns $$x_i$$ is not compatible with $$\sim$$, and therefore does not define a function on $$\mathbb{P}^n$$. As another example, if a function $$f: \mathbb{R}^2\setminus\{0\} \rightarrow \mathbb{R}$$ defined on $$\mathbb{R}^2\setminus\{0\}$$ is given by the formula
 
 $$f(x_0,x_1)=x_0^2-x_1$$
 
@@ -270,13 +270,13 @@ all satisfy the conditions of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/sch
 
 </div>
 
-In particular, since $$\Proj A_\bullet$$ is a locally ringed space, for any $$\mathfrak{p}\in \Proj A_\bullet$$ the stalk $$\mathscr{O}_{\Proj A_\bullet,\mathfrak{p}}$$ is a local ring. But anyway, since $$\mathfrak{p}$$ can be placed in a suitable affine open neighborhood, the following can be shown by essentially the same procedure as [§Affine Schemes, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8).
+In particular, since $$\Proj A_\bullet$$ is a locally ringed space, for any $$\mathfrak{p}\in \Proj A_\bullet$$ the stalk $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$$ is a local ring. But anyway, since $$\mathfrak{p}$$ can be placed in a suitable affine open neighborhood, the following can be shown by essentially the same procedure as [§Affine Schemes, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8).
 
 <div class="proposition" markdown="1">
 
 <ins id="lem11">**Lemma 11**</ins> For a graded ring $$A_\bullet$$ and any $$\mathfrak{p}\in \Proj A_\bullet$$, there exists an isomorphism
 
-$$\mathscr{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
+$$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 
 </div>
 
@@ -306,7 +306,7 @@ $$\mathbb{K}[\x_{0/i}, \ldots, \x_{n/i}]\rightarrow \mathbb{K}[\x_0,\ldots, \x_n
 
 Now any $$\mathfrak{p}\in \mathbb{P}^n_\mathbb{K}$$ is contained in some $$D_+(\x_i)$$. Suppose that via the above isomorphism the point $$\mathfrak{p}$$ of $$D_+(\x_i)$$ is carried to a point $$\mathfrak{q}$$ of $$U_i=\Spec \mathbb{K}[\x_{0/i}, \ldots, \x_{n/i}]/(\x_{i/i}-1)$$. Then in this case we naturally expect the isomorphism
 
-$$\mathscr{O}_{\mathbb{P}^n_\mathbb{K},\mathfrak{p}}\cong \mathscr{O}_{U_i, \mathfrak{q}}$$
+$$\mathcal{O}_{\mathbb{P}^n_\mathbb{K},\mathfrak{p}}\cong \mathcal{O}_{U_i, \mathfrak{q}}$$
 
 And of course this holds. ([[Commutative Algebra] §Localization of Graded Rings, ⁋Proposition 8](/en/math/commutative_algebra/localization_of_graded_rings#prop8))
 

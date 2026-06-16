@@ -75,7 +75,7 @@
 
 %%FIG stalk_and_localization-1 (Affine_Schemes-7.svg)
 \begin{tikzcd}
-	{\mathscr{O}_{\Spec A}(D(f))} & {\mathscr{O}_{\Spec A, \mathfrak{p}}} \\
+	{\mathcal{O}_{\Spec A}(D(f))} & {\mathcal{O}_{\Spec A, \mathfrak{p}}} \\
 	{A_f} & {A_\mathfrak{p}}
 	\arrow[from=1-1, to=1-2]
 	\arrow[from=1-1, to=2-1]
@@ -87,8 +87,8 @@
 \begin{tikzcd}
 	{A_{f_j}} && {A_{f_i}} \\
 	& {\displaystyle\varinjlim_{\mathfrak{p}\not\ni f}A_f} \\
-	{\mathscr{O}_{\Spec A}(D(f_j))} && {\mathscr{O}_{\Spec A}(D(f_i))} \\
-	& {\displaystyle \mathscr{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}}\mathscr{O}_{\Spec A}(D(f))}
+	{\mathcal{O}_{\Spec A}(D(f_j))} && {\mathcal{O}_{\Spec A}(D(f_i))} \\
+	& {\displaystyle \mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}}\mathcal{O}_{\Spec A}(D(f))}
 	\arrow[from=1-1, to=1-3]
 	\arrow[from=1-1, to=2-2]
 	\arrow[from=1-1, to=3-1]
@@ -102,8 +102,8 @@
 
 %%FIG faithful (Affine_Schemes-9.png)
 \begin{tikzcd}
-	&[-60pt] {\varphi_\ast\mathscr{O}_{\Spec B}(\Spec A)=\mathscr{O}_{\Spec B}(\Spec B)} && {\mathscr{O}_{\Spec B, \mathfrak{q}}} \\[30pt]
-	{\mathscr{O}_{\Spec A}(\Spec A)} && {\mathscr{O}_{\Spec A, \varphi(\mathfrak{q})}} \\
+	&[-60pt] {\varphi_\ast\mathcal{O}_{\Spec B}(\Spec A)=\mathcal{O}_{\Spec B}(\Spec B)} && {\mathcal{O}_{\Spec B, \mathfrak{q}}} \\[30pt]
+	{\mathcal{O}_{\Spec A}(\Spec A)} && {\mathcal{O}_{\Spec A, \varphi(\mathfrak{q})}} \\
 	& B && {B_\mathfrak{q}} \\[30pt]
 	A && {A_{\varphi(\mathfrak{q})}}
 	\arrow[from=1-2, to=1-4]
@@ -122,7 +122,7 @@
 
 %%FIG commuting_square (Affine_Schemes-10.svg)
 \begin{tikzcd}
-	{\mathscr{O}_{\Spec A, \varphi(\mathfrak{q})}} & {\mathscr{O}_{\Spec B, \mathfrak{q}}} \\
+	{\mathcal{O}_{\Spec A, \varphi(\mathfrak{q})}} & {\mathcal{O}_{\Spec B, \mathfrak{q}}} \\
 	{A_{\varphi(\mathfrak{q})}} & {B_\mathfrak{q}}
 	\arrow["{\varphi_\mathfrak{q}^\sharp}", from=1-1, to=1-2]
 	\arrow[from=1-1, to=2-1]
@@ -132,8 +132,8 @@
 
 %%FIG adjoint (Affine_Schemes-11.png)
 \begin{tikzcd}
-	&[-30pt] {\varphi_\ast\mathscr{O}_{X}(\Spec A)=\mathscr{O}_{X}(X)} && {\mathscr{O}_{X, x}} \\[30pt]
-	{\mathscr{O}_{\Spec A}(\Spec A)} && {\mathscr{O}_{\Spec A, \varphi(x)}} \\[30pt]
+	&[-30pt] {\varphi_\ast\mathcal{O}_{X}(\Spec A)=\mathcal{O}_{X}(X)} && {\mathcal{O}_{X, x}} \\[30pt]
+	{\mathcal{O}_{\Spec A}(\Spec A)} && {\mathcal{O}_{\Spec A, \varphi(x)}} \\[30pt]
 	A && {A_{\varphi(x)}}
 	\arrow[from=1-2, to=1-4]
 	\arrow["{\varphi^\sharp(\Spec A)}"{description}, from=2-1, to=1-2]

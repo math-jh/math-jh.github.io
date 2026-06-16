@@ -98,7 +98,7 @@ $$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $$X$$의 irreducible closed subset $$Y$$와 $$Y$$의 generic point $$y$$에 대하여, $$\codim Y=\dim \mathscr{O}_{X, y}$$이 성립한다. 
+<ins id="prop7">**명제 7**</ins> $$X$$의 irreducible closed subset $$Y$$와 $$Y$$의 generic point $$y$$에 대하여, $$\codim Y=\dim \mathcal{O}_{X, y}$$이 성립한다. 
 
 </div>
 <details class="proof" markdown="1">

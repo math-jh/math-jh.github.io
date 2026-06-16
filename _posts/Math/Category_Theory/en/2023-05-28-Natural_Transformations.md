@@ -27,7 +27,7 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 makes the following diagram commute for each $$A_1,A_2\in\obj(\mathcal{A})$$,
 
-![natural_transformation](/assets/images/Math/Category_Theory/Natural_Transformations-1.png){:style="width:11em" class="invert" .align-center}
+![natural_transformation](/assets/images/Math/Category_Theory/Natural_Transformations-1.svg){:style="width:10.28em" class="invert" .align-center}
 
 then we call $$\alpha=(\alpha_A)_{A\in\obj(\mathcal{A})}$$ a *natural transformation* and denote it by $$\alpha:F\Rightarrow G$$.
 

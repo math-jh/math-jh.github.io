@@ -27,9 +27,9 @@ In previous posts we explored several viewpoints for studying scheme morphisms. 
 
 Schemes are built from affine schemes. If a property $$P$$ of scheme morphisms is local on target, then for a scheme morphism $$\varphi:X \rightarrow Y$$ we may assume the target $$Y$$ is $$\Spec B$$, and then by the adjunction
 
-$$\Hom_\Sch(X, \Spec B)\cong \Hom_\cRing(B, \Gamma(X, \mathscr{O}_X))$$
+$$\Hom_\Sch(X, \Spec B)\cong \Hom_\cRing(B, \Gamma(X, \mathcal{O}_X))$$
 
-we can define the property of a scheme morphism $$X \rightarrow \Spec B$$ through the property of the ring homomorphism $$B \rightarrow \Gamma(X, \mathscr{O}_X)$$.
+we can define the property of a scheme morphism $$X \rightarrow \Spec B$$ through the property of the ring homomorphism $$B \rightarrow \Gamma(X, \mathcal{O}_X)$$.
 
 ## Quasi-Compact and Quasi-Separated Morphisms
 
@@ -118,7 +118,7 @@ Then quasi-compactness and quasi-separatedness not only satisfy the property of 
 
 We know from the adjunction
 
-$$\Hom_\Sch(X, \Spec B)\cong\Hom_\cRing (B, \Gamma(X, \mathscr{O}_X))$$
+$$\Hom_\Sch(X, \Spec B)\cong\Hom_\cRing (B, \Gamma(X, \mathcal{O}_X))$$
 
 that in particular, when $$X=\Spec A$$,
 
@@ -126,7 +126,7 @@ $$\Hom_\Sch(\Spec A,\Spec B)\cong\Hom_\cRing (B, A)$$
 
 holds. ([§Affine Schemes, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11)) Therefore, when examining a property of scheme morphisms that is affine-local on target as above, for any affine open subset $$V\cong\Spec B$$ of $$Y$$, the set $$U=\varphi^{-1}(V)$$ is also an open subscheme $$U\cong \Spec A$$ of $$X$$, and thus $$\varphi\vert_U: U \rightarrow V$$ becomes a morphism between affine schemes, so it would be desirable to obtain this property from the ring homomorphism
 
-$$(\varphi\vert_U)^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_U(V)=\mathscr{O}_U(U)$$
+$$(\varphi\vert_U)^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_U(V)=\mathcal{O}_U(U)$$
 
 However, of course for an arbitrary scheme morphism $$\varphi: X \rightarrow Y$$, the preimage of an affine open subset of $$Y$$ need not be affine. ([§Schemes, ⁋Example 8](/en/math/scheme_theory/schemes#ex8))
 
@@ -150,7 +150,7 @@ Then it is obvious that the composition of affine morphisms is affine. Moreover,
 
 <ins id="def10">**Definition 10**</ins> A scheme morphism $$\varphi:X \rightarrow Y$$ is *finite* if $$\varphi$$ is affine and, for every affine open subset $$V$$ of $$Y$$, the ring homomorphism
 
-$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}(V)}(V)$$
+$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_{\varphi^{-1}(V)}(V)$$
 
 is a finite ring homomorphism. ([[Commutative Algebra] §Integral Extensions, ⁋Definition 3](/en/math/commutative_algebra/integral_extension#def3))
 
@@ -162,7 +162,7 @@ To aid understanding, let us write an affine open subset $$V\subseteq Y$$ as $$\
 
 <ins id="def11">**Definition 11**</ins> A scheme morphism $$\varphi:X \rightarrow Y$$ is *integral* if $$\varphi$$ is affine and, for every affine open subset $$V$$ of $$Y$$, the ring homomorphism
 
-$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}(V)}(V)$$
+$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_{\varphi^{-1}(V)}(V)$$
 
 is an integral ring homomorphism. ([[Commutative Algebra] §Integral Extensions, ⁋Definition 3](/en/math/commutative_algebra/integral_extension#def3))
 
@@ -176,7 +176,7 @@ We know by [[Commutative Algebra] §Integral Extensions, ⁋Lemma 4](/en/math/co
 
 <ins id="def12">**Definition 12**</ins> A scheme morphism $$\varphi:X \rightarrow Y$$ is *locally of finite type* if for every affine open subset $$V$$ of $$Y$$ and every affine open subset $$U$$ of $$\varphi^{-1}(V)$$,
 
-$$(\varphi\vert_{U})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}(V)}(V)$$
+$$(\varphi\vert_{U})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_{\varphi^{-1}(V)}(V)$$
 
 is of finite type. ([[Commutative Algebra] §Integral Extensions, ⁋Definition 3](/en/math/commutative_algebra/integral_extension#def3))
 
@@ -216,7 +216,7 @@ First, for an algebraically closed field $$\mathbb{K}$$, consider the ring map $
 
 Now consider the corresponding scheme morphism $$\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$$. This is the map that takes any prime ideal $$\mathfrak{p}\subset \mathbb{K}[\x,\y]$$ and returns the prime ideal $$\mathfrak{p}\cap \mathbb{K}[\x]$$ of $$\mathbb{K}[\x]$$. Geometrically this is the map that sends a point $$(x,y)$$ of the affine plane $$\mathbb{A}^2_\mathbb{K}$$ to the point $$x$$ of the affine line $$\mathbb{A}^1_\mathbb{K}$$.
 
-![finite_type_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-1.png){:style="width:25em" class="invert" .align-center}
+![finite_type_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-1.svg){:style="width:27.72em" class="invert" .align-center}
 
 As an example of a finite morphism related to this, there is the composition of the above ring homomorphism $$\iota:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x,\y]$$ with the projection map $$\pi:\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$$. Then $$\mathbb{K}[\x,\y]/(\x-\y^2)$$ is generated as a $$\mathbb{K}[\x]$$-module by $$1$$ and $$\y$$, so $$\phi:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$$ is a finite morphism.
 
@@ -230,7 +230,7 @@ $$\Spec\phi: \Spec \frac{\mathbb{K}[\x,\y]}{(\x-\y^2)}\rightarrow \Spec \mathbb{
 
 which can be viewed geometrically as the projection from the zero set $$Z(\x-\y^2)$$ of $$\x=\y^2$$ to the $$x$$-axis.
 
-![finite_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-2.png){:style="width:25em" class="invert" .align-center}
+![finite_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-2.svg){:style="width:25.48em" class="invert" .align-center}
 
 The geometric difference between these two examples is quite clear. In the first example, the fiber over a point of the target is an infinite set, whereas in the second example the fiber over a point is a finite set. Algebraically this can be checked as follows: when we take an arbitrary point $$\mathfrak{p}=(\x-a)$$ of the target $$\mathbb{A}_\mathbb{K}^1$$, any $$\mathfrak{q}_b=(\x-a, \y-b)\in \mathbb{A}_\mathbb{K}^2$$ satisfies $$(\Spec\iota)(\mathfrak{q}_b)=\mathfrak{p}$$, whereas in the second example only the two points $$\mathfrak{q}_+=(\x-a, \y-\sqrt{a})$$ and $$\mathfrak{q}_-=(\x-a, \y+\sqrt{a})$$ satisfy $$(\Spec\phi)(\mathfrak{q}_\pm)=\mathfrak{p}$$.
 

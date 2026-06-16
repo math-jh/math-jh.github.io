@@ -56,7 +56,7 @@ Scheme은, structure sheaf를 빼고 보면 그냥 위상공간이므로, 위상
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> Scheme $$(X,\mathscr{O}_X)$$가 주어졌다 하자. 만일 $$X$$가 위상공간으로서 quasi-compact (resp. irreducible, connected)라면, $$X$$를 quasi-compact (resp. irreducible, connected) scheme이라 부른다. 
+<ins id="def3">**정의 3**</ins> Scheme $$(X,\mathcal{O}_X)$$가 주어졌다 하자. 만일 $$X$$가 위상공간으로서 quasi-compact (resp. irreducible, connected)라면, $$X$$를 quasi-compact (resp. irreducible, connected) scheme이라 부른다. 
 
 </div>
 
@@ -96,7 +96,7 @@ $$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 
 이 있으며, 이 scheme의 irreducible component는 $$\Spec\mathbb{K}[\x,\y]/(\x)$$와 $$\Spec \mathbb{K}[\x,\y]/(\y)$$이다. 
 
-![counterexamples](/assets/images/Math/Scheme_Theory/Properties_of_Schemes-1.png){:style="width:20em" class="invert" .align-center}
+![counterexamples](/assets/images/Math/Scheme_Theory/Topology_of_Schemes-1.svg){:style="width:21.87em" class="invert" .align-center}
 
 </div>
 
@@ -153,11 +153,11 @@ $$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$$
 
 $$D(f)\cong \Spec A_f$$
 
-이므로 $$\Spec A$$의 principal open set $$D(f)$$의 global section $$\mathscr{O}_{\Spec A}(D(f))$$ 또한 $$P$$를 만족한다. 거꾸로, 만일 $$A$$가 $$f_1,\ldots, f_r$$로부터 생성된다면 다음의 식
+이므로 $$\Spec A$$의 principal open set $$D(f)$$의 global section $$\mathcal{O}_{\Spec A}(D(f))$$ 또한 $$P$$를 만족한다. 거꾸로, 만일 $$A$$가 $$f_1,\ldots, f_r$$로부터 생성된다면 다음의 식
 
 $$A=A\setminus \emptyset=A\setminus Z(1)=A\setminus Z\left(\sum_{i=1}^r Z(f_i)\right)=A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^rA\setminus Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
 
-으로부터 $$D(f_i)$$들이 $$\Spec A$$를 덮는 것을 알 수 있다. 편의상 affine scheme $$X$$의 global section들의 ring $$\mathscr{O}_X(X)$$가 성질 $$Q$$를 갖는다면, $$X$$가 성질 $$P$$를 갖는다고 하자. 그럼  이상에서 [정의 8](#def8)의 두 조건은 다음과 같이 번역할 수 있다. 
+으로부터 $$D(f_i)$$들이 $$\Spec A$$를 덮는 것을 알 수 있다. 편의상 affine scheme $$X$$의 global section들의 ring $$\mathcal{O}_X(X)$$가 성질 $$Q$$를 갖는다면, $$X$$가 성질 $$P$$를 갖는다고 하자. 그럼  이상에서 [정의 8](#def8)의 두 조건은 다음과 같이 번역할 수 있다. 
 
 1. $$\Spec A$$가 $$P$$를 만족한다면, 임의의 principal open set $$D(f)$$ 또한 $$P$$를 만족한다.
 2. $$\Spec A$$를 덮는 open covering $$D(f_1),\ldots, D(f_r)$$가 각각 $$P$$를 만족한다면, $$\Spec A$$도 $$P$$를 만족한다. 
@@ -177,7 +177,7 @@ $$A=A\setminus \emptyset=A\setminus Z(1)=A\setminus Z\left(\sum_{i=1}^r Z(f_i)\r
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**정의 10**</ins> Scheme의 affine-local property $$P$$에 대하여, scheme $$(X, \mathscr{O}_X)$$가 *locally $$P$$*라는 것은 임의의 $$x\in X$$마다 적절한 open affine neighborhood $$U$$가 존재하여 $$X$$의 affine open subscheme $$U$$가 $$P$$를 만족하는 것이다. 
+<ins id="def10">**정의 10**</ins> Scheme의 affine-local property $$P$$에 대하여, scheme $$(X, \mathcal{O}_X)$$가 *locally $$P$$*라는 것은 임의의 $$x\in X$$마다 적절한 open affine neighborhood $$U$$가 존재하여 $$X$$의 affine open subscheme $$U$$가 $$P$$를 만족하는 것이다. 
 
 </div>
 
@@ -212,7 +212,7 @@ $$\mathfrak{q}\in D(g)\subseteq D(f)\cap V$$
 1. $$X$$가 locally $$P$$이다.
 2. $$X$$의 임의의 affine open subset $$U\subseteq X$$에 대하여, $$X$$의 open subscheme $$U$$가 $$P$$를 만족한다.
 3. $$X$$의 적당한 affine open covering $$\{U_i\}$$가 존재하여 $$X$$의 open subscheme $$U_i$$가 모두 $$P$$를 만족한다.
-4. $$X$$의 적당한 open covering $$\{U_i\}$$가 존재하여, 각각의 open subscheme $$(U_i, \mathscr{O}_X\vert_{U_i})$$가 locally $$P$$이다.
+4. $$X$$의 적당한 open covering $$\{U_i\}$$가 존재하여, 각각의 open subscheme $$(U_i, \mathcal{O}_X\vert_{U_i})$$가 locally $$P$$이다.
 
 특히, 만일 $$X$$가 locally $$P$$라면 $$X$$의 임의의 open subscheme이 locally $$P$$이다. 
 
@@ -248,9 +248,9 @@ $$V=\bigcup_{i\in I} V\cap U_i=\bigcup_{i\in I} \bigcup_{j\in J_i} \Spec (A_i)_{
 
 첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어지며, 혹은 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫쨰 결과를 사용해도 충분하다.
 
-둘쨰 조건을 보자. 만일 $$A=(f_1,\ldots, f_r)$$이라 하면, 우리는 $$D(f_i)$$들이 $$\Spec A$$의 open covering이라는 것을 알고, 따라서 $$\mathscr{O}_{\Spec A}$$가 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 첫째 조건을 만족하는 것으로부터 다음의 inclusion
+둘쨰 조건을 보자. 만일 $$A=(f_1,\ldots, f_r)$$이라 하면, 우리는 $$D(f_i)$$들이 $$\Spec A$$의 open covering이라는 것을 알고, 따라서 $$\mathcal{O}_{\Spec A}$$가 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 첫째 조건을 만족하는 것으로부터 다음의 inclusion
 
-$$A \cong \mathscr{O}_{\Spec A}(\Spec A) \hookrightarrow \prod_{i=1}^r \mathscr{O}_{\Spec A}(D(f_i))\cong\prod_{i=1}^r A_{f_i}$$
+$$A \cong \mathcal{O}_{\Spec A}(\Spec A) \hookrightarrow \prod_{i=1}^r \mathcal{O}_{\Spec A}(D(f_i))\cong\prod_{i=1}^r A_{f_i}$$
 
 을 얻는다. 이제 만일 $$A_{f_i}$$들이 모두 noetherian이라면, 그들의 (유한한) 곱 $$\prod A_{f_i}$$ 또한 noetherian이고 따라서 $$A$$는 noetherian ring의 subring이므로 [\[가환대수학\] §기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3)에 의하여 noetherian이다.
 
@@ -268,7 +268,7 @@ $$A \cong \mathscr{O}_{\Spec A}(\Spec A) \hookrightarrow \prod_{i=1}^r \mathscr{
 
 <div class="definition" markdown="1">
 
-<ins id="def15">**정의 15**</ins> Scheme $$X$$의 성질 $$P$$가 *stalk-local*이라는 것은 각각의 $$x\in X$$에 대하여 ring $$\mathscr{O}_{X,x}$$가 ring의 성질 $$Q$$를 만족하는 것이다. 
+<ins id="def15">**정의 15**</ins> Scheme $$X$$의 성질 $$P$$가 *stalk-local*이라는 것은 각각의 $$x\in X$$에 대하여 ring $$\mathcal{O}_{X,x}$$가 ring의 성질 $$Q$$를 만족하는 것이다. 
 
 </div>
 
@@ -290,7 +290,7 @@ $$A \cong \mathscr{O}_{\Spec A}(\Spec A) \hookrightarrow \prod_{i=1}^r \mathscr{
 
 우선 $$2\implies 3\implies 4\implies 5$$임은 자명하므로, $$5\implies 1$$ 그리고 $$1\implies 2$$만 보이면 충분하며, 이들은 다음의 isomorphism
 
-$$\mathscr{O}_{X,x}= \varinjlim_{V\ni x} \mathscr{O}_X(U)\cong \varinjlim_{U\supseteq V\ni x}\mathscr{O}(V)=\mathscr{O}_{U, x}$$
+$$\mathcal{O}_{X,x}= \varinjlim_{V\ni x} \mathcal{O}_X(U)\cong \varinjlim_{U\supseteq V\ni x}\mathcal{O}(V)=\mathcal{O}_{U, x}$$
 
 으로부터 자명하다. 
 
@@ -298,9 +298,9 @@ $$\mathscr{O}_{X,x}= \varinjlim_{V\ni x} \mathscr{O}_X(U)\cong \varinjlim_{U\sup
 
 특히 임의의 stalk-local property는 affine-local property이기도 하다. 그러나 이는 다소 주의할 필요가 있는 명제인데, 이는 가령 $$X$$ 위의 stalk-local property가
 
-$$\text{$X$ is $P$}\iff \text{$\mathscr{O}_{X,x}$ satisfies $Q$}$$
+$$\text{$X$ is $P$}\iff \text{$\mathcal{O}_{X,x}$ satisfies $Q$}$$
 
-로 주어졌을 때, 임의의 affine open subset $$U$$에 대하여 $$\mathscr{O}_X(U)$$가 $$Q$$를 만족한다는 것이 <em-ko>아니라</em-ko>, 임의의 affine open subset $$U$$와 원소 $$x\in U$$에 대하여 $$\mathscr{O}_{U,x}$$가 성질 $$Q$$를 만족하고 따라서 affine open subscheme $$U$$가 성질 $$P$$를 만족한다는 것이다. 
+로 주어졌을 때, 임의의 affine open subset $$U$$에 대하여 $$\mathcal{O}_X(U)$$가 $$Q$$를 만족한다는 것이 <em-ko>아니라</em-ko>, 임의의 affine open subset $$U$$와 원소 $$x\in U$$에 대하여 $$\mathcal{O}_{U,x}$$가 성질 $$Q$$를 만족하고 따라서 affine open subscheme $$U$$가 성질 $$P$$를 만족한다는 것이다. 
 
 가령 다음의 affine scheme
 
