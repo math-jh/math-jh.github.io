@@ -7,7 +7,13 @@
 \usepackage{diagram-style}
 \begin{document}
 
-%%FIG splitting_sequence (Exact_Sequences-1.svg)
+%%FIG Four_lemma (Exact_Sequences-1.svg)
+\begin{tikzcd}
+	A\rar["f"]\dar["\alpha"]&B\rar["g"]\dar["\beta"]&C\rar["h"]\dar["\gamma"]&D\dar["\delta"]\\
+	A'\rar["f'"]&B'\rar["g'"]&C'\rar["h'"]&D'
+\end{tikzcd}
+
+%%FIG splitting_sequence (Exact_Sequences-2.svg)
 \begin{tikzcd}
 	0 & M & L & N & 0 \\
 	0 & M & {M\oplus N} & N & 0

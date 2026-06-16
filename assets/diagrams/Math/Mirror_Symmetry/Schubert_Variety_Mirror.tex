@@ -1,0 +1,34 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{ytableau}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, decorations.markings, intersections}
+\begin{document}
+
+%%FIG diagram (Schubert_Variety_Mirror-1.svg)
+\begin{tikzpicture}[scale=1.15, >=Stealth,
+   v/.style={circle, draw, inner sep=1.2pt, font=\scriptsize},
+   q/.style={circle, draw, fill=accent1!15, inner sep=1.2pt, font=\scriptsize}]
+  \foreach \i/\jmax in {1/4, 2/4, 3/2}{
+    \foreach \j in {1,...,\jmax}{
+      \node[v] (n\i\j) at (\j,-\i) {$\scriptstyle \i\!\times\!\j$};
+    }
+  }
+  \node[v] (v0) at (0,0) {$1$};
+  \draw[->] (v0) -- (n11);
+  \draw[->] (n11)--(n12); \draw[->] (n12)--(n13); \draw[->] (n13)--(n14);
+  \draw[->] (n21)--(n22); \draw[->] (n22)--(n23); \draw[->] (n23)--(n24);
+  \draw[->] (n31)--(n32);
+  \draw[->] (n11)--(n21); \draw[->] (n12)--(n22); \draw[->] (n13)--(n23); \draw[->] (n14)--(n24);
+  \draw[->] (n21)--(n31); \draw[->] (n22)--(n32);
+  \node[q] (q1) at (5,-2) {$q_1$};
+  \node[q] (q2) at (3,-3) {$q_2$};
+  \draw[->] (n24) -- (q1);
+  \draw[->] (n32) -- (q2);
+\end{tikzpicture}
+
+\end{document}

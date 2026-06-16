@@ -42,11 +42,11 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 따라서 함수 $$f:A\rightarrow B$$가 단사함수라는 것은 다음의 diagram 
 
-![injection](/assets/images/Math/Set_Theory/Retraction_and_Section-1.png){:style="width:6em" class="invert" .align-center}
+![injection](/assets/images/Math/Set_Theory/Retraction_and_Section-1.svg){:style="width:5.54em" class="invert" .align-center}
 
 이 commute하도록 하는 $$r:B\rightarrow A$$가 있다는 것과 같은 말이고, $$f:A\rightarrow B$$가 전사함수라는 것은 다음의 diagram
 
-![surjection](/assets/images/Math/Set_Theory/Retraction_and_Section-2.png){:style="width:6em" class="invert" .align-center}
+![surjection](/assets/images/Math/Set_Theory/Retraction_and_Section-2.svg){:style="width:5.59em" class="invert" .align-center}
 
 이 commute하도록 하는 $$s:B\rightarrow A$$가 있다는 것과 같은 말이다. 이러한 성질을 만족하는 $$r,s$$에도 이름이 있다.
 
@@ -127,11 +127,11 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 
 1번의 결과는 다음의 diagram
 
-![surjection](/assets/images/Math/Set_Theory/Retraction_and_Section-3.png){:style="width:6em"  class="invert" .align-center}
+![surjection](/assets/images/Math/Set_Theory/Retraction_and_Section-3.svg){:style="width:5.94em"  class="invert" .align-center}
 
 이 commute하도록 하는 $$h$$가 존재한다는 것이고, 2번의 경우는 다음과 같은 diagram
 
-![injection](/assets/images/Math/Set_Theory/Retraction_and_Section-4.png){:style="width:6em"  class="invert" .align-center}
+![injection](/assets/images/Math/Set_Theory/Retraction_and_Section-4.svg){:style="width:5.94em"  class="invert" .align-center}
 
 이 commute하도록 하는 $$h$$가 존재한다는 것이다.
 

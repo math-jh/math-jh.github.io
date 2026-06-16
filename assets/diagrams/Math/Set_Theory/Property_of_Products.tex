@@ -1,0 +1,48 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG diagram (Property_of_Products-1.svg)
+\begin{tikzcd}
+	A_i\ar[from=r, "\operatorname{pr}_i" above]\ar[from=dr, "\operatorname{pr}_{ik}" below left]&\prod_{i\in I} A_i\ar[from=d, "\phi" right, dashed]&A_j\ar[from=l, "\operatorname{pr}_j" above]\ar[from=dl, "\operatorname{pr}_{jk'}" below right]\\
+	&\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)
+\end{tikzcd}
+
+%%FIG diagram (Property_of_Products-2.svg)
+\begin{tikzcd}
+\prod_{j\in J_k}A_j&\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\lar["\operatorname{pr}_k" above]\rar["\operatorname{pr}_{l}" above]&\prod_{j\in J_l}A_j\\
+&\prod_{i\in I}A_i\uar[dashed, "\psi" right]\ar[ul, "\operatorname{pr}_{J_k}" below left]\ar[ur, "\operatorname{pr}_{J_l}" below right]
+\end{tikzcd}
+
+%%FIG diagram (Property_of_Products-3.svg)
+\begin{tikzcd}
+\prod_{i\in I}A_i\rar["\operatorname{pr}_i" above]&A_i\\
+\prod_{i\in I}A_i\uar["\phi\circ\psi"]\urar["\operatorname{pr}_i" below right]
+\end{tikzcd}
+
+%%FIG diagram (Property_of_Products-4.svg)
+\begin{tikzcd}
+\prod_{i\in I} A_i\rar["\operatorname{pr}_i"]&A_i\\
+\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\uar["\phi"]\urar["\operatorname{pr}_{ik}"]\rar["\operatorname{pr}_k"]&\prod_{j\in J_k}A_j\uar["\operatorname{pr}_i" right]\\
+\prod_{i\in I}A_i\uar["\psi"]\urar["\operatorname{pr}_{J_k}" below right]
+\end{tikzcd}
+
+%%FIG diagram (Property_of_Products-5.svg)
+\begin{tikzcd}
+A_i\dar["f_i" left]&\prod_{i\in I}A_i\lar\rar\dar[dashed, "\prod_{i\in I} f_i"]&A_j\dar["f_j"]\\
+B_i\dar["g_i"left ]&\prod_{i\in I}B_i\lar\rar\dar[dashed, "\prod_{i\in I} g_i"]&B_j\dar["g_j"]\\
+C_i&\prod_{i\in I}C_i\lar\rar&C_j
+\end{tikzcd}
+
+%%FIG diagram (Property_of_Products-6.svg)
+\begin{tikzcd}
+A_i\dar["g_i\circ f_i" left]&\prod_{i\in I}A_i\lar\rar\dar[dashed, "\prod_{i\in I}(g_i\circ f_i)"]&A_j\dar["g_j\circ f_j"]\\
+C_i&\prod_{i\in I}C_i\lar\rar&C_j
+\end{tikzcd}
+
+\end{document}

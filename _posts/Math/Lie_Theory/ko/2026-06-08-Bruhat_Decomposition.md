@@ -412,7 +412,7 @@ $$1234\leq 1324\leq 2314\leq 2413\leq 3412$$
 
 으로 그려진다.
 
-![Hasse diagram of Bruhat order for Gr(2,4)](/assets/images/Math/Lie_Theory/Bruhat_Decomposition-1.png){:style="width:16em" class="invert" .align-center}
+![Hasse diagram of Bruhat order for Gr(2,4)](/assets/images/Math/Lie_Theory/Bruhat_Decomposition-1.svg){:style="width:14.89em" class="invert" .align-center}
 
 즉 $$1324$$ 아래에는 $$1234$$만 있고, 길이가 같은 $$1423$$과 $$2314$$는 서로 비교 불가능하며 둘 다 $$1324$$ 위·$$2413$$ 아래에 놓인다. 이 Hasse diagram은 두 갈래로 갈라졌다 다시 만나는 마름모꼴로, $$\Gr(2,4)$$의 Schubert class들 사이의 포함관계를 그대로 보여준다. 가령 Schubert variety $$X_{2413}$$은 $$X_{1423}^\circ$$, $$X_{2314}^\circ$$, $$X_{1324}^\circ$$, $$X_{1234}^\circ$$를 모두 포함하는 차원 $$3$$의 subvariety이다.
 

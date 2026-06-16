@@ -38,7 +38,7 @@ weight: 2
 
 <ins id="ex2">**예시 2**</ins> $$N = \mathbb{Z}^2$$에서 원점을 중심으로 방사형으로 세 개의 2차원 cone $$\tau_0, \tau_1, \tau_2$$가 $$\mathbb{R}^2$$를 덮는 fan을 생각할 수 있다. 가령 세 개의 벡터 $$e_1, e_2, -e_1-e_2$$를 생각한 후, 이들이 만드는 세 개의 cone을 생각하자.
 
-![$$\mathbb{P}^2$$의 fan](/assets/images/Math/Toric_Geometry/Toric_Varieties-1.png){:style="width:20em" class="invert" .align-center}
+![$$\mathbb{P}^2$$의 fan](/assets/images/Math/Toric_Geometry/Toric_Varieties-1.svg){:style="width:20em" class="invert" .align-center}
 
 각각의 cone은 두 개의 반직선 원소 $$\rho_i, \rho_{i+1}$$에 의해 생성되며, 이러한 반직선들은 1차원 cone들이 된다. 원점 $$\{0\}$$ 자체는 0차원 cone으로서 모든 fan에 포함된다. 이 fan은 $$\mathbb{P}^2$$의 toric variety를 정의하는 가장 기본적인 예시이다.
 

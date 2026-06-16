@@ -1,0 +1,70 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\usetikzlibrary{arrows.meta, positioning}
+\begin{document}
+
+%%FIG ADE type Dynkin diagram (Borel_Subgroup-1.svg)
+\begin{tikzpicture}[
+    dot/.style={circle, draw, fill=black, inner sep=1.7pt},
+    line width=0.6pt
+]
+% ---- A_n ----
+\node at (-1.7,9) {$A_n$};
+\node[dot] (a1) at (0,9){};
+\node[dot] (a2) at (1,9){};
+\node       (ad) at (2,9){$\cdots$};
+\node[dot] (a3) at (3,9){};
+\node[dot] (a4) at (4,9){};
+\draw (a1)--(a2) (a2)--(1.6,9) (2.4,9)--(a3) (a3)--(a4);
+
+% ---- D_n ----
+\node at (-1.7,6.8) {$D_n$};
+\node[dot] (d1) at (0,6.8){};
+\node[dot] (d2) at (1,6.8){};
+\node       (dd) at (2,6.8){$\cdots$};
+\node[dot] (d3) at (3,6.8){};
+\node[dot] (d4) at (4,6.8){};
+\node[dot] (d5) at (5,7.5){};
+\node[dot] (d6) at (5,6.1){};
+\draw (d1)--(d2) (d2)--(1.6,6.8) (2.4,6.8)--(d3) (d3)--(d4) (d4)--(d5) (d4)--(d6);
+
+% ---- E_6 ----
+\node at (-1.7,4.6) {$E_6$};
+\node[dot] (e1) at (0,4.6){};
+\node[dot] (e2) at (1,4.6){};
+\node[dot] (e3) at (2,4.6){};
+\node[dot] (e4) at (3,4.6){};
+\node[dot] (e5) at (4,4.6){};
+\node[dot] (e6) at (2,5.5){};
+\draw (e1)--(e2)--(e3)--(e4)--(e5) (e3)--(e6);
+
+% ---- E_7 ----
+\node at (-1.7,2.4) {$E_7$};
+\node[dot] (f1) at (0,2.4){};
+\node[dot] (f2) at (1,2.4){};
+\node[dot] (f3) at (2,2.4){};
+\node[dot] (f4) at (3,2.4){};
+\node[dot] (f5) at (4,2.4){};
+\node[dot] (f6) at (5,2.4){};
+\node[dot] (f7) at (2,3.3){};
+\draw (f1)--(f2)--(f3)--(f4)--(f5)--(f6) (f3)--(f7);
+
+% ---- E_8 ----
+\node at (-1.7,0.2) {$E_8$};
+\node[dot] (g1) at (0,0.2){};
+\node[dot] (g2) at (1,0.2){};
+\node[dot] (g3) at (2,0.2){};
+\node[dot] (g4) at (3,0.2){};
+\node[dot] (g5) at (4,0.2){};
+\node[dot] (g6) at (5,0.2){};
+\node[dot] (g7) at (6,0.2){};
+\node[dot] (g8) at (2,1.1){};
+\draw (g1)--(g2)--(g3)--(g4)--(g5)--(g6)--(g7) (g3)--(g8);
+\end{tikzpicture}
+
+\end{document}

@@ -17,7 +17,7 @@ last_polished_at: 2026-06-02T21:00:02+00:00
 ---
 For a preordered set $$A$$, a subset $$X\subseteq A$$ is *cofinal* (resp. *coinitial*) in $$A$$ if for any $$x\in A$$ there exists $$y\in X$$ such that $$x\leq y$$ (resp. $$y\leq x$$). For example, in the following diagram
 
-![cofinal_sequence](/assets/images/Math/Set_Theory/Directed_Set-1.png){:style="width:20em" class="invert" .align-center}
+![cofinal_sequence](/assets/images/Math/Set_Theory/Directed_Set-1.svg){:style="width:20.75em" class="invert" .align-center}
 
 the sets $$\left\{a_{2n}\right\}_{n\in\mathbb{N}}$$ and $$\left\{a_{1000+n}\right\}_{n\in\mathbb{N}}$$ are both cofinal.
 

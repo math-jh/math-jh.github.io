@@ -146,7 +146,7 @@ Therefore, we could simply define it as follows from the start.
  
 > Whenever a set $$B$$ and maps $$f_i:A_i\rightarrow B$$ are given, there exists a unique function $$f:\sum A_i\rightarrow B$$ such that $$f_i=f\circ\iota_i$$.
 
-![universal_property_of_sum](/assets/images/Math/Set_Theory/Sum_of_Sets-1.png){:style="width:12em" class="invert" .align-center}
+![universal_property_of_sum](/assets/images/Math/Set_Theory/Sum_of_Sets-1.svg){:style="width:13.49em" class="invert" .align-center}
 
 </div>
 

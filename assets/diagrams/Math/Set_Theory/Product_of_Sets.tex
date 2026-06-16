@@ -1,0 +1,28 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG diagram (Product_of_Sets-1.svg)
+\begin{tikzcd}
+A'\dar[dashed]\rar["u"]&A\dar["f"]\\
+B'&B\lar["v"]
+\end{tikzcd}
+
+%%FIG diagram (Product_of_Sets-2.svg)
+\begin{tikzcd}
+	A_i\ar[from=r, "\operatorname{pr}_i" above]\ar[from=dr, "f_i" below left]&\prod_{i\in I} A_i\ar[from=d, "f" right, dashed]&A_j\ar[from=l, "\operatorname{pr}_j" above]\ar[from=dl, "f_j" below right]\\
+	&B
+\end{tikzcd}
+
+%%FIG diagram (Product_of_Sets-3.svg)
+\begin{tikzcd}
+K\rar["u"]\dar["F\circ U"]&I\dar["F"]\\
+\prod_{k\in K}A_{u(k)}&\prod_{i\in I}A_i\lar["v"]
+\end{tikzcd}
+
+\end{document}
