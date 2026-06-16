@@ -31,7 +31,7 @@ To distinguish it more clearly from the embedded submanifold in 3, item 2 is som
 
 Intuitively, to say that a function $$F:N\rightarrow M$$ is a submanifold means that $$F$$ plays the role of the inclusion $$N\hookrightarrow M$$. There are then two ways to topologize the image $$F(N)\subseteq M$$: one is to transport the topology of $$N$$ via the bijection $$F:N\rightarrow F(N)$$, and the other is to induce it from the topology on $$M$$ via the subspace topology. If these two topologies agree, we call $$F$$ an *embedded* submanifold; otherwise, we simply call it a submanifold.
 
-![Immersion, submanifold, immersion](/assets/images/Math/Manifolds/Submanifolds-1.png){:style="width:500px" class="invert" .align-center}
+![Immersion, submanifold, immersion](/assets/images/Math/Manifolds/Submanifolds-1.svg){:style="width:30.02em" class="invert" .align-center}
 
 For example, in the figure above, $$N=\mathbb{R}$$, $$M=\mathbb{R}^2$$, (a) is an immersion but not a submanifold, (b) is a submanifold but not an embedded submanifold, and (c) is an embedded submanifold. For convenience, in (b), let $$F(0)$$ denote the point that $$F(t)$$ approaches as $$t\rightarrow\infty$$; then $$(-1,1)$$ is open in $$\mathbb{R}$$, but $$F\bigl((-1,1)\bigr)$$ cannot be open in the subspace topology on $$N$$.
 

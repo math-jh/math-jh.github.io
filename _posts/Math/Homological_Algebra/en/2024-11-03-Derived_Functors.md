@@ -42,11 +42,11 @@ For $$n<0$$, we regard all $$T_n$$ as zero. These satisfy the following conditio
     is exact.
 2. (Naturality) Given a homomorphism between short exact sequences
 
-    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Derived_Functors-1.png){:style="width:18em" class="invert" .align-center}
+    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Derived_Functors-1.svg){:style="width:19.34em" class="invert" .align-center}
 
     the following diagram
 
-    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-2.png){:style="width:32em" class="invert" .align-center}
+    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-2.svg){:style="width:35.61em" class="invert" .align-center}
 
     commutes.
 
@@ -72,7 +72,7 @@ In other words, it is a collection of natural transformations $$\alpha_n:S_n\Rig
 
 $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
-![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-3.png){:style="width:36em" class="invert" .align-center}
+![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-3.svg){:style="width:41.13em" class="invert" .align-center}
 
 <div class="definition" markdown="1">
 

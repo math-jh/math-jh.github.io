@@ -111,7 +111,7 @@ $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(
 
 If we think of the dual map $$L^\ast:W^\ast\rightarrow V^\ast$$ as a map from $$W$$ to $$V$$ via the above identifications $$\varphi$$, that is, if we consider $$L':W\rightarrow V$$ defined by the following diagram
 
-![identification](/assets/images/Math/Linear_Algebra/Bilinear_Form-1.png){:style="width:7em" class="invert" .align-center}
+![identification](/assets/images/Math/Linear_Algebra/Bilinear_Form-1.svg){:style="width:8.27em" class="invert" .align-center}
 
 then we can verify that the matrix representation of this linear map with respect to the two bases $$\mathcal{C}'$$ and $$\mathcal{B}'$$ is $$[L']_{\mathcal{B}'}^{\mathcal{C}'}$$.
 

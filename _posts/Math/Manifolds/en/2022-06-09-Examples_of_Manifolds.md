@@ -153,7 +153,7 @@ $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i
 
 [^1] the function $$\varphi_i\circ\pi\vert_{\tilde{U}_i}$$ is continuous, and hence by [\[Topology\] §Quotient Spaces, ⁋Proposition 4](/en/math/topology/quotient_spaces#prop4) $$\varphi_i$$ is also continuous. 
 
-![quotient_map](/assets/images/Math/Manifolds/Examples_of_Manifolds-2.png){:style="width:8em" class="invert" .align-center}
+![quotient_map](/assets/images/Math/Manifolds/Examples_of_Manifolds-2.svg){:style="width:7.46em" class="invert" .align-center}
 
 Moreover, the following continuous function
 

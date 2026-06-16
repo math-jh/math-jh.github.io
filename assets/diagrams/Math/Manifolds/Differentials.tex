@@ -1,0 +1,20 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG differential (Differentials-2.svg)
+\begin{tikzcd}
+	{\mathcal{C}^\infty_{N,F(p)}} & {\mathcal{C}_{M,p}^\infty} \\
+	& {\mathbb{R}}
+	\arrow["{F^\ast}", from=1-1, to=1-2]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{L\in(\mathcal{C}_{M,p}^\infty)^\ast}", from=1-2, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{{({F^\ast})^\ast}(L)=L\circ F^\ast\in(\mathcal{C}^\infty_{N, F(p)})^\ast}"', dashed, from=1-1, to=2-2]
+	\arrow[shift right=1, shorten <=3pt, shorten >=3pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+
+\end{document}
