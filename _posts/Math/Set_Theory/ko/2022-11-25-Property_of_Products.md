@@ -11,7 +11,6 @@ sidebar:
     nav: "set_theory-ko"
 
 date: 2022-11-25
-last_modified_at: 2022-11-25
 
 weight: 11
 

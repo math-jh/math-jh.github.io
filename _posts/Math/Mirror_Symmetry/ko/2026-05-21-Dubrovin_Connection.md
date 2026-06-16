@@ -9,7 +9,6 @@ sidebar:
     nav: "mirror_symmetry-ko"
 
 date: 2026-05-21
-last_modified_at: 2026-05-21
 weight: 4
 
 ---

@@ -9,7 +9,6 @@ sidebar:
     nav: "algebraic_structures-en"
 
 date: 2024-08-12
-last_modified_at: 2024-08-12
 weight: 204
 translated_at: 2026-05-29T22:30:04+00:00
 translation_source: kimi-cli

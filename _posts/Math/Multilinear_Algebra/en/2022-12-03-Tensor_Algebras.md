@@ -9,7 +9,6 @@ sidebar:
     nav: "multilinear_algebra-en"
 
 date: 2022-12-03
-last_modified_at: 2022-12-03
 weight: 10
 translated_at: 2026-06-01T13:30:05+00:00
 translation_source: kimi-cli

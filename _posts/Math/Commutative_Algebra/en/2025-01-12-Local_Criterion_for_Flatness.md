@@ -9,7 +9,6 @@ sidebar:
     nav: "commutative_algebra-en"
 
 date: 2025-01-12
-last_modified_at: 2025-01-12
 weight: 13
 
 toc: false

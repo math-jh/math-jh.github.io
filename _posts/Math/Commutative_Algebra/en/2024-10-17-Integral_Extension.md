@@ -9,7 +9,6 @@ sidebar:
     nav: "commutative_algebra-en"
 
 date: 2024-10-17
-last_modified_at: 2025-02-23
 weight: 8
 translated_at: 2026-05-30T17:30:03+00:00
 translation_source: kimi-cli

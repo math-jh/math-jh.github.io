@@ -9,7 +9,6 @@ sidebar:
     nav: "manifolds-en"
 
 date: 2023-01-12
-last_modified_at: 2023-01-12
 weight: 14
 translated_at: 2026-06-01T10:00:04+00:00
 translation_source: kimi-cli

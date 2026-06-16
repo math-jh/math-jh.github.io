@@ -9,7 +9,6 @@ sidebar:
     nav: "group_theory-en"
 
 date: 2025-03-29
-last_modified_at: 2025-03-29
 weight: 2
 translated_at: 2026-05-31T09:00:05+00:00
 translation_source: kimi-cli

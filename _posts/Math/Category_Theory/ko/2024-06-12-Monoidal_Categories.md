@@ -9,7 +9,6 @@ sidebar:
     nav: "category_theory-ko"
 
 date: 2024-06-12
-last_modified_at: 2024-06-12
 weight: 6
 
 ---

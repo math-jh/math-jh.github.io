@@ -9,7 +9,6 @@ sidebar:
     nav: "homological_algebra-en"
 
 date: 2023-01-02
-last_modified_at: 2024-10-31
 weight: 3
 published: false
 translated_at: 2026-05-31T13:00:06+00:00

@@ -12,7 +12,6 @@ sidebar:
     nav: "blog_development-ko"
 
 date: 2022-07-08
-last_modified_at: 2022-07-08
 weight: 2
 
 ---
