@@ -1,0 +1,192 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{ytableau}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, decorations.markings, intersections}
+\begin{document}
+
+%%FIG diagram (Quantum_Cohomology_of_Grassmannians-1.svg)
+\ytableausetup{boxsize=2em, centertableaux}
+\begin{ytableau}
+*(black!45) & *(black!45) & {} \\
+*(black!45) & {} & {} \\
+{} & {} & {}
+\end{ytableau}
+
+%%FIG diagram (Quantum_Cohomology_of_Grassmannians-2.svg)
+\ytableausetup{boxsize=1.5em, centertableaux}
+\begin{tikzpicture}
+\node (eq) at (0,0) {$\sigma_{(2,1)} \smile \sigma_{(1,1)} \;=$};
+\node (a) at (3.3,0) {\begin{ytableau} *(black!45) & *(black!45) & *(accent1!75) \\ *(black!45) & *(accent1!75) \end{ytableau}};
+\node at (4.7,0) {$+$};
+\node (b) at (6.0,0) {\begin{ytableau} *(black!45) & *(black!45) & *(accent1!75) \\ *(black!45) \\ *(accent1!75) \end{ytableau}};
+\node at (7.1,0) {$+$};
+\node (c) at (8.4,0) {\begin{ytableau} *(black!45) & *(black!45) \\ *(black!45) & *(accent1!75) \\ *(accent1!75) \end{ytableau}};
+\node at (3.3,-1.6) {\scriptsize $\sigma_{(3,2)}$};
+\node at (6.0,-1.6) {\scriptsize $\sigma_{(3,1,1)}$};
+\node at (8.4,-1.6) {\scriptsize $\sigma_{(2,2,1)}$};
+\end{tikzpicture}
+
+%%FIG diagram (Quantum_Cohomology_of_Grassmannians-3.svg)
+\begin{tikzpicture}[scale=0.5]
+  \begin{scope}[shift={(0,0)}]
+    \fill[black!25] (0,0) rectangle (1,1);
+    \draw (0,0) grid (1,1);
+    \node at (0.5,-1) {$\lambda=(1)$};
+  \end{scope}
+  \node at (3.2,0.5) {$\xrightarrow{\;\smile\,\sigma_2\;}$};
+  \begin{scope}[shift={(5,0)}]
+    \fill[black!25] (0,0) rectangle (1,1);
+    \fill[accent2!30] (1,0) rectangle (3,1);
+    \draw (0,0) grid (3,1);
+    \node at (1.5,-1) {$\mu=(3)$};
+  \end{scope}
+  \node at (9.3,0.5) {$+$};
+  \begin{scope}[shift={(10.5,0)}]
+    \fill[black!25] (0,0) rectangle (1,1);
+    \fill[accent2!30] (1,0) rectangle (2,1);
+    \fill[accent2!30] (0,-1) rectangle (1,0);
+    \draw (0,0) grid (2,1);
+    \draw (0,-1) grid (1,1);
+    \node at (1,-2) {$\mu=(2,1)$};
+  \end{scope}
+\end{tikzpicture}
+
+%% [구 버전, 미사용] rim hook: Gr(2,4) 직사각형(2x2) 밖 (3,1)의 4-rim hook 제거 → ∅, +q
+\begin{tikzpicture}[scale=0.5]
+  \begin{scope}[shift={(0,0)}]
+    \fill[accent1!20] (0,0) rectangle (3,1);
+    \fill[accent1!20] (0,-1) rectangle (1,0);
+    \draw (0,0) grid (3,1);
+    \draw (0,-1) grid (1,0);
+    \draw[accent2, very thick, dashed] (0,-2) rectangle (2,0);
+    \node at (1.5,-2.8) {$\mu=(3,1)$};
+  \end{scope}
+  \node at (5.8,-0.5) {$\xrightarrow{\;4\text{-rim hook}\ \text{제거}\;}$};
+  \node at (9.8,-0.5) {$q\,\sigma_\emptyset = q$};
+\end{tikzpicture}
+
+%%FIG diagram (Quantum_Cohomology_of_Grassmannians-4.svg)
+\begin{tikzpicture}[scale=0.5]
+  %% C1 (5): 1행이 점선 박스 오른쪽으로 초과
+  \begin{scope}[shift={(0,0)}]
+    \fill[black!45] (0,0) rectangle (2,1);
+    \fill[accent1!75] (2,0) rectangle (5,1);
+    \draw (0,0) grid (5,1);
+    \draw[accent2!70, thick, dashed] (0,-1) rectangle (3,1);
+    \node at (2.5,-2.7) {$(5)$};
+  \end{scope}
+  %% C2 (4,1): 1행 4번째 열이 점선 박스 오른쪽으로 초과
+  \begin{scope}[shift={(7,0)}]
+    \fill[black!45] (0,0) rectangle (2,1);
+    \fill[accent1!75] (2,0) rectangle (4,1);
+    \fill[accent1!75] (0,-1) rectangle (1,0);
+    \draw (0,0) grid (4,1);
+    \draw (0,-1) grid (1,0);
+    \draw[accent2!70, thick, dashed] (0,-1) rectangle (3,1);
+    \node at (2.0,-2.7) {$(4,1)$};
+  \end{scope}
+  %% C3 (3,2): 유일하게 2x3 직사각형 안에 들어감 (초록)
+  \begin{scope}[shift={(13,0)}]
+    \fill[black!45] (0,0) rectangle (2,1);
+    \fill[accent1!75] (2,0) rectangle (3,1);
+    \fill[accent1!75] (0,-1) rectangle (2,0);
+    \draw (0,0) grid (3,1);
+    \draw (0,-1) grid (2,0);
+    \draw[accent3!55!black, very thick, dashed] (0,-1) rectangle (3,1);
+    \node at (1.5,-2.7) {$(3,2)$};
+    \node[accent3!45!black] at (1.5,-3.5) {\scriptsize $\subseteq 2\times 3$};
+  \end{scope}
+\end{tikzpicture}
+
+%%FIG diagram (Quantum_Cohomology_of_Grassmannians-5.svg)
+\begin{tikzpicture}[scale=0.5]
+  %% C1 (4,1): 4번째 열이 점선 박스 오른쪽으로 초과
+  \begin{scope}[shift={(0,0)}]
+    \fill[black!45] (0,0) rectangle (2,1);
+    \fill[black!45] (0,-1) rectangle (1,0);
+    \fill[accent1!75] (2,0) rectangle (4,1);
+    \draw (0,0) grid (4,1);
+    \draw (0,-1) grid (1,0);
+    \draw[accent2!70, thick, dashed] (0,-1) rectangle (3,1);
+    \node at (1.5,-2.7) {$(4,1)$};
+  \end{scope}
+  %% C2 (3,1,1): 3번째 행이 점선 박스 아래로 초과
+  \begin{scope}[shift={(5.5,0)}]
+    \fill[black!45] (0,0) rectangle (2,1);
+    \fill[black!45] (0,-1) rectangle (1,0);
+    \fill[accent1!75] (2,0) rectangle (3,1);
+    \fill[accent1!75] (0,-2) rectangle (1,-1);
+    \draw (0,0) grid (3,1);
+    \draw (0,-1) grid (1,0);
+    \draw (0,-2) grid (1,-1);
+    \draw[accent2!70, thick, dashed] (0,-1) rectangle (3,1);
+    \node at (1.5,-2.7) {$(3,1,1)$};
+  \end{scope}
+  %% C3 (2,2,1): 3번째 행이 점선 박스 아래로 초과
+  \begin{scope}[shift={(11,0)}]
+    \fill[black!45] (0,0) rectangle (2,1);
+    \fill[black!45] (0,-1) rectangle (1,0);
+    \fill[accent1!75] (1,-1) rectangle (2,0);
+    \fill[accent1!75] (0,-2) rectangle (1,-1);
+    \draw (0,0) grid (2,1);
+    \draw (0,-1) grid (2,0);
+    \draw (0,-2) grid (1,-1);
+    \draw[accent2!70, thick, dashed] (0,-1) rectangle (3,1);
+    \node at (1.5,-2.7) {$(2,2,1)$};
+  \end{scope}
+  %% C4 (3,2): 유일하게 2x3 직사각형 안에 들어감 (초록)
+  \begin{scope}[shift={(16.5,0)}]
+    \fill[black!45] (0,0) rectangle (2,1);
+    \fill[black!45] (0,-1) rectangle (1,0);
+    \fill[accent1!75] (2,0) rectangle (3,1);
+    \fill[accent1!75] (1,-1) rectangle (2,0);
+    \draw (0,0) grid (3,1);
+    \draw (0,-1) grid (2,0);
+    \draw[accent3!55!black, very thick, dashed] (0,-1) rectangle (3,1);
+    \node at (1.5,-2.7) {$(3,2)$};
+    \node[accent3!45!black] at (1.5,-3.5) {\scriptsize $\subseteq 2\times 3$};
+  \end{scope}
+\end{tikzpicture}
+
+%%FIG diagram (Quantum_Cohomology_of_Grassmannians-6.svg)
+\ytableausetup{boxsize=1.6em, centertableaux}
+\begin{tikzpicture}
+\node (eq) at (0,0) {$\sigma_2 \star \sigma_{(2,1)} \;=$};
+\node (a) at (3.0,0) {\begin{ytableau} *(black!45) & *(black!45) & *(accent1!75) \\ *(black!45) & *(accent1!75) \end{ytableau}};
+\node at (4.9,0) {$+\; q$};
+\node at (3.0,-1.5) {\scriptsize $\sigma_{(3,2)}$};
+\end{tikzpicture}
+
+%%FIG diagram (Quantum_Cohomology_of_Grassmannians-7.svg)
+\begin{tikzpicture}[scale=0.6]
+  % 안쪽 box (회색)
+  \foreach \i/\j in {1/1,1/2,1/3,2/1,2/2,2/3,3/1} {\fill[black!25] (\j-1,-\i) rectangle (\j,-\i+1);}
+  % rim hook box (주황)
+  \foreach \i/\j in {1/4,1/5,2/4,3/4,3/3,3/2,4/2,4/1} {\fill[accent1!45] (\j-1,-\i) rectangle (\j,-\i+1);}
+  % 모든 box 외곽선
+  \foreach \i/\j in {1/1,1/2,1/3,1/4,1/5,2/1,2/2,2/3,2/4,3/1,3/2,3/3,3/4,4/1,4/2} {\draw (\j-1,-\i) rectangle (\j,-\i+1);}
+  % rim hook box 중점을 잇는 경로
+  \draw[accent1!80!black, very thick]
+    (4.5,-0.5) -- (3.5,-0.5) -- (3.5,-1.5) -- (3.5,-2.5) -- (2.5,-2.5) -- (1.5,-2.5) -- (1.5,-3.5) -- (0.5,-3.5);
+  \foreach \x/\y in {4.5/-0.5,3.5/-0.5,3.5/-1.5,3.5/-2.5,2.5/-2.5,1.5/-2.5,1.5/-3.5,0.5/-3.5} {\fill[accent1!80!black] (\x,\y) circle (2.4pt);}
+\end{tikzpicture}
+%%FIG diagram (Quantum_Cohomology_of_Grassmannians-8.svg)
+\begin{tikzpicture}[scale=0.5]
+  \begin{scope}[shift={(0,0)}]
+    \fill[accent1!20] (0,0) rectangle (4,1);
+    \fill[accent1!20] (0,-1) rectangle (1,0);
+    \draw (0,0) grid (4,1);
+    \draw (0,-1) grid (1,0);
+    \draw[accent2, very thick, dashed] (0,-1) rectangle (3,1);
+    \node at (2.0,-2.3) {$\mu=(4,1)$};
+  \end{scope}
+  \node at (7.5,-0.5) {$\xrightarrow{\;5\text{-rim hook}\ \text{제거}\;}$};
+  \node at (11.6,-0.5) {$q\,\sigma_\emptyset = q$};
+\end{tikzpicture}
+
+\end{document}

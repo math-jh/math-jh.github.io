@@ -25,25 +25,25 @@ One fact that became clear to physicists in the 19th century is that it is not t
 
 To see this, consider a *phase space* with one axis representing the position of an object and the other representing its momentum. For example, the phase space corresponding to a 1-dimensional space is a 2-dimensional space consisting of one position axis and one momentum axis; in general, the phase space of an $$n$$-dimensional space is a $$2n$$-dimensional space consisting of $$n$$-dimensional position coordinates and $$n$$-dimensional momentum coordinates.
 
-![phase_space](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-1.png){:style="width:268.8px" class="invert" .align-center}
+![phase_space](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-1.svg){:style="width:13.13em" class="invert" .align-center}
 
 In this setting, kinetic energy $$K=\frac{1}{2}mv^2$$ or potential energy $$P=mgh$$, once the constants $$m$$ and $$g$$ are fixed, are physical quantities described by position and velocity coordinates. That is, these energies are functions from phase space to $$\mathbb{R}$$. The law of conservation of energy then means that when the motion of an object is described in phase space, its trajectory must lie entirely within a level set of the energy function.
 
 For example, consider the motion of an object in one dimension subject to no force. Since the energy of this object consists only of kinetic energy, we may take the energy function $$E:\mathbb{R}^2\rightarrow\mathbb{R}$$ to be $$E(x,v)=v^2$$. Then the level sets of $$E$$ are line segments parallel to the position axis.
 
-![kinetic_energy](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-2.png){:style="width:268.8px" class="invert" .align-center}
+![kinetic_energy](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-2.svg){:style="width:13.13em" class="invert" .align-center}
 
 By the law of conservation of energy, an object starting at a point in phase space cannot leave this level set, no matter how much time elapses. Physically, this means that when no external force acts on the object, its acceleration is zero.
 
 The law of conservation of mechanical energy taught in high school states that the sum of kinetic and potential energy remains constant. Drawing a similar picture, the level sets of the energy function look roughly as follows.
 
-![mechanical_energy](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-3.png){:style="width:240.3px" class="invert" .align-center}
+![mechanical_energy](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-3.svg){:style="width:12.02em" class="invert" .align-center}
 
 Again, by the law of conservation of energy, the motion of the object must always remain on this level set of energy.
 
 Finally, consider the motion of an object attached to a spring. By Hooke's law, the potential energy imparted to the object by the spring is given by $$\frac{1}{2}kx^2$$. Since the kinetic energy of the object is $$\frac{1}{2}mv^2$$, we define the energy function $$E$$ by $$E(x,v)=\frac{1}{2}kx^2+\frac{1}{2}mv^2$$. Plotting this in phase space yields an ellipse, as shown below.
 
-![harmonic_oscillator](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-4.png){:style="width:391.35px" class="invert" .align-center}
+![harmonic_oscillator](/assets/images/Math/Symplectic_Geometry/Classical_Mechanics-4.svg){:style="width:19.81em" class="invert" .align-center}
 
 This suggests that the motion of the object will be periodic.
 

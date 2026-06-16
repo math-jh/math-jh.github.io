@@ -1,0 +1,58 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG diagram (Examples_of_Equivalence-2.svg)
+\begin{tikzcd}
+A\dar["p" left, shift right=.5]\rar["f"]&B\\
+A/R\ar[ur, "h" below right, dashed]\uar["s" right, shift right=.5, black!50]
+\end{tikzcd}
+
+%%FIG diagram (Examples_of_Equivalence-3.svg)
+\begin{tikzcd}
+	A\dar["p" left, shift right=.5]\rar["\tilde{f}"]\arrow[rr, "f", bend left=20]&f(A)\rar["j"]&B\\
+	A/R\uar["s" right, shift right=.5, black!50]\arrow[ur,"h" below right, densely dashed]
+\end{tikzcd}
+
+%%FIG diagram (Examples_of_Equivalence-4.svg)
+\begin{tikzcd}
+A\rar["f"]\dar["p" left]\arrow[rd, "q\circ f", black!50]&B\dar["q"]\\
+A/R&B/S	
+\end{tikzcd}
+
+%%FIG diagram (Examples_of_Equivalence-5.svg)
+\begin{tikzcd}
+A\drar["p\circ f" below left, dashed]\rar["f"]&B\dar["p"]\\
+&B/S
+\end{tikzcd}
+
+%%FIG diagram (Examples_of_Equivalence-6.svg)
+\begin{tikzcd}
+A\dar["p_S" left]\rar["p_R"]&A/R\\
+A/S	
+\end{tikzcd}	
+
+%%FIG diagram (Examples_of_Equivalence-7.svg)
+\begin{tikzcd}
+A/S\rar["h"]\dar["p"]&A/R\rar["\id"]&A/R\\
+(A/S)/(R/S)\arrow[ru, "k" below right]	
+\end{tikzcd}
+
+%%FIG diagram (Examples_of_Equivalence-8.svg)
+\begin{tikzcd}
+A\times A'\rar["f\times f'"]\dar&f(A)\times f'(A')\rar&B\times B'\\
+(A\times A')/(R\times R')\ar[ur, dashed]
+\end{tikzcd}
+
+%%FIG diagram (Examples_of_Equivalence-9.svg)
+\begin{tikzcd}
+A/R\dar&(A/R)\times (A'/R')\rar\lar\dar[dashed]&A'/R'\dar\\
+f(A)&f(A)\times f'(A')\lar\rar&f'(A')
+\end{tikzcd}
+
+\end{document}

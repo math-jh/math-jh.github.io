@@ -37,7 +37,7 @@ The above definition can be thought of briefly as a given map $$G\rightarrow\Aut
 
 Fix a finite group $$G$$, and suppose two representations $$V,W$$ are given. Then a *morphism* from $$V$$ to $$W$$ is given by the following diagram:
 
-![G-equivariant_maps](/assets/images/Math/Representation_Theory/Representations_of_Finite_Groups-1.png){:style="width:10em" class="invert" .align-center}
+![G-equivariant_maps](/assets/images/Math/Representation_Theory/Representations_of_Finite_Groups-1.svg){:style="width:10.05em" class="invert" .align-center}
 
 In formulas, this can simply be written as
 

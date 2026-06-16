@@ -36,7 +36,7 @@ $$\rho: G\times V \rightarrow V$$
 
 Finite group $$G$$를 고정하고, 두 representation $$V,W$$가 주어졌다 하자. 그럼 $$V$$에서 $$W$$의 *morphism*은 다음의 diagram
 
-![G-equivariant_maps](/assets/images/Math/Representation_Theory/Representations_of_Finite_Groups-1.png){:style="width:10em" class="invert" .align-center}
+![G-equivariant_maps](/assets/images/Math/Representation_Theory/Representations_of_Finite_Groups-1.svg){:style="width:10.05em" class="invert" .align-center}
 
 으로 주어진다. 이는, 식으로 표현하면, 간단히
 
