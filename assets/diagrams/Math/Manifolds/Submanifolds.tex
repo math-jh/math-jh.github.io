@@ -1,0 +1,31 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG Immersion, submanifold, immersion (Submanifolds-1.svg)
+\begin{tikzpicture}
+	\draw[thick, -{stealth}] (-2,0)--(2,0);
+	\draw[very thick, accent1, Parenthesis-Parenthesis] (-.5,0)--(.5,0);
+	\fill[accent1] (0,0) circle[radius=1.5pt];
+	\draw[thick, -{stealth}] (-4,-3)--(-2.5,-3) arc (-90:180:.5)--(-3,-4);
+	\draw[thick, -{stealth}] (-1,-3)--(0.5,-3) arc (-90:180:.5)--(0,-2.9);
+	\draw[thick, -{stealth}] (2,-3) to[out=40, in=160] (4,-2.5);
+	\draw[dashed, -{stealth}] (-2,-0.5)--(-2.5,-1.5) node[midway, left]{(a)};
+	\draw[dashed, -{stealth}] (0,-0.5)--(0,-1.5) node[midway, left]{(b)};
+	\draw[dashed, -{stealth}] (2,-0.5)--(2.5,-1.5) node[midway, right]{(c)};
+	\draw[dashed, accent1] (0,-3) circle[radius=15pt];
+	\begin{scope}
+		\clip (0,-3) circle[radius=15pt];
+		\fill[accent1] (0,-3) circle[radius=1.5pt] node[below]{\tiny $F(0)$};
+		\draw[accent1, very thick, -{stealth}] (-1,-3)--(0.5,-3) arc (-90:180:.5)--(0,-2.9);
+    \end{scope}
+    \draw (5,0) node{$N=\mathbb{R}$};
+    \draw (5,-3) node{$M=\mathbb{R}^2$};
+\end{tikzpicture}
+
+\end{document}

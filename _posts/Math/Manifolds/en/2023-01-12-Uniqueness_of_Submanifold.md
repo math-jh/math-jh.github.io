@@ -31,17 +31,17 @@ If we view a submanifold simply as a subset of the original manifold, this quest
 
 <ins id="ex1">**Example 1**</ins> Suppose both manifolds $$N$$ and $$P$$ are $$\mathbb{R}$$ with their natural manifold structures, and let $$M=\mathbb{R}^2$$ also carry its natural manifold structure. Define two submanifolds $$\Phi:N\rightarrow M$$ and $$\Psi:P\rightarrow M$$ by the two figures below
 
-![counterexample_1](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-1.png){:style="width:200px" class="invert" .align-center}
+![counterexample_1](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-1.svg){:style="width:18.80em" class="invert" .align-center}
 
 and
 
-![counterexample_2](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-2.png){:style="width:200px" class="invert" .align-center}
+![counterexample_2](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-2.svg){:style="width:18.80em" class="invert" .align-center}
 
 Then $$\Phi(N)=\Psi(P)$$, and therefore the bijection $$\bar{\Psi}^{-1}\circ\Phi$$ from $$N$$ to $$P$$ is well defined.
 
 Now consider a sufficiently small open neighborhood $$U$$ of the origin in $$N$$, and look at the image of $$U$$ under $$\bar{\Psi}^{-1}\circ\Phi$$. Then $$(\bar{\Psi}^{-1}\circ\Phi)(U)$$ is not an open set in $$P$$.
 
-![counterexample_3](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-3.png){:style="width:300px" class="invert" .align-center}
+![counterexample_3](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-3.svg){:style="width:19.88em" class="invert" .align-center}
 
 Hence $$(\bar{\Psi}^{-1}\circ\Phi)^{-1}$$ is not continuous, so this function is not even $$C^\infty$$.
 
@@ -132,7 +132,7 @@ This is immediate from the first claim of [Proposition 2](#prop2).
 
 First, applying [Proposition 4](#prop4) to the subspace topology $$\mathcal{T}$$, the differentiable structure making $$(A,\mathcal{T},\iota)$$ a submanifold of $$M$$ is unique. Denote it by $$\mathcal{A}$$. Now suppose a topology $$\mathcal{T}'$$ and a differentiable structure $$\mathcal{A}'$$ making $$(A,\iota)$$ a submanifold of $$M$$ are given, and consider the following diagram.
 
-![uniqueness](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-4.png){:style="width:12.6em" class="invert" .align-center}
+![uniqueness](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-4.svg){:style="width:12.99em" class="invert" .align-center}
 
 Here $$\iota$$ and $$\iota'$$ are both $$A\hookrightarrow M$$, but we have denoted them by different names for distinction. By definition $$(A,\mathcal{T},\mathcal{A})$$ is an embedded submanifold of $$M$$, so the vertical $$\iota$$ is an embedding; hence $$\operatorname{id}$$ is $$C^\infty$$ by [Proposition 2](#prop2). Moreover, by the chain rule
 

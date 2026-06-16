@@ -113,7 +113,7 @@ hold, so $$F^\ast$$ is a linear map between two $$\mathbb{R}$$-vector spaces.
 
 On the other hand, $$T_pM$$ and $$T_{F(p)}N$$ consist of those elements among linear maps from $$\mathcal{C}^\infty_{M,p}$$ and $$\mathcal{C}^\infty_{N,F(p)}$$ to $$\mathbb{R}$$ that satisfy the Leibniz rule; hence they are subspaces of the respective dual spaces $$(\mathcal{C}^\infty_{M,p})^\ast$$ and $$(\mathcal{C}^\infty_{N,F(p)})^\ast$$. Therefore, we can consider the dual map $$(F^\ast)^\ast:(\mathcal{C}^\infty_{M,p})^\ast\rightarrow(\mathcal{C}^\infty_{N,F(p)})^\ast$$ of the linear map $$F^\ast:\mathcal{C}^\infty_{N,F(p)}\rightarrow \mathcal{C}^\infty_{M,p}$$ obtained above.
 
-![differential](/assets/images/Math/Manifolds/Differentials-2.png){:style="width:17.6em" class="invert" .align-center}
+![differential](/assets/images/Math/Manifolds/Differentials-2.svg){:style="width:18.52em" class="invert" .align-center}
 
 Explicitly, this is the function defined for any linear map $$L\in (\mathcal{C}^\infty_{M,p})^\ast$$ by
 

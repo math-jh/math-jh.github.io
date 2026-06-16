@@ -101,20 +101,20 @@ The above is likewise merely one way of computing the areas of these figures. Gi
 
 Suppose $$n$$ linearly independent vectors in $$n$$-dimensional space are given. Then they span an $$n$$-dimensional parallelepiped. For example, when $$n=3$$, three vectors $$v_1,v_2,v_3$$ form a parallelepiped as follows.
 
-![parallelepiped](/assets/images/Math/Linear_Algebra/Determinant-1.png){:style="width:16em" class="invert" .align-center}
+![parallelepiped](/assets/images/Math/Linear_Algebra/Determinant-1.svg){:style="width:16em" class="invert" .align-center}
 
 For convenience of exposition, all subsequent discussion will use area in the plane, but it is not difficult to generalize everything to $$n$$-dimensional space.
 
 First, we must define which parallelogram has unit area 1. Of course there is considerable freedom here, but the most reasonable choice is to define a square of side length 1 as the parallelogram of unit area 1.
 
-![Square](/assets/images/Math/Linear_Algebra/Determinant-2.png){:style="width:5em" class="invert" .align-center}
+![Square](/assets/images/Math/Linear_Algebra/Determinant-2.svg){:style="width:5em" class="invert" .align-center}
 
 On the other hand, it is clear that starting from the above square and applying the following two rules, we can obtain all[^1] parallelograms.
 
 1. Shear: a transformation fixing one side of a parallelogram and translating the endpoint of the remaining side parallel to the fixed side.
 2. A transformation that scales the length of the remaining side by a factor of $$k>0$$ while keeping one side fixed.
 
-![Transformation](/assets/images/Math/Linear_Algebra/Determinant-3.png){:style="width:16em" class="invert" .align-center}
+![Transformation](/assets/images/Math/Linear_Algebra/Determinant-3.svg){:style="width:22em" class="invert" .align-center}
 
 Therefore, if we specify only how area changes under the deformations in rules 1 and 2, we have defined the area of all parallelograms. In case 1, we define the area to remain unchanged; in case 2, we define the area to be multiplied by $$k$$. With these definitions, the area of every parallelogram coincides with the familiar formula.[^2]
 
@@ -126,7 +126,7 @@ First, the initial condition that $$D$$ must satisfy—namely, <phrase>the area 
 
 In the usual notion of area, multiplying the length of one side of a parallelogram by $$-1$$ still yields a positive area. However, if we regard the resulting figure as having the opposite orientation from the original, we may view the area as negative; then one verifies that $$D$$ preserves arbitrary scalar multiplication of the length of one side, and considering shear transformations, $$D$$ also preserves the sum of two vectors corresponding to one side, as illustrated below.
 
-![Multilinearity](/assets/images/Math/Linear_Algebra/Determinant-4.png){:style="width:8em" class="invert" .align-center}
+![Multilinearity](/assets/images/Math/Linear_Algebra/Determinant-4.svg){:style="width:12em" class="invert" .align-center}
 
 Moreover, considering shear transformations, for a fixed side $$v_n$$, adding to $$v_n$$ any linear combination of the $$n-1$$ base vectors $$v_1,\ldots, v_{n-1}$$ preserves the value of $$D$$. This means that if $$v_n$$ is a linear combination of $$v_1,\ldots, v_{n-1}$$ then $$D(v_1,\ldots, v_n)=0$$, and hence by [Proposition 3](#prop3) this is equivalent to $$D$$ being alternating.
 

@@ -26,20 +26,20 @@ We defined projective and injective modules in [\[Multilinear Algebra\] §Projec
 
 1. An object $$P$$ of $$\mathcal{A}$$ is a *projective object* if, whenever a diagram
     
-    ![Projective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-1.png){:style="width:9em" class="invert" .align-center}
+    ![Projective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-1.svg){:style="width:9.44em" class="invert" .align-center}
 
     is given, there exists at least one morphism $$P \rightarrow B$$ making the following diagram
     
-    ![Projective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-2.png){:style="width:9em" class="invert" .align-center}
+    ![Projective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-2.svg){:style="width:9.44em" class="invert" .align-center}
 
     commute. If for every object $$A$$ in $$\mathcal{A}$$ there exists a projective object $$P$$ such that $$P \rightarrow A \rightarrow 0$$ can be made exact, we say that $$\mathcal{A}$$ has *enough projectives*.
 2. An object $$I$$ of $$\mathcal{A}$$ is an *injective object* if, whenever a diagram
     
-    ![Injective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-3.png){:style="width:8.8em" class="invert" .align-center}
+    ![Injective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-3.svg){:style="width:9.40em" class="invert" .align-center}
 
     is given, there exists at least one morphism $$B \rightarrow I$$ making the following diagram
     
-    ![Injective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-4.png){:style="width:8.8em" class="invert" .align-center}
+    ![Injective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-4.svg){:style="width:9.40em" class="invert" .align-center}
 
     commute. If for every object $$A$$ in $$\mathcal{A}$$ there exists an injective object $$I$$ such that $$0 \rightarrow A \rightarrow I$$ can be made exact, we say that $$\mathcal{A}$$ has *enough injectives*. 
 
@@ -76,11 +76,11 @@ A projective object in $$\mathcal{A}$$ is an injective object in $$\mathcal{A}^\
 
 First, since $$\mathcal{A}$$ has enough projectives, we can choose a surjection $$\epsilon_0:P_0 \rightarrow M$$. Let $$M_0=\ker \epsilon_0$$. Then since $$\mathcal{A}$$ has enough projectives, we can choose a surjection $$\epsilon_1:P_1 \rightarrow M_0$$. Drawing the diagram up to the composite $$d_1=\iota_0\circ\epsilon_1$$ of $$\epsilon_1: P_1 \rightarrow M_0$$ and the inclusion $$\iota_0: M_0 \rightarrow P_0$$, we obtain the following.
 
-![splicing-1](/assets/images/Math/Homological_Algebra/Resolutions-5.png){:style="width:18em" class="invert" .align-center}
+![splicing-1](/assets/images/Math/Homological_Algebra/Resolutions-5.svg){:style="width:19.97em" class="invert" .align-center}
 
 Proceeding in this way, whenever $$\epsilon_n:P_n \rightarrow M_{n-1}$$ is given we set $$M_n=\ker \epsilon_n$$ to obtain the following commutative diagram.
 
-![splicing-2](/assets/images/Math/Homological_Algebra/Resolutions-6.png){:style="width:36em" class="invert" .align-center}
+![splicing-2](/assets/images/Math/Homological_Algebra/Resolutions-6.svg){:style="width:39.85em" class="invert" .align-center}
 
 Then the complex obtained in the middle,
 
@@ -134,12 +134,12 @@ Meanwhile, the uniqueness of projective and injective resolutions follows from t
 
 <ins id="thm6">**Theorem 6**</ins> Let a projective resolution $$P_\bullet \rightarrow M$$ and any $$u:M \rightarrow N$$ be given. Then for every left resolution $$Q_\bullet \rightarrow N$$, there exists a chain map $$f:P_\bullet \rightarrow Q_\bullet$$ making the following diagram
 
-![comparison_proj](/assets/images/Math/Homological_Algebra/Resolutions-7.png){:style="width:18.4em" class="invert" .align-center}
+![comparison_proj](/assets/images/Math/Homological_Algebra/Resolutions-7.svg){:style="width:20.02em" class="invert" .align-center}
 
 commute, uniquely up to homotopy.  
 Similarly, let an injective resolution $$N \rightarrow I^\bullet$$ and any $$u: M \rightarrow N$$ be given. Then for every right resolution $$M \rightarrow J^\bullet$$, there exists a chain map $$f:J^\bullet \rightarrow I^\bullet$$ making the following diagram
 
-![comparison_inj](/assets/images/Math/Homological_Algebra/Resolutions-8.png){:style="width:18em" class="invert" .align-center}
+![comparison_inj](/assets/images/Math/Homological_Algebra/Resolutions-8.svg){:style="width:19.71em" class="invert" .align-center}
 
 commute.
 
@@ -169,15 +169,15 @@ $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
 First, drawing the given situation as a diagram, we obtain the following.
 
-![horseshoe-initial](/assets/images/Math/Homological_Algebra/Resolutions-9.png){:style="width:18.4em" class="invert" .align-center}
+![horseshoe-initial](/assets/images/Math/Homological_Algebra/Resolutions-9.svg){:style="width:20.34em" class="invert" .align-center}
 
 Now from the condition that $$P_0''$$ is projective, we can define $$P_0'' \rightarrow A$$. On the other hand, $$P_0' \rightarrow A$$ is already given as the composite of $$i_A$$ and $$\epsilon'$$, so considering their direct sum we obtain $$\epsilon:P_0 \rightarrow A$$. Now from [§Diagram Chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5) we obtain the following diagram
 
-![horseshoe-induction](/assets/images/Math/Homological_Algebra/Resolutions-10.png){:style="width:19.8em" class="invert" .align-center}
+![horseshoe-induction](/assets/images/Math/Homological_Algebra/Resolutions-10.svg){:style="width:20.84em" class="invert" .align-center}
 
 and in particular we obtain the following diagram
 
-![horseshoe-finish](/assets/images/Math/Homological_Algebra/Resolutions-11.png){:style="width:19em" class="invert" .align-center}
+![horseshoe-finish](/assets/images/Math/Homological_Algebra/Resolutions-11.svg){:style="width:21.61em" class="invert" .align-center}
 
 Repeating this process, we obtain $$P_\bullet$$.
 

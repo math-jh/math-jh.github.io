@@ -112,7 +112,7 @@ $$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{
 
 becomes a cochain complex. Also, since $$d$$ commutes with $$F^\ast$$ and $$F^\ast$$ is a graded algebra homomorphism, in the language above we can say that $$F^\ast$$ induces a chain map between de Rham complexes.
 
-![Chain_map_in_dR](/assets/images/Math/Manifolds/Differential_Forms-1.png){:style="width:23.2em" class="invert" .align-center}
+![Chain_map_in_dR](/assets/images/Math/Manifolds/Differential_Forms-1.svg){:style="width:26.08em" class="invert" .align-center}
 
 We call the cohomology group of the cochain complex (2) the *de Rham cohomology group* and denote it by $$H^\ast_\text{dR}(M)$$. de Rham's theorem shows that $$H_\text{dR}^\ast(M)$$ obtained in this way carries the same information as other cohomology groups defined topologically.
 

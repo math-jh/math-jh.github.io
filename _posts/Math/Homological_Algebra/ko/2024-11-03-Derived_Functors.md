@@ -41,11 +41,11 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
     가 exact이다.
 2. (Naturality) Short exact sequence들 사이의 homomorphism
     
-    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Derived_Functors-1.png){:style="width:18em" class="invert" .align-center}
+    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Derived_Functors-1.svg){:style="width:19.34em" class="invert" .align-center}
 
     이 주어졌을 때, 다음의 diagram
 
-    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-2.png){:style="width:32em" class="invert" .align-center}
+    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-2.svg){:style="width:35.61em" class="invert" .align-center}
 
     이 commute한다.
 
@@ -73,7 +73,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 마다 commute하도록 하는 $$\alpha_n:S_n\Rightarrow T_n$$들의 모임이다. 
 
-![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-3.png){:style="width:36em" class="invert" .align-center}
+![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-3.svg){:style="width:41.13em" class="invert" .align-center}
 
 <div class="definition" markdown="1">
 

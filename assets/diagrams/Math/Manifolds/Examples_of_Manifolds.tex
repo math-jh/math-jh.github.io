@@ -1,0 +1,19 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG quotient_map (Examples_of_Manifolds-2.svg)
+\begin{tikzcd}
+	{\widetilde{U}_i} \\
+	{U_i} & {\mathbb{R}^n}
+	\arrow["{\varphi_i}"', from=2-1, to=2-2]
+	\arrow["{\pi\vert_{\widetilde{U}_i}}"', from=1-1, to=2-1]
+	\arrow[dashed, from=1-1, to=2-2]
+\end{tikzcd}
+
+\end{document}

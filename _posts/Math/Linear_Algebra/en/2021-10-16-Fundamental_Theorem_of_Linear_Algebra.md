@@ -121,7 +121,7 @@ Since the $$i$$-th column of $$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$$ 
 
 The fundamental theorem we proved above applies only to Euclidean spaces, but with a very small modification it also holds for general finite-dimensional $$\mathbb{K}$$-vector spaces. This process can be summarized simply by the following diagram.
 
-![FTLA](/assets/images/Math/Linear_Algebra/Fundamental_Theorem_of_Linear_Algebra-1.png){:style="width:14em" class="invert" .align-center} 
+![FTLA](/assets/images/Math/Linear_Algebra/Fundamental_Theorem_of_Linear_Algebra-1.svg){:style="width:13.53em" class="invert" .align-center} 
 
 For any finite-dimensional $$\mathbb{K}$$-vector space $$V$$ and a basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$, the *coordinate representation* is the following isomorphism
 
@@ -233,7 +233,7 @@ we see that such a matrix is always invertible.
 
 To see how a change-of-basis matrix operates, fix a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ and let two bases $$\mathcal{B},\mathcal{B}'$$ defined on $$V$$ be given. The fundamental theorem of linear algebra means that the following diagram commutes.
 
-![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_Basis-1.png){:style="width:7em" class="invert" .align-center}
+![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_Basis-1.svg){:style="width:5.93em" class="invert" .align-center}
 
 Here the two vertical maps are $$v\mapsto [v]_\mathcal{B}$$ and $$v\mapsto[v]_{\mathcal{B}'}$$ respectively. Therefore, we can think of the change-of-basis matrix as the matrix that takes the coordinate representation of $$v\in V$$ with respect to $$\mathcal{B}$$ and converts it to the coordinate representation with respect to $$\mathcal{B}'$$. More generally, given any linear map $$L:V\rightarrow W$$ and bases $$\mathcal{B},\mathcal{C}$$ of $$V,W$$ as well as another pair of bases $$\mathcal{B}',\mathcal{C}'$$, the fundamental theorem of linear algebra gives us the equation
 

@@ -156,7 +156,7 @@ $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i
 
 으로 정의하면[^1] 함수 $$\varphi_i\circ\pi\vert_{\tilde{U}_i}$$가 연속이고 따라서 [\[위상수학\] §몫공간, ⁋명제 4](/ko/math/topology/quotient_spaces#prop4)에 의해 $$\varphi_i$$ 또한 연속이다. 
 
-![quotient_map](/assets/images/Math/Manifolds/Examples_of_Manifolds-2.png){:style="width:8em" class="invert" .align-center}
+![quotient_map](/assets/images/Math/Manifolds/Examples_of_Manifolds-2.svg){:style="width:7.46em" class="invert" .align-center}
 
 뿐만 아니라 다음의 연속함수
 

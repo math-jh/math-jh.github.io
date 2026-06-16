@@ -1,0 +1,20 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG F-related (Lie_Derivative-1.svg)
+\begin{tikzcd}
+	M & N \\
+	TM & TN
+	\arrow["F", from=1-1, to=1-2]
+	\arrow["dF"', from=2-1, to=2-2]
+	\arrow["X"', from=1-1, to=2-1]
+	\arrow["Y", from=1-2, to=2-2]
+\end{tikzcd}
+
+\end{document}

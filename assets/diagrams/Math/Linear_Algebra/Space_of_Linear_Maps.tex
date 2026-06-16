@@ -1,0 +1,19 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG extend_by_linearity (Space_of_Linear_Maps-1.svg)
+\begin{tikzcd}
+	{\mathcal{B}} & V \\
+	& W
+	\arrow["g"', from=1-1, to=2-2]
+	\arrow["\iota", hook, from=1-1, to=1-2]
+	\arrow["G", dashed, from=1-2, to=2-2]
+\end{tikzcd}
+
+\end{document}
