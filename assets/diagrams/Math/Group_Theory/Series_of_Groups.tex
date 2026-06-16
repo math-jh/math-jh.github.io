@@ -1,0 +1,41 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG Zassenhaus (Series_of_Groups-1.svg)
+\begin{tikzpicture}[every node/.style={inner sep=2.5pt}]
+	\node (H)    at (3,8)     {$H$};
+	\node (K)    at (11,8)    {$K$};
+	\node (HHK)  at (3,7)     {$H'(H\cap K)$};
+	\node (KKH)  at (11,7)    {$K'(K\cap H)$};
+	\node (HK)   at (7,6.1)   {$H\cap K$};
+	\node (HHKp) at (3,5)     {$H'(H\cap K')$};
+	\node (KKHp) at (11,5)    {$K'(K\cap H')$};
+	\node (Hp)   at (0,3)     {$H'$};
+	\node (C)    at (7,3)     {$(H\cap K')(K\cap H')$};
+	\node (Kp)   at (14,3)    {$K'$};
+	\node (KHp)  at (3.4,1.3) {$K\cap H'$};
+	\node (HKp)  at (10.6,1.3){$H\cap K'$};
+	\draw (H)--(HHK);
+	\draw (K)--(KKH);
+	\draw (HHK)--(HK);
+	\draw (KKH)--(HK);
+	\draw (HHK)--(HHKp);
+	\draw (KKH)--(KKHp);
+	\draw (HK)--(C);
+	\draw (HHKp)--(Hp);
+	\draw (HHKp)--(C);
+	\draw (KKHp)--(C);
+	\draw (KKHp)--(Kp);
+	\draw (Hp)--(KHp);
+	\draw (C)--(KHp);
+	\draw (C)--(HKp);
+	\draw (Kp)--(HKp);
+\end{tikzpicture}
+
+\end{document}

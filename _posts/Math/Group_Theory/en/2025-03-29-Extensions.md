@@ -49,7 +49,7 @@ Now, for fixed $$G$$ and $$F$$, the collection of all extensions of $$G$$ by $$F
 
 <ins id="def2">**Definition 2**</ins> For two extensions $$\mathcal{E}_1: F \rightarrow E_1 \rightarrow G$$ and $$\mathcal{E}_2:F \rightarrow E_2 \rightarrow G$$, a *morphism* from $$\mathcal{E}_1$$ to $$\mathcal{E}_2$$ is a map $$u:E_1 \rightarrow E_2$$ making the following diagram commute:
 
-![morphism_of_extensions](/assets/images/Math/Group_Theory/Extensions-1.png){:style="width:10.5em" class="invert" .align-center}
+![morphism_of_extensions](/assets/images/Math/Group_Theory/Extensions-1.svg){:style="width:10.17em" class="invert" .align-center}
 
 </div>
 
@@ -86,7 +86,7 @@ Of course, here retraction and section mean group homomorphisms, not merely func
 
 First, assume the first condition and consider the following diagram:
 
-![retraction_and_section](/assets/images/Math/Group_Theory/Extensions-2.png){:style="width:12em" class="invert" .align-center}
+![retraction_and_section](/assets/images/Math/Group_Theory/Extensions-2.svg){:style="width:11.92em" class="invert" .align-center}
 
 Then we define the retraction $$r:E \rightarrow F$$ as $$\pr_1\circ u$$, and $$s:G \rightarrow E$$ as $$u^{-1}\circ\iota_2$$.
 

@@ -116,7 +116,7 @@ $$\alpha: E\otimes_A\Hom_A(A, N) \rightarrow\Hom_E(E\otimes_AM, E\otimes_AN)$$
 
 은 사실 다음의 commutative diagram
 
-![simplest_case](/assets/images/Math/Commutative_Algebra/Properties_of_Localization-1.png){:style="width:23em" class="invert" .align-center}
+![simplest_case](/assets/images/Math/Commutative_Algebra/Properties_of_Localization-1.svg){:style="width:24.69em" class="invert" .align-center}
 
 에 넣을 수 있으므로 주어진 명제가 성립한다. 여기서 수직 방향 함수는 각각 isomorphism 
 
@@ -128,7 +128,7 @@ $$F \rightarrow G \rightarrow M \rightarrow 0$$
 
 을 잡은 후, 다음의 commutative diagram
 
-![general_case](/assets/images/Math/Commutative_Algebra/Properties_of_Localization-2.png){:style="width:44em" class="invert" .align-center}
+![general_case](/assets/images/Math/Commutative_Algebra/Properties_of_Localization-2.svg){:style="width:47.63em" class="invert" .align-center}
 
 에 four lemma를 사용하면 충분하다. 
 

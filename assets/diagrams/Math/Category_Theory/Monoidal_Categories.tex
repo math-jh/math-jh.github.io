@@ -1,0 +1,94 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG Associativity (Monoidal_Categories-1.svg)
+\begin{tikzcd}
+	{M\times M\times M} & {M\times M} \\
+	{M\times M} & M
+	\arrow["{\id_M\times\mu}", from=1-1, to=1-2]
+	\arrow["{\mu\times\id_M}"', from=1-1, to=2-1]
+	\arrow["\mu", from=1-2, to=2-2]
+	\arrow["\mu"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG Unit_element (Monoidal_Categories-2.svg)
+\begin{tikzcd}
+	{I\times M} & {M\times M} & {M\times I} \\
+	& M
+	\arrow["{i\times\id_M}", from=1-1, to=1-2]
+	\arrow["{\pr_2}"', from=1-1, to=2-2]
+	\arrow["\mu", from=1-2, to=2-2]
+	\arrow["{\id_M\times i}"', from=1-3, to=1-2]
+	\arrow["{\pr_1}", from=1-3, to=2-2]
+\end{tikzcd}
+
+%%FIG Pentagon_identity (Monoidal_Categories-3.svg)
+\begin{tikzcd}
+	&[-80pt]&[-45pt] {(A\otimes B)\otimes(C\otimes D)}&[-45pt]&[-80pt] \\[20pt]
+	{A\otimes(B\otimes(C\otimes D))} &&&& {((A\otimes B)\otimes C)\otimes D} \\[30pt]
+	& {A\otimes((B\otimes C)\otimes D)} && {(A\otimes(B\otimes C))\otimes D}
+	\arrow["{\alpha_{A\otimes B, C, D}}", from=1-3, to=2-5]
+	\arrow["{\alpha_{A, B, C\otimes D}}", from=2-1, to=1-3]
+	\arrow["{\id_A\otimes\alpha_{B,C,D}}"', from=2-1, to=3-2]
+	\arrow["{\alpha_{A, B\otimes C, D}}"', from=3-2, to=3-4]
+	\arrow["{\alpha_{A,B,C}\otimes\id_D}"', from=3-4, to=2-5]
+\end{tikzcd}
+
+%%FIG unitor_diagram (Monoidal_Categories-4.svg)
+\begin{tikzcd}
+	{A\otimes(I\otimes B)} && {(A\otimes I)\otimes B} \\
+	& {A\otimes B}
+	\arrow["{\alpha_{A,I,B}}", from=1-1, to=1-3]
+	\arrow["{\id_A\otimes\lambda_B}"', from=1-1, to=2-2]
+	\arrow["{\rho_A\otimes \id_B}", from=1-3, to=2-2]
+\end{tikzcd}
+
+%%FIG associativity_coherence (Monoidal_Categories-5.svg)
+\begin{tikzcd}
+	{A\otimes(B\otimes C)} & {A\otimes(C\otimes B)} & {(A\otimes C)\otimes B} \\
+	{(A\otimes B)\otimes C} & {C\otimes(A\otimes B)} & {(C\otimes A)\otimes B}
+	\arrow["{\id_A\otimes\gamma_{B,C}}", from=1-1, to=1-2]
+	\arrow["{\alpha_{A,B,C}}"', from=1-1, to=2-1]
+	\arrow["{\alpha_{A,C,B}}", from=1-2, to=1-3]
+	\arrow["{\gamma_{A,C}\otimes\id_B}", from=1-3, to=2-3]
+	\arrow["{\gamma_{A\otimes B,C}}"', from=2-1, to=2-2]
+	\arrow["{\alpha_{C,A,B}}"', from=2-2, to=2-3]
+\end{tikzcd}
+
+%%FIG symmetor (Monoidal_Categories-6.svg)
+\begin{tikzcd}
+	{A\otimes I} && {I\otimes A} \\
+	& A
+	\arrow["{\gamma_{A,I}}", from=1-1, to=1-3]
+	\arrow["{\rho_A}"', from=1-1, to=2-2]
+	\arrow["{\lambda_A}", from=1-3, to=2-2]
+\end{tikzcd}
+
+%%FIG inverse (Monoidal_Categories-7.svg)
+\begin{tikzcd}
+	{A\otimes B} && {A\otimes B} \\
+	& {B\otimes A}
+	\arrow["{\id_{A\otimes B}}", from=1-1, to=1-3]
+	\arrow["{\gamma_{A,B}}"', from=1-1, to=2-2]
+	\arrow["{\gamma_{B,A}}"', from=2-2, to=1-3]
+\end{tikzcd}
+
+%%FIG diagonal_morphism (Monoidal_Categories-8.svg)
+\begin{tikzcd}
+	X \\
+	& {X\times X} & X \\
+	& X
+	\arrow[dashed, from=1-1, to=2-2]
+	\arrow[curve={height=-6pt}, Rightarrow, no head, from=1-1, to=2-3]
+	\arrow[curve={height=6pt}, Rightarrow, no head, from=1-1, to=3-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+\end{tikzcd}
+
+\end{document}

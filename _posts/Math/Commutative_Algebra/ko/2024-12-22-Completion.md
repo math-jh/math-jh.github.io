@@ -30,7 +30,7 @@ $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G
 
 > $$\rho_{ji}\circ\pi_j=\pi_i$$를 만족하는 $$K \rightarrow G/H_i$$들이 주어질 때마다, 유일한 $$\pi:K \rightarrow \widehat{G}$$가 존재하여 다음의 diagram
 > 
-> ![universal_property](/assets/images/Math/Commutative_Algebra/Completion-1.png){:style="width:14em" class="invert" .align-center}
+> ![universal_property](/assets/images/Math/Commutative_Algebra/Completion-1.svg){:style="width:13.57em" class="invert" .align-center}
 > 
 > 이 commute하도록 할 수 있다.
 

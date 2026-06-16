@@ -29,9 +29,9 @@ Now we can define monoid objects.
 These satisfy the following conditions.
 
 - (Associativity)[^1]
-![associativity](/assets/images/Math/Category_Theory/Monoid_Objects-1.png){:style="width:26em" class="invert" .align-center}
+![associativity](/assets/images/Math/Category_Theory/Monoid_Objects-1.svg){:style="width:29.37em" class="invert" .align-center}
 - (Unit)
-![unit](/assets/images/Math/Category_Theory/Monoid_Objects-2.png){:style="width:16.6em" class="invert" .align-center}
+![unit](/assets/images/Math/Category_Theory/Monoid_Objects-2.svg){:style="width:17.03em" class="invert" .align-center}
 
 </div>
 
@@ -79,7 +79,7 @@ As with the previous definition, we can define group objects. To do so, as was t
 
 However, there is a problem if we try to translate this into the language of monoidal categories. If we write the second condition as a diagram,
 
-![group_axiom](/assets/images/Math/Category_Theory/Monoid_Objects-3.png){:style="width:10em" class="invert" .align-center}
+![group_axiom](/assets/images/Math/Category_Theory/Monoid_Objects-3.svg){:style="width:9.69em" class="invert" .align-center}
 
 it should look as follows. Here $$e_G$$ is the group homomorphism sending every element of $$G$$ to the identity element of $$G$$, and $$(-1)^{-1}\times \id_G$$ is the product of the two maps $$(-)^{-1}:G \rightarrow G$$ and $$\id_G:G \rightarrow G$$. Of course one could add both pieces of data and call this a group object, but doing so would not be a good solution because, for example, the unit $$\eta:I \rightarrow G$$ (as a monoid object) and the newly defined morphism $$e_G$$ would be entirely unrelated.
 
@@ -89,7 +89,7 @@ $$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
 
 where $$\epsilon_G$$ is the unique morphism from $$G$$ to the terminal object $$\{e\}$$, and $$\eta$$ is the unit of $$G$$ as a monoid object. Moreover, in a cartesian monoidal category the monoidal product is the categorical product, so the following diagram
 
-![inverse_morphism](/assets/images/Math/Category_Theory/Monoid_Objects-4.png){:style="width:12.6em" class="invert" .align-center}
+![inverse_morphism](/assets/images/Math/Category_Theory/Monoid_Objects-4.svg){:style="width:11.93em" class="invert" .align-center}
 
 shows that $$(-1)^{-1}\times \id_G$$ is well defined.
 
@@ -104,13 +104,13 @@ shows that $$(-1)^{-1}\times \id_G$$ is well defined.
 Let $$e_G$$ denote the composition $$G\rightarrow I\overset{\eta}{\rightarrow}G$$. These satisfy the following conditions.
 
 - (Associativity) The following diagram
-  ![associative_group_law](/assets/images/Math/Category_Theory/Monoid_Objects-5.png){:style="width:12em" class="invert" .align-center}
+  ![associative_group_law](/assets/images/Math/Category_Theory/Monoid_Objects-5.svg){:style="width:12.13em" class="invert" .align-center}
   commutes.
 - (Unit element) The following diagram
-  ![identity_element](/assets/images/Math/Category_Theory/Monoid_Objects-6.png){:style="width:11.6em" class="invert" .align-center}
+  ![identity_element](/assets/images/Math/Category_Theory/Monoid_Objects-6.svg){:style="width:11.81em" class="invert" .align-center}
   commutes.
 - (Inverse element) The following diagram
-  ![inverse_element](/assets/images/Math/Category_Theory/Monoid_Objects-7.png){:style="width:11.6em" class="invert" .align-center}
+  ![inverse_element](/assets/images/Math/Category_Theory/Monoid_Objects-7.svg){:style="width:11.08em" class="invert" .align-center}
   commutes.
 
 </div>
@@ -164,7 +164,7 @@ When a monoid object $$M$$ is given, the role of the symmetry is important in or
 
 To write the condition for $$\iota$$ explicitly, one must translate all the diagrams given in [Definition 3](#def3) into the information that a Hopf monoid carries; for example, one of the triangles is the following diagram
 
-![Hopf_inverse](/assets/images/Math/Category_Theory/Monoid_Objects-8.png){:style="width:14em" class="invert" .align-center}
+![Hopf_inverse](/assets/images/Math/Category_Theory/Monoid_Objects-8.svg){:style="width:14.39em" class="invert" .align-center}
 
 which can be written out explicitly, and similarly using $$\iota\otimes\id_H$$ one obtains the other triangle.
 

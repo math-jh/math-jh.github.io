@@ -1,0 +1,23 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG universal_property (Completion-1.svg)
+\begin{tikzcd}
+	& K \\
+	& {\widehat{G}} \\
+	{G/H_i} && {G/H_j}
+	\arrow[dashed, from=1-2, to=2-2]
+	\arrow["{\pi_i}"', curve={height=6pt}, from=1-2, to=3-1]
+	\arrow["{\pi_j}", curve={height=-6pt}, from=1-2, to=3-3]
+	\arrow["{\rho_i}", from=2-2, to=3-1]
+	\arrow["{\rho_j}", from=2-2, to=3-3]
+	\arrow["{\rho_{ji}}", from=3-3, to=3-1]
+\end{tikzcd}
+
+\end{document}

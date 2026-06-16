@@ -87,6 +87,7 @@ window.KATEX_MACROS = {
     "\\coker":"\\operatorname{coker}",
     "\\col":"\\operatorname{col}",
     "\\coim":"\\operatorname{coim}",
+    "\\colim":"\\operatorname*{colim}",
     "\\Cone":"\\operatorname{Cone}",
     "\\cone":"\\operatorname{cone}",
     "\\Conj":"\\operatorname{Conj}",
