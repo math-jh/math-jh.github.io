@@ -156,7 +156,7 @@ Simply-laced root system은 정확히 $$A_n$$, $$D_n$$, $$E_6$$, $$E_7$$, $$E_8$
 
 이들의 Dynkin diagram은 다음과 같다. 모두 single edge만으로 이루어지며, $$A_n$$은 chain, $$D_n$$은 한쪽 끝에서 갈라지는 fork, 그리고 $$E_6,E_7,E_8$$은 세 갈래가 한 vertex에서 만나는 형태를 갖는다.
 
-![ADE type Dynkin diagram](/assets/images/Math/Lie_Theory/Borel_Subgroup-1.png){:style="width:22em" class="invert" .align-center}
+![ADE type Dynkin diagram](/assets/images/Math/Lie_Theory/Borel_Subgroup-1.svg){:style="width:25.06em" class="invert" .align-center}
 
 ## Borel subalgebra
 

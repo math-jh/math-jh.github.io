@@ -16,7 +16,7 @@ weight: 17
 
 Preordered set $$A$$에 대하여, $$X\subseteq A$$가 $$A$$에서 *cofinal* (resp. *coinitial*)이라는 것은 임의의 $$x\in A$$에 대하여 $$y\in X$$가 존재하여 $$x\leq y$$ (resp. $$y\leq x$$)인 것이다. 예를 들어, 다음의 diagram
 
-![cofinal_sequence](/assets/images/Math/Set_Theory/Directed_Set-1.png){:style="width:20em" class="invert" .align-center}
+![cofinal_sequence](/assets/images/Math/Set_Theory/Directed_Set-1.svg){:style="width:20.75em" class="invert" .align-center}
 
 에서 집합 $$\left\{a_{2n}\right\}_{n\in\mathbb{N}}$$, $$\left\{a_{1000+n}\right\}_{n\in\mathbb{N}}$$ 등은 모두 cofinal이다.
 

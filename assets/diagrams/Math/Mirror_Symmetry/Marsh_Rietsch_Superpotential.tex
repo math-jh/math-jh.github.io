@@ -1,0 +1,85 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{ytableau}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, decorations.markings, intersections}
+\begin{document}
+
+%%FIG diagram (Marsh_Rietsch_Superpotential-1.svg)
+\ytableausetup{boxsize=1.5em, centertableaux}
+\begin{tikzpicture}[font=\small]
+\node (a) {\begin{ytableau} *(accent1!45)&{} \\ *(accent1!45)&{} \end{ytableau}};
+\node (b) [right=1.2cm of a] {\begin{ytableau} *(accent1!45)&*(accent1!45) \\ *(accent1!45)&*(accent1!45) \end{ytableau}};
+\node (c) [right=1.2cm of b] {\begin{ytableau} *(accent1!45)&*(accent1!45) \\ {}&{} \end{ytableau}};
+\node (d) [right=1.2cm of c] {\begin{ytableau} {}&{} \\ {}&{} \end{ytableau}};
+\node[below=3pt of a] {$J_1$};
+\node[below=3pt of b] {$J_2$};
+\node[below=3pt of c] {$J_3$};
+\node[below=3pt of d] {$J_4$};
+\end{tikzpicture}
+%%FIG diagram (Marsh_Rietsch_Superpotential-2.svg)
+\begin{tikzpicture}[font=\small]
+\node (a) {\begin{ytableau} *(accent1!45)&*(accent1!45) \\ *(accent1!45)&{} \end{ytableau}};
+\node (b) [right=1.2cm of a] {\begin{ytableau} *(accent1!45)&{} \\ {}&{} \end{ytableau}};
+\node (c) [right=1.2cm of b] {\begin{ytableau} *(accent1!45)&*(accent1!45) \\ *(accent1!45)&{} \end{ytableau}};
+\node (d) [right=1.2cm of c] {\begin{ytableau} *(accent1!45)&{} \\ {}&{} \end{ytableau}};
+\node[below=3pt of a] {$\widehat{J}_1$};
+\node[below=3pt of b] {$\widehat{J}_2$};
+\node[below=3pt of c] {$\widehat{J}_3$};
+\node[below=3pt of d] {$\widehat{J}_4$};
+\end{tikzpicture}
+%%FIG diagram (Marsh_Rietsch_Superpotential-3.svg)
+\ytableausetup{boxsize=1.3em, centertableaux}
+\begin{tikzpicture}[font=\small]
+\node (a) {\begin{ytableau} *(accent1!45)&*(accent1!45)&{}&{} \\ *(accent1!45)&*(accent1!45)&{}&{} \\ *(accent1!45)&*(accent1!45)&{}&{} \end{ytableau}};
+\node (b) [right=1.5cm of a] {\begin{ytableau} *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!45) \\ *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!45) \\ *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!45) \end{ytableau}};
+\node (c) [right=1.5cm of b] {\begin{ytableau} *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!45) \\ *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!45) \\ {}&{}&{}&{} \end{ytableau}};
+\node[below=4pt of a] {$\lambda(i),\ i<n-k$};
+\node[below=4pt of b] {$\lambda(n-k)$};
+\node[below=4pt of c] {$\lambda(i),\ i>n-k$};
+\end{tikzpicture}
+%%FIG diagram (Marsh_Rietsch_Superpotential-4.svg)
+\begin{tikzpicture}[font=\small]
+% row a: i < n-k (full height), +box top-right
+\node (a1) {\begin{ytableau} *(accent1!45)&*(accent1!45)&{}&{} \\ *(accent1!45)&*(accent1!45)&{}&{} \\ *(accent1!45)&*(accent1!45)&{}&{} \end{ytableau}};
+\node (a2) [right=2cm of a1] {\begin{ytableau} *(accent1!45)&*(accent1!45)&*(accent1!70)&{} \\ *(accent1!45)&*(accent1!45)&{}&{} \\ *(accent1!45)&*(accent1!45)&{}&{} \end{ytableau}};
+\draw[-{Stealth}] (a1) -- node[above]{$+\,\square$} (a2);
+\node[right=1.6cm of a2] {$i<n-k$};
+% row b: i > n-k (full width), +box bottom-left
+\node (b1) [below=0.9cm of a1] {\begin{ytableau} *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!45) \\ *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!45) \\ {}&{}&{}&{} \end{ytableau}};
+\node (b2) [right=2cm of b1] {\begin{ytableau} *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!45) \\ *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!45) \\ *(accent1!70)&{}&{}&{} \end{ytableau}};
+\draw[-{Stealth}] (b1) -- node[above]{$+\,\square$} (b2);
+\node[right=1.6cm of b2] {$i>n-k$};
+% row c: i = n-k (full box), +box wraps -> q
+\node (c1) [below=0.9cm of b1] {\begin{ytableau} *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!70) \\ *(accent1!45)&*(accent1!45)&*(accent1!45)&*(accent1!70) \\ *(accent1!70)&*(accent1!70)&*(accent1!70)&*(accent1!70) \end{ytableau}};
+\node (c2) [right=2cm of c1] {\begin{ytableau} *(accent1!45)&*(accent1!45)&*(accent1!45) \\ *(accent1!45)&*(accent1!45)&*(accent1!45) \end{ytableau}};
+\draw[-{Stealth}] (c1) -- node[above]{$+\,\square$, wrap} (c2);
+\node[right=1.4cm of c2] {$i=n-k\ (\times\,q)$};
+\end{tikzpicture}
+%%FIG diagram (Marsh_Rietsch_Superpotential-5.svg)
+\ytableausetup{boxsize=1.5em, centertableaux}
+\begin{tikzpicture}[font=\small]
+\node (p1) {\begin{ytableau} *(accent1!45)&{} \\ {}&{} \end{ytableau}};
+\node (d1) [right=4pt of p1] {$\cdot$};
+\node (p2) [right=4pt of d1] {\begin{ytableau} *(accent1!45)&*(accent1!45) \\ *(accent1!45)&{} \end{ytableau}};
+\node (eq) [right=8pt of p2] {$=$};
+\node (e1) [right=8pt of eq] {\begin{ytableau} {}&{} \\ {}&{} \end{ytableau}};
+\node (d2) [right=4pt of e1] {$\cdot$};
+\node (full) [right=4pt of d2] {\begin{ytableau} *(accent1!45)&*(accent1!45) \\ *(accent1!45)&*(accent1!45) \end{ytableau}};
+\node (plus) [right=8pt of full] {$+$};
+\node (w) [right=8pt of plus] {\begin{ytableau} *(accent1!45)&*(accent1!45) \\ {}&{} \end{ytableau}};
+\node (d3) [right=4pt of w] {$\cdot$};
+\node (v) [right=4pt of d3] {\begin{ytableau} *(accent1!45)&{} \\ *(accent1!45)&{} \end{ytableau}};
+\node[below=3pt of p1] {$p_{(1)}$};
+\node[below=3pt of p2] {$p_{(2,1)}$};
+\node[below=3pt of e1] {$p_{\emptyset}$};
+\node[below=3pt of full] {$p_{(2,2)}$};
+\node[below=3pt of w] {$p_{(2)}$};
+\node[below=3pt of v] {$p_{(1,1)}$};
+\end{tikzpicture}
+
+\end{document}

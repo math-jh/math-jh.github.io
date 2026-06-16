@@ -1,0 +1,37 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG Phase space (Classical_Mechanics-1.svg)
+\begin{tikzpicture}
+	\draw[->] (-.5,0)--(2,0) node[right]{position};
+	\draw[->] (0,-.5)--(0,2) node[above]{momentum};
+\end{tikzpicture}
+
+%%FIG Kinetic energy (Classical_Mechanics-2.svg)
+\begin{tikzpicture}
+	\draw[->] (-.5,0)--(2,0) node[right]{position};
+	\draw[->] (0,-.5)--(0,2) node[above]{momentum};
+	\draw[accent1] (-.4,0)--(1.9,0);
+\end{tikzpicture}
+
+%%FIG Mechanical energy (Classical_Mechanics-3.svg)
+\begin{tikzpicture}
+	\draw[->] (-1.5,0)--(1,0) node[right]{position};
+	\draw[->] (0,-1)--(0,1.5) node[above]{momentum};
+  	\draw[scale=0.5, domain=-2:2, smooth, variable=\y, accent1]  plot ({1.5-\y*\y}, {\y});
+\end{tikzpicture}
+
+%%FIG Harmonic oscillator (Classical_Mechanics-4.svg)
+\begin{tikzpicture}
+	\draw[->] (-2.5,0)--(2.5,0) node[right]{position};
+	\draw[->] (0,-1.5)--(0,1.5) node[above]{momentum};
+    \draw[accent1] (0,0) ellipse (2cm and 1cm);
+\end{tikzpicture}
+
+\end{document}

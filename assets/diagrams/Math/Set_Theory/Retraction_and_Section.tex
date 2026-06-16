@@ -1,0 +1,36 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG diagram (Retraction_and_Section-1.svg)
+\begin{tikzcd}
+	A\rar["f"]\ar[rd, "\operatorname{id}_A" below left]&B\dar["r", dashed]\\
+	&A
+\end{tikzcd}
+
+%%FIG diagram (Retraction_and_Section-2.svg)
+\begin{tikzcd}
+	A\rar["f"]&B\\
+	B\ar[ru, "\operatorname{id}_B" below right]\uar["s" left, dashed]
+\end{tikzcd}
+
+%%FIG diagram (Retraction_and_Section-3.svg)
+\begin{tikzcd}
+&C\\
+A\ar[ru, "f"]\rar["g"]&B\uar["h" right, dashed]\\
+B\ar[u, "s", black!50]\ar[ur, "\operatorname{id}_B" below right]
+\end{tikzcd}
+
+%%FIG diagram (Retraction_and_Section-4.svg)
+\begin{tikzcd}
+C\ar[d, "h" left, dashed]\\
+A\rar["g"]&B\ar[from=ul, "f" above right]\dar["r", black!50]\\
+&A\ar[from=ul, "\operatorname{id}_A" below left]
+\end{tikzcd}
+
+\end{document}

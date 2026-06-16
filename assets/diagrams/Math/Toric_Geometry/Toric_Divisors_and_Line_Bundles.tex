@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG Pic-to-cl-com.diag (Toric_Divisors_and_Line_Bundles-1.svg)
+\begin{tikzcd}[column sep=large, row sep=large]
+	0 \rar & M \rar \dar[equal] & {\CaDiv_T(X_\Sigma)} \rar \dar[hook] & {\Pic(X_\Sigma)} \rar \dar[hook] & 0 \\
+	0 \rar & M \rar             & {\Div_T(X_\Sigma)}   \rar           & {\Cl(X_\Sigma)}   \rar           & 0
+\end{tikzcd}
+
+\end{document}

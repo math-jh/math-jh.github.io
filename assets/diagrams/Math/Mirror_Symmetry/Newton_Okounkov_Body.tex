@@ -1,0 +1,31 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{ytableau}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, decorations.markings, intersections}
+\begin{document}
+
+%%FIG diagram (Newton_Okounkov_Body-1.svg)
+\begin{tikzpicture}[scale=1.0, >=Stealth]
+  \node (a) at (0,0) {$a$};
+  \node (b) at (2,0) {$b$};
+  \node (c) at (1,-1) {$c$};
+  \node (d) at (3,-1) {$d$};
+  \node (e) at (2,-2) {$e$};
+  \draw[->, black!50] (a)--(c); \draw[->, black!50] (c)--(b);
+  \draw[->, black!50] (c)--(e); \draw[->, black!50] (e)--(d);
+  \draw[->, black!50] (b)--(d);
+  \node[font=\scriptsize, black!70!black] at (0.4,-0.55) {$\geq$};
+  \node[font=\scriptsize, black!70!black] at (1.6,-0.55) {$\geq$};
+  \node[font=\scriptsize, black!70!black] at (1.4,-1.55) {$\geq$};
+  \node[font=\scriptsize, black!70!black] at (2.6,-1.55) {$\geq$};
+  \node[font=\footnotesize] at (4.8,-1) {$a\geq c\geq b,$};
+  \node[font=\footnotesize] at (4.85,-1.55) {$c\geq e\geq d$};
+  \node[font=\scriptsize] at (1,-2.8) {$Gr(2,4)$의 GT pattern};
+\end{tikzpicture}
+
+\end{document}
